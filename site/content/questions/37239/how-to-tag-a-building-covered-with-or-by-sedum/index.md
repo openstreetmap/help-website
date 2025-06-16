@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The roof of a building is covered with a sedum layer. I started a little search but was not able to locate a building tagged like it in OSM. Has anyone used a tag to map a building like it ? The use of landuse=grass triggers a warning, landuse can’t be a building ? But the roof covers the building ! Look here <a href="http://dutchimpressivegreen.com/nl/projecten/sedumdak-amsterdam">http://dutchimpressivegreen.com/nl/projecten/sedumdak-amsterdam</a> and <a href="http://www.openstreetmap.org/#map=19/52.32219/4.95891,">http://www.openstreetmap.org/#map=19/52.32219/4.95891,</a> but no attention for the roof coverage. I thought about landuse=grass together with covered=yes still, since they build sedum roofs every day. Just building a proposal for this one just wont do, the warnings will keep coming ?</p>
+<p>The roof of a building is covered with a sedum layer. I started a little search but was not able to locate a building tagged like it in OSM. Has anyone used a tag to map a building like it ? The use of landuse=grass triggers a warning, landuse can’t be a building ? But the roof covers the building ! Look here <a href="http://dutchimpressivegreen.com/nl/projecten/sedumdak-amsterdam">http://dutchimpressivegreen.com/nl/projecten/sedumdak-amsterdam</a> and <a href="https://www.openstreetmap.org/#map=19/52.32219/4.95891,">https://www.openstreetmap.org/#map=19/52.32219/4.95891,</a> but no attention for the roof coverage. I thought about landuse=grass together with covered=yes still, since they build sedum roofs every day. Just building a proposal for this one just wont do, the warnings will keep coming ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-covered" rel="tag" title="see questions tagged &#39;covered&#39;">covered</span> <span class="post-tag tag-link-sedum" rel="tag" title="see questions tagged &#39;sedum&#39;">sedum</span> <span class="post-tag tag-link-triggers" rel="tag" title="see questions tagged &#39;triggers&#39;">triggers</span>
@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From <a href="http://wiki.openstreetmap.org/wiki/Key:roof:material">http://wiki.openstreetmap.org/wiki/Key:roof:material</a> it looks like you want roof:material=grass to specify that there is sod or grass as the top surface of the roof.</p>
+<p>From <a href="https://wiki.openstreetmap.org/wiki/Key:roof:material">https://wiki.openstreetmap.org/wiki/Key:roof:material</a> it looks like you want roof:material=grass to specify that there is sod or grass as the top surface of the roof.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -96,7 +96,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>With regard to tile-based maps, like <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> said the commonly-used libraries can work offline. I did a quick-and-dirty example a couple of years ago over at <a href="https://github.com/SomeoneElseOSM/OSMembedded">https://github.com/SomeoneElseOSM/OSMembedded</a> . I'm not sure why you need to "gather" maps - just download the data and create your own. See <a href="https://switch2osm.org/serving-tiles/">https://switch2osm.org/serving-tiles/</a> for more details about that.</p>
+<p>With regard to tile-based maps, like <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> said the commonly-used libraries can work offline. I did a quick-and-dirty example a couple of years ago over at <a href="https://github.com/SomeoneElseOSM/OSMembedded">https://github.com/SomeoneElseOSM/OSMembedded</a> . I'm not sure why you need to "gather" maps - just download the data and create your own. See <a href="https://switch2osm.org/serving-tiles/">https://switch2osm.org/serving-tiles/</a> for more details about that.</p>
 <p>Other non-tile-based options include the vector-based OsmAnd maps (download the code and have a look at what it does if you're interested in that). Maps.me (a version of which has been recently open-sourced) also used vector-based maps.</p>
 <p>Also see <a href="https://github.com/mapbox/mapbox-gl-cocoa/issues/62">https://github.com/mapbox/mapbox-gl-cocoa/issues/62</a> for a discussion of Mapbox vector tiles offline.</p>
 </div>
@@ -146,7 +146,7 @@ osqa_accepted = false
 <div id="post-45997-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11589/elad159">@elad159</a>: just search this help page for your new questions. I am sure you will find old questions (and answers) about this. If you cannot find, then ask new questions please. This makes this help site most efficient for everybody.</p>
+<p><a href="https://help.openstreetmap.org/users/11589/elad159">@elad159</a>: just search this help page for your new questions. I am sure you will find old questions (and answers) about this. If you cannot find, then ask new questions please. This makes this help site most efficient for everybody.</p>
 </div>
 <div id="comment-45997-info" class="comment-info">
 <span class="comment-age">(19 Oct '15, 19:08)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

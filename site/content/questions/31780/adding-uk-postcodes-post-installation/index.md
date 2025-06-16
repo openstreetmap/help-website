@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "adding uk postcodes post installation"
-description = '''Hi, and sorry if this question has already been asked in the past. Can I add uk postcodes (as mentioned in http://wiki.openstreetmap.org/wiki/Nominatim/Installation#UK_postcodes ) after I already have a running Nominatim installation? Thanks, Raz'''
+description = '''Hi, and sorry if this question has already been asked in the past. Can I add uk postcodes (as mentioned in https://wiki.openstreetmap.org/wiki/Nominatim/Installation#UK_postcodes ) after I already have a running Nominatim installation? Thanks, Raz'''
 date = "2014-03-23T11:45:00Z"
 lastmod = "2014-03-24T10:54:00Z"
 weight = 31780
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, and sorry if this question has already been asked in the past.</p>
-<p>Can I add uk postcodes (as mentioned in <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#UK_postcodes">http://wiki.openstreetmap.org/wiki/Nominatim/Installation#UK_postcodes</a> )</p>
+<p>Can I add uk postcodes (as mentioned in <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#UK_postcodes">https://wiki.openstreetmap.org/wiki/Nominatim/Installation#UK_postcodes</a> )</p>
 <p>after I already have a running Nominatim installation?</p>
 <p>Thanks, Raz</p>
 </div>

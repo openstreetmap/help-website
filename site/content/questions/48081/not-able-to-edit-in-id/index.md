@@ -92,7 +92,7 @@ osqa_accepted = false
 <div id="post-48105-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/967/techlady"></a><a href="http://help.openstreetmap.org/users/967/techlady">@techlady</a>: umm, well, so your link above is working now? It is not for me. (also see my answer)</p>
+<p><a href="https://help.openstreetmap.org/users/967/techlady"></a><a href="https://help.openstreetmap.org/users/967/techlady">@techlady</a>: umm, well, so your link above is working now? It is not for me. (also see my answer)</p>
 </div>
 <div id="comment-48105-info" class="comment-info">
 <span class="comment-age">(13 Feb '16, 21:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

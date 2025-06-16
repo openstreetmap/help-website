@@ -76,7 +76,7 @@ osqa_accepted = false
 <div id="post-78094-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Your question looks like it might be the same as <a href="https://help.openstreetmap.org/questions/77894/were-experiencing-an-issue-where-our-leaflet-map-on-our-homepage-is-not-displaying-any-images-and-remains-entirely-blank-a-lot-of-500-errors-are-reported-from-the-chrome-developer-console">https://help.openstreetmap.org/questions/77894/were-experiencing-an-issue-where-our-leaflet-map-on-our-homepage-is-not-displaying-any-images-and-remains-entirely-blank-a-lot-of-500-errors-are-reported-from-the-chrome-developer-console</a> so the answers there will probably apply to you too.</p>
+<p>Your question looks like it might be the same as <a href="/questions/77894/were-experiencing-an-issue-where-our-leaflet-map-on-our-homepage-is-not-displaying-any-images-and-remains-entirely-blank-a-lot-of-500-errors-are-reported-from-the-chrome-developer-console">https://help.openstreetmap.org/questions/77894/were-experiencing-an-issue-where-our-leaflet-map-on-our-homepage-is-not-displaying-any-images-and-remains-entirely-blank-a-lot-of-500-errors-are-reported-from-the-chrome-developer-console</a> so the answers there will probably apply to you too.</p>
 </div>
 <div id="comment-78094-info" class="comment-info">
 <span class="comment-age">(29 Dec '20, 01:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

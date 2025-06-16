@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>My local railway station is being re-developed and one of the cafes on the station is now operating out of a small kiosk. It is only selling drinks and pastries. In South-east England this type of coffee kiosk is common on railway stations. Elsewhere you find kiosks providing tourist information, or specific types of fast food (pretzels, bratwurst ...) or selling boat cruises:</p>
 <p><a href="http://s2.geograph.org.uk/photos/86/52/865266_2671498a_213x160.jpg"><img src="http://s2.geograph.org.uk/photos/86/52/865266_2671498a_213x160.jpg" alt="kiosk photo on geograph.co.uk" /><br />
 <span class="small">photo CC-BY-SA Michael Ely (on geograph.co.uk)</span></a></p>
-<p>The current definition on the <a href="http://wiki.openstreetmap.org/wiki/Tag%3Ashop%3Dkiosk">wiki</a> suggests that <code>shop=kiosk</code> should be used for kiosks which sell newspapers, magazines, sweets, tobacco (and possibly lottery tickets): the retail category known as CTN (<strong>C</strong>onfectionery, <strong>T</strong>obacco, <strong>N</strong>ews) in the United Kingdom. Whereas the tag value might not be perfect it seems that this is a widely accepted and useful meaning, which would therefore be devalued by using <code>shop=kiosk</code> for other retail and information outlets operating from kiosks.</p>
+<p>The current definition on the <a href="https://wiki.openstreetmap.org/wiki/Tag%3Ashop%3Dkiosk">wiki</a> suggests that <code>shop=kiosk</code> should be used for kiosks which sell newspapers, magazines, sweets, tobacco (and possibly lottery tickets): the retail category known as CTN (<strong>C</strong>onfectionery, <strong>T</strong>obacco, <strong>N</strong>ews) in the United Kingdom. Whereas the tag value might not be perfect it seems that this is a widely accepted and useful meaning, which would therefore be devalued by using <code>shop=kiosk</code> for other retail and information outlets operating from kiosks.</p>
 <p>I would therefore be interested to know :</p>
 <ul>
 <li>any existing tagging practices</li>
@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>My recommendation would be to avoid using <code>shop=kiosk</code> . It's a tag which has been documented since the early days of wiki tag docs. I had <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Newsagent#Not_needed">some persuading to do</a>, to convince people that <code>shop=newsagent</code> was a good tag, because it's selling the same things as far as products go, so was sort of a duplicate. As we know, the word "kiosk" describes the building size. For this reason it never really should've been in the 'shop' key (Not that I'm blaming anyone. It was a very early tag as I say)</p>
+<p>My recommendation would be to avoid using <code>shop=kiosk</code> . It's a tag which has been documented since the early days of wiki tag docs. I had <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Newsagent#Not_needed">some persuading to do</a>, to convince people that <code>shop=newsagent</code> was a good tag, because it's selling the same things as far as products go, so was sort of a duplicate. As we know, the word "kiosk" describes the building size. For this reason it never really should've been in the 'shop' key (Not that I'm blaming anyone. It was a very early tag as I say)</p>
 <p>Now that shop=newsagent has bedded in a bit, if I could bring myself to start an argument on the matter, I would probably suggest that <code>shop=kiosk</code> should be phased out. This doesn't mean we stop mapping "kiosks". We just use a tag like building=kiosk instead (<a href="http://taginfo.openstreetmap.org/tags/building=kiosk">a few people starting to use this</a>)</p>
 <p>So in answer to your question I would do: <code>amenity=cafe, building=kiosk</code> ...and you could throw in <code>seating=no</code> for good measure.</p>
 <p>You might say, because it's only a little kiosk, it's not really a cafe. Debatable I'm sure, but I tend to think in terms of "top level tags" to give a basic classification to a thing. In this case the most helpful basic classification would be cafe I reckon.</p>
@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>After much reflection I have decided to use the tag <strong><code>kiosk=*</code></strong>, where typical values are those found for the shop tag. I am not using this in conjunction with <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dkiosk"><code>shop=kiosk</code></a> as this may still be construed solely to mean a newsagent-style kiosk, there is nothing to stop others tagging in this way.</p>
+<p>After much reflection I have decided to use the tag <strong><code>kiosk=*</code></strong>, where typical values are those found for the shop tag. I am not using this in conjunction with <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dkiosk"><code>shop=kiosk</code></a> as this may still be construed solely to mean a newsagent-style kiosk, there is nothing to stop others tagging in this way.</p>
 <p>There are at present a two of <a href="http://taginfo.openstreetmap.org.uk/keys/kiosk#values">kiosk=ice_cream</a> nodes in OSM. Other values which are relevant are: yes (when also an amenity), coffee (when not amenity=cafe), tickets, information, lottery (e.g. <a href="http://en.wikipedia.org/wiki/File:Once_kiosk.jpg">ONCE lottery ticket kiosks</a>). The tag kiosk could also be used to map <a href="http://en.wikipedia.org/wiki/Mall_kiosk">Mall Kiosks</a>, locally these often over mobile phone services or accessories.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -262,7 +262,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>TKTS leicester square ( <a href="http://www.openstreetmap.org/browse/node/348861308">http://www.openstreetmap.org/browse/node/348861308</a> ) is tagged amenity=ticket_office That's an awkward example because you <em>could</em> actually add shop=kiosk alongside that tag (because ticket office happens to be under the amenity key, whereas other examples would involve a clash on the shop key) ...but even so building=kiosk is a better tag to add as an additional "property tag" on the ticket office in my opinion.</p>
+<p>TKTS leicester square ( <a href="https://www.openstreetmap.org/browse/node/348861308">https://www.openstreetmap.org/browse/node/348861308</a> ) is tagged amenity=ticket_office That's an awkward example because you <em>could</em> actually add shop=kiosk alongside that tag (because ticket office happens to be under the amenity key, whereas other examples would involve a clash on the shop key) ...but even so building=kiosk is a better tag to add as an additional "property tag" on the ticket office in my opinion.</p>
 </div>
 <div id="comment-25531-info" class="comment-info">
 <span class="comment-age">(18 Aug '13, 01:06)</span> <span class="comment-user userinfo">Harry Wood</span>

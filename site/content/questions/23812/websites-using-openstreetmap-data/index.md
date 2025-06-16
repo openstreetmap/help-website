@@ -152,10 +152,10 @@ This question is marked "community wiki".
 <p>The <strong><a href="http://switch2osm.org/case-studies/">Case Studies</a></strong> on switch2osm.org offer a small selection of prominent examples.</p>
 <p>In addition to that, the OpenStreetMap wiki does have much more comprehensive lists of almost everything, but it's not always easy to find the right one:</p>
 <ul>
-<li><strong><a href="http://wiki.openstreetmap.org/wiki/OSM_Internet_Links">OSM Internet Links</a></strong> contains sites using OSM (the <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Internet_Links">German page</a> is a lot longer)</li>
+<li><strong><a href="https://wiki.openstreetmap.org/wiki/OSM_Internet_Links">OSM Internet Links</a></strong> contains sites using OSM (the <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Internet_Links">German page</a> is a lot longer)</li>
 <li><strong><a href="https://wiki.openstreetmap.org/wiki/They_are_using_OpenStreetMap">They are using OpenStreetMap</a></strong> is a list of organizations using OSM (not limited to websites)</li>
-<li><strong><a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List of OSM based Services</a></strong> contains mostly specialist or experimental map styles; you won't find sites that just embed standard maps</li>
-<li><strong><a href="http://wiki.openstreetmap.org/wiki/Software">Software</a></strong> has links to lists and tables of applications for various platforms</li>
+<li><strong><a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List of OSM based Services</a></strong> contains mostly specialist or experimental map styles; you won't find sites that just embed standard maps</li>
+<li><strong><a href="https://wiki.openstreetmap.org/wiki/Software">Software</a></strong> has links to lists and tables of applications for various platforms</li>
 </ul>
 <p>A few of the switch2osm.org case studies are related to real estate business and may be relevant to your interests.</p>
 </div>
@@ -221,7 +221,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_Online_Browsing">OSM_Online_Browsing</a> and <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List_of_OSM_based_Services</a>.</p>
+<p>See the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_Online_Browsing">OSM_Online_Browsing</a> and <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List_of_OSM_based_Services</a>.</p>
 <p>Maybe there are even more lists inside the wiki about special maps or special usecases, so browse the wiki if you like.</p>
 </div>
 <div class="answer-controls post-controls">

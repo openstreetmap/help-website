@@ -178,7 +178,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>To be clear, OpenStreetMap isn't designed as a map service you can use. It's some map data that you can contribute to and create your own maps from. Let's take Visakhapatnam as an example. In the openstreetmap.in example map, that's <a href="http://openstreetmap.in/demo/#9.54/17.6915/83.1969">http://openstreetmap.in/demo/#9.54/17.6915/83.1969</a> . In the OSM data, it's <a href="http://www.openstreetmap.org/node/245641840">http://www.openstreetmap.org/node/245641840</a> . You can see the available names that you can use to incorporate into maps there.</p>
+<p>To be clear, OpenStreetMap isn't designed as a map service you can use. It's some map data that you can contribute to and create your own maps from. Let's take Visakhapatnam as an example. In the openstreetmap.in example map, that's <a href="http://openstreetmap.in/demo/#9.54/17.6915/83.1969">http://openstreetmap.in/demo/#9.54/17.6915/83.1969</a> . In the OSM data, it's <a href="https://www.openstreetmap.org/node/245641840">https://www.openstreetmap.org/node/245641840</a> . You can see the available names that you can use to incorporate into maps there.</p>
 <p>Various people have created maps that feature latin names - the cycle map and transport layers at openstreetmap.org among them. Another example is "Gnome Maps" which uses tiles from Mapbox (see <a href="http://www.omgubuntu.co.uk/2016/07/gnome-maps-new-tile-service">here</a> for the story of that).</p>
 </div>
 <div id="comment-52963-info" class="comment-info">

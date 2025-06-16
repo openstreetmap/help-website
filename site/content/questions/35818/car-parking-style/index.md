@@ -131,7 +131,7 @@ One Answer:
 <div class="answer-body">
 <p>With the new example, I think I understand what you are getting at.</p>
 <p>Parking areas should not only include the parking spaces themselves, but also the access roads between the parking spaces and similar infrastructure. It is common to also include smaller sections of scrub or other decorations.</p>
-<p>If you want to map the individual parking spaces or blocks of parking spaces, you can use areas tagged <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space">amenity=parking_space</a>. They must not replace the parking area, but be mapped <em>in addition</em> to it.</p>
+<p>If you want to map the individual parking spaces or blocks of parking spaces, you can use areas tagged <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space">amenity=parking_space</a>. They must not replace the parking area, but be mapped <em>in addition</em> to it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

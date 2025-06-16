@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is unlikely that you will be able to use OSM data for address <strong>verification</strong> since the absence of an address does not guarantee that that address doesn't exist. I do not believe there are any countries for which OSM has a complete and definitive list of addresses.</p>
-<p>You can use OSM data to geocode addresses - i.e. covert an address to a latitude and longitude. See the nominatim <a href="http://wiki.openstreetmap.org/wiki/Nominatim">API</a> and usage <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">policy</a> but even for this purpose you are not guaranteed to get a valid location for all addresses and how suitable it is will depend on your usage.</p>
+<p>You can use OSM data to geocode addresses - i.e. covert an address to a latitude and longitude. See the nominatim <a href="https://wiki.openstreetmap.org/wiki/Nominatim">API</a> and usage <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">policy</a> but even for this purpose you are not guaranteed to get a valid location for all addresses and how suitable it is will depend on your usage.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a>.</p>
+<p>Please see the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -73,7 +73,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You can always go to osm.org proper to fix problems with osm data. See the <a href="http://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">beginner's guide</a>.</p>
+<p>You can always go to osm.org proper to fix problems with osm data. See the <a href="https://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">beginner's guide</a>.</p>
 <p>On the other hand, if it's a runkeeper-specific issue (what "more accurate times" are you talking about ?), you'll need to take your question to the runkeeper devs/community.</p>
 </div>
 <div id="comment-36498-info" class="comment-info">

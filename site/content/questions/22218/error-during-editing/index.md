@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "error during editing"
-description = '''When I use Potlatch2 to edit a map, I get error: There was a problem loading the map data. Please check your internet connection, or try zooming in. This is the link: http://www.openstreetmap.org/edit?lat=54.044717&amp;amp;lon=21.774369&amp;amp;zoom=18'''
+description = '''When I use Potlatch2 to edit a map, I get error: There was a problem loading the map data. Please check your internet connection, or try zooming in. This is the link: https://www.openstreetmap.org/edit?lat=54.044717&amp;amp;lon=21.774369&amp;amp;zoom=18'''
 date = "2013-05-09T15:01:00Z"
 lastmod = "2013-05-13T13:51:00Z"
 weight = 22218
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>When I use Potlatch2 to edit a map, I get error:</p>
 <p>There was a problem loading the map data. Please check your internet connection, or try zooming in.</p>
-<p>This is the link: <a href="http://www.openstreetmap.org/edit?lat=54.044717&amp;lon=21.774369&amp;zoom=18">http://www.openstreetmap.org/edit?lat=54.044717&amp;lon=21.774369&amp;zoom=18</a></p>
+<p>This is the link: <a href="https://www.openstreetmap.org/edit?lat=54.044717&amp;lon=21.774369&amp;zoom=18">https://www.openstreetmap.org/edit?lat=54.044717&amp;lon=21.774369&amp;zoom=18</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -130,7 +130,7 @@ One Answer:
 <div class="comment-text">
 <p>I still get this error:</p>
 <p>There was a problem loading the map data. Please check your internet connection, or try zooming in.</p>
-<p><a href="http://www.openstreetmap.org/api/0.6/map?bbox=21%2E69533556560898%2C54%2E01761497244311%2C21%2E808443246883392%2C54%2E07183076231712">http://www.openstreetmap.org/api/0.6/map?bbox=21%2E69533556560898%2C54%2E01761497244311%2C21%2E808443246883392%2C54%2E07183076231712</a></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/map?bbox=21%2E69533556560898%2C54%2E01761497244311%2C21%2E808443246883392%2C54%2E07183076231712">https://www.openstreetmap.org/api/0.6/map?bbox=21%2E69533556560898%2C54%2E01761497244311%2C21%2E808443246883392%2C54%2E07183076231712</a></p>
 </div>
 <div id="comment-22373-info" class="comment-info">
 <span class="comment-age">(13 May '13, 13:22)</span> <span class="comment-user userinfo">pawel_zielony</span>

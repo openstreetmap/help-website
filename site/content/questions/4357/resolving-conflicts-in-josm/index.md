@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing">JOSM/Advanced_editing</a> ... there are some hints for resolving conflicts.</p>
+<p>Have a look in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing">JOSM/Advanced_editing</a> ... there are some hints for resolving conflicts.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

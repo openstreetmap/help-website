@@ -162,7 +162,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>For a beginner, I would highly recommend to start with overpass turbo wizard. It automatically does all the magic for you, i.e. no need to learn anything new.</p>
 <p>Just type: <code>amenity=school in "Lyngby-Taarbæk Kommune"</code> in the wizard dialog on overpass-turbo.eu. You can read all about the wizard here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard">http://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard">https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard</a></p>
 <p>It's super simple to use. Just give it a try.</p>
 </div>
 <div id="comment-39893-info" class="comment-info">
@@ -205,7 +205,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a query tool that you can use to find the objects in question. It is called "Overpass API" and can be conveniently accessed through the <a href="http://overpass-turbo.eu">Overpass Turbo</a> web site. Using Overpass to find the schools in Lyngby-Taarbæk requires that you first identify the OSM relation ID of that municipality - <a href="http://www.openstreetmap.org/relation/2183062">2183062</a> - and then add 3600000000 to that number to use it in an Overpass query like so:</p>
+<p>There is a query tool that you can use to find the objects in question. It is called "Overpass API" and can be conveniently accessed through the <a href="http://overpass-turbo.eu">Overpass Turbo</a> web site. Using Overpass to find the schools in Lyngby-Taarbæk requires that you first identify the OSM relation ID of that municipality - <a href="https://www.openstreetmap.org/relation/2183062">2183062</a> - and then add 3600000000 to that number to use it in an Overpass query like so:</p>
 <pre><code>&lt;osm-script output=&quot;json&quot;&gt;
   &lt;query type=&quot;node&quot;&gt;
     &lt;has-kv k=&quot;amenity&quot; v=&quot;school&quot;/&gt;
@@ -214,7 +214,7 @@ osqa_accepted = true
   &lt;print mode=&quot;body&quot;/&gt;  
 &lt;/osm-script&gt;</code></pre>
 <p><a href="http://overpass-turbo.eu/s/6I3">(See it in action directly on Overpass Turbo.)</a></p>
-<p>You can influence the look of the result within certain limits, see <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/MapCSS.">http://wiki.openstreetmap.org/wiki/Overpass_turbo/MapCSS.</a> If you want more control over the look of the map, you should have a look at the <a href="http://umap.openstreetmap.fr">UMap service</a> which lets you draw stuff on the map and edit it. You can even export the query results from the above Overpass query and import them into UMap for editing, or <a href="http://www.mappa-mercia.org/2014/09/creating-an-always-up-to-date-map.html">directly link UMap and Overpass</a> - but then of course you can't manually edit the result.</p>
+<p>You can influence the look of the result within certain limits, see <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/MapCSS.">https://wiki.openstreetmap.org/wiki/Overpass_turbo/MapCSS.</a> If you want more control over the look of the map, you should have a look at the <a href="http://umap.openstreetmap.fr">UMap service</a> which lets you draw stuff on the map and edit it. You can even export the query results from the above Overpass query and import them into UMap for editing, or <a href="http://www.mappa-mercia.org/2014/09/creating-an-always-up-to-date-map.html">directly link UMap and Overpass</a> - but then of course you can't manually edit the result.</p>
 <p><a href="http://umap.openstreetmap.fr/de/map/anonymous-edit/24805%3At9FlEAJk6Nau1L-oEMLgok1ElII">(Example for an editable UMap with the above data.)</a></p>
 <p>(answer edited to include comments by escada and mmd, thanks!)</p>
 </div>

@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am unclear how I can name two or more parts of the same building separately. I found <a href="http://www.openstreetmap.org/?lat=51.527194&amp;lon=-2.597091&amp;zoom=18&amp;layers=M">this example</a> of what I want to achieve (where part is Halfords, part is BestBuy) but I don't understand how to achieve it. Any advice would be appreciated - thanks.</p>
+<p>I am unclear how I can name two or more parts of the same building separately. I found <a href="https://www.openstreetmap.org/?lat=51.527194&amp;lon=-2.597091&amp;zoom=18&amp;layers=M">this example</a> of what I want to achieve (where part is Halfords, part is BestBuy) but I don't understand how to achieve it. Any advice would be appreciated - thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-split" rel="tag" title="see questions tagged &#39;split&#39;">split</span>
@@ -63,7 +63,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Many thanks to all. I think my main issue was that I was not closing the second set of nodes. Hopefully I've cracked it - <a href="http://www.openstreetmap.org/?lat=51.497914&amp;lon=-2.522112&amp;zoom=18&amp;layers=M">see here</a> where I've split the central building into a Cardiac and Laser centre. Tim's video was particularly brilliant as it hand-held me through it.</p>
+<p>Many thanks to all. I think my main issue was that I was not closing the second set of nodes. Hopefully I've cracked it - <a href="https://www.openstreetmap.org/?lat=51.497914&amp;lon=-2.522112&amp;zoom=18&amp;layers=M">see here</a> where I've split the central building into a Cardiac and Laser centre. Tim's video was particularly brilliant as it hand-held me through it.</p>
 <p>Onwards and upwards! :-)</p>
 </div>
 <div id="comment-9099-info" class="comment-info">
@@ -371,7 +371,7 @@ osqa_accepted = true
 <div id="post-9067-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>this will explain "j" and others <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
+<p>this will explain "j" and others <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
 </div>
 <div id="comment-9067-info" class="comment-info">
 <span class="comment-age">(17 Nov '11, 10:23)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-37918-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As an asside, do you know about the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/measurement">measurement plugin</a> ? It's probably a better tool than the scale if you want to use it to draw.</p>
+<p>As an asside, do you know about the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/measurement">measurement plugin</a> ? It's probably a better tool than the scale if you want to use it to draw.</p>
 </div>
 <div id="comment-37918-info" class="comment-info">
 <span class="comment-age">(24 Oct '14, 11:00)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

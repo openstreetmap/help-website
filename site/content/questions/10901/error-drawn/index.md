@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Error drawn"
-description = '''Hi, just to register my company, by the editor. Should leave the area drawn, but appears incomplete. http://www.openstreetmap.org/export/embed.html?bbox=-1.297776,37.588367,-1.295271,37.590582&amp;amp;layer=mapnik'''
+description = '''Hi, just to register my company, by the editor. Should leave the area drawn, but appears incomplete. https://www.openstreetmap.org/export/embed.html?bbox=-1.297776,37.588367,-1.295271,37.590582&amp;amp;layer=mapnik'''
 date = "2012-03-01T12:29:00Z"
 lastmod = "2012-03-01T16:20:00Z"
 weight = 10901
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, just to register my company, by the editor. Should leave the area drawn, but appears incomplete.</p>
-<p><a href="http://www.openstreetmap.org/export/embed.html?bbox=-1.297776,37.588367,-1.295271,37.590582&amp;layer=mapnik">http://www.openstreetmap.org/export/embed.html?bbox=-1.297776,37.588367,-1.295271,37.590582&amp;layer=mapnik</a></p>
+<p><a href="https://www.openstreetmap.org/export/embed.html?bbox=-1.297776,37.588367,-1.295271,37.590582&amp;layer=mapnik">https://www.openstreetmap.org/export/embed.html?bbox=-1.297776,37.588367,-1.295271,37.590582&amp;layer=mapnik</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-company" rel="tag" title="see questions tagged &#39;company&#39;">company</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think I saw the same problem you are probably referring to <a href="http://www.openstreetmap.org/?lat=37.5894&amp;lon=-1.29586&amp;zoom=17&amp;layers=M">viewing the map here</a>. For some reason the rendering system wasn't refreshing some tiles off to the right hand side of the building area... but it's all re-rendered now. Some rendering and caching quirks can occur shortly after adding data, and this is more noticeable with areas of colour such as your landuse area there. If it still looks wrong for you, try holding down [shift] key while clicking refresh.</p>
+<p>I think I saw the same problem you are probably referring to <a href="https://www.openstreetmap.org/?lat=37.5894&amp;lon=-1.29586&amp;zoom=17&amp;layers=M">viewing the map here</a>. For some reason the rendering system wasn't refreshing some tiles off to the right hand side of the building area... but it's all re-rendered now. Some rendering and caching quirks can occur shortly after adding data, and this is more noticeable with areas of colour such as your landuse area there. If it still looks wrong for you, try holding down [shift] key while clicking refresh.</p>
 <p>Your data looks fine. Thanks for contributing to OpenStreetMap! Looks like there's plenty more things to add in this area of Spain e.g. streets in the nearby town of Mazarron. Help make the map better to help people find your business!</p>
 </div>
 <div class="answer-controls post-controls">

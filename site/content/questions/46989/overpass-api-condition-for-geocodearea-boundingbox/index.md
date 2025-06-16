@@ -69,7 +69,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>As far as I know you can only limit one query by either bbox or area parameter ... there is no combination feature in overpass-api documentation.</p>
-<p>But maybe you can do a difference between one result from the other and get a result you want. See <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference</a></p>
+<p>But maybe you can do a difference between one result from the other and get a result you want. See <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference</a></p>
 </div>
 <div id="comment-47037-info" class="comment-info">
 <span class="comment-age">(07 Dec '15, 17:11)</span> <span class="comment-user userinfo">stephan75</span>
@@ -165,7 +165,7 @@ out body;</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a>, may i know why is the 36000 number is prefixed with relation id?</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a>, may i know why is the 36000 number is prefixed with relation id?</p>
 </div>
 <div id="comment-49859-info" class="comment-info">
 <span class="comment-age">(27 May '16, 10:12)</span> <span class="comment-user userinfo">yogi_ks</span>
@@ -177,7 +177,7 @@ out body;</code></pre>
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10906/yogi_ks"></a><a href="http://help.openstreetmap.org/users/10906/yogi_ks">@yogi_ks</a>: it's simply a convention which is only used for Overpass API: read more about it <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">on the wiki page</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/10906/yogi_ks"></a><a href="https://help.openstreetmap.org/users/10906/yogi_ks">@yogi_ks</a>: it's simply a convention which is only used for Overpass API: read more about it <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">on the wiki page</a>.</p>
 <p><em>By convention the area id can be calculated from an existing OSM way by adding 2400000000 to its OSM id, or in case of a relation by adding 3600000000 respectively</em></p>
 </div>
 <div id="comment-49861-info" class="comment-info">
@@ -189,7 +189,7 @@ out body;</code></pre>
 <div id="post-49862-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a>: thank you for the explanation.</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a>: thank you for the explanation.</p>
 </div>
 <div id="comment-49862-info" class="comment-info">
 <span class="comment-age">(27 May '16, 12:11)</span> <span class="comment-user userinfo">yogi_ks</span>

@@ -129,8 +129,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I do not know what the "TopoMap tool" is and where you have downloaded your tiles. If you have downloaded tiles into a directory and these tiles conform to the standard z/x/y.png structure, then you can simply set up a local web page with OpenLayers or Leaflet, and instead of a tile server, you specify a "file: URL" as the location (or indeed any relative URL if the local web page has already been called through a file URL).</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example">http://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example</a> may have an example you can work from.</p>
-<p>Note that downloading large amounts of tiles from OSM for offline use is <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">not allowed.</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example">https://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example</a> may have an example you can work from.</p>
+<p>Note that downloading large amounts of tiles from OSM for offline use is <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">not allowed.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

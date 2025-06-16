@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see this question for answers: <a href="https://help.openstreetmap.org/questions/4091/new-road-has-different-name-on-opposite-sides">New road has different name on opposite sides</a></p>
+<p>Please see this question for answers: <a href="/questions/4091/new-road-has-different-name-on-opposite-sides">New road has different name on opposite sides</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

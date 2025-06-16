@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to create an extremely basic Mapnik XML stylesheet, so that I can display purely all ways and nodes in an OSM extract, for debugging purposes. It doesn't need to look pretty.</p>
-<p>I am running this against a flat-file .osm file, using the Geofabrik extract suggested at: <a href="http://wiki.openstreetmap.org/wiki/Mapnik/Rendering_OSM_XML_data_directly">http://wiki.openstreetmap.org/wiki/Mapnik/Rendering_OSM_XML_data_directly</a></p>
+<p>I am running this against a flat-file .osm file, using the Geofabrik extract suggested at: <a href="https://wiki.openstreetmap.org/wiki/Mapnik/Rendering_OSM_XML_data_directly">https://wiki.openstreetmap.org/wiki/Mapnik/Rendering_OSM_XML_data_directly</a></p>
 <p>I can't get the nodes to show - what am I doing wrong? The ways are showing fine.</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;Map background-color=&quot;#f2efe9&quot; srs=&quot;+proj=latlong +datum=WGS84&quot;&gt;
@@ -104,7 +104,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: Have clarified that I'm using a flat-file .osm extract.</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>: Have clarified that I'm using a flat-file .osm extract.</p>
 </div>
 <div id="comment-48078-info" class="comment-info">
 <span class="comment-age">(12 Feb '16, 16:18)</span> <span class="comment-user userinfo">fooquency</span>

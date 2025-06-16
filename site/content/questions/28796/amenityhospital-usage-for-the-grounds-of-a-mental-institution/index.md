@@ -110,11 +110,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity=hospital"><code>amenity=hospital</code></a> is a good start.</p>
-<p>One way to refine it further is <a href="http://taginfo.openstreetmap.org/search?q=psy#keys"><code>health_specialty=psychotherapy/psychiatry</code></a>. It comes from the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0">healthcare 2.0</a> proposed feature, which has seen some criticism and may not yet be ready for prime-time, but seems to be the only comprehensive proposition and sees some traction.</p>
-<p>The other option I know of is <code>healthcare=psychotherapist</code> / <code>psychiatrist</code> from the older <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare">healthcare</a> proposed feature. It's a bit simpler and is slightly more frequent in the db.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity=hospital"><code>amenity=hospital</code></a> is a good start.</p>
+<p>One way to refine it further is <a href="http://taginfo.openstreetmap.org/search?q=psy#keys"><code>health_specialty=psychotherapy/psychiatry</code></a>. It comes from the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0">healthcare 2.0</a> proposed feature, which has seen some criticism and may not yet be ready for prime-time, but seems to be the only comprehensive proposition and sees some traction.</p>
+<p>The other option I know of is <code>healthcare=psychotherapist</code> / <code>psychiatrist</code> from the older <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare">healthcare</a> proposed feature. It's a bit simpler and is slightly more frequent in the db.</p>
 <p>Unless you have a strong preference for healthcare 1 or 2, I suggest you tag both, as their tags do not collide and you'll reach a wider "audience" since neither scheme has clearly "won" yet.</p>
-<p>That said, most mental institutions are much more lightweight than a hospital. <a href="http://wiki.openstreetmap.org/wiki/Key:social_facility"><code>amenity=social_facility</code></a> is often a better fit, and includes a fairly well-used social_facility:for=mental_health.</p>
+<p>That said, most mental institutions are much more lightweight than a hospital. <a href="https://wiki.openstreetmap.org/wiki/Key:social_facility"><code>amenity=social_facility</code></a> is often a better fit, and includes a fairly well-used social_facility:for=mental_health.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

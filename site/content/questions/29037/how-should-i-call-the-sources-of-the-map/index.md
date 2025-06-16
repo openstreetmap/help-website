@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, "© OpenStreetMap-Mitwirkende" is enough. You can put it on/beside each map, or at the end of the book with all the other aknowledgements. This is explained on the <a href="http://www.openstreetmap.org/copyright">copyright page</a>.</p>
+<p>Yes, "© OpenStreetMap-Mitwirkende" is enough. You can put it on/beside each map, or at the end of the book with all the other aknowledgements. This is explained on the <a href="https://www.openstreetmap.org/copyright">copyright page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -127,7 +127,7 @@ One Answer:
 <li>Maximum of 50k elements (nodes + ways + relations) per changeset;</li>
 <li>Maximum of 2k nodes per way.</li>
 </ul>
-<p>You can get the current values requesting the current API capabilities, using the functionality built-in, as described in the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Capabilities:_GET_.2Fapi.2Fcapabilities">API v0.6</a> documentation. For the public API server, see its <a href="http://www.openstreetmap.org/api/capabilities">Current Capabilities</a>.</p>
+<p>You can get the current values requesting the current API capabilities, using the functionality built-in, as described in the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Capabilities:_GET_.2Fapi.2Fcapabilities">API v0.6</a> documentation. For the public API server, see its <a href="https://www.openstreetmap.org/api/capabilities">Current Capabilities</a>.</p>
 <p>It is very uncommon to reach those limits in common, urban editing, but quite possible when editing large bodies of water. I would recommend that when a way is close to half the maximum number of nodes (in this case, 1k nodes), it should be broken in two parts, one with 1k nodes and the other with the remainder of the nodes, and creating (or updating) the relevant relation. This way, it is possible to edit the element with very low risk of it reaching the limit again.</p>
 <p>I never reached the maximum number of elements in a changeset, but created more than one with somewhat more than 20k elements - without any problem when uploading.</p>
 </div>

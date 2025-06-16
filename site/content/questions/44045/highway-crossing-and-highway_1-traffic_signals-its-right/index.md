@@ -131,7 +131,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>For e.s.c.a.d.a .: I think this complicated issue. I think he should really be better debated, to define a common standard to everyone, which is difficult. I do not use the JOSM because it is incompatible with Chromebooks.</p>
-<p>Here's a link the intersection in question. analyze and see if it's correct: <a href="http://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949">http://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949</a></p>
+<p>Here's a link the intersection in question. analyze and see if it's correct: <a href="https://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949">https://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949</a></p>
 </div>
 <div id="comment-44109-info" class="comment-info">
 <span class="comment-age">(10 Jul '15, 13:08)</span> <span class="comment-user userinfo">seth</span>
@@ -143,7 +143,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I just updated the crossing in the way I would tag it, using iD. So my solution has nothing to do with the editor. See <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals">traffic signals wiki page</a> simple intersections why a single traffic signal node in the middle works</p>
+<p>I just updated the crossing in the way I would tag it, using iD. So my solution has nothing to do with the editor. See <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals">traffic signals wiki page</a> simple intersections why a single traffic signal node in the middle works</p>
 <p>There are now 5 nodes, one for each zebra crossing, 1 for the place where the two roads intersect</p>
 </div>
 <div id="comment-44110-info" class="comment-info">
@@ -231,7 +231,7 @@ osqa_accepted = true
 <div id="post-44049-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As documented on the corresponding <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Traffic_signals_for_pedestrians">wiki page</a></p>
+<p>As documented on the corresponding <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Traffic_signals_for_pedestrians">wiki page</a></p>
 </div>
 <div id="comment-44049-info" class="comment-info">
 <span class="comment-age">(08 Jul '15, 20:20)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -276,7 +276,7 @@ osqa_accepted = true
 <div id="post-44086-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As SK53 said, highway=crossing,crossing=traffic_signals,crossing_ref=zebra. I typically do not add crossing_ref=zebra as all pedestrian crossing here are "zebras". We do not have the other types. BTW, the <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">crossing</a> wiki page does not mention crossing=zebra at all.</p>
+<p>As SK53 said, highway=crossing,crossing=traffic_signals,crossing_ref=zebra. I typically do not add crossing_ref=zebra as all pedestrian crossing here are "zebras". We do not have the other types. BTW, the <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">crossing</a> wiki page does not mention crossing=zebra at all.</p>
 </div>
 <div id="comment-44086-info" class="comment-info">
 <span class="comment-age">(09 Jul '15, 20:02)</span> <span class="comment-user userinfo">escada</span>
@@ -311,7 +311,7 @@ osqa_accepted = true
 <div id="post-44093-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See the page on <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">crossing</a>, use crossing_ref : "The traditional, region-specific reference, such as zebra or pelican"</p>
+<p>See the page on <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">crossing</a>, use crossing_ref : "The traditional, region-specific reference, such as zebra or pelican"</p>
 </div>
 <div id="comment-44093-info" class="comment-info">
 <span class="comment-age">(10 Jul '15, 04:15)</span> <span class="comment-user userinfo">escada</span>
@@ -366,9 +366,9 @@ osqa_accepted = true
 <p>Scai ... but the traffic signal (for cars) is exactly through which pedestrians.</p>
 <p>I did what you suggested: putting different points. Maybe it's the tits out, but I believe that should be at the same point.</p>
 <p>Here's a link the intersection in question. analyze and see if it's correct:</p>
-<p><a href="http://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949">http://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949</a></p>
+<p><a href="https://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949">https://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949</a></p>
 <p>For e.s.c.a.d.a .: I think this complicated issue. I think he should really be better debated, to define a common standard to everyone, which is difficult. I do not use the JOSM because it is incompatible with Chromebooks.</p>
-<p>Here's a link the intersection in question. analyze and see if it's correct: <a href="http://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949">http://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949</a></p>
+<p>Here's a link the intersection in question. analyze and see if it's correct: <a href="https://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949">https://www.openstreetmap.org/edit?node=3641052960#map=20/-20.46169/-54.61949</a></p>
 </div>
 <div id="comment-44108-info" class="comment-info">
 <span class="comment-age">(10 Jul '15, 13:08)</span> <span class="comment-user userinfo">seth</span>

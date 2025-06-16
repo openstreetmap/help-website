@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find a list of programs and features for Android phones on <a href="http://wiki.openstreetmap.org/wiki/Android">the wiki</a>. I use <a href="http://osmand.net/">OsmAnd+</a> that allows you to download vector maps over every region in France.</p>
+<p>You can find a list of programs and features for Android phones on <a href="https://wiki.openstreetmap.org/wiki/Android">the wiki</a>. I use <a href="http://osmand.net/">OsmAnd+</a> that allows you to download vector maps over every region in France.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

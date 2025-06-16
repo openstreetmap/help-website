@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A recent UI change has moved the export of data from the export tab to an export link on the left, and the export of images (including PDF) to the "share" tab on the right. - You will however find that PDFs generated from the web interface are not editable very well, and you will be better off generating your own PDF with Maperitive. See e.g. the answers to <a href="https://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator">Using map in Adobe Illustrator?</a></p>
+<p>A recent UI change has moved the export of data from the export tab to an export link on the left, and the export of images (including PDF) to the "share" tab on the right. - You will however find that PDFs generated from the web interface are not editable very well, and you will be better off generating your own PDF with Maperitive. See e.g. the answers to <a href="/questions/1455/using-map-in-adobe-illustrator">Using map in Adobe Illustrator?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

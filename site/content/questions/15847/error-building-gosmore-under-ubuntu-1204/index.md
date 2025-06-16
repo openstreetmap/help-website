@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Error building Gosmore under ubuntu 12.04"
-description = '''I am trying to build Gosmore under Ubuntu 12.04. I am following the instrucions on http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running: sudo apt-get install libxml2-dev libgtk2.0-dev g++ make subversion libcurl4-gnutls-dev libgps-dev svn co http://svn.openstreetmap.org/applications/re...'''
+description = '''I am trying to build Gosmore under Ubuntu 12.04. I am following the instrucions on https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running: sudo apt-get install libxml2-dev libgtk2.0-dev g++ make subversion libcurl4-gnutls-dev libgps-dev svn co http://svn.openstreetmap.org/applications/re...'''
 date = "2012-09-06T15:40:00Z"
 lastmod = "2013-03-31T16:52:00Z"
 weight = 15847
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to build Gosmore under Ubuntu 12.04. I am following the instrucions on <a href="http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running:">http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running:</a></p>
+<p>I am trying to build Gosmore under Ubuntu 12.04. I am following the instrucions on <a href="https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running:">https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running:</a></p>
 <pre><code>sudo apt-get install libxml2-dev libgtk2.0-dev g++ make subversion libcurl4-gnutls-dev libgps-dev
 svn co http://svn.openstreetmap.org/applications/rendering/gosmore/
 cd gosmore
@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see possible solution at <a href="http://wiki.openstreetmap.org/wiki/Talk:Gosmore">http://wiki.openstreetmap.org/wiki/Talk:Gosmore</a></p>
+<p>see possible solution at <a href="https://wiki.openstreetmap.org/wiki/Talk:Gosmore">https://wiki.openstreetmap.org/wiki/Talk:Gosmore</a></p>
 <p>Use at your own risk</p>
 </div>
 <div class="answer-controls post-controls">

@@ -44,7 +44,7 @@ osqa_accepted = true
 <p>Don't you have any suggestions how it can be done? E.g. get a pice of road where GPS coordinate point to.</p>
 <p>UPD:</p>
 <p>Here is the example how direction services draw a route and how it should be. Blue line is how the mapbox draws the route. Red line is where the actual route is located.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/screenshot_XxVHH0q.png" alt="alt text" /></p>
+<p><img src="/upfiles/screenshot_XxVHH0q.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-directions" rel="tag" title="see questions tagged &#39;directions&#39;">directions</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span>

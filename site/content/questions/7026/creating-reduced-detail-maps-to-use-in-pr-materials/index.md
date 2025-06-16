@@ -106,10 +106,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You have at least two possibilities to reach your aim:</p>
-<p>Use full OSM raw data and process it with a small local <a href="http://wiki.openstreetmap.org/wiki/Rendering">renderer</a> like <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> or <a href="http://wiki.openstreetmap.org/wiki/Mapweaver">Mapweaver</a> by configuring the rendering rules there,</p>
+<p>Use full OSM raw data and process it with a small local <a href="https://wiki.openstreetmap.org/wiki/Rendering">renderer</a> like <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> or <a href="https://wiki.openstreetmap.org/wiki/Mapweaver">Mapweaver</a> by configuring the rendering rules there,</p>
 <p>or</p>
-<p>filter out the raw OSM data before processing with the help of <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, and then do an own rendering with standart rendering rules.</p>
-<p>Or: produce with full raw data an <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a> image or a file for <a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">Adobe Illustrator</a> and delete all unneeded elements via Inkscape or other vector editors.</p>
+<p>filter out the raw OSM data before processing with the help of <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, and then do an own rendering with standart rendering rules.</p>
+<p>Or: produce with full raw data an <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a> image or a file for <a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">Adobe Illustrator</a> and delete all unneeded elements via Inkscape or other vector editors.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

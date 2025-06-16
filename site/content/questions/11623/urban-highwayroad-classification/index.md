@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've been doing some work on <a href="http://www.openstreetmap.org/?lat=21.03295&amp;lon=105.8141&amp;zoom=15">Hanoi, Vietnam</a> - a fair amount of incorrect roads, new but unmapped roads, and untold numbers of unmapped alleyways!</p>
+<p>I've been doing some work on <a href="https://www.openstreetmap.org/?lat=21.03295&amp;lon=105.8141&amp;zoom=15">Hanoi, Vietnam</a> - a fair amount of incorrect roads, new but unmapped roads, and untold numbers of unmapped alleyways!</p>
 <p>A <em>lot</em> of the roads inside the city are classified as primary, a few secondary, and most are residential. This seems wrong to me and generally it doesn't reflect (1) the size/lanes of the roads or (2) the patterns of traffic the roads carry.</p>
 <p>I'd like to rethink classification of a lot of roads - make a lot of primary roads secondary, a lot of minor or residential roads tertiary or secondary - but <strong>before I do anything major, some questions:</strong></p>
-<p>(1) Are there any wiki resources on road classification in <em>urban</em> areas? I've found the following to be of some use: <a href="http://wiki.openstreetmap.org/wiki/Tagging_samples/urban">tagging samples/urban</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:highway">key:highway</a>, <a href="http://wiki.openstreetmap.org/wiki/Highway:International_equivalence">Highway:International equivalence</a>. However, something more conceptual would help me get my head around how this would translate to Hanoi, or something more specific in terms of normal ratios of these roads (yes, I've looked at other cities to get an idea!).</p>
+<p>(1) Are there any wiki resources on road classification in <em>urban</em> areas? I've found the following to be of some use: <a href="https://wiki.openstreetmap.org/wiki/Tagging_samples/urban">tagging samples/urban</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:highway">key:highway</a>, <a href="https://wiki.openstreetmap.org/wiki/Highway:International_equivalence">Highway:International equivalence</a>. However, something more conceptual would help me get my head around how this would translate to Hanoi, or something more specific in terms of normal ratios of these roads (yes, I've looked at other cities to get an idea!).</p>
 <p>(2) How aggressive should I be with making these changes? As a fairly new editor, I don't want to break any unwritten rules. If I'm going to rethink the main roads, it makes sense to change all of the primary and secondary roads within the city.</p>
 <p>Thank you!</p>
 <p>Note: I know the city well.</p>
@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Search on the wiki the existing guidelines about 'road tagging' (<a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=roads+tagging">result</a>). The wiki develops in detail how the classification works for country specific rules.<br />
+<p>Search on the wiki the existing guidelines about 'road tagging' (<a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=roads+tagging">result</a>). The wiki develops in detail how the classification works for country specific rules.<br />
 Some advices :<br />
 - classification is done by 'importance', not necessarily by physical attributs like the surface or width. A primary road might be unpaved in undeveloped countries.<br />
 - primary roads are the nation wide road network, connecting all major cities, regions and neightborhood countries;<br />
@@ -171,7 +171,7 @@ Some advices :<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a Wiki page about Vietnam: <a href="http://wiki.openstreetmap.org/wiki/Vietnam">http://wiki.openstreetmap.org/wiki/Vietnam</a></p>
+<p>There is a Wiki page about Vietnam: <a href="https://wiki.openstreetmap.org/wiki/Vietnam">https://wiki.openstreetmap.org/wiki/Vietnam</a></p>
 <p>Road classification is covered there, but not much. Also, it seems a little doubtful, as "all unpaved roads should be track", which does not reflect their real significance.</p>
 <p>As it seems that there is not yet a good classification scheme for Vietnam. Especially, not for urban areas. You can define one yourself, describe it in the Wiki (on the site I was mentioning), and then maybe contact some other users in Vietnam, if they have any objections about this scheme.</p>
 <p>BTW: The road tagging wiki is very Europe-centered. In developed countries, there are hardly any "tertiary"-roads that are unpaved. But I guess in Vietnam, you will occasionally come across even unpaved primaries. I am tagging in Georgia, and I can tell you, the guidelines for road classification in the Wiki are merely a rough guideline, but should definitely not be followed by every single letter in less developed areas.</p>
@@ -209,7 +209,7 @@ Some advices :<br />
 <div id="post-11642-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>don't be too "scientific" about it. Creating a scheme is easier than it sounds. If you like, you can use my road-tagging in Georgia for it and adapt it for Vietnam: <a href="http://wiki.openstreetmap.org/wiki/Road_Tagging_in_Georgia">http://wiki.openstreetmap.org/wiki/Road_Tagging_in_Georgia</a></p>
+<p>don't be too "scientific" about it. Creating a scheme is easier than it sounds. If you like, you can use my road-tagging in Georgia for it and adapt it for Vietnam: <a href="https://wiki.openstreetmap.org/wiki/Road_Tagging_in_Georgia">https://wiki.openstreetmap.org/wiki/Road_Tagging_in_Georgia</a></p>
 <p>Or you might find other countries' instructions more useful.</p>
 </div>
 <div id="comment-11642-info" class="comment-info">

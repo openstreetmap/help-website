@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "River name positioning"
-description = '''The river names are positioned some times on the left bank, some times on the right bank, some times in the middle of the river (and some times outside the river). Is this necessary? For illustration look at this area: http://www.openstreetmap.org/#map=14/47.1535/7.3859. Thanks.'''
+description = '''The river names are positioned some times on the left bank, some times on the right bank, some times in the middle of the river (and some times outside the river). Is this necessary? For illustration look at this area: https://www.openstreetmap.org/#map=14/47.1535/7.3859. Thanks.'''
 date = "2014-09-12T11:36:00Z"
 lastmod = "2020-06-10T06:37:00Z"
 weight = 36787
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The river names are positioned some times on the left bank, some times on the right bank, some times in the middle of the river (and some times outside the river). Is this necessary? For illustration look at this area: <a href="http://www.openstreetmap.org/#map=14/47.1535/7.3859.">http://www.openstreetmap.org/#map=14/47.1535/7.3859.</a> Thanks.</p>
+<p>The river names are positioned some times on the left bank, some times on the right bank, some times in the middle of the river (and some times outside the river). Is this necessary? For illustration look at this area: <a href="https://www.openstreetmap.org/#map=14/47.1535/7.3859.">https://www.openstreetmap.org/#map=14/47.1535/7.3859.</a> Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-positioning" rel="tag" title="see questions tagged &#39;positioning&#39;">positioning</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span>
@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It looks like there might be a problem with the data in that example. There's a river <a href="https://www.openstreetmap.org/way/285871726/history">here</a>, but <a href="https://www.openstreetmap.org/way/26642053">this</a> which looks like the <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbank</a> is also tagged "<a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">waterway=river</a>"</p>
+<p>It looks like there might be a problem with the data in that example. There's a river <a href="https://www.openstreetmap.org/way/285871726/history">here</a>, but <a href="https://www.openstreetmap.org/way/26642053">this</a> which looks like the <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbank</a> is also tagged "<a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">waterway=river</a>"</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

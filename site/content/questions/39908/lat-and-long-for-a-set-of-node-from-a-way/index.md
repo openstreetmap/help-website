@@ -126,7 +126,7 @@ WHERE highway is not null AND
    way &amp;&amp; ST_MakeBox2D(
        ST_Point(lon, lat), -- place lower left coordinates of box here
        ST_Point(lon, lat)) -- place upper right coordinates of box here</code></pre>
-<p>Another alternative is using the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Streets_and_other_ways">Overpass API</a> to return all highway-type ways in a given bounding box.</p>
+<p>Another alternative is using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Streets_and_other_ways">Overpass API</a> to return all highway-type ways in a given bounding box.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

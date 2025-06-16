@@ -112,10 +112,10 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The answer of this question depends if you want a map of this information for display, for paper or for editing.</p>
 <p>If you want to be a web map, this question:</p>
-<p><a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render Maps for My Website</a></p>
+<p><a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render Maps for My Website</a></p>
 <p>Is a good start. Using that information, you can start the rendering process. Some tools that didn't exist when answer was made are <a href="http://tilemill.com/pages/index.html">TileMill</a> for designing the rendering and <a href="http://tilestache.org">TileStache</a> for publishing the results.</p>
 <p>If you want a printed map, then <a href="http://www.use-it.be/europe/docs/OSMmanual/">this printed map tutorial using Inkscape</a> is probably your best starting place.</p>
-<p>If you want the map for editing purposes, then the best thing to do is probably look at <a href="http://wiki.openstreetmap.org/wiki/MapCSS">MapCSS</a>, which can be used in either Potlatch, or in Josm.</p>
+<p>If you want the map for editing purposes, then the best thing to do is probably look at <a href="https://wiki.openstreetmap.org/wiki/MapCSS">MapCSS</a>, which can be used in either Potlatch, or in Josm.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

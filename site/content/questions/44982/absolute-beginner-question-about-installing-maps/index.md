@@ -128,7 +128,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>While <a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> is probably the one he used before and is now looking for, a more generic entry point is <a href="http://wiki.openstreetmap.org/wiki/Garmin">http://wiki.openstreetmap.org/wiki/Garmin</a> . There are plenty of other places to get osm garming map files from.</p>
+<p>While <a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> is probably the one he used before and is now looking for, a more generic entry point is <a href="https://wiki.openstreetmap.org/wiki/Garmin">https://wiki.openstreetmap.org/wiki/Garmin</a> . There are plenty of other places to get osm garming map files from.</p>
 </div>
 <div id="comment-44985-info" class="comment-info">
 <span class="comment-age">(31 Aug '15, 12:03)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am assuming you want maps for a Garmin GPS and that it as at least 1 GB of memory or an SD card slot. I have used the maps AlaskaDave suggests but another good option are these, <a href="http://talkytoaster.co.uk/maps/">http://talkytoaster.co.uk/maps/</a> He also give good instructions on how to download, unzip, rename and transfer them. or read these Q&amp;As <a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
+<p>I am assuming you want maps for a Garmin GPS and that it as at least 1 GB of memory or an SD card slot. I have used the maps AlaskaDave suggests but another good option are these, <a href="http://talkytoaster.co.uk/maps/">http://talkytoaster.co.uk/maps/</a> He also give good instructions on how to download, unzip, rename and transfer them. or read these Q&amp;As <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -192,7 +192,7 @@ osqa_accepted = false
 <div id="post-44989-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Another option for later Garmins <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>Another option for later Garmins <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-44989-info" class="comment-info">
 <span class="comment-age">(31 Aug '15, 14:13)</span> <span class="comment-user userinfo">andy mackey</span>

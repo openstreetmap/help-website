@@ -135,7 +135,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> from sources or use one of avaiable server via API.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> from sources or use one of avaiable server via API.</p>
 <ul>
 <li><a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a></li>
 <li><a href="http://open.mapquestapi.com/nominatim/v1/">http://open.mapquestapi.com/nominatim/v1/</a></li>
@@ -189,7 +189,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The best currently available search engine for OpenStreetMap is nominatim which is documented in the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">wiki</a>. The source code is available in the <a href="http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/">SVN</a> (especially in the "gazetteer" directory there).</p>
+<p>The best currently available search engine for OpenStreetMap is nominatim which is documented in the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">wiki</a>. The source code is available in the <a href="http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/">SVN</a> (especially in the "gazetteer" directory there).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

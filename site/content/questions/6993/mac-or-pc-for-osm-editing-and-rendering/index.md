@@ -68,7 +68,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>You can use the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> to discuss the pros and cons of the <a href="http://wiki.openstreetmap.org/wiki/Editing#Choice_of_Editors">editing software available</a> running on various platforms. This Q&amp;A site is intended for questions which have one single definite answer, rather than discussions.</p>
+<p>You can use the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> to discuss the pros and cons of the <a href="https://wiki.openstreetmap.org/wiki/Editing#Choice_of_Editors">editing software available</a> running on various platforms. This Q&amp;A site is intended for questions which have one single definite answer, rather than discussions.</p>
 </div>
 <div id="comment-6994-info" class="comment-info">
 <span class="comment-age">(10 Aug '11, 12:00)</span> <span class="comment-user userinfo">Jonathan Ben...</span>

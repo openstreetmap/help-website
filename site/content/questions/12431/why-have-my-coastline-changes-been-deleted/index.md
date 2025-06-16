@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I made edit <a href="http://www.openstreetmap.org/browse/changeset/11020647">#11020647</a> to move the coastline for some reclaimed land but those changes have been deleted. I have sent a message to the user who deleted them, but now I am wondering whether the user is in fact a bot which has just got the coastline from the out of date Bing satellite photo. Does anyone know:</p>
+<p>I made edit <a href="https://www.openstreetmap.org/browse/changeset/11020647">#11020647</a> to move the coastline for some reclaimed land but those changes have been deleted. I have sent a message to the user who deleted them, but now I am wondering whether the user is in fact a bot which has just got the coastline from the out of date Bing satellite photo. Does anyone know:</p>
 <ol>
 <li>How do I know whether the user is a bot?</li>
 <li>How can I reapply the edit?</li>
@@ -119,7 +119,7 @@ osqa_accepted = false
 <div class="answer-body">
 <ol>
 <li>Bots should say so in their desctiption and their bot maintainers, and they should put bot=yes in their changesets. This user is probably not a bot.</li>
-<li>Do not revert someones edits without contacting them (unlike the user that reverted your changeset), that only lead to edit wars. If the user does not respond you should contact the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">data working group</a>.</li>
+<li>Do not revert someones edits without contacting them (unlike the user that reverted your changeset), that only lead to edit wars. If the user does not respond you should contact the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">data working group</a>.</li>
 <li>The general answer is 'do not do stupid edits', but that might not be your case.</li>
 </ol>
 </div>
@@ -173,8 +173,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Re (1) I'd have a look at the edits that that user has made. In this case their recent edits seem to be in one local area in Germany and across most of Turkey. I'd say it's unlikely to be a bot as most of those are more wide-ranging. The changeset comment contains "created_by = JOSM/1.5 (5113 de);reverter_plugin/28089". I'm not particularly familiar with JOSM; perhaps this means that they did a changeset revert?</p>
 <p>Re (2) and (3) you'll need to talk to them (or get someone who can speak German or Turkish as appropriate to do so on your behalf). I suspect it's something of a misunderstanding - in your changeset comment you said "not sure exact line"; maybe they thought that they were correcting the exact line that you weren't sure of, not knowing that you know that Bing is old/wrong here? Maybe some kind of note on the ways concerned that "I know Bing is wrong here" might help prevent problems like this in the future? Just re-reverting their changes won't help, since they can re-re-revert yours, which just wastes everyone's time.</p>
-<p>Maybe try asking on one of the IRC channels on the <a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a> page to see if anyone either knows the mapper personally or is familiar with their work?</p>
-<p>There is a wiki <a href="http://wiki.openstreetmap.org/wiki/Vandalism">vandalism</a> page (which is misnamed in my opinion - I believe that most problematical edits aren't vandalism) which gives a few more pointers.</p>
+<p>Maybe try asking on one of the IRC channels on the <a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a> page to see if anyone either knows the mapper personally or is familiar with their work?</p>
+<p>There is a wiki <a href="https://wiki.openstreetmap.org/wiki/Vandalism">vandalism</a> page (which is misnamed in my opinion - I believe that most problematical edits aren't vandalism) which gives a few more pointers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

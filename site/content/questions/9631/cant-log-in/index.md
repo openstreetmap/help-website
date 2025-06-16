@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-9666-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just linking to the user page <a href="http://www.openstreetmap.org/user/James%20Carnley">http://www.openstreetmap.org/user/James%20Carnley</a> I'm guessing this is something for sysadmins and trac. I Could try to reproduce but....</p>
+<p>Just linking to the user page <a href="https://www.openstreetmap.org/user/James%20Carnley">https://www.openstreetmap.org/user/James%20Carnley</a> I'm guessing this is something for sysadmins and trac. I Could try to reproduce but....</p>
 </div>
 <div id="comment-9666-info" class="comment-info">
 <span class="comment-age">(29 Dec '11, 00:36)</span> <span class="comment-user userinfo">emj</span>

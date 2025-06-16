@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">This wiki page</a> suggests that what you are doing, based on the description in your question, is correct.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">This wiki page</a> suggests that what you are doing, based on the description in your question, is correct.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

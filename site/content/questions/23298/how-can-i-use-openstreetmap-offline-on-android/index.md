@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> and then in detail for apps that can hold map tiles or own vector based maps offline.</p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> and then in detail for apps that can hold map tiles or own vector based maps offline.</p>
 <p>You would also have had many hints if you enter only two words in the search box of this FAQ site, namely "android" and "offline"</p>
 </div>
 <div class="answer-controls post-controls">
@@ -272,7 +272,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Orux maps ( It's on google play) works ok see this question and my answer re mapsforge. <a href="https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use">https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use</a> These mapsforge's maps are compact and download quickly compared to garmin osm imgs files which Orux will also display. <a href="http://download.mapsforge.org/maps/europe/">http://download.mapsforge.org/maps/europe/</a></p>
+<p>Orux maps ( It's on google play) works ok see this question and my answer re mapsforge. <a href="/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use">https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use</a> These mapsforge's maps are compact and download quickly compared to garmin osm imgs files which Orux will also display. <a href="http://download.mapsforge.org/maps/europe/">http://download.mapsforge.org/maps/europe/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

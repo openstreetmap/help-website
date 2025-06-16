@@ -40,17 +40,17 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Je fais une carte de la ville de Bavay avec le logiciel QGIS. Mais quand je télécharge les données xml via osm.org, il manque la zone urbaine grise autour de Bavay. Pourtant la zone apparaît sur la carte du site osm.org. C'est cette zone-là, qui a peut-être été mal modifiée et qu'il faut peut-être corriger :</p>
-<p><a href="http://www.openstreetmap.org/browse/way/41691881">http://www.openstreetmap.org/browse/way/41691881</a><br />
-(je télécharge ces données xml en ajoutant "full" à la fin de l'adresse : <a href="http://www.openstreetmap.org/browse/way/41691881/full">http://www.openstreetmap.org/browse/way/41691881/full</a> )</p>
+<p><a href="https://www.openstreetmap.org/browse/way/41691881">https://www.openstreetmap.org/browse/way/41691881</a><br />
+(je télécharge ces données xml en ajoutant "full" à la fin de l'adresse : <a href="https://www.openstreetmap.org/browse/way/41691881/full">https://www.openstreetmap.org/browse/way/41691881/full</a> )</p>
 <p>Dans QGIS, la zone urbaine autour de la ville n'est plus qu'un point et non un polygone. La zone urbaine intra-muros n'a aucun problème.</p>
-<p>Toutes les modifications de Christian Cogneaux, comme celle-ci (ou encore celle-là <a href="http://www.openstreetmap.org/browse/way/222858968">http://www.openstreetmap.org/browse/way/222858968</a> ) ont peut-être un problème ? Ou bien je ne comprends pas tout.</p>
+<p>Toutes les modifications de Christian Cogneaux, comme celle-ci (ou encore celle-là <a href="https://www.openstreetmap.org/browse/way/222858968">https://www.openstreetmap.org/browse/way/222858968</a> ) ont peut-être un problème ? Ou bien je ne comprends pas tout.</p>
 <hr />
 <p><em>(English translation - not by original author - no guarantees)</em></p>
 <p>I am making a map of the town of Bavay using QGIS. However, if I download the XML data from osm.org, the grey urban area around Bavay is missing. The area is visible on the map on osm.org. It is this area, which may have been edited incorrectly and which might need to be corrected:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/41691881">http://www.openstreetmap.org/browse/way/41691881</a><br />
-(I downloaded the XML data by adding "full" to the URI: <a href="http://www.openstreetmap.org/browse/way/41691881/full">http://www.openstreetmap.org/browse/way/41691881/full</a> )</p>
+<p><a href="https://www.openstreetmap.org/browse/way/41691881">https://www.openstreetmap.org/browse/way/41691881</a><br />
+(I downloaded the XML data by adding "full" to the URI: <a href="https://www.openstreetmap.org/browse/way/41691881/full">https://www.openstreetmap.org/browse/way/41691881/full</a> )</p>
 <p>In QGIS, the urban area around the town is only a point, not a polygon. The urban area in the center has no problem.</p>
-<p>Maybe all the edits by Christian Cogneaux, like this one (or this one: <a href="http://www.openstreetmap.org/browse/way/222858968">http://www.openstreetmap.org/browse/way/222858968</a> ) have a problem? Or maybe I don't understand everything.</p>
+<p>Maybe all the edits by Christian Cogneaux, like this one (or this one: <a href="https://www.openstreetmap.org/browse/way/222858968">https://www.openstreetmap.org/browse/way/222858968</a> ) have a problem? Or maybe I don't understand everything.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-xml" rel="tag" title="see questions tagged &#39;xml&#39;">xml</span> <span class="post-tag tag-link-lang-fr" rel="tag" title="see questions tagged &#39;lang-fr&#39;">lang-fr</span> <span class="post-tag tag-link-full" rel="tag" title="see questions tagged &#39;full&#39;">full</span> <span class="post-tag tag-link-téléchargement" rel="tag" title="see questions tagged &#39;téléchargement&#39;">téléchargement</span>
@@ -132,7 +132,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This looks like this problem: <a href="https://help.openstreetmap.org/questions/21078/my-lines-and-polygons-have-turned-to-nodes-when-exported-as-osm-xml-data-and-imported-into-qgis">My lines and polygons have turned to nodes when exported as OSM XML data and imported into QGIS!</a>. It is indeed a bug in QGIS, specifically the OSM plugin.</p>
+<p>This looks like this problem: <a href="/questions/21078/my-lines-and-polygons-have-turned-to-nodes-when-exported-as-osm-xml-data-and-imported-into-qgis">My lines and polygons have turned to nodes when exported as OSM XML data and imported into QGIS!</a>. It is indeed a bug in QGIS, specifically the OSM plugin.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

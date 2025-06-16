@@ -108,7 +108,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Mapping natural features isn't simple indeed. Natural areas don't have such clear boundaries like we humans would sometimes want, and neither are they as stable as we'd often want (a bit of rain can seriously change the look of a piece of land).</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwetland">wetland=swamp</a> seems indeed like the best choice for your case (it doesn't have to be always flooded).</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwetland">wetland=swamp</a> seems indeed like the best choice for your case (it doesn't have to be always flooded).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

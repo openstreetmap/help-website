@@ -66,7 +66,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>If no concrete help here, try asking on the discussion page in the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>If no concrete help here, try asking on the discussion page in the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
 <p>or ask the author Roland Olbricht directly ... contact see OSM wiki.</p>
 </div>
 <div id="comment-36705-info" class="comment-info">
@@ -81,7 +81,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>You were already discussing this issue with Roland here [1]. Why not continue working on that thread and close this one. Creating many similar threads is really confusing as nobody has a clue, which thread is still current.</p>
 <p>If you don't find this help format useful for discussions, you might want to create a Github issue [2] instead.</p>
-<p>[1] <a href="https://help.openstreetmap.org/questions/36464/overpass-api-area-query-does-not-recognise-all-areas">https://help.openstreetmap.org/questions/36464/overpass-api-area-query-does-not-recognise-all-areas</a></p>
+<p>[1] <a href="/questions/36464/overpass-api-area-query-does-not-recognise-all-areas">https://help.openstreetmap.org/questions/36464/overpass-api-area-query-does-not-recognise-all-areas</a></p>
 <p>[2] <a href="https://github.com/drolbr/Overpass-API/issues">https://github.com/drolbr/Overpass-API/issues</a></p>
 </div>
 <div id="comment-36771-info" class="comment-info">

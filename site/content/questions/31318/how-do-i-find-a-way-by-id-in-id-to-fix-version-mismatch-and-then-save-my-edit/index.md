@@ -219,7 +219,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>From memory I believe that you need to undo back past the point where you modified that way, and then save there. Unfortunately I can't find anything written down to back that statement up. The iD issues list has lots of discussion about <a href="https://github.com/openstreetmap/iD/search?q=save&amp;ref=cmdform&amp;type=Issues">how "save" should work</a>, but I can't immediately see your problem (which I presume is "another mapper has modified a way in the meantime") listed.</p>
 <p>In a separate browser window, you can look at the history of the way concerned:</p>
-<p><a href="http://www.openstreetmap.org/way/151789937/history">http://www.openstreetmap.org/way/151789937/history</a></p>
+<p><a href="https://www.openstreetmap.org/way/151789937/history">https://www.openstreetmap.org/way/151789937/history</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

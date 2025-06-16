@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi All!</p>
-<p>I am struggeling with <a href="https://help.openstreetmap.org/questions/48800/show-multiple-markers-in-same-location">the same issue</a>. I have multiple (2-200) markers on the exact same location. I need to inform the user somehow that there are many more markers, not just the one is visible. Is there any way to "spider" the markers around the location? Like here: <a href="http://leaflet.github.io/Leaflet.markercluster/example/marker-clustering-realworld.388.html">http://leaflet.github.io/Leaflet.markercluster/example/marker-clustering-realworld.388.html</a></p>
+<p>I am struggeling with <a href="/questions/48800/show-multiple-markers-in-same-location">the same issue</a>. I have multiple (2-200) markers on the exact same location. I need to inform the user somehow that there are many more markers, not just the one is visible. Is there any way to "spider" the markers around the location? Like here: <a href="http://leaflet.github.io/Leaflet.markercluster/example/marker-clustering-realworld.388.html">http://leaflet.github.io/Leaflet.markercluster/example/marker-clustering-realworld.388.html</a></p>
 <p>Thanks,</p>
 <p>rob</p>
 </div>

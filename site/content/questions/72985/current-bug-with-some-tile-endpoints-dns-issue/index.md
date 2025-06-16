@@ -284,7 +284,7 @@ osqa_accepted = false
 <div id="post-72987-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It looks like the same issue as <a href="https://help.openstreetmap.org/questions/72968/fetching-maps-that-are-on-my-multiple-sites-have-stopped-working">https://help.openstreetmap.org/questions/72968/fetching-maps-that-are-on-my-multiple-sites-have-stopped-working</a> , and the same advice applies - use the full site name.</p>
+<p>It looks like the same issue as <a href="/questions/72968/fetching-maps-that-are-on-my-multiple-sites-have-stopped-working">https://help.openstreetmap.org/questions/72968/fetching-maps-that-are-on-my-multiple-sites-have-stopped-working</a> , and the same advice applies - use the full site name.</p>
 </div>
 <div id="comment-72987-info" class="comment-info">
 <span class="comment-age">(10 Feb '20, 15:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

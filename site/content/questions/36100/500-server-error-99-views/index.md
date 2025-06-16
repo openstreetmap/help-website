@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I think that it's a bit more random than that - <a href="https://help.openstreetmap.org/questions/36054/how-to-move-a-bus-stop">this post</a> has exactly 99 views right now and loads OK for me. I've seen the same problem with other OSQA sites, even <a href="http://meta.osqa.net/">meta.osqa.net</a>, so although it may be common to the latest OSQA version, this particular problem is not specific to OSM's installation of it.</p>
+<p>I think that it's a bit more random than that - <a href="/questions/36054/how-to-move-a-bus-stop">this post</a> has exactly 99 views right now and loads OK for me. I've seen the same problem with other OSQA sites, even <a href="http://meta.osqa.net/">meta.osqa.net</a>, so although it may be common to the latest OSQA version, this particular problem is not specific to OSM's installation of it.</p>
 <p>Amusingly, <a href="http://meta.osqa.net/questions/10187/upgrade-has-caused-500-errors-how-can-i-resolve">http://meta.osqa.net/questions/10187/upgrade-has-caused-500-errors-how-can-i-resolve</a> seems prone to the 500 errors over there. Unfortunately, <a href="http://meta.osqa.net">meta.osqa.net</a> seems a bit moribund. OSQA's bug tracker is <a href="http://jira.osqa.net/secure/BrowseProject.jspa#selectedTab=com.atlassian.jira.plugin.system.project:issues-panel">here</a>.</p>
 </div>
 <div id="comment-36101-info" class="comment-info">
@@ -148,7 +148,7 @@ Add reverse geocoding information to the overpass resulting set.</p>
 </div>
 <div class="comment-text">
 <p>It could have something to do with the work being carried out on the help system server I guess<br />
-<a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
 </div>
 <div id="comment-36111-info" class="comment-info">
 <span class="comment-age">(23 Aug '14, 07:58)</span> <span class="comment-user userinfo">nevw</span>
@@ -159,7 +159,7 @@ Add reverse geocoding information to the overpass resulting set.</p>
 <div id="post-36127-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a> - the wiki platform status was in this case updated by someone who noticed the problem, rather than someone who's involved in fixing it, (although it's good that they did update the wiki to flag the known problem, of course).</p>
+<p><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a> - the wiki platform status was in this case updated by someone who noticed the problem, rather than someone who's involved in fixing it, (although it's good that they did update the wiki to flag the known problem, of course).</p>
 </div>
 <div id="comment-36127-info" class="comment-info">
 <span class="comment-age">(23 Aug '14, 12:46)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

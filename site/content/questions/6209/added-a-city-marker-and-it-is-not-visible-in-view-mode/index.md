@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> for the answer to this FAQ.</p>
+<p>Please see <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> for the answer to this FAQ.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, Guys Im working on the public transport routing service and found one weird thing with the bus route <a href="http://www.openstreetmap.org/browse/relation/2521698">here</a></p>
-<p>The problem is after passing the street Rua Professor Milton Roque Ramos Krieger the bus turns right to Rua Lauro Linhares at this <a href="http://www.openstreetmap.org/browse/node/1438405028">point</a>. But if u take a look on the root details again u'll notice that the route also goes to the left that is not true. This happens because the bus route goes through part of the street Rua Lauro Linhares and this full street (way) is included in route relation. Removing the street (way) from the path will cause a gap in the route.</p>
+<p>Hi, Guys Im working on the public transport routing service and found one weird thing with the bus route <a href="https://www.openstreetmap.org/browse/relation/2521698">here</a></p>
+<p>The problem is after passing the street Rua Professor Milton Roque Ramos Krieger the bus turns right to Rua Lauro Linhares at this <a href="https://www.openstreetmap.org/browse/node/1438405028">point</a>. But if u take a look on the root details again u'll notice that the route also goes to the left that is not true. This happens because the bus route goes through part of the street Rua Lauro Linhares and this full street (way) is included in route relation. Removing the street (way) from the path will cause a gap in the route.</p>
 <p>Actually it does not hurt my application but it looks wrong on the map and may confuse users. How can I fix it gracefully? Maybe devide the street (way) Rua Lauro Linhares into smaller ways? Or maybe there is another better solution?</p>
 <p>Thanks!</p>
 </div>

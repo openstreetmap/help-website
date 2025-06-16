@@ -222,7 +222,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I don't think the man_made with respect to a water_tap is correct in an osm context. Check how man_made is used in osm... <a href="http://wiki.openstreetmap.org/wiki/Key:man_made">http://wiki.openstreetmap.org/wiki/Key:man_made</a> I feel it is clearly an amenity for the community as Simon has suggested and I prefer you follow along those lines.</p>
+<p>I don't think the man_made with respect to a water_tap is correct in an osm context. Check how man_made is used in osm... <a href="https://wiki.openstreetmap.org/wiki/Key:man_made">https://wiki.openstreetmap.org/wiki/Key:man_made</a> I feel it is clearly an amenity for the community as Simon has suggested and I prefer you follow along those lines.</p>
 </div>
 <div id="comment-37579-info" class="comment-info">
 <span class="comment-age">(13 Oct '14, 11:28)</span> <span class="comment-user userinfo">nevw</span>
@@ -233,7 +233,7 @@ osqa_accepted = false
 <div id="post-37619-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7380/nevw"></a><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a>, good point. I have conceived the water-tap idea before Simon added his comment and haven't noticed it later. Hence couldn't take it into account. It's great we converge. I've modified the proposal.</p>
+<p><a href="https://help.openstreetmap.org/users/7380/nevw"></a><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a>, good point. I have conceived the water-tap idea before Simon added his comment and haven't noticed it later. Hence couldn't take it into account. It's great we converge. I've modified the proposal.</p>
 </div>
 <div id="comment-37619-info" class="comment-info">
 <span class="comment-age">(15 Oct '14, 08:26)</span> <span class="comment-user userinfo">Kotya</span>

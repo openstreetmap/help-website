@@ -39,11 +39,11 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I noticed a big blue square in Bishkek, Kyrgyzstan when map re-rendered after my commit. <a href="http://www.openstreetmap.org/?lat=42.87808&amp;lon=74.65663&amp;zoom=17&amp;layers=M">This place is here</a></p>
+<p>I noticed a big blue square in Bishkek, Kyrgyzstan when map re-rendered after my commit. <a href="https://www.openstreetmap.org/?lat=42.87808&amp;lon=74.65663&amp;zoom=17&amp;layers=M">This place is here</a></p>
 <p>I have read articles about such trouble:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/7283/blue-background">Blue background</a></li>
-<li><a href="https://help.openstreetmap.org/questions/9878/big-blue-square-on-colombia">Big blue square on Colombia</a></li>
+<li><a href="/questions/7283/blue-background">Blue background</a></li>
+<li><a href="/questions/9878/big-blue-square-on-colombia">Big blue square on Colombia</a></li>
 </ul>
 <p>But</p>
 <ol>
@@ -90,7 +90,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I noticed that after this commit <a href="http://www.openstreetmap.org/browse/changeset/15268811">http://www.openstreetmap.org/browse/changeset/15268811</a> part of this area became normal, i.e. with default background. May be this commit fixed the problem...</p>
+<p>I noticed that after this commit <a href="https://www.openstreetmap.org/browse/changeset/15268811">https://www.openstreetmap.org/browse/changeset/15268811</a> part of this area became normal, i.e. with default background. May be this commit fixed the problem...</p>
 </div>
 <div id="comment-20552-info" class="comment-info">
 <span class="comment-age">(07 Mar '13, 08:33)</span> <span class="comment-user userinfo">prg0x01h</span>

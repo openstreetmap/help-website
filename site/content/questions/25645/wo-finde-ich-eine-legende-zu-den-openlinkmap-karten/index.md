@@ -110,9 +110,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Falls du die Symbole und Farben auf der Basiskarte meinst, schau dort: <a href="http://www.openstreetmap.org/key">http://www.openstreetmap.org/key</a> Das ist die Legende der Standardkarte ("mapnik") von openstreetmap.org, jene wird von OpenLinkMap verwendet.</p>
+<p>Falls du die Symbole und Farben auf der Basiskarte meinst, schau dort: <a href="https://www.openstreetmap.org/key">https://www.openstreetmap.org/key</a> Das ist die Legende der Standardkarte ("mapnik") von openstreetmap.org, jene wird von OpenLinkMap verwendet.</p>
 <p>Eine eigene Legende von OpenLinkMap kann ich nicht finden. Den kompletten Programmcode von OpenLinkMap findest du <a href="https://github.com/rurseekatze/OpenLinkMap">dort</a>, darin müssten auch die Symbole irgendwo definiert sein, sofern die OpenLinkMap eigene Symbole hat, denn ich sehe dort nur blaue und schwarze Kreise.</p>
-<p>(Erweiterung aus den Kommentaren:) Du meinst also diese Stelle <a href="http://www.openlinkmap.org/?zoom=18&amp;lat=47.95918&amp;lon=11.54045&amp;layers=BFTTTTT">in OpenLinkMap</a> bzw. <a href="http://www.openstreetmap.org/#map=19/47.95918/11.54044">in OpenStreetMap</a> (dies sind die sog. Permalinks). Das Symbol kommt also von OpenStreetMap - nicht von OpenLinkMap. Soweit ich weiß gibt es auch für OpenStreetMap nur die Legende, die ich dir bereits verlinkte. Du musst also raten, bzw. dir die Roh-Daten ansehen. Die findest du z.B. über <a href="http://www.openstreetmap.org/#map=19/47.95920/11.54045&amp;layers=D">die Datenansicht</a> (kannst du im Layer-/Ebenen-Menü rechts aktivieren). Aktuell gibt es auch eine Testversion(!), wo du einfach auf eine Stelle klicken kannst: <a href="http://overpass.apis.dev.openstreetmap.org/#map=18/47.95928/11.54051">Klickbare Karte via OverpassAPI</a>.</p>
+<p>(Erweiterung aus den Kommentaren:) Du meinst also diese Stelle <a href="http://www.openlinkmap.org/?zoom=18&amp;lat=47.95918&amp;lon=11.54045&amp;layers=BFTTTTT">in OpenLinkMap</a> bzw. <a href="https://www.openstreetmap.org/#map=19/47.95918/11.54044">in OpenStreetMap</a> (dies sind die sog. Permalinks). Das Symbol kommt also von OpenStreetMap - nicht von OpenLinkMap. Soweit ich weiß gibt es auch für OpenStreetMap nur die Legende, die ich dir bereits verlinkte. Du musst also raten, bzw. dir die Roh-Daten ansehen. Die findest du z.B. über <a href="https://www.openstreetmap.org/#map=19/47.95920/11.54045&amp;layers=D">die Datenansicht</a> (kannst du im Layer-/Ebenen-Menü rechts aktivieren). Aktuell gibt es auch eine Testversion(!), wo du einfach auf eine Stelle klicken kannst: <a href="http://overpass.apis.dev.openstreetmap.org/#map=18/47.95928/11.54051">Klickbare Karte via OverpassAPI</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Die POI-Symbole sind (größtenteils) im Wiki dokumentiert, hier für <a href="http://wiki.openstreetmap.org/wiki/DE:Key:historic">historic=*</a> (nach unten scrollen zur Tabelle).</p>
+<p>Die POI-Symbole sind (größtenteils) im Wiki dokumentiert, hier für <a href="https://wiki.openstreetmap.org/wiki/DE:Key:historic">historic=*</a> (nach unten scrollen zur Tabelle).</p>
 <p>/al</p>
 </div>
 <div class="answer-controls post-controls">
@@ -275,7 +275,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hab die Liste hier gefunden:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/DE:Map_Features">http://wiki.openstreetmap.org/wiki/DE:Map_Features</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/DE:Map_Features">https://wiki.openstreetmap.org/wiki/DE:Map_Features</a></p>
 <p>Fände sinnvoll, wenn alle diese Symbole auch unter der "Map Key" Legende auftauchen würden.</p>
 <p>Am besten würden mir klickbare Icons gefallen, sodass man auch Öffnungszeiten und ähnliches bei Läden bekommen kann und außerdem die Erklärung des Icons wie auf der Map Features Seite erklärt. (Man kann zwar unter Layers &gt; Map Data durch die Checkbox aktivieren, aber dass muss man auch erst mal wissen, dann muss man wieder wissen worauf man eigentlich klicken muss (z. B. blauer Kreis beim Eingang) und dann wiederum auf das richtige Objekt und dort in der Tabelle die Öffnungszeiten finden. Die Website wird außerdem durchs aktivieren der Map Data sehr langsam beim scrollen.) Klickbare Icons würden außerdem das Problem lösen, dass man im Moment nur Namen von Läden sehen kann, indem man (teilweise bis zum Maximum) heranzoomt, was man ja auch erstmal wissen/ herausfinden muss.</p>
 <p>Außerdem ein Danke an alle die sich am Openstreetmap Projekt beteiligen! :-)</p>
@@ -331,7 +331,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I need help, I can't find in the legend what this symbol means: <img src="https://help.openstreetmap.org/upfiles/02.jpg" alt="alt text" /></p>
+<p>I need help, I can't find in the legend what this symbol means: <img src="/upfiles/02.jpg" alt="alt text" /></p>
 <p>Could someone help me?</p>
 <p>Thank you</p>
 </div>

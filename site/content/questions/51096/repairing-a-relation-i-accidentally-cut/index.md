@@ -115,7 +115,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can in fact do this with Potlatch, I do it all the time. Choose the way you want to use for the relation, click "Advanced" in the lower left of the screen. You now get an overview of the relations the way is part of. You can click "Add to" to pick a relation from a list of local relations (this can be quite long). If you know which relation you've broken, you can also use "Load relation" and insert the number of the broken relation.</p>
-<p>Some relations (eg hiking trails or bus routes) need their members to be in "chronological" order. You can access the list of members in Potlatch (doubleclick the relation as it appears when you select a member, then choose "Members" from the tab that opens) and change the order. But this is MUCH more practical in JOSM. See <a href="https://help.openstreetmap.org/questions/8197/re-ordering-sorting-ways-in-a-relation">this answer</a>.</p>
+<p>Some relations (eg hiking trails or bus routes) need their members to be in "chronological" order. You can access the list of members in Potlatch (doubleclick the relation as it appears when you select a member, then choose "Members" from the tab that opens) and change the order. But this is MUCH more practical in JOSM. See <a href="/questions/8197/re-ordering-sorting-ways-in-a-relation">this answer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

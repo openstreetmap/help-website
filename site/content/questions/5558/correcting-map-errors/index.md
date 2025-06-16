@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are two main way to get corrections into Openstreetmap</p>
-<p>1.) Sign up for Openstreetmap and edit the map data yourself. A <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> is available in many languages and the community is generally friendly towards new mappers and helps with questions and problems.</p>
+<p>1.) Sign up for Openstreetmap and edit the map data yourself. A <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> is available in many languages and the community is generally friendly towards new mappers and helps with questions and problems.</p>
 <p>2.) If you don't want to fix the issues yourself you can open bug reports on <a href="http://osmbugs.org/">OpenStreetBugs</a>. Depending on the number of mappers in the area the bug might be fixed in a couple of minutes or might persist for weeks.</p>
 </div>
 <div class="answer-controls post-controls">

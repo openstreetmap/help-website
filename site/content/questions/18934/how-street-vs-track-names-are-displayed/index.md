@@ -64,7 +64,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for the replys guys, that makes sense, although upon further reading of the Australian Tagging guidelines here it appears that highway=track and surface=unpaved are the correct tags for these road types? It does not mention "dirt" anywhere there, does that still sound right? I a new to this so please correct if I am wrong.</p>
-<p>Under the heading "Regional Roads" it says specifically to use "surface=unpaved" if the road is not sealed? <a href="http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Minor_Highways">http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Minor_Highways</a></p>
+<p>Under the heading "Regional Roads" it says specifically to use "surface=unpaved" if the road is not sealed? <a href="https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Minor_Highways">https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Minor_Highways</a></p>
 <p>Cheers</p>
 </div>
 <div id="comment-18961-info" class="comment-info">
@@ -76,7 +76,7 @@ osqa_accepted = false
 <div id="post-18963-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><em>surface=unpaved</em> is not wrong but just a generalization for all non-paved surfaces. Whenever possible try to be more specific by using one of the more detailed <a href="http://wiki.openstreetmap.org/wiki/Key:surface">surface values</a>.</p>
+<p><em>surface=unpaved</em> is not wrong but just a generalization for all non-paved surfaces. Whenever possible try to be more specific by using one of the more detailed <a href="https://wiki.openstreetmap.org/wiki/Key:surface">surface values</a>.</p>
 </div>
 <div id="comment-18963-info" class="comment-info">
 <span class="comment-age">(10 Jan '13, 11:47)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -193,10 +193,10 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>So it does, at least when you're using the "standard" map.</p>
-<p>Example road: <a href="http://www.openstreetmap.org/?lat=48.53081&amp;lon=-122.14672&amp;zoom=17&amp;layers=M&amp;way=22711297">http://www.openstreetmap.org/?lat=48.53081&amp;lon=-122.14672&amp;zoom=17&amp;layers=M&amp;way=22711297</a></p>
-<p>Example footway (couldn't find a long enough track): <a href="http://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=M</a></p>
+<p>Example road: <a href="https://www.openstreetmap.org/?lat=48.53081&amp;lon=-122.14672&amp;zoom=17&amp;layers=M&amp;way=22711297">https://www.openstreetmap.org/?lat=48.53081&amp;lon=-122.14672&amp;zoom=17&amp;layers=M&amp;way=22711297</a></p>
+<p>Example footway (couldn't find a long enough track): <a href="https://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=M</a></p>
 <p>But using the layer switcher switch to the cycle map and names will appear:</p>
-<p><a href="http://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=C">http://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=C">https://www.openstreetmap.org/?lat=48.95757&amp;lon=-120.77926&amp;zoom=16&amp;layers=C</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -217,8 +217,8 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Thanks</p>
 <p>I found one "track" who's name appears multiple times along the way, this one and the one that doesn't are both tagged as "highway = track", the difference is the one that works has a tag "surface = unpaved", the one that doesn't has "surface = dirt" and "tracktype = grade3".</p>
-<p>Here are the examples: Lancaster road works fine <a href="http://www.openstreetmap.org/?lat=-33.15683&amp;lon=116.00786&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=-33.15683&amp;lon=116.00786&amp;zoom=15&amp;layers=M</a></p>
-<p>Myles Avenue does not <a href="http://www.openstreetmap.org/?lat=-33.15079&amp;lon=116.04809&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=-33.15079&amp;lon=116.04809&amp;zoom=15&amp;layers=M</a></p>
+<p>Here are the examples: Lancaster road works fine <a href="https://www.openstreetmap.org/?lat=-33.15683&amp;lon=116.00786&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=-33.15683&amp;lon=116.00786&amp;zoom=15&amp;layers=M</a></p>
+<p>Myles Avenue does not <a href="https://www.openstreetmap.org/?lat=-33.15079&amp;lon=116.04809&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=-33.15079&amp;lon=116.04809&amp;zoom=15&amp;layers=M</a></p>
 <p>Sorry for a noob question, but what is the "layer switcher" you refer to?</p>
 <p>Cheers Aaron</p>
 </div>
@@ -233,7 +233,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>The layer switcher is the funny little symbol at the top right of the map:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/layer_switcher.png" alt="layer switcher" /></p>
+<p><img src="/upfiles/layer_switcher.png" alt="layer switcher" /></p>
 </div>
 <div id="comment-18952-info" class="comment-info">
 <span class="comment-age">(10 Jan '13, 01:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -321,7 +321,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><em>dirt</em> is much more specific than <em>unpaved</em>, you shouldn't change this value <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">just because of the renderer</a> unless the value is indeed wrong.</p>
+<p><em>dirt</em> is much more specific than <em>unpaved</em>, you shouldn't change this value <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">just because of the renderer</a> unless the value is indeed wrong.</p>
 </div>
 <div id="comment-18957-info" class="comment-info">
 <span class="comment-age">(10 Jan '13, 09:17)</span> <span class="comment-user userinfo">scai ♦</span>

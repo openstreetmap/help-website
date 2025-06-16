@@ -311,7 +311,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read this <a href="https://help.openstreetmap.org/questions/6938/map-without-labels-and-businesses">https://help.openstreetmap.org/questions/6938/map-without-labels-and-businesses</a> good luck</p>
+<p>Please read this <a href="/questions/6938/map-without-labels-and-businesses">https://help.openstreetmap.org/questions/6938/map-without-labels-and-businesses</a> good luck</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,10 +105,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I presume that you mean this one:</p>
-<p><a href="http://www.openstreetmap.org/way/77629035">http://www.openstreetmap.org/way/77629035</a></p>
-<p>It's actually part of a "<a href="http://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a>" - a piece of forest shaped like a doughnut:</p>
-<p><a href="http://www.openstreetmap.org/relation/1369031">http://www.openstreetmap.org/relation/1369031</a></p>
-<p>That has the relevant tags on it, including "<a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a>".</p>
+<p><a href="https://www.openstreetmap.org/way/77629035">https://www.openstreetmap.org/way/77629035</a></p>
+<p>It's actually part of a "<a href="https://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a>" - a piece of forest shaped like a doughnut:</p>
+<p><a href="https://www.openstreetmap.org/relation/1369031">https://www.openstreetmap.org/relation/1369031</a></p>
+<p>That has the relevant tags on it, including "<a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a>".</p>
 <p>It's perfectly OK to have the multipolygon tags on the relation, as it enables a mapper to have different tags on the constituent ways (for example, when mapping a forest I might have been able to do some parts from survey and the rest only from aerial imagery, and might want to use different "source" tags), while keeping the tags that apply to the relation as a whole on the relation.</p>
 <p>A word of warning - the outer way of this forest has a very large number of nodes, so if you try and use Potlatch 2's** internal history viewer your browser may struggle. Also, you'll notice in Potlatch 2 that it doesn't render the forest as a forest (because the main tag's on the relation) - unfortunately this is normal.</p>
 <p>** I'm guessing that you're using that editor based on a similarly named mapper's previous edits; apologies if I've got the wrong person.</p>

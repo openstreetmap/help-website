@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Two days ago I created a uMap with 4 layers (each with their own icon) and a total of about 25 points in them. The database view shows all points correctly. After saving and closing, also the preview image shows the content correctly: <img src="https://help.openstreetmap.org/upfiles/1_tupZvBr.PNG" alt="alt text" /></p>
-<p>However, whenever I reopen it (by clicking on its title under the preview image), all points disappear, except for 1 single point per layer (unique icon): <img src="https://help.openstreetmap.org/upfiles/2_ElVihXg.PNG" alt="alt text" /></p>
+<p>Two days ago I created a uMap with 4 layers (each with their own icon) and a total of about 25 points in them. The database view shows all points correctly. After saving and closing, also the preview image shows the content correctly: <img src="/upfiles/1_tupZvBr.PNG" alt="alt text" /></p>
+<p>However, whenever I reopen it (by clicking on its title under the preview image), all points disappear, except for 1 single point per layer (unique icon): <img src="/upfiles/2_ElVihXg.PNG" alt="alt text" /></p>
 <p>I tried different ways of creating new points withint these layers (e.g. cloning, or adding completely new ones), but the issue remains: only 1 single point per layer is saved (same in database view).</p>
 <p>Weirdly enough, I embedded the uMap on my web page, where it remains correct: <a href="https://cambisol.com/projects/">https://cambisol.com/projects/</a></p>
 <p>How can I recover my points? And how to prevent this in future edits?</p>

@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> can show this information (just click the checkbox in the settings<img src="https://help.openstreetmap.org/upfiles/Screenshot_JOSM_hdop.png" alt="alt text" />). I don't think any other editor can.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> can show this information (just click the checkbox in the settings<img src="/upfiles/Screenshot_JOSM_hdop.png" alt="alt text" />). I don't think any other editor can.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

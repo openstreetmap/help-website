@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You forgot to actually activate PostGIS features for your database. Check the <a href="http://wiki.openstreetmap.org/wiki/Mapnik/PostGIS">wiki page on Mapnik/PostGIS installation</a>. You are missing something like</p>
+<p>You forgot to actually activate PostGIS features for your database. Check the <a href="https://wiki.openstreetmap.org/wiki/Mapnik/PostGIS">wiki page on Mapnik/PostGIS installation</a>. You are missing something like</p>
 <pre><code>psql -d gis -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql
 psql -d gis -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql</code></pre>
 </div>

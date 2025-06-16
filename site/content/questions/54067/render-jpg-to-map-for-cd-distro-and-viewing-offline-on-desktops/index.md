@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the viewer, you should choose OpenLayers or Leaflet (both are Javascript libraries). You will have to copy the respective Javascript files onto the disc and write a 20-line HTML snippet but there's plenty of online resources to help you with that (see e.g. <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example">http://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example</a> - note that these instructions have you download tiles from OSM whereas what you want is your own tiles). The advantage of this is that it's totally free and requires only a web browser on the user's computer (no installation required).</p>
+<p>For the viewer, you should choose OpenLayers or Leaflet (both are Javascript libraries). You will have to copy the respective Javascript files onto the disc and write a 20-line HTML snippet but there's plenty of online resources to help you with that (see e.g. <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example">https://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example</a> - note that these instructions have you download tiles from OSM whereas what you want is your own tiles). The advantage of this is that it's totally free and requires only a web browser on the user's computer (no installation required).</p>
 <p>For generating the tiles, while there are free and open source ways to do it (stitch images together into a GeoTIFF using QGis, then use gdal2tiles), an easier way might be using the proprietary software MapTiler (maptiler.com) - try their free version to see if it allows you to do what you need.</p>
 </div>
 <div class="answer-controls post-controls">

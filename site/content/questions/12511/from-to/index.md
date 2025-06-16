@@ -70,7 +70,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>First of all, thank you for your super-quick answer and thanks everybody who has taken a role in developing this project. I am a programmer and I know how valuable your works are.</p>
 <p>I have downloaded the map from <a href="http://www.osmmaps.com/canada.html">http://www.osmmaps.com/canada.html</a></p>
-<p>The page (<a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#North_America)">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#North_America)</a> says the map is routable. I should just put the img file in the memory card and insert it into the GPS.</p>
+<p>The page (<a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#North_America)">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#North_America)</a> says the map is routable. I should just put the img file in the memory card and insert it into the GPS.</p>
 <p>My concern is if we can use OSM maps to get routs like Garmin maps. I mean when I use the car GPS, I enter the destination (the GPS has already detected where I am at the time) and the GPS gives me the rout to the destination and in case if I get on a wrong road, the GPS re-routs and gives me a new schedule. Does a OSM do the same for me?</p>
 </div>
 <div id="comment-12514-info" class="comment-info">
@@ -162,7 +162,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't know about Garmin eTrex Vista HCx specifically, but generally to use an OSM map with navigation you have to use a map that has been generated with routing enabled. So if the navigation doesn't work for you the first thing to check is that the map you downloaded from somewhere actually was generated with routing enabled.</p>
-<p>Depending of how skilled you are you may also generate your own Garmin maps using for example <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> and <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a>. For more information see <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin</a>.</p>
+<p>Depending of how skilled you are you may also generate your own Garmin maps using for example <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> and <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a>. For more information see <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see <a href="https://help.openstreetmap.org/questions/40850/map-not-in-english-most-countries-show-native-languages">https://help.openstreetmap.org/questions/40850/map-not-in-english-most-countries-show-native-languages</a></p>
+<p>see <a href="/questions/40850/map-not-in-english-most-countries-show-native-languages">https://help.openstreetmap.org/questions/40850/map-not-in-english-most-countries-show-native-languages</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

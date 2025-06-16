@@ -144,7 +144,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">But the wiki tells otherwise</a>™</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">But the wiki tells otherwise</a>™</p>
 </div>
 <div id="comment-19619-info" class="comment-info">
 <span class="comment-age">(06 Feb '13, 17:14)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -156,7 +156,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>And also lists exceptions: <a href="http://wiki.openstreetmap.org/wiki/Invalid_Abbreviation_Expansion">http://wiki.openstreetmap.org/wiki/Invalid_Abbreviation_Expansion</a></p>
+<p>And also lists exceptions: <a href="https://wiki.openstreetmap.org/wiki/Invalid_Abbreviation_Expansion">https://wiki.openstreetmap.org/wiki/Invalid_Abbreviation_Expansion</a></p>
 </div>
 <div id="comment-19623-info" class="comment-info">
 <span class="comment-age">(06 Feb '13, 17:36)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -284,7 +284,7 @@ osqa_accepted = false
 <div id="post-19697-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Then, improve the wiki <a href="http://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">http://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29</a></p>
+<p>Then, improve the wiki <a href="https://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">https://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29</a></p>
 </div>
 <div id="comment-19697-info" class="comment-info">
 <span class="comment-age">(07 Feb '13, 16:59)</span> <span class="comment-user userinfo">Pieren</span>
@@ -327,7 +327,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The documentation says <a href="http://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">not to abbreviate names</a>, ever. The difficulty is knowing when something that was an abbreviation isn't any more.</p>
+<p>The documentation says <a href="https://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">not to abbreviate names</a>, ever. The difficulty is knowing when something that was an abbreviation isn't any more.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -383,7 +383,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>"St." is a good example since it can be the abbreviation of "Street" or "Saint". Shortening names is always easier than expanding abbreviations. Alternatively, you can use the tag "<a href="http://wiki.openstreetmap.org/wiki/Name">short_name=*</a>" which will be interpreted by nominatim (and might be used in renderers in the futur)</p>
+<p>"St." is a good example since it can be the abbreviation of "Street" or "Saint". Shortening names is always easier than expanding abbreviations. Alternatively, you can use the tag "<a href="https://wiki.openstreetmap.org/wiki/Name">short_name=*</a>" which will be interpreted by nominatim (and might be used in renderers in the futur)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

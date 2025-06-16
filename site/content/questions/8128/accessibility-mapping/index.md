@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A lot of projects are listed on the <a href="http://wiki.openstreetmap.org/wiki/Accessibility">Accessibility wiki page</a></p>
-<p>One of the best ones is <a href="http://wheelmap.org/">WheelMap.org</a>, a website and iPhone app which displays OSM data and allows users to add to it. Generally it's all about classifying shops, cafes and other POIs by the their level of wheelchair accessibility using <a href="http://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair tags</a></p>
+<p>A lot of projects are listed on the <a href="https://wiki.openstreetmap.org/wiki/Accessibility">Accessibility wiki page</a></p>
+<p>One of the best ones is <a href="http://wheelmap.org/">WheelMap.org</a>, a website and iPhone app which displays OSM data and allows users to add to it. Generally it's all about classifying shops, cafes and other POIs by the their level of wheelchair accessibility using <a href="https://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair tags</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suggest you get to this "accessibility page" where you'll find which tags to use (e. g. highway=steps or wheelchair=yes/no/limited ...) : <a href="http://wiki.openstreetmap.org/wiki/Accessibility">http://wiki.openstreetmap.org/wiki/Accessibility</a> also significant info in "Disabilities" http://wiki.openstreetmap.org/wiki/Disabilities</p>
+<p>I suggest you get to this "accessibility page" where you'll find which tags to use (e. g. highway=steps or wheelchair=yes/no/limited ...) : <a href="https://wiki.openstreetmap.org/wiki/Accessibility">https://wiki.openstreetmap.org/wiki/Accessibility</a> also significant info in "Disabilities" https://wiki.openstreetmap.org/wiki/Disabilities</p>
 <p>Hervé</p>
 </div>
 <div class="answer-controls post-controls">

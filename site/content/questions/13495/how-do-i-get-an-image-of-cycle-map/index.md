@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For getting a bounding box area of the cycle map in an image, you can use <a href="http://wiki.openstreetmap.org/wiki/Bigmap">bigmap</a></p>
+<p>For getting a bounding box area of the cycle map in an image, you can use <a href="https://wiki.openstreetmap.org/wiki/Bigmap">bigmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -205,7 +205,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/XXXX.JPG" alt="alt text" />On my windows XP PC on the right hand side on the map page if hover over the standard icon I get cycle map as an option and it can be exported.</p>
+<p><img src="/upfiles/XXXX.JPG" alt="alt text" />On my windows XP PC on the right hand side on the map page if hover over the standard icon I get cycle map as an option and it can be exported.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

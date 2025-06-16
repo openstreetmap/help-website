@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch 2/Shortcuts</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch 2/Shortcuts</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -115,14 +115,14 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Am besten ist es die OpenStreetMap-Entwickler direkt zu kontaktieren ueber "mailing list" oder IRC chat:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></li>
 <li><a href="http://lists.openstreetmap.org/listinfo">http://lists.openstreetmap.org/listinfo</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Contact#IRC">http://wiki.openstreetmap.org/wiki/Contact#IRC</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Contact#IRC">https://wiki.openstreetmap.org/wiki/Contact#IRC</a></li>
 </ul>
 <p>Es gibt auch developer central in English und Deutsch:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/DE:Develop">http://wiki.openstreetmap.org/wiki/DE:Develop</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/DE:Develop">https://wiki.openstreetmap.org/wiki/DE:Develop</a></li>
 </ul>
 <p>oder ganze Deutsche Seite:</p>
 <ul>

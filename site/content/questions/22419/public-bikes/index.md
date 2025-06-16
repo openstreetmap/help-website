@@ -120,8 +120,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, it would be very useful to map these bicycle rental services in OpenStreetMap, then they will appear on OpenCycleMap. If you want to go and survey and map some, they can be tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_rental">amenity=bicycle_rental</a>. This will show on OpenCycleMap as a yellow square, with a C symbol.</p>
-<p>If you want to use data from other sources, eg that official website, then you should follow the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a>. Specifically, check whether that data is available under a suitable license. Also discuss it with the local community, and work out whether the data is accurate, and how it can be combined with any of these places already mapped in OSM.</p>
+<p>Yes, it would be very useful to map these bicycle rental services in OpenStreetMap, then they will appear on OpenCycleMap. If you want to go and survey and map some, they can be tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_rental">amenity=bicycle_rental</a>. This will show on OpenCycleMap as a yellow square, with a C symbol.</p>
+<p>If you want to use data from other sources, eg that official website, then you should follow the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a>. Specifically, check whether that data is available under a suitable license. Also discuss it with the local community, and work out whether the data is accurate, and how it can be combined with any of these places already mapped in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

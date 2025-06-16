@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It doesn't seem to be mentioned in the <a href="http://help.openstreetmap.org/faq/">faq</a>, which only mentions editing <em>answers</em> with 400 karma.</p>
+<p>It doesn't seem to be mentioned in the <a href="https://help.openstreetmap.org/faq/">faq</a>, which only mentions editing <em>answers</em> with 400 karma.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-meta" rel="tag" title="see questions tagged &#39;meta&#39;">meta</span> <span class="post-tag tag-link-karma" rel="tag" title="see questions tagged &#39;karma&#39;">karma</span>

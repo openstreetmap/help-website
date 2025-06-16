@@ -204,7 +204,7 @@ This answer is marked "community wiki".
 <blockquote>
 <p>I plan on making a map for a specific country estate and list all aspects of it from specific treets to holes in the ground and other things.</p>
 </blockquote>
-<p>You may be able to add this stuff to OSM. People are already <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree">mapping individual trees</a>, how tall they are, species, etc. So long as the data is correct (i.e. there actually is a tree there), then you could use the main OSM website.</p>
+<p>You may be able to add this stuff to OSM. People are already <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree">mapping individual trees</a>, how tall they are, species, etc. So long as the data is correct (i.e. there actually is a tree there), then you could use the main OSM website.</p>
 <p>Someone has already started <a href="http://opengeofiction.net/about">OpenGeofiction</a>, a clone of OSM for their own fantasy maps, which is open to lots of people. You could make your map there?</p>
 </div>
 <div class="answer-controls post-controls">

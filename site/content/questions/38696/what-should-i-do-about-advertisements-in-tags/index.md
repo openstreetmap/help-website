@@ -45,7 +45,7 @@ osqa_accepted = false
 <li>contact contributor and explain the error of his data</li>
 <li>or report to OSM. If so: how?</li>
 </ol>
-<p><a href="http://help.openstreetmap.org/upfiles/Rosa_Villa.png">link text</a></p>
+<p><span>link text</span></p>
 <p>The business itself seems to me to be a valid entry, it is the note that I don't like!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -153,7 +153,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Option 4? Move the text into a description key instead, that seems more appropriate "The description tag can be used to provide additional information about the related element to the end map user." http://wiki.openstreetmap.org/wiki/Key:description</p>
+<p>Option 4? Move the text into a description key instead, that seems more appropriate "The description tag can be used to provide additional information about the related element to the end map user." https://wiki.openstreetmap.org/wiki/Key:description</p>
 <p>If all the other tagging is OK, I guess I don't get so hung up about what people put in the note or description tag. It's probably some wasted effort anyway: people will probably just look at a business' website or online reviews, rather than notes/descriptions in OSM.</p>
 </div>
 <div class="answer-controls post-controls">

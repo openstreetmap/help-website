@@ -140,7 +140,7 @@ One Answer:
 <div id="post-45588-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2565/corneliux"></a><a href="http://help.openstreetmap.org/users/2565/corneliux">@Corneliux</a>, if <a href="http://help.openstreetmap.org/users/131/gnonthgol"></a><a href="http://help.openstreetmap.org/users/131/gnonthgol">@Gnonthgol</a> 's reply answers your question, could you please mark it as "accepted" (click the little check mark next to the "thumbs-up" and "thumbs-down" icons)?</p>
+<p><a href="https://help.openstreetmap.org/users/2565/corneliux"></a><a href="https://help.openstreetmap.org/users/2565/corneliux">@Corneliux</a>, if <a href="https://help.openstreetmap.org/users/131/gnonthgol"></a><a href="https://help.openstreetmap.org/users/131/gnonthgol">@Gnonthgol</a> 's reply answers your question, could you please mark it as "accepted" (click the little check mark next to the "thumbs-up" and "thumbs-down" icons)?</p>
 </div>
 <div id="comment-45588-info" class="comment-info">
 <span class="comment-age">(25 Sep '15, 08:18)</span> <span class="comment-user userinfo">Lightsider</span>
@@ -152,7 +152,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5070/lightsider"></a><a href="http://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> I doubt Corneliux will read your comment after almost 4 years without any activity. I marked the answer as accepted.</p>
+<p><a href="https://help.openstreetmap.org/users/5070/lightsider"></a><a href="https://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> I doubt Corneliux will read your comment after almost 4 years without any activity. I marked the answer as accepted.</p>
 </div>
 <div id="comment-45590-info" class="comment-info">
 <span class="comment-age">(25 Sep '15, 08:59)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -175,7 +175,7 @@ One Answer:
 <div id="post-45597-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, you're right, I didn't look at the timestamp. D'oh! :)</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, you're right, I didn't look at the timestamp. D'oh! :)</p>
 </div>
 <div id="comment-45597-info" class="comment-info">
 <span class="comment-age">(25 Sep '15, 12:12)</span> <span class="comment-user userinfo">Lightsider</span>

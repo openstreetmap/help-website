@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>First, a correct bbox for India should be (66.4,5.2,90.5,36.2).</p>
-<p>Then, which procedure have you followed for your attempt? Have you installed mapnik? Have you downloaded OSM data, and imported it into pgsql? If not, you must read the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik documentation on the wiki</a>. If you're aware of that, do you have any message output by the python script that can give us some hint for helping you?</p>
+<p>Then, which procedure have you followed for your attempt? Have you installed mapnik? Have you downloaded OSM data, and imported it into pgsql? If not, you must read the <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik documentation on the wiki</a>. If you're aware of that, do you have any message output by the python script that can give us some hint for helping you?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

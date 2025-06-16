@@ -136,7 +136,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Hi Teek Thanks for the fast respond. I tried it in iD.</p>
-<p>To my shame, I have to admit that I found the answer in another post: (<strong>How to reverse the direction of a river?</strong> <a href="https://help.openstreetmap.org/questions/35022/how-to-reverse-the-direction-of-a-river">https://help.openstreetmap.org/questions/35022/how-to-reverse-the-direction-of-a-river</a>).</p>
+<p>To my shame, I have to admit that I found the answer in another post: (<strong>How to reverse the direction of a river?</strong> <a href="/questions/35022/how-to-reverse-the-direction-of-a-river">https://help.openstreetmap.org/questions/35022/how-to-reverse-the-direction-of-a-river</a>).</p>
 <p>Please excuse my carelessness</p>
 </div>
 <div id="comment-84109-info" class="comment-info">

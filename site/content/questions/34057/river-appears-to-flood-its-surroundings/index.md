@@ -92,7 +92,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Highley, Alveley and Upper Arley also down the gurgler</p>
-<p><a href="http://www.openstreetmap.org/#map=13/52.4416/-2.3555">http://www.openstreetmap.org/#map=13/52.4416/-2.3555</a></p>
+<p><a href="https://www.openstreetmap.org/#map=13/52.4416/-2.3555">https://www.openstreetmap.org/#map=13/52.4416/-2.3555</a></p>
 </div>
 <div id="comment-34070-info" class="comment-info">
 <span class="comment-age">(18 Jun '14, 02:32)</span> <span class="comment-user userinfo">nevw</span>

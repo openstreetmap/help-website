@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For an answer, please follow <a href="http://www.openstreetmap.org/?lat=39.42&amp;lon=-7.68&amp;zoom=7&amp;layers=M">this link</a> :-)</p>
+<p>For an answer, please follow <a href="https://www.openstreetmap.org/?lat=39.42&amp;lon=-7.68&amp;zoom=7&amp;layers=M">this link</a> :-)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

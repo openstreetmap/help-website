@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am having trouble getting a cycleway and road crossing to "work" (ie route) correctly and could use some help. The cycleway crossing is <a href="http://www.openstreetmap.org/browse/way/179618746">ID: 179618746 at -32.0480027 and 115.8872204</a> (crossing Apsley Rd, in Willetton, West Australia. I am expecting I should be able to create a route where a bicycle can turn off the (dual carriageway) main road onto the cycleway, but it will not route that way. I have tried a number of things without success, but at present, the cycleway is tagged with: highway=cycleway, foot=designated. The road carriageways are designated: highway=secondary, oneway=yes. The intersecting nodes are designated as highway=crossing.</p>
+<p>I am having trouble getting a cycleway and road crossing to "work" (ie route) correctly and could use some help. The cycleway crossing is <a href="https://www.openstreetmap.org/browse/way/179618746">ID: 179618746 at -32.0480027 and 115.8872204</a> (crossing Apsley Rd, in Willetton, West Australia. I am expecting I should be able to create a route where a bicycle can turn off the (dual carriageway) main road onto the cycleway, but it will not route that way. I have tried a number of things without success, but at present, the cycleway is tagged with: highway=cycleway, foot=designated. The road carriageways are designated: highway=secondary, oneway=yes. The intersecting nodes are designated as highway=crossing.</p>
 <p>What am I doing wrong ?</p>
 <p>thanks</p>
 </div>
@@ -249,7 +249,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it is here <a href="http://www.openstreetmap.org/?lat=-32.048239&amp;lon=115.887132&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-32.048239&amp;lon=115.887132&amp;zoom=18&amp;layers=M</a> you can see from this screen shot that the cycle way as un-set cycle tags if you fix this it may work then.<img src="http://help.openstreetmap.org/upfiles/zzz_cycle_tags_1.JPG" alt="alt text" /></p>
+<p>If it is here <a href="https://www.openstreetmap.org/?lat=-32.048239&amp;lon=115.887132&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-32.048239&amp;lon=115.887132&amp;zoom=18&amp;layers=M</a> you can see from this screen shot that the cycle way as un-set cycle tags if you fix this it may work then.<img src="/upfiles/zzz_cycle_tags_1.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

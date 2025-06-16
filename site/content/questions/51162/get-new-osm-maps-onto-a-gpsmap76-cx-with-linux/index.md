@@ -155,7 +155,7 @@ One Answer:
 <div id="post-51170-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12589/jackerbes">@jackerbes</a>: what do you mean by "browse the maps"? You can open gmapsupp files <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Format">also with QLandkarte</a> (but only if you have a accompanying meta data file). Otherwise, it seems that there are no other applications to display Garmin map files, yes. I personally use no such software – only maps on my Garmin.</p>
+<p><a href="https://help.openstreetmap.org/users/12589/jackerbes">@jackerbes</a>: what do you mean by "browse the maps"? You can open gmapsupp files <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Format">also with QLandkarte</a> (but only if you have a accompanying meta data file). Otherwise, it seems that there are no other applications to display Garmin map files, yes. I personally use no such software – only maps on my Garmin.</p>
 <p>For how to make a map image file see <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> . Not really that easy.</p>
 <p>Your link about running Mapsource via wine - like mine. Yes, that's an option.</p>
 <p>However, I would like to emphasize that I suggest to use <span>one of the many webservices</span> which offer you small or even custom Garmin maps.</p>

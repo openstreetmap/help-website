@@ -140,7 +140,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>As <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> says you will need permission. For a long time in the UK we had no open source of postcodes, so you may need to use some of the methods we used: when displayed by a business or shop, on advertising copy such as hand bills (but not robotic extracts from web sites), crowdsourcing, receipts, asking people (for instance when buying things). A quick look suggests nothing useful in current open data sets, but things can change quickly, so keep an eye on the portals.</p>
+<p>As <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> says you will need permission. For a long time in the UK we had no open source of postcodes, so you may need to use some of the methods we used: when displayed by a business or shop, on advertising copy such as hand bills (but not robotic extracts from web sites), crowdsourcing, receipts, asking people (for instance when buying things). A quick look suggests nothing useful in current open data sets, but things can change quickly, so keep an eye on the portals.</p>
 <p>Even with open data we have less than 10% mapped: so it can be a big task. (UK postcode granularity is very fine).</p>
 </div>
 <div id="comment-38254-info" class="comment-info">

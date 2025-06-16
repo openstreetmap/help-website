@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can see all the available GPS traces at any point of the map when editing by choosing that option. Using the iD editor it is near the end of the list of backgrounds, GPS traces. Potlatch2 and JOSM have the ability to show all traces. see <a href="https://help.openstreetmap.org/questions/67862/show-multiple-gpx-tracks-in-id-editor">https://help.openstreetmap.org/questions/67862/show-multiple-gpx-tracks-in-id-editor</a></p>
+<p>You can see all the available GPS traces at any point of the map when editing by choosing that option. Using the iD editor it is near the end of the list of backgrounds, GPS traces. Potlatch2 and JOSM have the ability to show all traces. see <a href="/questions/67862/show-multiple-gpx-tracks-in-id-editor">https://help.openstreetmap.org/questions/67862/show-multiple-gpx-tracks-in-id-editor</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

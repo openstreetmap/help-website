@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Taken together I'd say that the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">main API wiki page</a> and the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> were a good start?</p>
+<p>Taken together I'd say that the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">main API wiki page</a> and the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> were a good start?</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

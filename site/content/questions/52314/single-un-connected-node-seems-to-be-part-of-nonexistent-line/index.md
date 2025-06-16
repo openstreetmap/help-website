@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Single, un-connected node seems to be part of nonexistent line"
-description = '''Hi all, something seems to be wrong with this node: http://www.openstreetmap.org/node/4426318079 It seems to belong to a line. http://www.openstreetmap.org/way/445159904 But there is no line... Strange.'''
+description = '''Hi all, something seems to be wrong with this node: https://www.openstreetmap.org/node/4426318079 It seems to belong to a line. https://www.openstreetmap.org/way/445159904 But there is no line... Strange.'''
 date = "2016-10-01T16:40:00Z"
 lastmod = "2016-10-03T14:48:00Z"
 weight = 52314
@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>something seems to be wrong with this node: <a href="http://www.openstreetmap.org/node/4426318079">http://www.openstreetmap.org/node/4426318079</a></p>
-<p>It seems to belong to a line. <a href="http://www.openstreetmap.org/way/445159904">http://www.openstreetmap.org/way/445159904</a></p>
+<p>something seems to be wrong with this node: <a href="https://www.openstreetmap.org/node/4426318079">https://www.openstreetmap.org/node/4426318079</a></p>
+<p>It seems to belong to a line. <a href="https://www.openstreetmap.org/way/445159904">https://www.openstreetmap.org/way/445159904</a></p>
 <p>But there is no line... Strange.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -78,7 +78,7 @@ osqa_accepted = true
 <div id="post-52328-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>… true, however, better here than nowhere. :-) So, <em>if possible</em>, please use another communication channel for such problems, <a href="http://help.openstreetmap.org/users/1829/rene78">@rene78</a>.</p>
+<p>… true, however, better here than nowhere. :-) So, <em>if possible</em>, please use another communication channel for such problems, <a href="https://help.openstreetmap.org/users/1829/rene78">@rene78</a>.</p>
 </div>
 <div id="comment-52328-info" class="comment-info">
 <span class="comment-age">(02 Oct '16, 10:57)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -178,7 +178,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think, requesting a changeset already increases the version number. Look at the nodes history: <a href="http://www.openstreetmap.org/browse/node/1479973945/history">http://www.openstreetmap.org/browse/node/1479973945/history</a></p>
+<p>I think, requesting a changeset already increases the version number. Look at the nodes history: <a href="https://www.openstreetmap.org/browse/node/1479973945/history">https://www.openstreetmap.org/browse/node/1479973945/history</a></p>
 <p>Try to get the nodes tags without requesting the changeset, make the changes locally and upload them. Have you added action="modify" before uploading?</p>
 </div>
 <div class="answer-controls post-controls">

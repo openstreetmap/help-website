@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Boundaries of adjacent multipolygons: I cannot see the boundaries for my features"
-description = '''Hi, I&#x27;m trying editing this area http://www.openstreetmap.org/#map=18/45.39764/10.48657 with JOSM. I&#x27;ve tried to apply the editing rules as strictly as possible using multipolygon relations among inner/outer features and adjacent objects. With the most features I haven&#x27;t found any problem, and the e...'''
+description = '''Hi, I&#x27;m trying editing this area https://www.openstreetmap.org/#map=18/45.39764/10.48657 with JOSM. I&#x27;ve tried to apply the editing rules as strictly as possible using multipolygon relations among inner/outer features and adjacent objects. With the most features I haven&#x27;t found any problem, and the e...'''
 date = "2015-06-03T16:45:00Z"
 lastmod = "2015-06-03T19:00:00Z"
 weight = 43380
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I'm trying editing this area <a href="http://www.openstreetmap.org/#map=18/45.39764/10.48657">http://www.openstreetmap.org/#map=18/45.39764/10.48657</a> with JOSM. I've tried to apply the editing rules as strictly as possible using multipolygon relations among inner/outer features and adjacent objects. With the most features I haven't found any problem, and the edited features are represented on the map as I edited them. On the contrary in some cases, as the one in the mentioned link, I'm quite sure to have followed the correct editing rules, but I cannot see the boundaries for my features (that are visible in the editing mode). Could anyone solve the mistery and explain me why it happens? Thanks in advance...</p>
+<p>Hi, I'm trying editing this area <a href="https://www.openstreetmap.org/#map=18/45.39764/10.48657">https://www.openstreetmap.org/#map=18/45.39764/10.48657</a> with JOSM. I've tried to apply the editing rules as strictly as possible using multipolygon relations among inner/outer features and adjacent objects. With the most features I haven't found any problem, and the edited features are represented on the map as I edited them. On the contrary in some cases, as the one in the mentioned link, I'm quite sure to have followed the correct editing rules, but I cannot see the boundaries for my features (that are visible in the editing mode). Could anyone solve the mistery and explain me why it happens? Thanks in advance...</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not_shown" rel="tag" title="see questions tagged &#39;not_shown&#39;">not_shown</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-features" rel="tag" title="see questions tagged &#39;features&#39;">features</span> <span class="post-tag tag-link-adjacent" rel="tag" title="see questions tagged &#39;adjacent&#39;">adjacent</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "API: JS cross-domain problem"
-description = '''OSM has an API to query data. Like this: http://www.openstreetmap.org/api/0.6/map?bbox=7.012854,51.450317,7.016477,51.452105 However, you can&#x27;t do this query from javascript, because this would violate the &quot;cross-domain policy&quot;. If I understood it right, OSM could remove this policy by adding these ...'''
+description = '''OSM has an API to query data. Like this: https://www.openstreetmap.org/api/0.6/map?bbox=7.012854,51.450317,7.016477,51.452105 However, you can&#x27;t do this query from javascript, because this would violate the &quot;cross-domain policy&quot;. If I understood it right, OSM could remove this policy by adding these ...'''
 date = "2012-09-12T09:41:00Z"
 lastmod = "2021-04-02T08:03:00Z"
 weight = 15990
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>OSM has an API to query data. Like this: <a href="http://www.openstreetmap.org/api/0.6/map?bbox=7.012854,51.450317,7.016477,51.452105">http://www.openstreetmap.org/api/0.6/map?bbox=7.012854,51.450317,7.016477,51.452105</a></p>
+<p>OSM has an API to query data. Like this: <a href="https://www.openstreetmap.org/api/0.6/map?bbox=7.012854,51.450317,7.016477,51.452105">https://www.openstreetmap.org/api/0.6/map?bbox=7.012854,51.450317,7.016477,51.452105</a></p>
 <p>However, you can't do this query from javascript, because this would violate the "cross-domain policy". If I understood it right, OSM could remove this policy by adding these HTTP headers to the API answer:</p>
 <p>response['Access-Control-Allow-Origin'] = "*" response['Access-Control-Allow-Methods'] = "POST, GET, OPTIONS" response['Access-Control-Allow-Headers'] = "X-Requested-With"</p>
 <p>(Taken from Stackoverflow-question "Cross domain POST query using Cross-Origin Resource Sharing getting no data back")</p>
@@ -116,12 +116,12 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can use Overpass API instead. Just replace</p>
-<pre><code>http://www.openstreetmap.org/api/0.6/</code></pre>
+<pre><code>https://www.openstreetmap.org/api/0.6/</code></pre>
 <p>by</p>
 <pre><code>http://overpass-api.de/api/xapi?</code></pre>
 <p>So you get e.g. <a href="http://overpass-api.de/api/xapi?map?bbox=7.012854,51.450317,7.016477,51.452105">http://overpass-api.de/api/xapi?map?bbox=7.012854,51.450317,7.016477,51.452105</a></p>
 <p>Overpass API sets a cross-origin header.</p>
-<p>The rationale behind this is that the OSM main API is for editing, not for data reading. By contrast, <a href="http://wiki.openstreetmap.org/wiki/XAPI">the mirrors</a> (one of which is Overpass API) serve beside a small time lag the same data, are intended for read only operations, and usually answer much faster.</p>
+<p>The rationale behind this is that the OSM main API is for editing, not for data reading. By contrast, <a href="https://wiki.openstreetmap.org/wiki/XAPI">the mirrors</a> (one of which is Overpass API) serve beside a small time lag the same data, are intended for read only operations, and usually answer much faster.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -214,7 +214,7 @@ osqa_accepted = true
 <div id="post-15993-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There is an <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> - it's the usual issue of shared resources. Depending on what you actually want to do, there may well be better alternatives to hitting the API directly.</p>
+<p>There is an <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> - it's the usual issue of shared resources. Depending on what you actually want to do, there may well be better alternatives to hitting the API directly.</p>
 </div>
 <div id="comment-15993-info" class="comment-info">
 <span class="comment-age">(12 Sep '12, 11:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

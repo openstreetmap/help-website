@@ -134,7 +134,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I assume you have signed in and created a user name. Next zoom right in to where you wish to edit. (you need to zoom in or you will be trying to download a lot of data). Click on Edit and choose an editor. The iD editor will be good for small edits. Click on the street to highlight it, click on the name to edit it. change the name. save it, give the source of the name in your case local knowledge. save it Job Done may take a little while for the change to be seen at all zoom levels. note: it it easier to point to place by right clicking the map, centering it. them just copy the URL and paste it like this. <a href="http://www.openstreetmap.org/#map=19/52.41462/0.27820">http://www.openstreetmap.org/#map=19/52.41462/0.27820</a></p>
+<p>I assume you have signed in and created a user name. Next zoom right in to where you wish to edit. (you need to zoom in or you will be trying to download a lot of data). Click on Edit and choose an editor. The iD editor will be good for small edits. Click on the street to highlight it, click on the name to edit it. change the name. save it, give the source of the name in your case local knowledge. save it Job Done may take a little while for the change to be seen at all zoom levels. note: it it easier to point to place by right clicking the map, centering it. them just copy the URL and paste it like this. <a href="https://www.openstreetmap.org/#map=19/52.41462/0.27820">https://www.openstreetmap.org/#map=19/52.41462/0.27820</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <div id="post-61440-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 </div>
 <div id="comment-61440-info" class="comment-info">
 <span class="comment-age">(01 Jan '18, 12:31)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -283,7 +283,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/osm_Gunning_Road_iD.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/osm_Gunning_Road_iD.JPG" alt="alt text" /></p>
 <p>This is a screen grab of iD running. It show how and where BCNorwich gets openstreetview as layer in ID from. This data is an allowable source as well as all of other backgrounds that can be displayed in the editors.</p>
 </div>
 <div class="answer-controls post-controls">

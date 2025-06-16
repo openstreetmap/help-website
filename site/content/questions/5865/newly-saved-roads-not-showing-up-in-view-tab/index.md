@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>So I've been doing a little bit of editing, trying to grasp this or that.</p>
 <p>My question is, why aren't my newly saved roads showing up in the view tab? They save was successful but to view the residential roads I need to zoom all the way in for a view of ALL of the roads and one step out for half of thme...three or more steps out and there is nothing to see of my new additions.</p>
-<p>Link is here: <a href="http://www.openstreetmap.org/?lat=29.5700991153717&amp;lon=-98.3430004119873&amp;zoom=16">http://www.openstreetmap.org/?lat=29.5700991153717&amp;lon=-98.3430004119873&amp;zoom=16</a></p>
+<p>Link is here: <a href="https://www.openstreetmap.org/?lat=29.5700991153717&amp;lon=-98.3430004119873&amp;zoom=16">https://www.openstreetmap.org/?lat=29.5700991153717&amp;lon=-98.3430004119873&amp;zoom=16</a></p>
 <p>Upon further examination, I don't get 100% of the roads I added. Am I doing something wrong with my adding? Is there a tutorial somewhere?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -83,7 +83,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>The way the rendering works in OpenStreetMap is perhaps a little odd from a users perspective and can result in differentially old maps. Only areas that get viewed are updated. If you don't view an area with changes for 24 hours, it won't get updated. The best way to make sure an area is updated, is to view it again and make sure to not hit your browser cache.</p>
-<p>A better (more detailed) explanation can be found at <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>A better (more detailed) explanation can be found at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div id="comment-5883-info" class="comment-info">
 <span class="comment-age">(19 Jun '11, 16:21)</span> <span class="comment-user userinfo">apmon</span>
@@ -138,7 +138,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You're probably doing nothing wrong. "Rerendering" the map on the view tab isn't instant - it takes time, depending on how busy the server is. Different zoom levels are rerendered at different times, too.</p>
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">FAQ</a>.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">FAQ</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

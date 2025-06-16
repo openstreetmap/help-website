@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Street cabinet.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dstreet_cabinet">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dstreet_cabinet</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dstreet_cabinet">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dstreet_cabinet</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

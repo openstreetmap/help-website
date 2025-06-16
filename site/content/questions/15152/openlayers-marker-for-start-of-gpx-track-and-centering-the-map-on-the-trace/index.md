@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Openlayers - marker for start of GPX track and centering the map on the trace"
-description = '''Using the example http://wiki.openstreetmap.org/wiki/Openlayers_Track_example I can make a map with a GPX trace on it but I have to centre the map by finding the co-ordinates separately and assigning them to variables for lat lon, and getting the zoom level by trial and error.  I can also add a pin ...'''
+description = '''Using the example https://wiki.openstreetmap.org/wiki/Openlayers_Track_example I can make a map with a GPX trace on it but I have to centre the map by finding the co-ordinates separately and assigning them to variables for lat lon, and getting the zoom level by trial and error.  I can also add a pin ...'''
 date = "2012-08-16T15:59:00Z"
 lastmod = "2017-10-09T13:57:00Z"
 weight = 15152
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Using the example <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">http://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a> I can make a map with a GPX trace on it but I have to centre the map by finding the co-ordinates separately and assigning them to variables for lat lon, and getting the zoom level by trial and error. I can also add a pin to mark the start but again have to position it by manually entering the co-ordinates. It's entirely possible to use javascript to parse the GPX file to find the bounds of the trace, and the centre point. The start point is also simply the first trackpoint.</p>
+<p>Using the example <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">https://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a> I can make a map with a GPX trace on it but I have to centre the map by finding the co-ordinates separately and assigning them to variables for lat lon, and getting the zoom level by trial and error. I can also add a pin to mark the start but again have to position it by manually entering the co-ordinates. It's entirely possible to use javascript to parse the GPX file to find the bounds of the trace, and the centre point. The start point is also simply the first trackpoint.</p>
 <p>Does anyone have any idea how to do this? I'm capable of adapting examples but not of generating this complexity of scripting!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

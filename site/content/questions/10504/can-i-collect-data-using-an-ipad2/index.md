@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd recommend: <a href="http://wiki.openstreetmap.org/wiki/Go_Map!!">http://wiki.openstreetmap.org/wiki/Go_Map!!</a> Source and bug tracking is here: <a href="https://github.com/bryceco/GoMap/issues">https://github.com/bryceco/GoMap/issues</a></p>
+<p>I'd recommend: <a href="https://wiki.openstreetmap.org/wiki/Go_Map!!">https://wiki.openstreetmap.org/wiki/Go_Map!!</a> Source and bug tracking is here: <a href="https://github.com/bryceco/GoMap/issues">https://github.com/bryceco/GoMap/issues</a></p>
 <p>It takes a while to get used to it, but after 30 minutes I think I get what this app does and what it's capable of. Can't wait to get out of my house to start editing. :)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -164,8 +164,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have no experience of ipad2 but These may help <a href="http://wiki.openstreetmap.org/wiki/Komoot_for_iPhone">http://wiki.openstreetmap.org/wiki/Komoot_for_iPhone</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Ipad">http://wiki.openstreetmap.org/wiki/Ipad</a> good luck</p>
+<p>I have no experience of ipad2 but These may help <a href="https://wiki.openstreetmap.org/wiki/Komoot_for_iPhone">https://wiki.openstreetmap.org/wiki/Komoot_for_iPhone</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Ipad">https://wiki.openstreetmap.org/wiki/Ipad</a> good luck</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

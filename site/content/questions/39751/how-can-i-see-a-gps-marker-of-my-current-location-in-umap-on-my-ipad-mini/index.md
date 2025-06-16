@@ -204,7 +204,7 @@ osqa_accepted = false
 <div id="post-39811-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9879/perla-rt">@perla-rt</a>: please mention this in your question text next time. There are really too much OSM-based maps and services to guess which one you mean.</p>
+<p><a href="https://help.openstreetmap.org/users/9879/perla-rt">@perla-rt</a>: please mention this in your question text next time. There are really too much OSM-based maps and services to guess which one you mean.</p>
 </div>
 <div id="comment-39811-info" class="comment-info">
 <span class="comment-age">(24 Dec '14, 02:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

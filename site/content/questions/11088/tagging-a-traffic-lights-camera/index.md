@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Tagging a traffic lights camera"
-description = '''Looking through http://wiki.openstreetmap.org/wiki/Key:highway I could not find an appropriate value to tag a traffic lights camera (i.e. the one that captures red light crossing only). The only option relevant is highway=speed_camera which is misleading, since such a camera does not catch you for s...'''
+description = '''Looking through https://wiki.openstreetmap.org/wiki/Key:highway I could not find an appropriate value to tag a traffic lights camera (i.e. the one that captures red light crossing only). The only option relevant is highway=speed_camera which is misleading, since such a camera does not catch you for s...'''
 date = "2012-03-09T23:25:00Z"
 lastmod = "2012-03-10T00:42:00Z"
 weight = 11088
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Looking through <a href="http://wiki.openstreetmap.org/wiki/Key:highway">http://wiki.openstreetmap.org/wiki/Key:highway</a> I could not find an appropriate value to tag a traffic lights camera (i.e. the one that captures red light crossing only). The only option relevant is highway=speed_camera which is misleading, since such a camera does not catch you for speeding, unless it is combined with one... Any suggestions?</p>
+<p>Looking through <a href="https://wiki.openstreetmap.org/wiki/Key:highway">https://wiki.openstreetmap.org/wiki/Key:highway</a> I could not find an appropriate value to tag a traffic lights camera (i.e. the one that captures red light crossing only). The only option relevant is highway=speed_camera which is misleading, since such a camera does not catch you for speeding, unless it is combined with one... Any suggestions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-traffic_lights" rel="tag" title="see questions tagged &#39;traffic_lights&#39;">traffic_lights</span> <span class="post-tag tag-link-speed_camera" rel="tag" title="see questions tagged &#39;speed_camera&#39;">speed_camera</span> <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The most common tagging style for a red light camera is a relation with <a href="http://wiki.openstreetmap.org/wiki/Relation:enforcement">enforcement=traffic_signals</a>.</p>
+<p>The most common tagging style for a red light camera is a relation with <a href="https://wiki.openstreetmap.org/wiki/Relation:enforcement">enforcement=traffic_signals</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

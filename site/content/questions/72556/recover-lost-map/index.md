@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>similar query may help: <a href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map">https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map</a></p>
+<p>similar query may help: <a href="/questions/69710/umap-openstreetmap-change-map">https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map</a></p>
 </div>
 <div id="comment-72563-info" class="comment-info">
 <span class="comment-age">(18 Jan '20, 01:04)</span> <span class="comment-user userinfo">nevw</span>

@@ -115,9 +115,9 @@ osqa_accepted = true
 <div class="answer-body">
 <p>IANAL, but this should be ok under certain conditions;</p>
 <ul>
-<li>OSM is properly <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">attributed</a> so that your customers know that they can get the osm data</li>
+<li>OSM is properly <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">attributed</a> so that your customers know that they can get the osm data</li>
 <li>Your data is either disjoint from the OSM data (you're basically using osm as a background map to display your own data) or contributed back to OSM (you can still charge for access to your improved interface and to any data that doesn't belong in osm proper).</li>
-<li>Make sure you understand what constinute a <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">derived database</a>. The line is often blurry; search on this site for example cases, and provide more details about your usecase if you're not sure.</li>
+<li>Make sure you understand what constinute a <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">derived database</a>. The line is often blurry; search on this site for example cases, and provide more details about your usecase if you're not sure.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -180,8 +180,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your question is indirectly answered in our <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3e._Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">Legal FAQ</a> which explains that you may charge for data derived from OSM. The usual license requirements of course apply (you have to attribute the source and should you derive data from OSM, that derived data must be licensed to your paying clients unter ODbL).</p>
-<p>Something that you should also keep in mind is the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> - if you want to make sure your paying customers are not dependent on the donation-supported OSM tile server then you'd want to <a href="http://switch2osm.org">set up your own tile server</a> or buy tile services from one of many available vendors.</p>
+<p>Your question is indirectly answered in our <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3e._Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">Legal FAQ</a> which explains that you may charge for data derived from OSM. The usual license requirements of course apply (you have to attribute the source and should you derive data from OSM, that derived data must be licensed to your paying clients unter ODbL).</p>
+<p>Something that you should also keep in mind is the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> - if you want to make sure your paying customers are not dependent on the donation-supported OSM tile server then you'd want to <a href="http://switch2osm.org">set up your own tile server</a> or buy tile services from one of many available vendors.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -116,7 +116,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Ich denke <a href="/questions/8202/">unterschiedliche-darstellung-abhangig-vom-zoomfaktor</a> hilft dir.</p>
-<p>Leider gibst du keinen <span>Link</span> (oder besser per Link auf <a href="http://www.openstreetmap.org/browse/node/1168595158">eine Datenseite</a>) auf eine fragliche Stelle an.</p>
+<p>Leider gibst du keinen <span>Link</span> (oder besser per Link auf <a href="https://www.openstreetmap.org/browse/node/1168595158">eine Datenseite</a>) auf eine fragliche Stelle an.</p>
 <p>Last but not least: willkommen bei OSM!</p>
 </div>
 <div class="answer-controls post-controls">

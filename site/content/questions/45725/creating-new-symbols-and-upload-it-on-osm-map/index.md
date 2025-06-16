@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As a mapper (surveyor) you can decide what you upload to OSM (<a href="http://wiki.openstreetmap.org/wiki/Key:traffic_sign">our Wiki</a> has more on traffic signs), but you cannot control what appears on (any given) map. You have to understand that there are many maps made from OSM data, and the ones on www.openstreetmap.org are just example. Which traffic signs these map show, is at the map designer's discretion. You can of course make your own map from OSM data that shows each and every traffic sign but that requires getting to understand the process of map making ("rendering") as well as a suitable server on which you can run it.</p>
+<p>As a mapper (surveyor) you can decide what you upload to OSM (<a href="https://wiki.openstreetmap.org/wiki/Key:traffic_sign">our Wiki</a> has more on traffic signs), but you cannot control what appears on (any given) map. You have to understand that there are many maps made from OSM data, and the ones on www.openstreetmap.org are just example. Which traffic signs these map show, is at the map designer's discretion. You can of course make your own map from OSM data that shows each and every traffic sign but that requires getting to understand the process of map making ("rendering") as well as a suitable server on which you can run it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -149,7 +149,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>You can take a look at <a href="http://wiki.openstreetmap.org/wiki/Finland:Traffic_signs">Finnish Traffic Signs (wiki page)</a>, which is a style for JOSM, one of the editors for OSM. All Finnish traffic signs are visible. The Dutch community made a similar style for their traffic signs. One of the problems with coming up with a global map for traffic signs is that they might look (totally) different in different countries. And when you show them all, they will clutter up the map easily, see the screenshot on the wiki page.</p>
+<p>You can take a look at <a href="https://wiki.openstreetmap.org/wiki/Finland:Traffic_signs">Finnish Traffic Signs (wiki page)</a>, which is a style for JOSM, one of the editors for OSM. All Finnish traffic signs are visible. The Dutch community made a similar style for their traffic signs. One of the problems with coming up with a global map for traffic signs is that they might look (totally) different in different countries. And when you show them all, they will clutter up the map easily, see the screenshot on the wiki page.</p>
 </div>
 <div id="comment-45755-info" class="comment-info">
 <span class="comment-age">(06 Oct '15, 16:55)</span> <span class="comment-user userinfo">escada</span>

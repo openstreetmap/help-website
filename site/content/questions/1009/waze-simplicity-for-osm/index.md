@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is no single app that does what you want. However, you'll find a few relevant ones. For example, <a href="http://mapzen.cloudmade.com/mapzen-poi-collector">Mapzen POI Collector</a> lets you add points of interest to OSM while on the move; <a href="http://www.skobbler.co.uk/">Skobbler</a> provides turn-by-turn directions; <a href="http://wiki.openstreetmap.org/wiki/Osm2go">OSM2go</a> offers editing from mobile devices.</p>
+<p>There is no single app that does what you want. However, you'll find a few relevant ones. For example, <a href="http://mapzen.cloudmade.com/mapzen-poi-collector">Mapzen POI Collector</a> lets you add points of interest to OSM while on the move; <a href="http://www.skobbler.co.uk/">Skobbler</a> provides turn-by-turn directions; <a href="https://wiki.openstreetmap.org/wiki/Osm2go">OSM2go</a> offers editing from mobile devices.</p>
 <p>Whereas Waze is a commercial company, OSM is an entirely voluntary endeavour. Consequently, OSM doesn't have a core development budget to fund flashy mobile editing software such as Waze's client, and apps are written because the developers want to. On occasion, though, a company will help fund development of an editing app in order to increase OSM's appeal.</p>
 <p>On the specific point of traffic data (congestion, police vans, etc.) this is expressly not stored in OSM at present. OSM stores durable data, not transitory data. In theory you could of course create a 'mashup' on top of OSM data, but Waze have understandably said that OSM's current licence means they're not keen to use OSM data for this.</p>
 </div>

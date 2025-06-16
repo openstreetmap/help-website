@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Reverting a way to an earlier version"
-description = '''Hello, It looks like in way: http://www.openstreetmap.org/way/37771906 the layout of the roundabout was modified after a survey to be like it was on the ground; and this has subsequently been removed by someone blindly copying what Bing shows them. The roundabout is now even larger, with physically ...'''
+description = '''Hello, It looks like in way: https://www.openstreetmap.org/way/37771906 the layout of the roundabout was modified after a survey to be like it was on the ground; and this has subsequently been removed by someone blindly copying what Bing shows them. The roundabout is now even larger, with physically ...'''
 date = "2016-08-17T10:39:00Z"
 lastmod = "2016-08-18T15:28:00Z"
 weight = 51478
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, It looks like in way: <a href="http://www.openstreetmap.org/way/37771906">http://www.openstreetmap.org/way/37771906</a> the layout of the roundabout was modified after a survey to be like it was on the ground; and this has subsequently been removed by someone blindly copying what Bing shows them. The roundabout is now even larger, with physically separated lanes for traffic heading in different directions.</p>
+<p>Hello, It looks like in way: <a href="https://www.openstreetmap.org/way/37771906">https://www.openstreetmap.org/way/37771906</a> the layout of the roundabout was modified after a survey to be like it was on the ground; and this has subsequently been removed by someone blindly copying what Bing shows them. The roundabout is now even larger, with physically separated lanes for traffic heading in different directions.</p>
 <p>Is it possible to easily see what was in v11.3 of the way and potentially bring it back again?</p>
 <p>Thanks c2r</p>
 </div>

@@ -164,7 +164,7 @@ osqa_accepted = false
 <p>You can choose to display the standard style OpenStreetMap or OpenCycleMap as the background. In the section for <em>Auto Routing</em>, select the option for <em>Data: OSM</em> and <em>By: Foot</em>.</p>
 <p>Then click on the map to draw your route, and it should follow the paths as shown on the map.</p>
 <p>Once you are finished drawing the route, select the <em>Summary</em> tab, then you can download it as a track in a GPX file. The you can transfer the track to the eTrex using Garmin MapSource or GPSBabel etc. Or you can choose the option on BikeRouteToaster to download it directly to the Garmin (this requires the Garmin Communicator plugin).</p>
-<p>There are some other websites listed here, which can do a similar thing: <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
+<p>There are some other websites listed here, which can do a similar thing: <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

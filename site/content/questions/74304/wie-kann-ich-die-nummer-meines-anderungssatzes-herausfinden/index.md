@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>Deine letzten Änderungen findest du auf deiner Profilseite auf <a href="https://www.openstreetmap.org">https://www.openstreetmap.org</a>. Dort auf "Bearbeitungen" gehen und den gewünschten Änderungssatz raus suchen. In deinem Fall wäre das <a href="https://www.openstreetmap.org/user/gramax/history.">https://www.openstreetmap.org/user/gramax/history.</a></p>
 <p>Beispiel anhand von meinen Bearbeitungen:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/foo_RjO6c7G.png" alt="Bearbeitungen" /></p>
+<p><img src="/upfiles/foo_RjO6c7G.png" alt="Bearbeitungen" /></p>
 <p>Die Nummer des Änderungssatzes wurde von mir rot hervorgehoben. Es ist die Nummer die mit einem Rautezeichen (Doppelkreuz) beginnt. Alternativ kannst du auch auf eine deiner Änderungen klicken und die resultierende URL teilen, darin ist die Nummer ebenfalls enthalten.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -147,7 +147,7 @@ One Answer:
 <div id="post-74316-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Brauchst du nicht, hier gibt es genug hilfsbereite Mapper :) Den Revert kann sicherlich jemand für dich unternehmen, das ist nicht so trivial. Einfach die Nummer deines Änderungssatzes in <a href="https://help.openstreetmap.org/questions/74301/anderungen-ruckgangig-machen">https://help.openstreetmap.org/questions/74301/anderungen-ruckgangig-machen</a> nachtragen.</p>
+<p>Brauchst du nicht, hier gibt es genug hilfsbereite Mapper :) Den Revert kann sicherlich jemand für dich unternehmen, das ist nicht so trivial. Einfach die Nummer deines Änderungssatzes in <a href="/questions/74301/anderungen-ruckgangig-machen">https://help.openstreetmap.org/questions/74301/anderungen-ruckgangig-machen</a> nachtragen.</p>
 </div>
 <div id="comment-74316-info" class="comment-info">
 <span class="comment-age">(21 Apr '20, 15:02)</span> <span class="comment-user userinfo">scai ♦</span>

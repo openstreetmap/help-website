@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Broadly speaking the difference is as stated in OSM's <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">Legal FAQ</a>:</p>
+<p>Broadly speaking the difference is as stated in OSM's <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">Legal FAQ</a>:</p>
 <blockquote>
 <p>3d. If I use your data together with someone else's data, do I have to apply your license to their data too?</p>
 <p>If the two datasets are independent, no, you don't; this is a Collective Database.</p>

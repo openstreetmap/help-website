@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "如何创造这种路线图？"
-description = '''http://www.openstreetmap.org/?relation=1165701'''
+description = '''https://www.openstreetmap.org/?relation=1165701'''
 date = "2013-04-08T13:01:00Z"
 lastmod = "2013-04-08T15:54:00Z"
 weight = 21315
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?relation=1165701">http://www.openstreetmap.org/?relation=1165701</a></p>
+<p><a href="https://www.openstreetmap.org/?relation=1165701">https://www.openstreetmap.org/?relation=1165701</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lang-zh" rel="tag" title="see questions tagged &#39;lang-zh&#39;">lang-zh</span> <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span>

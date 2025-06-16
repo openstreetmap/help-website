@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I uploaded full database in to the RDS instance and it works good for zoom levels greater than 5. But it is not rendering tiles for low zoom levels (eg: example.com/0/0/0.png). The screenshot attached here shows the output I get when I run</p>
 <pre><code>renderd -f -c /usr/local/etc/renderd.conf.</code></pre>
 <p>Please help me to find the reason behind this?</p>
-<p><a href="https://help.openstreetmap.org/upfiles/tiles000_dqG5LyD.PNG"><img src="https://help.openstreetmap.org/upfiles/tiles000_dqG5LyD.PNG" alt="screenshot" /></a></p>
+<p><span><img src="/upfiles/tiles000_dqG5LyD.PNG" alt="screenshot" /></span></p>
 <p>Thanks Subin</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -116,7 +116,7 @@ osqa_accepted = false
 <p>Perhaps it's worth explaining what typically happens when you ask for a tile to be rendered.</p>
 <p>The user makes a request for a tile. It doesn't exist, so Apache asks mod_tile for it (that "START TILE" above). If the tile can't be created fast enough the client will time out - that's normal. Creation of the tile continues. Some time (perhaps many minutes on a very slow system at low zooms) the tile will be created.</p>
 <p>The next time the the user requests the same time, the previously rendered tile will be returned, while in the background the new tile is created.</p>
-<p>So what happens in the syslog after the snippet that you posted? It could be one of a number of things - maybe the tile gets rendered after a minute or so, or maybe something gets killed because you run out of memory, or maybe "disk access" is so slow on your system that it's still trying to render that tile after many minutes (which was the diagnosis at <a href="https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb</a> ).</p>
+<p>So what happens in the syslog after the snippet that you posted? It could be one of a number of things - maybe the tile gets rendered after a minute or so, or maybe something gets killed because you run out of memory, or maybe "disk access" is so slow on your system that it's still trying to render that tile after many minutes (which was the diagnosis at <a href="/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb</a> ).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This appears to be essentially a duplicate of <a href="https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">this question</a>. You're trying to use a cloud service for something it's not really designed for.</p>
+<p>This appears to be essentially a duplicate of <a href="/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">this question</a>. You're trying to use a cloud service for something it's not really designed for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

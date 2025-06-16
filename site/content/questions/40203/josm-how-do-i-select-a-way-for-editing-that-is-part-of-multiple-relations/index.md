@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I'm working on large multipolygons in northern Thailand which is giving me fits. My previous questions relating to this topic have been about splitting them. But I've given up on that for now in favor of simply modifying them to better suit the actual terrain. Which brings me to my present question: There is one way (id:<a href="https://www.openstreetmap.org/way/140856543">140856543</a>) which is a member of 7 multipolygons, 5 boundary relations and 2 wood multipolygons. If I want to modify only one of the wood multipolygons I change all the others with it, which is not what I want.</p>
 <p>How do I select only the relation that I want to edit?</p>
-<p>Added this screenshot of the way in question <img src="http://help.openstreetmap.org/upfiles/Relations_in_JOSM.JPG" alt="alt text" /></p>
+<p>Added this screenshot of the way in question <img src="/upfiles/Relations_in_JOSM.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>
@@ -152,7 +152,7 @@ IMHO you should remove the boundary way from the wood polygons and either create
 <div id="post-40217-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, I need to better understand what you're saying. Are you telling me I should edit the particular multipolygon I'm interested in, search for the way numbered 140856543, remove it or split it or recreate it in some way, and then reattach it somehow?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, I need to better understand what you're saying. Are you telling me I should edit the particular multipolygon I'm interested in, search for the way numbered 140856543, remove it or split it or recreate it in some way, and then reattach it somehow?</p>
 <p>Perhaps way 140856543 is the entire wood multipolygon, all 152 nodes of it. If I split it, aren't I also affecting that way in the other six relations?</p>
 </div>
 <div id="comment-40217-info" class="comment-info">
@@ -219,7 +219,7 @@ IMHO you should remove the boundary way from the wood polygons and either create
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've covered something similar to this as part of the <a href="http://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">Irish Townland mapping project</a>. This section of the tutorial video should show you what to do</p>
+<p>I've covered something similar to this as part of the <a href="https://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">Irish Townland mapping project</a>. This section of the tutorial video should show you what to do</p>
 <p><a href="https://www.youtube.com/watch?v=WG6Po8SmweE&amp;feature=youtu.be&amp;t=16m55s">https://www.youtube.com/watch?v=WG6Po8SmweE&amp;feature=youtu.be&amp;t=16m55s</a></p>
 </div>
 <div class="answer-controls post-controls">
@@ -242,7 +242,7 @@ IMHO you should remove the boundary way from the wood polygons and either create
 <div id="post-40215-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5669/dacor">@DaCor</a>,</p>
+<p><a href="https://help.openstreetmap.org/users/5669/dacor">@DaCor</a>,</p>
 <p>I can already do what you show in your otherwise helpful video. In your example, you have a single relation with no others "on top" of it. In my situation I have 7 relations using the same way. Short of deleting a multipolygon and starting from scratch, something I'm never going to do, how can I separate the wood polygon of interest from the others before modifying it?</p>
 </div>
 <div id="comment-40215-info" class="comment-info">
@@ -331,7 +331,7 @@ IMHO you should remove the boundary way from the wood polygons and either create
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5669/dacor">@DaCor</a>,</p>
+<p><a href="https://help.openstreetmap.org/users/5669/dacor">@DaCor</a>,</p>
 <p>Thanks very much. It's complicated but at least I understand what needs to be done now. As malenki says above, "That is the disadvantage when mappers combine objects where they shouldn't." I second that comment entirely. National and province boundaries must be superimposed but using those same ways for wood multipolygons was a bad idea.</p>
 <p>Thanks for your detailed instructions and for making such a comprehensive video.</p>
 <p>Cheers, Dave</p>

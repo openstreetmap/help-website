@@ -69,7 +69,7 @@ Maybe an experience mapper can have a look why there are now so many NR all over
 2
 </div>
 <div class="comment-text">
-<p>Are you sure that they weren't there before? The <em>NR</em> stands for <em>nature reserve</em> and comes from <a href="http://www.openstreetmap.org/browse/relation/1453306">this relation</a>.</p>
+<p>Are you sure that they weren't there before? The <em>NR</em> stands for <em>nature reserve</em> and comes from <a href="https://www.openstreetmap.org/browse/relation/1453306">this relation</a>.</p>
 </div>
 <div id="comment-28295-info" class="comment-info">
 <span class="comment-age">(20 Nov '13, 16:40)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -115,7 +115,7 @@ Maybe an experience mapper can have a look why there are now so many NR all over
 1
 </div>
 <div class="comment-text">
-<p>Grand Teton is tagged as a park rather than as a nature reserve <a href="http://www.openstreetmap.org/browse/relation/1492555">http://www.openstreetmap.org/browse/relation/1492555</a></p>
+<p>Grand Teton is tagged as a park rather than as a nature reserve <a href="https://www.openstreetmap.org/browse/relation/1492555">https://www.openstreetmap.org/browse/relation/1492555</a></p>
 </div>
 <div id="comment-28305-info" class="comment-info">
 <span class="comment-age">(20 Nov '13, 18:07)</span> <span class="comment-user userinfo">EdLoach ♦</span>

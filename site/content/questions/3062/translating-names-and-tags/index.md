@@ -105,9 +105,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's possible to use multiple name tags on places by using <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1</a>-codes. For further information see the documentation of <a href="http://wiki.openstreetmap.org/wiki/Name">Key:name</a>. Thus, the name tags should probably look like <em>name:he</em>, <em>name:en</em> and <em>name:ar</em>.</p>
+<p>It's possible to use multiple name tags on places by using <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1</a>-codes. For further information see the documentation of <a href="https://wiki.openstreetmap.org/wiki/Name">Key:name</a>. Thus, the name tags should probably look like <em>name:he</em>, <em>name:en</em> and <em>name:ar</em>.</p>
 <p>And just as a reminder, as you probably already know you are not allowed to copy the names of the locations from any copyright protected source without adequate permission.</p>
-<p>You may also look at <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names">Multilingual names</a> to find out how this as been handled for other places. Unfortunately there is yet no Israel section of that wiki document. When you go ahead with the tagging you may consider to update that part of the wiki so other mappers can follow your coding style.</p>
+<p>You may also look at <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names">Multilingual names</a> to find out how this as been handled for other places. Unfortunately there is yet no Israel section of that wiki document. When you go ahead with the tagging you may consider to update that part of the wiki so other mappers can follow your coding style.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can add names for places in any language in OpenStreetMap by adding a tag with <code>name:&lt;lang&gt;=&lt;name&gt;</code> where <code>lang</code> is the two-letter ISO language code. OSM supports Unicode, so you should be OK adding names in both Hebrew and Arabic scripts -- and no-one has reported any major problems with this so far.</p>
-<p>Please try to use official translations of place names where available. We try to maintain a policy of <a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a>, so other mappers should be able to check the names you've added based on signs on the ground, official publications or other authoritative sources.</p>
+<p>Please try to use official translations of place names where available. We try to maintain a policy of <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a>, so other mappers should be able to check the names you've added based on signs on the ground, official publications or other authoritative sources.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

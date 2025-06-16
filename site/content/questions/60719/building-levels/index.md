@@ -63,7 +63,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>An example of a similar situation can be found with the "Glass House" of Denver, Colorado. The building base is seven levels, the towers are 23-24 levels high. You can see it in 3D and 2D here: <a href="http://demo.f4map.com/#lat=39.7566840&amp;lon=-105.0030585&amp;zoom=19&amp;camera.theta=33.942">http://demo.f4map.com/#lat=39.7566840&amp;lon=-105.0030585&amp;zoom=19&amp;camera.theta=33.942</a></p>
-<p><a href="http://www.openstreetmap.org/#map=19/39.75668/-105.00305">http://www.openstreetmap.org/#map=19/39.75668/-105.00305</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/39.75668/-105.00305">https://www.openstreetmap.org/#map=19/39.75668/-105.00305</a></p>
 </div>
 <div id="comment-60741-info" class="comment-info">
 <span class="comment-age">(23 Nov '17, 07:25)</span> <span class="comment-user userinfo">chachafish</span>
@@ -130,7 +130,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't think there is an one size fits all recommendation in this case.</p>
-<p>If you simply want to do normal mapping, I would draw the outline and add the number of levels for the highest tower. If you want to make the effort for 3D mapping, then you should split the building into multiple <code>building:part</code> elements (note it is not <code>building_part</code>, see <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_parts">http://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_parts</a> ).</p>
+<p>If you simply want to do normal mapping, I would draw the outline and add the number of levels for the highest tower. If you want to make the effort for 3D mapping, then you should split the building into multiple <code>building:part</code> elements (note it is not <code>building_part</code>, see <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_parts">https://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_parts</a> ).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

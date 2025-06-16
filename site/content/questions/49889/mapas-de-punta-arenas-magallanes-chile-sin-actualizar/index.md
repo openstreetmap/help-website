@@ -114,7 +114,7 @@ One Answer:
 <div class="answer-body">
 <p>Hola ruben,</p>
 <p>Si quieres que te responden en español, seria mas facil en la <a href="https://lists.openstreetmap.org/listinfo/talk-cl">lista de correos de Chile</a></p>
-<p>Tendras que dar mas detalle de cuales cambios no aperecen. Hizé un vistazo a tus cambios, y me fijé <a href="http://www.openstreetmap.org/changeset/39643920">de esto</a> que no es correcto. En <a href="http://www.openstreetmap.org/user/rubenleuquen/history">tu perfil</a> puedes ver todos tus cambios, indicanos cual es el problematico.</p>
+<p>Tendras que dar mas detalle de cuales cambios no aperecen. Hizé un vistazo a tus cambios, y me fijé <a href="https://www.openstreetmap.org/changeset/39643920">de esto</a> que no es correcto. En <a href="https://www.openstreetmap.org/user/rubenleuquen/history">tu perfil</a> puedes ver todos tus cambios, indicanos cual es el problematico.</p>
 <p>La repuesta a la pregunta, generalmente es una de estas dos cosas:</p>
 <ul>
 <li>has hecho algo mal, o has hecho un cambio que es correcto pero no aparece en el mapa de osm.org</li>

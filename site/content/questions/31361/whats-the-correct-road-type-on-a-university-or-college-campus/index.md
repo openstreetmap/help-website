@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I appreciate all the discussion going on about this. I figured it might help to share the campus I've been working on and had in mind when I posted the question. The particular case I've been thinking about is Western Michigan University found here: <a href="http://www.openstreetmap.org/#map=15/42.2835/-85.6092">http://www.openstreetmap.org/#map=15/42.2835/-85.6092</a> It has public roads with standard signs and a 25 MPH speed limit. There aren't any gates or anything separating it from the rest of town and it's patrolled by WMU Police, which is a branch of the city police.</p>
+<p>I appreciate all the discussion going on about this. I figured it might help to share the campus I've been working on and had in mind when I posted the question. The particular case I've been thinking about is Western Michigan University found here: <a href="https://www.openstreetmap.org/#map=15/42.2835/-85.6092">https://www.openstreetmap.org/#map=15/42.2835/-85.6092</a> It has public roads with standard signs and a 25 MPH speed limit. There aren't any gates or anything separating it from the rest of town and it's patrolled by WMU Police, which is a branch of the city police.</p>
 </div>
 <div id="comment-31389-info" class="comment-info">
 <span class="comment-age">(07 Mar '14, 14:17)</span> <span class="comment-user userinfo">jonesydesign</span>
@@ -241,7 +241,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Ah, but many roads on a university campus are not "in urban residential areas". I would lean toward highway=unclassified for those roads through areas with educational buildings.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified</a></p>
 <p>Having written that, I checked and the roads within a major university near me are tagged residential so I guess I might be in the minority.</p>
 </div>
 <div id="comment-31368-info" class="comment-info">

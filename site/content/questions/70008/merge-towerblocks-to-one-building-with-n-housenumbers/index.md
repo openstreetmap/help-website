@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there, I noticed that users have splittet a lot of towerblocks / Plattenbau buildings into small buildings for each part / stairwell. After discussion, I would like to merge the building shape into a single building way, that contains indipendend nodes per housenumber.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/josm_wohnblock_gesplittet_Z3jaKHk.jpg" alt="Small separated buildings form a building block, which is just wrong" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/josm_wohnblock.jpg" alt="Improved version, a merged building (block) that contains multiple housenumbers per entrance" /></p>
+<p><img src="/upfiles/josm_wohnblock_gesplittet_Z3jaKHk.jpg" alt="Small separated buildings form a building block, which is just wrong" /></p>
+<p><img src="/upfiles/josm_wohnblock.jpg" alt="Improved version, a merged building (block) that contains multiple housenumbers per entrance" /></p>
 <p>But I know only a manual way using JOSM to extract and cleanup the infos (add nodes, copy &amp; paste content of each building part, remove remaining tags, merge parts to main building). Anybody an idea to speedup this process? building-tools addon just offer another splitup, but not a reunion :-(</p>
 </div>
 <div id="question-tags" class="tags-container tags">

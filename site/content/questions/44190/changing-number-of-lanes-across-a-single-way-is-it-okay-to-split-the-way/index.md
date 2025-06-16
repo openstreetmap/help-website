@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am using OSM data to build a network for traffic simulation (using <a href="http://sumo.dlr.de/wiki/Main_Page">SUMO</a>). I often notice errors in the data when it comes to the available number of lane, I have fixed one as an example <a href="http://www.openstreetmap.org/changeset/32608483">Changeset 32608483</a>.</p>
+<p>I am using OSM data to build a network for traffic simulation (using <a href="http://sumo.dlr.de/wiki/Main_Page">SUMO</a>). I often notice errors in the data when it comes to the available number of lane, I have fixed one as an example <a href="https://www.openstreetmap.org/changeset/32608483">Changeset 32608483</a>.</p>
 <p>In the linked case, I am guessing it is okay to make the change but I have some other cases where a single way has its number of lanes change (some part of the way has 2 lanes, some part has 3, some other has 4 when the lane reaches an intersection). In this case, for the simulation purpose, I need to split this into three different ways, with the correct number of lane for each of them.</p>
 <p>Is it okay to make this kind of split and commit them to the OSM database? In some cases, it can significantly increase the number of ways without improving the quality of the map render.</p>
 </div>
@@ -139,7 +139,7 @@ osqa_accepted = true
 <blockquote>
 <p>in some cases, it can significantly increase the number of ways without improving the quality of the map render.</p>
 </blockquote>
-<p>This is not relevant - <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> is generally not a good idea (plus in this case it does not even cause problems for the renderer, because renderers know that split ways should usually be combined for rendering). If the number of lanes change, split the way.</p>
+<p>This is not relevant - <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> is generally not a good idea (plus in this case it does not even cause problems for the renderer, because renderers know that split ways should usually be combined for rendering). If the number of lanes change, split the way.</p>
 <p>Note: While splitting, take care not to remove any data:</p>
 <ul>
 <li>copy over all tags that apply to both of the new ways</li>
@@ -180,7 +180,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>Take a look at the turn lane tagging. As an example if the right lane disappears and there are merge arrows on the pavement then the section where the arrows are can be tagged with "turn:lanes=none|slight_left"</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:turn:lanes">http://wiki.openstreetmap.org/wiki/Key:turn:lanes</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:turn:lanes">https://wiki.openstreetmap.org/wiki/Key:turn:lanes</a></p>
 <p>For what it is worth some OSM based routers use this type of tagging to help provide lane guidance.</p>
 </div>
 <div id="comment-44212-info" class="comment-info">

@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/changeset/14184729">http://www.openstreetmap.org/browse/changeset/14184729</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/14184729">https://www.openstreetmap.org/browse/changeset/14184729</a></p>
 </div>
 <div id="comment-18268-info" class="comment-info">
 <span class="comment-age">(07 Dec '12, 08:50)</span> <span class="comment-user userinfo">EdLoach ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Anybody what&#x27;s the thing with the red area here?"
-description = '''Hello, Anybody knows what&#x27;s the problem with the map here: http://www.openstreetmap.org/?lat=37.22376&amp;amp;lon=-121.80045&amp;amp;zoom=15&amp;amp;layers=M At some of the zoom scales I see a red hatched rectangle covering a large area. Looks like something went wrong with rendering... Regards, Alex'''
+description = '''Hello, Anybody knows what&#x27;s the problem with the map here: https://www.openstreetmap.org/?lat=37.22376&amp;amp;lon=-121.80045&amp;amp;zoom=15&amp;amp;layers=M At some of the zoom scales I see a red hatched rectangle covering a large area. Looks like something went wrong with rendering... Regards, Alex'''
 date = "2011-06-10T20:11:00Z"
 lastmod = "2011-06-10T20:40:00Z"
 weight = 5676
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>Anybody knows what's the problem with the map here:</p>
-<p><a href="http://www.openstreetmap.org/?lat=37.22376&amp;lon=-121.80045&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=37.22376&amp;lon=-121.80045&amp;zoom=15&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=37.22376&amp;lon=-121.80045&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=37.22376&amp;lon=-121.80045&amp;zoom=15&amp;layers=M</a></p>
 <p>At some of the zoom scales I see a red hatched rectangle covering a large area. Looks like something went wrong with rendering...</p>
 <p>Regards,</p>
 <p>Alex</p>

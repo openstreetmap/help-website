@@ -44,7 +44,7 @@ osqa_accepted = true
 <p>Example: 1 deleted address, 2 create poi, 3 modify ...</p>
 <p>When I click a 'create' of 'modify' change that change is highlighted, letting me correct it. But the deletion... there is nothing to highlight.</p>
 <p>A little 'x' in the list of changes to remove that one change would be a solution for me.</p>
-<p>Edit: I posted an <a href="https://github.com/openstreetmap/iD/issues/3445">issue on GitHub</a>, thanks <a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a></a></p>
+<p>Edit: I posted an <a href="https://github.com/openstreetmap/iD/issues/3445">issue on GitHub</a>, thanks <a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a></a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-review" rel="tag" title="see questions tagged &#39;review&#39;">review</span> <span class="post-tag tag-link-undo" rel="tag" title="see questions tagged &#39;undo&#39;">undo</span> <span class="post-tag tag-link-save-changes" rel="tag" title="see questions tagged &#39;save-changes&#39;">save-changes</span>

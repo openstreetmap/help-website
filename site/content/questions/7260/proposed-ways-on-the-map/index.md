@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess the best thing to do is to tag the objects with something like <a href="http://wiki.openstreetmap.org/wiki/Key:proposed">Key:proposed</a> or <a href="http://wiki.openstreetmap.org/wiki/Key:construction">Key:construction</a>.</p>
-<p>Also <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">Tag:landuse=construction</a> may be useful.</p>
+<p>I guess the best thing to do is to tag the objects with something like <a href="https://wiki.openstreetmap.org/wiki/Key:proposed">Key:proposed</a> or <a href="https://wiki.openstreetmap.org/wiki/Key:construction">Key:construction</a>.</p>
+<p>Also <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">Tag:landuse=construction</a> may be useful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

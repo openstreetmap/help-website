@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Mapbox <em>does</em> allow you to tune design down to font level. They are the main contributors to <a href="http://www.mapbox.com/tilemill/">Tilemill</a>, which gives you access to pretty much all of <a href="http://mapnik.org/">mapnik</a>'s map rendering features. Just upload a style created with Tilemil instead of using one of the tunable preset maps.</p>
-<p>Other providers certainly do give you full crontrol over map styling too, but I'm not up to speed with them. Try <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">the wiki</a> for a list of osm map providers, or even <a href="http://switch2osm.org/serving-tiles/">build your own server</a>.</p>
+<p>Other providers certainly do give you full crontrol over map styling too, but I'm not up to speed with them. Try <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">the wiki</a> for a list of osm map providers, or even <a href="http://switch2osm.org/serving-tiles/">build your own server</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

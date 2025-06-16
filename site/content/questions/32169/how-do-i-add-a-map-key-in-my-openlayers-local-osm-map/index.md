@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I add a map key in my &quot;openlayers&quot; local OSM map?"
-description = '''Hello, I want to show MAP key as it is there on http://www.openstreetmap.org/#map=9/23.2439/71.1063 Below is my simple code for map: &amp;lt;div id=&quot;ourMap&quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;script src=&quot;http://www.openlayers .org/api/OpenLayers.js&quot;&amp;gt;&amp;lt;/script&amp;gt;  &amp;lt;script&amp;gt;   map = new OpenLayers.Map(&quot;ourMa...'''
+description = '''Hello, I want to show MAP key as it is there on https://www.openstreetmap.org/#map=9/23.2439/71.1063 Below is my simple code for map: &amp;lt;div id=&quot;ourMap&quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;script src=&quot;http://www.openlayers .org/api/OpenLayers.js&quot;&amp;gt;&amp;lt;/script&amp;gt;  &amp;lt;script&amp;gt;   map = new OpenLayers.Map(&quot;ourMa...'''
 date = "2014-04-07T11:02:00Z"
 lastmod = "2014-04-21T08:05:00Z"
 weight = 32169
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I want to show MAP key as it is there on <a href="http://www.openstreetmap.org/#map=9/23.2439/71.1063">http://www.openstreetmap.org/#map=9/23.2439/71.1063</a></p>
+<p>I want to show MAP key as it is there on <a href="https://www.openstreetmap.org/#map=9/23.2439/71.1063">https://www.openstreetmap.org/#map=9/23.2439/71.1063</a></p>
 <p>Below is my simple code for map:</p>
 <pre><code>&lt;div id=&quot;ourMap&quot;&gt;&lt;/div&gt;
 &#10;&lt;script  src=&quot;http://www.openlayers .org/api/OpenLayers.js&quot;&gt;&lt;/script&gt; 
@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenLayers doesn't support an OpenStreetMap Map Key out of the box, so there's no single feature you can enable for this purpose. Also, the OpenStreetMap main page uses Leaflet rather than OpenLayers, which makes a copy&amp;paste somewhat difficult.</p>
-<p>Maybe you could use <a href="http://www.openstreetmap.org/key">this URL</a> as a starting point to get at least the Map Key information and then enable/disable some of the elements according to your zoom layer (see data-zoom-min/data-zoom-max below). The question remains how to best embed that URL in your application. Maybe you want to use concept similar to a side bar to display your Map Key.</p>
+<p>Maybe you could use <a href="https://www.openstreetmap.org/key">this URL</a> as a starting point to get at least the Map Key information and then enable/disable some of the elements according to your zoom layer (see data-zoom-min/data-zoom-max below). The question remains how to best embed that URL in your application. Maybe you want to use concept similar to a side bar to display your Map Key.</p>
 <pre><code>tr class=&quot;mapkey-table-entry&quot; data-zoom-max=&quot;19&quot; data-zoom-min=&quot;0&quot; data-layer=&quot;mapnik&quot;</code></pre>
 </div>
 <div class="answer-controls post-controls">

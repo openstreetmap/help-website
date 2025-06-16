@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may look at the <a href="http://wiki.openstreetmap.org/wiki/Xapi">xapi</a> or overpass, or you can download a <a href="http://wiki.openstreetmap.org/wiki/Planet">planet extract</a> and <a href="http://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data">filter</a> it yourself.</p>
+<p>You may look at the <a href="https://wiki.openstreetmap.org/wiki/Xapi">xapi</a> or overpass, or you can download a <a href="https://wiki.openstreetmap.org/wiki/Planet">planet extract</a> and <a href="https://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data">filter</a> it yourself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

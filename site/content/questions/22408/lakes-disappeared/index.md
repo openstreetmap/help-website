@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "lakes disappeared"
-description = '''http://www.openstreetmap.org/?mlat=61.72652&amp;amp;mlon=15.17581&amp;amp;zoom=12 In a big square around Los / Hamra Sweden all lakes disappeared. Can somebody restore them? '''
+description = '''https://www.openstreetmap.org/?mlat=61.72652&amp;amp;mlon=15.17581&amp;amp;zoom=12 In a big square around Los / Hamra Sweden all lakes disappeared. Can somebody restore them? '''
 date = "2013-05-14T07:04:00Z"
 lastmod = "2013-05-24T23:46:00Z"
 weight = 22408
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?mlat=61.72652&amp;mlon=15.17581&amp;zoom=12">http://www.openstreetmap.org/?mlat=61.72652&amp;mlon=15.17581&amp;zoom=12</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=61.72652&amp;mlon=15.17581&amp;zoom=12">https://www.openstreetmap.org/?mlat=61.72652&amp;mlon=15.17581&amp;zoom=12</a></p>
 <p>In a big square around Los / Hamra Sweden all lakes disappeared. Can somebody restore them?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -74,7 +74,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I see <a href="http://zverik.osm.rambler.ru/whodidit/?lat=61.72164&amp;lon=15.17306&amp;zoom=11&amp;layers=BTT&amp;age=187">not really recent edits there</a>. <a href="http://mc.bbbike.org/mc/?lon=15.15795&amp;lat=61.70797&amp;zoom=10&amp;num=4&amp;mt0=mapnik&amp;mt1=bing-satellite&amp;mt2=landscape&amp;mt3=cyclemap">Map compare with bing sat</a>. <a href="http://www.openstreetmap.org/edit?editor=potlatch&amp;lat=61.7181&amp;lon=15.249&amp;zoom=13">Using Potlatch1's</a> way restore feature i see no deleted way where there seems (according to the bing sat image which we are allowed to use) to be a lake (south of the street curve). I suspect it never way there?!</p>
+<p>I see <a href="http://zverik.osm.rambler.ru/whodidit/?lat=61.72164&amp;lon=15.17306&amp;zoom=11&amp;layers=BTT&amp;age=187">not really recent edits there</a>. <a href="http://mc.bbbike.org/mc/?lon=15.15795&amp;lat=61.70797&amp;zoom=10&amp;num=4&amp;mt0=mapnik&amp;mt1=bing-satellite&amp;mt2=landscape&amp;mt3=cyclemap">Map compare with bing sat</a>. <a href="https://www.openstreetmap.org/edit?editor=potlatch&amp;lat=61.7181&amp;lon=15.249&amp;zoom=13">Using Potlatch1's</a> way restore feature i see no deleted way where there seems (according to the bing sat image which we are allowed to use) to be a lake (south of the street curve). I suspect it never way there?!</p>
 </div>
 <div id="comment-22423-info" class="comment-info">
 <span class="comment-age">(14 May '13, 13:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -131,7 +131,7 @@ osqa_accepted = false
 <div id="post-22438-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes, and in fact the lakes southeast of that empty place there were <a href="http://www.openstreetmap.org/browse/changeset/191602">created</a> semi(?)-automatically: "<a href="http://www.openstreetmap.org/browse/way/23854606">created_by = Dshpak_landsat_lakes</a>". <span>Vectorization software</span> can help. However, a manual trace may be better. And maybe such a mass semi-automated vectorization should be discussed before (forum, mailinglist, ..).</p>
+<p>Yes, and in fact the lakes southeast of that empty place there were <a href="https://www.openstreetmap.org/browse/changeset/191602">created</a> semi(?)-automatically: "<a href="https://www.openstreetmap.org/browse/way/23854606">created_by = Dshpak_landsat_lakes</a>". <span>Vectorization software</span> can help. However, a manual trace may be better. And maybe such a mass semi-automated vectorization should be discussed before (forum, mailinglist, ..).</p>
 </div>
 <div id="comment-22438-info" class="comment-info">
 <span class="comment-age">(14 May '13, 21:51)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -258,7 +258,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The Bing background seems to be just good enough to get rough outlines of the lakes. So zoom right in, click on edit, choose potlatch2, sign in, select bing background, zoom out until it appears, place cursor on the edge of a lake, shift click, move around lake edge shift click until you arrive at first node click it to complete the polygon, in the box on left pick water, click lake, name it, if you know what its called, click save, in box add source bing and local knowledge,save again. log out. you have a lake. I have just done this one <a href="http://www.openstreetmap.org/?lat=61.7159&amp;lon=15.2395&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=61.7159&amp;lon=15.2395&amp;zoom=13&amp;layers=M</a><br />
+<p>The Bing background seems to be just good enough to get rough outlines of the lakes. So zoom right in, click on edit, choose potlatch2, sign in, select bing background, zoom out until it appears, place cursor on the edge of a lake, shift click, move around lake edge shift click until you arrive at first node click it to complete the polygon, in the box on left pick water, click lake, name it, if you know what its called, click save, in box add source bing and local knowledge,save again. log out. you have a lake. I have just done this one <a href="https://www.openstreetmap.org/?lat=61.7159&amp;lon=15.2395&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=61.7159&amp;lon=15.2395&amp;zoom=13&amp;layers=M</a><br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -278,7 +278,7 @@ osqa_accepted = false
 <div id="post-22442-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If they have islands <a href="https://help.openstreetmap.org/questions/14724/tagging-and-rendering-island">https://help.openstreetmap.org/questions/14724/tagging-and-rendering-island</a></p>
+<p>If they have islands <a href="/questions/14724/tagging-and-rendering-island">https://help.openstreetmap.org/questions/14724/tagging-and-rendering-island</a></p>
 </div>
 <div id="comment-22442-info" class="comment-info">
 <span class="comment-age">(14 May '13, 23:00)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -302,7 +302,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Hej Andy I just created the first Lake</p>
-<p><a href="http://www.openstreetmap.org/?lat=61.6592&amp;lon=14.99234&amp;zoom=15">http://www.openstreetmap.org/?lat=61.6592&amp;lon=14.99234&amp;zoom=15</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=61.6592&amp;lon=14.99234&amp;zoom=15">https://www.openstreetmap.org/?lat=61.6592&amp;lon=14.99234&amp;zoom=15</a></p>
 <p>Thanks</p>
 </div>
 <div id="comment-22748-info" class="comment-info">

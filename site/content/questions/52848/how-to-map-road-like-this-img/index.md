@@ -210,7 +210,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/384/rafalr">@RafalR</a>: It depends on the specific case but usually the higher class wins.</p>
+<p><a href="https://help.openstreetmap.org/users/384/rafalr">@RafalR</a>: It depends on the specific case but usually the higher class wins.</p>
 </div>
 <div id="comment-52863-info" class="comment-info">
 <span class="comment-age">(07 Nov '16, 16:51)</span> <span class="comment-user userinfo">scai ♦</span>

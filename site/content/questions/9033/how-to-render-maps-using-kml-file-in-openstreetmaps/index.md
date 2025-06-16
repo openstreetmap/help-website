@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The "OpenStreetMap API" generally refers to the API for editing software. That's something different from what you're after. You can display KML as an overlay on a slippy map (which may be showing OpenStreetMap as a baselayer) Some information about doing that is linked from <a href="http://wiki.openstreetmap.org/wiki/KML">the KML page on the wiki</a>.</p>
+<p>The "OpenStreetMap API" generally refers to the API for editing software. That's something different from what you're after. You can display KML as an overlay on a slippy map (which may be showing OpenStreetMap as a baselayer) Some information about doing that is linked from <a href="https://wiki.openstreetmap.org/wiki/KML">the KML page on the wiki</a>.</p>
 <p>However you <em>may</em> have a problem that the KML file you have created is gigantic and will fail to load in the browser (I dont know if that will be a problem, it's just a hunch based on your description) A sensible sanity check might be to try loading it with google earth first of all, before trying a web overlay.</p>
 <p>"color for each of the states" could be achieved within the KML definitions. Perhaps QGIS doesn't give you that flexibility with its KML output (anyone know?). You may be able to achieve this by fiddling with the XML file by hand.</p>
 </div>

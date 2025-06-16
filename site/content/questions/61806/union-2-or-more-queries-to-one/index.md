@@ -250,7 +250,7 @@ out;</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/3339/edvac"></a><a href="https://help.openstreetmap.org/users/3339/edvac">@edvac</a> thanks a lot for your quick and good answer, this is great solution for me, thanks again. I have one another question but don't want add to this topic. If you can, please see this question also <a href="https://help.openstreetmap.org/questions/61819/how-get-all-ways-without-nd-tags">https://help.openstreetmap.org/questions/61819/how-get-all-ways-without-nd-tags</a></p>
+<p><a href="https://help.openstreetmap.org/users/3339/edvac"></a><a href="https://help.openstreetmap.org/users/3339/edvac">@edvac</a> thanks a lot for your quick and good answer, this is great solution for me, thanks again. I have one another question but don't want add to this topic. If you can, please see this question also <a href="/questions/61819/how-get-all-ways-without-nd-tags">https://help.openstreetmap.org/questions/61819/how-get-all-ways-without-nd-tags</a></p>
 </div>
 <div id="comment-61820-info" class="comment-info">
 <span class="comment-age">(26 Jan '18, 14:30)</span> <span class="comment-user userinfo">davittorosyan</span>

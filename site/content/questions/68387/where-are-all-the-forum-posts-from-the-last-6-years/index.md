@@ -84,7 +84,7 @@ osqa_accepted = true
 <div id="post-68392-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I can't reproduce this. Can you give the URL of specific pages? If I sort by active posts: <a href="https://help.openstreetmap.org/questions/?sort=active">https://help.openstreetmap.org/questions/?sort=active</a> ... or by newest posts.. <a href="https://help.openstreetmap.org/questions/?sort=newest">https://help.openstreetmap.org/questions/?sort=newest</a> ... I see what I would expect, a bunch of posts from March, then February, and if I go back far enough posts from 2018 etc.</p>
+<p>I can't reproduce this. Can you give the URL of specific pages? If I sort by active posts: <a href="/questions/?sort=active">https://help.openstreetmap.org/questions/?sort=active</a> ... or by newest posts.. <a href="/questions/?sort=newest">https://help.openstreetmap.org/questions/?sort=newest</a> ... I see what I would expect, a bunch of posts from March, then February, and if I go back far enough posts from 2018 etc.</p>
 <p>But maybe you are navigating to some other page?</p>
 </div>
 <div id="comment-68392-info" class="comment-info">
@@ -96,7 +96,7 @@ osqa_accepted = true
 <div id="post-68393-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/">https://help.openstreetmap.org/</a> <a href="https://help.openstreetmap.org/questions/?sort=active">https://help.openstreetmap.org/questions/?sort=active</a> <a href="https://help.openstreetmap.org/questions/?sort=newest">https://help.openstreetmap.org/questions/?sort=newest</a> For me it it is still as I posted - no posts from last 6 years</p>
+<p><a href="https://help.openstreetmap.org/">https://help.openstreetmap.org/</a> <a href="/questions/?sort=active">https://help.openstreetmap.org/questions/?sort=active</a> <a href="/questions/?sort=newest">https://help.openstreetmap.org/questions/?sort=newest</a> For me it it is still as I posted - no posts from last 6 years</p>
 </div>
 <div id="comment-68393-info" class="comment-info">
 <span class="comment-age">(15 Mar '19, 16:10)</span> <span class="comment-user userinfo">Rassilon</span>

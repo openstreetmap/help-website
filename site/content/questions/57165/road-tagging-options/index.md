@@ -202,7 +202,7 @@ osqa_accepted = false
 <p>Thanks for your response, dsh4!</p>
 <p>I guess what I was trying to say is it possible to have my temporary road names be "hidden" from public view and only viewable when searching a specific tag?</p>
 <p>I have already been downloading map data as you suggest and can continue in this fashion. It would just be easier for data sharing if I could make direct edits to the public map that are either temporary or hidden (maybe even only viewable once you export the data from OSM). Not sure if this is an option or you have alternate suggestions?</p>
-<p>I am also aware of the proposal process (<a href="http://wiki.openstreetmap.org/wiki/Proposal_process),">http://wiki.openstreetmap.org/wiki/Proposal_process),</a> which is a way to introduce new tags entirely.</p>
+<p>I am also aware of the proposal process (<a href="https://wiki.openstreetmap.org/wiki/Proposal_process),">https://wiki.openstreetmap.org/wiki/Proposal_process),</a> which is a way to introduce new tags entirely.</p>
 </div>
 <div id="comment-57167-info" class="comment-info">
 <span class="comment-age">(18 Jul '17, 23:30)</span> <span class="comment-user userinfo">bgdoo</span>

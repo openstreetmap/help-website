@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I couldn't find out who runs the OSM wiki, so i'll ask here. Kiwix support apparently requires something called Parasoid API ( <a href="http://sourceforge.net/p/kiwix/feature-requests/922">http://sourceforge.net/p/kiwix/feature-requests/922</a> ) to be installed by the admins.</p>
 <p>The benefit of this is offline access to the entire OSM wiki using <a href="http://kiwix.org">Kiwix</a>, a cross-platform wikipedia viewer.</p>
-<p>Other related question: <a href="https://help.openstreetmap.org/questions/18338/offline-documentation-of-tagging-wiki-extract">https://help.openstreetmap.org/questions/18338/offline-documentation-of-tagging-wiki-extract</a></p>
+<p>Other related question: <a href="/questions/18338/offline-documentation-of-tagging-wiki-extract">https://help.openstreetmap.org/questions/18338/offline-documentation-of-tagging-wiki-extract</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-kiwix" rel="tag" title="see questions tagged &#39;kiwix&#39;">kiwix</span> <span class="post-tag tag-link-offline" rel="tag" title="see questions tagged &#39;offline&#39;">offline</span>

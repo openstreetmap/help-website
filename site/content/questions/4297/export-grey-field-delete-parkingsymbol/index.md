@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On your second question: there are already a lot of QA's on exporting, I suggest browsing through them: <a href="http://help.openstreetmap.org/tags/export/"></a><a href="http://help.openstreetmap.org/tags/export/"></a><a href="http://help.openstreetmap.org/tags/export/">http://help.openstreetmap.org/tags/export/</a></p>
+<p>On your second question: there are already a lot of QA's on exporting, I suggest browsing through them: <a href="https://help.openstreetmap.org/tags/export/"></a><a href="https://help.openstreetmap.org/tags/export/"></a><a href="https://help.openstreetmap.org/tags/export/">https://help.openstreetmap.org/tags/export/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

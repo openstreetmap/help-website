@@ -132,7 +132,7 @@ One Answer:
 <p>As the text there says, I generated the script using the Wizard, with the input</p>
 <pre><code>building=* and name=* in &quot;Ploiesti, Romania&quot;</code></pre>
 <p>but I then edited the output configuration to have it generate csv instead of json. The query language is documented here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
 <p>To add a tag like "addr:housename" to the results, you would need to add additional lines to the main body of the script, like <code>way["building"]["addr:housename"](area.searchArea);</code>, with a node, way and relation query for each additional tag.</p>
 </div>
 <div class="answer-controls post-controls">

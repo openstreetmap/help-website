@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Paul, this here is a general question and answer database for OpenStreetMap (the data collection) itself. OsmAnd is just one of the many applications which use our data. Please get in contact with the creators of OsmAnd directly. You find contact options (and homepage links) there: <a href="http://wiki.openstreetmap.org/wiki/OsmAnd#Contact">http://wiki.openstreetmap.org/wiki/OsmAnd#Contact</a> From there you can get to the OsmAnd homepage <a href="http://osmand.net/">http://osmand.net/</a> and there you will find on the left menu the translation centre: <a href="http://translate.osmand.net/engage/osmand/?utm_source=widget">http://translate.osmand.net/engage/osmand/?utm_source=widget</a> This should be what you search for.</p>
+<p>Hi Paul, this here is a general question and answer database for OpenStreetMap (the data collection) itself. OsmAnd is just one of the many applications which use our data. Please get in contact with the creators of OsmAnd directly. You find contact options (and homepage links) there: <a href="https://wiki.openstreetmap.org/wiki/OsmAnd#Contact">https://wiki.openstreetmap.org/wiki/OsmAnd#Contact</a> From there you can get to the OsmAnd homepage <a href="http://osmand.net/">http://osmand.net/</a> and there you will find on the left menu the translation centre: <a href="http://translate.osmand.net/engage/osmand/?utm_source=widget">http://translate.osmand.net/engage/osmand/?utm_source=widget</a> This should be what you search for.</p>
 <p>Thanks for your help!</p>
 </div>
 <div class="answer-controls post-controls">

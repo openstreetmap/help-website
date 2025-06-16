@@ -140,7 +140,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Parameters">wiki</a> also mentioned <em>postalcode</em> instead of <em>postcode</em>. I <a href="http://wiki.openstreetmap.org/w/index.php?title=Nominatim&amp;action=historysubmit&amp;diff=853806&amp;oldid=832435">fixed</a> it.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Parameters">wiki</a> also mentioned <em>postalcode</em> instead of <em>postcode</em>. I <a href="https://wiki.openstreetmap.org/w/index.php?title=Nominatim&amp;action=historysubmit&amp;diff=853806&amp;oldid=832435">fixed</a> it.</p>
 </div>
 <div id="comment-18942-info" class="comment-info">
 <span class="comment-age">(09 Jan '13, 21:36)</span> <span class="comment-user userinfo">scai ♦</span>

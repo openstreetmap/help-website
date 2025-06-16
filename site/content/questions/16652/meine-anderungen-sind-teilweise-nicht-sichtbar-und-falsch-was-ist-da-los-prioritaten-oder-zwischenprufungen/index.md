@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>Teilweise wird die Karte auch nicht richtig dargestellt. So habe ich z.B. in der Stadtmitte eine construction side rausgenommen, da diese sehr oft durch die Gemeinde geändert wird und noch nicht final genehmigt ist. In der untersten Zoomstufe wird diese c-side nun aber noch rudimentär angezeigt, aber nicht komplett. Wie kann das passieren? Auch Gebäude stimmen nicht ganz: Die Grundschule Langenbrücken wird z.B. im oberen teil in der alten Form, im unteren Teil in der neuen angezeigt. Was ist da los?</p>
 <p>In der Radfahrerkarte und der MapQuest-Ansicht tauchen die Änderungen zum Teil auch nicht auf. Gibt es da Prioritäten oder Zwischenprüfungen?</p>
 <p>Danke vorab.</p>
-<p><a href="http://www.openstreetmap.org/?lat=49.2015535&amp;lon=8.647446&amp;zoom=18&amp;layers=M&amp;mlat=49.20194&amp;mlon=8.64724">Karte anzeigen</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=49.2015535&amp;lon=8.647446&amp;zoom=18&amp;layers=M&amp;mlat=49.20194&amp;mlon=8.64724">Karte anzeigen</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ansichten" rel="tag" title="see questions tagged &#39;ansichten&#39;">ansichten</span> <span class="post-tag tag-link-aktualisierung" rel="tag" title="see questions tagged &#39;aktualisierung&#39;">aktualisierung</span> <span class="post-tag tag-link-änderungen" rel="tag" title="see questions tagged &#39;änderungen&#39;">änderungen</span> <span class="post-tag tag-link-lang-de" rel="tag" title="see questions tagged &#39;lang-de&#39;">lang-de</span>
@@ -189,7 +189,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Eine <a href="http://wiki.openstreetmap.org/wiki/DE:Slippy_Map">Slippy Map</a> ist aus Kacheln (tiles) aufgebaut. Jede dieser Kacheln kann aktuell sein oder nicht (und zwar sowohl am Server wie am Client). Du kannst im Browser "aktualisieren" drücken oder den Cache leeren. Serverseitig passiert das Neuzeichnen (re-rendering) wenn nötig, wobei eine Warteschlange aufgebaut/abgearbeitet wird, sprich es kann dauern, bis dieses Neuzeichnen einer Kachel passiert. Man kann einzelne Kacheln auch als "dirty" markieren und damit ein Neuzeichnen anstoßen.</p>
+<p>Eine <a href="https://wiki.openstreetmap.org/wiki/DE:Slippy_Map">Slippy Map</a> ist aus Kacheln (tiles) aufgebaut. Jede dieser Kacheln kann aktuell sein oder nicht (und zwar sowohl am Server wie am Client). Du kannst im Browser "aktualisieren" drücken oder den Cache leeren. Serverseitig passiert das Neuzeichnen (re-rendering) wenn nötig, wobei eine Warteschlange aufgebaut/abgearbeitet wird, sprich es kann dauern, bis dieses Neuzeichnen einer Kachel passiert. Man kann einzelne Kacheln auch als "dirty" markieren und damit ein Neuzeichnen anstoßen.</p>
 <p>Vorgestern (3-Oct-2012) war das Rendern wegen eines Serverproblems kurzzeitig überhaupt <a href="http://lists.openstreetmap.org/pipermail/talk/2012-October/064743.html">ausgesetzt</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -268,7 +268,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Die Art und Weise wie die Standard-Karte aktualisiert wird, ist ein ausgeklügeltes System, um die vorhandenen limitierten Ressourcen möglichst effektiv zu verwenden. Es versucht Sachen so aktuell wie möglich zu zeigen, kann aber bei Überlastung (und Teilweise auch im normalen Betrieb) zu für nicht Experten zu unerwarteten Ergebnissen führen.</p>
-<p>In den Antworten zur folgenden Frage wird der Prozess und wie diese Artefakte zustande kommen im Detail erklärt: <a href="https://help.openstreetmap.org/questions/11179/wie-haeufig-wird-die-standard-karte-auf-osmorg-aktualisiert">https://help.openstreetmap.org/questions/11179/wie-haeufig-wird-die-standard-karte-auf-osmorg-aktualisiert</a></p>
+<p>In den Antworten zur folgenden Frage wird der Prozess und wie diese Artefakte zustande kommen im Detail erklärt: <a href="/questions/11179/wie-haeufig-wird-die-standard-karte-auf-osmorg-aktualisiert">https://help.openstreetmap.org/questions/11179/wie-haeufig-wird-die-standard-karte-auf-osmorg-aktualisiert</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

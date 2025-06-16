@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OpenCycleMap tiles are a product of Gravitystorm Ltd. <a href="http://www.thunderforest.com/">http://www.thunderforest.com/</a> Andy makes these tiles widely available. If you are looking to add them as a backdrop in JOSM you can go to Imagery &gt; Imagery Preferences and in the upper pane select OpenCycleMap and then click the Activate button. See Below: <img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2015-05-03_at_15.34.22.png" alt="Imagery Preferences panel screenshot" /></p>
+<p>The OpenCycleMap tiles are a product of Gravitystorm Ltd. <a href="http://www.thunderforest.com/">http://www.thunderforest.com/</a> Andy makes these tiles widely available. If you are looking to add them as a backdrop in JOSM you can go to Imagery &gt; Imagery Preferences and in the upper pane select OpenCycleMap and then click the Activate button. See Below: <img src="/upfiles/Screen_Shot_2015-05-03_at_15.34.22.png" alt="Imagery Preferences panel screenshot" /></p>
 <p>To add these tiles as a backdrop in iD you need to add it as custom background imagery. On the imagery control pane select custom and enter the TMS url from thunderforest.com .</p>
 </div>
 <div class="answer-controls post-controls">

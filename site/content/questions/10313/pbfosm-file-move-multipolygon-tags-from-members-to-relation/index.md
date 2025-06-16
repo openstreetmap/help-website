@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "pbf/osm-file: move multipolygon tags from members to relation"
-description = '''Hi, I want to pre-process downloaded OSM-data (big files) for my own use. Regarding relations, type=multipolygon, attributes should be removed from outer ways and go solely to the relation itself, like described in http://wiki.openstreetmap.org/wiki/Multipolygon_relation#Tagging. I will probably try...'''
+description = '''Hi, I want to pre-process downloaded OSM-data (big files) for my own use. Regarding relations, type=multipolygon, attributes should be removed from outer ways and go solely to the relation itself, like described in https://wiki.openstreetmap.org/wiki/Multipolygon_relation#Tagging. I will probably try...'''
 date = "2012-01-29T14:44:00Z"
 lastmod = "2012-01-29T14:44:00Z"
 weight = 10313
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I want to pre-process downloaded OSM-data (big files) for my own use. Regarding relations, type=multipolygon, attributes should be removed from outer ways and go solely to the relation itself, like described in <a href="http://wiki.openstreetmap.org/wiki/Multipolygon_relation#Tagging">http://wiki.openstreetmap.org/wiki/Multipolygon_relation#Tagging</a>.</p>
+<p>I want to pre-process downloaded OSM-data (big files) for my own use. Regarding relations, type=multipolygon, attributes should be removed from outer ways and go solely to the relation itself, like described in <a href="https://wiki.openstreetmap.org/wiki/Multipolygon_relation#Tagging">https://wiki.openstreetmap.org/wiki/Multipolygon_relation#Tagging</a>.</p>
 <p>I will probably try to use some Python and Osmosis calls to do that. Or do you know of simpler way?</p>
 <p>Thanks, Redoute</p>
 </div>

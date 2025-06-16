@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You haven't put any tags like <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=yes</a> or similar on your buildings on for example <a href="http://www.openstreetmap.org/browse/way/217282850">http://www.openstreetmap.org/browse/way/217282850</a>.</p>
+<p>You haven't put any tags like <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=yes</a> or similar on your buildings on for example <a href="https://www.openstreetmap.org/browse/way/217282850">https://www.openstreetmap.org/browse/way/217282850</a>.</p>
 <p><a href="http://keepright.ipax.at/report_map.php?schema=18&amp;error=43186174&amp;zoom=14&amp;lat=55.06859&amp;lon=-7.42409&amp;layers=B0T&amp;ch=0%2C30%2C40%2C50%2C70%2C90%2C100%2C110%2C120%2C130%2C150%2C160%2C170%2C180%2C191%2C192%2C193%2C194%2C195%2C196%2C197%2C198%2C201%2C202%2C203%2C204%2C205%2C206%2C207%2C208%2C210%2C220%2C231%2C232%2C270%2C281%2C282%2C283%2C284%2C285%2C291%2C292%2C293%2C294%2C311%2C312%2C313%2C320%2C350%2C370%2C380%2C401%2C402%2C411%2C412%2C413%2C20%2C60%2C300%2C360%2C390&amp;show_ign=1&amp;show_tmpign=1">Keep Right</a> may help you find editing mistakes like these if you scroll around. Keep Right is not updated instantly (but weekly I think), but is a good tool to raise the quality of OpenStreetMap.</p>
 </div>
 <div class="answer-controls post-controls">

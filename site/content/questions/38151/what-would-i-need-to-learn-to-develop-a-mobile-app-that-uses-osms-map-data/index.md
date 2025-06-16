@@ -109,7 +109,7 @@ osqa_accepted = false
 <p>It probably is nearly impossible to give a good answer to your question.</p>
 <p>Specific programming languages and developement environments depend very much on your target devices (WM, iOS, Android ....). While there are some device independent solutions, for example PhoneGap, they tend to be rather limited in practice.</p>
 <p>Further while the OSM data format is fairly simple I wouldn't underestimate the effort needed to actually manipulate it programmatically.</p>
-<p>The main OSM Dev page is here <a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a> I would suggest reading some of the more general documents and leaning some basics about OSM before you proceed.</p>
+<p>The main OSM Dev page is here <a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a> I would suggest reading some of the more general documents and leaning some basics about OSM before you proceed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Also have a look at <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> ... it is opensource and has many sample apps</p>
+<p>Also have a look at <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> ... it is opensource and has many sample apps</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -224,7 +224,7 @@ osqa_accepted = false
 <p>A couple of thoughts...</p>
 <p>You'll need to pick the technology that you want to use to develop your app. You've mentioned Android, so that narrows it down a bit - <a href="http://developer.android.com/training/index.html">Android Java</a>, PhoneGap / <a href="http://cordova.apache.org/">Cordova</a>, <a href="http://xamarin.com/">Xamarin</a> and possibly a couple of others. You'll also want to think about whether the devices that you're targetting will have the Google add-ons to Android (and be aware that some of Google's Android developer walkthroughs assume that these are available). I'd suggest choosing one based on your previous experience. Also there are quite a few libraries that you can use for OSM for Android Java, lots of web stuff that will work with Cordova, but less for Xamarin I think.</p>
 <p>First of all I'd start small. Try and choose a small part of what you eventually want to achieve. That might be "online slippy map display", or "online POI search", but start with something relatively simple and work forward from there rather than trying to understand everything before doing anything.</p>
-<p>I'd also look at what's out there already, such as <a href="https://github.com/osmdroid/osmdroid">osmdroid</a>, which is an OSM MapView library replacement. There are already applications out there that do what you want to do and a lot more (<a href="https://github.com/osmandapp/Osmand">OsmAnd</a> is one, there are <a href="http://wiki.openstreetmap.org/wiki/Android#Android_software_supporting_OpenStreetMap">lots of others</a>), and many of these have the source licenced in such a way that you can learn from them.</p>
+<p>I'd also look at what's out there already, such as <a href="https://github.com/osmdroid/osmdroid">osmdroid</a>, which is an OSM MapView library replacement. There are already applications out there that do what you want to do and a lot more (<a href="https://github.com/osmandapp/Osmand">OsmAnd</a> is one, there are <a href="https://wiki.openstreetmap.org/wiki/Android#Android_software_supporting_OpenStreetMap">lots of others</a>), and many of these have the source licenced in such a way that you can learn from them.</p>
 <p>In the longer term you'll need to ask yourself questions like "do I need this to work offline" (which has implications for data storage on the device itself) and "which back-end servers (if any) will I use for e.g. POI searching" (you'll need to check the terms of service for whatever you want to use; <a href="http://wiki.osm.org/wiki/Nominatim_usage_policy">here</a> for example is the one for "<a href="http://wiki.osm.org/wiki/Nominatim">Nominatim</a>", which is the name lookup service used on the OSM website). You'll also want to think about whether you want to display map tiles that something else (perhaps a remote server) has rendered or whether you want to draw things on the map display yourself.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -245,7 +245,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Cool, thanks mehn! I like your idea of starting the app with just a bit of the functionality and learning from there, and thats what I'm going to do.</p>
-<p>Thanks a million <a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, the link to Getting Started is highly appreciated :) I didn't notice it initially.</p>
+<p>Thanks a million <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, the link to Getting Started is highly appreciated :) I didn't notice it initially.</p>
 <p>Now the coding begins :D</p>
 </div>
 <div id="comment-38163-info" class="comment-info">

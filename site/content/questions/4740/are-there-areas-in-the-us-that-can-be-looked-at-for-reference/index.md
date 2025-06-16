@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suggest you take this question to the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us mailing list</a> which is better suited for the rather broad request you're making (see also the <a href="http://help.openstreetmap.org/faq/">FAQ for this help site</a>, especially the section about questions that should be avoided).</p>
+<p>I suggest you take this question to the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us mailing list</a> which is better suited for the rather broad request you're making (see also the <a href="https://help.openstreetmap.org/faq/">FAQ for this help site</a>, especially the section about questions that should be avoided).</p>
 <p>You might also want to check out <a href="http://www.bestofosm.org"></a><a href="http://bestofosm.org"></a><a href="http://bestofosm.org">bestofosm.org</a> which lists a few well-mapped places in the US.</p>
 </div>
 <div class="answer-controls post-controls">

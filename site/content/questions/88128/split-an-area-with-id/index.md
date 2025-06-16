@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, This question has been partially answered here:- <a href="https://help.openstreetmap.org/questions/55984/splitting-a-multipolygon-into-two-in-id">https://help.openstreetmap.org/questions/55984/splitting-a-multipolygon-into-two-in-id</a> It's fairly easy to do with the JOSM editor. If you need any help please ask and indicate the area involved.</p>
+<p>Hi, This question has been partially answered here:- <a href="/questions/55984/splitting-a-multipolygon-into-two-in-id">https://help.openstreetmap.org/questions/55984/splitting-a-multipolygon-into-two-in-id</a> It's fairly easy to do with the JOSM editor. If you need any help please ask and indicate the area involved.</p>
 <p>Regards Bernard</p>
 </div>
 <div class="answer-controls post-controls">

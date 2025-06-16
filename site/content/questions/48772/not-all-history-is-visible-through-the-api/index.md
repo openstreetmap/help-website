@@ -106,7 +106,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Potlatch looks to be showing you node edits which wouldn't have affected the way (so not adding/removing nodes or changing way tags).</p>
-<p><a href="http://www.openstreetmap.org/node/986138464/history">This is just one example</a> - find others by looking at the <a href="http://www.openstreetmap.org/api/0.6/way/84965365/full">XML for the way</a> and looking for node versions greater than 1.</p>
+<p><a href="https://www.openstreetmap.org/node/986138464/history">This is just one example</a> - find others by looking at the <a href="https://www.openstreetmap.org/api/0.6/way/84965365/full">XML for the way</a> and looking for node versions greater than 1.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>I checked for deleted ways using Potlatch 1 and found this one: <a href="http://www.openstreetmap.org/way/87489584">http://www.openstreetmap.org/way/87489584</a> which was farmland (history times out, but api call for v8 shows tags <a href="http://www.openstreetmap.org/api/0.6/way/87489584/8">http://www.openstreetmap.org/api/0.6/way/87489584/8</a> )</p>
+<p>I checked for deleted ways using Potlatch 1 and found this one: <a href="https://www.openstreetmap.org/way/87489584">https://www.openstreetmap.org/way/87489584</a> which was farmland (history times out, but api call for v8 shows tags <a href="https://www.openstreetmap.org/api/0.6/way/87489584/8">https://www.openstreetmap.org/api/0.6/way/87489584/8</a> )</p>
 </div>
 <div id="comment-48776-info" class="comment-info">
 <span class="comment-age">(22 Mar '16, 12:49)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -175,7 +175,7 @@ osqa_accepted = true
 <div id="post-48779-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a> and <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> for your help and all the useful pointers and tools you provided. I've reverted the changelist as the data added was significantly less than what we lost.</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a> and <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> for your help and all the useful pointers and tools you provided. I've reverted the changelist as the data added was significantly less than what we lost.</p>
 </div>
 <div id="comment-48779-info" class="comment-info">
 <span class="comment-age">(22 Mar '16, 13:15)</span> <span class="comment-user userinfo">Strainu</span>
@@ -218,7 +218,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>There should not be any hidden version.</p>
-<p><a href="http://www.openstreetmap.org/way/84965365/history">http://www.openstreetmap.org/way/84965365/history</a></p>
+<p><a href="https://www.openstreetmap.org/way/84965365/history">https://www.openstreetmap.org/way/84965365/history</a></p>
 <p>Indeed, in Potlatch it shows more nodes, wierd</p>
 </div>
 <div class="answer-controls post-controls">

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi all, I found one conversation in the forum that seems to answer my question already, but just in case I'd like to confirm.</p>
 <p>Does OpenStreetMap offer any sort of data download of IP addresses and the associated country, city, zip, etc.? (Similar to what MaxMind offers)</p>
-<p>According to this forum thread, OSM does not do this: <a href="https://help.openstreetmap.org/questions/16965/ip-geolocation">https://help.openstreetmap.org/questions/16965/ip-geolocation</a></p>
+<p>According to this forum thread, OSM does not do this: <a href="/questions/16965/ip-geolocation">https://help.openstreetmap.org/questions/16965/ip-geolocation</a></p>
 <p>Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -118,7 +118,7 @@ One Answer:
 <p>For the second case "unsuitable for motor vehicles", I'm going to assume that the tracktype at the bottom of the way is more than adequate to indicate unsuitability for normal motor vehicles, so intend to remove the motor_vehicle=no tag and replace with a note indicating this "unsuitable for motor vehicles" sign at the end.</p>
 <p>For the first case "unsuitable for heavy goods vehicles", I'd think this would eventually be dealt with by details captured by second and third-level surveys, such as width of road surface, maximum clearance in height/width, steepness, etc. - the kind of thing that is immediately apparent from looking down the road from the end where there is no sign, but less so from the junction where the sign is posted... but I'm not planning on surveying in that level of detail any time soon. As such, I'll leave the hgv=no in place, but add a fixme tag indicating that the characteristics of the road that make it unsuitable for HGVs need to be surveyed.</p>
 <p>Of course, if the local authority later decides to replace the information sign with an actual height/weight/width restriction, the tagging can be changed to reflect this.</p>
-<p>Edit: done. See <a href="http://www.openstreetmap.org/browse/changeset/8711649">http://www.openstreetmap.org/browse/changeset/8711649</a></p>
+<p>Edit: done. See <a href="https://www.openstreetmap.org/browse/changeset/8711649">https://www.openstreetmap.org/browse/changeset/8711649</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

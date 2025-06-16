@@ -341,7 +341,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may be more happy with Humanitaran layer - see <a href="http://www.openstreetmap.org/#map=13/50.2939/18.8325&amp;layers=H">http://www.openstreetmap.org/#map=13/50.2939/18.8325&amp;layers=H</a></p>
+<p>You may be more happy with Humanitaran layer - see <a href="https://www.openstreetmap.org/#map=13/50.2939/18.8325&amp;layers=H">https://www.openstreetmap.org/#map=13/50.2939/18.8325&amp;layers=H</a></p>
 <p>It was designed as base layer for additional markers.</p>
 </div>
 <div class="answer-controls post-controls">

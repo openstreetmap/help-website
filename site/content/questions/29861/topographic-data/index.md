@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-29862-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Which Garmin device are you using? Unfortunatly I can't read NL :( <a href="http://wiki.openstreetmap.org/wiki/Openfietskaart/Technical#Contour_.2F_Hoogtelijnen_Layer">http://wiki.openstreetmap.org/wiki/Openfietskaart/Technical#Contour_.2F_Hoogtelijnen_Layer</a></p>
+<p>Which Garmin device are you using? Unfortunatly I can't read NL :( <a href="https://wiki.openstreetmap.org/wiki/Openfietskaart/Technical#Contour_.2F_Hoogtelijnen_Layer">https://wiki.openstreetmap.org/wiki/Openfietskaart/Technical#Contour_.2F_Hoogtelijnen_Layer</a></p>
 </div>
 <div id="comment-29862-info" class="comment-info">
 <span class="comment-age">(15 Jan '14, 16:38)</span> <span class="comment-user userinfo">iii</span>

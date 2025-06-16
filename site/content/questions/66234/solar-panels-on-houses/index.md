@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I would like to start adding solar panels in my neighborhood. Many houses around me have simple photovoltaic panels on the roof of their houses. These aren't power plants, just personal power generators.</p>
 <p>What is the best practice to tagging solar panels on building's roofs?</p>
 <p>I was thinking to draw the outline of the solar panels and tag it as a generator.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Adding_Home_Solar_Panels.png" alt="Here&#39;s a picture of what I&#39;m talking about." /></p>
+<p><img src="/upfiles/Adding_Home_Solar_Panels.png" alt="Here&#39;s a picture of what I&#39;m talking about." /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-house" rel="tag" title="see questions tagged &#39;house&#39;">house</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-bestpractice" rel="tag" title="see questions tagged &#39;bestpractice&#39;">bestpractice</span> <span class="post-tag tag-link-solar" rel="tag" title="see questions tagged &#39;solar&#39;">solar</span>

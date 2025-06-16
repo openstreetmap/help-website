@@ -272,7 +272,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>To elaborate on Richard's last point: Yahoo's service has not been available for OSM tracing since 13 September 2011. This doesn't matter much, though, because we are allowed to use the <a href="http://wiki.openstreetmap.org/wiki/Bing">Bing</a> aerial imagery, which is much higher quality in most places anyway. Bing imagery is available through both Potlatch 2 and JOSM.</p>
+<p>To elaborate on Richard's last point: Yahoo's service has not been available for OSM tracing since 13 September 2011. This doesn't matter much, though, because we are allowed to use the <a href="https://wiki.openstreetmap.org/wiki/Bing">Bing</a> aerial imagery, which is much higher quality in most places anyway. Bing imagery is available through both Potlatch 2 and JOSM.</p>
 </div>
 <div id="comment-15920-info" class="comment-info">
 <span class="comment-age">(09 Sep '12, 17:58)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -295,7 +295,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors">http://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors">https://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors</a></p>
 </div>
 <div id="comment-15930-info" class="comment-info">
 <span class="comment-age">(10 Sep '12, 08:06)</span> <span class="comment-user userinfo">Tordanik</span>

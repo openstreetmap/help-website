@@ -300,7 +300,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p><strong>For Portuguese readers...</strong></p>
 <p>A principal fonte de documentação parece ser a estatística de uso, e isso inclui a correlação entre a tag <em>type</em> do elemento apontado e a <em>role</em> utilizada, conforme destacado na ilustração abaixo ("sem papel" indica uso frequente de <em>role</em> vazia).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/relation-role-main01.720px.png" alt="alt text" /></p>
+<p><img src="/upfiles/relation-role-main01.720px.png" alt="alt text" /></p>
 <p>Fonte: <a href="https://taginfo.openstreetmap.org/relations">taginfo.openstreetmap.org/relations</a>.</p>
 </div>
 <div class="answer-controls post-controls">

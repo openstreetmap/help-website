@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-83240-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question has already been answered : <a href="https://help.openstreetmap.org/questions/82690/abandoned-rail-line-construction-project-drawable">https://help.openstreetmap.org/questions/82690/abandoned-rail-line-construction-project-drawable</a></p>
+<p>This question has already been answered : <a href="/questions/82690/abandoned-rail-line-construction-project-drawable">https://help.openstreetmap.org/questions/82690/abandoned-rail-line-construction-project-drawable</a></p>
 </div>
 <div id="comment-83240-info" class="comment-info">
 <span class="comment-age">(27 Jan '22, 21:40)</span> <span class="comment-user userinfo">H_mlet</span>

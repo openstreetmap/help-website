@@ -88,7 +88,7 @@ osqa_accepted = true
 <div id="post-77603-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/12575/strongwillow">@strongwillow</a>, the answer to <a href="https://help.openstreetmap.org/questions/77582/using-apple-maps-imagery-in-ipad-app">https://help.openstreetmap.org/questions/77582/using-apple-maps-imagery-in-ipad-app</a> answers that question.</p>
+<p><a href="https://help.openstreetmap.org/users/12575/strongwillow">@strongwillow</a>, the answer to <a href="/questions/77582/using-apple-maps-imagery-in-ipad-app">https://help.openstreetmap.org/questions/77582/using-apple-maps-imagery-in-ipad-app</a> answers that question.</p>
 </div>
 <div id="comment-77603-info" class="comment-info">
 <span class="comment-age">(18 Nov '20, 15:45)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

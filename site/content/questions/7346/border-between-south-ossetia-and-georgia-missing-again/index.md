@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The Potlatch editor (the old one, Potlatch 1 - not Potlatch 2!) has a function to display deleted ways in an area. Zoom to the area where you suspect the border to have been, then hit U (for undelete) and Potlatch will load deleted ways from the server, showing them in red. You can then check the history of these and undelete them by clicking the padlock icon next to the way ID.</p>
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_1/Primer#Undoing_mistakes">Potlatch Primer</a> on the Wiki for details.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_1/Primer#Undoing_mistakes">Potlatch Primer</a> on the Wiki for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -128,7 +128,7 @@ One Answer:
 <div id="post-7348-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm guessing, but this: <a href="http://www.openstreetmap.org/browse/way/36817574">http://www.openstreetmap.org/browse/way/36817574</a></p>
+<p>I'm guessing, but this: <a href="https://www.openstreetmap.org/browse/way/36817574">https://www.openstreetmap.org/browse/way/36817574</a></p>
 <p>might be it or part of it. Does that sound right to anyone?</p>
 </div>
 <div id="comment-7348-info" class="comment-info">
@@ -140,7 +140,7 @@ One Answer:
 <div id="post-7349-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... and this looks like the affected relation: <a href="http://www.openstreetmap.org/browse/relation/1198766/history">http://www.openstreetmap.org/browse/relation/1198766/history</a></p>
+<p>... and this looks like the affected relation: <a href="https://www.openstreetmap.org/browse/relation/1198766/history">https://www.openstreetmap.org/browse/relation/1198766/history</a></p>
 </div>
 <div id="comment-7349-info" class="comment-info">
 <span class="comment-age">(26 Aug '11, 16:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

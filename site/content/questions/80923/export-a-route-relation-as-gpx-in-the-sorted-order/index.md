@@ -108,7 +108,7 @@ One Answer:
 <p>This might be worth a try...<br />
 Open a new layer in Josm, then select the route and ‘merge selected’ into the new layer. Then select all the route segments and ‘edit &gt; combine’ and try exporting the combined route to gpx. Be careful not to upload to osm on exiting.</p>
 <p>Also some alternative ideas in this query...<br />
-<a href="https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml</a></p>
+<a href="/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

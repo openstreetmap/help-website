@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I'm new to using Openstreetmap.org. I like the idea that users can correct and improve the data, much like Wikipedia, but documentation for doing basic editing tasks seems very hard to find. I've searched in various locations on the openstreetmap.org site, including this question database.</p>
 <p>When I search for my business address "3720 Canton St, Dallas, TX" Two conflicting locations are returned, one wrong by about a block, and the other is near our building but the pointer is maybe 50 feet away in the middle of a street. Here's the permalink to the area in question:</p>
-<p><a href="http://www.openstreetmap.org/?lat=32.785349&amp;lon=-96.773407&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=32.785349&amp;lon=-96.773407&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=32.785349&amp;lon=-96.773407&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=32.785349&amp;lon=-96.773407&amp;zoom=18&amp;layers=M</a></p>
 <p>I tried selecting "edit" and various editor options but in each case the address pointer vanishes when the editor loads, so there's nothing I can find to move or edit with regard to the address. One of the two pointers needs to be deleted completely, the other should be moved, presumably to the entrance of the building. I'd like to make the edits myself so that I can learn how and correct other entries as well, if someone can point me to the documentation on how to do it. What I would find helpful is a simple, step-by-step guide for new users with how-tos for basic tasks (e.g. "how to correct an address pointer", "how to remove a non-existent street", "how to correct a street name", etc.) Or if something like that already exists maybe its location could communicated to new users more effectively - including in the sign-up email or displayed on the sign-up page?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The reason that you can not find anything to edit is because the house in not actually in the OpenStreetMap data set. This has been found in an external (non-osm) data set called 'tiger' which isn't very acurate. If you add house numbers in this area in OSM this will be used in preference so simply adding the property in the correct location should fix things.</p>
-<p>There was already an answer to the question on <a href="https://help.openstreetmap.org/questions/7335/how-to-add-a-house-number">how to add house numbers</a> that you may find provides the information you are after.</p>
+<p>There was already an answer to the question on <a href="/questions/7335/how-to-add-a-house-number">how to add house numbers</a> that you may find provides the information you are after.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

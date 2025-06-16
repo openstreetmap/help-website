@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-26291-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Same problem here with the 1.3Gb file of France taken from this list: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>Same problem here with the 1.3Gb file of France taken from this list: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div id="comment-26291-info" class="comment-info">
 <span class="comment-age">(11 Sep '13, 16:44)</span> <span class="comment-user userinfo">poumtatalia</span>

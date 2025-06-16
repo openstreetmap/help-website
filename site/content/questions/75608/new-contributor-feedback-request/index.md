@@ -49,7 +49,7 @@ osqa_accepted = false
 <p>When I created the first contribution, I tried adding by hand. I biked this course beforehand to get perspective. Is there a mechanism to use GPX coordinates for adding a road?</p>
 <p>Here is the Strava activity (which can be converted to a GPX): <a href="https://www.strava.com/activities/3661475773">https://www.strava.com/activities/3661475773</a></p>
 <p>And a picture of the pedestrian bridge.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_20200623_183334.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/IMG_20200623_183334.jpg" alt="alt text" /></p>
 <p>For the second contribution, I set the tag bicycling as true. I use these Maps for my Hammerhead Karoo, but it seems they still do not see that path as cycling capable. I've emailed them to see if maybe I did something wrong.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -187,7 +187,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, For the first question, the OpenCycleMap query has been addressed before here :-<a href="https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a> It might take a few days for all tiles to be re-rendered. As for the bridge, as mapped it will not be routable as it is not joined to the eastern section of Wilkinson Road and the service road.</p>
+<p>Hi, For the first question, the OpenCycleMap query has been addressed before here :-<a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a> It might take a few days for all tiles to be re-rendered. As for the bridge, as mapped it will not be routable as it is not joined to the eastern section of Wilkinson Road and the service road.</p>
 <p>The second question, it may well be an anomaly with Hammerhead Karoo. The way is however joined onto the river multipolygon which may or may not cause a problem.<br />
 Anyway it doesn't seem right to join a highway to a river area. Then that highway which you tag bicycle=yes joins to a highway that does not allow for bicycle use, so routing software should not route cycles through there.</p>
 <p>Just my thoughts/observations.</p>

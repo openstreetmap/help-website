@@ -141,7 +141,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>In all honesty, it's pretty much impossible to remove all your edits, and certainly not easily. But you shouldn't ask for them to be removed anyway, even if you decide to leave the project.</p>
 <p>As an analogy, if we were a group of volunteers planting trees to make a forest, and you decided you didn't want to continue with the project, that's fine, there's no problem there. However, it would be churlish to grab a spade and go around digging up all the trees that you've already planted. That's the same effect as stopping contributing to OSM, but also asking for all your data to be removed.</p>
-<p>Moreover, our <a href="http://wiki.openstreetmap.org/wiki/Community_Code_of_Conduct_%28Draft%29">draft code of conduct</a> has a section covering leaving the project</p>
+<p>Moreover, our <a href="https://wiki.openstreetmap.org/wiki/Community_Code_of_Conduct_%28Draft%29">draft code of conduct</a> has a section covering leaving the project</p>
 <blockquote>
 <p><strong>Step down considerately</strong></p>
 <p>When members of OSM leave or disengage from the project and/or community, they are asked to do so in a way that minimizes disruption to the project as a whole. Members are strongly encouraged to put forth an effort to ensure that others can pick up where they left off.</p>

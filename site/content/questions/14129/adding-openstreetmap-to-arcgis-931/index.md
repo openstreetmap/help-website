@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">the Wiki</a> for a list of WMS services using OSM.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">the Wiki</a> for a list of WMS services using OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,10 +162,10 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Somebody asked <a href="http://gis.stackexchange.com/questions/10563/can-you-use-openstreetmap-tiles-in-arcgis-9-3-1">a very similar question over on gis.stackexchange.com</a>. Amazingly(*) it seems there isn't a very simple way to bring in a standard tile layer in ArcGIS 9.3.1.</p>
-<p>There is a <strong>plugin called <a href="http://arcbrutile.codeplex.com">ArcBruTile</a></strong> which lets you bring layers from various pre-defined tile servers including OpenStreetMap. <em>(TODO: Add more how-to info and a screenshot on our <a href="http://wiki.openstreetmap.org/wiki/ArcBruTile">ArcBruTile wiki page</a>)</em></p>
-<p>Alternatively you can <strong>bring in WMS layers</strong>. This is the old GIS way of doing raster layers, which ArcGis handles easily. OpenStreetMap is <a href="http://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">served as a WMS by a number of providers</a> as Frederik said.</p>
+<p>There is a <strong>plugin called <a href="http://arcbrutile.codeplex.com">ArcBruTile</a></strong> which lets you bring layers from various pre-defined tile servers including OpenStreetMap. <em>(TODO: Add more how-to info and a screenshot on our <a href="https://wiki.openstreetmap.org/wiki/ArcBruTile">ArcBruTile wiki page</a>)</em></p>
+<p>Alternatively you can <strong>bring in WMS layers</strong>. This is the old GIS way of doing raster layers, which ArcGis handles easily. OpenStreetMap is <a href="https://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">served as a WMS by a number of providers</a> as Frederik said.</p>
 <p><br />
-(* It's a feature which seems obvious to me as a way of making map browsing life easy, e.g. to layer other data on top of, but they've only got around to adding that in ArcGIS 10. I'd love to say QGIS developers have done better, but <a href="http://help.openstreetmap.org/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis/15909">well unless there's now an easier answer to this question... not really</a> )</p>
+(* It's a feature which seems obvious to me as a way of making map browsing life easy, e.g. to layer other data on top of, but they've only got around to adding that in ArcGIS 10. I'd love to say QGIS developers have done better, but <a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis/15909">well unless there's now an easier answer to this question... not really</a> )</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

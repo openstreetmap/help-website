@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I like the opentopomap's style of map. To get up to date maps on my Garmins i download from opentopo. Recently the Garmin.img file seems to be much smaller than the PC basecamp version and i cannot get it to work. I have got the PC version to display with Basecamp running on a Win10 PC but it won't export the map to my Oregon 650 either. Any ideas please? <a href="https://wiki.openstreetmap.org/wiki/OpenTopoMap">https://wiki.openstreetmap.org/wiki/OpenTopoMap</a> and <a href="http://garmin.opentopomap.org/">http://garmin.opentopomap.org/</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/opentopo_file_sizes.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/opentopo_file_sizes.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-basecamp" rel="tag" title="see questions tagged &#39;basecamp&#39;">basecamp</span> <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span> <span class="post-tag tag-link-opentopo" rel="tag" title="see questions tagged &#39;opentopo&#39;">opentopo</span> <span class="post-tag tag-link-.img" rel="tag" title="see questions tagged &#39;.img&#39;">.img</span>
@@ -192,7 +192,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Problem fixed. opentopomap have issued a new download and it now works. The file sizes are now of the size i would expect to see jpeg. thankyou for your help.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/current_opentopomap_sizes.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/current_opentopomap_sizes.JPG" alt="alt text" /></p>
 <p>If you compare the size of the offered files in the question, you will see the problem.</p>
 </div>
 <div class="answer-controls post-controls">

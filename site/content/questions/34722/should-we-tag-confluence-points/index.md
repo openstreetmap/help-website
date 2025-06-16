@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Recently I came across some lonesome node in the middle of nowhere which said "Confluence N49°/E12°" (<a href="http://www.openstreetmap.org/note/182399#map=18/48.99920/12.00049&amp;layers=N">here</a>). Upon placing an error note there I learned about the <a href="http://confluence.org">Confluence.org</a> website where people try to collect as many points on earth where longitude and lattitude lines meet. From the discussion on this error note (unfortunately in german) it seems that there was once a a sign indicating this confluence point but as I visited the place recently, there was nothing but forest without any physical hint for that "special" place.</p>
+<p>Recently I came across some lonesome node in the middle of nowhere which said "Confluence N49°/E12°" (<a href="https://www.openstreetmap.org/note/182399#map=18/48.99920/12.00049&amp;layers=N">here</a>). Upon placing an error note there I learned about the <a href="http://confluence.org">Confluence.org</a> website where people try to collect as many points on earth where longitude and lattitude lines meet. From the discussion on this error note (unfortunately in german) it seems that there was once a a sign indicating this confluence point but as I visited the place recently, there was nothing but forest without any physical hint for that "special" place.</p>
 <p>Is there any practice of mapping such "virtual" points even if there's no physical object in that place or do we only map things, that are there physically?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are a few projects like confluence.org, they're a fun collector's hobby.</p>
-<p>But unless there is something physically there (an <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/information">information board</a> perhaps ?), there's really no reason to map them in OSM.</p>
+<p>But unless there is something physically there (an <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/information">information board</a> perhaps ?), there's really no reason to map them in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

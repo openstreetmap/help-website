@@ -175,7 +175,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have not used that model but I suspect memory may be limited, Garmin map-source or base camp will allow you to send sections of map to your Garmin. See <a href="http://wiki.openstreetmap.org/wiki/BaseCamp">http://wiki.openstreetmap.org/wiki/BaseCamp</a> and for GB maps and an excellent description of the procedure see this talkytoaster.co.uk/ukmaps.htm<br />
+<p>I have not used that model but I suspect memory may be limited, Garmin map-source or base camp will allow you to send sections of map to your Garmin. See <a href="https://wiki.openstreetmap.org/wiki/BaseCamp">https://wiki.openstreetmap.org/wiki/BaseCamp</a> and for GB maps and an excellent description of the procedure see this talkytoaster.co.uk/ukmaps.htm<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

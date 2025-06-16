@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Would like to contribute to Piste Maps but no idea how"
-description = '''Hi, I am a snowboarding enthusiast with as many weeks of boarding as possible each year in the alps and NorthAmerica. I would love to support the piste maps project. http://wiki.openstreetmap.org/wiki/WikiProject_Piste_Maps Next trip will commence end of the week - Jackson Hole for 2 weeks. For fun ...'''
+description = '''Hi, I am a snowboarding enthusiast with as many weeks of boarding as possible each year in the alps and NorthAmerica. I would love to support the piste maps project. https://wiki.openstreetmap.org/wiki/WikiProject_Piste_Maps Next trip will commence end of the week - Jackson Hole for 2 weeks. For fun ...'''
 date = "2013-02-12T05:32:00Z"
 lastmod = "2013-02-13T18:42:00Z"
 weight = 19848
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I am a snowboarding enthusiast with as many weeks of boarding as possible each year in the alps and NorthAmerica. I would love to support the piste maps project.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Piste_Maps">http://wiki.openstreetmap.org/wiki/WikiProject_Piste_Maps</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/WikiProject_Piste_Maps">https://wiki.openstreetmap.org/wiki/WikiProject_Piste_Maps</a></p>
 <p>Next trip will commence end of the week - Jackson Hole for 2 weeks. For fun and my own data collection I will be tracking my days using 2 different devices at once (yes, I know I sound like a geek). I guess this data might be useful also for the project and I would love to help out - but I have no clue how.</p>
 <p>Who would be interested in the GPS data / where is an easy FAQ / better a howto on getting started?</p>
 <p>Thanks</p>

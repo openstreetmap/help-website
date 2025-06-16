@@ -144,7 +144,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The preprocessing of OSM data for routing can be very tricky, as you have to take a lot of stuff into account (access and surface tags, restrictions, defaults per country, ...).</p>
-<p>If you just like to create/try an routing algorithm, you might try <strong>this framework</strong>, that creates already a graph for you: <a href="http://code.google.com/p/trafficmining/">http://code.google.com/p/trafficmining/</a>. You might also consider other existing solutions as <strong>osm2pgrouting</strong> if you aren't tied to Spatiallite DB <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></p>
+<p>If you just like to create/try an routing algorithm, you might try <strong>this framework</strong>, that creates already a graph for you: <a href="http://code.google.com/p/trafficmining/">http://code.google.com/p/trafficmining/</a>. You might also consider other existing solutions as <strong>osm2pgrouting</strong> if you aren't tied to Spatiallite DB <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,17 +40,17 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This is a follow-up to <a href="http://help.openstreetmap.org/questions/15/getting-point-of-interest-data-from-openstreetmap">another question</a> on this site, where someone asked about getting (specific) POIs from the OSM data. The suggested ideal method is to get a recent copy of the <a href="http://wiki.openstreetmap.org/wiki/Planet">Planet</a> file and use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to extract the data you're interested in.</p>
-<p>I do heartily agree that this is the preferred way to go, especially since XAPI availability has been intermittent and performance has been slow to the point that it's no longer usable - although the <a href="http://wiki.openstreetmap.org/wiki/Xapi#Java_version_.28new.29--">new Java implementation</a> may alleviate this situation.</p>
+<p>This is a follow-up to <a href="/questions/15/getting-point-of-interest-data-from-openstreetmap">another question</a> on this site, where someone asked about getting (specific) POIs from the OSM data. The suggested ideal method is to get a recent copy of the <a href="https://wiki.openstreetmap.org/wiki/Planet">Planet</a> file and use <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to extract the data you're interested in.</p>
+<p>I do heartily agree that this is the preferred way to go, especially since XAPI availability has been intermittent and performance has been slow to the point that it's no longer usable - although the <a href="https://wiki.openstreetmap.org/wiki/Xapi#Java_version_.28new.29--">new Java implementation</a> may alleviate this situation.</p>
 <p>One of the unique qualities of OpenStreetMap is its continuous updating by all those thousands of contributors around the globe. Ideally you would want to reflect that in your POI extract. My question is:</p>
 <p><strong>What is the workflow for keeping an up-to-date OSM-based POI database that performs well?</strong></p>
 <p>To make this a little more concrete, here's what I currently do:</p>
 <ul>
 <li>Get an initial planet file from OSM</li>
-<li>Extract the POIs that I want to be available using the osmosis <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">--tag-filter</a> option</li>
-<li>In the same operation, write the POIs to a PostGIS database using <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--write-pgsql_.28--wp.29">--write-pgsql</a></li>
-<li>Initialize a replication environment using <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--read-replication-interval-init_.28--rrii.29-">--read-replication-interval-init</a>, following the instructions on the wiki</li>
-<li>Set up periodical replication using osmosis <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--read-replication-interval_.28--rri.29">--rri</a> <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--write-pgsql-change_.28--wpc.29">--wpc</a> in <a href="http://en.wikipedia.org/wiki/Cron">crontab</a></li>
+<li>Extract the POIs that I want to be available using the osmosis <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">--tag-filter</a> option</li>
+<li>In the same operation, write the POIs to a PostGIS database using <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--write-pgsql_.28--wp.29">--write-pgsql</a></li>
+<li>Initialize a replication environment using <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--read-replication-interval-init_.28--rrii.29-">--read-replication-interval-init</a>, following the instructions on the wiki</li>
+<li>Set up periodical replication using osmosis <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--read-replication-interval_.28--rri.29">--rri</a> <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--write-pgsql-change_.28--wpc.29">--wpc</a> in <a href="http://en.wikipedia.org/wiki/Cron">crontab</a></li>
 </ul>
 <p>This works, but the database grows because the --rri task replicates all changes and not just the POIs I'm interested in. So derived questions are:</p>
 <ul>

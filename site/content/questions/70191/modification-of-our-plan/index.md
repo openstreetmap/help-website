@@ -226,7 +226,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>So the question is really about recovering access to your uMap map. Please have a look at <a href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map/69714">InsertUser's answer</a> to a similar question a few weeks back. In short: you either need the original edit link which is different from the share link or you could download the complete map data (via share button) and re-create the map while being properly logged in.</p>
+<p>So the question is really about recovering access to your uMap map. Please have a look at <a href="/questions/69710/umap-openstreetmap-change-map/69714">InsertUser's answer</a> to a similar question a few weeks back. In short: you either need the original edit link which is different from the share link or you could download the complete map data (via share button) and re-create the map while being properly logged in.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

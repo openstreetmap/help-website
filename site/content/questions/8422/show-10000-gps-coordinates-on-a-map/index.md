@@ -132,7 +132,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Loading 10k points into OpenLayers in a vector layer will significantly slow down the web browser. You will either have to set up a database that does clustering for you - i.e. only show one marker at first and then show more when zooming in - or you will have to render your own map tiles with the 10k points already drawn directly onto the tiles (or onto transparent PNGs which you then show as an overlay).</p>
-<p>Since you seem to be interested in a small area only, rendering your own map tiles would not be too difficult, and could probably be done with Maperitive (see <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Wiki</a>).</p>
+<p>Since you seem to be interested in a small area only, rendering your own map tiles would not be too difficult, and could probably be done with Maperitive (see <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Wiki</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -182,7 +182,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Of course this is possible, just take a look at <a href="http://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> and the <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">OpenLayers simple example</a>.</p>
+<p>Of course this is possible, just take a look at <a href="https://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> and the <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">OpenLayers simple example</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -235,7 +235,7 @@ osqa_accepted = false
 <ol>
 <li>Yes</li>
 <li>Yes</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">Openlayers and a GPX layer</a> (alternatively a vector layer)</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">Openlayers and a GPX layer</a> (alternatively a vector layer)</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

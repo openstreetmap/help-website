@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-53600-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'd have expected it to be in <a href="http://www.openstreetmap.org/user/Robert%20Copithorne/history">this list</a> but it doesn't even seem to have been opened, never mind closed.</p>
+<p>I'd have expected it to be in <a href="https://www.openstreetmap.org/user/Robert%20Copithorne/history">this list</a> but it doesn't even seem to have been opened, never mind closed.</p>
 </div>
 <div id="comment-53600-info" class="comment-info">
 <span class="comment-age">(18 Dec '16, 21:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -125,7 +125,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Changesets do not get "processed" in the way you think they do. Essentially they are simply a start and end marker for a series of edits that belong together. What does get processed are uploads to the API, since it seems that you are using JOSM, the edits are uploaded in (OsmChange)[<a href="http://wiki.openstreetmap.org/wiki/OsmChange%5D">http://wiki.openstreetmap.org/wiki/OsmChange]</a> format and processed in one transaction (aka it either succeeds and all your edits are stored or it doesn't and nothing is stored). See <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Diff_upload:_POST_.2Fapi.2F0.6.2Fchangeset.2F.23id.2Fupload">API Diff upload</a></p>
+<p>Changesets do not get "processed" in the way you think they do. Essentially they are simply a start and end marker for a series of edits that belong together. What does get processed are uploads to the API, since it seems that you are using JOSM, the edits are uploaded in (OsmChange)[<a href="https://wiki.openstreetmap.org/wiki/OsmChange%5D">https://wiki.openstreetmap.org/wiki/OsmChange]</a> format and processed in one transaction (aka it either succeeds and all your edits are stored or it doesn't and nothing is stored). See <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Diff_upload:_POST_.2Fapi.2F0.6.2Fchangeset.2F.23id.2Fupload">API Diff upload</a></p>
 <p>The good thing is that the API upload call does not return a success code and the corresponding new ids for any nrw elements in the later case. With other words: if your upload wasn't successful JOSM should still either have the changed data somewhere or it bitterly complained when you threw it away.</p>
 <p>Off topic note: what does happen now and then, mostly due to network problems, is that JOSM doesn't receive the success code from the API and believes that data that has been successfully uploaded, hasn't been This leads to surprise conflicts and duplicate elements when you retry.</p>
 <p>In any case you should check that JOSM doesn't have your data hidden away somewhere, maybe you edited in the wrong layer or there was an other similar error.</p>

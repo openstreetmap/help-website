@@ -133,7 +133,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One hint I can give you is <a href="http://wiki.openstreetmap.org/wiki/Bigmap">Bigmap</a></p>
+<p>One hint I can give you is <a href="https://wiki.openstreetmap.org/wiki/Bigmap">Bigmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

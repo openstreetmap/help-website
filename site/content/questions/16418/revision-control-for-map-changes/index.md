@@ -142,7 +142,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>The special background color for "no data" is white and the data deleted due to our license change can be viewed at the <a href="http://tools.geofabrik.de/osmi/?view=redactionbot">OSMI Redaction Bot View</a>. If you want to learn how to contribute take a look at the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' Guide</a>. You can also report missing or wrong features via <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a>.</p>
+<p>The special background color for "no data" is white and the data deleted due to our license change can be viewed at the <a href="http://tools.geofabrik.de/osmi/?view=redactionbot">OSMI Redaction Bot View</a>. If you want to learn how to contribute take a look at the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' Guide</a>. You can also report missing or wrong features via <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a>.</p>
 </div>
 <div id="comment-16422-info" class="comment-info">
 <span class="comment-age">(24 Sep '12, 14:23)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -113,7 +113,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The osmarender layer on the front page of <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> is created by the Tiles At Home (T@H) project. It is made by many different computers rendering different areas of the map. It appears that one of the T@H clients has uploaded a broken image, and hasn't drawn the map properly. This is then causing problems with your map export.</p>
-<p>You may wish to request that area is re-rendered by the T@H project, see the <a href="http://wiki.openstreetmap.org/wiki/Tiles@Home#Requesting_a_re-render">wiki for instructions</a>. Alternatively, try the mapnik tile export for a slightly different, but working correctly, map.</p>
+<p>You may wish to request that area is re-rendered by the T@H project, see the <a href="https://wiki.openstreetmap.org/wiki/Tiles@Home#Requesting_a_re-render">wiki for instructions</a>. Alternatively, try the mapnik tile export for a slightly different, but working correctly, map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There has been an error in the rendering of the area you're trying to export. This is a temporary problem, since the map can be re-rendered, but it's difficult to say how long it will take to get fixed.</p>
-<p>Until then, you can either use the Mapnik rendering, or try rendering the area on your own computer using the standalone version of <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a>.</p>
+<p>Until then, you can either use the Mapnik rendering, or try rendering the area on your own computer using the standalone version of <a href="https://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

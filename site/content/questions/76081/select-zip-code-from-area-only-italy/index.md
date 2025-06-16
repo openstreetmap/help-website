@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, Can I select an area and by CALL API have all ZIP CODE in this area?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/CleanShot_2020-08-09_at_16.57.04@2x.png" alt="alt text" /></p>
+<p><img src="/upfiles/CleanShot_2020-08-09_at_16.57.04@2x.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zip-code" rel="tag" title="see questions tagged &#39;zip-code&#39;">zip-code</span> <span class="post-tag tag-link-areas" rel="tag" title="see questions tagged &#39;areas&#39;">areas</span> <span class="post-tag tag-link-zipcodes" rel="tag" title="see questions tagged &#39;zipcodes&#39;">zipcodes</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

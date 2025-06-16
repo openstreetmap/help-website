@@ -191,7 +191,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It would help if you could provide a bit of information about exactly what you're trying to do and what you're familiar with (e.g. Are you familiar with Android development? Are you trying to use Android Java, Phonegap or something like Xamarin?).</p>
-<p>First things first, a ".osm" file is just XML - there's nothing magical about the format. See the <a href="http://wiki.openstreetmap.org/wiki/Elements">"Elements" wiki page</a> for details about the items inside it. If you want more information, I'd have a read of the <a href="http://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">Beginners' Guide</a> since that contains other useful information. For development, some of the software linked from the main <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> page may be useful (some of it's licensed in a way that might be usable by you). "<a href="http://wiki.openstreetmap.org/wiki/OsmAnd">Osmand</a>" is one example that has a thriving community of developers and users, but there are others too. If you want a drop-in MapView replacement, consider <a href="http://wiki.openstreetmap.org/wiki/Osmdroid">Osmdroid</a>.</p>
+<p>First things first, a ".osm" file is just XML - there's nothing magical about the format. See the <a href="https://wiki.openstreetmap.org/wiki/Elements">"Elements" wiki page</a> for details about the items inside it. If you want more information, I'd have a read of the <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">Beginners' Guide</a> since that contains other useful information. For development, some of the software linked from the main <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> page may be useful (some of it's licensed in a way that might be usable by you). "<a href="https://wiki.openstreetmap.org/wiki/OsmAnd">Osmand</a>" is one example that has a thriving community of developers and users, but there are others too. If you want a drop-in MapView replacement, consider <a href="https://wiki.openstreetmap.org/wiki/Osmdroid">Osmdroid</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -236,7 +236,7 @@ One Answer:
 <div id="post-31427-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also have a look at <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">http://wiki.openstreetmap.org/wiki/Mapsforge</a> ... but don't use old 0.3 version ... 0.4 or even newer is freshly released ... see mapsforge googlegroup</p>
+<p>Also have a look at <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">https://wiki.openstreetmap.org/wiki/Mapsforge</a> ... but don't use old 0.3 version ... 0.4 or even newer is freshly released ... see mapsforge googlegroup</p>
 </div>
 <div id="comment-31427-info" class="comment-info">
 <span class="comment-age">(10 Mar '14, 16:54)</span> <span class="comment-user userinfo">stephan75</span>

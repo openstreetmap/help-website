@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why is the River Thames now full of riverbank?"
-description = '''Take a look at the River Thames near Tower Bridge: http://www.openstreetmap.org/?lat=51.507&amp;amp;lon=-0.08247&amp;amp;zoom=17 Why has the river turned grey, changing from a river entirely into a riverbank? It seems to have something to do with this edit by the OSMF Redaction Account, so I&#x27;m reluctant to ...'''
+description = '''Take a look at the River Thames near Tower Bridge: https://www.openstreetmap.org/?lat=51.507&amp;amp;lon=-0.08247&amp;amp;zoom=17 Why has the river turned grey, changing from a river entirely into a riverbank? It seems to have something to do with this edit by the OSMF Redaction Account, so I&#x27;m reluctant to ...'''
 date = "2012-07-15T07:15:00Z"
 lastmod = "2012-07-15T08:23:00Z"
 weight = 14262
@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Take a look at the River Thames near Tower Bridge: <a href="http://www.openstreetmap.org/?lat=51.507&amp;lon=-0.08247&amp;zoom=17">http://www.openstreetmap.org/?lat=51.507&amp;lon=-0.08247&amp;zoom=17</a></p>
-<p>Why has the river turned grey, changing from a river entirely into a riverbank? It seems to have something to do with <a href="http://www.openstreetmap.org/browse/way/141250836">this edit</a> by the OSMF Redaction Account, so I'm reluctant to do anything to it.</p>
+<p>Take a look at the River Thames near Tower Bridge: <a href="https://www.openstreetmap.org/?lat=51.507&amp;lon=-0.08247&amp;zoom=17">https://www.openstreetmap.org/?lat=51.507&amp;lon=-0.08247&amp;zoom=17</a></p>
+<p>Why has the river turned grey, changing from a river entirely into a riverbank? It seems to have something to do with <a href="https://www.openstreetmap.org/browse/way/141250836">this edit</a> by the OSMF Redaction Account, so I'm reluctant to do anything to it.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-thames" rel="tag" title="see questions tagged &#39;thames&#39;">thames</span> <span class="post-tag tag-link-riverbank" rel="tag" title="see questions tagged &#39;riverbank&#39;">riverbank</span>

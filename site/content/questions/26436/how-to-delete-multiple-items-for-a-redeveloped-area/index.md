@@ -219,7 +219,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM: you can also select the lasso button and hold down the left mouse and freehand draw around the area you need to encompass and when you cross the line again every thing inside will be selected , then hit delete. (josm 6115, java 1.6.0_51 on Mac osx 10.6.8) <img src="http://help.openstreetmap.org/upfiles/lasso2.png" alt="lasso_screen_image" /></p>
+<p>JOSM: you can also select the lasso button and hold down the left mouse and freehand draw around the area you need to encompass and when you cross the line again every thing inside will be selected , then hit delete. (josm 6115, java 1.6.0_51 on Mac osx 10.6.8) <img src="/upfiles/lasso2.png" alt="lasso_screen_image" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -324,7 +324,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>In iD you can shift-drag with the mouse to select multiple items and then click the rubbish bin that appears just below and to the right of them:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm_01006_1.png" alt="iD showing multiple objects selected" /></p>
+<p><img src="/upfiles/josm_01006_1.png" alt="iD showing multiple objects selected" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

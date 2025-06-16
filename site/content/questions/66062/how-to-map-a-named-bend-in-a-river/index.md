@@ -303,7 +303,7 @@ Other types of tagging are more suitable for a long stretch of the river.<br />
 <td><div class="item-right">
 <div class="answer-body">
 <p>In Sweden, there are some related examples <strong>where a section of a river has a different name</strong>. Here an example of the river <em>Indalsälven</em> on the map (<a href="https://minkarta.lantmateriet.se/?e=381977.601171875&amp;n=7034508.7998046875&amp;z=7">https://minkarta.lantmateriet.se/?e=381977.601171875&amp;n=7034508.7998046875&amp;z=7</a>) of the Swedish mapping authority where I highlighted the river in yellow. Along the section <em>Gevsjöströmmen</em>, the river is labelled <em>Gevsjöströmmen</em> and not <em>Indalsälven</em>.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Indalsalven_vGkysEC.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Indalsalven_vGkysEC.jpg" alt="alt text" /></p>
 <p>From <a href="https://wiki.openstreetmap.org/wiki/Tag:water%3Driver">https://wiki.openstreetmap.org/wiki/Tag:water%3Driver</a> I understand that the name tag should be added to the waterway=river object and not to the one describing the river banks. Therefore, including all sections of the whole river in a relation for that river seems to be a good solution. Then, individual segments of the river can carry their own names while the whole information is contained in the relation.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -168,7 +168,7 @@ osqa_accepted = true
 <p>I think you're misinterpreting the deep history viewer.</p>
 <p>DaveHansenTiger did indeed accept the new licence and his data has been preserved.</p>
 <p>A subsequent editor made some changes to this data, but didn't agree to the licence. It was these subsequent edits that had to be rolled back. (Given that the place in question is LA, I'd hazard a guess that this editor was Blars Blarson.)</p>
-<p>Therefore the node in question has been reverted to its original state, as first created by DaveHansenTiger. It hasn't been deleted: if you compare the <a href="http://www.openstreetmap.org/browse/node/122844242/history">two versions</a>, you'll see that v5 and v1 are exactly the same (with the exception of removing unnecessary TIGER tags).</p>
+<p>Therefore the node in question has been reverted to its original state, as first created by DaveHansenTiger. It hasn't been deleted: if you compare the <a href="https://www.openstreetmap.org/browse/node/122844242/history">two versions</a>, you'll see that v5 and v1 are exactly the same (with the exception of removing unnecessary TIGER tags).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -211,7 +211,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>ponzu: DaveHansenTiger created the way in the place the Tiger data had it. Tiger data was of very variable quality across the US. If you've not seen the list of common problems listed in the wiki they are at <a href="http://wiki.openstreetmap.org/wiki/TIGER_fixup">http://wiki.openstreetmap.org/wiki/TIGER_fixup</a></p>
+<p>ponzu: DaveHansenTiger created the way in the place the Tiger data had it. Tiger data was of very variable quality across the US. If you've not seen the list of common problems listed in the wiki they are at <a href="https://wiki.openstreetmap.org/wiki/TIGER_fixup">https://wiki.openstreetmap.org/wiki/TIGER_fixup</a></p>
 </div>
 <div id="comment-16600-info" class="comment-info">
 <span class="comment-age">(02 Oct '12, 08:42)</span> <span class="comment-user userinfo">EdLoach ♦</span>

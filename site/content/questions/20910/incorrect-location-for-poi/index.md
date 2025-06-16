@@ -89,7 +89,7 @@ This question is marked "community wiki".
 </div>
 <div class="comment-text">
 <p>It seems that nominatim returns the centerpoint of South Rancho Santa Fe Road for addresses that are not mapped jet. This address is one of them.</p>
-<p>There are multiple buildings in that <a href="http://www.openstreetmap.org/?lat=33.106176&amp;lon=-117.22363&amp;zoom=18&amp;layers=M">area</a> where that address is supposedly located.</p>
+<p>There are multiple buildings in that <a href="https://www.openstreetmap.org/?lat=33.106176&amp;lon=-117.22363&amp;zoom=18&amp;layers=M">area</a> where that address is supposedly located.</p>
 </div>
 <div id="comment-20914-info" class="comment-info">
 <span class="comment-age">(22 Mar '13, 17:58)</span> <span class="comment-user userinfo">RM87</span>
@@ -101,7 +101,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>Is this the link you need (Jonathan) <a href="http://www.openstreetmap.org/?lat=33.11846047639847&amp;lon=-117.22319036722183&amp;zoom=18">http://www.openstreetmap.org/?lat=33.11846047639847&amp;lon=-117.22319036722183&amp;zoom=18</a></p>
+<p>Is this the link you need (Jonathan) <a href="https://www.openstreetmap.org/?lat=33.11846047639847&amp;lon=-117.22319036722183&amp;zoom=18">https://www.openstreetmap.org/?lat=33.11846047639847&amp;lon=-117.22319036722183&amp;zoom=18</a></p>
 <p>That is the old or wrong location. I'll try to generate a correct location link.<br />
 </p>
 <p>Stand by.</p>
@@ -116,7 +116,7 @@ This question is marked "community wiki".
 2
 </div>
 <div class="comment-text">
-<p>Here's a location very close to where we should be listed ... <a href="http://www.openstreetmap.org/browse/node/596380741">http://www.openstreetmap.org/browse/node/596380741</a></p>
+<p>Here's a location very close to where we should be listed ... <a href="https://www.openstreetmap.org/browse/node/596380741">https://www.openstreetmap.org/browse/node/596380741</a></p>
 </div>
 <div id="comment-20916-info" class="comment-info">
 <span class="comment-age">(22 Mar '13, 18:14)</span> <span class="comment-user userinfo">SotoDiego</span>
@@ -141,7 +141,7 @@ This question is marked "community wiki".
 <div class="comment-text">
 <p>You really should try editing the map youreself. It is not as complicated as it may seem in the beginning. I did some basic mapping in the area, that will help you get started.</p>
 <p>You can add addresses to correct buildings and add points for companies. Or if one building is used by one company, then add the information on the building itself.</p>
-<p>On the lower left corner in potlatch is advanced button. You can add additional information (like company info) from there. Search the wiki <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> for relevant tags.</p>
+<p>On the lower left corner in potlatch is advanced button. You can add additional information (like company info) from there. Search the wiki <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> for relevant tags.</p>
 </div>
 <div id="comment-20918-info" class="comment-info">
 <span class="comment-age">(22 Mar '13, 18:38)</span> <span class="comment-user userinfo">RM87</span>
@@ -238,7 +238,7 @@ One Answer:
 <div id="post-20970-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you know the delivery companies you could try emailing this with a pointer to your place <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p>If you know the delivery companies you could try emailing this with a pointer to your place <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 </div>
 <div id="comment-20970-info" class="comment-info">
 <span class="comment-age">(25 Mar '13, 19:30)</span> <span class="comment-user userinfo">andy mackey</span>

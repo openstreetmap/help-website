@@ -7,7 +7,7 @@
         <meta name="description" content="Re-posted from stackoverflow: I&#39;m importing the whole-planet OSM data set into PostgreSQL 9.6.2 on a Amazon EC2 i3.4xlarge (122 Gb mem, 16 CPUs) with the PostgreSQL data directory on a throughput-optimized 2TB volume. I have adjusted Postgres parameters like this (for the import):  shared_buffers = ..." />
         <meta name="keywords" content="osm2pgsql,planet_osm" />
         
-        <link rel="canonical" href="https://help.openstreetmap.org/questions/55971/osm2pgql-7-days-on-building-index-on-table-planet_osm_ways" />
+        <link rel="canonical" href="/questions/55971/osm2pgql-7-days-on-building-index-on-table-planet_osm_ways" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55971/osm2pgql-7-days-on-building-index-on-table-planet_osm_ways?type=rss">
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -257,7 +257,7 @@ checkpoint_completion_target = 0.9
 <p>I'm using <code>osm2pgsql</code> to execute the import.  Here's the command:  </p>
 <p><code>osm2pgsql -c -d gis --number-processes 12 --slim -C 64000 --flat-nodes /data-cache/flat-node-cache/flat.nodes /data-postgres/planet-latest.osm.pbf</code>  </p>
 <p>The initial steps of the import have gone extremely fast, but its been sitting at <code>Building index on table: planet_osm_ways</code> for days without change. <code>htop</code> indicates active Postgres processeses for <code>checkpoint process</code> and <code>CREATE INDEX</code>.  When I log into Postgres and check <code>select * from pg_stat_activity;</code> I see an <code>active</code> state for <code>CREATE INDEX planet_osm_ways_nodes ON planet_osm_ways USING gin (nodes) WITH (FASTUPDATE=OFF) ;</code></p>
-<p>Following the advice in this <a href="https://help.openstreetmap.org/questions/27587/data-import-stuck-at-create-index">post</a> I looked for the table <code>place</code>, but the response was <code>Did not find any relation named "place".</code></p>
+<p>Following the advice in this <a href="/questions/27587/data-import-stuck-at-create-index">post</a> I looked for the table <code>place</code>, but the response was <code>Did not find any relation named "place".</code></p>
 <p>Does this sound normal?  This is time-sensitive and having already been waiting the better part of a week, I am a little worried something has wrong.  Are their other Postgres settings that could speed this part of the process?</p>
                             </div>
                             <div id="question-tags" class="tags-container tags">
@@ -545,7 +545,7 @@ checkpoint_completion_target = 0.9
 
 <div id="sidebar-upper" class="boxC">
     <div class="body">
-        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+        <p>This was the support site for <a href="https://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
      </div>
 </div>
 

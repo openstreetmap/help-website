@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "amenity flying club (aéro-club in french)"
-description = '''Hi, i would like to enter an flying club (aéro-club in french). What tag should i use? http://www.openstreetmap.org/edit#map=18/49.09134/2.04000'''
+description = '''Hi, i would like to enter an flying club (aéro-club in french). What tag should i use? https://www.openstreetmap.org/edit#map=18/49.09134/2.04000'''
 date = "2013-08-30T15:25:00Z"
 lastmod = "2013-09-02T00:23:00Z"
 weight = 25967
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, i would like to enter an flying club (aéro-club in french). What tag should i use?</p>
-<p><a href="http://www.openstreetmap.org/edit#map=18/49.09134/2.04000">http://www.openstreetmap.org/edit#map=18/49.09134/2.04000</a></p>
+<p><a href="https://www.openstreetmap.org/edit#map=18/49.09134/2.04000">https://www.openstreetmap.org/edit#map=18/49.09134/2.04000</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-club" rel="tag" title="see questions tagged &#39;club&#39;">club</span> <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span> <span class="post-tag tag-link-flying" rel="tag" title="see questions tagged &#39;flying&#39;">flying</span>
@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, did you mean this, <a href="http://wiki.openstreetmap.org/wiki/FR:Tag:sport%3Dfree_flying">http://wiki.openstreetmap.org/wiki/FR:Tag:sport%3Dfree_flying</a>. The field your pointing has been tagged earlier and looks good. If its something else please tell some more.</p>
+<p>Hi, did you mean this, <a href="https://wiki.openstreetmap.org/wiki/FR:Tag:sport%3Dfree_flying">https://wiki.openstreetmap.org/wiki/FR:Tag:sport%3Dfree_flying</a>. The field your pointing has been tagged earlier and looks good. If its something else please tell some more.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -166,7 +166,7 @@ One Answer:
 <div id="post-26058-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please look here too to gather some used tags <a href="http://www.openstreetmap.org/#map=17/51.94990/4.42428.">http://www.openstreetmap.org/#map=17/51.94990/4.42428.</a> They have some smalll airplanes as well.</p>
+<p>Please look here too to gather some used tags <a href="https://www.openstreetmap.org/#map=17/51.94990/4.42428.">https://www.openstreetmap.org/#map=17/51.94990/4.42428.</a> They have some smalll airplanes as well.</p>
 </div>
 <div id="comment-26058-info" class="comment-info">
 <span class="comment-age">(02 Sep '13, 00:23)</span> <span class="comment-user userinfo">Hendrikklaas</span>

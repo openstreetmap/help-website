@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I would appreciate your advice on how to map this place. <img src="http://help.openstreetmap.org/upfiles/fence.jpeg" alt="alt text" /> Believe it or not, this is the entrance to a public land, but the city is required by regulations to have this gate closed and locked in front of it. It is trivial for bikes and pedestrians to walk around the gate, although it is impassible by cars. Behind the gate is an abandoned road, which leads to hiking trails.</p>
+<p>I would appreciate your advice on how to map this place. <img src="/upfiles/fence.jpeg" alt="alt text" /> Believe it or not, this is the entrance to a public land, but the city is required by regulations to have this gate closed and locked in front of it. It is trivial for bikes and pedestrians to walk around the gate, although it is impassible by cars. Behind the gate is an abandoned road, which leads to hiking trails.</p>
 <p>Would I use abandoned:highway=* for the road? Or should the highway=footway since it is only closed to vehicles? Do you recommend barrier=gate or I was thinking barrier=fence ; fence=chain_link since the gate is always closed.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -187,7 +187,7 @@ osqa_accepted = false
 <div id="post-18629-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... and you already asked here: <a href="https://help.openstreetmap.org/questions/18386/create-tiles-in-windows-with-mapnik">https://help.openstreetmap.org/questions/18386/create-tiles-in-windows-with-mapnik</a></p>
+<p>... and you already asked here: <a href="/questions/18386/create-tiles-in-windows-with-mapnik">https://help.openstreetmap.org/questions/18386/create-tiles-in-windows-with-mapnik</a></p>
 </div>
 <div id="comment-18629-info" class="comment-info">
 <span class="comment-age">(19 Dec '12, 16:58)</span> <span class="comment-user userinfo">stephan75</span>
@@ -230,7 +230,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This help site is not the main entry to contact the OSM developers community. Use the osm dev mailing list instead:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 <p><a href="http://lists.openstreetmap.org/listinfo/dev">http://lists.openstreetmap.org/listinfo/dev</a></p>
 <p>But I don't understand really your problem. Tilemill uses Mapnik too. It's just a tool editing rendering styles where "Mapnik tutorials" itself is just using the OSM standard style. So, If you plan to use the standard Mapnik style for OSM, then one of the "hundreds" tutorials is good enough for you. When it runs for a demo db, then you can easily replace the demo by your full database, no ? Or if you are not able to change a db name in a configuration file ? Or your plan is to use Tilemill for a new map style, and you have to connect your till server with Tilemill. In which case, you should contact the dev list. Btw, what is your tile server ? mod_tile, renderd, tirex ?</p>
 </div>
@@ -300,7 +300,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tilemill is developed by Mapbox, a company where the business model is around hosting map tiles for you. It's free to use and open source but the aim is finally that your tiles are hosted by them and you pay some fee for that. If you want to host your tiles yourself, you can use their apps but then you will have to dig into the source code and find the hints and tricks yourself for your needs. Otherwise, use another toolchain like <a href="http://wiki.openstreetmap.org/wiki/Tirex">Tirex</a> or <a href="http://wiki.openstreetmap.org/wiki/Mod_tile">Mod tile and renderd</a> or check those wiki pages about tile rendering scripts and services <a href="http://wiki.openstreetmap.org/wiki/Mapnik">here (Mapnik)</a> and <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map">there (Slippy map)</a>. Again, you can use Mapnik directly but still use TileMill to edit the Mapnik map styles (check <a href="http://wiki.openstreetmap.org/wiki/Carto">CartoCSS export to Mapnik</a>). You can check also this <a href="http://switch2osm.org/serving-tiles/">switch2osm page about serving tiles</a>.</p>
+<p>Tilemill is developed by Mapbox, a company where the business model is around hosting map tiles for you. It's free to use and open source but the aim is finally that your tiles are hosted by them and you pay some fee for that. If you want to host your tiles yourself, you can use their apps but then you will have to dig into the source code and find the hints and tricks yourself for your needs. Otherwise, use another toolchain like <a href="https://wiki.openstreetmap.org/wiki/Tirex">Tirex</a> or <a href="https://wiki.openstreetmap.org/wiki/Mod_tile">Mod tile and renderd</a> or check those wiki pages about tile rendering scripts and services <a href="https://wiki.openstreetmap.org/wiki/Mapnik">here (Mapnik)</a> and <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map">there (Slippy map)</a>. Again, you can use Mapnik directly but still use TileMill to edit the Mapnik map styles (check <a href="https://wiki.openstreetmap.org/wiki/Carto">CartoCSS export to Mapnik</a>). You can check also this <a href="http://switch2osm.org/serving-tiles/">switch2osm page about serving tiles</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

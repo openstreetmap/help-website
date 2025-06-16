@@ -46,8 +46,8 @@ I am unsure how <a href="https://www.openstreetmap.org/#map=19/-27.22085/153.031
 Should I now edit the map to recreate the gap between the road endings but also spit the roads to add the short driveway sections?<br />
 If I had ended each way before the cement driveways begin, would the problem arise?<br />
 Where there is a small physical gap would it be best practice to add the tag noexit=yes to the end node.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/bollards_5o0LZbG.JPG" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/block.png" alt="Mapbox" /></p>
+<p><img src="/upfiles/bollards_5o0LZbG.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/block.png" alt="Mapbox" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span>
@@ -173,7 +173,7 @@ Where there is a small physical gap would it be best practice to add the tag noe
 </div>
 <div class="comment-text">
 <p>@AlakaDave "Connecting motorable roads" is a task from to-fix which is mainly used by Mapbox employees.</p>
-<p><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a> you can complain directly to Mapbox if necessary, their employees tend to be overzealous now and then.</p>
+<p><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a> you can complain directly to Mapbox if necessary, their employees tend to be overzealous now and then.</p>
 </div>
 <div id="comment-53192-info" class="comment-info">
 <span class="comment-age">(01 Dec '16, 09:11)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -251,7 +251,7 @@ Where there is a small physical gap would it be best practice to add the tag noe
 <div class="comment-text">
 <p>I have mapped the footway as separate from the road as the only connections to the roads are as mapped and it is expected that pedestrians only use the footways where provided in that vicinity. I think this is preferred over the sidewalk tag here because there is a gap between the road/driveways. Cyclists are permitted to ride on footways in this state. I will add the bicycle=yes to this footway too.<br />
 <a href="https://www.openstreetmap.org/#map=19/-27.22085/153.03156">https://www.openstreetmap.org/#map=19/-27.22085/153.03156</a><br />
-I think adding noexit=yes tags to the end node of the roads over-complicates the mapping here, but reading the wiki on the tag does indicate that this is an instance where it may be useful. <a href="http://wiki.openstreetmap.org/wiki/Key:noexit">http://wiki.openstreetmap.org/wiki/Key:noexit</a></p>
+I think adding noexit=yes tags to the end node of the roads over-complicates the mapping here, but reading the wiki on the tag does indicate that this is an instance where it may be useful. <a href="https://wiki.openstreetmap.org/wiki/Key:noexit">https://wiki.openstreetmap.org/wiki/Key:noexit</a></p>
 </div>
 <div id="comment-53191-info" class="comment-info">
 <span class="comment-age">(01 Dec '16, 08:52)</span> <span class="comment-user userinfo">nevw</span>

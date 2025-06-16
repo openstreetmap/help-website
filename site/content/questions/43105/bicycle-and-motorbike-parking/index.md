@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are both <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">amenity=bicycle_parking</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmotorcycle_parking">amenity=motorcycle_parking</a> tags. I would either use two nodes in the same vicinity (one for each tag), or use one tag for the parking area and a node inside it for the other tag.</p>
+<p>There are both <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">amenity=bicycle_parking</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmotorcycle_parking">amenity=motorcycle_parking</a> tags. I would either use two nodes in the same vicinity (one for each tag), or use one tag for the parking area and a node inside it for the other tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

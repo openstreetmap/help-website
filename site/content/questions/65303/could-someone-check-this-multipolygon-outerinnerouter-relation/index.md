@@ -201,9 +201,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In the region you linked to, you have defined two areas. One, representing a forest, shaped like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/help-mp-forest.png" alt="Outline of the forest multipolygon" /></p>
+<p><img src="/upfiles/help-mp-forest.png" alt="Outline of the forest multipolygon" /></p>
 <p>And one, representing a water body, shaped like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/help-mp-water.png" alt="Outline of the water polygon" /></p>
+<p><img src="/upfiles/help-mp-water.png" alt="Outline of the water polygon" /></p>
 <p>There is nothing about the water area to indicate that it has an island. So according to your mapping, the location in the center is both part of the forest area and the water area.</p>
 <p>To fix this, it would be best to restore the multipolygon relation <a href="https://www.openstreetmap.org/relation/8529025/history">8529025</a> that kocio originally created.</p>
 <p>Apart from that issue, the forest multipolygon is correct, although the use of multiple outer members is unnecessary here. (The forest on the island could simply be a separate polygon.)</p>

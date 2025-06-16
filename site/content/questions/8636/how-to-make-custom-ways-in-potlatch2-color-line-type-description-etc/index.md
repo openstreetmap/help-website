@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>OSM is not about making a map rendering but about making a vector map that is easy for others to use. You should find or make a descriptive tag set to mark data cables.</p>
 <p>For Potlatch2 you can create your own <a href="http://www.mapcss.org/">mapCSS</a> and add it to <em>stylesheets.xml</em> on a local potlatch2 installation (i assume from your previous posts that you have one). This style sheet can also be used in JOSM.</p>
-<p>If you want to customize Potlatch's tagging presets you can edit <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Developer_Documentation/Map_Features"><em>map_features.xml</em></a>, but this in itself doesn't alter how anything appears in the editor.</p>
+<p>If you want to customize Potlatch's tagging presets you can edit <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Developer_Documentation/Map_Features"><em>map_features.xml</em></a>, but this in itself doesn't alter how anything appears in the editor.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "I&#x27;ve found some wrongly deleted streets but can&#x27;t work out who deleted them"
-description = '''I&#x27;ve spotted some missing streets here: http://www.openstreetmap.org/?lat=50.82958&amp;amp;lon=-0.13847&amp;amp;zoom=17&amp;amp;layers=M At the moment the edits have only gone through to the standard map, so hopefully you&#x27;ll be able to compare easily with the others. They&#x27;re in the area between the Station, Tra...'''
+description = '''I&#x27;ve spotted some missing streets here: https://www.openstreetmap.org/?lat=50.82958&amp;amp;lon=-0.13847&amp;amp;zoom=17&amp;amp;layers=M At the moment the edits have only gone through to the standard map, so hopefully you&#x27;ll be able to compare easily with the others. They&#x27;re in the area between the Station, Tra...'''
 date = "2012-07-20T14:02:00Z"
 lastmod = "2012-07-20T16:03:00Z"
 weight = 14434
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've spotted some missing streets here: <a href="http://www.openstreetmap.org/?lat=50.82958&amp;lon=-0.13847&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=50.82958&amp;lon=-0.13847&amp;zoom=17&amp;layers=M</a></p>
+<p>I've spotted some missing streets here: <a href="https://www.openstreetmap.org/?lat=50.82958&amp;lon=-0.13847&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=50.82958&amp;lon=-0.13847&amp;zoom=17&amp;layers=M</a></p>
 <p>At the moment the edits have only gone through to the standard map, so hopefully you'll be able to compare easily with the others. They're in the area between the Station, Trafalger st, London rd and New England House.</p>
 <p>I've looked at the history, but there are a lot of changesets in that area and I can't really work out what happened in the ones I've looked at. Is there something I'm missing?</p>
 </div>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is likely due to the redaction bot <a href="http://www.openstreetmap.org/browse/changeset/12235105">removing data</a> added by mappers who hadn't agreed to the new licence, and the many changesets since are people remapping what has been lost.</p>
+<p>This is likely due to the redaction bot <a href="https://www.openstreetmap.org/browse/changeset/12235105">removing data</a> added by mappers who hadn't agreed to the new licence, and the many changesets since are people remapping what has been lost.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

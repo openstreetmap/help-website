@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Black nodes in Potlatch"
-description = '''When this area (http://www.openstreetmap.org/?lat=50.863588&amp;amp;lon=-1.17211&amp;amp;zoom=18&amp;amp;layers=M) is opened in Potlatch 2, most of the nodes in the bridleway are shown in black rather than red. Can anyone tell me what that means?'''
+description = '''When this area (https://www.openstreetmap.org/?lat=50.863588&amp;amp;lon=-1.17211&amp;amp;zoom=18&amp;amp;layers=M) is opened in Potlatch 2, most of the nodes in the bridleway are shown in black rather than red. Can anyone tell me what that means?'''
 date = "2012-04-25T19:14:00Z"
 lastmod = "2012-04-25T23:25:00Z"
 weight = 12363
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When this area (<a href="http://www.openstreetmap.org/?lat=50.863588&amp;lon=-1.17211&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=50.863588&amp;lon=-1.17211&amp;zoom=18&amp;layers=M)</a> is opened in Potlatch 2, most of the nodes in the bridleway are shown in black rather than red. Can anyone tell me what that means?</p>
+<p>When this area (<a href="https://www.openstreetmap.org/?lat=50.863588&amp;lon=-1.17211&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=50.863588&amp;lon=-1.17211&amp;zoom=18&amp;layers=M)</a> is opened in Potlatch 2, most of the nodes in the bridleway are shown in black rather than red. Can anyone tell me what that means?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-node" rel="tag" title="see questions tagged &#39;node&#39;">node</span> <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-black" rel="tag" title="see questions tagged &#39;black&#39;">black</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "...more OSM coming soon"
-description = '''There are a block of tiles near http://www.openstreetmap.org/?lat=52.196285&amp;amp;lon=0.176623&amp;amp;zoom=18&amp;amp;layers=M which have been showing &quot;...more OSM coming soon&quot; for a couple of days now. Can anything be done about this? Thanks, John'''
+description = '''There are a block of tiles near https://www.openstreetmap.org/?lat=52.196285&amp;amp;lon=0.176623&amp;amp;zoom=18&amp;amp;layers=M which have been showing &quot;...more OSM coming soon&quot; for a couple of days now. Can anything be done about this? Thanks, John'''
 date = "2012-09-24T09:38:00Z"
 lastmod = "2012-09-24T10:14:00Z"
 weight = 16406
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There are a block of tiles near <a href="http://www.openstreetmap.org/?lat=52.196285&amp;lon=0.176623&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.196285&amp;lon=0.176623&amp;zoom=18&amp;layers=M</a> which have been showing "...more OSM coming soon" for a couple of days now. Can anything be done about this?</p>
+<p>There are a block of tiles near <a href="https://www.openstreetmap.org/?lat=52.196285&amp;lon=0.176623&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.196285&amp;lon=0.176623&amp;zoom=18&amp;layers=M</a> which have been showing "...more OSM coming soon" for a couple of days now. Can anything be done about this?</p>
 <p>Thanks, John</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Dirtying the tiles, as per <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">this answer</a>, seems to work.</p>
+<p>Dirtying the tiles, as per <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">this answer</a>, seems to work.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

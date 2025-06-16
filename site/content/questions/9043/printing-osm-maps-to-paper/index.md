@@ -129,9 +129,9 @@ osqa_accepted = false
 <p>I mainly use two ways:</p>
 <ul>
 <li><a href="http://walking-papers.org/">walking papers</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Bigmap">bigmap</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Bigmap">bigmap</a></li>
 </ul>
-<p>You can also read the page <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> on the wiki.</p>
+<p>You can also read the page <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -231,7 +231,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can export an image of any area in OpenStreetMap using the <a href="http://www.openstreetmap.org/export">Exporter service</a>. This allows you to control the area included in your image and the zoom level. It's much easier than assembling an image from tiles yourself.</p>
+<p>You can export an image of any area in OpenStreetMap using the <a href="https://www.openstreetmap.org/export">Exporter service</a>. This allows you to control the area included in your image and the zoom level. It's much easier than assembling an image from tiles yourself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

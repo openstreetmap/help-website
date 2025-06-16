@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When I connect a <a href="http://nroets.dev.openstreetmap.org/demo/?lat=45.42132&amp;lon=-122.32352&amp;zoom=15&amp;markers=!45.41879,-122.32406!45.42833,-122.33612&amp;v=motorcar&amp;fast=1&amp;layers=B000FTFTT">trunk road to the network</a>, the routing software will sometimes suggest an <a href="http://wiki.openstreetmap.org/wiki/Talk:Gosmore#Illegal_Routing">an illegal and dangerous u-turn maneuver</a>. How do I fix it ?</p>
+<p>When I connect a <a href="http://nroets.dev.openstreetmap.org/demo/?lat=45.42132&amp;lon=-122.32352&amp;zoom=15&amp;markers=!45.41879,-122.32406!45.42833,-122.33612&amp;v=motorcar&amp;fast=1&amp;layers=B000FTFTT">trunk road to the network</a>, the routing software will sometimes suggest an <a href="https://wiki.openstreetmap.org/wiki/Talk:Gosmore#Illegal_Routing">an illegal and dangerous u-turn maneuver</a>. How do I fix it ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-turn_restrictions" rel="tag" title="see questions tagged &#39;turn_restrictions&#39;">turn_restrictions</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>

@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You're attempting to download too much data or too quickly. The usage policies of the various Overpass API instances can be found <a href="http://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">here</a>.</p>
+<p>You're attempting to download too much data or too quickly. The usage policies of the various Overpass API instances can be found <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

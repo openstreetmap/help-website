@@ -164,7 +164,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd imagine a node with kind of <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">barrier</a> tag would work, depending on the exact configuration.</p>
+<p>I'd imagine a node with kind of <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">barrier</a> tag would work, depending on the exact configuration.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

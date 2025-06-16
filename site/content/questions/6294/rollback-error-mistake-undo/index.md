@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rollback / Error / Mistake / Undo"
-description = '''Hi, I am new to OSM and made a mistake (see changeset http://www.openstreetmap.org/browse/changeset/8698182 and map http://www.openstreetmap.org/?lat=52.5208859145641&amp;amp;lon=9.72672790288925&amp;amp;zoom=18). The routing and configuration of this street are wrong.  How can I rollback to the past versio...'''
+description = '''Hi, I am new to OSM and made a mistake (see changeset https://www.openstreetmap.org/browse/changeset/8698182 and map https://www.openstreetmap.org/?lat=52.5208859145641&amp;amp;lon=9.72672790288925&amp;amp;zoom=18). The routing and configuration of this street are wrong.  How can I rollback to the past versio...'''
 date = "2011-07-12T23:20:00Z"
 lastmod = "2012-03-12T23:47:00Z"
 weight = 6294
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I am new to OSM and made a mistake (see changeset <a href="http://www.openstreetmap.org/browse/changeset/8698182">http://www.openstreetmap.org/browse/changeset/8698182</a> and map <a href="http://www.openstreetmap.org/?lat=52.5208859145641&amp;lon=9.72672790288925&amp;zoom=18).">http://www.openstreetmap.org/?lat=52.5208859145641&amp;lon=9.72672790288925&amp;zoom=18).</a> The routing and configuration of this street are wrong. How can I rollback to the past version? Thanks a lot!</p>
+<p>I am new to OSM and made a mistake (see changeset <a href="https://www.openstreetmap.org/browse/changeset/8698182">https://www.openstreetmap.org/browse/changeset/8698182</a> and map <a href="https://www.openstreetmap.org/?lat=52.5208859145641&amp;lon=9.72672790288925&amp;zoom=18).">https://www.openstreetmap.org/?lat=52.5208859145641&amp;lon=9.72672790288925&amp;zoom=18).</a> The routing and configuration of this street are wrong. How can I rollback to the past version? Thanks a lot!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span> <span class="post-tag tag-link-rollback" rel="tag" title="see questions tagged &#39;rollback&#39;">rollback</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span> <span class="post-tag tag-link-undo" rel="tag" title="see questions tagged &#39;undo&#39;">undo</span> <span class="post-tag tag-link-mistake" rel="tag" title="see questions tagged &#39;mistake&#39;">mistake</span>
@@ -108,9 +108,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The answers to the question that Andy linked to refer to <a href="http://wiki.openstreetmap.org/wiki/Revert">this page on the wiki</a>, which is still the best summary.</p>
+<p>The answers to the question that Andy linked to refer to <a href="https://wiki.openstreetmap.org/wiki/Revert">this page on the wiki</a>, which is still the best summary.</p>
 <p>The less the time between making the changeset and reverting it, the greater the chances of a clean revert. At least one of the nodes in your changeset has been edited since, so it is starting to get complicated. Maybe you could add a comment to your question saying which road is wrong?</p>
-<p>I'd add one other thing for future reference - if you ask on <a href="http://wiki.openstreetmap.org/wiki/Contact#IRC">an IRC channel</a> just after completing a changeset that needs reverting someone may be able to help.</p>
+<p>I'd add one other thing for future reference - if you ask on <a href="https://wiki.openstreetmap.org/wiki/Contact#IRC">an IRC channel</a> just after completing a changeset that needs reverting someone may be able to help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am wondering why you didn't click undo or just exit with out saving your error. but this question and its answers may help <a href="http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
+<p>I am wondering why you didn't click undo or just exit with out saving your error. but this question and its answers may help <a href="/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -246,7 +246,7 @@ osqa_accepted = false
 <div id="post-11148-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Looking at <a href="http://www.openstreetmap.org/browse/changeset/10960671">http://www.openstreetmap.org/browse/changeset/10960671</a> , it looks like both edits are in the same changeset. Potlatch 2 will auto-close a changeset after an hour; if you edit again within this period of time it'll go in the same changeset. If you look at <a href="http://www.openstreetmap.org/browse/node/1672598060/history">http://www.openstreetmap.org/browse/node/1672598060/history</a> , you can see the node added at 21:12, and then edited to remove the name 37 minutes later.</p>
+<p>Looking at <a href="https://www.openstreetmap.org/browse/changeset/10960671">https://www.openstreetmap.org/browse/changeset/10960671</a> , it looks like both edits are in the same changeset. Potlatch 2 will auto-close a changeset after an hour; if you edit again within this period of time it'll go in the same changeset. If you look at <a href="https://www.openstreetmap.org/browse/node/1672598060/history">https://www.openstreetmap.org/browse/node/1672598060/history</a> , you can see the node added at 21:12, and then edited to remove the name 37 minutes later.</p>
 </div>
 <div id="comment-11148-info" class="comment-info">
 <span class="comment-age">(12 Mar '12, 23:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -257,8 +257,8 @@ osqa_accepted = false
 <div id="post-11149-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(and to try and answer the actual question) <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Primer#Undoing">http://wiki.openstreetmap.org/wiki/Potlatch/Primer#Undoing</a> describes the "undo" options in Potlatch - that'll work while you're still editing.</p>
-<p>To find a particular node that you've edited, go to "my edits" (in your case <a href="http://www.openstreetmap.org/user/HellaHH/edits),">http://www.openstreetmap.org/user/HellaHH/edits),</a> and open the most recent or current changeset. You can click on a node in there (for example 1672598060, v2) and then select edit, and it'll take you into the editor with that node selected.</p>
+<p>(and to try and answer the actual question) <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Primer#Undoing">https://wiki.openstreetmap.org/wiki/Potlatch/Primer#Undoing</a> describes the "undo" options in Potlatch - that'll work while you're still editing.</p>
+<p>To find a particular node that you've edited, go to "my edits" (in your case <a href="https://www.openstreetmap.org/user/HellaHH/edits),">https://www.openstreetmap.org/user/HellaHH/edits),</a> and open the most recent or current changeset. You can click on a node in there (for example 1672598060, v2) and then select edit, and it'll take you into the editor with that node selected.</p>
 </div>
 <div id="comment-11149-info" class="comment-info">
 <span class="comment-age">(12 Mar '12, 23:21)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

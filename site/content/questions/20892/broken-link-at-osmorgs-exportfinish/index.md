@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>this is the broken link: <a href="http://www.openstreetmap.org/export/finish">http://www.openstreetmap.org/export/finish</a></p>
+<p>this is the broken link: <a href="https://www.openstreetmap.org/export/finish">https://www.openstreetmap.org/export/finish</a></p>
 </div>
 <div id="comment-20893-info" class="comment-info">
 <span class="comment-age">(22 Mar '13, 08:38)</span> <span class="comment-user userinfo">tfarooqi</span>
@@ -92,7 +92,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>For info see <a href="https://help.openstreetmap.org/questions/2042/exporting-as-openstreetmap-xml-gives-page-not-found">this</a> previous question (and some answers)</p>
+<p>For info see <a href="/questions/2042/exporting-as-openstreetmap-xml-gives-page-not-found">this</a> previous question (and some answers)</p>
 </div>
 <div id="comment-20901-info" class="comment-info">
 <span class="comment-age">(22 Mar '13, 13:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -175,7 +175,7 @@ This answer is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>This link will help if you want to download data for larger area: <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">http://wiki.openstreetmap.org/wiki/Downloading_data</a></p>
+<p>This link will help if you want to download data for larger area: <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">https://wiki.openstreetmap.org/wiki/Downloading_data</a></p>
 </div>
 <div id="comment-21044-info" class="comment-info">
 <span class="comment-age">(28 Mar '13, 11:50)</span> <span class="comment-user userinfo">tfarooqi</span>

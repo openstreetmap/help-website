@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Coastline edited in March, not rendered yet"
-description = '''Hello, I made some quite major amendments to the coastline surrounding the new harbour in my hometown. I understand coastline can take a long time to render but this was getting on for 2 months ago. Any ideas? http://www.openstreetmap.org/browse/way/58566303 the way in question'''
+description = '''Hello, I made some quite major amendments to the coastline surrounding the new harbour in my hometown. I understand coastline can take a long time to render but this was getting on for 2 months ago. Any ideas? https://www.openstreetmap.org/browse/way/58566303 the way in question'''
 date = "2013-05-10T18:33:00Z"
 lastmod = "2013-09-24T20:08:00Z"
 weight = 22271
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello, I made some quite major amendments to the coastline surrounding the new harbour in my hometown. I understand coastline can take a long time to render but this was getting on for 2 months ago.</p>
 <p>Any ideas?</p>
-<p><a href="http://www.openstreetmap.org/browse/way/58566303">http://www.openstreetmap.org/browse/way/58566303</a> the way in question</p>
+<p><a href="https://www.openstreetmap.org/browse/way/58566303">https://www.openstreetmap.org/browse/way/58566303</a> the way in question</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span>
@@ -126,7 +126,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... some hints are at <a href="http://wiki.openstreetmap.org/wiki/Coastline">http://wiki.openstreetmap.org/wiki/Coastline</a></p>
+<p>... some hints are at <a href="https://wiki.openstreetmap.org/wiki/Coastline">https://wiki.openstreetmap.org/wiki/Coastline</a></p>
 <p>Or type "coastline" in the serach box of this FAQ site.</p>
 </div>
 <div id="comment-22311-info" class="comment-info">

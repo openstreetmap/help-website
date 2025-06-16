@@ -136,7 +136,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Exactly - you need to draw a way which consists of your new nodes. <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a> about editing and linking to the specific editor manuals would (have) help(ed).</p>
+<p>Exactly - you need to draw a way which consists of your new nodes. <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a> about editing and linking to the specific editor manuals would (have) help(ed).</p>
 <p>Be aware that your gps records positions with errors - so, don't draw a zig-zag path if it is in reality a straight line. :-)<br />
 </p>
 <p>Having the ability to save/export gpx gps traces from your gps device to your computer would tremendously save you time entering the coordinates/moving the nodes to the recorded coordinates.</p>

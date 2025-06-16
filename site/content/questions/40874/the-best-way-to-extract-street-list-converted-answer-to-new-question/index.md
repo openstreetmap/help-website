@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>(converted from <a href="https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list/40874">https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list/40874</a> )</p>
+<p>(converted from <a href="/questions/9816/the-best-way-to-extract-street-list/40874">https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list/40874</a> )</p>
 <p>There still doesn't seem to be any simple way to get a proper Country-&gt;Province/State-&gt;Place-&gt;Street hierarchy out. I need that for the entire US and UK to start.</p>
 <p>A highway is an open Way polyline, and the others are closed Way polylines. The only relationship between them known to OSM is geographical, as far as I can tell. Converting this data to an address hierarchy requires a lot of polygon intersection tests to tell what's inside what.</p>
 <p>Has anyone built a tool for that? I don't see capabilities for that in osmfilter or osmosis. Loading all that spatial data into an SQL database with spatial indices is possible, but most of those don't do spatial joins very well.</p>

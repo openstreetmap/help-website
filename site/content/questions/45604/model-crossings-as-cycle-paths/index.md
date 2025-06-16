@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have noticed that at many places where there is a crossing (either an uncontrolled or one with traffic lights) where there is also a cycle path nearby, the crossing has just been modelled as an extension of that cycle path. Is this "correct"? Shouldn't the cycle path end here and the crossing be modelled as an actual crossing instead, tagged with <code>Bike=yes</code>?</p>
-<p><strong>Edit:</strong> One example would be <a href="http://www.openstreetmap.org/#map=19/58.40873/15.62525">this place</a>, where I actually edited the cycle path so that the part of it that crosses the street became a street crossing. But now I have started to doubt that that is actually the best way to model it?</p>
+<p><strong>Edit:</strong> One example would be <a href="https://www.openstreetmap.org/#map=19/58.40873/15.62525">this place</a>, where I actually edited the cycle path so that the part of it that crosses the street became a street crossing. But now I have started to doubt that that is actually the best way to model it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-crossing" rel="tag" title="see questions tagged &#39;crossing&#39;">crossing</span> <span class="post-tag tag-link-cyclepath" rel="tag" title="see questions tagged &#39;cyclepath&#39;">cyclepath</span>
@@ -77,7 +77,7 @@ osqa_accepted = false
 <div id="post-45619-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: I have added an example.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: I have added an example.</p>
 </div>
 <div id="comment-45619-info" class="comment-info">
 <span class="comment-age">(27 Sep '15, 21:27)</span> <span class="comment-user userinfo">Kristofer87</span>
@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you an example? I would expect the crossing way to be an extension of the cycle path (or foot path if appropriate) and the crossing tag to be on the intersection node, <a href="http://www.openstreetmap.org/node/282098156">such as this example</a>.</p>
+<p>Have you an example? I would expect the crossing way to be an extension of the cycle path (or foot path if appropriate) and the crossing tag to be on the intersection node, <a href="https://www.openstreetmap.org/node/282098156">such as this example</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

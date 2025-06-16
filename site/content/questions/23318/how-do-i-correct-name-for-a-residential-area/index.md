@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Is this the area we are discussing? <a href="http://www.openstreetmap.org/?lat=56.483549&amp;lon=-2.853248&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=56.483549&amp;lon=-2.853248&amp;zoom=18&amp;layers=M</a></p>
+<p>Is this the area we are discussing? <a href="https://www.openstreetmap.org/?lat=56.483549&amp;lon=-2.853248&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=56.483549&amp;lon=-2.853248&amp;zoom=18&amp;layers=M</a></p>
 <p>(Wild guess: You see something like Balmossie but it should be something else.)</p>
 </div>
 <div id="comment-23320-info" class="comment-info">
@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/area_polygon.JPG" alt="alt text" />Ideally draw a polygon of the area and tag that. you could then copy over the node data to the polygon. That should fix the issue, it may take a while for the new polygon to work correctly in search box. see <a href="https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
+<p><img src="/upfiles/area_polygon.JPG" alt="alt text" />Ideally draw a polygon of the area and tag that. you could then copy over the node data to the polygon. That should fix the issue, it may take a while for the new polygon to work correctly in search box. see <a href="/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

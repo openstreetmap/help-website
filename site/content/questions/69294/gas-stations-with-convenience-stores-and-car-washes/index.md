@@ -205,7 +205,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A similar (identical?) question was asked some time ago, but in British English. I think the answers are still applicable: <a href="https://help.openstreetmap.org/questions/22083/should-petrol-station-facilities-be-mapped-separately">https://help.openstreetmap.org/questions/22083/should-petrol-station-facilities-be-mapped-separately</a></p>
+<p>A similar (identical?) question was asked some time ago, but in British English. I think the answers are still applicable: <a href="/questions/22083/should-petrol-station-facilities-be-mapped-separately">https://help.openstreetmap.org/questions/22083/should-petrol-station-facilities-be-mapped-separately</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have created two proposals:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/maze">maze</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/supervised">supervised</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/maze">maze</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/supervised">supervised</a></li>
 </ul>
 <p>I'd like to start the RFCs for these two proposed features. However, I haven't subscribed to the <a href="http://lists.openstreetmap.org/listinfo/tagging"></a><a href="mailto:tagging@openstreetmap.org"></a><a href="mailto:tagging@openstreetmap.org">tagging@openstreetmap.org</a> mailing list (and I won't, as it has very high traffic). So how do I start the RFC process?</p>
 </div>

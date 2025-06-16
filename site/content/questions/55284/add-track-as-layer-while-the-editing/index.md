@@ -195,7 +195,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/iD_editor.JPG" alt="alt text" /> Upload the trace first. and If using the iD editor click on 1 then 2 and you will see all the available GPX traces.</p>
+<p><img src="/upfiles/iD_editor.JPG" alt="alt text" /> Upload the trace first. and If using the iD editor click on 1 then 2 and you will see all the available GPX traces.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -269,7 +269,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/iD_editor2.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/iD_editor2.JPG" alt="alt text" /></p>
 <p>With iD click on 1 then 2 choose to your gpx and it will display. but someoneesle's method is a little easier. maybe.</p>
 </div>
 <div class="answer-controls post-controls">

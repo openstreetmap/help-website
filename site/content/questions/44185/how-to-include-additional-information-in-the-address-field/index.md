@@ -166,7 +166,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap does not limit the amount of fields you can have on an object; it is only the simplified user interface (aka "presets") of some editors that will offer you a limited set of fields. You can always add so-called tags (key-value pairs) yourself. See <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a> for suggestions about which tags to use.</p>
+<p>OpenStreetMap does not limit the amount of fields you can have on an object; it is only the simplified user interface (aka "presets") of some editors that will offer you a limited set of fields. You can always add so-called tags (key-value pairs) yourself. See <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a> for suggestions about which tags to use.</p>
 <p>If all else fails, use "addr:full" and write the full address like it would be written on a postal envelope.</p>
 </div>
 <div class="answer-controls post-controls">

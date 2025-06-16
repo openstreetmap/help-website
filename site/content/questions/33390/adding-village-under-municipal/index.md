@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Should I tag the name of the Municipal the Village I am tagging? I did tags "is_in:country=" "landuse=residential" "name=" "place=village" should I do something else under the polygon or should I follow <a href="https://help.openstreetmap.org/questions/31027/how-should-we-tag-municipality">https://help.openstreetmap.org/questions/31027/how-should-we-tag-municipality</a> this exactly? Just want more clarification.</p>
+<p>Should I tag the name of the Municipal the Village I am tagging? I did tags "is_in:country=" "landuse=residential" "name=" "place=village" should I do something else under the polygon or should I follow <a href="/questions/31027/how-should-we-tag-municipality">https://help.openstreetmap.org/questions/31027/how-should-we-tag-municipality</a> this exactly? Just want more clarification.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-villages" rel="tag" title="see questions tagged &#39;villages&#39;">villages</span> <span class="post-tag tag-link-municipality" rel="tag" title="see questions tagged &#39;municipality&#39;">municipality</span> <span class="post-tag tag-link-municipal" rel="tag" title="see questions tagged &#39;municipal&#39;">municipal</span>
@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the instructions in question <a href="https://help.openstreetmap.org/questions/31027/how-should-we-tag-municipality">31027</a> are the one to follow.</p>
+<p>I think the instructions in question <a href="/questions/31027/how-should-we-tag-municipality">31027</a> are the one to follow.</p>
 <p>You do not have to add is_in tags. Those can be computed from the position of the node or polygon. You do not have to repeat addr:city on each address node. Again this is (can be) derived from the admin boundary (multi)-polygons around the nodes and ways.</p>
 </div>
 <div class="answer-controls post-controls">

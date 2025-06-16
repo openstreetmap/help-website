@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update">https://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update</a></p>
+<p><a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update">https://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update</a></p>
 </div>
 <div id="comment-36017-info" class="comment-info">
 <span class="comment-age">(20 Aug '14, 08:41)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-36026-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>… or <a href="https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a></p>
+<p>… or <a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a></p>
 </div>
 <div id="comment-36026-info" class="comment-info">
 <span class="comment-age">(20 Aug '14, 15:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] How can I search the Wiki?"
-description = '''In the last time I was not very satisfied with the search results in OSM Wiki. E.g. if I perform this search: http://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;amp;search=proposed+relation+area I get 0 results. The same for advanced search but there is a page which matches exactly the t...'''
+description = '''In the last time I was not very satisfied with the search results in OSM Wiki. E.g. if I perform this search: https://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;amp;search=proposed+relation+area I get 0 results. The same for advanced search but there is a page which matches exactly the t...'''
 date = "2011-03-01T11:50:00Z"
 lastmod = "2012-07-23T15:47:00Z"
 weight = 3472
@@ -39,10 +39,10 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In the last time I was not very satisfied with the search results in OSM Wiki. E.g. if I perform this search: <a href="http://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=proposed+relation+area">http://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=proposed+relation+area</a> I get 0 results.</p>
-<p><a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;redirs=0&amp;search=new+place+values&amp;fulltext=Search&amp;ns0=1&amp;ns1=1&amp;ns2=1&amp;ns3=1&amp;ns4=1&amp;ns5=1&amp;ns6=1&amp;ns7=1&amp;ns8=1&amp;ns9=1&amp;ns10=1&amp;ns11=1&amp;ns12=1&amp;ns13=1&amp;ns14=1&amp;ns15=1&amp;ns200=1&amp;ns201=1&amp;ns202=1&amp;ns204=1&amp;ns206=1&amp;ns207=1&amp;ns210=1&amp;ns212=1&amp;title=Special%3ASearch&amp;advanced=1&amp;fulltext=Advanced+search">The same for advanced search</a></p>
-<p>but there is a page which matches exactly the title: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/new_place_values">http://wiki.openstreetmap.org/wiki/Proposed_features/new_place_values</a></p>
-<p>or <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Area">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Area</a></p>
+<p>In the last time I was not very satisfied with the search results in OSM Wiki. E.g. if I perform this search: <a href="https://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=proposed+relation+area">https://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=proposed+relation+area</a> I get 0 results.</p>
+<p><a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;redirs=0&amp;search=new+place+values&amp;fulltext=Search&amp;ns0=1&amp;ns1=1&amp;ns2=1&amp;ns3=1&amp;ns4=1&amp;ns5=1&amp;ns6=1&amp;ns7=1&amp;ns8=1&amp;ns9=1&amp;ns10=1&amp;ns11=1&amp;ns12=1&amp;ns13=1&amp;ns14=1&amp;ns15=1&amp;ns200=1&amp;ns201=1&amp;ns202=1&amp;ns204=1&amp;ns206=1&amp;ns207=1&amp;ns210=1&amp;ns212=1&amp;title=Special%3ASearch&amp;advanced=1&amp;fulltext=Advanced+search">The same for advanced search</a></p>
+<p>but there is a page which matches exactly the title: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/new_place_values">https://wiki.openstreetmap.org/wiki/Proposed_features/new_place_values</a></p>
+<p>or <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Area">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Area</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-howto" rel="tag" title="see questions tagged &#39;howto&#39;">howto</span>
@@ -71,7 +71,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I've added some information on this page <a href="http://wiki.openstreetmap.org/wiki/Searching_the_wiki">http://wiki.openstreetmap.org/wiki/Searching_the_wiki</a> which gets linked from the "no matches" message. Hopefully only temporarily</p>
+<p>I've added some information on this page <a href="https://wiki.openstreetmap.org/wiki/Searching_the_wiki">https://wiki.openstreetmap.org/wiki/Searching_the_wiki</a> which gets linked from the "no matches" message. Hopefully only temporarily</p>
 </div>
 <div id="comment-3477-info" class="comment-info">
 <span class="comment-age">(01 Mar '11, 14:57)</span> <span class="comment-user userinfo">Harry Wood</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "street circles drawn with JOSM plugin arch appear deformed"
-description = '''I&#x27;m currently using JOSM to draw the streets, but when drawing circles with the plugin arch, by checking in the editor ID I appear deformed, for example http://www.openstreetmap.org/edit?editor=id#map=17/19.15808/-98.22783 or http://www.openstreetmap.org/edit?editor=id#map=18/19.15153/-98.22721 Is i...'''
+description = '''I&#x27;m currently using JOSM to draw the streets, but when drawing circles with the plugin arch, by checking in the editor ID I appear deformed, for example https://www.openstreetmap.org/edit?editor=id#map=17/19.15808/-98.22783 or https://www.openstreetmap.org/edit?editor=id#map=18/19.15153/-98.22721 Is i...'''
 date = "2013-09-04T02:01:00Z"
 lastmod = "2013-09-04T13:02:00Z"
 weight = 26103
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm currently using JOSM to draw the streets, but when drawing circles with the plugin arch, by checking in the editor ID I appear deformed, for example <a href="http://www.openstreetmap.org/edit?editor=id#map=17/19.15808/-98.22783">http://www.openstreetmap.org/edit?editor=id#map=17/19.15808/-98.22783</a> or <a href="http://www.openstreetmap.org/edit?editor=id#map=18/19.15153/-98.22721">http://www.openstreetmap.org/edit?editor=id#map=18/19.15153/-98.22721</a></p>
+<p>I'm currently using JOSM to draw the streets, but when drawing circles with the plugin arch, by checking in the editor ID I appear deformed, for example <a href="https://www.openstreetmap.org/edit?editor=id#map=17/19.15808/-98.22783">https://www.openstreetmap.org/edit?editor=id#map=17/19.15808/-98.22783</a> or <a href="https://www.openstreetmap.org/edit?editor=id#map=18/19.15153/-98.22721">https://www.openstreetmap.org/edit?editor=id#map=18/19.15153/-98.22721</a></p>
 <p>Is it a problem JOSM or OSM? Sorry my english, but I'm using Google Translator</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-26111-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span></span><span>@mihailrusia</span>: I cannot see a circle in your links. Please link to object pages if possible. However, I see a too much nodes in <a href="http://www.openstreetmap.org/browse/way/236353718">way/236353718</a> or <a href="http://www.openstreetmap.org/browse/way/146945899">way/146945899</a>.</p>
+<p><span></span><span>@mihailrusia</span>: I cannot see a circle in your links. Please link to object pages if possible. However, I see a too much nodes in <a href="https://www.openstreetmap.org/browse/way/236353718">way/236353718</a> or <a href="https://www.openstreetmap.org/browse/way/146945899">way/146945899</a>.</p>
 </div>
 <div id="comment-26111-info" class="comment-info">
 <span class="comment-age">(04 Sep '13, 12:58)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

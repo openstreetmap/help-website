@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-6056-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Not that there's an answer there yet, but this sounds similar to <a href="http://help.openstreetmap.org/questions/6048/bing-imagery-not-showing-up">http://help.openstreetmap.org/questions/6048/bing-imagery-not-showing-up</a></p>
+<p>Not that there's an answer there yet, but this sounds similar to <a href="/questions/6048/bing-imagery-not-showing-up">https://help.openstreetmap.org/questions/6048/bing-imagery-not-showing-up</a></p>
 </div>
 <div id="comment-6056-info" class="comment-info">
 <span class="comment-age">(28 Jun '11, 11:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -71,9 +71,9 @@ osqa_accepted = true
 <div id="post-15542-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2921/lonvia"></a><a href="http://help.openstreetmap.org/users/2921/lonvia">@lonvia</a> Unfortunately didn't work! Here is the result:</p>
+<p><a href="https://help.openstreetmap.org/users/2921/lonvia"></a><a href="https://help.openstreetmap.org/users/2921/lonvia">@lonvia</a> Unfortunately didn't work! Here is the result:</p>
 <p>/var/www/public_html/Nominatim/osmosis-0.40.1/bin/osmosis --read-xml 'belgium.pbf' --read-empty --derive-change --write-xml-change /var/www/public_html/Nominatim/data/osmosischange.osc ... org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskManager waitForCompletion SEVERE: Thread for task 1-read-xml failed org.openstreetmap.osmosis.core.OsmosisRuntimeException: Unable to parse xml file belgium.pbf.</p>
-<p><a href="http://help.openstreetmap.org/users/2933/cartinus"></a><a href="http://help.openstreetmap.org/users/2933/cartinus">@Cartinus</a> Thank you for the link! It will help me, but I wanted to know how to do if I want to import countries one by one.</p>
+<p><a href="https://help.openstreetmap.org/users/2933/cartinus"></a><a href="https://help.openstreetmap.org/users/2933/cartinus">@Cartinus</a> Thank you for the link! It will help me, but I wanted to know how to do if I want to import countries one by one.</p>
 </div>
 <div id="comment-15542-info" class="comment-info">
 <span class="comment-age">(27 Aug '12, 09:15)</span> <span class="comment-user userinfo">RoxanaO</span>
@@ -84,7 +84,7 @@ osqa_accepted = true
 <div id="post-40097-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You are using the wrong Osmosis flag, use --read-pbf, not --read-xml, see <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PBF_Binary_Tasks">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PBF_Binary_Tasks</a> (I have removed superfluous parts of above error message).</p>
+<p>You are using the wrong Osmosis flag, use --read-pbf, not --read-xml, see <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PBF_Binary_Tasks">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PBF_Binary_Tasks</a> (I have removed superfluous parts of above error message).</p>
 </div>
 <div id="comment-40097-info" class="comment-info">
 <span class="comment-age">(07 Jan '15, 12:43)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -217,7 +217,7 @@ osqa_accepted = true
 <div id="post-15579-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Ages ago someone posted a <a href="http://www.mail-archive.com/dev@openstreetmap.org/msg10349.html">patch</a> for osm2pgsql to modify instead of create data. If you really must merge data, you could try something like that - I'm sure that it'd be much slower than importing the data that <a href="http://help.openstreetmap.org/users/2933/cartinus">cartinus</a> <a href="http://planet.openstreetmap.nl/benelux/?order=N">linked to</a>, though.</p>
+<p>Ages ago someone posted a <a href="http://www.mail-archive.com/dev@openstreetmap.org/msg10349.html">patch</a> for osm2pgsql to modify instead of create data. If you really must merge data, you could try something like that - I'm sure that it'd be much slower than importing the data that <a href="https://help.openstreetmap.org/users/2933/cartinus">cartinus</a> <a href="http://planet.openstreetmap.nl/benelux/?order=N">linked to</a>, though.</p>
 </div>
 <div id="comment-15579-info" class="comment-info">
 <span class="comment-age">(28 Aug '12, 13:21)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

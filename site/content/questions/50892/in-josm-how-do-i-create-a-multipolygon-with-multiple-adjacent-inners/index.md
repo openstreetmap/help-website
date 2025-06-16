@@ -179,7 +179,7 @@ C-------------D</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is an example of this in <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a> .<br />
+<p>There is an example of this in <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a> .<br />
 See 'touching inner rings' and can be a valid osm polygon.<br />
 I haven't mapped one yet, so unsure what problem needs to be overcome to be accepted by the validator. Possibly you need to complete each polygon by reusing the nodes on the shared boundary.</p>
 </div>
@@ -204,7 +204,7 @@ I haven't mapped one yet, so unsure what problem needs to be overcome to be acce
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a> Thanks, I had already read this and the talk page (which gives the example of a lake with a beach both inside a wood). However I couldn't find any advice on what to do where the phrase "The boundary between farmland and lake does not belong to the forest" applies.</p>
+<p><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a> Thanks, I had already read this and the talk page (which gives the example of a lake with a beach both inside a wood). However I couldn't find any advice on what to do where the phrase "The boundary between farmland and lake does not belong to the forest" applies.</p>
 </div>
 <div id="comment-50897-info" class="comment-info">
 <span class="comment-age">(13 Jul '16, 15:20)</span> <span class="comment-user userinfo">BarnsleyOli</span>
@@ -341,7 +341,7 @@ I haven't mapped one yet, so unsure what problem needs to be overcome to be acce
 <div id="post-50909-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> it adds complexity for sure, it's an edge case to me, slightly better than two touching inner rings. I wasn't aware before there was some discussion on the topic here, and not much consensus: <a href="http://wiki.openstreetmap.org/wiki/Talk:Relation:multipolygon#Touching_inner_rings">http://wiki.openstreetmap.org/wiki/Talk:Relation:multipolygon#Touching_inner_rings</a></p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> it adds complexity for sure, it's an edge case to me, slightly better than two touching inner rings. I wasn't aware before there was some discussion on the topic here, and not much consensus: <a href="https://wiki.openstreetmap.org/wiki/Talk:Relation:multipolygon#Touching_inner_rings">https://wiki.openstreetmap.org/wiki/Talk:Relation:multipolygon#Touching_inner_rings</a></p>
 </div>
 <div id="comment-50909-info" class="comment-info">
 <span class="comment-age">(14 Jul '16, 20:39)</span> <span class="comment-user userinfo">Alecs01</span>

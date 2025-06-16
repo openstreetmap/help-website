@@ -156,12 +156,12 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Additionally to Frederik's answer you can find a description of most OSM-based services and major companies using OSM in the <a href="http://wiki.openstreetmap.org/wiki/Main_Page">wiki</a>:</p>
+<p>Additionally to Frederik's answer you can find a description of most OSM-based services and major companies using OSM in the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">wiki</a>:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/MapQuest">Open MapQuest</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Cycle_Map#Rendered_Cycle_Maps">OpenCycleMap</a></li>
-<li><a href="http://wiki.openstreetmap.org/w/index.php?search=&amp;button=&amp;title=Special%3ASearch">and so on</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/MapQuest">Open MapQuest</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Cycle_Map#Rendered_Cycle_Maps">OpenCycleMap</a></li>
+<li><a href="https://wiki.openstreetmap.org/w/index.php?search=&amp;button=&amp;title=Special%3ASearch">and so on</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

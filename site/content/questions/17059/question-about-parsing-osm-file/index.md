@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should be able to do this with osmjs. See <a href="http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a> and play around with the osmjs examples. You can use the CSV output class which is basically a file output.</p>
+<p>You should be able to do this with osmjs. See <a href="https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a> and play around with the osmjs examples. You can use the CSV output class which is basically a file output.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a> ... it has an option to output CSV data from osm files.</p>
+<p>Try <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a> ... it has an option to output CSV data from osm files.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

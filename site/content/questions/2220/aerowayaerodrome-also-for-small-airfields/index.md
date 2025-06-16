@@ -197,10 +197,10 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Rather than tagging an airport as a node, tagging it as a closed way that follows the airport's property lines tends to be more informative, as does mapping as much of the airport as possible. Examples:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/?lat=45.5873&amp;lon=-122.5931&amp;zoom=14&amp;layers=M-">Portland International Airport</a></li>
-<li><a href="http://www.openstreetmap.org/?lat=36.21645&amp;lon=-95.85248&amp;zoom=16&amp;layers=M-">Oklahoma Air National Guard Tulsa</a></li>
-<li><a href="http://www.openstreetmap.org/?lat=35.8521&amp;lon=-97.41136&amp;zoom=15&amp;layers=M-">Guthrie-Edmond Regional Airport</a></li>
-<li><a href="http://www.openstreetmap.org/?lat=36.15194&amp;lon=-5.34977&amp;zoom=16&amp;layers=M">Gibraltar Airport</a></li>
+<li><a href="https://www.openstreetmap.org/?lat=45.5873&amp;lon=-122.5931&amp;zoom=14&amp;layers=M-">Portland International Airport</a></li>
+<li><a href="https://www.openstreetmap.org/?lat=36.21645&amp;lon=-95.85248&amp;zoom=16&amp;layers=M-">Oklahoma Air National Guard Tulsa</a></li>
+<li><a href="https://www.openstreetmap.org/?lat=35.8521&amp;lon=-97.41136&amp;zoom=15&amp;layers=M-">Guthrie-Edmond Regional Airport</a></li>
+<li><a href="https://www.openstreetmap.org/?lat=36.15194&amp;lon=-5.34977&amp;zoom=16&amp;layers=M">Gibraltar Airport</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -416,7 +416,7 @@ osqa_accepted = false
 <p>The term "Airport" implies the provision of passenger and/or freight services, while an "Aerodrome" is a "small" airport. Both terms imply the provision of passenger flights and are synonymous with the aeroway=aerodrome tag in OSM. In commercial aviation, "aerodrome" has a a quite specific meaning. But I do notice that this tag is also used for non-commercial airfields and other places, such as launch sites for free-flying sails and gliders, where passenger aircraft cannot land and passenger transport services are not provided. I think this is bad practice.</p>
 <p>Although the term "Airfield" is more general and means a place where aircraft can land or take-off, it does not distinguish between the provision of passenger and non-passenger flights. The corresponding OSM tag is only used about half a dozen times.</p>
 <p>However the term "Airstrip" mean a cleared area that aircraft can land or take-off from. On New Zealand's official maps "airstrips" are distinguished from "aerodromes" and [international] "airports". Airstrips indicate places where light, often agricultural, aircraft can land or take-off from but these airfields are not suitable for larger aircraft carrying passengers because they don't have any passenger facilities or aviation infrastucture such as air traffic control or landing aids. Often these airstrips are merely a farm paddock or hill-ridge that has a firm flat surface covered in short grass.</p>
-<p>On 19 Nov 2012 <a href="http://www.openstreetmap.org/changeset/13927540">changeset 13927540</a> introduced the (undocumented) tag <a href="http://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairstrip">aeroway=airstrip</a> for about 3500 paddocks used as airstrips in New Zealand. There are perhaps another 100 uses of this tag elsewhere in the world. However this tag makes up about 1% of all uses of the aeroway key. Additionally, most of these places are nodes.</p>
+<p>On 19 Nov 2012 <a href="https://www.openstreetmap.org/changeset/13927540">changeset 13927540</a> introduced the (undocumented) tag <a href="https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairstrip">aeroway=airstrip</a> for about 3500 paddocks used as airstrips in New Zealand. There are perhaps another 100 uses of this tag elsewhere in the world. However this tag makes up about 1% of all uses of the aeroway key. Additionally, most of these places are nodes.</p>
 <p>Given the airstrip tag is already in use it could be used for those small (private?) airfields that are little more than a cleared farm paddock. Such airfields would not normally have an IATA or ICAO code as they do not provide any passenger flights nor have related aviation services, such as air traffic control or landing aids.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -469,8 +469,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I have found two old feature proposals for aiport sizes on the wiki:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Aerodrome_(unified_symbol_set)">Proposed features/Aerodrome (unified symbol set)</a> last activity there was back in 2008.</li>
-<li>and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/airport">Proposed features/airport</a> But both proposals seem to be abandoned.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Aerodrome_(unified_symbol_set)">Proposed features/Aerodrome (unified symbol set)</a> last activity there was back in 2008.</li>
+<li>and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/airport">Proposed features/airport</a> But both proposals seem to be abandoned.</li>
 </ul>
 <p>Another possible tagging scheme for airport sizes is to use the classification of the ACI (Airports Council International):</p>
 <ul>
@@ -510,7 +510,7 @@ osqa_accepted = false
 <div id="post-4208-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>don't know if you still are waiting for help, but here you go: * these are the guidelines to write a proposal: <a href="http://wiki.openstreetmap.org/wiki/Creating_a_proposal">http://wiki.openstreetmap.org/wiki/Creating_a_proposal</a> The easiest way to do it is take the source code of an existent proposal and copy it into your new proposal page. Then change the content and save. Ask for comments on the tagging mailing list ( <a href="http://lists.openstreetmap.org/listinfo/tagging">http://lists.openstreetmap.org/listinfo/tagging</a> ). To create a new page, simply enter the desired url in your browser and see if it is available (e.g. <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Airport_classification_ACI">http://wiki.openstreetmap.org/wiki/Proposed_features/Airport_classification_ACI</a> )</p>
+<p>don't know if you still are waiting for help, but here you go: * these are the guidelines to write a proposal: <a href="https://wiki.openstreetmap.org/wiki/Creating_a_proposal">https://wiki.openstreetmap.org/wiki/Creating_a_proposal</a> The easiest way to do it is take the source code of an existent proposal and copy it into your new proposal page. Then change the content and save. Ask for comments on the tagging mailing list ( <a href="http://lists.openstreetmap.org/listinfo/tagging">http://lists.openstreetmap.org/listinfo/tagging</a> ). To create a new page, simply enter the desired url in your browser and see if it is available (e.g. <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Airport_classification_ACI">https://wiki.openstreetmap.org/wiki/Proposed_features/Airport_classification_ACI</a> )</p>
 </div>
 <div id="comment-4208-info" class="comment-info">
 <span class="comment-age">(30 Mar '11, 18:51)</span> <span class="comment-user userinfo">dieterdreist</span>
@@ -638,7 +638,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are some international 'catalogues' of airports like ICAO or IATA. If the airport is listed there it should be added as aeroway=aerodrome, IMHO. Google manages to find some sites with list of airports like this: <a href="http://www.ourairports.com/airports/LB34/#lat=43.507102479507225,lon=27.844934463500977,zoom=14,type=Satellite,airport=LB34">http://www.ourairports.com/airports/LB34/#lat=43.507102479507225,lon=27.844934463500977,zoom=14,type=Satellite,airport=LB34</a> The LB34 identifier is an ICAO identifier (LB is for country - Bulgaria) and it also can be tagged with icao=LB34.</p>
-<p>You can find more tagging information here: <a href="http://wiki.openstreetmap.org/wiki/Airports">http://wiki.openstreetmap.org/wiki/Airports</a></p>
+<p>You can find more tagging information here: <a href="https://wiki.openstreetmap.org/wiki/Airports">https://wiki.openstreetmap.org/wiki/Airports</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -691,7 +691,7 @@ osqa_accepted = false
 <div id="post-4453-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I agree completely, but we may need some kind of more precise specifications of different airport classifications. There are some interesting proposals at the wiki Airport page here: <a href="http://wiki.openstreetmap.org/wiki/Talk:Airports#aerodrome.3Dprivate">http://wiki.openstreetmap.org/wiki/Talk:Airports#aerodrome.3Dprivate</a></p>
+<p>I agree completely, but we may need some kind of more precise specifications of different airport classifications. There are some interesting proposals at the wiki Airport page here: <a href="https://wiki.openstreetmap.org/wiki/Talk:Airports#aerodrome.3Dprivate">https://wiki.openstreetmap.org/wiki/Talk:Airports#aerodrome.3Dprivate</a></p>
 </div>
 <div id="comment-4453-info" class="comment-info">
 <span class="comment-age">(13 Apr '11, 17:56)</span> <span class="comment-user userinfo">ivanatora</span>

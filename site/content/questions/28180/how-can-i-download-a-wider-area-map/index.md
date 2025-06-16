@@ -136,11 +136,11 @@ One Answer:
 <div class="answer-body">
 <p>If you want to download <strong>raster map tiles</strong>, then please use one of this tools:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mobile_Atlas_Creator">http://wiki.openstreetmap.org/wiki/Mobile_Atlas_Creator</a><br />
+<li><a href="https://wiki.openstreetmap.org/wiki/Mobile_Atlas_Creator">https://wiki.openstreetmap.org/wiki/Mobile_Atlas_Creator</a><br />
 </li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OSMtiledownloader">http://wiki.openstreetmap.org/wiki/OSMtiledownloader</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSMtiledownloader">https://wiki.openstreetmap.org/wiki/OSMtiledownloader</a></li>
 </ul>
-<p>If you need instead raw <strong>vector geodata</strong>, then please get a <a href="http://planet.osm.org/">Planet extract</a> and maybe cut it with <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">osmosis</a>. Or you use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> that is read only.</p>
+<p>If you need instead raw <strong>vector geodata</strong>, then please get a <a href="http://planet.osm.org/">Planet extract</a> and maybe cut it with <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">osmosis</a>. Or you use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> that is read only.</p>
 <p>If you otherwise refer to a <strong>specific application</strong>, please lookup there documentation on how to upgrade map packages.</p>
 </div>
 <div class="answer-controls post-controls">

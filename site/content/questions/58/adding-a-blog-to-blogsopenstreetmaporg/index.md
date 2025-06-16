@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to contact <a href="http://www.openstreetmap.org/user/smsm1">Shaun McDonald</a> to get things added.</p>
+<p>You need to contact <a href="https://www.openstreetmap.org/user/smsm1">Shaun McDonald</a> to get things added.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

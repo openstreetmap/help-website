@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "tools to help with remapping after licence redaction"
-description = '''Given that licence redaction is currently underway (or complete?) http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted and that it will result in a number of roads and features disappearing from the map, are there any tools that I can use to see where I mi...'''
+description = '''Given that licence redaction is currently underway (or complete?) https://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted and that it will result in a number of roads and features disappearing from the map, are there any tools that I can use to see where I mi...'''
 date = "2012-08-13T10:57:00Z"
 lastmod = "2012-10-02T00:56:00Z"
 weight = 15007
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Given that licence redaction is currently underway (or complete?) <a href="http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted</a> and that it will result in a number of roads and features disappearing from the map, are there any tools that I can use to see where I might need to do some remapping?</p>
+<p>Given that licence redaction is currently underway (or complete?) <a href="/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">https://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted</a> and that it will result in a number of roads and features disappearing from the map, are there any tools that I can use to see where I might need to do some remapping?</p>
 <p>I noticed a road had gone from my home town of Brighton, UK which I take an interest in maintaining and am happy to remap....but it is hard to know where.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The simplest way is to go to the "Export" tab and dowload an image. This may become unavalable in peak houres. Then you can draw the trail on the images in your favorite image processing application. If you export in SVG you may be able to change the color of the lines instead of drawing new lines over it, assuming your program supports editing SVG files.</p>
-<p>The only criteria is the <a href="http://www.openstreetmap.org/copyright">licence terms</a> which sais you have to credit the image with "© OpenStreetMap contributors, CC-BY-SA".</p>
+<p>The only criteria is the <a href="https://www.openstreetmap.org/copyright">licence terms</a> which sais you have to credit the image with "© OpenStreetMap contributors, CC-BY-SA".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

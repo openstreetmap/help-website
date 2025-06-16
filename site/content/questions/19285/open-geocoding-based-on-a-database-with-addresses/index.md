@@ -114,7 +114,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>A side-note: OSM data (also google's data) is incomplete - you probably will not get a (or only get a very approximate) location for every address.</p>
 <p>How to do geocoding with OSM data? You already mentioned the right keyword/tag. See the <span>questions tagged <em>geocoding</em></span> (also try other tags or searches on this help page - this is a very popular topic for which you will find many answers). Shortcut - see: <span>our docu wiki's entry about <em>Nominatim</em></span>.</p>
-<p>If you are also searching for a JS library for displaying a map with markers, then you may want to have a look at <em><a href="http://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a></em>.</p>
+<p>If you are also searching for a JS library for displaying a map with markers, then you may want to have a look at <em><a href="https://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a></em>.</p>
 <p>If you find some more accurate info matching your question, please add it as an answer yourself.</p>
 </div>
 <div class="answer-controls post-controls">

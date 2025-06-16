@@ -66,9 +66,9 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>For info here's an original building: <a href="http://www.openstreetmap.org/way/183870998">http://www.openstreetmap.org/way/183870998</a></p>
-<p>and here's the duplicate: <a href="http://www.openstreetmap.org/way/346198845/history">http://www.openstreetmap.org/way/346198845/history</a></p>
-<p>The changeset was one of yours: <a href="http://www.openstreetmap.org/changeset/31276346">http://www.openstreetmap.org/changeset/31276346</a></p>
+<p>For info here's an original building: <a href="https://www.openstreetmap.org/way/183870998">https://www.openstreetmap.org/way/183870998</a></p>
+<p>and here's the duplicate: <a href="https://www.openstreetmap.org/way/346198845/history">https://www.openstreetmap.org/way/346198845/history</a></p>
+<p>The changeset was one of yours: <a href="https://www.openstreetmap.org/changeset/31276346">https://www.openstreetmap.org/changeset/31276346</a></p>
 <p>I'd suggest reverting that changeset - I can do that if you like.</p>
 <p>Also, I noticed that you've quoted "Callejero de Málaga; Bing; Google Maps" as the source there. You can't use Google Maps as a source for OSM; the licence isn't compatible. Bing Imagery can be used; Bing Maps cannot. I don't know under what licence "Callejero de Málaga" is available.</p>
 </div>
@@ -151,8 +151,8 @@ One Answer:
 <div class="answer-body">
 <p>OK, that's all been reverted now in <a href="https://www.openstreetmap.org/changeset/31340378">this</a> changeset. Three roads had been modified since the roads became duplicated; I'll let the people who made those edits know what happened so that they can check that the situation is now OK.</p>
 <p>One thing that might help to prevent the situation happening again is to look at the amount of data that JOSM says that it will upload - if it seems to be an unfeasibly large number of objects, something's probably gone wrong. It's an easy mistake to make (I've certainly done it!) but if you check before upload it should be possible to prevent errors being uploaded.</p>
-<p>With regard to the sources, you can only use sources that are suitably licensed. See the FAQ <a href="http://wiki.openstreetmap.org/wiki/FAQ#What_images_and_maps_may_I_use_to_make_maps_from.3F">here</a> (en <a href="http://wiki.openstreetmap.org/wiki/ES:FAQ#Poseo_datos_GPS.2C_.C2.BFc.C3.B3mo_puedo_utilizarlos_para_ayudar_a_OpenStreetMap.3F">espanol</a>). Obviously as well as removing references to Google Maps from changeset comments, you need to <em>actually not use that as a source</em>. The same applies to Bing maps (though the Bing imagery available in e.g. JOSM is OK). The "<a href="http://callejero.malaga.eu/">Callejero de Málaga</a>" site has some copyright information so unless someone in the Spanish community has arranged a suitable licence for the data I don't think that you can use that, either.</p>
-<p>There's a mailing list for Spain <a href="https://lists.openstreetmap.org/pipermail/talk-es/">here</a> and also an IRC channel listed on <a href="http://wiki.openstreetmap.org/wiki/IRC">this page</a>.</p>
+<p>With regard to the sources, you can only use sources that are suitably licensed. See the FAQ <a href="https://wiki.openstreetmap.org/wiki/FAQ#What_images_and_maps_may_I_use_to_make_maps_from.3F">here</a> (en <a href="https://wiki.openstreetmap.org/wiki/ES:FAQ#Poseo_datos_GPS.2C_.C2.BFc.C3.B3mo_puedo_utilizarlos_para_ayudar_a_OpenStreetMap.3F">espanol</a>). Obviously as well as removing references to Google Maps from changeset comments, you need to <em>actually not use that as a source</em>. The same applies to Bing maps (though the Bing imagery available in e.g. JOSM is OK). The "<a href="http://callejero.malaga.eu/">Callejero de Málaga</a>" site has some copyright information so unless someone in the Spanish community has arranged a suitable licence for the data I don't think that you can use that, either.</p>
+<p>There's a mailing list for Spain <a href="https://lists.openstreetmap.org/pipermail/talk-es/">here</a> and also an IRC channel listed on <a href="https://wiki.openstreetmap.org/wiki/IRC">this page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

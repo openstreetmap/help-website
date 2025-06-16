@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Large islands - more than 2000 nodes of coastline - how to tag/render?"
-description = '''Hi, I&#x27;m mapping Kerrera in Scotland: http://www.openstreetmap.org/#map=14/56.3962/-5.5459 The coastline is made up of two parts because it is more than 2000 nodes and can&#x27;t be joined into a single outline for the whole island.  I want to add the place=island and name=Kerrera to the coastline so it c...'''
+description = '''Hi, I&#x27;m mapping Kerrera in Scotland: https://www.openstreetmap.org/#map=14/56.3962/-5.5459 The coastline is made up of two parts because it is more than 2000 nodes and can&#x27;t be joined into a single outline for the whole island.  I want to add the place=island and name=Kerrera to the coastline so it c...'''
 date = "2014-10-06T20:59:00Z"
 lastmod = "2014-10-09T20:42:00Z"
 weight = 37353
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I'm mapping Kerrera in Scotland: <a href="http://www.openstreetmap.org/#map=14/56.3962/-5.5459">http://www.openstreetmap.org/#map=14/56.3962/-5.5459</a></p>
+<p>I'm mapping Kerrera in Scotland: <a href="https://www.openstreetmap.org/#map=14/56.3962/-5.5459">https://www.openstreetmap.org/#map=14/56.3962/-5.5459</a></p>
 <p>The coastline is made up of two parts because it is more than 2000 nodes and can't be joined into a single outline for the whole island.</p>
 <p>I want to add the place=island and name=Kerrera to the coastline so it can renders. I've added this to the two separate parts of the coastline but this does not render also when searching for Kerrera on nominatim it returns only one section of the outline highlighted. Do I need to put these two parts into a relation? The place=island wikipage doesn't mention using relations. I've add relation now but still doesn't seem to quite work as expected.</p>
 <p>Anyway, looking for anyway help with tagging large islands so the name is rendered and nominatim search returns full outline and more importantly the 'place=' is regarding as an area within the OSM data model.</p>
@@ -132,7 +132,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I've added a note to the place=island wikipage:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Disland">http://wiki.openstreetmap.org/wiki/Tag:place%3Disland</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Disland">https://wiki.openstreetmap.org/wiki/Tag:place%3Disland</a></p>
 </div>
 <div id="comment-37356-info" class="comment-info">
 <span class="comment-age">(06 Oct '14, 21:18)</span> <span class="comment-user userinfo">Hawkeye</span>

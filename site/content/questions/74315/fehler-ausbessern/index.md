@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-74317-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Es reicht wenn du einmal danach fragst, siehe <a href="https://help.openstreetmap.org/questions/74301/anderungen-ruckgangig-machen">https://help.openstreetmap.org/questions/74301/anderungen-ruckgangig-machen</a></p>
+<p>Es reicht wenn du einmal danach fragst, siehe <a href="/questions/74301/anderungen-ruckgangig-machen">https://help.openstreetmap.org/questions/74301/anderungen-ruckgangig-machen</a></p>
 </div>
 <div id="comment-74317-info" class="comment-info">
 <span class="comment-age">(21 Apr '20, 15:18)</span> <span class="comment-user userinfo">scai ♦</span>

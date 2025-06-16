@@ -117,7 +117,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First you need to understand the (different!) schmemas for modelling indoor OSM data: <a href="http://wiki.openstreetmap.org/wiki/Indoor">http://wiki.openstreetmap.org/wiki/Indoor</a><br />
+<p>First you need to understand the (different!) schmemas for modelling indoor OSM data: <a href="https://wiki.openstreetmap.org/wiki/Indoor">https://wiki.openstreetmap.org/wiki/Indoor</a><br />
 Then you need to figure out a good workflow for JOSM (e.g. adding your sketch in background, hiding levels to get better overflow, ...). To add your image, I recommend an aerial alignment service, so you can add the image as WMS.<br />
 Last but not least you need to find a services that makes use of your modelled data. AFAIK there is currently no renderer or anything that supports this schema and has a clever output (3D or multilayer floorplan)</p>
 </div>

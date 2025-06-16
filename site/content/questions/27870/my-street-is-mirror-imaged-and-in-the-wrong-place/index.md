@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-27877-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I had a look at <a href="http://www.openstreetmap.org/#map=17/38.44922/-90.46316">this road in OSM</a> and using Bing imagery it appears to follow the path of a road.</p>
+<p>I had a look at <a href="https://www.openstreetmap.org/#map=17/38.44922/-90.46316">this road in OSM</a> and using Bing imagery it appears to follow the path of a road.</p>
 <p>There is another road to the north-east that is near a mirror image of it but it has not been mapped in OSM.</p>
 <p>I think it would be best for a person with local knowledge to map this area correctly.</p>
 </div>

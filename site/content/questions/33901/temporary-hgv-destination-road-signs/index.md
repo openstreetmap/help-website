@@ -115,8 +115,8 @@ Temporary:date_off=28-11-2014</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should prefer using <a href="http://wiki.openstreetmap.org/wiki/Conditional_restriction">conditional access restrictions</a> instead of the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/temporary">temporary proposal</a>. It is more widely in use and more flexible.</p>
-<p>However your date doesn't follow the specification. The time &amp; date in the <a href="http://wiki.openstreetmap.org/wiki/Conditional_restriction#Condition">condition</a> field should follow the <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours:specification">specification</a> of the <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a> key which in turn is based on the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Time_domains">time domains</a> proposal. So if I'm not mistaken it has to be</p>
+<p>You should prefer using <a href="https://wiki.openstreetmap.org/wiki/Conditional_restriction">conditional access restrictions</a> instead of the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/temporary">temporary proposal</a>. It is more widely in use and more flexible.</p>
+<p>However your date doesn't follow the specification. The time &amp; date in the <a href="https://wiki.openstreetmap.org/wiki/Conditional_restriction#Condition">condition</a> field should follow the <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours:specification">specification</a> of the <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a> key which in turn is based on the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Time_domains">time domains</a> proposal. So if I'm not mistaken it has to be</p>
 <pre><code>hgv:conditional=destination @ (2014 Oct 20-2014 Nov 28)</code></pre>
 <p>But don't expect any software to handle this correctly at the moment.</p>
 </div>
@@ -179,7 +179,7 @@ Temporary:date_off=28-11-2014</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Tomas, there have been questions like yours before, please read the links. And search with temporary for more. <a href="https://help.openstreetmap.org/questions/259/what-is-the-recommended-way-to-tag-temporary-road-works-and-traffic-situations">https://help.openstreetmap.org/questions/259/what-is-the-recommended-way-to-tag-temporary-road-works-and-traffic-situations</a> <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/temporary">http://wiki.openstreetmap.org/wiki/Proposed_features/temporary</a> And yes it’s possible to add the time of the construction, but it won’t disappear from OSM out of its self. You’ll have to remember as owner of the action to remove it afterwards. I would go for just one line option 1 ; hgv=no, temporary:period=3-4-2014 - 12-8-2014</p>
+<p>Hi Tomas, there have been questions like yours before, please read the links. And search with temporary for more. <a href="/questions/259/what-is-the-recommended-way-to-tag-temporary-road-works-and-traffic-situations">https://help.openstreetmap.org/questions/259/what-is-the-recommended-way-to-tag-temporary-road-works-and-traffic-situations</a> <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/temporary">https://wiki.openstreetmap.org/wiki/Proposed_features/temporary</a> And yes it’s possible to add the time of the construction, but it won’t disappear from OSM out of its self. You’ll have to remember as owner of the action to remove it afterwards. I would go for just one line option 1 ; hgv=no, temporary:period=3-4-2014 - 12-8-2014</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ Temporary:date_off=28-11-2014</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Your <em>temporary</em> syntax is completely wrong, please re-read the proposal. The correct tags would be <em>temporary:hgv=destination</em>, <em>temporary:date_on=2014-10-20</em>, <em>temporary:date_off=2014-11-28</em>. But the <em>temporary</em> proposal is a bad idea anyway because it doesn't support multiple overlapping conditions. <a href="http://wiki.openstreetmap.org/wiki/Conditional_restriction">Conditional access restrictions</a> are more flexible.</p>
+<p>Your <em>temporary</em> syntax is completely wrong, please re-read the proposal. The correct tags would be <em>temporary:hgv=destination</em>, <em>temporary:date_on=2014-10-20</em>, <em>temporary:date_off=2014-11-28</em>. But the <em>temporary</em> proposal is a bad idea anyway because it doesn't support multiple overlapping conditions. <a href="https://wiki.openstreetmap.org/wiki/Conditional_restriction">Conditional access restrictions</a> are more flexible.</p>
 </div>
 <div id="comment-33903-info" class="comment-info">
 <span class="comment-age">(12 Jun '14, 10:01)</span> <span class="comment-user userinfo">scai ♦</span>

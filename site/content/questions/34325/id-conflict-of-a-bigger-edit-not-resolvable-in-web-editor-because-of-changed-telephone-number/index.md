@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I made some more changes to a camp ground today in the web editor but trying to save I get an error about a mismatch for a way ID. This is because someone already corrected my telephone number prefixes 0039 into the correct form +39 for Italy numbers. But now I cannot save my changes because I cannot undo his version 3 back to version 2 which my edit session was using.</p>
-<p>This way is affected and I already fixed the telephone number in my submission as well but I am unable to undo the shape changes which I did pretty early in my currently pending session. <a href="http://www.openstreetmap.org/way/177901194">http://www.openstreetmap.org/way/177901194</a> Can this be recolved by someone or how can I undo this one changes in the 77 changes of my submissions in the web editor ? Error: "Version mismatch: Provided 2, server had: 3 of Way 177901194"</p>
+<p>This way is affected and I already fixed the telephone number in my submission as well but I am unable to undo the shape changes which I did pretty early in my currently pending session. <a href="https://www.openstreetmap.org/way/177901194">https://www.openstreetmap.org/way/177901194</a> Can this be recolved by someone or how can I undo this one changes in the 77 changes of my submissions in the web editor ? Error: "Version mismatch: Provided 2, server had: 3 of Way 177901194"</p>
 <p>I know that I should have probably saved more often but now I do not want to loose all the work if possible. regards, Copro</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -185,7 +185,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Instead of overwriting the version manually, I'd recommend saving the XML as an osc file and resolve the conflicts in JOSM, which has a built-in conflict resolution workflow. I've written up a workaround here: <a href="http://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.">http://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.</a> Of course you can use Fiddler as you suggest instead of Chrome's Developer Tools to get the body of the XML. Cheers.</p>
+<p>Instead of overwriting the version manually, I'd recommend saving the XML as an osc file and resolve the conflicts in JOSM, which has a built-in conflict resolution workflow. I've written up a workaround here: <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.</a> Of course you can use Fiddler as you suggest instead of Chrome's Developer Tools to get the body of the XML. Cheers.</p>
 </div>
 <div id="comment-49497-info" class="comment-info">
 <span class="comment-age">(29 Apr '16, 10:40)</span> <span class="comment-user userinfo">carciofo</span>
@@ -252,7 +252,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As described in a previous answer <a href="https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">here</a>, you'll need to undo back past the problem, save, and then re-edit.</p>
+<p>As described in a previous answer <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">here</a>, you'll need to undo back past the problem, save, and then re-edit.</p>
 <p>In future you'll have to save more often to prevent the problem happening, unfortunately.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -378,7 +378,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>done a revert of my edit... <a href="http://www.openstreetmap.org/way/177901194#map=16/45.4790/12.5798">http://www.openstreetmap.org/way/177901194#map=16/45.4790/12.5798</a> i hope you can save yours edit... now...</p>
+<p>done a revert of my edit... <a href="https://www.openstreetmap.org/way/177901194#map=16/45.4790/12.5798">https://www.openstreetmap.org/way/177901194#map=16/45.4790/12.5798</a> i hope you can save yours edit... now...</p>
 <p>Marco</p>
 </div>
 <div class="answer-controls post-controls">

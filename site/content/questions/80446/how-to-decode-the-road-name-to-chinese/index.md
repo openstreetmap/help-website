@@ -151,7 +151,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The output when decode the name:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/messy.png" alt="alt text" /></p>
+<p><img src="/upfiles/messy.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

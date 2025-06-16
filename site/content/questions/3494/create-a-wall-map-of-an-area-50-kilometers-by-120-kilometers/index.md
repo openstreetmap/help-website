@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have no experience in this, but if I had to do this kind of thing I would start reading the wiki pages of <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>, <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> and <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>.</p>
+<p>I have no experience in this, but if I had to do this kind of thing I would start reading the wiki pages of <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>, <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, <a href="https://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> and <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>.</p>
 <p>This is my own estimation: To comfortably be able to see individual street names you will need a scale of about 1:10,000. That makes the map 5 * 12 meters, but you will probably not see the street names anyway because you are not tall enough. Maybe you can live with that, just knowing that the names really are there if you take your time to look at them.</p>
 <p>If you choose the scale 1:20,000 the street names may still be readable, but with exertion. Then the map will be just 2.5 * 6 meters.</p>
 <p>Go ahead! But please promise to post a photo of your creation later on!</p>
@@ -180,7 +180,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You've got a fundamental choice of raster versus vector. Sending vector data to the printer will generally yield better results but working with a large complex map can mean that this approach is not practical. This depends on the amount of vector data you're trying to generate/manipulate and send to the printer, and specs of the machine. But you're looking at a large printout, so unless it's quite a sparse area of map, it's likely that you'll be hitting these problems.</p>
-<p>For this reason generating a large (hi resolution) raster image is an approach I have used. I've done this for <a href="http://harrywood.co.uk/maps/">several humanitarian disaster mapping resources on my site</a> and also for my <a href="http://www.harrywood.co.uk/blog/2009/12/10/openstreetmap-jigsaw/">OpenStreetMap jigsaw</a>. I've always used <a href="http://wiki.openstreetmap.org/wiki/Bigmap">BigMap</a> which makes it easy to pick an area (and chose the zoom you need to see the street names) and the generate a big image by stitching tiles together. This step requires perl and GD but I've been able to do it easily on linux and windows. BigMap was created by Frederick who has also done a whole bunch of big wall-poster sized printouts (<a href="http://www.facebook.com/album.php?aid=257534&amp;id=679440397&amp;l=5f2c4c5512">featured in these pub photos</a>)</p>
+<p>For this reason generating a large (hi resolution) raster image is an approach I have used. I've done this for <a href="http://harrywood.co.uk/maps/">several humanitarian disaster mapping resources on my site</a> and also for my <a href="http://www.harrywood.co.uk/blog/2009/12/10/openstreetmap-jigsaw/">OpenStreetMap jigsaw</a>. I've always used <a href="https://wiki.openstreetmap.org/wiki/Bigmap">BigMap</a> which makes it easy to pick an area (and chose the zoom you need to see the street names) and the generate a big image by stitching tiles together. This step requires perl and GD but I've been able to do it easily on linux and windows. BigMap was created by Frederick who has also done a whole bunch of big wall-poster sized printouts (<a href="http://www.facebook.com/album.php?aid=257534&amp;id=679440397&amp;l=5f2c4c5512">featured in these pub photos</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -335,7 +335,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is now also a German company that produces maps of bigger areas based on OSM data, but you have to pay for their service and work:</p>
-<p><a href="http://geodressing.de"></a><a href="http://geodressing.de"></a><a href="http://geodressing.de">http://geodressing.de</a> ... (also listed at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a>)</p>
+<p><a href="http://geodressing.de"></a><a href="http://geodressing.de"></a><a href="http://geodressing.de">http://geodressing.de</a> ... (also listed at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a>)</p>
 <p>Maybe you can ask there in English es well.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -473,8 +473,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You (or someone else in a similar situation) might also want to consider</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a> (doesn't give you much customizations nor the 50x120km size but will be able to give you poster sizes <em>and</em> requires zero knowledge in coding, configuring and alike) or</li>
-<li>other <a href="http://wiki.openstreetmap.org/wiki/OSM_on_paper">OSM on paper</a> options.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a> (doesn't give you much customizations nor the 50x120km size but will be able to give you poster sizes <em>and</em> requires zero knowledge in coding, configuring and alike) or</li>
+<li>other <a href="https://wiki.openstreetmap.org/wiki/OSM_on_paper">OSM on paper</a> options.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

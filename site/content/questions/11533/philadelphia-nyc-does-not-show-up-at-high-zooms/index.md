@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Please give us a <a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a> to that area so that we can investigate further.</p>
+<p>Please give us a <a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a> to that area so that we can investigate further.</p>
 </div>
 <div id="comment-11547-info" class="comment-info">
 <span class="comment-age">(28 Mar '12, 09:29)</span> <span class="comment-user userinfo">stephan75</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-30389-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Likely <a href="http://www.openstreetmap.org/#map=12/39.9469/-75.1393">there</a>. And the answer is already at <a href="/questions/30378/">philadelphia-does-not-show-up-but-camden-does</a>.</p>
+<p>Likely <a href="https://www.openstreetmap.org/#map=12/39.9469/-75.1393">there</a>. And the answer is already at <a href="/questions/30378/">philadelphia-does-not-show-up-but-camden-does</a>.</p>
 </div>
 <div id="comment-30389-info" class="comment-info">
 <span class="comment-age">(02 Feb '14, 01:18)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

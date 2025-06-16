@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The openstreetmap.org website itself obeys the browser's language preference. So wether you are logged in or not, if your browser preferences are set to spanish, you'll see the website in spanish (unless some translations are missing).</p>
-<p>The standard map rendering however isn't in any specific language. Country names are writen in the country's local language (España, Deutchland, 中华人民共和国, etc). There are many alternative map renderings that favor a particular language, but we don't yet have a generic multilingual map. Some <a href="http://wiki.openstreetmap.org/wiki/Multilingual_maps_Wikipedia_project">experiments have been made</a>, but this is a hard topic to get right.</p>
+<p>The standard map rendering however isn't in any specific language. Country names are writen in the country's local language (España, Deutchland, 中华人民共和国, etc). There are many alternative map renderings that favor a particular language, but we don't yet have a generic multilingual map. Some <a href="https://wiki.openstreetmap.org/wiki/Multilingual_maps_Wikipedia_project">experiments have been made</a>, but this is a hard topic to get right.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-41681-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The website itself chooses the first supported language from the browser's config. See this <a href="http://wiki.openstreetmap.org/wiki/Translation">general translation page</a> and <a href="https://translatewiki.net/w/i.php?title=Special:Translate&amp;group=out-osm-site&amp;language=gd">help improve the gd translation</a>.</p>
+<p>The website itself chooses the first supported language from the browser's config. See this <a href="https://wiki.openstreetmap.org/wiki/Translation">general translation page</a> and <a href="https://translatewiki.net/w/i.php?title=Special:Translate&amp;group=out-osm-site&amp;language=gd">help improve the gd translation</a>.</p>
 </div>
 <div id="comment-41681-info" class="comment-info">
 <span class="comment-age">(13 Mar '15, 12:14)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Name display in Josm vs Potlach vs iD"
-description = '''So I created a building polygon here (http://www.openstreetmap.org/edit?editor=id#map=20/42.86023/140.70693) and gave the outline a name. When I review this object in JOSM I see the name, in iD I see the name but in Potlach 2 I cannot see the name. Is there a reason for this? thanks'''
+description = '''So I created a building polygon here (https://www.openstreetmap.org/edit?editor=id#map=20/42.86023/140.70693) and gave the outline a name. When I review this object in JOSM I see the name, in iD I see the name but in Potlach 2 I cannot see the name. Is there a reason for this? thanks'''
 date = "2015-12-06T09:24:00Z"
 lastmod = "2015-12-06T09:38:00Z"
 weight = 47004
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>So I created a building polygon here (<a href="http://www.openstreetmap.org/edit?editor=id#map=20/42.86023/140.70693)">http://www.openstreetmap.org/edit?editor=id#map=20/42.86023/140.70693)</a> and gave the outline a name.</p>
+<p>So I created a building polygon here (<a href="https://www.openstreetmap.org/edit?editor=id#map=20/42.86023/140.70693)">https://www.openstreetmap.org/edit?editor=id#map=20/42.86023/140.70693)</a> and gave the outline a name.</p>
 <p>When I review this object in JOSM I see the name, in iD I see the name but in Potlach 2 I cannot see the name.</p>
 <p>Is there a reason for this?</p>
 <p>thanks</p>

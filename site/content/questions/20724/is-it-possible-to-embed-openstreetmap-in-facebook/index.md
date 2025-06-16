@@ -136,7 +136,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Easier than building your whole own tile server would be to just redirect things through a SSL reverse proxy. Although in that case you need to make sure you stay in compliance with the tile usage policy ( <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a> )</p>
+<p>Easier than building your whole own tile server would be to just redirect things through a SSL reverse proxy. Although in that case you need to make sure you stay in compliance with the tile usage policy ( <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a> )</p>
 <p>However, if it is feasible for you to build your own tile server, then that is preferable as it gives you more flexibility and control.</p>
 </div>
 <div id="comment-20728-info" class="comment-info">

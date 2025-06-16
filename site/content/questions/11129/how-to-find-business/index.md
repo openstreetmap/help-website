@@ -124,7 +124,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Also, see the Beginners guide at <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p>Also, see the Beginners guide at <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 </div>
 <div id="comment-20769-info" class="comment-info">
 <span class="comment-age">(17 Mar '13, 15:27)</span> <span class="comment-user userinfo">gormo</span>

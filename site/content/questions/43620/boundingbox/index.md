@@ -124,7 +124,7 @@ osqa_accepted = false
 <div id="post-43628-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Like <a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a> suggested, why not just shift the latitude and longitude values in the bounding box by 1 mile? At London, that would be approximately 0.0145 degrees of latitude and 0.0233 degrees of longitude.</p>
+<p>Like <a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a> suggested, why not just shift the latitude and longitude values in the bounding box by 1 mile? At London, that would be approximately 0.0145 degrees of latitude and 0.0233 degrees of longitude.</p>
 </div>
 <div id="comment-43628-info" class="comment-info">
 <span class="comment-age">(18 Jun '15, 18:14)</span> <span class="comment-user userinfo">alester</span>

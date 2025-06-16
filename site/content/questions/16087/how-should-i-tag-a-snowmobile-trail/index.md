@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>vehicle=no snowmobile=yes</p>
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Access">access</a> tag.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Access">access</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -129,7 +129,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>You should add the main tag : "<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a>" or "<a href="http://wiki.openstreetmap.org/wiki/Track">highway=track</a>" depending how large it is.</p>
+<p>You should add the main tag : "<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a>" or "<a href="https://wiki.openstreetmap.org/wiki/Track">highway=track</a>" depending how large it is.</p>
 </div>
 <div id="comment-16093-info" class="comment-info">
 <span class="comment-age">(14 Sep '12, 15:21)</span> <span class="comment-user userinfo">Pieren</span>
@@ -209,7 +209,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the record: <a href="http://wiki.openstreetmap.org/wiki/Key:snowmobile">Key:snowmobile</a></p>
+<p>For the record: <a href="https://wiki.openstreetmap.org/wiki/Key:snowmobile">Key:snowmobile</a></p>
 <p>Such tags are visible on <a href="http://opensledmap.org">opensledmap.org</a></p>
 </div>
 <div class="answer-controls post-controls">

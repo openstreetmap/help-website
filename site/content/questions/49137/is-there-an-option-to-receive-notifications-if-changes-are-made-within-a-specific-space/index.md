@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, there are some options. See answers to the question <a href="https://help.openstreetmap.org/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed">How can I set up automatic notification whenever data that I've added to OSM is changed?</a></p>
+<p>Yes, there are some options. See answers to the question <a href="/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed">How can I set up automatic notification whenever data that I've added to OSM is changed?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -184,7 +184,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li>A number of websites provide routing services based on OSM data. There are also tools and libraries if what you're interested in is to do the routing yourself. See the <a href="http://wiki.openstreetmap.org/wiki/Routers">Routers</a> wiki page.</li>
+<li>A number of websites provide routing services based on OSM data. There are also tools and libraries if what you're interested in is to do the routing yourself. See the <a href="https://wiki.openstreetmap.org/wiki/Routers">Routers</a> wiki page.</li>
 <li>Some OSM-using maps do; usually they focus on a specific set of POIs, as displaying everything would cause performance and readbility problems. The demo maps at <a href="http://osm.org">http://osm.org</a> only show an image, unless you click edit -&gt; browse map data on the top left-hand side.</li>
 </ol>
 </div>

@@ -111,8 +111,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> to <a href="http://nominatim.openstreetmap.org/search.php?q=195%2C+Caroni+Savannah+Rd%2C+Trinidad+and+Tobago&amp;viewbox=-61.46%2C10.58%2C-61.37%2C10.53">search</a> for this address. Then, click on the little grey <a href="http://nominatim.openstreetmap.org/details.php?place_id=15918661">details</a> link of the first search result. This is Nominatim's view of this object, you can clearly see how the address is build. It also includes San Fernando as a <a href="http://www.openstreetmap.org/browse/node/1110779940">node</a> tagged with <em>place=city</em>.</p>
-<p>San Fernando seems to be the next closest city Nominatim can find, so it assumes that Caroni Savannah Rd belongs to San Fernando. It cannot know better because there is no <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">boundary</a> relation for San Fernando and the other cities. You have to add such a relation with a correct <a href="http://wiki.openstreetmap.org/wiki/Key:admin_level#admin_level">admin_level</a> tag (something between admin_level=7 and admin_level=10, the wiki page will tell you) so that Nominatim can know which place belongs to which city.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> to <a href="http://nominatim.openstreetmap.org/search.php?q=195%2C+Caroni+Savannah+Rd%2C+Trinidad+and+Tobago&amp;viewbox=-61.46%2C10.58%2C-61.37%2C10.53">search</a> for this address. Then, click on the little grey <a href="http://nominatim.openstreetmap.org/details.php?place_id=15918661">details</a> link of the first search result. This is Nominatim's view of this object, you can clearly see how the address is build. It also includes San Fernando as a <a href="https://www.openstreetmap.org/browse/node/1110779940">node</a> tagged with <em>place=city</em>.</p>
+<p>San Fernando seems to be the next closest city Nominatim can find, so it assumes that Caroni Savannah Rd belongs to San Fernando. It cannot know better because there is no <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">boundary</a> relation for San Fernando and the other cities. You have to add such a relation with a correct <a href="https://wiki.openstreetmap.org/wiki/Key:admin_level#admin_level">admin_level</a> tag (something between admin_level=7 and admin_level=10, the wiki page will tell you) so that Nominatim can know which place belongs to which city.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ One Answer:
 <div id="post-13657-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>First you have to find a compatible source for the boundary and then add it to OSM by creating a <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">boundary relation</a> using your <a href="http://wiki.openstreetmap.org/wiki/Editor#Top_two">favourite editor</a>.</p>
+<p>First you have to find a compatible source for the boundary and then add it to OSM by creating a <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">boundary relation</a> using your <a href="https://wiki.openstreetmap.org/wiki/Editor#Top_two">favourite editor</a>.</p>
 <p>This isn't an easy task for a beginner, maybe someone will help you. You can try to contact local mappers via the <a href="http://lists.openstreetmap.org/listinfo">mailing lists</a> for example.</p>
 </div>
 <div id="comment-13657-info" class="comment-info">

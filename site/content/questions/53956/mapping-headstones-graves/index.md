@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The historic=memorial tag is for significant memorials rather than ordinary graves or tombs. Otherwise a cemetery like Recoleta in Buenos Aires would be a mass of these tags (and even here I'm dubious about use of <a href="http://www.openstreetmap.org/#map=18/-34.58781/-58.39350">wayside_cross</a> for the tomb of Eva Peron).</p>
-<p>The currently recommended tag is <a href="http://wiki.openstreetmap.org/wiki/Tag:cemetery%3Dgrave">cemetery=grave</a>.</p>
+<p>The historic=memorial tag is for significant memorials rather than ordinary graves or tombs. Otherwise a cemetery like Recoleta in Buenos Aires would be a mass of these tags (and even here I'm dubious about use of <a href="https://www.openstreetmap.org/#map=18/-34.58781/-58.39350">wayside_cross</a> for the tomb of Eva Peron).</p>
+<p>The currently recommended tag is <a href="https://wiki.openstreetmap.org/wiki/Tag:cemetery%3Dgrave">cemetery=grave</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

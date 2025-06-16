@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>If a building is tagged buildng=yes it rendrers in darker colour and with outline, if it is something else (building=appartments/building=garage...) it renderes in a lighter colour and without outline. building=school is rendered (almost?) same as building=yes.</p>
 <p>Is this intentional? If it is, why?</p>
-<p>Example can be seen <a href="http://www.openstreetmap.org/?lat=49.204433&amp;lon=16.593089&amp;zoom=18&amp;layers=M">here</a>.</p>
+<p>Example can be seen <a href="https://www.openstreetmap.org/?lat=49.204433&amp;lon=16.593089&amp;zoom=18&amp;layers=M">here</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>

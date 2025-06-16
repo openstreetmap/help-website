@@ -130,7 +130,7 @@ osqa_accepted = false
 </ul>
 <p>However,</p>
 <ul>
-<li>you must acknowlege OSM when the work is distributed or publicly displayed, see the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">relevant FAQ</a></li>
+<li>you must acknowlege OSM when the work is distributed or publicly displayed, see the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">relevant FAQ</a></li>
 <li>if you find and correct errors in OSM map data or otherwise improve it during the creation of your work, you must publish said improvements.under the Open Database License. The best way to do so is often to edit the main OSM database.</li>
 </ul>
 <p>You also need to be aware that these are the restrictions that apply for use of the raw data. The designers of the various maps that you see on the web often impose additional legal restrictions for using their maps. If you tell us which map design you would like to use as the foundation of your work, we can tell you about these, too.</p>
@@ -165,7 +165,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@CatBoy</span> , <a href="http://help.openstreetmap.org/questions/32760/looking-for-a-description-of-how-the-map-is-shown-on-a-pc-rendering-process-but-no-technical-details/33010">This answer to a previous question</a> might help explain what is meant by "raw data".</p>
+<p><span>@CatBoy</span> , <a href="/questions/32760/looking-for-a-description-of-how-the-map-is-shown-on-a-pc-rendering-process-but-no-technical-details/33010">This answer to a previous question</a> might help explain what is meant by "raw data".</p>
 </div>
 <div id="comment-33226-info" class="comment-info">
 <span class="comment-age">(16 May '14, 09:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

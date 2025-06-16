@@ -128,7 +128,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>It was earlier this week that I added some trails and they are not showing up in the cycle map, but they are showing up in the standard map. For example, I added a trail alongside Rowland Road here:</p>
-<p><a href="http://www.openstreetmap.org/#map=18/44.89990/-93.43962">link</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/44.89990/-93.43962">link</a></p>
 <p>In standard mode, it shows it as a dashed brown line, but in cycle map it does not show up at all. Could it take more than a few days to update the cycle map?</p>
 </div>
 <div id="comment-55949-info" class="comment-info">

@@ -149,7 +149,7 @@ One Answer:
 <div id="post-39959-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>And you could ask for "Bowling Alley" to be added to the Nominatim Special Phrases. See <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN</a></p>
+<p>And you could ask for "Bowling Alley" to be added to the Nominatim Special Phrases. See <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN</a></p>
 </div>
 <div id="comment-39959-info" class="comment-info">
 <span class="comment-age">(01 Jan '15, 16:35)</span> <span class="comment-user userinfo">SK53 ♦</span>

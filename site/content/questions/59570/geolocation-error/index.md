@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Geolocation error"
-description = '''I have contributed to OSM for seven years. Now, for the first time, North America shows upon opening as here: http://www.openstreetmap.org/#map=5/38.007/-95.844. I receive messages such as below when I choose &#x27;Show my location&#x27;: Geolocation error: Network location provider at &#x27;https://www.googleapis...'''
+description = '''I have contributed to OSM for seven years. Now, for the first time, North America shows upon opening as here: https://www.openstreetmap.org/#map=5/38.007/-95.844. I receive messages such as below when I choose &#x27;Show my location&#x27;: Geolocation error: Network location provider at &#x27;https://www.googleapis...'''
 date = "2017-09-12T15:19:00Z"
 lastmod = "2018-10-02T23:31:00Z"
 weight = 59570
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have contributed to OSM for seven years. Now, for the first time, North America shows upon opening as here: <a href="http://www.openstreetmap.org/#map=5/38.007/-95.844.">http://www.openstreetmap.org/#map=5/38.007/-95.844.</a> I receive messages such as below when I choose 'Show my location': Geolocation error: Network location provider at 'https://www.googleapis.com/' : Returned error code 403.. Geolocation error: Only secure origins are allowed (see: <a href="https://goo.gl/Y0ZkNV)..">https://goo.gl/Y0ZkNV)..</a> I am unaware of any action on my part to deny my location. I use a version of Chrome on my Windows desktop. I have read to go to Settings&gt;Content Settings...&gt;Website Settings&gt;openstreetmap.org. Website Settings does not exist so far as I can see.</p>
+<p>I have contributed to OSM for seven years. Now, for the first time, North America shows upon opening as here: <a href="https://www.openstreetmap.org/#map=5/38.007/-95.844.">https://www.openstreetmap.org/#map=5/38.007/-95.844.</a> I receive messages such as below when I choose 'Show my location': Geolocation error: Network location provider at 'https://www.googleapis.com/' : Returned error code 403.. Geolocation error: Only secure origins are allowed (see: <a href="https://goo.gl/Y0ZkNV)..">https://goo.gl/Y0ZkNV)..</a> I am unaware of any action on my part to deny my location. I use a version of Chrome on my Windows desktop. I have read to go to Settings&gt;Content Settings...&gt;Website Settings&gt;openstreetmap.org. Website Settings does not exist so far as I can see.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-geolocation" rel="tag" title="see questions tagged &#39;geolocation&#39;">geolocation</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

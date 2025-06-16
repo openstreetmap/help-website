@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "See http://help.openstreetmap.org/questions/6652/when-the-edited-changes-will-appear-permanent , http://help.openstreetmap.org/questions/5711/how-to-make-saved-changes-live , http://help.openstreetmap.org/questions/8286/changes-not-on-the-map etc." by Richard 09 Dec '11, 07:23
+### The question has been closed for the following reason "See https://help.openstreetmap.org/questions/6652/when-the-edited-changes-will-appear-permanent , https://help.openstreetmap.org/questions/5711/how-to-make-saved-changes-live , https://help.openstreetmap.org/questions/8286/changes-not-on-the-map etc." by Richard 09 Dec '11, 07:23
 
 </div>
 

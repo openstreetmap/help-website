@@ -68,7 +68,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Did you receive an email from OSM server about success or failure of your GPX upload?</p>
-<p>You can also check <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
+<p>You can also check <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
 </div>
 <div id="comment-4861-info" class="comment-info">
 <span class="comment-age">(27 Apr '11, 19:41)</span> <span class="comment-user userinfo">stephan75</span>

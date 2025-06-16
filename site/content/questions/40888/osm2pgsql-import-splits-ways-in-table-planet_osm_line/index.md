@@ -61,7 +61,7 @@ osqa_accepted = false
 WHERE osm_id&gt;0
 GROUP BY osm_id
 HAVING count(*)&gt;0;</code></pre>
-<p>You can found this element: <a href="http://www.openstreetmap.org/way/166985155">http://www.openstreetmap.org/way/166985155</a> this is a simple way, it is defined twice, in 2 chunks. Why does osm2pgsql split this way in two chunks? How can I avoid this behavior?</p>
+<p>You can found this element: <a href="https://www.openstreetmap.org/way/166985155">https://www.openstreetmap.org/way/166985155</a> this is a simple way, it is defined twice, in 2 chunks. Why does osm2pgsql split this way in two chunks? How can I avoid this behavior?</p>
 <p>If I use ST_UNION() a complete way is shown without any gap.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

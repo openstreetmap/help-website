@@ -83,7 +83,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12356/clemapper"></a><a href="http://help.openstreetmap.org/users/12356/clemapper">@Clemapper</a>: in general, please do not post your questions to several places (at least not without mentioning it and linking all places). That wastes help resources.</p>
+<p><a href="https://help.openstreetmap.org/users/12356/clemapper"></a><a href="https://help.openstreetmap.org/users/12356/clemapper">@Clemapper</a>: in general, please do not post your questions to several places (at least not without mentioning it and linking all places). That wastes help resources.</p>
 </div>
 <div id="comment-49931-info" class="comment-info">
 <span class="comment-age">(31 May '16, 19:52)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

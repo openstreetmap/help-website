@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In my previous question <a href="https://help.openstreetmap.org/questions/66092,">https://help.openstreetmap.org/questions/66092,</a> I asked for help concerning why edited features were missing after applying a daily changefile to my OSM postgis dataset. It was determined that I used the flat nodes option upon initial planet.pbf import to postgres (--flat-nodes D:\nodes.cache), and this option was also required in the osm2pgsql --append command.</p>
+<p>In my previous question <a href="/questions/66092,">https://help.openstreetmap.org/questions/66092,</a> I asked for help concerning why edited features were missing after applying a daily changefile to my OSM postgis dataset. It was determined that I used the flat nodes option upon initial planet.pbf import to postgres (--flat-nodes D:\nodes.cache), and this option was also required in the osm2pgsql --append command.</p>
 <p>I was able to successfully append a daily changefile to my database using the flat nodes option in the append command. However, after viewing the data through a localhost Geoserver service, all of the database geometry is corrupted. Specifically, what were once smooth curves in the osm_line layer are now jagged and blocky. Polygons are incorrectly shaped as well. Rectangular building footprints are now often triangular. It looks like some sort of generalization process is happening to the nodes.</p>
 <p>Graphical examples:</p>
 <p>Lines - <a href="https://imgur.com/YJeDrMg">https://imgur.com/YJeDrMg</a><br />
@@ -176,7 +176,7 @@ PostgreSQL version 10.4, and PostGIS 2.4.4 Not sure what the GEOS library is.</p
 <p>Good you managed to solve your issues.</p>
 <p>As to DBeaver: yes, it takes a little bit of time to get used to, however, once you have used it a bit longer, there is much to like about the application. I have also found the developer very responsive and pro-active regarding bug reports and enhancement suggestions. At least it is a much better application than pgAdmin3. I haven't yet looked at pgAdmin4, so can't compare them yet.</p>
 <p>As to coordinate read-out in DBeaver, simply switch to Data view and select the way column and a record, then choose "Copy" from the right-click context menu. You can subsequently paste in Notepad, as I did in this screenshot.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/DBeaver.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/DBeaver.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -234,7 +234,7 @@ PostgreSQL version 10.4, and PostGIS 2.4.4 Not sure what the GEOS library is.</p
 <p>I tried DBeaver, as suggested by a member. I was able to query a feature but couldn't figure out how to view it or export the coords in this utility.</p>
 <p>I then came across a release note for PostgreSQL's pgAdmin4 database management console. They came out with a new version in September that allows you to directly view geometric features through the PostGIS extension, displaying the queried feature in a map window (overlaid on OSM, too!).</p>
 <p>I jumped to a given jagged road or triangular building and they were fine!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/image_(1).png" alt="alt text" /></p>
+<p><img src="/upfiles/image_(1).png" alt="alt text" /></p>
 <p>This is when we learned that Geoserver was likely the culprit. Looks like it was two conflicting Java path variables (not sure how that happened, but other people share the machine).</p>
 <p>Thanks for everyone's help! Cheers</p>
 </div>

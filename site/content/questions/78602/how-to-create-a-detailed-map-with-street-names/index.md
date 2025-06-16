@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello group, I would be grateful if you could help me in a project I am working.</p>
 <p>In essence I want to create maps with street names(like in the screenshot) I actually have a qgis 2.18 app but when i try to download shapefiles it only get roads layers.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_NpdGQnZ.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_NpdGQnZ.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-street" rel="tag" title="see questions tagged &#39;street&#39;">street</span> <span class="post-tag tag-link-names" rel="tag" title="see questions tagged &#39;names&#39;">names</span>

@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Maps aren’t available on certain devices. Please could you explain why and how we can fix this? They aren’t showing in the UK and only from devices located in Spain. We aren't sure about other countries, but I am sure there are issues there too.</p>
 <p>www.vitavip.es</p>
 <p>Example:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Picture_1_NlhQcPT.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/Picture_1_NlhQcPT.png" alt="alt text" /></p>
+<p><img src="/upfiles/Picture_1_NlhQcPT.png" alt="alt text" /> <img src="/upfiles/Picture_1_NlhQcPT.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not_shown" rel="tag" title="see questions tagged &#39;not_shown&#39;">not_shown</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "bounding box values order: (lat,lon,lat,lon) vs. (lat,lat,lon,lon)"
-description = '''The order of the values in a bounding box does not seem to be consistent. http://wiki.openstreetmap.org/wiki/Bounding_Box says the order is &quot;left,bottom,right,top&quot;, or &quot;min Longitude , min Latitude , max Longitude , max Latitude&quot;. This seems to be the order given in the box at the top in the search ...'''
+description = '''The order of the values in a bounding box does not seem to be consistent. https://wiki.openstreetmap.org/wiki/Bounding_Box says the order is &quot;left,bottom,right,top&quot;, or &quot;min Longitude , min Latitude , max Longitude , max Latitude&quot;. This seems to be the order given in the box at the top in the search ...'''
 date = "2013-01-16T17:19:00Z"
 lastmod = "2013-01-17T15:18:00Z"
 weight = 19145
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>The order of the values in a bounding box does not seem to be consistent.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Bounding_Box">http://wiki.openstreetmap.org/wiki/Bounding_Box</a> says the order is "left,bottom,right,top", or "min Longitude , min Latitude , max Longitude , max Latitude". This seems to be the order given in the box at the top in the search that is displayed when doing an HTML query at <a href="http://nominatim.openstreetmaps.org"></a><a href="http://nominatim.openstreetmaps.org">http://nominatim.openstreetmaps.org</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bounding_Box">https://wiki.openstreetmap.org/wiki/Bounding_Box</a> says the order is "left,bottom,right,top", or "min Longitude , min Latitude , max Longitude , max Latitude". This seems to be the order given in the box at the top in the search that is displayed when doing an HTML query at <a href="http://nominatim.openstreetmaps.org"></a><a href="http://nominatim.openstreetmaps.org">http://nominatim.openstreetmaps.org</a>.</p>
 <p>But the ordered returned by an XML or JSON query is "lat1, lat2, lon1, lon2".</p>
 <p>Is the wiki wrong or incomplete? Where else are the two different orders used, and which is more canonical?</p>
 </div>

@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While reading more about Notes <a href="http://wiki.openstreetmap.org/wiki/Notes#RSS_feed">I found the answer on its wiki page</a>.</p>
+<p>While reading more about Notes <a href="https://wiki.openstreetmap.org/wiki/Notes#RSS_feed">I found the answer on its wiki page</a>.</p>
 <blockquote>
 <p>You can subscribe to an RSS feed of all the note activity in your area. This allows you to keep an overview of the things reported in your area you map in. The URL for the RSS feed is</p>
 </blockquote>
@@ -212,7 +212,7 @@ osqa_accepted = false
 <div id="post-76475-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is it possible to display hidden notes? Question: <a href="https://help.openstreetmap.org/questions/76471/how-to-view-hidden-notes">https://help.openstreetmap.org/questions/76471/how-to-view-hidden-notes</a> Update: it is possible by adding <code>&amp;closed=-1</code> (<a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API).">https://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API).</a></p>
+<p>Is it possible to display hidden notes? Question: <a href="/questions/76471/how-to-view-hidden-notes">https://help.openstreetmap.org/questions/76471/how-to-view-hidden-notes</a> Update: it is possible by adding <code>&amp;closed=-1</code> (<a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API).">https://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API).</a></p>
 </div>
 <div id="comment-76475-info" class="comment-info">
 <span class="comment-age">(06 Sep '20, 10:35)</span> <span class="comment-user userinfo">baptx</span>

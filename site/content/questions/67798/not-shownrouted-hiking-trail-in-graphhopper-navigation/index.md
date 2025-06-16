@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hi all,</p>
 <p>I'm new here, I looked up and tried to find an answer to my question, but could find one... Sorry if this has been answered already!</p>
 <p>So I made some small edits to my local hiking trail, because the different trails were not connected together and you couldn't navigate them on a map. On this image:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/a.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/a.jpg" alt="alt text" /></p>
 <p>-- 1 -- The 2 arrows are pointing short sections of the trail that were not mapped at all. I connected the trails together (bottom arrow) and I connected the trail to the road (top arrow) (these changes can be seen there: <a href="https://www.openstreetmap.org/way/470643312">https://www.openstreetmap.org/way/470643312</a><br />
 <a href="https://www.openstreetmap.org/way/128944297">https://www.openstreetmap.org/way/128944297</a> )</p>
 <p>-- 2 -- The box is showing a trail that wasn't appearing on the map for hiking. I changed the "highway" tag of the line (that was already there) from "path" to "footway". - see my edit here: <a href="https://www.openstreetmap.org/changeset/66693927">https://www.openstreetmap.org/changeset/66693927</a> - and the history of changes here: <a href="https://www.openstreetmap.org/way/666463749/history">https://www.openstreetmap.org/way/666463749/history</a></p>
@@ -90,7 +90,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Welcome! :-) See also <a href="https://help.openstreetmap.org/questions/53722/when-do-directions-get-updated-after-changes-are-made-to-the-maps">https://help.openstreetmap.org/questions/53722/when-do-directions-get-updated-after-changes-are-made-to-the-maps</a> and <a href="https://help.openstreetmap.org/tags/update/?sort=mostvoted">https://help.openstreetmap.org/tags/update/?sort=mostvoted</a> for a bit more general answer to your question.</p>
+<p>Welcome! :-) See also <a href="/questions/53722/when-do-directions-get-updated-after-changes-are-made-to-the-maps">https://help.openstreetmap.org/questions/53722/when-do-directions-get-updated-after-changes-are-made-to-the-maps</a> and <a href="https://help.openstreetmap.org/tags/update/?sort=mostvoted">https://help.openstreetmap.org/tags/update/?sort=mostvoted</a> for a bit more general answer to your question.</p>
 </div>
 <div id="comment-67842-info" class="comment-info">
 <span class="comment-age">(01 Feb '19, 22:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

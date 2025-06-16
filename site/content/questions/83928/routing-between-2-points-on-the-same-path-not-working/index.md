@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your link failed to display the map. But when I typed in the co-ords routing worked with graphopper but not OSRM I suspect the footpath tag should have foot=allowed or in England foot=designated to indicate it is a legal footpath. I also notice there are some fixmes where the path crosses the stream does it have a bridge or is it a ford? this link will help others find it. <a href="https://www.openstreetmap.org/?mlat=51.63194&amp;mlon=10.40762#map=19/51.63194/10.40762">https://www.openstreetmap.org/?mlat=51.63194&amp;mlon=10.40762#map=19/51.63194/10.40762</a> Looking again, the tag is access=forestry would that mean forestry workers only? That may be the problem.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/routing.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/routing.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ One Answer:
 </blockquote>
 <p>is actually a bit confusing, and not just because "allowed" should be "yes" of course.</p>
 <p>The "foot" tag on something describes how it is legal to access it by that mode of transport. Somewhat confusingly, "foot=designated" is also used with "highway=path" to indicate that the thing being discussed is actually designed as a footway not any other sort of path.</p>
-<p>What I suspect Andy is alluding to here is the "designation=public_footpath" tag, which is used in England and Wales to indicate a special legal status, which also implies foot=yes (but I'd always add a foot=yes tag too, to avoid problems like <a href="https://help.openstreetmap.org/questions/83945/foot-routing-failing-bridleway-alone-doesnt-let-it-work-it-needs-footyes">this one</a>).</p>
+<p>What I suspect Andy is alluding to here is the "designation=public_footpath" tag, which is used in England and Wales to indicate a special legal status, which also implies foot=yes (but I'd always add a foot=yes tag too, to avoid problems like <a href="/questions/83945/foot-routing-failing-bridleway-alone-doesnt-let-it-work-it-needs-footyes">this one</a>).</p>
 </div>
 <div id="comment-83950-info" class="comment-info">
 <span class="comment-age">(21 Mar '22, 11:21)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

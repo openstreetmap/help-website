@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-41144-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for your approach.These postcodes are from Newyork,US. Actually we are sending postcodes only to get an optimized route between those postcodes from API and fetching postcodes falling on that route. We do not have full address all the time of these postcodes. when I am trying to find route between 10011 and 10012 or between 10011 and 10013, an javascript alert returns "Couldn't find a route between those two places." But direction between 10012 and 10013 postcodes displays a route.(searching in <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> site).</p>
+<p>Thank you for your approach.These postcodes are from Newyork,US. Actually we are sending postcodes only to get an optimized route between those postcodes from API and fetching postcodes falling on that route. We do not have full address all the time of these postcodes. when I am trying to find route between 10011 and 10012 or between 10011 and 10013, an javascript alert returns "Couldn't find a route between those two places." But direction between 10012 and 10013 postcodes displays a route.(searching in <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> site).</p>
 </div>
 <div id="comment-41144-info" class="comment-info">
 <span class="comment-age">(19 Feb '15, 11:23)</span> <span class="comment-user userinfo">saurabh</span>
@@ -143,7 +143,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The 1st address is here <a href="http://www.openstreetmap.org/way/250306603">http://www.openstreetmap.org/way/250306603</a> the 2nd one is currently not present in OSM (but TIGER data can be used to get a rough location) <a href="http://www.openstreetmap.org/search?query=26%20locust%20dr%2C%20summit#map=19/40.71450/-74.36470">http://www.openstreetmap.org/search?query=26%20locust%20dr%2C%20summit#map=19/40.71450/-74.36470</a></p>
+<p>The 1st address is here <a href="https://www.openstreetmap.org/way/250306603">https://www.openstreetmap.org/way/250306603</a> the 2nd one is currently not present in OSM (but TIGER data can be used to get a rough location) <a href="https://www.openstreetmap.org/search?query=26%20locust%20dr%2C%20summit#map=19/40.71450/-74.36470">https://www.openstreetmap.org/search?query=26%20locust%20dr%2C%20summit#map=19/40.71450/-74.36470</a></p>
 <p>However there are basic issues with what you are trying to do. Usage and even the basic semantics of post codes differ strongly from country to country. In some regions they are larger areas that can be defined by a polygon (for example Germany), in some countries they are essentially a list of addresses along a delivery route (US), in others they are essentially an ersatz address spanning just a few postboxes (UK) and I'm sure there are other systems out there.</p>
 <p>So before you embark on doing anything with postcodes (in the end regardless of source and country) you need to know what you are actually dealing with.</p>
 <p>As you can see from above what you intend to do is likely nonsense condsidering the US postcode system. There have been attempts to provide approximate postcode polygons for the US (and there is I believe even some open data) and where OSM address data is reasonably complete (NYC for example) you might even be able to generate such from OSM, but in normal circumstances you will not find them actually in the OSM data.</p>
@@ -265,7 +265,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10513/saurabh">@saurabh</a> If you want to know what Mapquest's rates for things are, you'll have to ask Mapquest. There are some links here:</p>
+<p><a href="https://help.openstreetmap.org/users/10513/saurabh">@saurabh</a> If you want to know what Mapquest's rates for things are, you'll have to ask Mapquest. There are some links here:</p>
 <p><a href="http://developer.mapquest.com/web/products/open/nominatim">http://developer.mapquest.com/web/products/open/nominatim</a></p>
 </div>
 <div id="comment-41287-info" class="comment-info">

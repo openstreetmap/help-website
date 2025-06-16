@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First, unless you are writing the OSM editor, that is <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">not correct usage of 0.6 API</a> . See that page for more info on alternatives (like running your own or third party server, or switching to <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>. There are usage examples there, and you get your node tags too.</p>
+<p>First, unless you are writing the OSM editor, that is <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">not correct usage of 0.6 API</a> . See that page for more info on alternatives (like running your own or third party server, or switching to <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>. There are usage examples there, and you get your node tags too.</p>
 <p>For example, sending Overpass query</p>
 <pre><code>  (node(32.0846,034.8415,32.3846,035);&lt;;);out;</code></pre>
 <p>returns (among other things)</p>

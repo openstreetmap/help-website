@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there a maximal point density that is allowed in the OSM database? I mean whether there is a rule that would say that the distance between two points that belong the same object (road, building, road lane marking etc.) can not be smaller than a given value (like 1, 10, 100 cm etc.)?</p>
-<p>The reason I am asking is because I am looking for a place where I could donate a precise geodata obtained with RTK precise positioning. My data would mainly deal with the main road marking types like solid-lane-divider and solid-road-edge that fall under the <a href="http://wiki.openstreetmap.org/wiki/Key:road_marking">road_marking key</a>.</p>
+<p>The reason I am asking is because I am looking for a place where I could donate a precise geodata obtained with RTK precise positioning. My data would mainly deal with the main road marking types like solid-lane-divider and solid-road-edge that fall under the <a href="https://wiki.openstreetmap.org/wiki/Key:road_marking">road_marking key</a>.</p>
 <p>My goal is for the data to be as precise as possible, but the final density would still be open for discussion. For instance, it probably would make sense for the road lanes point density to vary as needed by the lane shape (more dense in curves) maybe resulting in an average density of some 25 cm.</p>
 <p>Has the OSM community ever dealt with precise geospatial data?</p>
 </div>
@@ -108,8 +108,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, we have delt with precise geospatial data, and NO, road markings are defintely not something you should be using it for (essentially one user invented the key you referred to without any discussion with anybody). While there are numerous features and use cases where micro-mapping might result in useful information at this point in time, the non-abstracted, exact position of road markings is not one.</p>
-<p>If you want to do something helpful, please add <a href="http://wiki.openstreetmap.org/wiki/Lanes">lane tagging</a> (from which road marking can be derived if necessary).</p>
-<p>PS: see <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Street_area">http://wiki.openstreetmap.org/wiki/Proposed_features/Street_area</a> for useful detailed mapping of shoulder areas and similar.</p>
+<p>If you want to do something helpful, please add <a href="https://wiki.openstreetmap.org/wiki/Lanes">lane tagging</a> (from which road marking can be derived if necessary).</p>
+<p>PS: see <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Street_area">https://wiki.openstreetmap.org/wiki/Proposed_features/Street_area</a> for useful detailed mapping of shoulder areas and similar.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

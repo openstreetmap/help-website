@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Le tag adapté à une salle des fêtes est: amenity=community_centre</p>
-<p>Voici la page de wiki qui lui est consacrée: <a href="http://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dcommunity_centre">http://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dcommunity_centre</a></p>
+<p>Voici la page de wiki qui lui est consacrée: <a href="https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dcommunity_centre">https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dcommunity_centre</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

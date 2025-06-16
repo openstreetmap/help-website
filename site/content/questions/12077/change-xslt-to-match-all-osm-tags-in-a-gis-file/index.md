@@ -43,8 +43,8 @@ osqa_accepted = false
 <p>I am brandnew to GIS-Things, so please bear with me for asking a newbie question. I have an xslt that works on a split osm file[germany.osm.bz2]</p>
 <p>i took the <strong>file called germany.osm.bz2</strong> from this site: <a href="http://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de/">http://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de/</a> Apparently, right now, i am not at home so i cannot give you a smaller piece of this large file. <strong>Note:</strong> i splitted it with XML_Split Regarding the expected output - i want to have <strong>ALL (!!)</strong> Nodes and data that are combined with the term restaurant... HTH - (End of update.)</p>
 <p>I am divin into the GIS-world with a headstart: As a example i I want to do is parse all elements of <code>'amenity'</code> and <span><span><span><code>@v</code></span></span></span><code>='restaurant</code>.</p>
-<p>i visited the Doku for XAPI on Openstreetmap here: <a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a></p>
-<p>Here ive found a little example to show a map with marker (with XSL Code): <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Marker">http://wiki.openstreetmap.org/wiki/OpenLayers_Marker</a></p>
+<p>i visited the Doku for XAPI on Openstreetmap here: <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a></p>
+<p>Here ive found a little example to show a map with marker (with XSL Code): <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Marker">https://wiki.openstreetmap.org/wiki/OpenLayers_Marker</a></p>
 <p>Note: this is only an example: i guess if i can do this with one 'amenity'` - called restaurant then i can do it with others too.</p>
 <p>My <strong>first trial:</strong> What i am currently ironing out: i have a xslt-processor that runs and gives back some results..: In other words i want to gather all "available" elements (nodes, ways and relations) to match the elements I need to rework the given filter below so that we can get all elements.... See the current XSLT - and see where i stuck..</p>
 <pre><code>&lt;xsl:stylesheet version = &#39;1.0&#39;
@@ -125,9 +125,9 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>To add a little more to what Vincent de P said - some XML documents are governed by strict rules as to the values that they can contain. OSM isn't really like that - there's even a wiki document expaining that you can with caveats use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>.</p>
-<p>What might help a little is if you could explain a bit about what you're trying to do with the data. It may be that there's an existing service (such as the <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> that allows you to get at what you want rather than starting with flat XML), or it may be that you need to put the OSM data in a database optimised for the task that you want to perform (for rendering map tiles for example, there are instructions <a href="http://switch2osm.org/serving-tiles/">here</a>).</p>
-<p>The problem is that alongside the name there are manu, many other tags that might get used alongside amenity=restaurant (see <a href="http://taginfo.openstreetmap.org/tags/amenity=restaurant#combinations">here</a> for a list). Also, have a look at the "See Also" section of the amenity=restaurant <a href="http://wiki.openstreetmap.org/wiki/Restaurant">wiki page</a> for this that an establishment might get tagged as other than "restaurant".</p>
+<p>To add a little more to what Vincent de P said - some XML documents are governed by strict rules as to the values that they can contain. OSM isn't really like that - there's even a wiki document expaining that you can with caveats use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>.</p>
+<p>What might help a little is if you could explain a bit about what you're trying to do with the data. It may be that there's an existing service (such as the <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> that allows you to get at what you want rather than starting with flat XML), or it may be that you need to put the OSM data in a database optimised for the task that you want to perform (for rendering map tiles for example, there are instructions <a href="http://switch2osm.org/serving-tiles/">here</a>).</p>
+<p>The problem is that alongside the name there are manu, many other tags that might get used alongside amenity=restaurant (see <a href="http://taginfo.openstreetmap.org/tags/amenity=restaurant#combinations">here</a> for a list). Also, have a look at the "See Also" section of the amenity=restaurant <a href="https://wiki.openstreetmap.org/wiki/Restaurant">wiki page</a> for this that an establishment might get tagged as other than "restaurant".</p>
 </div>
 <div id="comment-12084-info" class="comment-info">
 <span class="comment-age">(17 Apr '12, 13:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -166,7 +166,7 @@ osqa_accepted = false
 <div id="post-12106-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... which continues into <a href="http://help.openstreetmap.org/questions/12100/xapi-request-runs-into-server-error-how-can-make-sense-of-xapi">this question</a> about the XAPI specificallly.</p>
+<p>... which continues into <a href="/questions/12100/xapi-request-runs-into-server-error-how-can-make-sense-of-xapi">this question</a> about the XAPI specificallly.</p>
 </div>
 <div id="comment-12106-info" class="comment-info">
 <span class="comment-age">(18 Apr '12, 00:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

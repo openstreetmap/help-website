@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-50604-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Can you zoom in from <a href="http://www.openstreetmap.org/#map=5/14.881/95.295">http://www.openstreetmap.org/#map=5/14.881/95.295</a> to a place where there's a probem with a road name? That would help people tell whether it was a problem with the map data or with the conversion to Garmin format.</p>
+<p>Can you zoom in from <a href="https://www.openstreetmap.org/#map=5/14.881/95.295">https://www.openstreetmap.org/#map=5/14.881/95.295</a> to a place where there's a probem with a road name? That would help people tell whether it was a problem with the map data or with the conversion to Garmin format.</p>
 <p>It would also be useful to know which "June 2016 OSM Maps" you installed. Lots of different people produce Garmin maps based on OSM data with lots of different features.</p>
 </div>
 <div id="comment-50604-info" class="comment-info">
@@ -76,7 +76,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>The data set used is from garmin.openstreetmap.nl 13-05-2016 is the release date.</p>
-<p>As for a location, Klaeng, Rayong is the example my buddy brought up. N12.78132, E101.64783 I have cranked up the detail setting as you can just make out with the attached image. All the roads are named "road' when I know them to be labelled correctly in the old ESRI Garmin set from 2010 as Thetsaban 1, 2 etc.<img src="http://help.openstreetmap.org/upfiles/BaseCampView_OSM_Generic_Routable_15-05-2016.png" alt="ScreenGrab from BaseCamp" /></p>
+<p>As for a location, Klaeng, Rayong is the example my buddy brought up. N12.78132, E101.64783 I have cranked up the detail setting as you can just make out with the attached image. All the roads are named "road' when I know them to be labelled correctly in the old ESRI Garmin set from 2010 as Thetsaban 1, 2 etc.<img src="/upfiles/BaseCampView_OSM_Generic_Routable_15-05-2016.png" alt="ScreenGrab from BaseCamp" /></p>
 <p>I think I remember the previous release of the TH dataset from this source as having street names, but am not sure. I wondered if this was a simple 'forgot to select layer' for the export or similar easy to make error... Hope so :) the simple stuff is the simplest to omit...</p>
 <p>Many thanks.</p>
 </div>
@@ -133,7 +133,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Those street names are missing from OpenStreetMap because no-one has added them yet.</p>
-<p>Here's <a href="http://www.openstreetmap.org/way/152946542">an example</a> near your Dunkin' Donuts. OpenStreetMap knows only that it's a residential street, not what the name is. Names typically get added to OpenStreetMap by people like you who know the area. Once the names have been added look out for an update date at garmin.openstreetmap.nl after that, and you'll be able to download a map with those names on.</p>
+<p>Here's <a href="https://www.openstreetmap.org/way/152946542">an example</a> near your Dunkin' Donuts. OpenStreetMap knows only that it's a residential street, not what the name is. Names typically get added to OpenStreetMap by people like you who know the area. Once the names have been added look out for an update date at garmin.openstreetmap.nl after that, and you'll be able to download a map with those names on.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

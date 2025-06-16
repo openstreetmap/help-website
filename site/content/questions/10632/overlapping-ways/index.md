@@ -192,7 +192,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The best solution is the first one.</p>
 <p>If you have a river or something similar, you can add boundary=administartive or =postal_code or whatever you need.</p>
-<p>On the first look, there is no sufficient information about this question in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Boundaries">boundaries</a> ... maybe we have to add some hints there.</p>
+<p>On the first look, there is no sufficient information about this question in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Boundaries">boundaries</a> ... maybe we have to add some hints there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -253,7 +253,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use first method and if editing in potlach2 the follow command "f" will after clicking a couple of nodes it will follow that way,which is great for long common boundaries see <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
+<p>I would use first method and if editing in potlach2 the follow command "f" will after clicking a couple of nodes it will follow that way,which is great for long common boundaries see <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is it legal to map in private spaces such airport or mall?"
-description = '''Hello, I&#x27;ve seen that there is few rules to follow in order to map airport spaces: http://wiki.openstreetmap.org/wiki/Aviation#Things_Not_to_Map  But beyond that, I would like to know if it&#x27;s legal to map such private spaces (authorized for public access)? Do the airport’s owner have some right of i...'''
+description = '''Hello, I&#x27;ve seen that there is few rules to follow in order to map airport spaces: https://wiki.openstreetmap.org/wiki/Aviation#Things_Not_to_Map  But beyond that, I would like to know if it&#x27;s legal to map such private spaces (authorized for public access)? Do the airport’s owner have some right of i...'''
 date = "2015-02-02T17:27:00Z"
 lastmod = "2015-02-03T22:12:00Z"
 weight = 40751
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I've seen that there is few rules to follow in order to map airport spaces: <a href="http://wiki.openstreetmap.org/wiki/Aviation#Things_Not_to_Map">http://wiki.openstreetmap.org/wiki/Aviation#Things_Not_to_Map</a></p>
+<p>Hello, I've seen that there is few rules to follow in order to map airport spaces: <a href="https://wiki.openstreetmap.org/wiki/Aviation#Things_Not_to_Map">https://wiki.openstreetmap.org/wiki/Aviation#Things_Not_to_Map</a></p>
 <p>But beyond that, I would like to know if it's legal to map such private spaces (authorized for public access)? Do the airport’s owner have some right of inspection about theses data? My question is also usable for such big private spaces like mall.</p>
 <p>Thanks,</p>
 </div>

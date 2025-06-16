@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have difficulties to build a route for pedestrians using the way <a href="http://www.openstreetmap.org/browse/way/31688374">31688374</a>. This way has two neighbors <a href="http://www.openstreetmap.org/browse/way/31688362">31688362</a> and <a href="http://www.openstreetmap.org/browse/way/23892563">23892563</a> and mapsource accepts a route <a href="http://www.openstreetmap.org/browse/way/31688362">31688362</a> --&gt; <a href="http://www.openstreetmap.org/browse/way/31688374">31688374</a> --&gt; <a href="http://www.openstreetmap.org/browse/way/23892563">23892563</a> for cyclists but refuses to use <a href="http://www.openstreetmap.org/browse/way/31688374">31688374</a> for pedestrians. Is there an experienced user of OSM who can tell me the reason for this bug?</p>
+<p>I have difficulties to build a route for pedestrians using the way <a href="https://www.openstreetmap.org/browse/way/31688374">31688374</a>. This way has two neighbors <a href="https://www.openstreetmap.org/browse/way/31688362">31688362</a> and <a href="https://www.openstreetmap.org/browse/way/23892563">23892563</a> and mapsource accepts a route <a href="https://www.openstreetmap.org/browse/way/31688362">31688362</a> --&gt; <a href="https://www.openstreetmap.org/browse/way/31688374">31688374</a> --&gt; <a href="https://www.openstreetmap.org/browse/way/23892563">23892563</a> for cyclists but refuses to use <a href="https://www.openstreetmap.org/browse/way/31688374">31688374</a> for pedestrians. Is there an experienced user of OSM who can tell me the reason for this bug?</p>
 <p>Many thanks in advance</p>
 <p>DBuenermann</p>
 </div>

@@ -126,7 +126,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm sure you are automatically subscribed to comments on your own changesets, otherwise this feature would be rather useless. To verify this I just added a comment to <a href="http://www.openstreetmap.org/changeset/26581590">your latest changeset</a>. Did you receive any mail?</p>
+<p>I'm sure you are automatically subscribed to comments on your own changesets, otherwise this feature would be rather useless. To verify this I just added a comment to <a href="https://www.openstreetmap.org/changeset/26581590">your latest changeset</a>. Did you receive any mail?</p>
 <p>And I just noted that you almost never describe your changesets. Please try to add at least a short comment about the changes you did :)</p>
 </div>
 <div class="answer-controls post-controls">

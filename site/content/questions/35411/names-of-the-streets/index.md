@@ -81,7 +81,7 @@ This question is marked "community wiki".
 <div id="post-35422-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please add your comments to your original question: <a href="https://help.openstreetmap.org/questions/35377/how-to-add-the-names-of-streets-to-osm">https://help.openstreetmap.org/questions/35377/how-to-add-the-names-of-streets-to-osm</a> . Thank you!</p>
+<p>Please add your comments to your original question: <a href="/questions/35377/how-to-add-the-names-of-streets-to-osm">https://help.openstreetmap.org/questions/35377/how-to-add-the-names-of-streets-to-osm</a> . Thank you!</p>
 </div>
 <div id="comment-35422-info" class="comment-info">
 <span class="comment-age">(01 Aug '14, 21:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

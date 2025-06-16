@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/route_arrow.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/route_arrow.JPG" alt="alt text" /></p>
 <p>Click on the route arrow and put in start and end points. A route will be calculated ( also for walking and cycling options for other uses). You may find it is not quick or easy enough for your use. You may find it simpler to build a quick look up table with a few limited areas of delivery prices. You may find postcodes are not complete enough either, although there are some busy postcode mappers working hard on post code coverage.</p>
 </div>
 <div class="answer-controls post-controls">

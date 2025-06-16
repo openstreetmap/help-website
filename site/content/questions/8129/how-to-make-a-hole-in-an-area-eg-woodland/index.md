@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I wish to mark an area in a wood that is not wood such as in <a href="http://www.openstreetmap.org/?lat=51.45477&amp;lon=-2.76774&amp;zoom=16&amp;layers=M">this example</a> but can't figure out how to do it. I think it requires using a multipolygon and discovered <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">this page</a> but am afraid I don't understand. Can someone explain the 'how to' in simple English please? I now use Potlatch 2.</p>
+<p>I wish to mark an area in a wood that is not wood such as in <a href="https://www.openstreetmap.org/?lat=51.45477&amp;lon=-2.76774&amp;zoom=16&amp;layers=M">this example</a> but can't figure out how to do it. I think it requires using a multipolygon and discovered <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">this page</a> but am afraid I don't understand. Can someone explain the 'how to' in simple English please? I now use Potlatch 2.</p>
 <p>Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -160,7 +160,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>The internal help in Potlatch2 is internal, and isn't hosted on the web anywhere as far as I'm aware. There is this though, which may or may not be 100% up to date:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a></p>
 </div>
 <div id="comment-8250-info" class="comment-info">
 <span class="comment-age">(03 Oct '11, 13:14)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -194,7 +194,7 @@ osqa_accepted = false
 <div id="post-22390-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See this question AND Richard's answer. <a href="https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
+<p>See this question AND Richard's answer. <a href="/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
 </div>
 <div id="comment-22390-info" class="comment-info">
 <span class="comment-age">(13 May '13, 19:22)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -321,7 +321,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For Potlatch2 its easy to make a multipolygon. First make the polygons,and tag each one separately. After that ctrl click each of the ways until all are highlighted then click the square in a square icon: then save it. Very simple. see pic <img src="http://help.openstreetmap.org/upfiles/0000000_muliti_polygon_1.JPG" alt="alt text" /></p>
+<p>For Potlatch2 its easy to make a multipolygon. First make the polygons,and tag each one separately. After that ctrl click each of the ways until all are highlighted then click the square in a square icon: then save it. Very simple. see pic <img src="/upfiles/0000000_muliti_polygon_1.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

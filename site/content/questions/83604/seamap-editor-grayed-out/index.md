@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>rookie question here, following available info from wiki I managed to get JOSM installed, openseamap loaded, openseamap plugin installed but when trying to add a missing light the Seamap editor shows the Save button grayed out. Missing something obvious? Thanks.</p>
-<p>screenshot: <img src="https://help.openstreetmap.org/upfiles/seamapeditor_CbKbcJB.png" alt="alt text" /></p>
+<p>screenshot: <img src="/upfiles/seamapeditor_CbKbcJB.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openseamap" rel="tag" title="see questions tagged &#39;openseamap&#39;">openseamap</span>

@@ -118,7 +118,7 @@ osqa_accepted = true
 <li>surface=dirt/grass/sand/... (surface is important in cyclo-cross)</li>
 <li>incline=up/down (whether the path is up- or downhill - following the direction of the way)</li>
 <li>width=... (average width of a track piece in meters)</li>
-<li>most other MTB tags should also apply to cyclo-cross: <a href="http://wiki.openstreetmap.org/wiki/Mountain_biking">http://wiki.openstreetmap.org/wiki/Mountain_biking</a></li>
+<li>most other MTB tags should also apply to cyclo-cross: <a href="https://wiki.openstreetmap.org/wiki/Mountain_biking">https://wiki.openstreetmap.org/wiki/Mountain_biking</a></li>
 </ul>
 <p>The difference between MTB and cyclo-cross is very small (the main differences are in the racing rules and the used bikes, which can't be mapped anyway). So using the same tagging makes sense.</p>
 <p>If you want to make maps of the yearly race parcours, I suggest you to use a different service, like <a href="umap.openstreetmap.fr">uMap</a></p>
@@ -203,7 +203,7 @@ It would be helpful if you could provide a link or a name of the mapped and tagg
 <div id="post-45970-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Malenki, <a href="http://www.openstreetmap.org/#map=19/52.34321/6.64076">http://www.openstreetmap.org/#map=19/52.34321/6.64076</a> It’s an area operated by a club with different routes and trails on the premises.</p>
+<p>Hi Malenki, <a href="https://www.openstreetmap.org/#map=19/52.34321/6.64076">https://www.openstreetmap.org/#map=19/52.34321/6.64076</a> It’s an area operated by a club with different routes and trails on the premises.</p>
 </div>
 <div id="comment-45970-info" class="comment-info">
 <span class="comment-age">(17 Oct '15, 19:59)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -214,7 +214,7 @@ It would be helpful if you could provide a link or a name of the mapped and tagg
 <div id="post-45991-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I typed "bmx tracks" into osm search box and found a few here is one. <a href="http://www.openstreetmap.org/search?query=bmx%20track#map=18/32.16389/-110.79491">http://www.openstreetmap.org/search?query=bmx%20track#map=18/32.16389/-110.79491</a></p>
+<p>I typed "bmx tracks" into osm search box and found a few here is one. <a href="https://www.openstreetmap.org/search?query=bmx%20track#map=18/32.16389/-110.79491">https://www.openstreetmap.org/search?query=bmx%20track#map=18/32.16389/-110.79491</a></p>
 </div>
 <div id="comment-45991-info" class="comment-info">
 <span class="comment-age">(19 Oct '15, 14:39)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -225,7 +225,7 @@ It would be helpful if you could provide a link or a name of the mapped and tagg
 <div id="post-45992-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>or "bike track" a lot of those as well. <a href="http://www.openstreetmap.org/way/357034629#map=19/-31.47490/152.80032">http://www.openstreetmap.org/way/357034629#map=19/-31.47490/152.80032</a></p>
+<p>or "bike track" a lot of those as well. <a href="https://www.openstreetmap.org/way/357034629#map=19/-31.47490/152.80032">https://www.openstreetmap.org/way/357034629#map=19/-31.47490/152.80032</a></p>
 </div>
 <div id="comment-45992-info" class="comment-info">
 <span class="comment-age">(19 Oct '15, 14:46)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -236,7 +236,7 @@ It would be helpful if you could provide a link or a name of the mapped and tagg
 <div id="post-45993-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>or "mountain bike track" a lot of those too. one <a href="http://www.openstreetmap.org/way/200132126">http://www.openstreetmap.org/way/200132126</a></p>
+<p>or "mountain bike track" a lot of those too. one <a href="https://www.openstreetmap.org/way/200132126">https://www.openstreetmap.org/way/200132126</a></p>
 </div>
 <div id="comment-45993-info" class="comment-info">
 <span class="comment-age">(19 Oct '15, 14:49)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -290,7 +290,7 @@ It would be helpful if you could provide a link or a name of the mapped and tagg
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Hendricklass not sure if any of my alternative names in my comments fit what you are looking for. You could inspect the tags that have been used before and as you know taginfo will show how many others have used the tag before. <a href="http://wiki.openstreetmap.org/wiki/Taginfo">http://wiki.openstreetmap.org/wiki/Taginfo</a></p>
+<p>Hi Hendricklass not sure if any of my alternative names in my comments fit what you are looking for. You could inspect the tags that have been used before and as you know taginfo will show how many others have used the tag before. <a href="https://wiki.openstreetmap.org/wiki/Taginfo">https://wiki.openstreetmap.org/wiki/Taginfo</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -114,7 +114,7 @@ osqa_accepted = false
 <div id="post-49600-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12210/lagopede">@Lagopede</a> No, that's your OsmAnd version.</p>
+<p><a href="https://help.openstreetmap.org/users/12210/lagopede">@Lagopede</a> No, that's your OsmAnd version.</p>
 </div>
 <div id="comment-49600-info" class="comment-info">
 <span class="comment-age">(06 May '16, 16:25)</span> <span class="comment-user userinfo">scai ♦</span>

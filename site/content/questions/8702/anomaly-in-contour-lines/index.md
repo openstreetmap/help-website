@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/Contour_lines.png" alt="alt text" />Hello,</p>
+<p><img src="/upfiles/Contour_lines.png" alt="alt text" />Hello,</p>
 <p>When I make contour lines of mountainous areas, I get some anomalies in the contour lines. At places where the lines are very close, I get polygons. In attachment [1] you will find such a .osm-file.</p>
 <p>What is the reason of this anomaly, and how can I solve it?</p>
 <p>I make contour lines with srtm2osm (OS: Ubuntu 11.04). In order to make a .osm-file, I use following command (with variables): mono Srtm2Osm.exe -bounds1 $ZL $WL $NL $OL -step $ele_mi -cat $ele_ma $ele_me</p>

@@ -135,7 +135,7 @@ One Answer:
 <div id="post-74471-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Awesome, it is proper now (more or less as per wiki :)). Could you also check same for this? <a href="https://help.openstreetmap.org/questions/74470/bahrain-capital-governorate-polygon-issue">https://help.openstreetmap.org/questions/74470/bahrain-capital-governorate-polygon-issue</a></p>
+<p>Awesome, it is proper now (more or less as per wiki :)). Could you also check same for this? <a href="/questions/74470/bahrain-capital-governorate-polygon-issue">https://help.openstreetmap.org/questions/74470/bahrain-capital-governorate-polygon-issue</a></p>
 </div>
 <div id="comment-74471-info" class="comment-info">
 <span class="comment-age">(29 Apr '20, 11:14)</span> <span class="comment-user userinfo">alexzd89</span>

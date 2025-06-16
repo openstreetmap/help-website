@@ -106,8 +106,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>On the bollard wiki page it mentions a maxwidth tag and I think this is suitable to add to the bollard to advise the maximum width of any vehicle like disability scooters or bike trailers or recumbent bikes, etc that could fit through the restriction.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard</a></p>
-<p>maxwidth:physical would be good in addition to maxwidth to idicate it is a physical restriction instead of a legal restriction. <a href="http://wiki.openstreetmap.org/wiki/Key:maxwidth:physical">http://wiki.openstreetmap.org/wiki/Key:maxwidth:physical</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard</a></p>
+<p>maxwidth:physical would be good in addition to maxwidth to idicate it is a physical restriction instead of a legal restriction. <a href="https://wiki.openstreetmap.org/wiki/Key:maxwidth:physical">https://wiki.openstreetmap.org/wiki/Key:maxwidth:physical</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

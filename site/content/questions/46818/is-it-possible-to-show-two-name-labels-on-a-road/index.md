@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a first look in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a> ...</p>
+<p>Have a first look in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a> ...</p>
 <p>there is at least one example where names (of places) are displayed in native language and in English below.</p>
 <p>Try to get in contact to the maintainer of those server.</p>
 </div>

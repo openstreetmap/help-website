@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Search the wiki and the help for similar topics. You can get started on <a href="http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">this page</a></p>
+<p>Search the wiki and the help for similar topics. You can get started on <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">this page</a></p>
 <p>Doing a Google search for "building an openstreetmap server" will bring up a lot of links to some useful tutorials. One of the best sites for this is <a href="http://switch2osm.org/">switch2osm</a>.</p>
 <p>Good luck with your project.</p>
 </div>

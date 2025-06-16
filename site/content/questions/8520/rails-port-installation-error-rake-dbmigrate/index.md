@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I followed this tutorial to setup an osm server: <a href="http://www.hyperionreactor.net/blog/how-build-your-own-osm-server-part-1-postgis-and-mapnik">http://www.hyperionreactor.net/blog/how-build-your-own-osm-server-part-1-postgis-and-mapnik</a> I'm still trying to make mapnik generate me images, but other than that everything worked well. Meanwhile i started to follow the official The Rails Port tutorial and i almost finished. (<a href="http://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu">rails on ubuntu</a> and <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">rails port</a>) This is the command i'm stuck at:</p>
+<p>I followed this tutorial to setup an osm server: <a href="http://www.hyperionreactor.net/blog/how-build-your-own-osm-server-part-1-postgis-and-mapnik">http://www.hyperionreactor.net/blog/how-build-your-own-osm-server-part-1-postgis-and-mapnik</a> I'm still trying to make mapnik generate me images, but other than that everything worked well. Meanwhile i started to follow the official The Rails Port tutorial and i almost finished. (<a href="https://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu">rails on ubuntu</a> and <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">rails port</a>) This is the command i'm stuck at:</p>
 <pre><code>alexandru@alex-lap:~/.osm/rail_port/rails$ rake db:migrate
 rake/rdoctask is deprecated.  Use rdoc/task instead (in RDoc 2.4.2+)
 Please install RDoc 2.4.2+ to generate documentation.

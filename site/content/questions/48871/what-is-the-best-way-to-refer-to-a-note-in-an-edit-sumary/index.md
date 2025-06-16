@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I guess it will be hard to be clearer and easier than a direct link to the note, like:</p>
-<p><a href="http://www.openstreetmap.org/note/1000">http://www.openstreetmap.org/note/1000</a></p>
+<p><a href="https://www.openstreetmap.org/note/1000">https://www.openstreetmap.org/note/1000</a></p>
 <p>If that's too noisy you could do Note 1000, but then people reading have to go piece together the link.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -134,7 +134,7 @@ One Answer:
 <div id="post-48875-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Am I right to think that edit summaries do but support markdown? Ideally I'd link to it w/o having the entire link url displayed. For example "as per <a href="http://www.openstreetmap.org/note/1000">note 1000</a>..."</p>
+<p>Am I right to think that edit summaries do but support markdown? Ideally I'd link to it w/o having the entire link url displayed. For example "as per <a href="https://www.openstreetmap.org/note/1000">note 1000</a>..."</p>
 </div>
 <div id="comment-48875-info" class="comment-info">
 <span class="comment-age">(28 Mar '16, 02:55)</span> <span class="comment-user userinfo">keithonearth</span>

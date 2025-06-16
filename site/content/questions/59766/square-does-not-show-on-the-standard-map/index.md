@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Square does not show on the standard map"
-description = '''Hi, Here is a square: http://www.openstreetmap.org/way/364228190#map=19/38.83383/20.70892&amp;amp;layers=D (edited a few minutes ago, but it&#x27;s been there since yesterday alright.) The standard and humanitarian maps doesn&#x27;t show anything at all there. The cycle and transport maps do show some green, but ...'''
+description = '''Hi, Here is a square: https://www.openstreetmap.org/way/364228190#map=19/38.83383/20.70892&amp;amp;layers=D (edited a few minutes ago, but it&#x27;s been there since yesterday alright.) The standard and humanitarian maps doesn&#x27;t show anything at all there. The cycle and transport maps do show some green, but ...'''
 date = "2017-09-22T11:48:00Z"
 lastmod = "2017-09-25T12:46:00Z"
 weight = 59766
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>Here is a square:</p>
-<p><a href="http://www.openstreetmap.org/way/364228190#map=19/38.83383/20.70892&amp;layers=D">http://www.openstreetmap.org/way/364228190#map=19/38.83383/20.70892&amp;layers=D</a></p>
+<p><a href="https://www.openstreetmap.org/way/364228190#map=19/38.83383/20.70892&amp;layers=D">https://www.openstreetmap.org/way/364228190#map=19/38.83383/20.70892&amp;layers=D</a></p>
 <p>(edited a few minutes ago, but it's been there since yesterday alright.)</p>
 <p>The standard and humanitarian maps doesn't show anything at all there. The cycle and transport maps do show some green, but not the name.</p>
 <p>(AFAICS the nearby squares that do show on the map have been declared as parks.)</p>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Key:highway,">http://wiki.openstreetmap.org/wiki/Key:highway,</a> squares should be specified as <code>highway=pedestrian</code> and <code>area=yes</code>. The additional <code>place=square</code> is apparently more recent and does not suffice on its own.</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Key:highway,">https://wiki.openstreetmap.org/wiki/Key:highway,</a> squares should be specified as <code>highway=pedestrian</code> and <code>area=yes</code>. The additional <code>place=square</code> is apparently more recent and does not suffice on its own.</p>
 <p>When you select square on the ui (at least in the iD editor), it only sets <code>place=square</code>, so you must go add the other two as well.</p>
 </div>
 <div class="answer-controls post-controls">

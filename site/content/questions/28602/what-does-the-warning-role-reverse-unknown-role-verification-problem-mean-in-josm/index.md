@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I get the warning "role reverse unknown - role verification problem" in JOSM but I am not sure what the issue is. The only thing I can think of is that I split a way included in this relation so I could change the layer of a particular segment. The relation ID is <a href="http://www.openstreetmap.org/browse/relation/3160902">3160902</a>. The changeset that gave me the error is <a href="http://www.openstreetmap.org/browse/changeset/19178806">that one</a>.</p>
+<p>I get the warning "role reverse unknown - role verification problem" in JOSM but I am not sure what the issue is. The only thing I can think of is that I split a way included in this relation so I could change the layer of a particular segment. The relation ID is <a href="https://www.openstreetmap.org/browse/relation/3160902">3160902</a>. The changeset that gave me the error is <a href="https://www.openstreetmap.org/browse/changeset/19178806">that one</a>.</p>
 <p>Cheers!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The generic "role <em>something</em> unknown" error means that the relation contains members that have an unexpected role for the given relation type. In this case, josm doen't like the "reverse" role that some member ways have. Checking the wiki for the <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Members">route relation</a> hints that "backward" is the expected role instead of reverse. Go fix the relation :)</p>
+<p>The generic "role <em>something</em> unknown" error means that the relation contains members that have an unexpected role for the given relation type. In this case, josm doen't like the "reverse" role that some member ways have. Checking the wiki for the <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Members">route relation</a> hints that "backward" is the expected role instead of reverse. Go fix the relation :)</p>
 <p>Note that JOSM might warn you about errors that weren't caused by you, but you edit an object that already contained errors. Don't blame JOSM, blame the previous contributor :p</p>
 </div>
 <div class="answer-controls post-controls">

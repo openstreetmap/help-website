@@ -125,7 +125,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The OpenStreetMap WMS in JOSM doesn't seem to be working for me either, it just gives red squares with "Exception occured".</p>
-<p>Another option for using background maps in JOSM is the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/SlippyMap">SlippyMap plugin</a>. This also has the option of showing OSM Mapnik maps, and its working fine for me.</p>
+<p>Another option for using background maps in JOSM is the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/SlippyMap">SlippyMap plugin</a>. This also has the option of showing OSM Mapnik maps, and its working fine for me.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -176,7 +176,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The WMS plugin for JOSM supports a number of built-in WMS servers. None of them is called "OpenStreetMap WMS"; you are probably referring to either the Landsat WMS or the Yahoo WMS.</p>
-<p>If your problem is with the Yahoo WMS then you are probably missing the extra downloader software which is required for legal reasons. See <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/WMSPlugin">the Wiki</a> for details.</p>
+<p>If your problem is with the Yahoo WMS then you are probably missing the extra downloader software which is required for legal reasons. See <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/WMSPlugin">the Wiki</a> for details.</p>
 <p>If your problem is with the Landsat WMS then you are affected by a general overload problem with the Landsat server that many seem to have at the moment. One possible solution for this is to replace the Landsat URL in your JOSM configuration by <a href="http://irs.gis-lab.info/?layers=landsat&amp;">http://irs.gis-lab.info/?layers=landsat&amp;</a> which is a caching proxy that should work better.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -228,7 +228,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>JOSM spews a lot of information to the command console window if you run it that way. This includes the exact WMS URLs being requested, and possibly useful error messages as you get the red Exception tiles.</p>
-<p>If you're not seeing the command window, you could try running/<a href="http://wiki.openstreetmap.org/wiki/JOSM/Installation">installing JOSM</a> differently so that you see this. For example on windows you could <a href="http://wiki.openstreetmap.org/wiki/JOSM/Windows#.bat_file">make a bat file to run it from</a>.</p>
+<p>If you're not seeing the command window, you could try running/<a href="https://wiki.openstreetmap.org/wiki/JOSM/Installation">installing JOSM</a> differently so that you see this. For example on windows you could <a href="https://wiki.openstreetmap.org/wiki/JOSM/Windows#.bat_file">make a bat file to run it from</a>.</p>
 <p>This might help you diagnose the problem (<em>might</em>)</p>
 <p>There is an open <a href="http://josm.openstreetmap.de/ticket/3916">enhancement request to improve the error display</a></p>
 </div>

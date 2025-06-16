@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I'm mapping in northern Thailand and have come across this problem frequently as of late. Back before there was high resolution imagery available for this region many OSM mappers drew large contiguous blocks of forest using only very low-res imagery as a guide. They created them as multipolygons to allow for the eventual addition of unwooded areas.</p>
 <p>Now, there is high quality aerial photography that reveals the truth of the situation -- the wooded areas are anything but contiguous. The multipolygons often need to be drastically altered or redrawn to allow for river valleys, cities, and areas of intense agriculture that are not wooded and were previously not discernible. The particular case I'm asking about can be seen in the link below. I want to split the section of wood situated just north of the Kok River off the big multipolygon but am unsure how to proceed.</p>
-<p><a href="http://www.openstreetmap.org/#map=14/20.0538/99.5079&amp;layers=N">http://www.openstreetmap.org/#map=14/20.0538/99.5079&amp;layers=N</a></p>
+<p><a href="https://www.openstreetmap.org/#map=14/20.0538/99.5079&amp;layers=N">https://www.openstreetmap.org/#map=14/20.0538/99.5079&amp;layers=N</a></p>
 <p>The white area is already an inner polygon, Way: 187645495, while the most outer one is AFAIK, Relation 1,999,865, a monster multipolygon that covers a huge area. I'm unsure how to proceed because I want the wooded area to remain as such but I would like to show that it is, in reality, an isolated wooded area north of the river.</p>
 <p>I have mucked about with these things before and after suffering through having to hand fix dozens of conflicts, I'm a bit gun shy.</p>
 <p>Thanks for your help...</p>

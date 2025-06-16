@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>The article <a href="https://wiki.openstreetmap.org/wiki/Notes#Resolving_notes">https://wiki.openstreetmap.org/wiki/Notes#Resolving_notes</a> says "Resolved notes are not removed or deleted. After a period of seven days they are hidden from view.". But how can we view hidden notes? I did not find it. Thanks.</p>
-<p>Update: In related questions, I just saw an answer mentioning the RSS feed <a href="http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude">http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude</a> on <a href="https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes">https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes</a> but it does not show hidden notes. Maybe there is an additional parameter that needs to be used.</p>
+<p>Update: In related questions, I just saw an answer mentioning the RSS feed <a href="http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude">http://api.openstreetmap.org/api/0.6/notes/feed?bbox=smaller_longitude,smaller_latitude,larger_longitude,larger_latitude</a> on <a href="/questions/25795/is-there-an-rss-feed-for-map-notes">https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes</a> but it does not show hidden notes. Maybe there is an additional parameter that needs to be used.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-notes" rel="tag" title="see questions tagged &#39;notes&#39;">notes</span> <span class="post-tag tag-link-rss" rel="tag" title="see questions tagged &#39;rss&#39;">rss</span>
@@ -244,7 +244,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>With <strong>JOSM</strong> you can easily download notes as you wish, even all closed notes, no matter how long ago they were closed.</p>
 <p>To set JOSM to download notes according to your needs, you have to go to <strong>preferences (F12)</strong>, enable the <strong>Expert Mode</strong> if you haven't it enabled, click on the <strong>Advanced Preferences</strong> tab and seach for <em>notes</em>, as shown in this image:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/notesJOSMpreferencesChangeClosedNotesKeys2_cxU0YHj.png" alt="alt text" /></p>
+<p><img src="/upfiles/notesJOSMpreferencesChangeClosedNotesKeys2_cxU0YHj.png" alt="alt text" /></p>
 <p>There, you will have several notes settings. For what you are asking, the two keys you are interested in are <strong>osm.notes.daysClosed</strong> and <strong>osm.notes.downloadLimit</strong>.</p>
 <p><strong>osm.notes.daysClosed</strong>: This key lets you specify how many days closed notes should be downloaded. <strong>Default is 7</strong>, that means that JOSM would download all notes that were closed during the last 7 days. It will add, obviously, all open notes.</p>
 <p>You can change that value to any other number. If you want <strong>only open notes</strong> to be downloaded, you will set it to <strong>0</strong>. And for what you are interested, if you want to <strong>download all notes, open or closed</strong>, whatever the time they were closed, you should set the value to <strong>-1</strong>.</p>

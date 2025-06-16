@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can continue the footways up to the building and connect both if this position corresponds to an entrance. In that case you should also add an <a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a> tag, for example <em>entrance=main</em> if this resembles the main entrance of the building or just <em>entrance=yes</em> if not or you are unsure about it. For main entrances it is even useful to move the address to the entrance node so that routers can lead you directly to the main entrance of the building.</p>
+<p>You can continue the footways up to the building and connect both if this position corresponds to an entrance. In that case you should also add an <a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a> tag, for example <em>entrance=main</em> if this resembles the main entrance of the building or just <em>entrance=yes</em> if not or you are unsure about it. For main entrances it is even useful to move the address to the entrance node so that routers can lead you directly to the main entrance of the building.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

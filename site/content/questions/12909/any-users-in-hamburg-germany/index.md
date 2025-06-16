@@ -137,7 +137,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>... or with a direct link: <a href="http://wiki.openstreetmap.org/wiki/Hamburger_Mappertreffen">http://wiki.openstreetmap.org/wiki/Hamburger_Mappertreffen</a></p>
+<p>... or with a direct link: <a href="https://wiki.openstreetmap.org/wiki/Hamburger_Mappertreffen">https://wiki.openstreetmap.org/wiki/Hamburger_Mappertreffen</a></p>
 </div>
 <div id="comment-12914-info" class="comment-info">
 <span class="comment-age">(23 May '12, 19:46)</span> <span class="comment-user userinfo">stephan75</span>

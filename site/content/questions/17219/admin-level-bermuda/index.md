@@ -62,7 +62,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Link to OSM: <a href="http://www.openstreetmap.org/?lat=32.3209&amp;lon=-64.7594&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=32.3209&amp;lon=-64.7594&amp;zoom=12&amp;layers=M</a></p>
+<p>Link to OSM: <a href="https://www.openstreetmap.org/?lat=32.3209&amp;lon=-64.7594&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=32.3209&amp;lon=-64.7594&amp;zoom=12&amp;layers=M</a></p>
 </div>
 <div id="comment-17220-info" class="comment-info">
 <span class="comment-age">(27 Oct '12, 12:52)</span> <span class="comment-user userinfo">hno2</span>
@@ -166,7 +166,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That depends on what a parish is. In UK parishes have admin_level=10, but in Louisiana parishes are admin_level=6. Take a look at <a href="http://wiki.openstreetmap.org/wiki/Admin_level">the wiki</a> for a table of different values in different countries.</p>
+<p>That depends on what a parish is. In UK parishes have admin_level=10, but in Louisiana parishes are admin_level=6. Take a look at <a href="https://wiki.openstreetmap.org/wiki/Admin_level">the wiki</a> for a table of different values in different countries.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

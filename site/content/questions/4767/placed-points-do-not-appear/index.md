@@ -111,12 +111,12 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Example links:</p>
-<p><a href="http://www.openstreetmap.org/browse/node/1239505123">http://www.openstreetmap.org/browse/node/1239505123</a></p>
-<p><a href="http://www.openstreetmap.org/browse/node/1239502874">http://www.openstreetmap.org/browse/node/1239502874</a></p>
-<p><a href="http://www.openstreetmap.org/browse/node/1239497809">http://www.openstreetmap.org/browse/node/1239497809</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/1239505123">https://www.openstreetmap.org/browse/node/1239505123</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/1239502874">https://www.openstreetmap.org/browse/node/1239502874</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/1239497809">https://www.openstreetmap.org/browse/node/1239497809</a></p>
 <p>A first observation: You have used historic = ruin instead of historic = ruins</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:historic">http://wiki.openstreetmap.org/wiki/Key:historic</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Druins">http://wiki.openstreetmap.org/wiki/Tag:historic%3Druins</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:historic">https://wiki.openstreetmap.org/wiki/Key:historic</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Druins">https://wiki.openstreetmap.org/wiki/Tag:historic%3Druins</a></p>
 <p>Also, not every feature is visible in every kind of map. What is invisible in Mapnik may show up in Osmarender.</p>
 </div>
 <div class="answer-controls post-controls">

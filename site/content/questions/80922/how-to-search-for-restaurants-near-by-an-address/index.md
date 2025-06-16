@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Here I asked for a near by search for restaurants around a node or town: <a href="https://help.openstreetmap.org/questions/80912/search-for-restaurants-around-a-distance">https://help.openstreetmap.org/questions/80912/search-for-restaurants-around-a-distance</a></p>
+<p>Here I asked for a near by search for restaurants around a node or town: <a href="/questions/80912/search-for-restaurants-around-a-distance">https://help.openstreetmap.org/questions/80912/search-for-restaurants-around-a-distance</a></p>
 <p>Now it would be helpful to perform the same search for an concrete address.</p>
 <p>E. g. let's say all restaurants around a disctance of 1000 Meters "Platz der Republik 1, Berlin" (maybe also with zip code)</p>
 <p>Would it be possible to build an address-replaceable query for that task?</p>

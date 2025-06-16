@@ -49,21 +49,21 @@ osqa_accepted = false
 <li>Max size 400x400</li>
 <li>svg format (jpg -at least- for smaller filesize compared to png)</li>
 </ul>
-<p>A <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">static map image</a> seems not to be an option because the services that may provide it either:</p>
+<p>A <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">static map image</a> seems not to be an option because the services that may provide it either:</p>
 <ul>
 <li>Are not free after a number of requests</li>
 <li>Do not provide svg or jpg formats</li>
 <li>Do not provide a marker</li>
 </ul>
 <p>The most realistic idea might be to create the images on my server(s)(or home box somehow) with a call to a script, for the first time, and then serve the created file while keep runing a task of updating the older images.</p>
-<p>Searching around for such a setup, I find that I have to use <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> on a <a href="http://wiki.openstreetmap.org/wiki/PostGIS/Installation">postgis</a> installation.</p>
+<p>Searching around for such a setup, I find that I have to use <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> on a <a href="https://wiki.openstreetmap.org/wiki/PostGIS/Installation">postgis</a> installation.</p>
 <p>Supposing that svg is the prefered format due to its quality of display on retina images:</p>
 <ul>
 <li>Is there a simpler or more capable solution for this task?</li>
 </ul>
 <p>If not, I have scatterly read the following issues for svg images and mapnik:</p>
 <ul>
-<li>Mapnik may produce <a href="http://wiki.openstreetmap.org/wiki/SVG">clunky svg files (on a cairo surface)</a>.</li>
+<li>Mapnik may produce <a href="https://wiki.openstreetmap.org/wiki/SVG">clunky svg files (on a cairo surface)</a>.</li>
 <li>An svg image may not include the road names.</li>
 </ul>
 <p>Are the above difficult to resolve on a self-hosted setup?</p>

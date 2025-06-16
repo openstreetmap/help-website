@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This previous question may assist you...<br />
-<a href="https://help.openstreetmap.org/questions/32622/how-to-use-open-street-map-with-gps-tracking-system">https://help.openstreetmap.org/questions/32622/how-to-use-open-street-map-with-gps-tracking-system</a></p>
+<a href="/questions/32622/how-to-use-open-street-map-with-gps-tracking-system">https://help.openstreetmap.org/questions/32622/how-to-use-open-street-map-with-gps-tracking-system</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

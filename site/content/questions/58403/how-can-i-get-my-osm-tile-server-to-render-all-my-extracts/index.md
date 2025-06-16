@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can't merge extracts directly with osm2pgsql, you will need to do that pre-import for example with <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>.</p>
+<p>You can't merge extracts directly with osm2pgsql, you will need to do that pre-import for example with <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>.</p>
 <p>Note this is a FAQ and you can find lots of answers on the topic on this site.</p>
 </div>
 <div class="answer-controls post-controls">

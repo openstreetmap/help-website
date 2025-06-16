@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-9657-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>you may know that garmins use there own form of vector format maps,you can get openstreetmap on it <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> although the newer garmins such as the origon can, I believe, display a jpeg. I do not have an origon but it may display a garmin nuvi road map. as the garmin 1310 will display OSM maybe the reverse is true</p>
+<p>you may know that garmins use there own form of vector format maps,you can get openstreetmap on it <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> although the newer garmins such as the origon can, I believe, display a jpeg. I do not have an origon but it may display a garmin nuvi road map. as the garmin 1310 will display OSM maybe the reverse is true</p>
 </div>
 <div id="comment-9657-info" class="comment-info">
 <span class="comment-age">(28 Dec '11, 13:22)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -118,8 +118,8 @@ One Answer:
 <div class="answer-body">
 <p>I'd be surprised if you could. My recollection (someone please correct me if I'm wrong!) is that the Medion devices run their own software, on top of Windows Mobile.<br />
 </p>
-<p>There's a bit of info in <a href="http://wiki.openstreetmap.org/wiki/Medion">the OSM wiki</a>, but that's concerned with recording tracks using them. There's also <a href="http://wiki.openstreetmap.org/wiki/PSF">this page</a>, which suggests that you can't easily get stuff into and out of PSF format, and there's also <a href="http://forum.openstreetmap.org/viewtopic.php?id=4056">this page on the forum from 2009</a>.</p>
-<p>However, getting OSM maps (including routable ones) onto a Garmin Oregon should be relatively straightforward - at least the vector format produced by the likes of <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> that also supports earlier Garmin devices. See the "download" and "creating your own maps" links on <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">this page</a>.</p>
+<p>There's a bit of info in <a href="https://wiki.openstreetmap.org/wiki/Medion">the OSM wiki</a>, but that's concerned with recording tracks using them. There's also <a href="https://wiki.openstreetmap.org/wiki/PSF">this page</a>, which suggests that you can't easily get stuff into and out of PSF format, and there's also <a href="http://forum.openstreetmap.org/viewtopic.php?id=4056">this page on the forum from 2009</a>.</p>
+<p>However, getting OSM maps (including routable ones) onto a Garmin Oregon should be relatively straightforward - at least the vector format produced by the likes of <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> that also supports earlier Garmin devices. See the "download" and "creating your own maps" links on <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">this page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ One Answer:
 <p>It's worth drawing a distinction between "data" and "maps" here I think.<br />
 </p>
 <p>In the case of Navteq, the data that is used to create maps for different devices is theirs (or licensed by them from third parties such as government agencies). The maps themselves that are produced from this data may be totally different (different format, and also different things shown on the map).</p>
-<p>In the case of OSM the data is a large XML file representing the entire planet (for which more easily downloadable extracts are available) but many different people create many different maps. There are some answers <a href="http://help.openstreetmap.org/questions/4006/why-does-an-osm-map-on-my-garmin-look-different-to-the-web-site">here</a> explaining why different maps based on OSM data look different.</p>
+<p>In the case of OSM the data is a large XML file representing the entire planet (for which more easily downloadable extracts are available) but many different people create many different maps. There are some answers <a href="/questions/4006/why-does-an-osm-map-on-my-garmin-look-different-to-the-web-site">here</a> explaining why different maps based on OSM data look different.</p>
 <p>To make a beer analogy - some of the ingredients that go into making either a light-coloured lager or a dark porter will be identical, but the end products will look and taste very different.</p>
 </div>
 <div id="comment-9656-info" class="comment-info">

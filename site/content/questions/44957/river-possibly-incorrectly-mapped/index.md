@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Williamp, Read the beginners pages <a href="http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks,">http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks,</a> as well as <a href="http://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data">http://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data</a> and walk the trail another time with a close look at the river valley to collect more traces.</p>
+<p>Hi Williamp, Read the beginners pages <a href="https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks,">https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks,</a> as well as <a href="https://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data">https://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data</a> and walk the trail another time with a close look at the river valley to collect more traces.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -217,7 +217,7 @@ osqa_accepted = false
 <div id="post-45008-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Perhaps a good way to map a dry steam is to hike it when it is dry, the erosion may make the line obvious. See also <a href="https://help.openstreetmap.org/questions/4437/how-do-you-tag-a-dry-creek">https://help.openstreetmap.org/questions/4437/how-do-you-tag-a-dry-creek</a></p>
+<p>Perhaps a good way to map a dry steam is to hike it when it is dry, the erosion may make the line obvious. See also <a href="/questions/4437/how-do-you-tag-a-dry-creek">https://help.openstreetmap.org/questions/4437/how-do-you-tag-a-dry-creek</a></p>
 </div>
 <div id="comment-45008-info" class="comment-info">
 <span class="comment-age">(01 Sep '15, 09:22)</span> <span class="comment-user userinfo">andy mackey</span>

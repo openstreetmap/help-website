@@ -108,8 +108,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A way tagged as bicycle=yes means a bicycle is legally allowed to travel along it. This is used for various types of roads and paths. Note most types of roads allow bicycles by default, it is not necessary to explicitly tag them with bicycle=yes. See the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a>.</p>
-<p>Also, just because a road is tagged as bicycle=yes, it may not be a nice road for cycling. eg it may be very busy, without any cycle lanes. Cycle lanes can be tagged with <a href="http://wiki.openstreetmap.org/wiki/Key:cycleway">cycleway=lane</a> Or a path tagged as bicycle=yes might be very rough, only suitable for mountain bikes. This can be tagged with surface, smoothness, or mtb:scale.</p>
+<p>A way tagged as bicycle=yes means a bicycle is legally allowed to travel along it. This is used for various types of roads and paths. Note most types of roads allow bicycles by default, it is not necessary to explicitly tag them with bicycle=yes. See the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a>.</p>
+<p>Also, just because a road is tagged as bicycle=yes, it may not be a nice road for cycling. eg it may be very busy, without any cycle lanes. Cycle lanes can be tagged with <a href="https://wiki.openstreetmap.org/wiki/Key:cycleway">cycleway=lane</a> Or a path tagged as bicycle=yes might be very rough, only suitable for mountain bikes. This can be tagged with surface, smoothness, or mtb:scale.</p>
 <p>Whereas cycle routes are mapped using relations, tagged as type=route and route=bicycle. A cycle route may include a variety of different roads and paths, and is usually signposted in some way, it may go to a specific destination. The route may have a name or number, and is often part of a wider network.</p>
 </div>
 <div class="answer-controls post-controls">

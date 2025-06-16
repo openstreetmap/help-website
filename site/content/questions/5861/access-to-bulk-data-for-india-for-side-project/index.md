@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use the <a href="http://wiki.openstreetmap.org/wiki/planet.osm">planet file</a>, or extracts thereof. The planet file contains all data, and you can use programs like <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to retrieve parts of it.</p>
+<p>Use the <a href="https://wiki.openstreetmap.org/wiki/planet.osm">planet file</a>, or extracts thereof. The planet file contains all data, and you can use programs like <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to retrieve parts of it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

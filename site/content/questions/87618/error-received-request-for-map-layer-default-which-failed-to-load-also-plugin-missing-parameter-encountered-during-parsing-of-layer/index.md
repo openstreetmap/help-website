@@ -77,7 +77,7 @@ osqa_accepted = false
     &lt;/Datasource&gt;</code></pre>
 <p>I'v debugged and I've looked everywhere online and can't find an answer that could guide me in the right direction.</p>
 <p>Could anyone help?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/error_goKC3DZ.png" alt="alt text" /></p>
+<p><img src="/upfiles/error_goKC3DZ.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-landcover" rel="tag" title="see questions tagged &#39;landcover&#39;">landcover</span> <span class="post-tag tag-link-switch2osm" rel="tag" title="see questions tagged &#39;switch2osm&#39;">switch2osm</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-tileserver" rel="tag" title="see questions tagged &#39;tileserver&#39;">tileserver</span>

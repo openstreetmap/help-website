@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There is a bicycle/pedestrian roundabout here: <a href="http://osm.org/go/0EumgXv94">http://osm.org/go/0EumgXv94</a>. It is mapped as <code>highway:cycleway</code>, and I've added <code>foot:designated</code> to it. It was correctly marked <code>oneway:yes</code> (for bicycles). I want to tag it as non-one way for pedestrians. What is the correct way to do it? Here — <a href="http://wiki.openstreetmap.org/wiki/Key:oneway">http://wiki.openstreetmap.org/wiki/Key:oneway</a> — I see that I can add exceptions. However I am stuck at the word choice: should it be <code>oneway:</code>pedestrian or pedestrians<code>=no</code>?</p>
+<p>There is a bicycle/pedestrian roundabout here: <a href="http://osm.org/go/0EumgXv94">http://osm.org/go/0EumgXv94</a>. It is mapped as <code>highway:cycleway</code>, and I've added <code>foot:designated</code> to it. It was correctly marked <code>oneway:yes</code> (for bicycles). I want to tag it as non-one way for pedestrians. What is the correct way to do it? Here — <a href="https://wiki.openstreetmap.org/wiki/Key:oneway">https://wiki.openstreetmap.org/wiki/Key:oneway</a> — I see that I can add exceptions. However I am stuck at the word choice: should it be <code>oneway:</code>pedestrian or pedestrians<code>=no</code>?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-exceptions" rel="tag" title="see questions tagged &#39;exceptions&#39;">exceptions</span> <span class="post-tag tag-link-pedestrian" rel="tag" title="see questions tagged &#39;pedestrian&#39;">pedestrian</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-oneway" rel="tag" title="see questions tagged &#39;oneway&#39;">oneway</span>
@@ -147,7 +147,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>It is mentioned in the <a href="http://wiki.openstreetmap.org/wiki/Key:oneway#Translation_for_routing">section for data consumers</a> on the Key:access page, for example. There it effectively states that (except on paths that are exclusively for pedestrians) oneway restrictions only apply to vehicles.</p>
+<p>It is mentioned in the <a href="https://wiki.openstreetmap.org/wiki/Key:oneway#Translation_for_routing">section for data consumers</a> on the Key:access page, for example. There it effectively states that (except on paths that are exclusively for pedestrians) oneway restrictions only apply to vehicles.</p>
 </div>
 <div id="comment-36387-info" class="comment-info">
 <span class="comment-age">(29 Aug '14, 23:56)</span> <span class="comment-user userinfo">Tordanik</span>

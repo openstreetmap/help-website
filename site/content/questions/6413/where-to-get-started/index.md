@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are happy with Google Maps and just want to use <a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">OpenStreetMap on Google Maps</a> this is the easy solution. Most OpenStreetMaps projects are however using the open source alternative <a href="http://www.openlayers.org/">OpenLayers</a>.</p>
+<p>If you are happy with Google Maps and just want to use <a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">OpenStreetMap on Google Maps</a> this is the easy solution. Most OpenStreetMaps projects are however using the open source alternative <a href="http://www.openlayers.org/">OpenLayers</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

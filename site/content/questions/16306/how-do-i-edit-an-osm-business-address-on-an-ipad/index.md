@@ -91,7 +91,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>But which app are you using? There are several: <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
+<p>But which app are you using? There are several: <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">https://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
 </div>
 <div id="comment-16314-info" class="comment-info">
 <span class="comment-age">(21 Sep '12, 17:25)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -167,7 +167,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tags for adding addresses are described on <a href="http://wiki.openstreetmap.org/wiki/Addr">this Wiki page</a>.</p>
+<p>The tags for adding addresses are described on <a href="https://wiki.openstreetmap.org/wiki/Addr">this Wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

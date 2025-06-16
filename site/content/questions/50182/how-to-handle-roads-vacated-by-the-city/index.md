@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to handle roads vacated by the city?"
-description = '''It&#x27;s not uncommon in St. Louis, MO for the city to vacate the public surface rights of a city street and grant use to a private organization. One such example can be seen at Indiana Ave between Potomac and Miami: http://www.openstreetmap.org/?mlat=38.59053&amp;amp;mlon=-90.22482#map=17/38.59053/-90.2248...'''
+description = '''It&#x27;s not uncommon in St. Louis, MO for the city to vacate the public surface rights of a city street and grant use to a private organization. One such example can be seen at Indiana Ave between Potomac and Miami: https://www.openstreetmap.org/?mlat=38.59053&amp;amp;mlon=-90.22482#map=17/38.59053/-90.2248...'''
 date = "2016-06-13T19:12:00Z"
 lastmod = "2016-06-17T18:16:00Z"
 weight = 50182
@@ -40,10 +40,10 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>It's not uncommon in St. Louis, MO for the city to vacate the public surface rights of a city street and grant use to a private organization. One such example can be seen at Indiana Ave between Potomac and Miami:</p>
-<p><a href="http://www.openstreetmap.org/?mlat=38.59053&amp;mlon=-90.22482#map=17/38.59053/-90.22482&amp;layers=N">http://www.openstreetmap.org/?mlat=38.59053&amp;mlon=-90.22482#map=17/38.59053/-90.22482&amp;layers=N</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=38.59053&amp;mlon=-90.22482#map=17/38.59053/-90.22482&amp;layers=N">https://www.openstreetmap.org/?mlat=38.59053&amp;mlon=-90.22482#map=17/38.59053/-90.22482&amp;layers=N</a></p>
 <p>A fence now stands at both ends of the block. I could simply mark these streets "private," but, while a street nominally still exists at this location, there's no longer actually any type of traffic on it (private or otherwise). In addition, the organization that's been given use is now free to do whatever they want with it. There are many other instances in the city where the street is turned into green space or has a structure erected upon it. In any case, it's unlikely that this will ever again be a part of the street grid.</p>
 <p>Should I remove these altogether? Tag them as private? Any other ideas? I recently tagged a group of such streets at another site as <code>access=no</code> but I wanted to check for some consensus before I move forward with any others. You can see those changes here:</p>
-<p><a href="http://www.openstreetmap.org/changeset/39914456">http://www.openstreetmap.org/changeset/39914456</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/39914456">https://www.openstreetmap.org/changeset/39914456</a></p>
 <p>For the curious, here is the board bill that vacated the street in my first example (PDF):</p>
 <p><a href="https://www.stlouis-mo.gov/internal-apps/legislative/upload/Ordinances/BOAPdf/66263x00.pdf">https://www.stlouis-mo.gov/internal-apps/legislative/upload/Ordinances/BOAPdf/66263x00.pdf</a></p>
 <p>I wonder, tangentially, if any of you have seen this sort of thing in other cities. I imagine it must be common in other places that have seen similar population losses.</p>
@@ -154,7 +154,7 @@ osqa_accepted = true
 <div id="post-50187-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5918/stf">@stf</a>: but if it IS (use and look) not a street (for anybody), like lwburk tells, why tag it as street?</p>
+<p><a href="https://help.openstreetmap.org/users/5918/stf">@stf</a>: but if it IS (use and look) not a street (for anybody), like lwburk tells, why tag it as street?</p>
 </div>
 <div id="comment-50187-info" class="comment-info">
 <span class="comment-age">(13 Jun '16, 23:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

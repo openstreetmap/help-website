@@ -121,7 +121,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You don't say what library or other software you're using to display the map. Controlling the placement will be a function of that library.</p>
-<p>However, <a href="http://www.openstreetmap.org/copyright">it is a legal requirement that you credit OpenStreetMap</a>, and OSM says that "For a browsable electronic map, the credit should appear in the corner of the map" - not hidden away on a credits page somewhere. Be fair, it's not exactly much to ask for giving you the best free map of the world without any advertising, is it?</p>
+<p>However, <a href="https://www.openstreetmap.org/copyright">it is a legal requirement that you credit OpenStreetMap</a>, and OSM says that "For a browsable electronic map, the credit should appear in the corner of the map" - not hidden away on a credits page somewhere. Be fair, it's not exactly much to ask for giving you the best free map of the world without any advertising, is it?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

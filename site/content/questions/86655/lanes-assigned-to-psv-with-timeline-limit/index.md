@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I would like to describe a highway that has 6 lanes and 3 most-left are assigned to buses and taxis on weekdays and Sat. (at a specific times) but any other vehicles are allowed at other times.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2023-02-09_144422.png" alt="conditional lanes" /></p>
+<p><img src="/upfiles/Screenshot_2023-02-09_144422.png" alt="conditional lanes" /></p>
 <p>I tried this keys/values combination</p>
 <pre><code>highway=secondary  
 lanes=6

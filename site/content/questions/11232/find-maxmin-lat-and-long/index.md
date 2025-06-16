@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a wiki page that explains this with lots of examples in different programming languages: <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a></p>
+<p>There's a wiki page that explains this with lots of examples in different programming languages: <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

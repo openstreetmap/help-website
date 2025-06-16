@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-47473-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> no not this, i need the code behind those exe's to which am sending the query.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> no not this, i need the code behind those exe's to which am sending the query.</p>
 </div>
 <div id="comment-47473-info" class="comment-info">
 <span class="comment-age">(12 Jan '16, 11:48)</span> <span class="comment-user userinfo">Arun Gowtham</span>
@@ -120,7 +120,7 @@ osqa_accepted = false
 <div id="post-47487-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> am not facing any issue,i just wanted to know how interpreter is processing my input i.e how is my query executed on a directory($DB_DIR) rather than a database !!</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> am not facing any issue,i just wanted to know how interpreter is processing my input i.e how is my query executed on a directory($DB_DIR) rather than a database !!</p>
 </div>
 <div id="comment-47487-info" class="comment-info">
 <span class="comment-age">(13 Jan '16, 03:57)</span> <span class="comment-user userinfo">Arun Gowtham</span>
@@ -131,7 +131,7 @@ osqa_accepted = false
 <div id="post-47492-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For high level introduction I recommend to take a look at the following Wiki page: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Technical_details">http://wiki.openstreetmap.org/wiki/Overpass_API/Technical_details</a></p>
+<p>For high level introduction I recommend to take a look at the following Wiki page: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Technical_details">https://wiki.openstreetmap.org/wiki/Overpass_API/Technical_details</a></p>
 </div>
 <div id="comment-47492-info" class="comment-info">
 <span class="comment-age">(13 Jan '16, 14:40)</span> <span class="comment-user userinfo">mmd</span>

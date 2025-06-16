@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is used for areas tagged as <code>leisure=nature_reserve</code>. The OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve">wiki</a> follows wikipedia and states:</p>
+<p>This is used for areas tagged as <code>leisure=nature_reserve</code>. The OpenStreetMap <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve">wiki</a> follows wikipedia and states:</p>
 <p>A nature reserve is a protected area of importance for wildlife, flora, fauna or features of geological or other special interest, which is reserved and managed for conservation and to provide special opportunities for study or research. Nature reserves may be designated by government institutions in some countries, or by private landowners, such as charities and research institutions.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -208,8 +208,8 @@ osqa_accepted = false
 <p>a green NR is the indication for <span><code>leisure=nature_reserve</code></span> by our default "mapnik" map style.</p>
 <p>Examples (as in our data as of 2013-11-20):</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/relation/1453306">Yellowstone National Park</a> has those NR everywhere because it is tagged as a "nature reserve".</li>
-<li><a href="http://www.openstreetmap.org/browse/relation/1492555">Grand Teton National Park</a> is not tagged as "nature reserve" and so has no "NR"s.</li>
+<li><a href="https://www.openstreetmap.org/browse/relation/1453306">Yellowstone National Park</a> has those NR everywhere because it is tagged as a "nature reserve".</li>
+<li><a href="https://www.openstreetmap.org/browse/relation/1492555">Grand Teton National Park</a> is not tagged as "nature reserve" and so has no "NR"s.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

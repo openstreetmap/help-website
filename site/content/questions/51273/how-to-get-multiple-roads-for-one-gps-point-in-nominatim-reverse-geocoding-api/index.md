@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim is the wrong tool for querying specific information from OSM. Nominatim is a geocoder and designed to transform addresses into coordinates and coordinates back into addresses.</p>
-<p>If you want to build a routing engine then better start working with offline data. If you still need to qeury for specific data then take a look at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> and the <a href="https://overpass-turbo.eu">overpass-turbo</a> frontend. These tools are very powerful and a lot better suited for your task.</p>
+<p>If you want to build a routing engine then better start working with offline data. If you still need to qeury for specific data then take a look at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> and the <a href="https://overpass-turbo.eu">overpass-turbo</a> frontend. These tools are very powerful and a lot better suited for your task.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

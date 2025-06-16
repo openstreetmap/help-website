@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a .osm file that contains the list of highways. How do i parse it so that it'll get the nodes so i can use it for my djikstra algorithm which computes the shortest path? I have followed the answer <a href="https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">here</a>. The problem is i don't know what command should i use in the osmfilter in step 2. I checked the Osmfilter wiki site and it does not tell me how to split the way into two edges. I'm lost on what to put the command so i can parse only the road nodes for routing purposes.</p>
+<p>I have a .osm file that contains the list of highways. How do i parse it so that it'll get the nodes so i can use it for my djikstra algorithm which computes the shortest path? I have followed the answer <a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">here</a>. The problem is i don't know what command should i use in the osmfilter in step 2. I checked the Osmfilter wiki site and it does not tell me how to split the way into two edges. I'm lost on what to put the command so i can parse only the road nodes for routing purposes.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osmfilter" rel="tag" title="see questions tagged &#39;osmfilter&#39;">osmfilter</span> <span class="post-tag tag-link-.osm" rel="tag" title="see questions tagged &#39;.osm&#39;">.osm</span> <span class="post-tag tag-link-parsing" rel="tag" title="see questions tagged &#39;parsing&#39;">parsing</span>
@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation/19214">described algorithm</a> is completely independent from osmfilter. You have to implement it in <em>your</em> application. It describes the things you have to do while parsing an OSM file in order to construct a graph representation <em>inside your</em> application.</p>
+<p>The <a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation/19214">described algorithm</a> is completely independent from osmfilter. You have to implement it in <em>your</em> application. It describes the things you have to do while parsing an OSM file in order to construct a graph representation <em>inside your</em> application.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

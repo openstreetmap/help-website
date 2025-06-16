@@ -68,7 +68,7 @@ osqa_accepted = false
 6
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
+<p><a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
 </div>
 <div id="comment-23558-info" class="comment-info">
 <span class="comment-age">(20 Jun '13, 13:45)</span> <span class="comment-user userinfo">cartinus</span>

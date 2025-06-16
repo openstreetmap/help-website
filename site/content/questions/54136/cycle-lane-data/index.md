@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><a href="http://overpass-turbo.eu/s/lkA">This Overpass query</a> will return most cycle lanes in a bounding box. It gets all ways with the cycleway key, then removes anything that is cycleway=no.</p>
-<p>From the <a href="http://wiki.openstreetmap.org/wiki/Key:cycleway">cycleway wiki page</a>, it looks like some other keys, like cycleway:left and cycleway:right may be used. If you haven't, look through all the tagging on that page and see if you want all of them or just a certain selection.</p>
+<p>From the <a href="https://wiki.openstreetmap.org/wiki/Key:cycleway">cycleway wiki page</a>, it looks like some other keys, like cycleway:left and cycleway:right may be used. If you haven't, look through all the tagging on that page and see if you want all of them or just a certain selection.</p>
 <p>You could also expand this query to include relations.</p>
 </div>
 <div class="answer-controls post-controls">

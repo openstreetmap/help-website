@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>. It is a software for geocoding and reverse geocoding in either xml or json formats. You can run your own instance or use the instances at OpenStreetMap or MapQuest depending on the trafic of your service.</p>
+<p>You can try <a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>. It is a software for geocoding and reverse geocoding in either xml or json formats. You can run your own instance or use the instances at OpenStreetMap or MapQuest depending on the trafic of your service.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

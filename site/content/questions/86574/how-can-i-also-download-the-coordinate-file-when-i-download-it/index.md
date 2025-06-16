@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-86576-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In <a href="https://help.openstreetmap.org/questions/86569/how-to-calculate-the-coordinates-of-the-4-corners-edge-of-the-map-with-openstreetmap">https://help.openstreetmap.org/questions/86569/how-to-calculate-the-coordinates-of-the-4-corners-edge-of-the-map-with-openstreetmap</a> you talk about a C# application.</p>
+<p>In <a href="/questions/86569/how-to-calculate-the-coordinates-of-the-4-corners-edge-of-the-map-with-openstreetmap">https://help.openstreetmap.org/questions/86569/how-to-calculate-the-coordinates-of-the-4-corners-edge-of-the-map-with-openstreetmap</a> you talk about a C# application.</p>
 <p>Please explain, IN DETAIL what you are being asked to do. We do not know because we do not have psychic powers.</p>
 </div>
 <div id="comment-86576-info" class="comment-info">

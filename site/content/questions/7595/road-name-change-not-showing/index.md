@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sometimes it takes a while for changes to appear on the map, they have to be rendered first. Especially on the weekend this may take longer. Also there is currently a <a href="http://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">power maintenance</a> due to which rendering is temporarily disabled, as can be seen on the <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">platform status page</a>.</p>
+<p>Sometimes it takes a while for changes to appear on the map, they have to be rendered first. Especially on the weekend this may take longer. Also there is currently a <a href="https://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">power maintenance</a> due to which rendering is temporarily disabled, as can be seen on the <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">platform status page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

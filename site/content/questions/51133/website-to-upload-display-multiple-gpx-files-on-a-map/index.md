@@ -220,7 +220,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see older questions, e.g. <a href="https://help.openstreetmap.org/questions/41874/how-to-print-a-gpx-tracks-and-waypoints-on-a-osm-map">https://help.openstreetmap.org/questions/41874/how-to-print-a-gpx-tracks-and-waypoints-on-a-osm-map</a> (in short: see <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">https://wiki.openstreetmap.org/wiki/Track_drawing_websites</a> – although most sites only allow to upload and share one track a time)</p>
+<p>see older questions, e.g. <a href="/questions/41874/how-to-print-a-gpx-tracks-and-waypoints-on-a-osm-map">https://help.openstreetmap.org/questions/41874/how-to-print-a-gpx-tracks-and-waypoints-on-a-osm-map</a> (in short: see <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">https://wiki.openstreetmap.org/wiki/Track_drawing_websites</a> – although most sites only allow to upload and share one track a time)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

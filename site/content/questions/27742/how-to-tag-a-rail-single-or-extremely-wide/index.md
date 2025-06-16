@@ -107,7 +107,7 @@ One Answer:
 <p><em>Maybe</em> you should use "gauge=0" for the single track rolling door (meaning "no distance between rails") or "gauge=&lt;large_number&gt;" for the dual-rail crane track. Using "gauge=0" probably is incorrect because it would mean "2 rails, but zero millimeters between them".</p>
 <p>I did not found any reference to "single_rail" in the wiki except when describing monorail systems, but I think that maybe instead of creating a new tag (that may someday be - or not - the "standard" for this kind of structure), you should use "railway=monorail" since the page for the tag value does not require the monorail to be "a system for passenger/cargo transportation".</p>
 <p>Also consider (for the large door) the real relevance of mapping the rail that it runs on. For example, the VAB (Vehicle Assembly Building), one of the buildings with the largest doors in the world, does not have its rails mapped (<em>correcting - they ARE the largest doors in the world!</em>) <a href="http://en.wikipedia.org/wiki/Vehicle_Assembly_Building">see Wikipedia</a>. The same for all the largest industrial plants from Boeing that I could find. For the cranes, I also wasn't able to find any mapped, having taken just a cursory look at some of the largest seaports in the world (Rotterdam, London and area, etc).</p>
-<p>Found also that some very large radio telescopes (like the <a href="http://www.openstreetmap.org/#map=18/53.23656/-2.30816">Lovell Telescope</a> or the <a href="http://www.openstreetmap.org/#map=18/50.52500/6.88403">Effelsberg Radio Telescope</a>) do not have the rails they run on mapped.</p>
+<p>Found also that some very large radio telescopes (like the <a href="https://www.openstreetmap.org/#map=18/53.23656/-2.30816">Lovell Telescope</a> or the <a href="https://www.openstreetmap.org/#map=18/50.52500/6.88403">Effelsberg Radio Telescope</a>) do not have the rails they run on mapped.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -129,7 +129,7 @@ One Answer:
 <div id="post-27815-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, thanks for the answer. But if its visible its worth mapping still ? That's hardly done, goes for bridges and other water works as well, but its IMHO no valid argument. Theyre a kind of building and should be added as well, have a look here <a href="http://www.openstreetmap.org/#map=19/51.87796/5.11822.">http://www.openstreetmap.org/#map=19/51.87796/5.11822.</a></p>
+<p>Hi, thanks for the answer. But if its visible its worth mapping still ? That's hardly done, goes for bridges and other water works as well, but its IMHO no valid argument. Theyre a kind of building and should be added as well, have a look here <a href="https://www.openstreetmap.org/#map=19/51.87796/5.11822.">https://www.openstreetmap.org/#map=19/51.87796/5.11822.</a></p>
 </div>
 <div id="comment-27815-info" class="comment-info">
 <span class="comment-age">(05 Nov '13, 12:37)</span> <span class="comment-user userinfo">Hendrikklaas</span>

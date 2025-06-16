@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can i use OSM Tiles for graphs in a scientific publication"
-description = '''Hello everyone, I&#x27;d like to include a few graphs in my Ph.D. thesis with GPS logs displayed on OSM map tiles. My question is how to correctly deal with the CC licence in this case. I&#x27;ve had a look at http://www.openstreetmap.org/copyright/en and http://wiki.openstreetmap.org/wiki/Legal_FAQ and from ...'''
+description = '''Hello everyone, I&#x27;d like to include a few graphs in my Ph.D. thesis with GPS logs displayed on OSM map tiles. My question is how to correctly deal with the CC licence in this case. I&#x27;ve had a look at https://www.openstreetmap.org/copyright/en and https://wiki.openstreetmap.org/wiki/Legal_FAQ and from ...'''
 date = "2014-09-16T11:56:00Z"
 lastmod = "2015-05-01T23:20:00Z"
 weight = 36857
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello everyone,</p>
 <p>I'd like to include a few graphs in my Ph.D. thesis with GPS logs displayed on OSM map tiles. My question is how to correctly deal with the CC licence in this case.</p>
-<p>I've had a look at <a href="http://www.openstreetmap.org/copyright/en">http://www.openstreetmap.org/copyright/en</a> and <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a> and from what I've learned, my approach would be as follows:</p>
+<p>I've had a look at <a href="https://www.openstreetmap.org/copyright/en">https://www.openstreetmap.org/copyright/en</a> and <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a> and from what I've learned, my approach would be as follows:</p>
 <p>Include in the label below the graph a text like: "Plot of the GPS data of all driving logs. Displayed on map data from OpenStreetMap available under a creative commons CC BY-SA licence, (c) OpenStreetMap-contributors - see <a href="http://openstreetmap.org/copyright">http://openstreetmap.org/copyright</a> and attachment A".</p>
 <p>And add an attachment at the end of the thesis with a clarification that all graphs including map data are published under the same CC BY-SA licence + include the Matlab Code for creating the renderings.</p>
 <p>I'd deeply appreciate comments on what can be improved or changed.</p>

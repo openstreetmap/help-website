@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We have a <a href="http://wiki.openstreetmap.org/wiki/IOS">Wiki page on iOS</a> and <a href="http://wiki.openstreetmap.org/wiki/Android">one on Android</a> - both list available software, and if you look at the "make track" column you will find those applications highlighted that can record GPS tracks (which will mostly be done in GPX format).</p>
+<p>We have a <a href="https://wiki.openstreetmap.org/wiki/IOS">Wiki page on iOS</a> and <a href="https://wiki.openstreetmap.org/wiki/Android">one on Android</a> - both list available software, and if you look at the "make track" column you will find those applications highlighted that can record GPS tracks (which will mostly be done in GPX format).</p>
 <p>Of course the "classic" way of making GPX files is with a standalone GPS device which will even today give superior results compared to smartphones.</p>
 </div>
 <div class="answer-controls post-controls">

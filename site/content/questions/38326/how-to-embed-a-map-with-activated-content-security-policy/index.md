@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to embed a map with activated Content-Security-Policy?"
-description = '''Hi, i try to embed a OSM Map via the Share Option on openstreetmap.org If i enable CSP on my Server, the Map will not be loaded. My problem is: I can&#x27;t figure out which Policies are needed so that http://www.openstreetmap.org/export/embed.html will be loaded on my site. I already tried &quot;frame-src &#x27;s...'''
+description = '''Hi, i try to embed a OSM Map via the Share Option on openstreetmap.org If i enable CSP on my Server, the Map will not be loaded. My problem is: I can&#x27;t figure out which Policies are needed so that https://www.openstreetmap.org/export/embed.html will be loaded on my site. I already tried &quot;frame-src &#x27;s...'''
 date = "2014-11-05T09:37:00Z"
 lastmod = "2014-11-24T08:21:00Z"
 weight = 38326
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>i try to embed a OSM Map via the Share Option on openstreetmap.org If i enable CSP on my Server, the Map will not be loaded. My problem is: I can't figure out which Policies are needed so that <a href="http://www.openstreetmap.org/export/embed.html">http://www.openstreetmap.org/export/embed.html</a> will be loaded on my site. I already tried "frame-src 'self' openstreetmap.org; img-src 'self' *.tile.openstreetmap.org" and also "script-src 'self' openstreetmap.org" but nothing helped.</p>
+<p>i try to embed a OSM Map via the Share Option on openstreetmap.org If i enable CSP on my Server, the Map will not be loaded. My problem is: I can't figure out which Policies are needed so that <a href="https://www.openstreetmap.org/export/embed.html">https://www.openstreetmap.org/export/embed.html</a> will be loaded on my site. I already tried "frame-src 'self' openstreetmap.org; img-src 'self' *.tile.openstreetmap.org" and also "script-src 'self' openstreetmap.org" but nothing helped.</p>
 <p>Could someone tell me the correct settings soi can use OSM Maps and activate CSP?</p>
 <p>Kind regard</p>
 <p>Tapsiturtle</p>

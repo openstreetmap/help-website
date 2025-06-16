@@ -86,7 +86,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>The short answer is that using the <em>data</em> is acceptable. That carries the ODbL licence and produced works, such as a render of a map, can be any licence you choose, but you must attribute OSM. You can find more on the legal FAQ here: <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
+<p>The short answer is that using the <em>data</em> is acceptable. That carries the ODbL licence and produced works, such as a render of a map, can be any licence you choose, but you must attribute OSM. You can find more on the legal FAQ here: <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
 <p>Using the map tiles from the OSM website is not quite the same. They too require attribution, but they use the licence CC BY-SA which may, arguably, force you to release all of the document as CC BY-SA. Use the data and render your own map to be sure. See <a href="http://switch2osm.org">http://switch2osm.org</a> for how to do that.</p>
 </div>
 <div id="comment-16431-info" class="comment-info">
@@ -141,8 +141,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to use the tiles, rather than the data, there is a usage policy: <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
-<p>You are free to use the data and render your own tiles which can then be used freely, subject to the licence: <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> Commercial use, within these terms, is perfectly acceptable.</p>
+<p>If you want to use the tiles, rather than the data, there is a usage policy: <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
+<p>You are free to use the data and render your own tiles which can then be used freely, subject to the licence: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> Commercial use, within these terms, is perfectly acceptable.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -195,7 +195,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes. That's the idea of OpenStreetMap it's "free" as in zero cost and "free" as in freedom. Feel free to use the static image and remember to give credit to OpenStreetMap as described on <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>Yes. That's the idea of OpenStreetMap it's "free" as in zero cost and "free" as in freedom. Feel free to use the static image and remember to give credit to OpenStreetMap as described on <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

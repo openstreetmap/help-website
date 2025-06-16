@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've just created a page (with some french words ;-) ) that displays OSM objects with a requested tag using <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. See for example the <a href="http://osm.dumoulin63.net/xapiviewer/?zoom=10&amp;lat=52.50242&amp;lon=13.59564&amp;layers=0BT&amp;request=highway%3Drest_area&amp;icon=icons%2Famenity_bench.n.32.png">rest stops near Berlin</a>.</p>
+<p>I've just created a page (with some french words ;-) ) that displays OSM objects with a requested tag using <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. See for example the <a href="http://osm.dumoulin63.net/xapiviewer/?zoom=10&amp;lat=52.50242&amp;lon=13.59564&amp;layers=0BT&amp;request=highway%3Drest_area&amp;icon=icons%2Famenity_bench.n.32.png">rest stops near Berlin</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

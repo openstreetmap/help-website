@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Restore deleted areas"
-description = '''Hi, I recently noticed that there were some areas removed from OSM near my hometown Gummersbach. I&#x27;ve found the changeset of this edit: http://www.openstreetmap.org/browse/changeset/11521105 Seems that it was removed by mistake. I mailed to the person who changed this, but I didn&#x27;t get an answer so ...'''
+description = '''Hi, I recently noticed that there were some areas removed from OSM near my hometown Gummersbach. I&#x27;ve found the changeset of this edit: https://www.openstreetmap.org/browse/changeset/11521105 Seems that it was removed by mistake. I mailed to the person who changed this, but I didn&#x27;t get an answer so ...'''
 date = "2012-06-02T22:30:00Z"
 lastmod = "2012-06-03T18:35:00Z"
 weight = 13210
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I recently noticed that there were some areas removed from OSM near my hometown Gummersbach.</p>
-<p>I've found the changeset of this edit: <a href="http://www.openstreetmap.org/browse/changeset/11521105">http://www.openstreetmap.org/browse/changeset/11521105</a></p>
+<p>I've found the changeset of this edit: <a href="https://www.openstreetmap.org/browse/changeset/11521105">https://www.openstreetmap.org/browse/changeset/11521105</a></p>
 <p>Seems that it was removed by mistake. I mailed to the person who changed this, but I didn't get an answer so far. How can I restore the removed data?</p>
 <p>Hardo</p>
 </div>
@@ -149,7 +149,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Undoing_Deletions">http://wiki.openstreetmap.org/wiki/Undoing_Deletions</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Undoing_Deletions">https://wiki.openstreetmap.org/wiki/Undoing_Deletions</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

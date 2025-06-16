@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-47389-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The only edit I could find under that user name is <a href="http://www.openstreetmap.org/changeset/36244093">this edit near Plainview</a>. Since it was made using the ID editor I presume it's not the edit you mean?</p>
+<p>The only edit I could find under that user name is <a href="https://www.openstreetmap.org/changeset/36244093">this edit near Plainview</a>. Since it was made using the ID editor I presume it's not the edit you mean?</p>
 </div>
 <div id="comment-47389-info" class="comment-info">
 <span class="comment-age">(06 Jan '16, 09:27)</span> <span class="comment-user userinfo">Lightsider</span>
@@ -96,7 +96,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There are two more changesets under that account (<a href="http://www.openstreetmap.org/changeset/36385110">36385110</a> &amp; <a href="http://www.openstreetmap.org/changeset/36411014">36411014</a>), both made from ArcGIS, but they're both empty. It looks like something didn't quite work right during the upload.</p>
+<p>There are two more changesets under that account (<a href="https://www.openstreetmap.org/changeset/36385110">36385110</a> &amp; <a href="https://www.openstreetmap.org/changeset/36411014">36411014</a>), both made from ArcGIS, but they're both empty. It looks like something didn't quite work right during the upload.</p>
 </div>
 <div id="comment-47401-info" class="comment-info">
 <span class="comment-age">(06 Jan '16, 22:39)</span> <span class="comment-user userinfo">alester</span>

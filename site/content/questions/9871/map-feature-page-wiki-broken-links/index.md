@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Map Feature page (WiKi) - broken links"
-description = '''Dear Sirs, I was looking at your page http://wiki.openstreetmap.org/wiki/Map_Features and noticed that only items in Section 1.3 (Amenity) are visible. All links to other sections seem not to be working. Can this be fixed? Thank you, -Andrea Forte'''
+description = '''Dear Sirs, I was looking at your page https://wiki.openstreetmap.org/wiki/Map_Features and noticed that only items in Section 1.3 (Amenity) are visible. All links to other sections seem not to be working. Can this be fixed? Thank you, -Andrea Forte'''
 date = "2012-01-09T18:20:00Z"
 lastmod = "2012-01-09T19:38:00Z"
 weight = 9871
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Dear Sirs,</p>
-<p>I was looking at your page <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> and noticed that only items in Section 1.3 (Amenity) are visible. All links to other sections seem not to be working. Can this be fixed? Thank you, -Andrea Forte</p>
+<p>I was looking at your page <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> and noticed that only items in Section 1.3 (Amenity) are visible. All links to other sections seem not to be working. Can this be fixed? Thank you, -Andrea Forte</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-broken" rel="tag" title="see questions tagged &#39;broken&#39;">broken</span>

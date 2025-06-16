@@ -147,7 +147,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Playgrounds can be represented as a point or area, "count" returns all the representations, "count:nodes" returns just the point features. More at <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a>.</p>
+<p>Playgrounds can be represented as a point or area, "count" returns all the representations, "count:nodes" returns just the point features. More at <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a>.</p>
 </div>
 <div id="comment-60356-info" class="comment-info">
 <span class="comment-age">(29 Oct '17, 20:43)</span> <span class="comment-user userinfo">maxerickson</span>

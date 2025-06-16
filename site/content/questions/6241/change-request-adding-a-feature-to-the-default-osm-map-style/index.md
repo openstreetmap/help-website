@@ -145,11 +145,11 @@ osqa_accepted = false
 <li><p><strong>Request it</strong><br />
 If you want a change made, you can request that change through the bug tracking system at <a href="http://trac.openstreetmap.org/">http://trac.openstreetmap.org</a> (you'll need an account there), and then submit a ticket to the Mapnik component.</p></li>
 <li><p><strong>Make the change, show it works, and submit it as a patch.</strong><br />
-This is the more complex way, but it gives you a larger change of success. You must first <a href="http://wiki.openstreetmap.org/wiki/Mapnik">follow the directions on the wiki for making a map with Mapnik</a> and customizing it.<br />
+This is the more complex way, but it gives you a larger change of success. You must first <a href="https://wiki.openstreetmap.org/wiki/Mapnik">follow the directions on the wiki for making a map with Mapnik</a> and customizing it.<br />
 I'm not sure what stage the transition of the stylesheets are from svn to git, but the stylesheets are also available at <a href="https://github.com/openstreetmap/mapnik-stylesheets">the osm github account</a>, where you can freely fork it, and then make a pull request, which IMHO is the best way to work with the repositories.</p></li>
 </ol>
 <h2 id="get-to-know-the-community">Get to know the community</h2>
-<p>Lastly, OSM is a relatively small and I'd say people-focused project. Your patches are more likely to be accepted if you actively engage the community by <a href="http://lists.openstreetmap.org/listinfo/dev">joining the dev list</a> or <a href="http://wiki.openstreetmap.org/wiki/IRC">joining us on IRC</a>, giving everyone a chance to meet you, for you to meet them, and the opportunity for collaboration.</p>
+<p>Lastly, OSM is a relatively small and I'd say people-focused project. Your patches are more likely to be accepted if you actively engage the community by <a href="http://lists.openstreetmap.org/listinfo/dev">joining the dev list</a> or <a href="https://wiki.openstreetmap.org/wiki/IRC">joining us on IRC</a>, giving everyone a chance to meet you, for you to meet them, and the opportunity for collaboration.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ I'm not sure what stage the transition of the stylesheets are from svn to git, b
 <div class="answer-body">
 <p>The first thing you have to check is to see if it is the primary way of taging and that there are enough elements in the database to make it appear on the map. You can use <a href="http://taginfo.openstreetmap.org/">taginfo</a> for this. In your case <em>tourism=artwork</em> comes up <a href="http://taginfo.openstreetmap.org/tags/tourism=artwork#wiki">over 6000 times</a> and is the primary tag for artwork.</p>
 <p>Next you search in <a href="http://trac.openstreetmap.org/search">trac</a> for any existing bugs for this tag. If there are none <a href="http://trac.openstreetmap.org/login">login</a> and open a <a href="http://trac.openstreetmap.org/newticket?component=mapnik&amp;type=enhancement">new ticket</a>.</p>
-<p>You can now try and make an icon according to <a href="http://wiki.openstreetmap.org/wiki/Map_Icons">the specifications</a> and see how this would look on the map at different zoom levels. Attach the icon and the example rendering to the bug report and make a comment saying how this could be rendered at different zoom levels.</p>
+<p>You can now try and make an icon according to <a href="https://wiki.openstreetmap.org/wiki/Map_Icons">the specifications</a> and see how this would look on the map at different zoom levels. Attach the icon and the example rendering to the bug report and make a comment saying how this could be rendered at different zoom levels.</p>
 <p>The rest of the work needs to be done by a developer. If you want to try yoursef as a developer and help out you can try install mapnik, make the change on your computer, test it, make a patch and attach it to the ticket. This will make it easier for the core developers to make the changes.</p>
 <p>If the core developers agree with your suggestions and you have made it easy for them to implement, then they will implement the changes and the tag will be rendered.</p>
 </div>

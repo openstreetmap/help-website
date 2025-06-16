@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hey all,</p>
-<p>New here and I LOVE the idea so I'm trying to update my local city to be as detailed as possible, starting with my local area. However, I have found that there are quite a few CanVec 6 lines on the map, with attached addresses at either end. <a href="http://www.openstreetmap.org/?minlon=-113.504440307617&amp;minlat=53.4275016784668&amp;maxlon=-113.504432678223&amp;maxlat=53.4275054931641">See on OSM here.</a> My question is - are these needed? I don't want to go and delete them if they are, but it really seems to complicate the map. Is there a better way to include street addresses?</p>
+<p>New here and I LOVE the idea so I'm trying to update my local city to be as detailed as possible, starting with my local area. However, I have found that there are quite a few CanVec 6 lines on the map, with attached addresses at either end. <a href="https://www.openstreetmap.org/?minlon=-113.504440307617&amp;minlat=53.4275016784668&amp;maxlon=-113.504432678223&amp;maxlat=53.4275054931641">See on OSM here.</a> My question is - are these needed? I don't want to go and delete them if they are, but it really seems to complicate the map. Is there a better way to include street addresses?</p>
 <p>Or is it better to detail the map as the <a href="http://nominatim.openstreetmap.org/search.php?q=119+pilkington+avenue%2Cbirmingham&amp;viewbox=-1.83%2C52.56%2C-1.81%2C52.54">area showcased on the Nominatim wiki page</a> demonstrates. Obviously I realize that for the sake of purely detailed maps this is better, but it would take <strong>far</strong> longer.</p>
 <p>Should I begin by deleting the CanVec lines and building the lot boundaries, <a href="http://nominatim.openstreetmap.org/search.php?q=10702+5+Ave+SW+Edmonton&amp;viewbox=-113.51%2C53.43%2C-113.49%2C53.42">as currently non-detailed addresses are not resolved</a>, or is there a way to correctly add address information (start and finish range) while working towards more complete detail.</p>
 <p>Thanks for the advice!</p>
@@ -66,7 +66,7 @@ osqa_accepted = false
 <div id="post-23175-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'd say, no, it isn't OK to delete them. But it looks like you've already started doing so: <a href="http://www.openstreetmap.org/browse/way/75003674/history">http://www.openstreetmap.org/browse/way/75003674/history</a></p>
+<p>I'd say, no, it isn't OK to delete them. But it looks like you've already started doing so: <a href="https://www.openstreetmap.org/browse/way/75003674/history">https://www.openstreetmap.org/browse/way/75003674/history</a></p>
 </div>
 <div id="comment-23175-info" class="comment-info">
 <span class="comment-age">(10 Jun '13, 08:50)</span> <span class="comment-user userinfo">sdoerr</span>
@@ -121,7 +121,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Rule number 1: do not delete things if you don't understand what they are for.</p>
-<p>What you are seeing are so called "address interpolations" see for example <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a> They are not a complication, they are a simplification. The alternative is to map individual house numbers, either as nodes, or on building outlines. It is not necessary to map individual lots (but you can do so if you want). If you want to map the individual numbers I think it is a good idea to map the building outlines (makes it easier to associate the numbers with the right buildings). If you do that I would simply add the individual numbers then delete the address interpolation on a block/road by block/road basis.</p>
+<p>What you are seeing are so called "address interpolations" see for example <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a> They are not a complication, they are a simplification. The alternative is to map individual house numbers, either as nodes, or on building outlines. It is not necessary to map individual lots (but you can do so if you want). If you want to map the individual numbers I think it is a good idea to map the building outlines (makes it easier to associate the numbers with the right buildings). If you do that I would simply add the individual numbers then delete the address interpolation on a block/road by block/road basis.</p>
 <p>My personal priority list for mapping</p>
 <ul>
 <li>major roads (with names)</li>

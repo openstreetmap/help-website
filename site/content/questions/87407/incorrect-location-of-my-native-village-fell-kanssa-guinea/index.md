@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Is not the lower group of buildings also part of Tomba Kanssa? <img src="https://help.openstreetmap.org/upfiles/tombakansaa.png" alt="alt text" /></p>
+<p>Is not the lower group of buildings also part of Tomba Kanssa? <img src="/upfiles/tombakansaa.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

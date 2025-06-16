@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/huntingdon_to_cambridge.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/huntingdon_to_cambridge.JPG" alt="alt text" /></p>
 <p>To see driving direction click the bent arrow (as to know) and either type in the two places or drag the red and green flags. You should now have the map and the route. From here i do a screen snip ( in windows 10 ) and just print the screen. You will probabley find that much of the route is simple and you only need to print the the complicated bits.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -218,7 +218,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/the_bent_arrow.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/the_bent_arrow.JPG" alt="alt text" /></p>
 <p>This is the bent arrow that gives access to the routing or directions feature.</p>
 </div>
 <div class="answer-controls post-controls">

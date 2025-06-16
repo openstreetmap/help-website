@@ -108,7 +108,7 @@ osqa_accepted = false
 <div id="post-40606-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You may be able to find another suitable map to use in the meantime from the list here <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
+<p>You may be able to find another suitable map to use in the meantime from the list here <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
 </div>
 <div id="comment-40606-info" class="comment-info">
 <span class="comment-age">(25 Jan '15, 14:41)</span> <span class="comment-user userinfo">nevw</span>
@@ -197,7 +197,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There was a stretch of road moved by mistake, I corrected it yesterday: <a href="http://www.openstreetmap.org/changeset/28334538">http://www.openstreetmap.org/changeset/28334538</a> some tiles may not be up-to-date yet, anyway data are fine.</p>
+<p>There was a stretch of road moved by mistake, I corrected it yesterday: <a href="https://www.openstreetmap.org/changeset/28334538">https://www.openstreetmap.org/changeset/28334538</a> some tiles may not be up-to-date yet, anyway data are fine.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -251,7 +251,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>In fact, "nevw", I do not know what you mean by "standard layer", but I have emptied my browser cache to be sure, and the bunch of wrong parallel streets are still there in opencyclemap. I cannot post images here, but please check for yourself at:</p>
-<p><a href="http://www.openstreetmap.org/#map=15/45.5357/9.0344&amp;layers=C">http://www.openstreetmap.org/#map=15/45.5357/9.0344&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/#map=15/45.5357/9.0344&amp;layers=C">https://www.openstreetmap.org/#map=15/45.5357/9.0344&amp;layers=C</a></p>
 <p>The same happens for zoom levels 16 and 17. I do hope that these errors will soon disappear, but as I see it what "nevw" wrote 3 hours ago is not correct at the moment</p>
 </div>
 <div id="comment-40565-info" class="comment-info">
@@ -275,7 +275,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The "standard layer" is the layer with the name "standard", available via the <a href="http://wiki.openstreetmap.org/wiki/Browsing#Layers">layer icon</a>. As already explained by SK53, just wait until the cycle map database and tiles have been updated.</p>
+<p>The "standard layer" is the layer with the name "standard", available via the <a href="https://wiki.openstreetmap.org/wiki/Browsing#Layers">layer icon</a>. As already explained by SK53, just wait until the cycle map database and tiles have been updated.</p>
 </div>
 <div id="comment-40567-info" class="comment-info">
 <span class="comment-age">(23 Jan '15, 15:36)</span> <span class="comment-user userinfo">scai ♦</span>

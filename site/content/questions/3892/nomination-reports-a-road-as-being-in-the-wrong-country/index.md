@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Nomination reports a road as being in the wrong country?"
-description = '''Hi, the kolonieweg on this place: http://www.openstreetmap.org/?lat=52.05471&amp;amp;lon=6.08128&amp;amp;zoom=16&amp;amp;layers=M You can find this way only if you search for: Kolonieweg, Bottrop, Deutschland Instead of Kolonieweg, Dieren, Nederland  How can i change this?'''
+description = '''Hi, the kolonieweg on this place: https://www.openstreetmap.org/?lat=52.05471&amp;amp;lon=6.08128&amp;amp;zoom=16&amp;amp;layers=M You can find this way only if you search for: Kolonieweg, Bottrop, Deutschland Instead of Kolonieweg, Dieren, Nederland  How can i change this?'''
 date = "2011-03-18T12:58:00Z"
 lastmod = "2011-03-29T03:12:00Z"
 weight = 3892
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, the kolonieweg on this place: <a href="http://www.openstreetmap.org/?lat=52.05471&amp;lon=6.08128&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=52.05471&amp;lon=6.08128&amp;zoom=16&amp;layers=M</a></p>
+<p>Hi, the kolonieweg on this place: <a href="https://www.openstreetmap.org/?lat=52.05471&amp;lon=6.08128&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=52.05471&amp;lon=6.08128&amp;zoom=16&amp;layers=M</a></p>
 <p>You can find this way only if you search for: Kolonieweg, Bottrop, Deutschland</p>
 <p>Instead of Kolonieweg, Dieren, Nederland</p>
 <p>How can i change this?</p>
@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at the data the boundary relation (for Dieren) seems to be correct. I guess there was recently a problem somewhere (maybe a broken boundary between the German and Durch border) which caused Nominatim (the search application used on OSM main page) to not be able to locate Dieren correctly. I suggest to wait for the next Nominatim data update to see if the problem persists. See here for more details: <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p>Looking at the data the boundary relation (for Dieren) seems to be correct. I guess there was recently a problem somewhere (maybe a broken boundary between the German and Durch border) which caused Nominatim (the search application used on OSM main page) to not be able to locate Dieren correctly. I suggest to wait for the next Nominatim data update to see if the problem persists. See here for more details: <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
 <p>Additionally I checked the Bottrop relation and it seems to be OK as well (it forms a closed way).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -262,7 +262,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It seems you have caught a problem in the implementation/set up of nominatim: it is interpreting place=region on a node with high importance, while this is a tag where it seems it is not even clear what the meaning is: <a href="http://wiki.openstreetmap.org/wiki/Tag:place=region">http://wiki.openstreetmap.org/wiki/Tag:place=region</a>, and while there are "exact" boundaries available without having to guess about the extension of a node place=region. (which is the reason - maybe together with the temporarily broken boundary between Holland and Germany - that Dieren is located in Bottrop)</p>
+<p>It seems you have caught a problem in the implementation/set up of nominatim: it is interpreting place=region on a node with high importance, while this is a tag where it seems it is not even clear what the meaning is: <a href="https://wiki.openstreetmap.org/wiki/Tag:place=region">https://wiki.openstreetmap.org/wiki/Tag:place=region</a>, and while there are "exact" boundaries available without having to guess about the extension of a node place=region. (which is the reason - maybe together with the temporarily broken boundary between Holland and Germany - that Dieren is located in Bottrop)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -345,7 +345,7 @@ osqa_accepted = false
 <div id="post-3901-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I don't agree that the place-way for Dieren should be extended. (Well, there is an "error" in classifying Dieren as "city" which would have to be modified, but that's not the question here). Talking about this way: <a href="http://www.openstreetmap.org/browse/way/6336691">http://www.openstreetmap.org/browse/way/6336691</a> Additionally there is a node for Dieren (place=town). I suggest to delete the node and to change place=city to place=town on the polygon.</p>
+<p>I don't agree that the place-way for Dieren should be extended. (Well, there is an "error" in classifying Dieren as "city" which would have to be modified, but that's not the question here). Talking about this way: <a href="https://www.openstreetmap.org/browse/way/6336691">https://www.openstreetmap.org/browse/way/6336691</a> Additionally there is a node for Dieren (place=town). I suggest to delete the node and to change place=city to place=town on the polygon.</p>
 <p>The administrative boundary for Dieren is including the way: <a href="http://open.mapquestapi.com/nominatim/v1/details.php?place_id=2108081540">http://open.mapquestapi.com/nominatim/v1/details.php?place_id=2108081540</a></p>
 </div>
 <div id="comment-3901-info" class="comment-info">
@@ -414,7 +414,7 @@ osqa_accepted = false
 <div id="post-4051-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span></span><span>@dieterdreist</span>: A final question: Why did you delete the node with "place=village", and kept the area? According to <a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a> it is recommended to have a place node + an area with "boundary=administrative", and not areas for both place and boundary. Or is that advice outdated?</p>
+<p><span></span><span>@dieterdreist</span>: A final question: Why did you delete the node with "place=village", and kept the area? According to <a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a> it is recommended to have a place node + an area with "boundary=administrative", and not areas for both place and boundary. Or is that advice outdated?</p>
 </div>
 <div id="comment-4051-info" class="comment-info">
 <span class="comment-age">(24 Mar '11, 17:51)</span> <span class="comment-user userinfo">sleske</span>
@@ -436,7 +436,7 @@ osqa_accepted = false
 <div id="post-4069-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span></span><span>@dieterdreist</span>: No problem, I'll probably get some rep eventually :-). BTW, I asked a separate question about the place/boundary thing: <a href="http://help.openstreetmap.org/questions/4068/when-does-it-make-sense-to-use-place-on-an-area">http://help.openstreetmap.org/questions/4068/when-does-it-make-sense-to-use-place-on-an-area</a></p>
+<p><span></span><span>@dieterdreist</span>: No problem, I'll probably get some rep eventually :-). BTW, I asked a separate question about the place/boundary thing: <a href="/questions/4068/when-does-it-make-sense-to-use-place-on-an-area">https://help.openstreetmap.org/questions/4068/when-does-it-make-sense-to-use-place-on-an-area</a></p>
 </div>
 <div id="comment-4069-info" class="comment-info">
 <span class="comment-age">(25 Mar '11, 11:45)</span> <span class="comment-user userinfo">sleske</span>

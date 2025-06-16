@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The physical dimensions vary with position on the earth, due to the projection of the earth onto square tiles.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tiles">See the wiki page about tiles</a> and the link from there to Quadtiles.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tiles">See the wiki page about tiles</a> and the link from there to Quadtiles.</p>
 <p>Compare for example the scale bar <a href="http://osm.org/go/l3b2VxL-">near the equator</a> and <a href="http://osm.org/go/1ze3Fxe-">near a pole</a> at the same zoom level.</p>
 </div>
 <div class="answer-controls post-controls">

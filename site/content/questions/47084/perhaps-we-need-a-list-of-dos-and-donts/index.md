@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Most OSM mappers are amateur cartographers. Some I would classify as artists (they draw whatever they see).</p>
 <p>The trouble is that poor mapping is less helpful for end users, can be difficult to maintain and is certainly laborious to correct (if some other mapper makes the effort to correct).</p>
 <p>I think OSM could do more to educate OSM mappers and encourage them to be effective mappers. What could we do?</p>
-<p>There is a helpful post on this help forum about <a href="https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">common mapping mistakes</a>. Perhaps this could be enhanced with some general best practices, becoming a list of dos and don'ts and then formalised as a Wiki article. Maybe this already exists, then how come common mapping mistakes persist? Maybe there is a better way to educate and encourage OSM mappers. Perhaps some polite enforcement is required, like sending a message to and OSM mapper informing them of a mistake and how to fix it.</p>
+<p>There is a helpful post on this help forum about <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">common mapping mistakes</a>. Perhaps this could be enhanced with some general best practices, becoming a list of dos and don'ts and then formalised as a Wiki article. Maybe this already exists, then how come common mapping mistakes persist? Maybe there is a better way to educate and encourage OSM mappers. Perhaps some polite enforcement is required, like sending a message to and OSM mapper informing them of a mistake and how to fix it.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mistakes" rel="tag" title="see questions tagged &#39;mistakes&#39;">mistakes</span> <span class="post-tag tag-link-best" rel="tag" title="see questions tagged &#39;best&#39;">best</span> <span class="post-tag tag-link-practices" rel="tag" title="see questions tagged &#39;practices&#39;">practices</span>
@@ -174,7 +174,7 @@ One Answer:
 <p>To add a bit more to this, there's a FAQ for the help site at:</p>
 <p><a href="https://help.openstreetmap.org/faq/">https://help.openstreetmap.org/faq/</a></p>
 <p>Part of the reason that it tries to restrict to a strict "question and answer" format is that we've found in the past that that's what worked, and part is that the OSQA software imposes a structure that really doesn't work with to-and-fro discussion.</p>
-<p>We do have lots of discussion forums for general and specific topics, and also regional-specific ones in various places. See <a href="http://wiki.openstreetmap.org/wiki/Contact_channels">http://wiki.openstreetmap.org/wiki/Contact_channels</a> for more details.</p>
+<p>We do have lots of discussion forums for general and specific topics, and also regional-specific ones in various places. See <a href="https://wiki.openstreetmap.org/wiki/Contact_channels">https://wiki.openstreetmap.org/wiki/Contact_channels</a> for more details.</p>
 </div>
 <div id="comment-47087-info" class="comment-info">
 <span class="comment-age">(10 Dec '15, 12:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-55249-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Related: <a href="https://help.openstreetmap.org/questions/43542/tagging-a-bus-station">tagging a bus station</a>.</p>
+<p>Related: <a href="/questions/43542/tagging-a-bus-station">tagging a bus station</a>.</p>
 </div>
 <div id="comment-55249-info" class="comment-info">
 <span class="comment-age">(23 Mar '17, 12:01)</span> <span class="comment-user userinfo">sleske</span>

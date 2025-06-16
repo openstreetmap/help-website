@@ -47,7 +47,7 @@ osqa_accepted = false
 <p>This section of the wiki says: "If you want to compile a map with a TYP file, you will need to ensure that the family-id of the map matches that of the TYP file"</p>
 <p>If you view 2000.txt from the github you'll see the FID is set to 2000 <a href="https://github.com/ligfietser/mkgmap-style-sheets/tree/master/typ/osm%20generic%20new">https://github.com/ligfietser/mkgmap-style-sheets/tree/master/typ/osm%20generic%20new</a></p>
 <p>However if I change --family-id=42 in the command line to 2000 Basecamp issues this error message &amp; won't open:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_vzQSXou.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_vzQSXou.JPG" alt="alt text" /></p>
 <p>What is the solution?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

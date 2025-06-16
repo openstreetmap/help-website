@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>When i embed OSM into webpages, the maps are not as sharp as GM on high resolution retina screens.</p>
 <p>Why is this and can this problem be fixed?</p>
 <p>Thanks for your advice ...</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-01-07_at_15.31.39.png" alt="alt text" /><img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-01-07_at_15.29.40.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2022-01-07_at_15.31.39.png" alt="alt text" /><img src="/upfiles/Screenshot_2022-01-07_at_15.29.40.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-screen" rel="tag" title="see questions tagged &#39;screen&#39;">screen</span> <span class="post-tag tag-link-retina" rel="tag" title="see questions tagged &#39;retina&#39;">retina</span> <span class="post-tag tag-link-resolution" rel="tag" title="see questions tagged &#39;resolution&#39;">resolution</span> <span class="post-tag tag-link-high_resolution" rel="tag" title="see questions tagged &#39;high_resolution&#39;">high_resolution</span>

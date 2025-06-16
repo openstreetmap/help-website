@@ -128,7 +128,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>someone already asked this or something similar:</p>
-<p><a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
+<p><a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

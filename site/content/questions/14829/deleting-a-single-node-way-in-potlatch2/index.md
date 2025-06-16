@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can select overlapping ways or nodes in Potlatch 2 by pressing the '/' key, see:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
 <p>Thus you can select the single node, press / to get the isolated node and then delete it as that node adds no value.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -168,7 +168,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Yes - see <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
+<p>Yes - see <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
 <p>"*" for you allegedly.</p>
 </div>
 <div id="comment-15194-info" class="comment-info">

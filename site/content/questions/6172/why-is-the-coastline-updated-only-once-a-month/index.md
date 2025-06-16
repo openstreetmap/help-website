@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">"Why do the changes I have made to coastline not appear on the map?"</a></p>
+<p>See <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">"Why do the changes I have made to coastline not appear on the map?"</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

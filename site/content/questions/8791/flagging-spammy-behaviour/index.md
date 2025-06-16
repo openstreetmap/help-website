@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "flagging spammy behaviour"
-description = '''I honestly don&#x27;t know whether this user is spamming, but it looks suspect. http://www.openstreetmap.org/user/4LikeEver/edits It raised the question for me, of whether there is a process for marking users or changesets that are suspect. Can&#x27;t remember seeing a button/link anywhere - something to cons...'''
+description = '''I honestly don&#x27;t know whether this user is spamming, but it looks suspect. https://www.openstreetmap.org/user/4LikeEver/edits It raised the question for me, of whether there is a process for marking users or changesets that are suspect. Can&#x27;t remember seeing a button/link anywhere - something to cons...'''
 date = "2011-11-04T02:20:00Z"
 lastmod = "2011-11-04T16:32:00Z"
 weight = 8791
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I honestly don't know whether this user is spamming, but it looks suspect. <a href="http://www.openstreetmap.org/user/4LikeEver/edits">http://www.openstreetmap.org/user/4LikeEver/edits</a></p>
+<p>I honestly don't know whether this user is spamming, but it looks suspect. <a href="https://www.openstreetmap.org/user/4LikeEver/edits">https://www.openstreetmap.org/user/4LikeEver/edits</a></p>
 <p>It raised the question for me, of whether there is a process for marking users or changesets that are suspect. Can't remember seeing a button/link anywhere - something to consider?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

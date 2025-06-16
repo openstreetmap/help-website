@@ -157,7 +157,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I believe some users have used the (undocumented) <a href="http://taginfo.openstreetmap.org/keys/traffic#values">traffic</a> tag to indicate relative use, and <a href="http://taginfo.openstreetmap.org/search?q=traffic%3Ahourly#keys">some quite complex tags</a> for more accurate surveys, though I can't understand the key structure. I found these on taginfo after finding <a href="https://lists.openstreetmap.org/pipermail/talk-gb/2011-January/010625.html">this old discussion on talk-gb</a>.</p>
-<p>Edit: my wiki searching skills clearly failed me. <a href="http://wiki.openstreetmap.org/wiki/Key:traffic:hourly">See Key:traffic:hourly here</a></p>
+<p>Edit: my wiki searching skills clearly failed me. <a href="https://wiki.openstreetmap.org/wiki/Key:traffic:hourly">See Key:traffic:hourly here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Under no circumstances should you add information from the Highway Capacity Manual to OpenStreetMap because it is "© Copyright 2010-2014 Transportation Research Board of the National Academy of Sciences" and their site says "This page and its contents are not to be reproduced without express written consent of the Transportation Research Board."</p>
 <p>This data is not compatible with OSM's license unless you obtain a permission (or the printed book is under a suitable open license).</p>
-<p>Even if it were legal to add the information, it would still be questionable in terms of OpenStreetMap's <a href="http://wiki.openstreetmap.org/wiki/Verifiability">Verifiability requirement.</a></p>
+<p>Even if it were legal to add the information, it would still be questionable in terms of OpenStreetMap's <a href="https://wiki.openstreetmap.org/wiki/Verifiability">Verifiability requirement.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -399,7 +399,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Locksmith, The link Ed Loach found was Richards and meant for cyclist who searched for the quiets road to make a tour. “I discussed with my colleagues and unfortunately, traffic_hourly is a rather difficult metric than capacity in transportation” Nice to hear but the OSM rule still stands; TAG WHATS THERE, and not what has been made up. If you want to design a tag for traffic counts to OSM remember, SK53 advice, please make a new description make a proposal and let’s talk over it. If it’s agreed, okay go ahead and add the tag to OSM Wiki and don’t start up adding earlier. Start your project based on OSM data according to these rules; <a href="http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap,">http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap,</a> on a solitaire and local server and add anything you like or need to make a sturdy plan, even if it’s based on estimation. Good luck</p>
+<p>Hi Locksmith, The link Ed Loach found was Richards and meant for cyclist who searched for the quiets road to make a tour. “I discussed with my colleagues and unfortunately, traffic_hourly is a rather difficult metric than capacity in transportation” Nice to hear but the OSM rule still stands; TAG WHATS THERE, and not what has been made up. If you want to design a tag for traffic counts to OSM remember, SK53 advice, please make a new description make a proposal and let’s talk over it. If it’s agreed, okay go ahead and add the tag to OSM Wiki and don’t start up adding earlier. Start your project based on OSM data according to these rules; <a href="https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap,">https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap,</a> on a solitaire and local server and add anything you like or need to make a sturdy plan, even if it’s based on estimation. Good luck</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

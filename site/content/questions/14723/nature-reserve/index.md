@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tag other than names must be in a single word without space, which are replaced by underscores. You had the way tagged as "nature reserve" instead of the correct <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve"><code>nature_reserve</code></a>. I have fixed that, and it should display correctly when the area next get re-rendered.</p>
+<p>Tag other than names must be in a single word without space, which are replaced by underscores. You had the way tagged as "nature reserve" instead of the correct <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve"><code>nature_reserve</code></a>. I have fixed that, and it should display correctly when the area next get re-rendered.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

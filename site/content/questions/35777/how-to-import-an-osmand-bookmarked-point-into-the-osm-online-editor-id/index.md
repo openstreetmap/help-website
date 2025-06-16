@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I travel and gather POIs using OsmAnd.</p>
-<p>What is the best way to transfer a point from OsmAnd to the <a href="http://www.openstreetmap.org/edit">OSM online editor</a>?</p>
+<p>What is the best way to transfer a point from OsmAnd to the <a href="https://www.openstreetmap.org/edit">OSM online editor</a>?</p>
 <p>Extract from OsmAnd's <code>favourites.gpx</code>:</p>
 <pre><code>&lt;wpt lat=&quot;34.9948124&quot; lon=&quot;135.7850504&quot;&gt;
 &lt;name&gt;Shimizu Temple&lt;/name&gt;
@@ -49,8 +49,8 @@ osqa_accepted = true
 <p>Notes:</p>
 <ul>
 <li>I don't want to use OSM Tracker because switching apps is slow, and I like how OsmAnd keeps showing the map in the background even when I enter a description for the point.</li>
-<li>This question is similar to <a href="https://help.openstreetmap.org/questions/15799/how-to-reliably-pin-point-osmand-favourite-in-osm-editor">How to reliably pin point OsmAnd favourite in OSM editor?</a> but I don't want to use OSM Tracker, which is the accepted answer (and the only answer) there.</li>
-<li>I can't upload OsmAnd's <code>favourites.gpx</code> to <a href="http://www.openstreetmap.org/traces">GPS Traces</a> because the data is not a track, it is a point, which GPS Traces can't import.</li>
+<li>This question is similar to <a href="/questions/15799/how-to-reliably-pin-point-osmand-favourite-in-osm-editor">How to reliably pin point OsmAnd favourite in OSM editor?</a> but I don't want to use OSM Tracker, which is the accepted answer (and the only answer) there.</li>
+<li>I can't upload OsmAnd's <code>favourites.gpx</code> to <a href="https://www.openstreetmap.org/traces">GPS Traces</a> because the data is not a track, it is a point, which GPS Traces can't import.</li>
 </ul>
 </div>
 <div id="question-tags" class="tags-container tags">

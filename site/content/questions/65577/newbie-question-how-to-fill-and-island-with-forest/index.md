@@ -287,7 +287,7 @@ To assist in drawing very large polygons of wooded or water areas there is a ‘
 <div id="post-65679-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I used Potlatch 2 and Flash with Google Chrome. see <a href="https://help.openstreetmap.org/questions/48990/potlatch2-not-loading-flash-problem">https://help.openstreetmap.org/questions/48990/potlatch2-not-loading-flash-problem</a></p>
+<p>I used Potlatch 2 and Flash with Google Chrome. see <a href="/questions/48990/potlatch2-not-loading-flash-problem">https://help.openstreetmap.org/questions/48990/potlatch2-not-loading-flash-problem</a></p>
 </div>
 <div id="comment-65679-info" class="comment-info">
 <span class="comment-age">(01 Sep '18, 20:53)</span> <span class="comment-user userinfo">andy mackey</span>

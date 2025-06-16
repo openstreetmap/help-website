@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/waypoints_in_iD.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/waypoints_in_iD.JPG" alt="alt text" /></p>
 <p>If you have the Waypoints ( co ords) in your GPS or other file just display them with iD. the jpeg should show you how.</p>
 </div>
 <div class="answer-controls post-controls">

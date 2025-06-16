@@ -132,7 +132,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>seen this? <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
+<p>seen this? <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
 </div>
 <div id="comment-7960-info" class="comment-info">
 <span class="comment-age">(17 Sep '11, 08:14)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -143,7 +143,7 @@ One Answer:
 <div id="post-14877-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you then want to separate them see this <a href="http://help.openstreetmap.org/questions/14853/separating-joined-ways-in-potlatch">http://help.openstreetmap.org/questions/14853/separating-joined-ways-in-potlatch</a></p>
+<p>If you then want to separate them see this <a href="/questions/14853/separating-joined-ways-in-potlatch">https://help.openstreetmap.org/questions/14853/separating-joined-ways-in-potlatch</a></p>
 </div>
 <div id="comment-14877-info" class="comment-info">
 <span class="comment-age">(07 Aug '12, 08:16)</span> <span class="comment-user userinfo">andy mackey</span>

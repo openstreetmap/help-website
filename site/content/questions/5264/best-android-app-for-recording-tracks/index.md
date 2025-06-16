@@ -112,8 +112,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a quite a few apps out there and most are listed on the <a href="http://wiki.openstreetmap.org/wiki/Android">osm wiki</a>.</p>
-<p>I would personally recommend <a href="http://wiki.openstreetmap.org/wiki/OSMtracker_(Android)">osmtracker for android</a> . It's free and the interface is relatively easier to use than other ones that I've used (locus and oruxmaps).</p>
+<p>There's a quite a few apps out there and most are listed on the <a href="https://wiki.openstreetmap.org/wiki/Android">osm wiki</a>.</p>
+<p>I would personally recommend <a href="https://wiki.openstreetmap.org/wiki/OSMtracker_(Android)">osmtracker for android</a> . It's free and the interface is relatively easier to use than other ones that I've used (locus and oruxmaps).</p>
 <p>You can also set the frequency of how often (by time, in seconds) you want the points to be recorded and you can also see the OSM map layer on it.</p>
 <p>Regardless of what program that you use, the battery will be used extensively because of gps logging.</p>
 <p>Almost 7 years later after first answering this question, I still recommend OSMtracker :)</p>
@@ -244,7 +244,7 @@ osqa_accepted = true
 <div id="post-50305-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11913/carnildo">@Carnildo</a>, this is what I was looking for, and was entering speed limits by hand instead. I must have overlooked it. Thanks for pointing out to the existence of this feature.</p>
+<p><a href="https://help.openstreetmap.org/users/11913/carnildo">@Carnildo</a>, this is what I was looking for, and was entering speed limits by hand instead. I must have overlooked it. Thanks for pointing out to the existence of this feature.</p>
 </div>
 <div id="comment-50305-info" class="comment-info">
 <span class="comment-age">(19 Jun '16, 09:13)</span> <span class="comment-user userinfo">Kotya</span>

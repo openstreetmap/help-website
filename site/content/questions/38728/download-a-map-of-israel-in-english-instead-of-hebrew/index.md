@@ -199,7 +199,7 @@ One Answer:
 <div id="post-38787-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sure I have the PDF files from <a href="http://www.openstreetmap.org/#map=15/31.7761/35.2246">http://www.openstreetmap.org/#map=15/31.7761/35.2246</a></p>
+<p>Sure I have the PDF files from <a href="https://www.openstreetmap.org/#map=15/31.7761/35.2246">https://www.openstreetmap.org/#map=15/31.7761/35.2246</a></p>
 </div>
 <div id="comment-38787-info" class="comment-info">
 <span class="comment-age">(25 Nov '14, 13:57)</span> <span class="comment-user userinfo">Doron Yosha</span>

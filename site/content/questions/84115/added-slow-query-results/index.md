@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p><a href="https://help.openstreetmap.org/users/5/richard"></a><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a></a>, I am not sure. I just set it up from off the switch2osm baseline. I can set one up and see what it spits out.</p>
-<p>So I just ran a slow query, here's some what I found:<img src="https://help.openstreetmap.org/upfiles/sql_(2).png" alt="alt text" /></p>
+<p>So I just ran a slow query, here's some what I found:<img src="/upfiles/sql_(2).png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-index" rel="tag" title="see questions tagged &#39;index&#39;">index</span> <span class="post-tag tag-link-slow" rel="tag" title="see questions tagged &#39;slow&#39;">slow</span> <span class="post-tag tag-link-postgres" rel="tag" title="see questions tagged &#39;postgres&#39;">postgres</span>
@@ -66,7 +66,7 @@ osqa_accepted = false
 <div id="post-84120-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This belongs to the question <a href="https://help.openstreetmap.org/questions/84102/extremely-variable-rendering-times">Extremely Variable Rendering Times</a>.<br />
+<p>This belongs to the question <a href="/questions/84102/extremely-variable-rendering-times">Extremely Variable Rendering Times</a>.<br />
 Jaredalv: Can you re-post this there as a comment your original question? (You can click <em>edit</em> here and copy / paste the text into a new comment over there.)</p>
 </div>
 <div id="comment-84120-info" class="comment-info">

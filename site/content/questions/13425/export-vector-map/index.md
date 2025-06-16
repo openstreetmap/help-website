@@ -101,7 +101,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question http://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator" by scai 11 Jun '12, 19:28
+### The question has been closed for the following reason "Duplicate Question https://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator" by scai 11 Jun '12, 19:28
 
 </div>
 
@@ -140,7 +140,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <ul>
-<li>On <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> zoom into area you want to export.<br />
+<li>On <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> zoom into area you want to export.<br />
 </li>
 <li>Click on export tab on the top of the page.</li>
 <li>Choose "Map Image (shows standard layer)" and SVG as export format.</li>
@@ -176,7 +176,7 @@ One Answer:
 <div id="post-13562-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... you can also have a look at <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p>... you can also have a look at <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 </div>
 <div id="comment-13562-info" class="comment-info">
 <span class="comment-age">(16 Jun '12, 21:36)</span> <span class="comment-user userinfo">stephan75</span>

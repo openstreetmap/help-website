@@ -144,7 +144,7 @@ This answer is marked "community wiki".
 <div class="comment-text">
 <p>Really interesting figures. Thanks for the info.</p>
 <p>Maybe we can improve this answer for the community(you can edit it) by adding references for the data. Vclaw referenced the source for the number of GPS points and other stats [1]. Do you have the reference for the other stats?</p>
-<p>[1] <a href="http://www.openstreetmap.org/stats/data_stats.html">http://www.openstreetmap.org/stats/data_stats.html</a></p>
+<p>[1] <a href="https://www.openstreetmap.org/stats/data_stats.html">https://www.openstreetmap.org/stats/data_stats.html</a></p>
 </div>
 <div id="comment-3302-info" class="comment-info">
 <span class="comment-age">(23 Feb '11, 10:12)</span> <span class="comment-user userinfo">temporalista</span>
@@ -198,8 +198,8 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is some details about this on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Stats">Stats</a></p>
-<p>See the link for <a href="http://www.openstreetmap.org/stats/data_stats.html">data stats</a> - it doesn't seem to have the number of GPS traces, but it does have the total number of GPS points that have been uploaded (currently 2192363704).</p>
+<p>There is some details about this on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Stats">Stats</a></p>
+<p>See the link for <a href="https://www.openstreetmap.org/stats/data_stats.html">data stats</a> - it doesn't seem to have the number of GPS traces, but it does have the total number of GPS points that have been uploaded (currently 2192363704).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

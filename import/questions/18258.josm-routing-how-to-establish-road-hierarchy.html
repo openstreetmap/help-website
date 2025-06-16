@@ -7,7 +7,7 @@
         <meta name="description" content="I&#39;ve built an OSM road dataset (from a shapefile to a .osm in JOSM), in which each unique feature has been assigned a &#39;highway&#39; tag. I&#39;ve declared oneways and bridges in the proper syntax as well. This dataset is going to be used in a mobile routing application, which I am currently beta testing wit..." />
         <meta name="keywords" content="hierarchy,roads,routing,josm" />
         
-        <link rel="canonical" href="https://help.openstreetmap.org/questions/18258/josm-routing-how-to-establish-road-hierarchy" />
+        <link rel="canonical" href="/questions/18258/josm-routing-how-to-establish-road-hierarchy" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/18258/josm-routing-how-to-establish-road-hierarchy?type=rss">
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -245,7 +245,7 @@
                     <td>
                         <div id="item-right">
                             <div class="question-body">
-                                <p>I've built an OSM road dataset (from a shapefile to a .osm in JOSM), in which each unique feature has been assigned a <a href="http://wiki.openstreetmap.org/wiki/Key:highway">'highway' tag</a>. I've declared oneways and bridges in the proper syntax as well. This dataset is going to be used in a mobile routing application, which I am currently beta testing with a developer. The one-ways and the turn restrictions that I've already built are being recognized and followed in solving routes in this application currently, but I would like to build-in some kind of hierarchy as well so that a 'primary' road is given preference over an 'unclassified' when solving a route. </p>
+                                <p>I've built an OSM road dataset (from a shapefile to a .osm in JOSM), in which each unique feature has been assigned a <a href="https://wiki.openstreetmap.org/wiki/Key:highway">'highway' tag</a>. I've declared oneways and bridges in the proper syntax as well. This dataset is going to be used in a mobile routing application, which I am currently beta testing with a developer. The one-ways and the turn restrictions that I've already built are being recognized and followed in solving routes in this application currently, but I would like to build-in some kind of hierarchy as well so that a 'primary' road is given preference over an 'unclassified' when solving a route. </p>
 <p>I had thought originally that the 'highway' tag would do this automatically, but that does not seem to be the case. What is it that I am missing?</p>
                             </div>
                             <div id="question-tags" class="tags-container tags">
@@ -307,7 +307,7 @@
         <a name="18316"></a>
         <div class="comment" id="comment-18316">
             <div id="post-18316-score" class="comment-score"></div>
-            <div class="comment-text"><p>Your question seems to be not an FAQ but mote a topic that would be beter placed to one of the OSM mailing lists, maybe the one about Routing or developing ... see <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p></div>
+            <div class="comment-text"><p>Your question seems to be not an FAQ but mote a topic that would be beter placed to one of the OSM mailing lists, maybe the one about Routing or developing ... see <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p></div>
             <div class="comment-info" id="comment-18316-info">
                 
                 
@@ -412,11 +412,11 @@
                                 <td>
                                     <div class="item-right">
                                         <div class="answer-body">
-                                            <p>It is true that the "<a href="http://wiki.openstreetmap.org/wiki/Key:highway">highway</a>" tag is defining the road importance in the traffic. But nothing is "automatic". Your software will have to translate a "highway" value into a speed/importance factor. For instance, a "highway=primary" will be prefered to a "highway=track". JOSM editor will not help you in this matter. You have to know that "primary" is more important than "secondary" which is more important than "tertiary" then "unclassified", etc... See for instance how <a href="https://github.com/DennisOSRM/Project-OSRM/blob/master/profiles/car.lua">OSRM is defining a speed profile for highway values</a>. As hint, you should notice that the wiki table about "highway" is already sorted by importance (Starting with "motorway" and finishing with "service"/"track"). Some values can be considered as equivalent.</p>
-<p>But more importantly, your software will have to check if the "highway" is accessible for your vehicles (cars ? motorbikes ? trucks ?) by checking the highway value (e.g. the "highway=cycleway" is not allowed for cars) combined with the "<a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a>" tags.</p>
+                                            <p>It is true that the "<a href="https://wiki.openstreetmap.org/wiki/Key:highway">highway</a>" tag is defining the road importance in the traffic. But nothing is "automatic". Your software will have to translate a "highway" value into a speed/importance factor. For instance, a "highway=primary" will be prefered to a "highway=track". JOSM editor will not help you in this matter. You have to know that "primary" is more important than "secondary" which is more important than "tertiary" then "unclassified", etc... See for instance how <a href="https://github.com/DennisOSRM/Project-OSRM/blob/master/profiles/car.lua">OSRM is defining a speed profile for highway values</a>. As hint, you should notice that the wiki table about "highway" is already sorted by importance (Starting with "motorway" and finishing with "service"/"track"). Some values can be considered as equivalent.</p>
+<p>But more importantly, your software will have to check if the "highway" is accessible for your vehicles (cars ? motorbikes ? trucks ?) by checking the highway value (e.g. the "highway=cycleway" is not allowed for cars) combined with the "<a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a>" tags.</p>
 <p>For instance, an "access=no" or "access=private" is not allowed for cars but ("access=no" + "motorcar=yes") or ("access=no" + "motor_vehicle=yes") or "access=motorocar" or "access=motor_vehicle" is allowed. Or "access=destination" is allowed but only if the concerned street is the route final destination... Sometimes, the "access" tag may allow motorcars where it is presumed forbidden, e.g. a combination of "highway=path" + "motorcar=yes" is bit exotic tagging since we assume that "path" is normally not open for 4 wheels vehicles but if a contributor specified explicitely "motorcar=yes", the access tag is more important than the "highway" value (but what is tolerated for "path" might be considered as a tagging error for other values e.g. if you combine "highway=footway" + "motorcar=yes").</p>
 <p>You might also have to check if some nodes on your ways contain the tag "barrier" which is most probably blocking your vehicle again (for cars, it's quite easy : all "barrier" values shall stop you excepted perhaps the improbable "barrier=no"; for bicycles, it's more difficult since barriers might be passable or not depending on the value).</p>
-<p>So, as you see, creating a routing software with OSM data requires a good knowledge of OSM tags and also current practices. You can study the wiki for that and also check the data itself and the different combinations. You also have to accept that contributors can do mistakes. If you route is wrong, it can be your algorithm ignoring a specific tag but it can be the data itself as well (tags and/or geometry). In case of doubts, you can ask the community here or on the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a>. You should also start with a limited amount of tags and simply admit publicly that you are only handling the most usual and simple cases at start ;-)</p>
+<p>So, as you see, creating a routing software with OSM data requires a good knowledge of OSM tags and also current practices. You can study the wiki for that and also check the data itself and the different combinations. You also have to accept that contributors can do mistakes. If you route is wrong, it can be your algorithm ignoring a specific tag but it can be the data itself as well (tags and/or geometry). In case of doubts, you can ask the community here or on the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a>. You should also start with a limited amount of tags and simply admit publicly that you are only handling the most usual and simple cases at start ;-)</p>
                                         </div>
                                         <div class="answer-controls post-controls">
                                             
@@ -551,7 +551,7 @@
 
 <div id="sidebar-upper" class="boxC">
     <div class="body">
-        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+        <p>This was the support site for <a href="https://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
      </div>
 </div>
 

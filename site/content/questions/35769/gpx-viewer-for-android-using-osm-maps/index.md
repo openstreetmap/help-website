@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Android">android</a> apps. Scroll down this long page until you find a separate table called "Monitoring features" ... and there you see a column about "Open existing track".</p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Android">android</a> apps. Scroll down this long page until you find a separate table called "Monitoring features" ... and there you see a column about "Open existing track".</p>
 <p>About Osmand: I think you cannot select an extra path on SD card only for GPX track files, but you can select the path where Osmand stores all data files including offline maps.</p>
 <p>But I think it is easier to copy your GPX files to Osmand's folder by hand in order to display them.</p>
 </div>

@@ -107,9 +107,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The facilities clearly belong in</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility</a></p>
 <p>and likely "shelter" is specific enough</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:social_facility">http://wiki.openstreetmap.org/wiki/Key:social_facility</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:social_facility">https://wiki.openstreetmap.org/wiki/Key:social_facility</a></p>
 <p>however this is OSM, if you believe that you need a more specific value, invent one and document it potentially with prior discussion.</p>
 </div>
 <div class="answer-controls post-controls">

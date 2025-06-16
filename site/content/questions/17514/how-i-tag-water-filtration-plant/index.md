@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are two widely used tags, <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwater_works">man_made=water_works</a> (produces drinking water) and <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant">man_made=wastewater_plant</a> (treats/cleans waste water). Use whichever fits best. If both don't really fit in your case then you can also <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">make up your own tag</a>. I couldn't find a better suited tag on <a href="http://taginfo.openstreetmap.org/">taginfo</a>.</p>
+<p>There are two widely used tags, <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwater_works">man_made=water_works</a> (produces drinking water) and <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant">man_made=wastewater_plant</a> (treats/cleans waste water). Use whichever fits best. If both don't really fit in your case then you can also <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">make up your own tag</a>. I couldn't find a better suited tag on <a href="http://taginfo.openstreetmap.org/">taginfo</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -140,7 +140,7 @@ osqa_accepted = false
 <blockquote>
 <p>please tell us the perma link to that object, so that we can inspect in detail.</p>
 </blockquote>
-<p>Here is the link to the <a href="http://www.openstreetmap.org/changeset/30381039">changeset</a>, the defibrillators in question I have already changed are: <a href="http://www.openstreetmap.org/node/3134128633/history">Defibrillator 1 history</a> and <a href="http://www.openstreetmap.org/node/3134128629/history">Defibrillator 2 history</a>, <a href="http://www.openstreetmap.org/node/3134117325/history">Defibrillator 3 history</a>.</p>
+<p>Here is the link to the <a href="https://www.openstreetmap.org/changeset/30381039">changeset</a>, the defibrillators in question I have already changed are: <a href="https://www.openstreetmap.org/node/3134128633/history">Defibrillator 1 history</a> and <a href="https://www.openstreetmap.org/node/3134128629/history">Defibrillator 2 history</a>, <a href="https://www.openstreetmap.org/node/3134117325/history">Defibrillator 3 history</a>.</p>
 <p>You are right with your guess, they have been imported as you can see from the history pages. Sadly I have no idea how to go on from here. Any suggestions are welcome.</p>
 </div>
 <div id="comment-42775-info" class="comment-info">
@@ -220,7 +220,7 @@ osqa_accepted = false
 <div id="post-42798-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>here is an example area I tried both styles in (I think I either ran out of time or had a confermation problem probably the first so it was only part done before I was had a lot of the local bits deleted (apperently for a better look in a renderer tut-tut (renders should be programed to filter the bits they need and reget what users don't like in the funal render)) so I may have abandoned that spot for a bit. <a href="http://www.openstreetmap.org/#map=20/51.75076/-1.23757&amp;layers=HD">http://www.openstreetmap.org/#map=20/51.75076/-1.23757&amp;layers=HD</a></p>
+<p>here is an example area I tried both styles in (I think I either ran out of time or had a confermation problem probably the first so it was only part done before I was had a lot of the local bits deleted (apperently for a better look in a renderer tut-tut (renders should be programed to filter the bits they need and reget what users don't like in the funal render)) so I may have abandoned that spot for a bit. <a href="https://www.openstreetmap.org/#map=20/51.75076/-1.23757&amp;layers=HD">https://www.openstreetmap.org/#map=20/51.75076/-1.23757&amp;layers=HD</a></p>
 </div>
 <div id="comment-42798-info" class="comment-info">
 <span class="comment-age">(01 May '15, 21:04)</span> <span class="comment-user userinfo">Govanus</span>
@@ -231,7 +231,7 @@ osqa_accepted = false
 <div id="post-42799-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/146186364">http://www.openstreetmap.org/way/146186364</a> in this example I stopped as the house had been split and I thought I could use indoor tags in the future to show the split.</p>
+<p><a href="https://www.openstreetmap.org/way/146186364">https://www.openstreetmap.org/way/146186364</a> in this example I stopped as the house had been split and I thought I could use indoor tags in the future to show the split.</p>
 </div>
 <div id="comment-42799-info" class="comment-info">
 <span class="comment-age">(01 May '15, 21:11)</span> <span class="comment-user userinfo">Govanus</span>

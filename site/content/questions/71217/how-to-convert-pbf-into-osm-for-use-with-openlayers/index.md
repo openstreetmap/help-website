@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>if i want to use it with web html openlayer .. how can I convert it into osm</p>
-<p>(originally posted as a comment at <a href="https://help.openstreetmap.org/questions/61539/how-to-convert-pbf-into-osm-using-osmosis#71217">https://help.openstreetmap.org/questions/61539/how-to-convert-pbf-into-osm-using-osmosis#71217</a>)</p>
+<p>(originally posted as a comment at <a href="/questions/61539/how-to-convert-pbf-into-osm-using-osmosis#71217">https://help.openstreetmap.org/questions/61539/how-to-convert-pbf-into-osm-using-osmosis#71217</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openlayers" rel="tag" title="see questions tagged &#39;openlayers&#39;">openlayers</span>

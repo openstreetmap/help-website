@@ -43,9 +43,9 @@ osqa_accepted = true
 <p><a href="https://overpass-api.de/achavi/?changeset=71406326">https://overpass-api.de/achavi/?changeset=71406326</a></p>
 <p>It would be great a great feature to have, for better understanding updates on units like <a href="https://www.openstreetmap.org/way/439311424">https://www.openstreetmap.org/way/439311424</a> -- ideally directly on the page, alternatively as a link to overpass-api.de.</p>
 <p>This was also asked about six years ago, but many things have probably changed since then, and it might not be as difficult to add it today:</p>
-<p><a href="https://help.openstreetmap.org/questions/26996">https://help.openstreetmap.org/questions/26996</a></p>
+<p><a href="/questions/26996">https://help.openstreetmap.org/questions/26996</a></p>
 <p>An example mock-up, where the unit number "439311424" is a link. It could also be a link called fx "View diff" next to "View History" at the bottom, pointing to a diff view of the latest revision:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/diff-view_e3j6Ajq.png" alt="alt text" /></p>
+<p><img src="/upfiles/diff-view_e3j6Ajq.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-diff" rel="tag" title="see questions tagged &#39;diff&#39;">diff</span> <span class="post-tag tag-link-version" rel="tag" title="see questions tagged &#39;version&#39;">version</span>

@@ -126,7 +126,7 @@ One Answer:
 <p>I think that it's fair to say that there are far fewer people using osm2pgsql on Windows than on e.g. Linux - that's probably why you didn't get any answers here.</p>
 <p>There has been some Windows activity at <a href="https://github.com/openstreetmap/osm2pgsql/issues?utf8=%E2%9C%93&amp;q=is%3Aissue+is%3Aopen+windows">https://github.com/openstreetmap/osm2pgsql/issues?utf8=%E2%9C%93&amp;q=is%3Aissue+is%3Aopen+windows</a> (your question there is at the top of the list).</p>
 <p>My first thought is "are you running out of memory?". Have you tried a much smaller data extract (a city or very small country)?</p>
-<p>My second is "what do you want to do with the data afterwards"? Your question at <a href="https://help.openstreetmap.org/questions/49457/ways-of-loading-a-planet-file-into-a-gui-and-exporting-tiles-from-it">https://help.openstreetmap.org/questions/49457/ways-of-loading-a-planet-file-into-a-gui-and-exporting-tiles-from-it</a> suggests that you want to generate tiles. I'm unaware of a well-documented software stack that will do this on Windows.</p>
+<p>My second is "what do you want to do with the data afterwards"? Your question at <a href="/questions/49457/ways-of-loading-a-planet-file-into-a-gui-and-exporting-tiles-from-it">https://help.openstreetmap.org/questions/49457/ways-of-loading-a-planet-file-into-a-gui-and-exporting-tiles-from-it</a> suggests that you want to generate tiles. I'm unaware of a well-documented software stack that will do this on Windows.</p>
 <p>My suggestions are:</p>
 <ol>
 <li>Use Ubuntu Linux 14.04 LTS as the base OS, and follow <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/</a></li>

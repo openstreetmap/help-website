@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Thank you for response to <a href="https://help.openstreetmap.org/questions/21078/my-lines-and-polygons-have-turned-to-nodes-when-exported-as-osm-xml-data-and-imported-into-qgis">this question</a> (problems were associated with QGIS plugin failing with 64-bit OSM IDs).</p>
+<p>Thank you for response to <a href="/questions/21078/my-lines-and-polygons-have-turned-to-nodes-when-exported-as-osm-xml-data-and-imported-into-qgis">this question</a> (problems were associated with QGIS plugin failing with 64-bit OSM IDs).</p>
 <p>Bearing in mind that this is something I hope to help other communities learn (who are not from a GIS background), which of the alternative methods would you recommend to enable us to visualise OSM data in QGIS?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

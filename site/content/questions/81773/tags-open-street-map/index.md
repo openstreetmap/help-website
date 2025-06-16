@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>Greetings,</p>
 <p>The tags is_in appear only in the first layer, how can I activate the tags for the secondary layer ?</p>
-<p>Picture of where the tags appear: <img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2021-09-16_11-26-27(1).png" alt="alt text" /></p>
+<p>Picture of where the tags appear: <img src="/upfiles/Screenshot_from_2021-09-16_11-26-27(1).png" alt="alt text" /></p>
 <p>Picture of where the tags don't appear:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2021-09-16_11-26-46(1).png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2021-09-16_11-26-46(1).png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span> <span class="post-tag tag-link-layer" rel="tag" title="see questions tagged &#39;layer&#39;">layer</span> <span class="post-tag tag-link-openlayers" rel="tag" title="see questions tagged &#39;openlayers&#39;">openlayers</span> <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span>

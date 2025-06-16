@@ -131,7 +131,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>When viewing the map at www.openstreetmap.org click the Layers button and tick the Map Data overlay.</p>
 <p>Click on the way in question (you may need to Hide Areas to do this).</p>
-<p>Click on Details in the panel on the left. This will take you to the details about the way, such as <a href="http://www.openstreetmap.org/browse/way/26728914">this example</a>.</p>
+<p>Click on Details in the panel on the left. This will take you to the details about the way, such as <a href="https://www.openstreetmap.org/browse/way/26728914">this example</a>.</p>
 <p>Each of the nodes in the way is listed. You can check each in turn to find the one you want. This will show you the current version of the node. Click on View History to find the version 1 entry which shows who added it and when.</p>
 <p>JOSM and Potlatch2 editors (I'm not sure about iD) also let you find this information by selecting the node you want and pressing Ctrl-H.</p>
 </div>
@@ -198,7 +198,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Every <a href="http://wiki.openstreetmap.org/wiki/Elements">element</a> in OSM has a history which clearly shows who edited the object, when it has been edited, which tags have been changed, and if the object has been moved. Most editors are capable of showing you the history directly. If you know the ID of the element then you can just go to the corresponding details page, e.g. <a href="http://www.openstreetmap.org/browse/node/123456">node with ID 123456</a> and click on "view history".</p>
+<p>Every <a href="https://wiki.openstreetmap.org/wiki/Elements">element</a> in OSM has a history which clearly shows who edited the object, when it has been edited, which tags have been changed, and if the object has been moved. Most editors are capable of showing you the history directly. If you know the ID of the element then you can just go to the corresponding details page, e.g. <a href="https://www.openstreetmap.org/browse/node/123456">node with ID 123456</a> and click on "view history".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -259,7 +259,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see also the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Change_monitoring#Monitoring_Tools">Monitoring_Tools</a> to see who has edited what objects.</p>
+<p>see also the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Change_monitoring#Monitoring_Tools">Monitoring_Tools</a> to see who has edited what objects.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

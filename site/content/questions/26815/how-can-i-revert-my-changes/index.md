@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can I revert my changes."
-description = '''Everything I deleted in this change was a mistake. How can I undo this in &quot;iD 1.2.0&quot;? http://www.openstreetmap.org/browse/changeset/18061992 Thanks a lot Jens'''
+description = '''Everything I deleted in this change was a mistake. How can I undo this in &quot;iD 1.2.0&quot;? https://www.openstreetmap.org/browse/changeset/18061992 Thanks a lot Jens'''
 date = "2013-09-27T15:02:00Z"
 lastmod = "2013-09-30T10:01:00Z"
 weight = 26815
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Everything I deleted in this change was a mistake. How can I undo this in "iD 1.2.0"?</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/18061992">http://www.openstreetmap.org/browse/changeset/18061992</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/18061992">https://www.openstreetmap.org/browse/changeset/18061992</a></p>
 <p>Thanks a lot Jens</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -177,7 +177,7 @@ malenki</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Judging by the paucity of answers, it might be time to jump into JOSM and download the 'revert plugin' <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">JOSM/Plugins/Reverter</a></p>
+<p>Judging by the paucity of answers, it might be time to jump into JOSM and download the 'revert plugin' <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">JOSM/Plugins/Reverter</a></p>
 <p>I haven't needed to use it yet, touch wood, but it is nice to know it is available.</p>
 </div>
 <div class="answer-controls post-controls">

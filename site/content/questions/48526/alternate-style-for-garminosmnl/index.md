@@ -151,7 +151,7 @@ One Answer:
 <div id="post-48530-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12059/rob_in"></a><a href="http://help.openstreetmap.org/users/12059/rob_in">@Rob_in</a>: oh, yes, I am sorry! I remember... the forum had a big problem with spammers and as a temporary emergency measure they had to disable the registration. You could contact Lambertus directly: <a href="https://www.openstreetmap.org/user/Lambertus">https://www.openstreetmap.org/user/Lambertus</a> (be logged in, then you can send a message there) or the mail address on top of <a href="https://wiki.openstreetmap.org/wiki/User:Lambertus">https://wiki.openstreetmap.org/wiki/User:Lambertus</a> .</p>
+<p><a href="https://help.openstreetmap.org/users/12059/rob_in"></a><a href="https://help.openstreetmap.org/users/12059/rob_in">@Rob_in</a>: oh, yes, I am sorry! I remember... the forum had a big problem with spammers and as a temporary emergency measure they had to disable the registration. You could contact Lambertus directly: <a href="https://www.openstreetmap.org/user/Lambertus">https://www.openstreetmap.org/user/Lambertus</a> (be logged in, then you can send a message there) or the mail address on top of <a href="https://wiki.openstreetmap.org/wiki/User:Lambertus">https://wiki.openstreetmap.org/wiki/User:Lambertus</a> .</p>
 </div>
 <div id="comment-48530-info" class="comment-info">
 <span class="comment-age">(06 Mar '16, 19:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

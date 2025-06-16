@@ -45,7 +45,7 @@ osqa_accepted = false
 <li>resources <a href="http://giswiki.hsr.ch/MBTiles">http://giswiki.hsr.ch/MBTiles</a></li>
 <li>suggestions how to create a regular MBTiles file with all rendered images inside</li>
 <li>tools <a href="http://maperitive.net/docs/Commands/GenerateMBTiles.html">http://maperitive.net/docs/Commands/GenerateMBTiles.html</a> and <a href="https://github.com/mapbox/mbutil">https://github.com/mapbox/mbutil</a></li>
-<li>related questions, like <a href="https://help.openstreetmap.org/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles">https://help.openstreetmap.org/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles</a> and <a href="http://stackoverflow.com/questions/23965409/how-do-i-download-mbtiles-project-data-from-my-mapbox-account">http://stackoverflow.com/questions/23965409/how-do-i-download-mbtiles-project-data-from-my-mapbox-account</a></li>
+<li>related questions, like <a href="/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles">https://help.openstreetmap.org/questions/24828/how-can-i-easily-convert-osm-to-mbtiles-with-default-styles</a> and <a href="http://stackoverflow.com/questions/23965409/how-do-i-download-mbtiles-project-data-from-my-mapbox-account">http://stackoverflow.com/questions/23965409/how-do-i-download-mbtiles-project-data-from-my-mapbox-account</a></li>
 </ul>
 <p>But I'll only do geocoding, and do not need GB of PNG images.</p>
 <p>Maybe the easiest way is still to spend XX hours of fat server power to generate the images and then just delete the images-table from the MBTiles file (since it's sqlite-based)?</p>

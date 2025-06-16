@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there,</p>
-<p>I need your help/recommendations to avoid routing through a park here in Rostock. It's the huge <a href="http://www.openstreetmap.org/#map=16/54.1413/12.0777">IGA-Park area</a> <img src="http://help.openstreetmap.org/upfiles/Bildschirmfoto_vom_2015-07-11_10:00:27.png" alt="alt text" /></p>
+<p>I need your help/recommendations to avoid routing through a park here in Rostock. It's the huge <a href="https://www.openstreetmap.org/#map=16/54.1413/12.0777">IGA-Park area</a> <img src="/upfiles/Bildschirmfoto_vom_2015-07-11_10:00:27.png" alt="alt text" /></p>
 <p>Here you need to pay to enter the park and of course we don't suggest routing through the park if you just want to pass it ;-)</p>
 <p>To make this understandable, we tagged all (ok most of) the ways with access=private and fee=yes. While this seems to work for the routers, this results in a visual clutter, as nobody would recognize the paths/footways as such.</p>
 <p>I know we don't tag for renderers, but maybe you have similar situations and a better tagging that avoids such problems?</p>

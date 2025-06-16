@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See my question and the way to fix this <a href="http://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary">http://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary</a> ...... I had to create a polygon of the area and name it, otherwise the name seems to spill into a much larger area</p>
+<p>See my question and the way to fix this <a href="/questions/3919/how-can-i-find-and-modify-a-boundary">https://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary</a> ...... I had to create a polygon of the area and name it, otherwise the name seems to spill into a much larger area</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -211,7 +211,7 @@ osqa_accepted = false
 <p>It seems that this is the result of the Nominatim search for "Porlock Way".</p>
 <p>With many places in the world, Nominatim results include Places that seem to be not directly related with the place you are searching for.</p>
 <p>This is "normal", and you don't have to change anything on the tagging of the original place or way.</p>
-<p>Details: <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> ... try <a href="http://nominatim.openstreetmap.org/"></a><a href="http://nominatim.openstreetmap.org"></a><a href="http://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a> to see why all that places are listet in the result.</p>
+<p>Details: <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> ... try <a href="http://nominatim.openstreetmap.org/"></a><a href="http://nominatim.openstreetmap.org"></a><a href="http://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a> to see why all that places are listet in the result.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

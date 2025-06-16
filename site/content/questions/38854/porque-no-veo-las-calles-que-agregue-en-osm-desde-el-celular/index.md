@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Porque no veo las calles que agregue en OSM desde el celular?"
-description = '''Hola. Hace unos días agregue unas calles cerca de donde vivo, pero cuando quiero verlas desde la aplicación de OSM para el celular no figuran. Desde la PC si las veo. Que puedo hacer para que las calles que agregue aparezcan también en la aplicación de OSM del celular? http://www.openstreetmap.org/#...'''
+description = '''Hola. Hace unos días agregue unas calles cerca de donde vivo, pero cuando quiero verlas desde la aplicación de OSM para el celular no figuran. Desde la PC si las veo. Que puedo hacer para que las calles que agregue aparezcan también en la aplicación de OSM del celular? https://www.openstreetmap.org/#...'''
 date = "2014-11-26T21:24:00Z"
 lastmod = "2014-11-28T05:43:00Z"
 weight = 38854
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hola. Hace unos días agregue unas calles cerca de donde vivo, pero cuando quiero verlas desde la aplicación de OSM para el celular no figuran. Desde la PC si las veo. Que puedo hacer para que las calles que agregue aparezcan también en la aplicación de OSM del celular?</p>
-<p><a href="http://www.openstreetmap.org/#map=18/-38.94378/-68.10127">http://www.openstreetmap.org/#map=18/-38.94378/-68.10127</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/-38.94378/-68.10127">https://www.openstreetmap.org/#map=18/-38.94378/-68.10127</a></p>
 <p>Lago Titicaca, Calle 28 y Varvarco son algunas de las calles que agregue</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -165,7 +165,7 @@ osqa_accepted = false
 <div id="post-48620-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Moved the comment about offsets to <a href="https://help.openstreetmap.org/questions/48585/significant-offset-between-josm-and-marble-for-mapwarper-imagery">its own question</a>.</p>
+<p>Moved the comment about offsets to <a href="/questions/48585/significant-offset-between-josm-and-marble-for-mapwarper-imagery">its own question</a>.</p>
 </div>
 <div id="comment-48620-info" class="comment-info">
 <span class="comment-age">(10 Mar '16, 22:32)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

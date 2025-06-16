@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all, I am trying to run rendered daemon and when I try to render multiple tiles at a time, it is showing error mentioned in the figure.<img src="https://help.openstreetmap.org/upfiles/NotDone_Error.PNG" alt="alt text" /></p>
+<p>Hi all, I am trying to run rendered daemon and when I try to render multiple tiles at a time, it is showing error mentioned in the figure.<img src="/upfiles/NotDone_Error.PNG" alt="alt text" /></p>
 <p>I am using following configuration to run the Tileserver for whole world Map: Rendering Server: 16GB RAM with 2 CPUs Database Server: 16GB RAM with 2 CPUs</p>
 <p>I am not sure what is this error about. Could somebody help me to figure out the problem? I pre-rendered tiles till zoom level 14. Thats why I thought of using servers with less number of CPUs and moderate memory.</p>
 <p>Please let me know if you need any more details regarding the configuration or setup. Thanks in Advance Subin</p>
@@ -102,7 +102,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Can you give us a few more clues? I notice "AWS RDS" is mentioned there, but I frankly don't believe that these are the <em>only</em> logs available.</p>
-<p>What I'm guessing is happening is that the disk on which the postgres database is stored is far far too slow. This was the answer given at <a href="https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb/62132">https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb/62132</a> and yet you still seem to be persisting with this configuration.</p>
+<p>What I'm guessing is happening is that the disk on which the postgres database is stored is far far too slow. This was the answer given at <a href="/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb/62132">https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb/62132</a> and yet you still seem to be persisting with this configuration.</p>
 <p>I'd suggest that you follow the advice that you've already been given ("For a world-wide database you must have your database on SSD, and ideally the database should be local to the rendering machine and not connected to over the network.").</p>
 </div>
 <div id="comment-62572-info" class="comment-info">
@@ -157,7 +157,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This appears to be essentially a duplicate of <a href="https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">this question</a>. You're trying to use a cloud service for something it's not really designed for.</p>
+<p>This appears to be essentially a duplicate of <a href="/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">this question</a>. You're trying to use a cloud service for something it's not really designed for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

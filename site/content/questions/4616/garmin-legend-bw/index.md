@@ -108,7 +108,7 @@ osqa_accepted = false
 <p>This does depend on what part of the world you want a map of, and what operating system you are using, but anyway:</p>
 <p>As the Legend has rather limited memory, many OSM based maps won't fit on it. So to get as much as possible of the area you are interested in, you will probably want to use a map made up of fairly small tiles. One good option for this is ComputerTeddy's maps, which cover the whole world. You can use this tool to figure out which tiles you need: <a href="http://touren.mospace.de/kachel.html">Garmin IMG tile calculator</a>. So download these tiles, and unzip them.</p>
 <p>You then need to combine the tiles, and transfer them to the eTrex. The easiest way of doing this is probably to use SendMap, which you can download for free from <a href="http://www.cgpsmapper.com/buy.htm">cGPSmapper</a> (for Windows or Linux). If using Windows, just unzip it and run <code>sendmap20.exe</code>. It has a GUI which lets you select the IMG files you downloaded, then pick the correct COM port, and upload to the GPS. Note that loading 8MB of maps to the Legend may take quite a while.</p>
-<p>Its also possible to install the OSM maps in Garmin MapSource (Windows), then use it to upload the maps to the Legend. You can do this using MapSetToolKit, instructions here: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource">OSM map on MapSource</a>. This means you can view the map in MapSource, then pick which tiles of it you want to send to the Legend.</p>
+<p>Its also possible to install the OSM maps in Garmin MapSource (Windows), then use it to upload the maps to the Legend. You can do this using MapSetToolKit, instructions here: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource">OSM map on MapSource</a>. This means you can view the map in MapSource, then pick which tiles of it you want to send to the Legend.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Small tiles are certainly important, to achieve this it may be necessary to create IMG files with less detail. When starting out I found <a href="http://wiki.openstreetmap.org/wiki/GroundTruth">GroundTruth</a> useful for doing this: it provides a fairly simple way to select data and how it is displayed.</p>
+<p>Small tiles are certainly important, to achieve this it may be necessary to create IMG files with less detail. When starting out I found <a href="https://wiki.openstreetmap.org/wiki/GroundTruth">GroundTruth</a> useful for doing this: it provides a fairly simple way to select data and how it is displayed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -208,7 +208,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a> on the wiki for details.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a> on the wiki for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

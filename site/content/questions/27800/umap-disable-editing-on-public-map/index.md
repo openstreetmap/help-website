@@ -188,7 +188,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>On the website of uMap there is a button called "Feedback" which contains an email address of the author ... maybe you can ask him direktly?</p>
-<p>or see the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/UMap">UMap</a></p>
+<p>or see the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/UMap">UMap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

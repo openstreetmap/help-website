@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Currently there is no commonly used tag for specifying the type of steps according to the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dsteps">highway=steps wiki page</a>. However, <a href="http://taginfo.openstreetmap.org/search?q=spiral#values">taginfo</a> lists <em>steps:type=spiral_stairs</em> and <em>steps=spiral</em> as possible tags, each used only once so far. Combining one of them with <em>highway=steps</em> should be enough.</p>
+<p>Currently there is no commonly used tag for specifying the type of steps according to the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dsteps">highway=steps wiki page</a>. However, <a href="http://taginfo.openstreetmap.org/search?q=spiral#values">taginfo</a> lists <em>steps:type=spiral_stairs</em> and <em>steps=spiral</em> as possible tags, each used only once so far. Combining one of them with <em>highway=steps</em> should be enough.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

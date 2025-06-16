@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As far as I can tell the Garmin GPSMAP 62 does <em>not</em> use prerendered tiles (which would be problematic to download for all of Ecuador) but uses map files in the Garmin .img format. Have a look at <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin"></a><a href="http://wiki.openstreetmap.org"></a><a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a>/wiki/OSM_Map_On_Garmin for documentation of how to get such a file based on Openstreetmap data.</p>
+<p>As far as I can tell the Garmin GPSMAP 62 does <em>not</em> use prerendered tiles (which would be problematic to download for all of Ecuador) but uses map files in the Garmin .img format. Have a look at <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin"></a><a href="http://wiki.openstreetmap.org"></a><a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a>/wiki/OSM_Map_On_Garmin for documentation of how to get such a file based on Openstreetmap data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

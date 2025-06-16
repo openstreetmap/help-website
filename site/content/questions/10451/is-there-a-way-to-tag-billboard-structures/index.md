@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Would <a href="http://wiki.openstreetmap.org/wiki/Information">information=board</a> be what you're looking for ?</p>
+<p>Would <a href="https://wiki.openstreetmap.org/wiki/Information">information=board</a> be what you're looking for ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -124,7 +124,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>That's for information boards such as found near monuments, in parks, etc. I think he should be looking at <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/advertising">http://wiki.openstreetmap.org/wiki/Proposed_features/advertising</a> instead, i.e. advertising=billboard (386 uses so far).</p>
+<p>That's for information boards such as found near monuments, in parks, etc. I think he should be looking at <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/advertising">https://wiki.openstreetmap.org/wiki/Proposed_features/advertising</a> instead, i.e. advertising=billboard (386 uses so far).</p>
 </div>
 <div id="comment-10454-info" class="comment-info">
 <span class="comment-age">(06 Feb '12, 20:43)</span> <span class="comment-user userinfo">JoshD</span>

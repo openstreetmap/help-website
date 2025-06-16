@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is a multipolygon needed <a href="http://www.openstreetmap.org/browse/way/241770696/history">here</a>? I'm thinking about the residential area which is contained inside of the leisure=common. Should that area be an inner, or is it ok as it's mapped now?</p>
+<p>Is a multipolygon needed <a href="https://www.openstreetmap.org/browse/way/241770696/history">here</a>? I'm thinking about the residential area which is contained inside of the leisure=common. Should that area be an inner, or is it ok as it's mapped now?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-residential" rel="tag" title="see questions tagged &#39;residential&#39;">residential</span> <span class="post-tag tag-link-common" rel="tag" title="see questions tagged &#39;common&#39;">common</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't think it is absolutely necessary, but if you do make the outer way of the residential area an inner member of a leisure=common multipolygon, you will then need to add tags to the inner area <a href="http://www.openstreetmap.org/browse/way/242006119">http://www.openstreetmap.org/browse/way/242006119</a> of the residential area <a href="http://www.openstreetmap.org/browse/relation/3267104">http://www.openstreetmap.org/browse/relation/3267104</a> as at the moment the hole in the residential area looks to be rendering as what surrounds the residential area, but if you make the whole residential area a hole in the common then that bit in the middle will be part of the hole too. I think.</p>
+<p>I don't think it is absolutely necessary, but if you do make the outer way of the residential area an inner member of a leisure=common multipolygon, you will then need to add tags to the inner area <a href="https://www.openstreetmap.org/browse/way/242006119">https://www.openstreetmap.org/browse/way/242006119</a> of the residential area <a href="https://www.openstreetmap.org/browse/relation/3267104">https://www.openstreetmap.org/browse/relation/3267104</a> as at the moment the hole in the residential area looks to be rendering as what surrounds the residential area, but if you make the whole residential area a hole in the common then that bit in the middle will be part of the hole too. I think.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

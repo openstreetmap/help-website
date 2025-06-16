@@ -105,8 +105,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'd try and use whatever was the most appropriate tag for the feature.</p>
-<p>For example, something like the top end of the <a href="http://www.openstreetmap.org/way/35924489">River Lathkil</a> in Derbyshire is definitely <em>not</em> a wadi, but it is an intermittent river. However, I'm sure that there are other features that are much better described as a wadi - in those cases I would use natural=wadi, because "intermittent stream or river" <a href="https://lists.openstreetmap.org/pipermail/tagging/2015-January/020964.html">really doesn't fit</a>.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi">wiki page</a> for "wadi" says things like "deprecated", but doesn't explain very why, and doesn't link to the <a href="https://lists.openstreetmap.org/pipermail/tagging/2015-January/thread.html#20946">tagging list discussion</a> that <a href="https://lists.openstreetmap.org/pipermail/tagging/2015-January/020948.html">explains the problem a bit</a>. Maybe have a read through that discussion and then consider what's best for the feature that you're thinking about tagging?</p>
+<p>For example, something like the top end of the <a href="https://www.openstreetmap.org/way/35924489">River Lathkil</a> in Derbyshire is definitely <em>not</em> a wadi, but it is an intermittent river. However, I'm sure that there are other features that are much better described as a wadi - in those cases I would use natural=wadi, because "intermittent stream or river" <a href="https://lists.openstreetmap.org/pipermail/tagging/2015-January/020964.html">really doesn't fit</a>.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi">wiki page</a> for "wadi" says things like "deprecated", but doesn't explain very why, and doesn't link to the <a href="https://lists.openstreetmap.org/pipermail/tagging/2015-January/thread.html#20946">tagging list discussion</a> that <a href="https://lists.openstreetmap.org/pipermail/tagging/2015-January/020948.html">explains the problem a bit</a>. Maybe have a read through that discussion and then consider what's best for the feature that you're thinking about tagging?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -263,7 +263,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Bratananio, combine natural=valley with intermittent=yes conform the Wiki, <a href="http://wiki.openstreetmap.org/wiki/Key:waterway">http://wiki.openstreetmap.org/wiki/Key:waterway</a> and choose intermittent The natural valley is often dry and the same goes for intermittent=yes but don’t ad waterway in any way.</p>
+<p>Hi Bratananio, combine natural=valley with intermittent=yes conform the Wiki, <a href="https://wiki.openstreetmap.org/wiki/Key:waterway">https://wiki.openstreetmap.org/wiki/Key:waterway</a> and choose intermittent The natural valley is often dry and the same goes for intermittent=yes but don’t ad waterway in any way.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

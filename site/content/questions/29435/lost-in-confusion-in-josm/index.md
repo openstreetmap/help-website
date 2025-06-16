@@ -116,14 +116,14 @@ One Answer:
 <p>So if you want to befriend that doberman, you need to <strong>play with it</strong> and go forward step by step:</p>
 <ul>
 <li><a href="http://en.flossmanuals.net/openstreetmap/editing-with-josm/">http://en.flossmanuals.net/openstreetmap/editing-with-josm/</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Video_Training">http://wiki.openstreetmap.org/wiki/Video_Training</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide">http://wiki.openstreetmap.org/wiki/JOSM/Guide</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Video_Training">https://wiki.openstreetmap.org/wiki/Video_Training</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide">https://wiki.openstreetmap.org/wiki/JOSM/Guide</a></li>
 </ul>
 <p>You just need to spend some time and allow yourself to make mistakes and learn, as everybody here in the OSM universe did before ;)<br />
 </p>
-<p>If you are still unhappy or feel that JOSM doesn't suit you, you might also check out <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">alternative editors</a>.<br />
+<p>If you are still unhappy or feel that JOSM doesn't suit you, you might also check out <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">alternative editors</a>.<br />
 </p>
-<p>If you like to post something about your <strong>specific problem</strong>, anybody here or perhaps in your <a href="http://wiki.openstreetmap.org/wiki/Contact">local area</a> is willing to help you to do the challenge :)</p>
+<p>If you like to post something about your <strong>specific problem</strong>, anybody here or perhaps in your <a href="https://wiki.openstreetmap.org/wiki/Contact">local area</a> is willing to help you to do the challenge :)</p>
 <p>P.S: Personally I feel that JOSM has become very user friendly during the past years and has a very nice usability compared with other tools in the freeGIS ecosystem...</p>
 </div>
 <div class="answer-controls post-controls">

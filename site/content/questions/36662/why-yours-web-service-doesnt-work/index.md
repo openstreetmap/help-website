@@ -127,7 +127,7 @@ One Answer:
 <p>This help forum is not intended for offering help for all services that use OSM data. For this problem, you should contact the developers of Your Navigation</p>
 <p>From <a href="http://yournavigation.org/about.html">http://yournavigation.org/about.html</a></p>
 <blockquote>
-<p>For more information, questions/feedback or want to lend a helping hand please visit the <a href="http://forum.openstreetmap.org/viewtopic.php?id=735">OpenStreetMap forum</a> or send me a message through the <a href="http://www.openstreetmap.org/message/new/Lambertus">OSM messaging function</a>. If you do not have an OpenStreetMap account email me directly: osm at na1400 dot info.</p>
+<p>For more information, questions/feedback or want to lend a helping hand please visit the <a href="http://forum.openstreetmap.org/viewtopic.php?id=735">OpenStreetMap forum</a> or send me a message through the <a href="https://www.openstreetmap.org/message/new/Lambertus">OSM messaging function</a>. If you do not have an OpenStreetMap account email me directly: osm at na1400 dot info.</p>
 </blockquote>
 </div>
 <div class="answer-controls post-controls">

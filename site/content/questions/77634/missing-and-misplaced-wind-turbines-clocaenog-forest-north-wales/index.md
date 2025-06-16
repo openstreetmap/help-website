@@ -225,7 +225,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is difficult to map them if access is restricted or aerial is unavailable. As SK53 suggested approximate positioning is still helpful, especially for rough navigation. This is a method i used a while ago. <a href="https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
+<p>It is difficult to map them if access is restricted or aerial is unavailable. As SK53 suggested approximate positioning is still helpful, especially for rough navigation. This is a method i used a while ago. <a href="/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -294,7 +294,7 @@ osqa_accepted = false
 <div id="post-77675-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>see <a href="https://help.openstreetmap.org/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it">https://help.openstreetmap.org/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it</a></p>
+<p>see <a href="/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it">https://help.openstreetmap.org/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it</a></p>
 </div>
 <div id="comment-77675-info" class="comment-info">
 <span class="comment-age">(23 Nov '20, 18:50)</span> <span class="comment-user userinfo">andy mackey</span>

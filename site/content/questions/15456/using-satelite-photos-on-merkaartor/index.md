@@ -110,7 +110,7 @@ One Answer:
 <li>Create a new layer via the menu Create → Add new Image layer. If you already have an image layer, skip to the next step.</li>
 <li>Change the image layer's source to Bing via the menu Layer → Map → Plugins → Bing.</li>
 </ol>
-<p><em>(That's according to <a href="http://wiki.openstreetmap.org/wiki/Bing#Merkaartor">http://wiki.openstreetmap.org/wiki/Bing#Merkaartor</a>)</em></p>
+<p><em>(That's according to <a href="https://wiki.openstreetmap.org/wiki/Bing#Merkaartor">https://wiki.openstreetmap.org/wiki/Bing#Merkaartor</a>)</em></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

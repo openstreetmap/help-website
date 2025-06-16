@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's very possibly an OAuth error, I think. Have you followed the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">instructions on the wiki</a> to get the 'consumer key' and 'consumer secret' correct?</p>
+<p>That's very possibly an OAuth error, I think. Have you followed the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">instructions on the wiki</a> to get the 'consumer key' and 'consumer secret' correct?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -113,7 +113,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>We do not have street IDs, we have way IDs. A way can represent a part of a street, a whole street, or another linear or polygonal feature, and consists of a sequence of nodes that describe the geometry as well of a set of tags that describe its properties.</p>
-<p>Even though OSM data can be represented in many formats, the Wiki page on <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML</a> should give you a good idea of how data is organised in OSM.</p>
+<p>Even though OSM data can be represented in many formats, the Wiki page on <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML</a> should give you a good idea of how data is organised in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -46,11 +46,11 @@ osqa_accepted = true
 <p>Yet another way is tagging one branch as a "highway link" and leaving it unnamed.</p>
 <p>Generally, there are no housenumbers on either branch of the intersection, so it would not really matter for numbering, but my sense is a road name should be used for one road, whenever possible. I would like to know how best to handle this for routing.</p>
 <ol>
-<li><a href="http://www.openstreetmap.org/#map=17/42.86888/-70.86948&amp;layers=T">service road</a></li>
-<li><a href="http://www.openstreetmap.org/#map=18/42.97181/-70.76941&amp;layers=T">duplicated road</a></li>
-<li><a href="http://www.openstreetmap.org/#map=18/43.06270/-70.76997&amp;layers=T">service road</a></li>
-<li><a href="http://www.openstreetmap.org/#map=18/42.94127/-70.79390&amp;layers=T">service road</a></li>
-<li><a href="http://www.openstreetmap.org/#map=18/42.93757/-70.83871&amp;layers=T">duplicated road</a></li>
+<li><a href="https://www.openstreetmap.org/#map=17/42.86888/-70.86948&amp;layers=T">service road</a></li>
+<li><a href="https://www.openstreetmap.org/#map=18/42.97181/-70.76941&amp;layers=T">duplicated road</a></li>
+<li><a href="https://www.openstreetmap.org/#map=18/43.06270/-70.76997&amp;layers=T">service road</a></li>
+<li><a href="https://www.openstreetmap.org/#map=18/42.94127/-70.79390&amp;layers=T">service road</a></li>
+<li><a href="https://www.openstreetmap.org/#map=18/42.93757/-70.83871&amp;layers=T">duplicated road</a></li>
 </ol>
 <p>edit: as requested, above are links to the different methods mentioned. did not see any link roads, to show here, although they are rare the description does read like the best option.</p>
 </div>

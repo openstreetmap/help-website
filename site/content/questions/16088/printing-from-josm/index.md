@@ -157,7 +157,7 @@ osqa_accepted = false
 <p>If you have made some edits to some original data from the main OSM server that you only need for your purposes, then do not upload your modified data, but save this locally as an osm file to your harddisk.</p>
 <p>Then try to find a program that can process OSM data in general delivered via a local file.</p>
 <p>At least maperitive should be able to do so, and you can produce bitmap files or SVG vector grafics with it.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> for some programs.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> for some programs.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

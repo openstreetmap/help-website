@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps <a href="http://www.medieninf.de/qmapcontrol/">http://www.medieninf.de/qmapcontrol/</a> or <a href="https://wiki.gnome.org/Projects/libchamplain">https://wiki.gnome.org/Projects/libchamplain</a> are options for you. Also see the <a href="http://wiki.openstreetmap.org/wiki/Frameworks">Frameworks page on the wiki.</a></p>
+<p>Perhaps <a href="http://www.medieninf.de/qmapcontrol/">http://www.medieninf.de/qmapcontrol/</a> or <a href="https://wiki.gnome.org/Projects/libchamplain">https://wiki.gnome.org/Projects/libchamplain</a> are options for you. Also see the <a href="https://wiki.openstreetmap.org/wiki/Frameworks">Frameworks page on the wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

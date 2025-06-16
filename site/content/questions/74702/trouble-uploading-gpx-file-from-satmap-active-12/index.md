@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you successfully uploaded a trace from your SatMap to OSM previously? If so maybe this particular trace was not terminated properly because of a power or memory running out. A GPX file need timestamps to successfully upload to OSM as a witness to their validity. Timestamps give some proof that the gpx was NOT created with mapping software that could be copied from a licensed map offending copyright. If you open a GPX trace with a text editor you will see a list of Lats and Longitudes and the time the points were recorded. This question and my answer may help you. <a href="https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
+<p>Have you successfully uploaded a trace from your SatMap to OSM previously? If so maybe this particular trace was not terminated properly because of a power or memory running out. A GPX file need timestamps to successfully upload to OSM as a witness to their validity. Timestamps give some proof that the gpx was NOT created with mapping software that could be copied from a licensed map offending copyright. If you open a GPX trace with a text editor you will see a list of Lats and Longitudes and the time the points were recorded. This question and my answer may help you. <a href="/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

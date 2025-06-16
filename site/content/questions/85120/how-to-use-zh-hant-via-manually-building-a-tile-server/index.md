@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>map didn't show zh-hant, how do i fix？ thanks a lot. <img src="https://help.openstreetmap.org/upfiles/1658076890663.jpg" alt="alt text" /></p>
+<p>map didn't show zh-hant, how do i fix？ thanks a lot. <img src="/upfiles/1658076890663.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building_server" rel="tag" title="see questions tagged &#39;building_server&#39;">building_server</span> <span class="post-tag tag-link-zh-hant" rel="tag" title="see questions tagged &#39;zh-hant&#39;">zh-hant</span>
@@ -62,7 +62,7 @@ osqa_accepted = true
 <div id="post-85127-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The previous part of this story is in <a href="https://help.openstreetmap.org/questions/85089/manually-building-a-tile-server-ubuntu-2204-lts-an-error-has-occured">https://help.openstreetmap.org/questions/85089/manually-building-a-tile-server-ubuntu-2204-lts-an-error-has-occured</a> .</p>
+<p>The previous part of this story is in <a href="/questions/85089/manually-building-a-tile-server-ubuntu-2204-lts-an-error-has-occured">https://help.openstreetmap.org/questions/85089/manually-building-a-tile-server-ubuntu-2204-lts-an-error-has-occured</a> .</p>
 </div>
 <div id="comment-85127-info" class="comment-info">
 <span class="comment-age">(17 Jul '22, 18:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

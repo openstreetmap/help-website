@@ -124,7 +124,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>This is different than creating a parallel way. When JOSM and Potlatch2 create a parallel way, it follows the shape of the source way. This allows, for example, creation of co-centric circles, <a href="http://www.openstreetmap.org/#map=19/31.24162/34.50496">a barrier along a closed way</a>, etc.</p>
+<p>This is different than creating a parallel way. When JOSM and Potlatch2 create a parallel way, it follows the shape of the source way. This allows, for example, creation of co-centric circles, <a href="https://www.openstreetmap.org/#map=19/31.24162/34.50496">a barrier along a closed way</a>, etc.</p>
 </div>
 <div id="comment-58419-info" class="comment-info">
 <span class="comment-age">(21 Aug '17, 09:08)</span> <span class="comment-user userinfo">zstadler</span>

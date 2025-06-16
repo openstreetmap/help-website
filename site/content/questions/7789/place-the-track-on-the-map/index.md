@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have uploaded a track. How can I place it on the map?</p>
-<p>Step by Step. I am in "GPS traces" tab, the title is "Public GPS traces". I select "See your traces". There is only one. Now I press "Map". There are no traces on the map. I don't remember were I saw traces before. What do I miss? This is the link to the trace: <a href="http://www.openstreetmap.org/user/gtamir/traces">http://www.openstreetmap.org/user/gtamir/traces</a></p>
+<p>Step by Step. I am in "GPS traces" tab, the title is "Public GPS traces". I select "See your traces". There is only one. Now I press "Map". There are no traces on the map. I don't remember were I saw traces before. What do I miss? This is the link to the trace: <a href="https://www.openstreetmap.org/user/gtamir/traces">https://www.openstreetmap.org/user/gtamir/traces</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-track" rel="tag" title="see questions tagged &#39;track&#39;">track</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span>
@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-7819-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Step by Step. I am in "GPS traces" tab, the title is "Public GPS traces". I select "See your traces". There is only one. Now I press "Map". There are no traces on the map. I don't remember were I saw traces before. What do I miss? This is the link to the trace: <a href="http://www.openstreetmap.org/user/gtamir/traces">http://www.openstreetmap.org/user/gtamir/traces</a></p>
+<p>Step by Step. I am in "GPS traces" tab, the title is "Public GPS traces". I select "See your traces". There is only one. Now I press "Map". There are no traces on the map. I don't remember were I saw traces before. What do I miss? This is the link to the trace: <a href="https://www.openstreetmap.org/user/gtamir/traces">https://www.openstreetmap.org/user/gtamir/traces</a></p>
 </div>
 <div id="comment-7819-info" class="comment-info">
 <span class="comment-age">(12 Sep '11, 20:38)</span> <span class="comment-user userinfo">gtamir</span>
@@ -81,7 +81,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>On that screen, if you select "edit" instead of "map" you'll be taken to the editor with just your trace in the background.</p>
-<p>The link will be something like this: <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=31.9487&amp;lon=34.9391&amp;zoom=17&amp;gpx=1100405">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=31.9487&amp;lon=34.9391&amp;zoom=17&amp;gpx=1100405</a></p>
+<p>The link will be something like this: <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=31.9487&amp;lon=34.9391&amp;zoom=17&amp;gpx=1100405">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=31.9487&amp;lon=34.9391&amp;zoom=17&amp;gpx=1100405</a></p>
 <p>However, where the are several traces locally (as there are with yours) it's worth loading them all as individual GPS traces aren't 100% accurate.</p>
 </div>
 <div id="comment-7825-info" class="comment-info">
@@ -214,7 +214,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to the <strong>Edit</strong> tab and click the <strong>GPS Data</strong> to see your tracks on the map. Then you edit the map with the help of your tracks. If you want more help, read the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a>.</p>
+<p>Go to the <strong>Edit</strong> tab and click the <strong>GPS Data</strong> to see your tracks on the map. Then you edit the map with the help of your tracks. If you want more help, read the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -293,7 +293,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I can recommend the video tutorials. see this question and links <a href="http://help.openstreetmap.org/questions/7170/videos-for-new-contributors">http://help.openstreetmap.org/questions/7170/videos-for-new-contributors</a> and the text help <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a></p>
+<p>I can recommend the video tutorials. see this question and links <a href="/questions/7170/videos-for-new-contributors">https://help.openstreetmap.org/questions/7170/videos-for-new-contributors</a> and the text help <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -346,7 +346,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to give <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> a try: simply open the GPS-trace with FILE-&gt;OPEN (or CTRL+O) (<em>you don't have to upload it, but if you can it is better, because this allows other users to have more raw data as basis for their mapping</em>). Then go to the imagery menu and select: Openstreetmap (Mapnik). Voilà, you got your trace on the map.</p>
+<p>If you want to give <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a> a try: simply open the GPS-trace with FILE-&gt;OPEN (or CTRL+O) (<em>you don't have to upload it, but if you can it is better, because this allows other users to have more raw data as basis for their mapping</em>). Then go to the imagery menu and select: Openstreetmap (Mapnik). Voilà, you got your trace on the map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

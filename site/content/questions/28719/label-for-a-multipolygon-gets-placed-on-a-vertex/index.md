@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Label for a multipolygon gets placed on a vertex"
-description = '''After creating the multipolygon http://www.openstreetmap.org/relation/3342120 , I realized that its museum symbol and the relative label on the OSM standard layer gets placed on a vertex rather than somewhere roughly in the middle of the multipolygon. Is this a known issue or am I doing something wr...'''
+description = '''After creating the multipolygon https://www.openstreetmap.org/relation/3342120 , I realized that its museum symbol and the relative label on the OSM standard layer gets placed on a vertex rather than somewhere roughly in the middle of the multipolygon. Is this a known issue or am I doing something wr...'''
 date = "2013-12-03T13:59:00Z"
 lastmod = "2013-12-04T12:12:00Z"
 weight = 28719
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After creating the multipolygon <a href="http://www.openstreetmap.org/relation/3342120">http://www.openstreetmap.org/relation/3342120</a> , I realized that its museum symbol and the relative label on the OSM standard layer gets placed on a vertex rather than somewhere roughly in the middle of the multipolygon. Is this a known issue or am I doing something wrong?</p>
+<p>After creating the multipolygon <a href="https://www.openstreetmap.org/relation/3342120">https://www.openstreetmap.org/relation/3342120</a> , I realized that its museum symbol and the relative label on the OSM standard layer gets placed on a vertex rather than somewhere roughly in the middle of the multipolygon. Is this a known issue or am I doing something wrong?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-labels" rel="tag" title="see questions tagged &#39;labels&#39;">labels</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>the relation looks fine to me. Not sure why that is done. At <a href="http://www.openstreetmap.org/relation/2972737">relation/2972737</a> it is in the middle. I had a look at <a href="http://overpass-turbo.eu/s/1FS">some other museum relations</a>, but could not find one which is clearly the same case as yours.</p>
+<p>the relation looks fine to me. Not sure why that is done. At <a href="https://www.openstreetmap.org/relation/2972737">relation/2972737</a> it is in the middle. I had a look at <a href="http://overpass-turbo.eu/s/1FS">some other museum relations</a>, but could not find one which is clearly the same case as yours.</p>
 </div>
 <div id="comment-28720-info" class="comment-info">
 <span class="comment-age">(03 Dec '13, 15:09)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

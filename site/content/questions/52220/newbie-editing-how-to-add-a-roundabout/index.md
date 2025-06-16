@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For details see <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout</a></p>
+<p>For details see <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout</a></p>
 <p>But basically you draw a circular way in the direction of traffic flow, tag it as you would for any road with things like highway=<em>, maxspeed=</em>, surface=*, etc. and then also tag it with junction=roundabout I like to add oneway=yes but that is optional.</p>
 </div>
 <div class="answer-controls post-controls">

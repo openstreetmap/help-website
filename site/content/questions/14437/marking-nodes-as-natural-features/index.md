@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming you are using Potlatch2 then after you have drawn that node/way you can see advanced button on the bottom left corner. After clicking it you can manually enter key=value pairs. List of most often used tags can be found on <a href="http://wiki.openstreetmap.org/wiki/Map_Features">map features page</a>. If you can't find a suitable tag from that list, then do a search on the <a href="http://wiki.openstreetmap.org/">wiki</a>.</p>
+<p>Assuming you are using Potlatch2 then after you have drawn that node/way you can see advanced button on the bottom left corner. After clicking it you can manually enter key=value pairs. List of most often used tags can be found on <a href="https://wiki.openstreetmap.org/wiki/Map_Features">map features page</a>. If you can't find a suitable tag from that list, then do a search on the <a href="https://wiki.openstreetmap.org/">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

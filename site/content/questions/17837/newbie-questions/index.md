@@ -142,7 +142,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'll have a go at the easy question. In Potlatch 2, click the Options button, and select 'show mouse latitude/longitude'. The position of the cursor is then shown in the top right corner of the editing area. The position is shown in decimal degrees. If you have positions in some other form and are unsure about converting between the two, have a look here (<a href="https://help.openstreetmap.org/questions/10019/how-can-i-convert-this?page=1&amp;focusedAnswerId=10022#10022).">https://help.openstreetmap.org/questions/10019/how-can-i-convert-this?page=1&amp;focusedAnswerId=10022#10022).</a></p>
+<p>I'll have a go at the easy question. In Potlatch 2, click the Options button, and select 'show mouse latitude/longitude'. The position of the cursor is then shown in the top right corner of the editing area. The position is shown in decimal degrees. If you have positions in some other form and are unsure about converting between the two, have a look here (<a href="/questions/10019/how-can-i-convert-this?page=1&amp;focusedAnswerId=10022#10022).">https://help.openstreetmap.org/questions/10019/how-can-i-convert-this?page=1&amp;focusedAnswerId=10022#10022).</a></p>
 <p>As regards uploading single points, I have successfully uploaded GPX files containing both tracks and waypoints. For example, I might upload a file containing the track of a road and a waypoint with the road's name, or perhaps the exact location of a gate. I haven't tried uploading a file containing only waypoints, but I would expect it to work. However, I have read that OSM requires uploaded data to include timestamps. I don't know whether that applies to waypoints as well as tracks.</p>
 <p>Routing is a subject that I would like to know more about, so I must leave that part of the question for someone else.</p>
 </div>
@@ -166,7 +166,7 @@ One Answer:
 <div id="post-17844-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>On the "single GPX point" question, you can upload GPX traces with waypoints in them, and they can be very short GPX traces with only one waypoint in them. If you have a look at <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1056198">this</a> example you can see one that I uploaded earlier that's almost the minimum number of track points that the OSM server will accept. Once uploaded GPS waypoints will appear as orange dots in Potlatch 2 - "alt-click" on them to convert them to nodes and then edit the tags accordingly.</p>
+<p>On the "single GPX point" question, you can upload GPX traces with waypoints in them, and they can be very short GPX traces with only one waypoint in them. If you have a look at <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1056198">this</a> example you can see one that I uploaded earlier that's almost the minimum number of track points that the OSM server will accept. Once uploaded GPS waypoints will appear as orange dots in Potlatch 2 - "alt-click" on them to convert them to nodes and then edit the tags accordingly.</p>
 </div>
 <div id="comment-17844-info" class="comment-info">
 <span class="comment-age">(21 Nov '12, 08:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -303,7 +303,7 @@ One Answer:
 <div id="post-17865-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you follow the links from the <a href="http://wiki.openstreetmap.org/wiki/Routing">wiki</a> there's quite a bit of info on that. Bascically, each platform infers what it can from what's added to the data - as long as you add "what is correct" to the data, all should be OK. Don't worry about "tagging for the router".</p>
+<p>If you follow the links from the <a href="https://wiki.openstreetmap.org/wiki/Routing">wiki</a> there's quite a bit of info on that. Bascically, each platform infers what it can from what's added to the data - as long as you add "what is correct" to the data, all should be OK. Don't worry about "tagging for the router".</p>
 </div>
 <div id="comment-17865-info" class="comment-info">
 <span class="comment-age">(21 Nov '12, 14:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

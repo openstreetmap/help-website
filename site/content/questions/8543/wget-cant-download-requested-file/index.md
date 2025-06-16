@@ -178,8 +178,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The main OpenStreetMap API is provided for editing the map, not for downloading large extracts for other projects. So it limits how large an area you can download. See the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a>.</p>
-<p>If you want a larger extract, eg a whole country, then it is probably best to use a Planet extract. These are available from a number of different providers, covering different parts of the world, see <a href="http://wiki.openstreetmap.org/wiki/Planet#Country_and_area_extracts">Planet.osm extracts</a>. Geofabrik and Cloudmade provide extracts for Argentina and Chile, or for the whole of South America, which would cover the area of your bounding box request.</p>
+<p>The main OpenStreetMap API is provided for editing the map, not for downloading large extracts for other projects. So it limits how large an area you can download. See the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a>.</p>
+<p>If you want a larger extract, eg a whole country, then it is probably best to use a Planet extract. These are available from a number of different providers, covering different parts of the world, see <a href="https://wiki.openstreetmap.org/wiki/Planet#Country_and_area_extracts">Planet.osm extracts</a>. Geofabrik and Cloudmade provide extracts for Argentina and Chile, or for the whole of South America, which would cover the area of your bounding box request.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

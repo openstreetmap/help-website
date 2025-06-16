@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I noticed today that at least Kerman province, and possibly others in Iran, do not have sub-provinces included in Nominatim. I was looking at <a href="http://wiki.openstreetmap.org/wiki/Contributors#GADM_.28Global_Administrative_Areas.29">this blurb</a>, which states:</p>
+<p>I noticed today that at least Kerman province, and possibly others in Iran, do not have sub-provinces included in Nominatim. I was looking at <a href="https://wiki.openstreetmap.org/wiki/Contributors#GADM_.28Global_Administrative_Areas.29">this blurb</a>, which states:</p>
 <blockquote>
 <p>Borders in Turkey, Bahrain, Iran, Iraq, Ivory Coast, Jordan, Saudi Arabia, Sudan, and Syria are derived from GADM data. We have been given explicit permission to distribute the datasets for these countries under OSM licensing condistions, including commercial use.</p>
 </blockquote>
@@ -116,7 +116,7 @@ One Answer:
 <p>Not directed at you, but given the amount of trouble it has caused, I do have to make this comment:</p>
 <p>GADM DATA IS PROVIDED UNDER A NON-COMMERCIAL USE LICENCE AND THEREFORE IS NOT SUITABLE FOR IMPORTING IN TO OSM EXCEPT IF EXPLICIT PERMISSION HAS BEEN OBTAINED.<br />
 </p>
-<p>Further note: determing if a data source is licenced in a way that would allow it to be imported or used for OSM purposes is just one of the required steps prior to an import, see <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> for more information.</p>
+<p>Further note: determing if a data source is licenced in a way that would allow it to be imported or used for OSM purposes is just one of the required steps prior to an import, see <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> for more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

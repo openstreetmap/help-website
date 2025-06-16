@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing a bit here - but maybe some of the <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">static maps</a> ideas might help?</p>
+<p>I'm guessing a bit here - but maybe some of the <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">static maps</a> ideas might help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Finally I removed everything I installed from the first tutorial and, then, I followed this one (<a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation)">http://wiki.openstreetmap.org/wiki/Nominatim/Installation)</a> to install Nominatim directly instead.</p>
+<p>Finally I removed everything I installed from the first tutorial and, then, I followed this one (<a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation)">https://wiki.openstreetmap.org/wiki/Nominatim/Installation)</a> to install Nominatim directly instead.</p>
 <p>Now I'm running into some problems (I'm importing a really small PBF file for test purpose):</p>
 <pre><code>Reanalysing database...
 NOTICE:   no notnull values, invalid stats
@@ -125,7 +125,7 @@ Jun 12, 2013 2:41:08 PM org.openstreetmap.osmosis.core.Osmosis run
 INFO: Pipeline complete.
 Jun 12, 2013 2:41:08 PM org.openstreetmap.osmosis.core.Osmosis run
 INFO: Total execution time: 373 milliseconds.
-PHP Warning:  file_get_contents(http://www.openstreetmap.org/api/0.6/node/2340848120/1): failed to open stream: Network is unreachable in /home/lucas/src/Nominatim/utils/setup.php on line 524
+PHP Warning:  file_get_contents(https://www.openstreetmap.org/api/0.6/node/2340848120/1): failed to open stream: Network is unreachable in /home/lucas/src/Nominatim/utils/setup.php on line 524
 PHP Notice:  Undefined offset: 1 in /home/lucas/src/Nominatim/utils/setup.php on line 526
 PHP Warning:  file_get_contents(http://planet.openstreetmap.org/replication/minute/?C=M;O=D): failed to open stream: Network is unreachable in /home/lucas/src/Nominatim/utils/setup.php on line 531
 PHP Notice:  Undefined variable: aRepMatch in /home/lucas/src/Nominatim/utils/setup.php on line 543

@@ -216,7 +216,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The use of semicolon is NOT recommended: <a href="http://wiki.openstreetmap.org/wiki/Semi-colon_value_separator">http://wiki.openstreetmap.org/wiki/Semi-colon_value_separator</a></p>
+<p>The use of semicolon is NOT recommended: <a href="https://wiki.openstreetmap.org/wiki/Semi-colon_value_separator">https://wiki.openstreetmap.org/wiki/Semi-colon_value_separator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -258,7 +258,7 @@ osqa_accepted = true
 <div id="post-44069-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11216/sakudo">@sakudo</a> unfortunately a major contributor to that wiki page was a prolific wiki editor who subsequently got banned because of (among other things) their inability to balance their views with those of other people.</p>
+<p><a href="https://help.openstreetmap.org/users/11216/sakudo">@sakudo</a> unfortunately a major contributor to that wiki page was a prolific wiki editor who subsequently got banned because of (among other things) their inability to balance their views with those of other people.</p>
 <p>However this case (multiple cuisines) is analogous to the "service" example on the wiki page where use of a semicolon <em>is</em> suggested.</p>
 <p>Perhaps you could suggest how the questioner should tag their restaurant?</p>
 </div>
@@ -294,7 +294,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7473/govanus">@Govanus</a>: I think you can safely assume that ",:" (a comma followed by a colon) is rarely if ever used, so that wouldn't be the best separator to use. The generally agreed-upon separator is a single ";" (semi-colon character).</p>
+<p><a href="https://help.openstreetmap.org/users/7473/govanus">@Govanus</a>: I think you can safely assume that ",:" (a comma followed by a colon) is rarely if ever used, so that wouldn't be the best separator to use. The generally agreed-upon separator is a single ";" (semi-colon character).</p>
 </div>
 <div id="comment-46730-info" class="comment-info">
 <span class="comment-age">(20 Nov '15, 00:42)</span> <span class="comment-user userinfo">alester</span>

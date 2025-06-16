@@ -158,7 +158,7 @@ osqa_accepted = false
 <div id="post-22073-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/188/emj"></a><a href="http://help.openstreetmap.org/users/188/emj">@emj</a>: Correct. You should search for ways with highway tag other than pedestrian,footway,cycleway,bridleway. And eliminate oneways with final point unconnected.</p>
+<p><a href="https://help.openstreetmap.org/users/188/emj"></a><a href="https://help.openstreetmap.org/users/188/emj">@emj</a>: Correct. You should search for ways with highway tag other than pedestrian,footway,cycleway,bridleway. And eliminate oneways with final point unconnected.</p>
 </div>
 <div id="comment-22073-info" class="comment-info">
 <span class="comment-age">(03 May '13, 12:28)</span> <span class="comment-user userinfo">erkinalp</span>

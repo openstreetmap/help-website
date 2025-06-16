@@ -40,13 +40,13 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have an application that processes exported OSM files, and I would like to know how exporting handles areas (that is closed &lt;way&gt;&lt;/way&gt; elements with the appropriate tags) that are partially outside of the export bounds.</p>
-<p>So if we consider this example, where green circles represent the area nodes (the green lines are there just to make clear how the nodes make up the area) and the red rectangle represents the export region: <img src="https://help.openstreetmap.org/upfiles/diagram-all_bumfYUl.png" alt="Example" /></p>
+<p>So if we consider this example, where green circles represent the area nodes (the green lines are there just to make clear how the nodes make up the area) and the red rectangle represents the export region: <img src="/upfiles/diagram-all_bumfYUl.png" alt="Example" /></p>
 <p>I imagine exporting could only behave in one of the following ways:</p>
 <ul>
-<li>It includes the entire area nodes in the exported OSM file: <img src="https://help.openstreetmap.org/upfiles/diagram-all_bumfYUl.png" alt="All nodes" /></li>
-<li>It does not include the area at all in the exported OSM file: <img src="https://help.openstreetmap.org/upfiles/diagram-none.png" alt="No nodes" /></li>
-<li>It includes only those nodes of the area that are inside the export bounds: <img src="https://help.openstreetmap.org/upfiles/diagram-contain.png" alt="Nodes inside only" /></li>
-<li>It includes those nodes of the area that are inside the export bounds, as well as one additional node for every way segment that "enters" or "leaves" the export rectangle: <img src="https://help.openstreetmap.org/upfiles/diagram-cover.png" alt="Nodes inside and around only" /></li>
+<li>It includes the entire area nodes in the exported OSM file: <img src="/upfiles/diagram-all_bumfYUl.png" alt="All nodes" /></li>
+<li>It does not include the area at all in the exported OSM file: <img src="/upfiles/diagram-none.png" alt="No nodes" /></li>
+<li>It includes only those nodes of the area that are inside the export bounds: <img src="/upfiles/diagram-contain.png" alt="Nodes inside only" /></li>
+<li>It includes those nodes of the area that are inside the export bounds, as well as one additional node for every way segment that "enters" or "leaves" the export rectangle: <img src="/upfiles/diagram-cover.png" alt="Nodes inside and around only" /></li>
 </ul>
 <p>The last two scenarios seem unlikely to me, cause in these scenarios, the output area would not always correctly represent the portion of the original area that is within the export bounds (it does not in the examples above). And the second scenario would be problematic to me, cause it means that you cannot export a specific region and be guaranteed that you will have ALL the elements that are either fully or partially within that region in the output OSM file. For that you would have to export a larger region that covers all the areas, but generally you don't know, for each area that is partially outside of the region of interest, how far out does it go...</p>
 <p>So <strong>how exactly does exporting handle an area that is partially outside of the export bounds?</strong> I use the built-in export feature of the interactive openstreetmap.org map (manually select an area then click on "Export" button) as well as the overpass API, so I'm interested to know what the behavior is for each of those solutions.</p>

@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Add_a_note_g1NJQNW.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Add_a_note_g1NJQNW.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -141,7 +141,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>for the address calculation question: see <a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ">http://wiki.openstreetmap.org/wiki/Nominatim/FAQ</a></p>
+<p>for the address calculation question: see <a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ">https://wiki.openstreetmap.org/wiki/Nominatim/FAQ</a></p>
 <p>in short the following techniques are used:</p>
 <ul>
 <li>the area or boundary (e.g. postcode boundaries in Germany, or country boundaries) around the item</li>

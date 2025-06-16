@@ -111,11 +111,11 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As tempting as it is, glueing the pedestrian area to the road way is a <a href="https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?page=1&amp;focusedAnswerId=17505#17505">bad idea</a>. Using "connecting footways" is still not very satisfying, but is IMHO better. Some examples:</p>
+<p>As tempting as it is, glueing the pedestrian area to the road way is a <a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately?page=1&amp;focusedAnswerId=17505#17505">bad idea</a>. Using "connecting footways" is still not very satisfying, but is IMHO better. Some examples:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/way/161685503#map=19/60.26286/24.85274">going through</a> the pedestrian area</li>
-<li>merely <a href="http://www.openstreetmap.org/way/231646474#map=19/48.85229/2.34775">connecting</a> the area to the way</li>
-<li>connecting <a href="http://www.openstreetmap.org/way/237673760">two ways</a> together</li>
+<li><a href="https://www.openstreetmap.org/way/161685503#map=19/60.26286/24.85274">going through</a> the pedestrian area</li>
+<li>merely <a href="https://www.openstreetmap.org/way/231646474#map=19/48.85229/2.34775">connecting</a> the area to the way</li>
+<li>connecting <a href="https://www.openstreetmap.org/way/237673760">two ways</a> together</li>
 </ul>
 <p>I found all these examples using a <a href="http://taginfo.openstreetmap.org/search?q=routing#values">taginfo search</a>, because the mappers added a note explaining the hackery. Thanks to them.</p>
 <p>Hopefully someday we'll agree on a taggin scheme for these connecting ways that routers can use but renderers ignore, but AFAIK that's currently the best solution.</p>
@@ -232,7 +232,7 @@ In this case the footway performs that role anyway. I have seen pedestrian areas
 <div id="post-42474-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10740/amaryllisgardener">@AmaryllisGardener</a>: I think so, yes</p>
+<p><a href="https://help.openstreetmap.org/users/10740/amaryllisgardener">@AmaryllisGardener</a>: I think so, yes</p>
 </div>
 <div id="comment-42474-info" class="comment-info">
 <span class="comment-age">(20 Apr '15, 19:06)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

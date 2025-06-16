@@ -110,7 +110,7 @@ osqa_accepted = false
 <p>Hello,</p>
 <p>I've pretty sure you can't. The admin can analyze the web server logs, when it's crashing usually, but otherwise they don't.</p>
 <p>You would have to host your host instance, with special analytics code, as discussed <a href="https://github.com/umap-project/umap/issues/596">on github</a>.</p>
-<p>The question had already been asked, with a simple workaround : <a href="https://help.openstreetmap.org/questions/52563/umap-user-map-view-statistics">Umap: user map view statistics</a></p>
+<p>The question had already been asked, with a simple workaround : <a href="/questions/52563/umap-user-map-view-statistics">Umap: user map view statistics</a></p>
 <p>Regards.</p>
 </div>
 <div class="answer-controls post-controls">

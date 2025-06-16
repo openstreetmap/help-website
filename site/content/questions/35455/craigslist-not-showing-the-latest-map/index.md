@@ -125,7 +125,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Just to confirm, Craigslist do seem to be using out of date map tiles - see <a href="https://help.openstreetmap.org/questions/34737/how-do-i-change-a-road-name">this previous question</a>.</p>
+<p>Just to confirm, Craigslist do seem to be using out of date map tiles - see <a href="/questions/34737/how-do-i-change-a-road-name">this previous question</a>.</p>
 </div>
 <div id="comment-35519-info" class="comment-info">
 <span class="comment-age">(04 Aug '14, 20:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

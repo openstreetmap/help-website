@@ -42,9 +42,9 @@ osqa_accepted = true
 <p>Hi everyone,</p>
 <p>currently i'm working on my own .net implementation of a tiles server. I've made some progress but currently im facing a problem with gaps in the rendered lines (example motorways) Look at the image, there are gaps in the blue motorway. I'm rendering data based on the nodes and ways relations imported to my custom database. Any ideas what am I missing? I've already tried to include all types of 'roads' to my query.</p>
 <p>Thank you for any suggestions :)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_problem.JPG" alt="alt text" /></p>
-<p>Here is the db structure, and a query answering scai's question So yes, all nodes seems to be imported correctly. and yes i am debuging the problem already for 2 days :) :<img src="https://help.openstreetmap.org/upfiles/osm_db_structure.JPG" alt="alt text" /></p>
-<p>How data is rendered on the tile: i'm using this <a href="https://help.openstreetmap.org/upfiles/osm_problem.JPG">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#C.23</a> to get lat and lng for each tile number (left top corner). Getting the +1 tile geoposition gives me right bottom corner. Let's call those two beginingGeoPosition and endGeoPosition. that gives me a set of nodes and their lat and lng.</p>
+<p><img src="/upfiles/osm_problem.JPG" alt="alt text" /></p>
+<p>Here is the db structure, and a query answering scai's question So yes, all nodes seems to be imported correctly. and yes i am debuging the problem already for 2 days :) :<img src="/upfiles/osm_db_structure.JPG" alt="alt text" /></p>
+<p>How data is rendered on the tile: i'm using this <span>https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#C.23</span> to get lat and lng for each tile number (left top corner). Getting the +1 tile geoposition gives me right bottom corner. Let's call those two beginingGeoPosition and endGeoPosition. that gives me a set of nodes and their lat and lng.</p>
 <p>Knowing my tiles are 256x256 i can get a pixel possition for each node on the tile:</p>
 <pre><code>var x = 256 * (node.Longitude - beginingGeoPosition.Longitude ) / (endGeoPosition.Longitude - beginingGeoPosition.Longitude )
 var y = 256 * (node.Latitude - beginingGeoPosition.Latitude )/(endGeoPosition.Latitude -beginingGeoPosition.Latitude );</code></pre>
@@ -109,7 +109,7 @@ var y = 256 * (node.Latitude - beginingGeoPosition.Latitude )/(endGeoPosition.La
 1
 </div>
 <div class="comment-text">
-<p>This seems to be around <a href="http://www.openstreetmap.org/way/223282681">http://www.openstreetmap.org/way/223282681</a> and there doesn't seem to be an obvious correspondance between ways in OSM and what is missing.</p>
+<p>This seems to be around <a href="https://www.openstreetmap.org/way/223282681">https://www.openstreetmap.org/way/223282681</a> and there doesn't seem to be an obvious correspondance between ways in OSM and what is missing.</p>
 <p>You'll need to describe in more detail what you have actually done to stand a chance of anyone being able to reply with useful information.</p>
 </div>
 <div id="comment-58787-info" class="comment-info">
@@ -132,7 +132,7 @@ var y = 256 * (node.Latitude - beginingGeoPosition.Latitude )/(endGeoPosition.La
 <div id="post-58792-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For example, it's exactly this line <a href="http://www.openstreetmap.org/way/497464371#map=14/52.3202/15.4986">http://www.openstreetmap.org/way/497464371#map=14/52.3202/15.4986</a> that is not rendered correctly.</p>
+<p>For example, it's exactly this line <a href="https://www.openstreetmap.org/way/497464371#map=14/52.3202/15.4986">https://www.openstreetmap.org/way/497464371#map=14/52.3202/15.4986</a> that is not rendered correctly.</p>
 <p>And to be more precise about what i alerady did: I've created db with tables that describes relations betwen nodes, ways, way tags (waytags values). Each node has its lat and lng.</p>
 <p>I've also created a api that provides an endpoint for z/x/y parameters. So based on z x and y (zoom and tile number) i can get the lat and lng coordinates.</p>
 <p>After that i can query my db getting all nodes betwen begining lat/lng and end lat/lng. It's a join query on ways and waytags so i get nodes for specific waytag value. In our discusion its highway = motorway It gives me all nodes between left top corner and bottom right corner of specific tile.</p>
@@ -282,7 +282,7 @@ One Answer:
 <div class="comment-text">
 <p>I've just got it working correctly. By querying db for data for all 9 tiles and drawing just the middle tile using all nodes. Its possible becouse .net graphic DrawLine method allows to pass also points with x/y possition less than 0. The line is just drawn and ends at the edge of an image. Rendering lasts a big longer but i've added a caching mechanism</p>
 <p>Than you all for your comments and help</p>
-<p>He is the result.<img src="https://help.openstreetmap.org/upfiles/osm_result.JPG" alt="alt text" /></p>
+<p>He is the result.<img src="/upfiles/osm_result.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-58838-info" class="comment-info">
 <span class="comment-age">(27 Aug '17, 15:36)</span> <span class="comment-user userinfo">michal_poz</span>

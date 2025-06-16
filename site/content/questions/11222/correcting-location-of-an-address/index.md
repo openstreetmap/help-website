@@ -73,7 +73,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>About your question: As always if there is a specific problem on the map, <em>include a link to the exact location</em>. Otherwise no one can help you. To post a link, open <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> , navigate to the problematic feature, then copy the link shown as "permalink" (bottom right). Edit that link into your question.</p>
+<p>About your question: As always if there is a specific problem on the map, <em>include a link to the exact location</em>. Otherwise no one can help you. To post a link, open <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> , navigate to the problematic feature, then copy the link shown as "permalink" (bottom right). Edit that link into your question.</p>
 </div>
 <div id="comment-11423-info" class="comment-info">
 <span class="comment-age">(22 Mar '12, 16:14)</span> <span class="comment-user userinfo">sleske</span>
@@ -109,7 +109,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>As to "What is Nominatim": It's the search software that OSM uses. <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a> . You can use it at <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> (or on the main OSM page, where it powers the search).</p>
+<p>As to "What is Nominatim": It's the search software that OSM uses. <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a> . You can use it at <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> (or on the main OSM page, where it powers the search).</p>
 </div>
 <div id="comment-11483-info" class="comment-info">
 <span class="comment-age">(23 Mar '12, 20:17)</span> <span class="comment-user userinfo">sleske</span>
@@ -221,7 +221,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>You need to provide the information to Nominatim that those houses in between actually exist.</p>
-<p>Therefore, you need to draw a way between the house number nodes, tagged with addr:nterpollation=even/odd/all. See this: <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a></p>
+<p>Therefore, you need to draw a way between the house number nodes, tagged with addr:nterpollation=even/odd/all. See this: <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a></p>
 </div>
 <div id="comment-15286-info" class="comment-info">
 <span class="comment-age">(20 Aug '12, 12:35)</span> <span class="comment-user userinfo">Sanderd17</span>
@@ -232,7 +232,7 @@ osqa_accepted = false
 <div id="post-16232-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Well...I added some ways as suggested by the linked Wiki article. We'll see what happens. The thing is, I don't know if I have all the tags right. So far I have addr:street=Susan Lane and addr:interpolation=odd (and even on the other side). However, a test for 81 didn't point to the right place; but I seem to remember reading elsewhere there may be some time needed for all the data to propagate (meaning if I tested again tomorrow or Thursday it may work better). (As I write this, today is Tuesday.) I'm talking about here: <a href="http://www.openstreetmap.org/?lat=42.93815&amp;lon=-78.76737&amp;zoom=17">http://www.openstreetmap.org/?lat=42.93815&amp;lon=-78.76737&amp;zoom=17</a></p>
+<p>Well...I added some ways as suggested by the linked Wiki article. We'll see what happens. The thing is, I don't know if I have all the tags right. So far I have addr:street=Susan Lane and addr:interpolation=odd (and even on the other side). However, a test for 81 didn't point to the right place; but I seem to remember reading elsewhere there may be some time needed for all the data to propagate (meaning if I tested again tomorrow or Thursday it may work better). (As I write this, today is Tuesday.) I'm talking about here: <a href="https://www.openstreetmap.org/?lat=42.93815&amp;lon=-78.76737&amp;zoom=17">https://www.openstreetmap.org/?lat=42.93815&amp;lon=-78.76737&amp;zoom=17</a></p>
 </div>
 <div id="comment-16232-info" class="comment-info">
 <span class="comment-age">(18 Sep '12, 21:01)</span> <span class="comment-user userinfo">Joe Philipps</span>
@@ -349,7 +349,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not sure if this apply here, but it might be that Nominatim returns the position as if the road was an area and points to the middle of that area.</p>
-<p><a href="http://www.openstreetmap.org/?minlon=-0.107443802058697&amp;minlat=51.5256423950195&amp;maxlon=-0.104036599397659&amp;maxlat=51.5262451171875">This</a> is a search for Skinner Street in London, as you can see it doesn't point exactly on the road, since the road is not straight. If the road was a circle Nominatim would point to the middle of it.</p>
+<p><a href="https://www.openstreetmap.org/?minlon=-0.107443802058697&amp;minlat=51.5256423950195&amp;maxlon=-0.104036599397659&amp;maxlat=51.5262451171875">This</a> is a search for Skinner Street in London, as you can see it doesn't point exactly on the road, since the road is not straight. If the road was a circle Nominatim would point to the middle of it.</p>
 <p>If this is not the case with your road then you might provide more details about it to let someone see exactly what's wrong with it :)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -411,7 +411,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the problem is with <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> (the OSM component that performs searches), have a look at the answer to <a href="http://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">this</a> question to help find out why it is saying what it is.</p>
+<p>If the problem is with <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> (the OSM component that performs searches), have a look at the answer to <a href="/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">this</a> question to help find out why it is saying what it is.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -464,7 +464,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I can understand that you do not wish to pin point your house to every one.Can you tell us if you house been mapped as a polygon and is it numbered? if not try that,the help videos are good . If you just want to give friends directions to your house then send them a link like in this Question How do I add a marker to a map? and this <a href="http://help.openstreetmap.org/questions/7170/videos-for-new-contributors">http://help.openstreetmap.org/questions/7170/videos-for-new-contributors</a> and <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> and inanswer to the vote question <a href="http://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_No">http://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_No</a> <a href="http://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_Yes">http://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_Yes</a> most things you will find in the wiki but you may need a map to do it!</p>
+<p>I can understand that you do not wish to pin point your house to every one.Can you tell us if you house been mapped as a polygon and is it numbered? if not try that,the help videos are good . If you just want to give friends directions to your house then send them a link like in this Question How do I add a marker to a map? and this <a href="/questions/7170/videos-for-new-contributors">https://help.openstreetmap.org/questions/7170/videos-for-new-contributors</a> and <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> and inanswer to the vote question <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_No">https://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_No</a> <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_Yes">https://wiki.openstreetmap.org/wiki/Open_Data_License/OSMF_Members_Vote/Why_You_Should_Vote_Yes</a> most things you will find in the wiki but you may need a map to do it!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

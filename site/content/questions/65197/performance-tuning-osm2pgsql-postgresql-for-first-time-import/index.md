@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>As a new user I have multiple questions, I will try to break it up by topic.</p>
 <h2 id="part-1">Part 1</h2>
-<p>I am a new user of OSM and started building a tool to locate customers and group them by criteria. I had made some great progress on my project and then came in last Monday to find the OSM tile server very slow. Not knowing how common this is I started putting together my own server. I stumbled across this thread: <a href="https://help.openstreetmap.org/questions/65043/osm-slowdown">https://help.openstreetmap.org/questions/65043/osm-slowdown</a> which initially gives me the impression it is an unusual situation, but either way I happen to have a decent server available that isn't doing anything at the moment and so figured I could set it up anyway.</p>
+<p>I am a new user of OSM and started building a tool to locate customers and group them by criteria. I had made some great progress on my project and then came in last Monday to find the OSM tile server very slow. Not knowing how common this is I started putting together my own server. I stumbled across this thread: <a href="/questions/65043/osm-slowdown">https://help.openstreetmap.org/questions/65043/osm-slowdown</a> which initially gives me the impression it is an unusual situation, but either way I happen to have a decent server available that isn't doing anything at the moment and so figured I could set it up anyway.</p>
 <p>Server Specs:</p>
 <ol>
 <li>Dell R620</li>

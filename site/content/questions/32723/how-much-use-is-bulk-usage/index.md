@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you actually read <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a> ?</p>
+<p>Have you actually read <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a> ?</p>
 <p>"Bulk usage" is not used in the document, "bulk downloading" is, however that does not seem to be relevant to your usage model.</p>
 </div>
 <div class="answer-controls post-controls">

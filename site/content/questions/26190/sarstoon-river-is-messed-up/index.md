@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello,</p>
-<p>I take it that you are talking about this area :- <a href="http://www.openstreetmap.org/#map=16/15.9025/-88.9941&amp;layers=N">http://www.openstreetmap.org/#map=16/15.9025/-88.9941&amp;layers=N</a></p>
+<p>I take it that you are talking about this area :- <a href="https://www.openstreetmap.org/#map=16/15.9025/-88.9941&amp;layers=N">https://www.openstreetmap.org/#map=16/15.9025/-88.9941&amp;layers=N</a></p>
 <p>Joining the two river ends would be no problem, I could do that if you wish. I wouldn't alter the park boundary though as that may be correctly positioned. The Bing imagery on that area (west of the break) is very bad such that one can't reliably trace the river. In fact at certain zoom levels some imagery is actually missing. Even further west the imagery improves.</p>
 <p>The single nodes I would say are left over from OSM's redaction of mapping not now conforming to the new terms of use. They can all be removed as there is nothing to align them to.</p>
 <p>Similarly the riverbank that is mapped from the break in the river to the coast is very poorly aligned to the Bing imagery. This also has suffered from the redaction, however the imagery here is fair so this could be realigned.</p>

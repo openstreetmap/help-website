@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help me understand seamark light patterns."
-description = '''It&#x27;s not clear to me how the seamark:light:character tags work in conjunction with the seamark:light:period and seamark:light:group tags. To be specific, I&#x27;m trying to parse the seamarks, not add new ones. These are the sources which I&#x27;m using: http://wiki.openstreetmap.org/wiki/Seamarks/Lights http...'''
+description = '''It&#x27;s not clear to me how the seamark:light:character tags work in conjunction with the seamark:light:period and seamark:light:group tags. To be specific, I&#x27;m trying to parse the seamarks, not add new ones. These are the sources which I&#x27;m using: https://wiki.openstreetmap.org/wiki/Seamarks/Lights http...'''
 date = "2016-11-29T10:33:00Z"
 lastmod = "2016-11-29T12:02:00Z"
 weight = 53166
@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>It's not clear to me how the seamark:light:character tags work in conjunction with the seamark:light:period and seamark:light:group tags. To be specific, I'm trying to parse the seamarks, not add new ones.</p>
 <p>These are the sources which I'm using:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Seamarks/Lights">http://wiki.openstreetmap.org/wiki/Seamarks/Lights</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Seamarks/Light_Characters">http://wiki.openstreetmap.org/wiki/Seamarks/Light_Characters</a> (when I mention examples, they are on this page)<br />
-<a href="http://wiki.openstreetmap.org/wiki/Seamarks/INT-1_Section_P">http://wiki.openstreetmap.org/wiki/Seamarks/INT-1_Section_P</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Seamarks/Lights">https://wiki.openstreetmap.org/wiki/Seamarks/Lights</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Seamarks/Light_Characters">https://wiki.openstreetmap.org/wiki/Seamarks/Light_Characters</a> (when I mention examples, they are on this page)<br />
+<a href="https://wiki.openstreetmap.org/wiki/Seamarks/INT-1_Section_P">https://wiki.openstreetmap.org/wiki/Seamarks/INT-1_Section_P</a><br />
 <a href="https://en.wikipedia.org/wiki/Light_characteristic">https://en.wikipedia.org/wiki/Light_characteristic</a></p>
 <p>1: Does the various types of flashes (flashes (Fl), quick flashes (Q), very quick flashes (VQ), ultra quick flashes (UQ) long flashes (LFl), isophases (Iso) and occults (Oc)) have a standard length for when a period isn't listed? Also, what about the length of darkness between the flashes? This seems to matter since in example 8 three flashes are grouped together and the long period causes a long pause rather than spreading out the flashes evenly. All I can find is the maximum and minimum frequency of quick, very quick and ultra quick flashes and the minimum length of long flashes.</p>
 <p>2: Why does example 18 have a long pause? They don't mention any grouping here. Shouldn't that be interrupted ultra quick flashing (IUQ) rather than just ultra quick flashing (UQ)? How do I know how long the pause should be in an interrupted flashing if there's no grouping and/or I don't know how long each flash is?</p>

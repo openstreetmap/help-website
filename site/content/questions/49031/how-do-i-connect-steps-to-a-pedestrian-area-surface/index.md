@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I need to intersect the surface of a pedestrian area with the beginning of some steps that go upward. How do I do this? Can someone help me? <img src="http://help.openstreetmap.org/upfiles/Immagine.png" alt="alt text" /></p>
+<p>I need to intersect the surface of a pedestrian area with the beginning of some steps that go upward. How do I do this? Can someone help me? <img src="/upfiles/Immagine.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-intersection" rel="tag" title="see questions tagged &#39;intersection&#39;">intersection</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>
@@ -175,7 +175,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: I also expect that many routing engines will have a problem with this, due to their generally poor handling of areas. This is just one symptom of a larger problem, though, and it doesn't change that it's correct to map things like that. Personally, I'm not a fan of mapping for the router (i.e. "virtual" ways and similar workarounds).</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: I also expect that many routing engines will have a problem with this, due to their generally poor handling of areas. This is just one symptom of a larger problem, though, and it doesn't change that it's correct to map things like that. Personally, I'm not a fan of mapping for the router (i.e. "virtual" ways and similar workarounds).</p>
 </div>
 <div id="comment-49113-info" class="comment-info">
 <span class="comment-age">(08 Apr '16, 15:16)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -217,7 +217,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>So your talking about a bridge thats coming down in the middel of the area ? Could you ad a OSM link for a picture of the situation ? Just end the bridge with steps where they stop without a connection to the border. Read this as well, <a href="http://wiki.openstreetmap.org/wiki/Key:incline">http://wiki.openstreetmap.org/wiki/Key:incline</a> , for the key and value of the steps away or up from the area.</p>
+<p>So your talking about a bridge thats coming down in the middel of the area ? Could you ad a OSM link for a picture of the situation ? Just end the bridge with steps where they stop without a connection to the border. Read this as well, <a href="https://wiki.openstreetmap.org/wiki/Key:incline">https://wiki.openstreetmap.org/wiki/Key:incline</a> , for the key and value of the steps away or up from the area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

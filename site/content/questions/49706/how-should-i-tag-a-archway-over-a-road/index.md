@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to figure out how to tag the multiple archways in milwaukee. I think it would be a nice detail to add since most of the old brewery buildings have them. Thanks for any help.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot_from_2016-05-16_14-53-12_a6U5dIX.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2016-05-16_14-53-12_a6U5dIX.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bridge" rel="tag" title="see questions tagged &#39;bridge&#39;">bridge</span> <span class="post-tag tag-link-man_made" rel="tag" title="see questions tagged &#39;man_made&#39;">man_made</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-question" rel="tag" title="see questions tagged &#39;question&#39;">question</span>
@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would tag it as a gantry shown here in this <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Gantry">Wiki article</a>.</p>
+<p>I would tag it as a gantry shown here in this <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Gantry">Wiki article</a>.</p>
 <p>The tagging I would suggest is:<br />
 man_made=gantry<br />
 name=Schlitz Park</p>

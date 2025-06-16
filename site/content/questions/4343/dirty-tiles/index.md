@@ -114,7 +114,7 @@ link:(<a href="http://c.tile.openstreetmap.org/9/293/185.png/status">http://c.ti
 <td><div class="item-right">
 <div class="answer-body">
 <p>In my experience high zoom levels (zoomed in far) are re-rendered very quickly, but when you zoom out a bunch (eg to level 9 as in your tile) it re-renders very infrequently. I suspect that lower zoom levels are on a schedule or something, and don't respond to the "dirty" system, or respond, but on a significantly different schedule. I'd love for someone to confirm this and share the details, as I haven't been able to find it documented anywhere.</p>
-<p>Would be lovely to have it documented <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering">here</a>.</p>
+<p>Would be lovely to have it documented <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -236,7 +236,7 @@ link:(<a href="http://c.tile.openstreetmap.org/9/293/185.png/status">http://c.ti
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I just commented on this issue to another question at <a href="http://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?page=1#5494">http://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?page=1#5494</a> . What's the c.* in the URL? (I'm assuming that my guess in the linked comment may well not be correct..).</p>
+<p>I just commented on this issue to another question at <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?page=1#5494">https://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile?page=1#5494</a> . What's the c.* in the URL? (I'm assuming that my guess in the linked comment may well not be correct..).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

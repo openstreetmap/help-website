@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Zoom levels&#x27; generation"
-description = '''Hi. I am confused with and I don&#x27;t understand the zoom levels&#x27; generation. More precisely - what are the criteria for objects (for example, area objects) to appear or disappear in the zoom levels. For illustration, access the link http://www.openstreetmap.org/#map=6/50.345/-99.55 and so zoom out one...'''
+description = '''Hi. I am confused with and I don&#x27;t understand the zoom levels&#x27; generation. More precisely - what are the criteria for objects (for example, area objects) to appear or disappear in the zoom levels. For illustration, access the link https://www.openstreetmap.org/#map=6/50.345/-99.55 and so zoom out one...'''
 date = "2013-12-04T11:27:00Z"
 lastmod = "2013-12-04T13:19:00Z"
 weight = 28753
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi. I am confused with and I don't understand the zoom levels' generation. More precisely - what are the criteria for objects (for example, area objects) to appear or disappear in the zoom levels. For illustration, access the link <a href="http://www.openstreetmap.org/#map=6/50.345/-99.55">http://www.openstreetmap.org/#map=6/50.345/-99.55</a> and so zoom out one step. Many large lakes will disappear while much smaller islands don't. If I repeat the experiment with other apps in the Slippymap (like the Cycle map, Transport map ...) I am getting even more confused. Even just pointing to some related documentation would be much appreciated. Thanks.</p>
+<p>Hi. I am confused with and I don't understand the zoom levels' generation. More precisely - what are the criteria for objects (for example, area objects) to appear or disappear in the zoom levels. For illustration, access the link <a href="https://www.openstreetmap.org/#map=6/50.345/-99.55">https://www.openstreetmap.org/#map=6/50.345/-99.55</a> and so zoom out one step. Many large lakes will disappear while much smaller islands don't. If I repeat the experiment with other apps in the Slippymap (like the Cycle map, Transport map ...) I am getting even more confused. Even just pointing to some related documentation would be much appreciated. Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span> <span class="post-tag tag-link-objects" rel="tag" title="see questions tagged &#39;objects&#39;">objects</span> <span class="post-tag tag-link-criteria" rel="tag" title="see questions tagged &#39;criteria&#39;">criteria</span>

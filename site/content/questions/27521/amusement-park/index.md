@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Amusement park"
-description = '''How do you tag amusement park facilities like roller or water coaster rides? This way is tagged as highway=bridleway which is clearly tagging for the renderer: http://www.openstreetmap.org/browse/way/142973947/history railway=rollercoaster is also entered but probably not rendered How about leisure=...'''
+description = '''How do you tag amusement park facilities like roller or water coaster rides? This way is tagged as highway=bridleway which is clearly tagging for the renderer: https://www.openstreetmap.org/browse/way/142973947/history railway=rollercoaster is also entered but probably not rendered How about leisure=...'''
 date = "2013-10-27T08:51:00Z"
 lastmod = "2013-10-27T14:15:00Z"
 weight = 27521
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How do you tag amusement park facilities like roller or water coaster rides? This way is tagged as highway=bridleway which is clearly tagging for the renderer: <a href="http://www.openstreetmap.org/browse/way/142973947/history">http://www.openstreetmap.org/browse/way/142973947/history</a> railway=rollercoaster is also entered but probably not rendered</p>
+<p>How do you tag amusement park facilities like roller or water coaster rides? This way is tagged as highway=bridleway which is clearly tagging for the renderer: <a href="https://www.openstreetmap.org/browse/way/142973947/history">https://www.openstreetmap.org/browse/way/142973947/history</a> railway=rollercoaster is also entered but probably not rendered</p>
 <p>How about leisure=track &amp; track=rollercoaster? Or railway=light_rail, tourism=attraction, attraction=rollercoaster?</p>
 <p>Any other ideas?</p>
 </div>
@@ -148,7 +148,7 @@ osqa_accepted = false
 <div id="post-27527-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>hi look here, <a href="http://www.openstreetmap.org/#map=16/42.0379/-72.6159.">http://www.openstreetmap.org/#map=16/42.0379/-72.6159.</a> I've seen several like these amusement or themeparks, but your ahead of us. Some rides are tagged but it's a minority.</p>
+<p>hi look here, <a href="https://www.openstreetmap.org/#map=16/42.0379/-72.6159.">https://www.openstreetmap.org/#map=16/42.0379/-72.6159.</a> I've seen several like these amusement or themeparks, but your ahead of us. Some rides are tagged but it's a minority.</p>
 </div>
 <div id="comment-27527-info" class="comment-info">
 <span class="comment-age">(27 Oct '13, 12:47)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -213,8 +213,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi</p>
-<p>This theme park <a href="http://www.openstreetmap.org/#map=18/-27.86440/153.31538">a Dreamword one</a> has been tagged railway=light_rail with name=Roller Coaster in common with other rides at the park. To me this seems to work well, in the absence of a specific tag.</p>
-<p>I notice that a tag is proposed <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/key:roller_coaster">roller_coaster</a></p>
+<p>This theme park <a href="https://www.openstreetmap.org/#map=18/-27.86440/153.31538">a Dreamword one</a> has been tagged railway=light_rail with name=Roller Coaster in common with other rides at the park. To me this seems to work well, in the absence of a specific tag.</p>
+<p>I notice that a tag is proposed <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/key:roller_coaster">roller_coaster</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -140,7 +140,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... or see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> in general.</p>
+<p>... or see <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> in general.</p>
 </div>
 <div id="comment-50089-info" class="comment-info">
 <span class="comment-age">(08 Jun '16, 17:34)</span> <span class="comment-user userinfo">stephan75</span>

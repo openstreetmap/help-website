@@ -50,7 +50,7 @@ osqa_accepted = false
 </ul>
 <p>How do I map the no merging sections? How do I map the sections where you are allowed to merge?<br />
 Bonus: there are signs that tell you to exit the HOV lane to make specific exits. Can I tag those as well?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/HOV_entrance.jpg" alt="An HOV lane entrance" /></p>
+<p><img src="/upfiles/HOV_entrance.jpg" alt="An HOV lane entrance" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-hov" rel="tag" title="see questions tagged &#39;hov&#39;">hov</span> <span class="post-tag tag-link-restrictions" rel="tag" title="see questions tagged &#39;restrictions&#39;">restrictions</span> <span class="post-tag tag-link-merging" rel="tag" title="see questions tagged &#39;merging&#39;">merging</span> <span class="post-tag tag-link-carpool" rel="tag" title="see questions tagged &#39;carpool&#39;">carpool</span> <span class="post-tag tag-link-lane" rel="tag" title="see questions tagged &#39;lane&#39;">lane</span>

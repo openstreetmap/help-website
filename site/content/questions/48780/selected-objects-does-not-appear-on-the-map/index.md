@@ -111,8 +111,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe the server itself of that online service is in trouble, or when it is based on overpass-api, there is trouble in the connection.</p>
-<p>Try to contact the guys who make that service, it is not an "official" one, but more a local project from <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Lithuania">Lithuanian OSM community</a>, I assume.</p>
-<p>Alternatively you can try <a href="http://wiki.openstreetmap.org/wiki/OpenPoiMap">OpenPoiMap</a>.</p>
+<p>Try to contact the guys who make that service, it is not an "official" one, but more a local project from <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Lithuania">Lithuanian OSM community</a>, I assume.</p>
+<p>Alternatively you can try <a href="https://wiki.openstreetmap.org/wiki/OpenPoiMap">OpenPoiMap</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

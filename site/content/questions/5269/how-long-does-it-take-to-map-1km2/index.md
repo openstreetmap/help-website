@@ -122,7 +122,7 @@ osqa_accepted = false
 <p>10 people will cover much more then 1 km^2 in 3 hours. Although the speed varies a lot.</p>
 <p>First you have to walk/cycle/drive all the streets and collect data. The time it takes depends on how fast you are going, how much data you care about and how much you have to backtrack e.g. dead ends.</p>
 <p>The next step (hopfully after some food and rest) is to upload the traces and add the streets. This is not done automaticly as a computer have a hard time interpreting raw data.</p>
-<p>Try the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> to learn more.</p>
+<p>Try the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> to learn more.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -252,7 +252,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When you are a bit more experienced with OSM data modelling you can even load your recorded GPS tracks in one of the available <a href="http://wiki.openstreetmap.org/wiki/Editing">offline-editors</a>. This loading is done immediately.</p>
+<p>When you are a bit more experienced with OSM data modelling you can even load your recorded GPS tracks in one of the available <a href="https://wiki.openstreetmap.org/wiki/Editing">offline-editors</a>. This loading is done immediately.</p>
 <p>After that, download the already existing data from the central OSM server according to the area that is covered by your recorders track. This is done in a few seconds.</p>
 <p>Than you have to draw all ways, points and objects in a kind of vector data that are not yet included in the OSM data. The time amount for this differs strongly by the grade of missing objects and the editor's skills about handling the editors program. This is the most time consuming part.</p>
 <p>After all edits and new objects are tagged as desired, do an upload of that data to the central OSM server. This is also done in seconds.</p>
@@ -384,7 +384,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 </div>
 <div id="comment-5301-info" class="comment-info">
 <span class="comment-age">(19 May '11, 20:40)</span> <span class="comment-user userinfo">andy mackey</span>

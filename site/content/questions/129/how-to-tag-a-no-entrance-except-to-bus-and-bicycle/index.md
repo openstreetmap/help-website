@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Using the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Conditions_for_access_tags">proposed syntax</a> for conditional tags, this can be expressed as</p>
+<p>Using the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Conditions_for_access_tags">proposed syntax</a> for conditional tags, this can be expressed as</p>
 <p>oneway = yes<br />
 oneway:bicycle = no<br />
 oneway:psv = no</p>

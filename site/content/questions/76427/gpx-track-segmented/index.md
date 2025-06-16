@@ -91,7 +91,7 @@ osqa_accepted = false
 <div id="post-76435-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are a few questions on GPX problems here is one i asked. <a href="https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
+<p>There are a few questions on GPX problems here is one i asked. <a href="/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
 </div>
 <div id="comment-76435-info" class="comment-info">
 <span class="comment-age">(04 Sep '20, 19:27)</span> <span class="comment-user userinfo">andy mackey</span>

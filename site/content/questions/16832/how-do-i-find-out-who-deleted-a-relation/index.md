@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Use the OpenStreetMap website!</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/1516318">http://www.openstreetmap.org/browse/relation/1516318</a> shows that the relation was deleted by chipsterxx in changeset <a href="http://www.openstreetmap.org/browse/changeset/13274666">13274666</a>.</p>
+<p><a href="https://www.openstreetmap.org/browse/relation/1516318">https://www.openstreetmap.org/browse/relation/1516318</a> shows that the relation was deleted by chipsterxx in changeset <a href="https://www.openstreetmap.org/browse/changeset/13274666">13274666</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The browser interface will tell you in most cases (it does with <a href="http://www.openstreetmap.org/browse/relation/1516318">this one</a>). From there you can investigate the changeset (here it looks like they tried to create a replacement) and get in contact with the mapper.</p>
+<p>The browser interface will tell you in most cases (it does with <a href="https://www.openstreetmap.org/browse/relation/1516318">this one</a>). From there you can investigate the changeset (here it looks like they tried to create a replacement) and get in contact with the mapper.</p>
 <p>There's also <a href="http://osm.mapki.com/history/relation.php?id=1516318">this tool</a> which will work in most cases too.</p>
 <p>It may be (I haven't looked in this case) that they're a relatively new mapper and therefore might merit a message more like "oh dear, something appears to have gone wrong" rather than "oi! you deleted a relation".</p>
 </div>
@@ -195,8 +195,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If possible, it might be nice to avoid reverting the whole changeset, since there are v1 objects in there. It might be possible to use the <a href="http://wiki.openstreetmap.org/wiki/RawEditor">RawEditor</a>, but that takes a bit of practice (since you'd need to set the versions to what the API expects, and ensure that since-deleted ways no longer feature). There's also <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">JOSM's revert plugin</a>, which was much improved the last time that I used it, although (as with any revert operation) you'd need to be careful about exactly what you were reverting.</p>
-<p>One thing that would also work would be to ask in one of the <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC channels</a> (there's also a <a href="http://irc.openstreetmap.org/">web interface</a> if you don't have an IRC client to hand) - someone there would be able to help, I'm sure.</p>
+<p>If possible, it might be nice to avoid reverting the whole changeset, since there are v1 objects in there. It might be possible to use the <a href="https://wiki.openstreetmap.org/wiki/RawEditor">RawEditor</a>, but that takes a bit of practice (since you'd need to set the versions to what the API expects, and ensure that since-deleted ways no longer feature). There's also <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">JOSM's revert plugin</a>, which was much improved the last time that I used it, although (as with any revert operation) you'd need to be careful about exactly what you were reverting.</p>
+<p>One thing that would also work would be to ask in one of the <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC channels</a> (there's also a <a href="http://irc.openstreetmap.org/">web interface</a> if you don't have an IRC client to hand) - someone there would be able to help, I'm sure.</p>
 </div>
 <div id="comment-16845-info" class="comment-info">
 <span class="comment-age">(11 Oct '12, 14:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

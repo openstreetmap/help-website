@@ -143,7 +143,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>You will find a lot of interesting links in this <a href="https://help.openstreetmap.org/questions/37514/gps-traces-layer-not-updating">question</a>.</p>
+<p>You will find a lot of interesting links in this <a href="/questions/37514/gps-traces-layer-not-updating">question</a>.</p>
 <p>Here is the <a href="https://github.com/openstreetmap/gpx-updater">repository</a> of the tool. Some PR have been merged recently, so it's not totally unmaintained as I thought.</p>
 </div>
 <div id="comment-83907-info" class="comment-info">

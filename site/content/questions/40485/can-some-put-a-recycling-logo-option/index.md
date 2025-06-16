@@ -232,7 +232,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10356/penuk"></a><a href="http://help.openstreetmap.org/users/10356/penuk">@penuk</a> That's not correct. Objects with the tag <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling">amenity=recycling</a> will show up on the standard layer with the logo from your question (a little brownish, though). <a href="http://www.openstreetmap.org/?mlat=51.05017&amp;mlon=13.78062#map=19/51.05017/13.78062">Here</a> is an example.</p>
+<p><a href="https://help.openstreetmap.org/users/10356/penuk"></a><a href="https://help.openstreetmap.org/users/10356/penuk">@penuk</a> That's not correct. Objects with the tag <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling">amenity=recycling</a> will show up on the standard layer with the logo from your question (a little brownish, though). <a href="https://www.openstreetmap.org/?mlat=51.05017&amp;mlon=13.78062#map=19/51.05017/13.78062">Here</a> is an example.</p>
 </div>
 <div id="comment-40549-info" class="comment-info">
 <span class="comment-age">(23 Jan '15, 07:43)</span> <span class="comment-user userinfo">scai ♦</span>

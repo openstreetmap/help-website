@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I have been trying adding a hyperlink to a map (in my machine), in .svg format, resultant of osmarender's rendering. However when I see the svg in a firefox the map element in hwihc I just added the a-tag disappears.</p>
 <p>Do anyone have any idea of how could I circumvent this?</p>
 <p>Here's an example of what I am trying to do</p>
-<pre><code>&lt;a xlink:href=&quot;http://www.openstreetmap.org/&quot; target=&quot;_top&quot;&gt;
+<pre><code>&lt;a xlink:href=&quot;https://www.openstreetmap.org/&quot; target=&quot;_top&quot;&gt;
 &lt;svg:textPath
          xlink:href=&quot;#way_reverse_7526713&quot;
          startOffset=&quot;50%&quot;

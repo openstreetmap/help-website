@@ -134,10 +134,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Browse the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> to see all known online or offline solutions so far.</p>
+<p>Browse the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> to see all known online or offline solutions so far.</p>
 <p>Tell us what existing solution of all those webservices or apps come near your aim.</p>
 <p>Special hint to <a href="http://www.liedman.net/leaflet-routing-machine/">Leaflet Routing Machine</a></p>
-<p>Do you need also OSM based <a href="http://wiki.openstreetmap.org/wiki/Search_engines">search engines</a>?</p>
+<p>Do you need also OSM based <a href="https://wiki.openstreetmap.org/wiki/Search_engines">search engines</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

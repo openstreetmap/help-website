@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p><a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

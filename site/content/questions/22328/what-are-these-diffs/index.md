@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What are these diffs?"
-description = '''Are these differences errors or there are formal reason for them? Look at the extract in the permalink: http://www.openstreetmap.org/?lat=49.0032&amp;amp;lon=-120.498&amp;amp;zoom=12&amp;amp;layers=M As an experienced mapper, I can understand the sharp cut on the white holes, displaced country border... but I d...'''
+description = '''Are these differences errors or there are formal reason for them? Look at the extract in the permalink: https://www.openstreetmap.org/?lat=49.0032&amp;amp;lon=-120.498&amp;amp;zoom=12&amp;amp;layers=M As an experienced mapper, I can understand the sharp cut on the white holes, displaced country border... but I d...'''
 date = "2013-05-12T10:59:00Z"
 lastmod = "2013-05-14T11:04:00Z"
 weight = 22328
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Are these differences errors or there are formal reason for them? Look at the extract in the permalink:</p>
-<p><a href="http://www.openstreetmap.org/?lat=49.0032&amp;lon=-120.498&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=49.0032&amp;lon=-120.498&amp;zoom=12&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=49.0032&amp;lon=-120.498&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=49.0032&amp;lon=-120.498&amp;zoom=12&amp;layers=M</a></p>
 <p>As an experienced mapper, I can understand the sharp cut on the white holes, displaced country border... but I dont understan the color differences for the (obviously) same area object types (light and dark green), the horizontal/vertical tile/grid lines, the very weak contrast between the light-green and light-blue... As I undestand, the SlippyMap is OSM's reference map and should be (among) the best maps created on the most recen/valid OSM source data.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The darker green comes from a <a href="http://www.openstreetmap.org/browse/relation/2421485">landuse=forest</a> relation and the lighter green from a <a href="http://www.openstreetmap.org/browse/relation/1209319">natural=wood</a> relation. Additionally there is a <a href="http://www.openstreetmap.org/browse/relation/2230176">boundary=national_park / leisure=nature_reserve</a> combination rendered as an area with many "NR" labels and to the west there is a <a href="http://www.openstreetmap.org/browse/relation/2421484">boundary=national_park</a> without the <em>leisure=nature_reserve</em> tag but with a <em>leisure=park</em> tag resulting in an even lighter green. Somewhat confusing but that's what you get if you want to render many different tags.</p>
+<p>The darker green comes from a <a href="https://www.openstreetmap.org/browse/relation/2421485">landuse=forest</a> relation and the lighter green from a <a href="https://www.openstreetmap.org/browse/relation/1209319">natural=wood</a> relation. Additionally there is a <a href="https://www.openstreetmap.org/browse/relation/2230176">boundary=national_park / leisure=nature_reserve</a> combination rendered as an area with many "NR" labels and to the west there is a <a href="https://www.openstreetmap.org/browse/relation/2421484">boundary=national_park</a> without the <em>leisure=nature_reserve</em> tag but with a <em>leisure=park</em> tag resulting in an even lighter green. Somewhat confusing but that's what you get if you want to render many different tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

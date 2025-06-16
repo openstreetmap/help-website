@@ -116,7 +116,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Did you wait long enough, or is it a specific problematic way that "never" shows up?</p>
-<p>Further reading: <a href="https://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update">Why does the cycle map take so long to update?</a></p>
+<p>Further reading: <a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update">Why does the cycle map take so long to update?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ osqa_accepted = false
 <div id="post-17382-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You'll need to wait a bit longer I think. Some changes that I made <a href="http://www.openstreetmap.org/?lat=52.91928&amp;lon=-1.44411&amp;zoom=17&amp;layers=C">here</a> a month ago haven't shown up yet.</p>
+<p>You'll need to wait a bit longer I think. Some changes that I made <a href="https://www.openstreetmap.org/?lat=52.91928&amp;lon=-1.44411&amp;zoom=17&amp;layers=C">here</a> a month ago haven't shown up yet.</p>
 </div>
 <div id="comment-17382-info" class="comment-info">
 <span class="comment-age">(01 Nov '12, 22:10)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

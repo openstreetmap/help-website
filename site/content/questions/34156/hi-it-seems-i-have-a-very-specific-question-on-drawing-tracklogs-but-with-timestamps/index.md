@@ -145,7 +145,7 @@ Do it more or less like this:<br />
 <ul>
 <li>Get the gpx track. Either draw it by hand or derive it from a routing site (e.g. <a href="http://openrouteservice.org">http://openrouteservice.org</a>)<br />
 </li>
-<li>For faking timestamps you can use gpsbabel(<a href="https://help.openstreetmap.org/questions/1260/how-to-create-fake-timestamps-with-gpsbabel">1</a>)</li>
+<li>For faking timestamps you can use gpsbabel(<a href="/questions/1260/how-to-create-fake-timestamps-with-gpsbabel">1</a>)</li>
 </ul>
 <p>If you want you can strip some timestamps from the file again – of course with gpsbabel. :)<br />
 Most elevation data you can add easily with some online services like <a href="http://www.gpsvisualizer.com/elevation">this</a>.</p>

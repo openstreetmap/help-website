@@ -126,7 +126,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I suspect the answer is going to be to manually select tiles and make sure that you select less than 2Gb. Would that work?</p>
-<p>An alternative would be to use <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> to create and download your own maps (that's a bit more work, but you have more control over file sizes etc. doing it that way).</p>
+<p>An alternative would be to use <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> to create and download your own maps (that's a bit more work, but you have more control over file sizes etc. doing it that way).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -82,7 +82,7 @@ osqa_accepted = false
 <p>Thank you for your replay. I tried to explain better my wish.</p>
 <p>Regards</p>
 <p>Here is a tile example : This is only one of the 500 tiles generated. Only those which make the permiter are like that, the others are good. I think it's because a latitude, longitude which delimite my selected zone falls in the middle of this tile.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Tile_problem_example.png" alt="alt text" /></p>
+<p><img src="/upfiles/Tile_problem_example.png" alt="alt text" /></p>
 </div>
 <div id="comment-32451-info" class="comment-info">
 <span class="comment-age">(19 Apr '14, 13:47)</span> <span class="comment-user userinfo">Den68</span>

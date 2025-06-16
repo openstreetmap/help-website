@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I want to check for thousands of points (lat, lon), if they are located inside a building polygon using the overpass API.</p>
-<p>I know how to do it for one point (eg: <a href="https://help.openstreetmap.org/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass)">https://help.openstreetmap.org/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass)</a> but I don't know how to do it without sending requests during hours to the overpass API.</p>
+<p>I know how to do it for one point (eg: <a href="/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass)">https://help.openstreetmap.org/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass)</a> but I don't know how to do it without sending requests during hours to the overpass API.</p>
 <p>I'm currently using this request for one point:</p>
 <pre><code>way(around:5, {lat}, {lon})[building];
 if(count(ways) &lt; 1) {{

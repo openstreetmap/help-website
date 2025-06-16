@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to find a way to search for car sharing cars in a given region. I.e. I want to be able to zoom into a specific part of my town and then have OSM show me the locations of <code>amenity=car_sharing</code>. I've tried several variations, like <code>car_sharing near ithaca</code> (no results), just zooming in and searching for <code>car_sharing</code> (gives me random carsharing results from all over the place), <code>ithaca carshare</code> (this is the name of the operator; again, no results). Am I totally misunderstanding how the search on OSM works? Is there another way to achieve the desired result? Thanks for your help!</p>
-<p>Addition: I know that the tags do exist in the area (I entered them myself) and they are displayed on Mapnik (e.g. <a href="http://www.openstreetmap.org/?lat=42.438694&amp;lon=-76.497517&amp;zoom=18&amp;layers=M">here</a>).</p>
+<p>Addition: I know that the tags do exist in the area (I entered them myself) and they are displayed on Mapnik (e.g. <a href="https://www.openstreetmap.org/?lat=42.438694&amp;lon=-76.497517&amp;zoom=18&amp;layers=M">here</a>).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-car_sharing" rel="tag" title="see questions tagged &#39;car_sharing&#39;">car_sharing</span> <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span>
@@ -133,7 +133,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>As to how this <em>should</em> work:</strong></p>
-<p>Searching for "car sharing near Ithaca" should work. "car sharing" is one of the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">special phrases</a> which Nominatim understands. The term "car sharing" is an alias for places with the tag <code>amenity=car_sharing</code> - which is just what you want.</p>
+<p>Searching for "car sharing near Ithaca" should work. "car sharing" is one of the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">special phrases</a> which Nominatim understands. The term "car sharing" is an alias for places with the tag <code>amenity=car_sharing</code> - which is just what you want.</p>
 <p>If I search for "car sharing near münchen", I get appropriate results from München, which shows that this search methods works in principle.</p>
 <p><strong>As to why searching for "car_sharing near ithaca" does not return results:</strong></p>
 <p>I'm not sure why this does not work. The search query is correct (see above), and the car sharing node you link to appears to be correct. The might be a problem with Nominatim's updates (normally, there should be an indication on the Nominatim page when it was last updated, but that is currently missing). Try again in a few days, and if the problem persists, you might consider filing a bug on nominatim in trac ( <a href="http://trac.openstreetmap.org/">http://trac.openstreetmap.org/</a> )</p>

@@ -205,12 +205,12 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not sure. I notice there's a node <a href="http://www.openstreetmap.org/browse/node/240128258">http://www.openstreetmap.org/browse/node/240128258</a> tagged with</p>
+<p>Not sure. I notice there's a node <a href="https://www.openstreetmap.org/browse/node/240128258">https://www.openstreetmap.org/browse/node/240128258</a> tagged with</p>
 <ul>
 <li>name = Bad Homburg vor der Höhe</li>
 <li>alt_name = Bad Homburg</li>
 </ul>
-<p>Maybe some streets are close enough to that node to be associated with it while others are not? Maybe adding 'alt_name = Bad Homburg' to the boundary relation <a href="http://www.openstreetmap.org/browse/relation/338875">http://www.openstreetmap.org/browse/relation/338875</a> as well would solve the problem?</p>
+<p>Maybe some streets are close enough to that node to be associated with it while others are not? Maybe adding 'alt_name = Bad Homburg' to the boundary relation <a href="https://www.openstreetmap.org/browse/relation/338875">https://www.openstreetmap.org/browse/relation/338875</a> as well would solve the problem?</p>
 <p>-- Steve</p>
 </div>
 <div class="answer-controls post-controls">
@@ -322,7 +322,7 @@ osqa_accepted = false
 <p>Did you try "streetname" , "city name" ?</p>
 <p>I just typed "Gluckensteinweg, Bad Homburg" on openstreetmap.org and it finds the street.</p>
 <p>"Bad Homburg Gluckensteinweg" is not found.</p>
-<p>This is explained on <a href="http://wiki.openstreetmap.org/wiki/Search">http://wiki.openstreetmap.org/wiki/Search</a></p>
+<p>This is explained on <a href="https://wiki.openstreetmap.org/wiki/Search">https://wiki.openstreetmap.org/wiki/Search</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -372,7 +372,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Wie schon escada schrieb, Du musst <a href="http://nominatim.openstreetmap.org/search.php?q=Gluckensteinweg%2C+Bad+Homburg">"Gluckensteinweg, Bad Homburg"</a>, <a href="http://nominatim.openstreetmap.org/search.php?q=Kirdorfer+Stra%C3%9Fe%2C+Bad+Homburg">"Kirdorfer Straße, Bad Homburg"</a> usw. suchen! <a href="http://wiki.openstreetmap.org/wiki/DE:Nominatim#Suche">Hier</a> wird's erklärt.</p>
+<p>Wie schon escada schrieb, Du musst <a href="http://nominatim.openstreetmap.org/search.php?q=Gluckensteinweg%2C+Bad+Homburg">"Gluckensteinweg, Bad Homburg"</a>, <a href="http://nominatim.openstreetmap.org/search.php?q=Kirdorfer+Stra%C3%9Fe%2C+Bad+Homburg">"Kirdorfer Straße, Bad Homburg"</a> usw. suchen! <a href="https://wiki.openstreetmap.org/wiki/DE:Nominatim#Suche">Hier</a> wird's erklärt.</p>
 <p>/al</p>
 </div>
 <div class="answer-controls post-controls">

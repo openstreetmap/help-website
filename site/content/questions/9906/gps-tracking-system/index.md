@@ -162,7 +162,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>As GPS tracking systems are usually quite specialised, and developed towards the needs of the client, this entirely depends on what supplier you work with.</p>
 <p>As BlueSky donates a bit to OSM, I assume they also work with OSM.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Merchandise#BlueSkyTracking">http://wiki.openstreetmap.org/wiki/Merchandise#BlueSkyTracking</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Merchandise#BlueSkyTracking">https://wiki.openstreetmap.org/wiki/Merchandise#BlueSkyTracking</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

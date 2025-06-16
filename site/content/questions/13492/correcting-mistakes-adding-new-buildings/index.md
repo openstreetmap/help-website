@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While not perfect the Beginners Guide gives an overview of how you can contribute to OSM <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p>While not perfect the Beginners Guide gives an overview of how you can contribute to OSM <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 <p>Alternative text: <a href="http://www.learnosm.org/beginners-guide/">http://www.learnosm.org/beginners-guide/</a></p>
 </div>
 <div class="answer-controls post-controls">

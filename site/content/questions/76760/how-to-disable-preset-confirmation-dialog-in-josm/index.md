@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I've added a custom preset and assigned a shortcut to it, but is there a way to add the preset tags without having to confirm the dialog each time?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Untitled_NsZtRKh.png" alt="alt text" /></p>
+<p><img src="/upfiles/Untitled_NsZtRKh.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-confirmation" rel="tag" title="see questions tagged &#39;confirmation&#39;">confirmation</span> <span class="post-tag tag-link-presets" rel="tag" title="see questions tagged &#39;presets&#39;">presets</span> <span class="post-tag tag-link-disable" rel="tag" title="see questions tagged &#39;disable&#39;">disable</span>

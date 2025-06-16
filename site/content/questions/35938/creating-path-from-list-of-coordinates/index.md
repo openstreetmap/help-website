@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is there any way to create paths from a list of coordinates directly, through editing the XML files, or otherwise? The KML data in <a href="http://www.rowmaps.com/kmls/DY/">rowmaps</a>, contains public rights of way info and is released under the OS OpenData Licence. <a href="http://www.openstreetmap.org/way/8045826">This path</a>, for example, is assigned coordinate data {-1.92871,53.35826; -1.92859,53.35825; -1.92848,53.35821; -1.92834,53.35814; -1.92792,53.35784 -1.92787,53.35780;} in the KML file.</p>
+<p>Is there any way to create paths from a list of coordinates directly, through editing the XML files, or otherwise? The KML data in <a href="http://www.rowmaps.com/kmls/DY/">rowmaps</a>, contains public rights of way info and is released under the OS OpenData Licence. <a href="https://www.openstreetmap.org/way/8045826">This path</a>, for example, is assigned coordinate data {-1.92871,53.35826; -1.92859,53.35825; -1.92848,53.35821; -1.92834,53.35814; -1.92792,53.35784 -1.92787,53.35780;} in the KML file.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-list" rel="tag" title="see questions tagged &#39;list&#39;">list</span> <span class="post-tag tag-link-coordinates" rel="tag" title="see questions tagged &#39;coordinates&#39;">coordinates</span>
@@ -171,7 +171,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Given that you cannot use the data due to the license in the first place it doesn't seem to be a sensible question at this point in time, but yes, naturally it is possible to convert a list of coordinates to a way. However what you are proposing is an import, and you need to follow <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
+<p>Given that you cannot use the data due to the license in the first place it doesn't seem to be a sensible question at this point in time, but yes, naturally it is possible to convert a list of coordinates to a way. However what you are proposing is an import, and you need to follow <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -248,7 +248,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Potlatch 2 allows you to open a KML file as a <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/vector_background_layers">vector background layer</a>.</p>
+<p>Potlatch 2 allows you to open a KML file as a <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/vector_background_layers">vector background layer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

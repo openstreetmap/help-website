@@ -203,7 +203,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Overpass Turbo can highlight POIs on the map, and toggle between map results and raw data. Here's the <a href="http://overpass-turbo.eu/s/3ls">search for shop=supermarket</a>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Overpass_OSM_map_search_by_tag_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/Overpass_OSM_map_search_by_tag_1.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -255,7 +255,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim is mainly an address search engine and not directly meant for highlighting POIs, this is just a side effect to give more detail in how the search results were obtained.</p>
-<p>If you want to search and highlighting specific POIs you can use <a href="http://openstreetbrowser.org/">OpenStreetBrowser</a>, <a href="http://www.lenz-online.de/osm/">OSM POI Viewer</a> or another tool from the <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> instead.</p>
+<p>If you want to search and highlighting specific POIs you can use <a href="http://openstreetbrowser.org/">OpenStreetBrowser</a>, <a href="http://www.lenz-online.de/osm/">OSM POI Viewer</a> or another tool from the <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> instead.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

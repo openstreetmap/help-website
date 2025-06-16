@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I wish to map some larger sink holes (also known as depressions, shake holes, etc.) where underground caves have collapsed, but cannot find an appropriate tag - can anyone advise please?</p>
-<p>I have searched on sink hole, depression and shake hole but can find nothing. As these provide topographical features used for navigation on open moorland I'd like to include some larger ones. An example is <a href="http://www.openstreetmap.org/?lat=51.83101&amp;lon=-3.21236&amp;zoom=15&amp;layers=M">here</a> if you look at the Yahoo/Bing imagery. NB the quarry shown in the NE sector is a man-made quarry but the other depressions are natural collapses so I am reluctant to use the quarry tag.</p>
+<p>I have searched on sink hole, depression and shake hole but can find nothing. As these provide topographical features used for navigation on open moorland I'd like to include some larger ones. An example is <a href="https://www.openstreetmap.org/?lat=51.83101&amp;lon=-3.21236&amp;zoom=15&amp;layers=M">here</a> if you look at the Yahoo/Bing imagery. NB the quarry shown in the NE sector is a man-made quarry but the other depressions are natural collapses so I am reluctant to use the quarry tag.</p>
 <p>Any advice would be very much appreciated please - thank you.</p>
 <p>Robin</p>
 </div>
@@ -242,7 +242,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thanks for the responses. Curiously I've discovered that if drawing a closed ring of nodes for the <strong>natural:cliff</strong> attribute it doesn't render. I need to go back in and split the way to make it do so. Example = <a href="http://www.openstreetmap.org/?lat=51.8336&amp;lon=-3.18665&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=51.8336&amp;lon=-3.18665&amp;zoom=17&amp;layers=M</a></p>
+<p>Thanks for the responses. Curiously I've discovered that if drawing a closed ring of nodes for the <strong>natural:cliff</strong> attribute it doesn't render. I need to go back in and split the way to make it do so. Example = <a href="https://www.openstreetmap.org/?lat=51.8336&amp;lon=-3.18665&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=51.8336&amp;lon=-3.18665&amp;zoom=17&amp;layers=M</a></p>
 <p>Am I doing it correctly?</p>
 </div>
 <div class="answer-controls post-controls">

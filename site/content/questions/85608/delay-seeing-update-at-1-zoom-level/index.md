@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is almost certainly a caching issue. Your browsers are showing you old tiles.</p>
-<p>This answer has some more info: <a href="https://help.openstreetmap.org/questions/83241/changes-only-on-some-zoom-levels-visible">https://help.openstreetmap.org/questions/83241/changes-only-on-some-zoom-levels-visible</a></p>
+<p>This answer has some more info: <a href="/questions/83241/changes-only-on-some-zoom-levels-visible">https://help.openstreetmap.org/questions/83241/changes-only-on-some-zoom-levels-visible</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

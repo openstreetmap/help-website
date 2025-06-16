@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, what is the standard way to assign a name to a turn?, see the attached screenshot from google maps. <img src="https://help.openstreetmap.org/upfiles/curvas.PNG" alt="alt text" /></p>
+<p>Hi, what is the standard way to assign a name to a turn?, see the attached screenshot from google maps. <img src="/upfiles/curvas.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-turn" rel="tag" title="see questions tagged &#39;turn&#39;">turn</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-turns" rel="tag" title="see questions tagged &#39;turns&#39;">turns</span>

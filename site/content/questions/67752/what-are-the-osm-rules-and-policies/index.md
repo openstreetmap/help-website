@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-67777-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What all of them? Given your other question is this one: [ <a href="https://help.openstreetmap.org/questions/67750/why-do-some-members-get-suspended">https://help.openstreetmap.org/questions/67750/why-do-some-members-get-suspended</a> ] and that you're (apparently) newly registered here, I'm guessing that you've had some kind of issue. Perhaps if you could clarify? You'll find this a positive and helpful community if you're respectful and positive....</p>
+<p>What all of them? Given your other question is this one: [ <a href="/questions/67750/why-do-some-members-get-suspended">https://help.openstreetmap.org/questions/67750/why-do-some-members-get-suspended</a> ] and that you're (apparently) newly registered here, I'm guessing that you've had some kind of issue. Perhaps if you could clarify? You'll find this a positive and helpful community if you're respectful and positive....</p>
 </div>
 <div id="comment-67777-info" class="comment-info">
 <span class="comment-age">(29 Jan '19, 11:10)</span> <span class="comment-user userinfo">Rostranimin</span>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello everyone!</p>
 <p>I've inserted every [turn:lanes] info that I know in one important highway which I use daily, but when I saw it on OsmAnd (I've got OsmAnd Live and have hourly updates) the lanes weren't exactely the way I've putted in on OSM.</p>
-<p>In a lot of intersections on the app it appears as 6 or even 11 lanes, when it's actually only 3 or 4 (that info is specify on [lanes]) like you can see on the screenshot below <img src="https://help.openstreetmap.org/upfiles/Screenshot_20190223-160359.png" alt="alt text" /></p>
+<p>In a lot of intersections on the app it appears as 6 or even 11 lanes, when it's actually only 3 or 4 (that info is specify on [lanes]) like you can see on the screenshot below <img src="/upfiles/Screenshot_20190223-160359.png" alt="alt text" /></p>
 <p>I'd like help to know what's possible wrong there and what needs to be corrected before I start to insert [turn:lanes] info into more roads of my city.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

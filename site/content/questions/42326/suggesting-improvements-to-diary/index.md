@@ -232,7 +232,7 @@ osqa_accepted = true
 <div id="post-42331-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>: thank you for your ideas, anyhow! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>: thank you for your ideas, anyhow! :-)</p>
 </div>
 <div id="comment-42331-info" class="comment-info">
 <span class="comment-age">(15 Apr '15, 01:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -244,7 +244,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a> even if the issues hadn't been closed, there is just essentially nobody working through feature requests (bug reports are different) and implementing them. So while I wouldn't preclude that somebody might take a fancy to an idea and actually do something about one, it is extremely unlikely.</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a> even if the issues hadn't been closed, there is just essentially nobody working through feature requests (bug reports are different) and implementing them. So while I wouldn't preclude that somebody might take a fancy to an idea and actually do something about one, it is extremely unlikely.</p>
 </div>
 <div id="comment-42334-info" class="comment-info">
 <span class="comment-age">(15 Apr '15, 07:13)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

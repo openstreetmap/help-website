@@ -199,7 +199,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> suggested <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">the list of special phrases for Nomination</a> is the correct way.</p>
+<p>As <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> suggested <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">the list of special phrases for Nomination</a> is the correct way.</p>
 <p>If still you are not able to execute then here is my suggestion. It'll be a good project <em>the list of simple questions with overpass API syntax</em> that are useful for many who want to use OSM but are unable to comprehend the complexities OSM overpass query language.</p>
 <p>You can start a project on github and make a list of questions then OSM community certainly will help you to convert those queries to overpass API. Just post the github project link here once you are ready.</p>
 </div>

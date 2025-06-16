@@ -115,7 +115,7 @@ One Answer:
 <div class="answer-body">
 <p>There's nobody who provides unlimited free tiles for downloading and using offline. You can get away with downloading <strong>small</strong> <strong>quantities</strong> of tiles from public tile servers using any tile downloader software but you will be blocked if you download larger areas because you're violating their usage policies.</p>
 <p>You have to understand the difference between free data (OSM data is free for the taking - you can download everything in one large file) and free services (producing and distributing tiles costs CPU time and bandwidth and these things are not free).</p>
-<p>Leaflet will be able to consume standard tile sources with z/x/y tile layout from the local disk. See <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">the Wiki</a> for details about the layout.</p>
+<p>Leaflet will be able to consume standard tile sources with z/x/y tile layout from the local disk. See <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">the Wiki</a> for details about the layout.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11589/elad159">@elad159</a> - read <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/</a> . That explains what you need to do to generate the tiles that you are interested in.</p>
+<p><a href="https://help.openstreetmap.org/users/11589/elad159">@elad159</a> - read <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/</a> . That explains what you need to do to generate the tiles that you are interested in.</p>
 </div>
 <div id="comment-46018-info" class="comment-info">
 <span class="comment-age">(20 Oct '15, 12:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -187,7 +187,7 @@ One Answer:
 <div class="comment-text">
 <p>i think i got it finally...</p>
 <p>i will try it later with the server configuration.</p>
-<p>thank you very much <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> !!</p>
+<p>thank you very much <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> !!</p>
 </div>
 <div id="comment-46019-info" class="comment-info">
 <span class="comment-age">(20 Oct '15, 12:31)</span> <span class="comment-user userinfo">elad159</span>
@@ -198,7 +198,7 @@ One Answer:
 <div id="post-46082-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> @Fredrick Ramm</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> @Fredrick Ramm</p>
 </div>
 <div id="comment-46082-info" class="comment-info">
 <span class="comment-age">(23 Oct '15, 20:02)</span> <span class="comment-user userinfo">elad159</span>

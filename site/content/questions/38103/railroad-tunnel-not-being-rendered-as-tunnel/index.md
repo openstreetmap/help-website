@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Railroad Tunnel not being rendered as tunnel"
-description = '''At http://www.openstreetmap.org/#map=18/38.23291/15.64425 you can see a railroad track which is tagged as being in a tunnel (visible on the southern track). The northern track would also be in a tunnel, is tagged almost the same, but is not rendered as such (it appears as normal track): tags of the ...'''
+description = '''At https://www.openstreetmap.org/#map=18/38.23291/15.64425 you can see a railroad track which is tagged as being in a tunnel (visible on the southern track). The northern track would also be in a tunnel, is tagged almost the same, but is not rendered as such (it appears as normal track): tags of the ...'''
 date = "2014-10-30T08:22:00Z"
 lastmod = "2014-10-30T10:40:00Z"
 weight = 38103
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>At <a href="http://www.openstreetmap.org/#map=18/38.23291/15.64425">http://www.openstreetmap.org/#map=18/38.23291/15.64425</a> you can see a railroad track which is tagged as being in a tunnel (visible on the southern track). The northern track would also be in a tunnel, is tagged almost the same, but is not rendered as such (it appears as normal track):</p>
+<p>At <a href="https://www.openstreetmap.org/#map=18/38.23291/15.64425">https://www.openstreetmap.org/#map=18/38.23291/15.64425</a> you can see a railroad track which is tagged as being in a tunnel (visible on the southern track). The northern track would also be in a tunnel, is tagged almost the same, but is not rendered as such (it appears as normal track):</p>
 <p>tags of the tunnel track: layer=-1, railway=rail, tunnel=yes</p>
 <p>tags of the not-rendered tunnel track: layer=-1, railway=rail, tunnel=yes, voltage=3000, frequency=0, gauge=1435, electrified=contact_line</p>
 <p>But the second one is also part of a route relation with the following tags: electrified=contact_line frequency=0 from=Salerno gauge=1435 name=Ferrovia Tirrenica Meridionale route=railway to=Reggio di Calabria type=route voltage=3000</p>

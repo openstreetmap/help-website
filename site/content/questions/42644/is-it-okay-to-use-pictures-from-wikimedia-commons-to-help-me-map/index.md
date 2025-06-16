@@ -122,7 +122,7 @@ One Answer:
 </ul>
 <p>For all sources, attribution is a <em>nice</em> thing to do. … but obviously not on the "Attribution" wiki page which would get very very long then.</p>
 <p>For all sources, a bit care is useful because the displayed license could simply be inserted by another wiki user, the uploader could not be the author (meaning that the uploader is not entitled to issue a license for the work). One case would be e.g. photos of maps (which were made by other people).</p>
-<p>Maybe <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> from the LWG can shed more light here (see <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2b._XYZ_Organisation_has_data_for_free_download_under_licence_N._Can_I_use_it_in_OSM.3F">https://wiki.openstreetmap.org/wiki/Legal_FAQ#2b._XYZ_Organisation_has_data_for_free_download_under_licence_N._Can_I_use_it_in_OSM.3F</a> which is about data – not photos – use).</p>
+<p>Maybe <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> from the LWG can shed more light here (see <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2b._XYZ_Organisation_has_data_for_free_download_under_licence_N._Can_I_use_it_in_OSM.3F">https://wiki.openstreetmap.org/wiki/Legal_FAQ#2b._XYZ_Organisation_has_data_for_free_download_under_licence_N._Can_I_use_it_in_OSM.3F</a> which is about data – not photos – use).</p>
 <p>From a data quality POV the there would be several other questions which should not be a part of this question here, I just wanted to mention it. Mentioning the source of your data is good anyway to enable other mappers to verify and understand your changes.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -181,7 +181,7 @@ One Answer:
 <div id="post-42658-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>okay, thank you, <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>! Yes, wrong licenses/copyright violations are an issue. However, are they really a problem for us – <em>if</em> we only extract some very very minor facts (the number of levels) from, let's say, a photo of a 15 level building in a city?</p>
+<p>okay, thank you, <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>! Yes, wrong licenses/copyright violations are an issue. However, are they really a problem for us – <em>if</em> we only extract some very very minor facts (the number of levels) from, let's say, a photo of a 15 level building in a city?</p>
 </div>
 <div id="comment-42658-info" class="comment-info">
 <span class="comment-age">(28 Apr '15, 22:01)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -204,7 +204,7 @@ One Answer:
 <div id="post-42684-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: yes, asking would also be a good opportunity to promote contributing to OSM. However, asking is not always possible and/or costly (e.g. in terms of time) (depending on the photo sharing platform).</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: yes, asking would also be a good opportunity to promote contributing to OSM. However, asking is not always possible and/or costly (e.g. in terms of time) (depending on the photo sharing platform).</p>
 </div>
 <div id="comment-42684-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 12:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -216,7 +216,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> other platforms however would have other ToS which in turn reopens the discussion. The other problem is that photographic works is one of the areas in which IP protection varies greatly, for example between Switzerland and Germany. So best ... be conservative, check the ToS and ask the source of the image.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> other platforms however would have other ToS which in turn reopens the discussion. The other problem is that photographic works is one of the areas in which IP protection varies greatly, for example between Switzerland and Germany. So best ... be conservative, check the ToS and ask the source of the image.</p>
 </div>
 <div id="comment-42686-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 13:14)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -227,7 +227,7 @@ One Answer:
 <div id="post-42689-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: the saddening thing is: I guess e.g. most Wikimedia Commons uploaders (and possibly or hopefully also the platform operator) or generally free content supporters would love to have their photos of buildings used for such uses like OSM (without additional negotiation/contact work). But, indeed, the case it is not clear cut.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: the saddening thing is: I guess e.g. most Wikimedia Commons uploaders (and possibly or hopefully also the platform operator) or generally free content supporters would love to have their photos of buildings used for such uses like OSM (without additional negotiation/contact work). But, indeed, the case it is not clear cut.</p>
 </div>
 <div id="comment-42689-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 13:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

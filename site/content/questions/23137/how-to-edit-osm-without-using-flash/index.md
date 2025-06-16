@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Other possibilities include <a href="http://wiki.openstreetmap.org/wiki/ID">iD</a> (if your browser supports it) and <a href="http://merkaartor.be/">Merkaartor</a> (currently not in active development but works).</p>
+<p>Other possibilities include <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a> (if your browser supports it) and <a href="http://merkaartor.be/">Merkaartor</a> (currently not in active development but works).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> is the Java OpenstreetMap editor, and is probably the most suitable approach for editing OSM without using Flash editor. (Note, this is increasingly true for all older platforms as Browser and Flash plug-in memory requirements become so bloated as to cause frequent crashes).</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a> is the Java OpenstreetMap editor, and is probably the most suitable approach for editing OSM without using Flash editor. (Note, this is increasingly true for all older platforms as Browser and Flash plug-in memory requirements become so bloated as to cause frequent crashes).</p>
 <p>JOSM provides a range of easy to use tools for adding house number and address information, and has a richer functionality in this regard than the in-browser editors.</p>
 </div>
 <div class="answer-controls post-controls">

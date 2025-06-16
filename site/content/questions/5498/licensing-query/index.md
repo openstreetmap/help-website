@@ -113,7 +113,7 @@ With the US and Australian product, we would send the digital image onto our dis
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is a free map, please read this <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> your print of the map should show that it is the openstreetmap details are in the link and are also clickable from the map page.</p>
+<p>It is a free map, please read this <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> your print of the map should show that it is the openstreetmap details are in the link and are also clickable from the map page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

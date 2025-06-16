@@ -138,7 +138,7 @@ osqa_accepted = false
 <li>Alternatively repeated middle clicking will cycle the selection.</li>
 <li>If you do not have a middle mouse button, hold down the 'Alt' key on the right side of your keyboard and do a repeated left-click to cycle the selection</li>
 </ul>
-<p>(This is as I wrote <a href="http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Unglueing_and_untangling">in the JOSM Guide</a>)</p>
+<p>(This is as I wrote <a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Unglueing_and_untangling">in the JOSM Guide</a>)</p>
 <p>Earlier you are asking whether this kind of data is a good idea in general. ...good question.</p>
 <p>It certainly makes it a little harder to work with the data (and I can understand you asking both questions at once, to make this point) I used to <em>always</em> avoid overlapping way-segments, but these days I'm using them quite a lot for building outlines. In my opinion you should not take the polygon of a park right up to share the way-segments of a road centreline, unless maybe there is no pavement or anything separating the area of park from the road. But this is certainly something people take varying approaches to, and it might be good to try to agree on some clearer guidelines. No clear answers at this stage I'm afraid.</p>
 </div>

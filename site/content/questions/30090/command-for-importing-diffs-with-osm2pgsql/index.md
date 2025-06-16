@@ -110,7 +110,7 @@ Do you use the -a (append) to import the diffs?<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's some info on <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">this switch2osm page</a> (go down to "updating") and also <a href="http://wiki.openstreetmap.org/wiki/Minutely_Mapnik">in the wiki here</a>. The last time I set this up (with no prior experience) I was able to follow a combination of those two. That was on Ubuntu though - I've no idea if anyone's ever tried Windows.</p>
+<p>There's some info on <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">this switch2osm page</a> (go down to "updating") and also <a href="https://wiki.openstreetmap.org/wiki/Minutely_Mapnik">in the wiki here</a>. The last time I set this up (with no prior experience) I was able to follow a combination of those two. That was on Ubuntu though - I've no idea if anyone's ever tried Windows.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -83,7 +83,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I'd also mention the "if you want to test your software" section of <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">this page</a>. There's a copy of the API at <a href="http://api06.dev.openstreetmap.org/">http://api06.dev.openstreetmap.org/</a> which you can use for testing, which avoids filling the live database with rubbish.</p>
+<p>I'd also mention the "if you want to test your software" section of <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">this page</a>. There's a copy of the API at <a href="http://api06.dev.openstreetmap.org/">http://api06.dev.openstreetmap.org/</a> which you can use for testing, which avoids filling the live database with rubbish.</p>
 </div>
 <div id="comment-15789-info" class="comment-info">
 <span class="comment-age">(04 Sep '12, 10:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

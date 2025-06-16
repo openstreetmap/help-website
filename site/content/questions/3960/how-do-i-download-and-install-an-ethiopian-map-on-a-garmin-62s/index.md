@@ -111,9 +111,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the wiki page <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Africa">OSM Map On Garmin/Download</a> you will find a lot of maps for Garmin.</p>
+<p>On the wiki page <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Africa">OSM Map On Garmin/Download</a> you will find a lot of maps for Garmin.</p>
 <p>For example this <a href="http://mapas.alternativaslibres.es/downloads.html">Ethiopia</a> map is updated at least weekly and you don't need email to download it.</p>
-<p>With a new Garmin device simply create a folder called "Garmin" on your SD-card and store the .img file in it. Make sure the file is called "gmapsupp.img". For more details on this see <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode">OSM Map On Garmin/Mass Storage Mode</a>.</p>
+<p>With a new Garmin device simply create a folder called "Garmin" on your SD-card and store the .img file in it. Make sure the file is called "gmapsupp.img". For more details on this see <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode">OSM Map On Garmin/Mass Storage Mode</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -214,7 +214,7 @@ osqa_accepted = false
 <div id="post-38510-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: That is an error which was not caught by the program. What else do you see around those words? I do not get this error when starting JOSM (in a terminal).</p>
+<p><a href="https://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: That is an error which was not caught by the program. What else do you see around those words? I do not get this error when starting JOSM (in a terminal).</p>
 <p>Which Java VM and version do you use? Which operating system? Do you have direct Internet access or via a proxy? Does downloading data or GPS traces with JOSM work? It is hard to guess, so please give us more information.</p>
 </div>
 <div id="comment-38510-info" class="comment-info">
@@ -242,7 +242,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9987/luca-amadio"></a><a href="http://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: are you sure that it is openstreetmapS in your log (did you type or copy&amp;paste)? The S is too much! If the S is in your log - why? Can you open <a href="https://josm.openstreetmap.de/maps">https://josm.openstreetmap.de/maps</a> in your browser (code display or download of a file)?</p>
+<p><a href="https://help.openstreetmap.org/users/9987/luca-amadio"></a><a href="https://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: are you sure that it is openstreetmapS in your log (did you type or copy&amp;paste)? The S is too much! If the S is in your log - why? Can you open <a href="https://josm.openstreetmap.de/maps">https://josm.openstreetmap.de/maps</a> in your browser (code display or download of a file)?</p>
 <p>Where did you download JOSM? Did you change its config?</p>
 </div>
 <div id="comment-38515-info" class="comment-info">
@@ -254,7 +254,7 @@ osqa_accepted = false
 <div id="post-38516-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: just by chance: Did you forbid HTTPS certificates which use SHA1? The josm website <a href="https://www.ssllabs.com/ssltest/analyze.html?d=josm.openstreetmap.de">uses SHA1</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: just by chance: Did you forbid HTTPS certificates which use SHA1? The josm website <a href="https://www.ssllabs.com/ssltest/analyze.html?d=josm.openstreetmap.de">uses SHA1</a>.</p>
 </div>
 <div id="comment-38516-info" class="comment-info">
 <span class="comment-age">(12 Nov '14, 14:06)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -277,7 +277,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9987/luca-amadio"></a><a href="http://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: The "Log" where you saw the "InvalidAlgorithmParameterException". But I see that you've edited your comment in the meantime and added details. Thanks. However, please could you copy the full lines. Do not type only a part of them. And, please, answer my questions.</p>
+<p><a href="https://help.openstreetmap.org/users/9987/luca-amadio"></a><a href="https://help.openstreetmap.org/users/9987/luca-amadio">@Luca Amadio</a>: The "Log" where you saw the "InvalidAlgorithmParameterException". But I see that you've edited your comment in the meantime and added details. Thanks. However, please could you copy the full lines. Do not type only a part of them. And, please, answer my questions.</p>
 </div>
 <div id="comment-38519-info" class="comment-info">
 <span class="comment-age">(12 Nov '14, 14:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -354,7 +354,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It works for me, see pic<img src="http://help.openstreetmap.org/upfiles/josm_Italy_north_bing.JPG" alt="alt text" /></p>
+<p>It works for me, see pic<img src="/upfiles/josm_Italy_north_bing.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Undo changeset"
-description = '''Can someone undo/repair the changeset http://www.openstreetmap.org/changeset/21491124 ? Something went wrong in this edit of a new user. Thanks!'''
+description = '''Can someone undo/repair the changeset https://www.openstreetmap.org/changeset/21491124 ? Something went wrong in this edit of a new user. Thanks!'''
 date = "2014-04-09T23:09:00Z"
 lastmod = "2014-04-10T07:43:00Z"
 weight = 32245
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can someone undo/repair the changeset <a href="http://www.openstreetmap.org/changeset/21491124">http://www.openstreetmap.org/changeset/21491124</a> ? Something went wrong in this edit of a new user. Thanks!</p>
+<p>Can someone undo/repair the changeset <a href="https://www.openstreetmap.org/changeset/21491124">https://www.openstreetmap.org/changeset/21491124</a> ? Something went wrong in this edit of a new user. Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span> <span class="post-tag tag-link-delete" rel="tag" title="see questions tagged &#39;delete&#39;">delete</span>
@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-32246-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Isn't this already in hand (see <a href="https://help.openstreetmap.org/questions/32213/batam-island-indonesia">this question</a>)?</p>
+<p>Isn't this already in hand (see <a href="/questions/32213/batam-island-indonesia">this question</a>)?</p>
 </div>
 <div id="comment-32246-info" class="comment-info">
 <span class="comment-age">(09 Apr '14, 23:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

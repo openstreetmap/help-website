@@ -165,7 +165,7 @@ One Answer:
 <div id="post-41390-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: yup, I used an overpass turbo query for this name, with the result as mentioned above. Strange, strange …</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: yup, I used an overpass turbo query for this name, with the result as mentioned above. Strange, strange …</p>
 </div>
 <div id="comment-41390-info" class="comment-info">
 <span class="comment-age">(26 Feb '15, 13:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>In Furnace Creek Ranch, Death Valley, there are some hotel rooms which are in separate cabins, 2 rooms per cabin. They are numbered, 201 on up. The number is not attached to a street.</p>
 <p>One options is to use addr:housenumber to record the number. The number shows up nicely in maps, but there are warnings about not having a street name to go with the house number.</p>
 <p>Here is a view of the area.</p>
-<p><a href="http://www.openstreetmap.org/#map=19/36.45764/-116.86580">http://www.openstreetmap.org/#map=19/36.45764/-116.86580</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/36.45764/-116.86580">https://www.openstreetmap.org/#map=19/36.45764/-116.86580</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-hotel" rel="tag" title="see questions tagged &#39;hotel&#39;">hotel</span> <span class="post-tag tag-link-room" rel="tag" title="see questions tagged &#39;room&#39;">room</span> <span class="post-tag tag-link-number" rel="tag" title="see questions tagged &#39;number&#39;">number</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 <p>Please do not use <code>addr:housenumber</code> for hotel rooms, even if they are located in different buildings and they show up on the map. Using this tag in this way will cause issues for tools which search for valid addresses. It will create noise.</p>
 <p>Hotel rooms are subsidiary elements at a '''single''' address and therefore should be tagged as such. Similar elements which are in use are addr:suite (for office suites within a building or complex) and <code>addr:flats</code> (for flats and apartments within a building or complex).</p>
 <p>By analogy you could use a tag <code>addr:hotel_roomnumber</code> or similar for this case, although, personally I'm uncertain as to whether this is appropriate information for OSM.</p>
-<p>Also OSM has a principle of <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature one element</a>, currently this resort appears to be mapped as multiple hotels. It would be better if this was mapped as an area enclosing the various buildings.</p>
+<p>Also OSM has a principle of <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature one element</a>, currently this resort appears to be mapped as multiple hotels. It would be better if this was mapped as an area enclosing the various buildings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

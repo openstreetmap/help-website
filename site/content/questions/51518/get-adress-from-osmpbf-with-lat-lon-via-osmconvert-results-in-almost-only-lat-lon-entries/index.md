@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I am testin to extract a .csv file from the germany-latest.osm.pbf including latitude, longitude, street, hausnumber, and city.</p>
-<p>But when I let the following command run, I get a csv file with mainly only latitude and longitude entries, all the other address information is missing: ./osmconvert germany-latest.osm.pbf --csv="<a href="http://help.openstreetmap.org/users/5110/latroc">@lat</a> <a href="http://help.openstreetmap.org/users/1350/longestaugust">@lon</a> addr:street addr:housenumber addr:city" -o=3.csv</p>
+<p>But when I let the following command run, I get a csv file with mainly only latitude and longitude entries, all the other address information is missing: ./osmconvert germany-latest.osm.pbf --csv="<a href="https://help.openstreetmap.org/users/5110/latroc">@lat</a> <a href="https://help.openstreetmap.org/users/1350/longestaugust">@lon</a> addr:street addr:housenumber addr:city" -o=3.csv</p>
 <p>What am I doing wrong?</p>
 <p>Thank you for your help</p>
 </div>
@@ -107,8 +107,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>osmconvert doesn't do any filtering. So <code>--csv="</code><a href="http://help.openstreetmap.org/users/5110/latroc"><code>@lat</code></a><code> </code><a href="http://help.openstreetmap.org/users/1350/longestaugust"><code>@lon</code></a><code> addr:street addr:housenumber addr:city"</code> includes every object with a latitude and longitude, which is every node in the file, regardless of whether it has an address or not.</p>
-<p>You can take a look at the companion tool <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>. It first requires using osmconvert to translate the .pbf into a format it understands, you will likely want the <code>--all-to-nodes</code> option when you do this step. Many addresses are associated with OpenStreetMap ways and relations, objects which do not directly store location information. The <code>--all-to-nodes</code> will extract a location for them.</p>
+<p>osmconvert doesn't do any filtering. So <code>--csv="</code><a href="https://help.openstreetmap.org/users/5110/latroc"><code>@lat</code></a><code> </code><a href="https://help.openstreetmap.org/users/1350/longestaugust"><code>@lon</code></a><code> addr:street addr:housenumber addr:city"</code> includes every object with a latitude and longitude, which is every node in the file, regardless of whether it has an address or not.</p>
+<p>You can take a look at the companion tool <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>. It first requires using osmconvert to translate the .pbf into a format it understands, you will likely want the <code>--all-to-nodes</code> option when you do this step. Many addresses are associated with OpenStreetMap ways and relations, objects which do not directly store location information. The <code>--all-to-nodes</code> will extract a location for them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

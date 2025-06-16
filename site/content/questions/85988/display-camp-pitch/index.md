@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>My only issue now is that I have realised that not all maps display Camp pitch.</p>
 <p>The ability to navigate to their campsite was going to be a major boost to that community of users.</p>
 <p>My question is does someone know what apps display camp pitches and also navigate?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Bathurst.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Bathurst.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-camp_site" rel="tag" title="see questions tagged &#39;camp_site&#39;">camp_site</span>

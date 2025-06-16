@@ -107,7 +107,7 @@ One Answer:
 <p>If you want to use OSM data or derived maps for commercial purposes I personally recommend that you start studying the OSM wiki before, because there are descriptions of all steps if you want to use OSM data in that way.</p>
 <p>So please do a part of the efforts on your own and tell us when you get stuck somewhere.</p>
 <p>Or you can contact any proffessional company:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

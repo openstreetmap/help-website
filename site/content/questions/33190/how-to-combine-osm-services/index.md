@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello all,<br />
-As mentioned in <a href="https://help.openstreetmap.org/questions/33178/accessing-data-by-using-own-instance-of-osm-api-06">my previous question</a> I am currently trying to set my own OSM-Server instance including website, API and Tile Server. In this context I also want to set up an own Overpass and Nominatim, which hopefully be done tomorrow. My problem is that I don't have a clear idea of how to combine those services to "one application". Up to now the website is up and running and I also have a working Tile-Server machine including the dataset and the database with my relevant data. In my case the data for the Tile server cover only one city but this is enough for my use case.<br />
+As mentioned in <a href="/questions/33178/accessing-data-by-using-own-instance-of-osm-api-06">my previous question</a> I am currently trying to set my own OSM-Server instance including website, API and Tile Server. In this context I also want to set up an own Overpass and Nominatim, which hopefully be done tomorrow. My problem is that I don't have a clear idea of how to combine those services to "one application". Up to now the website is up and running and I also have a working Tile-Server machine including the dataset and the database with my relevant data. In my case the data for the Tile server cover only one city but this is enough for my use case.<br />
 </p>
 <p>Now my questions are:<br />
-1.) How can I combine both services (the website rails port and Tile-Server)? I would like to be able to query data using the API on my local server. As mentioned in the answer of my <a href="https://help.openstreetmap.org/questions/33178/accessing-data-by-using-own-instance-of-osm-api-06">my previous question</a> it's necessary to have a own database so the local port of the API can access the data.<br />
+1.) How can I combine both services (the website rails port and Tile-Server)? I would like to be able to query data using the API on my local server. As mentioned in the answer of my <a href="/questions/33178/accessing-data-by-using-own-instance-of-osm-api-06">my previous question</a> it's necessary to have a own database so the local port of the API can access the data.<br />
 2.) Apart from querying the data using the API, how can I change the map source to my Tile-Sever. I've checked the source code, but I did not find the right line, where I could change it.</p>
 <p>Thanks for your input!</p>
 </div>

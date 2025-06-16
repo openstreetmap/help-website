@@ -169,7 +169,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello Sebastian,</p>
-<p>maybe you can find some more hints in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a>.</p>
+<p>maybe you can find some more hints in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

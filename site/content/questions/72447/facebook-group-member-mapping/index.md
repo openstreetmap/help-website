@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I use the share button and add a marker for meeting points for a walking group. Here is an example</p>
-<p><img src="https://help.openstreetmap.org/upfiles/share_a_location_and_marker.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/share_a_location_and_marker.JPG" alt="alt text" /></p>
 <p>and this is the short link for the above illustration. <a href="https://osm.org/go/eu68UYVZ--?m=">https://osm.org/go/eu68UYVZ--?m=</a></p>
 </div>
 <div class="answer-controls post-controls">

@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It should, go ahead and try. See this <a href="http://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations">list of supported abbreviations</a>.</p>
+<p>It should, go ahead and try. See this <a href="https://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations">list of supported abbreviations</a>.</p>
 <p>Note that OSM data itself should be unabbreviated, as it is much easyer for computers to abbreviate than to (correctly) expand.</p>
 </div>
 <div class="answer-controls post-controls">

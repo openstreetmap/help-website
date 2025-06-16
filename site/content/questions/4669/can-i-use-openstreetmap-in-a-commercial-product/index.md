@@ -71,7 +71,7 @@ This question is marked "community wiki".
 <div id="post-25932-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Possible duplicate of: <a href="https://help.openstreetmap.org/questions/3440/cost-of-commercial-use?">"Cost of Commercial use"</a>.</p>
+<p>Possible duplicate of: <a href="/questions/3440/cost-of-commercial-use?">"Cost of Commercial use"</a>.</p>
 </div>
 <div id="comment-25932-info" class="comment-info">
 <span class="comment-age">(29 Aug '13, 14:04)</span> <span class="comment-user userinfo">BuZZ-dEE</span>
@@ -125,7 +125,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is fully possible to use OpenStreetMap in a commercial product. The only thing we require is that you <a href="http://www.openstreetmap.org/copyright">credit</a> OpenStreetMap. However we would prefer <a href="http://donate.openstreetmap.org/">donations</a> and that you help making the map better.</p>
+<p>It is fully possible to use OpenStreetMap in a commercial product. The only thing we require is that you <a href="https://www.openstreetmap.org/copyright">credit</a> OpenStreetMap. However we would prefer <a href="http://donate.openstreetmap.org/">donations</a> and that you help making the map better.</p>
 <p>We require that any derrivative data to be open. However your data does not seem to be derrivative. It seems as your data have been produced without the help of any OSM data. This does not have to be released under a free licence.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -146,7 +146,7 @@ One Answer:
 7
 </div>
 <div class="comment-text">
-<p>Depending on your usage you might also need to consider the various acceptable use policies, linked from <a href="http://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy">http://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy</a> - if you are using OSM tiles for the background then the Tile Usage Policy is perhaps most relevant. If you were to download a data extract and generate your own tiles then these policies wouldn't be an issue.</p>
+<p>Depending on your usage you might also need to consider the various acceptable use policies, linked from <a href="https://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy">https://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy</a> - if you are using OSM tiles for the background then the Tile Usage Policy is perhaps most relevant. If you were to download a data extract and generate your own tiles then these policies wouldn't be an issue.</p>
 </div>
 <div id="comment-4693-info" class="comment-info">
 <span class="comment-age">(21 Apr '11, 07:19)</span> <span class="comment-user userinfo">EdLoach ♦</span>

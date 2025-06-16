@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "A stack of unremovable nodes ?"
-description = '''I found some unconnected nodes. In P2 J wont connect them and deleting does not work either. And yes I made them but I can’t remove nor join them, any solution ? Were talking about this area http://www.openstreetmap.org/#map=19/51.75295/3.85189'''
+description = '''I found some unconnected nodes. In P2 J wont connect them and deleting does not work either. And yes I made them but I can’t remove nor join them, any solution ? Were talking about this area https://www.openstreetmap.org/#map=19/51.75295/3.85189'''
 date = "2014-07-05T21:47:00Z"
 lastmod = "2014-07-05T22:47:00Z"
 weight = 34671
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I found some unconnected nodes. In P2 J wont connect them and deleting does not work either. And yes I made them but I can’t remove nor join them, any solution ? Were talking about this area <a href="http://www.openstreetmap.org/#map=19/51.75295/3.85189">http://www.openstreetmap.org/#map=19/51.75295/3.85189</a></p>
+<p>I found some unconnected nodes. In P2 J wont connect them and deleting does not work either. And yes I made them but I can’t remove nor join them, any solution ? Were talking about this area <a href="https://www.openstreetmap.org/#map=19/51.75295/3.85189">https://www.openstreetmap.org/#map=19/51.75295/3.85189</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-unremovable" rel="tag" title="see questions tagged &#39;unremovable&#39;">unremovable</span> <span class="post-tag tag-link-stack" rel="tag" title="see questions tagged &#39;stack&#39;">stack</span>

@@ -40,12 +40,12 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How can I tag a pedestrian road that is accessible only to the residents, this is, people who are going to access their private parking?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/2014-04-22_14.33.01.jpg" alt="Picture 1" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/2014-04-22_14.33.30.jpg" alt="Picture 2" /></p>
+<p><img src="/upfiles/2014-04-22_14.33.01.jpg" alt="Picture 1" /></p>
+<p><img src="/upfiles/2014-04-22_14.33.30.jpg" alt="Picture 2" /></p>
 <p>I have seen a road tagged only like:</p>
 <p>highway=pedestrian</p>
 <p>However, that doesn't explain that residents can access the road.</p>
-<p>I have found <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/access%3Dresident">this</a> but I think it's only a proposal.</p>
+<p>I have found <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/access%3Dresident">this</a> but I think it's only a proposal.</p>
 <p>What should I do?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>access=private is probably good enough. Are you sure however that highway=pedestrian is appropriate? See <a href="http://wiki.openstreetmap.org/wiki/Tag:highway=pedestrian">http://wiki.openstreetmap.org/wiki/Tag:highway=pedestrian</a><br />
+<p>access=private is probably good enough. Are you sure however that highway=pedestrian is appropriate? See <a href="https://wiki.openstreetmap.org/wiki/Tag:highway=pedestrian">https://wiki.openstreetmap.org/wiki/Tag:highway=pedestrian</a><br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -160,7 +160,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I agree this should be based on access tags but I'm not sure whether access=private or access=destination (both current suggested answers) is more appropriate. You know the road best so should decide. For details see the wiki page: <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p>I agree this should be based on access tags but I'm not sure whether access=private or access=destination (both current suggested answers) is more appropriate. You know the road best so should decide. For details see the wiki page: <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 </div>
 <div id="comment-32508-info" class="comment-info">
 <span class="comment-age">(22 Apr '14, 10:52)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -240,7 +240,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p><del>I think <em>access=destination</em> fits very well. It is very likely that not only residents are allowed to use the road, but visitors, customers, postman and similar people, too. Nevertheless <em>access=destination</em> prevents any transit traffic.</del></p>
 <p>Since you want to limit the access restrictions for <em>cars</em> you have to start with an appropriate highway class. Consider using <em>highway=residential</em>.</p>
-<p>Afterwards, you can add additional <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> restrictions depending on the local signs. Either choose the <em>vehicle</em> key if these restrictions apply to all vehicles (including bicycles) or add the <em>motor_vehicle</em> key if these restrictions only apply to motorized traffic.</p>
+<p>Afterwards, you can add additional <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> restrictions depending on the local signs. Either choose the <em>vehicle</em> key if these restrictions apply to all vehicles (including bicycles) or add the <em>motor_vehicle</em> key if these restrictions only apply to motorized traffic.</p>
 <p>Then, choose an appropriate access value. I think <em>vehicle=destination</em> or motor_vehicle=destination - depending on the local signs - fits very well. It is very likely that not only residents are allowed to use the road, but visitors, customers, postman and similar people, too. Nevertheless the <em>destination</em> value prevents any transit traffic of non-residents.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -355,7 +355,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Two mistakes with "vehicle=destination". See the definitions here: <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p>Two mistakes with "vehicle=destination". See the definitions here: <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 <p>"vehicle" includes bikes (are bikes fordiden here?). And "destination" allows anyone who wants to go to this street. See the wiki: "destination=Only when traveling to this element, e.g. customer parking lots.". This is wrong here since only the local residents can drive there. That's why I suggest to use "private" instead of "destination" (only the owners can go there). And "motor_vehicle" instead of "vehicle" to allow bicycles.</p>
 </div>
 <div id="comment-32566-info" class="comment-info">
@@ -448,7 +448,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Seeing the pictures, the street is mainly designed for pedestrians. I would still keep it as "highway=pedestrian" for the main tag (implies a "motor_vehicle=no" by default). About the local residents and deliveries, it is less common in OSM but there is a proposal you can find in the wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Conditional_restriction">http://wiki.openstreetmap.org/wiki/Conditional_restriction</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Conditional_restriction">https://wiki.openstreetmap.org/wiki/Conditional_restriction</a></p>
 <p>especially the example with "highway=pedestrian" + "motor_vehicle:conditional=delivery..." (plus one "motor_vehicle=private" for locals)</p>
 </div>
 <div class="answer-controls post-controls">

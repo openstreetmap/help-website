@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-21733-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>From a geological point of view, "gravel" just refers to <a href="https://en.wikipedia.org/wiki/Udden-Wentworth_scale">material of a certain size</a>. The two pictures in the OSM wiki are both gravel. The material in <a href="http://wiki.openstreetmap.org/wiki/File:Dscf1582-800.jpg">this one</a> looks like it has been created by breaking up a large lump of granite with a big hammer; whereas the material in <a href="http://wiki.openstreetmap.org/wiki/File:Dscf1781-800.jpg">this one</a> is rounded by natural erosion (it looks like the sort of glacial deposit that's quite common in Northern Europle). They're both technically gravel, though (and a layman at a builder's merchants would also probably refer to both as "gravel").</p>
+<p>From a geological point of view, "gravel" just refers to <a href="https://en.wikipedia.org/wiki/Udden-Wentworth_scale">material of a certain size</a>. The two pictures in the OSM wiki are both gravel. The material in <a href="https://wiki.openstreetmap.org/wiki/File:Dscf1582-800.jpg">this one</a> looks like it has been created by breaking up a large lump of granite with a big hammer; whereas the material in <a href="https://wiki.openstreetmap.org/wiki/File:Dscf1781-800.jpg">this one</a> is rounded by natural erosion (it looks like the sort of glacial deposit that's quite common in Northern Europle). They're both technically gravel, though (and a layman at a builder's merchants would also probably refer to both as "gravel").</p>
 </div>
 <div id="comment-21733-info" class="comment-info">
 <span class="comment-age">(22 Apr '13, 17:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

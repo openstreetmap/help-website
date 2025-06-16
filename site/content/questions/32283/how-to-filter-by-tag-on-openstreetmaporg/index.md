@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to filter by tag on openstreetmap.org?"
-description = '''I want to get a list of alleyways within a geographic bounding.  I believe I want all ways with this tag: http://wiki.openstreetmap.org/wiki/Tag:service=alley?uselang=en-US Can I do this through a hosted web service somewhere? Or do I have to download the entire data set and use osmfilter offline?'''
+description = '''I want to get a list of alleyways within a geographic bounding.  I believe I want all ways with this tag: https://wiki.openstreetmap.org/wiki/Tag:service=alley?uselang=en-US Can I do this through a hosted web service somewhere? Or do I have to download the entire data set and use osmfilter offline?'''
 date = "2014-04-11T00:52:00Z"
 lastmod = "2014-04-11T09:33:00Z"
 weight = 32283
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I want to get a list of alleyways within a geographic bounding.</p>
-<p>I believe I want all ways with this tag: <a href="http://wiki.openstreetmap.org/wiki/Tag:service=alley?uselang=en-US">http://wiki.openstreetmap.org/wiki/Tag:service=alley?uselang=en-US</a></p>
+<p>I believe I want all ways with this tag: <a href="https://wiki.openstreetmap.org/wiki/Tag:service=alley?uselang=en-US">https://wiki.openstreetmap.org/wiki/Tag:service=alley?uselang=en-US</a></p>
 <p>Can I do this through a hosted web service somewhere? Or do I have to download the entire data set and use osmfilter offline?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a> (or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> itself) for this sort of thing.</p>
+<p>Use <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a> (or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> itself) for this sort of thing.</p>
 <p>For large scale filtering, such as the USA, use a downloaded extract and Osmosis or osmfilter.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -146,7 +146,7 @@ osqa_accepted = false
 <div id="post-3775-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I know that routing sites like <a href="http://yournavigation.org">yournavigation.org</a> use a routing engine called "gosmore". The source code of both the website and the routing engine is available. Some documentation on gosmore can be found at: <a href="http://wiki.openstreetmap.org/wiki/Gosmore">http://wiki.openstreetmap.org/wiki/Gosmore</a></p>
+<p>I know that routing sites like <a href="http://yournavigation.org">yournavigation.org</a> use a routing engine called "gosmore". The source code of both the website and the routing engine is available. Some documentation on gosmore can be found at: <a href="https://wiki.openstreetmap.org/wiki/Gosmore">https://wiki.openstreetmap.org/wiki/Gosmore</a></p>
 </div>
 <div id="comment-3775-info" class="comment-info">
 <span class="comment-age">(13 Mar '11, 13:46)</span> <span class="comment-user userinfo">petschge</span>
@@ -188,7 +188,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, there is for example the openseamap-project, who try to collect globally all relevant data for navigation on the water: <a href="http://wiki.openstreetmap.org/wiki/Openseamap">http://wiki.openstreetmap.org/wiki/Openseamap</a> They also offer a JOSM extension and an online editor on their site. Another project is called "Freie Tonne" but project documentation is only available in German: <a href="http://wiki.openstreetmap.org/wiki/DE:FreieTonne">http://wiki.openstreetmap.org/wiki/DE:FreieTonne</a></p>
+<p>Yes, there is for example the openseamap-project, who try to collect globally all relevant data for navigation on the water: <a href="https://wiki.openstreetmap.org/wiki/Openseamap">https://wiki.openstreetmap.org/wiki/Openseamap</a> They also offer a JOSM extension and an online editor on their site. Another project is called "Freie Tonne" but project documentation is only available in German: <a href="https://wiki.openstreetmap.org/wiki/DE:FreieTonne">https://wiki.openstreetmap.org/wiki/DE:FreieTonne</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

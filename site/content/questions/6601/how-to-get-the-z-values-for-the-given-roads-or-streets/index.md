@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>We don't have Z values in general; the way things are drawn on the map depends mainly on the rendering software and its style sheet. I.e. when we have a road through a forest, neither will usually have a Z value and it is up to the rendering software to make the decision whether to draw the forest on top of the road, or the road on top of the forest.</p>
-<p>We do have a <code>layer</code> tag (see <a href="http://wiki.openstreetmap.org/wiki/Key:layer">Wiki</a>) that can be used to give a relative Z value to objects e.g. where several roads meet - the default layer is 0, and if something is in a tunnel we will often use layer=-1 and if it is on a bridge, layer=1.</p>
+<p>We do have a <code>layer</code> tag (see <a href="https://wiki.openstreetmap.org/wiki/Key:layer">Wiki</a>) that can be used to give a relative Z value to objects e.g. where several roads meet - the default layer is 0, and if something is in a tunnel we will often use layer=-1 and if it is on a bridge, layer=1.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

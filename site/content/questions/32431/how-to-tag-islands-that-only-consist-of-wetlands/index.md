@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi it looks like this area, <a href="http://www.openstreetmap.org/#map=17/52.48836/4.78798">http://www.openstreetmap.org/#map=17/52.48836/4.78798</a> the area is a polder, not a river, with typical low land, sometimes wet or dry. Meadows integrated into a nature reserve. Ad natural=wetland to an island and it is marked as wetland. If it’s less wet you could ad landuse=meadow as well. But that’s using 2 tags for the same area ! The natural=water tag for the river makes clear that it is an island. Connected all together as a multipolygone.</p>
+<p>Hi it looks like this area, <a href="https://www.openstreetmap.org/#map=17/52.48836/4.78798">https://www.openstreetmap.org/#map=17/52.48836/4.78798</a> the area is a polder, not a river, with typical low land, sometimes wet or dry. Meadows integrated into a nature reserve. Ad natural=wetland to an island and it is marked as wetland. If it’s less wet you could ad landuse=meadow as well. But that’s using 2 tags for the same area ! The natural=water tag for the river makes clear that it is an island. Connected all together as a multipolygone.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

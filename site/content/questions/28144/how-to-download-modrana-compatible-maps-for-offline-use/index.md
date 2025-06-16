@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>What I want: to download a specified area (greater Los Angeles) from openstreetmaps to my computer. Then I need to transfer it to my Nokia N900 so I can use the maps <em>offline</em>.</p>
 <p>What I've tried: the only thing that works is to use modRana's own download function on the phone. That takes forEVER, tends to lose map tiles, and always loses the connection long before it's done. (LA is big.) The result is I never have the part I need when I need it.</p>
 <p>I've also downloaded some of the zipped files, such as US-West, but then I can't figure out how to get modRana to use it.</p>
-<p>Now I saw jTiledownloader (I have version 0-6-1, latest) which allows you to provide the url to a map, e.g. <a href="http://www.openstreetmap.org/#map=8/33.816/-117.988">http://www.openstreetmap.org/#map=8/33.816/-117.988</a> , fill in how many levels of layers you want, and hit download.</p>
+<p>Now I saw jTiledownloader (I have version 0-6-1, latest) which allows you to provide the url to a map, e.g. <a href="https://www.openstreetmap.org/#map=8/33.816/-117.988">https://www.openstreetmap.org/#map=8/33.816/-117.988</a> , fill in how many levels of layers you want, and hit download.</p>
 <p>Except nothing happens. This is rather frustrating. I saw on another thread a long explanation talking about needing Java 7 or some such. Say it ain't so. This is what I get after the command "java -version": java version "1.6.0_26" Java(TM) SE Runtime Environment (build 1.6.0_26-b03) Java HotSpot(TM) 64-Bit Server VM (build 20.1-b02, mixed mode)</p>
 <p>There has GOT to be some nice easy straightforward way to download map tiles for offline use. It's the one thing everyone (who knows it's possible) wants from maps.</p>
 <p>What am I missing?</p>
@@ -137,7 +137,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for the info! Yes, I realize about load on the servers. I set the options to minimize that. My issue is this: I don't care what I use, so long as it's linux/open source. (Not Android open-except-for-every-app-that-matters. Sorry!) I'd be delighted to use vector-based maps.</p>
-<p>I've been trying to solve the problem of some easy way to get OSM offline on my N900 for years now. I don't have much time to spend on it, so I haven't got very far. The problem is I find answers like the following <a href="https://help.openstreetmap.org/questions/19789/how-to-build-osm-to-run-offline-on-android">how to run OSM on android</a>. (I can't tell from the time stamps what year it was written.)</p>
+<p>I've been trying to solve the problem of some easy way to get OSM offline on my N900 for years now. I don't have much time to spend on it, so I haven't got very far. The problem is I find answers like the following <a href="/questions/19789/how-to-build-osm-to-run-offline-on-android">how to run OSM on android</a>. (I can't tell from the time stamps what year it was written.)</p>
 <blockquote>
 In general, you can have a look at the OSM wiki about Android.<br />
 There are some apps that display OSM based maps offline -&gt; search for "offline" there.<br />

@@ -39,14 +39,14 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I currently have a <a href="http://wiki.openstreetmap.org/wiki/Garmin/eTrex_series#eTrex_Legend_HCx">Garmin Legend HCx</a> which is a great device that I would recommend to anyone: fast, flexible, affordable and you can load OSM maps onto it. I use it to record tracks (some of which I <a href="http://www.openstreetmap.org/user/mvexel/traces">upload</a>).</p>
+<p>I currently have a <a href="https://wiki.openstreetmap.org/wiki/Garmin/eTrex_series#eTrex_Legend_HCx">Garmin Legend HCx</a> which is a great device that I would recommend to anyone: fast, flexible, affordable and you can load OSM maps onto it. I use it to record tracks (some of which I <a href="https://www.openstreetmap.org/user/mvexel/traces">upload</a>).</p>
 <p>One thing that bugs me is that it does not store the horizontal accuracy values in the GPX output. The GPX specification <a href="http://www.topografix.com/GPX/1/1/#type_wptType">allows for it</a>, the device displays an accuracy value (presumably calculated from the HDOP it receives), but it's not saved in the GPX. I think this information is important to have both for processing of individual tracks, as well as for aggregated analysis (where are the black spots in the city?).</p>
 <p>My questions are:</p>
 <ul>
 <li>Is there a way to make the Legend HCx record the horizontal accuracy in the GPX output?</li>
 <li>Is there a dedicated consumer GPS device that is as full-featured as the Legend HCx and does record these values when outputting GPX?</li>
 </ul>
-<p>I am aware of the <a href="http://wiki.openstreetmap.org/wiki/GPS_Reviews">extensive list</a> over at the wiki, but that does not seem to contain much definitive info on the DOP support specific to GPX export.</p>
+<p>I am aware of the <a href="https://wiki.openstreetmap.org/wiki/GPS_Reviews">extensive list</a> over at the wiki, but that does not seem to contain much definitive info on the DOP support specific to GPX export.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-traces" rel="tag" title="see questions tagged &#39;traces&#39;">traces</span> <span class="post-tag tag-link-gpx" rel="tag" title="see questions tagged &#39;gpx&#39;">gpx</span> <span class="post-tag tag-link-tracks" rel="tag" title="see questions tagged &#39;tracks&#39;">tracks</span> <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span>
@@ -145,7 +145,7 @@ osqa_accepted = true
 <div id="post-5897-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can get NMEA from x-series, see <a href="http://wiki.openstreetmap.org/wiki/USB_Garmin_on_GNU/Linux.">http://wiki.openstreetmap.org/wiki/USB_Garmin_on_GNU/Linux.</a> However, it dosen't look like this data contain any accuracy data.</p>
+<p>You can get NMEA from x-series, see <a href="https://wiki.openstreetmap.org/wiki/USB_Garmin_on_GNU/Linux.">https://wiki.openstreetmap.org/wiki/USB_Garmin_on_GNU/Linux.</a> However, it dosen't look like this data contain any accuracy data.</p>
 </div>
 <div id="comment-5897-info" class="comment-info">
 <span class="comment-age">(20 Jun '11, 06:54)</span> <span class="comment-user userinfo">Kagee</span>
@@ -240,10 +240,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I now record and upload tracks using <a href="http://wiki.openstreetmap.org/wiki/OSMTrack">OSMTrack</a> on my iPhone 4.</p>
+<p>I now record and upload tracks using <a href="https://wiki.openstreetmap.org/wiki/OSMTrack">OSMTrack</a> on my iPhone 4.</p>
 <p>It <em>doesn't</em> record the HDOP in the GPX file (so may not help in your case), but it does allow you to set an "Accuracy Filter" so that only points with an accuracy of 20m or less are recorded.</p>
 <p>It also continually shows you the current GPS accuracy, which is presumably based on HDOP information.</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/9/97/OSMTrack_Screenshot.png" alt="OSMTrack screenshot" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/9/97/OSMTrack_Screenshot.png" alt="OSMTrack screenshot" /></p>
 <p>Typically the accuracy is reported as 5-10m for a good fix.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -297,7 +297,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p><a href="https://play.google.com/store/apps/details?id=me.guillaumin.android.osmtracker&amp;hl=en">OSMTracker for Android</a> can record HDOP information.</p>
 <p>Just enable "Use HDOP approximation" in the Settings:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20170916-101929_GmnVcWU.png" alt="Use HDOP approximation" /></p>
+<p><img src="/upfiles/Screenshot_20170916-101929_GmnVcWU.png" alt="Use HDOP approximation" /></p>
 <p>It works on any Android device. Free and open source.</p>
 </div>
 <div class="answer-controls post-controls">

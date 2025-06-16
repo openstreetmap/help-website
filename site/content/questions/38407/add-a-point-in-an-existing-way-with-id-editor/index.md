@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In Potlatch2, a <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Basic_edits">basic editing</a> function was adding a point in an existing way:</p>
+<p>In Potlatch2, a <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Basic_edits">basic editing</a> function was adding a point in an existing way:</p>
 <blockquote>
 <p><em>To add a point to an existing way, select the way and shift+click at the desired location.</em> …</p>
 </blockquote>

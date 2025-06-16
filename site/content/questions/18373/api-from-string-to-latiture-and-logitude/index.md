@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, regular address lookup as well as reverse geocoding is provided by <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Take a look at the <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Examples">examples</a> and also keep the <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Usage_Policy">usage policy</a> in mind. If you have to do bulk address lookups then better <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">install</a> your own Nominatim instance.</p>
+<p>Yes, regular address lookup as well as reverse geocoding is provided by <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Take a look at the <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Examples">examples</a> and also keep the <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Usage_Policy">usage policy</a> in mind. If you have to do bulk address lookups then better <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">install</a> your own Nominatim instance.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -116,7 +116,7 @@ map.addShape(point);</code></pre>
 <div id="post-44946-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11409/mahorelee">@MahoreLee</a>: please <span>choose</span> only one next time, that saves resources.</p>
+<p><a href="https://help.openstreetmap.org/users/11409/mahorelee">@MahoreLee</a>: please <span>choose</span> only one next time, that saves resources.</p>
 </div>
 <div id="comment-44946-info" class="comment-info">
 <span class="comment-age">(27 Aug '15, 22:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

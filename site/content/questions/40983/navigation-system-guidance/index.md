@@ -120,9 +120,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are aware that JOSM is mainly an offline editor for OSM data?</p>
-<p>So you want to use its sourcecode as a frame for your app? You can try it by stripping off all features you don't need. You can edit the map paint style by JOSM via <a href="http://wiki.openstreetmap.org/wiki/MapCSS">MapCSS</a>.</p>
-<p>See also <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> in general to find opensource projects.</p>
-<p>But why not trying other Java opensource software like listed in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Category:Java">Category:Java</a> ...?</p>
+<p>So you want to use its sourcecode as a frame for your app? You can try it by stripping off all features you don't need. You can edit the map paint style by JOSM via <a href="https://wiki.openstreetmap.org/wiki/MapCSS">MapCSS</a>.</p>
+<p>See also <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> in general to find opensource projects.</p>
+<p>But why not trying other Java opensource software like listed in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Category:Java">Category:Java</a> ...?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-14710-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For future reference this is how to <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p>For future reference this is how to <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 </div>
 <div id="comment-14710-info" class="comment-info">
 <span class="comment-age">(30 Jul '12, 19:42)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -84,7 +84,7 @@ osqa_accepted = true
 <div id="post-14822-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi OSmers, Thanks for the update Ill correct it (little bits) if possible. And I was curious about the source of it. Im not in for landscapes but came up against it here and there and even stumbled over a wooded area (<a href="http://www.openstreetmap.org/?lat=52.04155&amp;lon=5.03741&amp;zoom=18&amp;layers=M">5.03741-52.04155</a>) since I couldnt get it right in the original manner. Whats the different between Potlach and JOSM ?</p>
+<p>Hi OSmers, Thanks for the update Ill correct it (little bits) if possible. And I was curious about the source of it. Im not in for landscapes but came up against it here and there and even stumbled over a wooded area (<a href="https://www.openstreetmap.org/?lat=52.04155&amp;lon=5.03741&amp;zoom=18&amp;layers=M">5.03741-52.04155</a>) since I couldnt get it right in the original manner. Whats the different between Potlach and JOSM ?</p>
 </div>
 <div id="comment-14822-info" class="comment-info">
 <span class="comment-age">(03 Aug '12, 20:25)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -95,7 +95,7 @@ osqa_accepted = true
 <div id="post-14823-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/5584/should-i-use-potlatch-or-josm">http://help.openstreetmap.org/questions/5584/should-i-use-potlatch-or-josm</a></p>
+<p><a href="/questions/5584/should-i-use-potlatch-or-josm">https://help.openstreetmap.org/questions/5584/should-i-use-potlatch-or-josm</a></p>
 </div>
 <div id="comment-14823-info" class="comment-info">
 <span class="comment-age">(03 Aug '12, 22:11)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -202,7 +202,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A quick scan finds two duplicate bus stops, <a href="http://www.openstreetmap.org/browse/node/1406569089">here</a> and <a href="http://www.openstreetmap.org/browse/node/697977110/history">here</a>. The more recent of the two is from 2011, so not redaction related (and the <a href="http://translate.google.com/#auto/en/NS-wandeltocht%20Ankeveense%20Plassen%20en%20alles%20wat%20ik%20onderweg%20gezien%20heb">changeset comment</a> of the more recent one suggests it's normal mapping, not an import).</p>
+<p>A quick scan finds two duplicate bus stops, <a href="https://www.openstreetmap.org/browse/node/1406569089">here</a> and <a href="https://www.openstreetmap.org/browse/node/697977110/history">here</a>. The more recent of the two is from 2011, so not redaction related (and the <a href="http://translate.google.com/#auto/en/NS-wandeltocht%20Ankeveense%20Plassen%20en%20alles%20wat%20ik%20onderweg%20gezien%20heb">changeset comment</a> of the more recent one suggests it's normal mapping, not an import).</p>
 <p>Perhaps you could post a link to some specific duplicate buildings and to some non-connected waterways?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -223,7 +223,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Hi SomeoneElse, The coordinate of another building with a double roof is <a href="http://www.openstreetmap.org/?lat=52.29201&amp;lon=5.0757&amp;zoom=18&amp;layers=M">5.07570 / 52.29201</a>. The outlining of the surrounding fields is a little bit rough, not accurate ? At <a href="http://www.openstreetmap.org/?lat=52.09423&amp;lon=5.17143&amp;zoom=18&amp;layers=M">5.17143 / 52.09423</a> is a inconsistent topology. Is there an explanation for or is it computerized ? I dont dare to teckle it, since I expect it to be complex and I once started to ad footpaths in a wooded area, <a href="http://www.openstreetmap.org/?lat=52.04209&amp;lon=5.03713&amp;zoom=18&amp;layers=M">5.03713*52.04209</a> and youre still be able to see what I did. Some fields are light- and some are dark green and Im not able to correct it. It looks okay, but I know better, help !</p>
+<p>Hi SomeoneElse, The coordinate of another building with a double roof is <a href="https://www.openstreetmap.org/?lat=52.29201&amp;lon=5.0757&amp;zoom=18&amp;layers=M">5.07570 / 52.29201</a>. The outlining of the surrounding fields is a little bit rough, not accurate ? At <a href="https://www.openstreetmap.org/?lat=52.09423&amp;lon=5.17143&amp;zoom=18&amp;layers=M">5.17143 / 52.09423</a> is a inconsistent topology. Is there an explanation for or is it computerized ? I dont dare to teckle it, since I expect it to be complex and I once started to ad footpaths in a wooded area, <a href="https://www.openstreetmap.org/?lat=52.04209&amp;lon=5.03713&amp;zoom=18&amp;layers=M">5.03713*52.04209</a> and youre still be able to see what I did. Some fields are light- and some are dark green and Im not able to correct it. It looks okay, but I know better, help !</p>
 </div>
 <div id="comment-14706-info" class="comment-info">
 <span class="comment-age">(30 Jul '12, 16:46)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -235,10 +235,10 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Re the double building, <a href="http://www.openstreetmap.org/browse/way/43137361">this</a> one was added in 2009, and <a href="http://www.openstreetmap.org/browse/way/55127326">this duplicate</a> one was imported by <a href="http://www.openstreetmap.org/user/3dShapes">3dShapes</a> in 2010. The wiki page for that user says that they're contactable, so I'd do that (there's probably been discussion in the Dutch community about how to resolve duplicates).</p>
+<p>Re the double building, <a href="https://www.openstreetmap.org/browse/way/43137361">this</a> one was added in 2009, and <a href="https://www.openstreetmap.org/browse/way/55127326">this duplicate</a> one was imported by <a href="https://www.openstreetmap.org/user/3dShapes">3dShapes</a> in 2010. The wiki page for that user says that they're contactable, so I'd do that (there's probably been discussion in the Dutch community about how to resolve duplicates).</p>
 <p>Re the "inconsistent topology" that just looks like the 3dShapes data doesn't match the Bing imagery and is incomplete. I don't know how up-to-date the Bing imagery is there. According to <a href="http://forum.openstreetmap.org/viewtopic.php?id=15492">this</a> forum topic the 3dShapes data is from 2008 and the standard approach is to adjust it where it's wrong, but I'd definitely ask in the NL forum to get several local opinions.</p>
-<p>That area does (post 3dShapes import) look fairly horrible to edit. <a href="http://www.openstreetmap.org/browse/relation/1121328">This relation</a> is a multipolygon with <a href="http://www.openstreetmap.org/browse/way/71940980">one outer</a> and many inners, including some <a href="http://www.openstreetmap.org/browse/way/71941068">adjacent</a> to <a href="http://www.openstreetmap.org/browse/way/71941068">each other</a>. It looks OK in the standard Mapnik rendering, but it looks like it's not getting rendered as "landuse=grass" in Potlatch 2. Basically, don't worry what colour things appear in the editor (or on the standard Mapnik map for that matter) - try and make sure that it's an accurate representation of what's on the ground.</p>
-<p>One tip that might be useful to know when editing nodes that form part of multiple ways - if you press "/" when a node is selected you can cycle through all the ways that a node is part of. See <a href="http://wiki.openstreetmap.org/wiki/Potlatch_1/Keyboard_shortcuts">this page</a> for details (<a href="http://wiki.openstreetmap.org/wiki/NL:Potlatch/Keyboard_shortcuts">Nederlands</a>).</p>
+<p>That area does (post 3dShapes import) look fairly horrible to edit. <a href="https://www.openstreetmap.org/browse/relation/1121328">This relation</a> is a multipolygon with <a href="https://www.openstreetmap.org/browse/way/71940980">one outer</a> and many inners, including some <a href="https://www.openstreetmap.org/browse/way/71941068">adjacent</a> to <a href="https://www.openstreetmap.org/browse/way/71941068">each other</a>. It looks OK in the standard Mapnik rendering, but it looks like it's not getting rendered as "landuse=grass" in Potlatch 2. Basically, don't worry what colour things appear in the editor (or on the standard Mapnik map for that matter) - try and make sure that it's an accurate representation of what's on the ground.</p>
+<p>One tip that might be useful to know when editing nodes that form part of multiple ways - if you press "/" when a node is selected you can cycle through all the ways that a node is part of. See <a href="https://wiki.openstreetmap.org/wiki/Potlatch_1/Keyboard_shortcuts">this page</a> for details (<a href="https://wiki.openstreetmap.org/wiki/NL:Potlatch/Keyboard_shortcuts">Nederlands</a>).</p>
 </div>
 <div id="comment-14708-info" class="comment-info">
 <span class="comment-age">(30 Jul '12, 18:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

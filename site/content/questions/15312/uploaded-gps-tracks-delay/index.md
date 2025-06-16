@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>GPS tracks are imported by a background process which may become stuck once in a while; in which case it makes sense to either wait until it gets fixed, or try to raise the admins on <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a>. This help system is not a good channel for bug reports or problems that require an immediate response.</p>
+<p>GPS tracks are imported by a background process which may become stuck once in a while; in which case it makes sense to either wait until it gets fixed, or try to raise the admins on <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a>. This help system is not a good channel for bug reports or problems that require an immediate response.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -180,7 +180,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Yes, just ask your question on IRC right away and hopefully somebody will answer.</p>
-<p>There are also <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a>, <a href="http://lists.openstreetmap.org/listinfo/talk">talk</a> is most of the time the right place to ask.</p>
+<p>There are also <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a>, <a href="http://lists.openstreetmap.org/listinfo/talk">talk</a> is most of the time the right place to ask.</p>
 </div>
 <div id="comment-15354-info" class="comment-info">
 <span class="comment-age">(22 Aug '12, 07:44)</span> <span class="comment-user userinfo">scai ♦</span>

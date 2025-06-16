@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I expect that would be the 'Relation checker' in Preferences&gt;Data validator <img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-11-21_at_4.08.29_pm.png" alt="alt text" /></p>
+<p>I expect that would be the 'Relation checker' in Preferences&gt;Data validator <img src="/upfiles/Screen_Shot_2018-11-21_at_4.08.29_pm.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

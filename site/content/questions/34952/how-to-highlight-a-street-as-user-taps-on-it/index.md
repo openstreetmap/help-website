@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your question is too vague and is only about a user interface development. What you can ask on this help site is how a "street" is modelized in OSM : it's one or more <a href="http://wiki.openstreetmap.org/wiki/Way">ways (aka polylines)</a> carying a tag "<a href="http://wiki.openstreetmap.org/wiki/Key:highway">highway=*</a>" and possibly a <a href="http://wiki.openstreetmap.org/wiki/Street#Names_and_references">name and/or ref</a> tag. It's not necessarily geometrically continuous (one way attached to the next one) when it's interrupted by <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">roundabouts</a> which may have their own name and/or ref. The "highway" value may also change within the same street.</p>
+<p>Your question is too vague and is only about a user interface development. What you can ask on this help site is how a "street" is modelized in OSM : it's one or more <a href="https://wiki.openstreetmap.org/wiki/Way">ways (aka polylines)</a> carying a tag "<a href="https://wiki.openstreetmap.org/wiki/Key:highway">highway=*</a>" and possibly a <a href="https://wiki.openstreetmap.org/wiki/Street#Names_and_references">name and/or ref</a> tag. It's not necessarily geometrically continuous (one way attached to the next one) when it's interrupted by <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">roundabouts</a> which may have their own name and/or ref. The "highway" value may also change within the same street.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,9 +165,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap is essentially just lots and lots of data (see a previous answer to a different question <a href="http://help.openstreetmap.org/questions/32760/looking-for-a-description-of-how-the-map-is-shown-on-a-pc-rendering-process-but-no-technical-details/33010">here</a>). It's entirely up to you how what technologies you use to represent that data and to allow the user to interact with it.<br />
+<p>OpenStreetMap is essentially just lots and lots of data (see a previous answer to a different question <a href="/questions/32760/looking-for-a-description-of-how-the-map-is-shown-on-a-pc-rendering-process-but-no-technical-details/33010">here</a>). It's entirely up to you how what technologies you use to represent that data and to allow the user to interact with it.<br />
 </p>
-<p>Without knowing how you're doing that (Displaying information over pre-rendered tiles? Displaying vectors?) or even what technology you're using for Android development (Android Java? Xamarin? Cordova?) it's possible to do little more than point you at the <a href="http://wiki.openstreetmap.org/wiki/Category:Android">Android category in the wiki</a> and at previous "what is OSM" answers.</p>
+<p>Without knowing how you're doing that (Displaying information over pre-rendered tiles? Displaying vectors?) or even what technology you're using for Android development (Android Java? Xamarin? Cordova?) it's possible to do little more than point you at the <a href="https://wiki.openstreetmap.org/wiki/Category:Android">Android category in the wiki</a> and at previous "what is OSM" answers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

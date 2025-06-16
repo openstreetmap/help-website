@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You could map the individual ponds and then put them into a relation of types <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Group_Relation">group</a> or <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Cluster">cluster</a>.</p>
-<p>Have a look at a <a href="https://help.openstreetmap.org/questions/72769/is-there-a-relationsite-variant-to-use-for-natural-objects">related question</a> from earlier this year on the usage of these.</p>
+<p>Have a look at a <a href="/questions/72769/is-there-a-relationsite-variant-to-use-for-natural-objects">related question</a> from earlier this year on the usage of these.</p>
 <p>I have no idea how names would be rendered using these relations but <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">you shouldn't worry about that</a> as every map provider can do that differently anyway. Just make sure the data is entered correctly within our data model.</p>
 </div>
 <div class="answer-controls post-controls">

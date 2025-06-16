@@ -187,7 +187,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?mlat=50.0369&amp;mlon=8.7982&amp;zoom=14&amp;layers=M">Example</a> where I am quite sure that there was a crossing symbol a few weeks ago but apparently no change in the data (accessing from Germany). I guess(!) it could be related to the switch to <span>Carto</span> (see question <a href="/questions/24687/">how-to-move-labels</a>) and not being intentional, but still maybe not temporary. Co-incidental someone <a href="http://lists.openstreetmap.org/pipermail/talk/2013-August/067794.html">noticed at Aug 3 11:43</a> on the talk mailing list that there was a DNS change for tile accesses from Austria (now to server "<span>tabaluga</span>").</p>
+<p><a href="https://www.openstreetmap.org/?mlat=50.0369&amp;mlon=8.7982&amp;zoom=14&amp;layers=M">Example</a> where I am quite sure that there was a crossing symbol a few weeks ago but apparently no change in the data (accessing from Germany). I guess(!) it could be related to the switch to <span>Carto</span> (see question <a href="/questions/24687/">how-to-move-labels</a>) and not being intentional, but still maybe not temporary. Co-incidental someone <a href="http://lists.openstreetmap.org/pipermail/talk/2013-August/067794.html">noticed at Aug 3 11:43</a> on the talk mailing list that there was a DNS change for tile accesses from Austria (now to server "<span>tabaluga</span>").</p>
 <p>All in all: I would wait a bit (day?) and report it as bug against the carto stylesheet at some point in time, if not somebody knows better.</p>
 <p>Update:</p>
 <blockquote>
@@ -216,7 +216,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Yep, same missing crossings here: <a href="http://www.openstreetmap.org/?lat=51.68236&amp;lon=10.10939&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=51.68236&amp;lon=10.10939&amp;zoom=17&amp;layers=M</a> (accessed from germany too).</p>
+<p>Yep, same missing crossings here: <a href="https://www.openstreetmap.org/?lat=51.68236&amp;lon=10.10939&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=51.68236&amp;lon=10.10939&amp;zoom=17&amp;layers=M</a> (accessed from germany too).</p>
 </div>
 <div id="comment-24904-info" class="comment-info">
 <span class="comment-age">(05 Aug '13, 07:28)</span> <span class="comment-user userinfo">gormo</span>

@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi Guys,</p>
 <p>I was hoping for some help on how to mark such a road as is pictured below, with two, two lane one way roads and a third turning lane on each which intersects a two-way residential road with different road names north and south of "Grand Promenade"</p>
-<p>This is in reference to the road portion within the median (See: <a href="http://www.openstreetmap.org/#map=19/-31.89833/115.87364">http://www.openstreetmap.org/#map=19/-31.89833/115.87364</a>)</p>
+<p>This is in reference to the road portion within the median (See: <a href="https://www.openstreetmap.org/#map=19/-31.89833/115.87364">https://www.openstreetmap.org/#map=19/-31.89833/115.87364</a>)</p>
 <p>(A) Should it remain nameless (the roads either side have different names</p>
 <p>(B) What road type highway tag should be used, a link road? (I assume not) And assuming that the southern road is residential and the northern is tertiary, then what road type should be used (teritary, residential, or something else?)</p>
 <p><img src="https://dl.dropboxusercontent.com/u/29846412/Mapping/Screenshot%202015-01-06%2018.05.24.png" alt="alt text" /></p>
@@ -213,7 +213,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> &amp; <a href="http://help.openstreetmap.org/users/1188/aaronsta">@aaronsta</a> Sorry, my bad. In this case, only_straight_on wouldn't make sense as traffic from residential roads won't be able to turn right. only_straight_on can only work with T-intersections then.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> &amp; <a href="https://help.openstreetmap.org/users/1188/aaronsta">@aaronsta</a> Sorry, my bad. In this case, only_straight_on wouldn't make sense as traffic from residential roads won't be able to turn right. only_straight_on can only work with T-intersections then.</p>
 <p>So, like escada said, it's the link-road way as the "via" of a no_u_turn restriction, and probably have to split the primaries.. (right?)</p>
 </div>
 <div id="comment-40060-info" class="comment-info">

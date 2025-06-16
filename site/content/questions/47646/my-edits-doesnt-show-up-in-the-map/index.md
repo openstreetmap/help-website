@@ -130,7 +130,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Cycle_routes#Rendered_Cycle_Maps">OSM Wiki</a> the cycle map is only "updated every few days". But have a look at the Humanitarian layer, these tiles are already up-to-date: <a href="https://www.openstreetmap.org/#map=18/38.01658/-121.88864&amp;layers=H">https://www.openstreetmap.org/#map=18/38.01658/-121.88864&amp;layers=H</a></p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Cycle_routes#Rendered_Cycle_Maps">OSM Wiki</a> the cycle map is only "updated every few days". But have a look at the Humanitarian layer, these tiles are already up-to-date: <a href="https://www.openstreetmap.org/#map=18/38.01658/-121.88864&amp;layers=H">https://www.openstreetmap.org/#map=18/38.01658/-121.88864&amp;layers=H</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -192,7 +192,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>please try to see previous questions first, before asking a new one. :-)</p>
-<p>See the top question <a href="https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a> at <a href="https://help.openstreetmap.org/tags/opencyclemap/?sort=mostvoted">https://help.openstreetmap.org/tags/opencyclemap/?sort=mostvoted</a> or at <a href="https://help.openstreetmap.org/tags/update/?sort=mostvoted">https://help.openstreetmap.org/tags/update/?sort=mostvoted</a></p>
+<p>See the top question <a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a> at <a href="https://help.openstreetmap.org/tags/opencyclemap/?sort=mostvoted">https://help.openstreetmap.org/tags/opencyclemap/?sort=mostvoted</a> or at <a href="https://help.openstreetmap.org/tags/update/?sort=mostvoted">https://help.openstreetmap.org/tags/update/?sort=mostvoted</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

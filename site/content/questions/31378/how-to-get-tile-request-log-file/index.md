@@ -80,7 +80,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I just know my this summary on clients but thats not related to single tiles:<br />
-<a href="http://www.openstreetmap.org/user/!i!/diary/15190">http://www.openstreetmap.org/user/!i!/diary/15190</a></p>
+<a href="https://www.openstreetmap.org/user/!i!/diary/15190">https://www.openstreetmap.org/user/!i!/diary/15190</a></p>
 <p>OSM now has multiple tiles servers and makes use of geoip to work as mini CDN, so I guess it's pretty hard to aggregate this data (and keep the privacy)</p>
 </div>
 <div id="comment-31382-info" class="comment-info">

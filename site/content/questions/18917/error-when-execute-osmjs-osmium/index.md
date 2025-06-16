@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Error when execute osmjs -  osmium"
-description = '''i got a error in osmjs , I am following these instructions lines http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start ruben@ruben-pc:~/osmium/osmjs$ ./osmjs -l sparsetable -j js/objects.js file.osm ./osmjs: error while loading shared libraries: libgeos-3.3.6.so: cannot open shared object file: No s...'''
+description = '''i got a error in osmjs , I am following these instructions lines https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start ruben@ruben-pc:~/osmium/osmjs$ ./osmjs -l sparsetable -j js/objects.js file.osm ./osmjs: error while loading shared libraries: libgeos-3.3.6.so: cannot open shared object file: No s...'''
 date = "2013-01-07T15:46:00Z"
 lastmod = "2013-01-07T16:43:00Z"
 weight = 18917
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>i got a error in osmjs , I am following these instructions lines <a href="http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a></p>
+<p>i got a error in osmjs , I am following these instructions lines <a href="https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a></p>
 <p>ruben@ruben-pc:~/osmium/osmjs$ ./osmjs -l sparsetable -j js/objects.js file.osm<br />
 ./osmjs: error while loading shared libraries: libgeos-3.3.6.so: cannot open shared object file: No such file or directory<br />
 ruben@ruben-pc:~/osmium/osmjs$</p>

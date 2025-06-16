@@ -91,7 +91,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate of http://help.openstreetmap.org/questions/14082/building-an-app-with-google-maps-and-osmdroid-data and this is \_not\_ a Google Maps support forum." by Richard 09 Jul '12, 08:50
+### The question has been closed for the following reason "Duplicate of https://help.openstreetmap.org/questions/14082/building-an-app-with-google-maps-and-osmdroid-data and this is \_not\_ a Google Maps support forum." by Richard 09 Jul '12, 08:50
 
 </div>
 

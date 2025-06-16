@@ -71,7 +71,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>If you want to use a regex, you should use a <code>~</code> instead of <code>=</code>. In your query it would then look like the following:</p>
 <p><code>… and name!~"[a-z]")</code></p>
-<p>read more about the Wizard on my recent <a href="http://www.openstreetmap.org/user/tyr_asd/diary/20548">diary post</a> or the <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard">wiki</a></p>
+<p>read more about the Wizard on my recent <a href="https://www.openstreetmap.org/user/tyr_asd/diary/20548">diary post</a> or the <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard">wiki</a></p>
 </div>
 <div id="comment-29030-info" class="comment-info">
 <span class="comment-age">(13 Dec '13, 08:34)</span> <span class="comment-user userinfo">tyr_asd</span>

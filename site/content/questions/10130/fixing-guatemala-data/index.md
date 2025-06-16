@@ -136,7 +136,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>See also the country list on boundary=administrative <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a> for sub-national boundaries. (The values for Guatemala suggest that they are only proposed.)</p>
+<p>See also the country list on boundary=administrative <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a> for sub-national boundaries. (The values for Guatemala suggest that they are only proposed.)</p>
 </div>
 <div id="comment-10145-info" class="comment-info">
 <span class="comment-age">(23 Jan '12, 02:10)</span> <span class="comment-user userinfo">Ebenezer</span>

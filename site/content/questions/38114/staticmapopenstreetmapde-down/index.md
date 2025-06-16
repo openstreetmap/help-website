@@ -164,7 +164,7 @@ One Answer:
 <div id="post-38168-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9928/vec">@vec</a>: didn't you see my comment above?!</p>
+<p><a href="https://help.openstreetmap.org/users/9928/vec">@vec</a>: didn't you see my comment above?!</p>
 </div>
 <div id="comment-38168-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 13:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -188,7 +188,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9928/vec">@vec</a>: yes, you can. Use another service as mentioned in my comment above (directly under the question).</p>
+<p><a href="https://help.openstreetmap.org/users/9928/vec">@vec</a>: yes, you can. Use another service as mentioned in my comment above (directly under the question).</p>
 </div>
 <div id="comment-38173-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 14:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

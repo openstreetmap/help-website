@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Completeness">http://wiki.openstreetmap.org/wiki/Completeness</a> has a non-exhaustive list of studies.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Completeness">https://wiki.openstreetmap.org/wiki/Completeness</a> has a non-exhaustive list of studies.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

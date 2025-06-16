@@ -166,14 +166,14 @@ One Answer:
 <ul>
 <li>zoom right in</li>
 <li>click the '+' icon in the top right and enable data view Try to select the node or way which is troubling you (sometimes this can be difficult where areas and ways overalapping. In this case it's easy enough) Selecting reveals some information on the left.</li>
-<li>click the 'details' to go to the way "browse" data display (in this case you'll be ending up at <a href="http://www.openstreetmap.org/browse/way/58358718"></a><a href="http://www.openstreetmap.org/browse/way/58358718"></a><a href="http://www.openstreetmap.org/browse/way/58358718">http://www.openstreetmap.org/browse/way/58358718</a> )</li>
+<li>click the 'details' to go to the way "browse" data display (in this case you'll be ending up at <a href="https://www.openstreetmap.org/browse/way/58358718"></a><a href="https://www.openstreetmap.org/browse/way/58358718"></a><a href="https://www.openstreetmap.org/browse/way/58358718">https://www.openstreetmap.org/browse/way/58358718</a> )</li>
 <li>click the 'history' link at the bottom to reveal all versions of the object. In this case there are 8 different versions, so unfortunately this will take a little while to load</li>
 <li>Scroll to the bottom (or the top of the last section at the bottom) to see who created version 1.</li>
 <li>You might also the click changeset link for version 1, to get more information about what else was changed/created at the same time</li>
 </ul>
 <p>(Note: There are various types of situation where the web interface doesn't work well. An alternative is to use JOSM. Display the 'history' panel. Select the object and click the history button to fetch the data into that display)</p>
-<p>So in this case <a href="http://www.openstreetmap.org/browse/changeset/4618366"></a><a href="http://www.openstreetmap.org/browse/changeset/4618366"></a><a href="http://www.openstreetmap.org/browse/changeset/4618366">http://www.openstreetmap.org/browse/changeset/4618366</a> User Nakor added a bunch of nodes ways and relations with the changset comment "Washtenaw county boundaries".</p>
-<p>That might not help you decide what to do about the mess, but it might help you understand it. Also you could <a href="http://www.openstreetmap.org/message/new/Nakor">send a message to Nakor</a> to chat to him about it. Remember to be open minded about people's motivations. Don't accuse people of anything in an initial message, just explain the weird data you've come across and ask them what they think.</p>
+<p>So in this case <a href="https://www.openstreetmap.org/browse/changeset/4618366"></a><a href="https://www.openstreetmap.org/browse/changeset/4618366"></a><a href="https://www.openstreetmap.org/browse/changeset/4618366">https://www.openstreetmap.org/browse/changeset/4618366</a> User Nakor added a bunch of nodes ways and relations with the changset comment "Washtenaw county boundaries".</p>
+<p>That might not help you decide what to do about the mess, but it might help you understand it. Also you could <a href="https://www.openstreetmap.org/message/new/Nakor">send a message to Nakor</a> to chat to him about it. Remember to be open minded about people's motivations. Don't accuse people of anything in an initial message, just explain the weird data you've come across and ask them what they think.</p>
 <p>...</p>
 <p>Alternatively... If you have solid local knowledge of admin boundaries in your area. Be bold! Just wipe the messy data and map it the way you know it to be!</p>
 </div>

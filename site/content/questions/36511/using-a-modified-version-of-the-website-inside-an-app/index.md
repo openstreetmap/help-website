@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a></p>
+<p>See the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a></p>
 <p>There are some links to iOS apps where maybe some of the are opensource, or some frameworks are mentioned fto display OSM based maps on an iOS device.</p>
 <p>Also search this FAQ site for iOS ... there have been some similar questions like yours already!</p>
 </div>

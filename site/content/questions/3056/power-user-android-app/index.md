@@ -204,7 +204,7 @@ About tracks - I keep lots of tracks, some of them with 5k+ nodes. I need to be 
 1
 </div>
 <div class="comment-text">
-<p>cool. I'll give it a try too. There's some basic details here: <a href="http://wiki.openstreetmap.org/wiki/OruxMaps">http://wiki.openstreetmap.org/wiki/OruxMaps</a> If you know more, feel free to expand upon that.</p>
+<p>cool. I'll give it a try too. There's some basic details here: <a href="https://wiki.openstreetmap.org/wiki/OruxMaps">https://wiki.openstreetmap.org/wiki/OruxMaps</a> If you know more, feel free to expand upon that.</p>
 </div>
 <div id="comment-3263-info" class="comment-info">
 <span class="comment-age">(22 Feb '11, 11:26)</span> <span class="comment-user userinfo">Harry Wood</span>

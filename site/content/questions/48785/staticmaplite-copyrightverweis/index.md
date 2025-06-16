@@ -70,7 +70,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>next time you can create ONE question about one topic, and write both texts in each language together or separated by a line like ------ or similar.</p>
-<p>see doublette at <a href="https://help.openstreetmap.org/questions/48786/staticmaplite-copyright">https://help.openstreetmap.org/questions/48786/staticmaplite-copyright</a></p>
+<p>see doublette at <a href="/questions/48786/staticmaplite-copyright">https://help.openstreetmap.org/questions/48786/staticmaplite-copyright</a></p>
 </div>
 <div id="comment-48792-info" class="comment-info">
 <span class="comment-age">(23 Mar '16, 16:41)</span> <span class="comment-user userinfo">stephan75</span>
@@ -149,7 +149,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Siehe <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>Siehe <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 <p>Um dich lizenzkonform zu verhalten musst Du auf die Urheber (OpenStreetMap-Mitwirkende) und die Lizenz (Datenbank ODbL, Kartenkacheln von osm.org CC-BY-SA) verweisen - bei Homepages etc auch einen entsprechenden Link setzen. Die Kurzangabe im Bild (abgesehen dass sie kaum leserlich ist) ist meiner Ansicht nach also NICHT ausreichend.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -223,7 +223,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, the integrated notice is probably not sufficient. The <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">Legal FAQ</a> says:</p>
+<p>No, the integrated notice is probably not sufficient. The <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">Legal FAQ</a> says:</p>
 <blockquote>
 <p>3a. I would like to use OpenStreetMap maps. How should I credit you?</p>
 <p>What credit to use</p>

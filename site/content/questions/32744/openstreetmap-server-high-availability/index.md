@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>Pre-rendering tiles is something essentially every provider does, including OSM proper.</p>
 <p>It is simply a trade off between disk space used (even just Europe down to zoom level or so, will be rather large) and compute time. Since the low zoom tiles tend to be very explensive to produce it is customary to pre-render tiles down to around zoom 14 regardless of what you do.</p>
-<p>Tile disk requirements for a full planet can be found here <a href="http://wiki.openstreetmap.org/wiki/Tile_disk_usage">http://wiki.openstreetmap.org/wiki/Tile_disk_usage</a></p>
+<p>Tile disk requirements for a full planet can be found here <a href="https://wiki.openstreetmap.org/wiki/Tile_disk_usage">https://wiki.openstreetmap.org/wiki/Tile_disk_usage</a></p>
 <p>If you are using renderd you should already have render_list available that will batch render tiles, see the end of the page of <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/</a></p>
 </div>
 <div class="answer-controls post-controls">

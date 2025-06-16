@@ -155,8 +155,8 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>... see also <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">http://wiki.openstreetmap.org/wiki/OSM_XML</a></p>
-<p>and <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a></p>
+<p>... see also <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">https://wiki.openstreetmap.org/wiki/OSM_XML</a></p>
+<p>and <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a></p>
 </div>
 <div id="comment-33240-info" class="comment-info">
 <span class="comment-age">(16 May '14, 14:51)</span> <span class="comment-user userinfo">stephan75</span>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This page might help you: <a href="http://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dcable_car">http://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dcable_car</a></p>
+<p>This page might help you: <a href="https://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dcable_car">https://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dcable_car</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The cable car railways in San Francisco are tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram">railway=tram</a> (with <a href="http://wiki.openstreetmap.org/wiki/Key:oneway">oneway=yes</a>) (<a href="http://www.openstreetmap.org/browse/way/144344606">example</a>). The corresponding <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route relations</a> use <em>railway=tram</em> and <em>tram=cable_car</em> (<a href="http://www.openstreetmap.org/browse/relation/1959009">example</a>) although there are <a href="http://taginfo.openstreetmap.org/tags/tram=cable_car">not many</a> relations with the cable car tag. And of course you can also map tram stops with the <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram_stop">railway=tram_stop</a> tag (<a href="http://www.openstreetmap.org/browse/node/317081446">example</a>).</p>
+<p>The cable car railways in San Francisco are tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram">railway=tram</a> (with <a href="https://wiki.openstreetmap.org/wiki/Key:oneway">oneway=yes</a>) (<a href="https://www.openstreetmap.org/browse/way/144344606">example</a>). The corresponding <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relations</a> use <em>railway=tram</em> and <em>tram=cable_car</em> (<a href="https://www.openstreetmap.org/browse/relation/1959009">example</a>) although there are <a href="http://taginfo.openstreetmap.org/tags/tram=cable_car">not many</a> relations with the cable car tag. And of course you can also map tram stops with the <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram_stop">railway=tram_stop</a> tag (<a href="https://www.openstreetmap.org/browse/node/317081446">example</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

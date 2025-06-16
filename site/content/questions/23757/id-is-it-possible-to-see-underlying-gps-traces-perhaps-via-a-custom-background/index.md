@@ -209,7 +209,7 @@ This answer is marked "community wiki".
 <div id="post-23804-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Even better - the <a href="http://wiki.openstreetmap.org/wiki/Planet.gpx">raw data</a>'s available as <a href="http://zverik.osm.rambler.ru/gps/files/extracts/index.html">regional extracts</a> so it shouldn't be too difficult to populate a small database with the data.</p>
+<p>Even better - the <a href="https://wiki.openstreetmap.org/wiki/Planet.gpx">raw data</a>'s available as <a href="http://zverik.osm.rambler.ru/gps/files/extracts/index.html">regional extracts</a> so it shouldn't be too difficult to populate a small database with the data.</p>
 </div>
 <div id="comment-23804-info" class="comment-info">
 <span class="comment-age">(28 Jun '13, 23:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

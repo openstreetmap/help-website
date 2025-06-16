@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "location and use of .xsd Schema files?"
-description = '''(q1) Where is the official source of the current OSM .xsd Schema file?  Checked the Wiki and found this page as a start: http://wiki.openstreetmap.org/wiki/OSM_XML/XSD Is that it? (q2) How do you modify the xml Export (.osm) file to reference the authoritative .xsd Schema file? (Note: export writes ...'''
+description = '''(q1) Where is the official source of the current OSM .xsd Schema file?  Checked the Wiki and found this page as a start: https://wiki.openstreetmap.org/wiki/OSM_XML/XSD Is that it? (q2) How do you modify the xml Export (.osm) file to reference the authoritative .xsd Schema file? (Note: export writes ...'''
 date = "2015-02-17T14:23:00Z"
 lastmod = "2015-02-17T17:07:00Z"
 weight = 41078
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p><strong>(q1) Where is the official source of the current OSM .xsd Schema file?</strong></p>
-<p>Checked the Wiki and found this page as a start: <a href="http://wiki.openstreetmap.org/wiki/OSM_XML/XSD">http://wiki.openstreetmap.org/wiki/OSM_XML/XSD</a> Is that it?</p>
+<p>Checked the Wiki and found this page as a start: <a href="https://wiki.openstreetmap.org/wiki/OSM_XML/XSD">https://wiki.openstreetmap.org/wiki/OSM_XML/XSD</a> Is that it?</p>
 <p><strong>(q2) How do you modify the xml Export (.osm) file to reference the authoritative .xsd Schema file?</strong></p>
 <p>(Note: export writes a .osm file which is XML, and can easily be renamed to .xml)</p>
 <p>Speculate you just take line 2 of the .xml file which contains this:</p>

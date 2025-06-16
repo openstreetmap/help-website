@@ -81,7 +81,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10251/hariskar"></a><a href="http://help.openstreetmap.org/users/10251/hariskar">@hariskar</a>: Our wiki does not really set hard rules, but suggestions and documentation of usual practise or what most mappers agree to (it is a bit hard to define what our wiki really is). So you do not "have" to.</p>
+<p><a href="https://help.openstreetmap.org/users/10251/hariskar"></a><a href="https://help.openstreetmap.org/users/10251/hariskar">@hariskar</a>: Our wiki does not really set hard rules, but suggestions and documentation of usual practise or what most mappers agree to (it is a bit hard to define what our wiki really is). So you do not "have" to.</p>
 <p>Yes, if there is no transcription in our data, then it is OsmAnd's "fault" (or the one of a used library). Maybe several transcription schemes exist (e.g. one usually used in English and one usually used in German – this is the case for Russian)? You could report to / discuss this with <span>the programmers</span> (e.g. in the Issue Tracker).</p>
 </div>
 <div id="comment-40235-info" class="comment-info">
@@ -137,7 +137,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>See <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece">https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece</a> (→ <code>int_name</code>)</p>
-<p>If this is a transcription which can be done automatically by computers: I would say, <em>no additional tag</em> at all. See <a href="https://help.openstreetmap.org/questions/7492/transliterating-arabic-names">https://help.openstreetmap.org/questions/7492/transliterating-arabic-names</a> . The transcription can be done by the map maker's software: One example is the "Mapnik" style by the German OSM section: <a href="https://www.openstreetmap.org/way/89662083?lon=23.519913&amp;lat=38.075296&amp;zoom=17">compare</a> (<a href="http://mc.bbbike.org/mc/?lon=23.519913&amp;lat=38.075296&amp;zoom=17&amp;num=3&amp;mt0=mapnik&amp;mt1=mapnik-german&amp;mt2=osmfr&amp;marker=">only a Greece name tag for the street in the middle</a> … but still a transcription is shown; <a href="https://www.openstreetmap.org/way/261732681">the tertiary in the upper part has a <code>int_name</code> tag</a>).</p>
+<p>If this is a transcription which can be done automatically by computers: I would say, <em>no additional tag</em> at all. See <a href="/questions/7492/transliterating-arabic-names">https://help.openstreetmap.org/questions/7492/transliterating-arabic-names</a> . The transcription can be done by the map maker's software: One example is the "Mapnik" style by the German OSM section: <a href="https://www.openstreetmap.org/way/89662083?lon=23.519913&amp;lat=38.075296&amp;zoom=17">compare</a> (<a href="http://mc.bbbike.org/mc/?lon=23.519913&amp;lat=38.075296&amp;zoom=17&amp;num=3&amp;mt0=mapnik&amp;mt1=mapnik-german&amp;mt2=osmfr&amp;marker=">only a Greece name tag for the street in the middle</a> … but still a transcription is shown; <a href="https://www.openstreetmap.org/way/261732681">the tertiary in the upper part has a <code>int_name</code> tag</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

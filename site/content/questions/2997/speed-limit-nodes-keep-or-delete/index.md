@@ -80,7 +80,7 @@ source_ref=*</p>
 <div id="post-6566-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@mwbg</span> you really shouldn't delete them, the positions of the signs are very helpful when mapping and verifying maxspeeds. There is a mappaint style you can add to your JOSM-configuration to display the actual numbers (you can find it in the prefs). It currently doesn't work for speed limits in mph but you can easily extend it to do this. The solution for the direction is to put the nodes besides the road (this is usually at their position) rather than on it. There is also documentation on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Key:source:maxspeed">http://wiki.openstreetmap.org/wiki/Key:source:maxspeed</a></p>
+<p><span>@mwbg</span> you really shouldn't delete them, the positions of the signs are very helpful when mapping and verifying maxspeeds. There is a mappaint style you can add to your JOSM-configuration to display the actual numbers (you can find it in the prefs). It currently doesn't work for speed limits in mph but you can easily extend it to do this. The solution for the direction is to put the nodes besides the road (this is usually at their position) rather than on it. There is also documentation on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Key:source:maxspeed">https://wiki.openstreetmap.org/wiki/Key:source:maxspeed</a></p>
 </div>
 <div id="comment-6566-info" class="comment-info">
 <span class="comment-age">(26 Jul '11, 16:22)</span> <span class="comment-user userinfo">dieterdreist</span>

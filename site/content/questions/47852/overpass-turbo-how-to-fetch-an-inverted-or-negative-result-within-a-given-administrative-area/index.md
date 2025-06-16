@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference">overpass difference operator</a>.</p>
+<p>You need to use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference">overpass difference operator</a>.</p>
 <p>So first need to query the big set (with all ways in the admin area), then query the smaller set (all ways that also have 'prow_ref' in that area), and finally apply the difference and output it.</p>
 <p>See the example:</p>
 <pre><code>area[&quot;name&quot;=&quot;xxx&quot;][&quot;admin_level&quot;=8]-&gt;.a;

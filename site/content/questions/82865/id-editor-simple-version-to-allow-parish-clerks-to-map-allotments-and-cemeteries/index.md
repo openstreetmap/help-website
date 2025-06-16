@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-82873-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Duplicate or follow-up of <a href="https://help.openstreetmap.org/questions/82864/id-editor-contributors-from-single-account">https://help.openstreetmap.org/questions/82864/id-editor-contributors-from-single-account</a></p>
+<p>Duplicate or follow-up of <a href="/questions/82864/id-editor-contributors-from-single-account">https://help.openstreetmap.org/questions/82864/id-editor-contributors-from-single-account</a></p>
 </div>
 <div id="comment-82873-info" class="comment-info">
 <span class="comment-age">(18 Dec '21, 15:19)</span> <span class="comment-user userinfo">H_mlet</span>

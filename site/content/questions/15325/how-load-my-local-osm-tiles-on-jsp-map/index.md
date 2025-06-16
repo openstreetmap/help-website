@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Could you join your question with this one : <a href="http://help.openstreetmap.org/questions/15322/using-local-tiles">http://help.openstreetmap.org/questions/15322/using-local-tiles</a></p>
+<p>Could you join your question with this one : <a href="/questions/15322/using-local-tiles">https://help.openstreetmap.org/questions/15322/using-local-tiles</a></p>
 <p>Seems a student class having to do the same homework ;)</p>
 </div>
 <div id="comment-15327-info" class="comment-info">

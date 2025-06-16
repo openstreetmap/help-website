@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have added my business (a hotel) to OpenStreetMap some time ago in order to also have it listed at <a href="http://coinmap.org/">http://coinmap.org/</a> .</p>
-<p>My hotel is <a href="http://www.openstreetmap.org/node/4620910995">"Trafford Sky Homes"</a> in Leipzig, Germany. I added the key "payment:bitcoin" with value "yes" but for some reason it won´t be listed in coinmap.org</p>
+<p>My hotel is <a href="https://www.openstreetmap.org/node/4620910995">"Trafford Sky Homes"</a> in Leipzig, Germany. I added the key "payment:bitcoin" with value "yes" but for some reason it won´t be listed in coinmap.org</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-coinmap" rel="tag" title="see questions tagged &#39;coinmap&#39;">coinmap</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

@@ -271,7 +271,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can get infos on the osmf servers from here;<a href="http://wiki.openstreetmap.org/wiki/Servers">http://wiki.openstreetmap.org/wiki/Servers</a></p>
+<p>You can get infos on the osmf servers from here;<a href="https://wiki.openstreetmap.org/wiki/Servers">https://wiki.openstreetmap.org/wiki/Servers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

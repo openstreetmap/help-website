@@ -177,7 +177,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>To use Mkgmap to generate maps with address searching, you need to use the <code>--index</code> option.</p>
-<p>Some more details on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/options#Address_search_options">Address search options</a> and the Mkgmap site <a href="http://www.mkgmap.org.uk/news/2012/01/28/address-index-for-gps-devices">Address index for GPS devices</a>.</p>
+<p>Some more details on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/options#Address_search_options">Address search options</a> and the Mkgmap site <a href="http://www.mkgmap.org.uk/news/2012/01/28/address-index-for-gps-devices">Address index for GPS devices</a>.</p>
 <p>Though it may still depend on what Garmin device you are using. It seems this address searching works on some devices, but not others.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -107,7 +107,7 @@ osqa_accepted = false
 <div id="post-32343-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This area <a href="http://www.openstreetmap.org/#map=16/31.7273/-108.9932">http://www.openstreetmap.org/#map=16/31.7273/-108.9932</a> ? The name is from, as suspected, the TIGER dataset. See <a href="http://www.census.gov/geo/maps-data/data/tiger.html">http://www.census.gov/geo/maps-data/data/tiger.html</a> for more information, as long as the name is present there you will have a hard time stopping people from adding it back.</p>
+<p>This area <a href="https://www.openstreetmap.org/#map=16/31.7273/-108.9932">https://www.openstreetmap.org/#map=16/31.7273/-108.9932</a> ? The name is from, as suspected, the TIGER dataset. See <a href="http://www.census.gov/geo/maps-data/data/tiger.html">http://www.census.gov/geo/maps-data/data/tiger.html</a> for more information, as long as the name is present there you will have a hard time stopping people from adding it back.</p>
 </div>
 <div id="comment-32343-info" class="comment-info">
 <span class="comment-age">(12 Apr '14, 23:12)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

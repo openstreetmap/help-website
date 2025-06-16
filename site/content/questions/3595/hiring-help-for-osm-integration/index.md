@@ -121,7 +121,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A good place to find people who are doing OSM work for money is the wiki page <a href="http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">List of Companies offering OSM Consulting</a>.</p>
+<p>A good place to find people who are doing OSM work for money is the wiki page <a href="https://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">List of Companies offering OSM Consulting</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can either read the documentation on the powerfull <a href="http://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a> javascript library.</p>
+<p>You can either read the documentation on the powerfull <a href="https://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a> javascript library.</p>
 <p>Or you can simply use a service as <a href="http://cartosm.eu/">cartosm.eu</a></p>
 </div>
 <div class="answer-controls post-controls">

@@ -167,7 +167,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Marco, wenn auch am ursprünglich verwendeten Computer/Browser das Bearbeiten nicht mehr geht (per Cookie), dann kann dir nur (das ist ja Sinn der Einstellung "nur mit geheimen Bearbeitungslink zu bearbeiten") der Betreiber der von dir verwendeten uMap-Instanz<sup>(*)</sup> helfen. Ihn musst du anschreiben. Wenn du ihm glaubhaft darlegst, dass du der Besitzer bist, kann er dir vielleicht den Bearbeitungslink wieder geben. Das ist natürlich etwas Arbeit – kannst du die Karte nicht neu erstellen? Du kannst dich bei uMap übrigens auch anmelden, dann kann dir das mit dem Verlieren nicht mehr passieren.</p>
-<p><span class="small">(*) Wenn es, wie im Screenshot, um die uMap-Instanz auf <a href="https://umap.openstreetmap.fr/de/">https://umap.openstreetmap.fr/de/</a> geht, dann müsstest du dich an <a href="http://help.openstreetmap.org/users/4961/ybon">@ybon</a> (Kontaktdaten z.B. auf <a href="https://github.com/yohanboniface">https://github.com/yohanboniface</a> ) wenden, wenn ich das richtig im Kopf habe. Der Admin/Betreiber ist nicht offensichtlich angegeben.</span></p>
+<p><span class="small">(*) Wenn es, wie im Screenshot, um die uMap-Instanz auf <a href="https://umap.openstreetmap.fr/de/">https://umap.openstreetmap.fr/de/</a> geht, dann müsstest du dich an <a href="https://help.openstreetmap.org/users/4961/ybon">@ybon</a> (Kontaktdaten z.B. auf <a href="https://github.com/yohanboniface">https://github.com/yohanboniface</a> ) wenden, wenn ich das richtig im Kopf habe. Der Admin/Betreiber ist nicht offensichtlich angegeben.</span></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

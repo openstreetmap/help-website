@@ -121,7 +121,7 @@ One Answer:
 <p>Or maybe OSMAlchemy:</p>
 <p><a href="https://pypi.python.org/pypi/OSMAlchemy/">https://pypi.python.org/pypi/OSMAlchemy/</a></p>
 <p>I like to just write an Overpass script and embed that rather than using a wrapper.</p>
-<p>If you do intend to do programmatic editing, consider modifying the data using a script and then using JOSM to interact with the API (and be aware of the policy on automatic edits: <a href="http://wiki.openstreetmap.org/wiki/Automated_edits">http://wiki.openstreetmap.org/wiki/Automated_edits</a> ).</p>
+<p>If you do intend to do programmatic editing, consider modifying the data using a script and then using JOSM to interact with the API (and be aware of the policy on automatic edits: <a href="https://wiki.openstreetmap.org/wiki/Automated_edits">https://wiki.openstreetmap.org/wiki/Automated_edits</a> ).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

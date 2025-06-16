@@ -59,7 +59,7 @@ the name<br />
 </p>
 <p>You can see the 4 peak here:<br />
 </p>
-<p><a href="http://www.openstreetmap.org/#map=14/55.1656/9.9929">http://www.openstreetmap.org/#map=14/55.1656/9.9929</a><br />
+<p><a href="https://www.openstreetmap.org/#map=14/55.1656/9.9929">https://www.openstreetmap.org/#map=14/55.1656/9.9929</a><br />
 </p>
 <p>the 3 upper peaks with elevation displayed - the 1 lower peak ('Toppen') without elevation. Other zoom-levels have the same problem.<br />
 </p>
@@ -200,7 +200,7 @@ the name<br />
 <td><div class="item-right">
 <div class="answer-body">
 <p>Could be a bug in the renderer or its database. Or the renderer has some reason, unknown to us, for not displaying it. You can try to <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">create a new issue at the openstreetmap-carto github project</a> but it will require a separate GitHub account and probably is not worth the effort (and possibly even the wrong component).</p>
-<p>The important information is: The data you entered is fine. And the <a href="http://www.openstreetmap.org/#map=14/55.1656/9.9822&amp;layers=H">humanitarian layer</a> for example displays the elevation of all four peaks (you can switch the layer via the sidebar on the right).</p>
+<p>The important information is: The data you entered is fine. And the <a href="https://www.openstreetmap.org/#map=14/55.1656/9.9822&amp;layers=H">humanitarian layer</a> for example displays the elevation of all four peaks (you can switch the layer via the sidebar on the right).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

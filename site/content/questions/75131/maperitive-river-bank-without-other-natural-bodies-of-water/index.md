@@ -41,12 +41,12 @@ osqa_accepted = false
 <div class="question-body">
 <p>Using the Maperitive I am modifying a ruleset to meet my requirements.</p>
 <p>The place I am stuck is wanting to fill in an area of the river. Its a larger area. I don't however want the other bodies that are around it that are not marked river. Is there a way to exclude the other bodies or specify that I only want the natural bodie if it is a river?</p>
-<p>Here is what I have in the rule<img src="https://help.openstreetmap.org/upfiles/2020-06-04_00_14_00-Maperitive_(v2.4.3).png" alt="alt text" /></p>
+<p>Here is what I have in the rule<img src="/upfiles/2020-06-04_00_14_00-Maperitive_(v2.4.3).png" alt="alt text" /></p>
 <pre><code>    areas
     water : natural=water OR waterway=riverbank</code></pre>
 <p>Here is an examle of the area I want and don't want. This is Nashville TN.<br />
-Here are the tags on the river. <img src="https://help.openstreetmap.org/upfiles/2020-06-04_00_25_05-OpenStreetMap_ACn438b.png" alt="alt text" /></p>
-<p>And here are the tags on the Pond <img src="https://help.openstreetmap.org/upfiles/2020-06-04_00_24_21-OpenStreetMap.png" alt="alt text" /></p>
+Here are the tags on the river. <img src="/upfiles/2020-06-04_00_25_05-OpenStreetMap_ACn438b.png" alt="alt text" /></p>
+<p>And here are the tags on the Pond <img src="/upfiles/2020-06-04_00_24_21-OpenStreetMap.png" alt="alt text" /></p>
 <p>Thanks for your help.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -119,7 +119,7 @@ One Answer:
 <p>Ok, Figured it out thismorning. In the areas section of the rules.</p>
 <p>Old value: areas water : natural=water OR waterway=riverbank</p>
 <p>New values: areas water : water=river OR waterway=riverbank</p>
-<p>Results: <img src="https://help.openstreetmap.org/upfiles/2020-06-04_09_34_50-Maperitive_(v2.4.3).png" alt="alt text" /></p>
+<p>Results: <img src="/upfiles/2020-06-04_09_34_50-Maperitive_(v2.4.3).png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

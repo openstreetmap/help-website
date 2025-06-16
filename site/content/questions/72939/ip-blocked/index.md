@@ -97,7 +97,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>ERR CONNECTION TIMED OUT is the error I got after some time trying to access the page.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Captura.PNG" alt="www.openstreetmap.org" /></p>
+<p><img src="/upfiles/Captura.PNG" alt="www.openstreetmap.org" /></p>
 </div>
 <div id="comment-72988-info" class="comment-info">
 <span class="comment-age">(10 Feb '20, 15:59)</span> <span class="comment-user userinfo">adphxlx</span>

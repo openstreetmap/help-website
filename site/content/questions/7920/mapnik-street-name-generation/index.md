@@ -192,7 +192,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a> Ah! Yes you are right. I am using a custom piece of software for rendering and forgot I am caching zoom 0 to 12 and not re-rendering them. That fixed it. Thanks for your help!</p>
 <p>Also, I noticed you also commented on my question here:</p>
-<p><a href="https://help.openstreetmap.org/questions/66165/openstreetmap-carto-english-names">https://help.openstreetmap.org/questions/66165/openstreetmap-carto-english-names</a></p>
+<p><a href="/questions/66165/openstreetmap-carto-english-names">https://help.openstreetmap.org/questions/66165/openstreetmap-carto-english-names</a></p>
 <p>mentioning that the German fork of osm-carto is the best solution. Are there any major shortcomings to doing it the way I have here versus using the fork?</p>
 </div>
 <div id="comment-66189-info" class="comment-info">
@@ -288,7 +288,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/66165/openstreetmap-carto-english-names">https://help.openstreetmap.org/questions/66165/openstreetmap-carto-english-names</a> is a similar question with more up-to-date answers.</p>
+<p><a href="/questions/66165/openstreetmap-carto-english-names">https://help.openstreetmap.org/questions/66165/openstreetmap-carto-english-names</a> is a similar question with more up-to-date answers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

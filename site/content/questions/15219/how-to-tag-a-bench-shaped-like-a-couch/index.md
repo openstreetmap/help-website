@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd certainly use <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench">amenity=bench</a>. Taginfo <a href="http://taginfo.openstreetmap.org/tags/?key=amenity&amp;value=bench#combinations">shows</a> the other tags people have used with benches. You can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>, so if you think it's important to capture some information about benches that no-one else does, you are free to do so.</p>
+<p>I'd certainly use <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench">amenity=bench</a>. Taginfo <a href="http://taginfo.openstreetmap.org/tags/?key=amenity&amp;value=bench#combinations">shows</a> the other tags people have used with benches. You can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>, so if you think it's important to capture some information about benches that no-one else does, you are free to do so.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

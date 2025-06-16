@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your private overlays can be used over OSM as easy as any other map providers. You do not have to upload your data to OSM to use it, and if your data is not open licenced you should not.</p>
-<p>If you prefer you can still use Google Earth by following the guide <a href="http://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">OSM in Google Earth</a>. If you want to show you overlays in a web page you can use <a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">OSM in Google Maps</a> or the open source alternative <a href="http://www.openlayers.org/">OpenLayers</a>.</p>
+<p>If you prefer you can still use Google Earth by following the guide <a href="https://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">OSM in Google Earth</a>. If you want to show you overlays in a web page you can use <a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">OSM in Google Maps</a> or the open source alternative <a href="http://www.openlayers.org/">OpenLayers</a>.</p>
 <p>Note that if you use OSM to create the overlay (e.g. tracing or looking up on the map) this overlay is subject to the licence of that data (CC-BY-SA). However if your data is under a closed licence you can still use OSM in a seperate layer.</p>
 </div>
 <div class="answer-controls post-controls">

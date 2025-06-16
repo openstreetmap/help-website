@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's probably easiest to trace it from Bing. You get a better result than a node.</p>
-<p>In fact it is possible that someone already did this before the licence change, but didn't accept the new licence; so they would have deleted the old node (as per <a href="http://wiki.openstreetmap.org/wiki/GNIS">the instructions here</a>) and drawn in the area feature. The redaction process might then have deleted their contributions. Purely a guess though. If the instructions had said to use the existing node as part of the new way to show the area and just remove the tags then it might still be there now (but hindsight is a wonderful thing).</p>
+<p>In fact it is possible that someone already did this before the licence change, but didn't accept the new licence; so they would have deleted the old node (as per <a href="https://wiki.openstreetmap.org/wiki/GNIS">the instructions here</a>) and drawn in the area feature. The redaction process might then have deleted their contributions. Purely a guess though. If the instructions had said to use the existing node as part of the new way to show the area and just remove the tags then it might still be there now (but hindsight is a wonderful thing).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

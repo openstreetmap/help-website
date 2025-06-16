@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I've been working through a lot of keepright marks in my city (Louisville, KY) and in the process learned about turn restrictions and other sorts of relations.</p>
 <p>I know relations can be a bit complex, so before I go crazy doing a bunch of these in the area I'd like to have someone check my work to make sure I'm doing them right.</p>
 <p>I did turn restrictions on an interchange in suburban Louisville and was hoping someone well versed in the ways of relations and restrictions could double-check what I did to make sure its correct.</p>
-<p>The interchange of Billtown Road and I-265 (Gene Snyder Freeway) is the work I did: <a href="http://www.openstreetmap.org/#map=17/38.14647/-85.54581">http://www.openstreetmap.org/#map=17/38.14647/-85.54581</a></p>
+<p>The interchange of Billtown Road and I-265 (Gene Snyder Freeway) is the work I did: <a href="https://www.openstreetmap.org/#map=17/38.14647/-85.54581">https://www.openstreetmap.org/#map=17/38.14647/-85.54581</a></p>
 <p>Thanks for the help/review!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

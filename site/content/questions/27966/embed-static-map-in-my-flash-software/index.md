@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Exactly the same as your example, see our wiki: <span>Static map images</span>. You may also want to read about <span>Rendering</span> (the process of converting our geo data into a map or (routing) service).</p>
-<p>A side note: Please always obey the service's usage policy and <a href="http://www.openstreetmap.org/copyright">our and the map image creator's copyright</a>.</p>
+<p>A side note: Please always obey the service's usage policy and <a href="https://www.openstreetmap.org/copyright">our and the map image creator's copyright</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

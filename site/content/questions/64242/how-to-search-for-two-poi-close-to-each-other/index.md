@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/33089/proximity-search-node-with-tag1-near-node-with-tag2">https://help.openstreetmap.org/questions/33089/proximity-search-node-with-tag1-near-node-with-tag2</a></p>
+<p>See <a href="/questions/33089/proximity-search-node-with-tag1-near-node-with-tag2">https://help.openstreetmap.org/questions/33089/proximity-search-node-with-tag1-near-node-with-tag2</a></p>
 <p>Modified the example for your use case <a href="http://overpass-turbo.eu/s/zEB">http://overpass-turbo.eu/s/zEB</a></p>
 </div>
 <div class="answer-controls post-controls">

@@ -159,7 +159,7 @@ One Answer:
 <div id="post-60161-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>According to open street maps documentation, it looks like this tool was replaced by TileLite. I will look into it further, thank you for the recommendation! <a href="http://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server#Live_Rendering_with_LiveTiles_TileLite">http://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server#Live_Rendering_with_LiveTiles_TileLite</a></p>
+<p>According to open street maps documentation, it looks like this tool was replaced by TileLite. I will look into it further, thank you for the recommendation! <a href="https://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server#Live_Rendering_with_LiveTiles_TileLite">https://wiki.openstreetmap.org/wiki/User:Stanton/Mapnik_Test_Server#Live_Rendering_with_LiveTiles_TileLite</a></p>
 </div>
 <div id="comment-60161-info" class="comment-info">
 <span class="comment-age">(17 Oct '17, 21:49)</span> <span class="comment-user userinfo">pantaphobic</span>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you perhaps mean <a href="http://wiki.openstreetmap.org/wiki/OpenLevelUp">OpenLevelUp?</a></p>
+<p>Did you perhaps mean <a href="https://wiki.openstreetmap.org/wiki/OpenLevelUp">OpenLevelUp?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

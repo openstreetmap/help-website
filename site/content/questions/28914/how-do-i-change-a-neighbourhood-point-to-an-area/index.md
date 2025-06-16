@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-28916-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It is always helpful to provide a <a href="http://wiki.openstreetmap.org/wiki/Permalink">permalink</a> to the area you are talking about.</p>
+<p>It is always helpful to provide a <a href="https://wiki.openstreetmap.org/wiki/Permalink">permalink</a> to the area you are talking about.</p>
 </div>
 <div id="comment-28916-info" class="comment-info">
 <span class="comment-age">(09 Dec '13, 10:32)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -139,7 +139,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If you use JOSM, I would install utilsplugin2 (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2)">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2)</a> and after drawing the area, I would "merge" the node and the area with replace geometry. (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Replace_geometry_.28Ctrl.2BShift.2BG.29)">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Replace_geometry_.28Ctrl.2BShift.2BG.29)</a> This should preserve the history of the node.</p>
+<p>If you use JOSM, I would install utilsplugin2 (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2)">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2)</a> and after drawing the area, I would "merge" the node and the area with replace geometry. (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Replace_geometry_.28Ctrl.2BShift.2BG.29)">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Replace_geometry_.28Ctrl.2BShift.2BG.29)</a> This should preserve the history of the node.</p>
 </div>
 <div id="comment-28925-info" class="comment-info">
 <span class="comment-age">(09 Dec '13, 16:42)</span> <span class="comment-user userinfo">escada</span>
@@ -192,8 +192,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Another option is to make a relation for the neighborhood boundaries. For example, if the neighborhood boundaries are mostly along streets, you can use the streets as relation members rather than having redundant and overlapping ways. The relation would probably be tagged type=boundary with the name. To extend the tagging, you could tag place=neighbourhood, but if it is an official boundary (and depending on if there's any local standards used), I'd suggest boundary=administrative and admin_level=* The relation could also keep the node, and have it take the admin_centre or label role. More info on this method on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">http://wiki.openstreetmap.org/wiki/Relation:boundary</a></p>
-<p><strong>Note that rendering of this sort of data is still real hit and miss.</strong> For example, if you use relations like I've tried (see for example <a href="http://www.openstreetmap.org/relation/3323777">Relation 3323777</a>), "Standard" Mapnik will have a label in the center of the relation area, MapQuest and Humanitarian at the label node, and Cycle and Transport don't support at all.</p>
+<p>Another option is to make a relation for the neighborhood boundaries. For example, if the neighborhood boundaries are mostly along streets, you can use the streets as relation members rather than having redundant and overlapping ways. The relation would probably be tagged type=boundary with the name. To extend the tagging, you could tag place=neighbourhood, but if it is an official boundary (and depending on if there's any local standards used), I'd suggest boundary=administrative and admin_level=* The relation could also keep the node, and have it take the admin_centre or label role. More info on this method on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">https://wiki.openstreetmap.org/wiki/Relation:boundary</a></p>
+<p><strong>Note that rendering of this sort of data is still real hit and miss.</strong> For example, if you use relations like I've tried (see for example <a href="https://www.openstreetmap.org/relation/3323777">Relation 3323777</a>), "Standard" Mapnik will have a label in the center of the relation area, MapQuest and Humanitarian at the label node, and Cycle and Transport don't support at all.</p>
 <p>For place=neighbourhood, generally only MapQuest and Humanitarian render it consistently in my experience. (and for completeness' sake, they all render place=suburb to one degree or another)</p>
 </div>
 <div class="answer-controls post-controls">

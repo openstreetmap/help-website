@@ -142,7 +142,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap">http://help.openstreetmap.org/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap</a> may be of use to you</p>
+<p><a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap">https://help.openstreetmap.org/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap</a> may be of use to you</p>
 </div>
 <div id="comment-14680-info" class="comment-info">
 <span class="comment-age">(28 Jul '12, 10:00)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -50,7 +50,7 @@ osqa_accepted = false
 </ol>
 <p>The city / village nodes are retrieved from OSM file. The Output Graph edges should have weight calculated based on the Input Graph edges. The measure of the weight is in general distance in meters from one node to the next.</p>
 <p>My question is. Does somebody was working on something like this. I don't want to duplicate somebodys work. Ofcourse everybody are welcome to help me do it in right way.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/idea.gif" alt="Idea" /></p>
+<p><img src="/upfiles/idea.gif" alt="Idea" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-graph" rel="tag" title="see questions tagged &#39;graph&#39;">graph</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-edge" rel="tag" title="see questions tagged &#39;edge&#39;">edge</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>
@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>My advice: contact the developers of the many Openstreetmap routing services.</p>
-<p>( <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a> )</p>
+<p>( <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a> )</p>
 <p>Within their software developments they definitely will have dealt with the kind of graph decisions that you are thinkng about here.</p>
 <p>H.</p>
 </div>
@@ -142,7 +142,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>... or leave a message to the Routing mailinglist that can be found here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-11685-info" class="comment-info">
 <span class="comment-age">(01 Apr '12, 18:57)</span> <span class="comment-user userinfo">stephan75</span>

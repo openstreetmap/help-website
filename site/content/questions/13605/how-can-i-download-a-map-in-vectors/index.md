@@ -162,7 +162,7 @@ One Answer:
 <div id="post-13746-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Maybew some more possibilities to produce vector maps are listed at <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p>Maybew some more possibilities to produce vector maps are listed at <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 </div>
 <div id="comment-13746-info" class="comment-info">
 <span class="comment-age">(24 Jun '12, 16:31)</span> <span class="comment-user userinfo">stephan75</span>

@@ -161,7 +161,7 @@ surface=</em><br />
 smoothness=*<br />
 4wd_only=yes<br />
 </p>
-<p>I faced this issue in Albania, for example <a href="http://www.openstreetmap.org/browse/way/125823085">here</a></p>
+<p>I faced this issue in Albania, for example <a href="https://www.openstreetmap.org/browse/way/125823085">here</a></p>
 </div>
 <div id="comment-10293-info" class="comment-info">
 <span class="comment-age">(28 Jan '12, 12:23)</span> <span class="comment-user userinfo">malenki</span>

@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-60221-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes, York District Hospital. The hospital building itself is <a href="http://www.openstreetmap.org/relation/916106#map=16/53.9702/-1.0840">http://www.openstreetmap.org/relation/916106#map=16/53.9702/-1.0840</a> and I've so far added some departments as e.g. <a href="http://www.openstreetmap.org/node/4785109291">http://www.openstreetmap.org/node/4785109291</a> , but without any tagging of them beyond a "name" it's difficult to do much with them.</p>
+<p>Yes, York District Hospital. The hospital building itself is <a href="https://www.openstreetmap.org/relation/916106#map=16/53.9702/-1.0840">https://www.openstreetmap.org/relation/916106#map=16/53.9702/-1.0840</a> and I've so far added some departments as e.g. <a href="https://www.openstreetmap.org/node/4785109291">https://www.openstreetmap.org/node/4785109291</a> , but without any tagging of them beyond a "name" it's difficult to do much with them.</p>
 </div>
 <div id="comment-60221-info" class="comment-info">
 <span class="comment-age">(22 Oct '17, 22:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -63,7 +63,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>That's a really broad question...</p>
-<p>If you have a look at <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> there's a big "Software Development" heading. I'd start reading there.</p>
+<p>If you have a look at <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> there's a big "Software Development" heading. I'd start reading there.</p>
 </div>
 <div id="comment-43335-info" class="comment-info">
 <span class="comment-age">(30 May '15, 23:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

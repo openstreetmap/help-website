@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hallo, ich arbeite schon seit ein paar Wochen bei OSM mit und gehe in meiner Umgebung nun in die Feinarbeit (Hausnummer, Nutzflächen...) und wollte fragen, wie ich am besten Hausgärten und Felder darstelle. Ich hab das daweil mit landuse=allotments gemacht. Auf dem OSM-Wiki steht, das ist für Schrebergärten. Soll man das auch für normale Hausgärten verwenden? Ich bin der Meinung es sieht etwas komisch aus.</p>
-&lt;iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=14.78852,46.96011,14.80081,46.96965&amp;amp;layer=mapnik&amp;amp;marker=46.96946,14.80667" style="border: 1px solid black"&gt;&lt;/iframe&gt;
+&lt;iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=14.78852,46.96011,14.80081,46.96965&amp;amp;layer=mapnik&amp;amp;marker=46.96946,14.80667" style="border: 1px solid black"&gt;&lt;/iframe&gt;
 <p><br />
-<span class="small"><a href="http://www.openstreetmap.org/?lat=46.96488&amp;lon=14.794665&amp;zoom=16&amp;layers=M&amp;mlat=46.96946&amp;mlon=14.80667">Gr&amp;#246;&amp;#223;ere Karte anzeigen</a></span></p>
+<span class="small"><a href="https://www.openstreetmap.org/?lat=46.96488&amp;lon=14.794665&amp;zoom=16&amp;layers=M&amp;mlat=46.96946&amp;mlon=14.80667">Gr&amp;#246;&amp;#223;ere Karte anzeigen</a></span></p>
 <p>Und wie soll ich das bei den Feldern machen? Wenn ich für Gärten landuse=allotments und für Felder =farmland benutzer, ist meine ganze Stadt ockerbraun ;)</p>
 <p>Wie soll ich das lösen?</p>
 <p>Grüße Martin</p>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/mapa-error_0pWyUFb.png" alt="alt text" />Cordial saludo</p>
+<p><img src="/upfiles/mapa-error_0pWyUFb.png" alt="alt text" />Cordial saludo</p>
 <p>Hemos realizado un desarrollo tecnologico para la geo referencia de epidemias nutricionales, salud fisica y mental y todo estaba funcionando perfectamente hasta el dia de ayer</p>
 <p>el dia de hoy no aparece el mapa, solo los globos, el logo y la leyenda de la casa matriz al final</p>
 <p>haciendo inspeccion en la web y consola nos aparece este codigo de error</p>

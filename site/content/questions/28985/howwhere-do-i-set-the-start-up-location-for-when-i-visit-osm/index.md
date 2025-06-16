@@ -81,7 +81,7 @@ osqa_accepted = false
 <div id="post-28987-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Does <a href="https://help.openstreetmap.org/questions/26960/privacy-how-do-i-stop-openstreetmap-from-remembering-my-searcheslocation">this</a> answer you question?</p>
+<p>Does <a href="/questions/26960/privacy-how-do-i-stop-openstreetmap-from-remembering-my-searcheslocation">this</a> answer you question?</p>
 </div>
 <div id="comment-28987-info" class="comment-info">
 <span class="comment-age">(11 Dec '13, 10:08)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -94,7 +94,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I've cleared all the cookies, to no avail. However ...</p>
 <p>Opening in chrome gets a different map, so it's the browser.</p>
-<p>I haven't got my head around whether it's history doing funny things, but saving the full destination as a bookmark and going from there works, so <a href="http://www.openstreetmap.org/#map=12/51.7366/-0.3840">http://www.openstreetmap.org/#map=12/51.7366/-0.3840</a> opens the map at that scale and coords</p>
+<p>I haven't got my head around whether it's history doing funny things, but saving the full destination as a bookmark and going from there works, so <a href="https://www.openstreetmap.org/#map=12/51.7366/-0.3840">https://www.openstreetmap.org/#map=12/51.7366/-0.3840</a> opens the map at that scale and coords</p>
 </div>
 <div id="comment-28994-info" class="comment-info">
 <span class="comment-age">(11 Dec '13, 12:45)</span> <span class="comment-user userinfo">NeilUK</span>

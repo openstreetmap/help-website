@@ -179,7 +179,7 @@ relation    3903990</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As <a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> said, relations &amp; ways are complicated. <code>osm2psql</code> can output a <code>pgsimp</code> format, which is a directory of tab separated files (which are like CSVs). It might do what you want.</p>
+<p>As <a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> said, relations &amp; ways are complicated. <code>osm2psql</code> can output a <code>pgsimp</code> format, which is a directory of tab separated files (which are like CSVs). It might do what you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -229,7 +229,7 @@ relation    3903990</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <strong>--csv="<a href="http://help.openstreetmap.org/users/260/idoneus">@id</a> <a href="http://help.openstreetmap.org/users/5110/latroc">@lat</a> <a href="http://help.openstreetmap.org/users/1350/longestaugust">@lon</a>"</strong> in your question suggests that you need just IDs and coordinates. Maybe the option <strong>--all-to-nodes</strong> will help. It will retrieve the coordinates for all your ways and relations.</p>
+<p>The <strong>--csv="<a href="https://help.openstreetmap.org/users/260/idoneus">@id</a> <a href="https://help.openstreetmap.org/users/5110/latroc">@lat</a> <a href="https://help.openstreetmap.org/users/1350/longestaugust">@lon</a>"</strong> in your question suggests that you need just IDs and coordinates. Maybe the option <strong>--all-to-nodes</strong> will help. It will retrieve the coordinates for all your ways and relations.</p>
 <p><a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Dispose_of_Ways_and_Relations_and_Convert_them_to_Nodes">https://wiki.openstreetmap.org/wiki/Osmconvert#Dispose_of_Ways_and_Relations_and_Convert_them_to_Nodes</a></p>
 </div>
 <div class="answer-controls post-controls">

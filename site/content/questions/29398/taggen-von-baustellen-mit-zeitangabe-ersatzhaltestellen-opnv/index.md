@@ -122,19 +122,19 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hallo Thoschi, vorneweg bitte nicht verzweifeln bei dem Thema, da zeitliche Sachen bei OSM ja durchaus kontrovers diskutiert werden (siehe u.A. <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts">Comparison of life cycle concepts</a>) und auch das aktuell halten der Vor-Ort Situation einge Arbeit macht :)</p>
+<p>Hallo Thoschi, vorneweg bitte nicht verzweifeln bei dem Thema, da zeitliche Sachen bei OSM ja durchaus kontrovers diskutiert werden (siehe u.A. <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts">Comparison of life cycle concepts</a>) und auch das aktuell halten der Vor-Ort Situation einge Arbeit macht :)</p>
 <p>Nun zu deinen Fragen:</p>
-<p><strong>zu 1</strong>. Wie immer mehrere Ansätze, je nachdem wie detailliert du vorgehen willst: Entweder du markierst die ganze Gegend als <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">landuse=construction</a>, oder du taggst Straßenabschnitte als <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dconstruction">highway=construction</a> ggF. ergänzt um construction=tertiary oder <a href="http://wiki.openstreetmap.org/wiki/Key:construction">was eben passt</a>.</p>
-<p><strong>zu 2.</strong> Ein extra Polygon mit <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">landuse=construction</a></p>
-<p><strong>zu 3.</strong> Das ist mit <a href="http://wiki.openstreetmap.org/wiki/Key:start_date">start_date=*</a> möglich, aber wie man die zeitliche Dimension gut in OSM abbildet, ist eben nicht unumstritten...</p>
+<p><strong>zu 1</strong>. Wie immer mehrere Ansätze, je nachdem wie detailliert du vorgehen willst: Entweder du markierst die ganze Gegend als <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">landuse=construction</a>, oder du taggst Straßenabschnitte als <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dconstruction">highway=construction</a> ggF. ergänzt um construction=tertiary oder <a href="https://wiki.openstreetmap.org/wiki/Key:construction">was eben passt</a>.</p>
+<p><strong>zu 2.</strong> Ein extra Polygon mit <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">landuse=construction</a></p>
+<p><strong>zu 3.</strong> Das ist mit <a href="https://wiki.openstreetmap.org/wiki/Key:start_date">start_date=*</a> möglich, aber wie man die zeitliche Dimension gut in OSM abbildet, ist eben nicht unumstritten...</p>
 <p><strong>zu 4.</strong> Überlege dir wirklich, ob du das angehen willst. Sprich ggF. mal mit der lokalen Community per ML oder Stammtisch, denn zusammen macht sich das einfacher und lassen sich vielleicht bessere Lösungen finden:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mappertreffen_Dortmund">https://wiki.openstreetmap.org/wiki/Mappertreffen_Dortmund</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mappertreffen_Dortmund">https://wiki.openstreetmap.org/wiki/Mappertreffen_Dortmund</a></li>
 <li><a href="http://lists.openstreetmap.de/mailman/listinfo/ruhrgebiet">https://lists.openstreetmap.de/mailman/listinfo/ruhrgebiet</a></li>
 </ul>
 <p>Meine persönliche Meinung (ohne viele Infos) ist, dass ich die Sache die den ÖPNV betreffen erstmal so weit wie möglich lassen würde und ggF. nur deren Tags anpasse.<br />
-Eine genaue zeitliche Einschränkung der Routen ist mir nicht bekannt, es scheint nur <a href="http://wiki.openstreetmap.org/wiki/DE:Relation:route">state=temporaly</a> möglich zu sein.</p>
-<p><strong>zu 5.</strong> Mit <a href="http://wiki.openstreetmap.org/wiki/DE:Relation:route">state=proposed</a> wäre das sicherlich möglich, ohne dass bestehende Tools total durcheinander kommen. Ob das allerdings sinnvoll/machbar ist, das sollte vielleicht die lokale Community gemeinsam entscheiden...</p>
+Eine genaue zeitliche Einschränkung der Routen ist mir nicht bekannt, es scheint nur <a href="https://wiki.openstreetmap.org/wiki/DE:Relation:route">state=temporaly</a> möglich zu sein.</p>
+<p><strong>zu 5.</strong> Mit <a href="https://wiki.openstreetmap.org/wiki/DE:Relation:route">state=proposed</a> wäre das sicherlich möglich, ohne dass bestehende Tools total durcheinander kommen. Ob das allerdings sinnvoll/machbar ist, das sollte vielleicht die lokale Community gemeinsam entscheiden...</p>
 <p>ÖPNV-Tagging selbst ist ein sehr komplexes Thema geworden, weshalb ich mich da weitestgehend raushalte. Es sollte auch überlegt werden, ob sich der erhebliche Aufwand lohnt das zu aktualisieren etc. In jedem Fall aber viel Erfolg und immer mutig sein, dann wird das schon :)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -168,7 +168,7 @@ Eine genaue zeitliche Einschränkung der Routen ist mir nicht bekannt, es schein
 <div id="post-29401-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hier gibst einer grosse Stelle <a href="http://www.openstreetmap.org/#map=14/52.3279/5.0325,">http://www.openstreetmap.org/#map=14/52.3279/5.0325,</a> mit en Planmassiger landuse=construction und einer neuer Planmassiger Übersicht mit highway=construction.</p>
+<p>Hier gibst einer grosse Stelle <a href="https://www.openstreetmap.org/#map=14/52.3279/5.0325,">https://www.openstreetmap.org/#map=14/52.3279/5.0325,</a> mit en Planmassiger landuse=construction und einer neuer Planmassiger Übersicht mit highway=construction.</p>
 </div>
 <div id="comment-29401-info" class="comment-info">
 <span class="comment-age">(28 Dec '13, 12:25)</span> <span class="comment-user userinfo">Hendrikklaas</span>

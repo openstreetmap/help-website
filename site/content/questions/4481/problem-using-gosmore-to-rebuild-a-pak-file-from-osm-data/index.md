@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem using gosmore to rebuild a .pak file from osm data"
-description = '''I&#x27;m searching for an application or API that does routing. I only need the route and length/time of the route. After doing some research I had the impression gosmore is the appropriate one. I have downloaded and built it according to the wiki http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_an...'''
+description = '''I&#x27;m searching for an application or API that does routing. I only need the route and length/time of the route. After doing some research I had the impression gosmore is the appropriate one. I have downloaded and built it according to the wiki https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_an...'''
 date = "2011-04-14T12:42:00Z"
 lastmod = "2011-04-14T16:40:00Z"
 weight = 4481
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm searching for an application or API that does routing. I only need the route and length/time of the route. After doing some research I had the impression gosmore is the appropriate one. I have downloaded and built it according to the wiki <a href="http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running"></a><a href="http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running"></a><a href="http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running">http://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running</a>. I'm using ubuntu 10.04.2 but didn't take the ubuntu one because I want it to run it headless.</p>
+<p>I'm searching for an application or API that does routing. I only need the route and length/time of the route. After doing some research I had the impression gosmore is the appropriate one. I have downloaded and built it according to the wiki <a href="https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running"></a><a href="https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running"></a><a href="https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running">https://wiki.openstreetmap.org/wiki/Gosmore#Downloading_and_running</a>. I'm using ubuntu 10.04.2 but didn't take the ubuntu one because I want it to run it headless.</p>
 <p>First I tried a ready made .pak file to try gosmore out. But whatever QUERY_STRING I've provided, no route is found by gosmore. Then I tried to rebuild the pak file from a german osm data file. First it ended with a 3k sized .pak file. Then I recognized it needs somehow the elemstyles.xml. The next try was to do the rebuild in the source directory of gosmore where all these files are. But doing this</p>
 <pre><code>bzcat germany.osm.bz2 | ./gosmore rebuild</code></pre>
 <p>I get</p>
@@ -127,9 +127,9 @@ Building gosmore.pak using style elemstyles.xml...</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This web site is not intended to be a bug tracking system. If you look at Gosmore's <a href="http://wiki.openstreetmap.org/wiki/Gosmore#Bugs">Wiki page</a> you will find a reference to the trac system where you can report problems.</p>
+<p>This web site is not intended to be a bug tracking system. If you look at Gosmore's <a href="https://wiki.openstreetmap.org/wiki/Gosmore#Bugs">Wiki page</a> you will find a reference to the trac system where you can report problems.</p>
 <p>If I were to guess from the error message, I'd say maybe your machine has run out of memory. Did you monitor memory usage while running the program?</p>
-<p>I think gosmore is well suited for what you have in mind. There are other systems around that you could use just as well, for example <a href="http://wiki.openstreetmap.org/wiki/Routino">Routino</a> or <a href="http://wiki.openstreetmap.org/wiki/OSRM">OSRM</a>, both of which are AGPL licensed and support (only) headless operation.</p>
+<p>I think gosmore is well suited for what you have in mind. There are other systems around that you could use just as well, for example <a href="https://wiki.openstreetmap.org/wiki/Routino">Routino</a> or <a href="https://wiki.openstreetmap.org/wiki/OSRM">OSRM</a>, both of which are AGPL licensed and support (only) headless operation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

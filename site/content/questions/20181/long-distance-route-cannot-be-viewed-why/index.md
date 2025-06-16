@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all, I finished editing the long distance footpath <a href="http://www.openstreetmap.org/browse/relation/2167509">Hertoglimburgpad</a>. As far as I understand I followed best practices for entering this type of path. This means I made a separate relation for every single one of the (10) stages and gathered these 10 relations into the parent relation.</p>
+<p>Hi all, I finished editing the long distance footpath <a href="https://www.openstreetmap.org/browse/relation/2167509">Hertoglimburgpad</a>. As far as I understand I followed best practices for entering this type of path. This means I made a separate relation for every single one of the (10) stages and gathered these 10 relations into the parent relation.</p>
 <p>Normally if one would want to view a path on the map, the table containing all the different foothpaths would allow that via the "view"-link. In the case of the Hertoglimburgpad it does not show anything. If one downloads the gpx, the whole path is there. But view does not seem to work.</p>
 <p>Did I understand the howto for entering multistage routes wrong?</p>
 <p>Please give e some advice. H</p>

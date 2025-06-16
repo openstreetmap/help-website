@@ -187,7 +187,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I think you don't have to be bothered by the "will be uploaded to OpenStreetMap" message - surely you are using a different account/password with your local server than with OpenStreetMap, so even if you did something wrong, it will not be able to upload anything because the password is wrong. -- For loading OSM data into your local database, see <a href="https://help.openstreetmap.org/questions/50109/loading-data-to-apidb">https://help.openstreetmap.org/questions/50109/loading-data-to-apidb</a> and make sure to start with a very small amount of data first, to get an idea how long it takes.</p>
+<p>I think you don't have to be bothered by the "will be uploaded to OpenStreetMap" message - surely you are using a different account/password with your local server than with OpenStreetMap, so even if you did something wrong, it will not be able to upload anything because the password is wrong. -- For loading OSM data into your local database, see <a href="/questions/50109/loading-data-to-apidb">https://help.openstreetmap.org/questions/50109/loading-data-to-apidb</a> and make sure to start with a very small amount of data first, to get an idea how long it takes.</p>
 </div>
 <div id="comment-60734-info" class="comment-info">
 <span class="comment-age">(21 Nov '17, 16:26)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

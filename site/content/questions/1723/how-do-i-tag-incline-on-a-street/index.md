@@ -104,9 +104,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use the <strong><a href="http://wiki.openstreetmap.org/wiki/Key:incline">incline key</a></strong>, with the incline as a value. In your case, the road would be tagged as incline=10%</p>
-<p>As explained on the incline wiki page, a positive incline always refers to upward movement in the direction of the way that is tagged. So if the way's direction points downward, rather than upward, you can either reverse the way (if there are no other <a href="http://wiki.openstreetmap.org/wiki/Category:Way_Direction_Dependent">way-direction dependent tags</a> on the way) or use the incline key with a negative number, i.e. incline=-10%</p>
-<p>If you want to tag the <em>traffic sign</em> itself, instead of just the incline marked by it, you can use the proposed <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Traffic_sign">traffic_sign key</a>.</p>
+<p>Use the <strong><a href="https://wiki.openstreetmap.org/wiki/Key:incline">incline key</a></strong>, with the incline as a value. In your case, the road would be tagged as incline=10%</p>
+<p>As explained on the incline wiki page, a positive incline always refers to upward movement in the direction of the way that is tagged. So if the way's direction points downward, rather than upward, you can either reverse the way (if there are no other <a href="https://wiki.openstreetmap.org/wiki/Category:Way_Direction_Dependent">way-direction dependent tags</a> on the way) or use the incline key with a negative number, i.e. incline=-10%</p>
+<p>If you want to tag the <em>traffic sign</em> itself, instead of just the incline marked by it, you can use the proposed <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Traffic_sign">traffic_sign key</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:incline">incline=10%</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:incline">incline=10%</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

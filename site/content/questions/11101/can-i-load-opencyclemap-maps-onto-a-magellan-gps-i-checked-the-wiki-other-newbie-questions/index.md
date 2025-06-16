@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Magellan certainly doesn't have anything like the after-market maps support that Garmin does. The last time I looked there wasn't any easy way of getting "user" maps onto Magellan devices, but now <a href="http://wiki.openstreetmap.org/wiki/Magellan">this page</a> suggests <a href="http://maps4me.net/index.php?language=en">this</a> as a possible option.<br />
+<p>Magellan certainly doesn't have anything like the after-market maps support that Garmin does. The last time I looked there wasn't any easy way of getting "user" maps onto Magellan devices, but now <a href="https://wiki.openstreetmap.org/wiki/Magellan">this page</a> suggests <a href="http://maps4me.net/index.php?language=en">this</a> as a possible option.<br />
 </p>
 <p>It a bit vague though - it says "The underlying data has its origin only in license free sources as e.g. the Openstreetmap Project or converted, free Garmin maps." but doesn't say how up to date the data is and exactly what level of detail is converted. See also <a href="http://www.exploristforum.com/index.php?option=com_kunena&amp;Itemid=62&amp;func=showcat&amp;catid=46">here</a> (which seems to be a forum run by the same bloke).<br />
 </p>

@@ -61,7 +61,7 @@ osqa_accepted = true
 <div id="post-49900-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this it? <a href="http://www.openstreetmap.org/#map=18/46.91042/-117.07677">http://www.openstreetmap.org/#map=18/46.91042/-117.07677</a></p>
+<p>Is this it? <a href="https://www.openstreetmap.org/#map=18/46.91042/-117.07677">https://www.openstreetmap.org/#map=18/46.91042/-117.07677</a></p>
 </div>
 <div id="comment-49900-info" class="comment-info">
 <span class="comment-age">(30 May '16, 07:26)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -164,7 +164,7 @@ osqa_accepted = true
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Picswiss_GR-87-11_Le_Prese.jpg" alt="RhB, street running, Le Prese" /></p>
 <p>It is more usual for light rail and tram systems to have combined street running with vehicular traffic. This example is <a href="https://en.wikipedia.org/wiki/Hyson_Green">Radford Road in Nottingham</a>:</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Radford_Road_-_geograph.org.uk_-_1507146.jpg" alt="alt text" /></p>
-<p>These examples have been mapped slightly differently(<a href="http://www.openstreetmap.org/#map=16/46.2930/10.0826">Le Prese</a>, <a href="http://www.openstreetmap.org/#map=18/46.84761/9.53218">Chur</a>, <a href="http://www.openstreetmap.org/way/46748070#map=17/52.96992/-1.17375">Nottingham</a>), but there is enough commonality to suggest a suitable approach.</p>
+<p>These examples have been mapped slightly differently(<a href="https://www.openstreetmap.org/#map=16/46.2930/10.0826">Le Prese</a>, <a href="https://www.openstreetmap.org/#map=18/46.84761/9.53218">Chur</a>, <a href="https://www.openstreetmap.org/way/46748070#map=17/52.96992/-1.17375">Nottingham</a>), but there is enough commonality to suggest a suitable approach.</p>
 <ul>
 <li>Map the railway line as a separate way (or ways)</li>
 <li>Either a) share the nodes of the highway and railway for the shared portion of street-running (as seen in the Radford example), or b) offset the railway way to reflect that the highway and railway track often do not share centre-lines (the Le Prese example).</li>
@@ -221,7 +221,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Jack London Square is another spot where heavy rail tracks are in the middle of the street. <a href="https://en.wikipedia.org/wiki/Jack_London_Square#Railways_and_transit">There is a note about that in wikipedia</a>. It is currently mapped as <a href="http://www.openstreetmap.org/#map=19/37.79539/-122.27726">four separate ways</a>: One each for the double track railway and two separate automobile traffic ways despite it being all one level section of pavement with tracks embedded. That make sense to me as a functional description as opposed to a visual description.</p>
+<p>Jack London Square is another spot where heavy rail tracks are in the middle of the street. <a href="https://en.wikipedia.org/wiki/Jack_London_Square#Railways_and_transit">There is a note about that in wikipedia</a>. It is currently mapped as <a href="https://www.openstreetmap.org/#map=19/37.79539/-122.27726">four separate ways</a>: One each for the double track railway and two separate automobile traffic ways despite it being all one level section of pavement with tracks embedded. That make sense to me as a functional description as opposed to a visual description.</p>
 <p>While they do sometimes block off or control traffic for <a href="https://www.youtube.com/watch?v=TGIaSMrXF3I">special trains</a> generally it is just a street that <a href="https://www.youtube.com/watch?v=EFk-yeGHn-o">trains run on</a>.</p>
 <p>With that as an example, I'd probably spit Whitman street into two one-way segments, one on each side of the rail line.</p>
 </div>

@@ -85,7 +85,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Maybe Léo was not even aware of the fact that OSM's data (and hence maps) is editable by everyone (similar to Wikipedia), <span>welcome</span>. :-) Indeed umap would be the way to go for what we can guess here.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Maybe Léo was not even aware of the fact that OSM's data (and hence maps) is editable by everyone (similar to Wikipedia), <span>welcome</span>. :-) Indeed umap would be the way to go for what we can guess here.</p>
 </div>
 <div id="comment-48102-info" class="comment-info">
 <span class="comment-age">(13 Feb '16, 18:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -120,7 +120,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: while this is true, of course, for a data import into our database, I really don't think that a data import is meant here. I guess Léo wants to "put them on OSM" - just use some OSM-based map as background and display markers at the events positions in a second layer.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: while this is true, of course, for a data import into our database, I really don't think that a data import is meant here. I guess Léo wants to "put them on OSM" - just use some OSM-based map as background and display markers at the events positions in a second layer.</p>
 </div>
 <div id="comment-48580-info" class="comment-info">
 <span class="comment-age">(08 Mar '16, 20:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -175,12 +175,12 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>As explained in the comments:</p>
-<p>OpenStreetMap is a project, whose main "product" (if you want to call it that) is a database. The map you see on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> is one way of showing the data in this database.</p>
+<p>OpenStreetMap is a project, whose main "product" (if you want to call it that) is a database. The map you see on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> is one way of showing the data in this database.</p>
 <p>So if by "import all events of the area and put them on OSM" you mean importing them into the database, then no, you must not do that. The OSM database is meant for geographical information, not for event information (not to mention there may well be licensing problems).</p>
 <p>If you just want to display events on a map based on OSM data somewhere, that is quite possible. What you would do in that case is build your own website with a map based on OSM data, then add your events to that map. There are many ways to do that. See e.g.</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a></li>
-<li><a href="https://help.openstreetmap.org/questions/24465/10s-of-thousands-of-pois-howto-display-to-the-user-on-top-of-a-map">10's of thousands of POI's - Howto display to the user on top of a map?</a></li>
+<li><a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a></li>
+<li><a href="/questions/24465/10s-of-thousands-of-pois-howto-display-to-the-user-on-top-of-a-map">10's of thousands of POI's - Howto display to the user on top of a map?</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

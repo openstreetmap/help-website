@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>What is the best way to deal with pedestrian bridges that have been permanently closed?</p>
-<p>I've encountered several of these while using OSM to plan bike rides. They show up as bridges on the map, but when I get there, it's clear that they've been closed for years. For example, I know that the 8th Avenue pedestrian bridge over Interstate 10 (visible <a href="http://www.openstreetmap.org/?lat=34.03579&amp;lon=-118.32605&amp;zoom=17&amp;layers=M">here</a>) is blocked by gates that are essentially permanent, so I added gates to both ends of the bridge and tagged it as access=no.</p>
+<p>I've encountered several of these while using OSM to plan bike rides. They show up as bridges on the map, but when I get there, it's clear that they've been closed for years. For example, I know that the 8th Avenue pedestrian bridge over Interstate 10 (visible <a href="https://www.openstreetmap.org/?lat=34.03579&amp;lon=-118.32605&amp;zoom=17&amp;layers=M">here</a>) is blocked by gates that are essentially permanent, so I added gates to both ends of the bridge and tagged it as access=no.</p>
 <p>I assume this will prevent routing over the bridge, but it's not the most useful for humans. The 4th Avenue pedestrian bridge, visible just to the East, is open, but a user might not notice the difference between the closed and unclosed bridges because the default OSM cartography for both is rather similar.</p>
 <p>Is it better to just delete the bridge and hope that nobody naively re-creates it based on the aerial imagery?</p>
 </div>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps an acceptable compromise within the existing cartographic standards is to mark the path as a generic <em>highway=path</em> with <em>access=no</em>, as I've done <a href="http://www.openstreetmap.org/?lat=33.927711&amp;lon=-118.340588&amp;zoom=18&amp;layers=M">here</a>. Symbolized this way, the path is still shown, but the appearance is distinct enough from a functional pedestrian bridge that a user browsing the map is unlikely to take away the mistaken impression that it's accessible.</p>
+<p>Perhaps an acceptable compromise within the existing cartographic standards is to mark the path as a generic <em>highway=path</em> with <em>access=no</em>, as I've done <a href="https://www.openstreetmap.org/?lat=33.927711&amp;lon=-118.340588&amp;zoom=18&amp;layers=M">here</a>. Symbolized this way, the path is still shown, but the appearance is distinct enough from a functional pedestrian bridge that a user browsing the map is unlikely to take away the mistaken impression that it's accessible.</p>
 <p>Hopefully, describing it as a generic path is accurate enough. Even though it was designed to accommodate pedestrians, it's currently off-limits to everybody, so not really a footpath in its present state.</p>
 </div>
 <div class="answer-controls post-controls">

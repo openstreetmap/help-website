@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-42861-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/549/hwy101">@Hwy101</a>: what do you mean? that is exactly your original question text?!</p>
+<p><a href="https://help.openstreetmap.org/users/549/hwy101">@Hwy101</a>: what do you mean? that is exactly your original question text?!</p>
 </div>
 <div id="comment-42861-info" class="comment-info">
 <span class="comment-age">(04 May '15, 00:05)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

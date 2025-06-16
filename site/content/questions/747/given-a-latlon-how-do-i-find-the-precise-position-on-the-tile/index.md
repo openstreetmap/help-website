@@ -69,7 +69,7 @@ This question is marked "community wiki".
 2
 </div>
 <div class="comment-text">
-<p>related to <a href="http://help.openstreetmap.org/questions/2687/coordinates-to-pixels-based-on-zoom">the question about coordinates to pixels</a></p>
+<p>related to <a href="/questions/2687/coordinates-to-pixels-based-on-zoom">the question about coordinates to pixels</a></p>
 </div>
 <div id="comment-3135-info" class="comment-info">
 <span class="comment-age">(17 Feb '11, 14:37)</span> <span class="comment-user userinfo">emj</span>
@@ -123,7 +123,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When you calulate the tile number according to <a href="http://wiki.openstreetmap.org/wiki/Tilenames">the wiki</a> you will actually get a floating point number.</p>
+<p>When you calulate the tile number according to <a href="https://wiki.openstreetmap.org/wiki/Tilenames">the wiki</a> you will actually get a floating point number.</p>
 <p>The integer part indicates which tile you are (or should be) looking at.</p>
 <p>The fractional part indicates the position within the tile. As a tile is 256 pixel wide, multiplying the fractional part with 256 will give you the pixel position from the top left.</p>
 </div>
@@ -192,7 +192,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you just want to see the position on the map, you can use <em>mlat</em> and <em>mlon</em> to get a <a href="http://www.openstreetmap.org/?mlat=48.03611&amp;mlon=10.55885&amp;zoom=16&amp;layers=M">marker</a>.</p>
+<p>If you just want to see the position on the map, you can use <em>mlat</em> and <em>mlon</em> to get a <a href="https://www.openstreetmap.org/?mlat=48.03611&amp;mlon=10.55885&amp;zoom=16&amp;layers=M">marker</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

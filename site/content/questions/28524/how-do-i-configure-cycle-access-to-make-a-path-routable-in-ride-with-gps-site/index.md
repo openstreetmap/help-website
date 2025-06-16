@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I configure cycle access to make a path routable in &quot;Ride with GPS&quot; site"
-description = '''I am endeavoring to make a cycle route in Brisbane Australia part of the recognized &#x27;routable&#x27; routes.  The area in question is at: http://www.openstreetmap.org/#map=17/-27.45494/153.10319 A cyclist heading NE on Lytton Rd wanting to cross the Gateway Bridge over the Brisbane River is guided to take...'''
+description = '''I am endeavoring to make a cycle route in Brisbane Australia part of the recognized &#x27;routable&#x27; routes.  The area in question is at: https://www.openstreetmap.org/#map=17/-27.45494/153.10319 A cyclist heading NE on Lytton Rd wanting to cross the Gateway Bridge over the Brisbane River is guided to take...'''
 date = "2013-11-27T06:09:00Z"
 lastmod = "2013-11-28T11:11:00Z"
 weight = 28524
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am endeavoring to make a cycle route in Brisbane Australia part of the recognized 'routable' routes.</p>
-<p>The area in question is at: <a href="http://www.openstreetmap.org/#map=17/-27.45494/153.10319">http://www.openstreetmap.org/#map=17/-27.45494/153.10319</a> A cyclist heading NE on Lytton Rd wanting to cross the Gateway Bridge over the Brisbane River is guided to take the much-longer and much less used route up Metroplex Ave.</p>
-<p>How do I set up the access from Lytton Rd so that the bike path (<a href="http://www.openstreetmap.org/#map=19/-27.45537/153.10717">http://www.openstreetmap.org/#map=19/-27.45537/153.10717</a>) can be recognised if accessed directly from Lytton Rd? I have played with many possibilities and edits and am unable to make it routable.</p>
+<p>The area in question is at: <a href="https://www.openstreetmap.org/#map=17/-27.45494/153.10319">https://www.openstreetmap.org/#map=17/-27.45494/153.10319</a> A cyclist heading NE on Lytton Rd wanting to cross the Gateway Bridge over the Brisbane River is guided to take the much-longer and much less used route up Metroplex Ave.</p>
+<p>How do I set up the access from Lytton Rd so that the bike path (<a href="https://www.openstreetmap.org/#map=19/-27.45537/153.10717">https://www.openstreetmap.org/#map=19/-27.45537/153.10717</a>) can be recognised if accessed directly from Lytton Rd? I have played with many possibilities and edits and am unable to make it routable.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-ridewithgps" rel="tag" title="see questions tagged &#39;ridewithgps&#39;">ridewithgps</span> <span class="post-tag tag-link-routable" rel="tag" title="see questions tagged &#39;routable&#39;">routable</span> <span class="post-tag tag-link-cycleway" rel="tag" title="see questions tagged &#39;cycleway&#39;">cycleway</span>
@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>It would be more helpful for clearness here if you would link to the path's object page (<a href="http://www.openstreetmap.org/browse/way/242505802">example</a>, <span>howto</span>).</p>
+<p>It would be more helpful for clearness here if you would link to the path's object page (<a href="https://www.openstreetmap.org/browse/way/242505802">example</a>, <span>howto</span>).</p>
 </div>
 <div id="comment-28536-info" class="comment-info">
 <span class="comment-age">(27 Nov '13, 10:47)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -162,7 +162,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Where/how did you calculate your route? I assume the router you tried has outdated data.</p>
-<p>I tested a few bicycle routers from the <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">wiki list of online routers</a> but so far <a href="http://graphhopper.com">GraphHopper</a> seems to be the only bicycle router having recent data. And if I understand your description correctly then <a href="http://graphhopper.com/maps/?point=-27.457026%2C153.09489&amp;point=-27.430347%2C153.092701&amp;vehicle=BIKE">it does find the route</a>.</p>
+<p>I tested a few bicycle routers from the <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">wiki list of online routers</a> but so far <a href="http://graphhopper.com">GraphHopper</a> seems to be the only bicycle router having recent data. And if I understand your description correctly then <a href="http://graphhopper.com/maps/?point=-27.457026%2C153.09489&amp;point=-27.430347%2C153.092701&amp;vehicle=BIKE">it does find the route</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

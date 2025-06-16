@@ -117,8 +117,8 @@ osqa_accepted = false
 <li>You cannot request an arbitrary resolution; e.g. if you request a map the size of Orange County, you will not get a level of detail that shows individual houses. But you can get a more detailed map than the one you see on screen by entering a smaller scale number down to the allowed minimum.</li>
 <li>The resulting SVG is awful for post-processing (takes ages to load in Inkscape, lettering done as vectors, etc.)</li>
 </ul>
-<p>If you want more then you will have to install some rendering software on your own computer and run it. You could use e.g. <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a>, or a local <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> installation. Mapnik is the only one that will give you the same look as the main map, but is more difficult to set up and will also produce the same kind of SVG. Maperitive and Osmarender produce SVG that is better suited for post-processing but the maps will also look different. For Maperitive, also see <a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape">this other answer</a>.</p>
-<p>If you lack the time or ability to do this, you can also <a href="http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">pay someone to do the work.</a></p>
+<p>If you want more then you will have to install some rendering software on your own computer and run it. You could use e.g. <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, <a href="https://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a>, or a local <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> installation. Mapnik is the only one that will give you the same look as the main map, but is more difficult to set up and will also produce the same kind of SVG. Maperitive and Osmarender produce SVG that is better suited for post-processing but the maps will also look different. For Maperitive, also see <a href="/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape">this other answer</a>.</p>
+<p>If you lack the time or ability to do this, you can also <a href="https://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">pay someone to do the work.</a></p>
 <p>OpenStreetMap is a community effort, not a service provider. OpenStreetMap is "for" whomever community members want it to be for! If you choose one of the above methods for your work, or if you end up doing something completely different, consider contributing to OpenStreetMap by documenting your work in our Wiki so that others who have the same background and the same demands as yourself will have it easier to find the answers they are looking for.</p>
 <p>(*) In August 2013 the export tab has been removed, and replaced by an "export" link on the left hand side that lets you export the raw data for an area, and a "share" button on the right hand side that lets you export images.</p>
 </div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes: use Maperitive. See my answer on <a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape"></a><a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape"></a><a href="http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape">http://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape</a></p>
+<p>Yes: use Maperitive. See my answer on <a href="/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape"></a><a href="/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape"></a><a href="/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape">https://help.openstreetmap.org/questions/813/how-can-i-export-svg-files-with-layers-editable-in-inkscape</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -223,7 +223,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Bigmap">http://wiki.openstreetmap.org/wiki/Bigmap</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bigmap">https://wiki.openstreetmap.org/wiki/Bigmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

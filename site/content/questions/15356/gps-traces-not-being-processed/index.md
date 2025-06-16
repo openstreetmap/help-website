@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As you suggest in the question, <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> is the most effective way of communicating with the admins. On that page there's a "<a href="http://irc.openstreetmap.org/">you can chat on the web</a>" link - that's probably the easiest to use if you don't use IRC regularly. Just choose a nickname (e.g. what you use on OSM) and choose the channel - if you want to talk to the admins that'll be #osm-dev .</p>
+<p>As you suggest in the question, <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> is the most effective way of communicating with the admins. On that page there's a "<a href="http://irc.openstreetmap.org/">you can chat on the web</a>" link - that's probably the easiest to use if you don't use IRC regularly. Just choose a nickname (e.g. what you use on OSM) and choose the channel - if you want to talk to the admins that'll be #osm-dev .</p>
 <p>Then just ask your question (or say what's wrong).</p>
 <p>Don't forget that the admins don't operate a 24-hour response policy - they have to sleep sometimes, earn money in the day-job, etc. So don't assume that your question is being ignored if there's no immediate response. They're volunteers like the rest of us, so be friendly. :)</p>
 </div>

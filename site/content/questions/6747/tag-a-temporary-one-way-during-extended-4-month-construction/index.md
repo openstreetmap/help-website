@@ -122,7 +122,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this previous question, and in particular the answer from Jochen Topf: <a href="http://help.openstreetmap.org/questions/259/temporary-road-works-and-traffic-situations">Temporary road works and traffic situations</a>.</p>
+<p>See this previous question, and in particular the answer from Jochen Topf: <a href="/questions/259/temporary-road-works-and-traffic-situations">Temporary road works and traffic situations</a>.</p>
 <p>Note that people are using OSM data for a variety of things, eg downloading to their GPS device, and they might only update their map every few months. So your temporary change might be around for a lot longer than you expect.</p>
 <p>In general, if the road works etc is very short-term (eg a few days), then its best not to change it. If its more than a few months, then it probably is worth changing. Though it would be a good idea to add a note to remember to resurvey it and change it back, possibly with a fixme tag with the estimated date.</p>
 </div>
@@ -236,7 +236,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Making a "permanent" change to the map, even only temporarily, could affect people who may be using a download including this temporary change for some time to come. Even some of the frequently-used tools are only updating their database every few weeks or so.</p>
-<p>You might want to look at the proposed tagging scheme for such temporary changes... <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/temporary">http://wiki.openstreetmap.org/wiki/Proposed_features/temporary</a></p>
+<p>You might want to look at the proposed tagging scheme for such temporary changes... <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/temporary">https://wiki.openstreetmap.org/wiki/Proposed_features/temporary</a></p>
 <p>Using that proposed scheme, you would add (replacing xx-xx as appropriate)</p>
 <ul>
 <li>temporary:oneway=yes</li>

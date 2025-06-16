@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Please correct mapping error in my street?"
-description = '''Please note that the wrong street name appears on your maps for the section of Dundee Road where I live in Broughty Ferry DD5 1DW. I have previously taken this up with Google maps who eventually corrected their maps. Compare Open Street Map http://www.openstreetmap.org/?lat=56.468552&amp;amp;lon=-2.8830...'''
+description = '''Please note that the wrong street name appears on your maps for the section of Dundee Road where I live in Broughty Ferry DD5 1DW. I have previously taken this up with Google maps who eventually corrected their maps. Compare Open Street Map https://www.openstreetmap.org/?lat=56.468552&amp;amp;lon=-2.8830...'''
 date = "2012-07-26T14:55:00Z"
 lastmod = "2012-07-26T16:15:00Z"
 weight = 14617
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Please note that the wrong street name appears on your maps for the section of Dundee Road where I live in Broughty Ferry DD5 1DW.</p>
 <p>I have previously taken this up with Google maps who eventually corrected their maps.</p>
-<p>Compare Open Street Map <a href="http://www.openstreetmap.org/?lat=56.468552&amp;lon=-2.883056&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=56.468552&amp;lon=-2.883056&amp;zoom=18&amp;layers=M</a></p>
+<p>Compare Open Street Map <a href="https://www.openstreetmap.org/?lat=56.468552&amp;lon=-2.883056&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=56.468552&amp;lon=-2.883056&amp;zoom=18&amp;layers=M</a></p>
 <p>And Google Maps <a href="https://maps.google.co.uk/?ll=56.46805,-2.88213&amp;spn=0.003218,0.010568&amp;hnear=82+Dundee+Rd,+Broughty+Ferry,+Dundee+DD5+1DW,+United+Kingdom&amp;t=m&amp;z=17">https://maps.google.co.uk/?ll=56.46805,-2.88213&amp;spn=0.003218,0.010568&amp;hnear=82+Dundee+Rd,+Broughty+Ferry,+Dundee+DD5+1DW,+United+Kingdom&amp;t=m&amp;z=17</a></p>
 <p>Google Maps is right and your map is wrong.</p>
 <p>The specific issue is that Dundee Road continues east over the railway bridge into central Broughty Ferry and finishes at the cross roads junction with Claypotts Road, Brook Street and Westfield Road. Brook Street begins from this junction, it does not extend to the west as indicated currently on your map.</p>
@@ -129,7 +129,7 @@ One Answer:
 6
 </div>
 <div class="comment-text">
-<p>Also note that editing the map yourself is fast and easy (much more so than with Google Maps). Just click "edit" at the top of the page, fix the road shape or name (dont copy from Google or other copyrighted sources), and click "save". The modification will appear on the rendered map within minutes. See also <a href="http://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide">http://wiki.openstreetmap.org/wiki/Beginner's_Guide</a> .</p>
+<p>Also note that editing the map yourself is fast and easy (much more so than with Google Maps). Just click "edit" at the top of the page, fix the road shape or name (dont copy from Google or other copyrighted sources), and click "save". The modification will appear on the rendered map within minutes. See also <a href="https://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide">https://wiki.openstreetmap.org/wiki/Beginner's_Guide</a> .</p>
 </div>
 <div id="comment-14620-info" class="comment-info">
 <span class="comment-age">(26 Jul '12, 16:15)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

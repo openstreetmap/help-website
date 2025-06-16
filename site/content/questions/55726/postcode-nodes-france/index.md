@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Postcode nodes - France"
-description = '''Hi - Total newb how to modify this query to get all the available postcode nodes for France in http://overpass-turbo.eu/ . I&#x27;m mostly interested in just getting the json returned (if possible). Edit: An example of a postcode &#x27;node&#x27; is this: http://www.openstreetmap.org/node/2445940960 I did find the...'''
+description = '''Hi - Total newb how to modify this query to get all the available postcode nodes for France in http://overpass-turbo.eu/ . I&#x27;m mostly interested in just getting the json returned (if possible). Edit: An example of a postcode &#x27;node&#x27; is this: https://www.openstreetmap.org/node/2445940960 I did find the...'''
 date = "2017-04-21T01:23:00Z"
 lastmod = "2017-04-22T06:55:00Z"
 weight = 55726
@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Hi -</p>
 <p>Total newb how to modify this query to get all the available postcode nodes for France in <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> . I'm mostly interested in just getting the json returned (if possible).</p>
 <p>Edit:</p>
-<p>An example of a postcode 'node' is this: <a href="http://www.openstreetmap.org/node/2445940960">http://www.openstreetmap.org/node/2445940960</a> I did find the postcode 'relation' that corresponds here: <a href="http://www.openstreetmap.org/relation/252642">http://www.openstreetmap.org/relation/252642</a></p>
+<p>An example of a postcode 'node' is this: <a href="https://www.openstreetmap.org/node/2445940960">https://www.openstreetmap.org/node/2445940960</a> I did find the postcode 'relation' that corresponds here: <a href="https://www.openstreetmap.org/relation/252642">https://www.openstreetmap.org/relation/252642</a></p>
 <p>...I am mostly interested in just getting the lat/long (point location) of all available 'addr:postcode' tags....is that plausible to do without querying for the relations (or will I miss nodes in the process if I do NOT query the relations?</p>
 <blockquote>
 <p>/ <em>This shows the postal code points in france.</em> /</p>
@@ -80,7 +80,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>what is a postcode node ? Can you post a link to an example ?</p>
-<p>If you look e.g. at Saint-Etienne via Nominatim: <a href="http://nominatim.openstreetmap.org/details.php?place_id=159077530">http://nominatim.openstreetmap.org/details.php?place_id=159077530</a> you see that the postcode is not coming from a unique node. But if you look at the boundary relation <a href="http://www.openstreetmap.org/relation/117905,">http://www.openstreetmap.org/relation/117905,</a> you see a addr:postcode there.</p>
+<p>If you look e.g. at Saint-Etienne via Nominatim: <a href="http://nominatim.openstreetmap.org/details.php?place_id=159077530">http://nominatim.openstreetmap.org/details.php?place_id=159077530</a> you see that the postcode is not coming from a unique node. But if you look at the boundary relation <a href="https://www.openstreetmap.org/relation/117905,">https://www.openstreetmap.org/relation/117905,</a> you see a addr:postcode there.</p>
 <p>Please clarify your goal by updating the original question or as a comment.</p>
 </div>
 <div id="comment-55727-info" class="comment-info">

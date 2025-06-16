@@ -116,7 +116,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is no need for the name to be officially assigned - just that it is used in terrain. See <a href="http://wiki.openstreetmap.org/wiki/Names">http://wiki.openstreetmap.org/wiki/Names</a> : if there's a sign with a name, add the <code>name</code> in OSM.</p>
+<p>There is no need for the name to be officially assigned - just that it is used in terrain. See <a href="https://wiki.openstreetmap.org/wiki/Names">https://wiki.openstreetmap.org/wiki/Names</a> : if there's a sign with a name, add the <code>name</code> in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -135,7 +135,7 @@ osqa_accepted = true
 <div id="post-51106-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(on a side note, I would specify the type - <code>service=alley</code>, or whatever it is <a href="http://wiki.openstreetmap.org/wiki/Key:service">http://wiki.openstreetmap.org/wiki/Key:service</a> - this should help to de-prioritize searches for more-used highways with the same name, if that's your worry)</p>
+<p>(on a side note, I would specify the type - <code>service=alley</code>, or whatever it is <a href="https://wiki.openstreetmap.org/wiki/Key:service">https://wiki.openstreetmap.org/wiki/Key:service</a> - this should help to de-prioritize searches for more-used highways with the same name, if that's your worry)</p>
 </div>
 <div id="comment-51106-info" class="comment-info">
 <span class="comment-age">(26 Jul '16, 13:14)</span> <span class="comment-user userinfo">Piskvor</span>

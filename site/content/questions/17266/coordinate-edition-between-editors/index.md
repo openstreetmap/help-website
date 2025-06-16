@@ -176,8 +176,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers to <a href="https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area">Question:How do I see the history for my area</a>. In particular this <a href="http://www.itoworld.com/map/130">recent edits view</a>. So there's various ways of figuring out who has been actively editing in your area.</p>
-<p>Having found a user name you can <a href="http://wiki.openstreetmap.org/wiki/Contact#Contact_a_single_Mapper">contact a mapper via the website</a>.</p>
+<p>See the answers to <a href="/questions/7/how-do-i-see-the-history-for-my-area">Question:How do I see the history for my area</a>. In particular this <a href="http://www.itoworld.com/map/130">recent edits view</a>. So there's various ways of figuring out who has been actively editing in your area.</p>
+<p>Having found a user name you can <a href="https://wiki.openstreetmap.org/wiki/Contact#Contact_a_single_Mapper">contact a mapper via the website</a>.</p>
 <p>There are number of ideas under development to improve the "social" aspects of OpenStreetMap and make these kinds of interaction easier.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -229,7 +229,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look at <a href="http://forum.osm.org">http://forum.osm.org</a> where you might find other mappers from your country.</p>
-<p>Or do a research whether your area is covered by the <a href="http://wiki.openstreetmap.org/wiki/List_of_territory_based_projects">List_of_territory_based_projects</a></p>
+<p>Or do a research whether your area is covered by the <a href="https://wiki.openstreetmap.org/wiki/List_of_territory_based_projects">List_of_territory_based_projects</a></p>
 <p>To see edits from other mappers in your area, zoom in enough and choose "chronic" or similar in your language on the main view of osm.org to see their edits. You can contact them by clicking on their usernames.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -173,7 +173,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd definitely have a read of the <a href="http://help.openstreetmap.org/search/?q=import&amp;Submit=search&amp;t=question">previous answers</a> that have been given to questions about imports. You'll need to read through that list - about half of it is "I'd like to import data into OSM" and the other half is "I'd like to set up a rendering / Nominatim database" but it's easy to tell which question is which.</p>
+<p>I'd definitely have a read of the <a href="https://help.openstreetmap.org/search/?q=import&amp;Submit=search&amp;t=question">previous answers</a> that have been given to questions about imports. You'll need to read through that list - about half of it is "I'd like to import data into OSM" and the other half is "I'd like to set up a rendering / Nominatim database" but it's easy to tell which question is which.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

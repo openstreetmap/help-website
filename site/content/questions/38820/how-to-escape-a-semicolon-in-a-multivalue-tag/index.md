@@ -190,7 +190,7 @@ One Answer:
 <div id="post-38829-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10057/nabramovitz"></a><a href="http://help.openstreetmap.org/users/10057/nabramovitz">@nabramovitz</a>: Alternatively people could stop using the ";" with the cuisine tag. ;-) … And instead use namespaced tags with boolean values (in addition, for compatibility with the simple scheme). E.g. (hypothetical) <code>cuisine=german</code>, <code>cuisine:german=yes</code>, <code>cuisine:italian=yes</code> instead of <code>cusine=german;italian</code>. Assuming that the German food in this restaurant is a bit more on the menu or more popular.</p>
+<p><a href="https://help.openstreetmap.org/users/10057/nabramovitz"></a><a href="https://help.openstreetmap.org/users/10057/nabramovitz">@nabramovitz</a>: Alternatively people could stop using the ";" with the cuisine tag. ;-) … And instead use namespaced tags with boolean values (in addition, for compatibility with the simple scheme). E.g. (hypothetical) <code>cuisine=german</code>, <code>cuisine:german=yes</code>, <code>cuisine:italian=yes</code> instead of <code>cusine=german;italian</code>. Assuming that the German food in this restaurant is a bit more on the menu or more popular.</p>
 </div>
 <div id="comment-38829-info" class="comment-info">
 <span class="comment-age">(26 Nov '14, 00:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -213,7 +213,7 @@ One Answer:
 <div id="post-38831-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: haha, thanks (+1)! :-) Do you have got a better suggestion? Actually I think that approach is fixing some problems of the ";". However, I am quite aware that it may create others.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: haha, thanks (+1)! :-) Do you have got a better suggestion? Actually I think that approach is fixing some problems of the ";". However, I am quite aware that it may create others.</p>
 </div>
 <div id="comment-38831-info" class="comment-info">
 <span class="comment-age">(26 Nov '14, 01:48)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -236,7 +236,7 @@ One Answer:
 <div id="post-38856-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: In my cusisine=german;italian example I could search for simple cuisine:german=yes tags without needing any chopping up / substring / regex search inside the values. But I guess that discussion should end here. Thanks for your comment.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: In my cusisine=german;italian example I could search for simple cuisine:german=yes tags without needing any chopping up / substring / regex search inside the values. But I guess that discussion should end here. Thanks for your comment.</p>
 </div>
 <div id="comment-38856-info" class="comment-info">
 <span class="comment-age">(26 Nov '14, 22:05)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

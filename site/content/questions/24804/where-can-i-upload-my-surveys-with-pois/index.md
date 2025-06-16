@@ -116,7 +116,7 @@ osqa_accepted = true
 <li>If the gpx files do not contain traces from your survey: prepare the waypoint gpx file to be accepted by the OSM.org server (add one trackpoint with a time stamp). See wiki: <span>Upload Waypoints</span>.</li>
 <li>upload to OSM.org server with a "<span>identifiable</span>" ("public" may also work, but is less useful if you also include real traces in a gpx file) visibility setting,</li>
 <li>point other mappers to your list of traces (since the waypoints do not seem to be available if someone just queries the server for all traces).</li>
-<li>Then the other mappers can use your traces and waypoints with P2 directly (<a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;gpx=1036624&amp;lat=53.1394&amp;lon=-1.64386&amp;zoom=14">example</a> = edit link on <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1036624">trace page</a>; using P1 would also work) or download from the trace page and load from their local computer in JOSM.</li>
+<li>Then the other mappers can use your traces and waypoints with P2 directly (<a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;gpx=1036624&amp;lat=53.1394&amp;lon=-1.64386&amp;zoom=14">example</a> = edit link on <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1036624">trace page</a>; using P1 would also work) or download from the trace page and load from their local computer in JOSM.</li>
 </ol>
 <p>To coordinate the mapping you (or another mapper) could (or even should because it will not work otherwise) make a wiki page (e.g. a sub page of your user page) where you copy and paste the links to each trace; already processed/used traces can then be marked by others. You also can make personal notes there (although most info should be on the trace page itself), e.g. additional surveying notes.</p>
 <p>That is a kind of small <em>remote survey assisted <span>armchair mapping</span></em> <span>mapping project</span> then. I think communication between the project's contributors is important as relying on surveying notes/waypoints by someone else who is doing the armchair mapping is probably no easy task. Not as easy as using other people's traces to help to adjust a aerial background image or to average a way's location.</p>
@@ -207,7 +207,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes. Create a GPX file containing the waypoints, then using a text editor edit a couple of track points in, like I did with <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1036624">this example one</a>.</p>
+<p>Yes. Create a GPX file containing the waypoints, then using a text editor edit a couple of track points in, like I did with <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1036624">this example one</a>.</p>
 <p>OSM will then allow you to upload the trace with visibility set to "Identifiable", and waypoints will be displayed when you edit the trace (provided the editor that you choose supports them).</p>
 <p>Of the available editors Potlatch 1 supports waypoints extremely well, Potlatch 2 nearly as well and JOSM a bit. Not sure of the current status in iD.</p>
 <p>Obviously the waypoints need to have a location recorded by yourself and not use one copied from some other source.</p>
@@ -246,7 +246,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>(re JOSM), see <a href="https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">this question</a>, and <a href="https://help.openstreetmap.org/questions/7618/josm-is-it-possible-to-move-gpx-waypoints-out-of-the-way-to-see-what-might-be-underneath">this one</a>, and <a href="https://help.openstreetmap.org/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">this one</a>. Things may have moved on since they were asked, of course.</p>
+<p>(re JOSM), see <a href="/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">this question</a>, and <a href="/questions/7618/josm-is-it-possible-to-move-gpx-waypoints-out-of-the-way-to-see-what-might-be-underneath">this one</a>, and <a href="/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">this one</a>. Things may have moved on since they were asked, of course.</p>
 </div>
 <div id="comment-24809-info" class="comment-info">
 <span class="comment-age">(01 Aug '13, 17:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -134,7 +134,7 @@ One Answer:
 <div class="answer-body">
 <p>It is technically possible from the OSM API (making recursive use of the /node/123/ways call to find out which other ways use the first/last node of the given way), but if done frequently it would be considered an abuse of the API.</p>
 <p>Often, the motorway will be part of a relation, and then it would be possible to use the /relation/123/full call to download the full relation. This, too, is something that we don't like to see in an automated fashion.</p>
-<p>If you want to make such queries regularly, set up your own database and import OSM data into it. Alternatively, check out if <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpasss API</a> offers something that you can use.</p>
+<p>If you want to make such queries regularly, set up your own database and import OSM data into it. Alternatively, check out if <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpasss API</a> offers something that you can use.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

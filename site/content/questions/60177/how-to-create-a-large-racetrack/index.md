@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to create a large racetrack"
-description = '''In the part of Canada where I live most every town has a rodeo grounds, and many of those also have a large race track. I found one track at the Calgary Stampede that renders very nice as a representation of the track on the OSM map as an oval.  http://www.openstreetmap.org/#map=16/51.0333/-114.0526...'''
+description = '''In the part of Canada where I live most every town has a rodeo grounds, and many of those also have a large race track. I found one track at the Calgary Stampede that renders very nice as a representation of the track on the OSM map as an oval.  https://www.openstreetmap.org/#map=16/51.0333/-114.0526...'''
 date = "2017-10-19T03:14:00Z"
 lastmod = "2017-10-21T03:36:00Z"
 weight = 60177
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In the part of Canada where I live most every town has a rodeo grounds, and many of those also have a large race track. I found one track at the Calgary Stampede that renders very nice as a representation of the track on the OSM map as an oval.</p>
-<p><a href="http://www.openstreetmap.org/#map=16/51.0333/-114.0526">http://www.openstreetmap.org/#map=16/51.0333/-114.0526</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/51.0333/-114.0526">https://www.openstreetmap.org/#map=16/51.0333/-114.0526</a></p>
 <p>I've tried to play with that one to figure out how two lines render with a shaded area between them. I've tried a few things, but many of them either fill in the oval or do not show up on the map at all. I know there are lots of other sports areas with ovals that could be done the same way, but how do you do it? Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -121,7 +121,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>As explained on the <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dtrack">leisure=track</a> page, you have to use a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon-relation</a> for that.</p>
-<p>The accepted answer of <a href="https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">this question</a> explains how to do that in the iD-editor.</p>
+<p>The accepted answer of <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">this question</a> explains how to do that in the iD-editor.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

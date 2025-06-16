@@ -110,7 +110,7 @@ osqa_accepted = false
 <div id="post-40011-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10169/juststupid"></a><a href="http://help.openstreetmap.org/users/10169/juststupid">@JustStupid</a>: … as said it is all said in my FAQ link, hmpf</p>
+<p><a href="https://help.openstreetmap.org/users/10169/juststupid"></a><a href="https://help.openstreetmap.org/users/10169/juststupid">@JustStupid</a>: … as said it is all said in my FAQ link, hmpf</p>
 <p>If you start the discussion elsewhere, please mention the new location/URL here (for people finding this one).</p>
 </div>
 <div id="comment-40011-info" class="comment-info">

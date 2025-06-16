@@ -294,7 +294,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is what I did recently as the three companies have various percentages of the overall building <a href="http://www.openstreetmap.org/?lat=52.336068&amp;lon=-0.205438&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.336068&amp;lon=-0.205438&amp;zoom=18&amp;layers=M</a><br />
+<p>This is what I did recently as the three companies have various percentages of the overall building <a href="https://www.openstreetmap.org/?lat=52.336068&amp;lon=-0.205438&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.336068&amp;lon=-0.205438&amp;zoom=18&amp;layers=M</a><br />
 </p>
 </div>
 <div class="answer-controls post-controls">

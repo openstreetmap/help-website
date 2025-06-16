@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Habe ich diesen Einmündungsbereich zu highway=primary richtig getaggt (Einbahnstraßen, Abbiegeverbote, Busrelationen)?"
-description = '''Ich habe gestern den folgenden Einmüdungsbereich &quot;verfeinert&quot;: http://www.openstreetmap.org/#map=19/51.95692/8.86622 Vorher bestand die Einmündung aus einem einzigen way, was ich fürs Routing nicht angemessen fand. Neben der Aufteilung in Einbahnstraßen habe ich versucht, sämtliche daraus resultiere...'''
+description = '''Ich habe gestern den folgenden Einmüdungsbereich &quot;verfeinert&quot;: https://www.openstreetmap.org/#map=19/51.95692/8.86622 Vorher bestand die Einmündung aus einem einzigen way, was ich fürs Routing nicht angemessen fand. Neben der Aufteilung in Einbahnstraßen habe ich versucht, sämtliche daraus resultiere...'''
 date = "2014-02-23T09:54:00Z"
 lastmod = "2014-03-07T16:37:00Z"
 weight = 30946
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Ich habe gestern den folgenden Einmüdungsbereich "verfeinert": <a href="http://www.openstreetmap.org/#map=19/51.95692/8.86622">http://www.openstreetmap.org/#map=19/51.95692/8.86622</a></p>
+<p>Ich habe gestern den folgenden Einmüdungsbereich "verfeinert": <a href="https://www.openstreetmap.org/#map=19/51.95692/8.86622">https://www.openstreetmap.org/#map=19/51.95692/8.86622</a></p>
 <p>Vorher bestand die Einmündung aus einem einzigen way, was ich fürs Routing nicht angemessen fand. Neben der Aufteilung in Einbahnstraßen habe ich versucht, sämtliche daraus resultierende Abbiegeverbote abzubilden, inklusive den Relationen von zwei Buslinien.</p>
 <p>Habe ich die neuen ways richtig getaggt, oder hätte ich mit primary_link o.ä. arbeiten sollen?</p>
 </div>
@@ -112,7 +112,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Ich würde <code>primary_link</code> bei allen "geschwungenen" (also Autobahn-ähnlichen) Ab- und Zufahrten setzen. Das Wiki hat dazu eine <a href="http://wiki.openstreetmap.org/wiki/Link_%28highway%29">Seite</a>, aber leider nicht auf deutsch (die deutsche Übersetzung verlinkt nur auf <code>trunk_link</code>).</p>
+<p>Ich würde <code>primary_link</code> bei allen "geschwungenen" (also Autobahn-ähnlichen) Ab- und Zufahrten setzen. Das Wiki hat dazu eine <a href="https://wiki.openstreetmap.org/wiki/Link_%28highway%29">Seite</a>, aber leider nicht auf deutsch (die deutsche Übersetzung verlinkt nur auf <code>trunk_link</code>).</p>
 </div>
 <div id="comment-30956-info" class="comment-info">
 <span class="comment-age">(23 Feb '14, 12:11)</span> <span class="comment-user userinfo">scai ♦</span>

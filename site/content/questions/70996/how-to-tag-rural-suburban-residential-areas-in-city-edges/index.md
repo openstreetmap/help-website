@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>In many Hungarian city edges and villages there are suburban landuses with large gardens and small family houses <a href="https://www.google.com/maps/@46.905761,19.6308809,1571m/data=!3m1!1e3">like these</a>:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/default.png" alt="Rural-suburban areas" /></p>
+<p><img src="/upfiles/default.png" alt="Rural-suburban areas" /></p>
 <p>In Hungary these are usually tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dallotments"><code>landuse=allotments</code></a>. That is wrong, since these are houses for permanent residence and many of them doesn't have actual gardens to grow fruits/vegetables. On the other hand, they can be really sparse, with small houses, and such a rural environment that they are closer to farmyards (without an actual farmland) so <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential"><code>landuse=residental</code></a> doesn't seems right either.</p>
 <p>How should we tag these lands?</p>
 </div>

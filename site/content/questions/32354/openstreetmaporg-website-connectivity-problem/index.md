@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi everybody</p>
 <p>i have routing errors - who can help me to fix this issue?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/14.04.png" alt="alt text" /></p>
+<p><img src="/upfiles/14.04.png" alt="alt text" /></p>
 <p>regards Martin</p>
 </div>
 <div id="question-tags" class="tags-container tags">

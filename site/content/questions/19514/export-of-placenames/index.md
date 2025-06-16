@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Export of Placenames?"
-description = '''I&#x27;ve done some looking around but can&#x27;t figure out if this is possible: I need a file of placenames in the UK along with their lat/lng. Similar to this: http://wiki.openstreetmap.org/wiki/List_of_London_Underground_stations Does such a thing exist? Chris.'''
+description = '''I&#x27;ve done some looking around but can&#x27;t figure out if this is possible: I need a file of placenames in the UK along with their lat/lng. Similar to this: https://wiki.openstreetmap.org/wiki/List_of_London_Underground_stations Does such a thing exist? Chris.'''
 date = "2013-02-01T16:15:00Z"
 lastmod = "2013-02-04T08:53:00Z"
 weight = 19514
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I've done some looking around but can't figure out if this is possible:</p>
 <p>I need a file of placenames in the UK along with their lat/lng. Similar to this:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/List_of_London_Underground_stations">http://wiki.openstreetmap.org/wiki/List_of_London_Underground_stations</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/List_of_London_Underground_stations">https://wiki.openstreetmap.org/wiki/List_of_London_Underground_stations</a></p>
 <p>Does such a thing exist?</p>
 <p>Chris.</p>
 </div>
@@ -166,8 +166,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I'm afraid this probably doesn't readily exist. But for sure it is possible to generate this, although this require the use of more advanced techniques. I could imagine two different approaches:</p>
 <p><strong>Filter the data locally from downloaded data</strong></p>
-<p>First you have to get the country extract for the UK e.g. from <a href="http://download.geofabrik.de/openstreetmap/europe/">Geofabrik</a>. Also you have to get <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> and familiarize yourself with the usage. Osmosis allows you to extract all place nodes, use something like <code>--tag-filter accept-nodes place=*</code>. This gives you an XML file containing the information, you will have to reformat it somehow to get the list you're looking for.</p>
-<p><strong>Use <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to get the data</strong></p>
+<p>First you have to get the country extract for the UK e.g. from <a href="http://download.geofabrik.de/openstreetmap/europe/">Geofabrik</a>. Also you have to get <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> and familiarize yourself with the usage. Osmosis allows you to extract all place nodes, use something like <code>--tag-filter accept-nodes place=*</code>. This gives you an XML file containing the information, you will have to reformat it somehow to get the list you're looking for.</p>
+<p><strong>Use <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to get the data</strong></p>
 <p>Overpass API allows you to do the filtering directly. Here you'll have to use something like <code>&amp;lt; has-kv k="place" /&amp;gt;</code>. But doing so for all places in the UK might be a bit to large of an request. For an easier interface you could have a look at <a href="http://overpass-turbo.eu/">overpass turbo</a>.</p>
 </div>
 <div class="answer-controls post-controls">

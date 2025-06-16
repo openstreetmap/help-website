@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-47790-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> overpass api creates a lot of area i suppose, but am in need of only country or state i.e administrative areas. i query for amenities on this areas.</p>
+<p><a href="https://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> overpass api creates a lot of area i suppose, but am in need of only country or state i.e administrative areas. i query for amenities on this areas.</p>
 </div>
 <div id="comment-47790-info" class="comment-info">
 <span class="comment-age">(01 Feb '16, 12:22)</span> <span class="comment-user userinfo">Arun Gowtham</span>

@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see <a href="http://help.openstreetmap.org/questions/7375/fundamental-question-on-mapping">previous questions</a> and answers on this.</p>
+<p>Please see <a href="/questions/7375/fundamental-question-on-mapping">previous questions</a> and answers on this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

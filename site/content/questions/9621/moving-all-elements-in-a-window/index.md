@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am in Mompox, Bolívar, Colombia, the current status of the map is very primitive: it only contains roads, no squares, no information about points of interest, outdated style of road indication (they started using names instead of numbers). but the main problem is that all roads are displaced in the same direction by a variable amount of some 20 to 80 meters. I am staying at "la casona", on the Carrera 2 between Calle 18 and 19. comparing the gps data I have been collecting with the map already in openstreetmap, I seem to be between calle 20 and 21.</p>
-<p>the place is here: <a href="http://www.openstreetmap.org/?lat=9.23908352851868&amp;lon=-74.4233179092407&amp;zoom=15">http://www.openstreetmap.org/?lat=9.23908352851868&amp;lon=-74.4233179092407&amp;zoom=15</a></p>
-<p>the combined gps data is here: <a href="http://www.openstreetmap.org/user/mariotomo/traces/1156479">http://www.openstreetmap.org/user/mariotomo/traces/1156479</a></p>
+<p>the place is here: <a href="https://www.openstreetmap.org/?lat=9.23908352851868&amp;lon=-74.4233179092407&amp;zoom=15">https://www.openstreetmap.org/?lat=9.23908352851868&amp;lon=-74.4233179092407&amp;zoom=15</a></p>
+<p>the combined gps data is here: <a href="https://www.openstreetmap.org/user/mariotomo/traces/1156479">https://www.openstreetmap.org/user/mariotomo/traces/1156479</a></p>
 <p>I would like to move all calles at once, but what is the best way to move things without breaking relationships and without performing a double move on intersection points?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

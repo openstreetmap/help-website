@@ -304,7 +304,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> a very simple tool for such task:</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> a very simple tool for such task:</p>
 <pre><code>osmfilter my-data.osm --keep=highway=* -o=my-data-highway.osm</code></pre>
 </div>
 <div class="answer-controls post-controls">

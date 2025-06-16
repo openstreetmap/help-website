@@ -133,7 +133,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>... or see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> where you have at least "Pelias" as another solution.</p>
+<p>... or see <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> where you have at least "Pelias" as another solution.</p>
 </div>
 <div id="comment-46719-info" class="comment-info">
 <span class="comment-age">(19 Nov '15, 16:40)</span> <span class="comment-user userinfo">stephan75</span>

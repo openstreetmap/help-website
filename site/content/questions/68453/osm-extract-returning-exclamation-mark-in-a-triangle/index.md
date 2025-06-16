@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>I have issued with the data export from OSM via overpass and via quickOSM in QGIS. In both cases, it returns an exclamation mark within a triangle polygon (see attached image).</p>
 <p>Do you know what the problem is and how I can solve this?</p>
 <p>Thanks a lot and bests, Sebastian</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2019-03-21_at_13.28.32_3FCKfBX.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2019-03-21_at_13.28.32_3FCKfBX.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span>

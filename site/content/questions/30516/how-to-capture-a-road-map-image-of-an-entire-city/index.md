@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>Our existing free-to-use infrastructure is not suitable for generating such images. You'll have to either</p>
 <ul>
-<li>use a third-party service - there's the excellent and free <a href="http://www.maposmatic.org">MapOsMatic</a> but you can also buy services from <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">the providers listed on our Wiki.</a></li>
+<li>use a third-party service - there's the excellent and free <a href="http://www.maposmatic.org">MapOsMatic</a> but you can also buy services from <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">the providers listed on our Wiki.</a></li>
 <li>render the image yourself from raw data, for example by using the Maperitive software or the osm2pgsql/PostGIS/Nominatim toolchain; type "printing" in the search box above to read a couple of answers that deal with this.</li>
 </ul>
 </div>

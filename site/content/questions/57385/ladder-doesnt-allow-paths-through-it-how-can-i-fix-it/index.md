@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I'm attempting to create a direct hiking route via a ladder on OpenRouteService (which uses OpenStreetMap), but the route cannot be created.</p>
 <p>Here is the ladder (Thronleiter) on OSM: <a href="https://www.openstreetmap.org/edit#map=21/47.49255/13.23794">https://www.openstreetmap.org/edit#map=21/47.49255/13.23794</a></p>
-<p>I found other ladders that do work here: <a href="http://www.openstreetmap.org/edit#map=19/47.36060/9.75714">http://www.openstreetmap.org/edit#map=19/47.36060/9.75714</a></p>
+<p>I found other ladders that do work here: <a href="https://www.openstreetmap.org/edit#map=19/47.36060/9.75714">https://www.openstreetmap.org/edit#map=19/47.36060/9.75714</a></p>
 <p>I found that those ladders use type ‘steps’ instead of ‘line’, so I changed that, but it didn’t seem to have any effect.</p>
 <p>Other than that, I don’t see any significant differences between the two - but it still doesn't work. Any ideas?</p>
 <p>The routes on OpenRouteService:</p>

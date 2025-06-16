@@ -158,7 +158,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>If you only need small sections of OSM. you could try The Custom Map feature that the Vista 20 has see <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>If you only need small sections of OSM. you could try The Custom Map feature that the Vista 20 has see <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-28239-info" class="comment-info">
 <span class="comment-age">(19 Nov '13, 16:44)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -205,7 +205,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10012/mountainminxosm">@mountainminxOSM</a> converted your comment to a comment. As nevw and SomeoneElse have pointed out this probably needs more information to be resolved.</p>
+<p><a href="https://help.openstreetmap.org/users/10012/mountainminxosm">@mountainminxOSM</a> converted your comment to a comment. As nevw and SomeoneElse have pointed out this probably needs more information to be resolved.</p>
 <p>Did existing on device maps stop working when the software was upgraded, or were these newly installed maps?</p>
 </div>
 <div id="comment-38614-info" class="comment-info">

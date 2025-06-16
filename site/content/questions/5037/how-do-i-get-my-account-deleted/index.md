@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/questions/878/">How can I delete my account?</a></p>
+<p><a href="/questions/878/">How can I delete my account?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

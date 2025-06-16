@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See also <a href="http://help.openstreetmap.org/questions/1828/how-do-i-change-language-of-a-map">http://help.openstreetmap.org/questions/1828/how-do-i-change-language-of-a-map</a> which mentions the multilingual options at <a href="http://toolserver.org">toolserver.org</a>, such as <a href="http://toolserver.org/~osm/locale/ru.html">http://toolserver.org/~osm/locale/ru.html</a></p>
+<p>See also <a href="/questions/1828/how-do-i-change-language-of-a-map">https://help.openstreetmap.org/questions/1828/how-do-i-change-language-of-a-map</a> which mentions the multilingual options at <a href="http://toolserver.org">toolserver.org</a>, such as <a href="http://toolserver.org/~osm/locale/ru.html">http://toolserver.org/~osm/locale/ru.html</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>On <a href="http://openstreetmap.org">openstreetmap.org</a> there is no map in Russian language, but the default name for every feature is rendered (the value in the name-tag). I don't know if there is a rendering in Russian available, but it is possible. If there is none, you could make one yourself.</p>
-<p>There is already a similar question <a href="http://help.openstreetmap.org/questions/3403/easiest-way-to-render-maps-with-custom-language">here</a>, with code for maperitive, where the answer suggests you might have to "(make sure it's a tab indent and not spaces)".</p>
+<p>There is already a similar question <a href="/questions/3403/easiest-way-to-render-maps-with-custom-language">here</a>, with code for maperitive, where the answer suggests you might have to "(make sure it's a tab indent and not spaces)".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

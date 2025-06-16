@@ -87,7 +87,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>please refer to -&gt; <a href="http://www.openstreetmap.org/way/289028263#map=7/15.364/109.709">http://www.openstreetmap.org/way/289028263#map=7/15.364/109.709</a></p>
+<p>please refer to -&gt; <a href="https://www.openstreetmap.org/way/289028263#map=7/15.364/109.709">https://www.openstreetmap.org/way/289028263#map=7/15.364/109.709</a></p>
 </div>
 <div id="comment-56733-info" class="comment-info">
 <span class="comment-age">(23 Jun '17, 08:21)</span> <span class="comment-user userinfo">DebbieYSK</span>
@@ -141,7 +141,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi DebbieYSK, Please read these pages as well and remember that a name on an Island in the middle of nowhere still could be disputed. <a href="http://wiki.openstreetmap.org/wiki/Disputes">http://wiki.openstreetmap.org/wiki/Disputes</a> The surrounding countries are all interested in the mining prospects beneath the sea. But only China has developed invasive actions, which are not according international rules or agreements. OSM does not support any action to change border lines wich are not accordingly international agreements. Greetz</p>
+<p>Hi DebbieYSK, Please read these pages as well and remember that a name on an Island in the middle of nowhere still could be disputed. <a href="https://wiki.openstreetmap.org/wiki/Disputes">https://wiki.openstreetmap.org/wiki/Disputes</a> The surrounding countries are all interested in the mining prospects beneath the sea. But only China has developed invasive actions, which are not according international rules or agreements. OSM does not support any action to change border lines wich are not accordingly international agreements. Greetz</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

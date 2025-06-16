@@ -51,7 +51,7 @@ osqa_accepted = false
 <li>shop=haberdashery</li>
 <li>craft=sewing</li>
 </ol>
-<p>I <a href="https://help.openstreetmap.org/questions/88169/how-to-translate-osmand-poi-type-to-osm-wiki-tags">recently learned</a> that, in fact, a "Drapery store" in OsmAnd is merely just</p>
+<p>I <a href="/questions/88169/how-to-translate-osmand-poi-type-to-osm-wiki-tags">recently learned</a> that, in fact, a "Drapery store" in OsmAnd is merely just</p>
 <ul>
 <li>shop=fabric</li>
 </ul>

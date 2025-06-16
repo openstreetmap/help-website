@@ -138,7 +138,7 @@ One Answer:
 <div class="comment-text">
 <p>This looks even better than Potlatch's Task as it can accept polygon geometry &amp; not just centre points. Using a combination of Overpass &amp; JOSM's filter I can create the required data for the ToDo plugin.</p>
 <p>Except for one thing, my ToDos are over an area to large for JOSM to download. I have to 'Download in current view' each time which leads me to a follow on Q:</p>
-<p><a href="https://help.openstreetmap.org/questions/67514">https://help.openstreetmap.org/questions/67514</a></p>
+<p><a href="/questions/67514">https://help.openstreetmap.org/questions/67514</a></p>
 </div>
 <div id="comment-67515-info" class="comment-info">
 <span class="comment-age">(08 Jan '19, 18:57)</span> <span class="comment-user userinfo">DaveF</span>

@@ -133,7 +133,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tuning postgres is an art. For starters see the <a href="http://wiki.openstreetmap.org/wiki/Postgresql">osm wiki</a>, the <a href="http://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server">postgres wiki</a>, or the <a href="http://www.postgresql.org/docs/9.2/static/runtime-config.html">postgres doc</a>. Some of the most important things you should try :</p>
+<p>Tuning postgres is an art. For starters see the <a href="https://wiki.openstreetmap.org/wiki/Postgresql">osm wiki</a>, the <a href="http://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server">postgres wiki</a>, or the <a href="http://www.postgresql.org/docs/9.2/static/runtime-config.html">postgres doc</a>. Some of the most important things you should try :</p>
 <ul>
 <li>raise <a href="http://www.postgresql.org/docs/9.2/static/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY">shared_buffers</a> to 30-40% of available ram</li>
 <li>raise <a href="http://www.postgresql.org/docs/9.2/static/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY">work_mem</a> until you stop seeing <a href="http://www.postgresql.org/docs/9.2/static/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT">log_temp_file</a> warnings in the logs, unless it gets so high that you'd run out of memory</li>

@@ -252,8 +252,8 @@ osqa_accepted = false
 <p>It's usually considered faulty and tools like JOSM validator or the numerous quality check tools will report such self-intersecting ways.</p>
 <p>That relates to constructions like a 'P' or '8'. It does not apply to closed ways creating areas. That is a way where the first and last node are the same. You will use the later to map buildings or lakes.</p>
 <p>Some quality checks that list self-intersections are:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports"></a><a href="http://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports"></a><a href="http://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports">http://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways"></a><a href="http://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways"></a><a href="http://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways">http://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports"></a><a href="https://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports"></a><a href="https://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports">https://wiki.openstreetmap.org/wiki/Self_intersecting_way_reports</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways"></a><a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways"></a><a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways">https://wiki.openstreetmap.org/wiki/OSM_Inspector/Views/Geometry#Fix_self-intersecting_ways</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

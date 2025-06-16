@@ -135,7 +135,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe just <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure=dance">leisure=dance</a>, combined with dance:teaching=yes and building=yes if appropriate. It doesn't seem like amenity=school is used much with things like a dance school.<br />
+<p>Maybe just <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure=dance">leisure=dance</a>, combined with dance:teaching=yes and building=yes if appropriate. It doesn't seem like amenity=school is used much with things like a dance school.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -218,7 +218,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Me scratches head: <a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=dance">http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=dance</a></p>
+<p>Me scratches head: <a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=dance">https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=dance</a></p>
 </div>
 <div id="comment-19124-info" class="comment-info">
 <span class="comment-age">(15 Jan '13, 20:08)</span> <span class="comment-user userinfo">cartinus</span>

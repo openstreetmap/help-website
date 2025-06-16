@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please take a step back first and read up on the topic of imports in to OSM. Just a quick search here would for example have turned up <a href="http://help.openstreetmap.org/questions/4936/import-into-openstreetmap">http://help.openstreetmap.org/questions/4936/import-into-openstreetmap</a></p>
+<p>Please take a step back first and read up on the topic of imports in to OSM. Just a quick search here would for example have turned up <a href="/questions/4936/import-into-openstreetmap">https://help.openstreetmap.org/questions/4936/import-into-openstreetmap</a></p>
 <p>A CC-by licence could however be OK if the copyright holder can accept attribution via our website and not on downstream derived works. Note that OSM does not provide a repository for DEM data so at least that data set is not suitable for importing in any case.</p>
 </div>
 <div class="answer-controls post-controls">

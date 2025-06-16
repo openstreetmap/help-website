@@ -176,7 +176,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can start with the <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">OpenLayers simple example</a>.</p>
+<p>You can start with the <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">OpenLayers simple example</a>.</p>
 <p>Note the section for "Other tile sets". You have to add this code to the layer definition section, instead of the two lines for Mapnik:</p>
 <pre><code>var newLayer = new OpenLayers.Layer.OSM(&quot;New Layer&quot;, &quot;URL_TO_TILES/${z}/${x}/${y}.png&quot;, {numZoomLevels: 19});
 map.addLayer(newLayer);</code></pre>

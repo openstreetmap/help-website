@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-9883-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info <a href="http://www.openstreetmap.org/?lat=7.069&amp;lon=-73.185&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=7.069&amp;lon=-73.185&amp;zoom=10&amp;layers=M</a> shows this (currently).</p>
+<p>For info <a href="https://www.openstreetmap.org/?lat=7.069&amp;lon=-73.185&amp;zoom=10&amp;layers=M">https://www.openstreetmap.org/?lat=7.069&amp;lon=-73.185&amp;zoom=10&amp;layers=M</a> shows this (currently).</p>
 </div>
 <div id="comment-9883-info" class="comment-info">
 <span class="comment-age">(10 Jan '12, 12:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -90,7 +90,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hope I fixed everything in <a href="http://www.openstreetmap.org/browse/changeset/10470794">http://www.openstreetmap.org/browse/changeset/10470794</a> <em>sigh</em></p>
+<p>Hope I fixed everything in <a href="https://www.openstreetmap.org/browse/changeset/10470794">https://www.openstreetmap.org/browse/changeset/10470794</a> <em>sigh</em></p>
 </div>
 <div id="comment-10142-info" class="comment-info">
 <span class="comment-age">(22 Jan '12, 22:34)</span> <span class="comment-user userinfo">malenki</span>
@@ -179,7 +179,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that someone's broken a coastline or similar. The ins and outs of this sort of problem are discussed in another question <a href="http://help.openstreetmap.org/questions/9554/inverness-showing-as-flooded">here</a>. Obviously it's a way from the coast, but a quick search with the history tab finds <a href="http://www.openstreetmap.org/browse/changeset/10316987">this</a> changeset with the description "riverbank correction culpa virtual innundacion". Maybe try contacting the mapper of that?<br />
+<p>I suspect that someone's broken a coastline or similar. The ins and outs of this sort of problem are discussed in another question <a href="/questions/9554/inverness-showing-as-flooded">here</a>. Obviously it's a way from the coast, but a quick search with the history tab finds <a href="https://www.openstreetmap.org/browse/changeset/10316987">this</a> changeset with the description "riverbank correction culpa virtual innundacion". Maybe try contacting the mapper of that?<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you just want to see yourself whether all streets have been covered, you may load all your tracks in <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> or <a href="http://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a> and visually verify it.</p>
+<p>If you just want to see yourself whether all streets have been covered, you may load all your tracks in <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> or <a href="https://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a> and visually verify it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want something on your own website, you could use OpenLayers. eg start with this <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">OpenLayers Track example</a>. Then that can be easily modified to show multiple tracks at once, see the customization section on that page.</p>
+<p>If you want something on your own website, you could use OpenLayers. eg start with this <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">OpenLayers Track example</a>. Then that can be easily modified to show multiple tracks at once, see the customization section on that page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

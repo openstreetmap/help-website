@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Have you already compared the OSM data for the streets AND the aerial photos with exact GPS traces for that area? In some constellations OSM data can be right and only the aerial photos have an offset. Does <a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">http://wiki.openstreetmap.org/wiki/True_Offset_Process</a> help?</p>
+<p>Have you already compared the OSM data for the streets AND the aerial photos with exact GPS traces for that area? In some constellations OSM data can be right and only the aerial photos have an offset. Does <a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">https://wiki.openstreetmap.org/wiki/True_Offset_Process</a> help?</p>
 </div>
 <div id="comment-4309-info" class="comment-info">
 <span class="comment-age">(06 Apr '11, 16:27)</span> <span class="comment-user userinfo">stephan75</span>

@@ -157,7 +157,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11985/knmille7"></a><a href="http://help.openstreetmap.org/users/11985/knmille7">@knmille7</a>: please could you ask a <a href="/questions/ask">new question</a> clearly mentioning the bulk thing and that you do not want to fix yourself? Thank you! :-) This keeps this discussion more useful for others with the same questions. -&gt; Thanks for <a href="/questions/48154/bulk-data-correction">your second question</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/11985/knmille7"></a><a href="https://help.openstreetmap.org/users/11985/knmille7">@knmille7</a>: please could you ask a <a href="/questions/ask">new question</a> clearly mentioning the bulk thing and that you do not want to fix yourself? Thank you! :-) This keeps this discussion more useful for others with the same questions. -&gt; Thanks for <a href="/questions/48154/bulk-data-correction">your second question</a>.</p>
 </div>
 <div id="comment-48153-info" class="comment-info">
 <span class="comment-age">(15 Feb '16, 19:40)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -106,7 +106,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>First option: openstreetmap.org</strong></p>
-<p>Within the "Share" menu on the OpenStreetMap website you will find a checkbox labelled "Include marker". The placement of the marker can be changed using drag &amp; drop. Share the marked location by copying the <a href="http://wiki.openstreetmap.org/wiki/Permalink">"Link"</a> or <a href="http://wiki.openstreetmap.org/wiki/Shortlink">"Short link"</a> from the field below the checkbox.</p>
+<p>Within the "Share" menu on the OpenStreetMap website you will find a checkbox labelled "Include marker". The placement of the marker can be changed using drag &amp; drop. Share the marked location by copying the <a href="https://wiki.openstreetmap.org/wiki/Permalink">"Link"</a> or <a href="https://wiki.openstreetmap.org/wiki/Shortlink">"Short link"</a> from the field below the checkbox.</p>
 <p>This option has the advantage of working directly on the main OpenStreetMap site and requires no external tools.</p>
 <p><em>(Note: This section was edited to reflect new features introduced to the OpenStreetMap website. It originally suggested manually editing the URL.)</em></p>
 <hr />
@@ -166,7 +166,7 @@ OpenStreetMap is just one of several available base maps.</p>
 2
 </div>
 <div class="comment-text">
-<p>Documentation can be found in the wiki: <a href="http://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker">http://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker</a></p>
+<p>Documentation can be found in the wiki: <a href="https://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker">https://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker</a></p>
 </div>
 <div id="comment-6857-info" class="comment-info">
 <span class="comment-age">(03 Aug '11, 22:04)</span> <span class="comment-user userinfo">mmehl</span>
@@ -315,7 +315,7 @@ OpenStreetMap is just one of several available base maps.</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you only need a static image of the rendered OpenStreetMap (i.e. without zooming and panning), have a look at <a href="http://dev.openstreetmap.de/staticmap/"></a><a href="http://dev.openstreetmap.de/staticmap/"></a><a href="http://dev.openstreetmap.de/staticmap/">http://dev.openstreetmap.de/staticmap/</a> and try the wizard mode to get a URL to a freshly generated picture which you can use in any web page. The wizard letzs you place multiple markers.</p>
-<p>More information may be here: <a href="http://wiki.openstreetmap.org/wiki/Static_map_images"></a><a href="http://wiki.openstreetmap.org/wiki/Static_map_images"></a><a href="http://wiki.openstreetmap.org/wiki/Static_map_images">http://wiki.openstreetmap.org/wiki/Static_map_images</a></p>
+<p>More information may be here: <a href="https://wiki.openstreetmap.org/wiki/Static_map_images"></a><a href="https://wiki.openstreetmap.org/wiki/Static_map_images"></a><a href="https://wiki.openstreetmap.org/wiki/Static_map_images">https://wiki.openstreetmap.org/wiki/Static_map_images</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -520,7 +520,7 @@ OpenStreetMap is just one of several available base maps.</p>
 <li>put pointer on box below and COPY it</li>
 <li>Paste the cut into your message.</li>
 </ol>
-<p><img src="https://help.openstreetmap.org/upfiles/marker_on_map.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/marker_on_map.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

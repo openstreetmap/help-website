@@ -52,7 +52,7 @@ osqa_accepted = false
 </ol>
 <p>Also when I try to query these features on the OSM website, despite showing, they do not select and appear in the enclosing query results.</p>
 <p>Many thanks</p>
-<p><img src="http://help.openstreetmap.org/upfiles/OSM_Romania_ESRI_Import.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/OSM_Romania_ESRI_Import.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span> <span class="post-tag tag-link-esri" rel="tag" title="see questions tagged &#39;esri&#39;">esri</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>
@@ -99,7 +99,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I suspect that you're talking about <a href="http://www.openstreetmap.org/way/86092363">http://www.openstreetmap.org/way/86092363</a> . That's an "outer" of <a href="http://www.openstreetmap.org/relation/1283094">http://www.openstreetmap.org/relation/1283094</a> .</p>
+<p>I suspect that you're talking about <a href="https://www.openstreetmap.org/way/86092363">https://www.openstreetmap.org/way/86092363</a> . That's an "outer" of <a href="https://www.openstreetmap.org/relation/1283094">https://www.openstreetmap.org/relation/1283094</a> .</p>
 <p>That whole area looks like another advert for "how not to import data into OSM", but that unfrtunately doesn't help you at all :)</p>
 </div>
 <div id="comment-46411-info" class="comment-info">
@@ -112,7 +112,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Please say whether this is a node/way/relation: osm_id's are NOT unique, and ideally provide the link. I can guess that this is probably a way id, the relevant relation is <a href="http://www.openstreetmap.org/relation/1283094">http://www.openstreetmap.org/relation/1283094</a></p>
+<p>Please say whether this is a node/way/relation: osm_id's are NOT unique, and ideally provide the link. I can guess that this is probably a way id, the relevant relation is <a href="https://www.openstreetmap.org/relation/1283094">https://www.openstreetmap.org/relation/1283094</a></p>
 </div>
 <div id="comment-46412-info" class="comment-info">
 <span class="comment-age">(05 Nov '15, 14:28)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -212,7 +212,7 @@ One Answer:
 <div id="post-46428-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I am not sure who is fixing them, maybe <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, but I can query some of the data and have been able to import some of the missing features this morning.</p>
+<p>I am not sure who is fixing them, maybe <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, but I can query some of the data and have been able to import some of the missing features this morning.</p>
 </div>
 <div id="comment-46428-info" class="comment-info">
 <span class="comment-age">(06 Nov '15, 10:21)</span> <span class="comment-user userinfo">Jon2709</span>

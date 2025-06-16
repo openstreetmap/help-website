@@ -138,8 +138,8 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>What you're describing just sounds like a <a href="http://www.wetroads.co.uk/index.htm">long ford</a> to me. <a href="http://www.openstreetmap.org/way/42000985/history">Here</a> is one that I mapped ages ago. I split the road so that the bit that is both highway and waterway is tagged as such - i.e. your "option 3".</p>
-<p>I'd also add <a href="http://wiki.openstreetmap.org/wiki/Key%3Aintermittent">"intermittent=yes"</a> to indicate that the waterway is intermittent (there's little chance of confusion as to which tag intermittent applies to since it's a tag for waterways).</p>
+<p>What you're describing just sounds like a <a href="http://www.wetroads.co.uk/index.htm">long ford</a> to me. <a href="https://www.openstreetmap.org/way/42000985/history">Here</a> is one that I mapped ages ago. I split the road so that the bit that is both highway and waterway is tagged as such - i.e. your "option 3".</p>
+<p>I'd also add <a href="https://wiki.openstreetmap.org/wiki/Key%3Aintermittent">"intermittent=yes"</a> to indicate that the waterway is intermittent (there's little chance of confusion as to which tag intermittent applies to since it's a tag for waterways).</p>
 </div>
 <div id="comment-44612-info" class="comment-info">
 <span class="comment-age">(04 Aug '15, 20:03)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -163,7 +163,7 @@ One Answer:
 <div id="post-44614-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Sure, I forgot intermittent=yes. BTW, in your example, flow direction seems reversed, am I wrong?</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Sure, I forgot intermittent=yes. BTW, in your example, flow direction seems reversed, am I wrong?</p>
 </div>
 <div id="comment-44614-info" class="comment-info">
 <span class="comment-age">(04 Aug '15, 21:01)</span> <span class="comment-user userinfo">Alecs01</span>
@@ -174,7 +174,7 @@ One Answer:
 <div id="post-44615-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7863/alecs01">@Alecs01</a> so it is - thanks!</p>
+<p><a href="https://help.openstreetmap.org/users/7863/alecs01">@Alecs01</a> so it is - thanks!</p>
 </div>
 <div id="comment-44615-info" class="comment-info">
 <span class="comment-age">(04 Aug '15, 21:57)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

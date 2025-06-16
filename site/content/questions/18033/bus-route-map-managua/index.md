@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you use JOSM, the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/public_transport">public transport plugin</a> can save a lot of work. I've used it to map around 1500 bus stops and 50 bus lines in Wuppertal, Germany.</p>
+<p>If you use JOSM, the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/public_transport">public transport plugin</a> can save a lot of work. I've used it to map around 1500 bus stops and 50 bus lines in Wuppertal, Germany.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, it is allowed as long as you credit OSM. This is addressed in the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">Legal FAQ</a>:</p>
+<p>Yes, it is allowed as long as you credit OSM. This is addressed in the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">Legal FAQ</a>:</p>
 <blockquote>
 <p>Our requested attribution is "© OpenStreetMap contributors". You must make it clear that the data is available under the Open Database Licence. This can be achieved by providing a "License" or "Terms" link which links to www.openstreetmap.org/copyright or www.opendatacommons.org/licenses/odbl.</p>
 </blockquote>
@@ -144,7 +144,7 @@ One Answer:
 <div id="post-18612-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@mtemp</span>: <a href="http://www.openstreetmap.org/copyright/de">http://www.openstreetmap.org/copyright/de</a> mentions a different attribution. Also only mentioning cc-by-sa (which applies to the tiles) is probably not enough. If I understand correctly, ODbL needs also to be mentioned even if you do not distribute the raw data but only rendered tiles.</p>
+<p><span>@mtemp</span>: <a href="https://www.openstreetmap.org/copyright/de">https://www.openstreetmap.org/copyright/de</a> mentions a different attribution. Also only mentioning cc-by-sa (which applies to the tiles) is probably not enough. If I understand correctly, ODbL needs also to be mentioned even if you do not distribute the raw data but only rendered tiles.</p>
 </div>
 <div id="comment-18612-info" class="comment-info">
 <span class="comment-age">(19 Dec '12, 15:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

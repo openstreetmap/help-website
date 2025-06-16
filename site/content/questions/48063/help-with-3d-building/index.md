@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help with 3D building."
-description = '''Hi, I&#x27;m currently trying to add a simple 3D building called &#x27;De La Warr Pavilion&#x27; here - http://www.openstreetmap.org/#map=19/50.83745/0.47171 But it appears, at least on F4Map the ground floor is missing under the other building parts - http://demo.f4map.com/#lat=50.8374459&amp;amp;lon=0.4714628&amp;amp;zo...'''
+description = '''Hi, I&#x27;m currently trying to add a simple 3D building called &#x27;De La Warr Pavilion&#x27; here - https://www.openstreetmap.org/#map=19/50.83745/0.47171 But it appears, at least on F4Map the ground floor is missing under the other building parts - http://demo.f4map.com/#lat=50.8374459&amp;amp;lon=0.4714628&amp;amp;zo...'''
 date = "2016-02-11T20:08:00Z"
 lastmod = "2016-02-13T12:09:00Z"
 weight = 48063
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I'm currently trying to add a simple 3D building called 'De La Warr Pavilion' here - <a href="http://www.openstreetmap.org/#map=19/50.83745/0.47171">http://www.openstreetmap.org/#map=19/50.83745/0.47171</a></p>
+<p>I'm currently trying to add a simple 3D building called 'De La Warr Pavilion' here - <a href="https://www.openstreetmap.org/#map=19/50.83745/0.47171">https://www.openstreetmap.org/#map=19/50.83745/0.47171</a></p>
 <p>But it appears, at least on F4Map the ground floor is missing under the other building parts - <a href="http://demo.f4map.com/#lat=50.8374459&amp;lon=0.4714628&amp;zoom=20&amp;camera.theta=39.893&amp;camera.phi=-5.73">http://demo.f4map.com/#lat=50.8374459&amp;lon=0.4714628&amp;zoom=20&amp;camera.theta=39.893&amp;camera.phi=-5.73</a></p>
 <p>Am I doing something wrong, or is this a known bug? Thanks in advance.</p>
 <p>Alex</p>
@@ -114,7 +114,7 @@ osqa_accepted = true
 <p>Note that if a building=* contains at least one area tagged as building:part=*, the building outline is no longer considered for volume rendering.</p>
 </blockquote>
 <p>So it might be necessary to draw another outline with building:part=yes and building:levels=1 which overlaps with the parts having a "building:min_level" set. This seems to render correctly with at least OSM2World. The new way looks in JOSM like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/foo_osF0OM6.png" alt="alt text" /></p>
+<p><img src="/upfiles/foo_osF0OM6.png" alt="alt text" /></p>
 <p>However since I'm neither convinced that this is the correct solution (isn't there an easier one?) nor do I know whether the building really does look the way I "fixed" it I won't upload it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -213,7 +213,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Alex, not a direct an answer but did you studied these pages ? <a href="http://wiki.openstreetmap.org/wiki/3D_tagging">http://wiki.openstreetmap.org/wiki/3D_tagging</a></p>
+<p>Alex, not a direct an answer but did you studied these pages ? <a href="https://wiki.openstreetmap.org/wiki/3D_tagging">https://wiki.openstreetmap.org/wiki/3D_tagging</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

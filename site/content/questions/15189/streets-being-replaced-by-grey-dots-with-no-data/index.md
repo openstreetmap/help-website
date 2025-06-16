@@ -138,7 +138,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Not in the southeast, but on the other side of the country:</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-32.158012&amp;lon=116.001203&amp;zoom=18">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-32.158012&amp;lon=116.001203&amp;zoom=18</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-32.158012&amp;lon=116.001203&amp;zoom=18">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-32.158012&amp;lon=116.001203&amp;zoom=18</a></p>
 <p>The road was redacted and has been re-added by a WA mapper, but the "grey dots" are still present. I'm guessing that they were added by licence accepters pre-redaction. The "new" line of the road in this case appears to be a better match for GPS traces and (Bing) imagery than the old.</p>
 </div>
 <div id="comment-15195-info" class="comment-info">

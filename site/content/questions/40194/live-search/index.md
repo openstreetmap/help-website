@@ -157,7 +157,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a> in the OSM wiki you can also try <a href="https://mapzen.com/pelias">Pelias</a>.</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a> in the OSM wiki you can also try <a href="https://mapzen.com/pelias">Pelias</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

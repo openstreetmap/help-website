@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "street intersections in nominatim V2"
-description = '''Hi, I&#x27;m looking at intersections of roads &quot;nominatim V2&quot;, on nominatim site  says that version 2 supports these search (http://wiki.openstreetmap.org/wiki/Nominatim/Version2), but no results. I found a sample search on the web: &quot;X street corner and street, city Z&quot;,  but no results. What is the searc...'''
+description = '''Hi, I&#x27;m looking at intersections of roads &quot;nominatim V2&quot;, on nominatim site  says that version 2 supports these search (https://wiki.openstreetmap.org/wiki/Nominatim/Version2), but no results. I found a sample search on the web: &quot;X street corner and street, city Z&quot;,  but no results. What is the searc...'''
 date = "2012-11-08T20:24:00Z"
 lastmod = "2012-11-08T23:16:00Z"
 weight = 17594
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I'm looking at intersections of roads "nominatim V2", on nominatim site says that version 2 supports these search (<a href="http://wiki.openstreetmap.org/wiki/Nominatim/Version2),">http://wiki.openstreetmap.org/wiki/Nominatim/Version2),</a> but no results.</p>
+<p>Hi, I'm looking at intersections of roads "nominatim V2", on nominatim site says that version 2 supports these search (<a href="https://wiki.openstreetmap.org/wiki/Nominatim/Version2),">https://wiki.openstreetmap.org/wiki/Nominatim/Version2),</a> but no results.</p>
 <p>I found a sample search on the web: "X street corner and street, city Z", but no results.</p>
 <p>What is the search method in nominatim for intersections?</p>
 <p>thanks</p>

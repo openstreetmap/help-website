@@ -71,7 +71,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Please tell us in detail WHAT does not work!</p>
 <p>Do you think that a mechanic can help you if you tell him just: "my car does not drive" ??</p>
-<p>Have you tried already <a href="http://wiki.openstreetmap.org/wiki/Overpass_Turbo">http://wiki.openstreetmap.org/wiki/Overpass_Turbo</a> ? Read about all its features in the OSM wiki and built-in help pages.</p>
+<p>Have you tried already <a href="https://wiki.openstreetmap.org/wiki/Overpass_Turbo">https://wiki.openstreetmap.org/wiki/Overpass_Turbo</a> ? Read about all its features in the OSM wiki and built-in help pages.</p>
 </div>
 <div id="comment-37193-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 16:49)</span> <span class="comment-user userinfo">stephan75</span>
@@ -157,8 +157,8 @@ osqa_accepted = true
 <p>Your bounding box (which is different to the one in scai's example above) is a tiny area:</p>
 <p><a href="http://owl.apis.dev.openstreetmap.org/?box=yes&amp;bbox=-77.015412%2C38.889932%2C-77.015212%2C38.889732#map=19/38.88982/-77.01594&amp;layers=N">http://owl.apis.dev.openstreetmap.org/?box=yes&amp;bbox=-77.015412%2C38.889932%2C-77.015212%2C38.889732#map=19/38.88982/-77.01594&amp;layers=N</a></p>
 <p>The ways in it have no maxspeed tags:</p>
-<p><a href="http://www.openstreetmap.org/way/6055099">http://www.openstreetmap.org/way/6055099</a></p>
-<p><a href="http://www.openstreetmap.org/way/6062971">http://www.openstreetmap.org/way/6062971</a></p>
+<p><a href="https://www.openstreetmap.org/way/6055099">https://www.openstreetmap.org/way/6055099</a></p>
+<p><a href="https://www.openstreetmap.org/way/6062971">https://www.openstreetmap.org/way/6062971</a></p>
 <p>EDIT: Clarified that the bbox used differs from the suggestion in the previous comment (just to make it absolutely clear!).</p>
 </div>
 <div id="comment-37344-info" class="comment-info">
@@ -171,7 +171,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9742/omkar-bodke"></a><a href="http://help.openstreetmap.org/users/9742/omkar-bodke">@Omkar</a> The second URL in my previous comment returns two ways with maxspeed tags (<a href="http://www.openstreetmap.org/way/9429794">http://www.openstreetmap.org/way/9429794</a> and <a href="http://www.openstreetmap.org/way/257681343">http://www.openstreetmap.org/way/257681343</a> ).</p>
+<p><a href="https://help.openstreetmap.org/users/9742/omkar-bodke"></a><a href="https://help.openstreetmap.org/users/9742/omkar-bodke">@Omkar</a> The second URL in my previous comment returns two ways with maxspeed tags (<a href="https://www.openstreetmap.org/way/9429794">https://www.openstreetmap.org/way/9429794</a> and <a href="https://www.openstreetmap.org/way/257681343">https://www.openstreetmap.org/way/257681343</a> ).</p>
 </div>
 <div id="comment-37345-info" class="comment-info">
 <span class="comment-age">(06 Oct '14, 15:19)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -226,7 +226,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer">http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer">https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer</a></p>
 <p>Check the link above ... it even has an example for maxspeed and bbox. Change way to * if you also want nodes and relations.</p>
 <p>Btw: this page is horrible to use on a mobile device!!</p>
 </div>

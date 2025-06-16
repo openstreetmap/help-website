@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>(I found an old question <a href="https://help.openstreetmap.org/questions/1623/how-do-i-tag-a-skywalk-skyway-sky-bridge">"How do I tag a skywalk / skyway / sky bridge?"</a> but I could not find the solution.)</p>
+<p>(I found an old question <a href="/questions/1623/how-do-i-tag-a-skywalk-skyway-sky-bridge">"How do I tag a skywalk / skyway / sky bridge?"</a> but I could not find the solution.)</p>
 <p>I tried to map a pedestrian deck (aka pedway) with "area=yes" over something like a road. But it appears at the bottom even with "bridge=yes" and "layer=1" tags.</p>
 <p>For example, see <a href="https://www.openstreetmap.org/way/541875201">a pedestrian deck crossing over railways</a>. You see railways and a service road are crossing over the deck, not under it. (This deck does not have "bridge" tag but in my conclusion it does not matter.) You may also notice some underlying railways are tagged with "tunnel=yes" to avoid this behavior, but I am not sure it is the correct way. The another deck without "area" tag is correctly drawn over a road that is about 150m west of this deck (an extention of the same footway).</p>
-<p>Another example, <a href="http://www.openstreetmap.org/browse/way/62333303">"Bridge of Sighs", Oxford</a> has similar structure that I wanted to draw, but it is also shown under New College Lane. I expected it to be drawn over the lane. (I know "pedestrian" tag is not used there.)</p>
+<p>Another example, <a href="https://www.openstreetmap.org/browse/way/62333303">"Bridge of Sighs", Oxford</a> has similar structure that I wanted to draw, but it is also shown under New College Lane. I expected it to be drawn over the lane. (I know "pedestrian" tag is not used there.)</p>
 <p>How do you tag such a structure correctly? Or is this a rendering problem of standard map?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

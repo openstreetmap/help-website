@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I come across areas that are very under-mapped, and I'd love to be able to flag down some fellow mappers and let them know that their help would be really appreciated in this area. Most recently I relized how many unmmapped roads exist in <a href="http://www.openstreetmap.org/#map=13/34.1394/74.4995">the Kashmir Valley</a>. (I added what I could in the sothern section of the area linked, but have not yet continued north)</p>
+<p>I come across areas that are very under-mapped, and I'd love to be able to flag down some fellow mappers and let them know that their help would be really appreciated in this area. Most recently I relized how many unmmapped roads exist in <a href="https://www.openstreetmap.org/#map=13/34.1394/74.4995">the Kashmir Valley</a>. (I added what I could in the sothern section of the area linked, but have not yet continued north)</p>
 <p>I like adding roads to unmapped areas, as it feels more productive than adding building traces or other minor details in area that are already well mapped. I suspect that there are others that feel the same way. Does anyone have any recommendations on how to draw attention, and bring mappers to an area?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -162,7 +162,7 @@ osqa_accepted = false
 <li>Create a task at <strong><a href="http://tasks.teachosm.org">TeachOSM</a></strong></li>
 <li>If you are part of a community, post the link to that community page and ask people to participate.</li>
 <li>If possible, arrange a <strong>Mapathon</strong>, list it in <strong><a href="http://www.missingmaps.org/host/">Missingmaps events</a></strong> and invite people to join.</li>
-<li>Check out this <a href="http://wiki.openstreetmap.org/wiki/Missing_Maps_mapathons:_for_students_and_universities#Who_to_tell...">link</a>. It will help you to reach out.</li>
+<li>Check out this <a href="https://wiki.openstreetmap.org/wiki/Missing_Maps_mapathons:_for_students_and_universities#Who_to_tell...">link</a>. It will help you to reach out.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

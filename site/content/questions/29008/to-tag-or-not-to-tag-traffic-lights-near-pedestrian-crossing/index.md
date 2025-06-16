@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Good morning.</p>
-<p>I'm adding some nodes in my town, trying to indicate crosswalks and traffic signals. One <a href="http://www.openstreetmap.org/#map=19/41.61785/-4.72624">example here</a></p>
+<p>I'm adding some nodes in my town, trying to indicate crosswalks and traffic signals. One <a href="https://www.openstreetmap.org/#map=19/41.61785/-4.72624">example here</a></p>
 <p>Some of them are only traffic signals (highway=traffic_signals), but others are pedestrian crossings (highway=crossing) with traffic signals near them.</p>
 <p>I think that I'm not doing it well. Because my low English level, sometimes I don't understand correctly Wiki.</p>
 <p>As far as I understand, pedestrian crossing with traffic lights have to be tagged as highway=crossing + crossing=traffic_signals. (Nowadays I've not added the tag "crossing=traffic_signals", so I have to correct them). But, is it necessary (or convenient) to add a node near the pedestrian crossing where the traffic signal is?</p>
@@ -144,7 +144,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>As other people said before, many times there is no single "right" way to tag things in OSM. I usually tag pedestrian crossings and vehicle crossings following simple rules:</p>
 <p>highway=traffic_signals are used whenever <em>vehicles</em> must obey to the traffic lights. For example, when two roads intersect, the highway=traffic_signals would be applied to the node at the intersection.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Vehicle_Crossing.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Vehicle_Crossing.jpg" alt="alt text" /></p>
 <p>(In the image above, the crossings do not have traffic lights in them)</p>
 <p>highway=crossing + crossing=traffic_signals are used when <em>pedestrians</em> must obey the traffic lights.</p>
 <p>(See image below)</p>
@@ -152,7 +152,7 @@ osqa_accepted = true
 <p>If there is a crossing, but without traffic lights, it would be tagged as highway=crossing (and optionally crossing=* to specify the type of crossing)</p>
 <p>This way, it is possible to clearly separate the pedestrian and the vehicles "rules". Vehicles need to obey the lights at highway=traffic_signals and pedestrians must obey the lights at crossing=traffic_signals. I always put the node tagged highway=traffic_signals or highway=crossing <em>on</em> the way (never besides).</p>
 <p>Also, sometimes it may be needed to add a way with highway=footway (or other like it) between two or more crossing nodes, making shortest path routing possible between crossings placed on long disjointed ways.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Pedestrian_Crossing.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Pedestrian_Crossing.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -215,7 +215,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>First, as always at OSM, there is no single "right" way to tag something, but various approaches that have different pros/cons.<br />
-If I understand your case right, you ask for a "complex" crossing, that has traffic lights for the car highways, but also traffic lights for the parallel footways? For me this sounds similar to this situation: <img src="http://help.openstreetmap.org/upfiles/Bildschirmfoto_vom_2013-12-12_19:21:45.png" alt="alt text" />.</p>
+If I understand your case right, you ask for a "complex" crossing, that has traffic lights for the car highways, but also traffic lights for the parallel footways? For me this sounds similar to this situation: <img src="/upfiles/Bildschirmfoto_vom_2013-12-12_19:21:45.png" alt="alt text" />.</p>
 <p>Here the crossing lanes have a dedicated traffic light that is tagged highway=crossing, crossing=traffic_light for the pedestrian footways. Keeping the traffic light and the crossing <strong>together at a single node</strong> keeps the semantic interpretation (making a computer understand that there is a place where people can save cross a highway) easier.<br />
 The only advantage I see for keeping them seperated would be that you can map the different positions more detailed, but IMHO at least currently it's not worth to do so. But who knows, maybe in 2..3 years we will alter the existing data to be more accurate :)</p>
 </div>
@@ -279,7 +279,7 @@ The only advantage I see for keeping them seperated would be that you can map th
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi read these as well, <a href="https://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,">https://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,</a> just by typing 'how to tag traffic lights' Some of us choose your tagging scheme (my choice, moore accurate) but a single node at the crossing can be found as well.</p>
+<p>Hi read these as well, <a href="/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,">https://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,</a> just by typing 'how to tag traffic lights' Some of us choose your tagging scheme (my choice, moore accurate) but a single node at the crossing can be found as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

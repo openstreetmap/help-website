@@ -121,7 +121,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are a couple of - mostly commercial - WMS services that support various projections, 4326 among them. See the <a href="http://wiki.openstreetmap.org/wiki/WMS">WMS page on the wiki</a> for details. You can also set up your own WMS or tile server using the 4326 projection (more work), or use a tool like MapProxy to re-project existing tiles into 4326 (sub-standard image quality).</p>
+<p>There are a couple of - mostly commercial - WMS services that support various projections, 4326 among them. See the <a href="https://wiki.openstreetmap.org/wiki/WMS">WMS page on the wiki</a> for details. You can also set up your own WMS or tile server using the 4326 projection (more work), or use a tool like MapProxy to re-project existing tiles into 4326 (sub-standard image quality).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -130,7 +130,7 @@ One Answer:
 <p>Thanks!</p>
 <p>I did the editing stuff at the beginning of the week as I can remember. So I think it's worth to wait for the update next week.</p>
 <p>Here are the coordinates of the bicycleshop if it's interesting enough - tiny nice bike-repair station that offers well updated retro-roadbikes from the 70s - early 90s:</p>
-<p><a href="http://www.openstreetmap.org/?minlon=13.437351455688&amp;minlat=52.493761291504&amp;maxlon=13.457352409363&amp;maxlat=52.513765106201">Stahl + Wolle - Berlin, Germany</a></p>
+<p><a href="https://www.openstreetmap.org/?minlon=13.437351455688&amp;minlat=52.493761291504&amp;maxlon=13.457352409363&amp;maxlat=52.513765106201">Stahl + Wolle - Berlin, Germany</a></p>
 <p>Best, Micha.</p>
 </div>
 <div id="comment-13373-info" class="comment-info">
@@ -142,7 +142,7 @@ One Answer:
 <div id="post-13382-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This shows <a href="http://www.openstreetmap.org/?lat=52.299136&amp;lon=-0.291858&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.299136&amp;lon=-0.291858&amp;zoom=18&amp;layers=M</a></p>
+<p>This shows <a href="https://www.openstreetmap.org/?lat=52.299136&amp;lon=-0.291858&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.299136&amp;lon=-0.291858&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-13382-info" class="comment-info">
 <span class="comment-age">(09 Jun '12, 18:54)</span> <span class="comment-user userinfo">andy mackey</span>

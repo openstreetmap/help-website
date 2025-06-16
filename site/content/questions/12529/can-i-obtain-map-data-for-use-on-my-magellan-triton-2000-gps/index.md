@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Magellan">Magellan</a> ... maybe there you can find a source where you can download a map or even create one on your own from fresh raw OSM data.</p>
+<p>Have a look in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Magellan">Magellan</a> ... maybe there you can find a source where you can download a map or even create one on your own from fresh raw OSM data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

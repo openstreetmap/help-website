@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Tagging node or building?"
-description = '''I have rather general question whether to tag a building or a node if both exist, but I will explain my question in the acutal example of a fire station (http://www.openstreetmap.org/?lat=52.54402&amp;amp;lon=13.247669&amp;amp;zoom=18&amp;amp;layers=M) For the fire station exists the node and the building. Both...'''
+description = '''I have rather general question whether to tag a building or a node if both exist, but I will explain my question in the acutal example of a fire station (https://www.openstreetmap.org/?lat=52.54402&amp;amp;lon=13.247669&amp;amp;zoom=18&amp;amp;layers=M) For the fire station exists the node and the building. Both...'''
 date = "2012-10-02T10:02:00Z"
 lastmod = "2012-10-02T13:15:00Z"
 weight = 16601
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have rather general question whether to tag a building or a node if both exist, but I will explain my question in the acutal example of a fire station (<a href="http://www.openstreetmap.org/?lat=52.54402&amp;lon=13.247669&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=52.54402&amp;lon=13.247669&amp;zoom=18&amp;layers=M)</a></p>
+<p>I have rather general question whether to tag a building or a node if both exist, but I will explain my question in the acutal example of a fire station (<a href="https://www.openstreetmap.org/?lat=52.54402&amp;lon=13.247669&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=52.54402&amp;lon=13.247669&amp;zoom=18&amp;layers=M)</a></p>
 <p>For the fire station exists the node and the building. Both have the tag amenity:fire_station. The building however has additional information.</p>
 <p>My question now: What is the best practice to deal with this.</p>
 <p>(A) Copy the information from the building to the tag. (If they apply to both of them.)</p>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>B is the best practice described <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">here</a> ("One feature, one OSM element").</p>
+<p>B is the best practice described <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">here</a> ("One feature, one OSM element").</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-16451-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div id="comment-16451-info" class="comment-info">
 <span class="comment-age">(25 Sep '12, 11:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -91,7 +91,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by scai 25 Sep '12, 11:44
+### The question has been closed for the following reason "Duplicate Question https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by scai 25 Sep '12, 11:44
 
 </div>
 

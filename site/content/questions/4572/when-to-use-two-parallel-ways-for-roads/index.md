@@ -228,8 +228,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes.</p>
-<p>There's a section on this old wiki page: <a href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">Editing Standards and Conventions#Divided highways</a></p>
-<p>And <a href="http://www.openstreetmap.org/?lat=51.515925&amp;lon=-0.164216&amp;zoom=18&amp;layers=M">here's an example</a> of an awkward road in London which has a barrier in the middle down some of its length.</p>
+<p>There's a section on this old wiki page: <a href="https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">Editing Standards and Conventions#Divided highways</a></p>
+<p>And <a href="https://www.openstreetmap.org/?lat=51.515925&amp;lon=-0.164216&amp;zoom=18&amp;layers=M">here's an example</a> of an awkward road in London which has a barrier in the middle down some of its length.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

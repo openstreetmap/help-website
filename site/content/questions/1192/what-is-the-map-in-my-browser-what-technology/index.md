@@ -205,7 +205,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Slippy_map">http://wiki.openstreetmap.org/wiki/Slippy_map</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Slippy_map">https://wiki.openstreetmap.org/wiki/Slippy_map</a></p>
 <p>This is all I needed to know, but back in October I was even worse a neeby than today. The wiki is rather good, once one gets the hang of it.</p>
 </div>
 <div class="answer-controls post-controls">

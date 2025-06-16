@@ -162,7 +162,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As the <a href="http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">wiki says</a>:</p>
+<p>As the <a href="https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">wiki says</a>:</p>
 <p>Contact a sysadmin, the sysadmin will disable your account and remove your details from the OpenStreetMap database. Your email address will usually be retained in the event that an OpenStreetMap sysadmin needs to contact you in the future.</p>
 <p>If you have made any modifications or additions to OpenStreetMap, the sysadmin will ask you to license these under any future OpenStreetMap Licenses or to release as public domain.</p>
 </div>
@@ -225,7 +225,7 @@ osqa_accepted = true
 <div id="post-83927-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As of 2022, it is usually no longer necessary to contact the sysadmins for this. See <a href="https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account/83926">my answer</a> for details.</p>
+<p>As of 2022, it is usually no longer necessary to contact the sysadmins for this. See <a href="/questions/878/how-can-i-delete-my-account/83926">my answer</a> for details.</p>
 </div>
 <div id="comment-83927-info" class="comment-info">
 <span class="comment-age">(19 Mar '22, 14:38)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -340,7 +340,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">wiki</a> currently says "Send an email to the support address and an administrator will disable your account". I'd do that.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">wiki</a> currently says "Send an email to the support address and an administrator will disable your account". I'd do that.</p>
 </div>
 <div id="comment-17255-info" class="comment-info">
 <span class="comment-age">(29 Oct '12, 10:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

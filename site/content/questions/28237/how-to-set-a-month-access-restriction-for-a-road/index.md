@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-28242-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There's also <a href="https://help.openstreetmap.org/questions/1083/tagging-seasonal-use-roads">this previous question</a>, if it helps.</p>
+<p>There's also <a href="/questions/1083/tagging-seasonal-use-roads">this previous question</a>, if it helps.</p>
 </div>
 <div id="comment-28242-info" class="comment-info">
 <span class="comment-age">(19 Nov '13, 17:00)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

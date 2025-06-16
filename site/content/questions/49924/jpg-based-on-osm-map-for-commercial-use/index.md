@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>IANAL, but crediting OSM in the image should be sufficient - see e.g. the image at <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> , specifically this: <a href="http://www.openstreetmap.org/assets/attribution_example-937610fe671db6f42d3666d91fd7a1b1035d0df26066b890e4c007a314fc2da3.png">http://www.openstreetmap.org/assets/attribution_example-937610fe671db6f42d3666d91fd7a1b1035d0df26066b890e4c007a314fc2da3.png</a></p>
+<p>IANAL, but crediting OSM in the image should be sufficient - see e.g. the image at <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> , specifically this: <a href="https://www.openstreetmap.org/assets/attribution_example-937610fe671db6f42d3666d91fd7a1b1035d0df26066b890e4c007a314fc2da3.png">https://www.openstreetmap.org/assets/attribution_example-937610fe671db6f42d3666d91fd7a1b1035d0df26066b890e4c007a314fc2da3.png</a></p>
 </div>
 <div id="comment-49925-info" class="comment-info">
 <span class="comment-age">(31 May '16, 15:42)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-49930-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/9641/piskvor"></a><a href="http://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a>: that's an "answer", could you please post it as such? (conversion does not work due to technical problems)</p>
+<p>meta <a href="https://help.openstreetmap.org/users/9641/piskvor"></a><a href="https://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a>: that's an "answer", could you please post it as such? (conversion does not work due to technical problems)</p>
 </div>
 <div id="comment-49930-info" class="comment-info">
 <span class="comment-age">(31 May '16, 19:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

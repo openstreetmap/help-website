@@ -123,7 +123,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can type "ios" or "offline" or both keywords in the search field of ths FAQ site ... there have already been similar questions, and answers.</p>
-<p>More hints are hidden at <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">Apple_iOS</a> in the OSM wiki. Have a look there for apps that have offline maps. Sometimes there are even opensource apps where you can get some ideas from.</p>
+<p>More hints are hidden at <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">Apple_iOS</a> in the OSM wiki. Have a look there for apps that have offline maps. Sometimes there are even opensource apps where you can get some ideas from.</p>
 <p>Or tell us an app that comes nearest to your aims, and maybe we can give you some hints how to clone its features.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,7 +174,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just in case, if you're not already familiar with how OpenStreetMap data is structured, it's worth having a read of <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this page</a> and the ones linked to it from the wiki. I'd also suggest becoming familar with the editing process - try adding some local points of interest near you that aren't already on the map.</p>
+<p>Just in case, if you're not already familiar with how OpenStreetMap data is structured, it's worth having a read of <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this page</a> and the ones linked to it from the wiki. I'd also suggest becoming familar with the editing process - try adding some local points of interest near you that aren't already on the map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

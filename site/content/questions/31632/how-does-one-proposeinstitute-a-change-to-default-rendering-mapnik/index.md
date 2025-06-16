@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How does one propose/institute a change in rendering?</p>
-<p>In <a href="http://www.openstreetmap.org/?mlat=32.68737&amp;mlon=-117.19813#map=17/32.68738/-117.19813">this area</a> of Coronado, California, United States of America the coastline way is overwritten by the beach and by a park. This obliterates the valuable details of the coastline way.</p>
+<p>In <a href="https://www.openstreetmap.org/?mlat=32.68737&amp;mlon=-117.19813#map=17/32.68738/-117.19813">this area</a> of Coronado, California, United States of America the coastline way is overwritten by the beach and by a park. This obliterates the valuable details of the coastline way.</p>
 <p>There are parks in my area (not just this one) which have jurisdiction on water and as such ought to be mapped. I understand that beaches ought to be drawn to the coastline but not below the high water mark. This practice ought to be changed for two reasons 1) it is important for tourist to know if there is a beach a low tide and 2) it is important for mariners to know the bottom substrate for anchoring purposes.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dbeach#Between_high_and_low_water">beach discussion page</a> talks to these point in some detail.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dbeach#Between_high_and_low_water">beach discussion page</a> talks to these point in some detail.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>

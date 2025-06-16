@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/edit#map=16/33.0695/-116.5851">Edit link</a> with layer USGS Topological Map has some buildings in black while others are purple. Why?</p>
+<p><a href="https://www.openstreetmap.org/edit#map=16/33.0695/-116.5851">Edit link</a> with layer USGS Topological Map has some buildings in black while others are purple. Why?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-colors" rel="tag" title="see questions tagged &#39;colors&#39;">colors</span> <span class="post-tag tag-link-legend" rel="tag" title="see questions tagged &#39;legend&#39;">legend</span> <span class="post-tag tag-link-usgs" rel="tag" title="see questions tagged &#39;usgs&#39;">usgs</span>

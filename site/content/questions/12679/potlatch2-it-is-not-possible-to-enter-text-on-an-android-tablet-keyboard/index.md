@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>(I'm not familiar with Android but) isn't there a way to manually bring the soft keyboard up**? If not, probably that's something that you'd want to take up with Google rather than OSM, since it's their software that's the problem.</p>
-<p>I'd imagine that a (relatively) small screen without a mouse would be quite limiting in terms of the general editing that you can do (does "pinch to zoom" work properly, for example?), so perhaps an <a href="http://wiki.openstreetmap.org/wiki/Android">Android-specific</a> editing application might be a better bet? I'm sure that other people can chip in with specific recommendations.</p>
+<p>I'd imagine that a (relatively) small screen without a mouse would be quite limiting in terms of the general editing that you can do (does "pinch to zoom" work properly, for example?), so perhaps an <a href="https://wiki.openstreetmap.org/wiki/Android">Android-specific</a> editing application might be a better bet? I'm sure that other people can chip in with specific recommendations.</p>
 <p>** I had a quick go with Potlatch2 on a Blackberry Playbook (a 7" non-Android tablet) and you CAN enter text, but zoom is tricky, and every off-target touch creates a new node, so frankly you wouldn't actually use this for editing.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -136,7 +136,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Many thanks for this reply. I checked this website <a href="http://www.freietonne.de/seekarte/">http://www.freietonne.de/seekarte/</a> and it also displays seamarks used in inland navigation, provided that the tagging scheme follows the indications of this page <a href="http://wiki.openstreetmap.org/wiki/DE:FreieTonne/Symbole.">http://wiki.openstreetmap.org/wiki/DE:FreieTonne/Symbole.</a> For example, locks on rivers and canals are properly rendered. Thanks again.</p>
+<p>Many thanks for this reply. I checked this website <a href="http://www.freietonne.de/seekarte/">http://www.freietonne.de/seekarte/</a> and it also displays seamarks used in inland navigation, provided that the tagging scheme follows the indications of this page <a href="https://wiki.openstreetmap.org/wiki/DE:FreieTonne/Symbole.">https://wiki.openstreetmap.org/wiki/DE:FreieTonne/Symbole.</a> For example, locks on rivers and canals are properly rendered. Thanks again.</p>
 </div>
 <div id="comment-14711-info" class="comment-info">
 <span class="comment-age">(30 Jul '12, 19:45)</span> <span class="comment-user userinfo">gerdami</span>

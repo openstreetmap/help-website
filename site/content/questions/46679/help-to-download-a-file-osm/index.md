@@ -219,7 +219,7 @@ osqa_accepted = false
 <p>The second query should have all of the bicycle stations within whatever boundary is chosen as Lyon and all of the highways. The earlier query returns the nodes ways and relations of bicycle stations without anything else.</p>
 <p>I would urge you to try to adjust the query yourself. A couple things about overpass: you have to request nodes, ways and relations if you want them all. Those results are combined by putting them inside of parenthesis (you can see this in the example queries). It is also necessary to request the members of ways and relations, this is what the final lines of the examples are doing. The <code>&gt;;</code> on the second to last line is an instruction to find the members, the last line says to add them to the output.</p>
 <p>The description of the query language may be helpful:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
 <p>I don't mean to be unhelpful, but understanding the data model will be useful when working with the data, and with an understanding of the data model, it should be simple to modify the overpass query to return the desired data.</p>
 </div>
 <div id="comment-46795-info" class="comment-info">
@@ -309,7 +309,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In general we have a collection of sources for rae OSM XML data in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">planet.osm</a></p>
+<p>In general we have a collection of sources for rae OSM XML data in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">planet.osm</a></p>
 <p>Read all the hints there ... for a regional extract for only a city I recommend to load an extract from geofabrik.de</p>
 <p>There are more tools then, if you want do cut that extract even in smaller pieces, tell us if you need those.</p>
 </div>
@@ -413,7 +413,7 @@ osqa_accepted = false
 <div id="post-60205-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've moved your "answer" to a new question at <a href="https://help.openstreetmap.org/questions/60204/sumo-how-to-import-data">https://help.openstreetmap.org/questions/60204/sumo-how-to-import-data</a> .</p>
+<p>I've moved your "answer" to a new question at <a href="/questions/60204/sumo-how-to-import-data">https://help.openstreetmap.org/questions/60204/sumo-how-to-import-data</a> .</p>
 </div>
 <div id="comment-60205-info" class="comment-info">
 <span class="comment-age">(21 Oct '17, 18:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

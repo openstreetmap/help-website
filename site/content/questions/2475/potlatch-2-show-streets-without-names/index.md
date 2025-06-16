@@ -113,9 +113,9 @@ One Answer:
 <div class="answer-body">
 <p>Potlatch 2 on <a href="http://openstreetmap.org">openstreetmap.org</a> doesn't currently have a built-in way of showing unnamed streets, but there are a number of steps you could take to get one:</p>
 <ol>
-<li>Create a custom stylesheet for Potlatch 2 which highlights streets with no name. Potlatch 2 uses a language called <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">MapCSS</a>, so you can create any style you want. There's a guide to <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">deploying a customised version of Potlatch 2</a> on the wiki.</li>
+<li>Create a custom stylesheet for Potlatch 2 which highlights streets with no name. Potlatch 2 uses a language called <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">MapCSS</a>, so you can create any style you want. There's a guide to <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">deploying a customised version of Potlatch 2</a> on the wiki.</li>
 <li>You could ask the developers working on Potlatch 2 to create such a style sheet and add it to Potlatch 2 running on <a href="http://openstreetmap.org">openstreetmap.org</a>. This will almost certainly take longer than doing it yourself, since the devs may have other priorities they want to work on. <a href="http://trac.openstreetmap.org/newticket">File a ticket in Trac</a> with the component <strong>Potlatch2</strong> and Type <strong>enhancement</strong>.</li>
-<li>You could use CloudMade's <a href="http://wiki.openstreetmap.org/wiki/NoName">NoName</a> rendering as a custom tiled background in PL2. This is only updated once a week, so any names you add won't show up immediately, but it still shows areas that need mapping.</li>
+<li>You could use CloudMade's <a href="https://wiki.openstreetmap.org/wiki/NoName">NoName</a> rendering as a custom tiled background in PL2. This is only updated once a week, so any names you add won't show up immediately, but it still shows areas that need mapping.</li>
 </ol>
 <p>Please bear in mind that for most places, the correct way of getting missing street names is to gather them in a survey. Methodically copying names from another source without permission is a violation of copyright, so please don't just take the names from another map.</p>
 </div>

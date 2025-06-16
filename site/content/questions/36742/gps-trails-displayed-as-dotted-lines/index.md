@@ -116,10 +116,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This has been noticed before<br />
-<a href="https://help.openstreetmap.org/questions/35514/why-are-traces-showing-up-dashed-in-id">https://help.openstreetmap.org/questions/35514/why-are-traces-showing-up-dashed-in-id</a></p>
+<a href="/questions/35514/why-are-traces-showing-up-dashed-in-id">https://help.openstreetmap.org/questions/35514/why-are-traces-showing-up-dashed-in-id</a></p>
 <p>Mine appear dashed too. We can guess a few possibilities and it will be interesting to see why it happens.</p>
-<p>When I downloaded one of <a href="http://help.openstreetmap.org/users/9628/talexhv">@talexhv</a>'s gpx traces it looks like this in iD when I tick the 'Local GPX file' checkbox <img src="http://help.openstreetmap.org/upfiles/local.png" alt="gpx" /></p>
-<p>and when I change the tick to 'OpenStreetMapo GPS traces' instead the same trace shows like this. <img src="http://help.openstreetmap.org/upfiles/dashed.png" alt="alt text" /></p>
+<p>When I downloaded one of <a href="https://help.openstreetmap.org/users/9628/talexhv">@talexhv</a>'s gpx traces it looks like this in iD when I tick the 'Local GPX file' checkbox <img src="/upfiles/local.png" alt="gpx" /></p>
+<p>and when I change the tick to 'OpenStreetMapo GPS traces' instead the same trace shows like this. <img src="/upfiles/dashed.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

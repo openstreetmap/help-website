@@ -119,7 +119,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would use the old_name tag for this situation.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Key:name">http://wiki.openstreetmap.org/wiki/Key:name</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Key:name">https://wiki.openstreetmap.org/wiki/Key:name</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

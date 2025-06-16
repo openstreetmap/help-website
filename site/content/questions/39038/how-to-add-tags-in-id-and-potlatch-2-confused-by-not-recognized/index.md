@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to add tags in iD and Potlatch 2? Confused by &quot;not recognized&quot;"
-description = '''I have found several items with regard to charging stations for EV or E-bike. Most with a link to http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station (Link to Wiki) However I don&#x27;t see a possibility to use these tags as such in iD and even in Potlatch 2 I get the warning that the tag i...'''
+description = '''I have found several items with regard to charging stations for EV or E-bike. Most with a link to https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station (Link to Wiki) However I don&#x27;t see a possibility to use these tags as such in iD and even in Potlatch 2 I get the warning that the tag i...'''
 date = "2014-12-04T16:14:00Z"
 lastmod = "2014-12-04T19:46:00Z"
 weight = 39038
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have found several items with regard to charging stations for EV or E-bike. Most with a link to <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station</a> (Link to Wiki)</p>
+<p>I have found several items with regard to charging stations for EV or E-bike. Most with a link to <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station</a> (Link to Wiki)</p>
 <p>However I don't see a possibility to use these tags as such in iD and even in Potlatch 2 I get the warning that the tag is not recognised/UNKNOWN.</p>
 <ul>
 <li>Is the wiki out of date?</li>
@@ -199,7 +199,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10102/kilokilo">@KiloKilo</a>: yes, exactly.</p>
+<p><a href="https://help.openstreetmap.org/users/10102/kilokilo">@KiloKilo</a>: yes, exactly.</p>
 </div>
 <div id="comment-39054-info" class="comment-info">
 <span class="comment-age">(04 Dec '14, 19:46)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -241,7 +241,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>KiloKilo, welcome youre in P2 and (ID) always able to ad any item. Click and ad a description in the advanced menu. In this case please read this as well, <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station.">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station.</a> happy mapping and enjoy adding the right tags.</p>
+<p>KiloKilo, welcome youre in P2 and (ID) always able to ad any item. Click and ad a description in the advanced menu. In this case please read this as well, <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station.">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station.</a> happy mapping and enjoy adding the right tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

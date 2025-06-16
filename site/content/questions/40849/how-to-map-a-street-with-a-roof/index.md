@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Add the tag <a href="http://wiki.openstreetmap.org/wiki/Key:covered">covered=yes</a> to the parts of the street that are covered, you might have to split the way accordingly.</p>
-<p>There is also the <a href="http://wiki.openstreetmap.org/wiki/Tag:building%3Droof">building=roof</a> tag which you could add to the roof outline. But the wiki suggests to use this tag only <em>for roofs which are open at least at two sides</em> - which isn't really the case here.</p>
+<p>Add the tag <a href="https://wiki.openstreetmap.org/wiki/Key:covered">covered=yes</a> to the parts of the street that are covered, you might have to split the way accordingly.</p>
+<p>There is also the <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Droof">building=roof</a> tag which you could add to the roof outline. But the wiki suggests to use this tag only <em>for roofs which are open at least at two sides</em> - which isn't really the case here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

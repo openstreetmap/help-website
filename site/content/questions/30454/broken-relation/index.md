@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I found a broken relation for water area <strong>Balaton</strong>: <a href="http://analyser.openstreetmap.fr/cgi-bin/index.py?relation=1638031">Relation 1638031</a></p>
-<p>The end node 2607089288 of way <a href="http://www.openstreetmap.org/way/232147389">232147389</a> is not connected. Can someone fix this or explain me how to fix it with JOSM?</p>
+<p>The end node 2607089288 of way <a href="https://www.openstreetmap.org/way/232147389">232147389</a> is not connected. Can someone fix this or explain me how to fix it with JOSM?</p>
 <p>Kind regards</p>
 </div>
 <div id="question-tags" class="tags-container tags">

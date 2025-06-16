@@ -41,8 +41,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I've been adding large shopping centers in my area to OSM, in some fairly descent detail I might add. But as I compared a recently added shopping center with one I added earlier, I realized that I did the parking lots a bit differently.</p>
-<p>For one I did every parking aisle. <a href="http://www.openstreetmap.org/?lat=35.101488679647446&amp;lon=-80.98476827144623&amp;zoom=18">http://www.openstreetmap.org/?lat=35.101488679647446&amp;lon=-80.98476827144623&amp;zoom=18</a></p>
-<p>But for a more recent one I did every parking aisle PLUS I also marked off each parking area <a href="http://www.openstreetmap.org/?lat=35.145066529512405&amp;lon=-80.93232035636902&amp;zoom=18">http://www.openstreetmap.org/?lat=35.145066529512405&amp;lon=-80.93232035636902&amp;zoom=18</a></p>
+<p>For one I did every parking aisle. <a href="https://www.openstreetmap.org/?lat=35.101488679647446&amp;lon=-80.98476827144623&amp;zoom=18">https://www.openstreetmap.org/?lat=35.101488679647446&amp;lon=-80.98476827144623&amp;zoom=18</a></p>
+<p>But for a more recent one I did every parking aisle PLUS I also marked off each parking area <a href="https://www.openstreetmap.org/?lat=35.145066529512405&amp;lon=-80.93232035636902&amp;zoom=18">https://www.openstreetmap.org/?lat=35.145066529512405&amp;lon=-80.93232035636902&amp;zoom=18</a></p>
 <p>What are your opinions on marking both parking aisles (obviously parking areas) AND parking areas? Aside from feeling a bit redundant, it bothers me because of all the "P" logos that it creates all over the place. (Zoom out to level 15 on that second link to see how the "P's" get a bit ridiculous and pretty much overpower the area). To me it's just a visual thing. All those "P's" and all those tan areas don't look good. But is one data set more important than others, or more useful to certain applications or devices?</p>
 <p>As I move forward with more details in other areas I'd like to be consistent on how I do major parking lots. I don't mind doing the parking aisles but I'm not so sure about additionally circling the same area as a parking lot too.</p>
 </div>
@@ -264,7 +264,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi You could look at this one, <a href="http://www.openstreetmap.org/?lat=52.060857&amp;lon=5.172798&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.060857&amp;lon=5.172798&amp;zoom=18&amp;layers=M</a> I only added 3 extra P dots. The P dot in the left corner is caused by the parking area, its not much but sufficient IMHO. If you would like to make your own doiing at the same way, too bad its a lot of work and like what emj states, make a choice to cover them all together as the same area without in a multipolygone the buildings. It looks like a large shopping area, where not all the shops are in the same building. The use of multipolygone is ment for this kind of tagging Greetz &amp; have fun</p>
+<p>Hi You could look at this one, <a href="https://www.openstreetmap.org/?lat=52.060857&amp;lon=5.172798&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.060857&amp;lon=5.172798&amp;zoom=18&amp;layers=M</a> I only added 3 extra P dots. The P dot in the left corner is caused by the parking area, its not much but sufficient IMHO. If you would like to make your own doiing at the same way, too bad its a lot of work and like what emj states, make a choice to cover them all together as the same area without in a multipolygone the buildings. It looks like a large shopping area, where not all the shops are in the same building. The use of multipolygone is ment for this kind of tagging Greetz &amp; have fun</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

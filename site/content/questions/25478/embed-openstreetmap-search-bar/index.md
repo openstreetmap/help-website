@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Embed openstreetmap search bar"
-description = '''Hi All, I am interested in embedding the search bar of openstreetmap in my website just like I do  for google search. Here is the short template, I am not an expert in php or html.  &amp;lt;form method=&quot;get&quot; action=&quot;http://www.openstreetmap.org/&quot; target=&quot;_blank&quot;&amp;gt;  &amp;lt;input type=&quot;text&quot; name=&quot;q&quot; size=...'''
+description = '''Hi All, I am interested in embedding the search bar of openstreetmap in my website just like I do  for google search. Here is the short template, I am not an expert in php or html.  &amp;lt;form method=&quot;get&quot; action=&quot;https://www.openstreetmap.org/&quot; target=&quot;_blank&quot;&amp;gt;  &amp;lt;input type=&quot;text&quot; name=&quot;q&quot; size=...'''
 date = "2013-08-16T11:36:00Z"
 lastmod = "2013-08-16T11:36:00Z"
 weight = 25478
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi All,</p>
 <p>I am interested in embedding the search bar of openstreetmap in my website just like I do for google search. Here is the short template, I am not an expert in php or html.</p>
-<p>&lt;form method="get" action="http://www.openstreetmap.org/" target="_blank"&gt; &lt;input type="text" name="q" size="71" maxlength="255" value="" placeholder="Type here to use openstreet map"/&gt; &lt;input type="submit" value="Open street Maps"/&gt; &lt;/form&gt;</p>
+<p>&lt;form method="get" action="https://www.openstreetmap.org/" target="_blank"&gt; &lt;input type="text" name="q" size="71" maxlength="255" value="" placeholder="Type here to use openstreet map"/&gt; &lt;input type="submit" value="Open street Maps"/&gt; &lt;/form&gt;</p>
 <p>Please let me know if it is possible and if yes how?</p>
 <p>Regards, Pawan</p>
 </div>

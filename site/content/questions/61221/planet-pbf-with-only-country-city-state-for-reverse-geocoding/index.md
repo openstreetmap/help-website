@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You haven't mentioned a specific geocoder, so I assume you plan to write your own implementation, e.g. using a full-text search engine.</p>
-<p><a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> allows you to extract only the places you want. Start with a small geographic area (e.g. one country) first. Look for <code>place</code> tags (<a href="http://wiki.openstreetmap.org/wiki/Key:place),">http://wiki.openstreetmap.org/wiki/Key:place),</a> <code>boundary=administrative</code> (<a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative)">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative)</a> and <code>admin_level</code> (country is 2, city is 8, so anything in that range).</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> allows you to extract only the places you want. Start with a small geographic area (e.g. one country) first. Look for <code>place</code> tags (<a href="https://wiki.openstreetmap.org/wiki/Key:place),">https://wiki.openstreetmap.org/wiki/Key:place),</a> <code>boundary=administrative</code> (<a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative)">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative)</a> and <code>admin_level</code> (country is 2, city is 8, so anything in that range).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

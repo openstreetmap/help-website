@@ -131,7 +131,7 @@ Looks like a LOT of work to do in the area, good luck...</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, it looks like it should be tagged outer.</p>
-<p>Incidentally, it also looks like way <a href="http://www.openstreetmap.org/way/166580594">166580594</a> is tagged inner, but has the same name as the parent relation, and is on or beyond other outer ways. Could this way just be deleted?</p>
+<p>Incidentally, it also looks like way <a href="https://www.openstreetmap.org/way/166580594">166580594</a> is tagged inner, but has the same name as the parent relation, and is on or beyond other outer ways. Could this way just be deleted?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

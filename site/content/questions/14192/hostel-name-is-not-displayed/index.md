@@ -104,10 +104,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess you are talking about <a href="http://www.openstreetmap.org/browse/node/1821595631">this hostel</a>.</p>
-<p>First, please don't use wrong tags only to make things appear on the map. This is called <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> and should be avoided!</p>
-<p>Second, the style sheet of the renderer (in this case <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>) defines what things will appear and how they will appear. Hostels definitely are rendered on the map, even with names! Yet the name is not always visible, for example if there are other objects around and their labels would overlap (like the fast food POI in your case). In this case also the <a href="http://wiki.openstreetmap.org/wiki/Mapnik#Stylesheet">style sheet</a> defines which of the conflicting labels will be shown and which hidden.</p>
-<p>And don't forget that the main page is just an example rendering of the objects in the database. There are lots of other <a href="http://wiki.openstreetmap.org/wiki/Rendering">renderers</a> and <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">services</a> available, all with different settings and priorities.</p>
+<p>I guess you are talking about <a href="https://www.openstreetmap.org/browse/node/1821595631">this hostel</a>.</p>
+<p>First, please don't use wrong tags only to make things appear on the map. This is called <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> and should be avoided!</p>
+<p>Second, the style sheet of the renderer (in this case <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>) defines what things will appear and how they will appear. Hostels definitely are rendered on the map, even with names! Yet the name is not always visible, for example if there are other objects around and their labels would overlap (like the fast food POI in your case). In this case also the <a href="https://wiki.openstreetmap.org/wiki/Mapnik#Stylesheet">style sheet</a> defines which of the conflicting labels will be shown and which hidden.</p>
+<p>And don't forget that the main page is just an example rendering of the objects in the database. There are lots of other <a href="https://wiki.openstreetmap.org/wiki/Rendering">renderers</a> and <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">services</a> available, all with different settings and priorities.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

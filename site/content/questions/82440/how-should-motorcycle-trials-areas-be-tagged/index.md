@@ -216,7 +216,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Thanks for the quick replies. I'm happy to change the tags to something more appropriate than leisure=park if it's clear what the tags should be.</p>
 <p>Maybe an example will help. The areas in question are designated in the Cleveland National Forest Motor Vehicle Use Map. Here's how the map depicts these areas.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2021-11-01_at_11.46.19_AM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2021-11-01_at_11.46.19_AM.png" alt="alt text" /></p>
 <p>The USFS map legend makes it clear that the Trials Areas are for motorcycle use only even though some trails (e.g. 901) are also option to ATVs, and other trails (e.g. 903) are open to any street-legal motor vehicle.</p>
 <p>Here's a link to one of the areas off the 912A route: <a href="https://www.openstreetmap.org/way/998197106">Trials Area</a>. If you look at the aerial imagery, you can see that this is not a motocross track. It's just a rock outcropping that has been designated as an open riding area.</p>
 <p>For reference, <a href="https://en.wikipedia.org/wiki/Motorcycle_trials">motorcycle trials</a> is a distinct sport from motocross. So I wouldn't think that leisure=track or sport=motocross would be appropriate here.</p>

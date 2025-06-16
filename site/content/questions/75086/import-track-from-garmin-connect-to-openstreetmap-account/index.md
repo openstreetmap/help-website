@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://tapiriik.com/">https://tapiriik.com/</a> is a connector from different app (as example from garmin to Strava). Tapiriik connects different apps, it was useful if someone of these apps could permit to download all the track. We could synchronize all the track form GC to XXX and download all the track, after download from XXX and import in OSM. What do you think about? <img src="https://help.openstreetmap.org/upfiles/apps.jpg" alt="alt text" /></p>
+<p><a href="https://tapiriik.com/">https://tapiriik.com/</a> is a connector from different app (as example from garmin to Strava). Tapiriik connects different apps, it was useful if someone of these apps could permit to download all the track. We could synchronize all the track form GC to XXX and download all the track, after download from XXX and import in OSM. What do you think about? <img src="/upfiles/apps.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -279,7 +279,7 @@ Access-Control-Allow-Origin: *
 1
 </div>
 <div class="comment-text">
-<p>Also checkout <a href="http://wiki.openstreetmap.org/wiki/Osmium/Architecture#OSM_Files">file handling in Osmium</a>.</p>
+<p>Also checkout <a href="https://wiki.openstreetmap.org/wiki/Osmium/Architecture#OSM_Files">file handling in Osmium</a>.</p>
 </div>
 <div id="comment-18686-info" class="comment-info">
 <span class="comment-age">(24 Dec '12, 07:20)</span> <span class="comment-user userinfo">cartinus</span>

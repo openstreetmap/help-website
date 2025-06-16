@@ -138,7 +138,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Hello srbrook, thank you very much for explain WGS84 and projections for me. I think I got better idea now. My application is using tiles from other source. I am trying to use OSM tiles instead. After I put OSM tiles in the application, (I tested on a few places,) the x coordinates looks the same as before, but y coordinates are about a couple of kilometres different between two tile source. My first guess was it is probably to do with osm tiles are using a different projection from what the application requires. After I saw this post <a href="https://help.openstreetmap.org/questions/23934/osm-and-4326-projection,">https://help.openstreetmap.org/questions/23934/osm-and-4326-projection,</a> I am more convinced that this is to do with the different projection.</p>
+<p>Hello srbrook, thank you very much for explain WGS84 and projections for me. I think I got better idea now. My application is using tiles from other source. I am trying to use OSM tiles instead. After I put OSM tiles in the application, (I tested on a few places,) the x coordinates looks the same as before, but y coordinates are about a couple of kilometres different between two tile source. My first guess was it is probably to do with osm tiles are using a different projection from what the application requires. After I saw this post <a href="/questions/23934/osm-and-4326-projection,">https://help.openstreetmap.org/questions/23934/osm-and-4326-projection,</a> I am more convinced that this is to do with the different projection.</p>
 <p>I will have another look at the application code, and I might need your help again. Thanks.</p>
 </div>
 <div id="comment-26799-info" class="comment-info">
@@ -150,7 +150,7 @@ One Answer:
 <div id="post-26861-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hello srbrook, my application is using osm tiles as the background layer, and features on other layers are created by mapinfo. Because mapinfo is using NAD83 projection. I guess my question became how to generate tiles in NAD83 projection. To remove confusion, I started a new question <a href="https://help.openstreetmap.org/questions/26860/how-to-generate-tiles-in-nad83-projection,">https://help.openstreetmap.org/questions/26860/how-to-generate-tiles-in-nad83-projection,</a> and I will close this question. I look forward to your reply in the new question. Thanks.</p>
+<p>Hello srbrook, my application is using osm tiles as the background layer, and features on other layers are created by mapinfo. Because mapinfo is using NAD83 projection. I guess my question became how to generate tiles in NAD83 projection. To remove confusion, I started a new question <a href="/questions/26860/how-to-generate-tiles-in-nad83-projection,">https://help.openstreetmap.org/questions/26860/how-to-generate-tiles-in-nad83-projection,</a> and I will close this question. I look forward to your reply in the new question. Thanks.</p>
 </div>
 <div id="comment-26861-info" class="comment-info">
 <span class="comment-age">(30 Sep '13, 12:29)</span> <span class="comment-user userinfo">hua zhang</span>

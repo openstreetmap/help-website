@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The best place to look for traffic rules is probably the <a href="http://wiki.openstreetmap.org/wiki/Road_Signs">road signs</a> wiki page and its <a href="http://wiki.openstreetmap.org/wiki/DE:Road_Signs">various translations</a>.</p>
+<p>The best place to look for traffic rules is probably the <a href="https://wiki.openstreetmap.org/wiki/Road_Signs">road signs</a> wiki page and its <a href="https://wiki.openstreetmap.org/wiki/DE:Road_Signs">various translations</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

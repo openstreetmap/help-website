@@ -108,7 +108,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Potlatch is an open source Open Street Map editor written to work in your web browser (by using the Flash plugin). It's currently the default editor on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> -- when you click the Edit tab you're using Potlatch! No need to download anything.</p>
-<p>For more information, a user guide, and other help see the <a href="http://wiki.openstreetmap.org/wiki/Potlatch">Potlatch wiki page</a>.</p>
+<p>For more information, a user guide, and other help see the <a href="https://wiki.openstreetmap.org/wiki/Potlatch">Potlatch wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

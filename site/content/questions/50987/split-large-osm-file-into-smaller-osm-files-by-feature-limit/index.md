@@ -167,7 +167,7 @@ One Answer:
 <div id="post-51004-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Import/Software">http://wiki.openstreetmap.org/wiki/Import/Software</a> . There are multiple programs there that might help you.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Import/Software">https://wiki.openstreetmap.org/wiki/Import/Software</a> . There are multiple programs there that might help you.</p>
 </div>
 <div id="comment-51004-info" class="comment-info">
 <span class="comment-age">(20 Jul '16, 21:24)</span> <span class="comment-user userinfo">Jochen Topf</span>

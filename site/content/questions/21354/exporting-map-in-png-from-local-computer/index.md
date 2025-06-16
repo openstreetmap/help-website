@@ -80,7 +80,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Hi Marco, welcome! :-) That is a very common topic which has been answered many times already. See for example: https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment or directly: http://wiki.openstreetmap.org/wiki/OSM_on_Paper" by aseerel4c26 09 Apr '13, 16:50
+### The question has been closed for the following reason "Hi Marco, welcome! :-) That is a very common topic which has been answered many times already. See for example: https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment or directly: https://wiki.openstreetmap.org/wiki/OSM_on_Paper" by aseerel4c26 09 Apr '13, 16:50
 
 </div>
 

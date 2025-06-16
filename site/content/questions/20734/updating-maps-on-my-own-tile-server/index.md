@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When I did it, I followed the <a href="http://wiki.openstreetmap.org/wiki/Minutely_Mapnik">"Minutely Mapnik" instructions in the OSM wiki</a>.</p>
+<p>When I did it, I followed the <a href="https://wiki.openstreetmap.org/wiki/Minutely_Mapnik">"Minutely Mapnik" instructions in the OSM wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Is there any way to sort my uploaded traces by date? I have many pages of traces, most of which have a date in the title, and need to determine if a particular trace has already been uploaded so as not to duplicate it. I upload my traces with timestamps intact AFAIK, that is, "Identifiable (shown in trace list and as identifiable, ordered points with timestamps)"</p>
 <p>Thanks Dave</p>
-<p><a href="http://www.openstreetmap.org/user/AlaskaDave/traces">http://www.openstreetmap.org/user/AlaskaDave/traces</a></p>
+<p><a href="https://www.openstreetmap.org/user/AlaskaDave/traces">https://www.openstreetmap.org/user/AlaskaDave/traces</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-sort" rel="tag" title="see questions tagged &#39;sort&#39;">sort</span> <span class="post-tag tag-link-gpx" rel="tag" title="see questions tagged &#39;gpx&#39;">gpx</span> <span class="post-tag tag-link-sorting" rel="tag" title="see questions tagged &#39;sorting&#39;">sorting</span> <span class="post-tag tag-link-traces" rel="tag" title="see questions tagged &#39;traces&#39;">traces</span>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, download them all (copy and paste from <a href="http://www.openstreetmap.org/user/AlaskaDave/traces)">http://www.openstreetmap.org/user/AlaskaDave/traces)</a> (only 20 pages), to a spreadsheet where they can be sorted by date order. Your problem will be that you have not always used the gpx date in the same manner. Also you've sometimes uploaded gpx traces years after they were made i.e. "2013--3-16 Phayao to Chiangrai via Phu Sang WF uploaded on 27-12-2015". With a little patience the dates can be rectified in the spreadsheet and sorted properly.</p>
+<p>Hi, download them all (copy and paste from <a href="https://www.openstreetmap.org/user/AlaskaDave/traces)">https://www.openstreetmap.org/user/AlaskaDave/traces)</a> (only 20 pages), to a spreadsheet where they can be sorted by date order. Your problem will be that you have not always used the gpx date in the same manner. Also you've sometimes uploaded gpx traces years after they were made i.e. "2013--3-16 Phayao to Chiangrai via Phu Sang WF uploaded on 27-12-2015". With a little patience the dates can be rectified in the spreadsheet and sorted properly.</p>
 <p>I always keep the date from the GPS generated gpx file untouched and place any description of the trace after it. Regards.</p>
 </div>
 <div class="answer-controls post-controls">

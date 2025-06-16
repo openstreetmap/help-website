@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>They are the number of badges you have won in each of the gold, silver and bronze categories. Click <a href="http://help.openstreetmap.org/badges/">badges tab</a> above to see what are available, or the bottom of <a href="http://help.openstreetmap.org/users/2532/gerdami">your user page</a> to see which ones you have been awarded.</p>
+<p>They are the number of badges you have won in each of the gold, silver and bronze categories. Click <a href="https://help.openstreetmap.org/badges/">badges tab</a> above to see what are available, or the bottom of <a href="https://help.openstreetmap.org/users/2532/gerdami">your user page</a> to see which ones you have been awarded.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -253,7 +253,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello There, If it's not been said before welcome to the addiction of OSM.</p>
-<p>I find this page to be very helpful,:- <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a> it describes well the way to map bodies of water.</p>
+<p>I find this page to be very helpful,:- <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a> it describes well the way to map bodies of water.</p>
 <p>If you've more specific questions after reading that page or need anything explaining please just ask.</p>
 <p>Regards Bernard</p>
 </div>

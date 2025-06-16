@@ -65,7 +65,7 @@ osqa_accepted = false
 <ul>
 <li>Found this in the German part of the forums but it was last updated in 2012. Any assistance would be awesome !</li>
 </ul>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG1.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/IMG1.PNG" alt="alt text" /></p>
 </div>
 <div id="comment-63098-info" class="comment-info">
 <span class="comment-age">(24 Apr '18, 02:01)</span> <span class="comment-user userinfo">Joel PG</span>

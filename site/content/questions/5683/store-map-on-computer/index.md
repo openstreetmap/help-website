@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is a wide range of choice for this, far too much to cover in an answer here.</p>
-<p>I would suggest browsing this summary on the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">Offline Routers</a>. Only you will know what is likely to fit your software environment, technical knowledge and routing requirements. Many, if not all, of these require OSM data to be stored in a format appropriate for routing: the OSM XML format is not optimal for this purpose.</p>
+<p>I would suggest browsing this summary on the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">Offline Routers</a>. Only you will know what is likely to fit your software environment, technical knowledge and routing requirements. Many, if not all, of these require OSM data to be stored in a format appropriate for routing: the OSM XML format is not optimal for this purpose.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

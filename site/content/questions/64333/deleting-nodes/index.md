@@ -117,25 +117,25 @@ One Answer:
 <div class="answer-body">
 <p>The procedure with 2 of the most popular editors, <strong>iD</strong> and <strong>JOSM</strong>, would be as follows:</p>
 <p>Let's say we want to delete a litter bin in a park (a wrong edit or a litter bin that has been removed, for example):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papelerared.png" alt="alt text" /></p>
+<p><img src="/upfiles/papelerared.png" alt="alt text" /></p>
 <h2 id="with-id">With iD</h2>
 <p>To edit the map, we select the iD editor (we need to login with our OSM user):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraiD01red.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraiD01red.png" alt="alt text" /></p>
 <p>Next, we left-click on the waste basket we want to delete, and we right-click to get the delete button (we can also use the <strong>Ctrl+Backspace</strong> shortcut):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraiD02red.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraiD02red.png" alt="alt text" /></p>
 <p>If the node you want to delete is part of one way, you can select the node similarly:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraiD03red.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraiD03red.png" alt="alt text" /></p>
 <p>Once you have finished with your edits, you can upload the changes to the OSM server. Click on the button with the upload icon on the top of the screen (or <strong>Ctrl+s</strong> shortcut)...</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraiD04red.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraiD04red.png" alt="alt text" /></p>
 <p>... and then add a comment and a source for the data change, before clicking on the <em>Upload</em> button (blue button):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraiD05red.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraiD05red.png" alt="alt text" /></p>
 <h2 id="with-josm">With JOSM</h2>
 <p>Download the data for the area we want to edit. Click on the waste-basket node and then click on the <em>Delete</em> button of the keyboard:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraJOSM01red.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraJOSM01red.png" alt="alt text" /></p>
 <p>The same applies to any node that is part of a way:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraJOSM02.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraJOSM02.png" alt="alt text" /></p>
 <p>Finally, click on the upload button (or <strong>Ctrl+Shift+Up</strong> shortcut), write a comment, mention the source you have used, and click on the <em>Upload changes</em> button:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/papeleraJOSM03red.png" alt="alt text" /></p>
+<p><img src="/upfiles/papeleraJOSM03red.png" alt="alt text" /></p>
 <p>Deleting a node is a beginner task. You may be interested in reading some tutorials for beginners, like the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">link of andy mackey</a>, or <a href="http://learnosm.org">learnosm</a>, for example.</p>
 </div>
 <div class="answer-controls post-controls">

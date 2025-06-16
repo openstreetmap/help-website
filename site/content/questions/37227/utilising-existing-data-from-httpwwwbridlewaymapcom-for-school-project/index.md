@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, you can use the underlying OSM data. I don't know whether they have used other data sources for their map. If they did, you have to ask the copyright owners of that data for permission.</p>
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Develop">wiki for developers</a> for more information on using the OSM data in your application.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Develop">wiki for developers</a> for more information on using the OSM data in your application.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ One Answer:
 <div id="post-37234-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Whether they can use "this existing data" (i.e. the data as presented by <a href="http://www.bridlewaymap.com/">http://www.bridlewaymap.com/</a> , including the style of the underlying map tiles) I'm not sure - the tiles are hosted at Mapbox (a company separate from OpenStreetMap, that offers services using OpenStreetMap data and knowledge) and the tile style may be one of theirs. However as <a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> says, the underlying OpenStreetMap data can certainly be used (see <a href="http://www.openstreetmap.org/copyright">this page</a> for details).</p>
+<p>Whether they can use "this existing data" (i.e. the data as presented by <a href="http://www.bridlewaymap.com/">http://www.bridlewaymap.com/</a> , including the style of the underlying map tiles) I'm not sure - the tiles are hosted at Mapbox (a company separate from OpenStreetMap, that offers services using OpenStreetMap data and knowledge) and the tile style may be one of theirs. However as <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> says, the underlying OpenStreetMap data can certainly be used (see <a href="https://www.openstreetmap.org/copyright">this page</a> for details).</p>
 <p>Your students would have to decide "what constitutes a bridleway" of course - it might be "something the physically looks like a bridleway" or "something that has the legal status of Public Bridleway", or perhaps some combination (which is what <a href="http://www.bridlewaymap.com/">http://www.bridlewaymap.com/</a> looks like it is showing).</p>
 </div>
 <div id="comment-37234-info" class="comment-info">

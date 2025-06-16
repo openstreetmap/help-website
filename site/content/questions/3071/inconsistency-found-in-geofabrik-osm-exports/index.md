@@ -45,7 +45,7 @@ osqa_accepted = true
 <p><a href="http://download.geofabrik.de/osm/europe/france/"></a><a href="http://download.geofabrik.de/osm/europe/france/"></a><a href="http://download.geofabrik.de/osm/europe/france/">http://download.geofabrik.de/osm/europe/france/</a></p>
 <p>However, in some of them, I found some strange ways definitions (missing nodes), this sounds to me like a mistake from their side, a kind of inconsistency that occurs during the generation of those subsets. However, as I'm relatively new to OSM, maybe you can confirm that this is a mistake from their side.</p>
 <p>Here's the definition of the way 23301557 in their file: (with only one node in it) <img src="/upfiles/Screen_shot_2011-02-15_at_2.51.34_PM.png" alt="alt text" /></p>
-<p><strong>And here's the way it is defined in OSM</strong> : <a href="http://www.openstreetmap.org/browse/way/23301557"></a><a href="http://www.openstreetmap.org/browse/way/23301557"></a><a href="http://www.openstreetmap.org/browse/way/23301557">http://www.openstreetmap.org/browse/way/23301557</a> <img src="/upfiles/Screen_shot_2011-02-15_at_2.51.50_PM.png" alt="alt text" /> Some nodes seem to be missing.....</p>
+<p><strong>And here's the way it is defined in OSM</strong> : <a href="https://www.openstreetmap.org/browse/way/23301557"></a><a href="https://www.openstreetmap.org/browse/way/23301557"></a><a href="https://www.openstreetmap.org/browse/way/23301557">https://www.openstreetmap.org/browse/way/23301557</a> <img src="/upfiles/Screen_shot_2011-02-15_at_2.51.50_PM.png" alt="alt text" /> Some nodes seem to be missing.....</p>
 <p>Can you confirm me that this is due an error on the geofabrik side and not something I'm missing in my use of the .osm file ?</p>
 <p>Thanks a lot.</p>
 </div>

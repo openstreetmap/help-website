@@ -107,7 +107,7 @@ osqa_accepted = false
 <p>You may have technical answers, along with general import advice (copyright, import method, ...) on the import mailing list:</p>
 <p><a href="http://lists.openstreetmap.org/listinfo/imports">http://lists.openstreetmap.org/listinfo/imports</a></p>
 <p>Also, you probably want to have a look to :</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

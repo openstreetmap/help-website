@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Lately, I've come upon many instances of data (mostly street names) on the OSM database that were copied <em>verbatim</em> from unauthorized sources (mostly Google and Bing). Some of them are very old, but many are very recent, and some were inserted by very active users.</p>
 <p>I've checked, for a few cases, the official, public, authorized, sources for the same data, and it is different from the information in Google Maps. Therefore, I can conclude that the data in the OSM database <em>was almost surely</em> copied from Google.</p>
 <p>It seems that, no matter how many times it is said, there are always some users simply ignoring the "do not copy from other [unauthorized] sources" rule...</p>
-<p>Not willing to take the matter to the DWG for now, I want to at least, somehow, notify the offending user(s), maybe asking politely not to make the same mistake, or maybe to remove the offending data, or send some other message with the same content and/or effect. At least before something like <a href="https://help.openstreetmap.org/questions/27159/road-in-uberaba-mg-brazil">this</a> happens (total disaster).</p>
+<p>Not willing to take the matter to the DWG for now, I want to at least, somehow, notify the offending user(s), maybe asking politely not to make the same mistake, or maybe to remove the offending data, or send some other message with the same content and/or effect. At least before something like <a href="/questions/27159/road-in-uberaba-mg-brazil">this</a> happens (total disaster).</p>
 <p>Any tips on how to do it? How do one approach another user regarding those issues?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

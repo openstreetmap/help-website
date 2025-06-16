@@ -111,7 +111,7 @@ If there is no established way, is there some proposal?</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>In the early days one would have just said "add hgv=yes, bus=yes". There's actually 2233 objects tagged with both "amenity=parking" and "hgv=*", so I'd suggest using that.</p>
-<p>Some are using <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/parking:lane">Proposed_features/parking:lane</a> syntax also for areas. If the area is only allowed for buses and hgv's, that would be parking:condition:area:vehicles=hgv;bus or parking:condition:vehicles=hgv;bus</p>
+<p>Some are using <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/parking:lane">Proposed_features/parking:lane</a> syntax also for areas. If the area is only allowed for buses and hgv's, that would be parking:condition:area:vehicles=hgv;bus or parking:condition:vehicles=hgv;bus</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

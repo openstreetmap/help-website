@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's <a href="http://wiki.openstreetmap.org/wiki/England_Cycling_Data_project">England Cycling Data from the DfT</a>, I think.</p>
+<p>It's <a href="https://wiki.openstreetmap.org/wiki/England_Cycling_Data_project">England Cycling Data from the DfT</a>, I think.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

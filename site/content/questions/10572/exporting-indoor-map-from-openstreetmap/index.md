@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Exporting Indoor map from openstreetmap"
-description = '''Dear friends I have created map for our college building as following  http://www.openstreetmap.org/?lat=19.0753930807114&amp;amp;lon=72.9924237728119&amp;amp;zoom=18 This map has building interiors .you can see by adding data overlay . But due to limitations on zoom I cannot export the internal structure o...'''
+description = '''Dear friends I have created map for our college building as following  https://www.openstreetmap.org/?lat=19.0753930807114&amp;amp;lon=72.9924237728119&amp;amp;zoom=18 This map has building interiors .you can see by adding data overlay . But due to limitations on zoom I cannot export the internal structure o...'''
 date = "2012-02-13T18:01:00Z"
 lastmod = "2020-05-14T07:34:00Z"
 weight = 10572
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Dear friends I have created map for our college building as following <a href="http://www.openstreetmap.org/?lat=19.0753930807114&amp;lon=72.9924237728119&amp;zoom=18">http://www.openstreetmap.org/?lat=19.0753930807114&amp;lon=72.9924237728119&amp;zoom=18</a></p>
+<p>Dear friends I have created map for our college building as following <a href="https://www.openstreetmap.org/?lat=19.0753930807114&amp;lon=72.9924237728119&amp;zoom=18">https://www.openstreetmap.org/?lat=19.0753930807114&amp;lon=72.9924237728119&amp;zoom=18</a></p>
 <p>This map has building interiors .you can see by adding data overlay .</p>
 <p>But due to limitations on zoom I cannot export the internal structure of the mapped building I want to use this map on android phones for indoor navigation .But how to export the higher zoomed levels from osm ? How to render this map on android smartphone ?</p>
 <p>Thanks in advance</p>
@@ -171,7 +171,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Looking at the building, I would probably be able to guess what most of the lines mean, but that is not something map data should rely on. Most of the lines seem untagged so it won't be visible on any rendered map - disregarding the zoom level.</p>
-<p>For indoor mapping look at this <a href="http://wiki.openstreetmap.org/wiki/IndoorOSM">proposal</a>. It seems better than reinventing the wheel. You might get your building <a href="http://indoorosm.uni-hd.de/">here</a>. :)</p>
+<p>For indoor mapping look at this <a href="https://wiki.openstreetmap.org/wiki/IndoorOSM">proposal</a>. It seems better than reinventing the wheel. You might get your building <a href="http://indoorosm.uni-hd.de/">here</a>. :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -275,7 +275,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM data has no zoom levels, only renderers impose this. If you render your own images with one of the many <a href="http://wiki.openstreetmap.org/wiki/Renderer">tools</a> (or even make a renderer of your own) you can display as much detail as you want. You can also render objects that the OSM site do not show.</p>
+<p>OSM data has no zoom levels, only renderers impose this. If you render your own images with one of the many <a href="https://wiki.openstreetmap.org/wiki/Renderer">tools</a> (or even make a renderer of your own) you can display as much detail as you want. You can also render objects that the OSM site do not show.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

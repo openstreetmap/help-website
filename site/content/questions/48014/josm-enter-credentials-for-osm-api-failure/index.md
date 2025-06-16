@@ -91,7 +91,7 @@ osqa_accepted = false
 <div id="post-48065-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: while this surely would be an option, I quite doubt that the java version could really make a difference here. Just a sanity check: which java version do you run, <a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a> (<code>java -version</code> in the command line)?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: while this surely would be an option, I quite doubt that the java version could really make a difference here. Just a sanity check: which java version do you run, <a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a> (<code>java -version</code> in the command line)?</p>
 </div>
 <div id="comment-48065-info" class="comment-info">
 <span class="comment-age">(11 Feb '16, 20:59)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -102,7 +102,7 @@ osqa_accepted = false
 <div id="post-48066-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: while this surely would be an option, I quite doubt that the java version could really make a difference here. Just a sanity check: which java version do you run, <a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a> (<code>java -version</code> in the command line)? JOSM and OS is visible in your log below already.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: while this surely would be an option, I quite doubt that the java version could really make a difference here. Just a sanity check: which java version do you run, <a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a> (<code>java -version</code> in the command line)? JOSM and OS is visible in your log below already.</p>
 </div>
 <div id="comment-48066-info" class="comment-info">
 <span class="comment-age">(11 Feb '16, 21:01)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -200,7 +200,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1532/davef"></a><a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a>: OAuth: hmm, you could try the half-automatic version of it, but it may be a bit complicated to set up.</p>
+<p><a href="https://help.openstreetmap.org/users/1532/davef"></a><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a>: OAuth: hmm, you could try the half-automatic version of it, but it may be a bit complicated to set up.</p>
 <p>yes, the username should be "DaveF" (<a href="https://josm.openstreetmap.de/wiki/Help/Preferences/Connection#AuthenticationSettings">help</a>). Also it worked before with those settings, didn't it?</p>
 <p>sorry, currently I have no other clues.</p>
 </div>
@@ -239,7 +239,7 @@ osqa_accepted = false
 <div id="post-48039-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a>: you're getting a "401 Unauthorized" from the API. So the connection works... but the authentication does not. Sadly, I do not see why it does not work (it could be just a wrong password). No, as far as I can tell, the changed mail address should not matter.</p>
+<p><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a>: you're getting a "401 Unauthorized" from the API. So the connection works... but the authentication does not. Sadly, I do not see why it does not work (it could be just a wrong password). No, as far as I can tell, the changed mail address should not matter.</p>
 <p>I have searched a bit though the JOSM tickets, could not find other people having the same issue.</p>
 <p>You could try to create a new account and try with it. Or could you try on another computer? Or, as said above, try the (half-)manual OAuth instead of username and password.</p>
 <p>Maybe someone else has more ideas.</p>
@@ -265,7 +265,7 @@ osqa_accepted = false
 <div id="post-48062-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1532/davef"></a><a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a>: did I understand it correctly that after the action in Firefox clicking "retrieve access token" in josm did not work? Could you please copy the related message from the debug log? I just tried it, and it worked.</p>
+<p><a href="https://help.openstreetmap.org/users/1532/davef"></a><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a>: did I understand it correctly that after the action in Firefox clicking "retrieve access token" in josm did not work? Could you please copy the related message from the debug log? I just tried it, and it worked.</p>
 <p>In the screenshot (I have removed it now) there was an "token" code, since that could potentially (I guess it is no problem, but I am not sure) mean that someone could upload or even access parts of your account, please go to the OSM homepage, login, go into your account's settings, go to "oauth settings" and revoke the access for JOSM.</p>
 <p>Now try it again.</p>
 </div>

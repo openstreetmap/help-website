@@ -100,7 +100,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>The easiest way would be to search for "P5-2 HA" You will see a Triangle (Hochbehälter (Wasser) ) - change into Edit-Mode and then you see the emergeny Point with the infos</p>
 <p>It would be best if one can see a red dot with the name P5-2 HA cause this you will need by calling 112</p>
-<p><a href="http://www.openstreetmap.org/#map=19/51.38622/7.57565">http://www.openstreetmap.org/#map=19/51.38622/7.57565</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/51.38622/7.57565">https://www.openstreetmap.org/#map=19/51.38622/7.57565</a></p>
 </div>
 <div id="comment-27721-info" class="comment-info">
 <span class="comment-age">(02 Nov '13, 11:35)</span> <span class="comment-user userinfo">deejay-S</span>
@@ -111,7 +111,7 @@ osqa_accepted = false
 <div id="post-27722-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks! That'd be <a href="http://www.openstreetmap.org/browse/node/420229193">this</a> <a href="https://wiki.openstreetmap.org/wiki/Tag:highway=emergency%20access%20point?uselang=en-GB">highway=emergency_access_point</a>.</p>
+<p>Thanks! That'd be <a href="https://www.openstreetmap.org/browse/node/420229193">this</a> <a href="https://wiki.openstreetmap.org/wiki/Tag:highway=emergency%20access%20point?uselang=en-GB">highway=emergency_access_point</a>.</p>
 </div>
 <div id="comment-27722-info" class="comment-info">
 <span class="comment-age">(02 Nov '13, 11:40)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -176,7 +176,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Siehe auch die Kommenare und Antworten zu <a href="https://help.openstreetmap.org/questions/7550/certain-pois-or-node-attributes-not-showing">Certain POIs or node attributes not showing</a> (englisch).</p>
+<p>Siehe auch die Kommenare und Antworten zu <a href="/questions/7550/certain-pois-or-node-attributes-not-showing">Certain POIs or node attributes not showing</a> (englisch).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

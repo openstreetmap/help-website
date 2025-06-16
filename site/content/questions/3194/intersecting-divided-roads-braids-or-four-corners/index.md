@@ -203,7 +203,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Follow-up Question - Is the decision to choose one junction configuration versus another on the basis of what is best for a particular navigation aid a mild example of "<a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>"?</p>
+<p>Follow-up Question - Is the decision to choose one junction configuration versus another on the basis of what is best for a particular navigation aid a mild example of "<a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>"?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

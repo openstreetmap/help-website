@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] What should I do about vandalism?"
-description = '''GoTo http://www.openstreetmap.org/browse/way/124455942 Should I just eliminate or report? (to)'''
+description = '''GoTo https://www.openstreetmap.org/browse/way/124455942 Should I just eliminate or report? (to)'''
 date = "2011-09-05T15:30:00Z"
 lastmod = "2011-09-05T15:48:00Z"
 weight = 7643
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>GoTo <a href="http://www.openstreetmap.org/browse/way/124455942">http://www.openstreetmap.org/browse/way/124455942</a> Should I just eliminate or report? (to)</p>
+<p>GoTo <a href="https://www.openstreetmap.org/browse/way/124455942">https://www.openstreetmap.org/browse/way/124455942</a> Should I just eliminate or report? (to)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-vandalism" rel="tag" title="see questions tagged &#39;vandalism&#39;">vandalism</span>
@@ -89,7 +89,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "See http://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism." by Frederik Ramm 05 Sep '11, 15:33
+### The question has been closed for the following reason "See https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism." by Frederik Ramm 05 Sep '11, 15:33
 
 </div>
 

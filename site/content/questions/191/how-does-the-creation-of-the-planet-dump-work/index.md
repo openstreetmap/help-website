@@ -166,7 +166,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>The planet dump is created by running the <a href="http://svn.openstreetmap.org/applications/utils/planet.osm/C/">planet dump program</a> against the OpenStreetMap database. The run is started at 1:11am UK local time, and the exact time is available in the timestamp attribute of the &lt;osm&gt; element at the beginning of the file. Planet files are compressed with <a href="http://compression.ca/pbzip2/">pbzip2</a>, which makes them unsuitable for some decompressors, notably the Java native bzip2 implementation.</p>
 <p>Planet files may contain ways which reference nodes which have been deleted, or relations which reference members which have been deleted. In planet files generated since March 2010 this is due to errors in the database, not with the dump process, and these errors can be found and fixed. In planet files generated before March 2010 this is due to the dump process not being run in a sufficiently isolated transaction.</p>
-<p>Planet files are in the standard <a href="http://wiki.openstreetmap.org/wiki/.osm">OSM XML format</a>, and only contain visible (not deleted) elements. Anonymous edits are present, but lacking the uid and user attributes.</p>
+<p>Planet files are in the standard <a href="https://wiki.openstreetmap.org/wiki/.osm">OSM XML format</a>, and only contain visible (not deleted) elements. Anonymous edits are present, but lacking the uid and user attributes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

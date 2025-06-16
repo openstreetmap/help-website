@@ -94,7 +94,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I can read all the country names that are in Latin Characters on my screen (big desktop). So I don't know what is "not looking clear" means for you.</p>
-<p>This help forum is not the best place to ask questions about applications that use OSM data. Please contact the developers of staticmap, the website mentions that you should contact <a href="http://wiki.openstreetmap.org/wiki/User:Rac98">http://wiki.openstreetmap.org/wiki/User:Rac98</a> in case you have questions with the application.</p>
+<p>This help forum is not the best place to ask questions about applications that use OSM data. Please contact the developers of staticmap, the website mentions that you should contact <a href="https://wiki.openstreetmap.org/wiki/User:Rac98">https://wiki.openstreetmap.org/wiki/User:Rac98</a> in case you have questions with the application.</p>
 </div>
 <div id="comment-36697-info" class="comment-info">
 <span class="comment-age">(09 Sep '14, 09:23)</span> <span class="comment-user userinfo">escada</span>

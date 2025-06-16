@@ -51,9 +51,9 @@ osqa_accepted = true
         tag k=&#39;room1&#39; v=&#39;105&#39; /&gt;
         tag k=&#39;room33&#39; v=&#39;106&#39; /&gt;
       /relation&gt;</code></pre>
-<p><strong>How can I search this class ? I added this maps.xml,jar,library on eclipse</strong> I want to do below picture <img src="http://help.openstreetmap.org/upfiles/sass_1.JPG" /></p>
+<p><strong>How can I search this class ? I added this maps.xml,jar,library on eclipse</strong> I want to do below picture <img src="/upfiles/sass_1.JPG" /></p>
 <p><strong>This is my last work</strong></p>
-<p><img src="http://help.openstreetmap.org/upfiles/sonjosm_2.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/sonjosm_2.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-indoor" rel="tag" title="see questions tagged &#39;indoor&#39;">indoor</span>
@@ -102,7 +102,7 @@ osqa_accepted = true
 <div id="post-31765-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Same for me. You know this page? <a href="http://wiki.openstreetmap.org/wiki/Indoor_mapping">http://wiki.openstreetmap.org/wiki/Indoor_mapping</a></p>
+<p>Same for me. You know this page? <a href="https://wiki.openstreetmap.org/wiki/Indoor_mapping">https://wiki.openstreetmap.org/wiki/Indoor_mapping</a></p>
 </div>
 <div id="comment-31765-info" class="comment-info">
 <span class="comment-age">(22 Mar '14, 19:49)</span> <span class="comment-user userinfo">iii</span>
@@ -362,7 +362,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>From reading this again it sounds like the question is now "I've added some data to OSM. How do I search for it in my application"?</p>
 <p>The answer is, it depends on how you're storing OSM data in your application. One approach would be to hold OSM <strong>data</strong> for a small area internally to your application, and then render that as vector data on-screen. Another approach would be to rely on externally-generated tiles, perhaps hosted externally or internally, and render those.</p>
-<p>If you're taking to first approach, you can search the data that you've got internally. If you're taking the second, you'll need to use an external service for finding things, such as <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>.</p>
+<p>If you're taking to first approach, you can search the data that you've got internally. If you're taking the second, you'll need to use an external service for finding things, such as <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>.</p>
 <p>Unfortunately, because we don't know exactly what you've done (or what problem you're trying to solve) it's difficult to provide more concrete suggestions. Is the code that you've created so far hosted publically anywhere so that people could look at it?</p>
 </div>
 <div class="answer-controls post-controls">

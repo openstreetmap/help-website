@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p><a href="http://mvexel.dev.openstreetmap.org/bingimageanalyzer/?lat=21.58200507178057&amp;lon=-158.10527904019415&amp;zoom=19">This site</a> provided by user mvexel suggests that the Bing imagery for the area is dated 2011. If you zoom out a bit though you get 2004 imagery.</p>
 <p>I am unaware how to check the age of other imagery but if someone was to develop a JOSM plugin to show the age of the imagery tiles being used at edit time it would be a handy tool. I think you may be able to see info in JOSM by selecting the imagery layer, then right-click for more info, but I am unable to check at the moment.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">The aerial imagery page</a> lists other providers</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">The aerial imagery page</a> lists other providers</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

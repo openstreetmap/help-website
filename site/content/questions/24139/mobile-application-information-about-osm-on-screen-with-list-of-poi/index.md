@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>(partly <span>@Matija Nalis</span>'s answer) depending on the size of the <em>mobile</em> device there may really no be space for a attribution permanently on the screen. So Artur might want to do it like many other mobile applications - in the "about" screen and/or shown on startup. If that is compliant with your ODbL license - <a href="http://www.openstreetmap.org/copyright">please read yourself</a> (the full legal text).</p>
+<p>(partly <span>@Matija Nalis</span>'s answer) depending on the size of the <em>mobile</em> device there may really no be space for a attribution permanently on the screen. So Artur might want to do it like many other mobile applications - in the "about" screen and/or shown on startup. If that is compliant with your ODbL license - <a href="https://www.openstreetmap.org/copyright">please read yourself</a> (the full legal text).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

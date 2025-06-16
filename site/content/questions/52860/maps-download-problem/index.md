@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Unfortunately the map generation of garmin.openstreetmap.nl seems broken and it is not clear when this is fixed. In the meantime you can convert the osm_generic_new_tiles.zip file with the <a href="http://osm.pleiades.uni-wuppertal.de/openfietsmap/OSM_Combiner/readme.html">OSM combiner</a> tool, or try other alternatives, <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>Unfortunately the map generation of garmin.openstreetmap.nl seems broken and it is not clear when this is fixed. In the meantime you can convert the osm_generic_new_tiles.zip file with the <a href="http://osm.pleiades.uni-wuppertal.de/openfietsmap/OSM_Combiner/readme.html">OSM combiner</a> tool, or try other alternatives, <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

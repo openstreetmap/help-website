@@ -79,7 +79,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Extension of this subject is at <a href="https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites">https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites</a></p>
+<p>Extension of this subject is at <a href="/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites">https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites</a></p>
 <p>Worth reading for people interested in this subject</p>
 </div>
 <div id="comment-28595-info" class="comment-info">
@@ -134,9 +134,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is possible to do very much with OSM. OSM is just <a href="http://www.openstreetmap.org/copyright">free</a> (free-dom, not necessarily free beer) data – not a service. But <span>many services are using OSM data</span> (including our own service <a href="http://www.openstreetmap.org">osm.org</a> which is mainly targeted at mappers). So, if someone would build a program like the one, which google has running there, it would also be possible with OSM data in the background.</p>
+<p>It is possible to do very much with OSM. OSM is just <a href="https://www.openstreetmap.org/copyright">free</a> (free-dom, not necessarily free beer) data – not a service. But <span>many services are using OSM data</span> (including our own service <a href="http://www.openstreetmap.org">osm.org</a> which is mainly targeted at mappers). So, if someone would build a program like the one, which google has running there, it would also be possible with OSM data in the background.</p>
 <p>A <em>service</em> which could <em>suit your needs</em> (at least party) <em>is <span>uMap</span></em>. It also allows to place marker(s), draw lines on the map, add names and description to the markers, ….</p>
-<p>However, you mention you want to create a "cycle map": If the cycle routes are signposted and official you can <span>add them to our OSM data</span> and view them e.g. at the <a href="http://www.openstreetmap.org/#layers=C">OpenCycleMap</a>. No need to keep them only for you. Please note that we are strictly not allowed and do not want to copy data from other sources (like google maps) – with a few exceptions. If, instead, these routes are just your personal favourite routes then they should not be added to the OSM data.</p>
+<p>However, you mention you want to create a "cycle map": If the cycle routes are signposted and official you can <span>add them to our OSM data</span> and view them e.g. at the <a href="https://www.openstreetmap.org/#layers=C">OpenCycleMap</a>. No need to keep them only for you. Please note that we are strictly not allowed and do not want to copy data from other sources (like google maps) – with a few exceptions. If, instead, these routes are just your personal favourite routes then they should not be added to the OSM data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

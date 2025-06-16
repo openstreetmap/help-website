@@ -43,7 +43,7 @@ osqa_accepted = true
 <pre><code>./osmupdate tmp.pbf updated.pbf --hour --day --keep-tempfiles --drop-author</code></pre>
 <p>Now I wanted to try osmium to compare the performance but I cannot find a simple osmium command that does all the magic behind the scene (like fetching the necessary change files from the servers), I only found the normal <a href="http://osmcode.org/osmium-tool/manual.html#working-with-change-files">apply-changes command</a>. Is there an osmupdate equivalent for osmium like (?)</p>
 <pre><code>./osmium updatemagic tmp.pbf updated.pbf</code></pre>
-<p>Related question is <a href="https://help.openstreetmap.org/questions/53298/planet-full-history-update">this</a></p>
+<p>Related question is <a href="/questions/53298/planet-full-history-update">this</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osmium" rel="tag" title="see questions tagged &#39;osmium&#39;">osmium</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span>

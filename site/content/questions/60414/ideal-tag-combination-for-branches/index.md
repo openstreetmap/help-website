@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use <a href="http://wiki.openstreetmap.org/wiki/Key:name">loc_name</a> (local name), since that seems to best describe what you've described. I don't know whether Nominatim uses that tag or not, but really that's beside the point.</p>
+<p>I would use <a href="https://wiki.openstreetmap.org/wiki/Key:name">loc_name</a> (local name), since that seems to best describe what you've described. I don't know whether Nominatim uses that tag or not, but really that's beside the point.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

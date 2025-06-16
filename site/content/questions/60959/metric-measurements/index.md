@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-60961-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>similar question <a href="https://help.openstreetmap.org/questions/49522/can-i-change-from-km-to-miles">https://help.openstreetmap.org/questions/49522/can-i-change-from-km-to-miles</a></p>
+<p>similar question <a href="/questions/49522/can-i-change-from-km-to-miles">https://help.openstreetmap.org/questions/49522/can-i-change-from-km-to-miles</a></p>
 </div>
 <div id="comment-60961-info" class="comment-info">
 <span class="comment-age">(02 Dec '17, 17:01)</span> <span class="comment-user userinfo">andy mackey</span>

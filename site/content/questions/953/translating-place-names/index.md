@@ -114,7 +114,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The name tag does support <a href="http://wiki.openstreetmap.org/wiki/Key:name#Localization">localization</a>. There is also an <a href="http://toolserver.org/~osm/locale/">experimental map supporting different locales</a> and a <a href="http://wiki.openstreetmap.org/wiki/Map_Internationalization">corresponding wiki page</a>.</p>
+<p>The name tag does support <a href="https://wiki.openstreetmap.org/wiki/Key:name#Localization">localization</a>. There is also an <a href="http://toolserver.org/~osm/locale/">experimental map supporting different locales</a> and a <a href="https://wiki.openstreetmap.org/wiki/Map_Internationalization">corresponding wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -341,7 +341,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you want to have a look at <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/RemoteControl/Add-tags">add-tags</a> with which you can add all at Wikipedia available translations of a name to an object.</p>
+<p>Maybe you want to have a look at <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/RemoteControl/Add-tags">add-tags</a> with which you can add all at Wikipedia available translations of a name to an object.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

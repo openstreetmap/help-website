@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmand">Osmand</a> ... it is the hottest opensource Android app to use OSM data for map display (vector and tiles) and even routing.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Osmand">Osmand</a> ... it is the hottest opensource Android app to use OSM data for map display (vector and tiles) and even routing.</p>
 <p>It has also some overlay features.</p>
 <p>PS: If you wanna try it, using the latest development version from its project page (downloadable apf-file) is strongly recommended.</p>
 </div>

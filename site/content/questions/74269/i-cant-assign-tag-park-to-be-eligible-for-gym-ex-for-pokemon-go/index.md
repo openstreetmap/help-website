@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello guys, I'm a novice editor, I'm trying to transform a park in my neighborhood into an eligible place to appear gym ex on Pokemon go, I researched and found that I have to put TAG = Park, I did it however when I use the OVERPASS Turbo website to check it does not appear to be right, I would like to know what I did wrong and if possible if someone can edit it right for me I thank you thanks follow attached pictures <a href="https://www.openstreetmap.org/#map=18/-22.67901/-47.62996">https://www.openstreetmap.org/#map=18/-22.67901/-47.62996</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_04-18-20_at_03.55_PM_LmJXpUL.JPG" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_04-18-20_at_03.54_PM_OCxyrzg.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_04-18-20_at_03.55_PM_LmJXpUL.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_04-18-20_at_03.54_PM_OCxyrzg.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-pokemon_go" rel="tag" title="see questions tagged &#39;pokemon_go&#39;">pokemon_go</span>

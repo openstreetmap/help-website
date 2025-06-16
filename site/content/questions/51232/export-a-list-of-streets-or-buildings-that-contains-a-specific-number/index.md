@@ -143,7 +143,7 @@ osqa_accepted = false
 <div id="post-51264-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This approach also has some shortcomings with <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">interpolated address schemas</a>. A nominatim based query would probably be more to the point. Anyone volunteering to provide one?</p>
+<p>This approach also has some shortcomings with <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">interpolated address schemas</a>. A nominatim based query would probably be more to the point. Anyone volunteering to provide one?</p>
 </div>
 <div id="comment-51264-info" class="comment-info">
 <span class="comment-age">(05 Aug '16, 12:34)</span> <span class="comment-user userinfo">mmd</span>

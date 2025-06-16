@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to Get full object of older versions?"
-description = '''I want a full osm object like we get on querying http://www.openstreetmap.org/api/0.6/way/40003158/full but i also want to specify the version of the object too like in http://www.openstreetmap.org/api/0.6/way/40003158/3 I want to have the full object of older versions i.e. result of both queries in...'''
+description = '''I want a full osm object like we get on querying https://www.openstreetmap.org/api/0.6/way/40003158/full but i also want to specify the version of the object too like in https://www.openstreetmap.org/api/0.6/way/40003158/3 I want to have the full object of older versions i.e. result of both queries in...'''
 date = "2014-04-10T09:31:00Z"
 lastmod = "2014-04-10T10:22:00Z"
 weight = 32257
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want a full osm object like we get on querying <a href="http://www.openstreetmap.org/api/0.6/way/40003158/full">http://www.openstreetmap.org/api/0.6/way/40003158/full</a></p>
-<p>but i also want to specify the version of the object too like in <a href="http://www.openstreetmap.org/api/0.6/way/40003158/3">http://www.openstreetmap.org/api/0.6/way/40003158/3</a></p>
+<p>I want a full osm object like we get on querying <a href="https://www.openstreetmap.org/api/0.6/way/40003158/full">https://www.openstreetmap.org/api/0.6/way/40003158/full</a></p>
+<p>but i also want to specify the version of the object too like in <a href="https://www.openstreetmap.org/api/0.6/way/40003158/3">https://www.openstreetmap.org/api/0.6/way/40003158/3</a></p>
 <p>I want to have the full object of older versions i.e. result of both queries in combined form</p>
 </div>
 <div id="question-tags" class="tags-container tags">

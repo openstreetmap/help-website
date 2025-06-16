@@ -191,7 +191,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are as many formats as exist in the real life + all the possible insertion mistakes. Take a look at the <a href="http://taginfo.openstreetmap.org/keys/addr:housenumber#values">taginfo page</a> for different values. There are more than 20 thousand different values that use at least 100 different formats.</p>
-<p>You can find out from the <a href="http://wiki.openstreetmap.org/wiki/Addresses">wiki</a> why some of these formats are used.</p>
+<p>You can find out from the <a href="https://wiki.openstreetmap.org/wiki/Addresses">wiki</a> why some of these formats are used.</p>
 <p>Depending on your needs you may concider treating housenumbers as text.</p>
 </div>
 <div class="answer-controls post-controls">

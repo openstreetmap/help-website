@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No. See <a href="https://help.openstreetmap.org/questions/40838/is-there-a-way-to-turn-on-the-satellite-layer">this previous question</a>.</p>
+<p>No. See <a href="/questions/40838/is-there-a-way-to-turn-on-the-satellite-layer">this previous question</a>.</p>
 <p>Other, non-OSM layers may be available.</p>
 </div>
 <div class="answer-controls post-controls">

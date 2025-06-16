@@ -163,7 +163,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada"></a><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> The wiki description for historic=battlefield is rather sparse but in my opinion it should only be used if the battlefield has been preserved or restored somehow. For example take a look at <a href="https://www.openstreetmap.org/way/89401134">Culloden Battlefield</a> which has several memorials (I think the monument tags are wrong here) and a museum. If there are no remains at all then it shouldn't be tagged in my opinion.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> The wiki description for historic=battlefield is rather sparse but in my opinion it should only be used if the battlefield has been preserved or restored somehow. For example take a look at <a href="https://www.openstreetmap.org/way/89401134">Culloden Battlefield</a> which has several memorials (I think the monument tags are wrong here) and a museum. If there are no remains at all then it shouldn't be tagged in my opinion.</p>
 </div>
 <div id="comment-45128-info" class="comment-info">
 <span class="comment-age">(08 Sep '15, 17:07)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -168,9 +168,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I draw roundabouts as a singular circular closed way and the guidance here seems to suggest the same <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">wiki about roundabout</a></p>
-<p>Like this ... <img src="http://help.openstreetmap.org/upfiles/unnamed.png" alt="alt text" /></p>
-<p>Haven't seen one like this yet but I would consider this incorrect :) <img src="http://help.openstreetmap.org/upfiles/named.png" alt="alt text" /></p>
+<p>I draw roundabouts as a singular circular closed way and the guidance here seems to suggest the same <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">wiki about roundabout</a></p>
+<p>Like this ... <img src="/upfiles/unnamed.png" alt="alt text" /></p>
+<p>Haven't seen one like this yet but I would consider this incorrect :) <img src="/upfiles/named.png" alt="alt text" /></p>
 <p>Edit: On further consideration and checking some of the different kinds of roundabouts on the wiki link above, I can see that the more complex roundabouts, would be best mapped by splitting into several sections and be separately named and may be of different class too.</p>
 </div>
 <div class="answer-controls post-controls">

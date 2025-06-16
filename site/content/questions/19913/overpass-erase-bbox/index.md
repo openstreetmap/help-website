@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, the unions are all that is possible at the moment. But you can use union also on <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_Polygon">polygon queries</a> which allows in principle an arbitrary geometry by stitching polygons.</p>
+<p>Yes, the unions are all that is possible at the moment. But you can use union also on <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_Polygon">polygon queries</a> which allows in principle an arbitrary geometry by stitching polygons.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

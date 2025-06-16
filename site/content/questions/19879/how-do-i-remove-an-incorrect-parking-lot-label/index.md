@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>(assuming it was and is still a private car park) then I wouldn't remove it - I'm guessing someone's added it based on aerial imagery, and if you just remove it another mapper could easily add it back again. Instead, I'd add an "<a href="http://wiki.openstreetmap.org/wiki/Tag:access%3Dprivate">access=private</a>" tag to it so that anyone looking for a car park won't park in it by accident. On the "standard" OSM map the "P" shows in a dimmer blue; applications looking for car parks are able to look at the "access" tag and warn users away from private ones.</p>
-<p><a href="http://www.openstreetmap.org/browse/way/180636999">Here</a> is an example of a private parking area near the Pennine Way that I marked as private for exactly that reason - there's a sign beside it saying "private", presumably because tourists were using the owners' spaces and leaving them with nowhere to park.</p>
+<p>(assuming it was and is still a private car park) then I wouldn't remove it - I'm guessing someone's added it based on aerial imagery, and if you just remove it another mapper could easily add it back again. Instead, I'd add an "<a href="https://wiki.openstreetmap.org/wiki/Tag:access%3Dprivate">access=private</a>" tag to it so that anyone looking for a car park won't park in it by accident. On the "standard" OSM map the "P" shows in a dimmer blue; applications looking for car parks are able to look at the "access" tag and warn users away from private ones.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/180636999">Here</a> is an example of a private parking area near the Pennine Way that I marked as private for exactly that reason - there's a sign beside it saying "private", presumably because tourists were using the owners' spaces and leaving them with nowhere to park.</p>
 <p>Of course; if it's not somewhere that cars are parked then just delete it from the map, or retag it as what the current use is (with "access=private" if appropriate, of course).</p>
 </div>
 <div class="answer-controls post-controls">

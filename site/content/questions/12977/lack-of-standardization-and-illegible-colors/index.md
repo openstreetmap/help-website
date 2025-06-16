@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Mappers in most countries choose the road classification that works best for the local situation. Our <a href="http://wiki.openstreetmap.org/wiki/Key:highway">wiki</a> says this about trunk roads:</p>
+<p>Mappers in most countries choose the road classification that works best for the local situation. Our <a href="https://wiki.openstreetmap.org/wiki/Key:highway">wiki</a> says this about trunk roads:</p>
 <p><em>Important roads that aren't motorways. Typically maintained by central, not local government. Need not necessarily be a divided highway.</em></p>
 <p>The wiki isn't authoritative but this probably reflects what most people do. As you see, "collision-free" is not a required property for trunk roads.</p>
 <p>The colour used for drawing these roads is not fixed; it's the renderer's decision what colour to use. We use green on the style for www.openstreetmap.org but e.g. www.openstreetmap.de or open.mapquest.com will use different colours.</p>

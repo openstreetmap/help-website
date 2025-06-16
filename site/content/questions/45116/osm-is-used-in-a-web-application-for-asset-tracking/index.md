@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-45118-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> thanks, i have updated question.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> thanks, i have updated question.</p>
 </div>
 <div id="comment-45118-info" class="comment-info">
 <span class="comment-age">(08 Sep '15, 12:04)</span> <span class="comment-user userinfo">RajkumarP</span>
@@ -155,7 +155,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With this volume of data (50k geocoding requests per day) you will probably need to set up your own geocoding server: e.g. <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>.</p>
+<p>With this volume of data (50k geocoding requests per day) you will probably need to set up your own geocoding server: e.g. <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -181,7 +181,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The usage policy of the Nominatim server running on openstreetmap.org can be found in the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">wiki</a>. e.g. there is a limit of 1 request / second. The page also lists 2 commercial geocoders that you can use (probably for a fee)</p>
+<p>The usage policy of the Nominatim server running on openstreetmap.org can be found in the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">wiki</a>. e.g. there is a limit of 1 request / second. The page also lists 2 commercial geocoders that you can use (probably for a fee)</p>
 </div>
 <div id="comment-45127-info" class="comment-info">
 <span class="comment-age">(08 Sep '15, 16:58)</span> <span class="comment-user userinfo">escada</span>
@@ -193,7 +193,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> for an overview, but it really seems to be the best to install an own server by you with an OSM based geocoding service of your choice.</p>
+<p>... see <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> for an overview, but it really seems to be the best to install an own server by you with an OSM based geocoding service of your choice.</p>
 </div>
 <div id="comment-45130-info" class="comment-info">
 <span class="comment-age">(08 Sep '15, 18:25)</span> <span class="comment-user userinfo">stephan75</span>
@@ -204,7 +204,7 @@ One Answer:
 <div id="post-45172-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> I'm pretty sure you will get blocked if you run 50k requests against OSMF's Nominatim server. I can't find the link, but I think Mapquest now limit to 15k/month (Certainly they've recently brought OpenMapQuest into line with other products wrt usage &amp; API keys).</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> I'm pretty sure you will get blocked if you run 50k requests against OSMF's Nominatim server. I can't find the link, but I think Mapquest now limit to 15k/month (Certainly they've recently brought OpenMapQuest into line with other products wrt usage &amp; API keys).</p>
 </div>
 <div id="comment-45172-info" class="comment-info">
 <span class="comment-age">(10 Sep '15, 15:29)</span> <span class="comment-user userinfo">SK53 ♦</span>

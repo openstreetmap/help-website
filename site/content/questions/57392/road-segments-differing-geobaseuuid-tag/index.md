@@ -128,7 +128,7 @@ One Answer:
 <div id="post-57411-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yeah the roads are joined together but it was making it a pain to add more information or update them as they had to be done individually. It appears to be part of this import <a href="http://wiki.openstreetmap.org/wiki/GeoBase_Import">http://wiki.openstreetmap.org/wiki/GeoBase_Import</a></p>
+<p>Yeah the roads are joined together but it was making it a pain to add more information or update them as they had to be done individually. It appears to be part of this import <a href="https://wiki.openstreetmap.org/wiki/GeoBase_Import">https://wiki.openstreetmap.org/wiki/GeoBase_Import</a></p>
 </div>
 <div id="comment-57411-info" class="comment-info">
 <span class="comment-age">(01 Aug '17, 15:54)</span> <span class="comment-user userinfo">JayKoh</span>

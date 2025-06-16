@@ -192,9 +192,9 @@ This question is marked "community wiki".
 <li>Prior to your trip, ensure your Garmin GPS is recording a track log (the exact procedures differ based on the model).</li>
 <li>Connect your GPS to a computer with a USB cable. The device should "mount" like an external hard drive.</li>
 <li>Visit the Garmin GPX folder or perhaps GPX/Archive. The files you want end in the ".gpx" extension, and contain track logs.</li>
-<li>You can upload traces to <a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/trace</a>s or better yet load them into the JOSM editor, <a href="https://josm.openstreetmap.de/">https://josm.openstreetmap.de/</a> . Please don't upload GPS traces directly into the map: instead using the air photos and existing data as a guide, trace over your GPS tracks and make adjustments. You can set the display color of your GPS trace to something wild, to make it distinct compared to the base map.</li>
+<li>You can upload traces to <a href="https://www.openstreetmap.org/traces">https://www.openstreetmap.org/trace</a>s or better yet load them into the JOSM editor, <a href="https://josm.openstreetmap.de/">https://josm.openstreetmap.de/</a> . Please don't upload GPS traces directly into the map: instead using the air photos and existing data as a guide, trace over your GPS tracks and make adjustments. You can set the display color of your GPS trace to something wild, to make it distinct compared to the base map.</li>
 </ol>
-<p><img src="http://help.openstreetmap.org/upfiles/Archive_044.png" alt="Upload Garmin GPS trace on Linux" /></p>
+<p><img src="/upfiles/Archive_044.png" alt="Upload Garmin GPS trace on Linux" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

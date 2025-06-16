@@ -158,7 +158,7 @@ One Answer:
 <div class="answer-body">
 <p>No. The outer and inner of a multipolygon relation must not touch or cross. No sharing of points either.<br />
 </p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

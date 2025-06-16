@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I couldn't <a href="http://trac.openstreetmap.org/search?q=&amp;noquickjump=1&amp;ticket=on">find a bugreport</a>. You can create one with your regular OSM account. However keep in mind that the mapnik XML stylesheet is <a href="http://lists.openstreetmap.org/pipermail/talk/2013-July/067707.html">currently ported</a> to <a href="http://wiki.openstreetmap.org/wiki/Carto">CartoCSS</a> and therefore won't be any major changes until this has been finished.</p>
+<p>I couldn't <a href="http://trac.openstreetmap.org/search?q=&amp;noquickjump=1&amp;ticket=on">find a bugreport</a>. You can create one with your regular OSM account. However keep in mind that the mapnik XML stylesheet is <a href="http://lists.openstreetmap.org/pipermail/talk/2013-July/067707.html">currently ported</a> to <a href="https://wiki.openstreetmap.org/wiki/Carto">CartoCSS</a> and therefore won't be any major changes until this has been finished.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -141,7 +141,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>The subscription page on the talk mailing list is at <a href="http://lists.openstreetmap.org/listinfo/talk">http://lists.openstreetmap.org/listinfo/talk</a>, and there's a link from there to other lists too. In fact (taking a step back) the wiki <a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a> page might be worth having a look at.</p>
+<p>The subscription page on the talk mailing list is at <a href="http://lists.openstreetmap.org/listinfo/talk">http://lists.openstreetmap.org/listinfo/talk</a>, and there's a link from there to other lists too. In fact (taking a step back) the wiki <a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a> page might be worth having a look at.</p>
 </div>
 <div id="comment-24543-info" class="comment-info">
 <span class="comment-age">(24 Jul '13, 22:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

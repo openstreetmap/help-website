@@ -73,7 +73,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I think that it's fair to say that "... using osm2pgsql and PostgreSQL with PostGIS to take the data from the file into a database" does work for at least some people. See also <a href="https://help.openstreetmap.org/questions/49178/osm2pgsql-appears-to-have-stopped-with-no-errors">https://help.openstreetmap.org/questions/49178/osm2pgsql-appears-to-have-stopped-with-no-errors</a></p>
+<p>I think that it's fair to say that "... using osm2pgsql and PostgreSQL with PostGIS to take the data from the file into a database" does work for at least some people. See also <a href="/questions/49178/osm2pgsql-appears-to-have-stopped-with-no-errors">https://help.openstreetmap.org/questions/49178/osm2pgsql-appears-to-have-stopped-with-no-errors</a></p>
 </div>
 <div id="comment-49459-info" class="comment-info">
 <span class="comment-age">(27 Apr '16, 14:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

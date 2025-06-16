@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Ah, my bad, Opensnowmap doesn't recognize area=yes for sled pistes, I must fix this. Otherwise your tagging seems right and follows the Piste maps wiki page ( <a href="https://wiki.openstreetmap.org/wiki/Piste_Maps).">https://wiki.openstreetmap.org/wiki/Piste_Maps).</a></p>
-<p><a href="http://www.openstreetmap.org/way/546926752#map=19/42.69176/-84.61256&amp;layers=D">http://www.openstreetmap.org/way/546926752#map=19/42.69176/-84.61256&amp;layers=D</a></p>
+<p><a href="https://www.openstreetmap.org/way/546926752#map=19/42.69176/-84.61256&amp;layers=D">https://www.openstreetmap.org/way/546926752#map=19/42.69176/-84.61256&amp;layers=D</a></p>
 <p><a href="http://www.opensnowmap.org/index.html?zoom=17&amp;lat=42.69121&amp;lon=-84.61364&amp;layers=snowbase">http://www.opensnowmap.org/index.html?zoom=17&amp;lat=42.69121&amp;lon=-84.61364&amp;layers=snowbase</a></p>
 </div>
 <div class="answer-controls post-controls">

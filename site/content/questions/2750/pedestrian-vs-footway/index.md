@@ -107,7 +107,7 @@ One Answer:
 <div class="answer-body">
 <p><strong>highway=pedestrian</strong> ways are generally wide, about the width of a normal residential street or wider. They can be areas too: think large public pedestrian squares. There's enough space for a crowd to mill around, and probably points of interest like shops to all sides. It sounds like your named street example where motor traffic is prohibited is one of these.</p>
 <p><strong>highway=footway</strong> ways are generally narrow, with perhaps only enough space for two people on foot to pass, or narrower. Traffic is generally directed, from one end to the other.</p>
-<p>Whether it's named or not is not really relevant to the tagging. highway=pedestrian can be named in many places: for example, I've added some near where I live: <a href="http://www.openstreetmap.org/?mlat=51.759226&amp;mlon=-1.199723&amp;zoom=18">Headington Quarry named footpaths</a>. Some of them are very narrow, with bike barriers and abutting stone walls, but they bear regular road name signage in an identical style to the rest of the city.</p>
+<p>Whether it's named or not is not really relevant to the tagging. highway=pedestrian can be named in many places: for example, I've added some near where I live: <a href="https://www.openstreetmap.org/?mlat=51.759226&amp;mlon=-1.199723&amp;zoom=18">Headington Quarry named footpaths</a>. Some of them are very narrow, with bike barriers and abutting stone walls, but they bear regular road name signage in an identical style to the rest of the city.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Yes. Those cases are clear to me. Please take a look at the pedestrian street at: <a href="http://www.openstreetmap.org/?lat=37.396999&amp;lon=-5.927309&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=37.396999&amp;lon=-5.927309&amp;zoom=18&amp;layers=M</a></p>
+<p>Yes. Those cases are clear to me. Please take a look at the pedestrian street at: <a href="https://www.openstreetmap.org/?lat=37.396999&amp;lon=-5.927309&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=37.396999&amp;lon=-5.927309&amp;zoom=18&amp;layers=M</a></p>
 <p>The problem is with streets that are: - Wide, even small gardens inside (pedestrian?) - Has no name nor number (they do not give access to the buildings) (footway?) - They are in a pure residential area: no shops, no points of interest. (footway?) - Some are very short, just the length of one or two houses...</p>
 <p>Probably in these cases that are ambiguous it is not so important to tag one way or the other.</p>
 </div>
@@ -154,7 +154,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I see that the wiki page for highway=pedestrian <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian</a> does explain the difference, although the page for highway=footway does not.</p>
+<p>I see that the wiki page for highway=pedestrian <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian</a> does explain the difference, although the page for highway=footway does not.</p>
 </div>
 <div id="comment-2776-info" class="comment-info">
 <span class="comment-age">(08 Feb '11, 01:51)</span> <span class="comment-user userinfo">Ebenezer</span>

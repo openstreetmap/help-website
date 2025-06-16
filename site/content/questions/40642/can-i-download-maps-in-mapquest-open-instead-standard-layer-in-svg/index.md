@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not really. See <a href="https://help.openstreetmap.org/questions/11720/exporting-mapquest-open-map">Exporting MapQuest Open Map</a>.</p>
+<p>Not really. See <a href="/questions/11720/exporting-mapquest-open-map">Exporting MapQuest Open Map</a>.</p>
 <p>The MapQuest Open map styles are <a href="https://github.com/MapQuest/MapQuest-Mapnik-Style">open source</a> in theory so you could set up your own rendering with them, but have changed quite a bit since they were published on GitHub, and more recent versions are not publicly available.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to have OSM based maps in SVG format in another style than mapnik standard style, see <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a> in the OSM wiki.</p>
+<p>If you want to have OSM based maps in SVG format in another style than mapnik standard style, see <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a> in the OSM wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

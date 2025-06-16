@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Default speed limits are likely set by each router themselves. I picked a <a href="http://www.openstreetmap.org/way/224695847">random road in Lafayette</a> and it currently has no <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed</a> tag on it.</p>
-<p>There is <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">a wiki page</a> describing some default maxspeed values, but it is unlikely all routers use it, and it isn't clear how authoritative or accurate the information on that page is.</p>
+<p>Default speed limits are likely set by each router themselves. I picked a <a href="https://www.openstreetmap.org/way/224695847">random road in Lafayette</a> and it currently has no <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed</a> tag on it.</p>
+<p>There is <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">a wiki page</a> describing some default maxspeed values, but it is unlikely all routers use it, and it isn't clear how authoritative or accurate the information on that page is.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

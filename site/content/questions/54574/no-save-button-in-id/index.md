@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a <a href="https://help.openstreetmap.org/questions/49434/cant-save-edits-in-id-despite-comment">similar issue</a>. However no Save button at all. So cannot save. Is this a know issue.</p>
+<p>I have a <a href="/questions/49434/cant-save-edits-in-id-despite-comment">similar issue</a>. However no Save button at all. So cannot save. Is this a know issue.</p>
 <p>Using Latest Safari on latest Mac OS X (released, not beta)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

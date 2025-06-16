@@ -156,7 +156,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Just download map data for the area you want the imagery then in the upper tab bar of JOSM you have to have the Imagery tab. Click on it and Bing Sat should be the first one. Click on it and a new layer should open with the satellite imagery.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/imagery.png" alt="alt text" /></p>
+<p><img src="/upfiles/imagery.png" alt="alt text" /></p>
 </div>
 <div id="comment-19516-info" class="comment-info">
 <span class="comment-age">(01 Feb '13, 17:23)</span> <span class="comment-user userinfo">twist3r</span>

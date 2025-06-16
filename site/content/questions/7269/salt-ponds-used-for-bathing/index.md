@@ -123,10 +123,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li>Sounds to me as well that you might have forgotten to add <a href="http://wiki.openstreetmap.org/wiki/Key:water">natural=water</a> to you water=salt_pond</li>
-<li>Since it's a tourist attraction, dont forget the name and the <a href="http://wiki.openstreetmap.org/wiki/Tourism">tourism</a> tags. Maybe you can use your own value for the tourism tag here to specify it's a mud bath ? - check <a href="http://taginfo.openstreetmap.org/keys/?key=tourism#values">taginfo</a>.</li>
-<li>Another tag to check is <a href="http://wiki.openstreetmap.org/wiki/Key:leisure">leisure</a> (=swimming_pool ?). Again, browse taginfo.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Dont tag for the renderer</a>.</li>
+<li>Sounds to me as well that you might have forgotten to add <a href="https://wiki.openstreetmap.org/wiki/Key:water">natural=water</a> to you water=salt_pond</li>
+<li>Since it's a tourist attraction, dont forget the name and the <a href="https://wiki.openstreetmap.org/wiki/Tourism">tourism</a> tags. Maybe you can use your own value for the tourism tag here to specify it's a mud bath ? - check <a href="http://taginfo.openstreetmap.org/keys/?key=tourism#values">taginfo</a>.</li>
+<li>Another tag to check is <a href="https://wiki.openstreetmap.org/wiki/Key:leisure">leisure</a> (=swimming_pool ?). Again, browse taginfo.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Dont tag for the renderer</a>.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

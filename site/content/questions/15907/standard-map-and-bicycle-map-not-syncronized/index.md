@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>for 1) you could ask the creator of <a href="http://opencyclemap.org/">opencyclemap.org</a> using the email address from the whois or <a href="http://twitter.com/gravitystorm">twitter</a>¹.</p>
-<p>2) <a href="http://www.openstreetmap.org/?way=176794075">works for me</a></p>
+<p>2) <a href="https://www.openstreetmap.org/?way=176794075">works for me</a></p>
 <p>hth, malenki</p>
 <p>¹ thanks @ Toebee for assistance (;</p>
 </div>
@@ -152,7 +152,7 @@ One Answer:
 <div id="post-16578-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This will give a bit more info <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>This will give a bit more info <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div id="comment-16578-info" class="comment-info">
 <span class="comment-age">(01 Oct '12, 16:05)</span> <span class="comment-user userinfo">andy mackey</span>

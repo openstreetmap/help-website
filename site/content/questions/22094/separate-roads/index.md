@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Separate roads?"
-description = '''Can someone tell me how to fix these roads -&amp;gt;http://www.openstreetmap.org/?lat=61.96632&amp;amp;lon=26.97533&amp;amp;zoom=16&amp;amp;layers=M You can see that there is many separate roads called Henkisalmentie. How can i combine the roads in to one road. I tried to combine them in JOSM and Potlatch but I cou...'''
+description = '''Can someone tell me how to fix these roads -&amp;gt;https://www.openstreetmap.org/?lat=61.96632&amp;amp;lon=26.97533&amp;amp;zoom=16&amp;amp;layers=M You can see that there is many separate roads called Henkisalmentie. How can i combine the roads in to one road. I tried to combine them in JOSM and Potlatch but I cou...'''
 date = "2013-05-04T16:47:00Z"
 lastmod = "2013-05-04T19:20:00Z"
 weight = 22094
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can someone tell me how to fix these roads -&gt;<a href="http://www.openstreetmap.org/?lat=61.96632&amp;lon=26.97533&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=61.96632&amp;lon=26.97533&amp;zoom=16&amp;layers=M</a></p>
+<p>Can someone tell me how to fix these roads -&gt;<a href="https://www.openstreetmap.org/?lat=61.96632&amp;lon=26.97533&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=61.96632&amp;lon=26.97533&amp;zoom=16&amp;layers=M</a></p>
 <p>You can see that there is many separate roads called Henkisalmentie. How can i combine the roads in to one road. I tried to combine them in JOSM and Potlatch but I couldn't do it.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,7 +118,7 @@ One Answer:
 <div class="answer-body">
 <p>The simple answer is you can't.</p>
 <p>The OSM data model does not have a concept of a road merely that of abstract linear features (ways). A street which consists of several interconnected sections must perforce be represented by several ways sharing a common tag <code>name=*</code>. This has numerous advantages because there is no need to create a huge infrastructure to deal with the multitude of special cases which would arise if we tried to have a road primitive (dual carriageways, roundabouts, main highways with service roads, <a href="http://osm.org/go/euuShWgaz-">unimaginative street naming</a> and so on).</p>
-<p>You could use the <a href="http://wiki.openstreetmap.org/wiki/Relation:associatedStreet">associatedStreet</a> relation to explicitly show that all these ways belong to a single named street.</p>
+<p>You could use the <a href="https://wiki.openstreetmap.org/wiki/Relation:associatedStreet">associatedStreet</a> relation to explicitly show that all these ways belong to a single named street.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

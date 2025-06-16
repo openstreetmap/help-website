@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Red is not allowed because after the turn it's restricted to the 1st lane until it passes the yellow entrance. Only green is allowed. How should the turn restrictions be added to this junction?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/route_ECRGfuO.png" alt="Route" /> <img src="https://i.imgur.com/gqa6G7V.png" alt="alt text" /></p>
+<p><img src="/upfiles/route_ECRGfuO.png" alt="Route" /> <img src="https://i.imgur.com/gqa6G7V.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-junction" rel="tag" title="see questions tagged &#39;junction&#39;">junction</span> <span class="post-tag tag-link-turn_restrictions" rel="tag" title="see questions tagged &#39;turn_restrictions&#39;">turn_restrictions</span>

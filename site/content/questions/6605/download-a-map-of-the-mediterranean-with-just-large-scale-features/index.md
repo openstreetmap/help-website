@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I would like to download a map of the Eastern Mediterranean to edit in a GIS program. I don't need fine scale detail, mainly just the shorelines. Is there a way to download the data at just the largest zoom levels?</p>
-<p>I want a map that looks something like <a href="http://www.openstreetmap.org/?lat=36.92&amp;lon=26.58&amp;zoom=6&amp;layers=N">this</a>.</p>
+<p>I want a map that looks something like <a href="https://www.openstreetmap.org/?lat=36.92&amp;lon=26.58&amp;zoom=6&amp;layers=N">this</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-download" rel="tag" title="see questions tagged &#39;download&#39;">download</span> <span class="post-tag tag-link-zoom" rel="tag" title="see questions tagged &#39;zoom&#39;">zoom</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

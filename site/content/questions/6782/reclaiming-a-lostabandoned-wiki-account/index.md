@@ -116,8 +116,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to contact a sysadmin to help. <a href="http://wiki.openstreetmap.org/wiki/Sysadmin">Sysadmins list</a></p>
-<p>I'm part of the sysadmin team, <a href="http://wiki.openstreetmap.org/wiki/Special:EmailUser/Firefishy">contact me here (osm wiki)</a> or <a href="http://www.openstreetmap.org/user/Firefishy">contact me here (</a><a href="http://osm.org">osm.org</a>)</p>
+<p>You need to contact a sysadmin to help. <a href="https://wiki.openstreetmap.org/wiki/Sysadmin">Sysadmins list</a></p>
+<p>I'm part of the sysadmin team, <a href="https://wiki.openstreetmap.org/wiki/Special:EmailUser/Firefishy">contact me here (osm wiki)</a> or <a href="https://www.openstreetmap.org/user/Firefishy">contact me here (</a><a href="http://osm.org">osm.org</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

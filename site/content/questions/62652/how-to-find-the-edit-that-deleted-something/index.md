@@ -66,7 +66,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Overall seems to be a duplicate of <a href="https://help.openstreetmap.org/questions/50707/locating-deleted-items">https://help.openstreetmap.org/questions/50707/locating-deleted-items</a> .</p>
+<p>Overall seems to be a duplicate of <a href="/questions/50707/locating-deleted-items">https://help.openstreetmap.org/questions/50707/locating-deleted-items</a> .</p>
 </div>
 <div id="comment-68479-info" class="comment-info">
 <span class="comment-age">(25 Mar '19, 11:01)</span> <span class="comment-user userinfo">Richlv</span>

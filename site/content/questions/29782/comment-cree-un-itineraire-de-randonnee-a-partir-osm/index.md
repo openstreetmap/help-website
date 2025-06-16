@@ -128,7 +128,7 @@ osqa_accepted = false
 <p><a href="http://brouter.de/brouter-web/">http://brouter.de/brouter-web/</a> configurable à souhait</p>
 <p><a href="http://www.visugpx.com/">http://www.visugpx.com/</a> adpté au velo/rando</p>
 <p>sinon voir la liste complete :</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Biking.2C_Geocaching.2C_Hiking.2C_Sport">http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Biking.2C_Geocaching.2C_Hiking.2C_Sport</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Biking.2C_Geocaching.2C_Hiking.2C_Sport">https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Biking.2C_Geocaching.2C_Hiking.2C_Sport</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -237,7 +237,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Avoir un regard sur <a href="http://wiki.openstreetmap.org/wiki/FR:Hiking">http://wiki.openstreetmap.org/wiki/FR:Hiking</a> vous pouvez utiliser route = *</p>
+<p>Avoir un regard sur <a href="https://wiki.openstreetmap.org/wiki/FR:Hiking">https://wiki.openstreetmap.org/wiki/FR:Hiking</a> vous pouvez utiliser route = *</p>
 <p>désolé je ne parle français</p>
 </div>
 <div class="answer-controls post-controls">

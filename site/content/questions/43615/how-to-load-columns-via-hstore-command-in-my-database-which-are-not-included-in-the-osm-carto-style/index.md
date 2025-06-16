@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please do not ask two questions in one (particularly when they are technically not related), can you open a seperate question for your 2nd part?</p>
-<p>Wrt hstore I'm assuming that you are actually loading them in to Postgres/Postgis not qgis, and likely doing that with osm2pgsql? If that is the case you can follow <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql#hstore">http://wiki.openstreetmap.org/wiki/Osm2pgsql#hstore</a> and reimport.</p>
+<p>Wrt hstore I'm assuming that you are actually loading them in to Postgres/Postgis not qgis, and likely doing that with osm2pgsql? If that is the case you can follow <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql#hstore">https://wiki.openstreetmap.org/wiki/Osm2pgsql#hstore</a> and reimport.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,8 +159,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To import with hstore, you'll need to reimport. First run <code>CREATE EXTENSION hstore;</code> in the postgres database you want to use, then pass the <code>--hstore</code> option to osm2pgsql. <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql#hstore">Read more</a>.</p>
-<p>I'm afraid I don't know how to style QGis in the way you want, perhaps someone else can help. (Though like <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>, I advise you to open another question)</p>
+<p>To import with hstore, you'll need to reimport. First run <code>CREATE EXTENSION hstore;</code> in the postgres database you want to use, then pass the <code>--hstore</code> option to osm2pgsql. <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql#hstore">Read more</a>.</p>
+<p>I'm afraid I don't know how to style QGis in the way you want, perhaps someone else can help. (Though like <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>, I advise you to open another question)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

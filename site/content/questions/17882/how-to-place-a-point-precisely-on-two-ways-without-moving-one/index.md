@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Say that I have two ways that cross but do not have a shared point (an intersection). In Potlatch, how can I create a point that is on both ways without moving either one? It seems like no matter how I try to do this I end up creating a junction between the two ways but moving one of them.</p>
-<p>This is particularly of interest to me at the moment as I am trying to use the technique described on the <a href="http://wiki.openstreetmap.org/wiki/Roof_modelling">http://wiki.openstreetmap.org/wiki/Roof_modelling</a> page in the wiki to make my roof and parking lot outlines a bit more exact; and I can use "make parallel way" to create a nice grid to work with, but when I try to trace it I have no points to snap to, and when I create the points I end up moving my construction lines. Which then negates the point of doing all that work in the first place.</p>
+<p>This is particularly of interest to me at the moment as I am trying to use the technique described on the <a href="https://wiki.openstreetmap.org/wiki/Roof_modelling">https://wiki.openstreetmap.org/wiki/Roof_modelling</a> page in the wiki to make my roof and parking lot outlines a bit more exact; and I can use "make parallel way" to create a nice grid to work with, but when I try to trace it I have no points to snap to, and when I create the points I end up moving my construction lines. Which then negates the point of doing all that work in the first place.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch" rel="tag" title="see questions tagged &#39;potlatch&#39;">potlatch</span> <span class="post-tag tag-link-construction" rel="tag" title="see questions tagged &#39;construction&#39;">construction</span> <span class="post-tag tag-link-intersection" rel="tag" title="see questions tagged &#39;intersection&#39;">intersection</span> <span class="post-tag tag-link-tracing" rel="tag" title="see questions tagged &#39;tracing&#39;">tracing</span>
@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you can imagine to try the editor JOSM:</p>
-<p>There is a plugin called <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utilsplugin2</a> that gives you the feature to select two ways that cross eachother, and it automatically adds a new node where the lines cut.</p>
+<p>There is a plugin called <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utilsplugin2</a> that gives you the feature to select two ways that cross eachother, and it automatically adds a new node where the lines cut.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ osqa_accepted = false
 <div id="post-17908-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you zoom further in after you have started P2, and are accurate the point will not move see this question <a href="https://help.openstreetmap.org/questions/15374/how-to-join-existing-paths">https://help.openstreetmap.org/questions/15374/how-to-join-existing-paths</a></p>
+<p>If you zoom further in after you have started P2, and are accurate the point will not move see this question <a href="/questions/15374/how-to-join-existing-paths">https://help.openstreetmap.org/questions/15374/how-to-join-existing-paths</a></p>
 </div>
 <div id="comment-17908-info" class="comment-info">
 <span class="comment-age">(23 Nov '12, 00:26)</span> <span class="comment-user userinfo">andy mackey</span>

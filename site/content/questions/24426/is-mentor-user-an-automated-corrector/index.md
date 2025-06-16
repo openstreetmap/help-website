@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As far as can be seen from <a href="http://www.openstreetmap.org/user/mentor">http://www.openstreetmap.org/user/mentor</a> , "mentor" is a normal user just like you.</p>
+<p>As far as can be seen from <a href="https://www.openstreetmap.org/user/mentor">https://www.openstreetmap.org/user/mentor</a> , "mentor" is a normal user just like you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

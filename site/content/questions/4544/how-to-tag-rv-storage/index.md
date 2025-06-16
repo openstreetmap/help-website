@@ -232,8 +232,8 @@ One Answer:
 <div id="post-4617-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have updated the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcaravan_site">tourism=caravan_site</a> so it should be a clearer definition / explanation now.</p>
-<p>For amenity=storage (or similar), I would suggest you follow the <a href="http://wiki.openstreetmap.org/wiki/Creating_a_proposal">tag proposal process</a>, and/or discuss it on the Tagging mailing list. You could then request that it is shown by renderers etc.</p>
+<p>I have updated the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcaravan_site">tourism=caravan_site</a> so it should be a clearer definition / explanation now.</p>
+<p>For amenity=storage (or similar), I would suggest you follow the <a href="https://wiki.openstreetmap.org/wiki/Creating_a_proposal">tag proposal process</a>, and/or discuss it on the Tagging mailing list. You could then request that it is shown by renderers etc.</p>
 </div>
 <div id="comment-4617-info" class="comment-info">
 <span class="comment-age">(18 Apr '11, 22:11)</span> <span class="comment-user userinfo">Vclaw</span>

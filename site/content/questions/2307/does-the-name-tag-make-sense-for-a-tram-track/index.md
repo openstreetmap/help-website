@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>As a related question to <a href="http://help.openstreetmap.org/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street">What is the proper way to tag tram tracks embedded in a street?</a> : Does the <code>name=*</code> tag make sense for a tram track?</p>
-<p>On <a href="http://wiki.openstreetmap.org/wiki/Tag:railway=tram">Tag:railway=tram</a> , the Wiki proposes to use <code>name=*</code> to tag the "Line numbers". This seems ill-advised, because:</p>
+<p>As a related question to <a href="/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street">What is the proper way to tag tram tracks embedded in a street?</a> : Does the <code>name=*</code> tag make sense for a tram track?</p>
+<p>On <a href="https://wiki.openstreetmap.org/wiki/Tag:railway=tram">Tag:railway=tram</a> , the Wiki proposes to use <code>name=*</code> to tag the "Line numbers". This seems ill-advised, because:</p>
 <ul>
 <li>often several lines share a track</li>
 <li>usually a line will consist of many ways (because of length); tagging them all by line number will make it difficult to find the whole length of a line (it would have to be joined by searching for the name)</li>

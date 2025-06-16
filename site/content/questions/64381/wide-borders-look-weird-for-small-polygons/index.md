@@ -45,7 +45,7 @@ osqa_accepted = false
  #countries { polygon-fill: #ffffba; line-color: #8dd; line-join: round; line-cap: round; line-width: 14; }</code></pre>
 <p>I have played with the <em>line-join</em> and <em>line-cap</em> properties, but this is the best result I have got and it is not enough.</p>
 <p>Can this problem be solved at all? Am I missing something? Must something be done differently?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/islands.png" alt="alt text" /></p>
+<p><img src="/upfiles/islands.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-style" rel="tag" title="see questions tagged &#39;style&#39;">style</span> <span class="post-tag tag-link-kosmtik" rel="tag" title="see questions tagged &#39;kosmtik&#39;">kosmtik</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>

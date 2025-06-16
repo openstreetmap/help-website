@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If your device is a Garmin brand one, see <a href="http://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">"Basic Guide to Download OSM to Garmin GPS"</a>. Otherwise, type make and model of your GPS in the search box at our <a href="http://wiki.openstreetmap.org/">wiki</a> and see what you find.</p>
+<p>If your device is a Garmin brand one, see <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">"Basic Guide to Download OSM to Garmin GPS"</a>. Otherwise, type make and model of your GPS in the search box at our <a href="https://wiki.openstreetmap.org/">wiki</a> and see what you find.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

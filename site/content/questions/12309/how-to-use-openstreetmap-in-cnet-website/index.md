@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are many ways to use OSM data on a website, without specific details on what you actually want to acheive it is difficult to give you a good answer.</p>
-<p>We do have a list of frameworks including some built with C# here <a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a></p>
+<p>We do have a list of frameworks including some built with C# here <a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a></p>
 <p>Search engines will find you a couple more.</p>
 </div>
 <div class="answer-controls post-controls">

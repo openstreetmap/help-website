@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-48369-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a>: While fiddling with the OpT query, I have found a working solution - I had a typo in there :(</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a>: While fiddling with the OpT query, I have found a working solution - I had a typo in there :(</p>
 </div>
 <div id="comment-48369-info" class="comment-info">
 <span class="comment-age">(26 Feb '16, 11:29)</span> <span class="comment-user userinfo">Piskvor</span>

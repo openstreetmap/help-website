@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>What I'd imagine that you'd want to do is to display some points of interest (breweries etc.) over the top of some existing map tiles.</p>
 <p><a href="http://brewmap.maps3.org.uk/client/brewmap.html">Here's a site</a> that's similar to what you're describing, but for the UK. It uses <a href="http://leafletjs.com/">Leaflet</a> as a Javascript library to display map tiles and the overlays on top of them. There are lots of leaflet examples <a href="http://leafletjs.com/examples.html">here</a>, and there are some worked examples at the <a href="http://switch2osm.org/using-tiles/getting-started-with-leaflet/">switch2osm</a> site that may be helpful.</p>
-<p>What also might be helpful is a <a href="http://help.openstreetmap.org/questions/32760/looking-for-a-description-of-how-the-map-is-shown-on-a-pc-rendering-process-but-no-technical-details/33010">previous answer</a> attempting to give a "soup to nuts" explanation of OpenStreetMap, and the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginners' Guide</a> in the OSM wiki.</p>
+<p>What also might be helpful is a <a href="/questions/32760/looking-for-a-description-of-how-the-map-is-shown-on-a-pc-rendering-process-but-no-technical-details/33010">previous answer</a> attempting to give a "soup to nuts" explanation of OpenStreetMap, and the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginners' Guide</a> in the OSM wiki.</p>
 <p>I'd actually start with the "getting started with Leaflet" example at the switch2osm site, to just display a simple slippy map using existing tiles. Then try adding simple hardcoded overlay markers, then try getting those overlays from a server that are loaded based on map position, etc.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi please read this thoroughly and you ll find some answers, <a href="http://wiki.openstreetmap.org/wiki/Using_OSM">http://wiki.openstreetmap.org/wiki/Using_OSM</a> and <a href="http://wiki.openstreetmap.org/wiki/Web_front_end">http://wiki.openstreetmap.org/wiki/Web_front_end</a> and don’t ask multiple questions inside one question. These links carry a lot of other ones how to build and use a site with OSM material. Feel free to ask for specific answers after reading.</p>
+<p>Hi please read this thoroughly and you ll find some answers, <a href="https://wiki.openstreetmap.org/wiki/Using_OSM">https://wiki.openstreetmap.org/wiki/Using_OSM</a> and <a href="https://wiki.openstreetmap.org/wiki/Web_front_end">https://wiki.openstreetmap.org/wiki/Web_front_end</a> and don’t ask multiple questions inside one question. These links carry a lot of other ones how to build and use a site with OSM material. Feel free to ask for specific answers after reading.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

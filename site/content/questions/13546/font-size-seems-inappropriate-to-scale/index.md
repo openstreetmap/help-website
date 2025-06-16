@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Font size seems inappropriate to scale"
-description = '''http://www.openstreetmap.org/?lat=37.7719402313232&amp;amp;lon=-116.824793815613&amp;amp;zoom=15 I have a number of maps of the Tonopah Test Range. I entered two street names just to see how they would look before spending a lot of effort on naming more roads. The link goes to &quot;Repeater Road&quot;. The font seem...'''
+description = '''https://www.openstreetmap.org/?lat=37.7719402313232&amp;amp;lon=-116.824793815613&amp;amp;zoom=15 I have a number of maps of the Tonopah Test Range. I entered two street names just to see how they would look before spending a lot of effort on naming more roads. The link goes to &quot;Repeater Road&quot;. The font seem...'''
 date = "2012-06-14T20:19:00Z"
 lastmod = "2012-06-14T21:48:00Z"
 weight = 13546
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=37.7719402313232&amp;lon=-116.824793815613&amp;zoom=15">http://www.openstreetmap.org/?lat=37.7719402313232&amp;lon=-116.824793815613&amp;zoom=15</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=37.7719402313232&amp;lon=-116.824793815613&amp;zoom=15">https://www.openstreetmap.org/?lat=37.7719402313232&amp;lon=-116.824793815613&amp;zoom=15</a></p>
 <p>I have a number of maps of the Tonopah Test Range. I entered two street names just to see how they would look before spending a lot of effort on naming more roads. The link goes to "Repeater Road". The font seems very small. You need to zoom in quite a bit to see it at all.</p>
 <p>I found the message regarding changing XML to increase the size, but I see nothing in Potlach2 to allow the font size to be change.</p>
 </div>

@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>In Europe there are lots of areas (especially in city centers) where the first level of a building is occupied by something commercial (retail, services, catering) and all the higher (1 or more) levels are residential/living spaces. For example:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/shops-with-house-levels.jpeg" alt="Shops with residential/housing levels on top" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/shops-with-house-levels-high-rise_O0ZSPrx.png" alt="High-rise shops with residential/housing levels on top" /></p>
+<p><img src="/upfiles/shops-with-house-levels.jpeg" alt="Shops with residential/housing levels on top" /></p>
+<p><img src="/upfiles/shops-with-house-levels-high-rise_O0ZSPrx.png" alt="High-rise shops with residential/housing levels on top" /></p>
 <p>How should we tag such buildings and the landuse for them? Are they residential or retail/commercial?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -68,7 +68,7 @@ osqa_accepted = true
 <div id="post-71106-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas">https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas</a></p>
+<p>See also <a href="/questions/23994/tagging-landuse-in-downtown-areas">https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas</a></p>
 </div>
 <div id="comment-71106-info" class="comment-info">
 <span class="comment-age">(11 Oct '19, 08:53)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -238,7 +238,7 @@ Youe don't have to be too detailed. Landuse is about the general use of the land
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This type of question has been asked frequently in the past. See for example answers to : <a href="https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas">Tagging landuse in downtown areas</a>.</p>
+<p>This type of question has been asked frequently in the past. See for example answers to : <a href="/questions/23994/tagging-landuse-in-downtown-areas">Tagging landuse in downtown areas</a>.</p>
 <p>Your nice pictures I would unequivocally tag as landuse=retail (see my old answer above).</p>
 </div>
 <div class="answer-controls post-controls">

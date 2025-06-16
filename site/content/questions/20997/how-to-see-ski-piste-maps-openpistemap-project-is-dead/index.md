@@ -117,7 +117,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>On the website is does say "OpenPisteMap is currently experiencing some problems after migration to a new server. Please be patient while we resolve these issues."</p>
-<p>However I seem to remember seeing this message at the very end of 2012 so at least a good 3 full months ago. If anyone has more detail on the status please update the Wiki (<a href="http://wiki.openstreetmap.org/wiki/OpenPisteMap).">http://wiki.openstreetmap.org/wiki/OpenPisteMap).</a> I have added the current status.</p>
+<p>However I seem to remember seeing this message at the very end of 2012 so at least a good 3 full months ago. If anyone has more detail on the status please update the Wiki (<a href="https://wiki.openstreetmap.org/wiki/OpenPisteMap).">https://wiki.openstreetmap.org/wiki/OpenPisteMap).</a> I have added the current status.</p>
 </div>
 <div id="comment-21060-info" class="comment-info">
 <span class="comment-age">(29 Mar '13, 09:28)</span> <span class="comment-user userinfo">robbieonsea</span>
@@ -339,7 +339,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/OpenPisteMap">http://wiki.openstreetmap.org/wiki/OpenPisteMap</a> has a link to the source code, so you'll be able to setup your own OpenPisteMap.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OpenPisteMap">https://wiki.openstreetmap.org/wiki/OpenPisteMap</a> has a link to the source code, so you'll be able to setup your own OpenPisteMap.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

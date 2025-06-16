@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tag <a href="http://taginfo.openstreetmap.org/tags/barrier=embankment#overview"><code>barrier=embankment</code></a> seems best for the earthworks themselves, but the tag <a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Dfort"><code>historic=fort</code></a> has also been used to show the location of forts.</p>
+<p>The tag <a href="http://taginfo.openstreetmap.org/tags/barrier=embankment#overview"><code>barrier=embankment</code></a> seems best for the earthworks themselves, but the tag <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dfort"><code>historic=fort</code></a> has also been used to show the location of forts.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

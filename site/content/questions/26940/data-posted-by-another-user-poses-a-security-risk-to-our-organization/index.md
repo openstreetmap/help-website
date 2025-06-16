@@ -159,7 +159,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To remove accurate information such as building names or business locations would generally be a form of vandalism and be reverted.</p>
-<p>If there is accurate information in OSM that you believe should be removed your best option is to contact the Data Working Group at data@osmfoundation.org, but before doing so you need to first read <a href="http://help.openstreetmap.org/questions/26411/removing-data-for-safety-or-privacy-reasons/26417">this post on a similar question</a> by Frederik Ramm, another member of the Data Working Group.</p>
+<p>If there is accurate information in OSM that you believe should be removed your best option is to contact the Data Working Group at data@osmfoundation.org, but before doing so you need to first read <a href="/questions/26411/removing-data-for-safety-or-privacy-reasons/26417">this post on a similar question</a> by Frederik Ramm, another member of the Data Working Group.</p>
 <p>The most relevant quote is "OpenStreetMap will always accept building names if they're correct and their addition is legal."</p>
 <p>Paul Norman<br />
 For the Data Working Group</p>

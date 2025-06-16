@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Please edit your question and give us a <a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a> to that place, so we can investigate.</p>
+<p>Please edit your question and give us a <a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a> to that place, so we can investigate.</p>
 </div>
 <div id="comment-15862-info" class="comment-info">
 <span class="comment-age">(06 Sep '12, 21:05)</span> <span class="comment-user userinfo">stephan75</span>
@@ -142,7 +142,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Here is the permalink of the missing street: <a href="http://www.openstreetmap.org/?lat=43.557828&amp;lon=3.953757&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=43.557828&amp;lon=3.953757&amp;zoom=18&amp;layers=M</a></p>
+<p>Here is the permalink of the missing street: <a href="https://www.openstreetmap.org/?lat=43.557828&amp;lon=3.953757&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=43.557828&amp;lon=3.953757&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-15877-info" class="comment-info">
 <span class="comment-age">(07 Sep '12, 09:43)</span> <span class="comment-user userinfo">Pieren</span>
@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, I've <a href="http://www.openstreetmap.org/browse/changeset/13020752">added</a> the missing road with <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a>, using <a href="http://wiki.openstreetmap.org/wiki/Bing">Bing aerial</a> and the french <a href="http://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr">cadastre</a> for checking the name (if you're local, you can survey directly the name by visiting the street).</p>
+<p>Hi, I've <a href="https://www.openstreetmap.org/browse/changeset/13020752">added</a> the missing road with <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a>, using <a href="https://wiki.openstreetmap.org/wiki/Bing">Bing aerial</a> and the french <a href="https://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr">cadastre</a> for checking the name (if you're local, you can survey directly the name by visiting the street).</p>
 <p>Now, you can do the same for other missing roads :-)</p>
 </div>
 <div class="answer-controls post-controls">

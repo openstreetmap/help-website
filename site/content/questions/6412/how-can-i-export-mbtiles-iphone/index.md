@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can use <a href="http://tilemill.com/">TileMill</a> to create mbtiles out of OSM data.</p>
-<p>But I am not aware about whether Tilemill can process OSM data directly. Maybe you have to convert it from osm format to <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">shapefiles</a> first or find a download source for shp.</p>
+<p>But I am not aware about whether Tilemill can process OSM data directly. Maybe you have to convert it from osm format to <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">shapefiles</a> first or find a download source for shp.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

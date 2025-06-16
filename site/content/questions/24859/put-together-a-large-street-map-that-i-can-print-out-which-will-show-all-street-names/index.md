@@ -144,7 +144,7 @@ One Answer:
 <div id="post-24933-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/23568/printing-a-map">https://help.openstreetmap.org/questions/23568/printing-a-map</a></p>
+<p><a href="/questions/23568/printing-a-map">https://help.openstreetmap.org/questions/23568/printing-a-map</a></p>
 </div>
 <div id="comment-24933-info" class="comment-info">
 <span class="comment-age">(05 Aug '13, 17:26)</span> <span class="comment-user userinfo">andy mackey</span>

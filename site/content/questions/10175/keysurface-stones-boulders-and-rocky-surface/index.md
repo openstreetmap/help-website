@@ -41,12 +41,12 @@ osqa_accepted = true
 <div class="question-body">
 <p>As advised in the wiki page documenting this tag, paths should always be tagged with surface.</p>
 <p>However I don't see any specific values to descrive paths with medium-sized rocks and stones. There is the value <em>pebblestone</em>, but I don't think it is appropriate for a surface like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/stones.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/stones.PNG" alt="alt text" /></p>
 <p>These stones are neither small nor rounded, so I woudn't call them pebbles! In my opinion, <em>gravel</em> wouldn't be appropriate, either.</p>
 <p>Also, it seems we miss a value for a path full of boulders (large rocks), like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/boulders.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/boulders.PNG" alt="alt text" /></p>
 <p>Finally, how would you tag a path with a rocky surface? For example:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/rocky.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/rocky.PNG" alt="alt text" /></p>
 <p>What values would be appropriate for these 3 surface types?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -124,7 +124,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well, you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>, but obviously it makes sense to use the same values as other mappers, so <a href="http://taginfo.openstreetmap.org/">taginfo</a> can be useful. From looking at <a href="http://taginfo.openstreetmap.org/keys/surface#values">the popular values for surface</a>, I'd say "rocky" is the most popular option that fits the bill. If that isn't granular enough perhaps you might find <a href="http://wiki.openstreetmap.org/wiki/Mtb:scale">Mtb:scale</a> helpful?</p>
+<p>Well, you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>, but obviously it makes sense to use the same values as other mappers, so <a href="http://taginfo.openstreetmap.org/">taginfo</a> can be useful. From looking at <a href="http://taginfo.openstreetmap.org/keys/surface#values">the popular values for surface</a>, I'd say "rocky" is the most popular option that fits the bill. If that isn't granular enough perhaps you might find <a href="https://wiki.openstreetmap.org/wiki/Mtb:scale">Mtb:scale</a> helpful?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I don't think that it's necessarily helpful to "propose" a new value - I'd have a look at what other people are using for the tag, and if nothing fits, pick something better. Although the <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a> page says "please document" in this case I suspect that added lots more entries to <a href="http://wiki.openstreetmap.org/wiki/Surface">key:surface</a> isn't going to help as that already has "User Defined" and a link to <a href="http://taginfo.openstreetmap.org/keys/?key=surface#values">tagwatch</a> at the bottom.</p>
+<p>I don't think that it's necessarily helpful to "propose" a new value - I'd have a look at what other people are using for the tag, and if nothing fits, pick something better. Although the <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a> page says "please document" in this case I suspect that added lots more entries to <a href="https://wiki.openstreetmap.org/wiki/Surface">key:surface</a> isn't going to help as that already has "User Defined" and a link to <a href="http://taginfo.openstreetmap.org/keys/?key=surface#values">tagwatch</a> at the bottom.</p>
 </div>
 <div id="comment-10182-info" class="comment-info">
 <span class="comment-age">(23 Jan '12, 20:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

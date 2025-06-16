@@ -188,7 +188,7 @@ There may be other suitable choices <a href="https://wiki.openstreetmap.org/wiki
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A possible alternative is GPS Prune, it will run on Win PCs and some macs you will need to install Java for it to run. <img src="http://help.openstreetmap.org/upfiles/gps_prune.JPG" alt="alt text" /></p>
+<p>A possible alternative is GPS Prune, it will run on Win PCs and some macs you will need to install Java for it to run. <img src="/upfiles/gps_prune.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -269,7 +269,7 @@ There may be other suitable choices <a href="https://wiki.openstreetmap.org/wiki
 <div id="post-48299-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>www8.garmin.com/learningcenter/training/basecamp <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>www8.garmin.com/learningcenter/training/basecamp <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div id="comment-48299-info" class="comment-info">
 <span class="comment-age">(22 Feb '16, 23:03)</span> <span class="comment-user userinfo">andy mackey</span>

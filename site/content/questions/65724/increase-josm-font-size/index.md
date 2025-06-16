@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Does the answer to <a href="https://help.openstreetmap.org/questions/61236/how-can-i-scale-josm-for-a-4kuhd-display">this previous question</a> help?</p>
+<p>Does the answer to <a href="/questions/61236/how-can-i-scale-josm-for-a-4kuhd-display">this previous question</a> help?</p>
 </div>
 <div id="comment-65726-info" class="comment-info">
 <span class="comment-age">(03 Sep '18, 20:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

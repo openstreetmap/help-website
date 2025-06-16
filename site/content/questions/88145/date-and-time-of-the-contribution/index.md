@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I was wondering if there is an easy way to see the date and the time of the contribution (time when the changeset is created)? There is a following text on each changeset: Edited 13 days ago by XYZ, and on PC when you do the mouse over 13 days, you'll get the tooltip with the exact date, but on mobile I'm finding it very frustrating. I haven't found a way to check the date via mobile browser. How to get deatiled date and time on mobile?</p>
 <p>Follow-up question would be if it is possible to implement tooltip like it is on gitlab since it works like a charm (I wanted to attach the image, but my reputation is below 60 and I'm unable to provide a screenshot).</p>
 <p>PS. I haven't been looged in, so this is why I couldn't upload :)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_0856_fmQ6acZ.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/IMG_0856_fmQ6acZ.jpeg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span> <span class="post-tag tag-link-timestamps" rel="tag" title="see questions tagged &#39;timestamps&#39;">timestamps</span>

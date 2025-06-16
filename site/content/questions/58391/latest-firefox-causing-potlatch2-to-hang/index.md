@@ -77,7 +77,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>True. It also moves the floating toolbar from its default location to the blue pulldown menu near the top of the screen:</p>
-<p><a href="https://help.openstreetmap.org/upfiles/Capture_TdXppOB.JPG">https://help.openstreetmap.org/upfiles/Capture_TdXppOB.JPG</a></p>
+<p><span>/upfiles/Capture_TdXppOB.JPG</span></p>
 <p>A temporary workaround is to open OSM in a new window &amp; keep other websites in the original one.</p>
 </div>
 <div id="comment-58398-info" class="comment-info">

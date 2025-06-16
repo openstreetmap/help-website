@@ -148,7 +148,7 @@ osqa_accepted = false
 <div id="post-35840-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See: <a href="https://help.openstreetmap.org/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it">https://help.openstreetmap.org/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it</a></p>
+<p>See: <a href="/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it">https://help.openstreetmap.org/questions/35806/how-do-i-make-boundaries-for-a-city-with-enclaves-inside-of-it</a></p>
 </div>
 <div id="comment-35840-info" class="comment-info">
 <span class="comment-age">(14 Aug '14, 17:56)</span> <span class="comment-user userinfo">Justin_-koavf-</span>

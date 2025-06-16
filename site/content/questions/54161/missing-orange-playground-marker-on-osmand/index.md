@@ -128,7 +128,7 @@ osqa_accepted = true
 <div id="post-54225-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> it still has nothing to do with the question</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> it still has nothing to do with the question</p>
 </div>
 <div id="comment-54225-info" class="comment-info">
 <span class="comment-age">(21 Jan '17, 12:43)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -139,7 +139,7 @@ osqa_accepted = true
 <div id="post-54241-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10488/scallllllllll">@scal</a> how else do you get them?</p>
+<p><a href="https://help.openstreetmap.org/users/10488/scallllllllll">@scal</a> how else do you get them?</p>
 </div>
 <div id="comment-54241-info" class="comment-info">
 <span class="comment-age">(22 Jan '17, 22:32)</span> <span class="comment-user userinfo">H_mlet</span>

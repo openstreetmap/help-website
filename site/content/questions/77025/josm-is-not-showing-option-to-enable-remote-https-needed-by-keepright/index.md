@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi</p>
 <p>I have JOSM working and remote control enabled. It works fine with OSM pages but JOSM remote settings does not show the HTTPS option which keepright needs:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2020-10-09_11_31_52-Preferences.gif" alt="Remote Settings Available" /></p>
+<p><img src="/upfiles/2020-10-09_11_31_52-Preferences.gif" alt="Remote Settings Available" /></p>
 <p>Am I looking in the wrong place?</p>
-<p>Note: the solution suggested at <a href="https://help.openstreetmap.org/questions/55643/how-do-i-fix-the-link-to-josm-from-keepright">https://help.openstreetmap.org/questions/55643/how-do-i-fix-the-link-to-josm-from-keepright</a> (right click on the JOSM link in keepright) does not work, because I have no JOSM link there.</p>
+<p>Note: the solution suggested at <a href="/questions/55643/how-do-i-fix-the-link-to-josm-from-keepright">https://help.openstreetmap.org/questions/55643/how-do-i-fix-the-link-to-josm-from-keepright</a> (right click on the JOSM link in keepright) does not work, because I have no JOSM link there.</p>
 <p>JOSM is running in Windows 10 64 bit and keepright is running in firefox.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

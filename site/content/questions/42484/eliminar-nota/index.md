@@ -130,7 +130,7 @@ One Answer:
 <div id="post-42498-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/42485/nota-sin-resolver-350876">https://help.openstreetmap.org/questions/42485/nota-sin-resolver-350876</a></p>
+<p>See also <a href="/questions/42485/nota-sin-resolver-350876">https://help.openstreetmap.org/questions/42485/nota-sin-resolver-350876</a></p>
 </div>
 <div id="comment-42498-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 09:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -90,7 +90,7 @@ wy 165283326</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Not sure what to do if reverter has failed but for future reference you should be able to retrieve previous versions of objects following pattern for <a href="https://help.openstreetmap.org/questions/20506/overpass-get-older-version">this question</a>.</p>
+<p>Not sure what to do if reverter has failed but for future reference you should be able to retrieve previous versions of objects following pattern for <a href="/questions/20506/overpass-get-older-version">this question</a>.</p>
 </div>
 <div id="comment-78435-info" class="comment-info">
 <span class="comment-age">(21 Jan '21, 12:46)</span> <span class="comment-user userinfo">InsertUser</span>

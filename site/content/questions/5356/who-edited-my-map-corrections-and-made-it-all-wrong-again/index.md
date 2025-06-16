@@ -104,10 +104,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Visit <a href="http://www.openstreetmap.org/user/docdoc/edits">http://www.openstreetmap.org/user/docdoc/edits</a> and select the changeset you made. Then click on the ways at "Has the following X ways" to see their editing history.</p>
-<p>You may also look at any object by starting from the map <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> and selecting Overlays/Data at the blue/white "+" in the upper right corner. Then select Load Data in the Data frame. Now you can click on the object you want to inspect directly in the map, and then select Show History in the Data frame.</p>
+<p>Visit <a href="https://www.openstreetmap.org/user/docdoc/edits">https://www.openstreetmap.org/user/docdoc/edits</a> and select the changeset you made. Then click on the ways at "Has the following X ways" to see their editing history.</p>
+<p>You may also look at any object by starting from the map <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> and selecting Overlays/Data at the blue/white "+" in the upper right corner. Then select Load Data in the Data frame. Now you can click on the object you want to inspect directly in the map, and then select Show History in the Data frame.</p>
 <p>If possible I suggest you contact the person who has edited your changes directly instead of starting an editing war.</p>
-<p>It is possible to add "hidden" (non-rendered) tags further describing the reason behind an editing. See <a href="http://wiki.openstreetmap.org/wiki/Key:note">Key:note</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:comment">Key:comment</a>.</p>
+<p>It is possible to add "hidden" (non-rendered) tags further describing the reason behind an editing. See <a href="https://wiki.openstreetmap.org/wiki/Key:note">Key:note</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:comment">Key:comment</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Two other ways of seeing who has edited in your area are <a href="http://wiki.openstreetmap.org/wiki/OSM_Mapper">ITO OSM Mapper</a> (registration required) and <a href="http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL</a> (OpenStreetMap Watch List).</p>
+<p>Two other ways of seeing who has edited in your area are <a href="https://wiki.openstreetmap.org/wiki/OSM_Mapper">ITO OSM Mapper</a> (registration required) and <a href="https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL</a> (OpenStreetMap Watch List).</p>
 <p>The ITO product only shows ways, and sometimes is a few days behind the main database, but it provides a very convenient way of getting an overview of editors, edits and tagging in an area. I find OWL is most conveniently used with an RSS/Atom feed for a particular area. The two are complementary as OSM Mapper is great for an overview, and OWL can show the detail of individual edits.</p>
 </div>
 <div class="answer-controls post-controls">

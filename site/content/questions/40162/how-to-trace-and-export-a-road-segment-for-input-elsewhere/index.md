@@ -167,7 +167,7 @@ osqa_accepted = false
 <div id="post-40184-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10297/chucksherman">@ChuckSherman</a>: not any more, right?</p>
+<p><a href="https://help.openstreetmap.org/users/10297/chucksherman">@ChuckSherman</a>: not any more, right?</p>
 </div>
 <div id="comment-40184-info" class="comment-info">
 <span class="comment-age">(09 Jan '15, 20:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

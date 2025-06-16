@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "osmose error 7090 on traffic-light placement"
-description = '''I have added a few stoplights following the idea of placing the node at the point where the cars stop. I just checked osmose and I&#x27;m getting warning 7090, node on ways; class 3.[http://wiki.openstreetmap.org/wiki/Osmose/issues#7090]. I&#x27;m not really sure what this means but it sounds like the node is...'''
+description = '''I have added a few stoplights following the idea of placing the node at the point where the cars stop. I just checked osmose and I&#x27;m getting warning 7090, node on ways; class 3.[https://wiki.openstreetmap.org/wiki/Osmose/issues#7090]. I&#x27;m not really sure what this means but it sounds like the node is...'''
 date = "2016-07-08T02:50:00Z"
 lastmod = "2016-07-12T16:08:00Z"
 weight = 50725
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have added a few stoplights following the idea of placing the node at the point where the cars stop. I just checked osmose and I'm getting warning 7090, node on ways; class 3.[<a href="http://wiki.openstreetmap.org/wiki/Osmose/issues#7090%5D.">http://wiki.openstreetmap.org/wiki/Osmose/issues#7090].</a> I'm not really sure what this means but it sounds like the node is not on a road . One such node is <a href="http://www.openstreetmap.org/node/3577524591"></a> <a href="http://www.openstreetmap.org/node/3577524591">http://www.openstreetmap.org/node/3577524591</a> . Ive tried to place the node in the center of road right over the white stop line that I can see from the satellite image. Ive also notices that this error comes up a lot all over the world. I'm just learning OSM so any help or guidance will be useful. Thanks</p>
+<p>I have added a few stoplights following the idea of placing the node at the point where the cars stop. I just checked osmose and I'm getting warning 7090, node on ways; class 3.[<a href="https://wiki.openstreetmap.org/wiki/Osmose/issues#7090%5D.">https://wiki.openstreetmap.org/wiki/Osmose/issues#7090].</a> I'm not really sure what this means but it sounds like the node is not on a road . One such node is <a href="https://www.openstreetmap.org/node/3577524591"></a> <a href="https://www.openstreetmap.org/node/3577524591">https://www.openstreetmap.org/node/3577524591</a> . Ive tried to place the node in the center of road right over the white stop line that I can see from the satellite image. Ive also notices that this error comes up a lot all over the world. I'm just learning OSM so any help or guidance will be useful. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osmose" rel="tag" title="see questions tagged &#39;osmose&#39;">osmose</span> <span class="post-tag tag-link-traffic_signals" rel="tag" title="see questions tagged &#39;traffic_signals&#39;">traffic_signals</span> <span class="post-tag tag-link-7090" rel="tag" title="see questions tagged &#39;7090&#39;">7090</span>

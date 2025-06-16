@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This link is probably the easiest way and should work, but the montana is a newer model and things can change.You may find, as I have with a Nivi 1390 garmin that you can have several maps of different names in the memory card.On older units GMAPsupp was the only name that would load. which was the case on the Vista HCX.http://help.openstreetmap.org/questions/3785/osm-on-garmin</p>
+<p>This link is probably the easiest way and should work, but the montana is a newer model and things can change.You may find, as I have with a Nivi 1390 garmin that you can have several maps of different names in the memory card.On older units GMAPsupp was the only name that would load. which was the case on the Vista HCX.https://help.openstreetmap.org/questions/3785/osm-on-garmin</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

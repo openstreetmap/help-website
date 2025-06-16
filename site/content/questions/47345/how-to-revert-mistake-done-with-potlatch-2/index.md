@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>While doing changes I made mistake which did not show clearly in the zoom setting I was working. So I saved changes. But it looks a big mistake in other zoom levels. How to undo it? I do not know JOSM at all, so most help threads are uncomprehensible to me.</p>
-<p>The mistake can be seen most clearly here: <a href="http://www.openstreetmap.org/#map=12/61.3056/27.9149">http://www.openstreetmap.org/#map=12/61.3056/27.9149</a> Zoom a bit closer and water/land attributes invert!</p>
-<p>Mistake is somewhere in this location <a href="http://www.openstreetmap.org/#map=17/61.28512/27.93208">http://www.openstreetmap.org/#map=17/61.28512/27.93208</a></p>
+<p>The mistake can be seen most clearly here: <a href="https://www.openstreetmap.org/#map=12/61.3056/27.9149">https://www.openstreetmap.org/#map=12/61.3056/27.9149</a> Zoom a bit closer and water/land attributes invert!</p>
+<p>Mistake is somewhere in this location <a href="https://www.openstreetmap.org/#map=17/61.28512/27.93208">https://www.openstreetmap.org/#map=17/61.28512/27.93208</a></p>
 <p>If someone can revert changes to this area, please do so.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

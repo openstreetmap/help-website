@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are many ways to do this, depending on your needs and tastes. One way is to use <a href="http://switch2osm.org/using-tiles/getting-started-with-leaflet/">leaflet</a> with an OSM basemap, and your POIs in <a href="http://leafletjs.com/examples/geojson.html">geojson</a> format. Please be more specific if you have problems.</p>
-<p>Speaking of geocoded postal codes, where did you get yours from ? If your source is <a href="http://www.openstreetmap.org/copyright">compatible with osm</a>, it would be advantageous to get the data into OSM :</p>
+<p>Speaking of geocoded postal codes, where did you get yours from ? If your source is <a href="https://www.openstreetmap.org/copyright">compatible with osm</a>, it would be advantageous to get the data into OSM :</p>
 <ul>
 <li>Many ready-made tools will allow you to query and display the data</li>
 <li>Data will be much more widely available</li>
@@ -138,7 +138,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>If your data can be added to OSM, please contact the <a href="https://lists.openstreetmap.org/listinfo/talk-pl">OSM Talk Poland</a> mailing list and see the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>.</p>
+<p>If your data can be added to OSM, please contact the <a href="https://lists.openstreetmap.org/listinfo/talk-pl">OSM Talk Poland</a> mailing list and see the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>.</p>
 </div>
 <div id="comment-27030-info" class="comment-info">
 <span class="comment-age">(09 Oct '13, 10:16)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

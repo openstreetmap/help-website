@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-58949-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This looks like an exact duplicate of <a href="https://help.openstreetmap.org/questions/58935/query-for-total-mapped-buildings">https://help.openstreetmap.org/questions/58935/query-for-total-mapped-buildings</a> . If you feel that hasn't been answered, can you add a comment there explaining the problem?</p>
+<p>This looks like an exact duplicate of <a href="/questions/58935/query-for-total-mapped-buildings">https://help.openstreetmap.org/questions/58935/query-for-total-mapped-buildings</a> . If you feel that hasn't been answered, can you add a comment there explaining the problem?</p>
 </div>
 <div id="comment-58949-info" class="comment-info">
 <span class="comment-age">(03 Sep '17, 19:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

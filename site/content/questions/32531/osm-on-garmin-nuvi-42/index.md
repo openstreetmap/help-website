@@ -137,7 +137,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Generating own maps is way to complicated for the average user. Especially since there are already many <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">pre-generated OSM maps for Garmin</a> available.</p>
+<p>Generating own maps is way to complicated for the average user. Especially since there are already many <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">pre-generated OSM maps for Garmin</a> available.</p>
 </div>
 <div id="comment-32537-info" class="comment-info">
 <span class="comment-age">(22 Apr '14, 20:40)</span> <span class="comment-user userinfo">scai ♦</span>

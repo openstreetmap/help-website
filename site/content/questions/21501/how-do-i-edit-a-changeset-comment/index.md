@@ -117,7 +117,7 @@ One Answer:
 <p>If you would use the offline editor <span>JOSM</span> it is differently: per default a new comment for each save is asked.</p>
 <p>See also the previous questions about the same topic:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/8439/is-it-possible-to-change-comments-in-changeset-history">is-it-possible-to-change-comments-in-changeset-history</a></li>
+<li><a href="/questions/8439/is-it-possible-to-change-comments-in-changeset-history">is-it-possible-to-change-comments-in-changeset-history</a></li>
 <li><span>how-to-source-a-changeset-after-its-closed</span></li>
 </ul>
 </div>

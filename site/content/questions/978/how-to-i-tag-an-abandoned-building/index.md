@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use building=<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Abandoned">abandoned</a> or building=<a href="http://wiki.openstreetmap.org/wiki/Key:disused">disused</a>, whatever fits more (probably the first one makes more sense). These are not very common tags, but have already <a href="http://tagstat.hypercube.telascience.org/tagvaluedetails.php?tag=building&amp;value=abandoned">27</a> and <a href="http://tagstat.hypercube.telascience.org/tagvaluedetails.php?tag=building&amp;value=disused">9</a> usages according to tagstat.</p>
+<p>You could use building=<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Abandoned">abandoned</a> or building=<a href="https://wiki.openstreetmap.org/wiki/Key:disused">disused</a>, whatever fits more (probably the first one makes more sense). These are not very common tags, but have already <a href="http://tagstat.hypercube.telascience.org/tagvaluedetails.php?tag=building&amp;value=abandoned">27</a> and <a href="http://tagstat.hypercube.telascience.org/tagvaluedetails.php?tag=building&amp;value=disused">9</a> usages according to tagstat.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

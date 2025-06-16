@@ -95,7 +95,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Isn't this a duplicate of <a href="https://help.openstreetmap.org/questions/50696/how-to-get-map-corner-latlong-using-open-layer">https://help.openstreetmap.org/questions/50696/how-to-get-map-corner-latlong-using-open-layer</a> ?</p>
+<p>Isn't this a duplicate of <a href="/questions/50696/how-to-get-map-corner-latlong-using-open-layer">https://help.openstreetmap.org/questions/50696/how-to-get-map-corner-latlong-using-open-layer</a> ?</p>
 </div>
 <div id="comment-50929-info" class="comment-info">
 <span class="comment-age">(15 Jul '16, 17:52)</span> <span class="comment-user userinfo">alester</span>

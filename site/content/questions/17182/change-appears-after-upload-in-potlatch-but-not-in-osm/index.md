@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Change appears after upload in Potlatch but not in OSM"
-description = '''Hello, I added at this day this little way: http://www.openstreetmap.org/user/pedentim/traces/1343021 It is my first one, so my question might be notorious to you. The upload was succesfull. The way is visble to me in potlatch, but not in OSM. Have I just to wait some time? Or did I miss something? ...'''
+description = '''Hello, I added at this day this little way: https://www.openstreetmap.org/user/pedentim/traces/1343021 It is my first one, so my question might be notorious to you. The upload was succesfull. The way is visble to me in potlatch, but not in OSM. Have I just to wait some time? Or did I miss something? ...'''
 date = "2012-10-25T16:21:00Z"
 lastmod = "2012-10-25T21:33:00Z"
 weight = 17182
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I added at this day this little way: <a href="http://www.openstreetmap.org/user/pedentim/traces/1343021">http://www.openstreetmap.org/user/pedentim/traces/1343021</a></p>
+<p>Hello, I added at this day this little way: <a href="https://www.openstreetmap.org/user/pedentim/traces/1343021">https://www.openstreetmap.org/user/pedentim/traces/1343021</a></p>
 <p>It is my first one, so my question might be notorious to you.</p>
 <p>The upload was succesfull.</p>
 <p>The way is visble to me in potlatch, but not in OSM.</p>
@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-17190-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please see <a href="https://help.openstreetmap.org/questions/938/can-not-see-the-gps-track">this FAQ</a></p>
+<p>Please see <a href="/questions/938/can-not-see-the-gps-track">this FAQ</a></p>
 </div>
 <div id="comment-17190-info" class="comment-info">
 <span class="comment-age">(25 Oct '12, 21:33)</span> <span class="comment-user userinfo">Jonathan Ben...</span>

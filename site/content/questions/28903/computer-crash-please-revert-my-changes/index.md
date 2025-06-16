@@ -184,8 +184,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The relevant changeset seems to be <a href="http://www.openstreetmap.org/changeset/19336022">#19336022</a> (<a href="http://osmhv.openstreetmap.de/changeset.jsp?id=19336022#lon=39.86861856;lat=43.51887562;zoom=15;layer=Mpnk">OSMHV</a>) - likely <a href="https://github.com/systemed/iD/issues/542">the iD circle problem</a>. ;-) Not your fault, Юрий777. You may want to <em>use another <span>editor</span></em> in future.</p>
-<p>I have <a href="http://www.openstreetmap.org/changeset/19336756">reverted</a> (<a href="http://osmhv.openstreetmap.de/changeset.jsp?id=19336756#lon=39.86870439;lat=43.5178113;zoom=15;layer=Mpnk">OSMHV</a>) it. All fine again. Please re-do the changes you wanted to do (seems you wanted to do something with the wood or recreation ground).</p>
+<p>The relevant changeset seems to be <a href="https://www.openstreetmap.org/changeset/19336022">#19336022</a> (<a href="http://osmhv.openstreetmap.de/changeset.jsp?id=19336022#lon=39.86861856;lat=43.51887562;zoom=15;layer=Mpnk">OSMHV</a>) - likely <a href="https://github.com/systemed/iD/issues/542">the iD circle problem</a>. ;-) Not your fault, Юрий777. You may want to <em>use another <span>editor</span></em> in future.</p>
+<p>I have <a href="https://www.openstreetmap.org/changeset/19336756">reverted</a> (<a href="http://osmhv.openstreetmap.de/changeset.jsp?id=19336756#lon=39.86870439;lat=43.5178113;zoom=15;layer=Mpnk">OSMHV</a>) it. All fine again. Please re-do the changes you wanted to do (seems you wanted to do something with the wood or recreation ground).</p>
 <p>Next time you need such help, it would be better to ask in a live chat or forum (because this site here is not meant for your type of questions) – see <span>Contact options</span>.</p>
 </div>
 <div class="answer-controls post-controls">

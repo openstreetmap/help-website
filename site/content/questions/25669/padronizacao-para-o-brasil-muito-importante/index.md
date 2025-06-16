@@ -122,7 +122,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Lucas, sugiro verificar o <a href="http://wiki.openstreetmap.org/wiki/Pt-br:Guia_de_Mapeamento_do_Territ%C3%B3rio_Brasileiro">Guia de mapeamento do território brasileiro</a> no wiki.</p>
+<p>Lucas, sugiro verificar o <a href="https://wiki.openstreetmap.org/wiki/Pt-br:Guia_de_Mapeamento_do_Territ%C3%B3rio_Brasileiro">Guia de mapeamento do território brasileiro</a> no wiki.</p>
 <p>Também é interessante entrar em contato com a comunidade brasileira. Veja o site <a href="http://openstreetmap.com.br/">http://openstreetmap.com.br/</a> para saber como.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -175,8 +175,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There appear to be Wiki pages for mapping Brazil, including mapping roads:</p>
 <p>Parece haver páginas wiki para mapear Brasil, incluindo estradas de mapeamento:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Brazil">http://wiki.openstreetmap.org/wiki/Brazil</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Pt-br:Map_Features#Roads">http://wiki.openstreetmap.org/wiki/Pt-br:Map_Features#Roads</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Brazil">https://wiki.openstreetmap.org/wiki/Brazil</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Pt-br:Map_Features#Roads">https://wiki.openstreetmap.org/wiki/Pt-br:Map_Features#Roads</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

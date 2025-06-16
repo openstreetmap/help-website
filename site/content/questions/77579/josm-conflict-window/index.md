@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>Which is the 'Their Version' (Right)?</p>
 <p>What does the pale orange/peach(?) coloured entries signify?</p>
 <p>Is there a reason timestamps couldn't have been added? It would have made it so much clearer?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture2.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Capture2.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-conflicts" rel="tag" title="see questions tagged &#39;conflicts&#39;">conflicts</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span>

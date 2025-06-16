@@ -108,7 +108,7 @@ out skel qt;</code></pre>
   &quot;id&quot;: &quot;node/5478168779&quot;
 },</code></pre>
 <p>This is how the stop looks in OpenStreetMap:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/vj1nA.png" alt="alt text" /></p>
+<p><img src="/upfiles/vj1nA.png" alt="alt text" /></p>
 <p>(original data source: <a href="https://www.openstreetmap.org/node/5478168779">https://www.openstreetmap.org/node/5478168779</a> )</p>
 <p>OSM has tags, especially the name, that are missing in the geojson export.</p>
 <p>How do I get the tags like</p>

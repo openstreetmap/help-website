@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a wiki page explaining how to put a <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map on Garmin devices</a> and also a <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">list of pre-made maps</a> for Garmin devices.</p>
+<p>There is a wiki page explaining how to put a <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map on Garmin devices</a> and also a <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">list of pre-made maps</a> for Garmin devices.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

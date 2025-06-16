@@ -48,7 +48,7 @@ osqa_accepted = false
 );
 out body;</code></pre>
 <p>Unfortunately, returned ways are out of my bounding box, as shown on the picture below (bbox is approximately red square) so the question is how to filter results to retrieve data only in my bounding box range?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/example1.png" alt="alt text" /></p>
+<p><img src="/upfiles/example1.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-filter" rel="tag" title="see questions tagged &#39;filter&#39;">filter</span> <span class="post-tag tag-link-filtering" rel="tag" title="see questions tagged &#39;filtering&#39;">filtering</span> <span class="post-tag tag-link-bbox" rel="tag" title="see questions tagged &#39;bbox&#39;">bbox</span> <span class="post-tag tag-link-bounding-polygon" rel="tag" title="see questions tagged &#39;bounding-polygon&#39;">bounding-polygon</span>

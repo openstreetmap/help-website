@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>Following bug not yet fixed: <a href="https://help.openstreetmap.org/questions/12810/kashmir-india">https://help.openstreetmap.org/questions/12810/kashmir-india</a></p>
+<p>Following bug not yet fixed: <a href="/questions/12810/kashmir-india">https://help.openstreetmap.org/questions/12810/kashmir-india</a></p>
 <p>India's administrative boundary is not correct in jammu&amp;kashmir.</p>
 <p>India government announced new law regarding show incorrect map(refer below links).</p>
 <p><a href="http://www.hindustantimes.com/india/up-to-100-crore-fine-prison-sentence-for-wrong-depiction-of-india-map/story-5SSQhsYBsa8bJ4NCkrsawJ.html">http://www.hindustantimes.com/india/up-to-100-crore-fine-prison-sentence-for-wrong-depiction-of-india-map/story-5SSQhsYBsa8bJ4NCkrsawJ.html</a></p>
@@ -240,7 +240,7 @@ osqa_accepted = false
 <div id="post-49590-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/30/rorym">@rorym</a>: Thanks for your answer. So I can't edit admin boundary in OSM, right?</p>
+<p><a href="https://help.openstreetmap.org/users/30/rorym">@rorym</a>: Thanks for your answer. So I can't edit admin boundary in OSM, right?</p>
 </div>
 <div id="comment-49590-info" class="comment-info">
 <span class="comment-age">(06 May '16, 08:50)</span> <span class="comment-user userinfo">Rajavelu_M</span>
@@ -264,7 +264,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Btw, this is a very relevant document on OSM and disputed territories: <a href="http://wiki.osmfoundation.org/w/images/d/d8/DisputedTerritoriesInformation.pdf">http://wiki.osmfoundation.org/w/images/d/d8/DisputedTerritoriesInformation.pdf</a> ; another applicable answer for a similar issue here: <a href="http://help.openstreetmap.org/questions/48961/is-showing-golan-as-part-of-israel-illegal-ist-die-darstellung-der-golanhohen-als-teil-des-staates-israels-illegal-in-deutschland/48974">http://help.openstreetmap.org/questions/48961/is-showing-golan-as-part-of-israel-illegal-ist-die-darstellung-der-golanhohen-als-teil-des-staates-israels-illegal-in-deutschland/48974</a></p>
+<p>Btw, this is a very relevant document on OSM and disputed territories: <a href="http://wiki.osmfoundation.org/w/images/d/d8/DisputedTerritoriesInformation.pdf">http://wiki.osmfoundation.org/w/images/d/d8/DisputedTerritoriesInformation.pdf</a> ; another applicable answer for a similar issue here: <a href="/questions/48961/is-showing-golan-as-part-of-israel-illegal-ist-die-darstellung-der-golanhohen-als-teil-des-staates-israels-illegal-in-deutschland/48974">https://help.openstreetmap.org/questions/48961/is-showing-golan-as-part-of-israel-illegal-ist-die-darstellung-der-golanhohen-als-teil-des-staates-israels-illegal-in-deutschland/48974</a></p>
 </div>
 <div id="comment-49592-info" class="comment-info">
 <span class="comment-age">(06 May '16, 09:21)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -288,7 +288,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/30/rorym"></a><a href="http://help.openstreetmap.org/users/30/rorym">@rorym</a>,<a href="http://help.openstreetmap.org/users/9641/piskvor"></a><a href="http://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a> &amp; <a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> : Thanks for your details.</p>
+<p><a href="https://help.openstreetmap.org/users/30/rorym"></a><a href="https://help.openstreetmap.org/users/30/rorym">@rorym</a>,<a href="https://help.openstreetmap.org/users/9641/piskvor"></a><a href="https://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a> &amp; <a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> : Thanks for your details.</p>
 <p>Can I edit india admin boundary in my local DB only? If yes, how to do the same?</p>
 </div>
 <div id="comment-49597-info" class="comment-info">
@@ -301,7 +301,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11165/rajavelu_m">@Rajavelu_M</a> It depends on what you want to do. Do you want to render an OSM on a web browser with a tile server? Then import the data into postgres with osm2pgsql, then delete the admin borders you don't want with SQL, then have a shapefile with the borders you do want, and then import that and insert that into the <code>planet_osm_polygon</code> table with the correct tags.</p>
+<p><a href="https://help.openstreetmap.org/users/11165/rajavelu_m">@Rajavelu_M</a> It depends on what you want to do. Do you want to render an OSM on a web browser with a tile server? Then import the data into postgres with osm2pgsql, then delete the admin borders you don't want with SQL, then have a shapefile with the borders you do want, and then import that and insert that into the <code>planet_osm_polygon</code> table with the correct tags.</p>
 </div>
 <div id="comment-49599-info" class="comment-info">
 <span class="comment-age">(06 May '16, 14:40)</span> <span class="comment-user userinfo">rorym</span>
@@ -312,7 +312,7 @@ osqa_accepted = false
 <div id="post-49674-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/30/rorym">@rorym</a>: Thanks for your answer. But still i am struggle in get data and do the above steps. Any reference for more details?</p>
+<p><a href="https://help.openstreetmap.org/users/30/rorym">@rorym</a>: Thanks for your answer. But still i am struggle in get data and do the above steps. Any reference for more details?</p>
 </div>
 <div id="comment-49674-info" class="comment-info">
 <span class="comment-age">(11 May '16, 10:32)</span> <span class="comment-user userinfo">Rajavelu_M</span>
@@ -323,7 +323,7 @@ osqa_accepted = false
 <div id="post-49676-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>PlaneMad (see the other answer here) wrote a diary entry about it - see <a href="http://www.openstreetmap.org/user/PlaneMad/diary/38176">http://www.openstreetmap.org/user/PlaneMad/diary/38176</a> . That's using a Mapbox Studio dataset.</p>
+<p>PlaneMad (see the other answer here) wrote a diary entry about it - see <a href="https://www.openstreetmap.org/user/PlaneMad/diary/38176">https://www.openstreetmap.org/user/PlaneMad/diary/38176</a> . That's using a Mapbox Studio dataset.</p>
 </div>
 <div id="comment-49676-info" class="comment-info">
 <span class="comment-age">(11 May '16, 12:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -391,7 +391,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This issue is not new, is wholly covered by the existing Disputed Territories policy of the Foundation. See <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>'s answer.</p>
+<p>This issue is not new, is wholly covered by the existing Disputed Territories policy of the Foundation. See <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>'s answer.</p>
 <p>Furthermore OSM User PlaneMad developed mapping &amp; tagging approaches which address this particular question some years ago. A recent blog post describes what he does for custom boundaries: <a href="https://www.openstreetmap.org/user/PlaneMad/diary/38176">https://www.openstreetmap.org/user/PlaneMad/diary/38176</a></p>
 </div>
 <div class="answer-controls post-controls">

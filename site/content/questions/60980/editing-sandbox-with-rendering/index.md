@@ -40,12 +40,12 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there a copy of the OSM API anywhere (either at OpenStreetMap.org or elsewhere) either with rendered maps based on the data added or with the planet files/diffs output that someone could use for rendering?</p>
-<p>I'm asking because a <a href="https://help.openstreetmap.org/questions/28304/online-tool-for-creating-new-sandbox-map-to-teach-a-people-class-how-to-map">related question</a> has been around for a while, and a similar question has <a href="https://lists.openstreetmap.org/pipermail/osmf-talk/2017-November/004479.html">just popped up</a> on osmf-talk again.</p>
+<p>I'm asking because a <a href="/questions/28304/online-tool-for-creating-new-sandbox-map-to-teach-a-people-class-how-to-map">related question</a> has been around for a while, and a similar question has <a href="https://lists.openstreetmap.org/pipermail/osmf-talk/2017-November/004479.html">just popped up</a> on osmf-talk again.</p>
 <p>Currently the sort-of answers that I'm aware of are:</p>
 <ul>
 <li><a href="http://opengeofiction.net/">opengeofiction</a> - not really an answer as I believe they have community rules about "not copying tthe real world".</li>
 <li>iD's walkthrough is a sandbox, but there's no rendering.</li>
-<li>Using a <a href="https://help.openstreetmap.org/questions/28304/online-tool-for-creating-new-sandbox-map-to-teach-a-people-class-how-to-map/28320">/map call</a> to fetch from osm.org's dev API - not ideal because it's limited to small areas.</li>
+<li>Using a <a href="/questions/28304/online-tool-for-creating-new-sandbox-map-to-teach-a-people-class-how-to-map/28320">/map call</a> to fetch from osm.org's dev API - not ideal because it's limited to small areas.</li>
 </ul>
 <p>None of these are ideal though.</p>
 </div>

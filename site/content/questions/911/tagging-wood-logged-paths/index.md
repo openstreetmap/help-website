@@ -181,8 +181,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You use the regular <a href="http://wiki.openstreetmap.org/wiki/Key:highway">highway</a> tag as usual as the highway tag describes the importance of the highway and not the quality.</p>
-<p>To tag that the surface of the path is of wood you use <a href="http://wiki.openstreetmap.org/wiki/Tag:surface%3Dwood">surface=wood</a>.</p>
+<p>You use the regular <a href="https://wiki.openstreetmap.org/wiki/Key:highway">highway</a> tag as usual as the highway tag describes the importance of the highway and not the quality.</p>
+<p>To tag that the surface of the path is of wood you use <a href="https://wiki.openstreetmap.org/wiki/Tag:surface%3Dwood">surface=wood</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

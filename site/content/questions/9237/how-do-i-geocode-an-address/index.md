@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, read the <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Parameters">Nominatim docs</a>, since it is currently hosted by Mapquest there is currently no such limit, but a max of 50k requests per day was <a href="http://gis.638310.n2.nabble.com/Reverse-geocoding-on-Nominatim-acceptable-volumes-td5672254.html">mentioned on the mailing list</a>. But as always with webservices (like Googles services as well), ToS can change at anytime.</p>
+<p>Yes, read the <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Parameters">Nominatim docs</a>, since it is currently hosted by Mapquest there is currently no such limit, but a max of 50k requests per day was <a href="http://gis.638310.n2.nabble.com/Reverse-geocoding-on-Nominatim-acceptable-volumes-td5672254.html">mentioned on the mailing list</a>. But as always with webservices (like Googles services as well), ToS can change at anytime.</p>
 <p>If you search like this:</p>
 <p><a href="http://open.mapquestapi.com/nominatim/v1/search/us/ca/1600+Amphitheatre+Parkway,+Mountain+View,+CA?format=json&amp;polygon=1&amp;addressdetails=1">http://open.mapquestapi.com/nominatim/v1/search/us/ca/1600+Amphitheatre+Parkway,+Mountain+View,+CA?format=json&amp;polygon=1&amp;addressdetails=1</a></p>
 <p>Will results in a json response including these matches:</p>

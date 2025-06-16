@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can do it with Potlatch2, but not (yet) with iD.</p>
-<p>If you have a look at <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">this page</a>, and read down to the "Potlatch 2 example", you should see some pictures that explain the basic process. To do what you're trying to do, you'll also need to split and rejoin some ways too.</p>
+<p>If you have a look at <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">this page</a>, and read down to the "Potlatch 2 example", you should see some pictures that explain the basic process. To do what you're trying to do, you'll also need to split and rejoin some ways too.</p>
 <p>Your area is slightly complicated because you're dealing with coastline, which doesn't get updated as often on the "standard" map rendering as other features (see some of <a href="https://help.openstreetmap.org/search/?q=coastline&amp;Submit=Search&amp;t=question">these previous questions</a> for details).</p>
 </div>
 <div class="answer-controls post-controls">

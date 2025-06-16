@@ -139,13 +139,13 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Honest answer: There is, at present, no good way to represent the individual tenants/offices in large buildings in OSM. There have been many proposals about how best to handle this (for instance, <a href="http://wiki.openstreetmap.org/wiki/Indoor_Mapping">indoor mapping</a> and <a href="http://wiki.openstreetmap.org/wiki/Challenges_for_Indoor_Maps#Stores_in_a_Shopping_Center_and_other_Entities_on_the_Map">challenges for indoor maps</a>), but there is no consensus. OSM has always struggled with mapping things which are vertically stacked, and while we're managing things like bridges and tunnels quite nicely, it's not feasible to extend this approach to more than 2 or 3 layers (let alone 20+ layers).</p>
+<p>Honest answer: There is, at present, no good way to represent the individual tenants/offices in large buildings in OSM. There have been many proposals about how best to handle this (for instance, <a href="https://wiki.openstreetmap.org/wiki/Indoor_Mapping">indoor mapping</a> and <a href="https://wiki.openstreetmap.org/wiki/Challenges_for_Indoor_Maps#Stores_in_a_Shopping_Center_and_other_Entities_on_the_Map">challenges for indoor maps</a>), but there is no consensus. OSM has always struggled with mapping things which are vertically stacked, and while we're managing things like bridges and tunnels quite nicely, it's not feasible to extend this approach to more than 2 or 3 layers (let alone 20+ layers).</p>
 <p>I would recommend to, for the moment:</p>
 <ul>
 <li>Tag the building itself (probably with <code>building=commercial</code>)</li>
-<li>Tag its <a href="http://wiki.openstreetmap.org/wiki/Addresses">address</a> and/or name</li>
-<li>Tag the <a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrances</a></li>
-<li>Perhaps tag the building' <a href="http://wiki.openstreetmap.org/wiki/Key:height">height</a></li>
+<li>Tag its <a href="https://wiki.openstreetmap.org/wiki/Addresses">address</a> and/or name</li>
+<li>Tag the <a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrances</a></li>
+<li>Perhaps tag the building' <a href="https://wiki.openstreetmap.org/wiki/Key:height">height</a></li>
 </ul>
 <p>If you feel so inclined, participate in the discussions around how best to handle this case in OSM (although keep in mind that this may be a case where the information about building tenants/offices should not go into the main OSM database, but into a different service).</p>
 </div>
@@ -168,7 +168,7 @@ One Answer:
 <div class="comment-text">
 <p>I checked out the indoor mapping links, thanks!</p>
 <p>But the site seems to be down: I could not check out the prototype (a polish airport).</p>
-<p>But I came across a Google example: <a href="https://www.google.co.in/maps/%3Ca%20href="></a><a href="http://help.openstreetmap.org/users/6207/123spielerei">@12</a>.9375131,77.6279375,20.25z"&gt;https://www.google.co.in/maps/<a href="http://help.openstreetmap.org/users/6207/123spielerei"></a><a href="http://help.openstreetmap.org/users/6207/123spielerei">@12</a>.9375131,77.6279375,20.25z</p>
+<p>But I came across a Google example: <a href="https://www.google.co.in/maps/%3Ca%20href="></a><a href="https://help.openstreetmap.org/users/6207/123spielerei">@12</a>.9375131,77.6279375,20.25z"&gt;https://www.google.co.in/maps/<a href="https://help.openstreetmap.org/users/6207/123spielerei"></a><a href="https://help.openstreetmap.org/users/6207/123spielerei">@12</a>.9375131,77.6279375,20.25z</p>
 <p>This shows floor-wise layout of a mall. (A floor-selector scale pops up next to the building, so that we can choose the desired floor).</p>
 <p>This feature is available in Android app (Google Maps) as well.</p>
 <p>It would be fantastic to have this feature in OSM.</p>

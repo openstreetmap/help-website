@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Deleted a part of Vänern"
-description = '''I happened to delete a part of the lake Vänern. How do i restore it? http://www.openstreetmap.org/browse/changeset/16658035 '''
+description = '''I happened to delete a part of the lake Vänern. How do i restore it? https://www.openstreetmap.org/browse/changeset/16658035 '''
 date = "2013-06-22T16:55:00Z"
 lastmod = "2013-06-23T23:34:00Z"
 weight = 23609
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I happened to delete a part of the lake Vänern. How do i restore it? <a href="http://www.openstreetmap.org/browse/changeset/16658035">http://www.openstreetmap.org/browse/changeset/16658035</a></p>
+<p>I happened to delete a part of the lake Vänern. How do i restore it? <a href="https://www.openstreetmap.org/browse/changeset/16658035">https://www.openstreetmap.org/browse/changeset/16658035</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-deleted" rel="tag" title="see questions tagged &#39;deleted&#39;">deleted</span> <span class="post-tag tag-link-rollback" rel="tag" title="see questions tagged &#39;rollback&#39;">rollback</span> <span class="post-tag tag-link-vänern" rel="tag" title="see questions tagged &#39;vänern&#39;">vänern</span> <span class="post-tag tag-link-revert" rel="tag" title="see questions tagged &#39;revert&#39;">revert</span> <span class="post-tag tag-link-undo" rel="tag" title="see questions tagged &#39;undo&#39;">undo</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-23611-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are some hints about how to do it in <a href="https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
+<p>There are some hints about how to do it in <a href="/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
 </div>
 <div id="comment-23611-info" class="comment-info">
 <span class="comment-age">(22 Jun '13, 17:13)</span> <span class="comment-user userinfo">gnurk</span>
@@ -166,7 +166,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Changeset <a href="http://www.openstreetmap.org/browse/changeset/16658829">16658829</a> should have reverted your changeset <a href="http://www.openstreetmap.org/browse/changeset/16658035">16658035</a> now.</p>
+<p>Changeset <a href="https://www.openstreetmap.org/browse/changeset/16658829">16658829</a> should have reverted your changeset <a href="https://www.openstreetmap.org/browse/changeset/16658035">16658035</a> now.</p>
 <p>Are you able to confirm that the map looks like it did before your mistake now? It may take a while for the revert to show up on the map.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -239,7 +239,7 @@ For the future: When you do a revert using JOSM and the reverter plugin, you can
 3
 </div>
 <div class="comment-text">
-<p>bomander, now I've reverted and fixed-up the 3 ways/buildings that got lost in the first reversion. Hopefully everything is 100% OK now, and I feel happy that I've developed my skills a little bit without causing too much damage. :-) <a href="http://www.openstreetmap.org/browse/changeset/16663065">http://www.openstreetmap.org/browse/changeset/16663065</a></p>
+<p>bomander, now I've reverted and fixed-up the 3 ways/buildings that got lost in the first reversion. Hopefully everything is 100% OK now, and I feel happy that I've developed my skills a little bit without causing too much damage. :-) <a href="https://www.openstreetmap.org/browse/changeset/16663065">https://www.openstreetmap.org/browse/changeset/16663065</a></p>
 </div>
 <div id="comment-23622-info" class="comment-info">
 <span class="comment-age">(23 Jun '13, 01:18)</span> <span class="comment-user userinfo">gnurk</span>

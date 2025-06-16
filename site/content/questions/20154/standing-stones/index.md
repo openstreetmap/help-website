@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use <a href="http://wiki.openstreetmap.org/wiki/Tag:historic=archaeological_site">historic=archaeological</a>, <a href="http://taginfo.openstreetmap.org/keys/site_type#values">site_type=megalith</a>, <a href="http://taginfo.openstreetmap.org/keys/megalith_type#values">megalith_type=something</a>. As Hendrik says, the value for megalith_type differs a lot depending on the country, even if the object is similar.</p>
+<p>Use <a href="https://wiki.openstreetmap.org/wiki/Tag:historic=archaeological_site">historic=archaeological</a>, <a href="http://taginfo.openstreetmap.org/keys/site_type#values">site_type=megalith</a>, <a href="http://taginfo.openstreetmap.org/keys/megalith_type#values">megalith_type=something</a>. As Hendrik says, the value for megalith_type differs a lot depending on the country, even if the object is similar.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

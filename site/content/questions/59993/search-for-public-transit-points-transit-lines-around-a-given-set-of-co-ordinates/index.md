@@ -95,7 +95,7 @@ osqa_accepted = false
 <div id="post-66102-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This would be very useful feature and quite easily done with existing code I assume. Now already manully one can click all public transportation (PT) stops around some POI and see eg. all the busses/trams/metros which stops there. With a pen and paper (or snapshot) then collect all those PT-lines. Now just the code optionally would automatically "click" all those PT-stops around some radius and return a list of stops and PT-lines. See also: <a href="https://help.openstreetmap.org/questions/45635/public-transport?">https://help.openstreetmap.org/questions/45635/public-transport?</a></p>
+<p>This would be very useful feature and quite easily done with existing code I assume. Now already manully one can click all public transportation (PT) stops around some POI and see eg. all the busses/trams/metros which stops there. With a pen and paper (or snapshot) then collect all those PT-lines. Now just the code optionally would automatically "click" all those PT-stops around some radius and return a list of stops and PT-lines. See also: <a href="/questions/45635/public-transport?">https://help.openstreetmap.org/questions/45635/public-transport?</a></p>
 </div>
 <div id="comment-66102-info" class="comment-info">
 <span class="comment-age">(30 Sep '18, 12:35)</span> <span class="comment-user userinfo">zimon</span>

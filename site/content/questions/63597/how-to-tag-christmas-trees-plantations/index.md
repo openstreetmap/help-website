@@ -69,7 +69,7 @@ osqa_accepted = true
 <div id="post-63892-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Similar <a href="https://help.openstreetmap.org/questions/50624/are-knee-high-trees-a-forest">https://help.openstreetmap.org/questions/50624/are-knee-high-trees-a-forest</a></p>
+<p>Similar <a href="/questions/50624/are-knee-high-trees-a-forest">https://help.openstreetmap.org/questions/50624/are-knee-high-trees-a-forest</a></p>
 </div>
 <div id="comment-63892-info" class="comment-info">
 <span class="comment-age">(30 May '18, 20:59)</span> <span class="comment-user userinfo">andy mackey</span>

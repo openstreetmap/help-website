@@ -167,7 +167,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>See also related question by the same person:</p>
-<p><a href="https://help.openstreetmap.org/questions/43050/select-a-task">https://help.openstreetmap.org/questions/43050/select-a-task</a></p>
+<p><a href="/questions/43050/select-a-task">https://help.openstreetmap.org/questions/43050/select-a-task</a></p>
 </div>
 <div id="comment-43066-info" class="comment-info">
 <span class="comment-age">(13 May '15, 17:21)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -267,7 +267,7 @@ One Answer:
 <div id="post-43062-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've no idea - <a href="http://mapgive.state.gov/projects/nepal/">http://mapgive.state.gov/projects/nepal/</a> does not load from here. I'd suggest asking on IRC - see <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> ; go to the HOT channel.</p>
+<p>I've no idea - <a href="http://mapgive.state.gov/projects/nepal/">http://mapgive.state.gov/projects/nepal/</a> does not load from here. I'd suggest asking on IRC - see <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a> ; go to the HOT channel.</p>
 </div>
 <div id="comment-43062-info" class="comment-info">
 <span class="comment-age">(13 May '15, 16:45)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

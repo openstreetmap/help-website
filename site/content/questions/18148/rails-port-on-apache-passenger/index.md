@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rails port on Apache Passenger"
-description = '''Hi everyone! I have managed to successfuly install Rails port application (following this: http://wiki.openstreetmap.org/wiki/The_Rails_Port tutorial. When I run it under WEBRick server, it runs ok and i can access api. However I cannot make it run under Apache Passenger. Accessing any page I get fo...'''
+description = '''Hi everyone! I have managed to successfuly install Rails port application (following this: https://wiki.openstreetmap.org/wiki/The_Rails_Port tutorial. When I run it under WEBRick server, it runs ok and i can access api. However I cannot make it run under Apache Passenger. Accessing any page I get fo...'''
 date = "2012-12-02T14:33:00Z"
 lastmod = "2013-05-20T12:26:00Z"
 weight = 18148
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi everyone!</p>
-<p>I have managed to successfuly install Rails port application (following this: <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> tutorial. When I run it under WEBRick server, it runs ok and i can access api. However I cannot make it run under Apache Passenger. Accessing any page I get following error:</p>
+<p>I have managed to successfuly install Rails port application (following this: <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a> tutorial. When I run it under WEBRick server, it runs ok and i can access api. However I cannot make it run under Apache Passenger. Accessing any page I get following error:</p>
 <p>Your application's database configuration file might be written incorrectly. Please check it and fix any errors. The database server may not be running. Please check whether it's running, and start it if it isn't.</p>
 <p>Error message: PG::Error: ERROR: relation "oauth_tokens" does not exist LINE 5: WHERE a.attrelid = '"oauth_tokens"'::regclass ^ : SELECT a.attname, format_type(a.atttypid, a.atttypmod), pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod FROM pg_attribute a LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum WHERE a.attrelid = '"oauth_tokens"'::regclass AND a.attnum &gt; 0 AND NOT a.attisdropped ORDER BY a.attnum (ActiveRecord::StatementInvalid)</p>
 <p>Exception class: ActiveRecord::StatementInvalid</p>

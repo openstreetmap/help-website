@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/ID/Shortcuts">this wiki page on iD Shortcuts</a> (which I know is not 'official documentation') you can use Alt+Click when drawing a line or area to place a node without connecting to an existing object. This would be quite useful, to avoid unwanted connections. But it doesn't seem to work for me.</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/ID/Shortcuts">this wiki page on iD Shortcuts</a> (which I know is not 'official documentation') you can use Alt+Click when drawing a line or area to place a node without connecting to an existing object. This would be quite useful, to avoid unwanted connections. But it doesn't seem to work for me.</p>
 <p>A note on that page says with Firefox you should use full-screen mode to avoid an unwanted browser interaction regarding the Alt key. I've tried it with Firefox (38.8.0ESR) and also Seamonkey (2.40), both full-screen and regular mode, all on Linux. When I press Alt, it does in fact prevent highlighting of another Way that my cursor touches. But it won't recognize the click to add a point there. If I release Alt, of course, it adds a node but connects to that object.</p>
 <p>Does it work for anyone? If it does, I'll just assume it is something about my browser/desktop environment causing this.</p>
 </div>

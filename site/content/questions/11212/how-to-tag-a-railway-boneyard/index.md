@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Well, there is no clear tagging convention for such objects and I would suggest you to contact our mailing list dedicated to tagging discussions : <a href="http://lists.openstreetmap.org/listinfo/tagging">tagging@openstreetmap.org</a>.<br />
-Anyway, you could check the possibility to use the tag "<a href="http://wiki.openstreetmap.org/wiki/Key:tourism">tourism=attraction</a>" combined with a possible new "<a href="http://wiki.openstreetmap.org/wiki/Key:historic">historic</a>" tag e.g. "historic=tram" for the vehicle itself (until a museum is created or the vehicle is restored and runs again in which case I wouldn't tag the vehicle itself anymore but its touristic line).</p>
+Anyway, you could check the possibility to use the tag "<a href="https://wiki.openstreetmap.org/wiki/Key:tourism">tourism=attraction</a>" combined with a possible new "<a href="https://wiki.openstreetmap.org/wiki/Key:historic">historic</a>" tag e.g. "historic=tram" for the vehicle itself (until a museum is created or the vehicle is restored and runs again in which case I wouldn't tag the vehicle itself anymore but its touristic line).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

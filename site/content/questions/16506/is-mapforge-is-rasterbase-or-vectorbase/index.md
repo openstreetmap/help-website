@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">wiki</a></p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">wiki</a></p>
 <blockquote>
 <p>mapsforge provides a free, open-source, offline vector map library (and more) for Android.</p>
 </blockquote>
@@ -133,8 +133,8 @@ One Answer:
 <div id="post-16513-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... and according to the wiki page <a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a> there are also:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/CartoType">http://wiki.openstreetmap.org/wiki/CartoType</a></p>
+<p>... and according to the wiki page <a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a> there are also:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/CartoType">https://wiki.openstreetmap.org/wiki/CartoType</a></p>
 <p>Or have a look at the opensourced Osmand app.</p>
 </div>
 <div id="comment-16513-info" class="comment-info">

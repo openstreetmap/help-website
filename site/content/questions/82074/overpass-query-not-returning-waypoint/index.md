@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm attempting to find all places of worship in my state. I suspect the results are not complete to my liking because it is only entered as a waypoint and not a node. is this the case? &amp; how can I solve this?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Clipboard01_VMllqQ6.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/Clipboard02_iYjhqlJ.png" alt="alt text" /></p>
+<p><img src="/upfiles/Clipboard01_VMllqQ6.png" alt="alt text" /> <img src="/upfiles/Clipboard02_iYjhqlJ.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass-turbo" rel="tag" title="see questions tagged &#39;overpass-turbo&#39;">overpass-turbo</span>

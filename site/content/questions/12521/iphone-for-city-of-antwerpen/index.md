@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You'll have to explain your needs a bit better : what would you want the application to do ? The wiki has a <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">list of iOS apps</a> that may suit you.</p>
+<p>You'll have to explain your needs a bit better : what would you want the application to do ? The wiki has a <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">list of iOS apps</a> that may suit you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To get in contact to local OSM activists, you can have a deeper look at <a href="http://wiki.openstreetmap.org/wiki/Local_contacts">WikiProject_Netherlands</a> or at <a href="http://wiki.openstreetmap.org/wiki/Local_contacts">Local_contacts</a></p>
+<p>To get in contact to local OSM activists, you can have a deeper look at <a href="https://wiki.openstreetmap.org/wiki/Local_contacts">WikiProject_Netherlands</a> or at <a href="https://wiki.openstreetmap.org/wiki/Local_contacts">Local_contacts</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

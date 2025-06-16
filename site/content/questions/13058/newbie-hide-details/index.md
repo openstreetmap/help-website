@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I'm a new user. I didn't find the FAQ and "hide + details" returns 281 answers but I didn't find the answer.</p>
 <p>I read that OSM is generally better than Google Maps, so gave it a try today.</p>
 <p>I prefer the way Google Maps displays maps because OSM shows too many details, such as houses on a city map.</p>
-<p>Is there a way to tell OSM to show maps with fewer details, or is the only way to download the map, <a href="http://help.openstreetmap.org/questions/5737/newbie-question-about-hiding-elements">doctor it with an SVG application</a>, and upload the map to my web site before giving users its URL?</p>
+<p>Is there a way to tell OSM to show maps with fewer details, or is the only way to download the map, <a href="/questions/5737/newbie-question-about-hiding-elements">doctor it with an SVG application</a>, and upload the map to my web site before giving users its URL?</p>
 <p>Thank you.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -142,7 +142,7 @@ One Answer:
 <div id="post-13066-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There's a list <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">here</a>, but it's quite long...</p>
+<p>There's a list <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">here</a>, but it's quite long...</p>
 </div>
 <div id="comment-13066-info" class="comment-info">
 <span class="comment-age">(29 May '12, 12:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -165,7 +165,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Yes - pretty much. Other sites mostly don't query the main database, though. The OSM "standard" layer is described a bit <a href="http://wiki.openstreetmap.org/wiki/Mapnik">here</a>, and actually uses a separate database to store the data from which the map is created - a process called <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a>. The actual data is described a bit <a href="http://wiki.openstreetmap.org/wiki/Planet">here</a>, and smaller extracts are also available, e.g. from <a href="http://download.geofabrik.de/osm/">here</a>. If you're interested in how things work together, have a look at the <a href="http://switch2osm.org/">switch2osm</a> site, particularly the "serving tiles" and "using tiles" sections.</p>
+<p>Yes - pretty much. Other sites mostly don't query the main database, though. The OSM "standard" layer is described a bit <a href="https://wiki.openstreetmap.org/wiki/Mapnik">here</a>, and actually uses a separate database to store the data from which the map is created - a process called <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a>. The actual data is described a bit <a href="https://wiki.openstreetmap.org/wiki/Planet">here</a>, and smaller extracts are also available, e.g. from <a href="http://download.geofabrik.de/osm/">here</a>. If you're interested in how things work together, have a look at the <a href="http://switch2osm.org/">switch2osm</a> site, particularly the "serving tiles" and "using tiles" sections.</p>
 </div>
 <div id="comment-13069-info" class="comment-info">
 <span class="comment-age">(29 May '12, 13:38)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'd like to add a node (city centre) as a relation (admin_centre) to an administrative boundary, with JOSM, but how?</p>
-<p>This question was previously asked (and answered) <a href="https://help.openstreetmap.org/questions/71724/missing-admin_centre-in-relation">here</a>, but that only answered the part for the online website editor.</p>
+<p>This question was previously asked (and answered) <a href="/questions/71724/missing-admin_centre-in-relation">here</a>, but that only answered the part for the online website editor.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-admin_centre" rel="tag" title="see questions tagged &#39;admin_centre&#39;">admin_centre</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>

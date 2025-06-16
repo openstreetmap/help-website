@@ -144,7 +144,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>Note you should check if what you want to do is actually compatible with <a href="http://wiki.openstreetmap.org/wiki/Tag:highway=traffic_signals">http://wiki.openstreetmap.org/wiki/Tag:highway=traffic_signals</a> which in general assumes that the signal is mapped on the actual way.</p>
+<p>Note you should check if what you want to do is actually compatible with <a href="https://wiki.openstreetmap.org/wiki/Tag:highway=traffic_signals">https://wiki.openstreetmap.org/wiki/Tag:highway=traffic_signals</a> which in general assumes that the signal is mapped on the actual way.</p>
 </div>
 <div id="comment-32637-info" class="comment-info">
 <span class="comment-age">(25 Apr '14, 15:05)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -170,7 +170,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I have to strongly agree with vincent-de-phily on this: Don't remove the tag from the highway! One of the main "rendering" (i.e. users) of OSM data are routing engines which use this information to determine the best route. By adding highway=stop, highway=give_way and highway=traffic_signal tags to appropriate nodes on highways routing engines can make a better decisions on a good route.</p>
-<p>See also: <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Complex_intersections">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Complex_intersections</a></p>
+<p>See also: <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Complex_intersections">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Complex_intersections</a></p>
 <p>If you must, add a separate node in the actual physical location for a map image renderer.</p>
 </div>
 <div id="comment-32639-info" class="comment-info">

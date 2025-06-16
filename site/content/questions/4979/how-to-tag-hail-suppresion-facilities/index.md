@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Sounds amazing. Can you a take a photo? I want to see these rockets :-)</p>
-<p>Seriously, a photo is also a good way to start discussing with people how to tag something. It also proves that this thing really is something you've encountered and want to know how to map (as opposed to people inventing theoretical tagging problems without ever trying to do any mapping) Upload a photo to the wiki and and put <code>[[Category:Tagging_Question]]</code> on File description page, to add it to <a href="http://wiki.openstreetmap.org/wiki/Category:Tagging_Question">this category</a>, then you could add a discussion on <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:military">Talk:Key:military</a> or somewhere else, referencing this image. (...in fact you could reference it in your question here too)</p>
+<p>Seriously, a photo is also a good way to start discussing with people how to tag something. It also proves that this thing really is something you've encountered and want to know how to map (as opposed to people inventing theoretical tagging problems without ever trying to do any mapping) Upload a photo to the wiki and and put <code>[[Category:Tagging_Question]]</code> on File description page, to add it to <a href="https://wiki.openstreetmap.org/wiki/Category:Tagging_Question">this category</a>, then you could add a discussion on <a href="https://wiki.openstreetmap.org/wiki/Talk:Key:military">Talk:Key:military</a> or somewhere else, referencing this image. (...in fact you could reference it in your question here too)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

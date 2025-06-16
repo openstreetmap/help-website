@@ -72,7 +72,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>An example for what exactly? In both of your <a href="https://help.openstreetmap.org/questions/46003/leaflet-tiles-offline">previous</a> <a href="https://help.openstreetmap.org/questions/45962/finding-javascript-api-for-loading-maps-markslayers-etc-that-works-offline">questions</a> other users mentioned <a href="http://switch2osm.org/serving-tiles/">http://switch2osm.org/serving-tiles/</a> which includes a step-by-step guide. What exactly is still unclear to you?</p>
+<p>An example for what exactly? In both of your <a href="/questions/46003/leaflet-tiles-offline">previous</a> <a href="/questions/45962/finding-javascript-api-for-loading-maps-markslayers-etc-that-works-offline">questions</a> other users mentioned <a href="http://switch2osm.org/serving-tiles/">http://switch2osm.org/serving-tiles/</a> which includes a step-by-step guide. What exactly is still unclear to you?</p>
 </div>
 <div id="comment-46020-info" class="comment-info">
 <span class="comment-age">(20 Oct '15, 13:00)</span> <span class="comment-user userinfo">scai ♦</span>

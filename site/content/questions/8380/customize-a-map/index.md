@@ -143,7 +143,7 @@ One Answer:
 <div id="post-8383-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you want to produce extracts in the sense of "small osm files", and the ready-made extracts on sites like <a href="http://download.geofabrik.de">download.geofabrik.de</a> (others are available, check <a href="http://wiki.openstreetmap.org/wiki/Planet.osm)">wiki.openstreetmap.org/wiki/Planet.osm)</a> are not sufficient for you, then you can use the Osmosis tool to create your own extracts.</p>
+<p>If you want to produce extracts in the sense of "small osm files", and the ready-made extracts on sites like <a href="http://download.geofabrik.de">download.geofabrik.de</a> (others are available, check <a href="https://wiki.openstreetmap.org/wiki/Planet.osm)">wiki.openstreetmap.org/wiki/Planet.osm)</a> are not sufficient for you, then you can use the Osmosis tool to create your own extracts.</p>
 <p>If you want to produce Shape Files then I suggest you first create an OSM extract and then run the osmjs tool on that.</p>
 </div>
 <div id="comment-8383-info" class="comment-info">

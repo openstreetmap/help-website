@@ -110,9 +110,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As long as it is "public domain" or compatible with the OSM licenses at <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License"></a><a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License"></a><a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">http://wiki.openstreetmap.org/wiki/OpenStreetMap_License</a> , and <a href="http://wiki.openstreetmap.org/wiki/Open_Database_License"></a><a href="http://wiki.openstreetmap.org/wiki/Open_Database_License"></a><a href="http://wiki.openstreetmap.org/wiki/Open_Database_License">http://wiki.openstreetmap.org/wiki/Open_Database_License</a> ...just publish the files somewhere.</p>
+<p>As long as it is "public domain" or compatible with the OSM licenses at <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap_License"></a><a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap_License"></a><a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap_License">https://wiki.openstreetmap.org/wiki/OpenStreetMap_License</a> , and <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License"></a><a href="https://wiki.openstreetmap.org/wiki/Open_Database_License"></a><a href="https://wiki.openstreetmap.org/wiki/Open_Database_License">https://wiki.openstreetmap.org/wiki/Open_Database_License</a> ...just publish the files somewhere.</p>
 <p>When data goes into OpenStreetMap, it goes out again to many people who are re-using the data, so there's really no difference between "giving the data to OpenStreetMap" and "publishing the data publicly". You want to give the data to whoever is interested in the OpenStreetMap community? Easiest way to do that?... publish it!</p>
-<p>Then the challenge is just to get it noticed by people who would be interested/capable of using it. Fire a message (with a URL) to the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us mailing list</a>, and place a link on the 'Oklahoma' wiki page. <em>....oh wait. Nobody created the 'Oklahoma' wiki page yet (<a href="http://wiki.openstreetmap.org/wiki/Template:US_States">red link</a>). Sort it out OSM U.S. folk!</em></p>
+<p>Then the challenge is just to get it noticed by people who would be interested/capable of using it. Fire a message (with a URL) to the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us mailing list</a>, and place a link on the 'Oklahoma' wiki page. <em>....oh wait. Nobody created the 'Oklahoma' wiki page yet (<a href="https://wiki.openstreetmap.org/wiki/Template:US_States">red link</a>). Sort it out OSM U.S. folk!</em></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -142,7 +142,7 @@ osqa_accepted = false
 <div id="post-1688-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There's some information about <a href="http://wiki.openstreetmap.org/wiki/Creating_city_pages">creating these kinds of pages here</a> (mostly written by me) In the UK and Germany there's been people taking it too far, and creating wiki pages about every little town, with mapping status information which just goes out of date, but this is a <em>state</em> we're talking about. "zero or single mappers" well that's a problem, and it's a problem we can start to try to tackle. One simple step: create a wiki page to welcome people living in Oklahoma to join in the mapping efforts.</p>
+<p>There's some information about <a href="https://wiki.openstreetmap.org/wiki/Creating_city_pages">creating these kinds of pages here</a> (mostly written by me) In the UK and Germany there's been people taking it too far, and creating wiki pages about every little town, with mapping status information which just goes out of date, but this is a <em>state</em> we're talking about. "zero or single mappers" well that's a problem, and it's a problem we can start to try to tackle. One simple step: create a wiki page to welcome people living in Oklahoma to join in the mapping efforts.</p>
 </div>
 <div id="comment-1688-info" class="comment-info">
 <span class="comment-age">(01 Dec '10, 11:44)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As long as it is "public domain" or compatible with the OSM licenses at <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">http://wiki.openstreetmap.org/wiki/OpenStreetMap_License</a> , and <a href="http://wiki.openstreetmap.org/wiki/Open_Database_License">http://wiki.openstreetmap.org/wiki/Open_Database_License</a> , contact me at niceman (at) <a href="http://att.net">att.net</a></p>
+<p>As long as it is "public domain" or compatible with the OSM licenses at <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap_License">https://wiki.openstreetmap.org/wiki/OpenStreetMap_License</a> , and <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License">https://wiki.openstreetmap.org/wiki/Open_Database_License</a> , contact me at niceman (at) <a href="http://att.net">att.net</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Share button"
-description = '''Hello, I want to add a share button on the map. By clicking it user should able to share current map Image. Such functionality is already given at http://www.openstreetmap.org/#map=2/49.0/124.1. I want to do the same. Can I have small example? Thanks Hardik Pancholi'''
+description = '''Hello, I want to add a share button on the map. By clicking it user should able to share current map Image. Such functionality is already given at https://www.openstreetmap.org/#map=2/49.0/124.1. I want to do the same. Can I have small example? Thanks Hardik Pancholi'''
 date = "2014-03-24T06:03:00Z"
 lastmod = "2014-03-27T16:26:00Z"
 weight = 31808
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I want to add a share button on the map. By clicking it user should able to share current map Image. Such functionality is already given at <a href="http://www.openstreetmap.org/#map=2/49.0/124.1.">http://www.openstreetmap.org/#map=2/49.0/124.1.</a></p>
+<p>I want to add a share button on the map. By clicking it user should able to share current map Image. Such functionality is already given at <a href="https://www.openstreetmap.org/#map=2/49.0/124.1.">https://www.openstreetmap.org/#map=2/49.0/124.1.</a></p>
 <p>I want to do the same. Can I have small example?</p>
 <p>Thanks Hardik Pancholi</p>
 </div>
@@ -163,7 +163,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Hello,</p>
-<p>Sorry but I didn't get you. What I want to share functionality same as on <a href="http://www.openstreetmap.org/.">http://www.openstreetmap.org/.</a></p>
+<p>Sorry but I didn't get you. What I want to share functionality same as on <a href="https://www.openstreetmap.org/.">https://www.openstreetmap.org/.</a></p>
 <p>In right side menu list there are list of functionality are there. I want to implement share functionality. It will be really good If I can have example.</p>
 <p>Thanks</p>
 </div>

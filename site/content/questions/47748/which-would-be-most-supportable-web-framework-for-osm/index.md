@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can find some hints in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a></p>
+<p>Maybe you can find some hints in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a></p>
 <p>Tell us when any of those listed items comes near your aim, and maybe we can deliver more details.</p>
 </div>
 <div class="answer-controls post-controls">

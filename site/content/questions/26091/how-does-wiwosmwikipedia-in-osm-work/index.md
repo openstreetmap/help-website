@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Does the Technical Procedure on <a href="http://wiki.openstreetmap.org/wiki/WIWOSM">this wiki page</a> help?</p>
+<p>Does the Technical Procedure on <a href="https://wiki.openstreetmap.org/wiki/WIWOSM">this wiki page</a> help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

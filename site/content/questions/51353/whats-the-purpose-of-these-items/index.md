@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What&#x27;s the purpose of these items ?"
-description = '''Hi, If i search for &quot;Corse&quot; (a french region) in nominatim, I get all these results   A node for the center of the island : http://www.openstreetmap.org/node/61083317 The administrative boundaries : http://www.openstreetmap.org/relation/76910 A way for the boundary of a small island that is away fro...'''
+description = '''Hi, If i search for &quot;Corse&quot; (a french region) in nominatim, I get all these results   A node for the center of the island : https://www.openstreetmap.org/node/61083317 The administrative boundaries : https://www.openstreetmap.org/relation/76910 A way for the boundary of a small island that is away fro...'''
 date = "2016-08-11T16:41:00Z"
 lastmod = "2016-08-11T21:45:00Z"
 weight = 51353
@@ -42,12 +42,12 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>If i search for "Corse" (a french region) in nominatim, I get all these results</p>
 <ul>
-<li>A node for the center of the island : <a href="http://www.openstreetmap.org/node/61083317">http://www.openstreetmap.org/node/61083317</a></li>
-<li>The administrative boundaries : <a href="http://www.openstreetmap.org/relation/76910">http://www.openstreetmap.org/relation/76910</a></li>
-<li>A way for the boundary of a small island that is away from corse but part of it : <a href="http://www.openstreetmap.org/way/239142487#map=17/42.96388/9.34187">http://www.openstreetmap.org/way/239142487#map=17/42.96388/9.34187</a></li>
-<li>Another one <a href="http://www.openstreetmap.org/way/239132562">http://www.openstreetmap.org/way/239132562</a></li>
+<li>A node for the center of the island : <a href="https://www.openstreetmap.org/node/61083317">https://www.openstreetmap.org/node/61083317</a></li>
+<li>The administrative boundaries : <a href="https://www.openstreetmap.org/relation/76910">https://www.openstreetmap.org/relation/76910</a></li>
+<li>A way for the boundary of a small island that is away from corse but part of it : <a href="https://www.openstreetmap.org/way/239142487#map=17/42.96388/9.34187">https://www.openstreetmap.org/way/239142487#map=17/42.96388/9.34187</a></li>
+<li>Another one <a href="https://www.openstreetmap.org/way/239132562">https://www.openstreetmap.org/way/239132562</a></li>
 </ul>
-<p>I'm new in OSM and I don't really know what i'm supposed to do here : - Is it normal to have a node and a relation for the same entity ? (I don't have this for all the french regions) - Is it normal to create a way with a name that reference it's parent entity when it's just here for having the shape of the island - Is it normal that these ways are not in the main relationship (<a href="http://www.openstreetmap.org/relation/76910)">http://www.openstreetmap.org/relation/76910)</a></p>
+<p>I'm new in OSM and I don't really know what i'm supposed to do here : - Is it normal to have a node and a relation for the same entity ? (I don't have this for all the french regions) - Is it normal to create a way with a name that reference it's parent entity when it's just here for having the shape of the island - Is it normal that these ways are not in the main relationship (<a href="https://www.openstreetmap.org/relation/76910)">https://www.openstreetmap.org/relation/76910)</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-newbie" rel="tag" title="see questions tagged &#39;newbie&#39;">newbie</span> <span class="post-tag tag-link-france" rel="tag" title="see questions tagged &#39;france&#39;">france</span>

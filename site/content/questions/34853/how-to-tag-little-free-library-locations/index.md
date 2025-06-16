@@ -145,7 +145,7 @@ One Answer:
 <p>There was a discussion thread on the tagging mail list a while back that might pertain to this at <a href="https://lists.openstreetmap.org/pipermail/tagging/2013-August/014401.html">https://lists.openstreetmap.org/pipermail/tagging/2013-August/014401.html</a></p>
 <p>I don't see that any consensus was reached on that but two possibilities did come out of that:</p>
 <ol>
-<li><p>Tagging it as a reuse facility: <a href="http://wiki.openstreetmap.org/wiki/Reuse">http://wiki.openstreetmap.org/wiki/Reuse</a> where the tags would be something like amenity=reuse, reuse:books=yes</p></li>
+<li><p>Tagging it as a reuse facility: <a href="https://wiki.openstreetmap.org/wiki/Reuse">https://wiki.openstreetmap.org/wiki/Reuse</a> where the tags would be something like amenity=reuse, reuse:books=yes</p></li>
 <li><p>And simply amenity=public_bookcase</p></li>
 </ol>
 <p>I prefer the second single tag variety but haven't committed to it for tagging a bookshelf/library on a stand by a church that is a mile or two from me.</p>

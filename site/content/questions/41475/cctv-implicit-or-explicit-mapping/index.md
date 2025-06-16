@@ -119,8 +119,8 @@ The wiki notices that it should be used to explicitly tag the cams for this kind
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To indicate the location of a surveillance camera, you need to explicitly tag a node with <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurveillance">man_made=surveillance</a>. I don't see how you can implicitly mark the locations of discrete objects. For example, how would one render "there's probably a camera somewhere around here, but we're not really sure where"? That wouldn't seem very useful. :)</p>
-<p>As for whether to map them, that seems like something that would be better discussed in the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">Mailing lists</a>.</p>
+<p>To indicate the location of a surveillance camera, you need to explicitly tag a node with <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurveillance">man_made=surveillance</a>. I don't see how you can implicitly mark the locations of discrete objects. For example, how would one render "there's probably a camera somewhere around here, but we're not really sure where"? That wouldn't seem very useful. :)</p>
+<p>As for whether to map them, that seems like something that would be better discussed in the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">Mailing lists</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -231,7 +231,7 @@ The wiki notices that it should be used to explicitly tag the cams for this kind
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The intention is to map a node of the location for each camera. <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurveillance">Additional tags</a> are also encouraged that describe elements such as the operating organisation of the camera (e.g. the business or the local authority) and the zone of interest.</p>
+<p>The intention is to map a node of the location for each camera. <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurveillance">Additional tags</a> are also encouraged that describe elements such as the operating organisation of the camera (e.g. the business or the local authority) and the zone of interest.</p>
 <p>Remember that OpenStreetMap data is not just used to render map images, some potential uses of CCTV data might be...</p>
 <ul>
 <li>How many cameras are within 10 metres of me.</li>

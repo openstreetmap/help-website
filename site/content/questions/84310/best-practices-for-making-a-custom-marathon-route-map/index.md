@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I'm helping my city update their website with a new map of a 5K race. I'd like to use OSM for the map. Obviously I could screenshot it and exit in a drawing app. But I'd like to do it the "right way" and end up with an embeddable osm map applet they can use, or export to svg or png.</p>
 <p>I need to show the path to run, and the altitude. directional arrows, and I need to be able to force certain street names to show, and perhaps hide others. (I assume this is normally handled automatically, by how zoomed in one is on the map.)</p>
 <p>I made a gpx file on osmand that shows the route decently well (aside from the forced visible/notvisible street names. Where should I go from here?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20220428-100620(1).png" alt="osmand screenshot" /></p>
+<p><img src="/upfiles/Screenshot_20220428-100620(1).png" alt="osmand screenshot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-5k" rel="tag" title="see questions tagged &#39;5k&#39;">5k</span> <span class="post-tag tag-link-marathon" rel="tag" title="see questions tagged &#39;marathon&#39;">marathon</span>

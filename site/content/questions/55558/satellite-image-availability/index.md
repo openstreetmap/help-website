@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are not the first and probably not the last one to ask this question, but if you would have used the search functionality of this website, you would have found <a href="https://help.openstreetmap.org/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map.">https://help.openstreetmap.org/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map.</a> But the short answer remains "NO", as Frederik indicated.</p>
+<p>You are not the first and probably not the last one to ask this question, but if you would have used the search functionality of this website, you would have found <a href="/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map.">https://help.openstreetmap.org/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map.</a> But the short answer remains "NO", as Frederik indicated.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

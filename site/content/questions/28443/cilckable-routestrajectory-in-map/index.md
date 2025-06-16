@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>If I click any of displayed trajectory, it should create a popup to display information regarding that trajectory/route.</p>
 <p>Can you suggest different approach to go through with this requirement?]</p>
 <p>I've gone through following link but not succeeded with this.</p>
-<p><a href="https://help.openstreetmap.org/questions/9823/how-can-i-select-a-linestring-with-openlayers-selectfeture-at-any-position-of-the-line">https://help.openstreetmap.org/questions/9823/how-can-i-select-a-linestring-with-openlayers-selectfeture-at-any-position-of-the-line</a></p>
+<p><a href="/questions/9823/how-can-i-select-a-linestring-with-openlayers-selectfeture-at-any-position-of-the-line">https://help.openstreetmap.org/questions/9823/how-can-i-select-a-linestring-with-openlayers-selectfeture-at-any-position-of-the-line</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-export" rel="tag" title="see questions tagged &#39;export&#39;">export</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-web" rel="tag" title="see questions tagged &#39;web&#39;">web</span>
@@ -84,7 +84,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I also have some problems to understand your request.<br />
-So you talk about #OpenLayers and popups. But where is the exact problem in your case? <a href="http://wiki.openstreetmap.org/wiki/Openlayers#Examples">http://wiki.openstreetmap.org/wiki/Openlayers#Examples</a></p>
+So you talk about #OpenLayers and popups. But where is the exact problem in your case? <a href="https://wiki.openstreetmap.org/wiki/Openlayers#Examples">https://wiki.openstreetmap.org/wiki/Openlayers#Examples</a></p>
 </div>
 <div id="comment-28445-info" class="comment-info">
 <span class="comment-age">(25 Nov '13, 12:25)</span> <span class="comment-user userinfo">iii</span>

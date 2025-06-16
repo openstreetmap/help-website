@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/Data_model">data model</a> does not support bezier curves (or circles and arcs for that matter), hence the need to break them into straight line segments.</p>
+<p>The OpenStreetMap <a href="https://wiki.openstreetmap.org/wiki/Data_model">data model</a> does not support bezier curves (or circles and arcs for that matter), hence the need to break them into straight line segments.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While there <em>are</em> a few <a href="http://taginfo.openstreetmap.org/search?q=addr%3Astreet">instances of addr:street:XX in the db</a>, I don't think they are usefull, because the single "name" tag will link back to the actual street way, which has all the names. This work even better if you use an <a href="http://wiki.openstreetmap.org/wiki/Relation:associatedStreet">associatedstreet relation</a> instead of the addr:street tag.</p>
+<p>While there <em>are</em> a few <a href="http://taginfo.openstreetmap.org/search?q=addr%3Astreet">instances of addr:street:XX in the db</a>, I don't think they are usefull, because the single "name" tag will link back to the actual street way, which has all the names. This work even better if you use an <a href="https://wiki.openstreetmap.org/wiki/Relation:associatedStreet">associatedstreet relation</a> instead of the addr:street tag.</p>
 <p>A search on nominatim for one of the name:xx value works just fine without using extra addr:street:XX tags.</p>
 </div>
 <div class="answer-controls post-controls">

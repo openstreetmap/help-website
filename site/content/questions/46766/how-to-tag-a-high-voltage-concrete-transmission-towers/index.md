@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi pokakukam, take a look here <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France,">http://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France,</a> its Francois Lacombes as far as I remember work and he’s specialized in power lines. So if you can’t work it out yourself ask him directly.</p>
+<p>Hi pokakukam, take a look here <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France,">https://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France,</a> its Francois Lacombes as far as I remember work and he’s specialized in power lines. So if you can’t work it out yourself ask him directly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

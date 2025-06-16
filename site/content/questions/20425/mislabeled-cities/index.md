@@ -82,7 +82,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>zig, please give us a <a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a></p>
+<p>zig, please give us a <a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a></p>
 </div>
 <div id="comment-20431-info" class="comment-info">
 <span class="comment-age">(01 Mar '13, 23:22)</span> <span class="comment-user userinfo">stephan75</span>

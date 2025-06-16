@@ -107,9 +107,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>In Potlatch, the "direction of the way" is shown by the arrow in the little toolbox in the corner. If you can only travel on it in one direction, the way itself will have arrows on it. See these two pictures of an English motorway:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/p201.png" alt="M5 Northbound" /> and <img src="http://help.openstreetmap.org/upfiles/p202.png" alt="M5 Southbound" /></p>
+<p><img src="/upfiles/p201.png" alt="M5 Northbound" /> and <img src="/upfiles/p202.png" alt="M5 Southbound" /></p>
 <p>Once you've made it oneway, look at the arrows on the way on the map. If they point in the right direction, that's good. If they point in the wrong direction, change to "oneway reverse".</p>
-<p>For other editors (iD, JOSM, and others), there's an explanation for <a href="http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right#Identifying_the_direction_of_a_.27way.27">identifying the direction of a way</a> in the wiki.</p>
+<p>For other editors (iD, JOSM, and others), there's an explanation for <a href="https://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right#Identifying_the_direction_of_a_.27way.27">identifying the direction of a way</a> in the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -43,12 +43,12 @@ osqa_accepted = true
 <pre><code>andorra-latest.osm.pbf       https://download.geofabrik.de/europe/andorra-latest.osm.pbf
 azores-latest.osm.pbf        https://download.geofabrik.de/europe/azores-latest.osm.pbf
 cyprus-latest.osm.pbf        https://download.geofabrik.de/europe/cyprus-latest.osm.pbf</code></pre>
-<p>And I am using <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Windows">osmconvert</a> to merge maps. I read <a href="https://help.openstreetmap.org/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim">this answer</a> to merge maps. So my command of merging the above maps looks like this:</p>
+<p>And I am using <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Windows">osmconvert</a> to merge maps. I read <a href="/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim">this answer</a> to merge maps. So my command of merging the above maps looks like this:</p>
 <pre><code>.\osmconvert andorra-latest.osm.pbf --out-o5m | .\osmconvert - azores-latest.osm.pbf | .\osmconvert - cyprus-latest.osm.pbf -o=all.osm.pbf</code></pre>
 <p>However, the osmconvert shows the following errors after running the above command:</p>
 <pre><code>osmconvert Error: unknown file format: standard input
 osmconvert Error: could not open input file: .osm.pbf</code></pre>
-<p>An image: <img src="https://help.openstreetmap.org/upfiles/osmoutput.png" alt="alt text" /></p>
+<p>An image: <img src="/upfiles/osmoutput.png" alt="alt text" /></p>
 <p>However, the merging perfectly works in Windows 7 and Windows Server 2016 Standard</p>
 <p>Does anybody know how to solve this error?</p>
 </div>

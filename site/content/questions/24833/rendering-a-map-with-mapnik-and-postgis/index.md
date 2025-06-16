@@ -58,7 +58,7 @@ osqa_accepted = false
  public | spatial_ref_sys    | table | postgres | 3216 kB | 
 (10 rows)</code></pre>
 <p>So it seems that the database has been populated with stuff.</p>
-<p>Then I tried to adapt the tutorial at <a href="http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly">http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly</a>. I downloaded the style file there, made it compatible with Mapnik 2, changed various details, and tried to change the datasource from XML to PostGIS. What I have now is the following (in the file test.xml):</p>
+<p>Then I tried to adapt the tutorial at <a href="https://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly">https://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly</a>. I downloaded the style file there, made it compatible with Mapnik 2, changed various details, and tried to change the datasource from XML to PostGIS. What I have now is the following (in the file test.xml):</p>
 <p><a href="http://pastebin.archlinux.fr/467464">http://pastebin.archlinux.fr/467464</a></p>
 <p>(I looked at the OSM style files to see what kind of parameters are needed for postgis)</p>
 <p>Then I have the following Python script (adapted from the other tutorial):</p>
@@ -140,7 +140,7 @@ render_to_file(m, map_output)</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Don't try to use the approach described in <a href="http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly">http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly</a> . It reads the OSM XML file directly using a broken, unsupported and likely-to-be-removed input plugin for Mapnik. The first steps, where you use osm2pgsql to load the OSM data into postgresql, are the correct steps.</p>
+<p>Don't try to use the approach described in <a href="https://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly">https://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly</a> . It reads the OSM XML file directly using a broken, unsupported and likely-to-be-removed input plugin for Mapnik. The first steps, where you use osm2pgsql to load the OSM data into postgresql, are the correct steps.</p>
 <p>When you have the data loaded in your database, there are two general approaches.</p>
 <p>1) Use command-line tools. <a href="http://code.google.com/p/mapnik-utils/wiki/Nik2Img">nik2img.py</a> is the swiss army knife of command-line mapnik image generation, and is basically a fully-working version of the script you'd start writing yourself. You need a stylesheet to go with it, and I'd suggest <a href="https://github.com/gravitystorm/openstreetmap-carto">openstreetmap-carto</a>.</p>
 <p>2) Use a graphical interface. Tilemill is the best approach. When you have that installed, you can either create your own stylesheet and add your layers from postgis, or use a pre-created stylesheet. I'd again suggest <a href="https://github.com/gravitystorm/openstreetmap-carto">openstreetmap-carto</a> or <a href="https://github.com/mapbox/osm-bright">osm-bright</a>, which are both Tilemill-compatible stylesheets for OSM data which has been loaded into postgis.</p>

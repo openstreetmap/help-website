@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/leaflet_coords.jpg" alt="Picture supposed to be here" />I am currently working with map data from Nairobi,Kenya. I am using leaflet to place textboxes on places clicked on the map and have their coordinates returned. Sometimes the pattern I get suggests that the coordinates being returned are incorrect. For example, there is this instance where I clicked and created 6 textboxes. The further east I went, the smaller the longitudes were getting. From my knowledge of geography, it should be the other way round. Is this a problem with the data or could it be coming from leaflet?</p>
+<p><img src="/upfiles/leaflet_coords.jpg" alt="Picture supposed to be here" />I am currently working with map data from Nairobi,Kenya. I am using leaflet to place textboxes on places clicked on the map and have their coordinates returned. Sometimes the pattern I get suggests that the coordinates being returned are incorrect. For example, there is this instance where I clicked and created 6 textboxes. The further east I went, the smaller the longitudes were getting. From my knowledge of geography, it should be the other way round. Is this a problem with the data or could it be coming from leaflet?</p>
 <p>EDIT:</p>
 <p>My code for creating textboxes looks like this:</p>
 <pre><code>  var counter = 0;
@@ -431,7 +431,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Yes see this <a href="https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
+<p>Yes see this <a href="/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
 </div>
 <div id="comment-62417-info" class="comment-info">
 <span class="comment-age">(26 Feb '18, 16:14)</span> <span class="comment-user userinfo">andy mackey</span>

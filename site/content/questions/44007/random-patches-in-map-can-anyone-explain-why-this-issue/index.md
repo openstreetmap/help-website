@@ -106,8 +106,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That typically happens when a large area has been changed from one landuse to another, and the tile servers struggle to catch up. In this case someone changed the <a href="http://www.openstreetmap.org/way/283148869/history">university</a> to be a building and then not a building again.</p>
-<p>There's an in-depth answer <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a> explaining the tile update process.</p>
+<p>That typically happens when a large area has been changed from one landuse to another, and the tile servers struggle to catch up. In this case someone changed the <a href="https://www.openstreetmap.org/way/283148869/history">university</a> to be a building and then not a building again.</p>
+<p>There's an in-depth answer <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a> explaining the tile update process.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

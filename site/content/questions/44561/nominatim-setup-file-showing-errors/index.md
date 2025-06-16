@@ -131,7 +131,7 @@ One Answer:
 <div id="post-44564-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, so instead of ./utils/setup.php --osm-file &lt;your data="" file=""&gt; --all [--osm2pgsql-cache 24000] 2&gt;&amp;1 | tee setup.log I have to use ./utils/setup.php --osm-file &lt;your data="" file=""&gt; --all --osm2pgsql-cache 24000 2&gt;&amp;1 | tee setup.log ?</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, so instead of ./utils/setup.php --osm-file &lt;your data="" file=""&gt; --all [--osm2pgsql-cache 24000] 2&gt;&amp;1 | tee setup.log I have to use ./utils/setup.php --osm-file &lt;your data="" file=""&gt; --all --osm2pgsql-cache 24000 2&gt;&amp;1 | tee setup.log ?</p>
 </div>
 <div id="comment-44564-info" class="comment-info">
 <span class="comment-age">(31 Jul '15, 08:19)</span> <span class="comment-user userinfo">arj123</span>

@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can "download" tiles of your area and build a <a href="http://openstreetmap.gryph.de/bigmap.cgi">big map with this tool</a>, or build your own map with a renderer like mapnik or Maperitive. For more details, read similar questions: <a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">3494</a>, <a href="http://help.openstreetmap.org/questions/4376/i-need-a-big-map-of-minorca">4376</a>.</p>
+<p>You can "download" tiles of your area and build a <a href="http://openstreetmap.gryph.de/bigmap.cgi">big map with this tool</a>, or build your own map with a renderer like mapnik or Maperitive. For more details, read similar questions: <a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">3494</a>, <a href="/questions/4376/i-need-a-big-map-of-minorca">4376</a>.</p>
 <p>What does mean "highres map" for you?</p>
 </div>
 <div class="answer-controls post-controls">

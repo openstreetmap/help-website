@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to map an RV/caravan park appropriately?"
-description = '''http://www.openstreetmap.org/#map=19/47.57686/-122.13311 I am working on mapping RV parks that I visit that are otherwise simply tagged. The previous submitter added a border and tagged it tourism: camp_site, caravans: yes. While I am adding the buildings to the site, I was considering tagging the p...'''
+description = '''https://www.openstreetmap.org/#map=19/47.57686/-122.13311 I am working on mapping RV parks that I visit that are otherwise simply tagged. The previous submitter added a border and tagged it tourism: camp_site, caravans: yes. While I am adding the buildings to the site, I was considering tagging the p...'''
 date = "2017-10-29T18:14:00Z"
 lastmod = "2017-10-29T23:22:00Z"
 weight = 60345
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/#map=19/47.57686/-122.13311">http://www.openstreetmap.org/#map=19/47.57686/-122.13311</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/47.57686/-122.13311">https://www.openstreetmap.org/#map=19/47.57686/-122.13311</a></p>
 <p>I am working on mapping RV parks that I visit that are otherwise simply tagged. The previous submitter added a border and tagged it tourism: camp_site, caravans: yes.</p>
 <p>While I am adding the buildings to the site, I was considering tagging the place of business as tourism: camp_site, caravans: yes, including name, operator, and many other appropriate tags for an RV park. The service road will lead to the entrance of the actual business building to help with navigation. It seems the property border that is currently on the map and the overall RV parking, buildings, playgrounds, should all be included in a relation.</p>
 <p>Any advice, links, or other thoughts on handling RV parks? Thanks much.</p>

@@ -159,7 +159,7 @@ One Answer:
 <div id="post-38804-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is ambitious. If your server is too slow, you will have to rely on other resources or tools. For example overpass offers augmented diffs: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Augmented_Diffs">http://wiki.openstreetmap.org/wiki/Overpass_API/Augmented_Diffs</a> But it only support BBOX for extracting a region. Or let someone with a fast server provide you with the regional diffs.</p>
+<p>This is ambitious. If your server is too slow, you will have to rely on other resources or tools. For example overpass offers augmented diffs: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Augmented_Diffs">https://wiki.openstreetmap.org/wiki/Overpass_API/Augmented_Diffs</a> But it only support BBOX for extracting a region. Or let someone with a fast server provide you with the regional diffs.</p>
 </div>
 <div id="comment-38804-info" class="comment-info">
 <span class="comment-age">(25 Nov '14, 19:29)</span> <span class="comment-user userinfo">datendelphin</span>

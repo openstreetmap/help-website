@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have been trying to use a multipolygon to render the public access areas of Windsor Great Park (UK). I have used a role=outer, leisure=park for the outer boundary and for the inner non-access areas I have used role=inner. The relationship is <a href="http://www.openstreetmap.org/browse/relation/2195597">2195597</a>. The inner polygons are not being "subtracted" from the park render. Can anyone identify the issue / help please?</p>
+<p>I have been trying to use a multipolygon to render the public access areas of Windsor Great Park (UK). I have used a role=outer, leisure=park for the outer boundary and for the inner non-access areas I have used role=inner. The relationship is <a href="https://www.openstreetmap.org/browse/relation/2195597">2195597</a>. The inner polygons are not being "subtracted" from the park render. Can anyone identify the issue / help please?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-park" rel="tag" title="see questions tagged &#39;park&#39;">park</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>

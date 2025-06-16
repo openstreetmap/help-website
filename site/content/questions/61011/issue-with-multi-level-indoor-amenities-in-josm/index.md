@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have an issue with multi-level amenity in JOSM.</p>
 <p>Wiki defines pretty straightforward rule for tagging - <code>level=1;2</code>. For my amenity it looks like <code>level=12;16</code>. And these levels appear in JOSM, so I can toggle between them. But when I toggle one of these levels, my amenity fades out, as like it is not located on the selected floor:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/1_1NygK7r.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/2_PHYZZf2.png" alt="alt text" /></p>
+<p><img src="/upfiles/1_1NygK7r.png" alt="alt text" /> <img src="/upfiles/2_PHYZZf2.png" alt="alt text" /></p>
 <p>Is it something wrong with JOSM or that multi-level rule cannot be applied for amenities on different floors?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

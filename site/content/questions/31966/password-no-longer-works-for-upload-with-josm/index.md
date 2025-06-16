@@ -89,7 +89,7 @@ This question is marked "community wiki".
 &#10;</div>
 <div class="comment-text">
 <p>If you really think that it's a problem with the service, please send a mail with your registration email address to the support<br />
-<a href="http://wiki.openstreetmap.org/wiki/Faq#Why_doesn.27t_my_login_work.3F">http://wiki.openstreetmap.org/wiki/Faq#Why_doesn.27t_my_login_work.3F</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Faq#Why_doesn.27t_my_login_work.3F">https://wiki.openstreetmap.org/wiki/Faq#Why_doesn.27t_my_login_work.3F</a></p>
 </div>
 <div id="comment-31968-info" class="comment-info">
 <span class="comment-age">(28 Mar '14, 09:10)</span> <span class="comment-user userinfo">iii</span>

@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>As the <a href="http://wiki.openstreetmap.org/wiki/UMap">wiki page on uMap</a> indicates, you might have more support for your uMap related questions on the <a href="https://lists.openstreetmap.org/listinfo/umap">mailing list</a>, especially if you are asking implementation details as you did here.</p>
+<p>As the <a href="https://wiki.openstreetmap.org/wiki/UMap">wiki page on uMap</a> indicates, you might have more support for your uMap related questions on the <a href="https://lists.openstreetmap.org/listinfo/umap">mailing list</a>, especially if you are asking implementation details as you did here.</p>
 </div>
 <div id="comment-41739-info" class="comment-info">
 <span class="comment-age">(16 Mar '15, 14:24)</span> <span class="comment-user userinfo">escada</span>

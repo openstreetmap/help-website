@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a changeset (<a href="http://www.openstreetmap.org/browse/changeset/11160853">11160853</a>) which contains a few very localized edits, yet the bounding box covers half of North America??? Can this be fixed?</p>
+<p>I have a changeset (<a href="https://www.openstreetmap.org/browse/changeset/11160853">11160853</a>) which contains a few very localized edits, yet the bounding box covers half of North America??? Can this be fixed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span>
@@ -132,8 +132,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at the node history of node <a href="http://www.openstreetmap.org/browse/node/1698667325/history">1698667325</a>! It had the coordinates lat="0.0" lon="0.0", but that is now corrected by the user <a href="http://www.openstreetmap.org/user/kellerma">kellerma</a> by deleting the node.</p>
-<p>I found this by manual inspection of the <a href="http://www.openstreetmap.org/api/0.6/changeset/11160853/download">osmChange XML</a>.</p>
+<p>Take a look at the node history of node <a href="https://www.openstreetmap.org/browse/node/1698667325/history">1698667325</a>! It had the coordinates lat="0.0" lon="0.0", but that is now corrected by the user <a href="https://www.openstreetmap.org/user/kellerma">kellerma</a> by deleting the node.</p>
+<p>I found this by manual inspection of the <a href="https://www.openstreetmap.org/api/0.6/changeset/11160853/download">osmChange XML</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -218,7 +218,7 @@ osqa_accepted = false
 <div id="post-41461-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a>: well, it still <em>could</em> be a matter of knowing how Garmin processes addresses - for this specific device. Maybe it works different as your Oregon 450?!</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>: well, it still <em>could</em> be a matter of knowing how Garmin processes addresses - for this specific device. Maybe it works different as your Oregon 450?!</p>
 </div>
 <div id="comment-41461-info" class="comment-info">
 <span class="comment-age">(03 Mar '15, 00:36)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -229,7 +229,7 @@ osqa_accepted = false
 <div id="post-41464-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: This specific device shouldn't be the problem as Garmin nuvi devices are usually well supported, although the address search is still not ideal and sometimes requires special steps to make it work correctly.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: This specific device shouldn't be the problem as Garmin nuvi devices are usually well supported, although the address search is still not ideal and sometimes requires special steps to make it work correctly.</p>
 </div>
 <div id="comment-41464-info" class="comment-info">
 <span class="comment-age">(03 Mar '15, 07:55)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -240,7 +240,7 @@ osqa_accepted = false
 <div id="post-41469-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: Can you elaborate on the special steps to make address search work correctly?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: Can you elaborate on the special steps to make address search work correctly?</p>
 </div>
 <div id="comment-41469-info" class="comment-info">
 <span class="comment-age">(03 Mar '15, 13:39)</span> <span class="comment-user userinfo">Dani</span>
@@ -252,7 +252,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10604/dani">@Dani</a> See the already mentioned <a href="http://forum.openstreetmap.org/viewtopic.php?id=2625">forum thread</a> for maps provided by garmin.openstreetmap.nl.</p>
+<p><a href="https://help.openstreetmap.org/users/10604/dani">@Dani</a> See the already mentioned <a href="http://forum.openstreetmap.org/viewtopic.php?id=2625">forum thread</a> for maps provided by garmin.openstreetmap.nl.</p>
 </div>
 <div id="comment-41471-info" class="comment-info">
 <span class="comment-age">(03 Mar '15, 14:02)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What is correct to do in rendering?"
-description = '''When zooming out objects become smaller and thinner. At some point, to avoid messy images, the renderer ignores small and thin objects or area fragments. While some rendering models ignore land objects (islands, peninsulas ... e.g. Finnish islands), like here http://www.openstreetmap.org/#map=4/59.9...'''
+description = '''When zooming out objects become smaller and thinner. At some point, to avoid messy images, the renderer ignores small and thin objects or area fragments. While some rendering models ignore land objects (islands, peninsulas ... e.g. Finnish islands), like here https://www.openstreetmap.org/#map=4/59.9...'''
 date = "2014-10-22T20:12:00Z"
 lastmod = "2014-10-22T20:34:00Z"
 weight = 37881
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When zooming out objects become smaller and thinner. At some point, to avoid messy images, the renderer ignores small and thin objects or area fragments. While some rendering models ignore land objects (islands, peninsulas ... e.g. Finnish islands), like here <a href="http://www.openstreetmap.org/#map=4/59.91/13.18">http://www.openstreetmap.org/#map=4/59.91/13.18</a> others ignore water objects (tiny lakes, channels ... maybe by enlarging the land objects), like here <a href="http://www.openstreetmap.org/#map=4/59.91/13.18&amp;layers=T.">http://www.openstreetmap.org/#map=4/59.91/13.18&amp;layers=T.</a> So, what should be correct? Thanks.</p>
+<p>When zooming out objects become smaller and thinner. At some point, to avoid messy images, the renderer ignores small and thin objects or area fragments. While some rendering models ignore land objects (islands, peninsulas ... e.g. Finnish islands), like here <a href="https://www.openstreetmap.org/#map=4/59.91/13.18">https://www.openstreetmap.org/#map=4/59.91/13.18</a> others ignore water objects (tiny lakes, channels ... maybe by enlarging the land objects), like here <a href="https://www.openstreetmap.org/#map=4/59.91/13.18&amp;layers=T.">https://www.openstreetmap.org/#map=4/59.91/13.18&amp;layers=T.</a> So, what should be correct? Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zooming" rel="tag" title="see questions tagged &#39;zooming&#39;">zooming</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-filtering" rel="tag" title="see questions tagged &#39;filtering&#39;">filtering</span>

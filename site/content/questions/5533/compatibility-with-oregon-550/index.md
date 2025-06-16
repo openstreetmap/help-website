@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can check what information we have about <a href="http://wiki.openstreetmap.org/wiki/Garmin">different Garmin units</a> on our wiki. The Oregon units are perfectly compatible.</p>
-<p>There are many different places you can download maps from, depending on what kind of map you want - driving, hiking, cycling, general purpose - which part of the world you want, how often you want it updated and so on. Have a look, again at the wiki, in the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">Garmin downloads</a> section.</p>
+<p>You can check what information we have about <a href="https://wiki.openstreetmap.org/wiki/Garmin">different Garmin units</a> on our wiki. The Oregon units are perfectly compatible.</p>
+<p>There are many different places you can download maps from, depending on what kind of map you want - driving, hiking, cycling, general purpose - which part of the world you want, how often you want it updated and so on. Have a look, again at the wiki, in the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">Garmin downloads</a> section.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

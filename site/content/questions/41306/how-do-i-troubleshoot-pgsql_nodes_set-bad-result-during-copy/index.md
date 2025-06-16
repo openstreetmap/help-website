@@ -45,8 +45,8 @@ osqa_accepted = false
 <pre><code>osm2pgsql -H localhost --slim  --hstore-all -d midwest_from_osm -U postgres -W ~/Downloads/us-midwest-latest.osm.pbf</code></pre>
 <p>I tried using <code>--slim</code> and <code>-C</code> with values from 1024 up to 4096.</p>
 <p>Here are two screen captures from two attempts this evening. Any solutions or suggestions for how I can troubleshot this problem? Thanks!</p>
-<p><img src="http://help.openstreetmap.org/upfiles/2015-02-23_21-12-06.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/2015-02-23_21-32-07.png" alt="alt text" /></p>
+<p><img src="/upfiles/2015-02-23_21-12-06.png" alt="alt text" /></p>
+<p><img src="/upfiles/2015-02-23_21-32-07.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osm2pgsql" rel="tag" title="see questions tagged &#39;osm2pgsql&#39;">osm2pgsql</span>

@@ -136,7 +136,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>You've made the change correctly - the rendered maps that you see (on the openstreetmap site and elsewhere) will take a little while to update, and any caches between you and OpenStreetMap can affect that too. For example I just looked at <a href="https://www.openstreetmap.org/#map=17/53.99056/-0.90420">https://www.openstreetmap.org/#map=17/53.99056/-0.90420</a> and saw the wrong name, but a refresh of the page in the browser caused the correct name to appear. Other maps might take longer - <a href="https://www.openstreetmap.org/#map=17/53.99056/-0.90555&amp;layers=C">https://www.openstreetmap.org/#map=17/53.99056/-0.90555&amp;layers=C</a> gets updated about once a week, I think.</p>
-<p>There are more detailed explanations elsewhere of the update process, such as <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> .</p>
+<p>There are more detailed explanations elsewhere of the update process, such as <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> .</p>
 </div>
 <div id="comment-68662-info" class="comment-info">
 <span class="comment-age">(05 Apr '19, 10:05)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -39,13 +39,13 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am getting only half of the Bing's satellite image over my town <a href="http://www.openstreetmap.org/?minlon=76.647936096191&amp;minlat=10.755248298645&amp;maxlon=76.667943725586&amp;maxlat=10.775249252319">Palakkad, Kerala, India</a> as shown in screenshot below. There is no satellite image for few blocks more on north, east and south side.</p>
+<p>I am getting only half of the Bing's satellite image over my town <a href="https://www.openstreetmap.org/?minlon=76.647936096191&amp;minlat=10.755248298645&amp;maxlon=76.667943725586&amp;maxlat=10.775249252319">Palakkad, Kerala, India</a> as shown in screenshot below. There is no satellite image for few blocks more on north, east and south side.</p>
 <ul>
 <li>Is it a bug? or</li>
 <li>Bing do not have images for that areas? or</li>
 <li>can we solve it by ourselves? If yes, how?</li>
 </ul>
-<p><img src="http://help.openstreetmap.org/upfiles/Partial_Bing_Imaginary_1.png" alt="Partial Bing Imaginary" /></p>
+<p><img src="/upfiles/Partial_Bing_Imaginary_1.png" alt="Partial Bing Imaginary" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-images" rel="tag" title="see questions tagged &#39;images&#39;">images</span> <span class="post-tag tag-link-imaginary" rel="tag" title="see questions tagged &#39;imaginary&#39;">imaginary</span> <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-satellite" rel="tag" title="see questions tagged &#39;satellite&#39;">satellite</span>
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bing simply does not have <a href="http://wiki.openstreetmap.org/wiki/Bing/Coverage">high-res coverage</a> in <a href="http://ant.dev.openstreetmap.org/bingimageanalyzer/?lat=10.765895390540976&amp;lon=76.6380996045002&amp;zoom=13">this area</a>. Sorry, you'll have to use plain old GPS and surveying.</p>
+<p>Bing simply does not have <a href="https://wiki.openstreetmap.org/wiki/Bing/Coverage">high-res coverage</a> in <a href="http://ant.dev.openstreetmap.org/bingimageanalyzer/?lat=10.765895390540976&amp;lon=76.6380996045002&amp;zoom=13">this area</a>. Sorry, you'll have to use plain old GPS and surveying.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ One Answer:
 <div class="comment-text">
 <p>Not that I know of; you'll probably need to map by traditional surveying (you should do a good bit of that anyway !). However :</p>
 <p>Bing is adding imagery at a fast rate, so hopefully it'll come to your area st some stage. But it's a huge undertaking and they're prioretising US and Europe for now, so you might be waiting a long time.</p>
-<p>The wiki (<a href="http://wiki.openstreetmap.org/wiki/India/Data_sources)">http://wiki.openstreetmap.org/wiki/India/Data_sources)</a> mentions other usable data sources, but none look similar to Bing. Maybe try asking on the indian mailing list.</p>
+<p>The wiki (<a href="https://wiki.openstreetmap.org/wiki/India/Data_sources)">https://wiki.openstreetmap.org/wiki/India/Data_sources)</a> mentions other usable data sources, but none look similar to Bing. Maybe try asking on the indian mailing list.</p>
 </div>
 <div id="comment-16870-info" class="comment-info">
 <span class="comment-age">(12 Oct '12, 16:32)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -156,7 +156,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><span></span><span>@vincent</span>-de-phily I have an Android phone. So I can utilize its GPS system for mapping. <a href="http://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a> is a good app to add/modify data. And thanks for that wiki page. Let's see if I can find any alternative imagery. :)</p>
+<p><span></span><span>@vincent</span>-de-phily I have an Android phone. So I can utilize its GPS system for mapping. <a href="https://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a> is a good app to add/modify data. And thanks for that wiki page. Let's see if I can find any alternative imagery. :)</p>
 </div>
 <div id="comment-16876-info" class="comment-info">
 <span class="comment-age">(13 Oct '12, 08:31)</span> <span class="comment-user userinfo">ikrshnan</span>

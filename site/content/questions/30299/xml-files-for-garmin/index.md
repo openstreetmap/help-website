@@ -133,7 +133,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you got it from <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Europe/EuroVelo">http://wiki.openstreetmap.org/wiki/WikiProject_Europe/EuroVelo</a> then it wont help you at all. Those xml files only show some osm tags and relation numbers. On <a href="http://cycling.waymarkedtrails.org">http://cycling.waymarkedtrails.org</a> you can download gpx tracks but the longer the route, the more fragmented and unsorted those tracks are, and of limited use for your Garmin.</p>
+<p>If you got it from <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Europe/EuroVelo">https://wiki.openstreetmap.org/wiki/WikiProject_Europe/EuroVelo</a> then it wont help you at all. Those xml files only show some osm tags and relation numbers. On <a href="http://cycling.waymarkedtrails.org">http://cycling.waymarkedtrails.org</a> you can download gpx tracks but the longer the route, the more fragmented and unsorted those tracks are, and of limited use for your Garmin.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

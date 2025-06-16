@@ -206,7 +206,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've already read that adding the source on a changeset is an intesting solution for multi-sourced objects properties. But you can edit objects using aerial imagery and physical survey, and the problem is the same.</p>
-<p>I've not found a clear and complete solution on <a href="http://wiki.openstreetmap.org/wiki/Key:source">documentation</a>, but what is possible is:</p>
+<p>I've not found a clear and complete solution on <a href="https://wiki.openstreetmap.org/wiki/Key:source">documentation</a>, but what is possible is:</p>
 <ul>
 <li>use multi-source value by using a semicolon as a separator, for example <code>source=bing;survey</code> either on the object or on the changeset</li>
 <li>for changeset sourcing solution: use strictly only one source per changeset. It may be sometimes difficult, but improve the traceability</li>
@@ -305,7 +305,7 @@ source:[key]=[value]
 <div id="post-3590-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>putting the source to the changeset is not only easier for you, it is also easier for the other mappers. If you look at the currently provided method from osm to lookup the history of an object: <a href="http://www.openstreetmap.org/browse/way/12345685/history">http://www.openstreetmap.org/browse/way/12345685/history</a></p>
+<p>putting the source to the changeset is not only easier for you, it is also easier for the other mappers. If you look at the currently provided method from osm to lookup the history of an object: <a href="https://www.openstreetmap.org/browse/way/12345685/history">https://www.openstreetmap.org/browse/way/12345685/history</a></p>
 <p>you can see that it is much easier to look at the changeset comments then to rely on the different tags.</p>
 <p>When would you remove the source tag? Objects in OSM are not static nor should they be. They are continuously modified and each of this modifications, often performed just on a fraction of an object, may have their own source.</p>
 </div>

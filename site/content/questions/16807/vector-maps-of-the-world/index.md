@@ -106,9 +106,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, it is possible, see for example <a href="http://wiki.openstreetmap.org/wiki/Kothic_JS">http://wiki.openstreetmap.org/wiki/Kothic_JS</a> however most of the solutions should be considered experimental at this point in time. Two of OSM-related GSOC projects from this year had related topics:</p>
+<p>Yes, it is possible, see for example <a href="https://wiki.openstreetmap.org/wiki/Kothic_JS">https://wiki.openstreetmap.org/wiki/Kothic_JS</a> however most of the solutions should be considered experimental at this point in time. Two of OSM-related GSOC projects from this year had related topics:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service">http://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service">https://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service</a></li>
 <li><a href="http://www.google-melange.com/gsoc/project/google/gsoc2012/anderpijoan/14001">http://www.google-melange.com/gsoc/project/google/gsoc2012/anderpijoan/14001</a></li>
 </ul>
 <p>On Android devices you should look at <a href="http://code.google.com/p/mapsforge/">http://code.google.com/p/mapsforge/</a></p>

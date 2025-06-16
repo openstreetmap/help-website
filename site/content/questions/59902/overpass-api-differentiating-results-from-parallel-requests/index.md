@@ -161,7 +161,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You could inject a marker element:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#The_make_statement">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#The_make_statement</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#The_make_statement">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#The_make_statement</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

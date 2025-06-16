@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API#Union">Union query</a>:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Union">Union query</a>:</p>
 <pre><code>(node[&quot;amenity&quot;~&quot;courthouse|prison&quot;];
 node[&quot;office&quot;=&quot;layer&quot;];);</code></pre>
 </div>

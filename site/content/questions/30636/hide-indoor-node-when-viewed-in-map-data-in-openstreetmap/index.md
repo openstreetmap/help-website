@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/nodes_OSM.JPG" alt="alt text" /></p>
-<p>Greetings. I am still new in Openstreetmap. Currently i am drawing an indoor map using JOSM for my final year project. The problem is when i view the map data of my faculty in openstreetmap. it shows all the nodes. I cant understand why it shows. It suppose to show like this from <a href="http://www.openstreetmap.org/node/2100509693#map=19/46.25549/-63.13784&amp;layers=D">this link</a></p>
+<p><img src="/upfiles/nodes_OSM.JPG" alt="alt text" /></p>
+<p>Greetings. I am still new in Openstreetmap. Currently i am drawing an indoor map using JOSM for my final year project. The problem is when i view the map data of my faculty in openstreetmap. it shows all the nodes. I cant understand why it shows. It suppose to show like this from <a href="https://www.openstreetmap.org/node/2100509693#map=19/46.25549/-63.13784&amp;layers=D">this link</a></p>
 <p>can anyone share with me on how to fix this matter?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -130,7 +130,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You've added the nodes to the <a href="http://www.openstreetmap.org/relation/3505091">relation you have created</a> with a role of buildingpart. I don't understand what a level relation is, but you probably don't need to include every node as well as every way.</p>
+<p>You've added the nodes to the <a href="https://www.openstreetmap.org/relation/3505091">relation you have created</a> with a role of buildingpart. I don't understand what a level relation is, but you probably don't need to include every node as well as every way.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <div id="post-30659-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>this is the link <a href="http://www.openstreetmap.org/#map=19/3.25402/101.72974&amp;layers=D">http://www.openstreetmap.org/#map=19/3.25402/101.72974&amp;layers=D</a></p>
+<p>this is the link <a href="https://www.openstreetmap.org/#map=19/3.25402/101.72974&amp;layers=D">https://www.openstreetmap.org/#map=19/3.25402/101.72974&amp;layers=D</a></p>
 </div>
 <div id="comment-30659-info" class="comment-info">
 <span class="comment-age">(12 Feb '14, 00:42)</span> <span class="comment-user userinfo">firdaus shaj...</span>

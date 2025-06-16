@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>According to <a href="http://osm2po.de/">osm2po.de</a> the licence forbids reverse engineering, de-compiling and disassembling. Hence osm2po is proprietary (and should be avoided ;)).</p>
-<p>Depending on what you are planning to do, free and open source alternatives include <a href="http://pgrouting.org/docs/tools/osm2pgrouting.html">osm2pgrouting</a> for pgRouting imports, or <a href="http://www.project-osrm.org/">OSRM</a>, <a href="http://www.graphhopper.com/">GraphHopper</a>, and <a href="http://wiki.openstreetmap.org/wiki/Gosmore">gosmore</a> as full-blown routing engines that can load the full OSM planet and have a routing API. These open source projects represent dozens of years of research and development; by making them Open Source, their authors have secured the participation of many others in coding enhancements or finding and fixing bugs.</p>
+<p>Depending on what you are planning to do, free and open source alternatives include <a href="http://pgrouting.org/docs/tools/osm2pgrouting.html">osm2pgrouting</a> for pgRouting imports, or <a href="http://www.project-osrm.org/">OSRM</a>, <a href="http://www.graphhopper.com/">GraphHopper</a>, and <a href="https://wiki.openstreetmap.org/wiki/Gosmore">gosmore</a> as full-blown routing engines that can load the full OSM planet and have a routing API. These open source projects represent dozens of years of research and development; by making them Open Source, their authors have secured the participation of many others in coding enhancements or finding and fixing bugs.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

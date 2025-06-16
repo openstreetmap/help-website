@@ -114,10 +114,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Look at the marker in this map:</p>
-<p><a href="http://www.openstreetmap.org/?lat=40.172393&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.172393&amp;mlon=-84.226356">http://www.openstreetmap.org/?lat=40.172393&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.172393&amp;mlon=-84.226356</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=40.172393&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.172393&amp;mlon=-84.226356">https://www.openstreetmap.org/?lat=40.172393&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.172393&amp;mlon=-84.226356</a></p>
 <p>This is the location you are asking about. Then look at the dashed purple line 100 metres below it. That is the Piqua city boundary. Therefore, the location you have given is outside the city as far as OSM is concerned.</p>
 <p>If you place the position just a little further south, like this</p>
-<p><a href="http://www.openstreetmap.org/?lat=40.17&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.17&amp;mlon=-84.226356#">http://www.openstreetmap.org/?lat=40.17&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.17&amp;mlon=-84.226356#</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=40.17&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.17&amp;mlon=-84.226356#">https://www.openstreetmap.org/?lat=40.17&amp;lon=-84.226356&amp;zoom=16&amp;mlat=40.17&amp;mlon=-84.226356#</a></p>
 <p>then Nominatim predictably finds a result in Piqua.</p>
 <p>You can change the boundary if you think it is wrong.</p>
 </div>

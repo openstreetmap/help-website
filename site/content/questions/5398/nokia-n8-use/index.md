@@ -105,8 +105,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems that the Nokia N8 is driven by Symbian^3</p>
-<p>So you can have a look at the <a href="http://wiki.openstreetmap.org/wiki/Symbian">Symbian</a> section in the OSM wiki.</p>
-<p>Or when you can execute Java midlets on your phone look at that <a href="http://wiki.openstreetmap.org/wiki/Category:Java_midlet">category</a> there.</p>
+<p>So you can have a look at the <a href="https://wiki.openstreetmap.org/wiki/Symbian">Symbian</a> section in the OSM wiki.</p>
+<p>Or when you can execute Java midlets on your phone look at that <a href="https://wiki.openstreetmap.org/wiki/Category:Java_midlet">category</a> there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

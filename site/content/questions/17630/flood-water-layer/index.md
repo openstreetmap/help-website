@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-54193-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I asked a related question, which may be interesting to you. <a href="https://help.openstreetmap.org/questions/18032/ways-and-water-levels-in-gb">https://help.openstreetmap.org/questions/18032/ways-and-water-levels-in-gb</a></p>
+<p>I asked a related question, which may be interesting to you. <a href="/questions/18032/ways-and-water-levels-in-gb">https://help.openstreetmap.org/questions/18032/ways-and-water-levels-in-gb</a></p>
 </div>
 <div id="comment-54193-info" class="comment-info">
 <span class="comment-age">(20 Jan '17, 14:11)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p><a href="http://meta.osqa.net/questions/105/how-to-bypass-you-cannot-accept-your-own-answer-message">http://meta.osqa.net/questions/105/how-to-bypass-you-cannot-accept-your-own-answer-message</a></p>
-<p>My Question: <a href="https://help.openstreetmap.org/questions/21141/tags-for-returned-and-services-league-rsl-clubs">https://help.openstreetmap.org/questions/21141/tags-for-returned-and-services-league-rsl-clubs</a></p>
+<p>My Question: <a href="/questions/21141/tags-for-returned-and-services-league-rsl-clubs">https://help.openstreetmap.org/questions/21141/tags-for-returned-and-services-league-rsl-clubs</a></p>
 <p>I thank SK53 for his help, however I've come back and answered my own question.</p>
 <p>This leaves me with two options:</p>
 <ul>
@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think if you look at the unanswered tab you will see that there are many answered questions which haven't had an answer accepted, so the rare occasion when someone answers their own question won't add to this noticeably.</p>
-<p>Looking at the OSQA post you mentioned, it is perhaps best to ask an admin to mark your answer as accepted for you, though looking around this site and <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">the wiki</a> I'm not sure who that would be here.</p>
+<p>Looking at the OSQA post you mentioned, it is perhaps best to ask an admin to mark your answer as accepted for you, though looking around this site and <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">the wiki</a> I'm not sure who that would be here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: <span>nearly</span>: if I remember correctly our admin <span></span><a href="http://help.openstreetmap.org/users/1/tomh">@tomh</a> assigned "moderator" rights to a set of users (which resembled the top karma points users at that time).</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: <span>nearly</span>: if I remember correctly our admin <span></span><a href="https://help.openstreetmap.org/users/1/tomh">@tomh</a> assigned "moderator" rights to a set of users (which resembled the top karma points users at that time).</p>
 </div>
 <div id="comment-50839-info" class="comment-info">
 <span class="comment-age">(11 Jul '16, 21:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

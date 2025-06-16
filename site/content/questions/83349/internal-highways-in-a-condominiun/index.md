@@ -48,8 +48,8 @@ osqa_accepted = false
 </ul>
 <p>There is a current discussion around this, and I would like to see what other mappers think or propose to standardize the <a href="https://wiki.openstreetmap.org/wiki/Colombia/Guide_for_mapping">mapping in Colombia</a>. The <a href="https://wiki.openstreetmap.org/wiki/Highway_tagging_samples/urban">examples proposed here</a> also does not fit our issue.</p>
 <p>Here is an example of those <a href="https://www.openstreetmap.org/#map=17/4.71673/-74.05059">internal highways</a>.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/apartamento_en_arriendo_o_venta_santa_coloma_bogota_8850125616680858018.jpeg" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2022-02-03_at_3.42.39_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/apartamento_en_arriendo_o_venta_santa_coloma_bogota_8850125616680858018.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2022-02-03_at_3.42.39_PM.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-residential" rel="tag" title="see questions tagged &#39;residential&#39;">residential</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span>

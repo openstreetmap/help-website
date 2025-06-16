@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Using Josm you can select multiple buildings, either by selecting a group individually or using the lasso tool to round 'em up, then select duplicate, and then move 'em on to where you need to paste the next lot. This is ok if they are all the same shape. There is also a <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/BuildingsTools">BuildingsTools</a> plugin for Josm for when 'drawing many rectangular buildings in JOSM is tedious'</p>
+<p>Using Josm you can select multiple buildings, either by selecting a group individually or using the lasso tool to round 'em up, then select duplicate, and then move 'em on to where you need to paste the next lot. This is ok if they are all the same shape. There is also a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/BuildingsTools">BuildingsTools</a> plugin for Josm for when 'drawing many rectangular buildings in JOSM is tedious'</p>
 <p>The shortcut for rotate is... Ctrl-Shift-LeftMouse Holding the "Shift" and "Ctrl" key allows rotating selected objects. ..and the <a href="https://josm.openstreetmap.de/wiki/Shortcuts">rest of the shortcuts</a></p>
 </div>
 <div class="answer-controls post-controls">

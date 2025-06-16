@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-49500-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question was already answered here before: <a href="https://help.openstreetmap.org/questions/43114/how-can-i-dissolve-intersecting-polygons-with-overpass">https://help.openstreetmap.org/questions/43114/how-can-i-dissolve-intersecting-polygons-with-overpass</a></p>
+<p>This question was already answered here before: <a href="/questions/43114/how-can-i-dissolve-intersecting-polygons-with-overpass">https://help.openstreetmap.org/questions/43114/how-can-i-dissolve-intersecting-polygons-with-overpass</a></p>
 </div>
 <div id="comment-49500-info" class="comment-info">
 <span class="comment-age">(29 Apr '16, 15:18)</span> <span class="comment-user userinfo">mmd</span>

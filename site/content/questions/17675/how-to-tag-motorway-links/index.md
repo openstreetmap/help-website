@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag motorway links"
-description = '''Hi is there a protocol to tag and name a highway link between 2 highways ? See link below. http://www.openstreetmap.org/edit?lat=52.06515&amp;amp;lon=5.07355&amp;amp;zoom=15 Use the lowest number of a road to tag them ? Tag them halfway in between ? Tag the to and the from with the originating number ? Gree...'''
+description = '''Hi is there a protocol to tag and name a highway link between 2 highways ? See link below. https://www.openstreetmap.org/edit?lat=52.06515&amp;amp;lon=5.07355&amp;amp;zoom=15 Use the lowest number of a road to tag them ? Tag them halfway in between ? Tag the to and the from with the originating number ? Gree...'''
 date = "2012-11-12T23:38:00Z"
 lastmod = "2012-11-13T08:08:00Z"
 weight = 17675
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi is there a protocol to tag and name a highway link between 2 highways ? See link below. <a href="http://www.openstreetmap.org/edit?lat=52.06515&amp;lon=5.07355&amp;zoom=15">http://www.openstreetmap.org/edit?lat=52.06515&amp;lon=5.07355&amp;zoom=15</a> Use the lowest number of a road to tag them ? Tag them halfway in between ? Tag the to and the from with the originating number ? Greetz Hendrik</p>
+<p>Hi is there a protocol to tag and name a highway link between 2 highways ? See link below. <a href="https://www.openstreetmap.org/edit?lat=52.06515&amp;lon=5.07355&amp;zoom=15">https://www.openstreetmap.org/edit?lat=52.06515&amp;lon=5.07355&amp;zoom=15</a> Use the lowest number of a road to tag them ? Tag them halfway in between ? Tag the to and the from with the originating number ? Greetz Hendrik</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The mappers <a href="http://www.openstreetmap.org/user/It%27s%20so%20funny">It's so funny</a> and <a href="http://www.openstreetmap.org/user/The%20Maarssen%20Mapper">The Maarssen Mapper</a> are the most active motorway detail mappers near you (probably in the whole of The Netherlands). If you want consistent tagging, please coordinate with them.</p>
+<p>The mappers <a href="https://www.openstreetmap.org/user/It%27s%20so%20funny">It's so funny</a> and <a href="https://www.openstreetmap.org/user/The%20Maarssen%20Mapper">The Maarssen Mapper</a> are the most active motorway detail mappers near you (probably in the whole of The Netherlands). If you want consistent tagging, please coordinate with them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello everyone.</p>
-<p>Yesterday I noticed a strange very big lake in the center of Madagascar [<a href="http://www.openstreetmap.org/way/547294938">this polygon</a>]. When inspecting the data, I found that it was supposed to be a watershed basin but was wrongly tagged as <code>landuse=basin</code>. To avoid the rendering of the whole area as a lake/basin, I immediately removed the <code>landuse=basin</code> tag and replaced it with a fixme note.</p>
+<p>Yesterday I noticed a strange very big lake in the center of Madagascar [<a href="https://www.openstreetmap.org/way/547294938">this polygon</a>]. When inspecting the data, I found that it was supposed to be a watershed basin but was wrongly tagged as <code>landuse=basin</code>. To avoid the rendering of the whole area as a lake/basin, I immediately removed the <code>landuse=basin</code> tag and replaced it with a fixme note.</p>
 <ul>
-<li>By the way I was wondering if there was really a way to add watershed basin limits to OpenStreetMap? (<a href="http://wiki.openstreetmap.org/wiki/Relation:watershed">This proposed relation type</a> takes in waterways (main stream + tributaries) instead of limits)</li>
+<li>By the way I was wondering if there was really a way to add watershed basin limits to OpenStreetMap? (<a href="https://wiki.openstreetmap.org/wiki/Relation:watershed">This proposed relation type</a> takes in waterways (main stream + tributaries) instead of limits)</li>
 <li>What do I do with this polygon: should I let it there as it is or delete it?</li>
 </ul>
 <p>Thanks.</p>

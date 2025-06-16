@@ -154,7 +154,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Unless they are actually one above the other, you can probably do with only the <a href="http://wiki.openstreetmap.org/wiki/Key:ele"><code>ele</code></a> tag. Layer is a tag mostly for display for features that <em>overlap each others</em>. If two features don't overlap, layers are pointless.</p>
+<p>Unless they are actually one above the other, you can probably do with only the <a href="https://wiki.openstreetmap.org/wiki/Key:ele"><code>ele</code></a> tag. Layer is a tag mostly for display for features that <em>overlap each others</em>. If two features don't overlap, layers are pointless.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

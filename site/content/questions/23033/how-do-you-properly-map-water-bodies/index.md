@@ -71,7 +71,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>link to second lake</p>
-<p><a href="http://www.openstreetmap.org/?lat=18.4307&amp;lon=-66.0278&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=18.4307&amp;lon=-66.0278&amp;zoom=14&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=18.4307&amp;lon=-66.0278&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=18.4307&amp;lon=-66.0278&amp;zoom=14&amp;layers=M</a></p>
 </div>
 <div id="comment-23039-info" class="comment-info">
 <span class="comment-age">(05 Jun '13, 21:39)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -134,8 +134,8 @@ One Answer:
 <li>multipolygons and therefore reusing the existing coastline way (+ you need to make one new way to connect endpoints of the existing coastline way.).</li>
 <li>points in the middle of bay</li>
 </ul>
-<p>You can read more about tagging of bays in the <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dbay">wiki</a>.</p>
-<p>If there is water under <a href="http://www.openstreetmap.org/?lat=18.427957&amp;lon=-65.989745&amp;zoom=18&amp;layers=M">these bridges</a> then you may connect these water areas or create a line with waterway='something' between them dependenig on the real situation on the ground.</p>
+<p>You can read more about tagging of bays in the <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dbay">wiki</a>.</p>
+<p>If there is water under <a href="https://www.openstreetmap.org/?lat=18.427957&amp;lon=-65.989745&amp;zoom=18&amp;layers=M">these bridges</a> then you may connect these water areas or create a line with waterway='something' between them dependenig on the real situation on the ground.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

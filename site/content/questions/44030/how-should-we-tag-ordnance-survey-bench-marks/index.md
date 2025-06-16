@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How should <a href="http://www.ordnancesurvey.co.uk/benchmarks/">OS bench marks</a> - used to record altitude - be tagged? <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point"><code>man_made=survey_point</code></a> seems sensible, but this appears to be for trig points, rather than cut marks in walls.</p>
+<p>How should <a href="http://www.ordnancesurvey.co.uk/benchmarks/">OS bench marks</a> - used to record altitude - be tagged? <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point"><code>man_made=survey_point</code></a> seems sensible, but this appears to be for trig points, rather than cut marks in walls.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ordnancesurvey" rel="tag" title="see questions tagged &#39;ordnancesurvey&#39;">ordnancesurvey</span>

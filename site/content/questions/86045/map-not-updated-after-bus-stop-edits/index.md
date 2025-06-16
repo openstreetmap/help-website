@@ -177,7 +177,7 @@ One Answer:
 <div id="post-86078-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>if you can see them in the editor then they are in the OSM database, but it might take some time before you see them. This is an old question that relates, but I think it is still fairly valid. <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>if you can see them in the editor then they are in the OSM database, but it might take some time before you see them. This is an old question that relates, but I think it is still fairly valid. <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div id="comment-86078-info" class="comment-info">
 <span class="comment-age">(03 Nov '22, 08:50)</span> <span class="comment-user userinfo">EdLoach ♦</span>

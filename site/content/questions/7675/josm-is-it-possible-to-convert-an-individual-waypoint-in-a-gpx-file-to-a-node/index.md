@@ -165,7 +165,7 @@ osqa_accepted = true
 <div id="post-50893-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5517/erik">@erik</a> It's not the accepted answer because it doesn't actually work for me (for the reasons I added as comments below that answer).</p>
+<p><a href="https://help.openstreetmap.org/users/5517/erik">@erik</a> It's not the accepted answer because it doesn't actually work for me (for the reasons I added as comments below that answer).</p>
 </div>
 <div id="comment-50893-info" class="comment-info">
 <span class="comment-age">(13 Jul '16, 14:42)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -373,7 +373,7 @@ osqa_accepted = true
 <div id="post-47189-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>When I try and open a GPX file (I used <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/2079394">http://www.openstreetmap.org/user/SomeoneElse/traces/2079394</a> ) two layers are created, "TR3891b.GPX" and "Markers from TR3891b.GPX". If I select the latter, and "convert to data layer" I get a warning "Upload of unprocessed GPS data as map data is considered harmful" (which is fair enough - I have no intention of uploading unprocessed GPS data).</p>
+<p>When I try and open a GPX file (I used <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/2079394">https://www.openstreetmap.org/user/SomeoneElse/traces/2079394</a> ) two layers are created, "TR3891b.GPX" and "Markers from TR3891b.GPX". If I select the latter, and "convert to data layer" I get a warning "Upload of unprocessed GPS data as map data is considered harmful" (which is fair enough - I have no intention of uploading unprocessed GPS data).</p>
 <p>I selected a waypoint (DOA157315) and copied it to a new OSM layer. If I save (to the dev server, for testing) I get <a href="http://api06.dev.openstreetmap.org/node/4301145583">http://api06.dev.openstreetmap.org/node/4301145583</a> . This isn't much use. What I actually want to do is to be able to see the full set of tags on the waypoint:</p>
 <p>&lt;wpt lat="53.0097842" lon="-1.4806223"&gt; &lt;name&gt;DOA157315&lt;/name&gt; &lt;sym&gt;Boat Ramp&lt;/sym&gt; &lt;/wpt&gt;</p>
 <p>and process them. In this case "Boat Ramp" means "this footway is marked as a public footpath".</p>

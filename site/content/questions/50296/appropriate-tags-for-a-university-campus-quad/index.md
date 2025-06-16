@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would start by mapping the features individually <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench">amenity=bench</a>, <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway">highway=footway</a>, <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/landcover">landcover=grass</a> (which I prefer over <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a>), etc.</p>
-<p>It the quad has a name, and it seems they often do, then put a polygon around it with a <a href="http://wiki.openstreetmap.org/wiki/Key:name">name=*</a> tag.</p>
+<p>I would start by mapping the features individually <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench">amenity=bench</a>, <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway">highway=footway</a>, <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/landcover">landcover=grass</a> (which I prefer over <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a>), etc.</p>
+<p>It the quad has a name, and it seems they often do, then put a polygon around it with a <a href="https://wiki.openstreetmap.org/wiki/Key:name">name=*</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

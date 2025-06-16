@@ -143,7 +143,7 @@ osqa_accepted = true
 <div id="post-27044-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As already explained by Vincent the highest point can be tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dpeak">natural=peak</a>. But this should only be done for somewhat important peaks and not every small hill.</p>
+<p>As already explained by Vincent the highest point can be tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dpeak">natural=peak</a>. But this should only be done for somewhat important peaks and not every small hill.</p>
 </div>
 <div id="comment-27044-info" class="comment-info">
 <span class="comment-age">(09 Oct '13, 14:52)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -210,7 +210,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Simply add the tag "ele" (described <a href="http://wiki.openstreetmap.org/wiki/Key:ele">here</a>) to the nodes of interest on the trail/path/highway. If the node doesn't exist, add a new node on the way. This node does <em>not</em> need to be tagged with anything else, like natural=peak.</p>
+<p>Simply add the tag "ele" (described <a href="https://wiki.openstreetmap.org/wiki/Key:ele">here</a>) to the nodes of interest on the trail/path/highway. If the node doesn't exist, add a new node on the way. This node does <em>not</em> need to be tagged with anything else, like natural=peak.</p>
 <p>There are a few examples on the documentation page for the tag, and it seems that these use cases are the ones you described in the original question.</p>
 <p>Also, ways <em>may</em> be tagged with the "ele" key, like airport runways, etc, as described in the documentation as well, provided they are "flat".</p>
 </div>

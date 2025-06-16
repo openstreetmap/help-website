@@ -165,7 +165,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">Tile Usage Policy</a> says that all "bulk downloading is strongly discouraged" and that permission must be obtained in advance by the app author.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">Tile Usage Policy</a> says that all "bulk downloading is strongly discouraged" and that permission must be obtained in advance by the app author.</p>
 <p>The vector data distributed by OSM contains everything we have. If Locus choose not to render all of it that's their choice.</p>
 </div>
 <div id="comment-8727-info" class="comment-info">
@@ -337,7 +337,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi guys, tile server is in preparation now. Did you read this post? <a href="http://www.openstreetmap.org/user/!i!/diary/15190.">http://www.openstreetmap.org/user/!i!/diary/15190.</a> There is nice graph that show current stat. I completely! disable downloading of tiles from your server during October. So since version 1.14.0 and up, Locus is not allowed to directly download map tiles from your server, so it works only as a viewer. Is there now any chance to unblock access to tiles level 17 and higher for app with user agent Locus/1.14.0 and higher?</p>
+<p>Hi guys, tile server is in preparation now. Did you read this post? <a href="https://www.openstreetmap.org/user/!i!/diary/15190.">https://www.openstreetmap.org/user/!i!/diary/15190.</a> There is nice graph that show current stat. I completely! disable downloading of tiles from your server during October. So since version 1.14.0 and up, Locus is not allowed to directly download map tiles from your server, so it works only as a viewer. Is there now any chance to unblock access to tiles level 17 and higher for app with user agent Locus/1.14.0 and higher?</p>
 <p>I hope that server will be ready till end of November so then I hope that most of current users will use this server that will serve only for Locus.</p>
 <p>Just one think (to comment previous posts), access to maps is exactly same for Free and Pro version of app. So I don't want money from users for maps! Pro version is payed for extra functionality that offer, not for maps! And also, Free version is fully functional, not just some time limited demo, so I'm really trying to offer people fully working app and if they want some extra ...</p>
 </div>

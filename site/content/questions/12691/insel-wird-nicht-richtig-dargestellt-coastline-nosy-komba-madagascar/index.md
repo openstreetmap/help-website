@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Da die Küstenlinien nur <a href="http://wiki.openstreetmap.org/wiki/DE:Coastline#mit_Mapnik">alle paar Wochen neu gerendert werden</a> dauert es eine Weile, bis Änderungen auf der Karte erscheinen.</p>
+<p>Da die Küstenlinien nur <a href="https://wiki.openstreetmap.org/wiki/DE:Coastline#mit_Mapnik">alle paar Wochen neu gerendert werden</a> dauert es eine Weile, bis Änderungen auf der Karte erscheinen.</p>
 <p>Die Multipolygone für Wasser im Ozean solltest du entsorgen.</p>
 </div>
 <div class="answer-controls post-controls">

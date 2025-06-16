@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-48491-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/936/dieterdreist"></a><a href="http://help.openstreetmap.org/users/936/dieterdreist">@dieterdreist</a></p>
+<p><a href="https://help.openstreetmap.org/users/936/dieterdreist"></a><a href="https://help.openstreetmap.org/users/936/dieterdreist">@dieterdreist</a></p>
 <p>My server config: 32 core CPU, 128GB RAM &amp; 2TB SSD HD. If i called 1000 geocode queries one by one, it takes around 4000 seconds for finish.</p>
 <p>I have another doubt: Is it possible to call bulk geocode queries in a single request ?</p>
 </div>
@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-48550-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can try to ask on the OSM developer mailinglist, see <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a> ...</p>
+<p>You can try to ask on the OSM developer mailinglist, see <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a> ...</p>
 <p>or try to contact user lonvia ... she is quite helpful about nominatim.</p>
 </div>
 <div id="comment-48550-info" class="comment-info">
@@ -184,7 +184,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I have similar issue though (see the link below), as all the caching stuff consumes a lot of RAM and I believe 128Gb is an overkill for reverse geo...</p>
-<p><a href="https://help.openstreetmap.org/questions/49991/speed-up-nominatimreverse-goecoding-optimize-db-size">https://help.openstreetmap.org/questions/49991/speed-up-nominatimreverse-goecoding-optimize-db-size</a></p>
+<p><a href="/questions/49991/speed-up-nominatimreverse-goecoding-optimize-db-size">https://help.openstreetmap.org/questions/49991/speed-up-nominatimreverse-goecoding-optimize-db-size</a></p>
 </div>
 <div id="comment-50016-info" class="comment-info">
 <span class="comment-age">(04 Jun '16, 15:07)</span> <span class="comment-user userinfo">Taras O</span>

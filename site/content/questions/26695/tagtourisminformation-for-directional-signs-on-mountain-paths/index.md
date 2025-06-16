@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi I've seen in certain areas there are a lot of points marked as Tag:tourism=information that are actually just directional signs on mountain paths. I attach a picture to be clear. Is this correct? In some cases/areas these signs are numbered and can be used as a reference, but mostly they aren't. I wonder if they should be left as they are, changed to information=guidepost or removed when they have no number/reference.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/P1070516.jpg" alt="Balise" /></p>
+<p><img src="/upfiles/P1070516.jpg" alt="Balise" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span> <span class="post-tag tag-link-signs" rel="tag" title="see questions tagged &#39;signs&#39;">signs</span>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If they're further tagged "<a href="http://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a>" that sounds OK to me.</p>
+<p>If they're further tagged "<a href="https://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a>" that sounds OK to me.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -150,9 +150,9 @@ One Answer:
 <div class="comment-text">
 <p>To see who added a sign that you've noticed in iD, do the following:</p>
 <p>Down at the bottom left hand side of the iD window you'll see a "View on openstreetmap.org" option:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/id_01.png" alt="iD" /></p>
+<p><img src="/upfiles/id_01.png" alt="iD" /></p>
 <p>Click that, and you'll be taken to a browse node page like:</p>
-<p><a href="http://www.openstreetmap.org/browse/node/1922390860">http://www.openstreetmap.org/browse/node/1922390860</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/1922390860">https://www.openstreetmap.org/browse/node/1922390860</a></p>
 <p>where you can see who the last editor was, and also click "View History" to see previous edits.</p>
 <p>I don't know of a way to search for all nodes of a certain type in a certain area within iD, but outside you can use <a href="http://overpass-turbo.eu/?key=information&amp;value=guidepost&amp;template=key-value">Overpass Turbo</a>. In the search window search for the area that you're interested in (or just move the window there) then click "run". You can also get to Overpass Turbo from <a href="http://taginfo.openstreetmap.org/tags/information=guidepost">taginfo</a> (the steering wheel to the right of the JOSM link).</p>
 </div>

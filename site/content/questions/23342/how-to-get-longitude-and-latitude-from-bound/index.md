@@ -157,7 +157,7 @@ One Answer:
 <div id="post-23379-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I guess you have read this <a href="http://wiki.openstreetmap.org/wiki/Bounding_box">http://wiki.openstreetmap.org/wiki/Bounding_box</a> and noticed that it uses degrees and fractions in decimal format NOT degrees Minutes and Seconds so 45.5 deg= 45,30,00 DMS. If that does not help what lat lon were you expecting to get back from your code. Could you set it up so you know the result beforehand as a test?</p>
+<p>I guess you have read this <a href="https://wiki.openstreetmap.org/wiki/Bounding_box">https://wiki.openstreetmap.org/wiki/Bounding_box</a> and noticed that it uses degrees and fractions in decimal format NOT degrees Minutes and Seconds so 45.5 deg= 45,30,00 DMS. If that does not help what lat lon were you expecting to get back from your code. Could you set it up so you know the result beforehand as a test?</p>
 </div>
 <div id="comment-23379-info" class="comment-info">
 <span class="comment-age">(14 Jun '13, 19:46)</span> <span class="comment-user userinfo">andy mackey</span>

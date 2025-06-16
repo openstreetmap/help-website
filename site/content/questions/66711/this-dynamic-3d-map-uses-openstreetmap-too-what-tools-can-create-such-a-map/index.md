@@ -196,7 +196,7 @@ osqa_accepted = false
 <p><a href="https://www.esri.com/arcgis-blog/products/arcgis-earth/3d-gis/introducing-arcgis-earth-v1-8-powerful-interactive-3d-analysis-for-everyone/">https://www.esri.com/arcgis-blog/products/arcgis-earth/3d-gis/introducing-arcgis-earth-v1-8-powerful-interactive-3d-analysis-for-everyone/</a></p>
 <p>This is a desktop solution though, so you can't create webservices. It is also Windows only. But it does a lot more than Google Earth ever did, especially in terms of the ease of adding custom data and a wealth of ArcGIS Online available data (e.g. scientific and statistical layers) provided by the GIS communities, although for some of these layers, you will need an ArcGIS Online account with ESRI to access them, while others seem accessible as is.</p>
 <p>The download button is a bit inconspicuous at the entire bottom of the first mentioned page.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/ArcGIS_Earth_OSM.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/ArcGIS_Earth_OSM.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -249,7 +249,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>By the way, there is also the very nice 3D rendering of Swiss Topo, live from their website, that you may already know:</p>
 <p><a href="https://map.geo.admin.ch">https://map.geo.admin.ch</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Swiss_Topo_3D_xEB4eTd.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Swiss_Topo_3D_xEB4eTd.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

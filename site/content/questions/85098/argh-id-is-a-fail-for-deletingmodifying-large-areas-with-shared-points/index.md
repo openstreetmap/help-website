@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have a large closed way that I need to change, and since it shares many points with something I don't want to disturb, I can't just delete those nodes. I'm fine with deleting the whole area and starting over, since it got screwed up. But if I select it close-in and try to delete, iD says it can't delete because it's not completely visible. If I zoom out far enough for the whole object to be visible, I can't delete anything at all. Th'F ?? It still shows the selected area at full-visibility, despite the "zoom in to edit" box along with. Thus the selection is clearly still valid, but "delete" doesn't work at the farther-out zoom.</p>
-<p>c.f.: <a href="https://help.openstreetmap.org/questions/85086/">https://help.openstreetmap.org/questions/85086/</a> and <a href="https://www.openstreetmap.org/way/1078919094">https://www.openstreetmap.org/way/1078919094</a> which I'm still looking for clear answers on, by the way.</p>
+<p>c.f.: <a href="/questions/85086/">https://help.openstreetmap.org/questions/85086/</a> and <a href="https://www.openstreetmap.org/way/1078919094">https://www.openstreetmap.org/way/1078919094</a> which I'm still looking for clear answers on, by the way.</p>
 <p>Is there some magic URL I can hand to the API to just nuke the way and start over?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

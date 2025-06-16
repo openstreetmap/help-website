@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">Videos</a>, <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Websites</a>, <a href="http://weait.com/content/openstreetmap-beginner">Websites</a>, <a href="http://help.osm.org/">Wikis</a>, <a href="http://openstreetmapconsultant.com/2011/openstreetmap-books-a-comparative-review/">Books</a>, <a href="http://usergroups.openstreetmap.de/">local meetings</a>, <a href="http://stateofthemap.org/">International conferences</a>, <a href="http://sotm-eu.org/">international conferences</a>.</p>
+<p>There are <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">Videos</a>, <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Websites</a>, <a href="http://weait.com/content/openstreetmap-beginner">Websites</a>, <a href="http://help.osm.org/">Wikis</a>, <a href="http://openstreetmapconsultant.com/2011/openstreetmap-books-a-comparative-review/">Books</a>, <a href="http://usergroups.openstreetmap.de/">local meetings</a>, <a href="http://stateofthemap.org/">International conferences</a>, <a href="http://sotm-eu.org/">international conferences</a>.</p>
 <p>There have also been occasional webinars.</p>
 </div>
 <div class="answer-controls post-controls">

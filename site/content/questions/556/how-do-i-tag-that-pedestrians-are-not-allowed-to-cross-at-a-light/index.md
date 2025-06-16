@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">documents</a> highway=crossing + crossing=no for tagging a node where you would expect to be able to cross the street, but where in fact no possibility to cross the street exists.</p>
+<p>The wiki <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">documents</a> highway=crossing + crossing=no for tagging a node where you would expect to be able to cross the street, but where in fact no possibility to cross the street exists.</p>
 <p>Unfortunately, this will not solve the problem for applications and is at most informational for other mappers. There still doesn't appear to be a proper solution for this yet.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -268,7 +268,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The 'no pedestrian' sign is an informational sign. Just like the 'no exit' sign it tells the drivers of an missing feature. In OSM we do not map missing features, only features that are there.</p>
-<p>You should mark the crossings with <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">highway=crossing and crossing=*</a> and don't map the 'no pedestrian'.</p>
+<p>You should mark the crossings with <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">highway=crossing and crossing=*</a> and don't map the 'no pedestrian'.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

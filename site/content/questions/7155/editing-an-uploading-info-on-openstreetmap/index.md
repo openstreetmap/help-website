@@ -140,7 +140,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If your question is "which editors are available to edit OSM data?" then have a look here: <a href="http://wiki.openstreetmap.org/wiki/Editors#Choice_of_Editors">http://wiki.openstreetmap.org/wiki/Editors#Choice_of_Editors</a></p>
+<p>If your question is "which editors are available to edit OSM data?" then have a look here: <a href="https://wiki.openstreetmap.org/wiki/Editors#Choice_of_Editors">https://wiki.openstreetmap.org/wiki/Editors#Choice_of_Editors</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

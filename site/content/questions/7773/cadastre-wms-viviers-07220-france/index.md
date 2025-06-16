@@ -107,8 +107,8 @@ One Answer:
 <div class="answer-body">
 <p>You have to change the projection. First, go to the JOSM preferences (F12), third tab (the grid symbol) then select the projection "Lambert CC 9 zones (France)" and next, the Lambert CC Zone "4 (44 to 46 degrees)". Then download the cadastre.<br />
 You can find more explanations on the wiki about which projection to use in JOSM for the french cadastre:<br />
-<a href="http://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Projections">http://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Projections</a></p>
-<p>If you have other questions about the french cadastre, contact the french mailing list talk-fr@<a href="http://openstreetmap.org">openstreetmap.org</a> or <a href="http://wiki.openstreetmap.org/wiki/FR:Contact">one of the french forums</a>.</p>
+<a href="https://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Projections">https://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Projections</a></p>
+<p>If you have other questions about the french cadastre, contact the french mailing list talk-fr@<a href="http://openstreetmap.org">openstreetmap.org</a> or <a href="https://wiki.openstreetmap.org/wiki/FR:Contact">one of the french forums</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

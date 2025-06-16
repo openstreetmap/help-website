@@ -211,7 +211,7 @@ osqa_accepted = false
 <div id="post-48401-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info, I've always used "osmosis" <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a> to split larger PBF downloads into smaller ones. Never tried it for editing and upload though, as (like everyone else) I've always assumed that data would be out of date too quickly.</p>
+<p>For info, I've always used "osmosis" <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a> to split larger PBF downloads into smaller ones. Never tried it for editing and upload though, as (like everyone else) I've always assumed that data would be out of date too quickly.</p>
 </div>
 <div id="comment-48401-info" class="comment-info">
 <span class="comment-age">(28 Feb '16, 14:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

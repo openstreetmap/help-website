@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi this is a look a like qeustion. <a href="https://help.openstreetmap.org/questions/15222/bollards-on-a-row">https://help.openstreetmap.org/questions/15222/bollards-on-a-row</a> with an answer.</p>
+<p>hi this is a look a like qeustion. <a href="/questions/15222/bollards-on-a-row">https://help.openstreetmap.org/questions/15222/bollards-on-a-row</a> with an answer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

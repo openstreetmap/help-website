@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I was interested to see that a object that I added to OSM appeared on GMaps after I added it to OSM.</p>
-<p>I added <a href="http://www.openstreetmap.org/way/308836852#map=18/34.07029/74.83115">this</a> houseboat to OpenStreetMap a couple of years ago.</p>
+<p>I added <a href="https://www.openstreetmap.org/way/308836852#map=18/34.07029/74.83115">this</a> houseboat to OpenStreetMap a couple of years ago.</p>
 <p>There are many houseboats along that stretch of the Jhelum River, most/all of them floating guest houses. I only added that one, because it was the one I'd stayed in, and I really liked it (Run by a great group of brothers). I was surprised when, a couple months ago, I saw it on Google Maps (see <a href="https://www.google.ca/maps/@34.0706421,74.8315684,18.25z">here</a>). I'm not on GMaps very often, so it could have easily been there for a year or even longer w/o me noticing it.</p>
 <p>I guess that GMaps still has some volunteer editors, so that could have been the explanation, but it still doesn't sit right with me for them to take info from us, w/o attribution.</p>
 <p>What could the explanation be?</p>

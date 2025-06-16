@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please email me at <a href="http://mailto:nroets@gmail.com"></a><a href="mailto:nroets@gmail.com"></a><a href="mailto:nroets@gmail.com">nroets@gmail.com</a>. The <a href="http://wiki.openstreetmap.org/wiki/Osm.org_Routing_Demo"></a><a href="http://Osm.org"></a><a href="http://Osm.org">Osm.org</a> Routing Demo has lots of spare computing power and I think it will have the answer in a few weeks.</p>
+<p>Please email me at <a href="http://mailto:nroets@gmail.com"></a><a href="mailto:nroets@gmail.com"></a><a href="mailto:nroets@gmail.com">nroets@gmail.com</a>. The <a href="https://wiki.openstreetmap.org/wiki/Osm.org_Routing_Demo"></a><a href="http://Osm.org"></a><a href="http://Osm.org">Osm.org</a> Routing Demo has lots of spare computing power and I think it will have the answer in a few weeks.</p>
 <p>Also note that the plain Dijkstra routing algorithm can find the shortest route from one point to many other points at the same cost of finding the route between that point and the farthest point. Running Dijkstra 2500 times on the UK network should not take more than 1 hour on a mere netbook.</p>
 </div>
 <div class="answer-controls post-controls">

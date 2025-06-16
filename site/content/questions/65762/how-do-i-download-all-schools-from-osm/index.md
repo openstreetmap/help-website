@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>How would I best obtain all the schools (amenity=school) in the OSM database?</p>
-<p>This question asks how to do it for a specific location: <a href="https://help.openstreetmap.org/questions/11004/download-a-map-and-extract-position-from-places-like-schools-hospitals-etc">https://help.openstreetmap.org/questions/11004/download-a-map-and-extract-position-from-places-like-schools-hospitals-etc</a></p>
+<p>This question asks how to do it for a specific location: <a href="/questions/11004/download-a-map-and-extract-position-from-places-like-schools-hospitals-etc">https://help.openstreetmap.org/questions/11004/download-a-map-and-extract-position-from-places-like-schools-hospitals-etc</a></p>
 <p>And the answer is the use the Overpass API or XAPI.</p>
-<p>In my case, I want <em>all</em> the schools. The following is a question along those lines: <a href="https://help.openstreetmap.org/questions/13827/download-amenities">https://help.openstreetmap.org/questions/13827/download-amenities</a></p>
+<p>In my case, I want <em>all</em> the schools. The following is a question along those lines: <a href="/questions/13827/download-amenities">https://help.openstreetmap.org/questions/13827/download-amenities</a></p>
 <p>However it dates back to 2012, and the most upvoted answer recommends to download a full planet dump (tens to hundreds of gigs) and retrieve what you want using a tool like Osmosis or OSMFilter.</p>
 <p>Is there a better way?</p>
 </div>

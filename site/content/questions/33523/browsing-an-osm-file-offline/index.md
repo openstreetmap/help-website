@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM (newest versions) have switched their default style to use <a href="http://wiki.openstreetmap.org/wiki/Mapcss">MapCSS</a> - perhaps one of the applications listed on that wiki page would suit your needs?</p>
+<p>JOSM (newest versions) have switched their default style to use <a href="https://wiki.openstreetmap.org/wiki/Mapcss">MapCSS</a> - perhaps one of the applications listed on that wiki page would suit your needs?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

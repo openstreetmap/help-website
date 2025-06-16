@@ -126,7 +126,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You may get more help if you use the URL of a search. like this one. <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=52.3374%2C-0.1727%3B52.3295%2C-0.2041#map=14/52.3320/-0.1886">https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=52.3374%2C-0.1727%3B52.3295%2C-0.2041#map=14/52.3320/-0.1886</a> Post the failed route. Other mappers can then move the pointers around to locate the issue. The URL is highlighted in this JPEG of one I did.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Example_of_routing.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Example_of_routing.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -240,7 +240,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think first problem that stopped South to North car routing was a turn restriction which was no left turn on the roundabout?? I have deleted it. It could take a few days for the routing engines to react to my edit.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/map_note_tenerfife.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/map_note_tenerfife.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

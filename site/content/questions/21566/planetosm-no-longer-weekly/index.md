@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There were some technical issues in the last week or two, preventing the generation of the weekly planet files. ( <a href="http://lists.openstreetmap.org/pipermail/dev/2013-April/026763.html">http://lists.openstreetmap.org/pipermail/dev/2013-April/026763.html</a> ) As soon as those are resolved, the weekly schedule will be resumed.</p>
-<p>In the mean time, it is always possible to update the most recent planet file with daily diffs using e.g. osmosis to obtain a fully up-to-date planet file. ( <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a> )</p>
+<p>In the mean time, it is always possible to update the most recent planet file with daily diffs using e.g. osmosis to obtain a fully up-to-date planet file. ( <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a> )</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

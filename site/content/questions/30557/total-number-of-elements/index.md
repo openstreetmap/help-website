@@ -93,7 +93,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Exactly, everything contained in the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">planet</a>.</p>
+<p>Exactly, everything contained in the <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">planet</a>.</p>
 </div>
 <div id="comment-30649-info" class="comment-info">
 <span class="comment-age">(11 Feb '14, 16:58)</span> <span class="comment-user userinfo">scai ♦</span>

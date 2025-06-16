@@ -237,7 +237,7 @@ Cannot parse valid changeset from xml string . Must specify a string with one or
 <div id="post-31663-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have this address: <a href="http://www.openstreetmap.org/edit?editor=id#map=18/15.29679/76.48148">http://www.openstreetmap.org/edit?editor=id#map=18/15.29679/76.48148</a></p>
+<p>I have this address: <a href="https://www.openstreetmap.org/edit?editor=id#map=18/15.29679/76.48148">https://www.openstreetmap.org/edit?editor=id#map=18/15.29679/76.48148</a></p>
 <p>Yes I get the error message always. I tried at different days. Many times .Opera 20 stable.</p>
 </div>
 <div id="comment-31663-info" class="comment-info">

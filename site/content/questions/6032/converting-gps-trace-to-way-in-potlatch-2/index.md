@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>try this and let us know if, and at what point you get stuck <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2</a></p>
+<p>try this and let us know if, and at what point you get stuck <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

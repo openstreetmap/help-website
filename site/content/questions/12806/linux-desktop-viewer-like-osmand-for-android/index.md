@@ -142,7 +142,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12463/christianfoltin">@ChristianFoltin</a> in general it is good form to indicate when one is promoting ones own project/product.</p>
+<p><a href="https://help.openstreetmap.org/users/12463/christianfoltin">@ChristianFoltin</a> in general it is good form to indicate when one is promoting ones own project/product.</p>
 </div>
 <div id="comment-50487-info" class="comment-info">
 <span class="comment-age">(27 Jun '16, 15:16)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">wiki/Software/Desktop</a></p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">wiki/Software/Desktop</a></p>
 <p>There you can sort all tables according to Linux programs and (if you scroll down the page) about "show map as vector"</p>
 <p>Thus you can find out what programs fulfil at least these two key features.</p>
 <p>My recommendations from many month ago are Gosmore, GpsVP, mapFactor Navigator free (run it via Wine!),</p>
@@ -248,7 +248,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Cruiser">http://wiki.openstreetmap.org/wiki/Cruiser</a> is quite nice, if not quite as flashy as other products.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Cruiser">https://wiki.openstreetmap.org/wiki/Cruiser</a> is quite nice, if not quite as flashy as other products.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

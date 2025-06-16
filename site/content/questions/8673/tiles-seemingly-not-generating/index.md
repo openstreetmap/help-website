@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please look for error messages mapnik produces. Perhaps this similar question can give you some hints: <a href="http://help.openstreetmap.org/questions/8506/mapnik-image-generations-returns-error">http://help.openstreetmap.org/questions/8506/mapnik-image-generations-returns-error</a></p>
+<p>Please look for error messages mapnik produces. Perhaps this similar question can give you some hints: <a href="/questions/8506/mapnik-image-generations-returns-error">https://help.openstreetmap.org/questions/8506/mapnik-image-generations-returns-error</a></p>
 <p>If you get tiles, but all are empty, perhaps the extent bounds in inc/datasource-settings.xml.inc is wrong.</p>
 </div>
 <div class="answer-controls post-controls">

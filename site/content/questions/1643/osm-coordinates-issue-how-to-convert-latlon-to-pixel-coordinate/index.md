@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That has already been aseked and answered <a href="http://help.openstreetmap.org/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile">here</a>. Then next time before you ask a new question please check the documentation and this help system for existing explanations.</p>
+<p>That has already been aseked and answered <a href="/questions/747/given-a-latlon-how-do-i-find-the-precise-position-on-the-tile">here</a>. Then next time before you ask a new question please check the documentation and this help system for existing explanations.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

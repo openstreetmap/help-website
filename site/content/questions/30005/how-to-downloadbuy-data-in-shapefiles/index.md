@@ -213,8 +213,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you need custom files you can try to get them on misc. portals or try to create them by yourself <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">http://wiki.openstreetmap.org/wiki/Shapefiles</a><br />
-You can also ask consultants to do the job for you, if it's timecritical <a href="http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting</a></p>
+<p>If you need custom files you can try to get them on misc. portals or try to create them by yourself <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">https://wiki.openstreetmap.org/wiki/Shapefiles</a><br />
+You can also ask consultants to do the job for you, if it's timecritical <a href="https://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">https://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

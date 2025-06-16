@@ -77,7 +77,7 @@ TILEDIR=/var/lib/mod_tile
 &#10;XML=/home/peiman/src/openstreetmap-carto/style.xml
 DESCRIPTION=This is the standard osm mapnik style
 &#10;
-;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;http://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;http://wiki.openstreetmap.org/w\
+;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;https://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;https://wiki.openstreetmap.org/w\
 ;iki/Contributors\&quot;&gt;contributors&lt;/a&gt;, &lt;a href=\&quot;http://creativecommons.org/licenses/by-sa/2.0/\&quot;&gt;CC-BY-SA&lt;/a&gt;
 HOST=localhost
 TILESIZE=256

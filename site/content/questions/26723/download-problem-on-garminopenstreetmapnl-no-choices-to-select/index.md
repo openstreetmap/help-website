@@ -224,9 +224,9 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Works for me - but only if I pick a "popular" country:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/nl1.png" alt="UK" /></p>
+<p><img src="/upfiles/nl1.png" alt="UK" /></p>
 <p>as opposed to:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/nl2.png" alt="Svalbard" /></p>
+<p><img src="/upfiles/nl2.png" alt="Svalbard" /></p>
 <p>I guess your options are either to change your travel plans or wait the 6 minutes for a country map link to be emailed to you :)</p>
 </div>
 <div id="comment-26744-info" class="comment-info">
@@ -275,7 +275,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Which state? As the web page says, you need to make a selection first:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/nl4.png" alt="USA" /></p>
+<p><img src="/upfiles/nl4.png" alt="USA" /></p>
 </div>
 <div id="comment-26748-info" class="comment-info">
 <span class="comment-age">(25 Sep '13, 23:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

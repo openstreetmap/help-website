@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help needed on creating a routable map from openstreetmap.org for Garmin handheld"
-description = '''Hi all, I found a greatly detailed map of Myanmar (formerly known as Burma) on this website ( http://wiki.openstreetmap.org/wiki/WikiProject_Myanmar ) that I want to use on my Garmin eTrex 30.  I can&#x27;t figure out how to extract a map from that source so that it can be used in my GPS or BaseCamp. I d...'''
+description = '''Hi all, I found a greatly detailed map of Myanmar (formerly known as Burma) on this website ( https://wiki.openstreetmap.org/wiki/WikiProject_Myanmar ) that I want to use on my Garmin eTrex 30.  I can&#x27;t figure out how to extract a map from that source so that it can be used in my GPS or BaseCamp. I d...'''
 date = "2017-03-04T16:51:00Z"
 lastmod = "2017-03-05T18:46:00Z"
 weight = 54899
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>I found a greatly detailed map of Myanmar (formerly known as Burma) on this website ( <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Myanmar">http://wiki.openstreetmap.org/wiki/WikiProject_Myanmar</a> ) that I want to use on my Garmin eTrex 30. I can't figure out how to extract a map from that source so that it can be used in my GPS or BaseCamp. I did find some documentation, but it is to technical for me. I downloaded mkgmap, but I don't know what to do with it... should do something in the command line but I am not getting anywhere....</p>
+<p>I found a greatly detailed map of Myanmar (formerly known as Burma) on this website ( <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Myanmar">https://wiki.openstreetmap.org/wiki/WikiProject_Myanmar</a> ) that I want to use on my Garmin eTrex 30. I can't figure out how to extract a map from that source so that it can be used in my GPS or BaseCamp. I did find some documentation, but it is to technical for me. I downloaded mkgmap, but I don't know what to do with it... should do something in the command line but I am not getting anywhere....</p>
 <p>Can someone please assist me with this? Maybe some really basic instructions for dummies, or even make me a map I can use straight away.. I'm on a windows 10 computer btw</p>
 <p>Help is greatly appreciated!!</p>
 <p>Jørgen</p>
@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use mkgmap together with an .osm.pbf file downloaded e.g. from <a href="http://download.geofabrik.de/asia/myanmar.html">http://download.geofabrik.de/asia/myanmar.html</a> following <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">these instructions.</a> However, the web site extract.bbbike.org allows you to create a Garmin map without having to install any software.</p>
+<p>You can use mkgmap together with an .osm.pbf file downloaded e.g. from <a href="http://download.geofabrik.de/asia/myanmar.html">http://download.geofabrik.de/asia/myanmar.html</a> following <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">these instructions.</a> However, the web site extract.bbbike.org allows you to create a Garmin map without having to install any software.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -134,7 +134,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>If you want to create your own map, <a href="http://www.openstreetmap.org/user/SomeoneElse/diary/38613">this link</a> might be helpful.</p>
+<p>If you want to create your own map, <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/38613">this link</a> might be helpful.</p>
 <p>I'd expect one potential problem with Myanmar to be the characters used in names, though - you'd probably want to map "name:en" as the name field if only because it'll have characters that'll display on a Garmin.</p>
 </div>
 <div id="comment-54902-info" class="comment-info">
@@ -146,7 +146,7 @@ osqa_accepted = false
 <div id="post-54903-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks! I used the bbbike.org website, it results in a map that is directly useable on my GPS. However, it looks like it has less detail (roads, buildings) than the map on <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Myanmar">http://wiki.openstreetmap.org/wiki/WikiProject_Myanmar</a> I will also look into the geofabrik.de website, maybe that will give a more detailed map?</p>
+<p>Thanks! I used the bbbike.org website, it results in a map that is directly useable on my GPS. However, it looks like it has less detail (roads, buildings) than the map on <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Myanmar">https://wiki.openstreetmap.org/wiki/WikiProject_Myanmar</a> I will also look into the geofabrik.de website, maybe that will give a more detailed map?</p>
 </div>
 <div id="comment-54903-info" class="comment-info">
 <span class="comment-age">(04 Mar '17, 23:08)</span> <span class="comment-user userinfo">Jorgen74</span>
@@ -295,7 +295,7 @@ osqa_accepted = false
 <div id="post-54924-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are many other providers of Garmin suitable maps too <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>There are many other providers of Garmin suitable maps too <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div id="comment-54924-info" class="comment-info">
 <span class="comment-age">(05 Mar '17, 15:33)</span> <span class="comment-user userinfo">nevw</span>

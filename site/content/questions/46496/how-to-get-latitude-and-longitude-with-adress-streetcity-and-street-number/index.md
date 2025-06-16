@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems that you are looking for an OSM based geocoder engine, so you enter an address with street and city, and you want to have target coordinates, right?</p>
-<p>See the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a> to get a list of all OSM based or related services.</p>
+<p>See the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a> to get a list of all OSM based or related services.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

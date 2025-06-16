@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Pengal That is a sluice gate, I found this proposal <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/sluice_gate">http://wiki.openstreetmap.org/wiki/Proposed_features/sluice_gate</a> .</p>
+<p>Hi Pengal That is a sluice gate, I found this proposal <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/sluice_gate">https://wiki.openstreetmap.org/wiki/Proposed_features/sluice_gate</a> .</p>
 <p>So it looks like</p>
 <ul>
 <li><code>waterway=flow_control</code></li>

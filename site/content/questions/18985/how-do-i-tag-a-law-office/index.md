@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For tagging an office you should use the <a href="http://wiki.openstreetmap.org/wiki/Key:office">office</a> key and for your specific case the <a href="http://wiki.openstreetmap.org/wiki/Tag:office%3Dlawyer">lawyer</a> value (currently the fifth popular value on <a href="http://taginfo.openstreetmap.org/keys/office#values">taginfo</a>). You can provide additional information by specifying <a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr</a> and so on.</p>
+<p>For tagging an office you should use the <a href="https://wiki.openstreetmap.org/wiki/Key:office">office</a> key and for your specific case the <a href="https://wiki.openstreetmap.org/wiki/Tag:office%3Dlawyer">lawyer</a> value (currently the fifth popular value on <a href="http://taginfo.openstreetmap.org/keys/office#values">taginfo</a>). You can provide additional information by specifying <a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr</a> and so on.</p>
 <p>At the moment there is no special rendering for the office key on our main map as far as I know.</p>
 </div>
 <div class="answer-controls post-controls">

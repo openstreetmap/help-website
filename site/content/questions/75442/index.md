@@ -160,7 +160,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I think the coordinates in the browser address bar are just the centre of the map view. I don't know if you can set coordinates manually in the default editor.</p>
 <p>To edit coordinates directly you will need to use something that gives deeper access to the data. <a href="https://wiki.openstreetmap.org/wiki/RU:Level0">Level0</a> can do this, but you will have to set the tags manually.</p>
-<p>JOSM is a more powerful editor that allows manual input and has preset support so you don't have to enter all the tags manually. Instructions for adding a node by coordinates are <a href="https://help.openstreetmap.org/questions/864/how-to-add-node-with-exact-coordinates-in-josm">here</a></p>
+<p>JOSM is a more powerful editor that allows manual input and has preset support so you don't have to enter all the tags manually. Instructions for adding a node by coordinates are <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

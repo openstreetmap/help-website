@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi</p>
 <p>I am trying to make this junction the same road (for naming purposes), whatever i do OSM is treating them as two distinct roads.</p>
 <p>Do I need to go with it and name the two distinct roads the same?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/street_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/street_1.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-junction" rel="tag" title="see questions tagged &#39;junction&#39;">junction</span>
@@ -114,11 +114,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://www.openstreetmap.org/browse/way/182321711">way to the left</a> is a strange t-shaped way, rather than a straight way.</p>
+<p>The <a href="https://www.openstreetmap.org/browse/way/182321711">way to the left</a> is a strange t-shaped way, rather than a straight way.</p>
 <p><img src="http://farm9.staticflickr.com/8035/8011359922_8568a733b9_o_d.jpg" alt="182321711" /></p>
-<p>This is because when originally drawn the way went back on itself. I would delete <a href="http://www.openstreetmap.org/browse/node/1926740093">the node</a> where the two ways join, and then extend what remains of <a href="http://www.openstreetmap.org/browse/way/182321713">this way</a> to join the original one.</p>
+<p>This is because when originally drawn the way went back on itself. I would delete <a href="https://www.openstreetmap.org/browse/node/1926740093">the node</a> where the two ways join, and then extend what remains of <a href="https://www.openstreetmap.org/browse/way/182321713">this way</a> to join the original one.</p>
 <p>As they have the same name as each other, as Andy says you can use R to copy the tags from one way to the other; they will need tagging separately and be treated as separate ways though because of the geometry.</p>
-<p>I also notice <a href="http://www.openstreetmap.org/browse/way/182321712">this short untagged way</a> that shows as a black line in my image below. You might just want to delete that as it is on top of the first way mentioned above.</p>
+<p>I also notice <a href="https://www.openstreetmap.org/browse/way/182321712">this short untagged way</a> that shows as a black line in my image below. You might just want to delete that as it is on top of the first way mentioned above.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

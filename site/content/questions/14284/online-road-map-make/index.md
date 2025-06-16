@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you zoom to your house and right click on permalink, its at bottom right of map screen, right click copy link address them paste this into an email. Ideally do one with your house in the middle. Then one zoomed out a little. This question may help <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> this is an example of a permalink of a topical site. <a href="http://www.openstreetmap.org/?lat=52.33564&amp;lon=-0.169816&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.33564&amp;lon=-0.169816&amp;zoom=18&amp;layers=M</a> hope this works for you.</p>
+<p>If you zoom to your house and right click on permalink, its at bottom right of map screen, right click copy link address them paste this into an email. Ideally do one with your house in the middle. Then one zoomed out a little. This question may help <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> this is an example of a permalink of a topical site. <a href="https://www.openstreetmap.org/?lat=52.33564&amp;lon=-0.169816&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.33564&amp;lon=-0.169816&amp;zoom=18&amp;layers=M</a> hope this works for you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

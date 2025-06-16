@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>New here, and not so clear on how sets work yet..</p>
-<p>I'm requesting a bunch of ways, and the nodes within these. For each node I'd like to find the other nodes which are connected via a way as kindly demonstrated here, <a href="https://help.openstreetmap.org/questions/71493">https://help.openstreetmap.org/questions/71493</a></p>
+<p>I'm requesting a bunch of ways, and the nodes within these. For each node I'd like to find the other nodes which are connected via a way as kindly demonstrated here, <a href="/questions/71493">https://help.openstreetmap.org/questions/71493</a></p>
 <p>However, I was hoping for a way to call this on multiple nodes, but having someway of knowing which nodes neighbour which, as opposed to receiving a large set of unordered nodes for the whole group.</p>
 <p>Ultimately, in my application, I'm looking to create an array, neighbours[node], which contains a vector of reachable nodes from the said node.</p>
 <p>Ideally this will also be filtered this so that it incorporates the oneway tag in regards which nodes are "reachable", i.e.</p>

@@ -142,7 +142,7 @@ One Answer:
 <div id="post-8368-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>but how should i take pictures at the right moments? if the camera is mounted, would need some kind of remote control to take pictures. also, i am not sure, how osmand can help (beside, i only have an iphone) - is it only for uploading the track? because this doesn't help me while mapping? The JOSM Video Mapping looks interesting. <a href="http://wiki.openstreetmap.org/wiki/Video_mapping">http://wiki.openstreetmap.org/wiki/Video_mapping</a></p>
+<p>but how should i take pictures at the right moments? if the camera is mounted, would need some kind of remote control to take pictures. also, i am not sure, how osmand can help (beside, i only have an iphone) - is it only for uploading the track? because this doesn't help me while mapping? The JOSM Video Mapping looks interesting. <a href="https://wiki.openstreetmap.org/wiki/Video_mapping">https://wiki.openstreetmap.org/wiki/Video_mapping</a></p>
 </div>
 <div id="comment-8368-info" class="comment-info">
 <span class="comment-age">(09 Oct '11, 08:12)</span> <span class="comment-user userinfo">leopold</span>

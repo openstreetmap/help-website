@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "reporting base map error needing correction"
-description = '''I&#x27;ve spotted an error in LB Bexley, Greater London, UK. A section of Bedonwell Road has been deleted, between its&#x27; junction with Little Heath Road, and its&#x27; junction with Long Lane.  see http://www.openstreetmap.org/?lat=51.47088&amp;amp;lon=0.14419&amp;amp;zoom=17&amp;amp;layers=M I first noticed this while us...'''
+description = '''I&#x27;ve spotted an error in LB Bexley, Greater London, UK. A section of Bedonwell Road has been deleted, between its&#x27; junction with Little Heath Road, and its&#x27; junction with Long Lane.  see https://www.openstreetmap.org/?lat=51.47088&amp;amp;lon=0.14419&amp;amp;zoom=17&amp;amp;layers=M I first noticed this while us...'''
 date = "2012-12-04T17:17:00Z"
 lastmod = "2012-12-05T15:45:00Z"
 weight = 18197
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've spotted an error in LB Bexley, Greater London, UK. A section of Bedonwell Road has been deleted, between its' junction with Little Heath Road, and its' junction with Long Lane. see <a href="http://www.openstreetmap.org/?lat=51.47088&amp;lon=0.14419&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=51.47088&amp;lon=0.14419&amp;zoom=17&amp;layers=M</a> I first noticed this while using CycleMap, The error also occurs in Mapnik. On the other hand, HikeBikeMap is OK. I'm a complete novice, and have no idea how to make the correction. In particular I lack any understanding of how the error was introduced in the first place and how to propagate a correction across all derivative maps.</p>
+<p>I've spotted an error in LB Bexley, Greater London, UK. A section of Bedonwell Road has been deleted, between its' junction with Little Heath Road, and its' junction with Long Lane. see <a href="https://www.openstreetmap.org/?lat=51.47088&amp;lon=0.14419&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=51.47088&amp;lon=0.14419&amp;zoom=17&amp;layers=M</a> I first noticed this while using CycleMap, The error also occurs in Mapnik. On the other hand, HikeBikeMap is OK. I'm a complete novice, and have no idea how to make the correction. In particular I lack any understanding of how the error was introduced in the first place and how to propagate a correction across all derivative maps.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-reporting" rel="tag" title="see questions tagged &#39;reporting&#39;">reporting</span> <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

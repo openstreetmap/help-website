@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Tunnel=yes bei Straße, die durch ein Gebäude führt ?"
-description = '''Hi, die Zwiefalter Straße in 88499 Riedlingen führt durch das Gebäude &quot;Zwiefalter Tor&quot; (http://www.openstreetmap.org/?lat=48.154746&amp;amp;lon=9.477186&amp;amp;zoom=18&amp;amp;layers=M) und ist mit highway=residental eingezeichnet. Osmand+ zeigt hier aber keine reguläre Straße an und führt mich deshalb auf ein...'''
+description = '''Hi, die Zwiefalter Straße in 88499 Riedlingen führt durch das Gebäude &quot;Zwiefalter Tor&quot; (https://www.openstreetmap.org/?lat=48.154746&amp;amp;lon=9.477186&amp;amp;zoom=18&amp;amp;layers=M) und ist mit highway=residental eingezeichnet. Osmand+ zeigt hier aber keine reguläre Straße an und führt mich deshalb auf ein...'''
 date = "2013-06-29T09:04:00Z"
 lastmod = "2013-06-29T22:06:00Z"
 weight = 23808
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, die Zwiefalter Straße in 88499 Riedlingen führt durch das Gebäude "Zwiefalter Tor" (<a href="http://www.openstreetmap.org/?lat=48.154746&amp;lon=9.477186&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=48.154746&amp;lon=9.477186&amp;zoom=18&amp;layers=M)</a> und ist mit highway=residental eingezeichnet. Osmand+ zeigt hier aber keine reguläre Straße an und führt mich deshalb auf einen Umweg. Muß hier für den Abschnitt, der durch das Gebäude führt noch der Eintrag tunnel=yes ergänzt werden ? mfg</p>
+<p>Hi, die Zwiefalter Straße in 88499 Riedlingen führt durch das Gebäude "Zwiefalter Tor" (<a href="https://www.openstreetmap.org/?lat=48.154746&amp;lon=9.477186&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=48.154746&amp;lon=9.477186&amp;zoom=18&amp;layers=M)</a> und ist mit highway=residental eingezeichnet. Osmand+ zeigt hier aber keine reguläre Straße an und führt mich deshalb auf einen Umweg. Muß hier für den Abschnitt, der durch das Gebäude führt noch der Eintrag tunnel=yes ergänzt werden ? mfg</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-highways" rel="tag" title="see questions tagged &#39;highways&#39;">highways</span> <span class="post-tag tag-link-tunnel" rel="tag" title="see questions tagged &#39;tunnel&#39;">tunnel</span> <span class="post-tag tag-link-lang-de" rel="tag" title="see questions tagged &#39;lang-de&#39;">lang-de</span>
@@ -116,7 +116,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hmmm, die <a href="http://map.project-osrm.org">OSRM-Engine</a> routet durchaus durch das Gebäude ...</p>
-<p>Bitte mach noch weitere Tests mit anderen <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online-Routern</a>.</p>
+<p>Bitte mach noch weitere Tests mit anderen <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online-Routern</a>.</p>
 <p>Wenn NUR Osmand daran scheitert, dann ist es eher ein Osmand-Problem, wende dich dafür an die Osmand-Mailingliste bei Google-groups, oder eröffne ein Ticket für Osmand auf der Projektseite bei Google-Code.</p>
 <p>Bitte nenne uns noch deine Genaue Osmand-Version und welche Offline Karte du darin genau benutzt. (Name und Datum). Bitte editiere deine Frage hier für diese Informationen. Dann können wir dir weiterhelfen.</p>
 </div>
@@ -191,7 +191,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Der <code>tunnel</code>-Schlüssel wird in normalerweise auch für Gebäudedurchfahrten verwendet. Ein besserer Wert als <code>yes</code> ist allerdings das noch recht neue <a href="http://wiki.openstreetmap.org/wiki/Key:tunnel#tunnel.3Dbuilding_passage"><code>building_passage</code></a>.</p>
+<p>Der <code>tunnel</code>-Schlüssel wird in normalerweise auch für Gebäudedurchfahrten verwendet. Ein besserer Wert als <code>yes</code> ist allerdings das noch recht neue <a href="https://wiki.openstreetmap.org/wiki/Key:tunnel#tunnel.3Dbuilding_passage"><code>building_passage</code></a>.</p>
 <p>Ganz unabhängig von der Lösung deines aktuellen Problems würde ich also das Tagging des im Gebäude verlaufenden Stücks der Straße mit <code>tunnel=building_passage</code> empfehlen. Eine Auswirkung aufs Routing fände ich wohlgemerkt sehr verwunderlich, ausschließen kann ich sie allerdings nicht.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -211,7 +211,7 @@ osqa_accepted = false
 <div id="post-23825-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Ich werde die Eingabe tunnel=building_passage ergänzen. Ist dann die Eingabe layer=-1 noch erforderlich / korrekt ? (<a href="http://www.openstreetmap.org/?lat=48.154603&amp;lon=9.476475&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=48.154603&amp;lon=9.476475&amp;zoom=18&amp;layers=M)</a> mg</p>
+<p>Ich werde die Eingabe tunnel=building_passage ergänzen. Ist dann die Eingabe layer=-1 noch erforderlich / korrekt ? (<a href="https://www.openstreetmap.org/?lat=48.154603&amp;lon=9.476475&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=48.154603&amp;lon=9.476475&amp;zoom=18&amp;layers=M)</a> mg</p>
 </div>
 <div id="comment-23825-info" class="comment-info">
 <span class="comment-age">(29 Jun '13, 13:28)</span> <span class="comment-user userinfo">cb650cx</span>

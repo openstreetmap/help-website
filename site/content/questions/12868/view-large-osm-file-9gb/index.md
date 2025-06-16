@@ -132,7 +132,7 @@ osqa_accepted = false
 <ul>
 <li><p>One is "<a href="http://unxutils.sourceforge.net/">unxutils</a>", which contains a number of natively compiled binaries of Unix-like utilities on Windows - things like sed, grep, etc.</p></li>
 <li><p>Another is <a href="http://www.cygwin.com/">Cygwin</a>, which is designed to provide a Unix-like environment within a Windows system.</p></li>
-<li><p>Finally it's worth mentioning "<a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>" - there's a Windows binary of that available too.</p></li>
+<li><p>Finally it's worth mentioning "<a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>" - there's a Windows binary of that available too.</p></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

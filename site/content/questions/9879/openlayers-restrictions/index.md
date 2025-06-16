@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenLayers is a JavaScript library. You can host it on your site and use it to your heart's content because using it does not impact anyone else.</p>
-<p>If you want to serve OpenStreetMap data via OpenLayers, you will need to either supply your own map tiles built from OpenStreetMap, or use those provided by OpenStreetMap subject to the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy,</a> or you could <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">pay someone to provide tiles to/for you.</a></p>
+<p>If you want to serve OpenStreetMap data via OpenLayers, you will need to either supply your own map tiles built from OpenStreetMap, or use those provided by OpenStreetMap subject to the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy,</a> or you could <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">pay someone to provide tiles to/for you.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -208,7 +208,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=51.6523&amp;lon=13.22403&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=51.6523&amp;lon=13.22403&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=51.6523&amp;lon=13.22403&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=51.6523&amp;lon=13.22403&amp;zoom=16&amp;layers=M</a></p>
 <p>ich hoffe das ist richtig, es geht um die straße zwischen den beiden Bahnübergängen sowie einem kleinen stück feldweg Danke Dirk</p>
 </div>
 <div id="comment-23580-info" class="comment-info">
@@ -221,7 +221,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/way/226527249">Die Straße zwischen den Übergängen</a> und <a href="http://www.openstreetmap.org/browse/way/226555162">das neue Feldwegstück</a> ist in den Daten korrekt vorhanden und werden mir nur bei Zoomstufen größer als 15 angezeigt. Stufen 15 und kleiner sind eben noch nicht aktualisiert, weil der Vorgang sehr rechenintensiv ist und wir nur sehr begrenzte Rechenkapazität haben.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/226527249">Die Straße zwischen den Übergängen</a> und <a href="https://www.openstreetmap.org/browse/way/226555162">das neue Feldwegstück</a> ist in den Daten korrekt vorhanden und werden mir nur bei Zoomstufen größer als 15 angezeigt. Stufen 15 und kleiner sind eben noch nicht aktualisiert, weil der Vorgang sehr rechenintensiv ist und wir nur sehr begrenzte Rechenkapazität haben.</p>
 </div>
 <div id="comment-23582-info" class="comment-info">
 <span class="comment-age">(21 Jun '13, 16:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

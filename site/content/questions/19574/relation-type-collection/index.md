@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "relation type &quot;collection&quot; ?"
-description = '''Can we delete such undocumented type of relations &quot;collection&quot; ? http://www.openstreetmap.org/browse/relation/2737769 http://www.openstreetmap.org/browse/relation/2736724 since it is breaking the rule &quot;relations are not categories&quot; ? (and plz don&#x27;t close questions starting with &quot;What do you think .....'''
+description = '''Can we delete such undocumented type of relations &quot;collection&quot; ? https://www.openstreetmap.org/browse/relation/2737769 https://www.openstreetmap.org/browse/relation/2736724 since it is breaking the rule &quot;relations are not categories&quot; ? (and plz don&#x27;t close questions starting with &quot;What do you think .....'''
 date = "2013-02-04T13:17:00Z"
 lastmod = "2013-02-05T18:09:00Z"
 weight = 19574
@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Can we delete such undocumented type of relations "collection" ?</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/2737769">http://www.openstreetmap.org/browse/relation/2737769</a><br />
-<a href="http://www.openstreetmap.org/browse/relation/2736724">http://www.openstreetmap.org/browse/relation/2736724</a></p>
-<p>since it is breaking the rule "<a href="http://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories">relations are not categories</a>" ?</p>
+<p><a href="https://www.openstreetmap.org/browse/relation/2737769">https://www.openstreetmap.org/browse/relation/2737769</a><br />
+<a href="https://www.openstreetmap.org/browse/relation/2736724">https://www.openstreetmap.org/browse/relation/2736724</a></p>
+<p>since it is breaking the rule "<a href="https://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories">relations are not categories</a>" ?</p>
 <p>(and plz don't close questions starting with "What do you think ..." without checking the question)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

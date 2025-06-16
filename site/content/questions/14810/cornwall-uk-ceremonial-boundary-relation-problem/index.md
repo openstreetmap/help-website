@@ -39,11 +39,11 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Apologies if this has been raised before. I am trying to process UK county data. My interpretation of <a href="http://wiki.openstreetmap.org/wiki/English_Counties">this wiki page</a> is that the ceremonial county of Cornwall should be mainland Cornwall plus the Isles of Scilly, and the administrative county should be just mainland Cornwall.</p>
+<p>Apologies if this has been raised before. I am trying to process UK county data. My interpretation of <a href="https://wiki.openstreetmap.org/wiki/English_Counties">this wiki page</a> is that the ceremonial county of Cornwall should be mainland Cornwall plus the Isles of Scilly, and the administrative county should be just mainland Cornwall.</p>
 <p>What we seem to actually have, is as follows:</p>
-<p>Relation <a href="http://www.openstreetmap.org/browse/relation/57537">57537</a>, boundary=administrative, admin_level=6, name=Cornwall<br />
+<p>Relation <a href="https://www.openstreetmap.org/browse/relation/57537">57537</a>, boundary=administrative, admin_level=6, name=Cornwall<br />
 (Mainland Cornwall)</p>
-<p>Relation <a href="http://www.openstreetmap.org/browse/relation/1987628">1987628</a>, boundary=ceremonial, name=Cornwall<br />
+<p>Relation <a href="https://www.openstreetmap.org/browse/relation/1987628">1987628</a>, boundary=ceremonial, name=Cornwall<br />
 (JUST the Isles of Scilly - appears to EXCLUDE mainland Cornwall!)</p>
 <p>Surely the ceremonial county should include mainland Cornwall - or am I misreading the data?<br />
 I'm very new to working with OpenStreetMap.</p>
@@ -206,7 +206,7 @@ I'm very new to working with OpenStreetMap.</p>
 <div id="post-43934-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have you got the correct ids? Neither <a href="http://www.openstreetmap.org/relation/151362048">http://www.openstreetmap.org/relation/151362048</a> or <a href="http://www.openstreetmap.org/way/2619319494">http://www.openstreetmap.org/way/2619319494</a> seem to exist. Nor can I see anything immediately wrong with the two relations mentioned in the original question.</p>
+<p>Have you got the correct ids? Neither <a href="https://www.openstreetmap.org/relation/151362048">https://www.openstreetmap.org/relation/151362048</a> or <a href="https://www.openstreetmap.org/way/2619319494">https://www.openstreetmap.org/way/2619319494</a> seem to exist. Nor can I see anything immediately wrong with the two relations mentioned in the original question.</p>
 </div>
 <div id="comment-43934-info" class="comment-info">
 <span class="comment-age">(03 Jul '15, 07:31)</span> <span class="comment-user userinfo">EdLoach ♦</span>

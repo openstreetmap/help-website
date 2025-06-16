@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might want to do <code>highway=emergency_access_point</code> as suggested on <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Demergency_access_point">this page</a>.</p>
+<p>You might want to do <code>highway=emergency_access_point</code> as suggested on <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Demergency_access_point">this page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

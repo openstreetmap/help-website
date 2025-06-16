@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Eigentlich beantwortet <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> die Frage schon.</p>
+<p>Eigentlich beantwortet <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> die Frage schon.</p>
 <p>Weitere Informationen finden sich auf den folgenden Seiten</p>
 <ul>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ">http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ</a></li>

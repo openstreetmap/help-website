@@ -120,9 +120,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is not a trivial task and it would be much easier for you to use the ready-made polygons from <a href="http://naturalearthdata.com/.">http://naturalearthdata.com/.</a></p>
-<p>If you really want to go down the OSM route then try the links presented in this blog article: <a href="http://www.openstreetmap.org/user/dbusse/diary/17043">http://www.openstreetmap.org/user/dbusse/diary/17043</a> - be aware that country borders will include maritime borders and that you need to intersect them with the coastline (try <a href="http://www.openstreetmapdata.com/">http://www.openstreetmapdata.com/</a> ) to get "proper" country outlines. We are talking about very detailed polygons, some with hundreds of thousands of points, so be warned that not every GIS program on every computer will simply process them.</p>
+<p>If you really want to go down the OSM route then try the links presented in this blog article: <a href="https://www.openstreetmap.org/user/dbusse/diary/17043">https://www.openstreetmap.org/user/dbusse/diary/17043</a> - be aware that country borders will include maritime borders and that you need to intersect them with the coastline (try <a href="http://www.openstreetmapdata.com/">http://www.openstreetmapdata.com/</a> ) to get "proper" country outlines. We are talking about very detailed polygons, some with hundreds of thousands of points, so be warned that not every GIS program on every computer will simply process them.</p>
 <p>A good tool to export OSM data to shape files is "osmjs" but it probably requires some OSM and Linux knowledge to operate.</p>
-<p>The OSM wiki has a list of OSM businesses here: <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> - some of them will be able to do this processing for you.</p>
+<p>The OSM wiki has a list of OSM businesses here: <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> - some of them will be able to do this processing for you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -214,7 +214,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> ... you can reduce big country extracts to any elements you want by filtering.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> ... you can reduce big country extracts to any elements you want by filtering.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

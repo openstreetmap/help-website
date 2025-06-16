@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can deny the revlevant access, as you already have (access=no prohibits access by foot too and maybe not what you actually wanted to express) and then allow the appropriate method of transport. While OSM doesn't have a very finegrained system in general it should be good enough, see <a href="http://wiki.openstreetmap.org/wiki/Key:access#Transport_mode_restrictions">http://wiki.openstreetmap.org/wiki/Key:access#Transport_mode_restrictions</a></p>
+<p>You can deny the revlevant access, as you already have (access=no prohibits access by foot too and maybe not what you actually wanted to express) and then allow the appropriate method of transport. While OSM doesn't have a very finegrained system in general it should be good enough, see <a href="https://wiki.openstreetmap.org/wiki/Key:access#Transport_mode_restrictions">https://wiki.openstreetmap.org/wiki/Key:access#Transport_mode_restrictions</a></p>
 <p>Note that vehicle classifications differ a lot between jurisdictions, so this will always tend to not capture every nuance of local laws.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -184,7 +184,7 @@ osqa_accepted = false
 <div id="post-51998-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The wiki has a useful <a href="http://wiki.openstreetmap.org/wiki/Empty_relations">article about empty relations</a>, including a link to a tool that lists them, and some hint on why they appear and how to handle them. Info about iD is currently missing, if you use that editor please update the wiki page.</p>
+<p>The wiki has a useful <a href="https://wiki.openstreetmap.org/wiki/Empty_relations">article about empty relations</a>, including a link to a tool that lists them, and some hint on why they appear and how to handle them. Info about iD is currently missing, if you use that editor please update the wiki page.</p>
 </div>
 <div id="comment-51998-info" class="comment-info">
 <span class="comment-age">(12 Sep '16, 09:14)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

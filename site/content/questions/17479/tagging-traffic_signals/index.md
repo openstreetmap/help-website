@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Traffic_signals">traffic signals wiki page</a> rather clearly states that there is <em>no well established convention</em> currently. You can <em>either add one single traffic signal</em> at the crosspoint of the roads (example <a href="http://www.openstreetmap.org/?lat=50.683425&amp;lon=10.920936&amp;zoom=18&amp;layers=M">here</a>) or <em>one traffic signal of each incoming way</em> of a crossing (examples <a href="http://www.openstreetmap.org/?lat=50.972598&amp;lon=11.043414&amp;zoom=18&amp;layers=M">here</a> and <a href="http://www.openstreetmap.org/?lat=50.964463&amp;lon=11.046064&amp;zoom=18&amp;layers=M">here</a>). It also depends on whether the sidewalks and bicycle ways are mapped separately or not.</p>
-<p>Also don't forget about the <a href="http://wiki.openstreetmap.org/wiki/Crossing">crossing</a> tag where you can specify various kinds of crossings.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Traffic_signals">traffic signals wiki page</a> rather clearly states that there is <em>no well established convention</em> currently. You can <em>either add one single traffic signal</em> at the crosspoint of the roads (example <a href="https://www.openstreetmap.org/?lat=50.683425&amp;lon=10.920936&amp;zoom=18&amp;layers=M">here</a>) or <em>one traffic signal of each incoming way</em> of a crossing (examples <a href="https://www.openstreetmap.org/?lat=50.972598&amp;lon=11.043414&amp;zoom=18&amp;layers=M">here</a> and <a href="https://www.openstreetmap.org/?lat=50.964463&amp;lon=11.046064&amp;zoom=18&amp;layers=M">here</a>). It also depends on whether the sidewalks and bicycle ways are mapped separately or not.</p>
+<p>Also don't forget about the <a href="https://wiki.openstreetmap.org/wiki/Crossing">crossing</a> tag where you can specify various kinds of crossings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

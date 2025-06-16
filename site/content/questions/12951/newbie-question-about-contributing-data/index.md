@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should send a message to the local <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a>. They can help you with the import and merging. It will probably be some manual process to merge the datasets together.</p>
+<p>You should send a message to the local <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a>. They can help you with the import and merging. It will probably be some manual process to merge the datasets together.</p>
 <p>Note that even if you feel that the data shold be given to the ones that paied for it (the citizens) there are others that think this is not the case and may take you to court over it.</p>
 </div>
 <div class="answer-controls post-controls">

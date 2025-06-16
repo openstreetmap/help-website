@@ -377,9 +377,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Although an abandoned railway leaves distinctive features which are not rails, most of these should be mapped for what they are: embankment, cutting, bridge, footway, cycleway.</p>
-<p>For example, this bridge and the connecting paths used to be a railway (abandoned in 1970s) - nowadays, there's nothing at all on the ground that would warrant newly adding a railway=abandoned tag to the path. The bridge is there, as are the embankments, but nothing in particular says "railway" besides the distinctive embankment width <a href="http://www.openstreetmap.org/way/172953994#map=17/50.03605/14.46326">http://www.openstreetmap.org/way/172953994#map=17/50.03605/14.46326</a></p>
-<p>OTOH: this railway spur has moved down from active to abandoned, relatively recently (see also the shift from active to disused on the connected network) - it wouldn't make sense to remove the tag, even though it wasn't converted into anything: <a href="http://www.openstreetmap.org/way/27757285/history">http://www.openstreetmap.org/way/27757285/history</a></p>
-<p>So, IMHO, I wouldn't create a new way for an abandoned RR, but if an existing way gets converted into a cycleway, just switch the tag to rail=abandoned, as has happened here: <a href="http://www.openstreetmap.org/way/40759571">http://www.openstreetmap.org/way/40759571</a></p>
+<p>For example, this bridge and the connecting paths used to be a railway (abandoned in 1970s) - nowadays, there's nothing at all on the ground that would warrant newly adding a railway=abandoned tag to the path. The bridge is there, as are the embankments, but nothing in particular says "railway" besides the distinctive embankment width <a href="https://www.openstreetmap.org/way/172953994#map=17/50.03605/14.46326">https://www.openstreetmap.org/way/172953994#map=17/50.03605/14.46326</a></p>
+<p>OTOH: this railway spur has moved down from active to abandoned, relatively recently (see also the shift from active to disused on the connected network) - it wouldn't make sense to remove the tag, even though it wasn't converted into anything: <a href="https://www.openstreetmap.org/way/27757285/history">https://www.openstreetmap.org/way/27757285/history</a></p>
+<p>So, IMHO, I wouldn't create a new way for an abandoned RR, but if an existing way gets converted into a cycleway, just switch the tag to rail=abandoned, as has happened here: <a href="https://www.openstreetmap.org/way/40759571">https://www.openstreetmap.org/way/40759571</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -429,7 +429,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some mappers love historic stuff <a href="http://wiki.openstreetmap.org/wiki/Historic">http://wiki.openstreetmap.org/wiki/Historic</a> so it shoild be left alone. If correctly tagged it probably won't render (or show) on the main maps but it can be seen when editing and used by history fans for their maps or research. Some dismantled lines are now cycle routes and long footpaths, I wish they all were.</p>
+<p>Some mappers love historic stuff <a href="https://wiki.openstreetmap.org/wiki/Historic">https://wiki.openstreetmap.org/wiki/Historic</a> so it shoild be left alone. If correctly tagged it probably won't render (or show) on the main maps but it can be seen when editing and used by history fans for their maps or research. Some dismantled lines are now cycle routes and long footpaths, I wish they all were.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -258,7 +258,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is not a full solution, but a workaround: you can display Notes from the map: it's in the Layers menu, or accessible via URL parameter <code>layers=N</code>:</p>
-<p><a href="http://www.openstreetmap.org/?layers=N">http://www.openstreetmap.org/?layers=N</a></p>
+<p><a href="https://www.openstreetmap.org/?layers=N">https://www.openstreetmap.org/?layers=N</a></p>
 <p>From there, you can use the "Edit" button to switch into iD.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -333,7 +333,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I found myself using yet another workaround.</p>
 <ol>
-<li>Create a feature (e.g. a point) where you think a note is located (see <a href="http://help.openstreetmap.org/questions/49445/view-osm-notes-in-id-editor/49453">answer</a> by Piskvor).</li>
+<li>Create a feature (e.g. a point) where you think a note is located (see <a href="/questions/49445/view-osm-notes-in-id-editor/49453">answer</a> by Piskvor).</li>
 <li>Save the edit.</li>
 <li>Switch osm.org to Humanitarian layer. This will immediately show the mapped features immediately, unlike the default "standard" layer.</li>
 <li>Switch on Note display.</li>
@@ -403,7 +403,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Another possible way to do this, that might work, is to export a GPX file from the note(s), then load that GPX file into iD. The result should be a visible (pink) waypoint overlaying the map in iD, at the correct position of the note.</p>
 <p>I looked into trying this and found 2 tools people had written to export notes to GPX. One is in Perl, and one in Java. But I didn't persue it, so I don't know if the whole process actually works. If you want to try it, here are the 2 tools:</p>
-<pre><code>  http://www.openstreetmap.org/user/richlv/diary/35938
+<pre><code>  https://www.openstreetmap.org/user/richlv/diary/35938
 &#10;  https://github.com/SomeoneElseOSM/Notes01</code></pre>
 </div>
 <div class="answer-controls post-controls">

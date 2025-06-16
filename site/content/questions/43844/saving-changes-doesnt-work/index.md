@@ -192,7 +192,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7499/bhousel">@bhousel</a> actually I understand the causes of the problem; my point was that this is a useful strategy if something isnt working (as you suggest the API perhaps), and can it be written up in such a way that its a suitable thing to try for folk less familiar with the vagaries of OSM and software.</p>
+<p><a href="https://help.openstreetmap.org/users/7499/bhousel">@bhousel</a> actually I understand the causes of the problem; my point was that this is a useful strategy if something isnt working (as you suggest the API perhaps), and can it be written up in such a way that its a suitable thing to try for folk less familiar with the vagaries of OSM and software.</p>
 </div>
 <div id="comment-43863-info" class="comment-info">
 <span class="comment-age">(30 Jun '15, 11:50)</span> <span class="comment-user userinfo">SK53 ♦</span>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just like you split the way for the tunnel sections. You can split it for the section below the building. The section below the building gets the additional tag <a href="http://wiki.openstreetmap.org/wiki/Key:covered">covered=yes</a>.</p>
+<p>Just like you split the way for the tunnel sections. You can split it for the section below the building. The section below the building gets the additional tag <a href="https://wiki.openstreetmap.org/wiki/Key:covered">covered=yes</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

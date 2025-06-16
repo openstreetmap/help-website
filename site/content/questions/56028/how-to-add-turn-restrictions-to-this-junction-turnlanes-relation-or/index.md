@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to add turn restrictions to this junction (turn:lanes, relation, or ...)?"
-description = '''I&#x27;m trying to map the service road at the NW corner of this junction: http://www.openstreetmap.org/#map=19/32.09684/34.82139 That road is currently marked as &quot;one lane forward, one bus lane backwards&quot; which is correct for most of it, but at the intersection it widens to two lanes in the forward dire...'''
+description = '''I&#x27;m trying to map the service road at the NW corner of this junction: https://www.openstreetmap.org/#map=19/32.09684/34.82139 That road is currently marked as &quot;one lane forward, one bus lane backwards&quot; which is correct for most of it, but at the intersection it widens to two lanes in the forward dire...'''
 date = "2017-05-04T12:12:00Z"
 lastmod = "2017-05-04T23:56:00Z"
 weight = 56028
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to map the service road at the NW corner of this junction: <a href="http://www.openstreetmap.org/#map=19/32.09684/34.82139">http://www.openstreetmap.org/#map=19/32.09684/34.82139</a></p>
+<p>I'm trying to map the service road at the NW corner of this junction: <a href="https://www.openstreetmap.org/#map=19/32.09684/34.82139">https://www.openstreetmap.org/#map=19/32.09684/34.82139</a></p>
 <p>That road is currently marked as "one lane forward, one bus lane backwards" which is correct for most of it, but at the intersection it widens to two lanes in the forward direction. One of those lanes is "right turns only", the other is left-or-straight. (That's in addition to the opposite bus lane.) How do I add these restrictions?</p>
 <p>I'm not sure whether I should just add turn:lanes:forward="left;through|right", or whether relation(s) are also required.</p>
 </div>

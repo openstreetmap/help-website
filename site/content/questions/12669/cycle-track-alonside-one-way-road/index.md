@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cycle track alonside one-way road"
-description = '''Harper Way in Fareham (http://www.openstreetmap.org/?lat=50.85191&amp;amp;lon=-1.17911&amp;amp;zoom=18&amp;amp;layers=M) is effectively a taxi rank and delivery access road, with a footpath and cycle track running alongside it. It is currently shown as a minor road with a &#x27;cycleway = track&#x27; tag. I would like to...'''
+description = '''Harper Way in Fareham (https://www.openstreetmap.org/?lat=50.85191&amp;amp;lon=-1.17911&amp;amp;zoom=18&amp;amp;layers=M) is effectively a taxi rank and delivery access road, with a footpath and cycle track running alongside it. It is currently shown as a minor road with a &#x27;cycleway = track&#x27; tag. I would like to...'''
 date = "2012-05-11T22:41:00Z"
 lastmod = "2012-05-12T22:40:00Z"
 weight = 12669
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Harper Way in Fareham (<a href="http://www.openstreetmap.org/?lat=50.85191&amp;lon=-1.17911&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=50.85191&amp;lon=-1.17911&amp;zoom=18&amp;layers=M)</a> is effectively a taxi rank and delivery access road, with a footpath and cycle track running alongside it. It is currently shown as a minor road with a 'cycleway = track' tag. I would like to show that it has restricted one-way access for motor vehicles, but two-way access for bicycles. Would it be better to map the road and the footpath / cycle track as separate ways?</p>
+<p>Harper Way in Fareham (<a href="https://www.openstreetmap.org/?lat=50.85191&amp;lon=-1.17911&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=50.85191&amp;lon=-1.17911&amp;zoom=18&amp;layers=M)</a> is effectively a taxi rank and delivery access road, with a footpath and cycle track running alongside it. It is currently shown as a minor road with a 'cycleway = track' tag. I would like to show that it has restricted one-way access for motor vehicles, but two-way access for bicycles. Would it be better to map the road and the footpath / cycle track as separate ways?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-cycleway" rel="tag" title="see questions tagged &#39;cycleway&#39;">cycleway</span> <span class="post-tag tag-link-oneway" rel="tag" title="see questions tagged &#39;oneway&#39;">oneway</span>
@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A track that is two-way whereas the road is one way is tagged with <a href="http://wiki.openstreetmap.org/wiki/Key:cycleway"><code>cycleway=opposite_track</code></a></p>
+<p>A track that is two-way whereas the road is one way is tagged with <a href="https://wiki.openstreetmap.org/wiki/Key:cycleway"><code>cycleway=opposite_track</code></a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -201,7 +201,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Note that you will not get legally binding advice here; please read the licenses yourself.</p>
-<p>If linking is not possible then following the <em><a href="http://www.openstreetmap.org/copyright">advice for printed works</a></em> should be okay (since the problem is similar).</p>
+<p>If linking is not possible then following the <em><a href="https://www.openstreetmap.org/copyright">advice for printed works</a></em> should be okay (since the problem is similar).</p>
 <p>For mapquest tiles/rendering please look at their license/copyright requirements (I could not find the relevant page).</p>
 </div>
 <div class="answer-controls post-controls">

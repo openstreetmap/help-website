@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I understand <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">this page right</a>, the indexing goes bottom-up. So i's invoked by the addresses itself and uses the tagged/closest road and the polygone/place radius area. So a road that crosses multiple boundaries can also be found in both cases and we don't need to split it.</p>
+<p>If I understand <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">this page right</a>, the indexing goes bottom-up. So i's invoked by the addresses itself and uses the tagged/closest road and the polygone/place radius area. So a road that crosses multiple boundaries can also be found in both cases and we don't need to split it.</p>
 <p><em>(but please may nominatim experts call me wrong)</em></p>
 </div>
 <div class="answer-controls post-controls">

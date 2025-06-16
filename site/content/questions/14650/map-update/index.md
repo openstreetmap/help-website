@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Rendered_Map_Updates">http://wiki.openstreetmap.org/wiki/Rendered_Map_Updates</a></p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Rendered_Map_Updates">https://wiki.openstreetmap.org/wiki/Rendered_Map_Updates</a></p>
 <p>... so just wait a bit.</p>
 </div>
 <div class="answer-controls post-controls">

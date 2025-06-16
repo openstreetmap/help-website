@@ -65,7 +65,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>Also have a look at a very recent similar question on connectivity problems in Iran: <a href="https://help.openstreetmap.org/questions/80467">Today Map not loaded without VPN</a></p>
+<p>Also have a look at a very recent similar question on connectivity problems in Iran: <a href="/questions/80467">Today Map not loaded without VPN</a></p>
 </div>
 <div id="comment-80504-info" class="comment-info">
 <span class="comment-age">(09 Jun '21, 12:22)</span> <span class="comment-user userinfo">TZorn</span>

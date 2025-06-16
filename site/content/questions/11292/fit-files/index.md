@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Garmin/Edge_series#Edge_500">this</a> page, you can import FIT to Garmin Training Center or Garmin Connect, then export as TXC. You can use <a href="http://www.gpsbabel.org/">GPSBabel</a> to convert TXC to GPX.</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Garmin/Edge_series#Edge_500">this</a> page, you can import FIT to Garmin Training Center or Garmin Connect, then export as TXC. You can use <a href="http://www.gpsbabel.org/">GPSBabel</a> to convert TXC to GPX.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -239,7 +239,7 @@ osqa_accepted = false
 <div id="post-11731-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Not yet, is the FIT SDK (<a href="http://help.openstreetmap.org/questions/11292/fit-files/11432)">http://help.openstreetmap.org/questions/11292/fit-files/11432)</a> the correct library to achieve this?</p>
+<p>Not yet, is the FIT SDK (<a href="/questions/11292/fit-files/11432)">https://help.openstreetmap.org/questions/11292/fit-files/11432)</a> the correct library to achieve this?</p>
 </div>
 <div id="comment-11731-info" class="comment-info">
 <span class="comment-age">(05 Apr '12, 08:06)</span> <span class="comment-user userinfo">routeconverter</span>

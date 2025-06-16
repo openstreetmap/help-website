@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a building with several independent and uprising parts ?"
-description = '''An ouvrage, http://www.openstreetmap.org/#map=17/49.37495/6.13151 is an underground defense system with batteries popping up. The ouvrage should IMHO gets layer - -&amp;lt;1 and covered – yes, but the battery on top could get layer - &amp;lt;1 ? Should the building be drawn as a multi polygone to make the b...'''
+description = '''An ouvrage, https://www.openstreetmap.org/#map=17/49.37495/6.13151 is an underground defense system with batteries popping up. The ouvrage should IMHO gets layer - -&amp;lt;1 and covered – yes, but the battery on top could get layer - &amp;lt;1 ? Should the building be drawn as a multi polygone to make the b...'''
 date = "2013-09-19T23:59:00Z"
 lastmod = "2013-09-20T20:31:00Z"
 weight = 26511
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>An ouvrage, <a href="http://www.openstreetmap.org/#map=17/49.37495/6.13151">http://www.openstreetmap.org/#map=17/49.37495/6.13151</a> is an underground defense system with batteries popping up. The ouvrage should IMHO gets layer - -&lt;1 and covered – yes, but the battery on top could get layer - &lt;1 ? Should the building be drawn as a multi polygone to make the battery popping up.</p>
+<p>An ouvrage, <a href="https://www.openstreetmap.org/#map=17/49.37495/6.13151">https://www.openstreetmap.org/#map=17/49.37495/6.13151</a> is an underground defense system with batteries popping up. The ouvrage should IMHO gets layer - -&lt;1 and covered – yes, but the battery on top could get layer - &lt;1 ? Should the building be drawn as a multi polygone to make the battery popping up.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-battery" rel="tag" title="see questions tagged &#39;battery&#39;">battery</span> <span class="post-tag tag-link-covered" rel="tag" title="see questions tagged &#39;covered&#39;">covered</span> <span class="post-tag tag-link-layer" rel="tag" title="see questions tagged &#39;layer&#39;">layer</span> <span class="post-tag tag-link-ouvrage" rel="tag" title="see questions tagged &#39;ouvrage&#39;">ouvrage</span>
@@ -115,8 +115,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tag 'layer' does not indicate if the feature is under or above the ground level. It describes a relative position between two OSM elements when they overlap or cross each other. Read the <a href="http://wiki.openstreetmap.org/wiki/Layer">wiki documentation about layer</a>.</p>
-<p>The tag '<a href="http://wiki.openstreetmap.org/wiki/Key:covered">covered</a>' does not indicate if the feature is buried underground. In fact, we don't have yet a clear consensus for tagging underground buildings, primarily because they are not easy to survey (excepted when it comes from external resources like the cadastre in this case) and therefore is uncommon in OSM. One possibility is maybe the key "<a href="http://wiki.openstreetmap.org/wiki/Key:location">location=underground</a>" already used for e.g. pipelines.</p>
+<p>The tag 'layer' does not indicate if the feature is under or above the ground level. It describes a relative position between two OSM elements when they overlap or cross each other. Read the <a href="https://wiki.openstreetmap.org/wiki/Layer">wiki documentation about layer</a>.</p>
+<p>The tag '<a href="https://wiki.openstreetmap.org/wiki/Key:covered">covered</a>' does not indicate if the feature is buried underground. In fact, we don't have yet a clear consensus for tagging underground buildings, primarily because they are not easy to survey (excepted when it comes from external resources like the cadastre in this case) and therefore is uncommon in OSM. One possibility is maybe the key "<a href="https://wiki.openstreetmap.org/wiki/Key:location">location=underground</a>" already used for e.g. pipelines.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

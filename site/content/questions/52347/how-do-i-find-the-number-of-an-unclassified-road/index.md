@@ -234,7 +234,7 @@ Here is a list of other map renderings based on the osm database data<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/#map=13/51.3432/-1.9052">Here's the link</a> to the group of C roads that no longer have labels c50, c60, c51 and c8</p>
+<p><a href="https://www.openstreetmap.org/#map=13/51.3432/-1.9052">Here's the link</a> to the group of C roads that no longer have labels c50, c60, c51 and c8</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -260,7 +260,7 @@ Here is a list of other map renderings based on the osm database data<br />
 3
 </div>
 <div class="comment-text">
-<p>Does for example <a href="http://www.openstreetmap.org/way/204410111">http://www.openstreetmap.org/way/204410111</a> have a ref of C60 displayed anywhere [in the real world]? If not, in what way is this reference "incredibly useful"?</p>
+<p>Does for example <a href="https://www.openstreetmap.org/way/204410111">https://www.openstreetmap.org/way/204410111</a> have a ref of C60 displayed anywhere [in the real world]? If not, in what way is this reference "incredibly useful"?</p>
 <p>(this is a genuine question by the way - I know some people do like adding unsigned references to OSM and would genuinely like to know what people do use these references for).</p>
 </div>
 <div id="comment-52354-info" class="comment-info">

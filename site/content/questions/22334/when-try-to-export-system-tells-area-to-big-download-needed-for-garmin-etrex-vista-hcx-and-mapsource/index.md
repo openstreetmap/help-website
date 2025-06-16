@@ -141,8 +141,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The main database is designed for editing and therefore indeed doesn't allow to export more than a very tiny piece of the map.</p>
-<p>You can either download a Garmin map directly <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
-<p>or get the raw data from a mirror server <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Sample_map_calls">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Sample_map_calls</a></p>
+<p>You can either download a Garmin map directly <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>or get the raw data from a mirror server <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Sample_map_calls">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Sample_map_calls</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I started to play with umap and i must say that it feeds almost my needs and my co-workers's.</p>
 <p>I wonder if there are some tools to create umap format from scratch ? I use php as script langage.</p>
 <p>If not, do you think, it's possible to export as umap format then update the file (how?) then re-import the file in umap. By instance, what is the best practice if i want to change the background color of some polygons ? I don't want to and I can't use the remote-data functionnality because all my data can't be accessed from the internet.</p>
-<p>It seems this same type of question has already been asked with no success: <a href="https://help.openstreetmap.org/questions/65319/umap-programmatically-updating-layer-content">https://help.openstreetmap.org/questions/65319/umap-programmatically-updating-layer-content</a></p>
+<p>It seems this same type of question has already been asked with no success: <a href="/questions/65319/umap-programmatically-updating-layer-content">https://help.openstreetmap.org/questions/65319/umap-programmatically-updating-layer-content</a></p>
 <p>Thank-you and regards,</p>
 <p>fabrice.</p>
 </div>

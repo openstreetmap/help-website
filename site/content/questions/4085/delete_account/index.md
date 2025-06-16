@@ -69,7 +69,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Duplicate question; please see <a href="http://help.openstreetmap.org/questions/878/how-can-i-delete-my-account">http://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a></p>
+<p>Duplicate question; please see <a href="/questions/878/how-can-i-delete-my-account">https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a></p>
 </div>
 <div id="comment-4205-info" class="comment-info">
 <span class="comment-age">(30 Mar '11, 14:19)</span> <span class="comment-user userinfo">sleske</span>

@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I'm creating a page in wiki, and it stuck on "Save your changes" pop-up (see attached). no button works except "I'm not a robot", which, after completing, still asks to complete. Clicking on X button or outside the pop-up changes nothing, so the only way is to refresh the page, losing all you've done. I tried twice, no luck.</p>
 <p>Anyone encountered anything similar?</p>
 <p>Thanks</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2021-01-26_at_11.03.57.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2021-01-26_at_11.03.57.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-stuck" rel="tag" title="see questions tagged &#39;stuck&#39;">stuck</span> <span class="post-tag tag-link-save" rel="tag" title="see questions tagged &#39;save&#39;">save</span> <span class="post-tag tag-link-changes" rel="tag" title="see questions tagged &#39;changes&#39;">changes</span> <span class="post-tag tag-link-your" rel="tag" title="see questions tagged &#39;your&#39;">your</span>

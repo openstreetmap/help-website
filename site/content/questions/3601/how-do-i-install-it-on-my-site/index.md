@@ -137,7 +137,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>A more specific starting point is: <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.5#Use_the_map">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.5#Use_the_map</a></p>
+<p>A more specific starting point is: <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.5#Use_the_map">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.5#Use_the_map</a></p>
 </div>
 <div id="comment-3608-info" class="comment-info">
 <span class="comment-age">(07 Mar '11, 11:55)</span> <span class="comment-user userinfo">gnurk</span>

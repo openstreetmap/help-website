@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm in a planning situation and we are asking people about proposed cycle routes.</p>
-<p>I have looked at this <a href="https://help.openstreetmap.org/questions/26246/licensing-issues-on-creating-hypothetical-roads">https://help.openstreetmap.org/questions/26246/licensing-issues-on-creating-hypothetical-roads</a> - re hypothetical roads and this re cycle routes <a href="https://help.openstreetmap.org/questions/36926/cycle-routes">https://help.openstreetmap.org/questions/36926/cycle-routes</a></p>
+<p>I have looked at this <a href="/questions/26246/licensing-issues-on-creating-hypothetical-roads">https://help.openstreetmap.org/questions/26246/licensing-issues-on-creating-hypothetical-roads</a> - re hypothetical roads and this re cycle routes <a href="/questions/36926/cycle-routes">https://help.openstreetmap.org/questions/36926/cycle-routes</a></p>
 <p>So I'm presuming I'm out of luck re using Openstreet to create hypothetical cycling routes ...? Is that correct?</p>
 <p>I am looking for a tool where I can create an online map but export it as JSON and EPS files (or similar for scalable vector file for high-res print)</p>
 </div>
@@ -308,7 +308,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might want to check <a href="http://umap.openstreetmap.fr">uMap</a> with some documentation on the <a href="http://wiki.openstreetmap.org/wiki/UMap">wiki</a>. It's enough for the online map and JSON export.</p>
+<p>You might want to check <a href="http://umap.openstreetmap.fr">uMap</a> with some documentation on the <a href="https://wiki.openstreetmap.org/wiki/UMap">wiki</a>. It's enough for the online map and JSON export.</p>
 <p>Unfortunately for the printing part, it's a <a href="https://github.com/umap-project/umap/issues/88">popular issue</a>, but I'm sure that with the JSON you should be able to do it.</p>
 </div>
 <div class="answer-controls post-controls">

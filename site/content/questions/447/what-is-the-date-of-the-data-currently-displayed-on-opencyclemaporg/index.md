@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-450-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is basically a duplicate of <a href="http://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update">http://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update</a></p>
+<p>This is basically a duplicate of <a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update">https://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update</a></p>
 </div>
 <div id="comment-450-info" class="comment-info">
 <span class="comment-age">(23 Jul '10, 07:12)</span> <span class="comment-user userinfo">Jochen Topf</span>

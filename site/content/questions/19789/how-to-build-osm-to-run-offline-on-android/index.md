@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/OsmAnd">You can try looking at OsmAnd</a> it is <a href="http://code.google.com/p/osmand/source/checkout">open source and has a public source code repo.</a> Feel free to study the code and look at what it is doing / how it works. You might also want to look at <a href="http://wiki.openstreetmap.org/wiki/OsmAndMapCreator">their map creator app.</a> I hope that helps.<br />
+<p><a href="https://wiki.openstreetmap.org/wiki/OsmAnd">You can try looking at OsmAnd</a> it is <a href="http://code.google.com/p/osmand/source/checkout">open source and has a public source code repo.</a> Feel free to study the code and look at what it is doing / how it works. You might also want to look at <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">their map creator app.</a> I hope that helps.<br />
 </p>
 <p>Your question is a bit vague, do you have a vector map, or map tiles? Are you developing an android application or just want a solution for your self where you have an offline map?<br />
 </p>
@@ -208,7 +208,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In general, you can have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a></p>
+<p>In general, you can have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a></p>
 <p>There are some apps that display OSM based maps offline -&gt; search for "offline" there</p>
 <p>And some of them are opensource ... sou it is up to you to inspect the sourcecode and find out how each one is working.</p>
 <p>You also have to decide first whethet you want to display pre-rendered map tile graphics like the main site osm.org does ... or you want to render the OSM data as vector graphic in realtime, like Osmand, Mapsforge, ZANAvi, Navit or others do.</p>

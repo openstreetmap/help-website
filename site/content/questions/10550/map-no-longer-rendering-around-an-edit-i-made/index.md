@@ -43,8 +43,8 @@ osqa_accepted = false
 </p>
 <p>I looked at the area in Potlatch and it seems that all the road data has been erased but im not sure how. All i did was add a boundary and tag. So either i really screwed up or someone went in there and erased the entire area about the same time i was making my edit. I'm new to editing and i'm not sure how to undo my change or even if what i did was wrong. Can someone with a bit of experience take a look and figure out what happened.<br />
 </p>
-<p>Here is a link to the change i made and the area <a href="http://www.openstreetmap.org/browse/changeset/10544289">http://www.openstreetmap.org/browse/changeset/10544289</a></p>
-<p>And this edit was made just before i saved mine. It says 115 ways where deleted which may explain what happened to all the roads. <a href="http://www.openstreetmap.org/browse/changeset/10542889">http://www.openstreetmap.org/browse/changeset/10542889</a></p>
+<p>Here is a link to the change i made and the area <a href="https://www.openstreetmap.org/browse/changeset/10544289">https://www.openstreetmap.org/browse/changeset/10544289</a></p>
+<p>And this edit was made just before i saved mine. It says 115 ways where deleted which may explain what happened to all the roads. <a href="https://www.openstreetmap.org/browse/changeset/10542889">https://www.openstreetmap.org/browse/changeset/10542889</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-deleted" rel="tag" title="see questions tagged &#39;deleted&#39;">deleted</span> <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think that "Camp Byng" is OK now - if you look <a href="http://www.openstreetmap.org/?way=148127376">here</a> it seems to show up. It's nothing that you have done wrong, as various bits of pre-licence-switchover cleanup are being done in that area, and it looks like that might be what you're seeing. For example <a href="http://www.openstreetmap.org/browse/way/39203386/history">here</a> is a road in that area that was imported from a source that's not compatible with the ODBL licence, and then removed. If you regularly visit the area, it would help to add what features you can from ground survey.</p>
+<p>I think that "Camp Byng" is OK now - if you look <a href="https://www.openstreetmap.org/?way=148127376">here</a> it seems to show up. It's nothing that you have done wrong, as various bits of pre-licence-switchover cleanup are being done in that area, and it looks like that might be what you're seeing. For example <a href="https://www.openstreetmap.org/browse/way/39203386/history">here</a> is a road in that area that was imported from a source that's not compatible with the ODBL licence, and then removed. If you regularly visit the area, it would help to add what features you can from ground survey.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

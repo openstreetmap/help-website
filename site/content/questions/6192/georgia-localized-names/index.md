@@ -167,7 +167,7 @@ name:ka: გაბაშვილის ქუჩა</code></pre>
 <div id="post-6198-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've been reading the <a href="http://wiki.openstreetmap.org/wiki/Name">Key:Name</a> page, and I thought the name was about the local name, period. If you are looking for something you can understand, just browse the map through a client that shows the name in your language. At least, it was my understanding.</p>
+<p>I've been reading the <a href="https://wiki.openstreetmap.org/wiki/Name">Key:Name</a> page, and I thought the name was about the local name, period. If you are looking for something you can understand, just browse the map through a client that shows the name in your language. At least, it was my understanding.</p>
 <p>In their case, this already lead to the following : their own <a href="http://mapspot.ge">viewer</a> does not use the <em>name</em> key but let you choose between the <em>name:en</em> or <em>name:ka</em>.</p>
 </div>
 <div id="comment-6198-info" class="comment-info">
@@ -180,7 +180,7 @@ name:ka: გაბაშვილის ქუჩა</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Anyway, I just found the wiki page about the <a href="http://wiki.openstreetmap.org/wiki/Georgia_JumpStart_Import">JumpStart import of Georgia inside OSM</a>, which should lead me to the people who did it to discuss the best way forward.</p>
+<p>Anyway, I just found the wiki page about the <a href="https://wiki.openstreetmap.org/wiki/Georgia_JumpStart_Import">JumpStart import of Georgia inside OSM</a>, which should lead me to the people who did it to discuss the best way forward.</p>
 </div>
 <div id="comment-6199-info" class="comment-info">
 <span class="comment-age">(06 Jul '11, 19:11)</span> <span class="comment-user userinfo">benoit</span>

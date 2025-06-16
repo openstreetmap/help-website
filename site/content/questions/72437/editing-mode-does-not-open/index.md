@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Is this question on umap? Please browse through this help site, e.g. only yesterday: <a href="https://help.openstreetmap.org/questions/72420/umap-editor-missing-map-not-in-my-maps">https://help.openstreetmap.org/questions/72420/umap-editor-missing-map-not-in-my-maps</a></p>
+<p>Is this question on umap? Please browse through this help site, e.g. only yesterday: <a href="/questions/72420/umap-editor-missing-map-not-in-my-maps">https://help.openstreetmap.org/questions/72420/umap-editor-missing-map-not-in-my-maps</a></p>
 </div>
 <div id="comment-72438-info" class="comment-info">
 <span class="comment-age">(08 Jan '20, 16:46)</span> <span class="comment-user userinfo">TZorn</span>

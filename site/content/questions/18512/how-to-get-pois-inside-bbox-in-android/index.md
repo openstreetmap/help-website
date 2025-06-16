@@ -119,7 +119,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There's two sides to your problem: You need a server that delivers the data and you need to display it in your client. I will talk only about the server side in this answer (due to lack of Android skills).</p>
 <p>OpenStreetMap does not operate a server that would be suitable to make end-user queries like "what POIs are in this bbox" against. There are some third-party services that could be used, like XAPI or Overpass, however they all have their terms of use and limitations and you should not be using them in an application that you plan to distribute widely! You will have to set up your own server for that.</p>
-<p>When queried, Overpass and XAPI will return data in <a href="http://wiki.openstreetmap.org/wiki/Osm_format">OSM format</a>. In the simple case of the POI being mapped as a point in OpenStreetMap, this would be a "node" object with a latitude and longitude, and some tags describing the name etc.; but the POI might also be a way or even relation in cases where it is mapped as an area in OSM.</p>
+<p>When queried, Overpass and XAPI will return data in <a href="https://wiki.openstreetmap.org/wiki/Osm_format">OSM format</a>. In the simple case of the POI being mapped as a point in OpenStreetMap, this would be a "node" object with a latitude and longitude, and some tags describing the name etc.; but the POI might also be a way or even relation in cases where it is mapped as an area in OSM.</p>
 <p>There's a different, relatively new, third-party API that might suit you even better than Overpass and XAPI - see <a href="http://lists.openstreetmap.org/pipermail/talk-lu/2012-December/000099.html">http://lists.openstreetmap.org/pipermail/talk-lu/2012-December/000099.html</a> for the announcement. This allows you to download data in JSON format, but again, check with the operators before you make wide use of that.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -187,7 +187,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Concerning <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>, you can boldly try. The relevant values (100'000 queries per day or 10 GB download data per day) have never been surpassed by any app. And the servers protect themselves, so you cannot hurt anybody. Severals apps make successfully use of Overpass API, and they have figures more around 1000 queries per day, 100-300 users, and less than 1 GB of download data.</p>
+<p>Concerning <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>, you can boldly try. The relevant values (100'000 queries per day or 10 GB download data per day) have never been surpassed by any app. And the servers protect themselves, so you cannot hurt anybody. Severals apps make successfully use of Overpass API, and they have figures more around 1000 queries per day, 100-300 users, and less than 1 GB of download data.</p>
 <p>In particular, there is an example website for mobile devices, <a href="http://overpass-api.de/locate_me.html">http://overpass-api.de/locate_me.html</a> which you can use as a starting point (however, it is written in JavaScript, not Java).</p>
 </div>
 <div class="answer-controls post-controls">

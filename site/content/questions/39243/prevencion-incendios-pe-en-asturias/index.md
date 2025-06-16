@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-39245-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/39241/firehazard">https://help.openstreetmap.org/questions/39241/firehazard</a></p>
+<p>See also <a href="/questions/39241/firehazard">https://help.openstreetmap.org/questions/39241/firehazard</a></p>
 </div>
 <div id="comment-39245-info" class="comment-info">
 <span class="comment-age">(12 Dec '14, 17:48)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

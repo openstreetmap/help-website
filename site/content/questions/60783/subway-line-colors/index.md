@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can add a <code>colour</code> tag to the route relation as described on this page: <a href="http://wiki.openstreetmap.org/wiki/Tag:route%3Dsubway">http://wiki.openstreetmap.org/wiki/Tag:route%3Dsubway</a> however this will not have an effect on the "openstreetmap carto" rendering which doesn't display subway colours.</p>
+<p>You can add a <code>colour</code> tag to the route relation as described on this page: <a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dsubway">https://wiki.openstreetmap.org/wiki/Tag:route%3Dsubway</a> however this will not have an effect on the "openstreetmap carto" rendering which doesn't display subway colours.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

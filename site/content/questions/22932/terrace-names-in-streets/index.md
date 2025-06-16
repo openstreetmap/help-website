@@ -112,8 +112,8 @@ osqa_accepted = false
 <li>Remove the superfluous building_name tag from the individual building=house elements.</li>
 <li>Add address information to the house polygons. Option 1: to remove the building tags from these just leaving polygons providing the address, and this seems to work for most purposes - thanks to Dee Earley for this idea); Option 2: use the building_part relation to identify the individual properties in the terrace.</li>
 </ul>
-<p>Here's an example where I have not yet terraced the terrace: <a href="http://www.openstreetmap.org/browse/way/118145309">Peel Villas</a>.</p>
-<p>A much simpler way is to represent the terrace as a address interpolation way in which case you can just name the way as here: <a href="http://www.openstreetmap.org/browse/way/210630478">Robroy Terrace</a>.</p>
+<p>Here's an example where I have not yet terraced the terrace: <a href="https://www.openstreetmap.org/browse/way/118145309">Peel Villas</a>.</p>
+<p>A much simpler way is to represent the terrace as a address interpolation way in which case you can just name the way as here: <a href="https://www.openstreetmap.org/browse/way/210630478">Robroy Terrace</a>.</p>
 <p>JOSM of course will protest loudly about overlapping buildings, but much of the information (other than addresses) which one may want to associate with houses in a terrace belong to the terrace (date of construction, no of levels, roof type, building material, builder, architect, etc).</p>
 <p>The whole process requires more refinement, but in some places I think accurate information is not merely a nice to have, but essential. For instance Fford Garth Isaf (Lower Garth Road) in Bangor, Gwynedd (<a href="http://osm.org/go/eudHFpOI0-)">http://osm.org/go/eudHFpOI0-)</a> has many terraces, with houses numbered in the terrace. Conventional sequential house numbering has been introduced relatively recently (also on Fford Garth Uchaf, where houses just used to have names).</p>
 </div>

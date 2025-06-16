@@ -122,8 +122,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can have a closer look in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> ...</p>
-<p>or see the table and further links at <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">Apple_iOS</a> to find apps that come near your aim ... maybe there is some developer willing to help you, or you find an opensource solution.</p>
+<p>You can have a closer look in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> ...</p>
+<p>or see the table and further links at <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">Apple_iOS</a> to find apps that come near your aim ... maybe there is some developer willing to help you, or you find an opensource solution.</p>
 <p>In detail I can recommend mapbox.com or <a href="http://www.mousebirdconsulting.com/whirlyglobe">mousebirdConsulting.com</a></p>
 </div>
 <div class="answer-controls post-controls">

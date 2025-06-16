@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I've been downloading OSM unlabeled road image data through Mathematica and processing it so it only includes main roads.</p>
-<p>For example, here's an image of Sao Paulo at zoom 13, pre and post segmentation. <img src="http://help.openstreetmap.org/upfiles/SaoPaulo.png" alt="alt text" /> <img src="http://help.openstreetmap.org/upfiles/saoPaulo-MainAndSecondaryRoads-15Km.png" alt="alt text" /></p>
+<p>For example, here's an image of Sao Paulo at zoom 13, pre and post segmentation. <img src="/upfiles/SaoPaulo.png" alt="alt text" /> <img src="/upfiles/saoPaulo-MainAndSecondaryRoads-15Km.png" alt="alt text" /></p>
 <p>The results are ok, but I want to know how can I skip this segmentation effort.</p>
 <p>Is there a way to download only the road layer with Maperitive or other 3rd party application?</p>
 </div>
@@ -111,8 +111,8 @@ osqa_accepted = false
 <p>In short, yes. The better approach will vary based on what you are trying to do. Here's a quick Overpass Turbo query that extracts some of the major road vectors:</p>
 <p><a href="http://overpass-turbo.eu/s/ayj">http://overpass-turbo.eu/s/ayj</a></p>
 <p>Perhaps the vector representation there is better suited to what you are doing than a rendering.</p>
-<p>(The Overpass api can return the data in a variety or formats, see <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a> for more)</p>
-<p>If you want to render a small to medium sized area, using something like Maperative with a <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">country or regional extract</a> would be a reasonable idea.</p>
+<p>(The Overpass api can return the data in a variety or formats, see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a> for more)</p>
+<p>If you want to render a small to medium sized area, using something like Maperative with a <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">country or regional extract</a> would be a reasonable idea.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

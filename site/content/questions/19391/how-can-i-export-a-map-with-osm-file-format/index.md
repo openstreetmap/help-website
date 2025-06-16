@@ -111,9 +111,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How much data do you need? If it's a very small area then the "export" tab on the main site should work. However, I suspect that you would be better with one of the country and area extracts described on <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">this page</a>.</p>
+<p>How much data do you need? If it's a very small area then the "export" tab on the main site should work. However, I suspect that you would be better with one of the country and area extracts described on <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">this page</a>.</p>
 <p>I tend to use extracts from <a href="http://download.geofabrik.de/openstreetmap/">here</a>, but other download sites are available.</p>
-<p>If you try and export too big an area using the "Export" tab you may get issues such as <a href="https://help.openstreetmap.org/questions/19342/why-does-the-xml-export-fail">this one</a>.</p>
+<p>If you try and export too big an area using the "Export" tab you may get issues such as <a href="/questions/19342/why-does-the-xml-export-fail">this one</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -143,7 +143,7 @@ osqa_accepted = false
 <div id="post-19400-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You're not going to be able to get useful contour lines out of OSM. Have a look at <a href="https://help.openstreetmap.org/questions/3069/elevation-maps">this previous question</a>.</p>
+<p>You're not going to be able to get useful contour lines out of OSM. Have a look at <a href="/questions/3069/elevation-maps">this previous question</a>.</p>
 </div>
 <div id="comment-19400-info" class="comment-info">
 <span class="comment-age">(28 Jan '13, 14:10)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

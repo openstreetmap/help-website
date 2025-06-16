@@ -74,7 +74,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I have not noticed Bing remove a zoom level before, but I have noticed that locally to me the highest zoom level is sometimes significantly older than the next-highest. Here's an example where z19 shows the current road layout and z20 the old:</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=20/53.14848/-1.18438">http://www.openstreetmap.org/edit?editor=potlatch2#map=20/53.14848/-1.18438</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=20/53.14848/-1.18438">https://www.openstreetmap.org/edit?editor=potlatch2#map=20/53.14848/-1.18438</a></p>
 </div>
 <div id="comment-28972-info" class="comment-info">
 <span class="comment-age">(10 Dec '13, 17:40)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -151,7 +151,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>People have noticed <a href="https://help.openstreetmap.org/questions/28868/aerial-background-imagery-disappears-in-p2-if-i-zoom-in-to-a-high-level-it-did-not-in-the-past">elsewhere</a> that some high-zoom Bing imagery has been removed.</p>
+<p>People have noticed <a href="/questions/28868/aerial-background-imagery-disappears-in-p2-if-i-zoom-in-to-a-high-level-it-did-not-in-the-past">elsewhere</a> that some high-zoom Bing imagery has been removed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

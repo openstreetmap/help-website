@@ -76,7 +76,7 @@ osqa_accepted = false
 <div id="post-24448-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#">http://www.openstreetmap.org/#</a> new version of permlink not working either for me, so by roundabout north of Papworth Cambs Uk lat lon -0.12574 west and 52.25739 north I seem to have the inverse midas touch today</p>
+<p><a href="https://www.openstreetmap.org/#">https://www.openstreetmap.org/#</a> new version of permlink not working either for me, so by roundabout north of Papworth Cambs Uk lat lon -0.12574 west and 52.25739 north I seem to have the inverse midas touch today</p>
 </div>
 <div id="comment-24448-info" class="comment-info">
 <span class="comment-age">(22 Jul '13, 11:45)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/0000000duplicating_problem.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/0000000duplicating_problem.JPG" alt="alt text" /></p>
 <p>Using Potlatch2 I noticed a number of silo tanks were missing from a waste water plant. I will try to explain what was trying to achieve and how and what went wrong. I drew a rough circle over the first silo, Then I used the circle tool then dragged it exactly over the bing image. Then I used the parallel tool which created another circle which I dragged to the next silo this is quite a quick way to copy similar items to a new place. When finished I should have turned off the background and zoomed in further and I would have noticed that I had been dragging three overlaid concentric circles each time. Another mapper pointed this out to me and I checked it, Mean while another mapper had also spotted the error and fixed it. I have since experimented to replicate the error hopefully this text and the jpeg will explain all. Sorry everybody and thanks for help and it wasn't a bug in P2.</p>
 </div>
 <div class="answer-controls post-controls">

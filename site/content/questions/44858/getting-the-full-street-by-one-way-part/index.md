@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Getting the full street by one way part"
-description = '''Is it possible to obtain the whole street (through the api) by having a way id of only one part of the street? For example http://www.openstreetmap.org/way/49055428 is just a part of the &quot;Rue Mansard&quot; which also consists of http://www.openstreetmap.org/way/100012684'''
+description = '''Is it possible to obtain the whole street (through the api) by having a way id of only one part of the street? For example https://www.openstreetmap.org/way/49055428 is just a part of the &quot;Rue Mansard&quot; which also consists of https://www.openstreetmap.org/way/100012684'''
 date = "2015-08-21T08:12:00Z"
 lastmod = "2015-08-22T16:16:00Z"
 weight = 44858
@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is it possible to obtain the whole street (through the api) by having a way id of only one part of the street?</p>
-<p>For example <a href="http://www.openstreetmap.org/way/49055428">http://www.openstreetmap.org/way/49055428</a> is just a part of the "Rue Mansard" which also consists of <a href="http://www.openstreetmap.org/way/100012684">http://www.openstreetmap.org/way/100012684</a></p>
+<p>For example <a href="https://www.openstreetmap.org/way/49055428">https://www.openstreetmap.org/way/49055428</a> is just a part of the "Rue Mansard" which also consists of <a href="https://www.openstreetmap.org/way/100012684">https://www.openstreetmap.org/way/100012684</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-api" rel="tag" title="see questions tagged &#39;api&#39;">api</span> <span class="post-tag tag-link-way" rel="tag" title="see questions tagged &#39;way&#39;">way</span>

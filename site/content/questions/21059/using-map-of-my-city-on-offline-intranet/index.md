@@ -108,8 +108,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You'll need to setup your own tile server (to display the map) and nominatim server (to search for addresses). <a href="http://switch2osm.org/serving-tiles/">switch2osm</a> has a <a href="http://switch2osm.org/serving-tiles/">good tutorial on serving tiles</a>, and the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">nominatim installation</a> instructions can be found on the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">wiki</a>.</p>
-<p>Hum, those instructions are for Linux servers though. All the tools should work on Windows, but I do not know of a tutorial for that platform. Maybe an easyer solution would be to use a <a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">ready-made virtual machine image</a> to run the osm services.</p>
+<p>You'll need to setup your own tile server (to display the map) and nominatim server (to search for addresses). <a href="http://switch2osm.org/serving-tiles/">switch2osm</a> has a <a href="http://switch2osm.org/serving-tiles/">good tutorial on serving tiles</a>, and the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">nominatim installation</a> instructions can be found on the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">wiki</a>.</p>
+<p>Hum, those instructions are for Linux servers though. All the tools should work on Windows, but I do not know of a tutorial for that platform. Maybe an easyer solution would be to use a <a href="https://wiki.openstreetmap.org/wiki/Virtual_machine_image">ready-made virtual machine image</a> to run the osm services.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

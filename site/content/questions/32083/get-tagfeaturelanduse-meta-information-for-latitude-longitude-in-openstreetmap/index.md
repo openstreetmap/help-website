@@ -185,7 +185,7 @@ One Answer:
 <p>This is done by this algorithms <a href="https://github.com/tomhughes/openstreetmap-website/blob/overpass/app/assets/javascripts/index/query.js#L235">https://github.com/tomhughes/openstreetmap-website/blob/overpass/app/assets/javascripts/index/query.js#L235</a></p>
 <h2 id="tldr">TL,DR;</h2>
 <p><code>is_in</code> is the key command to get the enclosing area with all it's tags available.</p>
-<p>Unfortunately <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas">is_in</a> only appears to be covering areas with names in it. Other areas/ways can be covered by <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Around">around</a></p>
+<p>Unfortunately <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas">is_in</a> only appears to be covering areas with names in it. Other areas/ways can be covered by <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Around">around</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

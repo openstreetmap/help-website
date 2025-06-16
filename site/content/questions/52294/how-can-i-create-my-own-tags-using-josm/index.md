@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-52313-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12831/paulabotella">@PaulaBotella</a>: could you please reply to my comment above?</p>
+<p><a href="https://help.openstreetmap.org/users/12831/paulabotella">@PaulaBotella</a>: could you please reply to my comment above?</p>
 </div>
 <div id="comment-52313-info" class="comment-info">
 <span class="comment-age">(01 Oct '16, 11:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -99,7 +99,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>sorry <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, I was asking about tagging presets, but yesterday I found out (thanks to one of the answers bellow) that the OSM community of Senegal (<a href="http://wiki.openstreetmap.org/wiki/FR:WikiProject_Senegal)">http://wiki.openstreetmap.org/wiki/FR:WikiProject_Senegal)</a> has already developed their own tagging system, so I will follow it.</p>
+<p>sorry <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, I was asking about tagging presets, but yesterday I found out (thanks to one of the answers bellow) that the OSM community of Senegal (<a href="https://wiki.openstreetmap.org/wiki/FR:WikiProject_Senegal)">https://wiki.openstreetmap.org/wiki/FR:WikiProject_Senegal)</a> has already developed their own tagging system, so I will follow it.</p>
 </div>
 <div id="comment-52323-info" class="comment-info">
 <span class="comment-age">(02 Oct '16, 06:31)</span> <span class="comment-user userinfo">PaulaBotella</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 <div id="post-52327-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12831/paulabotella">@PaulaBotella</a>: okay, fine. :-) Could you please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark an answer as accepted</a> if it solves your problem.</p>
+<p><a href="https://help.openstreetmap.org/users/12831/paulabotella">@PaulaBotella</a>: okay, fine. :-) Could you please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark an answer as accepted</a> if it solves your problem.</p>
 </div>
 <div id="comment-52327-info" class="comment-info">
 <span class="comment-age">(02 Oct '16, 10:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

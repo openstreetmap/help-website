@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello! Could you please explain how to get back photos from Flickr? Now it is not available to open it (they are unfound). Thank you</p>
-<p>I meant that we had an ability to check flickr photos, but now we are not able even to see the link and windows<img src="https://help.openstreetmap.org/upfiles/2021-10-20_18.31.44_hJEBSjP.jpg" alt="alt text" /></p>
+<p>I meant that we had an ability to check flickr photos, but now we are not able even to see the link and windows<img src="/upfiles/2021-10-20_18.31.44_hJEBSjP.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-photos" rel="tag" title="see questions tagged &#39;photos&#39;">photos</span> <span class="post-tag tag-link-flickr" rel="tag" title="see questions tagged &#39;flickr&#39;">flickr</span>

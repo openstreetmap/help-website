@@ -207,7 +207,7 @@ osqa_accepted = false
 <div id="post-74832-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hey, I opened a question on this <a href="https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work">https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work</a> (don't know where the proper reporting or repo is)</p>
+<p>Hey, I opened a question on this <a href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work">https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work</a> (don't know where the proper reporting or repo is)</p>
 </div>
 <div id="comment-74832-info" class="comment-info">
 <span class="comment-age">(15 May '20, 13:03)</span> <span class="comment-user userinfo">Kovoschiz</span>

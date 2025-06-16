@@ -44,7 +44,7 @@ osqa_accepted = false
 <blockquote>
 <p>marker = new L.marker([22.42118, 78.60718], {icon: icon.png}); map.addLayer(marker);</p>
 </blockquote>
-<p>and showing correctly in single map. But In zoom level 1, In my page I have 2 or 3 maps(3 tiles), But marker showing in a single map only(Refer the attached image<img src="http://help.openstreetmap.org/upfiles/osm_map.png" alt="alt text" />).</p>
+<p>and showing correctly in single map. But In zoom level 1, In my page I have 2 or 3 maps(3 tiles), But marker showing in a single map only(Refer the attached image<img src="/upfiles/osm_map.png" alt="alt text" />).</p>
 <p>Any option show marker in all maps?</p>
 <p><strong>Edited on Aug 28:</strong></p>
 <p>In google maps, when we drag horizontally our data will shown in all maps. But in openstreet map data showed in a single world map, not replicated to other maps. Any option to show data in all maps or how to replicate the same map horizontally in all time?</p>

@@ -115,7 +115,7 @@ One Answer:
 <p>The whole point of OSM is <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">YOU can edit it! :)</a></p>
 <p>Or, if you don't feel like it, you can drop some <a href="https://wiki.openstreetmap.org/wiki/Notes">Notes</a> so that mappers can see where's the issue. Note that being logged in helps a lot - you'll get notification whenever somebody comments or closes your note.</p>
 <p><strong>2. You made some edits that you can't see on the map at osm.org</strong></p>
-<p>See <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this question</a></p>
+<p>See <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this question</a></p>
 <p>This is very common concern among newbies, it's even linked in the iD web editor after you upload your edit. Basically, your job as a mapper is done and you can only remain patient. Only things in the editor or "Show map data" layer matter to you.</p>
 </div>
 <div class="answer-controls post-controls">

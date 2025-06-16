@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>There are geocoding services that use OpenStreetMap data, these are listed on the <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a> page on the wiki. The second list on that page contains a list of software you can run on your own server if your data is particularly sensitive.</p>
 <p>I'm not aware of any OSM specific tutorials for Access, but a quick search found <a href="http://www.mkrgeo-blog.com/the-costless-way-to-geocoding-addresses-in-excel-part-3-bulk-data-geocoding-with-nominatim-and-others-geocoding-tools/">this</a> and <a href="https://github.com/gramener/geocode-excel">this</a> for Nominatim and Excel, which might be adaptable (I can't vouch for the safety of the files they link to, I've only just found them).</p>
-<p>Please note that for the initial bulk lookup you may need to be careful with <a href="https://help.openstreetmap.org/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay">usage policies</a>.</p>
+<p>Please note that for the initial bulk lookup you may need to be careful with <a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay">usage policies</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You don't have to use HTTP for overpass api on your own server. There's a binary called <code>osm3s_query</code> which will happily accept your Overpass XML or QL queries on <code>stdin</code> and return some OSM xml result on stdout. That's actually quite handy once in a while for some local tests. Even overpass-api.de leverages <code>osm3s_query</code> for the purpose of creating/updating areas (see <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/install#Area_creation">Wiki</a> for details).</p>
+<p>You don't have to use HTTP for overpass api on your own server. There's a binary called <code>osm3s_query</code> which will happily accept your Overpass XML or QL queries on <code>stdin</code> and return some OSM xml result on stdout. That's actually quite handy once in a while for some local tests. Even overpass-api.de leverages <code>osm3s_query</code> for the purpose of creating/updating areas (see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/install#Area_creation">Wiki</a> for details).</p>
 <p>However, HTTP is clearly more convenient for overpass turbo and other web based apps, even if you're only pointing your browser to <code>localhost</code>.</p>
 <p>This brings up the question why you want to avoid HTTP in the first place??</p>
 </div>

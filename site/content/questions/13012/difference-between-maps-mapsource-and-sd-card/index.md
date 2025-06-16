@@ -202,7 +202,7 @@ osqa_accepted = false
 <div id="post-13018-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>On OSM map page a right click on permalink then left click copy then paste into comment or edit question and add it. like this.http://www.openstreetmap.org/?lat=52&amp;lon=0&amp;zoom=18&amp;layers=M hope this helps</p>
+<p>On OSM map page a right click on permalink then left click copy then paste into comment or edit question and add it. like this.https://www.openstreetmap.org/?lat=52&amp;lon=0&amp;zoom=18&amp;layers=M hope this helps</p>
 </div>
 <div id="comment-13018-info" class="comment-info">
 <span class="comment-age">(28 May '12, 15:04)</span> <span class="comment-user userinfo">andy mackey</span>

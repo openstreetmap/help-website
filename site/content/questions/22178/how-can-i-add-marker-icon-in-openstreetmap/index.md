@@ -68,7 +68,7 @@ This question is marked "community wiki".
 <div id="post-22181-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You could look at the documentation, try using "icon" in search box, here is one result <a href="http://wiki.openstreetmap.org/wiki/Map_Icons">http://wiki.openstreetmap.org/wiki/Map_Icons</a></p>
+<p>You could look at the documentation, try using "icon" in search box, here is one result <a href="https://wiki.openstreetmap.org/wiki/Map_Icons">https://wiki.openstreetmap.org/wiki/Map_Icons</a></p>
 </div>
 <div id="comment-22181-info" class="comment-info">
 <span class="comment-age">(08 May '13, 08:49)</span> <span class="comment-user userinfo">andy mackey</span>

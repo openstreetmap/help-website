@@ -117,7 +117,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The tiles for all zoom levels are not updated immediately because it would cost too much to do rendering this intensely. There are many other reasons why tiles take longer than you expect to re-render to the latest mapped information.<br />
 See this previous answer...<br />
-<a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 <p>Looking at the image you provided, be aware that as you zoom out less types of objects are rendered and less things can be squeezed onto the decreasing pixel space.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -171,7 +171,7 @@ See this previous answer...<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">this FAQ</a> or the <a href="http://help.openstreetmap.org/questions/22837/yet-another-why-havent-my-edits-shown-up-in-openstreetmaporg-question">answer to this question</a>.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">this FAQ</a> or the <a href="/questions/22837/yet-another-why-havent-my-edits-shown-up-in-openstreetmaporg-question">answer to this question</a>.</p>
 <p>Sometimes the issue is with your browser using old tiles from your browser cache. Try refreshing the browser page at each zoom level to download any updated map tiles.</p>
 <p>If you can see changes you have made appearing at the most detailed zoom level then they are in the OSM database. At less detailed levels the map tiles may take more time to be re-rendered. Just when the corresponding tiles at each level get re-rendered may depend on how much has changed on the tile and whether your browser has recently reloaded the tile. Try refreshing your browser at each zoom level where you expect to see changes. This may trigger re-rendering of the map tile. If the server rendering queue is empty then the change may appear immediately, otherwise it might take a few minutes or even several hours to several days for changes to appear at some less detailed zoom levels.</p>
 </div>

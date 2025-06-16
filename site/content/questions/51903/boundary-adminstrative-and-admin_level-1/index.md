@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a> it does not make sense.</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a> it does not make sense.</p>
 <p>Perhaps you could contact the mappers that introduced those boundaries and ask them why it makes sense for them ?</p>
 </div>
 <div class="answer-controls post-controls">

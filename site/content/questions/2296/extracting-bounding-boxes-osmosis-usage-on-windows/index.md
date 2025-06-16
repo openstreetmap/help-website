@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Extracting bounding boxes - Osmosis usage on Windows"
-description = '''Hello I have downloaded europe.osm.bz2 and I would like to exctract a large area using osmosis. Please forgive me for my ignorance, I am not a Linux / Unix at all and if I am missing something obvious, please advise. I am ammending this script I found on the http://wiki.openstreetmap.org/wiki/Osmosi...'''
+description = '''Hello I have downloaded europe.osm.bz2 and I would like to exctract a large area using osmosis. Please forgive me for my ignorance, I am not a Linux / Unix at all and if I am missing something obvious, please advise. I am ammending this script I found on the https://wiki.openstreetmap.org/wiki/Osmosi...'''
 date = "2011-01-19T13:47:00Z"
 lastmod = "2012-05-24T00:49:00Z"
 weight = 2296
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello I have downloaded europe.osm.bz2 and I would like to exctract a large area using osmosis. Please forgive me for my ignorance, I am not a Linux / Unix at all and if I am missing something obvious, please advise.</p>
-<p>I am ammending this script I found on the <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes"></a><a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes"></a><a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes</a>.</p>
+<p>I am ammending this script I found on the <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes"></a><a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes"></a><a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes</a>.</p>
 <p>Published script:</p>
 <pre><code> bzcat downloaded.osm.bz2 | osmosis\
   --read-xml enableDateParsing=no file=/dev/stdin\
@@ -200,7 +200,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Instead of file=CONIN$ you have to use file"-" (see <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailedklzzwxh:0000Usageklzzwxh:00010.39">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.39</a>)</p>
+<p>Instead of file=CONIN$ you have to use file"-" (see <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailedklzzwxh:0000Usageklzzwxh:00010.39">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.39</a>)</p>
 <p>In my example i used 7-zip (bzcat should work as well when using -d -c as parameters)</p>
 <p>c:Programme7-Zip7z.exe e -so I:AdminThomasosmxmleurope.osm.bz2 | D:OSMosmosisbinosmosis.bat --rx file="-" --tf accept-ways highway=motorway,trunk,primary --used-node --write-xml file="I:AdminThomasosmxmleuropa_einfach_highway.osm"</p>
 <p>This extracts motorway, trunk and primary street from europe</p>
@@ -318,7 +318,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Directly: <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.37#PBF_Binary_Tasks">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.37#PBF_Binary_Tasks</a></p>
+<p>Directly: <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.37#PBF_Binary_Tasks">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.37#PBF_Binary_Tasks</a></p>
 </div>
 <div id="comment-2305-info" class="comment-info">
 <span class="comment-age">(19 Jan '11, 17:35)</span> <span class="comment-user userinfo">Breki</span>

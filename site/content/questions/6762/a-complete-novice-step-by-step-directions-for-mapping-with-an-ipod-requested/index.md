@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/OSMTrack">OSMTrack app</a> makes it very easy to record and upload tracks on an iOS device. Once installed and set up it it is literally a case of press "Start", walk the track, press "Stop", give it a name and press "Send".</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/OSMTrack">OSMTrack app</a> makes it very easy to record and upload tracks on an iOS device. Once installed and set up it it is literally a case of press "Start", walk the track, press "Stop", give it a name and press "Send".</p>
 <p>One thing though: as far as I am aware the iPod Touch does not have any built-in GPS capability (unlike the iPhone) so you'd need a third-party GPS add-on, like the TomTom Car Kit.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -176,7 +176,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Mapzen">Mapzen</a> or <a href="http://wiki.openstreetmap.org/wiki/Mapzen_POI_Collector">Mapzen POI collector</a>.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Mapzen">Mapzen</a> or <a href="https://wiki.openstreetmap.org/wiki/Mapzen_POI_Collector">Mapzen POI collector</a>.</p>
 <p>Try to install them, display some OSM data or maps, and try your first edits or contributions via that apps.</p>
 <p>If you are not sure whether your work is proper, tell us e.g. via the <a href="http://forum.osm.org">OSM forum</a> where you have been editing, and we can have a look.</p>
 </div>

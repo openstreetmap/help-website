@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "routing problem"
-description = '''I&#x27;ve been mapping bike trails and foot paths in Red Deer, Canada. An example here: http://www.openstreetmap.org/?lat=52.27479&amp;amp;lon=-113.80498&amp;amp;zoom=17&amp;amp;layers=M You can see that the tags for the Bob Johnstone Trail are set at &quot;highway = cycleway&quot; and &quot;motor_vehicle = no&quot;. So a routing progr...'''
+description = '''I&#x27;ve been mapping bike trails and foot paths in Red Deer, Canada. An example here: https://www.openstreetmap.org/?lat=52.27479&amp;amp;lon=-113.80498&amp;amp;zoom=17&amp;amp;layers=M You can see that the tags for the Bob Johnstone Trail are set at &quot;highway = cycleway&quot; and &quot;motor_vehicle = no&quot;. So a routing progr...'''
 date = "2011-06-25T15:34:00Z"
 lastmod = "2011-06-25T21:34:00Z"
 weight = 5984
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I've been mapping bike trails and foot paths in Red Deer, Canada. An example here:</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.27479&amp;lon=-113.80498&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.27479&amp;lon=-113.80498&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.27479&amp;lon=-113.80498&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.27479&amp;lon=-113.80498&amp;zoom=17&amp;layers=M</a></p>
 <p>You can see that the tags for the Bob Johnstone Trail are set at "highway = cycleway" and "motor_vehicle = no". So a routing program should NOT route motor vehicles on these trails.</p>
 <p>Unfortunately, the Garmin compatible map (including my trail additions) downloaded from <a href="http://osmmaps.com">osmmaps.com</a> to my Garmin Dakota 20 does exactly this, even though the Dakota routing is set to "on road for distance" and "routes for car/motorcycle".</p>
 <p>Have I tagged incorrectly? Or is the Garmin simply unable to distinguish between a road and a trail?</p>

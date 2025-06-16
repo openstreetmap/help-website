@@ -113,7 +113,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap can store route and stop information using the <a href="http://wiki.openstreetmap.org/wiki/Public_Transport">Public Transport</a> convention in the Wiki. Schedules, routing, fare information must be stored and calculated externally. This is best represented using the standard <a href="http://www.gtfs-data-exchange.com/">GTFS</a> format. <a href="http://opentripplanner.org/">Open Trip Planner</a> is able to use the GTFS format for routing.</p>
+<p>OpenStreetMap can store route and stop information using the <a href="https://wiki.openstreetmap.org/wiki/Public_Transport">Public Transport</a> convention in the Wiki. Schedules, routing, fare information must be stored and calculated externally. This is best represented using the standard <a href="http://www.gtfs-data-exchange.com/">GTFS</a> format. <a href="http://opentripplanner.org/">Open Trip Planner</a> is able to use the GTFS format for routing.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

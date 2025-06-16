@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you mean <a href="http://www.openstreetmap.org/stats/data_stats.html">these stats</a>, and <a href="http://www.openstreetmap.org/user/Rob%20Dyson/edits">these are your edits</a> then you do show in the top editors yesterday next to a number 209 (at the time of writing). I wouldn't worry too much though about the "top editors" list - quality is more important than quantity (but harder to measure).</p>
+<p>If you mean <a href="https://www.openstreetmap.org/stats/data_stats.html">these stats</a>, and <a href="https://www.openstreetmap.org/user/Rob%20Dyson/edits">these are your edits</a> then you do show in the top editors yesterday next to a number 209 (at the time of writing). I wouldn't worry too much though about the "top editors" list - quality is more important than quantity (but harder to measure).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

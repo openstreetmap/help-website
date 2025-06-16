@@ -272,8 +272,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>After further research, I found that the closest to a consensus on this is <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtheatre"><code>amenity=theatre</code></a> with <code>theatre:type=open_air</code>. (or <code>theatre:type=amphi</code> if it's an amphitheatre).</p>
-<p>There is also another tag for a specific type of outdoor stage: a band stand, which uses <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Bandstand"><code>amenity=bandstand</code></a>.</p>
+<p>After further research, I found that the closest to a consensus on this is <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtheatre"><code>amenity=theatre</code></a> with <code>theatre:type=open_air</code>. (or <code>theatre:type=amphi</code> if it's an amphitheatre).</p>
+<p>There is also another tag for a specific type of outdoor stage: a band stand, which uses <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Bandstand"><code>amenity=bandstand</code></a>.</p>
 <p>In my case, I also will add <code>covered=yes</code></p>
 </div>
 <div class="answer-controls post-controls">
@@ -344,7 +344,7 @@ This answer is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>and theatres, such as Seebuehne at Bregenz (<span>photo</span>) at <a href="http://www.openstreetmap.org/way/83181757">http://www.openstreetmap.org/way/83181757</a></p>
+<p>and theatres, such as Seebuehne at Bregenz (<span>photo</span>) at <a href="https://www.openstreetmap.org/way/83181757">https://www.openstreetmap.org/way/83181757</a></p>
 </div>
 <div id="comment-31344-info" class="comment-info">
 <span class="comment-age">(05 Mar '14, 23:09)</span> <span class="comment-user userinfo">SK53 ♦</span>

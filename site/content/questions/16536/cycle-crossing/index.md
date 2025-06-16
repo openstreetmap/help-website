@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>this suggests highway=crossing and cycleway=crossing <a href="http://wiki.openstreetmap.org/wiki/Crossing">http://wiki.openstreetmap.org/wiki/Crossing</a></p>
+<p>this suggests highway=crossing and cycleway=crossing <a href="https://wiki.openstreetmap.org/wiki/Crossing">https://wiki.openstreetmap.org/wiki/Crossing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

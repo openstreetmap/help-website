@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to convert a complete Netherlands history dump file to csv file using osmconvert, but when ever I enter the basic line given below the osmconvert application is getting terminated- osmconvert netherlands.osm --all-to-nodes --csv="<a href="http://help.openstreetmap.org/users/260/idoneus">@id</a> <a href="http://help.openstreetmap.org/users/1350/longestaugust">@lon</a> <a href="http://help.openstreetmap.org/users/5110/latroc">@lat</a> amenity name" --out-csv -o=outfile.csv</p>
+<p>I am trying to convert a complete Netherlands history dump file to csv file using osmconvert, but when ever I enter the basic line given below the osmconvert application is getting terminated- osmconvert netherlands.osm --all-to-nodes --csv="<a href="https://help.openstreetmap.org/users/260/idoneus">@id</a> <a href="https://help.openstreetmap.org/users/1350/longestaugust">@lon</a> <a href="https://help.openstreetmap.org/users/5110/latroc">@lat</a> amenity name" --out-csv -o=outfile.csv</p>
 <p>Help me in solving this problem, also help me in extracting the timestamp of this netherlands data into this csv output file.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

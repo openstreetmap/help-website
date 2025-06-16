@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi</p>
 <p>I have noticed that the internal administrative boundary lines of Bosnia are unnecesarily thick. Especially, if one uses zoom 8 (see link below), the lines become nearly indistinguishable. This makes it very confusing for users, such as myself, to see the difference between the country's borders and the internal structure of the country.</p>
 <p>I have tried to play around with the admin_level parameter of these border lines, but it didn't give me the wanted effect. Are these lines somehow centrally hardcoded by an OSM body? Preferably, the internal line thickness should be the same as those of the states in the US.</p>
-<p><a href="http://www.openstreetmap.org/?lat=44.5308&amp;lon=19.0843&amp;zoom=8&amp;layers=M">http://www.openstreetmap.org/?lat=44.5308&amp;lon=19.0843&amp;zoom=8&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=44.5308&amp;lon=19.0843&amp;zoom=8&amp;layers=M">https://www.openstreetmap.org/?lat=44.5308&amp;lon=19.0843&amp;zoom=8&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-boundaries" rel="tag" title="see questions tagged &#39;boundaries&#39;">boundaries</span> <span class="post-tag tag-link-line" rel="tag" title="see questions tagged &#39;line&#39;">line</span> <span class="post-tag tag-link-admin_boundary" rel="tag" title="see questions tagged &#39;admin_boundary&#39;">admin_boundary</span> <span class="post-tag tag-link-bosnia" rel="tag" title="see questions tagged &#39;bosnia&#39;">bosnia</span> <span class="post-tag tag-link-thickness" rel="tag" title="see questions tagged &#39;thickness&#39;">thickness</span>
@@ -113,8 +113,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I zoomed in <a href="http://osm.org/go/xfdn8pq6p--">here</a>. The three boundary ways shown are all admin_level=4 which according to <a href="http://wiki.openstreetmap.org/wiki/Admin_level#10_admin_level_values_for_specific_countries">this table</a> is the boundary of an entity (I confess I don't know what these are), which is the same admin_level used by the United States to mark states, so should be the same.</p>
-<p>Where I have zoomed in, one of the three lines appears darker. I suspect this is because <a href="http://www.openstreetmap.org/browse/way/40963218">it is a member</a> of two boundary relations, and the <a href="http://www.openstreetmap.org/browse/way/177599455">other</a> <a href="http://www.openstreetmap.org/browse/way/177599461">two</a> aren't in any. This probably also means the <a href="http://www.openstreetmap.org/browse/relation/253231">boundary</a> <a href="http://www.openstreetmap.org/browse/relation/2321266">relations</a> aren't closed as they just end at this point.</p>
+<p>I zoomed in <a href="http://osm.org/go/xfdn8pq6p--">here</a>. The three boundary ways shown are all admin_level=4 which according to <a href="https://wiki.openstreetmap.org/wiki/Admin_level#10_admin_level_values_for_specific_countries">this table</a> is the boundary of an entity (I confess I don't know what these are), which is the same admin_level used by the United States to mark states, so should be the same.</p>
+<p>Where I have zoomed in, one of the three lines appears darker. I suspect this is because <a href="https://www.openstreetmap.org/browse/way/40963218">it is a member</a> of two boundary relations, and the <a href="https://www.openstreetmap.org/browse/way/177599455">other</a> <a href="https://www.openstreetmap.org/browse/way/177599461">two</a> aren't in any. This probably also means the <a href="https://www.openstreetmap.org/browse/relation/253231">boundary</a> <a href="https://www.openstreetmap.org/browse/relation/2321266">relations</a> aren't closed as they just end at this point.</p>
 <p>Oh, in addition, at zoom 8 <a href="http://tile.openstreetmap.org/8/141/92.png/status">the tile</a> hasn't been re-rendered since 4th September, so your changes won't yet be visible.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -162,7 +162,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>There are other questions on this site about how often things update, such as <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> Generally it is a few minutes, but at this sort of zoom level it is less frequent. I did do the /dirty trick mentioned in the answer before my answer above, and it has since rerendered. If you can't see the thinner lines then you have the old tile still cached locally. The link "the tile" in my answer now shows today's date.</p>
+<p>There are other questions on this site about how often things update, such as <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> Generally it is a few minutes, but at this sort of zoom level it is less frequent. I did do the /dirty trick mentioned in the answer before my answer above, and it has since rerendered. If you can't see the thinner lines then you have the old tile still cached locally. The link "the tile" in my answer now shows today's date.</p>
 </div>
 <div id="comment-16067-info" class="comment-info">
 <span class="comment-age">(14 Sep '12, 09:50)</span> <span class="comment-user userinfo">EdLoach ♦</span>

@@ -104,9 +104,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is wrong to have both the area way <em>and</em> central node. If you see this, then generally the <strong>correct thing to do is delete the central node</strong>. <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>.</p>
-<p>I tend to draw in a large area encompassing the building or buildings, and car parks and sports pitches. The amenity=school tag goes on this encompassing area. Something like this illustration from the <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">amenity=school docs</a></p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/6/6d/Amenity_school_usage_example.svg/375px-Amenity_school_usage_example.svg.png" alt="alt text" /></p>
+<p>It is wrong to have both the area way <em>and</em> central node. If you see this, then generally the <strong>correct thing to do is delete the central node</strong>. <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>.</p>
+<p>I tend to draw in a large area encompassing the building or buildings, and car parks and sports pitches. The amenity=school tag goes on this encompassing area. Something like this illustration from the <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">amenity=school docs</a></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/6/6d/Amenity_school_usage_example.svg/375px-Amenity_school_usage_example.svg.png" alt="alt text" /></p>
 <p>But you were asking about the symbols.</p>
 <p>In the "standard" OpenStreetMap map rendering, the map doesn't currently display a school symbol regardless of whether the school is mapped as a node or an area. So I guess you mean in the Potlatch editor the symbol is no longer displayed, or maybe in JOSM. They both do this actually.</p>
 <p>None of this is a problem though. You're not doing it wrong if you don't see the school symbol.</p>

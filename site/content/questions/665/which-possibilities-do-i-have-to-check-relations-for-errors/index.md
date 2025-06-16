@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Which possibilities do I have to check <a href="http://wiki.openstreetmap.org/wiki/Relations" title="relations">relations</a> for errors?</p>
+<p>Which possibilities do I have to check <a href="https://wiki.openstreetmap.org/wiki/Relations" title="relations">relations</a> for errors?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span> <span class="post-tag tag-link-analyse" rel="tag" title="see questions tagged &#39;analyse&#39;">analyse</span> <span class="post-tag tag-link-check" rel="tag" title="see questions tagged &#39;check&#39;">check</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

@@ -131,9 +131,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>highway=proposed proposed=residential</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dproposed">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dproposed</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dproposed">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dproposed</a></p>
 <p>highway=construction construction=residential</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dconstruction">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dconstruction</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dconstruction">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dconstruction</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

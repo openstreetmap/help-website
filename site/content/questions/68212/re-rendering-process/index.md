@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The whole world isn't pre rendered at all zoom-levels (else there would be a lot of boring blue ones). The higher zoom tiles are only rendered when first requested. See <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> for a full explanation.</p>
+<p>The whole world isn't pre rendered at all zoom-levels (else there would be a lot of boring blue ones). The higher zoom tiles are only rendered when first requested. See <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> for a full explanation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

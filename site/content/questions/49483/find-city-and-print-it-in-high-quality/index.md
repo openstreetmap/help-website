@@ -219,7 +219,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In general, have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a>.</p>
+<p>In general, have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

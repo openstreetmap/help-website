@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Using Javawa device manager I see this list of maps (all are .img files) on the etrex and after selecting an individual map, I can rename using the 'edit name' button</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2014-07-11_at_11.37.27_am.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2014-07-11_at_11.37.27_am.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello. I started using OSM, great services and all, but I'm struggling on one point. I have an JS object that contains a list of places, with coordinates etc. I have my actual location with the geolocation API. I want to do a research within 300m and see if some of those places are into the radius. So I have found how to call the "radius", with the <a href="http://wiki.openstreetmap.org/wiki/OSM_Protocol_Version_0.6#Retrieving%5Fmap%5Fdata%5Fby%5Fbounding%5Fbox%3A%5FGET%5F.2Fapi.2F0.6.2Fmap">bounding box</a>, but I can't find how to simply get the 4 needed coordinates from my position (assuming I'm at the center of the circle/rectangle, of course). If anyone can help me, it'd be greatly appreciated.</p>
+<p>Hello. I started using OSM, great services and all, but I'm struggling on one point. I have an JS object that contains a list of places, with coordinates etc. I have my actual location with the geolocation API. I want to do a research within 300m and see if some of those places are into the radius. So I have found how to call the "radius", with the <a href="https://wiki.openstreetmap.org/wiki/OSM_Protocol_Version_0.6#Retrieving%5Fmap%5Fdata%5Fby%5Fbounding%5Fbox%3A%5FGET%5F.2Fapi.2F0.6.2Fmap">bounding box</a>, but I can't find how to simply get the 4 needed coordinates from my position (assuming I'm at the center of the circle/rectangle, of course). If anyone can help me, it'd be greatly appreciated.</p>
 <p>EDIT: So, I've found a piece of code that convert two sets of lat/long in meters, so I compare all my values. Not the most efficient thing ever, but for my need, it was alright. I let my code here, in case anybody needs it someday.<br />
 <a href="https://gist.github.com/4554882">Gist</a></p>
 </div>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/osm_grab.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/osm_grab.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

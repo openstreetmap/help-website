@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a misunderstanding. The notes interface to iD saves notes to the key:note tag ( <a href="http://wiki.openstreetmap.org/wiki/Key:note">http://wiki.openstreetmap.org/wiki/Key:note</a> ) (as explained with its documentation). The notes features is not implemented yet but will be ( <a href="https://github.com/systemed/iD/issues/1393">https://github.com/systemed/iD/issues/1393</a> ) and since this is likely to cause further confusion, we'll remove the Key:note UI.</p>
+<p>This is a misunderstanding. The notes interface to iD saves notes to the key:note tag ( <a href="https://wiki.openstreetmap.org/wiki/Key:note">https://wiki.openstreetmap.org/wiki/Key:note</a> ) (as explained with its documentation). The notes features is not implemented yet but will be ( <a href="https://github.com/systemed/iD/issues/1393">https://github.com/systemed/iD/issues/1393</a> ) and since this is likely to cause further confusion, we'll remove the Key:note UI.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

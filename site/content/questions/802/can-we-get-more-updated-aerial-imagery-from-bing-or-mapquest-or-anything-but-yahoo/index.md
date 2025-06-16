@@ -116,7 +116,7 @@ osqa_accepted = false
 <p>Also, there isn't one fixed source of aerial imagery for OSM; depending on the editor you use (and depending on the area you are looking at), different sources may be available. Some editors even support pulling aerial imagery from any WMS service.</p>
 <p>But the main criteria for selecting aerial imagery for OSM use is not its technical availability or its currency, but its license or usage policy. Care has to be taken when selecting aerial imageray for tracing, for example we do not currently have permission from Google or Mapquest to trace their imagery. Tracing from Bing imagery is now allowed and supported by all major editors.</p>
 <p>We're always on the lookout for good additional sources of aerial imagery, so if you have connections to someone who owns the rights to good and current imagery, and is willing to allow OSM to trace from it, then discuss that on the mailing lists and we'll find a way to incorporate these images in our editors.</p>
-<p>There's a <a href="http://wiki.openstreetmap.org/wiki/WMS_sources">Wiki page</a> about potential sources of imagery.</p>
+<p>There's a <a href="https://wiki.openstreetmap.org/wiki/WMS_sources">Wiki page</a> about potential sources of imagery.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -228,9 +228,9 @@ osqa_accepted = false
 <div class="answer-body">
 <p>This is depending on the area you are editing. In the US you can use a variety of PD-licensed aerial imagery sources, in Germany there is some local and regional authorities releasing some of their imagery for OSM, and also in Italy, Spain, Australia and other parts of the world good imagery gets more and more available. Check the wiki for more information, e.g.:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">http://wiki.openstreetmap.org/wiki/Aerial_imagery</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Potential_Datasource">http://wiki.openstreetmap.org/wiki/Potential_Datasource</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">https://wiki.openstreetmap.org/wiki/Aerial_imagery</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Potential_Datasource">https://wiki.openstreetmap.org/wiki/Potential_Datasource</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -284,7 +284,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Someone should double check, but the OpenStreetMap page regarding "USGS High Resolution Orthoimagery" at <a href="http://wiki.openstreetmap.org/wiki/USGS_High_Resolution_Orthoimagery">http://wiki.openstreetmap.org/wiki/USGS_High_Resolution_Orthoimagery</a> suggests public domain imagery.<br />
+<p>Someone should double check, but the OpenStreetMap page regarding "USGS High Resolution Orthoimagery" at <a href="https://wiki.openstreetmap.org/wiki/USGS_High_Resolution_Orthoimagery">https://wiki.openstreetmap.org/wiki/USGS_High_Resolution_Orthoimagery</a> suggests public domain imagery.<br />
 </p>
 <p><a href="http://viewer.nationalmap.gov/viewer/">http://viewer.nationalmap.gov/viewer/</a></p>
 <p>It sounds like this would be easy to incorporate into JOSM, but I use Potlach and haven't figured out yet how to change the background to a web page. I know how to change from Yahoo to blank, but not how to add another background in Potlach.</p>

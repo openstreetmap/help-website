@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can I get the full history Planet file without downloading it?"
-description = '''I want to compare OSM datasets for South Africa over the past 5 years (2007-2011). I am not able to download the big file from: http://wiki.openstreetmap.org/wiki/Planet.osm/full. Does anyone have a copy of the dataset or know how I can work my way around it? I am not able to download a file of this...'''
+description = '''I want to compare OSM datasets for South Africa over the past 5 years (2007-2011). I am not able to download the big file from: https://wiki.openstreetmap.org/wiki/Planet.osm/full. Does anyone have a copy of the dataset or know how I can work my way around it? I am not able to download a file of this...'''
 date = "2011-10-19T07:47:00Z"
 lastmod = "2011-11-01T08:38:00Z"
 weight = 8496
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to compare OSM datasets for South Africa over the past 5 years (2007-2011). I am not able to download the big file from: <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/full.">http://wiki.openstreetmap.org/wiki/Planet.osm/full.</a> Does anyone have a copy of the dataset or know how I can work my way around it?</p>
+<p>I want to compare OSM datasets for South Africa over the past 5 years (2007-2011). I am not able to download the big file from: <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/full.">https://wiki.openstreetmap.org/wiki/Planet.osm/full.</a> Does anyone have a copy of the dataset or know how I can work my way around it?</p>
 <p>I am not able to download a file of this size with our internet connection at all. The maximum I am able to download is about 50MB.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

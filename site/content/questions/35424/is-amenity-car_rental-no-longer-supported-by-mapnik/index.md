@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is amenity = car_rental no longer supported by Mapnik?"
-description = '''Not so long ago, amenity = car_rental was shown by Mapnik with an icon - and a name could be added. Now nothing is shown for these tags - neither icon nor name. In this view http://www.openstreetmap.org/node/2720708286#map=19/55.39935/10.37690 you can see a node defined with tags: amenity = car_rent...'''
+description = '''Not so long ago, amenity = car_rental was shown by Mapnik with an icon - and a name could be added. Now nothing is shown for these tags - neither icon nor name. In this view https://www.openstreetmap.org/node/2720708286#map=19/55.39935/10.37690 you can see a node defined with tags: amenity = car_rent...'''
 date = "2014-08-01T23:02:00Z"
 lastmod = "2014-08-02T09:08:00Z"
 weight = 35424
@@ -40,12 +40,12 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Not so long ago, <code>amenity = car_rental</code> was shown by Mapnik with an icon - and a name could be added. Now nothing is shown for these tags - neither icon nor name.</p>
-<p>In this view <a href="http://www.openstreetmap.org/node/2720708286#map=19/55.39935/10.37690">http://www.openstreetmap.org/node/2720708286#map=19/55.39935/10.37690</a><br />
+<p>In this view <a href="https://www.openstreetmap.org/node/2720708286#map=19/55.39935/10.37690">https://www.openstreetmap.org/node/2720708286#map=19/55.39935/10.37690</a><br />
 you can see a node defined with tags:</p>
 <pre><code>amenity = car_rental  
 name = Avis</code></pre>
 <p>But in this view<br />
-<a href="http://www.openstreetmap.org/#map=19/55.39935/10.37669">http://www.openstreetmap.org/#map=19/55.39935/10.37669</a><br />
+<a href="https://www.openstreetmap.org/#map=19/55.39935/10.37669">https://www.openstreetmap.org/#map=19/55.39935/10.37669</a><br />
 nothing is shown for these tags.</p>
 <p>This is just one example - I have checked other car rentals that previously displayed both icon and name - but now display nothing.</p>
 <p>Is this an error to be corrected - or do new rules for car rentals apply?</p>
@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Mapnik is simply a program that can generate image files from data and style information. So I think you are talking about the default rendering at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a></p>
+<p>Mapnik is simply a program that can generate image files from data and style information. So I think you are talking about the default rendering at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></p>
 <p>A while back they switched from using straight Mapnik XML style definitions to CartoCSS definitions and the team that works on that have been "improving" and "fixing" things. Quotes around those as I've seen complaints on mailing lists regarding things that used to be rendered and no longer are.</p>
 <p>I think the new CartoCSS stuff is maintained at <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> and I think there is an "issues" link there where this type of problem can be reported.</p>
 </div>

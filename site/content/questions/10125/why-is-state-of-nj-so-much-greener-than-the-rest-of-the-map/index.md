@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What appears on the default Mapnik map is a compromise - it does show "every clump of trees" (or every <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">natural=wood</a> at any rate). The reason why NJ's so much greener than neighbouring states is that woodland data appears to have been imported for it by <a href="http://www.openstreetmap.org/user/NJDataUploads">this</a> account. Looking at the map N of Trenton it seems to include "land that is sometimes used for growing trees" rather than "land that has trees on it as at the time of the Bing imagery".</p>
+<p>What appears on the default Mapnik map is a compromise - it does show "every clump of trees" (or every <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">natural=wood</a> at any rate). The reason why NJ's so much greener than neighbouring states is that woodland data appears to have been imported for it by <a href="https://www.openstreetmap.org/user/NJDataUploads">this</a> account. Looking at the map N of Trenton it seems to include "land that is sometimes used for growing trees" rather than "land that has trees on it as at the time of the Bing imagery".</p>
 <p>Other renderings are available - you may find that <a href="http://open.mapquest.co.uk/?version=1.0&amp;hk=9-yUPjsUKP">this one</a> fits better with leftpondian expectations of what a map shoould look like.</p>
 </div>
 <div class="answer-controls post-controls">

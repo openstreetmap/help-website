@@ -131,7 +131,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I see that if you search for High Court Drive it finds it. Does that mean the edit has been approved?</p>
-<p>However, no matches if you search for the postcode: <a href="http://www.openstreetmap.org/search?query=ng12%205ly">http://www.openstreetmap.org/search?query=ng12%205ly</a></p>
+<p>However, no matches if you search for the postcode: <a href="https://www.openstreetmap.org/search?query=ng12%205ly">https://www.openstreetmap.org/search?query=ng12%205ly</a></p>
 <p>Do you have to register a postcode separately?</p>
 </div>
 <div id="comment-35613-info" class="comment-info">

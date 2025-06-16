@@ -64,7 +64,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Would it be possible to include a permalink to a specific example of the problem?</p>
-<p>Also (if you haven't seen it previously) have a look at <a href="https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">this previous answer</a> about coastline updates.</p>
+<p>Also (if you haven't seen it previously) have a look at <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">this previous answer</a> about coastline updates.</p>
 </div>
 <div id="comment-19254-info" class="comment-info">
 <span class="comment-age">(22 Jan '13, 09:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -130,7 +130,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The whole subjects of areas/polygons, especially areas with holes is a big mess. The reason is simply historic. We don't have an area/polygon/multipolygon object type, so we "simulate" areas by other means: Closed ways, special relation types such as multipolygon and boundary, or tags on ways such as area=yes, waterway=riverbank and natural=coastline. Relations are a relatively late newcomer to the OSM stable of object types and they are complex, so they still are not integrated properly everywhere. Each of these "solutions" work slightly different, and it is practically impossible to get all of this right, even if we knew what "right" is supposed to mean.</p>
-<p>Basically everybody agrees that we need some kind of "area" datatype, but it is unclear how this is supposed to work exactly. See <a href="http://wiki.openstreetmap.org/wiki/The_Future_of_Areas">the wiki</a> for ideas and plans in that direction.</p>
+<p>Basically everybody agrees that we need some kind of "area" datatype, but it is unclear how this is supposed to work exactly. See <a href="https://wiki.openstreetmap.org/wiki/The_Future_of_Areas">the wiki</a> for ideas and plans in that direction.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

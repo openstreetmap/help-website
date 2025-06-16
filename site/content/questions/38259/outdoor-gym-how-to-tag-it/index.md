@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps you mean leisure=pitch; sport=fitness? Wait a minute, I found this: <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfitness_station">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfitness_station</a> Seems to be the best match among already existing tags.</p>
+<p>Perhaps you mean leisure=pitch; sport=fitness? Wait a minute, I found this: <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfitness_station">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfitness_station</a> Seems to be the best match among already existing tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

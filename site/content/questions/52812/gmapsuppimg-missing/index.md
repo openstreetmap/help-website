@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The garmin.openstreetmap.nl site currently has a problem with map compilation.<br />
-I suggest you try another provider until it is fully functioning again, as listed on the OSM Wiki <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a><br />
+I suggest you try another provider until it is fully functioning again, as listed on the OSM Wiki <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a><br />
 I have been using <a href="http://download.bbbike.org/osm/">Bbbike</a> and they are quite good for me, but there are numerous other choices.</p>
 </div>
 <div class="answer-controls post-controls">

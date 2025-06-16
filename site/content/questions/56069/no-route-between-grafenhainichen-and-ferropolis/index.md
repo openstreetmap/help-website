@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-56070-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Es ist möglich bis parkplatz: <a href="http://www.openstreetmap.org/directions?engine=mapzen_car&amp;route=51.7309%2C12.4589%3B51.7585%2C12.4460#map=13/51.7426/12.4444">http://www.openstreetmap.org/directions?engine=mapzen_car&amp;route=51.7309%2C12.4589%3B51.7585%2C12.4460#map=13/51.7426/12.4444</a></p>
+<p>Es ist möglich bis parkplatz: <a href="https://www.openstreetmap.org/directions?engine=mapzen_car&amp;route=51.7309%2C12.4589%3B51.7585%2C12.4460#map=13/51.7426/12.4444">https://www.openstreetmap.org/directions?engine=mapzen_car&amp;route=51.7309%2C12.4589%3B51.7585%2C12.4460#map=13/51.7426/12.4444</a></p>
 </div>
 <div id="comment-56070-info" class="comment-info">
 <span class="comment-age">(07 May '17, 06:45)</span> <span class="comment-user userinfo">escada</span>

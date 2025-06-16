@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Since I cant Delete this question, So i am making it Answered, found the solution <a href="https://help.openstreetmap.org/questions/36946/set-railsport-and-josm-to-use-local-tile-server">https://help.openstreetmap.org/questions/36946/set-railsport-and-josm-to-use-local-tile-server</a></p>
+<p>Since I cant Delete this question, So i am making it Answered, found the solution <a href="/questions/36946/set-railsport-and-josm-to-use-local-tile-server">https://help.openstreetmap.org/questions/36946/set-railsport-and-josm-to-use-local-tile-server</a></p>
 <p>although, just had to edit all link in leaflet.osm.js</p>
 <p>Thanks</p>
 </div>

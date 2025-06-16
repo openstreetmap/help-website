@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For all questions about umap that need support from their authors, I already answered here: <a href="https://help.openstreetmap.org/questions/36618/created-a-new-map-as-anonymous-cant-now-edit">https://help.openstreetmap.org/questions/36618/created-a-new-map-as-anonymous-cant-now-edit</a></p>
+<p>For all questions about umap that need support from their authors, I already answered here: <a href="/questions/36618/created-a-new-map-as-anonymous-cant-now-edit">https://help.openstreetmap.org/questions/36618/created-a-new-map-as-anonymous-cant-now-edit</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

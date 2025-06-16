@@ -151,7 +151,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity">http://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity</a> is the current opinion of the LWG on the matter.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity">https://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity</a> is the current opinion of the LWG on the matter.</p>
 </div>
 <div id="comment-53629-info" class="comment-info">
 <span class="comment-age">(21 Dec '16, 12:53)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I signed up a long time ago I don't remember seeing any age limits. I presume you signed up more recently, did you see any age restriction. EDIT Unfortunately it seems that young people can't comply with this. Sadley. <a href="http://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity">http://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity</a></p>
+<p>I signed up a long time ago I don't remember seeing any age limits. I presume you signed up more recently, did you see any age restriction. EDIT Unfortunately it seems that young people can't comply with this. Sadley. <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity">https://wiki.openstreetmap.org/wiki/Open_Database_License/Contributor_Terms/Open_Issues#Legal_Capacity</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

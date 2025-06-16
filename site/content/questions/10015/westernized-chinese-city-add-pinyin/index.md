@@ -135,7 +135,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This kind of issue is often discussed on the project page for that country. (for China see <a href="http://wiki.openstreetmap.org/wiki/China">http://wiki.openstreetmap.org/wiki/China</a> ) It may also be discussed on <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names">http://wiki.openstreetmap.org/wiki/Multilingual_names</a></p>
+<p>This kind of issue is often discussed on the project page for that country. (for China see <a href="https://wiki.openstreetmap.org/wiki/China">https://wiki.openstreetmap.org/wiki/China</a> ) It may also be discussed on <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names">https://wiki.openstreetmap.org/wiki/Multilingual_names</a></p>
 <p>The convention for mainland China seems to be that name= has the Chinese name only, while for Hong Kong the convention seems to be name= has the Chinese name followed by the English name (which may be different to the Chinese name using Pinyin).</p>
 </div>
 <div class="answer-controls post-controls">

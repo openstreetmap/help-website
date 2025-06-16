@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am currently developing a rich text email editor for iPads (and other platforms) which will soon appear on Indiegogo.com . One of the email templates I want to add is called "This is my Current Position". It uses staticmap.openstreetmap.de and openstreetmap.org to display a map inside an email.</p>
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy,">http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy,</a> I need a permission from the system administrators for "distributing an app that uses tiles from openstreetmap.org". How can I get that permission? I can not find email addresses of the system administrators. Is staticmap.openstreetmap.de using the tile server at all?</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy,">https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy,</a> I need a permission from the system administrators for "distributing an app that uses tiles from openstreetmap.org". How can I get that permission? I can not find email addresses of the system administrators. Is staticmap.openstreetmap.de using the tile server at all?</p>
 <p>Marvin iNimated.com</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Follow-up to my <a href="https://help.openstreetmap.org/questions/68666/tile-server-randomly-freezes-requiring-a-server-restart">previous (bad) question</a>. I managed to catch one of these freezes and monitor the <code>syslog</code> and server behavior. The "freeze" does not need a server restart. It would actually work itself out in about 5-10 minutes.</p>
+<p>Follow-up to my <a href="/questions/68666/tile-server-randomly-freezes-requiring-a-server-restart">previous (bad) question</a>. I managed to catch one of these freezes and monitor the <code>syslog</code> and server behavior. The "freeze" does not need a server restart. It would actually work itself out in about 5-10 minutes.</p>
 <p>First of all, this is <a href="https://i.gyazo.com/9940234404a03e005218db28df6e95b6.png">what I see on the map</a> that is using my tile server. Requests for (pre-rendered) tiles are all stuck.</p>
 <p>Here's what my <a href="https://i.gyazo.com/6a22f60b6ba19583162f2f750be4d6f1.png">VPS monitoring looks like</a>. Look at the bottom chart "Bandwidth Public". As you can see, the server is operating normally and suddenly has a huge drop in outbound bandwidth, which means the server stopped serving tiles. All other system stats look normal.</p>
 <p>Looking at the syslog, here is the section of output code during the freeze. The freeze began at around 15:33 and ended about 10 minutes later. The anomaly code is at 15:37, where there were a bunch of outputs like <code>Created slice User Slice of root</code> and <code>Reached target Sockets</code>. However the freeze began at 15:33, so 4 minutes before the weird output began.</p>

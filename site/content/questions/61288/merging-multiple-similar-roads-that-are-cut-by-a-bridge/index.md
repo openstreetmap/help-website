@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Until now, I am confused as to how to handle multiple ways referring to the same road but are separated by a bridge. In several places, I have seen so much of these ways as separate entries when searching the name of a major highway or road, many of which are because of the bridges:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osmDuplicateRoads.png" alt="Multiple ways referring to the same road" /></p>
+<p><img src="/upfiles/osmDuplicateRoads.png" alt="Multiple ways referring to the same road" /></p>
 <p>I tried merging some of those ways before but it could not be merged because of the bridges in between. Should they really be separate entries despite referring to a single road or is there a solution to merge them despite the bridge in between?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

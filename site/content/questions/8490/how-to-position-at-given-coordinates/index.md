@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you mean the map on <a href="http://osm.org">osm.org</a> use this url with your coordinates:</p>
-<pre><code>http://www.openstreetmap.org/?lat=12.345&amp;lon=12.345&amp;zoom=17&amp;layers=M</code></pre>
+<pre><code>https://www.openstreetmap.org/?lat=12.345&amp;lon=12.345&amp;zoom=17&amp;layers=M</code></pre>
 <p>The easiest way to get to this link is the permanent link n bottom right corner of the screen...</p>
 </div>
 <div class="answer-controls post-controls">
@@ -141,7 +141,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Additional documentation of the URL parameters is available in the wiki, see the <a href="http://wiki.openstreetmap.org/wiki/Permalink">Permalink</a> and <a href="http://wiki.openstreetmap.org/wiki/Layer_URL_parameter">Layer URL parameter</a> pages as well as <a href="http://wiki.openstreetmap.org/wiki/Browse#Linking_to_Maps">"Linking to Maps"</a>.</p>
+<p>Additional documentation of the URL parameters is available in the wiki, see the <a href="https://wiki.openstreetmap.org/wiki/Permalink">Permalink</a> and <a href="https://wiki.openstreetmap.org/wiki/Layer_URL_parameter">Layer URL parameter</a> pages as well as <a href="https://wiki.openstreetmap.org/wiki/Browse#Linking_to_Maps">"Linking to Maps"</a>.</p>
 </div>
 <div id="comment-8529-info" class="comment-info">
 <span class="comment-age">(20 Oct '11, 12:52)</span> <span class="comment-user userinfo">Tordanik</span>

@@ -107,8 +107,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I sympathise, here's my example: <a href="http://www.openstreetmap.org/way/24349310">http://www.openstreetmap.org/way/24349310</a>, Spring Lane in Cookham Dean.</p>
-<p>Undoubtedly the first thing to add is <a href="http://wiki.openstreetmap.org/wiki/Sidewalks">sidewalk=none</a>. This is the single most useful tag which could be used by routers to optimise for safer routes. There is also the very little used verges tag which looks to take similar values to sidewalk. Also adding a note is a useful start in case we develop more elaborate ways of tagging this.</p>
+<p>I sympathise, here's my example: <a href="https://www.openstreetmap.org/way/24349310">https://www.openstreetmap.org/way/24349310</a>, Spring Lane in Cookham Dean.</p>
+<p>Undoubtedly the first thing to add is <a href="https://wiki.openstreetmap.org/wiki/Sidewalks">sidewalk=none</a>. This is the single most useful tag which could be used by routers to optimise for safer routes. There is also the very little used verges tag which looks to take similar values to sidewalk. Also adding a note is a useful start in case we develop more elaborate ways of tagging this.</p>
 <p>I don't know of any router which explicitly makes use of this, but it is eminently possible. I would not be surprised if SomeoneElse doesn't use sidewalk in his own Garmin mkgmap routine.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -142,7 +142,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/583/malenki">@malenki</a> I've never walked along that road since 2006, long before OSM days. Too scary. So I do have an excuse.</p>
+<p><a href="https://help.openstreetmap.org/users/583/malenki">@malenki</a> I've never walked along that road since 2006, long before OSM days. Too scary. So I do have an excuse.</p>
 </div>
 <div id="comment-48002-info" class="comment-info">
 <span class="comment-age">(08 Feb '16, 12:06)</span> <span class="comment-user userinfo">SK53 ♦</span>

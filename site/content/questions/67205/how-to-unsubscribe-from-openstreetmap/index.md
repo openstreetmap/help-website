@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The question has been asked before, on this very site, <a href="https://help.openstreetmap.org/questions/1415/how-do-i-close-my-osm-account">here</a> and <a href="https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account">here</a> :)</p>
+<p>The question has been asked before, on this very site, <a href="/questions/1415/how-do-i-close-my-osm-account">here</a> and <a href="/questions/878/how-can-i-delete-my-account">here</a> :)</p>
 </div>
 <div id="comment-67207-info" class="comment-info">
 <span class="comment-age">(15 Dec '18, 07:32)</span> <span class="comment-user userinfo">robinmetral</span>

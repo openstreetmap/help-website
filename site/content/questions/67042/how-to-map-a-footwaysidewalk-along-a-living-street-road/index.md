@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi there. I can't figure out how to map sidewalks along living street roads. It seems they are always omitted.</p>
 <p>So, for example, here is a spot.</p>
-<p>On a map it looks like this (red line is the sidewalk and blue line is the living street) <img src="https://help.openstreetmap.org/upfiles/path2.jpg" alt="alt text" /></p>
-<p>In real life it looks like this (color lines are roughly in the same places) <img src="https://help.openstreetmap.org/upfiles/path1.jpg" alt="alt text" /></p>
+<p>On a map it looks like this (red line is the sidewalk and blue line is the living street) <img src="/upfiles/path2.jpg" alt="alt text" /></p>
+<p>In real life it looks like this (color lines are roughly in the same places) <img src="/upfiles/path1.jpg" alt="alt text" /></p>
 <blockquote>
 <p>Photo by <a href="https://yandex.ru/legal/maps_termsofuse/?lang=en">Yandex.Maps</a></p>
 </blockquote>
@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-67047-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks! It is just illustration here, however to be safe some words auf caution for others and case you were not aware: please <a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps">do not use such street-level photos</a> for your contribution to OSM (unless freely licensed, like <a href="https://wiki.openstreetmap.org/wiki/Mapillary">mapillary</a>).</p>
+<p>Thanks! It is just illustration here, however to be safe some words auf caution for others and case you were not aware: please <a href="/questions/710/can-i-use-google-streetview-to-help-create-maps">do not use such street-level photos</a> for your contribution to OSM (unless freely licensed, like <a href="https://wiki.openstreetmap.org/wiki/Mapillary">mapillary</a>).</p>
 </div>
 <div id="comment-67047-info" class="comment-info">
 <span class="comment-age">(03 Dec '18, 07:07)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -245,7 +245,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> first, further there is a US specific import list <a href="https://lists.openstreetmap.org/listinfo/imports-us">https://lists.openstreetmap.org/listinfo/imports-us</a> that should be adressed too.</p>
+<p>Please read <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> first, further there is a US specific import list <a href="https://lists.openstreetmap.org/listinfo/imports-us">https://lists.openstreetmap.org/listinfo/imports-us</a> that should be adressed too.</p>
 <p>To the data itself, some of it would seem to be useful for OSM (for example clearance) and a lot not. As so often is such cases the best use woud likely be as reference material for QA.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -299,7 +299,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not a small or easy task! Only a small subset of those fields would even possibly belong in OSM, you'd have to make sure you used the right OSM tags for them, and you'd have to be very careful to match NBI data with the correct OSM bridge features, if they exist. To add to the complexity, there's not only <a href="http://wiki.openstreetmap.org/wiki/Key:bridge">bridge=*</a> tags, but also the <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbridge">man_made=bridge</a> tagging scheme, and <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">bridge relations</a>. Could be a good MapRoulette task, but I'd recommend you start with the <a href="https://lists.openstreetmap.org/listinfo/talk-us">talk-us mailing list</a>, and see if anyone's been working on it already. For example, <a href="http://help.openstreetmap.org/users/17/mvexel">@mvexel</a> wrote this <a href="https://oegeo.wordpress.com/2012/03/06/a-self-updating-openstreetmap-database-of-us-bridges-a-step-by-step-guide">blogpost about US bridges</a> a few years ago.</p>
+<p>Not a small or easy task! Only a small subset of those fields would even possibly belong in OSM, you'd have to make sure you used the right OSM tags for them, and you'd have to be very careful to match NBI data with the correct OSM bridge features, if they exist. To add to the complexity, there's not only <a href="https://wiki.openstreetmap.org/wiki/Key:bridge">bridge=*</a> tags, but also the <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbridge">man_made=bridge</a> tagging scheme, and <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">bridge relations</a>. Could be a good MapRoulette task, but I'd recommend you start with the <a href="https://lists.openstreetmap.org/listinfo/talk-us">talk-us mailing list</a>, and see if anyone's been working on it already. For example, <a href="https://help.openstreetmap.org/users/17/mvexel">@mvexel</a> wrote this <a href="https://oegeo.wordpress.com/2012/03/06/a-self-updating-openstreetmap-database-of-us-bridges-a-step-by-step-guide">blogpost about US bridges</a> a few years ago.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

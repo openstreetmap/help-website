@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The tag "man_made=breakwater" with "highway=footway" does not seem to render correctly on any of the common <a href="http://osm.org/go/e0Ute0lF9--?m=">maps</a>. This tagging scheme seems to be allowed on the <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbreakwater">wiki</a>. Any idea if this is a bug or if this is tagged/mapped incorrectly?</p>
+<p>The tag "man_made=breakwater" with "highway=footway" does not seem to render correctly on any of the common <a href="http://osm.org/go/e0Ute0lF9--?m=">maps</a>. This tagging scheme seems to be allowed on the <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbreakwater">wiki</a>. Any idea if this is a bug or if this is tagged/mapped incorrectly?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-breakwater" rel="tag" title="see questions tagged &#39;breakwater&#39;">breakwater</span> <span class="post-tag tag-link-footway" rel="tag" title="see questions tagged &#39;footway&#39;">footway</span>
@@ -126,7 +126,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Dabbi, you should draw the breakwater as what it is, a structure, take a look here, <a href="http://www.openstreetmap.org/#map=17/51.82697/5.07256.">http://www.openstreetmap.org/#map=17/51.82697/5.07256.</a> Now theres like scai mentioned just a path to the light. Add the footway on top of the breakwater or dam.</p>
+<p>Hi Dabbi, you should draw the breakwater as what it is, a structure, take a look here, <a href="https://www.openstreetmap.org/#map=17/51.82697/5.07256.">https://www.openstreetmap.org/#map=17/51.82697/5.07256.</a> Now theres like scai mentioned just a path to the light. Add the footway on top of the breakwater or dam.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

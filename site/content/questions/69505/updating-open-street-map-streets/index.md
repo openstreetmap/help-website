@@ -175,7 +175,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I am no expert, this is my guess. It is probable that the GIS data you would like to use is based on commercial copyrighted maps. I am fairly sure that would mean it CANNOT be used to update OSM. You could put notes on the Standard Layer indicating where a new street is, This may encourage mappers to survey them, Maybe you? Perhaps a link to a source of some open data, like street names and postal codes could be put into the note. But you would have to make sure that, the data is open.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Add_a_note.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Add_a_note.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

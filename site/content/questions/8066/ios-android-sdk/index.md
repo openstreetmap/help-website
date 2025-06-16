@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap doesn't provide a formal SDK. We focus on creating the map data; we don't provide an end-user product or developer tools. We leave that to other people!</p>
-<p>For iOS, the most popular map library is <a href="https://github.com/route-me/route-me">RouteMe</a>, which is open source. Bear in mind, however, that if your app uses map images from <a href="http://openstreetmap.org">openstreetmap.org</a>, you absolutely must adhere to the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>, and that pretty much means using your own server or a third-party one unless you're expecting only miniscule amounts of usage.</p>
+<p>For iOS, the most popular map library is <a href="https://github.com/route-me/route-me">RouteMe</a>, which is open source. Bear in mind, however, that if your app uses map images from <a href="http://openstreetmap.org">openstreetmap.org</a>, you absolutely must adhere to the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>, and that pretty much means using your own server or a third-party one unless you're expecting only miniscule amounts of usage.</p>
 <p>You may also find <a href="http://developers.cloudmade.com/projects">CloudMade's SDKs</a> of interest.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -197,9 +197,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The map data is provided as whole planet dumps or extracts. See <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a> on the wiki for more details. These are quite large files and contain every (current) bit of data is the osm database. For a mobile app you would probably run the data through filters beforehand possibly changing the format as well as discarding unwanted elements. Then you application would have to read the vector data and render it on the mobile device.</p>
+<p>The map data is provided as whole planet dumps or extracts. See <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a> on the wiki for more details. These are quite large files and contain every (current) bit of data is the osm database. For a mobile app you would probably run the data through filters beforehand possibly changing the format as well as discarding unwanted elements. Then you application would have to read the vector data and render it on the mobile device.</p>
 <p>This is fairly complex to program, you might find open source programs which can do this already and try to use them.</p>
-<p>The other way is to use map tiles which are rendered on a server and sent as pictures (usually png). This is what you see on the main site. You can use the tiles rendered by the openstreetmap servers but there is the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a> mentioned by Richard which doesn't allow mass downloading of tiles for offline use. The solution is to set up your own server to render the tiles (or find another source of tiles with a compatible usage policy).</p>
+<p>The other way is to use map tiles which are rendered on a server and sent as pictures (usually png). This is what you see on the main site. You can use the tiles rendered by the openstreetmap servers but there is the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a> mentioned by Richard which doesn't allow mass downloading of tiles for offline use. The solution is to set up your own server to render the tiles (or find another source of tiles with a compatible usage policy).</p>
 <p>A disadvantage of this is that the tiles take up quite a lot more storage than the vector data so the offline area would be more restricted. Making a program to display map tiles is much easier and uses less processing power on the device, again you might find an already existing open source program which would help.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -250,7 +250,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a> and <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> ... there are some apps that are opensource.</p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a> and <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> ... there are some apps that are opensource.</p>
 <p>Have a look how they get theit OSM derived data and how they display it.</p>
 </div>
 <div class="answer-controls post-controls">

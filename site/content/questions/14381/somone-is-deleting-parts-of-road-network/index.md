@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><a href="http://lists.openstreetmap.org/pipermail/announce/2012-July/000068.html">Redaction bot</a>, perhaps?</p>
-<p>I think that the way concerned was <a href="http://www.openstreetmap.org/browse/way/37939702/history">this one</a>. It looks like someone (maybe you?) is starting to <a href="http://www.openstreetmap.org/browse/way/171917006">remap</a>.</p>
+<p>I think that the way concerned was <a href="https://www.openstreetmap.org/browse/way/37939702/history">this one</a>. It looks like someone (maybe you?) is starting to <a href="https://www.openstreetmap.org/browse/way/171917006">remap</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,10 +105,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That page is for downloading tiles from ComputerTeddy's maps. You can download them from one of the servers listed on this page: <a href="http://wiki.openstreetmap.org/wiki/User:Computerteddy#Downloads_-_Kartendaten_f.C3.BCr_GPS-Ger.C3.A4te_von_Garmin">ComputeTeddy Downloads</a>.</p>
+<p>That page is for downloading tiles from ComputerTeddy's maps. You can download them from one of the servers listed on this page: <a href="https://wiki.openstreetmap.org/wiki/User:Computerteddy#Downloads_-_Kartendaten_f.C3.BCr_GPS-Ger.C3.A4te_von_Garmin">ComputeTeddy Downloads</a>.</p>
 <p>Specifically, try this website <a href="http://ftp5.gwdg.de/pub/misc/openstreetmap/teddynetz.de/latest/img/">http://ftp5.gwdg.de/pub/misc/openstreetmap/teddynetz.de/latest/img/</a> The tiles are in directories depending on the first part of the tile number.</p>
 <p>Or you could try using this webpage: <a href="http://touren.mospace.de/kachel.html">Garmin image tile calculator</a>. Pick the area you want on the map, then it will generate a list of URLs for the tiles you need to download (also from ComputerTeddy's maps).</p>
-<p>Or depending on what sort of maps you want, and what part of the world, there are a range of other OSM Garmin maps available. Some of them might be easier to download and install. See the list at <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a>.</p>
+<p>Or depending on what sort of maps you want, and what part of the world, there are a range of other OSM Garmin maps available. Some of them might be easier to download and install. See the list at <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

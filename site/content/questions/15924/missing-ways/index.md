@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Missing Ways"
-description = '''Been a while since I logged in, so I did to see how my area has progressed and I have found may ways are missing in this area for one: http://www.openstreetmap.org/?lat=-38.0645357072353&amp;amp;lon=145.303461849689&amp;amp;zoom=18 How do I get them back and find out who did it?'''
+description = '''Been a while since I logged in, so I did to see how my area has progressed and I have found may ways are missing in this area for one: https://www.openstreetmap.org/?lat=-38.0645357072353&amp;amp;lon=145.303461849689&amp;amp;zoom=18 How do I get them back and find out who did it?'''
 date = "2012-09-09T23:56:00Z"
 lastmod = "2012-09-10T11:37:00Z"
 weight = 15924
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Been a while since I logged in, so I did to see how my area has progressed and I have found may ways are missing in this area for one: <a href="http://www.openstreetmap.org/?lat=-38.0645357072353&amp;lon=145.303461849689&amp;zoom=18">http://www.openstreetmap.org/?lat=-38.0645357072353&amp;lon=145.303461849689&amp;zoom=18</a> How do I get them back and find out who did it?</p>
+<p>Been a while since I logged in, so I did to see how my area has progressed and I have found may ways are missing in this area for one: <a href="https://www.openstreetmap.org/?lat=-38.0645357072353&amp;lon=145.303461849689&amp;zoom=18">https://www.openstreetmap.org/?lat=-38.0645357072353&amp;lon=145.303461849689&amp;zoom=18</a> How do I get them back and find out who did it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-undelete" rel="tag" title="see questions tagged &#39;undelete&#39;">undelete</span>
@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Searching it may have been part of this: <a href="https://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">https://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted</a> I did a lot of rides on the bike to get this.</p>
+<p>Searching it may have been part of this: <a href="/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">https://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted</a> I did a lot of rides on the bike to get this.</p>
 </div>
 <div id="comment-15925-info" class="comment-info">
 <span class="comment-age">(10 Sep '12, 00:06)</span> <span class="comment-user userinfo">Yoda</span>
@@ -86,7 +86,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>It looks like you edited ways added by contributors that didn't accept the new licence and terms, and the redaction bot removed them. <a href="http://www.openstreetmap.org/browse/way/25466301/history">This</a> appears to be an example. As Richard says, if you've got your original notes you can add them back (and the area is at least partially covered by GPS traces to help with alignment).</p>
+<p>It looks like you edited ways added by contributors that didn't accept the new licence and terms, and the redaction bot removed them. <a href="https://www.openstreetmap.org/browse/way/25466301/history">This</a> appears to be an example. As Richard says, if you've got your original notes you can add them back (and the area is at least partially covered by GPS traces to help with alignment).</p>
 </div>
 <div id="comment-15938-info" class="comment-info">
 <span class="comment-age">(10 Sep '12, 10:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

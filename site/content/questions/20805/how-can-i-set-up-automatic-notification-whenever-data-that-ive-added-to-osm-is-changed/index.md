@@ -117,7 +117,7 @@ osqa_accepted = false
 <li><a href="http://zverik.osm.rambler.ru/whodidit/">whodidit</a> has a nice interface, but might miss changesets if they only touch relations for example.</li>
 <li><a href="http://positron96.appspot.com/osmfilter.html">osm filter</a> (see Malenki's answer) uses heuristics to weed out uninteresting changesets, but the heuristics have false-positives.</li>
 <li><a href="http://www.itoworld.com/product/osm/map">ITO world</a> is usefull too, but it requires a login and can be a bit hard to navigate for our purpose.</li>
-<li>osm.org's <a href="http://www.openstreetmap.org/browse/changesets?bbox=-0.11626%2C51.50403%2C-0.0993%2C51.51077">history tab</a> suffers from worldwide edits that get included when they shouldn't.</li>
+<li>osm.org's <a href="https://www.openstreetmap.org/browse/changesets?bbox=-0.11626%2C51.50403%2C-0.0993%2C51.51077">history tab</a> suffers from worldwide edits that get included when they shouldn't.</li>
 <li><a href="http://matt.dev.openstreetmap.org/owl_viewer/">OWL</a> (see Richard's answer) is the traditional tool, currently offline but should come back.</li>
 <li>The <a href="http://owl.apis.dev.openstreetmap.org/">new history tab</a> doesn't yet do notification, but its backend should allow for that, and it is slated to become the new official change-notification service.</li>
 <li>The <a href="http://resultmaps.neis-one.org/newestosmcreatefeed.php">newest active osm</a> feed shows new contributors, who often make a few mistakes when they start.</li>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p><a href="https://wiki.openstreetmap.org/wiki/Seattle,_Washington">Seattle</a> has started designating floor parking areas around bike stands to accommodate <a href="https://en.wikipedia.org/wiki/Bicycle-sharing_system#Dockless_bikes">dockless bike shares</a>:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_1391_kCEPnjO.jpg" style="width:33.0%" alt="floor parking around bike stands on sidewalk" /><img src="https://help.openstreetmap.org/upfiles/IMG_1392.jpg" style="width:33.0%" alt="floor parking around bike stands in street parking lane" /><img src="https://help.openstreetmap.org/upfiles/IMG_1450.jpg" style="width:33.0%" alt="floor parking around bike stands in intersection" /></p>
+<p><img src="/upfiles/IMG_1391_kCEPnjO.jpg" style="width:33.0%" alt="floor parking around bike stands on sidewalk" /><img src="/upfiles/IMG_1392.jpg" style="width:33.0%" alt="floor parking around bike stands in street parking lane" /><img src="/upfiles/IMG_1450.jpg" style="width:33.0%" alt="floor parking around bike stands in intersection" /></p>
 <p>How should these be tagged? One node for <code>bicycle_parking=stands</code> and a second node (or area?) for <code>bicycle_parking=floor</code>?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

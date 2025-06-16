@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Which software serves /status and /dirty tile directives ?"
-description = '''The wiki mentions &quot;/status&quot; or &quot;/dirty&quot; tile directives: http://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering Which software serves these commands ? I searched in the source codes of the OSM Rails port and mod_tile, without finding anything. If someone can help me, thanks in advance!'''
+description = '''The wiki mentions &quot;/status&quot; or &quot;/dirty&quot; tile directives: https://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering Which software serves these commands ? I searched in the source codes of the OSM Rails port and mod_tile, without finding anything. If someone can help me, thanks in advance!'''
 date = "2012-02-01T16:40:00Z"
 lastmod = "2012-02-16T23:12:00Z"
 weight = 10363
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The wiki mentions "/status" or "/dirty" tile directives: <a href="http://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering">http://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering</a></p>
+<p>The wiki mentions "/status" or "/dirty" tile directives: <a href="https://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering">https://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering</a></p>
 <p>Which software serves these commands ?</p>
 <p>I searched in the source codes of the OSM Rails port and mod_tile, without finding anything.</p>
 <p>If someone can help me, thanks in advance!</p>

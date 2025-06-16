@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answer to <a href="http://help.openstreetmap.org/questions/1004/simple-legendkey">"Simple legend/key?"</a> for enabling a map legend. If you are further interested in how OSM highway types map to the Philippines road classification, check the <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Philippines/Mapping_conventions">Philippines Mapping Conventions</a> page on our wiki.</p>
+<p>See the answer to <a href="/questions/1004/simple-legendkey">"Simple legend/key?"</a> for enabling a map legend. If you are further interested in how OSM highway types map to the Philippines road classification, check the <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Philippines/Mapping_conventions">Philippines Mapping Conventions</a> page on our wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

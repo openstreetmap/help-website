@@ -184,7 +184,7 @@ osqa_accepted = true
 <p>parking:condition:right=free</p>
 <p>Only if you want to be extraordinarily detailed, you can add another tag that parking is "on the street" (assuming the fact that this kerb is also a street):</p>
 <p>parking:lane:right:parallel=on_street</p>
-<p>Please find the tags <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/parking:lane">in the wiki</a>. The rendered map looks <a href="http://parking.openstreetmap.de/?zoom=17&amp;lat=60.18482&amp;lon=24.94901&amp;layers=B000FT">like this</a>.</p>
+<p>Please find the tags <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/parking:lane">in the wiki</a>. The rendered map looks <a href="http://parking.openstreetmap.de/?zoom=17&amp;lat=60.18482&amp;lon=24.94901&amp;layers=B000FT">like this</a>.</p>
 <p>In your special case, the street could be described as a parking_aisle indeed (what a shame!)</p>
 </div>
 <div class="answer-controls post-controls">

@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>In theory you could use the OpenStreetMap toolchain to set up an imaginary map but it's going to be a long road for you. You will first have to understand the basic concepts of OSM, and how "map data" differs from "a JPG map". You will then have to set up your own OSM backend server, your own rendering server, and your own routing server, maybe geocoding as well. It is all possible, it is all open source, but it's a lot of work and of course our tools are geared towards the real world so it is possible you will have to adapt them occasionally.</p>
-<p>Here's a similar question with answers: <a href="https://help.openstreetmap.org/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap">How to create fantasy/imaginary maps with OpenStreetMap?</a></p>
+<p>Here's a similar question with answers: <a href="/questions/4496/how-to-create-fantasyimaginary-maps-with-openstreetmap">How to create fantasy/imaginary maps with OpenStreetMap?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

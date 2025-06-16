@@ -176,7 +176,7 @@ osqa_accepted = false
 <div id="post-9535-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Bueno hay <a href="http://wiki.openstreetmap.org/wiki/GPStogo">http://wiki.openstreetmap.org/wiki/GPStogo</a> si quieres prestar un GPS.</p>
+<p>Bueno hay <a href="https://wiki.openstreetmap.org/wiki/GPStogo">https://wiki.openstreetmap.org/wiki/GPStogo</a> si quieres prestar un GPS.</p>
 </div>
 <div id="comment-9535-info" class="comment-info">
 <span class="comment-age">(14 Dec '11, 21:34)</span> <span class="comment-user userinfo">emj</span>
@@ -296,7 +296,7 @@ osqa_accepted = false
 <div id="post-10497-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In a word - no. <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1">This</a> wiki page makes it clear - OSM is not supposed to be a copy of some other map. Unfortunately the translated-into-Spanish version <a href="http://wiki.openstreetmap.org/wiki/ES:Beginners_Guide_1.1">here</a> doesn't have as much detail, but you can feed the English version through a web-based translation tool to understand what it's saying, I'm sure.</p>
+<p>In a word - no. <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1">This</a> wiki page makes it clear - OSM is not supposed to be a copy of some other map. Unfortunately the translated-into-Spanish version <a href="https://wiki.openstreetmap.org/wiki/ES:Beginners_Guide_1.1">here</a> doesn't have as much detail, but you can feed the English version through a web-based translation tool to understand what it's saying, I'm sure.</p>
 </div>
 <div id="comment-10497-info" class="comment-info">
 <span class="comment-age">(08 Feb '12, 17:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

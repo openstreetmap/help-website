@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-26257-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here's another more detailed explaination given to another similar question: <a href="https://help.openstreetmap.org/questions/22962/should-i-use-pois-or-areas-to-identify-shops">https://help.openstreetmap.org/questions/22962/should-i-use-pois-or-areas-to-identify-shops</a></p>
+<p>Here's another more detailed explaination given to another similar question: <a href="/questions/22962/should-i-use-pois-or-areas-to-identify-shops">https://help.openstreetmap.org/questions/22962/should-i-use-pois-or-areas-to-identify-shops</a></p>
 </div>
 <div id="comment-26257-info" class="comment-info">
 <span class="comment-age">(10 Sep '13, 17:19)</span> <span class="comment-user userinfo">MagicFab</span>
@@ -118,7 +118,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>A common style of mapping is to add tags to the building outline if they apply to the entire building, but to place a node within the building if the feature does not use the whole building (e.g. if there are multiple shops within the same building).</p>
-<p>You <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">should avoid creating duplicates</a>, so choose either a node or tags on the building outline, but not both.</p>
+<p>You <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">should avoid creating duplicates</a>, so choose either a node or tags on the building outline, but not both.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally, people map objects as points until they have better sources which allow them to map them as areas (buildings in your examples). There is also a clear guideline <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">in the wiki</a> which suggests you shouldn't use both.</p>
+<p>Generally, people map objects as points until they have better sources which allow them to map them as areas (buildings in your examples). There is also a clear guideline <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">in the wiki</a> which suggests you shouldn't use both.</p>
 <p>So if you can map something as an area, the 1st method you mention is best, but if you can't the 2nd is still better than neither. Just try and avoid both.</p>
 </div>
 <div class="answer-controls post-controls">

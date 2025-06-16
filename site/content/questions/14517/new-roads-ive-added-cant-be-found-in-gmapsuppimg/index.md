@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>Note the date underneath the map on garmin.openstreetmap.nl. It currently says "Map version: 07-07-2012". So the downloaded Garmin maps won't contain any changes or additions after that date.</p>
 <p>So wait until those maps are next updated, then download a new gmapsupp.img and the streets you added should be included. Those maps are usually updated every few weeks or so.</p>
-<p>Or you could try another source of OSM Garmin maps, which may be more up to date, see the list <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map on Garmin/Download</a>. Or you can download the OSM data, and generate Garmin maps yourself, but this is more complicated. See the instructions here <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map on Garmin</a>.</p>
+<p>Or you could try another source of OSM Garmin maps, which may be more up to date, see the list <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map on Garmin/Download</a>. Or you can download the OSM data, and generate Garmin maps yourself, but this is more complicated. See the instructions here <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map on Garmin</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

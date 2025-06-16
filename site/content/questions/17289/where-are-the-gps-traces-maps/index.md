@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Pascal Neis recently created a <a href="http://neis-one.org/2012/05/osm-gps-grid-map/">slippy map of GPS points</a>. There are also a <a href="http://wiki.openstreetmap.org/wiki/Featured_Images/Jul-Sep_2012#week-38">featured image</a> with a map of GPS <em>points</em> and a <a href="http://www.flickr.com/photos/stevefaeembra/7051613199/in/photostream/">heatmap of GPS points</a> both created recently.</p>
+<p>Pascal Neis recently created a <a href="http://neis-one.org/2012/05/osm-gps-grid-map/">slippy map of GPS points</a>. There are also a <a href="https://wiki.openstreetmap.org/wiki/Featured_Images/Jul-Sep_2012#week-38">featured image</a> with a map of GPS <em>points</em> and a <a href="http://www.flickr.com/photos/stevefaeembra/7051613199/in/photostream/">heatmap of GPS points</a> both created recently.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

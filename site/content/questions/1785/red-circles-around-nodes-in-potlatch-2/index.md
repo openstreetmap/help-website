@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can anyone explain to me why I'm seeing this strange "rendering" in Potlatch 2? It happens to me only for <a href="http://www.openstreetmap.org/browse/way/88004479">one particular way</a>.</p>
+<p>Can anyone explain to me why I'm seeing this strange "rendering" in Potlatch 2? It happens to me only for <a href="https://www.openstreetmap.org/browse/way/88004479">one particular way</a>.</p>
 <p><img src="http://i.imgur.com/CTSVI.png" alt="Screenshot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Those red circles mean there are duplicate nodes there, ie several nodes with exactly the same coordinates.</p>
-<p>Checking that location, it looks like the way for the school is duplicated. See <a href="http://www.openstreetmap.org/browse/way/88004479/history">way 88004479</a> and <a href="http://www.openstreetmap.org/browse/way/88004554/history">way 88004554</a>. They both have the same tags, and both have nodes in the same locations, so these nodes are duplicates. So if you just delete one of those ways, it will fix the problem (and get rid of the red circles in Potlatch).</p>
+<p>Checking that location, it looks like the way for the school is duplicated. See <a href="https://www.openstreetmap.org/browse/way/88004479/history">way 88004479</a> and <a href="https://www.openstreetmap.org/browse/way/88004554/history">way 88004554</a>. They both have the same tags, and both have nodes in the same locations, so these nodes are duplicates. So if you just delete one of those ways, it will fix the problem (and get rid of the red circles in Potlatch).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

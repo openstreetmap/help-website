@@ -158,9 +158,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The wiki is contradictory. If you look at:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:restriction#Members">http://wiki.openstreetmap.org/wiki/Relation:restriction#Members</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:restriction#Members">https://wiki.openstreetmap.org/wiki/Relation:restriction#Members</a></p>
 <p>it says you have one from way, one to way, then one via node or one or more via ways. The road signs table on the other hand contradict this just for no entry signs:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:restriction#Road_signs">http://wiki.openstreetmap.org/wiki/Relation:restriction#Road_signs</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:restriction#Road_signs">https://wiki.openstreetmap.org/wiki/Relation:restriction#Road_signs</a></p>
 <p>The no entry ones were only added to the wiki on 11th October last year, and I can't remember seeing discussion about them. I personally would have suggested sticking with the same definition of the relation, and if necessary creating one for each "from" way.</p>
 <p>As a reminder, no entry restrictions aren't needed for one way streets.</p>
 </div>

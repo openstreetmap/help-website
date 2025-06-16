@@ -162,8 +162,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The roads in the last picture clearly miss <em>a lot</em> of <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">turn restrictions</a>. As already mentioned by Hendrik try to keep it simple. Usually only <a href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">physically divided roads</a> are entered as separate ways, except when there is a rather complex junction which cannot be modeled by a single way. In that case you also have to add all relevant turn restrictions or routing engines may choose routes which aren't allowed in reality.</p>
-<p>Another mistake in the last picture are the two <em>unconnected</em> mini roundabouts. If they are true roundabouts then draw them as closed loops (as already done) and add the <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">junction=roundabout</a> tag. If they are just mini roundabouts then only draw a single node with the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmini_roundabout">highway=mini_roundabout</a> tag and connect all roads to this node (the current mini roundabout is unconnected and hence cannot be recognized by any routing engine). But you cannot have <em>both</em> as it is currently the case. And are there really that much stop signs? Seems like another mistake to me.</p>
+<p>The roads in the last picture clearly miss <em>a lot</em> of <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">turn restrictions</a>. As already mentioned by Hendrik try to keep it simple. Usually only <a href="https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">physically divided roads</a> are entered as separate ways, except when there is a rather complex junction which cannot be modeled by a single way. In that case you also have to add all relevant turn restrictions or routing engines may choose routes which aren't allowed in reality.</p>
+<p>Another mistake in the last picture are the two <em>unconnected</em> mini roundabouts. If they are true roundabouts then draw them as closed loops (as already done) and add the <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">junction=roundabout</a> tag. If they are just mini roundabouts then only draw a single node with the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmini_roundabout">highway=mini_roundabout</a> tag and connect all roads to this node (the current mini roundabout is unconnected and hence cannot be recognized by any routing engine). But you cannot have <em>both</em> as it is currently the case. And are there really that much stop signs? Seems like another mistake to me.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Yes, there are all those stop signs there :-)</p>
 <p>So at the last picture we can simplify it with one mini-roundabout at each side, like this?</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/0/02/Mapping-Features-Mini-Roundabout.png" alt="http://wiki.openstreetmap.org/w/images/0/02/Mapping-Features-Mini-Roundabout.png" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/0/02/Mapping-Features-Mini-Roundabout.png" alt="https://wiki.openstreetmap.org/w/images/0/02/Mapping-Features-Mini-Roundabout.png" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

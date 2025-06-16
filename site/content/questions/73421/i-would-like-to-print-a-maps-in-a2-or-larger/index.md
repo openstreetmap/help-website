@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I would like to print a maps in A2 or larger. How can I extract afile to do this?</p>
 <p>Udo</p>
-<p><em>converted to question from: <a href="https://help.openstreetmap.org/questions/39271/printing-to-a0-and-drawing-a-radi">https://help.openstreetmap.org/questions/39271/printing-to-a0-and-drawing-a-radi</a></em></p>
+<p><em>converted to question from: <a href="/questions/39271/printing-to-a0-and-drawing-a-radi">https://help.openstreetmap.org/questions/39271/printing-to-a0-and-drawing-a-radi</a></em></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-printing" rel="tag" title="see questions tagged &#39;printing&#39;">printing</span>

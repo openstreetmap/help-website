@@ -167,7 +167,7 @@ osqa_accepted = false
 <div id="post-39701-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10179/feuermond16">@Feuermond16</a>: Hmm, also wenn du sie einfach <span>gelöscht hast</span>, dann ist es nicht so wie ich das Umbauen dachte. Du sagtest doch, dass sich Streckenführungen teilweise bei alt und neu gleichen. Nungut, man könnte Teile so immer noch wiederverwenden, aber einfacher ist es wenn du sie erst löschst, wenn du die neuen erstellt hast. Letztendlich musst du wissen, wie du es machen magst.</p>
+<p><a href="https://help.openstreetmap.org/users/10179/feuermond16">@Feuermond16</a>: Hmm, also wenn du sie einfach <span>gelöscht hast</span>, dann ist es nicht so wie ich das Umbauen dachte. Du sagtest doch, dass sich Streckenführungen teilweise bei alt und neu gleichen. Nungut, man könnte Teile so immer noch wiederverwenden, aber einfacher ist es wenn du sie erst löschst, wenn du die neuen erstellt hast. Letztendlich musst du wissen, wie du es machen magst.</p>
 </div>
 <div id="comment-39701-info" class="comment-info">
 <span class="comment-age">(18 Dec '14, 18:16)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -211,7 +211,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hallo,</p>
 <p>die Relationen würde ich nicht löschen, sondern die Wege entsprechend anpassen. Sie sind ja vorhanden, wurden aber nur in dem Wegeverlauf geändert.</p>
-<p>Bei dem <a href="http://www.openstreetmap.org/relation/87283/">Kurweg K2</a> wurde der Weg auf der alten Relation aufgebaut</p>
+<p>Bei dem <a href="https://www.openstreetmap.org/relation/87283/">Kurweg K2</a> wurde der Weg auf der alten Relation aufgebaut</p>
 <p>Die Kurwege 8 und 9, welche nicht mehr vorhanden sind, können gelöscht werden.</p>
 <p>Es sollten auch die Start- und Endpunkte (außer bei Rundwegen) mit angegeben werden.</p>
 <p>Ebenso die Beschilderung der Wege, die nur in einer Richtung vorhanden sind (oneway=yes).</p>
@@ -247,7 +247,7 @@ osqa_accepted = false
 <div id="post-39711-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Firemond16 hat vorhin einen Thermalquellenweg (<span>4286195</span>) bereits neu angelegt. Der sollte dann wohl integriert werden. Ich nehme an, dass du das machen wirst, <a href="http://help.openstreetmap.org/users/10201/max60watt"></a><a href="http://help.openstreetmap.org/users/10201/max60watt">@max60watt</a>. Am besten schreibt ihr beide dann über die Sache per Mail weiter.</p>
+<p>Firemond16 hat vorhin einen Thermalquellenweg (<span>4286195</span>) bereits neu angelegt. Der sollte dann wohl integriert werden. Ich nehme an, dass du das machen wirst, <a href="https://help.openstreetmap.org/users/10201/max60watt"></a><a href="https://help.openstreetmap.org/users/10201/max60watt">@max60watt</a>. Am besten schreibt ihr beide dann über die Sache per Mail weiter.</p>
 </div>
 <div id="comment-39711-info" class="comment-info">
 <span class="comment-age">(19 Dec '14, 00:29)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

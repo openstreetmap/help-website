@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>highway=path</p>
 <p>bicycle=yes</p>
 <p>foot=yes or foot=designated ????</p>
-<p>I have no questions with the other tags posted <a href="http://wiki.openstreetmap.org/wiki/Mountainbike">here</a> but with the above mentioned I am confused, because the trail "was" for hikers but now bikers are using it too.</p>
+<p>I have no questions with the other tags posted <a href="https://wiki.openstreetmap.org/wiki/Mountainbike">here</a> but with the above mentioned I am confused, because the trail "was" for hikers but now bikers are using it too.</p>
 <p>And I don't know how important it is for the render of the opencyclemap, Does the trail have different colors or forms?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> for implicit access restrictions. In general I would only tag exceptions to the rule and not try to add all possible access tags (which leads to stuff like motorboat=no on residential roads).</p>
+<p>Please see <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> for implicit access restrictions. In general I would only tag exceptions to the rule and not try to add all possible access tags (which leads to stuff like motorboat=no on residential roads).</p>
 <p>So if in your region there are no specific legal restrictions on using paths I would leave the highway=path naked except for surface tags and potential explicit access restrictions.</p>
 <p>PS: you should realize that the use of highway=path and the general topic of access restrictions tends to lead to very drawn out discussions and there are probably as many opinions on the issues as there are mappers.</p>
 </div>

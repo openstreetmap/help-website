@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM Mapquest tiles slow or timed out"
-description = '''Hello! I have noticed as of about 1 week ago the MapQuest tiles at maximum zoom do not load, or take a minutes to load. For example anywhere I visit in the world at maximum zoom does not load tiles: http://www.openstreetmap.org/#map=18/-31.95600/115.85541&amp;amp;layers=Q I have no idea who to contact a...'''
+description = '''Hello! I have noticed as of about 1 week ago the MapQuest tiles at maximum zoom do not load, or take a minutes to load. For example anywhere I visit in the world at maximum zoom does not load tiles: https://www.openstreetmap.org/#map=18/-31.95600/115.85541&amp;amp;layers=Q I have no idea who to contact a...'''
 date = "2016-06-01T07:57:00Z"
 lastmod = "2016-06-19T16:42:00Z"
 weight = 49939
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hello!</p>
 <p>I have noticed as of about 1 week ago the MapQuest tiles at maximum zoom do not load, or take a minutes to load. For example anywhere I visit in the world at maximum zoom does not load tiles:</p>
-<p><a href="http://www.openstreetmap.org/#map=18/-31.95600/115.85541&amp;layers=Q">http://www.openstreetmap.org/#map=18/-31.95600/115.85541&amp;layers=Q</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/-31.95600/115.85541&amp;layers=Q">https://www.openstreetmap.org/#map=18/-31.95600/115.85541&amp;layers=Q</a></p>
 <p>I have no idea who to contact about this so I am trying here. I believe the tiles are generated and served by MapQuest? So maybe they have a server issue? Thank you for your time.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

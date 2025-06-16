@@ -194,7 +194,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Never used it myself, but a bit of poking on the wiki revealed that there should be something to generate the database structure in a directory named "script/contrib" with your osmosis download.</p>
-<p>See: <a href="http://wiki.openstreetmap.org/wiki/Osmosis#DB_Schema">http://wiki.openstreetmap.org/wiki/Osmosis#DB_Schema</a></p>
+<p>See: <a href="https://wiki.openstreetmap.org/wiki/Osmosis#DB_Schema">https://wiki.openstreetmap.org/wiki/Osmosis#DB_Schema</a></p>
 </div>
 <div id="comment-16988-info" class="comment-info">
 <span class="comment-age">(17 Oct '12, 23:45)</span> <span class="comment-user userinfo">cartinus</span>

@@ -110,9 +110,9 @@ One Answer:
 <p>Your question is rather at odds with the OSM data model, a way object with no tags is not a street, nor anything else.</p>
 <p>If you actually want to find all streets that don't have tags outside of the highway tag and no relation membership, that can be likely done. If you want to find all way objects that have no tags and no relation membership, that can be done too, but is a different question.</p>
 <p>Assuming you want to do it with the Overpass API, you should be able to get a result with a combination of the approaches used in</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Search_for_untagged_ways">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Search_for_untagged_ways</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Search_for_untagged_ways">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Search_for_untagged_ways</a></p>
 <p>and</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Bus_relations.2C_which_are_not_part_of_a_master_relation">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Bus_relations.2C_which_are_not_part_of_a_master_relation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Bus_relations.2C_which_are_not_part_of_a_master_relation">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Bus_relations.2C_which_are_not_part_of_a_master_relation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

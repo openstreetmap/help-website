@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe Frederiks answer <a href="https://help.openstreetmap.org/questions/18295/export-a-way-as-a-gpx">here</a> is also helpful for you.</p>
+<p>Maybe Frederiks answer <a href="/questions/18295/export-a-way-as-a-gpx">here</a> is also helpful for you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

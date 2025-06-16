@@ -108,7 +108,7 @@ One Answer:
 <p>Yes, it is possible. But now, it depends of what do you want exactly.</p>
 <ul>
 <li>If you want to integrate a search box for navigating on OpenStreetMap tiles, you only need to deploy the html/javascript page on your server (Ok for a WAMP)</li>
-<li>If you want to have your own instance of nominatim (for heavy usage or better service and customization), you may read <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">this documentation</a>. It will thus be easier to install this server on a linux system, but you can keep your WAMP for the web frontend.</li>
+<li>If you want to have your own instance of nominatim (for heavy usage or better service and customization), you may read <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">this documentation</a>. It will thus be easier to install this server on a linux system, but you can keep your WAMP for the web frontend.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

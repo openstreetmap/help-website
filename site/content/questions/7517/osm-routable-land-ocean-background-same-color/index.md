@@ -186,8 +186,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Those OSM World Routable maps do not have polygons generated for the areas of sea, so the sea does show up as blue. I don't think a TYP file could change this.</p>
-<p>Whether to generate sea polygons is an option in Mkgmap, the software used to make most OSM Garmin maps. Some ready made maps use this option, others don't. You could try some of the other maps listed on <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">Download</a>, and see if any of them have sea areas.</p>
-<p>Or you can make the maps yourself, using Mkgmap. See for basic instructions: <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">How to create a map</a>. To get areas for sea, you have to specify the option for this, see <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/usage#Sea_generation_options">Sea generation options</a>.</p>
+<p>Whether to generate sea polygons is an option in Mkgmap, the software used to make most OSM Garmin maps. Some ready made maps use this option, others don't. You could try some of the other maps listed on <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">Download</a>, and see if any of them have sea areas.</p>
+<p>Or you can make the maps yourself, using Mkgmap. See for basic instructions: <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">How to create a map</a>. To get areas for sea, you have to specify the option for this, see <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/usage#Sea_generation_options">Sea generation options</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

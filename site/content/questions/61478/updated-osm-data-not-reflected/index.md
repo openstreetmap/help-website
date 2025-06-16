@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Updated osm data not reflected"
-description = '''hi, I have updated an OSM data (osm_id: 5319742462) as suburb:Valasaravakkam. http://www.openstreetmap.org/node/5319742462 But still, I got incorrect old data as suburb:Virugambakkam. http://nominatim.openstreetmap.org/lookup?osm_ids=N5319742462'''
+description = '''hi, I have updated an OSM data (osm_id: 5319742462) as suburb:Valasaravakkam. https://www.openstreetmap.org/node/5319742462 But still, I got incorrect old data as suburb:Virugambakkam. http://nominatim.openstreetmap.org/lookup?osm_ids=N5319742462'''
 date = "2018-01-04T11:31:00Z"
 lastmod = "2018-01-05T23:40:00Z"
 weight = 61478
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>hi,</p>
 <p>I have updated an OSM data (osm_id: 5319742462) as suburb:Valasaravakkam.</p>
-<p><a href="http://www.openstreetmap.org/node/5319742462">http://www.openstreetmap.org/node/5319742462</a></p>
+<p><a href="https://www.openstreetmap.org/node/5319742462">https://www.openstreetmap.org/node/5319742462</a></p>
 <p>But still, I got incorrect old data as suburb:Virugambakkam.</p>
 <p><a href="http://nominatim.openstreetmap.org/lookup?osm_ids=N5319742462">http://nominatim.openstreetmap.org/lookup?osm_ids=N5319742462</a></p>
 </div>
@@ -134,7 +134,7 @@ osqa_accepted = false
 <div id="post-61492-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Added a new data with correct address details, but still, nominatim shows incorrect data. <a href="http://www.openstreetmap.org/node/5321788696">http://www.openstreetmap.org/node/5321788696</a></p>
+<p>Added a new data with correct address details, but still, nominatim shows incorrect data. <a href="https://www.openstreetmap.org/node/5321788696">https://www.openstreetmap.org/node/5321788696</a></p>
 <p><a href="http://nominatim.openstreetmap.org/lookup?osm_ids=N5321788696">http://nominatim.openstreetmap.org/lookup?osm_ids=N5321788696</a></p>
 </div>
 <div id="comment-61492-info" class="comment-info">
@@ -160,7 +160,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The node for <a href="http://www.openstreetmap.org/node/294073565">Valasaravakkam</a> is tagged as a town, not a suburb. Therefore, Virugambakkam is the closest suburb and that's why nominatim is saying what it is.</p>
+<p>The node for <a href="https://www.openstreetmap.org/node/294073565">Valasaravakkam</a> is tagged as a town, not a suburb. Therefore, Virugambakkam is the closest suburb and that's why nominatim is saying what it is.</p>
 </div>
 <div id="comment-61499-info" class="comment-info">
 <span class="comment-age">(05 Jan '18, 23:40)</span> <span class="comment-user userinfo">alester</span>

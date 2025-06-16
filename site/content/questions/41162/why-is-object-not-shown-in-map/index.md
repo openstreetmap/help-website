@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I have added an object "Tower" (Node: <a href="http://www.openstreetmap.org/node/3090280891">3090280891</a>) coordinates: 8.20587/49.24843 man_made = tower name = Houschder Winzerturm</p>
+<p>Hi, I have added an object "Tower" (Node: <a href="https://www.openstreetmap.org/node/3090280891">3090280891</a>) coordinates: 8.20587/49.24843 man_made = tower name = Houschder Winzerturm</p>
 <p>This object is visible in Potlach editor but not in the map. Could you tell me why not. Thanks and kind regards, Nasswasser</p>
 </div>
 <div id="question-tags" class="tags-container tags">

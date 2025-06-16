@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The guy behind osm-history-splitter made <a href="https://github.com/MaZderMind/osm-history-renderer/blob/master/TUTORIAL.md">this great tutorial</a> on how to set up the splitter on an Ubuntu machine. The toolkit has a nice visualization tool too, making it easy to make animated maps <a href="http://www.openstreetmap.org/user/joost%20schouppe/diary/21826">like these</a>. You can also extract shapefiles from a certain timestamp easily too, see <a href="http://www.openstreetmap.org/user/joost%20schouppe/diary/35530">an example here</a>.</p>
+<p>The guy behind osm-history-splitter made <a href="https://github.com/MaZderMind/osm-history-renderer/blob/master/TUTORIAL.md">this great tutorial</a> on how to set up the splitter on an Ubuntu machine. The toolkit has a nice visualization tool too, making it easy to make animated maps <a href="https://www.openstreetmap.org/user/joost%20schouppe/diary/21826">like these</a>. You can also extract shapefiles from a certain timestamp easily too, see <a href="https://www.openstreetmap.org/user/joost%20schouppe/diary/35530">an example here</a>.</p>
 <p>If you're used to a Windows environment, setting up a virtual Ubuntu machine is relatively painless with <a href="https://www.virtualbox.org/">virtual box</a>. If youy can explain me how to do this, I can give you a copy of my virtual machine, all set up (and messy). I might be able to give you access to an online machine already set up (command line interface only).</p>
 <p>Or if you can limit the amount of things you need, I might be able to do it for you. Just cutting Nepal from <a href="http://planet.openstreetmap.org/pbf/full-history/history-latest.osm.pbf">the full history dump</a> might save you some time if you don't have a strong machine. But you'd still need all the same tools to be able to process the osh.pbf file that comes out of it.</p>
 <p>Edit: spelling</p>
@@ -250,10 +250,10 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There's a hosted extract for Europe which you could use ( <a href="http://osm.personalwerk.de/full-history-extracts/latest/continents/">http://osm.personalwerk.de/full-history-extracts/latest/continents/</a> ) , however it dates from january 2015. It's a mere 23 giga :) If you need something more recent, I don't know of anything else than the planet extracts you'll find here: <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/full">http://wiki.openstreetmap.org/wiki/Planet.osm/full</a></p>
+<p>There's a hosted extract for Europe which you could use ( <a href="http://osm.personalwerk.de/full-history-extracts/latest/continents/">http://osm.personalwerk.de/full-history-extracts/latest/continents/</a> ) , however it dates from january 2015. It's a mere 23 giga :) If you need something more recent, I don't know of anything else than the planet extracts you'll find here: <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/full">https://wiki.openstreetmap.org/wiki/Planet.osm/full</a></p>
 <p>Just make sure you use PBF as that's what the splitter needs.</p>
 <p>The splitter is command line, however it only needs a single line of code to make an extract for a bounding box.</p>
-<p>With the importer, you can than load it into a Postgres database. It only takes a single line of code to export a thematic extract to shapefile if you happen to be more used to that. Check my diary (e.g. <a href="http://www.openstreetmap.org/user/joost%20schouppe/diary/35530">http://www.openstreetmap.org/user/joost%20schouppe/diary/35530</a> , but many more posts on the subject) for some hints and feel free to send me a PM.</p>
+<p>With the importer, you can than load it into a Postgres database. It only takes a single line of code to export a thematic extract to shapefile if you happen to be more used to that. Check my diary (e.g. <a href="https://www.openstreetmap.org/user/joost%20schouppe/diary/35530">https://www.openstreetmap.org/user/joost%20schouppe/diary/35530</a> , but many more posts on the subject) for some hints and feel free to send me a PM.</p>
 </div>
 <div id="comment-50120-info" class="comment-info">
 <span class="comment-age">(10 Jun '16, 09:31)</span> <span class="comment-user userinfo">joost schouppe</span>
@@ -278,7 +278,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Without knowing what went wrong when you tried it, there's little anyone can suggest, beyond doing a quick web search for whatever error appears (I'm guessing that you're missing some prerequisites, but have no idea exactly what).</p>
-<p>In general, with things that need a bit of interaction, if you go to #osm or #osm-dev on IRC (see <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> ) there will be lots of people who've done exactly that before and will be able to help.</p>
+<p>In general, with things that need a bit of interaction, if you go to #osm or #osm-dev on IRC (see <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a> ) there will be lots of people who've done exactly that before and will be able to help.</p>
 </div>
 <div id="comment-50215-info" class="comment-info">
 <span class="comment-age">(15 Jun '16, 10:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

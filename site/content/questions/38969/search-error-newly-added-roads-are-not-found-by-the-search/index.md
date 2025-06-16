@@ -133,7 +133,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The search is done through a service called <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. There was some <a href="https://twitter.com/OSM_Tech/status/538394075448479744">maintenance this weekend</a>, so it may be slow to catch up with recent edits. The data import lag may be viewed in a graph linked from the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_often_is_the_index_updated.3F">FAQ</a>.</p>
+<p>The search is done through a service called <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. There was some <a href="https://twitter.com/OSM_Tech/status/538394075448479744">maintenance this weekend</a>, so it may be slow to catch up with recent edits. The data import lag may be viewed in a graph linked from the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_often_is_the_index_updated.3F">FAQ</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

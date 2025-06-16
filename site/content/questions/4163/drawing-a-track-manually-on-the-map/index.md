@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See also <a href="http://help.openstreetmap.org/questions/884/application-or-web-interface-for-building-tracks-on-osm">Application or Web Interface for Building Tracks on OSM</a>.</p>
+<p>See also <a href="/questions/884/application-or-web-interface-for-building-tracks-on-osm">Application or Web Interface for Building Tracks on OSM</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

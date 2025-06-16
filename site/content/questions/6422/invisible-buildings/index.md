@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, can anybody tell me why way <a href="http://www.openstreetmap.org/browse/way/122184832">122184832</a> is visible as a building while the adjacent way <a href="http://www.openstreetmap.org/browse/way/122186232">122186232</a>, tagged identically, is not visible on the map (Mapnik renderer)?</p>
+<p>Hi, can anybody tell me why way <a href="https://www.openstreetmap.org/browse/way/122184832">122184832</a> is visible as a building while the adjacent way <a href="https://www.openstreetmap.org/browse/way/122186232">122186232</a>, tagged identically, is not visible on the map (Mapnik renderer)?</p>
 <p>Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">

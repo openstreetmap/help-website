@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use the tag <em>man_made=wastewater_plant</em>. For more detail see <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant">Tag:man_made=wastewater_plant</a>. However it is not currently rendered by Mapnic or Cycle Map, but can be seen if you use the Osmarender view.</p>
+<p>Use the tag <em>man_made=wastewater_plant</em>. For more detail see <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant">Tag:man_made=wastewater_plant</a>. However it is not currently rendered by Mapnic or Cycle Map, but can be seen if you use the Osmarender view.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I draw a polygon of the site and use the industrial tag and label it sewage works which renders ok. see <a href="http://www.openstreetmap.org/?lat=52.32332&amp;lon=-0.14847&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.32332&amp;lon=-0.14847&amp;zoom=17&amp;layers=M</a></p>
+<p>I draw a polygon of the site and use the industrial tag and label it sewage works which renders ok. see <a href="https://www.openstreetmap.org/?lat=52.32332&amp;lon=-0.14847&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.32332&amp;lon=-0.14847&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

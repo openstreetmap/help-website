@@ -113,7 +113,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>This is quite common. Therefore the piste tags do not interfere with the normal tags for roads.</p>
 <p>Use piste:type=nordic in addition to the highway= <em>tag. Additionally add piste:grooming=</em> or piste:name=*.</p>
-<p>See more at <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps">http://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps</a></p>
+<p>See more at <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps">https://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Just split the ways, and tag half of it piste:type=nordic <a href="http://wiki.openstreetmap.org/wiki/Key:piste:type">http://wiki.openstreetmap.org/wiki/Key:piste:type</a></p>
+<p>Just split the ways, and tag half of it piste:type=nordic <a href="https://wiki.openstreetmap.org/wiki/Key:piste:type">https://wiki.openstreetmap.org/wiki/Key:piste:type</a></p>
 </div>
 <div id="comment-2276-info" class="comment-info">
 <span class="comment-age">(19 Jan '11, 02:21)</span> <span class="comment-user userinfo">emj</span>
@@ -186,7 +186,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Footways used for pistes don't get snowplowed, so <a href="http://wiki.openstreetmap.org/wiki/Key:snowplowing">snowplowing=*</a> would be a nice tag to add, too.</p>
+<p>Footways used for pistes don't get snowplowed, so <a href="https://wiki.openstreetmap.org/wiki/Key:snowplowing">snowplowing=*</a> would be a nice tag to add, too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

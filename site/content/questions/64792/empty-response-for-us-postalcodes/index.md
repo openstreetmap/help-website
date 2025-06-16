@@ -111,7 +111,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>For reference: <a href="http://www.openstreetmap.org/node/5772838029">5772838029</a> and <a href="http://www.openstreetmap.org/node/5772394662">5772394662</a></p>
+<p>For reference: <a href="https://www.openstreetmap.org/node/5772838029">5772838029</a> and <a href="https://www.openstreetmap.org/node/5772394662">5772394662</a></p>
 </div>
 <div id="comment-64820-info" class="comment-info">
 <span class="comment-age">(20 Jul '18, 16:48)</span> <span class="comment-user userinfo">alester</span>

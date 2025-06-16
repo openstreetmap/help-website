@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a Wiki article on <a href="http://wiki.openstreetmap.org/wiki/Undoing_Deletions">Undoing Deletions</a>. You will most likely want to follow the recommendation of using Potlatch.</p>
+<p>There is a Wiki article on <a href="https://wiki.openstreetmap.org/wiki/Undoing_Deletions">Undoing Deletions</a>. You will most likely want to follow the recommendation of using Potlatch.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -164,7 +164,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As commented for question regarding <a href="http://help.openstreetmap.org/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">undeleting a POI</a> I must say that I warmly recommend using JOSM's Undelete plugin also for undeleting a way <em>if</em> you are using JOSM <em>and</em> are looking to undelete a specific way to it's latest version before its deletion.</p>
+<p>As commented for question regarding <a href="/questions/786/is-there-a-way-to-undelete-a-deleted-node-poi">undeleting a POI</a> I must say that I warmly recommend using JOSM's Undelete plugin also for undeleting a way <em>if</em> you are using JOSM <em>and</em> are looking to undelete a specific way to it's latest version before its deletion.</p>
 <p>Potlach 1.4's benefit is the ability to choose a prior version which to revert to at the same time as doing the undeletion.</p>
 </div>
 <div class="answer-controls post-controls">

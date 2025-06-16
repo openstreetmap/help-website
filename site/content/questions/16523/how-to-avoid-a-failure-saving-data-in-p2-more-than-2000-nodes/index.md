@@ -90,7 +90,7 @@ osqa_accepted = true
 <div id="post-16543-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I wonder if it was perhaps <a href="http://www.openstreetmap.org/browse/way/68186248">way 68186248</a> which is part of <a href="http://www.openstreetmap.org/browse/relation/1074822">relation 1074822</a>, which has a fixme on it "Deze shape is te lang, loopt door in min. 1 volgend blad." ("This shape is too long, extends into at least one additional sheet.")</p>
+<p>I wonder if it was perhaps <a href="https://www.openstreetmap.org/browse/way/68186248">way 68186248</a> which is part of <a href="https://www.openstreetmap.org/browse/relation/1074822">relation 1074822</a>, which has a fixme on it "Deze shape is te lang, loopt door in min. 1 volgend blad." ("This shape is too long, extends into at least one additional sheet.")</p>
 </div>
 <div id="comment-16543-info" class="comment-info">
 <span class="comment-age">(29 Sep '12, 21:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -141,7 +141,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you're using "iD" (the default web editor on OpenStreetMap.org) click on the way (road), then click on the node in the way that you want to divide it at, and you should see a "scissors" icon in the radial menu:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/id_snip.png" alt="iD Scissors icon in radial menu" /></p>
+<p><img src="/upfiles/id_snip.png" alt="iD Scissors icon in radial menu" /></p>
 <p>Click that, and the road will be split in two. You can then click on each section and give it the correct name.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -228,7 +228,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hai, please read these pages concerning three editors for OSM, all with specific rules and possibilities, <a href="http://wiki.openstreetmap.org/wiki/Editing">http://wiki.openstreetmap.org/wiki/Editing</a></p>
+<p>Hai, please read these pages concerning three editors for OSM, all with specific rules and possibilities, <a href="https://wiki.openstreetmap.org/wiki/Editing">https://wiki.openstreetmap.org/wiki/Editing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

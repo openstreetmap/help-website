@@ -111,9 +111,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can try</p>
-<p>a) <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a></p>
+<p>a) <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a></p>
 <p>or</p>
-<p>b) <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">download raw OSM data</a> for your area and do some filtering with <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> by keeping objects with "peak".</p>
+<p>b) <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">download raw OSM data</a> for your area and do some filtering with <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> by keeping objects with "peak".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -393,7 +393,7 @@ osqa_accepted = false
 <div id="post-44074-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11206/himmelslund">@himmelslund</a> I'd that ask over at the OsmAnd Google Group rather than here.</p>
+<p><a href="https://help.openstreetmap.org/users/11206/himmelslund">@himmelslund</a> I'd that ask over at the OsmAnd Google Group rather than here.</p>
 </div>
 <div id="comment-44074-info" class="comment-info">
 <span class="comment-age">(09 Jul '15, 16:31)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>While mapping, I came upon a secondary road that seems to be going over a reservoir/lake. With Bing imagery which is very old, the drawing is correct. However, with Maxar imagery, ESRI imagery, it seems there is now a reservoir there and the road has ceased to exist along with the bridge that was there. Attaching an image:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/3_qpXW9Dd.png" alt="alt text" /></p>
+<p><img src="/upfiles/3_qpXW9Dd.png" alt="alt text" /></p>
 <p>Here is the location: <a href="https://www.openstreetmap.org/#map=16/15.0298/38.8822">https://www.openstreetmap.org/#map=16/15.0298/38.8822</a></p>
 <p>If the road does not actually exist over the reservoir, the right thing to do is to split the highway from the edge of the reservoir, remove the middle portion that intersect the reservoir and remove the bridge. However, I want to make sure that is what should be done before doing it.</p>
 <p>Thanks in advance.</p>

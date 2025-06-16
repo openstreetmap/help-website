@@ -130,7 +130,7 @@ If your data is accurate and you will manually edit it later you can upload them
 1
 </div>
 <div class="comment-text">
-<p>... and have a detailed look at <a href="http://wiki.openstreetmap.org/wiki/Import">http://wiki.openstreetmap.org/wiki/Import</a> and all sub pages.</p>
+<p>... and have a detailed look at <a href="https://wiki.openstreetmap.org/wiki/Import">https://wiki.openstreetmap.org/wiki/Import</a> and all sub pages.</p>
 </div>
 <div id="comment-10342-info" class="comment-info">
 <span class="comment-age">(30 Jan '12, 18:08)</span> <span class="comment-user userinfo">stephan75</span>

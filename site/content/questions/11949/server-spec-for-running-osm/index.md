@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Server Spec for running OSM"
-description = '''I&#x27;m looking to run an OSM tile server and have been wondering what spec machine to get. I expect fairly heavy usage across a full planet of data and have taken the current yevaud spec as a benchmark of a high usage web-server. http://wiki.openstreetmap.org/wiki/Servers/yevaud My only question on thi...'''
+description = '''I&#x27;m looking to run an OSM tile server and have been wondering what spec machine to get. I expect fairly heavy usage across a full planet of data and have taken the current yevaud spec as a benchmark of a high usage web-server. https://wiki.openstreetmap.org/wiki/Servers/yevaud My only question on thi...'''
 date = "2012-04-12T22:08:00Z"
 lastmod = "2017-05-29T05:19:00Z"
 weight = 11949
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm looking to run an OSM tile server and have been wondering what spec machine to get. I expect fairly heavy usage across a full planet of data and have taken the current yevaud spec as a benchmark of a high usage web-server.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Servers/yevaud">http://wiki.openstreetmap.org/wiki/Servers/yevaud</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Servers/yevaud">https://wiki.openstreetmap.org/wiki/Servers/yevaud</a></p>
 <p>My only question on this is what is the SSD disk used for in particular setup? it's not big enough to cover the storage of the tiles (stated at ~1.2Tb). What is being kept on this disk? the disk itself would seem to represent half the cost of the server.<br />
 </p>
 </div>
@@ -295,7 +295,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Please see if these are helpful for you. <a href="http://wiki.openstreetmap.org/wiki/Servers">servers</a> and <a href="https://hardware.openstreetmap.org/">servers</a></p>
+<p>Please see if these are helpful for you. <a href="https://wiki.openstreetmap.org/wiki/Servers">servers</a> and <a href="https://hardware.openstreetmap.org/">servers</a></p>
 </div>
 <div id="comment-53570-info" class="comment-info">
 <span class="comment-age">(16 Dec '16, 03:32)</span> <span class="comment-user userinfo">Gagan</span>

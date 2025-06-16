@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-19484-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just in case you haven't seen it, there an overview of the "turn OSM data into a graph" part <a href="https://help.openstreetmap.org/questions/19213/osm-xml-into-graph">here</a>.</p>
+<p>Just in case you haven't seen it, there an overview of the "turn OSM data into a graph" part <a href="/questions/19213/osm-xml-into-graph">here</a>.</p>
 </div>
 <div id="comment-19484-info" class="comment-info">
 <span class="comment-age">(31 Jan '13, 09:38)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

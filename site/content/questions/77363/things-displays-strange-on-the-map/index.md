@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi. Does someone know why it looks like this on the map? It's a train station that looks very weird. The transit platform should be in one piece, se the blue line. And the text and the building looks very weird too. //Carl <img src="https://help.openstreetmap.org/upfiles/KarlskronaC_OSM.jpg" alt="alt text" /></p>
+<p>Hi. Does someone know why it looks like this on the map? It's a train station that looks very weird. The transit platform should be in one piece, se the blue line. And the text and the building looks very weird too. //Carl <img src="/upfiles/KarlskronaC_OSM.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-station" rel="tag" title="see questions tagged &#39;station&#39;">station</span> <span class="post-tag tag-link-strange" rel="tag" title="see questions tagged &#39;strange&#39;">strange</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The problem is caused by the different time at which the tiles refresh: different tiles are refreshed at different times. In fact, right now the tiles show the map as you expected.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-11-02-23-00-30-939_com.vivaldi.browser.jpg" width="200" /></p>
+<p><img src="/upfiles/Screenshot_2020-11-02-23-00-30-939_com.vivaldi.browser.jpg" width="200" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

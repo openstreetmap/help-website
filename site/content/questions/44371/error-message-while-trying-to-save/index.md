@@ -66,7 +66,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Does the answer to this previous question help:</p>
-<p><a href="https://help.openstreetmap.org/questions/43844/saving-changes-doesnt-work">https://help.openstreetmap.org/questions/43844/saving-changes-doesnt-work</a></p>
+<p><a href="/questions/43844/saving-changes-doesnt-work">https://help.openstreetmap.org/questions/43844/saving-changes-doesnt-work</a></p>
 </div>
 <div id="comment-44375-info" class="comment-info">
 <span class="comment-age">(22 Jul '15, 23:43)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

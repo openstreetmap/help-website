@@ -236,7 +236,7 @@ After your changes are written to OSM, there is indeed no simple way to undo cha
 <p>If new to using JOSM, for a familiar 'look similar to the main osm' try using the this combination of Josm + Mapnik. see screen shot. I find it quite good, but you can load many from the preferences link.</p>
 <p>Edit...This reply needs clarification and a better option would be to select Map Paint Styles 'JOSM Internal Style' + 'P2 Potlach 2' for usual editing.</p>
 <p>The 'Mapnik (true)' option is not meant for editing, but to see how it would look on the osm.org-Style after editing.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_shot_2013-09-28_at_4.43.46_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_shot_2013-09-28_at_4.43.46_PM.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

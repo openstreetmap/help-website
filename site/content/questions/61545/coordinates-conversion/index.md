@@ -227,7 +227,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A web search will show how to do it. But the calculations are fairly simple. There are 60' (minutes) in degree and 60" (seconds) in a minute. S57°18'05" = 57 + 18/60 +5/(60*60) = 57+ 0.3+0.001388 = 57.301388 and E 40.00. OSM also uses minus degrees for locations west of the Greenwich meridian and degrees south of the Equator. so -57.301388 (S) and + 40 (E). This is a park near the where i live <a href="http://www.openstreetmap.org/#map=18/52.33182/-0.17130">http://www.openstreetmap.org/#map=18/52.33182/-0.17130</a> if you copy that link and edit with the calculated figures it should work for you.</p>
+<p>A web search will show how to do it. But the calculations are fairly simple. There are 60' (minutes) in degree and 60" (seconds) in a minute. S57°18'05" = 57 + 18/60 +5/(60*60) = 57+ 0.3+0.001388 = 57.301388 and E 40.00. OSM also uses minus degrees for locations west of the Greenwich meridian and degrees south of the Equator. so -57.301388 (S) and + 40 (E). This is a park near the where i live <a href="https://www.openstreetmap.org/#map=18/52.33182/-0.17130">https://www.openstreetmap.org/#map=18/52.33182/-0.17130</a> if you copy that link and edit with the calculated figures it should work for you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -249,7 +249,7 @@ osqa_accepted = false
 <div id="post-61552-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>so does this work? <a href="http://www.openstreetmap.org/#map=18/-57.301388/+40.00">http://www.openstreetmap.org/#map=18/-57.301388/+40.00</a></p>
+<p>so does this work? <a href="https://www.openstreetmap.org/#map=18/-57.301388/+40.00">https://www.openstreetmap.org/#map=18/-57.301388/+40.00</a></p>
 </div>
 <div id="comment-61552-info" class="comment-info">
 <span class="comment-age">(09 Jan '18, 20:32)</span> <span class="comment-user userinfo">andy mackey</span>

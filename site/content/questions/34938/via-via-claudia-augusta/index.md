@@ -75,7 +75,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Do you mean the bike route Via Claudia Augusta: <a href="http://www.openstreetmap.org/relation/17666#map=10/47.1206/10.8009&amp;layers=C">http://www.openstreetmap.org/relation/17666#map=10/47.1206/10.8009&amp;layers=C</a></p>
+<p>Do you mean the bike route Via Claudia Augusta: <a href="https://www.openstreetmap.org/relation/17666#map=10/47.1206/10.8009&amp;layers=C">https://www.openstreetmap.org/relation/17666#map=10/47.1206/10.8009&amp;layers=C</a></p>
 </div>
 <div id="comment-34940-info" class="comment-info">
 <span class="comment-age">(17 Jul '14, 11:30)</span> <span class="comment-user userinfo">ligfietser</span>

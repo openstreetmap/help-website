@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "MotionX - how to load tracks from openstreetmap.org"
-description = '''Hi, How can I load a track from openstreetmap.org into MotionX? For example this one: http://www.openstreetmap.org/relation/2048350#map=14/45.3965/22.8497 What are all the steps to do? Thank you!'''
+description = '''Hi, How can I load a track from openstreetmap.org into MotionX? For example this one: https://www.openstreetmap.org/relation/2048350#map=14/45.3965/22.8497 What are all the steps to do? Thank you!'''
 date = "2015-07-21T09:24:00Z"
 lastmod = "2015-07-22T10:54:00Z"
 weight = 44304
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>How can I load a track from openstreetmap.org into MotionX? For example this one: <a href="http://www.openstreetmap.org/relation/2048350#map=14/45.3965/22.8497">http://www.openstreetmap.org/relation/2048350#map=14/45.3965/22.8497</a> What are all the steps to do?</p>
+<p>How can I load a track from openstreetmap.org into MotionX? For example this one: <a href="https://www.openstreetmap.org/relation/2048350#map=14/45.3965/22.8497">https://www.openstreetmap.org/relation/2048350#map=14/45.3965/22.8497</a> What are all the steps to do?</p>
 <p>Thank you!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

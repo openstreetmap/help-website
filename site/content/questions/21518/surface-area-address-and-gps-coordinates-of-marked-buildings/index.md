@@ -108,9 +108,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The short answer is no. The data's all in a big database, but you'll need to extract the data that you're interested in and calculate e.g. the surface area.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">This page</a> of the beginner's guide explains the sort of data that there is - nodes (each with a latitude and longitude), ways (connected nodes) and relations. Buildings will typically be closed ways (as on that page) or <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygons</a> (one or more outer areas from which one or more inner areas must be subtracted).</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Building">This page</a> explains a bit about how buildings are mapped.</p>
-<p>In order to obtain the data, you'll either want to process an XML data extract (see the links from <a href="http://planet.openstreetmap.org/">this page</a>) or use a querying mechanism such as <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> to fetch it.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">This page</a> of the beginner's guide explains the sort of data that there is - nodes (each with a latitude and longitude), ways (connected nodes) and relations. Buildings will typically be closed ways (as on that page) or <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygons</a> (one or more outer areas from which one or more inner areas must be subtracted).</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Building">This page</a> explains a bit about how buildings are mapped.</p>
+<p>In order to obtain the data, you'll either want to process an XML data extract (see the links from <a href="http://planet.openstreetmap.org/">this page</a>) or use a querying mechanism such as <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> to fetch it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

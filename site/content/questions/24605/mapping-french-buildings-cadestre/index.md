@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should read the following wiki page: <a href="http://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents">http://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents</a></p>
+<p>You should read the following wiki page: <a href="https://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents">https://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents</a></p>
 <p>Pour plus d'aide et de contact avec la communauté française OSM c'est ici: <a href="http://forum.openstreetmap.fr/">http://forum.openstreetmap.fr/</a></p>
 </div>
 <div class="answer-controls post-controls">

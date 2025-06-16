@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to create a no-U turn restriction at this intersection?"
-description = '''http://www.openstreetmap.org/edit?editor=potlatch2#map=19/38.85194/-77.34922 I have done a couple of restrictions but I am unable to do a No U-turn restriction here. Coming from the south heading north on Monument Drive, there is a no U-turn at Government Center Parkway intersection. Usually, when I...'''
+description = '''https://www.openstreetmap.org/edit?editor=potlatch2#map=19/38.85194/-77.34922 I have done a couple of restrictions but I am unable to do a No U-turn restriction here. Coming from the south heading north on Monument Drive, there is a no U-turn at Government Center Parkway intersection. Usually, when I...'''
 date = "2013-08-31T03:54:00Z"
 lastmod = "2013-09-02T02:42:00Z"
 weight = 25990
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=19/38.85194/-77.34922">http://www.openstreetmap.org/edit?editor=potlatch2#map=19/38.85194/-77.34922</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=19/38.85194/-77.34922">https://www.openstreetmap.org/edit?editor=potlatch2#map=19/38.85194/-77.34922</a></p>
 <p>I have done a couple of restrictions but I am unable to do a No U-turn restriction here. Coming from the south heading north on Monument Drive, there is a no U-turn at Government Center Parkway intersection.</p>
 <p>Usually, when I do these restrictions, I get a list of the ways/streets in the drop-down menu (in Potlatch) but in this case, there are no ways/ streets showing at all. Any ideas? Thanks!</p>
 </div>
@@ -246,7 +246,7 @@ osqa_accepted = false
 <div id="post-26005-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you. I used a wrong tool to split. I have now separated the segments, still cannot make it. WHich Intersection node should I pick (..9001)? Then I want to add the no U-turn restriction. From way ...1397 to ...6658. But 6658 does not show up in the drop down menu, only ..6653 which is a continuation of 6658. (BTW I have read: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">http://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions</a> but still am unable to make it work). Can you describe step by step how you do it in this case?</p>
+<p>Thank you. I used a wrong tool to split. I have now separated the segments, still cannot make it. WHich Intersection node should I pick (..9001)? Then I want to add the no U-turn restriction. From way ...1397 to ...6658. But 6658 does not show up in the drop down menu, only ..6653 which is a continuation of 6658. (BTW I have read: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">https://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions</a> but still am unable to make it work). Can you describe step by step how you do it in this case?</p>
 </div>
 <div id="comment-26005-info" class="comment-info">
 <span class="comment-age">(31 Aug '13, 11:00)</span> <span class="comment-user userinfo">slover98</span>
@@ -257,7 +257,7 @@ osqa_accepted = false
 <div id="post-26006-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>PS. I also read this but still cannot make it work: <a href="https://help.openstreetmap.org/questions/3530/what-is-the-proper-way-to-add-no-u-turn-restrictions-when-the-road-is-divided">https://help.openstreetmap.org/questions/3530/what-is-the-proper-way-to-add-no-u-turn-restrictions-when-the-road-is-divided</a></p>
+<p>PS. I also read this but still cannot make it work: <a href="/questions/3530/what-is-the-proper-way-to-add-no-u-turn-restrictions-when-the-road-is-divided">https://help.openstreetmap.org/questions/3530/what-is-the-proper-way-to-add-no-u-turn-restrictions-when-the-road-is-divided</a></p>
 </div>
 <div id="comment-26006-info" class="comment-info">
 <span class="comment-age">(31 Aug '13, 11:08)</span> <span class="comment-user userinfo">slover98</span>
@@ -314,7 +314,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/no-u-turn_1.GIF" alt="alt text" /></p>
+<p><img src="/upfiles/no-u-turn_1.GIF" alt="alt text" /></p>
 <p>I did the following. First I split the nodes. Then I created the first no u-turn node, where the red and short blue sections intersect. What helps is to select “Show” on the restriction menu so the map shows you which sections of the road are added to the restriction.</p>
 <p>The I proceeded to the second node (upper left corner) and again created a no u-turn restriction.</p>
 <p>Perhaps this is how it should be done(?)</p>

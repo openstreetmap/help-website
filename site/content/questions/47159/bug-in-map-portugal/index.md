@@ -93,7 +93,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Try another provider:<br />
-<a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a><br />
 I find the bbbike ones are fine for my needs.<br />
 Ensure you only have one map enabled.<br />
 You could use JaVaWa Device Manager <a href="http://www.javawa.nl/jdm_en.html">http://www.javawa.nl/jdm_en.html</a> to check for problems.</p>

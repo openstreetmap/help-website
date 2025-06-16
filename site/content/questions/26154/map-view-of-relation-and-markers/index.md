@@ -42,9 +42,9 @@ osqa_accepted = false
 <p>Dear OpenStreetMap users,</p>
 <p>today I need your help, cause I want to view a relation and two (or more) markers onto the same map, how can I archieve this?</p>
 <ul>
-<li>relation: <a href="http://www.openstreetmap.org/?relation=62463">hanseatic city of Lübeck</a>.</li>
-<li>marker 1: <a href="http://www.openstreetmap.org/?mlon=10.714526174019&amp;mlat=53.803372409097">airport</a>.</li>
-<li>marker 2: <a href="http://www.openstreetmap.org/?mlon=10.669926402531&amp;mlat=53.867539782056">central railway station</a>.</li>
+<li>relation: <a href="https://www.openstreetmap.org/?relation=62463">hanseatic city of Lübeck</a>.</li>
+<li>marker 1: <a href="https://www.openstreetmap.org/?mlon=10.714526174019&amp;mlat=53.803372409097">airport</a>.</li>
+<li>marker 2: <a href="https://www.openstreetmap.org/?mlon=10.669926402531&amp;mlat=53.867539782056">central railway station</a>.</li>
 </ul>
 <p>Thanks for your help.</p>
 <p>best regards</p>

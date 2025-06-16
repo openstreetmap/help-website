@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First of all, you don't want to import the GPS trace as-is. GPS isn't accurate enough. Consider <a href="https://help.openstreetmap.org/upfiles/GPS_traces.jpg">this set of traces from my hiking</a>: most of the trails are less than a meter wide, yet it's common for multiple traces to disagree with each other by ten to twenty meters. In particular, note the switchbacks in the center of the image: there are five traces there, and not one of them follows the actual route of the trail.</p>
+<p>First of all, you don't want to import the GPS trace as-is. GPS isn't accurate enough. Consider <span>this set of traces from my hiking</span>: most of the trails are less than a meter wide, yet it's common for multiple traces to disagree with each other by ten to twenty meters. In particular, note the switchbacks in the center of the image: there are five traces there, and not one of them follows the actual route of the trail.</p>
 <p>The best way to map a trail from a GPS trace is to use it as a background while drawing the trail. Open the GPX file in the editor (in iD, you do this through the "Custom Map Data" section of the "Map Data" tab; in JOSM, you open the GPX file using "File"-&gt;"Open"). Pick the best-aligned imagery in the area (the GPS trace may be helpful for this), and draw the trail on the map using a combination of the imagery, the GPS trace, and your memory of the hike. Then add appropriate tags and upload the result.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -327,7 +327,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Here's a similar question i asked, i'm sure you will find the answers useful <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a> the above covers a way marked trail, but for adding an unmapped trail watch some of the utube videos, internet search. "Adding trails to OpenStreetMap (OSM) using GPS ... - YouTube" they can be quite a good way to learn OSM.</p>
+<p>Here's a similar question i asked, i'm sure you will find the answers useful <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a> the above covers a way marked trail, but for adding an unmapped trail watch some of the utube videos, internet search. "Adding trails to OpenStreetMap (OSM) using GPS ... - YouTube" they can be quite a good way to learn OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

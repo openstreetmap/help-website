@@ -172,13 +172,13 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>On osm.org, move the map so that an electricity pole is on the map. Here's an example:</p>
-<p><a href="http://www.openstreetmap.org/?lat=53.27938&amp;lon=-1.3337&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=53.27938&amp;lon=-1.3337&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=53.27938&amp;lon=-1.3337&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=53.27938&amp;lon=-1.3337&amp;zoom=17&amp;layers=M</a></p>
 <p>Zoom in.</p>
 <p>Select "browse map data" from the "edit" menu (select the little triangle on the right to get the menu).</p>
 <p>The electricity pole will be shown by a green dot. Click it.</p>
 <p>Click "details" to the right of the node number. You can now see what it's tagged as an who added it (and the node number to look for in your "Denmark" extract).</p>
 <p>Repeat the process for the polyline ("way") representing the cable.</p>
-<p>On that example of mine, the poles are "<a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dtower">power=tower</a>" and the cables "<a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dline">power=line</a>".</p>
+<p>On that example of mine, the poles are "<a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dtower">power=tower</a>" and the cables "<a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dline">power=line</a>".</p>
 <p>If this doesn't work for you perhaps you could post a permalink to the area where you can see power lines but can't get data for?</p>
 </div>
 <div class="answer-controls post-controls">

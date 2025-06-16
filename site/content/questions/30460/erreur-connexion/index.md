@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Je vois que <a href="http://hdyc.neis-one.org/?timarso">tu utilise JOSM</a>. En reprenant en Français les suggestions de <a href="https://help.openstreetmap.org/questions/30091/beginner-with-josm-problem-connecting-to-openstreet">cette question</a>:</p>
+<p>Je vois que <a href="http://hdyc.neis-one.org/?timarso">tu utilise JOSM</a>. En reprenant en Français les suggestions de <a href="/questions/30091/beginner-with-josm-problem-connecting-to-openstreet">cette question</a>:</p>
 <ul>
 <li>Peux-tu télécharger <a href="http://api.openstreetmap.org/api/0.6/relation/161648">http://api.openstreetmap.org/api/0.6/relation/161648</a> avec un navigateur comme firefox ?Si ce n'est pas le cas, il s'agit d'un problème réseau qui n'est pas la faute de JOSM.</li>
 <li>Vérifie tes paramètres de proxy JOSM en allant dans "preferences -&gt; connection settings -&gt; proxy settings" si tu te connecte à internet via un proxy (copie les parametres de ton navigateur).</li>

@@ -118,7 +118,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you edit the map the changes are uploaded to the central OSM server. From there the changes trigger rerendering of the various maps. Depending on your iPhone program, you may get the changes through the central server directly, through one of the maps that are rendered, or from the maker of the program. This might take seconds, hours or days depending on the delivery method.</p>
-<p>For a list of iPhone programs that use OpenStreetMap go to <a href="http://wiki.openstreetmap.org/wiki/IPhone#Apps">the wiki</a>. There are many programs that are using other maps such as Google or Bing maps and these will not show your changes. However there seems to be more use of OpenStreetMap by programs that actually use the map data and not just the map renderings as OSM is cheaper for start-ups.</p>
+<p>For a list of iPhone programs that use OpenStreetMap go to <a href="https://wiki.openstreetmap.org/wiki/IPhone#Apps">the wiki</a>. There are many programs that are using other maps such as Google or Bing maps and these will not show your changes. However there seems to be more use of OpenStreetMap by programs that actually use the map data and not just the map renderings as OSM is cheaper for start-ups.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

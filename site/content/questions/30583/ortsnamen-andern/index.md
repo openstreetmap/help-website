@@ -114,8 +114,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hallo shoebell, willkommen bei OSM :)</p>
-<p>Zu deinem konkreten Beispiel: <a href="http://www.openstreetmap.org/note/116218">http://www.openstreetmap.org/note/116218</a></p>
-<p>Wenn du mit iD arbeitest (empfohlen, da aktuellster Editor), dann findest du an der Stelle des Namens einen Marker. <a href="http://www.openstreetmap.org/node/240127434">Dieser</a> repräsentiert ein Punktobjekt bei OSM, dem entsprechende Merkmale hinterlegt sind. Wenn du es mit linksklick selektierst, werden diese auch auf der linken Seite aufgelistet und du kannst zum Beispiel den Namen ändern. Aufgrund deines Bugs scheint das aber schon jemand gemacht zu haben. Wie du richtig schreibst, kann der Name u.U. noch an den Grenzen der Stadt falsch geschrieben sein. Da fehlt mir gerade die Zeit das zu überprüfen...</p>
+<p>Zu deinem konkreten Beispiel: <a href="https://www.openstreetmap.org/note/116218">https://www.openstreetmap.org/note/116218</a></p>
+<p>Wenn du mit iD arbeitest (empfohlen, da aktuellster Editor), dann findest du an der Stelle des Namens einen Marker. <a href="https://www.openstreetmap.org/node/240127434">Dieser</a> repräsentiert ein Punktobjekt bei OSM, dem entsprechende Merkmale hinterlegt sind. Wenn du es mit linksklick selektierst, werden diese auch auf der linken Seite aufgelistet und du kannst zum Beispiel den Namen ändern. Aufgrund deines Bugs scheint das aber schon jemand gemacht zu haben. Wie du richtig schreibst, kann der Name u.U. noch an den Grenzen der Stadt falsch geschrieben sein. Da fehlt mir gerade die Zeit das zu überprüfen...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

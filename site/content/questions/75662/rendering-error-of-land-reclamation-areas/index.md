@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/map.png" alt="alt text" /> You could see that the rendering is quite wrong especially for land reclamation areas, and this issue has persisted for weeks. Even redrawing most of the parts cannot really solve certain areas that should not be in the sea or on the land.</p>
+<p><img src="/upfiles/map.png" alt="alt text" /> You could see that the rendering is quite wrong especially for land reclamation areas, and this issue has persisted for weeks. Even redrawing most of the parts cannot really solve certain areas that should not be in the sea or on the land.</p>
 <p><a href="https://www.openstreetmap.org/#map=16/25.1451/121.3736">https://www.openstreetmap.org/#map=16/25.1451/121.3736</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">

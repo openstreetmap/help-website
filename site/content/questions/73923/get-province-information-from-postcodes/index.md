@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I did the following query using Nominatim: <code>loca = geocode(query = row['CAP'], country_codes = country, addressdetails = True, language = 'it,en')</code></p>
 <p>To retrieve the city I found out that there can be varoius information in the addressdetails: loca.raw['address']['city'], loca.raw['address']['hamlet'], loca.raw['address']['village']. To retrieve the region I found out that the information is stored in loca.raw['address']['state']. For the province I have found the information under loca.raw['address']['county'], but it is not always correct.</p>
 <p>I'll make you an example: postcode 47122, it is a city in Italy, province Forlì. When I search this postcode in nominatim.openstreetmap I get this result:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Immagine_0kGFmbe.png" alt="alt text" /></p>
+<p><img src="/upfiles/Immagine_0kGFmbe.png" alt="alt text" /></p>
 <p>So my question is: Is this workflow correct or there are better ways to retrieve city, province and region? How can I get a more detailed address that includes all the information I need?</p>
 <p>Thanks, Carlotta.</p>
 </div>

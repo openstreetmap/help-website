@@ -83,7 +83,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>this is the permalink to the area: <a href="http://www.openstreetmap.org/?lat=30.26266&amp;lon=-5.68114&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=30.26266&amp;lon=-5.68114&amp;zoom=17&amp;layers=M</a> the only tracks there are from my N900.</p>
+<p>this is the permalink to the area: <a href="https://www.openstreetmap.org/?lat=30.26266&amp;lon=-5.68114&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=30.26266&amp;lon=-5.68114&amp;zoom=17&amp;layers=M</a> the only tracks there are from my N900.</p>
 <p>tracks made both in car and on foot, mostly open sky, definitely no tall buildings, some brief parts in covered passages.</p>
 <p>all tracks have the same average offset as compared to the background image.</p>
 </div>
@@ -353,7 +353,7 @@ osqa_accepted = true
 <div id="post-6447-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've just been reading this <a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">http://wiki.openstreetmap.org/wiki/True_Offset_Process</a> hope it helps</p>
+<p>I've just been reading this <a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">https://wiki.openstreetmap.org/wiki/True_Offset_Process</a> hope it helps</p>
 </div>
 <div id="comment-6447-info" class="comment-info">
 <span class="comment-age">(19 Jul '11, 18:00)</span> <span class="comment-user userinfo">andy mackey</span>

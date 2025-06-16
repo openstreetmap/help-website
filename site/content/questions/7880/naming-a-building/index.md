@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to name our local Scout Hall, which is in the middle of the screen <a href="http://www.openstreetmap.org/?lat=51.364236&amp;lon=-0.132632&amp;zoom=18">here</a> can someone explain why the name does not appear on the published map?</p>
+<p>I am trying to name our local Scout Hall, which is in the middle of the screen <a href="https://www.openstreetmap.org/?lat=51.364236&amp;lon=-0.132632&amp;zoom=18">here</a> can someone explain why the name does not appear on the published map?</p>
 <p>Ian</p>
 </div>
 <div id="question-tags" class="tags-container tags">

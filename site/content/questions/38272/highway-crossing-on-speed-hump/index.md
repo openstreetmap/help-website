@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi looking at the Wiki pages <a href="http://wiki.openstreetmap.org/wiki/Traffic_calming">http://wiki.openstreetmap.org/wiki/Traffic_calming</a> a bump is 0.30 m, a hump is longer but has no flat area to carry a cycle way. Tag it traffic_calming=table, it has a flat area to allow bicycles a safe passage over the highway.</p>
+<p>Hi looking at the Wiki pages <a href="https://wiki.openstreetmap.org/wiki/Traffic_calming">https://wiki.openstreetmap.org/wiki/Traffic_calming</a> a bump is 0.30 m, a hump is longer but has no flat area to carry a cycle way. Tag it traffic_calming=table, it has a flat area to allow bicycles a safe passage over the highway.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

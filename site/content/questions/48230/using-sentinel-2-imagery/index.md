@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>This topic is probably more suitable to be discussed in the talk-legal mailing list, I suppose.</p>
-<p>I have seen it being mentioned in the user diaries (<a href="http://www.openstreetmap.org/user/PlaneMad/diary/37816">for example</a>) and in some OSM-related blogs (<a href="http://blog.imagico.de/more-images-for-mapping-in-osm/">for example</a>).</p>
+<p>I have seen it being mentioned in the user diaries (<a href="https://www.openstreetmap.org/user/PlaneMad/diary/37816">for example</a>) and in some OSM-related blogs (<a href="http://blog.imagico.de/more-images-for-mapping-in-osm/">for example</a>).</p>
 <p>But I have came across some arguments saying that there's ambiguity in the license, so probably just no, I guess. Sorry, I am not so sure if I understood all that legalese.</p>
 <p>So I would like to know if it is fine to use Sentinel-2 as a tracing layer. If it is OK, then my mapping area could benefit from it.</p>
 </div>
@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-48387-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>So, I just found recently that there's a mention about GMES/Copernicus on the wiki - <a href="http://wiki.openstreetmap.org/wiki/Contributors#EU_Copernicus_.28GMES.29_data">http://wiki.openstreetmap.org/wiki/Contributors#EU_Copernicus_.28GMES.29_data</a></p>
+<p>So, I just found recently that there's a mention about GMES/Copernicus on the wiki - <a href="https://wiki.openstreetmap.org/wiki/Contributors#EU_Copernicus_.28GMES.29_data">https://wiki.openstreetmap.org/wiki/Contributors#EU_Copernicus_.28GMES.29_data</a></p>
 <p>Guess we could use them.</p>
 </div>
 <div id="comment-48387-info" class="comment-info">

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi all,</p>
 <p>how to get rid of the title and especially the author of the Map?</p>
 <p>Thank you very much. Regards</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Picture.JPG" alt="Titel and Author of Map" /></p>
+<p><img src="/upfiles/Picture.JPG" alt="Titel and Author of Map" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span> <span class="post-tag tag-link-title" rel="tag" title="see questions tagged &#39;title&#39;">title</span> <span class="post-tag tag-link-author" rel="tag" title="see questions tagged &#39;author&#39;">author</span>

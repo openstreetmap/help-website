@@ -268,8 +268,8 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for the feedback. I have looked at YouTube videos but it's hard to compare their resolution with what could be had from still shots. Shooting video for a 5 or 6 hour ride isn't feasible (battery &amp; storage limitations) so I would be shooting still photos every couple of seconds.</p>
-<p><a href="http://help.openstreetmap.org/users/4984/iii">@iii</a> - I'll visit those links when I get the chance.</p>
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> - to which other "far cheaper" cameras are you referring?</p>
+<p><a href="https://help.openstreetmap.org/users/4984/iii">@iii</a> - I'll visit those links when I get the chance.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> - to which other "far cheaper" cameras are you referring?</p>
 </div>
 <div id="comment-44119-info" class="comment-info">
 <span class="comment-age">(10 Jul '15, 18:16)</span> <span class="comment-user userinfo">AlaskaDave</span>
@@ -292,7 +292,7 @@ osqa_accepted = true
 <div id="post-44145-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave"></a><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> "eyeCam" for example. I don't own one but according to youtube videos it will be sufficient for identifying road signs. And there are various similar cheap cameras available. The video quality of a GoPro camera will be higher of course.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave"></a><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> "eyeCam" for example. I don't own one but according to youtube videos it will be sufficient for identifying road signs. And there are various similar cheap cameras available. The video quality of a GoPro camera will be higher of course.</p>
 </div>
 <div id="comment-44145-info" class="comment-info">
 <span class="comment-age">(13 Jul '15, 10:26)</span> <span class="comment-user userinfo">scai ♦</span>

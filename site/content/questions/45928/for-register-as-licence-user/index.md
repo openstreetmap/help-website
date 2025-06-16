@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap does not sell access to its servers. You can either set up your own server (the software you need is Open Source, see <a href="http://wiki.openstreetmap.org/wiki/Nominatim">wiki instructions),</a> or you can pay for a commercial OpenStreetMap based geocoding service. A (not necessarily complete) list of providers is also <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">on the wiki.</a></p>
+<p>OpenStreetMap does not sell access to its servers. You can either set up your own server (the software you need is Open Source, see <a href="https://wiki.openstreetmap.org/wiki/Nominatim">wiki instructions),</a> or you can pay for a commercial OpenStreetMap based geocoding service. A (not necessarily complete) list of providers is also <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">on the wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -138,7 +138,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11537/cdesai">@CDesai</a> I'm not sure that you do understand.</p>
+<p><a href="https://help.openstreetmap.org/users/11537/cdesai">@CDesai</a> I'm not sure that you do understand.</p>
 <p>OpenStreetMap isn't a web service free for you to use. If you want to use a commercial service you're free to do so - contact one of the service providers mentioned above.</p>
 </div>
 <div id="comment-45938-info" class="comment-info">
@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See especially the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a> and try to find out what service or software can do reverse geocoding.</p>
+<p>See especially the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a> and try to find out what service or software can do reverse geocoding.</p>
 <p>Then get in contact to the organisations / companies that drive those services, like komoot.de for Photon... or mapzen.com for pelias or <a href="https://mapzen.com/projects/search">Search</a> ... or mapbox.com should have also a solution.</p>
 </div>
 <div class="answer-controls post-controls">

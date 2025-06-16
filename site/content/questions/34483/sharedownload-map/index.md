@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Here are some answers to <a href="https://help.openstreetmap.org/tags/printing/?sort=mostvoted">print questions</a> and <a href="https://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper">another</a> I just printed a jpeg of my locality via the share link on the right side ok, but having tried a second time for a bigger area I received this error message... "Error The load average on the server is too high at the moment. Please wait a few minutes before trying again."</p>
+<p>Here are some answers to <a href="https://help.openstreetmap.org/tags/printing/?sort=mostvoted">print questions</a> and <a href="/questions/9043/printing-osm-maps-to-paper">another</a> I just printed a jpeg of my locality via the share link on the right side ok, but having tried a second time for a bigger area I received this error message... "Error The load average on the server is too high at the moment. Please wait a few minutes before trying again."</p>
 <p>There are high loads on the servers at times.</p>
 <p>Let us know if this doesn't solve your problem</p>
 </div>

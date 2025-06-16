@@ -80,7 +80,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Maybe some hints are here?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/CartoCSS">http://wiki.openstreetmap.org/wiki/CartoCSS</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/CartoCSS">https://wiki.openstreetmap.org/wiki/CartoCSS</a></p>
 </div>
 <div id="comment-28702-info" class="comment-info">
 <span class="comment-age">(02 Dec '13, 19:53)</span> <span class="comment-user userinfo">stephan75</span>

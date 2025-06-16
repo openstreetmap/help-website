@@ -120,8 +120,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First, if you've not seen it already, have a read of <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this section</a> of the beginners' guide in the OpenStreetMap wiki - it explains the sorts of data that you'll find in OSM.</p>
-<p>One of the sorts of data that that page refers to is a "way" - a list of OSM "nodes". Each OSM node has a latitude and longitude value. A street may consist of several ways (if you look at <a href="http://www.openstreetmap.org/node/300457718">this node</a> you'll see that it is part of three ways with the same name - one single carriageway part and two ways each forming half of a dual carriageway) so you'll probably want to select ways by name</p>
+<p>First, if you've not seen it already, have a read of <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this section</a> of the beginners' guide in the OpenStreetMap wiki - it explains the sorts of data that you'll find in OSM.</p>
+<p>One of the sorts of data that that page refers to is a "way" - a list of OSM "nodes". Each OSM node has a latitude and longitude value. A street may consist of several ways (if you look at <a href="https://www.openstreetmap.org/node/300457718">this node</a> you'll see that it is part of three ways with the same name - one single carriageway part and two ways each forming half of a dual carriageway) so you'll probably want to select ways by name</p>
 <p>How you search for things by name depends on how much data you want. If you just want one specific road then <a href="http://overpass-turbo.eu/">Overpass Turbo</a> might be an option - browse to an area of interest and use a query like this:</p>
 <pre><code>&lt;osm-script output=&quot;json&quot; timeout=&quot;25&quot;&gt;
   &lt;!-- gather results --&gt;
@@ -136,7 +136,7 @@ One Answer:
   &lt;recurse type=&quot;down&quot;/&gt;
   &lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&gt;
 &lt;/osm-script&gt;</code></pre>
-<p>If you want more data, then you'll want to download an extract of the OSM for your area (use one of the "extract" links from <a href="http://planet.openstreetmap.org/">here</a>) and then extract data from it, perhaps as described in <a href="https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list">this question</a>.</p>
+<p>If you want more data, then you'll want to download an extract of the OSM for your area (use one of the "extract" links from <a href="http://planet.openstreetmap.org/">here</a>) and then extract data from it, perhaps as described in <a href="/questions/9816/the-best-way-to-extract-street-list">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

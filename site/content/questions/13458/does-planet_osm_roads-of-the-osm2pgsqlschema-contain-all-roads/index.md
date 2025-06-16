@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Regarding to wiki, <em>planet_osm_roads</em> contains a subset of <em>planet_osm_line</em>. <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Processed_Data">see wiki</a></p>
+<p>Regarding to wiki, <em>planet_osm_roads</em> contains a subset of <em>planet_osm_line</em>. <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Processed_Data">see wiki</a></p>
 <p>But does it cover all roads? I am only interested in the data about roads for cars.</p>
 <p>Can I use the <em>planet_osm_roads</em> to filter this information, or is it maybe incomplete?</p>
 </div>

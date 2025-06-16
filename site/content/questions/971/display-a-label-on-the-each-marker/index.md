@@ -116,7 +116,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It would help if you provided some more details of what you want to do. ie Do you want a map on your own website? And what do you mean by markers? Places in OSM, or some other waypoints?</p>
-<p>The best option is probably to use <a href="http://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a>. This lets you show an OSM map, with markers overlaid, and popups when you click on them. There is a simple example of this here: <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">Openlayers POI layer example</a>. This needs the markers in a tab separated text file, so you will have to convert your markers to that format.</p>
+<p>The best option is probably to use <a href="https://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a>. This lets you show an OSM map, with markers overlaid, and popups when you click on them. There is a simple example of this here: <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">Openlayers POI layer example</a>. This needs the markers in a tab separated text file, so you will have to convert your markers to that format.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -179,7 +179,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, you can show labels on the map in OpenLayers. See this example here: <a href="http://openlayers.org/dev/examples/vector-features-with-text.html">OpenLayers Labeled features example</a>. It shouldn't be too hard to modify that to show an OSM map instead, and change the markers and labels to what you want. You can probably find more details in the <a href="http://docs.openlayers.org/">OpenLayers Documentation</a></p>
-<p>Alternatively, it is possible to show OSM maps in the Google Maps API. See <a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">Google Maps example</a>. So you could modify that example map that you linked, to use OSM maps instead of Google.</p>
+<p>Alternatively, it is possible to show OSM maps in the Google Maps API. See <a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">Google Maps example</a>. So you could modify that example map that you linked, to use OSM maps instead of Google.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

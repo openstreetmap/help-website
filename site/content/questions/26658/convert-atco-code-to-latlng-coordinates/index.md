@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The ATCO code is an identifier for bus stops in the <a href="http://wiki.openstreetmap.org/wiki/NaPTAN">NaPTAN</a> database, which has been imported into OSM in parts of the UK. You can search OSM for bus stops with the naptan:AtcoCode tag key that you want, otherwise it should be possible to find the stop in NaPTAN itself.</p>
+<p>The ATCO code is an identifier for bus stops in the <a href="https://wiki.openstreetmap.org/wiki/NaPTAN">NaPTAN</a> database, which has been imported into OSM in parts of the UK. You can search OSM for bus stops with the naptan:AtcoCode tag key that you want, otherwise it should be possible to find the stop in NaPTAN itself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -197,7 +197,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not OSM data, but you might want to look at the <a href="http://data.gov.uk/dataset/naptan">NaPTAN data</a>. Some of this was imported as a trial into OpenStreetMap and where that has been done the stops may have a naptan:AtcoCode tag, <a href="http://www.openstreetmap.org/browse/node/474890256">such as this one</a>. Where the data has been verified the position is likely to be more accurate than the original NaPTAN data, though their data may well have been updated since the original data was made available and the trial imports were done.</p>
+<p>Not OSM data, but you might want to look at the <a href="http://data.gov.uk/dataset/naptan">NaPTAN data</a>. Some of this was imported as a trial into OpenStreetMap and where that has been done the stops may have a naptan:AtcoCode tag, <a href="https://www.openstreetmap.org/browse/node/474890256">such as this one</a>. Where the data has been verified the position is likely to be more accurate than the original NaPTAN data, though their data may well have been updated since the original data was made available and the trial imports were done.</p>
 <p>The NaPTAN data states precision of: "+/- 1 metre spatial accuracy of Ordnance Survey Grid Reference" so you may need to convert the grid reference to lat/lon (and then perhaps to WGS84 or whatever you need).</p>
 </div>
 <div class="answer-controls post-controls">

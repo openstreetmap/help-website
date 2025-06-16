@@ -239,7 +239,7 @@ weitere Postleitzahlen: <strong>70173, 70174, 70176, 70178, 70180, 70182, 70184,
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9913/ali-sabahi">@Ali Sabahi</a> If you'd like your questions to be answered, it's best not to add them as "new answers" to an original question. Edit the original question or add comments to it - that way all parts of your question are visible in one place.</p>
+<p><a href="https://help.openstreetmap.org/users/9913/ali-sabahi">@Ali Sabahi</a> If you'd like your questions to be answered, it's best not to add them as "new answers" to an original question. Edit the original question or add comments to it - that way all parts of your question are visible in one place.</p>
 </div>
 <div id="comment-38147-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 09:03)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

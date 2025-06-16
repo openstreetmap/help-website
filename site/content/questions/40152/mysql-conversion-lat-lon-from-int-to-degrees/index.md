@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at your <a href="http://www.openstreetmap.org/node/2094180296">first example</a> which is at 34.9660688, 33.665498 it suggests you divide by 10,000,000</p>
+<p>Looking at your <a href="https://www.openstreetmap.org/node/2094180296">first example</a> which is at 34.9660688, 33.665498 it suggests you divide by 10,000,000</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

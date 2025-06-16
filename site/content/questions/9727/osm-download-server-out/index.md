@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Instead of using the Export tab on the OSM page to get .osm data, you can use a Planet extract. These are available for a variety of countries/areas, covering most of the world. See <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a></p>
+<p>Instead of using the Export tab on the OSM page to get .osm data, you can use a Planet extract. These are available for a variety of countries/areas, covering most of the world. See <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a></p>
 <p>If you don't need all of the area of a Planet extract, you can use Osmosis or Osmconvert to extract a smaller area, before loading it into Mapwel. Or use Splitter to split it into smaller tiles.</p>
 </div>
 <div class="answer-controls post-controls">

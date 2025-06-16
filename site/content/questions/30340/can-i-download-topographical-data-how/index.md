@@ -131,7 +131,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... or have a look at <a href="http://wiki.openstreetmap.org/wiki/SRTM">http://wiki.openstreetmap.org/wiki/SRTM</a></p>
+<p>... or have a look at <a href="https://wiki.openstreetmap.org/wiki/SRTM">https://wiki.openstreetmap.org/wiki/SRTM</a></p>
 </div>
 <div id="comment-35183-info" class="comment-info">
 <span class="comment-age">(25 Jul '14, 15:16)</span> <span class="comment-user userinfo">stephan75</span>

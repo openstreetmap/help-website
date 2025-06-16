@@ -44,9 +44,9 @@ osqa_accepted = false
 <hr />
 <h2 id="options-today">Options today</h2>
 <p>These are the openstreetmap.org/user <strong>"official options"</strong>:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot-2018-8-10_OpenStreetMap.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot-2018-8-10_OpenStreetMap.png" alt="alt text" /></p>
 <p>About the <strong>HELP.OSM options</strong>: the official username-login is working, but need password... The "or..." set of optoins (for "one click login") have very poor intersection</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot-2018-8-10_Login_-_OSM_Help.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot-2018-8-10_Login_-_OSM_Help.png" alt="alt text" /></p>
 <hr />
 </div>
 <div id="question-tags" class="tags-container tags">

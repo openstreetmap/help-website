@@ -164,7 +164,7 @@ So my search still continues.......</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10650/renegps">@ReneGPS</a>: great, thanks for sharing your further investigation.</p>
+<p><a href="https://help.openstreetmap.org/users/10650/renegps">@ReneGPS</a>: great, thanks for sharing your further investigation.</p>
 <p>Just as an example how it could be: We have many OSM-based maps and programs to make maps <span>for Garmin</span> devices (because someone has found out how the Garmin map format works, if I remember correctly not supplied openly by Garmin). It <a href="http://www.gopal-navigator.de/wiki/GoPal_Outdoor_Navigator_2_-_FAQ#Kann_ich_eigenes_Kartenmaterial_erstellen.2Fbenutzen.2C_z.B_OSM.3F">seems</a> (FAQ of the previous software version which is linked from the current SW FAQ) the file format is not know / converter software is not available. So you need to reply on Medion-supplied OSM-based maps.</p>
 </div>
 <div id="comment-41689-info" class="comment-info">

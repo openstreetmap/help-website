@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The problem is that <a href="https://www.openstreetmap.org/node/2397936672/history#map=16/42.8598/-71.9497">node 2397936672</a> was deleted in a changeset three hours before your question (Although you seem to have noticed the changeset and commented on it since posting your question). As the <code>&lt;nd ref="2397936672"/&gt;</code> is within the <code>&lt;way id="230172065" version="4"&gt;...&lt;/way&gt;</code> definition it is required for your edit to be valid. More background on OSM elements can be found on <a href="https://wiki.openstreetmap.org/wiki/Elements">this page</a> on the wiki.</p>
-<p>I don't know if iD now has a conflict resolution environment like JOSM's these days, it didn't when <a href="https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">this question</a> was asked.</p>
+<p>I don't know if iD now has a conflict resolution environment like JOSM's these days, it didn't when <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">this question</a> was asked.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

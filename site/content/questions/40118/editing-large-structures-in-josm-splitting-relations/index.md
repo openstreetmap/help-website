@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In a <a href="http://help.openstreetmap.org/questions/40093/how-to-edit-large-structures">recent question</a>, heunigreenfreak asked how to edit large structures. He is using the iD editor with which it's not really possible. Respondents suggested he use JOSM, which is much more capable. I have been using JOSM for quite a while and feel fairly comfortable with it but yet am unsure about the best way to do what heunigreenfreak asked. In particular, there is a very large multipolygon (natural=wood) in northern Thailand that has grown to include 769 members. It has many "outer" segments and many "inner" segments. When one is modifying it, adding inner regions for example, one <em>should first</em> download the entire structure, a task that leaves plenty of time for a long coffee break. (id:<a href="http://www.openstreetmap.org/relation/1599039">1599039</a>). Its become very unwieldy and I would like to break it into several smaller parts, say along river valleys or highways, areas that are not actually wooded.</p>
+<p>In a <a href="/questions/40093/how-to-edit-large-structures">recent question</a>, heunigreenfreak asked how to edit large structures. He is using the iD editor with which it's not really possible. Respondents suggested he use JOSM, which is much more capable. I have been using JOSM for quite a while and feel fairly comfortable with it but yet am unsure about the best way to do what heunigreenfreak asked. In particular, there is a very large multipolygon (natural=wood) in northern Thailand that has grown to include 769 members. It has many "outer" segments and many "inner" segments. When one is modifying it, adding inner regions for example, one <em>should first</em> download the entire structure, a task that leaves plenty of time for a long coffee break. (id:<a href="https://www.openstreetmap.org/relation/1599039">1599039</a>). Its become very unwieldy and I would like to break it into several smaller parts, say along river valleys or highways, areas that are not actually wooded.</p>
 <p>So how does one go about splitting such a large structure in JOSM? It cannot be entirely seen in one normal download and worse, because of its size any edits run the risk of encountering conflicts if such editing isn't done in a short time frame. Resolving potentially numerous conflicts is what keeps me from trying this on my own.</p>
 <p>Anybody care to provide a step-by-step guide to splitting large areas in JOSM?</p>
 </div>
@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-40133-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: with "general best-practise question" I meant a question which does not focus on a specific sub-topic of working with "large structures" (like your question here does).</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: with "general best-practise question" I meant a question which does not focus on a specific sub-topic of working with "large structures" (like your question here does).</p>
 </div>
 <div id="comment-40133-info" class="comment-info">
 <span class="comment-age">(08 Jan '15, 11:29)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -113,7 +113,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2041/paul_012">@Paul_012</a> That's a great help. I made a few changes using that technique just now but it raises new questions. I have not been able to download the "entire relation" because it seems to be composed of many individual smaller relations. The id I gave in the original post, 1599039, is only one piece of the giant one. When splitting other portions of the giant, how can I be sure I'm not splitting a "shared" way, that is, one shared by two or more pieces of the puzzle?</p>
+<p><a href="https://help.openstreetmap.org/users/2041/paul_012">@Paul_012</a> That's a great help. I made a few changes using that technique just now but it raises new questions. I have not been able to download the "entire relation" because it seems to be composed of many individual smaller relations. The id I gave in the original post, 1599039, is only one piece of the giant one. When splitting other portions of the giant, how can I be sure I'm not splitting a "shared" way, that is, one shared by two or more pieces of the puzzle?</p>
 <p>I find it difficult to even describe the problem in words LOL. Perhaps there is a "parent relation" - if so, I cannot find it.</p>
 </div>
 <div id="comment-40174-info" class="comment-info">
@@ -126,7 +126,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave"></a><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: <span>relation 1599039</span> has no "parent relation" – otherwise it would be listed at the bottom of the linked data page with the text "Part of Relation xxxx".</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave"></a><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: <span>relation 1599039</span> has no "parent relation" – otherwise it would be listed at the bottom of the linked data page with the text "Part of Relation xxxx".</p>
 <p>Alternatively, you could also see this in JOSM if you select the relation in the <a href="https://josm.openstreetmap.de/wiki/Help/Dialog/TagsMembership">TagsMembership</a> dialog (see the example image on the docu page). This way you also find out to which "pieces of the puzzle" a "shared" way belongs (select the way to be inspected before, of course).</p>
 </div>
 <div id="comment-40179-info" class="comment-info">

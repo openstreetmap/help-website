@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Why searching for an item that’s hardly used, but still available in some cities as a kind of ad in the USA, I believe they’re called billboards. Such as man-made - billboard or board and add board - expression to the object. I didnt look for the WIKI but Billboard has a page in it, <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Billboard">http://wiki.openstreetmap.org/wiki/Proposed_features/Billboard</a> Greetz Hendrik Welcome and happy tagging</p>
+<p>Why searching for an item that’s hardly used, but still available in some cities as a kind of ad in the USA, I believe they’re called billboards. Such as man-made - billboard or board and add board - expression to the object. I didnt look for the WIKI but Billboard has a page in it, <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Billboard">https://wiki.openstreetmap.org/wiki/Proposed_features/Billboard</a> Greetz Hendrik Welcome and happy tagging</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

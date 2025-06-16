@@ -135,7 +135,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This recent query might be of help and gives an Overpass Turbo script for extracting the data from osm which you can output in many ways<br />
-<a href="https://help.openstreetmap.org/questions/74345/is-there-still-a-lighting-map-somewhere-out-there">https://help.openstreetmap.org/questions/74345/is-there-still-a-lighting-map-somewhere-out-there</a></p>
+<a href="/questions/74345/is-there-still-a-lighting-map-somewhere-out-there">https://help.openstreetmap.org/questions/74345/is-there-still-a-lighting-map-somewhere-out-there</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

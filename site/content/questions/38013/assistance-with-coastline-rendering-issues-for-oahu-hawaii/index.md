@@ -134,7 +134,7 @@ osqa_accepted = false
 <div id="post-38020-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1728/asef">@ase</a> - yes, I did see other comments and questions, My impression was that coastline updates were on the order of a couple times a week, while other edits was something like daily. which is consistent with my experience of the faulty coastline being propagated to the alternate map renderings, just wanted to be sure I did not somehow break things with my updates.</p>
+<p><a href="https://help.openstreetmap.org/users/1728/asef">@ase</a> - yes, I did see other comments and questions, My impression was that coastline updates were on the order of a couple times a week, while other edits was something like daily. which is consistent with my experience of the faulty coastline being propagated to the alternate map renderings, just wanted to be sure I did not somehow break things with my updates.</p>
 <p>Since you say this slow update is in the realm of expectation, I will hold off bothering anyone further about it for now and put a reminder to myself to check on this again in a month.</p>
 </div>
 <div id="comment-38020-info" class="comment-info">
@@ -147,7 +147,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9899/adapted-engineering">@adapted</a>: well, yes if you observed the propagation of the faulty one... then the other way round should be on an similar time scale. However, if the standard style has it right now, I would not be too worried. I am not aware of any increased fault tolerance in that style compared to the other styles. By the way: while Wai'anae is flooded in the cycle map and transport map, I it is not in the humanitarian and MQ Open (if you still see it flooded there, try to refresh your browser cache with Ctrl+F5).</p>
+<p><a href="https://help.openstreetmap.org/users/9899/adapted-engineering">@adapted</a>: well, yes if you observed the propagation of the faulty one... then the other way round should be on an similar time scale. However, if the standard style has it right now, I would not be too worried. I am not aware of any increased fault tolerance in that style compared to the other styles. By the way: while Wai'anae is flooded in the cycle map and transport map, I it is not in the humanitarian and MQ Open (if you still see it flooded there, try to refresh your browser cache with Ctrl+F5).</p>
 </div>
 <div id="comment-38025-info" class="comment-info">
 <span class="comment-age">(28 Oct '14, 03:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

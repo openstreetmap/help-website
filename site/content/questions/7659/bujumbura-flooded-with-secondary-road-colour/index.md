@@ -68,7 +68,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Whilst I can't answer for the specifics of the rendering issue, I'd previously noticed a similar problem, where a very large area is "flooded" with graveyard at zoom level 14 in a remote part of Scotland (and again this disappears at other zoom levels)</p>
-<p>See <a href="http://www.openstreetmap.org/?lat=55.9658&amp;lon=-5.9907&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=55.9658&amp;lon=-5.9907&amp;zoom=14&amp;layers=M</a></p>
+<p>See <a href="https://www.openstreetmap.org/?lat=55.9658&amp;lon=-5.9907&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=55.9658&amp;lon=-5.9907&amp;zoom=14&amp;layers=M</a></p>
 </div>
 <div id="comment-7671-info" class="comment-info">
 <span class="comment-age">(06 Sep '11, 12:00)</span> <span class="comment-user userinfo">banoffee</span>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <div id="post-7691-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The graveyard one seems to be fixed now too. Forcing re-rendering of the problem tiles earlier today still gave the dodgy graveyard. The only changeset that changed anything in the general vicinity was <a href="http://www.openstreetmap.org/browse/changeset/9228920">http://www.openstreetmap.org/browse/changeset/9228920</a> which doesn't <em>appear</em> to have changed anything remotely relevant to the problem.</p>
+<p>The graveyard one seems to be fixed now too. Forcing re-rendering of the problem tiles earlier today still gave the dodgy graveyard. The only changeset that changed anything in the general vicinity was <a href="https://www.openstreetmap.org/browse/changeset/9228920">https://www.openstreetmap.org/browse/changeset/9228920</a> which doesn't <em>appear</em> to have changed anything remotely relevant to the problem.</p>
 <p>The underlying rendering issue, and/or what normal mappers might need to do to locate the problem causing it and fix the data seems to remain a mystery, and presumably will have to wait until the problem recurs somewhere else for a proper investigation/fix.</p>
 </div>
 <div id="comment-7691-info" class="comment-info">
@@ -211,9 +211,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I can confirm this. It seems to be a rendering error. I checked the boundary of this problem</p>
-<p>the south-western corner is this: <a href="http://www.openstreetmap.org/?mlat=-8.66794&amp;mlon=25.20267&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?mlat=-8.66794&amp;mlon=25.20267&amp;zoom=17&amp;layers=M</a> <a href="http://b.tile.openstreetmap.org/17/74712/68703.png">http://b.tile.openstreetmap.org/17/74712/68703.png</a></p>
-<p>the south-eastern corner is: <a href="http://www.openstreetmap.org/?mlat=-8.66793&amp;mlon=90.01891&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?mlat=-8.66793&amp;mlon=90.01891&amp;zoom=17&amp;layers=M</a></p>
-<p>the north-eastern corner is: <a href="http://www.openstreetmap.org/?mlat=-0.02202&amp;mlon=90.01101&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?mlat=-0.02202&amp;mlon=90.01101&amp;zoom=17&amp;layers=M</a></p>
+<p>the south-western corner is this: <a href="https://www.openstreetmap.org/?mlat=-8.66794&amp;mlon=25.20267&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?mlat=-8.66794&amp;mlon=25.20267&amp;zoom=17&amp;layers=M</a> <a href="http://b.tile.openstreetmap.org/17/74712/68703.png">http://b.tile.openstreetmap.org/17/74712/68703.png</a></p>
+<p>the south-eastern corner is: <a href="https://www.openstreetmap.org/?mlat=-8.66793&amp;mlon=90.01891&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?mlat=-8.66793&amp;mlon=90.01891&amp;zoom=17&amp;layers=M</a></p>
+<p>the north-eastern corner is: <a href="https://www.openstreetmap.org/?mlat=-0.02202&amp;mlon=90.01101&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?mlat=-0.02202&amp;mlon=90.01101&amp;zoom=17&amp;layers=M</a></p>
 <p>The problem exists only in Zoom17, as you can see the area is huge: 550 square degrees (covering half of the indian ocean as well). I doubt that this is a problem in your local area, instead seems to be something that went wrong in the rendering process. I already forwarded your problem to the <a href="http://lists.openstreetmap.org/pipermail/dev/2011-September/023469.html">Developers Mailing list</a>.</p>
 </div>
 <div class="answer-controls post-controls">

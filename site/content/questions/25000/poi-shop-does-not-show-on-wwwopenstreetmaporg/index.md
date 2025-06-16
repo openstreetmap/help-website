@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I have created a <a href="http://www.openstreetmap.org/browse/node/2399722702">POI</a> which is a shop called "Angelgeräte Bode". It does not show on the map, while other shops show. Can anyone tell me what I have done wrong?</p>
+<p>I have created a <a href="https://www.openstreetmap.org/browse/node/2399722702">POI</a> which is a shop called "Angelgeräte Bode". It does not show on the map, while other shops show. Can anyone tell me what I have done wrong?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not_shown" rel="tag" title="see questions tagged &#39;not_shown&#39;">not_shown</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>
@@ -171,7 +171,7 @@ One Answer:
 <div id="post-25058-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span></span><span>@bazooka2010</span> Yes. <a href="http://wiki.openstreetmap.org/wiki/Carto">CartoCSS</a> is the new stylesheet for OSM's standard layer.</p>
+<p><span></span><span>@bazooka2010</span> Yes. <a href="https://wiki.openstreetmap.org/wiki/Carto">CartoCSS</a> is the new stylesheet for OSM's standard layer.</p>
 </div>
 <div id="comment-25058-info" class="comment-info">
 <span class="comment-age">(08 Aug '13, 06:30)</span> <span class="comment-user userinfo">scai ♦</span>

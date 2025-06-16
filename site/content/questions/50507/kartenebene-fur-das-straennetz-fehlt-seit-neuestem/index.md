@@ -142,7 +142,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12484/michiow-"></a><a href="http://help.openstreetmap.org/users/12484/michiow-">@michiow---</a>: "Mapnik" gibt es aber noch. Das <span>ist</span> schon seit längerem der Kartenstil "Standard". Und: eventuell gefällt dir der <a href="http://www.openstreetmap.de/karte.html">openstreetmap.de-Stil</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/12484/michiow-"></a><a href="https://help.openstreetmap.org/users/12484/michiow-">@michiow---</a>: "Mapnik" gibt es aber noch. Das <span>ist</span> schon seit längerem der Kartenstil "Standard". Und: eventuell gefällt dir der <a href="http://www.openstreetmap.de/karte.html">openstreetmap.de-Stil</a>.</p>
 </div>
 <div id="comment-50514-info" class="comment-info">
 <span class="comment-age">(28 Jun '16, 21:51)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

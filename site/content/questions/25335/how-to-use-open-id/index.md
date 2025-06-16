@@ -217,7 +217,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>the <a href="https://www.openstreetmap.org/login">osm.org login page</a> has (well, only if you select the first icon) a nice "what is this" link which links to our wiki page <a href="http://wiki.openstreetmap.org/wiki/OpenID">http://wiki.openstreetmap.org/wiki/OpenID</a></p>
+<p>the <a href="https://www.openstreetmap.org/login">osm.org login page</a> has (well, only if you select the first icon) a nice "what is this" link which links to our wiki page <a href="https://wiki.openstreetmap.org/wiki/OpenID">https://wiki.openstreetmap.org/wiki/OpenID</a></p>
 <p>If you mean the <a href="https://help.openstreetmap.org/account/signin/">login on this help site</a>: it has an info link on the left, two on the right and a short info text on the right.</p>
 <p>Is there anything not clear or did you just not see the links?</p>
 </div>

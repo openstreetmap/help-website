@@ -119,7 +119,7 @@ out skel qt;</code></pre>
 <div id="post-71462-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>My own answer on my last comment: <a href="https://help.openstreetmap.org/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass">https://help.openstreetmap.org/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass</a></p>
+<p>My own answer on my last comment: <a href="/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass">https://help.openstreetmap.org/questions/55529/how-to-detect-if-point-is-inside-a-building-polygon-with-overpass</a></p>
 </div>
 <div id="comment-71462-info" class="comment-info">
 <span class="comment-age">(04 Nov '19, 22:34)</span> <span class="comment-user userinfo">rriemann</span>

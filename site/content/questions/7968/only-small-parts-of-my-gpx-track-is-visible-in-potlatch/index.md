@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Yesterday, I recorded a track with car and uploaded the GPX file to OpenStreetMap. Now when I'm using the GPX-track with Potlatch only small parts of my GPX track is visible and it is very hard to follow. Why is that? Is there any way I can make my GPX track more visible in Potlatch? I use Potlatch 2 on the osm.org website.</p>
-<p>This is how it looks in Potlatch for me: <img src="http://help.openstreetmap.org/upfiles/potlatch_1.png" alt="alt text" /></p>
+<p>This is how it looks in Potlatch for me: <img src="/upfiles/potlatch_1.png" alt="alt text" /></p>
 <p>The parts of the cyan track should be one long track.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -127,9 +127,9 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I've not seen this when editing traces from the GPS trace list, but have seen it when selecting "GPS Data / GPS Data" from within Potlatch2. Here's an example:</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=53.077324&amp;lon=-0.553765&amp;zoom=18">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=53.077324&amp;lon=-0.553765&amp;zoom=18</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=53.077324&amp;lon=-0.553765&amp;zoom=18">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=53.077324&amp;lon=-0.553765&amp;zoom=18</a></p>
 <p>You can see part of an outlier trace to the east of the A607, and another east-west portion at the left of the screen. That east-west one is an earlier one of mine from March 2010:</p>
-<p><a href="http://www.openstreetmap.org/trace/645773/view">http://www.openstreetmap.org/trace/645773/view</a></p>
+<p><a href="https://www.openstreetmap.org/trace/645773/view">https://www.openstreetmap.org/trace/645773/view</a></p>
 <p>Edit it from the traces list and it's complete; edit as above and it's not.</p>
 </div>
 <div id="comment-8007-info" class="comment-info">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Transport for London publish a list of <a href="https://api.tfl.gov.uk/#BikePoint">cycle hire locations</a> under a <a href="https://tfl.gov.uk/corporate/terms-and-conditions/transport-data-service">modified version</a> of the UK Government's Open Data License. According to <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">the wiki</a>, the plain Open Government License is compatible with uploading to OSM. However, i'm unsure whether Transport for London's modified license is ok.</p>
+<p>Transport for London publish a list of <a href="https://api.tfl.gov.uk/#BikePoint">cycle hire locations</a> under a <a href="https://tfl.gov.uk/corporate/terms-and-conditions/transport-data-service">modified version</a> of the UK Government's Open Data License. According to <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">the wiki</a>, the plain Open Government License is compatible with uploading to OSM. However, i'm unsure whether Transport for London's modified license is ok.</p>
 <p>I ran through the list a few weeks ago and IIRC there are about 275 cycle hire locations missing from OSM. It would be cool to fill in the gaps.</p>
 <p>Does anyone know if the license will allow it? (I tried emailing them a few weeks ago, and they declined to reply.)</p>
 </div>

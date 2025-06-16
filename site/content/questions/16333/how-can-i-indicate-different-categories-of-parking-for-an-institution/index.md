@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can I indicate different categories of parking for an institution?"
-description = '''My problem: I have been mapping the parking lots on the University of Louisville campus (see: http://www.openstreetmap.org/?lat=38.216213285923&amp;amp;lon=-85.760897397995&amp;amp;zoom=18). The university divides lots into colors - red/purple/blue, etc. The parking pass you buy determines which lots you ca...'''
+description = '''My problem: I have been mapping the parking lots on the University of Louisville campus (see: https://www.openstreetmap.org/?lat=38.216213285923&amp;amp;lon=-85.760897397995&amp;amp;zoom=18). The university divides lots into colors - red/purple/blue, etc. The parking pass you buy determines which lots you ca...'''
 date = "2012-09-22T05:18:00Z"
 lastmod = "2012-09-24T13:58:00Z"
 weight = 16333
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My problem: I have been mapping the parking lots on the University of Louisville campus (see: <a href="http://www.openstreetmap.org/?lat=38.216213285923&amp;lon=-85.760897397995&amp;zoom=18).">http://www.openstreetmap.org/?lat=38.216213285923&amp;lon=-85.760897397995&amp;zoom=18).</a> The university divides lots into colors - red/purple/blue, etc. The parking pass you buy determines which lots you can park in. I would like to indicate somehow which category each lot belongs to.</p>
+<p>My problem: I have been mapping the parking lots on the University of Louisville campus (see: <a href="https://www.openstreetmap.org/?lat=38.216213285923&amp;lon=-85.760897397995&amp;zoom=18).">https://www.openstreetmap.org/?lat=38.216213285923&amp;lon=-85.760897397995&amp;zoom=18).</a> The university divides lots into colors - red/purple/blue, etc. The parking pass you buy determines which lots you can park in. I would like to indicate somehow which category each lot belongs to.</p>
 <p>I have not found a way to tag parking lots in this way, and I'm not sure how to or if I should start adding this info. Would it be best to use a relation somehow?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Are those parkings reserved for specific groups of people ? If so, one to do this might be access=students/staff/etc. The set of access values actually distinguished by renderers is small, but if parking access matches something commonly seen in <a href="http://taginfo.openstreetmap.org/keys/access#values">taginfo</a>, there's no reason not to tag it.</p>
 <p>The second/complementary option is to simply tag "name=Blue car park". It makes semantic sense, and most renderers will use that.</p>
-<p>Lastly, there's the obvious-sounding "colour=" tag (the "color" spelling variant is less used in osm). No existing renderer (that I know of) uses that for car parks (it's more commonly used for route relations), but you could set up <a href="http://wiki.openstreetmap.org/wiki/Tilemill">your own renderer config</a> to display color-coded car parks.</p>
+<p>Lastly, there's the obvious-sounding "colour=" tag (the "color" spelling variant is less used in osm). No existing renderer (that I know of) uses that for car parks (it's more commonly used for route relations), but you could set up <a href="https://wiki.openstreetmap.org/wiki/Tilemill">your own renderer config</a> to display color-coded car parks.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -188,7 +188,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><em>area=red</em> is not a good suggestion here, the <a href="http://wiki.openstreetmap.org/wiki/Key:area">area</a> tag is already used for different things. Better use the <a href="http://wiki.openstreetmap.org/wiki/Key:ref">ref</a> tag instead.</p>
+<p><em>area=red</em> is not a good suggestion here, the <a href="https://wiki.openstreetmap.org/wiki/Key:area">area</a> tag is already used for different things. Better use the <a href="https://wiki.openstreetmap.org/wiki/Key:ref">ref</a> tag instead.</p>
 </div>
 <div id="comment-16347-info" class="comment-info">
 <span class="comment-age">(22 Sep '12, 12:21)</span> <span class="comment-user userinfo">scai ♦</span>

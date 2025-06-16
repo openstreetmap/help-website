@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've not looked at the full history dump, but are those ways current versions, or historical? I don't think there used to be a limit, and long ways had to be split at some point before a certain update, so I would expect you to find some old ways that were more than 2000 nodes, but no current ones.</p>
-<p>Aha! <a href="http://wiki.openstreetmap.org/wiki/API_changes_between_v0.5_and_v0.6">Found a reference!</a></p>
+<p>Aha! <a href="https://wiki.openstreetmap.org/wiki/API_changes_between_v0.5_and_v0.6">Found a reference!</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

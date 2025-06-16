@@ -129,8 +129,8 @@ One Answer:
 <li>We initially get a <code>boundaryarea</code> as defined per Poland's admin_level=2 boundary</li>
 <li>Now we determine difference of all <code>admin_level=7</code> boundaries in that area MINUS those <code>admin_level=7</code> boundaries having an admin_centre node.</li>
 </ul>
-<p>Read more about the recurse functions used in this query <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">here</a>.</p>
-<p>Note that there are some relations returned outside of Poland. This is not a bug in the query, but rather some outdated areas on overpass-api.de. See <a href="https://help.openstreetmap.org/questions/47080/areas-broken-on-all-overpass-servers">this thread</a> for details. It works just fine on our dev box with up-to-date areas.</p>
+<p>Read more about the recurse functions used in this query <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">here</a>.</p>
+<p>Note that there are some relations returned outside of Poland. This is not a bug in the query, but rather some outdated areas on overpass-api.de. See <a href="/questions/47080/areas-broken-on-all-overpass-servers">this thread</a> for details. It works just fine on our dev box with up-to-date areas.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

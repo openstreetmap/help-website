@@ -131,7 +131,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For France there is indeed <a href="http://wiki.openstreetmap.org/wiki/Cadastre">cadastre</a> information available that can be imported into OSM. However as the wiki pages are in french I can't tell you how to do it.</p>
+<p>For France there is indeed <a href="https://wiki.openstreetmap.org/wiki/Cadastre">cadastre</a> information available that can be imported into OSM. However as the wiki pages are in french I can't tell you how to do it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -192,7 +192,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If this is where you mean <a href="http://www.openstreetmap.org/?lat=48.43523&amp;lon=-0.49548&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=48.43523&amp;lon=-0.49548&amp;zoom=15&amp;layers=M</a> then it I think a group effort is the answer so that many trace a few buildings each.</p>
+<p>If this is where you mean <a href="https://www.openstreetmap.org/?lat=48.43523&amp;lon=-0.49548&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=48.43523&amp;lon=-0.49548&amp;zoom=15&amp;layers=M</a> then it I think a group effort is the answer so that many trace a few buildings each.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

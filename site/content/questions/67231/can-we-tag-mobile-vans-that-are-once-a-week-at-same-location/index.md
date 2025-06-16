@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I saw two questions about how to tag food trucks and mobile vans that are at a specific spot every day :</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/46667/how-to-tag-food-trucks-and-food-carts">https://help.openstreetmap.org/questions/46667/how-to-tag-food-trucks-and-food-carts</a></li>
-<li><a href="https://help.openstreetmap.org/questions/27300/pop-up-shops-mobile-vans-how-to-tag">https://help.openstreetmap.org/questions/27300/pop-up-shops-mobile-vans-how-to-tag</a></li>
+<li><a href="/questions/46667/how-to-tag-food-trucks-and-food-carts">https://help.openstreetmap.org/questions/46667/how-to-tag-food-trucks-and-food-carts</a></li>
+<li><a href="/questions/27300/pop-up-shops-mobile-vans-how-to-tag">https://help.openstreetmap.org/questions/27300/pop-up-shops-mobile-vans-how-to-tag</a></li>
 </ul>
 <p>Can we tag a similar truck that is at the same location every week but only one day a week?</p>
 <p>I would like to tag a convenience truck that sells bulk products on markets. So as the truck is on a different market every week day I would have to tag it in 5 different places. Is it something allowed by OpenStreetMap? If no, do you see any alternative to reference theses shops that we find more and more on the streets?</p>

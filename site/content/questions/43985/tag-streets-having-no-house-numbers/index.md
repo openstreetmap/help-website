@@ -160,7 +160,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Vmiklos, there are more streets (ways) without housenumbers, since the streets dont get a number but only the houses, homes or buildings. Read these lines as well, <a href="http://wiki.openstreetmap.org/wiki/Addresses">http://wiki.openstreetmap.org/wiki/Addresses</a> ,with schemes for different countries. And remember the adress tag could even contain just a number without any relation to or with the street you need to get the building, like RR4OSM211.</p>
+<p>Vmiklos, there are more streets (ways) without housenumbers, since the streets dont get a number but only the houses, homes or buildings. Read these lines as well, <a href="https://wiki.openstreetmap.org/wiki/Addresses">https://wiki.openstreetmap.org/wiki/Addresses</a> ,with schemes for different countries. And remember the adress tag could even contain just a number without any relation to or with the street you need to get the building, like RR4OSM211.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

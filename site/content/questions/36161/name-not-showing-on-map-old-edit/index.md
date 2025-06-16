@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Name not showing on map (old edit)"
-description = '''I was investigating this note on map http://www.openstreetmap.org/note/214250 and guessed that it was added because &#x27;anonymous&#x27; couldn&#x27;t see the name &#x27;Heath Park&#x27; when viewing the map. Of course, I don&#x27;t know what device was being used to look at the map. The way http://www.openstreetmap.org/way/102...'''
+description = '''I was investigating this note on map https://www.openstreetmap.org/note/214250 and guessed that it was added because &#x27;anonymous&#x27; couldn&#x27;t see the name &#x27;Heath Park&#x27; when viewing the map. Of course, I don&#x27;t know what device was being used to look at the map. The way https://www.openstreetmap.org/way/102...'''
 date = "2014-08-25T23:00:00Z"
 lastmod = "2014-08-26T09:38:00Z"
 weight = 36161
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was investigating this note on map <a href="http://www.openstreetmap.org/note/214250">http://www.openstreetmap.org/note/214250</a> and guessed that it was added because 'anonymous' couldn't see the name 'Heath Park' when viewing the map. Of course, I don't know what device was being used to look at the map.</p>
-<p>The way <a href="http://www.openstreetmap.org/way/102655608">http://www.openstreetmap.org/way/102655608</a> has been tagged 'leisure=park' and 'name=Heath Park' since last year. The name doesn't display on 'standard' Mapnik layer at any zoom level. It does display on Cycle Map layer. It does display on Osmand.</p>
+<p>I was investigating this note on map <a href="https://www.openstreetmap.org/note/214250">https://www.openstreetmap.org/note/214250</a> and guessed that it was added because 'anonymous' couldn't see the name 'Heath Park' when viewing the map. Of course, I don't know what device was being used to look at the map.</p>
+<p>The way <a href="https://www.openstreetmap.org/way/102655608">https://www.openstreetmap.org/way/102655608</a> has been tagged 'leisure=park' and 'name=Heath Park' since last year. The name doesn't display on 'standard' Mapnik layer at any zoom level. It does display on Cycle Map layer. It does display on Osmand.</p>
 <p>Should it display on 'standard' layer? Are any corrections or additions to tagging needed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The name should display. If you look <a href="http://www.openstreetmap.org/way/23110167">here</a> you can see that the name normally does. I'm guessing that in your example perhaps the icon for the playground in the middle is stopping the name appearing?</p>
+<p>The name should display. If you look <a href="https://www.openstreetmap.org/way/23110167">here</a> you can see that the name normally does. I'm guessing that in your example perhaps the icon for the playground in the middle is stopping the name appearing?</p>
 <p>The issue tracker for the "standard" stylesheet is <a href="https://github.com/gravitystorm/openstreetmap-carto/issues?q=is:open+is:issue">here</a>, so it might be worth mentioning it there, but I've no idea how solveable the problem is with current and future versions of the rendering software.</p>
 </div>
 <div class="answer-controls post-controls">

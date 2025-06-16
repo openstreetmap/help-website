@@ -118,8 +118,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>By visiting the <a href="http://wiki.osm.org">OSM wiki</a> and entering "mapnik windows" in the text search box there, I found two interesting links:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/User:Grille_Chompa/Mapnik_renderer_windows">User:Grille_Chompa/Mapnik_renderer_windows</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/User:Ajoessen/Mapnik">User:Ajoessen/Mapnik</a> ( maybe translation with google online service helpful)</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/User:Grille_Chompa/Mapnik_renderer_windows">User:Grille_Chompa/Mapnik_renderer_windows</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/User:Ajoessen/Mapnik">User:Ajoessen/Mapnik</a> ( maybe translation with google online service helpful)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

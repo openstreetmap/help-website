@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I had the same problem this is what I learned <a href="http://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">http://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
+<p>I had the same problem this is what I learned <a href="/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

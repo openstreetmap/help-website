@@ -159,7 +159,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Isn't <a href="http://wiki.openstreetmap.org/wiki/Oauth">OAuth</a> enough?</p>
+<p>Isn't <a href="https://wiki.openstreetmap.org/wiki/Oauth">OAuth</a> enough?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -232,7 +232,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/OpenID">OpenID wiki page</a> OSM already supports OpenID but requires an additional OSM account.</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/OpenID">OpenID wiki page</a> OSM already supports OpenID but requires an additional OSM account.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

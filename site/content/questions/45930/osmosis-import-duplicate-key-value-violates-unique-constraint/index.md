@@ -170,7 +170,7 @@ PostgreSQL version is 9.3</p>
 <div id="post-45956-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you're interested in rendering, geocoding and routing, then an APIDB may not be the way to go. For rendering in the same way as osm.org, see <a href="https://switch2osm.org/serving-tiles/">https://switch2osm.org/serving-tiles/</a> (though other renderers are available), for geocoding see <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> (again, other geocoders exist), for routing perhaps some of the examples from <a href="http://wiki.openstreetmap.org/wiki/Routing#Developers">http://wiki.openstreetmap.org/wiki/Routing#Developers</a> .</p>
+<p>If you're interested in rendering, geocoding and routing, then an APIDB may not be the way to go. For rendering in the same way as osm.org, see <a href="https://switch2osm.org/serving-tiles/">https://switch2osm.org/serving-tiles/</a> (though other renderers are available), for geocoding see <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> (again, other geocoders exist), for routing perhaps some of the examples from <a href="https://wiki.openstreetmap.org/wiki/Routing#Developers">https://wiki.openstreetmap.org/wiki/Routing#Developers</a> .</p>
 </div>
 <div id="comment-45956-info" class="comment-info">
 <span class="comment-age">(16 Oct '15, 14:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

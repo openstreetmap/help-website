@@ -105,8 +105,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Die entsprechenden Links auf deutsch wären<br />
-<a href="http://wiki.openstreetmap.org/wiki/DE:Photo_mapping#Fotomapping_mit_JOSM">Fotomapping mit JOSM</a> und<br />
-<a href="http://wiki.openstreetmap.org/wiki/DE:Geotagging_Source_Photos">DE:Geotagging Source Photos</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/DE:Photo_mapping#Fotomapping_mit_JOSM">Fotomapping mit JOSM</a> und<br />
+<a href="https://wiki.openstreetmap.org/wiki/DE:Geotagging_Source_Photos">DE:Geotagging Source Photos</a></p>
 <p>Ich bevorzuge es, die GPS-Daten direkt in die EXIF-Daten der Bilder zu schreiben (zweiter Link). Wenn man die Bilder dann mit JOSM öffnet, werden sie dann an der entsprechenden Stelle angezeigt.</p>
 <p>An deiner Kamera musst du nichts einstellen, du solltest aber Zeitnah zu der Fotoserie, die du mit GPS-Daten verwenden willst ein Foto einer genauen Uhr mit Sekundenanzeige machen. Der Grund steht auch im zweiten Link.</p>
 <p>hth<br />
@@ -162,8 +162,8 @@ malenki</p>
 <div class="answer-body">
 <p>translated... Hello, when I Photos - without GPS data - added loading to a GPS track in JOSM be assigned to me by the time this information from the GPS track. I upload photos with GPS data to, this GPS track are not assigned. Do I set my camera to a specific data format for GPS data? If so, which one?</p>
 <p>answer... Hi, I don't speak german and I don't really know exactly what you mean, but he is a link that may help while you wait for a more useful reply...</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Photo_mapping">http://wiki.openstreetmap.org/wiki/Photo_mapping</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Photomapping_In_JOSM">http://wiki.openstreetmap.org/wiki/Photomapping_In_JOSM</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Photo_mapping">https://wiki.openstreetmap.org/wiki/Photo_mapping</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Photomapping_In_JOSM">https://wiki.openstreetmap.org/wiki/Photomapping_In_JOSM</a></p>
 <p><a href="http://showmedo.com/videotutorials/series?name=mS2P1ZqS6">http://showmedo.com/videotutorials/series?name=mS2P1ZqS6</a></p>
 </div>
 <div class="answer-controls post-controls">

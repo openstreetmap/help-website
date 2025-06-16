@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have been recently busy fixing waterways and have encountered several mangrove forests/areas not included within the coastline (<a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline"><code>natural=coastline</code></a>), like this one:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/coastline-with-mangroves.png" alt="Coastline excluding mangrove areas" /></p>
+<p><img src="/upfiles/coastline-with-mangroves.png" alt="Coastline excluding mangrove areas" /></p>
 <p><a href="https://www.openstreetmap.org/edit?editor=id#map=16/7.7140/123.1336">https://www.openstreetmap.org/edit?editor=id#map=16/7.7140/123.1336</a></p>
 <p>As can be seen in the above image, if the tidal channels (<a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dtidal_channel"><code>waterway=tidal_channel</code></a>) are drawn, they will no longer be connected to the coastline. What is the convention on drawing coastlines relating to mangrove areas?</p>
 </div>

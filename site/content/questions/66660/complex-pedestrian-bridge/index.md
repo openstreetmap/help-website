@@ -118,7 +118,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This sounds a lot like a <a href="https://en.wikipedia.org/wiki/Skyway">skyway</a>--see the answer to <a href="https://help.openstreetmap.org/questions/1623/how-do-i-tag-a-skywalk-skyway-sky-bridge">How do I tag a skywalk / skyway / skybridge</a> for the way I've usually seem them mapped.</p>
+<p>This sounds a lot like a <a href="https://en.wikipedia.org/wiki/Skyway">skyway</a>--see the answer to <a href="/questions/1623/how-do-i-tag-a-skywalk-skyway-sky-bridge">How do I tag a skywalk / skyway / skybridge</a> for the way I've usually seem them mapped.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -108,7 +108,7 @@ osqa_accepted = false
 <div id="post-49767-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: could you please comment too instead of just voting down my comment (which should not really happen UI-wise)? I am confused. In case you mean my typo ("bug" instead of "bus") - fixed.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: could you please comment too instead of just voting down my comment (which should not really happen UI-wise)? I am confused. In case you mean my typo ("bug" instead of "bus") - fixed.</p>
 </div>
 <div id="comment-49767-info" class="comment-info">
 <span class="comment-age">(20 May '16, 21:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -130,7 +130,7 @@ osqa_accepted = false
 <div id="post-49771-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> It simply isn't true to say that "errors wouldn't be made if users used JOSM" instead of some other editor. A quick count back through the last dozen or so issues where I've had to get involved fixing stuff (either locally or, with a DWG hat on, more widely). Here's the tally of the editors used:</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> It simply isn't true to say that "errors wouldn't be made if users used JOSM" instead of some other editor. A quick count back through the last dozen or so issues where I've had to get involved fixing stuff (either locally or, with a DWG hat on, more widely). Here's the tally of the editors used:</p>
 <pre><code>JOSM                                         6
 iD                                           2
 osmapi (i.e. some other front-end program):  2
@@ -146,7 +146,7 @@ Potlatch 2                                   1</code></pre>
 <div id="post-49775-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> thanks for the explanation. Please note that I did not say what you've quoted. Not at all. It is just my personal experience that JOSM gives you a clearer more data centric view, more tools to check your edits and, hence, is easier to use than Potlatch2 or iD. This is at least true for complex tasks. And I, personally, made the switch far too late (torture myself by using Potlatch2 for too long) and I want help others to be more productive and have more fun. I remember how time consuming and annoying it was to separate terraced buildings into single ones with Potlatch2.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> thanks for the explanation. Please note that I did not say what you've quoted. Not at all. It is just my personal experience that JOSM gives you a clearer more data centric view, more tools to check your edits and, hence, is easier to use than Potlatch2 or iD. This is at least true for complex tasks. And I, personally, made the switch far too late (torture myself by using Potlatch2 for too long) and I want help others to be more productive and have more fun. I remember how time consuming and annoying it was to separate terraced buildings into single ones with Potlatch2.</p>
 </div>
 <div id="comment-49775-info" class="comment-info">
 <span class="comment-age">(21 May '16, 10:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

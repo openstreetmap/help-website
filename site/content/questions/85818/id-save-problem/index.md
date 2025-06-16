@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I can't save my projects. In this screen, I can't press the left panel, please help me?!<img src="https://help.openstreetmap.org/upfiles/osmissue_Wns6SXM.png" alt="alt text" /></p>
+<p>Hello, I can't save my projects. In this screen, I can't press the left panel, please help me?!<img src="/upfiles/osmissue_Wns6SXM.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-saves" rel="tag" title="see questions tagged &#39;saves&#39;">saves</span> <span class="post-tag tag-link-save" rel="tag" title="see questions tagged &#39;save&#39;">save</span> <span class="post-tag tag-link-saved" rel="tag" title="see questions tagged &#39;saved&#39;">saved</span> <span class="post-tag tag-link-save_panel" rel="tag" title="see questions tagged &#39;save_panel&#39;">save_panel</span> <span class="post-tag tag-link-save-changes" rel="tag" title="see questions tagged &#39;save-changes&#39;">save-changes</span>

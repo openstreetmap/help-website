@@ -122,7 +122,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The closest we have is probably this, in English: <a href="http://en.flossmanuals.net/openstreetmap/">http://en.flossmanuals.net/openstreetmap/</a> - you can download a PDF there. In French, but no PDF, I suggest reading <a href="http://openstreetmap.fr/">http://openstreetmap.fr/</a> and <a href="http://wiki.openstreetmap.org/wiki/FR:Main_Page.">http://wiki.openstreetmap.org/wiki/FR:Main_Page.</a></p>
+<p>The closest we have is probably this, in English: <a href="http://en.flossmanuals.net/openstreetmap/">http://en.flossmanuals.net/openstreetmap/</a> - you can download a PDF there. In French, but no PDF, I suggest reading <a href="http://openstreetmap.fr/">http://openstreetmap.fr/</a> and <a href="https://wiki.openstreetmap.org/wiki/FR:Main_Page.">https://wiki.openstreetmap.org/wiki/FR:Main_Page.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bonjour,</p>
-<p>Je ne sais pas ce que vous voulez dire exactement par "notice d'utilisation", mais cela me rappelle un projet initié par des contributeurs francais il y a quelques années déjà: <a href="http://wiki.openstreetmap.org/wiki/WikiProject_France/Osmecum">osmecum</a></p>
+<p>Je ne sais pas ce que vous voulez dire exactement par "notice d'utilisation", mais cela me rappelle un projet initié par des contributeurs francais il y a quelques années déjà: <a href="https://wiki.openstreetmap.org/wiki/WikiProject_France/Osmecum">osmecum</a></p>
 <p>En espérant que cela aide</p>
 </div>
 <div class="answer-controls post-controls">

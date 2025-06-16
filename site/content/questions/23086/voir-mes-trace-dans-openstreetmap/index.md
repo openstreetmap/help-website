@@ -114,7 +114,7 @@ One Answer:
 <div class="answer-body">
 <p>Le site osm.org ne permet pas de faire ça à ma connaissance. Par contre vous pouvez :</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/trace/1473064/data">Télécharger le fichier gpx</a> vers votre ordinateur en suivant les liens sur votre profil.</li>
+<li><a href="https://www.openstreetmap.org/trace/1473064/data">Télécharger le fichier gpx</a> vers votre ordinateur en suivant les liens sur votre profil.</li>
 <li>Ouvrir le fichier gpx avec un des éditeurs osm ou bien un logiciel comme <a href="http://marble.kde.org/">marble</a>.</li>
 <li>Ou bien afficher le ficher sur une page html de votre cru avec <a href="http://leafletjs.com/plugins.html">leaflet</a> ou <a href="http://dev.openlayers.org/apidocs/files/OpenLayers/Format/GPX-js.html">openlayers</a>.</li>
 </ul>

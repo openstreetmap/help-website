@@ -109,7 +109,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you distribute OSM data as a separate part of your application (say, an "osm.dat" file) then only that falls under CC-BY-SA.</p>
 <p>Note that if you make a screenshot of your application in action, where OSM data is shown merged with other data, then that whole screenshot would be CC-BY-SA including any other data shown. The same applies if users of your application e.g. make a screenshot or save the map as PDF - as soon as they distribute that screenshot or saved map, it has to be CC-BY-SA with everything that's on it.</p>
-<p>Also note that this answer assumes that you are talking about using the OSM <em>data</em>. If you want to use OSM <em>infrastructure</em>, i.e. download map tiles from OSM servers etc., then that's not simply a license question but also one of <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">acceptable use.</a></p>
+<p>Also note that this answer assumes that you are talking about using the OSM <em>data</em>. If you want to use OSM <em>infrastructure</em>, i.e. download map tiles from OSM servers etc., then that's not simply a license question but also one of <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">acceptable use.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

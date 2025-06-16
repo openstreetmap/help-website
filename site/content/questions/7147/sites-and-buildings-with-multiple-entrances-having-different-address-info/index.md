@@ -114,7 +114,7 @@ One Answer:
 <li>The <em>addr:housenumber</em> tag appears on the map. But the important thing is that routers and search engines finds the address.</li>
 <li>You should add the <em>building=entrance</em> node to the building because entrances are part of the building outline. If you do not have the building outline you do not have to do so.</li>
 <li>If the node is not an entrance to a <strong>building</strong> then you do not tag it as <em>building=entrance</em>. You can still tag the address to a node and even tag it with <em>barrier=gate</em> if that is more appropriate.</li>
-<li>For longer stretches of housenumbers you can add them to a way that you tag with <em><a href="http://wiki.openstreetmap.org/wiki/Key:addr:interpolation">addr:intrapolation</a></em>.</li>
+<li>For longer stretches of housenumbers you can add them to a way that you tag with <em><a href="https://wiki.openstreetmap.org/wiki/Key:addr:interpolation">addr:intrapolation</a></em>.</li>
 <li>That is where you use <em>building=entrance</em> to add several entrances and addresses to the same building. There is no reason there should be only one <em>building=entrance</em> assosiated with a single building.</li>
 </ol>
 </div>

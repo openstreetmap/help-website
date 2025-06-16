@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I'm on struggle street now, hence posting here - I am running my own ubuntu 22.04 tile server, per the switch2osm.org guide, and it's running great. I've since started trying to customize it, by trying to remove text, symbols/icons and (administrative) boundaries - the purple ones.</p>
-<p>I've scoured the web for answer, similar questions and more, with minor success - I've deleted the majority of text using the <em>3rd</em> tip by SomeoneElse <a href="https://help.openstreetmap.org/questions/84525/how-to-render-osm-map-tiles-without-text-osm2pgsql-mapnik-apache-mod_tile">here</a> - however, I'm finding some building names and street numbers are still appearing.</p>
+<p>I've scoured the web for answer, similar questions and more, with minor success - I've deleted the majority of text using the <em>3rd</em> tip by SomeoneElse <a href="/questions/84525/how-to-render-osm-map-tiles-without-text-osm2pgsql-mapnik-apache-mod_tile">here</a> - however, I'm finding some building names and street numbers are still appearing.</p>
 <p>My biggest struggle, however, has been removing all symbols and purple boundaries. I've tried simply deleting the "admin.mss" and "symbols" folder, altering the names, modifying the colour variables in the mss file and a whole heap of other hacks/attempts but to no avail (in most cases, when updating there is no difference, even if the files are deleted).</p>
 <p>Unfortunately I'm quite new, so I apologies beforehand for the possible hand holding I'll need.</p>
 <p>I'd really appreciate any/all advice. Thanks</p>

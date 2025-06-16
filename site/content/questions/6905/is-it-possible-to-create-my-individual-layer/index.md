@@ -117,7 +117,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>You can't do this using the main OSM servers, but you can run your own servers to do this.</p>
 <p>Everything in OpenStreetMap is editable by everyone, and if you have some data which you don't want to be edited by anyone else, it shouldn't go in the main OSM database.</p>
-<p>What you can do is set up your own instance of the <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">"Rails Port"</a>, the software running on the OSM servers and use the same editors and rendering tools as OSM.</p>
+<p>What you can do is set up your own instance of the <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">"Rails Port"</a>, the software running on the OSM servers and use the same editors and rendering tools as OSM.</p>
 <p>Also, you need to consider OSM's licence, which says that if you publish anything made from a combination of your own data and OSM data, the whole work must be under OSM's license.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,8 +174,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>"my partners and I" suggests you might need a collaboration platform which might mean installing your own instance of <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">the rails port</a> (fairly complicated)</p>
-<p>A simpler small-scale solution might be to have a play around with <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>, which allows you to edit the data offline, and save your changes offline away from the main OSM database. You can also do this with separate layer of newly added data if you wish. That's all very easy, but then maybe the challenge comes with <em>using</em> that data.</p>
+<p>"my partners and I" suggests you might need a collaboration platform which might mean installing your own instance of <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">the rails port</a> (fairly complicated)</p>
+<p>A simpler small-scale solution might be to have a play around with <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>, which allows you to edit the data offline, and save your changes offline away from the main OSM database. You can also do this with separate layer of newly added data if you wish. That's all very easy, but then maybe the challenge comes with <em>using</em> that data.</p>
 <p>Depending on what kind of "thematic layer" we're talking about You might achieve what you want with a web map display and some markers. If you want to see your new data on a rendered map then you've either got to share the data with the rest of us and see it rendered on OpenStreetMap, or run your own rendering software.</p>
 <p>You know authorisation is overrated. Just share your data with OpenStreetMap. We promise not to break it :-)</p>
 </div>

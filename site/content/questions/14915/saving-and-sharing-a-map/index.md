@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try <a href="http://facilmap.org/">http://facilmap.org/</a> even some features you want seems missing. I'm working on such a tool, but still not finished (<a href="http://wiki.openstreetmap.org/wiki/User:NicolasDumoulin/MyOSM">current doc in french</a>) …</p>
+<p>You can try <a href="http://facilmap.org/">http://facilmap.org/</a> even some features you want seems missing. I'm working on such a tool, but still not finished (<a href="https://wiki.openstreetmap.org/wiki/User:NicolasDumoulin/MyOSM">current doc in french</a>) …</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

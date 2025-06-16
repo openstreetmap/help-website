@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Here is an example of <a href="http://www.openstreetmap.org/relation/380103#map=18/34.08324/-118.26030">a no U turn relation that has a way as the via property</a>. It is the correct way to model a U turn restriction at this point.</p>
+<p>Here is an example of <a href="https://www.openstreetmap.org/relation/380103#map=18/34.08324/-118.26030">a no U turn relation that has a way as the via property</a>. It is the correct way to model a U turn restriction at this point.</p>
 <p>Using A* routing, is it possible to honour this restriction? OSRM <a href="http://map.project-osrm.org/?z=18&amp;center=34.083084%2C-118.260022&amp;loc=34.082575%2C-118.259931&amp;loc=34.083117%2C-118.260146&amp;hl=en&amp;alt=0&amp;df=0">incorrectly routes through the u-turn</a>, implying that it might be a difficult problem to solve. The only way I can think of is to modify the graph so that the U turn route is not possible. Is there a simpler method?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

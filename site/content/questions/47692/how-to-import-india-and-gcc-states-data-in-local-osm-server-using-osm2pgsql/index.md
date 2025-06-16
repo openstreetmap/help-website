@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Download both country files &amp; merge them with <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Merging_two_or_more_Geographical_Areas">osmconvert</a> (easier to use, as has fewer dependencies, but less functional, than Osmosis). Then import using osm2pgsql.</p>
+<p>Download both country files &amp; merge them with <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Merging_two_or_more_Geographical_Areas">osmconvert</a> (easier to use, as has fewer dependencies, but less functional, than Osmosis). Then import using osm2pgsql.</p>
 <p>Note that if you want to add additional countries with shared borders you will most likely have to reimport all the data.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -286,7 +286,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download the full OSM planet file from planet.openstreetmap.org, and then use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--bounding-polygon_.28--bp.29">clip out the polygon(s) you want</a>. You'll be left with a pbf file which you can import with osm2psql.</p>
+<p>You can download the full OSM planet file from planet.openstreetmap.org, and then use <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--bounding-polygon_.28--bp.29">clip out the polygon(s) you want</a>. You'll be left with a pbf file which you can import with osm2psql.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -332,7 +332,7 @@ osqa_accepted = false
 <div id="post-47698-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can download osmosis here <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Downloading">http://wiki.openstreetmap.org/wiki/Osmosis#Downloading</a></p>
+<p>You can download osmosis here <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Downloading">https://wiki.openstreetmap.org/wiki/Osmosis#Downloading</a></p>
 </div>
 <div id="comment-47698-info" class="comment-info">
 <span class="comment-age">(28 Jan '16, 09:58)</span> <span class="comment-user userinfo">rorym</span>

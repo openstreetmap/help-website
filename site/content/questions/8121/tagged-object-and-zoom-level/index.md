@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, this is solely decided by the renderer (which is <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> for the main map) and the stylesheet. However you are free to <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">render your own map</a>, the wiki has also a large list of <a href="http://wiki.openstreetmap.org/wiki/Renderer">rendering software</a>.</p>
+<p>No, this is solely decided by the renderer (which is <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> for the main map) and the stylesheet. However you are free to <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">render your own map</a>, the wiki has also a large list of <a href="https://wiki.openstreetmap.org/wiki/Renderer">rendering software</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

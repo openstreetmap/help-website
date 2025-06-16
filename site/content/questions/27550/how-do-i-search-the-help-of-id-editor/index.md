@@ -97,7 +97,7 @@ osqa_accepted = true
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question. I'd forgotten that I'd asked http://help.openstreetmap.org/questions/23756/ previously. D'oh." by SomeoneElse 28 Oct '13, 12:56
+### The question has been closed for the following reason "Duplicate Question. I'd forgotten that I'd asked https://help.openstreetmap.org/questions/23756/ previously. D'oh." by SomeoneElse 28 Oct '13, 12:56
 
 </div>
 

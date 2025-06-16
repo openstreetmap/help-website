@@ -106,7 +106,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Thanks - found it!</p>
-<p><a href="http://www.openstreetmap.org/?lat=50.881663&amp;lon=7.983005&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=50.881663&amp;lon=7.983005&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=50.881663&amp;lon=7.983005&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=50.881663&amp;lon=7.983005&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-4122-info" class="comment-info">
 <span class="comment-age">(26 Mar '11, 00:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -210,10 +210,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As Ed says, the colouring is due to the type of route relations involved. There's a simpler example of something similar (with only two relations involved) <a href="http://www.openstreetmap.org/?lat=53.18765&amp;lon=-1.45992&amp;zoom=17&amp;layers=M">here</a>. The blue line is a "route=hiking" relation; the green ones are either just a "route=foot" relation or (in the south of the view) both relations running along the same path.</p>
+<p>As Ed says, the colouring is due to the type of route relations involved. There's a simpler example of something similar (with only two relations involved) <a href="https://www.openstreetmap.org/?lat=53.18765&amp;lon=-1.45992&amp;zoom=17&amp;layers=M">here</a>. The blue line is a "route=hiking" relation; the green ones are either just a "route=foot" relation or (in the south of the view) both relations running along the same path.</p>
 <p>In your example, to see the relations involved, click on the green line. In the bottom left you can choose "simple" or "advanced" - click "advanced". You'll now see 4 relations - one "route=foot", and 3 "route=hiking". If you double-click on the top one of these an "edit relation" box appears - the name is "Jakobs-Pilgerweg Marburg-Köln". Again in this window you can click "simple" or "advanced" (and also "members"). If you click "advanced" you can see the tags associated with the relation.</p>
-<p>There's more information about relations <a href="http://wiki.openstreetmap.org/wiki/Relation">here</a> <a href="http://wiki.openstreetmap.org/wiki/DE:Relations">(Deutsch)</a>. They're a way of applying tags together to a group of things that together make up one big thing. Obviously you need to be careful editing things that are part of relations - the E1 relation in your example is part of a route that runs from Italy to Sweden, so local changes can have global consequences.</p>
-<p>You can view route relations in OSM <a href="http://www.openstreetmap.org/?relation=114995">like this</a>, and there are other sites (dedicated to hiking) that render them too, <a href="http://osm.lonvia.de/world_hiking.html?zoom=16&amp;lat=50.88185&amp;lon=7.98016&amp;layers=FFBT">like this one</a>.</p>
+<p>There's more information about relations <a href="https://wiki.openstreetmap.org/wiki/Relation">here</a> <a href="https://wiki.openstreetmap.org/wiki/DE:Relations">(Deutsch)</a>. They're a way of applying tags together to a group of things that together make up one big thing. Obviously you need to be careful editing things that are part of relations - the E1 relation in your example is part of a route that runs from Italy to Sweden, so local changes can have global consequences.</p>
+<p>You can view route relations in OSM <a href="https://www.openstreetmap.org/?relation=114995">like this</a>, and there are other sites (dedicated to hiking) that render them too, <a href="http://osm.lonvia.de/world_hiking.html?zoom=16&amp;lat=50.88185&amp;lon=7.98016&amp;layers=FFBT">like this one</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -118,7 +118,7 @@ osqa_accepted = false
 <blockquote>
 <p>Tiger_reviewed:yes type:node</p>
 </blockquote>
-<p>More examples of search queries: <a href="http://wiki.openstreetmap.org/wiki/JOSM_search_function">http://wiki.openstreetmap.org/wiki/JOSM search function</a></p>
+<p>More examples of search queries: <a href="https://wiki.openstreetmap.org/wiki/JOSM_search_function">https://wiki.openstreetmap.org/wiki/JOSM search function</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

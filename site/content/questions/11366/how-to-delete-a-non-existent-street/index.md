@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "how to delete a non-existent street?"
-description = '''A road in my neighborhood was planned but never built. Now it is part of people&#x27;s yards and will never be built. I can&#x27;t figure out how to delete it I opened the data layer but see no delete option. It is http://www.openstreetmap.org/edit?lat=41.579366&amp;amp;lon=-71.438544&amp;amp;zoom=18 and the name is ...'''
+description = '''A road in my neighborhood was planned but never built. Now it is part of people&#x27;s yards and will never be built. I can&#x27;t figure out how to delete it I opened the data layer but see no delete option. It is https://www.openstreetmap.org/edit?lat=41.579366&amp;amp;lon=-71.438544&amp;amp;zoom=18 and the name is ...'''
 date = "2012-03-20T19:03:00Z"
 lastmod = "2012-03-21T17:29:00Z"
 weight = 11366
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>A road in my neighborhood was planned but never built. Now it is part of people's yards and will never be built. I can't figure out how to delete it I opened the data layer but see no delete option.</p>
-<p>It is <a href="http://www.openstreetmap.org/edit?lat=41.579366&amp;lon=-71.438544&amp;zoom=18">http://www.openstreetmap.org/edit?lat=41.579366&amp;lon=-71.438544&amp;zoom=18</a> and the name is Drift Way.</p>
+<p>It is <a href="https://www.openstreetmap.org/edit?lat=41.579366&amp;lon=-71.438544&amp;zoom=18">https://www.openstreetmap.org/edit?lat=41.579366&amp;lon=-71.438544&amp;zoom=18</a> and the name is Drift Way.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-delete" rel="tag" title="see questions tagged &#39;delete&#39;">delete</span>

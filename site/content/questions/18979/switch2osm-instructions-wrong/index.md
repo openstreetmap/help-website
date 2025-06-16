@@ -60,7 +60,7 @@ HTTP request sent, awaiting response... 404 Not Found
 r/share/mapnik-osm-data/world_boundaries/110m_admin_0_boundary_lines_land.shp&#39; does not exist (encountered during parsing of layer &#39;ne
 countries&#39; in map &#39;/etc/mapnik-osm-data/osm.xml&#39;)</code></pre>
 <p>I am not sure whether it is my own issue since it may get blocked by my company firewall (although error message must be different), so it would've been nice if someone could double check it.</p>
-<pre><code>I solved it by manually downloading those archives from links provided by: http://wiki.openstreetmap.org/wiki/Mapnik
+<pre><code>I solved it by manually downloading those archives from links provided by: https://wiki.openstreetmap.org/wiki/Mapnik
 (those are: ne_10m_populated_places.zip and ne_110m_admin_0_boundary_lines_land.zip on that wiki page). Then I extracted them and copied .dbf, .prj, .shp, .shx files to /usr/share/mapnik-osm-data/world_boundaries. And I had to rename ne_110m_admin_0_boundary_lines_land to 110m_admin_0_boundary_lines_land, removing ne_ prefix from them.</code></pre>
 <p>After that I restarted renderd by:</p>
 <pre><code>sudo /etc/init.d/renderd restart</code></pre>
@@ -113,7 +113,7 @@ countries&#39; in map &#39;/etc/mapnik-osm-data/osm.xml&#39;)</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Looks like someone else had this problem on #osm irc channel on 27th November, and the wiki page was updated since - <a href="http://wiki.openstreetmap.org/wiki/Talk:Mapnik#Download_required_data">http://wiki.openstreetmap.org/wiki/Talk:Mapnik#Download_required_data</a> was added in late December. It looks like the libapache2-mod-tile package may need repackaging.</p>
+<p>Looks like someone else had this problem on #osm irc channel on 27th November, and the wiki page was updated since - <a href="https://wiki.openstreetmap.org/wiki/Talk:Mapnik#Download_required_data">https://wiki.openstreetmap.org/wiki/Talk:Mapnik#Download_required_data</a> was added in late December. It looks like the libapache2-mod-tile package may need repackaging.</p>
 </div>
 <div id="comment-18984-info" class="comment-info">
 <span class="comment-age">(11 Jan '13, 10:46)</span> <span class="comment-user userinfo">EdLoach ♦</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My question is similar to <a href="https://help.openstreetmap.org/questions/5473/export-country-state-city-street-zip-code-worldwide-for-use-with-address-auto-completion">this one</a>, but the only answer offered over there does not satisfy my requirement.</p>
+<p>My question is similar to <a href="/questions/5473/export-country-state-city-street-zip-code-worldwide-for-use-with-address-auto-completion">this one</a>, but the only answer offered over there does not satisfy my requirement.</p>
 <p><br />
 </p>
 <p>I need a to create a database containing the required data to <strong>auto-complete a postal address</strong> filled in by a user in a mobile application.<br />

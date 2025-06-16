@@ -172,7 +172,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Not that I know of, and I'm doubtful there would be, because:</p>
 <ol>
-<li>that would be a really complex tagging scheme, probably using some variant on the <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening hours</a> scheme</li>
+<li>that would be a really complex tagging scheme, probably using some variant on the <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening hours</a> scheme</li>
 <li>it could potentially change so much it would be difficult to keep updated in OSM</li>
 <li>it might make more sense to use something like the <a href="https://developers.google.com/transit/gtfs/">Google Transit Feed Specification</a>, which is specifically tailored to distribute this kind of information</li>
 </ol>

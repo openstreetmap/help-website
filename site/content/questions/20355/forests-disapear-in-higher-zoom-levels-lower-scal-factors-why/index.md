@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Forests disapear in higher zoom levels (lower scal factors). Why?"
-description = '''Look at the two consequtive zoom levels http://www.openstreetmap.org/?lat=47.792&amp;amp;lon=-85.794&amp;amp;zoom=9&amp;amp;layers=M and http://www.openstreetmap.org/?lat=47.791&amp;amp;lon=-85.793&amp;amp;zoom=10&amp;amp;layers=M In the level 10 the green (assume forest) on some islans disapear but not on the other land a...'''
+description = '''Look at the two consequtive zoom levels https://www.openstreetmap.org/?lat=47.792&amp;amp;lon=-85.794&amp;amp;zoom=9&amp;amp;layers=M and https://www.openstreetmap.org/?lat=47.791&amp;amp;lon=-85.793&amp;amp;zoom=10&amp;amp;layers=M In the level 10 the green (assume forest) on some islans disapear but not on the other land a...'''
 date = "2013-02-27T22:06:00Z"
 lastmod = "2013-02-28T11:58:00Z"
 weight = 20355
@@ -41,9 +41,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Look at the two consequtive zoom levels</p>
-<p><a href="http://www.openstreetmap.org/?lat=47.792&amp;lon=-85.794&amp;zoom=9&amp;layers=M">http://www.openstreetmap.org/?lat=47.792&amp;lon=-85.794&amp;zoom=9&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=47.792&amp;lon=-85.794&amp;zoom=9&amp;layers=M">https://www.openstreetmap.org/?lat=47.792&amp;lon=-85.794&amp;zoom=9&amp;layers=M</a></p>
 <p>and</p>
-<p><a href="http://www.openstreetmap.org/?lat=47.791&amp;lon=-85.793&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=47.791&amp;lon=-85.793&amp;zoom=10&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=47.791&amp;lon=-85.793&amp;zoom=10&amp;layers=M">https://www.openstreetmap.org/?lat=47.791&amp;lon=-85.793&amp;zoom=10&amp;layers=M</a></p>
 <p>In the level 10 the green (assume forest) on some islans disapear but not on the other land areas. Is there a special reason for that?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,17 +118,17 @@ One Answer:
 <p>This is an issue in the data, not in the rendering.</p>
 <p>Problem : this island is modelized two times.</p>
 <p>First time with a single closed way (polygon) tagged with "natural=land":<br />
-<a href="http://www.openstreetmap.org/browse/way/71638376">http://www.openstreetmap.org/browse/way/71638376</a><br />
+<a href="https://www.openstreetmap.org/browse/way/71638376">https://www.openstreetmap.org/browse/way/71638376</a><br />
 and being part of the relation "Lake superior" as "inner" polygon:<br />
-<a href="http://www.openstreetmap.org/browse/relation/1120169">http://www.openstreetmap.org/browse/relation/1120169</a></p>
+<a href="https://www.openstreetmap.org/browse/relation/1120169">https://www.openstreetmap.org/browse/relation/1120169</a></p>
 <p>Second time with several polygons or simple ways:<br />
-<a href="http://www.openstreetmap.org/browse/way/71638569">http://www.openstreetmap.org/browse/way/71638569</a><br />
-<a href="http://www.openstreetmap.org/browse/way/71645461">http://www.openstreetmap.org/browse/way/71645461</a><br />
-<a href="http://www.openstreetmap.org/browse/way/72372507">http://www.openstreetmap.org/browse/way/72372507</a></p>
+<a href="https://www.openstreetmap.org/browse/way/71638569">https://www.openstreetmap.org/browse/way/71638569</a><br />
+<a href="https://www.openstreetmap.org/browse/way/71645461">https://www.openstreetmap.org/browse/way/71645461</a><br />
+<a href="https://www.openstreetmap.org/browse/way/72372507">https://www.openstreetmap.org/browse/way/72372507</a></p>
 <p>being part of 3 relations of type "multipolygon" as "outer" and tagged with "natural=wood":<br />
-<a href="http://www.openstreetmap.org/browse/relation/1117973">http://www.openstreetmap.org/browse/relation/1117973</a><br />
-<a href="http://www.openstreetmap.org/browse/relation/1117939">http://www.openstreetmap.org/browse/relation/1117939</a><br />
-<a href="http://www.openstreetmap.org/browse/relation/1117953">http://www.openstreetmap.org/browse/relation/1117953</a></p>
+<a href="https://www.openstreetmap.org/browse/relation/1117973">https://www.openstreetmap.org/browse/relation/1117973</a><br />
+<a href="https://www.openstreetmap.org/browse/relation/1117939">https://www.openstreetmap.org/browse/relation/1117939</a><br />
+<a href="https://www.openstreetmap.org/browse/relation/1117953">https://www.openstreetmap.org/browse/relation/1117953</a></p>
 <p>As you can see, the same surface is identified twice as "natural=land" and "natural=wood". Then the renderer will probably select only one of them, depending how the order of the data is processed and the rendering styles which varies at the different zoom levels.</p>
 <p>To fix this, a better modeling would be to delete the 3 artificial polygons, keep only the coastline ways, remove the tag "natural=land" in the Lake superior" relation (but keep its "inner" role), and merge the 3 "natural=wood" multipolygon relations into a single one (with the same tags).</p>
 </div>

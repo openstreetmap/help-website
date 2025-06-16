@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Units on the same street with the same &quot;addr:housenumber&quot;, how do you tag?"
-description = '''So, I tagged this street: http://www.openstreetmap.org/edit#map=18/50.66197/-120.25733 As you can see, all those building share the same address (2210 Qu&#x27;Appelle Boulevard), but have a different Unit. For example, I could live at 2210 Qu&#x27;Appelle Boulevard, Unit 5 whereas my neighbor would live at 22...'''
+description = '''So, I tagged this street: https://www.openstreetmap.org/edit#map=18/50.66197/-120.25733 As you can see, all those building share the same address (2210 Qu&#x27;Appelle Boulevard), but have a different Unit. For example, I could live at 2210 Qu&#x27;Appelle Boulevard, Unit 5 whereas my neighbor would live at 22...'''
 date = "2015-06-24T05:24:00Z"
 lastmod = "2015-06-24T14:11:00Z"
 weight = 43741
@@ -39,12 +39,12 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>So, I tagged this street: <a href="http://www.openstreetmap.org/edit#map=18/50.66197/-120.25733">http://www.openstreetmap.org/edit#map=18/50.66197/-120.25733</a></p>
+<p>So, I tagged this street: <a href="https://www.openstreetmap.org/edit#map=18/50.66197/-120.25733">https://www.openstreetmap.org/edit#map=18/50.66197/-120.25733</a></p>
 <p>As you can see, all those building share the same address (2210 Qu'Appelle Boulevard), but have a different Unit. For example, I could live at 2210 Qu'Appelle Boulevard, Unit 5 whereas my neighbor would live at 2210 Qu'Appelle Boulevard, Unit 6.</p>
 <p>I think I tagged it properly, but on the map, it looks like all buildings have the numbers (because the addr:unit doesn't show on the map.</p>
 <p>Source I found</p>
-<p><a href="https://help.openstreetmap.org/questions/2329/addresses-with-two-house-numbers">https://help.openstreetmap.org/questions/2329/addresses-with-two-house-numbers</a></p>
-<p><a href="https://help.openstreetmap.org/questions/39962/how-to-tag-block-of-apartments-with-units">https://help.openstreetmap.org/questions/39962/how-to-tag-block-of-apartments-with-units</a></p>
+<p><a href="/questions/2329/addresses-with-two-house-numbers">https://help.openstreetmap.org/questions/2329/addresses-with-two-house-numbers</a></p>
+<p><a href="/questions/39962/how-to-tag-block-of-apartments-with-units">https://help.openstreetmap.org/questions/39962/how-to-tag-block-of-apartments-with-units</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-units" rel="tag" title="see questions tagged &#39;units&#39;">units</span> <span class="post-tag tag-link-house" rel="tag" title="see questions tagged &#39;house&#39;">house</span> <span class="post-tag tag-link-number" rel="tag" title="see questions tagged &#39;number&#39;">number</span>

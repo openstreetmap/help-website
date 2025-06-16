@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this question: <a href="https://help.openstreetmap.org/questions/864/how-to-add-node-with-exact-coordinates-in-josm">https://help.openstreetmap.org/questions/864/how-to-add-node-with-exact-coordinates-in-josm</a> .</p>
+<p>See this question: <a href="/questions/864/how-to-add-node-with-exact-coordinates-in-josm">https://help.openstreetmap.org/questions/864/how-to-add-node-with-exact-coordinates-in-josm</a> .</p>
 <p>JOSM is the java openstreetmap editor available from <a href="http://josm.openstreetmap.org">http://josm.openstreetmap.org</a></p>
 <p>Also, be sure you have WGS84 coordinates and not Gauss-Krüger or UTM.</p>
 <p>From your spelling of "projekt" I infer you are germany-based, where coordinates are given in Gauss-Krüger or, recently, UTM.</p>

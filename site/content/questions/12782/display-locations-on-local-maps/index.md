@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have not found much other than the lat long display in polatch2 or josm editors but does this help <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> if not a little more detail of what you wish to do may get a better answer.</p>
+<p>I have not found much other than the lat long display in polatch2 or josm editors but does this help <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> if not a little more detail of what you wish to do may get a better answer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

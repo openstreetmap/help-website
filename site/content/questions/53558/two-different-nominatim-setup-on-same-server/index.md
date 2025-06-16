@@ -113,7 +113,7 @@ One Answer:
 <li><p>In the <code>local.php</code> set the <code>CONST_Website_BaseURL</code> to the URL you set in the Apache configuration.</p></li>
 </ul>
 <p>If that doesn't work report problems to <a href="https://github.com/twain47/Nominatim/issues">https://github.com/twain47/Nominatim/issues</a></p>
-<p>P.S. it's possible to merge two countries and use one installation, that might be easier <a href="https://help.openstreetmap.org/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim">https://help.openstreetmap.org/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim</a></p>
+<p>P.S. it's possible to merge two countries and use one installation, that might be easier <a href="/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim">https://help.openstreetmap.org/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

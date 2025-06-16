@@ -43,7 +43,7 @@ osqa_accepted = false
 <ol>
 <li>Because this tag is incorrect. landuse=forest implies that the area inside is being active forested for timber.</li>
 <li>Because a lot of the land inside a US National Forest is not actually wood-land, and rather scrub or grassland.</li>
-<li>Because it renders badly. I've been doing a lot of work drawing in the land-cover around the <a href="http://www.openstreetmap.org/#map=13/40.6106/-105.2547">Roosevelt National Forest and Rocky Mountain National Park</a>, and it would not be possible to do this work if the whole area were covered with a massive blob of green inside the boundary.</li>
+<li>Because it renders badly. I've been doing a lot of work drawing in the land-cover around the <a href="https://www.openstreetmap.org/#map=13/40.6106/-105.2547">Roosevelt National Forest and Rocky Mountain National Park</a>, and it would not be possible to do this work if the whole area were covered with a massive blob of green inside the boundary.</li>
 </ol>
 <p>From reading the wiki it seems that boundary=protected_area,protect_class=6 is much more appropriate. The only issue is that the boundary is not rendered.</p>
 <p>Does anyone know the story is here? I would expect boundary=protected_area to render similarly to leasure=national_park.</p>
@@ -164,8 +164,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the National Forest boundary, boundary=protected_area is preferred over leisure=national_park--see <a href="http://wiki.openstreetmap.org/wiki/US_Forest_Service_Data#National_Forest_Boundaries">http://wiki.openstreetmap.org/wiki/US_Forest_Service_Data#National_Forest_Boundaries</a>. If you read the text there, it suggests adding landuse=forest if it's pretty much all forest, but logically it should probably be separated--see below. Also note <a href="https://lists.openstreetmap.org/pipermail/talk-us/2015-June/014925.html">this discussion</a> on talk-us in June 2015.</p>
-<p>What is actually on the ground (forest, scrub, grassland, etc) is different and should be tagged as such. You can see a discussion of the multiple issues with forest tagging here: <a href="http://wiki.openstreetmap.org/wiki/Forest">http://wiki.openstreetmap.org/wiki/Forest</a>. However, I'd still use it, as it is not going away anytime soon, and maybe add the <a href="http://wiki.openstreetmap.org/wiki/Landcover">landcover</a> tag if you want to support that schema.</p>
+<p>For the National Forest boundary, boundary=protected_area is preferred over leisure=national_park--see <a href="https://wiki.openstreetmap.org/wiki/US_Forest_Service_Data#National_Forest_Boundaries">https://wiki.openstreetmap.org/wiki/US_Forest_Service_Data#National_Forest_Boundaries</a>. If you read the text there, it suggests adding landuse=forest if it's pretty much all forest, but logically it should probably be separated--see below. Also note <a href="https://lists.openstreetmap.org/pipermail/talk-us/2015-June/014925.html">this discussion</a> on talk-us in June 2015.</p>
+<p>What is actually on the ground (forest, scrub, grassland, etc) is different and should be tagged as such. You can see a discussion of the multiple issues with forest tagging here: <a href="https://wiki.openstreetmap.org/wiki/Forest">https://wiki.openstreetmap.org/wiki/Forest</a>. However, I'd still use it, as it is not going away anytime soon, and maybe add the <a href="https://wiki.openstreetmap.org/wiki/Landcover">landcover</a> tag if you want to support that schema.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

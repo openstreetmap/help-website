@@ -41,11 +41,11 @@ osqa_accepted = true
 <div class="question-body">
 <p>When generating a route the server is not using the off-ramps to make a u-turn but rather moving all the way down the highway which causes the route to be much longer than what is possible. See here</p>
 <p><a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=20.0135%2C41.4811%3B19.9922%2C41.5190#map=13/19.9762/41.5221">https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=20.0135%2C41.4811%3B19.9922%2C41.5190#map=13/19.9762/41.5221</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2022-05-19_at_09.24.16.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2022-05-19_at_09.24.16.png" alt="alt text" /></p>
 <p>Whereas in Google Maps you get this <a href="https://www.google.co.za/maps/dir/20.0100%0941.4795/19.9910%0941.5190/@20.0041348,41.4936417,15z/data=!4m10!4m9!1m3!2m2!1d41.4795!2d20.01!1m3!2m2!1d41.519!2d19.991!3e0">https://www.google.co.za/maps/dir/20.0100%0941.4795/19.9910%0941.5190/@20.0041348,41.4936417,15z/data=!4m10!4m9!1m3!2m2!1d41.4795!2d20.01!1m3!2m2!1d41.519!2d19.991!3e0</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2022-05-19_at_09.07.41.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2022-05-19_at_09.07.41.png" alt="alt text" /></p>
 <p>The routing server is not making use of the off-ramps</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2022-05-19_at_09.02.19.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2022-05-19_at_09.02.19.png" alt="alt text" /></p>
 <p>I am using OSM server for routing inside an application that is calculating distances by route. Any suggestions on how this can be fixed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

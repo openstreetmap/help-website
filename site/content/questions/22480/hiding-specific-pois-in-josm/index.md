@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am tracing road imagery and building footprints in JOSM and would like to remove <strong>from view</strong> the labeling and symbology of points of interest. Is there a way to see only certain feature types in a view? Say for instance only buildings and highways?</p>
-<p>Below is an image, with such labels and symbols. <img src="http://help.openstreetmap.org/upfiles/labels_PIO.png" alt="alt text" /></p>
+<p>Below is an image, with such labels and symbols. <img src="/upfiles/labels_PIO.png" alt="alt text" /></p>
 <p>Thanks, Alyssa.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

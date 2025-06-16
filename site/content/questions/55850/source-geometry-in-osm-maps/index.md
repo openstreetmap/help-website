@@ -175,7 +175,7 @@ The "note" related to the last example is also confusing. The problem/error is m
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Where are you getting your source data/images from?</p>
-<p>This is the first roundabout in Wireframe mode in Potlatch 2. Looks pretty round to me: <a href="http://www.openstreetmap.org/edit#map=21/45.52146/-122.64957">http://www.openstreetmap.org/edit#map=21/45.52146/-122.64957</a></p>
+<p>This is the first roundabout in Wireframe mode in Potlatch 2. Looks pretty round to me: <a href="https://www.openstreetmap.org/edit#map=21/45.52146/-122.64957">https://www.openstreetmap.org/edit#map=21/45.52146/-122.64957</a></p>
 <p>Could your Jpeg creator be set to low detail?</p>
 </div>
 <div class="answer-controls post-controls">

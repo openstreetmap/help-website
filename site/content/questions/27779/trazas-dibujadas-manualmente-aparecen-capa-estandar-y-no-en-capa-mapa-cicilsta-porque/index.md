@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>La OpenCycleMap no se actualiza con tanta frecuencia como la capa estándar (Mapnik). Si entiendes un poco de ingles puedes leerlo aquí: <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">http://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle</a></p>
+<p>La OpenCycleMap no se actualiza con tanta frecuencia como la capa estándar (Mapnik). Si entiendes un poco de ingles puedes leerlo aquí: <a href="https://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">https://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

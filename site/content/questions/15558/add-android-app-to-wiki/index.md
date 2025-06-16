@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Add Android App to Wiki"
-description = '''I&#x27;d like to add my app (GPS Essentials) to the list of supporting apps here: http://wiki.openstreetmap.org/wiki/Android Is there any information available on how to do this? '''
+description = '''I&#x27;d like to add my app (GPS Essentials) to the list of supporting apps here: https://wiki.openstreetmap.org/wiki/Android Is there any information available on how to do this? '''
 date = "2012-08-27T18:09:00Z"
 lastmod = "2012-08-31T08:35:00Z"
 weight = 15558
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'd like to add my app (GPS Essentials) to the list of supporting apps here: <a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a> Is there any information available on how to do this?</p>
+<p>I'd like to add my app (GPS Essentials) to the list of supporting apps here: <a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a> Is there any information available on how to do this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-android" rel="tag" title="see questions tagged &#39;android&#39;">android</span>
@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First you should create a wiki page for your app. Then you have to add <a href="http://wiki.openstreetmap.org/wiki/Template:Software2">Template:Software2</a> to that page, filling in the appropriate details for your app. A bot will read the details in the template, and automatically add it to the Android wiki page, probably within a day or so.</p>
+<p>First you should create a wiki page for your app. Then you have to add <a href="https://wiki.openstreetmap.org/wiki/Template:Software2">Template:Software2</a> to that page, filling in the appropriate details for your app. A bot will read the details in the template, and automatically add it to the Android wiki page, probably within a day or so.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -135,7 +135,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>An explanation with some FAQ is also available on <a href="http://wiki.openstreetmap.org/wiki/User:TTTBot">the bot's user page</a>. That page is reachable from "Learn more" link below each of the tables on "Android". Feel free to improve it!</p>
+<p>An explanation with some FAQ is also available on <a href="https://wiki.openstreetmap.org/wiki/User:TTTBot">the bot's user page</a>. That page is reachable from "Learn more" link below each of the tables on "Android". Feel free to improve it!</p>
 </div>
 <div id="comment-15567-info" class="comment-info">
 <span class="comment-age">(28 Aug '12, 04:32)</span> <span class="comment-user userinfo">Tordanik</span>

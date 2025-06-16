@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>First you have to keep in mind that OpenStreetMap is mainly about collecting geospatial data and not about creating maps for third-party devices. However, there are multiple non-official projects/users creating such maps from OSM's geospatial data, including maps for most Garmin devices.</p>
-<p>Our <a href="http://wiki.openstreetmap.org">wiki</a> has a long list about different <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">ready-made Garmin maps</a>. These maps differ in their features, especially the geographic area they cover, if they are routable or not and what main type of transportation they are made for.</p>
+<p>Our <a href="http://wiki.openstreetmap.org">wiki</a> has a long list about different <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">ready-made Garmin maps</a>. These maps differ in their features, especially the geographic area they cover, if they are routable or not and what main type of transportation they are made for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want GB maps for that Garmin I would use these <a href="http://talkytoaster.info/ukmaps.htm">http://talkytoaster.info/ukmaps.htm</a> the maps are built with OSM data into a Garmin file as that is the only type of map file your device can display, they are free by the way I have used TT maps for a couple or years they are great. For other areas this contributor also creates map files <a href="http://wiki.openstreetmap.org/wiki/User:Lambertus">http://wiki.openstreetmap.org/wiki/User:Lambertus</a></p>
+<p>If you want GB maps for that Garmin I would use these <a href="http://talkytoaster.info/ukmaps.htm">http://talkytoaster.info/ukmaps.htm</a> the maps are built with OSM data into a Garmin file as that is the only type of map file your device can display, they are free by the way I have used TT maps for a couple or years they are great. For other areas this contributor also creates map files <a href="https://wiki.openstreetmap.org/wiki/User:Lambertus">https://wiki.openstreetmap.org/wiki/User:Lambertus</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -190,7 +190,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>A bit more info from previous Question <a href="http://help.openstreetmap.org/questions/3785/osm-on-garmin">http://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
+<p>A bit more info from previous Question <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
 </div>
 <div id="comment-15143-info" class="comment-info">
 <span class="comment-age">(16 Aug '12, 12:20)</span> <span class="comment-user userinfo">andy mackey</span>

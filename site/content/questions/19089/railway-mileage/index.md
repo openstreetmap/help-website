@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Railway Mileage"
-description = '''Hi Guys After a quick look around I noticed that this was abandoned  http://wiki.openstreetmap.org/wiki/Proposed_features/Milestones Is there anyway to get this back off the ground again. We are willing to make a reasonable donation and provide any additional work back to the OpenStreetMap community...'''
+description = '''Hi Guys After a quick look around I noticed that this was abandoned  https://wiki.openstreetmap.org/wiki/Proposed_features/Milestones Is there anyway to get this back off the ground again. We are willing to make a reasonable donation and provide any additional work back to the OpenStreetMap community...'''
 date = "2013-01-14T22:27:00Z"
 lastmod = "2013-01-14T23:10:00Z"
 weight = 19089
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi Guys</p>
 <p>After a quick look around I noticed that this was abandoned</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Milestones">http://wiki.openstreetmap.org/wiki/Proposed_features/Milestones</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Milestones">https://wiki.openstreetmap.org/wiki/Proposed_features/Milestones</a></p>
 <p>Is there anyway to get this back off the ground again. We are willing to make a reasonable donation and provide any additional work back to the OpenStreetMap community.</p>
 <p>Our goal is to make it easier for railway infrastructure workers to easily find the nearest access point for a specific mileage/milestone/kilometre peg.</p>
 <p>Any information would be greatly appreciated.</p>
@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's not the tag itself that is abandoned, but the proposal system is abandoned by many people.</p>
-<p>There are <a href="http://taginfo.openstreetmap.org/tags/?key=highway&amp;value=milestone">11 001 highway=milestone</a> and <a href="http://taginfo.openstreetmap.org/tags/?key=railway&amp;value=milestone">1 043 railway=milestone</a> in the database. If you want more of them, then just tag them. If you are planning a massive import however then please see the <a href="http://wiki.openstreetmap.org/wiki/Import_guidelines">import guidelines</a> and other questions on this helpsite about imports.</p>
+<p>There are <a href="http://taginfo.openstreetmap.org/tags/?key=highway&amp;value=milestone">11 001 highway=milestone</a> and <a href="http://taginfo.openstreetmap.org/tags/?key=railway&amp;value=milestone">1 043 railway=milestone</a> in the database. If you want more of them, then just tag them. If you are planning a massive import however then please see the <a href="https://wiki.openstreetmap.org/wiki/Import_guidelines">import guidelines</a> and other questions on this helpsite about imports.</p>
 <p>EDIT: Over a year later and now there are a lot more railway=milestone in the database. This tag is now visible on the <a href="http://www.openrailwaymap.org">OpenRailwayMap</a>.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -161,7 +161,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>You have to register with your own server. You'll need a working email server setup to actually receive the confirmation mail, but you could also check the users table directly with the psql command line tool and manually activate the user that has been created. I forgot what the field was - something like <code>update users set status='active';</code> or so.</p>
 <p>You are seeing a full-blown map because the tiles are renderd by <a href="http://openstreetmap.org">openstreetmap.org</a>. You could change that to point to your local tiles but in order for that to work you first have to <em>have</em> local tiles at all! Tiles are not produced by the rails port software that you have installed. Instead, they are produced by a tile server bassed on the Mapnik rendering engine which has its <em>own</em> PostGIS database (you cannot use the same that you are using with the rails port, instead you have to use Osmosis to dump data from your database into XML format, then use osm2pgsql to load into the rendering database).</p>
-<p>There's a <a href="http://weait.com/content/build-your-own-openstreetmap-server">howto</a> on setting up a tile server and there's also copious documentation on the wiki, e.g. <a href="http://wiki.openstreetmap.org/wiki/HowTo_mod_tile">here</a>.</p>
+<p>There's a <a href="http://weait.com/content/build-your-own-openstreetmap-server">howto</a> on setting up a tile server and there's also copious documentation on the wiki, e.g. <a href="https://wiki.openstreetmap.org/wiki/HowTo_mod_tile">here</a>.</p>
 <p>Don't forget that most of these documents assume that you want to load "real" OSM data; loading your own data instead always means first exporting it with Osmsois.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -248,7 +248,7 @@ But let me get this straight with all i understand by now. First you make an osm
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li>You probably have not set up e-mail on your server. The server do not know what address to send from or to whitch server. The solution is to manualy activate the user you registered. This is described on the <a href="http://wiki.openstreetmap.org/wiki/Rails_port#Confirming_users">wiki</a>. There is also a description of how to get Potlatch2 to work. In JOSM you can change the "osm-server.url" option to your server.</li>
+<li>You probably have not set up e-mail on your server. The server do not know what address to send from or to whitch server. The solution is to manualy activate the user you registered. This is described on the <a href="https://wiki.openstreetmap.org/wiki/Rails_port#Confirming_users">wiki</a>. There is also a description of how to get Potlatch2 to work. In JOSM you can change the "osm-server.url" option to your server.</li>
 <li>The only part of your page that is still from <a href="http://osm.org">osm.org</a> should be the slippy maps. When you edit your the map on your server you will edit your own version of the map and the changes won't be uploaded to <a href="http://osm.org">osm.org</a> and the redering won't be updated. You can change the url of the tiles in the source code (just grep for <a href="http://tile.openstreetmap.org">tile.openstreetmap.org</a>) to a render server you have set up to render the map on your server. This is however not neccesary and overly complex.</li>
 </ol>
 </div>

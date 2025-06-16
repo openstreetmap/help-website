@@ -187,7 +187,7 @@ osqa_accepted = false
 <ol>
 <li>MPs for buildings</li>
 </ol>
-<p>Buildings aren't different here, but the <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">Simple 3D buildings</a> schema enforces a relation (but not to glue all the walls together). Also some <a href="http://wiki.openstreetmap.org/wiki/Indoor">indoor mapping</a> schemas might make use of this very fine grade of modelling (as you can tag walls seperately). AFAIK this wall based modelling isn't common sense yet.</p>
+<p>Buildings aren't different here, but the <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">Simple 3D buildings</a> schema enforces a relation (but not to glue all the walls together). Also some <a href="https://wiki.openstreetmap.org/wiki/Indoor">indoor mapping</a> schemas might make use of this very fine grade of modelling (as you can tag walls seperately). AFAIK this wall based modelling isn't common sense yet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

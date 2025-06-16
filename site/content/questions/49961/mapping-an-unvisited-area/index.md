@@ -119,9 +119,9 @@ osqa_accepted = true
 <div class="answer-body">
 <p>First off: there is no one correct answer. Each mapper has their own personal style of doing thing, also depending on what you'd like to map.</p>
 <p>As aseerel4c26 said, record the things you think would be most useful to you. It's nearly impossible to <em>fully</em> map an area in one go, usually several people visit the same area repeatedly, each time adding more and different details. Don't stress too much about recording everything; anything you add to the map has value! If the area is relatively blank, you can start by just mapping the trails and roads, and any significant POIs. When mapping an urban environment I would, for instance, write down street names, street types, locations and names of shops, etc. Note that this requires stopping every few seconds (depending on the density of things you want to write down), if you want to spend more time riding, then some kind of automatic camera setup might be better.</p>
-<p>Personally when I map on a bicycle I record my GPS tracks on my phone. I have a notepad and pen, and I draw annotated schematics of my surroundings, recording things which I find relevant (here is an <a href="http://wiki.openstreetmap.org/wiki/File:OSM-PDA-BSGPSPDA-bike.jpg">old example</a>). I don't worry about getting the proportions correct on my sketch - my GPS tracks will handle that for me.</p>
+<p>Personally when I map on a bicycle I record my GPS tracks on my phone. I have a notepad and pen, and I draw annotated schematics of my surroundings, recording things which I find relevant (here is an <a href="https://wiki.openstreetmap.org/wiki/File:OSM-PDA-BSGPSPDA-bike.jpg">old example</a>). I don't worry about getting the proportions correct on my sketch - my GPS tracks will handle that for me.</p>
 <p>When I get home, I upload my GPS tracks to OSM, and then use an editor like JOSM to draw the ways and points, combining the information from the GPS tracks (which gives me their location) and my sketch (which gives me their attributes). In dense areas this is enough, in more sparse areas you may want to manually create waypoints using your GPS logger (so that you know where to map that POI, as it may not be obvious just from looking at your GPS tracks).</p>
-<p>For sketching you could try using <a href="http://wiki.openstreetmap.org/wiki/Field_Papers">Field Papers</a>, but a blank piece of paper does it just as well.</p>
+<p>For sketching you could try using <a href="https://wiki.openstreetmap.org/wiki/Field_Papers">Field Papers</a>, but a blank piece of paper does it just as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -271,7 +271,7 @@ osqa_accepted = true
 <div id="post-50030-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11913/carnildo">@Carnildo</a>: thanks, "button sets" sounds good!</p>
+<p><a href="https://help.openstreetmap.org/users/11913/carnildo">@Carnildo</a>: thanks, "button sets" sounds good!</p>
 </div>
 <div id="comment-50030-info" class="comment-info">
 <span class="comment-age">(05 Jun '16, 12:32)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

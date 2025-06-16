@@ -232,7 +232,7 @@ osqa_accepted = false
 <div id="post-53576-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p><a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-53576-info" class="comment-info">
 <span class="comment-age">(16 Dec '16, 09:53)</span> <span class="comment-user userinfo">andy mackey</span>

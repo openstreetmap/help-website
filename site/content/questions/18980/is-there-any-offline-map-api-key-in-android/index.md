@@ -79,7 +79,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question http://help.openstreetmap.org/questions/18955/creation-of-osm-offline-map-api-key" by scai 11 Jan '13, 07:41
+### The question has been closed for the following reason "Duplicate Question https://help.openstreetmap.org/questions/18955/creation-of-osm-offline-map-api-key" by scai 11 Jan '13, 07:41
 
 </div>
 

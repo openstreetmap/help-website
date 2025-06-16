@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I tried to tag a two-way signed cycleway on the footpath on one side of the road in changeset <a href="http://www.openstreetmap.org/changeset/26332967">26332967</a>. It is not showing up on OSM cycle. Have I coded it correctly? Why is it not showing up on the map? Is there some comprehensive examples of how to code the many complicated situations of where cycleways may be put in relation to footpaths and roads? Thanks, Greg</p>
+<p>Hi, I tried to tag a two-way signed cycleway on the footpath on one side of the road in changeset <a href="https://www.openstreetmap.org/changeset/26332967">26332967</a>. It is not showing up on OSM cycle. Have I coded it correctly? Why is it not showing up on the map? Is there some comprehensive examples of how to code the many complicated situations of where cycleways may be put in relation to footpaths and roads? Thanks, Greg</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-footpath" rel="tag" title="see questions tagged &#39;footpath&#39;">footpath</span> <span class="post-tag tag-link-twoway" rel="tag" title="see questions tagged &#39;twoway&#39;">twoway</span> <span class="post-tag tag-link-cycleway" rel="tag" title="see questions tagged &#39;cycleway&#39;">cycleway</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>That's the Lübecker scheme: <a href="http://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren_L%C3%BCbecker_Methode,">http://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren_L%C3%BCbecker_Methode,</a> which is not "recognized" outside Lübeck, and hence not rendered on the main map. At least that is what I think.</p>
+<p>That's the Lübecker scheme: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren_L%C3%BCbecker_Methode,">https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren_L%C3%BCbecker_Methode,</a> which is not "recognized" outside Lübeck, and hence not rendered on the main map. At least that is what I think.</p>
 </div>
 <div id="comment-38267-info" class="comment-info">
 <span class="comment-age">(02 Nov '14, 22:08)</span> <span class="comment-user userinfo">escada</span>
@@ -133,7 +133,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, here is a site with tags for <a href="http://wiki.openstreetmap.org/wiki/Bicycle">cycleways</a> In The Netherlands it's always allowed to walk on a cycleway, so I would only tag the cycleway. <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">Australia</a> has the same rule, I don't see one for New Zealand.</p>
+<p>Hi, here is a site with tags for <a href="https://wiki.openstreetmap.org/wiki/Bicycle">cycleways</a> In The Netherlands it's always allowed to walk on a cycleway, so I would only tag the cycleway. <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">Australia</a> has the same rule, I don't see one for New Zealand.</p>
 <p>hth a bit Gys</p>
 </div>
 <div class="answer-controls post-controls">

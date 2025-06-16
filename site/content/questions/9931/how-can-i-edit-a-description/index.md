@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to <a href="http://osm.org">osm.org</a>, zoom in to the tunnel, and click the "edit" button to enter the Potlach editor. Then click on the tunel, and edit its tags on the left-hand side (choose "advanced" view at the bottom of the panel if your tag doesn't show up). See the <a href="http://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide">beginner's guide</a> for more info. Welcome :)</p>
+<p>Go to <a href="http://osm.org">osm.org</a>, zoom in to the tunnel, and click the "edit" button to enter the Potlach editor. Then click on the tunel, and edit its tags on the left-hand side (choose "advanced" view at the bottom of the panel if your tag doesn't show up). See the <a href="https://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide">beginner's guide</a> for more info. Welcome :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

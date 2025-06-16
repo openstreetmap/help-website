@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Like all other <a href="https://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets">changeset tags</a>, the review_requested tag cannot be modified after the changeset is closed. This is the same mechanism as with the changeset's comment and source, see for example <a href="https://help.openstreetmap.org/questions/8439/is-it-possible-to-change-comments-in-changeset-history">"Is it possible to change comments in changeset history"</a>.</p>
+<p>Like all other <a href="https://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets">changeset tags</a>, the review_requested tag cannot be modified after the changeset is closed. This is the same mechanism as with the changeset's comment and source, see for example <a href="/questions/8439/is-it-possible-to-change-comments-in-changeset-history">"Is it possible to change comments in changeset history"</a>.</p>
 <p>As <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> has pointed out, this tag does not mean that your data is not added to the database. The only effect is that people will be more likely to review your changeset. If you still want to make it clear that you added the tag by accident, you can use your changeset's <a href="https://wiki.openstreetmap.org/wiki/Changeset#Changeset_Discussions">discussion</a> for that.</p>
 </div>
 <div class="answer-controls post-controls">

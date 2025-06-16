@@ -77,7 +77,7 @@ osqa_accepted = false
 <div id="post-24168-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>So <a href="http://www.openstreetmap.org/browse/relation/3076009">http://www.openstreetmap.org/browse/relation/3076009</a> is the thing we are discussing?</p>
+<p>So <a href="https://www.openstreetmap.org/browse/relation/3076009">https://www.openstreetmap.org/browse/relation/3076009</a> is the thing we are discussing?</p>
 </div>
 <div id="comment-24168-info" class="comment-info">
 <span class="comment-age">(10 Jul '13, 17:00)</span> <span class="comment-user userinfo">gnurk</span>
@@ -132,11 +132,11 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Do you have a link to the swimming pool or highway? That will make it easier for us to give you a more specific answer.</p>
-<p>First of all: <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Don't tag for the renderer</a>. But checking the result as you've done is a good habit.</p>
-<p>Did you create a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relation</a> relation? You should probably have done that, with the highway as role outer and swimming pool as role inner. Put as many tags as possible on the relation instead of the outer ring, as stated in the wiki.</p>
+<p>First of all: <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Don't tag for the renderer</a>. But checking the result as you've done is a good habit.</p>
+<p>Did you create a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relation</a> relation? You should probably have done that, with the highway as role outer and swimming pool as role inner. Put as many tags as possible on the relation instead of the outer ring, as stated in the wiki.</p>
 <p>Does these swimming pools look OK to you?</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/3076138">http://www.openstreetmap.org/browse/relation/3076138</a></p>
-<p><a href="http://www.openstreetmap.org/?box=yes&amp;bbox=15.12222%2C58.32058%2C15.12357%2C58.32104">http://www.openstreetmap.org/?box=yes&amp;bbox=15.12222%2C58.32058%2C15.12357%2C58.32104</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/3076138">https://www.openstreetmap.org/browse/relation/3076138</a></p>
+<p><a href="https://www.openstreetmap.org/?box=yes&amp;bbox=15.12222%2C58.32058%2C15.12357%2C58.32104">https://www.openstreetmap.org/?box=yes&amp;bbox=15.12222%2C58.32058%2C15.12357%2C58.32104</a></p>
 <p>I changed them recently, after I've read your question, so it may take some time before they show up completely on the map.</p>
 <hr />
 <p>Updated answer: I'm not very familiar with editing in Potlatch, but since you managed to create the multipolygon relation I think you are almost done. You just have to move around the tags a little bit. You need to click Advanced when editing the ways and the relation.</p>
@@ -157,8 +157,8 @@ One Answer:
 <hr />
 <p>Updated answer:</p>
 <p>I've made a shreenshot of Potlatch which I hope clarifies which tags to move.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging">multipolygon</a> wiki says "It is suggested to apply all tags which describe the area to the relation, and not to the ways. In many cases this may result in completely untagged ways." (and also "This section is for software developers, users should add tags always to relation and not to outer ways!")</p>
-<p><img src="http://help.openstreetmap.org/upfiles/swimming_1.png" alt="screen shot" /></p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging">multipolygon</a> wiki says "It is suggested to apply all tags which describe the area to the relation, and not to the ways. In many cases this may result in completely untagged ways." (and also "This section is for software developers, users should add tags always to relation and not to outer ways!")</p>
+<p><img src="/upfiles/swimming_1.png" alt="screen shot" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -182,7 +182,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Hi: Thank you very much! The link to the swimming pools you sent me ... they look perfect, exactly what I need</p>
-<p>Here is (I hope) the link to the swimming pool I am trying to do (that little rectangle under the lake): <a href="http://www.openstreetmap.org/?lat=38.781213&amp;lon=-77.532396&amp;zoom=19">http://www.openstreetmap.org/?lat=38.781213&amp;lon=-77.532396&amp;zoom=19</a> I must be really dumb as I don't quite understand it, for example, this: Tag the relation (not the outer way) as:</p>
+<p>Here is (I hope) the link to the swimming pool I am trying to do (that little rectangle under the lake): <a href="https://www.openstreetmap.org/?lat=38.781213&amp;lon=-77.532396&amp;zoom=19">https://www.openstreetmap.org/?lat=38.781213&amp;lon=-77.532396&amp;zoom=19</a> I must be really dumb as I don't quite understand it, for example, this: Tag the relation (not the outer way) as:</p>
 <p>When you have the time, if you could please outline the exact steps. As I said, I can only use Potlatch and iD.</p>
 <p>Thank you!!!!</p>
 </div>

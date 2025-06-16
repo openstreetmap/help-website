@@ -180,7 +180,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10255/nordie69"></a><a href="http://help.openstreetmap.org/users/10255/nordie69">@nordie69</a> Great links thx. The first one is good for me. I didn't realise OSM now uses CartoCSS for styling (whatever that is). Also lead to <a href="https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml">https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml</a> which appears to be the old XML style sheet (+4000 lines, holy crap!). This XML also declares a bunch of Layers towards the end.</p>
+<p><a href="https://help.openstreetmap.org/users/10255/nordie69"></a><a href="https://help.openstreetmap.org/users/10255/nordie69">@nordie69</a> Great links thx. The first one is good for me. I didn't realise OSM now uses CartoCSS for styling (whatever that is). Also lead to <a href="https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml">https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml</a> which appears to be the old XML style sheet (+4000 lines, holy crap!). This XML also declares a bunch of Layers towards the end.</p>
 </div>
 <div id="comment-40709-info" class="comment-info">
 <span class="comment-age">(30 Jan '15, 08:23)</span> <span class="comment-user userinfo">mapgenius323</span>
@@ -204,7 +204,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10128/mapgenius323">@mapgenius323</a>: "I didn't realise OSM now uses CartoCSS" – you really should just read the Mapnik wiki page. It is mentioned there (prominently in the intro section). You may find other interesting bits on that page.</p>
+<p><a href="https://help.openstreetmap.org/users/10128/mapgenius323">@mapgenius323</a>: "I didn't realise OSM now uses CartoCSS" – you really should just read the Mapnik wiki page. It is mentioned there (prominently in the intro section). You may find other interesting bits on that page.</p>
 </div>
 <div id="comment-40715-info" class="comment-info">
 <span class="comment-age">(30 Jan '15, 13:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -215,7 +215,7 @@ osqa_accepted = false
 <div id="post-40724-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I did read that page. I missed that though. I disagree that that is prominent. I find the entire OSM wiki a muddle, but that is my personal opinion, and I am still grateful for its existence of course.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I did read that page. I missed that though. I disagree that that is prominent. I find the entire OSM wiki a muddle, but that is my personal opinion, and I am still grateful for its existence of course.</p>
 </div>
 <div id="comment-40724-info" class="comment-info">
 <span class="comment-age">(30 Jan '15, 21:53)</span> <span class="comment-user userinfo">mapgenius323</span>
@@ -258,7 +258,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Examining OSM's Mapnik style sheet is the best way to get a feeling for how Mapnik integrates with a Postgres/PostGIS database. This is available at <a href="https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml">https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml</a>. Note that OSM now specifies its style in <a href="http://wiki.openstreetmap.org/wiki/CartoCSS">CartoCSS</a>, but these CartoCSS style sheets are still compiled into Mapnik XML style sheets. Also see <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> for more info on CartoCSS.</p>
+<p>Examining OSM's Mapnik style sheet is the best way to get a feeling for how Mapnik integrates with a Postgres/PostGIS database. This is available at <a href="https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml">https://trac.openstreetmap.org/browser/subversion/applications/rendering/mapnik/osm.xml</a>. Note that OSM now specifies its style in <a href="https://wiki.openstreetmap.org/wiki/CartoCSS">CartoCSS</a>, but these CartoCSS style sheets are still compiled into Mapnik XML style sheets. Also see <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> for more info on CartoCSS.</p>
 <p>Basically, Mapnik has an abstraction layer, with drivers for each type of data source ("layer"). These drivers read geometric data in some specific external format in to some internal format used by Mapnik. This internal format geometric data eventually finds its way to symbolizers and onto a canvas via way of "styles", which get attached to each layer. The PostGIS driver requires you to specify a SQL query that returns a table of data. That table must contain a column called "way" of PostGIS type "geometry". The table may contain arbitrary other columns. These other columns can be used to support rendering (how they can be used I don't know yet). But in most cases all that is needed for a symbolizer to render something is the way column. Layers also need a database connection configuration. The following link shows a complete and working, but very basic Mapnik style sheet with a PostGIS layer - <a href="http://pastebin.com/1spMSvA8">http://pastebin.com/1spMSvA8</a></p>
 <hr />
 P.S. Thanks for help from commenters above. Please feel free to add to or expand on this answer.
@@ -369,7 +369,7 @@ P.S. Thanks for help from commenters above. Please feel free to add to or expand
 <div id="post-40692-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10128/mapgenius323">@mapgenius323</a>: it is not "very" helpful, yes. But more than the cited part of the intro.</p>
+<p><a href="https://help.openstreetmap.org/users/10128/mapgenius323">@mapgenius323</a>: it is not "very" helpful, yes. But more than the cited part of the intro.</p>
 </div>
 <div id="comment-40692-info" class="comment-info">
 <span class="comment-age">(29 Jan '15, 12:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

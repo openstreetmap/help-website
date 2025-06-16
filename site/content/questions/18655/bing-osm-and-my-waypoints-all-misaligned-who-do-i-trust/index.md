@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Bing, OSM and my waypoints all misaligned. Who do I trust?"
-description = '''I&#x27;m currently in Vagator Village, P.O. Anjuna, Bardez Taluka, Goa, India. here&#x27;s a link to the area: http://www.openstreetmap.org/export?lat=15.5978&amp;amp;lon=73.74234&amp;amp;zoom=15&amp;amp;layers=M When I first opened the area in JOSM, I noticed a misalignment between extant OSM data and the Bing imagery b...'''
+description = '''I&#x27;m currently in Vagator Village, P.O. Anjuna, Bardez Taluka, Goa, India. here&#x27;s a link to the area: https://www.openstreetmap.org/export?lat=15.5978&amp;amp;lon=73.74234&amp;amp;zoom=15&amp;amp;layers=M When I first opened the area in JOSM, I noticed a misalignment between extant OSM data and the Bing imagery b...'''
 date = "2012-12-21T09:51:00Z"
 lastmod = "2012-12-23T11:32:00Z"
 weight = 18655
@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm currently in Vagator Village, P.O. Anjuna, Bardez Taluka, Goa, India. here's a link to the area:</p>
-<p><a href="http://www.openstreetmap.org/export?lat=15.5978&amp;lon=73.74234&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/export?lat=15.5978&amp;lon=73.74234&amp;zoom=15&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/export?lat=15.5978&amp;lon=73.74234&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/export?lat=15.5978&amp;lon=73.74234&amp;zoom=15&amp;layers=M</a></p>
 <p>When I first opened the area in JOSM, I noticed a misalignment between extant OSM data and the Bing imagery by some 6-8 meters horizontally and vertically. To establish who is 'right' I gathered a few ground points from features visible on the Bing imagery, using my etrex vista hcx. I averaged the measurements for a minute each, and repeated the measurements on successive days. Conditions were ideal: clear sky, all satellites visible, no trees. My repeat measurements came out within 1m of the previous ones. Alas: if I set the image offset in JOSM to coincide with my measurements I only need a small offset for the images, and it's different to the one I would need to make the extant OSM data concide with the images.</p>
 <p>I suspect the original OSM data may have been derived from different imagery which wasn't correctly aligned. The systematic offset between the OSM data and Bing imagery can be seen well when looking at Chapora Fort:</p>
-<p><a href="http://www.openstreetmap.org/export?lat=15.60609&amp;lon=73.73622&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/export?lat=15.60609&amp;lon=73.73622&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/export?lat=15.60609&amp;lon=73.73622&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/export?lat=15.60609&amp;lon=73.73622&amp;zoom=17&amp;layers=M</a></p>
 <p>In JOSM, an offset of 8.00; -6.00 roughly fixes the OSM/Bing difference, while for my own measurements, an offset of 1.00; 2.00 to the Bing images seems just about right. While the offset for my own measurements is so small that it's within the tolerance of the GPS measurements and therefore probably insignificant, I feel the discrepancy between the extant OSM data and both the imagery and my measurements implies that the extant OSM data are misplaced. What should I do?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

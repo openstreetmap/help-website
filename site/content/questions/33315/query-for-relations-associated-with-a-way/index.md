@@ -48,7 +48,7 @@ osqa_accepted = false
 Example: With a way id, for example <em>157561015</em>, realize that bus services <em>170, 171, 184, ...</em> are associated with this way.</p>
 <p><strong>Suggestions</strong></p>
 <ol>
-<li><p>I noticed that openstreetmap.org has the capability to perform such a query. See <a href="http://www.openstreetmap.org/way/157561015">http://www.openstreetmap.org/way/157561015</a> . Scroll down the "side-bar" to see relations</p></li>
+<li><p>I noticed that openstreetmap.org has the capability to perform such a query. See <a href="https://www.openstreetmap.org/way/157561015">https://www.openstreetmap.org/way/157561015</a> . Scroll down the "side-bar" to see relations</p></li>
 <li><p>Convert OSM map data into a form that can be used to create a database. Is there an easy way of doing this? (for e.g. Spatialite?)</p></li>
 </ol>
 <p>Thank you for reading.</p>
@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>ad 1.</p>
-<p>The website obviously has access to the main database. For external apps that are not editors, we prefer (strongly) that you use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass-api</a>. You can use <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass turbo</a> to test your queries. <a href="http://overpass-turbo.eu/s/3sT">These are all the bus routes using way 157561015</a>.</p>
+<p>The website obviously has access to the main database. For external apps that are not editors, we prefer (strongly) that you use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass-api</a>. You can use <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass turbo</a> to test your queries. <a href="http://overpass-turbo.eu/s/3sT">These are all the bus routes using way 157561015</a>.</p>
 <p>If later your app becomes wildly successful, we actually prefer you setup your own database. ;)</p>
 <p>ad 2.</p>
 <p>I think you answered your own question: <a href="https://www.gaia-gis.it/fossil/spatialite-tools/wiki?name=spatialite_osm_raw">spatialite osm raw</a></p>

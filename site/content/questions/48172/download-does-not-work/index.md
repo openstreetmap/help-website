@@ -133,7 +133,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you are talking about the <a href="http://wiki.openstreetmap.org/wiki/Export">Export</a> feature of main osm.org website.</p>
+<p>I think you are talking about the <a href="https://wiki.openstreetmap.org/wiki/Export">Export</a> feature of main osm.org website.</p>
 <p>Read the whole text in the OSM wiki about that feature, and about troubbleshooting.</p>
 <p>Tell us here if you get stuck with new problems in detail.</p>
 </div>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are trying to download too large an area. Either try a smaller area, or look at one of the alternatives described <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">here</a>.</p>
+<p>You are trying to download too large an area. Either try a smaller area, or look at one of the alternatives described <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -235,7 +235,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you only want small maps the export function should work, Screen prints will also work. But for bigger maps i would suggest using Garmins Basecamp, it is a free program which has several other features such as route planning and printing. See this other question on Basecamp. It will work on Win PC also. The downloaded map means the you can then work without an internet connection. <a href="https://help.openstreetmap.org/questions/40523/importing-maps-to-basecamp-mac">https://help.openstreetmap.org/questions/40523/importing-maps-to-basecamp-mac</a></p>
+<p>If you only want small maps the export function should work, Screen prints will also work. But for bigger maps i would suggest using Garmins Basecamp, it is a free program which has several other features such as route planning and printing. See this other question on Basecamp. It will work on Win PC also. The downloaded map means the you can then work without an internet connection. <a href="/questions/40523/importing-maps-to-basecamp-mac">https://help.openstreetmap.org/questions/40523/importing-maps-to-basecamp-mac</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

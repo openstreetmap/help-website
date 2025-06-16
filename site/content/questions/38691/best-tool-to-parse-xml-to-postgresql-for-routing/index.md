@@ -128,7 +128,7 @@ One Answer:
 <div id="post-38702-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9952/echoalphapapa">@echoalphapapa</a></p>
+<p><a href="https://help.openstreetmap.org/users/9952/echoalphapapa">@echoalphapapa</a></p>
 <p>if you want to try other opensource routing frameworks, type "routing" in the search box of this FAQ site.</p>
 </div>
 <div id="comment-38702-info" class="comment-info">
@@ -140,7 +140,7 @@ One Answer:
 <div id="post-38709-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a> actually the point of the project I'm working is to build my own routing engine. Right now I'm just look at ways to parse the data into a PostgreSQL database and then build my routing engine.</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a> actually the point of the project I'm working is to build my own routing engine. Right now I'm just look at ways to parse the data into a PostgreSQL database and then build my routing engine.</p>
 </div>
 <div id="comment-38709-info" class="comment-info">
 <span class="comment-age">(21 Nov '14, 16:59)</span> <span class="comment-user userinfo">echoalphapapa</span>

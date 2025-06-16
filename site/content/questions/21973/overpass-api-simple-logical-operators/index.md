@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The question <a href="https://help.openstreetmap.org/questions/21941/can-not-find-rdby-putgarden-denmark-ferry-route-with-navigator-from-mapfactor">https://help.openstreetmap.org/questions/21941/can-not-find-rdby-putgarden-denmark-ferry-route-with-navigator-from-mapfactor</a> gave me the idea to query the DB for all nodes that are tagged barrier=... and do not have an access tag, so I can specifically check those in my area.</p>
+<p>The question <a href="/questions/21941/can-not-find-rdby-putgarden-denmark-ferry-route-with-navigator-from-mapfactor">https://help.openstreetmap.org/questions/21941/can-not-find-rdby-putgarden-denmark-ferry-route-with-navigator-from-mapfactor</a> gave me the idea to query the DB for all nodes that are tagged barrier=... and do not have an access tag, so I can specifically check those in my area.</p>
 <p>(How) can this be done in OverpassQL? Does OverpassQL or some other API have support for "not"-style operators? I couldn't find documentation stating this.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Looks like there's ["key"!="value"], or ["key"!~"value"] if you want to use regular expressions.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

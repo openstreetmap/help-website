@@ -111,7 +111,7 @@ One Answer:
 </ol>
 <p>Random example <a href="https://www.openstreetmap.org/way/454489677">https://www.openstreetmap.org/way/454489677</a></p>
 <p>The good thing about OSM is that you can rectify both issues easily (with a bit of time) yourself. Create yourself an account and start editing <a href="https://www.openstreetmap.org/login?referer=%2F">https://www.openstreetmap.org/login?referer=%2F</a></p>
-<p>Adding building outlines is quite straight forward, for building heights see: <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Height">http://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Height</a></p>
+<p>Adding building outlines is quite straight forward, for building heights see: <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Height">https://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Height</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

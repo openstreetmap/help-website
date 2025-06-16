@@ -169,7 +169,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As mentioned, the age varies from each source. Even with the same source of imagery, the age will change (as noted on the bing page) depending on the particular place.</p>
-<p>Right now, there isn't a specific place detailing all of this information, but you could check out: <a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">http://wiki.openstreetmap.org/wiki/Aerial_imagery</a> and <a href="http://wiki.openstreetmap.org/wiki/Potential_Datasources">http://wiki.openstreetmap.org/wiki/Potential_Datasources</a></p>
+<p>Right now, there isn't a specific place detailing all of this information, but you could check out: <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">https://wiki.openstreetmap.org/wiki/Aerial_imagery</a> and <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">https://wiki.openstreetmap.org/wiki/Potential_Datasources</a></p>
 <p>Also, if you're a josm user: Have the WMS layer open and selected, right-click on it on any area and select 'tile info'. This will sometimes tell you the approximate date when the imagery was taken (although this is sometimes incorrect!).</p>
 </div>
 <div class="answer-controls post-controls">

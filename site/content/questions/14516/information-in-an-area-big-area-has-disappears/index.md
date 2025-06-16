@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] information in an area big area has disappears ??"
-description = '''Hello, Yesterday I discovered that the streets in a large area had disappeared. I checked the history of changes and it seems that nobody had changed it. I also noted that in other areas other streets had disappeared. http://www.openstreetmap.org/?lat=40.33597&amp;amp;lon=-3.83912&amp;amp;zoom=16 at that po...'''
+description = '''Hello, Yesterday I discovered that the streets in a large area had disappeared. I checked the history of changes and it seems that nobody had changed it. I also noted that in other areas other streets had disappeared. https://www.openstreetmap.org/?lat=40.33597&amp;amp;lon=-3.83912&amp;amp;zoom=16 at that po...'''
 date = "2012-07-23T18:46:00Z"
 lastmod = "2012-07-23T18:46:00Z"
 weight = 14516
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, Yesterday I discovered that the streets in a large area had disappeared. I checked the history of changes and it seems that nobody had changed it. I also noted that in other areas other streets had disappeared.</p>
-<p><a href="http://www.openstreetmap.org/?lat=40.33597&amp;lon=-3.83912&amp;zoom=16">http://www.openstreetmap.org/?lat=40.33597&amp;lon=-3.83912&amp;zoom=16</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=40.33597&amp;lon=-3.83912&amp;zoom=16">https://www.openstreetmap.org/?lat=40.33597&amp;lon=-3.83912&amp;zoom=16</a></p>
 <p>at that position the difference can be detected choosing between the” general “view and the “mapQuest open “ view .</p>
 <p>May it be a problem of the application?, Is my mistake?</p>
 <p>Could anyone tell me if there is a way to solve it without rebuilding it at all?</p>

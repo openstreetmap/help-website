@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>About disputed areas, you should report to the Data Working Group (DWG). See the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">wiki</a>.</p>
+<p>About disputed areas, you should report to the Data Working Group (DWG). See the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

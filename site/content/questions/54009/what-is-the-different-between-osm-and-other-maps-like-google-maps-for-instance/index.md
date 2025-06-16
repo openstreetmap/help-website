@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See for example <a href="https://help.openstreetmap.org/questions/53484/in-which-ways-is-openstreetmap-superior-to-google-maps">https://help.openstreetmap.org/questions/53484/in-which-ways-is-openstreetmap-superior-to-google-maps</a> for a current answer.</p>
+<p>See for example <a href="/questions/53484/in-which-ways-is-openstreetmap-superior-to-google-maps">https://help.openstreetmap.org/questions/53484/in-which-ways-is-openstreetmap-superior-to-google-maps</a> for a current answer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

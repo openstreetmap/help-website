@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check this <a href="http://help.openstreetmap.org/questions/11069/does-openstreetmap-have-a-my-places-feature-like-google-maps">similar question</a> and the link to Open MapQuest and their "My Maps" feature (which is currently not available at the moment I write this post).</p>
+<p>Check this <a href="/questions/11069/does-openstreetmap-have-a-my-places-feature-like-google-maps">similar question</a> and the link to Open MapQuest and their "My Maps" feature (which is currently not available at the moment I write this post).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I try to install nominatim server by this <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">tutorial</a> . My hardware Ubuntu 14.04, 32bit, 4gbram, 488gbmemory. But i have faced with this problem : osm2pgsql SVN version 0.89.0-dev (64bit id space)</p>
+<p>Hi, I try to install nominatim server by this <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">tutorial</a> . My hardware Ubuntu 14.04, 32bit, 4gbram, 488gbmemory. But i have faced with this problem : osm2pgsql SVN version 0.89.0-dev (64bit id space)</p>
 <blockquote>
 <p>Using projection SRS 4326 (Latlong) NOTICE: table "place" does not exist, skipping Allocating memory for sparse node cache Node-cache: cache=18000MB, maxblocks=0*2304000, allocation method=8192 Mid: loading persistent node cache from /home/agentmonitoring/Desktop/Nominatim-2.5.1/CONST_Osm2pgsql_Flatnode_File Failed to allocate space for node cache file: Internal error 22 Error occurred, cleaning up ERROR: Error executing external command: /home/agentmonitoring/Desktop/Nominatim-2.5.1/osm2pgsql/osm2pgsql --flat-nodes /home/agentmonitoring/Desktop/Nominatim-2.5.1/CONST_Osm2pgsql_Flatnode_File -lsc -O gazetteer --hstore --number-processes 1 -C 18000 -P 5432 -d nominatim /home/agentmonitoring/Desktop/planet-latest.osm.pbf Error executing external command: /home/agentmonitoring/Desktop/Nominatim-2.5.1/osm2pgsql/osm2pgsql --flat-nodes /home/agentmonitoring/Desktop/Nominatim-2.5.1/CONST_Osm2pgsql_Flatnode_File -lsc -O gazetteer --hstore --number-processes 1 -C 18000 -P 5432 -d nominatim /home/agentmonitoring/Desktop/planet-latest.osm.pbf</p>
 </blockquote>

@@ -190,7 +190,7 @@ osqa_accepted = false
 <div id="post-61632-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I created a new question <a href="https://help.openstreetmap.org/questions/61630/how-to-change-openstreetmap-tiles-update-expire-to-use-geofabrik-updates">https://help.openstreetmap.org/questions/61630/how-to-change-openstreetmap-tiles-update-expire-to-use-geofabrik-updates</a> from a comment here.</p>
+<p>I created a new question <a href="/questions/61630/how-to-change-openstreetmap-tiles-update-expire-to-use-geofabrik-updates">https://help.openstreetmap.org/questions/61630/how-to-change-openstreetmap-tiles-update-expire-to-use-geofabrik-updates</a> from a comment here.</p>
 </div>
 <div id="comment-61632-info" class="comment-info">
 <span class="comment-age">(14 Jan '18, 23:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

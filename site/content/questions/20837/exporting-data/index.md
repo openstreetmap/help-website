@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You're probably better off with a data extract than a live export. Have a look at <a href="https://help.openstreetmap.org/questions/19342/why-does-the-xml-export-fail">this previous question</a>.</p>
+<p>You're probably better off with a data extract than a live export. Have a look at <a href="/questions/19342/why-does-the-xml-export-fail">this previous question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

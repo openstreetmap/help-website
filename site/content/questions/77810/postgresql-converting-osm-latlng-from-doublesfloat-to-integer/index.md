@@ -43,9 +43,9 @@ osqa_accepted = false
 <p>osmosis --read-xml file="/home/ubuntu/osmosis/bin/eu_filterxrx.osm" --write-apidb host="localhost" database="osm_test-1" user="shafi" password="lhoft" validateSchemaVersion="no"</p>
 <p>writing it to an apidb. Doing this makes converts my latitude and longitudes to integers for some reason</p>
 <p>orignal data looks like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/latlngOSM.jpeg" alt="osm data viewed in notepad++" /> as you can see lat and long are both decimals above. but once i put the data into postgres and i view it using pgadmin the lat and lon are no longer deicmals they are now integers making them useless. how do i stop it doing that,</p>
+<p><img src="/upfiles/latlngOSM.jpeg" alt="osm data viewed in notepad++" /> as you can see lat and long are both decimals above. but once i put the data into postgres and i view it using pgadmin the lat and lon are no longer deicmals they are now integers making them useless. how do i stop it doing that,</p>
 <p>Thanks in Advance</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_ga6jcJk.PNG" alt="data once it is inside DB" /></p>
+<p><img src="/upfiles/Capture_ga6jcJk.PNG" alt="data once it is inside DB" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-postgresql" rel="tag" title="see questions tagged &#39;postgresql&#39;">postgresql</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-postgres" rel="tag" title="see questions tagged &#39;postgres&#39;">postgres</span> <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span> <span class="post-tag tag-link-help" rel="tag" title="see questions tagged &#39;help&#39;">help</span>

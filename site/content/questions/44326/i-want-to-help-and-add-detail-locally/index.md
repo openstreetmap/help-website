@@ -179,7 +179,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't use a GPS unit myself, I prefer to use my smartphone, so sadly I cant give you any tips on how to use your device, but I posted up a list of tips in another thread which might be of use in terms of adding/collecting information</p>
-<p>You can find it <a href="https://help.openstreetmap.org/questions/43243/how-do-you-plan-a-survey?page=1&amp;focusedAnswerId=43265#43265">here</a></p>
+<p>You can find it <a href="/questions/43243/how-do-you-plan-a-survey?page=1&amp;focusedAnswerId=43265#43265">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

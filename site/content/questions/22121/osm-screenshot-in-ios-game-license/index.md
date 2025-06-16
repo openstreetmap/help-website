@@ -205,7 +205,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Starting point for your reading about using OSM derived works or produced graphic tiles should be the page about <a href="http://www.openstreetmap.org/copyright/en">copyright</a>.</p>
+<p>Starting point for your reading about using OSM derived works or produced graphic tiles should be the page about <a href="https://www.openstreetmap.org/copyright/en">copyright</a>.</p>
 <p>This may leadd you to some pages in the OSM wiki where you have more details and examples.</p>
 <p>You may also enter the keyword or the tag "licence" in the search field of this FAQ site ... you are not the first one asking issues like that.</p>
 </div>
@@ -255,7 +255,7 @@ to Remix — to adapt the work
 <div id="post-22233-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>without knowing the 100% correct answer about the licence question, I can only give another hint to the wiki pages about <a href="http://wiki.openstreetmap.org/wiki/Games">http://wiki.openstreetmap.org/wiki/Games</a> ... have a look at the used licences there.</p>
+<p>without knowing the 100% correct answer about the licence question, I can only give another hint to the wiki pages about <a href="https://wiki.openstreetmap.org/wiki/Games">https://wiki.openstreetmap.org/wiki/Games</a> ... have a look at the used licences there.</p>
 <p>in this FAQ site there are also questions and answers about using OSM maps in printed books ... as far as I know the whole book has NOT to be under the same licence as the single map is.</p>
 </div>
 <div id="comment-22233-info" class="comment-info">

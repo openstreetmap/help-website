@@ -151,7 +151,7 @@ One Answer:
 <div id="post-22257-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue/ABS_Data">this wiki page</a>, the Australian Bureau of Statistics has given permission for ABS data to be imported. This is also apparently where other importers have got suburb boundaries from. I'll look into doing an import.</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue/ABS_Data">this wiki page</a>, the Australian Bureau of Statistics has given permission for ABS data to be imported. This is also apparently where other importers have got suburb boundaries from. I'll look into doing an import.</p>
 <p>Edit: Hmmm, it seems WA doesn't have suburb areas either. Seems no one reimported the boundaries after the redaction?</p>
 </div>
 <div id="comment-22257-info" class="comment-info">
@@ -178,7 +178,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>The link posted by cartinus shows that Nominatim (our currently used address search engine) only finds a Canberra <em>node</em>. A node has no information about the <em>boundary</em> and consequently Nominatim tries to <em>guess</em> the boundary as already explained. In order to fix it you have to add the actual boundary for Canberra to the map or at least a rough estimation.</p>
-<p>If the post code is wrong then just add the correct post code to the <a href="http://www.openstreetmap.org/browse/node/247253488">place node of Evatt</a>. Currently there is none.</p>
+<p>If the post code is wrong then just add the correct post code to the <a href="https://www.openstreetmap.org/browse/node/247253488">place node of Evatt</a>. Currently there is none.</p>
 <p>It's all right there in the link :).</p>
 </div>
 <div id="comment-22354-info" class="comment-info">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to correctly map a POI&#x27;s address ?"
-description = '''Can someone please tell me how I can properly tag this POI http://www.openstreetmap.org/browse/way/237662466 ? It&#x27;s a shop located in the Pierstraat in Reet. The building has an addr:street tag and is part of an associatedStreet relation. However Nominatim (and openlinkmap) places it in the Pierstra...'''
+description = '''Can someone please tell me how I can properly tag this POI https://www.openstreetmap.org/browse/way/237662466 ? It&#x27;s a shop located in the Pierstraat in Reet. The building has an addr:street tag and is part of an associatedStreet relation. However Nominatim (and openlinkmap) places it in the Pierstra...'''
 date = "2013-11-14T06:24:00Z"
 lastmod = "2013-11-15T08:27:00Z"
 weight = 28075
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can someone please tell me how I can properly tag this POI <a href="http://www.openstreetmap.org/browse/way/237662466">http://www.openstreetmap.org/browse/way/237662466</a> ?</p>
+<p>Can someone please tell me how I can properly tag this POI <a href="https://www.openstreetmap.org/browse/way/237662466">https://www.openstreetmap.org/browse/way/237662466</a> ?</p>
 <p>It's a shop located in the Pierstraat in Reet. The building has an addr:street tag and is part of an associatedStreet relation. However Nominatim (and openlinkmap) places it in the Pierstraat - Matenstraat. Do a look-up for "Vero Golf" on osm.org</p>
 <p>I know this is a complex street that starts as Pierstraat in Reet/Rumst in the east, becomes Pierstraat (Reet side)- Reetsesteenweg (Aartselaar side), Pierstraat (both Reet &amp; Aartselaar), Pierstraat (Aartselaar side) - Matenstraat (Niel side) while traveling to the west.</p>
 <p>Nevertheless the building is nearer a Pierstraat-Pierstraat part and has all those additional tags.</p>
@@ -109,7 +109,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You've mapped it correctly, Nominatim is just not very good at updating associatedStreet relations. It's a <a href="https://trac.openstreetmap.org/ticket/4619">known bug</a>.</p>
-<p>Here is what happened: you've originally put the house into <a href="http://www.openstreetmap.org/browse/relation/2594673">this associatedStreet relation</a> which does contain the 'Pierstraat - Matenstraat' street. Nominatim simply uses the first street it finds in such a relation for the name an ignores all tags on the relation itself, so that is where the name comes from. Later you have moved the house to the new relation and that move was not caught by Nominatim's update process. The houses will only be updated when they are changed themselves again.</p>
+<p>Here is what happened: you've originally put the house into <a href="https://www.openstreetmap.org/browse/relation/2594673">this associatedStreet relation</a> which does contain the 'Pierstraat - Matenstraat' street. Nominatim simply uses the first street it finds in such a relation for the name an ignores all tags on the relation itself, so that is where the name comes from. Later you have moved the house to the new relation and that move was not caught by Nominatim's update process. The houses will only be updated when they are changed themselves again.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a> can help to clarify such issues. After <a href="http://nominatim.openstreetmap.org/search.php?q=Vero+Golf">searching for Vero Golf</a> and clicking on <a href="http://nominatim.openstreetmap.org/details.php?place_id=9140432282">(details)</a> you can see Nominatim's internal view for this place including the address hierarchy. According to this, <em>Pierstraat - Matenstraat</em> comes from <a href="http://www.openstreetmap.org/browse/way/22949350">this street</a>. Additionally there is no associatedStreet-relation in the hierarchy. So I guess there is an internal error because Nominatim is supposed to support associatedStreet-relations.</p>
+<p><a href="http://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a> can help to clarify such issues. After <a href="http://nominatim.openstreetmap.org/search.php?q=Vero+Golf">searching for Vero Golf</a> and clicking on <a href="http://nominatim.openstreetmap.org/details.php?place_id=9140432282">(details)</a> you can see Nominatim's internal view for this place including the address hierarchy. According to this, <em>Pierstraat - Matenstraat</em> comes from <a href="https://www.openstreetmap.org/browse/way/22949350">this street</a>. Additionally there is no associatedStreet-relation in the hierarchy. So I guess there is an internal error because Nominatim is supposed to support associatedStreet-relations.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -192,7 +192,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://nominatim.openstreetmap.org/details.php?place_id=9140432282">http://nominatim.openstreetmap.org/details.php?place_id=9140432282</a> suggests last updated on 13th September 2013 and it wasn't added to the associatedStreet relation until 26th September (as such I'd have expected the addr:street on the POI way itself to take priority, but what do I know). Note though that the associatedStreet relation <a href="http://www.openstreetmap.org/browse/relation/2789005">http://www.openstreetmap.org/browse/relation/2789005</a> does contain some ways with role street but the name Pierstraat - Matenstraat so perhaps that is causing the confusion.</p>
+<p><a href="http://nominatim.openstreetmap.org/details.php?place_id=9140432282">http://nominatim.openstreetmap.org/details.php?place_id=9140432282</a> suggests last updated on 13th September 2013 and it wasn't added to the associatedStreet relation until 26th September (as such I'd have expected the addr:street on the POI way itself to take priority, but what do I know). Note though that the associatedStreet relation <a href="https://www.openstreetmap.org/browse/relation/2789005">https://www.openstreetmap.org/browse/relation/2789005</a> does contain some ways with role street but the name Pierstraat - Matenstraat so perhaps that is causing the confusion.</p>
 </div>
 <div id="comment-28085-info" class="comment-info">
 <span class="comment-age">(14 Nov '13, 09:22)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -216,7 +216,7 @@ osqa_accepted = true
 <div id="post-28093-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've just read <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview</a> . it has a section on Building indexing. My interpretation now is that it takes the data from one of the street members in the associatedStreet, not from the tags on the relation. Is this correct ?</p>
+<p>I've just read <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview</a> . it has a section on Building indexing. My interpretation now is that it takes the data from one of the street members in the associatedStreet, not from the tags on the relation. Is this correct ?</p>
 <p>Thanks EdLoach for pointing me to the "missing" update. I wonder what I did on the 13th. I normally put everything immediately in the associatedStreet relation. Maybe I created a second one by accident and merged the two together on the 26th ?</p>
 <p>Is there a way to trigger the update in Nominatim ?</p>
 </div>

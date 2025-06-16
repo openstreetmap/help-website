@@ -282,7 +282,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd guess that circular sign you can see might help. Is it a no cycling sign? Or something else that might help? It might be that cycling is permitted, just awkward... And your link for the photo suggests that they form part of NCN 6, so I'd be surprised if cycling isn't at least designated (though have seen sections of NCN routes which tell cyclists to dismount). It may be designed to slow cyclists down rather than prevent their access (there are a few simpler barriers like that near me, more like those in the <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier">cycle barrier</a> wiki page photo that are <a href="http://goo.gl/maps/qCQnw">on bridges on a shared used cycle path</a> for no obvious reasons that I can see).</p>
+<p>I'd guess that circular sign you can see might help. Is it a no cycling sign? Or something else that might help? It might be that cycling is permitted, just awkward... And your link for the photo suggests that they form part of NCN 6, so I'd be surprised if cycling isn't at least designated (though have seen sections of NCN routes which tell cyclists to dismount). It may be designed to slow cyclists down rather than prevent their access (there are a few simpler barriers like that near me, more like those in the <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier">cycle barrier</a> wiki page photo that are <a href="http://goo.gl/maps/qCQnw">on bridges on a shared used cycle path</a> for no obvious reasons that I can see).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -354,7 +354,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use barrier=chicane bicycle=yes and foot=yes on the way. I am sure wheel chairs, motability scooters and cycles could get through ok. tandems don't know. see <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dchicane">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dchicane</a> and <a href="http://www.cyclestreets.net/photomap/tags/chicane/">http://www.cyclestreets.net/photomap/tags/chicane/</a></p>
+<p>I would use barrier=chicane bicycle=yes and foot=yes on the way. I am sure wheel chairs, motability scooters and cycles could get through ok. tandems don't know. see <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dchicane">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dchicane</a> and <a href="http://www.cyclestreets.net/photomap/tags/chicane/">http://www.cyclestreets.net/photomap/tags/chicane/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

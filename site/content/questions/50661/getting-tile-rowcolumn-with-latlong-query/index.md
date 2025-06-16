@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've been <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_tile_numbers_5">Slippy Tiles Wiki</a> page for equations to convert lat/long values (given via the user) to tile references, and then work with the data relating to the tile.</p>
+<p>I've been <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_tile_numbers_5">Slippy Tiles Wiki</a> page for equations to convert lat/long values (given via the user) to tile references, and then work with the data relating to the tile.</p>
 <p>My problem is the wiki's equation always does one of the following:</p>
 <ul>
 <li><p>Returns a location 20+ miles away from my given lat/long. The range is ~18 miles to 200+ miles, no consistency.</p></li>
@@ -87,7 +87,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Looking at the history, I see a large number of edits by a wiki editor who has caused problems with equations in the past (the one who used "coherent variant names" in a comment).</p>
-<p>I'd suggest looking back in the history <a href="http://wiki.openstreetmap.org/w/index.php?title=Slippy_map_tilenames&amp;action=history">http://wiki.openstreetmap.org/w/index.php?title=Slippy_map_tilenames&amp;action=history</a> , finding a version before their first edit, and using the equations from there.</p>
+<p>I'd suggest looking back in the history <a href="https://wiki.openstreetmap.org/w/index.php?title=Slippy_map_tilenames&amp;action=history">https://wiki.openstreetmap.org/w/index.php?title=Slippy_map_tilenames&amp;action=history</a> , finding a version before their first edit, and using the equations from there.</p>
 <p>If that works, paste those equations into the current page.</p>
 </div>
 <div id="comment-50662-info" class="comment-info">
@@ -99,7 +99,7 @@ osqa_accepted = false
 <div id="post-50664-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> thank you so much. Thishad me and a few colleagues confused, I thought I was being an idiot and not using the given equation properly but if it's incorrect in the CE wiki then I can see why it'd be a problem. On the hunt I go...</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> thank you so much. Thishad me and a few colleagues confused, I thought I was being an idiot and not using the given equation properly but if it's incorrect in the CE wiki then I can see why it'd be a problem. On the hunt I go...</p>
 </div>
 <div id="comment-50664-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 11:21)</span> <span class="comment-user userinfo">JamesGould</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 <div id="post-50670-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> tried and used the equations past said wiki user (my god a lot of edits) and the result has been the same. I was informed on SO that bitshifting wasn't the same as using <code>Math.Pow(2, zoomLevel)</code> so I tried the older equations with both and the result remained the same, for reference.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> tried and used the equations past said wiki user (my god a lot of edits) and the result has been the same. I was informed on SO that bitshifting wasn't the same as using <code>Math.Pow(2, zoomLevel)</code> so I tried the older equations with both and the result remained the same, for reference.</p>
 </div>
 <div id="comment-50670-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 11:46)</span> <span class="comment-user userinfo">JamesGould</span>
@@ -132,7 +132,7 @@ osqa_accepted = false
 <div id="post-50673-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> I don't believe so no. I swapped the equations around and it came back with both the lat and long incorrect, rather than just the lat. I queried the same UK based lat/long in WebCalc and the result was the same as my application, but it doesn't exist in the database. Even all values, not taking the zoom_level as a parameter gave me back 0 results.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> I don't believe so no. I swapped the equations around and it came back with both the lat and long incorrect, rather than just the lat. I queried the same UK based lat/long in WebCalc and the result was the same as my application, but it doesn't exist in the database. Even all values, not taking the zoom_level as a parameter gave me back 0 results.</p>
 </div>
 <div id="comment-50673-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 13:11)</span> <span class="comment-user userinfo">JamesGould</span>
@@ -155,7 +155,7 @@ osqa_accepted = false
 <div id="post-50675-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> correct it did. My inputs are <code>lat: 52.298059</code>, <code>long: -0.1275920</code> using zoom 14- these should resolve to 10 Downing Street, London.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> correct it did. My inputs are <code>lat: 52.298059</code>, <code>long: -0.1275920</code> using zoom 14- these should resolve to 10 Downing Street, London.</p>
 <p>The output for the values are: <code>X: 8186</code> (tile column) and <code>Y: 5448</code> (tile row). I'm using a UK based .mbtiles file from osm2vectortiles.org. My SQL query is: <code>string query = string.Format("SELECT tile_data FROM tiles WHERE zoom_level = {0} AND tile_column = {1} AND tile_row = {2}", ZoomLevel, _merc.TileLong, _merc.TileLat);</code></p>
 </div>
 <div id="comment-50675-info" class="comment-info">
@@ -178,7 +178,7 @@ osqa_accepted = false
 <div id="post-50677-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> I honestly have no idea what's going on. I just queried the lat/long you gave me above for downing street and it's given me a tile about 100 miles away. Do OSM provide their own vector tiles that I can query using SQL or something similar? I can't tell if it's my code or the data I'm using that's the issue.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> I honestly have no idea what's going on. I just queried the lat/long you gave me above for downing street and it's given me a tile about 100 miles away. Do OSM provide their own vector tiles that I can query using SQL or something similar? I can't tell if it's my code or the data I'm using that's the issue.</p>
 </div>
 <div id="comment-50677-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 13:47)</span> <span class="comment-user userinfo">JamesGould</span>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <div id="post-50679-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> if I use those lat/longs above and query the tile in the osm2vectortiles.org united_kingdom.mbtiles file, it gives back data from west sussex, about 50 miles south of the lat long query location. Is that going to be a problem with my code or a problem with the data? This is all using zoom level 14.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> if I use those lat/longs above and query the tile in the osm2vectortiles.org united_kingdom.mbtiles file, it gives back data from west sussex, about 50 miles south of the lat long query location. Is that going to be a problem with my code or a problem with the data? This is all using zoom level 14.</p>
 </div>
 <div id="comment-50679-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 14:07)</span> <span class="comment-user userinfo">JamesGould</span>
@@ -226,7 +226,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> me and a collegaue have just gone through it all and came to the same concluson - the data is wrong. We couldn't find a source for the database used in WebCalc (if you know it please tell me!) so I'm using the data I have right now (sourced from osm2vectortiles) and start working on figuring out lat long tile values from the max/min bounds of the DB.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> me and a collegaue have just gone through it all and came to the same concluson - the data is wrong. We couldn't find a source for the database used in WebCalc (if you know it please tell me!) so I'm using the data I have right now (sourced from osm2vectortiles) and start working on figuring out lat long tile values from the max/min bounds of the DB.</p>
 </div>
 <div id="comment-50682-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 14:47)</span> <span class="comment-user userinfo">JamesGould</span>
@@ -250,7 +250,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> ah that would make a lot of sense as to why they're working with the online browser and not the db I've got. I'll get cracking, thank you both for your help.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> ah that would make a lot of sense as to why they're working with the online browser and not the db I've got. I'll get cracking, thank you both for your help.</p>
 </div>
 <div id="comment-50684-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 15:08)</span> <span class="comment-user userinfo">JamesGould</span>

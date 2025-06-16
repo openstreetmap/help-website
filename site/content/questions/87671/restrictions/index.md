@@ -77,7 +77,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Url: osmotr.itbroker.ru/inspection/508283/map</p>
-<p>!error<a href="https://help.openstreetmap.org/upfiles/6B818482-F25E-4AA6-8FED-7F44EBFC5D64.jpeg">1</a></p>
+<p>!error<span>1</span></p>
 <p>White screen</p>
 </div>
 <div id="comment-87677-info" class="comment-info">
@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-87678-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/79846625-1F7B-432A-A40F-E5D22EBEA8FB.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/79846625-1F7B-432A-A40F-E5D22EBEA8FB.jpeg" alt="alt text" /></p>
 </div>
 <div id="comment-87678-info" class="comment-info">
 <span class="comment-age">(15 Aug '23, 07:18)</span> <span class="comment-user userinfo">StanTheMan</span>

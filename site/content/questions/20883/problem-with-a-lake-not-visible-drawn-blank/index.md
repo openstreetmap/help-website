@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem with a lake, not visible, drawn blank"
-description = '''Hello, Recently I noticed that one of the lakes in my area is not drawn properly on the standard map - no blue at all, it&#x27;s marked as &quot;meadow&quot; or something. Shows fine in bicycle/transport/mapquest map. This is Anderson Reservoir, in the middle of the map here: http://www.openstreetmap.org/?lat=37.1...'''
+description = '''Hello, Recently I noticed that one of the lakes in my area is not drawn properly on the standard map - no blue at all, it&#x27;s marked as &quot;meadow&quot; or something. Shows fine in bicycle/transport/mapquest map. This is Anderson Reservoir, in the middle of the map here: https://www.openstreetmap.org/?lat=37.1...'''
 date = "2013-03-21T17:45:00Z"
 lastmod = "2013-03-24T09:44:00Z"
 weight = 20883
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>Recently I noticed that one of the lakes in my area is not drawn properly on the standard map - no blue at all, it's marked as "meadow" or something. Shows fine in bicycle/transport/mapquest map. This is Anderson Reservoir, in the middle of the map here:</p>
-<p><a href="http://www.openstreetmap.org/?lat=37.1694&amp;lon=-121.6205&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=37.1694&amp;lon=-121.6205&amp;zoom=14&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=37.1694&amp;lon=-121.6205&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=37.1694&amp;lon=-121.6205&amp;zoom=14&amp;layers=M</a></p>
 <p>I checked things with JOSM - the lake seems to be a closed polygon, clockwise direction, looks fine to me. There are some complex overlapping polygons that I guess cause the problem, but I don't dare attempt this complex an edit without understanding the problem first. Can somebody more experienced in OSM matters take a look?</p>
 <p>Regards,</p>
 <ul>
@@ -129,8 +129,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, the rendering problems are caused by several areas which are overlapping with the lake.</p>
-<p>Most of the lake is covered by this area, for Anderson Lake County Park: <a href="http://www.openstreetmap.org/browse/way/28461629">way 28461629</a>. This is tagged as <code>leisure=park</code> - this area may be a "county park", but it seems it doesn't meet the OSM definition for <code>leisure=park</code>, ie "open, green area for recreation". It should probably be tagged with <code>boundary=national_park</code> or <code>boundary=protected_area</code> instead.</p>
-<p>Also the lake is surrounded by a way which is an outer part of <a href="http://www.openstreetmap.org/browse/relation/1696825">relation 1696825</a>. This relation is tagged as <code>landuse=meadow</code>. The lake doesn't meet the OSM defintion of meadow "land primarily vegetated by grass plus other non-woody plants", so shouldn't be tagged as that. It appears that relation is from an import of government data for farmland.</p>
+<p>Most of the lake is covered by this area, for Anderson Lake County Park: <a href="https://www.openstreetmap.org/browse/way/28461629">way 28461629</a>. This is tagged as <code>leisure=park</code> - this area may be a "county park", but it seems it doesn't meet the OSM definition for <code>leisure=park</code>, ie "open, green area for recreation". It should probably be tagged with <code>boundary=national_park</code> or <code>boundary=protected_area</code> instead.</p>
+<p>Also the lake is surrounded by a way which is an outer part of <a href="https://www.openstreetmap.org/browse/relation/1696825">relation 1696825</a>. This relation is tagged as <code>landuse=meadow</code>. The lake doesn't meet the OSM defintion of meadow "land primarily vegetated by grass plus other non-woody plants", so shouldn't be tagged as that. It appears that relation is from an import of government data for farmland.</p>
 <p>It would be worth contacting the user who originally added this (nmixter), or discussing it on the talk-us mailing list, to agree how these areas should be mapped and tagged.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -292,7 +292,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/blank_polygon.JPG" alt="alt text" />There appears to be two polygons around the lake one tagged lake the other without any tags,which I think may be the problem. I would be reluctant to delete the blank one as it would been difficult to re-do. I use potlatch2 but I believe it is easier to retain the polygon on your PC to put back if necessary if you are using JOSM. Hopefully a more experienced mapper will know the safe procedure. here is the blank polygon.<br />
+<p><img src="/upfiles/blank_polygon.JPG" alt="alt text" />There appears to be two polygons around the lake one tagged lake the other without any tags,which I think may be the problem. I would be reluctant to delete the blank one as it would been difficult to re-do. I use potlatch2 but I believe it is easier to retain the polygon on your PC to put back if necessary if you are using JOSM. Hopefully a more experienced mapper will know the safe procedure. here is the blank polygon.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

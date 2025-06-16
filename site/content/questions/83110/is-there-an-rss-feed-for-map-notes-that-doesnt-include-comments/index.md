@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I read these two and am able to get an rss feed notes. * <a href="https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes">https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes</a> * <a href="https://help.openstreetmap.org/questions/76471/how-to-view-hidden-notes">https://help.openstreetmap.org/questions/76471/how-to-view-hidden-notes</a></p>
+<p>I read these two and am able to get an rss feed notes. * <a href="/questions/25795/is-there-an-rss-feed-for-map-notes">https://help.openstreetmap.org/questions/25795/is-there-an-rss-feed-for-map-notes</a> * <a href="/questions/76471/how-to-view-hidden-notes">https://help.openstreetmap.org/questions/76471/how-to-view-hidden-notes</a></p>
 <p>However, the rss feed of open notes also includes "new comments" an "closed note". Is there a way to to get an rss feed that only includes notes and not comments?</p>
 <p>This would be very handy for me to help keep up with notes in a specific area without being overwhelmed by comments.</p>
 <p>Reddit thread with suggestions: <a href="https://old.reddit.com/r/openstreetmap/comments/s73at9/is_there_an_rss_feed_for_map_notes_that_doesnt/">https://old.reddit.com/r/openstreetmap/comments/s73at9/is_there_an_rss_feed_for_map_notes_that_doesnt/</a></p>

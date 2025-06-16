@@ -171,7 +171,7 @@ out geom;</code></pre>
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>: I had to adopt your initial proposal, as it also didn't work as expected: you need to store the area in an inputset (here it is called <code>.ca</code>) and use that for both relation and way. Otherwise, the relation query will silently remove the California area, and way (area) will not find anything, as there's no more area to work on.</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>: I had to adopt your initial proposal, as it also didn't work as expected: you need to store the area in an inputset (here it is called <code>.ca</code>) and use that for both relation and way. Otherwise, the relation query will silently remove the California area, and way (area) will not find anything, as there's no more area to work on.</p>
 </div>
 <div id="comment-46121-info" class="comment-info">
 <span class="comment-age">(25 Oct '15, 21:21)</span> <span class="comment-user userinfo">mmd</span>

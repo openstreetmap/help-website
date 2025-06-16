@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Depending on the country that corresponds more or less to the classification in primary, secondary, tertiary, unclassified and residential. See this <a href="http://wiki.openstreetmap.org/wiki/Highway:International_equivalence">wiki page</a> for the road classification per country. Of course you could combine this with the maximum speed (when it is mapped) to make your own classification.</p>
+<p>Depending on the country that corresponds more or less to the classification in primary, secondary, tertiary, unclassified and residential. See this <a href="https://wiki.openstreetmap.org/wiki/Highway:International_equivalence">wiki page</a> for the road classification per country. Of course you could combine this with the maximum speed (when it is mapped) to make your own classification.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

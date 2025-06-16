@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>All known software displaying and using OSM data should be collected in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Software">Software</a> ... there are sub pages about JavaME and Symbian where you can find software running on your Nokia devices.</p>
+<p>All known software displaying and using OSM data should be collected in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Software">Software</a> ... there are sub pages about JavaME and Symbian where you can find software running on your Nokia devices.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

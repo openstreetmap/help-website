@@ -208,7 +208,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do you mean from the map on the OSM website <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> ? If so the answer is to click "permalink" at the bottom right-hand corner, and it'll appear in the URL bar.</p>
+<p>Do you mean from the map on the OSM website <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> ? If so the answer is to click "permalink" at the bottom right-hand corner, and it'll appear in the URL bar.</p>
 <p>Or perhaps you mean obtain the cursor position in Javascript on your own map using OSM data? Or something else?</p>
 </div>
 <div class="answer-controls post-controls">

@@ -86,8 +86,8 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I want to show these differences</p>
-<p>its old names: <a href="https://help.openstreetmap.org/upfiles/Ashampoo_Snap_2017.09.19_13h02m05s_001_.png">https://help.openstreetmap.org/upfiles/Ashampoo_Snap_2017.09.19_13h02m05s_001_.png</a></p>
-<p>its my edit: <a href="https://help.openstreetmap.org/upfiles/Ashampoo_Snap_2017.09.19_13h05m01s_002_.png">https://help.openstreetmap.org/upfiles/Ashampoo_Snap_2017.09.19_13h05m01s_002_.png</a></p>
+<p>its old names: <span>/upfiles/Ashampoo_Snap_2017.09.19_13h02m05s_001_.png</span></p>
+<p>its my edit: <span>/upfiles/Ashampoo_Snap_2017.09.19_13h05m01s_002_.png</span></p>
 </div>
 <div id="comment-59705-info" class="comment-info">
 <span class="comment-age">(19 Sep '17, 10:10)</span> <span class="comment-user userinfo">MEZHH</span>
@@ -152,7 +152,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a fairly detailed old answer <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a> which explains how the "standard" map gets updated. It's still mostly correct. What is slowing things down currently is a map style update. You don't need to do anything - the map tiles will catch up.</p>
+<p>There's a fairly detailed old answer <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a> which explains how the "standard" map gets updated. It's still mostly correct. What is slowing things down currently is a map style update. You don't need to do anything - the map tiles will catch up.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

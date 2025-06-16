@@ -65,7 +65,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Here is a link showing the area. Any local mappers able to sort it out?<br />
-<a href="http://www.openstreetmap.org/relation/2415084">http://www.openstreetmap.org/relation/2415084</a></p>
+<a href="https://www.openstreetmap.org/relation/2415084">https://www.openstreetmap.org/relation/2415084</a></p>
 </div>
 <div id="comment-37522-info" class="comment-info">
 <span class="comment-age">(11 Oct '14, 10:11)</span> <span class="comment-user userinfo">nevw</span>
@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Dave, it would be best to add a note to the osm map so a greater mapping audience can see where the map needs correcting- click on the note icon on the right side of the link I gave above, drag the note to the spot you want and fill in the text box at the left. Check your text as you can't edit these as far as I can tell, though you can add a further comment. <img src="http://help.openstreetmap.org/upfiles/note.png" alt="alt text" /></p>
+<p>Dave, it would be best to add a note to the osm map so a greater mapping audience can see where the map needs correcting- click on the note icon on the right side of the link I gave above, drag the note to the spot you want and fill in the text box at the left. Check your text as you can't edit these as far as I can tell, though you can add a further comment. <img src="/upfiles/note.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

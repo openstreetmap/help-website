@@ -86,7 +86,7 @@ osqa_accepted = false
 <div id="post-13584-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Duplicate of: <a href="http://help.openstreetmap.org/questions/10939/how-to-change-one-way-street-to-two-way-street-only-on-some-part">http://help.openstreetmap.org/questions/10939/how-to-change-one-way-street-to-two-way-street-only-on-some-part</a></p>
+<p>Duplicate of: <a href="/questions/10939/how-to-change-one-way-street-to-two-way-street-only-on-some-part">https://help.openstreetmap.org/questions/10939/how-to-change-one-way-street-to-two-way-street-only-on-some-part</a></p>
 </div>
 <div id="comment-13584-info" class="comment-info">
 <span class="comment-age">(18 Jun '12, 07:58)</span> <span class="comment-user userinfo">sleske</span>
@@ -108,7 +108,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "See older question: http://help.openstreetmap.org/questions/10939/how-to-change-one-way-street-to-two-way-street-only-on-some-part" by Vincent de Phily 11 Jun '12, 18:51
+### The question has been closed for the following reason "See older question: https://help.openstreetmap.org/questions/10939/how-to-change-one-way-street-to-two-way-street-only-on-some-part" by Vincent de Phily 11 Jun '12, 18:51
 
 </div>
 

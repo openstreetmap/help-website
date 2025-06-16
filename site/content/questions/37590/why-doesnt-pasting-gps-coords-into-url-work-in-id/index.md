@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Let's take the following example (Paris): <a href="http://www.openstreetmap.org/#map=18/48.85623/2.34703">http://www.openstreetmap.org/#map=18/48.85623/2.34703</a></p>
+<p>Let's take the following example (Paris): <a href="https://www.openstreetmap.org/#map=18/48.85623/2.34703">https://www.openstreetmap.org/#map=18/48.85623/2.34703</a></p>
 <ol>
 <li><p>Copy the lat/lon part in the URL: 48.85623/2.34703</p></li>
 <li><p>Enter <code>48.85623,2.34703</code> in iD's <em>Search features</em> and hit enter. This will take you to the right location. Note that we replaced separator character <code>/</code> (slash) by a <code>,</code> (comma). A space separator will also work in this case.</p></li>

@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bonjour,</p>
-<p>Le placement des libellés (noms de rue, places, magasins …) est fait <strong>automatiquement</strong> par le logiciel de rendu <a href="http://wiki.openstreetmap.org/wiki/FR:Mapnik">Mapnik</a>. Je viens de jeter un œuil et <a href="http://www.openstreetmap.org/?lat=47.86524&amp;lon=-2.42119&amp;zoom=17&amp;layers=M">ton village</a> n'est pas trop mal rendu avec le rendu « standard ». Il y a peut-être eu quelques artefacts juste après tes modifications le temps que toutes les <a href="http://wiki.openstreetmap.org/wiki/FR:Slippy_Map">tuiles</a> soient recalculées.</p>
+<p>Le placement des libellés (noms de rue, places, magasins …) est fait <strong>automatiquement</strong> par le logiciel de rendu <a href="https://wiki.openstreetmap.org/wiki/FR:Mapnik">Mapnik</a>. Je viens de jeter un œuil et <a href="https://www.openstreetmap.org/?lat=47.86524&amp;lon=-2.42119&amp;zoom=17&amp;layers=M">ton village</a> n'est pas trop mal rendu avec le rendu « standard ». Il y a peut-être eu quelques artefacts juste après tes modifications le temps que toutes les <a href="https://wiki.openstreetmap.org/wiki/FR:Slippy_Map">tuiles</a> soient recalculées.</p>
 <p>Bienvenue sur OpenStreetMap ! :-)</p>
 </div>
 <div class="answer-controls post-controls">

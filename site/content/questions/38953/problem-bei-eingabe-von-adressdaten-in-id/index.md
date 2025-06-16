@@ -149,7 +149,7 @@ One Answer:
 <div id="post-38960-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7549/herbert167"></a><a href="http://help.openstreetmap.org/users/7549/herbert167">@Herbert167</a>: Die Wartung läuft <span>erst seit</span> 2014-11-28, 16:43:55 UTC (übers Wochenende). Insofern kommt das schon hin. Du kannst ja nochmal morgen probieren, dann sollte die Wartung erledigt sein (und das Nominatim-Feld wieder grün sein). Eine Fehlerbehebung für iD ist übrigens mittlerweile schon programmiert. Bis sie auf der Homepage live-geschaltet ist, kann es aber noch dauern.</p>
+<p><a href="https://help.openstreetmap.org/users/7549/herbert167"></a><a href="https://help.openstreetmap.org/users/7549/herbert167">@Herbert167</a>: Die Wartung läuft <span>erst seit</span> 2014-11-28, 16:43:55 UTC (übers Wochenende). Insofern kommt das schon hin. Du kannst ja nochmal morgen probieren, dann sollte die Wartung erledigt sein (und das Nominatim-Feld wieder grün sein). Eine Fehlerbehebung für iD ist übrigens mittlerweile schon programmiert. Bis sie auf der Homepage live-geschaltet ist, kann es aber noch dauern.</p>
 </div>
 <div id="comment-38960-info" class="comment-info">
 <span class="comment-age">(30 Nov '14, 21:55)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

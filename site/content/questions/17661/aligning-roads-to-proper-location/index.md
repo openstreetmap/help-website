@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There doesn't seem to be a good answer to this anywhere. The closest is <a href="https://help.openstreetmap.org/questions/13320/satellite-image-accuracy">Satellite Image Accuracy</a> which relates to having a inacurate background. It is definitely hard to not want to trace these.</p>
+<p>There doesn't seem to be a good answer to this anywhere. The closest is <a href="/questions/13320/satellite-image-accuracy">Satellite Image Accuracy</a> which relates to having a inacurate background. It is definitely hard to not want to trace these.</p>
 <p>However, what about when you have GPX data that backs the satellite image? What is the correct way to adjust this. Do the same rules apply for when the GPS image is innacurate? Or should the roads all be manually moved (I know you can multi select).</p>
 <p>What is the right way and is there anything to make this eaiser?</p>
 <p>Update: I don't know if "aligning" the image actually fixes the accuracy or just causes both roads and satellite to be inaccurate. Sounds like that is the common approach though.</p>
@@ -142,7 +142,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>I think our current 'gold standard' is the average of several good GPS traces. I would not normally use any imagery without first aligning it, except perhaps to correct an obvious gross error or omission where GPS data is not available and would be hard to obtain. Aligning the imagery to the existing mapping is a good method if you know that the existing mapping of that area is good, but otherwise it does not guarantee accuracy. You might want to consider the answers to <a href="https://help.openstreetmap.org/questions/5137/satellite-images-versus-gps-tracks.">https://help.openstreetmap.org/questions/5137/satellite-images-versus-gps-tracks.</a></p>
+<p>I think our current 'gold standard' is the average of several good GPS traces. I would not normally use any imagery without first aligning it, except perhaps to correct an obvious gross error or omission where GPS data is not available and would be hard to obtain. Aligning the imagery to the existing mapping is a good method if you know that the existing mapping of that area is good, but otherwise it does not guarantee accuracy. You might want to consider the answers to <a href="/questions/5137/satellite-images-versus-gps-tracks.">https://help.openstreetmap.org/questions/5137/satellite-images-versus-gps-tracks.</a></p>
 </div>
 <div id="comment-17671-info" class="comment-info">
 <span class="comment-age">(12 Nov '12, 22:16)</span> <span class="comment-user userinfo">Madryn</span>

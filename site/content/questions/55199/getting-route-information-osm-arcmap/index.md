@@ -227,8 +227,8 @@ osqa_accepted = false
 <div id="post-55523-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I downloaded an OSM file of Munich from openstreetmap.org and when I loaded it in ArcMap I get this <img src="https://help.openstreetmap.org/upfiles/nodes,lines,ways_bV48dRJ.PNG" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/attribute_table.PNG" alt="alt text" /></p>
+<p>I downloaded an OSM file of Munich from openstreetmap.org and when I loaded it in ArcMap I get this <img src="/upfiles/nodes,lines,ways_bV48dRJ.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/attribute_table.PNG" alt="alt text" /></p>
 <p>I don't get why all column in attribute table are empty</p>
 </div>
 <div id="comment-55523-info" class="comment-info">

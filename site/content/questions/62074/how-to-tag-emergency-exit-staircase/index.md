@@ -115,7 +115,7 @@ osqa_accepted = false
 <p>Draw the staircase connected to this node and tag it with <code>highway=steps</code>, <code>access=no</code> and <code>emergency=yes</code>.</p>
 <p>Draw a connection from this staircase to the rest of the road network, e.g. to a nearby road or footway.</p>
 <p>Example:<br />
-<img src="https://help.openstreetmap.org/upfiles/foo_nYyV3MT.png" alt="example image" /></p>
+<img src="/upfiles/foo_nYyV3MT.png" alt="example image" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

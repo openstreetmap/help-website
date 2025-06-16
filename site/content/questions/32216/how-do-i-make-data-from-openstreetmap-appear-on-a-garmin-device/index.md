@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>(from question <a href="https://help.openstreetmap.org/questions/3394/add-nodes-to-map">3394</a> "add nodes to map")</p>
+<p>(from question <a href="/questions/3394/add-nodes-to-map">3394</a> "add nodes to map")</p>
 <p>Adding the nodes to a map is not a problem. My problem is that the wells do not appear in Basecamp nor in the Garmin GPS after downloading the OSM Map and uploading to Basecamp/Garmin device.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -124,9 +124,9 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Garmin maps, like rendered web maps, do not display every feature that exist in the data. Also, note that gramin maps available for download may not have the most up to date data. Some may be a day old, some much longer. Check where you downloaded the map.</p>
 <p>AFAICS, the default mkgmap style does not render man_made=petroleum_well, so unless you downloaded a specialised garmin map, it's unlikely that they include wells. Where did you download the map ? You could try asking the garmin map author to add wells.</p>
-<p>Or you could <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">create the garmin map</a> yourself. Once you managed to create a standard map, edit the default style to add wells. I haven't tested it, but adding this line to the examples/styles/default/points file should work:</p>
+<p>Or you could <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">create the garmin map</a> yourself. Once you managed to create a standard map, edit the default style to add wells. I haven't tested it, but adding this line to the examples/styles/default/points file should work:</p>
 <pre><code>man_made=petroleum_well [0x6416 resolution 22]</code></pre>
-<p>See the <a href="http://www.mkgmap.org.uk/doc/index.html">general mkgmap style documentation</a> and the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/POI_Types">list of POI types</a> for details.</p>
+<p>See the <a href="http://www.mkgmap.org.uk/doc/index.html">general mkgmap style documentation</a> and the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/POI_Types">list of POI types</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

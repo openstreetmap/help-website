@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can extract road networks from OpenStreetMap data and use them for routing, but OpenLayers is only used to display the result of that process.</p>
-<p>Instead you'll need to get to know how OSM data is structured, the tools you can use to import it into other systems (such as pgRouting), how to perform routing queries, and only then how to display the results. If you have specific questions about OpenStreetMap you can ask them here, but otherwise a good place to start would be <a href="http://wiki.openstreetmap.org/wiki/Osm2pgrouting">osm2pgrouting</a>.</p>
+<p>Instead you'll need to get to know how OSM data is structured, the tools you can use to import it into other systems (such as pgRouting), how to perform routing queries, and only then how to display the results. If you have specific questions about OpenStreetMap you can ask them here, but otherwise a good place to start would be <a href="https://wiki.openstreetmap.org/wiki/Osm2pgrouting">osm2pgrouting</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ One Answer:
 <div id="post-9186-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>To get an overview about all routing possibilities based on OSM, have a look at the wiki at <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a> and all its sub pages.</p>
+<p>To get an overview about all routing possibilities based on OSM, have a look at the wiki at <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a> and all its sub pages.</p>
 </div>
 <div id="comment-9186-info" class="comment-info">
 <span class="comment-age">(22 Nov '11, 16:49)</span> <span class="comment-user userinfo">stephan75</span>

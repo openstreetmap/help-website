@@ -160,7 +160,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: I would think of <code>maxwidth:pysical</code> of the maximal width a vehicle could have. <code>width</code> is the width of the feature. In case of a bridge that may be significantly more due to construction elements/cage. Or is <code>width</code> on a typical bridge object in OSM the "track width" as you reason? I think it is not clear. What is the extent of <code>width</code> for <span>that bridge picture</span>? <code>maxwidth:physical</code> seems to be more clear to me. Full disclosure: I created that wiki page of a not yet widely used tag … as I just noticed. ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: I would think of <code>maxwidth:pysical</code> of the maximal width a vehicle could have. <code>width</code> is the width of the feature. In case of a bridge that may be significantly more due to construction elements/cage. Or is <code>width</code> on a typical bridge object in OSM the "track width" as you reason? I think it is not clear. What is the extent of <code>width</code> for <span>that bridge picture</span>? <code>maxwidth:physical</code> seems to be more clear to me. Full disclosure: I created that wiki page of a not yet widely used tag … as I just noticed. ;-)</p>
 </div>
 <div id="comment-51269-info" class="comment-info">
 <span class="comment-age">(05 Aug '16, 22:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -171,7 +171,7 @@ osqa_accepted = false
 <div id="post-51279-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> That's what I tried (and maybe failed) to explain. Yes, in my opinion <code>width</code> is the same as the track width of a vehicle since a vehicle can't drive on a road that is smaller than it's track width. For the bridge in your picture <code>maxwidth:physical</code> is IHMO a few centimeters larger than <code>width</code>.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> That's what I tried (and maybe failed) to explain. Yes, in my opinion <code>width</code> is the same as the track width of a vehicle since a vehicle can't drive on a road that is smaller than it's track width. For the bridge in your picture <code>maxwidth:physical</code> is IHMO a few centimeters larger than <code>width</code>.</p>
 </div>
 <div id="comment-51279-info" class="comment-info">
 <span class="comment-age">(06 Aug '16, 09:38)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -182,7 +182,7 @@ osqa_accepted = false
 <div id="post-51285-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: thanks. And the track width is the outside width of the track/tires?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: thanks. And the track width is the outside width of the track/tires?</p>
 <p>I think <code>width</code> is quite undefined what it means if tagged to a bridge. Which is the feature, which is described by width? Is it <code>highway=unclassified</code> (for example) or is it the whole <code>highway=unclassified</code> + <code>bridge=yes</code>?</p>
 <p>In the past, when I tagged <code>width</code> onto a <code>highway=residential</code> I measured the width of the road, from curb to curb. If that is right – I do not know. What if <code>sidewalk=both</code> is tagged, too?</p>
 </div>
@@ -195,7 +195,7 @@ osqa_accepted = false
 <div id="post-51292-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>@<a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Yes, track width is the distance between the vehicle's tyres. But I think it is usually calculated based on the wheel's center which makes it a little more awkward.</p>
+<p>@<a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Yes, track width is the distance between the vehicle's tyres. But I think it is usually calculated based on the wheel's center which makes it a little more awkward.</p>
 <p>If a road has a <code>width</code> tag and also <code>sidewalk</code> tags then in my opinion the <code>width</code> just applies to the actual road and not to the sidewalk. The sidewalk's width must be tagged separately using <code>sidewalk:width</code> or <code>sidewalk:left:width</code> + <code>sidewalk:right:width</code>. So measuring a road's width from curb to curb sounds right.</p>
 </div>
 <div id="comment-51292-info" class="comment-info">

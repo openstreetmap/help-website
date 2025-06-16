@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Whats wrong with this roundabout ?"
-description = '''Im adding man_made=embankments, http://www.openstreetmap.org/#map=18/52.47369/4.77315 The roads (ways) are nicely figured in OSM,s slippy map, but the roundabout tagged highway=trunk is turned into a black line when added man_made=embankment.  Whats the reason for this exception ? Or just being impa...'''
+description = '''Im adding man_made=embankments, https://www.openstreetmap.org/#map=18/52.47369/4.77315 The roads (ways) are nicely figured in OSM,s slippy map, but the roundabout tagged highway=trunk is turned into a black line when added man_made=embankment.  Whats the reason for this exception ? Or just being impa...'''
 date = "2014-09-02T16:11:00Z"
 lastmod = "2014-09-02T22:09:00Z"
 weight = 36514
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Im adding man_made=embankments, <a href="http://www.openstreetmap.org/#map=18/52.47369/4.77315">http://www.openstreetmap.org/#map=18/52.47369/4.77315</a> The roads (ways) are nicely figured in OSM,s slippy map, but the roundabout tagged highway=trunk is turned into a black line when added man_made=embankment. Whats the reason for this exception ? Or just being impatient ?</p>
+<p>Im adding man_made=embankments, <a href="https://www.openstreetmap.org/#map=18/52.47369/4.77315">https://www.openstreetmap.org/#map=18/52.47369/4.77315</a> The roads (ways) are nicely figured in OSM,s slippy map, but the roundabout tagged highway=trunk is turned into a black line when added man_made=embankment. Whats the reason for this exception ? Or just being impatient ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-roundabout" rel="tag" title="see questions tagged &#39;roundabout&#39;">roundabout</span> <span class="post-tag tag-link-embankment" rel="tag" title="see questions tagged &#39;embankment&#39;">embankment</span> <span class="post-tag tag-link-trunk" rel="tag" title="see questions tagged &#39;trunk&#39;">trunk</span>
@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When I check right now the data, the tag "man_made=embankment" is <a href="http://www.openstreetmap.org/way/6606647/history">removed</a>. But I would guess that could be a rendering issue. Combining these two attributs is a bit dangerous for a roundabout since both of them are depending on the direction of the way (the transport flow for the roundabout and the high/low side for the embankment). What I could advice is :</p>
-<p>- read the wiki about <a href="http://wiki.openstreetmap.org/wiki/Tag:man%20made=embankment?uselang=en">embankment</a>. It says that "embankment=yes" is much more popular in OSM (something I verified with taginfo). The direction of the way is important : cf "Add man_made=embankment to a way with the left-hand side of the way being the high side and the right-hand side being the low side"<br />
+<p>When I check right now the data, the tag "man_made=embankment" is <a href="https://www.openstreetmap.org/way/6606647/history">removed</a>. But I would guess that could be a rendering issue. Combining these two attributs is a bit dangerous for a roundabout since both of them are depending on the direction of the way (the transport flow for the roundabout and the high/low side for the embankment). What I could advice is :</p>
+<p>- read the wiki about <a href="https://wiki.openstreetmap.org/wiki/Tag:man%20made=embankment?uselang=en">embankment</a>. It says that "embankment=yes" is much more popular in OSM (something I verified with taginfo). The direction of the way is important : cf "Add man_made=embankment to a way with the left-hand side of the way being the high side and the right-hand side being the low side"<br />
 - It also says that you can micro-map the embankment by tracing separate ways (detached from the highway)<br />
 - in general, you don't need a "oneway=yes" on "junction=roundabout". This is probably the only case in OSM where oneway is clearly implied (it's more controversial for motorways).</p>
 </div>

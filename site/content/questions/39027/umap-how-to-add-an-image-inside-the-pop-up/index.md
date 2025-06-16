@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/pop-up-example_gFp0lR1.png" alt="alt text" />I wanted to know if it is possible to insert an image in a pop-up. When I make a mark about a location, I can add some information in the pop-up, and when i click on the mark, the pop-up is displayed. I want to add an image there, im not sure if i can do it.</p>
+<p><img src="/upfiles/pop-up-example_gFp0lR1.png" alt="alt text" />I wanted to know if it is possible to insert an image in a pop-up. When I make a mark about a location, I can add some information in the pop-up, and when i click on the mark, the pop-up is displayed. I want to add an image there, im not sure if i can do it.</p>
 <p>I am adding an example of what i want to do. I want to add to every drop a description + links + image of the place. I know how to add the description + link, but I haven't found the way to add an image, I am not sure if that is possible.</p>
 <p>Note: That is a random image inserted in a random place just to make the example of what i want to do.</p>
 </div>

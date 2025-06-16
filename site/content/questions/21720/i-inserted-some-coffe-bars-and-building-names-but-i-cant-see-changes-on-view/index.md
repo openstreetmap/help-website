@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hi WalterStadt, try to add a link like this, <a href="http://www.openstreetmap.org/?lat=43.8465&amp;lon=18.3744&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=43.8465&amp;lon=18.3744&amp;zoom=13&amp;layers=M</a> with your next question. If you’re working in P 2, you’ll be able to find and copy the permanent link at the right bottom side of the start screen. It gives us a pic of the problem you’re trying to solve. And don’t hesitate to ask for help, but try to read the Osm Wiki as well or just add the question in the blank window below questions. Greetz</p>
+<p>Hi WalterStadt, try to add a link like this, <a href="https://www.openstreetmap.org/?lat=43.8465&amp;lon=18.3744&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=43.8465&amp;lon=18.3744&amp;zoom=13&amp;layers=M</a> with your next question. If you’re working in P 2, you’ll be able to find and copy the permanent link at the right bottom side of the start screen. It gives us a pic of the problem you’re trying to solve. And don’t hesitate to ask for help, but try to read the Osm Wiki as well or just add the question in the blank window below questions. Greetz</p>
 </div>
 <div id="comment-21747-info" class="comment-info">
 <span class="comment-age">(22 Apr '13, 23:46)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -133,7 +133,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see these other questions: <span>i-have-made-edits-but-they-dont-show-up-on-the-map</span> and <span>how-to-make-saved-changes-live</span>. You just have to wait a bit more (and to clear your browser cache) before you see <a href="http://www.openstreetmap.org/browse/changeset/15823297">your changes</a>. Also note that not everything is shown on out standard ("mapnik") map (on osm.org).</p>
+<p>Please see these other questions: <span>i-have-made-edits-but-they-dont-show-up-on-the-map</span> and <span>how-to-make-saved-changes-live</span>. You just have to wait a bit more (and to clear your browser cache) before you see <a href="https://www.openstreetmap.org/browse/changeset/15823297">your changes</a>. Also note that not everything is shown on out standard ("mapnik") map (on osm.org).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -188,7 +188,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@WalterStadt</span>: you just need to wait. As long as your edit is saved in the data(!) it is fine. You can check <a href="http://www.openstreetmap.org/user/WalterStadt/edits">your edits</a> for that purpose if you are not sure. There is just one possible problem: if you mistyped some tag it will never appear anywhere in the map (even if the object type is usually shown in this specific map). However, if your edit is rendered at least on some zoom level then everything is fine obviously. Just wait for the other levels and clear your browser's cache before trying to look again.</p>
+<p><span>@WalterStadt</span>: you just need to wait. As long as your edit is saved in the data(!) it is fine. You can check <a href="https://www.openstreetmap.org/user/WalterStadt/edits">your edits</a> for that purpose if you are not sure. There is just one possible problem: if you mistyped some tag it will never appear anywhere in the map (even if the object type is usually shown in this specific map). However, if your edit is rendered at least on some zoom level then everything is fine obviously. Just wait for the other levels and clear your browser's cache before trying to look again.</p>
 </div>
 <div id="comment-21746-info" class="comment-info">
 <span class="comment-age">(22 Apr '13, 23:39)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

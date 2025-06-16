@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not as such (strictly speaking, there aren't "layers" in OSM as such), but you can extract the data (have a look at some of <a href="http://help.openstreetmap.org/search/?q=extract&amp;Submit=search&amp;t=question">these</a> questions for how to do that - you'll probably end up using <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>).</p>
+<p>Not as such (strictly speaking, there aren't "layers" in OSM as such), but you can extract the data (have a look at some of <a href="https://help.openstreetmap.org/search/?q=extract&amp;Submit=search&amp;t=question">these</a> questions for how to do that - you'll probably end up using <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>).</p>
 <p>You'd be looking for ways tagged "building=*", I'd imagine. Once you've got the data, you'd then want to do something with it yourself of course - for example, if you want to render some tiles showing just building footprints you'd need to render it.</p>
 </div>
 <div class="answer-controls post-controls">

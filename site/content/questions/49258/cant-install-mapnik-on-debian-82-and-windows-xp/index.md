@@ -106,7 +106,7 @@ osqa_accepted = false
 <div id="post-49272-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12185/idri-sofiane"></a><a href="http://help.openstreetmap.org/users/12185/idri-sofiane">@IDRI</a>: the first step (" git clone <a href="https://github.com/mapnik/mapnik.git">https://github.com/mapnik/mapnik.git</a> ") of "method 1" works fine for me (Linux). What exactly did you download in "method 2"?</p>
+<p><a href="https://help.openstreetmap.org/users/12185/idri-sofiane"></a><a href="https://help.openstreetmap.org/users/12185/idri-sofiane">@IDRI</a>: the first step (" git clone <a href="https://github.com/mapnik/mapnik.git">https://github.com/mapnik/mapnik.git</a> ") of "method 1" works fine for me (Linux). What exactly did you download in "method 2"?</p>
 </div>
 <div id="comment-49272-info" class="comment-info">
 <span class="comment-age">(16 Apr '16, 14:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -118,7 +118,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/3029/datendelphin"></a><a href="http://help.openstreetmap.org/users/3029/datendelphin">@datendelphin</a> , <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@asserl4c26</a>: I just found the problem : disk space insufficient to extract all the folders and files !!!</p>
+<p><a href="https://help.openstreetmap.org/users/3029/datendelphin"></a><a href="https://help.openstreetmap.org/users/3029/datendelphin">@datendelphin</a> , <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@asserl4c26</a>: I just found the problem : disk space insufficient to extract all the folders and files !!!</p>
 <p>Mapnik Installation and building worked fine on my personal computer.</p>
 <p>Thank you everyone for your contribution and your precious time.</p>
 </div>
@@ -132,7 +132,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12185/idri-sofiane"></a><a href="http://help.openstreetmap.org/users/12185/idri-sofiane">@IDRI</a>: oops... ;-) thanks for the feedback.</p>
+<p><a href="https://help.openstreetmap.org/users/12185/idri-sofiane"></a><a href="https://help.openstreetmap.org/users/12185/idri-sofiane">@IDRI</a>: oops... ;-) thanks for the feedback.</p>
 </div>
 <div id="comment-49274-info" class="comment-info">
 <span class="comment-age">(16 Apr '16, 17:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

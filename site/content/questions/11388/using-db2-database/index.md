@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Having a look at <a href="http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">Databases_and_data_access_APIs</a> and <a href="http://wiki.openstreetmap.org/wiki/List_of_Database_Schemas">List_of_Database_Schemas</a> there is no hint about DB2 ... so it seems that there is no direct way.</p>
+<p>Having a look at <a href="https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">Databases_and_data_access_APIs</a> and <a href="https://wiki.openstreetmap.org/wiki/List_of_Database_Schemas">List_of_Database_Schemas</a> there is no hint about DB2 ... so it seems that there is no direct way.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

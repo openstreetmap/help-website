@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In several places that I have mapped recently, a road either leads into a car park or forms part of the boundary of a parking area, and a footpath starts from a different part of the same car park. Does that make the road and the footpath effectively joined, and if not, what is the recommended way to map them?</p>
-<p>A similar question to this has been asked before (<a href="http://help.openstreetmap.org/questions/3177/car-parks-footpaths-and-auto-routing">Car parks footpaths and auto-routing</a>), but it did not seem to result in a definitive answer.</p>
+<p>A similar question to this has been asked before (<a href="/questions/3177/car-parks-footpaths-and-auto-routing">Car parks footpaths and auto-routing</a>), but it did not seem to result in a definitive answer.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-car" rel="tag" title="see questions tagged &#39;car&#39;">car</span> <span class="post-tag tag-link-park" rel="tag" title="see questions tagged &#39;park&#39;">park</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-footpath" rel="tag" title="see questions tagged &#39;footpath&#39;">footpath</span>
@@ -209,7 +209,7 @@ Do not tag/map incorrectly because of anyone.</p>
 1
 </div>
 <div class="comment-text">
-<p>I tried using MapSource to find a pedestrian route from the road entrance to Thatchers Copse car park (<a href="http://www.openstreetmap.org/?lat=50.83063&amp;lon=-1.25046&amp;zoom=17&amp;layers=M)">http://www.openstreetmap.org/?lat=50.83063&amp;lon=-1.25046&amp;zoom=17&amp;layers=M)</a> to the footpath at its south west corner. It routed round the North side of Thatchers Copse, ignoring the possibility of walking through the car park.</p>
+<p>I tried using MapSource to find a pedestrian route from the road entrance to Thatchers Copse car park (<a href="https://www.openstreetmap.org/?lat=50.83063&amp;lon=-1.25046&amp;zoom=17&amp;layers=M)">https://www.openstreetmap.org/?lat=50.83063&amp;lon=-1.25046&amp;zoom=17&amp;layers=M)</a> to the footpath at its south west corner. It routed round the North side of Thatchers Copse, ignoring the possibility of walking through the car park.</p>
 </div>
 <div id="comment-10245-info" class="comment-info">
 <span class="comment-age">(26 Jan '12, 19:02)</span> <span class="comment-user userinfo">Madryn</span>
@@ -266,7 +266,7 @@ Do not tag/map incorrectly because of anyone.</p>
 <div id="post-10452-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/2985/access-land-tag">http://help.openstreetmap.org/questions/2985/access-land-tag</a> you could ask again in a new question or comment on mine there may be some new info</p>
+<p><a href="/questions/2985/access-land-tag">https://help.openstreetmap.org/questions/2985/access-land-tag</a> you could ask again in a new question or comment on mine there may be some new info</p>
 </div>
 <div id="comment-10452-info" class="comment-info">
 <span class="comment-age">(06 Feb '12, 20:00)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -301,7 +301,7 @@ Do not tag/map incorrectly because of anyone.</p>
 <div id="post-10604-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If it is possible to fix the router, it is beyond my ability. I have noticed the problem on MapSource and on an Etrex 30. Also, consider some of the replies to a related question (<a href="http://help.openstreetmap.org/questions/3177/car-parks-footpaths-and-auto-routing),">http://help.openstreetmap.org/questions/3177/car-parks-footpaths-and-auto-routing),</a> such as 'the bad news is that I have never heard of any production quality street map routing software or firmware that can route through a polygon' and 'I'd consider every router that uses parking aisles as shortcuts to be quite broken'.</p>
+<p>If it is possible to fix the router, it is beyond my ability. I have noticed the problem on MapSource and on an Etrex 30. Also, consider some of the replies to a related question (<a href="/questions/3177/car-parks-footpaths-and-auto-routing),">https://help.openstreetmap.org/questions/3177/car-parks-footpaths-and-auto-routing),</a> such as 'the bad news is that I have never heard of any production quality street map routing software or firmware that can route through a polygon' and 'I'd consider every router that uses parking aisles as shortcuts to be quite broken'.</p>
 </div>
 <div id="comment-10604-info" class="comment-info">
 <span class="comment-age">(15 Feb '12, 18:44)</span> <span class="comment-user userinfo">Madryn</span>

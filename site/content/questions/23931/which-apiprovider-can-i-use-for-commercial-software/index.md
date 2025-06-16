@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use the public instances Overpass API for about up to 10.000 users per day, as written in the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">introduction</a>. Please be aware that there is no service level guaranteed foor these public servers. If you can live with both restrictions, using the public servers is fine.</p>
+<p>You can use the public instances Overpass API for about up to 10.000 users per day, as written in the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">introduction</a>. Please be aware that there is no service level guaranteed foor these public servers. If you can live with both restrictions, using the public servers is fine.</p>
 <p>There are no hard limits. The server does load management automatically based on the sizes of the individual requests, so ou won't get blocked if your service gets popular. It simply becomes slower.</p>
 <p>Setting up an own server is quite affordable (a single 32 GB RAM server will serve about 1'000'000 queries per day or 5-50 per second, depending on the queries, and it is easy to install), so it can be done at any time later if necessary.</p>
 </div>

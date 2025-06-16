@@ -173,7 +173,7 @@ One Answer:
 <div id="post-8216-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes - moving the "start" way to the top and then sorting does work: <a href="http://www.openstreetmap.org/browse/relation/1694505">http://www.openstreetmap.org/browse/relation/1694505</a></p>
+<p>Yes - moving the "start" way to the top and then sorting does work: <a href="https://www.openstreetmap.org/browse/relation/1694505">https://www.openstreetmap.org/browse/relation/1694505</a></p>
 </div>
 <div id="comment-8216-info" class="comment-info">
 <span class="comment-age">(29 Sep '11, 15:12)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

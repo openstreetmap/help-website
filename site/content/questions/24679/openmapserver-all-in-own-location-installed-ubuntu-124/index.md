@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I'am trying to import much data to map, so not good idea to upload public map and jam system.</p>
 <p>I have Ubuntu 12.4 lts and installed openstreetmap software as well potlatch2.</p>
 <p>Openstreet ware need's for potlatch2 at least oauth,... what else, is there instructions ? As undesrtood potlatch2 can only edit data at public server but not at own if not build for it, I figured out that oauth must be installed what elese?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2</a></p>
 <p>Also intrested to search by street name or object!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

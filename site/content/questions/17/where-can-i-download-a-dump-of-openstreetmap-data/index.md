@@ -110,9 +110,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap releases a weekly file called the "planet" in .osm format which shows the current state of the database. There are a number of mirror sites you can obtain this from listed on the wiki <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a> page. This file is many gigabytes in size even though it is compressed.</p>
+<p>OpenStreetMap releases a weekly file called the "planet" in .osm format which shows the current state of the database. There are a number of mirror sites you can obtain this from listed on the wiki <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a> page. This file is many gigabytes in size even though it is compressed.</p>
 <p>There are also third party sites which split the data into different files by country and region also listed on that page. These may be more manageable if you only need a smaller region.</p>
-<p>OpenStreetMap also releases regular change files which can be used to keep an already downloaded file uptodate. More information on this is also on the wiki <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/diffs">Planet.osm/diffs</a> page.</p>
+<p>OpenStreetMap also releases regular change files which can be used to keep an already downloaded file uptodate. More information on this is also on the wiki <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/diffs">Planet.osm/diffs</a> page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a lot at <a href="http://wiki.openstreetmap.org/wiki/Planet"></a><a href="http://wiki.openstreetmap.org/wiki/Planet"></a><a href="http://wiki.openstreetmap.org/wiki/Planet">http://wiki.openstreetmap.org/wiki/Planet</a>. It lists several places where you can get planet dumps.</p>
+<p>Have a lot at <a href="https://wiki.openstreetmap.org/wiki/Planet"></a><a href="https://wiki.openstreetmap.org/wiki/Planet"></a><a href="https://wiki.openstreetmap.org/wiki/Planet">https://wiki.openstreetmap.org/wiki/Planet</a>. It lists several places where you can get planet dumps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

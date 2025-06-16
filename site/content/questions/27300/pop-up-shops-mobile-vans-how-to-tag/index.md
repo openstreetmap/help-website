@@ -220,7 +220,7 @@ osqa_accepted = false
 <div id="post-46709-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi PlaneMad, if it’s like that consider to use these tags, <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace</a> Since the place is hardly exact every day. OSM is all about coordinates and tags but an area seems okay.</p>
+<p>Hi PlaneMad, if it’s like that consider to use these tags, <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace</a> Since the place is hardly exact every day. OSM is all about coordinates and tags but an area seems okay.</p>
 </div>
 <div id="comment-46709-info" class="comment-info">
 <span class="comment-age">(19 Nov '15, 10:25)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -232,7 +232,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@hendrikklaas</a> (just for clarification) the area might count as a marketplace (or might not), but individual stalls certainly aren't.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@hendrikklaas</a> (just for clarification) the area might count as a marketplace (or might not), but individual stalls certainly aren't.</p>
 </div>
 <div id="comment-46710-info" class="comment-info">
 <span class="comment-age">(19 Nov '15, 10:46)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

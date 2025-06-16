@@ -136,7 +136,7 @@ One Answer:
 <div id="post-39902-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also take a look at <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">static map images</a> in the wiki for alternative solutions, such as <a href="http://wiki.openstreetmap.org/wiki/Bigmap">Bigmap</a>. And please make sure to read the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> first.</p>
+<p>Also take a look at <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">static map images</a> in the wiki for alternative solutions, such as <a href="https://wiki.openstreetmap.org/wiki/Bigmap">Bigmap</a>. And please make sure to read the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> first.</p>
 </div>
 <div id="comment-39902-info" class="comment-info">
 <span class="comment-age">(28 Dec '14, 22:15)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tiles@home layer has been taken offline. See <a href="http://help.openstreetmap.org/questions/10933/tiles-home">"Tiles @ Home"</a> for details.</p>
+<p>The tiles@home layer has been taken offline. See <a href="/questions/10933/tiles-home">"Tiles @ Home"</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

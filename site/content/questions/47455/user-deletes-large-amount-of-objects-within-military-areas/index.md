@@ -45,7 +45,7 @@ osqa_accepted = true
 <p>I invited him to discuss here with us.</p>
 <p>What do you think?</p>
 <p>Cheers Rene</p>
-<p>Example changesets: <a href="http://www.openstreetmap.org/changeset/36497305">http://www.openstreetmap.org/changeset/36497305</a> <a href="http://www.openstreetmap.org/changeset/36496699">http://www.openstreetmap.org/changeset/36496699</a></p>
+<p>Example changesets: <a href="https://www.openstreetmap.org/changeset/36497305">https://www.openstreetmap.org/changeset/36497305</a> <a href="https://www.openstreetmap.org/changeset/36496699">https://www.openstreetmap.org/changeset/36496699</a></p>
 <p>And many, many more. Thousands of nodes. Lots of work from other users.</p>
 <p>Conversation with him:</p>
 <p>On 2016-01-10 23:13:25 UTC rene78 wrote:</p>
@@ -214,7 +214,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When someone is deleting legitimate mapping like this it is best to <a href="http://wiki.openstreetmap.org/wiki/Vandalism#Normal_revert">revert the changes</a> quickly, which does a cleaner job than waiting until the map has been further edited. You can revert changes using <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">JOSM</a>, if you aren’t confident to do it yourself you can ask the community for help on one of our <a href="http://wiki.openstreetmap.org/wiki/Contact_channels">contact channels</a>.</p>
+<p>When someone is deleting legitimate mapping like this it is best to <a href="https://wiki.openstreetmap.org/wiki/Vandalism#Normal_revert">revert the changes</a> quickly, which does a cleaner job than waiting until the map has been further edited. You can revert changes using <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">JOSM</a>, if you aren’t confident to do it yourself you can ask the community for help on one of our <a href="https://wiki.openstreetmap.org/wiki/Contact_channels">contact channels</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -233,7 +233,7 @@ osqa_accepted = true
 <div id="post-47463-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Reading through the <a href="http://wiki.openstreetmap.org/wiki/Military">Wiki pages on military mapping</a>, there are references to the legality of mapping military installations, even from aerial images. Some cursory Googling hasn't found any specific Singaporean laws pertaining to this, but I haven't looked in great detail.</p>
+<p>Reading through the <a href="https://wiki.openstreetmap.org/wiki/Military">Wiki pages on military mapping</a>, there are references to the legality of mapping military installations, even from aerial images. Some cursory Googling hasn't found any specific Singaporean laws pertaining to this, but I haven't looked in great detail.</p>
 <p>Since this could be a legal matter, is there a more specialised form where this could be discussed? I couldn't find an appropriate mailing list or OSM forum, but that doesn't mean there isn't one.</p>
 </div>
 <div id="comment-47463-info" class="comment-info">
@@ -270,7 +270,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="http://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent</a> while your statement is understandable, we do have to be aware that mapping from a far does not make it legal to use the data in a country with restrictive regulations. In the end we need to tread a thin line between the position that mapping and map data should be free and usability of our dats (for China this is not directly a concern since mapping and using non-approved geo data is illegal there to start with).</p>
+<p><a href="https://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent</a> while your statement is understandable, we do have to be aware that mapping from a far does not make it legal to use the data in a country with restrictive regulations. In the end we need to tread a thin line between the position that mapping and map data should be free and usability of our dats (for China this is not directly a concern since mapping and using non-approved geo data is illegal there to start with).</p>
 <p>For the above reasons we typically make it a local community decision what kind of detail of mapping of sensitive areas should be done. It is not clear in the case of SG that there is actually a consensus on the issue.</p>
 </div>
 <div id="comment-47489-info" class="comment-info">
@@ -283,7 +283,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4792/simon">@Simon</a> Good point about data reuse. But this is pretty much the same problem as contested borders, where different countries expect a different map. Just as we need tools to present different borders to indians and pakistanese, we apparently need tools to hide military data from singaporeans.</p>
+<p><a href="https://help.openstreetmap.org/users/4792/simon">@Simon</a> Good point about data reuse. But this is pretty much the same problem as contested borders, where different countries expect a different map. Just as we need tools to present different borders to indians and pakistanese, we apparently need tools to hide military data from singaporeans.</p>
 </div>
 <div id="comment-47491-info" class="comment-info">
 <span class="comment-age">(13 Jan '16, 13:44)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

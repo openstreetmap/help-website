@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In principle there is no problem using the tiles served by OSM as a background on a low volume site, you will naturally need to provide attribution (see <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> ). If you expect more than a trivial amount of traffic you should either arrange for such a service from a commercial map tile provider or set up your own tile server (see <a href="http://switch2osm.org">switch2osm.org</a> ).</p>
+<p>In principle there is no problem using the tiles served by OSM as a background on a low volume site, you will naturally need to provide attribution (see <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> ). If you expect more than a trivial amount of traffic you should either arrange for such a service from a commercial map tile provider or set up your own tile server (see <a href="http://switch2osm.org">switch2osm.org</a> ).</p>
 <p>To actually display the tiles you will need to code or extend a Piwigo plugin, but I suspect that you can reuse code from either the google or bing one.</p>
 </div>
 <div class="answer-controls post-controls">

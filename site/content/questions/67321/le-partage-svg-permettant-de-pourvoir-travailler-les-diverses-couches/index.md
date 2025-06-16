@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-67339-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>this is the the same question as your other question <a href="https://help.openstreetmap.org/questions/67310/partage-sous-format-svg-disparition-des-couches-modifiables-sharing-as-svg-disappearing-editable-scoops">https://help.openstreetmap.org/questions/67310/partage-sous-format-svg-disparition-des-couches-modifiables-sharing-as-svg-disappearing-editable-scoops</a> , isn't it?</p>
+<p>this is the the same question as your other question <a href="/questions/67310/partage-sous-format-svg-disparition-des-couches-modifiables-sharing-as-svg-disappearing-editable-scoops">https://help.openstreetmap.org/questions/67310/partage-sous-format-svg-disparition-des-couches-modifiables-sharing-as-svg-disappearing-editable-scoops</a> , isn't it?</p>
 </div>
 <div id="comment-67339-info" class="comment-info">
 <span class="comment-age">(24 Dec '18, 09:27)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

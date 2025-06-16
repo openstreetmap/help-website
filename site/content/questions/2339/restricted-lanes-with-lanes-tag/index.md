@@ -106,8 +106,8 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>First of all the <code>lanes=*</code> tag was not ment to handle every case. A <code>lanes=*</code> tag on highway=residential would include all motorized lanes, but not bike lanes, mostly since bike lanes tend to be so much smaller.</p>
-<p><strong>Example:</strong> <a href="http://www.openstreetmap.org/browse/way/31719658">Bahnhofsplatz</a> and a <a href="http://www.panoramio.com/photo/23677275">picture of it</a>, where you can almost see 4 car lanes + cycle lane + bus lane. tagged as lanes=5</p>
-<p><strong>Verbose lane tagging</strong> is AFAIK not solved, but you are not alone wanting to do that, but <code>lanes=*</code> is not the place for that. There are several proposals hidden on the wiki, on some link from the <a href="http://wiki.openstreetmap.org/wiki/Key:lanes">key:lanes=* page</a> they all lack an easy to access documentation with examples. You are free to document your findings.</p>
+<p><strong>Example:</strong> <a href="https://www.openstreetmap.org/browse/way/31719658">Bahnhofsplatz</a> and a <a href="http://www.panoramio.com/photo/23677275">picture of it</a>, where you can almost see 4 car lanes + cycle lane + bus lane. tagged as lanes=5</p>
+<p><strong>Verbose lane tagging</strong> is AFAIK not solved, but you are not alone wanting to do that, but <code>lanes=*</code> is not the place for that. There are several proposals hidden on the wiki, on some link from the <a href="https://wiki.openstreetmap.org/wiki/Key:lanes">key:lanes=* page</a> they all lack an easy to access documentation with examples. You are free to document your findings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

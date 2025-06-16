@@ -158,7 +158,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><strong>Until Early 2013,</strong> The stylesheet used in Mapnik was located in the <a href="http://trac.openstreetmap.org/browser/applications/rendering/mapnik/osm.xml">OSM Trac</a>. For more discussion, see the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> page in the OOpenStreetMap Wiki.</p>
+<p><strong>Until Early 2013,</strong> The stylesheet used in Mapnik was located in the <a href="http://trac.openstreetmap.org/browser/applications/rendering/mapnik/osm.xml">OSM Trac</a>. For more discussion, see the <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> page in the OOpenStreetMap Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -214,7 +214,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I realized there are some rendering examples on <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> wiki page.</p>
+<p>I realized there are some rendering examples on <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> wiki page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

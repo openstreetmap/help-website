@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are various apps using OSM for iOS. You might want to consult the <a href="http://wiki.openstreetmap.org/wiki/IOS">respective Wikipage</a> for more details.</p>
+<p>There are various apps using OSM for iOS. You might want to consult the <a href="https://wiki.openstreetmap.org/wiki/IOS">respective Wikipage</a> for more details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -225,9 +225,9 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>There is even a page about yur app in the OSM wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OpenStreetPad">http://wiki.openstreetmap.org/wiki/OpenStreetPad</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OpenStreetPad">https://wiki.openstreetmap.org/wiki/OpenStreetPad</a></p>
 <p>nice!</p>
-<p>If you want a bit more popularity for your app or just some more betatesters or feedback, what about linking to that page from some more important pages like Rendering, Software, iOS, Editor ... or even using the <a href="http://wiki.openstreetmap.org/wiki/Template:Software2">http://wiki.openstreetmap.org/wiki/Template:Software2</a> like it is used for any piece of usable software dealing with OSM, to get an entry in the automatically generated tables about apps for iOS ?</p>
+<p>If you want a bit more popularity for your app or just some more betatesters or feedback, what about linking to that page from some more important pages like Rendering, Software, iOS, Editor ... or even using the <a href="https://wiki.openstreetmap.org/wiki/Template:Software2">https://wiki.openstreetmap.org/wiki/Template:Software2</a> like it is used for any piece of usable software dealing with OSM, to get an entry in the automatically generated tables about apps for iOS ?</p>
 </div>
 <div id="comment-12061-info" class="comment-info">
 <span class="comment-age">(16 Apr '12, 13:54)</span> <span class="comment-user userinfo">stephan75</span>

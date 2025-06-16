@@ -112,7 +112,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>In Potlatch2 you can choose a map style (see the button right to the background settings button) where you can select "wireframe" mode ... maybe this helps a bit.</p>
 <p>But as far as I examined there is no such feature in iD editor.</p>
-<p>If you want to switch on and off certain layers while ediding OSM data in an editor, I really recommend to try <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM editor</a> ... maybe it needs some time to get familiar, but working with background layers in JOSM by switching them on or off or giving them a certain tranparency works like a charm!!</p>
+<p>If you want to switch on and off certain layers while ediding OSM data in an editor, I really recommend to try <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM editor</a> ... maybe it needs some time to get familiar, but working with background layers in JOSM by switching them on or off or giving them a certain tranparency works like a charm!!</p>
 <p>(You need Java7 Framework on a desktop PC to use JOSM)</p>
 </div>
 <div class="answer-controls post-controls">

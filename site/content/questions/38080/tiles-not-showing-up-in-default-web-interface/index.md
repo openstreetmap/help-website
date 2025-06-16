@@ -92,7 +92,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9919/groovy354"></a><a href="http://help.openstreetmap.org/users/9919/groovy354">@groovy354</a>: as a quick workaround: just use the <span>layer switcher button</span> and switch to another map style. They should work (since they are served by other servers).</p>
+<p><a href="https://help.openstreetmap.org/users/9919/groovy354"></a><a href="https://help.openstreetmap.org/users/9919/groovy354">@groovy354</a>: as a quick workaround: just use the <span>layer switcher button</span> and switch to another map style. They should work (since they are served by other servers).</p>
 </div>
 <div id="comment-38087-info" class="comment-info">
 <span class="comment-age">(29 Oct '14, 19:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -147,7 +147,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Earlier today there was a problem with one of the tile servers (since fixed). Things should be back to normal soon.</p>
-<p>As a bit of background, <a href="http://munin.osm.org/openstreetmap/orm.openstreetmap/index.html#renderd">here's the relevant graph</a> which at the time of writing shows a climb, and then steep drop, in data import lag on one of the servers, and <a href="https://help.openstreetmap.org/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?page=1&amp;focusedAnswerId=528#528">here</a> is a bit of an explanation of it.</p>
+<p>As a bit of background, <a href="http://munin.osm.org/openstreetmap/orm.openstreetmap/index.html#renderd">here's the relevant graph</a> which at the time of writing shows a climb, and then steep drop, in data import lag on one of the servers, and <a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg?page=1&amp;focusedAnswerId=528#528">here</a> is a bit of an explanation of it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

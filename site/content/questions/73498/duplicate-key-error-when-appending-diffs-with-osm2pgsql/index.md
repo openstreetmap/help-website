@@ -46,7 +46,7 @@ osqa_accepted = false
 <p>osmosis --rri workingDirectory=/mnt/OSM/osmosis-minutely/ --sc --wxc - | osm2pgsql -a -k -d &lt;dbname&gt; -P 5432 -s -G -K -U &lt;user&gt; -W -H &lt;host&gt; -S custom.style -</p>
 <p>I'm using 64-bit osm2pgsql (v 1.2.1). I've tried adding swap space, specifying multiple -C values (2000 up to 16000), number of processes from 1 to 8, importing 60 seconds at a time up to 1 hour, always the same error.</p>
 <p>The error I'm getting is this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2020-03-12_at_3.42.57_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2020-03-12_at_3.42.57_PM.png" alt="alt text" /></p>
 <p>Thanks in advance for any assistance.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

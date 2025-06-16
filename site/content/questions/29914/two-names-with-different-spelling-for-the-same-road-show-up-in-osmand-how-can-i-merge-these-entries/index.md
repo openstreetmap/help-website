@@ -75,7 +75,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Is this the place?</p>
-<p><a href="http://www.openstreetmap.org/way/206001863#map=19/51.30538/7.39145">http://www.openstreetmap.org/way/206001863#map=19/51.30538/7.39145</a></p>
+<p><a href="https://www.openstreetmap.org/way/206001863#map=19/51.30538/7.39145">https://www.openstreetmap.org/way/206001863#map=19/51.30538/7.39145</a></p>
 <p>Where is the other with double ff?</p>
 </div>
 <div id="comment-29919-info" class="comment-info">
@@ -180,7 +180,7 @@ osqa_accepted = false
 <p>Hi: I see the problem. I don't know how to merge them but I checked the street and it seems that there are not that many buildings with two ff in the name. I use Potlatch and I did a screen shot of what I would do.</p>
 <p>I would select the buildings that have two ff in the name by holding the Ctr key. Once all are selected, in the advance tags view you simply replace ff with one f. You can click on any house, if the addr:street remains the same (i.e. with two ff), it means that you clicked on the right building. If it will change to 'different' it means you clicked on the building which has a different name, so you need to 'unclick' it and continue. All houses will keep their individual street numbers (it will show as 'different' in the tag field).</p>
 <p>After the OSM update, the street with ff should disappear. However, I don't know whether OSM keeps old names in some memory and for how long etc. If the wrong street name still appears after the update and you are sure you replaced all ff with f, I would contact another OSM board and ask them about it (a possible glitch): <a href="https://groups.google.com/forum/?fromgroups#!forum/osmand">https://groups.google.com/forum/?fromgroups#!forum/osmand</a></p>
-<p>Regards, Martin<img src="http://help.openstreetmap.org/upfiles/hofinghofstrasse.GIF" alt="alt text" /></p>
+<p>Regards, Martin<img src="/upfiles/hofinghofstrasse.GIF" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -234,7 +234,7 @@ osqa_accepted = false
 <p>Thanks for reporting this issue :)</p>
 <p>I lookup the data and indeed there was an discrepancy between the name of the road way "Höfinghoffstraße" and some of the housenumbers "Höffinghoffstraße". I don't know the OsmAnd preprocessing, but it sounds reasonable to me that this will derive into 2 different road names.<br />
 So <strong>I fixed the spelling</strong> using JOSM editor and filtered all buildings for that.</p>
-<p>P.S: You can use our <a href="http://wiki.openstreetmap.org/wiki/Notes">'notes' feature</a> at osm.org to drop a note directly on the map. So hopefully someone with local knowledge can help to fix such issues ;)</p>
+<p>P.S: You can use our <a href="https://wiki.openstreetmap.org/wiki/Notes">'notes' feature</a> at osm.org to drop a note directly on the map. So hopefully someone with local knowledge can help to fix such issues ;)</p>
 <p>P.P.S: I also removed the streetnames from the footways as IMHO it's bad tagging style, as footways usually don't have nor need a name tag and maintaining and keeping them in sync is a possible way to provoke mistakes.</p>
 </div>
 <div class="answer-controls post-controls">

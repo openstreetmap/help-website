@@ -214,7 +214,7 @@ osqa_accepted = true
 <div id="post-51984-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> "each type of highway * each type of vehicle" isn't really needed, that would only be the worst case. Instead one would set a default speed for urban, rural and motorways for all vehicle types and then just add a list of exceptions which should be fairly small.</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> "each type of highway * each type of vehicle" isn't really needed, that would only be the worst case. Instead one would set a default speed for urban, rural and motorways for all vehicle types and then just add a list of exceptions which should be fairly small.</p>
 </div>
 <div id="comment-51984-info" class="comment-info">
 <span class="comment-age">(11 Sep '16, 07:50)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -140,7 +140,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>How to name a bridge is explained here : <a href="http://wiki.openstreetmap.org/wiki/Bridge">http://wiki.openstreetmap.org/wiki/Bridge</a></p>
+<p>How to name a bridge is explained here : <a href="https://wiki.openstreetmap.org/wiki/Bridge">https://wiki.openstreetmap.org/wiki/Bridge</a></p>
 </div>
 <div id="comment-36475-info" class="comment-info">
 <span class="comment-age">(01 Sep '14, 14:42)</span> <span class="comment-user userinfo">Pieren</span>

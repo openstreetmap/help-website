@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki page on summits is <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dpeak">Tag:natural=peak</a> It gives details of other associated tags such as name, elevation, survey points, cains etc</p>
+<p>The wiki page on summits is <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dpeak">Tag:natural=peak</a> It gives details of other associated tags such as name, elevation, survey points, cains etc</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi wich editor do you use, P2, JOSM or ID ? P2 just add a node and use the advance menu. JOSM add fi man made = marker/cross if the summit has it and use the advanced menu. In advanced youre able to add anything according to the wiki, <a href="http://wiki.openstreetmap.org/wiki/Tag:summit:cross%3Dyes">http://wiki.openstreetmap.org/wiki/Tag:summit:cross%3Dyes</a></p>
+<p>hi wich editor do you use, P2, JOSM or ID ? P2 just add a node and use the advance menu. JOSM add fi man made = marker/cross if the summit has it and use the advanced menu. In advanced youre able to add anything according to the wiki, <a href="https://wiki.openstreetmap.org/wiki/Tag:summit:cross%3Dyes">https://wiki.openstreetmap.org/wiki/Tag:summit:cross%3Dyes</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

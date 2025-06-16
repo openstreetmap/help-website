@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Major city missing many blocks? How can I tell if its vandalism or just neglect?"
-description = '''In the osm map of the downtown where I live, there is a region that is devoid of many city blocks - unlike the neighbourhoods around that area: http://www.openstreetmap.org/?lat=42.3139&amp;amp;lon=-83.0338&amp;amp;zoom=14&amp;amp;layers=M Before I try correcting this omission, I want to make sure that wasn&#x27;t t...'''
+description = '''In the osm map of the downtown where I live, there is a region that is devoid of many city blocks - unlike the neighbourhoods around that area: https://www.openstreetmap.org/?lat=42.3139&amp;amp;lon=-83.0338&amp;amp;zoom=14&amp;amp;layers=M Before I try correcting this omission, I want to make sure that wasn&#x27;t t...'''
 date = "2013-06-03T02:35:00Z"
 lastmod = "2013-06-03T16:22:00Z"
 weight = 22968
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In the osm map of the downtown where I live, there is a region that is devoid of many city blocks - unlike the neighbourhoods around that area:</p>
-<p><a href="http://www.openstreetmap.org/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14&amp;layers=M</a></p>
 <p>Before I try correcting this omission, I want to make sure that wasn't the result of vandalism - that could be hopefully easily fixed by undoing those actions? Unfortunately, using the history tab is not really useful in this regard because the history log captures a great many changes that happen across North America and the interface advances only 10 changes per page.</p>
 <p>Any ideas on how to find out when and how the blocks were removed and if that happened, how to restore the work? Or is best to just start tracing?</p>
 </div>
@@ -107,8 +107,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><em>In general:</em> That is similar to the question <a href="/questions/22408/lakes-disappeared">lakes-disappeared</a>. There are some <span>monitoring tools</span>, which can help here. I suggest to check the <a href="http://zverik.osm.rambler.ru/whodidit/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14&amp;layers=BTT&amp;age=187">area with Who did it</a> for recent (time frame select box on top). Or check <a href="http://owl.apis.dev.openstreetmap.org/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14">the area with the new history tab</a>. And maybe to look <a href="http://www.openstreetmap.org/edit?editor=potlatch&amp;lat=42.3139&amp;lon=-83.0338&amp;zoom=16">with Potlatch1</a> for deleted ways.</p>
-<p><em>Here:</em> Indeed this looks not good here (first glance) - e.g. with the new history tab we find changes by user <a href="http://www.openstreetmap.org/browse/changeset/16299145">e.g. this one</a> (<a href="http://osmhv.openstreetmap.de/changeset.jsp?id=16299145">view with OSM History Viewer</a>). Probably we need to do some reverts (yes that is possible) - special tools exist (but not easy to handle). What should be done is nicely described here: <a href="/questions/216/what-should-i-do-about-vandalism/221">what-should-i-do-about-vandalism</a>. I have written a message to this user now (asking what he plans) and will forward any answer/report to the Data Working Group then (those reverts are a bit too big for me ...) in 24 hours or something. I am not sure how long to wait in this case ... it looks like a big misunderstanding - private map - to me. Not long, since the damage (if the roads are there in reality...) is quite big.</p>
+<p><em>In general:</em> That is similar to the question <a href="/questions/22408/lakes-disappeared">lakes-disappeared</a>. There are some <span>monitoring tools</span>, which can help here. I suggest to check the <a href="http://zverik.osm.rambler.ru/whodidit/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14&amp;layers=BTT&amp;age=187">area with Who did it</a> for recent (time frame select box on top). Or check <a href="http://owl.apis.dev.openstreetmap.org/?lat=42.3139&amp;lon=-83.0338&amp;zoom=14">the area with the new history tab</a>. And maybe to look <a href="https://www.openstreetmap.org/edit?editor=potlatch&amp;lat=42.3139&amp;lon=-83.0338&amp;zoom=16">with Potlatch1</a> for deleted ways.</p>
+<p><em>Here:</em> Indeed this looks not good here (first glance) - e.g. with the new history tab we find changes by user <a href="https://www.openstreetmap.org/browse/changeset/16299145">e.g. this one</a> (<a href="http://osmhv.openstreetmap.de/changeset.jsp?id=16299145">view with OSM History Viewer</a>). Probably we need to do some reverts (yes that is possible) - special tools exist (but not easy to handle). What should be done is nicely described here: <a href="/questions/216/what-should-i-do-about-vandalism/221">what-should-i-do-about-vandalism</a>. I have written a message to this user now (asking what he plans) and will forward any answer/report to the Data Working Group then (those reverts are a bit too big for me ...) in 24 hours or something. I am not sure how long to wait in this case ... it looks like a big misunderstanding - private map - to me. Not long, since the damage (if the roads are there in reality...) is quite big.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Changes made by b3rogers have been reverted <a href="http://www.openstreetmap.org/browse/changeset/16401044">http://www.openstreetmap.org/browse/changeset/16401044</a></p>
+<p>Changes made by b3rogers have been reverted <a href="https://www.openstreetmap.org/browse/changeset/16401044">https://www.openstreetmap.org/browse/changeset/16401044</a></p>
 </div>
 <div id="comment-22972-info" class="comment-info">
 <span class="comment-age">(03 Jun '13, 06:18)</span> <span class="comment-user userinfo">SK53 ♦</span>

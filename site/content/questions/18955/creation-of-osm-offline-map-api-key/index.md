@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://switch2osm.org/">switch to osm</a>, and the <a href="http://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide">beginner's guide</a>. The rest of the wiki has plenty of information too. You'll need to ask more specific questions if you want an answer that is less generic.</p>
+<p>See <a href="http://switch2osm.org/">switch to osm</a>, and the <a href="https://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide">beginner's guide</a>. The rest of the wiki has plenty of information too. You'll need to ask more specific questions if you want an answer that is less generic.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -172,9 +172,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I were you, I'd start at the <a href="http://wiki.openstreetmap.org/wiki/Developer_FAQ">Developer FAQ</a> - that answers pretty much all of your questions so far!</p>
-<p>It might also be helpful to read <a href="https://help.openstreetmap.org/questions/9453/do-i-need-an-api-key-for-my-project">this previous question</a> and also <a href="https://help.openstreetmap.org/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android">this one</a>.</p>
-<p>Any Android frameworks will be listed in <a href="http://wiki.openstreetmap.org/wiki/Category:Android">the "Android" category</a> in the wiki, including <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a>.</p>
+<p>If I were you, I'd start at the <a href="https://wiki.openstreetmap.org/wiki/Developer_FAQ">Developer FAQ</a> - that answers pretty much all of your questions so far!</p>
+<p>It might also be helpful to read <a href="/questions/9453/do-i-need-an-api-key-for-my-project">this previous question</a> and also <a href="/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android">this one</a>.</p>
+<p>Any Android frameworks will be listed in <a href="https://wiki.openstreetmap.org/wiki/Category:Android">the "Android" category</a> in the wiki, including <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

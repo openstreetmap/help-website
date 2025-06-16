@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Is seems that for the openstreetmap.org credentials to work for login on help.openstreetmap.org, the password has to fulfill certain properties. I've filed a <a href="https://help.openstreetmap.org/questions/71596/what-properties-does-my-osmorg-password-have-to-fulfill-to-also-work-on-helposmorg">separate question</a> to ask what those are.</p>
+<p>Is seems that for the openstreetmap.org credentials to work for login on help.openstreetmap.org, the password has to fulfill certain properties. I've filed a <a href="/questions/71596/what-properties-does-my-osmorg-password-have-to-fulfill-to-also-work-on-helposmorg">separate question</a> to ask what those are.</p>
 <p>My data points so far:</p>
 <ul>
 <li>A password generaged with <code>pwgen -s 12</code> (i.e. 12 random alphanumeric characters) does work</li>

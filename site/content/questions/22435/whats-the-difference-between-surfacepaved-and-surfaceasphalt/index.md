@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What&#x27;s the difference between surface=paved and surface=asphalt?"
-description = '''I see a path which is labeled partially with surface=paved and partially with surface=asphalt? What&#x27;s the difference between the two, and which should be preferred? I don&#x27;t see much clarification at: http://wiki.openstreetmap.org/wiki/Key:surface'''
+description = '''I see a path which is labeled partially with surface=paved and partially with surface=asphalt? What&#x27;s the difference between the two, and which should be preferred? I don&#x27;t see much clarification at: https://wiki.openstreetmap.org/wiki/Key:surface'''
 date = "2013-05-14T21:28:00Z"
 lastmod = "2013-05-15T08:31:00Z"
 weight = 22435
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I see a path which is labeled partially with surface=paved and partially with surface=asphalt? What's the difference between the two, and which should be preferred?</p>
-<p>I don't see much clarification at: <a href="http://wiki.openstreetmap.org/wiki/Key:surface">http://wiki.openstreetmap.org/wiki/Key:surface</a></p>
+<p>I don't see much clarification at: <a href="https://wiki.openstreetmap.org/wiki/Key:surface">https://wiki.openstreetmap.org/wiki/Key:surface</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-surface" rel="tag" title="see questions tagged &#39;surface&#39;">surface</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -144,7 +144,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Note that wikipedia's definitions doesn't always have to match our definitions. Better take a look at <a href="http://wiki.openstreetmap.org/wiki/Key:surface">our wiki</a> instead.</p>
+<p>Note that wikipedia's definitions doesn't always have to match our definitions. Better take a look at <a href="https://wiki.openstreetmap.org/wiki/Key:surface">our wiki</a> instead.</p>
 </div>
 <div id="comment-22448-info" class="comment-info">
 <span class="comment-age">(15 May '13, 08:12)</span> <span class="comment-user userinfo">scai ♦</span>

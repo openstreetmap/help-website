@@ -114,7 +114,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>As with many other issues in OSM, you have to be aware that mapping practice varies quite a bit. That being said, I think there is generally a consensus about the following statements:</p>
 <ul>
-<li>use either a node or an area, but not both (<a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>)</li>
+<li>use either a node or an area, but not both (<a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>)</li>
 <li>a node is always a good first step</li>
 <li>if used correctly, an area is preferable to a node</li>
 <li>a building should not have amenity/shop tags if there is more than one such feature within the building.</li>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi I am absolute beguinner with java, which likely is the reason for my question. I want to generate a <em>.map from a</em> .osm or from a *.pbf, to then be used in Locus. Osmosis downloaded, Java RTE and JDK installed. The wiki gives the hint on the Locus page: osmosis --read-pbf "hungary.osm.pbf" --mapfile-writer file="hungary.osm.map" Hot to really execute this?</p>
 <p>Without further help, I managed to run Osmosis with some Tasks, but not with the one to make MAP files. The following line is started from a .BAT: C:\OSM\osmosis\bin\osmosis.bat -plugin org.mapsforge.map.writer.osmosis.MapFileWriterPluginLoader --read-xml file="C:\OSM\south-africa-and-lesotho-latest.osm" --mapfile-writer file="C:\OSM\durban.map" --bounding-box top=-29.85 left=30.9 bottom=-29.9 right=31.1</p>
-<p>It starts osmosis, loads the plugin, starts read, but then comes the following error: <img src="http://help.openstreetmap.org/upfiles/error.png" alt="alt text" /></p>
+<p>It starts osmosis, loads the plugin, starts read, but then comes the following error: <img src="/upfiles/error.png" alt="alt text" /></p>
 <p>Please advise, what is wrong and must be changed. It can´t be too much wrong. Thanks a lot.</p>
 <p>I assume, these are some rather basic questions, but I am trying to get this osmosis running since some hours and become desperate.</p>
 <p>Thanks for some hints. Dieter</p>

@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>At road junctions when the traffic signals control vehicular traffic as well as the pedestrian crossing I get more confused. For a simple junction (two streets crossing) I could leave a <code>highway=traffic_signals</code> on the junction node, and tag the pedestrian crossings as <code>highway=crossing</code>, or I can remove a single node for the traffic signals and rely on tagging each set of lights together with their pedestrian crossing attributes.</p>
 <p>I would like:</p>
 <ul>
-<li><p>a description of the standard practice of tagging for signal-controlled crossings (if your answer is fully covered by existing responses to this question <a href="http://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing">how-to-tag-traffic-lights-on-pedestrian-crossing</a>, please avoid duplicating answers);</p></li>
+<li><p>a description of the standard practice of tagging for signal-controlled crossings (if your answer is fully covered by existing responses to this question <a href="/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing">how-to-tag-traffic-lights-on-pedestrian-crossing</a>, please avoid duplicating answers);</p></li>
 <li><p>an explanation of why a particular combination of tags are used;</p></li>
 <li><p>how this should be applied to junctions where the signals are controlling both vehicles and pedestrians;</p></li>
 <li><p>and, lastly, advice on linking together traffic signals at junctions (e.g., with a relation). Please don't forget that most cases of junctions are more complex than just two streets crossing.</p></li>
@@ -176,7 +176,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:crossing">http://wiki.openstreetmap.org/wiki/Key:crossing</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:crossing">https://wiki.openstreetmap.org/wiki/Key:crossing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

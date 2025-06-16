@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-42731-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: in fact I think the interface on osm.org should tell this to IE users. E.g. a popup <em>"your default editor setting is "iD" but we cannot start it because you are using an unsupported browser (Internet Explorer), use another browser (Chrome/Chromium, Firefox, Safari, Opera, …) if you want to use iD. As a replacement we will try to start "Potlatch 2" now. [OK]</em></p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: in fact I think the interface on osm.org should tell this to IE users. E.g. a popup <em>"your default editor setting is "iD" but we cannot start it because you are using an unsupported browser (Internet Explorer), use another browser (Chrome/Chromium, Firefox, Safari, Opera, …) if you want to use iD. As a replacement we will try to start "Potlatch 2" now. [OK]</em></p>
 </div>
 <div id="comment-42731-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 12:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-42732-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> that's not something that's going to change as a result of a help question comment :)</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> that's not something that's going to change as a result of a help question comment :)</p>
 <p>One problem is that many people won't have explicitly chosen iD as their default; it'll have been chosen for them when they sign up. Note that this has previously been discussed at <a href="https://github.com/openstreetmap/openstreetmap-website/issues/941">https://github.com/openstreetmap/openstreetmap-website/issues/941</a> .</p>
 </div>
 <div id="comment-42732-info" class="comment-info">
@@ -101,7 +101,7 @@ osqa_accepted = false
 <div id="post-42737-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: oh, really? :-P I do not use github as a matter of principle, so … and I nearly guessed that it is intentionally or that just no one likes to program it. Thanks for the issue link!</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: oh, really? :-P I do not use github as a matter of principle, so … and I nearly guessed that it is intentionally or that just no one likes to program it. Thanks for the issue link!</p>
 <p>Yes, I know that most did not set it as default themselves - but they could really change the default to Potlatch 2 if they really want to regularly use IE and want to get rid of the warning.</p>
 </div>
 <div id="comment-42737-info" class="comment-info">

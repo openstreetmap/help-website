@@ -296,8 +296,8 @@ A supplementary question, When you "Share" does that mean that the point is in t
 <p>Try this <a href="http://www.nearby.org.uk/conversions.cgi">http://www.nearby.org.uk/conversions.cgi</a> for the conversion, put the lat lon into osm search box, better if you zoom in first, share and add a marker and you get this <a href="https://www.openstreetmap.org/?mlat=53.08871&amp;mlon=-3.37557#map=18/53.08871/-3.37557">https://www.openstreetmap.org/?mlat=53.08871&amp;mlon=-3.37557#map=18/53.08871/-3.37557</a></p>
 <p>Put the co-ords into the search box A. Zoom in by clicking on B + . "Go" on search ( if you don't do zoom first you wont know where the middle is. Use C to share.Add a marker tic box D. Click on E. Then cut and paste link at F. that's how i generated the map with the marker. This one <a href="https://www.openstreetmap.org/?mlat=53.08871&amp;mlon=-3.37557#map=18/53.08871/-3.37557">https://www.openstreetmap.org/?mlat=53.08871&amp;mlon=-3.37557#map=18/53.08871/-3.37557</a></p>
 <p>I sounds much more complicated than it is. Easy to try out and not a problem if it goes wrong, I email links to myself to test them.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Search_Box_ABC_8x28Jtz.JPG" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Search_Box_DEF_Gzz1j3L.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Search_Box_ABC_8x28Jtz.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Search_Box_DEF_Gzz1j3L.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

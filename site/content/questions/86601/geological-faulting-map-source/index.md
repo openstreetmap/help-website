@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-86604-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/22_qZTkDh7.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/22_qZTkDh7.JPG" alt="alt text" /></p>
 <p>This is the area at Beinn Luibhean</p>
 </div>
 <div id="comment-86604-info" class="comment-info">

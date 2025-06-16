@@ -170,7 +170,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look at the similar program osmfilter.</p>
-<p>It has features to produce a listing for all used keys in an osm file, see <a href="http://wiki.openstreetmap.org/wiki/Osmfilter#Getting_Tag_Statistics">Osmfilter#Getting_Tag_Statistics</a></p>
+<p>It has features to produce a listing for all used keys in an osm file, see <a href="https://wiki.openstreetmap.org/wiki/Osmfilter#Getting_Tag_Statistics">Osmfilter#Getting_Tag_Statistics</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

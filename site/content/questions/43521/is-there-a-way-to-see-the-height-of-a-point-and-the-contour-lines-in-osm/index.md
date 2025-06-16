@@ -201,7 +201,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OSM database doesn't store contours (as they're called). However many people have made custom OSM maps which include contours. <a href="http://www.openstreetmap.org/#map=6/50.653/-0.385&amp;layers=C">The Cycle Map on the main website</a>, or <a href="http://cycle.travel/map">RichardF's cycle.travel</a>.</p>
+<p>The OSM database doesn't store contours (as they're called). However many people have made custom OSM maps which include contours. <a href="https://www.openstreetmap.org/#map=6/50.653/-0.385&amp;layers=C">The Cycle Map on the main website</a>, or <a href="http://cycle.travel/map">RichardF's cycle.travel</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -220,7 +220,7 @@ osqa_accepted = false
 <div id="post-43535-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... also you can find some hints about that via <a href="http://wiki.openstreetmap.org/wiki/Contours">http://wiki.openstreetmap.org/wiki/Contours</a></p>
+<p>... also you can find some hints about that via <a href="https://wiki.openstreetmap.org/wiki/Contours">https://wiki.openstreetmap.org/wiki/Contours</a></p>
 </div>
 <div id="comment-43535-info" class="comment-info">
 <span class="comment-age">(11 Jun '15, 17:10)</span> <span class="comment-user userinfo">stephan75</span>

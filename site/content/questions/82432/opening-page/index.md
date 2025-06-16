@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Scroll the map so the country is in the centre. Click the share icon ( green in the jpeg ) then copy the link. <a href="https://www.openstreetmap.org/#map=5/54.840/-5.334">https://www.openstreetmap.org/#map=5/54.840/-5.334</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Share_and_link.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Share_and_link.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

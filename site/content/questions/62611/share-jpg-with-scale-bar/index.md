@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/share_jpeg_with_scale.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/share_jpeg_with_scale.JPG" alt="alt text" /></p>
 <p>Hopefully this explains how. Click on third icon up ( green in pic ) choose jpeg format, then drag the outline to include the scale bar. Click the link near the top and save it for emailing. Or on a win 10 PC use the screen snip tool, and save as a jpeg and email it as an attachment. For example here is a short link with a marker of a car park for a start point of a walk that a group could use as the meeting point. <a href="https://osm.org/go/eu6_3vj4?m=">https://osm.org/go/eu6_3vj4?m=</a></p>
 </div>
 <div class="answer-controls post-controls">

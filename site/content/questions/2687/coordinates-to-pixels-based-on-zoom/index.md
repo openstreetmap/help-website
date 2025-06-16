@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The (very) short answer is: Have a look at <a href="http://wiki.openstreetmap.org/wiki/Tilenames">at the wiki</a> and <a href="http://help.openstreetmap.org/questions/747">the question that was asked earlier</a>.</p>
+<p>The (very) short answer is: Have a look at <a href="https://wiki.openstreetmap.org/wiki/Tilenames">at the wiki</a> and <a href="/questions/747">the question that was asked earlier</a>.</p>
 <p>As this does not resolve the submitters question, I'll edit my answer and expand it. For the original example URL we can extract the following parameters: longitude 89.08805 west, latitude 30.6393 north and zoomlevel 6.5156731549786215. (Note that this is a non integer zoomlevel and might break lots of code that only expects integer zoomlevels.) However looking at the output resulting gif it looks like the website truncates the zoomlevel and really uses zoomlevel 6.</p>
 <p>Using this really simple java code which would support fractional zoomlevels if needed in the future we can convert lat and long to tile coordinates.</p>
 <pre><code>double lon = -89.08805;

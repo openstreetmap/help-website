@@ -305,7 +305,7 @@ malenki</p>
 <div class="answer-body">
 <p>Answer to the updated question:<br />
 * make sure you are allowed to use the data you want to import into OSM<br />
-* make sure you follow the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a></p>
+* make sure you follow the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a></p>
 <p>For to you wish to comparison I cannot help much more as what I pointed out above. Maybe it is also helpful for you to download the unaltered OSM data into one layer and open the date you created in an other layer above the previous one so you can see differences of the outlines.</p>
 <p>Maybe someone comes around with a more sophisticated answer...</p>
 </div>

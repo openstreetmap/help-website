@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello guys,</p>
-<p>I quite fighting with OSM API v0.6 and upload GPX track task. I'm developing application for Android and trying to use <a href="http://wiki.openstreetmap.org/wiki/Api06#Uploading_Traces">this</a> method. Firstly I though it should be a problem of login, so I changed login mechanism to OAuth. Anyway same result now.</p>
+<p>I quite fighting with OSM API v0.6 and upload GPX track task. I'm developing application for Android and trying to use <a href="https://wiki.openstreetmap.org/wiki/Api06#Uploading_Traces">this</a> method. Firstly I though it should be a problem of login, so I changed login mechanism to OAuth. Anyway same result now.</p>
 <p>After selecting track and settings all parameters (description ('test'), tags ('test'), visibility ('public')), uploading always return <strong>400 Bad Request</strong>, no content, no error message</p>
 <pre><code>---------- REQUEST -----------
 org.apache.http.client.methods.HttpPost@427e06f8, url: http://api.openstreetmap.org/api/0.6/gpx/create

@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I would like to map a building which is a stables with 2 flats above. What's the best way of doing this?</p>
 <p>I was going to map the whole building as stables, and then use nodes for the 2 flats, but then you can't see what areas the flats cover. Is that the best way of doing it? Or should I do the stables and flats all as overlapping building ways?</p>
-<p>The stables are currently mapped as a node, but I don't like that as it doesn't show the whole area that the stables cover: <a href="http://www.openstreetmap.org/node/1011636463">http://www.openstreetmap.org/node/1011636463</a></p>
+<p>The stables are currently mapped as a node, but I don't like that as it doesn't show the whole area that the stables cover: <a href="https://www.openstreetmap.org/node/1011636463">https://www.openstreetmap.org/node/1011636463</a></p>
 <p>You can see a <a href="http://www.thisispaddington.com/cms/images/articles/thumbnails/Hyde-Park-and-area-31.jpg">photo here</a> - the stables are on the ground floor and the 2 flats are the first floor.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

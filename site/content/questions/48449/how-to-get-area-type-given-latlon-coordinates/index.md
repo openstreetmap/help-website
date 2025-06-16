@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is exactly what "query feature" on the <a href="http://osm.org/">http://osm.org/</a> map does, using <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a>:</p>
+<p>This is exactly what "query feature" on the <a href="http://osm.org/">http://osm.org/</a> map does, using <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a>:</p>
 <pre><code>[timeout:5][out:json];is_in(lat,lon)-&gt;.a;way(pivot.a);out tags geom({{bbox}});relation(pivot.a);out tags bb;</code></pre>
 <p>Where you need to replace <code>lon</code> and <code>lat</code> with the coordinates of the point, and replace <code>{{bbox}}</code> by the current map bounding box (if you need that). This gives you the elements <em>surrounding</em> the given point. Note that this also returns administrative boundaries (county, state, etc.), not just physical elements - you'd need to filter on this, perhaps by throwing away <code>boundary</code> relations etc. See e.g. <a href="http://overpass-api.de/api/convert?data=%5Btimeout%3A5%5D%5Bout%3Ajson%5D%3Bis_in(50.08417%2C14.35882)-%3E.a%3Bway(pivot.a)%3Bout%20tags%20geom(50.08157175512576%2C14.357349872589111%2C50.08436684351692%2C14.374194145202637)%3Brelation(pivot.a)%3Bout%20tags%20bb%3B&amp;target=compact">this query</a> - note that the largest enclosing feature is the entire country.</p>
 <p>Also, this will give you <em>enclosing</em> features - so for a highway (which is usually an unclosed way), you wouldn't get a usable result. For that, you may need the other query, "nearby features":</p>

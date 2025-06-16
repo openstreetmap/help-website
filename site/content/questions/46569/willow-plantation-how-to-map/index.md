@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello.</p>
-<p>How do I map a willow plantation? The question is neighboring <a href="https://help.openstreetmap.org/questions/45251/poplar-plantation-how-to-map">this one</a>, but the main difference is that willows only grows a few meters high, up to ten or so (like <a href="http://www.ouest-france.fr/sites/default/files/styles/image-640x360/public/2013/12/30/une-saulaie-experimentale-au-talhouet.jpg?itok=cV9kxV6e">this</a>) before being cut for basketwork, and the whole land is clearcut regularly, making its appearance strongly vary in a matter of years, so the regular, heterogeneous appearance of <code>landuse=forest</code> seems far too different from the general appearance of the plantation to fit, but, then, how to map?</p>
+<p>How do I map a willow plantation? The question is neighboring <a href="/questions/45251/poplar-plantation-how-to-map">this one</a>, but the main difference is that willows only grows a few meters high, up to ten or so (like <a href="http://www.ouest-france.fr/sites/default/files/styles/image-640x360/public/2013/12/30/une-saulaie-experimentale-au-talhouet.jpg?itok=cV9kxV6e">this</a>) before being cut for basketwork, and the whole land is clearcut regularly, making its appearance strongly vary in a matter of years, so the regular, heterogeneous appearance of <code>landuse=forest</code> seems far too different from the general appearance of the plantation to fit, but, then, how to map?</p>
 <p>Awaiting your answers,</p>
 <p>Regards.</p>
 </div>
@@ -122,7 +122,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Penegal, take a look here, practical a large plantation of willows or osier, <a href="http://www.openstreetmap.org/#map=12/51.7655/4.7609">http://www.openstreetmap.org/#map=12/51.7655/4.7609</a> Those osier fields are also used to make mattresses to cover the river bottom before adding stones to build dikes and embankments. Consider natural=wetland with landuse=farmland / forest, crop=osier, like Andy said. And no it’s not in OSM Wiki. But Wikipedia has some words for that kind of fields as willow scrub. I tend to natural=scrub, but scrub or wetland dont match with natural together.</p>
+<p>Hi Penegal, take a look here, practical a large plantation of willows or osier, <a href="https://www.openstreetmap.org/#map=12/51.7655/4.7609">https://www.openstreetmap.org/#map=12/51.7655/4.7609</a> Those osier fields are also used to make mattresses to cover the river bottom before adding stones to build dikes and embankments. Consider natural=wetland with landuse=farmland / forest, crop=osier, like Andy said. And no it’s not in OSM Wiki. But Wikipedia has some words for that kind of fields as willow scrub. I tend to natural=scrub, but scrub or wetland dont match with natural together.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello,<br />
-According to <a href="http://wiki.openstreetmap.org/wiki/Forest">OSM Wiki</a> I would tag it as:</p>
+According to <a href="https://wiki.openstreetmap.org/wiki/Forest">OSM Wiki</a> I would tag it as:</p>
 <ul>
 <li>natural = wood</li>
 <li>managed = yes</li>
@@ -212,7 +212,7 @@ According to <a href="http://wiki.openstreetmap.org/wiki/Forest">OSM Wiki</a> I 
 <div id="post-46594-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Unfortunately, wood and forest mapping in OpenStreetMap is confused (essentially, different users use the same tag to mean different things). See <a href="http://wiki.openstreetmap.org/wiki/Forest">http://wiki.openstreetmap.org/wiki/Forest</a> for details.</p>
+<p>Unfortunately, wood and forest mapping in OpenStreetMap is confused (essentially, different users use the same tag to mean different things). See <a href="https://wiki.openstreetmap.org/wiki/Forest">https://wiki.openstreetmap.org/wiki/Forest</a> for details.</p>
 </div>
 <div id="comment-46594-info" class="comment-info">
 <span class="comment-age">(15 Nov '15, 13:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

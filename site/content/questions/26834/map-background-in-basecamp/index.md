@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>In BaseCamp, there seems to be no underlying ground or water layer so that both land and water (at least coastal water) appear the same colour.</p>
 <p>How can this be fixed? It's very annoying.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2013-09-29_at_8.27.53_AM_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2013-09-29_at_8.27.53_AM_1.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-layers" rel="tag" title="see questions tagged &#39;layers&#39;">layers</span> <span class="post-tag tag-link-basecamp" rel="tag" title="see questions tagged &#39;basecamp&#39;">basecamp</span>

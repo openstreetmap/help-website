@@ -191,7 +191,7 @@ One Answer:
 <li><p>Select the object to be added, scroll down to all relations and click on the plus button.</p></li>
 <li><p>Select the correct relation and assign the relevant role <a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dbus">according to the schema</a> used by that route.</p></li>
 </ol>
-<p>According to <a href="https://help.openstreetmap.org/questions/39272/delete-relation-in-id">this question</a> iD will automatically delete a relation when it no longer refers to any other objects.</p>
+<p>According to <a href="/questions/39272/delete-relation-in-id">this question</a> iD will automatically delete a relation when it no longer refers to any other objects.</p>
 <p>Relations can only refer to whole objects, so if you need to terminate a route partway along a way you will need to split it into two parts and only add the relevant portion to the relation.</p>
 </div>
 <div class="answer-controls post-controls">

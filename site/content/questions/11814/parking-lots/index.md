@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's your time and effort that goes into making the map, so the level of detail is up to you. As long as you use correct tagging (the <a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Dparking_aisle">service=parking_aisle</a> tag exists specifically for this purpose), applications can decide whether and how to present additional information like that.</p>
+<p>It's your time and effort that goes into making the map, so the level of detail is up to you. As long as you use correct tagging (the <a href="https://wiki.openstreetmap.org/wiki/Tag:service%3Dparking_aisle">service=parking_aisle</a> tag exists specifically for this purpose), applications can decide whether and how to present additional information like that.</p>
 <p>I tend to represent parking areas at least with an area outline and a central service road for access, and occasionally also add parking aisles. That being said, there are clearly diminishing returns for detailed mapping as the necessary effort increases and the use cases for the data become more exotic. Depending on your personal priorities you might consider mapping other facts more worthwhile. There's nothing wrong with leaving some work to other mappers with a different set of interests.</p>
 </div>
 <div class="answer-controls post-controls">

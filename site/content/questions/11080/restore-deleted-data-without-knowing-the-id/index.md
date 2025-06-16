@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Someone deleted a rather large (a few square kilometers) forrest near my house. I spent some time optimizing the forrest contours last year and don't really want to recreate the whole thing. Is there a way to get back the lost data? I found someone <a href="http://help.openstreetmap.org/questions/4019/how-do-i-restore-data-that-was-lost-during-editing">explaining how to restore ways</a> if you know the id but in this case I don't know it.</p>
+<p>Someone deleted a rather large (a few square kilometers) forrest near my house. I spent some time optimizing the forrest contours last year and don't really want to recreate the whole thing. Is there a way to get back the lost data? I found someone <a href="/questions/4019/how-do-i-restore-data-that-was-lost-during-editing">explaining how to restore ways</a> if you know the id but in this case I don't know it.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-deleted" rel="tag" title="see questions tagged &#39;deleted&#39;">deleted</span> <span class="post-tag tag-link-restore" rel="tag" title="see questions tagged &#39;restore&#39;">restore</span> <span class="post-tag tag-link-undelete" rel="tag" title="see questions tagged &#39;undelete&#39;">undelete</span>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The method described in <a href="http://help.openstreetmap.org/questions/1090/how-do-i-undelete-a-way">this question</a> (using Potlatch 1) should still work, but it's important to try and understand what's happened and why before doing so. There are a number of reasons why something might have been deleted, including the following:</p>
+<p>The method described in <a href="/questions/1090/how-do-i-undelete-a-way">this question</a> (using Potlatch 1) should still work, but it's important to try and understand what's happened and why before doing so. There are a number of reasons why something might have been deleted, including the following:</p>
 <ol>
 <li>It's just a mistake. These things occasionally happen.</li>
 <li>Someone's got some data from a better source that's more accurate.</li>

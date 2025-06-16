@@ -114,12 +114,12 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would suggest seeing whether</p>
-<p><a href="https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a></p>
+<p><a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a></p>
 <p>or</p>
-<p><a href="https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers">https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers</a></p>
+<p><a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers">https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers</a></p>
 <p>or</p>
-<p><a href="https://help.openstreetmap.org/questions/19537/create-map-with-markers">https://help.openstreetmap.org/questions/19537/create-map-with-markers</a></p>
-<p>answer your question. I would suggest looking at <a href="http://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a> and <a href="http://wiki.openstreetmap.org/wiki/Openlayers">Openlayers</a> options initially.</p>
+<p><a href="/questions/19537/create-map-with-markers">https://help.openstreetmap.org/questions/19537/create-map-with-markers</a></p>
+<p>answer your question. I would suggest looking at <a href="https://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a> and <a href="https://wiki.openstreetmap.org/wiki/Openlayers">Openlayers</a> options initially.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ This question is marked "community wiki".
 <p>and then set up a website using those tiles:</p>
 <p><a href="http://switch2osm.org/using-tiles/">http://switch2osm.org/using-tiles/</a></p>
 <p>If you want to avoid the "serving tiles" part of that for now, you can point your site at an existing tile source, but make sure that you abide by the terms of use of that tile source. In the case of OSM-hosted tiles that's:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile usage policy</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile usage policy</a></p>
 </div>
 <div id="comment-26143-info" class="comment-info">
 <span class="comment-age">(05 Sep '13, 12:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -188,8 +188,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read first the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a>.</p>
-<p>Then decide if your "multiple markers" have to always use the latest data from OSM or if you can use some cached data store locally on your server (can be a JSON or XML file). If you want to get the latest data in OSM, you should use one of the alternative data providers listed in the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> page. But then you will depend on a third party. It's up to you.</p>
+<p>Please read first the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a>.</p>
+<p>Then decide if your "multiple markers" have to always use the latest data from OSM or if you can use some cached data store locally on your server (can be a JSON or XML file). If you want to get the latest data in OSM, you should use one of the alternative data providers listed in the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> page. But then you will depend on a third party. It's up to you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

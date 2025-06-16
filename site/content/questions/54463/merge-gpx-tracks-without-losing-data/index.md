@@ -156,7 +156,7 @@ osqa_accepted = true
 <div id="post-54470-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> - It's all data that might be useful for determining imagery offsets so whether it's loaded as one track or two, isn't the end result the same?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> - It's all data that might be useful for determining imagery offsets so whether it's loaded as one track or two, isn't the end result the same?</p>
 </div>
 <div id="comment-54470-info" class="comment-info">
 <span class="comment-age">(05 Feb '17, 10:00)</span> <span class="comment-user userinfo">AlaskaDave</span>
@@ -168,7 +168,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> No, see the track visualization. At several locations the merged track jumps continuously from one side of the road to the other. The merged track is just a large mess. Uploading both tracks individually would be much better.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> No, see the track visualization. At several locations the merged track jumps continuously from one side of the road to the other. The merged track is just a large mess. Uploading both tracks individually would be much better.</p>
 </div>
 <div id="comment-54471-info" class="comment-info">
 <span class="comment-age">(05 Feb '17, 10:32)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -317,9 +317,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/PRUNE_Speed_close_up.JPG" alt="alt text" /><img src="http://help.openstreetmap.org/upfiles/PRUNE_Speed_CrbByoZ.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/PRUNE_Speed_close_up.JPG" alt="alt text" /><img src="/upfiles/PRUNE_Speed_CrbByoZ.JPG" alt="alt text" /></p>
 <p>Having seen the traces <a href="http://www.gpsvisualizer.com/display/20170204145114-03119-map.html">http://www.gpsvisualizer.com/display/20170204145114-03119-map.html</a><br />
-I would guess that one device didn't have good signal all the time, was it in a pocket or a bag? high rise building can also cause problems. see <a href="http://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data">http://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data</a> I believe some devices now discard obviously faulty points, by seeing the average speed they calculate the large jumps of speed the zig zags would induce aren't likely and disregard them. It's possible this could be done with clever spread sheet, (the distance between consecutive, once a second points can't &gt; 6 km/h ( if walking) then ignore it) For me it's just easier to delete rogue points by looking at them with GPS Prune, which does display the speed between consecutive points by the way.</p>
+I would guess that one device didn't have good signal all the time, was it in a pocket or a bag? high rise building can also cause problems. see <a href="https://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data">https://wiki.openstreetmap.org/wiki/Accuracy_of_GPS_data</a> I believe some devices now discard obviously faulty points, by seeing the average speed they calculate the large jumps of speed the zig zags would induce aren't likely and disregard them. It's possible this could be done with clever spread sheet, (the distance between consecutive, once a second points can't &gt; 6 km/h ( if walking) then ignore it) For me it's just easier to delete rogue points by looking at them with GPS Prune, which does display the speed between consecutive points by the way.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -81,7 +81,7 @@ osqa_accepted = false
 <div id="post-51448-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12657/beauregaardhooligan">@beauregaardhooligan</a>: at which platform would you like to use "this"? What is "this"? For which use case would you like to use "this"?</p>
+<p><a href="https://help.openstreetmap.org/users/12657/beauregaardhooligan">@beauregaardhooligan</a>: at which platform would you like to use "this"? What is "this"? For which use case would you like to use "this"?</p>
 </div>
 <div id="comment-51448-info" class="comment-info">
 <span class="comment-age">(16 Aug '16, 15:59)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -159,7 +159,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I am not aware of such a feature-rich (possibly easy to use) offline program for desktop PCs. Our <span>data license</span> would allow the creation of such a software by everybody. I would give "Navit" or "MapFactor Navigator Free" a try. If you just want to view maps and plan a bit, then Garmin-maps-based Viewers may be good.</p>
 <p>We have a list of offline programs there (with links to other lists): <a href="https://wiki.openstreetmap.org/wiki/Offline_Openstreetmap#Using_the_data_offline">https://wiki.openstreetmap.org/wiki/Offline_Openstreetmap#Using_the_data_offline</a></p>
-<p>Also see <a href="https://help.openstreetmap.org/questions/5374/offline-map-software-for-windows">https://help.openstreetmap.org/questions/5374/offline-map-software-for-windows</a></p>
+<p>Also see <a href="/questions/5374/offline-map-software-for-windows">https://help.openstreetmap.org/questions/5374/offline-map-software-for-windows</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -203,7 +203,7 @@ osqa_accepted = false
 <div id="post-51533-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
 </div>
 <div id="comment-51533-info" class="comment-info">
 <span class="comment-age">(19 Aug '16, 08:57)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -214,7 +214,7 @@ osqa_accepted = false
 <div id="post-51534-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/BaseCamp">http://wiki.openstreetmap.org/wiki/BaseCamp</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/BaseCamp">https://wiki.openstreetmap.org/wiki/BaseCamp</a></p>
 </div>
 <div id="comment-51534-info" class="comment-info">
 <span class="comment-age">(19 Aug '16, 08:58)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -256,7 +256,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I like and use GPS Prune it needs Java but its small and quick, you can cache maps when you have internet, you will also need a smal gpx file or feed in a point to start it. <img src="http://help.openstreetmap.org/upfiles/GPS_Prune_point.JPG" alt="alt text" /></p>
+<p>I like and use GPS Prune it needs Java but its small and quick, you can cache maps when you have internet, you will also need a smal gpx file or feed in a point to start it. <img src="/upfiles/GPS_Prune_point.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -298,7 +298,7 @@ osqa_accepted = false
 <div id="post-51530-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>find java here <a href="https://help.openstreetmap.org/questions/38907/can-you-recommend-a-safe-site-to-get-java">https://help.openstreetmap.org/questions/38907/can-you-recommend-a-safe-site-to-get-java</a></p>
+<p>find java here <a href="/questions/38907/can-you-recommend-a-safe-site-to-get-java">https://help.openstreetmap.org/questions/38907/can-you-recommend-a-safe-site-to-get-java</a></p>
 </div>
 <div id="comment-51530-info" class="comment-info">
 <span class="comment-age">(19 Aug '16, 08:47)</span> <span class="comment-user userinfo">andy mackey</span>

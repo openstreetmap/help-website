@@ -106,8 +106,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, you can download the data for Paris, then load it in a rendering engine like <a href="http://www.maperitive.net">Maperitive</a> (also see <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Wiki article</a>) where you can decide what gets drawn and what not by editing a style sheet. It is not something you can do by simply clicking a few buttons but Maperitive is reasonably well documented and if you are comfortable editing a text file then it should work for you.</p>
-<p>To download data, go to the export tab and choose "OpenStreetMap XML" as your output format. If you want to download an area larger than the export tab allows, check out <a href="http://www.openstreetmap.org/wiki/Xapi">XAPI</a> or download a <a href="http://www.openstreetmap.org/wiki/Planet.osm">planet extract</a>. You can use the <a href="http://www.openstreetmap.org/wiki/Osmosis">Osmosis</a> program to extract subsections of a planet extract if you need it.</p>
+<p>Yes, you can download the data for Paris, then load it in a rendering engine like <a href="http://www.maperitive.net">Maperitive</a> (also see <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Wiki article</a>) where you can decide what gets drawn and what not by editing a style sheet. It is not something you can do by simply clicking a few buttons but Maperitive is reasonably well documented and if you are comfortable editing a text file then it should work for you.</p>
+<p>To download data, go to the export tab and choose "OpenStreetMap XML" as your output format. If you want to download an area larger than the export tab allows, check out <a href="https://www.openstreetmap.org/wiki/Xapi">XAPI</a> or download a <a href="https://www.openstreetmap.org/wiki/Planet.osm">planet extract</a>. You can use the <a href="https://www.openstreetmap.org/wiki/Osmosis">Osmosis</a> program to extract subsections of a planet extract if you need it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ One Answer:
 <div id="post-4236-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive article on the Wiki</a> for a better introduction. Note that you don't <em>delete</em> the non-roads; you just change the style sheet to show only the roads.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive article on the Wiki</a> for a better introduction. Note that you don't <em>delete</em> the non-roads; you just change the style sheet to show only the roads.</p>
 </div>
 <div id="comment-4236-info" class="comment-info">
 <span class="comment-age">(31 Mar '11, 21:00)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>after having posted a question yesterday, see <a href="https://help.openstreetmap.org/questions/27927/shop-appears-only-in-edit-mode">here</a>, I moved to the area where I live, Wallensteinplatz in Vienna, and had a look to the shops around the corner.</p>
+<p>after having posted a question yesterday, see <a href="/questions/27927/shop-appears-only-in-edit-mode">here</a>, I moved to the area where I live, Wallensteinplatz in Vienna, and had a look to the shops around the corner.</p>
 <p>My attention was attracted from a florist shop named "Tatoo" on the Wallensteinstrasse, which is actually a Tattoo shop with the florist icon.</p>
 <p>A second icon drew my attention, the Motel "Puff" on the Jägerstrasse. This is actually, ehehm... a brothel, no chance to stay there more than half an hour or so...</p>
 <p>I have the feeling that some users were frustrated because of seeing on the view mode nothing of what they have being adding to the map and then assigned a tag visible on the view mode having some (to the least controversial) relation to what the place actually is.</p>

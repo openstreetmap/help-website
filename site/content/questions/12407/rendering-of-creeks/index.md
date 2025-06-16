@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rendering of Creeks"
-description = '''In Fareham Creek (http://www.openstreetmap.org/?lat=50.84289&amp;amp;lon=-1.17585&amp;amp;zoom=15&amp;amp;layers=M), Mapnik (and the other renderings offered on the OSM web site) show the extent of the creek correctly. However, using Talkytoaster&#x27;s maps, both MapSource and a Garmin GPS show the water (with a ve...'''
+description = '''In Fareham Creek (https://www.openstreetmap.org/?lat=50.84289&amp;amp;lon=-1.17585&amp;amp;zoom=15&amp;amp;layers=M), Mapnik (and the other renderings offered on the OSM web site) show the extent of the creek correctly. However, using Talkytoaster&#x27;s maps, both MapSource and a Garmin GPS show the water (with a ve...'''
 date = "2012-04-28T14:42:00Z"
 lastmod = "2012-04-28T14:57:00Z"
 weight = 12407
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In Fareham Creek (<a href="http://www.openstreetmap.org/?lat=50.84289&amp;lon=-1.17585&amp;zoom=15&amp;layers=M),">http://www.openstreetmap.org/?lat=50.84289&amp;lon=-1.17585&amp;zoom=15&amp;layers=M),</a> Mapnik (and the other renderings offered on the OSM web site) show the extent of the creek correctly. However, using Talkytoaster's maps, both MapSource and a Garmin GPS show the water (with a very blocky coastline) only up to roughly where the power line crosses the creek. Further north, the water is shown as the same colour as the land. Somebody has gone to the trouble of mapping the shoreline, but the Garmin rendering ignores it. Can anyone tell me what I need to do in order to correct this?</p>
+<p>In Fareham Creek (<a href="https://www.openstreetmap.org/?lat=50.84289&amp;lon=-1.17585&amp;zoom=15&amp;layers=M),">https://www.openstreetmap.org/?lat=50.84289&amp;lon=-1.17585&amp;zoom=15&amp;layers=M),</a> Mapnik (and the other renderings offered on the OSM web site) show the extent of the creek correctly. However, using Talkytoaster's maps, both MapSource and a Garmin GPS show the water (with a very blocky coastline) only up to roughly where the power line crosses the creek. Further north, the water is shown as the same colour as the land. Somebody has gone to the trouble of mapping the shoreline, but the Garmin rendering ignores it. Can anyone tell me what I need to do in order to correct this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span> <span class="post-tag tag-link-creek" rel="tag" title="see questions tagged &#39;creek&#39;">creek</span>

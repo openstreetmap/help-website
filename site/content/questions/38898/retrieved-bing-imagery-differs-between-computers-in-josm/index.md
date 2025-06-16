@@ -86,7 +86,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10071/yamaofparadise">@YamaOfParadise</a>, that is strange. In my JOSM installation, the Bing imagery URL is same as you specified and I can go to zoom level 19 without problems.</p>
+<p><a href="https://help.openstreetmap.org/users/10071/yamaofparadise">@YamaOfParadise</a>, that is strange. In my JOSM installation, the Bing imagery URL is same as you specified and I can go to zoom level 19 without problems.</p>
 </div>
 <div id="comment-38913-info" class="comment-info">
 <span class="comment-age">(29 Nov '14, 04:43)</span> <span class="comment-user userinfo">BlueTiger</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have little bit confusion with my website How do i map my website</p>
-<p><em>converted to question from answer in <a href="https://help.openstreetmap.org/questions/45765/best-way-to-map-shops-within-a-mall-or-shopping-center">Best way to map shops within a mall or shopping center?</a></em></p>
+<p><em>converted to question from answer in <a href="/questions/45765/best-way-to-map-shops-within-a-mall-or-shopping-center">Best way to map shops within a mall or shopping center?</a></em></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shop" rel="tag" title="see questions tagged &#39;shop&#39;">shop</span> <span class="post-tag tag-link-business" rel="tag" title="see questions tagged &#39;business&#39;">business</span>

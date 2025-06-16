@@ -71,7 +71,7 @@ Version mismatch: Provided 4, server had: 6 of Way 320298294“</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>It's the same problem as <a href="https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit</a> but could really do with a decent answer written in native German.</p>
+<p>It's the same problem as <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit</a> but could really do with a decent answer written in native German.</p>
 </div>
 <div id="comment-40461-info" class="comment-info">
 <span class="comment-age">(18 Jan '15, 13:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -105,7 +105,7 @@ Version mismatch: Provided 4, server had: 6 of Way 320298294“</code></pre>
 <div id="post-49496-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've described a workaround here: <a href="http://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.">http://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.</a> You're welcome to translate it and post it as an answer here in case it may help someone in their own Muttersprache :)</p>
+<p>I've described a workaround here: <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit/49473.</a> You're welcome to translate it and post it as an answer here in case it may help someone in their own Muttersprache :)</p>
 </div>
 <div id="comment-49496-info" class="comment-info">
 <span class="comment-age">(29 Apr '16, 10:32)</span> <span class="comment-user userinfo">carciofo</span>
@@ -197,7 +197,7 @@ Würdest du den Editor JOSM verwenden, könntest du den <a href="https://josm.op
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10350/schonberger">@Schönberger</a>: Super, danke für deine Beschreibung, das ist gut zu wissen! Und, genau, in kleineren Einheiten zu speichern mildert dieses Problem. Irgendetwas ist hier ja auch schiefgelaufen (denn der Konflikt trat ja mit dir selbst auf – was im Normalfall nicht passieren sollte), wieso weiß ich nicht genau: Möglicherweise hast du den Editor in zwei Browserfenstern/-tabs gleichzeitig geöffnet? Es kann natürlich auch ein (nun schlecht nachvollziehbarer) Programmierfehler im Editor sein.</p>
+<p><a href="https://help.openstreetmap.org/users/10350/schonberger">@Schönberger</a>: Super, danke für deine Beschreibung, das ist gut zu wissen! Und, genau, in kleineren Einheiten zu speichern mildert dieses Problem. Irgendetwas ist hier ja auch schiefgelaufen (denn der Konflikt trat ja mit dir selbst auf – was im Normalfall nicht passieren sollte), wieso weiß ich nicht genau: Möglicherweise hast du den Editor in zwei Browserfenstern/-tabs gleichzeitig geöffnet? Es kann natürlich auch ein (nun schlecht nachvollziehbarer) Programmierfehler im Editor sein.</p>
 </div>
 <div id="comment-40480-info" class="comment-info">
 <span class="comment-age">(19 Jan '15, 16:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -221,7 +221,7 @@ Würdest du den Editor JOSM verwenden, könntest du den <a href="https://josm.op
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10350/schonberger">@Schönberger</a>: das kannst du zwar prinzipiell machen, musst dann aber – wie gemerkt – darauf achten, dass du nicht das gleiche Objekt in mehr als einer Editorsitzung bearbeitest. Am besten vermeidest du es den Editor mehrmals zu öffnen.</p>
+<p><a href="https://help.openstreetmap.org/users/10350/schonberger">@Schönberger</a>: das kannst du zwar prinzipiell machen, musst dann aber – wie gemerkt – darauf achten, dass du nicht das gleiche Objekt in mehr als einer Editorsitzung bearbeitest. Am besten vermeidest du es den Editor mehrmals zu öffnen.</p>
 </div>
 <div id="comment-40482-info" class="comment-info">
 <span class="comment-age">(19 Jan '15, 16:40)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -129,7 +129,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I do not know much about Thailand, but did you check its <a href="http://wiki.openstreetmap.org/wiki/Thailand">wiki page</a> or contact the <a href="https://lists.openstreetmap.org/listinfo">local community</a> ? They may know about local data sources.</p>
+<p>I do not know much about Thailand, but did you check its <a href="https://wiki.openstreetmap.org/wiki/Thailand">wiki page</a> or contact the <a href="https://lists.openstreetmap.org/listinfo">local community</a> ? They may know about local data sources.</p>
 <p>While protectedplanet data is copyrighted, their help page let me hope that they might be amenable to allow import into OSM. You would need to contact them to get an <strong>official explicit permission to import and sub-licence the data into OSM, with attribution, by any OSM contributor</strong>. This requires some diplomacy but may be well worth it. Document your attempts on the wiki and mailing list.</p>
 <p>When all else fails, these kind of sources can still be used as a todo list. Knowing that "there is a park around here" can be helpful, even if you need to assert the nature, location, shape, name, etc using other sources such as Bing.</p>
 </div>
@@ -195,7 +195,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The formation of every national park is proclaimed in the Royal Thai Govenment Gazette, the archives of which can be searched online at <a href="http://www.ratchakitcha.soc.go.th/RKJ/announce/search.jsp">http://www.ratchakitcha.soc.go.th/RKJ/announce/search.jsp</a> (in Thai). Each proclamation is accompanied by a map, which as part of legislation should be public domain. I've mapped some national parks and protected areas using such maps, though they sometimes aren't perfectly accurate. Take a look at the source tags for <a href="http://www.openstreetmap.org/browse/relation/2971358">Khao Yai National Park</a> or <a href="http://www.openstreetmap.org/browse/relation/2969357">Huai Kha Khaeng Wildlife Sanctuary</a>. No idea about GPX files though.</p>
+<p>The formation of every national park is proclaimed in the Royal Thai Govenment Gazette, the archives of which can be searched online at <a href="http://www.ratchakitcha.soc.go.th/RKJ/announce/search.jsp">http://www.ratchakitcha.soc.go.th/RKJ/announce/search.jsp</a> (in Thai). Each proclamation is accompanied by a map, which as part of legislation should be public domain. I've mapped some national parks and protected areas using such maps, though they sometimes aren't perfectly accurate. Take a look at the source tags for <a href="https://www.openstreetmap.org/browse/relation/2971358">Khao Yai National Park</a> or <a href="https://www.openstreetmap.org/browse/relation/2969357">Huai Kha Khaeng Wildlife Sanctuary</a>. No idea about GPX files though.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

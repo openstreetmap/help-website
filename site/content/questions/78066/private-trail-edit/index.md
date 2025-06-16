@@ -206,7 +206,7 @@ This question is marked "community wiki".
 <p>How does one edit the OSM map so the paths will show up as grey hashmarks?</p>
 <p>Thank you,</p>
 <p>Marc</p>
-<p><img src="https://help.openstreetmap.org/upfiles/All_Trails_map.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/OSM_Map_Nw7OnSe.png" alt="alt text" /></p>
+<p><img src="/upfiles/All_Trails_map.png" alt="alt text" /> <img src="/upfiles/OSM_Map_Nw7OnSe.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>So according to the Wiki, <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbus_station">amenity=bus_station is deprecated</a>. One should map it as <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Station">public_transport=station</a>. Fine by me, but the wiki never says how to say what kind of station it is - does it do trains, subways, buses, etc. Or am I being blind?</p>
+<p>So according to the Wiki, <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbus_station">amenity=bus_station is deprecated</a>. One should map it as <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Station">public_transport=station</a>. Fine by me, but the wiki never says how to say what kind of station it is - does it do trains, subways, buses, etc. Or am I being blind?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-public-transport" rel="tag" title="see questions tagged &#39;public-transport&#39;">public-transport</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-bus-station" rel="tag" title="see questions tagged &#39;bus-station&#39;">bus-station</span>
@@ -171,7 +171,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Joost schouppe, try to read these lines, <a href="http://wiki.openstreetmap.org/w/index.php?search=station&amp;title=Special%3ASearch&amp;go=OK">http://wiki.openstreetmap.org/w/index.php?search=station&amp;title=Special%3ASearch&amp;go=OK</a> , <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation">http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation</a> and make a choice or read the proposals as well. That will bring you to the right tagging scheme. And tag the way of transport = with a extra value, train, bus, metro aso</p>
+<p>Joost schouppe, try to read these lines, <a href="https://wiki.openstreetmap.org/w/index.php?search=station&amp;title=Special%3ASearch&amp;go=OK">https://wiki.openstreetmap.org/w/index.php?search=station&amp;title=Special%3ASearch&amp;go=OK</a> , <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation">https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation</a> and make a choice or read the proposals as well. That will bring you to the right tagging scheme. And tag the way of transport = with a extra value, train, bus, metro aso</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

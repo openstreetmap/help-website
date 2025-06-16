@@ -113,8 +113,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use OpenStreetMap for anything you like. You only have to make sure you credit OSM in the manner requested, and that any improvements you make to the data are contributed back under the same terms: see <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a>.</p>
-<p>In addition, bear in mind that the servers at openstreetmap.org have limited capacity and are run by volunteers. So if you expect significant usage, or 100% availability is crucial to your project, then you should set up your own server with OSM data or use a commercial provider. See <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a>.</p>
+<p>You can use OpenStreetMap for anything you like. You only have to make sure you credit OSM in the manner requested, and that any improvements you make to the data are contributed back under the same terms: see <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a>.</p>
+<p>In addition, bear in mind that the servers at openstreetmap.org have limited capacity and are run by volunteers. So if you expect significant usage, or 100% availability is crucial to your project, then you should set up your own server with OSM data or use a commercial provider. See <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a>.</p>
 <p>By the way, it's called "OpenStreetMap" (one word, not plural), not "OpenStreet Maps" or anything. :)</p>
 </div>
 <div class="answer-controls post-controls">

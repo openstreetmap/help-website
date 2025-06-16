@@ -131,7 +131,7 @@ osqa_accepted = false
 <pre><code>Mo-Th 06:00-01:00; Su 06:00-01:00</code></pre>
 <p>Alternatively you could just specify the opening hours for each day separately. It will look more complicated but means exactly the same:</p>
 <pre><code>Mo-Th 00:00-01:00,06:00-24:00; Fr 00:00-01:00; Su 06:00-24:00</code></pre>
-<p>There is also a nice plugin for JOSM: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpeningHoursEditor">OpeningHoursEditor</a>. It makes editing opening hours quite easy. But always double-check the result, there are some bugs and it doesn't support the whole opening hours specification.</p>
+<p>There is also a nice plugin for JOSM: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpeningHoursEditor">OpeningHoursEditor</a>. It makes editing opening hours quite easy. But always double-check the result, there are some bugs and it doesn't support the whole opening hours specification.</p>
 <p>Also see the <a href="http://openingh.openstreetmap.de/evaluation_tool/">opening hours evaluation tool</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -207,7 +207,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Past midnight, it's the next day. So add the 0-1am section in the next day. You can have multiple sections per day. This is explained in the <a href="http://wiki.openstreetmap.org/wiki/Opening_hours">wiki</a>. Assuming you mean that this POI is open 24h on friday and saturday, it gives:</p>
+<p>Past midnight, it's the next day. So add the 0-1am section in the next day. You can have multiple sections per day. This is explained in the <a href="https://wiki.openstreetmap.org/wiki/Opening_hours">wiki</a>. Assuming you mean that this POI is open 24h on friday and saturday, it gives:</p>
 <pre><code>Mo-Su 00:00-01:00,18:00-24:00; Fr,Sa 00:00-24:00</code></pre>
 <p>You may find the josm plugin easyer to use than this webpage.</p>
 <p>As a side note, avoid using the 12h format unless you absolutely need to. It's confusing.</p>
@@ -272,7 +272,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Mo-Fr 00:00-01:00,06:00-24:00; Sa,Su 00:00-24:00</p>
-<p>I figured out the correct opening hours on my own from using the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpeningHoursEditor">OpeningHoursEditor</a>.</p>
+<p>I figured out the correct opening hours on my own from using the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpeningHoursEditor">OpeningHoursEditor</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

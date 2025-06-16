@@ -137,7 +137,7 @@ One Answer:
 <div id="post-53013-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: I do not see "maps" mentioned in the question. The question is about a list (text) of shop names which are in the shopping centre.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: I do not see "maps" mentioned in the question. The question is about a list (text) of shop names which are in the shopping centre.</p>
 </div>
 <div id="comment-53013-info" class="comment-info">
 <span class="comment-age">(17 Nov '16, 21:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

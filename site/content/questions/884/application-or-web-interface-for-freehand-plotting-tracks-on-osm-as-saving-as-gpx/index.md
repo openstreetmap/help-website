@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>... or even more possibilities at <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track_drawing_websites</a> or <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List_of_OSM_based_Services</a></p>
+<p>... or even more possibilities at <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track_drawing_websites</a> or <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List_of_OSM_based_Services</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

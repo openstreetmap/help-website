@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Right click &gt; "view image" to see it larger</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot-1.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot-1.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-geodata" rel="tag" title="see questions tagged &#39;geodata&#39;">geodata</span>

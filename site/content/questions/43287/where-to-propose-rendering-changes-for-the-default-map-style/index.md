@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In the picture below, the fact that the footpaths have the tag "<a href="http://wiki.openstreetmap.org/wiki/Tag:bridge%3Dboardwalk">bridge=boardwalk</a>" cause the footpaths to be rendered as bridges. At this zoom level (14), the bridge rendering overshadows the footpath. I think the rendering should be changed so that at level 14 and below, the footpaths should be rendered as standard footpaths, and upon zooming to higher levels, the bridge depiction can be shown. URL for this location: <a href="http://www.openstreetmap.org/#map=14/30.5278/-86.5034">http://www.openstreetmap.org/#map=14/30.5278/-86.5034</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Capture1.PNG" alt="alt text" /></p>
+<p>In the picture below, the fact that the footpaths have the tag "<a href="https://wiki.openstreetmap.org/wiki/Tag:bridge%3Dboardwalk">bridge=boardwalk</a>" cause the footpaths to be rendered as bridges. At this zoom level (14), the bridge rendering overshadows the footpath. I think the rendering should be changed so that at level 14 and below, the footpaths should be rendered as standard footpaths, and upon zooming to higher levels, the bridge depiction can be shown. URL for this location: <a href="https://www.openstreetmap.org/#map=14/30.5278/-86.5034">https://www.openstreetmap.org/#map=14/30.5278/-86.5034</a></p>
+<p><img src="/upfiles/Capture1.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bridge" rel="tag" title="see questions tagged &#39;bridge&#39;">bridge</span> <span class="post-tag tag-link-footpath" rel="tag" title="see questions tagged &#39;footpath&#39;">footpath</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span>

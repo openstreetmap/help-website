@@ -128,7 +128,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Also, <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">avoid tagging for the renderer</a>. The OpenStreetMap is rendered in metric distances. If you want to see the map in imperial distances you will have to find a (different) renderer that displays feet rather than metres.</p>
+<p>Also, <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">avoid tagging for the renderer</a>. The OpenStreetMap is rendered in metric distances. If you want to see the map in imperial distances you will have to find a (different) renderer that displays feet rather than metres.</p>
 </div>
 <div id="comment-43446-info" class="comment-info">
 <span class="comment-age">(07 Jun '15, 13:31)</span> <span class="comment-user userinfo">Huttite</span>

@@ -111,13 +111,13 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Aquí está la página wiki <a href="http://wiki.openstreetmap.org/wiki/ES:Relation:restriction">ES: Relación: restricción</a></p>
+<p>Aquí está la página wiki <a href="https://wiki.openstreetmap.org/wiki/ES:Relation:restriction">ES: Relación: restricción</a></p>
 <p>Parece complicado al principio y lo uso JOSM lugar de identificación, por lo que puede necesitar una respuesta de alguien que usa ID.</p>
 <p>De Se las notas bajo EDITORES, ya que hay algunos plugins disponibles para ayudarle.</p>
 <p>Puedo hablar Inglés, así que espero que usted puede leer esto - No puedo. :)</p>
 <p>English:<br />
 </p>
-<p>wiki link <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">Relation:restriction</a></p>
+<p>wiki link <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">Relation:restriction</a></p>
 <p>It looks daunting at first and I use JOSM instead of ID, so you may need a reply from someone who uses ID.<br />
 </p>
 <p>Se the notes under EDITORS as there are some plugins available to help.</p>

@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>hi everyone</p>
 <pre><code>                i got the follwing error while i setuping North America data in Nominatim in ubuntu.</code></pre>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot_from_2014-01-31_08-07-21-png.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2014-01-31_08-07-21-png.jpg" alt="alt text" /></p>
 <p>when i check for Disk Space it shows</p>
 <p>Available disk space on my system</p>
 <p>Filesystem Type Size Used Avail Use% Mounted on</p>

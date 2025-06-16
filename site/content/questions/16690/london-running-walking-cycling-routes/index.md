@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might find some help at the <a href="http://wiki.openstreetmap.org/wiki/London/Summer_2012_events">11 Oct London pub meet-up</a>.</p>
+<p>You might find some help at the <a href="https://wiki.openstreetmap.org/wiki/London/Summer_2012_events">11 Oct London pub meet-up</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

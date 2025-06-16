@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Wooded areas"
-description = '''I recently joined OSM to help maintain maps in the area I live. I discovered tonight that someone painstakingly added polygons for many wooded areas that seem to me to be unnecessary considering the data that has to be read to draw them. An example is here: http://www.openstreetmap.org/browse/way/68...'''
+description = '''I recently joined OSM to help maintain maps in the area I live. I discovered tonight that someone painstakingly added polygons for many wooded areas that seem to me to be unnecessary considering the data that has to be read to draw them. An example is here: https://www.openstreetmap.org/browse/way/68...'''
 date = "2012-11-02T07:55:00Z"
 lastmod = "2012-11-03T00:04:00Z"
 weight = 17395
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I recently joined OSM to help maintain maps in the area I live. I discovered tonight that someone painstakingly added polygons for many wooded areas that seem to me to be unnecessary considering the data that has to be read to draw them. An example is here: <a href="http://www.openstreetmap.org/browse/way/68167478">http://www.openstreetmap.org/browse/way/68167478</a></p>
+<p>I recently joined OSM to help maintain maps in the area I live. I discovered tonight that someone painstakingly added polygons for many wooded areas that seem to me to be unnecessary considering the data that has to be read to draw them. An example is here: <a href="https://www.openstreetmap.org/browse/way/68167478">https://www.openstreetmap.org/browse/way/68167478</a></p>
 <p>Is this level of detail really needed, or even desired on OSM??</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -134,7 +134,7 @@ One Answer:
 <div id="post-17421-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>At last, a definitive answer; 20 nodes for a small curve is excessive (and I don't mean that as a sarcastic comment - it genuinely helps). Could you possibly look at my mapping of Meadowband Road (<a href="http://www.openstreetmap.org/edit?lat=50.854085&amp;lon=-1.205115&amp;zoom=18)">http://www.openstreetmap.org/edit?lat=50.854085&amp;lon=-1.205115&amp;zoom=18)</a> and tell me whether I have used an excessive number of nodes to try to get it to render as a smooth curve?</p>
+<p>At last, a definitive answer; 20 nodes for a small curve is excessive (and I don't mean that as a sarcastic comment - it genuinely helps). Could you possibly look at my mapping of Meadowband Road (<a href="https://www.openstreetmap.org/edit?lat=50.854085&amp;lon=-1.205115&amp;zoom=18)">https://www.openstreetmap.org/edit?lat=50.854085&amp;lon=-1.205115&amp;zoom=18)</a> and tell me whether I have used an excessive number of nodes to try to get it to render as a smooth curve?</p>
 </div>
 <div id="comment-17421-info" class="comment-info">
 <span class="comment-age">(02 Nov '12, 20:17)</span> <span class="comment-user userinfo">Madryn</span>

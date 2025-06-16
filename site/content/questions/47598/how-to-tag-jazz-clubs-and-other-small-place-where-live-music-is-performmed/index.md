@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Locally, I've tended to go for "<code>amenity=music_venue</code>" for "small music places". What works for you might be different; where I am there are fewer "jazz only" or "blues only" places than there are in e.g. the US or the Netherlands, so a more general tag is more appropriate here. I'd suggest having a look at other places near you and see what tags people have used. In London <a href="http://www.openstreetmap.org/way/157771360">Ronnie Scott's</a> is a bar; asking Nominatim for a selection of <a href="http://www.openstreetmap.org/search?query=jazz%20club">things with Jazz club in the name</a> finds plenty of restaurants, bars and pubs (though of course Nominatim doesn't index everything). Other tags such as "<code>amenity=nightclub</code>" or "<code>amenity=arts_centre</code>" might work for you too depending on the actual nature of the place.</p>
+<p>Locally, I've tended to go for "<code>amenity=music_venue</code>" for "small music places". What works for you might be different; where I am there are fewer "jazz only" or "blues only" places than there are in e.g. the US or the Netherlands, so a more general tag is more appropriate here. I'd suggest having a look at other places near you and see what tags people have used. In London <a href="https://www.openstreetmap.org/way/157771360">Ronnie Scott's</a> is a bar; asking Nominatim for a selection of <a href="https://www.openstreetmap.org/search?query=jazz%20club">things with Jazz club in the name</a> finds plenty of restaurants, bars and pubs (though of course Nominatim doesn't index everything). Other tags such as "<code>amenity=nightclub</code>" or "<code>amenity=arts_centre</code>" might work for you too depending on the actual nature of the place.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I agree with someoneElse. Back in 2013, I didn't find a suitable tag for describing places like you describe, so I proposed the <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmusic_venue">amenity=music_venue</a> and its response on the tagging mailing was mixed. In the absence of a suitable tag, I continue to use the tag in place where it fits - venues where the primary activity there is live music performances.</p>
+<p>I agree with someoneElse. Back in 2013, I didn't find a suitable tag for describing places like you describe, so I proposed the <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmusic_venue">amenity=music_venue</a> and its response on the tagging mailing was mixed. In the absence of a suitable tag, I continue to use the tag in place where it fits - venues where the primary activity there is live music performances.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

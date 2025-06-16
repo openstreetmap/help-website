@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Sanday Island Coastline"
-description = '''Hello, . http://www.openstreetmap.org/?lat=59.249&amp;amp;lon=-2.465&amp;amp;zoom=11&amp;amp;layers=M Could someone have a look at the above island which has not rendered correctly. The coast is only in two sections but I can&#x27;t see where the problem is. Many Thanks Bernard . Edit The JOSM validator reports one ...'''
+description = '''Hello, . https://www.openstreetmap.org/?lat=59.249&amp;amp;lon=-2.465&amp;amp;zoom=11&amp;amp;layers=M Could someone have a look at the above island which has not rendered correctly. The coast is only in two sections but I can&#x27;t see where the problem is. Many Thanks Bernard . Edit The JOSM validator reports one ...'''
 date = "2013-01-20T08:34:00Z"
 lastmod = "2013-01-20T10:13:00Z"
 weight = 19218
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, . <a href="http://www.openstreetmap.org/?lat=59.249&amp;lon=-2.465&amp;zoom=11&amp;layers=M">http://www.openstreetmap.org/?lat=59.249&amp;lon=-2.465&amp;zoom=11&amp;layers=M</a> Could someone have a look at the above island which has not rendered correctly. The coast is only in two sections but I can't see where the problem is. Many Thanks Bernard . Edit The JOSM validator reports one section as OK and the other section as area not closed. I highlight and zoom to the problem which is node 1922407724. However this node seems to be merged with the end node of the other section</p>
+<p>Hello, . <a href="https://www.openstreetmap.org/?lat=59.249&amp;lon=-2.465&amp;zoom=11&amp;layers=M">https://www.openstreetmap.org/?lat=59.249&amp;lon=-2.465&amp;zoom=11&amp;layers=M</a> Could someone have a look at the above island which has not rendered correctly. The coast is only in two sections but I can't see where the problem is. Many Thanks Bernard . Edit The JOSM validator reports one section as OK and the other section as area not closed. I highlight and zoom to the problem which is node 1922407724. However this node seems to be merged with the end node of the other section</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-islands" rel="tag" title="see questions tagged &#39;islands&#39;">islands</span> <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span>

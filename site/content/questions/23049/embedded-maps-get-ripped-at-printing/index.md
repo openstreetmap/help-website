@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-23054-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>like this: <a href="http://help.openstreetmap.org/upfiles/osm-map.png">http://help.openstreetmap.org/upfiles/osm-map.png</a></p>
+<p>like this: <span>/upfiles/osm-map.png</span></p>
 </div>
 <div id="comment-23054-info" class="comment-info">
 <span class="comment-age">(06 Jun '13, 10:29)</span> <span class="comment-user userinfo">rolfM</span>
@@ -160,7 +160,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The map is for screen rendering... if you want to print it, you would need to choose one of the options listed <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">here</a></p>
+<p>The map is for screen rendering... if you want to print it, you would need to choose one of the options listed <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

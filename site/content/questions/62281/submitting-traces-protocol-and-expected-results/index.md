@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-62320-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Your previous question and some answers, You have two slightly different ids (alanmcd and AlanMcd) which explains why you perhap could not see your traces always. It would also make login more problematic. <a href="https://help.openstreetmap.org/questions/61873/logging-change-and-seeing-result-when">https://help.openstreetmap.org/questions/61873/logging-change-and-seeing-result-when</a></p>
+<p>Your previous question and some answers, You have two slightly different ids (alanmcd and AlanMcd) which explains why you perhap could not see your traces always. It would also make login more problematic. <a href="/questions/61873/logging-change-and-seeing-result-when">https://help.openstreetmap.org/questions/61873/logging-change-and-seeing-result-when</a></p>
 </div>
 <div id="comment-62320-info" class="comment-info">
 <span class="comment-age">(23 Feb '18, 17:56)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -185,7 +185,7 @@ One Answer:
 <div id="post-62315-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Found it! Your other question and identity ( alanmcd and AlanMcD ) <a href="https://help.openstreetmap.org/questions/61873/logging-change-and-seeing-result-when">https://help.openstreetmap.org/questions/61873/logging-change-and-seeing-result-when</a></p>
+<p>Found it! Your other question and identity ( alanmcd and AlanMcD ) <a href="/questions/61873/logging-change-and-seeing-result-when">https://help.openstreetmap.org/questions/61873/logging-change-and-seeing-result-when</a></p>
 </div>
 <div id="comment-62315-info" class="comment-info">
 <span class="comment-age">(23 Feb '18, 13:54)</span> <span class="comment-user userinfo">andy mackey</span>

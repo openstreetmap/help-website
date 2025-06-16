@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I've been trying to create a local replica of the main OSM database for a few months now, and ran into all sort of problems. The most serious is a crash in osmosis when loading the full planet.osm into a PostgreSQL database, described <a href="https://trac.openstreetmap.org/ticket/4597">here</a>.</p>
 <p>I do run into this problem if I try to load a planet.osm file from September/2012, but NOT if I load a planet.osm file from ca. 01/Aug/2012.</p>
-<p>However, after the (august) planet.osm file is loaded, to setup the replication process, I need the state.txt file from some time before, but near, the age of the main planet.osm, and for that I tried to use the <a href="http://toolserver.org/~mazder/replicate-sequences/">tool</a> listed in the osmosis's documentation contained <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/diffs#Using_the_replication_diffs">here</a>.</p>
+<p>However, after the (august) planet.osm file is loaded, to setup the replication process, I need the state.txt file from some time before, but near, the age of the main planet.osm, and for that I tried to use the <a href="http://toolserver.org/~mazder/replicate-sequences/">tool</a> listed in the osmosis's documentation contained <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/diffs#Using_the_replication_diffs">here</a>.</p>
 <p>To my great surprise, there aren't any files from before 12/Sep/2012! This file has the first sequence number (000/000/001) so there is no way to access state.txt files from dates before that.</p>
 <p>My question (at last) is:</p>
 <ul>

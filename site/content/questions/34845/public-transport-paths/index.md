@@ -174,9 +174,9 @@ osqa_accepted = false
 <p>Hi Sdheb, Welcome<br />
 </p>
 <ol>
-<li>use OSM as you like it live on its own server and ad anything conform these rules, read <a href="http://wiki.openstreetmap.org/wiki/Legal">http://wiki.openstreetmap.org/wiki/Legal</a> If you go a different way please start your own map at a local server, after reading those rules.</li>
-<li>no there's no third party providers, only supporters, read this as well <a href="http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap</a> and <a href="http://wiki.openstreetmap.org/wiki/Contribute_map_data">http://wiki.openstreetmap.org/wiki/Contribute_map_data</a> as well</li>
-<li>since OSM is a database, you’ll be able to make any selection you like or wish to see. Use a rendering type you like. But as long as someone has added that data to the system you could use it. Otherwise you’ll have to add the data yourself or ask a lot of people politely to do so. 4 Almost the same answer if it’s in OSM you could get it out. It all comes down on the query you use. Please read the beginners pages as well, <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">http://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></li>
+<li>use OSM as you like it live on its own server and ad anything conform these rules, read <a href="https://wiki.openstreetmap.org/wiki/Legal">https://wiki.openstreetmap.org/wiki/Legal</a> If you go a different way please start your own map at a local server, after reading those rules.</li>
+<li>no there's no third party providers, only supporters, read this as well <a href="https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap</a> and <a href="https://wiki.openstreetmap.org/wiki/Contribute_map_data">https://wiki.openstreetmap.org/wiki/Contribute_map_data</a> as well</li>
+<li>since OSM is a database, you’ll be able to make any selection you like or wish to see. Use a rendering type you like. But as long as someone has added that data to the system you could use it. Otherwise you’ll have to add the data yourself or ask a lot of people politely to do so. 4 Almost the same answer if it’s in OSM you could get it out. It all comes down on the query you use. Please read the beginners pages as well, <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">https://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

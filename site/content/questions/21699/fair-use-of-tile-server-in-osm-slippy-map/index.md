@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-28052-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please only use one question per "question" entry here. For the "attribution" part see <a href="http://www.openstreetmap.org/copyright">OSM.org copyright page</a> or dozens of previous questions on this site.</p>
+<p>Please only use one question per "question" entry here. For the "attribution" part see <a href="https://www.openstreetmap.org/copyright">OSM.org copyright page</a> or dozens of previous questions on this site.</p>
 </div>
 <div id="comment-28052-info" class="comment-info">
 <span class="comment-age">(13 Nov '13, 16:45)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -128,10 +128,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I assume that you already know the OSM wiki page about <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile_usage_policy</a></p>
+<p>I assume that you already know the OSM wiki page about <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile_usage_policy</a></p>
 <p>There are more hints about using tiles from the main servers.</p>
 <p>But you have to tell us first how your implementaztion works. Then we can help you in detail.</p>
-<p>Also see <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">Deploying_your_own_Slippy_Map</a></p>
+<p>Also see <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">Deploying_your_own_Slippy_Map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

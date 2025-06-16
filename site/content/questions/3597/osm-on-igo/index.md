@@ -116,7 +116,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I suggest start by <a href="http://translate.google.co.za/translate?hl=en&amp;sl=ro&amp;u=http://gpszone.ro/forum/viewthread.php%3Fthread_id%3D871&amp;ei=a9t0TbiGNpGwhQeexOBS&amp;sa=X&amp;oi=translate&amp;ct=result&amp;resnum=2&amp;ved=0CCcQ7gEwAQ&amp;prev=/search%3Fq%3Dnavon%2Bn260%2Bmiopocket%26hl%3Den%26safe%3Doff%26client%3Dfirefox-a%26hs%3DIrv%26sa%3DG%26rls%3Dorg.mozilla:en-US:official%26prmd%3Divns">installing MioPocket</a>. The exact details is beyond the scope of OSM.</p>
-<p>Then you can install either <a href="http://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a>, Navipowm or Navit. You will need to download your country and compile it to the correct format using a Windows or Linux program. These applications are not as userfriendly as iGO, so don't expect too much.</p>
+<p>Then you can install either <a href="https://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a>, Navipowm or Navit. You will need to download your country and compile it to the correct format using a Windows or Linux program. These applications are not as userfriendly as iGO, so don't expect too much.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

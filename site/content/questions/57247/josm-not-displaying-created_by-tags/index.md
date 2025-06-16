@@ -163,7 +163,7 @@ osqa_accepted = false
 <div id="post-57258-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I agree with the above comments the tag has no practical meaning (which editor you used is a changeset property right now <a href="http://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets)">http://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets)</a> and you should simply ignore it. There is btw in my opinion at least some useful information left in this tag (and a reason not to just delete all of them at once): a POI tagged created_by is probably worth a survey, it is a long time since it was last touched by someone.</p>
+<p>I agree with the above comments the tag has no practical meaning (which editor you used is a changeset property right now <a href="https://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets)">https://wiki.openstreetmap.org/wiki/Changeset#Tags_on_changesets)</a> and you should simply ignore it. There is btw in my opinion at least some useful information left in this tag (and a reason not to just delete all of them at once): a POI tagged created_by is probably worth a survey, it is a long time since it was last touched by someone.</p>
 </div>
 <div id="comment-57258-info" class="comment-info">
 <span class="comment-age">(24 Jul '17, 20:04)</span> <span class="comment-user userinfo">Alecs01</span>

@@ -365,7 +365,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM isn't one map - it's the <a href="http://planet.openstreetmap.org/">data</a>. There are <a href="http://wiki.openstreetmap.org/wiki/Maps">lots of OSM-based maps</a>, some vector-based.<br />
+<p>OSM isn't one map - it's the <a href="http://planet.openstreetmap.org/">data</a>. There are <a href="https://wiki.openstreetmap.org/wiki/Maps">lots of OSM-based maps</a>, some vector-based.<br />
 </p>
 <p>The way that progress happens (e.g. the recent move to Leaflet) is that someone goes away and makes a variant that is an improvement, and it gets incorporated. The way that it doesn't happen is with people say "the volunteers who develop and run OSM services ought to do X".</p>
 </div>

@@ -145,7 +145,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Also, take some days and read the OSM wiki ... starting for example at <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> or the Main Page</p>
+<p>Also, take some days and read the OSM wiki ... starting for example at <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> or the Main Page</p>
 </div>
 <div id="comment-16916-info" class="comment-info">
 <span class="comment-age">(16 Oct '12, 10:55)</span> <span class="comment-user userinfo">stephan75</span>

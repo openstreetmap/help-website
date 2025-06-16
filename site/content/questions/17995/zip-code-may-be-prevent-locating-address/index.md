@@ -161,7 +161,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The problem with your address is not the postcode but the <a href="http://www.openstreetmap.org/browse/relation/127615">administrative boundary for Markleville</a>. It only encloses the village itself. Road S 400 E is outside the village according to that. Nominatim then messes up a little bit as you can see on the <a href="http://nominatim.openstreetmap.org/details.php?place_id=31403768">details page for the road</a>. It actually places your road into Emporia because it is the closest village that does not have a boundary defined.</p>
+<p>The problem with your address is not the postcode but the <a href="https://www.openstreetmap.org/browse/relation/127615">administrative boundary for Markleville</a>. It only encloses the village itself. Road S 400 E is outside the village according to that. Nominatim then messes up a little bit as you can see on the <a href="http://nominatim.openstreetmap.org/details.php?place_id=31403768">details page for the road</a>. It actually places your road into Emporia because it is the closest village that does not have a boundary defined.</p>
 <p>To correct the situation, I'd recommend to do two things: add a addr:city=Markleville tag to your street, so that Nominatim knows to which village the road belongs, and then define a proper boundary relation for Emporia, so it knows to which village the road does not belong.</p>
 </div>
 <div class="answer-controls post-controls">

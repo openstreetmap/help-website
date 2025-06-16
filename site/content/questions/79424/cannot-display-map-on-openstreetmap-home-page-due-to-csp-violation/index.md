@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I didn't use OpenStreetMap for a while, but when I'm trying to browse the map today, it completely failed to load in my browser; the first error indicated by web page console is 'Content Security Policy: The page’s settings blocked the loading of a resource at self (“script-src”). Source: call to eval() or related function blocked by CSP.' <img src="https://help.openstreetmap.org/upfiles/openstreetmap-csp-failure.png" alt="alt text" /></p>
+<p>I didn't use OpenStreetMap for a while, but when I'm trying to browse the map today, it completely failed to load in my browser; the first error indicated by web page console is 'Content Security Policy: The page’s settings blocked the loading of a resource at self (“script-src”). Source: call to eval() or related function blocked by CSP.' <img src="/upfiles/openstreetmap-csp-failure.png" alt="alt text" /></p>
 <p>I'm using Firefox 60.9.0esr-1~deb9u1 from Debian.</p>
 <p>Any idea of the cause?</p>
 </div>

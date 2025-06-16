@@ -128,7 +128,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This is not possible because the ID is only unique <em>within</em> the same <a href="https://wiki.openstreetmap.org/wiki/Elements">element</a> type. Or in other words: There can and will be different elements with the same ID (e.g. a <a href="http://www.openstreetmap.org/node/123">node</a>, a <a href="http://www.openstreetmap.org/way/123">way</a> and a (now deleted) <a href="http://www.openstreetmap.org/relation/123">relation</a> all having the ID <em>123</em>). Therefore you have to know the element type a specific ID belongs to.</p>
+<p>This is not possible because the ID is only unique <em>within</em> the same <a href="https://wiki.openstreetmap.org/wiki/Elements">element</a> type. Or in other words: There can and will be different elements with the same ID (e.g. a <a href="https://www.openstreetmap.org/node/123">node</a>, a <a href="https://www.openstreetmap.org/way/123">way</a> and a (now deleted) <a href="https://www.openstreetmap.org/relation/123">relation</a> all having the ID <em>123</em>). Therefore you have to know the element type a specific ID belongs to.</p>
 </div>
 <div id="comment-34131-info" class="comment-info">
 <span class="comment-age">(19 Jun '14, 08:32)</span> <span class="comment-user userinfo">scai ♦</span>

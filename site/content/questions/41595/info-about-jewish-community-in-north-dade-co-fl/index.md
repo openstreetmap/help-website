@@ -64,8 +64,8 @@ osqa_accepted = false
 <div id="post-41596-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It's a self help system here...start searching <a href="http://www.openstreetmap.org/#map=11/25.5666/-80.4810">http://www.openstreetmap.org/#map=11/25.5666/-80.4810</a> Note that there is a 'transport layer' under the stack of books icon at the right. If you find any of your location interests missing you could map them for others too.</p>
-<p>There are many varieties of the map to highlight different interests <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
+<p>It's a self help system here...start searching <a href="https://www.openstreetmap.org/#map=11/25.5666/-80.4810">https://www.openstreetmap.org/#map=11/25.5666/-80.4810</a> Note that there is a 'transport layer' under the stack of books icon at the right. If you find any of your location interests missing you could map them for others too.</p>
+<p>There are many varieties of the map to highlight different interests <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
 </div>
 <div id="comment-41596-info" class="comment-info">
 <span class="comment-age">(10 Mar '15, 03:55)</span> <span class="comment-user userinfo">nevw</span>

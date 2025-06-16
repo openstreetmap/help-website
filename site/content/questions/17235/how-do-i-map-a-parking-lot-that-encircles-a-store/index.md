@@ -112,7 +112,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your third option - make a hole in the parking lot and put the building inside the hole - is the correct and commonly used approach. Areas with holes are modelled as <strong>multipolygon relations</strong> in OSM. It's possible to create these with all of the mainstream editors.</p>
-<p>Refer to the <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">Relation:multipolygon</a> wiki page for documentation, including Potlatch examples.</p>
+<p>Refer to the <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">Relation:multipolygon</a> wiki page for documentation, including Potlatch examples.</p>
 <p>If the parking lot is directly adjacent to the building, you can re-use the building outline as the multipolygon's "inner" member.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,7 +174,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Third option is the way to go. You can use <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relations</a> for it.</p>
+<p>Third option is the way to go. You can use <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relations</a> for it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

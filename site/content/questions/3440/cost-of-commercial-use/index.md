@@ -122,8 +122,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap is an open data project. Anyone, and any company, may use OpenStreetMap data as long as they comply with the <a href="http://www.openstreetmap.org/copyright">OpenStreetMap license</a>. However we would appreciate a <a href="http://donate.openstreetmap.org/">donation</a>.</p>
-<p>Please note that there are additional restrictions when using other services which present OpenStreetMap data. For example, the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">editing API</a> and the map image tiles from the <a href="http://openstreetmap.org">openstreetmap.org</a> web site have <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">limits on use and bandwidth</a>. For details see the information and further links on the copyright and license page.</p>
+<p>OpenStreetMap is an open data project. Anyone, and any company, may use OpenStreetMap data as long as they comply with the <a href="https://www.openstreetmap.org/copyright">OpenStreetMap license</a>. However we would appreciate a <a href="http://donate.openstreetmap.org/">donation</a>.</p>
+<p>Please note that there are additional restrictions when using other services which present OpenStreetMap data. For example, the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">editing API</a> and the map image tiles from the <a href="http://openstreetmap.org">openstreetmap.org</a> web site have <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">limits on use and bandwidth</a>. For details see the information and further links on the copyright and license page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

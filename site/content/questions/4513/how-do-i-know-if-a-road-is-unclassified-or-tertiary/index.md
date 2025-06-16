@@ -112,7 +112,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The answer this question probably depends a little on the conventions used in your country. In some countries there is a distinct difference between highway=tertiary and highway=unclassified, but in others highway=unclassified is simply a more minor road.</p>
-<p>For the USA, the <a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging">United States roads tagging</a> page is probably the way to go. Many countries have similar pages. See also the <a href="http://wiki.openstreetmap.org/wiki/Highway#International_equivalence">International Equivalence section</a> on the <a href="http://wiki.openstreetmap.org/wiki/Highway">Key:highway</a> wiki page.</p>
+<p>For the USA, the <a href="https://wiki.openstreetmap.org/wiki/United_States_roads_tagging">United States roads tagging</a> page is probably the way to go. Many countries have similar pages. See also the <a href="https://wiki.openstreetmap.org/wiki/Highway#International_equivalence">International Equivalence section</a> on the <a href="https://wiki.openstreetmap.org/wiki/Highway">Key:highway</a> wiki page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>When I type "stairs" in Vespucci nothing appear. What tag should I use?</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/c/c4/Stairs_with_ramp.jpg/300px-Stairs_with_ramp.jpg" alt="alt text" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/c/c4/Stairs_with_ramp.jpg/300px-Stairs_with_ramp.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-vespucci" rel="tag" title="see questions tagged &#39;vespucci&#39;">vespucci</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Use the "highway=steps" tag:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dsteps">http://wiki.openstreetmap.org/wiki/Tag:highway=steps</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dsteps">https://wiki.openstreetmap.org/wiki/Tag:highway=steps</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

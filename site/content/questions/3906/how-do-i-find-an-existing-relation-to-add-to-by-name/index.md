@@ -237,9 +237,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is also worth looking at the <a href="http://wiki.openstreetmap.org/wiki/Main_Page">OSM wiki</a>, and try searching for anything relevant. There are various projects and pages related to mapping hiking routes.</p>
-<p>There's a wiki page on the <a href="http://wiki.openstreetmap.org/wiki/Camino_de_Santiago">Camino de Santiago</a>, which lists relations for various parts of the route. So you can check that for any relations in the section you are mapping. If there isn't anything, you could create another relation and add a link on that wiki page.</p>
-<p>Also see the wiki page for <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Europe/Long-distance_paths">WikiProject Europe/Long-distance paths</a>, which the Camino de Santiage is part of.</p>
+<p>It is also worth looking at the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">OSM wiki</a>, and try searching for anything relevant. There are various projects and pages related to mapping hiking routes.</p>
+<p>There's a wiki page on the <a href="https://wiki.openstreetmap.org/wiki/Camino_de_Santiago">Camino de Santiago</a>, which lists relations for various parts of the route. So you can check that for any relations in the section you are mapping. If there isn't anything, you could create another relation and add a link on that wiki page.</p>
+<p>Also see the wiki page for <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Europe/Long-distance_paths">WikiProject Europe/Long-distance paths</a>, which the Camino de Santiage is part of.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -301,7 +301,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you know the number of the relation you can search in Potlatch 2 - see the answer to <a href="http://help.openstreetmap.org/questions/4906/potlatch-2-how-to-add-a-way-to-a-relation-that-isnt-nearby">this question</a>.</p>
+<p>If you know the number of the relation you can search in Potlatch 2 - see the answer to <a href="/questions/4906/potlatch-2-how-to-add-a-way-to-a-relation-that-isnt-nearby">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

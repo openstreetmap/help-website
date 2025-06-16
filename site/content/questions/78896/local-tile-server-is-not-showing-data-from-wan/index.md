@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I have successfully installed and setup a tile server with following guide : <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/</a></p>
 <p>Loaded a data for specific region and everything is working OK. However, when i try to access the data from outside, the tile's are not shown.</p>
 <p>To be more specific on my firewall i've set up a NAT rule whenever i receive a request on port 10780, my PUBLIC_IP:10780 to forward the request to my tile server on HTTP port. Request is forwarded however on the browser nothing is shown, there're no errors in the apache's log and in the server , everything seems fine with the request its coming to the server, since i can see the public IP of the request in the access log of the apache, only with developer tools i got the following :</p>
-<p><img src="https://help.openstreetmap.org/upfiles/picture.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/picture.PNG" alt="alt text" /></p>
 <p>I am using leaflet file and the content of the file is as below :</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html style=&quot;height:100%;margin:0;padding:0;&quot;&gt;

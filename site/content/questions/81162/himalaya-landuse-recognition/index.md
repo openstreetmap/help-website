@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, I'm actually mapping himalayan area. There are many areas like the one attached. Is this landuse farmland or animal keeping?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2021-08-02-101729_627x579_scrot.png" alt="landuse" /></p>
+<p><img src="/upfiles/2021-08-02-101729_627x579_scrot.png" alt="landuse" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-himalaya" rel="tag" title="see questions tagged &#39;himalaya&#39;">himalaya</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-nepal" rel="tag" title="see questions tagged &#39;nepal&#39;">nepal</span>

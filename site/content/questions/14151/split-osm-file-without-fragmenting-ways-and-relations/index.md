@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/OSMT">OSMT</a>, <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, <a href="http://wiki.openstreetmap.org/wiki/Splitter">Splitter</a></p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/OSMT">OSMT</a>, <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, <a href="https://wiki.openstreetmap.org/wiki/Splitter">Splitter</a></p>
 <p>I found these ones by enterring "split" in the search box of the OSM wiki ...</p>
 <p>But I don't know how each program deals with ways at the edges ...</p>
 </div>

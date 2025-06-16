@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Searching the wiki for <a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=mooring">mooring</a> reveals the tag <a href="http://wiki.openstreetmap.org/wiki/Key:mooring">mooring=*</a>, it is often found on <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier">man_made=pier</a>.</p>
+<p>Searching the wiki for <a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=mooring">mooring</a> reveals the tag <a href="https://wiki.openstreetmap.org/wiki/Key:mooring">mooring=*</a>, it is often found on <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier">man_made=pier</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

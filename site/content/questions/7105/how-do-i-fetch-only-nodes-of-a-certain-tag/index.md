@@ -129,8 +129,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you do not want to hammer the API servers you can also download the raw OSM data of your desired area via the sources listed at <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a> . I would recommend <a href="http://geofabrik.de">geofabrik.de</a> or <a href="http://cloudmade.com">cloudmade.com</a></p>
-<p>Process that data with Osmosis or <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> which seems to be a bit easier to handle IMHO.</p>
+<p>If you do not want to hammer the API servers you can also download the raw OSM data of your desired area via the sources listed at <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a> . I would recommend <a href="http://geofabrik.de">geofabrik.de</a> or <a href="http://cloudmade.com">cloudmade.com</a></p>
+<p>Process that data with Osmosis or <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> which seems to be a bit easier to handle IMHO.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -203,7 +203,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There is more than one XAPI server, take a look at the <a href="http://wiki.openstreetmap.org/wiki/XAPI#Servers">XAPI wiki page</a>. The XAPI server by mapquest is said to be working well and there is also the JXAPI.</p>
+<p>There is more than one XAPI server, take a look at the <a href="https://wiki.openstreetmap.org/wiki/XAPI#Servers">XAPI wiki page</a>. The XAPI server by mapquest is said to be working well and there is also the JXAPI.</p>
 </div>
 <div id="comment-7109-info" class="comment-info">
 <span class="comment-age">(16 Aug '11, 07:13)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -247,10 +247,10 @@ osqa_accepted = false
 <div class="answer-body">
 <p>XAPI request is probably the easiest solution for that but unfortunatelly, XAPI servers are often out-of-service.<br />
 Another way is that you download an extract from the whole planet database ([1]) and use the java tool Osmosis ([2]) to limit your search in a bounding box or polygon ([3]) and filter with your specific tag (key/value pair)([4]).</p>
-<p>[1] <a href="http://wiki.openstreetmap.org/wiki/Planet#Mirrors">http://wiki.openstreetmap.org/wiki/Planet#Mirrors</a> (in particular, check Geofabrik or Cloudmade producing smaller daily extracts by state, region or country)<br />
-[2] <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a><br />
-[3] <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#Area_Filtering_Tasks">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#Area_Filtering_Tasks</a><br />
-[4] <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#--node-key-value_.28--nkv.29">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#--node-key-value_.28--nkv.29</a></p>
+<p>[1] <a href="https://wiki.openstreetmap.org/wiki/Planet#Mirrors">https://wiki.openstreetmap.org/wiki/Planet#Mirrors</a> (in particular, check Geofabrik or Cloudmade producing smaller daily extracts by state, region or country)<br />
+[2] <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a><br />
+[3] <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#Area_Filtering_Tasks">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#Area_Filtering_Tasks</a><br />
+[4] <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#--node-key-value_.28--nkv.29">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.38#--node-key-value_.28--nkv.29</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

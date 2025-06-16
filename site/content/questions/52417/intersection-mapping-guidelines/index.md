@@ -95,7 +95,7 @@ In general, from my experience of the type of junctions I have seen so far, I ex
 <div id="post-52422-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>On closer inspection of graphics above I see you have traffic lights located in preferred positions and agree with <a href="http://help.openstreetmap.org/users/21/mike-n">@Mike N</a> that 1 &amp; 2 are common and fine.</p>
+<p>On closer inspection of graphics above I see you have traffic lights located in preferred positions and agree with <a href="https://help.openstreetmap.org/users/21/mike-n">@Mike N</a> that 1 &amp; 2 are common and fine.</p>
 </div>
 <div id="comment-52422-info" class="comment-info">
 <span class="comment-age">(09 Oct '16, 13:18)</span> <span class="comment-user userinfo">nevw</span>

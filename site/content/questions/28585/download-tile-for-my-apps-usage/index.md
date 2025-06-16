@@ -111,14 +111,14 @@ One Answer:
 <div class="answer-body">
 <p>Hi saurus, thank you for choosing OSM for your project :)</p>
 <p>The tile usage policiy explais in details the <strong>technical requirements</strong> on an application to perform an download:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy#Technical_Usage_Requirements">http://wiki.openstreetmap.org/wiki/Tile_usage_policy#Technical_Usage_Requirements</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy#Technical_Usage_Requirements">https://wiki.openstreetmap.org/wiki/Tile_usage_policy#Technical_Usage_Requirements</a><br />
 If your application fullfills all of that, everything is fine. If you are unsure, you can also use existing applications that grab the images and store it in a local folder:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Category:Tile_downloading">http://wiki.openstreetmap.org/wiki/Category:Tile_downloading</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Category:Tile_downloading">https://wiki.openstreetmap.org/wiki/Category:Tile_downloading</a></p>
 <p>AFAIK the policy tries to avoid to give <strong>accurate number</strong>, because in the end devs will find ways to surround this anyway (e.g. using different agent strings, use proxies, ...). If you have enough time, just setup your box to download the tiles as slow as possible during the night ;)</p>
 <p>If you need a lot of tiles, you can also use other (mostly free) <strong>tile providers</strong>:<br />
-<a href="http://wiki.openstreetmap.org/wiki/TMS">http://wiki.openstreetmap.org/wiki/TMS</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/TMS">https://wiki.openstreetmap.org/wiki/TMS</a><br />
 (But also they have a policy and might choose a different license on the map images itself)<br />
-Another way would be to setup your own map server (see switch2osm.org) or use a local renderer as <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> or <a href="http://wiki.openstreetmap.org/wiki/TileMill">TileMill</a>.</p>
+Another way would be to setup your own map server (see switch2osm.org) or use a local renderer as <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> or <a href="https://wiki.openstreetmap.org/wiki/TileMill">TileMill</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

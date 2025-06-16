@@ -317,7 +317,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Stefano,</p>
-<p>I tracked down your changeset: <a href="http://www.openstreetmap.org/browse/node/1123509665">http://www.openstreetmap.org/browse/node/1123509665</a></p>
+<p>I tracked down your changeset: <a href="https://www.openstreetmap.org/browse/node/1123509665">https://www.openstreetmap.org/browse/node/1123509665</a></p>
 <p>You need to use a lower-case "c" for country in the place=country tag.</p>
 <p>As to how long your changes take to appear, it depends on server(s) load, whether you have tiles cached locally and other variables. Usually varies from a few minutes to a few hours.</p>
 </div>

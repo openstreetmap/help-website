@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This <strong>very</strong> question was asked a day or so ago: I dont imagine the <a href="http://help.openstreetmap.org/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network">answers</a> have changed</p>
+<p>This <strong>very</strong> question was asked a day or so ago: I dont imagine the <a href="/questions/5438/how-to-avoid-potlatch-2-download-limit-when-editing-on-multiple-computers-on-a-network">answers</a> have changed</p>
 <p>I'm sorry to say that there appears to be little that can be done, other than working with an off-line tool.</p>
 <p>This type of <strong>HELP</strong> I've got a problem <strong>NOW</strong> issue is best asked on the IRC channel.</p>
 </div>

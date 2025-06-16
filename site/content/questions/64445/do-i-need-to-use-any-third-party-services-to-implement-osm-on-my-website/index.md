@@ -49,7 +49,7 @@ osqa_accepted = false
 <p>I would really appreciate your help. Thank you in advance!</p>
 <p>Looking forward to hearing from you.</p>
 <p>Best, Nikita</p>
-<p>Related Question: <a href="https://help.openstreetmap.org/questions/64437/is-there-a-request-limit-for-static-maps?">https://help.openstreetmap.org/questions/64437/is-there-a-request-limit-for-static-maps?</a></p>
+<p>Related Question: <a href="/questions/64437/is-there-a-request-limit-for-static-maps?">https://help.openstreetmap.org/questions/64437/is-there-a-request-limit-for-static-maps?</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-staticmap" rel="tag" title="see questions tagged &#39;staticmap&#39;">staticmap</span> <span class="post-tag tag-link-requests" rel="tag" title="see questions tagged &#39;requests&#39;">requests</span> <span class="post-tag tag-link-dynamic" rel="tag" title="see questions tagged &#39;dynamic&#39;">dynamic</span> <span class="post-tag tag-link-3rd_party" rel="tag" title="see questions tagged &#39;3rd_party&#39;">3rd_party</span>

@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hi all,</p>
 <p>I have updated a lake, which has been restored to its original state. It was dried out for farmland use a long time ago, and is now being restored (almost).</p>
 <p>I have created the lake as a multipolygon and the islets ways with natural=coastline place=islet drawn counterclockwise. I have added name=(whatever their name is).</p>
-<p>The lake is found <a href="http://www.openstreetmap.org/?lat=55.70696&amp;lon=8.24181&amp;zoom=15&amp;layers=M">here</a>.</p>
+<p>The lake is found <a href="https://www.openstreetmap.org/?lat=55.70696&amp;lon=8.24181&amp;zoom=15&amp;layers=M">here</a>.</p>
 <p>However, their names does not appear. I have even tried to add a point with place=islet and name=(it's name), that doesn't show either.</p>
 <p>I'm new to contributing and to asking questions, so I thought it would be wiser to reach out to you guys before I am getting this more complicated and erroneous than it has to be.</p>
 <p>Thanks, Jesper</p>
@@ -136,7 +136,7 @@ One Answer:
 <div id="post-18488-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks a lot for the feedback. No, I didn't invent Islet myself, I tried to follow the guidelines found here: <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dislet">http://wiki.openstreetmap.org/wiki/Tag:place%3Dislet</a></p>
+<p>Thanks a lot for the feedback. No, I didn't invent Islet myself, I tried to follow the guidelines found here: <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dislet">https://wiki.openstreetmap.org/wiki/Tag:place%3Dislet</a></p>
 <p>I'll change it to Island, remove the coastline, see what happens.</p>
 <p>Thanks!</p>
 </div>

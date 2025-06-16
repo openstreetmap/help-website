@@ -140,7 +140,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> I also notice people will draw a path/footway where it actually exists and (quite logically) not add the extra piece which connects it to the centreline of a highway. Of course this often looks fine on CartoCSS as the highways are usually depicted wider than they really are, but obviously breaks routing.</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> I also notice people will draw a path/footway where it actually exists and (quite logically) not add the extra piece which connects it to the centreline of a highway. Of course this often looks fine on CartoCSS as the highways are usually depicted wider than they really are, but obviously breaks routing.</p>
 </div>
 <div id="comment-51864-info" class="comment-info">
 <span class="comment-age">(02 Sep '16, 10:53)</span> <span class="comment-user userinfo">SK53 ♦</span>

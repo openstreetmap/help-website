@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I reduce my tile size (the average tile size specified in the wiki is much smaller)?"
-description = '''well I have a question. http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage says average tile size =634 bytes my minimum tile size is 22kb how do i reduce the tile size? (this question was split from how-big-is-your-map-size-for-the-entire-world.)'''
+description = '''well I have a question. https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage says average tile size =634 bytes my minimum tile size is 22kb how do i reduce the tile size? (this question was split from how-big-is-your-map-size-for-the-entire-world.)'''
 date = "2013-07-12T19:12:00Z"
 lastmod = "2013-07-15T11:45:00Z"
 weight = 24191
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>well I have a question. <a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a> says average tile size =634 bytes my minimum tile size is 22kb how do i reduce the tile size?</p>
+<p>well I have a question. <a href="https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a> says average tile size =634 bytes my minimum tile size is 22kb how do i reduce the tile size?</p>
 <p>(this question was split from <a href="/questions/9766/">how-big-is-your-map-size-for-the-entire-world</a>.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

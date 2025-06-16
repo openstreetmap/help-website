@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I would like to find all relations that have duplicate wikidata tags. I saw <a href="https://help.openstreetmap.org/questions/39745/show-duplicated-nodes-via-overpass">finding dup nodes</a>, but cannot figure out how to adaapt my query to it:</p>
+<p>I would like to find all relations that have duplicate wikidata tags. I saw <a href="/questions/39745/show-duplicated-nodes-via-overpass">finding dup nodes</a>, but cannot figure out how to adaapt my query to it:</p>
 <p><code>[out:csv(admin_level,::id,wikidata,name,wikipedia,boundary,type,alt_name,designation)]; ( rel["admin_level"]["wikidata"]; );</code></p>
 </div>
 <div id="question-tags" class="tags-container tags">

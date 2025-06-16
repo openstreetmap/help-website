@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why I cannot download Arua (Uganda) city map in .osm format?"
-description = '''I cannot download the map for Arua, Uganda. I am using the openstreetmap website (http://www.openstreetmap.org/#map=14/3.0264/30.9285 ) and trying to download in an OSM format clicking on the export button. Does anyone know what is the problem? Is there any other place where to find a vectorial map ...'''
+description = '''I cannot download the map for Arua, Uganda. I am using the openstreetmap website (https://www.openstreetmap.org/#map=14/3.0264/30.9285 ) and trying to download in an OSM format clicking on the export button. Does anyone know what is the problem? Is there any other place where to find a vectorial map ...'''
 date = "2016-05-24T16:20:00Z"
 lastmod = "2016-05-26T12:10:00Z"
 weight = 49815
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I cannot download the map for Arua, Uganda. I am using the openstreetmap website (<a href="http://www.openstreetmap.org/#map=14/3.0264/30.9285">http://www.openstreetmap.org/#map=14/3.0264/30.9285</a> ) and trying to download in an OSM format clicking on the export button. Does anyone know what is the problem?</p>
+<p>I cannot download the map for Arua, Uganda. I am using the openstreetmap website (<a href="https://www.openstreetmap.org/#map=14/3.0264/30.9285">https://www.openstreetmap.org/#map=14/3.0264/30.9285</a> ) and trying to download in an OSM format clicking on the export button. Does anyone know what is the problem?</p>
 <p>Is there any other place where to find a vectorial map for that city? By vectorial I mean any map format that I could open with Illustrator. I am using maperative to transform formats.</p>
 <p>Many thanks, Jose</p>
 </div>
@@ -226,9 +226,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The export button on top of the osm.org site is meant to export raw osm data. Since you want to open the map in Illustrator, it doesn't sound like this is what you want.</p>
-<p>You can export a map in various image formats (png, svg, jpeg, pdf) from the share button on the right hand side (an arrow coming out of a box). An svg image should work in Illustrator, although I don't have Illustartor myself to check. The svg works in inkscape though, and I've used it to edit osm map images before. I've attached a screenshot (from <a href="http://www.openstreetmap.org/#map=15/3.0226/30.9115">http://www.openstreetmap.org/#map=15/3.0226/30.9115</a>) to show you how to download an svg image.</p>
-<p>This question has been discussed before as the previous answer said, see for example <a href="https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a>. There are also programs that can use raw osm data (downloaded using the 'Export'-button) to produce map images with more control. I'm not very familiar with these myself, but have produced images with <img src="http://www.merkaartor.be/" alt="Merkaartor" /> before and heard that <img src="http://maperitive.net/" alt="Maperative" /> is a good tool for this job.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/2016-05-26-132029_1920x1080_scrot_Ww74Np8.png" alt="&quot;Screenshot from osm.org&quot;" /></p>
+<p>You can export a map in various image formats (png, svg, jpeg, pdf) from the share button on the right hand side (an arrow coming out of a box). An svg image should work in Illustrator, although I don't have Illustartor myself to check. The svg works in inkscape though, and I've used it to edit osm map images before. I've attached a screenshot (from <a href="https://www.openstreetmap.org/#map=15/3.0226/30.9115">https://www.openstreetmap.org/#map=15/3.0226/30.9115</a>) to show you how to download an svg image.</p>
+<p>This question has been discussed before as the previous answer said, see for example <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a>. There are also programs that can use raw osm data (downloaded using the 'Export'-button) to produce map images with more control. I'm not very familiar with these myself, but have produced images with <img src="http://www.merkaartor.be/" alt="Merkaartor" /> before and heard that <img src="http://maperitive.net/" alt="Maperative" /> is a good tool for this job.</p>
+<p><img src="/upfiles/2016-05-26-132029_1920x1080_scrot_Ww74Np8.png" alt="&quot;Screenshot from osm.org&quot;" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

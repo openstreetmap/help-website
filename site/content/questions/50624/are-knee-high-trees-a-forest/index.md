@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>While surveying i crossed a small isolated field about 300 metres square ( not part of a large forest ). On Bing and other maps it is well wooded and mapped as a forest. On the ground half of the field is bare and i suspect may become more truck parking while the other half as what looks like christmas trees of &lt;50cm. Forests are a landmark when navigating so forest does not seem correct to me so should it be a plant nursery or something else? <a href="http://www.openstreetmap.org/#map=18/52.33627/-0.29386">http://www.openstreetmap.org/#map=18/52.33627/-0.29386</a></p>
+<p>While surveying i crossed a small isolated field about 300 metres square ( not part of a large forest ). On Bing and other maps it is well wooded and mapped as a forest. On the ground half of the field is bare and i suspect may become more truck parking while the other half as what looks like christmas trees of &lt;50cm. Forests are a landmark when navigating so forest does not seem correct to me so should it be a plant nursery or something else? <a href="https://www.openstreetmap.org/#map=18/52.33627/-0.29386">https://www.openstreetmap.org/#map=18/52.33627/-0.29386</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-plant" rel="tag" title="see questions tagged &#39;plant&#39;">plant</span> <span class="post-tag tag-link-nursery" rel="tag" title="see questions tagged &#39;nursery&#39;">nursery</span> <span class="post-tag tag-link-tree" rel="tag" title="see questions tagged &#39;tree&#39;">tree</span> <span class="post-tag tag-link-forest" rel="tag" title="see questions tagged &#39;forest&#39;">forest</span>
@@ -64,7 +64,7 @@ osqa_accepted = true
 <div id="post-63891-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Similar <a href="https://help.openstreetmap.org/questions/63597/how-to-tag-christmas-trees-plantations">https://help.openstreetmap.org/questions/63597/how-to-tag-christmas-trees-plantations</a></p>
+<p>Similar <a href="/questions/63597/how-to-tag-christmas-trees-plantations">https://help.openstreetmap.org/questions/63597/how-to-tag-christmas-trees-plantations</a></p>
 </div>
 <div id="comment-63891-info" class="comment-info">
 <span class="comment-age">(30 May '18, 20:58)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -129,8 +129,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you perchance take a picture? From your description I think that <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dplant_nursery"><code>landuse=plant_nursery</code></a> would indeed be the correct tag.</p>
-<p>Although it's also possible that a forest was clear-cut and is now being replanted, once it's grown back to "looking more like a forest" then <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest"><code>landuse=forest</code></a> would be more appropriate, but I agree that it seems an odd tag to apply to knee-high trees.</p>
+<p>Did you perchance take a picture? From your description I think that <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dplant_nursery"><code>landuse=plant_nursery</code></a> would indeed be the correct tag.</p>
+<p>Although it's also possible that a forest was clear-cut and is now being replanted, once it's grown back to "looking more like a forest" then <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest"><code>landuse=forest</code></a> would be more appropriate, but I agree that it seems an odd tag to apply to knee-high trees.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -241,7 +241,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I tend to map "places where trees are, have been, or are going to be grown" as landuse=forest, so this would include your "knee high trees" as well i suspect.</p>
-<p>There's a proposed tagging scheme for forestry (in Russian) <a href="http://wiki.openstreetmap.org/wiki/RU:Key:wood#.D0.94.D0.B5.D0.B9.D1.81.D1.82.D0.B2.D1.83.D1.8E.D1.89.D0.B8.D0.B5_.D1.83.D1.82.D0.BE.D1.87.D0.BD.D1.8F.D1.8E.D1.89.D0.B8.D0.B5_.D1.82.D0.B5.D0.B3.D0.B8_.D0.B2_.D0.BF.D1.80.D0.BE.D1.81.D1.82.D1.80.D0.B0.D0.BD.D1.81.D1.82.D0.B2.D0.B5_.D0.B8.D0.BC.D0.B5.D0.BD_wood:">here</a>. I found out about it via the comments on a <a href="http://www.openstreetmap.org/user/SomeoneElse/diary/38527#comments">diary entry</a> - some of the other comments there are worth reading too.</p>
+<p>There's a proposed tagging scheme for forestry (in Russian) <a href="https://wiki.openstreetmap.org/wiki/RU:Key:wood#.D0.94.D0.B5.D0.B9.D1.81.D1.82.D0.B2.D1.83.D1.8E.D1.89.D0.B8.D0.B5_.D1.83.D1.82.D0.BE.D1.87.D0.BD.D1.8F.D1.8E.D1.89.D0.B8.D0.B5_.D1.82.D0.B5.D0.B3.D0.B8_.D0.B2_.D0.BF.D1.80.D0.BE.D1.81.D1.82.D1.80.D0.B0.D0.BD.D1.81.D1.82.D0.B2.D0.B5_.D0.B8.D0.BC.D0.B5.D0.BD_wood:">here</a>. I found out about it via the comments on a <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/38527#comments">diary entry</a> - some of the other comments there are worth reading too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

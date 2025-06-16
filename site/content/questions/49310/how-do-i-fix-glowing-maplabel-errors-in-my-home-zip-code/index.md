@@ -115,9 +115,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The short answer is to create an account on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> and click the "Edit" button.</p>
-<p>A slightly longer answer is to consult some reference material like is listed on <a href="http://www.openstreetmap.org/welcome">http://www.openstreetmap.org/welcome</a> or <a href="http://learnosm.org/">http://learnosm.org/</a> and get started editing.</p>
-<p>You can also use <a href="http://www.openstreetmap.org/note/new">http://www.openstreetmap.org/note/new</a> to make notes explaining the problems. Someone else who sees the note may then decide to correct the problem.</p>
+<p>The short answer is to create an account on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> and click the "Edit" button.</p>
+<p>A slightly longer answer is to consult some reference material like is listed on <a href="https://www.openstreetmap.org/welcome">https://www.openstreetmap.org/welcome</a> or <a href="http://learnosm.org/">http://learnosm.org/</a> and get started editing.</p>
+<p>You can also use <a href="https://www.openstreetmap.org/note/new">https://www.openstreetmap.org/note/new</a> to make notes explaining the problems. Someone else who sees the note may then decide to correct the problem.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -152,7 +152,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>You might also find the links from <a href="http://www.openstreetmap.org/welcome">http://www.openstreetmap.org/welcome</a> useful.</p>
+<p>You might also find the links from <a href="https://www.openstreetmap.org/welcome">https://www.openstreetmap.org/welcome</a> useful.</p>
 </div>
 <div id="comment-49317-info" class="comment-info">
 <span class="comment-age">(20 Apr '16, 22:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

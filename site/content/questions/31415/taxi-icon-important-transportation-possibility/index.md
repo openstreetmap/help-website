@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looks like amenity=taxi with possibly contact:phone=* based on the wiki page at <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtaxi">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtaxi</a> would be a start. I don't know how many, if any, renderers will display it.</p>
+<p>Looks like amenity=taxi with possibly contact:phone=* based on the wiki page at <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtaxi">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtaxi</a> would be a start. I don't know how many, if any, renderers will display it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

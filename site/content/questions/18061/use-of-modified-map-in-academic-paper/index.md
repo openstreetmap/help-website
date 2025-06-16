@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM is a free map for any and every one to use, which is why I and others add to it. Please credit OSM maps in the book, see this to find out how and if you make a lot of money I'm sure a donation would be welcome. <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>OSM is a free map for any and every one to use, which is why I and others add to it. Please credit OSM maps in the book, see this to find out how and if you make a lot of money I'm sure a donation would be welcome. <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You can find some topics about your aims if you enter keywords like book, publish, magazine or similar in the search field of this FAQ site.</p>
 <p>But be aware: in late summer 2012 we had a change in licence when you publish OSM data. In some manner it also affects when you publish printed maps as a derived work or similar ... this can be under a capable free licence like CC-by-SA.</p>
-<p>See <a href="http://www.openstreetmap.org/copyright/en">http://www.openstreetmap.org/copyright/en</a> and all linked pages to get more information.</p>
+<p>See <a href="https://www.openstreetmap.org/copyright/en">https://www.openstreetmap.org/copyright/en</a> and all linked pages to get more information.</p>
 <p>PS: If you want to display own objects or markers on your printed maps, give us more information in detail as a <em>comment</em></p>
 </div>
 <div class="answer-controls post-controls">
@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at the papers linked from <a href="http://wiki.openstreetmap.org/wiki/Research">http://wiki.openstreetmap.org/wiki/Research</a> , and reference your images accordingly (keeping in mind the license change, as mentioned).</p>
+<p>Take a look at the papers linked from <a href="https://wiki.openstreetmap.org/wiki/Research">https://wiki.openstreetmap.org/wiki/Research</a> , and reference your images accordingly (keeping in mind the license change, as mentioned).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

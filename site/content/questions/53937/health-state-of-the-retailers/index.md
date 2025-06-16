@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi it's possible to identify the health state of the retailers. I have a project for identify the location of the free retailers. Imagines if you have the possibility to check the condition of the shops: active, not active,for rent, for sale. in this case the color of the identification symble it will be different, red, yellow etc. Is this already possible or it will be possible to do togheter? In the attached you can fine a exemple.<img src="http://help.openstreetmap.org/upfiles/Ipotesi_mappa_interattiva.jpg" alt="alt text" /></p>
+<p>Hi it's possible to identify the health state of the retailers. I have a project for identify the location of the free retailers. Imagines if you have the possibility to check the condition of the shops: active, not active,for rent, for sale. in this case the color of the identification symble it will be different, red, yellow etc. Is this already possible or it will be possible to do togheter? In the attached you can fine a exemple.<img src="/upfiles/Ipotesi_mappa_interattiva.jpg" alt="alt text" /></p>
 <p>Best regards, Michele Fiaschi</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -124,7 +124,7 @@ One Answer:
 <p>The longer answer is that IF the information was collected it could be possible:</p>
 <ul>
 <li>In the UK some of us tag shops (really retail premises) which are empty with shop=vacant (your case 3).</li>
-<li>For former retail premises (case 2) you would have to rely on the underlying building tags: building=retail with a separate building:use tag (see <a href="http://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments#Converted_Buildings_used_as_Apartments">description</a> for residential apartments in buildings built for other purposes). This latter approach will not work for buildings which were not built as shops, but have been used as such.</li>
+<li>For former retail premises (case 2) you would have to rely on the underlying building tags: building=retail with a separate building:use tag (see <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments#Converted_Buildings_used_as_Apartments">description</a> for residential apartments in buildings built for other purposes). This latter approach will not work for buildings which were not built as shops, but have been used as such.</li>
 <li>Data on demolished retail premises is not stored in OSM.</li>
 </ul>
 <p>Overall this approach is more likely to work for very specific classes of retail premises. For instance pubs in Britain are usually <a href="http://sk53-osm.blogspot.co.uk/2013/06/vanishing-pubs.html">architecturally distinctive</a> even when used for something else. I've wondered in the past about tagging former corner shops as these are usually still recognisable long after they have been converted to pure residential use.</p>

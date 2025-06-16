@@ -144,7 +144,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Can you provide a URL that links to the area where the bus stop is? A "highway=bus_stop" is normally mapped at the side of the road where the pole is. Do you mean a "public_transport=stop_position" as described here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport">http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport">https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport</a></p>
 <p>It's confusing that there are two ways of describing public transport in OSM; while most of the world manages with bus stops and bus route relations, some places in central Europe have adopted the more complicated "Public_Transport" definition, because they have more complicated things to map.</p>
 </div>
 <div id="comment-36082-info" class="comment-info">
@@ -216,7 +216,7 @@ osqa_accepted = false
 <div id="post-49678-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8569/nakaner">@Nakaner</a> "all members are sorted" might be what the person that designed the schema intended, but in this particular case they seem not to be: <a href="https://www.openstreetmap.org/api/0.6/relation/161789">https://www.openstreetmap.org/api/0.6/relation/161789</a> (there's more than one bus stop from two years ago at a different place in the relation).</p>
+<p><a href="https://help.openstreetmap.org/users/8569/nakaner">@Nakaner</a> "all members are sorted" might be what the person that designed the schema intended, but in this particular case they seem not to be: <a href="https://www.openstreetmap.org/api/0.6/relation/161789">https://www.openstreetmap.org/api/0.6/relation/161789</a> (there's more than one bus stop from two years ago at a different place in the relation).</p>
 </div>
 <div id="comment-49678-info" class="comment-info">
 <span class="comment-age">(11 May '16, 16:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

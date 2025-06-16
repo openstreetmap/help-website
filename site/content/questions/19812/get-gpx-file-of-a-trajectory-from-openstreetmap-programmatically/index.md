@@ -90,7 +90,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>You already asked lots of rather similar questions. Please start using the <a href="http://wiki.openstreetmap.org/w/index.php?search">wiki search function</a>. There is a <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">list of online routers</a> with a <em>GPX export</em> row.</p>
+<p>You already asked lots of rather similar questions. Please start using the <a href="https://wiki.openstreetmap.org/w/index.php?search">wiki search function</a>. There is a <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">list of online routers</a> with a <em>GPX export</em> row.</p>
 </div>
 <div id="comment-19841-info" class="comment-info">
 <span class="comment-age">(11 Feb '13, 18:50)</span> <span class="comment-user userinfo">scai ♦</span>

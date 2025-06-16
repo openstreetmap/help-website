@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The geocodeArea in <code>{{geocodeArea:bergen}}-&gt;.searchArea;</code> originated with Overpass-Turbo and likely isn't supported by Maproulette. Replacing it with the Overpass API area id will probably get it to work.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">Overpass QL documentation</a> describes area ids as follows:</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">Overpass QL documentation</a> describes area ids as follows:</p>
 <pre><code>Note that area ids need to be derived from an existing OSM way by adding 2400000000 to its OSM id or in case of a relation by adding 3600000000 respectively.</code></pre>
 </div>
 <div class="answer-controls post-controls">

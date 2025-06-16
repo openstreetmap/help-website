@@ -40,14 +40,14 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>OSM offer a simple and standard way to express a link to a map feature geometry, for example the <a href="https://www.wikidata.org/wiki/Q208760">Singapore's Merlion Fountain</a> is <a href="https://www.openstreetmap.org/way/182819157">openstreetmap.org/way/182819157</a> ... So, how to do similar thing to a box represented by its <code>w21z76281</code> ~5m×5m <strong>Geohash box at an OSM map</strong>? There are an OSM's API that I can use by HTTP GET?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/merlion01.png" alt="alt text" /></p>
+<p><img src="/upfiles/merlion01.png" alt="alt text" /></p>
 <p>Geohash is a <a href="https://en.wikipedia.org/wiki/De_facto_standard"><em>de facto</em> standard</a> to enconde LatLong in only one (base32) number, accepted by PostGIS and many others, see <a href="https://postgis.net/docs/ST_GeoHash.html"><em>ST_GeoHash()</em> function</a>.</p>
 <hr />
 <p>PS1: the non-OSM <a href="http://geohash.org/w21z76281">geohash.org/w21z76281</a> is ugly (no zoom no box) and points to GoogleMap. As <a href="https://help.openstreetmap.org/users/10973/maxerickson"></a><a href="https://help.openstreetmap.org/users/10973/maxerickson">@Maxerickson</a></a> pointed, <a href="http://geohash.org/w21z76281?format=osm">geohash.org/w21z76281?format=osm</a> will be near it, but there are no box renderization, and it is a non-OSM's domain name (not really-open as <code>Wikidata.org</code> or open-and-reliable as <code>OSM.ORG</code> or <code>OpenStreetMap.org</code>).</p>
 <p>PS2: there are something better to illustrate the resolution box, but also GoogleMap, <a href="https://www.movable-type.co.uk/scripts/geohash.html">movable-type.co.uk/scripts/geohash</a> you can see a box... with some work you can see changing to 9-characters and copy/paste "w21z76281".</p>
 <hr />
 <p><strong>Example</strong> of GoogleMap's renderization,<br />
-<img src="https://help.openstreetmap.org/upfiles/merlion02_74Q5qV0.png" alt="alt text" /></p>
+<img src="/upfiles/merlion02_74Q5qV0.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-latlong" rel="tag" title="see questions tagged &#39;latlong&#39;">latlong</span>

@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ">Nominatim FAQ</a> to find out when new data is processed.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ">Nominatim FAQ</a> to find out when new data is processed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

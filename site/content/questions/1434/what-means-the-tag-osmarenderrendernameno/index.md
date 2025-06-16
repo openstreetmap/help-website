@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I find sometimes this tag attached to highways. I interpret this tag as a hint for the <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> rendering application. Even though it is not really <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>, I found some cases where a highway is split just to not display the name on some part of the street. Is that acceptable to add tags helping rendering and is it correct to split an OSM way just to improve the rendering results ?</p>
+<p>I find sometimes this tag attached to highways. I interpret this tag as a hint for the <a href="https://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> rendering application. Even though it is not really <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>, I found some cases where a highway is split just to not display the name on some part of the street. Is that acceptable to add tags helping rendering and is it correct to split an OSM way just to improve the rendering results ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-osmarender" rel="tag" title="see questions tagged &#39;osmarender&#39;">osmarender</span>

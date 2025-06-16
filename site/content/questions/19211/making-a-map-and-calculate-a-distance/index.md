@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use a router e.g. an online one like yournavigation or OSRM, of course these can only be used for small amount of lookups (see <a href="https://github.com/DennisOSRM/Project-OSRM/wiki/Api-usage-policy">OSRM api policy</a>), and they candisapear at any moment. If you want to lookup lots of these distances you will have to install something of your own, <a href="http://wiki.openstreetmap.org/wiki/Gosmore">installing Gosmore</a> is quite easy, OSRM I've never tried to install.</p>
+<p>You can use a router e.g. an online one like yournavigation or OSRM, of course these can only be used for small amount of lookups (see <a href="https://github.com/DennisOSRM/Project-OSRM/wiki/Api-usage-policy">OSRM api policy</a>), and they candisapear at any moment. If you want to lookup lots of these distances you will have to install something of your own, <a href="https://wiki.openstreetmap.org/wiki/Gosmore">installing Gosmore</a> is quite easy, OSRM I've never tried to install.</p>
 <p>These are the URLs to use.</p>
 <pre><code>http://yournavigation.org/api/dev/route.php?flat=59.31934&amp;flon=18.0572&amp;tlat=58.4162&amp;tlon=15.5523&amp;v=motorcar&amp;fast=1&amp;instructions=1
 http://router.project-osrm.org/viaroute?z=6&amp;loc=59.3193,18.0572&amp;loc=58.4162,15.5523&amp;alt=false</code></pre>

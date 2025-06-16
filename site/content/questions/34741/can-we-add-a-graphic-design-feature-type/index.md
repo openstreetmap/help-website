@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>One of the big advantages of OSM is its essentially free form tagging.</p>
 <p>If nothing fits, please create an appropriate tagging. Naturally it would be nice, but not mandatory to go through the proposal process and if it is only so that what you are using is documented.</p>
-<p>See: <a href="http://wiki.openstreetmap.org/wiki/Proposal_process">http://wiki.openstreetmap.org/wiki/Proposal_process</a></p>
+<p>See: <a href="https://wiki.openstreetmap.org/wiki/Proposal_process">https://wiki.openstreetmap.org/wiki/Proposal_process</a></p>
 <p>Please note that we in general, with a handful of exceptions, only add objects/facts that can be physically observed and actually have a location. And further none of the above guarantees that a feature will be rendered on any specific map.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -159,7 +159,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>At this moment there are already 28 office=graphic_design according to taginfo (<a href="http://taginfo.openstreetmap.org/keys/office#values">http://taginfo.openstreetmap.org/keys/office#values</a> + search for graphic)</p>
 <p>In iD you can use the "all tags" section to type in "office" as key and "graphic_design" as value.</p>
-<p>I see no need to go through the formal proposal process, but documenting it on the wiki in the <a href="http://wiki.openstreetmap.org/wiki/Key:office">http://wiki.openstreetmap.org/wiki/Key:office</a> page would be nice though.</p>
+<p>I see no need to go through the formal proposal process, but documenting it on the wiki in the <a href="https://wiki.openstreetmap.org/wiki/Key:office">https://wiki.openstreetmap.org/wiki/Key:office</a> page would be nice though.</p>
 <p>Note there is a "user defined" value anyway.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I read <a href="https://help.openstreetmap.org/questions/5440/why-arent-my-gps-traces-shown-on-the-maps">this question</a> looking for an answer why my uploaded GPS trail, which I then edited and drew in the editor doesn't show. I uploaded the map and edited it in Potlach 2 (drawing the trail by hand following the uploaded GPS waypoints) over a month ago. While the trail does now show on the map when I log in to openstreetmap, I don't see it on my phone, where I have the maps.me app installed (based on Openstreetmap maps) and updated several times since then. Anybody able to explain this to me?</p>
+<p>I read <a href="/questions/5440/why-arent-my-gps-traces-shown-on-the-maps">this question</a> looking for an answer why my uploaded GPS trail, which I then edited and drew in the editor doesn't show. I uploaded the map and edited it in Potlach 2 (drawing the trail by hand following the uploaded GPS waypoints) over a month ago. While the trail does now show on the map when I log in to openstreetmap, I don't see it on my phone, where I have the maps.me app installed (based on Openstreetmap maps) and updated several times since then. Anybody able to explain this to me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mapswithme" rel="tag" title="see questions tagged &#39;mapswithme&#39;">mapswithme</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-49179-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm presuming this changeset: <a href="http://www.openstreetmap.org/changeset/37668224">http://www.openstreetmap.org/changeset/37668224</a></p>
+<p>I'm presuming this changeset: <a href="https://www.openstreetmap.org/changeset/37668224">https://www.openstreetmap.org/changeset/37668224</a></p>
 </div>
 <div id="comment-49179-info" class="comment-info">
 <span class="comment-age">(11 Apr '16, 13:01)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -133,7 +133,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When something is added to the OSM database it won't show on any versions of the map (except in the editor) until that new data is used to render one of the many maps available. If i look for new map for my Garmin by searching for "osm on garmin" it is probable that any prebuilt map.img i find could be a month old. For your problem you should contact maps.me and ask them how recentley they updated their maps from the osm database. We tend to think computers are instant, sometimes they are not. EDIT looking at the update frequency for osm garmin.imgs here shows some are done daily while others are some months. <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> Quote from map.me site "The OpenStreetMap database is updated every minute. As for the app itself, we update maps with almost every new release. If you have made a modification in OSM, you will be able to see it in the next release." edit link to Diary entry and comments <a href="https://www.openstreetmap.org/user/jinalfoflia/diary/38489">https://www.openstreetmap.org/user/jinalfoflia/diary/38489</a></p>
+<p>When something is added to the OSM database it won't show on any versions of the map (except in the editor) until that new data is used to render one of the many maps available. If i look for new map for my Garmin by searching for "osm on garmin" it is probable that any prebuilt map.img i find could be a month old. For your problem you should contact maps.me and ask them how recentley they updated their maps from the osm database. We tend to think computers are instant, sometimes they are not. EDIT looking at the update frequency for osm garmin.imgs here shows some are done daily while others are some months. <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> Quote from map.me site "The OpenStreetMap database is updated every minute. As for the app itself, we update maps with almost every new release. If you have made a modification in OSM, you will be able to see it in the next release." edit link to Diary entry and comments <a href="https://www.openstreetmap.org/user/jinalfoflia/diary/38489">https://www.openstreetmap.org/user/jinalfoflia/diary/38489</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,9 +157,9 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>see also these blog entries about map update frequence and daily download source:</p>
-<p><a href="http://www.openstreetmap.org/user/Zverik/diary/38344#comments">http://www.openstreetmap.org/user/Zverik/diary/38344#comments</a></p>
+<p><a href="https://www.openstreetmap.org/user/Zverik/diary/38344#comments">https://www.openstreetmap.org/user/Zverik/diary/38344#comments</a></p>
 <p>which leads to</p>
-<p><a href="http://www.openstreetmap.org/user/Zverik/diary/35658">http://www.openstreetmap.org/user/Zverik/diary/35658</a></p>
+<p><a href="https://www.openstreetmap.org/user/Zverik/diary/35658">https://www.openstreetmap.org/user/Zverik/diary/35658</a></p>
 </div>
 <div id="comment-49376-info" class="comment-info">
 <span class="comment-age">(23 Apr '16, 08:42)</span> <span class="comment-user userinfo">stephan75</span>

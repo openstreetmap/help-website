@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Access for employees only"
-description = '''I&#x27;ve stumbled over a rather unique (in my experience) situation. Not far from my work but off the company campus there is a fence gate, which is for employees of my company only (one needs a key to go through it). Here is the location: http://www.openstreetmap.org/node/3055889192. How should I tag i...'''
+description = '''I&#x27;ve stumbled over a rather unique (in my experience) situation. Not far from my work but off the company campus there is a fence gate, which is for employees of my company only (one needs a key to go through it). Here is the location: https://www.openstreetmap.org/node/3055889192. How should I tag i...'''
 date = "2014-09-02T18:35:00Z"
 lastmod = "2014-10-08T11:00:00Z"
 weight = 36520
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've stumbled over a rather unique (in my experience) situation. Not far from my work but <em>off the company campus</em> there is a fence gate, which is for employees of my company only (one needs a key to go through it). Here is the location: <a href="http://www.openstreetmap.org/node/3055889192">http://www.openstreetmap.org/node/3055889192</a>. How should I tag it? No routing application has a mode "employee of xxx" in additional to car/foot/bicycle. Does it make sense to add such specific information at all?</p>
+<p>I've stumbled over a rather unique (in my experience) situation. Not far from my work but <em>off the company campus</em> there is a fence gate, which is for employees of my company only (one needs a key to go through it). Here is the location: <a href="https://www.openstreetmap.org/node/3055889192">https://www.openstreetmap.org/node/3055889192</a>. How should I tag it? No routing application has a mode "employee of xxx" in additional to car/foot/bicycle. Does it make sense to add such specific information at all?</p>
 <p><strong>UPDATE:</strong> I've realised that the following information is important to clarify my motivation. The number of people who are allowed to pass this gate (company employees) is about 6 thousand. The population of the town where the company campus is located has 44 thousand people living in it.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -276,7 +276,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It appears this method allows for specifying conditions required for access : <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">http://wiki.openstreetmap.org/wiki/Conditional_restrictions</a></p>
+<p>It appears this method allows for specifying conditions required for access : <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">https://wiki.openstreetmap.org/wiki/Conditional_restrictions</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

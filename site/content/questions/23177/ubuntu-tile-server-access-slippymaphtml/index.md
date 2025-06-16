@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Ubuntu tile server, access slippymap.html"
-description = '''Hi guys, I succeeded in setting up my own tile server with OSM data by following this great tutorial: http://wiki.openstreetmap.org/wiki/Ubuntu_tile_server. As said in the tutorial I can see the map at http://localhost/osm/slippymap.html. Now, I&#x27;d like to go further. How can I access slippymap.html ...'''
+description = '''Hi guys, I succeeded in setting up my own tile server with OSM data by following this great tutorial: https://wiki.openstreetmap.org/wiki/Ubuntu_tile_server. As said in the tutorial I can see the map at http://localhost/osm/slippymap.html. Now, I&#x27;d like to go further. How can I access slippymap.html ...'''
 date = "2013-06-10T09:28:00Z"
 lastmod = "2014-06-02T11:30:00Z"
 weight = 23177
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi guys, I succeeded in setting up my own tile server with OSM data by following this great tutorial:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Ubuntu_tile_server">http://wiki.openstreetmap.org/wiki/Ubuntu_tile_server</a>.</p>
+<a href="https://wiki.openstreetmap.org/wiki/Ubuntu_tile_server">https://wiki.openstreetmap.org/wiki/Ubuntu_tile_server</a>.</p>
 <p>As said in the tutorial I can see the map at <a href="http://localhost/osm/slippymap.html.">http://localhost/osm/slippymap.html.</a> Now, I'd like to go further. How can I access <em>slippymap.html</em> file?</p>
 <p>Thanks!</p>
 <p>Lucas</p>

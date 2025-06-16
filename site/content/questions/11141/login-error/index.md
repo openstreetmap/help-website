@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are several explenations why the cookies might not be returned from your browser. Cookies can be enabled and disabled on a domain by domain level and they can expire. If the login procedure started without cookies enabled/expired cookies then you will get this error.</p>
-<p>Check that you have not added wiki.openstreetmap.org to your blacklist, or if using a whitelist add it to it. Then restart the login procedure by going to <a href="http://wiki.openstreetmap.org/">http://wiki.openstreetmap.org/</a> and click login at the top right.</p>
+<p>Check that you have not added wiki.openstreetmap.org to your blacklist, or if using a whitelist add it to it. Then restart the login procedure by going to <a href="https://wiki.openstreetmap.org/">https://wiki.openstreetmap.org/</a> and click login at the top right.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

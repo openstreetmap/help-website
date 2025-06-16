@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "get address string like in Nominatim using Overpass API"
-description = '''I am trying to build up an address string like OSM Nominatim does using the overpass API, when all I have is the ID of e.g. a way:  http://www.openstreetmap.org/way/4979228 Target would be to get a string shown as when you are searching for &#x27;Aachener Weiher&quot; on Nominatim  Aachener Weiher, Frieda-Fis...'''
+description = '''I am trying to build up an address string like OSM Nominatim does using the overpass API, when all I have is the ID of e.g. a way:  https://www.openstreetmap.org/way/4979228 Target would be to get a string shown as when you are searching for &#x27;Aachener Weiher&quot; on Nominatim  Aachener Weiher, Frieda-Fis...'''
 date = "2017-12-10T20:01:00Z"
 lastmod = "2017-12-11T12:31:00Z"
 weight = 61125
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am trying to build up an address string like OSM Nominatim does using the overpass API, when all I have is the ID of e.g. a way:</p>
-<p><a href="http://www.openstreetmap.org/way/4979228">http://www.openstreetmap.org/way/4979228</a></p>
-<p>Target would be to get a string shown as when you are <a href="http://www.openstreetmap.org/search?query=aachener%20weiher#map=18/50.93526/6.92739&amp;layers=H" title="searching for &#39;Aachener Weiher&quot; on Nominatim">searching for 'Aachener Weiher" on Nominatim</a></p>
+<p><a href="https://www.openstreetmap.org/way/4979228">https://www.openstreetmap.org/way/4979228</a></p>
+<p>Target would be to get a string shown as when you are <a href="https://www.openstreetmap.org/search?query=aachener%20weiher#map=18/50.93526/6.92739&amp;layers=H" title="searching for &#39;Aachener Weiher&quot; on Nominatim">searching for 'Aachener Weiher" on Nominatim</a></p>
 <p><code>Aachener Weiher, Frieda-Fischer-Weg, Neustadt/Süd, Innenstadt, Köln, Regierungsbezirk Köln, Nordrhein-Westfalen, 50674, Deutschland</code></p>
 <p>I guess this can maybe be done using the <code>is_in</code> or recurse up <code>&lt;&lt;;</code> functions, but I am stuck n how to use them properly. All examples I found show how to get features in a given area, not the area around a given feature.</p>
 <p>Can someone please point me into the right direction? Thank you.</p>

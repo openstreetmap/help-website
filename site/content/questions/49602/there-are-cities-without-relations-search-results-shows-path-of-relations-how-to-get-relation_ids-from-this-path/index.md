@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hello.</p>
 <p>There are cities without relations. 'Search results' shows path of relations. How to get relation_ids from this path?</p>
 <p>For example I am looking for 'Wislon'. In Search results I see City: 'Wilson, Wilson County, North Carolina, United States of America', ie Wilson is part of Wilson County and Wilson County is part of North Carolina and so on. If I go to the details of the city (click the link), at the bottom of the page I see there is no any relation.</p>
-<p>How can I get relation_ids for Wilson County, North Carolina, United States of America? Usually I use <a href="http://www.openstreetmap.org/api/0.6/relation/">http://www.openstreetmap.org/api/0.6/relation/</a><strong><em>relation_id</em></strong>, but this is not the case.</p>
+<p>How can I get relation_ids for Wilson County, North Carolina, United States of America? Usually I use <a href="https://www.openstreetmap.org/api/0.6/relation/">https://www.openstreetmap.org/api/0.6/relation/</a><strong><em>relation_id</em></strong>, but this is not the case.</p>
 <p>As I can guess, this path is based on latitude\longitude of a place, and map\engine checks the next bigger territory untill the country level is reached. Is there any API call which I can use to get relation_ids of this tree? Thank you.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,10 +112,10 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The county relation is available:</p>
-<p><a href="http://www.openstreetmap.org/relation/2528757">http://www.openstreetmap.org/relation/2528757</a></p>
+<p><a href="https://www.openstreetmap.org/relation/2528757">https://www.openstreetmap.org/relation/2528757</a></p>
 <p>To obtain the county relation from another object, you could synthesize a coordinate for the object (maybe the center or use some method to select a child node) and use reverse geocoding to obtain the admin hierarchy for that point. Nominatim and Overpass API both have support for such queries:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -137,7 +137,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Your information + some additional search + re-read few times Overpass API (lack of examples) and I have finally what I want :) Nominatim is cool thing, lots of example, but lack of functionality :)</p>
 <p>Here is the example of the solution: <a href="http://overpass-api.de/api/interpreter?data=rel(4084902);%3E;is_in;out;">http://overpass-api.de/api/interpreter?data=rel(4084902);&gt;;is_in;out;</a></p>
-<p>Also related info: <a href="http://help.openstreetmap.org/questions/20053/locating-an-osm-object-eg-finding-town-relation-name/20055">http://help.openstreetmap.org/questions/20053/locating-an-osm-object-eg-finding-town-relation-name/20055</a></p>
+<p>Also related info: <a href="/questions/20053/locating-an-osm-object-eg-finding-town-relation-name/20055">https://help.openstreetmap.org/questions/20053/locating-an-osm-object-eg-finding-town-relation-name/20055</a></p>
 </div>
 <div id="comment-49604-info" class="comment-info">
 <span class="comment-age">(07 May '16, 00:11)</span> <span class="comment-user userinfo">bear_ukraine</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Changes don&#x27;t get rendered"
-description = '''Thank you for this good explanation. But why on earth the changes I made 10 d (ten days) ago here: http://www.openstreetmap.org/#map=19/49.03245/104.05903 and there: https://www.openstreetmap.org/#map=19/49.45912/105.94815 don&#x27;t appear at all? I pressed F5 several times on my Firefox for Linux, I ap...'''
+description = '''Thank you for this good explanation. But why on earth the changes I made 10 d (ten days) ago here: https://www.openstreetmap.org/#map=19/49.03245/104.05903 and there: https://www.openstreetmap.org/#map=19/49.45912/105.94815 don&#x27;t appear at all? I pressed F5 several times on my Firefox for Linux, I ap...'''
 date = "2014-07-01T07:19:00Z"
 lastmod = "2014-07-10T10:30:00Z"
 weight = 34480
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Thank you for <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this good explanation</a>. But why on earth the changes I made 10 d (ten days) ago here: <a href="http://www.openstreetmap.org/#map=19/49.03245/104.05903">http://www.openstreetmap.org/#map=19/49.03245/104.05903</a> and there: <a href="https://www.openstreetmap.org/#map=19/49.45912/105.94815">https://www.openstreetmap.org/#map=19/49.45912/105.94815</a> don't appear at all? I pressed F5 several times on my Firefox for Linux, I appended "/dirty" to the URL, not to avail.</p>
+<p>Thank you for <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this good explanation</a>. But why on earth the changes I made 10 d (ten days) ago here: <a href="https://www.openstreetmap.org/#map=19/49.03245/104.05903">https://www.openstreetmap.org/#map=19/49.03245/104.05903</a> and there: <a href="https://www.openstreetmap.org/#map=19/49.45912/105.94815">https://www.openstreetmap.org/#map=19/49.45912/105.94815</a> don't appear at all? I pressed F5 several times on my Firefox for Linux, I appended "/dirty" to the URL, not to avail.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-changes" rel="tag" title="see questions tagged &#39;changes&#39;">changes</span>
@@ -141,7 +141,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Because there are essential tags missing, as already explained by nevw. We cannot render everything because otherwise the map would become too cluttered and unusable. That's why only objects with specific tags get rendered. Your <a href="http://www.openstreetmap.org/way/288863318">office</a> will get rendered if you add the <a href="http://wiki.openstreetmap.org/wiki/Key:building">building</a> key, for example <em>building=office</em>. The <a href="http://www.openstreetmap.org/node/2924133246">ticket shop</a> should get the tag <em>shop=ticket</em> instead of <em>shop=ticket_shop</em>. And your <a href="http://www.openstreetmap.org/way/289066543">station</a> should get the <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation">public_transport=station</a> tag.</p>
+<p>Because there are essential tags missing, as already explained by nevw. We cannot render everything because otherwise the map would become too cluttered and unusable. That's why only objects with specific tags get rendered. Your <a href="https://www.openstreetmap.org/way/288863318">office</a> will get rendered if you add the <a href="https://wiki.openstreetmap.org/wiki/Key:building">building</a> key, for example <em>building=office</em>. The <a href="https://www.openstreetmap.org/node/2924133246">ticket shop</a> should get the tag <em>shop=ticket</em> instead of <em>shop=ticket_shop</em>. And your <a href="https://www.openstreetmap.org/way/289066543">station</a> should get the <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation">public_transport=station</a> tag.</p>
 </div>
 <div id="comment-34556-info" class="comment-info">
 <span class="comment-age">(02 Jul '14, 16:47)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -152,7 +152,7 @@ One Answer:
 <div id="post-34791-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>OK. Thank you very much. I didn't get the relationship between the lack of information and the fact it wasn't rendered. However, the choices seem very limited. For instance "shop=ticket" seems not to work, and the list of shops is extremely short. [<a href="http://www.openstreetmap.org/way/292145746">http://www.openstreetmap.org/way/292145746</a> Don Bosco center] is another example of not-in-the-list building type: a youth centre. I also have a rental service shop: not listed. Moreover, adding "public_transport=station" to the coach stations didn't make them appear.</p>
+<p>OK. Thank you very much. I didn't get the relationship between the lack of information and the fact it wasn't rendered. However, the choices seem very limited. For instance "shop=ticket" seems not to work, and the list of shops is extremely short. [<a href="https://www.openstreetmap.org/way/292145746">https://www.openstreetmap.org/way/292145746</a> Don Bosco center] is another example of not-in-the-list building type: a youth centre. I also have a rental service shop: not listed. Moreover, adding "public_transport=station" to the coach stations didn't make them appear.</p>
 </div>
 <div id="comment-34791-info" class="comment-info">
 <span class="comment-age">(10 Jul '14, 08:27)</span> <span class="comment-user userinfo">Henri de Sol...</span>
@@ -164,7 +164,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Please be aware that not all editors list all possible choices for shops. Take a look at <a href="http://wiki.openstreetmap.org/wiki/Key:shop">http://wiki.openstreetmap.org/wiki/Key:shop</a> for the list of shops that is documented. Note the 'user defined' at the bottom. So you can add any type of shop you want. However, it's better to also document it on this page if you start using a new value. On the other hand not all shops are rendered on the default map. The humanitarian rendering (available from the menu on the right) shows all shops.</p>
+<p>Please be aware that not all editors list all possible choices for shops. Take a look at <a href="https://wiki.openstreetmap.org/wiki/Key:shop">https://wiki.openstreetmap.org/wiki/Key:shop</a> for the list of shops that is documented. Note the 'user defined' at the bottom. So you can add any type of shop you want. However, it's better to also document it on this page if you start using a new value. On the other hand not all shops are rendered on the default map. The humanitarian rendering (available from the menu on the right) shows all shops.</p>
 </div>
 <div id="comment-34793-info" class="comment-info">
 <span class="comment-age">(10 Jul '14, 10:30)</span> <span class="comment-user userinfo">escada</span>

@@ -143,7 +143,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>I'm not sure what question you're asking, but the API's "get way /full" call might be the answer:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Full:_GET_.2Fapi.2F0.6.2F.5Bway.7Crelation.5D.2F.23id.2Ffull">http://wiki.openstreetmap.org/wiki/API_v0.6#Full:<em>GET</em>.2Fapi.2F0.6.2F.5Bway.7Crelation.5D.2F.23id.2Ffull</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Full:_GET_.2Fapi.2F0.6.2F.5Bway.7Crelation.5D.2F.23id.2Ffull">https://wiki.openstreetmap.org/wiki/API_v0.6#Full:<em>GET</em>.2Fapi.2F0.6.2F.5Bway.7Crelation.5D.2F.23id.2Ffull</a></p>
 <p>Would it be possible to edit your question to include more words that describe what it is that you're actually trying to do?</p>
 </div>
 <div id="comment-30481-info" class="comment-info">

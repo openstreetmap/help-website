@@ -48,7 +48,7 @@ osqa_accepted = false
 <p><strong>2) propose a more specific tag</strong> for the purpose, such as "building=residential_property" or "building=residential_minor"</p>
 <p><strong>3)</strong> not propose any new tag, but rather just <strong>use building=residential</strong>, even though that doesn't convey the minor significance of the building. (To show the difference: building=residential could just as well be used to tag the main house on the property, but the new building=minor could not bo (correctly) used to tag that.)</p>
 <p>I'm inclined to think the first option would be best.</p>
-<p>The only reference to such a feature I've found is a question on this forum: <a href="http://help.openstreetmap.org/questions/5722">"How to tag residential properties garages, sheds etc?"</a> I haven't found any similar feature in use from taginfo.</p>
+<p>The only reference to such a feature I've found is a question on this forum: <a href="/questions/5722">"How to tag residential properties garages, sheds etc?"</a> I haven't found any similar feature in use from taginfo.</p>
 <p>(And yes, I realize because of the wiki nature I can start using pretty much any tag I want without proposing them, but I wanted to ask which more experienced mappers would consider to be the best approach in this case.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

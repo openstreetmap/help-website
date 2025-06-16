@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am integrating OSM in my website. I am able to search and locate any location, but not able to draw the border of any particular city like the picture.<img src="https://help.openstreetmap.org/upfiles/osm_AJH5NG2.PNG" alt="alt text" /></p>
-<p>But in my page it is showing like this<img src="https://help.openstreetmap.org/upfiles/osm2_wqpdttd.PNG" alt="alt text" /></p>
+<p>I am integrating OSM in my website. I am able to search and locate any location, but not able to draw the border of any particular city like the picture.<img src="/upfiles/osm_AJH5NG2.PNG" alt="alt text" /></p>
+<p>But in my page it is showing like this<img src="/upfiles/osm2_wqpdttd.PNG" alt="alt text" /></p>
 <p>Please help, how can i achieve this border?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

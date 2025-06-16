@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That error also occurs if you try to download too large an area. Have a look at some of these alternatives. <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">OSM on paper</a> Edit: yes, not working for me either with small area.</p>
+<p>That error also occurs if you try to download too large an area. Have a look at some of these alternatives. <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">OSM on paper</a> Edit: yes, not working for me either with small area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

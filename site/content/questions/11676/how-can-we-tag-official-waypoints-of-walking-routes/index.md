@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>there's a not entirely dissimilar question <a href="http://help.openstreetmap.org/questions/11132/how-should-i-indicate-the-startend-of-a-local-walking-route">here</a>. Basically: if the waypoint is marked on the ground somehow? Tag that as appropriate (which is the typical approach), and they can then be put in the relation.</p>
+<p>there's a not entirely dissimilar question <a href="/questions/11132/how-should-i-indicate-the-startend-of-a-local-walking-route">here</a>. Basically: if the waypoint is marked on the ground somehow? Tag that as appropriate (which is the typical approach), and they can then be put in the relation.</p>
 <p>I'm wary that such description are liable to be revised, though, and such waypoints may not be genuine formal features of the paths themselves (i.e. used for their legal definition), but merely used for orientation or outside reference. In the latter case, they shouldn't be tagged IMO.</p>
 </div>
 <div class="answer-controls post-controls">

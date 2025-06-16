@@ -172,7 +172,7 @@ osqa_accepted = false
 <pre><code>The reason I&#39;m interested in their possible deletion, is that they make editing the map more difficult in that it is hard to see through their shading, and it seems that objects within the polygons can be very difficult to select at times.</code></pre>
 <p>That is a very bad reason for wanting to delete something. We do not delete stuff because it makes peoples life easier. With the proper tools (e.g. JOSM) you can filter out the objects you are not interested in.</p>
 <p>On the other hand, if you say that these polygons do not convey the reality on the ground, then you should correct them.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential</a> .</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

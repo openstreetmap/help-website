@@ -129,7 +129,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for your response and your suggestion!</p>
-<p>From your hint, I've called up <a href="http://www.openstreet.org">www.openstreet.org</a> and right-clicked on individual tiles to check and see where they are coming from. There are no tiles from <a href="http://b.tile.openstreet.org">b.tile.openstreet.org</a>; only a. and c. The unloaded tile images come from <a href="http://www.openstreetmap.org/openlayers/img/404.png">http://www.openstreetmap.org/openlayers/img/404.png</a> . I'll dig a little deeper and see if somehow Firefox is blocking images from b. If it is however, I wouldn't expect to see a 404 error but see something else.</p>
+<p>From your hint, I've called up <a href="http://www.openstreet.org">www.openstreet.org</a> and right-clicked on individual tiles to check and see where they are coming from. There are no tiles from <a href="http://b.tile.openstreet.org">b.tile.openstreet.org</a>; only a. and c. The unloaded tile images come from <a href="https://www.openstreetmap.org/openlayers/img/404.png">https://www.openstreetmap.org/openlayers/img/404.png</a> . I'll dig a little deeper and see if somehow Firefox is blocking images from b. If it is however, I wouldn't expect to see a 404 error but see something else.</p>
 <p>Thanks for your help. I didn't know about the a,b and c servers. Looks like the answer is there somewhere.</p>
 </div>
 <div id="comment-5050-info" class="comment-info">

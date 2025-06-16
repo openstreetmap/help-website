@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>Rock is not visible fis zoomed out layers <a href="https://www.openstreetmap.org/node/5744002460">https://www.openstreetmap.org/node/5744002460</a></p>
 <p>It's nice plase with postglacial rocks and bigges one is in the center. Is is possible to make it more visible? Telling the truth i found it only by google map thanks to my friend. in Osmand app when i was in the forest it was not possible to find it. Maybe stone/rock shall be marked with other tag to make it more visible? Thanks</p>
-<p>My own pic<a href="https://help.openstreetmap.org/upfiles/strava.PNG">link text</a></p>
+<p>My own pic<span>link text</span></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-stones" rel="tag" title="see questions tagged &#39;stones&#39;">stones</span>

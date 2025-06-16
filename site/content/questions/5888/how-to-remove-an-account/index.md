@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This might help: <a href="http://help.openstreetmap.org/questions/878/how-can-i-delete-my-account">http://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a></p>
+<p>This might help: <a href="/questions/878/how-can-i-delete-my-account">https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a></p>
 <p>Cheers, Chris</p>
 </div>
 <div class="answer-controls post-controls">
@@ -170,7 +170,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There are few good reasons to <strong>delete</strong> an account. If you do not want to use one of the accounts any more just stop submiting changesets using this account.</p>
 <p>The previous edits done by this account can then be traced back to this user and to you. If there is no changesets or diary entries related to that account it may be purged by the administrators if they find that necessary.</p>
-<p>If you have a realy good reason to delete an account you can try to bother the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">administrators</a>. Theese might be to busy to even answer you and are certainly to busy to listen to everyone who might want their accounts deleted.</p>
+<p>If you have a realy good reason to delete an account you can try to bother the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">administrators</a>. Theese might be to busy to even answer you and are certainly to busy to listen to everyone who might want their accounts deleted.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

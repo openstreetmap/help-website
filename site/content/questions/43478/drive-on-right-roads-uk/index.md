@@ -158,7 +158,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>I didn't set it up. I found the driving_side page on the wiki <a href="http://wiki.openstreetmap.org/wiki/Key:driving_side">http://wiki.openstreetmap.org/wiki/Key:driving_side</a> then clicked the "uk" link under "more tools for this tag" in the box on the right and noticed there was an overpass turbo link. I suspect the tag has been added deliberately and in those instances you end up driving on the right because of circumstances linked to one way systems.</p>
+<p>I didn't set it up. I found the driving_side page on the wiki <a href="https://wiki.openstreetmap.org/wiki/Key:driving_side">https://wiki.openstreetmap.org/wiki/Key:driving_side</a> then clicked the "uk" link under "more tools for this tag" in the box on the right and noticed there was an overpass turbo link. I suspect the tag has been added deliberately and in those instances you end up driving on the right because of circumstances linked to one way systems.</p>
 </div>
 <div id="comment-43483-info" class="comment-info">
 <span class="comment-age">(09 Jun '15, 08:34)</span> <span class="comment-user userinfo">EdLoach ♦</span>

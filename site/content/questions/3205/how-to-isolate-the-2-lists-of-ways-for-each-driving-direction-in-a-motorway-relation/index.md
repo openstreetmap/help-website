@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to isolate the 2 lists of ways for each driving direction in a Motorway relation ?"
-description = '''Hello, I&#x27;m interested in the way &quot;Motorways&quot; are described in OSM. For instance that one : http://www.openstreetmap.org/browse/relation/107088 describes a motorway between 2 cities : Paris and Lille (North of France). However the members of the relation are for both driving directions : Paris -&amp;gt; ...'''
+description = '''Hello, I&#x27;m interested in the way &quot;Motorways&quot; are described in OSM. For instance that one : https://www.openstreetmap.org/browse/relation/107088 describes a motorway between 2 cities : Paris and Lille (North of France). However the members of the relation are for both driving directions : Paris -&amp;gt; ...'''
 date = "2011-02-19T20:35:00Z"
 lastmod = "2011-03-01T11:32:00Z"
 weight = 3205
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello,<br />
 I'm interested in the way "Motorways" are described in OSM.<br />
 For instance that one :<br />
-<a href="http://www.openstreetmap.org/browse/relation/107088">http://www.openstreetmap.org/browse/relation/107088</a><br />
+<a href="https://www.openstreetmap.org/browse/relation/107088">https://www.openstreetmap.org/browse/relation/107088</a><br />
 describes a motorway between 2 cities : Paris and Lille (North of France).<br />
 However the members of the relation are for both driving directions : Paris -&gt; Lille <strong>AND</strong> Lille-&gt;Paris .<br />
 Is there an "easy" way to know which ways are part of the Paris-&gt;Lille driving direction and which ones are only relevant for the other driving direction (=split the relation in two parts, one for each driving direction) ?<br />
@@ -271,9 +271,9 @@ Thanks.</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>You could try ignoring relations, and extracting "WayChains". A chain of ways that are connected end-to-end.</p>
-<p>My <a href="http://wiki.openstreetmap.org/wiki/Waychains_TIGER_fixup">WayChains TIGER fixup</a> analysis does this kind of thing (on motorways as it happens, although it would work for other kinds of end-to-end connected ways)</p>
+<p>My <a href="https://wiki.openstreetmap.org/wiki/Waychains_TIGER_fixup">WayChains TIGER fixup</a> analysis does this kind of thing (on motorways as it happens, although it would work for other kinds of end-to-end connected ways)</p>
 <p>The logic to join together ways into "waychains" can be found in <a href="http://harrywood.dev.openstreetmap.org/waychains/waychainsummary.rb">waychainsummary.rb</a>.</p>
-<p>I'm running it with a pre-processing step using my <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--simplify">osmosis simplify plugin</a>, which reduces ways down to just their start node and end node.</p>
+<p>I'm running it with a pre-processing step using my <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--simplify">osmosis simplify plugin</a>, which reduces ways down to just their start node and end node.</p>
 <p>Note however that I was deliberately designing this to help find problems in the U.S. motorways data. For extracting OpenStreetMap data for practical use, you may find this approach a little fragile. e.g. if a mapper tags an onramp with highway=motorway instead of highway=motorway_link, then it may not chain the ways correctly at that point. You'd have to fix it before trying again.</p>
 </div>
 <div class="answer-controls post-controls">

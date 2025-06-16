@@ -147,7 +147,7 @@ osqa_accepted = true
 <p>Won't that just give the same problem?</p>
 <p>Sorry I didn't explain very well.</p>
 <p>The school grounds extend into the woods and they both share some borders.</p>
-<p>The school and wood are here: <a href="http://www.openstreetmap.org/?lat=53.3374187350273&amp;lon=-1.4866116642952&amp;zoom=17">http://www.openstreetmap.org/?lat=53.3374187350273&amp;lon=-1.4866116642952&amp;zoom=17</a></p>
+<p>The school and wood are here: <a href="https://www.openstreetmap.org/?lat=53.3374187350273&amp;lon=-1.4866116642952&amp;zoom=17">https://www.openstreetmap.org/?lat=53.3374187350273&amp;lon=-1.4866116642952&amp;zoom=17</a></p>
 <p>I have to admit that I have edited this, and was only aware of the issue when I saw the final result in the browser. The woods used to be visible. I could revert it, but I do think that the fact that the school extends into the woods should be marked.</p>
 <p>Could I put a separated marker through the woods and tag it?</p>
 </div>
@@ -171,7 +171,7 @@ osqa_accepted = true
 <div id="post-12223-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I fixed this area in a similar matter: <a href="http://www.openstreetmap.org/?lat=59.388878&amp;lon=16.540354&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=59.388878&amp;lon=16.540354&amp;zoom=18&amp;layers=M</a></p>
+<p>I fixed this area in a similar matter: <a href="https://www.openstreetmap.org/?lat=59.388878&amp;lon=16.540354&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=59.388878&amp;lon=16.540354&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-12223-info" class="comment-info">
 <span class="comment-age">(20 Apr '12, 22:59)</span> <span class="comment-user userinfo">TheOddOne2</span>

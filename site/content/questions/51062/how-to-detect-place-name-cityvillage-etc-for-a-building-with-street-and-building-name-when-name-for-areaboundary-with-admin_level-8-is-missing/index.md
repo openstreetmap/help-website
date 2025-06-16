@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I did a quick query on imported data (Europe) for administrative boundaries and I see all the admin boundaries up to level 7 have name tag provided for the area (with one exception only for relation <a href="http://www.openstreetmap.org/relation/1727384" title="Missing &#39;name&#39; tag">1727384</a>, that has no such "name" tag).</p>
+<p>I did a quick query on imported data (Europe) for administrative boundaries and I see all the admin boundaries up to level 7 have name tag provided for the area (with one exception only for relation <a href="https://www.openstreetmap.org/relation/1727384" title="Missing &#39;name&#39; tag">1727384</a>, that has no such "name" tag).</p>
 <p>The issue is with admin_level = 8 boundaries, because 1448 boundaries have no such name (but 105652 areas on level 8 has such name provided). Admin level 8 is a city or a village boundary for instance.</p>
-<p>Sample: The relation with ID <a href="http://www.openstreetmap.org/relation/6071056">6071056</a> has no name, but has admin_centre node with name,<br />
-relation <a href="http://www.openstreetmap.org/relation/5164506">5164506</a> has no name, but has some <a href="http://www.openstreetmap.org/node/337585514#map=15/48.7894/28.7913">node</a> inside this area with addr: and name tags.</p>
+<p>Sample: The relation with ID <a href="https://www.openstreetmap.org/relation/6071056">6071056</a> has no name, but has admin_centre node with name,<br />
+relation <a href="https://www.openstreetmap.org/relation/5164506">5164506</a> has no name, but has some <a href="https://www.openstreetmap.org/node/337585514#map=15/48.7894/28.7913">node</a> inside this area with addr: and name tags.</p>
 <p>In case of missing name tags for admin_level=8 areas should I look for any node inside such area with addr tags, or maybe there is some better idea to fix missing area names?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

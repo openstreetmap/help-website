@@ -117,7 +117,7 @@ One Answer:
 <blockquote>
 <p>it is not clear to me what is nominatim doing with osm2pgsql if the data structures are different.</p>
 </blockquote>
-<p>Nominatim uses osm2pgsql to import the data structures it needs based on its own configuration and use-case. When you setup a setup a server for map tile rendering and search (Nominatim) that data needs to go into separate database. (related question: <a href="https://help.openstreetmap.org/questions/52978/possible-to-use-one-db-for-nominatim-and-tile-server)">https://help.openstreetmap.org/questions/52978/possible-to-use-one-db-for-nominatim-and-tile-server)</a> Yes, it's seems like a huge waste to have most data twice but the systems aren't connected and there's no plans to have them use the same data structures.</p>
+<p>Nominatim uses osm2pgsql to import the data structures it needs based on its own configuration and use-case. When you setup a setup a server for map tile rendering and search (Nominatim) that data needs to go into separate database. (related question: <a href="/questions/52978/possible-to-use-one-db-for-nominatim-and-tile-server)">https://help.openstreetmap.org/questions/52978/possible-to-use-one-db-for-nominatim-and-tile-server)</a> Yes, it's seems like a huge waste to have most data twice but the systems aren't connected and there's no plans to have them use the same data structures.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -152,7 +152,7 @@ One Answer:
 <div id="post-47534-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Using the taginfo link above and the Overpass Turbo button, I found this example, in case it helps: <a href="http://www.openstreetmap.org/relation/5315266">http://www.openstreetmap.org/relation/5315266</a></p>
+<p>Using the taginfo link above and the Overpass Turbo button, I found this example, in case it helps: <a href="https://www.openstreetmap.org/relation/5315266">https://www.openstreetmap.org/relation/5315266</a></p>
 </div>
 <div id="comment-47534-info" class="comment-info">
 <span class="comment-age">(16 Jan '16, 10:16)</span> <span class="comment-user userinfo">EdLoach ♦</span>

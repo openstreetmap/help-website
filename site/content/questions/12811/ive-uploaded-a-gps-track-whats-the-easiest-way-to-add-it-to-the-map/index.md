@@ -87,7 +87,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Here is the link the the track.</p>
-<p><a href="http://www.openstreetmap.org/?minlon=103.464609375&amp;minlat=19.96625541687&amp;maxlon=103.4846170044&amp;maxlat=19.986257324219">http://www.openstreetmap.org/?minlon=103.464609375&amp;minlat=19.96625541687&amp;maxlon=103.4846170044&amp;maxlat=19.986257324219</a></p>
+<p><a href="https://www.openstreetmap.org/?minlon=103.464609375&amp;minlat=19.96625541687&amp;maxlon=103.4846170044&amp;maxlat=19.986257324219">https://www.openstreetmap.org/?minlon=103.464609375&amp;minlat=19.96625541687&amp;maxlon=103.4846170044&amp;maxlat=19.986257324219</a></p>
 </div>
 <div id="comment-12820-info" class="comment-info">
 <span class="comment-age">(20 May '12, 15:51)</span> <span class="comment-user userinfo">brian_bkk</span>
@@ -114,7 +114,7 @@ osqa_accepted = false
 <p>The step above about vector file loading is a god send.. Nice and easy to delete the data where there is already a track and then get the new path in place.. doesn't take much time at all.. Thank you.</p>
 <p>Sorry to ask so many questions.. I have now completed a major road all the way to the Vietnam border. I followed the same road type etc up to where the road ended and my addtion started.</p>
 <p>What is strange is.. When I go to OSM and look. I can see the original road clearly.. but to view the new complete road I added I have to zoom right in..</p>
-<p><a href="http://www.openstreetmap.org/?lat=14.651&amp;lon=107.313&amp;zoom=11&amp;layers=M">http://www.openstreetmap.org/?lat=14.651&amp;lon=107.313&amp;zoom=11&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=14.651&amp;lon=107.313&amp;zoom=11&amp;layers=M">https://www.openstreetmap.org/?lat=14.651&amp;lon=107.313&amp;zoom=11&amp;layers=M</a></p>
 <p>Thank you for your help.. Once I get past all these questions I have a lot of roads / trails and tracks for Laos to upload..</p>
 <p>Cheers Brian</p>
 </div>
@@ -263,7 +263,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The other part of your question "why doesn't LIMA 36 show up" is that not everything is or can be shown on the "standard" mapnik map. <a href="http://www.openstreetmap.org/?mlat=53.8356&amp;mlon=-1.281&amp;zoom=14&amp;layers=M">Here</a>, for example, is the site of the <a href="http://www.openstreetmap.org/browse/node/426887891">battle of Towton</a> - the adjacent field named "bloody meadow" is shown, but not the battlefield name.</p>
+<p>The other part of your question "why doesn't LIMA 36 show up" is that not everything is or can be shown on the "standard" mapnik map. <a href="https://www.openstreetmap.org/?mlat=53.8356&amp;mlon=-1.281&amp;zoom=14&amp;layers=M">Here</a>, for example, is the site of the <a href="https://www.openstreetmap.org/browse/node/426887891">battle of Towton</a> - the adjacent field named "bloody meadow" is shown, but not the battlefield name.</p>
 <p>However, just because it doesn't show up on the standard map doesn't mean that no-one will see it. There are <a href="http://brewmap.maps3.org.uk/client/brewmap.html">many</a> <a href="http://www.livingwithdragons.com/maps/toilets/">examples</a> of people using OSM data to highlight a certain kind of feature on a customised map - there may already be one for historic battlefields.</p>
 </div>
 <div class="answer-controls post-controls">

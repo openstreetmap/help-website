@@ -91,7 +91,7 @@ This question is marked "community wiki".
 </div>
 <div class="comment-text">
 <p>This is the raw download that I was referring to:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Planet.gpx">http://wiki.openstreetmap.org/wiki/Planet.gpx</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Planet.gpx">https://wiki.openstreetmap.org/wiki/Planet.gpx</a></p>
 <p>There are a bunch of tools linked from that page too.</p>
 </div>
 <div id="comment-29646-info" class="comment-info">
@@ -172,8 +172,8 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>If you want all the GPS data of a region, use JOSM, go to the download dialogue and just check [x] "GPS Data from OpenStreetMap".</p>
 <p>The only easy way I can imagine to get all traces is to use a little scripting. First, find out how many pages of gpx file descriptions for that user exist, then download them all like this:</p>
-<pre><code>for i in $(seq 1 12); do wget http://www.openstreetmap.org/user/malenki/traces/page/&quot;$i&quot; -O page_&quot;$i&quot;.html; done</code></pre>
-<p>Having all the files you can search them for the file IDs and download them similar to the above "script"; the URL would be <a href="http://www.openstreetmap.org/trace/(trace-ID)/data.">http://www.openstreetmap.org/trace/(trace-ID)/data.</a></p>
+<pre><code>for i in $(seq 1 12); do wget https://www.openstreetmap.org/user/malenki/traces/page/&quot;$i&quot; -O page_&quot;$i&quot;.html; done</code></pre>
+<p>Having all the files you can search them for the file IDs and download them similar to the above "script"; the URL would be <a href="https://www.openstreetmap.org/trace/(trace-ID)/data.">https://www.openstreetmap.org/trace/(trace-ID)/data.</a></p>
 <p>hth<br />
 malenki</p>
 </div>

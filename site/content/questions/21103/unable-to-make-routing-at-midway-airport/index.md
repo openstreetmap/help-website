@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm unable to do some routing at one specific area with Open Trip Planner.</p>
-<p>Going from the Midway train station to the actual airport seems impossible. <a href="http://www.openstreetmap.org/?minlon=-87.7621688842773&amp;minlat=41.7781562805176&amp;maxlon=-87.7393341064453&amp;maxlat=41.792911529541">See here</a> .</p>
+<p>Going from the Midway train station to the actual airport seems impossible. <a href="https://www.openstreetmap.org/?minlon=-87.7621688842773&amp;minlat=41.7781562805176&amp;maxlon=-87.7393341064453&amp;maxlat=41.792911529541">See here</a> .</p>
 <p>You will also see that I added a footpath and it did not change anything.</p>
 <p>Thanks,</p>
 </div>
@@ -111,7 +111,7 @@ One Answer:
 <p>Two possible reasons:</p>
 <ul>
 <li>You've inserted the footway two days ago - that may be too recent (find out which data is used for routing by the OTP instance you are using). Usually <em>routing engines significantly lag behind</em> the main OSM database.</li>
-<li>Furthermore your footway's <a href="http://www.openstreetmap.org/browse/node/2233019164">western node</a> is not connected to anything (which may be conforming with reality). I don't know what you choose as target in the routing and if the OTP has a "direct connection/straight line" (no way) routing capability. Depending on which position you choose as routing target (e.g. the middle of the runways) it may be too far away (for OTP) from your footway.</li>
+<li>Furthermore your footway's <a href="https://www.openstreetmap.org/browse/node/2233019164">western node</a> is not connected to anything (which may be conforming with reality). I don't know what you choose as target in the routing and if the OTP has a "direct connection/straight line" (no way) routing capability. Depending on which position you choose as routing target (e.g. the middle of the runways) it may be too far away (for OTP) from your footway.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

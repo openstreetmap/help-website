@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi, I'd like to use OSM database with some additional not open-licensed data - is this possible without licensing the data as open? Will it be the same situation after transition of OSM to Odbl?<br />
 My client wants custom markers to appear on the map in his application, while keeping database of the markers not public and not open-licensed - I've spent some time studying the legal wiki, but not sure if that thing is actually possible.<br />
-Also it looks like some <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">OSM-based services</a> are keeping their data separated from the OSM database while keeping parts of the data not released as open and I'm curious how it looks like from the legal view.<br />
+Also it looks like some <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">OSM-based services</a> are keeping their data separated from the OSM database while keeping parts of the data not released as open and I'm curious how it looks like from the legal view.<br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -130,10 +130,10 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Some more hints can be found in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
+<p>Some more hints can be found in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
 <p>or at</p>
-<p><a href="http://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer">http://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer</a></p>
-<p><a href="http://help.openstreetmap.org/questions/6102/can-i-add-a-custom-layer">http://help.openstreetmap.org/questions/6102/can-i-add-a-custom-layer</a></p>
+<p><a href="/questions/6905/is-it-possible-to-create-my-individual-layer">https://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer</a></p>
+<p><a href="/questions/6102/can-i-add-a-custom-layer">https://help.openstreetmap.org/questions/6102/can-i-add-a-custom-layer</a></p>
 </div>
 <div id="comment-15396-info" class="comment-info">
 <span class="comment-age">(22 Aug '12, 16:36)</span> <span class="comment-user userinfo">stephan75</span>

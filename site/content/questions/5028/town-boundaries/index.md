@@ -135,7 +135,7 @@ One Answer:
 <div id="post-5031-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>there are lots of questions and answers on this all ready here is one <a href="http://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary">http://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary</a></p>
+<p>there are lots of questions and answers on this all ready here is one <a href="/questions/3919/how-can-i-find-and-modify-a-boundary">https://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary</a></p>
 </div>
 <div id="comment-5031-info" class="comment-info">
 <span class="comment-age">(07 May '11, 17:26)</span> <span class="comment-user userinfo">andy mackey</span>

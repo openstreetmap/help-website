@@ -114,8 +114,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I expect that you are displaying a cache copy and you need to refresh the image on your browser Start+r or Control+F5 may work. The Standard, Transport and Humanitarian maps display your edit now.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-03-05_at_9.43.46_AM.png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-03-05_at_9.46.40_AM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-03-05_at_9.43.46_AM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-03-05_at_9.46.40_AM.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -138,7 +138,7 @@ osqa_accepted = false
 <div id="post-54898-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Por lo que comentas se deberia ver correctamente pero lo siguo viendo mal<img src="https://help.openstreetmap.org/upfiles/osm_Ou8nJG8.png" alt="alt text" /></p>
+<p>Por lo que comentas se deberia ver correctamente pero lo siguo viendo mal<img src="/upfiles/osm_Ou8nJG8.png" alt="alt text" /></p>
 <p>JQN</p>
 </div>
 <div id="comment-54898-info" class="comment-info">

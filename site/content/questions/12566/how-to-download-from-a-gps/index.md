@@ -145,8 +145,8 @@ osqa_accepted = false
 <div class="answer-body">
 <ol>
 <li>Oregon Series Owner's Manual page 38 (page 44 of the <a href="http://static.garmincdn.com/pumac/Oregon_x50_Series_OM_EN.pdf">pdf file</a>).</li>
-<li>After copying the files named .gpx to your computer follow <a href="http://wiki.openstreetmap.org/wiki/Upload">the upload-howto</a>.</li>
-<li>For adding the ways (paths) itself to the OpenStreetMap you should follow <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this guide</a>.</li>
+<li>After copying the files named .gpx to your computer follow <a href="https://wiki.openstreetmap.org/wiki/Upload">the upload-howto</a>.</li>
+<li>For adding the ways (paths) itself to the OpenStreetMap you should follow <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this guide</a>.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

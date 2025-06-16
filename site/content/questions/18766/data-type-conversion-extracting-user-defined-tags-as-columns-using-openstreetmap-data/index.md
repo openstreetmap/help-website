@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the command line programm <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a> ... it has a feature to output OSM elements in CSV files.</p>
+<p>Have a look at the command line programm <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a> ... it has a feature to output OSM elements in CSV files.</p>
 <p>You can define manually what columns are to be generated.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -142,7 +142,7 @@ One Answer:
 <div id="post-18839-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Could You also have a look at <a href="https://help.openstreetmap.org/questions/18838/joining-osm-csv-file-to-same-file-in-qgis">this</a></p>
+<p>Could You also have a look at <a href="/questions/18838/joining-osm-csv-file-to-same-file-in-qgis">this</a></p>
 </div>
 <div id="comment-18839-info" class="comment-info">
 <span class="comment-age">(04 Jan '13, 11:09)</span> <span class="comment-user userinfo">amritkarma</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why does background imagery (such as Bing) only display up to a certain zoom level in Potlatch2?"
-description = '''After reading this Question how-do-i-map-regular-buildings and finding that the Bing looks ok I would like to know why it will only magnify to the level it does. I am sure a higher even though fuzzy image would be of use. place in Question http://www.openstreetmap.org/?lat=47.76286&amp;amp;lon=-1.19319&amp;...'''
+description = '''After reading this Question how-do-i-map-regular-buildings and finding that the Bing looks ok I would like to know why it will only magnify to the level it does. I am sure a higher even though fuzzy image would be of use. place in Question https://www.openstreetmap.org/?lat=47.76286&amp;amp;lon=-1.19319&amp;...'''
 date = "2012-04-22T15:05:00Z"
 lastmod = "2012-04-23T18:16:00Z"
 weight = 12256
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After reading this Question <a href="/questions/12249">how-do-i-map-regular-buildings</a> and finding that the Bing looks ok I would like to know why it will only magnify to the level it does. I am sure a higher even though fuzzy image would be of use. place in Question <a href="http://www.openstreetmap.org/?lat=47.76286&amp;lon=-1.19319&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=47.76286&amp;lon=-1.19319&amp;zoom=16&amp;layers=M</a></p>
+<p>After reading this Question <a href="/questions/12249">how-do-i-map-regular-buildings</a> and finding that the Bing looks ok I would like to know why it will only magnify to the level it does. I am sure a higher even though fuzzy image would be of use. place in Question <a href="https://www.openstreetmap.org/?lat=47.76286&amp;lon=-1.19319&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=47.76286&amp;lon=-1.19319&amp;zoom=16&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-zoom" rel="tag" title="see questions tagged &#39;zoom&#39;">zoom</span> <span class="post-tag tag-link-mag" rel="tag" title="see questions tagged &#39;mag&#39;">mag</span>
@@ -111,10 +111,10 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I suspect that this question is actually about Potlatch2, not Bing imagery.</p>
-<p>In P2, if you <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=47.76286&amp;lon=-1.19319&amp;zoom=18">edit the link provided at zoom level 18</a>, you don't get any Bing imagery, whereas you do at <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=47.76286&amp;lon=-1.19319&amp;zoom=17">zoom level 17</a>.<br />
+<p>In P2, if you <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=47.76286&amp;lon=-1.19319&amp;zoom=18">edit the link provided at zoom level 18</a>, you don't get any Bing imagery, whereas you do at <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=47.76286&amp;lon=-1.19319&amp;zoom=17">zoom level 17</a>.<br />
 </p>
 <p>Compare this with JOSM, where if you zoom in although there is a "no tiles at this zoom level" message, the previous level's tiles are magnified:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm.png" alt="screenshot of JOSM showing pixilation effect" /></p>
+<p><img src="/upfiles/josm.png" alt="screenshot of JOSM showing pixilation effect" /></p>
 <p>A <a href="https://trac.openstreetmap.org/search?q=potlatch+zoom&amp;noquickjump=1&amp;ticket=on">quick search of trac</a> doesn't find a matching enhancement request for it, but that's probably where it's best logged (as an enhancement against component Potlatch2, with a relatively low priority, as nothing's actually broken).</p>
 </div>
 <div class="answer-controls post-controls">

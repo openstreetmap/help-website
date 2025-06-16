@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to add some detailed mapping along a cycle route (the N72 in Newcastle,UK). This route is largely along peaceful designated bike/hiking paths that are away from the busy roads, but in some areas it briefly travels along the pavement/sidewalk by the side of a road.</p>
-<p>Ideally I'd like to capture this detail in the tagging, preferably in a way that is useful to the various cycle maps. I've had a go at <a href="http://www.openstreetmap.org/?lat=54.96481&amp;lon=-1.65753&amp;zoom=16&amp;layers=M">this section from William Armstrong Drive and along Scotswood Road</a>, which I have currently tagged as follows:</p>
+<p>Ideally I'd like to capture this detail in the tagging, preferably in a way that is useful to the various cycle maps. I've had a go at <a href="https://www.openstreetmap.org/?lat=54.96481&amp;lon=-1.65753&amp;zoom=16&amp;layers=M">this section from William Armstrong Drive and along Scotswood Road</a>, which I have currently tagged as follows:</p>
 <h2 id="normal-cycle-path">Normal Cycle Path</h2>
 <p>The section along the waterfront, away from the road, is simply tagged as most cycle paths are:</p>
 <pre><code>highway=cycleway
@@ -59,11 +59,11 @@ footway=crossing
 cycleway=crossing
 foot=yes
 bicycle=yes</code></pre>
-<p>and drawn that through the <code>highway=crossing</code> node on the road (<a href="http://wiki.openstreetmap.org/wiki/Tag:footway%3Dcrossing">as recommended here</a>)</p>
+<p>and drawn that through the <code>highway=crossing</code> node on the road (<a href="https://wiki.openstreetmap.org/wiki/Tag:footway%3Dcrossing">as recommended here</a>)</p>
 <p><strong>So does this approach make any sense?</strong><br />
 </p>
 <p>Logically it seems okay to me, but I'm a bit worried about how it will be interpreted and rendered by existing apps. <em>(Yes I know we should be renderer-agnostic, but I don't want to break a route that used to work correctly)</em>.</p>
-<p>Incidentally I can't just add a <code>cycleway=track</code> to the way for the road (as <a href="http://wiki.openstreetmap.org/wiki/Bicycle">suggested in wiki</a>) because unusually the road actually has a cycle lane on it as well (yep, a cycle lane on the road AND a signed shared-use pavement alongside it).</p>
+<p>Incidentally I can't just add a <code>cycleway=track</code> to the way for the road (as <a href="https://wiki.openstreetmap.org/wiki/Bicycle">suggested in wiki</a>) because unusually the road actually has a cycle lane on it as well (yep, a cycle lane on the road AND a signed shared-use pavement alongside it).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-sidewalks" rel="tag" title="see questions tagged &#39;sidewalks&#39;">sidewalks</span> <span class="post-tag tag-link-bicycle" rel="tag" title="see questions tagged &#39;bicycle&#39;">bicycle</span> <span class="post-tag tag-link-footway" rel="tag" title="see questions tagged &#39;footway&#39;">footway</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-cycleway" rel="tag" title="see questions tagged &#39;cycleway&#39;">cycleway</span>
@@ -204,7 +204,7 @@ bicycle=yes</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nowadays, for "along the sidewalk", there is the <a href="http://wiki.openstreetmap.org/wiki/Key:segregated">segregated tag</a>.</p>
+<p>Nowadays, for "along the sidewalk", there is the <a href="https://wiki.openstreetmap.org/wiki/Key:segregated">segregated tag</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -373,7 +373,7 @@ This answer is marked "community wiki".
 <div class="answer-body">
 <p>This forum is not meant for discussion. So I am tempted to close this question.</p>
 <p>However, to give you a short answer I would like to point out that</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Bicycle">http://wiki.openstreetmap.org/wiki/Bicycle</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bicycle">https://wiki.openstreetmap.org/wiki/Bicycle</a></p>
 <p>covers most options were sidewalks and bicycle lanes meet.</p>
 </div>
 <div class="answer-controls post-controls">

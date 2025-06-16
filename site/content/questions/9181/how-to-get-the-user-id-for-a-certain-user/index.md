@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there a way to query the user id given a certain user display name? What about the other way around?</p>
-<p>The display name can be changed any time, so the id seem to be the better solution to identify an account. Is it possible to link to the user page by id? (Something like <a href="http://www.openstreetmap.org/user?id=xxxx)">http://www.openstreetmap.org/user?id=xxxx)</a></p>
+<p>The display name can be changed any time, so the id seem to be the better solution to identify an account. Is it possible to link to the user page by id? (Something like <a href="https://www.openstreetmap.org/user?id=xxxx)">https://www.openstreetmap.org/user?id=xxxx)</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-uid" rel="tag" title="see questions tagged &#39;uid&#39;">uid</span> <span class="post-tag tag-link-id" rel="tag" title="see questions tagged &#39;id&#39;">id</span> <span class="post-tag tag-link-user" rel="tag" title="see questions tagged &#39;user&#39;">user</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span>
@@ -230,7 +230,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The API has supported a call with the UID as argument for quite a while now. The call returns user information including the user name:</p>
-<p><a href="http://www.openstreetmap.org/api/0.6/user/">http://www.openstreetmap.org/api/0.6/user/</a><em>the_uid</em></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/user/">https://www.openstreetmap.org/api/0.6/user/</a><em>the_uid</em></p>
 <p>This will naturally only give you the current mapping uid-&gt;user name and not historic ones.</p>
 </div>
 <div class="answer-controls post-controls">

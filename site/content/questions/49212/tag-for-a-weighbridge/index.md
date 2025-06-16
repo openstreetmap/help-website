@@ -132,7 +132,7 @@ One Answer:
 <p>according to taginfo, under amenity you'll find</p>
 <p>weighbridge=541 weigh_station=22 weigh_bridge=10 weightbridge=6 weighing_station=2</p>
 <p>so the usage seems to favour weighbridge.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dweighbridge">amenity=weighbridge</a> also has a wiki page, which documents the current use.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dweighbridge">amenity=weighbridge</a> also has a wiki page, which documents the current use.</p>
 </div>
 <div id="comment-49214-info" class="comment-info">
 <span class="comment-age">(14 Apr '16, 07:53)</span> <span class="comment-user userinfo">escada</span>

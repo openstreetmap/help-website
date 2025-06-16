@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My question comes after seeing the <a href="http://www.openstreetmap.org/changeset/51817737">changeset 51817737</a>. I graduated from this university recently and have updated it on OSM many times. The reason this person gave or labeling this section of the campus as a park was that it's very "park-like". The university does have many trees and it can be considered an urban forest and does have a named park on campus grounds but it is located on the northern part.</p>
+<p>My question comes after seeing the <a href="https://www.openstreetmap.org/changeset/51817737">changeset 51817737</a>. I graduated from this university recently and have updated it on OSM many times. The reason this person gave or labeling this section of the campus as a park was that it's very "park-like". The university does have many trees and it can be considered an urban forest and does have a named park on campus grounds but it is located on the northern part.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-university" rel="tag" title="see questions tagged &#39;university&#39;">university</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-park" rel="tag" title="see questions tagged &#39;park&#39;">park</span> <span class="post-tag tag-link-labeling" rel="tag" title="see questions tagged &#39;labeling&#39;">labeling</span>
@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-59948-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For another university that mixes a few "park" areas with some "grass" areas, see the University of Minnesota <a href="http://www.openstreetmap.org/#map=18/44.97791/-93.23637">http://www.openstreetmap.org/#map=18/44.97791/-93.23637</a></p>
+<p>For another university that mixes a few "park" areas with some "grass" areas, see the University of Minnesota <a href="https://www.openstreetmap.org/#map=18/44.97791/-93.23637">https://www.openstreetmap.org/#map=18/44.97791/-93.23637</a></p>
 </div>
 <div id="comment-59948-info" class="comment-info">
 <span class="comment-age">(04 Oct '17, 15:40)</span> <span class="comment-user userinfo">neuhausr</span>

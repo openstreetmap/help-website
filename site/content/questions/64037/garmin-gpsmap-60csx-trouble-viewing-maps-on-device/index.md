@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-64040-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Could this be caused by the problem described in <a href="https://help.openstreetmap.org/questions/63954/problem-installing-maps-on-device-using-latest-basecamp-version">https://help.openstreetmap.org/questions/63954/problem-installing-maps-on-device-using-latest-basecamp-version</a> ? If you are using the latest basecamp version, try downgrading to 4.6.2.</p>
+<p>Could this be caused by the problem described in <a href="/questions/63954/problem-installing-maps-on-device-using-latest-basecamp-version">https://help.openstreetmap.org/questions/63954/problem-installing-maps-on-device-using-latest-basecamp-version</a> ? If you are using the latest basecamp version, try downgrading to 4.6.2.</p>
 </div>
 <div id="comment-64040-info" class="comment-info">
 <span class="comment-age">(06 Jun '18, 09:05)</span> <span class="comment-user userinfo">scai ♦</span>

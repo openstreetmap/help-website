@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I edit the tags of a relation in Potlatch 2?"
-description = '''Using Potlatch 2 I discovered this relation:  http://www.openstreetmap.org/relation/1322621  I have made a minor edit - removing the relation from the lake, but the main problem is:  The relation has this tag &quot;landuse = scrub&quot; - but it does not display as &#x27;scrub&#x27;. Checking the documentation, I found...'''
+description = '''Using Potlatch 2 I discovered this relation:  https://www.openstreetmap.org/relation/1322621  I have made a minor edit - removing the relation from the lake, but the main problem is:  The relation has this tag &quot;landuse = scrub&quot; - but it does not display as &#x27;scrub&#x27;. Checking the documentation, I found...'''
 date = "2014-03-16T12:03:00Z"
 lastmod = "2014-03-16T18:16:00Z"
 weight = 31592
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Using Potlatch 2 I discovered this relation:<br />
 </p>
-<p><a href="http://www.openstreetmap.org/relation/1322621">http://www.openstreetmap.org/relation/1322621</a><br />
+<p><a href="https://www.openstreetmap.org/relation/1322621">https://www.openstreetmap.org/relation/1322621</a><br />
 </p>
 <p>I have made a minor edit - removing the relation from the lake, but the main problem is:<br />
 </p>
@@ -121,9 +121,9 @@ Checking the documentation, I found that the tag should have been "natural = scr
 <td><div class="item-right">
 <div class="answer-body">
 <p>With Potlatch 2, double-click on the relation at the left:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/p2_1_2.png" alt="alt text" /></p>
+<p><img src="/upfiles/p2_1_2.png" alt="alt text" /></p>
 <p>and then you can edit the relation. Scroll down to get to advanced settings, or look at members:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/p2_2.png" alt="alt text" /></p>
+<p><img src="/upfiles/p2_2.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

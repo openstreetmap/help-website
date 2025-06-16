@@ -48,7 +48,7 @@ osqa_accepted = true
 </ul>
 <p>For a parking lot, it is fairly easy using <code>amenity=parking</code>, <code>parking=surface</code>, <code>access=private</code> and <code>opening_hours=Mo-Fr 07:00-21:00</code>. However, with lanes, the system is different and according to the wiki page, using the key <code>parking:condition:both:time_interval=*</code> will make it necessary to use <code>parking:condition:both:default=*</code> for outside the opening hours, for which I am not sure what value to use (maybe "no"?).</p>
 <p>Using the key <code>opening_hours=*</code> for the lane would be a problem as the street is still accessible out of those parking hours.</p>
-<p>The way I am talking about is <a href="http://www.openstreetmap.org/browse/way/24297653">this one</a>, so you can see my attempt at it.</p>
+<p>The way I am talking about is <a href="https://www.openstreetmap.org/browse/way/24297653">this one</a>, so you can see my attempt at it.</p>
 <p>Cheers!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

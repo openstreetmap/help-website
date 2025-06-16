@@ -126,7 +126,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might get some help from <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">video tutorials</a> which cover the basics.</p>
+<p>You might get some help from <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">video tutorials</a> which cover the basics.</p>
 <p>If you still can't get along with Potlatch, you may give a try to <a href="http://josm.openstreetmap.de/">JOSM</a> or <a href="http://merkaartor.be/">Merkaartor</a>. Maybe one of them has an interface you find more easily understandable. You can find some video tutorials for JOSM from the first link and some documentation <a href="http://josm.openstreetmap.de/wiki/Help">here</a>. Merkaartor has little documentation <a href="http://merkaartor.be/wiki/merkaartor/Documentation">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -177,7 +177,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may have already seen it, but just in case not - the <a href="http://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginners' guide</a> and the links from it go through the concepts in OSM and is definitely worth a read.</p>
+<p>You may have already seen it, but just in case not - the <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginners' guide</a> and the links from it go through the concepts in OSM and is definitely worth a read.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

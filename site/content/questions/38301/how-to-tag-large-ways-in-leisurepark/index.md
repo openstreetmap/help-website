@@ -110,9 +110,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In this case drawing a closed way with <em><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">highway=pedestrian</a></em> and <em>area=yes</em> seems fine to me. If bicycles are allowed then add <em>bicycle=yes</em>, too.</p>
+<p>In this case drawing a closed way with <em><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">highway=pedestrian</a></em> and <em>area=yes</em> seems fine to me. If bicycles are allowed then add <em>bicycle=yes</em>, too.</p>
 <p>Alternatively there is a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway"><em>area:highway</em> proposal</a> which suggests to use the tag <em>area:highway=footway</em> without(!) an additional <em>highway</em> tag. This isn't currently rendered anywhere as far as I know.</p>
-<p>Note that you can always specify the <a href="http://wiki.openstreetmap.org/wiki/Key:width">width</a> of a way, although it won't get rendered at the standard layers at the moment.</p>
+<p>Note that you can always specify the <a href="https://wiki.openstreetmap.org/wiki/Key:width">width</a> of a way, although it won't get rendered at the standard layers at the moment.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

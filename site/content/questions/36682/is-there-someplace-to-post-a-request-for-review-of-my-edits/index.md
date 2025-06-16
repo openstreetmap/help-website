@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>A recent <a href="http://www.openstreetmap.org/user/Gerald%20Weber/diary/23680">diary post</a> has got me wondering about if I'm making mistakes without knowing it. I've been mapping since spring, and have been making an effort to read the wiki and the help pages when I have a question, and to just expand my knowledge of the protect as a whole.</p>
+<p>A recent <a href="https://www.openstreetmap.org/user/Gerald%20Weber/diary/23680">diary post</a> has got me wondering about if I'm making mistakes without knowing it. I've been mapping since spring, and have been making an effort to read the wiki and the help pages when I have a question, and to just expand my knowledge of the protect as a whole.</p>
 <p>That said it is entirely possible I've missed something, and have been making mistakes for the last 5 months. Is there someplace I can make a request for a review of my edits?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You can find some common mistakes here <a href="https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
+<p>You can find some common mistakes here <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
 </div>
 <div id="comment-36715-info" class="comment-info">
 <span class="comment-age">(09 Sep '14, 19:27)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -167,8 +167,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The place where you're most likely to get immediate feedback is on <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> - either the main #osm channel or (if one exists for where you live) a country-specific one.</p>
-<p>I wouldn't read too much into why-oh-why diary entries like the one that you linked to; they've been a feature of OpenStreetMap since the early days. However, when a question was asked here about the <a href="https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">most common errors</a> other users make the top answer was "<a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1026">not mapping</a>". It's sometimes forgotten that we were all new mappers once (when I started, the map was blank for miles in any direction, meaning all my "learning" was away from the public gaze - something that's unlikely to be true nowadays).</p>
+<p>The place where you're most likely to get immediate feedback is on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> - either the main #osm channel or (if one exists for where you live) a country-specific one.</p>
+<p>I wouldn't read too much into why-oh-why diary entries like the one that you linked to; they've been a feature of OpenStreetMap since the early days. However, when a question was asked here about the <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">most common errors</a> other users make the top answer was "<a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1026">not mapping</a>". It's sometimes forgotten that we were all new mappers once (when I started, the map was blank for miles in any direction, meaning all my "learning" was away from the public gaze - something that's unlikely to be true nowadays).</p>
 <p>Another thought - is there a <a href="http://wiki.osm.org/wiki/Current_events">local mapper gettogether</a> in your city? If there is, it's definitely worth going along and saying hello.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -242,7 +242,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>... or see <a href="http://wiki.openstreetmap.org/wiki/Quality_assurance">http://wiki.openstreetmap.org/wiki/Quality_assurance</a> to have the ultimate collection of tools to keep OSM data sane.</p>
+<p>... or see <a href="https://wiki.openstreetmap.org/wiki/Quality_assurance">https://wiki.openstreetmap.org/wiki/Quality_assurance</a> to have the ultimate collection of tools to keep OSM data sane.</p>
 </div>
 <div id="comment-36708-info" class="comment-info">
 <span class="comment-age">(09 Sep '14, 13:16)</span> <span class="comment-user userinfo">stephan75</span>
@@ -296,7 +296,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>They can see where you have been working here <a href="http://www.openstreetmap.org/user/keithonearth">http://www.openstreetmap.org/user/keithonearth</a> and i'd be surprised if no one wants to have look. To see edits or traces click on them from link.</p>
+<p>They can see where you have been working here <a href="https://www.openstreetmap.org/user/keithonearth">https://www.openstreetmap.org/user/keithonearth</a> and i'd be surprised if no one wants to have look. To see edits or traces click on them from link.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

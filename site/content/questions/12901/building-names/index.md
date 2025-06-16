@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think maybe you are seeing old tiles? The name I see is Malden Senior Center as per the tagging on <a href="http://www.openstreetmap.org/browse/way/29571541/history">this way</a> if I am looking in the correct place. Having said that I can't find what might have previously been tagged as the United Methodist Church - perhaps a node which has since been deleted. Ah, yes - <a href="http://www.openstreetmap.org/browse/node/358277472/history">you deleted it</a> I think. So you are seeing tiles which are most likely cached locally to you. Try whatever method clears your browser cache (often something like Shift-F5).</p>
+<p>I think maybe you are seeing old tiles? The name I see is Malden Senior Center as per the tagging on <a href="https://www.openstreetmap.org/browse/way/29571541/history">this way</a> if I am looking in the correct place. Having said that I can't find what might have previously been tagged as the United Methodist Church - perhaps a node which has since been deleted. Ah, yes - <a href="https://www.openstreetmap.org/browse/node/358277472/history">you deleted it</a> I think. So you are seeing tiles which are most likely cached locally to you. Try whatever method clears your browser cache (often something like Shift-F5).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

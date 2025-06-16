@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The Wiki notes a barrier=guardrail but there’s no mentioning of the type of rail, single or double, wooden beams or cables nor the special element to prevent motorcycles to slide underneath the guard_rail. IMHO that’s the real barrier=motocycle_barrier. The Wiki notes barrier=motorcycle_barrier <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier</a></p>
+<p>The Wiki notes a barrier=guardrail but there’s no mentioning of the type of rail, single or double, wooden beams or cables nor the special element to prevent motorcycles to slide underneath the guard_rail. IMHO that’s the real barrier=motocycle_barrier. The Wiki notes barrier=motorcycle_barrier <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier</a></p>
 <p>Its IMHO no barrier but a gate(way). How to tag the specific characteristics of a barrier=guardrail or don’t bother ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

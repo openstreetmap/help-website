@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is normally the hint used when the area you have chosen is too large. See this previous query regarding <a href="https://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper">Printing OSM maps to paper</a></p>
+<p>This is normally the hint used when the area you have chosen is too large. See this previous query regarding <a href="/questions/9043/printing-osm-maps-to-paper">Printing OSM maps to paper</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A tiny program I have been using is GPSPrune it will store the map as a png or on a windows PC you can get a screen jpeg, it shows a high level of detail. Its primary use is to display and then edit a GPX trace. It does need JAVA to run and needs a GPX trace to select an area but then clicking on View will show a map very very quickly, different style are available. It's worth a try. see pic blue line is trace and you can get times and speed info, or delete trace and just see map.<img src="http://help.openstreetmap.org/upfiles/Prune2_pic.JPG" alt="alt text" /></p>
+<p>A tiny program I have been using is GPSPrune it will store the map as a png or on a windows PC you can get a screen jpeg, it shows a high level of detail. Its primary use is to display and then edit a GPX trace. It does need JAVA to run and needs a GPX trace to select an area but then clicking on View will show a map very very quickly, different style are available. It's worth a try. see pic blue line is trace and you can get times and speed info, or delete trace and just see map.<img src="/upfiles/Prune2_pic.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

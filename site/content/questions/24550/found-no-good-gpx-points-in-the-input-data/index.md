@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-24553-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>have a look at this <a href="https://help.openstreetmap.org/questions/2130/gpx-file-no-time-tag">https://help.openstreetmap.org/questions/2130/gpx-file-no-time-tag</a></p>
+<p>have a look at this <a href="/questions/2130/gpx-file-no-time-tag">https://help.openstreetmap.org/questions/2130/gpx-file-no-time-tag</a></p>
 </div>
 <div id="comment-24553-info" class="comment-info">
 <span class="comment-age">(25 Jul '13, 07:40)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -201,7 +201,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you open the trace with a text editor does it look like this? I used notepad on my Win7 PC to view this one that I recorded with a Garmin Vista HCX. If your trace doesn't have the Lat Lon with times it won't be accepted. The system is set up this way so that traces constructed by tracing a copyrighted map are rejected. hope this is of assistance.<img src="http://help.openstreetmap.org/upfiles/zzzzzzz_what_a_gpx_trace_looks_like.JPG" alt="alt text" /><br />
+<p>If you open the trace with a text editor does it look like this? I used notepad on my Win7 PC to view this one that I recorded with a Garmin Vista HCX. If your trace doesn't have the Lat Lon with times it won't be accepted. The system is set up this way so that traces constructed by tracing a copyrighted map are rejected. hope this is of assistance.<img src="/upfiles/zzzzzzz_what_a_gpx_trace_looks_like.JPG" alt="alt text" /><br />
 </p>
 </div>
 <div class="answer-controls post-controls">

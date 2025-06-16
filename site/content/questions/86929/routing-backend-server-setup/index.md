@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to setup my own routing server, Few days ago, I asked the following question: <span></span><a href="https://help.openstreetmap.org/questions/86871/routing-distance-from-openstreet-map-data">https://help.openstreetmap.org/questions/86871/routing-distance-from-openstreet-map-data</a></p>
+<p>I am trying to setup my own routing server, Few days ago, I asked the following question: <span></span><a href="/questions/86871/routing-distance-from-openstreet-map-data">https://help.openstreetmap.org/questions/86871/routing-distance-from-openstreet-map-data</a></p>
 <p>So I downloaded the pbf file from Geofabrik. As given in this link: <span></span><a href="https://github.com/Project-OSRM/osrm-backend">https://github.com/Project-OSRM/osrm-backend</a>, I ran the docker command to preprocess the extract(pbf file). When I ran it for smaller region like berlin, it was successfully executed within minutes. When I downloaded the pbf file for entire USA and tried to run, it gave an error: "insufficient memory. Please provide more swap space."</p>
 <p>My system has Ubuntu, 12GB RAM, the download speed 41 MBps and upload speed are 21 MBps. By default, it was using swap space around 4GB. I increased the swap space to 20GB and 50 GB still same error. After when I increased the swap space to 100GB, it processed for around 160 hours(7 days), my system got heated up and shut down.</p>
 <p>Now, the plan is to do this activity on the AWS server. AWS instances come in large variety with different features, For this activity I don't think there is a much need of network bandwidth in this case(not sure), all that is needed is RAM.</p>

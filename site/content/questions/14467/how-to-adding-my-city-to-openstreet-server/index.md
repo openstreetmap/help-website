@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can add your city on your own by using ans OSM editor like Potlatch2, Merkaartor or JOSM.</p>
-<p>Read the OSM wiki <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a> to get familiar with OSM elements and its tagging schemata.</p>
+<p>Read the OSM wiki <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a> to get familiar with OSM elements and its tagging schemata.</p>
 <p>There is also a webservice called openstreetbugs where you can mark errors on the map in the hope that someone other will see your mark and do the edit, but you cannot rely on.</p>
 <p>So it seems to be better to get involved on your own. The learning experience is quite good if you deal with OSM some days or weeks.</p>
 </div>
@@ -142,7 +142,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Well, you'd need to read as far as <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">section 1.4.1</a> which says "A town may be marked using a node tagged with <a href="http://wiki.openstreetmap.org/wiki/Key:place">place</a>=<a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dtown">town</a>".</p>
+<p>Well, you'd need to read as far as <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">section 1.4.1</a> which says "A town may be marked using a node tagged with <a href="https://wiki.openstreetmap.org/wiki/Key:place">place</a>=<a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dtown">town</a>".</p>
 </div>
 <div id="comment-14560-info" class="comment-info">
 <span class="comment-age">(25 Jul '12, 05:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

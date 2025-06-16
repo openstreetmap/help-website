@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>A local river was dammed up in 1924, forming a man-made lake. The river no longer exists in this location as it is now at the bottom of the lake. For some reason, the river and lots of tributaries that haven't existed in 88 years was in OSM. When viewing the map, it showed a river (and tributaries) flowing down the middle of this big lake, which is ridiculous. I've already removed all the way-out-of-date river ways from Potlatch2 so it doesn't display in the lake anymore. But I now see that while the large man-made lake shows up, no name is displayed anywhere.</p>
 <p>How to handle this?</p>
 <p>When I click on the lake shore line, a mile or so at a time will highlight. But that's just a line (a way?), not a closed shape. Let me back up a bit and explain that the lake shows up as blue on the OSM map but I can't find anything in Potlatch2 that would designate this as water in any way. Those lines that are the shore, show up as "not recognised". I could assign them as coastline but I'm assuming coastline is only for an ocean? Either way, since these separate ways (lines) are not connected into a closed shape, Lake is not even an option for me to choose (unless I force it in with the advanced details). So do I need to join all the miles and miles of lakeshore so that I can then create one big lake? And again, why is this showing up as blue on the map when in Potlatch2 it's just an undesignated shape between various lines?</p>
-<p>If you need to look at the specific situation it is here: <a href="http://www.openstreetmap.org/?lat=35.09975&amp;lon=-81.03627&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=35.09975&amp;lon=-81.03627&amp;zoom=15&amp;layers=M</a> But I'm not asking anybody else to fix it - I just want to know a) what's going on here and b) how to fix it myself.</p>
+<p>If you need to look at the specific situation it is here: <a href="https://www.openstreetmap.org/?lat=35.09975&amp;lon=-81.03627&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=35.09975&amp;lon=-81.03627&amp;zoom=15&amp;layers=M</a> But I'm not asking anybody else to fix it - I just want to know a) what's going on here and b) how to fix it myself.</p>
 <p>Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to read up on how relations work. Checkout: <a href="http://wiki.openstreetmap.org/wiki/Relation">http://wiki.openstreetmap.org/wiki/Relation</a></p>
+<p>You need to read up on how relations work. Checkout: <a href="https://wiki.openstreetmap.org/wiki/Relation">https://wiki.openstreetmap.org/wiki/Relation</a></p>
 <p>With your specific case, each of the segments along the shoreline are polygons that are members of a multipolygon relation. Using Potlatch2, click on one of the shoreline segments then click 'Advanced' at the bottom-left. You'll see the relation box containing 'multipolygon lake'. Double click on that and you'll get a popup window which allows you to view and edit the relation.</p>
 <p>Regarding the missing name of the lake, my guess is that the relation is broken somehow which is stopping it from rendering on the main map. This could be because the segments don't form a closed circuit. Unfortunately that's the limit of Potlatch2. You will have to start playing with the more advanced JOSM tool to fix that one.</p>
 </div>
@@ -133,7 +133,7 @@ One Answer:
 <div id="post-16977-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The relation is <a href="http://www.openstreetmap.org/browse/relation/299167">http://www.openstreetmap.org/browse/relation/299167</a> which also shows the source (NHD). The relation looks OK in JOSM. It might be that due to the shape of the lake it might be trying to place the label outside the water area, but that's only a guess. I thought I found the label for a minute, but it was the same feature from the gnis import <a href="http://www.openstreetmap.org/browse/node/357090944">http://www.openstreetmap.org/browse/node/357090944</a> - perhaps this is an example of why sometimes imports are frowned on. Ah! This might be it? <a href="http://osm.org/go/ZSlzTSF9i--?m">http://osm.org/go/ZSlzTSF9i--?m</a></p>
+<p>The relation is <a href="https://www.openstreetmap.org/browse/relation/299167">https://www.openstreetmap.org/browse/relation/299167</a> which also shows the source (NHD). The relation looks OK in JOSM. It might be that due to the shape of the lake it might be trying to place the label outside the water area, but that's only a guess. I thought I found the label for a minute, but it was the same feature from the gnis import <a href="https://www.openstreetmap.org/browse/node/357090944">https://www.openstreetmap.org/browse/node/357090944</a> - perhaps this is an example of why sometimes imports are frowned on. Ah! This might be it? <a href="http://osm.org/go/ZSlzTSF9i--?m">http://osm.org/go/ZSlzTSF9i--?m</a></p>
 </div>
 <div id="comment-16977-info" class="comment-info">
 <span class="comment-age">(17 Oct '12, 20:26)</span> <span class="comment-user userinfo">EdLoach ♦</span>

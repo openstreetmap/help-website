@@ -116,7 +116,7 @@ osqa_accepted = false
 <li>open .osm file in text editor, find node (search for "action='modify'"), change location in XML, save file</li>
 <li>open JOSM, load file from disk, upload to OSM.</li>
 </ul>
-<p>Another, slightly less complicated, option is to use the <a href="http://wiki.openstreetmap.org/wiki/RawEditor">OSM Raw Editor</a> (which will nonetheless require that you edit XML code by hand, but it does so in a browser window).</p>
+<p>Another, slightly less complicated, option is to use the <a href="https://wiki.openstreetmap.org/wiki/RawEditor">OSM Raw Editor</a> (which will nonetheless require that you edit XML code by hand, but it does so in a browser window).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -178,7 +178,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you've marked waypoints on your Garmin, and you upload the trace to OSM, you can also add the waypoints to OSM directly in the Potlatch 2 online editor. Have a look at <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1056198">this trace</a> - if you edit the area and zoom in you'll see an orange dot where a waypoint was marked in the middle. To convert it to a node, "alt-click" on it, select "advanced" mode in Potlatch and add any necessary tags (and remove any Garmin ones that don't belong in OSM, such as "cmt" and "extensions").</p>
+<p>If you've marked waypoints on your Garmin, and you upload the trace to OSM, you can also add the waypoints to OSM directly in the Potlatch 2 online editor. Have a look at <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1056198">this trace</a> - if you edit the area and zoom in you'll see an orange dot where a waypoint was marked in the middle. To convert it to a node, "alt-click" on it, select "advanced" mode in Potlatch and add any necessary tags (and remove any Garmin ones that don't belong in OSM, such as "cmt" and "extensions").</p>
 <p>With Potlatch 2, this works provided the node isn't under an existing OSM way</p>
 </div>
 <div class="answer-controls post-controls">
@@ -210,7 +210,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Potlatch 1 doesn't ignore waypoints for me - trying editing the "this trace" link above with it and you'll see an orange dot for the waypoint.</p>
-<p>Potlatch 1 actually has a couple of advantages over Potlatch 2 as far as waypoint handling goes - see trac 3669 and <a href="http://help.openstreetmap.org/questions/2355/waypoint-handling-in-potlatch-2">http://help.openstreetmap.org/questions/2355/waypoint-handling-in-potlatch-2</a></p>
+<p>Potlatch 1 actually has a couple of advantages over Potlatch 2 as far as waypoint handling goes - see trac 3669 and <a href="/questions/2355/waypoint-handling-in-potlatch-2">https://help.openstreetmap.org/questions/2355/waypoint-handling-in-potlatch-2</a></p>
 </div>
 <div id="comment-7251-info" class="comment-info">
 <span class="comment-age">(22 Aug '11, 10:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

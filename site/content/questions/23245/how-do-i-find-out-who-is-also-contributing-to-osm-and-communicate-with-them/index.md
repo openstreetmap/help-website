@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you have an account on openstreetmap.org and go to <a href="http://www.openstreetmap.org/user/">http://www.openstreetmap.org/user/</a>&lt;your_username_&gt; , you will see mappers located near you in the map view on the right. For this to work you would have to set a location in your account preferences.</p>
+<p>If you have an account on openstreetmap.org and go to <a href="https://www.openstreetmap.org/user/">https://www.openstreetmap.org/user/</a>&lt;your_username_&gt; , you will see mappers located near you in the map view on the right. For this to work you would have to set a location in your account preferences.</p>
 <p>Another good way would be to have a look at "Who did it?" on <a href="http://zverik.osm.rambler.ru/whodidit/?zoom=11&amp;lat=14.63741&amp;lon=121.05136&amp;layers=BTT">http://zverik.osm.rambler.ru/whodidit/?zoom=11&amp;lat=14.63741&amp;lon=121.05136&amp;layers=BTT</a> for your area of interest and look who has edited there in the past, and then contact them through OSM.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -280,7 +280,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Welcome!</p>
 <p>Finding other people mapping in your area: Best look at the two tools listed in the bottom section of the wiki page <span>Nearby users</span>.</p>
-<p>Communicating: When you are on someone's user page (example: <a href="http://www.openstreetmap.org/user/aseerel4c26">my OSM.org user page</a>), then you can use the link "send message" to send a message to this user who can respond then. You can have a look in the user's recent edits there to see if he is really active currently.</p>
+<p>Communicating: When you are on someone's user page (example: <a href="https://www.openstreetmap.org/user/aseerel4c26">my OSM.org user page</a>), then you can use the link "send message" to send a message to this user who can respond then. You can have a look in the user's recent edits there to see if he is really active currently.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -363,7 +363,7 @@ osqa_accepted = false
 <div id="post-41113-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/87/pieren">@Pieren</a>: Well - ish. Notes certainly <em>are</em> designed to connect casual site users with local mappers (though otherwise I suspect I agree with what you're saying).</p>
+<p><a href="https://help.openstreetmap.org/users/87/pieren">@Pieren</a>: Well - ish. Notes certainly <em>are</em> designed to connect casual site users with local mappers (though otherwise I suspect I agree with what you're saying).</p>
 </div>
 <div id="comment-41113-info" class="comment-info">
 <span class="comment-age">(18 Feb '15, 13:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -76,7 +76,7 @@ osqa_accepted = false
 <div id="post-57391-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This one <a href="http://www.openstreetmap.org/relation/2889926#map=17/54.69490/-2.67471">http://www.openstreetmap.org/relation/2889926#map=17/54.69490/-2.67471</a></p>
+<p>This one <a href="https://www.openstreetmap.org/relation/2889926#map=17/54.69490/-2.67471">https://www.openstreetmap.org/relation/2889926#map=17/54.69490/-2.67471</a></p>
 </div>
 <div id="comment-57391-info" class="comment-info">
 <span class="comment-age">(01 Aug '17, 07:00)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -130,7 +130,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you doing bicycle routes? The bridge looks to be OK for car and foot routing, but is <a href="http://www.openstreetmap.org/way/23386404">set to exclude bicycles</a>. If bicycles aren't allowed on the bridge, then they can perhaps be <a href="http://www.openstreetmap.org/way/326550904">pushed over the footbridge</a> in which case it should probably be bicycle=dismount rather than bicycle=no</p>
+<p>Are you doing bicycle routes? The bridge looks to be OK for car and foot routing, but is <a href="https://www.openstreetmap.org/way/23386404">set to exclude bicycles</a>. If bicycles aren't allowed on the bridge, then they can perhaps be <a href="https://www.openstreetmap.org/way/326550904">pushed over the footbridge</a> in which case it should probably be bicycle=dismount rather than bicycle=no</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -288,7 +288,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/326550904">http://www.openstreetmap.org/way/326550904</a> is the issue - it's set to bicycle=no. cycle.travel assumes that the NCN 7 route relation overrides this, which the others don't appear to do.</p>
+<p><a href="https://www.openstreetmap.org/way/326550904">https://www.openstreetmap.org/way/326550904</a> is the issue - it's set to bicycle=no. cycle.travel assumes that the NCN 7 route relation overrides this, which the others don't appear to do.</p>
 </div>
 <div id="comment-57423-info" class="comment-info">
 <span class="comment-age">(02 Aug '17, 09:33)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -311,7 +311,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Personally, I would have routed the NCN over the road bridge as the blue signs are advisory &amp; only in one direction. Many riders find leaving &amp; especially rejoining traffic flows to be more dangerous than staying in the road.</p>
-<p>If the NCN is to remain on the footpath then <a href="http://www.openstreetmap.org/way/124356979">http://www.openstreetmap.org/way/124356979</a> needs trimming</p>
+<p>If the NCN is to remain on the footpath then <a href="https://www.openstreetmap.org/way/124356979">https://www.openstreetmap.org/way/124356979</a> needs trimming</p>
 <p>I've never understood the logic of 'cyclists dismount' for narrow ways as someone pushing takes up twice the space.</p>
 </div>
 <div id="comment-57481-info" class="comment-info">
@@ -354,7 +354,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://" alt="alt text" />Richard pointed out the problem. I have edited that bit to bicycle=yes. it works now. After a bit of research this main bridge was is only two meters wide and was a temporary thirty odd years ago! the footbridge seems to be under a meter wide, hence the advice to dismount. It is also on "c2c"<img src="https://help.openstreetmap.org/upfiles/Eden_Bridge_graphhopper.JPG" alt="alt text" /> coast to coast route. So how did i edit it? 1 click edit 2 select id 3 click on the way, inspect it 4 change it to cycle =yes 5 save edit</p>
+<p><img src="http://" alt="alt text" />Richard pointed out the problem. I have edited that bit to bicycle=yes. it works now. After a bit of research this main bridge was is only two meters wide and was a temporary thirty odd years ago! the footbridge seems to be under a meter wide, hence the advice to dismount. It is also on "c2c"<img src="/upfiles/Eden_Bridge_graphhopper.JPG" alt="alt text" /> coast to coast route. So how did i edit it? 1 click edit 2 select id 3 click on the way, inspect it 4 change it to cycle =yes 5 save edit</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -408,7 +408,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/iD_edit_2NjH1SX.JPG" alt="alt text" /><img src="http://" alt="alt text" /></p>
+<p><img src="/upfiles/iD_edit_2NjH1SX.JPG" alt="alt text" /><img src="http://" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -442,7 +442,7 @@ osqa_accepted = false
 <div id="post-57457-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>More on iD editor:- <a href="http://wiki.openstreetmap.org/wiki/ID">http://wiki.openstreetmap.org/wiki/ID</a></p>
+<p>More on iD editor:- <a href="https://wiki.openstreetmap.org/wiki/ID">https://wiki.openstreetmap.org/wiki/ID</a></p>
 </div>
 <div id="comment-57457-info" class="comment-info">
 <span class="comment-age">(04 Aug '17, 10:37)</span> <span class="comment-user userinfo">andy mackey</span>

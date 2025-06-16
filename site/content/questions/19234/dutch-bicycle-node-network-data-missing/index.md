@@ -190,7 +190,7 @@ One Answer:
 <div id="post-19244-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sometime last year some people have decided that the nodes no longer have to be part of the relations connecting the nodes. The whole of Flanders and large parts of the Netherlands are updated to this "improved" tagging scheme. See the changes to <a href="http://wiki.openstreetmap.org/wiki/Cycle_Node_Network_Tagging">Cycle Node Network Tagging</a> in October last year.</p>
+<p>Sometime last year some people have decided that the nodes no longer have to be part of the relations connecting the nodes. The whole of Flanders and large parts of the Netherlands are updated to this "improved" tagging scheme. See the changes to <a href="https://wiki.openstreetmap.org/wiki/Cycle_Node_Network_Tagging">Cycle Node Network Tagging</a> in October last year.</p>
 <blockquote>
 <p>There is no need to add the junction nodes to this relation. They are part of the ways, so inherently already part of it. This allows for a more controlled way of downloading the hierarchy (collection/network/route).</p>
 </blockquote>

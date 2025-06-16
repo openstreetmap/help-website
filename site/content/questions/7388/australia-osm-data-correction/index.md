@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>have a look at the recent question <a href="http://help.openstreetmap.org/questions/7375/fundamental-question-on-mapping">http://help.openstreetmap.org/questions/7375/fundamental-question-on-mapping</a> You have good quality bing in Gosford ,if I've looked at the right one, so it would be an easy first edit. please have a go.</p>
+<p>have a look at the recent question <a href="/questions/7375/fundamental-question-on-mapping">https://help.openstreetmap.org/questions/7375/fundamental-question-on-mapping</a> You have good quality bing in Gosford ,if I've looked at the right one, so it would be an easy first edit. please have a go.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

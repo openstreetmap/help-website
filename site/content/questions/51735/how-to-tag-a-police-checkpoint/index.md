@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>It seems worth mapping these, as they may effect a traveler's travel time, and indicate a certain political climate in the area. I know I would have found knowledge of their location useful at times.</p>
 <p>I see the military=checkpoint but this is inaccurate if it is the civilian police running the post. There is the checkpoint tag, but it is intended for completely different usage.</p>
 <p>I'm surprised not to find a useful tag on the wiki or in taginfo, possibly I'm just not doing a good job of searching. Can anyone point me to a good tag, or is the consensus to start a new tag?</p>
-<p><strong>Edit:</strong> <a href="http://www.openstreetmap.org/node/2418793696">here</a> is an example of how another editor solved this problem, just by using the name tag. It doesn't seem like an ideal solution to me, but useful none the less. I've added some additional details to the area.</p>
+<p><strong>Edit:</strong> <a href="https://www.openstreetmap.org/node/2418793696">here</a> is an example of how another editor solved this problem, just by using the name tag. It doesn't seem like an ideal solution to me, but useful none the less. I've added some additional details to the area.</p>
 <p>I've realized that I've been overlooking something obvious, that the check points (at least here in India) all have gates to control the flow of traffic, so I've been adding barrier=gate tags to relevant locations. Additionally, I've been adding the highway=checkpoint tag, as I think it's a useful tag, and doesn't deserve to die. I've only added two or three at this point, but taginfo tells me that their are 90 <a href="https://taginfo.openstreetmap.org/tags/highway=checkpoint">instances</a> at present.</p>
 <p>As has been noted by others below there are many potential usages of this tag, related to the one I brought up. I think that mapping these features, and extending this tag to do so would be a good thing.</p>
 </div>
@@ -153,7 +153,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>There's a thread here: <a href="http://forum.openstreetmap.org/viewtopic.php?id=9866">http://forum.openstreetmap.org/viewtopic.php?id=9866</a> indicating highway=checkpoint is no longer in use.</p>
-<p>And there's another thread here: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Checkpoint">http://wiki.openstreetmap.org/wiki/Proposed_features/Checkpoint</a> indicating man_made=Checkpoint has been abandoned.</p>
+<p>And there's another thread here: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Checkpoint">https://wiki.openstreetmap.org/wiki/Proposed_features/Checkpoint</a> indicating man_made=Checkpoint has been abandoned.</p>
 </div>
 <div id="comment-51738-info" class="comment-info">
 <span class="comment-age">(26 Aug '16, 06:31)</span> <span class="comment-user userinfo">logrady</span>
@@ -166,9 +166,9 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Seems like there ought to be some way to tag those. Here are three US Border Patrol permanent check points that aren't obviously shown as things that might slow you down when traveling (middle one is approximate as there is nothing on the map there at all):</p>
-<p><a href="http://www.openstreetmap.org/#map=17/33.35178/-117.52488">http://www.openstreetmap.org/#map=17/33.35178/-117.52488</a> <a href="http://www.openstreetmap.org/#map=15/32.7956/-116.4858">http://www.openstreetmap.org/#map=15/32.7956/-116.4858</a> <a href="http://www.openstreetmap.org/#map=16/32.6593/-114.3643">http://www.openstreetmap.org/#map=16/32.6593/-114.3643</a></p>
+<p><a href="https://www.openstreetmap.org/#map=17/33.35178/-117.52488">https://www.openstreetmap.org/#map=17/33.35178/-117.52488</a> <a href="https://www.openstreetmap.org/#map=15/32.7956/-116.4858">https://www.openstreetmap.org/#map=15/32.7956/-116.4858</a> <a href="https://www.openstreetmap.org/#map=16/32.6593/-114.3643">https://www.openstreetmap.org/#map=16/32.6593/-114.3643</a></p>
 <p>And here are three California agricultural inspection stations. Which, fortunately, seldom cause long traffic backups.</p>
-<p><a href="http://www.openstreetmap.org/#map=16/32.7448/-114.7427">http://www.openstreetmap.org/#map=16/32.7448/-114.7427</a> <a href="http://www.openstreetmap.org/#map=17/33.60570/-114.53589">http://www.openstreetmap.org/#map=17/33.60570/-114.53589</a> <a href="http://www.openstreetmap.org/#map=17/34.18911/-114.57497">http://www.openstreetmap.org/#map=17/34.18911/-114.57497</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/32.7448/-114.7427">https://www.openstreetmap.org/#map=16/32.7448/-114.7427</a> <a href="https://www.openstreetmap.org/#map=17/33.60570/-114.53589">https://www.openstreetmap.org/#map=17/33.60570/-114.53589</a> <a href="https://www.openstreetmap.org/#map=17/34.18911/-114.57497">https://www.openstreetmap.org/#map=17/34.18911/-114.57497</a></p>
 <p>On all of the above, expect to come to a complete stop. And on the California located border patrol checks you can often expect a 15 minute to 30 minute backup during busy times.</p>
 <p>None are military (though some might argue that for the border patrol).</p>
 <p>And we have no uniform way to tag these?</p>

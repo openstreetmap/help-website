@@ -171,7 +171,7 @@ One Answer:
 <div id="post-54277-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: now it shows:</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: now it shows:</p>
 <pre><code>Server status:
 osm.pleiades.uni-wuppertal.de/garmin/, queue = 0 requests (~0 days), status = OK
 osm2.pleiades.uni-wuppertal.de/garmin/, queue = 0 requests (~0 days), status = OK

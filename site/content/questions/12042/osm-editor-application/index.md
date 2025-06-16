@@ -113,9 +113,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would recommend you to try out <a href="http://www.openstreetmap.org/edit?lat=43.00075&amp;lon=-4.13596&amp;zoom=17">Potlatch2</a> (Online editor) first and then advance to <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>.</p>
+<p>I would recommend you to try out <a href="https://www.openstreetmap.org/edit?lat=43.00075&amp;lon=-4.13596&amp;zoom=17">Potlatch2</a> (Online editor) first and then advance to <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>.</p>
 <p>In that way you will have a better understanding of the OSM-project and you will always have the Potlatch editor available for quick fixes (where ever you are).</p>
-<p>You can read <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">this</a> for pros and cons.</p>
+<p>You can read <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">this</a> for pros and cons.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

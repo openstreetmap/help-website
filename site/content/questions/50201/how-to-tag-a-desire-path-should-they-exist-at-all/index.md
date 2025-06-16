@@ -141,7 +141,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>There's also the "informal=" tag, to distinguish evolved paths from constructed ones: <a href="http://wiki.openstreetmap.org/wiki/Key:informal">http://wiki.openstreetmap.org/wiki/Key:informal</a></p>
+<p>There's also the "informal=" tag, to distinguish evolved paths from constructed ones: <a href="https://wiki.openstreetmap.org/wiki/Key:informal">https://wiki.openstreetmap.org/wiki/Key:informal</a></p>
 </div>
 <div id="comment-50270-info" class="comment-info">
 <span class="comment-age">(17 Jun '16, 08:14)</span> <span class="comment-user userinfo">Carnildo</span>
@@ -219,7 +219,7 @@ width=0.2</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11592/leeuw"></a><a href="http://help.openstreetmap.org/users/11592/leeuw">@Leeuw</a>: in my opinion it is quite clear that in that case (without knowing more details) no one is allowed to walk there. <code>access=no</code> or <code>=private</code>. Or was the fence an accident and everybody (including the owner) agrees that it should be removed soon?</p>
+<p><a href="https://help.openstreetmap.org/users/11592/leeuw"></a><a href="https://help.openstreetmap.org/users/11592/leeuw">@Leeuw</a>: in my opinion it is quite clear that in that case (without knowing more details) no one is allowed to walk there. <code>access=no</code> or <code>=private</code>. Or was the fence an accident and everybody (including the owner) agrees that it should be removed soon?</p>
 <p>It may be good to map the fence as a barrier too.</p>
 </div>
 <div id="comment-50205-info" class="comment-info">
@@ -232,7 +232,7 @@ width=0.2</code></pre>
 4
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11592/leeuw">@Leeuw</a>: first and foremost the path exists, thus it should be mapped.<br />
+<p><a href="https://help.openstreetmap.org/users/11592/leeuw">@Leeuw</a>: first and foremost the path exists, thus it should be mapped.<br />
 Adding any access tag doesn't prevent people walking it in RL.</p>
 </div>
 <div id="comment-50229-info" class="comment-info">

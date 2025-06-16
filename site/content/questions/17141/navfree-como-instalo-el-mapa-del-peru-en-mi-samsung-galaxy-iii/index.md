@@ -68,7 +68,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Cual programa?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a></p>
 <p>(English of question was "Hi, I just installed the program on my samsung galaxy III but do not see in the store a map of Peru. what should I do")</p>
 </div>
 <div id="comment-17142-info" class="comment-info">
@@ -140,7 +140,7 @@ One Answer:
 <p>Nevmii also have a <a href="http://navmii.uservoice.com/forums/76347-navmii-">uservoice page</a> (a customer feedback mechanism) on which someone's asked "Please make it possible that users can download their respective regional maps". Someone from NavMii has answered:</p>
 <pre><code>But with regard to downloading data from OpenStreetMap… No can do The OSM data must be compiled and heavily optimised. Our compilers are propriatary and are likely to remain so for the forseeable future.</code></pre>
 <p>So it's not good news - it doesn't look like you'll be able to get a map of Peru from Navfree any time soon.</p>
-<p>However, there are a <a href="http://wiki.openstreetmap.org/wiki/Android">large number of other Android apps</a> available, some of which may provide the features that you're looking for. I don't have an Android phone myself, so can't recommend a particular one. In addition, <a href="https://help.openstreetmap.org/search/?q=android&amp;Submit=Search&amp;t=question">lots of questions here mention Android</a>, so reading through the answers to those may also help.</p>
+<p>However, there are a <a href="https://wiki.openstreetmap.org/wiki/Android">large number of other Android apps</a> available, some of which may provide the features that you're looking for. I don't have an Android phone myself, so can't recommend a particular one. In addition, <a href="https://help.openstreetmap.org/search/?q=android&amp;Submit=Search&amp;t=question">lots of questions here mention Android</a>, so reading through the answers to those may also help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

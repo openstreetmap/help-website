@@ -147,7 +147,7 @@ osqa_accepted = false
 <p>Routes don't have to have a direction. It's fine to split ways where needed for modeling something. Alternative ways of modeling the difference reflected in the split would anyway be just as complicated.</p>
 <p>If a way can have traffic in both directions, there's no problem using it for routes that traverse it in one direction or the other. Ways should not overlap.</p>
 <p>So a route can have a direction, in which case the ways would be marked as forward or backward, but it is not necessary, many ways just have a blank role, with no info about direction. The is some indication of this on the wiki page for routes:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:route#Members">http://wiki.openstreetmap.org/wiki/Relation:route#Members</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:route#Members">https://wiki.openstreetmap.org/wiki/Relation:route#Members</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to contact the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">system admins</a> to resolve your problems.</p>
+<p>You need to contact the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">system admins</a> to resolve your problems.</p>
 <p>In any case you've obviously inadvertently used two different e-mail addresses (you can't create two accounts with -exactly- the same e-mail address).</p>
 </div>
 <div class="answer-controls post-controls">

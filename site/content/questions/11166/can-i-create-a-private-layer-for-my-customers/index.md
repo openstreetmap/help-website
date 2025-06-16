@@ -71,7 +71,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See <a href="http://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer">http://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer</a> for the answer to this question.</p>
+<p>See <a href="/questions/6905/is-it-possible-to-create-my-individual-layer">https://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer</a> for the answer to this question.</p>
 </div>
 <div id="comment-11167-info" class="comment-info">
 <span class="comment-age">(13 Mar '12, 14:37)</span> <span class="comment-user userinfo">Jonathan Ben...</span>
@@ -93,7 +93,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question -- see http://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer" by Jonathan Bennett 13 Mar '12, 14:36
+### The question has been closed for the following reason "Duplicate Question -- see https://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer" by Jonathan Bennett 13 Mar '12, 14:36
 
 </div>
 

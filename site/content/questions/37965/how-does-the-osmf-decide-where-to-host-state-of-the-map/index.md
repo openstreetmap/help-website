@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>State of the Map (SotM) is an annual conference hosted by the OpenStreetMap Foundation. Previous conferences have taken place in the UK, Japan, USA, Spain and so on (see <a href="http://wiki.openstreetmap.org/wiki/State_of_the_Map">1</a>). Note that there are also SotM-{} conferences organised by local teams (e.g. SotM-US) but these are not affiliated with the OSM Foundation.</p>
+<p>State of the Map (SotM) is an annual conference hosted by the OpenStreetMap Foundation. Previous conferences have taken place in the UK, Japan, USA, Spain and so on (see <a href="https://wiki.openstreetmap.org/wiki/State_of_the_Map">1</a>). Note that there are also SotM-{} conferences organised by local teams (e.g. SotM-US) but these are not affiliated with the OSM Foundation.</p>
 <p>My question is how does the Foundation decide where to host the next conference?</p>
-<p>1] <a href="http://wiki.openstreetmap.org/wiki/State_of_the_Map">https://wiki.openstreetmap.org/wiki/State_of_the_Map</a></p>
+<p>1] <a href="https://wiki.openstreetmap.org/wiki/State_of_the_Map">https://wiki.openstreetmap.org/wiki/State_of_the_Map</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-conference" rel="tag" title="see questions tagged &#39;conference&#39;">conference</span> <span class="post-tag tag-link-sotm" rel="tag" title="see questions tagged &#39;sotm&#39;">sotm</span> <span class="post-tag tag-link-community" rel="tag" title="see questions tagged &#39;community&#39;">community</span> <span class="post-tag tag-link-osmf" rel="tag" title="see questions tagged &#39;osmf&#39;">osmf</span>
@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a "Call for Venues" each year. Currently the call for venues for SotM 2015 is open. Anyone can submit their proposal at <a href="http://wiki.openstreetmap.org/wiki/State_Of_The_Map_2015/Call_for_venues">http://wiki.openstreetmap.org/wiki/State_Of_The_Map_2015/Call_for_venues</a></p>
+<p>There is a "Call for Venues" each year. Currently the call for venues for SotM 2015 is open. Anyone can submit their proposal at <a href="https://wiki.openstreetmap.org/wiki/State_Of_The_Map_2015/Call_for_venues">https://wiki.openstreetmap.org/wiki/State_Of_The_Map_2015/Call_for_venues</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

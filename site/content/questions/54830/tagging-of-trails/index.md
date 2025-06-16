@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to map trails that are used (unofficially) for gas-powered dirt bikes... Trails are much wider than the wooded trails nearby, but they are not big enough for a tractor or four wheel vehicle. Currently they are tagged highway=service which is wrong, but not sure whether to use highway=path width=3 or highway=track ... also wondering how to show the state of disrepair, that would indicate the trees fallen into these trails. Found <a href="https://help.openstreetmap.org/questions/50948/track-wide-enough-for-quad-bikes-but-not-for-agriculutural-only-vehicles-highwaytrack-or-highwaypath">this question</a> with a search and figured it would be good to add this question here. Found this image below that looks similar to the Hyannis Mass USA area that I am mapping.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/dirtbike.jpg" alt="alt text" /></p>
+<p>I'm trying to map trails that are used (unofficially) for gas-powered dirt bikes... Trails are much wider than the wooded trails nearby, but they are not big enough for a tractor or four wheel vehicle. Currently they are tagged highway=service which is wrong, but not sure whether to use highway=path width=3 or highway=track ... also wondering how to show the state of disrepair, that would indicate the trees fallen into these trails. Found <a href="/questions/50948/track-wide-enough-for-quad-bikes-but-not-for-agriculutural-only-vehicles-highwaytrack-or-highwaypath">this question</a> with a search and figured it would be good to add this question here. Found this image below that looks similar to the Hyannis Mass USA area that I am mapping.</p>
+<p><img src="/upfiles/dirtbike.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-track" rel="tag" title="see questions tagged &#39;track&#39;">track</span> <span class="post-tag tag-link-path" rel="tag" title="see questions tagged &#39;path&#39;">path</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -69,7 +69,7 @@ osqa_accepted = true
 <div id="post-54831-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've converted your "answer" from <a href="https://help.openstreetmap.org/questions/50948/track-wide-enough-for-quad-bikes-but-not-for-agriculutural-only-vehicles-highwaytrack-or-highwaypath">this question</a> since it is clearly a question and not an answer. Please don't add new questions to existing ones. This help system is meant for adding answers only.</p>
+<p>I've converted your "answer" from <a href="/questions/50948/track-wide-enough-for-quad-bikes-but-not-for-agriculutural-only-vehicles-highwaytrack-or-highwaypath">this question</a> since it is clearly a question and not an answer. Please don't add new questions to existing ones. This help system is meant for adding answers only.</p>
 </div>
 <div id="comment-54831-info" class="comment-info">
 <span class="comment-age">(28 Feb '17, 12:32)</span> <span class="comment-user userinfo">scai ♦</span>

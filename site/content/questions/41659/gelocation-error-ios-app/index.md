@@ -160,7 +160,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>and about the second bit:</p>
-<p>See the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a> to get a list of all apps that are related to OSM.</p>
+<p>See the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a> to get a list of all apps that are related to OSM.</p>
 <p>If you know one that is missing in the wiki list, let us know!</p>
 </div>
 <div class="answer-controls post-controls">

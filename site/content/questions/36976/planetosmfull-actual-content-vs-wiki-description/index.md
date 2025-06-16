@@ -66,7 +66,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You seem to mix the <em>planet</em> and the <em>history</em>. If you are interested in the <em>planet</em> (the data, i.e. all nodes, ways and relations including their tags) then you downloaded the wrong file and should download from one of the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Planet.osm_mirrors">planet mirrors</a> instead (<em>planet-latest.osm.pbf</em> or <em>planet-latest.osm.bz2</em>).</p>
+<p>You seem to mix the <em>planet</em> and the <em>history</em>. If you are interested in the <em>planet</em> (the data, i.e. all nodes, ways and relations including their tags) then you downloaded the wrong file and should download from one of the <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Planet.osm_mirrors">planet mirrors</a> instead (<em>planet-latest.osm.pbf</em> or <em>planet-latest.osm.bz2</em>).</p>
 </div>
 <div id="comment-36983-info" class="comment-info">
 <span class="comment-age">(22 Sep '14, 19:48)</span> <span class="comment-user userinfo">scai ♦</span>

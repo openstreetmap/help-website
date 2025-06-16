@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Oops, that was my browser cache, my bad!<br />
-I found the answer while browsing other beginners questions. E.g. <a href="http://help.openstreetmap.org/questions/18390/road-appears-and-disappears-at-different-scales/18392">road-appears-and-disappears-at-different-scales</a></p>
+I found the answer while browsing other beginners questions. E.g. <a href="/questions/18390/road-appears-and-disappears-at-different-scales/18392">road-appears-and-disappears-at-different-scales</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use the <a href="http://wiki.openstreetmap.org/wiki/Tag:shop=furniture">shop=furniture</a> tag.</p>
+<p>Use the <a href="https://wiki.openstreetmap.org/wiki/Tag:shop=furniture">shop=furniture</a> tag.</p>
 <p>7606 features are using this tag as of 31st May 2011 according to <a href="http://taginfo.openstreetmap.de/tags/shop=furniture">taginfo</a>.</p>
 </div>
 <div class="answer-controls post-controls">

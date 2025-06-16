@@ -182,7 +182,7 @@ To post there requires a githup-login...</p>
 4
 </div>
 <div class="comment-text">
-<p>OMG, don't use the tag "area=yes/no" in order to help the editor to recognize a polygon or a line. Check this wiki page about "area" http://wiki.openstreetmap.org/wiki/Area</p>
+<p>OMG, don't use the tag "area=yes/no" in order to help the editor to recognize a polygon or a line. Check this wiki page about "area" https://wiki.openstreetmap.org/wiki/Area</p>
 </div>
 <div id="comment-28917-info" class="comment-info">
 <span class="comment-age">(09 Dec '13, 10:59)</span> <span class="comment-user userinfo">Pieren</span>

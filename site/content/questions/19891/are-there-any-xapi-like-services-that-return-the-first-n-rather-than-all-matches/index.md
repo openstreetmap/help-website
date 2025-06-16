@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Limit_attribute_to_limit_elements_.28limit.2C_n.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#limit_attribute</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Limit_attribute_to_limit_elements_.28limit.2C_n.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#limit_attribute</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

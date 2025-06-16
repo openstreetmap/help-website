@@ -107,8 +107,8 @@ osqa_accepted = false
 <p>Assuming your local imagery is available under a compatible license or you have explicit permission.</p>
 <p>There are two plugins for the JOSM editor that could help you with this.</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">ImportImagePlugin</a> for georeferenced imagery</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">PicLayer</a> for any image</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">ImportImagePlugin</a> for georeferenced imagery</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">PicLayer</a> for any image</li>
 </ul>
 <p>If you are allowed to upload the imagery to the web, then you can also use <a href="http://mapwarper.net/">Map Warper</a>.</p>
 </div>

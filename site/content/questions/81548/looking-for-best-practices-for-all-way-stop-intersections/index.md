@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>What are the best practices for mapping an all-way stop intersection? I've seen where the stop is a single shared node for all the ways at the intersection and I've also seen a separate stop for each way usually at the point of the stop sign or crosswalk. I'm wondering primarily about stop signs but do the same rules apply for traffic signals?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/single_node_stop.jpg" alt="Single node stop" /> <img src="https://help.openstreetmap.org/upfiles/multi-stop_intersection.jpg" alt="Muti-stop intersection" /></p>
+<p><img src="/upfiles/single_node_stop.jpg" alt="Single node stop" /> <img src="/upfiles/multi-stop_intersection.jpg" alt="Muti-stop intersection" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-intersections" rel="tag" title="see questions tagged &#39;intersections&#39;">intersections</span> <span class="post-tag tag-link-stop" rel="tag" title="see questions tagged &#39;stop&#39;">stop</span> <span class="post-tag tag-link-traffic_signals" rel="tag" title="see questions tagged &#39;traffic_signals&#39;">traffic_signals</span> <span class="post-tag tag-link-stopsign" rel="tag" title="see questions tagged &#39;stopsign&#39;">stopsign</span>

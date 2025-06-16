@@ -130,7 +130,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is not an option on the main website, but there are several third party sites that provide this service based on OpenStreetMap data: <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters</a></p>
+<p>This is not an option on the main website, but there are several third party sites that provide this service based on OpenStreetMap data: <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -129,7 +129,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is certainly possible to do this automated, however getting it right tends to be a lot of work. In the past for example similar things have been done with abbreviated road names in the USA.</p>
-<p>But before you even think about coding (as said you probably can modify one of the existing scripts) you should get agreement and support from your fellow mappers in Iran. See <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a> I realize that this may be easier said than done in a country with a small number of mappers.</p>
+<p>But before you even think about coding (as said you probably can modify one of the existing scripts) you should get agreement and support from your fellow mappers in Iran. See <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a> I realize that this may be easier said than done in a country with a small number of mappers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

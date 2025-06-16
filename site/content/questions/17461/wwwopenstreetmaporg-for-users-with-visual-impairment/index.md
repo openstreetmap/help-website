@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "www.openstreetmap.org for users with visual impairment?"
-description = '''The website at http://www.openstreetmap.org/ is not suitable for a visually impaired person. Text and map have poor contrast. Some users may be helped by having the text and map images with a black background with white text and white markings such as limits etc.. Is it possible to add such a layout...'''
+description = '''The website at https://www.openstreetmap.org/ is not suitable for a visually impaired person. Text and map have poor contrast. Some users may be helped by having the text and map images with a black background with white text and white markings such as limits etc.. Is it possible to add such a layout...'''
 date = "2012-11-04T16:08:00Z"
 lastmod = "2012-11-05T14:54:00Z"
 weight = 17461
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The website at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> is not suitable for a visually impaired person. Text and map have poor contrast. Some users may be helped by having the text and map images with a black background with white text and white markings such as limits etc..</p>
+<p>The website at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> is not suitable for a visually impaired person. Text and map have poor contrast. Some users may be helped by having the text and map images with a black background with white text and white markings such as limits etc..</p>
 <p>Is it possible to add such a layout to the website?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -92,7 +92,7 @@ osqa_accepted = false
 <div id="post-17491-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Finally, please specify what website you are talking about. There are many websites and apps that use OSM data. Do you mean the site at <a href="http://www.openstreetmap.org/?">http://www.openstreetmap.org/?</a></p>
+<p>Finally, please specify what website you are talking about. There are many websites and apps that use OSM data. Do you mean the site at <a href="https://www.openstreetmap.org/?">https://www.openstreetmap.org/?</a></p>
 </div>
 <div id="comment-17491-info" class="comment-info">
 <span class="comment-age">(05 Nov '12, 11:39)</span> <span class="comment-user userinfo">sleske</span>
@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are already a bunch of special maps or even apps for mobile devices listet at <a href="http://wiki.openstreetmap.org/wiki/OSM_for_the_blind">OSM_for_the_blind</a></p>
+<p>There are already a bunch of special maps or even apps for mobile devices listet at <a href="https://wiki.openstreetmap.org/wiki/OSM_for_the_blind">OSM_for_the_blind</a></p>
 <p>Maybe there are some more solutions to "display" OSM data in a way you can use?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -209,7 +209,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap has a focus on data collection, not map creation. The map on the openstreetmap.org main site tries to showcase some of the data, but it can’t possibly show everything or fulfill every need. There are <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">lots of maps and projects</a> based on OSM data. Maybe some of them already fulfill your need?</p>
+<p>OpenStreetMap has a focus on data collection, not map creation. The map on the openstreetmap.org main site tries to showcase some of the data, but it can’t possibly show everything or fulfill every need. There are <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">lots of maps and projects</a> based on OSM data. Maybe some of them already fulfill your need?</p>
 <p>What about e.g. <a href="http://www.amauro.map.at/">AmauroMap</a> or the <a href="http://maps.stamen.com/toner/">toner map</a>?</p>
 <p>If those don’t help you I’m afraid you will have to find someone or an organization to create a high-contrast map style for you e.g. in <a href="http://mapbox.com/tilemill/">TileMill</a>.</p>
 </div>

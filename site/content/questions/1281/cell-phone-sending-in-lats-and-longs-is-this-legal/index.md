@@ -112,8 +112,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Re-read <a href="http://wiki.openstreetmap.org/wiki/Licence">licenses</a> of OpenStreetMap, there are free.</p>
-<p>Concerning nominatim you can read <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a> about nominal server. But as free software you can build your own nominatim server and make as many request as you need. Note there also have other instances of nominatime server, like at MapQuest. All this information come from the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> wiki page.</p>
+<p>Re-read <a href="https://wiki.openstreetmap.org/wiki/Licence">licenses</a> of OpenStreetMap, there are free.</p>
+<p>Concerning nominatim you can read <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a> about nominal server. But as free software you can build your own nominatim server and make as many request as you need. Note there also have other instances of nominatime server, like at MapQuest. All this information come from the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> wiki page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I believe you were looking for <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a>.</p>
+<p>I believe you were looking for <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

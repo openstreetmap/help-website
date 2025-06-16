@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bus parking, would be entered as a normal parking (i.e. <code>amenity=parking</code>), but would required the use of the advanced tagging system to use <a href="http://wiki.openstreetmap.org/wiki/Key:access">access tagging</a> (in this case, I believe that is <code>access=no</code> with <code>bus=yes</code>)</p>
+<p>Bus parking, would be entered as a normal parking (i.e. <code>amenity=parking</code>), but would required the use of the advanced tagging system to use <a href="https://wiki.openstreetmap.org/wiki/Key:access">access tagging</a> (in this case, I believe that is <code>access=no</code> with <code>bus=yes</code>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

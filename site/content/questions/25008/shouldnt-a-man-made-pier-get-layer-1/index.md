@@ -112,7 +112,7 @@ osqa_accepted = true
 <li><code>highway</code> (when used for areas, though it is drawn above <code>landuse</code> or <code>natural</code>)</li>
 </ul>
 <p>So since the water is implicitly "background", there's no need to give the pier a layer.</p>
-<p>For example, the <a href="http://wiki.openstreetmap.org/wiki/Key:layer">wiki</a> explains:</p>
+<p>For example, the <a href="https://wiki.openstreetmap.org/wiki/Key:layer">wiki</a> explains:</p>
 <blockquote>
 <p>Waterways (waterway=*) do not normally need to be tagged with a layer and are generally rendered as if they flow underneath built features. [...] Landuses, such as parks and woods should not normally be tagged with a layer.</p>
 </blockquote>
@@ -210,7 +210,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well strictly speaking the <a href="http://wiki.openstreetmap.org/wiki/Layer">layer tag</a> is relative, so what value is used will depend on what else is mapped (or is planned to be mapped) under or over it.</p>
+<p>Well strictly speaking the <a href="https://wiki.openstreetmap.org/wiki/Layer">layer tag</a> is relative, so what value is used will depend on what else is mapped (or is planned to be mapped) under or over it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

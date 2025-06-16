@@ -159,7 +159,7 @@ XML=/usr/local/etc/mapnik/has_address.xml
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11425/dalishi"></a><a href="http://help.openstreetmap.org/users/11425/dalishi">@dalishi</a> the datasource specifications are in the style file. If for whatever reason the data is different for the two extracts you have, you simply need to import them in to seperate database instances and adapt the datasource specs. I've never actually done that myself, but I don't see any reason why that shouldn't work.</p>
+<p><a href="https://help.openstreetmap.org/users/11425/dalishi"></a><a href="https://help.openstreetmap.org/users/11425/dalishi">@dalishi</a> the datasource specifications are in the style file. If for whatever reason the data is different for the two extracts you have, you simply need to import them in to seperate database instances and adapt the datasource specs. I've never actually done that myself, but I don't see any reason why that shouldn't work.</p>
 </div>
 <div id="comment-45020-info" class="comment-info">
 <span class="comment-age">(02 Sep '15, 06:58)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -182,7 +182,7 @@ XML=/usr/local/etc/mapnik/has_address.xml
 1
 </div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> thanks for the comments. I have tried and I can keep the [default] and add other sections below with their style xml respectively. For the URI I don't quite understand why you said no need to change. I assign each section with a URI, e.g URI=/osm_tiles/ for [dafault] and URI=/my_tiles/ for [myosm] which is my own section. I keep the TILEDIR=/var/lib/mod_tile the same though.</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> thanks for the comments. I have tried and I can keep the [default] and add other sections below with their style xml respectively. For the URI I don't quite understand why you said no need to change. I assign each section with a URI, e.g URI=/osm_tiles/ for [dafault] and URI=/my_tiles/ for [myosm] which is my own section. I keep the TILEDIR=/var/lib/mod_tile the same though.</p>
 </div>
 <div id="comment-45115-info" class="comment-info">
 <span class="comment-age">(08 Sep '15, 10:56)</span> <span class="comment-user userinfo">dalishi</span>

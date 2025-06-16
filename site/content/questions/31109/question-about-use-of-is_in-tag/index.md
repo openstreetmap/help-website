@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the POI you add is within the area of the large shopping building (presumably drawn as an area anyway), then as this is geographic information it is automatically within the building. You could perhaps add <a href="http://wiki.openstreetmap.org/wiki/Key:addr">address tags</a> though which would make it clearer.</p>
-<p><code>is_in</code> isn't really needed for places within well defined boundaries either for similar reasons, though some people still use it - see the second paragraph about when to use it <a href="http://wiki.openstreetmap.org/wiki/Key:is_in">here</a>.</p>
+<p>If the POI you add is within the area of the large shopping building (presumably drawn as an area anyway), then as this is geographic information it is automatically within the building. You could perhaps add <a href="https://wiki.openstreetmap.org/wiki/Key:addr">address tags</a> though which would make it clearer.</p>
+<p><code>is_in</code> isn't really needed for places within well defined boundaries either for similar reasons, though some people still use it - see the second paragraph about when to use it <a href="https://wiki.openstreetmap.org/wiki/Key:is_in">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

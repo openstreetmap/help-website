@@ -145,7 +145,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Yes, there is a limit. If a query comes without speical mark, it is terminated after 3 minutes. Please read <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout</a></p>
+<p>Yes, there is a limit. If a query comes without speical mark, it is terminated after 3 minutes. Please read <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout</a></p>
 <p>You can start your query with "[timeout:900];" or a higher value to let the query longer running.</p>
 </div>
 <div id="comment-17985-info" class="comment-info">
@@ -188,7 +188,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the program called <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a>.</p>
+<p>Have a look at the program called <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a>.</p>
 <p>You can download an OSM raw data country extract e.g. from geofabrik.de and (if neccesary) convert it with osmconvert.</p>
 </div>
 <div class="answer-controls post-controls">

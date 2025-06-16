@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>It has a mile long stretch of farm track which is not a road at all and this causes a lot of road cyclists to be sent down there resulting in punctures and damage.</p>
 <p>Can anyone let me know how to put in a request for the designation to be altered in OSM to stop this please?</p>
 <p>I have a few more pictures to evidence the unsuitability of the track.</p>
-<p>Thanks <a href="https://help.openstreetmap.org/upfiles/20210417_153202.jpg">https://help.openstreetmap.org/upfiles/20210417_153202.jpg</a></p>
+<p>Thanks <span>/upfiles/20210417_153202.jpg</span></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-cycling" rel="tag" title="see questions tagged &#39;cycling&#39;">cycling</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span>
@@ -101,7 +101,7 @@ osqa_accepted = false
 <p>I went back up there and there is one post (in the picture here) that has the red arrow as per <a href="https://help.openstreetmap.org/users/2855/trigpoint">@trigpoint</a> comment above.</p>
 <p>I can only put one photo in each post so I'll add some more comments to show more about the condition of the track.</p>
 <p>It may be technically and legally open to all traffic but it's not a useful route for all traffic and indeed is used by tractors, dog walkers and misguided road cyclists like me. The track isn't suitable for a big chunk of society eg: road bikes, parents with pushchairs, people with mobility or balance problems, mobility scooters etc.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/20210417_153842_resized.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/20210417_153842_resized.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-79780-info" class="comment-info">
 <span class="comment-age">(21 Apr '21, 09:50)</span> <span class="comment-user userinfo">Rkj</span>
@@ -112,7 +112,7 @@ osqa_accepted = false
 <div id="post-79781-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/20210417_153553_resized_LWB0gpx.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/20210417_153553_resized_LWB0gpx.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-79781-info" class="comment-info">
 <span class="comment-age">(21 Apr '21, 09:51)</span> <span class="comment-user userinfo">Rkj</span>
@@ -123,7 +123,7 @@ osqa_accepted = false
 <div id="post-79782-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/20210417_153836_resized.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/20210417_153836_resized.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-79782-info" class="comment-info">
 <span class="comment-age">(21 Apr '21, 09:51)</span> <span class="comment-user userinfo">Rkj</span>
@@ -134,7 +134,7 @@ osqa_accepted = false
 <div id="post-79783-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/20210417_153406_resized.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/20210417_153406_resized.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-79783-info" class="comment-info">
 <span class="comment-age">(21 Apr '21, 09:51)</span> <span class="comment-user userinfo">Rkj</span>

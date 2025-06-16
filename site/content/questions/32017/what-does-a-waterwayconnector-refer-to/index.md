@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Waterway connector is probably a 1:1 mapping from <a href="http://wiki.openstreetmap.org/wiki/NHD">US NHD</a> data.</p>
+<p>Waterway connector is probably a 1:1 mapping from <a href="https://wiki.openstreetmap.org/wiki/NHD">US NHD</a> data.</p>
 <p>IIRC this is used to indicate the flowline of a linear waterway (river, stream etc) through a lake, pond or reservoir. There are advantages to this approach: if connector is not rendered then one gets a better rendering; the entire flow of a catchment is still captured (which it would not be if there is no linear waterway through water bodies). The downside is that it might not capture all the information one might want (e.g., does it represent a river or stream).</p>
 <p>Another name in NHD s ArtificalPath.</p>
 <p>I'm not aware that we had any detailed discussion about the use of such features in OSM, although my belief is that used judiciously they can make working with river catchment data from OSM much easier.</p>

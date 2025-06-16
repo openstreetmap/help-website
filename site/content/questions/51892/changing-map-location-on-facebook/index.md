@@ -156,7 +156,7 @@ osqa_accepted = false
 <div id="post-51898-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> only unedited answers can be converted to comments.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> only unedited answers can be converted to comments.</p>
 </div>
 <div id="comment-51898-info" class="comment-info">
 <span class="comment-age">(04 Sep '16, 23:22)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <div id="post-51899-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: thanks, still a bug. :-) And someone still moved my comment up to the question - it was like follows:</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: thanks, still a bug. :-) And someone still moved my comment up to the question - it was like follows:</p>
 </div>
 <div id="comment-51899-info" class="comment-info">
 <span class="comment-age">(04 Sep '16, 23:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -178,7 +178,7 @@ osqa_accepted = false
 <div id="post-51900-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/12743/yoga-pp">@Yoga PP</a>: please login and then use the "add new comment" instead of the "answer" feature. Please do so and then delete this "answer". Note to others conversion does not work here.</p>
+<p>meta <a href="https://help.openstreetmap.org/users/12743/yoga-pp">@Yoga PP</a>: please login and then use the "add new comment" instead of the "answer" feature. Please do so and then delete this "answer". Note to others conversion does not work here.</p>
 </div>
 <div id="comment-51900-info" class="comment-info">
 <span class="comment-age">(04 Sep '16, 23:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -220,7 +220,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi have a look here on the only original OSM map, <a href="http://www.openstreetmap.org/#map=17/11.48697/104.94554">http://www.openstreetmap.org/#map=17/11.48697/104.94554</a> The only business in that area on OSM is "Thy Cheng" a DIY shop, without a tag or node, it has been added to the contour of the building. The end of this story is that a third party has made a mistake. Please use the link in the right low corner and push the button "Here we Go" if I’m right. Good luck. PPs please or use your OSM account to map and tag your business on the OSM map by following basic rules for tagging and adding nodes, <a href="https://wiki.openstreetmap.org/wiki/Map_Features.">https://wiki.openstreetmap.org/wiki/Map_Features.</a> Finding the right building should be easy, the buildings look quit visible in editing mode. Use Potlach 2 or ID.</p>
+<p>Hi have a look here on the only original OSM map, <a href="https://www.openstreetmap.org/#map=17/11.48697/104.94554">https://www.openstreetmap.org/#map=17/11.48697/104.94554</a> The only business in that area on OSM is "Thy Cheng" a DIY shop, without a tag or node, it has been added to the contour of the building. The end of this story is that a third party has made a mistake. Please use the link in the right low corner and push the button "Here we Go" if I’m right. Good luck. PPs please or use your OSM account to map and tag your business on the OSM map by following basic rules for tagging and adding nodes, <a href="https://wiki.openstreetmap.org/wiki/Map_Features.">https://wiki.openstreetmap.org/wiki/Map_Features.</a> Finding the right building should be easy, the buildings look quit visible in editing mode. Use Potlach 2 or ID.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

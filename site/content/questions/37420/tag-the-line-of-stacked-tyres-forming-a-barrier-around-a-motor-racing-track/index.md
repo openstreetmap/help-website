@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Suggestions wanted on preferred tag for the line of stacked tyres forming a barrier around a motor racing track. The <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">barrier tags</a> don't seem to offer a solution.</p>
+<p>Suggestions wanted on preferred tag for the line of stacked tyres forming a barrier around a motor racing track. The <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">barrier tags</a> don't seem to offer a solution.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-safety" rel="tag" title="see questions tagged &#39;safety&#39;">safety</span> <span class="post-tag tag-link-tyre_wall" rel="tag" title="see questions tagged &#39;tyre_wall&#39;">tyre_wall</span> <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span> <span class="post-tag tag-link-race-track" rel="tag" title="see questions tagged &#39;race-track&#39;">race-track</span>
@@ -106,7 +106,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Barrier=wall, material=tyres has been used in a couple places <a href="http://overpass-turbo.eu/s/5lZ">Overpass Turbo link</a></p>
 <p>A couple others have tagged barrier=tires <a href="http://overpass-turbo.eu/s/5lX">Overpass Turbo link</a>. That also seems OK, except for the American "tire" vs. British "tyre" spelling.</p>
-<p>You might also consider putting something about this on the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Draceway">highway=raceway</a> wiki page, as that is usually the context these will be used in.</p>
+<p>You might also consider putting something about this on the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Draceway">highway=raceway</a> wiki page, as that is usually the context these will be used in.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Malheureusement, ça semble difficile sans quelques connaissances en programmmation. Pour les logiciels qui affichent OSM en fond de carte et des traces GPS (au format GPX ou KML), tu peux chercher du côté de <a href="http://www.openlayers.org/">OpenLayers</a> ou son équivalent plus léger <a href="http://leaflet.cloudmade.com/">Leaflet</a>. Ces deux logiciels sont en javascript. Le wiki d'OSM fournit quelques informations sur leur utilisation avec OSM (<a href="http://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a>, <a href="http://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a>).</p>
+<p>Malheureusement, ça semble difficile sans quelques connaissances en programmmation. Pour les logiciels qui affichent OSM en fond de carte et des traces GPS (au format GPX ou KML), tu peux chercher du côté de <a href="http://www.openlayers.org/">OpenLayers</a> ou son équivalent plus léger <a href="http://leaflet.cloudmade.com/">Leaflet</a>. Ces deux logiciels sont en javascript. Le wiki d'OSM fournit quelques informations sur leur utilisation avec OSM (<a href="https://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a>, <a href="https://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -49,7 +49,7 @@ osqa_accepted = true
 <p><strong>What I want to check is: How should I best correct this issue?</strong> Should I correct to points or areas? Should</p>
 <p>*<em><em>(A natural depression in a land surface communicating with a subterranean passage, generally occurring in limestone regions and formed by solution or by collapse of a cavern roof.</em> Defenition from: <a href="http://www.thefreedictionary.com/Shake+hole">http://www.thefreedictionary.com/Shake+hole</a></em>)</p>
 <p><strong>For example:</strong> <a href="https://www.openstreetmap.org/way/93798676">https://www.openstreetmap.org/way/93798676</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Capture_dKUaKSh.JPG" alt="Image showing example of the problem" /></p>
+<p><img src="/upfiles/Capture_dKUaKSh.JPG" alt="Image showing example of the problem" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

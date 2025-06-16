@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I looked at the node above. Then at the first three nodes of <a href="http://www.openstreetmap.org/relation/2396015">Relation: A : Fontaine =&gt; Echirolles (2396015)</a>.</p>
+<p>I looked at the node above. Then at the first three nodes of <a href="https://www.openstreetmap.org/relation/2396015">Relation: A : Fontaine =&gt; Echirolles (2396015)</a>.</p>
 <p>Those three all have the tag railway=tram_stop. For the node that doesn't give results this tag was removed. Can this be the cause?</p>
 </div>
 <div class="answer-controls post-controls">

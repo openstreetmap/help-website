@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just pop along to <a href="http://www.openstreetmap.org/user/terms"></a><a href="http://www.openstreetmap.org/user/terms"></a><a href="http://www.openstreetmap.org/user/terms">http://www.openstreetmap.org/user/terms</a> and have a read of the terms, and if you're happy to accept them then click the big "Accept" button at the bottom.</p>
+<p>Just pop along to <a href="https://www.openstreetmap.org/user/terms"></a><a href="https://www.openstreetmap.org/user/terms"></a><a href="https://www.openstreetmap.org/user/terms">https://www.openstreetmap.org/user/terms</a> and have a read of the terms, and if you're happy to accept them then click the big "Accept" button at the bottom.</p>
 <p>If you like you can also check the box to say that you'd like your edits to be considered as public domain.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would recommend to ask Pascal Neis, see his <a href="http://neis-one.org/">blog</a> about statistics.</p>
-<p>Or see the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Statistics">Statistics</a></p>
+<p>Or see the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Statistics">Statistics</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

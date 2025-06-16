@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "see my track on a map"
-description = '''why I can&#x27;t see both a track and map under ? I am on &quot;openstreetmap&quot; where I imported a gpx file. I received the message from openstreetmap.org: loaded successfully with 173 out of a possible 173 points. You can view the trace here: &quot;http://www.openstreetmap.org/user/acha85/traces/2479812&quot;. But when...'''
+description = '''why I can&#x27;t see both a track and map under ? I am on &quot;openstreetmap&quot; where I imported a gpx file. I received the message from openstreetmap.org: loaded successfully with 173 out of a possible 173 points. You can view the trace here: &quot;https://www.openstreetmap.org/user/acha85/traces/2479812&quot;. But when...'''
 date = "2017-08-18T09:07:00Z"
 lastmod = "2017-08-19T08:01:00Z"
 weight = 58373
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>why I can't see both a track and map under ? I am on "openstreetmap" where I imported a gpx file. I received the message from openstreetmap.org: loaded successfully with 173 out of a possible 173 points. You can view the trace here: "http://www.openstreetmap.org/user/acha85/traces/2479812". But when I open this link I see only the track, without map "under". what do I have to do ? I use firefox and windows 8</p>
+<p>why I can't see both a track and map under ? I am on "openstreetmap" where I imported a gpx file. I received the message from openstreetmap.org: loaded successfully with 173 out of a possible 173 points. You can view the trace here: "https://www.openstreetmap.org/user/acha85/traces/2479812". But when I open this link I see only the track, without map "under". what do I have to do ? I use firefox and windows 8</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-track" rel="tag" title="see questions tagged &#39;track&#39;">track</span> <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span>
@@ -90,7 +90,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Excellent, i see you have uploaded a couple <a href="http://www.openstreetmap.org/user/acha85/traces">http://www.openstreetmap.org/user/acha85/traces</a></p>
+<p>Excellent, i see you have uploaded a couple <a href="https://www.openstreetmap.org/user/acha85/traces">https://www.openstreetmap.org/user/acha85/traces</a></p>
 </div>
 <div id="comment-58377-info" class="comment-info">
 <span class="comment-age">(18 Aug '17, 09:43)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -215,7 +215,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is one of your uploaded traces shown on OSM using GPS Prune. You cannot edit OSM with P<img src="https://help.openstreetmap.org/upfiles/GPS_Prune_with_your_trace.JPG" alt="alt text" />rune but you can check your trace against the map to decide if it is a worthwhile upload. Excess points can be deleted before uploading to OSM. I notice that your track might be more useful if track points were recorded more often, once a second is recommended.</p>
+<p>This is one of your uploaded traces shown on OSM using GPS Prune. You cannot edit OSM with P<img src="/upfiles/GPS_Prune_with_your_trace.JPG" alt="alt text" />rune but you can check your trace against the map to decide if it is a worthwhile upload. Excess points can be deleted before uploading to OSM. I notice that your track might be more useful if track points were recorded more often, once a second is recommended.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, i'm new to openstreemap, but i spotted a wrong map of an road in my area i used OSMTracker for Android to record a gpx track and try to fix it. I'm from Brazil and wrong track on OsmAnd~ map is the BR-367 between the cities of Almenara and Jacinto. I don't know how to edit maps, so i uploaded the gpx file so anyone can do what i can't: <a href="http://www.openstreetmap.org/user/kerryk1ng/traces/1645605">http://www.openstreetmap.org/user/kerryk1ng/traces/1645605</a></p>
+<p>Hi, i'm new to openstreemap, but i spotted a wrong map of an road in my area i used OSMTracker for Android to record a gpx track and try to fix it. I'm from Brazil and wrong track on OsmAnd~ map is the BR-367 between the cities of Almenara and Jacinto. I don't know how to edit maps, so i uploaded the gpx file so anyone can do what i can't: <a href="https://www.openstreetmap.org/user/kerryk1ng/traces/1645605">https://www.openstreetmap.org/user/kerryk1ng/traces/1645605</a></p>
 <p>My question is, where can i send the file to someone check and fix the thing... And there's also a bridge and on point of the road that i didn't put this time, but i will do, so it's not my noob "final" version.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>First: Welcome to OSM! You already did great steps toward fixing the issue! Thank you!</p>
-<p>I guess the street problem is also on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> right? Not only on OsmAnd?</p>
+<p>I guess the street problem is also on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> right? Not only on OsmAnd?</p>
 <p>This help site is meant for quite general problems and not for collaborative mapping. On this help site you can find how to fix it yourself (you could also see <span>Beginners' guide</span> or <a href="http://learnosm.org/">learnosm.org</a>). You can also ask specific, but general problems on why you cannot fix it yourself (editor problems?).</p>
 <p>I think it would be best to <em>go to</em> <a href="http://forum.openstreetmap.org/viewforum.php?id=74">http://forum.openstreetmap.org/viewforum.php?id=74</a> (your osm.org login works) and add your question there. You can then discuss (questions my be needed to map it correctly) with people from Brazil what is wrong and how it should be improved.</p>
 <p>Other options would be a mailing list post or a <span>note on www.osm.org</span> with a description and link to your trace.</p>

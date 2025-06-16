@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try to start in the OSM wiki here: <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' Guide</a></p>
+<p>Try to start in the OSM wiki here: <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' Guide</a></p>
 <p>When there are more questions you can also post at the <a href="http://forum.openstreetmap.org/">OSM forum</a>.</p>
 </div>
 <div class="answer-controls post-controls">

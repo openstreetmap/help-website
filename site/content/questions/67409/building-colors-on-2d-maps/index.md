@@ -194,7 +194,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Simon: in my experience, <strong>building=retail</strong> isn't really misused. In fact, here in the Netherlands, I think this tag is likely more common than <strong>building=commercial</strong>, and used to mark buildings containing shops.</p>
 <p>My own personal "ArcGIS Renderer for OpenStreetMap" actually makes a distinction for these types of buildings compared to "ordinary" buildings like houses, but I have given retail/commercial/supermarket/kiosk the same color, as they are close in meaning.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/ArcGIS_Renderer_for_OpenStreetMap_Building_colors_dlR8WY1.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/ArcGIS_Renderer_for_OpenStreetMap_Building_colors_dlR8WY1.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

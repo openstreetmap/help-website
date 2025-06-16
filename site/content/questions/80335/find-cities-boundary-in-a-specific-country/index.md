@@ -69,7 +69,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Please be more specific what you are trying to achieve and what you have already done. Please update (edit) your question with that information.</p>
-<p>meta: firs asked in <a href="https://help.openstreetmap.org/questions/69390/how-do-i-extract-the-polygon-locationlat-long-of-a-building">How do I extract the polygon location(lat, long) of a building?</a></p>
+<p>meta: firs asked in <a href="/questions/69390/how-do-i-extract-the-polygon-locationlat-long-of-a-building">How do I extract the polygon location(lat, long) of a building?</a></p>
 </div>
 <div id="comment-80337-info" class="comment-info">
 <span class="comment-age">(28 May '21, 13:03)</span> <span class="comment-user userinfo">TZorn</span>

@@ -47,7 +47,7 @@ nwr[&quot;natural&quot;~&quot;water&quot;] (around:5000, 48.8693488, 2.319511);
 out meta;
 &gt;; out skel qt;</code></pre>
 <p>I do query the using 'river' separately but I really want the polygon and not the line!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/laseine.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/laseine.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-paris" rel="tag" title="see questions tagged &#39;paris&#39;">paris</span> <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span>
@@ -134,7 +134,7 @@ One Answer:
 <div class="comment-text">
 <p>Thank you!</p>
 <p>I have that in my separate river query - however, I only get a polyline back in my output. Is there no way to get a multi-polygon instead, please?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_zNxkJU4.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_zNxkJU4.PNG" alt="alt text" /></p>
 </div>
 <div id="comment-73461-info" class="comment-info">
 <span class="comment-age">(10 Mar '20, 15:38)</span> <span class="comment-user userinfo">jusdespommes</span>

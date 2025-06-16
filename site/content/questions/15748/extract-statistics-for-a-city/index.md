@@ -118,7 +118,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it is a small area you can use <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to directly get all POIs you are interested in inside a given bounding box.</p>
+<p>If it is a small area you can use <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to directly get all POIs you are interested in inside a given bounding box.</p>
 <p>Please type</p>
 <pre><code>&lt;union&gt;
   &lt;area-query ref=&quot;3600377733&quot;/&gt;
@@ -127,7 +127,7 @@ osqa_accepted = true
 &lt;print/&gt;</code></pre>
 <p>into <a href="http://overpass-api.de/query_form.html">http://overpass-api.de/query_form.html</a>.</p>
 <p>This gives you exactly the OSM elements within the city border of Bucharest.</p>
-<p>For a larger area consider using a <a href="http://wiki.openstreetmap.org/wiki/Extract#Country_and_area_extracts">planet extract</a>. Afterwards you could use a combination of <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to filter out the interesting data and finally do you calculations.</p>
+<p>For a larger area consider using a <a href="https://wiki.openstreetmap.org/wiki/Extract#Country_and_area_extracts">planet extract</a>. Afterwards you could use a combination of <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to filter out the interesting data and finally do you calculations.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -195,7 +195,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Btw: 3600377733 = 3600000000 + ID of the Bucharest relation <a href="http://www.openstreetmap.org/relation/377733">http://www.openstreetmap.org/relation/377733</a></p>
+<p>Btw: 3600377733 = 3600000000 + ID of the Bucharest relation <a href="https://www.openstreetmap.org/relation/377733">https://www.openstreetmap.org/relation/377733</a></p>
 </div>
 <div id="comment-34010-info" class="comment-info">
 <span class="comment-age">(16 Jun '14, 18:57)</span> <span class="comment-user userinfo">simon04</span>
@@ -237,7 +237,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am not an expert about that, but you should try to import the raw weekly or daily diffed planet data into a <a href="http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">database</a> and then do a database query about special elements.</p>
+<p>I am not an expert about that, but you should try to import the raw weekly or daily diffed planet data into a <a href="https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">database</a> and then do a database query about special elements.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

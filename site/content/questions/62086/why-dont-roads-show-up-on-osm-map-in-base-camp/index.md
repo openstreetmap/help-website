@@ -299,7 +299,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The problem may be getting the correct settings in Basecamp. Check you have selected the map or you will see a very basic one. The amount of detail shown can also be changed see circled items on Jpeg. <img src="https://help.openstreetmap.org/upfiles/Basecamp.JPG" alt="alt text" /></p>
+<p>The problem may be getting the correct settings in Basecamp. Check you have selected the map or you will see a very basic one. The amount of detail shown can also be changed see circled items on Jpeg. <img src="/upfiles/Basecamp.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -353,7 +353,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't have a MAC but using a WIN10 PC i downloaded a file from your link "osm_generic_gmapsupp.zip" I then placed that file in a folder called Garmin thats is in a plugged in SD (to PC) I didn't have to unzip it, (not sure if my PC did that automatically). I selected that file and choose open with Basecamp. It worked, I centred the Basecamp display over Reed Island BC <a href="https://www.openstreetmap.org/search?query=reed%20island%20BC#map=17/50.31075/-122.80390">https://www.openstreetmap.org/search?query=reed%20island%20BC#map=17/50.31075/-122.80390</a> so you can compare them. See Scr Shot of Basecamp. <img src="https://help.openstreetmap.org/upfiles/Read_Island_BC.JPG" alt="alt text" /></p>
+<p>I don't have a MAC but using a WIN10 PC i downloaded a file from your link "osm_generic_gmapsupp.zip" I then placed that file in a folder called Garmin thats is in a plugged in SD (to PC) I didn't have to unzip it, (not sure if my PC did that automatically). I selected that file and choose open with Basecamp. It worked, I centred the Basecamp display over Reed Island BC <a href="https://www.openstreetmap.org/search?query=reed%20island%20BC#map=17/50.31075/-122.80390">https://www.openstreetmap.org/search?query=reed%20island%20BC#map=17/50.31075/-122.80390</a> so you can compare them. See Scr Shot of Basecamp. <img src="/upfiles/Read_Island_BC.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

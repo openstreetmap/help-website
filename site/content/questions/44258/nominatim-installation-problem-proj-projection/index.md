@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This is my first time to install Nominatim. Testing on centos6.5 parallels in mac. I have tried the earlier questions <a href="https://help.openstreetmap.org/questions/20326/nominatim-installation-not-finding-proj-headers,">https://help.openstreetmap.org/questions/20326/nominatim-installation-not-finding-proj-headers,</a> but this did not worked as its already installed.</p>
+<p>This is my first time to install Nominatim. Testing on centos6.5 parallels in mac. I have tried the earlier questions <a href="/questions/20326/nominatim-installation-not-finding-proj-headers,">https://help.openstreetmap.org/questions/20326/nominatim-installation-not-finding-proj-headers,</a> but this did not worked as its already installed.</p>
 <hr />
 <pre><code>    [root@localhost Nominatim]# ./configure
 checking for a BSD-compatible install... /usr/bin/install -c

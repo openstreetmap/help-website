@@ -92,7 +92,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>OpenStreetMap != Google.</p>
-<p>Like I said above, OpenStreetMap is not a "service". OpenStreetMap has a whole bunch of data that you can download and do what you want with <a href="http://planet.osm.org/">http://planet.osm.org/</a> , subject to what it says at <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> . Some imagery providers have made imagery available for use by OpenStreetMap, but (in the case of Bing) that's explicitly for use in the editors - see <a href="https://wiki.openstreetmap.org/wiki/Bing_Maps">https://wiki.openstreetmap.org/wiki/Bing_Maps</a> .</p>
+<p>Like I said above, OpenStreetMap is not a "service". OpenStreetMap has a whole bunch of data that you can download and do what you want with <a href="http://planet.osm.org/">http://planet.osm.org/</a> , subject to what it says at <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> . Some imagery providers have made imagery available for use by OpenStreetMap, but (in the case of Bing) that's explicitly for use in the editors - see <a href="https://wiki.openstreetmap.org/wiki/Bing_Maps">https://wiki.openstreetmap.org/wiki/Bing_Maps</a> .</p>
 <p>There are third-party imagery services available - I'd suggest you talk to one of those and discuss licensing.</p>
 </div>
 <div id="comment-53584-info" class="comment-info">

@@ -178,7 +178,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>It sounds like you've found a bug with Potlatch 2. Please file the bug report in our bug tracking system. For more information on filing bug reports please see the following places.</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Potlatch2#Feedback_and_bugs">http://wiki.openstreetmap.org/wiki/Potlatch2#Feedback_and_bugs</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Potlatch2#Feedback_and_bugs">https://wiki.openstreetmap.org/wiki/Potlatch2#Feedback_and_bugs</a></li>
 <li><a href="http://trac.openstreetmap.org"></a><a href="http://trac.openstreetmap.org">http://trac.openstreetmap.org</a></li>
 </ul>
 </div>

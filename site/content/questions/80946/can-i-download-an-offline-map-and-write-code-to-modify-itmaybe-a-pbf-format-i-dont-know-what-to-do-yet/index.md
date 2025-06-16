@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I asked if I could design a program to modify osm maps online a few days ago(cuz there are some errors in the map of OSM), someone replied that it certainly be a violation of the Automated edits code of conduct. I've been working on a map-matching algorithm. Due to a large number of errors in the OSM map, my algorithm performance is very poor, that's why I want to modify it. If I can't write a program to modify the OSM main database directly, I'd like to fall back on downloading an offline map of Shanghai and modifing it offline to test the performance of my map update algorithm. If this is possible, could anyone tell me how it should be done technically? Thank you very much!!!（The Blue Dots are GPS tracks, but there's no road on OSM) <img src="https://help.openstreetmap.org/upfiles/8_3Y035mp.jpg" alt="alt text" /></p>
+<p>I asked if I could design a program to modify osm maps online a few days ago(cuz there are some errors in the map of OSM), someone replied that it certainly be a violation of the Automated edits code of conduct. I've been working on a map-matching algorithm. Due to a large number of errors in the OSM map, my algorithm performance is very poor, that's why I want to modify it. If I can't write a program to modify the OSM main database directly, I'd like to fall back on downloading an offline map of Shanghai and modifing it offline to test the performance of my map update algorithm. If this is possible, could anyone tell me how it should be done technically? Thank you very much!!!（The Blue Dots are GPS tracks, but there's no road on OSM) <img src="/upfiles/8_3Y035mp.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span>
@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-80952-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/20491/mugwort">@mugwort</a> I think it was <a href="https://help.openstreetmap.org/questions/80851/hi-everyone-i-am-very-happy-to-be-here-to-discuss-with-all-of-you-i-have-some-problems-really-hope-someone-can-help-me">this question</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/20491/mugwort">@mugwort</a> I think it was <a href="/questions/80851/hi-everyone-i-am-very-happy-to-be-here-to-discuss-with-all-of-you-i-have-some-problems-really-hope-someone-can-help-me">this question</a>.</p>
 </div>
 <div id="comment-80952-info" class="comment-info">
 <span class="comment-age">(14 Jul '21, 04:49)</span> <span class="comment-user userinfo">InsertUser</span>
@@ -148,7 +148,7 @@ osqa_accepted = false
 <p>Someone else can continue to update the road information in the future.</p>
 </blockquote>
 <p>You're actually best placed to fix the issue - you know there is a problem, and you're motivated to fix it. Expecting other mappers to provide you with a "free pony" is likely to lead to a long wait.</p>
-<p>Incidentally, I agree with what Tzorn said over at <a href="https://help.openstreetmap.org/questions/80851/hi-everyone-i-am-very-happy-to-be-here-to-discuss-with-all-of-you-i-have-some-problems-really-hope-someone-can-help-me">https://help.openstreetmap.org/questions/80851/hi-everyone-i-am-very-happy-to-be-here-to-discuss-with-all-of-you-i-have-some-problems-really-hope-someone-can-help-me</a> - "I think it would be much easier if you explained once in more detail what you are doing, how you are doing it and what you want to achieve in the end".</p>
+<p>Incidentally, I agree with what Tzorn said over at <a href="/questions/80851/hi-everyone-i-am-very-happy-to-be-here-to-discuss-with-all-of-you-i-have-some-problems-really-hope-someone-can-help-me">https://help.openstreetmap.org/questions/80851/hi-everyone-i-am-very-happy-to-be-here-to-discuss-with-all-of-you-i-have-some-problems-really-hope-someone-can-help-me</a> - "I think it would be much easier if you explained once in more detail what you are doing, how you are doing it and what you want to achieve in the end".</p>
 </div>
 <div id="comment-80983-info" class="comment-info">
 <span class="comment-age">(15 Jul '21, 15:10)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

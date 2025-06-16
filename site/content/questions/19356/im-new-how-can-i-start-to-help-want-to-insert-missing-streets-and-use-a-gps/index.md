@@ -112,10 +112,10 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I first would like to welcome you to the OpenStreetMap community. :)</p>
-<p>You can start by getting GPS traces while you drive through town. You can use a <a href="http://wiki.openstreetmap.org/wiki/Gps">GPS</a> or <a href="http://wiki.openstreetmap.org/wiki/Android">Smart phone</a> to capture the gps traces. After you have the traces convert to <a href="http://wiki.openstreetmap.org/wiki/Making_GPX_Files">GPX file</a> format and upload to OSM. You can then fetch the traces from the flash based Potlach editor(built into osm.org), JOSM the java one or Merkaartor the Qt / C++ one. You create a new way and trace over your tracks, you can also look at the aerial imagery. <a href="http://wiki.openstreetmap.org/wiki/IT:Map_Features">You then tag the road with the right tag. highway = "the type of road", and name = "the name of the street"</a> (without the ") and now you have added a new road to OSM. :)</p>
+<p>You can start by getting GPS traces while you drive through town. You can use a <a href="https://wiki.openstreetmap.org/wiki/Gps">GPS</a> or <a href="https://wiki.openstreetmap.org/wiki/Android">Smart phone</a> to capture the gps traces. After you have the traces convert to <a href="https://wiki.openstreetmap.org/wiki/Making_GPX_Files">GPX file</a> format and upload to OSM. You can then fetch the traces from the flash based Potlach editor(built into osm.org), JOSM the java one or Merkaartor the Qt / C++ one. You create a new way and trace over your tracks, you can also look at the aerial imagery. <a href="https://wiki.openstreetmap.org/wiki/IT:Map_Features">You then tag the road with the right tag. highway = "the type of road", and name = "the name of the street"</a> (without the ") and now you have added a new road to OSM. :)</p>
 <p>You can trace the roads from your house just using the aerial imagery however you would need to go there and get gps traces later to check if it is aligned properly and you also need to name the road. The rule of thumb is to name the road based on what the sign says. Don't copy from other online maps since they may have the wrong name and it is copyright infringement.<br />
 </p>
-<p><a href="http://wiki.openstreetmap.org/wiki/IT:Beginners&#39;_guide">Check out the beginner's guide for more information. The wiki is one of the best go to guides for tagging and general information</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/IT:Beginners&#39;_guide">Check out the beginner's guide for more information. The wiki is one of the best go to guides for tagging and general information</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> section on our Wiki.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> section on our Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

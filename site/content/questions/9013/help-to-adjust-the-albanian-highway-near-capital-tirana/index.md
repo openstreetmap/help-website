@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help to adjust the Albanian highway near capital Tirana"
-description = '''Hello to anyone! Can anybody adjust this highway (SH2) in Albania: http://www.openstreetmap.org/?lat=41.36912&amp;amp;lon=19.690898&amp;amp;zoom=18&amp;amp;layers=M  The correct way most be like this: http://maps.google.com/?ll=41.368999,19.691556&amp;amp;spn=0.005628,0.013078&amp;amp;t=m&amp;amp;z=17&amp;amp;vpsrc=6'''
+description = '''Hello to anyone! Can anybody adjust this highway (SH2) in Albania: https://www.openstreetmap.org/?lat=41.36912&amp;amp;lon=19.690898&amp;amp;zoom=18&amp;amp;layers=M  The correct way most be like this: http://maps.google.com/?ll=41.368999,19.691556&amp;amp;spn=0.005628,0.013078&amp;amp;t=m&amp;amp;z=17&amp;amp;vpsrc=6'''
 date = "2011-11-15T15:16:00Z"
 lastmod = "2011-11-18T11:13:00Z"
 weight = 9013
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello to anyone! Can anybody adjust this highway (SH2) in Albania: <a href="http://www.openstreetmap.org/?lat=41.36912&amp;lon=19.690898&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=41.36912&amp;lon=19.690898&amp;zoom=18&amp;layers=M</a> The correct way most be like this: <a href="http://maps.google.com/?ll=41.368999,19.691556&amp;spn=0.005628,0.013078&amp;t=m&amp;z=17&amp;vpsrc=6">http://maps.google.com/?ll=41.368999,19.691556&amp;spn=0.005628,0.013078&amp;t=m&amp;z=17&amp;vpsrc=6</a></p>
+<p>Hello to anyone! Can anybody adjust this highway (SH2) in Albania: <a href="https://www.openstreetmap.org/?lat=41.36912&amp;lon=19.690898&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=41.36912&amp;lon=19.690898&amp;zoom=18&amp;layers=M</a> The correct way most be like this: <a href="http://maps.google.com/?ll=41.368999,19.691556&amp;spn=0.005628,0.013078&amp;t=m&amp;z=17&amp;vpsrc=6">http://maps.google.com/?ll=41.368999,19.691556&amp;spn=0.005628,0.013078&amp;t=m&amp;z=17&amp;vpsrc=6</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-sh2" rel="tag" title="see questions tagged &#39;sh2&#39;">sh2</span> <span class="post-tag tag-link-albania" rel="tag" title="see questions tagged &#39;albania&#39;">albania</span>
@@ -139,7 +139,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I have now fixed this. There was several overlapping ways for that highway SH2. And the ways for the bridges were repeated/circular, ie they went across the bridge then back again.</p>
 <p>I'm not sure how this happened, but it caused that strange rendering on the map.</p>
-<p>For these sorts of problems it is worth checking some of the <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">Quality assurance tools</a>, which can highlight possible errors. eg Keep Right or the JOSM Validator. Both of these tools find a number of other errors in that area, eg crossing ways and overlapping ways. It would be worth checking these, and fixing them where possible. See this <a href="http://keepright.ipax.at/report_map.php?zoom=15&amp;lat=41.37044&amp;lon=19.69034&amp;layers=B00T&amp;ch=0%2C30%2C40%2C50%2C60%2C70%2C90%2C100%2C110%2C120%2C130%2C150%2C160%2C170%2C180%2C191%2C192%2C193%2C194%2C195%2C196%2C197%2C198%2C201%2C202%2C203%2C204%2C205%2C206%2C207%2C208%2C210%2C220%2C231%2C232%2C270%2C281%2C282%2C283%2C284%2C291%2C292%2C293%2C311%2C312%2C313%2C350%2C380&amp;show_ign=1&amp;show_tmpign=1">link for the area on Keep Right</a>.</p>
+<p>For these sorts of problems it is worth checking some of the <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">Quality assurance tools</a>, which can highlight possible errors. eg Keep Right or the JOSM Validator. Both of these tools find a number of other errors in that area, eg crossing ways and overlapping ways. It would be worth checking these, and fixing them where possible. See this <a href="http://keepright.ipax.at/report_map.php?zoom=15&amp;lat=41.37044&amp;lon=19.69034&amp;layers=B00T&amp;ch=0%2C30%2C40%2C50%2C60%2C70%2C90%2C100%2C110%2C120%2C130%2C150%2C160%2C170%2C180%2C191%2C192%2C193%2C194%2C195%2C196%2C197%2C198%2C201%2C202%2C203%2C204%2C205%2C206%2C207%2C208%2C210%2C220%2C231%2C232%2C270%2C281%2C282%2C283%2C284%2C291%2C292%2C293%2C311%2C312%2C313%2C350%2C380&amp;show_ign=1&amp;show_tmpign=1">link for the area on Keep Right</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,7 +210,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>The problem is not copyrights but, this road need an expert to link the road in the correct way on this viaduct, like on the image here. Me can't do it...</p>
-<p><img src="http://help.openstreetmap.org/upfiles/ura-limuthit-to-edit.jpg" alt="ura limuthit to edit" /></p>
+<p><img src="/upfiles/ura-limuthit-to-edit.jpg" alt="ura limuthit to edit" /></p>
 </div>
 <div id="comment-9017-info" class="comment-info">
 <span class="comment-age">(15 Nov '11, 17:31)</span> <span class="comment-user userinfo">kaprik</span>

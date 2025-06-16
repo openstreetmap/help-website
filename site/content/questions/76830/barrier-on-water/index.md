@@ -222,7 +222,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Just for info, I've now found this related question from 2014:</p>
-<p><a href="https://help.openstreetmap.org/questions/37418/tag-line-of-floating-buoys-near-weir-or-dam">https://help.openstreetmap.org/questions/37418/tag-line-of-floating-buoys-near-weir-or-dam</a></p>
+<p><a href="/questions/37418/tag-line-of-floating-buoys-near-weir-or-dam">https://help.openstreetmap.org/questions/37418/tag-line-of-floating-buoys-near-weir-or-dam</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

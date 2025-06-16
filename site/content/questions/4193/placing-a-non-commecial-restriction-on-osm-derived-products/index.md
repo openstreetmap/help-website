@@ -221,7 +221,7 @@ osqa_accepted = false
 <p>The idea of the license is to keep the data free and open. If somebody is extending coverage or details of the map with information which we would like to have in OpenStreetMap, then the sharealike requirement ensures that we can bring that data into OpenStreetMap itself (with the same <em>more</em> open license than any NC restricted dataset).</p>
 <p>It is not the intention of the share-alike clauses to present annoying problems for users like you, but sadly that is what it often does.</p>
 <p>Some good news: You are allowed to mash OpenStreetMap with more restrictive datasets (even with 'all rights reserved' data) provided this mashing amounts to a "collective work" rather than a "derivative work". Some bad news: Nobody really knows what counts as collective vs derivative, but a printed wall map doesn't really publish the datasets separately so it's not looking good for you.</p>
-<p>Bring on the <a href="http://wiki.openstreetmap.org/wiki/Open_Database_License">ODbL</a>!</p>
+<p>Bring on the <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License">ODbL</a>!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -193,7 +193,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe have a look at the answers to <a href="http://help.openstreetmap.org/questions/9335/is-it-possible-to-place-temporary-private-marks">this question</a>? I suggested Mapquest Open in response there, and it might work for you here too. I've not tried to use it collaboratively, though - you'd need to see if it worked for you.</p>
+<p>Maybe have a look at the answers to <a href="/questions/9335/is-it-possible-to-place-temporary-private-marks">this question</a>? I suggested Mapquest Open in response there, and it might work for you here too. I've not tried to use it collaboratively, though - you'd need to see if it worked for you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

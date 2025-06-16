@@ -142,7 +142,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9972/y10000101"></a><a href="http://help.openstreetmap.org/users/9972/y10000101">@y10000101</a>: it takes a while to <span>update</span>.</p>
+<p><a href="https://help.openstreetmap.org/users/9972/y10000101"></a><a href="https://help.openstreetmap.org/users/9972/y10000101">@y10000101</a>: it takes a while to <span>update</span>.</p>
 </div>
 <div id="comment-38400-info" class="comment-info">
 <span class="comment-age">(09 Nov '14, 13:47)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

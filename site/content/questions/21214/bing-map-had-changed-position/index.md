@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Bing Map had changed position"
-description = '''Three months ago I had make ways in my city over the Bing Maps. But now all ways aren&#x27;t precise. It isn&#x27;t correctly over the Bing Map. What could be? Should I adjust all roads to match with map image? http://www.openstreetmap.org/?lat=-30.089519&amp;amp;lon=-51.322262&amp;amp;zoom=18&amp;amp;layers=M'''
+description = '''Three months ago I had make ways in my city over the Bing Maps. But now all ways aren&#x27;t precise. It isn&#x27;t correctly over the Bing Map. What could be? Should I adjust all roads to match with map image? https://www.openstreetmap.org/?lat=-30.089519&amp;amp;lon=-51.322262&amp;amp;zoom=18&amp;amp;layers=M'''
 date = "2013-04-05T00:12:00Z"
 lastmod = "2013-04-06T09:39:00Z"
 weight = 21214
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Three months ago I had make ways in my city over the Bing Maps. But now all ways aren't precise. It isn't correctly over the Bing Map. What could be? Should I adjust all roads to match with map image? <a href="http://www.openstreetmap.org/?lat=-30.089519&amp;lon=-51.322262&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-30.089519&amp;lon=-51.322262&amp;zoom=18&amp;layers=M</a></p>
+<p>Three months ago I had make ways in my city over the Bing Maps. But now all ways aren't precise. It isn't correctly over the Bing Map. What could be? Should I adjust all roads to match with map image? <a href="https://www.openstreetmap.org/?lat=-30.089519&amp;lon=-51.322262&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-30.089519&amp;lon=-51.322262&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-aerial" rel="tag" title="see questions tagged &#39;aerial&#39;">aerial</span> <span class="post-tag tag-link-precision" rel="tag" title="see questions tagged &#39;precision&#39;">precision</span> <span class="post-tag tag-link-alignment" rel="tag" title="see questions tagged &#39;alignment&#39;">alignment</span>
@@ -256,7 +256,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check this wiki about realigning the background layer: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Realigning_the_background_layer">http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Realigning_the_background_layer</a></p>
+<p>Check this wiki about realigning the background layer: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Realigning_the_background_layer">https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Realigning_the_background_layer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -340,7 +340,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>There are a number of uploaded traces here <a href="http://www.openstreetmap.org/?lat=-30.088567&amp;lon=-51.340911&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-30.088567&amp;lon=-51.340911&amp;zoom=18&amp;layers=M</a></p>
+<p>There are a number of uploaded traces here <a href="https://www.openstreetmap.org/?lat=-30.088567&amp;lon=-51.340911&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-30.088567&amp;lon=-51.340911&amp;zoom=18&amp;layers=M</a></p>
 <p>While not perfect, they should probably help with the offset.</p>
 </div>
 <div id="comment-21230-info" class="comment-info">
@@ -353,7 +353,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I can see three traces <a href="http://www.openstreetmap.org/edit?lat=-30.086397&amp;lon=-51.319942&amp;zoom=19">here</a> but not many to the southwest of that in town? Are those the ones that you're talking about?</p>
+<p>I can see three traces <a href="https://www.openstreetmap.org/edit?lat=-30.086397&amp;lon=-51.319942&amp;zoom=19">here</a> but not many to the southwest of that in town? Are those the ones that you're talking about?</p>
 </div>
 <div id="comment-21231-info" class="comment-info">
 <span class="comment-age">(05 Apr '13, 12:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

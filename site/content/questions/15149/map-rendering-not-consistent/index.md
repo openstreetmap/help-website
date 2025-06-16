@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>hello, I created the map of <a href="http://www.openstreetmap.org/?lat=45.54403&amp;lon=4.32902&amp;zoom=15&amp;layers=M">Saint-Bonnet-les-Oules</a> (42330, France) and we see the house and paths that are different on different zoom levels. Why?</p>
+<p>hello, I created the map of <a href="https://www.openstreetmap.org/?lat=45.54403&amp;lon=4.32902&amp;zoom=15&amp;layers=M">Saint-Bonnet-les-Oules</a> (42330, France) and we see the house and paths that are different on different zoom levels. Why?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-problem" rel="tag" title="see questions tagged &#39;problem&#39;">problem</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-zoom" rel="tag" title="see questions tagged &#39;zoom&#39;">zoom</span> <span class="post-tag tag-link-village" rel="tag" title="see questions tagged &#39;village&#39;">village</span>
@@ -81,7 +81,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>En tout cas, il y a un problème sur la classification des "highway" dans ce coin. Il y a trop de "primary" et "secondary". Il faudrait baisser d'un cran les nouvelles routes que tu as créés (passer de "primary" à "secondary" ou de "secondary" à "tertiary" ou "unclassified". Regarde cette doc pour comprendre : <a href="http://wiki.openstreetmap.org/wiki/FR:France_roads_tagging">http://wiki.openstreetmap.org/wiki/FR:France_roads_tagging</a></p>
+<p>En tout cas, il y a un problème sur la classification des "highway" dans ce coin. Il y a trop de "primary" et "secondary". Il faudrait baisser d'un cran les nouvelles routes que tu as créés (passer de "primary" à "secondary" ou de "secondary" à "tertiary" ou "unclassified". Regarde cette doc pour comprendre : <a href="https://wiki.openstreetmap.org/wiki/FR:France_roads_tagging">https://wiki.openstreetmap.org/wiki/FR:France_roads_tagging</a></p>
 </div>
 <div id="comment-15154-info" class="comment-info">
 <span class="comment-age">(16 Aug '12, 16:02)</span> <span class="comment-user userinfo">Pieren</span>
@@ -114,8 +114,8 @@ osqa_accepted = false
 <div id="post-15161-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Les problème en image de Saint-Bonnet-Les-Oules (42330, France) <img src="http://help.openstreetmap.org/upfiles/sanspetittitre2.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Sans_titre.png" alt="alt text" /></p>
+<p>Les problème en image de Saint-Bonnet-Les-Oules (42330, France) <img src="/upfiles/sanspetittitre2.png" alt="alt text" /></p>
+<p><img src="/upfiles/Sans_titre.png" alt="alt text" /></p>
 </div>
 <div id="comment-15161-info" class="comment-info">
 <span class="comment-age">(16 Aug '12, 18:34)</span> <span class="comment-user userinfo">valcycliste</span>
@@ -169,7 +169,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This looks to be the same kind of problem as is answered <a href="http://help.openstreetmap.org/questions/14972/why-my-editions-are-visible-only-when-the-zoom-is-16-or-less">here</a>.</p>
+<p>This looks to be the same kind of problem as is answered <a href="/questions/14972/why-my-editions-are-visible-only-when-the-zoom-is-16-or-less">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

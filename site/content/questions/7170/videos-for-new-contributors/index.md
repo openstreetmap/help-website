@@ -213,7 +213,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you have already a look at the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">Video_tutorials</a> ?</p>
+<p>Did you have already a look at the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">Video_tutorials</a> ?</p>
 <p>There are some of them ...</p>
 </div>
 <div class="answer-controls post-controls">

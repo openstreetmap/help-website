@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You may tag a wheelchair friendly way with wheelchair=yes.</p>
-<p>Relevant wiki page: <a href="http://wiki.openstreetmap.org/wiki/Wheelchair">Key:wheelchair</a></p>
+<p>Relevant wiki page: <a href="https://wiki.openstreetmap.org/wiki/Wheelchair">Key:wheelchair</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,8 +161,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Elements accessible for wheelchair users are often tagged with the straightforward <a href="http://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair=yes</a> tag.</p>
-<p>To specifically tag kerb heights at pedestrian crossings, you could also consider the proposed <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/kerb">kerb key</a>. The rationale for using not just wheelchair=yes here is that this information has potential applications beyond wheelchair routing. For example, blind people are also affected by kerb heights.</p>
+<p>Elements accessible for wheelchair users are often tagged with the straightforward <a href="https://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair=yes</a> tag.</p>
+<p>To specifically tag kerb heights at pedestrian crossings, you could also consider the proposed <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/kerb">kerb key</a>. The rationale for using not just wheelchair=yes here is that this information has potential applications beyond wheelchair routing. For example, blind people are also affected by kerb heights.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

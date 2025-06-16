@@ -63,7 +63,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Looks like the same problem as <a href="https://help.openstreetmap.org/questions/74054/edits-not-appearing-on-maps">https://help.openstreetmap.org/questions/74054/edits-not-appearing-on-maps</a> . Until the problem's fixed I suggest you follow the advice there - essentially, try another map.</p>
+<p>Looks like the same problem as <a href="/questions/74054/edits-not-appearing-on-maps">https://help.openstreetmap.org/questions/74054/edits-not-appearing-on-maps</a> . Until the problem's fixed I suggest you follow the advice there - essentially, try another map.</p>
 </div>
 <div id="comment-74083-info" class="comment-info">
 <span class="comment-age">(10 Apr '20, 13:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

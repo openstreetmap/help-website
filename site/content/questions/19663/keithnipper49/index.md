@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
-<p>edit: also see this recent question: <a href="https://help.openstreetmap.org/questions/19200/osm-maps-for-garmin-gps">https://help.openstreetmap.org/questions/19200/osm-maps-for-garmin-gps</a> .</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>edit: also see this recent question: <a href="/questions/19200/osm-maps-for-garmin-gps">https://help.openstreetmap.org/questions/19200/osm-maps-for-garmin-gps</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Category:Oil_and_Gas_Infrastructure">Oil and Gas Infrastructure</a> wiki category suggests some version of <em>man_made=</em> for the pad itself. You could use <em>man_made=petroleum_well</em> and add a subtag <a href="http://taginfo.openstreetmap.org/keys/petroleum_well">petroleum_well=fracking</a>. You could go for a brand-new man_made=fracking_well but I'm uncomfortable about "frackturing" the oil and gas schemes more than they already are.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Category:Oil_and_Gas_Infrastructure">Oil and Gas Infrastructure</a> wiki category suggests some version of <em>man_made=</em> for the pad itself. You could use <em>man_made=petroleum_well</em> and add a subtag <a href="http://taginfo.openstreetmap.org/keys/petroleum_well">petroleum_well=fracking</a>. You could go for a brand-new man_made=fracking_well but I'm uncomfortable about "frackturing" the oil and gas schemes more than they already are.</p>
 <p>Concerning the site itself (not just the well), <em>landuse=industrial industrial=fracking</em> seems like the way to go. While <em>industrial=oil/gas</em> is common, there are currently <a href="http://taginfo.openstreetmap.org/tags/industrial=fracking">25 instances of industrial=fracking</a> in the db, all by the same user.</p>
 </div>
 <div class="answer-controls post-controls">

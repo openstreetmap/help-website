@@ -73,7 +73,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Where did that XML come from? I'm asking because the API returns only one name tag for that way as you can see by visiting <a href="http://www.openstreetmap.org/browse/way/17369196">http://www.openstreetmap.org/browse/way/17369196</a></p>
+<p>Where did that XML come from? I'm asking because the API returns only one name tag for that way as you can see by visiting <a href="https://www.openstreetmap.org/browse/way/17369196">https://www.openstreetmap.org/browse/way/17369196</a></p>
 </div>
 <div id="comment-4939-info" class="comment-info">
 <span class="comment-age">(03 May '11, 05:29)</span> <span class="comment-user userinfo">petschge</span>
@@ -85,7 +85,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>It looks to be corrupt XML. The latter bit is from <a href="http://www.openstreetmap.org/browse/way/17395105">http://www.openstreetmap.org/browse/way/17395105</a></p>
+<p>It looks to be corrupt XML. The latter bit is from <a href="https://www.openstreetmap.org/browse/way/17395105">https://www.openstreetmap.org/browse/way/17395105</a></p>
 </div>
 <div id="comment-4947-info" class="comment-info">
 <span class="comment-age">(03 May '11, 11:12)</span> <span class="comment-user userinfo">EdLoach ♦</span>

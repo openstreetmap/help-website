@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/browse/way/60004936">Way 60004936</a> has been edited by the <a href="http://www.openstreetmap.org/user/OSMF%20Redaction%20Account">OSMF Redaction Account</a>. Thus, data that doesn't conform to the current OSM license has been removed by the automated redactions process.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/60004936">Way 60004936</a> has been edited by the <a href="https://www.openstreetmap.org/user/OSMF%20Redaction%20Account">OSMF Redaction Account</a>. Thus, data that doesn't conform to the current OSM license has been removed by the automated redactions process.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

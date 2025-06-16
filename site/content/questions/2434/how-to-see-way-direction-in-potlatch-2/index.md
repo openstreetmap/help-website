@@ -254,7 +254,7 @@ that the single arrow I saw marked the direction of the way, I thought it marked
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am trying to reverse the direction of a way (a cliff in this instance) in Potlatch 2 but cannot find out how to do it. The above post and <strong>2.3 Advance Edits</strong> on <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Advanced_Edits">this page</a> indicates that I should have a way direction icon in the bottom left of Potlatch2 but mine only has the other 6 icons, not the way reversal one. How do I do it please?</p>
+<p>I am trying to reverse the direction of a way (a cliff in this instance) in Potlatch 2 but cannot find out how to do it. The above post and <strong>2.3 Advance Edits</strong> on <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Advanced_Edits">this page</a> indicates that I should have a way direction icon in the bottom left of Potlatch2 but mine only has the other 6 icons, not the way reversal one. How do I do it please?</p>
 <p>Robin</p>
 </div>
 <div class="answer-controls post-controls">
@@ -320,7 +320,7 @@ that the single arrow I saw marked the direction of the way, I thought it marked
 <td><div class="item-right">
 <div class="answer-body">
 <p>If mapping a polygon way directions are important they are shown in P2 by the two arrows between the bin and the scissors</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Polygon_Direction.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Polygon_Direction.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

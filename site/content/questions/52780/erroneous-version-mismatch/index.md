@@ -166,7 +166,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9886/sunfishtommy">@sunfishtommy</a> I'd suggest asking in #osm-dev on IRC. That's where the most up-to-date information will be.</p>
+<p><a href="https://help.openstreetmap.org/users/9886/sunfishtommy">@sunfishtommy</a> I'd suggest asking in #osm-dev on IRC. That's where the most up-to-date information will be.</p>
 </div>
 <div id="comment-52802-info" class="comment-info">
 <span class="comment-age">(02 Nov '16, 16:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

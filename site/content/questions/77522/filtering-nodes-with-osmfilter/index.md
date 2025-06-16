@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>osmfilter _removeHighways.osm --drop="highway=" --drop-nodes=highway -o=good_wayss.osm</p>
 </blockquote>
 <p>I am new to osmfilter any help will be appreciated :)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/nodes.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/nodes.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-filter" rel="tag" title="see questions tagged &#39;filter&#39;">filter</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-osmfilter" rel="tag" title="see questions tagged &#39;osmfilter&#39;">osmfilter</span> <span class="post-tag tag-link-help" rel="tag" title="see questions tagged &#39;help&#39;">help</span>

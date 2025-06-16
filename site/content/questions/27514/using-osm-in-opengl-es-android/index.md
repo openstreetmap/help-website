@@ -144,7 +144,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>or see <a href="http://wiki.openstreetmap.org/wiki/3D">http://wiki.openstreetmap.org/wiki/3D</a> in general.</p>
+<p>or see <a href="https://wiki.openstreetmap.org/wiki/3D">https://wiki.openstreetmap.org/wiki/3D</a> in general.</p>
 </div>
 <div id="comment-27590-info" class="comment-info">
 <span class="comment-age">(28 Oct '13, 19:14)</span> <span class="comment-user userinfo">stephan75</span>

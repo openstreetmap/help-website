@@ -62,7 +62,7 @@ osqa_accepted = true
 <div id="post-18043-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>for example this car park is, I bet today (27 November 2012), under water and may well have a few flood wreaked cars in it. A smart phone using the river level data and, if we can add surface level it could save other cars in future.http://www.openstreetmap.org/?lat=52.32144&amp;lon=-0.076936&amp;zoom=18&amp;layers=M</p>
+<p>for example this car park is, I bet today (27 November 2012), under water and may well have a few flood wreaked cars in it. A smart phone using the river level data and, if we can add surface level it could save other cars in future.https://www.openstreetmap.org/?lat=52.32144&amp;lon=-0.076936&amp;zoom=18&amp;layers=M</p>
 </div>
 <div id="comment-18043-info" class="comment-info">
 <span class="comment-age">(27 Nov '12, 23:01)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -139,7 +139,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM is not really relevant for what you ask. Which part of the land can be flooded depends on water level and land elevation but also on flood flow. Any dyke or wall or drain can change the water flow. What is more appropriate is a high detailed <a href="http://en.wikipedia.org/wiki/Digital_elevation_model">DEM (Digital elevation model)</a> eventually combined with the 2D OSM data saying which feature is where.</p>
-<p>A possible workaround for some small and localized feature can be the use of the tag "<a href="http://wiki.openstreetmap.org/wiki/Key:ele">ele</a>". But be aware about the datum when you compare different data sources elevations ('ele' is normally expressed in the WGS84 datum).</p>
+<p>A possible workaround for some small and localized feature can be the use of the tag "<a href="https://wiki.openstreetmap.org/wiki/Key:ele">ele</a>". But be aware about the datum when you compare different data sources elevations ('ele' is normally expressed in the WGS84 datum).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "old and deleted data gets rendered"
-description = '''Hi there, about 1 month ago I devided a farm into parts and created new farms and meadows. But now the old farm, that was a multipolygon, is still rendered (mapnik). It is not part of the map now (it may was part of http://www.openstreetmap.org/relation/1418460/ in the past). The same happend to a s...'''
+description = '''Hi there, about 1 month ago I devided a farm into parts and created new farms and meadows. But now the old farm, that was a multipolygon, is still rendered (mapnik). It is not part of the map now (it may was part of https://www.openstreetmap.org/relation/1418460/ in the past). The same happend to a s...'''
 date = "2015-03-28T16:37:00Z"
 lastmod = "2015-03-30T07:48:00Z"
 weight = 41966
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there,</p>
-<p>about 1 month ago I devided a farm into parts and created new farms and meadows. But now the old farm, that was a multipolygon, is still rendered (mapnik). It is not part of the map now (it may was part of <a href="http://www.openstreetmap.org/relation/1418460/">http://www.openstreetmap.org/relation/1418460/</a> in the past). The same happend to a still existing residential (no multipolygon). <a href="https://www.openstreetmap.org/way/335237650">https://www.openstreetmap.org/way/335237650</a> When I change its shape, the new shape gets rendered, but the old too. When I delete a node, that was part of these shapes, then the old data is gone and not rendered any more. Moving a node seems to move the old data too.</p>
+<p>about 1 month ago I devided a farm into parts and created new farms and meadows. But now the old farm, that was a multipolygon, is still rendered (mapnik). It is not part of the map now (it may was part of <a href="https://www.openstreetmap.org/relation/1418460/">https://www.openstreetmap.org/relation/1418460/</a> in the past). The same happend to a still existing residential (no multipolygon). <a href="https://www.openstreetmap.org/way/335237650">https://www.openstreetmap.org/way/335237650</a> When I change its shape, the new shape gets rendered, but the old too. When I delete a node, that was part of these shapes, then the old data is gone and not rendered any more. Moving a node seems to move the old data too.</p>
 <p>Does anyone know what could cause this and how I could solve it, without removing all of the nodes and replace them by new ones.</p>
 <p>I think that within the changeset check in something went wrong, both problems are may caused by the same chek in.</p>
 <p><img src="http://www.norbert-freier.de/rendering.png" title="title" alt="rendering" /></p>
@@ -252,7 +252,7 @@ osqa_accepted = false
 <div id="post-41987-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd"></a><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> The <a href="https://www.openstreetmap.org/#map=17/50.65175/13.25163&amp;layers=H">HOT layer</a> neither. It's just the standard layer (or better the database for the standard layer) which has both old and new data.</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd"></a><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> The <a href="https://www.openstreetmap.org/#map=17/50.65175/13.25163&amp;layers=H">HOT layer</a> neither. It's just the standard layer (or better the database for the standard layer) which has both old and new data.</p>
 </div>
 <div id="comment-41987-info" class="comment-info">
 <span class="comment-age">(29 Mar '15, 14:14)</span> <span class="comment-user userinfo">scai ♦</span>

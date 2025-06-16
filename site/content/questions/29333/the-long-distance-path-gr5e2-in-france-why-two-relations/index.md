@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I'm drawing the GR5 in France, the footpath has two relations:</p>
-<p><a href="http://www.openstreetmap.org/relation/3228571">European long distance path E2 - Lorraine</a></p>
+<p><a href="https://www.openstreetmap.org/relation/3228571">European long distance path E2 - Lorraine</a></p>
 <p>and</p>
-<p><a href="http://www.openstreetmap.org/relation/2029679">GR 5 Lorraine</a></p>
+<p><a href="https://www.openstreetmap.org/relation/2029679">GR 5 Lorraine</a></p>
 <p>They seem exactly the same and have the same segments/members added to them. Is this necessary? this seems laborious and double? What is the correct way to do this, and how can I correct this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

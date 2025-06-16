@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Geonames">Geonames</a> ...</p>
+<p>Have a look at the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Geonames">Geonames</a> ...</p>
 <p>It seems that data from Geonames is NOT imported to OSM, so you need to add them here as well (if I understand that information there right)</p>
 </div>
 <div class="answer-controls post-controls">

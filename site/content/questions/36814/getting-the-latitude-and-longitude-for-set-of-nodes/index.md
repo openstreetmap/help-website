@@ -116,8 +116,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's not quite clear what your actual problem is. Your smartphone should already be capable of obtaining lat and lon via the integrated GPS device.</p>
-<p>Do you need the name of the town for the current position? In that case you can use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> and run a simple <em>reverse</em> geocoding query.</p>
-<p>Do you need the position of a specific town? In that case use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> with a regular geocoding query.</p>
+<p>Do you need the name of the town for the current position? In that case you can use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> and run a simple <em>reverse</em> geocoding query.</p>
+<p>Do you need the position of a specific town? In that case use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> with a regular geocoding query.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>See this previous answer to adding geo-tagged photos in Josm.<br />
-<a href="https://help.openstreetmap.org/questions/26416/open-jpg-in-josm">photos</a> (Not relevant to this question)</p>
+<a href="/questions/26416/open-jpg-in-josm">photos</a> (Not relevant to this question)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

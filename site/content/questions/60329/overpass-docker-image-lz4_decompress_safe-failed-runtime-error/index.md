@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I have installed a docker image of the overpass api server as explained <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Via_a_Docker_image">here</a>. Instead of providing data for the whole world, I configured the image to use a osm.bz2 file containing only my area of interest. Now I have reached the point where at least one query is being answered as expected, while all other get the following response:</p>
+<p>Hi, I have installed a docker image of the overpass api server as explained <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Via_a_Docker_image">here</a>. Instead of providing data for the whole world, I configured the image to use a osm.bz2 file containing only my area of interest. Now I have reached the point where at least one query is being answered as expected, while all other get the following response:</p>
 <pre><code>{
   &quot;version&quot;: 0.6,
   &quot;generator&quot;: &quot;Overpass API&quot;,

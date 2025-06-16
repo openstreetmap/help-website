@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think the problem is that the tagtransform.jar linked from the wiki is built for an older version of Osmosis. So it is lacking some of the classes required by the current version.</p>
-<p>You could follow the instructions for <a href="http://wiki.openstreetmap.org/wiki/Osmosis/TagTransform#Building_the_jar_yourself_.28.3E.3D0.37.29">Building the TagTransform jar yourself</a>, using the current version of Osmosis and the TagTransform source from SVN. This will probably require installing Apache Ant, I don't know how easy that is on Windows.</p>
+<p>You could follow the instructions for <a href="https://wiki.openstreetmap.org/wiki/Osmosis/TagTransform#Building_the_jar_yourself_.28.3E.3D0.37.29">Building the TagTransform jar yourself</a>, using the current version of Osmosis and the TagTransform source from SVN. This will probably require installing Apache Ant, I don't know how easy that is on Windows.</p>
 <p>Or try this tagtransform.jar that I have built for Osmosis v0.38: <a href="http://osmalba.org/work/tagtransform.jar">http://osmalba.org/work/tagtransform.jar</a> Just download it, and put it in the lib/default directory. This works fine for me, using Osmosis v0.38 on Windows. Though I am no expert on this, I'm not sure if it will work for anyone else, or with different versions of Osmosis.</p>
 </div>
 <div class="answer-controls post-controls">

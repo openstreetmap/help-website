@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>For some reason, the recognised keyword for bicycle rentals is 'Cycle Rental'. Searching for <a href="http://nominatim.openstreetmap.org/search.php?q=Cycle+Rentals+in+dublin">cycle rentals in Dublin</a> works fine.</p>
-<p>In the wiki you can find <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">the list of special phrases our search engine recognizes</a>. Feel free to add 'bicycle rental' at the appropriate place. It will then be taken into account when the list is reimported in the search engine next time. Sadly that happens only very infrequently.</p>
+<p>In the wiki you can find <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">the list of special phrases our search engine recognizes</a>. Feel free to add 'bicycle rental' at the appropriate place. It will then be taken into account when the list is reimported in the search engine next time. Sadly that happens only very infrequently.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

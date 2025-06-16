@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>A lot of this info is compatible with OSM philosophy, so this information you can just put in OSM. Look at projects like <a href="http://wheelmap.org/">Wheelmap</a>, <a href="http://www.openbeermap.com/">Openbeermap</a>, <a href="https://www.openstreetmap.org/user/tmcw/diary/28138">Coffeedex</a></p>
-<p>Some information should not be put in the Openstreetmap database. Then you will want to link data. I wrote a bit about my ideas on that subject in <a href="http://www.openstreetmap.org/user/joost%20schouppe/diary/34328">my diary</a>. The comments there will give you an idea about most other available options too.</p>
+<p>Some information should not be put in the Openstreetmap database. Then you will want to link data. I wrote a bit about my ideas on that subject in <a href="https://www.openstreetmap.org/user/joost%20schouppe/diary/34328">my diary</a>. The comments there will give you an idea about most other available options too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

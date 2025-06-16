@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The reason is that the street is within the boundary relation Chestfield CP <a href="http://www.openstreetmap.org/relation/2565513,">http://www.openstreetmap.org/relation/2565513,</a> which is part of the relation Canterbury <a href="http://www.openstreetmap.org/relation/448590">http://www.openstreetmap.org/relation/448590</a></p>
-<p>There is a relation for the boundary of Whitstable, <a href="http://www.openstreetmap.org/relation/2513976#map=13/51.3533/1.0340,">http://www.openstreetmap.org/relation/2513976#map=13/51.3533/1.0340,</a> but it does not have an admin_level tag. This might make sense, because there is a note "does not exist as administrative unit"</p>
+<p>The reason is that the street is within the boundary relation Chestfield CP <a href="https://www.openstreetmap.org/relation/2565513,">https://www.openstreetmap.org/relation/2565513,</a> which is part of the relation Canterbury <a href="https://www.openstreetmap.org/relation/448590">https://www.openstreetmap.org/relation/448590</a></p>
+<p>There is a relation for the boundary of Whitstable, <a href="https://www.openstreetmap.org/relation/2513976#map=13/51.3533/1.0340,">https://www.openstreetmap.org/relation/2513976#map=13/51.3533/1.0340,</a> but it does not have an admin_level tag. This might make sense, because there is a note "does not exist as administrative unit"</p>
 <p>The "normal" solution would be to have a correctly mapped boundary-relation of Whitstable around the street. However, in this case the previous mappers have a different opinion than you about the town. I would get in touch with the editors of those 3 relations and see what's the thruth</p>
 </div>
 <div class="answer-controls post-controls">

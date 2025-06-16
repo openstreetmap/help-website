@@ -117,7 +117,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Always map the intent of signs. Mapping the signs themselves (and particularly repeater signs) is entirely optional, but ultimately may help fellow mappers in cases where particular restrictions, such as speedlimits, change.</p>
-<p>The community of mappers in Helsinki, Finland moved to mapping the signs and their wiki page (<a href="http://wiki.openstreetmap.org/wiki/Finland:Traffic_signs">http://wiki.openstreetmap.org/wiki/Finland:Traffic_signs</a>) provides some good reasons for doing so. Broadly speaking mapping signs assists in verification, and helps spot change &amp; errors.</p>
+<p>The community of mappers in Helsinki, Finland moved to mapping the signs and their wiki page (<a href="https://wiki.openstreetmap.org/wiki/Finland:Traffic_signs">https://wiki.openstreetmap.org/wiki/Finland:Traffic_signs</a>) provides some good reasons for doing so. Broadly speaking mapping signs assists in verification, and helps spot change &amp; errors.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -67,7 +67,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>Do you mean Osmosis Polygon filter files ( <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> ) ? Can you link the CloudMade resource you're referring to, to make it clearer what you're looking for?</p>
+<p>Do you mean Osmosis Polygon filter files ( <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> ) ? Can you link the CloudMade resource you're referring to, to make it clearer what you're looking for?</p>
 </div>
 <div id="comment-17262-info" class="comment-info">
 <span class="comment-age">(29 Oct '12, 14:48)</span> <span class="comment-user userinfo">Harry Wood</span>

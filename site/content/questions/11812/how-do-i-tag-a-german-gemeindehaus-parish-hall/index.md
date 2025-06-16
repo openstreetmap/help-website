@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>In Germany, many (catholic or protestant) church parishes have a so-called <a href="http://de.wikipedia.org/wiki/Gemeindehaus">"Gemeindehaus"</a> or "Gemeindezentrum" (literally: parish hall).</p>
 <p>As a building, it looks like a meeting hall (and not like a typical church). Inside, it usually contains church offices, and various rooms where the parish activities (meetings etc.) can take place. Often, but not always, church services are also held in the Gemeindehaus. However, most parishes also have a "real" church (often right next to the Gemeindehaus), with the typical building features of a church.</p>
 <p>How should I tag such a building? I think <code>amenity=place_of_worship</code> definitely applies (along with religion etc.) I am not sure about the building tag, though. I could just use <code>building=church</code>, but that feels wrong, as the building usually does not look like a church. Also, it may be confusing as many parishes have both a church and a Gemeindehaus, which would then be tagged identically.</p>
-<p>Is there a tag for this? Even the <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dplace_of_worship">German tag page for "place of worship"</a> does not address this.</p>
+<p>Is there a tag for this? Even the <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dplace_of_worship">German tag page for "place of worship"</a> does not address this.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-religion" rel="tag" title="see questions tagged &#39;religion&#39;">religion</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -168,7 +168,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I agree with vclaw and others that church_hall is better than parish_hall; I put together a feature proposal over on the wiki to centralise discussion about this. Your description of a Gemeindehaus matches perfectly my experience of parish halls and church halls in the US---not all denominations tend to use them, but they're pretty common. If you could put your experience and examples of Gemeindehäuser over at <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Church_hall">http://wiki.openstreetmap.org/wiki/Proposed_features/Church_hall</a> that'd be cool. :)</p>
+<p>I agree with vclaw and others that church_hall is better than parish_hall; I put together a feature proposal over on the wiki to centralise discussion about this. Your description of a Gemeindehaus matches perfectly my experience of parish halls and church halls in the US---not all denominations tend to use them, but they're pretty common. If you could put your experience and examples of Gemeindehäuser over at <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Church_hall">https://wiki.openstreetmap.org/wiki/Proposed_features/Church_hall</a> that'd be cool. :)</p>
 </div>
 <div id="comment-18185-info" class="comment-info">
 <span class="comment-age">(04 Dec '12, 04:55)</span> <span class="comment-user userinfo">blahedo</span>
@@ -298,7 +298,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'd go for the "main use" approach: if it's essentially a civic hall that just happens to be used for worship (i.e. it's not the actual parish church), then it's <code>amenity=parish_hall</code>. If it's <em>the</em> church, but it's also used a lot for other uses, that's <code>amenity=place_of_worship</code>. Where I live, it's understood that most churches have an area that constitute a "parish hall", which can be rented for various activities (that area may in fact be the church itself!). I'd still tag them as places of worship.</p>
-<p>Remember also that "secondary" uses can be usefully covered by using a descriptive <code>building=</code> tag, and that in practice, <em>you use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a></em> as long as it makes sense, so <code>amenity:secondary=</code> is a perfectly valid way to indicate it, even if it won't display on the map (but then <em>no double features</em> will ever display anyway if icons would be the mean to do it, and IIRC, there is no icon for parish halls).</p>
+<p>Remember also that "secondary" uses can be usefully covered by using a descriptive <code>building=</code> tag, and that in practice, <em>you use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a></em> as long as it makes sense, so <code>amenity:secondary=</code> is a perfectly valid way to indicate it, even if it won't display on the map (but then <em>no double features</em> will ever display anyway if icons would be the mean to do it, and IIRC, there is no icon for parish halls).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

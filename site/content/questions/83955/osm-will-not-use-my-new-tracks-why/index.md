@@ -210,7 +210,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is the software you are using which seems to be set up for motor-vehicle restrictions eventhough you select foot. Basecamp does it correctly.<a href="https://help.openstreetmap.org/upfiles/aa0.jpg">link text</a> Not much help I know but the only tag that restricts your routing is motor_vehicle=no</p>
+<p>It is the software you are using which seems to be set up for motor-vehicle restrictions eventhough you select foot. Basecamp does it correctly.<span>link text</span> Not much help I know but the only tag that restricts your routing is motor_vehicle=no</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

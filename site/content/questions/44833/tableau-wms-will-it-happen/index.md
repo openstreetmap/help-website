@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Could you explain the relevance of your question to OpenStreetMap?</p>
-<p>If you are referring to a WMS service offering OSM data there are a number of service providers that might offer such a service - see <a href="http://wiki.openstreetmap.org/wiki/WMS">our Wiki</a> for a list and no, there are definitely no plans to offer a WMS as a community run service by the OSMF directly.</p>
+<p>If you are referring to a WMS service offering OSM data there are a number of service providers that might offer such a service - see <a href="https://wiki.openstreetmap.org/wiki/WMS">our Wiki</a> for a list and no, there are definitely no plans to offer a WMS as a community run service by the OSMF directly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

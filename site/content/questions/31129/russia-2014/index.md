@@ -56,8 +56,8 @@ osqa_accepted = false
 <li>32 Хабаровский край</li>
 </ul>
 <p>The steps I'm following: sync regions, sync districts using region boundaries as helper, sync settlements using district boundaries and tags as helpers. (some of them manually because of naming differences)</p>
-<p>just an example: <a href="http://www.openstreetmap.org/?mlat=52.588333&amp;mlon=85.261389&amp;zoom=11#map=14/52.5959/85.2700">map</a> <a href="http://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B2%D0%BE%D0%BC%D0%B0%D0%B9%D1%81%D0%BA%D0%BE%D0%B5_(%D0%91%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)">wiki</a></p>
-<p>"с Первомайское" is missing from osm, but it's an administrative center of "Первомайский сельсовет" which includes: п <a href="http://www.openstreetmap.org/node/1201886178">Берёзовая Горка</a>, п <a href="http://www.openstreetmap.org/node/1177820742">Восточный</a>, п <a href="http://www.openstreetmap.org/node/1177820842">Ягодный</a>, п <a href="http://www.openstreetmap.org/node/1177820787">Ясная Поляна</a>, с Первомайское <a href="http://maps.yandex.ru/-/CVffUO4h">yandex</a>. All but center are marked on the map.</p>
+<p>just an example: <a href="https://www.openstreetmap.org/?mlat=52.588333&amp;mlon=85.261389&amp;zoom=11#map=14/52.5959/85.2700">map</a> <a href="http://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B2%D0%BE%D0%BC%D0%B0%D0%B9%D1%81%D0%BA%D0%BE%D0%B5_(%D0%91%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)">wiki</a></p>
+<p>"с Первомайское" is missing from osm, but it's an administrative center of "Первомайский сельсовет" which includes: п <a href="https://www.openstreetmap.org/node/1201886178">Берёзовая Горка</a>, п <a href="https://www.openstreetmap.org/node/1177820742">Восточный</a>, п <a href="https://www.openstreetmap.org/node/1177820842">Ягодный</a>, п <a href="https://www.openstreetmap.org/node/1177820787">Ясная Поляна</a>, с Первомайское <a href="http://maps.yandex.ru/-/CVffUO4h">yandex</a>. All but center are marked on the map.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-problem" rel="tag" title="see questions tagged &#39;problem&#39;">problem</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-oktmo" rel="tag" title="see questions tagged &#39;oktmo&#39;">oktmo</span>
@@ -141,7 +141,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>SK53 convert your comment to answer. I did found a topic about them validating osm using OKTMO. <a href="http://forum.openstreetmap.org/viewtopic.php?id=23294&amp;p=1">http://forum.openstreetmap.org/viewtopic.php?id=23294&amp;p=1</a></p>
-<p>Btw, that settlement from example had a boundary, but no point: <a href="http://www.openstreetmap.org/way/35973613">http://www.openstreetmap.org/way/35973613</a> (still a lot of another bugs in other districts)</p>
+<p>Btw, that settlement from example had a boundary, but no point: <a href="https://www.openstreetmap.org/way/35973613">https://www.openstreetmap.org/way/35973613</a> (still a lot of another bugs in other districts)</p>
 </div>
 <div id="comment-31168-info" class="comment-info">
 <span class="comment-age">(02 Mar '14, 13:57)</span> <span class="comment-user userinfo">olamedia</span>
@@ -196,7 +196,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Another option: adding notes at problem places: <a href="http://wiki.openstreetmap.org/wiki/Notes">http://wiki.openstreetmap.org/wiki/Notes</a></p>
+<p>Another option: adding notes at problem places: <a href="https://wiki.openstreetmap.org/wiki/Notes">https://wiki.openstreetmap.org/wiki/Notes</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

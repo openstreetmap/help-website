@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Possible duplicate of <a href="https://help.openstreetmap.org/questions/31586/adding-areas-for-flats-above-shops">https://help.openstreetmap.org/questions/31586/adding-areas-for-flats-above-shops</a> but it is also possible to draw areas over areas (though many renderings might not make that clear) e.g. <a href="https://www.openstreetmap.org/#map=19/51.80587/1.15535">https://www.openstreetmap.org/#map=19/51.80587/1.15535</a></p>
+<p>Possible duplicate of <a href="/questions/31586/adding-areas-for-flats-above-shops">https://help.openstreetmap.org/questions/31586/adding-areas-for-flats-above-shops</a> but it is also possible to draw areas over areas (though many renderings might not make that clear) e.g. <a href="https://www.openstreetmap.org/#map=19/51.80587/1.15535">https://www.openstreetmap.org/#map=19/51.80587/1.15535</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

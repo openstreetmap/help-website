@@ -109,7 +109,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>Static data like number of lanes etc. is fine to keep in OSM (it is very welcome, even); note that when letting your users edit OSM data through an app, those users will need to have personal accounts with OSM (you cannot create one single account in OSM and upload all your user edits under that one single account).</p>
 <p>Dynamic data like traffic flow or accident information has no room in OSM and you will have to add that to a separate table in your local database, possibly keyed against OSM IDs so that you can merge OSM and your dynamic data with appropriate queries.</p>
-<p>Note that there may be license implications - if your dynamic data is in any way "derived" from OSM, perhaps in that the user used an OSM map as a reference when they identified the traffic condition, then your dynamic data would have to be made available under the ODbL (see our <a href="http://wiki.openstreetmap.org/wiki/Legal%20FAQ">Legal FAQ).</a></p>
+<p>Note that there may be license implications - if your dynamic data is in any way "derived" from OSM, perhaps in that the user used an OSM map as a reference when they identified the traffic condition, then your dynamic data would have to be made available under the ODbL (see our <a href="https://wiki.openstreetmap.org/wiki/Legal%20FAQ">Legal FAQ).</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -257,7 +257,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is an agreement that on OSM we do not map temporary nor highly dynamic features like <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Dfuel#Prices">gasoline[1]</a> <a href="http://forum.openstreetmap.org/viewtopic.php?id=19327">prices[2]</a>, accidents, minor short lived construction sites, <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#landuse.3Dagricultural_produce.3D.2A">produce on farmland</a> and such.<br />
+<p>It is an agreement that on OSM we do not map temporary nor highly dynamic features like <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Dfuel#Prices">gasoline[1]</a> <a href="http://forum.openstreetmap.org/viewtopic.php?id=19327">prices[2]</a>, accidents, minor short lived construction sites, <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#landuse.3Dagricultural_produce.3D.2A">produce on farmland</a> and such.<br />
 But of course you are free to use the OSM map/data with an extra layer on it to display the data you collect - be it traffic jams, <a href="http://tom.acrewoods.net/2013/09/12/mapping-dirty-london/">air pollution</a>, flash mobs or a <a href="http://www.apps-bahn.de/bin/livemap/query-livemap.exe/dn?L=vs_livefahrplan&amp;livemap=yes">live railway map</a>.<br />
 Other people luckily think straightforward about using an <a href="https://lists.openstreetmap.org/pipermail/dev/2009-April/014907.html">external service</a> for what you want to try.<br />
 </p>

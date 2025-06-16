@@ -194,7 +194,7 @@ osqa_accepted = false
 <li><a href="http://maps.cloudmade.com/?styleId=3">http://maps.cloudmade.com/?styleId=3</a></li>
 <li><a href="https://www.mapbox.com/editor/">https://www.mapbox.com/editor/</a></li>
 </ul>
-<p>If you just want to make a single image, you might also use offline OSM data and render a small area with a local renderer. I guess <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> suites well and maybe they also have a no-names style.</p>
+<p>If you just want to make a single image, you might also use offline OSM data and render a small area with a local renderer. I guess <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> suites well and maybe they also have a no-names style.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -253,7 +253,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You might have a look at the preshipped styles or user contributed, before you spend to much time: <a href="http://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings">http://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings</a><br />
+<p>You might have a look at the preshipped styles or user contributed, before you spend to much time: <a href="https://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings">https://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings</a><br />
 Otherwise you wan't to adapt an existing one, by removing the 'text' value assigments.</p>
 </div>
 <div id="comment-28544-info" class="comment-info">

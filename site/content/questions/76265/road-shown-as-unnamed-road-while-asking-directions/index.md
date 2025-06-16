@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It can take a while for the routing data to be updated behind the scenes. Each service has it's own schedule.</p>
-<p>See <a href="https://help.openstreetmap.org/questions/53722/when-do-directions-get-updated-after-changes-are-made-to-the-maps">this answer</a> for more information.</p>
+<p>See <a href="/questions/53722/when-do-directions-get-updated-after-changes-are-made-to-the-maps">this answer</a> for more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

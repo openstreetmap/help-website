@@ -115,7 +115,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd say natural=birds_nest (there's already some usage of that tag <a href="http://taginfo.openstreetmap.org/search?q=nest#values">in the db</a>). Then add <a href="http://wiki.openstreetmap.org/wiki/Key:genus">genus</a>/<a href="http://wiki.openstreetmap.org/wiki/Key:species">species</a> tags like the ones that are used for t<a href="http://wiki.openstreetmap.org/wiki/Tag:natural=tree">rees</a>.</p>
+<p>I'd say natural=birds_nest (there's already some usage of that tag <a href="http://taginfo.openstreetmap.org/search?q=nest#values">in the db</a>). Then add <a href="https://wiki.openstreetmap.org/wiki/Key:genus">genus</a>/<a href="https://wiki.openstreetmap.org/wiki/Key:species">species</a> tags like the ones that are used for t<a href="https://wiki.openstreetmap.org/wiki/Tag:natural=tree">rees</a>.</p>
 <p>I wouldn't really worry about the fact that it's built on a chimey, but if you really want to maybe try something like nest:type=chimney_top ?</p>
 </div>
 <div class="answer-controls post-controls">

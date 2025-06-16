@@ -264,7 +264,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The faq <a href="http://help.openstreetmap.org/faq/">http://help.openstreetmap.org/faq/</a> suggests you should be able to comment as long as you don't have a negative karma.</p>
+<p>The faq <a href="https://help.openstreetmap.org/faq/">https://help.openstreetmap.org/faq/</a> suggests you should be able to comment as long as you don't have a negative karma.</p>
 </div>
 <div id="comment-2847-info" class="comment-info">
 <span class="comment-age">(09 Feb '11, 14:00)</span> <span class="comment-user userinfo">EdLoach ♦</span>

@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you don't explicitly want to build your very own map, you can download pre-made maps for your Garmin device. Here <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> you'll find a list of many people who build such maps so you don't have to. These are all kind of maps tailored for motorists, cyclists, hikers etc.</p>
+<p>If you don't explicitly want to build your very own map, you can download pre-made maps for your Garmin device. Here <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> you'll find a list of many people who build such maps so you don't have to. These are all kind of maps tailored for motorists, cyclists, hikers etc.</p>
 <p>Those maps differ in what they display (small footpaths, huts) how they look on your device (colors, icons) and if and how they enable you to use the routing feature of your Garmin (car-only, cars+bikes+on foot, bikes only). Some come sorted by country or region, some let you combine predefined tiles, some even let your draw an arbitrary area on a map to select what you want.</p>
 <p>Unfortunately, not all of these details can be found on the linked site. You have to take a look at the websites of the people offering the maps. Even there, you might not always get an example or detailed information. Then only trying them out on your own device will help.</p>
 </div>
@@ -191,7 +191,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>A big thank you to everyone for their help. After the thunderstorms I'm back online and have cracked it. I can't believe I made such a pig's ear of it; I followed Chaos99's advice and went to <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> Then used Freizeitkarte for France and Spain.....now we're up and running. Thanks again Slowfox</p>
+<p>A big thank you to everyone for their help. After the thunderstorms I'm back online and have cracked it. I can't believe I made such a pig's ear of it; I followed Chaos99's advice and went to <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> Then used Freizeitkarte for France and Spain.....now we're up and running. Thanks again Slowfox</p>
 </div>
 <div id="comment-25482-info" class="comment-info">
 <span class="comment-age">(16 Aug '13, 14:29)</span> <span class="comment-user userinfo">slowfox05</span>
@@ -263,7 +263,7 @@ osqa_accepted = false
 <div id="post-32080-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I always use the Garmin software for the Mac (MapInstall), but lots of different options are mentioned at <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Installing_the_map_onto_your_GPS">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Installing_the_map_onto_your_GPS</a></p>
+<p>I always use the Garmin software for the Mac (MapInstall), but lots of different options are mentioned at <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Installing_the_map_onto_your_GPS">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Installing_the_map_onto_your_GPS</a></p>
 </div>
 <div id="comment-32080-info" class="comment-info">
 <span class="comment-age">(02 Apr '14, 21:24)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -459,7 +459,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As previous answers have said, if you just want to "install some maps" then a site such as <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> is the way to go. If however in the future you do want to create your own maps (and modify the map style) then <a href="http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap/2440">this previous answer</a> may help.</p>
+<p>As previous answers have said, if you just want to "install some maps" then a site such as <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> is the way to go. If however in the future you do want to create your own maps (and modify the map style) then <a href="/questions/1809/how-to-install-mkgmap/2440">this previous answer</a> may help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -617,7 +617,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Small area maps can be loaded into the following Garmins:- the new Etrex, the Dakota, the Oregon and the Montana by using the Garmin custom map feature. see www.garmin.com/us/products/onthetrail/​custommaps here's a Q&amp;A about this method <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>Small area maps can be loaded into the following Garmins:- the new Etrex, the Dakota, the Oregon and the Montana by using the Garmin custom map feature. see www.garmin.com/us/products/onthetrail/​custommaps here's a Q&amp;A about this method <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

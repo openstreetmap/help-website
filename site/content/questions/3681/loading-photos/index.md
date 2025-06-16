@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-3686-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>BabuSudhakar: Your can edit your original version of this question at <a href="http://help.openstreetmap.org/questions/3573/loading-photos">http://help.openstreetmap.org/questions/3573/loading-photos</a> to add more detail. Repeatedly posting the same badly-phrased question is unlikely to get you the right answer, and it may get you banned from the system.</p>
+<p>BabuSudhakar: Your can edit your original version of this question at <a href="/questions/3573/loading-photos">https://help.openstreetmap.org/questions/3573/loading-photos</a> to add more detail. Repeatedly posting the same badly-phrased question is unlikely to get you the right answer, and it may get you banned from the system.</p>
 </div>
 <div id="comment-3686-info" class="comment-info">
 <span class="comment-age">(10 Mar '11, 16:49)</span> <span class="comment-user userinfo">Jonathan Ben...</span>

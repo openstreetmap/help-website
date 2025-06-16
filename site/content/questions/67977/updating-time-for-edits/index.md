@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi there, some friends and me edited a city in central America, digitized hundreds of buildings. We finished the edits a few weeks ago, but so far the map has not been rerendered, the download database has not been updated. When logged in the OSM Map page, the edits appear if the map data field in the layers tab is checked. I read the <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">mapnik update post</a> and I think I got the most important parts. Is it possible to estimate how long the process of implementation will take? Or can this process be expedited?</p>
+<p>Hi there, some friends and me edited a city in central America, digitized hundreds of buildings. We finished the edits a few weeks ago, but so far the map has not been rerendered, the download database has not been updated. When logged in the OSM Map page, the edits appear if the map data field in the layers tab is checked. I read the <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">mapnik update post</a> and I think I got the most important parts. Is it possible to estimate how long the process of implementation will take? Or can this process be expedited?</p>
 <p>Thanks for any suggestions! :)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -130,7 +130,7 @@ One Answer:
 <div id="post-67979-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi scai, thank you for your answer. Yes this is me, and some of my edits are available. But the updates of the friends are not available (in editing mode and map data view (see attached <img src="https://help.openstreetmap.org/upfiles/map_view_and_map_OhOZ1ML.png" alt="alt text" />image)). We often use OSM shapefiles for GIS analyses, for that we download the complete OSM data with full attributes from <a href="http://download.geofabrik.de/central-america.html">Geofabrik</a></p>
+<p>Hi scai, thank you for your answer. Yes this is me, and some of my edits are available. But the updates of the friends are not available (in editing mode and map data view (see attached <img src="/upfiles/map_view_and_map_OhOZ1ML.png" alt="alt text" />image)). We often use OSM shapefiles for GIS analyses, for that we download the complete OSM data with full attributes from <a href="http://download.geofabrik.de/central-america.html">Geofabrik</a></p>
 </div>
 <div id="comment-67979-info" class="comment-info">
 <span class="comment-age">(12 Feb '19, 13:19)</span> <span class="comment-user userinfo">WarGeo</span>

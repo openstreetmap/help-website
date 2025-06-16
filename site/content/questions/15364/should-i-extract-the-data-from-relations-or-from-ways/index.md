@@ -196,8 +196,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read this part of the OSM wiki, it will clarify your view on relations: <a href="http://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories">http://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories</a></p>
-<p>Next to that, you can use <a href="http://wiki.openstreetmap.org/wiki/Xapi">xapi</a> or the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a> to gather features with the same tags.</p>
+<p>Please read this part of the OSM wiki, it will clarify your view on relations: <a href="https://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories">https://wiki.openstreetmap.org/wiki/Relations/Relations_are_not_Categories</a></p>
+<p>Next to that, you can use <a href="https://wiki.openstreetmap.org/wiki/Xapi">xapi</a> or the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a> to gather features with the same tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -278,7 +278,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Sure, don't get me wrong, I'm trying to be constructive but the lack of coherence with the relations gave me some good headaches. <a href="http://www.openstreetmap.org/?relation=1728819">http://www.openstreetmap.org/?relation=1728819</a> That relation ends on the left into a substation (Denzlingen), the line that comes out from that substation are a group of ways. None of them belong to any relation. There are a good couple of thousands more cases like this. So when you try to analise what lines are available, if you go through relations, you will miss a lot of them. So it is better to go directly through ways... (PS: my data comes from geofabrik.de)</p>
+<p>Sure, don't get me wrong, I'm trying to be constructive but the lack of coherence with the relations gave me some good headaches. <a href="https://www.openstreetmap.org/?relation=1728819">https://www.openstreetmap.org/?relation=1728819</a> That relation ends on the left into a substation (Denzlingen), the line that comes out from that substation are a group of ways. None of them belong to any relation. There are a good couple of thousands more cases like this. So when you try to analise what lines are available, if you go through relations, you will miss a lot of them. So it is better to go directly through ways... (PS: my data comes from geofabrik.de)</p>
 </div>
 <div id="comment-15391-info" class="comment-info">
 <span class="comment-age">(22 Aug '12, 15:38)</span> <span class="comment-user userinfo">JorgePM</span>

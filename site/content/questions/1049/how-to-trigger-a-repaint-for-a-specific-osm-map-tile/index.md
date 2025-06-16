@@ -157,7 +157,7 @@ osqa_accepted = false
 <div id="post-54015-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've been reading through this, now old, question as I had the same question. One update for <a href="http://help.openstreetmap.org/users/1224/lennard">@Lennard</a>: informationfreeway.org now seems to use the mapnik map, and not the (now discontinued) Tiles@Home map.</p>
+<p>I've been reading through this, now old, question as I had the same question. One update for <a href="https://help.openstreetmap.org/users/1224/lennard">@Lennard</a>: informationfreeway.org now seems to use the mapnik map, and not the (now discontinued) Tiles@Home map.</p>
 </div>
 <div id="comment-54015-info" class="comment-info">
 <span class="comment-age">(13 Jan '17, 08:46)</span> <span class="comment-user userinfo">keithonearth</span>
@@ -199,7 +199,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The answer is <a href="http://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering">here</a></p>
+<p>The answer is <a href="https://wiki.openstreetmap.org/wiki/Slippy_map#Mapnik_tile_rendering">here</a></p>
 <blockquote>
 <p>If you want to make a tile render before the seven day expiry then you can mark it as dirty by appending /dirty: <a href="http://tile.openstreetmap.org/7/63/42.png/dirty">http://tile.openstreetmap.org/7/63/42.png/dirty</a></p>
 </blockquote>

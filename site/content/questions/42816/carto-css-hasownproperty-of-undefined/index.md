@@ -87,7 +87,7 @@ at exports.(anonymous function) (/usr/lib/nodejs/carto/lib/carto/index.js:73:5)<
 &#10;</div>
 <div class="comment-text">
 <p>(when anything goes wrong, suspect node.js)</p>
-<p>What does "node -v" return? For info I'm seeing v0.10.37 on an Ubuntu 14.04 box with a PPA for node (see <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver#Things_that_need_nodejs">http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver#Things_that_need_nodejs</a> )</p>
+<p>What does "node -v" return? For info I'm seeing v0.10.37 on an Ubuntu 14.04 box with a PPA for node (see <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver#Things_that_need_nodejs">https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver#Things_that_need_nodejs</a> )</p>
 </div>
 <div id="comment-42836-info" class="comment-info">
 <span class="comment-age">(03 May '15, 13:33)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Please stop suggesting that people ask questions in forums that no-one actually uses. There have been exactly two topics commented on in the last two months on that sub-forum, and one of those was misplaced.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Please stop suggesting that people ask questions in forums that no-one actually uses. There have been exactly two topics commented on in the last two months on that sub-forum, and one of those was misplaced.</p>
 </div>
 <div id="comment-37785-info" class="comment-info">
 <span class="comment-age">(20 Oct '14, 16:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-37812-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@someoneElse</a>, have a nice day.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@someoneElse</a>, have a nice day.</p>
 </div>
 <div id="comment-37812-info" class="comment-info">
 <span class="comment-age">(21 Oct '14, 00:03)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -133,7 +133,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I assume you have read <a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging">http://wiki.openstreetmap.org/wiki/United_States_roads_tagging</a></p>
+<p>I assume you have read <a href="https://wiki.openstreetmap.org/wiki/United_States_roads_tagging">https://wiki.openstreetmap.org/wiki/United_States_roads_tagging</a></p>
 <p>If you have a four lane divided and access controlled road it should be either motorway or trunk by my reading of the wiki.</p>
 <p>When you state these were "recently demoted" I assume that a mapper made the change based on their opinion. Have you contacted the person who made the change and asked why? It could be that they are new and are unaware of the consensus on how roads in the US should be classified.</p>
 <p>You may also want to bring this up on the talk-us mailing list, which has a lot more traffic than the US forum on this site: <a href="https://lists.openstreetmap.org/listinfo/talk-us">https://lists.openstreetmap.org/listinfo/talk-us</a></p>

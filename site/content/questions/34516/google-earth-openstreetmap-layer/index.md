@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-34532-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(this was previously an "answer" on <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> )</p>
+<p>(this was previously an "answer" on <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> )</p>
 </div>
 <div id="comment-34532-info" class="comment-info">
 <span class="comment-age">(02 Jul '14, 09:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

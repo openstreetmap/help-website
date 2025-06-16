@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a floating barrier ?"
-description = '''In a lock, there’s a barrier made of floating beams or logs on either side, http://www.openstreetmap.org/#map=17/52.46559/4.59801 to prevent mooring or damage. Buts not in the WIKI.  Tag it as barrier = log, floating = yes ? Or ad seamark:mooring man_made = construction as well ?'''
+description = '''In a lock, there’s a barrier made of floating beams or logs on either side, https://www.openstreetmap.org/#map=17/52.46559/4.59801 to prevent mooring or damage. Buts not in the WIKI.  Tag it as barrier = log, floating = yes ? Or ad seamark:mooring man_made = construction as well ?'''
 date = "2013-09-21T13:53:00Z"
 lastmod = "2013-09-21T20:53:00Z"
 weight = 26585
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In a lock, there’s a barrier made of floating beams or logs on either side, <a href="http://www.openstreetmap.org/#map=17/52.46559/4.59801">http://www.openstreetmap.org/#map=17/52.46559/4.59801</a> to prevent mooring or damage. Buts not in the WIKI. Tag it as barrier = log, floating = yes ? Or ad seamark:mooring man_made = construction as well ?</p>
+<p>In a lock, there’s a barrier made of floating beams or logs on either side, <a href="https://www.openstreetmap.org/#map=17/52.46559/4.59801">https://www.openstreetmap.org/#map=17/52.46559/4.59801</a> to prevent mooring or damage. Buts not in the WIKI. Tag it as barrier = log, floating = yes ? Or ad seamark:mooring man_made = construction as well ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-construction" rel="tag" title="see questions tagged &#39;construction&#39;">construction</span> <span class="post-tag tag-link-log" rel="tag" title="see questions tagged &#39;log&#39;">log</span> <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I believe there is <em>no currently accepted way</em> to map this feature as of now. I found one reference to a proposal to add "boom" as a man made object (man_made=boom), as described <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/boom">here</a>, and one stub page in the Wiki for "boom" as a sea obstruction <a href="http://wiki.openstreetmap.org/wiki/Tag:seamark:obstruction:category%3Dboom">here</a>.</p>
+<p>I believe there is <em>no currently accepted way</em> to map this feature as of now. I found one reference to a proposal to add "boom" as a man made object (man_made=boom), as described <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/boom">here</a>, and one stub page in the Wiki for "boom" as a sea obstruction <a href="https://wiki.openstreetmap.org/wiki/Tag:seamark:obstruction:category%3Dboom">here</a>.</p>
 <p>Anyway, the first is not used yet, and the second has been used only 6 times ever in the whole map.</p>
 <p>If I had to map the feature anyway, since it seems that most booms are temporary (oil spill cleanup, for example), I would use the man_made=boom tag. Sometimes only after a tag value is used by many people that a standard is accepted.</p>
 <p><strong>EDIT:</strong> Counted 11 occurrences of "man_made=boom" in the whole current database (updated yesterday noon).</p>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I am not wrong this feature is at the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a></p>
+<p>If I am not wrong this feature is at the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a></p>
 <p>Do a search there for the parameter "around" to get results limited by a radius.</p>
 <p>But before, get familiar how to use OverpassApi at all, it seems not to be an easy toy for fresh OSM beginners :-)</p>
 </div>

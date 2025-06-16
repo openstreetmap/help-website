@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>My openstreetmap database have import the asia.osm.pbf, and the gis database have import the planet-lastest.osm.pbf, when i make an edit on the openstreetmap db by iD editor, and use osmosis command to produce a changes.osc.gz file, then i use the "<strong>osm2pgsql --append --slim -H 192.168.1.162 -P 5432 -d gis -U postgres -C 160 --number-processes 3 changes.osc.gz -e15 -o expire.list</strong>" command to import the changes.osc.gz into gis db, some error occurs, i don't know how to solve it. And i didn't find a solution on the internet, so i ask a question here, hope someone to help me.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/error1.png" alt="alt text" /></p>
+<p><img src="/upfiles/error1.png" alt="alt text" /></p>
 <p>This error disappears when i add a projection parameter "-E 3857", but other error occurs, the detail error message is:</p>
 <pre><code>osm2pgsql SVN version 0.82.0 (64bit id space)
 Using projection SRS 3857 (EPSG:3857)

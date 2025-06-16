@@ -149,7 +149,7 @@ osqa_accepted = true
 <p>If you have a working Mapnik setup, you can simply request Mapnik to produce such a map because proj.4 already supports the projection. Easiest if you use nik2img.py:</p>
 <pre><code>nik2img.py osmstyle.xml -b -180 -90 180 90 -d 1000 1000 -s &#39;+proj=cea +lon_0=0 +lat_ts=45 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs&#39; -fPNG world.png</code></pre>
 <p>The result looks like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/q-17935-worldmap-gall-peters.png" alt="alt text" /></p>
+<p><img src="/upfiles/q-17935-worldmap-gall-peters.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

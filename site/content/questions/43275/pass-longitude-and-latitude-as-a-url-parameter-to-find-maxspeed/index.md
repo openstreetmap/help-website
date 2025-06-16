@@ -221,7 +221,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe you van try the "radius" Parameter?</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">Overpass_QL</a> and search for "radius" ... Success?</p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">Overpass_QL</a> and search for "radius" ... Success?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

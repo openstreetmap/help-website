@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it is a bridge, I would tag it as a bridge and maybe use one of the proposed or user defined values from <a href="http://wiki.openstreetmap.org/wiki/Key:bridge">http://wiki.openstreetmap.org/wiki/Key:bridge</a> other possible tags (based on your description) may be found on these pages <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier</a> <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Harbour#Pier">http://wiki.openstreetmap.org/wiki/Proposed_features/Harbour#Pier</a></p>
+<p>If it is a bridge, I would tag it as a bridge and maybe use one of the proposed or user defined values from <a href="https://wiki.openstreetmap.org/wiki/Key:bridge">https://wiki.openstreetmap.org/wiki/Key:bridge</a> other possible tags (based on your description) may be found on these pages <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier</a> <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Harbour#Pier">https://wiki.openstreetmap.org/wiki/Proposed_features/Harbour#Pier</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -136,7 +136,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><span>@Hendrikklaas</span> Whether or not you can moor a boat at it is <em>entirely irrelevant</em> to whether it is in fact a pier. That's handled with the <a href="http://wiki.openstreetmap.org/wiki/Key:mooring"><code>mooring</code></a> tag.</p>
+<p><span>@Hendrikklaas</span> Whether or not you can moor a boat at it is <em>entirely irrelevant</em> to whether it is in fact a pier. That's handled with the <a href="https://wiki.openstreetmap.org/wiki/Key:mooring"><code>mooring</code></a> tag.</p>
 </div>
 <div id="comment-13151-info" class="comment-info">
 <span class="comment-age">(31 May '12, 13:57)</span> <span class="comment-user userinfo">Circeus</span>

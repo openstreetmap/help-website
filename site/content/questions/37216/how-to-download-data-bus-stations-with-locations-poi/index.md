@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hi, thank you for any help. How do download bus stations with geolocation? I need list bus stations and to geolocations (POI).</p>
 <p>For example: Ginnheim, 50.1405127, 8.646109; Niddapark, 50.1438225, 8.6421729; Römerstadt, 50.1533931, 8.6381724; Nordwestzentrum, 50.1579072, 8.6347154; Heddernheimer Landstraße, 50.1637958, 8.6348233; ...</p>
 <p>This is done manually.</p>
-<p>I need a list automatically. <a href="http://www.openstreetmap.org/relation/387071">http://www.openstreetmap.org/relation/387071</a></p>
+<p>I need a list automatically. <a href="https://www.openstreetmap.org/relation/387071">https://www.openstreetmap.org/relation/387071</a></p>
 <p>Thank you.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -174,7 +174,7 @@ One Answer:
 <div class="comment-text">
 <p>all nodes that are either a tagged with public_transport=stop_position or public_transport=platform | stands for "or" ;<br />
 "^" for start of the string; $ for end of the string</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Public_transport">new tagging schema</a> for public transport does not use the highway=bus_stop notation.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Public_transport">new tagging schema</a> for public transport does not use the highway=bus_stop notation.</p>
 </div>
 <div id="comment-37251-info" class="comment-info">
 <span class="comment-age">(03 Oct '14, 09:10)</span> <span class="comment-user userinfo">escada</span>
@@ -189,7 +189,7 @@ One Answer:
 <p>I need a lot of sessions and overpass turbo show me the error that there is much.</p>
 <p>One relation - (rel(3335256);&gt;&gt;)-&gt;.a;(node.a[highway=bus_stop]; node.a[railway=halt]; node.a[railway=tram_stop]; node.a[railway=station];&gt;;); out meta;</p>
 <p>How do I make multiple relations?</p>
-<p>Problem is in <a href="http://wiki.openstreetmap.org/wiki/Finland:Helsinki/Joukkoliikenne">http://wiki.openstreetmap.org/wiki/Finland:Helsinki/Joukkoliikenne</a></p>
+<p>Problem is in <a href="https://wiki.openstreetmap.org/wiki/Finland:Helsinki/Joukkoliikenne">https://wiki.openstreetmap.org/wiki/Finland:Helsinki/Joukkoliikenne</a></p>
 <p>Public transport in Helsinki has not one relation but very much. Do you know of any solutions ? Thank you</p>
 </div>
 <div id="comment-37396-info" class="comment-info">

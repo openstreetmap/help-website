@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>It would help if you specify where you downloaded this map, as there are <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">many sites</a> that offer garmin images from OSM data.</p>
+<p>It would help if you specify where you downloaded this map, as there are <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">many sites</a> that offer garmin images from OSM data.</p>
 </div>
 <div id="comment-23132-info" class="comment-info">
 <span class="comment-age">(09 Jun '13, 10:03)</span> <span class="comment-user userinfo">RM87</span>

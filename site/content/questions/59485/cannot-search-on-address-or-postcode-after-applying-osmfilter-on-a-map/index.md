@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You need to import essentially all (well not quite) data for the area in question to allow nominatim to build its object hierarchy, in particular not just the objects with addresses but the streets in the area too.</p>
-<p>With other words instead of using osmfilter you should create an extract of the city in question with a suitable tool (you will need the a bounding box or a boundary polygon for the area in question), for example with <a href="http://osmcode.org/osmium-tool/">http://osmcode.org/osmium-tool/</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a></p>
+<p>With other words instead of using osmfilter you should create an extract of the city in question with a suitable tool (you will need the a bounding box or a boundary polygon for the area in question), for example with <a href="http://osmcode.org/osmium-tool/">http://osmcode.org/osmium-tool/</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

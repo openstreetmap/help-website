@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If that just front-ends the main OSM API (as the <a href="http://wiki.openstreetmap.org/wiki/Osmapi">wiki page</a> suggests) I wouldn't use it AT ALL for large downloads. What you need is something that front-ends something like <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>. Perhaps ask the authors of your Python framework how they suggest that you do that?</p>
+<p>If that just front-ends the main OSM API (as the <a href="https://wiki.openstreetmap.org/wiki/Osmapi">wiki page</a> suggests) I wouldn't use it AT ALL for large downloads. What you need is something that front-ends something like <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>. Perhaps ask the authors of your Python framework how they suggest that you do that?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

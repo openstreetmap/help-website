@@ -117,7 +117,7 @@ Cons: Meta is somewhat arbitrarily distributed between the outline and the node.
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The first option is preferred, where possible. See the wiki pages on <a href="http://wiki.openstreetmap.org/wiki/Good_practice">Good practice</a> and <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>. Basically if there is only one feature on the ground, then only one object in OSM should be tagged as that.</p>
+<p>The first option is preferred, where possible. See the wiki pages on <a href="https://wiki.openstreetmap.org/wiki/Good_practice">Good practice</a> and <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>. Basically if there is only one feature on the ground, then only one object in OSM should be tagged as that.</p>
 <p>Its true that this causes some applications or renderers to not show some features mapped as areas. But that is a bug with the application/renderer, which should be reported and fixed. If necessary, you could do pre-processing of the OSM data, to convert features mapped as areas into nodes, before rendering the map. With your options 2 or 3, this would cause duplicate objects on the map.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -200,7 +200,7 @@ osqa_accepted = false
 <div id="post-24560-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>i read the josm_file_format <a href="http://wiki.openstreetmap.org/wiki/JOSM_file_format">http://wiki.openstreetmap.org/wiki/JOSM_file_format</a> which states that create is done by giving negaive id and does not use the action attribute.</p>
+<p>i read the josm_file_format <a href="https://wiki.openstreetmap.org/wiki/JOSM_file_format">https://wiki.openstreetmap.org/wiki/JOSM_file_format</a> which states that create is done by giving negaive id and does not use the action attribute.</p>
 </div>
 <div id="comment-24560-info" class="comment-info">
 <span class="comment-age">(25 Jul '13, 10:20)</span> <span class="comment-user userinfo">amritkarma</span>
@@ -212,7 +212,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Well, "deleted" doesn't mean "gone away for ever"; it just means "marked as deleted and not currently appearing in the data". To take an example from one of my recent changesets, <a href="http://www.openstreetmap.org/browse/way/231022984/history">way 231022984</a> was deleted in <a href="http://www.openstreetmap.org/browse/changeset/17065699">changeset 17065699</a>. If I was to revert that changeset, the way would be "undeleted" and appear in the data again. Using the same ID (rather than creating a new one) is much more traceable.</p>
+<p>Well, "deleted" doesn't mean "gone away for ever"; it just means "marked as deleted and not currently appearing in the data". To take an example from one of my recent changesets, <a href="https://www.openstreetmap.org/browse/way/231022984/history">way 231022984</a> was deleted in <a href="https://www.openstreetmap.org/browse/changeset/17065699">changeset 17065699</a>. If I was to revert that changeset, the way would be "undeleted" and appear in the data again. Using the same ID (rather than creating a new one) is much more traceable.</p>
 </div>
 <div id="comment-24561-info" class="comment-info">
 <span class="comment-age">(25 Jul '13, 10:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

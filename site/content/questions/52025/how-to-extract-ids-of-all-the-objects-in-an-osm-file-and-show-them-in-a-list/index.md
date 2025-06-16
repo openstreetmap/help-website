@@ -128,7 +128,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Also, avoid linking to object id's whenever possible. See <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Permanent_ID">http://wiki.openstreetmap.org/wiki/Overpass_API/Permanent_ID</a></p>
+<p>Also, avoid linking to object id's whenever possible. See <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Permanent_ID">https://wiki.openstreetmap.org/wiki/Overpass_API/Permanent_ID</a></p>
 </div>
 <div id="comment-52043-info" class="comment-info">
 <span class="comment-age">(14 Sep '16, 14:23)</span> <span class="comment-user userinfo">joost schouppe</span>

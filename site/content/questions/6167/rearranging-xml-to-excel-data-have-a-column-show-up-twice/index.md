@@ -116,7 +116,7 @@ osqa_accepted = false
 <p>The Ruby library <strong><a href="http://osmlib.rubyforge.org">OSMlib</a></strong> allows <a href="http://osmlib.rubyforge.org/osmlib-export/rdoc/files/doc/format-csv.html">export into CSV</a>.</p>
 <p>The example in the documentation pointed to above has a hospital example that mirrors your restaurant example.</p>
 <p>One thing to be aware of, as it sounds like you're looking to extract the data out of OSM, is that the license persists, and your new dataset in CSV form is still under the CC-BY-SA license (until OSM completes the license transition).</p>
-<p>So if you distribute this file, it must be under the terms of the CC-BY-SA. If you make a new map, it's a derived work, and if you combine this data with other data, it's a derived work. You should read the various license pages on the OSM Wiki for more information about this, in particular the page on <a href="http://wiki.openstreetmap.org/wiki/Common_licence_interpretations">Common license interpretations</a> may help.</p>
+<p>So if you distribute this file, it must be under the terms of the CC-BY-SA. If you make a new map, it's a derived work, and if you combine this data with other data, it's a derived work. You should read the various license pages on the OSM Wiki for more information about this, in particular the page on <a href="https://wiki.openstreetmap.org/wiki/Common_licence_interpretations">Common license interpretations</a> may help.</p>
 <p>OSM's a great resource for POI data. Good luck with your project!</p>
 </div>
 <div class="answer-controls post-controls">

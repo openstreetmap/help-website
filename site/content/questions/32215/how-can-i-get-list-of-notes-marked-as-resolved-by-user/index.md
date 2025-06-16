@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can I get list of notes marked as resolved by user?"
-description = '''For example http://www.openstreetmap.org/note/85497 was marked as resolved, despite the fact that the problem still exists. It was done by somebody with 0 edits, and I suspect that this account may be responsible for similar actions. Unfortunately I am unable to find log of notes affected (especiall...'''
+description = '''For example https://www.openstreetmap.org/note/85497 was marked as resolved, despite the fact that the problem still exists. It was done by somebody with 0 edits, and I suspect that this account may be responsible for similar actions. Unfortunately I am unable to find log of notes affected (especiall...'''
 date = "2014-04-09T07:38:00Z"
 lastmod = "2014-04-09T08:51:00Z"
 weight = 32215
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>For example <a href="http://www.openstreetmap.org/note/85497">http://www.openstreetmap.org/note/85497</a> was marked as resolved, despite the fact that the problem still exists.</p>
+<p>For example <a href="https://www.openstreetmap.org/note/85497">https://www.openstreetmap.org/note/85497</a> was marked as resolved, despite the fact that the problem still exists.</p>
 <p>It was done by somebody with 0 edits, and I suspect that this account may be responsible for similar actions. Unfortunately I am unable to find log of notes affected (especially closed/reopened) by specified user.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can browse his notes here: <a href="http://www.openstreetmap.org/user/vac666/notes">http://www.openstreetmap.org/user/vac666/notes</a></p>
+<p>You can browse his notes here: <a href="https://www.openstreetmap.org/user/vac666/notes">https://www.openstreetmap.org/user/vac666/notes</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

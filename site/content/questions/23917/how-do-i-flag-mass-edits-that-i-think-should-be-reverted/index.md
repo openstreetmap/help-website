@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>For example <a href="http://www.openstreetmap.org/browse/changeset/16797153">this bulk edit</a> of 1110 nodes seems to be damaging to me.</p>
+<p>For example <a href="https://www.openstreetmap.org/browse/changeset/16797153">this bulk edit</a> of 1110 nodes seems to be damaging to me.</p>
 <p>I think there was a similar edit recently, but not on such a large scale for me to bother doing anything about it. Obviously that's not great. Is there a way I can easily flag such edits for review by some team?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -63,7 +63,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>As a side note, that particular changeset appears to have been reverted by its author already: <a href="http://www.openstreetmap.org/browse/changeset/16798964">http://www.openstreetmap.org/browse/changeset/16798964</a></p>
+<p>As a side note, that particular changeset appears to have been reverted by its author already: <a href="https://www.openstreetmap.org/browse/changeset/16798964">https://www.openstreetmap.org/browse/changeset/16798964</a></p>
 </div>
 <div id="comment-23918-info" class="comment-info">
 <span class="comment-age">(03 Jul '13, 00:29)</span> <span class="comment-user userinfo">Tordanik</span>

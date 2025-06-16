@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Something like <a href="http://www.openstreetmap.org/traces/tag/Bicycle">this</a>? <a href="http://www.openstreetmap.org/traces/tag/Bicycle"><code>http://www.openstreetmap.org/traces/tag/Bicycle</code></a></p>
-<p>You can also filter by <a href="http://www.openstreetmap.org/user/felweb/traces/tag/Fahrrad">user and tag</a>. <a href="http://www.openstreetmap.org/user/felweb/traces/tag/Fahrrad"><code>http://www.openstreetmap.org/user/felweb/traces/tag/Fahrrad</code></a></p>
+<p>Something like <a href="https://www.openstreetmap.org/traces/tag/Bicycle">this</a>? <a href="https://www.openstreetmap.org/traces/tag/Bicycle"><code>https://www.openstreetmap.org/traces/tag/Bicycle</code></a></p>
+<p>You can also filter by <a href="https://www.openstreetmap.org/user/felweb/traces/tag/Fahrrad">user and tag</a>. <a href="https://www.openstreetmap.org/user/felweb/traces/tag/Fahrrad"><code>https://www.openstreetmap.org/user/felweb/traces/tag/Fahrrad</code></a></p>
 <p>The above examples were picked at random.</p>
 </div>
 <div class="answer-controls post-controls">

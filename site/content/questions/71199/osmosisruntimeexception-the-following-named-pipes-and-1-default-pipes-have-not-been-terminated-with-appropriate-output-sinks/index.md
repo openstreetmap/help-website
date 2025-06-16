@@ -183,7 +183,7 @@ org.openstreetmap.osmosis.core.OsmosisRuntimeException: The following named pipe
 <p>Hi Frederik,</p>
 <p>sorry for the missing link: <a href="https://learnosm.org/en/osm-data/osmosis/">https://learnosm.org/en/osm-data/osmosis/</a></p>
 <p>The full command is following ( \ is used to change the line). I still get an error message but this time from line 7: completeRelations (saying its written incorrectly or can't be found)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Unbenannt.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Unbenannt.PNG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

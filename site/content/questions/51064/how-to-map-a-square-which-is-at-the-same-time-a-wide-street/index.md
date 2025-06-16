@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to map a square which is at the same time a &quot;wide street&quot;?"
-description = '''Hey everyone, I am currently doing some surveying and mapping in Peru. I have trouble mapping a particular square in a city called Juliaca. The issue: It serves both as a street and a square. http://www.openstreetmap.org/?mlat=-15.48855&amp;amp;mlon=-70.13525#map=18/-15.48855/-70.13526&amp;amp;layers=N As y...'''
+description = '''Hey everyone, I am currently doing some surveying and mapping in Peru. I have trouble mapping a particular square in a city called Juliaca. The issue: It serves both as a street and a square. https://www.openstreetmap.org/?mlat=-15.48855&amp;amp;mlon=-70.13525#map=18/-15.48855/-70.13526&amp;amp;layers=N As y...'''
 date = "2016-07-23T04:32:00Z"
 lastmod = "2016-07-24T16:12:00Z"
 weight = 51064
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hey everyone, I am currently doing some surveying and mapping in Peru. I have trouble mapping a particular square in a city called Juliaca. The issue: It serves both as a street and a square.</p>
-<p><a href="http://www.openstreetmap.org/?mlat=-15.48855&amp;mlon=-70.13525#map=18/-15.48855/-70.13526&amp;layers=N">http://www.openstreetmap.org/?mlat=-15.48855&amp;mlon=-70.13525#map=18/-15.48855/-70.13526&amp;layers=N</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=-15.48855&amp;mlon=-70.13525#map=18/-15.48855/-70.13526&amp;layers=N">https://www.openstreetmap.org/?mlat=-15.48855&amp;mlon=-70.13525#map=18/-15.48855/-70.13526&amp;layers=N</a></p>
 <p>As you can see on a Satellite photo, the whole street is extremely wide, with low traffic levels. People are walking around and vendor stands are around, so that the function is an excellent example of public space usage, it repsresents multiple-purpose area. This area also has a particular name: At least in local knowledge it is known as "Laguna Temporal", and serves as a street-market on Sundays.</p>
 <p>The question is, how to map this best:<br />
 1)Specify a street width so that renderers know how to represent the area?<br />
@@ -69,7 +69,7 @@ osqa_accepted = true
 <div id="post-51066-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is it a market area or parking area or maybe both, <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace</a></p>
+<p>Is it a market area or parking area or maybe both, <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace</a></p>
 </div>
 <div id="comment-51066-info" class="comment-info">
 <span class="comment-age">(23 Jul '16, 14:03)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -133,7 +133,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>What I should have linked to as well was:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a></p>
 <p>it may not be at the level that you're interested in, but it should help you to ask the right questions.</p>
 </div>
 <div id="comment-49636-info" class="comment-info">
@@ -176,7 +176,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could begin with the routing page of the osm wiki <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></p>
+<p>You could begin with the routing page of the osm wiki <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -226,7 +226,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want a solution out-of-the-box, then have a look at some SDK from mapbox, Mapzen or similar companies mentioned at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial OSM Software and Services</a></p>
+<p>If you want a solution out-of-the-box, then have a look at some SDK from mapbox, Mapzen or similar companies mentioned at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial OSM Software and Services</a></p>
 <p>Browse each website there to find out whether any of them has frameworks available that you need.</p>
 </div>
 <div class="answer-controls post-controls">

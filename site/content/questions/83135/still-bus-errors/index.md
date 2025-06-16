@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Example: At 51.3669 7.3097 split the street and save. Use iD-Editor in browser. This produces 12 bus errors, enclosure <a href="https://help.openstreetmap.org/upfiles/21.01.2022_still_bus_errors.jpg">1</a>. The problem exists till spring 2021, compare with questions/81881</p>
+<p>Example: At 51.3669 7.3097 split the street and save. Use iD-Editor in browser. This produces 12 bus errors, enclosure <span>1</span>. The problem exists till spring 2021, compare with questions/81881</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bus" rel="tag" title="see questions tagged &#39;bus&#39;">bus</span> <span class="post-tag tag-link-errors" rel="tag" title="see questions tagged &#39;errors&#39;">errors</span>

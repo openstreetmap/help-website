@@ -73,8 +73,8 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>That is really a bunch of questions ...</p>
-<p>Maybe this is better answered in any of the OSM forums (<a href="http://forum.osm.org">http://forum.osm.org</a>) or one of the OSM mailing list at <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
-<p>Or have a look at HOT <a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team">http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team</a> where you might find further information.</p>
+<p>Maybe this is better answered in any of the OSM forums (<a href="http://forum.osm.org">http://forum.osm.org</a>) or one of the OSM mailing list at <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p>Or have a look at HOT <a href="https://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team">https://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team</a> where you might find further information.</p>
 </div>
 <div id="comment-17268-info" class="comment-info">
 <span class="comment-age">(29 Oct '12, 17:16)</span> <span class="comment-user userinfo">stephan75</span>

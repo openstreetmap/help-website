@@ -220,7 +220,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Related problem and solutions <a href="https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
+<p>Related problem and solutions <a href="/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
 </div>
 <div id="comment-20247-info" class="comment-info">
 <span class="comment-age">(25 Feb '13, 09:40)</span> <span class="comment-user userinfo">andy mackey</span>

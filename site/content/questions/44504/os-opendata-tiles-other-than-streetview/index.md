@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>OS StreetView is available as a background layer in iD, but may also - <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata#Available_data">according to the wiki</a> - be loaded as a custom layer using</p>
+<p>OS StreetView is available as a background layer in iD, but may also - <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata#Available_data">according to the wiki</a> - be loaded as a custom layer using</p>
 <pre><code>http://os.openstreetmap.org/sv/{zoom}/{x}/{y}.png</code></pre>
 <p>Can VectorMap or OpenMap - which may be more suitable for tracing - be loaded in iD in this way too?</p>
 </div>

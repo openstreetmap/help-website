@@ -84,7 +84,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Yes: <a href="http://www.openstreetmap.org/#map=18/-27.56407/153.08074">here you go.</a></p>
+<p>Yes: <a href="https://www.openstreetmap.org/#map=18/-27.56407/153.08074">here you go.</a></p>
 <p>It's the South East Busway tunnel.</p>
 </div>
 <div id="comment-27321-info" class="comment-info">
@@ -97,7 +97,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/way/242180508">direct data link</a> (I hope that is the correct object)</p>
+<p><a href="https://www.openstreetmap.org/browse/way/242180508">direct data link</a> (I hope that is the correct object)</p>
 </div>
 <div id="comment-27323-info" class="comment-info">
 <span class="comment-age">(19 Oct '13, 03:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

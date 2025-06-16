@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why is a deleted relation still being rendered?"
-description = '''I have a problem with the following boundary relation: http://www.openstreetmap.org/relation/5617489  It was deleted yet it&#x27;s still being displayed in the map. Any idea why?'''
+description = '''I have a problem with the following boundary relation: https://www.openstreetmap.org/relation/5617489  It was deleted yet it&#x27;s still being displayed in the map. Any idea why?'''
 date = "2015-12-30T07:55:00Z"
 lastmod = "2016-01-14T09:04:00Z"
 weight = 47321
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I have a problem with the following boundary relation:</p>
-<p><span></span><a href="http://www.openstreetmap.org/relation/5617489">http://www.openstreetmap.org/relation/5617489</a></p>
+<p><span></span><a href="https://www.openstreetmap.org/relation/5617489">https://www.openstreetmap.org/relation/5617489</a></p>
 <p>It was deleted yet it's still being displayed in the map. Any idea why?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's the usual story I think - tiles just not yet updated. <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">This question</a> has lots of details about the process. I requested an immediate rerender via "/dirty" of <a href="http://b.tile.openstreetmap.org/14/3700/7146.png">http://b.tile.openstreetmap.org/14/3700/7146.png</a> and the rendering of the relation was removed from that tile.</p>
+<p>It's the usual story I think - tiles just not yet updated. <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">This question</a> has lots of details about the process. I requested an immediate rerender via "/dirty" of <a href="http://b.tile.openstreetmap.org/14/3700/7146.png">http://b.tile.openstreetmap.org/14/3700/7146.png</a> and the rendering of the relation was removed from that tile.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

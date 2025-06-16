@@ -114,12 +114,12 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You can get all administrative boundaries in several ways:</p>
 <ol>
-<li>You could make a call at one of the <a href="http://wiki.openstreetmap.org/wiki/Xapi">Xapi</a> filtering by location (bounding box) and tag (admin_level). Note that the Xapi is mostly overloaded these days, <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">check current status here</a>.</li>
-<li>You could take a germany extract, for instance from geofabrik, and extract the boundaries with <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></li>
+<li>You could make a call at one of the <a href="https://wiki.openstreetmap.org/wiki/Xapi">Xapi</a> filtering by location (bounding box) and tag (admin_level). Note that the Xapi is mostly overloaded these days, <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">check current status here</a>.</li>
+<li>You could take a germany extract, for instance from geofabrik, and extract the boundaries with <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></li>
 <li>If I recall right, <a href="http://www.geofabrik.de/en/data/shapefiles.html">geofabrik</a> offers shapefiles from OSM-Data, and there might be a boundaries file for Germany in their download section , <a href="http://download.geofabrik.de/osm/">see here</a>.</li>
 <li>If you wanted only admin_level=4 and 2 you could download them with josm, but for admin_level=6 this might be too much effort.</li>
 </ol>
-<p>I don't know which formats are supported by Map-Explorer, but if it doesn't support osm-xml directly you could load the osm-file into Josm and export it as GPX, which most geo-applications are able to read. There are also tools available to convert osm to shapefile. More help on this topic and alternative programs can be found <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">in the wiki</a>.</p>
+<p>I don't know which formats are supported by Map-Explorer, but if it doesn't support osm-xml directly you could load the osm-file into Josm and export it as GPX, which most geo-applications are able to read. There are also tools available to convert osm to shapefile. More help on this topic and alternative programs can be found <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">in the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

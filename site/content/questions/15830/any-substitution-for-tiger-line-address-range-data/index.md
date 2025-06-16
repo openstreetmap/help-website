@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The best way is to use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Many areas of the US are lacking address data, but the addresses which are present in OSM are generally much better than the TIGER lines. Nominatim has logic which can fall back to the TIGER lines when no OSM data is entered.</p>
-<p>For testing, you can use the OpenStreetMap version of Nominatim. For low-medium volumes of lookups, you can also use the <a href="http://devblog.mapquest.com/2012/08/21/new-geocoding-service-and-updated-apis-based-on-open-data-2/">Mapquest Open</a> Geocoding APIs. For rapid response or high volumes of lookups, you will need to set up Nominatim on a server. In this case, you'll need to load the TIGER line address data following the procedure at <a href="https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance">this answer</a>.</p>
+<p>The best way is to use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Many areas of the US are lacking address data, but the addresses which are present in OSM are generally much better than the TIGER lines. Nominatim has logic which can fall back to the TIGER lines when no OSM data is entered.</p>
+<p>For testing, you can use the OpenStreetMap version of Nominatim. For low-medium volumes of lookups, you can also use the <a href="http://devblog.mapquest.com/2012/08/21/new-geocoding-service-and-updated-apis-based-on-open-data-2/">Mapquest Open</a> Geocoding APIs. For rapid response or high volumes of lookups, you will need to set up Nominatim on a server. In this case, you'll need to load the TIGER line address data following the procedure at <a href="/questions/12150/missing-house-numbers-in-local-nominatim-instance">this answer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -129,7 +129,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Doesn't Nominatim use Tiger data in the US? According to <a href="https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance">this answer</a>, anyway.</p>
+<p>Doesn't Nominatim use Tiger data in the US? According to <a href="/questions/12150/missing-house-numbers-in-local-nominatim-instance">this answer</a>, anyway.</p>
 </div>
 <div id="comment-15843-info" class="comment-info">
 <span class="comment-age">(06 Sep '12, 12:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

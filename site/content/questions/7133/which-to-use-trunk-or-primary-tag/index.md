@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Which to use, Trunk or Primary tag?"
-description = '''I am trying to make sure things are standardized but when it comes to the tag for Primary or Trunk, it gets a bit confusing. Referencing this page. http://wiki.openstreetmap.org/wiki/Canada:Alberta  Says that certain highways are trunk and others are primary. Yet if you read the definition of Trunk,...'''
+description = '''I am trying to make sure things are standardized but when it comes to the tag for Primary or Trunk, it gets a bit confusing. Referencing this page. https://wiki.openstreetmap.org/wiki/Canada:Alberta  Says that certain highways are trunk and others are primary. Yet if you read the definition of Trunk,...'''
 date = "2011-08-17T06:15:00Z"
 lastmod = "2013-01-17T04:11:00Z"
 weight = 7133
@@ -41,13 +41,13 @@ osqa_accepted = false
 <div class="question-body">
 <p>I am trying to make sure things are standardized but when it comes to the tag for Primary or Trunk, it gets a bit confusing.</p>
 <p>Referencing this page.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Canada:Alberta">http://wiki.openstreetmap.org/wiki/Canada:Alberta</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Canada:Alberta">https://wiki.openstreetmap.org/wiki/Canada:Alberta</a><br />
 </p>
 <p>Says that certain highways are trunk and others are primary. Yet if you read the definition of Trunk, it states that it is controlled access. Now this definition is open to interpretation. Does controlled access mean level ground with stop signs or higher level of control. If you have access onto the highway without any signs, does that change it down to Primary?<br />
 </p>
 <p>To confuse matters, someone had already edited some of the roads as Primary yet according to the page above, they are Trunk. Some of the Trunk highways join onto Primary highways in the U.S.<br />
 </p>
-<p>To further confuse, <a href="http://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines">http://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines</a> states that any road that is federally funded should be Trunk, but no highway is fully funded in our area. Mainly provincial.</p>
+<p>To further confuse, <a href="https://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines">https://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines</a> states that any road that is federally funded should be Trunk, but no highway is fully funded in our area. Mainly provincial.</p>
 <p>I just want to make sure that the maps are correct.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at the <a href="http://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines#Trunk">Canadian tagging guidelines</a> a trunk road is a road that is part of the national highway system. There is a list of all the trunk roads in Canada in this <a href="http://www.comt.ca/english/NHS-Report-English.pdf">PDF</a> starting at page 35.</p>
+<p>Looking at the <a href="https://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines#Trunk">Canadian tagging guidelines</a> a trunk road is a road that is part of the national highway system. There is a list of all the trunk roads in Canada in this <a href="http://www.comt.ca/english/NHS-Report-English.pdf">PDF</a> starting at page 35.</p>
 <p>Primary roads can be federally funded but are maintained by the provincial governments and not the national gouverment.</p>
 </div>
 <div class="answer-controls post-controls">

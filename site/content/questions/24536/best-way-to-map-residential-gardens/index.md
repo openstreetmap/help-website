@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That proposal <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">has already been rejected</a>, however as it is quite used in practice, I do not see problem with you also using it (especially as it was rejected mostly for low exposure and hence too little votes, and not sound reasons). What you should do however (whether or not you use garden:type), is to add tag <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a>=private</p>
+<p>That proposal <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">has already been rejected</a>, however as it is quite used in practice, I do not see problem with you also using it (especially as it was rejected mostly for low exposure and hence too little votes, and not sound reasons). What you should do however (whether or not you use garden:type), is to add tag <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a>=private</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

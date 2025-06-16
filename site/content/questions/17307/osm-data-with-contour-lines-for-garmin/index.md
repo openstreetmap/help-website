@@ -190,7 +190,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>tk-osm.thkukuk.de has also USA contourlines, for other areas you can make contour lines yourself with <a href="http://wiki.openstreetmap.org/wiki/Phyghtmap">Phyghtmap</a></p>
+<p>tk-osm.thkukuk.de has also USA contourlines, for other areas you can make contour lines yourself with <a href="https://wiki.openstreetmap.org/wiki/Phyghtmap">Phyghtmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>House numbers are available in the Standard and MapQuest layers from zoom level 17 onwards — provided that someone has mapped them. If no-one has added numbers where you live your best bet is for you or your friends to <a href="http://wiki.openstreetmap.org/wiki/Contribute_map_data">add the numbers</a> yourselves. This is likely to involve surveying the houses yourself.</p>
+<p>House numbers are available in the Standard and MapQuest layers from zoom level 17 onwards — provided that someone has mapped them. If no-one has added numbers where you live your best bet is for you or your friends to <a href="https://wiki.openstreetmap.org/wiki/Contribute_map_data">add the numbers</a> yourselves. This is likely to involve surveying the houses yourself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

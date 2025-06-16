@@ -161,7 +161,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>There's a related question <a href="https://help.openstreetmap.org/questions/19408/how-to-tag-an-element-with-multiple-values">here</a> which describes a restaurant which legitimately has multiple "cuisine" values.</p>
+<p>There's a related question <a href="/questions/19408/how-to-tag-an-element-with-multiple-values">here</a> which describes a restaurant which legitimately has multiple "cuisine" values.</p>
 </div>
 <div id="comment-19418-info" class="comment-info">
 <span class="comment-age">(29 Jan '13, 13:05)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

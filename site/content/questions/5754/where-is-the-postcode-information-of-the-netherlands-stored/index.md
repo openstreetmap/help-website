@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've noticed that the postcode information of many streets in the Netherlands are known by nominatim. For instance, <a href="http://www.openstreetmap.org/?lat=52.016512&amp;lon=4.354438&amp;zoom=18">this place</a> is very correctly reported by nominatim as "Buitenboogerd, 2611 KA, Nederland" (as can be seen <a href="http://nominatim.openstreetmap.org/reverse?lat=52.016512&amp;lon=4.354438">here</a>).</p>
+<p>I've noticed that the postcode information of many streets in the Netherlands are known by nominatim. For instance, <a href="https://www.openstreetmap.org/?lat=52.016512&amp;lon=4.354438&amp;zoom=18">this place</a> is very correctly reported by nominatim as "Buitenboogerd, 2611 KA, Nederland" (as can be seen <a href="http://nominatim.openstreetmap.org/reverse?lat=52.016512&amp;lon=4.354438">here</a>).</p>
 <p>In the Netherlands, each street has a different postcode (or more). But on the "Buitenboogerd" way, I cannot see any information about the postcode, nor anywhere around! So I wonder, where is this information stored? How can I edit/update it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ One Answer:
 <p><a href="http://open.mapquestapi.com/nominatim/v1/details.php?place_id=15365374">http://open.mapquestapi.com/nominatim/v1/details.php?place_id=15365374</a></p>
 <p>There you can see that Nominatim used a node located next to "Molenstraat" (two blocks to the south). That node belongs to a shop, but it also has complete address information, including postcode, and Nominatim just guesses that streets close to it have the same postcode.</p>
 <p>The node in Nominatim: <a href="http://open.mapquestapi.com/nominatim/v1/details.php?place_id=79652437">http://open.mapquestapi.com/nominatim/v1/details.php?place_id=79652437</a></p>
-<p>The same node in OSM: <a href="http://www.openstreetmap.org/browse/node/553511622">http://www.openstreetmap.org/browse/node/553511622</a></p>
+<p>The same node in OSM: <a href="https://www.openstreetmap.org/browse/node/553511622">https://www.openstreetmap.org/browse/node/553511622</a></p>
 <p>In general, Nominatim seems to use a variety of heuristics to find out where areas of cities, postcodes etc. are. This sometimes works... and sometimes not.</p>
 </div>
 <div class="answer-controls post-controls">

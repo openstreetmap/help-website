@@ -43,16 +43,16 @@ osqa_accepted = false
 <p>In short I'm wondering if someone would be able to have a look at the mapnik rule sheet on road widths, in regards to what I shall elaborate on. I have done about as much as I am able to do myself.</p>
 <p>On the Mapnik renders there are a few differences in the road widths which I would like to propose getting a bit of a tweaking. I haven't looked at the rulesheet itself for a couple of reasons, so I started by making a test area for the different zoom levels for the road combinations. (excluding _link being down the central line).</p>
 <p>(all these links are having the underscore dropped after the last - because it seems to be the italic shortcut)</p>
-<p><a href="http://wiki.openstreetmap.org/w/images/1/14/Core-Casing_-">http://wiki.openstreetmap.org/w/images/1/14/Core-Casing_-</a><em>Z13.png</em></p>
-<p><em><a href="http://wiki.openstreetmap.org/w/images/0/02/Core-Casing">http://wiki.openstreetmap.org/w/images/0/02/Core-Casing</a></em>-<em>Z14.png</em></p>
-<p><em><a href="http://wiki.openstreetmap.org/w/images/2/21/Core-Casing">http://wiki.openstreetmap.org/w/images/2/21/Core-Casing</a></em>-<em>Z15.png</em></p>
-<p><em><a href="http://wiki.openstreetmap.org/w/images/e/e5/Core-Casing">http://wiki.openstreetmap.org/w/images/e/e5/Core-Casing</a></em>-<em>Z16.png</em></p>
-<p><em><a href="http://wiki.openstreetmap.org/w/images/5/55/Core-Casing">http://wiki.openstreetmap.org/w/images/5/55/Core-Casing</a></em>-<em>Z17.png</em></p>
-<p><em><a href="http://wiki.openstreetmap.org/w/images/4/40/Core-Casing">http://wiki.openstreetmap.org/w/images/4/40/Core-Casing</a></em>-_Z18.png</p>
+<p><a href="https://wiki.openstreetmap.org/w/images/1/14/Core-Casing_-">https://wiki.openstreetmap.org/w/images/1/14/Core-Casing_-</a><em>Z13.png</em></p>
+<p><em><a href="https://wiki.openstreetmap.org/w/images/0/02/Core-Casing">https://wiki.openstreetmap.org/w/images/0/02/Core-Casing</a></em>-<em>Z14.png</em></p>
+<p><em><a href="https://wiki.openstreetmap.org/w/images/2/21/Core-Casing">https://wiki.openstreetmap.org/w/images/2/21/Core-Casing</a></em>-<em>Z15.png</em></p>
+<p><em><a href="https://wiki.openstreetmap.org/w/images/e/e5/Core-Casing">https://wiki.openstreetmap.org/w/images/e/e5/Core-Casing</a></em>-<em>Z16.png</em></p>
+<p><em><a href="https://wiki.openstreetmap.org/w/images/5/55/Core-Casing">https://wiki.openstreetmap.org/w/images/5/55/Core-Casing</a></em>-<em>Z17.png</em></p>
+<p><em><a href="https://wiki.openstreetmap.org/w/images/4/40/Core-Casing">https://wiki.openstreetmap.org/w/images/4/40/Core-Casing</a></em>-_Z18.png</p>
 <p>From this I have extracted estimations the core-casing values and put them here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/User:Ben./MapnikRoads">http://wiki.openstreetmap.org/wiki/User:Ben./MapnikRoads</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/User:Ben./MapnikRoads">https://wiki.openstreetmap.org/wiki/User:Ben./MapnikRoads</a></p>
 <p>(These are estimates, so may not always be correct, but it makes it clear where the differences are)</p>
-<p>So then I stuck them into this table: <a href="http://wiki.openstreetmap.org/w/images/0/02/Difference_in_Core-Casing.PNG">http://wiki.openstreetmap.org/w/images/0/02/Difference_in_Core-Casing.PNG</a></p>
+<p>So then I stuck them into this table: <a href="https://wiki.openstreetmap.org/w/images/0/02/Difference_in_Core-Casing.PNG">https://wiki.openstreetmap.org/w/images/0/02/Difference_in_Core-Casing.PNG</a></p>
 <p>To evaluate:</p>
 <p>The "motorway" and "motorway_link_" are the strangest as they are smaller than all but a few roads of lower status than them. Then from trunk to Secondary the roads are a fraction bigger than others, but more noticeable the casing is thinner. Thirdly the way they increase over zoom levels isn't smooth at times. Finally the order in which they render has <em>links</em> render very early, rather than just before there similarly named road (i.e. motorway_link to motorway).</p>
 <p>The main issue with this is in flyover junctions where roads don't flow nicely into one another; but there are other reasons also.</p>

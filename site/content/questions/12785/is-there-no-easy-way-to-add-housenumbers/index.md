@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See Richard's answer to <a href="http://help.openstreetmap.org/questions/7335/how-to-add-a-house-number">this earlier question</a></p>
+<p>See Richard's answer to <a href="/questions/7335/how-to-add-a-house-number">this earlier question</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

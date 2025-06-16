@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you haven't already seen it, then the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> wiki page is definitely the place to start. Also, lots of questions are asked here about <a href="https://help.openstreetmap.org/search/?q=geocoding&amp;Submit=Search&amp;t=question">geocoding / reverse geocoding</a> and <a href="https://help.openstreetmap.org/search/?q=nominatim&amp;Submit=Search&amp;t=question">Nominatim</a>, so it's definitely worth looking through the answers to previous ones.</p>
+<p>If you haven't already seen it, then the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> wiki page is definitely the place to start. Also, lots of questions are asked here about <a href="https://help.openstreetmap.org/search/?q=geocoding&amp;Submit=Search&amp;t=question">geocoding / reverse geocoding</a> and <a href="https://help.openstreetmap.org/search/?q=nominatim&amp;Submit=Search&amp;t=question">Nominatim</a>, so it's definitely worth looking through the answers to previous ones.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

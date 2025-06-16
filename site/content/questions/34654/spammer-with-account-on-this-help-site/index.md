@@ -202,7 +202,7 @@ osqa_accepted = true
 <div id="post-34733-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/diary">http://www.openstreetmap.org/diary</a> 's are no-follow. Does not stop the Spam at all.</p>
+<p><a href="https://www.openstreetmap.org/diary">https://www.openstreetmap.org/diary</a> 's are no-follow. Does not stop the Spam at all.</p>
 </div>
 <div id="comment-34733-info" class="comment-info">
 <span class="comment-age">(08 Jul '14, 16:53)</span> <span class="comment-user userinfo">AndiG88</span>
@@ -246,7 +246,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I agree totally!!</p>
 <p>Do we have a feature in this <a href="http://www.osqa.net">OSQA</a> framework to delete entries? How much karma points are needed if possible?</p>
-<p>We also need a better spam reporting and removing system in the <a href="http://www.openstreetmap.org/diary">osm.org website diaries</a> with more people having acces to spam deleting feature and account closing feature.</p>
+<p>We also need a better spam reporting and removing system in the <a href="https://www.openstreetmap.org/diary">osm.org website diaries</a> with more people having acces to spam deleting feature and account closing feature.</p>
 <p>Maybe we need a feature request about that at <a href="https://github.com/openstreetmap/openstreetmap-website">OSM's github issue tracker</a> ??</p>
 </div>
 <div class="answer-controls post-controls">

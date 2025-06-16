@@ -59,7 +59,7 @@ osqa_accepted = false
 <p>Under predefined countries, europe select Ireland.</p>
 <p>Dowload map directly. This direct link may work <a href="http://osm.pleiades.uni-wuppertal.de/garmin/generic_new/18-02-2014/c589f89a2b2f7a1c1d9aca87a0538c30/">http://osm.pleiades.uni-wuppertal.de/garmin/generic_new/18-02-2014/c589f89a2b2f7a1c1d9aca87a0538c30/</a></p>
 <p>Then when I approach a roundabout it speaks the wrong exit number.</p>
-<p>The actual roundabout I used mostly for my testing is this one: <a href="http://www.openstreetmap.org/#map=17/53.18160/-6.13258&amp;layers=N">http://www.openstreetmap.org/#map=17/53.18160/-6.13258&amp;layers=N</a> It is where the Killarney road (R767) meets the R768 beside the petrol station.</p>
+<p>The actual roundabout I used mostly for my testing is this one: <a href="https://www.openstreetmap.org/#map=17/53.18160/-6.13258&amp;layers=N">https://www.openstreetmap.org/#map=17/53.18160/-6.13258&amp;layers=N</a> It is where the Killarney road (R767) meets the R768 beside the petrol station.</p>
 <p>If heading along the Killarney road, the third exit is spoken as the first exit.</p>
 <p>I also noticed that on alternativelibres and on garmin.openstreemap.nl that even when the guidance is correct ,the ICON, always shows to go the wrong way around the roundabout. (see attached photos)</p>
 <p>That is probably a seperate problem.</p>

@@ -84,7 +84,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "See http://help.openstreetmap.org/questions/5715/access-blocked-when-using-mobile-atlas-creator for why some apps get blocked from downloading tiles." by Jonathan Bennett 04 Aug '11, 17:33
+### The question has been closed for the following reason "See https://help.openstreetmap.org/questions/5715/access-blocked-when-using-mobile-atlas-creator for why some apps get blocked from downloading tiles." by Jonathan Bennett 04 Aug '11, 17:33
 
 </div>
 
@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile_usage_policy</a> ... that is the reason why sometimes some apps are blocked in downloading big bunches of tile data.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile_usage_policy</a> ... that is the reason why sometimes some apps are blocked in downloading big bunches of tile data.</p>
 <p>It is not only you, but also other users of such apps in summary.</p>
 <p>Maybe you can contact the author of OziExplorer (if not any other has done before ...) to find a solution for this like providing an own alternative download server.</p>
 </div>

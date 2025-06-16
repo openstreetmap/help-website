@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, since your problem is likely to be a FAQ, you could have a look at these solutions <a href="https://help.openstreetmap.org/questions/6938/map-without-labels-and-businesses">https://help.openstreetmap.org/questions/6938/map-without-labels-and-businesses</a> Or add the question map without .... in the blank window on top of this page, just below the dark blue marked Questions. Be welcome and happy mapping Greetz</p>
+<p>Hi, since your problem is likely to be a FAQ, you could have a look at these solutions <a href="/questions/6938/map-without-labels-and-businesses">https://help.openstreetmap.org/questions/6938/map-without-labels-and-businesses</a> Or add the question map without .... in the blank window on top of this page, just below the dark blue marked Questions. Be welcome and happy mapping Greetz</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

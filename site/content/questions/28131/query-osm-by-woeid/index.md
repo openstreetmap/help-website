@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Query OSM by WOEID"
-description = '''Is it possible to query open street map locations based on a WOEID? See here: http://wiki.openstreetmap.org/wiki/Key:woeid Update: Also, I have lots of different place names, and I need to translate them into about 10 different locales. Because I know the WOEID for each location, I was thinking that...'''
+description = '''Is it possible to query open street map locations based on a WOEID? See here: https://wiki.openstreetmap.org/wiki/Key:woeid Update: Also, I have lots of different place names, and I need to translate them into about 10 different locales. Because I know the WOEID for each location, I was thinking that...'''
 date = "2013-11-15T12:12:00Z"
 lastmod = "2013-11-15T13:21:00Z"
 weight = 28131
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is it possible to query open street map locations based on a WOEID?</p>
-<p>See here: <a href="http://wiki.openstreetmap.org/wiki/Key:woeid">http://wiki.openstreetmap.org/wiki/Key:woeid</a></p>
+<p>See here: <a href="https://wiki.openstreetmap.org/wiki/Key:woeid">https://wiki.openstreetmap.org/wiki/Key:woeid</a></p>
 <p>Update: Also, I have lots of different place names, and I need to translate them into about 10 different locales. Because I know the WOEID for each location, I was thinking that I could just query OSM to achieve this (if the OSM item has WOEID information too). Some of the locales are in the aliases for GeoPlanet, but quite a lot of them aren't as an alias, so I need to find a better way of translating them.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

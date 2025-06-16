@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Don't know where to post this. There's a little issue where parts of a lake show as land and parts of the land show and water (kind of like a photographic negative really... probably a minus sign somewhere... always had trouble with those minus signs...) anyway, it's happening around here:</p>
-<p><a href="http://www.openstreetmap.org/?minlon=-78.6187362670898&amp;minlat=35.9839973449707&amp;maxlon=-78.6174926757812&amp;maxlat=35.9844665527344">http://www.openstreetmap.org/?minlon=-78.6187362670898&amp;minlat=35.9839973449707&amp;maxlon=-78.6174926757812&amp;maxlat=35.9844665527344</a></p>
+<p><a href="https://www.openstreetmap.org/?minlon=-78.6187362670898&amp;minlat=35.9839973449707&amp;maxlon=-78.6174926757812&amp;maxlat=35.9844665527344">https://www.openstreetmap.org/?minlon=-78.6187362670898&amp;minlat=35.9839973449707&amp;maxlon=-78.6174926757812&amp;maxlat=35.9844665527344</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-land" rel="tag" title="see questions tagged &#39;land&#39;">land</span> <span class="post-tag tag-link-negative" rel="tag" title="see questions tagged &#39;negative&#39;">negative</span> <span class="post-tag tag-link-bug" rel="tag" title="see questions tagged &#39;bug&#39;">bug</span>

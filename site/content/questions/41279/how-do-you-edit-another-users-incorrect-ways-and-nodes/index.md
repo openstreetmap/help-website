@@ -170,7 +170,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>I noticed that you added a number of ways with a sole cycleway=lane tag, that is likely not what you wanted to do. cycleway=lane is an additional property of an existing way, not a standalone way.</p>
-<p>If you have access to irc I would suggest joining the osm channel for quick support see <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a></p>
+<p>If you have access to irc I would suggest joining the osm channel for quick support see <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a></p>
 <p>Further our mailing lists are always a good source of information see <a href="http://lists.openstreetmap.org/">http://lists.openstreetmap.org/</a> , finally you should have a look at our wiki; <a href="http://wiki.openstreetmap.org">http://wiki.openstreetmap.org</a></p>
 </div>
 <div id="comment-41284-info" class="comment-info">

@@ -165,7 +165,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can try to use Overpass API</p>
-<p>wiki page: [1]: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>wiki page: [1]: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
 <p>site page: <a href="http://overpass-api.de/">http://overpass-api.de/</a></p>
 <p>and for a page that explain how to use it from a command line (or in your case from a script) see this page: <a href="http://overpass-api.de/command_line.html">http://overpass-api.de/command_line.html</a></p>
 <p>Please note this two point:</p>

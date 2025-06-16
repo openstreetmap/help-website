@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is it possible to either import or trace from data that is licensed under CC-BY under the new <a href="http://www.osmfoundation.org/wiki/License/Contributor_Terms">contributor terms</a>? Examples of such data would be <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">Ordnance Survey OpenData</a> or some of the data available at <a href="http://wiki.openstreetmap.org/wiki/Data.australia.gov.au">data.australia.gov.au</a>.</p>
+<p>Is it possible to either import or trace from data that is licensed under CC-BY under the new <a href="http://www.osmfoundation.org/wiki/License/Contributor_Terms">contributor terms</a>? Examples of such data would be <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">Ordnance Survey OpenData</a> or some of the data available at <a href="https://wiki.openstreetmap.org/wiki/Data.australia.gov.au">data.australia.gov.au</a>.</p>
 <p>I'm particularly concerned that it says "You have explicit permission from the rights holder to submit the Contents and grant the licence below." where the license includes "... another free and open licence ... chosen by a vote of the OSMF membership and approved by at least a 2/3 majority vote of active contributors."</p>
 <p>The only thing that these data sources give explicit permission for is that the distribution remains compatible with CC-BY. We certainly don't have explicit permission to relicense as <em>any</em> free and open license, regardless of what proportion of the active contributors were to vote for a future license change.</p>
 </div>
@@ -115,7 +115,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Clause 4 of the Contributor Terms is designed to ensure that OSMF always maintains suitable attribution:</p>
 <blockquote>
-<p>At Your or the copyright holder’s option, OSMF agrees to attribute You or the copyright holder. A mechanism will be provided, currently a web page <a href="http://wiki.openstreetmap.org/wiki/Attribution">http://wiki.openstreetmap.org/wiki/Attribution</a>.</p>
+<p>At Your or the copyright holder’s option, OSMF agrees to attribute You or the copyright holder. A mechanism will be provided, currently a web page <a href="https://wiki.openstreetmap.org/wiki/Attribution">https://wiki.openstreetmap.org/wiki/Attribution</a>.</p>
 </blockquote>
 <p>However, I don't think this would ensure that people who relicense OpenStreetMap data have to maintain suitable attribute. So at the moment, I don't think CC-BY is compatible with the new Contributor Terms.</p>
 </div>
@@ -196,7 +196,7 @@ osqa_accepted = false
 <p>Currently, even with CC-by-SA 2.0, we do not really attribute contributors and and third-party sources correctly downstream. So your concerns are justified, but the issue is not something new.</p>
 <p>To resolve this with CC-by sources, the only solution is to specifically ask if the, essentially indirect, attribution via the OSM website is good enough.</p>
 <p>This has been done in the case of OS and for at least some of the Australian government sources.</p>
-<p>See: <a href="http://wiki.openstreetmap.org/wiki/Contributors">http://wiki.openstreetmap.org/wiki/Contributors</a></p>
+<p>See: <a href="https://wiki.openstreetmap.org/wiki/Contributors">https://wiki.openstreetmap.org/wiki/Contributors</a></p>
 <p>Simon</p>
 </div>
 <div class="answer-controls post-controls">

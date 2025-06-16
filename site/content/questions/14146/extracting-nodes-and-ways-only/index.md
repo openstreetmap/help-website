@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First get your just your city. If your city is <a href="http://metro.teczno.com/">one of these</a>, then it's very easy. Otherwise see the various options on <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">downloading data page</a></p>
-<p>Then filter by highway tag. You might do this with an <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">Osmosis tag filter</a></p>
+<p>First get your just your city. If your city is <a href="http://metro.teczno.com/">one of these</a>, then it's very easy. Otherwise see the various options on <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">downloading data page</a></p>
+<p>Then filter by highway tag. You might do this with an <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">Osmosis tag filter</a></p>
 <pre><code>osmosis \
   --read-xml input.osm \
   --tf accept-ways highway=* \ 
@@ -131,7 +131,7 @@ One Answer:
 <div id="post-14232-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... yes, like <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a> :-)</p>
+<p>... yes, like <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> :-)</p>
 </div>
 <div id="comment-14232-info" class="comment-info">
 <span class="comment-age">(12 Jul '12, 16:55)</span> <span class="comment-user userinfo">stephan75</span>

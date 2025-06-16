@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try to ask one of these <a href="http://wiki.openstreetmap.org/wiki/Sysadmin">sysadmins</a></p>
+<p>Try to ask one of these <a href="https://wiki.openstreetmap.org/wiki/Sysadmin">sysadmins</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

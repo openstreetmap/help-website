@@ -83,7 +83,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Maybe we need some testcases to see where the problem is.</p>
-<p>And perhabs you can ask <a href="http://www.openstreetmap.org/user/lonvia">http://www.openstreetmap.org/user/lonvia</a> ... she seems to be involved in some way to Nominatim.</p>
+<p>And perhabs you can ask <a href="https://www.openstreetmap.org/user/lonvia">https://www.openstreetmap.org/user/lonvia</a> ... she seems to be involved in some way to Nominatim.</p>
 </div>
 <div id="comment-12197-info" class="comment-info">
 <span class="comment-age">(20 Apr '12, 13:16)</span> <span class="comment-user userinfo">stephan75</span>

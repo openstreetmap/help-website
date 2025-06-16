@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In German these tracks are called a "Finnenbahn", there is currently no tagging that is really satisfactory. But in any case you should not tag for the renderer, it is an issue for the developers of the style if something renders wrong, not an issue for you.</p>
-<p>Example tagging: <a href="http://www.openstreetmap.org/way/60767516">http://www.openstreetmap.org/way/60767516</a></p>
+<p>Example tagging: <a href="https://www.openstreetmap.org/way/60767516">https://www.openstreetmap.org/way/60767516</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

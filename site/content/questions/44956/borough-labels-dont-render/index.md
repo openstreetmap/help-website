@@ -121,7 +121,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nodes with place=borough will probably be rendered if they are defined as the label of an administrative boundary relation. Of course, then you will need the data of the borders between boroughs. <a href="http://wiki.openstreetmap.org/wiki/United_States_admin_level">Here is some info</a> as to what administrative devision goes into which admin_level in different states.</p>
+<p>Nodes with place=borough will probably be rendered if they are defined as the label of an administrative boundary relation. Of course, then you will need the data of the borders between boroughs. <a href="https://wiki.openstreetmap.org/wiki/United_States_admin_level">Here is some info</a> as to what administrative devision goes into which admin_level in different states.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

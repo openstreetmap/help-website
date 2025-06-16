@@ -107,11 +107,11 @@ One Answer:
 <p>I think your question was left unanswered because one might suspect it will be a steep learning curve for you to accomplish your wish, as you imply that getting it in to a Word-document is part of the problem ;)</p>
 <p>But a straightforward way of doing this could be:</p>
 <ol>
-<li><a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Download</a> planet.osm (20 GB), or better, a UK extract (~500 MB)<br />
+<li><a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Download</a> planet.osm (20 GB), or better, a UK extract (~500 MB)<br />
 <strong>(Don't do this if you don't feel confident executing the other steps)</strong></li>
-<li>Install <a href="http://wiki.openstreetmap.org/wiki/PostgreSQL">PostgreSQL</a></li>
-<li>Install <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a> and import your osm-file to PostgreSQL</li>
-<li>Apply relevant <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">SQL-query</a></li>
+<li>Install <a href="https://wiki.openstreetmap.org/wiki/PostgreSQL">PostgreSQL</a></li>
+<li>Install <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a> and import your osm-file to PostgreSQL</li>
+<li>Apply relevant <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">SQL-query</a></li>
 </ol>
 <p>Or, if you're willing to compensate, you could contact any of the Openstreetmap consultants, like <a href="http://www.geofabrik.de/services/consulting.html">Geofabrik</a> or <a href="http://www.gravitystorm.co.uk/andy">gravitystorm</a></p>
 <p>(There might be some clever way of doing this easy, like <a href="http://nominatim.openstreetmap.org/search?q=Restaurants%20in%20London&amp;format=xml">this</a>, or for your particular question: <a href="http://nominatim.openstreetmap.org/search?q=Residentials%20in%20London">http://nominatim.openstreetmap.org/search?q=Residentials%20in%20London</a>, but it doesn't work and would be some pain to extract the result.)</p>

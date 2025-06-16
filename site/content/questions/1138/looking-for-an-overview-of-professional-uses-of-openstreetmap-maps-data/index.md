@@ -105,8 +105,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As far as I'm aware there's no list that makes the distinction between "professional" and "non-professional" uses. The most comprehensive list of uses of OSM data is the <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> that has minor projects as well as major, and everything on the scale from hobby project to major commercial uses of OSM data.</p>
-<p>One other page that may be of interest is the German-language page of <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Internet_Links">OSM Internet Links</a> which has many other links to professional users of OSM data, but many of those are simply "how to find us" pages on their websites using OSM maps.</p>
+<p>As far as I'm aware there's no list that makes the distinction between "professional" and "non-professional" uses. The most comprehensive list of uses of OSM data is the <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> that has minor projects as well as major, and everything on the scale from hobby project to major commercial uses of OSM data.</p>
+<p>One other page that may be of interest is the German-language page of <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Internet_Links">OSM Internet Links</a> which has many other links to professional users of OSM data, but many of those are simply "how to find us" pages on their websites using OSM maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -180,13 +180,13 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There is no single comprehensive list of professional uses, most lists don't distinguish between professional and hobbyist projects. However, the wiki has lists of</p>
 <ul>
-<li>(web) services: <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List of OSM based Services</a></li>
-<li>websites using OSM: <a href="http://wiki.openstreetmap.org/wiki/OSM_Internet_Links">OSM Internet links</a>, more comprehensive <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Internet_Links">German equivalent</a></li>
-<li>desktop applications: <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">Software/Desktop</a></li>
-<li>mobile applications: <a href="http://wiki.openstreetmap.org/wiki/Software/Mobile_phones">Mobile phones</a>, <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a>, <a href="http://wiki.openstreetmap.org/wiki/IPhone">iPhone</a>, ...</li>
-<li>other lists of applications, classified by platform or category: <a href="http://wiki.openstreetmap.org/wiki/Software">Software</a></li>
+<li>(web) services: <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List of OSM based Services</a></li>
+<li>websites using OSM: <a href="https://wiki.openstreetmap.org/wiki/OSM_Internet_Links">OSM Internet links</a>, more comprehensive <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Internet_Links">German equivalent</a></li>
+<li>desktop applications: <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">Software/Desktop</a></li>
+<li>mobile applications: <a href="https://wiki.openstreetmap.org/wiki/Software/Mobile_phones">Mobile phones</a>, <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a>, <a href="https://wiki.openstreetmap.org/wiki/IPhone">iPhone</a>, ...</li>
+<li>other lists of applications, classified by platform or category: <a href="https://wiki.openstreetmap.org/wiki/Software">Software</a></li>
 <li>consulting companies: <a href="http://List_of_Companies_offering_OSM_Consulting">List of Companies offering OSM Consulting</a></li>
-<li>scientific projects and publications: <a href="http://wiki.openstreetmap.org/wiki/Research">Research</a></li>
+<li>scientific projects and publications: <a href="https://wiki.openstreetmap.org/wiki/Research">Research</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

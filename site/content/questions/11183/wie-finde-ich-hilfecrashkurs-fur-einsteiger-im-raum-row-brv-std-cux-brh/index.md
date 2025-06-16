@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ist Bremen zu weit? Die haben ein monatliches Treffen: <a href="http://wiki.openstreetmap.org/wiki/Bremen/Mappertreffen">http://wiki.openstreetmap.org/wiki/Bremen/Mappertreffen</a> - das letzte war leider gerade gestern. Ansonsten vielleicht mal auf die Bremer Mailingliste schreiben: <a href="http://lists.openstreetmap.de/mailman/listinfo/bremen">http://lists.openstreetmap.de/mailman/listinfo/bremen</a></p>
+<p>Ist Bremen zu weit? Die haben ein monatliches Treffen: <a href="https://wiki.openstreetmap.org/wiki/Bremen/Mappertreffen">https://wiki.openstreetmap.org/wiki/Bremen/Mappertreffen</a> - das letzte war leider gerade gestern. Ansonsten vielleicht mal auf die Bremer Mailingliste schreiben: <a href="http://lists.openstreetmap.de/mailman/listinfo/bremen">http://lists.openstreetmap.de/mailman/listinfo/bremen</a></p>
 <p>Dieses Hilfesystem ist eher dafür gedacht, konkrete Antworten auf Fragen zu finden und zu sammeln, die später vielleicht auch noch für andere relevant sind (so dass man am Ende alle Fragen und Antworten wie ein grosses Handbuch benutzen kann). Fragen wie Deine passen eigentlich besser auf eine Mailingliste, oder ggf. auch in das OSM-Forum (forum.openstreetmap.org, runterscrollen zu "Germany").</p>
 </div>
 <div class="answer-controls post-controls">
@@ -145,7 +145,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Es gibt auch <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a>...</p>
+<p>Es gibt auch <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a>...</p>
 </div>
 <div id="comment-11204-info" class="comment-info">
 <span class="comment-age">(14 Mar '12, 18:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

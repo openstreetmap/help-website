@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Not explicitly a campus, but general inspiration may be found here: <a href="http://help.openstreetmap.org/questions/6894/exceptionally-well-mapped-areas-examples">http://help.openstreetmap.org/questions/6894/exceptionally-well-mapped-areas-examples</a></p>
+<p>Not explicitly a campus, but general inspiration may be found here: <a href="/questions/6894/exceptionally-well-mapped-areas-examples">https://help.openstreetmap.org/questions/6894/exceptionally-well-mapped-areas-examples</a></p>
 <p>Well, in fact you will find links such as <a href="http://map.umd.edu/map/">http://map.umd.edu/map/</a> reading that thread.</p>
 </div>
 <div id="comment-11049-info" class="comment-info">
@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Cambridge (<a href="http://wiki.openstreetmap.org/wiki/Cambridge/University_of_Cambridge">wiki</a>, <a href="http://www.openstreetmap.org/?lat=52.20429&amp;lon=0.11441&amp;zoom=16&amp;layers=M">OSM</a>) is probably worth a look at, as <a href="http://www.openstreetmap.org/user/davidearl">David Earl</a>'s doing an "official" (for the Uni) OSM-based remap - and very nice it looks too.</p>
+<p>Cambridge (<a href="https://wiki.openstreetmap.org/wiki/Cambridge/University_of_Cambridge">wiki</a>, <a href="https://www.openstreetmap.org/?lat=52.20429&amp;lon=0.11441&amp;zoom=16&amp;layers=M">OSM</a>) is probably worth a look at, as <a href="https://www.openstreetmap.org/user/davidearl">David Earl</a>'s doing an "official" (for the Uni) OSM-based remap - and very nice it looks too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -221,10 +221,10 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Additional university, colleges in the USA:</p>
-<p>[University of Utah] <a href="http://www.openstreetmap.org/?lat=40.7656596601009&amp;lon=-111.846900880337&amp;zoom=17">http://www.openstreetmap.org/?lat=40.7656596601009&amp;lon=-111.846900880337&amp;zoom=17</a></p>
-<p>A sprawling agricultural university Kansas State University: <a href="http://www.openstreetmap.org/?lat=39.18775&amp;lon=-96.57699&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=39.18775&amp;lon=-96.57699&amp;zoom=16&amp;layers=M</a></p>
+<p>[University of Utah] <a href="https://www.openstreetmap.org/?lat=40.7656596601009&amp;lon=-111.846900880337&amp;zoom=17">https://www.openstreetmap.org/?lat=40.7656596601009&amp;lon=-111.846900880337&amp;zoom=17</a></p>
+<p>A sprawling agricultural university Kansas State University: <a href="https://www.openstreetmap.org/?lat=39.18775&amp;lon=-96.57699&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=39.18775&amp;lon=-96.57699&amp;zoom=16&amp;layers=M</a></p>
 <p>Relatively dense Wake Forest University <a href="http://osm.org/go/ZS28kq76v-">http://osm.org/go/ZS28kq76v-</a></p>
-<p>Case Western Reserve University <a href="http://www.openstreetmap.org/?lat=41.51088&amp;lon=-81.60855&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=41.51088&amp;lon=-81.60855&amp;zoom=17&amp;layers=M</a></p>
+<p>Case Western Reserve University <a href="https://www.openstreetmap.org/?lat=41.51088&amp;lon=-81.60855&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=41.51088&amp;lon=-81.60855&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,9 +42,9 @@ osqa_accepted = false
 <p>Quite a couple of weeks ago, i was pleased to find some new details about the Hamburg harbor, exactly naming each one of them. Why is it gone now? Is there any way to have them displayed again? I don't find it a good idea, to remove information, once it has been gathered.</p>
 <p><em>Additional info:</em></p>
 <p>I'm talking about following part:</p>
-<p><a href="http://www.openstreetmap.org/#map=16/53.5200/9.9711">http://www.openstreetmap.org/#map=16/53.5200/9.9711</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/53.5200/9.9711">https://www.openstreetmap.org/#map=16/53.5200/9.9711</a></p>
 <p>On the left side we had "Stettiner Ufer", at the right side it was "Roeloffsufer", or in</p>
-<p><a href="http://www.openstreetmap.org/#map=16/53.5314/9.9637">http://www.openstreetmap.org/#map=16/53.5314/9.9637</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/53.5314/9.9637">https://www.openstreetmap.org/#map=16/53.5314/9.9637</a></p>
 <p>there are two harbors, Kuhwerder Hafen, and Kaiser-Wilhelm-Hafen, which had all the names for the different Kais written next to them. I noticed it just about 2 months or so ago, so it seemed to be brand new. By the way, even in full zoom, they don't come back.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

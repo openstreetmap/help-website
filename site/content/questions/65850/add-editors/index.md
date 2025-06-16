@@ -128,8 +128,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just in case you are referring to umap (e.g. <a href="http://umap.openstreetmap.fr">http://umap.openstreetmap.fr</a>), you can look at thi previous answer: <a href="https://help.openstreetmap.org/questions/37386/add-user-as-editor-to-umap">https://help.openstreetmap.org/questions/37386/add-user-as-editor-to-umap</a></p>
-<p>The configuration can be found under the key-icon <img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-09-11_at_05.11.19.png" alt="umap configuration" /></p>
+<p>Just in case you are referring to umap (e.g. <a href="http://umap.openstreetmap.fr">http://umap.openstreetmap.fr</a>), you can look at thi previous answer: <a href="/questions/37386/add-user-as-editor-to-umap">https://help.openstreetmap.org/questions/37386/add-user-as-editor-to-umap</a></p>
+<p>The configuration can be found under the key-icon <img src="/upfiles/Screen_Shot_2018-09-11_at_05.11.19.png" alt="umap configuration" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -145,7 +145,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the case that your device has an operating system like WindowsMobile, have a look at <a href="http://Software/PNA">PNA</a> and <a href="http://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows_Mobile</a>.</p>
+<p>In the case that your device has an operating system like WindowsMobile, have a look at <a href="http://Software/PNA">PNA</a> and <a href="https://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows_Mobile</a>.</p>
 <p>Maybe you have to find out how to get access to the level of the device where you can install other WindowsMobile applications.</p>
 <p>Come to <a href="http://forum.openstreetmap.org">forum.openstreetmap.org</a> to ask when you have more detailed questions.</p>
 </div>

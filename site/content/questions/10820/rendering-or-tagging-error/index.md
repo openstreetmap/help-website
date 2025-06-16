@@ -39,12 +39,12 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The node <a href="http://www.openstreetmap.org/browse/node/31290236">31290236</a> is part of a bridge - the road forks there.<br />
+<p>The node <a href="https://www.openstreetmap.org/browse/node/31290236">31290236</a> is part of a bridge - the road forks there.<br />
 On Mapnik rendering it looks like only one part is a bridge and the other goes somehow underneath it. This is however not true, they are connected. Looking at the data, it seems ok and MapQuest layer got the rendering right.<br />
 Still I'd like to ask if the data is really correct before filing a bug for Mapnik.<br />
 </p>
-<p>It is <a href="http://www.openstreetmap.org/?mlat=49.193251&amp;mlon=16.569754&amp;zoom=18&amp;layers=M">here</a>, how it actually looks can by seen <a href="http://www.mapy.cz/s/3ako">here</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Crossing.png" title="the place concerned" alt="alt text" /></p>
+<p>It is <a href="https://www.openstreetmap.org/?mlat=49.193251&amp;mlon=16.569754&amp;zoom=18&amp;layers=M">here</a>, how it actually looks can by seen <a href="http://www.mapy.cz/s/3ako">here</a></p>
+<p><img src="/upfiles/Crossing.png" title="the place concerned" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-bridge" rel="tag" title="see questions tagged &#39;bridge&#39;">bridge</span>

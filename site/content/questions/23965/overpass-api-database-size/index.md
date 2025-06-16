@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-46891-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11689/kgaitanis">@kgaitanis</a>: from where do you got the estimate? Keep in mind, that <a href="https://wiki.openstreetmap.org/wiki/Stats#Nodes.2C_ways_and_relations">OSM is growing</a>. Could it be that the estimate is quite old?</p>
+<p><a href="https://help.openstreetmap.org/users/11689/kgaitanis">@kgaitanis</a>: from where do you got the estimate? Keep in mind, that <a href="https://wiki.openstreetmap.org/wiki/Stats#Nodes.2C_ways_and_relations">OSM is growing</a>. Could it be that the estimate is quite old?</p>
 </div>
 <div id="comment-46891-info" class="comment-info">
 <span class="comment-age">(29 Nov '15, 13:08)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -140,7 +140,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The <a href="http://overpass-api.de/no_frills.html#startup">Overpass installation instructions</a> explain how you can import from a Planet file, but this probably won't achieve what you want since the planet file includes every piece of information in OpenStreetMap and will almost certainly mean a larger DB. If you're only interested in one country or area, you could import an Planet file extract, such as <a href="http://download.geofabrik.de/">those available from Geofabrik</a>, but you won't be able to keep this up to date with diffs.</p>
-<p>Equally you could download the entire Planet and filter out any data you aren't interested in using <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, but this will be slow and will still need lots of disk space for the two Planet files you will end up storing.</p>
+<p>Equally you could download the entire Planet and filter out any data you aren't interested in using <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, but this will be slow and will still need lots of disk space for the two Planet files you will end up storing.</p>
 <p>The simplest answer is probably just to get a bigger hard drive, especially since the amount of data in OpenStreetMap is only going to get larger over time.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -108,7 +108,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One possibility is just to stick a note where it's blocked (like <a href="http://www.openstreetmap.org/browse/node/1904037986">this</a> for example). It's not ideal (I'm certainly open to better suggestions) but it's a start. Note that that example isn't a public footpath that's blocked but an alternative route to one across access land.</p>
+<p>One possibility is just to stick a note where it's blocked (like <a href="https://www.openstreetmap.org/browse/node/1904037986">this</a> for example). It's not ideal (I'm certainly open to better suggestions) but it's a start. Note that that example isn't a public footpath that's blocked but an alternative route to one across access land.</p>
 <p>If it was a public footpath, and it was clear where the inaccessible footpath went, I'd probably tag the impassible way with designation=public_footpath, no highway tag, and a suitable note.<br />
 </p>
 <p>I've also tended to do that where there's a clearly signed footpath but "everybody" uses an alternative because it's more convenient for both landowners and walkers.</p>
@@ -153,7 +153,7 @@ osqa_accepted = true
 <div id="post-16303-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Recently I explored a right of way that as been in dispute for years and can't be used as there are buildings and security fences in the way.I suspect that it is left on the "Definitive Map" as it may get legally resolved some time. It heads NE to SW through this point <a href="http://www.openstreetmap.org/?lat=52.2005&amp;lon=-0.3004&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=52.2005&amp;lon=-0.3004&amp;zoom=14&amp;layers=M</a></p>
+<p>Recently I explored a right of way that as been in dispute for years and can't be used as there are buildings and security fences in the way.I suspect that it is left on the "Definitive Map" as it may get legally resolved some time. It heads NE to SW through this point <a href="https://www.openstreetmap.org/?lat=52.2005&amp;lon=-0.3004&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=52.2005&amp;lon=-0.3004&amp;zoom=14&amp;layers=M</a></p>
 </div>
 <div id="comment-16303-info" class="comment-info">
 <span class="comment-age">(21 Sep '12, 10:54)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -231,7 +231,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/browse/way/182269106">Exactly the same story here, look at Bing</a>. It's on a map and I just OSMapped it.<br />
+<p><a href="https://www.openstreetmap.org/browse/way/182269106">Exactly the same story here, look at Bing</a>. It's on a map and I just OSMapped it.<br />
 What you describe was at least its state 20+ years ago, though. I'll have to go and check.<br />
 I think I remember that boy scouts made it a revival project.<br />
 They love that and they get some wood for their spring bonfire.<br />

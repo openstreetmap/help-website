@@ -106,7 +106,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at Overpass, especially <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#newer">newer</a> and <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_date_of_change_.28changed.29">changed</a></p>
+<p>Take a look at Overpass, especially <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#newer">newer</a> and <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_date_of_change_.28changed.29">changed</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To expand on <a href="http://help.openstreetmap.org/users/5390/escada"></a><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a></a>'s answer, an example ruleset for Overpass would be:</p>
+<p>To expand on <a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a></a>'s answer, an example ruleset for Overpass would be:</p>
 <hr />
 <pre><code>[out:json][timeout:25];
 (

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] If I&#x27;ll make patch for rendering Key:surface for Mapnik will someone apply it?"
-description = '''http://help.openstreetmap.org/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever'''
+description = '''/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever'''
 date = "2011-06-02T21:39:00Z"
 lastmod = "2011-06-02T21:39:00Z"
 weight = 5509
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://help.openstreetmap.org/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever">http://help.openstreetmap.org/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever</a></p>
+<p><a href="/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever">https://help.openstreetmap.org/questions/5503/are-there-any-plans-to-implement-keysurface-rendering-ever</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-gravel" rel="tag" title="see questions tagged &#39;gravel&#39;">gravel</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-unpaved" rel="tag" title="see questions tagged &#39;unpaved&#39;">unpaved</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Vandalism spotted"
-description = '''Issue: http://www.openstreetmap.org/user/Aezn/edits I shouldn&#x27;t let this one get away. Has anyone checked whether all the vandalism has been fixed? Thanks.'''
+description = '''Issue: https://www.openstreetmap.org/user/Aezn/edits I shouldn&#x27;t let this one get away. Has anyone checked whether all the vandalism has been fixed? Thanks.'''
 date = "2013-06-21T19:28:00Z"
 lastmod = "2013-06-22T08:22:00Z"
 weight = 23587
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Issue: <a href="http://www.openstreetmap.org/user/Aezn/edits">http://www.openstreetmap.org/user/Aezn/edits</a></p>
+<p>Issue: <a href="https://www.openstreetmap.org/user/Aezn/edits">https://www.openstreetmap.org/user/Aezn/edits</a></p>
 <p>I shouldn't let this one get away. Has anyone checked whether all the vandalism has been fixed?</p>
 <p>Thanks.</p>
 </div>

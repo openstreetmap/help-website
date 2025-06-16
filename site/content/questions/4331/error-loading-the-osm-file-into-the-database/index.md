@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Error loading the OSM File into the database."
-description = '''I’ve been following the instructions found here. http://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup There have been some problems so I’ve had to grab updated versions of files, but when I try to import the iowa highway osm it gives me the this.  user@osgeolive:~/osmosis-0.31/bin$ ./osmosis —re...'''
+description = '''I’ve been following the instructions found here. https://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup There have been some problems so I’ve had to grab updated versions of files, but when I try to import the iowa highway osm it gives me the this.  user@osgeolive:~/osmosis-0.31/bin$ ./osmosis —re...'''
 date = "2011-04-08T06:29:00Z"
 lastmod = "2011-04-08T09:11:00Z"
 weight = 4331
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I’ve been following the instructions found here.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup">http://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup">https://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup</a></p>
 <p>There have been some problems so I’ve had to grab updated versions of files, but when I try to import the iowa highway osm it gives me the this.</p>
 <pre><code> user@osgeolive:~/osmosis-0.31/bin$ ./osmosis —read-xml file=“/home/user/Downloa ds/iowa.osm.highway.bz2” —write-pgsql user=“osm” database=“osm” password=“osm”
  Apr 6, 2011 3:51:18 PM org.openstreetmap.osmosis.core.Osmosis run

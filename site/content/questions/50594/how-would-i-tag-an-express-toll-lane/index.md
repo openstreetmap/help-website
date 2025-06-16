@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I have added an express toll lane (which is a type of <a href="https://en.wikipedia.org/wiki/Managed_lane">managed lane</a>) to Loop 1 in Austin between RM 2222 and FM 734 as shown here: <a href="https://www.openstreetmap.org/#map=18/30.34304/-97.75141">small area just north of RM 2222</a>. I was wondering what the proper tagging would be. Here are the following tags I have added. I divided the lane from the rest of the freeway because there is a barrier between the lane and the rest of highway with access points.<br />
-<img src="http://help.openstreetmap.org/upfiles/DSCN24091.jpg" alt="Picture of lane entrance" /><br />
+<img src="/upfiles/DSCN24091.jpg" alt="Picture of lane entrance" /><br />
 highway = construction (lane will open later in July)<br />
 construction = motorway<br />
 hgv = no (trucks and trailers are prohibited)<br />

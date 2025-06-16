@@ -156,7 +156,7 @@ osqa_accepted = true
 <div id="post-53706-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: what about to have a wiki page about the wiki page of the help site? ;) Well, sorry for this. :-P</p>
+<p>meta <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: what about to have a wiki page about the wiki page of the help site? ;) Well, sorry for this. :-P</p>
 </div>
 <div id="comment-53706-info" class="comment-info">
 <span class="comment-age">(25 Dec '16, 00:19)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -167,7 +167,7 @@ osqa_accepted = true
 <div id="post-53707-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13117/leeturtle">@Leeturtle</a>: I agree - not it is obvious. Do you mind "accepting" an answer then? :)</p>
+<p><a href="https://help.openstreetmap.org/users/13117/leeturtle">@Leeturtle</a>: I agree - not it is obvious. Do you mind "accepting" an answer then? :)</p>
 </div>
 <div id="comment-53707-info" class="comment-info">
 <span class="comment-age">(25 Dec '16, 00:23)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

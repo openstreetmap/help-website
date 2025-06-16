@@ -130,7 +130,7 @@ One Answer:
 <div class="answer-body">
 <p>Please use the search function first before asking a question, nearly all common question have been answered more than once.</p>
 <p>Searching for "account" returns among others</p>
-<p><a href="https://help.openstreetmap.org/questions/16120/osm-nickname-and-account-history-lost">https://help.openstreetmap.org/questions/16120/osm-nickname-and-account-history-lost</a></p>
+<p><a href="/questions/16120/osm-nickname-and-account-history-lost">https://help.openstreetmap.org/questions/16120/osm-nickname-and-account-history-lost</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

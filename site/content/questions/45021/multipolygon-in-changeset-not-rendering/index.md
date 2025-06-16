@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At least at zoom level 13 it renders for me <a href="http://www.openstreetmap.org/#map=13/45.3521/136.5127">http://www.openstreetmap.org/#map=13/45.3521/136.5127</a></p>
+<p>At least at zoom level 13 it renders for me <a href="https://www.openstreetmap.org/#map=13/45.3521/136.5127">https://www.openstreetmap.org/#map=13/45.3521/136.5127</a></p>
 <p>You may need to reload.</p>
 </div>
 <div class="answer-controls post-controls">

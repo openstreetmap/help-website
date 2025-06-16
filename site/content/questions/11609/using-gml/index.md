@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using GML"
-description = '''Hi,  Is &quot;http://www.openstreetmap.org/gml/&quot; working? I tried but I couldn&#x27;t open the link. Thanks, Laura'''
+description = '''Hi,  Is &quot;https://www.openstreetmap.org/gml/&quot; working? I tried but I couldn&#x27;t open the link. Thanks, Laura'''
 date = "2012-03-29T20:47:00Z"
 lastmod = "2012-10-25T14:49:00Z"
 weight = 11609
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, Is "http://www.openstreetmap.org/gml/" working? I tried but I couldn't open the link.</p>
+<p>Hi, Is "https://www.openstreetmap.org/gml/" working? I tried but I couldn't open the link.</p>
 <p>Thanks, Laura</p>
 </div>
 <div id="question-tags" class="tags-container tags">

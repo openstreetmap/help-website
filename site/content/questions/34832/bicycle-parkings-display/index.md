@@ -246,11 +246,11 @@ osqa_accepted = false
 <p>I see them on this version of the osm though the capacity does not get rendered on this version.<br />
 <a href="http://layers.openstreetmap.fr/?zoom=19&amp;lat=43.60396&amp;lon=1.3342&amp;layers=B0000FFFFFFFFFFFFFFFFFFFFFF">"gare de Colomiers"</a><br />
 <a href="http://layers.openstreetmap.fr/?zoom=19&amp;lat=43.62218&amp;lon=1.31807&amp;layers=B0000FFFFFFFFFFFFFFFFFFFFFF">"cimetiere paysage du bassac"</a></p>
-<p>Looks ok on the <a href="http://www.openstreetmap.org/#map=18/43.60387/1.33459&amp;layers=C">Openstreetmap cycle layer</a> too where the 22 capacity bike parking render is complete but the other 2 small blue squares denoting the bike parking must be crowded out by other rendering.</p>
+<p>Looks ok on the <a href="https://www.openstreetmap.org/#map=18/43.60387/1.33459&amp;layers=C">Openstreetmap cycle layer</a> too where the 22 capacity bike parking render is complete but the other 2 small blue squares denoting the bike parking must be crowded out by other rendering.</p>
 <p>Looks fine in Josm with the Potlatch 2 Map Paint Style too</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2014-07-12_at_10.39.23_pm.png" alt="josm view" /></p>
+<p><img src="/upfiles/Screen_Shot_2014-07-12_at_10.39.23_pm.png" alt="josm view" /></p>
 <p>I can only see one rack near the cemetery though</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2014-07-12_at_11.09.34_pm.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2014-07-12_at_11.09.34_pm.png" alt="alt text" /></p>
 <p>I think it has been done correctly.</p>
 </div>
 <div id="comment-34837-info" class="comment-info">
@@ -262,8 +262,8 @@ osqa_accepted = false
 <div id="post-34838-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are three bicycle parkings visible in the link you provided, but only in the cycle layer : <a href="http://www.openstreetmap.org/relation/35078#map=18/43.60397/1.33466&amp;layers=C">http://www.openstreetmap.org/relation/35078#map=18/43.60397/1.33466&amp;layers=C</a> and not in other layers.</p>
-<p>Seems a small facility because each is only 1 node. It's possible to tag an area or a building for larger facilities : <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking</a></p>
+<p>There are three bicycle parkings visible in the link you provided, but only in the cycle layer : <a href="https://www.openstreetmap.org/relation/35078#map=18/43.60397/1.33466&amp;layers=C">https://www.openstreetmap.org/relation/35078#map=18/43.60397/1.33466&amp;layers=C</a> and not in other layers.</p>
+<p>Seems a small facility because each is only 1 node. It's possible to tag an area or a building for larger facilities : <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking</a></p>
 <p>Gys</p>
 </div>
 <div id="comment-34838-info" class="comment-info">
@@ -325,7 +325,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>As has been pointed out multiple times opencyclemap DOES show bicycle parkings, if it doesn't have significant cpacity it simply isn't very prominent (see <a href="http://www.openstreetmap.org/#map=18/43.62299/1.31734&amp;layers=C">http://www.openstreetmap.org/#map=18/43.62299/1.31734&amp;layers=C</a> )</p>
+<p>As has been pointed out multiple times opencyclemap DOES show bicycle parkings, if it doesn't have significant cpacity it simply isn't very prominent (see <a href="https://www.openstreetmap.org/#map=18/43.62299/1.31734&amp;layers=C">https://www.openstreetmap.org/#map=18/43.62299/1.31734&amp;layers=C</a> )</p>
 </div>
 <div id="comment-34847-info" class="comment-info">
 <span class="comment-age">(12 Jul '14, 15:47)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -391,7 +391,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The basic OSM website can display cycle parking, if you ask it to. Go to <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>, and select the Layers icon on the right of the screen (it looks like three sheets of paper in a stack). From that list, select Cycle Map. The rendered map no longer shows bus stops, but bicycle parking places are shown as little blue squares. Go to <a href="http://www.openstreetmap.org/#map=17/50.85162/-1.17706&amp;layers=C">http://www.openstreetmap.org/#map=17/50.85162/-1.17706&amp;layers=C</a> for an example of a place with a reasonable cycle parking provision (one of them appears to be in the middle of the road, which I will try to correct).</p>
+<p>The basic OSM website can display cycle parking, if you ask it to. Go to <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>, and select the Layers icon on the right of the screen (it looks like three sheets of paper in a stack). From that list, select Cycle Map. The rendered map no longer shows bus stops, but bicycle parking places are shown as little blue squares. Go to <a href="https://www.openstreetmap.org/#map=17/50.85162/-1.17706&amp;layers=C">https://www.openstreetmap.org/#map=17/50.85162/-1.17706&amp;layers=C</a> for an example of a place with a reasonable cycle parking provision (one of them appears to be in the middle of the road, which I will try to correct).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

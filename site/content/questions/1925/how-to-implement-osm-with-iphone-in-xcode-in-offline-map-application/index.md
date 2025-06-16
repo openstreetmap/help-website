@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Information about using OSM data and maps on an iPhone or similar devices can be found in the <a href="http://wiki.openstreetmap.org/wiki/Iphone">OSM wiki</a> ... When you need more detailed information, please edit your original question and give us more details of your aim.</p>
+<p>Information about using OSM data and maps on an iPhone or similar devices can be found in the <a href="https://wiki.openstreetmap.org/wiki/Iphone">OSM wiki</a> ... When you need more detailed information, please edit your original question and give us more details of your aim.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

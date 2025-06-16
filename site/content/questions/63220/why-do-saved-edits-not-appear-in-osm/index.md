@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have made various edits (using ID in browser) to an area I've been walking recently. The edits all show when I'm in edit mode but none have become generally visible. Why is that ?</p>
-<p>The help page: <a href="https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
+<p>The help page: <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
 <p>Has an entry named "Not Mapping!". The author is surprised that people sign up and then don't make any edits.</p>
 <p>I have put the effort in, got the GPS traces, made edits accordingly and saved them.</p>
 <p>None of my edits appear, I wonder if I fall into his/her category of people who sign up and don't make any edits.</p>

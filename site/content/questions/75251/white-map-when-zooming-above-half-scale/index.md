@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/topomap_blank_JwE2DpE.jpeg" alt="alt text" />Hi all! I'm using topomap since a while, and love it. But since a few weeks, a large area in Belgium turns blank (completly white) when I zoom above half scale. I downloaded again the last version, but no change. Anything I can do? I'm using garmin base camp on win7 pro. Thanks for your help. JP</p>
+<p><img src="/upfiles/topomap_blank_JwE2DpE.jpeg" alt="alt text" />Hi all! I'm using topomap since a while, and love it. But since a few weeks, a large area in Belgium turns blank (completly white) when I zoom above half scale. I downloaded again the last version, but no change. Anything I can do? I'm using garmin base camp on win7 pro. Thanks for your help. JP</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-opentopomap" rel="tag" title="see questions tagged &#39;opentopomap&#39;">opentopomap</span>

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is an (somewhat old) proposal on mapping climbing activities: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Climbing">http://wiki.openstreetmap.org/wiki/Proposed_features/Climbing</a></p>
+<p>There is an (somewhat old) proposal on mapping climbing activities: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Climbing">https://wiki.openstreetmap.org/wiki/Proposed_features/Climbing</a></p>
 <p>However, the proposed route=climbing is currently only used 5(!) times on the whole planet. There seem to be a couple of problems to it. First, it seems to me a climing route should be implemented a relation in order to cover multi-pitch climbs. Secondly, there is a thorough accuracy problem with regard to GPS-signal (quite some signal problem and considerable offset in these locations) but also with regard to the current topographical mapping details in osm: There are currently only very little topographical items supported and used and those are highly generic (eg natural=fell, natural=bedrock,...).</p>
 <p>You may want to have a look at <a href="http://www.camptocamp.org">www.camptocamp.org</a> which is another open-data initiative targeted at alpinism and also providing geolocalised climbing information (also available as wms (officially permitted) if you want to add selected info to osm).</p>
 </div>

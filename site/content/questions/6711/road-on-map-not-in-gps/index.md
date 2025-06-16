@@ -72,8 +72,8 @@ osqa_accepted = false
 <p>Whereabouts did you download the gmapsupp.img from?<br />
 </p>
 <p>Depending on what options the person that made that file selected (and there are lots of people doing this, and no "official" ones) you may very well see some features and not others.</p>
-<p>Also, would it be possible to provide a permalink to the area where you're seeing the problem, like this: <a href="http://www.openstreetmap.org/?lat=52.029994&amp;lon=5.569937&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.029994&amp;lon=5.569937&amp;zoom=18&amp;layers=M</a></p>
-<p>or a link to an actual road that you can't see, like this: <a href="http://www.openstreetmap.org/browse/way/6961146">http://www.openstreetmap.org/browse/way/6961146</a></p>
+<p>Also, would it be possible to provide a permalink to the area where you're seeing the problem, like this: <a href="https://www.openstreetmap.org/?lat=52.029994&amp;lon=5.569937&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.029994&amp;lon=5.569937&amp;zoom=18&amp;layers=M</a></p>
+<p>or a link to an actual road that you can't see, like this: <a href="https://www.openstreetmap.org/browse/way/6961146">https://www.openstreetmap.org/browse/way/6961146</a></p>
 <p>(those links are just examples of course)</p>
 </div>
 <div id="comment-6875-info" class="comment-info">

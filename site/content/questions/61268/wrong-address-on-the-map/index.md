@@ -170,7 +170,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Nitpick: When house numbers are missing in an area, I think it'd be more effective to survey the house numbers at street corners and add <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">address interpolation tags</a> than to tag just one random house in the middle of the street.</p>
+<p>Nitpick: When house numbers are missing in an area, I think it'd be more effective to survey the house numbers at street corners and add <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">address interpolation tags</a> than to tag just one random house in the middle of the street.</p>
 </div>
 <div id="comment-61282-info" class="comment-info">
 <span class="comment-age">(20 Dec '17, 05:41)</span> <span class="comment-user userinfo">dsh4</span>

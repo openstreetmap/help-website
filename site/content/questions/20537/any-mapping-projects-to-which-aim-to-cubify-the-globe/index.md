@@ -133,7 +133,7 @@ One Answer:
 <p>Question "A": I've seen no tile server serving <a href="http://www.progonos.com/furuti/MapProj/Normal/ProjPoly/projPoly2.html">cubic globes</a>.</p>
 <p>But I'm sorry this is not a question about Openstreetmap, so you will not get an answer here. I did find some links that might help you:</p>
 <ul>
-<li>use mercator instead check out how the <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map">slippy map</a> work, especially how <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">tile names are generated</a>, they are vertically and horizontally aligned.</li>
+<li>use mercator instead check out how the <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map">slippy map</a> work, especially how <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">tile names are generated</a>, they are vertically and horizontally aligned.</li>
 <li>if you don't like that read up on projections on wikipedia, mercator vs. gnomic</li>
 <li>there are <a href="http://mycodingwrongs.wordpress.com/2010/07/24/reprojecting-blue-marble/">people on the net</a> that has done this.</li>
 <li>You could try asking on <a href="http://gis.stackexchange.com/">gis.stackexchange</a> they are probably better at open ended questions.</li>

@@ -162,7 +162,7 @@ in executeQuery Full sql was: &#39;SELECT * FROM (SELECT
 &#10;</div>
 <div class="comment-text">
 <p>This snapshot may help</p>
-<p><img src="https://help.openstreetmap.org/upfiles/mapsrv.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/mapsrv.PNG" alt="alt text" /></p>
 </div>
 <div id="comment-63629-info" class="comment-info">
 <span class="comment-age">(23 May '18, 07:50)</span> <span class="comment-user userinfo">jiten19851985</span>
@@ -173,7 +173,7 @@ in executeQuery Full sql was: &#39;SELECT * FROM (SELECT
 <div id="post-63639-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/hstore.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/hstore.PNG" alt="alt text" /></p>
 </div>
 <div id="comment-63639-info" class="comment-info">
 <span class="comment-age">(23 May '18, 09:36)</span> <span class="comment-user userinfo">jiten19851985</span>

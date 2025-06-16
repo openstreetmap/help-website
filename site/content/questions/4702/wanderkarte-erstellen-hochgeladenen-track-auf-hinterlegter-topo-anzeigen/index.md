@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I hope I have understood your question correctly (see my translation above).</p>
-<p>In a Windows environment I would use <a href="http://wiki.openstreetmap.org/wiki/Kosmos">Kosmos</a> or <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to create such a map.</p>
+<p>In a Windows environment I would use <a href="https://wiki.openstreetmap.org/wiki/Kosmos">Kosmos</a> or <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to create such a map.</p>
 <p>OSM does not store elevation data other than for a small number of points. The usual source which is widely used with OSM data is <a href="http://en.wikipedia.org/wiki/Shuttle_Radar_Topography_Mission">SRTM</a>. Both these tools integrate accessing and preparing this data as simple commands or menu options. They also allow GPS (in gpx) tracks to be overlaid on the map, and allow the final product to be saved to a file for printing.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -165,8 +165,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try <a href="http://wiki.openstreetmap.org/wiki/Hikingbook.pl">Hikingbook.pl</a> for such purposes.</p>
-<p>Or have a look at <a href="http://wiki.openstreetmap.org/wiki/Hiking_Map">Hiking_Map</a> to see more possibilities about hiking maps.</p>
+<p>You can try <a href="https://wiki.openstreetmap.org/wiki/Hikingbook.pl">Hikingbook.pl</a> for such purposes.</p>
+<p>Or have a look at <a href="https://wiki.openstreetmap.org/wiki/Hiking_Map">Hiking_Map</a> to see more possibilities about hiking maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -289,7 +289,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Zusätzlich zu der von <a href="/questions/4702/wanderkarte-erstellen/4707">andy mackey genannten</a> Website findest du dort eine Liste von Websites, die das gewünschte anbieten: <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">http://wiki.openstreetmap.org/wiki/Track_drawing_websites</a></p>
+<p>Zusätzlich zu der von <a href="/questions/4702/wanderkarte-erstellen/4707">andy mackey genannten</a> Website findest du dort eine Liste von Websites, die das gewünschte anbieten: <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">https://wiki.openstreetmap.org/wiki/Track_drawing_websites</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

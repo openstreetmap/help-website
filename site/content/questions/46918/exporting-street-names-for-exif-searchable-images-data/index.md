@@ -151,7 +151,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can simple geocode the pictures, with other words extract the coordinates and reverse geocode them for example with nominatim: <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding</a></p>
+<p>You can simple geocode the pictures, with other words extract the coordinates and reverse geocode them for example with nominatim: <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding</a></p>
 <p>The fine print:</p>
 <ul>
 <li>I don't know of any ready-made tool that does this, but it shoudn't be all too difficult to whip up something</li>
@@ -222,7 +222,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you know the rough lat/lon of the location you want to find street names for you could use a Overpass Query such as this one <a href="http://overpass-turbo.eu/s/d31">http://overpass-turbo.eu/s/d31</a>, which returns all named streets within 300 m of an arbitrary point in Walworth. If you can directly use the geocoded co-ordinates of the photo or of the subject then all the better.</p>
 <p>Exactly how one integrates this into a workflow I cant say (the turbo queries can be saved to run overpass which in turn can be run as a command line).</p>
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> raises the ODBL, but if the primary purpose is to enable customers to better identify suitable images, making the data of photo locations &amp; streetnames publicly available might not be an issue. The fine points of how ODbL applies to EXIF data will no doubt exercise a lawyer.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> raises the ODBL, but if the primary purpose is to enable customers to better identify suitable images, making the data of photo locations &amp; streetnames publicly available might not be an issue. The fine points of how ODbL applies to EXIF data will no doubt exercise a lawyer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

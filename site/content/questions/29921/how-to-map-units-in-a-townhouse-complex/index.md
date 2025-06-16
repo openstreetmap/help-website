@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to map units in a townhouse complex?"
-description = '''I am currently mapping a towhnouse complex (&quot;Fernbrook&quot;) in suburban Brisbane: http://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040 Is the current mapping the ideal one? I just mapped a block of buildings for the moment, which makes it more easy to have an idea of how the complex is ...'''
+description = '''I am currently mapping a towhnouse complex (&quot;Fernbrook&quot;) in suburban Brisbane: https://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040 Is the current mapping the ideal one? I just mapped a block of buildings for the moment, which makes it more easy to have an idea of how the complex is ...'''
 date = "2014-01-18T02:23:00Z"
 lastmod = "2014-01-19T02:32:00Z"
 weight = 29921
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am currently mapping a towhnouse complex ("Fernbrook") in suburban Brisbane: <a href="http://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040">http://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040</a> Is the current mapping the ideal one? I just mapped a block of buildings for the moment, which makes it more easy to have an idea of how the complex is subdivided.</p>
+<p>I am currently mapping a towhnouse complex ("Fernbrook") in suburban Brisbane: <a href="https://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040">https://www.openstreetmap.org/way/13932593#map=18/-27.44844/152.94040</a> Is the current mapping the ideal one? I just mapped a block of buildings for the moment, which makes it more easy to have an idea of how the complex is subdivided.</p>
 <p>More precisely, I would like to know:</p>
 <ul>
 <li>Should the whole complex be tagged as a residential area with a name?</li>
@@ -193,7 +193,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/residential.GIF" alt="alt text" /></p>
+<p><img src="/upfiles/residential.GIF" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -225,7 +225,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Hi Stephane: I am guessing you are asking for an actual link to the example I showed (?). If so, here is the link to the whole residential subdivision. Regards, Martin</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=id#map=17/38.79074/-77.52785">http://www.openstreetmap.org/edit?editor=id#map=17/38.79074/-77.52785</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=id#map=17/38.79074/-77.52785">https://www.openstreetmap.org/edit?editor=id#map=17/38.79074/-77.52785</a></p>
 </div>
 <div id="comment-29956-info" class="comment-info">
 <span class="comment-age">(19 Jan '14, 00:37)</span> <span class="comment-user userinfo">slover98</span>

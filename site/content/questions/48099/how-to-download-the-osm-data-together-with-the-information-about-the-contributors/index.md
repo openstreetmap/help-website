@@ -120,7 +120,7 @@ One Answer:
 <div class="answer-body">
 <p>Overpass API will return extended information about objects if you use the print statement <code>out meta</code>. It only returns information about the last user to change an object. A deeper analysis than that would require tracking the history somehow (the history dumps or changesets or...).</p>
 <p>If you want information <em>about</em> the users, the OSM API could then be used to access public profile information:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Methods_for_user_data">http://wiki.openstreetmap.org/wiki/API_v0.6#Methods_for_user_data</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Methods_for_user_data">https://wiki.openstreetmap.org/wiki/API_v0.6#Methods_for_user_data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

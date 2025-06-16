@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://help.openstreetmap.org/questions/1088/routable-data-on-garmin-dakota-20/1094">this previous answer</a> to another question.</p>
+<p>Have a look at <a href="/questions/1088/routable-data-on-garmin-dakota-20/1094">this previous answer</a> to another question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -164,8 +164,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the OSM database, we use <a href="http://wiki.openstreetmap.org/wiki/Key:access">access tags</a> on <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">barriers</a> to express who can pass through the barrier. So gates that can be opened by pedestrians should at least get a foot=yes tag.</p>
-<p>As for visualizing this information, Overpass Turbo is your best bet, as described in the <a href="https://help.openstreetmap.org/questions/36588/how-do-i-view-stiles-on-the-map">stile question</a>.</p>
+<p>In the OSM database, we use <a href="https://wiki.openstreetmap.org/wiki/Key:access">access tags</a> on <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">barriers</a> to express who can pass through the barrier. So gates that can be opened by pedestrians should at least get a foot=yes tag.</p>
+<p>As for visualizing this information, Overpass Turbo is your best bet, as described in the <a href="/questions/36588/how-do-i-view-stiles-on-the-map">stile question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -230,7 +230,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/14/tordanik">@Tordanik</a> In Britain really quite frequently. Which is why people like <a href="http://help.openstreetmap.org/users/2855/trig222">@trig222</a> spend a lot of time volunteering to rectify the situation by reporting such problems to the highway authority. I've certainly come across worse <a href="http://sk53-osm.blogspot.com/2011/07/footpaths-in-carmarthenshire-whats-point.html.">http://sk53-osm.blogspot.com/2011/07/footpaths-in-carmarthenshire-whats-point.html.</a> What's clear from this question is that we dont have a good single tag to indicate that the legal right of way is obstructed.</p>
+<p><a href="https://help.openstreetmap.org/users/14/tordanik">@Tordanik</a> In Britain really quite frequently. Which is why people like <a href="https://help.openstreetmap.org/users/2855/trig222">@trig222</a> spend a lot of time volunteering to rectify the situation by reporting such problems to the highway authority. I've certainly come across worse <a href="http://sk53-osm.blogspot.com/2011/07/footpaths-in-carmarthenshire-whats-point.html.">http://sk53-osm.blogspot.com/2011/07/footpaths-in-carmarthenshire-whats-point.html.</a> What's clear from this question is that we dont have a good single tag to indicate that the legal right of way is obstructed.</p>
 </div>
 <div id="comment-36647-info" class="comment-info">
 <span class="comment-age">(06 Sep '14, 08:00)</span> <span class="comment-user userinfo">SK53 ♦</span>

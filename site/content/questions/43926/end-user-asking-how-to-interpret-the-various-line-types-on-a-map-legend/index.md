@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "End User asking how to interpret the various line types on a map (legend?)"
-description = '''I am essentially a &#x27;consumer&#x27; of osm maps, not doing updates myself. So, that is the orientation of this question, just want to know how to interpret the various lines i am seeing. I have found various links that purport to be osm legends (one example: http://www.openstreetmap.org/key), but the line...'''
+description = '''I am essentially a &#x27;consumer&#x27; of osm maps, not doing updates myself. So, that is the orientation of this question, just want to know how to interpret the various lines i am seeing. I have found various links that purport to be osm legends (one example: https://www.openstreetmap.org/key), but the line...'''
 date = "2015-07-03T00:08:00Z"
 lastmod = "2015-08-10T10:16:00Z"
 weight = 43926
@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am essentially a 'consumer' of osm maps, not doing updates myself. So, that is the orientation of this question, just want to know how to interpret the various lines i am seeing. I have found various links that purport to be osm legends (one example: <a href="http://www.openstreetmap.org/key),">http://www.openstreetmap.org/key),</a> but the lines that i illustrate below are not defined in those legends. I use the site ridewithgps.com to access osm maps, and so as you might guess my interest is for bicycle. In order for this to be of practical use to an 'end-user' i need to know roughly what type of road or path i am going to encounter, before i can trust to map a bike ride over these marked lines. The lines i refer to (at the moment) are in this list and shown in the uploaded image.</p>
+<p>I am essentially a 'consumer' of osm maps, not doing updates myself. So, that is the orientation of this question, just want to know how to interpret the various lines i am seeing. I have found various links that purport to be osm legends (one example: <a href="https://www.openstreetmap.org/key),">https://www.openstreetmap.org/key),</a> but the lines that i illustrate below are not defined in those legends. I use the site ridewithgps.com to access osm maps, and so as you might guess my interest is for bicycle. In order for this to be of practical use to an 'end-user' i need to know roughly what type of road or path i am going to encounter, before i can trust to map a bike ride over these marked lines. The lines i refer to (at the moment) are in this list and shown in the uploaded image.</p>
 <p>1 purple dashed line 2 brown-ish short-long dashed line 3 white-pink filled alternating (looks a little like rr, but is not) 4 pink highlighted dashed line 5 light gray solid road-seeming line 6 light gray cabled line</p>
-<p><img src="http://help.openstreetmap.org/upfiles/rwGps_line_types_gGcQ6FG.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/rwGps_line_types_gGcQ6FG.jpg" alt="alt text" /></p>
 <p>Thanks much!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -371,7 +371,7 @@ osqa_accepted = false
 <div id="post-44694-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There's a description of the ways that osm people communicate with each other over at <a href="http://wiki.openstreetmap.org/wiki/Contact_channels">http://wiki.openstreetmap.org/wiki/Contact_channels</a> . What you've said above would be the perfect fit for a diary entry, I'd say.</p>
+<p>There's a description of the ways that osm people communicate with each other over at <a href="https://wiki.openstreetmap.org/wiki/Contact_channels">https://wiki.openstreetmap.org/wiki/Contact_channels</a> . What you've said above would be the perfect fit for a diary entry, I'd say.</p>
 </div>
 <div id="comment-44694-info" class="comment-info">
 <span class="comment-age">(10 Aug '15, 10:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

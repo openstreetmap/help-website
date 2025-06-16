@@ -43,8 +43,8 @@ osqa_accepted = true
 <p>Based on searching here, I thought it would be [[<a href="http://example.com">http://example.com</a>]] or [[{ }]] but neither of those seem to work.</p>
 <p>Any suggestions?</p>
 <p><img src="/upfiles/2015-10-05_23h46_45.png" alt="umap screenshot showing a popup with a table" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/2015-10-06_12h41_17.png" alt="umap screenshot showing a popup with a table link working" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/2015-10-06_12h40_42.png" alt="umap screenshot showing a popup with a table link not working" /></p>
+<p><img src="/upfiles/2015-10-06_12h41_17.png" alt="umap screenshot showing a popup with a table link working" /></p>
+<p><img src="/upfiles/2015-10-06_12h40_42.png" alt="umap screenshot showing a popup with a table link not working" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span> <span class="post-tag tag-link-popup" rel="tag" title="see questions tagged &#39;popup&#39;">popup</span> <span class="post-tag tag-link-link" rel="tag" title="see questions tagged &#39;link&#39;">link</span> <span class="post-tag tag-link-table" rel="tag" title="see questions tagged &#39;table&#39;">table</span>

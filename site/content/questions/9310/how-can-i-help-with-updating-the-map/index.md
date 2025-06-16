@@ -114,8 +114,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Welcome to OSM! Just create a user account and start editing ;)</p>
-<p>On the Wiki, there is a beginner's guide: <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
-<p>And here is the country page for Pakistan: <a href="http://wiki.openstreetmap.org/wiki/Pakistan">http://wiki.openstreetmap.org/wiki/Pakistan</a></p>
+<p>On the Wiki, there is a beginner's guide: <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p>And here is the country page for Pakistan: <a href="https://wiki.openstreetmap.org/wiki/Pakistan">https://wiki.openstreetmap.org/wiki/Pakistan</a></p>
 <p>There is also a link to other users in Pakistan, so you can get in contact with fellow mappers.</p>
 <p>If you are insecure about things, you can always ask on the helpdesk or to other users.</p>
 </div>

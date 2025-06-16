@@ -140,8 +140,8 @@ One Answer:
 <div id="post-51307-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you so much, this helps! However, I am still struggling with the query. Do you think that the best approach is to do a subtraction (as in <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference)">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference)</a> between one set created with the old date (using "[date:...") and one created with the new date? I'm having trouble with this since it seems like the ["date:"] parameter, like the ["timeout:"] parameter, is meant to be set only once for the whole query, at the top.</p>
-<p>I suppose another approach would be to try to convert the diff file to OSM using <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">OSMConvert</a> .</p>
+<p>Thank you so much, this helps! However, I am still struggling with the query. Do you think that the best approach is to do a subtraction (as in <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference)">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Difference)</a> between one set created with the old date (using "[date:...") and one created with the new date? I'm having trouble with this since it seems like the ["date:"] parameter, like the ["timeout:"] parameter, is meant to be set only once for the whole query, at the top.</p>
+<p>I suppose another approach would be to try to convert the diff file to OSM using <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">OSMConvert</a> .</p>
 <p>Any further pointers you could give me would be mush appreciated. A link to a working example of a query with two different dates (but not using "diff:") would be particularly valuable.</p>
 <p>Thanks again,</p>
 <p>Madeline</p>

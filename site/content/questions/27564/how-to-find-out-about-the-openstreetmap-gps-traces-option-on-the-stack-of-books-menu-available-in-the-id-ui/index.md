@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Underlying GPS traces are now available within the iD editor (hooray!) via the "stack of books" menu (although you might need to maximise or change browser settings to get it to fit on the screen).</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_01014_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/screenshot_01014_1.png" alt="alt text" /></p>
 <p>However, there doesn't seem to be much information about this feature. Which traces are shown? The tooltip says "Public" - does this mean that "Identifiable" ones are not? How long should it take for an uploaded trace to be visible? What do the colours mean? Is it possible (as it is with JOSM) to query traces to see which are old and which recent? Are waypoints displayed, and if so how?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -170,7 +170,7 @@ No, this layer is just a static tile layer. So, no subsequent filtering is possi
 <pre><code>Which traces are shown? The tooltip says &quot;Public&quot; - does this mean that &quot;Identifiable&quot; ones are not?</code></pre>
 <p>Any GPS track uploaded and marked as "Identifiable" or "Public" is included in the layer.</p>
 <pre><code>How long should it take for an uploaded trace to be visible?</code></pre>
-<p>Allegedly "Every 60 seconds", although <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1590291">this</a> trace has been public for some hours now and doesn't appear. Presumably that's just another bug.</p>
+<p>Allegedly "Every 60 seconds", although <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1590291">this</a> trace has been public for some hours now and doesn't appear. Presumably that's just another bug.</p>
 <pre><code>What do the colours mean?</code></pre>
 <p>Eastbound movement in red, westbound in cyan, northbound in yellow, and southbound in violet.</p>
 <pre><code>Is it possible (as it is with JOSM) to query traces to see which are old and which recent?</code></pre>

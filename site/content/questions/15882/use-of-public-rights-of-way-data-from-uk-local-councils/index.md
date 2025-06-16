@@ -172,7 +172,7 @@ osqa_accepted = false
 <li>Land use (e.g. farmland, residential)</li>
 </ul>
 <p>Just simply knowing that there's a public footpath that goes from A to B isn't much use if your back is knackered and you want to avoid stiles, or if it's been raining and you want to avoid mud.</p>
-<p>Where the council's Definitive Statement may be useful is where there may be inconsistent or missing signage on the ground (like <a href="http://www.openstreetmap.org/?lat=51.63516&amp;lon=-1.25966&amp;zoom=15&amp;layers=M">here</a>) and in highlighting paths in OSM that no-one's surveyed yet.</p>
+<p>Where the council's Definitive Statement may be useful is where there may be inconsistent or missing signage on the ground (like <a href="https://www.openstreetmap.org/?lat=51.63516&amp;lon=-1.25966&amp;zoom=15&amp;layers=M">here</a>) and in highlighting paths in OSM that no-one's surveyed yet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -204,7 +204,7 @@ osqa_accepted = false
 <div id="post-15894-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There isn't a central "authority" that decides whether or not to import data. If it were to get done, it would be done by an ordinary mapper or a group of mappers. As Richard says, they'd have to discuss it with the community first (see <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">these guidelines</a>), and there would have to be a general agreement to import the data.</p>
+<p>There isn't a central "authority" that decides whether or not to import data. If it were to get done, it would be done by an ordinary mapper or a group of mappers. As Richard says, they'd have to discuss it with the community first (see <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">these guidelines</a>), and there would have to be a general agreement to import the data.</p>
 <p>It's <a href="http://switch2osm.org/using-tiles/getting-started-with-leaflet/">fairly straightforward</a> to display multiple data layers on one map, so if you wanted to create a map that overlaid some data from Ox CC on top of an OSM map that's certainly possible without an import, and it's also possible to load custom background layers into the popular OSM editors.</p>
 </div>
 <div id="comment-15894-info" class="comment-info">

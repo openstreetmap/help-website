@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Both if possible. But likely the <code>power=plant</code> for the overall thing is the most important aspect. See those two example solar plants: <a href="https://www.openstreetmap.org/way/5097254">https://www.openstreetmap.org/way/5097254</a> and <a href="https://www.openstreetmap.org/way/192932181">https://www.openstreetmap.org/way/192932181</a> (thanks for the last link, <a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a></a>). Switch on the <span>data layer</span> or inspect in your editor to see the used tagging of the individual panel groups.</p>
+<p>Both if possible. But likely the <code>power=plant</code> for the overall thing is the most important aspect. See those two example solar plants: <a href="https://www.openstreetmap.org/way/5097254">https://www.openstreetmap.org/way/5097254</a> and <a href="https://www.openstreetmap.org/way/192932181">https://www.openstreetmap.org/way/192932181</a> (thanks for the last link, <a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a></a>). Switch on the <span>data layer</span> or inspect in your editor to see the used tagging of the individual panel groups.</p>
 <p>As Hendrikklaas said, it is useful to read the wiki pages: <a href="https://wiki.openstreetmap.org/wiki/Tag:power=plant">https://wiki.openstreetmap.org/wiki/Tag:power=plant</a> , <a href="https://wiki.openstreetmap.org/wiki/Tag:power=generator">https://wiki.openstreetmap.org/wiki/Tag:power=generator</a> , <a href="https://wiki.openstreetmap.org/wiki/Tag:generator:source=solar">https://wiki.openstreetmap.org/wiki/Tag:generator:source=solar</a></p>
 </div>
 <div class="answer-controls post-controls">
@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Sarr_Cat, Take a look here, <a href="http://www.openstreetmap.org/#map=14/35.0143/-117.5559">http://www.openstreetmap.org/#map=14/35.0143/-117.5559</a> and read the Solar pages in the Wiki &amp; solar power, <a href="http://wiki.openstreetmap.org/w/index.php?search=solar&amp;title=Special%3ASearch&amp;go=OK">http://wiki.openstreetmap.org/w/index.php?search=solar&amp;title=Special%3ASearch&amp;go=OK</a> The Californian power generator is several areas large and tagged as is, an area with solar panels, so tag yours the same way. You could however tag the rows and panels as well separatly if you get a change to map them thoroughly.</p>
+<p>Hi Sarr_Cat, Take a look here, <a href="https://www.openstreetmap.org/#map=14/35.0143/-117.5559">https://www.openstreetmap.org/#map=14/35.0143/-117.5559</a> and read the Solar pages in the Wiki &amp; solar power, <a href="https://wiki.openstreetmap.org/w/index.php?search=solar&amp;title=Special%3ASearch&amp;go=OK">https://wiki.openstreetmap.org/w/index.php?search=solar&amp;title=Special%3ASearch&amp;go=OK</a> The Californian power generator is several areas large and tagged as is, an area with solar panels, so tag yours the same way. You could however tag the rows and panels as well separatly if you get a change to map them thoroughly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -201,7 +201,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>You failed to answer the question, i.e. whether to tag each panel individually or all together and why. Just for the sake of completeness, here is an <a href="http://www.openstreetmap.org/#map=17/51.01845/13.80205">example of individually tagged panels</a>.</p>
+<p>You failed to answer the question, i.e. whether to tag each panel individually or all together and why. Just for the sake of completeness, here is an <a href="https://www.openstreetmap.org/#map=17/51.01845/13.80205">example of individually tagged panels</a>.</p>
 </div>
 <div id="comment-43138-info" class="comment-info">
 <span class="comment-age">(20 May '15, 21:32)</span> <span class="comment-user userinfo">scai ♦</span>

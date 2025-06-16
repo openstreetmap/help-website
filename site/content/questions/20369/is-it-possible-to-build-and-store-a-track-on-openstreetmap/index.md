@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are a number of websites that let you draw a track on top of OSM based maps. Some of these are listed here: <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
+<p>There are a number of websites that let you draw a track on top of OSM based maps. Some of these are listed here: <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

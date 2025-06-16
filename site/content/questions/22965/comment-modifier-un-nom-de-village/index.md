@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi follow these explanations and change street into municipality, an area. <a href="https://help.openstreetmap.org/questions/2756/how-do-i-change-a-street-name">https://help.openstreetmap.org/questions/2756/how-do-i-change-a-street-name</a> and make the change or just ask the person who made the mistake by mail to change it. There have been several questions and answers with the same content.</p>
+<p>Hi follow these explanations and change street into municipality, an area. <a href="/questions/2756/how-do-i-change-a-street-name">https://help.openstreetmap.org/questions/2756/how-do-i-change-a-street-name</a> and make the change or just ask the person who made the mistake by mail to change it. There have been several questions and answers with the same content.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -153,7 +153,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>cest bon, regarde ici sil vous plait aussi <a href="http://wiki.openstreetmap.org/wiki/FR:Help:Contents">http://wiki.openstreetmap.org/wiki/FR:Help:Contents</a></p>
+<p>cest bon, regarde ici sil vous plait aussi <a href="https://wiki.openstreetmap.org/wiki/FR:Help:Contents">https://wiki.openstreetmap.org/wiki/FR:Help:Contents</a></p>
 </div>
 <div id="comment-22982-info" class="comment-info">
 <span class="comment-age">(03 Jun '13, 13:48)</span> <span class="comment-user userinfo">Hendrikklaas</span>

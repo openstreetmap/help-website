@@ -113,7 +113,7 @@ osqa_accepted = false
 <div id="post-41238-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>see <a href="https://help.openstreetmap.org/questions/24550/found-no-good-gpx-points-in-the-input-data">https://help.openstreetmap.org/questions/24550/found-no-good-gpx-points-in-the-input-data</a> or <a href="https://help.openstreetmap.org/questions/35688/found-no-good-gpx-points-in-the-input-data">https://help.openstreetmap.org/questions/35688/found-no-good-gpx-points-in-the-input-data</a></p>
+<p>see <a href="/questions/24550/found-no-good-gpx-points-in-the-input-data">https://help.openstreetmap.org/questions/24550/found-no-good-gpx-points-in-the-input-data</a> or <a href="/questions/35688/found-no-good-gpx-points-in-the-input-data">https://help.openstreetmap.org/questions/35688/found-no-good-gpx-points-in-the-input-data</a></p>
 </div>
 <div id="comment-41238-info" class="comment-info">
 <span class="comment-age">(22 Feb '15, 13:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -136,7 +136,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10539/rjferret">@RjFerret</a>: ah, yes, but only in the preview (it is a bit fucked up...). A correctly working Markdown preview is <a href="http://daringfireball.net/projects/markdown/dingus">dingus</a>. I have removed the spaces for you.</p>
+<p><a href="https://help.openstreetmap.org/users/10539/rjferret">@RjFerret</a>: ah, yes, but only in the preview (it is a bit fucked up...). A correctly working Markdown preview is <a href="http://daringfireball.net/projects/markdown/dingus">dingus</a>. I have removed the spaces for you.</p>
 </div>
 <div id="comment-41252-info" class="comment-info">
 <span class="comment-age">(22 Feb '15, 23:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

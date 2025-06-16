@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's an overview about routing with OSM on the wiki page <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>. You will be interested specifically in the list of <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online Routers</a>. There is a comparison of several services at the bottom of the page, check out the row "API open for 3rd party applications" to find some that might be suitable for you.</p>
+<p>There's an overview about routing with OSM on the wiki page <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>. You will be interested specifically in the list of <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online Routers</a>. There is a comparison of several services at the bottom of the page, check out the row "API open for 3rd party applications" to find some that might be suitable for you.</p>
 <p>None of these routing services is operated by OpenStreetMap directly; they are all using OpenStreetMap data but are operated by third parties. There may be usage restrictions if you are planning to use them heavily, and you might be forced to run your own server or pay for a commercial service.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -164,7 +164,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM servers keep map data, not routing. If you want a routing service based on OSM see <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">online_routers</a>. For cars only YOURS and MapQuest seem to have a public API for routing.<br />
+<p>OSM servers keep map data, not routing. If you want a routing service based on OSM see <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">online_routers</a>. For cars only YOURS and MapQuest seem to have a public API for routing.<br />
 Based on the scale you plan to do this you might consider running your own server. Most of the routers mentioned on wiki is open source so you would not have to program your own routing.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -201,7 +201,7 @@ Based on the scale you plan to do this you might consider running your own serve
 1
 </div>
 <div class="comment-text">
-<p>Looking at <a href="http://wiki.openstreetmap.org/wiki/YOURS#API_documentation">API documentation of YOURS</a> and more specifically the <a href="http://www.yournavigation.org/api/1.0/gosmore.php?format=kml&amp;flat=52.215676&amp;flon=5.963946&amp;tlat=52.2573&amp;tlon=6.1799&amp;v=motorcar&amp;fast=1&amp;layer=mapnik">example</a> the response contains the nodes. This seems to me exactly what Google does, only the coordinates encoding is xml, not JSON. I doubt you get anything better...<br />
+<p>Looking at <a href="https://wiki.openstreetmap.org/wiki/YOURS#API_documentation">API documentation of YOURS</a> and more specifically the <a href="http://www.yournavigation.org/api/1.0/gosmore.php?format=kml&amp;flat=52.215676&amp;flon=5.963946&amp;tlat=52.2573&amp;tlon=6.1799&amp;v=motorcar&amp;fast=1&amp;layer=mapnik">example</a> the response contains the nodes. This seems to me exactly what Google does, only the coordinates encoding is xml, not JSON. I doubt you get anything better...<br />
 PS: if you use their service buy them some RAM to get faster response ;-)</p>
 </div>
 <div id="comment-7353-info" class="comment-info">

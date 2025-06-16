@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@Vincent</span> Click on the Tombs link in my answer. You'll find a link to <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Tomb_Plugin">the JOSM tomb plugin</a>. Which uses <a href="http://wiki.openstreetmap.org/wiki/Relation:person">a relation of type=person</a> to store the name, data of birth, etc.</p>
+<p><span>@Vincent</span> Click on the Tombs link in my answer. You'll find a link to <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Tomb_Plugin">the JOSM tomb plugin</a>. Which uses <a href="https://wiki.openstreetmap.org/wiki/Relation:person">a relation of type=person</a> to store the name, data of birth, etc.</p>
 <p>Note that I didn't invent this overly complex construction, somebody else did.</p>
 </div>
 <div id="comment-24124-info" class="comment-info">
@@ -148,8 +148,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is certainly reasonable to put this data into Openstreetmap. Have a look at the tagging for <a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Dtomb">tombs</a>.</p>
-<p>It is however unlikely that the graves will ever be displayed on the default map. This doesn't mean you (or somebody else) can't make a map or application that works similar as the Mount Auburn one, but with OSM data and tools. The person to build this might get some good ideas for how <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Applications">Overpass Turbo and some other related applications</a> work</p>
+<p>It is certainly reasonable to put this data into Openstreetmap. Have a look at the tagging for <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dtomb">tombs</a>.</p>
+<p>It is however unlikely that the graves will ever be displayed on the default map. This doesn't mean you (or somebody else) can't make a map or application that works similar as the Mount Auburn one, but with OSM data and tools. The person to build this might get some good ideas for how <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Applications">Overpass Turbo and some other related applications</a> work</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 <div id="post-24132-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just so it doesn't get missed: see also the <a href="http://wiki.openstreetmap.org/wiki/Relation:person">person relation</a> to tag who is buried at a particular site.</p>
+<p>Just so it doesn't get missed: see also the <a href="https://wiki.openstreetmap.org/wiki/Relation:person">person relation</a> to tag who is buried at a particular site.</p>
 </div>
 <div id="comment-24132-info" class="comment-info">
 <span class="comment-age">(09 Jul '13, 14:22)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -215,8 +215,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There are a couple of answers to questions on this site which may be relevant:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/22017/how-do-i-tag-a-single-wayside-grave">How do I tag a single wayside grave?</a></li>
-<li><a href="https://help.openstreetmap.org/questions/5758/war-cemetery-maps">War Cemetery Maps</a></li>
+<li><a href="/questions/22017/how-do-i-tag-a-single-wayside-grave">How do I tag a single wayside grave?</a></li>
+<li><a href="/questions/5758/war-cemetery-maps">War Cemetery Maps</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -267,7 +267,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a German wiki page about <a href="http://wiki.openstreetmap.org/wiki/Friedhofmapping">Friedhofmapping</a> (graveyard mapping). It suggests tagging them as</p>
+<p>There is a German wiki page about <a href="https://wiki.openstreetmap.org/wiki/Friedhofmapping">Friedhofmapping</a> (graveyard mapping). It suggests tagging them as</p>
 <pre><code>  cemetery = grave
   + name = ...
   + wikipedia:subject = ...</code></pre>

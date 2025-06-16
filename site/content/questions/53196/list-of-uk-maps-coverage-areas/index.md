@@ -136,7 +136,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In OsmAnd/OsmAnd+ just download the world map (currently 185 MB, installed 260 MB). Then simply browse the map to see the individual regions. If you tap on them OsmAnd will show a popup with the name of the region, the size and a button for downloading it:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/photo_2016-12-02_09-03-05.jpg" alt="OsmAnd map download popup" /></p>
+<p><img src="/upfiles/photo_2016-12-02_09-03-05.jpg" alt="OsmAnd map download popup" /></p>
 <p>Note: tapping on download regions only works for lower zoom levels.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -183,7 +183,7 @@ osqa_accepted = false
 <div id="post-36005-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You're perfectly right about the discussion, but in this case, in seems that it's pretty much settled: <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dpet">http://wiki.openstreetmap.org/wiki/Tag:shop%3Dpet</a></p>
+<p>You're perfectly right about the discussion, but in this case, in seems that it's pretty much settled: <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dpet">https://wiki.openstreetmap.org/wiki/Tag:shop%3Dpet</a></p>
 <p>As you see, pet shops should be labelled shop=pet and according to taginfo, almost all pet shops are tagged this way, except a few of them. At the bottom of the page, I noticed that there is a way to help fix the improper tags, and I started fixing them. Of course, as I have to do it one by one, it will take, that's why I was wondering if there is a better way to do it.</p>
 <p>Thanks for the trick, I'll be careful (I never save unless everything is perfect). It's going to help when the shops are lose to each other. As for the others, I'll do it one by one...</p>
 </div>

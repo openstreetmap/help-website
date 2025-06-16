@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have some coordinates XY and would like to show a pin (or some other custom image) at those coordinates in iD editor. That pin shouldn't be included in osm changeset, I just want to render it on the map while user is using iD editor. That should look like this: <img src="https://help.openstreetmap.org/upfiles/Webp.net-resizeimage.png" alt="alt text" /></p>
+<p>I have some coordinates XY and would like to show a pin (or some other custom image) at those coordinates in iD editor. That pin shouldn't be included in osm changeset, I just want to render it on the map while user is using iD editor. That should look like this: <img src="/upfiles/Webp.net-resizeimage.png" alt="alt text" /></p>
 <ul>
 <li>Can this be done with existing iD code?</li>
 <li>What part of code should be changed/forked to support this scenario?</li>

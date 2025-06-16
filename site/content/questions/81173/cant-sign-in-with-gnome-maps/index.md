@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-81512-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Me too. Others report a similar issue here... <a href="https://help.openstreetmap.org/questions/81238/how-can-i-authorize-gnome-maps-to-access-osm">https://help.openstreetmap.org/questions/81238/how-can-i-authorize-gnome-maps-to-access-osm</a></p>
+<p>Me too. Others report a similar issue here... <a href="/questions/81238/how-can-i-authorize-gnome-maps-to-access-osm">https://help.openstreetmap.org/questions/81238/how-can-i-authorize-gnome-maps-to-access-osm</a></p>
 </div>
 <div id="comment-81512-info" class="comment-info">
 <span class="comment-age">(26 Aug '21, 23:11)</span> <span class="comment-user userinfo">stevebrodie</span>

@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I found a decent one at: <a href="https://wikishire.co.uk/map">https://wikishire.co.uk/map</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2020-12-27_10-12-15.png" width="600" /></p>
+<p><img src="/upfiles/Screenshot_from_2020-12-27_10-12-15.png" width="600" /></p>
 <p>Not sure exactly how it was created, but it does use OpenStreetMap. This page describes the map: <a href="https://wikishire.co.uk/wiki/Wikishire:Map">https://wikishire.co.uk/wiki/Wikishire:Map</a> but does not give any useful information on its construction.</p>
 <p>An interactive map with districts can be found here: <a href="https://mapping.dorsetforyou.gov.uk/map?version=mylocal&amp;lyrs=50">https://mapping.dorsetforyou.gov.uk/map?version=mylocal&amp;lyrs=50</a> but it seems to use Ordnance Survey data, I'm not sure if that data could be reused or not on OSM.</p>
 </div>

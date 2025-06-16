@@ -126,7 +126,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Please ask only one question per page. This is a Q&amp;A tool, not a forum or a mailing list.</p>
 <p>About the road map, check out this list:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
 <p>especially the Stamen maps where you could find what you are looking for.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -223,7 +223,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Indeed, even with filters active, all data will be saved. If you want to save only certain data (from JOSM), look into the Overpass plugin for JOSM. Using that plugin, you can use an Overpass Query to download only certain types of objects, or objects with certain tags. Then you can save only those objects from JOSM (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/mirrored_download)">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/mirrored_download)</a></p>
+<p>Indeed, even with filters active, all data will be saved. If you want to save only certain data (from JOSM), look into the Overpass plugin for JOSM. Using that plugin, you can use an Overpass Query to download only certain types of objects, or objects with certain tags. Then you can save only those objects from JOSM (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/mirrored_download)">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/mirrored_download)</a></p>
 <p>But maybe you should look into setting up your own DB, based on a planet extract that contains just the data you need.</p>
 </div>
 <div id="comment-33369-info" class="comment-info">

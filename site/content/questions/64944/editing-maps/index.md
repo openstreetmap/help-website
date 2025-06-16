@@ -107,7 +107,7 @@ One Answer:
 <p>Yes it is allowed, depending on what you mean with "map", you should provide attribution in any case. Other obligations depend on exactly what you are doing.</p>
 <p>See</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></li>
+<li><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence">http://wiki.osmfoundation.org/wiki/Licence</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines">http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines</a></li>
 </ul>

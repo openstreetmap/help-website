@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Landuse=residential won&#x27;t render name together with place key."
-description = '''When I map smaller villages I often make a polygon and tag it landuse=residential, place=village/hamlet and name=[name]. For some reason however, this won&#x27;t render the name of the village in any render style available on openstreetmap.org. Example: http://www.openstreetmap.org/?lat=55.59874&amp;amp;lon=...'''
+description = '''When I map smaller villages I often make a polygon and tag it landuse=residential, place=village/hamlet and name=[name]. For some reason however, this won&#x27;t render the name of the village in any render style available on openstreetmap.org. Example: https://www.openstreetmap.org/?lat=55.59874&amp;amp;lon=...'''
 date = "2013-02-05T23:17:00Z"
 lastmod = "2013-05-11T07:37:00Z"
 weight = 19598
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When I map smaller villages I often make a polygon and tag it landuse=residential, place=village/hamlet and name=[name]. For some reason however, this won't render the name of the village in any render style available on openstreetmap.org. Example: <a href="http://www.openstreetmap.org/?lat=55.59874&amp;lon=13.40605&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=55.59874&amp;lon=13.40605&amp;zoom=15&amp;layers=M</a> landuse=residential without place tag for reference: <a href="http://www.openstreetmap.org/?lat=55.69905&amp;lon=13.19617&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=55.69905&amp;lon=13.19617&amp;zoom=17&amp;layers=M</a></p>
+<p>When I map smaller villages I often make a polygon and tag it landuse=residential, place=village/hamlet and name=[name]. For some reason however, this won't render the name of the village in any render style available on openstreetmap.org. Example: <a href="https://www.openstreetmap.org/?lat=55.59874&amp;lon=13.40605&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=55.59874&amp;lon=13.40605&amp;zoom=15&amp;layers=M</a> landuse=residential without place tag for reference: <a href="https://www.openstreetmap.org/?lat=55.69905&amp;lon=13.19617&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=55.69905&amp;lon=13.19617&amp;zoom=17&amp;layers=M</a></p>
 <p>How is this? Is this kind of mapping discouraged? I thought it best if the place name rendered at the center of the polygon, instead of where the mapper may have put the place node. Or is it simply a Mapnik bug?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,9 +106,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Usually the place tags go on nodes. If it's on a closed way, it's usually also tagged with boundary=administrative. See <a href="http://wiki.openstreetmap.org/wiki/Place">http://wiki.openstreetmap.org/wiki/Place</a> (NB: the villages of Veberod and Dalby near your example seem to use the node)</p>
+<p>Usually the place tags go on nodes. If it's on a closed way, it's usually also tagged with boundary=administrative. See <a href="https://wiki.openstreetmap.org/wiki/Place">https://wiki.openstreetmap.org/wiki/Place</a> (NB: the villages of Veberod and Dalby near your example seem to use the node)</p>
 <p>I've put a name on landuse only when it's a specific unified area (ie residential development, trailer park, powerplant, military base, etc) which is generally a smaller subsection of an administrative area.</p>
-<p>Also, from the <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> wiki page:</p>
+<p>Also, from the <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> wiki page:</p>
 <p>"The extent of the area should mark the boundary of known residential use, not the extent of the whole town or village, where they are not identical." It would appear in your example that not all of the area is residential?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -129,7 +129,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:place">place</a> tag is equally valid on areas.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:place">place</a> tag is equally valid on areas.</p>
 </div>
 <div id="comment-19620-info" class="comment-info">
 <span class="comment-age">(06 Feb '13, 17:16)</span> <span class="comment-user userinfo">scai ♦</span>

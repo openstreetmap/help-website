@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-30051-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have a program, and I am querying OSM for a static map with the URL. For example, this link describes how to get a single tile: <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a> The problem is that a single 256x256 tile will not fit my needs. There used to be a way to query a whole map (consisting of several tiles), but I can't seem to figure out how to do that anymore. The old URL has been deprecated.</p>
+<p>I have a program, and I am querying OSM for a static map with the URL. For example, this link describes how to get a single tile: <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a> The problem is that a single 256x256 tile will not fit my needs. There used to be a way to query a whole map (consisting of several tiles), but I can't seem to figure out how to do that anymore. The old URL has been deprecated.</p>
 </div>
 <div id="comment-30051-info" class="comment-info">
 <span class="comment-age">(22 Jan '14, 00:24)</span> <span class="comment-user userinfo">aussiemcgr</span>
@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap isn't actually a mapping service, so you don't need to "query OSM for a map". At its heart it's just <a href="http://planet.openstreetmap.org/">a big lump of data</a> that you can download, or <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">download extracts from</a>, and use yourself to either create tiles from (if you want map tiles) or extract points of interest, or whatever else you want to do.</p>
+<p>OpenStreetMap isn't actually a mapping service, so you don't need to "query OSM for a map". At its heart it's just <a href="http://planet.openstreetmap.org/">a big lump of data</a> that you can download, or <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">download extracts from</a>, and use yourself to either create tiles from (if you want map tiles) or extract points of interest, or whatever else you want to do.</p>
 <p>If you want to create "a map of many tiles" <a href="http://switch2osm.org/serving-tiles/">these instructions</a> provide one way to do it based on data that you've downloaded previously (although that's just one way of displaying data on a map, and each of the components involved even in doing that has alternatives).</p>
 <p>Just as you're free to use OSM data to provide a map other people are too, and there may well be someone that operates an API that works in the way that you describe (at a stretch, it's close to how tile rendering libraries such as <a href="http://leafletjs.com/">Leaflet</a> work - and again, other display libraries are available). If you want to extract data rather than render tiles, services such as <a href="http://wiki.osm.org/wiki/Overpass_API">Overpass</a> might be useful.</p>
 <p>However, as <span>@iii</span> says, it's not immediately clear what you're describing - maybe if you can provide the URL that you used to use, people would know more about what you're trying to do?</p>

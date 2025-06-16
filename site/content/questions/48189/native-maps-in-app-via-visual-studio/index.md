@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>You can enter the keywords Cordova or Xamarin in the search box of this FAQ site to get some hits.</p>
 <p>And even by connecting those two words with "openstreetmap" in an internet search engine results in more hits.</p>
-<p>Or have a look at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> ... there are some companies who offer frameworks for mobile app development.</p>
+<p>Or have a look at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> ... there are some companies who offer frameworks for mobile app development.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Based on the <a href="https://help.openstreetmap.org/users/11055/battinivinod">previous questions that you've asked</a>, I still think that it would help you if you were to take a step back and become more familiar with how data in OpenStreetMap relates to real-world objects. It isn't clear, even after four questions, exactly what you're really trying to do. It seems to be routing-graph related, and so the answers <a href="https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">here</a> may help, but I suspect you'll need to learn a little more about routing graphs in general and how OSM represents the real world before jumping in to the OSM specifics there.</p>
+<p>Based on the <a href="https://help.openstreetmap.org/users/11055/battinivinod">previous questions that you've asked</a>, I still think that it would help you if you were to take a step back and become more familiar with how data in OpenStreetMap relates to real-world objects. It isn't clear, even after four questions, exactly what you're really trying to do. It seems to be routing-graph related, and so the answers <a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">here</a> may help, but I suspect you'll need to learn a little more about routing graphs in general and how OSM represents the real world before jumping in to the OSM specifics there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

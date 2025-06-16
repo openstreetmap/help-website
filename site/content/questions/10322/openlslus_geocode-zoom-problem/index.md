@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Referring to <a href="http://help.openstreetmap.org/questions/9690/why-geting-null-result-from-openlslus_geocodephp">this question</a>, did you put the correct link to the python directory in proxy.cgi? I've used python download from FWTools in my Windows environment. I've copied proxy.cgi to the apache\cgi-bin directory, and changed the first line from</p>
+<p>Referring to <a href="/questions/9690/why-geting-null-result-from-openlslus_geocodephp">this question</a>, did you put the correct link to the python directory in proxy.cgi? I've used python download from FWTools in my Windows environment. I've copied proxy.cgi to the apache\cgi-bin directory, and changed the first line from</p>
 <p>'#!/usr/bin/env python</p>
 <p>into:</p>
 <p>'#!C:\Gis\apps\FWTools\python\python.exe -u</p>
@@ -147,7 +147,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Did you see this?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example#Use_Proj4js_for_other_transformations">http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example#Use_Proj4js_for_other_transformations</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example#Use_Proj4js_for_other_transformations">https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example#Use_Proj4js_for_other_transformations</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This problem is most probably due to both maps having the same product ID or FID. You will need to use a special software tool to change this before installing the second map. I use <a href="http://www.javawa.nl/gmtk_en.html">JaVaWa GMTK</a>.</p>
-<p>This issue is well documented in the main <a href="http://wiki.openstreetmap.org/w/index.php?search=multiple+osm+maps+in+mapsource&amp;title=Special%3ASearch">OSM Wiki and can be found using this search</a>. Many providers of OSM Maps for Garmin also have info on their sites. (eg <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">FAQ</a>)</p>
+<p>This issue is well documented in the main <a href="https://wiki.openstreetmap.org/w/index.php?search=multiple+osm+maps+in+mapsource&amp;title=Special%3ASearch">OSM Wiki and can be found using this search</a>. Many providers of OSM Maps for Garmin also have info on their sites. (eg <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> <a href="https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">FAQ</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

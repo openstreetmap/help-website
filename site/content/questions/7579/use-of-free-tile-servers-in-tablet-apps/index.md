@@ -68,7 +68,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>Peter, if you do something for what appears to be the only non-monopoly tablet in the world, I'm very interested ;-)</p>
-<p>Hervé (author of <a href="http://help.openstreetmap.org/questions/4403/blackberry-playbook-osm-applications)">http://help.openstreetmap.org/questions/4403/blackberry-playbook-osm-applications)</a></p>
+<p>Hervé (author of <a href="/questions/4403/blackberry-playbook-osm-applications)">https://help.openstreetmap.org/questions/4403/blackberry-playbook-osm-applications)</a></p>
 </div>
 <div id="comment-7583-info" class="comment-info">
 <span class="comment-age">(03 Sep '11, 09:42)</span> <span class="comment-user userinfo">Herve5</span>
@@ -220,7 +220,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You must follow the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> if you are using the tiles provided by OSMf. It is still possible to create a offline map using the restrictions. It will however have a limited download speed, zoom and area. The problem is that your program might become popular very fast and that the infrastructure can not grow fast enough.</p>
+<p>You must follow the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> if you are using the tiles provided by OSMf. It is still possible to create a offline map using the restrictions. It will however have a limited download speed, zoom and area. The problem is that your program might become popular very fast and that the infrastructure can not grow fast enough.</p>
 <p>Another option is to set up your own tile server, possibly restricting access to your own users.</p>
 <p>The third option is to render the map on the device itself. This is how for instance <a href="http://osmand.net/">OsmAnd</a> provide offline maps. There is other benefits by vector based maps but may add complexety to your program.</p>
 </div>

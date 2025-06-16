@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suggest you pick a consultant from <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">the list in our wiki</a> and ask them to help you. What you are asking for (step-by-step guidance on a very specific project) is beyond the kind of help we can provide through a Q&amp;A site like this one.</p>
+<p>I suggest you pick a consultant from <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">the list in our wiki</a> and ask them to help you. What you are asking for (step-by-step guidance on a very specific project) is beyond the kind of help we can provide through a Q&amp;A site like this one.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

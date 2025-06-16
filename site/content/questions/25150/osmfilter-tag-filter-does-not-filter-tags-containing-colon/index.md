@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-25210-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>if you cannot get any help here, try the discussion page of <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a> in the OSM wiki.</p>
+<p>if you cannot get any help here, try the discussion page of <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> in the OSM wiki.</p>
 </div>
 <div id="comment-25210-info" class="comment-info">
 <span class="comment-age">(11 Aug '13, 20:08)</span> <span class="comment-user userinfo">stephan75</span>
@@ -133,7 +133,7 @@ osqa_accepted = true
 <div id="post-48814-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12110/lanzalibre">@lanzalibre</a> is that related to this question in any way? They were using osmfilter; you're using osmosis? I'd suggest asking a separate question (and say what OS you're using, as that can change what you type on the command line before osmosis even sees it).</p>
+<p><a href="https://help.openstreetmap.org/users/12110/lanzalibre">@lanzalibre</a> is that related to this question in any way? They were using osmfilter; you're using osmosis? I'd suggest asking a separate question (and say what OS you're using, as that can change what you type on the command line before osmosis even sees it).</p>
 </div>
 <div id="comment-48814-info" class="comment-info">
 <span class="comment-age">(24 Mar '16, 09:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

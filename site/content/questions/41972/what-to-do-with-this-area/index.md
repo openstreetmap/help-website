@@ -127,7 +127,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One possible idea for an open air theatre from the <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Dtheatre#open_air_theatre">theatre talk page</a> is amenity=theatre <a href="http://taginfo.openstreetmap.org/keys/theatre:type">theatre:type=amphi</a> (short for amphitheatre)</p>
+<p>One possible idea for an open air theatre from the <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Dtheatre#open_air_theatre">theatre talk page</a> is amenity=theatre <a href="http://taginfo.openstreetmap.org/keys/theatre:type">theatre:type=amphi</a> (short for amphitheatre)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,7 +210,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>Many of our viewers are shaking their heads in despair upon this revelation.<br />
-<a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps</a></p>
+<a href="/questions/710/can-i-use-google-streetview-to-help-create-maps">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps</a></p>
 </div>
 <div id="comment-41991-info" class="comment-info">
 <span class="comment-age">(29 Mar '15, 16:26)</span> <span class="comment-user userinfo">nevw</span>
@@ -233,7 +233,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>We may use the Bing background aerial and old out of copyright maps but please read this before using any other sources. <a href="http://wiki.openstreetmap.org/wiki/Copyright">http://wiki.openstreetmap.org/wiki/Copyright</a></p>
+<p>We may use the Bing background aerial and old out of copyright maps but please read this before using any other sources. <a href="https://wiki.openstreetmap.org/wiki/Copyright">https://wiki.openstreetmap.org/wiki/Copyright</a></p>
 </div>
 <div id="comment-41994-info" class="comment-info">
 <span class="comment-age">(29 Mar '15, 17:05)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -304,7 +304,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10740/amaryllisgardener"></a><a href="http://help.openstreetmap.org/users/10740/amaryllisgardener">@AmaryllisGardener</a>: even if we would leave copyright aside – we want to better than any other maps (and we are in many places by a big margin), this would not work by (illegally) copying bad data.</p>
+<p><a href="https://help.openstreetmap.org/users/10740/amaryllisgardener"></a><a href="https://help.openstreetmap.org/users/10740/amaryllisgardener">@AmaryllisGardener</a>: even if we would leave copyright aside – we want to better than any other maps (and we are in many places by a big margin), this would not work by (illegally) copying bad data.</p>
 </div>
 <div id="comment-42106-info" class="comment-info">
 <span class="comment-age">(02 Apr '15, 00:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

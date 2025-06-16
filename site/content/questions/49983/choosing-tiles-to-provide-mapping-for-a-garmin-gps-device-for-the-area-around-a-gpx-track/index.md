@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Here is another alternative...<br />
-Zoom into the map segments at <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> and take a Screen Shot <img src="https://www.dropbox.com/s/z0816qmn021ngvp/Screen%20Shot%202016-06-08%20at%202.34.05%20PM.png?dl=0" alt=" " /> <img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2016-06-08_at_2.34.05_PM.png" alt="alt text" /></p>
+Zoom into the map segments at <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> and take a Screen Shot <img src="https://www.dropbox.com/s/z0816qmn021ngvp/Screen%20Shot%202016-06-08%20at%202.34.05%20PM.png?dl=0" alt=" " /> <img src="/upfiles/Screen_Shot_2016-06-08_at_2.34.05_PM.png" alt="alt text" /></p>
 <p>In JOSM, load the 'pic layer' plugin and restart.<br />
 Open your gpx track in JOSM, load the OpenStreetMap(Mapnik)imagery<br />
 Then use the 'new picture layer from file...' tool under the imagery menu to open your Screen Shot.<br />
@@ -119,7 +119,7 @@ In the layers box move the Screen Shot layer to above the 'OpenStreetMap(Mapnik)
 Activate that Screen Shot layer and resize it to align with the 'OpenStreetMap(Mapnik)imagery' already loaded.<br />
 You will likely need to adjust the opacity of the Screen Shot layer to get the alignment close.</p>
 <p>It should look something like this...<br />
-<img src="https://www.dropbox.com/s/4fzw6sa3nkf5c1k/Screen%20Shot%202016-06-08%20at%208.15.08%20PM.png?dl=0" alt=" " /><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2016-06-08_at_8.15.08_PM.png" alt="alt text" /></p>
+<img src="https://www.dropbox.com/s/4fzw6sa3nkf5c1k/Screen%20Shot%202016-06-08%20at%208.15.08%20PM.png?dl=0" alt=" " /><img src="/upfiles/Screen_Shot_2016-06-08_at_8.15.08_PM.png" alt="alt text" /></p>
 <p>Then load other screen shots to complete the route and you should be able to select just the tiles you need, by alternating between JOSM and your browser to select them, and hopefully eventually have one suitable map for the Garmin.</p>
 <p>But I think that Andy Mackey has suggested the best method by loading all Europe and use Basecamp to sent just the portion required to you gps receiver. I haven't done that myself but it would seem to be the easiest.</p>
 </div>
@@ -186,7 +186,7 @@ You will likely need to adjust the opacity of the Screen Shot layer to get the a
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/basecamp_pic.JPG" alt="alt text" />The Garmin GPS60 csx will display one of these osm maps <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> but only one at a time ( older garmins can only access a single map called Gmapsupp). The solution is to download each country you will cross onto separate microsd cards and swap as you to move from one to another. You can load the GPX and display it on these maps if they are grouped together ( but renamed Gmapsupp1, 2 , or 3 for example) on a memory stick after installing Garmin Basecamp on your PC. <a href="http://www8.garmin.com/learningcenter/training/basecamp/">http://www8.garmin.com/learningcenter/training/basecamp/</a></p>
+<p><img src="/upfiles/basecamp_pic.JPG" alt="alt text" />The Garmin GPS60 csx will display one of these osm maps <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> but only one at a time ( older garmins can only access a single map called Gmapsupp). The solution is to download each country you will cross onto separate microsd cards and swap as you to move from one to another. You can load the GPX and display it on these maps if they are grouped together ( but renamed Gmapsupp1, 2 , or 3 for example) on a memory stick after installing Garmin Basecamp on your PC. <a href="http://www8.garmin.com/learningcenter/training/basecamp/">http://www8.garmin.com/learningcenter/training/basecamp/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -527,7 +527,7 @@ You will likely need to adjust the opacity of the Screen Shot layer to get the a
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13183/wieland">@Wieland</a> - I've tried your page and really like it BUT the circle of doom never finishes looping to allow me to enter my e-mail address and request the map</p>
+<p><a href="https://help.openstreetmap.org/users/13183/wieland">@Wieland</a> - I've tried your page and really like it BUT the circle of doom never finishes looping to allow me to enter my e-mail address and request the map</p>
 </div>
 <div id="comment-54120-info" class="comment-info">
 <span class="comment-age">(17 Jan '17, 18:48)</span> <span class="comment-user userinfo">bfgjohno</span>

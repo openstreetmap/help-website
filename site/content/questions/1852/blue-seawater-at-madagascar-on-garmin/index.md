@@ -212,8 +212,8 @@ osqa_accepted = false
 <p>Firstly, the coast should be tagged as <code>natural=coastline</code>, not <code>natural=water</code> (which is for inland areas of water).</p>
 <p>To answer the question, filling in areas of sea is actually quite complicated. This feature was only added to Mkgmap (the software used to make most OSM based Garmin maps) fairly recently, and it might still have problems with some complicated coastlines.</p>
 <p>So most pre-made OSM Garmin maps don't use this option, as they haven't updated their process or Mkgmap version since then. I'm not familiar with the Madagascar map you refer to (and the link isn't working just now), but I assume that's the case here.</p>
-<p>So if you want a Garmin map with sea filled in blue, you can try another map. You could look at the list here, and see which cover Madagascar, though I'm not sure which actually have sea areas: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a></p>
-<p>Or you can generate a map yourself, using Mkgmap. If doing theis you will have to make sure you use the <code>--generate-sea</code> option. See more details on <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/usage">Mkgmap/help/usage</a></p>
+<p>So if you want a Garmin map with sea filled in blue, you can try another map. You could look at the list here, and see which cover Madagascar, though I'm not sure which actually have sea areas: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a></p>
+<p>Or you can generate a map yourself, using Mkgmap. If doing theis you will have to make sure you use the <code>--generate-sea</code> option. See more details on <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/usage">Mkgmap/help/usage</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to start mapping, but it's hard to find out were to start and what kind of edits are good enough to be a real contribution. I could find enough information about editors, but there isn't a good starter-guide on what kind of edits are welcome and how to make quality data. Some people asked the <a href="https://help.openstreetmap.org/questions/6/how-do-i-get-started-with-openstreetmap">same question</a> here, but didn't get any useful answers. So I'll try to ask some more specific questions.</p>
+<p>I'm trying to start mapping, but it's hard to find out were to start and what kind of edits are good enough to be a real contribution. I could find enough information about editors, but there isn't a good starter-guide on what kind of edits are welcome and how to make quality data. Some people asked the <a href="/questions/6/how-do-i-get-started-with-openstreetmap">same question</a> here, but didn't get any useful answers. So I'll try to ask some more specific questions.</p>
 <ul>
 <li>I don't have access to gps-data, but I know that in between two buildings is a road, is it OK to draw it? / Can I make a edit if I'm really sure of my data, but don't have any source to support it?</li>
 <li>In The Netherlands is a lot of data on buildings from the 3Dshapes source. A lot of building are not drawn accurately. I know about offset, but I'm talking about corners that should be 90degrees. Is it OK to correct this from the Bing imagery? (<em>edit: 3Dshapes buildings are now replaced by BAG data that is much more accurate</em>)</li>
@@ -289,8 +289,8 @@ osqa_accepted = true
 <li><a href="https://wiki.openstreetmap.org/wiki/Good_practice">The Good practice page</a> on the wiki is a good read for the beginning mapper.</li>
 <li>There also is a <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners guide</a>, lots of technical manuals, less useful for finding out "where to start mapping".</li>
 <li>For help picking and installing your editor: <a href="https://wiki.openstreetmap.org/wiki/Editors">read this</a>.</li>
-<li><a href="https://help.openstreetmap.org/questions/?sort=mostvoted">The highest voted questions on this website</a>.</li>
-<li><a href="https://help.openstreetmap.org/questions/954/how-do-i-set-my-home-location?page=1&amp;focusedAnswerId=957#957">Set your home location</a> to find other local mappers. Also keep an eye on the history of objects, to find out who the most active mappers in your neighborhood.</li>
+<li><a href="/questions/?sort=mostvoted">The highest voted questions on this website</a>.</li>
+<li><a href="/questions/954/how-do-i-set-my-home-location?page=1&amp;focusedAnswerId=957#957">Set your home location</a> to find other local mappers. Also keep an eye on the history of objects, to find out who the most active mappers in your neighborhood.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

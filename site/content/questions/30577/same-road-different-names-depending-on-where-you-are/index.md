@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You'll need to divide the road at the point where something changes. If you look at the answer to a similar question <a href="https://help.openstreetmap.org/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections">here</a> you can see a picture showing how to do it.</p>
+<p>You'll need to divide the road at the point where something changes. If you look at the answer to a similar question <a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections">here</a> you can see a picture showing how to do it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

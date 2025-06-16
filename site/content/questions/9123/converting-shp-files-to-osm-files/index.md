@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Converting shp files to osm files"
-description = '''I am trying to use the python script ogr2osm to convert .shp files to .osm files to use with JOSM, by following the script at http://wiki.openstreetmap.org/wiki/Ogr2osm  When I try and run it, I get the error: &quot;ImportError: No module named ogr&quot;. I think it is due to not having the python-gdal bindin...'''
+description = '''I am trying to use the python script ogr2osm to convert .shp files to .osm files to use with JOSM, by following the script at https://wiki.openstreetmap.org/wiki/Ogr2osm  When I try and run it, I get the error: &quot;ImportError: No module named ogr&quot;. I think it is due to not having the python-gdal bindin...'''
 date = "2011-11-19T02:15:00Z"
 lastmod = "2011-11-20T16:49:00Z"
 weight = 9123
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to use the python script ogr2osm to convert .shp files to .osm files to use with JOSM, by following the script at <a href="http://wiki.openstreetmap.org/wiki/Ogr2osm">http://wiki.openstreetmap.org/wiki/Ogr2osm</a></p>
+<p>I am trying to use the python script ogr2osm to convert .shp files to .osm files to use with JOSM, by following the script at <a href="https://wiki.openstreetmap.org/wiki/Ogr2osm">https://wiki.openstreetmap.org/wiki/Ogr2osm</a></p>
 <p>When I try and run it, I get the error: "ImportError: No module named ogr". I think it is due to not having the python-gdal bindings or osgeo/ogr python bindings installed but nowhere can I find a step by step explanation of how to do this correctly on a Windows 7 machine. I have installed the OSGeo4W shell using the download link given on the wiki page.</p>
 <p>I have not used python before but am familiar with other languages and the use of the Command Prompt in Windows.</p>
 </div>

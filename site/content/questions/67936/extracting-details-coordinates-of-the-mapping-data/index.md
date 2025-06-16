@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello everyone, i am trying to extract the map data coordinates with the osm data , i have successfully download the data from JOSM and using the MYGEODATA to convert the osm data to CSV file! The picture is as followed<a href="https://help.openstreetmap.org/upfiles/PS2.png">alt text</a></p>
+<p>Hello everyone, i am trying to extract the map data coordinates with the osm data , i have successfully download the data from JOSM and using the MYGEODATA to convert the osm data to CSV file! The picture is as followed<span>alt text</span></p>
 <p>As you can see in the first two column have X&amp;Y coordinate, and the following picture is the map data that i download, it is the Shanghai Yintao Golf Club.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/PS3.png" alt="alt text" /></p>
+<p><img src="/upfiles/PS3.png" alt="alt text" /></p>
 <p>I want to know that is there any possible way for me to have all those coordinates of the dots in the pictures 2, as i only have X Y coordinates for each area.</p>
 <p>Thank you for reading my question and hope you all have a good day!</p>
 <p>John</p>
@@ -157,7 +157,7 @@ One Answer:
 <li>Download the msxsl.exe tool from Microsoft.</li>
 <li>Use msxsl.exe to extract the data you need from the OSM file.</li>
 </ol>
-<p>You will have to create a XSL file about the data (= columns) you want msxsl.exe to extract. Example: <img src="https://help.openstreetmap.org/upfiles/xsl-config.png" alt="Example of an xsl:stylesheet for msxsl.exe" /></p>
+<p>You will have to create a XSL file about the data (= columns) you want msxsl.exe to extract. Example: <img src="/upfiles/xsl-config.png" alt="Example of an xsl:stylesheet for msxsl.exe" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

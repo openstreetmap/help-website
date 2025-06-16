@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Having used GPS to access the <a href="http://www.openstreetmap.org/?lat=51.441813&amp;lon=-1.048566&amp;zoom=18&amp;layers=M">Calcot Hotel</a> (51.4418, -1.04857) the satnav wanted to approach the hotel via the nearest road (Gatcombe Close). However, the access is off the main Bath Rd. How does one resolve this problem?</p>
+<p>Having used GPS to access the <a href="https://www.openstreetmap.org/?lat=51.441813&amp;lon=-1.048566&amp;zoom=18&amp;layers=M">Calcot Hotel</a> (51.4418, -1.04857) the satnav wanted to approach the hotel via the nearest road (Gatcombe Close). However, the access is off the main Bath Rd. How does one resolve this problem?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-entrance" rel="tag" title="see questions tagged &#39;entrance&#39;">entrance</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm probably way off here, but on the newer Nüvis the <code>gmapsupp.img</code> files have to go in a <code>/Map</code> directory. The <a href="http://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series">Garmin wiki page</a> has some notes...</p>
+<p>I'm probably way off here, but on the newer Nüvis the <code>gmapsupp.img</code> files have to go in a <code>/Map</code> directory. The <a href="https://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series">Garmin wiki page</a> has some notes...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

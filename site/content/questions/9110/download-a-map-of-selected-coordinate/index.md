@@ -138,7 +138,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This <a href="http://help.openstreetmap.org/questions/8700/how-can-i-download-a-subset-of-the-data-for-a-large-area">other thread</a> should interest you</p>
+<p>This <a href="/questions/8700/how-can-i-download-a-subset-of-the-data-for-a-large-area">other thread</a> should interest you</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -249,7 +249,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use export option on the sit e: <a href="http://www.openstreetmap.org/.">http://www.openstreetmap.org/.</a> Please refer this snap shot for your answer<img src="http://help.openstreetmap.org/upfiles/osm_export_1.JPG" alt="alt text" /></p>
+<p>You can use export option on the sit e: <a href="https://www.openstreetmap.org/.">https://www.openstreetmap.org/.</a> Please refer this snap shot for your answer<img src="/upfiles/osm_export_1.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

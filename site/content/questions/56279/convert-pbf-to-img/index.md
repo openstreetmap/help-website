@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "convert .pbf to .img"
-description = '''I downloaded a .pbf OSM file and wants to convert it into a Garmin .img file . If possible direct, if not using a in between format. I have searched a lot, but could not find a real solution. Attempeds :  reading : http://wiki.openstreetmap.org/wiki/PBF_Format reading : http://wiki.openstreetmap.org...'''
+description = '''I downloaded a .pbf OSM file and wants to convert it into a Garmin .img file . If possible direct, if not using a in between format. I have searched a lot, but could not find a real solution. Attempeds :  reading : https://wiki.openstreetmap.org/wiki/PBF_Format reading : http://wiki.openstreetmap.org...'''
 date = "2017-05-24T11:47:00Z"
 lastmod = "2019-03-20T17:58:00Z"
 weight = 56279
@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>I downloaded a .pbf OSM file and wants to convert it into a Garmin .img file . If possible direct, if not using a in between format. I have searched a lot, but could not find a real solution.</p>
 <p>Attempeds :</p>
 <ul>
-<li>reading : <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">http://wiki.openstreetmap.org/wiki/PBF_Format</a></li>
-<li>reading : <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl:Manual">http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl:Manual</a></li>
+<li>reading : <a href="https://wiki.openstreetmap.org/wiki/PBF_Format">https://wiki.openstreetmap.org/wiki/PBF_Format</a></li>
+<li>reading : <a href="https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl:Manual">https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl:Manual</a></li>
 <li><a href="http://www.javawa.nl">http://www.javawa.nl</a> Does al lot of conversions but not from .pbf</li>
 <li><a href="http://www.mkgmap.org.uk/">http://www.mkgmap.org.uk/</a> Can not read .pbf</li>
 </ul>
@@ -261,7 +261,7 @@ bernard@desktop:~/Garmin/Europa$</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I wrote a diary entry about the steps needed to run mkgmap: <a href="http://www.openstreetmap.org/user/SomeoneElse/diary/38613">http://www.openstreetmap.org/user/SomeoneElse/diary/38613</a></p>
+<p>I wrote a diary entry about the steps needed to run mkgmap: <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/38613">https://www.openstreetmap.org/user/SomeoneElse/diary/38613</a></p>
 <p>One difference between that and what you tried is that it's downloading a version of mkgmap from the developers rather than fetching from a repository that apt-get knows about (I don't know how often those are updated). I don't know what OS you're running, so don't know what version of mkgmap you're using. It's possible that for some reason it doesn't know about the libraries used to process .pbf files.</p>
 <p>Another difference is that it describes the use of "splitter" which you'll need to use unless working with trivially small files - but as escada suggests I'd definitely try a very small area first to see if that works. I've always (just out of habit) created .osm.gz files from splitter so may never actually have tested .pbf processing by mkgmap (though if the documentation says it works, I'm sure it does).</p>
 </div>

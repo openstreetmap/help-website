@@ -47,7 +47,7 @@ rel[&quot;amenity&quot;=&quot;fast_food&quot;](area:3600062484);
 way[&quot;amenity&quot;=&quot;fast_food&quot;](area:3600062484);
 );
 out;</code></pre>
-<p>I do get results, but not all I'd expect from looking at the map. For example, I'd expect <a href="http://www.openstreetmap.org/node/1783787144">this node</a> - which fulfills the amenity fast_food condition - to be in the <a href="https://www.openstreetmap.org/relation/62484#map=11/48.5512/12.1516">area 3600062484</a> and therefore in the result set amongst others, which unfortunately it isn't.</p>
+<p>I do get results, but not all I'd expect from looking at the map. For example, I'd expect <a href="https://www.openstreetmap.org/node/1783787144">this node</a> - which fulfills the amenity fast_food condition - to be in the <a href="https://www.openstreetmap.org/relation/62484#map=11/48.5512/12.1516">area 3600062484</a> and therefore in the result set amongst others, which unfortunately it isn't.</p>
 <p>What am I doing wrong?</p>
 <p>Thankful for any help I can get here.</p>
 </div>

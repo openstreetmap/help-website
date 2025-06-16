@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Undoing a changeset"
-description = '''I goofed up, I made this change to Great Plains Blvd: http://www.openstreetmap.org/changeset/48926771 And as it turns out, I used Bing imagery which is outdated. This road has been redone and the original OSM data before my change was much better. I basically reverted OSM to the old road and bike pa...'''
+description = '''I goofed up, I made this change to Great Plains Blvd: https://www.openstreetmap.org/changeset/48926771 And as it turns out, I used Bing imagery which is outdated. This road has been redone and the original OSM data before my change was much better. I basically reverted OSM to the old road and bike pa...'''
 date = "2017-05-24T20:20:00Z"
 lastmod = "2017-05-24T22:52:00Z"
 weight = 56302
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I goofed up, I made this change to Great Plains Blvd:</p>
-<p><a href="http://www.openstreetmap.org/changeset/48926771">http://www.openstreetmap.org/changeset/48926771</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/48926771">https://www.openstreetmap.org/changeset/48926771</a></p>
 <p>And as it turns out, I used Bing imagery which is outdated. This road has been redone and the original OSM data before my change was much better. I basically reverted OSM to the old road and bike paths.</p>
 <p>Is there a way to just undo the whole changeset?</p>
 </div>
@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-56305-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've reverted this changeset in <a href="http://www.openstreetmap.org/changeset/48958573.">http://www.openstreetmap.org/changeset/48958573.</a> There are good answers to the general question (ex: <a href="https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a> ) so I'm going to close this one.</p>
+<p>I've reverted this changeset in <a href="https://www.openstreetmap.org/changeset/48958573.">https://www.openstreetmap.org/changeset/48958573.</a> There are good answers to the general question (ex: <a href="/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a> ) so I'm going to close this one.</p>
 <p>An easy way to request assistance with a particular changeset is to hop into IRC <a href="https://irc.openstreetmap.org/">https://irc.openstreetmap.org/</a> , mention the changesets that need reverting and then wait.</p>
 </div>
 <div id="comment-56305-info" class="comment-info">

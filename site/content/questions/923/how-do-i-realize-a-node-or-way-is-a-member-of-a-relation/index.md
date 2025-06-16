@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can ask the OSM API with a special <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Relations_for_Element:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id.2Frelations">API call</a>. Basically you do something like this: GET /api/0.6/[node|way|relation]/#id/relations . See the link for details. If you are using the planet file or some extract of it, there is no direct link from the member object to the relation. You have to go through all the relations and look at each member.</p>
+<p>You can ask the OSM API with a special <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Relations_for_Element:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id.2Frelations">API call</a>. Basically you do something like this: GET /api/0.6/[node|way|relation]/#id/relations . See the link for details. If you are using the planet file or some extract of it, there is no direct link from the member object to the relation. You have to go through all the relations and look at each member.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

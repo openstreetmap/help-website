@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Please pardon me if this is a stupid question, but I am trying since several days now to integrate a basic Openrailway map into a project using openlayers 2 API but it's simply not working. I followed all the steps mentioned <a href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap/API">here</a> and ended up with something like this:</p>
+<p>Please pardon me if this is a stupid question, but I am trying since several days now to integrate a basic Openrailway map into a project using openlayers 2 API but it's simply not working. I followed all the steps mentioned <a href="https://wiki.openstreetmap.org/wiki/OpenRailwayMap/API">here</a> and ended up with something like this:</p>
 <p><a href="http://codepen.io/payamcf/pen/XKPrvm">http://codepen.io/payamcf/pen/XKPrvm</a></p>
 <p>What am I doing wrong?</p>
 </div>

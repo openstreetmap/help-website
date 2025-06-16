@@ -140,7 +140,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What is the origin of your "current street data"? Did you get the new ways and objects by tracking all the ways with a GPS device or by taking them legaly from the yahoo satellite images ( <a href="http://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery">http://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery</a> ) that we are allowed to use?</p>
+<p>What is the origin of your "current street data"? Did you get the new ways and objects by tracking all the ways with a GPS device or by taking them legaly from the yahoo satellite images ( <a href="https://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery">https://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery</a> ) that we are allowed to use?</p>
 <p>You are not allowed to take data from any source where you might break the copyright or licence of the owner, like GoogleMaps or similar.</p>
 <p>So when you tell us more about your data, we can show you the best way to add it to the OSM data.</p>
 </div>

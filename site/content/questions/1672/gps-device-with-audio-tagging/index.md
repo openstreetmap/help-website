@@ -118,7 +118,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As far as I know, <a href="http://wiki.openstreetmap.org/wiki/OSMtracker">OSMtracker</a> is able to log a GPS track and record audio files related to a waypoint that you enter by pressing a button on your position.</p>
+<p>As far as I know, <a href="https://wiki.openstreetmap.org/wiki/OSMtracker">OSMtracker</a> is able to log a GPS track and record audio files related to a waypoint that you enter by pressing a button on your position.</p>
 <p>To run that app you need a windows mobile device with a GPS receiver and a microphone. Some classic PDA are like this. Or you use the special Andriod version of OSMTracker with any suitable device.</p>
 </div>
 <div class="answer-controls post-controls">

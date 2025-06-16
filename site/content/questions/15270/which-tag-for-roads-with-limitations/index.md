@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may find the answer if you read the wiki page about the <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> key.</p>
+<p>You may find the answer if you read the wiki page about the <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> key.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,7 +130,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>There are also wiki pages with <a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">road signs and their corresponding tags</a> for several countries.</p>
+<p>There are also wiki pages with <a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">road signs and their corresponding tags</a> for several countries.</p>
 </div>
 <div id="comment-15272-info" class="comment-info">
 <span class="comment-age">(19 Aug '12, 16:44)</span> <span class="comment-user userinfo">scai ♦</span>

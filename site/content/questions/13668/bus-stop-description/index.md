@@ -115,8 +115,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As already mentioned by Paul, there is a <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Bus_routes_.28also_trolley_bus.29">route relation</a> for buses and the wiki page also lists an <a href="http://www.openstreetmap.org/browse/relation/37415">example</a> of an already mapped bus route. The name is just for the bus stop and should not be abused for anything other as you correctly pointed out.</p>
-<p>The bus shelter you mentioned can be simply added by using the <a href="http://wiki.openstreetmap.org/wiki/Key:shelter">shelter=*</a> key, as mentioned on the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">highway=bus_stop</a> page. JOSM already supports it in the bus stop preset, I don't know if Potlatch does.</p>
+<p>As already mentioned by Paul, there is a <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Bus_routes_.28also_trolley_bus.29">route relation</a> for buses and the wiki page also lists an <a href="https://www.openstreetmap.org/browse/relation/37415">example</a> of an already mapped bus route. The name is just for the bus stop and should not be abused for anything other as you correctly pointed out.</p>
+<p>The bus shelter you mentioned can be simply added by using the <a href="https://wiki.openstreetmap.org/wiki/Key:shelter">shelter=*</a> key, as mentioned on the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">highway=bus_stop</a> page. JOSM already supports it in the bus stop preset, I don't know if Potlatch does.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

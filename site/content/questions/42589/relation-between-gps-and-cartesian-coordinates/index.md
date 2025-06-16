@@ -136,7 +136,7 @@ One Answer:
 <div id="post-42603-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For indoor mapping of this kind I would find a local co-ordinate system suitable for calculations in Cartesian geometry (such as OSGB (EPSG:27700 for UK) or CH-1903 or CH-1903+(for CH)). This is effectively what <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> is suggesting.</p>
+<p>For indoor mapping of this kind I would find a local co-ordinate system suitable for calculations in Cartesian geometry (such as OSGB (EPSG:27700 for UK) or CH-1903 or CH-1903+(for CH)). This is effectively what <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> is suggesting.</p>
 </div>
 <div id="comment-42603-info" class="comment-info">
 <span class="comment-age">(26 Apr '15, 15:43)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -147,7 +147,7 @@ One Answer:
 <div id="post-42604-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a> I suspect this maybe simply an arbitrary grid laid over the floor plan (or screen coordinates for what it is worth).</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a> I suspect this maybe simply an arbitrary grid laid over the floor plan (or screen coordinates for what it is worth).</p>
 </div>
 <div id="comment-42604-info" class="comment-info">
 <span class="comment-age">(26 Apr '15, 15:58)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-85644-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Closing as identical to <a href="https://help.openstreetmap.org/questions/85642/how-to-integrate-openstreetmap-into-a-react-native-project">https://help.openstreetmap.org/questions/85642/how-to-integrate-openstreetmap-into-a-react-native-project</a></p>
+<p>Closing as identical to <a href="/questions/85642/how-to-integrate-openstreetmap-into-a-react-native-project">https://help.openstreetmap.org/questions/85642/how-to-integrate-openstreetmap-into-a-react-native-project</a></p>
 </div>
 <div id="comment-85644-info" class="comment-info">
 <span class="comment-age">(18 Sep '22, 15:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

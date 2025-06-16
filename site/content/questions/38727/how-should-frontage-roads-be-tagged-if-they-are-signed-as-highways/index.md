@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>While editing and straightening out roads in a Dallas suburb, I noticed roads that were signed as state highways instead being named as "frontage roads" (service roads) for a tollway they are located next to.</p>
 <p>I've driven down these roads and have noticed TxDOT (Texas Dept. of Trans.) signs that identify the road as "SH-161" although on municipal signs they're identified as "frontage roads" in an abbreviated manner.</p>
-<p><a href="http://www.openstreetmap.org/way/39749586">A link to the feature in question</a></p>
+<p><a href="https://www.openstreetmap.org/way/39749586">A link to the feature in question</a></p>
 <p>I'm wondering, do I go for the State designation (SH 161) or keep them as-is? On the same point, do we name prefix them as "SH" (state highway) or "TX" ("LA" in Louisiana; "OK" in Oklahoma"; "OR" in Oregon)?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

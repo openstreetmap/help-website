@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki has <code>shop=tobacco</code> listed on the <a href="http://wiki.openstreetmap.org/wiki/Key:shop">page for the <code>shop=*</code></a> key. You can also find tags for other kinds of shops there.</p>
+<p>The wiki has <code>shop=tobacco</code> listed on the <a href="https://wiki.openstreetmap.org/wiki/Key:shop">page for the <code>shop=*</code></a> key. You can also find tags for other kinds of shops there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

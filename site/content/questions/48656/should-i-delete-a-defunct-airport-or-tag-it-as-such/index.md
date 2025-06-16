@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This <a href="http://www.openstreetmap.org/node/1042019529">Sitka Seaplane Base</a> / airport is currently defunct. I'm wondering if it's best to delete the node, which would lead to it looking to some like it hasn't been mapped, or tag it defunct. I didn't find a tag of such sorts, so I thought I should ask.</p>
+<p>This <a href="https://www.openstreetmap.org/node/1042019529">Sitka Seaplane Base</a> / airport is currently defunct. I'm wondering if it's best to delete the node, which would lead to it looking to some like it hasn't been mapped, or tag it defunct. I didn't find a tag of such sorts, so I thought I should ask.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-airport" rel="tag" title="see questions tagged &#39;airport&#39;">airport</span> <span class="post-tag tag-link-closed" rel="tag" title="see questions tagged &#39;closed&#39;">closed</span> <span class="post-tag tag-link-delete" rel="tag" title="see questions tagged &#39;delete&#39;">delete</span>
@@ -178,7 +178,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>It depends. Normally I'd say "lifecycle tagging" (as aseerel4c26 already has), but what exactly is a seaplane base? Is it just a spot in sea where seaplanes used to take off from? If so, and there's nothing at all there now, I'd just delete the node. However, if there is something left (perhaps on-shore buildings) then it may be worth tagging with an appropriate lifecycle tag.</p>
 <p>You may also want to consider adding the data to OpenHistoricalMap - see <a href="http://www.openhistoricalmap.org/about">http://www.openhistoricalmap.org/about</a> for more information.</p>
-<p>As an aside, this node has come from the "our airports" import. That is claimed, on <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports">http://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports</a> to be public domain, but there have been questions about that, such as <a href="https://lists.openstreetmap.org/pipermail/newbies/2011-August/006584.html">https://lists.openstreetmap.org/pipermail/newbies/2011-August/006584.html</a> .</p>
+<p>As an aside, this node has come from the "our airports" import. That is claimed, on <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports">https://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports</a> to be public domain, but there have been questions about that, such as <a href="https://lists.openstreetmap.org/pipermail/newbies/2011-August/006584.html">https://lists.openstreetmap.org/pipermail/newbies/2011-August/006584.html</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

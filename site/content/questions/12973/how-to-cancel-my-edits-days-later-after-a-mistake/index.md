@@ -73,7 +73,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>I don't quite understand what the solution to this problem is. I am in a similar situation now.</p>
-<p>I started editing the map at one location, must have "touched" the map there, then I panned 5 miles east and changed the one-way designation on some roads. Now the bounding box for the change area is a very long rectangle. I would like to back-out / discard my edit and start again. Is there a way for me to do this myself using the web-based tools? The changeset is <a href="http://www.openstreetmap.org/browse/changeset/13712519">13712519</a>, by the way. Thanks.</p>
+<p>I started editing the map at one location, must have "touched" the map there, then I panned 5 miles east and changed the one-way designation on some roads. Now the bounding box for the change area is a very long rectangle. I would like to back-out / discard my edit and start again. Is there a way for me to do this myself using the web-based tools? The changeset is <a href="https://www.openstreetmap.org/browse/changeset/13712519">13712519</a>, by the way. Thanks.</p>
 </div>
 <div id="comment-17360-info" class="comment-info">
 <span class="comment-age">(01 Nov '12, 16:35)</span> <span class="comment-user userinfo">ebow</span>
@@ -85,7 +85,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Your <a href="http://www.openstreetmap.org/browse/changeset/13712519">changeset</a> only has 3 things in it - adding oneway indicators <a href="http://www.openstreetmap.org/browse/way/9589266/history">here</a> and <a href="http://www.openstreetmap.org/browse/way/9590032/history">here</a>, and creating and deleting a single <a href="http://www.openstreetmap.org/browse/node/1992469124/history">node</a> <a href="http://www.openstreetmap.org/?mlat=42.5044653&amp;mlon=-71.2324302&amp;zoom=18">here</a>. Although the changeset bounding box includes the created and then deleted node, there's no net change to the map, so no need to worry about it.</p>
+<p>Your <a href="https://www.openstreetmap.org/browse/changeset/13712519">changeset</a> only has 3 things in it - adding oneway indicators <a href="https://www.openstreetmap.org/browse/way/9589266/history">here</a> and <a href="https://www.openstreetmap.org/browse/way/9590032/history">here</a>, and creating and deleting a single <a href="https://www.openstreetmap.org/browse/node/1992469124/history">node</a> <a href="https://www.openstreetmap.org/?mlat=42.5044653&amp;mlon=-71.2324302&amp;zoom=18">here</a>. Although the changeset bounding box includes the created and then deleted node, there's no net change to the map, so no need to worry about it.</p>
 </div>
 <div id="comment-17366-info" class="comment-info">
 <span class="comment-age">(01 Nov '12, 18:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -135,7 +135,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Welcome to OSM. The first link (edits) on your profile lists all of the editing you have done and you deleted three ways and a relation in <a href="http://www.openstreetmap.org/browse/changeset/18709644">http://www.openstreetmap.org/browse/changeset/18709644</a>. You can use <a href="http://wiki.openstreetmap.org/wiki/FR:IRC">IRC</a> to ask for help restoring them.</p>
+<p>Welcome to OSM. The first link (edits) on your profile lists all of the editing you have done and you deleted three ways and a relation in <a href="https://www.openstreetmap.org/browse/changeset/18709644">https://www.openstreetmap.org/browse/changeset/18709644</a>. You can use <a href="https://wiki.openstreetmap.org/wiki/FR:IRC">IRC</a> to ask for help restoring them.</p>
 </div>
 <div id="comment-27792-info" class="comment-info">
 <span class="comment-age">(04 Nov '13, 22:13)</span> <span class="comment-user userinfo">Wynndale</span>
@@ -204,7 +204,7 @@ One Answer:
 <p>Edits can be reverted, even the most seasoned mappers make mistakes, so there is nothing to be ashamed of. Reporting the issue, if you can't fix yourself, is the right thing to do.</p>
 <p>To be able to repair the damage we need the so called "changeset id" of the edits that need to be reverted. You can find the necessary information on the "History" tab in your OSM account.</p>
 <p>In general as long as no further work has been done in the area, it is possible to undo any damage quite painlessly. The longer you wait the worse it may become. It is a good idea if reverting is (currently) outside of your technical abilities (for example you don't edit with JOSM), to either report the issue to the #osm IRC channel, or your local mailing list.</p>
-<p>The error you made is, alas, fairly common, it is a really good idea to adhere to the rules collected here: <a href="http://wiki.openstreetmap.org/wiki/Good_practice">http://wiki.openstreetmap.org/wiki/Good_practice</a></p>
+<p>The error you made is, alas, fairly common, it is a really good idea to adhere to the rules collected here: <a href="https://wiki.openstreetmap.org/wiki/Good_practice">https://wiki.openstreetmap.org/wiki/Good_practice</a></p>
 <p>A further note, while we have permission to trace from Bing aerial imagery, please don't use the regular Bing maps for any input to OSM.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -230,7 +230,7 @@ One Answer:
 <p>Thanks,</p>
 <p>Indeed, I noticed that Bing aerial imagery is not as reliable as I thought... I'll do what you said as soon as possible.</p>
 <p>Thanks again!</p>
-<p>p.s. For instance, if the modifications on this page <a href="http://www.openstreetmap.org/browse/changeset/11666234">http://www.openstreetmap.org/browse/changeset/11666234</a> had to be canceled, how do I do that?</p>
+<p>p.s. For instance, if the modifications on this page <a href="https://www.openstreetmap.org/browse/changeset/11666234">https://www.openstreetmap.org/browse/changeset/11666234</a> had to be canceled, how do I do that?</p>
 </div>
 <div id="comment-12982-info" class="comment-info">
 <span class="comment-age">(27 May '12, 16:18)</span> <span class="comment-user userinfo">Hugues F</span>

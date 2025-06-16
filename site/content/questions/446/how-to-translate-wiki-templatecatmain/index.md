@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I translated <a href="http://wiki.openstreetmap.org/wiki/Template:Catmain">Template:Catmain</a> to <a href="http://wiki.openstreetmap.org/wiki/Template:DE:Catmain">Template:DE:Catmain</a>. But it didn't work at <a href="http://wiki.openstreetmap.org/wiki/DE:Relationen">DE:Relationen</a>.</p>
+<p>I translated <a href="https://wiki.openstreetmap.org/wiki/Template:Catmain">Template:Catmain</a> to <a href="https://wiki.openstreetmap.org/wiki/Template:DE:Catmain">Template:DE:Catmain</a>. But it didn't work at <a href="https://wiki.openstreetmap.org/wiki/DE:Relationen">DE:Relationen</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-translate" rel="tag" title="see questions tagged &#39;translate&#39;">translate</span> <span class="post-tag tag-link-template" rel="tag" title="see questions tagged &#39;template&#39;">template</span>

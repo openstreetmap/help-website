@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There's no way at present to use a local file of any kind in Potlatch 2, but development work is underway to make loading local files possible.</p>
-<p>To <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">deploy a custom Potlatch 2 installation</a> you don't need to have your own Rails port. You can just point your PL2 at the main editing API, or at the <a href="http://apis.dev.openstreetmap.org/">dev server</a> for testing. Then it's just a case of uploading your MapCSS file to your web space and configuring it.</p>
+<p>To <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">deploy a custom Potlatch 2 installation</a> you don't need to have your own Rails port. You can just point your PL2 at the main editing API, or at the <a href="http://apis.dev.openstreetmap.org/">dev server</a> for testing. Then it's just a case of uploading your MapCSS file to your web space and configuring it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

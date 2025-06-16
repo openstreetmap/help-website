@@ -246,7 +246,7 @@ osqa_accepted = true
 <li>To join a way that as crossed a way...click while pressing "j"</li>
 <li>The escape key helps sometimes</li>
 </ol>
-<p>This and the videos are a good source of info <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2#How_to_use_Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2#How_to_use_Potlatch_2</a></p>
+<p>This and the videos are a good source of info <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2#How_to_use_Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2#How_to_use_Potlatch_2</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

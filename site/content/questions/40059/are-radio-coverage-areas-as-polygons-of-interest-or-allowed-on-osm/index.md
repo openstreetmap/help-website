@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li><p>We have the concept of "<a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a>". Radio signal strength is something that the average contributor cannot verify.</p></li>
+<li><p>We have the concept of "<a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a>". Radio signal strength is something that the average contributor cannot verify.</p></li>
 <li><p>we had in the past similar requests like radioactivity levels, noise polution, timezones, etc. We could create plenty of invisible polygons on the map. Since OSM editors are not able to manage easily layers, such invisible polygons for a limited public (unlike admin boundaries widely used for geocoding) is not really welcome in our global geodatabase. But we are happy if you create a mashup with OSM as background map ;-)</p></li>
 </ol>
 </div>
@@ -157,7 +157,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5918/stf"></a><a href="http://help.openstreetmap.org/users/5918/stf">@stf</a>: verifiability is an issue, esp. as signal strength and SNR varies wildly depending on equipment used (e.g. my old cellphone has excellent mobile coverage where the new one only reports mediocre, on the same network, in the same physical location).</p>
+<p><a href="https://help.openstreetmap.org/users/5918/stf"></a><a href="https://help.openstreetmap.org/users/5918/stf">@stf</a>: verifiability is an issue, esp. as signal strength and SNR varies wildly depending on equipment used (e.g. my old cellphone has excellent mobile coverage where the new one only reports mediocre, on the same network, in the same physical location).</p>
 </div>
 <div id="comment-40092-info" class="comment-info">
 <span class="comment-age">(07 Jan '15, 10:33)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -231,7 +231,7 @@ osqa_accepted = true
 <div id="post-40098-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/5669/dacor">@DaCor</a> - happy to release the data of the mashup. Since I'm still finding my way around OSM, would that data be hosted on OSM or on our own server and then made available as a zipped file of geojson coordinates or shapefiles (for example)?</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/5669/dacor">@DaCor</a> - happy to release the data of the mashup. Since I'm still finding my way around OSM, would that data be hosted on OSM or on our own server and then made available as a zipped file of geojson coordinates or shapefiles (for example)?</p>
 <p>Also - we are planning to use mapbox for our mashups, as it allows for some custom basemaps/tiles - but I think they also use OSM no?</p>
 </div>
 <div id="comment-40098-info" class="comment-info">

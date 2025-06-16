@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>Hi !</p>
 <p>There is a form to modify a map created in OSM to avoid the splitting of a route that crosses the International Dateline...? The resulting map looks ugly.</p>
 <p>Thanks in advance</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Clipboard02_eoJm4Sc.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Clipboard02_eoJm4Sc.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-antimeridian" rel="tag" title="see questions tagged &#39;antimeridian&#39;">antimeridian</span> <span class="post-tag tag-link-180º" rel="tag" title="see questions tagged &#39;180º&#39;">180º</span>
@@ -227,7 +227,7 @@ osqa_accepted = true
 <p>I've created a polyline across this ocean, and it looks alright, see below.</p>
 <p>You might share your map URL, or the original data, for further experimentation.</p>
 <p>Regards</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2020-02-11_17-01-15.png" alt="umap across pacific" /></p>
+<p><img src="/upfiles/2020-02-11_17-01-15.png" alt="umap across pacific" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -372,7 +372,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>It looks so nice now...</p>
-<p><img src="https://help.openstreetmap.org/upfiles/map_hbal011good_qPccmb5.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/map_hbal011good_qPccmb5.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

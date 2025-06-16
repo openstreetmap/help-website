@@ -109,8 +109,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The <strong><a href="http://tools.geofabrik.de/osmi/?view=wtfe">OSMI License Change</a></strong> view is an useful tool for this purpose. It highlights ways, nodes, and some relations affected by the license change. Clicking on these reveals additional detail that are valuable for either contacting the authors or remapping the objects.</p>
-<p><strong><a href="http://wiki.openstreetmap.org/wiki/CLEANMAP">Cleanmap</a></strong> is an alternative with a different approach to visualization. It renders either "clean" or "bad" objects in the familiar Mapnik rendering style, illustrating how the map might look if all data affected by the license change were to be removed today.</p>
-<p>When editing an area, it is helpful to have licensing information displayed directly in the editor. <strong>Potlatch 2</strong> has a built-in feature that does this. For JOSM, you can install the <strong><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/LicenseChange">JOSM License Change plugin</a></strong>.</p>
+<p><strong><a href="https://wiki.openstreetmap.org/wiki/CLEANMAP">Cleanmap</a></strong> is an alternative with a different approach to visualization. It renders either "clean" or "bad" objects in the familiar Mapnik rendering style, illustrating how the map might look if all data affected by the license change were to be removed today.</p>
+<p>When editing an area, it is helpful to have licensing information displayed directly in the editor. <strong>Potlatch 2</strong> has a built-in feature that does this. For JOSM, you can install the <strong><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/LicenseChange">JOSM License Change plugin</a></strong>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

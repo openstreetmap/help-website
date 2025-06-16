@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>If you do a address search on "S 16th Street, Ames, IA" the result set shows "Tertiary Road S 16th St, Old Orchard Mobile Home Park, Ames, Boone, Iowa, United States of America". Notice the "Old Orchard Mobile Home Park" in the address. This really shouldn't be part of the address and is (I think) caused by the "place = hamlet" property of the <a href="http://www.openstreetmap.org/browse/node/151946213">Old Orchard Mobile Home Park</a>.</p>
+<p>If you do a address search on "S 16th Street, Ames, IA" the result set shows "Tertiary Road S 16th St, Old Orchard Mobile Home Park, Ames, Boone, Iowa, United States of America". Notice the "Old Orchard Mobile Home Park" in the address. This really shouldn't be part of the address and is (I think) caused by the "place = hamlet" property of the <a href="https://www.openstreetmap.org/browse/node/151946213">Old Orchard Mobile Home Park</a>.</p>
 <p>So what's the proper way to tag mobile home parks?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is no official tag for this. Perhaps <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Trailer_Park"></a><a href="http://*http://wiki.openstreetmap.org"></a><a href="http://*http://wiki.openstreetmap.org">*http://wiki.openstreetmap.org</a>/wiki/Proposed_features/Trailer_Park* would be good to start with</p>
+<p>There is no official tag for this. Perhaps <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Trailer_Park"></a><a href="http://*http://wiki.openstreetmap.org"></a><a href="http://*http://wiki.openstreetmap.org">*http://wiki.openstreetmap.org</a>/wiki/Proposed_features/Trailer_Park* would be good to start with</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -190,7 +190,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Here's one I mapped a while ago: <a href="http://www.openstreetmap.org/way/285562795">http://www.openstreetmap.org/way/285562795</a></p>
+<p>Here's one I mapped a while ago: <a href="https://www.openstreetmap.org/way/285562795">https://www.openstreetmap.org/way/285562795</a></p>
 <p>The extent of the mobile home park is often pretty clear.</p>
 <p>I think a lot of the names in GNIS have fallen out of common use though, like with the old rail stops.</p>
 </div>
@@ -273,7 +273,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Any reason you can't use the conventional tourism=caravan_site plus name=xyz</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcaravan_site">http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcaravan_site</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcaravan_site">https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcaravan_site</a></p>
 <p>I would agree that landuse=residential is fine, especially for the area that encompasses groups of long-term or permanent residents homes.</p>
 <p>All the sites that I am aware of are part of a wider community and are included as part their local hamlet, suburb or neighbourhood as well as the name=xyz for the park itself.</p>
 </div>

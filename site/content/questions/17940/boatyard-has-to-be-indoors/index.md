@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>Do you think a <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dboatyard">Tag:waterway=boatyard</a> necessarily has to be indoors? Like building=yes ? I mean, many boatyards are at least partially outdoors, aren't they?</p>
+<p>Do you think a <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dboatyard">Tag:waterway=boatyard</a> necessarily has to be indoors? Like building=yes ? I mean, many boatyards are at least partially outdoors, aren't they?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-boatyard" rel="tag" title="see questions tagged &#39;boatyard&#39;">boatyard</span>

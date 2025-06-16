@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/2565/bandwidth-limit-exceeded">https://help.openstreetmap.org/questions/2565/bandwidth-limit-exceeded</a> for the answer</p>
+<p>See <a href="/questions/2565/bandwidth-limit-exceeded">https://help.openstreetmap.org/questions/2565/bandwidth-limit-exceeded</a> for the answer</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

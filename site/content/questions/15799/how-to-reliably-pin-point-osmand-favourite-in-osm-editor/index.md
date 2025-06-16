@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>In OsmAnd you can enable the logging module and export the logged track as gpx file. You can then use the gpx in your OSM editor or upload it to openstreetmap.</p>
 <p>For logging POIs (points of interest) OsmAnd has another module which you can enable.</p>
-<p>I would recommend another tool for logging: <a href="http://wiki.openstreetmap.org/wiki/OSMtracker">OSM Tracker</a>. It's easier to add the tags and it also allows to take photos and align the with the track.</p>
+<p>I would recommend another tool for logging: <a href="https://wiki.openstreetmap.org/wiki/OSMtracker">OSM Tracker</a>. It's easier to add the tags and it also allows to take photos and align the with the track.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

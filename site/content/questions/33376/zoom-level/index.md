@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Which website and map layer are you asking about? Would it be possible to use a few more words to describe your problem? On the OpenStreetMap website, <a href="http://www.openstreetmap.org/#map=19/52.93397/-0.81082">the standard map layer goes up to 19</a>, but <a href="http://www.openstreetmap.org/#map=18/52.93397/-0.81116&amp;layers=C">not all others do</a>. Is that what you are asking about, or something else?</p>
+<p>Which website and map layer are you asking about? Would it be possible to use a few more words to describe your problem? On the OpenStreetMap website, <a href="https://www.openstreetmap.org/#map=19/52.93397/-0.81082">the standard map layer goes up to 19</a>, but <a href="https://www.openstreetmap.org/#map=18/52.93397/-0.81116&amp;layers=C">not all others do</a>. Is that what you are asking about, or something else?</p>
 </div>
 <div id="comment-33377-info" class="comment-info">
 <span class="comment-age">(22 May '14, 14:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

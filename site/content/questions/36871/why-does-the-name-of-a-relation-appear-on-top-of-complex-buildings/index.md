@@ -42,10 +42,10 @@ osqa_accepted = true
 <p>Hi there!</p>
 <p>I have been trying to map complex buildings, using the building relation and the outline and part roles, to enhance the map of my university.</p>
 <p>I noticed that, when creating complex buildings, the name of the University's multipolygon relation ends up appearing on each part of the building, instead of just once in the middle of the whole complex.</p>
-<p><a href="http://www.openstreetmap.org/#map=18/-27.49781/153.01297">Have a look at the map</a>.</p>
+<p><a href="https://www.openstreetmap.org/#map=18/-27.49781/153.01297">Have a look at the map</a>.</p>
 <p>This happens with most renderers available on the main website (if it does not happen, I assume the renderer simply does not render the information at all).</p>
-<p>Here are the relations that I am talking about: <a href="http://www.openstreetmap.org/relation/4040716">one of them</a>, <a href="http://www.openstreetmap.org/relation/3182379">another one</a>, <a href="http://www.openstreetmap.org/relation/3253659">a third one</a>.</p>
-<p>I do not want to map for the renderer, I just want to know if the renderers need to be improved or if I am doing something wrong, as the <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">help page about 3D mapping</a> is not 100% clear on what tags should and should not be used with each element of the relation.</p>
+<p>Here are the relations that I am talking about: <a href="https://www.openstreetmap.org/relation/4040716">one of them</a>, <a href="https://www.openstreetmap.org/relation/3182379">another one</a>, <a href="https://www.openstreetmap.org/relation/3253659">a third one</a>.</p>
+<p>I do not want to map for the renderer, I just want to know if the renderers need to be improved or if I am doing something wrong, as the <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">help page about 3D mapping</a> is not 100% clear on what tags should and should not be used with each element of the relation.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -116,8 +116,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the reason is that each building is part of the relation <a href="http://www.openstreetmap.org/relation/1753569">University of Queensland</a>, which is a multi-polygon-relation. The name of such a relation is always repeated on all children.</p>
-<p>I think it's better the make that relation a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">site</a>-relation. I thought a multi-polygon-relation was meant to create holes in buildings, lakes, etc. Not sure whether that would change anything in the rendering.</p>
+<p>I think the reason is that each building is part of the relation <a href="https://www.openstreetmap.org/relation/1753569">University of Queensland</a>, which is a multi-polygon-relation. The name of such a relation is always repeated on all children.</p>
+<p>I think it's better the make that relation a <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">site</a>-relation. I thought a multi-polygon-relation was meant to create holes in buildings, lakes, etc. Not sure whether that would change anything in the rendering.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -149,7 +149,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Here's exactly why it's incorrect: you're treating the buildings as holes in the university area, where they are actually on the university grounds. Looks like it's the same with other features, like water--very unusual.</p>
-<p>Regarding the site relation, it is likely not needed here. Quote from <a href="http://wiki.openstreetmap.org/wiki/Site:">http://wiki.openstreetmap.org/wiki/Site:</a> "It is not necessary or appropriate to use a relation when all the elements contained within the boundary of the site belong to the site, and no elements beyond that boundary do belong. In this simple case simply tag the perimeter with all the appropriate tags."</p>
+<p>Regarding the site relation, it is likely not needed here. Quote from <a href="https://wiki.openstreetmap.org/wiki/Site:">https://wiki.openstreetmap.org/wiki/Site:</a> "It is not necessary or appropriate to use a relation when all the elements contained within the boundary of the site belong to the site, and no elements beyond that boundary do belong. In this simple case simply tag the perimeter with all the appropriate tags."</p>
 </div>
 <div id="comment-36882-info" class="comment-info">
 <span class="comment-age">(17 Sep '14, 15:10)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -160,7 +160,7 @@ One Answer:
 <div id="post-36889-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Great, thank you everyone. Now, I might just keep the outer roles of the multipolygon relation and tag that multipolygon as role=perimeter, according to <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site</a> Wouldn't it be nice to see the site relation actually approved? The discussion page has been stalled since 2012.</p>
+<p>Great, thank you everyone. Now, I might just keep the outer roles of the multipolygon relation and tag that multipolygon as role=perimeter, according to <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site</a> Wouldn't it be nice to see the site relation actually approved? The discussion page has been stalled since 2012.</p>
 </div>
 <div id="comment-36889-info" class="comment-info">
 <span class="comment-age">(17 Sep '14, 23:40)</span> <span class="comment-user userinfo">stephane-gui...</span>

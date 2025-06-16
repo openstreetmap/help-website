@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>How should be tagged roundabout with multiphase traffic light?</p>
 <ol>
-<li>As normal street (4 one way streets) because condition "the traffic on the roundabout has right of way" (from <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">Wikipedia</a>) is not fulfilled.</li>
+<li>As normal street (4 one way streets) because condition "the traffic on the roundabout has right of way" (from <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">Wikipedia</a>) is not fulfilled.</li>
 <li>As roundabout (junction:roundabout) because before roundabout exist signposts with information about roundabout.</li>
 </ol>
 <p>This place has own name (roundabout ...). Traffic is the same as on 4 crossroads near each other. Only in a situation when traffic lights is not working all drive in this place like as the normal roundabout.</p>

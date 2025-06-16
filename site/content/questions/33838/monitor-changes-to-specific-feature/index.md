@@ -193,7 +193,7 @@ This answer is marked "community wiki".
 <p>This should include the version number of each object, and if I am not wrong even a timestamp when it was modified the last time.</p>
 <p>Each time when an OSM object is edited, the version number is increased by 1.</p>
 <p>Try to store the version number of each object in a file or database of your choice. Then compare that stored version number with the result when you want to check it.</p>
-<p>Perhabs you can benefit from the famous <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass-api</a>.</p>
+<p>Perhabs you can benefit from the famous <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass-api</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

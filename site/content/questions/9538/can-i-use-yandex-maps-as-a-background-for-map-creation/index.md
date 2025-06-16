@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/How_do_you_map_in/Russia#The_Data_Sources">Apparently</a> no, but you can use the yandex panorams (aka streetview). I guess they do not control the license of the map data, so they cannot give it away like they do for their streetview ? The <a href="http://wiki.openstreetmap.org/wiki/RU:ВикиПроект_Россия">Russia</a> page on the wiki probably has more information.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/How_do_you_map_in/Russia#The_Data_Sources">Apparently</a> no, but you can use the yandex panorams (aka streetview). I guess they do not control the license of the map data, so they cannot give it away like they do for their streetview ? The <a href="https://wiki.openstreetmap.org/wiki/RU:ВикиПроект_Россия">Russia</a> page on the wiki probably has more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

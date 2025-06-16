@@ -139,7 +139,7 @@ One Answer:
 <div class="answer-body">
 <p>The enclosing features are area features coming from <a href="http://overpass-api.de/">http://overpass-api.de/</a> .</p>
 <p>There is some discussion here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Areas">http://wiki.openstreetmap.org/wiki/Overpass_API/Areas</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Areas">https://wiki.openstreetmap.org/wiki/Overpass_API/Areas</a></p>
 <p>I think a landuse=forest should create an area, but maybe it hasn't been generated yet. I used the script below to find out that areas were last generated 2 days ago. Is the feature newer than that?</p>
 <p>This is about the simplest script that will return an area:</p>
 <p><a href="http://overpass-turbo.eu/s/eo7">http://overpass-turbo.eu/s/eo7</a></p>
@@ -177,7 +177,7 @@ One Answer:
 <div id="post-48109-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for the info. The link lead me to this textual description of what makes a way into a polygon (area): <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/Polygon_Features">http://wiki.openstreetmap.org/wiki/Overpass_turbo/Polygon_Features</a></p>
+<p>Thanks for the info. The link lead me to this textual description of what makes a way into a polygon (area): <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Polygon_Features">https://wiki.openstreetmap.org/wiki/Overpass_turbo/Polygon_Features</a></p>
 <p>According to that, landuse=forest on a closed loop way without area=no makes a polygon. But I know that isn't working as far as "enclosing features" goes. I also looked at the area3.osm3s script. With my very limited understanding of it, I see it does use landuse (other than no), with name, and not area=no to make a polygon. I also see the script considers a multipolygon to be a polygon but only if it has a name, and the one ("A" above) does not, yet it does work as an enclosing feature.</p>
 <p>I'm going to try to fix my case "B" above - to make it like "A" and see what happens. As much as I would like to understand what is happening, I'm OK with fixing the feature and moving on.</p>
 </div>
@@ -190,9 +190,9 @@ One Answer:
 <div id="post-48129-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is very strange, and I obviously don't know what is going on. But after looking at it some more, the problem isn't that the State Forests don't show as Enclosing Features. The problem is that <em>nothing</em> shows as enclosing features. This is happening for large areas of Southern New Jersey, such as here: <a href="http://www.openstreetmap.org/#map=15/39.6176/-74.5007">http://www.openstreetmap.org/#map=15/39.6176/-74.5007</a></p>
+<p>This is very strange, and I obviously don't know what is going on. But after looking at it some more, the problem isn't that the State Forests don't show as Enclosing Features. The problem is that <em>nothing</em> shows as enclosing features. This is happening for large areas of Southern New Jersey, such as here: <a href="https://www.openstreetmap.org/#map=15/39.6176/-74.5007">https://www.openstreetmap.org/#map=15/39.6176/-74.5007</a></p>
 <p>When I use Query Features on a road there, I see no Enclosing Features at all. But further south, I see at least a County, State, and Country as Enclosing Features.</p>
-<p>Something seems to be blocking it from working there. I thought maybe it was the Pinelands National Reserve area ( <a href="http://www.openstreetmap.org/way/33832747">http://www.openstreetmap.org/way/33832747</a> ) which is a huge closed way that surrounds this (tags: area=yes, boundary=national_park) but that doesn't seem to be the cause. Enclosing Features works in some places inside this area.</p>
+<p>Something seems to be blocking it from working there. I thought maybe it was the Pinelands National Reserve area ( <a href="https://www.openstreetmap.org/way/33832747">https://www.openstreetmap.org/way/33832747</a> ) which is a huge closed way that surrounds this (tags: area=yes, boundary=national_park) but that doesn't seem to be the cause. Enclosing Features works in some places inside this area.</p>
 </div>
 <div id="comment-48129-info" class="comment-info">
 <span class="comment-age">(15 Feb '16, 03:10)</span> <span class="comment-user userinfo">ljb_nj</span>
@@ -219,7 +219,7 @@ out;</code></pre>
 <div id="post-48166-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>maxerickson: I think you have figured it out. The areas are OK, but the problem is with the browser and the query. I am seeing almost the same thing: "Error: TypeError: t.bounds is undefined", "Source File: <a href="http://www.openstreetmap.org/assets/...">http://www.openstreetmap.org/assets/..."</a> in my browser. (Using either Firefox or Seamonkey browsers.)</p>
+<p>maxerickson: I think you have figured it out. The areas are OK, but the problem is with the browser and the query. I am seeing almost the same thing: "Error: TypeError: t.bounds is undefined", "Source File: <a href="https://www.openstreetmap.org/assets/...">https://www.openstreetmap.org/assets/..."</a> in my browser. (Using either Firefox or Seamonkey browsers.)</p>
 <p>But I suppose it still could be something in the map data that triggers this, which would explain why it only happens in some areas.</p>
 </div>
 <div id="comment-48166-info" class="comment-info">

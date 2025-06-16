@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess the question is more about multipolygons (i.e. how to create an object as a "hole" inside another object). The existing lake should became the outer ring, and the new island the inner ring, of a new multipolygon relation. How to create a multipolygon relation depends on the editor you use, the wiki contains an illustrated example with Potlatch: <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">http://wiki.openstreetmap.org/wiki/Multipolygon</a></p>
+<p>I guess the question is more about multipolygons (i.e. how to create an object as a "hole" inside another object). The existing lake should became the outer ring, and the new island the inner ring, of a new multipolygon relation. How to create a multipolygon relation depends on the editor you use, the wiki contains an illustrated example with Potlatch: <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">https://wiki.openstreetmap.org/wiki/Multipolygon</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9886/sunfishtommy"></a><a href="http://help.openstreetmap.org/users/9886/sunfishtommy">@Sunfishtommy</a>: thanks, according to your other question here you mean the editor "iD" (note that Potlatch is also an "online" editor). Yes, the "merge"/"+" seems to be a new shortcut for this.</p>
+<p><a href="https://help.openstreetmap.org/users/9886/sunfishtommy"></a><a href="https://help.openstreetmap.org/users/9886/sunfishtommy">@Sunfishtommy</a>: thanks, according to your other question here you mean the editor "iD" (note that Potlatch is also an "online" editor). Yes, the "merge"/"+" seems to be a new shortcut for this.</p>
 </div>
 <div id="comment-37941-info" class="comment-info">
 <span class="comment-age">(24 Oct '14, 19:16)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -228,7 +228,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Yea i am relatively new and i have been using iD exclusively because of its simplicity. I didn't even realize there were other options until recently. But i am finally starting to learn the terminology.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Yea i am relatively new and i have been using iD exclusively because of its simplicity. I didn't even realize there were other options until recently. But i am finally starting to learn the terminology.</p>
 </div>
 <div id="comment-37971-info" class="comment-info">
 <span class="comment-age">(26 Oct '14, 16:52)</span> <span class="comment-user userinfo">Sunfishtommy</span>
@@ -270,7 +270,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For help with Id look here <a href="https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag</a> For Potlatch2 see Richards answer here, he made P2 and should know <a href="https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
+<p>For help with Id look here <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag</a> For Potlatch2 see Richards answer here, he made P2 and should know <a href="/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -323,7 +323,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hello! Have you read <a href="http://wiki.openstreetmap.org/wiki/Island">Tag:place=island</a>?</p>
+<p>Hello! Have you read <a href="https://wiki.openstreetmap.org/wiki/Island">Tag:place=island</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

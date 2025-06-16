@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>You could use JOSM's measurement plugin, or hack JOSM source to let you zoom closer. But there wouldn't be much point to it:</p>
 <ul>
-<li>The OSM database stores coordinates in <a href="http://wiki.openstreetmap.org/wiki/Rails_port/Database_schema">a format that has a 1.7cm granularity</a> depending on where you are on earth (longitude granularity does get finer near the poles). So you can't store anything more precise in OSM.</li>
+<li>The OSM database stores coordinates in <a href="https://wiki.openstreetmap.org/wiki/Rails_port/Database_schema">a format that has a 1.7cm granularity</a> depending on where you are on earth (longitude granularity does get finer near the poles). So you can't store anything more precise in OSM.</li>
 <li>Plate tectonics cause movements of <a href="https://en.wikipedia.org/wiki/File:Global_plate_motion_2008-04-17.jpg">more than 1cm/year in most places of the world</a>, so while you can map something with cm accuracy relative to itself, the absolute position (which is what OSM stores) would need to be updated every year.</li>
 </ul>
 </div>

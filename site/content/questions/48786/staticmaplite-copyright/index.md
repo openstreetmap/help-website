@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-48793-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>doublette: see <a href="https://help.openstreetmap.org/questions/48785/staticmaplite-copyrightverweis">https://help.openstreetmap.org/questions/48785/staticmaplite-copyrightverweis</a></p>
+<p>doublette: see <a href="/questions/48785/staticmaplite-copyrightverweis">https://help.openstreetmap.org/questions/48785/staticmaplite-copyrightverweis</a></p>
 </div>
 <div id="comment-48793-info" class="comment-info">
 <span class="comment-age">(23 Mar '16, 16:42)</span> <span class="comment-user userinfo">stephan75</span>

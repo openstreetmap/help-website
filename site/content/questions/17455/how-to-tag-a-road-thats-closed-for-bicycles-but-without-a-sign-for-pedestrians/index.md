@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just add the appropriate <a href="http://wiki.openstreetmap.org/wiki/Key:access">access tags</a> as described on the <a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">road signs wiki page</a>. If there is no sign forbidding pedestrians then you don't have to add any further tag because <em>foot=yes</em> is the <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions#Default">default</a> for most way types.</p>
+<p>Just add the appropriate <a href="https://wiki.openstreetmap.org/wiki/Key:access">access tags</a> as described on the <a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">road signs wiki page</a>. If there is no sign forbidding pedestrians then you don't have to add any further tag because <em>foot=yes</em> is the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions#Default">default</a> for most way types.</p>
 <p>In your specific case a <em>vehicle=no</em> seems sufficient as it forbids bicycles, moped and any other motorized vehicle.</p>
 </div>
 <div class="answer-controls post-controls">

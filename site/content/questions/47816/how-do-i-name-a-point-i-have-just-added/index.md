@@ -190,7 +190,7 @@ One Answer:
 <div id="post-47856-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11938/stuart-t"></a><a href="http://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: see <a href="https://wiki.openstreetmap.org/wiki/Good_changeset_comments">there for changeset comments</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/11938/stuart-t"></a><a href="https://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: see <a href="https://wiki.openstreetmap.org/wiki/Good_changeset_comments">there for changeset comments</a>.</p>
 <p>"Not only a name": you need to set what the object should represent. E.g. a school or a restaurant, or a park bench, or a ... That's also the reason why it does <span>not show up on the map</span>. I guess you mean <a href="https://www.openstreetmap.org/node/3985898141">this node</a>. So, what is "Jack the Ripper murder site"? Is there some real-world object or is it just a site which where some action took place in the past?</p>
 </div>
 <div id="comment-47856-info" class="comment-info">
@@ -225,7 +225,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11938/stuart-t"></a><a href="http://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: fine. However, if it is just a more or less historic place with no current real-world emanation, then there should not be a point at all (according to OSM's goals). If there is e.g. a information plate for tourists, you could add <a href="https://wiki.openstreetmap.org/wiki/Tag:information%3Dboard">such tags</a> to the object.</p>
+<p><a href="https://help.openstreetmap.org/users/11938/stuart-t"></a><a href="https://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: fine. However, if it is just a more or less historic place with no current real-world emanation, then there should not be a point at all (according to OSM's goals). If there is e.g. a information plate for tourists, you could add <a href="https://wiki.openstreetmap.org/wiki/Tag:information%3Dboard">such tags</a> to the object.</p>
 <p>Digging through <a href="https://www.openstreetmap.org/user/Stuart%20T/history">your changesets</a> I guess I have found the orignal object: <a href="https://www.openstreetmap.org/node/2497824565/history">https://www.openstreetmap.org/node/2497824565/history</a> . This one? Please comment, I will undelete (an advanced action) the old object, then you can try to move it again. ...okay, since you seem to accidentally <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=36975562">moved a node</a> which belongs to some streets/pedestrian area I will revert all of that - <a href="https://www.openstreetmap.org/changeset/36976930">done</a>. You can try to move the node again now. By the way: the location is quite different from the old one, was the object moved in the real world or do you think it was just placed at the wrong location by your fellow mappers before?</p>
 </div>
 <div id="comment-47865-info" class="comment-info">

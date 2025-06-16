@@ -46,7 +46,7 @@ osqa_accepted = false
 <p>Can someone help as to how this can be taken care off?</p>
 <p>I think this is because the database for the ZIP code has not been updated from the OSM side. This is not just for India (Where I am currently facing the most issues) but in European countries too.</p>
 <p>Thanks!</p>
-<p>Edit 1: Sorry. Adding some screenshots here to help <img src="https://help.openstreetmap.org/upfiles/Screenshot_13_mOpYOxg.jpg" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/Screenshot_12_SeG8B96.jpg" alt="alt text" /></p>
+<p>Edit 1: Sorry. Adding some screenshots here to help <img src="/upfiles/Screenshot_13_mOpYOxg.jpg" alt="alt text" /> <img src="/upfiles/Screenshot_12_SeG8B96.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zip-code" rel="tag" title="see questions tagged &#39;zip-code&#39;">zip-code</span> <span class="post-tag tag-link-api" rel="tag" title="see questions tagged &#39;api&#39;">api</span> <span class="post-tag tag-link-postcode" rel="tag" title="see questions tagged &#39;postcode&#39;">postcode</span> <span class="post-tag tag-link-pin" rel="tag" title="see questions tagged &#39;pin&#39;">pin</span>

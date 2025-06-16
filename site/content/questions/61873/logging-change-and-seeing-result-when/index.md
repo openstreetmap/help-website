@@ -245,7 +245,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/trace_with_a_bit_highlighted.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/trace_with_a_bit_highlighted.JPG" alt="alt text" /></p>
 <p>I found your Trace: From map page: click GPX Traces: Click See your Trace: Choose the Trace: Click edit: and this is what you will see. The thin Blue/Cyan line is the trace. I plotted some points ( By shift click) and i created the yellow highlighted way, next you would have to pick a road or path type, connect the end node(s) to the existing road then save it. I hope you get the idea. Happy Mapping. Note it will take a day or so for the way to fully appear on OSM ( after it as been saved,I didn't save the edit, it's your next job) The illustrated editor i used in this time was Potlatch2. Once the edit is saved it will be available as map data but you will then have to wait for the OSM on Garmin site you mention( or other one) to the use that data to build a Garmin map. It is possible to build your on map for a garmin and incorporate any trace you have, but very difficult. see Wiki.</p>
 </div>
 <div class="answer-controls post-controls">

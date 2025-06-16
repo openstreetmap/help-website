@@ -106,11 +106,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Edit_maps#General_tips_for_adding_roads_or_other_ways">general tips in the Beginner's Guide</a> as well as these similar questions:</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Edit_maps#General_tips_for_adding_roads_or_other_ways">general tips in the Beginner's Guide</a> as well as these similar questions:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/7461/using-a-gps-track-to-create-a-road-or-path">Using a gps track to create a road or path</a></li>
-<li><a href="https://help.openstreetmap.org/questions/8844/convert-track-to-road">Convert track to road</a></li>
-<li><a href="https://help.openstreetmap.org/questions/12811/ive-uploaded-a-gps-track-whats-the-easiest-way-to-add-it-to-the-map">I've uploaded a GPS track - what's the easiest way to add it to the map?</a></li>
+<li><a href="/questions/7461/using-a-gps-track-to-create-a-road-or-path">Using a gps track to create a road or path</a></li>
+<li><a href="/questions/8844/convert-track-to-road">Convert track to road</a></li>
+<li><a href="/questions/12811/ive-uploaded-a-gps-track-whats-the-easiest-way-to-add-it-to-the-map">I've uploaded a GPS track - what's the easiest way to add it to the map?</a></li>
 </ul>
 <p>Re-drawing (<em>tracing</em>) GPX tracks is intended because GPX tracks contain errors. They are not smooth, they may jump from times to times, they contain "rat's nests" whenever you stop or drive slowly, and they don't start or end exactly at other roads already contained in OSM. Converting such GPX tracks would result in very poor roads. Therefore each road <em>should</em> be drawn manually.</p>
 </div>

@@ -179,7 +179,7 @@ osqa_accepted = false
 <div id="post-11800-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks, after looking into the style file on the wiki i found the following page: <a href="http://wiki.openstreetmap.org/wiki/Regionalisedmap">http://wiki.openstreetmap.org/wiki/Regionalisedmap</a></p>
+<p>Thanks, after looking into the style file on the wiki i found the following page: <a href="https://wiki.openstreetmap.org/wiki/Regionalisedmap">https://wiki.openstreetmap.org/wiki/Regionalisedmap</a></p>
 <p>This mirrors what you and ChrisH are saying, i'll look into this further. Do you know if there any example mapnik style-sheets that just render names?</p>
 </div>
 <div id="comment-11800-info" class="comment-info">

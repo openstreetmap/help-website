@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-56643-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If i find a good viewpoint I add them to the data. This one is nice rest stop for cyclists or walkers on the Grafham Water circuit. <a href="http://www.openstreetmap.org/#map=19/52.30443/-0.34403">http://www.openstreetmap.org/#map=19/52.30443/-0.34403</a> Scenery is subjective but i guess web searches will find some jpegs for a second opinion.</p>
+<p>If i find a good viewpoint I add them to the data. This one is nice rest stop for cyclists or walkers on the Grafham Water circuit. <a href="https://www.openstreetmap.org/#map=19/52.30443/-0.34403">https://www.openstreetmap.org/#map=19/52.30443/-0.34403</a> Scenery is subjective but i guess web searches will find some jpegs for a second opinion.</p>
 </div>
 <div id="comment-56643-info" class="comment-info">
 <span class="comment-age">(16 Jun '17, 13:34)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -116,9 +116,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Highways are split into different types, there is some info here: <a href="http://wiki.openstreetmap.org/wiki/Key:highway">http://wiki.openstreetmap.org/wiki/Key:highway</a></p>
+<p>Highways are split into different types, there is some info here: <a href="https://wiki.openstreetmap.org/wiki/Key:highway">https://wiki.openstreetmap.org/wiki/Key:highway</a></p>
 <p>Intercity routes planned over primary and secondary highways will certainly be more scenic than those planned over motorways, but I'm not sure that is the sort of route you mean.</p>
-<p>Coverage isn't quite as good for natural areas as it is for highways, but you could also analyze where preferred highway types overlap with natural areas (parks and forest and so on, skim <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> to get a sense of what is commonly mapped).</p>
+<p>Coverage isn't quite as good for natural areas as it is for highways, but you could also analyze where preferred highway types overlap with natural areas (parks and forest and so on, skim <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> to get a sense of what is commonly mapped).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

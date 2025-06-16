@@ -146,7 +146,7 @@ One Answer:
 <blockquote>
 <p>Is this supported when one searches for "food" or "clothes" in a mobile app like OSMAnd</p>
 </blockquote>
-<p>That would depend on the app, but is not really related to this question. E.g. would such an app find "regular" (i.e. same opening hours, always mixed selection of goods) <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity=marketplace">amenity=marketplace</a> when searching for "food" or "clothes"? It might, or it might need to be enhanced with <a href="https://wiki.openstreetmap.org/wiki/Key:description">description=*</a> key or <a href="https://wiki.openstreetmap.org/wiki/Key:clothes">clothes=*</a> or <a href="https://taginfo.openstreetmap.org/search?q=sells%3A#keys">sells:*</a> prefix etc.</p>
+<p>That would depend on the app, but is not really related to this question. E.g. would such an app find "regular" (i.e. same opening hours, always mixed selection of goods) <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity=marketplace">amenity=marketplace</a> when searching for "food" or "clothes"? It might, or it might need to be enhanced with <a href="https://wiki.openstreetmap.org/wiki/Key:description">description=*</a> key or <a href="https://wiki.openstreetmap.org/wiki/Key:clothes">clothes=*</a> or <a href="https://taginfo.openstreetmap.org/search?q=sells%3A#keys">sells:*</a> prefix etc.</p>
 </div>
 <div id="comment-87358-info" class="comment-info">
 <span class="comment-age">(07 Jun '23, 14:29)</span> <span class="comment-user userinfo">Matija Nalis</span>

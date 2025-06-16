@@ -58,7 +58,7 @@ osqa_accepted = false
 <p>I modified the <strong>osm2pgsql</strong> script in <strong>mod_tile/openstreetmap-tiles-update-expire</strong> to this</p>
 <p><code>osm2pgsql -slim -a --flat-nodes /node.cache --cache 3000 -e 13-20 &lt;database config, user, host etc&gt; -o /dirty_tiles /changes.osc.gz</code></p>
 <p>Is the "<strong>-e</strong> (expire tiles)" slows down the importing? If I only want to update the database but don't want to update the image tiles, can I just remove the <strong>-e</strong> and <strong>-o</strong> argument?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2020-12-09_12-57-19.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/2020-12-09_12-57-19.jpg" alt="alt text" /></p>
 <p>You can see the processing speed is really slow!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

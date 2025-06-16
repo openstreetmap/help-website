@@ -201,7 +201,7 @@ osqa_accepted = true
 <p>In JOSM, you can simply search(ctrl+f) for <em>building_number</em> or <em>building_number:*</em> and you will find them. That's probably the first thing you want to do to verify that only the buildings you added that actually have this tag.</p>
 <p>If you want to automate this process, you may do the following:</p>
 <p>After downloading the university via JOSM, save it as a <code>.osm</code> file. Close JOSM and open the <code>.osm</code> file in a text editor, and use the text editor's "replace all" functionality on <em>building_number</em> to the tag you desire to use. Then open this file in JOSM, download the data from OpenStreetMap, and merge the layers of the file with the OSM Data Layer. Send Changes.</p>
-<p>In this case, you probably want to use <a href="http://wiki.openstreetmap.org/wiki/Ref"><code>ref=*</code> or <code>ref:unimelb=*</code></a> instead of <code>unimelb:building_number=*</code>.</p>
+<p>In this case, you probably want to use <a href="https://wiki.openstreetmap.org/wiki/Ref"><code>ref=*</code> or <code>ref:unimelb=*</code></a> instead of <code>unimelb:building_number=*</code>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -228,7 +228,7 @@ This answer is marked "community wiki".
 </div>
 <div class="comment-text">
 <p>I've found the JOSM TODO_list plugin useful for working down a list:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/TODO_list">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/TODO_list</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/TODO_list">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/TODO_list</a></p>
 </div>
 <div id="comment-30531-info" class="comment-info">
 <span class="comment-age">(07 Feb '14, 11:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

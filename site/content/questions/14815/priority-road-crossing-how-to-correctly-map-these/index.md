@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Just ran into a dangerous navigation comment due to this. <a href="http://www.openstreetmap.org/edit?lat=36.65467&amp;lon=-4.65104&amp;zoom=16">See the situation outside Alhaurín el Grande</a> or graphically:</p>
+<p>Just ran into a dangerous navigation comment due to this. <a href="https://www.openstreetmap.org/edit?lat=36.65467&amp;lon=-4.65104&amp;zoom=16">See the situation outside Alhaurín el Grande</a> or graphically:</p>
 <pre><code>           ++++++++++ -----------------
                       +
                         +

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "naming convention for residential streets"
-description = '''In Lima, Peru ( http://www.openstreetmap.org/#map=17/-12.12754/-77.02875 ) I have seen that some streets have &quot;calle&quot; (Spanish for street) in their name and some do not. E.g.: Calle Schell, Calle Bolívar, Calle San Martín. In many Latin American countries the street name omits &quot;calle&quot;. Only for larg...'''
+description = '''In Lima, Peru ( https://www.openstreetmap.org/#map=17/-12.12754/-77.02875 ) I have seen that some streets have &quot;calle&quot; (Spanish for street) in their name and some do not. E.g.: Calle Schell, Calle Bolívar, Calle San Martín. In many Latin American countries the street name omits &quot;calle&quot;. Only for larg...'''
 date = "2014-11-03T14:19:00Z"
 lastmod = "2014-11-03T16:52:00Z"
 weight = 38283
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In Lima, Peru ( <a href="http://www.openstreetmap.org/#map=17/-12.12754/-77.02875">http://www.openstreetmap.org/#map=17/-12.12754/-77.02875</a> ) I have seen that some streets have "calle" (Spanish for street) in their name and some do not. E.g.: Calle Schell, Calle Bolívar, Calle San Martín.</p>
+<p>In Lima, Peru ( <a href="https://www.openstreetmap.org/#map=17/-12.12754/-77.02875">https://www.openstreetmap.org/#map=17/-12.12754/-77.02875</a> ) I have seen that some streets have "calle" (Spanish for street) in their name and some do not. E.g.: Calle Schell, Calle Bolívar, Calle San Martín.</p>
 <p>In many Latin American countries the street name omits "calle". Only for larger streets e.g. "Avenida" is added to distinguish such main urban streets.</p>
 <p>So, is it ok if one just removes "calle" from "normal" streets? Apparently, in Lima this is not handled uniformly.</p>
 </div>

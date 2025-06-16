@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-25395-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Do you mean <a href="http://www.openstreetmap.org/browse/node/26576170">such a name</a> (<a href="http://www.openstreetmap.org/#map=13/20.7800/97.0452&amp;layers=Q">MapQuest rendering with international and Burmese name</a>)? Is the data right but wrong on the map rendering?</p>
+<p>Do you mean <a href="https://www.openstreetmap.org/browse/node/26576170">such a name</a> (<a href="https://www.openstreetmap.org/#map=13/20.7800/97.0452&amp;layers=Q">MapQuest rendering with international and Burmese name</a>)? Is the data right but wrong on the map rendering?</p>
 <p>Please give an example, copy a link.</p>
 </div>
 <div id="comment-25395-info" class="comment-info">
@@ -274,7 +274,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thank you for those image links (in your comments above). So you are speaking of: <a href="http://www.openstreetmap.org/browse/node/315390382">object</a>/<a href="http://www.openstreetmap.org/#map=11/19.7405/96.1359">location on map</a>. The name in the data is exactly you write it "နေပြည်တော်" (I do not have a font to display it, but a Ctrl+F search helps). That is the most important part. Which font the renderer (the programs which create the maps) uses is up to them. And there are many maps made of OpenStreetMap data.</p>
+<p>Thank you for those image links (in your comments above). So you are speaking of: <a href="https://www.openstreetmap.org/browse/node/315390382">object</a>/<a href="https://www.openstreetmap.org/#map=11/19.7405/96.1359">location on map</a>. The name in the data is exactly you write it "နေပြည်တော်" (I do not have a font to display it, but a Ctrl+F search helps). That is the most important part. Which font the renderer (the programs which create the maps) uses is up to them. And there are many maps made of OpenStreetMap data.</p>
 <p>Half-way officially by of OSM.org itself is the mapnik standard style (of which you took the screenshot and to which I linked). If it is clearly a wrong font, maybe we could have it changed. But your explanations sound like there is some dispute about what is the "correct" font, right? Maybe it was already discussed somewhere which one to use. To change it (as I understand it) this has to be discussed <span>somewhere</span> (maybe mailing list or forum) and if it is clear that the style should be changed you can ask the developers of it to make the change. Getting in touch with the <span>WikiProject Myanmar</span> (see the history of the page to see who edited) or just write on the talk page.</p>
 </div>
 <div class="answer-controls post-controls">

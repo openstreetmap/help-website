@@ -178,12 +178,12 @@ One Answer:
 <li>browse the map</li>
 <li>available on windows with new maps</li>
 </ul>
-<p>Thus if you filter the <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">desktop software</a> you will find some candidates that are known to work for the most people:</p>
+<p>Thus if you filter the <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">desktop software</a> you will find some candidates that are known to work for the most people:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/MapFactor_Navigator_Free">Mapfactor free</a> - not FLOSS but more user friendly?</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/NaviPOWM">Navipown</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Navit">Navit</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/MapFactor_Navigator_Free">Mapfactor free</a> - not FLOSS but more user friendly?</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/NaviPOWM">Navipown</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Navit">Navit</a></li>
 </ul>
 <p>This is a subjective selection, also I hope that I didn't miss any important candidate.<br />
 Please keep in mind, that most FLOSS tools (esp. Navit) need some time for setup to work properly and it's usability is ...moderate. Anyway I can tell that they are able to do the job :)</p>

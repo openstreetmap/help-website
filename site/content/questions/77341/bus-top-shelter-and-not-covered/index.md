@@ -182,9 +182,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think a shelter is something like this</p>
-<p><img src="https://help.openstreetmap.org/upfiles/West-Hollywood-Smart-Bus-Shelter-Photo-Jon-Viscott.jpg" /></p>
+<p><img src="/upfiles/West-Hollywood-Smart-Bus-Shelter-Photo-Jon-Viscott.jpg" /></p>
 <p>while a covered bus stop would be something like this</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-11-01-13-45-07-622_com.google.android.apps.maps.jpg" /></p>
+<p><img src="/upfiles/Screenshot_2020-11-01-13-45-07-622_com.google.android.apps.maps.jpg" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

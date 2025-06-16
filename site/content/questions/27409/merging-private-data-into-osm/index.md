@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Do you mean something like <a href="http://www.geofabrik.de/en/projects/separatedata/index.html">this usecase</a>?</p>
-<p>Then consult the guys from geofabrik.de or maybe any other "professional" <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">provider</a>.</p>
+<p>Then consult the guys from geofabrik.de or maybe any other "professional" <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">provider</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

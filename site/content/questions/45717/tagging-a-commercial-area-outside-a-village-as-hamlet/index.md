@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When looking at the area surrounding the Leipzig/Halle airport, I noticed that the commercial area outside of Zwochau is tagged with <code>place=hamlet</code> and <code>name=Gewerbegebiet Zwochau</code> (<a href="http://www.openstreetmap.org/#map=16/51.4621/12.2540">see here</a>). However, although it lies outside the village, it appears to be the only commercial or industrial area within 5 miles around the airport tagged in such a way. Is this a generally acceptable tagging scheme, or should it be done differently? If yes, how?</p>
+<p>When looking at the area surrounding the Leipzig/Halle airport, I noticed that the commercial area outside of Zwochau is tagged with <code>place=hamlet</code> and <code>name=Gewerbegebiet Zwochau</code> (<a href="https://www.openstreetmap.org/#map=16/51.4621/12.2540">see here</a>). However, although it lies outside the village, it appears to be the only commercial or industrial area within 5 miles around the airport tagged in such a way. Is this a generally acceptable tagging scheme, or should it be done differently? If yes, how?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-commercial" rel="tag" title="see questions tagged &#39;commercial&#39;">commercial</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-hamlet" rel="tag" title="see questions tagged &#39;hamlet&#39;">hamlet</span>

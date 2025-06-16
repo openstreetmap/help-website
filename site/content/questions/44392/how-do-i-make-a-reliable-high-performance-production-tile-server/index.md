@@ -220,7 +220,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Well, this doesn't seem to be an FAQ about OSM, but a need for server experts.</p>
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> for instant advices.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> for instant advices.</p>
 <p>After own internet seraching I only found:</p>
 <p><a href="http://www.geofabrik.de/media/2012-09-08-osm2pgsql-performance.pdf">http://www.geofabrik.de/media/2012-09-08-osm2pgsql-performance.pdf</a></p>
 <p>Some server hardware stuff is mentioned there.</p>

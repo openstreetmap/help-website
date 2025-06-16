@@ -73,7 +73,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/75719/how-to-measure-the-heavy-use-of-osm-as-per-osm-policy">https://help.openstreetmap.org/questions/75719/how-to-measure-the-heavy-use-of-osm-as-per-osm-policy</a></p>
+<p>See also <a href="/questions/75719/how-to-measure-the-heavy-use-of-osm-as-per-osm-policy">https://help.openstreetmap.org/questions/75719/how-to-measure-the-heavy-use-of-osm-as-per-osm-policy</a></p>
 </div>
 <div id="comment-75726-info" class="comment-info">
 <span class="comment-age">(15 Jul '20, 15:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

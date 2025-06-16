@@ -39,10 +39,10 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Imagine that I'm trying to fix the duplicate tram stop nodes at <a href="http://www.openstreetmap.org/browse/node/30877311">Failsworth</a>. In JOSM I can select "download from OSM" and can search for Failsworth, and download the area around it.</p>
+<p>Imagine that I'm trying to fix the duplicate tram stop nodes at <a href="https://www.openstreetmap.org/browse/node/30877311">Failsworth</a>. In JOSM I can select "download from OSM" and can search for Failsworth, and download the area around it.</p>
 <p>Then if I select a small area around the tram stop and select "validation" I can see that 2 "nodes at the same position",. I can then manually check the tags of each and see that the newer node is an identical copy of the older one, but with one (valid) extra tag, and not a member of the relations that it should be. I'd like to merge them (delete the newer node and add new tag to the older node).</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM Validator</a> page suggests that it should be able to fix this automatically, but "Fix" for some reason is greyed out:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm_01006.png" alt="Fix greyed out in JOSM validator for duplicate nodes" /></p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM Validator</a> page suggests that it should be able to fix this automatically, but "Fix" for some reason is greyed out:</p>
+<p><img src="/upfiles/josm_01006.png" alt="Fix greyed out in JOSM validator for duplicate nodes" /></p>
 <p>Is there any reason for this?</p>
 <p>(this is with the current stable JOSM of 6115)</p>
 </div>
@@ -142,7 +142,7 @@ One Answer:
 <p>You should review each case and merge or separate the nodes according each node tags. In this case, the solution would be "merge".</p>
 <p>In JOSM, click twice over the validator item ("2 nodes:..." in this case) then press the "3" key ("Zoom to Selection"), then the "M" key ("Merge nodes").</p>
 <p>JOSM does not enable the "Fix" button if there is the possibility of more than one correct way to fix the problem reported.</p>
-<p>This problem ("Nodes as same position") is very common when ways are accidentally unglued from each other. See, for example, my answer for the recent <a href="https://help.openstreetmap.org/questions/26515/ungrouping-separating-objects">question</a> on way/area ungrouping.</p>
+<p>This problem ("Nodes as same position") is very common when ways are accidentally unglued from each other. See, for example, my answer for the recent <a href="/questions/26515/ungrouping-separating-objects">question</a> on way/area ungrouping.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-46362-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>yup its not, it is related to railsport, and tags are for josm and railsport as well. I've managed to fix it however. The URL to tile server was wrong. Solution is here: <a href="http://help.openstreetmap.org/questions/36946/set-railsport-and-josm-to-use-local-tile-">http://help.openstreetmap.org/questions/36946/set-railsport-and-josm-to-use-local-tile-</a></p>
+<p>yup its not, it is related to railsport, and tags are for josm and railsport as well. I've managed to fix it however. The URL to tile server was wrong. Solution is here: <a href="/questions/36946/set-railsport-and-josm-to-use-local-tile-">https://help.openstreetmap.org/questions/36946/set-railsport-and-josm-to-use-local-tile-</a></p>
 </div>
 <div id="comment-46362-info" class="comment-info">
 <span class="comment-age">(03 Nov '15, 12:22)</span> <span class="comment-user userinfo">jorax</span>
@@ -140,7 +140,7 @@ One Answer:
 <div class="answer-body">
 <p>Ad 2. how to change visible layer in JOSM: use blue '+' button on right border of screen.</p>
 <p><img src="/upfiles/Untitled_kHiamIu.png" alt="screenshot of JOSM&#39;s download area selection window" /></p>
-<p>Concerning synchronizing databases this is the solution: <a href="http://wiki.openstreetmap.org/wiki/Minutely_Mapnik">http://wiki.openstreetmap.org/wiki/Minutely_Mapnik</a></p>
+<p>Concerning synchronizing databases this is the solution: <a href="https://wiki.openstreetmap.org/wiki/Minutely_Mapnik">https://wiki.openstreetmap.org/wiki/Minutely_Mapnik</a></p>
 <p>Basically the idea is to set osmosis to download replication files from given server and then osm2pgsql should upload those changes to gis. But i use both manually through terminal.</p>
 <p>How can I execute them automatically?</p>
 </div>

@@ -77,7 +77,7 @@ osqa_accepted = true
 <div id="post-12172-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=32.9182684421539&amp;lon=35.2025127410889&amp;zoom=15">http://www.openstreetmap.org/?lat=32.9182684421539&amp;lon=35.2025127410889&amp;zoom=15</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=32.9182684421539&amp;lon=35.2025127410889&amp;zoom=15">https://www.openstreetmap.org/?lat=32.9182684421539&amp;lon=35.2025127410889&amp;zoom=15</a></p>
 <p>I'll explain, at the top you can see the name "Akhihud Forest" (יער אחיהוד) which is too long for a label. To the right there's "Misgav Regional Council" (מועצה אזורית משגב) again, too long...</p>
 <p>They both appear the same: Forest Akhihud</p>
 <p>Council Regional Misgav (Opposite order)</p>

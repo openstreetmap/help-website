@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi</p>
-<p>TLDR, I think my question below has possibly been answered <a href="https://help.openstreetmap.org/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis">here</a> but it's too technical for me to understand.</p>
+<p>TLDR, I think my question below has possibly been answered <a href="/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis">here</a> but it's too technical for me to understand.</p>
 <p>I would like to get the lat-long of some POIs in csv format so I can compare them with a published dataset using Excel (that's all I can manage!)</p>
 <p>I get the following result with Overpass Turbo:</p>
 <pre><code>&quot;elements&quot;: [

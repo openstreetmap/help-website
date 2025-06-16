@@ -125,7 +125,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For voting simply click on the <em>thumbs</em> (<img src="http://help.openstreetmap.org/m/default/media/images/vote-arrow-up.png" alt="up" /> and <img src="https://help.openstreetmap.org/m/default/media/images/vote-arrow-down.png" alt="down" />) left to the question/answer. You can also award some of <em>your</em> points via the <em>award points</em> link but this is rarely done.</p>
+<p>For voting simply click on the <em>thumbs</em> (<img src="https://help.openstreetmap.org/m/default/media/images/vote-arrow-up.png" alt="up" /> and <img src="https://help.openstreetmap.org/m/default/media/images/vote-arrow-down.png" alt="down" />) left to the question/answer. You can also award some of <em>your</em> points via the <em>award points</em> link but this is rarely done.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

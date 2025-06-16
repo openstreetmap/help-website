@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a> - I've also added changeset discussion entries to some of their edits and I guess we should revert unless they come back with a solid explanation.</p>
+<p>See <a href="/questions/216/what-should-i-do-about-vandalism">What should I do about vandalism?</a> - I've also added changeset discussion entries to some of their edits and I guess we should revert unless they come back with a solid explanation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

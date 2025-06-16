@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I can't help with the specific question being asked, but in terms of using offline data...</p>
-<p>You'll find the whole world data from the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet Snapshots</a> taken weekly. This is the raw OSM data with all change sets being applied.</p>
+<p>You'll find the whole world data from the <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet Snapshots</a> taken weekly. This is the raw OSM data with all change sets being applied.</p>
 <p><a href="http://osmand.net/">OsmAnd</a> is a free Android app that can provide routing information and while downloads are broken up by state/province the whole world could be downloaded.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -125,7 +125,7 @@ One Answer:
 <div id="post-19640-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In addition, if you're going to use <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's algorithm</a> then I'd imagine you'll want to convert OSM ways and nodes into a graph of linked nodes as well. There's a discussion of that <a href="http://help.openstreetmap.org/questions/19213/osm-xml-into-graph/19214">here</a>.</p>
+<p>In addition, if you're going to use <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's algorithm</a> then I'd imagine you'll want to convert OSM ways and nodes into a graph of linked nodes as well. There's a discussion of that <a href="/questions/19213/osm-xml-into-graph/19214">here</a>.</p>
 </div>
 <div id="comment-19640-info" class="comment-info">
 <span class="comment-age">(06 Feb '13, 21:54)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -148,7 +148,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>... and also have a look at <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></p>
+<p>... and also have a look at <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a></p>
 </div>
 <div id="comment-19718-info" class="comment-info">
 <span class="comment-age">(07 Feb '13, 22:47)</span> <span class="comment-user userinfo">stephan75</span>

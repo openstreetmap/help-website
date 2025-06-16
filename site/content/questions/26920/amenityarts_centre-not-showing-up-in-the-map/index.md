@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] amenity=arts_centre not showing up in the map"
-description = '''I have added a single node on a map, it&#x27;s over a building, and tagged it as amenity=arts_centre. I used the latest JOSM. The node is not showing on the map... here is the link: http://www.openstreetmap.org/#map=18/43.83243/13.04435 A similar node over the nearby building is correctly shown (the node...'''
+description = '''I have added a single node on a map, it&#x27;s over a building, and tagged it as amenity=arts_centre. I used the latest JOSM. The node is not showing on the map... here is the link: https://www.openstreetmap.org/#map=18/43.83243/13.04435 A similar node over the nearby building is correctly shown (the node...'''
 date = "2013-10-03T10:05:00Z"
 lastmod = "2013-10-03T10:35:00Z"
 weight = 26920
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have added a single node on a map, it's over a building, and tagged it as amenity=arts_centre. I used the latest JOSM. The node is not showing on the map... here is the link:</p>
-<p><a href="http://www.openstreetmap.org/#map=18/43.83243/13.04435">http://www.openstreetmap.org/#map=18/43.83243/13.04435</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/43.83243/13.04435">https://www.openstreetmap.org/#map=18/43.83243/13.04435</a></p>
 <p>A similar node over the nearby building is correctly shown (the node for the postal office), whereas the arts_centre isn't. What did I make wrong? Thanks! -Fabrizio</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Enter "map style" in the search box above and read some of the responses. Especially, read the answer to <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>. The short answer is that not everything is shown on the default map and that's normal!</p>
+<p>Enter "map style" in the search box above and read some of the responses. Especially, read the answer to <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>. The short answer is that not everything is shown on the default map and that's normal!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

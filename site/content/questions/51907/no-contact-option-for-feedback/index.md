@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-51915-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/8973/chuparuedas">@Chuparuedas</a>: please could you ask another question entry here on this site (if you cannot find an older question about the same topic) for your second question (and then delete the text part here)? Thank you!</p>
+<p>meta <a href="https://help.openstreetmap.org/users/8973/chuparuedas">@Chuparuedas</a>: please could you ask another question entry here on this site (if you cannot find an older question about the same topic) for your second question (and then delete the text part here)? Thank you!</p>
 </div>
 <div id="comment-51915-info" class="comment-info">
 <span class="comment-age">(05 Sep '16, 21:05)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

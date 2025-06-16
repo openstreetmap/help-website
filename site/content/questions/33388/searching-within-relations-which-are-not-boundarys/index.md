@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Searching within relations which are not boundarys."
-description = '''One can search withing relations like this: node(area:3600062422)[&quot;addr:city&quot;]; out meta; But this does only work for boundary relations because they are preprocessed by the overpass api. How to search within other relations like this one: http://www.openstreetmap.org/relation/3734750'''
+description = '''One can search withing relations like this: node(area:3600062422)[&quot;addr:city&quot;]; out meta; But this does only work for boundary relations because they are preprocessed by the overpass api. How to search within other relations like this one: https://www.openstreetmap.org/relation/3734750'''
 date = "2014-05-22T22:36:00Z"
 lastmod = "2014-05-26T18:49:00Z"
 weight = 33388
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>One can search withing relations like this:</p>
 <p><code>node(area:3600062422)["addr:city"]; out meta;</code></p>
-<p>But this does only work for boundary relations because they are preprocessed by the overpass api. How to search within other relations like this one: <a href="http://www.openstreetmap.org/relation/3734750">http://www.openstreetmap.org/relation/3734750</a></p>
+<p>But this does only work for boundary relations because they are preprocessed by the overpass api. How to search within other relations like this one: <a href="https://www.openstreetmap.org/relation/3734750">https://www.openstreetmap.org/relation/3734750</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span> <span class="post-tag tag-link-overpass-api" rel="tag" title="see questions tagged &#39;overpass-api&#39;">overpass-api</span>
@@ -63,7 +63,7 @@ osqa_accepted = true
 <div id="post-33434-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In case of no sufficient answer here, try to ask at the discussion page in the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">http://wiki.openstreetmap.org/wiki/Overpass_turbo</a></p>
+<p>In case of no sufficient answer here, try to ask at the discussion page in the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">https://wiki.openstreetmap.org/wiki/Overpass_turbo</a></p>
 </div>
 <div id="comment-33434-info" class="comment-info">
 <span class="comment-age">(23 May '14, 17:14)</span> <span class="comment-user userinfo">stephan75</span>

@@ -161,7 +161,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have used a few Garmin GPSes but not a Dakota. Many of the them have map settings to modify the detail shown. Look at the map/ settings and see if there are any options you can try. Please let us know if they solve the problem. There seems to be a few websites that are offering PDF manuals of older devices, even if Garmin no longer host them. You could even ask Garmin for advice. Later devices:-</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Shading_Etrex.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Shading_Etrex.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

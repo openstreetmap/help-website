@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "GPS device taking pictures and saving orientation+HDOP ?"
-description = '''Following this question: http://help.openstreetmap.org/questions/4040/hdop-in-gpx-which-device-can-do-it and this list: http://wiki.openstreetmap.org/wiki/GPS_Reviews What are the existing devices that can do all of the following:  Take picture Save lat-long position + orientation (angle to North) o...'''
+description = '''Following this question: https://help.openstreetmap.org/questions/4040/hdop-in-gpx-which-device-can-do-it and this list: https://wiki.openstreetmap.org/wiki/GPS_Reviews What are the existing devices that can do all of the following:  Take picture Save lat-long position + orientation (angle to North) o...'''
 date = "2012-03-14T16:45:00Z"
 lastmod = "2012-03-15T00:37:00Z"
 weight = 11200
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Following this question: <a href="http://help.openstreetmap.org/questions/4040/hdop-in-gpx-which-device-can-do-it">http://help.openstreetmap.org/questions/4040/hdop-in-gpx-which-device-can-do-it</a> and this list: <a href="http://wiki.openstreetmap.org/wiki/GPS_Reviews">http://wiki.openstreetmap.org/wiki/GPS_Reviews</a></p>
+<p>Following this question: <a href="/questions/4040/hdop-in-gpx-which-device-can-do-it">https://help.openstreetmap.org/questions/4040/hdop-in-gpx-which-device-can-do-it</a> and this list: <a href="https://wiki.openstreetmap.org/wiki/GPS_Reviews">https://wiki.openstreetmap.org/wiki/GPS_Reviews</a></p>
 <p>What are the existing devices that can do all of the following:</p>
 <ul>
 <li>Take picture</li>
@@ -48,7 +48,7 @@ osqa_accepted = false
 <li>If possible: display OSM tiles (better if I can put my own ones)</li>
 </ul>
 <p>Ideally HDOP and the like should go into both exif of the pictures and gpx track, but post-processing (gpscorrelate or the like) is OK.</p>
-<p>I would need to know this ASAP to buy the device and learn how to use it: it's for an 80-day alpine mapping party, starting early June 2012! See here: <a href="http://wiki.openstreetmap.org/wiki/ViaAlpina">http://wiki.openstreetmap.org/wiki/ViaAlpina</a></p>
+<p>I would need to know this ASAP to buy the device and learn how to use it: it's for an 80-day alpine mapping party, starting early June 2012! See here: <a href="https://wiki.openstreetmap.org/wiki/ViaAlpina">https://wiki.openstreetmap.org/wiki/ViaAlpina</a></p>
 <p>Thanks! Mayeul</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I've just created a new tile server but my tiles looks like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2019-09-12_at_14.57.54.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2019-09-12_at_14.57.54.png" alt="alt text" /></p>
 <p>What am I missing?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

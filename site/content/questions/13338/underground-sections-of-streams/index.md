@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Underground sections of Streams"
-description = '''Should I draw in underground sections (50 meter or longer) as tunnel=culvert or just not map at all. Will the stream if mapped as tunnel=culvert then get rendered as a normal stream? If so it will look wrong. see other Q http://help.openstreetmap.org/questions/1181/should-i-map-underground-water-tun...'''
+description = '''Should I draw in underground sections (50 meter or longer) as tunnel=culvert or just not map at all. Will the stream if mapped as tunnel=culvert then get rendered as a normal stream? If so it will look wrong. see other Q https://help.openstreetmap.org/questions/1181/should-i-map-underground-water-tun...'''
 date = "2012-06-08T08:35:00Z"
 lastmod = "2012-06-14T17:54:00Z"
 weight = 13338
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Should I draw in underground sections (50 meter or longer) as tunnel=culvert or just not map at all. Will the stream if mapped as tunnel=culvert then get rendered as a normal stream? If so it will look wrong. see other Q <a href="http://help.openstreetmap.org/questions/1181/should-i-map-underground-water-tunnels">http://help.openstreetmap.org/questions/1181/should-i-map-underground-water-tunnels</a></p>
+<p>Should I draw in underground sections (50 meter or longer) as tunnel=culvert or just not map at all. Will the stream if mapped as tunnel=culvert then get rendered as a normal stream? If so it will look wrong. see other Q <a href="/questions/1181/should-i-map-underground-water-tunnels">https://help.openstreetmap.org/questions/1181/should-i-map-underground-water-tunnels</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-underground" rel="tag" title="see questions tagged &#39;underground&#39;">underground</span> <span class="post-tag tag-link-stream" rel="tag" title="see questions tagged &#39;stream&#39;">stream</span>
@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should describe the feature as best you can, using existing, well-used tags where possible. If this results in an odd rendering, this is a <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">problem with that render, not your mapping</a>. Indeed, if you omit detail like this because of an odd rendering result, the rendering will never get fixed because its developers won't have an example to work from.</p>
+<p>You should describe the feature as best you can, using existing, well-used tags where possible. If this results in an odd rendering, this is a <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">problem with that render, not your mapping</a>. Indeed, if you omit detail like this because of an odd rendering result, the rendering will never get fixed because its developers won't have an example to work from.</p>
 <p>So yes, map the stream in its culvert wherever possible.</p>
 </div>
 <div class="answer-controls post-controls">

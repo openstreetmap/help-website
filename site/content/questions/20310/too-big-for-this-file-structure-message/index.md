@@ -117,7 +117,7 @@ This question is marked "community wiki".
 <ul>
 <li>Format your SD card with <a href="http://en.wikipedia.org/wiki/Ext2">Ext2/3/4</a> or <a href="http://en.wikipedia.org/wiki/Ntfs">Ntfs</a>. The problem with that is that your Garmin device is likely to only support FAT32 filesystems.</li>
 <li>Use multiple smaller gmappsupp.img files, each showing a smaller area of the world. One advantage of this is that you can deactivate some of the map files, so that your device will feel faster. Another advantage is that you do not have to redownload the full 6GB if you just want an update of your area.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mkgmap">Generate</a> a smaller map file, by removing some features. This is more technical, but can be an interesting solution.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mkgmap">Generate</a> a smaller map file, by removing some features. This is more technical, but can be an interesting solution.</li>
 </ul>
 <p>Concerning the "gmappsupp.img is a disk image file" question, this is just Windows's silly habit of guessing a file's type from its name. Ignore it.</p>
 </div>

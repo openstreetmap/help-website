@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In general, if you are seeing problems with any of the openstreetmap.org services, check <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a> for any known issues. Then, use <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> to ask others if they see similar problems and/or contact the admins.</p>
+<p>In general, if you are seeing problems with any of the openstreetmap.org services, check <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a> for any known issues. Then, use <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> to ask others if they see similar problems and/or contact the admins.</p>
 <p>This forum is unsuitable for the discussion of particular, temporary service interruptions.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -184,7 +184,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Thirsday night into this Wednesday morning the openstreetmap.org website was not working at all (but it is working now)</p>
 <p>What the problem was is that when I clicked the save button in the "Save Changes Dialog Box" it had been doing the endless moving of the circle "prossesing" icon but it was not saving (the server hung up and/or had crashed)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
 </div>
 <div id="comment-17163-info" class="comment-info">
 <span class="comment-age">(24 Oct '12, 18:21)</span> <span class="comment-user userinfo">William_Jone...</span>
@@ -281,7 +281,7 @@ osqa_accepted = false
 <div id="post-78778-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've converted this to a question at <a href="https://help.openstreetmap.org/questions/78774/changes-in-openstreetmap-not-appearing-in-mapcarta?page=1&amp;focusedAnswerId=78777#78777">https://help.openstreetmap.org/questions/78774/changes-in-openstreetmap-not-appearing-in-mapcarta?page=1&amp;focusedAnswerId=78777#78777</a> . It's not an answer to this question (and doesn't actually seem to be related to it in any way).</p>
+<p>I've converted this to a question at <a href="/questions/78774/changes-in-openstreetmap-not-appearing-in-mapcarta?page=1&amp;focusedAnswerId=78777#78777">https://help.openstreetmap.org/questions/78774/changes-in-openstreetmap-not-appearing-in-mapcarta?page=1&amp;focusedAnswerId=78777#78777</a> . It's not an answer to this question (and doesn't actually seem to be related to it in any way).</p>
 </div>
 <div id="comment-78778-info" class="comment-info">
 <span class="comment-age">(10 Feb '21, 14:00)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

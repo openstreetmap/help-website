@@ -83,7 +83,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Is <a href="http://www.openstreetmap.org/?lat=53.3541&amp;lon=7.214&amp;zoom=12&amp;layers=M">this</a> the Emden that you're talking about? Although it's possible that both imagery such as Bing and GPS traces can be offset, a quick look at Emden suggests that it doesn't seem too far out. Could you post a link (the "Permalink" button at the bottom-right in view mode) to the place that's wrong?</p>
+<p>Is <a href="https://www.openstreetmap.org/?lat=53.3541&amp;lon=7.214&amp;zoom=12&amp;layers=M">this</a> the Emden that you're talking about? Although it's possible that both imagery such as Bing and GPS traces can be offset, a quick look at Emden suggests that it doesn't seem too far out. Could you post a link (the "Permalink" button at the bottom-right in view mode) to the place that's wrong?</p>
 </div>
 <div id="comment-11888-info" class="comment-info">
 <span class="comment-age">(11 Apr '12, 00:24)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -139,7 +139,7 @@ osqa_accepted = false
 <div id="post-12190-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Looking at the harbor area it looks like Bing is generally west of the OSM data. Setting an offset of Easting 15.0 Northing 0 makes many things align better. See fore example way <a href="http://www.openstreetmap.org/browse/way/28544821">http://www.openstreetmap.org/browse/way/28544821</a> and the surroundings. But I don't know the area so I can't tell what is correct.</p>
+<p>Looking at the harbor area it looks like Bing is generally west of the OSM data. Setting an offset of Easting 15.0 Northing 0 makes many things align better. See fore example way <a href="https://www.openstreetmap.org/browse/way/28544821">https://www.openstreetmap.org/browse/way/28544821</a> and the surroundings. But I don't know the area so I can't tell what is correct.</p>
 </div>
 <div id="comment-12190-info" class="comment-info">
 <span class="comment-age">(19 Apr '12, 23:57)</span> <span class="comment-user userinfo">gnurk</span>
@@ -207,7 +207,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The approximate offset can be found by looking at GPS traces and GPS waypoints made over time (and objects drawn from them without using sat images). There definitely are offsets in some Bing images - everyone can't reasonably have the same systematical errors in their GPS traces year after year. The hard thing may be to find out which ways have been entered in OSM using Bing, and which one have been entered just from GPS traces - especially if the mappers haven't used the source=Bing tag.</p>
 <p>There is a wiki page about this challenging problem:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">http://wiki.openstreetmap.org/wiki/True_Offset_Process</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">https://wiki.openstreetmap.org/wiki/True_Offset_Process</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -279,7 +279,7 @@ osqa_accepted = false
 <li>Click "more details"</li>
 <li>Click "View History" at the bottom of the new page that's displayed</li>
 </ol>
-<p>You'll get a page like <a href="http://www.openstreetmap.org/browse/way/51162495/history">this</a>.</p>
+<p>You'll get a page like <a href="https://www.openstreetmap.org/browse/way/51162495/history">this</a>.</p>
 <p>or, from view mode:</p>
 <ol>
 <li>Hover the mouse over "Edit" and select "View Map Data"</li>

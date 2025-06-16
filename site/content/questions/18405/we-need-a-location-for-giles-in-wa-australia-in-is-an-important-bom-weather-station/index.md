@@ -63,7 +63,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Perhaps you could explain your problem in a bit more detail?</p>
-<p>The first <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> search result for "Giles Western Australia" is the <a href="http://www.openstreetmap.org/?lat=-25.033097&amp;lon=128.302441&amp;zoom=18&amp;layers=M">weather station</a>, so presumably you've found that OK?</p>
+<p>The first <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> search result for "Giles Western Australia" is the <a href="https://www.openstreetmap.org/?lat=-25.033097&amp;lon=128.302441&amp;zoom=18&amp;layers=M">weather station</a>, so presumably you've found that OK?</p>
 </div>
 <div id="comment-18406-info" class="comment-info">
 <span class="comment-age">(13 Dec '12, 00:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi <span>@Spelio</span> and <span>@richard</span>, Giles is not a location but a Meteorological Station in Western Australia and so would be difficult to find in most map search engines. It is actually in the community of Warakurna which has three distinct areas of the aboriginal settlement, the weather station and the roadhouse close to the Gunbarrel Highway (because it is as straight as a Gunbarrel). OSM has it well documented <a href="http://www.openstreetmap.org/node/1999556576#map=16/-25.0385/128.3034">here</a> . To drive the Gunbarrel, takes about 3 to 4 days and needs you to report into the police station at both ends. When you pass a car in the opposite direction you stop and brew a tea! We haven't started discussing the roads off the highway.</p>
+<p>Hi <span>@Spelio</span> and <span>@richard</span>, Giles is not a location but a Meteorological Station in Western Australia and so would be difficult to find in most map search engines. It is actually in the community of Warakurna which has three distinct areas of the aboriginal settlement, the weather station and the roadhouse close to the Gunbarrel Highway (because it is as straight as a Gunbarrel). OSM has it well documented <a href="https://www.openstreetmap.org/node/1999556576#map=16/-25.0385/128.3034">here</a> . To drive the Gunbarrel, takes about 3 to 4 days and needs you to report into the police station at both ends. When you pass a car in the opposite direction you stop and brew a tea! We haven't started discussing the roads off the highway.</p>
 <p>The issue with mapping remote parts of Australia is that you will find that dirt highways, farmers tracks, fire breaks, grader lines around old fires and mining tracks all look the same and you don't want to send someone down a grader track that was used once three years ago to access a lightning strike that started a bushfire that has never been used again.</p>
 </div>
 <div class="answer-controls post-controls">

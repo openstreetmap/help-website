@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Islands lost in transition"
-description = '''There were some islands in this channel some weeks ago. Assume they have disappeared in the transition process while moving objects from coastline to other data layers. http://www.openstreetmap.org/#map=11/-8.0263/138.7951 Thanks for the answer.'''
+description = '''There were some islands in this channel some weeks ago. Assume they have disappeared in the transition process while moving objects from coastline to other data layers. https://www.openstreetmap.org/#map=11/-8.0263/138.7951 Thanks for the answer.'''
 date = "2013-10-28T08:44:00Z"
 lastmod = "2013-10-30T20:56:00Z"
 weight = 27547
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>There were some islands in this channel some weeks ago. Assume they have disappeared in the transition process while moving objects from coastline to other data layers.<br />
-<a href="http://www.openstreetmap.org/#map=11/-8.0263/138.7951">http://www.openstreetmap.org/#map=11/-8.0263/138.7951</a></p>
+<a href="https://www.openstreetmap.org/#map=11/-8.0263/138.7951">https://www.openstreetmap.org/#map=11/-8.0263/138.7951</a></p>
 <p>Thanks for the answer.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

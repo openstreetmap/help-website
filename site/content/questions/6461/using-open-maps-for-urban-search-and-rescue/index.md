@@ -174,12 +174,12 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a number of ways you can do this. There is an in-built grid division in the way map <a href="http://wiki.openstreetmap.org/wiki/Tiles">tiles</a> are served up. I think it's rather elegant and simple to make use of this. For example a tile with coordinates 130994,87124 can be opened in the browser at this URL: <a href="http://tile.openstreetmap.org/18/130994/87124.png">http://tile.openstreetmap.org/18/130994/87124.png</a><br />
+<p>There is a number of ways you can do this. There is an in-built grid division in the way map <a href="https://wiki.openstreetmap.org/wiki/Tiles">tiles</a> are served up. I think it's rather elegant and simple to make use of this. For example a tile with coordinates 130994,87124 can be opened in the browser at this URL: <a href="http://tile.openstreetmap.org/18/130994/87124.png">http://tile.openstreetmap.org/18/130994/87124.png</a><br />
 </p>
 <p>The '18' in this URL is the zoom level.</p>
 <p>CloudMade do a diddy <a href="http://tile.cloudmade.com/fd093e52f0965d46bb1c6c6281022199/1/64/18/130994/87124.png">64x64px version of tiles following the same coordinate scheme</a>.</p>
-<p>You should take a look at the <a href="http://wiki.openstreetmap.org/wiki/QualityStreetMap">QualityStreetMap</a> tool, which uses tile coordinates, and has a selecting interface. In fact it has an open tagging scheme which you could perhaps just use directly for tracking your searches. Job done! However you'd probably want to look at installing it on your own server.</p>
-<p>Another tool which does interesting grid things is <a href="http://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a>. Grid lines drawn on the PDF output maps.</p>
+<p>You should take a look at the <a href="https://wiki.openstreetmap.org/wiki/QualityStreetMap">QualityStreetMap</a> tool, which uses tile coordinates, and has a selecting interface. In fact it has an open tagging scheme which you could perhaps just use directly for tracking your searches. Job done! However you'd probably want to look at installing it on your own server.</p>
+<p>Another tool which does interesting grid things is <a href="https://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a>. Grid lines drawn on the PDF output maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -146,7 +146,7 @@ One Answer:
 <div id="post-46109-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi guys, heres the context <a href="http://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation">http://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation</a> ,our own OSM Wiki. It all comes down to the meaning of the English words. It seems that Nordic_ski gets or has the meaning of beiing made for the "German Langlaufloipe", Nordic skies are narrower than Telemark types but they use the same kind of bindings. Thats why I asked the question since the Wiki denies the similarity.</p>
+<p>Hi guys, heres the context <a href="https://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation">https://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation</a> ,our own OSM Wiki. It all comes down to the meaning of the English words. It seems that Nordic_ski gets or has the meaning of beiing made for the "German Langlaufloipe", Nordic skies are narrower than Telemark types but they use the same kind of bindings. Thats why I asked the question since the Wiki denies the similarity.</p>
 </div>
 <div id="comment-46109-info" class="comment-info">
 <span class="comment-age">(25 Oct '15, 20:21)</span> <span class="comment-user userinfo">Hendrikklaas</span>

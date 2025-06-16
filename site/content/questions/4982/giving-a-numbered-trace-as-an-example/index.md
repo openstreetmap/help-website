@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do you mean one of your .gpx uploaded traces, like <a href="http://www.openstreetmap.org/user/EdLoach/traces/896103">this one</a>? If so you can probably just quote the URL which in this example was <a href="http://www.openstreetmap.org/user/EdLoach/traces/896103">http://www.openstreetmap.org/user/EdLoach/traces/896103</a></p>
+<p>Do you mean one of your .gpx uploaded traces, like <a href="https://www.openstreetmap.org/user/EdLoach/traces/896103">this one</a>? If so you can probably just quote the URL which in this example was <a href="https://www.openstreetmap.org/user/EdLoach/traces/896103">https://www.openstreetmap.org/user/EdLoach/traces/896103</a></p>
 <p>I haven't tested whether the traces have to be public/identifiable/whatever for this to work; mine are all identifiable if it helps?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -136,7 +136,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>The traces need to be not private. If it helps, here's one that's "public":</p>
-<p><a href="http://www.openstreetmap.org/user/SomeoneElse/traces/909159">http://www.openstreetmap.org/user/SomeoneElse/traces/909159</a></p>
+<p><a href="https://www.openstreetmap.org/user/SomeoneElse/traces/909159">https://www.openstreetmap.org/user/SomeoneElse/traces/909159</a></p>
 </div>
 <div id="comment-4989-info" class="comment-info">
 <span class="comment-age">(04 May '11, 15:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

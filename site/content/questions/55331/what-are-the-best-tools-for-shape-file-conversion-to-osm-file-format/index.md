@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please understand that we have rules that must be followed for data imports, see <a href="http://wiki.openstreetmap.org/wiki/Import">http://wiki.openstreetmap.org/wiki/Import</a> for details. Under no circumstances should you simply convert a shape file from any external source and upload it to OpenStreetMap without prior discussion. Among other things, such discussion will help you ensure the license is compatible and the tagging is useful.</p>
+<p>Please understand that we have rules that must be followed for data imports, see <a href="https://wiki.openstreetmap.org/wiki/Import">https://wiki.openstreetmap.org/wiki/Import</a> for details. Under no circumstances should you simply convert a shape file from any external source and upload it to OpenStreetMap without prior discussion. Among other things, such discussion will help you ensure the license is compatible and the tagging is useful.</p>
 <p>Having said that, there are a couple of command line tools (shp2osm, polyshp2osm) and there's also the "OpenData" plugin for JOSM that allows you to open shape files in the editor. If you are specifically talking about shape files obtained from HERE and you want to use them to run OSM software with them, try the "Morituri" converter from <a href="https://github.com/knowname/morituri">https://github.com/knowname/morituri</a> .</p>
 </div>
 <div class="answer-controls post-controls">

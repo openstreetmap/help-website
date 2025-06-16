@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can download admin boundaries through the <a href="https://osm.wno-edv-service.de/boundaries/">Boundaries tool</a> in several formats Umap can read.</p>
-<p>Here's help on <a href="https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">how to download a relation as GPX</a>, which is ok for Umap</p>
+<p>Here's help on <a href="/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">how to download a relation as GPX</a>, which is ok for Umap</p>
 <p>And you could even have <a href="http://www.mappa-mercia.org/2014/09/creating-an-always-up-to-date-map.html">a live link to the OSM database using Overpass Turbo</a>, but that's not really necesary - and sometimes rather slow.</p>
 </div>
 <div class="answer-controls post-controls">

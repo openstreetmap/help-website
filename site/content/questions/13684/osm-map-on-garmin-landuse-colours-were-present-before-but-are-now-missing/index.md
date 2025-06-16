@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-13687-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Do you mean <a href="http://www.openstreetmap.org/?mlat=-13.33333&amp;mlon=48.25&amp;zoom=12">this</a> Nosy Be?</p>
+<p>Do you mean <a href="https://www.openstreetmap.org/?mlat=-13.33333&amp;mlon=48.25&amp;zoom=12">this</a> Nosy Be?</p>
 </div>
 <div id="comment-13687-info" class="comment-info">
 <span class="comment-age">(21 Jun '12, 14:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -147,8 +147,8 @@ osqa_accepted = false
 <p>If you haven't changed the import process (i.e. you're running exactly the same mkgmap version in exactly the same way as before) then, as you suggest, the data must have changed.</p>
 <p>I've looked at the centre of the area that you're interested in with Potlatch 1, and can't see any obvious recent deletions.</p>
 <p>I've no idea where the <a href="http://raumbezug.eu/">raumbezug.eu</a> site gets its data from, though. It's possible that they are filtering some features from the OSM data before it gets to you - that would explain things being missing. Unfortunately, that site looks broken currently - I see a page full of "<strong>Deprecated: Function split() is deprecated in /home/geolist/www/raumbezug.eu/parser/include/class.parser_file_phpcms.php on line 196</strong>" when I browse to it.</p>
-<p>In order to find out what the problem is, I suggest that you identify one feature that's missing from your new maps that was present in your old ones. Have a look in the mkgmap style file to see what OSM tags were mapped to that feature, and have a look at the OSM map to make sure that it's definitely still there (zoom in and use "Browse Map Data" on the "Edit" menu). That should give you a node or (more probably) a way ID. You can then search (using grep) through the "old" and "new" input data for that way ID. If you need to convert a .PBF file to a .OSM file, you can use <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> for that. If you're on Windows and don't have "grep" available, you can get one from Unxutils <a href="http://unxutils.sourceforge.net/">here</a>.</p>
-<p>If it turns out that your current download site is filtering data that you don't want it to, then I'd suggest downloading a planet extract from <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">elsewhere</a>. I've found <a href="http://download.geofabrik.de/osm/">Geofabrik</a> very reliable, but lots of other sites are available.</p>
+<p>In order to find out what the problem is, I suggest that you identify one feature that's missing from your new maps that was present in your old ones. Have a look in the mkgmap style file to see what OSM tags were mapped to that feature, and have a look at the OSM map to make sure that it's definitely still there (zoom in and use "Browse Map Data" on the "Edit" menu). That should give you a node or (more probably) a way ID. You can then search (using grep) through the "old" and "new" input data for that way ID. If you need to convert a .PBF file to a .OSM file, you can use <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> for that. If you're on Windows and don't have "grep" available, you can get one from Unxutils <a href="http://unxutils.sourceforge.net/">here</a>.</p>
+<p>If it turns out that your current download site is filtering data that you don't want it to, then I'd suggest downloading a planet extract from <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">elsewhere</a>. I've found <a href="http://download.geofabrik.de/osm/">Geofabrik</a> very reliable, but lots of other sites are available.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

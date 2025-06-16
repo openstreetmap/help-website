@@ -40,12 +40,12 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I asked a question in the following thread:</p>
-<p><a href="https://help.openstreetmap.org/questions/22837/yet-another-why-havent-my-edits-shown-up-in-openstreetmaporg-question">https://help.openstreetmap.org/questions/22837/yet-another-why-havent-my-edits-shown-up-in-openstreetmaporg-question</a></p>
+<p><a href="/questions/22837/yet-another-why-havent-my-edits-shown-up-in-openstreetmaporg-question">https://help.openstreetmap.org/questions/22837/yet-another-why-havent-my-edits-shown-up-in-openstreetmaporg-question</a></p>
 <p>This was closed with the following comment:</p>
 <p><em>While edits are usually quick to show up on the map, it can occasionally take longer; other answers, that you claim to have read, explain this in more detail.</em></p>
 <p>The tone of your reply gives the impression you think I’m a liar, or too stupid or too lazy to read properly.</p>
 <p>I had read the following link:</p>
-<p><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 <p>This said the following:</p>
 <p><em>When you talk about 'the map', you may mean the 'Mapnik'-layer on OpenStreetMap.org. That one should be <strong>updated every minute</strong>, but you still have to keep in mind that not everything is shown there.</em></p>
 <p>This is the first time I’ve done a map update and I would like some feedback that what I’m doing is not wrong and not a waste of my time.<br />

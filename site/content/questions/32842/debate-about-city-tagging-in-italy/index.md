@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>An OSM contributor, Marc Mongenet, has recently turned several Italian province capitals from place=city to place=town because their population is &lt;100k inhabitants. But, according to <a href="http://wiki.openstreetmap.org/wiki/IT:Key:place">the relevant Italian wiki page</a>, Italian province capitals with &gt;50k inhabitants shall be regarded as cities as well; the <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dcity">international page</a> is more or less on the same note, saying that the place=city tag is meant "to identify the largest settlement or settlements within a territory, including national, state and provincial capitals, and other major conurbations"; <a href="http://wiki.openstreetmap.org/wiki/Key:place">this other page</a> indicates that a city should have "normally" a population of 100k inhabitants (but I personally consider this threshold as rather flexible as it's likely that it was originally meant for the US).</p>
+<p>An OSM contributor, Marc Mongenet, has recently turned several Italian province capitals from place=city to place=town because their population is &lt;100k inhabitants. But, according to <a href="https://wiki.openstreetmap.org/wiki/IT:Key:place">the relevant Italian wiki page</a>, Italian province capitals with &gt;50k inhabitants shall be regarded as cities as well; the <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dcity">international page</a> is more or less on the same note, saying that the place=city tag is meant "to identify the largest settlement or settlements within a territory, including national, state and provincial capitals, and other major conurbations"; <a href="https://wiki.openstreetmap.org/wiki/Key:place">this other page</a> indicates that a city should have "normally" a population of 100k inhabitants (but I personally consider this threshold as rather flexible as it's likely that it was originally meant for the US).</p>
 <p>I have invited the user to revert his edits, but he refuses to do so because he does not agree with the Italian criteria, and claims that inserting all of those cities will make the map overcrowded at low zoom levels. So, who's right and who's wrong?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -123,7 +123,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>What follows is my personal view - there are other views and I'm sure that people will add them as alternative answers:</p>
 <p>First - bluntly, if the whole Italian community is saying one thing and one user in Switzerland is saying another, then I'd say that the Italian community's view had more weight with regard to Italian data.</p>
-<p>That's not to say that his argument doesn't have merit - the place=city wiki page has, <a href="http://wiki.openstreetmap.org/w/index.php?title=Tag:place%3Dcity&amp;oldid=274110">since the earliest version</a>, suggested that it should be used for large places, not necessarily places that are labelled cities.</p>
+<p>That's not to say that his argument doesn't have merit - the place=city wiki page has, <a href="https://wiki.openstreetmap.org/w/index.php?title=Tag:place%3Dcity&amp;oldid=274110">since the earliest version</a>, suggested that it should be used for large places, not necessarily places that are labelled cities.</p>
 <p>However, in Ireland he made town/city edits that were reverted by the Irish community as soon as they found out. They have a very clear definition of what a city is there - the mistake that he made there was confusing distance between places with the difficulty of getting between them (for example Galway is every inch a city - I suspect no one around there would consider it in the orbit of Limerick, which he assumed that it was).</p>
 <p>He did something similar in the UK. There <a href="https://lists.openstreetmap.org/pipermail/talk-gb/2014-April/015982.html">the discussion</a> wasn't as clear-cut (the majority in this and the previously linked discussion were in favour of "place=city == large" rather than "place=city == designated as a city"). Personally I'd still think there needs to be some way of recording "this place is, in the real world, a city" (perhaps "designation"?) in addition to "this is a large and important place" (and at some point I plan to investigate the suggestions in that list thread for usage clashes).</p>
 <p>Unfortunately this users edits in the UK were comically poor for other reasons - promoting Telford to a city, adding a duplicate Glasgow, and tagging-for-the-renderer Wolverhampton as a town because it's near Birmingham. These got reverted.</p>
@@ -186,7 +186,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Sorry, I forgot the reference:</p>
-<p>[1] <a href="http://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city">http://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city</a></p>
+<p>[1] <a href="https://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city">https://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city</a></p>
 </div>
 <div id="comment-32861-info" class="comment-info">
 <span class="comment-age">(05 May '14, 13:48)</span> <span class="comment-user userinfo">solitone</span>
@@ -375,7 +375,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can certainly revert my edits. The edit you are interested in should all be commented with the same format. Of course, the map (taken as a whole) will not really get better with the revert, it's mainly a (sad) bureaucratic decision.</p>
-<p>I am still refining the page <a href="http://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city">http://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city</a></p>
+<p>I am still refining the page <a href="https://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city">https://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -476,7 +476,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello,</p>
-<p>Here are the main points of <a href="http://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city">http://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city</a></p>
+<p>Here are the main points of <a href="https://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city">https://wiki.openstreetmap.org/wiki/User_talk:Marc_Mongenet/town_and_city</a></p>
 <p><strong>Orthogonality problem</strong></p>
 <p>The place tag is the generic tag to map human settlements. For capitals (national, state, provincial, any admin level), there is the admin_centre role.</p>
 <p>Using place for both purposes (settlements and capitals) is an error, because many provincial, state, and even some national capitals, are not a large settlement, nor the largest settlement in the territory (examples: Privas, Appenzell, Vaduz). Settlement importance and capital status are orthogonal properties.</p>

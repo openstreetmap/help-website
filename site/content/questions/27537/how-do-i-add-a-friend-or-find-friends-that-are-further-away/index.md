@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to a user's user page - eg. <a href="http://www.openstreetmap.org/user/exampleusernamehere/">http://www.openstreetmap.org/user/exampleusernamehere/</a> - and click the "add as friend" link.</p>
+<p>Go to a user's user page - eg. <a href="https://www.openstreetmap.org/user/exampleusernamehere/">https://www.openstreetmap.org/user/exampleusernamehere/</a> - and click the "add as friend" link.</p>
 <p>To find people around you, have a look on that help page: <span>Nearby users</span> (lists, among others, "who's around me").</p>
 </div>
 <div class="answer-controls post-controls">

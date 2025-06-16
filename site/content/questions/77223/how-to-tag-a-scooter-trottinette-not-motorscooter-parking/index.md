@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>It can be a free-floating area (without stands), or stands with a shape that is designated for scooter 🛴 (it allows to lock the handlebar for example)</p>
-<p>Related : <a href="https://help.openstreetmap.org/questions/13088/scooter-rental">https://help.openstreetmap.org/questions/13088/scooter-rental</a></p>
+<p>Related : <a href="/questions/13088/scooter-rental">https://help.openstreetmap.org/questions/13088/scooter-rental</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bicycle_parking" rel="tag" title="see questions tagged &#39;bicycle_parking&#39;">bicycle_parking</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello,</p>
 <p>I mapped a stream that starts naturally meandering. On its way it is more and more forced into a man made straight bed through agricultural area. In that area the previous mapper tagged it as a ditch.</p>
 <p>My question: is it better to stick to stream all along the waterway, or change from stream to ditch at a point?</p>
-<p>I already had a look at this question and I think mine in building on that: <a href="https://help.openstreetmap.org/questions/14730/is-a-ditch-a-stream-or-a-drain?">https://help.openstreetmap.org/questions/14730/is-a-ditch-a-stream-or-a-drain?</a></p>
+<p>I already had a look at this question and I think mine in building on that: <a href="/questions/14730/is-a-ditch-a-stream-or-a-drain?">https://help.openstreetmap.org/questions/14730/is-a-ditch-a-stream-or-a-drain?</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-waterway" rel="tag" title="see questions tagged &#39;waterway&#39;">waterway</span> <span class="post-tag tag-link-ditch" rel="tag" title="see questions tagged &#39;ditch&#39;">ditch</span> <span class="post-tag tag-link-stream" rel="tag" title="see questions tagged &#39;stream&#39;">stream</span>

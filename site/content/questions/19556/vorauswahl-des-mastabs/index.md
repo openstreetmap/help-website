@@ -195,7 +195,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Zu "Zoomstufen und Maßstab" gibt es dort was: <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale</a> Gilt allerdings wohl nur für die Tiles - die Objekte auf dem Bitmap-Export sind größer (wieso auch immer).</p>
+<p>Zu "Zoomstufen und Maßstab" gibt es dort was: <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale</a> Gilt allerdings wohl nur für die Tiles - die Objekte auf dem Bitmap-Export sind größer (wieso auch immer).</p>
 </div>
 <div id="comment-19734-info" class="comment-info">
 <span class="comment-age">(08 Feb '13, 02:23)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -206,7 +206,7 @@ osqa_accepted = false
 <div id="post-19817-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>im OSM-Wiki kann man in die Suchbox oben rechts z.B. "zoom" eingeben und stößt dann auf <a href="http://wiki.openstreetmap.org/wiki/Zoom_levels">http://wiki.openstreetmap.org/wiki/Zoom_levels</a></p>
+<p>im OSM-Wiki kann man in die Suchbox oben rechts z.B. "zoom" eingeben und stößt dann auf <a href="https://wiki.openstreetmap.org/wiki/Zoom_levels">https://wiki.openstreetmap.org/wiki/Zoom_levels</a></p>
 <p>vielleicht hilft das ja weiter?</p>
 </div>
 <div id="comment-19817-info" class="comment-info">

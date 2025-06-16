@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Please be as kind as to have a look at the attached image and say what is your first thought of the probable reasons for such malfunction.</p>
 <p>The setup is Tilestache/Mapnik/Nginx. PostgreSQL database contains OSM data and works just fine with the "standard" setup of Apache/mod_tile/Mapnik.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/mapnik-error.png" alt="alt text" /></p>
+<p><img src="/upfiles/mapnik-error.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-tilestache" rel="tag" title="see questions tagged &#39;tilestache&#39;">tilestache</span> <span class="post-tag tag-link-postgresql" rel="tag" title="see questions tagged &#39;postgresql&#39;">postgresql</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -83,9 +83,9 @@ osqa_accepted = false
 <p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a></p>
 <p>Hi! Thanks for the reply.</p>
 <p>If I zoom in, it, basically, remains in essence the same - a matrix of tiles of the same size with the background shifted in the same triangle manner, only at a larger scale.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/zoom-in_FIPJVon.png" alt="alt text" /></p>
+<p><img src="/upfiles/zoom-in_FIPJVon.png" alt="alt text" /></p>
 <p>If I zoom out, though, it becomes even more strange, as the map is almost normal, but there are defects in the background, with similar regular displaced light/dark triangles at the top of the screen, next to the Polar Circle, and, in addition to that, with long but narrow irregular diagonal triangles stretched out from three (in this particular case) locations in Europe with their top vertices converging somewhere above Iceland.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/zoom-out.png" alt="alt text" /></p>
+<p><img src="/upfiles/zoom-out.png" alt="alt text" /></p>
 </div>
 <div id="comment-63079-info" class="comment-info">
 <span class="comment-age">(22 Apr '18, 20:07)</span> <span class="comment-user userinfo">Mixroc</span>
@@ -97,7 +97,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Another view at about mid-zoom: <img src="https://help.openstreetmap.org/upfiles/zoom-mid_T4GicAv.png" alt="alt text" /></p>
+<p>Another view at about mid-zoom: <img src="/upfiles/zoom-mid_T4GicAv.png" alt="alt text" /></p>
 </div>
 <div id="comment-63080-info" class="comment-info">
 <span class="comment-age">(22 Apr '18, 20:16)</span> <span class="comment-user userinfo">Mixroc</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>One of the views of the world:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/zoom-world.png" alt="alt text" /></p>
+<p><img src="/upfiles/zoom-world.png" alt="alt text" /></p>
 </div>
 <div id="comment-63081-info" class="comment-info">
 <span class="comment-age">(22 Apr '18, 20:21)</span> <span class="comment-user userinfo">Mixroc</span>

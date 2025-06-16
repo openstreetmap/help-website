@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I recorded 21 points (quite close together, within 10m of each other) using GPSlogger on my android phone. uploaded the trace to osm. I can see all points within osm. But only 2 points in potlatch. Is this normal? can I make potlatch display all the points?</p>
-<p>trace is here <a href="http://www.openstreetmap.org/user/paulnewall/traces/1425846">http://www.openstreetmap.org/user/paulnewall/traces/1425846</a></p>
+<p>trace is here <a href="https://www.openstreetmap.org/user/paulnewall/traces/1425846">https://www.openstreetmap.org/user/paulnewall/traces/1425846</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-trace" rel="tag" title="see questions tagged &#39;trace&#39;">trace</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span>

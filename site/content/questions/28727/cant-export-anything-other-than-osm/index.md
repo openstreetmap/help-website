@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want to export the standard layer as an image or PDF, this moved to the share button on the right of the screen a couple of months ago. I don't think you can export the other layers though, even if they are selected when you try.</p>
-<p>Edit: See also this <a href="https://help.openstreetmap.org/questions/25118/export-function-cancelled-i-miss-it-on-osmorg-since-2013-08">question and answer</a>.</p>
+<p>Edit: See also this <a href="/questions/25118/export-function-cancelled-i-miss-it-on-osmorg-since-2013-08">question and answer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -164,7 +164,7 @@ This answer is marked "community wiki".
 <div id="post-40669-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> thanks - I had no idea those still existed, I thought that the WM labs stuff (like the multilanguage stuff, which found a new home) had all gone.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> thanks - I had no idea those still existed, I thought that the WM labs stuff (like the multilanguage stuff, which found a new home) had all gone.</p>
 </div>
 <div id="comment-40669-info" class="comment-info">
 <span class="comment-age">(28 Jan '15, 19:50)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

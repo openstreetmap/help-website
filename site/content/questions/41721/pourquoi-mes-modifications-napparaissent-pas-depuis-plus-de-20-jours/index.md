@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sur quelle carte ? C'est déjà possible de voir la bibliotheque de <a href="http://www.openstreetmap.org/changeset/29459687">http://www.openstreetmap.org/changeset/29459687</a></p>
+<p>Sur quelle carte ? C'est déjà possible de voir la bibliotheque de <a href="https://www.openstreetmap.org/changeset/29459687">https://www.openstreetmap.org/changeset/29459687</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

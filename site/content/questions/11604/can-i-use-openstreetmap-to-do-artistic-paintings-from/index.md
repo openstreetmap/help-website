@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Very similar question here: <a href="http://help.openstreetmap.org/questions/10875/commercial-use-of-stylized-data-in-prints">http://help.openstreetmap.org/questions/10875/commercial-use-of-stylized-data-in-prints</a></p>
+<p>Very similar question here: <a href="/questions/10875/commercial-use-of-stylized-data-in-prints">https://help.openstreetmap.org/questions/10875/commercial-use-of-stylized-data-in-prints</a></p>
 </div>
 <div id="comment-11658-info" class="comment-info">
 <span class="comment-age">(31 Mar '12, 14:21)</span> <span class="comment-user userinfo">gerdami</span>
@@ -171,7 +171,7 @@ osqa_accepted = false
 <div id="post-11610-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It somewhat depends on your requirements regarding the style of the graphics. A <a href="http://wiki.openstreetmap.org/wiki/Rendering">complete overview</a> of rendering software is available; many of those are not at all usable by beginners, though. You might want to start with something relatively accessible like the freeware renderer <a href="http://maperitive.net/">Maperitive</a>.</p>
+<p>It somewhat depends on your requirements regarding the style of the graphics. A <a href="https://wiki.openstreetmap.org/wiki/Rendering">complete overview</a> of rendering software is available; many of those are not at all usable by beginners, though. You might want to start with something relatively accessible like the freeware renderer <a href="http://maperitive.net/">Maperitive</a>.</p>
 <p>By the way, don't forget that the database will only be available under the ODbL after the license change is complete, which might still take a few weeks or so!</p>
 </div>
 <div id="comment-11610-info" class="comment-info">

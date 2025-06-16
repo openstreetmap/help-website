@@ -189,7 +189,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9874/raito">@raito</a> according to the T&amp;Cs you are likely not even allowed to look at it ....</p>
+<p><a href="https://help.openstreetmap.org/users/9874/raito">@raito</a> according to the T&amp;Cs you are likely not even allowed to look at it ....</p>
 </div>
 <div id="comment-50584-info" class="comment-info">
 <span class="comment-age">(03 Jul '16, 11:05)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -223,7 +223,7 @@ osqa_accepted = true
 <div id="post-50592-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9874/raito">@raito</a> government administrations screwing up the legal side of things tends to be norm, not the exception. The T&amp;Cs are quite clear, you will need to approach the survey department and point out the contradiction. From the newspaper articles it is not really clear if the information is actually intended to be open Data or at least something in that direction.</p>
+<p><a href="https://help.openstreetmap.org/users/9874/raito">@raito</a> government administrations screwing up the legal side of things tends to be norm, not the exception. The T&amp;Cs are quite clear, you will need to approach the survey department and point out the contradiction. From the newspaper articles it is not really clear if the information is actually intended to be open Data or at least something in that direction.</p>
 </div>
 <div id="comment-50592-info" class="comment-info">
 <span class="comment-age">(03 Jul '16, 21:47)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

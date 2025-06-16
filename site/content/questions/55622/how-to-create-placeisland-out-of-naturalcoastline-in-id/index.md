@@ -39,11 +39,11 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-04-16_at_8.21.48_AM_2YZIzWn.png" alt="alt text" />While trying to perform an extract of Caribbean islands in Quick OSM (Overpass API), I discovered that some major islands were left out of my extract. I supposed that the problem was inconsistent tagging.</p>
+<p><img src="/upfiles/Screen_Shot_2017-04-16_at_8.21.48_AM_2YZIzWn.png" alt="alt text" />While trying to perform an extract of Caribbean islands in Quick OSM (Overpass API), I discovered that some major islands were left out of my extract. I supposed that the problem was inconsistent tagging.</p>
 <p>I'm a newbie iD editor, but I dove in to try to figure out what's going on. I found that islands that extracted properly have a relation defined between their coastline (line) feature and their island feature, in which the coastline is defined as the "outer" of the island. On the other hand, islands that <em>didn't</em> extract properly had a coastline tag, but no island tag.</p>
 <p>My question is how to define the area of an island as an island feature, and how to create the required relation between that and the coastline feature, for the islands that need this. Does a guide or tutorial exist for doing this task in iD? I have looked and haven't been able to find one.</p>
 <p>EDIT: I added two images to show what I'm finding. The first shows tags for the coastline of Long Island in The Bahamas, where the coastline is tagged as having a relation with the island. The second is for the coastline of the island of Eleuthera in The Bahamas, where no island tag exists.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-04-16_at_8.23.57_AM.png" alt="tags for Long Island in The Bahamas, including the island relation" /> Many thanks in advance!</p>
+<p><img src="/upfiles/Screen_Shot_2017-04-16_at_8.23.57_AM.png" alt="tags for Long Island in The Bahamas, including the island relation" /> Many thanks in advance!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-islands" rel="tag" title="see questions tagged &#39;islands&#39;">islands</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-multipolygons" rel="tag" title="see questions tagged &#39;multipolygons&#39;">multipolygons</span>
@@ -113,9 +113,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would think that a relation in the sense that osm uses would not be required unless you want to group a number of islands under the same name or the island is very large.<br />
-It is likely that many of the Caribbean islands are large enough to need the outer way split into multiple parts and therefore need to be mapped as a multipolygon. e.g. <a href="http://www.openstreetmap.org/relation/4092586">Kerera</a> is a multipolygon with the outer way split into 4 segments and each of the segments (members) are tagged natural=coastline<br />
+It is likely that many of the Caribbean islands are large enough to need the outer way split into multiple parts and therefore need to be mapped as a multipolygon. e.g. <a href="https://www.openstreetmap.org/relation/4092586">Kerera</a> is a multipolygon with the outer way split into 4 segments and each of the segments (members) are tagged natural=coastline<br />
 There is a difference between mapping islands in the sea and islands in lakes and rivers.<br />
-Have a look at the <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Disland">place=island tags</a></p>
+Have a look at the <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Disland">place=island tags</a></p>
 <p>Can't help with iD but JOSM seems well suited for multipolygon mapping.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -187,7 +187,7 @@ Have a look at the <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dislan
 <p>Then add all the parts of coastline that makes up the coastline for the island.</p>
 <p>I found that to do this in ID was not so easy so the easiest way to do this and my advice to you is to <a href="https://josm.openstreetmap.de/">install JOSM</a>, have a quick view at this <a href="https://www.youtube.com/watch?v=8gH_fu2vICk">instructional movie</a> for how to do this. It's in Russian and quite dated, but he presses the same buttons and they still look the same.</p>
 <p>Or, a quick fix, if you don't want to figure it out. Put a note on the map explaining what's wrong and someone will/might fix it.</p>
-<p>Edit: Some examples of <a href="http://www.openstreetmap.org/relation/5847770">a medium island</a> and <a href="http://www.openstreetmap.org/relation/6361027">a large island</a> with lots of ways that form the outer way that makes the coastline of the island.</p>
+<p>Edit: Some examples of <a href="https://www.openstreetmap.org/relation/5847770">a medium island</a> and <a href="https://www.openstreetmap.org/relation/6361027">a large island</a> with lots of ways that form the outer way that makes the coastline of the island.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

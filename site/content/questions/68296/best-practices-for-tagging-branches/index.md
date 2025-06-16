@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Some cafés or restaurants have a few branches. I'm not thinking of major franchises like Subway (for that, see <a href="https://help.openstreetmap.org/questions/60414/ideal-tag-combination-for-branches">this question</a>) but of examples like The Barn in Berlin, a small coffee shop chain with <a href="https://thebarn.de/pages/locations">6 locations in town</a>.</p>
+<p>Some cafés or restaurants have a few branches. I'm not thinking of major franchises like Subway (for that, see <a href="/questions/60414/ideal-tag-combination-for-branches">this question</a>) but of examples like The Barn in Berlin, a small coffee shop chain with <a href="https://thebarn.de/pages/locations">6 locations in town</a>.</p>
 <p>Currently when searching for The Barn in Nominatim, ony a couple results come up, and they're all named the same. This could hopefully be improved with better tagging of branches.</p>
 <p>A good start is definitely to use the wikied <a href="https://wiki.openstreetmap.org/wiki/Key%3Abranch"><code>branch</code> tag</a> with the name of the branch. For example:</p>
 <p><code>name="The Barn" branch="Neukölln"</code></p>

@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-50853-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta: <a href="http://help.openstreetmap.org/users/12526/alhjres">@alhjres</a>: In general, please do not post your questions to several places (at least not without mentioning it and linking all places). That wastes help resources.</p>
+<p>meta: <a href="https://help.openstreetmap.org/users/12526/alhjres">@alhjres</a>: In general, please do not post your questions to several places (at least not without mentioning it and linking all places). That wastes help resources.</p>
 </div>
 <div id="comment-50853-info" class="comment-info">
 <span class="comment-age">(12 Jul '16, 06:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -330,7 +330,7 @@ osqa_accepted = false
 It may take a bit longer for all the zoom levels to update to the latest osm data.</p>
 <p>The people who supply the Garmin extracts of osm data will update their databases soon and those extracts will also show the Arabic names too I assume.<br />
 But others may be able to confirm that.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screen_yPksvpg.png" alt="osm map" /></p>
+<p><img src="/upfiles/screen_yPksvpg.png" alt="osm map" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -401,7 +401,7 @@ I believe this is suitable to display Arabic text.</p>
 2
 </div>
 <div class="comment-text">
-<p>Yes, see <a href="https://help.openstreetmap.org/questions/50763/arabic-garmin-osm">https://help.openstreetmap.org/questions/50763/arabic-garmin-osm</a></p>
+<p>Yes, see <a href="/questions/50763/arabic-garmin-osm">https://help.openstreetmap.org/questions/50763/arabic-garmin-osm</a></p>
 </div>
 <div id="comment-50817-info" class="comment-info">
 <span class="comment-age">(11 Jul '16, 13:52)</span> <span class="comment-user userinfo">nevw</span>

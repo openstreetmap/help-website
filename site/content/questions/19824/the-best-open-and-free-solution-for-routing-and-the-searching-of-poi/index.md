@@ -94,7 +94,7 @@ Other question :) : can I use MapQuest for commercial use.</p>
 2
 </div>
 <div class="comment-text">
-<p><span>@Yahya</span>: for more specific questions, you can also try one of the OSM mailing lists, see <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><span>@Yahya</span>: for more specific questions, you can also try one of the OSM mailing lists, see <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 <p>There are topics like Routing or Development</p>
 </div>
 <div id="comment-19852-info" class="comment-info">

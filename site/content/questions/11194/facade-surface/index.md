@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are <a href="http://wiki.openstreetmap.org/wiki/Category:3D">various wiki-pages</a> regarding 3d-modelling and rendering of buildings with osm data you might want to consult. 3D-Tagging of buildings is still rather experimential and highly fragmentary. However, the city of Rostock seems to contain most building heights due to an <a href="http://wiki.openstreetmap.org/wiki/OSM-3D#Some_Interesting_Places">import</a>.</p>
+<p>There are <a href="https://wiki.openstreetmap.org/wiki/Category:3D">various wiki-pages</a> regarding 3d-modelling and rendering of buildings with osm data you might want to consult. 3D-Tagging of buildings is still rather experimential and highly fragmentary. However, the city of Rostock seems to contain most building heights due to an <a href="https://wiki.openstreetmap.org/wiki/OSM-3D#Some_Interesting_Places">import</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

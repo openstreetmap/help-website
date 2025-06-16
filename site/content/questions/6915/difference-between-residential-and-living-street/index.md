@@ -111,8 +111,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Most mappers (at least in Germany) use highway=living_street if and only if this sign is present:</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/d/d8/Zeichen_325.1.svg/120px-Zeichen_325.1.svg.png" alt="Zeichen 325 &quot;Verkehrsberuhigte Zone&quot;" /></p>
-<p>Also see the German <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dliving_street">wiki page</a> for the highway=living_street tag.</p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/d/d8/Zeichen_325.1.svg/120px-Zeichen_325.1.svg.png" alt="Zeichen 325 &quot;Verkehrsberuhigte Zone&quot;" /></p>
+<p>Also see the German <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dliving_street">wiki page</a> for the highway=living_street tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -231,7 +231,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/6006/ftrebien">@ftrebien</a> <a href="http://help.openstreetmap.org/users/4231/mcpicoli">@MCPicoli</a> the help platform is really not suitable for policy discussions, I suggest you take them to talk-br or whatever the Brazilian mailing list is called. And when you have reasched a conclusion post the answer here (on a multiple year old, stale, question).</p>
+<p><a href="https://help.openstreetmap.org/users/6006/ftrebien">@ftrebien</a> <a href="https://help.openstreetmap.org/users/4231/mcpicoli">@MCPicoli</a> the help platform is really not suitable for policy discussions, I suggest you take them to talk-br or whatever the Brazilian mailing list is called. And when you have reasched a conclusion post the answer here (on a multiple year old, stale, question).</p>
 </div>
 <div id="comment-41873-info" class="comment-info">
 <span class="comment-age">(24 Mar '15, 08:45)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -363,7 +363,7 @@ osqa_accepted = false
 <div id="post-27706-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.legislation.gov.uk/uksi/2006/2082/contents/made">Quiet Lanes and Home Zones</a> is what you're talking about I think. There's a quiet lane <a href="http://www.openstreetmap.org/browse/way/37522804/history">here</a>.</p>
+<p><a href="http://www.legislation.gov.uk/uksi/2006/2082/contents/made">Quiet Lanes and Home Zones</a> is what you're talking about I think. There's a quiet lane <a href="https://www.openstreetmap.org/browse/way/37522804/history">here</a>.</p>
 </div>
 <div id="comment-27706-info" class="comment-info">
 <span class="comment-age">(02 Nov '13, 00:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

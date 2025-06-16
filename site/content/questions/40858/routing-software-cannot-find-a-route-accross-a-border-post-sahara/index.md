@@ -240,7 +240,7 @@ One Answer:
 <div id="post-40902-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10452/jojo4u">@jojo4u</a>: ah, okay, I misunderstood you then, thanks Yes, of course, that zig-zag likely was wrong.</p>
+<p><a href="https://help.openstreetmap.org/users/10452/jojo4u">@jojo4u</a>: ah, okay, I misunderstood you then, thanks Yes, of course, that zig-zag likely was wrong.</p>
 </div>
 <div id="comment-40902-info" class="comment-info">
 <span class="comment-age">(09 Feb '15, 21:19)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

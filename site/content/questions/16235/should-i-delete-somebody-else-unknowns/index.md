@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Should I delete somebody else &quot;unknowns&quot;?"
-description = '''I am editing right now this region (my trace): http://www.openstreetmap.org/?lat=53.16436&amp;amp;lon=18.69398&amp;amp;zoom=15&amp;amp;layers=M and I noticed (switch to editor please) a hundreds of points -- type: unknown.  Was it some kind of vandalism and I should now delete those points since I see them (rea...'''
+description = '''I am editing right now this region (my trace): https://www.openstreetmap.org/?lat=53.16436&amp;amp;lon=18.69398&amp;amp;zoom=15&amp;amp;layers=M and I noticed (switch to editor please) a hundreds of points -- type: unknown.  Was it some kind of vandalism and I should now delete those points since I see them (rea...'''
 date = "2012-09-18T21:48:00Z"
 lastmod = "2012-09-18T22:20:00Z"
 weight = 16235
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am editing right now this region (my trace):</p>
-<p><a href="http://www.openstreetmap.org/?lat=53.16436&amp;lon=18.69398&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=53.16436&amp;lon=18.69398&amp;zoom=15&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=53.16436&amp;lon=18.69398&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=53.16436&amp;lon=18.69398&amp;zoom=15&amp;layers=M</a></p>
 <p>and I noticed (switch to editor please) a hundreds of points -- type: unknown.</p>
 <p>Was it some kind of vandalism and I should now delete those points since I see them (reason: such points serve no purpose (?) and just make map bigger), or should I leave them?</p>
 </div>
@@ -65,7 +65,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p><a href="http://keepright.ipax.at/report_map.php?zoom=15&amp;lat=53.16436&amp;lon=18.69398&amp;layers=B0T&amp;ch=0%2C70&amp;show_ign=1&amp;show_tmpign=1">http://keepright.ipax.at/report_map.php?zoom=15&amp;lat=53.16436&amp;lon=18.69398&amp;layers=B0T&amp;ch=0%2C70&amp;show_ign=1&amp;show_tmpign=1</a></p>
-<p>Some of those nodes has been edited by <a href="http://www.openstreetmap.org/user/Redaction%20Account%20Bugfix">http://www.openstreetmap.org/user/Redaction%20Account%20Bugfix</a> and perhaps Frederik Ramm or someone else can give an explanation of why those kind of nodes has occurred and how to handle them.</p>
+<p>Some of those nodes has been edited by <a href="https://www.openstreetmap.org/user/Redaction%20Account%20Bugfix">https://www.openstreetmap.org/user/Redaction%20Account%20Bugfix</a> and perhaps Frederik Ramm or someone else can give an explanation of why those kind of nodes has occurred and how to handle them.</p>
 </div>
 <div id="comment-16237-info" class="comment-info">
 <span class="comment-age">(18 Sep '12, 22:02)</span> <span class="comment-user userinfo">gnurk</span>
@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The history of the nodes (e.g. <a href="http://www.openstreetmap.org/browse/node/587574579/history)">http://www.openstreetmap.org/browse/node/587574579/history)</a> shows that these nodes are redacted during the license change. Feel free to support the <a href="http://wiki.openstreetmap.org/wiki/Remapping">remapping</a> effort.</p>
+<p>The history of the nodes (e.g. <a href="https://www.openstreetmap.org/browse/node/587574579/history)">https://www.openstreetmap.org/browse/node/587574579/history)</a> shows that these nodes are redacted during the license change. Feel free to support the <a href="https://wiki.openstreetmap.org/wiki/Remapping">remapping</a> effort.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

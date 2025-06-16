@@ -136,7 +136,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>See also the wiki pages <a href="http://wiki.openstreetmap.org/wiki/Key:addr">Key:addr</a> and <a href="http://wiki.openstreetmap.org/wiki/Addresses">Addresses</a> for more in-depth documentation.</p>
+<p>See also the wiki pages <a href="https://wiki.openstreetmap.org/wiki/Key:addr">Key:addr</a> and <a href="https://wiki.openstreetmap.org/wiki/Addresses">Addresses</a> for more in-depth documentation.</p>
 </div>
 <div id="comment-24447-info" class="comment-info">
 <span class="comment-age">(22 Jul '13, 11:27)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

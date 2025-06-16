@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The usual way to tag a road that has similar characteristics to a residential road but lies in an industrial area is <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified">highway=unclassified</a>. highway=service could be used for something that is a pure access road but I would never expect trucks on a highway=service.</p>
+<p>The usual way to tag a road that has similar characteristics to a residential road but lies in an industrial area is <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified">highway=unclassified</a>. highway=service could be used for something that is a pure access road but I would never expect trucks on a highway=service.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -120,7 +120,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, these are lossy methods. For example, osm2pgsql drops coastlines, and the main outputs manipulate data into OGC simple features, which loses information regarding routing relationships.</p>
-<p>You can load osm data into postgres in a lossless fashion using osmosis and the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#API_Database_Tasks">--write-apidb</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PostGIS_Tasks_.28Snapshot_Schema.29">--write-pgsql</a> outputs, depending on what schema you wish to use.</p>
+<p>You can load osm data into postgres in a lossless fashion using osmosis and the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#API_Database_Tasks">--write-apidb</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PostGIS_Tasks_.28Snapshot_Schema.29">--write-pgsql</a> outputs, depending on what schema you wish to use.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

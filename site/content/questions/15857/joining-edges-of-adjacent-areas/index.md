@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the case of the airport apron, a cleaner option is to use a <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">multypolygon relation</a>. Leave the builing ways as-is, but remove the tags fron the apron way (except maybe source=Bing for example) and put them in a relation. So that you do not have extra ways, yet the data is semantically correct.</p>
+<p>In the case of the airport apron, a cleaner option is to use a <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">multypolygon relation</a>. Leave the builing ways as-is, but remove the tags fron the apron way (except maybe source=Bing for example) and put them in a relation. So that you do not have extra ways, yet the data is semantically correct.</p>
 <p>If two nodes are conceptually at the same location, then they should be a single node. Having "overlaping nodes" is dirty and unnecessary. Overlaping ways are more subjective : They are arguably dirty too but they can be oh-so-pratical. Using relations for the same purpose often sound like too much work. I use relations for complicated stuff, and overlaping ways for simpler ones. YMMV.</p>
 <p>In any case, overlaps/relations should only be used if the real-life objects actually "touch". A forest alongside a lake or an administrative boundary following a road/river are good examples, but a park alongside a road most certainly isn't (unless the road is mapped as an area). Said differently, only glue ways together if they are both areas/2D or both lines/1D, but not if you have a mix.</p>
 </div>

@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki <a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a> page is a good place to start looking for how to contact local mappers. There's a list of mailing lists <a href="http://lists.openstreetmap.org/listinfo">here</a>, and although there doesn't appear to be one for the Dominican Republic there is one for <a href="http://lists.openstreetmap.org/listinfo/talk-ht">Haiti</a> on the other side of the island. Maybe someone there, or in another neighbouring country may know someone?</p>
+<p>The wiki <a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a> page is a good place to start looking for how to contact local mappers. There's a list of mailing lists <a href="http://lists.openstreetmap.org/listinfo">here</a>, and although there doesn't appear to be one for the Dominican Republic there is one for <a href="http://lists.openstreetmap.org/listinfo/talk-ht">Haiti</a> on the other side of the island. Maybe someone there, or in another neighbouring country may know someone?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

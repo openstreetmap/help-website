@@ -232,7 +232,7 @@ Query Features
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems to be working fine and with quick response for me on Safari, Firefox and Cliqz assuming this is the thing you mean...</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-03-18_at_9.16.15_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-03-18_at_9.16.15_PM.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

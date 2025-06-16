@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In OpenStreetMap, you should tag the town according to the guidelines at <a href="http://wiki.openstreetmap.org/wiki/Key:place">key:place</a> so that the data is correct. It's mostly about population, but also some other influence of a place's general importance in the region.</p>
+<p>In OpenStreetMap, you should tag the town according to the guidelines at <a href="https://wiki.openstreetmap.org/wiki/Key:place">key:place</a> so that the data is correct. It's mostly about population, but also some other influence of a place's general importance in the region.</p>
 <p>As to rendering (how it is displayed on maps), that changes depending on the map. If it is a small town, I would not expect it to display unless zoomed in.</p>
 <p>If you're curious, the rendering for the "main" OSM map is on <a href="https://github.com/gravitystorm/openstreetmap-carto">github</a>--I think placenames.mss is the file you'd want to look at.</p>
 </div>

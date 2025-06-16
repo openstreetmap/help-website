@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In OpenStreetMap terms your categories correspond to various <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> tags as follows:</p>
+<p>In OpenStreetMap terms your categories correspond to various <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> tags as follows:</p>
 <ul>
 <li>2-wheeled vehicles to <strong>motorcycle</strong></li>
 <li>LMV to <strong>motorcar</strong></li>

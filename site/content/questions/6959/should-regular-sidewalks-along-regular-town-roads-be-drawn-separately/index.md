@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Should regular sidewalks along regular town roads be drawn separately ?"
-description = '''I sometimes see sidewalks (e.g. http://www.openstreetmap.org/?lat=48.190038&amp;amp;lon=11.642101&amp;amp;zoom=18&amp;amp;layers=M see „Fußweg Hofäckerallee” or „Fußweg Föhringer Allee” ) along regular town roads be painted separately?  I don&#x27;t think that this is a good idea, it&#x27;s useless, confusing and jamming...'''
+description = '''I sometimes see sidewalks (e.g. https://www.openstreetmap.org/?lat=48.190038&amp;amp;lon=11.642101&amp;amp;zoom=18&amp;amp;layers=M see „Fußweg Hofäckerallee” or „Fußweg Föhringer Allee” ) along regular town roads be painted separately?  I don&#x27;t think that this is a good idea, it&#x27;s useless, confusing and jamming...'''
 date = "2011-08-08T13:44:00Z"
 lastmod = "2011-08-08T14:20:00Z"
 weight = 6959
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I sometimes see sidewalks (e.g. <a href="http://www.openstreetmap.org/?lat=48.190038&amp;lon=11.642101&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.190038&amp;lon=11.642101&amp;zoom=18&amp;layers=M</a> see „Fußweg Hofäckerallee” or „Fußweg Föhringer Allee” ) along regular town roads be painted separately?</p>
+<p>I sometimes see sidewalks (e.g. <a href="https://www.openstreetmap.org/?lat=48.190038&amp;lon=11.642101&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.190038&amp;lon=11.642101&amp;zoom=18&amp;layers=M</a> see „Fußweg Hofäckerallee” or „Fußweg Föhringer Allee” ) along regular town roads be painted separately?</p>
 <p>I don't think that this is a good idea, it's useless, confusing and jamming the map with redundant information (If there's a road called „Hofäckerallee”, it does not make sense to paint the walkway with the name „Sidewalk Hofäckerallee”. If you draw both walkways, then there is three times the name of the street.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -79,7 +79,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question - see http://help.openstreetmap.org/questions/1236/should-i-map-sidewalks" by banoffee 08 Aug '11, 14:26
+### The question has been closed for the following reason "Duplicate Question - see https://help.openstreetmap.org/questions/1236/should-i-map-sidewalks" by banoffee 08 Aug '11, 14:26
 
 </div>
 
@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please observe the <a href="http://help.openstreetmap.org/faq/">FAQ for this site</a>. You do not want an answer - you want a discussion. This is not the place for discussions; you'd best take the issue to the <a href="http://lists.openstreetmap.org/listinfo/talk">talk</a> or the <a href="http://lists.openstreetmap.org/listinfo/tagging">tagging</a> mailing list.</p>
+<p>Please observe the <a href="https://help.openstreetmap.org/faq/">FAQ for this site</a>. You do not want an answer - you want a discussion. This is not the place for discussions; you'd best take the issue to the <a href="http://lists.openstreetmap.org/listinfo/talk">talk</a> or the <a href="http://lists.openstreetmap.org/listinfo/tagging">tagging</a> mailing list.</p>
 <p>Note that OSM allows you to find out who added the name to the sidewalk, and to send them a message; so if you want to find out why they did it, maybe you should just ask them! It is possible that their motivation was to provide better route instructions for pedestrian routing - "follow Fußweg Hofäckerallee for 200 metres" is more useful than "follow footway for 200 metres".<br />
 </p>
 </div>
@@ -138,7 +138,7 @@ One Answer:
 <div id="post-6961-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also <a href="http://wiki.openstreetmap.org/wiki/Sidewalk">http://wiki.openstreetmap.org/wiki/Sidewalk</a> for links to proposed ways of tagging sidewalks (and the relevant discussion pages).</p>
+<p>See also <a href="https://wiki.openstreetmap.org/wiki/Sidewalk">https://wiki.openstreetmap.org/wiki/Sidewalk</a> for links to proposed ways of tagging sidewalks (and the relevant discussion pages).</p>
 <p>If anyone else thinks of a better way to tag sidewalks, they are also free to propose this in the relevant places (i.e. not here!)</p>
 </div>
 <div id="comment-6961-info" class="comment-info">

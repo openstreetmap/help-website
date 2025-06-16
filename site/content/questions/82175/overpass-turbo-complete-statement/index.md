@@ -42,9 +42,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have troubles <strong>understanding the <code>complete</code> statment</strong>. I read the description on <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#The_block_statement_complete">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#The_block_statement_complete</a> but I still do not get it.</p>
 <p>Here, an <strong>example</strong>: <a href="http://overpass-turbo.eu/s/1c3K">http://overpass-turbo.eu/s/1c3K</a>; my goal is to get a map of river and its tributaries. When I leave the <code>complete</code> block commented out, I receive the river mapped as relation and a couple of way segments that belong to its tributaries. Works just as expected, here, a picture:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/example.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/example.jpg" alt="alt text" /></p>
 <p>However, when I am commenting out line 12 and using the <code>complete</code> block instead, I only receive the river relation <code>.r</code> which I started with. My set <code>.add</code> has no tributaries and the result looks like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/example2.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/example2.jpg" alt="alt text" /></p>
 <p>Something I am doing wrong ;) I thought the <code>complete</code> block would iterate several times, thus, adding more and more segments of contributing rivers and streams. <strong>Thanks</strong> for some hints!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

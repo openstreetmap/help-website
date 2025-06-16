@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mio Cyclo 300 does not show OSM cycle paths that I would expect to see."
-description = '''Hi,  I have recently bought a GPS Mio Cyclo 300.  It uses openstreetmap.  Yesterday I went with my bike into the Forest of Saint-Germain, on the west of the Parisian region.  The GPS couln&#x27;t show me any of the tracks that I see on this web site (http://www.openstreetmap.org/?lat=48.9415&amp;amp;lon=2.10...'''
+description = '''Hi,  I have recently bought a GPS Mio Cyclo 300.  It uses openstreetmap.  Yesterday I went with my bike into the Forest of Saint-Germain, on the west of the Parisian region.  The GPS couln&#x27;t show me any of the tracks that I see on this web site (https://www.openstreetmap.org/?lat=48.9415&amp;amp;lon=2.10...'''
 date = "2012-09-10T11:40:00Z"
 lastmod = "2012-09-10T13:45:00Z"
 weight = 15941
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I have recently bought a GPS Mio Cyclo 300. It uses openstreetmap.<br />
 </p>
-<p>Yesterday I went with my bike into the Forest of Saint-Germain, on the west of the Parisian region. The GPS couln't show me any of the tracks that I see on this web site (<a href="http://www.openstreetmap.org/?lat=48.9415&amp;lon=2.1072&amp;zoom=13&amp;layers=M).">http://www.openstreetmap.org/?lat=48.9415&amp;lon=2.1072&amp;zoom=13&amp;layers=M).</a></p>
+<p>Yesterday I went with my bike into the Forest of Saint-Germain, on the west of the Parisian region. The GPS couln't show me any of the tracks that I see on this web site (<a href="https://www.openstreetmap.org/?lat=48.9415&amp;lon=2.1072&amp;zoom=13&amp;layers=M).">https://www.openstreetmap.org/?lat=48.9415&amp;lon=2.1072&amp;zoom=13&amp;layers=M).</a></p>
 <p>How is it possible?</p>
 <p>Many thanks in advance. Cheers,</p>
 <p>Raniero</p>
@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-15947-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As a bit more info, <a href="http://www.openstreetmap.org/browse/way/33104067/history">here</a> is one of the bridleways concerned - you can see the tags that are set.</p>
+<p>As a bit more info, <a href="https://www.openstreetmap.org/browse/way/33104067/history">here</a> is one of the bridleways concerned - you can see the tags that are set.</p>
 <p><a href="http://eu.mio.com/media/specifications/pdf/Mio_Cyclo_series_UM_EN_R00.pdf">Here</a> is the user manual for the same or a similar device. Presumably on page 17 you've set "bike map" to OSM?</p>
 <p><a href="http://www.expertreviews.co.uk/gps/1293634/mio-cyclo-300">Here</a> is an online review that doesn't describe the data being used but does say "this cycle satnav’s route planning hasn’t yet got to grips with the finer points of British cycleways"</p>
 </div>

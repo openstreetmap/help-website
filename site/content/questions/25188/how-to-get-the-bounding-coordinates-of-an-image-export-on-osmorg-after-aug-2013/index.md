@@ -144,7 +144,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/jpeg_co-ords.JPG" alt="alt text" />This works on a Win7 PC. The share button (second up on right hand side box with arrow), then tic custom dims, drag to size and download. While image and box is still on screen, click export tab at top and tic the manual adjust, drag this box to match image box and you can read off read off co-ords write them down and EXIT don't export. Job Done.</p>
+<p><img src="/upfiles/jpeg_co-ords.JPG" alt="alt text" />This works on a Win7 PC. The share button (second up on right hand side box with arrow), then tic custom dims, drag to size and download. While image and box is still on screen, click export tab at top and tic the manual adjust, drag this box to match image box and you can read off read off co-ords write them down and EXIT don't export. Job Done.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

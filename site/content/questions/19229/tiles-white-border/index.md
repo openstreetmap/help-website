@@ -145,7 +145,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the <a href="http://www.openstreetmap.org/">main page</a> zoom to your desired area and click on export tab on top of the page.<br />
+<p>On the <a href="https://www.openstreetmap.org/">main page</a> zoom to your desired area and click on export tab on top of the page.<br />
 Choose the format (PDF) and the desired scale from the left side of the page.<br />
 Click on the Export button and the file will be generated for you.</p>
 </div>

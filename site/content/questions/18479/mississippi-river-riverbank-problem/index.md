@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>The Mississippi River, just to the east of St Louis MO in the USA, is "missing" for part of its length. It appears as land, and an island in the river appears as water. This seems to indicate there is some problem with the relation used for the riverbank, but I can't find it. In addition, there seems to be a second "riverbank" shape on top of the relation (similar but not identical shape). Does anyone know how to debug this? I am new to OSM relations and don't know where to start...</p>
-<p>Link: <a href="http://www.openstreetmap.org/?lat=38.7232&amp;lon=-90.1832&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=38.7232&amp;lon=-90.1832&amp;zoom=13&amp;layers=M</a></p>
+<p>Link: <a href="https://www.openstreetmap.org/?lat=38.7232&amp;lon=-90.1832&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=38.7232&amp;lon=-90.1832&amp;zoom=13&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-riverbank" rel="tag" title="see questions tagged &#39;riverbank&#39;">riverbank</span>
@@ -108,9 +108,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are right, there are several problems here - parts of the river are mapped twice, and one of these duplicates is a <a href="http://www.openstreetmap.org/?relation=1592433">very large and broken polygon</a> that includes (or tries to include) a couple of tributaries (among them the Meramec). It is probably hopeless to try and fix this so my suggestion would be to delete that large polygon (or cut it into smaller pieces and re-use those that aren't already covered by something else).</p>
+<p>You are right, there are several problems here - parts of the river are mapped twice, and one of these duplicates is a <a href="https://www.openstreetmap.org/?relation=1592433">very large and broken polygon</a> that includes (or tries to include) a couple of tributaries (among them the Meramec). It is probably hopeless to try and fix this so my suggestion would be to delete that large polygon (or cut it into smaller pieces and re-use those that aren't already covered by something else).</p>
 <p>The OSM Inspector is a good tool to check multipolygons polygons for sanity, and it shows <a href="http://tools.geofabrik.de/osmi/?view=multipolygon&amp;lon=-90.40668&amp;lat=38.44305&amp;zoom=10">this polygon as having un-closed outer rings</a>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/poly.png" alt="alt text" /></p>
+<p><img src="/upfiles/poly.png" alt="alt text" /></p>
 <p>(Note however that OSM Inspector doesn't have live data - it is usually a day behind, so don't expect the display to change immediately after you've fixed something.)</p>
 </div>
 <div class="answer-controls post-controls">

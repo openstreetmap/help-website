@@ -106,7 +106,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please have a look at question <a href="https://help.openstreetmap.org/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary">this question</a>:</p>
+<p>Please have a look at question <a href="/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary">this question</a>:</p>
 <p>You can download the full boundary with <a href="http://overpass-api.de/api/interpreter?data=(rel%5Bname=&#39;Helsinki&#39;%5D;%3E;);out;">http://overpass-api.de/api/interpreter?data=(rel[name='Helsinki'];&gt;;);out;</a> and then convert the return value with <a href="http://svn.openstreetmap.org/applications/utils/osm-extract/polygons/rel2poly.pl">http://svn.openstreetmap.org/applications/utils/osm-extract/polygons/rel2poly.pl</a> into a polygon.</p>
 </div>
 <div class="answer-controls post-controls">

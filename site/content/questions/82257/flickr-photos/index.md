@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-82279-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/82276/flickr-photos">https://help.openstreetmap.org/questions/82276/flickr-photos</a> which seems to be a continuation of this question</p>
+<p>See <a href="/questions/82276/flickr-photos">https://help.openstreetmap.org/questions/82276/flickr-photos</a> which seems to be a continuation of this question</p>
 </div>
 <div id="comment-82279-info" class="comment-info">
 <span class="comment-age">(20 Oct '21, 16:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

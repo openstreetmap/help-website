@@ -125,7 +125,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'm presuming that this means "how can I add an entry to the Start menu in Windows that will open my favourite web browser at a particular location".</p>
-<p>Probably the easiest way (if you're not used to adding entries to the Start menu manually) is to simply browse to the place you're interested in and add a bookmark. The URL for the bookmark contains details of the location, so if you have bookmarked <a href="http://www.openstreetmap.org/#map=19/51.50857/-0.21573">http://www.openstreetmap.org/#map=19/51.50857/-0.21573</a> as "My favourite pub" then it will appear on your list of bookmarks - select it and OSM will open at that location.</p>
+<p>Probably the easiest way (if you're not used to adding entries to the Start menu manually) is to simply browse to the place you're interested in and add a bookmark. The URL for the bookmark contains details of the location, so if you have bookmarked <a href="https://www.openstreetmap.org/#map=19/51.50857/-0.21573">https://www.openstreetmap.org/#map=19/51.50857/-0.21573</a> as "My favourite pub" then it will appear on your list of bookmarks - select it and OSM will open at that location.</p>
 <p>Some web browsers (e.g. Firefox) will appear on the start menu with places that you visit frequently, which if you use this bookmark often, will include it.</p>
 </div>
 <div class="answer-controls post-controls">

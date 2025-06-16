@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should check the API 0.6 <code>changesets</code> method call: <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Query:_GET_.2Fapi.2F0.6.2Fchangesets">Link</a>. It comes with all the details you're looking for.</p>
+<p>You should check the API 0.6 <code>changesets</code> method call: <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Query:_GET_.2Fapi.2F0.6.2Fchangesets">Link</a>. It comes with all the details you're looking for.</p>
 <pre><code>https://api.openstreetmap.org/api/0.6/changesets?user=3582
 https://api.openstreetmap.org/api/0.6/changesets?display_name=davidearl</code></pre>
 </div>

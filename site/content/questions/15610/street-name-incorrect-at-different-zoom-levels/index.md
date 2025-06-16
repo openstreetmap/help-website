@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-15635-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Duplicate of <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></p>
+<p>Duplicate of <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></p>
 </div>
 <div id="comment-15635-info" class="comment-info">
 <span class="comment-age">(29 Aug '12, 10:34)</span> <span class="comment-user userinfo">sleske</span>
@@ -128,7 +128,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a long detailed answer to the question of "when do tile levels at different zoom levels get updated" <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
+<p>There's a long detailed answer to the question of "when do tile levels at different zoom levels get updated" <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

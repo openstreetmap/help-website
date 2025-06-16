@@ -43,7 +43,7 @@ osqa_accepted = true
 <p><a href="http://blogs.openstreetmap.org/rss20.xml">http://blogs.openstreetmap.org/rss20.xml</a></p>
 <p>However I want only want to be notified about English ones.</p>
 <p>How, if possible could it be configured to my preferred language?</p>
-<p>Update: I notice one can get list of recent OSM diary entries, such as in German: <a href="http://www.openstreetmap.org/diary/de">http://www.openstreetmap.org/diary/de</a></p>
+<p>Update: I notice one can get list of recent OSM diary entries, such as in German: <a href="https://www.openstreetmap.org/diary/de">https://www.openstreetmap.org/diary/de</a></p>
 <p>However no obvious way to get an RSS feed on it :(</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't think it's possible for blogs.osm.org; at least, I've not seen such a set up with the <a href="http://www.planetplanet.org/">Planet</a> feed reader (which is used there). For the English diary entries, however, there is <a href="http://www.openstreetmap.org/diary/en/rss">openstreetmap.org/diary/en/rss</a>.</p>
+<p>I don't think it's possible for blogs.osm.org; at least, I've not seen such a set up with the <a href="http://www.planetplanet.org/">Planet</a> feed reader (which is used there). For the English diary entries, however, there is <a href="https://www.openstreetmap.org/diary/en/rss">openstreetmap.org/diary/en/rss</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ One Answer:
 <div id="post-11881-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For other languages substitute the 'en' for the language of your choice. e.g. for Russian. <a href="http://www.openstreetmap.org/diary/ru/rss">http://www.openstreetmap.org/diary/ru/rss</a></p>
+<p>For other languages substitute the 'en' for the language of your choice. e.g. for Russian. <a href="https://www.openstreetmap.org/diary/ru/rss">https://www.openstreetmap.org/diary/ru/rss</a></p>
 <p>Mapping others languages to the two character code is left as an exercise for the reader :)</p>
 </div>
 <div id="comment-11881-info" class="comment-info">

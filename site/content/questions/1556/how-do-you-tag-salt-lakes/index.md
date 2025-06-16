@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Deserts">natural=desert</a> and desert=salt as salt lakes are really deserts made of salt instead of sand or rocks.</p>
+<p>You can try <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Deserts">natural=desert</a> and desert=salt as salt lakes are really deserts made of salt instead of sand or rocks.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -129,7 +129,7 @@ osqa_accepted = false
 <div id="post-30031-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The Uyuni Salt Lake in Bolivia is tagged like this. See: <a href="http://www.openstreetmap.org/#map=9/-19.9462/-67.2281">http://www.openstreetmap.org/#map=9/-19.9462/-67.2281</a></p>
+<p>The Uyuni Salt Lake in Bolivia is tagged like this. See: <a href="https://www.openstreetmap.org/#map=9/-19.9462/-67.2281">https://www.openstreetmap.org/#map=9/-19.9462/-67.2281</a></p>
 </div>
 <div id="comment-30031-info" class="comment-info">
 <span class="comment-age">(20 Jan '14, 18:07)</span> <span class="comment-user userinfo">ALE</span>
@@ -182,7 +182,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Under <a href="http://wiki.openstreetmap.org/wiki/Wetland">wetland</a> you can find <code>wetland=saltern</code> and <code>wetland=saltmarsh</code> - if that fits...</p>
+<p>Under <a href="https://wiki.openstreetmap.org/wiki/Wetland">wetland</a> you can find <code>wetland=saltern</code> and <code>wetland=saltmarsh</code> - if that fits...</p>
 <p>Note:</p>
 <ul>
 <li>The Great Salt Lake is tagged as natural=water...</li>
@@ -293,7 +293,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looks like natural=water, salt=yes <a href="http://wiki.openstreetmap.org/wiki/Key:salt">http://wiki.openstreetmap.org/wiki/Key:salt</a></p>
+<p>Looks like natural=water, salt=yes <a href="https://wiki.openstreetmap.org/wiki/Key:salt">https://wiki.openstreetmap.org/wiki/Key:salt</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -324,7 +324,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost</a> In that case it's a salt pan and not a salt lake, isn't it? For salt pans natural=desert + desert=salt should be used, see Gnonthgol's answer.</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost</a> In that case it's a salt pan and not a salt lake, isn't it? For salt pans natural=desert + desert=salt should be used, see Gnonthgol's answer.</p>
 </div>
 <div id="comment-42931-info" class="comment-info">
 <span class="comment-age">(06 May '15, 20:52)</span> <span class="comment-user userinfo">scai ♦</span>

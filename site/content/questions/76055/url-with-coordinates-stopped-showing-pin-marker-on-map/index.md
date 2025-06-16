@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I recently created an album of my photos, with a URL link for each photo specifying its GSM coordinates (like <a href="http://www.openstreetmap.org/?zoom=18&amp;mlat=48.86397197222222&amp;mlon=2.35273600000000">this one</a>). Until yesterday, upon clicking on such a link, the opening map would display a marker (pin) on the spot corresponding to the location. As of today, it doesn't display it anymore (but it opens at the right spot).</p>
+<p>I recently created an album of my photos, with a URL link for each photo specifying its GSM coordinates (like <a href="https://www.openstreetmap.org/?zoom=18&amp;mlat=48.86397197222222&amp;mlon=2.35273600000000">this one</a>). Until yesterday, upon clicking on such a link, the opening map would display a marker (pin) on the spot corresponding to the location. As of today, it doesn't display it anymore (but it opens at the right spot).</p>
 <p>I haven't changed the URLs. I tried different browsers, I tried different machines (my PC; my cellpàhone). No way.</p>
 <p>How do I make the pins display again, please?</p>
 <p>Thanks, Michael</p>

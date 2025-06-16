@@ -65,7 +65,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See this question and its answer: <a href="https://help.openstreetmap.org/questions/64405/tile-server-hardware-requirements">https://help.openstreetmap.org/questions/64405/tile-server-hardware-requirements</a></p>
+<p>See this question and its answer: <a href="/questions/64405/tile-server-hardware-requirements">https://help.openstreetmap.org/questions/64405/tile-server-hardware-requirements</a></p>
 </div>
 <div id="comment-64438-info" class="comment-info">
 <span class="comment-age">(29 Jun '18, 10:46)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the footpaths are for the public to use there is not much different from a legal right of way. You can add an <a href="http://wiki.openstreetmap.org/wiki/Key:operator">operator=*</a> tag to the footpaths to show that these paths are operated by the local voluntary group.</p>
+<p>If the footpaths are for the public to use there is not much different from a legal right of way. You can add an <a href="https://wiki.openstreetmap.org/wiki/Key:operator">operator=*</a> tag to the footpaths to show that these paths are operated by the local voluntary group.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try adding the <a href="http://taginfo.openstreetmap.org/keys/designation#values">designation=permissive_footpath</a> tag in the advanced tagging screen. See also the wiki page about the <a href="http://wiki.openstreetmap.org/wiki/Key:designation">designation key</a>.</p>
+<p>Try adding the <a href="http://taginfo.openstreetmap.org/keys/designation#values">designation=permissive_footpath</a> tag in the advanced tagging screen. See also the wiki page about the <a href="https://wiki.openstreetmap.org/wiki/Key:designation">designation key</a>.</p>
 <p>The operator tag also mentioned in these answers is useful to say who it is that maintains them.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -212,7 +212,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For footpaths that aren't designated as footpaths, bridleways, byways etc. I personally wouldn't use "designation" - I'd tag the access as accurately as possible (which might be "yes", "permissive" or perhaps something else), and if relevant add some sort of note explaining the situation.</p>
-<p><a href="http://www.openstreetmap.org/browse/way/52984927">Here</a> is one example. see also <a href="http://taginfo.openstreetmap.org/search?q=defra#values">here</a>, which shows how people have mapped paths that are open for permissive access under the DEFRA scheme.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/52984927">Here</a> is one example. see also <a href="http://taginfo.openstreetmap.org/search?q=defra#values">here</a>, which shows how people have mapped paths that are open for permissive access under the DEFRA scheme.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -262,7 +262,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I did a search of the wiki for "permissive" here's a link to one example of tags <a href="http://wiki.openstreetmap.org/wiki/Trails">http://wiki.openstreetmap.org/wiki/Trails</a> In England permissive paths can be withdrawn by landowner so they are better than nothing but be wary of landowners who get paths classified as permissive that you know, are from years of use rights of way so they can then close them.</p>
+<p>I did a search of the wiki for "permissive" here's a link to one example of tags <a href="https://wiki.openstreetmap.org/wiki/Trails">https://wiki.openstreetmap.org/wiki/Trails</a> In England permissive paths can be withdrawn by landowner so they are better than nothing but be wary of landowners who get paths classified as permissive that you know, are from years of use rights of way so they can then close them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

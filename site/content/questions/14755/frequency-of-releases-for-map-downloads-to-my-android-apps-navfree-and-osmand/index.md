@@ -119,7 +119,7 @@ osqa_accepted = true
 <p>The other thing is how to get most recent data for your app that uses map files based on OSM</p>
 <p>For <em>Osmand</em> it needs about twoo weeks when the Osmand guys start a new processing of map generation for the whole planet. That might be the reason why they have regular updates only once in a month or similar.</p>
 <p>Best way for you: Download the most recent raw OSM data from geofabrik.de for your area and create a map for Osmand with the bundled MapCreator that runs on any desktop PC with Java.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a>... <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/diffs">Planet.osm/diffs</a> ... <a href="http://code.google.com/p/osmand/">code.google.com/p/osmand/</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a>... <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/diffs">Planet.osm/diffs</a> ... <a href="http://code.google.com/p/osmand/">code.google.com/p/osmand/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -220,7 +220,7 @@ osqa_accepted = true
 <div id="post-14758-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>related Q <a href="http://help.openstreetmap.org/questions/14292/access-blocked">http://help.openstreetmap.org/questions/14292/access-blocked</a></p>
+<p>related Q <a href="/questions/14292/access-blocked">https://help.openstreetmap.org/questions/14292/access-blocked</a></p>
 </div>
 <div id="comment-14758-info" class="comment-info">
 <span class="comment-age">(01 Aug '12, 12:41)</span> <span class="comment-user userinfo">andy mackey</span>

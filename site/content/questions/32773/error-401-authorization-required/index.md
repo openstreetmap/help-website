@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] error 401 Authorization Required"
-description = '''I have been working with kenguest api http://wiki.openstreetmap.org/wiki/User:Kenguest and it bothers me a lot. We are already using the search api in php. Now when trying to push some update this error came in  thrown in D:&#92;projects***&#92;libraries&#92;osm&#92;Services&#92;OpenStreetMap&#92;Transport&#92;HTTP.php on line...'''
+description = '''I have been working with kenguest api https://wiki.openstreetmap.org/wiki/User:Kenguest and it bothers me a lot. We are already using the search api in php. Now when trying to push some update this error came in  thrown in D:&#92;projects***&#92;libraries&#92;osm&#92;Services&#92;OpenStreetMap&#92;Transport&#92;HTTP.php on line...'''
 date = "2014-04-30T15:42:00Z"
 lastmod = "2014-04-30T16:19:00Z"
 weight = 32773
@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have been working with kenguest api <a href="http://wiki.openstreetmap.org/wiki/User:Kenguest">http://wiki.openstreetmap.org/wiki/User:Kenguest</a> and it bothers me a lot. We are already using the search api in php. Now when trying to push some update this error came in</p>
+<p>I have been working with kenguest api <a href="https://wiki.openstreetmap.org/wiki/User:Kenguest">https://wiki.openstreetmap.org/wiki/User:Kenguest</a> and it bothers me a lot. We are already using the search api in php. Now when trying to push some update this error came in</p>
 <p>thrown in D:\projects*<strong><em>**\libraries\osm\Services\OpenStreetMap\Transport\HTTP.php on line 162 [30-Apr-2014 14:04:33 UTC] PHP Fatal error: Uncaught exception 'Services_OpenStreetMap_Exception' with message 'Unexpected HTTP status: 401 Authorization Required' in D:\projects*</em></strong>**\libraries\osm\Services\OpenStreetMap\Transport\HTTP.php:162 Stack trace:</p>
 <h1 id="dprojectslibrariesopenstreetapi.php173-services_openstreetmap_transport_http-getresponsehttpapi.open...-put-xml-version...-null-array">0 D:\projects*<strong><em>**\libraries\openstreetapi.php(173): Services_OpenStreetMap_Transport_HTTP-&gt;getResponse('http://api.open...', 'PUT', '</em></strong>*', '<strong>*</strong>', '&lt;?xml version="...', NULL, Array)</h1>
-<p>the username and password are correct no doubt about it. Following the details from here <a href="http://wiki.openstreetmap.org/wiki/OsmChange">http://wiki.openstreetmap.org/wiki/OsmChange</a> tried using the username instead of the email and still does not work. I am able to login with this credentials and able to search also. I'm asking for advice. Please help.</p>
+<p>the username and password are correct no doubt about it. Following the details from here <a href="https://wiki.openstreetmap.org/wiki/OsmChange">https://wiki.openstreetmap.org/wiki/OsmChange</a> tried using the username instead of the email and still does not work. I am able to login with this credentials and able to search also. I'm asking for advice. Please help.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-error401" rel="tag" title="see questions tagged &#39;error401&#39;">error401</span>

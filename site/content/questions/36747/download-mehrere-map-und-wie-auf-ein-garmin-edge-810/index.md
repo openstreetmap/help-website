@@ -86,7 +86,7 @@ osqa_accepted = false
 <div id="post-36750-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>siehe <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>siehe <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div id="comment-36750-info" class="comment-info">
 <span class="comment-age">(11 Sep '14, 09:06)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -152,7 +152,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Wow...this is perfect for the <a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">DC RainMaker ... How to download free maps to your Garmin Edge 705/800/810</a><br />
-How is your english <a href="http://help.openstreetmap.org/users/9630/lippi_rs"></a><a href="http://help.openstreetmap.org/users/9630/lippi_rs">@Lippi_RS</a></a></p>
+How is your english <a href="https://help.openstreetmap.org/users/9630/lippi_rs"></a><a href="https://help.openstreetmap.org/users/9630/lippi_rs">@Lippi_RS</a></a></p>
 <p>I am unfamiliar with the Mr European maps but I suggest this is the way to go!</p>
 </div>
 <div class="answer-controls post-controls">

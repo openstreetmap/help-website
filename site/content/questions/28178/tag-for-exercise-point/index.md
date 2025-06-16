@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>What is the preferred method to tag these type of places dotted around some parks and tracks to do some exercise?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/IMG_0782.JPG" alt="ex 1" /> <img src="http://help.openstreetmap.org/upfiles/IMG_0781.JPG" alt="ex 2" /> <img src="http://help.openstreetmap.org/upfiles/IMG_0780.JPG" alt="ex 3" /> <img src="http://help.openstreetmap.org/upfiles/IMG_0779.JPG" alt="ex 4" /></p>
-<p>I note these two.. <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfitness_station">Tag:leisure=fitness_station</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/exercise_point">Proposed features/exercise point</a> and find either would be suitable, but there appears to be little use of them yet and no guidance on the <a href="http://wiki.openstreetmap.org/wiki/Map_Features">MapFeatures</a> page.</p>
+<p><img src="/upfiles/IMG_0782.JPG" alt="ex 1" /> <img src="/upfiles/IMG_0781.JPG" alt="ex 2" /> <img src="/upfiles/IMG_0780.JPG" alt="ex 3" /> <img src="/upfiles/IMG_0779.JPG" alt="ex 4" /></p>
+<p>I note these two.. <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfitness_station">Tag:leisure=fitness_station</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/exercise_point">Proposed features/exercise point</a> and find either would be suitable, but there appears to be little use of them yet and no guidance on the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">MapFeatures</a> page.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tag" rel="tag" title="see questions tagged &#39;tag&#39;">tag</span> <span class="post-tag tag-link-exercise_point" rel="tag" title="see questions tagged &#39;exercise_point&#39;">exercise_point</span> <span class="post-tag tag-link-leisure" rel="tag" title="see questions tagged &#39;leisure&#39;">leisure</span> <span class="post-tag tag-link-fitness_station" rel="tag" title="see questions tagged &#39;fitness_station&#39;">fitness_station</span>

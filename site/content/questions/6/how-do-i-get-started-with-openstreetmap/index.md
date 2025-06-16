@@ -106,9 +106,9 @@ osqa_accepted = false
 <div class="answer-body">
 <p>First of all the <a href="http://wiki.openstreetmap.org" title="OpenStreetMap Wiki">Wiki</a> is an important resource (and available in many languages):</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide" title="Beginners&#39; Guide">Beginners Guide</a> for an first overview</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Map_Making_Overview" title="Map Making Overview">Map making</a> for editing the map</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Contact" title="Contact">Contact</a> for communication with others to get help or discuss</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide" title="Beginners&#39; Guide">Beginners Guide</a> for an first overview</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Map_Making_Overview" title="Map Making Overview">Map making</a> for editing the map</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Contact" title="Contact">Contact</a> for communication with others to get help or discuss</li>
 </ul>
 <p>And of course you can ask here if you have any other questions.</p>
 </div>
@@ -154,7 +154,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>RangerRick obviously this question is very much about contributing new raw data. I think your question could be a good one to ask (ask it as new question rather than a 'comment' here) although it's rather a broad. There are already some questions on here which you may find helpful, <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">about rendering</a> for example. We also have a wiki page '<a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">Using OpenStreetMap</a>'.</p>
+<p>RangerRick obviously this question is very much about contributing new raw data. I think your question could be a good one to ask (ask it as new question rather than a 'comment' here) although it's rather a broad. There are already some questions on here which you may find helpful, <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">about rendering</a> for example. We also have a wiki page '<a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">Using OpenStreetMap</a>'.</p>
 </div>
 <div id="comment-890-info" class="comment-info">
 <span class="comment-age">(21 Sep '10, 16:57)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -196,7 +196,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should talk to Andy Allan ;) He can be a hard guy to get a hold of though; alternatively, consume the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginner's Guide</a> which is available in a lot of languages and will guide you in your first steps in OpenStreetMap. Any questions that you might still have we will gladly answer here!</p>
+<p>You should talk to Andy Allan ;) He can be a hard guy to get a hold of though; alternatively, consume the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginner's Guide</a> which is available in a lot of languages and will guide you in your first steps in OpenStreetMap. Any questions that you might still have we will gladly answer here!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

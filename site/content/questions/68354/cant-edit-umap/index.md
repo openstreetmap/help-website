@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/66814/i-have-lost-the-link-to-edit-my-umap-map">I have lost the link to edit my "umap" map</a></p>
+<p>See <a href="/questions/66814/i-have-lost-the-link-to-edit-my-umap-map">I have lost the link to edit my "umap" map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

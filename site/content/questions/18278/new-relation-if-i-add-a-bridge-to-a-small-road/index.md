@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Normally, I wouldn't do that just to say "these are parts of the same road", as (presumably) the road name or reference number will already do that.</p>
-<p>The USA is an exception to the norm here though - a physical piece of tarmac can have two or more numbers, so there it'd be added to route relations like <a href="http://www.openstreetmap.org/browse/relation/377631">this one</a>. If you have a look at one of the parts of Jefferson Street in that relation you'll see that it's part of a "US 19" relation (for the route) but not part of a "Jefferson Street" relation because that's obvious from the name.</p>
+<p>The USA is an exception to the norm here though - a physical piece of tarmac can have two or more numbers, so there it'd be added to route relations like <a href="https://www.openstreetmap.org/browse/relation/377631">this one</a>. If you have a look at one of the parts of Jefferson Street in that relation you'll see that it's part of a "US 19" relation (for the route) but not part of a "Jefferson Street" relation because that's obvious from the name.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

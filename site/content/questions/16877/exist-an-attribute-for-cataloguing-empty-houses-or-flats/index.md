@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The usual way to mark this in OSM is with <code>disused=yes</code>. From the <a href="http://wiki.openstreetmap.org/wiki/Key:disused">wiki page</a></p>
+<p>The usual way to mark this in OSM is with <code>disused=yes</code>. From the <a href="https://wiki.openstreetmap.org/wiki/Key:disused">wiki page</a></p>
 <blockquote>
 <p>A disused feature is any man-made feature which is no longer used for its intended purpose, but which is still maintained and has repairs made. Reuse may be planned. Disused features are still useful for navigation and are visible in the landscape. Frequently these will be boarded-up buildings; for example, an old disused multi-storey car park.</p>
 </blockquote>
@@ -136,7 +136,7 @@ osqa_accepted = false
 <div id="post-16899-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you look at the <a href="http://wiki.openstreetmap.org/wiki/Railway">railway</a> tag the values abandoned and disused <em>can</em> have different meanings. A building which is empty for only a short time may be abandoned during that time, but not really disused. Of course this depends on the interpretation and should be clarified in the wiki.</p>
+<p>If you look at the <a href="https://wiki.openstreetmap.org/wiki/Railway">railway</a> tag the values abandoned and disused <em>can</em> have different meanings. A building which is empty for only a short time may be abandoned during that time, but not really disused. Of course this depends on the interpretation and should be clarified in the wiki.</p>
 </div>
 <div id="comment-16899-info" class="comment-info">
 <span class="comment-age">(15 Oct '12, 11:58)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -179,7 +179,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><a href="http://taginfo.openstreetmap.org">taginfo</a> reports <a href="http://taginfo.openstreetmap.org/tags/building=abandoned">building=abandoned</a> which you could use for this. There is also <a href="http://taginfo.openstreetmap.org/tags/building=disused">building=disused</a> but the meaning seems not very clear to me.</p>
-<p>Furthermore the wiki suggests that you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>. But note that not every information belongs into OSM's database. For personal purposes better create a separate database and display its content via an overlay on top of a OSM map.</p>
+<p>Furthermore the wiki suggests that you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>. But note that not every information belongs into OSM's database. For personal purposes better create a separate database and display its content via an overlay on top of a OSM map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

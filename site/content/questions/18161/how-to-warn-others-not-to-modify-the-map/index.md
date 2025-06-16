@@ -110,9 +110,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's not widely accepted way to achieve this. I would recommend placing a <a href="http://wiki.openstreetmap.org/wiki/Key:note">"note"</a> tag on the junction and putting a message in there.</p>
+<p>There's not widely accepted way to achieve this. I would recommend placing a <a href="https://wiki.openstreetmap.org/wiki/Key:note">"note"</a> tag on the junction and putting a message in there.</p>
 <p>It would be possible to invent a system whereby editors would display a pop-up warning when edits are made inside an area tagged with certain warning tags, or when an object that carries such tags is modified, but we don't have that yet.</p>
-<p>The same applies to aerial imagery offsets - in some areas, some imagery sources might be 10 metres off or more, and it would be great if it were possible to automatically alert users to this situation, rather than having them mindlessly trace from misaligned imagery. Some work has been done towards this (see <a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process)">http://wiki.openstreetmap.org/wiki/True_Offset_Process)</a> and both problems - aerial imagery being out of date, or out of kilter - are really quite similar, but we haven't yet got a universally working solution.</p>
+<p>The same applies to aerial imagery offsets - in some areas, some imagery sources might be 10 metres off or more, and it would be great if it were possible to automatically alert users to this situation, rather than having them mindlessly trace from misaligned imagery. Some work has been done towards this (see <a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process)">https://wiki.openstreetmap.org/wiki/True_Offset_Process)</a> and both problems - aerial imagery being out of date, or out of kilter - are really quite similar, but we haven't yet got a universally working solution.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

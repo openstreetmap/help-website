@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download "ready made for Garmin" maps based on Openstreetmap data from many providers. Most of them are <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">listed in the wiki</a>.</p>
+<p>You can download "ready made for Garmin" maps based on Openstreetmap data from many providers. Most of them are <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">listed in the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -123,7 +123,7 @@ One Answer:
 <div id="post-19542-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks, how it works , what shall I do once I open the link? <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Mauritius">http://wiki.openstreetmap.org/wiki/WikiProject_Mauritius</a></p>
+<p>Thanks, how it works , what shall I do once I open the link? <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Mauritius">https://wiki.openstreetmap.org/wiki/WikiProject_Mauritius</a></p>
 </div>
 <div id="comment-19542-info" class="comment-info">
 <span class="comment-age">(02 Feb '13, 13:55)</span> <span class="comment-user userinfo">Boj33</span>
@@ -157,8 +157,8 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>On <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">the wiki page</a>. You'll see a number of providers listed as "worldwide", such as <a href="http://garmin.openstreetmap.nl/">this one</a>. Mauritius is listed under "Africa":</p>
-<p><img src="http://help.openstreetmap.org/upfiles/q_1.png" alt="Screenshot of garmin.osm.nl" /></p>
+<p>On <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">the wiki page</a>. You'll see a number of providers listed as "worldwide", such as <a href="http://garmin.openstreetmap.nl/">this one</a>. Mauritius is listed under "Africa":</p>
+<p><img src="/upfiles/q_1.png" alt="Screenshot of garmin.osm.nl" /></p>
 </div>
 <div id="comment-19569-info" class="comment-info">
 <span class="comment-age">(04 Feb '13, 09:00)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

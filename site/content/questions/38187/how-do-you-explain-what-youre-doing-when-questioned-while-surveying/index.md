@@ -293,7 +293,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't have a pamphlet but do often get into conversations with local business owners and start talking to them about OSM. Once I've finished uploading all the details I usually send them a link to the relevant section of the map. More details here in a diary entry I posted a few months ago <a href="http://www.openstreetmap.org/user/NZGraham/diary/23335">http://www.openstreetmap.org/user/NZGraham/diary/23335</a></p>
+<p>I don't have a pamphlet but do often get into conversations with local business owners and start talking to them about OSM. Once I've finished uploading all the details I usually send them a link to the relevant section of the map. More details here in a diary entry I posted a few months ago <a href="https://www.openstreetmap.org/user/NZGraham/diary/23335">https://www.openstreetmap.org/user/NZGraham/diary/23335</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -431,7 +431,7 @@ osqa_accepted = false
 <div id="post-38207-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> "But maybe as I'm oldish people feel less threatened" I should feel pretty safe then as a 67 year old mapper!</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> "But maybe as I'm oldish people feel less threatened" I should feel pretty safe then as a 67 year old mapper!</p>
 </div>
 <div id="comment-38207-info" class="comment-info">
 <span class="comment-age">(01 Nov '14, 00:38)</span> <span class="comment-user userinfo">NZGraham</span>

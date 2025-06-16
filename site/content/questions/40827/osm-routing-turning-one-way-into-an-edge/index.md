@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You could of course have a look at the existing routing engines which you don't want to use, each of which have solved that problem in one way or the other.</p>
-<p>The question that you have been linked to in the post you reference above actually contains the answer. Re-read it: <a href="https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">How can I convert an OSM XML file into a graph representation?</a></p>
+<p>The question that you have been linked to in the post you reference above actually contains the answer. Re-read it: <a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">How can I convert an OSM XML file into a graph representation?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

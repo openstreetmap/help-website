@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-10467-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I posted a question related to this: <a href="Tagging%20minor%20residential%20property%20buildings"></a><a href="http://help.openstreetmap.org/questions/104569">http://help.openstreetmap.org/questions/104569</a></p>
+<p>I posted a question related to this: <a href="Tagging%20minor%20residential%20property%20buildings"></a><a href="/questions/104569">https://help.openstreetmap.org/questions/104569</a></p>
 </div>
 <div id="comment-10467-info" class="comment-info">
 <span class="comment-age">(07 Feb '12, 13:49)</span> <span class="comment-user userinfo">Ilari</span>
@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-10473-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/104569">http://help.openstreetmap.org/questions/104569</a></p>
+<p><a href="/questions/104569">https://help.openstreetmap.org/questions/104569</a></p>
 <p>Link does not work!</p>
 </div>
 <div id="comment-10473-info" class="comment-info">
@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-10479-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Perhaps <a href="http://help.openstreetmap.org/questions/10456/tagging-minor-residential-property-buildings">http://help.openstreetmap.org/questions/10456/tagging-minor-residential-property-buildings</a> ?</p>
+<p>Perhaps <a href="/questions/10456/tagging-minor-residential-property-buildings">https://help.openstreetmap.org/questions/10456/tagging-minor-residential-property-buildings</a> ?</p>
 </div>
 <div id="comment-10479-info" class="comment-info">
 <span class="comment-age">(08 Feb '12, 00:24)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -199,7 +199,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a good selection of building tags on the <a href="http://wiki.openstreetmap.org/wiki/Key:building">key:building</a> wiki page. As most things in OSM, these tags are not set in stone and there's perhaps some discussion over some of them but it's a good guide none-the-less.</p>
+<p>There's a good selection of building tags on the <a href="https://wiki.openstreetmap.org/wiki/Key:building">key:building</a> wiki page. As most things in OSM, these tags are not set in stone and there's perhaps some discussion over some of them but it's a good guide none-the-less.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

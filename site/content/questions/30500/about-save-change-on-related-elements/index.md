@@ -139,7 +139,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><span>@Digma</span>: Yes. You only change what you (helped by your editor) change. Have a look at one of <a href="http://www.openstreetmap.org/user/Digmaa/history">your changesets</a> and view the osmChange XML (link on bottom of each changeset page). Ways are just a list of nodes – see <span>elements in our wiki</span>.</p>
+<p><span>@Digma</span>: Yes. You only change what you (helped by your editor) change. Have a look at one of <a href="https://www.openstreetmap.org/user/Digmaa/history">your changesets</a> and view the osmChange XML (link on bottom of each changeset page). Ways are just a list of nodes – see <span>elements in our wiki</span>.</p>
 </div>
 <div id="comment-30505-info" class="comment-info">
 <span class="comment-age">(06 Feb '14, 17:19)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

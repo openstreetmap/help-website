@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I see that some kind of bot is doing changes but after first bot I've recreated missing parts of Wisła river. Now I see that <a href="http://www.openstreetmap.org/browse/way/43647821">this part</a> is not rendering. Is it some kind of mistake or is it related to my <a href="https://trac.openstreetmap.org/ticket/4525">bug report</a>?</p>
+<p>Hi, I see that some kind of bot is doing changes but after first bot I've recreated missing parts of Wisła river. Now I see that <a href="https://www.openstreetmap.org/browse/way/43647821">this part</a> is not rendering. Is it some kind of mistake or is it related to my <a href="https://trac.openstreetmap.org/ticket/4525">bug report</a>?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-bot" rel="tag" title="see questions tagged &#39;bot&#39;">bot</span> <span class="post-tag tag-link-bug" rel="tag" title="see questions tagged &#39;bug&#39;">bug</span>

@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-30842-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I manually create the boundary relation and set e.g. the attributes, name=xxx; type=boundary; boundary=administrative ; admin_level=9 The members of the relations are way with attributes boundary=administrative; admin_level=9 Note that is is also possible to have admin_level=8 here, it's typically the highest level that wins. All the ways get role outer. see e.g. <a href="http://www.openstreetmap.org/relation/3402541#map=13/51.0137/3.6307">http://www.openstreetmap.org/relation/3402541#map=13/51.0137/3.6307</a></p>
+<p>I manually create the boundary relation and set e.g. the attributes, name=xxx; type=boundary; boundary=administrative ; admin_level=9 The members of the relations are way with attributes boundary=administrative; admin_level=9 Note that is is also possible to have admin_level=8 here, it's typically the highest level that wins. All the ways get role outer. see e.g. <a href="https://www.openstreetmap.org/relation/3402541#map=13/51.0137/3.6307">https://www.openstreetmap.org/relation/3402541#map=13/51.0137/3.6307</a></p>
 <p>We use add a node with role admin_centre, other communities use the role label</p>
 </div>
 <div id="comment-30842-info" class="comment-info">
@@ -148,7 +148,7 @@ osqa_accepted = false
 </p>
 <p>A boundary relation can be a rather complex object in OpenStreetMap terms. I can't recommend that you struggle with creating that complex object, while simultaneously struggling with a new editor. I don't know of a boundary relation tutorial. But let's try to point you in the right direction.<br />
 </p>
-<p>Here is a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">wiki page on multipolygon relations</a>. A boundary relation is a type of multipolygon relation. I wouldn't dive into a complex multipolygon as a first step.<br />
+<p>Here is a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">wiki page on multipolygon relations</a>. A boundary relation is a type of multipolygon relation. I wouldn't dive into a complex multipolygon as a first step.<br />
 </p>
 <p>This is a tutorial on creating a simpler multipolygon relation, for a <a href="http://weait.com/courtyard">building with a courtyard</a>. The courtyard tutorial creates a very simple multipolygon relation. That probably makes a good first step on relations.<br />
 </p>

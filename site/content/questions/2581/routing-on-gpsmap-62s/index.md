@@ -191,7 +191,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Yes, I'd agree that it sounds like the map that you've loaded isn't routable. Routable maps are quite easy to create - I gave a soup-to-nuts example of creating a one in answer to another question here:</p>
-<p><a href="http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap?page=1#2440">http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap?page=1#2440</a></p>
+<p><a href="/questions/1809/how-to-install-mkgmap?page=1#2440">https://help.openstreetmap.org/questions/1809/how-to-install-mkgmap?page=1#2440</a></p>
 </div>
 <div id="comment-2606-info" class="comment-info">
 <span class="comment-age">(31 Jan '11, 15:31)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

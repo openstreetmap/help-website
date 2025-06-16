@@ -105,9 +105,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Pre-generating tiles for "just 5 [USA] states" would already take a <a href="http://help.openstreetmap.org/questions/6062/how-large-in-disk-size-is-a-current-complete-tile-set">huge amount of disk space</a> if you're interested in the higher zooms. I wouldn't pre-generate tiles for anything bigger than, say, France, and even then only if you have a lot of disk space and CPU to throw at it.</p>
-<p>The other prliminary question is : do you really need to generate and serve your own tiles ? Unless you want a custom map rendering or know that you will outgrow the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>, you can use one of the existing tiles provider and add you own data on top of it using OpenLayers. You'll save yourself a lot of trouble, and the tiles will be kept up to date.</p>
-<p>If after that you still want to (pre)render you own tiles, check <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> which is the most common way to do things. There's quite a lot more information on the wiki and many techniques depending on use-case, but it's getting out of my area of expertise so I'll let somebody else answer.</p>
+<p>Pre-generating tiles for "just 5 [USA] states" would already take a <a href="/questions/6062/how-large-in-disk-size-is-a-current-complete-tile-set">huge amount of disk space</a> if you're interested in the higher zooms. I wouldn't pre-generate tiles for anything bigger than, say, France, and even then only if you have a lot of disk space and CPU to throw at it.</p>
+<p>The other prliminary question is : do you really need to generate and serve your own tiles ? Unless you want a custom map rendering or know that you will outgrow the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>, you can use one of the existing tiles provider and add you own data on top of it using OpenLayers. You'll save yourself a lot of trouble, and the tiles will be kept up to date.</p>
+<p>If after that you still want to (pre)render you own tiles, check <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> which is the most common way to do things. There's quite a lot more information on the wiki and many techniques depending on use-case, but it's getting out of my area of expertise so I'll let somebody else answer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

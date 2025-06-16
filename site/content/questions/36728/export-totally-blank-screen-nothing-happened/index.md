@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, it's rubbish isn't it :-) ?</p>
-<p>Unfortunately, depending what you actually want to do, the "export" option is almost never the correct one if you want to do something with the data. Depending on what sort of data you want, and over how big an area, you're probably better off with an <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">extract from the main "planet" file</a>, using something that's tailored for what you want (e.g. <a href="http://garmin.openstreetmap.nl/">for use on a Garmin GPS</a>), or using a service such as <a href="http://overpass-turbo.eu/">Overpass Turbo</a>.</p>
+<p>Unfortunately, depending what you actually want to do, the "export" option is almost never the correct one if you want to do something with the data. Depending on what sort of data you want, and over how big an area, you're probably better off with an <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">extract from the main "planet" file</a>, using something that's tailored for what you want (e.g. <a href="http://garmin.openstreetmap.nl/">for use on a Garmin GPS</a>), or using a service such as <a href="http://overpass-turbo.eu/">Overpass Turbo</a>.</p>
 <p>In fact, when you click "export" and scroll down you'll see an explanation.</p>
 <p>See <a href="https://help.openstreetmap.org/search/?q=export&amp;Submit=search&amp;t=question">lots of previous export questions</a>.</p>
 </div>

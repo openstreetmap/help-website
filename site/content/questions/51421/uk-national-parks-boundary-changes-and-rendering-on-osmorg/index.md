@@ -44,8 +44,8 @@ osqa_accepted = true
 <p>I have noticed that the nice green tinted outline on the default osm.org site still shows the old boundaries, even though the orange selection highlight shows the new one. Have I done something wrong? Will it just take time for the changes to be reflected properly?</p>
 <p>Some links:</p>
 <ul>
-<li>"Relation: Lake District National Park (287917)" (Difference between green tint and orange hightlight is clearest in the central part of the eastern boundary.) <a href="http://www.openstreetmap.org/relation/287917#map=9/54.4796/-3.0377">http://www.openstreetmap.org/relation/287917#map=9/54.4796/-3.0377</a></li>
-<li>"Relation: Yorkshire Dales National Park (307985)" (Difference between green tint and orange hightlight is clearest in the North West of the boundary.) <a href="http://www.openstreetmap.org/relation/307985#map=10/54.2628/-2.2041">http://www.openstreetmap.org/relation/307985#map=10/54.2628/-2.2041</a></li>
+<li>"Relation: Lake District National Park (287917)" (Difference between green tint and orange hightlight is clearest in the central part of the eastern boundary.) <a href="https://www.openstreetmap.org/relation/287917#map=9/54.4796/-3.0377">https://www.openstreetmap.org/relation/287917#map=9/54.4796/-3.0377</a></li>
+<li>"Relation: Yorkshire Dales National Park (307985)" (Difference between green tint and orange hightlight is clearest in the North West of the boundary.) <a href="https://www.openstreetmap.org/relation/307985#map=10/54.2628/-2.2041">https://www.openstreetmap.org/relation/307985#map=10/54.2628/-2.2041</a></li>
 <li>News report on the changed national park boundaries: <a href="http://www.bbc.co.uk/news/uk-england-36905517">http://www.bbc.co.uk/news/uk-england-36905517</a></li>
 </ul>
 <p>Sources on the boundary outlines:</p>

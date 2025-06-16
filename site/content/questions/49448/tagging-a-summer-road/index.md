@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>There is already a similar question <a href="https://help.openstreetmap.org/questions/2416/how-to-tag-road-that-is-not-maintained-in-winter">How to tag road that is not maintained in winter</a>. Does this answer your question?</p>
+<p>There is already a similar question <a href="/questions/2416/how-to-tag-road-that-is-not-maintained-in-winter">How to tag road that is not maintained in winter</a>. Does this answer your question?</p>
 </div>
 <div id="comment-49472-info" class="comment-info">
 <span class="comment-age">(27 Apr '16, 16:53)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi read these pages, African roads tagging scheme, <a href="http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa">http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa</a> 4wd only=recommended <a href="http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines">http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines</a> and special the 4x4 lines And have also a look at these pages, <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> And yes they are not meant for snow but just for muddy tracks, but look for instance at the roads nearby in your or that region for similar tagging schemes. And remember that your allowed to make your own scheme or use your own tags.</p>
+<p>Hi read these pages, African roads tagging scheme, <a href="https://wiki.openstreetmap.org/wiki/Highway_Tag_Africa">https://wiki.openstreetmap.org/wiki/Highway_Tag_Africa</a> 4wd only=recommended <a href="https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines">https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines</a> and special the 4x4 lines And have also a look at these pages, <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> And yes they are not meant for snow but just for muddy tracks, but look for instance at the roads nearby in your or that region for similar tagging schemes. And remember that your allowed to make your own scheme or use your own tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

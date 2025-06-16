@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe there is a nice GUI for such a thing but I don't know one.</p>
-<p>If nobody comes up with one you have to be contend with the Overpass API and an around-search: <a href="http://wiki.openstreetmap.org/wiki/OAPI#Around">http://wiki.openstreetmap.org/wiki/OAPI#Around</a></p>
+<p>If nobody comes up with one you have to be contend with the Overpass API and an around-search: <a href="https://wiki.openstreetmap.org/wiki/OAPI#Around">https://wiki.openstreetmap.org/wiki/OAPI#Around</a></p>
 <p>Use it with <a href="http://overpass-turbo.eu/">Overpass Turbo</a> if you don't want to fiddle around too much.</p>
 <p>hth<br />
 malenki</p>

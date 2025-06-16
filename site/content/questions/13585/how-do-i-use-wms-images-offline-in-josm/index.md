@@ -121,7 +121,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is what the layer context menu looks like for me (in the current stable version 5267):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm-wms-bookmark.png" alt="Screenshot: JOSM’s WMS layer context menu" /></p>
+<p><img src="/upfiles/josm-wms-bookmark.png" alt="Screenshot: JOSM’s WMS layer context menu" /></p>
 <p>When using “Set WMS Bookmark” a new entry is added to the “Imagery” menu.</p>
 <p>The other possibility should be to use the context menu entries to save to and load the WMS layer from a file. With this all cached tiles and server settings are saved to one huge package file which can be loaded later and on a different machine, too.</p>
 </div>

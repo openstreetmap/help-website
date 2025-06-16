@@ -133,7 +133,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Apologies. This isn't a windows environment. I should have put in the environment.</p>
 <p>Ubuntu 12.04 server Postgresql 9.1.4 PostGIS 2.01</p>
-<p>I followed the latest Nominatim installlation procedures outlined on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
+<p>I followed the latest Nominatim installlation procedures outlined on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
 </div>
 <div id="comment-16182-info" class="comment-info">
 <span class="comment-age">(17 Sep '12, 21:05)</span> <span class="comment-user userinfo">mooreja</span>

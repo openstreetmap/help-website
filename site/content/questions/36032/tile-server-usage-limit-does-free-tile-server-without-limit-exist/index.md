@@ -133,7 +133,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9492/asterxiang"></a><a href="http://help.openstreetmap.org/users/9492/asterxiang">@asterxiang</a>: I would just like to add the option of running an <a href="http://switch2osm.org/serving-tiles/">own tile server</a>. This has no fixed "limit on the number of tiles/request" – only a hardware limit. And of course you need to run and set it up (which is no simple and cheap task). Setting an own tile server is possible because the OSM data is free (as in "freedom", not as in "free beer", as you already noticed).</p>
+<p><a href="https://help.openstreetmap.org/users/9492/asterxiang"></a><a href="https://help.openstreetmap.org/users/9492/asterxiang">@asterxiang</a>: I would just like to add the option of running an <a href="http://switch2osm.org/serving-tiles/">own tile server</a>. This has no fixed "limit on the number of tiles/request" – only a hardware limit. And of course you need to run and set it up (which is no simple and cheap task). Setting an own tile server is possible because the OSM data is free (as in "freedom", not as in "free beer", as you already noticed).</p>
 </div>
 <div id="comment-36034-info" class="comment-info">
 <span class="comment-age">(20 Aug '14, 21:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

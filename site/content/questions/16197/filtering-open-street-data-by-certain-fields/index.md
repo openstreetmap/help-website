@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try with <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>. You should get the residential highways wich such a command:</p>
+<p>You can try with <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>. You should get the residential highways wich such a command:</p>
 <p><code>osmosis --rx input.osm --tf accept-ways highway=residential --used-node --wx highway.residential.osm</code></p>
 </div>
 <div class="answer-controls post-controls">

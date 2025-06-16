@@ -206,7 +206,7 @@ out;</code></pre>
 <div id="post-39082-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/99/stephan75"></a><a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: xapi is unable to produce JSON. My answer will help you to create an equivalent Overpass XML/QL query, which in fact returns the same result in JSON format.</p>
+<p><a href="https://help.openstreetmap.org/users/99/stephan75"></a><a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: xapi is unable to produce JSON. My answer will help you to create an equivalent Overpass XML/QL query, which in fact returns the same result in JSON format.</p>
 </div>
 <div id="comment-39082-info" class="comment-info">
 <span class="comment-age">(05 Dec '14, 15:15)</span> <span class="comment-user userinfo">mmd</span>

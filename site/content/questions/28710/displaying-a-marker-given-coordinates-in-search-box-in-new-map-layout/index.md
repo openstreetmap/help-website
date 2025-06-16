@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can manually create one <a href="http://www.openstreetmap.org/?mlat=47.3372196&amp;mlon=8.0413902&amp;zoom=15">marker</a> or use <a href="http://owl.apis.dev.openstreetmap.org">http://owl.apis.dev.openstreetmap.org</a> (while there is the old UI version). Indeed this is more useful than the newer behaviour!</p>
+<p>You can manually create one <a href="https://www.openstreetmap.org/?mlat=47.3372196&amp;mlon=8.0413902&amp;zoom=15">marker</a> or use <a href="http://owl.apis.dev.openstreetmap.org">http://owl.apis.dev.openstreetmap.org</a> (while there is the old UI version). Indeed this is more useful than the newer behaviour!</p>
 <p>Please report bugs at <a href="https://trac.openstreetmap.org/">https://trac.openstreetmap.org/</a> (you can login with your usual www.osm.org login) for component "website". However, please note that your wish might not be respected.</p>
 </div>
 <div class="answer-controls post-controls">

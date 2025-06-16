@@ -104,22 +104,22 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are refering to the actual physical trail, then you first have to select the appropriate <em><a href="http://wiki.openstreetmap.org/wiki/Key:highway" title="Highway">highway</a></em> tag (please refer to the linked wiki pages for more detailed definitions and discussion):</p>
+<p>If you are refering to the actual physical trail, then you first have to select the appropriate <em><a href="https://wiki.openstreetmap.org/wiki/Key:highway" title="Highway">highway</a></em> tag (please refer to the linked wiki pages for more detailed definitions and discussion):</p>
 <ul>
-<li><em><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath" title="Path">highway=path</a></em> for smaller ways in the wild</li>
-<li><em><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack" title="Track">highway=track</a></em> for ways in the wild that are wide enough for a 4-wheel vehicle</li>
+<li><em><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath" title="Path">highway=path</a></em> for smaller ways in the wild</li>
+<li><em><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack" title="Track">highway=track</a></em> for ways in the wild that are wide enough for a 4-wheel vehicle</li>
 <li>Or if you are mapping in urban areas you may want to use:</li>
-<li><em><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway" title="Footway">highway=footway</a></em> for footways</li>
-<li>Or any other <a href="http://wiki.openstreetmap.org/wiki/Key:highway" title="Highway">highway tag</a> that is appropriate</li>
+<li><em><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway" title="Footway">highway=footway</a></em> for footways</li>
+<li>Or any other <a href="https://wiki.openstreetmap.org/wiki/Key:highway" title="Highway">highway tag</a> that is appropriate</li>
 </ul>
 <p>In addition to <em>highway</em>, there are some hiking-specific tags:</p>
 <ul>
-<li><em><a href="http://wiki.openstreetmap.org/wiki/Key:sac_scale" title="Sac scale">sac_scale=*</a></em> for how difficult it is to use the way</li>
-<li><em><a href="http://wiki.openstreetmap.org/wiki/Key:trail_visibility" title="Trail visibility">trail_visibility=*</a></em> for how easily the way can be followed</li>
-<li><em><a href="http://wiki.openstreetmap.org/wiki/Key:incline" title="Incline">incline=*</a></em> for how steep the trail is</li>
+<li><em><a href="https://wiki.openstreetmap.org/wiki/Key:sac_scale" title="Sac scale">sac_scale=*</a></em> for how difficult it is to use the way</li>
+<li><em><a href="https://wiki.openstreetmap.org/wiki/Key:trail_visibility" title="Trail visibility">trail_visibility=*</a></em> for how easily the way can be followed</li>
+<li><em><a href="https://wiki.openstreetmap.org/wiki/Key:incline" title="Incline">incline=*</a></em> for how steep the trail is</li>
 </ul>
-<p>More tags and information on hiking-related mapping can be found on the <a href="http://wiki.openstreetmap.org/wiki/Hiking" title="Hiking">Hiking wiki page</a>.</p>
-<p>If you are refering to a hiking route (not the actual way itself, but rather a collection of ways that form a route), you may want to look into <a href="http://wiki.openstreetmap.org/wiki/Relations/Routes" title="Route Relations">Route Relations</a>.</p>
+<p>More tags and information on hiking-related mapping can be found on the <a href="https://wiki.openstreetmap.org/wiki/Hiking" title="Hiking">Hiking wiki page</a>.</p>
+<p>If you are refering to a hiking route (not the actual way itself, but rather a collection of ways that form a route), you may want to look into <a href="https://wiki.openstreetmap.org/wiki/Relations/Routes" title="Route Relations">Route Relations</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -187,7 +187,7 @@ One Answer:
 <div id="post-45260-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>any help <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
+<p>any help <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
 </div>
 <div id="comment-45260-info" class="comment-info">
 <span class="comment-age">(15 Sep '15, 20:42)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -209,7 +209,7 @@ One Answer:
 <div id="post-47656-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11904/chrismendez">@ChrisMendez</a>, to be clear, the surface/smoothness/sac_scale are completely unrelated to the footway/path distinction. highway=path is simply a generic trail of some sort, whereas highway=footway is a path designated as legally-usable by foot traffic. "highway=path" + "foot=designated" = "highway=footway". The only difference between footway and path is the default access=* levels.</p>
+<p><a href="https://help.openstreetmap.org/users/11904/chrismendez">@ChrisMendez</a>, to be clear, the surface/smoothness/sac_scale are completely unrelated to the footway/path distinction. highway=path is simply a generic trail of some sort, whereas highway=footway is a path designated as legally-usable by foot traffic. "highway=path" + "foot=designated" = "highway=footway". The only difference between footway and path is the default access=* levels.</p>
 </div>
 <div id="comment-47656-info" class="comment-info">
 <span class="comment-age">(26 Jan '16, 18:33)</span> <span class="comment-user userinfo">alester</span>

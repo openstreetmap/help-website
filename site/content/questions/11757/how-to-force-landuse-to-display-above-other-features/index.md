@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Currently the <a href="http://wiki.openstreetmap.org/wiki/Key:layer">wikipage</a> for the <code>layer=*</code> tag has all sort of recommandations. It seems that in practice, layers are hard-ignored in a number of circumstances. In this case I need <a href="http://www.openstreetmap.org/browse/way/157742329">a grassy area</a> to be on top of the building: this parking garage is built "into the hillside" and at its top can be rolled onto (as can be clearly seen on aerial imagery). However I have been resolutely unable to force the landuse area to layer on top.</p>
+<p>Currently the <a href="https://wiki.openstreetmap.org/wiki/Key:layer">wikipage</a> for the <code>layer=*</code> tag has all sort of recommandations. It seems that in practice, layers are hard-ignored in a number of circumstances. In this case I need <a href="https://www.openstreetmap.org/browse/way/157742329">a grassy area</a> to be on top of the building: this parking garage is built "into the hillside" and at its top can be rolled onto (as can be clearly seen on aerial imagery). However I have been resolutely unable to force the landuse area to layer on top.</p>
 <p>Is there a way to actually achieve that or has this been made specifically impossible in the Map style?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,8 +106,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When editing osm-data you may want to keep in mind that osm is primarily a geo-database and the map on osm.org is only one possible representation out of this data. If you are not happy with the rendering style provided you are free to use the data and render with it another map according to your needs.</p>
-<p>The argument <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">not to tag things incorrectly for the renderer</a> is often used to remind mappers that the database and a resulting map are two different things.</p>
-<p>With regard to your case I would suggest to consider the "grassy area on a building" as a roof and tag it accordingly. There are various tagging options for <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes">building attributes</a> however not widely used an thus not rendered ond osm.org (yet). Tagging the building a layer=-1 is factually incorrect as it is a building which is clearly above ground.</p>
+<p>The argument <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">not to tag things incorrectly for the renderer</a> is often used to remind mappers that the database and a resulting map are two different things.</p>
+<p>With regard to your case I would suggest to consider the "grassy area on a building" as a roof and tag it accordingly. There are various tagging options for <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes">building attributes</a> however not widely used an thus not rendered ond osm.org (yet). Tagging the building a layer=-1 is factually incorrect as it is a building which is clearly above ground.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

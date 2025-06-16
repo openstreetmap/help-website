@@ -107,7 +107,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I see from your edit history that you are using Potlatch 2 as your editor.</p>
 <p>You will need to add one of the nodes as you do at present, select it, switch to advanced mode, and add the other tag manually.</p>
-<p>The two tags are <a href="http://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Dtable">traffic_calming=table</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:crossing#Examples">highway=crossing in combination with some other tags</a>, which means it would be easiest to add the crossing first and add the single tag in advanced mode - you will see when you switch to advanced mode the table of tags with the key in the first column (the bit before the =) and the value in the second.</p>
+<p>The two tags are <a href="https://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Dtable">traffic_calming=table</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:crossing#Examples">highway=crossing in combination with some other tags</a>, which means it would be easiest to add the crossing first and add the single tag in advanced mode - you will see when you switch to advanced mode the table of tags with the key in the first column (the bit before the =) and the value in the second.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

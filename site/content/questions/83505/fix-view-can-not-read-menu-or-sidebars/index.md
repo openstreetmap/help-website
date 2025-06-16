@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello; This morning I was viewing a map and details on the side-bar about the village. I must have touched something, suddenly the map enlarged and covered total page and the side bar and menu information is VERY small..maybe 1mm in size and not readable. Need help to fix this problem or OSM will be inusable.</p>
-<p>thank you Sue K<img src="https://help.openstreetmap.org/upfiles/OSM.jpg" alt="alt text" /></p>
+<p>thank you Sue K<img src="/upfiles/OSM.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-print" rel="tag" title="see questions tagged &#39;print&#39;">print</span> <span class="post-tag tag-link-change" rel="tag" title="see questions tagged &#39;change&#39;">change</span> <span class="post-tag tag-link-view" rel="tag" title="see questions tagged &#39;view&#39;">view</span>

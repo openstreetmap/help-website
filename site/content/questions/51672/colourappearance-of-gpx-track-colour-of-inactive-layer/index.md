@@ -122,7 +122,7 @@ One Answer:
 <div class="answer-body">
 <p>I answer Question 2:</p>
 <p>Go to JOSM preferences (<strong>F12</strong>), go to <strong>Display Settings</strong>, there to the <strong>Colours</strong> tab and change the <strong>inactive</strong> field to the colour you wish:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/changeInactiveLayerColour_UdzucI2.png" alt="alt text" /></p>
+<p><img src="/upfiles/changeInactiveLayerColour_UdzucI2.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

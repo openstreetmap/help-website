@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What is the standard for mapping buoys?"
-description = '''It looks like buoys per se have been a proposed feature since 2008 - http://wiki.openstreetmap.org/wiki/Proposed_features/Buoy. However, Potlatch2 has a UI item for Man Made -&amp;gt; Navigation Marks, and if you change the Object Type to &quot;buoy&quot; and go in the Advanced view, you&#x27;ll see that it added mand...'''
+description = '''It looks like buoys per se have been a proposed feature since 2008 - https://wiki.openstreetmap.org/wiki/Proposed_features/Buoy. However, Potlatch2 has a UI item for Man Made -&amp;gt; Navigation Marks, and if you change the Object Type to &quot;buoy&quot; and go in the Advanced view, you&#x27;ll see that it added mand...'''
 date = "2012-08-28T22:32:00Z"
 lastmod = "2012-08-29T06:09:00Z"
 weight = 15600
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It looks like <strong>buoys</strong> per se have been a <em>proposed</em> feature since 2008 - <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Buoy.">http://wiki.openstreetmap.org/wiki/Proposed_features/Buoy.</a> However, Potlatch2 has a UI item for Man Made -&gt; Navigation Marks, and if you change the Object Type to "buoy" and go in the Advanced view, you'll see that it added <code>mand_made=buoy</code>. JOSM however doesn't offer an autocomplete of "buoy" for <code>man_made</code>.</p>
-<p>So what is the status of this rather basic feature? For more details, see also the <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Buoy#Still_.22proposed.22.2C_as_of_2012.3F">talk page for Proposed features/Buoy</a>, where I left a message about the confusion with a bunch of other pages discussing seamarks.</p>
+<p>It looks like <strong>buoys</strong> per se have been a <em>proposed</em> feature since 2008 - <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Buoy.">https://wiki.openstreetmap.org/wiki/Proposed_features/Buoy.</a> However, Potlatch2 has a UI item for Man Made -&gt; Navigation Marks, and if you change the Object Type to "buoy" and go in the Advanced view, you'll see that it added <code>mand_made=buoy</code>. JOSM however doesn't offer an autocomplete of "buoy" for <code>man_made</code>.</p>
+<p>So what is the status of this rather basic feature? For more details, see also the <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Buoy#Still_.22proposed.22.2C_as_of_2012.3F">talk page for Proposed features/Buoy</a>, where I left a message about the confusion with a bunch of other pages discussing seamarks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-seamark" rel="tag" title="see questions tagged &#39;seamark&#39;">seamark</span> <span class="post-tag tag-link-navigation" rel="tag" title="see questions tagged &#39;navigation&#39;">navigation</span> <span class="post-tag tag-link-lame" rel="tag" title="see questions tagged &#39;lame&#39;">lame</span>
@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems most sea features are tagged in the seamark tagspace. See the wiki for possible values and details on use:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:seamark">http://wiki.openstreetmap.org/wiki/Key:seamark</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:seamark">https://wiki.openstreetmap.org/wiki/Key:seamark</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,8 +156,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a wiki page about <a href="http://wiki.openstreetmap.org/wiki/Marine_navigation">marine navigation</a> listing lots of different <em><a href="http://wiki.openstreetmap.org/wiki/Key:seamark:type">seamark:type=</a></em> tags. <a href="http://taginfo.openstreetmap.org/keys/?key=seamark%3Atype#values">Taginfo</a> knows some more values if the one you are searching is missing.</p>
-<p>If you want to see those objects rendered on a map you can visit <a href="http://wiki.openstreetmap.org/wiki/OpenSeaMap">OpenSeaMap</a> or <a href="http://wiki.openstreetmap.org/wiki/FreieTonne">FreieTonne</a>.</p>
+<p>There is a wiki page about <a href="https://wiki.openstreetmap.org/wiki/Marine_navigation">marine navigation</a> listing lots of different <em><a href="https://wiki.openstreetmap.org/wiki/Key:seamark:type">seamark:type=</a></em> tags. <a href="http://taginfo.openstreetmap.org/keys/?key=seamark%3Atype#values">Taginfo</a> knows some more values if the one you are searching is missing.</p>
+<p>If you want to see those objects rendered on a map you can visit <a href="https://wiki.openstreetmap.org/wiki/OpenSeaMap">OpenSeaMap</a> or <a href="https://wiki.openstreetmap.org/wiki/FreieTonne">FreieTonne</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

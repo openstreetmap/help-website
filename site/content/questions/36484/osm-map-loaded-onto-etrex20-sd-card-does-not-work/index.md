@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>How and from where are you downloading the .img files? You cannot use .osm tiles directly. <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>How and from where are you downloading the .img files? You cannot use .osm tiles directly. <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 <p>Guide suitable for eTrex20 <a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html</a></p>
 </div>
 <div id="comment-36485-info" class="comment-info">
@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-36489-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9574/wafbob"></a><a href="http://help.openstreetmap.org/users/9574/wafbob">@Wafbob</a>: Please could you correct your spelling and use more words to describe what you want to do and what does not work. Currently it is hard to understand.</p>
+<p><a href="https://help.openstreetmap.org/users/9574/wafbob"></a><a href="https://help.openstreetmap.org/users/9574/wafbob">@Wafbob</a>: Please could you correct your spelling and use more words to describe what you want to do and what does not work. Currently it is hard to understand.</p>
 </div>
 <div id="comment-36489-info" class="comment-info">
 <span class="comment-age">(02 Sep '14, 02:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

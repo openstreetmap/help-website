@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>While realizing that not every element is rendered, tourism=picnic_site seems like a pretty strong candidate. Potlatch 2 includes the tag as a drag on, and <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dpicnic_site">it is well documented</a>. And yet, it doesn't seem to show up. Am I missing something? Thanks!</p>
+<p>While realizing that not every element is rendered, tourism=picnic_site seems like a pretty strong candidate. Potlatch 2 includes the tag as a drag on, and <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dpicnic_site">it is well documented</a>. And yet, it doesn't seem to show up. Am I missing something? Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-picnic_site" rel="tag" title="see questions tagged &#39;picnic_site&#39;">picnic_site</span>

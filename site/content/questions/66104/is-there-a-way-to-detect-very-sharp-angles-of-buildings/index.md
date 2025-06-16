@@ -43,8 +43,8 @@ osqa_accepted = false
 <p>Hi everyone.</p>
 <p>I'm trying to fix several buildings having very sharp angles (see photos below), looks like they were unintentionally caused by the extrude tool in JOSM. It's hard to find them by eyes as they need to be zoomed very close to be seen.</p>
 <p>Is there a way to detect these using JOSM or another tool?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/17-27-08.png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/17-29-09.png" alt="alt text" /></p>
+<p><img src="/upfiles/17-27-08.png" alt="alt text" /></p>
+<p><img src="/upfiles/17-29-09.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-angle" rel="tag" title="see questions tagged &#39;angle&#39;">angle</span> <span class="post-tag tag-link-quality_assurance" rel="tag" title="see questions tagged &#39;quality_assurance&#39;">quality_assurance</span>

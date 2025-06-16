@@ -251,7 +251,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The Asuncion area map looks good to me. if it is good enough for you and you are running an android device you could try the Orux maps app. See this question and my second answer it works well for me so give it a try. This procure is for pre-loaded off-line maps. <a href="https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use">https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use</a> try this map for it <a href="http://download.mapsforge.org/maps/south-america/">http://download.mapsforge.org/maps/south-america/</a></p>
+<p>The Asuncion area map looks good to me. if it is good enough for you and you are running an android device you could try the Orux maps app. See this question and my second answer it works well for me so give it a try. This procure is for pre-loaded off-line maps. <a href="/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use">https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use</a> try this map for it <a href="http://download.mapsforge.org/maps/south-america/">http://download.mapsforge.org/maps/south-america/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

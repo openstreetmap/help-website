@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM can download raw OSM data along a GPX track, see <a href="https://help.openstreetmap.org/questions/1503/how-to-download-map-data-along-a-gpx-track-in-josm">this question</a>.</p>
+<p>JOSM can download raw OSM data along a GPX track, see <a href="/questions/1503/how-to-download-map-data-along-a-gpx-track-in-josm">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, i have just started working with OSMChange files ".osc" and after reading <a href="https://wiki.openstreetmap.org/wiki/OsmChange">https://wiki.openstreetmap.org/wiki/OsmChange</a> i still have some questions. In particular about the modify way and how to interpret it.</p>
-<p>For example in this case <img src="https://help.openstreetmap.org/upfiles/osc_8iXO5GQ.png" alt="alt text" /></p>
+<p>For example in this case <img src="/upfiles/osc_8iXO5GQ.png" alt="alt text" /></p>
 <p>What is this saying? That way 377346605 after the update will have 2 nodes and 1 tag? Or could there be an incremental update? For example way 377346605 after the update will have all the previous nodes plus the two listed in the xml?</p>
 <p>I guess the question is if in general in this file format a modified way is always completely described? (In the case where the update is about deleting 1 node from a way made of 20, in the osc i would get all the 19 nodes listed with their ids)</p>
 <p>If you have any link to this format documentation would be great. Thanks for the help, Federico.</p>

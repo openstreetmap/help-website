@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have months of editing and I have not seen any changes in the editing mode the black lines</p>
 <p>What I still have to do</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_HMq4oWg.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/osm_HMq4oWg.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-changes" rel="tag" title="see questions tagged &#39;changes&#39;">changes</span> <span class="post-tag tag-link-street" rel="tag" title="see questions tagged &#39;street&#39;">street</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span>

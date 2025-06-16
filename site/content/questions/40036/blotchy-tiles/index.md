@@ -114,8 +114,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please do not ask two questions in one. For your 2nd question the answer can be found by searching for existing questions on similar topics see for example <a href="https://help.openstreetmap.org/questions/29913/lakeway-tx-instead-of-austin-tx">https://help.openstreetmap.org/questions/29913/lakeway-tx-instead-of-austin-tx</a></p>
-<p>As to your 1st question: lots of the landuse in Canada is imported from the canvec datasource and that has been done in a grid like fashion, so your perceived tile blotchiness is simply reflecting the data that is there or rather not. See <a href="http://wiki.openstreetmap.org/wiki/CanVec">http://wiki.openstreetmap.org/wiki/CanVec</a></p>
+<p>Please do not ask two questions in one. For your 2nd question the answer can be found by searching for existing questions on similar topics see for example <a href="/questions/29913/lakeway-tx-instead-of-austin-tx">https://help.openstreetmap.org/questions/29913/lakeway-tx-instead-of-austin-tx</a></p>
+<p>As to your 1st question: lots of the landuse in Canada is imported from the canvec datasource and that has been done in a grid like fashion, so your perceived tile blotchiness is simply reflecting the data that is there or rather not. See <a href="https://wiki.openstreetmap.org/wiki/CanVec">https://wiki.openstreetmap.org/wiki/CanVec</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

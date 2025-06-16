@@ -155,7 +155,7 @@ I also found a Python script which may help you fixing this issue <a href="https
 </div>
 <div class="comment-text">
 <p>Requiring timestamps makes it more likely that the track is actually from a GPS device. And not just traced from Google Maps, or some other copyright source.</p>
-<p>If you are concerned about privacy, then you can adjust the visibility of your GPS traces. <a href="http://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">http://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces</a> ie set them as trackable, then they won't be linked to your account.</p>
+<p>If you are concerned about privacy, then you can adjust the visibility of your GPS traces. <a href="https://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">https://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces</a> ie set them as trackable, then they won't be linked to your account.</p>
 <p>Or if you are really concerned about privacy, then don't upload any GPS tracks to OSM. You can still use them for editing the map - eg JOSM and ID allow you to load GPX files from your PC.</p>
 </div>
 <div id="comment-23993-info" class="comment-info">
@@ -452,7 +452,7 @@ Thanks for your help anyway Pieren !</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi! Looks like you used expertgps to create the gpx. Never just that software myself but I googled and I would be surprised if it is not able to convert keeping the timestamps. Try to search here: <a href="http://www.expertgps.com/support.asp"></a><a href="http://www.expertgps.com/support.asp"></a><a href="http://www.expertgps.com/support.asp">http://www.expertgps.com/support.asp</a></p>
-<p>You could also try to use the editgpx plugin in JOSM. It allows for editing gpx and saving as anonymised time-stamps. Possibly it can also genereta the time-stamps when missing. See here: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx"></a><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx"></a><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx</a></p>
+<p>You could also try to use the editgpx plugin in JOSM. It allows for editing gpx and saving as anonymised time-stamps. Possibly it can also genereta the time-stamps when missing. See here: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx"></a><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx"></a><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx</a></p>
 <p>Happy mapping!</p>
 </div>
 <div class="answer-controls post-controls">

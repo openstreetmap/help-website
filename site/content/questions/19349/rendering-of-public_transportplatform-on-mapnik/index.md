@@ -135,7 +135,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>As explained <a href="http://help.openstreetmap.org/questions/19312/some-roads-rendered-with-green-colors-which-is-not-readable-on-the-gree-background/19317">here</a> by Richard the Mapnik style is currently ported to Carto, so there aren't much modifications possible at the moment. But I guess (and hope) after the porting has succeeded there will be more and faster changes to the stylesheet than before.</p>
+<p>As explained <a href="/questions/19312/some-roads-rendered-with-green-colors-which-is-not-readable-on-the-gree-background/19317">here</a> by Richard the Mapnik style is currently ported to Carto, so there aren't much modifications possible at the moment. But I guess (and hope) after the porting has succeeded there will be more and faster changes to the stylesheet than before.</p>
 </div>
 <div id="comment-19353-info" class="comment-info">
 <span class="comment-age">(26 Jan '13, 12:05)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -147,7 +147,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I've seen at least two ways to handle this lack of support. Either double-tagging like <a href="http://www.openstreetmap.org/browse/way/146881716">http://www.openstreetmap.org/browse/way/146881716</a> or using the new scheme like <a href="http://www.openstreetmap.org/browse/way/164415122">http://www.openstreetmap.org/browse/way/164415122</a> - but adding a note tag about the ticket, keeping the "Don't tag for the renderer" philosophy in mind.</p>
+<p>I've seen at least two ways to handle this lack of support. Either double-tagging like <a href="https://www.openstreetmap.org/browse/way/146881716">https://www.openstreetmap.org/browse/way/146881716</a> or using the new scheme like <a href="https://www.openstreetmap.org/browse/way/164415122">https://www.openstreetmap.org/browse/way/164415122</a> - but adding a note tag about the ticket, keeping the "Don't tag for the renderer" philosophy in mind.</p>
 </div>
 <div id="comment-19354-info" class="comment-info">
 <span class="comment-age">(26 Jan '13, 12:14)</span> <span class="comment-user userinfo">gnurk</span>

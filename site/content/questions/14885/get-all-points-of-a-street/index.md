@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Any basic frameworks about routing with OSM data can be found in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
+<p>Any basic frameworks about routing with OSM data can be found in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
 <p>But you have to define first how you will find the start and end node of a street, because one street can consist of several ways.</p>
 <p>So tell us by adding a COMMENT here how you will define this.</p>
 </div>

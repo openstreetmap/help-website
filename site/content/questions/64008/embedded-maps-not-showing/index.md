@@ -225,7 +225,7 @@ osqa_accepted = false
 <p>I'd use IRC but failed</p>
 <p>.. tile cache info: tile.openstreetmap.org debug Cache Server: saphira.openstreetmap.org</p>
 <p>Render Server: orm.openstreetmap.org Load Average: 61.6</p>
-<p>File Status world_boundaries-... Request Headers HTTP_REFERER: <a href="https://help.openstreetmap.org/questions/64008/embedded-maps-not-showing?page=1&amp;focusedAnswerId=64099">https://help.openstreetmap.org/questions/64008/embedded-maps-not-showing?page=1&amp;focusedAnswerId=64099</a> CONTEXT_DOCUMENT_ROOT: /srv/tile.openstreetmap.org/cgi-bin/ CONTEXT_PREFIX: /cgi-bin/ SERVER_SIG:</p>
+<p>File Status world_boundaries-... Request Headers HTTP_REFERER: <a href="/questions/64008/embedded-maps-not-showing?page=1&amp;focusedAnswerId=64099">https://help.openstreetmap.org/questions/64008/embedded-maps-not-showing?page=1&amp;focusedAnswerId=64099</a> CONTEXT_DOCUMENT_ROOT: /srv/tile.openstreetmap.org/cgi-bin/ CONTEXT_PREFIX: /cgi-bin/ SERVER_SIG:</p>
 <p>Apache/2.4.18 (Ubuntu) Server at tile.openstreetmap.org Port 443</p>
 <p>REQ_METHOD: GET SVR_PROTOCOL: HTTP/1.0 QRY_STRING: HTTP_USER_AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36 HTTP_CONNECTION: keep-alive SVR_NAME: tile.openstreetmap.org REMOTE_ADDR: 185.73.44.30 HTTP_VIA: 1.1 saphira.openstreetmap.org:3128 (squid/2.7.STABLE9) SERVER_PORT: 443 SERVER_ADDR: 193.63.75.98 DOC_ROOT: /srv/tile.openstreetmap.org/html</p>
 <p>HTTP_HOST: tile.openstreetmap.org SCRIPT_URL: /cgi-bin/debug HTTPS: on HTTP_UPGRADE_INSECURE_REQUESTS: 1 HTTP_CACHE_CONTROL: max-age=518400 REQUEST_URI: /cgi-bin/debug</p>

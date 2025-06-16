@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why would a building be showing the wrong (old) name?"
-description = '''I split a building into two (they have different street numbers), but the newly-added building (http://www.openstreetmap.org/browse/way/225384024 ) still has the old building name when viewed on OpenStreetMap (its name appear to be correct when I edit). What might be causing this and how do I fix th...'''
+description = '''I split a building into two (they have different street numbers), but the newly-added building (https://www.openstreetmap.org/browse/way/225384024 ) still has the old building name when viewed on OpenStreetMap (its name appear to be correct when I edit). What might be causing this and how do I fix th...'''
 date = "2013-06-16T00:04:00Z"
 lastmod = "2013-06-16T19:06:00Z"
 weight = 23405
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I split a building into two (they have different street numbers), but the newly-added building (<a href="http://www.openstreetmap.org/browse/way/225384024">http://www.openstreetmap.org/browse/way/225384024</a> ) still has the old building name when viewed on OpenStreetMap (its name appear to be correct when I edit). What might be causing this and how do I fix the new building so that it is displayed with its own name instead of the name of the other building?</p>
+<p>I split a building into two (they have different street numbers), but the newly-added building (<a href="https://www.openstreetmap.org/browse/way/225384024">https://www.openstreetmap.org/browse/way/225384024</a> ) still has the old building name when viewed on OpenStreetMap (its name appear to be correct when I edit). What might be causing this and how do I fix the new building so that it is displayed with its own name instead of the name of the other building?</p>
 <p>(I have grouped the two buildings into a multipolygon, but the multipolygon does not have the same name as the old outline, so I’m not sure what’s happening here.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-23418-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What is the old name and the new name? Currently the name displayed is "Adjoined buildings at 230 and 240 Richmond Street West"; this name comes from the relation <a href="http://www.openstreetmap.org/browse/relation/3003329">http://www.openstreetmap.org/browse/relation/3003329</a> . Is that what you expected?</p>
+<p>What is the old name and the new name? Currently the name displayed is "Adjoined buildings at 230 and 240 Richmond Street West"; this name comes from the relation <a href="https://www.openstreetmap.org/browse/relation/3003329">https://www.openstreetmap.org/browse/relation/3003329</a> . Is that what you expected?</p>
 </div>
 <div id="comment-23418-info" class="comment-info">
 <span class="comment-age">(16 Jun '13, 17:52)</span> <span class="comment-user userinfo">sleske</span>
@@ -181,7 +181,7 @@ One Answer:
 <p><em>a delay of several hours</em><br />
 </p>
 </blockquote>
-<p>Read e.g. the first answer <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a></p>
+<p>Read e.g. the first answer <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a></p>
 </div>
 <div id="comment-23415-info" class="comment-info">
 <span class="comment-age">(16 Jun '13, 09:24)</span> <span class="comment-user userinfo">malenki</span>

@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I found two polygons called Drew Harbour 9 there are probably three which is why the name appears once in the middle of each polygon. Is the triple naming a big problem? the mapper as decided to map the polygons separately. You could contact him. I or someone will paste a link to Q AND A of how you can do that. <img src="http://help.openstreetmap.org/upfiles/drew_habour.JPG" alt="alt text" /></p>
+<p>I found two polygons called Drew Harbour 9 there are probably three which is why the name appears once in the middle of each polygon. Is the triple naming a big problem? the mapper as decided to map the polygons separately. You could contact him. I or someone will paste a link to Q AND A of how you can do that. <img src="/upfiles/drew_habour.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -204,7 +204,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This is another polygon of the same name by clicking the advanced tab and then way number this appears to help you contact the mapper if you really need to.<img src="http://help.openstreetmap.org/upfiles/Drew_Habour_9_b.JPG" alt="alt text" /></p>
+<p>This is another polygon of the same name by clicking the advanced tab and then way number this appears to help you contact the mapper if you really need to.<img src="/upfiles/Drew_Habour_9_b.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-19297-info" class="comment-info">
 <span class="comment-age">(23 Jan '13, 22:39)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -258,7 +258,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One thing that I notice is that the "Cape Mudge 10" name that appears <a href="http://www.openstreetmap.org/?lat=50.0282&amp;lon=-125.1948&amp;zoom=14&amp;layers=M">here on the standard map</a> doesn't appear <a href="http://www.openstreetmap.org/?lat=50.0282&amp;lon=-125.1948&amp;zoom=14&amp;layers=Q">on the Mapquest Open version</a>, so that may be a quick and dirty way of getting a background to display cat numbers against.</p>
+<p>One thing that I notice is that the "Cape Mudge 10" name that appears <a href="https://www.openstreetmap.org/?lat=50.0282&amp;lon=-125.1948&amp;zoom=14&amp;layers=M">here on the standard map</a> doesn't appear <a href="https://www.openstreetmap.org/?lat=50.0282&amp;lon=-125.1948&amp;zoom=14&amp;layers=Q">on the Mapquest Open version</a>, so that may be a quick and dirty way of getting a background to display cat numbers against.</p>
 <p>To check between different maps go to the layer selector at the top right, and choose the layer that you want to see.</p>
 </div>
 <div class="answer-controls post-controls">

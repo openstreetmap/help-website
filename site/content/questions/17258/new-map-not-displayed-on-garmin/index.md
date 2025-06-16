@@ -124,7 +124,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>A short googling gave <a href="http://www.noeman.org/gsm/garmin-tutorials/278366-multiple-maps-microsd-n%FCvi-50-a.html">this</a> helpful looking result.<br />
 Maybe it also helps to name the file on the SD-card/Garmin gmapsup1.img or gmapsup2.img instead of gmapsupp.img</p>
-<p>Edit: Right now it sprang to my mind that <a href="http://help.openstreetmap.org/questions/17378/downloading-an-image-file-from-osm-to-garmin-etrex-20/17383">this answer</a> could help you, too.</p>
+<p>Edit: Right now it sprang to my mind that <a href="/questions/17378/downloading-an-image-file-from-osm-to-garmin-etrex-20/17383">this answer</a> could help you, too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

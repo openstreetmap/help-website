@@ -117,7 +117,7 @@ One Answer:
 <div class="answer-body">
 <p>I presume you're referring to the legend for the "standard" map style.</p>
 <p>Unfortunately there isn't a 100% up-to-date map legend anywhere. You can get a bit of an idea on the main map by clicking the "i" at the right-hand side, though some of those are a <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1268">bit out of date</a> ("highway=unsurfaced" is no longer rendered on the standard map, for example).</p>
-<p>Your best bet currently is probably <a href="http://wiki.openstreetmap.org/wiki/Standard_tile_layer">this wiki page</a>. It's also not guaranteed to be up to date but is probably more so than anywhere else.</p>
+<p>Your best bet currently is probably <a href="https://wiki.openstreetmap.org/wiki/Standard_tile_layer">this wiki page</a>. It's also not guaranteed to be up to date but is probably more so than anywhere else.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

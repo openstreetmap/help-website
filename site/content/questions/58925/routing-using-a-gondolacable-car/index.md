@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Routing using a gondola/cable car?"
-description = '''Hi there. I didn&#x27;t find any suitable post which explains &quot;how to route using a cable car/gondola&quot;. Here&#x27;s one example: http://www.openstreetmap.org/way/104203846 I&#x27;ve tried to route on a bike or even by foot using this gondola. I&#x27;ve inserted the aerialway:bicycle=yes, but while routing...doesn&#x27;t wor...'''
+description = '''Hi there. I didn&#x27;t find any suitable post which explains &quot;how to route using a cable car/gondola&quot;. Here&#x27;s one example: https://www.openstreetmap.org/way/104203846 I&#x27;ve tried to route on a bike or even by foot using this gondola. I&#x27;ve inserted the aerialway:bicycle=yes, but while routing...doesn&#x27;t wor...'''
 date = "2017-09-02T12:59:00Z"
 lastmod = "2017-09-04T22:24:00Z"
 weight = 58925
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi there.</p>
 <p>I didn't find any suitable post which explains "how to route using a cable car/gondola".</p>
-<p>Here's one example: <a href="http://www.openstreetmap.org/way/104203846">http://www.openstreetmap.org/way/104203846</a> I've tried to route on a bike or even by foot using this gondola. I've inserted the aerialway:bicycle=yes, but while routing...doesn't work. Can you please help me?</p>
+<p>Here's one example: <a href="https://www.openstreetmap.org/way/104203846">https://www.openstreetmap.org/way/104203846</a> I've tried to route on a bike or even by foot using this gondola. I've inserted the aerialway:bicycle=yes, but while routing...doesn't work. Can you please help me?</p>
 <p>Thanks! Filipe</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I can't think of an easy way to do it online. Offline, you could use something like <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to render "before" and "after" maps, or load "before" and then "after" .osm files for a small area into JOSM.</p>
+<p>I can't think of an easy way to do it online. Offline, you could use something like <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to render "before" and "after" maps, or load "before" and then "after" .osm files for a small area into JOSM.</p>
 <p>Of course, if you had a time machine you could go back to 2008 when the main Mapnik map only updated every week or so!</p>
 </div>
 <div class="answer-controls post-controls">

@@ -126,7 +126,7 @@ One Answer:
 <div class="answer-body">
 <p>Well done for choosing OpenStreetMap!</p>
 <p>However, OpenStreetMap's servers are run entirely on donated resources. They have strictly limited capacity. Unfortunately, heavy use of OSM tiles adversely affects people's ability to edit the map - which will be why your access has been blocked.</p>
-<p>The wiki contains useful guidance on the policy - and also some good pointers on how to avoid the problem either by using alternative tile providers or by creating your own server. See: <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a></p>
+<p>The wiki contains useful guidance on the policy - and also some good pointers on how to avoid the problem either by using alternative tile providers or by creating your own server. See: <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

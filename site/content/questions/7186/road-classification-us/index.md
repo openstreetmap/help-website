@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a wiki page about US road classification: <a href="http://wiki.openstreetmap.org/wiki/United_States_Road_Classification">http://wiki.openstreetmap.org/wiki/United_States_Road_Classification</a> . If that does not help then ask from <a href="http://lists.openstreetmap.org/listinfo/talk-us">Talk-us</a> mailing list and give links to roads about what you have doubts.</p>
+<p>There is a wiki page about US road classification: <a href="https://wiki.openstreetmap.org/wiki/United_States_Road_Classification">https://wiki.openstreetmap.org/wiki/United_States_Road_Classification</a> . If that does not help then ask from <a href="http://lists.openstreetmap.org/listinfo/talk-us">Talk-us</a> mailing list and give links to roads about what you have doubts.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -137,9 +137,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Well they say that JOSM with OpenData plugin can handle shapefiles without any external help:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Import/Shapefile">http://wiki.openstreetmap.org/wiki/Import/Shapefile</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Import/Shapefile">https://wiki.openstreetmap.org/wiki/Import/Shapefile</a></p>
 <p>There are also a lot of conversion scripts at the website. I guess it's worth a try as you get real OSM shapes in high quality and you don't need to manually trace the shape.</p>
-<p>Of course you should always <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct">pay attention</a> when you do imports.</p>
+<p>Of course you should always <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct">pay attention</a> when you do imports.</p>
 <p>Good luck!</p>
 </div>
 <div class="answer-controls post-controls">
@@ -194,7 +194,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I'm not familar with the Alaska community but we have multiple ways to get in touch with people: <a href="http://wiki.openstreetmap.org/wiki/Contact">http://wiki.openstreetmap.org/wiki/Contact</a><br />
+<p>I'm not familar with the Alaska community but we have multiple ways to get in touch with people: <a href="https://wiki.openstreetmap.org/wiki/Contact">https://wiki.openstreetmap.org/wiki/Contact</a><br />
 If you don't find a superlocal channel, you might consider to ask at TALK or IMPORTS mailinglists.</p>
 </div>
 <div id="comment-31877-info" class="comment-info">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to correct a misplaced town name"
-description = '''Can anyone tell me why the word &#x27;Fareham&#x27; appears in rendered map here (http://www.openstreetmap.org/?lat=50.785683&amp;amp;lon=-1.163904&amp;amp;zoom=18&amp;amp;layers=M)? There seems to be no node at that location, which is several miles from either Fareham town or the Fareham borough boundary. I would correc...'''
+description = '''Can anyone tell me why the word &#x27;Fareham&#x27; appears in rendered map here (https://www.openstreetmap.org/?lat=50.785683&amp;amp;lon=-1.163904&amp;amp;zoom=18&amp;amp;layers=M)? There seems to be no node at that location, which is several miles from either Fareham town or the Fareham borough boundary. I would correc...'''
 date = "2013-04-22T20:01:00Z"
 lastmod = "2013-05-01T18:47:00Z"
 weight = 21736
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can anyone tell me why the word 'Fareham' appears in rendered map here (<a href="http://www.openstreetmap.org/?lat=50.785683&amp;lon=-1.163904&amp;zoom=18&amp;layers=M)?">http://www.openstreetmap.org/?lat=50.785683&amp;lon=-1.163904&amp;zoom=18&amp;layers=M)?</a> There seems to be no node at that location, which is several miles from either Fareham town or the Fareham borough boundary. I would correct it if I knew what to correct. Any help would be appreciated.</p>
+<p>Can anyone tell me why the word 'Fareham' appears in rendered map here (<a href="https://www.openstreetmap.org/?lat=50.785683&amp;lon=-1.163904&amp;zoom=18&amp;layers=M)?">https://www.openstreetmap.org/?lat=50.785683&amp;lon=-1.163904&amp;zoom=18&amp;layers=M)?</a> There seems to be no node at that location, which is several miles from either Fareham town or the Fareham borough boundary. I would correct it if I knew what to correct. Any help would be appreciated.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-town" rel="tag" title="see questions tagged &#39;town&#39;">town</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span>
@@ -111,7 +111,7 @@ One Answer:
 <li>source: naptan_import</li>
 <li>public_transport: pay_scale_area</li>
 </ul>
-<p>A quick search on the wiki gave this page : <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dpay_scale_area">http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dpay_scale_area</a> Problems should be reported to "the mailing list". But I have no idea which list is meant.</p>
+<p>A quick search on the wiki gave this page : <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dpay_scale_area">https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dpay_scale_area</a> Problems should be reported to "the mailing list". But I have no idea which list is meant.</p>
 <p>Maybe it can be discussed on that mailing to change the name to something that includes "pay scale area" ?</p>
 </div>
 <div class="answer-controls post-controls">

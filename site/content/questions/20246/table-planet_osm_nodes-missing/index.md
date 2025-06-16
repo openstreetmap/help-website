@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Table planet_osm_nodes missing"
-description = '''Hi I have a schema &quot;gis&quot; in my PostreSQL DB, which was created by osm2pgsql in slim mode. I was importing not all planet, just one country. It is written here http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Intermediate_tables that table planet_osm_nodes must exist. But I don&#x27;t have this interme...'''
+description = '''Hi I have a schema &quot;gis&quot; in my PostreSQL DB, which was created by osm2pgsql in slim mode. I was importing not all planet, just one country. It is written here https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Intermediate_tables that table planet_osm_nodes must exist. But I don&#x27;t have this interme...'''
 date = "2013-02-25T09:33:00Z"
 lastmod = "2013-02-25T09:33:00Z"
 weight = 20246
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi I have a schema "gis" in my PostreSQL DB, which was created by osm2pgsql in slim mode. I was importing not all planet, just one country. It is written here <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Intermediate_tables">http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Intermediate_tables</a> that table planet_osm_nodes must exist.</p>
+<p>Hi I have a schema "gis" in my PostreSQL DB, which was created by osm2pgsql in slim mode. I was importing not all planet, just one country. It is written here <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Intermediate_tables">https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Intermediate_tables</a> that table planet_osm_nodes must exist.</p>
 <p>But I don't have this intermediate tables in my "gis" schema. Ant it causes problems in installing minutely diffs.</p>
 <p>Does anyone knows where table planet_osm_nodes should be installed from? Or, maybe, I can just create it (and sequences and smth else) somehow?</p>
 </div>

@@ -167,7 +167,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>It's specifically a gate <em>for</em> an animal. Maybe add as a gate, but with access tags to indicate that human and vehicular traffic isn't allowed, but animal traffic (certain sorts of animal) is?</p>
 <p>Your suggested <a href="http://taginfo.openstreetmap.org/keys/gate%3Atype">gate:type</a> does have fairly wide use already, though not yet "dog_guillotine" (the English spelling of "guillotine" has an "e" at the end, by the way).</p>
-<p>As an aside, one other place that "dog guillotines" exist is on stiles. The tag <a href="http://taginfo.openstreetmap.org/keys/dog_guillotine"><code>dog_guillotine=yes</code></a> has been used a few times. On the <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dstile">stile wiki page</a> <a href="http://taginfo.openstreetmap.org/keys/dog_gate"><code>dog_gate=yes</code></a> is suggested, but is only used 3 times.</p>
+<p>As an aside, one other place that "dog guillotines" exist is on stiles. The tag <a href="http://taginfo.openstreetmap.org/keys/dog_guillotine"><code>dog_guillotine=yes</code></a> has been used a few times. On the <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dstile">stile wiki page</a> <a href="http://taginfo.openstreetmap.org/keys/dog_gate"><code>dog_gate=yes</code></a> is suggested, but is only used 3 times.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Thank you for your answers.</p>
 <p>I think a new tag would be better. dog_guillotine is to specific.</p>
-<p>I'm going to use barrier=animal_gate; gate:type=guillotine. I'll try to document it in the wiki (first on the <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:barrier#barrier.3Danimal_gate">discussion page</a> of barrier)</p>
+<p>I'm going to use barrier=animal_gate; gate:type=guillotine. I'll try to document it in the wiki (first on the <a href="https://wiki.openstreetmap.org/wiki/Talk:Key:barrier#barrier.3Danimal_gate">discussion page</a> of barrier)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

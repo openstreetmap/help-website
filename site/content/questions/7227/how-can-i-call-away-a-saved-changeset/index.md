@@ -79,7 +79,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Already replied in http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset" by Pieren 21 Aug '11, 09:47
+### The question has been closed for the following reason "Already replied in https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset" by Pieren 21 Aug '11, 09:47
 
 </div>
 
@@ -118,7 +118,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>By "call away" I guess that you mean "undo the effect of", "rollback" or "revert"?</p>
-<p>If so, I'd have a read of <a href="http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">this question</a> (in this case ignoring the issues about reverting other people's changesets, as this is yours). As it's a very recent changeset it's likely that no-one else has touched the items in it since and there's a good chance that a clean revert is possible.<br />
+<p>If so, I'd have a read of <a href="/questions/731/how-can-i-revert-a-changeset">this question</a> (in this case ignoring the issues about reverting other people's changesets, as this is yours). As it's a very recent changeset it's likely that no-one else has touched the items in it since and there's a good chance that a clean revert is possible.<br />
 </p>
 <p>If you're familiar enough with JOSM and the data that you're reverting you can have a go yourself with something like JOSM's revert plugin (after having a read of the wiki links in the other question) or (possibly the quickest way of doing it) ask someone in the #OSM IRC channel to revert it for you - that normally gets a pretty quick response.</p>
 </div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please, have a look on this similar question:</p>
-<p><a href="http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">how-can-i-revert-a-changeset</a></p>
+<p><a href="/questions/731/how-can-i-revert-a-changeset">how-can-i-revert-a-changeset</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

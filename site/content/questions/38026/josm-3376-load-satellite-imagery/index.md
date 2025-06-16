@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>3376 is from July 2010, and Bing imagery wasn't available for tracing by OSM until November 2010, and I don't think imagery was integrated with the core JOSM editor until <a href="http://wiki.openstreetmap.org/w/index.php?title=Bing&amp;diff=579784&amp;oldid=577448">build 3715 in January 2011</a>. Unfortunately a quick web search suggests there <a href="https://discussions.apple.com/docs/DOC-6491">isn't a newer Java available for PPC</a>.</p>
+<p>3376 is from July 2010, and Bing imagery wasn't available for tracing by OSM until November 2010, and I don't think imagery was integrated with the core JOSM editor until <a href="https://wiki.openstreetmap.org/w/index.php?title=Bing&amp;diff=579784&amp;oldid=577448">build 3715 in January 2011</a>. Unfortunately a quick web search suggests there <a href="https://discussions.apple.com/docs/DOC-6491">isn't a newer Java available for PPC</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

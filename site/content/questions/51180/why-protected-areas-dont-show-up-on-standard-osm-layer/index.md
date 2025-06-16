@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Regarding of rendering protected boundaries, please, read <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/603">this issue</a>.</p>
-<p>Regarding of adding any tags to force rendering, it could be qualified as <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>.</p>
+<p>Regarding of adding any tags to force rendering, it could be qualified as <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>.</p>
 <p>While <code>leisure=nature_reserve</code> is technically related to <code>boundary=protected_area</code>, the latter one is the most sufficient and recent way of tagging these areas. Keep in mind, that <code>leisure=*</code> key could, in certain cases, lead to misinterpretation, since highest protection class areas are not meant for any recreational activities.</p>
 </div>
 <div class="answer-controls post-controls">

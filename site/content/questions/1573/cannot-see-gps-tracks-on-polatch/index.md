@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cannot see GPS tracks on Polatch"
-description = '''Hi Yesterday I&#x27;ve uploaded all tracks I&#x27;ve collected in 5 years. Now I&#x27;m trying to add streets on my village, but I can&#x27;t see on Potlatch the GPS track I need. This is the track: http://www.openstreetmap.org/user/itec/traces/871229 I&#x27;ve uploaded my tracks grouped by month. Now I&#x27;ve removed them. Is ...'''
+description = '''Hi Yesterday I&#x27;ve uploaded all tracks I&#x27;ve collected in 5 years. Now I&#x27;m trying to add streets on my village, but I can&#x27;t see on Potlatch the GPS track I need. This is the track: https://www.openstreetmap.org/user/itec/traces/871229 I&#x27;ve uploaded my tracks grouped by month. Now I&#x27;ve removed them. Is ...'''
 date = "2010-11-21T12:01:00Z"
 lastmod = "2010-11-21T15:59:00Z"
 weight = 1573
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi Yesterday I've uploaded all tracks I've collected in 5 years. Now I'm trying to add streets on my village, but I can't see on Potlatch the GPS track I need. This is the track: <a href="http://www.openstreetmap.org/user/itec/traces/871229">http://www.openstreetmap.org/user/itec/traces/871229</a></p>
+<p>Hi Yesterday I've uploaded all tracks I've collected in 5 years. Now I'm trying to add streets on my village, but I can't see on Potlatch the GPS track I need. This is the track: <a href="https://www.openstreetmap.org/user/itec/traces/871229">https://www.openstreetmap.org/user/itec/traces/871229</a></p>
 <p>I've uploaded my tracks grouped by month. Now I've removed them. Is it better to upload them again as sigle small files?</p>
 <p>BR Emanuele</p>
 </div>
@@ -110,7 +110,7 @@ One Answer:
 </p>
 <p>To see only GPS tracks that you uploaded, press the "G" key.<br />
 </p>
-<p>To see only a single track in potlatch, visit the <a href="http://www.openstreetmap.org/traces">track list</a> and press the edit link beside the track that interests you. Potlatch will open with that GPS track loaded.</p>
+<p>To see only a single track in potlatch, visit the <a href="https://www.openstreetmap.org/traces">track list</a> and press the edit link beside the track that interests you. Potlatch will open with that GPS track loaded.</p>
 <p>Potlatch has help pages that you can see by pressing the "help" button at the lower left of the potlatch window.<br />
 </p>
 <p>In Potlatch2, there is a "GPS Data" selector drop-down box at the upper right of the Potlatch2 window.</p>
@@ -148,7 +148,7 @@ One Answer:
 <div class="comment-text">
 <p>I see your track here.<br />
 </p>
-<p><a href="http://www.openstreetmap.org/edit?gpx=871229">http://www.openstreetmap.org/edit?gpx=871229</a></p>
+<p><a href="https://www.openstreetmap.org/edit?gpx=871229">https://www.openstreetmap.org/edit?gpx=871229</a></p>
 <p>It's light blue and thin.</p>
 </div>
 <div id="comment-1579-info" class="comment-info">

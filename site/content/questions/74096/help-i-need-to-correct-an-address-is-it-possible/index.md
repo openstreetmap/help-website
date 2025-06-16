@@ -222,7 +222,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have mapped the outlines of the buildings in the area and a square of land i can see on Bing aerial. Lexi, if you can put map notes with the correct addresses and Post codes on them I will add that data to OSM. The outlines may not show for a day or so. What is the open space i have mapped is it a new plot or a paddock or something else? You could add the data yourself, login, click edit in iD, select the building polygon, fill in the name ( if it has one ) number and street and postcode and save it. I notice the road or street is not named, that also needs adding. if that were correct at least an address search should work correctly ( with OSM ) but you'll have to contact the postcode people and later TomTom. My old Garmin Nuvi finds your location with your postcode, If I remember i may test my newer Ford sat nav when i'm allowed out! Happy Mapping.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/AIR_VIEW.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/AIR_VIEW.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

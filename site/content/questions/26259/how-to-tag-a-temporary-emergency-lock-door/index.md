@@ -208,7 +208,7 @@ osqa_accepted = true
 <div id="post-36459-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Andy, solely emergency_flood barrier, because there a lot different species of emergency_flood barriers. The Measlandkering <a href="http://www.openstreetmap.org/#map=16/51.9543/4.1644">http://www.openstreetmap.org/#map=16/51.9543/4.1644</a> and Thames Barrier <a href="http://www.openstreetmap.org/#map=16/51.4964/0.0372">http://www.openstreetmap.org/#map=16/51.4964/0.0372</a> We got several more. Or emergency flood_barrier with specific tag for its function and specifics, OSM like.</p>
+<p>Andy, solely emergency_flood barrier, because there a lot different species of emergency_flood barriers. The Measlandkering <a href="https://www.openstreetmap.org/#map=16/51.9543/4.1644">https://www.openstreetmap.org/#map=16/51.9543/4.1644</a> and Thames Barrier <a href="https://www.openstreetmap.org/#map=16/51.4964/0.0372">https://www.openstreetmap.org/#map=16/51.4964/0.0372</a> We got several more. Or emergency flood_barrier with specific tag for its function and specifics, OSM like.</p>
 </div>
 <div id="comment-36459-info" class="comment-info">
 <span class="comment-age">(31 Aug '14, 16:15)</span> <span class="comment-user userinfo">Hendrikklaas</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The wiki entry for a dispensing pharmacy is amenity pharmacy dispensing=yes and showing a WHITE cross in a GREEN square (see <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Healthcare">link text</a> ) So why when I enter those tags does the symbol appear as a RED cross inside a red square outline?</p>
+<p>The wiki entry for a dispensing pharmacy is amenity pharmacy dispensing=yes and showing a WHITE cross in a GREEN square (see <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Healthcare">link text</a> ) So why when I enter those tags does the symbol appear as a RED cross inside a red square outline?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-icon" rel="tag" title="see questions tagged &#39;icon&#39;">icon</span> <span class="post-tag tag-link-pharmacy" rel="tag" title="see questions tagged &#39;pharmacy&#39;">pharmacy</span>
@@ -158,7 +158,7 @@ One Answer:
 <div id="post-27961-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi JimAsh, you’re still able to use simple text in the advanced menus and a lot more possibilities. The symbols were made to simplify the proces. It depends on the editor, ID, P2 or JOSM, please read this <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide.">http://wiki.openstreetmap.org/wiki/Beginners%27_guide.</a> Btw don’t hesitate and keep mapping.</p>
+<p>Hi JimAsh, you’re still able to use simple text in the advanced menus and a lot more possibilities. The symbols were made to simplify the proces. It depends on the editor, ID, P2 or JOSM, please read this <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide.">https://wiki.openstreetmap.org/wiki/Beginners%27_guide.</a> Btw don’t hesitate and keep mapping.</p>
 </div>
 <div id="comment-27961-info" class="comment-info">
 <span class="comment-age">(11 Nov '13, 01:08)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -170,7 +170,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Hendrikklaas, your link went to a page with no current text... This one is ok... <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> The only difference in the link is the full-stop at the end I think?</p>
+<p>Hendrikklaas, your link went to a page with no current text... This one is ok... <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> The only difference in the link is the full-stop at the end I think?</p>
 </div>
 <div id="comment-27964-info" class="comment-info">
 <span class="comment-age">(11 Nov '13, 02:45)</span> <span class="comment-user userinfo">nevw</span>

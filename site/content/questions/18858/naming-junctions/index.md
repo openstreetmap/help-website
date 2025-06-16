@@ -174,7 +174,7 @@ osqa_accepted = true
 <li>name=(Exit or junction name)</li>
 <li>ref=(Exit or junction number)</li>
 </ul>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_junction">highway=motorway_junction</a> for examples.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_junction">highway=motorway_junction</a> for examples.</p>
 <p>/al</p>
 </div>
 <div class="answer-controls post-controls">

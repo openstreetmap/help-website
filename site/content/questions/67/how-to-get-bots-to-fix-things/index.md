@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to get bots to fix things?"
-description = '''Hey! I regularly find geometry in the map that has problems. How do I submit this geometry problem to get fixed by &#x27;bot? I realize someone has to write code to fix it, but if they don&#x27;t know about the problems, how will it ever get fixed? For instance:  http://www.openstreetmap.org/browse/way/231196...'''
+description = '''Hey! I regularly find geometry in the map that has problems. How do I submit this geometry problem to get fixed by &#x27;bot? I realize someone has to write code to fix it, but if they don&#x27;t know about the problems, how will it ever get fixed? For instance:  https://www.openstreetmap.org/browse/way/231196...'''
 date = "2010-07-10T21:55:00Z"
 lastmod = "2010-07-11T21:39:00Z"
 weight = 67
@@ -43,11 +43,11 @@ osqa_accepted = false
 <p>I regularly find geometry in the map that has problems. How do I submit this geometry problem to get fixed by 'bot? I realize someone has to write code to fix it, but if they don't know about the problems, how will it ever get fixed?</p>
 <p>For instance:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/way/23119666"></a><a href="http://www.openstreetmap.org/browse/way/23119666"></a><a href="http://www.openstreetmap.org/browse/way/23119666">http://www.openstreetmap.org/browse/way/23119666</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/23119666"></a><a href="https://www.openstreetmap.org/browse/way/23119666"></a><a href="https://www.openstreetmap.org/browse/way/23119666">https://www.openstreetmap.org/browse/way/23119666</a></li>
 <li>this way is self overlapping about 100 times.</li>
-<li><a href="http://www.openstreetmap.org/browse/way/35354717"></a><a href="http://www.openstreetmap.org/browse/way/35354717"></a><a href="http://www.openstreetmap.org/browse/way/35354717">http://www.openstreetmap.org/browse/way/35354717</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/35354717"></a><a href="https://www.openstreetmap.org/browse/way/35354717"></a><a href="https://www.openstreetmap.org/browse/way/35354717">https://www.openstreetmap.org/browse/way/35354717</a></li>
 <li>this way is self overlapping and should be cut into an outer/inner relation.</li>
-<li><a href="http://www.openstreetmap.org/browse/way/35915907"></a><a href="http://www.openstreetmap.org/browse/way/35915907"></a><a href="http://www.openstreetmap.org/browse/way/35915907">http://www.openstreetmap.org/browse/way/35915907</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/35915907"></a><a href="https://www.openstreetmap.org/browse/way/35915907"></a><a href="https://www.openstreetmap.org/browse/way/35915907">https://www.openstreetmap.org/browse/way/35915907</a></li>
 <li>this way crosses itself</li>
 </ul>
 <p>These are all fixable problems but I don't know how to write the bots to fix them. Where do I submit these issues?</p>
@@ -220,7 +220,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I doubt any user would intentionally introduce such an error. Its most likely an editor issue. To reduce errors like these to appear in the first place, it could be worth investigating how it happened. In the case with <a href="http://www.openstreetmap.org/browse/way/23119666">way 23119666</a>, you can see by the history that the error was introduced using the potlatch editor. Potlatch has as a "smoothing" function for straight roads and circles when you press 'T'. If you try to "smooth" a concave (shape of C) closed way, the function takes a 'crazy pill' and attempts to rectify this by creating "extra" loops of nodes. <a href="http://trac.openstreetmap.org/ticket/2489">The bug</a> has already been submitted to trac.</p>
+<p>I doubt any user would intentionally introduce such an error. Its most likely an editor issue. To reduce errors like these to appear in the first place, it could be worth investigating how it happened. In the case with <a href="https://www.openstreetmap.org/browse/way/23119666">way 23119666</a>, you can see by the history that the error was introduced using the potlatch editor. Potlatch has as a "smoothing" function for straight roads and circles when you press 'T'. If you try to "smooth" a concave (shape of C) closed way, the function takes a 'crazy pill' and attempts to rectify this by creating "extra" loops of nodes. <a href="http://trac.openstreetmap.org/ticket/2489">The bug</a> has already been submitted to trac.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

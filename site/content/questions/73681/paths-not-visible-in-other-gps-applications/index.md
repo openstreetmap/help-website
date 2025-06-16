@@ -267,7 +267,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This side by side view of the two paths and their Tagging (in Potlatch2 edit mode and advanced mode) you will see that the tagging is slightly different. One has foot=yes tag the other does not. This, i think will explain what you have discovered.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Both_paths_side_by_side.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Both_paths_side_by_side.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

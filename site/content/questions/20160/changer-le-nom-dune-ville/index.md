@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Déjà fait ? Voir <a href="http://www.openstreetmap.org/browse/node/704822528">http://www.openstreetmap.org/browse/node/704822528</a> (pour Argenton-Château) et <a href="http://www.openstreetmap.org/browse/node/2093215206">http://www.openstreetmap.org/browse/node/2093215206</a> (pour Saint-Clémentin).</p>
+<p>Déjà fait ? Voir <a href="https://www.openstreetmap.org/browse/node/704822528">https://www.openstreetmap.org/browse/node/704822528</a> (pour Argenton-Château) et <a href="https://www.openstreetmap.org/browse/node/2093215206">https://www.openstreetmap.org/browse/node/2093215206</a> (pour Saint-Clémentin).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should find some hints in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Software">Software</a> ... for several platforms and operating ystems we have collections as tables, even with a sorting about offline or online map loading.</p>
+<p>You should find some hints in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Software">Software</a> ... for several platforms and operating ystems we have collections as tables, even with a sorting about offline or online map loading.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

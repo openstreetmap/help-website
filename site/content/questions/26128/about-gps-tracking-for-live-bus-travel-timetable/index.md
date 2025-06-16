@@ -215,7 +215,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>My answer to this would be basically the same given here: <a href="https://help.openstreetmap.org/questions/25685/tutorials-about-parsing-osmpbf">Tutorials About Parsing Osmpbf</a>.</p>
+<p>My answer to this would be basically the same given here: <a href="/questions/25685/tutorials-about-parsing-osmpbf">Tutorials About Parsing Osmpbf</a>.</p>
 <p>I don't know all the available libraries/programs so I can't give you any specific guidance here. But this is what I'm expecting based on what I have seen.</p>
 <p>For timetable/bus routing I would expect to find little to no work being done for app programming (where I assume app means iOS/Android and not desktop application).</p>
 <p>If you do find something, or if you are going to develop it all yourself, the process will be to read raw OSM data (PBF or XML) and convert it to a format your app will use. There is likely existing specifications for storing route and times to be used in such a manner, but maybe you'll need to specify your own.</p>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This question is really rather unspecific, but you probably want to look at <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">downloading data</a> or one of the <a href="http://wiki.openstreetmap.org/wiki/Export">export</a> features.</p>
+<p>This question is really rather unspecific, but you probably want to look at <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">downloading data</a> or one of the <a href="https://wiki.openstreetmap.org/wiki/Export">export</a> features.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ You can download the map for example <a href="http://downloads.cloudmade.com/">h
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, See these <a href="http://help.openstreetmap.org/questions/1464/is-it-possible-to-take-a-screenshot-of-detailed-parts-of-the-map-including-what-you-would-see-dragging-the-map-to-a-new-area">ques</a><a href="http://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper">tions</a> and their answers.</p>
+<p>Hi, See these <a href="/questions/1464/is-it-possible-to-take-a-screenshot-of-detailed-parts-of-the-map-including-what-you-would-see-dragging-the-map-to-a-new-area">ques</a><a href="/questions/9043/printing-osm-maps-to-paper">tions</a> and their answers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

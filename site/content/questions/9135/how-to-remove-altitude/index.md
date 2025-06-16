@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Sports Tracker only uses OpenStreetMap map images as a backdrop to your trace. The altitude data you're seeing has been gathered from your GPS receiver, and has nothing to do with OpenStreetMap, which doesn't actually store any altitude data for any features.</p>
-<p>There are some <a href="http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks">tips for improving GPS accuracy</a> on our wiki, but other than that you should contact either the manufacturer of your GPS receiver (or phone if you're using its built-in GPS), or Sports Tracking Technologies, the publishers of your App.</p>
+<p>There are some <a href="https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks">tips for improving GPS accuracy</a> on our wiki, but other than that you should contact either the manufacturer of your GPS receiver (or phone if you're using its built-in GPS), or Sports Tracking Technologies, the publishers of your App.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

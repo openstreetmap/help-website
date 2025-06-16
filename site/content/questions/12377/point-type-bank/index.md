@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I guess you talk about editing OSM with the main online tool "Potlatch2". If that is the case, you already have an icon (also called a "preset") for "Bank". Click on "Show all" on the "Amenity" pane (left side) and select the icon for "Bank".</p>
-<p>Note that OSM is much more than this rather limited POI list. Check also our wiki page "<a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map features</a>" for the most well known POI's and use the Potlatch2 "advanced" tab when you have selected one node or polygon to insert POI's that are not predefined in the editor. You are also free to create new tags for new features or create proposals on the wiki (you are also strongly encouraged to contact the community before doing any new stuff at the beginning).</p>
+<p>Note that OSM is much more than this rather limited POI list. Check also our wiki page "<a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map features</a>" for the most well known POI's and use the Potlatch2 "advanced" tab when you have selected one node or polygon to insert POI's that are not predefined in the editor. You are also free to create new tags for new features or create proposals on the wiki (you are also strongly encouraged to contact the community before doing any new stuff at the beginning).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

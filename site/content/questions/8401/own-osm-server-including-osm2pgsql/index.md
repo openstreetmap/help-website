@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I have a question about this tutorial [1] [2]. I have followed the steps as explained, but I get no map in my browser. I do not know where the problem could be. I've done the tutorial twice, but always with the same result. Can someone please give me a hint?</p>
 <p>My systems: Debian 6.0.2 (first try) and Debian 6.0.0 (second try)</p>
-<p>[1] <a href="http://wiki.openstreetmap.org/wiki/DE:HowtoMinutelyHstore">http://wiki.openstreetmap.org/wiki/DE:HowtoMinutelyHstore</a> [2] <a href="http://wiki.openstreetmap.org/wiki/DE:HowTo_Mapnik_%26_Tirex">http://wiki.openstreetmap.org/wiki/DE:HowTo_Mapnik_%26_Tirex</a></p>
+<p>[1] <a href="https://wiki.openstreetmap.org/wiki/DE:HowtoMinutelyHstore">https://wiki.openstreetmap.org/wiki/DE:HowtoMinutelyHstore</a> [2] <a href="https://wiki.openstreetmap.org/wiki/DE:HowTo_Mapnik_%26_Tirex">https://wiki.openstreetmap.org/wiki/DE:HowTo_Mapnik_%26_Tirex</a></p>
 <p>Regards Chris</p>
 </div>
 <div id="question-tags" class="tags-container tags">

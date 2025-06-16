@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct">this page</a> actually says is "outline it beforehand and discuss it on a suitable mailing list (a regional, national or international list depending on the scope of your planned change". I'd suggest an international list if the scope is international. If we're really talking about unambiguous spelling errors it's likely that there'll be little or any resistance, but changes that haven't been thought through will be opposed (for example, a global change of "MacDonald's" to "McDonald's" that doesn't consider that there might be a "Hamish MacDonald's Porridge Shop" somewhere in Scotland would be clearly the wrong thing to do).</p>
+<p>What <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct">this page</a> actually says is "outline it beforehand and discuss it on a suitable mailing list (a regional, national or international list depending on the scope of your planned change". I'd suggest an international list if the scope is international. If we're really talking about unambiguous spelling errors it's likely that there'll be little or any resistance, but changes that haven't been thought through will be opposed (for example, a global change of "MacDonald's" to "McDonald's" that doesn't consider that there might be a "Hamish MacDonald's Porridge Shop" somewhere in Scotland would be clearly the wrong thing to do).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,7 +130,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>I found my answer on <a href="http://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy#Discuss">http://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy#Discuss</a> The correct list I searched was tagging@lists.openstreetmap.org</p>
+<p>I found my answer on <a href="https://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy#Discuss">https://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy#Discuss</a> The correct list I searched was tagging@lists.openstreetmap.org</p>
 </div>
 <div id="comment-21417-info" class="comment-info">
 <span class="comment-age">(11 Apr '13, 20:49)</span> <span class="comment-user userinfo">saerdnaer</span>

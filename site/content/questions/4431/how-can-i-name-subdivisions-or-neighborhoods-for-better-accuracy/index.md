@@ -129,7 +129,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>There have been a few discussions about this topic before. I created a wiki article on HOAs, which links to a related discussion on the forums about handling neighborhoods: <a href="http://wiki.openstreetmap.org/wiki/Homeowner_association">http://wiki.openstreetmap.org/wiki/Homeowner_association</a></p>
+<p>There have been a few discussions about this topic before. I created a wiki article on HOAs, which links to a related discussion on the forums about handling neighborhoods: <a href="https://wiki.openstreetmap.org/wiki/Homeowner_association">https://wiki.openstreetmap.org/wiki/Homeowner_association</a></p>
 <p>dieterdreist is right though, there is a gap right now. We should definitely have further discussions, and since the forum post is active, I'd encourage you to read and discuss this there: <a href="http://forum.openstreetmap.org/viewtopic.php?id=11885">http://forum.openstreetmap.org/viewtopic.php?id=11885</a></p>
 <p>He's mostly discussing how to map given current tags, however I believe we might need to create new ones.</p>
 </div>
@@ -142,7 +142,7 @@ One Answer:
 <div id="post-4459-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've moved some of the HOA content to an article dedicated to neighborhoods: <a href="http://wiki.openstreetmap.org/wiki/Neighborhood">http://wiki.openstreetmap.org/wiki/Neighborhood</a></p>
+<p>I've moved some of the HOA content to an article dedicated to neighborhoods: <a href="https://wiki.openstreetmap.org/wiki/Neighborhood">https://wiki.openstreetmap.org/wiki/Neighborhood</a></p>
 <p>Hopefully we can have some discussions on this and reach consensus. Use the forum, mailing list, or talk page for this. The article above links to some current discussions.</p>
 </div>
 <div id="comment-4459-info" class="comment-info">

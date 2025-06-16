@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Simple answer: No, this is not possible. That is not really the purpose of the search box on the main page.</p>
-<p>Though the search box does use some other tags as well as the name, eg to see what kind of object it is. And you can search for something like "pub in Glasgow", and it will find anything within Glasgow that is tagged as amenity=pub. For more details, see the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, which is the search tool.</p>
+<p>Though the search box does use some other tags as well as the name, eg to see what kind of object it is. And you can search for something like "pub in Glasgow", and it will find anything within Glasgow that is tagged as amenity=pub. For more details, see the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, which is the search tool.</p>
 <p>If you do what to search for a particular key or value, then the best option is probably to use JOSM. You can just use JOSM to pick an area from the map, then download the osm data. Then use the "Find" tool to select the objects you want.</p>
 <p>You don't necessarily have to use the XAPI for this, unless you want to search tags over a larger area (ie more than you can download in JOSM at once).</p>
 </div>

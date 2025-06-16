@@ -148,7 +148,7 @@ You will need to select 2 points to split the outer polygon into two parts.</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8521/flockfinder">@flockfinder</a>: this will split the ways, and afterwards both ways should be a member of the relation (Potlatch2 should do this for you).</p>
+<p><a href="https://help.openstreetmap.org/users/8521/flockfinder">@flockfinder</a>: this will split the ways, and afterwards both ways should be a member of the relation (Potlatch2 should do this for you).</p>
 </div>
 <div id="comment-50194-info" class="comment-info">
 <span class="comment-age">(14 Jun '16, 06:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -183,7 +183,7 @@ You will need to select 2 points to split the outer polygon into two parts.</p>
 <div id="post-50200-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8521/flockfinder">@flockfinder</a>: yes, any not-that-broken editor should automatically make the new split-off way (by X) a member too (or at least show you a warning and advice that you may want to do that manually). Of course this does not apply to expert editors / expert modes, but for a general OSM editor it would be quite destructive if it would not take care of relations when you split ways which are a relation member.</p>
+<p><a href="https://help.openstreetmap.org/users/8521/flockfinder">@flockfinder</a>: yes, any not-that-broken editor should automatically make the new split-off way (by X) a member too (or at least show you a warning and advice that you may want to do that manually). Of course this does not apply to expert editors / expert modes, but for a general OSM editor it would be quite destructive if it would not take care of relations when you split ways which are a relation member.</p>
 <p>I cannot try it (since I do not use Flash), but I do not know different information about Potlatch2.</p>
 <p>And in any case: I would encourage you to view the relation memberships of your new split-off way and confirm that the automation worked. It is good for the understanding of the data model.</p>
 </div>

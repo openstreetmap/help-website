@@ -67,7 +67,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>For most "advanced" mapping questions, a single best/accepted way of mapping doesn't exist, and mappers will therefore want to voice and discuss contradicting opinions on the topic.</p>
 <p>I'm not aware of a consensus on mapping the style of intersections you describe, so this is probably one of those topics.</p>
-<p>Please use the <a href="http://forum.openstreetmap.org/">traditional forum</a> or <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> for questions that will likely lead to discussion.</p>
+<p>Please use the <a href="http://forum.openstreetmap.org/">traditional forum</a> or <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> for questions that will likely lead to discussion.</p>
 </div>
 <div id="comment-68-info" class="comment-info">
 <span class="comment-age">(10 Jul '10, 21:56)</span> <span class="comment-user userinfo">Tordanik</span>

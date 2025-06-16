@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can set "source=abc;xyz"</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Semi-colon_value_separator">Semi-colon_value_separator</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Semi-colon_value_separator">Semi-colon_value_separator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

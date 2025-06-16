@@ -112,7 +112,7 @@ TILESIZE=256
 ;MAXZOOM=18
 ;TYPE=png image/png
 ;DESCRIPTION=This is a description of the tile layer used in the tile json request
-;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;http://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;http://wiki.openstreetmap.org/wiki/Contributors\&quot;&gt;contributors&lt;/a&gt;, &lt;a href=\&quot;http://opendatacommons.org/licenses/odbl/\&quot;&gt;ODbL&lt;/a&gt;
+;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;https://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;https://wiki.openstreetmap.org/wiki/Contributors\&quot;&gt;contributors&lt;/a&gt;, &lt;a href=\&quot;http://opendatacommons.org/licenses/odbl/\&quot;&gt;ODbL&lt;/a&gt;
 ;SERVER_ALIAS=http://localhost/
 ;CORS=http://www.openstreetmap.org
 ;ASPECTX=1
@@ -130,7 +130,7 @@ TILESIZE=256
 ;MAXZOOM=22
 ;TYPE=png image/png
 ;DESCRIPTION=This is a description of the tile layer used in the tile json request
-;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;http://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;http://wiki.openstreetmap.org/wiki/Contributors\&quot;&gt;contributors&lt;/a&gt;, &lt;a href=\&quot;http://opendatacommons.org/licenses/odbl/\&quot;&gt;ODbL&lt;/a&gt;
+;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;https://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;https://wiki.openstreetmap.org/wiki/Contributors\&quot;&gt;contributors&lt;/a&gt;, &lt;a href=\&quot;http://opendatacommons.org/licenses/odbl/\&quot;&gt;ODbL&lt;/a&gt;
 ;SERVER_ALIAS=http://localhost/
 ;CORS=*</code></pre>
 <p>anyone can you please me on this?</p>

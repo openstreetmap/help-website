@@ -126,7 +126,7 @@ nmea cannot open &#39;&quot;C:\Users\Spiess\Desktop\newgpx file&#39; for write. 
 &#10;</div>
 <div class="comment-text">
 <p>Just have seen there is a option to send a screen shot. Ad this now to the question / reply sent already.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/GPSBabel-1.4.3,_Pic1.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/GPSBabel-1.4.3,_Pic1.jpg" alt="alt text" /></p>
 <p>Hope this works - I am a New User here ...</p>
 <p>Thanks &amp; Regards Yougy2</p>
 </div>
@@ -191,7 +191,7 @@ nmea cannot open &#39;&quot;C:\Users\Spiess\Desktop\newgpx file&#39; for write. 
 1
 </div>
 <div class="comment-text">
-<p>I'm sure that you're already aware, but just in case you are not - you'll need to edit the map to reflect the trace that you've uploaded - an uploaded GPS trace doesn't magically become a cycleway, for example. There's an introductory series of pages on the wiki <a href="http://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">here</a> (und <a href="http://wiki.openstreetmap.org/wiki/DE:Beginners%27_guide">auf Deutsch</a>).</p>
+<p>I'm sure that you're already aware, but just in case you are not - you'll need to edit the map to reflect the trace that you've uploaded - an uploaded GPS trace doesn't magically become a cycleway, for example. There's an introductory series of pages on the wiki <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">here</a> (und <a href="https://wiki.openstreetmap.org/wiki/DE:Beginners%27_guide">auf Deutsch</a>).</p>
 </div>
 <div id="comment-15721-info" class="comment-info">
 <span class="comment-age">(31 Aug '12, 13:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -362,7 +362,7 @@ nmea cannot open &#39;&quot;C:\Users\Spiess\Desktop\newgpx file&#39; for write. 
 <p>&lt;gpx version="1.0" creator="GPSBabel - &amp;lt;a href=" http:="" www.gpsbabel.org"=""&gt;http://www.gpsbabel.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/0" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 <a href="http://www.topografix.com/GPX/1/0/gpx.xsd">"&gt;http://www.topografix.com/GPX/1/0/gpx.xsd"&gt;</a> &lt;time&gt;2012-08-30T11:33:41Z&lt;/time&gt; &lt;bounds minlat="49.089228333" minlon="9.403351667" maxlat="49.090763333" maxlon="9.406095000"/&gt; &lt;trk&gt; &lt;trkseg&gt; &lt;trkpt lat="49.089353333" lon="9.403638333"&gt; &lt;time&gt;2012-08-29T07:49:17Z&lt;/time&gt; &lt;course&gt;0.000000&lt;/course&gt; &lt;speed&gt;0.000000&lt;/speed&gt; &lt;/trkpt&gt; &lt;trkpt lat="49.089353333" lon="9.403638333"&gt; &lt;ele&gt;471.100000&lt;/ele&gt; &lt;time&gt;2012-08-29T07:49:18Z&lt;/time&gt; &lt;course&gt;0.000000&lt;/course&gt; &lt;speed&gt;0.000000&lt;/speed&gt; &lt;fix&gt;3d&lt;/fix&gt; &lt;sat&gt;5&lt;/sat&gt; &lt;hdop&gt;1.800000&lt;/hdop&gt; &lt;vdop&gt;2.200000&lt;/vdop&gt; &lt;pdop&gt;2.800000&lt;/pdop&gt; &lt;/trkpt&gt; &lt;trkpt lat="49.089353333" lon="9.403638333"&gt; &lt;ele&gt;471.100000&lt;/ele&gt; &lt;time&gt;2012-08-29T07:49:19Z&lt;/time&gt; &lt;course&gt;0.000000&lt;/course&gt; &lt;speed&gt;0.000000&lt;/speed&gt; &lt;fix&gt;3d&lt;/fix&gt; &lt;sat&gt;6&lt;/sat&gt; &lt;hdop&gt;1.600000&lt;/hdop&gt; &lt;vdop&gt;1.800000&lt;/vdop&gt; &lt;pdop&gt;2.400000&lt;/pdop&gt; &lt;/trkpt&gt; &lt;trkpt lat="49.089353333" lon="9.403638333"&gt; &lt;ele&gt;471.100000&lt;/ele&gt; &lt;time&gt;2012-08-29T07:49:20Z&lt;/time&gt; &lt;course&gt;0.000000&lt;/course&gt; &lt;speed&gt;0.000000&lt;/speed&gt; &lt;fix&gt;3d&lt;/fix&gt; &lt;sat&gt;4&lt;/sat&gt; &lt;hdop&gt;9.100000&lt;/hdop&gt; &lt;vdop&gt;2.800000&lt;/vdop&gt; &lt;pdop&gt;9.500000&lt;/pdop&gt; &lt;/trkpt&gt; &lt;trkpt lat="49.089353333" lon="9.403638333"&gt; &lt;ele&gt;471.100000&lt;/ele&gt; &lt;time&gt;2012-08-29T07:49:21Z&lt;/time&gt; &lt;course&gt;0.000000&lt;/course&gt; &lt;speed&gt;0.000000&lt;/speed&gt; &lt;fix&gt;3d&lt;/fix&gt; &lt;sat&gt;6&lt;/sat&gt; &lt;hdop&gt;1.600000&lt;/hdop&gt; &lt;vdop&gt;1.800000&lt;/vdop&gt; &lt;pdop&gt;2.400000&lt;/pdop&gt; &lt;/trkpt&gt; &lt;trkpt lat="49.089353333" lon="9.403638333"&gt; &lt;ele&gt;471.100000&lt;/ele&gt; &lt;time&gt;2012-08-29T07:49:22Z&lt;/time&gt; &lt;course&gt;0.000000&lt;/course&gt; &lt;speed&gt;0.000000&lt;/speed&gt; &lt;fix&gt;3d&lt;/fix&gt; &lt;sat&gt;6&lt;/sat&gt; &lt;hdop&gt;1.600000&lt;/hdop&gt; &lt;vdop&gt;1.800000&lt;/vdop&gt; &lt;pdop&gt;2.400000&lt;/pdop&gt; &lt;/trkpt&gt; &lt;trkpt lat="49.089353333" lon="9.403638333"&gt; &lt;ele&gt;471.100000&lt;/ele&gt; &lt;time&gt;2012-08-29T07:49:23Z&lt;/time&gt; &lt;course&gt;0.000000&lt;/course&gt; &lt;speed&gt;0.000000&lt;/speed&gt; &lt;fix&gt;3d&lt;/fix&gt; ... ...</p>
 <p>Now I Look into how to upload the file into openstreetmap to find out how I get further. Will wait a few days, in case I do something wrong trying this file "life".</p>
 <p>Don´t want to do something silly or damage the system. So your checkup would be highly appreciated.</p>
-<p>Now I read the suggested link <a href="http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks.">http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks.</a></p>
+<p>Now I read the suggested link <a href="https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks.">https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks.</a></p>
 <p>Thanks to all ...</p>
 </div>
 <div id="comment-15677-info" class="comment-info">
@@ -432,7 +432,7 @@ nmea cannot open &#39;&quot;C:\Users\Spiess\Desktop\newgpx file&#39; for write. 
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is used by some OSMers <a href="http://www.gpsbabel.org/capabilities.html">http://www.gpsbabel.org/capabilities.html</a> more info</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks">http://wiki.openstreetmap.org/wiki/Recording_GPS_tracks</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks">https://wiki.openstreetmap.org/wiki/Recording_GPS_tracks</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

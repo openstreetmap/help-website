@@ -130,7 +130,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As mentioned in <a href="https://help.openstreetmap.org/questions/36295/results-in-overpass-turbo-api-interesting-data-tells-us-more-things">this previous question</a>, see <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">our wiki page</a> about it, specifically the "Map key" section of that page which explains what the different circle colours mean.</p>
+<p>As mentioned in <a href="/questions/36295/results-in-overpass-turbo-api-interesting-data-tells-us-more-things">this previous question</a>, see <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">our wiki page</a> about it, specifically the "Map key" section of that page which explains what the different circle colours mean.</p>
 <p>Below this picture</p>
 <p><img src="https://wiki.openstreetmap.org/w/images/c/c1/Overpass_turbo_map_key.png" alt="Overpass turbo symbols as displayed in wiki page" /></p>
 <p>is a description that says what they mean:</p>

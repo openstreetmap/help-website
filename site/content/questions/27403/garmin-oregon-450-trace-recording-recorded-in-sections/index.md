@@ -101,7 +101,7 @@ osqa_accepted = false
 <div id="post-29313-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/user/andy%20mackey/traces/1624036">http://www.openstreetmap.org/user/andy%20mackey/traces/1624036</a> <a href="http://www.openstreetmap.org/user/andy%20mackey/traces/1628215">http://www.openstreetmap.org/user/andy%20mackey/traces/1628215</a> <a href="http://www.openstreetmap.org/user/andy%20mackey/traces/1628217">http://www.openstreetmap.org/user/andy%20mackey/traces/1628217</a> the top trace was the whole days hike the last two are some of the 8 that i joined to make one.</p>
+<p><a href="https://www.openstreetmap.org/user/andy%20mackey/traces/1624036">https://www.openstreetmap.org/user/andy%20mackey/traces/1624036</a> <a href="https://www.openstreetmap.org/user/andy%20mackey/traces/1628215">https://www.openstreetmap.org/user/andy%20mackey/traces/1628215</a> <a href="https://www.openstreetmap.org/user/andy%20mackey/traces/1628217">https://www.openstreetmap.org/user/andy%20mackey/traces/1628217</a> the top trace was the whole days hike the last two are some of the 8 that i joined to make one.</p>
 </div>
 <div id="comment-29313-info" class="comment-info">
 <span class="comment-age">(23 Dec '13, 19:15)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -322,7 +322,7 @@ to create one file I can upload. Yes, OSM accepts zip and gz files.<br />
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have been experiencing and looking at fragmented/sectionalized problem again. I have had the Oregon set to auto archive and this and a full current file caused the device to save to archive when full, On one walk every 50 minutes. The main cause of autosave kicking in, is my failure save GPXes to my PC then delete them from the Oregon's memory. The mapping software i usually use only has the facility to choose only a single file at a time, which is tedious. GPS Prune allowed me to control click all of the sections, with the same date, then load them as one file. Prune, as the name suggests as pruning facilities to trim off rouge points and it also displays the up-to-date OSM map so you can see if you new trace is new to OSM and worth uploading to the traces list.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Prune_cntl_lots_of_traces.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Prune_cntl_lots_of_traces.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

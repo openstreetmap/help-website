@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>HI penegal, I would not change your tagging scheme, leave it as is and have a look here <a href="http://www.openstreetmap.org/#map=17/52.48436/4.77604">http://www.openstreetmap.org/#map=17/52.48436/4.77604</a> the Wiki let you use all kinds of combinations. A site or area with different kinds of wet-dry-meadow land. Its gradually being transformed from landuse=meadow into natural=wetland in all varieties.</p>
+<p>HI penegal, I would not change your tagging scheme, leave it as is and have a look here <a href="https://www.openstreetmap.org/#map=17/52.48436/4.77604">https://www.openstreetmap.org/#map=17/52.48436/4.77604</a> the Wiki let you use all kinds of combinations. A site or area with different kinds of wet-dry-meadow land. Its gradually being transformed from landuse=meadow into natural=wetland in all varieties.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-7112-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Are you referring to <a href="http://wiki.openstreetmap.org/wiki/Osmarender/Howto#xsltproc">this step in using the osmarender?</a> Not clear from your question</p>
+<p>Are you referring to <a href="https://wiki.openstreetmap.org/wiki/Osmarender/Howto#xsltproc">this step in using the osmarender?</a> Not clear from your question</p>
 </div>
 <div id="comment-7112-info" class="comment-info">
 <span class="comment-age">(16 Aug '11, 09:58)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your experience is normal. Unfortunately, it can take a long time to render a SVG using xsltproc. I rendered a relatively large city several months ago with the z17 stylesheet (its bounding box was North 41.6000 West -81.85 South 41.4173 EAST -81.5323 ) and it had taken over 6 hours to render !</p>
-<p>As petschge mentioned, the speed was much quicker with <a href="http://wiki.openstreetmap.org/wiki/Osmarender/orp">or/p</a> - the same bounding box and stylesheet had taken less than 10 minutes to render with or/p !</p>
+<p>As petschge mentioned, the speed was much quicker with <a href="https://wiki.openstreetmap.org/wiki/Osmarender/orp">or/p</a> - the same bounding box and stylesheet had taken less than 10 minutes to render with or/p !</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

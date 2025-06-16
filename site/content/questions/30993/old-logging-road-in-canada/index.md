@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I'm about too add logging roads to OSM. I understand I need to tag them as "track" and specify the grade, but how do I tag the old logging roads? Those roads are not accessible with any vehicle and vegetation is growing on them (by vegetation, I mean trees), On the other hand, they are still visible and you could use them again with a little work...</p>
-<p><a href="http://www.openstreetmap.org/#map=16/49.1268/-69.9480">Here's an example</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/49.1268/-69.9480">Here's an example</a></p>
 <p>Thanks in advance.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -287,7 +287,7 @@ One Answer:
 <div id="post-31022-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... and there's more discussion of footway vs path <a href="http://www.openstreetmap.org/user/Richard/diary/20333">here</a> - but you're already asking exactly the right questions.</p>
+<p>... and there's more discussion of footway vs path <a href="https://www.openstreetmap.org/user/Richard/diary/20333">here</a> - but you're already asking exactly the right questions.</p>
 </div>
 <div id="comment-31022-info" class="comment-info">
 <span class="comment-age">(25 Feb '14, 14:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

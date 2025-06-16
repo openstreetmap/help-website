@@ -365,7 +365,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I've used some of the tools found at <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Compare">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Compare</a> and I can't find any areas with suspicious similarities to Google Maps in northern part of Singapore.</p>
+<p>I've used some of the tools found at <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Compare">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Compare</a> and I can't find any areas with suspicious similarities to Google Maps in northern part of Singapore.</p>
 </div>
 <div id="comment-12491-info" class="comment-info">
 <span class="comment-age">(01 May '12, 21:40)</span> <span class="comment-user userinfo">gnurk</span>

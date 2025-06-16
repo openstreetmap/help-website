@@ -77,7 +77,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@SomeoneElse</span>: The area is not that hard to find using <a href="http://www.openstreetmap.org/user/rrpoulin/edits">the edit history</a></p>
+<p><span>@SomeoneElse</span>: The area is not that hard to find using <a href="https://www.openstreetmap.org/user/rrpoulin/edits">the edit history</a></p>
 </div>
 <div id="comment-19533-info" class="comment-info">
 <span class="comment-age">(01 Feb '13, 21:56)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your changes look OK - they're just taking a little while to render on the main map. There's a bit more about the process in the <a href="http://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">FAQ</a>, and there's more of the technical detail (including how to cheat to get things to render quicker) in <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this help question</a>.</p>
+<p>Your changes look OK - they're just taking a little while to render on the main map. There's a bit more about the process in the <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">FAQ</a>, and there's more of the technical detail (including how to cheat to get things to render quicker) in <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this help question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

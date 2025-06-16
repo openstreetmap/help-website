@@ -65,9 +65,9 @@ osqa_accepted = false
 <div id="post-43379-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>about (1): Maybe you need something like geocoding? then see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> ...</p>
-<p>or about the most used OSM APIs: <a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a></p>
-<p>or (even better!): <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>about (1): Maybe you need something like geocoding? then see <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> ...</p>
+<p>or about the most used OSM APIs: <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a></p>
+<p>or (even better!): <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
 </div>
 <div id="comment-43379-info" class="comment-info">
 <span class="comment-age">(03 Jun '15, 16:41)</span> <span class="comment-user userinfo">stephan75</span>

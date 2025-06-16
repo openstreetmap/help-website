@@ -45,7 +45,7 @@ osqa_accepted = false
 <li>No left_turn for hgv</li>
 <li>except for delivery. (in french, sauf livraisons)</li>
 </ul>
-<p><img src="http://help.openstreetmap.org/upfiles/no_left_turn.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/no_left_turn.jpg" alt="alt text" /></p>
 <p>My relation start with these tags: type=restriction restriction:hgv=no_left_turn</p>
 <p>Perhaps i should add restriction:hgv:conditional=none @ delivery</p>
 <p>What is your opinion about this ?</p>
@@ -144,7 +144,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to tag that then the solution is indeed what you wrote, supported by the wiki page <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions#Condition">Conditional_restrictions</a></p>
+<p>If you want to tag that then the solution is indeed what you wrote, supported by the wiki page <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions#Condition">Conditional_restrictions</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

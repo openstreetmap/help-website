@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I'm studding AI course and I need to create a routing or navigation program.</p>
 <p>I live in Barcelona and first at all I need Barcelona's street network data. I have found it here <a href="https://mapzen.com/metro-extracts/">https://mapzen.com/metro-extracts/</a> (but I don't know it this data is good enough to use it in a navigation system).</p>
-<p>Here, <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a>, I have found more information about routing but I'm terrible lost.</p>
+<p>Here, <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a>, I have found more information about routing but I'm terrible lost.</p>
 <p>Where do you recommend me to start with this?</p>
 <p>I have to implement my own version of A* algorithm. I only need data, but reading the previous page I see that Openstreet data has information about speed, highway type, etc.</p>
 <p>I'm sorry, but I'm lost and I don't know where to start with.</p>
@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-41535-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There have already been various similar questions, for example <a href="https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">How can I convert an OSM XML file into a graph representation?</a>.</p>
+<p>There have already been various similar questions, for example <a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">How can I convert an OSM XML file into a graph representation?</a>.</p>
 </div>
 <div id="comment-41535-info" class="comment-info">
 <span class="comment-age">(06 Mar '15, 10:26)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -124,7 +124,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, it looks like you're onto the right idea. You can use an extract like that to route. It should have good information for you to route on (roads, footpaths, etc.). Read up about the <a href="http://wiki.openstreetmap.org/wiki/Elements">OpenStreetMap data model</a> and learn how ways are made up of nodes. When 2 roads join (e.g. at a junction), they should share a node. You will need the PBF or XML file from Mapzen. The XML format might be easier for you to work with (read up about the <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">XML Schema</a>). You can parse XML in any language. I <a href="https://github.com/rory/openstreetmap-publess-walk">wrote a programme to route across Dublin without passing a pub</a>, it parses the XML directly and does simple routing on that. It's open source.</p>
+<p>Yes, it looks like you're onto the right idea. You can use an extract like that to route. It should have good information for you to route on (roads, footpaths, etc.). Read up about the <a href="https://wiki.openstreetmap.org/wiki/Elements">OpenStreetMap data model</a> and learn how ways are made up of nodes. When 2 roads join (e.g. at a junction), they should share a node. You will need the PBF or XML file from Mapzen. The XML format might be easier for you to work with (read up about the <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">XML Schema</a>). You can parse XML in any language. I <a href="https://github.com/rory/openstreetmap-publess-walk">wrote a programme to route across Dublin without passing a pub</a>, it parses the XML directly and does simple routing on that. It's open source.</p>
 <p>re: speed limits. They are optional for your routing algorithm. You can use them or not use them. It depends on what you want your router to be aware of.</p>
 </div>
 <div class="answer-controls post-controls">

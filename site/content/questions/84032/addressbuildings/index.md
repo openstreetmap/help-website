@@ -269,7 +269,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Adding addresses to both POI nodes and the buildings that contain them is another debate where there's "no simple answer." See a previous discussion at <a href="https://help.openstreetmap.org/questions/48735/address-information-in-poi-and-building">https://help.openstreetmap.org/questions/48735/address-information-in-poi-and-building</a> with some good arguments on both sides.</p>
+<p>Adding addresses to both POI nodes and the buildings that contain them is another debate where there's "no simple answer." See a previous discussion at <a href="/questions/48735/address-information-in-poi-and-building">https://help.openstreetmap.org/questions/48735/address-information-in-poi-and-building</a> with some good arguments on both sides.</p>
 </div>
 <div id="comment-84041-info" class="comment-info">
 <span class="comment-age">(29 Mar '22, 18:34)</span> <span class="comment-user userinfo">jmapb</span>

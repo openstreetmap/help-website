@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi,</p>
 <p>I'm not sure if this right forum. I think there's a misalignment in satellite map in <a href="https://www.openstreetmap.org/edit#map=19/-8.08139/112.32438">-8.08139/112.32438</a>.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-08-06_OpenStreetMap.png" alt="-8.08139/112.32438" /></p>
+<p><img src="/upfiles/Screenshot_2020-08-06_OpenStreetMap.png" alt="-8.08139/112.32438" /></p>
 <p>As you can see, there's different image position in zoom level 18 and level 17 and level 19.</p>
 <p>It's almost two years and I thought somebody will be notice, but it's not.</p>
 <p>It's make really hard to align the road and building marker if the reference image itself is not line up.</p>

@@ -136,7 +136,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9939/totymedli"></a><a href="http://help.openstreetmap.org/users/9939/totymedli">@totymedli</a>: thanks, I have tried to clarify. Maybe someone else finds a good example. The ones I have found are university hospitals but are neither inside the general university area nor associated with one by a relation (<span>example</span>, which also has many amenity=hospital, which is not really according to one feature, one element). However, that's not a rule. As there are very few "rules" in the OSM world in general.</p>
+<p><a href="https://help.openstreetmap.org/users/9939/totymedli"></a><a href="https://help.openstreetmap.org/users/9939/totymedli">@totymedli</a>: thanks, I have tried to clarify. Maybe someone else finds a good example. The ones I have found are university hospitals but are neither inside the general university area nor associated with one by a relation (<span>example</span>, which also has many amenity=hospital, which is not really according to one feature, one element). However, that's not a rule. As there are very few "rules" in the OSM world in general.</p>
 <p>I have added a drawing, hope that helps. If not … maybe I have understood your question wrongly.</p>
 </div>
 <div id="comment-38294-info" class="comment-info">
@@ -161,7 +161,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr"></a><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: Thank you. That's nearly what I am saying or, at least, meaning, yes. Contrary to your assumption, I assumed (see my image) that the hospital campus is not separate from the rest of the university campus. The geographic constellation is not that clear in the question.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr"></a><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: Thank you. That's nearly what I am saying or, at least, meaning, yes. Contrary to your assumption, I assumed (see my image) that the hospital campus is not separate from the rest of the university campus. The geographic constellation is not that clear in the question.</p>
 </div>
 <div id="comment-38313-info" class="comment-info">
 <span class="comment-age">(04 Nov '14, 17:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

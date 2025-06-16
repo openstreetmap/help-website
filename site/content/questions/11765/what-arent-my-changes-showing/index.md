@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What aren&#x27;t my changes showing?"
-description = '''Taking my chances of sounding like a vain noob (which I probably am ;-) ), I cannot help but wonder why some of my edits do not seem to show up in the map even months after the original edit? Here is an example: http://www.openstreetmap.org/browse/changeset/8383938 What am I doing wrong?'''
+description = '''Taking my chances of sounding like a vain noob (which I probably am ;-) ), I cannot help but wonder why some of my edits do not seem to show up in the map even months after the original edit? Here is an example: https://www.openstreetmap.org/browse/changeset/8383938 What am I doing wrong?'''
 date = "2012-04-06T11:08:00Z"
 lastmod = "2012-04-11T18:05:00Z"
 weight = 11765
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Taking my chances of sounding like a vain noob (which I probably am ;-) ), I cannot help but wonder why some of my edits do not seem to show up in the map even months after the original edit?</p>
 <p>Here is an example:</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/8383938">http://www.openstreetmap.org/browse/changeset/8383938</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/8383938">https://www.openstreetmap.org/browse/changeset/8383938</a></p>
 <p>What am I doing wrong?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -65,7 +65,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for your feedback, Chris.</p>
-<p>The whole changeset <a href="http://www.openstreetmap.org/browse/changeset/10999571">http://www.openstreetmap.org/browse/changeset/10999571</a> looks like a mistake, probably just someone doodling around. Needless to say, I have not received any reply to my enquiry to "kirasternchen", the party involved. As my time is rather limited, <strong>how can I find/contact other mappers working on the same region?</strong> Maybe one of them is able to help? "Reverts" seem to be beyond my abilities for now (I just use Potlatch).</p>
+<p>The whole changeset <a href="https://www.openstreetmap.org/browse/changeset/10999571">https://www.openstreetmap.org/browse/changeset/10999571</a> looks like a mistake, probably just someone doodling around. Needless to say, I have not received any reply to my enquiry to "kirasternchen", the party involved. As my time is rather limited, <strong>how can I find/contact other mappers working on the same region?</strong> Maybe one of them is able to help? "Reverts" seem to be beyond my abilities for now (I just use Potlatch).</p>
 </div>
 <div id="comment-11802-info" class="comment-info">
 <span class="comment-age">(07 Apr '12, 23:54)</span> <span class="comment-user userinfo">MarkTwain</span>
@@ -78,7 +78,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Sorry, it's me again.</p>
 <p>"kirasternchen" has not replied to my messages and I am not able to revert the changes that person did (there does not seem to be such an option in Potlatch). On top of that I still have no clue how to find fellow OSM mappers around the region in question who might be able to help.</p>
-<p><strong>Thus, let me appeal to any of you with the ability to do reverts to please revert the changeset <a href="http://www.openstreetmap.org/browse/changeset/10999571">http://www.openstreetmap.org/browse/changeset/10999571</a></strong></p>
+<p><strong>Thus, let me appeal to any of you with the ability to do reverts to please revert the changeset <a href="https://www.openstreetmap.org/browse/changeset/10999571">https://www.openstreetmap.org/browse/changeset/10999571</a></strong></p>
 <p>Thank you so much for your help.</p>
 </div>
 <div id="comment-11884-info" class="comment-info">
@@ -145,7 +145,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Checking each of the nodes in turn, a number of them have been deleted since then. Of those that remain, such as <a href="http://www.openstreetmap.org/browse/node/820874257">http://www.openstreetmap.org/browse/node/820874257</a> there are no tags on the node which will render in any of the renderings available at <a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> though they may render on renders done elsewhere.</p>
+<p>Checking each of the nodes in turn, a number of them have been deleted since then. Of those that remain, such as <a href="https://www.openstreetmap.org/browse/node/820874257">https://www.openstreetmap.org/browse/node/820874257</a> there are no tags on the node which will render in any of the renderings available at <a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> though they may render on renders done elsewhere.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -230,7 +230,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Ask the guy who deleted the data. Look at the changeset listed above, click on a node that has been deleted and you will see the user who deleted it. If you click on his link you can send him a message.</p>
-<p>If you think his removals are vandalism they can be reverted, but the sooner you act the better, reverting edits is much harder if the data has been subsequently edited. Try IRC or a mailing list for individual help. (see <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> and <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a> )</p>
+<p>If you think his removals are vandalism they can be reverted, but the sooner you act the better, reverting edits is much harder if the data has been subsequently edited. Try IRC or a mailing list for individual help. (see <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a> and <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a> )</p>
 </div>
 <div id="comment-11801-info" class="comment-info">
 <span class="comment-age">(07 Apr '12, 21:36)</span> <span class="comment-user userinfo">ChrisH</span>

@@ -160,7 +160,7 @@ One Answer:
 <div id="post-49726-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For further reference, see the documentation: <a href="http://wiki.openstreetmap.org/w/index.php?title=Osmosis/Detailed_Usage">http://wiki.openstreetmap.org/w/index.php?title=Osmosis/Detailed_Usage</a></p>
+<p>For further reference, see the documentation: <a href="https://wiki.openstreetmap.org/w/index.php?title=Osmosis/Detailed_Usage">https://wiki.openstreetmap.org/w/index.php?title=Osmosis/Detailed_Usage</a></p>
 </div>
 <div id="comment-49726-info" class="comment-info">
 <span class="comment-age">(18 May '16, 10:08)</span> <span class="comment-user userinfo">Piskvor</span>

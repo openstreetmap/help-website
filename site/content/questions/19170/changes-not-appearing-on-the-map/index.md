@@ -119,7 +119,7 @@ One Answer:
 <pre><code>14649781 January 14, 2013 16:57 entered details for an Alcohol shop (called &quot;Off Licence&quot; in Ireland) Dropped the icon &amp; gave it a name.</code></pre>
 <p>I suspect that the problem here might be that "shop=alcohol" isn't rendered on the standard map. There's a <a href="https://trac.openstreetmap.org/ticket/3043">trac ticket</a> raised for the rendering of generic shops, and discussion on that ticket as to whether it's a good idea or not.</p>
 <pre><code>14650544 January 14, 2013 17:59 corrected the location of a Gym. I simply moved the icon.</code></pre>
-<p>I suspect the problem here might be similar - I'm not aware that "leisure=sports_centre" is rendered on the standard map (for example the one <a href="http://www.openstreetmap.org/?lat=53.228842&amp;lon=-1.422019&amp;zoom=18&amp;layers=M">here</a> just shows as a generic name on an area).</p>
+<p>I suspect the problem here might be similar - I'm not aware that "leisure=sports_centre" is rendered on the standard map (for example the one <a href="https://www.openstreetmap.org/?lat=53.228842&amp;lon=-1.422019&amp;zoom=18&amp;layers=M">here</a> just shows as a generic name on an area).</p>
 <p>However, just because they don't render on one particular map doesn't mean that you shouldn't map them. The data's still there, it'll appear on any maps designed to show that particular information. I can also type "Delaney's - Dublin's oldest bike shop" in the search box and it'll find it!</p>
 </div>
 <div class="answer-controls post-controls">

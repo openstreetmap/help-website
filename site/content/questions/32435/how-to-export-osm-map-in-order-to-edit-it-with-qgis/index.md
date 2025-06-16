@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In detail this depends on the task you wish to realize with this tandem, but a good introduction is here: <a href="http://wiki.openstreetmap.org/wiki/QGIS">http://wiki.openstreetmap.org/wiki/QGIS</a></p>
+<p>In detail this depends on the task you wish to realize with this tandem, but a good introduction is here: <a href="https://wiki.openstreetmap.org/wiki/QGIS">https://wiki.openstreetmap.org/wiki/QGIS</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>I expect the full warning message is <em>"No Tags - Unconnected nodes without physical tags"</em>?</p>
 <p>The warning means you've added a node somewhere without any tags set on it.</p>
-<p>The warning comes from the JOSM "validator". You can read about the validator and different error messages on the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM Validator wiki page</a>.</p>
+<p>The warning comes from the JOSM "validator". You can read about the validator and different error messages on the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM Validator wiki page</a>.</p>
 <p>Note that the validator runs prior to upload. But you can also run it at any other time if you show the validator panel. This has the advantage that you and right-click and "zoom to problem" on any particular message, to help figure out what it's talking about.</p>
 </div>
 <div class="answer-controls post-controls">

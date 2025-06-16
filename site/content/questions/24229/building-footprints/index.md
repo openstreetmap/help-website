@@ -115,8 +115,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You cannot export what is not in the OSM database! So, if you can't see the building outlines in your area of interest, no one drew them yet. As said by "andy mackey" in one of the comments, you could draw them yourself. I did this for some neighbourhoods in São Paulo, Brazil and São Bernardo do Campo, Brazil, and I can say it is very, very tedious to do. Please see also <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">Simple 3D Buildings</a></p>
-<p>After the buildings are on the map you could extract the area of interest, filtering by the building=* tag, for example, using <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>, and then do other steps as neeeded.</p>
+<p>You cannot export what is not in the OSM database! So, if you can't see the building outlines in your area of interest, no one drew them yet. As said by "andy mackey" in one of the comments, you could draw them yourself. I did this for some neighbourhoods in São Paulo, Brazil and São Bernardo do Campo, Brazil, and I can say it is very, very tedious to do. Please see also <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">Simple 3D Buildings</a></p>
+<p>After the buildings are on the map you could extract the area of interest, filtering by the building=* tag, for example, using <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>, and then do other steps as neeeded.</p>
 <p>Another way would be importing the complete extract of the area of interest into a PostGIS database and then filtering (via SQL query) by the desired tags. This approach has the advantage of returning geometry objects that (maybe) other software can use directly.</p>
 <p>Please note that very few buildings have info on height, ceiling type, etc., complicating things even more.</p>
 </div>

@@ -108,7 +108,7 @@ osqa_accepted = false
 <div id="post-40765-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: ah, okay. I get germany.tile.openstreetmap.org (and the same IP) for all three names. However, I do not have the non-loading tiles problem now.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: ah, okay. I get germany.tile.openstreetmap.org (and the same IP) for all three names. However, I do not have the non-loading tiles problem now.</p>
 </div>
 <div id="comment-40765-info" class="comment-info">
 <span class="comment-age">(03 Feb '15, 23:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -145,7 +145,7 @@ osqa_accepted = false
 <div id="post-40776-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2397/user8192">@user8192</a>: yes, that's right. Just for info: "<a href="http://dns.openstreetmap.org/tile.openstreetmap.org.html">United States via corvallis</a>"</p>
+<p><a href="https://help.openstreetmap.org/users/2397/user8192">@user8192</a>: yes, that's right. Just for info: "<a href="http://dns.openstreetmap.org/tile.openstreetmap.org.html">United States via corvallis</a>"</p>
 </div>
 <div id="comment-40776-info" class="comment-info">
 <span class="comment-age">(04 Feb '15, 13:41)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -168,7 +168,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11132/gutenye">@gutenye</a> the tiles from the Humanitarian level are not distributed via the tile cache network (IMHO). As pointed out earlier the fastest way to get your problem addressed (if it is actually possible) is to join #osm-dev and give some details.</p>
+<p><a href="https://help.openstreetmap.org/users/11132/gutenye">@gutenye</a> the tiles from the Humanitarian level are not distributed via the tile cache network (IMHO). As pointed out earlier the fastest way to get your problem addressed (if it is actually possible) is to join #osm-dev and give some details.</p>
 </div>
 <div id="comment-43674-info" class="comment-info">
 <span class="comment-age">(21 Jun '15, 09:52)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

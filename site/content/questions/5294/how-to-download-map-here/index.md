@@ -139,7 +139,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Yeah well that means you want to be able to use a different datasource for the navdroyd software. You could ask them (so you're asking the wrong people here) but I can tell you that it's unlikely to be possible. Navdroyd works only with OpenStreetMap. They've developed the system to run with their own data format, which is created as a conversion of OpenStreetMap data on their servers.</p>
-<p>The other option is to look at making the Malaysia better in OpenStreetMap. Anyone help with this! See <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Malaysia">WikiProject Malaysia</a></p>
+<p>The other option is to look at making the Malaysia better in OpenStreetMap. Anyone help with this! See <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Malaysia">WikiProject Malaysia</a></p>
 </div>
 <div id="comment-5337-info" class="comment-info">
 <span class="comment-age">(23 May '11, 15:33)</span> <span class="comment-user userinfo">Harry Wood</span>

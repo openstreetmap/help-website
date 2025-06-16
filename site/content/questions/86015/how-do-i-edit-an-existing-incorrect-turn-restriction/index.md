@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I want to correct incorrect/invalid turn restrictions. I can find them using osmose, but I can't figure out how to edit/correct them in ID editor. Lets take this relation as an example: <a href="https://www.openstreetmap.org/relation/11272427#map=19/18.51456/73.84239">https://www.openstreetmap.org/relation/11272427#map=19/18.51456/73.84239</a></p>
 <p>The issue is that the via element is a node, when it should have been a way.</p>
 <p>When I navigate to the relation in ID editor, I see this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-10-28_at_18.43.25.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2022-10-28_at_18.43.25.png" alt="alt text" /></p>
 <p>I can't figure out how to modify or add new member to the relation.</p>
 <p>How do I edit such incorrect turn restrictions in Id Editor ?</p>
 </div>

@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>While searching an Italian city (my own) the result for whatever reason shows up with one of the city's translated names (the Greek one). Even as the leftmost one.</p>
-<p><a href="https://help.openstreetmap.org/questions/76083/openstreetmap-search-shows-results-in-translated-languages?">This other question</a> seemingly reports the same issue (I didn't post there because it would count as an answer).</p>
+<p><a href="/questions/76083/openstreetmap-search-shows-results-in-translated-languages?">This other question</a> seemingly reports the same issue (I didn't post there because it would count as an answer).</p>
 <p>I don't know if it's a bug or an option, but if it's the latter I think it should be turned off by default or at least some thought should be put on it, because such results look "untidy" and they also lack consistency (why one language over the others? and I would guess English could take that spot).</p>
 <p>One is also lead to think that the name fields for the entry are messed up (as I did).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/arezzo_Sv6srP6.png" alt="alt text" /></p>
+<p><img src="/upfiles/arezzo_Sv6srP6.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-language" rel="tag" title="see questions tagged &#39;language&#39;">language</span> <span class="post-tag tag-link-names" rel="tag" title="see questions tagged &#39;names&#39;">names</span>

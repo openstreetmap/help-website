@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "not understand function"
-description = '''Hello everybody, I don&#x27;t get the function. I have registered to OSM. I was directed here from Wikipedia. I&#x27;ve got a direct link: http://www.openstreetmap.org/?relation=103398 But when I klick, I can see nothing. Whats wrong? My intent is to get a map file for the Donauradweg from Passau to Wien. I w...'''
+description = '''Hello everybody, I don&#x27;t get the function. I have registered to OSM. I was directed here from Wikipedia. I&#x27;ve got a direct link: https://www.openstreetmap.org/?relation=103398 But when I klick, I can see nothing. Whats wrong? My intent is to get a map file for the Donauradweg from Passau to Wien. I w...'''
 date = "2012-08-13T10:55:00Z"
 lastmod = "2012-08-13T12:33:00Z"
 weight = 15006
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello everybody, I don't get the function. I have registered to OSM. I was directed here from Wikipedia. I've got a direct link: <a href="http://www.openstreetmap.org/?relation=103398">http://www.openstreetmap.org/?relation=103398</a> But when I klick, I can see nothing. Whats wrong? My intent is to get a map file for the Donauradweg from Passau to Wien.</p>
+<p>Hello everybody, I don't get the function. I have registered to OSM. I was directed here from Wikipedia. I've got a direct link: <a href="https://www.openstreetmap.org/?relation=103398">https://www.openstreetmap.org/?relation=103398</a> But when I klick, I can see nothing. Whats wrong? My intent is to get a map file for the Donauradweg from Passau to Wien.</p>
 <p>I want to import the file into a smartphone app or navigational tools, so I will probably need a GPX or KML file.</p>
 <p>Would anybody mind giving me some basics or in the best a solution for my issue? Thanks in forehand, Thomas</p>
 </div>
@@ -166,7 +166,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To visualise it, try having a look at "DCP" on Lonvia's cycle map <a href="http://cycling.lonvia.de/de/?zoom=8&amp;lat=48.37177&amp;lon=14.3771">here</a>. When you say you want a "map file" what format do you want it in?</p>
-<p>The link that you were given was a "show a relation on a large map" one and doesn't seem to be working for that relation, possibly because it <a href="http://www.openstreetmap.org/browse/relation/103398">consists only of smaller relations</a>.</p>
+<p>The link that you were given was a "show a relation on a large map" one and doesn't seem to be working for that relation, possibly because it <a href="https://www.openstreetmap.org/browse/relation/103398">consists only of smaller relations</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

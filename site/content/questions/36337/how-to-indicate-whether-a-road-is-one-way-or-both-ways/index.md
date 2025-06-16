@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-36340-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>-1: Please Google "osm one way" and find <a href="http://wiki.openstreetmap.org/wiki/Key:oneway.">http://wiki.openstreetmap.org/wiki/Key:oneway.</a></p>
+<p>-1: Please Google "osm one way" and find <a href="https://wiki.openstreetmap.org/wiki/Key:oneway.">https://wiki.openstreetmap.org/wiki/Key:oneway.</a></p>
 </div>
 <div id="comment-36340-info" class="comment-info">
 <span class="comment-age">(28 Aug '14, 17:45)</span> <span class="comment-user userinfo">Kotya</span>
@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A road is both ways unless you add <a href="http://wiki.openstreetmap.org/wiki/Key:oneway">oneway=yes</a> to it (how you do this depends on the editor you use)</p>
+<p>A road is both ways unless you add <a href="https://wiki.openstreetmap.org/wiki/Key:oneway">oneway=yes</a> to it (how you do this depends on the editor you use)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -224,7 +224,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is important that one way street are mapped correctly, routing won't work correctly if you don't. Roads are two-way by default (unset) just set them to the correct one way if needed, just check the arrows point the right way. Turn restrictions, for example "no right turn", also need care to get right as they apply to a pair of roads at the junction, and they can be a little more difficult to get correct. You can check them, after a while, with OSRM to see if the work in the way you expected. see <a href="https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
+<p>It is important that one way street are mapped correctly, routing won't work correctly if you don't. Roads are two-way by default (unset) just set them to the correct one way if needed, just check the arrows point the right way. Turn restrictions, for example "no right turn", also need care to get right as they apply to a pair of roads at the junction, and they can be a little more difficult to get correct. You can check them, after a while, with OSRM to see if the work in the way you expected. see <a href="/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

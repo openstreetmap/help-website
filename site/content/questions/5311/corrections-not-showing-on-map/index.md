@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Make sure that you have taged all the streets properly with the highway=* tag. I notice that you have added <a href="http://www.openstreetmap.org/browse/way/111472431">a way</a> without any tags.</p>
+<p>Make sure that you have taged all the streets properly with the highway=* tag. I notice that you have added <a href="https://www.openstreetmap.org/browse/way/111472431">a way</a> without any tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

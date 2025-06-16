@@ -156,7 +156,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11111/vinay-kumar-m-b"></a><a href="http://help.openstreetmap.org/users/11111/vinay-kumar-m-b">@vinay</a>-kumar-m-b Please ask a separate question and provide clear details why the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">installation instructions</a> don't work for you.</p>
+<p><a href="https://help.openstreetmap.org/users/11111/vinay-kumar-m-b"></a><a href="https://help.openstreetmap.org/users/11111/vinay-kumar-m-b">@vinay</a>-kumar-m-b Please ask a separate question and provide clear details why the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">installation instructions</a> don't work for you.</p>
 </div>
 <div id="comment-43572-info" class="comment-info">
 <span class="comment-age">(15 Jun '15, 14:06)</span> <span class="comment-user userinfo">scai ♦</span>

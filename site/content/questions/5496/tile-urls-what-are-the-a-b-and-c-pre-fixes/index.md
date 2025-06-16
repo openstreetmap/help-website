@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I just ran into these "prefixes" and can't figure them out. At first I saw a tile URL beginning with c. <em>and was assuming it is a cached version. Then I noticed prefixes of a.</em> and b.*. All of the prefixed URLs seem to be some sort of cached or older versions of the tiles in question but what?</p>
-<p>I couldn't find information in the Slippy map wiki article (<a href="http://wiki.openstreetmap.org/wiki/Slippy_Map)">http://wiki.openstreetmap.org/wiki/Slippy_Map)</a> and the related questions here don't seem to help either (<a href="http://help.openstreetmap.org/questions/4343/dirty-tiles">http://help.openstreetmap.org/questions/4343/dirty-tiles</a> &amp; <a href="http://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile)">http://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile)</a></p>
+<p>I couldn't find information in the Slippy map wiki article (<a href="https://wiki.openstreetmap.org/wiki/Slippy_Map)">https://wiki.openstreetmap.org/wiki/Slippy_Map)</a> and the related questions here don't seem to help either (<a href="/questions/4343/dirty-tiles">https://help.openstreetmap.org/questions/4343/dirty-tiles</a> &amp; <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile)">https://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile)</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span>

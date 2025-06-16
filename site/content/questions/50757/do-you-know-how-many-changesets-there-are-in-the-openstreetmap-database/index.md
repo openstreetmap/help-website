@@ -107,7 +107,7 @@ One Answer:
 <p>Changesets are tracked here:</p>
 <p><a href="http://osmstats.neis-one.org/?item=changesets">http://osmstats.neis-one.org/?item=changesets</a></p>
 <p>There's lots of info and links for other things here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Stats">http://wiki.openstreetmap.org/wiki/Stats</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Stats">https://wiki.openstreetmap.org/wiki/Stats</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

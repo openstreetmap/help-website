@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Change same attribute of a lot of nodes"
-description = '''I inserted all the rivers and streams of my home town, but when browsing around to the neighboring towns, I saw the following: http://www.openstreetmap.org/?lat=46.956&amp;amp;lon=11.9469&amp;amp;zoom=13&amp;amp;layers=M In this town (and some around it) all the rivers and streams are tagged layer=-1, source=AM...'''
+description = '''I inserted all the rivers and streams of my home town, but when browsing around to the neighboring towns, I saw the following: https://www.openstreetmap.org/?lat=46.956&amp;amp;lon=11.9469&amp;amp;zoom=13&amp;amp;layers=M In this town (and some around it) all the rivers and streams are tagged layer=-1, source=AM...'''
 date = "2010-11-23T14:11:00Z"
 lastmod = "2010-11-23T14:25:00Z"
 weight = 1598
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I inserted all the rivers and streams of my home town, but when browsing around to the neighboring towns, I saw the following:</p>
-<p><a href="http://www.openstreetmap.org/?lat=46.956&amp;lon=11.9469&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=46.956&amp;lon=11.9469&amp;zoom=13&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=46.956&amp;lon=11.9469&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=46.956&amp;lon=11.9469&amp;zoom=13&amp;layers=M</a></p>
 <p>In this town (and some around it) all the rivers and streams are tagged layer=-1, source=AMT FÜR RAUMORDNUNG etc...</p>
 <p>BUT</p>
 <p>all the nodes on these streams are also tagged layer=-1, source=AMT... etc. I have manually removed these node taggings for one neighboring town (Mühlwald/Selva di Molini), but was thinking if there isn't a faster way of doing this, à la select all waterways that have nodes that are tagged layer=-1 and source=AMT FÜR RAUMORDNUNG... and then do some processing on these, preferrably with JOSM.</p>

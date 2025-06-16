@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>That means the cycleroute is not complete yet, but only a proposal (state=proposed).</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/1416582">South Riverparks Trail</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/1416582">South Riverparks Trail</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

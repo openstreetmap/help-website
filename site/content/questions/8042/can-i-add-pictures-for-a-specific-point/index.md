@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Besides the mentioned tags there are also sister projects like <a href="http://wiki.openstreetmap.org/wiki/Openstreetview">OpenStreetView</a> and <a href="http://wiki.openstreetmap.org/wiki/OpenStreetPhoto">OpenStreetPhoto</a> that try to create a photo database with corresponding coordinates and show them on a OSM map.</p>
+<p>Besides the mentioned tags there are also sister projects like <a href="https://wiki.openstreetmap.org/wiki/Openstreetview">OpenStreetView</a> and <a href="https://wiki.openstreetmap.org/wiki/OpenStreetPhoto">OpenStreetPhoto</a> that try to create a photo database with corresponding coordinates and show them on a OSM map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a proposed feature image: <a href="http://wiki.openstreetmap.org/wiki/Image">http://wiki.openstreetmap.org/wiki/Image</a></p>
+<p>There is a proposed feature image: <a href="https://wiki.openstreetmap.org/wiki/Image">https://wiki.openstreetmap.org/wiki/Image</a></p>
 <p>but images can only be linked from an external site, not uploaded to osm. Osm is a map and not a photo album, anyway ;)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -255,7 +255,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can in the JOSM editor this will give details <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Photo_Geotagging">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Photo_Geotagging</a> but I don't know of a way in the map page</p>
+<p>You can in the JOSM editor this will give details <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Photo_Geotagging">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Photo_Geotagging</a> but I don't know of a way in the map page</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

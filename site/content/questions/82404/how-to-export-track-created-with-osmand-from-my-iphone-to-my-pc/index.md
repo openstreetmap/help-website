@@ -143,7 +143,7 @@ One Answer:
 <div id="post-82476-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>or this solution <a href="https://help.openstreetmap.org/questions/53218/how-to-export-track-created-with-osmand-to-my-pc">https://help.openstreetmap.org/questions/53218/how-to-export-track-created-with-osmand-to-my-pc</a></p>
+<p>or this solution <a href="/questions/53218/how-to-export-track-created-with-osmand-to-my-pc">https://help.openstreetmap.org/questions/53218/how-to-export-track-created-with-osmand-to-my-pc</a></p>
 </div>
 <div id="comment-82476-info" class="comment-info">
 <span class="comment-age">(05 Nov '21, 07:01)</span> <span class="comment-user userinfo">andy mackey</span>

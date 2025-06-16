@@ -70,7 +70,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Specifically it's the links to the cycling and transport layers on your site that don't work for me. Taking an example link location from your site:</p>
-<p><a href="http://www.openstreetmap.org/export/embed.html?bbox=4.821281433105468%2C52.338171059294034%2C4.978179931640624%2C52.40262833871028&amp;layer=cyclemap">http://www.openstreetmap.org/export/embed.html?bbox=4.821281433105468%2C52.338171059294034%2C4.978179931640624%2C52.40262833871028&amp;layer=cyclemap</a></p>
+<p><a href="https://www.openstreetmap.org/export/embed.html?bbox=4.821281433105468%2C52.338171059294034%2C4.978179931640624%2C52.40262833871028&amp;layer=cyclemap">https://www.openstreetmap.org/export/embed.html?bbox=4.821281433105468%2C52.338171059294034%2C4.978179931640624%2C52.40262833871028&amp;layer=cyclemap</a></p>
 <p>If I omit the "&amp;layer=cyclemap" off the end it works as an embedded link (but obviously shows the "wrong" map).</p>
 </div>
 <div id="comment-52024-info" class="comment-info">

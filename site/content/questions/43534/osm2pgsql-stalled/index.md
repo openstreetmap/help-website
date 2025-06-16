@@ -145,7 +145,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are current versions of osm2pgsql that don't provide any output during that stage.</p>
-<p>For estimated times for import see <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks</a></p>
+<p>For estimated times for import see <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks</a></p>
 <p>Note that due to OSM data growth these are always out of date (but can give you a rough indication).</p>
 </div>
 <div class="answer-controls post-controls">

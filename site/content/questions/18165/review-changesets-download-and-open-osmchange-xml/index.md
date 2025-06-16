@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Review Changesets /Download and open osmChange XML"
-description = '''I want to review changesets done by mappers that are new to OSM. Currently I go to &quot;http://www.openstreetmap.org/browse/changeset/123456789&quot;, download the osmChange XML to a file changeset.osc and open this file in JOSM. Is there an easier way to review a changeset?'''
+description = '''I want to review changesets done by mappers that are new to OSM. Currently I go to &quot;https://www.openstreetmap.org/browse/changeset/123456789&quot;, download the osmChange XML to a file changeset.osc and open this file in JOSM. Is there an easier way to review a changeset?'''
 date = "2012-12-03T11:49:00Z"
 lastmod = "2016-04-16T14:00:00Z"
 weight = 18165
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I want to review changesets done by mappers that are new to OSM.</p>
-<p>Currently I go to "http://www.openstreetmap.org/browse/changeset/123456789", download the osmChange XML to a file <code>changeset.osc</code> and open this file in JOSM. Is there an easier way to review a changeset?</p>
+<p>Currently I go to "https://www.openstreetmap.org/browse/changeset/123456789", download the osmChange XML to a file <code>changeset.osc</code> and open this file in JOSM. Is there an easier way to review a changeset?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span> <span class="post-tag tag-link-review" rel="tag" title="see questions tagged &#39;review&#39;">review</span> <span class="post-tag tag-link-quality_assurance" rel="tag" title="see questions tagged &#39;quality_assurance&#39;">quality_assurance</span>
@@ -148,7 +148,7 @@ osqa_accepted = true
 <div id="post-49271-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/80/addismap_alexander">@AddisMap_Alexander</a>: I currently use achavi and OSM History Viewer (OSMHV) for this purpose. But new tools come and old ones go, so keep an eye on this list in future. :)</p>
+<p><a href="https://help.openstreetmap.org/users/80/addismap_alexander">@AddisMap_Alexander</a>: I currently use achavi and OSM History Viewer (OSMHV) for this purpose. But new tools come and old ones go, so keep an eye on this list in future. :)</p>
 </div>
 <div id="comment-49271-info" class="comment-info">
 <span class="comment-age">(16 Apr '16, 14:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -65,7 +65,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>For info, that's here I believe:</p>
-<p><a href="http://www.openstreetmap.org/way/426571814">http://www.openstreetmap.org/way/426571814</a></p>
+<p><a href="https://www.openstreetmap.org/way/426571814">https://www.openstreetmap.org/way/426571814</a></p>
 </div>
 <div id="comment-50384-info" class="comment-info">
 <span class="comment-age">(22 Jun '16, 14:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -163,7 +163,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Two things: you can now set <a href="http://help.openstreetmap.org/questions/2391/starting-potlatch2-from-the-gpx-traces-list?page=1#2397">Potlatch 2 as default editor</a>, and your GPX traces are available directly under "my tracks" in Potlatch 2 now days.</p>
+<p>Two things: you can now set <a href="/questions/2391/starting-potlatch2-from-the-gpx-traces-list?page=1#2397">Potlatch 2 as default editor</a>, and your GPX traces are available directly under "my tracks" in Potlatch 2 now days.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

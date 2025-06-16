@@ -110,7 +110,7 @@ One Answer:
 <div class="answer-body">
 <p>The <a href="http://switch2osm.org">switch2osm</a> site is probably the best place to start. Among other things it describes <a href="http://switch2osm.org/serving-tiles/">how to set up a tile server</a>. I'd actually suggest <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">the "manual build" instructions</a> so that you can see step-by-step what's happening.</p>
 <p>Once you've done that, you want to experiment with other rendering software, but I'd at least go through this process first so that questions like "what's actually in the database" and "how are tiles organised" pop up naturally as you do it.</p>
-<p>There's also information in the OSM wiki (such as <a href="http://wiki.openstreetmap.org/wiki/Rendering">here</a>) but I'd start with the switch2osm site first.</p>
+<p>There's also information in the OSM wiki (such as <a href="https://wiki.openstreetmap.org/wiki/Rendering">here</a>) but I'd start with the switch2osm site first.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Searching for '<a href="http://www.openstreetmap.org/search?query=Ridgefield">Ridgefield</a>'</p>
+<p>Searching for '<a href="https://www.openstreetmap.org/search?query=Ridgefield">Ridgefield</a>'</p>
 <p>Results in:</p>
 <ul>
 <li>Town Ridgefield, Fairfield County, United States of America ...</li>

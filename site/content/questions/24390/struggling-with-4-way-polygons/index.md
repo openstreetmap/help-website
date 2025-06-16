@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Struggling with 4 way polygons"
-description = '''Hi: I need help rendering this water park. http://www.openstreetmap.org/edit?editor=id&amp;amp;lat=38.754401&amp;amp;lon=-77.440391&amp;amp;zoom=18  There are four ways. The inside is a swimming pool (way #1), then the paved area (way #2) then the ‘river bank’ (way #3) and finally the boundary of the paved area...'''
+description = '''Hi: I need help rendering this water park. https://www.openstreetmap.org/edit?editor=id&amp;amp;lat=38.754401&amp;amp;lon=-77.440391&amp;amp;zoom=18  There are four ways. The inside is a swimming pool (way #1), then the paved area (way #2) then the ‘river bank’ (way #3) and finally the boundary of the paved area...'''
 date = "2013-07-20T02:30:00Z"
 lastmod = "2013-07-20T14:41:00Z"
 weight = 24390
@@ -40,11 +40,11 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi: I need help rendering this water park.</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=id&amp;lat=38.754401&amp;lon=-77.440391&amp;zoom=18">http://www.openstreetmap.org/edit?editor=id&amp;lat=38.754401&amp;lon=-77.440391&amp;zoom=18</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=id&amp;lat=38.754401&amp;lon=-77.440391&amp;zoom=18">https://www.openstreetmap.org/edit?editor=id&amp;lat=38.754401&amp;lon=-77.440391&amp;zoom=18</a></p>
 <p>There are four ways. The inside is a swimming pool (way #1), then the paved area (way #2) then the ‘river bank’ (way #3) and finally the boundary of the paved area around (way #4).</p>
 <p>I know how to render two polygons, for example a lake surrounded by a wooded area. The lake = the inner polygon will get normal tags and the outer way (wooded area) gets its tags in ‘Relations.’</p>
 <p>I also read item #7 at</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
 <p>How should I apply this?</p>
 <p>My first ‘set’ of polygons would be #1 ‘inner’ and #2 ‘outer’?</p>
 <p>Then another set of polygons, that is #3 as ‘inner’ and #4 as ‘outer’</p>

@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The <a href="http://downloads.cloudmade.com/asia/eastern_asia#downloads_breadcrumbs">Cloudmade download server</a> has shapefiles for Korea. There are none on <a href="http://download.geofabrik.de/">Geofabrik's download server</a> but they will usually add files to the list if you inquire. Note that there is not "one true way" of making shape files from OSM data - everyone does it differently, resulting in different columns etc.</p>
-<p>The most versatile way of making shape files is if you download and install the <a href="http://wiki.openstreetmap.org/wiki/Osmium">osmjs</a> utility which allows you to specify exactly what you want in your shape through a few lines of JavaScript. Of course this still requires that you have an OSM extract for your area to begin with.</p>
+<p>The most versatile way of making shape files is if you download and install the <a href="https://wiki.openstreetmap.org/wiki/Osmium">osmjs</a> utility which allows you to specify exactly what you want in your shape through a few lines of JavaScript. Of course this still requires that you have an OSM extract for your area to begin with.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

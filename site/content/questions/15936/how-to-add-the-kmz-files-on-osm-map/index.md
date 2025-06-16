@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You don't say exactly what you're trying to do, but is <a href="http://wiki.openstreetmap.org/wiki/KML">this page</a> any help?</p>
+<p>You don't say exactly what you're trying to do, but is <a href="https://wiki.openstreetmap.org/wiki/KML">this page</a> any help?</p>
 <p>Also perhaps have a look at some of <a href="https://www.google.co.uk/search?hl=en&amp;site=&amp;source=hp&amp;q=display+kml+files+on+osm&amp;btnG=Search">these other links</a>.</p>
 </div>
 <div class="answer-controls post-controls">

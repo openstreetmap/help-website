@@ -51,7 +51,7 @@ osqa_accepted = false
 </ul>
 <p>And only a table mixed with own and OSM data would be a "<strong>Derivative Work</strong>"?</p>
 <p>In search of a solution we found this answer from an <a href="https://help.openstreetmap.org/users/104/frederik-ramm">OSM Moderator</a>:<br />
-<a href="https://help.openstreetmap.org/questions/16559/unclear-on-derivative-db-vs-produced-work-vs-collective-db">"<em>One thing that is clear though is that when ODbL talks of databases, it always talks of the concept, and never of the manifestation. This means that whether your two databases reside in different buildings, or on the same computer but different database engines, or in the same engine but different tables, or even in the same table, does not make a difference for the "derivative database" question; whether one is a derivative of the other depends on what you do with it, not how you store it.</em>"</a> <sup>1</sup></p>
+<a href="/questions/16559/unclear-on-derivative-db-vs-produced-work-vs-collective-db">"<em>One thing that is clear though is that when ODbL talks of databases, it always talks of the concept, and never of the manifestation. This means that whether your two databases reside in different buildings, or on the same computer but different database engines, or in the same engine but different tables, or even in the same table, does not make a difference for the "derivative database" question; whether one is a derivative of the other depends on what you do with it, not how you store it.</em>"</a> <sup>1</sup></p>
 <p><br />
 </p>
 <h1 id="question-2-can-i-use-parts-of-a-result-based-on-calculations-of-osm-data-without-triggering-share-alike-to-the-application-database">Question 2: Can I use parts of a result based on calculations of OSM data without triggering Share-Alike to the application database?</h1>
@@ -107,16 +107,16 @@ The stored information is:<br />
 <p><br />
 </p>
 <p>To a similar question an <a href="https://help.openstreetmap.org/users/104/frederik-ramm">OSM Moderator</a> answered:<br />
-<a href="https://help.openstreetmap.org/questions/17932/collective-produced-derivative-work">"<em>If you manage to create your algorithm in a way that the mixing of OSM and proprietary data happens on-the-fly when the user queries your system, then it is likely that you are not creating a derived database and therefore you don't have to share anything except the original OSM data you've been using.&gt;<br />
+<a href="/questions/17932/collective-produced-derivative-work">"<em>If you manage to create your algorithm in a way that the mixing of OSM and proprietary data happens on-the-fly when the user queries your system, then it is likely that you are not creating a derived database and therefore you don't have to share anything except the original OSM data you've been using.&gt;<br />
 <br />
 The ODbL doesn't require that you make the exact snapshot of the database available, it is ok to have a reasonable delay.</em><br />
 <em>I repeat that this is a non-lawyer opinion from someone who has been wrong in the past.</em>"</a> <sup>3</sup></p>
 <p><br />
 </p>
 <h1 id="sources">Sources:</h1>
-<p><sup>1</sup> <a href="https://help.openstreetmap.org/questions/16559/unclear-on-derivative-db-vs-produced-work-vs-collective-db">https://help.openstreetmap.org/questions/16559/unclear-on-derivative-db-vs-produced-work-vs-collective-db</a><br />
+<p><sup>1</sup> <a href="/questions/16559/unclear-on-derivative-db-vs-produced-work-vs-collective-db">https://help.openstreetmap.org/questions/16559/unclear-on-derivative-db-vs-produced-work-vs-collective-db</a><br />
 <sup>2</sup> <a href="https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ#What_exactly_do_I_need_to_share.3F">https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ#What_exactly_do_I_need_to_share.3F</a><br />
-<sup>3</sup> <a href="https://help.openstreetmap.org/questions/17932/collective-produced-derivative-work">https://help.openstreetmap.org/questions/17932/collective-produced-derivative-work</a><br />
+<sup>3</sup> <a href="/questions/17932/collective-produced-derivative-work">https://help.openstreetmap.org/questions/17932/collective-produced-derivative-work</a><br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">

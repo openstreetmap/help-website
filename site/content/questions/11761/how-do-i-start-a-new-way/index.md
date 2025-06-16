@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi,<br />
-since your question is somewhat unclear where your actual problem lies, I may point you to the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">Beginners Guide</a> at the wiki. I think there you might find the information you need. Basically it's just about knowing some basic principles and picking an editor of your choice. <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.3">JOSM</a> and <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">Potlatch</a> are somewhat common I guess ...<br />
+since your question is somewhat unclear where your actual problem lies, I may point you to the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">Beginners Guide</a> at the wiki. I think there you might find the information you need. Basically it's just about knowing some basic principles and picking an editor of your choice. <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.3">JOSM</a> and <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">Potlatch</a> are somewhat common I guess ...<br />
 If this is not the information you need, you need to be more precise in your question, maybe provide an example so that others can have a look and give you a better advice than pointing to the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,7 +156,7 @@ If this is not the information you need, you need to be more precise in your que
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This may help <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2</a> and this <a href="http://vimeo.com/24984085">http://vimeo.com/24984085</a></p>
+<p>This may help <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2</a> and this <a href="http://vimeo.com/24984085">http://vimeo.com/24984085</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

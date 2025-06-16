@@ -52,12 +52,12 @@ Coverage    Polygon</code></pre>
 <hr />
 <p>Where would I even go for this information? "The information that I am looking for is the <strong>key, value pair of "Coverage"</strong></p>
 <h2 id="what-i-have-searched-for">What I have searched for:</h2>
-<p>I looked on this page and was not able to find it because "Coverage" is not a tag. <a href="http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#Sources_of_OSM_Data">Databases and data access APIs</a></p>
+<p>I looked on this page and was not able to find it because "Coverage" is not a tag. <a href="https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#Sources_of_OSM_Data">Databases and data access APIs</a></p>
 <p>I know it says this "Quite a few people break this file down into smaller files for different regions and make extracts available separately on mirror servers. Various tools are available to cut the Planet file up into smaller areas if required."</p>
 <p>One solution that I that I have found is to setup Nominatim db on a server which I do not want to do if I necessarily do not have too.</p>
 <h2 id="other-solutions">Other Solutions</h2>
 <p>Maybe I can query this with osmosis? But from what I read that , it does is allow you manipulate shape files. If what I seek is not in a shape, how would I be able to know beforehand? <strong>Would it not be useful to know what actual shapes are in the file before you manipulate it?</strong> Maybe this exists?</p>
-<p>That is why I would like to look them up in a nominatum query by coverage. I simply would like to check if a list of city names exist as a polygon against the nominatum api. ( I.e Python: for i is in Mylist: return True) <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43#Default_Arguments">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43#Default_Arguments</a></p>
+<p>That is why I would like to look them up in a nominatum query by coverage. I simply would like to check if a list of city names exist as a polygon against the nominatum api. ( I.e Python: for i is in Mylist: return True) <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43#Default_Arguments">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43#Default_Arguments</a></p>
 <p>Maybe I suck at searching, I apologize in advance.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

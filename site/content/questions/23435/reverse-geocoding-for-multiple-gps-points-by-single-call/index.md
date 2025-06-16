@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at this page: <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup</a> . Nominatim is handling only single query for reverse geocoding. Therefore, it doesn't seem possible.</p>
+<p>Have a look at this page: <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup</a> . Nominatim is handling only single query for reverse geocoding. Therefore, it doesn't seem possible.</p>
 <p>Lucas</p>
 </div>
 <div class="answer-controls post-controls">
@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can query nominatim maximum 1 request per second, but <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Bulk_Geocoding">Nominatim usage policy</a> frowns upon bulk reverse geocoding. So you are very likely to be blocked if you constantly do one per second.</p>
+<p>You can query nominatim maximum 1 request per second, but <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Bulk_Geocoding">Nominatim usage policy</a> frowns upon bulk reverse geocoding. So you are very likely to be blocked if you constantly do one per second.</p>
 <p>There are <a href="http://gis.stackexchange.com/questions/21382/bulk-geocode-20-million-records">other solutions</a>, but they will cost you in time and money.</p>
 </div>
 <div class="answer-controls post-controls">

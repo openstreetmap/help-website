@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I am not 100% but I think that overpassAPI and overpass-turbo cannot deliver any reverse geocoding.</p>
-<p>So you need an own solution, either by Nominatim, or by anothzer search engine or framework ... see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a></p>
+<p>So you need an own solution, either by Nominatim, or by anothzer search engine or framework ... see <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a></p>
 <p>Also do a search on this FAQ site for "bulk geocoding" and "reverse geocoding".</p>
 </div>
 <div class="answer-controls post-controls">
@@ -130,7 +130,7 @@ This answer is marked "community wiki".
 <div id="post-46720-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">is_in</a> query acts as a reverse geocode, but there is not an Overpass operator to mark up the input items with the geocoding results, it would have to be used in a manner similar to nominatim.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">is_in</a> query acts as a reverse geocode, but there is not an Overpass operator to mark up the input items with the geocoding results, it would have to be used in a manner similar to nominatim.</p>
 </div>
 <div id="comment-46720-info" class="comment-info">
 <span class="comment-age">(19 Nov '15, 17:21)</span> <span class="comment-user userinfo">maxerickson</span>

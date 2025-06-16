@@ -156,7 +156,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>As SomeoneElse, but I might add a note ( <a href="http://wiki.openstreetmap.org/wiki/Notes#Adding_notes">http://wiki.openstreetmap.org/wiki/Notes#Adding_notes</a> ) rather than (or maybe as well as) a fixme, as the notes are generally more visible.</p>
+<p>As SomeoneElse, but I might add a note ( <a href="https://wiki.openstreetmap.org/wiki/Notes#Adding_notes">https://wiki.openstreetmap.org/wiki/Notes#Adding_notes</a> ) rather than (or maybe as well as) a fixme, as the notes are generally more visible.</p>
 </div>
 <div id="comment-45632-info" class="comment-info">
 <span class="comment-age">(28 Sep '15, 10:39)</span> <span class="comment-user userinfo">EdLoach ♦</span>

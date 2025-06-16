@@ -134,7 +134,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look at the OSM wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Online_Browsing">OSM_Online_Browsing</a> ... <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List_of_OSM_based_Services</a> ... <a href="http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">Using_OpenStreetMap</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Online_Browsing">OSM_Online_Browsing</a> ... <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List_of_OSM_based_Services</a> ... <a href="https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">Using_OpenStreetMap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

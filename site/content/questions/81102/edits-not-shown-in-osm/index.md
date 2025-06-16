@@ -126,7 +126,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Hi,</p>
-<p>Thank you for your answer. I have checked with another laptop and I see the same. Here is the link <a href="https://www.openstreetmap.org/#map=16/43.8043/5.3038">https://www.openstreetmap.org/#map=16/43.8043/5.3038</a> In the photo attached you can see in yellow is the private paths and in ref the path which doesn’t exist and is on a private property also. <img src="https://help.openstreetmap.org/upfiles/E4A1C96C-335A-48A2-8505-18B6EBC68525.jpeg" alt="alt text" /></p>
+<p>Thank you for your answer. I have checked with another laptop and I see the same. Here is the link <a href="https://www.openstreetmap.org/#map=16/43.8043/5.3038">https://www.openstreetmap.org/#map=16/43.8043/5.3038</a> In the photo attached you can see in yellow is the private paths and in ref the path which doesn’t exist and is on a private property also. <img src="/upfiles/E4A1C96C-335A-48A2-8505-18B6EBC68525.jpeg" alt="alt text" /></p>
 <p>Many thanks</p>
 </div>
 <div id="comment-81106-info" class="comment-info">

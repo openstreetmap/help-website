@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Does the "start mapping" link from <a href="http://www.openstreetmap.org/welcome">this page</a> answer the question?</p>
+<p>Does the "start mapping" link from <a href="https://www.openstreetmap.org/welcome">this page</a> answer the question?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

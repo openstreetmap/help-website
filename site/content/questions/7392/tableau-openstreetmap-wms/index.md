@@ -182,7 +182,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check out the <a href="http://wiki.openstreetmap.org/wiki/WMS">Wiki page on WMS</a> to see which third-party WMSes are available. All of them will work with Tableau. Some of them are free. Not all of them cover the whole world. Not all of them are ok for commercial use.</p>
+<p>Check out the <a href="https://wiki.openstreetmap.org/wiki/WMS">Wiki page on WMS</a> to see which third-party WMSes are available. All of them will work with Tableau. Some of them are free. Not all of them cover the whole world. Not all of them are ok for commercial use.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

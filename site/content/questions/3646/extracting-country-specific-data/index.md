@@ -186,7 +186,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Smaller non-rectangular areas, like cities, can be extracted using the methods described in <a href="http://78.46.81.38/#chapter.use_cases">OSM Server Side Script</a>.</p>
-<p>In order to extract big areas, like a whole country, you may download a <a href="http://wiki.openstreetmap.org/wiki/Planet">planet</a> file, or a part of a planet file, and then use Osmosis <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">Polygon Filter File Format</a>.</p>
+<p>In order to extract big areas, like a whole country, you may download a <a href="https://wiki.openstreetmap.org/wiki/Planet">planet</a> file, or a part of a planet file, and then use Osmosis <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">Polygon Filter File Format</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

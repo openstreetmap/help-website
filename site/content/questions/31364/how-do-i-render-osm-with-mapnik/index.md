@@ -148,7 +148,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tilemill">TileMill</a> is a map design application that uses Mapnik as its rendering component. You could use this to generate your map as a standalone application, or in conjunction with a MapBox account if you need tile hosting services.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tilemill">TileMill</a> is a map design application that uses Mapnik as its rendering component. You could use this to generate your map as a standalone application, or in conjunction with a MapBox account if you need tile hosting services.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Odd &quot;highway=raceway&quot; rendering issue"
-description = '''There seems to be a strange rendering issue that affects only &quot;highway=raceway&quot; ways here: http://www.openstreetmap.org/?lat=53.30779&amp;amp;lon=-0.06335&amp;amp;zoom=16&amp;amp;layers=M  It&#x27;s not appearing in either OSM&#x27;s standard mapnik tiles (or e.g. the cyclemap). It used to until recent edits to the area,...'''
+description = '''There seems to be a strange rendering issue that affects only &quot;highway=raceway&quot; ways here: https://www.openstreetmap.org/?lat=53.30779&amp;amp;lon=-0.06335&amp;amp;zoom=16&amp;amp;layers=M  It&#x27;s not appearing in either OSM&#x27;s standard mapnik tiles (or e.g. the cyclemap). It used to until recent edits to the area,...'''
 date = "2013-02-06T12:29:00Z"
 lastmod = "2015-07-29T18:20:00Z"
 weight = 19608
@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There seems to be a strange rendering issue that affects only "highway=raceway" ways here:</p>
-<p><a href="http://www.openstreetmap.org/?lat=53.30779&amp;lon=-0.06335&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=53.30779&amp;lon=-0.06335&amp;zoom=16&amp;layers=M</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/q_2.png" alt="Cadwell Park showing only 1 highway=raceway" /></p>
+<p><a href="https://www.openstreetmap.org/?lat=53.30779&amp;lon=-0.06335&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=53.30779&amp;lon=-0.06335&amp;zoom=16&amp;layers=M</a></p>
+<p><img src="/upfiles/q_2.png" alt="Cadwell Park showing only 1 highway=raceway" /></p>
 <p>It's not appearing in either OSM's standard mapnik tiles (or e.g. the cyclemap). It used to until recent edits to the area, but those edits only changed the source tag.</p>
 <p>Dirtying tiles has no effect. I did nudge one node on one way ("Coppice") a smidgeon and that way now renders. That would suggest a rendering database issue (but is it strange that the Cyclemap tiles are affected too?).</p>
 <p>There are a couple of open trac issues open against highway=raceway (both linked to from <a href="https://trac.openstreetmap.org/ticket/3009">here</a>) but I don't think that either of them is the issue in this case.</p>
@@ -82,7 +82,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><span></span><span>@neuhausr</span> No, <a href="http://www.openstreetmap.org/?lat=50.55917&amp;lon=11.8152&amp;zoom=17&amp;layers=M">elsewhere</a> it renders fine as single ways and this wouldn't make sense because a raceway doesn't necessarily has to be a loop. <span></span><span>@SomeoneElse</span> An import problem is also the only thing that comes to my mind. I suggest someone having access to the DB taking a look at it. Maybe the cause of the problem can be identified and fixed.</p>
+<p><span></span><span>@neuhausr</span> No, <a href="https://www.openstreetmap.org/?lat=50.55917&amp;lon=11.8152&amp;zoom=17&amp;layers=M">elsewhere</a> it renders fine as single ways and this wouldn't make sense because a raceway doesn't necessarily has to be a loop. <span></span><span>@SomeoneElse</span> An import problem is also the only thing that comes to my mind. I suggest someone having access to the DB taking a look at it. Maybe the cause of the problem can be identified and fixed.</p>
 </div>
 <div id="comment-19621-info" class="comment-info">
 <span class="comment-age">(06 Feb '13, 17:20)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -94,7 +94,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Thanks. One other point (mentioned by EdLoach on IRC) is that "highway=raceway not appearing on the Cycle Map" is a complete red herring. It doesn't appear because it's not supposed to (see <a href="http://www.openstreetmap.org/?lat=52.97871&amp;lon=-1.74134&amp;zoom=16&amp;layers=C">here</a> for example).</p>
+<p>Thanks. One other point (mentioned by EdLoach on IRC) is that "highway=raceway not appearing on the Cycle Map" is a complete red herring. It doesn't appear because it's not supposed to (see <a href="https://www.openstreetmap.org/?lat=52.97871&amp;lon=-1.74134&amp;zoom=16&amp;layers=C">here</a> for example).</p>
 </div>
 <div id="comment-19622-info" class="comment-info">
 <span class="comment-age">(06 Feb '13, 17:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -148,9 +148,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/users/5580/th_pro_media">@TH_Pro_Media</a> has identified the nub of the problem, but misidentified the cause.</p>
+<p><a href="https://help.openstreetmap.org/users/5580/th_pro_media">@TH_Pro_Media</a> has identified the nub of the problem, but misidentified the cause.</p>
 <p>A quick search <a href="http://overpass-turbo.eu/s/aEe">using Overpass</a> reveals many racetracks tagged with <code>highway=raceway</code> and <code>sport=motor</code> throughout Europe. Indeed, this is an entirely reasonably, albeit redundant, tagging.</p>
-<p>Clearly the problem might lie with the CartoCSS rendering. As raceway and motor appear a handful of times in the project it is quite easy to work out if the problem arises with one of these rules: my immediate suspect was <a href="https://github.com/gravitystorm/openstreetmap-carto/search?utf8=%E2%9C%93&amp;q=sport&amp;type=Code">this one</a> in the style file, which says things tagged with sport should be treated as polygons. A quick search revealed a race circuit in Northern Island where parts of the circuit were rendering correctly, but the main racetrack, mapped as a closed way was not. A simple test then was to add an <code>area=no</code> tag which should force the way to be treated as a line. The way now <a href="http://www.openstreetmap.org/#map=15/54.3070/-5.5828">renders correctly</a>. Note, that very few of the ways tagged with <code>sport=motor</code> were closed (8/144).</p>
+<p>Clearly the problem might lie with the CartoCSS rendering. As raceway and motor appear a handful of times in the project it is quite easy to work out if the problem arises with one of these rules: my immediate suspect was <a href="https://github.com/gravitystorm/openstreetmap-carto/search?utf8=%E2%9C%93&amp;q=sport&amp;type=Code">this one</a> in the style file, which says things tagged with sport should be treated as polygons. A quick search revealed a race circuit in Northern Island where parts of the circuit were rendering correctly, but the main racetrack, mapped as a closed way was not. A simple test then was to add an <code>area=no</code> tag which should force the way to be treated as a line. The way now <a href="https://www.openstreetmap.org/#map=15/54.3070/-5.5828">renders correctly</a>. Note, that very few of the ways tagged with <code>sport=motor</code> were closed (8/144).</p>
 <p>This rule could conceivable affect other sports which apply to linear ways when such ways are closed (the only one I can think of immediately is climbing on cliffs, but these will likely be tagged <code>area=no</code> when closed).</p>
 <p><strong>Summary</strong>: this is a feature of the CartoCSS style which causes raceways mapped as closed ways to be treated as areas when any sport tag is applied. The solutions are either: a) remove the <code>sport=motor</code> tag; or b) add <code>area=no</code>.</p>
 </div>
@@ -196,7 +196,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a> thanks: and of course this is the long-term answer for scai, fix the bug in OSM-Carto. area=no is better because it is redundant &amp; does not remove information, whereas dropping sport=motor does</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a> thanks: and of course this is the long-term answer for scai, fix the bug in OSM-Carto. area=no is better because it is redundant &amp; does not remove information, whereas dropping sport=motor does</p>
 </div>
 <div id="comment-44520-info" class="comment-info">
 <span class="comment-age">(29 Jul '15, 18:20)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -319,7 +319,7 @@ osqa_accepted = true
 <div id="post-19702-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Interesting, but I'm not convinced that "sport=motor" is the issue. If you have a look at <a href="http://www.openstreetmap.org/?lat=52.82958&amp;lon=-1.37434&amp;zoom=15&amp;layers=M">Donington Park</a>, you'll see that that is tagged like that and doesn't have the same issue.</p>
+<p>Interesting, but I'm not convinced that "sport=motor" is the issue. If you have a look at <a href="https://www.openstreetmap.org/?lat=52.82958&amp;lon=-1.37434&amp;zoom=15&amp;layers=M">Donington Park</a>, you'll see that that is tagged like that and doesn't have the same issue.</p>
 </div>
 <div id="comment-19702-info" class="comment-info">
 <span class="comment-age">(07 Feb '13, 17:40)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -341,7 +341,7 @@ osqa_accepted = true
 <div id="post-19704-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/way/27131003">Yes</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/27131003">Yes</a></p>
 </div>
 <div id="comment-19704-info" class="comment-info">
 <span class="comment-age">(07 Feb '13, 17:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -389,7 +389,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>I'm not arguing about whether the tagging is "correct" or not (I'm quite prepared to believe that the previous tagging wasn't), merely trying to understand why a way wasn't rendering previously but (after a "node move" edit to a way) started to do so.<br />
 </p>
-<p>Re Donington, <a href="http://www.openstreetmap.org/browse/relation/51164">the relation</a> that the way that had both sport=motor and highway=raceway was part of didn't have highway=raceway on it, so that doesn't explain way the way that I linked to was rendering. I'll have to have a look at the mapnik stylesheet...</p>
+<p>Re Donington, <a href="https://www.openstreetmap.org/browse/relation/51164">the relation</a> that the way that had both sport=motor and highway=raceway was part of didn't have highway=raceway on it, so that doesn't explain way the way that I linked to was rendering. I'll have to have a look at the mapnik stylesheet...</p>
 </div>
 <div id="comment-19710-info" class="comment-info">
 <span class="comment-age">(07 Feb '13, 20:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -474,7 +474,7 @@ osqa_accepted = true
 <div id="post-44505-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The Willowbank speedway is tagged highway=road, <a href="http://www.openstreetmap.org/#map=18/-27.69568/152.65788">http://www.openstreetmap.org/#map=18/-27.69568/152.65788</a> although it has no other use then driving down as fast as. So theyre might be several others around the world on OSM. This one should if possible get highway=raceway, raceway=speedway a different kind of speed sport. It’s not a closed track, by service roads yes, but not as raceway. The direction of the raceway is strange, IMHO drag racing happens with 2 participants on either side of the track, but this has been tagged in the opposite direction.</p>
+<p>The Willowbank speedway is tagged highway=road, <a href="https://www.openstreetmap.org/#map=18/-27.69568/152.65788">https://www.openstreetmap.org/#map=18/-27.69568/152.65788</a> although it has no other use then driving down as fast as. So theyre might be several others around the world on OSM. This one should if possible get highway=raceway, raceway=speedway a different kind of speed sport. It’s not a closed track, by service roads yes, but not as raceway. The direction of the raceway is strange, IMHO drag racing happens with 2 participants on either side of the track, but this has been tagged in the opposite direction.</p>
 </div>
 <div id="comment-44505-info" class="comment-info">
 <span class="comment-age">(29 Jul '15, 14:40)</span> <span class="comment-user userinfo">Hendrikklaas</span>

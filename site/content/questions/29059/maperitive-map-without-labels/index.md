@@ -46,7 +46,7 @@ osqa_accepted = false
 <p>My intention is to get a static map without any labels ("United Kingdom", "London" etc) and then overlay one png on top of the other. I want to use the Transport web map.</p>
 <p>I've figured out how to get Maperitive to export an image of the right geographical area, but it still has labels.</p>
 <p>So my first question is how do I get this (as an exported png) from Maperitive?</p>
-<p>I tried doing <a href="http://help.openstreetmap.org/questions/1873/how-can-i-create-a-map-without-any-names-on-it/1879">this</a>. With the following commands:</p>
+<p>I tried doing <a href="/questions/1873/how-can-i-create-a-map-without-any-names-on-it/1879">this</a>. With the following commands:</p>
 <pre><code>edit-rules 
 //replace all occurrences of &#39;draw:text&#39; and &#39;draw : text&#39; with &#39;&#39;
 //save as notext.mrules

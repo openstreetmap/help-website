@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Own Nominatim Server gives no JSON output in Curl"
-description = '''Hello, my own nomination server works well. In Chrome I get my JSON output: [  {  &quot;place_id&quot;: &quot;6781110&quot;,  &quot;licence&quot;: &quot;Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright&quot;,  &quot;osm_type&quot;: &quot;way&quot;,  &quot;osm_id&quot;: &quot;35776867&quot;,  &quot;boundingbox&quot;: [  &quot;52.5531628&quot;,  &quot;52.5534904&quot;,  &quot;13....'''
+description = '''Hello, my own nomination server works well. In Chrome I get my JSON output: [  {  &quot;place_id&quot;: &quot;6781110&quot;,  &quot;licence&quot;: &quot;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&quot;,  &quot;osm_type&quot;: &quot;way&quot;,  &quot;osm_id&quot;: &quot;35776867&quot;,  &quot;boundingbox&quot;: [  &quot;52.5531628&quot;,  &quot;52.5534904&quot;,  &quot;13....'''
 date = "2016-11-19T22:24:00Z"
 lastmod = "2016-11-20T08:53:00Z"
 weight = 53042
@@ -44,7 +44,7 @@ osqa_accepted = true
 <pre><code>[
     {
         &quot;place_id&quot;: &quot;6781110&quot;,
-        &quot;licence&quot;: &quot;Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright&quot;,
+        &quot;licence&quot;: &quot;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&quot;,
         &quot;osm_type&quot;: &quot;way&quot;,
         &quot;osm_id&quot;: &quot;35776867&quot;,
         &quot;boundingbox&quot;: [

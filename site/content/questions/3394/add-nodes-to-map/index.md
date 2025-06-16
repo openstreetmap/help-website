@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-32220-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The follow-on question that was here has been moved to <a href="https://help.openstreetmap.org/questions/32216/how-do-i-make-data-from-openstreetmap-appear-on-a-garmin-device">a new question</a>.</p>
+<p>The follow-on question that was here has been moved to <a href="/questions/32216/how-do-i-make-data-from-openstreetmap-appear-on-a-garmin-device">a new question</a>.</p>
 </div>
 <div id="comment-32220-info" class="comment-info">
 <span class="comment-age">(09 Apr '14, 13:38)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suggest you start reading the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a> and then tell us where you get into trouble.</p>
+<p>I suggest you start reading the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a> and then tell us where you get into trouble.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you're using the OpenStreetMap editors, for both Potlatch and JOSM, you can <strong>add a node by double-clicking.</strong></p>
-<p>Then it's a question of which "tags" to add. A tag is a name=value pair, and the editors will allow you enter these as free text fields. To identify it as an gas well I suggest you add <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpetroleum_well">man_made=petroleum_well</a>. In addition you might add other tags such as a <a href="http://wiki.openstreetmap.org/wiki/Key:name">name tag</a> with a name, or a <a href="http://wiki.openstreetmap.org/wiki/Key:ref">ref tag</a> with reference number, to identify the well.</p>
+<p>Then it's a question of which "tags" to add. A tag is a name=value pair, and the editors will allow you enter these as free text fields. To identify it as an gas well I suggest you add <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpetroleum_well">man_made=petroleum_well</a>. In addition you might add other tags such as a <a href="https://wiki.openstreetmap.org/wiki/Key:name">name tag</a> with a name, or a <a href="https://wiki.openstreetmap.org/wiki/Key:ref">ref tag</a> with reference number, to identify the well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

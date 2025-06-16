@@ -88,7 +88,7 @@ osqa_accepted = false
 <div id="post-37275-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(re the "where in the world is this question about") I'd assumed from <a href="https://help.openstreetmap.org/questions/37191/rendering-a-russian-language-map">this previous question</a> that it's actually Ukraine and/or Moldova.</p>
+<p>(re the "where in the world is this question about") I'd assumed from <a href="/questions/37191/rendering-a-russian-language-map">this previous question</a> that it's actually Ukraine and/or Moldova.</p>
 </div>
 <div id="comment-37275-info" class="comment-info">
 <span class="comment-age">(03 Oct '14, 18:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -112,7 +112,7 @@ osqa_accepted = false
 <div id="post-37282-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>to post a map link just zoom into the place in question then cut and paste this bit above the map, it this it? <a href="http://www.openstreetmap.org/way/83039146#map=16/46.8232/29.5197">http://www.openstreetmap.org/way/83039146#map=16/46.8232/29.5197</a></p>
+<p>to post a map link just zoom into the place in question then cut and paste this bit above the map, it this it? <a href="https://www.openstreetmap.org/way/83039146#map=16/46.8232/29.5197">https://www.openstreetmap.org/way/83039146#map=16/46.8232/29.5197</a></p>
 </div>
 <div id="comment-37282-info" class="comment-info">
 <span class="comment-age">(03 Oct '14, 22:52)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -166,8 +166,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The only way to be <em>really</em> sure is to go and have a look, so personally I'd add a <a href="http://wiki.openstreetmap.org/wiki/Note">note</a> suggesting that there might be a problem so that a local mapper can investigate. It's fairly easy to get OSM notes local to an area (so easy that even I <a href="https://github.com/SomeoneElseOSM/Notes01">wrote something</a> to do that), and local mappers can see and act on them.</p>
-<p>As an alternative, perhaps find the main communications mechanisms that the local community uses (which might be <a href="http://wiki.openstreetmap.org/wiki/Contact">mailing lists, forum, IRC or something else</a>) and ask there? Someone may be able to give you an answer straight away.</p>
+<p>The only way to be <em>really</em> sure is to go and have a look, so personally I'd add a <a href="https://wiki.openstreetmap.org/wiki/Note">note</a> suggesting that there might be a problem so that a local mapper can investigate. It's fairly easy to get OSM notes local to an area (so easy that even I <a href="https://github.com/SomeoneElseOSM/Notes01">wrote something</a> to do that), and local mappers can see and act on them.</p>
+<p>As an alternative, perhaps find the main communications mechanisms that the local community uses (which might be <a href="https://wiki.openstreetmap.org/wiki/Contact">mailing lists, forum, IRC or something else</a>) and ask there? Someone may be able to give you an answer straight away.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

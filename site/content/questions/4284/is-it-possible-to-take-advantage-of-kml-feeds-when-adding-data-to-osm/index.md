@@ -121,8 +121,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At least GPSBabel can do conversions between KML and GPX: <a href="http://wiki.openstreetmap.org/wiki/Gpsbabel">http://wiki.openstreetmap.org/wiki/Gpsbabel</a></p>
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Converting_GPS_track_data_between_formats">http://wiki.openstreetmap.org/wiki/Converting_GPS_track_data_between_formats</a> can also Prune do the same conversion: <a href="http://wiki.openstreetmap.org/wiki/Prune">http://wiki.openstreetmap.org/wiki/Prune</a></p>
+<p>At least GPSBabel can do conversions between KML and GPX: <a href="https://wiki.openstreetmap.org/wiki/Gpsbabel">https://wiki.openstreetmap.org/wiki/Gpsbabel</a></p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Converting_GPS_track_data_between_formats">https://wiki.openstreetmap.org/wiki/Converting_GPS_track_data_between_formats</a> can also Prune do the same conversion: <a href="https://wiki.openstreetmap.org/wiki/Prune">https://wiki.openstreetmap.org/wiki/Prune</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

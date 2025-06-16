@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to read up on the basics of the OSM data model, e.g. <a href="http://wiki.openstreetmap.org/wiki/Data_model">on the Wiki</a>. This will give you an idea of how to identify what is a street. You will then be able to process an OSM data set and export streets only, or identify crossroads. Finding neighbour's coordinates is a simple geometric problem. Many people will have "an idea" about this but the space here is too short to explain it all! It is possible that importing OSM data into a spatial database (e.g. imposm, osm2pgsql - read other answers about these in this help system) will help you, since you can then query the database for geometries or things like nearest neighbours.</p>
+<p>You need to read up on the basics of the OSM data model, e.g. <a href="https://wiki.openstreetmap.org/wiki/Data_model">on the Wiki</a>. This will give you an idea of how to identify what is a street. You will then be able to process an OSM data set and export streets only, or identify crossroads. Finding neighbour's coordinates is a simple geometric problem. Many people will have "an idea" about this but the space here is too short to explain it all! It is possible that importing OSM data into a spatial database (e.g. imposm, osm2pgsql - read other answers about these in this help system) will help you, since you can then query the database for geometries or things like nearest neighbours.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -149,7 +149,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>To do anything directly with the OSM data (such as routing) you'll almost certainly want to download an extract of the data (such as from one of the links <a href="http://wiki.openstreetmap.org/wiki/Extract">here</a>) first.</p>
+<p>To do anything directly with the OSM data (such as routing) you'll almost certainly want to download an extract of the data (such as from one of the links <a href="https://wiki.openstreetmap.org/wiki/Extract">here</a>) first.</p>
 </div>
 <div id="comment-24474-info" class="comment-info">
 <span class="comment-age">(23 Jul '13, 09:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -214,7 +214,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe there are some hints from opensource solutions from <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> ?</p>
+<p>Maybe there are some hints from opensource solutions from <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

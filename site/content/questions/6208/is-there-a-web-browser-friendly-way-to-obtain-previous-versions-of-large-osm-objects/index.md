@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Let's imagine that I want to have a look at previous versions of the <a href="http://www.openstreetmap.org/browse/relation/63872">Pennine Way</a>. It's quite large and has quite a few versions, so the <a href="http://www.openstreetmap.org/browse/relation/63872/history">history</a> link times out, and a message "Sorry, the data for the relation with the id 63872, took too long to retrieve". Suppose I just want to see the previous version - is there a clicky pointy way of doing that?</p>
+<p>Let's imagine that I want to have a look at previous versions of the <a href="https://www.openstreetmap.org/browse/relation/63872">Pennine Way</a>. It's quite large and has quite a few versions, so the <a href="https://www.openstreetmap.org/browse/relation/63872/history">history</a> link times out, and a message "Sorry, the data for the relation with the id 63872, took too long to retrieve". Suppose I just want to see the previous version - is there a clicky pointy way of doing that?</p>
 <p>The only alternatives that I'm aware of is to do something like this:<br />
 </p>
 <pre><code>wget --timeout=120 http://api.openstreetmap.org/api/0.6/relation/63872/208</code></pre>
@@ -121,7 +121,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>You could try using the OSM History Browser to list the change sets and allow you to compare selected changes.</p>
 <p><a href="http://osm.virtuelle-loipe.de/history/">http://osm.virtuelle-loipe.de/history/</a></p>
-<p>Also the Route Relations 'h' link on the <a href="http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths</a> page will provide the relation number and take you straight there: <a href="http://osm.virtuelle-loipe.de/history/?type=relation&amp;ref=63872">http://osm.virtuelle-loipe.de/history/?type=relation&amp;ref=63872</a></p>
+<p>Also the Route Relations 'h' link on the <a href="https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths</a> page will provide the relation number and take you straight there: <a href="http://osm.virtuelle-loipe.de/history/?type=relation&amp;ref=63872">http://osm.virtuelle-loipe.de/history/?type=relation&amp;ref=63872</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

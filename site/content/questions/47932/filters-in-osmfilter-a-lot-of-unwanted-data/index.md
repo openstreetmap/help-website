@@ -56,7 +56,7 @@ osqa_accepted = false
   --ignore-dependencies ^
   -o=&quot;D:/GIS Data/Tijdelijk/countrieseuroperelation.osm&quot;</code></pre>
 <p>This yields an OSM file with relations of the national borders of about 60 countries, which is correct. So it seems to me the unwanted data is filtered when OSMfilter is resolving the child relations, ways and nodes of these 60 relations. Why is this unwanted data included by OSM filter? Should I change my query? Or is perhaps the data insufficiently tagged in some countries (as the problem only occurs in about half of the countries).</p>
-<p>BTW: This question is related to my question about <a href="https://help.openstreetmap.org/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">Osmosis</a>. I tried to do the same query in Osmosis to see if the dependencies on the 60 relations are resolved in another fashion by Osmosis.</p>
+<p>BTW: This question is related to my question about <a href="/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">Osmosis</a>. I tried to do the same query in Osmosis to see if the dependencies on the 60 relations are resolved in another fashion by Osmosis.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osmfilter" rel="tag" title="see questions tagged &#39;osmfilter&#39;">osmfilter</span> <span class="post-tag tag-link-osm2pgsql" rel="tag" title="see questions tagged &#39;osm2pgsql&#39;">osm2pgsql</span> <span class="post-tag tag-link-ogr2ogr" rel="tag" title="see questions tagged &#39;ogr2ogr&#39;">ogr2ogr</span>
@@ -147,10 +147,10 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think it is probably a result of shared boundary ways that are included in the relations, like</p>
-<p><a href="http://www.openstreetmap.org/way/362763546">http://www.openstreetmap.org/way/362763546</a></p>
+<p><a href="https://www.openstreetmap.org/way/362763546">https://www.openstreetmap.org/way/362763546</a></p>
 <p>Which is a member of Spain, Portugal and several lesser boundaries.</p>
 <p>Edit: Actually, it sounds like this is the issue:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Osmfilter#Drop_specific_dependencies">http://wiki.openstreetmap.org/wiki/Talk:Osmfilter#Drop_specific_dependencies</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Osmfilter#Drop_specific_dependencies">https://wiki.openstreetmap.org/wiki/Talk:Osmfilter#Drop_specific_dependencies</a></p>
 <p>There are relations included as members of the Spain relation.</p>
 <p>If I understand correctly, osmfilter does not do what I speculated above, it resolves subordinate dependencies only, it doesn't seek out parents of included objects.</p>
 </div>
@@ -217,7 +217,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>Another update:</strong></p>
-<p>I got Osmosis working in the correct fashion (for the solution see: <a href="https://help.openstreetmap.org/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">https://help.openstreetmap.org/questions/47931/filters-in-osmosis-filtering-administrative-boundaries</a> ), so now I can compare the results of Osmosis to the results from OSMfilter.</p>
+<p>I got Osmosis working in the correct fashion (for the solution see: <a href="/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">https://help.openstreetmap.org/questions/47931/filters-in-osmosis-filtering-administrative-boundaries</a> ), so now I can compare the results of Osmosis to the results from OSMfilter.</p>
 <p>I downloaded the Geofabrik file of Portugal as Portugal got improperly filtered by OSMfilter (see above). I filtered for boundaries=administrative AND admin_level=2.</p>
 <p>OSMfilter:</p>
 <pre><code>osmfilter ^

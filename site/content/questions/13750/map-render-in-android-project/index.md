@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question of http://help.openstreetmap.org/questions/13749/how-to-render-a-custom-map-in-android-project" by SomeoneElse 24 Jun '12, 23:02
+### The question has been closed for the following reason "Duplicate Question of https://help.openstreetmap.org/questions/13749/how-to-render-a-custom-map-in-android-project" by SomeoneElse 24 Jun '12, 23:02
 
 </div>
 

@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>does this give you any ideas <a href="http://www.openstreetmap.org/?lat=52.216143&amp;lon=-0.067283&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.216143&amp;lon=-0.067283&amp;zoom=18&amp;layers=M</a></p>
+<p>does this give you any ideas <a href="https://www.openstreetmap.org/?lat=52.216143&amp;lon=-0.067283&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.216143&amp;lon=-0.067283&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-22944-info" class="comment-info">
 <span class="comment-age">(01 Jun '13, 22:57)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -116,13 +116,13 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the page for tagging buildings (with addresses) on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Building">http://wiki.openstreetmap.org/wiki/Building</a></p>
-<p>Yards are generally separated by fences, hedges, etc: <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">http://wiki.openstreetmap.org/wiki/Key:barrier</a></p>
+<p>See the page for tagging buildings (with addresses) on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Building">https://wiki.openstreetmap.org/wiki/Building</a></p>
+<p>Yards are generally separated by fences, hedges, etc: <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">https://wiki.openstreetmap.org/wiki/Key:barrier</a></p>
 <p>For mapping the yards themselves there seem to be three schools of thought (apart from not mapping that much detail at all). The first is most numerous. Mainly because people think the default map becomes too "messy" when tagging that way, the other options were invented.</p>
 <ol>
 <li><a href="http://taginfo.openstreetmap.org/tags/?key=leisure&amp;value=garden#combinations">Combine leisure=garden with access=private</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:leisure%3Dgarden">Use residential=garden with or within landuse=residential</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">Combine leisure=garden with garden:type=residential</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:leisure%3Dgarden">Use residential=garden with or within landuse=residential</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">Combine leisure=garden with garden:type=residential</a></li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

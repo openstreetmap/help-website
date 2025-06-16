@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've just come across an issue of mapping a POI which covers several buildings each of which has its own address (<a href="http://www.openstreetmap.org/browse/way/234029034">Palace Hotel, Tallinn</a>). In Estonia most buildings have been imported with their associated address data from Open Source government data, with the result that address data on buildings is very complete and addresses for POIs are less complete. This reverses mapping situations familiar to me.</p>
+<p>I've just come across an issue of mapping a POI which covers several buildings each of which has its own address (<a href="https://www.openstreetmap.org/browse/way/234029034">Palace Hotel, Tallinn</a>). In Estonia most buildings have been imported with their associated address data from Open Source government data, with the result that address data on buildings is very complete and addresses for POIs are less complete. This reverses mapping situations familiar to me.</p>
 <p>Although a hotel may include in its footprint several buildings, the actual address of the hotel may be:</p>
 <ul>
 <li>the housenumber of just one of the buildings (the current case)</li>
@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's not uncommon to have the same address data on more than one entity in OSM. Some mappers like to add address data to node-only POIs for completeness, even if several POIs share the same address and even if the building they are in is indeed already mapped and has the same address on its building outline.</p>
-<p>In your case, I would collect all buildings (and other detail belonging to the hotel complex) into a <a href="http://wiki.openstreetmap.org/wiki/Relation:site">site relation</a>, map all hotel-relevant details there and include the 'main' postal address of the hotel. I would still keep the addresses on the buildings.</p>
+<p>In your case, I would collect all buildings (and other detail belonging to the hotel complex) into a <a href="https://wiki.openstreetmap.org/wiki/Relation:site">site relation</a>, map all hotel-relevant details there and include the 'main' postal address of the hotel. I would still keep the addresses on the buildings.</p>
 <p>This way you'll get the right address when searching for the hotel, but still retain the addresses of the single buildings should someone need them.</p>
 </div>
 <div class="answer-controls post-controls">

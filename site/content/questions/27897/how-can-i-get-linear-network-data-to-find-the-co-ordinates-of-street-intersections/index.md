@@ -115,10 +115,10 @@ One Answer:
 <div class="answer-body">
 <p>See these existing answers:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/7430/creating-graphnodes-edges-from-osm-xml-data">Creating Graph(Nodes-Edges) from OSM XML Data</a></li>
-<li><a href="https://help.openstreetmap.org/questions/15442/detection-of-intersections-in-the-maps">Detection of Intersections in the maps</a></li>
-<li><a href="https://help.openstreetmap.org/questions/19213/osm-xml-into-graph">OSM XML into Graph</a></li>
-<li><a href="https://help.openstreetmap.org/questions/24639/underlying-graph-structure-of-ways">Underlying graph structure of ways</a></li>
+<li><a href="/questions/7430/creating-graphnodes-edges-from-osm-xml-data">Creating Graph(Nodes-Edges) from OSM XML Data</a></li>
+<li><a href="/questions/15442/detection-of-intersections-in-the-maps">Detection of Intersections in the maps</a></li>
+<li><a href="/questions/19213/osm-xml-into-graph">OSM XML into Graph</a></li>
+<li><a href="/questions/24639/underlying-graph-structure-of-ways">Underlying graph structure of ways</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -203,7 +203,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>then I really can only recommend that you get more familiar with Routing on OSM based data in general.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a> ... there are links to some opensource projects dealing with that topic. Have a look how they do their basic data preparation.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a> ... there are links to some opensource projects dealing with that topic. Have a look how they do their basic data preparation.</p>
 <p>Or ask at <a href="http://gis.stackexchange.com">http://gis.stackexchange.com</a> additionaly.</p>
 </div>
 <div id="comment-28053-info" class="comment-info">

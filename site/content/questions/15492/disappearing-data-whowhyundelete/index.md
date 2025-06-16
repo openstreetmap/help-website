@@ -181,7 +181,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Most likely you are referring to the effects of the license change, see e.g. this previous question:</p>
-<p><a href="http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted</a></p>
+<p><a href="/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">https://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted</a></p>
 <p>If you are not, ignore this answer.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -287,7 +287,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>You should really improve your question by specifying if you are speaking about the "license change effect" or "data deleted by someone else".</p>
 <p>Because the answer will be different :</p>
-<p>For the first, the license transition withdrawn many objects because they did not comply with the new ODbl license. Those data cannot be retrieved and need a new survey (check <a href="http://wiki.openstreetmap.org/wiki/Remapping">the "remapping" task on the wiki</a>).</p>
+<p>For the first, the license transition withdrawn many objects because they did not comply with the new ODbl license. Those data cannot be retrieved and need a new survey (check <a href="https://wiki.openstreetmap.org/wiki/Remapping">the "remapping" task on the wiki</a>).</p>
 <p>For the second, it is possible to restore the deleted objects; see the hints provided by other answers on this page.</p>
 </div>
 <div class="answer-controls post-controls">

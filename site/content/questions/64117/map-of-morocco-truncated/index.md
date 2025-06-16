@@ -136,7 +136,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Just to add a couple of points to this - there's another help question <a href="https://help.openstreetmap.org/questions/53812/contested-border-sahrawi-morocco-decision-to-display">here</a> that has more discussion about the issues involved in the decisions to show the boundaries in OSM in that area as they are currently shown.</p>
+<p>Just to add a couple of points to this - there's another help question <a href="/questions/53812/contested-border-sahrawi-morocco-decision-to-display">here</a> that has more discussion about the issues involved in the decisions to show the boundaries in OSM in that area as they are currently shown.</p>
 <p>Also one more thing - nothing in OSM controls what the map that Zoho Campaigns shows your customers and potential customers. It's perfectly possible to create a map from OSM data that shows <em>your</em> desired borders. <a href="https://www.openstreetmap.org/user/PlaneMad/diary/38176">Here</a> is an example for India (see the section that says "'Fixing' the boundaries of India").</p>
 </div>
 <div id="comment-64126-info" class="comment-info">

@@ -130,7 +130,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... and once you've got data from e.g. GeoFabrik you can then use something like <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a> to either extract what you want or delete what you don't want.</p>
+<p>... and once you've got data from e.g. GeoFabrik you can then use something like <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> to either extract what you want or delete what you don't want.</p>
 <p>France is quite large, so maybe a smaller area might be what you're looking for - <a href="http://download.geofabrik.de/osm/europe/france/">http://download.geofabrik.de/osm/europe/france/</a> ?</p>
 </div>
 <div id="comment-8718-info" class="comment-info">

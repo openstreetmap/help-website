@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-50651-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a>, "Paris" should be "Parigi" then.</p>
+<p><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a>, "Paris" should be "Parigi" then.</p>
 </div>
 <div id="comment-50651-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 06:51)</span> <span class="comment-user userinfo">escada</span>

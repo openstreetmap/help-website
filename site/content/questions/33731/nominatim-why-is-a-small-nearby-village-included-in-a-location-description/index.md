@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Looking at <a href="http://nominatim.openstreetmap.org/details.php?place_id=35602344">http://nominatim.openstreetmap.org/details.php?place_id=35602344</a>, <a href="http://nominatim.openstreetmap.org/details.php?place_id=39331659">http://nominatim.openstreetmap.org/details.php?place_id=39331659</a> and a good number of the roads around the area, they all seem to incorrectly include 'Wick' using the place node of a small nearby village - <a href="http://www.openstreetmap.org/node/30133595">http://www.openstreetmap.org/node/30133595</a></p>
+<p>Looking at <a href="http://nominatim.openstreetmap.org/details.php?place_id=35602344">http://nominatim.openstreetmap.org/details.php?place_id=35602344</a>, <a href="http://nominatim.openstreetmap.org/details.php?place_id=39331659">http://nominatim.openstreetmap.org/details.php?place_id=39331659</a> and a good number of the roads around the area, they all seem to incorrectly include 'Wick' using the place node of a small nearby village - <a href="https://www.openstreetmap.org/node/30133595">https://www.openstreetmap.org/node/30133595</a></p>
 <p>I haven't been able to work out why Nominatim includes the 'Wick' place node in this case, can anyone help explain it for me? Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -164,7 +164,7 @@ One Answer:
 <div id="post-33843-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've added the relation Bosstraat <a href="http://www.openstreetmap.org/relation/3777416">http://www.openstreetmap.org/relation/3777416</a> Unfortunately, I now notice that it does not work. e.g. Oude Reetse Baan 89, Boom is still linked to this neighborhood. It is certainly not part of it. I though I edited some address at that time and I got rid of the pesky "Bosstraat"</p>
+<p>I've added the relation Bosstraat <a href="https://www.openstreetmap.org/relation/3777416">https://www.openstreetmap.org/relation/3777416</a> Unfortunately, I now notice that it does not work. e.g. Oude Reetse Baan 89, Boom is still linked to this neighborhood. It is certainly not part of it. I though I edited some address at that time and I got rid of the pesky "Bosstraat"</p>
 </div>
 <div id="comment-33843-info" class="comment-info">
 <span class="comment-age">(10 Jun '14, 14:27)</span> <span class="comment-user userinfo">escada</span>
@@ -175,7 +175,7 @@ One Answer:
 <div id="post-33844-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><em>Oude Reetse Baan 89, Boom</em> is linked to the <a href="http://www.openstreetmap.org/node/2886010337">neighborhood node</a> and not the relation you created, according to <a href="http://nominatim.openstreetmap.org/details.php?place_id=3676767676">Nominatim's detail page</a> (funny place ID, btw.). I'm not quite sure how to prevent that and it seems appropriate to ask a new question about this issue.</p>
+<p><em>Oude Reetse Baan 89, Boom</em> is linked to the <a href="https://www.openstreetmap.org/node/2886010337">neighborhood node</a> and not the relation you created, according to <a href="http://nominatim.openstreetmap.org/details.php?place_id=3676767676">Nominatim's detail page</a> (funny place ID, btw.). I'm not quite sure how to prevent that and it seems appropriate to ask a new question about this issue.</p>
 </div>
 <div id="comment-33844-info" class="comment-info">
 <span class="comment-age">(10 Jun '14, 15:25)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -187,7 +187,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I don't know if it would work at all. But I do know that if it works, then you need to use matching importance for the admin level and the place node. Relation Bosstraat is at admin level 10 (calculated importance=20). The node for Bosstraat is tagged as neighbourhood (calculated importance=22).</p>
-<p>See: <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Country_to_street_level">Nominatim Development Overview</a></p>
+<p>See: <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Country_to_street_level">Nominatim Development Overview</a></p>
 </div>
 <div id="comment-33845-info" class="comment-info">
 <span class="comment-age">(10 Jun '14, 15:35)</span> <span class="comment-user userinfo">cartinus</span>

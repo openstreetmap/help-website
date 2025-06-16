@@ -122,7 +122,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to use a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> relation containing two ways: the one you have with role=outer and the courtyard with role=inner. It is best to put the building tag on the relation.</p>
+<p>You need to use a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> relation containing two ways: the one you have with role=outer and the courtyard with role=inner. It is best to put the building tag on the relation.</p>
 <p>I know this is possible in both Potlatch 2 and Josm editors, but am not sure how easy it is in iD.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -173,7 +173,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to create a <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a>. See <a href="https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">this question</a> or <a href="https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">that one</a> for tutorial.</p>
+<p>You need to create a <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a>. See <a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">this question</a> or <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">that one</a> for tutorial.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -224,7 +224,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is very easy (hear the pundits screaming "NO" in the background :-)). Instead of a simple closed way or polygon you need to create a so called multi-polygon. This tends to be one of the most hated constructs in OSM, but in reality they are quite useful and the bad rep is mainly because they are often used unnecessarily.</p>
-<p>Essentially you need to greate a relation of type <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a>, add the outer polygon of your building as an "outer" element and the hole(s) as "inner" element(s). How exactly to do this depends on the editor you are using which you haven't indicated.</p>
+<p>Essentially you need to greate a relation of type <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a>, add the outer polygon of your building as an "outer" element and the hole(s) as "inner" element(s). How exactly to do this depends on the editor you are using which you haven't indicated.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

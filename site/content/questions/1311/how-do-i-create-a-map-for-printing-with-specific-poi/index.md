@@ -112,7 +112,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, it is possible!</p>
-<p>The easiest way is to use <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> (the successor of <a href="http://wiki.openstreetmap.org/wiki/Kosmos">Kosmos</a>). With this software you can create your customised map using rules for rendering.</p>
+<p>The easiest way is to use <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> (the successor of <a href="https://wiki.openstreetmap.org/wiki/Kosmos">Kosmos</a>). With this software you can create your customised map using rules for rendering.</p>
 <p>Besides, if you are up for an adventure, you can use GIS software such as <a href="http://www.gvsig.org/web/">gvSIG</a> to play with shapefiles converted from OSM data and create full customised maps.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -222,10 +222,10 @@ Just select the highest build number. If you need any help use documentation sit
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes. This is the kind of flexibility which OpenStreetMap allows and encourages.</p>
-<p>A couple of people have suggested playing with Maperitive. This kind of task usually calls to mind "rendering", the process of going from raw OpenStreetMap data to attractive map images. We have a number of alternative <a href="http://wiki.openstreetmap.org/wiki/Renderer">renderer</a> tools, which offer great flexibility in the production of map images. You can choose, not only which POI types are given prominence, but also every other aspect of the map's style (line widths colours etc). ...but be warned, these can be rather tricky to set up and get working.</p>
+<p>A couple of people have suggested playing with Maperitive. This kind of task usually calls to mind "rendering", the process of going from raw OpenStreetMap data to attractive map images. We have a number of alternative <a href="https://wiki.openstreetmap.org/wiki/Renderer">renderer</a> tools, which offer great flexibility in the production of map images. You can choose, not only which POI types are given prominence, but also every other aspect of the map's style (line widths colours etc). ...but be warned, these can be rather tricky to set up and get working.</p>
 <p>For printing in a publication, setting up a renderer may be overkill. This may depend on how many maps you want to include, how large / complex they are, and how many POIs you want to emphasise. You may find the most productive approach is to take an a map image and manually edit the image in a graphics package to add some icons.</p>
-<p>Some options which may be of interest are listed on the <a href="http://wiki.openstreetmap.org/wiki/OSM_on_paper">OSM on paper</a> wiki page.</p>
-<p>Don't forget to write “© OpenStreetMap contributors, CC-BY-SA” in any printed publication (see <a href="http://www.openstreetmap.org/copyright">OpenStreetMap copyright and license</a>)</p>
+<p>Some options which may be of interest are listed on the <a href="https://wiki.openstreetmap.org/wiki/OSM_on_paper">OSM on paper</a> wiki page.</p>
+<p>Don't forget to write “© OpenStreetMap contributors, CC-BY-SA” in any printed publication (see <a href="https://www.openstreetmap.org/copyright">OpenStreetMap copyright and license</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

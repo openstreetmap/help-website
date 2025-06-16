@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>First thing first: do not confuse the data with its rendering. We have many uses of the data, including many renderings and the "standard" rendering you refer to, but we only have one database, which contains all our data.</p>
-<p>That data changes very rapidly, and it is an iterative process. When you download data, it is <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">a snapshot of the data</a> at a particular time. If your snapshot is too old for your needs, you can download <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/diffs">diff files</a> which bring you to the latest version.</p>
+<p>That data changes very rapidly, and it is an iterative process. When you download data, it is <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">a snapshot of the data</a> at a particular time. If your snapshot is too old for your needs, you can download <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/diffs">diff files</a> which bring you to the latest version.</p>
 <p>The data that you fetch from the main database is always "live" and current. Other sources (renderings, extracts, etc) can lag from a few minutes to a few months.</p>
 <p>Note also that whenever something changes, the old version of the object is kept in the database as well. You can explore that in your editor or by showing the "map data layer", clicking on an object, and clicking "history" in the left pane. You'll see when the object was changed, by who, in which way, etc. You can also process historical data if you have downloaded a file that contains it.</p>
 </div>

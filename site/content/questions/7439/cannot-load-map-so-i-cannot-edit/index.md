@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Potlatch2 works with URLs such as <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=55.951602&amp;lon=-3.198635&amp;zoom=22">this</a>, so you could locate the area that you want, zoom in, and then show tracks with the "gps data" option. This will show all tracks but won't show your saved waypoints, though.</p>
+<p>Potlatch2 works with URLs such as <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=55.951602&amp;lon=-3.198635&amp;zoom=22">this</a>, so you could locate the area that you want, zoom in, and then show tracks with the "gps data" option. This will show all tracks but won't show your saved waypoints, though.</p>
 <p>Alternatively - use that URL again, zoom in, and then in Potlatch2 just load the track that you want via "My Tracks". That'll load the track and waypoints too.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -144,9 +144,9 @@ osqa_accepted = false
 <div id="post-7456-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Instead, go to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> and navigate (in view mode) to where you want to start editing, and zoom in as far as you can there.</p>
+<p>Instead, go to <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> and navigate (in view mode) to where you want to start editing, and zoom in as far as you can there.</p>
 <p>From there, select the "edit" button above the main map and zoom in a bit more as soon as the editor window loads.</p>
-<p>The link will be of the form: <a href="http://www.openstreetmap.org/edit?lat=53.154617&amp;lon=-1.604711&amp;zoom=18">http://www.openstreetmap.org/edit?lat=53.154617&amp;lon=-1.604711&amp;zoom=18</a></p>
+<p>The link will be of the form: <a href="https://www.openstreetmap.org/edit?lat=53.154617&amp;lon=-1.604711&amp;zoom=18">https://www.openstreetmap.org/edit?lat=53.154617&amp;lon=-1.604711&amp;zoom=18</a></p>
 <p>where the "zoom=" bit controls how far you're zoomed in. The editor supports much higher zoom levels than map view so you can try e.g. "zoom=24" there...</p>
 </div>
 <div id="comment-7456-info" class="comment-info">
@@ -201,7 +201,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you zoomed right in? if not you might be tring to load too much data and it will fail related question <a href="http://help.openstreetmap.org/questions/2181/error-trying-load-map">http://help.openstreetmap.org/questions/2181/error-trying-load-map</a></p>
+<p>Have you zoomed right in? if not you might be tring to load too much data and it will fail related question <a href="/questions/2181/error-trying-load-map">https://help.openstreetmap.org/questions/2181/error-trying-load-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

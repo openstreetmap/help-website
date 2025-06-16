@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Is it <a href="http://help.openstreetmap.org/questions/3099/calculate-bbox-from-latlonzoompixel-widthpixel-height">this question</a>?</p>
+<p>Is it <a href="/questions/3099/calculate-bbox-from-latlonzoompixel-widthpixel-height">this question</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ osqa_accepted = false
 <div id="post-14674-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://pastebin.com/mMKrhA4D">http://pastebin.com/mMKrhA4D</a> is what I did with what he wrote at <a href="http://help.openstreetmap.org/questions/3099/calculate-bbox-from-latlonzoompixel-widthpixel-height.">http://help.openstreetmap.org/questions/3099/calculate-bbox-from-latlonzoompixel-widthpixel-height.</a> But the calculated values are too large. Why is that?</p>
+<p><a href="http://pastebin.com/mMKrhA4D">http://pastebin.com/mMKrhA4D</a> is what I did with what he wrote at <a href="/questions/3099/calculate-bbox-from-latlonzoompixel-widthpixel-height.">https://help.openstreetmap.org/questions/3099/calculate-bbox-from-latlonzoompixel-widthpixel-height.</a> But the calculated values are too large. Why is that?</p>
 </div>
 <div id="comment-14674-info" class="comment-info">
 <span class="comment-age">(27 Jul '12, 22:19)</span> <span class="comment-user userinfo">Richart</span>

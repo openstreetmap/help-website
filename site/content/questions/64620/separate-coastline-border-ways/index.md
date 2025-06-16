@@ -45,7 +45,7 @@ osqa_accepted = true
 <li><a href="https://www.openstreetmap.org/way/22744974">w22744974</a> is a coastline that is not marked as a boundary.</li>
 </ol>
 <p>I'm guessing the two should be merged, but I just want to confirm it first.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-07-10_at_9.09.49_pm.png" alt="image of coastline vs state boundary" /></p>
+<p><img src="/upfiles/Screen_Shot_2018-07-10_at_9.09.49_pm.png" alt="image of coastline vs state boundary" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-border" rel="tag" title="see questions tagged &#39;border&#39;">border</span> <span class="post-tag tag-link-mapping" rel="tag" title="see questions tagged &#39;mapping&#39;">mapping</span> <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span>

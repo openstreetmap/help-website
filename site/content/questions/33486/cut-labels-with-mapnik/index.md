@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Cut Labels with Mapnik"
-description = '''I&#x27;m getting cut labels on my maps. Same thing is happening on the main map here: http://www.openstreetmap.org/#map=11/52.3303/-1.3774 (look between Coventry and Rugby) Anyone know how to fix them? I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile. Also made a static one with Mapni...'''
+description = '''I&#x27;m getting cut labels on my maps. Same thing is happening on the main map here: https://www.openstreetmap.org/#map=11/52.3303/-1.3774 (look between Coventry and Rugby) Anyone know how to fix them? I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile. Also made a static one with Mapni...'''
 date = "2014-05-26T18:20:00Z"
 lastmod = "2014-05-26T18:20:00Z"
 weight = 33486
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm getting cut labels on my maps. Same thing is happening on the main map here:</p>
-<p><a href="http://www.openstreetmap.org/#map=11/52.3303/-1.3774">http://www.openstreetmap.org/#map=11/52.3303/-1.3774</a></p>
+<p><a href="https://www.openstreetmap.org/#map=11/52.3303/-1.3774">https://www.openstreetmap.org/#map=11/52.3303/-1.3774</a></p>
 <p>(look between Coventry and Rugby)</p>
 <p>Anyone know how to fix them?</p>
 <p>I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile. Also made a static one with Mapnik and generate_tiles.py to make the tiles. Same thing is happening in both cases.</p>

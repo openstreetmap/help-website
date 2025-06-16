@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is a ditch a stream or a drain?"
-description = '''I have just added a short branch of a &#x27;stream&#x27; to the map (http://www.openstreetmap.org/?lat=50.842754&amp;amp;lon=-1.214097&amp;amp;zoom=18&amp;amp;layers=M). It is not really a stream so much as a drainage ditch running alongside a footpath. Potlatch 2 offers me the choice of describing it as a stream or a dr...'''
+description = '''I have just added a short branch of a &#x27;stream&#x27; to the map (https://www.openstreetmap.org/?lat=50.842754&amp;amp;lon=-1.214097&amp;amp;zoom=18&amp;amp;layers=M). It is not really a stream so much as a drainage ditch running alongside a footpath. Potlatch 2 offers me the choice of describing it as a stream or a dr...'''
 date = "2012-07-31T20:14:00Z"
 lastmod = "2012-09-30T10:56:00Z"
 weight = 14730
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have just added a short branch of a 'stream' to the map (<a href="http://www.openstreetmap.org/?lat=50.842754&amp;lon=-1.214097&amp;zoom=18&amp;layers=M).">http://www.openstreetmap.org/?lat=50.842754&amp;lon=-1.214097&amp;zoom=18&amp;layers=M).</a> It is not really a stream so much as a drainage ditch running alongside a footpath. Potlatch 2 offers me the choice of describing it as a stream or a drain. Which would be more appropriate, or are there other tags that I could consider?</p>
+<p>I have just added a short branch of a 'stream' to the map (<a href="https://www.openstreetmap.org/?lat=50.842754&amp;lon=-1.214097&amp;zoom=18&amp;layers=M).">https://www.openstreetmap.org/?lat=50.842754&amp;lon=-1.214097&amp;zoom=18&amp;layers=M).</a> It is not really a stream so much as a drainage ditch running alongside a footpath. Potlatch 2 offers me the choice of describing it as a stream or a drain. Which would be more appropriate, or are there other tags that I could consider?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ditch" rel="tag" title="see questions tagged &#39;ditch&#39;">ditch</span> <span class="post-tag tag-link-stream" rel="tag" title="see questions tagged &#39;stream&#39;">stream</span> <span class="post-tag tag-link-drain" rel="tag" title="see questions tagged &#39;drain&#39;">drain</span>
@@ -68,7 +68,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I think of a streams as natural and possibly meandering like the one a little to west of your link and a ditch as a man made item straight or parallel to a field edge or road. see this <a href="http://wiki.openstreetmap.org/wiki/Key:waterway/Narrow_variants">http://wiki.openstreetmap.org/wiki/Key:waterway/Narrow_variants</a></p>
+<p>I think of a streams as natural and possibly meandering like the one a little to west of your link and a ditch as a man made item straight or parallel to a field edge or road. see this <a href="https://wiki.openstreetmap.org/wiki/Key:waterway/Narrow_variants">https://wiki.openstreetmap.org/wiki/Key:waterway/Narrow_variants</a></p>
 </div>
 <div id="comment-14734-info" class="comment-info">
 <span class="comment-age">(31 Jul '12, 21:49)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -167,7 +167,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki documents <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dditch">waterway=ditch</a> as another option. That tag is commonly used <a href="http://taginfo.openstreetmap.org:8001/tags/waterway=ditch">according to taginfo</a> (even though the correlation with source=* suggests a large share of imports), and it is available through JOSM presets.</p>
+<p>The wiki documents <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dditch">waterway=ditch</a> as another option. That tag is commonly used <a href="http://taginfo.openstreetmap.org:8001/tags/waterway=ditch">according to taginfo</a> (even though the correlation with source=* suggests a large share of imports), and it is available through JOSM presets.</p>
 <p>If it fits more closely than other waterway values, you should consider using it even if it is not among the rather limited selection of tags known to Potlatch.</p>
 </div>
 <div class="answer-controls post-controls">

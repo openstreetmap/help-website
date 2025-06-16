@@ -151,9 +151,9 @@ One Answer:
 <div class="comment-text">
 <p>These might also be useful:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns">Mapping landuse residential and overlapping it by other landuse (on smaller areas in towns)</a></li>
-<li><a href="https://help.openstreetmap.org/questions/18495/is-it-okay-if-landuse-borders-share-nodes-with-streets-rivers">Is it okay if landuse borders share nodes with streets / rivers?</a></li>
-<li><a href="https://help.openstreetmap.org/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">Should the edges of landuse= <em>or boundary=</em> areas share points with streets that form their borders?</a></li>
+<li><a href="/questions/6508/mapping-landuse-residential-and-overlapping-it-by-other-landuse-on-smaller-areas-in-towns">Mapping landuse residential and overlapping it by other landuse (on smaller areas in towns)</a></li>
+<li><a href="/questions/18495/is-it-okay-if-landuse-borders-share-nodes-with-streets-rivers">Is it okay if landuse borders share nodes with streets / rivers?</a></li>
+<li><a href="/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">Should the edges of landuse= <em>or boundary=</em> areas share points with streets that form their borders?</a></li>
 </ul>
 </div>
 <div id="comment-68476-info" class="comment-info">

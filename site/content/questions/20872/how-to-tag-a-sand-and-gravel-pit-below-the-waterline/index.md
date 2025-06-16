@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a sand and gravel pit below the waterline ?"
-description = '''I realized after reading this old question, &#x27;how to tag a disused quarry&#x27;, that we have sand, gravel and even peat pits, below the water level. Look here a sand pit, http://www.openstreetmap.org/?lat=52.00672&amp;amp;lon=6.06508&amp;amp;zoom=15&amp;amp;layers=M. I wouldn’t use quarry since it’s not an open air ...'''
+description = '''I realized after reading this old question, &#x27;how to tag a disused quarry&#x27;, that we have sand, gravel and even peat pits, below the water level. Look here a sand pit, https://www.openstreetmap.org/?lat=52.00672&amp;amp;lon=6.06508&amp;amp;zoom=15&amp;amp;layers=M. I wouldn’t use quarry since it’s not an open air ...'''
 date = "2013-03-21T12:40:00Z"
 lastmod = "2016-06-01T09:38:00Z"
 weight = 20872
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I realized after reading this old question, 'how to tag a disused quarry', that we have sand, gravel and even peat pits, below the water level. Look here a sand pit, <a href="http://www.openstreetmap.org/?lat=52.00672&amp;lon=6.06508&amp;zoom=15&amp;layers=M.">http://www.openstreetmap.org/?lat=52.00672&amp;lon=6.06508&amp;zoom=15&amp;layers=M.</a> I wouldn’t use quarry since it’s not an open air pit, any idea ? And after being disused or abandoned they’re reshaped into recreation areas, like this one <a href="http://www.openstreetmap.org/?lat=51.102&amp;lon=5.81535&amp;zoom=15&amp;layers=M.">http://www.openstreetmap.org/?lat=51.102&amp;lon=5.81535&amp;zoom=15&amp;layers=M.</a> Just ad the material sand, gravel as values to the key resource, with or without the remark below water level ? Greetz</p>
+<p>I realized after reading this old question, 'how to tag a disused quarry', that we have sand, gravel and even peat pits, below the water level. Look here a sand pit, <a href="https://www.openstreetmap.org/?lat=52.00672&amp;lon=6.06508&amp;zoom=15&amp;layers=M.">https://www.openstreetmap.org/?lat=52.00672&amp;lon=6.06508&amp;zoom=15&amp;layers=M.</a> I wouldn’t use quarry since it’s not an open air pit, any idea ? And after being disused or abandoned they’re reshaped into recreation areas, like this one <a href="https://www.openstreetmap.org/?lat=51.102&amp;lon=5.81535&amp;zoom=15&amp;layers=M.">https://www.openstreetmap.org/?lat=51.102&amp;lon=5.81535&amp;zoom=15&amp;layers=M.</a> Just ad the material sand, gravel as values to the key resource, with or without the remark below water level ? Greetz</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-below" rel="tag" title="see questions tagged &#39;below&#39;">below</span> <span class="post-tag tag-link-pit" rel="tag" title="see questions tagged &#39;pit&#39;">pit</span> <span class="post-tag tag-link-peat" rel="tag" title="see questions tagged &#39;peat&#39;">peat</span> <span class="post-tag tag-link-level" rel="tag" title="see questions tagged &#39;level&#39;">level</span>

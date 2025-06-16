@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/relation/5916003#map=18/60.39040/5.32855">http://www.openstreetmap.org/relation/5916003#map=18/60.39040/5.32855</a> would indicate that if there was an issue it has been fixed in the mean time.</p>
+<p><a href="https://www.openstreetmap.org/relation/5916003#map=18/60.39040/5.32855">https://www.openstreetmap.org/relation/5916003#map=18/60.39040/5.32855</a> would indicate that if there was an issue it has been fixed in the mean time.</p>
 <p>When you get to it, could you update the maps.me map data and check if everything is OK?</p>
 </div>
 <div class="answer-controls post-controls">

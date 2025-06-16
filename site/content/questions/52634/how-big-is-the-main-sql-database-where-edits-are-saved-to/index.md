@@ -150,7 +150,7 @@ One Answer:
 <div id="post-53337-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13060/wetitpig0">@Wetitpig0</a> - I also noticed the sharp db size drops but have no idea what that can be. I think user TomH on osm-dev IRC channel will know (try to ping him - if you get answer please post here).</p>
+<p><a href="https://help.openstreetmap.org/users/13060/wetitpig0">@Wetitpig0</a> - I also noticed the sharp db size drops but have no idea what that can be. I think user TomH on osm-dev IRC channel will know (try to ping him - if you get answer please post here).</p>
 </div>
 <div id="comment-53337-info" class="comment-info">
 <span class="comment-age">(08 Dec '16, 08:06)</span> <span class="comment-user userinfo">Kozuch</span>
@@ -162,7 +162,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>This may be due to the defragmentation of the OSM database. I have not asked the developers, but someone said this in <a href="https://help.openstreetmap.org/questions/53430/visible-tile-borders-in-rendering">one question</a>.</p>
+<p>This may be due to the defragmentation of the OSM database. I have not asked the developers, but someone said this in <a href="/questions/53430/visible-tile-borders-in-rendering">one question</a>.</p>
 </div>
 <div id="comment-53432-info" class="comment-info">
 <span class="comment-age">(09 Dec '16, 08:42)</span> <span class="comment-user userinfo">Wetitpig0</span>

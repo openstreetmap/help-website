@@ -166,7 +166,7 @@ One Answer:
 <div id="post-37963-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>, you are welcome, glad that I could help you. Your comments made me curious and looked through the defaultpresets.xml and found that the option disable_off for check box controls whether the tag to be present or not. If you set disable_off to true, the tag will not show up when it is unset. Setting it to true will cause to go through the cycles you mentioned in your first comment.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>, you are welcome, glad that I could help you. Your comments made me curious and looked through the defaultpresets.xml and found that the option disable_off for check box controls whether the tag to be present or not. If you set disable_off to true, the tag will not show up when it is unset. Setting it to true will cause to go through the cycles you mentioned in your first comment.</p>
 </div>
 <div id="comment-37963-info" class="comment-info">
 <span class="comment-age">(26 Oct '14, 07:58)</span> <span class="comment-user userinfo">primej</span>

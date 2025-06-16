@@ -141,7 +141,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I used your co-ords to get this. <a href="https://www.openstreetmap.org/#map=19/47.71452/-124.42098">https://www.openstreetmap.org/#map=19/47.71452/-124.42098</a> I seems to me that the coastline was partly created clock wise and part anti clock. I have only mapped a few lakes with islands and can't remember which side of the line land is supposed to be on but it is in the wiki. I have looked it up and..</p>
 <p>The coastline should be created anti-clockwise with the land to the left as you create a coastline. With P3 and JOSM editors the way direction can be reversed. When I looked at your island the greater part of the coastline needed reversing so the land was to the left. You could look at another location and inspect the tagging see the JPEG note the arrow in the tool box indicates the "way" direction.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Coastline.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Coastline.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -206,7 +206,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This should be a comment but i wanted to illustrate the issue. I do not think it will render for the reasons in my first answer ( land should be to the left of the coastline "way" ) but a further check shows this when I select one section of the coastline it also selects some rocks that are in a multi polygon, I do not think this is correct either. <img src="https://help.openstreetmap.org/upfiles/potlatch_of_island_and_rocks.JPG" alt="alt text" /></p>
+<p>This should be a comment but i wanted to illustrate the issue. I do not think it will render for the reasons in my first answer ( land should be to the left of the coastline "way" ) but a further check shows this when I select one section of the coastline it also selects some rocks that are in a multi polygon, I do not think this is correct either. <img src="/upfiles/potlatch_of_island_and_rocks.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -314,7 +314,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This bit shows is in the opposite direction according to the arrows. or have I selected something other than the coastline? <img src="https://help.openstreetmap.org/upfiles/coastline2.JPG" alt="alt text" /></p>
+<p>This bit shows is in the opposite direction according to the arrows. or have I selected something other than the coastline? <img src="/upfiles/coastline2.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

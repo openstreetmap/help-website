@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Do any of the suggestions <a href="https://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper">here</a> help?</p>
+<p>Do any of the suggestions <a href="/questions/9043/printing-osm-maps-to-paper">here</a> help?</p>
 </div>
 <div id="comment-24344-info" class="comment-info">
 <span class="comment-age">(18 Jul '13, 12:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are several ways (from using various website tools to local programs)</p>
-<p>You can find the list at the OSM wiki <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">here</a></p>
+<p>You can find the list at the OSM wiki <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

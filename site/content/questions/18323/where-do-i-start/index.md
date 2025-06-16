@@ -128,7 +128,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>This assumes that the data is in OpenStreetMap already, and you want to create the files needed for your garmin unit. Before that though, if you want to create the map in the first place within OpenStreetMap (and share it with the world in our wonderful free dataset), then there's lots to learn about, editing OpenStreetMap, and recording data.</p>
-<p>We have a beginners guide for this <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> ...Also maybe check out <a href="http://learnosm.org">http://learnosm.org</a></p>
+<p>We have a beginners guide for this <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> ...Also maybe check out <a href="http://learnosm.org">http://learnosm.org</a></p>
 </div>
 <div id="comment-18335-info" class="comment-info">
 <span class="comment-age">(10 Dec '12, 13:33)</span> <span class="comment-user userinfo">Harry Wood</span>

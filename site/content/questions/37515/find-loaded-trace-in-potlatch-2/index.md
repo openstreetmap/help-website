@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Which ones are you having problems with - is it just the large ones perhaps? I tried going to <a href="http://www.openstreetmap.org/user/Mrdezzz/traces">your traces list</a> and clicked "edit" against one of the smaller (~2000 point) ones. That loaded that trace in Potlatch2 (it took a few seconds). However with one of the &gt; 7000 point ones it doesn't seem to load.</p>
+<p>Which ones are you having problems with - is it just the large ones perhaps? I tried going to <a href="https://www.openstreetmap.org/user/Mrdezzz/traces">your traces list</a> and clicked "edit" against one of the smaller (~2000 point) ones. That loaded that trace in Potlatch2 (it took a few seconds). However with one of the &gt; 7000 point ones it doesn't seem to load.</p>
 </div>
 <div id="comment-37523-info" class="comment-info">
 <span class="comment-age">(11 Oct '14, 10:14)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -144,7 +144,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This trace was probably recorded while stationary <a href="http://www.openstreetmap.org/user/Mrdezzz/traces/1810053">http://www.openstreetmap.org/user/Mrdezzz/traces/1810053</a> so would only be of use to locate a single point, as it has 6000 points it is wasteful of resources. I would suggest you check your traces in some way before uploading, GPSPrune will show a trace on an osm map so you can edit it before uploading.<img src="http://help.openstreetmap.org/upfiles/trace_on_p2_map.JPG" alt="alt text" /></p>
+<p>This trace was probably recorded while stationary <a href="https://www.openstreetmap.org/user/Mrdezzz/traces/1810053">https://www.openstreetmap.org/user/Mrdezzz/traces/1810053</a> so would only be of use to locate a single point, as it has 6000 points it is wasteful of resources. I would suggest you check your traces in some way before uploading, GPSPrune will show a trace on an osm map so you can edit it before uploading.<img src="/upfiles/trace_on_p2_map.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ One Answer:
 <div id="post-37539-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>My answer here may help <a href="https://help.openstreetmap.org/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process">https://help.openstreetmap.org/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process</a></p>
+<p>My answer here may help <a href="/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process">https://help.openstreetmap.org/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process</a></p>
 </div>
 <div id="comment-37539-info" class="comment-info">
 <span class="comment-age">(11 Oct '14, 23:31)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -224,7 +224,7 @@ One Answer:
 <div id="post-37556-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>see new Q <a href="https://help.openstreetmap.org/questions/37543/draw-gpx-trace-on-top-of-roads">https://help.openstreetmap.org/questions/37543/draw-gpx-trace-on-top-of-roads</a></p>
+<p>see new Q <a href="/questions/37543/draw-gpx-trace-on-top-of-roads">https://help.openstreetmap.org/questions/37543/draw-gpx-trace-on-top-of-roads</a></p>
 </div>
 <div id="comment-37556-info" class="comment-info">
 <span class="comment-age">(12 Oct '14, 12:03)</span> <span class="comment-user userinfo">andy mackey</span>

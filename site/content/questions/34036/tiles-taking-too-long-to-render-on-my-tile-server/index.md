@@ -209,7 +209,7 @@ osqa_accepted = false
 <div id="post-42390-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9046/ale42">@ale42</a> did you resolve this? I have an <em>incredibly</em> slow tile server.</p>
+<p><a href="https://help.openstreetmap.org/users/9046/ale42">@ale42</a> did you resolve this? I have an <em>incredibly</em> slow tile server.</p>
 </div>
 <div id="comment-42390-info" class="comment-info">
 <span class="comment-age">(16 Apr '15, 15:35)</span> <span class="comment-user userinfo">haroldship</span>

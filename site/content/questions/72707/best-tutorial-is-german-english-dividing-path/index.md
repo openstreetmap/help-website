@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The iD editor has a tutorial which seems good. Signup, start iD and read them. BUT this seems easier <a href="https://help.openstreetmap.org/questions/55984/splitting-a-multipolygon-into-two-in-id">https://help.openstreetmap.org/questions/55984/splitting-a-multipolygon-into-two-in-id</a></p>
+<p>The iD editor has a tutorial which seems good. Signup, start iD and read them. BUT this seems easier <a href="/questions/55984/splitting-a-multipolygon-into-two-in-id">https://help.openstreetmap.org/questions/55984/splitting-a-multipolygon-into-two-in-id</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

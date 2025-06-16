@@ -127,7 +127,7 @@ One Answer:
 <div id="post-41765-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@simonPoole</a>: Thank you, <span>this is what my printed design would look like</span> with the attribution at the bottom right hand corner - the map would be A4 so would the type size be adequate for this.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@simonPoole</a>: Thank you, <span>this is what my printed design would look like</span> with the attribution at the bottom right hand corner - the map would be A4 so would the type size be adequate for this.</p>
 <p>Thank you</p>
 </div>
 <div id="comment-41765-info" class="comment-info">

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I would like to update many businesses in my neighborhood as it appears most of the town hasn't been updated for a while.</p>
-<p>In looking up best practices, I saw that a good suggestion was to move businesses that had moved to their new location (from: <a href="https://help.openstreetmap.org/questions/29089/how-to-indicate-that-restaurant-moved">https://help.openstreetmap.org/questions/29089/how-to-indicate-that-restaurant-moved</a>). At this point, I have perhaps 50-100+ (maybe far more) deprecated shops and amenities that show up on OSM. I don't know where most of them went.</p>
+<p>In looking up best practices, I saw that a good suggestion was to move businesses that had moved to their new location (from: <a href="/questions/29089/how-to-indicate-that-restaurant-moved">https://help.openstreetmap.org/questions/29089/how-to-indicate-that-restaurant-moved</a>). At this point, I have perhaps 50-100+ (maybe far more) deprecated shops and amenities that show up on OSM. I don't know where most of them went.</p>
 <p>My plan is to change the information to the new businesses and use 'old_name=*' tag to show the shop/amenity that used to be there.</p>
 <p>Does it make sense to do it this way? I found it quite difficult to individually look up where the old businesses had gone or whether they had simply closed their doors for good.</p>
 <p>any and all tips would be helpful. I am simply trying to keep my home updated in OSM.</p>

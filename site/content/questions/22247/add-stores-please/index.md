@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As Grillo says you can add your own tags ( there is a wool shop ) but if you need a new icon the docs have links to making them <a href="http://wiki.openstreetmap.org/wiki/Map_Icons">http://wiki.openstreetmap.org/wiki/Map_Icons</a></p>
+<p>As Grillo says you can add your own tags ( there is a wool shop ) but if you need a new icon the docs have links to making them <a href="https://wiki.openstreetmap.org/wiki/Map_Icons">https://wiki.openstreetmap.org/wiki/Map_Icons</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

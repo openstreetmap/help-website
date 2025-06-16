@@ -106,7 +106,7 @@ This question is marked "community wiki".
 <div id="post-5574-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There's a section on this funny old wiki page: <a href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">Editing Standards and Conventions</a> ...on the topic. Doesn't answer you question though. Maybe you could lay down some guidelines there, if your ideas are accepted.</p>
+<p>There's a section on this funny old wiki page: <a href="https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">Editing Standards and Conventions</a> ...on the topic. Doesn't answer you question though. Maybe you could lay down some guidelines there, if your ideas are accepted.</p>
 </div>
 <div id="comment-5574-info" class="comment-info">
 <span class="comment-age">(06 Jun '11, 12:33)</span> <span class="comment-user userinfo">Harry Wood</span>

@@ -94,7 +94,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I go to this page and at the bottom i click on United States <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>I go to this page and at the bottom i click on United States <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 <p>then it go to this page <a href="http://daveh.dev.openstreetmap.org/garmin/Lambertus/">http://daveh.dev.openstreetmap.org/garmin/Lambertus/</a></p>
 <p>I pick the (Latest) at the bottom of page. It takes me to this page <a href="http://daveh.dev.openstreetmap.org/garmin/Lambertus/latest/">http://daveh.dev.openstreetmap.org/garmin/Lambertus/latest/</a> I then pick the 4000MD-???????.gmapsupp.ing Then that is when i get the garbage. I can do this with Firefox and it works great. So how do i do this with Internet Explorer 9?</p>
 </div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p><em>Please note - sorry but I couldn't get the question editor to show my XML so I've had to replace all the '&lt;'s with '[' and all the '&gt;'s with ']' in what follows. If someone knows how to fix this for me please let me know - thanks.</em></p>
-<p>I am building a simple application which, given a worldwide lat/lon, requires details of the nearest city or town, based upon a simple as-the-crow-flies measurement. To achieve this I've chosen to use the OSM nodes which are tagged place='town' or place='city', calculating the spherical distance between my check point and each node's lat/lon. These nodes, according to <a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a>, represent the approximate centre of each town and city and so are ideal for my requirement.</p>
+<p>I am building a simple application which, given a worldwide lat/lon, requires details of the nearest city or town, based upon a simple as-the-crow-flies measurement. To achieve this I've chosen to use the OSM nodes which are tagged place='town' or place='city', calculating the spherical distance between my check point and each node's lat/lon. These nodes, according to <a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a>, represent the approximate centre of each town and city and so are ideal for my requirement.</p>
 <p>Given my chosen approach, I extracted the data from the Overpass API, using the following requests:</p>
 <pre><code>curl http://www.overpass-api.de/api/xapi?node[place=city] -g -o worldcities.osm
 curl http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360] -g -o worldtowns.osm -g -o worldtowns.osm</code></pre>
@@ -515,7 +515,7 @@ curl http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360] -g -o wo
 <p>And from this is I can use code to go through the boundary admin_levels, in descending sequence, to give me:</p>
 <p>New Forest, Hampshire, South East England, England, United Kingdom</p>
 <p>which are exactly the details I was hoping to get from the is_in tag. So, I've started a process of doing this for all of the towns and cities, effectively adding my own 'is_in' tag to my application's database.</p>
-<p>Here's some results from the process, with the node's is_in tag at the end (if it has one) to allows some comparison. The number at the beginning is the node's id for reference, e.g. <a href="http://www.openstreetmap.org/node/107775">http://www.openstreetmap.org/node/107775</a> for the first row.</p>
+<p>Here's some results from the process, with the node's is_in tag at the end (if it has one) to allows some comparison. The number at the beginning is the node's id for reference, e.g. <a href="https://www.openstreetmap.org/node/107775">https://www.openstreetmap.org/node/107775</a> for the first row.</p>
 <pre><code>107775 - London: Greater London, England, United Kingdom [is_in=England, United Kingdom, UK, Great Britain, Europe]
 204648 - Wellington: New Zealand [is_in=North Island, New Zealand]
 273316 - Itajaí: Santa Catarina, South Region, Brazil [is_in=Santa Catarina, Brazil]
@@ -567,7 +567,7 @@ curl http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360] -g -o wo
 <li>Should I consider sharing the results of my processing? Should I even consider using this to update the OSM central database, setting each place node with the is_in tags I have determined? I would have used a more standardised is_in tag if it had been available and so wonder if the OSM community could benefit somehow?</li>
 <li>I'm really only considering English names, but am aware I'm working with Worldwide data. If this information is to be shared what additional processing should be added? I wonder if I can determine the language which is applicable to each node so I could use, for example, the name:es tags for a Spanish location rather than the name:en ones which I'm using currently?</li>
 </ol>
-<p>One thing nagging me is that I'm wondering why this approach hasn't been applied before. Map data is, by its very nature, a hierarchy of places within other places, so why is it necessary to have a free-form is_in tag to describe the hierarchy which already exists? I've read through <a href="http://wiki.openstreetmap.org/wiki/Key:is_in">http://wiki.openstreetmap.org/wiki/Key:is_in</a> and the discussion about boundary polygon making is_in redundant vs. is_in permitting 'simpler searching and easy disambiguation' and I strongly agree with the latter point; in my case having the is_in tag available would save a great deal of complex boundary processing by the Overpass API servers.</p>
+<p>One thing nagging me is that I'm wondering why this approach hasn't been applied before. Map data is, by its very nature, a hierarchy of places within other places, so why is it necessary to have a free-form is_in tag to describe the hierarchy which already exists? I've read through <a href="https://wiki.openstreetmap.org/wiki/Key:is_in">https://wiki.openstreetmap.org/wiki/Key:is_in</a> and the discussion about boundary polygon making is_in redundant vs. is_in permitting 'simpler searching and easy disambiguation' and I strongly agree with the latter point; in my case having the is_in tag available would save a great deal of complex boundary processing by the Overpass API servers.</p>
 <p>Thanks for any help or guidance you can offer.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -659,7 +659,7 @@ curl http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360] -g -o wo
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Investigate "reverse geocoding" such as is possible with <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">Nominatim</a> or other services. The <a href="http://wiki.openstreetmap.org/wiki/Key:is_in"><code>is_in</code></a> tag is an old tag which is usually ignored or removed where boundary relations exist.</p>
+<p>Investigate "reverse geocoding" such as is possible with <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">Nominatim</a> or other services. The <a href="https://wiki.openstreetmap.org/wiki/Key:is_in"><code>is_in</code></a> tag is an old tag which is usually ignored or removed where boundary relations exist.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -689,7 +689,7 @@ curl http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360] -g -o wo
 <div id="post-33717-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Given your comment on the is_in tag being old and usually ignored, I think it is also notable that Nominatim actually uses it when assessing the location name. See <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview:">http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview:</a></p>
+<p>Given your comment on the is_in tag being old and usually ignored, I think it is also notable that Nominatim actually uses it when assessing the location name. See <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview:">https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview:</a></p>
 <p>"All items by name listed in the is_in are searched for within the current country (in no particular order)." and "During the indexing process an address is also calculated using the first feature found for each level. Where an is_in value is provided it is used to filter the address."</p>
 </div>
 <div id="comment-33717-info" class="comment-info">
@@ -732,7 +732,7 @@ curl http://www.overpass-api.de/api/xapi?node[place=town][@timeout=360] -g -o wo
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe some more hints about reverse geocoding can be found at <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a></p>
+<p>Maybe some more hints about reverse geocoding can be found at <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

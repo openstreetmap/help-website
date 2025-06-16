@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>Hi and welcome, Fabio!</p>
 <p>Do you mean the appearance at our standard map style on osm.org? Then please see the answers to that other question (in short: currently no changes are made since it is ported to a new system but there are <span>lots of other map styles and uses of our data</span>): <span>Question: rendering-of-public_transportplatform-on-mapnik</span>.</p>
-<p>If you mean the preset icons of the editor Potlatch2 (which you used in <a href="http://www.openstreetmap.org/browse/changeset/14791884">your last edit</a>): it does, by far, not support all <span>features</span> which we have <a href="http://taginfo.openstreetmap.org/tags">in our data</a>. Here is how to tag a computer shop: <span>shop=computer</span> (in our docu wiki). You can add those tags via the <span>advanced mode in Potlatch2</span>.</p>
+<p>If you mean the preset icons of the editor Potlatch2 (which you used in <a href="https://www.openstreetmap.org/browse/changeset/14791884">your last edit</a>): it does, by far, not support all <span>features</span> which we have <a href="http://taginfo.openstreetmap.org/tags">in our data</a>. Here is how to tag a computer shop: <span>shop=computer</span> (in our docu wiki). You can add those tags via the <span>advanced mode in Potlatch2</span>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

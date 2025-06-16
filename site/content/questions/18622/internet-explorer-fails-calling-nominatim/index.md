@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>hello,</p>
-<p>i got a problem similar to <a href="https://help.openstreetmap.org/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">https://help.openstreetmap.org/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer</a></p>
+<p>i got a problem similar to <a href="/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">https://help.openstreetmap.org/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer</a></p>
 <p>that is my call to nominatim: <a href="http://nominatim.openstreetmap.org/search?q=flughafen%2Chamburg%2CDE&amp;format=json&amp;addressdetails=0&amp;limit=1">Suche Flughafen Hamburg</a> in Firefox i can read the answer in standard tab. In InternetExplorer i also receive the same result (after having a detail look with a debug tool)<br />
 </p>
 <p>But calling that link inside a webpage wih jquery... in Firefox anything is fine.</p>
@@ -133,7 +133,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you checked your encoding as suggested in the question you linked to? Try searching for something without any special characters in it like 'london' and see if that works. If it does it would suggest an encoding problem - follow the advice from <a href="https://help.openstreetmap.org/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">https://help.openstreetmap.org/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer</a>.</p>
+<p>Have you checked your encoding as suggested in the question you linked to? Try searching for something without any special characters in it like 'london' and see if that works. If it does it would suggest an encoding problem - follow the advice from <a href="/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer">https://help.openstreetmap.org/questions/722/why-does-nominatim-return-an-error-for-queries-from-internet-explorer</a>.</p>
 <p>Alternatively can you try using format=jsonv2 instead. The v2 format was introduced to fix a problem with a conflict between the property 'class' used in the original json format.</p>
 <p><a href="http://nominatim.openstreetmap.org/search?q=flughafen%2Chamburg%2CDE&amp;format=jsonv2&amp;addressdetails=0&amp;limit=1">http://nominatim.openstreetmap.org/search?q=flughafen%2Chamburg%2CDE&amp;format=jsonv2&amp;addressdetails=0&amp;limit=1</a></p>
 <p>If neither of these are the cause you will need to use the debugger to view the actual response comming back from the nominatim server. You could also try replacing <code>alert("error");</code> with <code>alert(err);</code> to hopefully get some useful information.</p>

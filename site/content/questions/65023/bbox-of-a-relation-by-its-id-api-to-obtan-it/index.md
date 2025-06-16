@@ -139,7 +139,7 @@ out  bb ;</code></pre>
 <p>gives the information you want (but not quite in the right format. A bit if editing will get it.</p>
 <pre><code>bounds minlat=&quot;-25.4832679&quot; minlon=&quot;-53.1090000&quot; maxlat=&quot;-19.7823272&quot; maxlon=&quot;-44.1610000&quot;</code></pre>
 <h1 id="using-a-relation-within-overpass">Using a relation within Overpass</h1>
-<p>Assuming you want to do the query mentioned in <a href="https://help.openstreetmap.org/questions/65020/best-way-to-retrieve-a-csv-table-from-overpass">Best way to retrieve a CSV table from Overpass</a> , the following query uses the area defined by the relation, rather than a bounding box.</p>
+<p>Assuming you want to do the query mentioned in <a href="/questions/65020/best-way-to-retrieve-a-csv-table-from-overpass">Best way to retrieve a CSV table from Overpass</a> , the following query uses the area defined by the relation, rather than a bounding box.</p>
 <pre><code>[out:csv(::id,::user,::type,wikidata,name,place, boundary)] ;
 relation   (298204) -&gt; .c ;
 .c map_to_area -&gt; .myarea ;

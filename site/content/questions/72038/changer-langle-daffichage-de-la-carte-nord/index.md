@@ -105,8 +105,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Probably the best bet is to use QGIS. You can use XYZ tiles and create a print layout with a different orientation than N up. One way is changing the angle of the canvas, but it is not perfect because the map canvas is specified in terms of a bbox. The other allows you to rotate the map in the canvas. Screenshots of the two techniques below.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_(63)_YchWJnj.png" alt="rotating a map canvas in QGIS" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_(64).png" alt="rotating a map within a canvas in QGIS" /></p>
+<p><img src="/upfiles/Screenshot_(63)_YchWJnj.png" alt="rotating a map canvas in QGIS" /></p>
+<p><img src="/upfiles/Screenshot_(64).png" alt="rotating a map within a canvas in QGIS" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

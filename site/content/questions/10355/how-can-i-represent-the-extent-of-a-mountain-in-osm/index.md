@@ -172,7 +172,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There seem to be more people concerned about mapping mountains. Maybe the openstreetmap wiki is a good place to join these activities and improve the state of the art, see <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Mountains">Proposed features/Mountains</a>.</p>
+<p>There seem to be more people concerned about mapping mountains. Maybe the openstreetmap wiki is a good place to join these activities and improve the state of the art, see <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Mountains">Proposed features/Mountains</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -233,7 +233,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In general, OSM does not carry elevation data. There are already good sources for elevation data (e.g. the <a href="http://wiki.openstreetmap.org/wiki/SRTM">SRTM data</a>), and obtaining better data from GPS or similar sources is very difficult, so the general consensus is that there is no point in putting elevation data into OSM (except for certain distinguished points, see <a href="http://wiki.openstreetmap.org/wiki/Key:ele">Key:ele</a>).</p>
+<p>In general, OSM does not carry elevation data. There are already good sources for elevation data (e.g. the <a href="https://wiki.openstreetmap.org/wiki/SRTM">SRTM data</a>), and obtaining better data from GPS or similar sources is very difficult, so the general consensus is that there is no point in putting elevation data into OSM (except for certain distinguished points, see <a href="https://wiki.openstreetmap.org/wiki/Key:ele">Key:ele</a>).</p>
 <p>So you do not input the extent of a mountain (which is not really well-defined anyway). If you want a map which shows the extent of a mountain, you create a contour map by combining OSM data with elevation data - this will then show the mountain with its contours.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -284,7 +284,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It currently sucks, you are right. Some related info <a href="https://help.openstreetmap.org/questions/28266/how-to-mark-a-mountain">here</a>.</p>
+<p>It currently sucks, you are right. Some related info <a href="/questions/28266/how-to-mark-a-mountain">here</a>.</p>
 <p>I see that people in Austria are using Massifs and Ranges. They are not yet really well displayed on the map. I.e. I'd like to see the mountains marked as Rax and Schneeberg, not as countless peaks and other smaller elements.</p>
 </div>
 <div class="answer-controls post-controls">

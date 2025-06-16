@@ -142,7 +142,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... oder schau generell im OSM-Wiki unter <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p>... oder schau generell im OSM-Wiki unter <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 </div>
 <div id="comment-22531-info" class="comment-info">
 <span class="comment-age">(17 May '13, 20:31)</span> <span class="comment-user userinfo">stephan75</span>

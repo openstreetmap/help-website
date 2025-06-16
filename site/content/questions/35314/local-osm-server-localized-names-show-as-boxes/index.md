@@ -72,7 +72,7 @@ osqa_accepted = true
 <div id="post-35321-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I cannot give you a concrete hint to solve your problem, butt maybe see the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">http://wiki.openstreetmap.org/wiki/Map_internationalization</a> to see different possibilities.</p>
+<p>I cannot give you a concrete hint to solve your problem, butt maybe see the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a> to see different possibilities.</p>
 </div>
 <div id="comment-35321-info" class="comment-info">
 <span class="comment-age">(30 Jul '14, 20:34)</span> <span class="comment-user userinfo">stephan75</span>

@@ -148,7 +148,7 @@ One Answer:
 <div id="post-50372-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Some similar ideas here <a href="http://wiki.openstreetmap.org/wiki/Mapping_techniques">http://wiki.openstreetmap.org/wiki/Mapping_techniques</a></p>
+<p>Some similar ideas here <a href="https://wiki.openstreetmap.org/wiki/Mapping_techniques">https://wiki.openstreetmap.org/wiki/Mapping_techniques</a></p>
 </div>
 <div id="comment-50372-info" class="comment-info">
 <span class="comment-age">(22 Jun '16, 09:22)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -172,7 +172,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>See something I wrote ages ago <a href="http://wiki.openstreetmap.org/wiki/User:SK53/Mad_Ideas#Naive_Triangulation_from_Images">http://wiki.openstreetmap.org/wiki/User:SK53/Mad_Ideas#Naive_Triangulation_from_Images</a></p>
+<p>See something I wrote ages ago <a href="https://wiki.openstreetmap.org/wiki/User:SK53/Mad_Ideas#Naive_Triangulation_from_Images">https://wiki.openstreetmap.org/wiki/User:SK53/Mad_Ideas#Naive_Triangulation_from_Images</a></p>
 </div>
 <div id="comment-50379-info" class="comment-info">
 <span class="comment-age">(22 Jun '16, 11:36)</span> <span class="comment-user userinfo">SK53 ♦</span>

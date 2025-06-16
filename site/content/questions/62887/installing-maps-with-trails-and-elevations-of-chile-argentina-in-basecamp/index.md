@@ -118,7 +118,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are many Garmin suitable osm based map producers to choose from:<br />
-<a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

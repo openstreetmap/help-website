@@ -127,7 +127,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are extracts of OpenStreetMap data for Equador available <a href="http://download.geofabrik.de/openstreetmap/south-america/">from Geofabrik</a> in a couple of formats. The .bz2 file will probably be easiest for you.</p>
-<p>There are instructions <a href="http://wiki.openstreetmap.org/wiki/Navitel">here</a> descriing how to convert a .osm file (raw OSM data) into a .nm2 file that's usable with Navitel.</p>
+<p>There are instructions <a href="https://wiki.openstreetmap.org/wiki/Navitel">here</a> descriing how to convert a .osm file (raw OSM data) into a .nm2 file that's usable with Navitel.</p>
 <p>I've not tried the process myself (I don't have anything to test the result with) but it sounds like it's worth a try.</p>
 </div>
 <div class="answer-controls post-controls">

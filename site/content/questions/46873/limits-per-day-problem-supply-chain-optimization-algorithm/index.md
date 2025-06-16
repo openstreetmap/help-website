@@ -245,7 +245,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Please note that there is no free solution based on OSM that allows you to make that many requests. It costs money to run a server with the whole planet dump and to provide bandwidth for so many requests. I think you either have to run your local server (and thus pay the cost) or pay for a geocoding solution.</p>
-<p>See Frederiks comment on <a href="https://help.openstreetmap.org/questions/46914/nominatim-alternative">https://help.openstreetmap.org/questions/46914/nominatim-alternative</a> which states the same</p>
+<p>See Frederiks comment on <a href="/questions/46914/nominatim-alternative">https://help.openstreetmap.org/questions/46914/nominatim-alternative</a> which states the same</p>
 </div>
 <div id="comment-46916-info" class="comment-info">
 <span class="comment-age">(01 Dec '15, 06:09)</span> <span class="comment-user userinfo">escada</span>

@@ -64,7 +64,7 @@ osqa_accepted = false
 <div class="comment-text">
 <ul>
 <li>Could you give us a link to the road in question?</li>
-<li>Road classification is not always black-or-white. Is there perhaps some useful guidance in the <a href="http://wiki.openstreetmap.org/wiki/Category:Tagging_guidelines_by_country">country-specific tagging guidelines</a>?</li>
+<li>Road classification is not always black-or-white. Is there perhaps some useful guidance in the <a href="https://wiki.openstreetmap.org/wiki/Category:Tagging_guidelines_by_country">country-specific tagging guidelines</a>?</li>
 </ul>
 </div>
 <div id="comment-51416-info" class="comment-info">
@@ -77,7 +77,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/418875340">http://www.openstreetmap.org/way/418875340</a> Disregard the current tagging but this is the type of way I want to tag correctly</p>
+<p><a href="https://www.openstreetmap.org/way/418875340">https://www.openstreetmap.org/way/418875340</a> Disregard the current tagging but this is the type of way I want to tag correctly</p>
 </div>
 <div id="comment-51418-info" class="comment-info">
 <span class="comment-age">(15 Aug '16, 11:27)</span> <span class="comment-user userinfo">Alan01730</span>

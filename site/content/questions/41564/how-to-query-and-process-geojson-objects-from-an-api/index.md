@@ -137,7 +137,7 @@ One Answer:
 <div id="post-41576-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> thanks for your reply. Would you bother to give me a link that sets me up with sufficient material to tackle this problem? The problem is that I do not know what specifically I need to work through and with regards to my deadline I would like to avoid a lengthy search.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> thanks for your reply. Would you bother to give me a link that sets me up with sufficient material to tackle this problem? The problem is that I do not know what specifically I need to work through and with regards to my deadline I would like to avoid a lengthy search.</p>
 </div>
 <div id="comment-41576-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 14:20)</span> <span class="comment-user userinfo">scoopert</span>
@@ -184,7 +184,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> As you claimed, it turned out not to be a major problem. Though it took me a whole day, now I have my code compiling and running using a csv file. However, I am not sure yet what logic I should implement to pick "the best match" from Photon to avoid that the coordinates refer to a completely different point in the country. One possibility I can imagine is that I exploit the fact that the postal address additionally provides the state. Thus, I can check whether Photon's response and my original data match. But this is a pretty poor check as states are big. Do you have a suggestion?</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> As you claimed, it turned out not to be a major problem. Though it took me a whole day, now I have my code compiling and running using a csv file. However, I am not sure yet what logic I should implement to pick "the best match" from Photon to avoid that the coordinates refer to a completely different point in the country. One possibility I can imagine is that I exploit the fact that the postal address additionally provides the state. Thus, I can check whether Photon's response and my original data match. But this is a pretty poor check as states are big. Do you have a suggestion?</p>
 </div>
 <div id="comment-41670-info" class="comment-info">
 <span class="comment-age">(13 Mar '15, 08:36)</span> <span class="comment-user userinfo">scoopert</span>

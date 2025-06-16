@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Land used to store houses - how should it be tagged?"
-description = '''This way http://www.openstreetmap.org/way/440915000 outlines the area used by the business Jack House Transit to store buildings which they have moved from one location and are being held pending sale and relocation to a different location. Have a look at JHT website http://www.houseremoval.co.nz/ f...'''
+description = '''This way https://www.openstreetmap.org/way/440915000 outlines the area used by the business Jack House Transit to store buildings which they have moved from one location and are being held pending sale and relocation to a different location. Have a look at JHT website http://www.houseremoval.co.nz/ f...'''
 date = "2016-09-06T11:02:00Z"
 lastmod = "2016-09-07T03:15:00Z"
 weight = 51919
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This way <a href="http://www.openstreetmap.org/way/440915000">http://www.openstreetmap.org/way/440915000</a> outlines the area used by the business Jack House Transit to store buildings which they have moved from one location and are being held pending sale and relocation to a different location. Have a look at JHT website <a href="http://www.houseremoval.co.nz/">http://www.houseremoval.co.nz/</a> for more information.</p>
+<p>This way <a href="https://www.openstreetmap.org/way/440915000">https://www.openstreetmap.org/way/440915000</a> outlines the area used by the business Jack House Transit to store buildings which they have moved from one location and are being held pending sale and relocation to a different location. Have a look at JHT website <a href="http://www.houseremoval.co.nz/">http://www.houseremoval.co.nz/</a> for more information.</p>
 <p>The way is already within an area tagged 'landuse=industrial' – should I just reuse that tag on the way or can anyone suggest something more appropriate?</p>
 <p>The site is, in very broad terms, a shop – I could have gone to the office, purchased one of the buildings and started making arrangements for it to be delivered and installed on a vacant piece of land. Tags I have considered are 'landuse=retail' or 'shop=buildings'</p>
 </div>

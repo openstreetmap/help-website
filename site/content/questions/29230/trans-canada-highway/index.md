@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As in most countries, please ask the local OSM community for the best way to go. <a href="http://forum.openstreetmap.org/viewforum.php?id=16.">http://forum.openstreetmap.org/viewforum.php?id=16.</a> And look at the other highways and their tags here . <a href="http://wiki.openstreetmap.org/wiki/Key:highway">http://wiki.openstreetmap.org/wiki/Key:highway</a> and a vieuw other pages.</p>
+<p>As in most countries, please ask the local OSM community for the best way to go. <a href="http://forum.openstreetmap.org/viewforum.php?id=16.">http://forum.openstreetmap.org/viewforum.php?id=16.</a> And look at the other highways and their tags here . <a href="https://wiki.openstreetmap.org/wiki/Key:highway">https://wiki.openstreetmap.org/wiki/Key:highway</a> and a vieuw other pages.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

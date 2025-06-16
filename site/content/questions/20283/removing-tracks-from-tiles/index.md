@@ -73,7 +73,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Any chance of posting a screenshot showing the problem? I don't see "tracks from other users" present on the <a href="https://itunes.apple.com/gb/app/motionx-gps/id299949744?mt=8">screenshots on this page</a>. I do see OpenCycleMap tiles in those pictures, but I don't see any GPS tracks from other users e.g. <a href="http://www.openstreetmap.org/?lat=37.76602&amp;lon=-122.39153&amp;zoom=16&amp;layers=C">here</a>. Even a ropy picture from another cameraphone would help.</p>
+<p>Any chance of posting a screenshot showing the problem? I don't see "tracks from other users" present on the <a href="https://itunes.apple.com/gb/app/motionx-gps/id299949744?mt=8">screenshots on this page</a>. I do see OpenCycleMap tiles in those pictures, but I don't see any GPS tracks from other users e.g. <a href="https://www.openstreetmap.org/?lat=37.76602&amp;lon=-122.39153&amp;zoom=16&amp;layers=C">here</a>. Even a ropy picture from another cameraphone would help.</p>
 </div>
 <div id="comment-20285-info" class="comment-info">
 <span class="comment-age">(25 Feb '13, 22:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

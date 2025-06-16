@@ -64,7 +64,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I am not sure whether this can help:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Free_The_Postcode">http://wiki.openstreetmap.org/wiki/Free_The_Postcode</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Free_The_Postcode">https://wiki.openstreetmap.org/wiki/Free_The_Postcode</a></p>
 <p>And I fear you have to specify your question with some examples:</p>
 <p>Do you have external own data without postal codes, and you want to add them including the correct postal code, and you want to derive the postal code from already existing OSM objects?</p>
 </div>
@@ -133,7 +133,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that there won't be an already-existing complete database which contains a list of OSM IDs and postcodes. This is because many people who have added buildings to OSM haven't added their postcodes. For example, if you search OSM for your example postcode "EC1A 2DE" no exact match comes back. Nearby you can see <a href="http://www.openstreetmap.org/browse/way/30610281">this church</a> (which has got a postcode mapped) and <a href="http://www.openstreetmap.org/browse/way/33128759">this adjacent building</a> which hasn't.</p>
+<p>I suspect that there won't be an already-existing complete database which contains a list of OSM IDs and postcodes. This is because many people who have added buildings to OSM haven't added their postcodes. For example, if you search OSM for your example postcode "EC1A 2DE" no exact match comes back. Nearby you can see <a href="https://www.openstreetmap.org/browse/way/30610281">this church</a> (which has got a postcode mapped) and <a href="https://www.openstreetmap.org/browse/way/33128759">this adjacent building</a> which hasn't.</p>
 <p>It may be possible to infer a postcode for an OSM ID from various external sources - here's <a href="http://sk53-osm.blogspot.co.uk/2013/03/local-government-open-data-2-checking.html">a blog post by <span>@SK53</span></a> talking about one approach. I wouldn't underestimate the work required though.</p>
 <p>Obviously postcode isn't unique except for large buildings - although maybe you're only interested in certain large buildings which do have a unique postcode?</p>
 </div>

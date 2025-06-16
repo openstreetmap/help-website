@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/6193/out-of-help-and-back-to-osm">https://help.openstreetmap.org/questions/6193/out-of-help-and-back-to-osm</a></p>
+<p><a href="/questions/6193/out-of-help-and-back-to-osm">https://help.openstreetmap.org/questions/6193/out-of-help-and-back-to-osm</a></p>
 </div>
 <div id="comment-29186-info" class="comment-info">
 <span class="comment-age">(19 Dec '13, 08:35)</span> <span class="comment-user userinfo">andy mackey</span>

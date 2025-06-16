@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to visit the page of the relevant proposal and see if the voting stage is open. I think <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/shelter_type">shelter type</a> is the only proposal with voting open currently. If you visit that page and scroll down to the Voting section you will see the information about how to vote on that proposal, the key bit being</p>
+<p>You need to visit the page of the relevant proposal and see if the voting stage is open. I think <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/shelter_type">shelter type</a> is the only proposal with voting open currently. If you visit that page and scroll down to the Voting section you will see the information about how to vote on that proposal, the key bit being</p>
 <blockquote>
 <p><strong>Please vote with {{vote|yes}} or {{vote|no}} and sign with ~~~~</strong></p>
 </blockquote>

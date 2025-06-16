@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At least in my neighborhood, the international number is shown: <a href="http://osm.org/go/0EpMwJ7i8--?m=">http://osm.org/go/0EpMwJ7i8--?m=</a> But in Belgium, we do not see national numbers on highways when there is an international number. We have mapped e.g. ref=int_ref =E19 and nat_ref=A1 (see <a href="http://www.openstreetmap.org/way/10263815#map=18/51.08661/4.44289)">http://www.openstreetmap.org/way/10263815#map=18/51.08661/4.44289)</a></p>
+<p>At least in my neighborhood, the international number is shown: <a href="http://osm.org/go/0EpMwJ7i8--?m=">http://osm.org/go/0EpMwJ7i8--?m=</a> But in Belgium, we do not see national numbers on highways when there is an international number. We have mapped e.g. ref=int_ref =E19 and nat_ref=A1 (see <a href="https://www.openstreetmap.org/way/10263815#map=18/51.08661/4.44289)">https://www.openstreetmap.org/way/10263815#map=18/51.08661/4.44289)</a></p>
 <p>In other countries, the international number is not shown on the destination signs, so there it makes more sense to show the national number on a map.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -191,7 +191,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Just as another example, Sweden is a country where "E" road references are used as the main reference for relevant roads, both on road signs and in OSM. See for instance here:</p>
-<p><a href="http://www.openstreetmap.org/way/93758788#map=12/59.6480/17.8926">http://www.openstreetmap.org/way/93758788#map=12/59.6480/17.8926</a></p>
+<p><a href="https://www.openstreetmap.org/way/93758788#map=12/59.6480/17.8926">https://www.openstreetmap.org/way/93758788#map=12/59.6480/17.8926</a></p>
 </div>
 <div id="comment-54689-info" class="comment-info">
 <span class="comment-age">(17 Feb '17, 09:39)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

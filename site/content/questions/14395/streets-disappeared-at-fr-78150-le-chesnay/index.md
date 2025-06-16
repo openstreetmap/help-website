@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Redaction_bot_progress_map">licence change</a>. The <a href="http://wiki.openstreetmap.org/wiki/Redaction_bot_progress_map">redaction bot</a> is "removing" a lot of data around the world, and is probably the one responsible for Le Chesnay too. Now is a great time to <a href="http://wiki.openstreetmap.org/wiki/FR:Beginners&#39;_guide">start contributing to osm</a> by fixing deletions wherever you can. Le Chesnay has good aerial imagery, so if you know your town it's a great way to start.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Redaction_bot_progress_map">licence change</a>. The <a href="https://wiki.openstreetmap.org/wiki/Redaction_bot_progress_map">redaction bot</a> is "removing" a lot of data around the world, and is probably the one responsible for Le Chesnay too. Now is a great time to <a href="https://wiki.openstreetmap.org/wiki/FR:Beginners&#39;_guide">start contributing to osm</a> by fixing deletions wherever you can. Le Chesnay has good aerial imagery, so if you know your town it's a great way to start.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?lat=48.82547&amp;lon=2.13056&amp;zoom=15&amp;layers=M">This</a> is the result of our <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license change</a>. Currently, the <a href="http://wiki.openstreetmap.org/wiki/Redaction_bot_progress_map">redaction bot</a> looks at every object and removes non-<a href="http://wiki.openstreetmap.org/wiki/Open_Database_License">ODbL</a> compatible content or even the whole object. This could have been prevented by <a href="http://wiki.openstreetmap.org/wiki/Remapping">remapping</a> in the first place but has obviously not been done for every object in your town.</p>
+<p><a href="https://www.openstreetmap.org/?lat=48.82547&amp;lon=2.13056&amp;zoom=15&amp;layers=M">This</a> is the result of our <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license change</a>. Currently, the <a href="https://wiki.openstreetmap.org/wiki/Redaction_bot_progress_map">redaction bot</a> looks at every object and removes non-<a href="https://wiki.openstreetmap.org/wiki/Open_Database_License">ODbL</a> compatible content or even the whole object. This could have been prevented by <a href="https://wiki.openstreetmap.org/wiki/Remapping">remapping</a> in the first place but has obviously not been done for every object in your town.</p>
 <p>As you can see on the <a href="http://harrywood.dev.openstreetmap.org/license-change/botprocessing.php?zoom=6&amp;lat=46.63872&amp;lon=2.53858&amp;layers=B00FTTFFFFFF">progress map</a> France is already finished. That means you can now start to remap missing information by using ODbL-compatible sources.</p>
 </div>
 <div class="answer-controls post-controls">

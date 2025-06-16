@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These links may help for an image - <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">OSM on Paper</a> - <a href="http://bigmap.osmz.ru/">BigMap 2</a> - <a href="http://maposmatic.org/">MapOSMatic</a> - <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a></p>
+<p>These links may help for an image - <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">OSM on Paper</a> - <a href="http://bigmap.osmz.ru/">BigMap 2</a> - <a href="http://maposmatic.org/">MapOSMatic</a> - <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,7 +162,7 @@ osqa_accepted = false
 <p><a href="http://planet.openstreetmap.org/">Planet OSM</a> Regularly updated copies of the complete OpenStreetMap database</p>
 <p><a href="http://download.geofabrik.de/">Geofabrik Downloads</a> Regularly-updated extracts of continents, countries, and selected cities</p>
 <p><a href="https://mapzen.com/metro-extracts/">Metro Extracts</a> Extracts for major world cities and their surrounding areas</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Download">Other Sources</a> Additional sources listed on the OpenStreetMap wiki</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Download">Other Sources</a> Additional sources listed on the OpenStreetMap wiki</p>
 <p>Edit: Ah - looks like you want an "underlying image", so the other answer is closer to what you want. I'll leave this here in case anyone stumbles across the question by searching for "AutoCAD" though.</p>
 </div>
 <div class="answer-controls post-controls">

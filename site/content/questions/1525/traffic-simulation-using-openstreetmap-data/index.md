@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As long as this wiki page still exists, have a look at <a href="http://wiki.openstreetmap.org/wiki/Neat_Stuff">Neat_Stuff</a> -&gt; Simulations -&gt; Traffic</p>
+<p>As long as this wiki page still exists, have a look at <a href="https://wiki.openstreetmap.org/wiki/Neat_Stuff">Neat_Stuff</a> -&gt; Simulations -&gt; Traffic</p>
 <p>Maybe there is some stuff you can use?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -160,9 +160,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Feedback on OSM schema for this kind of work is really interesting. Tell us (use wiki) what you expected, what you need for your work.</p>
-<p>An other people working on thesis about public transport has write one scheme for this, and it's now used on OSM : <a href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema"></a><a href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema"></a><a href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema">http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema</a></p>
-<p>You can have some kind of real traffic information with <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">gpx</a> stock.</p>
-<p>You can also found interest on transit or routing <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">malling lists</a></p>
+<p>An other people working on thesis about public transport has write one scheme for this, and it's now used on OSM : <a href="https://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema"></a><a href="https://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema"></a><a href="https://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema">https://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema</a></p>
+<p>You can have some kind of real traffic information with <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">gpx</a> stock.</p>
+<p>You can also found interest on transit or routing <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">malling lists</a></p>
 <p>Btw, this is not a forum but a help desk.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "blocking the offending"
-description = '''where the request to block ikovaltaras (http://www.openstreetmap.org/user/ikovaltaras) which deals with vandalism, uses Google Maps and other commercial sources. http://forum.openstreetmap.org/viewtopic.php?pid=245080 # p245080'''
+description = '''where the request to block ikovaltaras (https://www.openstreetmap.org/user/ikovaltaras) which deals with vandalism, uses Google Maps and other commercial sources. http://forum.openstreetmap.org/viewtopic.php?pid=245080 # p245080'''
 date = "2012-06-06T16:36:00Z"
 lastmod = "2012-06-06T16:45:00Z"
 weight = 13278
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>where the request to block ikovaltaras (<a href="http://www.openstreetmap.org/user/ikovaltaras)">http://www.openstreetmap.org/user/ikovaltaras)</a> which deals with vandalism, uses Google Maps and other commercial sources. <a href="http://forum.openstreetmap.org/viewtopic.php?pid=245080">http://forum.openstreetmap.org/viewtopic.php?pid=245080</a> # p245080</p>
+<p>where the request to block ikovaltaras (<a href="https://www.openstreetmap.org/user/ikovaltaras)">https://www.openstreetmap.org/user/ikovaltaras)</a> which deals with vandalism, uses Google Maps and other commercial sources. <a href="http://forum.openstreetmap.org/viewtopic.php?pid=245080">http://forum.openstreetmap.org/viewtopic.php?pid=245080</a> # p245080</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-the" rel="tag" title="see questions tagged &#39;the&#39;">the</span> <span class="post-tag tag-link-offending" rel="tag" title="see questions tagged &#39;offending&#39;">offending</span> <span class="post-tag tag-link-blocking" rel="tag" title="see questions tagged &#39;blocking&#39;">blocking</span>

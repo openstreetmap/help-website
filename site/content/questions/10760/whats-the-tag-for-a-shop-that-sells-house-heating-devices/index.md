@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What&#x27;s the tag for a shop that sells house heating devices?"
-description = '''I browsed the categories at http://wiki.openstreetmap.org/wiki/Category:En:Key:shop  but could not identify the one that matches.'''
+description = '''I browsed the categories at https://wiki.openstreetmap.org/wiki/Category:En:Key:shop  but could not identify the one that matches.'''
 date = "2012-02-24T11:12:00Z"
 lastmod = "2012-02-25T21:44:00Z"
 weight = 10760
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I browsed the categories at <a href="http://wiki.openstreetmap.org/wiki/Category:En:Key:shop">http://wiki.openstreetmap.org/wiki/Category:En:Key:shop</a> but could not identify the one that matches.</p>
+<p>I browsed the categories at <a href="https://wiki.openstreetmap.org/wiki/Category:En:Key:shop">https://wiki.openstreetmap.org/wiki/Category:En:Key:shop</a> but could not identify the one that matches.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shop" rel="tag" title="see questions tagged &#39;shop&#39;">shop</span>
@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>try shop=furnace</p>
-<p>Wiki-descripton: <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dfurnace">http://wiki.openstreetmap.org/wiki/Tag:shop%3Dfurnace</a></p>
+<p>Wiki-descripton: <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dfurnace">https://wiki.openstreetmap.org/wiki/Tag:shop%3Dfurnace</a></p>
 <p>Does it fit to your purpose?</p>
 </div>
 <div class="answer-controls post-controls">

@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-79162-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Compare <a href="https://help.openstreetmap.org/questions/79161/what-building-tag-to-use">https://help.openstreetmap.org/questions/79161/what-building-tag-to-use</a> for my problem.</p>
+<p>Compare <a href="/questions/79161/what-building-tag-to-use">https://help.openstreetmap.org/questions/79161/what-building-tag-to-use</a> for my problem.</p>
 </div>
 <div id="comment-79162-info" class="comment-info">
 <span class="comment-age">(07 Mar '21, 14:23)</span> <span class="comment-user userinfo">mjost</span>

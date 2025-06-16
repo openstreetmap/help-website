@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please do not use the editing API for such downloads, as the name says it is mainly intended for editing.</p>
-<p>To export a subset of OSM data for a area you should either use an <a href="http://planet.openstreetmap.org/">extract of the area</a> in question and filter to obtain (please have a look at the <a href="http://wiki.openstreetmap.org">wiki</a> for descriptions of the many tools available) the data that you want or, if the area in question is not too large, use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>.</p>
+<p>To export a subset of OSM data for a area you should either use an <a href="http://planet.openstreetmap.org/">extract of the area</a> in question and filter to obtain (please have a look at the <a href="http://wiki.openstreetmap.org">wiki</a> for descriptions of the many tools available) the data that you want or, if the area in question is not too large, use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

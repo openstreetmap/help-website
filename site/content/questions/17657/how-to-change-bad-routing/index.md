@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Indicating turning restriction is done with a restriction relation. <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">This page on the wiki</a> has the needed information for turning and other restrictions. Note that once the edit is in the database, it might take some time before the data is updated on whatever routing engine you were using.</p>
+<p>Indicating turning restriction is done with a restriction relation. <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">This page on the wiki</a> has the needed information for turning and other restrictions. Note that once the edit is in the database, it might take some time before the data is updated on whatever routing engine you were using.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

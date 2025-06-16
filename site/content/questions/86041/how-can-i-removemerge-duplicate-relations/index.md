@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I found an area (around Vesuvius national park in Italy) where there are lots of duplicate relations (they have slightly different name, but they refer to the same hiking path, like these two: <a href="https://www.openstreetmap.org/relation/2672045#map=15/40.8100/14.4386">https://www.openstreetmap.org/relation/2672045#map=15/40.8100/14.4386</a> and <a href="https://www.openstreetmap.org/relation/9278294#map=15/40.7982/14.4421">https://www.openstreetmap.org/relation/9278294#map=15/40.7982/14.4421</a> ).</p>
 <p>Is there a better way to merge them/remove the duplicate one without manually removing all the member paths from one of them?</p>
-<p>There is a similar question here: <a href="https://help.openstreetmap.org/questions/2014/is-it-possible-to-merge-relations">https://help.openstreetmap.org/questions/2014/is-it-possible-to-merge-relations</a> but it is old and does not provide an answer for the web editor.</p>
+<p>There is a similar question here: <a href="/questions/2014/is-it-possible-to-merge-relations">https://help.openstreetmap.org/questions/2014/is-it-possible-to-merge-relations</a> but it is old and does not provide an answer for the web editor.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>

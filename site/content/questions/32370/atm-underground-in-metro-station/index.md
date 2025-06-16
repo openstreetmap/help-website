@@ -186,7 +186,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>the multiple links I added to this answer may help you.</p>
-<p><a href="https://help.openstreetmap.org/questions/1860/subway-stations-with-multiple-entrances?page=1&amp;focusedAnswerId=48441#48441">https://help.openstreetmap.org/questions/1860/subway-stations-with-multiple-entrances?page=1&amp;focusedAnswerId=48441#48441</a></p>
+<p><a href="/questions/1860/subway-stations-with-multiple-entrances?page=1&amp;focusedAnswerId=48441#48441">https://help.openstreetmap.org/questions/1860/subway-stations-with-multiple-entrances?page=1&amp;focusedAnswerId=48441#48441</a></p>
 <p>I began to map inside a metro station though I'm yet to complete the links can help you see what you can do. In this the ATM is given as if it was inside a building and even if you can't be too cirtain on the precise place the corridoor/room/area'ed-highways all help you give a logical postion for some one to navigate to. Infuture someone may move it to a more exact place for you.</p>
 </div>
 <div class="answer-controls post-controls">

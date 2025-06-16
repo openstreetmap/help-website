@@ -44,9 +44,9 @@ osqa_accepted = false
 <p>Applications:</p>
 <ul>
 <li>find benches near a body of water (seriously)</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbrothel">brothel</a> near <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice">police</a> (for fun)</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dswingerclub">swingerclub</a> near <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">place_of_worship</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dstripclub">stripclub</a> near <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dkindergarten">kindergarten</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbrothel">brothel</a> near <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpolice">police</a> (for fun)</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dswingerclub">swingerclub</a> near <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">place_of_worship</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dstripclub">stripclub</a> near <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dkindergarten">kindergarten</a></li>
 </ul>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -138,7 +138,7 @@ One Answer:
 &lt;/query&gt;
 &#10;&lt;print/&gt;</code></pre>
 <p>You can see it <a href="http://overpass-turbo.eu/s/3lE">live for Berlin</a>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/brothels_near_police_in_Berlin.png" alt="alt text" /></p>
+<p><img src="/upfiles/brothels_near_police_in_Berlin.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You didn't provide much details about your usecase, so it it is hard to point you to the best solution (there are many). One option that is both simple and powerfull is the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a>, which you can experiment on using its <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a> gui.</p>
+<p>You didn't provide much details about your usecase, so it it is hard to point you to the best solution (there are many). One option that is both simple and powerfull is the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a>, which you can experiment on using its <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a> gui.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

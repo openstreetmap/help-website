@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to retrieve older versions of deleted objects?"
-description = '''http://www.openstreetmap.org/browse/way/211750802 this way was deleted. i want to see the first version of this but http://www.openstreetmap.org/browse/way/211750802/1 gives file not found.'''
+description = '''https://www.openstreetmap.org/browse/way/211750802 this way was deleted. i want to see the first version of this but https://www.openstreetmap.org/browse/way/211750802/1 gives file not found.'''
 date = "2013-07-04T10:13:00Z"
 lastmod = "2013-07-04T10:26:00Z"
 weight = 23960
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/browse/way/211750802">http://www.openstreetmap.org/browse/way/211750802</a> this way was deleted.</p>
-<p>i want to see the first version of this but <a href="http://www.openstreetmap.org/browse/way/211750802/1">http://www.openstreetmap.org/browse/way/211750802/1</a> gives file not found.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/211750802">https://www.openstreetmap.org/browse/way/211750802</a> this way was deleted.</p>
+<p>i want to see the first version of this but <a href="https://www.openstreetmap.org/browse/way/211750802/1">https://www.openstreetmap.org/browse/way/211750802/1</a> gives file not found.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-deleted" rel="tag" title="see questions tagged &#39;deleted&#39;">deleted</span> <span class="post-tag tag-link-version" rel="tag" title="see questions tagged &#39;version&#39;">version</span> <span class="post-tag tag-link-old" rel="tag" title="see questions tagged &#39;old&#39;">old</span>
@@ -105,11 +105,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The browse pages on openstreetmap.org don't allow you to see individual versions of objects like the API does. You can view the entire history of an object by appending <code>/history</code> to its URI, like this: <a href="http://www.openstreetmap.org/browse/way/211750802/history">http://www.openstreetmap.org/browse/way/211750802/history</a>.</p>
-<p>If you accidentally delete data like this, you have <a href="http://wiki.openstreetmap.org/wiki/Change_rollback">a number of options available</a>:</p>
+<p>The browse pages on openstreetmap.org don't allow you to see individual versions of objects like the API does. You can view the entire history of an object by appending <code>/history</code> to its URI, like this: <a href="https://www.openstreetmap.org/browse/way/211750802/history">https://www.openstreetmap.org/browse/way/211750802/history</a>.</p>
+<p>If you accidentally delete data like this, you have <a href="https://wiki.openstreetmap.org/wiki/Change_rollback">a number of options available</a>:</p>
 <ul>
 <li>If you haven't closed your editor (JOSM in your case) you may be able to use its Undo function to restore the deleted data, then re-upload</li>
-<li>If you realise you've accidentally deleted data after closing JOSM, you can use the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">Reverter plug-in</a> to restore it</li>
+<li>If you realise you've accidentally deleted data after closing JOSM, you can use the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">Reverter plug-in</a> to restore it</li>
 <li>If you're not comfortable doing this, or can't get it working, ask on the <a href="http://lists.openstreetmap.org/listinfo/talk">Talk mailing list</a> or the <a href="http://irc.openstreetmap.org/">IRC channel</a> where an experienced mapper may be able to help you revert your mistakes.</li>
 </ul>
 </div>

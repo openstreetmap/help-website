@@ -147,7 +147,7 @@ One Answer:
 <div id="post-40269-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10312/manuantony"></a><a href="http://help.openstreetmap.org/users/10312/manuantony">@manuantony</a>: what do you mean by "edit the map data"? Do you want to use a mobile application (your newly developed one?) to edit the OSM data on the main server (the data for everyone)? And could you please clarify what you mean by "by using GPX files" in the context of "edit the map data"?</p>
+<p><a href="https://help.openstreetmap.org/users/10312/manuantony"></a><a href="https://help.openstreetmap.org/users/10312/manuantony">@manuantony</a>: what do you mean by "edit the map data"? Do you want to use a mobile application (your newly developed one?) to edit the OSM data on the main server (the data for everyone)? And could you please clarify what you mean by "by using GPX files" in the context of "edit the map data"?</p>
 </div>
 <div id="comment-40269-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 21:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

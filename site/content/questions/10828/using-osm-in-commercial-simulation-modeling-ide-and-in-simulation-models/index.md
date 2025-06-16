@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap does not impose any limitations on the license of software products working with OSM data or maps. Data licenses and software licenses are considered separate. However, if users of your software produce works that contain OSM data or maps and distribute them, then they will have to respect the terms of the OSM license.</p>
-<p>If you also want to distribute OSM data directly with your product, then <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">"Can I charge for distributing OSM data..."</a> from the Legal FAQ applies.</p>
+<p>If you also want to distribute OSM data directly with your product, then <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">"Can I charge for distributing OSM data..."</a> from the Legal FAQ applies.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Annotation_2020-04-11_161427.png" alt="Picture" /><br />
+<p><img src="/upfiles/Annotation_2020-04-11_161427.png" alt="Picture" /><br />
 What does the Distance and Via slider do?<br />
 EDIT: I'm using the iD editor.</p>
 </div>
@@ -137,8 +137,8 @@ One Answer:
 <p>The "Distance" slider controls how far to search for additional connected roads.</p>
 <p>The "Via" slider adjusts how many via ways may be included in the search. (Tip: simple is better)</p>
 </blockquote>
-<p>A turn restriction has a from and a to road. It also has either a via-node or multiple via-ways. So I assume that the above 2 controls will guide the iD editor in finding roads in case you want to create a turn-restriction with via-ways.<img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-04-14_at_05.45.19.png" alt="alt text" /></p>
-<p>In case of a node, one can create the above turn restrictions, but when one moves the button slide to ways, one can create a turn restriction towards the parallel road when needed. This road is within a few meters of the selected one, so the top slider has no effect. <img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-04-14_at_05.45.08.png" alt="alt text" /></p>
+<p>A turn restriction has a from and a to road. It also has either a via-node or multiple via-ways. So I assume that the above 2 controls will guide the iD editor in finding roads in case you want to create a turn-restriction with via-ways.<img src="/upfiles/Screenshot_2020-04-14_at_05.45.19.png" alt="alt text" /></p>
+<p>In case of a node, one can create the above turn restrictions, but when one moves the button slide to ways, one can create a turn restriction towards the parallel road when needed. This road is within a few meters of the selected one, so the top slider has no effect. <img src="/upfiles/Screenshot_2020-04-14_at_05.45.08.png" alt="alt text" /></p>
 <p>Hope this helps</p>
 </div>
 <div class="answer-controls post-controls">

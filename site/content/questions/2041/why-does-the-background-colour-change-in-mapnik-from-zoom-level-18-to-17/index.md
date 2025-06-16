@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why does the background colour change in Mapnik from zoom level 18 to 17?"
-description = '''Why does the background colour change in Mapnik from zoom level 18 to 17? Example: http://www.openstreetmap.org/?lat=-26.83108&amp;amp;lon=-65.19923&amp;amp;zoom=18&amp;amp;layers=M http://www.openstreetmap.org/?lat=-26.83108&amp;amp;lon=-65.19923&amp;amp;zoom=17&amp;amp;layers=M &quot;Background&quot; changes from grey to violet / ...'''
+description = '''Why does the background colour change in Mapnik from zoom level 18 to 17? Example: https://www.openstreetmap.org/?lat=-26.83108&amp;amp;lon=-65.19923&amp;amp;zoom=18&amp;amp;layers=M https://www.openstreetmap.org/?lat=-26.83108&amp;amp;lon=-65.19923&amp;amp;zoom=17&amp;amp;layers=M &quot;Background&quot; changes from grey to violet / ...'''
 date = "2011-01-06T15:03:00Z"
 lastmod = "2011-03-15T15:49:00Z"
 weight = 2041
@@ -41,8 +41,8 @@ osqa_accepted = true
 <div class="question-body">
 <p>Why does the background colour change in Mapnik from zoom level 18 to 17?</p>
 <p>Example:</p>
-<p><a href="http://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=18&amp;layers=M</a></p>
-<p><a href="http://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=-26.83108&amp;lon=-65.19923&amp;zoom=17&amp;layers=M</a></p>
 <p>"Background" changes from grey to violet / pink.</p>
 <p>The behaviour is the same in this area for IE8 and FF3.6 .</p>
 </div>
@@ -67,11 +67,11 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Although the areas you linked are not longer affected, there are many others that are still affected:</p>
-<p><a href="http://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M</a></p>
-<p><a href="http://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M</a></p>
 <p>I have not clue if it is related, but the North Pole and South Pole are rendered close to Africa:</p>
-<p><a href="http://www.openstreetmap.org/?lat=-0.0001&amp;lon=0.00001&amp;zoom=17&amp;layers=C">http://www.openstreetmap.org/?lat=-0.0001&amp;lon=0.00001&amp;zoom=17&amp;layers=C</a></p>
-<p><a href="http://www.openstreetmap.org/?lat=0&amp;lon=0&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=0&amp;lon=0&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-0.0001&amp;lon=0.00001&amp;zoom=17&amp;layers=C">https://www.openstreetmap.org/?lat=-0.0001&amp;lon=0.00001&amp;zoom=17&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=0&amp;lon=0&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=0&amp;lon=0&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div id="comment-3794-info" class="comment-info">
 <span class="comment-age">(14 Mar '11, 13:16)</span> <span class="comment-user userinfo">temporalista</span>
@@ -226,8 +226,8 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>The problem persists in other areas:</p>
-<p><a href="http://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M</a></p>
-<p><a href="http://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=-1.20704&amp;lon=116.82483&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=-2.85286&amp;lon=-78.99426&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div id="comment-3795-info" class="comment-info">
 <span class="comment-age">(14 Mar '11, 13:18)</span> <span class="comment-user userinfo">temporalista</span>

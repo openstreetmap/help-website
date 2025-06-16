@@ -66,7 +66,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Umap is based on OpenStreeMap data but it is developed by different people. The different implementations are also run by different groups. Please check out <a href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map">the answers to a another umap question</a> a few days ago on how to get in touch with the right people that can help with technical issues.</p>
+<p>Umap is based on OpenStreeMap data but it is developed by different people. The different implementations are also run by different groups. Please check out <a href="/questions/69710/umap-openstreetmap-change-map">the answers to a another umap question</a> a few days ago on how to get in touch with the right people that can help with technical issues.</p>
 </div>
 <div id="comment-69755-info" class="comment-info">
 <span class="comment-age">(26 Jun '19, 15:59)</span> <span class="comment-user userinfo">TZorn</span>

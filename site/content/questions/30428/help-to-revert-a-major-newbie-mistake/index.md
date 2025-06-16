@@ -43,8 +43,8 @@ osqa_accepted = false
 <p>I have been an OSM mapper for some years now, but I have found that an OSM newbie has deleted some admin boundries. I have looked at the documantation to revert anothers changesets and have started to try reverting, but the revert plugin is confusing for me to download and use.</p>
 <p>The following changesets need to be reverted please:</p>
 <ul>
-<li>(no comment) Closed about 4 hours ago by Warners · #<a href="http://www.openstreetmap.org/changeset/20365164">20365164</a></li>
-<li>(no comment) Closed about 5 hours ago by Warners · #<a href="http://www.openstreetmap.org/changeset/20365029">20365029</a></li>
+<li>(no comment) Closed about 4 hours ago by Warners · #<a href="https://www.openstreetmap.org/changeset/20365164">20365164</a></li>
+<li>(no comment) Closed about 5 hours ago by Warners · #<a href="https://www.openstreetmap.org/changeset/20365029">20365029</a></li>
 </ul>
 <p>Many thanks, Angyork</p>
 </div>
@@ -128,8 +128,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've reverted the relevant changesets in <a href="http://www.openstreetmap.org/changeset/20368253">20368253</a> and <a href="http://www.openstreetmap.org/changeset/20368273">20368273</a>. Are you already in contact with the new user concerned? If so, it would be useful to know (in order to improve iD documentation etc.) what they were trying to do when they did these deletions. The deletions weren't just admin boundaries - they seem to be everything in a small area.</p>
-<p>One suggestion (for future reversion requests from other people who might see this "help" question) - you might get a quicker answer on <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> than here since help questions regularly sit for hours or longer until people see them, and if other people have edited objects aftr the problematic edits it becomes more difficult to revert.</p>
+<p>I've reverted the relevant changesets in <a href="https://www.openstreetmap.org/changeset/20368253">20368253</a> and <a href="https://www.openstreetmap.org/changeset/20368273">20368273</a>. Are you already in contact with the new user concerned? If so, it would be useful to know (in order to improve iD documentation etc.) what they were trying to do when they did these deletions. The deletions weren't just admin boundaries - they seem to be everything in a small area.</p>
+<p>One suggestion (for future reversion requests from other people who might see this "help" question) - you might get a quicker answer on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> than here since help questions regularly sit for hours or longer until people see them, and if other people have edited objects aftr the problematic edits it becomes more difficult to revert.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

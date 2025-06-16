@@ -132,8 +132,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to do photo mapping you're going to need to use an offline editor like <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>. JOSM can open GEO tagged photos and can even let you uses a GPX track to add a GEO tag to a photo. There is an article on [Photo mapping}(<a href="http://wiki.openstreetmap.org/wiki/Photo_mapping)">http://wiki.openstreetmap.org/wiki/Photo_mapping)</a> on the Wiki that you might want to read for more information.</p>
-<p>PS I guess you can you <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Photo-mapping">Potlatch 1 for Photo-mapping</a> but using <a href="http://wiki.openstreetmap.org/wiki/Potlatch_1">Potlatch <strong>1</strong></a> is discourage so use JOSM or if you have strict no JAVA policy you can use <a href="http://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a></p>
+<p>If you want to do photo mapping you're going to need to use an offline editor like <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>. JOSM can open GEO tagged photos and can even let you uses a GPX track to add a GEO tag to a photo. There is an article on [Photo mapping}(<a href="https://wiki.openstreetmap.org/wiki/Photo_mapping)">https://wiki.openstreetmap.org/wiki/Photo_mapping)</a> on the Wiki that you might want to read for more information.</p>
+<p>PS I guess you can you <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Photo-mapping">Potlatch 1 for Photo-mapping</a> but using <a href="https://wiki.openstreetmap.org/wiki/Potlatch_1">Potlatch <strong>1</strong></a> is discourage so use JOSM or if you have strict no JAVA policy you can use <a href="https://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

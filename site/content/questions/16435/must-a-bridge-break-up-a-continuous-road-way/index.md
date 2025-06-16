@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are correct. Whenever the properties of a way change, a new way has to be created; and since we record the bridge as a property of the way, ways need to be split at bridges.</p>
-<p>There's a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges%20and%20Tunnels">proposed relation for bridges</a> however even that will probably require splitting the way. And there's the option of collecting all the individual bits of your 10 mile road into a named route using the <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route relation</a> but that is not normally used for plain roads.</p>
+<p>There's a <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges%20and%20Tunnels">proposed relation for bridges</a> however even that will probably require splitting the way. And there's the option of collecting all the individual bits of your 10 mile road into a named route using the <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relation</a> but that is not normally used for plain roads.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

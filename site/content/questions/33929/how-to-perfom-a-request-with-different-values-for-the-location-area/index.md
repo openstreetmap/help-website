@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>new to osm - and all the corresponding things like requests done with overpass and thelike</p>
-<p>update: this thread is related to the thread <a href="https://help.openstreetmap.org/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser">https://help.openstreetmap.org/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser</a></p>
+<p>update: this thread is related to the thread <a href="/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser">https://help.openstreetmap.org/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser</a></p>
 <p>where i perform a request to the overpass-API-endpoint. All goes well - but i want to have</p>
 <p>a. the results stored within a mysql-database b. perform a request with another area-definition....</p>
 <p>see more at the above mentioned thread:</p>
@@ -57,7 +57,7 @@ out;&#39;;</code></pre>
   (around:1000)
   [&quot;amenity&quot;~&quot;fast_food&quot;];
            out;&#39;;</code></pre>
-<p>cf: <a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a></p>
+<p>cf: <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a></p>
 <p>well can i enter values for countries as well what if i want to have all schools from a certain country:<br />
 </p>
 <pre><code>$query = &#39;node
@@ -106,7 +106,7 @@ out;&#39;;</code></pre>
 <div id="post-33933-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>update: thank you for the respond! this thread is related to the thread <a href="https://help.openstreetmap.org/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser">https://help.openstreetmap.org/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser</a></p>
+<p>update: thank you for the respond! this thread is related to the thread <a href="/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser">https://help.openstreetmap.org/questions/33926/osm-overpass-api-with-php-simplexml-minor-changes-to-the-parser</a></p>
 <p>where i perform a request to the overpass-API-endpoint. All goes well - but i want to have</p>
 <p>a. the results stored within a mysql-database b. perform a request with another area-definition....</p>
 <p>see more at the above mentioned thread:</p>
@@ -120,7 +120,7 @@ out;&#39;;</code></pre>
 <div id="post-33937-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>hello dear SomeQoneElse - again me. well since i am learing while working with the scripts i have create a wiki-page - here i collect all the ideas and good things that i collect in the internet. see the above mentioned question - in other words - rephrased <a href="http://wiki.openstreetmap.org/wiki/PHP_und_Overpass">http://wiki.openstreetmap.org/wiki/PHP_und_Overpass</a></p>
+<p>hello dear SomeQoneElse - again me. well since i am learing while working with the scripts i have create a wiki-page - here i collect all the ideas and good things that i collect in the internet. see the above mentioned question - in other words - rephrased <a href="https://wiki.openstreetmap.org/wiki/PHP_und_Overpass">https://wiki.openstreetmap.org/wiki/PHP_und_Overpass</a></p>
 <p>love to hear from you. Dont hesitate to add your ideas - either here or at the wikipage</p>
 </div>
 <div id="comment-33937-info" class="comment-info">

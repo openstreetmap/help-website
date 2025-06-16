@@ -176,8 +176,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM does not store images in the database, and it probably never will. What you are linking to is a guide to <a href="http://wiki.openstreetmap.org/wiki/Photo_mapping">photomapping</a> witch is a technique for remembering details when mapping.</p>
-<p>You might want to look at the project <a href="http://wiki.openstreetmap.org/wiki/OpenStreetView">OpenStreetView</a> witch might give you what you want.</p>
+<p>OSM does not store images in the database, and it probably never will. What you are linking to is a guide to <a href="https://wiki.openstreetmap.org/wiki/Photo_mapping">photomapping</a> witch is a technique for remembering details when mapping.</p>
+<p>You might want to look at the project <a href="https://wiki.openstreetmap.org/wiki/OpenStreetView">OpenStreetView</a> witch might give you what you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

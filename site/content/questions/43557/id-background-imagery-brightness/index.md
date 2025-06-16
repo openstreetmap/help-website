@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm struggling to find a way to change the background imagery in iD to be bright enough to use. I'm currently editing <a href="http://www.openstreetmap.org/#map=16/53.0435/-1.0588">here</a>. In <a href="http://www.openstreetmap.org/edit?editor=id#map=16/53.0435/-1.0588">iD</a> the (Bing) imagery is too dark to see what's going on. For comparison, in <a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=16/53.0435/-1.0588">P2</a> it's not - it's possible to make out e.g. field boundaries clearly.</p>
+<p>I'm struggling to find a way to change the background imagery in iD to be bright enough to use. I'm currently editing <a href="https://www.openstreetmap.org/#map=16/53.0435/-1.0588">here</a>. In <a href="https://www.openstreetmap.org/edit?editor=id#map=16/53.0435/-1.0588">iD</a> the (Bing) imagery is too dark to see what's going on. For comparison, in <a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=16/53.0435/-1.0588">P2</a> it's not - it's possible to make out e.g. field boundaries clearly.</p>
 <p>In order to try and make the imagery visible I've turned up the screen brightness as far as I can, and tried each of the boxes at the top of the "background imagery" list (from reading the documentation I think that they're supposed to be "100% brightness" through "25% brightness" though that text doesn't display properly on a small screen). However the result is still too dark to use in iD when what is presumably the same imagery looks just fine in P2.</p>
 <p>It's possible that this is just a bug (not necessarily in iD) but I'm asking here in case I'm missing something obvious.</p>
 </div>
@@ -180,7 +180,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The brightness worked for me. Here is a poor photo of my Tesco Hudl which shows that it seems to work ok. Not an answer but may help with your problem solving.<img src="http://help.openstreetmap.org/upfiles/SDC17618.JPG" alt="alt text" /></p>
+<p>The brightness worked for me. Here is a poor photo of my Tesco Hudl which shows that it seems to work ok. Not an answer but may help with your problem solving.<img src="/upfiles/SDC17618.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

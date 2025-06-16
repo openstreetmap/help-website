@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're talking about a umap, then <a href="https://help.openstreetmap.org/questions/43085/link-in-pop-up-on-umap">this might help</a> to get the URL's to show. I don't think there's a search option though.</p>
+<p>If you're talking about a umap, then <a href="/questions/43085/link-in-pop-up-on-umap">this might help</a> to get the URL's to show. I don't think there's a search option though.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

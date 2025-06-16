@@ -218,8 +218,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't know of any ready-to-use solution but you can create your own.</p>
-<p>First you need to determine the location for every address you have. This can be done using <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> and querying each of your address with the help of a little script. But keep in mind <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim's usage policy</a> when doing bulk geocoding.</p>
-<p>After having obtained all locations you can show them on a map with the help of either <a href="http://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a> or <a href="http://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a>. Examples on how to show markers are available for both libraries.</p>
+<p>First you need to determine the location for every address you have. This can be done using <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> and querying each of your address with the help of a little script. But keep in mind <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim's usage policy</a> when doing bulk geocoding.</p>
+<p>After having obtained all locations you can show them on a map with the help of either <a href="https://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a> or <a href="https://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a>. Examples on how to show markers are available for both libraries.</p>
 <p>All these tools are freely available and not very difficult to use but you have to do some little reading of course.</p>
 </div>
 <div class="answer-controls post-controls">

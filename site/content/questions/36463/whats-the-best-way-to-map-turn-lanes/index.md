@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was looking at the wiki, specifically <a href="http://wiki.openstreetmap.org/wiki/Key:turn">this article about turn lanes</a>, and I wanted to know if this is really the best practice. Most turn lanes I have seen are mapped as an extension of the road being turned on to, or not at all. I have used the turn lane tags but nothing changes on the map; they seem to just be extra data.</p>
+<p>I was looking at the wiki, specifically <a href="https://wiki.openstreetmap.org/wiki/Key:turn">this article about turn lanes</a>, and I wanted to know if this is really the best practice. Most turn lanes I have seen are mapped as an extension of the road being turned on to, or not at all. I have used the turn lane tags but nothing changes on the map; they seem to just be extra data.</p>
 <p>For an example: <img src="http://i.snag.gy/sgxHZ.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -167,7 +167,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I haven't seen a map renderer that honors lanes=count much less the turn:lanes key. Despite that I continue to map them per the turn lanes wiki in the hope that if enough area is tagged that way the renderers will follow. <a href="http://wiki.openstreetmap.org/wiki/Key:turn">http://wiki.openstreetmap.org/wiki/Key:turn</a></p>
+<p>I haven't seen a map renderer that honors lanes=count much less the turn:lanes key. Despite that I continue to map them per the turn lanes wiki in the hope that if enough area is tagged that way the renderers will follow. <a href="https://wiki.openstreetmap.org/wiki/Key:turn">https://wiki.openstreetmap.org/wiki/Key:turn</a></p>
 <p>I haven't looked at the area of your example, but my my area there are sometimes turn lanes that become separate ways as they traverse the median between the two ways and physically look like your example. It seems the prevailing practice in my area, which I have continued, is to do them like your example except tagging as highway=something_link where the "something" is the type of road it is coming off of (primary, secondary, etc.).</p>
 </div>
 <div class="answer-controls post-controls">

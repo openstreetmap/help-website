@@ -203,7 +203,7 @@ And at 2: This short way would need a highway (path? track?) tag in addition, ot
 <div id="post-49202-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> why would a router distinguish between values of barrier ? taginfo has 42 pages with values for barriers (<a href="http://taginfo.openstreetmap.org/keys/barrier#values).">http://taginfo.openstreetmap.org/keys/barrier#values).</a> They might not have an icon for each of them, but I think each barrier is treated in the same way: no access except for the xxx=yes.</p>
+<p><a href="https://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> why would a router distinguish between values of barrier ? taginfo has 42 pages with values for barriers (<a href="http://taginfo.openstreetmap.org/keys/barrier#values).">http://taginfo.openstreetmap.org/keys/barrier#values).</a> They might not have an icon for each of them, but I think each barrier is treated in the same way: no access except for the xxx=yes.</p>
 </div>
 <div id="comment-49202-info" class="comment-info">
 <span class="comment-age">(13 Apr '16, 10:48)</span> <span class="comment-user userinfo">escada</span>
@@ -216,7 +216,7 @@ And at 2: This short way would need a highway (path? track?) tag in addition, ot
 </div>
 <div class="comment-text">
 <p>I'd also favour number 3 (also, is the gate really <em>in the middle</em> of the cattle grid? You'd have to walk over the cattle grid to open it).</p>
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> routers treat barriers in different ways and thankfully "no access except for the xxx=yes on the barrier node" (which would be wrong) is not the most common.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> routers treat barriers in different ways and thankfully "no access except for the xxx=yes on the barrier node" (which would be wrong) is not the most common.</p>
 </div>
 <div id="comment-49204-info" class="comment-info">
 <span class="comment-age">(13 Apr '16, 10:54)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -238,8 +238,8 @@ And at 2: This short way would need a highway (path? track?) tag in addition, ot
 <div id="post-49206-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: you're correct, not all barriers should be treated as access=no</p>
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Barriers">barriers</a> page, each barrier without explicit defined access, should be interpreted as access=no.For <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard">bollard</a> this is defined, for <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcattle_grid">cattle_grid</a> not, although I assume this is a mistake on the wiki page.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: you're correct, not all barriers should be treated as access=no</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Barriers">barriers</a> page, each barrier without explicit defined access, should be interpreted as access=no.For <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard">bollard</a> this is defined, for <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcattle_grid">cattle_grid</a> not, although I assume this is a mistake on the wiki page.</p>
 </div>
 <div id="comment-49206-info" class="comment-info">
 <span class="comment-age">(13 Apr '16, 11:28)</span> <span class="comment-user userinfo">escada</span>
@@ -250,7 +250,7 @@ And at 2: This short way would need a highway (path? track?) tag in addition, ot
 <div id="post-49207-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: the OP wrote a barrier gate running across the cattle grid: for me that means that the cattle grid starts before the gate and ends after the gate. So on a micro level the cattle grid is a way, the gate a node. Don't know how routers treat barriers that are not nodes. At this moment <a href="http://taginfo.openstreetmap.org/tags/barrier=cattle_grid">taginfo</a> says there are 128 cattle_grids mapped as way. more than 25700 as node.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: the OP wrote a barrier gate running across the cattle grid: for me that means that the cattle grid starts before the gate and ends after the gate. So on a micro level the cattle grid is a way, the gate a node. Don't know how routers treat barriers that are not nodes. At this moment <a href="http://taginfo.openstreetmap.org/tags/barrier=cattle_grid">taginfo</a> says there are 128 cattle_grids mapped as way. more than 25700 as node.</p>
 </div>
 <div id="comment-49207-info" class="comment-info">
 <span class="comment-age">(13 Apr '16, 11:32)</span> <span class="comment-user userinfo">escada</span>
@@ -262,7 +262,7 @@ And at 2: This short way would need a highway (path? track?) tag in addition, ot
 &#10;</div>
 <div class="comment-text">
 <p>Re ways vs nodes, I'd expect most cattle grids mapped as ways to be perpendicular to the track they're on, not parallel to it. See for example:</p>
-<p><a href="http://www.openstreetmap.org/way/153401962">http://www.openstreetmap.org/way/153401962</a></p>
+<p><a href="https://www.openstreetmap.org/way/153401962">https://www.openstreetmap.org/way/153401962</a></p>
 </div>
 <div id="comment-49208-info" class="comment-info">
 <span class="comment-age">(13 Apr '16, 12:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

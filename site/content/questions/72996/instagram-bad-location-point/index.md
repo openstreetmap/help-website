@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Captura_de_pantalla_2020-02-11_a_las_9.50.52_a._m..png" alt="alt text" />The Instagram application does not detect where I am. INSTAGRAM LOCATED IN DIFFERENT BAD POSITIONS in Catalonia. I am in Barcelona, not in "castellar del valles"</p>
+<p><img src="/upfiles/Captura_de_pantalla_2020-02-11_a_las_9.50.52_a._m..png" alt="alt text" />The Instagram application does not detect where I am. INSTAGRAM LOCATED IN DIFFERENT BAD POSITIONS in Catalonia. I am in Barcelona, not in "castellar del valles"</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-instagram" rel="tag" title="see questions tagged &#39;instagram&#39;">instagram</span>

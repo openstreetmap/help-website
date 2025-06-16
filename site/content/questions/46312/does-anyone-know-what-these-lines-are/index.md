@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The chansets that introduced them says "Trazo del gasoducto", so they are probably <a href="http://wiki.openstreetmap.org/wiki/Pipeline">gas pipelines</a>. Did you try to <a href="https://www.openstreetmap.org/message/new/Anamhoo">contact that contributor</a> to ask him/her the details ?</p>
+<p>The chansets that introduced them says "Trazo del gasoducto", so they are probably <a href="https://wiki.openstreetmap.org/wiki/Pipeline">gas pipelines</a>. Did you try to <a href="https://www.openstreetmap.org/message/new/Anamhoo">contact that contributor</a> to ask him/her the details ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>I think the question is quite similar to e.g. <a href="/questions/25/how-do-i-add-a-marker-to-a-map">how-do-i-add-a-marker-to-a-map</a> except that you would have to simply take a screenshot after placing the markers, right? I think the new uMap service (see <a href="/questions/25/how-do-i-add-a-marker-to-a-map/24774">my answer there</a>) would be suited for you.</p>
 <p>If you want to make a "illustration" anyway, <span>exporting</span> (also possible in SVG vector format) and placing the markers yourself in an image editor software would be another option.</p>
-<p>If you want to publish something OpenStreetMap-based please do not forget to add the <a href="http://www.openstreetmap.org/copyright">proper attribution</a>.</p>
+<p>If you want to publish something OpenStreetMap-based please do not forget to add the <a href="https://www.openstreetmap.org/copyright">proper attribution</a>.</p>
 <p>PS: Welcome to the OpenStreetMap universe and thank you for supporting our base infrastructure!</p>
 </div>
 <div class="answer-controls post-controls">
@@ -162,7 +162,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>or try <a href="http://wiki.openstreetmap.org/wiki/Geojson.io">http://wiki.openstreetmap.org/wiki/Geojson.io</a></p>
+<p>or try <a href="https://wiki.openstreetmap.org/wiki/Geojson.io">https://wiki.openstreetmap.org/wiki/Geojson.io</a></p>
 <p>or <a href="http://sharemap.org">http://sharemap.org</a></p>
 </div>
 <div id="comment-37208-info" class="comment-info">

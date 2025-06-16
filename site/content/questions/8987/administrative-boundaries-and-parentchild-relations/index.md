@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://lists.openstreetmap.org/">mailing lists</a> are a good way for discussions and generally "learning other contributors' thoughts". This site is not a discussion forum, but a system intended on finding clear answers to clear questions. See also the <a href="http://help.openstreetmap.org/faq/">FAQ</a> link at the top of this page.</p>
+<p>The <a href="http://lists.openstreetmap.org/">mailing lists</a> are a good way for discussions and generally "learning other contributors' thoughts". This site is not a discussion forum, but a system intended on finding clear answers to clear questions. See also the <a href="https://help.openstreetmap.org/faq/">FAQ</a> link at the top of this page.</p>
 <p>For UK specific questions, the <a href="http://lists.openstreetmap.org/listinfo/talk-gb">talk-gb</a> list is the best place to go.</p>
 </div>
 <div class="answer-controls post-controls">

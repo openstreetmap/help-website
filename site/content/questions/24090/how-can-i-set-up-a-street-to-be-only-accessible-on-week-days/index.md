@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>In order to apply a restriction only to part of a street, you have to split it into multiple sections (if it isn't already).</p>
-<p>The time-dependent restriction itself can then be applied to the appropriate section(s) using <strong><a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">Conditional restrictions</a></strong>. In your example the correct tag would be <strong>vehicle:conditional = no @ (Sa,Su)</strong></p>
+<p>The time-dependent restriction itself can then be applied to the appropriate section(s) using <strong><a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">Conditional restrictions</a></strong>. In your example the correct tag would be <strong>vehicle:conditional = no @ (Sa,Su)</strong></p>
 <p>Note that this assumes that all vehicles, including e.g. bicycles are banned, and that the day of the week - rather than whether it is a workday - is the relevant factor. Otherwise, the tag has to look somewhat different. Also note that, in order to be able to enter more complex tags such as these, you may have to tell your editor to show you "all tags" (iD) or switch to "advanced mode" (Potlatch 2).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -159,7 +159,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>(oops, sorry, I wrote all in German - too lazy to translate now)</p>
-<p><span>@ivolino</span>: Wenn du zukünftig solche Fehler in unseren Daten feststellst, aber es vorerst nicht selbst beheben kannst (und nicht hier nachfragen willst, wie es geht), dann <span>melde den Fehler</span>. Ich habe es nun <a href="http://www.openstreetmap.org/browse/changeset/16893760">eingetragen</a> (dazu habe ich erstmal die Straße in zwei Teile getrennt, um sie getrennt voneinander taggen zu können), ich hoffe es ist so richtig und der richtige <a href="http://www.openstreetmap.org/browse/way/229353584">Straßenabschnitt</a>.</p>
+<p><span>@ivolino</span>: Wenn du zukünftig solche Fehler in unseren Daten feststellst, aber es vorerst nicht selbst beheben kannst (und nicht hier nachfragen willst, wie es geht), dann <span>melde den Fehler</span>. Ich habe es nun <a href="https://www.openstreetmap.org/browse/changeset/16893760">eingetragen</a> (dazu habe ich erstmal die Straße in zwei Teile getrennt, um sie getrennt voneinander taggen zu können), ich hoffe es ist so richtig und der richtige <a href="https://www.openstreetmap.org/browse/way/229353584">Straßenabschnitt</a>.</p>
 <p><span>@Tordanik</span>: Laut der Wikiseite sollte <code>:conditional</code> an den key, hast du das absichtlich weggelassen? Ich habe nun <code>vehicle:conditional = no @ (Sa-Su)</code> verwendet.</p>
 </div>
 <div id="comment-24151-info" class="comment-info">

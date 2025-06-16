@@ -64,7 +64,7 @@ osqa_accepted = false
 <p>somewhat unrelated to the openstreetmap, but when you find a well used mtb trails area, you may find it useful as I have to check the area using the Strava Heatmaps as well as checking the OSM<br />
 </p>
 <p><a href="http://labs.strava.com/heatmap/#14/-243.87920/-31.98191/blue/bike">http://labs.strava.com/heatmap/#14/-243.87920/-31.98191/blue/bike</a></p>
-<p><a href="http://www.openstreetmap.org/#map=13/-31.9801/116.1122&amp;layers=C">http://www.openstreetmap.org/#map=13/-31.9801/116.1122&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/#map=13/-31.9801/116.1122&amp;layers=C">https://www.openstreetmap.org/#map=13/-31.9801/116.1122&amp;layers=C</a></p>
 </div>
 <div id="comment-33771-info" class="comment-info">
 <span class="comment-age">(07 Jun '14, 09:46)</span> <span class="comment-user userinfo">nevw</span>

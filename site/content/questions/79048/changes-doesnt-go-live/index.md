@@ -64,7 +64,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for speedy reply.</p>
-<p>I see this in a new broswer, see pic.<img src="https://help.openstreetmap.org/upfiles/1.PNG" alt="alt text" /></p>
+<p>I see this in a new broswer, see pic.<img src="/upfiles/1.PNG" alt="alt text" /></p>
 <p>Why isn't the company showing up as the other two examples, did I register it wrong?</p>
 </div>
 <div id="comment-79051-info" class="comment-info">

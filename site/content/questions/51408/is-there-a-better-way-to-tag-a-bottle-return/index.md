@@ -165,7 +165,7 @@ Which doesn't work very well because it seems to indicate that a facility with r
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure we have that facilty in the UK yet, although deposite returns were discussed on the radio recently, we did have a deposite system 50 years ago when we could get 3 or 4 old pennies on lemonade and beer bottles. I would suggest a good look at tag info here for other countries. <a href="http://wiki.openstreetmap.org/wiki/TagFinder">http://wiki.openstreetmap.org/wiki/TagFinder</a> and as you suggest debating a new tag which is fit for purpose. The plastic bag tax seems to be working and i think returnable deposites would be a good idea as well.</p>
+<p>I'm not sure we have that facilty in the UK yet, although deposite returns were discussed on the radio recently, we did have a deposite system 50 years ago when we could get 3 or 4 old pennies on lemonade and beer bottles. I would suggest a good look at tag info here for other countries. <a href="https://wiki.openstreetmap.org/wiki/TagFinder">https://wiki.openstreetmap.org/wiki/TagFinder</a> and as you suggest debating a new tag which is fit for purpose. The plastic bag tax seems to be working and i think returnable deposites would be a good idea as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

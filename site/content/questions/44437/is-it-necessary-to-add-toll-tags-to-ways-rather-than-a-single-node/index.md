@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The relevant <a href="http://wiki.openstreetmap.org/wiki/Key:toll">Wiki page</a> says that the toll=* key is approved for use only on ways, and usage in Taginfo reflects this. But shouldn't adding the tag to a single node (the tollbooth) be adequate for routers to recognise that the road requires a toll? Having to explicitly mark each portion of a road where a toll is applicable seems very redundant, since this is just essentially tracing possible routes that go through the tollbooth.</p>
+<p>The relevant <a href="https://wiki.openstreetmap.org/wiki/Key:toll">Wiki page</a> says that the toll=* key is approved for use only on ways, and usage in Taginfo reflects this. But shouldn't adding the tag to a single node (the tollbooth) be adequate for routers to recognise that the road requires a toll? Having to explicitly mark each portion of a road where a toll is applicable seems very redundant, since this is just essentially tracing possible routes that go through the tollbooth.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-toll" rel="tag" title="see questions tagged &#39;toll&#39;">toll</span>

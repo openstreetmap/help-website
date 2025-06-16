@@ -154,7 +154,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>right click over permalink left click over copy link address them its ready to paste right click,paste <a href="http://www.openstreetmap.org/?lat=53.7579&amp;lon=-2.7053&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=53.7579&amp;lon=-2.7053&amp;zoom=14&amp;layers=M</a></p>
+<p>right click over permalink left click over copy link address them its ready to paste right click,paste <a href="https://www.openstreetmap.org/?lat=53.7579&amp;lon=-2.7053&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=53.7579&amp;lon=-2.7053&amp;zoom=14&amp;layers=M</a></p>
 </div>
 <div id="comment-8047-info" class="comment-info">
 <span class="comment-age">(20 Sep '11, 20:12)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -426,9 +426,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes you can. But you wouldn't do this within OpenStreetMap itself (see other answers)</p>
-<p>You can try to make tweaks like this to a map (a particular map image of a particular area) by first extracting the area in <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG format</a> (or similar), and then using a graphical vector editing tool such as inkscape or adobe illustrator to make the change. This would let you remove labels which are getting in the way, and this might reveal other details, although...<br />
+<p>You can try to make tweaks like this to a map (a particular map image of a particular area) by first extracting the area in <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG format</a> (or similar), and then using a graphical vector editing tool such as inkscape or adobe illustrator to make the change. This would let you remove labels which are getting in the way, and this might reveal other details, although...<br />
 </p>
-<p>...the renderer might have decided not to plot some objects because it knows the label is there (collision detection with the Mapnik renderer) To reveal those kinds of bits of the map, you'd need to re-run the rendering without the label somehow. All a bit more tricky, but you'd be looking at running your own <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> installation or the less technical <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperative</a>. Given your own rendering set-up, you could make one-off destructive changes to your own local database, such as moving or deleting a place label.</p>
+<p>...the renderer might have decided not to plot some objects because it knows the label is there (collision detection with the Mapnik renderer) To reveal those kinds of bits of the map, you'd need to re-run the rendering without the label somehow. All a bit more tricky, but you'd be looking at running your own <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> installation or the less technical <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperative</a>. Given your own rendering set-up, you could make one-off destructive changes to your own local database, such as moving or deleting a place label.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -458,7 +458,7 @@ osqa_accepted = true
 <div id="post-8626-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>With regard to asking for advice about what/how to contribute, I'd have a read of <a href="http://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">http://wiki.openstreetmap.org/wiki/Beginner%27s_Guide</a> and the pages that are linked from there, and then ask any questions as separate help questions on this site (i.e. don't add a comment here, but "ask a question" again).</p>
+<p>With regard to asking for advice about what/how to contribute, I'd have a read of <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide</a> and the pages that are linked from there, and then ask any questions as separate help questions on this site (i.e. don't add a comment here, but "ask a question" again).</p>
 </div>
 <div id="comment-8626-info" class="comment-info">
 <span class="comment-age">(24 Oct '11, 19:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

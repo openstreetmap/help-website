@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>this question is related to Moroccan medinas, but I think most European cities with a medieval core expose a similar problem.</p>
-<p>take for example the <a href="http://www.openstreetmap.org/?lat=31.514246&amp;lon=-9.769025&amp;zoom=18&amp;layers=M">medina of Essaouira</a>. it is composed of a couple of broad alleys cutting the space in quarters in each of which houses are made reachable by narrow, mostly dead end, streets. people living there use these streets on foot, bike and motorbike. most of these streets are just about 1.5m wide.</p>
+<p>take for example the <a href="https://www.openstreetmap.org/?lat=31.514246&amp;lon=-9.769025&amp;zoom=18&amp;layers=M">medina of Essaouira</a>. it is composed of a couple of broad alleys cutting the space in quarters in each of which houses are made reachable by narrow, mostly dead end, streets. people living there use these streets on foot, bike and motorbike. most of these streets are just about 1.5m wide.</p>
 <p>how should I categorize them and how do I make sure they do not clutter the area as if they were big fat alleys?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are several tags for this, like <a href="http://wiki.openstreetmap.org/wiki/Key:width">width=</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:narrow">narrow=yes</a>. Both can be used to specify that a way is narrower than others, but both won't get rendered on the main page. Furthermore there is <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">highway=service</a> with <a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">service=alley</a> which might be suitable in some cases, but not in all. Usually <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">highway=service</a> are rendered thinner than other highways, but you should always remember that tagging for the renderer should be avoided.</p>
+<p>There are several tags for this, like <a href="https://wiki.openstreetmap.org/wiki/Key:width">width=</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:narrow">narrow=yes</a>. Both can be used to specify that a way is narrower than others, but both won't get rendered on the main page. Furthermore there is <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">highway=service</a> with <a href="https://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">service=alley</a> which might be suitable in some cases, but not in all. Usually <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">highway=service</a> are rendered thinner than other highways, but you should always remember that tagging for the renderer should be avoided.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -224,7 +224,7 @@ osqa_accepted = true
 <div id="post-7633-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>thanks for the hint, in fact I am also editing Safi (أسفي) area (<a href="http://www.openstreetmap.org/?lat=32.29875&amp;lon=-9.2407&amp;zoom=17&amp;layers=O)">http://www.openstreetmap.org/?lat=32.29875&amp;lon=-9.2407&amp;zoom=17&amp;layers=O)</a> and I thought I would make some experiments in the old medina, by checking which representation I like most in both mapnik and openstreet and I think I am going to tag either as residential or service/alley (discarding use of pedestrian and living_street). did not think of footways nor path, I will test those as well.</p>
+<p>thanks for the hint, in fact I am also editing Safi (أسفي) area (<a href="https://www.openstreetmap.org/?lat=32.29875&amp;lon=-9.2407&amp;zoom=17&amp;layers=O)">https://www.openstreetmap.org/?lat=32.29875&amp;lon=-9.2407&amp;zoom=17&amp;layers=O)</a> and I thought I would make some experiments in the old medina, by checking which representation I like most in both mapnik and openstreet and I think I am going to tag either as residential or service/alley (discarding use of pedestrian and living_street). did not think of footways nor path, I will test those as well.</p>
 </div>
 <div id="comment-7633-info" class="comment-info">
 <span class="comment-age">(05 Sep '11, 12:57)</span> <span class="comment-user userinfo">mariotomo</span>
@@ -278,7 +278,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Key:width">width=*</a> along with the highway=residential. It will still clutter the map if the rendering rules do not use the tag, but this is the renderers fault. If you want you can try to make a patch to the main mapnik layer used on the front page. This may require some programming.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Key:width">width=*</a> along with the highway=residential. It will still clutter the map if the rendering rules do not use the tag, but this is the renderers fault. If you want you can try to make a patch to the main mapnik layer used on the front page. This may require some programming.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

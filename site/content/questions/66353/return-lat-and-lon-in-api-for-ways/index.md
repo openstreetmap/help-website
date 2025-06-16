@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Return lat and lon in API for ways"
-description = '''I would love to see the API-call https://www.openstreetmap.org/api/0.6/way/214501181 to return &amp;lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.6.1 (2060 thorn-02.openstreetmap.org)&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;http://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacomm...'''
+description = '''I would love to see the API-call https://www.openstreetmap.org/api/0.6/way/214501181 to return &amp;lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.6.1 (2060 thorn-02.openstreetmap.org)&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;https://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacomm...'''
 date = "2018-10-16T08:56:00Z"
 lastmod = "2018-10-16T13:22:00Z"
 weight = 66353
@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I would love to see the API-call</p>
 <p><a href="https://www.openstreetmap.org/api/0.6/way/214501181">https://www.openstreetmap.org/api/0.6/way/214501181</a></p>
 <p>to return</p>
-<p>&lt;<code>osm version="0.6" generator="CGImap 0.6.1 (2060 thorn-02.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/"&gt;</code></p>
+<p>&lt;<code>osm version="0.6" generator="CGImap 0.6.1 (2060 thorn-02.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="https://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/"&gt;</code></p>
 <p>&lt;<code>way id="214501181" visible="true" version="4" changeset="49679796" timestamp="2017-06-19T23:15:34Z" user="WayneSchlegel" uid="548288"&gt;</code></p>
 <p>&lt;<code>nd ref="2240372834" lat="48.5235762" lon="9.0594567"/&gt;</code></p>
 <p>&lt;<code>nd ref="2240372819" lat="48.5235762" lon="9.0594567"/&gt;</code></p>

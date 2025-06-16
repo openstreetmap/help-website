@@ -196,7 +196,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Of course, if the city or zip boundaries have been mapped as areas correctly, it becomes redundant to add this information as it is retrievable based on where the building is located</p>
-<p>e.g. <a href="http://www.openstreetmap.org/search?query=1%20Corrib%20Park#map=19/53.28173/-9.07195">this search</a> shows the full address string but if you look at the <a href="http://www.openstreetmap.org/way/207248053">building itself</a>, it only has the addr:housenumber and addr:street tagging applied</p>
+<p>e.g. <a href="https://www.openstreetmap.org/search?query=1%20Corrib%20Park#map=19/53.28173/-9.07195">this search</a> shows the full address string but if you look at the <a href="https://www.openstreetmap.org/way/207248053">building itself</a>, it only has the addr:housenumber and addr:street tagging applied</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -246,7 +246,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>cweiske, zip and city fields are unmistakable part of the address of a building, apartments or companies. Read these lines as well <a href="http://wiki.openstreetmap.org/wiki/Addresses">http://wiki.openstreetmap.org/wiki/Addresses</a> - the zip, house number and country code are enough to get to the right address - not every router uses all elements of the address code - so add all the available address elements into OSM</p>
+<p>cweiske, zip and city fields are unmistakable part of the address of a building, apartments or companies. Read these lines as well <a href="https://wiki.openstreetmap.org/wiki/Addresses">https://wiki.openstreetmap.org/wiki/Addresses</a> - the zip, house number and country code are enough to get to the right address - not every router uses all elements of the address code - so add all the available address elements into OSM</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

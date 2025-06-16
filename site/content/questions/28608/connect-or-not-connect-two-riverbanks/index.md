@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I want to add riverbank to a river, the Wang, that is a tributary to another river, the Ping. The Ping is a member of a large relation and has a defined riverbank already. How do I best construct the "junction" between the two riverbanks? The area of interest is included in the link below</p>
-<p><a href="http://www.openstreetmap.org/#map=16/18.5424/98.9368">http://www.openstreetmap.org/#map=16/18.5424/98.9368</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/18.5424/98.9368">https://www.openstreetmap.org/#map=16/18.5424/98.9368</a></p>
 <p>Thanks for your help, as always</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>seen this? <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank#River_junctions">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank#River_junctions</a> added edit:- Dave. I just opened the editor again and i see that neither of the polygons seems to be complete, i'm sure they need to be.. they don't highlight as yellow all the way around when selected which they should. The way that forms the junction should be used as part of both riverbank polygons although the link suggests that this bit is not really a river bank, maybe someone can help us both on that point. I usually create long rivers by breaking the polygons into smaller ones that have common joining ways. like the one just mentioned. This works for me. Maybe that this will also be confirmed as ok.</p>
+<p>seen this? <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank#River_junctions">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank#River_junctions</a> added edit:- Dave. I just opened the editor again and i see that neither of the polygons seems to be complete, i'm sure they need to be.. they don't highlight as yellow all the way around when selected which they should. The way that forms the junction should be used as part of both riverbank polygons although the link suggests that this bit is not really a river bank, maybe someone can help us both on that point. I usually create long rivers by breaking the polygons into smaller ones that have common joining ways. like the one just mentioned. This works for me. Maybe that this will also be confirmed as ok.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

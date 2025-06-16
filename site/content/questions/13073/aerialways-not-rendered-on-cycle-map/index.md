@@ -111,7 +111,7 @@ One Answer:
 <div class="answer-body">
 <p>The cyclemap rendering is provided by Andy Allan <a href="http://www.gravitystorm.co.uk/">http://www.gravitystorm.co.uk/</a> he is the person to direct such requests.</p>
 <p>A superficial check didn't turn up any biking map (for example <a href="http://hikebikemap.de/)">http://hikebikemap.de/)</a> that actually renders aerialways even though they could clearly be considered public transport. If none of the existing maps providers want to add a rendering of such objects, you can naturally always DIY:</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Rendering,">http://wiki.openstreetmap.org/wiki/Rendering,</a> Maperitive is probably the best tool for a one off rendering.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Rendering,">https://wiki.openstreetmap.org/wiki/Rendering,</a> Maperitive is probably the best tool for a one off rendering.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

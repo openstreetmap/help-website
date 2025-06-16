@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have checked the location and although you have drawn an outline of the gym area you have NOT added the tag.building=yes . I have just added it and it should,I hope, now appear on the map, in a while.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Building_yes_missing_eM6YNWF.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Building_yes_missing_eM6YNWF.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -118,7 +118,7 @@ out geom;</code></pre>
 map_to_area;
 out geom;</code></pre>
 <p>both return the data below, as expected, using OPT.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_ImTZKN2.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_ImTZKN2.JPG" alt="alt text" /></p>
 <p>This returns the geometry</p>
 <pre><code>rel[&quot;ISO3166-2&quot;=&quot;NI-AS&quot;];
 out geom;</code></pre>

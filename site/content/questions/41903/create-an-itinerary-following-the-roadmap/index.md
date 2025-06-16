@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure what you mean. The routing certainly follows the road contours <a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=-34.8217%2C140.7287%3B-34.4873%2C140.6614#map=11/-34.6431/140.6549">http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=-34.8217%2C140.7287%3B-34.4873%2C140.6614#map=11/-34.6431/140.6549</a></p>
+<p>I'm not sure what you mean. The routing certainly follows the road contours <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=-34.8217%2C140.7287%3B-34.4873%2C140.6614#map=11/-34.6431/140.6549">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=-34.8217%2C140.7287%3B-34.4873%2C140.6614#map=11/-34.6431/140.6549</a></p>
 <p>Do you mean to export a map only dislaying the route plus nearby roads within 200 metres of the track or similar.</p>
 <p>or do you just want to export the displayed route (using the osm routing link) to a .gpx file to load into a GPS receiver like a garmin. If this is what you require, select 'Directions courtesy of OSRM' at the bottom of the 'Directions' section and the OSRM site will offer a download of a .gpx file if you re-enter the start and end locations in that routing page.</p>
 </div>
@@ -151,7 +151,7 @@ osqa_accepted = false
 <p><a href="http://map.project-osrm.org">http://map.project-osrm.org</a></p>
 <p><a href="http://www.openrouteservice.org">http://www.openrouteservice.org</a></p>
 <p><a href="https://graphhopper.com/maps">https://graphhopper.com/maps</a></p>
-<p>or <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">http://wiki.openstreetmap.org/wiki/Routing/online_routers</a> in general to see services that can export a calculated route as GPX.</p>
+<p>or <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">https://wiki.openstreetmap.org/wiki/Routing/online_routers</a> in general to see services that can export a calculated route as GPX.</p>
 </div>
 <div id="comment-41920-info" class="comment-info">
 <span class="comment-age">(25 Mar '15, 17:52)</span> <span class="comment-user userinfo">stephan75</span>

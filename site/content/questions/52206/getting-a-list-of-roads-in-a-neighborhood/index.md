@@ -119,7 +119,7 @@ One Answer:
 <div class="answer-body">
 <p>This type of problem is best tackled using Overpass/Overpass-Turbo.</p>
 <p>If your neighbourhood is mapped as a polygon then you can use this as an area for constraining the query. Otherwise use around with, say, a value of 500-1000 metres. You'll probably get some false positives, but remember that unless the neighbourhood is precisely defined people living there will have rather different perspectives of what it includes. Therefore tagging individual roads is unlikely to meet OSM's repeatably observable criterion.</p>
-<p>Suitable example queries of this type are shown on the OSM <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Special_clauses:_around_and_poly">wiki</a>.</p>
+<p>Suitable example queries of this type are shown on the OSM <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Special_clauses:_around_and_poly">wiki</a>.</p>
 <p>You can arrange for the output to be produced ia csv format. Here's <a href="http://overpass-turbo.eu/s/ixO">an example</a> for Overpass-turbo.</p>
 </div>
 <div class="answer-controls post-controls">

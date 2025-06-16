@@ -62,7 +62,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>You might be interested in some of the answers to <a href="https://help.openstreetmap.org/questions/6915/difference-between-residential-and-living-street">this related question</a>.</p>
+<p>You might be interested in some of the answers to <a href="/questions/6915/difference-between-residential-and-living-street">this related question</a>.</p>
 </div>
 <div id="comment-32716-info" class="comment-info">
 <span class="comment-age">(28 Apr '14, 10:26)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -237,7 +237,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hi is it a remark or a question ? <a href="http://wiki.openstreetmap.org/wiki/Highway">http://wiki.openstreetmap.org/wiki/Highway</a> Please ad a new question in a new menu.</p>
+<p>Hi is it a remark or a question ? <a href="https://wiki.openstreetmap.org/wiki/Highway">https://wiki.openstreetmap.org/wiki/Highway</a> Please ad a new question in a new menu.</p>
 </div>
 <div id="comment-38047-info" class="comment-info">
 <span class="comment-age">(28 Oct '14, 12:45)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -248,7 +248,7 @@ osqa_accepted = false
 <div id="post-38054-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>some information <a href="http://wiki.openstreetmap.org/wiki/Living_street">http://wiki.openstreetmap.org/wiki/Living_street</a></p>
+<p>some information <a href="https://wiki.openstreetmap.org/wiki/Living_street">https://wiki.openstreetmap.org/wiki/Living_street</a></p>
 </div>
 <div id="comment-38054-info" class="comment-info">
 <span class="comment-age">(28 Oct '14, 15:10)</span> <span class="comment-user userinfo">andy mackey</span>

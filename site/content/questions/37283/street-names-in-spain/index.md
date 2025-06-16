@@ -93,7 +93,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n">http://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n</a> for information on what rules the ES community is following.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n">https://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n</a> for information on what rules the ES community is following.</p>
 </div>
 <div id="comment-37286-info" class="comment-info">
 <span class="comment-age">(04 Oct '14, 00:07)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

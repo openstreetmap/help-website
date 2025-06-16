@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>here is a boules court that was created ages ago</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20200713_101650.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20200713_101650.png" alt="alt text" /></p>
 <p>but it still does not show up on the map:</p>
 <p><a href="https://www.openstreetmap.org/?mlat=51.02956&amp;mlon=3.70697#map=19/51.02956/3.70697&amp;layers=CN">map</a></p>
 <p>why would I bother adding such features if they don't show up?</p>

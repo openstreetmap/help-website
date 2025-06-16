@@ -113,9 +113,9 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I expect that you would need to use one of the main editors like ID, Potlatch 2 or Josm, using a pc, to move or realign the roads, add a node to places where you want to split the road to add the name to the right sections.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Editors">http://wiki.openstreetmap.org/wiki/Editors</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">http://wiki.openstreetmap.org/wiki/Comparison_of_editors</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Editors">https://wiki.openstreetmap.org/wiki/Editors</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">https://wiki.openstreetmap.org/wiki/Comparison_of_editors</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a><br />
 I noticed a note on the map where you may like to split a damaged part of a road and tag it access=no and highway=construction until it is repaired.</p>
 </div>
 <div id="comment-51582-info" class="comment-info">
@@ -127,7 +127,7 @@ I noticed a note on the map where you may like to split a damaged part of a road
 <div id="post-51619-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12681/andreamoro">@andreamoro</a>: thanks for your help in that region! That's much needed! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/12681/andreamoro">@andreamoro</a>: thanks for your help in that region! That's much needed! :-)</p>
 </div>
 <div id="comment-51619-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 21:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -238,7 +238,7 @@ One Answer:
 <div id="post-51615-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: well, at least the links to the editors are not broken in our "confusing" wiki page – quite an advantage. ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: well, at least the links to the editors are not broken in our "confusing" wiki page – quite an advantage. ;-)</p>
 </div>
 <div id="comment-51615-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 21:39)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -272,7 +272,7 @@ One Answer:
 <div id="post-51618-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12681/andreamoro"></a><a href="http://help.openstreetmap.org/users/12681/andreamoro">@andreamoro</a>: please keep in mind, that temporary (days, weeks, ...) road blockings should not be incorporated into our data. There are other dynamic info systems (including traffic jam) available, OSM is not really made for this kind of dynamic data.</p>
+<p><a href="https://help.openstreetmap.org/users/12681/andreamoro"></a><a href="https://help.openstreetmap.org/users/12681/andreamoro">@andreamoro</a>: please keep in mind, that temporary (days, weeks, ...) road blockings should not be incorporated into our data. There are other dynamic info systems (including traffic jam) available, OSM is not really made for this kind of dynamic data.</p>
 </div>
 <div id="comment-51618-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 21:52)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -283,7 +283,7 @@ One Answer:
 <div id="post-51624-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> indeed. Those roads are out of service, done of them for 2 years and more. Recent thunderstorm completely devastated some other areas and the Italian road system is like a pasta drainer</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> indeed. Those roads are out of service, done of them for 2 years and more. Recent thunderstorm completely devastated some other areas and the Italian road system is like a pasta drainer</p>
 </div>
 <div id="comment-51624-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 22:48)</span> <span class="comment-user userinfo">andreamoro</span>
@@ -294,7 +294,7 @@ One Answer:
 <div id="post-51625-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12681/andreamoro"></a><a href="http://help.openstreetmap.org/users/12681/andreamoro">@andreamoro</a>: okay, thanks for the clarification. That's fine in this case! Best wishes for yourself on your tours on those roads!</p>
+<p><a href="https://help.openstreetmap.org/users/12681/andreamoro"></a><a href="https://help.openstreetmap.org/users/12681/andreamoro">@andreamoro</a>: okay, thanks for the clarification. That's fine in this case! Best wishes for yourself on your tours on those roads!</p>
 </div>
 <div id="comment-51625-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 23:08)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -113,7 +113,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There's a great number of things you need to learn to be able to build the kind of site you're talking about. You need to know several (not just one) programming language, how relational databases work, how HTML and JavaScript work together, and the many different ways geographic information is processed.</p>
 <p>To put it another way, it's like saying "I've been asked to build a house, where can I learn the bricklaying I need?". You're being asked too large a task, especially for an intern.</p>
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">simple example of overlaying markers on an OSM map</a>, but that needs you to know some JavaScript yourself, which you'll need to learn separately.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">simple example of overlaying markers on an OSM map</a>, but that needs you to know some JavaScript yourself, which you'll need to learn separately.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

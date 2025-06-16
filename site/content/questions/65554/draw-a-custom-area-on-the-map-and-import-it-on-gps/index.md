@@ -68,7 +68,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Hi, welcome! :-)</p>
-<p>This Has been asked several times in the past (yes, but not thaaat easy to find - the tag "drawing" helps a lot, though): See <a href="https://help.openstreetmap.org/questions/25135/how-to-manually-create-a-gps-track-for-biking">https://help.openstreetmap.org/questions/25135/how-to-manually-create-a-gps-track-for-biking</a></p>
+<p>This Has been asked several times in the past (yes, but not thaaat easy to find - the tag "drawing" helps a lot, though): See <a href="/questions/25135/how-to-manually-create-a-gps-track-for-biking">https://help.openstreetmap.org/questions/25135/how-to-manually-create-a-gps-track-for-biking</a></p>
 </div>
 <div id="comment-65558-info" class="comment-info">
 <span class="comment-age">(25 Aug '18, 21:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

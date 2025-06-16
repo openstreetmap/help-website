@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's just some <a href="https://twitter.com/OSM_Tech/status/538394075448479744">temporary server-room work</a> I think.</p>
-<p>In the short term there are numerous other "setting up a tile server" links. For example, there are some notes that I took <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver">here</a> but there are plenty of others that I'm sure people can suggest.</p>
+<p>In the short term there are numerous other "setting up a tile server" links. For example, there are some notes that I took <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver">here</a> but there are plenty of others that I'm sure people can suggest.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

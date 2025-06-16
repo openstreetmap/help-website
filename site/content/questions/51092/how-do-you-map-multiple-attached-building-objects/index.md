@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>This is related to the question:</p>
-<p><a href="https://help.openstreetmap.org/questions/36574/how-do-you-map-and-tag-a-screened-porch?">https://help.openstreetmap.org/questions/36574/how-do-you-map-and-tag-a-screened-porch?</a></p>
+<p><a href="/questions/36574/how-do-you-map-and-tag-a-screened-porch?">https://help.openstreetmap.org/questions/36574/how-do-you-map-and-tag-a-screened-porch?</a></p>
 <p>In that question they answered that porches could be tagged with building:porch. With that in mind, how should I tag two building that share a wall with each other.</p>
 <p>This also comes up in things like row homes and some building in commercial areas. The validator complains if I have a building that is an unclosed way, so I am assuming that I can't just make a building that only has three sides and shares its forth side with another building.</p>
 </div>

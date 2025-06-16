@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:addr">L'enregistrement du numéro d'un bâtiment est normalisé dans l'étiquette 'addr'</a>. Exemple:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:addr">L'enregistrement du numéro d'un bâtiment est normalisé dans l'étiquette 'addr'</a>. Exemple:</p>
 <pre><code>addr:country=FR
 addr:postcode=92400
 addr:city=Courbevoie
@@ -119,8 +119,8 @@ addr:housenumber=27
 building=yes
 name=Les Jardins de Parthenay
 source=cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010</code></pre>
-<p><a href="http://wiki.openstreetmap.org/wiki/Addressing">Ca peut même être plus compliqué que ça</a>...</p>
-<p>En tout cas ça fait quand même un paquet d'étiquettes à entrer manuellement - <a href="http://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Utilitaire_de_saisie_des_adresses">l'extension JOSM mentionnée par Pieren</a> est d'un grand secours.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Addressing">Ca peut même être plus compliqué que ça</a>...</p>
+<p>En tout cas ça fait quand même un paquet d'étiquettes à entrer manuellement - <a href="https://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Utilitaire_de_saisie_des_adresses">l'extension JOSM mentionnée par Pieren</a> est d'un grand secours.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -173,7 +173,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/questions/9643/how-to-edit-house-numbers">This</a> previous question is relevant, I think. Not all of the wiki links from that are currently available in French, but the <a href="http://wiki.openstreetmap.org/wiki/FR:Beginners%27_guide">Beginners' Guide</a> is.</p>
+<p><a href="/questions/9643/how-to-edit-house-numbers">This</a> previous question is relevant, I think. Not all of the wiki links from that are currently available in French, but the <a href="https://wiki.openstreetmap.org/wiki/FR:Beginners%27_guide">Beginners' Guide</a> is.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -234,7 +234,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A noter que pour la France, si tu utilises JOSM et le plugin cadastre-fr qui fournit les images du cadastre (et les adresses), tu peux très rapidement saisir les numéros grâce à ce petit outil inclu dans le plugin (<a href="http://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Utilitaire_de_saisie_des_adresses">voir le wiki</a>)</p>
+<p>A noter que pour la France, si tu utilises JOSM et le plugin cadastre-fr qui fournit les images du cadastre (et les adresses), tu peux très rapidement saisir les numéros grâce à ce petit outil inclu dans le plugin (<a href="https://wiki.openstreetmap.org/wiki/FR:JOSM/Fr:Plugin/Cadastre-fr#Utilitaire_de_saisie_des_adresses">voir le wiki</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>I think the way to resolve this is to simply add the location of your hotel on OpenStreetMap.</p>
 <p>Facebook has very recently started using OpenStreetMap for locations in China and elsewhere in East Asia, and we dont know exactly how Facebook chooses how to locate the marker on the OpenStreetMap background.</p>
-<p>OpenStreetMap does have 朝阳区 / Chaoyang District <a href="http://www.openstreetmap.org/relation/2988933#map=14/39.9327/116.3897&amp;layers=Q">mapped</a>.</p>
+<p>OpenStreetMap does have 朝阳区 / Chaoyang District <a href="https://www.openstreetmap.org/relation/2988933#map=14/39.9327/116.3897&amp;layers=Q">mapped</a>.</p>
 <p>To add a hotel you can either:</p>
 <ul>
 <li>Create a note (bottom icon on Right-hand side of screen pop-out menu) in the correct location, and wait for an experienced OpenStreetMap editor to add it to the data.</li>

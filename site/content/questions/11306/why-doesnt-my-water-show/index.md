@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why doesn&#x27;t my water show?"
-description = '''I&#x27;m having trouble making a lake show in the OSM view. It all appears ok, but just doesn&#x27;t want to show up. I&#x27;ve checked and checked and it must be something to do with the nodes, but I can&#x27;t see what.  The link below shows it.  http://www.openstreetmap.org/?box=yes&amp;amp;bbox=-1.2754%2C53.31288%2C-1....'''
+description = '''I&#x27;m having trouble making a lake show in the OSM view. It all appears ok, but just doesn&#x27;t want to show up. I&#x27;ve checked and checked and it must be something to do with the nodes, but I can&#x27;t see what.  The link below shows it.  https://www.openstreetmap.org/?box=yes&amp;amp;bbox=-1.2754%2C53.31288%2C-1....'''
 date = "2012-03-18T22:03:00Z"
 lastmod = "2012-03-18T23:47:00Z"
 weight = 11306
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I'm having trouble making a lake show in the OSM view. It all appears ok, but just doesn't want to show up. I've checked and checked and it must be something to do with the nodes, but I can't see what.<br />
 </p>
 <p>The link below shows it.</p>
-<p><a href="http://www.openstreetmap.org/?box=yes&amp;bbox=-1.2754%2C53.31288%2C-1.2656%2C53.32024">http://www.openstreetmap.org/?box=yes&amp;bbox=-1.2754%2C53.31288%2C-1.2656%2C53.32024</a></p>
+<p><a href="https://www.openstreetmap.org/?box=yes&amp;bbox=-1.2754%2C53.31288%2C-1.2656%2C53.32024">https://www.openstreetmap.org/?box=yes&amp;bbox=-1.2754%2C53.31288%2C-1.2656%2C53.32024</a></p>
 <p>Any help would be appreciated, I'm new to this and this one has got me really confused.</p>
 <p>Thanks</p>
 </div>
@@ -67,7 +67,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>It shows up OK for me - perhaps it's just the (entirely normal) effect of things not showing up immediately they're added?</p>
-<p><a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> is a good summary.</p>
+<p><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> is a good summary.</p>
 </div>
 <div id="comment-11310-info" class="comment-info">
 <span class="comment-age">(18 Mar '12, 23:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

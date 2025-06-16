@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-37709-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Endpoints: <a href="http://www.openstreetmap.org/node/52556109#map=13/49.0028/-123.1380">http://www.openstreetmap.org/node/52556109#map=13/49.0028/-123.1380</a> <a href="http://www.openstreetmap.org/node/52556109#map=16/48.6897/-123.4078">http://www.openstreetmap.org/node/52556109#map=16/48.6897/-123.4078</a></p>
+<p>Endpoints: <a href="https://www.openstreetmap.org/node/52556109#map=13/49.0028/-123.1380">https://www.openstreetmap.org/node/52556109#map=13/49.0028/-123.1380</a> <a href="https://www.openstreetmap.org/node/52556109#map=16/48.6897/-123.4078">https://www.openstreetmap.org/node/52556109#map=16/48.6897/-123.4078</a></p>
 </div>
 <div id="comment-37709-info" class="comment-info">
 <span class="comment-age">(17 Oct '14, 19:44)</span> <span class="comment-user userinfo">RM87</span>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, it is not correct to change this way into a highway=trunk in order to repair route calculation errors. You can use duration=* see <a href="http://wiki.openstreetmap.org/wiki/Tag:route%3Dferry">http://wiki.openstreetmap.org/wiki/Tag:route%3Dferry</a></p>
+<p>No, it is not correct to change this way into a highway=trunk in order to repair route calculation errors. You can use duration=* see <a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dferry">https://wiki.openstreetmap.org/wiki/Tag:route%3Dferry</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

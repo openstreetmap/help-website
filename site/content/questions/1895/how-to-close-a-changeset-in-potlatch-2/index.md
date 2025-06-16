@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Recently you can type 'C' to close the changeset.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a> for all the keyboard shortcuts in Potlatch 2.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a> for all the keyboard shortcuts in Potlatch 2.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -154,8 +154,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbeacon">beacon wiki page</a>, you can use <code>manmade</code>=<code>beacon</code> with <code>airmark</code>=<code>beacon</code>. Mind you, I'm not sure if that wiki page reflects actual usage anywhere.</p>
-<p>I think it would be better to stick to using the <a href="http://wiki.openstreetmap.org/wiki/Aeroway">aeroway</a> key and tag them with <code>aeroway</code>=<code>beacon</code>, <code>beacon</code>=<code>landing</code> or something similar. I don't think any of these render yet, so if you want to see them you would need to talk to the people operating the various renderers.</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbeacon">beacon wiki page</a>, you can use <code>manmade</code>=<code>beacon</code> with <code>airmark</code>=<code>beacon</code>. Mind you, I'm not sure if that wiki page reflects actual usage anywhere.</p>
+<p>I think it would be better to stick to using the <a href="https://wiki.openstreetmap.org/wiki/Aeroway">aeroway</a> key and tag them with <code>aeroway</code>=<code>beacon</code>, <code>beacon</code>=<code>landing</code> or something similar. I don't think any of these render yet, so if you want to see them you would need to talk to the people operating the various renderers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

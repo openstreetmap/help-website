@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-22586-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>bit more info <a href="https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use">https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use</a></p>
+<p>bit more info <a href="/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use">https://help.openstreetmap.org/questions/21317/which-extension-to-chose-when-exporting-a-selection-for-oruxmaps-use</a></p>
 </div>
 <div id="comment-22586-info" class="comment-info">
 <span class="comment-age">(20 May '13, 23:44)</span> <span class="comment-user userinfo">andy mackey</span>

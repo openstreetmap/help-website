@@ -124,7 +124,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As your question shows, you have likely already found this wikipage which documents christmas specific tagging (and which currently lacks a suggestion for places where to buy trees): <a href="http://wiki.openstreetmap.org/wiki/Key:xmas:feature">http://wiki.openstreetmap.org/wiki/Key:xmas:feature</a></p>
+<p>As your question shows, you have likely already found this wikipage which documents christmas specific tagging (and which currently lacks a suggestion for places where to buy trees): <a href="https://wiki.openstreetmap.org/wiki/Key:xmas:feature">https://wiki.openstreetmap.org/wiki/Key:xmas:feature</a></p>
 <p>I find the wording "shop" a little bit unfortunate for this kind of business, because the vast majority I am aware of are operating in the open (i.e. they are not "shops" because they are not inside a building and usually not even provide any kind of structure).</p>
 <p>My suggestion would be: <strong><code>xmas:feature=tree_vendor</code></strong> or something similar (avoiding the word "shop").</p>
 </div>

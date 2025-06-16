@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see this question and answer: <a href="https://help.openstreetmap.org/questions/25000/poi-shop-does-not-show-on-wwwopenstreetmaporg">poi-shop-does-not-show-on-wwwopenstreetmaporg</a></p>
+<p>see this question and answer: <a href="/questions/25000/poi-shop-does-not-show-on-wwwopenstreetmaporg">poi-shop-does-not-show-on-wwwopenstreetmaporg</a></p>
 <p>the main display at openstreetmap.org is only an example display ... not all POI categories can be shown.</p>
 </div>
 <div class="answer-controls post-controls">

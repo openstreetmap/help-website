@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Should street names in TIGER tags be converted to not use abbreviations?"
-description = '''Going by the two wiki pages http://wiki.openstreetmap.org/wiki/Names and http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions, I should not abbreviate street names when adding new data. However, in some TIGER data I&#x27;m working through, I&#x27;m encountering abbreviations such as &#x27;St&#x27; for &#x27;...'''
+description = '''Going by the two wiki pages https://wiki.openstreetmap.org/wiki/Names and https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions, I should not abbreviate street names when adding new data. However, in some TIGER data I&#x27;m working through, I&#x27;m encountering abbreviations such as &#x27;St&#x27; for &#x27;...'''
 date = "2012-08-04T04:59:00Z"
 lastmod = "2020-03-06T14:07:00Z"
 weight = 14824
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Going by the two wiki pages <a href="http://wiki.openstreetmap.org/wiki/Names">http://wiki.openstreetmap.org/wiki/Names</a> and <a href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions">http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions</a>, I should not abbreviate street names when adding new data. However, in some TIGER data I'm working through, I'm encountering abbreviations such as 'St' for 'Street'.</p>
+<p>Going by the two wiki pages <a href="https://wiki.openstreetmap.org/wiki/Names">https://wiki.openstreetmap.org/wiki/Names</a> and <a href="https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions">https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions</a>, I should not abbreviate street names when adding new data. However, in some TIGER data I'm working through, I'm encountering abbreviations such as 'St' for 'Street'.</p>
 <p>Would it be better to convert this data to 'Street'/the equivalent, or leave it as is?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -158,7 +158,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes! It would definitely better to convert those names and remove the abbreviations, as <a href="http://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">stated in the wiki</a>. <a href="http://wiki.openstreetmap.org/wiki/TIGER">TIGER</a> data has been imported, consequently the names don't always follow our guidelines. One could argue whether those abbreviations should have been replaced while importing the data, but now it is probably to late to automate this task without breaking anything.</p>
+<p>Yes! It would definitely better to convert those names and remove the abbreviations, as <a href="https://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">stated in the wiki</a>. <a href="https://wiki.openstreetmap.org/wiki/TIGER">TIGER</a> data has been imported, consequently the names don't always follow our guidelines. One could argue whether those abbreviations should have been replaced while importing the data, but now it is probably to late to automate this task without breaking anything.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

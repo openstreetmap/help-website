@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>In nearly all these cases the paths are on private land</p>
 <p>They do not have permissive access rights (where the owner says "I dont mind you walking here, but please be aware I might change my mind"). In practice these paths are private with limited access under certain specific conditions (membership, payment of a fee, opening hours). Use of permissive implies that these are generally routable at all times (subject to any other relevant tags). Therefore I think access=private is the most appropriate general tag.</p>
-<p>Fee tags should be set on the area within which the paths run. Only use fee or toll if the fee or toll is specifically for use of the path, for instance <a href="http://www.openstreetmap.org/way/40360570">High Force</a> (not tagged with fee) or the <a href="http://www.openstreetmap.org/way/177805087">Aareschlucht</a> (tagged incorrectly IMO with permissive). In general things like Open Air Museums, Gardens, National Trust properties, Stately Homes etc. which charge a fee should have this tagged on their boundary. Customers is ambiguous in this context because this is most usually noted on places such as supermarkets, pubs, restaurants which provide a conditional permissive access, rather than a fee-based one.</p>
+<p>Fee tags should be set on the area within which the paths run. Only use fee or toll if the fee or toll is specifically for use of the path, for instance <a href="https://www.openstreetmap.org/way/40360570">High Force</a> (not tagged with fee) or the <a href="https://www.openstreetmap.org/way/177805087">Aareschlucht</a> (tagged incorrectly IMO with permissive). In general things like Open Air Museums, Gardens, National Trust properties, Stately Homes etc. which charge a fee should have this tagged on their boundary. Customers is ambiguous in this context because this is most usually noted on places such as supermarkets, pubs, restaurants which provide a conditional permissive access, rather than a fee-based one.</p>
 <p>There are complications to this approach:</p>
 <ul>
 <li>Not all paths in an area may be allowed for use by visitors. Some paths will be more private than others.</li>
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The way I look at it, there is some location that prevents someone from walking a path if they have not paid a fee. This would suggest a <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">gate</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dentrance">entrance</a>, if the fee is collected there the <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dtoll_booth">toll_booth</a> is probably appropriate and include <a href="http://wiki.openstreetmap.org/wiki/Key:fee">fee</a>=yes for all, possibly excluding toll_booth as it is implied. The pathways could all be set to permissive/customer.</p>
+<p>The way I look at it, there is some location that prevents someone from walking a path if they have not paid a fee. This would suggest a <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">gate</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dentrance">entrance</a>, if the fee is collected there the <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dtoll_booth">toll_booth</a> is probably appropriate and include <a href="https://wiki.openstreetmap.org/wiki/Key:fee">fee</a>=yes for all, possibly excluding toll_booth as it is implied. The pathways could all be set to permissive/customer.</p>
 <p>I can't give recommendations on the choice over permissive/customer. I don't think the guidelines are very well defined here, this includes destination in the context of parking.</p>
 <p>Update:: I agree with SK53 that access=private is probably correct.</p>
 </div>
@@ -217,7 +217,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At last for parking I would prefer <a href="http://wiki.openstreetmap.org/wiki/Key:fee">http://wiki.openstreetmap.org/wiki/Key:fee</a> as I know it's very popular here in Germany. Toll also sounds good and both indicate that usual routing engines should avoid such tracks (if user doesn't ignores paying toll).</p>
+<p>At last for parking I would prefer <a href="https://wiki.openstreetmap.org/wiki/Key:fee">https://wiki.openstreetmap.org/wiki/Key:fee</a> as I know it's very popular here in Germany. Toll also sounds good and both indicate that usual routing engines should avoid such tracks (if user doesn't ignores paying toll).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -267,7 +267,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi take access=no toll=yes but have a look here <a href="http://wiki.openstreetmap.org/wiki/Toll">http://wiki.openstreetmap.org/wiki/Toll</a> happy mapping. Try to search in the WIKI or type the key words in the blank line on top.</p>
+<p>Hi take access=no toll=yes but have a look here <a href="https://wiki.openstreetmap.org/wiki/Toll">https://wiki.openstreetmap.org/wiki/Toll</a> happy mapping. Try to search in the WIKI or type the key words in the blank line on top.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

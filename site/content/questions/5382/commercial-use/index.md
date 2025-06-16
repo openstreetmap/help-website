@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://help.openstreetmap.org/tags/commercial/">existing answers on this site</a>. In short, yes you can use the <em>data</em> if you adhere to the license but there are limits to your use of project <em>infrastructure</em>, i.e. if your web site generates noticeable traffic to our tile server you may have to get your own tile source (see <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>).</p>
+<p>See <a href="https://help.openstreetmap.org/tags/commercial/">existing answers on this site</a>. In short, yes you can use the <em>data</em> if you adhere to the license but there are limits to your use of project <em>infrastructure</em>, i.e. if your web site generates noticeable traffic to our tile server you may have to get your own tile source (see <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -137,7 +137,7 @@ One Answer:
 5
 </div>
 <div class="comment-text">
-<p>It is possible but not trivial; your hardware resources are on the low side. If you don't do daily/hourly/minutely updates, but instead do a full Germany import every few weeks, it could work. Follow the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik Installation Instructions</a> then install either <a href="http://wiki.openstreetmap.org/wiki/Mod_tile">renderd/mod_tile</a> or <a href="http://wiki.openstreetmap.org/wiki/Tirex">Tirex</a>. There is a <a href="http://wiki.openstreetmap.org/wiki/DE:HowTo_minutely_hstore">German-language document</a> that might help although you probably don't want the hstore and minutely updates.</p>
+<p>It is possible but not trivial; your hardware resources are on the low side. If you don't do daily/hourly/minutely updates, but instead do a full Germany import every few weeks, it could work. Follow the <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik Installation Instructions</a> then install either <a href="https://wiki.openstreetmap.org/wiki/Mod_tile">renderd/mod_tile</a> or <a href="https://wiki.openstreetmap.org/wiki/Tirex">Tirex</a>. There is a <a href="https://wiki.openstreetmap.org/wiki/DE:HowTo_minutely_hstore">German-language document</a> that might help although you probably don't want the hstore and minutely updates.</p>
 </div>
 <div id="comment-5385-info" class="comment-info">
 <span class="comment-age">(26 May '11, 09:07)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

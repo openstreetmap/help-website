@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>why the changeset #<a href="https://www.openstreetmap.org/changeset/132221431">132221431</a> that is supposed to be New Zealand-wide, it's shown with an orange rectangle that crosses Australia, South Africa, Argentina, and Chile.</p>
 <p>If it isn't a node, way, or something beyond NZ, then I guess it's a bug.</p>
 <p>What do you think?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2023-02-08_145220.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2023-02-08_145220.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span>

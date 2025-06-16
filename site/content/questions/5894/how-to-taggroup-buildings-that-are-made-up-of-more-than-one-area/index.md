@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've been tracing buildings using separate areas for different roof levels as recommended <a href="http://wiki.openstreetmap.org/wiki/Key:building">on the wiki</a>.</p>
+<p>I've been tracing buildings using separate areas for different roof levels as recommended <a href="https://wiki.openstreetmap.org/wiki/Key:building">on the wiki</a>.</p>
 <p>How should I go about tagging them and signifying that they belong to the same structure?</p>
 <p><strong>Here's an example:</strong></p>
 <p><img src="http://gyazo.com/3ea52159fc22c35b7077892ab1eaca77.png" alt="alt text" /></p>
@@ -129,7 +129,7 @@ osqa_accepted = true
 <li>make each individual building outline a member of the relation, with role=outer</li>
 </ul>
 <p>That should do it.</p>
-<p>Those interested in 3D rendering will probably suggest tags for the various roof levels as well. <a href="http://wiki.openstreetmap.org/wiki/Key:building:levels">Incomplete or contentious examples may be seen here</a>.</p>
+<p>Those interested in 3D rendering will probably suggest tags for the various roof levels as well. <a href="https://wiki.openstreetmap.org/wiki/Key:building:levels">Incomplete or contentious examples may be seen here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

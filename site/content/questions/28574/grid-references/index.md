@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This depends on your webmap toolkit how to realize this functionality. There are also some maps with grids out there: <a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a></p>
+<p>This depends on your webmap toolkit how to realize this functionality. There are also some maps with grids out there: <a href="https://wiki.openstreetmap.org/wiki/Maps">https://wiki.openstreetmap.org/wiki/Maps</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

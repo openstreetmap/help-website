@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you go to <a href="http://www.openstreetmap.org/export">http://www.openstreetmap.org/export</a> you'll see some options below "If the above export fails, please consider using one of the sources listed below:".</p>
+<p>If you go to <a href="https://www.openstreetmap.org/export">https://www.openstreetmap.org/export</a> you'll see some options below "If the above export fails, please consider using one of the sources listed below:".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

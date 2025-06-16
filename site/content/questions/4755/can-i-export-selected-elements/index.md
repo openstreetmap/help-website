@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Openstreetmap data is not organized into layers like classic GIS program or the data layer of google earth. You can of course download only the administrative limits using the <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>. Alternatively you can download all of the data for an area (either using JOSM or an extract of the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">planet dump</a>. However you will then have to render your own map from the data. For that have a look at <a href="http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">the wiki</a>. Alternatively you can feed the unfiltered data to the renderer and just modify the stylesheet to only show administrative limits and the water bodies.</p>
+<p>Openstreetmap data is not organized into layers like classic GIS program or the data layer of google earth. You can of course download only the administrative limits using the <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>. Alternatively you can download all of the data for an area (either using JOSM or an extract of the <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">planet dump</a>. However you will then have to render your own map from the data. For that have a look at <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">the wiki</a>. Alternatively you can feed the unfiltered data to the renderer and just modify the stylesheet to only show administrative limits and the water bodies.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

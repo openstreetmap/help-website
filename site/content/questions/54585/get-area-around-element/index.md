@@ -53,14 +53,14 @@ out body;
 out skel qt;</code></pre>
 <p><strong>Update:</strong></p>
 <p>If we analyse the problem <em>with a simple 2D example</em> :</p>
-<p><img src="https://help.openstreetmap.org/upfiles/plan_coordinate.png" alt="alt text" /></p>
+<p><img src="/upfiles/plan_coordinate.png" alt="alt text" /></p>
 <ul>
 <li>I have a way (red) from <code>A{2;2}</code> to <code>B{5;2}</code></li>
 <li>I need the area (blue) CDEF <code>({1;3}, {6;3}, {6;1}, {1;1})</code>.</li>
 </ul>
 <p>I know how to get the way : in the query example, it's the <code>way(area)....</code> instruction. <strong>How to get the</strong> blue <strong>area with Overpass</strong> ?</p>
 <p><em>With a concrete example</em>, this is what I would like to have : from the blue line (a tramway), I want the purple area (around <code>ZZ</code> meter from this way).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/area_around.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/area_around.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-around" rel="tag" title="see questions tagged &#39;around&#39;">around</span>

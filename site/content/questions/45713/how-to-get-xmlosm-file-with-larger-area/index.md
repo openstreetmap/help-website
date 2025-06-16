@@ -132,7 +132,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download the complete, world wide, planet file from <a href="http://planet.openstreetmap.org/">planet.openstreetmap.org</a>. If that is too large, you can use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to trim it down a certain area.</p>
+<p>You can download the complete, world wide, planet file from <a href="http://planet.openstreetmap.org/">planet.openstreetmap.org</a>. If that is too large, you can use <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to trim it down a certain area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

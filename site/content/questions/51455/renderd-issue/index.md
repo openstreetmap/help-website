@@ -122,7 +122,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I believe that what's happened is that the the "ne populated places" source has changed and the OSMBright script (which is Mapbox's) hasn't been updated to match it.</p>
-<p>The last time I set up OSMBright was to answer <a href="http://help.openstreetmap.org/questions/50435/duplicate-town-names/50447">this</a> question, and do vaguely remember having to extract some shapefiles manually and move them around. I also did have to fiddle about with the <a href="https://github.com/SomeoneElseOSM/openstreetmap-carto-AJT/commits/master/get-shapefiles.sh">script</a> that I do use that does the same job. You should be able to figure out the data location from that, and manually move the shapefiles that you need to the right place. It's not ideal, but it should get you a working stylesheet.</p>
+<p>The last time I set up OSMBright was to answer <a href="/questions/50435/duplicate-town-names/50447">this</a> question, and do vaguely remember having to extract some shapefiles manually and move them around. I also did have to fiddle about with the <a href="https://github.com/SomeoneElseOSM/openstreetmap-carto-AJT/commits/master/get-shapefiles.sh">script</a> that I do use that does the same job. You should be able to figure out the data location from that, and manually move the shapefiles that you need to the right place. It's not ideal, but it should get you a working stylesheet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

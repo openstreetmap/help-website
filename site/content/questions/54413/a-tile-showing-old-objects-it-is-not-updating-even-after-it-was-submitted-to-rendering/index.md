@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I've duplicated some objects by mistake, and then I reverted my mistake, but the tile showing it remains even though days have passed.</p>
-<p>I've submitted the tile for rendering by adding /dirty to its url, but that doesn't seem to work. The tile's URL is <a href="https://a.tile.openstreetmap.org/17/72908/42319.png,">https://a.tile.openstreetmap.org/17/72908/42319.png,</a> it is visible only at one zoom level. The location affected is here: <a href="http://www.openstreetmap.org/#map=17/53.61837/20.25000">http://www.openstreetmap.org/#map=17/53.61837/20.25000</a></p>
+<p>I've submitted the tile for rendering by adding /dirty to its url, but that doesn't seem to work. The tile's URL is <a href="https://a.tile.openstreetmap.org/17/72908/42319.png,">https://a.tile.openstreetmap.org/17/72908/42319.png,</a> it is visible only at one zoom level. The location affected is here: <a href="https://www.openstreetmap.org/#map=17/53.61837/20.25000">https://www.openstreetmap.org/#map=17/53.61837/20.25000</a></p>
 <p>Please let me know if I can do anything else to fix this.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -106,8 +106,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess you are talking about <a href="http://www.openstreetmap.org/#map=18/-38.10181/145.32595">this area</a>.</p>
-<p>The bridges you have added (e.g. <a href="http://www.openstreetmap.org/way/357315736">way 357315736</a>) only have a <em>bridge=yes</em> tag. You forgot to add the highway tag, in this case <em>highway=footway</em>. The same applies for your <a href="http://www.openstreetmap.org/way/356864876">boardwalk</a>. There is even a <a href="http://www.openstreetmap.org/way/357366943">boardwalk</a> with no bridge at all, instead it is tagged with <em>Line=boardwalk</em> which is no valid tag.</p>
+<p>I guess you are talking about <a href="https://www.openstreetmap.org/#map=18/-38.10181/145.32595">this area</a>.</p>
+<p>The bridges you have added (e.g. <a href="https://www.openstreetmap.org/way/357315736">way 357315736</a>) only have a <em>bridge=yes</em> tag. You forgot to add the highway tag, in this case <em>highway=footway</em>. The same applies for your <a href="https://www.openstreetmap.org/way/356864876">boardwalk</a>. There is even a <a href="https://www.openstreetmap.org/way/357366943">boardwalk</a> with no bridge at all, instead it is tagged with <em>Line=boardwalk</em> which is no valid tag.</p>
 <p>After correcting these mistakes your bridges and boardwalks should start getting rendered.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -139,7 +139,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Since you mentioned handrails: You can add this information, too. Just take a look at the <a href="https://wiki.openstreetmap.org/wiki/Key:handrail">handrail tag</a> in the wiki :). And another thing: For proper routing please connect your footways to the surrounding highways. Currently not all ends of the footway are properly connected. <a href="http://www.openstreetmap.org/way/357296349">Way 357296349</a> even ends at an administrative boundary which you seem to have mistaken for a routable way.</p>
+<p>Since you mentioned handrails: You can add this information, too. Just take a look at the <a href="https://wiki.openstreetmap.org/wiki/Key:handrail">handrail tag</a> in the wiki :). And another thing: For proper routing please connect your footways to the surrounding highways. Currently not all ends of the footway are properly connected. <a href="https://www.openstreetmap.org/way/357296349">Way 357296349</a> even ends at an administrative boundary which you seem to have mistaken for a routable way.</p>
 </div>
 <div id="comment-43999-info" class="comment-info">
 <span class="comment-age">(06 Jul '15, 07:41)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -162,7 +162,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I've looked for this too, and haven't found a well defined way to tag boardwalks on the wiki beyond surface=wood. I have seen that some people add bridge=boardwalk to the footway, whether it is over open water or not. See also <a href="https://help.openstreetmap.org/questions/31231/how-do-i-tag-footpaths-made-of-wood">https://help.openstreetmap.org/questions/31231/how-do-i-tag-footpaths-made-of-wood</a></p>
+<p>I've looked for this too, and haven't found a well defined way to tag boardwalks on the wiki beyond surface=wood. I have seen that some people add bridge=boardwalk to the footway, whether it is over open water or not. See also <a href="/questions/31231/how-do-i-tag-footpaths-made-of-wood">https://help.openstreetmap.org/questions/31231/how-do-i-tag-footpaths-made-of-wood</a></p>
 </div>
 <div id="comment-44003-info" class="comment-info">
 <span class="comment-age">(06 Jul '15, 14:47)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -173,7 +173,7 @@ One Answer:
 <div id="post-44010-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: The wiki page for [bridge=boardwalk] does not require the bridge to be over open water. The definition states "A plank walkway over wet or otherwise difficult terrain, usually low to the ground and supported by posts."</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: The wiki page for [bridge=boardwalk] does not require the bridge to be over open water. The definition states "A plank walkway over wet or otherwise difficult terrain, usually low to the ground and supported by posts."</p>
 </div>
 <div id="comment-44010-info" class="comment-info">
 <span class="comment-age">(06 Jul '15, 20:15)</span> <span class="comment-user userinfo">escada</span>
@@ -184,7 +184,7 @@ One Answer:
 <div id="post-44011-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>, exactly my point! :)</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>, exactly my point! :)</p>
 </div>
 <div id="comment-44011-info" class="comment-info">
 <span class="comment-age">(06 Jul '15, 20:39)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -195,7 +195,7 @@ One Answer:
 <div id="post-44022-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, or this one <a href="http://www.openstreetmap.org/#map=19/52.94626/6.46945">http://www.openstreetmap.org/#map=19/52.94626/6.46945</a><br />
+<p>Hi, or this one <a href="https://www.openstreetmap.org/#map=19/52.94626/6.46945">https://www.openstreetmap.org/#map=19/52.94626/6.46945</a><br />
 not a bridge at all but a stretch of beams covering the underlaying peat, next to eachother, "bridge" just like the Romans build theyre ways in wet areas or "boardwalk" ? This ones carries a tag as, historic=archeological_site</p>
 </div>
 <div id="comment-44022-info" class="comment-info">

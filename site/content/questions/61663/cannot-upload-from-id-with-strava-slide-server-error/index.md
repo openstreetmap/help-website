@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Whenever I try to upload changes from iD with <a href="http://strava.github.io/iD/#background=Mapbox&amp;map=16.67/102.16642/2.53913">Strava Slide</a> I get the error message "Server returned status code undefined". Anything changed regarding the server settings?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Error_message.png" alt="alt text" /></p>
+<p><img src="/upfiles/Error_message.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-strava_slide" rel="tag" title="see questions tagged &#39;strava_slide&#39;">strava_slide</span> <span class="post-tag tag-link-upload" rel="tag" title="see questions tagged &#39;upload&#39;">upload</span> <span class="post-tag tag-link-server" rel="tag" title="see questions tagged &#39;server&#39;">server</span>

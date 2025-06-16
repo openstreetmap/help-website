@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Where to record building name"
-description = '''I have just added Bartlett Court to the map (http://www.openstreetmap.org/#map=17/50.79826/-1.19637). It&#x27;s a block of warden-assisted flats. I marked it as a generic residential building; can anyone suggest a better way of tagging it?  In the basic details, I also recorded the building&#x27;s name. Bartl...'''
+description = '''I have just added Bartlett Court to the map (https://www.openstreetmap.org/#map=17/50.79826/-1.19637). It&#x27;s a block of warden-assisted flats. I marked it as a generic residential building; can anyone suggest a better way of tagging it?  In the basic details, I also recorded the building&#x27;s name. Bartl...'''
 date = "2014-08-05T22:38:00Z"
 lastmod = "2014-08-12T16:32:00Z"
 weight = 35558
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have just added Bartlett Court to the map (<a href="http://www.openstreetmap.org/#map=17/50.79826/-1.19637).">http://www.openstreetmap.org/#map=17/50.79826/-1.19637).</a> It's a block of warden-assisted flats. I marked it as a generic residential building; can anyone suggest a better way of tagging it?</p>
+<p>I have just added Bartlett Court to the map (<a href="https://www.openstreetmap.org/#map=17/50.79826/-1.19637).">https://www.openstreetmap.org/#map=17/50.79826/-1.19637).</a> It's a block of warden-assisted flats. I marked it as a generic residential building; can anyone suggest a better way of tagging it?</p>
 <p>In the basic details, I also recorded the building's name. Bartlett Court has a street address on Elmore Road, so I opened the Address tab in Potlatch 2, and was given a second opportunity to record the name of the building.</p>
 <p>Recording the same information in two places is just asking for trouble, especially if there's a computer involved, so which one should I leave blank?</p>
 </div>
@@ -113,7 +113,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In a guesstimated 99,9% of cases, names should <strong>only</strong> go into "Name" field of Potlatch 2. The "Building Name" field is intended for the comparatively rare case of names that are part of a postal address. As the building in your example has a house number, it is probably not one of these special cases.</p>
-<p>Within the OSM database, the "Name" field will fill in the <a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a> key, whereas the "Building Name" field fills in <a href="http://wiki.openstreetmap.org/wiki/Key:addr:housename">addr:housename</a>.</p>
+<p>Within the OSM database, the "Name" field will fill in the <a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a> key, whereas the "Building Name" field fills in <a href="https://wiki.openstreetmap.org/wiki/Key:addr:housename">addr:housename</a>.</p>
 <p>When you are interested in subtle differences in meaning, it often helps to look into the "advanced" tab to find out which tags are hidden behind the user-friendly facade.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-75109-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/66892/how-to-calculate-area-of-polygons-in-overpass">https://help.openstreetmap.org/questions/66892/how-to-calculate-area-of-polygons-in-overpass</a></p>
+<p><a href="/questions/66892/how-to-calculate-area-of-polygons-in-overpass">https://help.openstreetmap.org/questions/66892/how-to-calculate-area-of-polygons-in-overpass</a></p>
 </div>
 <div id="comment-75109-info" class="comment-info">
 <span class="comment-age">(02 Jun '20, 19:29)</span> <span class="comment-user userinfo">DaveF</span>

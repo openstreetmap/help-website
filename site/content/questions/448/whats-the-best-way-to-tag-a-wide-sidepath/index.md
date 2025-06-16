@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should use the <a href="http://wiki.openstreetmap.org/wiki/Key:width"><code>width</code></a> tag, or <a href="http://wiki.openstreetmap.org/wiki/Key:est_width"><code>est_width</code></a> if you are estimating the width.</p>
+<p>You should use the <a href="https://wiki.openstreetmap.org/wiki/Key:width"><code>width</code></a> tag, or <a href="https://wiki.openstreetmap.org/wiki/Key:est_width"><code>est_width</code></a> if you are estimating the width.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it's very wide, and named or notable consider making an area which abuts the road, sharing its nodes. Tag the area with both <strong>highway=pedestrian</strong> and <strong>area=yes</strong>. The <a href="http://wiki.openstreetmap.org/wiki/Key:area">area tag</a> makes areas from highways which would otherwise be loops.</p>
+<p>If it's very wide, and named or notable consider making an area which abuts the road, sharing its nodes. Tag the area with both <strong>highway=pedestrian</strong> and <strong>area=yes</strong>. The <a href="https://wiki.openstreetmap.org/wiki/Key:area">area tag</a> makes areas from highways which would otherwise be loops.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -222,7 +222,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Depending on the usage of the "sidewalk" as a seaside promenade possibly with shops, etc. you could tag it as <code>highway=pedestrian</code> and a <code>width</code> tag.</p>
-<p>However if it really is a sidewalk, then it may be a bit more problematic, since there is no widely used system to tag them. Usually they are not tagged at all. There is a proposal <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway">http://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway</a> which is relavant and a width feature is mentioned but not really finally formulated.</p>
+<p>However if it really is a sidewalk, then it may be a bit more problematic, since there is no widely used system to tag them. Usually they are not tagged at all. There is a proposal <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway">https://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway</a> which is relavant and a width feature is mentioned but not really finally formulated.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

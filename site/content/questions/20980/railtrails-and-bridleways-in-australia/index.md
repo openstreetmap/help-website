@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally, there are few hard and fast rules - I'd map it as whatever it "looks most like". The only ex-rail trail in Australia I've added was <a href="http://www.openstreetmap.org/browse/way/96156248">this one</a>, and I added it as a "highway=track" because when I was there it felt more like that than a "highway=cycleway" or "highway=bridleway", and then added other access tags accordingly.</p>
+<p>Generally, there are few hard and fast rules - I'd map it as whatever it "looks most like". The only ex-rail trail in Australia I've added was <a href="https://www.openstreetmap.org/browse/way/96156248">this one</a>, and I added it as a "highway=track" because when I was there it felt more like that than a "highway=cycleway" or "highway=bridleway", and then added other access tags accordingly.</p>
 <p>When adding the Monsal Trail in England I did ask on the talk-gb list and the <a href="http://lists.openstreetmap.org/pipermail/talk-gb/2012-December/014226.html">consensus was slightly different</a> - it's a better quality track (actually surfaced through the tunnels) and so "highway=cycleway" was preferred there.</p>
 <p>It might be worth asking on <a href="http://lists.openstreetmap.org/listinfo/talk-au">the talk-au list</a> to see if anyone has any views about the specific trail concerned.</p>
 </div>

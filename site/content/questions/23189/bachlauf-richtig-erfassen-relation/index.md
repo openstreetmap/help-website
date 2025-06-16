@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, wie wird ein Bachlauf richtig erfaßt, damit dieser in der OSM-Karte mit dem Namen gesucht werden kann und der gesamte Verlauf "am Stück" angezeigt wird?</p>
-<p>Der "Reutibach" ist wegen Straßenunterquerungen (drain ?) etc. in einzelne ways aufgeteilt, die aber alle miteinander verbunden sind und auch alle mit dem Namen "Reutibach" versehen sind. Ich habe nun für den gesamten Bachlauf zusätzlich eine Relation (<a href="http://www.openstreetmap.org/browse/relation/2992159">ID 2992159</a>) angelegt, ebenfalls mit dem Namen "Reutibach".</p>
+<p>Der "Reutibach" ist wegen Straßenunterquerungen (drain ?) etc. in einzelne ways aufgeteilt, die aber alle miteinander verbunden sind und auch alle mit dem Namen "Reutibach" versehen sind. Ich habe nun für den gesamten Bachlauf zusätzlich eine Relation (<a href="https://www.openstreetmap.org/browse/relation/2992159">ID 2992159</a>) angelegt, ebenfalls mit dem Namen "Reutibach".</p>
 <p>Wenn ich auf der OSM-Karte nach "Reutibach" suche, werden aber nur einzelne Abschnitte angezeigt. Warum?</p>
 <p>Vielen Dank für Eure Hilfe.</p>
 </div>
@@ -114,8 +114,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Die Flüsse sind immer so stückweise - das ist ja zwangsweise so. Die Relation hast du wohl <span>richtig</span> erstellt.</p>
-<p>Ein paar Infos (eine Antwort ist das noch nicht wirklich): Die Suche auf <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> läuft über <span>Nominatim</span> (und GeoNames im unteren Bereich).</p>
-<p>Nominatim scheint Wasserweg-Relationen entweder nicht zu beachten oder zumindest nicht in der Liste weit oben zu positionieren (<a href="http://nominatim.openstreetmap.org/details?osmtype=R&amp;osmid=2992159">Reutibach-Relation in Nominatim</a>. Ich habe auch testweise nach <a href="http://www.openstreetmap.org/browse/relation/123924">Rhein</a> gesucht, <a href="http://nominatim.openstreetmap.org/details?osmtype=R&amp;osmid=123924">die Relation scheint aber Nominatim gar nicht bekannt zu sein</a> - <a href="http://nominatim.openstreetmap.org/details?osmtype=R&amp;osmid=62400">Positivbeispiel</a>). Vielleicht ist es Absicht (Performance?), vielleicht auch ein Fehler in Nominatim. Ich <a href="https://trac.openstreetmap.org/ticket/4883">habe nachgefragt/gemeldet</a>.</p>
+<p>Ein paar Infos (eine Antwort ist das noch nicht wirklich): Die Suche auf <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> läuft über <span>Nominatim</span> (und GeoNames im unteren Bereich).</p>
+<p>Nominatim scheint Wasserweg-Relationen entweder nicht zu beachten oder zumindest nicht in der Liste weit oben zu positionieren (<a href="http://nominatim.openstreetmap.org/details?osmtype=R&amp;osmid=2992159">Reutibach-Relation in Nominatim</a>. Ich habe auch testweise nach <a href="https://www.openstreetmap.org/browse/relation/123924">Rhein</a> gesucht, <a href="http://nominatim.openstreetmap.org/details?osmtype=R&amp;osmid=123924">die Relation scheint aber Nominatim gar nicht bekannt zu sein</a> - <a href="http://nominatim.openstreetmap.org/details?osmtype=R&amp;osmid=62400">Positivbeispiel</a>). Vielleicht ist es Absicht (Performance?), vielleicht auch ein Fehler in Nominatim. Ich <a href="https://trac.openstreetmap.org/ticket/4883">habe nachgefragt/gemeldet</a>.</p>
 <p>Zu beachten ist auch, falls erst kürzlich gemappt, das letzte Aktualisierungsdatum der Daten, die Nominatim verwendet (sichtbar oben auf <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> ).</p>
 </div>
 <div class="answer-controls post-controls">

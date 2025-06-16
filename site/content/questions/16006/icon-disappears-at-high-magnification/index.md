@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming you are talking about this place: <a href="http://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=M</a>, then these two bicycle shops render correctly on all zoom levels. Your internet browser is most probably caching old tiles. You may try to <a href="http://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache">bypass your browsers cache</a> and see if this helps.</p>
+<p>Assuming you are talking about this place: <a href="https://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=M</a>, then these two bicycle shops render correctly on all zoom levels. Your internet browser is most probably caching old tiles. You may try to <a href="http://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache">bypass your browsers cache</a> and see if this helps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,8 +177,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you may be referring to the "Cycle map" layer, so this permalink: <a href="http://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=C">http://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=C</a></p>
-<p>It is true that at some zoom levels, currently just one bike shop is shown on the map. I think this is just because OpenCycleMap is a bit out of date, and different zoom levels may be updated at different times. See this previous question <a href="https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">When does a change get updated on the OpenCycleMap?</a></p>
+<p>I think you may be referring to the "Cycle map" layer, so this permalink: <a href="https://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=C">https://www.openstreetmap.org/?lat=54.977765&amp;lon=-1.575766&amp;zoom=18&amp;layers=C</a></p>
+<p>It is true that at some zoom levels, currently just one bike shop is shown on the map. I think this is just because OpenCycleMap is a bit out of date, and different zoom levels may be updated at different times. See this previous question <a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">When does a change get updated on the OpenCycleMap?</a></p>
 <p>It seems OpenCycleMap is currently a few weeks behind in some places, on some zoom levels. Though this may vary, depending on how many people have viewed a particular area, and how busy the servers are.</p>
 <p>So just wait a while, then both bike shops should be shown correctly.</p>
 </div>

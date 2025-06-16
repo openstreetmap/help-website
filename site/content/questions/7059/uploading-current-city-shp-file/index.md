@@ -111,7 +111,7 @@ One Answer:
 <p>Because the old boundary is possibly an element of one ore more relations, or even streets and ways are elements of the boundary.</p>
 <p>And: As a matter of data amount, especially of the whole raw OSM data covering the planet, it can be always better not do delete old data and replace it with new, but to edit the existing ones. Because old Data is still stored in the history data.</p>
 <p>A proper way to benefit from your new shapefile can be to load it into any editor that can handle shapefiles, but there in an extra layer. Then you can use this layer as a transparent overlay to adjust the already existing one.</p>
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Shapefile">shapefile</a> to see which editors or GIS programs can do that.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Shapefile">shapefile</a> to see which editors or GIS programs can do that.</p>
 <p>PS: do you really have the permission to use that shapefile for OSM purposes, according to the license that we are using and that is to come (ODBL)? (Please edit your question and add information if you have)</p>
 </div>
 <div class="answer-controls post-controls">

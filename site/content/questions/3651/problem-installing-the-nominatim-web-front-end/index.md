@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem installing the Nominatim web front-end"
-description = '''I am currently trying to set up a OSM Server together with Nominatim to do Reverse Geocoding. OSM works fine (I can render maps with Mapnik etc...) I also set up the tables for Nominatim following this:  http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Set_up_the_website But when I copy the...'''
+description = '''I am currently trying to set up a OSM Server together with Nominatim to do Reverse Geocoding. OSM works fine (I can render maps with Mapnik etc...) I also set up the tables for Nominatim following this:  https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Set_up_the_website But when I copy the...'''
 date = "2011-03-09T15:59:00Z"
 lastmod = "2011-03-09T17:28:00Z"
 weight = 3651
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am currently trying to set up a OSM Server together with Nominatim to do Reverse Geocoding. OSM works fine (I can render maps with Mapnik etc...)</p>
-<p>I also set up the tables for Nominatim following this: <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Set_up_the_website">http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Set_up_the_website</a></p>
+<p>I also set up the tables for Nominatim following this: <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Set_up_the_website">https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Set_up_the_website</a></p>
 <p>But when I copy the website directory to /var/www/ and open the page, it will just show an empty page. (PHP-Parser works fine) I already hunted the problem down to a line in "init.php", where it says "require_once('DB.php');", but there is no DB.php in the website/.htlib/ directory. Is it missing, or where is this usually to be found?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

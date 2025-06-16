@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>¿Te ayuda hacer zoom en el mapa un poco?</p>
-<p>You can try to zoom in a bit, see this answer: <a href="http://help.openstreetmap.org/questions/4762/server-error-in-potlatch-2-couldnt-load-the-map">http://help.openstreetmap.org/questions/4762/server-error-in-potlatch-2-couldnt-load-the-map</a></p>
+<p>You can try to zoom in a bit, see this answer: <a href="/questions/4762/server-error-in-potlatch-2-couldnt-load-the-map">https://help.openstreetmap.org/questions/4762/server-error-in-potlatch-2-couldnt-load-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

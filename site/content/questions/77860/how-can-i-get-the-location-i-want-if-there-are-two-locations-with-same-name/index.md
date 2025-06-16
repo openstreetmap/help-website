@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am searching for a map of sub-districts (admin level 6) within a district(admin level 5) in which each sub-dist will be clickable on my webpage. The problem is there are some districts with one of its sub-district having same name as the district itself. when I search for the district I get the sub-district instead.</p>
-<p>Sub District with same name <img src="https://help.openstreetmap.org/upfiles/2020-12-06_23_02_52-overpass_turbo_-_Brave.png" alt="alt text" /></p>
-<p>What i want<img src="https://help.openstreetmap.org/upfiles/2020-12-06_23_02_44-overpass_turbo_-_Brave.png" alt="alt text" /></p>
+<p>Sub District with same name <img src="/upfiles/2020-12-06_23_02_52-overpass_turbo_-_Brave.png" alt="alt text" /></p>
+<p>What i want<img src="/upfiles/2020-12-06_23_02_44-overpass_turbo_-_Brave.png" alt="alt text" /></p>
 <pre><code>[out:json];
 &#10;{{geocodeArea: chittoor, Andhra Pradesh, india}}-&gt;.searchArea;
 &#10;(

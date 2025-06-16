@@ -158,7 +158,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This is probably the most useful approach, as there might be multiple amenities inside the building which are open to the general public, even if they're all operated by the hotel (e.g. a bar, a restaurant and a fitness here: <a href="http://www.openstreetmap.org/node/3818622072">http://www.openstreetmap.org/node/3818622072</a> )</p>
+<p>This is probably the most useful approach, as there might be multiple amenities inside the building which are open to the general public, even if they're all operated by the hotel (e.g. a bar, a restaurant and a fitness here: <a href="https://www.openstreetmap.org/node/3818622072">https://www.openstreetmap.org/node/3818622072</a> )</p>
 </div>
 <div id="comment-47408-info" class="comment-info">
 <span class="comment-age">(07 Jan '16, 10:16)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -180,7 +180,7 @@ osqa_accepted = false
 <div id="post-47476-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I see your point, and agree that the current usage is clumsy. Perhaps this could be solved by referencing each of the objects in a relation; however, the only similar suggestion that I have found is <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Operators">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Operators</a> , and that seems 1.not similar enough and 2.dead for some time :(</p>
+<p>I see your point, and agree that the current usage is clumsy. Perhaps this could be solved by referencing each of the objects in a relation; however, the only similar suggestion that I have found is <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Operators">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Operators</a> , and that seems 1.not similar enough and 2.dead for some time :(</p>
 </div>
 <div id="comment-47476-info" class="comment-info">
 <span class="comment-age">(12 Jan '16, 12:25)</span> <span class="comment-user userinfo">Piskvor</span>

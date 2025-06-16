@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The complete list of all possible downloads for Garmin devices can be found on <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>The complete list of all possible downloads for Garmin devices can be found on <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 <p>Personally I use <a href="http://extract.bbbike.org/">http://extract.bbbike.org/</a> for extracts in Western Europe.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -181,7 +181,7 @@ osqa_accepted = false
 <div id="post-47274-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This guy in spite of his name spends a lot of time in Thailand so take his advice. His diary entries, along with many others, are worth a read. here is one <a href="http://www.openstreetmap.org/user/AlaskaDave/diary/">http://www.openstreetmap.org/user/AlaskaDave/diary/</a></p>
+<p>This guy in spite of his name spends a lot of time in Thailand so take his advice. His diary entries, along with many others, are worth a read. here is one <a href="https://www.openstreetmap.org/user/AlaskaDave/diary/">https://www.openstreetmap.org/user/AlaskaDave/diary/</a></p>
 </div>
 <div id="comment-47274-info" class="comment-info">
 <span class="comment-age">(24 Dec '15, 18:25)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I have some problems <a href="http://www.openstreetmap.org/?lat=49.395441&amp;lon=22.075842&amp;zoom=18&amp;layers=M">here</a>. Some time ago I had a big relation of polygons and multipolygons. I've splited it up by removing all forests from relation and then I've removed that relation too. Now some of these polygons can't show on the map. At my example you can see one polygon visible. I edited it by moving one of its nodes by few millimeters and submited tile for rendering. Is it a bug?</p>
+<p>Hi, I have some problems <a href="https://www.openstreetmap.org/?lat=49.395441&amp;lon=22.075842&amp;zoom=18&amp;layers=M">here</a>. Some time ago I had a big relation of polygons and multipolygons. I've splited it up by removing all forests from relation and then I've removed that relation too. Now some of these polygons can't show on the map. At my example you can see one polygon visible. I edited it by moving one of its nodes by few millimeters and submited tile for rendering. Is it a bug?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sounds like a bug. In the rendering tools chain, the concerned is <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pqsql</a>. You should open a ticket on the <a href="https://trac.openstreetmap.org/">OSM bug report system</a> and provide your example.</p>
+<p>Sounds like a bug. In the rendering tools chain, the concerned is <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pqsql</a>. You should open a ticket on the <a href="https://trac.openstreetmap.org/">OSM bug report system</a> and provide your example.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-85718-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/missing_buildings_okotoks_OUjLpDh.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/missing_buildings_okotoks_OUjLpDh.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-85718-info" class="comment-info">
 <span class="comment-age">(26 Sep '22, 17:11)</span> <span class="comment-user userinfo">Niek</span>

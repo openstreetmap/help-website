@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Having read <a href="http://wiki.openstreetmap.org/wiki/Land_use_and_areas_of_natural_land">Land_use_and_areas_of_natural_land</a>, I'm still trying to figure out the best approach for multiple land use. The example is where some land is private property, and residential, ie there are houses in the landuse. However, there is also a forest/aka wood occupying the outer bits of of the residential landuse. How to tag this?</p>
+<p>Having read <a href="https://wiki.openstreetmap.org/wiki/Land_use_and_areas_of_natural_land">Land_use_and_areas_of_natural_land</a>, I'm still trying to figure out the best approach for multiple land use. The example is where some land is private property, and residential, ie there are houses in the landuse. However, there is also a forest/aka wood occupying the outer bits of of the residential landuse. How to tag this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span>
@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-17879-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>To follow up, lets assume there is a large "forest", but in it, there are open fields/heaths, bare rock areas. I guess it may depend on the renderer how this is shown, but would one map the forest(wood) as one area, and the heaths in it as individual areas, or would one have to split up the surrounding forest, so the forest(wood) and heaths are not overlapping?<img src="http://help.openstreetmap.org/upfiles/snap.jpg" alt="alt text" /></p>
+<p>To follow up, lets assume there is a large "forest", but in it, there are open fields/heaths, bare rock areas. I guess it may depend on the renderer how this is shown, but would one map the forest(wood) as one area, and the heaths in it as individual areas, or would one have to split up the surrounding forest, so the forest(wood) and heaths are not overlapping?<img src="/upfiles/snap.jpg" alt="alt text" /></p>
 <p>I attach an example, here its the opposite, the forests(woods) are enclosed by open areas.</p>
 </div>
 <div id="comment-17879-info" class="comment-info">
@@ -146,7 +146,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Many thanks, I did see <a href="https://help.openstreetmap.org/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood">https://help.openstreetmap.org/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood</a></p>
+<p>Many thanks, I did see <a href="/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood">https://help.openstreetmap.org/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood</a></p>
 </div>
 <div id="comment-17877-info" class="comment-info">
 <span class="comment-age">(21 Nov '12, 20:56)</span> <span class="comment-user userinfo">buzzzy</span>
@@ -339,7 +339,7 @@ osqa_accepted = true
 <div id="post-47522-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I agree that layer= <em>on a landuse=</em> seems wrong, but because not all landuse= <em>tags mean "land use" (see <a href="http://wiki.openstreetmap.org/wiki/Landuse#problematic_key:landuse_values),">http://wiki.openstreetmap.org/wiki/Landuse#problematic_key:landuse_values),</a> I think one could have legitimately overlapping landuse=</em> areas. For more on the fuzzy nature of land use and land cover tagging in OSM, see <a href="http://wiki.openstreetmap.org/wiki/Environment">http://wiki.openstreetmap.org/wiki/Environment</a></p>
+<p>I agree that layer= <em>on a landuse=</em> seems wrong, but because not all landuse= <em>tags mean "land use" (see <a href="https://wiki.openstreetmap.org/wiki/Landuse#problematic_key:landuse_values),">https://wiki.openstreetmap.org/wiki/Landuse#problematic_key:landuse_values),</a> I think one could have legitimately overlapping landuse=</em> areas. For more on the fuzzy nature of land use and land cover tagging in OSM, see <a href="https://wiki.openstreetmap.org/wiki/Environment">https://wiki.openstreetmap.org/wiki/Environment</a></p>
 </div>
 <div id="comment-47522-info" class="comment-info">
 <span class="comment-age">(15 Jan '16, 13:53)</span> <span class="comment-user userinfo">neuhausr</span>

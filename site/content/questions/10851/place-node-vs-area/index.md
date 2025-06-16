@@ -200,7 +200,7 @@ That should give precise borders of the city without creating duplicate geometri
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In my point of view, the place=* tag should be used on a node. The spatial relation between a feature and the village/town can be deduced with the administrative boundary. See also <a href="http://help.openstreetmap.org/questions/3942/how-to-map-inhabited-places-settlements">this similar question (with my answer)</a>.</p>
+<p>In my point of view, the place=* tag should be used on a node. The spatial relation between a feature and the village/town can be deduced with the administrative boundary. See also <a href="/questions/3942/how-to-map-inhabited-places-settlements">this similar question (with my answer)</a>.</p>
 <p>The area is used for giving the administrative boundary, while the node give a more accurate information on the "place" center's position.</p>
 <p>In some case, there isn't a suitable boundary, but it is mainly for the hamlets, that are commonly attached to a village/town with a administrative boundary (at least in France). In this case, I don't think it is so annoying to not have a geometric inclusion of a feature of this hamlet in an area.</p>
 </div>

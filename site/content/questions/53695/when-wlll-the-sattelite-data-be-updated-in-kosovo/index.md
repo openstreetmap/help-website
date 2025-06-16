@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think this answers your question: <a href="https://help.openstreetmap.org/questions/21683/why-are-satellite-images-heavely-outdated">https://help.openstreetmap.org/questions/21683/why-are-satellite-images-heavely-outdated</a></p>
+<p>I think this answers your question: <a href="/questions/21683/why-are-satellite-images-heavely-outdated">https://help.openstreetmap.org/questions/21683/why-are-satellite-images-heavely-outdated</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

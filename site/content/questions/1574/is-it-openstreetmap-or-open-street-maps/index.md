@@ -112,7 +112,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/osm_.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm_.png" alt="alt text" /></p>
 <p>:)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -166,7 +166,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>I'm glad you asked that.<br />
 </p>
-<p>Yes, the press and many others often get the name wrong. The correct spelling is OpenStreetMap. One word, three capital letters, one map. OpenStreetMap is also a <a href="http://wiki.openstreetmap.org/wiki/Trademark">trademark</a>.<br />
+<p>Yes, the press and many others often get the name wrong. The correct spelling is OpenStreetMap. One word, three capital letters, one map. OpenStreetMap is also a <a href="https://wiki.openstreetmap.org/wiki/Trademark">trademark</a>.<br />
 </p>
 <p>Other variations are incorrect.<br />
 </p>

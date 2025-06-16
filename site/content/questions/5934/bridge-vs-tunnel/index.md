@@ -172,9 +172,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/user/Harry%20Wood/diary/14067">Down the pub one time</a> we suggested the simple rule: <em>"If the road passing under is longer (underneath) than the gap is wide, then it should be a tunnel on the under way, rather than a bridge on the over way."</em> ....But we were all completely drunk at the time :-)</p>
-<p>By that rule I'd say your second and third images are both tunnels (and that is how I would map them), but your first one is 50/50. Could be a bridge. See comments on my diary for some further discussion. I've also just added a <a href="http://wiki.openstreetmap.org/wiki/Key:bridge#Bridge_vs_Tunnel">specific section to the wiki</a> where we should one day answer this question.<br />
-<strong><em>[update] :</em></strong> The wiki page was modified to carry some more specific advice, which is good I guess. See <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:bridge#Bridge_vs_Tunnels">the discussion here</a></p>
+<p><a href="https://www.openstreetmap.org/user/Harry%20Wood/diary/14067">Down the pub one time</a> we suggested the simple rule: <em>"If the road passing under is longer (underneath) than the gap is wide, then it should be a tunnel on the under way, rather than a bridge on the over way."</em> ....But we were all completely drunk at the time :-)</p>
+<p>By that rule I'd say your second and third images are both tunnels (and that is how I would map them), but your first one is 50/50. Could be a bridge. See comments on my diary for some further discussion. I've also just added a <a href="https://wiki.openstreetmap.org/wiki/Key:bridge#Bridge_vs_Tunnel">specific section to the wiki</a> where we should one day answer this question.<br />
+<strong><em>[update] :</em></strong> The wiki page was modified to carry some more specific advice, which is good I guess. See <a href="https://wiki.openstreetmap.org/wiki/Talk:Key:bridge#Bridge_vs_Tunnels">the discussion here</a></p>
 <p>But on the whole I agree with Vincent de Phily. If you have a case where you can't decide between bridge or tunnel... well then it probably doesn't matter too much. Getting levels right matters more (mainly to help the renderers). Avoiding connections where there are none is important (To avoid routing problems)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -272,7 +272,7 @@ osqa_accepted = false
 <div id="post-42683-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/666/sleske">@sleske</a>: I've edited it – better now? :-) Then please delete your and my (this) comment.</p>
+<p><a href="https://help.openstreetmap.org/users/666/sleske">@sleske</a>: I've edited it – better now? :-) Then please delete your and my (this) comment.</p>
 </div>
 <div id="comment-42683-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 12:29)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -532,7 +532,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>No I'm saying the construction techniques for a some cut and cover tunnel can be identical to a bridge. A good example of this would be the Seattle freeway lids on Mercer Island and soon to be on State Route 520.</p>
-<p>The longer curved one, okay tunnel, the shorter ones, bridge or tunnel is more ambiguous <a href="http://www.openstreetmap.org/?lat=47.5881&amp;lon=-122.23165&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=47.5881&amp;lon=-122.23165&amp;zoom=15&amp;layers=M</a></p>
+<p>The longer curved one, okay tunnel, the shorter ones, bridge or tunnel is more ambiguous <a href="https://www.openstreetmap.org/?lat=47.5881&amp;lon=-122.23165&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=47.5881&amp;lon=-122.23165&amp;zoom=15&amp;layers=M</a></p>
 <p>And yes I would map a cut and cover tunnel as a tunnel. There is some vagueness in some wider bridges as in this example, or in some culverts.</p>
 </div>
 <div id="comment-6885-info" class="comment-info">
@@ -642,7 +642,7 @@ osqa_accepted = false
 <p>I'd consider a higher level (and elevation hight) either for midway nodes or bridge line sections if it were hump-backed [a bridge whose over path rises to get above and over a suporting arch] and for simlar varient cases].</p>
 <p>Its worth noteing this helps when handleing [automaticly] complex transport junctions with stacked bridges and viaducted canals snd railways passing over and under each other in a small area like in Brimingham Britain.</p>
 <hr />
-<p><img src="http://help.openstreetmap.org/upfiles/Untitled4.jpg" alt="Spegetti-junction on the M6 at Birmingham, UK, EU." /> This example shows arange of moterways mainroads cyclepths local road and rregional distributer roads Weaving link roads and canals rivers and railway services.</p>
+<p><img src="/upfiles/Untitled4.jpg" alt="Spegetti-junction on the M6 at Birmingham, UK, EU." /> This example shows arange of moterways mainroads cyclepths local road and rregional distributer roads Weaving link roads and canals rivers and railway services.</p>
 <p>Even before railways birmingham had similar major junctions on the canal system complete with aquduct overpasses and lock-ed link routes to ease the heavy barge traffic!</p>
 <p>Sticking to one level may be difficult. Ireality they are built with undulating bridges with some of the older routes in cuttings tunnels and embankments.</p>
 </div>

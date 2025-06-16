@@ -112,7 +112,7 @@ osqa_accepted = true
 <li>Yes map the ramp path and give it highway=footway, wheelchair=yes or if it is ONLY for wheelchairs highway=path, wheelchair=designated, foot=no, horse=no, bicycle=no</li>
 <li>Yes in the case described you just connect to the road line (or you can add footways along the road if you know where is it).</li>
 </ol>
-<p>It is also useful to tag the incline, to specify which way the ramp goes. At least incline=up or incline=down (relative to the direction of the way). Or if you are able to measure the steepness, you can tag that as a percentage or angle. See <a href="http://wiki.openstreetmap.org/wiki/Key:incline">http://wiki.openstreetmap.org/wiki/Key:incline</a></p>
+<p>It is also useful to tag the incline, to specify which way the ramp goes. At least incline=up or incline=down (relative to the direction of the way). Or if you are able to measure the steepness, you can tag that as a percentage or angle. See <a href="https://wiki.openstreetmap.org/wiki/Key:incline">https://wiki.openstreetmap.org/wiki/Key:incline</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -145,7 +145,7 @@ osqa_accepted = true
 <div id="post-22500-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Why highway=path if it is ONLY for wheelchairs? path allows foot, bicycles and horses according to the <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access restrictions</a>.</p>
+<p>Why highway=path if it is ONLY for wheelchairs? path allows foot, bicycles and horses according to the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access restrictions</a>.</p>
 </div>
 <div id="comment-22500-info" class="comment-info">
 <span class="comment-age">(17 May '13, 10:41)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -157,7 +157,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>It is also useful to tag the incline, to specify which way the ramp goes. At least incline=up or incline=down (relative to the direction of the way). Or if you are able to measure the steepness, you can tag that as a percentage or angle. See <a href="http://wiki.openstreetmap.org/wiki/Key:incline">http://wiki.openstreetmap.org/wiki/Key:incline</a></p>
+<p>It is also useful to tag the incline, to specify which way the ramp goes. At least incline=up or incline=down (relative to the direction of the way). Or if you are able to measure the steepness, you can tag that as a percentage or angle. See <a href="https://wiki.openstreetmap.org/wiki/Key:incline">https://wiki.openstreetmap.org/wiki/Key:incline</a></p>
 </div>
 <div id="comment-22530-info" class="comment-info">
 <span class="comment-age">(17 May '13, 19:37)</span> <span class="comment-user userinfo">Vclaw</span>
@@ -210,7 +210,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Federico, here’s another example, <a href="http://www.openstreetmap.org/?lat=52.04074&amp;lon=5.079667&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.04074&amp;lon=5.079667&amp;zoom=18&amp;layers=M</a> an access ramp wich looks like a large corkscrew with separated stairways. A pedestrian is allowed to 'take' a wheelchair, buggy or even a bicycle along to cross the Railway line.</p>
+<p>Hi Federico, here’s another example, <a href="https://www.openstreetmap.org/?lat=52.04074&amp;lon=5.079667&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.04074&amp;lon=5.079667&amp;zoom=18&amp;layers=M</a> an access ramp wich looks like a large corkscrew with separated stairways. A pedestrian is allowed to 'take' a wheelchair, buggy or even a bicycle along to cross the Railway line.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -265,7 +265,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><span></span><span>@Hendrikklaas</span> If your surface is not among your editor's presets you can either choose between the categories paved/unpaved or specify the surface as close as possible by <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">using a custom value</a>. There is no option between those two.</p>
+<p><span></span><span>@Hendrikklaas</span> If your surface is not among your editor's presets you can either choose between the categories paved/unpaved or specify the surface as close as possible by <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">using a custom value</a>. There is no option between those two.</p>
 </div>
 <div id="comment-22538-info" class="comment-info">
 <span class="comment-age">(18 May '13, 09:06)</span> <span class="comment-user userinfo">scai ♦</span>

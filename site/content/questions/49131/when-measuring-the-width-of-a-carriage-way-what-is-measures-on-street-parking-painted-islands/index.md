@@ -147,7 +147,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You need to be a little careful with some of these taginfo numbers - in some cases they've been created either mechanically or by humans, but without brain being in gear. For example, I randomly picked a "shoulder:width" and got to <a href="http://www.openstreetmap.org/way/391523093">http://www.openstreetmap.org/way/391523093</a> . Obviously (both logically and from the imagery) there's no shoulder at all here - clearly the way for the main carriageway has been split and the extra tags simply haven't been noticed.</p>
+<p>You need to be a little careful with some of these taginfo numbers - in some cases they've been created either mechanically or by humans, but without brain being in gear. For example, I randomly picked a "shoulder:width" and got to <a href="https://www.openstreetmap.org/way/391523093">https://www.openstreetmap.org/way/391523093</a> . Obviously (both logically and from the imagery) there's no shoulder at all here - clearly the way for the main carriageway has been split and the extra tags simply haven't been noticed.</p>
 </div>
 <div id="comment-49147-info" class="comment-info">
 <span class="comment-age">(10 Apr '16, 10:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -158,7 +158,7 @@ osqa_accepted = false
 <div id="post-49154-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: thanks for the note, indeed, I quoted those numbers just for ease of reading (no need to click through to taginfo each time if you want to know the number). High numbers do not necessarily mean that a tag is used by many mappers or is useful and well-thought-out at all.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: thanks for the note, indeed, I quoted those numbers just for ease of reading (no need to click through to taginfo each time if you want to know the number). High numbers do not necessarily mean that a tag is used by many mappers or is useful and well-thought-out at all.</p>
 </div>
 <div id="comment-49154-info" class="comment-info">
 <span class="comment-age">(10 Apr '16, 11:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

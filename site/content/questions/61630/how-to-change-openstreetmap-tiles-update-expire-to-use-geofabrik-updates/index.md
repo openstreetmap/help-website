@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-61631-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This was originally a comment on <a href="https://help.openstreetmap.org/questions/60986/openstreetmap-website-production-depolyment">https://help.openstreetmap.org/questions/60986/openstreetmap-website-production-depolyment</a> but isn't really related to the original question there, so I created a new question from it.</p>
+<p>This was originally a comment on <a href="/questions/60986/openstreetmap-website-production-depolyment">https://help.openstreetmap.org/questions/60986/openstreetmap-website-production-depolyment</a> but isn't really related to the original question there, so I created a new question from it.</p>
 </div>
 <div id="comment-61631-info" class="comment-info">
 <span class="comment-age">(14 Jan '18, 23:12)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

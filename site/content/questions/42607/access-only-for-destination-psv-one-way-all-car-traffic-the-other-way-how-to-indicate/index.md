@@ -170,7 +170,7 @@ osqa_accepted = false
 <div id="post-42613-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10895/albertp"></a><a href="http://help.openstreetmap.org/users/10895/albertp">@AlbertP</a>: yes, sorry, I missed the "destination" allowance.</p>
+<p><a href="https://help.openstreetmap.org/users/10895/albertp"></a><a href="https://help.openstreetmap.org/users/10895/albertp">@AlbertP</a>: yes, sorry, I missed the "destination" allowance.</p>
 </div>
 <div id="comment-42613-info" class="comment-info">
 <span class="comment-age">(27 Apr '15, 13:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -232,7 +232,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10895/albertp"></a><a href="http://help.openstreetmap.org/users/10895/albertp">@AlbertP</a>: Yes, I think your additional tag <code>oneway:conditional=no @ destination</code> is right. Maybe even the simpler <code>oneway:destination=no</code> would be reasonable (we currently have this tag about 40 times), although this does not fit into the <span>conditional restrictions</span> syntax.</p>
+<p><a href="https://help.openstreetmap.org/users/10895/albertp"></a><a href="https://help.openstreetmap.org/users/10895/albertp">@AlbertP</a>: Yes, I think your additional tag <code>oneway:conditional=no @ destination</code> is right. Maybe even the simpler <code>oneway:destination=no</code> would be reasonable (we currently have this tag about 40 times), although this does not fit into the <span>conditional restrictions</span> syntax.</p>
 </div>
 <div id="comment-42614-info" class="comment-info">
 <span class="comment-age">(27 Apr '15, 13:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-50216-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> USA and Canada. And I don't know the answer for the 2nd question as I have 0 knowledge in Engineering and transportation.</p>
+<p><a href="https://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> USA and Canada. And I don't know the answer for the 2nd question as I have 0 knowledge in Engineering and transportation.</p>
 </div>
 <div id="comment-50216-info" class="comment-info">
 <span class="comment-age">(15 Jun '16, 10:35)</span> <span class="comment-user userinfo">xline</span>
@@ -172,7 +172,7 @@ One Answer:
 <div id="post-50221-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Note that the classification under <code>hazmat:*</code> is country-specific - e.g. there's "hazmat:E=no" here: <a href="http://www.openstreetmap.org/way/27793042">http://www.openstreetmap.org/way/27793042</a> , which is descended from ADR: <a href="https://en.wikipedia.org/wiki/ADR_(treaty)">https://en.wikipedia.org/wiki/ADR_(treaty)</a> , but not specifically described there (rather, implemented by various signatory states in similar ways).</p>
+<p>Note that the classification under <code>hazmat:*</code> is country-specific - e.g. there's "hazmat:E=no" here: <a href="https://www.openstreetmap.org/way/27793042">https://www.openstreetmap.org/way/27793042</a> , which is descended from ADR: <a href="https://en.wikipedia.org/wiki/ADR_(treaty)">https://en.wikipedia.org/wiki/ADR_(treaty)</a> , but not specifically described there (rather, implemented by various signatory states in similar ways).</p>
 </div>
 <div id="comment-50221-info" class="comment-info">
 <span class="comment-age">(15 Jun '16, 12:16)</span> <span class="comment-user userinfo">Piskvor</span>

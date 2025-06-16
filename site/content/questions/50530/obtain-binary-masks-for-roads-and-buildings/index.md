@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Dear community,</p>
-<p>could someone give me a piece of understanding of how to produce a script that would download binary masks like these by small tiles (e.g. 512x512 pixels) when given a geographical position of the tile?<img src="http://help.openstreetmap.org/upfiles/houses.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/road.png" alt="alt text" /></p>
+<p>could someone give me a piece of understanding of how to produce a script that would download binary masks like these by small tiles (e.g. 512x512 pixels) when given a geographical position of the tile?<img src="/upfiles/houses.png" alt="alt text" /></p>
+<p><img src="/upfiles/road.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-roads" rel="tag" title="see questions tagged &#39;roads&#39;">roads</span> <span class="post-tag tag-link-houses" rel="tag" title="see questions tagged &#39;houses&#39;">houses</span> <span class="post-tag tag-link-mask" rel="tag" title="see questions tagged &#39;mask&#39;">mask</span>

@@ -132,9 +132,9 @@ One Answer:
 <div class="answer-body">
 <p>There are many ways to get where you want. From what you write, I'm assuming you're interested in roads. (OSM is much more than that) To get an idea of road properties:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:highway">check the wiki on roads</a> or the <a href="http://taginfo.openstreetmap.org/keys/highway#combinations">tagging combinations with highways</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:highway">check the wiki on roads</a> or the <a href="http://taginfo.openstreetmap.org/keys/highway#combinations">tagging combinations with highways</a></li>
 <li><a href="http://overpass-turbo.eu/s/bsm">make a small extract of roads in a given area using overpass turbo</a>. After running, you can export ta various file formats. Don't just do this for too large an area, as it will crash your browser and overload servers. The extracted data will include all the tags of these roads, not just a selection.</li>
-<li><a href="http://www.openstreetmap.org/#map=15/-17.5400/-65.6494&amp;layers=D">activate the "data" layer on OSM.org</a></li>
+<li><a href="https://www.openstreetmap.org/#map=15/-17.5400/-65.6494&amp;layers=D">activate the "data" layer on OSM.org</a></li>
 </ul>
 <p>Routing software (like the ones available through osm.org) usually take into account max speed and road type. So when no maxspeed is available, a secondary road might be assumed to be faster than a tertiary road.</p>
 <p>Depending on where you want to go, you might want to look into converting OSM extracts to sqlite database, which works pretty good with QGIS. But if you want more specific help, please specify what exactly you're trying to accomplish.</p>
@@ -171,7 +171,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>For larger datasets, you can download raw .OSM files <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a> and process them using for example Osmium <a href="http://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data">http://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data</a></p>
+<p>For larger datasets, you can download raw .OSM files <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a> and process them using for example Osmium <a href="https://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data">https://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data</a></p>
 </div>
 <div id="comment-45328-info" class="comment-info">
 <span class="comment-age">(17 Sep '15, 10:30)</span> <span class="comment-user userinfo">joost schouppe</span>

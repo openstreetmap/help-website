@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Someone deleted some Roads in Region Centre, France"
-description = '''See here: http://www.openstreetmap.org/?lat=47.9836&amp;amp;lon=2.0745&amp;amp;zoom=14&amp;amp;layers=M Is it possible to restore the changing? Is someone working there? Untill now I only used the Webeditor to create some paths. Thanks!'''
+description = '''See here: https://www.openstreetmap.org/?lat=47.9836&amp;amp;lon=2.0745&amp;amp;zoom=14&amp;amp;layers=M Is it possible to restore the changing? Is someone working there? Untill now I only used the Webeditor to create some paths. Thanks!'''
 date = "2012-08-08T13:31:00Z"
 lastmod = "2012-08-08T14:38:00Z"
 weight = 14912
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>See here: <a href="http://www.openstreetmap.org/?lat=47.9836&amp;lon=2.0745&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=47.9836&amp;lon=2.0745&amp;zoom=14&amp;layers=M</a></p>
+<p>See here: <a href="https://www.openstreetmap.org/?lat=47.9836&amp;lon=2.0745&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=47.9836&amp;lon=2.0745&amp;zoom=14&amp;layers=M</a></p>
 <p>Is it possible to restore the changing? Is someone working there?</p>
 <p>Untill now I only used the Webeditor to create some paths.</p>
 <p>Thanks!</p>
@@ -71,7 +71,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>It's the redaction bot. Have a look at the answers to <a href="http://help.openstreetmap.org/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">this previous question</a>.</p>
+<p>It's the redaction bot. Have a look at the answers to <a href="/questions/14526/osmf-redaction-account-huge-amount-of-data-deleted">this previous question</a>.</p>
 </div>
 <div id="comment-14913-info" class="comment-info">
 <span class="comment-age">(08 Aug '12, 14:38)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

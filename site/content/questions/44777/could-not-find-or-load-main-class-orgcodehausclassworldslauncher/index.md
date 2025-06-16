@@ -249,7 +249,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Does <a href="https://help.openstreetmap.org/questions/2905/osmosis-not-running">this previous question</a> help? A quick web search for "osmosis classworlds" (without quotes) turns up lots of people asking the same question, and lots of answers.</p>
+<p>Does <a href="/questions/2905/osmosis-not-running">this previous question</a> help? A quick web search for "osmosis classworlds" (without quotes) turns up lots of people asking the same question, and lots of answers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

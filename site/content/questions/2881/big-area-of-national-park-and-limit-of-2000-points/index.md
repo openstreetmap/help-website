@@ -42,8 +42,8 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi all,</p>
 <p>I have a problem with area of National Park Rila in Bulgaria. There is a limit of 2000 points for upload to OSM and i can't upload all area of park. I separate the area to 3 parts and create relation in multipolygon but in the render still i have 3 separate areas for NP Rila.</p>
-<p><a href="http://www.openstreetmap.org/?lat=42.2026&amp;lon=23.4577&amp;zoom=13&amp;layers=O">http://www.openstreetmap.org/?lat=42.2026&amp;lon=23.4577&amp;zoom=13&amp;layers=O</a></p>
-<p>Please can anybody help me to visualize one area like National Park Pirin: <a href="http://www.openstreetmap.org/?lat=41.73&amp;lon=23.468&amp;zoom=11&amp;layers=M">http://www.openstreetmap.org/?lat=41.73&amp;lon=23.468&amp;zoom=11&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=42.2026&amp;lon=23.4577&amp;zoom=13&amp;layers=O">https://www.openstreetmap.org/?lat=42.2026&amp;lon=23.4577&amp;zoom=13&amp;layers=O</a></p>
+<p>Please can anybody help me to visualize one area like National Park Pirin: <a href="https://www.openstreetmap.org/?lat=41.73&amp;lon=23.468&amp;zoom=11&amp;layers=M">https://www.openstreetmap.org/?lat=41.73&amp;lon=23.468&amp;zoom=11&amp;layers=M</a></p>
 <p>I use JOSM to simplify the area but i still have about 5000 points. Another simplification will bring lose of accuracy.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -66,7 +66,7 @@ osqa_accepted = true
 <div id="post-2937-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are two intersecting relations here: the Rila NP (<a href="http://www.openstreetmap.org/?relation=1417776">http://www.openstreetmap.org/?relation=1417776</a>) and a forest area <a href="http://8http://www.openstreetmap.org">8http://www.openstreetmap.org</a>/?relation=253825) named Рила...</p>
+<p>There are two intersecting relations here: the Rila NP (<a href="https://www.openstreetmap.org/?relation=1417776">https://www.openstreetmap.org/?relation=1417776</a>) and a forest area <a href="http://8http://www.openstreetmap.org">8http://www.openstreetmap.org</a>/?relation=253825) named Рила...</p>
 </div>
 <div id="comment-2937-info" class="comment-info">
 <span class="comment-age">(11 Feb '11, 08:12)</span> <span class="comment-user userinfo">katpatuka</span>
@@ -78,7 +78,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Yes it is. First relation is connected with area of Nature Park, second with forest areas in Bulgaria. Is this a problem?</p>
-<p>For relation <a href="http://www.openstreetmap.org/?relation=253825">http://www.openstreetmap.org/?relation=253825</a> this is not a final version.</p>
+<p>For relation <a href="https://www.openstreetmap.org/?relation=253825">https://www.openstreetmap.org/?relation=253825</a> this is not a final version.</p>
 </div>
 <div id="comment-2939-info" class="comment-info">
 <span class="comment-age">(11 Feb '11, 09:33)</span> <span class="comment-user userinfo">Захари Савов</span>

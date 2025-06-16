@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Third-party sites take updates from OSM at their own schedule. Even if you've made an update to OSM, it won't necessarily show immediately (or even within weeks) on a third-party site.</p>
-<p>Over and above that, it's very difficult to give advice unless you can provide a direct link, as Simon says. However, if (for example) you mean a path like <a href="http://www.openstreetmap.org/way/294709547">http://www.openstreetmap.org/way/294709547</a>, you haven't expressly said that the path is open to bikes. You need to add a bicycle=yes tag; otherwise the router will think it's a path for pedestrians only, and will refuse to send bikes along it.</p>
+<p>Over and above that, it's very difficult to give advice unless you can provide a direct link, as Simon says. However, if (for example) you mean a path like <a href="https://www.openstreetmap.org/way/294709547">https://www.openstreetmap.org/way/294709547</a>, you haven't expressly said that the path is open to bikes. You need to add a bicycle=yes tag; otherwise the router will think it's a path for pedestrians only, and will refuse to send bikes along it.</p>
 <p>Please also add a surface= tag (for example, surface=gravel or surface=ground) so that the router will be able to make a decision whether it's suitable for (say) road bikes.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -181,7 +181,7 @@ osqa_accepted = false
 <div id="post-39786-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks Simon. For example, every path of these. <a href="http://www.openstreetmap.org/search?query=laste%20di%20sotto#map=19/46.45465/11.97412">http://www.openstreetmap.org/search?query=laste%20di%20sotto#map=19/46.45465/11.97412</a></p>
+<p>Thanks Simon. For example, every path of these. <a href="https://www.openstreetmap.org/search?query=laste%20di%20sotto#map=19/46.45465/11.97412">https://www.openstreetmap.org/search?query=laste%20di%20sotto#map=19/46.45465/11.97412</a></p>
 </div>
 <div id="comment-39786-info" class="comment-info">
 <span class="comment-age">(22 Dec '14, 14:25)</span> <span class="comment-user userinfo">Dolomites</span>

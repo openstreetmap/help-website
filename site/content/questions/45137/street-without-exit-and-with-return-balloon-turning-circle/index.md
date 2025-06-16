@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Street without exit and with return balloon (turning circle)"
-description = '''In a street without exit and return balloon, it is correct to use simultaneously the tags below?  noexit = yes highway = turning_circle  Or should I opt for one of them? If so, which one? Here&#x27;s a link with example: http://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382'''
+description = '''In a street without exit and return balloon, it is correct to use simultaneously the tags below?  noexit = yes highway = turning_circle  Or should I opt for one of them? If so, which one? Here&#x27;s a link with example: https://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382'''
 date = "2015-09-09T13:26:00Z"
 lastmod = "2015-09-10T12:56:00Z"
 weight = 45137
@@ -45,7 +45,7 @@ osqa_accepted = true
 <li><code>noexit = yes</code></li>
 <li><code>highway = turning_circle</code></li>
 </ul>
-<p>Or should I opt for one of them? If so, which one? Here's a link with example: <a href="http://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382">http://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382</a></p>
+<p>Or should I opt for one of them? If so, which one? Here's a link with example: <a href="https://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382">https://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-turning_circle" rel="tag" title="see questions tagged &#39;turning_circle&#39;">turning_circle</span> <span class="post-tag tag-link-noexit" rel="tag" title="see questions tagged &#39;noexit&#39;">noexit</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -156,7 +156,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10008/seth">@seth</a>: I, personally, would add add both tags then (to record your local knowledge).</p>
+<p><a href="https://help.openstreetmap.org/users/10008/seth">@seth</a>: I, personally, would add add both tags then (to record your local knowledge).</p>
 <p>I do not understand what you mean by "Comments not yet 'closed the matter.'", sorry</p>
 </div>
 <div id="comment-45146-info" class="comment-info">
@@ -170,7 +170,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Sorry for my English, because I think a little bit.</p>
 <p>I said it was not clear if I can use both tags or not, specifically for this case.</p>
-<p>All that being said, it is based on various situations. But I would like an answer just for this situation as link: <a href="http://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382">http://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382</a></p>
+<p>All that being said, it is based on various situations. But I would like an answer just for this situation as link: <a href="https://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382">https://www.openstreetmap.org/edit?editor=id#map=20/-20.52457/-54.62382</a></p>
 <p>Independent of other possibilities elsewhere.</p>
 </div>
 <div id="comment-45147-info" class="comment-info">
@@ -183,7 +183,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10008/seth">@seth</a>: for the situation at the linked position (and with "The street really no way out. I know the place and route ends with a wall, transposable only with a ladder."): Just add both tags (<code>highway=turning_circle</code> and <code>noexit=yes</code>). Then everybody knows that there is really no footpath missing (e.g. to Rua Alcácer).</p>
+<p><a href="https://help.openstreetmap.org/users/10008/seth">@seth</a>: for the situation at the linked position (and with "The street really no way out. I know the place and route ends with a wall, transposable only with a ladder."): Just add both tags (<code>highway=turning_circle</code> and <code>noexit=yes</code>). Then everybody knows that there is really no footpath missing (e.g. to Rua Alcácer).</p>
 <p>In addition: To indicate that you have real local knowledge, add something like this ("local knowledge") to your changeset comment when you save the change.</p>
 </div>
 <div id="comment-45148-info" class="comment-info">
@@ -239,7 +239,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just <code>highway=turning_circle</code> is sufficient, as it clearly implies that the roads ends at that point. See also: <a href="http://wiki.openstreetmap.org/wiki/Key%3Anoexit#When_not_to_use">noexit key</a> on the wiki.</p>
+<p>Just <code>highway=turning_circle</code> is sufficient, as it clearly implies that the roads ends at that point. See also: <a href="https://wiki.openstreetmap.org/wiki/Key%3Anoexit#When_not_to_use">noexit key</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

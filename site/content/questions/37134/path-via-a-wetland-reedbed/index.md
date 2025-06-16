@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The path is a right of way and passes through a reedbed. I drew a polygon for reedbed and tagged it natural=wetland and wetland=reedbed. It has not rendered yet. does the polygon have to be drawn clockwise? a previous edit in another area with natural=wetland and wetland=marsh has rendered. The path rendered fine, and it is not a board walk, so we were fortunate it had not rained much in the last five months, how should it be tagged to show it may be a problem as it does NOT seem to have an easy detour. unlike this one:- <a href="http://www.openstreetmap.org/#map=18/52.33225/-0.13675">http://www.openstreetmap.org/#map=18/52.33225/-0.13675</a></p>
+<p>The path is a right of way and passes through a reedbed. I drew a polygon for reedbed and tagged it natural=wetland and wetland=reedbed. It has not rendered yet. does the polygon have to be drawn clockwise? a previous edit in another area with natural=wetland and wetland=marsh has rendered. The path rendered fine, and it is not a board walk, so we were fortunate it had not rained much in the last five months, how should it be tagged to show it may be a problem as it does NOT seem to have an easy detour. unlike this one:- <a href="https://www.openstreetmap.org/#map=18/52.33225/-0.13675">https://www.openstreetmap.org/#map=18/52.33225/-0.13675</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-reedbed" rel="tag" title="see questions tagged &#39;reedbed&#39;">reedbed</span> <span class="post-tag tag-link-seasonal_path" rel="tag" title="see questions tagged &#39;seasonal_path&#39;">seasonal_path</span>
@@ -65,7 +65,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>It has rendered, and it is here <a href="http://www.openstreetmap.org/#map=18/52.53093/-0.59153">http://www.openstreetmap.org/#map=18/52.53093/-0.59153</a></p>
+<p>It has rendered, and it is here <a href="https://www.openstreetmap.org/#map=18/52.53093/-0.59153">https://www.openstreetmap.org/#map=18/52.53093/-0.59153</a></p>
 </div>
 <div id="comment-37136-info" class="comment-info">
 <span class="comment-age">(30 Sep '14, 09:10)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -119,7 +119,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How about "note:surface"? I've <a href="http://www.openstreetmap.org/way/186835762">occasionally</a> used that for this sort of information.</p>
+<p>How about "note:surface"? I've <a href="https://www.openstreetmap.org/way/186835762">occasionally</a> used that for this sort of information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -150,7 +150,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1725/andy">@andy</a> I'd have gone with surface=mud; give you know the area it would be nice to add designation tags to identify the rights of way.</p>
+<p><a href="https://help.openstreetmap.org/users/1725/andy">@andy</a> I'd have gone with surface=mud; give you know the area it would be nice to add designation tags to identify the rights of way.</p>
 </div>
 <div id="comment-37190-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 15:03)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -203,7 +203,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How about adding an extra tag as access:no=wet or access:boot=yes, there several tracks over here with D-tours in the rain season or floods. Look here <a href="http://www.openstreetmap.org/#map=15/52.2903/5.0935.">http://www.openstreetmap.org/#map=15/52.2903/5.0935.</a> These tracks carry the warning use watertight shoes by wet whether or seasonal, it’s a semi flooded area, <a href="http://www.openstreetmap.org/#map=15/51.7884/4.0170">http://www.openstreetmap.org/#map=15/51.7884/4.0170</a> and yes nobody tagged them as such. This is a track in a river bed, regular flooded as well, <a href="http://www.openstreetmap.org/#map=16/51.8925/5.6984">http://www.openstreetmap.org/#map=16/51.8925/5.6984</a> but no tags.</p>
+<p>How about adding an extra tag as access:no=wet or access:boot=yes, there several tracks over here with D-tours in the rain season or floods. Look here <a href="https://www.openstreetmap.org/#map=15/52.2903/5.0935.">https://www.openstreetmap.org/#map=15/52.2903/5.0935.</a> These tracks carry the warning use watertight shoes by wet whether or seasonal, it’s a semi flooded area, <a href="https://www.openstreetmap.org/#map=15/51.7884/4.0170">https://www.openstreetmap.org/#map=15/51.7884/4.0170</a> and yes nobody tagged them as such. This is a track in a river bed, regular flooded as well, <a href="https://www.openstreetmap.org/#map=16/51.8925/5.6984">https://www.openstreetmap.org/#map=16/51.8925/5.6984</a> but no tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -223,7 +223,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>The access key is for legal access and should not be misused for recommendations. Besides, the correct tag would be <em>access:conditional=no @ wet</em> according to the <a href="http://wiki.openstreetmap.org/wiki/Conditional_restriction">conditional restrictions</a>.</p>
+<p>The access key is for legal access and should not be misused for recommendations. Besides, the correct tag would be <em>access:conditional=no @ wet</em> according to the <a href="https://wiki.openstreetmap.org/wiki/Conditional_restriction">conditional restrictions</a>.</p>
 </div>
 <div id="comment-37161-info" class="comment-info">
 <span class="comment-age">(30 Sep '14, 20:02)</span> <span class="comment-user userinfo">scai ♦</span>

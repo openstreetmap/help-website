@@ -45,9 +45,9 @@ osqa_accepted = true
 <p>I would like to relaunch the import, do you have any advice to use less disk space ? maybe</p>
 <ul>
 <li>use <code>--flat-nodes</code> osm2pgsql option ? if yes: do you think 1TB will be sufficent for node file + database ? or I should try to host node file on another 500GB disk ? Can you confirm that <code>--drop</code> osm2pgsql option will drop the node file at the end of the process ?</li>
-<li>turn on <code>autovaccum</code> as suggested here <a href="https://help.openstreetmap.org/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation">osm2pgsql import - disk space running out during index creation</a> ?</li>
+<li>turn on <code>autovaccum</code> as suggested here <a href="/questions/52672/osm2pgsql-import-disk-space-running-out-during-index-creation">osm2pgsql import - disk space running out during index creation</a> ?</li>
 </ul>
-<p>In fact I got 916GB available, minus planet.osm.pbf file (50GB), so I got ~865GB. If it's confirmed that it is not sufficient for a full planet import, I'll add the information to this post ( <a href="https://help.openstreetmap.org/questions/64405/tile-server-hardware-requirements">Tile server hardware requirements</a> ).</p>
+<p>In fact I got 916GB available, minus planet.osm.pbf file (50GB), so I got ~865GB. If it's confirmed that it is not sufficient for a full planet import, I'll add the information to this post ( <a href="/questions/64405/tile-server-hardware-requirements">Tile server hardware requirements</a> ).</p>
 <p>Below are more informations, thanks in advance for your help !</p>
 <p>Augustin</p>
 <h3 id="osm2pgsql-command">osm2pgsql command</h3>

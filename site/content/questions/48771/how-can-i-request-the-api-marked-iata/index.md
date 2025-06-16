@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Moved from <a href="https://help.openstreetmap.org/questions/1989/load-data-from-sqlserver-and-display-markers-on-map">https://help.openstreetmap.org/questions/1989/load-data-from-sqlserver-and-display-markers-on-map</a>:</p>
+<p>Moved from <a href="/questions/1989/load-data-from-sqlserver-and-display-markers-on-map">https://help.openstreetmap.org/questions/1989/load-data-from-sqlserver-and-display-markers-on-map</a>:</p>
 <p>Hello! How can I request the API marked IATA? I need a base: Airport name in Russian, English , IATA- Code . Can I help with your service obtain the necessary information ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

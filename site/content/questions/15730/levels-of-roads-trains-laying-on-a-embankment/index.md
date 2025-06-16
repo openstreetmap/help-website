@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As explained as an answer to your question <a href="http://help.openstreetmap.org/questions/14961/why-are-layers-numbered-1-and-1-and-is-there-no-other-variation?page=1&amp;focusedAnswerId=14963#14963">"Why are layers numbered -1 and 1 and is there no other variation?"</a>, layers are relative to other features. So yes, your guess is correct - the only place where the railway needs a layer=1 is where it crosses above another element on a bridge/viaduct (e.g. road or railway line).</p>
-<p>(I'm assuming here that you meant <em>layer</em>, not <em>level</em>. <a href="http://wiki.openstreetmap.org/wiki/Key:level">level</a> is used for floors within a building and would be completely out of place for an railway line on top of an embankment.)</p>
+<p>As explained as an answer to your question <a href="/questions/14961/why-are-layers-numbered-1-and-1-and-is-there-no-other-variation?page=1&amp;focusedAnswerId=14963#14963">"Why are layers numbered -1 and 1 and is there no other variation?"</a>, layers are relative to other features. So yes, your guess is correct - the only place where the railway needs a layer=1 is where it crosses above another element on a bridge/viaduct (e.g. road or railway line).</p>
+<p>(I'm assuming here that you meant <em>layer</em>, not <em>level</em>. <a href="https://wiki.openstreetmap.org/wiki/Key:level">level</a> is used for floors within a building and would be completely out of place for an railway line on top of an embankment.)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>If you look at the comments at the answer to your question <a href="http://help.openstreetmap.org/questions/15663/how-to-tag-a-road-digged-in-under-a-road-that-has-been-lifted">"How to tag a road (digged in) under a road that has been lifted ?"</a> and pay attention to which comments are vote up and which are not, then there is no need for any confusion.</p>
+<p>If you look at the comments at the answer to your question <a href="/questions/15663/how-to-tag-a-road-digged-in-under-a-road-that-has-been-lifted">"How to tag a road (digged in) under a road that has been lifted ?"</a> and pay attention to which comments are vote up and which are not, then there is no need for any confusion.</p>
 </div>
 <div id="comment-15747-info" class="comment-info">
 <span class="comment-age">(01 Sep '12, 15:43)</span> <span class="comment-user userinfo">cartinus</span>

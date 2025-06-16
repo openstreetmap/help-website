@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/chautari9thpingpong.jpg" alt="alt text" /><img src="https://help.openstreetmap.org/upfiles/chautara9thpipal_zI8U5aC.jpg" alt="alt text" />chautara's are very important features in nepal. usually one finds a ber and pipal side-by-side (they are married after all) surrounded by a platform of sorts. the pipal may be worshiped as an aspect of lord vishnu. it is a place for porters to rest or even camp overnight. many have community fresh water wells or ponds. many have a shrine or temple nearby. chautara's are meeting places where folks wait for their friends, or hired a taxi or catch a bus. how should these be noted, asks the newbie. <img src="https://help.openstreetmap.org/upfiles/chautari9thpani.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/chautari9thpingpong.jpg" alt="alt text" /><img src="/upfiles/chautara9thpipal_zI8U5aC.jpg" alt="alt text" />chautara's are very important features in nepal. usually one finds a ber and pipal side-by-side (they are married after all) surrounded by a platform of sorts. the pipal may be worshiped as an aspect of lord vishnu. it is a place for porters to rest or even camp overnight. many have community fresh water wells or ponds. many have a shrine or temple nearby. chautara's are meeting places where folks wait for their friends, or hired a taxi or catch a bus. how should these be noted, asks the newbie. <img src="/upfiles/chautari9thpani.jpg" alt="alt text" /></p>
 <p>taxi stand, ping pong table, pipal tree as site of puja, water tank (spring), small mahadev shrine behind</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The "<a href="http://www.openstreetmap.org/copyright">copyright</a>" link at <a href="http://www.openstreetmap.org/">openstreetmap.org</a> should explain: <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> .</p>
+<p>The "<a href="https://www.openstreetmap.org/copyright">copyright</a>" link at <a href="https://www.openstreetmap.org/">openstreetmap.org</a> should explain: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> .</p>
 <p>That describes the usage of OpenStreetMap <strong>data</strong>. If you want to use OpenStreetMap <strong>services</strong>, you'll also want to read the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> and the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">api usage policy</a>. There are also many third-party APIs that use OpenStreetMap data; these will have their own usage policies.</p>
 </div>
 <div class="answer-controls post-controls">

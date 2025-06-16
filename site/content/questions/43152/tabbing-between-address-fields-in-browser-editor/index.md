@@ -141,7 +141,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Converting <a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>'s comment to the answer:</p>
+<p>Converting <a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>'s comment to the answer:</p>
 <p>Tested quick, and I agree it is an issue sometimes.</p>
 <p>It has been reported, but there's been no action on it. Maybe you could add a comment? <a href="https://github.com/openstreetmap/iD/issues/2320">https://github.com/openstreetmap/iD/issues/2320</a></p>
 </div>

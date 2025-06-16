@@ -62,7 +62,7 @@ osqa_accepted = true
 <div id="post-4414-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question is also relevant: <a href="http://help.openstreetmap.org/questions/3165/some-direction-mapping-mobile-homes-estates-trailer-parks">http://help.openstreetmap.org/questions/3165/some-direction-mapping-mobile-homes-estates-trailer-parks</a>. I fear that at present there is no good consensus answer.</p>
+<p>This question is also relevant: <a href="/questions/3165/some-direction-mapping-mobile-homes-estates-trailer-parks">https://help.openstreetmap.org/questions/3165/some-direction-mapping-mobile-homes-estates-trailer-parks</a>. I fear that at present there is no good consensus answer.</p>
 </div>
 <div id="comment-4414-info" class="comment-info">
 <span class="comment-age">(12 Apr '11, 12:53)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -138,7 +138,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use tourism=camp_site with caravans=yes as suggested by <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site">the wiki</a>.</p>
+<p>I would use tourism=camp_site with caravans=yes as suggested by <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site">the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -299,7 +299,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the site is mainly for caravans you can use tourism=<a href="http://wiki.openstreetmap.org/wiki/Tag:tourism=caravan%20site?uselang=en">caravan_site</a>. It renders with a caravan symbol on Mapnik. See <a href="http://osm.org/go/uY9nGPsYk--">here</a> for an example.</p>
+<p>If the site is mainly for caravans you can use tourism=<a href="https://wiki.openstreetmap.org/wiki/Tag:tourism=caravan%20site?uselang=en">caravan_site</a>. It renders with a caravan symbol on Mapnik. See <a href="http://osm.org/go/uY9nGPsYk--">here</a> for an example.</p>
 <p>I guess it depends on your perspective as to whether it is a caravan site that allows tents, or a camp site that allows caravans.</p>
 </div>
 <div class="answer-controls post-controls">

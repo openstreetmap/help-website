@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Overpas_turbo_Sr8eilu.png" alt="alt text" /></p>
+<p><img src="/upfiles/Overpas_turbo_Sr8eilu.png" alt="alt text" /></p>
 <p>I don't know how to handle this error</p>
 </div>
 <div id="question-tags" class="tags-container tags">

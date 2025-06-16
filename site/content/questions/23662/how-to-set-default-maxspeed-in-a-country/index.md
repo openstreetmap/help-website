@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I noticed that default maxspeed for routing is given in "<a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">OSM tags for routing/Maxspeed</a>" but the country I live in, Sri Lanka, is not listed. How can I include Sri Lankan default maxspeed values?</p>
+<p>I noticed that default maxspeed for routing is given in "<a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">OSM tags for routing/Maxspeed</a>" but the country I live in, Sri Lanka, is not listed. How can I include Sri Lankan default maxspeed values?</p>
 <p>The default values are given in <a href="http://www.rda.gov.lk/supported/aboutrda/Speed_Limits_1763_26%20(E).pdf">Government Gazette of Sri Lanka</a>. The official value for motorcars is 70 Kmph. But, actual average driving speed can be lesser than this for secondary and tertiary roads.</p>
-<p>I did search for similar question, but did not find the answer I look for. The best I found was <a href="https://help.openstreetmap.org/questions/7400/mapping-of-general-traffic-rules">this</a>, but it did not tell me how exactly I can get this done. Help me. I’m new to OSM.</p>
+<p>I did search for similar question, but did not find the answer I look for. The best I found was <a href="/questions/7400/mapping-of-general-traffic-rules">this</a>, but it did not tell me how exactly I can get this done. Help me. I’m new to OSM.</p>
 <p>Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">

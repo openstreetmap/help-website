@@ -118,7 +118,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>For exporting a map from openstreetmap.org, you can only get an image for the standard map style, not the Cycle Map.</p>
 <p>There are other ways for getting an image of the cycle map. The simplest would be to view the map, then press the "Print screen" button on your keyboard, then you can paste that into an image editor. Though this is limited by the resolution of your monitor, as to how much you can view at once.</p>
-<p>To get a larger image of the cycle map, you could use one of the services here: <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static map images</a></p>
+<p>To get a larger image of the cycle map, you could use one of the services here: <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static map images</a></p>
 <p>For a map without labels, you could try <a href="http://toolserver.org/~osm/locale/en.html">Multilingual OpenStreetMap on Toolserver</a>. This has the labels as a separate layer, so you can switch them off using the layer switcher. As above, you can use Print Screen to get an image of this. I don't know of any way for getting a larger image from this map.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -283,8 +283,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the "remove all text" part: short of <em>buying a PC and</em> setting up your own renderer (like Maperitive, <a href="http://wiki.openstreetmap.org/wiki/Maperitive">http://wiki.openstreetmap.org/wiki/Maperitive</a> ) with rendering rules you could export the map as SVG and then manually delete all the labels.</p>
-<p>Or you could use Tilemill, <a href="http://wiki.openstreetmap.org/wiki/Tilemill">http://wiki.openstreetmap.org/wiki/Tilemill</a> , and create your rendering rules there.</p>
+<p>For the "remove all text" part: short of <em>buying a PC and</em> setting up your own renderer (like Maperitive, <a href="https://wiki.openstreetmap.org/wiki/Maperitive">https://wiki.openstreetmap.org/wiki/Maperitive</a> ) with rendering rules you could export the map as SVG and then manually delete all the labels.</p>
+<p>Or you could use Tilemill, <a href="https://wiki.openstreetmap.org/wiki/Tilemill">https://wiki.openstreetmap.org/wiki/Tilemill</a> , and create your rendering rules there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

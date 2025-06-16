@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a wetland area ?"
-description = '''I changed landuse-grass into natural-wetland, since it’s covered with reed. But the description in the Wiki, http://wiki.openstreetmap.org/wiki/Wetlands  makes it difficult to choose. A semi-wetland meadow which is saturated with water throughout much of the year looks like a good one. But it’s a wi...'''
+description = '''I changed landuse-grass into natural-wetland, since it’s covered with reed. But the description in the Wiki, https://wiki.openstreetmap.org/wiki/Wetlands  makes it difficult to choose. A semi-wetland meadow which is saturated with water throughout much of the year looks like a good one. But it’s a wi...'''
 date = "2013-08-31T13:21:00Z"
 lastmod = "2013-08-31T13:47:00Z"
 weight = 26009
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I changed landuse-grass into natural-wetland, since it’s covered with reed. But the description in the Wiki, <a href="http://wiki.openstreetmap.org/wiki/Wetlands">http://wiki.openstreetmap.org/wiki/Wetlands</a> makes it difficult to choose. A semi-wetland meadow which is saturated with water throughout much of the year looks like a good one. But it’s a wilderness of reed with a flock of Galloway’s on abandoned farmland, but it’s not inundated.</p>
+<p>I changed landuse-grass into natural-wetland, since it’s covered with reed. But the description in the Wiki, <a href="https://wiki.openstreetmap.org/wiki/Wetlands">https://wiki.openstreetmap.org/wiki/Wetlands</a> makes it difficult to choose. A semi-wetland meadow which is saturated with water throughout much of the year looks like a good one. But it’s a wilderness of reed with a flock of Galloway’s on abandoned farmland, but it’s not inundated.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-reed" rel="tag" title="see questions tagged &#39;reed&#39;">reed</span> <span class="post-tag tag-link-wetland" rel="tag" title="see questions tagged &#39;wetland&#39;">wetland</span> <span class="post-tag tag-link-covered" rel="tag" title="see questions tagged &#39;covered&#39;">covered</span>

@@ -97,7 +97,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Please be sure where your map data comes from ... if I read natural-earth in your import source, then it is a matter of naturalearth.com about theit multilingual names. Ask there if you have trouble with their data.</p>
-<p>If you want to use raw OSM data or derived maps, maybe have a general look at <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names">http://wiki.openstreetmap.org/wiki/Multilingual_names</a> or <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">http://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
+<p>If you want to use raw OSM data or derived maps, maybe have a general look at <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names">https://wiki.openstreetmap.org/wiki/Multilingual_names</a> or <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
 </div>
 <div id="comment-26117-info" class="comment-info">
 <span class="comment-age">(04 Sep '13, 16:55)</span> <span class="comment-user userinfo">stephan75</span>
@@ -162,7 +162,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>All country nodes appear to have a <a href="http://wiki.openstreetmap.org/wiki/Country_code">country code</a> tag, either country_code_fips= <em>and/or country_code_iso3166_1_alpha_2=</em> tag, so you can get a file that'd probably work for you via the api. For example, <a href="http://overpass.osm.rambler.ru/cgi/interpreter?data=node%5Bcountry_code_fips%5D%3Bout%3B">http://overpass.osm.rambler.ru/cgi/interpreter?data=node%5Bcountry_code_fips%5D%3Bout%3B</a> for OSM XML format or <a href="http://overpass.osm.rambler.ru/cgi/interpreter?data=%5Bout:json%5D;node%5Bcountry_code_fips%5D%3Bout%3B">http://overpass.osm.rambler.ru/cgi/interpreter?data=%5Bout:json%5D;node%5Bcountry_code_fips%5D%3Bout%3B</a> for JSON. Looking at the resulting files, be forewarned you will have to deal with some unusual characters!</p>
+<p>All country nodes appear to have a <a href="https://wiki.openstreetmap.org/wiki/Country_code">country code</a> tag, either country_code_fips= <em>and/or country_code_iso3166_1_alpha_2=</em> tag, so you can get a file that'd probably work for you via the api. For example, <a href="http://overpass.osm.rambler.ru/cgi/interpreter?data=node%5Bcountry_code_fips%5D%3Bout%3B">http://overpass.osm.rambler.ru/cgi/interpreter?data=node%5Bcountry_code_fips%5D%3Bout%3B</a> for OSM XML format or <a href="http://overpass.osm.rambler.ru/cgi/interpreter?data=%5Bout:json%5D;node%5Bcountry_code_fips%5D%3Bout%3B">http://overpass.osm.rambler.ru/cgi/interpreter?data=%5Bout:json%5D;node%5Bcountry_code_fips%5D%3Bout%3B</a> for JSON. Looking at the resulting files, be forewarned you will have to deal with some unusual characters!</p>
 <p>You can also view the country names that are on those nodes by language on the Multilingual Country List (<a href="http://toolserver.org/~mazder/multilingual-country-list/?lang=de">German example</a>)</p>
 </div>
 <div class="answer-controls post-controls">

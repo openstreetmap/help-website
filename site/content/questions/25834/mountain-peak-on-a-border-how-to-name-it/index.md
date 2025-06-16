@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mountain peak on a border: how to name it?"
-description = '''Hi, While it is quite natural to put local name for a peak located within country borders, it looks less clear what to do with the ones on national borders. Examples can be found in Tatra Mountains on Polish/Slovak border: http://www.openstreetmap.org/#map=15/49.1896/20.0616 Some are in Polish (Szpi...'''
+description = '''Hi, While it is quite natural to put local name for a peak located within country borders, it looks less clear what to do with the ones on national borders. Examples can be found in Tatra Mountains on Polish/Slovak border: https://www.openstreetmap.org/#map=15/49.1896/20.0616 Some are in Polish (Szpi...'''
 date = "2013-08-27T02:01:00Z"
 lastmod = "2013-08-27T09:47:00Z"
 weight = 25834
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>While it is quite natural to put local name for a peak located within country borders, it looks less clear what to do with the ones on national borders. Examples can be found in Tatra Mountains on Polish/Slovak border: <a href="http://www.openstreetmap.org/#map=15/49.1896/20.0616">http://www.openstreetmap.org/#map=15/49.1896/20.0616</a> Some are in Polish (Szpiglasowy Wierch), some in Slovak (Druhý Mnich).</p>
+<p>While it is quite natural to put local name for a peak located within country borders, it looks less clear what to do with the ones on national borders. Examples can be found in Tatra Mountains on Polish/Slovak border: <a href="https://www.openstreetmap.org/#map=15/49.1896/20.0616">https://www.openstreetmap.org/#map=15/49.1896/20.0616</a> Some are in Polish (Szpiglasowy Wierch), some in Slovak (Druhý Mnich).</p>
 <p>I could do something like this: name:pl=Zadni Mnich name:sk=Druhý Mnich But then, with no name= tag, OSM does not render any name at all in the default view.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -128,7 +128,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Mt. Everest is tagged with name="Mount Everest" and all the different names as name:xx=</p>
-<p>See <a href="http://www.openstreetmap.org/browse/node/164979149">http://www.openstreetmap.org/browse/node/164979149</a></p>
+<p>See <a href="https://www.openstreetmap.org/browse/node/164979149">https://www.openstreetmap.org/browse/node/164979149</a></p>
 </div>
 <div id="comment-25842-info" class="comment-info">
 <span class="comment-age">(27 Aug '13, 09:47)</span> <span class="comment-user userinfo">gormo</span>

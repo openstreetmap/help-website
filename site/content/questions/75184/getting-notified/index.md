@@ -138,7 +138,7 @@ One Answer:
 <div class="comment-text">
 <p>Monitoring your changeset is a quite complicated task since objects change, get split etc and thus it is difficult to determine what belonged to your chanageset after a while.</p>
 <p>I'm using the Whodidit tool on the linked page to monitor what happens in the area I'm most active. Others use OSMCHA for that purpose. These tools will show you also other edits but for me it's a good way to find problematic edits in my area.</p>
-<p>Also have a look at this answer to an older question where I described the situation in a bit more detail: <a href="https://help.openstreetmap.org/questions/72340/tracking-changes-after-my-own-edits/72343">questions 72340</a></p>
+<p>Also have a look at this answer to an older question where I described the situation in a bit more detail: <a href="/questions/72340/tracking-changes-after-my-own-edits/72343">questions 72340</a></p>
 </div>
 <div id="comment-75228-info" class="comment-info">
 <span class="comment-age">(09 Jun '20, 08:02)</span> <span class="comment-user userinfo">TZorn</span>

@@ -118,7 +118,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Yes it's possible. OpenLayers (a popular slippy map javascript library) can be downloaded and run locally, hence on <a href="http://openlayers.org/"></a><a href="http://openlayers.org"></a><a href="http://openlayers.org">openlayers.org</a> you see a "Link to the hosted version" and a download link. You want to download. And when you come to invoke it with a <code>&lt;script&gt;</code> tag, you would reference a relative path rather than the <a href="http://openlayers.org">openlayers.org</a> URL.</p>
 <p>Likewise for the tileset. Rather than having OpenLayers point at a tileset on a remote server (the normal setup) you would point it at relative tile URLs.</p>
-<p>You then need tile images arranged in a standard directory structure on your local disk. You might come by these tile files by downloading them from someone else's tile server, e.g. using tile <a href="http://wiki.openstreetmap.org/wiki/Category:Tile_downloading">downloader software</a>, but this approach tends to be problematic for the source server, if you're downloading more than a couple of hundred tiles (a large area of map or several zoom levels). A better thing to do (and much more flexible and fun!) is <a href="http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">Creating your own tiles</a> (various approaches) Once you've got a directory full of tiles, and figured out how to initialise OpenLayers to the right part of the world... it will happily all work from your local machine, or on webserver on a local network, with no internet connection.</p>
+<p>You then need tile images arranged in a standard directory structure on your local disk. You might come by these tile files by downloading them from someone else's tile server, e.g. using tile <a href="https://wiki.openstreetmap.org/wiki/Category:Tile_downloading">downloader software</a>, but this approach tends to be problematic for the source server, if you're downloading more than a couple of hundred tiles (a large area of map or several zoom levels). A better thing to do (and much more flexible and fun!) is <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">Creating your own tiles</a> (various approaches) Once you've got a directory full of tiles, and figured out how to initialise OpenLayers to the right part of the world... it will happily all work from your local machine, or on webserver on a local network, with no internet connection.</p>
 <p>This a unique advantage of OpenStreetMap. Google maps and other providers do not allow their maps to be used in this way.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -171,7 +171,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>It all depends on what you want to do, and what you have: one way would be to:</p>
 <ol>
-<li>setup a reverse proxy for <a href="http://tile.osm.org">tile.osm.org</a>, to cache tiles. Either a <a href="http://wiki.openstreetmap.org/wiki/ProxySimplePHP">small php script</a>, or <a href="http://www.varnish-cache.org/">Varnish</a></li>
+<li>setup a reverse proxy for <a href="http://tile.osm.org">tile.osm.org</a>, to cache tiles. Either a <a href="https://wiki.openstreetmap.org/wiki/ProxySimplePHP">small php script</a>, or <a href="http://www.varnish-cache.org/">Varnish</a></li>
 <li>install postgis</li>
 <li>install <a href="http://tinyows.org/trac2.">tinyows</a></li>
 <li>load WFS from Tinyows on top of Openlayers</li>

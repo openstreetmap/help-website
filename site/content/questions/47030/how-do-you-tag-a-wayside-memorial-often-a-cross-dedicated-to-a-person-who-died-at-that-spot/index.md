@@ -86,7 +86,7 @@ osqa_accepted = true
 <div id="post-47073-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> historic=memorial is used for Stolpersteine in Germany, and the vast majority of such people were not "popular/special"</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> historic=memorial is used for Stolpersteine in Germany, and the vast majority of such people were not "popular/special"</p>
 </div>
 <div id="comment-47073-info" class="comment-info">
 <span class="comment-age">(09 Dec '15, 09:33)</span> <span class="comment-user userinfo">rorym</span>
@@ -97,7 +97,7 @@ osqa_accepted = true
 <div id="post-47074-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/30/rorym"></a><a href="http://help.openstreetmap.org/users/30/rorym">@rorym</a> That's true. So I guess historic=memorial is appropriate.</p>
+<p><a href="https://help.openstreetmap.org/users/30/rorym"></a><a href="https://help.openstreetmap.org/users/30/rorym">@rorym</a> That's true. So I guess historic=memorial is appropriate.</p>
 </div>
 <div id="comment-47074-info" class="comment-info">
 <span class="comment-age">(09 Dec '15, 09:36)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -151,7 +151,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would suggest drawing (mapping) inspiration from the <a href="https://en.wikipedia.org/wiki/Stolperstein">Stolpersteine (literally 'stumbling blocks')</a> in Germany, which are small plaques on the ground which mark living places of victims of the Nazis. There are tens of thousands already mapped in OSM. The <a href="http://wiki.openstreetmap.org/wiki/DE:Stolpersteine">OSM Wiki page for Stolpersteine</a>, explains that they are tagged <code>historic=memorial memorial:type=stolerstein name="Person's name" memorial:text="Text on the plaque"</code>. <a href="http://taginfo.openstreetmap.org/keys/memorial%3Atype#values">Taginfo for the <code>memorial:type</code> key</a> shows some other memorial types are in active use.</p>
+<p>I would suggest drawing (mapping) inspiration from the <a href="https://en.wikipedia.org/wiki/Stolperstein">Stolpersteine (literally 'stumbling blocks')</a> in Germany, which are small plaques on the ground which mark living places of victims of the Nazis. There are tens of thousands already mapped in OSM. The <a href="https://wiki.openstreetmap.org/wiki/DE:Stolpersteine">OSM Wiki page for Stolpersteine</a>, explains that they are tagged <code>historic=memorial memorial:type=stolerstein name="Person's name" memorial:text="Text on the plaque"</code>. <a href="http://taginfo.openstreetmap.org/keys/memorial%3Atype#values">Taginfo for the <code>memorial:type</code> key</a> shows some other memorial types are in active use.</p>
 <p>Perhaps something like that?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -205,7 +205,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Here is an historic one i was shown on an Ivel Valley Ramblers walk. It's near Sandy and the A1 at <a href="http://www.openstreetmap.org/#map=19/52.12493/-0.30179">http://www.openstreetmap.org/#map=19/52.12493/-0.30179</a> I mapped the memorial to "Frederick Thomas Bidlake" at the time in 2012. Quite a man in the history of cycling. see <a href="https://en.wikipedia.org/wiki/Frederick_Thomas_Bidlake">https://en.wikipedia.org/wiki/Frederick_Thomas_Bidlake</a> I not sure about mapping the new ones consisting of flowers and maybe motor cycle helmets. They may help save lives, by warning us of a dangerous area. Perhaps we need a danger tag similar to the official " Accident Black Spot" signs the we have on some danger points on major roads in the UK.</p>
+<p>Here is an historic one i was shown on an Ivel Valley Ramblers walk. It's near Sandy and the A1 at <a href="https://www.openstreetmap.org/#map=19/52.12493/-0.30179">https://www.openstreetmap.org/#map=19/52.12493/-0.30179</a> I mapped the memorial to "Frederick Thomas Bidlake" at the time in 2012. Quite a man in the history of cycling. see <a href="https://en.wikipedia.org/wiki/Frederick_Thomas_Bidlake">https://en.wikipedia.org/wiki/Frederick_Thomas_Bidlake</a> I not sure about mapping the new ones consisting of flowers and maybe motor cycle helmets. They may help save lives, by warning us of a dangerous area. Perhaps we need a danger tag similar to the official " Accident Black Spot" signs the we have on some danger points on major roads in the UK.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

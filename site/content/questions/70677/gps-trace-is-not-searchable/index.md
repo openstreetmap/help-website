@@ -272,7 +272,7 @@ osqa_accepted = false
 <div id="post-70706-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Another option <a href="https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id/35473">https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id/35473</a></p>
+<p>Another option <a href="/questions/35439/can-i-convert-a-gps-track-to-road-in-id/35473">https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id/35473</a></p>
 </div>
 <div id="comment-70706-info" class="comment-info">
 <span class="comment-age">(09 Sep '19, 16:32)</span> <span class="comment-user userinfo">andy mackey</span>

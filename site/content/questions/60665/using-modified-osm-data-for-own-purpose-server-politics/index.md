@@ -141,7 +141,7 @@ This answer is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>With regard to licensing, OSM's statement about OSM data is <a href="http://www.openstreetmap.org/copyright">here</a>. OSMF's <a href="http://wiki.osmfoundation.org/w/images/d/d8/DisputedTerritoriesInformation.pdf">policy</a> (PDF) says "We encourage different groups and communities to use our data, collect and contribute data important to you, and to make your own maps that are harmonious with your general usage, culture and legal system", so I'd say you are actually <em>encouraged</em> to make such a map :)</p>
+<p>With regard to licensing, OSM's statement about OSM data is <a href="https://www.openstreetmap.org/copyright">here</a>. OSMF's <a href="http://wiki.osmfoundation.org/w/images/d/d8/DisputedTerritoriesInformation.pdf">policy</a> (PDF) says "We encourage different groups and communities to use our data, collect and contribute data important to you, and to make your own maps that are harmonious with your general usage, culture and legal system", so I'd say you are actually <em>encouraged</em> to make such a map :)</p>
 </div>
 <div id="comment-60668-info" class="comment-info">
 <span class="comment-age">(17 Nov '17, 14:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

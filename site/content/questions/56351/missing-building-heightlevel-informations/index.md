@@ -177,7 +177,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>Keep in mind that "<a href="http://wiki.openstreetmap.org/wiki/Key:level">level</a>" indicates the floor on which the tagged object is located (e.g. an office on the second floor/level). If you want to indicate the number of floors in a building, the tag would be "<a href="http://wiki.openstreetmap.org/wiki/Key:building:levels">building:levels</a>".</p>
+<p>Keep in mind that "<a href="https://wiki.openstreetmap.org/wiki/Key:level">level</a>" indicates the floor on which the tagged object is located (e.g. an office on the second floor/level). If you want to indicate the number of floors in a building, the tag would be "<a href="https://wiki.openstreetmap.org/wiki/Key:building:levels">building:levels</a>".</p>
 </div>
 <div id="comment-56537-info" class="comment-info">
 <span class="comment-age">(08 Jun '17, 16:55)</span> <span class="comment-user userinfo">alester</span>

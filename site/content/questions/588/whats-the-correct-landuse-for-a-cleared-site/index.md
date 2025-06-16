@@ -116,9 +116,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've just stuck a bit of text on the page describing <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dbrownfield">landuse=brownfield</a> taken from the key:landuse page (so there is at least <em>some</em> description there)</p>
+<p>I've just stuck a bit of text on the page describing <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dbrownfield">landuse=brownfield</a> taken from the key:landuse page (so there is at least <em>some</em> description there)</p>
 <p><em>"Land scheduled for new development"</em>... So that doesn't fit what you want.</p>
-<p>Perhaps you should use landuse=wasteland as per <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Wasteland">Proposed features/Wasteland</a></p>
+<p>Perhaps you should use landuse=wasteland as per <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Wasteland">Proposed features/Wasteland</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

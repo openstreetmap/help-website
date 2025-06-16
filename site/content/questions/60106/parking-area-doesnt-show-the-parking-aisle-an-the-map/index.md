@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I tagged a new parking area with his aisles in it. But on the map, the aisles are not shown.</p>
 <p>I compared with other areas, but there are no differences between the keys there and mine.</p>
 <p>Has someone an idea where the fault can be?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Parking_area_U7gpxyA.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Parking_area_U7gpxyA.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-aisle" rel="tag" title="see questions tagged &#39;aisle&#39;">aisle</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span>
@@ -229,7 +229,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Try to make full refresh of the webpage (CTRL + F5 in my case). After that the tile was refreshed:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_1_WOeAGW7.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_1_WOeAGW7.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

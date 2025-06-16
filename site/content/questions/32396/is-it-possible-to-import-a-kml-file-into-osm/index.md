@@ -106,9 +106,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It really depends on if the objects you have mapped are appropriate for inclusion in OSM or not, for example a vineyard or a shop would be clear candidates (<a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvineyard">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvineyard</a> for example). It would be a good idea to search through some of the relevant mailing lists to see if there has been discussion of more advanced tagging or tagging that can be adapted (for example to indicate that it is organic produce).</p>
+<p>It really depends on if the objects you have mapped are appropriate for inclusion in OSM or not, for example a vineyard or a shop would be clear candidates (<a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvineyard">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvineyard</a> for example). It would be a good idea to search through some of the relevant mailing lists to see if there has been discussion of more advanced tagging or tagging that can be adapted (for example to indicate that it is organic produce).</p>
 <p>If it is simply information that you want to show "on top" of a map you should either roll your own slippy map with the information as an overlay or you can use a service like umap.openstreetmap.fr</p>
-<p>Technical note: I don't believe that any of the current editors directly allow the loading of KML files, however you can convert to GPX and load that, see <a href="http://wiki.openstreetmap.org/wiki/KML">http://wiki.openstreetmap.org/wiki/KML</a></p>
+<p>Technical note: I don't believe that any of the current editors directly allow the loading of KML files, however you can convert to GPX and load that, see <a href="https://wiki.openstreetmap.org/wiki/KML">https://wiki.openstreetmap.org/wiki/KML</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,7 +130,7 @@ osqa_accepted = false
 <div id="post-32410-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think that you can import a kml file into JOSM when you use the OpenData plugin. According the the website of the plugin, it can deal with simple kml files. See <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files</a> If your file does not open, you can file a bugreport for the plugin (see link)</p>
+<p>I think that you can import a kml file into JOSM when you use the OpenData plugin. According the the website of the plugin, it can deal with simple kml files. See <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files</a> If your file does not open, you can file a bugreport for the plugin (see link)</p>
 </div>
 <div id="comment-32410-info" class="comment-info">
 <span class="comment-age">(17 Apr '14, 14:14)</span> <span class="comment-user userinfo">escada</span>

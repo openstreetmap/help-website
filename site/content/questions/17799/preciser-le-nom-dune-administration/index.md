@@ -111,9 +111,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Je suppose que tu parles de ce bâtiment:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/110105309">http://www.openstreetmap.org/browse/way/110105309</a></p>
-<p>J'y ai ajouté le tag "<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcourthouse">amemity=courthouse</a>" qui accessoirement ajoutera le symbole marron dont tu parles (mais ce symbole n'apparaitra pas forcément sur toutes les cartes OSM, il ne faut pas non plus mettre ce tag juste pour afficher un logo mais bien de préciser par le bon tag la bonne fonction).</p>
-<p>J'ai supprimé le tag "designation" qui n'est <a href="http://wiki.openstreetmap.org/wiki/Key:designation">pas utilisé correctement dans ce contexte</a>.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/110105309">https://www.openstreetmap.org/browse/way/110105309</a></p>
+<p>J'y ai ajouté le tag "<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcourthouse">amemity=courthouse</a>" qui accessoirement ajoutera le symbole marron dont tu parles (mais ce symbole n'apparaitra pas forcément sur toutes les cartes OSM, il ne faut pas non plus mettre ce tag juste pour afficher un logo mais bien de préciser par le bon tag la bonne fonction).</p>
+<p>J'ai supprimé le tag "designation" qui n'est <a href="https://wiki.openstreetmap.org/wiki/Key:designation">pas utilisé correctement dans ce contexte</a>.</p>
 <p>J'ai aussi corrigé les tags d'adresses : le "addr:street" doit correspondre exactement à celui de la rue (majuscule pour "avenue"). Le "addr:postcode" ne doit contenir que le code postal, soit 59304. Il n'existe pas encore à ma connaissance de tag pour définir une boite postale. J'ai donc créer pour la circonstance un tag "addr:postbox" pour mettre la valeur "10349" en attendant qu'un consensus se dégage sur ce sujet.</p>
 <p>Pour le nom, tu avais déjà fait correctement les choses (tag "name"). Mais il faut ensuite attendre quelques minutes pour le voir apparaître sur la carte (en rafraichissant son cache de navigateur aussi). Certains ajoutent le nom de la ville comme "Tribunal de Grande Instance de Paris". C'est à toi de voir. Pour moi, la version simple est suffisante. Le nom ou le numéro peuvent s'afficher sur la carte suivant le niveau de zoom. C'est un choix du style de rendu.</p>
 <p>On peut aussi choisir de mettre l'adresse sur un noeud en facade et préciser la fonction du bâtiment sur le bâtiment lui-même (séparer adresse et fonction dans deux éléments distincts est surtout intéressant lorsqu'une seule adresse et/ou un seul bâtiment regroupe plusieurs fonctions).</p>
@@ -224,7 +224,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Il faut lire la définition du tag "designation" en anglais avant de répondre n'importe quoi : <a href="http://wiki.openstreetmap.org/wiki/Key:designation">http://wiki.openstreetmap.org/wiki/Key:designation</a></p>
+<p>Il faut lire la définition du tag "designation" en anglais avant de répondre n'importe quoi : <a href="https://wiki.openstreetmap.org/wiki/Key:designation">https://wiki.openstreetmap.org/wiki/Key:designation</a></p>
 </div>
 <div id="comment-18025-info" class="comment-info">
 <span class="comment-age">(27 Nov '12, 13:38)</span> <span class="comment-user userinfo">Pieren</span>

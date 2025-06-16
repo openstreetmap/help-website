@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I once mapped a traffic choker such as the one shown below <a href="http://osm.org/go/eu8bAXGH0--">as three ways</a> one for the main part of the <a href="http://www.openstreetmap.org/browse/way/110890293">highway</a> and two highway=cycleway.</p>
+<p>I once mapped a traffic choker such as the one shown below <a href="http://osm.org/go/eu8bAXGH0--">as three ways</a> one for the main part of the <a href="https://www.openstreetmap.org/browse/way/110890293">highway</a> and two highway=cycleway.</p>
 <p>Given the topology of such features, mapping them this way is inaccurate (the cycleways flare away from their true line). In my mapped example there is also a pedestrian crossing on a road table in the middle of the chicane. So they can be somewhat complex.</p>
 <p>Is there any quicker/simpler way of mapping such detail, without losing the information from the 3-way approach?</p>
 <p><img src="http://openstreetview.org/available/135bd48717384f7d43363acf0912b56ec891dcc3-large.jpg" alt="choker with two cycle &#39;gutters&#39;" /></p>
@@ -265,7 +265,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This may help you as somone has a standard tag for them (near the bottom of the page) <a href="http://wiki.openstreetmap.org/wiki/Key:traffic_calming">http://wiki.openstreetmap.org/wiki/Key:traffic_calming</a></p>
+<p>This may help you as somone has a standard tag for them (near the bottom of the page) <a href="https://wiki.openstreetmap.org/wiki/Key:traffic_calming">https://wiki.openstreetmap.org/wiki/Key:traffic_calming</a></p>
 <p>I areaised a few recently here:- <a href="https://www.openstreetmap.org/way/368797281#map=19/51.74765/-1.22939&amp;layers=D">https://www.openstreetmap.org/way/368797281#map=19/51.74765/-1.22939&amp;layers=D</a></p>
 <p>I hope that helps</p>
 <p>-Govanus</p>

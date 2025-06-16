@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-87700-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm not sure how to link OSM objects but here is one of the streets in question. <img src="https://help.openstreetmap.org/upfiles/westbellecenter.png" alt="alt text" /></p>
+<p>I'm not sure how to link OSM objects but here is one of the streets in question. <img src="/upfiles/westbellecenter.png" alt="alt text" /></p>
 <p>It is W Belle Center Rd in Joplin, Missouri. Was changed to 25mph and should be 55.</p>
 </div>
 <div id="comment-87700-info" class="comment-info">

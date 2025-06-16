@@ -106,8 +106,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, this model is allowed. We have other questions already replied about using OSM in books. Use the search function on the top of the page or <a href="http://help.openstreetmap.org/questions/3879/using-openstreetmaps-to-illustrate-a-route-taken-for-a-book-to-be-published">check one of them here</a>. Basically, you only have to credit OpenStreetMap somewhere in your iBook.</p>
-<p>But your question is not only legal. You also want "a base map without POI" which means that you will have to find <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">an OSM map already rendered without POI's</a> (might have additional legal requirements) or <a href="http://wiki.openstreetmap.org/wiki/Rendering#Rendering_Software">create your own customized rendering style</a> (which is the strong advantage of OSM).</p>
+<p>Yes, this model is allowed. We have other questions already replied about using OSM in books. Use the search function on the top of the page or <a href="/questions/3879/using-openstreetmaps-to-illustrate-a-route-taken-for-a-book-to-be-published">check one of them here</a>. Basically, you only have to credit OpenStreetMap somewhere in your iBook.</p>
+<p>But your question is not only legal. You also want "a base map without POI" which means that you will have to find <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">an OSM map already rendered without POI's</a> (might have additional legal requirements) or <a href="https://wiki.openstreetmap.org/wiki/Rendering#Rendering_Software">create your own customized rendering style</a> (which is the strong advantage of OSM).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Re the legality of it, have a read of this question and answers <a href="http://help.openstreetmap.org/questions/9846/iosmac-app-store-and-cc-by-sa-compatibility">here</a>.</p>
+<p>Re the legality of it, have a read of this question and answers <a href="/questions/9846/iosmac-app-store-and-cc-by-sa-compatibility">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

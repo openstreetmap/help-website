@@ -43,10 +43,10 @@ osqa_accepted = false
 <p>I'm not sure if there is an issue with Nominatim or the tagging with these search results(the latter is a little poor) that have been reported to me, so I'm going to ask here before reporting or improving.</p>
 <p>Search for</p>
 <ul>
-<li>"<a href="http://www.openstreetmap.org/search?query=Trelissick#map=16/50.0822/-5.3155">Trelissick</a>" and you find a building (small residential cottage) in Porthleven.</li>
-<li>"<a href="http://www.openstreetmap.org/search?query=Trelissick%2C%20Coombe#map=14/50.2169/-5.0227">Trelissick, Coombe</a>" you find many things relating to the NT property, probably what you were looking for.</li>
-<li>"<a href="http://www.openstreetmap.org/search?query=Trelissick%20Gardens#map=14/50.2169/-5.0227">Trelissick Gardens</a>" or "<a href="http://www.openstreetmap.org/search?query=Trelissick%20House#map=14/50.2169/-5.0227">Trelissick House</a>" and you find those objects which are NT properties.</li>
-<li>"<a href="http://www.openstreetmap.org/search?query=Trelissick%2C%20Cornwall#map=16/50.0822/-5.3155">Trelissick, Cornwall</a>" you get the residential building in Porthleven again, although the NT objects are equally in Cornwall.</li>
+<li>"<a href="https://www.openstreetmap.org/search?query=Trelissick#map=16/50.0822/-5.3155">Trelissick</a>" and you find a building (small residential cottage) in Porthleven.</li>
+<li>"<a href="https://www.openstreetmap.org/search?query=Trelissick%2C%20Coombe#map=14/50.2169/-5.0227">Trelissick, Coombe</a>" you find many things relating to the NT property, probably what you were looking for.</li>
+<li>"<a href="https://www.openstreetmap.org/search?query=Trelissick%20Gardens#map=14/50.2169/-5.0227">Trelissick Gardens</a>" or "<a href="https://www.openstreetmap.org/search?query=Trelissick%20House#map=14/50.2169/-5.0227">Trelissick House</a>" and you find those objects which are NT properties.</li>
+<li>"<a href="https://www.openstreetmap.org/search?query=Trelissick%2C%20Cornwall#map=16/50.0822/-5.3155">Trelissick, Cornwall</a>" you get the residential building in Porthleven again, although the NT objects are equally in Cornwall.</li>
 </ul>
 <p>I'm wondering if leisure=garden is not "of interest" enough and a relation object with tourism=attraction + name="Trelissick House and Gardens" would be better.</p>
 <p>When I do this, I'll also want to get rid of all the (descriptions) in the name values and replace them with access or operator tags as appropriate.</p>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to install the overpass api as a web server with apache but I cannot access the interpreter from an http request. <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/install">Overpass API Install</a></p>
+<p>I'm trying to install the overpass api as a web server with apache but I cannot access the interpreter from an http request. <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/install">Overpass API Install</a></p>
 <p>Here is my 000-default.conf</p>
 <pre><code>&lt;VirtualHost *:80&gt;
 ServerAdmin webmaster@localhost

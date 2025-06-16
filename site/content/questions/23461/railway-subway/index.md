@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It does appear that <a href="http://taginfo.openstreetmap.org/tags/railway=subway"><code>railway=subway</code></a> (despite this being very American English) is the standard means for tagging urban railways, particular ones which predominantly run underground.</p>
-<p>I would suggest that you contact the Spanish OSM community on <a href="http://lists.openstreetmap.org/listinfo/talk-es">talk-es</a>, and/or add a <a href="http://wiki.openstreetmap.org/wiki/Notes">Note</a> close to a relevant feature. Someone may then respond by re-tagging it.</p>
+<p>I would suggest that you contact the Spanish OSM community on <a href="http://lists.openstreetmap.org/listinfo/talk-es">talk-es</a>, and/or add a <a href="https://wiki.openstreetmap.org/wiki/Notes">Note</a> close to a relevant feature. Someone may then respond by re-tagging it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

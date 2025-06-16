@@ -197,7 +197,7 @@ osqa_accepted = true
 <div id="post-50731-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada"></a><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> You are probably right. It just seemed the closest option for an item which doesn't really have a specific tag. Your use of the 'tourism' tag is perhaps a better option although I'm not sure that even that is 100% correct. Perhaps zellfaze can decide based on his/her local knowledge of the actual feature.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> You are probably right. It just seemed the closest option for an item which doesn't really have a specific tag. Your use of the 'tourism' tag is perhaps a better option although I'm not sure that even that is 100% correct. Perhaps zellfaze can decide based on his/her local knowledge of the actual feature.</p>
 </div>
 <div id="comment-50731-info" class="comment-info">
 <span class="comment-age">(08 Jul '16, 08:44)</span> <span class="comment-user userinfo">NZGraham</span>
@@ -209,7 +209,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/6756/nzgraham">@NZGraham</a> Note that <a href="http://wiki.openstreetmap.org/wiki/Key:board_type">board_type=notice</a> is also placed under tourism. We should not take all classifications in a literal way.</p>
+<p><a href="https://help.openstreetmap.org/users/6756/nzgraham">@NZGraham</a> Note that <a href="https://wiki.openstreetmap.org/wiki/Key:board_type">board_type=notice</a> is also placed under tourism. We should not take all classifications in a literal way.</p>
 </div>
 <div id="comment-50733-info" class="comment-info">
 <span class="comment-age">(08 Jul '16, 10:19)</span> <span class="comment-user userinfo">escada</span>

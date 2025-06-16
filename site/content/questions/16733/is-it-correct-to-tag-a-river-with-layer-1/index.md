@@ -42,9 +42,9 @@ osqa_accepted = true
 <div class="question-body">
 <p>Is it correct to tag a river with layer=-1 if it is not underground?</p>
 <p>I have seen stretches of rivers tagged as such, even though they are not underground. I have always understood a negative value for layer to imply that something is underground. I thought this was documented on the wiki, but I cannot find any explicit mention under:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Layer">http://wiki.openstreetmap.org/wiki/Layer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Layer">https://wiki.openstreetmap.org/wiki/Layer</a></p>
 <p>or</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/River">http://wiki.openstreetmap.org/wiki/River</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/River">https://wiki.openstreetmap.org/wiki/River</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-layer" rel="tag" title="see questions tagged &#39;layer&#39;">layer</span> <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -109,7 +109,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you wanted <a href="http://wiki.openstreetmap.org/wiki/Key:layer">Key:layer</a> which mentions the issue.</p>
+<p>I think you wanted <a href="https://wiki.openstreetmap.org/wiki/Key:layer">Key:layer</a> which mentions the issue.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -203,7 +203,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>That's a good example. Yet the <a href="http://wiki.openstreetmap.org/wiki/Key:layer">wiki</a> currently states "negative values [...] for features that are below ground" which I think is wrong. The layer key shouldn't say anything about below or above ground, just about the relative position to other objects.</p>
+<p>That's a good example. Yet the <a href="https://wiki.openstreetmap.org/wiki/Key:layer">wiki</a> currently states "negative values [...] for features that are below ground" which I think is wrong. The layer key shouldn't say anything about below or above ground, just about the relative position to other objects.</p>
 </div>
 <div id="comment-16740-info" class="comment-info">
 <span class="comment-age">(08 Oct '12, 21:10)</span> <span class="comment-user userinfo">scai ♦</span>

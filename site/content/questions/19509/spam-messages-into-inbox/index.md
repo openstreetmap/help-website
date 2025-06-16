@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I put the issue <a href="http://wiki.openstreetmap.org/w/index.php?title=Spam&amp;oldid=862187">on the wiki</a>. (That page is the first hit when searching for "SPAM" in the wiki. :) )</p>
+<p>I put the issue <a href="https://wiki.openstreetmap.org/w/index.php?title=Spam&amp;oldid=862187">on the wiki</a>. (That page is the first hit when searching for "SPAM" in the wiki. :) )</p>
 <p>hth<br />
 malenki</p>
 </div>
@@ -149,7 +149,7 @@ malenki</p>
 2
 </div>
 <div class="comment-text">
-<p>You should never reply to spam. Anyway, instead of updating a wiki page that nobody reads, report your problem directly to the OSM admins. I think it is enough painful to escalate. For direct contacts, check this page: <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">http://wiki.openstreetmap.org/wiki/System_Administrators</a></p>
+<p>You should never reply to spam. Anyway, instead of updating a wiki page that nobody reads, report your problem directly to the OSM admins. I think it is enough painful to escalate. For direct contacts, check this page: <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">https://wiki.openstreetmap.org/wiki/System_Administrators</a></p>
 </div>
 <div id="comment-19572-info" class="comment-info">
 <span class="comment-age">(04 Feb '13, 11:03)</span> <span class="comment-user userinfo">Pieren</span>

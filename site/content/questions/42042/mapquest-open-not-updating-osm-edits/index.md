@@ -151,7 +151,7 @@ One Answer:
 <div id="post-42047-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10752/bardu55">@bardu55</a>: everything could be. MapQuest is a completely separate company, I do not know their tile updating policy. Could you please mention a link to one of your edits/location?</p>
+<p><a href="https://help.openstreetmap.org/users/10752/bardu55">@bardu55</a>: everything could be. MapQuest is a completely separate company, I do not know their tile updating policy. Could you please mention a link to one of your edits/location?</p>
 </div>
 <div id="comment-42047-info" class="comment-info">
 <span class="comment-age">(31 Mar '15, 00:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -162,7 +162,7 @@ One Answer:
 <div id="post-42048-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: <a href="https://www.openstreetmap.org/#map=17/60.16577/-134.70487">https://www.openstreetmap.org/#map=17/60.16577/-134.70487</a> all around Caribou Crossing Coffee (<a href="http://mc.bbbike.org/mc/?lon=-134.70636&amp;lat=60.16573&amp;zoom=17&amp;num=2&amp;mt0=mapnik&amp;mt1=mapquest-eu">map compare</a>)</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: <a href="https://www.openstreetmap.org/#map=17/60.16577/-134.70487">https://www.openstreetmap.org/#map=17/60.16577/-134.70487</a> all around Caribou Crossing Coffee (<a href="http://mc.bbbike.org/mc/?lon=-134.70636&amp;lat=60.16573&amp;zoom=17&amp;num=2&amp;mt0=mapnik&amp;mt1=mapquest-eu">map compare</a>)</p>
 </div>
 <div id="comment-42048-info" class="comment-info">
 <span class="comment-age">(31 Mar '15, 00:31)</span> <span class="comment-user userinfo">bardu55</span>
@@ -196,7 +196,7 @@ One Answer:
 <div id="post-42077-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10752/bardu55">@bardu55</a>: this is as expected and because the editor accesses the raw data – which <em>is</em> updated as soon as you upload/save an edit.</p>
+<p><a href="https://help.openstreetmap.org/users/10752/bardu55">@bardu55</a>: this is as expected and because the editor accesses the raw data – which <em>is</em> updated as soon as you upload/save an edit.</p>
 </div>
 <div id="comment-42077-info" class="comment-info">
 <span class="comment-age">(31 Mar '15, 18:31)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -207,7 +207,7 @@ One Answer:
 <div id="post-42080-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: I see, danke!</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: I see, danke!</p>
 </div>
 <div id="comment-42080-info" class="comment-info">
 <span class="comment-age">(31 Mar '15, 18:39)</span> <span class="comment-user userinfo">bardu55</span>
@@ -231,7 +231,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Thanks, I have contacted MapQuest and I'm awaiting there response.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Thanks, I have contacted MapQuest and I'm awaiting there response.</p>
 </div>
 <div id="comment-42155-info" class="comment-info">
 <span class="comment-age">(06 Apr '15, 20:21)</span> <span class="comment-user userinfo">bardu55</span>

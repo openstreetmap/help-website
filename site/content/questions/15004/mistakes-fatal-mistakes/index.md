@@ -115,7 +115,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some ideas can be found in the thread <a href="http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">How can I revert a changeset?</a>. That thread is about reverting something someone else has done, but the technique is the same if you want to correct your own mistakes.</p>
+<p>Some ideas can be found in the thread <a href="/questions/731/how-can-i-revert-a-changeset">How can I revert a changeset?</a>. That thread is about reverting something someone else has done, but the technique is the same if you want to correct your own mistakes.</p>
 <p>If you don't feel comfortable with the JOSM editor hopefully someone else in this forum may assist you with the rollback.</p>
 </div>
 <div class="answer-controls post-controls">

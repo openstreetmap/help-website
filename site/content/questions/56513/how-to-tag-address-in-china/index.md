@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/WikiProject_China">http://wiki.openstreetmap.org/wiki/WikiProject_China</a> contains some information on the topic. I would further suggest trying to contact other mappers in China, for example <a href="https://lists.openstreetmap.org/listinfo/talk-cn">https://lists.openstreetmap.org/listinfo/talk-cn</a> or the IRC channel <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/WikiProject_China">https://wiki.openstreetmap.org/wiki/WikiProject_China</a> contains some information on the topic. I would further suggest trying to contact other mappers in China, for example <a href="https://lists.openstreetmap.org/listinfo/talk-cn">https://lists.openstreetmap.org/listinfo/talk-cn</a> or the IRC channel <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

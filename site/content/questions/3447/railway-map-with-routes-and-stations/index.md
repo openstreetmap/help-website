@@ -116,7 +116,7 @@ osqa_accepted = false
 <p>If by "use OpenStreetMap" you mean use the OpenStreetMap data. Your steps will include:</p>
 <ol>
 <li>acquiring the OSM data by downloading the <a href="http://planet.osm.org/">planet</a> or <a href="http://download.geofabrik.de/osm/">extracts</a></li>
-<li>building a local <a href="http://wiki.openstreetmap.org/wiki/Minutely_Mapnik">OSM stack</a></li>
+<li>building a local <a href="https://wiki.openstreetmap.org/wiki/Minutely_Mapnik">OSM stack</a></li>
 <li>loading your local database</li>
 <li>rendering the maps to suit your requirements</li>
 <li>presenting your rendered map to your audience</li>
@@ -154,7 +154,7 @@ osqa_accepted = false
 <div id="post-3455-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Maybe a nice example is presented in the videos of <a href="http://wiki.openstreetmap.org/wiki/TileMill">http://wiki.openstreetmap.org/wiki/TileMill</a> at <a href="http://vimeo.com">http://vimeo.com</a></p>
+<p>Maybe a nice example is presented in the videos of <a href="https://wiki.openstreetmap.org/wiki/TileMill">https://wiki.openstreetmap.org/wiki/TileMill</a> at <a href="http://vimeo.com">http://vimeo.com</a></p>
 </div>
 <div id="comment-3455-info" class="comment-info">
 <span class="comment-age">(28 Feb '11, 20:26)</span> <span class="comment-user userinfo">stephan75</span>
@@ -197,7 +197,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>some intreating options are pre made with colour/b&amp;w options at www.openrailwaymap.org as well as useful guides to tags tey promote.</p>
-<p>the wiki has a lot of detail on tagging used on railways and is very helpful for navigating though raw data you get above:- <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> more than 500 entries:- <a href="http://wiki.openstreetmap.org/w/index.php?search=Rail&amp;title=Special%3ASearch&amp;fulltext=Search">http://wiki.openstreetmap.org/w/index.php?search=Rail&amp;title=Special%3ASearch&amp;fulltext=Search</a> simpler starting guide:- <a href="http://wiki.openstreetmap.org/wiki/Key:railway">http://wiki.openstreetmap.org/wiki/Key:railway</a> <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Public_Transport">http://wiki.openstreetmap.org/wiki/Map_Features#Public_Transport</a></p>
+<p>the wiki has a lot of detail on tagging used on railways and is very helpful for navigating though raw data you get above:- <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> more than 500 entries:- <a href="https://wiki.openstreetmap.org/w/index.php?search=Rail&amp;title=Special%3ASearch&amp;fulltext=Search">https://wiki.openstreetmap.org/w/index.php?search=Rail&amp;title=Special%3ASearch&amp;fulltext=Search</a> simpler starting guide:- <a href="https://wiki.openstreetmap.org/wiki/Key:railway">https://wiki.openstreetmap.org/wiki/Key:railway</a> <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Public_Transport">https://wiki.openstreetmap.org/wiki/Map_Features#Public_Transport</a></p>
 <p>It is worth remembering that contributers are increasing detail on a continious basis in the areas they cover so results can be patchy if you want lots of detail with out adding the missing bits yourself into the main database.</p>
 <p>The Rail Infrastructure companies in the EU (or maybe the whole EEA can oftern provide additional data source that you can blend with OSM data to give more infomation on your map Links to meny such source site can resuchered through the European Railway Agency at <a href="http://www.era.europa.eu/">http://www.era.europa.eu/</a> they also take enquires to the contacts given there in a helpful manner.</p>
 <p>The UK has verious networks in vious states of documentation but the maimline services are available from Network Rail <a href="http://www.networkrail.co.uk/industry-partners/using-our-network-index.aspx">http://www.networkrail.co.uk/industry-partners/using-our-network-index.aspx</a> they also has live and open data programs in addition to their layout guides.</p>

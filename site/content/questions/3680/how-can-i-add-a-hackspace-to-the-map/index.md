@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>OpenStreetMap developers have often made use of hackspaces for <a href="http://wiki.openstreetmap.org/wiki/London_Hack_Weekend_May_2010">weekend hacking sessions</a> and other events, but I cannot find any objects with tags including "hack" on <a href="http://wiki.openstreetmap.org/wiki/Tagwatch">tagwatch</a> for Europe. I'd like to add the local hackspace and the assorted community activities (communal media workshops, dance studios, exhibition space and training rooms) hosted at the same site. The closest tag I can think of is <a href="http://wiki.openstreetmap.org/wiki/Community_centre"><code>amenity=community_centre</code></a>, but somehow this doesn't seem to quite capture the concept. What do you suggest?</p>
+<p>OpenStreetMap developers have often made use of hackspaces for <a href="https://wiki.openstreetmap.org/wiki/London_Hack_Weekend_May_2010">weekend hacking sessions</a> and other events, but I cannot find any objects with tags including "hack" on <a href="https://wiki.openstreetmap.org/wiki/Tagwatch">tagwatch</a> for Europe. I'd like to add the local hackspace and the assorted community activities (communal media workshops, dance studios, exhibition space and training rooms) hosted at the same site. The closest tag I can think of is <a href="https://wiki.openstreetmap.org/wiki/Community_centre"><code>amenity=community_centre</code></a>, but somehow this doesn't seem to quite capture the concept. What do you suggest?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-hackspace" rel="tag" title="see questions tagged &#39;hackspace&#39;">hackspace</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-community" rel="tag" title="see questions tagged &#39;community&#39;">community</span> <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span>
@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>I'm aware of one hackspace (hackerspace) map already based on openstreetmap.</p>
 <p><a href="http://www.technomancy.org/osm-hackerspaces/"></a><a href="http://www.technomancy.org/osm-hackerspaces/"></a><a href="http://www.technomancy.org/osm-hackerspaces/">http://www.technomancy.org/osm-hackerspaces/</a></p>
-<p>It uses the tag <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dhackerspace"><code>leisure=hackerspace</code></a></p>
+<p>It uses the tag <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dhackerspace"><code>leisure=hackerspace</code></a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -137,7 +137,7 @@ One Answer:
 <div id="post-3716-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The three hackerspaces I know are: <a href="http://www.openstreetmap.org/browse/node/638569869">http://www.openstreetmap.org/browse/node/638569869</a> <a href="http://www.openstreetmap.org/browse/node/272855162">http://www.openstreetmap.org/browse/node/272855162</a> and <a href="http://www.openstreetmap.org/browse/node/260050809">http://www.openstreetmap.org/browse/node/260050809</a> . So leisure=hackerspace looks good. (And we should teach them about "don't tag for the renderer").</p>
+<p>The three hackerspaces I know are: <a href="https://www.openstreetmap.org/browse/node/638569869">https://www.openstreetmap.org/browse/node/638569869</a> <a href="https://www.openstreetmap.org/browse/node/272855162">https://www.openstreetmap.org/browse/node/272855162</a> and <a href="https://www.openstreetmap.org/browse/node/260050809">https://www.openstreetmap.org/browse/node/260050809</a> . So leisure=hackerspace looks good. (And we should teach them about "don't tag for the renderer").</p>
 </div>
 <div id="comment-3716-info" class="comment-info">
 <span class="comment-age">(11 Mar '11, 09:27)</span> <span class="comment-user userinfo">petschge</span>

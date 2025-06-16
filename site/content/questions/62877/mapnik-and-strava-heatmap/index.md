@@ -183,7 +183,7 @@ This it the Github site <a href="https://github.com/strava/iD">https://github.co
 <p>Strava Heatmap <a href="https://www.strava.com/heatmap#7.92/137.99609/-34.51999/hot/all">https://www.strava.com/heatmap#7.92/137.99609/-34.51999/hot/all</a></p>
 <ul>
 <li>Note that Strava has recently changed their policy regarding the availability of data and there has been recent discussion on the osm help site<br />
-<a href="https://help.openstreetmap.org/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do">https://help.openstreetmap.org/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do</a></li>
+<a href="/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do">https://help.openstreetmap.org/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

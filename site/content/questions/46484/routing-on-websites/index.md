@@ -125,7 +125,7 @@ One Answer:
 <p>See</p>
 <p><a href="https://github.com/openstreetmap/openstreetmap-website/tree/master/app/assets/javascripts/index/directions">https://github.com/openstreetmap/openstreetmap-website/tree/master/app/assets/javascripts/index/directions</a></p>
 <p>and</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Routing">http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Routing</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Routing">https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services#Routing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

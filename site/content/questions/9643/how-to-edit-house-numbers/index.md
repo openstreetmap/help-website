@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-9677-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Links would be nice. This is the place I gather? <a href="http://www.openstreetmap.org/?lat=43.783493&amp;lon=-79.139488&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=43.783493&amp;lon=-79.139488&amp;zoom=18&amp;layers=M</a></p>
+<p>Links would be nice. This is the place I gather? <a href="https://www.openstreetmap.org/?lat=43.783493&amp;lon=-79.139488&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=43.783493&amp;lon=-79.139488&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-9677-info" class="comment-info">
 <span class="comment-age">(29 Dec '11, 09:53)</span> <span class="comment-user userinfo">emj</span>
@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should read the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginner's Guide</a> and <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Primer">Potlatch Primer</a>. Adding or editing house numbers is easy, see the <a href="http://wiki.openstreetmap.org/wiki/Key:addr">wiki page for the addr key</a>.</p>
+<p>You should read the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginner's Guide</a> and <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Primer">Potlatch Primer</a>. Adding or editing house numbers is easy, see the <a href="https://wiki.openstreetmap.org/wiki/Key:addr">wiki page for the addr key</a>.</p>
 <p>If you just want to correct them, open the map with the relevant area and click on the edit tab. Now you can click on the point with the house number (or the building outline) and change the number in the house number field. Do this for all wrong numbers and then just click on the save button. It may take some time until the changes appear on the map.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -136,7 +136,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Note that much of the addressing there uses interpolation ways (aka address ranges), not address points. More info on interpolation ways: <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a> For a visualization, use the ItoWorld buildings and addresses layer: <a href="http://www.itoworld.com/product/data/ito_map/main?view=9&amp;lat=43.72616483869152&amp;lon=-79.2172648680751&amp;zoom=13">http://www.itoworld.com/product/data/ito_map/main?view=9&amp;lat=43.72616483869152&amp;lon=-79.2172648680751&amp;zoom=13</a></p>
+<p>Note that much of the addressing there uses interpolation ways (aka address ranges), not address points. More info on interpolation ways: <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a> For a visualization, use the ItoWorld buildings and addresses layer: <a href="http://www.itoworld.com/product/data/ito_map/main?view=9&amp;lat=43.72616483869152&amp;lon=-79.2172648680751&amp;zoom=13">http://www.itoworld.com/product/data/ito_map/main?view=9&amp;lat=43.72616483869152&amp;lon=-79.2172648680751&amp;zoom=13</a></p>
 </div>
 <div id="comment-9659-info" class="comment-info">
 <span class="comment-age">(28 Dec '11, 16:57)</span> <span class="comment-user userinfo">neuhausr</span>

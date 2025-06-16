@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why doesn&#x27;t the standard style map get updated?"
-description = '''Please check out this view on a region in Paraguay: http://www.openstreetmap.org/#map=12/-22.6569/-60.1694 This view is several weeks old. Many many chnages and additions have been made since then, but although zoom levels &amp;lt;= 11 get updated within a minute or so, nothing happens to zoom levels of...'''
+description = '''Please check out this view on a region in Paraguay: https://www.openstreetmap.org/#map=12/-22.6569/-60.1694 This view is several weeks old. Many many chnages and additions have been made since then, but although zoom levels &amp;lt;= 11 get updated within a minute or so, nothing happens to zoom levels of...'''
 date = "2017-01-17T18:28:00Z"
 lastmod = "2017-01-18T20:48:00Z"
 weight = 54119
@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Please check out this view on a region in Paraguay: <a href="http://www.openstreetmap.org/#map=12/-22.6569/-60.1694">http://www.openstreetmap.org/#map=12/-22.6569/-60.1694</a></p>
+<p>Please check out this view on a region in Paraguay: <a href="https://www.openstreetmap.org/#map=12/-22.6569/-60.1694">https://www.openstreetmap.org/#map=12/-22.6569/-60.1694</a></p>
 <p>This view is several weeks old. Many many chnages and additions have been made since then, but although zoom levels &lt;= 11 get updated within a minute or so, nothing happens to zoom levels of &gt;= 12, even after weeks.</p>
 <p>This is not a chache problem, as I have tried it on many computers and browsers, same result.</p>
-<p>Also, adding /dirty as recommended here has not shown any effect: <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated?">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated?</a></p>
+<p>Also, adding /dirty as recommended here has not shown any effect: <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated?</a></p>
 <p>Any idea?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

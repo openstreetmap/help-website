@@ -69,8 +69,8 @@ osqa_accepted = false
 <div id="post-31954-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In general the OSM community is very sceptical about imports: <a href="http://wiki.openstreetmap.org/wiki/Imports">http://wiki.openstreetmap.org/wiki/Imports</a><br />
-But of course you can ask the <a href="http://wiki.openstreetmap.org/wiki/Contact">local community</a> about details in this particular case.</p>
+<p>In general the OSM community is very sceptical about imports: <a href="https://wiki.openstreetmap.org/wiki/Imports">https://wiki.openstreetmap.org/wiki/Imports</a><br />
+But of course you can ask the <a href="https://wiki.openstreetmap.org/wiki/Contact">local community</a> about details in this particular case.</p>
 </div>
 <div id="comment-31954-info" class="comment-info">
 <span class="comment-age">(27 Mar '14, 18:18)</span> <span class="comment-user userinfo">iii</span>
@@ -169,7 +169,7 @@ But of course you can ask the <a href="http://wiki.openstreetmap.org/wiki/Contac
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>BNDT (or NTDB in English) is old and I believe is no longer being updated. It has been superseded by <a href="http://wiki.openstreetmap.org/wiki/Canvec">CanVec</a>, which is available to be imported into OSM. You still might want to pose your concerns to the Talk-CA mailing list, though.</p>
+<p>BNDT (or NTDB in English) is old and I believe is no longer being updated. It has been superseded by <a href="https://wiki.openstreetmap.org/wiki/Canvec">CanVec</a>, which is available to be imported into OSM. You still might want to pose your concerns to the Talk-CA mailing list, though.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

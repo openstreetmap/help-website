@@ -133,7 +133,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>According to an answer to <a href="http://help.openstreetmap.org/questions/1895/how-to-close-a-changeset-in-potlatch-2">this question</a> the changeset can be closed by pressing C.</p>
+<p>According to an answer to <a href="/questions/1895/how-to-close-a-changeset-in-potlatch-2">this question</a> the changeset can be closed by pressing C.</p>
 </div>
 <div id="comment-13649-info" class="comment-info">
 <span class="comment-age">(20 Jun '12, 07:08)</span> <span class="comment-user userinfo">scai ♦</span>

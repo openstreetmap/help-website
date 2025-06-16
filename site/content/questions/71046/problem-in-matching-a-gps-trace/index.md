@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have a GPS trace of a route used by a vehicle. I am trying to find out whether this path is the same as estimated/propose by OSM. But GPS trace is missing some points, so it forms a straight line between two points(line goes over through some places on map instead of following a road). My solution to this was using a Match service provided by OSRM. It works fine but sometimes it generates a loop over some routes (keeps on circling the same route near a roundabout), when it should have gone straight. How I can solve this issue.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2019-10-09_13-13-24.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2019-10-09_13-13-24.png" alt="alt text" /></p>
 <p>I used following request to local server</p>
 <p><a href="http://localhost:5000/match/v1/car/polyline(%7Bpoly_line%7D)?overview=full&amp;steps=true&amp;geometries=polyline"><code>http://localhost:5000/match/v1/car/polyline({poly_line})?overview=full&amp;steps=true&amp;geometries=polyline</code></a></p>
 <p>and extracted the generated poly-line and then used that to plot this map using folium</p>

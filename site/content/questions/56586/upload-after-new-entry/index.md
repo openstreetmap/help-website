@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Enylesor,please read these lines <a href="https://help.openstreetmap.org/questions/34084/how-long-it-takes-to-be-an-edit-visible">https://help.openstreetmap.org/questions/34084/how-long-it-takes-to-be-an-edit-visible</a> Another question is, what did you use to edit the restaurant ? The bottom line is be patient.</p>
+<p>Hi Enylesor,please read these lines <a href="/questions/34084/how-long-it-takes-to-be-an-edit-visible">https://help.openstreetmap.org/questions/34084/how-long-it-takes-to-be-an-edit-visible</a> Another question is, what did you use to edit the restaurant ? The bottom line is be patient.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

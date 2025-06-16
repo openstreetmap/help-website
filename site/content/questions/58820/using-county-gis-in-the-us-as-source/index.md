@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is no general answer to that question. You will need to a) find out the terms of use and licence for the GIS site, and b) determine if it is compatible with our licence and contributor terms (and document all of this).</p>
-<p>If you plan on not just using the data as reference you will further need to follow the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>.</p>
+<p>If you plan on not just using the data as reference you will further need to follow the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>.</p>
 <p>In general involving anybody else mappign in your area would be a good idea in any case.</p>
 </div>
 <div class="answer-controls post-controls">

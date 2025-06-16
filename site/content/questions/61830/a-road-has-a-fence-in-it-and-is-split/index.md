@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would add "no exit" nodes and a fence across the road. Like this:<img src="https://help.openstreetmap.org/upfiles/gbage_DTY3wfo.jpg" alt="alt text" /></p>
+<p>I would add "no exit" nodes and a fence across the road. Like this:<img src="/upfiles/gbage_DTY3wfo.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

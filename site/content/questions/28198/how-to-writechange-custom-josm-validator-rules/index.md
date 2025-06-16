@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Is there any way of writing my own custom rules for the JOSM validator, or to change some of the existing rules?</p>
 <p>Sometimes, the default rules flag as "warning" lots of "defects" that really aren't problems, because the underlying rule is not specific enough, or is too strict, and sometimes I want new rules so that I can check my own work more strictly.</p>
-<p>For example, the default rules flag the ways used for house number interpolation that end near a street corner as "Way end near other way", and while this is strictly true, these ways do not have real physical representation, and are just a helpful construct to aid in address geolocation. Therefore, I do not want them flagged as such, requiring one extra rule in the validation to exclude them. See <a href="https://help.openstreetmap.org/questions/26509/should-the-ways-that-generate-the-interpolated-address-numbers-from-the-known-points-cross-other-streets-or-not">this question</a> for more information. If I disable the "unconnected ways" option in the preferences page, or change the "validator.UnconnectedWays.node_way_distance" configuration value, the validator will miss the real unconnected ways...</p>
+<p>For example, the default rules flag the ways used for house number interpolation that end near a street corner as "Way end near other way", and while this is strictly true, these ways do not have real physical representation, and are just a helpful construct to aid in address geolocation. Therefore, I do not want them flagged as such, requiring one extra rule in the validation to exclude them. See <a href="/questions/26509/should-the-ways-that-generate-the-interpolated-address-numbers-from-the-known-points-cross-other-streets-or-not">this question</a> for more information. If I disable the "unconnected ways" option in the preferences page, or change the "validator.UnconnectedWays.node_way_distance" configuration value, the validator will miss the real unconnected ways...</p>
 <p>Another example is for the recent change that flags as "warning" the missing voltage of power lines. See <a href="http://josm.openstreetmap.de/ticket/9332">here</a>. I do want to disable this rule (annoying!) in my local working copy, but if I disable the "power lines" option in the JOSM validator's preferences page, I would also disable all of the other errors/warnings related to power lines.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -127,7 +127,7 @@ osqa_accepted = true
 <div id="post-28212-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you aren't comfortable with software development workflows (downloading, compiling, comitting...) head over to <a href="http://wiki.openstreetmap.org/wiki/IRC">#osm-dev or #josm</a> to guide you. Have fun :)</p>
+<p>If you aren't comfortable with software development workflows (downloading, compiling, comitting...) head over to <a href="https://wiki.openstreetmap.org/wiki/IRC">#osm-dev or #josm</a> to guide you. Have fun :)</p>
 </div>
 <div id="comment-28212-info" class="comment-info">
 <span class="comment-age">(19 Nov '13, 10:07)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -202,7 +202,7 @@ osqa_accepted = true
 </ol>
 <p>When you run the validator (typically automatically before upload) you’ll get a warning:</p>
 <blockquote>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2022-04-19_14-00-18.png" width="585" alt="screenshot" /></p>
+<p><img src="/upfiles/Screenshot_from_2022-04-19_14-00-18.png" width="585" alt="screenshot" /></p>
 </blockquote>
 </div>
 <div class="answer-controls post-controls">

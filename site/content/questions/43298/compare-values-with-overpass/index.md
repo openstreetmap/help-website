@@ -362,7 +362,7 @@ out geom;</code></pre>
 <div class="answer-body">
 <p>I can't answer your query but are you aware that we have our own instance of overpass at <a href="http://overpass-turbo.openstreetmap.ie/">http://overpass-turbo.openstreetmap.ie/</a></p>
 <p>There are some folks in the Irish chatroom who might be able to assist also</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Ireland#Contacting_Irish_Mappers">http://wiki.openstreetmap.org/wiki/WikiProject_Ireland#Contacting_Irish_Mappers</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/WikiProject_Ireland#Contacting_Irish_Mappers">https://wiki.openstreetmap.org/wiki/WikiProject_Ireland#Contacting_Irish_Mappers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

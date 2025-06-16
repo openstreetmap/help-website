@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-15945-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You appear to be using <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=34.232352&amp;lon=108.912213&amp;zoom=18">this area</a> of the map as a "test area" or sandbox.<br />
+<p>You appear to be using <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=34.232352&amp;lon=108.912213&amp;zoom=18">this area</a> of the map as a "test area" or sandbox.<br />
 </p>
 <p>Please don't do this.<br />
 </p>

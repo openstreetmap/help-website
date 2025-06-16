@@ -131,7 +131,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Here is the schema of Osm2pgsql:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema</a></p>
 <p>it contains one example and documentation of the table structure.</p>
 </div>
 <div class="answer-controls post-controls">

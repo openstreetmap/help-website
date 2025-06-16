@@ -85,7 +85,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See <a href="http://help.openstreetmap.org/questions/8163/when-a-street-has-different-names-on-either-side-of-a-divided-highway-how-is-it-tagged-in-between">here</a> where somebody asked the same question.</p>
+<p>See <a href="/questions/8163/when-a-street-has-different-names-on-either-side-of-a-divided-highway-how-is-it-tagged-in-between">here</a> where somebody asked the same question.</p>
 </div>
 <div id="comment-16643-info" class="comment-info">
 <span class="comment-age">(03 Oct '12, 16:08)</span> <span class="comment-user userinfo">cartinus</span>
@@ -257,7 +257,7 @@ osqa_accepted = false
 <div id="post-53647-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: There are a few roads like this where a boundary runs along the centre of the road and it's a different name on either side (I can't find any examples right now), but that isn't what's happening here anyway.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: There are a few roads like this where a boundary runs along the centre of the road and it's a different name on either side (I can't find any examples right now), but that isn't what's happening here anyway.</p>
 </div>
 <div id="comment-53647-info" class="comment-info">
 <span class="comment-age">(21 Dec '16, 19:13)</span> <span class="comment-user userinfo">alester</span>

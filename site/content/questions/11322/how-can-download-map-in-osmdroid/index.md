@@ -144,7 +144,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A quick scan of osmdroid's <a href="http://code.google.com/p/osmdroid/w/list">wiki</a> suggests that it seems to use tiles in OSM's native format. You'd therefore need to find a source of those tiles, and as you suggest OSM's tile servers probably aren't an option because of OSM's <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>.</p>
+<p>A quick scan of osmdroid's <a href="http://code.google.com/p/osmdroid/w/list">wiki</a> suggests that it seems to use tiles in OSM's native format. You'd therefore need to find a source of those tiles, and as you suggest OSM's tile servers probably aren't an option because of OSM's <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>.</p>
 <p>You could <a href="http://switch2osm.org/serving-tiles/">set up a tile server yourself</a>, or talk to someone who already has such a setup. Then you can <a href="http://download.geofabrik.de/osm/">download the region you're interested in</a> and load it into the database. Finally, the OSM tools that are installed on your tile server will include <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/generate_tiles.py">generate_tiles.py</a>, so you can edit that to cover the region that you want and then run it.</p>
 <p>Be aware, however, that a large region or high zoom level of tiles will require lots of SD card space (and take a long time to generate tiles for). What region and what tile depth/zoom level are you interested in?</p>
 </div>

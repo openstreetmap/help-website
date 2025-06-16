@@ -146,7 +146,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suggest to set <code>--number-processes</code> to about half your cores, not the full number. Also, 512 GB of disk space will <em>not</em> be sufficient for a full planet import (1 TB is needed and even that will soon run out). This help site also has some recommendations about optimizing your postgresql.conf (e.g. <a href="https://help.openstreetmap.org/questions/60910/how-can-osm2pgsqlpostgresqlconf-be-optimized-to-process-ways">here).</a></p>
+<p>I suggest to set <code>--number-processes</code> to about half your cores, not the full number. Also, 512 GB of disk space will <em>not</em> be sufficient for a full planet import (1 TB is needed and even that will soon run out). This help site also has some recommendations about optimizing your postgresql.conf (e.g. <a href="/questions/60910/how-can-osm2pgsqlpostgresqlconf-be-optimized-to-process-ways">here).</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

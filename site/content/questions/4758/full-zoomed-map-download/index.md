@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the answers to <a href="http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a></p>
+<p>Have a look at the answers to <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

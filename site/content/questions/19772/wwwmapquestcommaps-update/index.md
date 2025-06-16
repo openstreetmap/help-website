@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I believe that the main MapQuest site is not using OSM data for most countries. Refer to the <a href="http://wiki.openstreetmap.org/wiki/MapQuest">MapQuest OSM</a> page for the address of Mapquest Open for other countries.</p>
+<p>I believe that the main MapQuest site is not using OSM data for most countries. Refer to the <a href="https://wiki.openstreetmap.org/wiki/MapQuest">MapQuest OSM</a> page for the address of Mapquest Open for other countries.</p>
 <p>Because Nominatim indexes so much data, the Mapquest Open search or the Nominatim search on the main OSM site may get several months behind. Recently, main Nominatim search on the OSM site was current to within 1 day of data updates and should see your data.</p>
 </div>
 <div class="answer-controls post-controls">

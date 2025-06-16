@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Er - unfortunately we don't know! Your question sounds similar to <a href="https://help.openstreetmap.org/questions/19385/how-to-hiddenchange-properties-in-osm">this one</a>. Could you try explaining what you're trying to do in a few more words?</p>
+<p>Er - unfortunately we don't know! Your question sounds similar to <a href="/questions/19385/how-to-hiddenchange-properties-in-osm">this one</a>. Could you try explaining what you're trying to do in a few more words?</p>
 </div>
 <div id="comment-19398-info" class="comment-info">
 <span class="comment-age">(28 Jan '13, 11:10)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

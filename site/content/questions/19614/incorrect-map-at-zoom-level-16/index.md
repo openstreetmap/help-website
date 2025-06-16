@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Incorrect map at zoom level 16"
-description = '''I made some updates to a section of map about a week ago. I noticed something was not quite right with one of the zoom levels. The incorrect map: http://www.openstreetmap.org/?lat=43.60998&amp;amp;lon=-116.44394&amp;amp;zoom=16&amp;amp;layers=M All other zoom levels look good.  Why is that?'''
+description = '''I made some updates to a section of map about a week ago. I noticed something was not quite right with one of the zoom levels. The incorrect map: https://www.openstreetmap.org/?lat=43.60998&amp;amp;lon=-116.44394&amp;amp;zoom=16&amp;amp;layers=M All other zoom levels look good.  Why is that?'''
 date = "2013-02-06T16:11:00Z"
 lastmod = "2013-02-07T08:28:00Z"
 weight = 19614
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I made some updates to a section of map about a week ago. I noticed something was not quite right with one of the zoom levels. The incorrect map:</p>
-<p><a href="http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M</a></p>
 <p>All other zoom levels look good.<br />
 </p>
 <p>Why is that?</p>
@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I can't see any obvious difference between zoom levels, so I'd expect that it's exactly the same reason as <a href="https://help.openstreetmap.org/questions/19531/edits-do-not-appear-in-view-mode">last time</a>.</p>
+<p>I can't see any obvious difference between zoom levels, so I'd expect that it's exactly the same reason as <a href="/questions/19531/edits-do-not-appear-in-view-mode">last time</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -179,9 +179,9 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Thanks but I do see significant differences between <a href="http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M</a></p>
-<p>and <a href="http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=15&amp;layers=M</a></p>
-<p>and <a href="http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=17&amp;layers=M</a></p>
+<p>Thanks but I do see significant differences between <a href="https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=16&amp;layers=M</a></p>
+<p>and <a href="https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=15&amp;layers=M</a></p>
+<p>and <a href="https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=43.60998&amp;lon=-116.44394&amp;zoom=17&amp;layers=M</a></p>
 <p>Not the same issue as last time, I think there is one layer that takes longer than others to update. I put these edits in almost a week ago.</p>
 </div>
 <div id="comment-19630-info" class="comment-info">

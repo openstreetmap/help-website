@@ -174,7 +174,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In the JOSM, it is a pretty easy step. All you have is to press the middle (wheel) button on your mouse, and you will get the list of the objects you want to select.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/middle_button.png" alt="alt text" /></p>
+<p><img src="/upfiles/middle_button.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

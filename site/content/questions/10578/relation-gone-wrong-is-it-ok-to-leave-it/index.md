@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have just discovered the "relations" feature which allowed me to fix an untagged island in a loch. Later I found what I thought were some untagged polygons. However, they seem to be related, as a number get selected when I click on one. Maybe they should they be woods? Would it be best to leave it?</p>
-<p><a href="http://www.openstreetmap.org/edit?lat=56.420358017309&amp;lon=-4.3350980531351&amp;zoom=16">Glen Ogle polygons</a></p>
+<p><a href="https://www.openstreetmap.org/edit?lat=56.420358017309&amp;lon=-4.3350980531351&amp;zoom=16">Glen Ogle polygons</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-delete" rel="tag" title="see questions tagged &#39;delete&#39;">delete</span>
@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-10581-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Perhaps what's being referred to is <a href="http://www.openstreetmap.org/browse/relation/1083007/history">http://www.openstreetmap.org/browse/relation/1083007/history</a> ? That's not too far away.</p>
+<p>Perhaps what's being referred to is <a href="https://www.openstreetmap.org/browse/relation/1083007/history">https://www.openstreetmap.org/browse/relation/1083007/history</a> ? That's not too far away.</p>
 </div>
 <div id="comment-10581-info" class="comment-info">
 <span class="comment-age">(13 Feb '12, 22:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

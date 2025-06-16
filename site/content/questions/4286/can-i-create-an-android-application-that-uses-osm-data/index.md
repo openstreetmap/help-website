@@ -134,8 +134,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please, separate your question in two.</p>
-<p>First question: Yes, you can create an Android app that uses OSM data as far as you complain the OSM legal terms (See <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a>)</p>
-<p>Second question: Yes, you can extract the area for one specific country. See: <a href="http://help.openstreetmap.org/questions/713/how-to-extract-partial-data-for-large-regions">http://help.openstreetmap.org/questions/713/how-to-extract-partial-data-for-large-regions</a></p>
+<p>First question: Yes, you can create an Android app that uses OSM data as far as you complain the OSM legal terms (See <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a>)</p>
+<p>Second question: Yes, you can extract the area for one specific country. See: <a href="/questions/713/how-to-extract-partial-data-for-large-regions">https://help.openstreetmap.org/questions/713/how-to-extract-partial-data-for-large-regions</a></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -188,7 +188,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are alreadz a bunch of Android apps that display OSM data and more! Have a look at <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> in the OSM wiki.</p>
+<p>There are alreadz a bunch of Android apps that display OSM data and more! Have a look at <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> in the OSM wiki.</p>
 <p>Some of them are even open source, so you can have a look at.</p>
 <p>According to this, there shall be no legal problems to create OSM related Android apps.</p>
 <p>A new sub forum has been installed for Android things at the <a href="http://forum.openstreetmap.org/viewforum.php?id=56">OSM forum</a>.</p>

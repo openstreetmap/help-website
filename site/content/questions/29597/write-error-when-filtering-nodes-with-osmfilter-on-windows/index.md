@@ -149,7 +149,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>so you want to limit your result to a smaller area?</p>
-<p>If yes, can you define that area via a boundingbox or a boundary relation from the OSM data? like <a href="http://www.openstreetmap.org/relation/2417889">http://www.openstreetmap.org/relation/2417889</a> ?</p>
+<p>If yes, can you define that area via a boundingbox or a boundary relation from the OSM data? like <a href="https://www.openstreetmap.org/relation/2417889">https://www.openstreetmap.org/relation/2417889</a> ?</p>
 </div>
 <div id="comment-29617-info" class="comment-info">
 <span class="comment-age">(06 Jan '14, 16:26)</span> <span class="comment-user userinfo">stephan75</span>
@@ -188,7 +188,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>... and then use <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">http://wiki.openstreetmap.org/wiki/Osmconvert</a> to convert your OSM file to a CSV file where you determine yourself what elements should be in the output file.</p>
+<p>... and then use <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">https://wiki.openstreetmap.org/wiki/Osmconvert</a> to convert your OSM file to a CSV file where you determine yourself what elements should be in the output file.</p>
 <p>Read that documentation in the OSM wiki and try several tags.</p>
 </div>
 <div id="comment-29637-info" class="comment-info">

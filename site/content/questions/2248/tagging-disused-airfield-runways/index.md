@@ -104,10 +104,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think this might work for disused <a href="http://wiki.openstreetmap.org/wiki/Tag:aeroway%3Drunway">runways</a>, the same works for taxi ways etc..</p>
+<p>I think this might work for disused <a href="https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Drunway">runways</a>, the same works for taxi ways etc..</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:disused">airfield=disused</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:disused">disused=runway</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:disused">airfield=disused</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:disused">disused=runway</a></li>
 </ul>
 <p>I don't think it's rendered</p>
 </div>

@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>However, I'm getting <a href="http://pastebin.com/RpJakXUq">this log</a>.</p>
 <p>My Linux distribution is a CentOS 6.4.</p>
 <p>I tried to research the problem and I've come <a href="http://www.mail-archive.com/dev@openstreetmap.org/msg18898.html">into this</a>.</p>
-<p>I still didn't try because I'm afraid it can damage my current instalation, and we need it running. If there's a huge downtime it will bad. Is it safe to try this solution? Also, I installed Nominatim by following the instructions <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>.</p>
+<p>I still didn't try because I'm afraid it can damage my current instalation, and we need it running. If there's a huge downtime it will bad. Is it safe to try this solution? Also, I installed Nominatim by following the instructions <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span> <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span>

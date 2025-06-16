@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Normally the answer is "taginfo", but (as you'd expect) that does explicit processing of semicolons. If I search for <a href="http://taginfo.openstreetmap.org.uk/search?q=bar%3Bcafe%3Btoilets#values">http://taginfo.openstreetmap.org.uk/search?q=bar%3Bcafe%3Btoilets#values</a> I get the <a href="http://www.openstreetmap.org/way/234822100/history">one expected value</a> back, but I'm not aware of a way of searching for any values (or keys for that matter) containing multiple semicolons.</p>
+<p>Normally the answer is "taginfo", but (as you'd expect) that does explicit processing of semicolons. If I search for <a href="http://taginfo.openstreetmap.org.uk/search?q=bar%3Bcafe%3Btoilets#values">http://taginfo.openstreetmap.org.uk/search?q=bar%3Bcafe%3Btoilets#values</a> I get the <a href="https://www.openstreetmap.org/way/234822100/history">one expected value</a> back, but I'm not aware of a way of searching for any values (or keys for that matter) containing multiple semicolons.</p>
 <p>In postgres (with a "normal" rendering database) I can do:</p>
 <pre><code>gis=# SELECT amenity FROM planet_osm_polygon WHERE (amenity LIKE &#39;%;%;%&#39;);
                   amenity
@@ -75,7 +75,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/changeset/36573638">This</a> is probably the name_X correction you had in mind.</p>
+<p><a href="https://www.openstreetmap.org/changeset/36573638">This</a> is probably the name_X correction you had in mind.</p>
 </div>
 <div id="comment-47616-info" class="comment-info">
 <span class="comment-age">(21 Jan '16, 15:17)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

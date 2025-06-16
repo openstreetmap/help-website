@@ -65,7 +65,7 @@ osqa_accepted = true
 <div id="post-71486-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This seems to be essentially the same question as <a href="https://help.openstreetmap.org/questions/71483/show-search-results-as-clickable-icons-on-map">https://help.openstreetmap.org/questions/71483/show-search-results-as-clickable-icons-on-map</a> ?</p>
+<p>This seems to be essentially the same question as <a href="/questions/71483/show-search-results-as-clickable-icons-on-map">https://help.openstreetmap.org/questions/71483/show-search-results-as-clickable-icons-on-map</a> ?</p>
 </div>
 <div id="comment-71486-info" class="comment-info">
 <span class="comment-age">(06 Nov '19, 17:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -258,8 +258,8 @@ osqa_accepted = true
 <p><a href="https://www.openstreetmap.org/#map=17/55.67167/12.58990&amp;layers=D">https://www.openstreetmap.org/#map=17/55.67167/12.58990&amp;layers=D</a></p>
 <p>I hope you agree it's not an optimal user experience?</p>
 <p>I think openstreetmap.org is an amazing project. My only goal here is to make the front-end more user friendly and useful for ordinary users, who are used to features such as the one requested in this issue.</p>
-<p><strong>Map, default view</strong> <img src="https://help.openstreetmap.org/upfiles/1.1.map-view-default-700px.png" alt="alt text" /></p>
-<p><strong>Map, with data layer enabled</strong> <img src="https://help.openstreetmap.org/upfiles/1.2.map-view-details-700px.png" alt="alt text" /></p>
+<p><strong>Map, default view</strong> <img src="/upfiles/1.1.map-view-default-700px.png" alt="alt text" /></p>
+<p><strong>Map, with data layer enabled</strong> <img src="/upfiles/1.2.map-view-details-700px.png" alt="alt text" /></p>
 </div>
 <div id="comment-71509-info" class="comment-info">
 <span class="comment-age">(07 Nov '19, 08:36)</span> <span class="comment-user userinfo">ragit</span>

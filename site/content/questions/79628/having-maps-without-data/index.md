@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Using leaflet and OSM, to show some maps on my web application, I need to know if it is possible to have only roads map and remove data from the map which is shown on my page</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Untitled_uVfjvAJ.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Untitled_uVfjvAJ.jpg" alt="alt text" /></p>
 <pre><code> L.tileLayer(&#39;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {
     attribution: &#39;&#39;,
     maxZoom: 19

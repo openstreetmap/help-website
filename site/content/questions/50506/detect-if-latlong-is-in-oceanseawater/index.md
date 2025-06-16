@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-50545-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I only found this topic: <a href="https://help.openstreetmap.org/questions/36914/how-to-query-a-loglat-to-check-if-it-is-in-a-body-of-water">https://help.openstreetmap.org/questions/36914/how-to-query-a-loglat-to-check-if-it-is-in-a-body-of-water</a></p>
+<p>I only found this topic: <a href="/questions/36914/how-to-query-a-loglat-to-check-if-it-is-in-a-body-of-water">https://help.openstreetmap.org/questions/36914/how-to-query-a-loglat-to-check-if-it-is-in-a-body-of-water</a></p>
 </div>
 <div id="comment-50545-info" class="comment-info">
 <span class="comment-age">(01 Jul '16, 15:19)</span> <span class="comment-user userinfo">stephan75</span>

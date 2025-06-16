@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've tried "toilet" in different languages but it shows only <a href="https://help.openstreetmap.org/questions/20647/how-to-find-a-bot-maintainer-to-suggest-additional-replace-conditions">incorrectly mapped toilets</a>.</p>
+<p>I've tried "toilet" in different languages but it shows only <a href="/questions/20647/how-to-find-a-bot-maintainer-to-suggest-additional-replace-conditions">incorrectly mapped toilets</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>

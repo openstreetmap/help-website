@@ -132,14 +132,14 @@ One Answer:
 <div class="answer-body">
 <p>Hi aHaSaN,</p>
 <p>check out the wiki for approved or commonly used tags. Osmose (i.e. via the link posted by az09) can help you identify and edit bad tags.</p>
-<p>Here's an example how to proceed: <a href="http://www.openstreetmap.org/way/295391114">http://www.openstreetmap.org/way/295391114</a> is identified in Osmose as a bad tagged building. Let's have a detailed look at the tags:</p>
+<p>Here's an example how to proceed: <a href="https://www.openstreetmap.org/way/295391114">https://www.openstreetmap.org/way/295391114</a> is identified in Osmose as a bad tagged building. Let's have a detailed look at the tags:</p>
 <pre><code>building=Library
 name=Library Bhaban</code></pre>
 <p>If you search the OSM wiki for library, you will find <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlibrary</a> So the official tagging for a library should be</p>
 <pre><code>amenity=library
 name=Library Bhaban</code></pre>
 <p>You might leave the building tag and change it either to building=yes or building=civic - the wiki mentions libraries as an example for civic buildings, however it doesn't seem to be widely used, so there is always some room for interpretation ;)</p>
-<p>Another example for this ATM machine: <a href="http://www.openstreetmap.org/node/4363320727">http://www.openstreetmap.org/node/4363320727</a></p>
+<p>Another example for this ATM machine: <a href="https://www.openstreetmap.org/node/4363320727">https://www.openstreetmap.org/node/4363320727</a></p>
 <p>Current tags:</p>
 <pre><code>amenity=atm booth
 name=BRAC Bank Ltd</code></pre>
@@ -147,7 +147,7 @@ name=BRAC Bank Ltd</code></pre>
 <pre><code>amenity=atm
 operator=BRAC Bank Ltd</code></pre>
 <p>If you have any more information (see wiki for many other possible keys) you may add it too.</p>
-<p>Last but not least let's have one of the building on the university campus (there seem to be a lot of errors): <a href="http://www.openstreetmap.org/way/295545678">http://www.openstreetmap.org/way/295545678</a></p>
+<p>Last but not least let's have one of the building on the university campus (there seem to be a lot of errors): <a href="https://www.openstreetmap.org/way/295545678">https://www.openstreetmap.org/way/295545678</a></p>
 <pre><code>building=Academic
 name=MBA Building</code></pre>
 <p>As it is part of Dhaka University I would follow the tagging guidelines for universities in the wiki (<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Duniversity),">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Duniversity),</a> so appropriate tags here should be</p>

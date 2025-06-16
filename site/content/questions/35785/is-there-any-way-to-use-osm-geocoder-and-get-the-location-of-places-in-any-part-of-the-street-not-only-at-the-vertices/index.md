@@ -132,7 +132,7 @@ One Answer:
 <div id="post-35791-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... also have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> in general.</p>
+<p>... also have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> in general.</p>
 </div>
 <div id="comment-35791-info" class="comment-info">
 <span class="comment-age">(13 Aug '14, 19:49)</span> <span class="comment-user userinfo">stephan75</span>

@@ -76,7 +76,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Hi, well I am a little confused by the terminology from the documentation.</p>
-<p>I started with the guide. <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">How to make a map</a></p>
+<p>I started with the guide. <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">How to make a map</a></p>
 <p>This says "These tiles can be compiled into a map as-is, but the resultant map would lack addressing data (e.g. city or zip code). Addressing data comes from preprocessed bounds tiles, and you can either download them from navmaps.eu or create them yourself as described in Mkgmap/help/options#Using_preprocessed_bounds_for_the_address_index. Place the resultant files into a subdirectory named bounds. "</p>
 <p>To me that implies that the bounds directory would contain more of an index than boundary definitions.</p>
 </div>

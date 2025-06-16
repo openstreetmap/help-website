@@ -116,7 +116,7 @@ One Answer:
 <div class="answer-body">
 <p>JMapViewer loads raster tiles that have been produced by the OpenStreetMap server (or another tile server) according to styling rules configured on that server; the tiles cannot be customised on the client.</p>
 <p>You can set up your own tile server (see <a href="http://switch2osm.,org/">switch2osm.org</a> for good howtos), and then you can configure a different map style on your server. There are also commercial offerings for custom-styled tiles (e.g. Cloudmade, Mapbox).</p>
-<p>Alternatively, you can change your client from loading and displaying raster tiles to working with vector data; in that case, the styling happens on the client and you can influence that at will. Check out <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">MapsForge</a>, an open source vector rendering library for Java.</p>
+<p>Alternatively, you can change your client from loading and displaying raster tiles to working with vector data; in that case, the styling happens on the client and you can influence that at will. Check out <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">MapsForge</a>, an open source vector rendering library for Java.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

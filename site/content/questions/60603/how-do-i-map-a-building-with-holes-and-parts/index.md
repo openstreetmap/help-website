@@ -147,7 +147,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You cannot use one relation as a building relation and a multipolygon relation at the same time. Instead, after creating your multipolygon, you would need to create a second relation, this time using <code>type=building</code> instead of <code>type=multipolygon</code>. Add the multipolygon relation, not the outer way, as the <code>outline</code> member.</p>
-<p>Note, however, that building relations are optional (and indeed unnecessary) for almost all buildings – see my <a href="https://help.openstreetmap.org/questions/60330/how-do-you-create-a-relation-between-a-building-and-3d-building-parts/60332">answer</a> to a related question. So you can probably avoid the problem by simply not using one. :)</p>
+<p>Note, however, that building relations are optional (and indeed unnecessary) for almost all buildings – see my <a href="/questions/60330/how-do-you-create-a-relation-between-a-building-and-3d-building-parts/60332">answer</a> to a related question. So you can probably avoid the problem by simply not using one. :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

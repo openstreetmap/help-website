@@ -123,8 +123,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?lat=10&amp;lon=-84.0001&amp;zoom=12&amp;layers=M">OSM map of Costa Rica</a></p>
-<p>Or if you mean dead trees: <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper#Simple_web_interfaces_for_printing_OSM_maps">OSM on paper projects</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=10&amp;lon=-84.0001&amp;zoom=12&amp;layers=M">OSM map of Costa Rica</a></p>
+<p>Or if you mean dead trees: <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper#Simple_web_interfaces_for_printing_OSM_maps">OSM on paper projects</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

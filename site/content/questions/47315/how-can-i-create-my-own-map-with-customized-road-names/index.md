@@ -115,7 +115,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As a start, you can do a search on this FAQ site for "own style" ... there are some topics that may come near your aim.</p>
-<p>Being a beginner, read the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Elements">Elements</a>, <a href="http://wiki.openstreetmap.org/wiki/Tags">Tags</a>, <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>, <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> and <a href="http://wiki.openstreetmap.org/wiki/MapCSS">MapCSS</a></p>
+<p>Being a beginner, read the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Elements">Elements</a>, <a href="https://wiki.openstreetmap.org/wiki/Tags">Tags</a>, <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>, <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> and <a href="https://wiki.openstreetmap.org/wiki/MapCSS">MapCSS</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>When hiking, I record my track, with the altitude, and I'd like to extract the incline data to fill the <a href="https://wiki.openstreetmap.org/wiki/Key:incline">incline tag</a> in OSM. Is there a way to extract this information and fill the tag automatically ? Or do I need to manually compute the altitude difference in all segments an manually modify the incline tag ?</p>
-<p>I saw a <a href="https://help.openstreetmap.org/questions/36155/extract-inclines-from-gpx-file">related question</a>, but it is 6 years old, and post necromancy is kind of bad practice...</p>
+<p>I saw a <a href="/questions/36155/extract-inclines-from-gpx-file">related question</a>, but it is 6 years old, and post necromancy is kind of bad practice...</p>
 <p>I found nothing like that in JOSM or in plugins.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

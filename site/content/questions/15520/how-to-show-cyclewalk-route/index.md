@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to show cycle/walk route?"
-description = '''Take a look here: http://www.openstreetmap.org/?lat=53.07104&amp;amp;lon=18.5322&amp;amp;zoom=17&amp;amp;layers=M there is a path there with a route attached to it (it is just an example for this question). In every case like this the path is rendered according to the traffic allowed there. However there is no ...'''
+description = '''Take a look here: https://www.openstreetmap.org/?lat=53.07104&amp;amp;lon=18.5322&amp;amp;zoom=17&amp;amp;layers=M there is a path there with a route attached to it (it is just an example for this question). In every case like this the path is rendered according to the traffic allowed there. However there is no ...'''
 date = "2012-08-26T15:38:00Z"
 lastmod = "2012-08-26T19:38:00Z"
 weight = 15520
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Take a look here: <a href="http://www.openstreetmap.org/?lat=53.07104&amp;lon=18.5322&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=53.07104&amp;lon=18.5322&amp;zoom=17&amp;layers=M</a> there is a path there with a route attached to it (it is just an <strong>example</strong> for this question).</p>
+<p>Take a look here: <a href="https://www.openstreetmap.org/?lat=53.07104&amp;lon=18.5322&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=53.07104&amp;lon=18.5322&amp;zoom=17&amp;layers=M</a> there is a path there with a route attached to it (it is just an <strong>example</strong> for this question).</p>
 <p>In every case like this the path is rendered according to the traffic allowed there. However there is no indication if there is any route -- the difference is, that I can ride a bicycle anywhere where bicycle is allowed, but only on route I will see route signs (I mean, in real world).</p>
 <p>So displaying some walk/bicycle sign over the actual route (in OSM this time) would be useful.</p>
 <p><strong>QUESTION</strong>: how to show walk/cycle routes "indicators" (bolder lines, signs, anything)?</p>
@@ -181,11 +181,11 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:route%3Dhiking#Tagging_walking_and_hiking_Route_Networks">This is</a> how this kind of routes is mapped.<br />
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dhiking#Tagging_walking_and_hiking_Route_Networks">This is</a> how this kind of routes is mapped.<br />
 To <em>see</em> the routes on a map:<br />
 1. pay attention to the key <em>osmc:symbol</em> mentioned there<br />
 2. have a look at the route at maps showing them like <a href="http://www.hikebikemap.de">hikebikemap.de</a> or <a href="http://www.wanderreitkarte.de/">www.wanderreitkarte.de</a><br />
-(more specialised maps maps you can find <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">here</a>).<br />
+(more specialised maps maps you can find <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">here</a>).<br />
 </p>
 <p>hth<br />
 malenki</p>

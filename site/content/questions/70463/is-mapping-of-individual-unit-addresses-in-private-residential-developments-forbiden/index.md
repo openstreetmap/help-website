@@ -273,7 +273,7 @@ osqa_accepted = false
 <p>Lets set aside this particular location, and whether you need to trespass to access the address unit number. I really don't care about that particular location.</p>
 <p>I agree that we shouldn't trespass to do mapping, but there is plenty of valid reasons for a OSM contributor to be in a private place, and if the contributor wants to add some data that can only be obtained while on private property I'm convinced that is fine.</p>
 <p>An example might be a delivery company, who's in a private complex, and adds unit numbers within that complex. That could be very useful for delivery drivers, and they have a valid reason to be there. They are not trespassing. Another example could be a private camp, that only accepts paying guests. Those guests may map while they are there, despite it being private. In either case it's helpful to remember to include access tags.</p>
-<p><a href="https://help.openstreetmap.org/questions/54972/can-you-add-hiking-trails-without-knowledgepermission-of-landowner">Here's</a> an example of a question about mapping private land.</p>
+<p><a href="/questions/54972/can-you-add-hiking-trails-without-knowledgepermission-of-landowner">Here's</a> an example of a question about mapping private land.</p>
 </div>
 <div id="comment-70489-info" class="comment-info">
 <span class="comment-age">(23 Aug '19, 08:05)</span> <span class="comment-user userinfo">keithonearth</span>

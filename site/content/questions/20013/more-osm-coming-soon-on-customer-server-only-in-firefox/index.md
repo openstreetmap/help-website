@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "&quot;More osm coming soon&quot; on Customer server only in Firefox"
-description = '''I can&#x27;t figure out why only Firefox shows &#x27;More osm coming soon&quot; while Chrome/Chromium works perfectly. I checked the tile server blocking under firefox Edit / Preferences / Content / LoadImagesAutomatically / Exceptions and it is empty (as mentioned in http://wiki.openstreetmap.org/wiki/More_OSM_co...'''
+description = '''I can&#x27;t figure out why only Firefox shows &#x27;More osm coming soon&quot; while Chrome/Chromium works perfectly. I checked the tile server blocking under firefox Edit / Preferences / Content / LoadImagesAutomatically / Exceptions and it is empty (as mentioned in https://wiki.openstreetmap.org/wiki/More_OSM_co...'''
 date = "2013-02-18T11:44:00Z"
 lastmod = "2013-02-18T13:55:00Z"
 weight = 20013
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I can't figure out why only Firefox shows 'More osm coming soon" while Chrome/Chromium works perfectly. I checked the tile server blocking under firefox Edit / Preferences / Content / LoadImagesAutomatically / Exceptions and it is empty (as mentioned in <a href="http://wiki.openstreetmap.org/wiki/More_OSM_coming_soon).">http://wiki.openstreetmap.org/wiki/More_OSM_coming_soon).</a> Firefox makes the GET requests for the tiles properly but doesn't load in the browser.</p>
+<p>I can't figure out why only Firefox shows 'More osm coming soon" while Chrome/Chromium works perfectly. I checked the tile server blocking under firefox Edit / Preferences / Content / LoadImagesAutomatically / Exceptions and it is empty (as mentioned in <a href="https://wiki.openstreetmap.org/wiki/More_OSM_coming_soon).">https://wiki.openstreetmap.org/wiki/More_OSM_coming_soon).</a> Firefox makes the GET requests for the tiles properly but doesn't load in the browser.</p>
 <p>Could someone help? The server url is <a href="http://map.bibek.com.np:3000/">http://map.bibek.com.np:3000/</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">

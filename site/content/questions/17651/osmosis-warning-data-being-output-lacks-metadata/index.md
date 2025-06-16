@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Osmosis is giving me this warning message</p>
 <pre><code>&quot;WARNING: Attention: Data being output lacks metadata. Please use omitmetadata=true&quot;</code></pre>
-<p>I am using a <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--write-pbf_.28--wb.29">--write-pbf</a> output and I see I can specify 'omitmetadata=true' to stop it outputting version number, timestamp, user name, and user id, but what is the cause of this warning?</p>
+<p>I am using a <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--write-pbf_.28--wb.29">--write-pbf</a> output and I see I can specify 'omitmetadata=true' to stop it outputting version number, timestamp, user name, and user id, but what is the cause of this warning?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span>

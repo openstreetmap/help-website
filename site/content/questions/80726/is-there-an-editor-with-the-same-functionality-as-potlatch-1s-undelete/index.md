@@ -142,7 +142,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/50707/locating-deleted-items">This</a> previous question has an Overpass based solution for retrieval. I don't know if this could be retrieved directly into JOSM?</p>
+<p><a href="/questions/50707/locating-deleted-items">This</a> previous question has an Overpass based solution for retrieval. I don't know if this could be retrieved directly into JOSM?</p>
 </div>
 <div id="comment-80743-info" class="comment-info">
 <span class="comment-age">(27 Jun '21, 01:23)</span> <span class="comment-user userinfo">InsertUser</span>

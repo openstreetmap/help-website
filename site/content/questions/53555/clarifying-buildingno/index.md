@@ -185,7 +185,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/339/edloach"></a><a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: to be clear: I do not support to tag these cases with building=no (1. other tags would be more suitable and 2. having a tag with building=* could mean that there IS some kind [see the value] of building).</p>
+<p><a href="https://help.openstreetmap.org/users/339/edloach"></a><a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: to be clear: I do not support to tag these cases with building=no (1. other tags would be more suitable and 2. having a tag with building=* could mean that there IS some kind [see the value] of building).</p>
 </div>
 <div id="comment-53589-info" class="comment-info">
 <span class="comment-age">(17 Dec '16, 18:12)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

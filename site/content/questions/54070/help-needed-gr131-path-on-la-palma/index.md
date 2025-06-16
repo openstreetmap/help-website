@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-54074-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#map=19/28.75207/-17.89039">http://www.openstreetmap.org/#map=19/28.75207/-17.89039</a> is the URL. I can't zoom in further - it's max already. In the middle you see the LP-403 road with the marked parking. The GR-131 hiking path is the red dotted line which ends up at the parking but should end at the LP-403 road.</p>
+<p><a href="https://www.openstreetmap.org/#map=19/28.75207/-17.89039">https://www.openstreetmap.org/#map=19/28.75207/-17.89039</a> is the URL. I can't zoom in further - it's max already. In the middle you see the LP-403 road with the marked parking. The GR-131 hiking path is the red dotted line which ends up at the parking but should end at the LP-403 road.</p>
 </div>
 <div id="comment-54074-info" class="comment-info">
 <span class="comment-age">(16 Jan '17, 12:47)</span> <span class="comment-user userinfo">fzipper</span>
@@ -107,7 +107,7 @@ osqa_accepted = false
 <div id="post-54079-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info, this is the problem way: <a href="http://www.openstreetmap.org/way/38062272">http://www.openstreetmap.org/way/38062272</a></p>
+<p>For info, this is the problem way: <a href="https://www.openstreetmap.org/way/38062272">https://www.openstreetmap.org/way/38062272</a></p>
 </div>
 <div id="comment-54079-info" class="comment-info">
 <span class="comment-age">(16 Jan '17, 13:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -184,7 +184,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/routing_test.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/routing_test.JPG" alt="alt text" /></p>
 <p>0 Routing is connected and must have been for some time for the router to use the data. But the service road that joins the path to the tower to the south was tagged as private I have now changed that to walking allowed which should fix it for other routers.. I hope!</p>
 <p>permanent link|edit|delete|more ▼ answered 11 mins ago andy%20mackey's gravatar image andy mackey 10.0k●66●113●233 accept rate: 4%</p>
 </div>

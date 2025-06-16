@@ -78,7 +78,7 @@ osqa_accepted = false
 <li><span>Spratly_Islands</span></li>
 </ul>
 <p>A side note since you mention to download tiles, in case that a many tiles: please respect our <span>Tile_usage_policy</span>.</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/2417005">Paracel Islands are named and in OSM's data</a>. At least some of the Spratly islands are also in our data.</p>
+<p><a href="https://www.openstreetmap.org/browse/relation/2417005">Paracel Islands are named and in OSM's data</a>. At least some of the Spratly islands are also in our data.</p>
 <p>Do you mean that you would like to see the name of the island group? On which tiles? There are many map styles.</p>
 </div>
 <div id="comment-21174-info" class="comment-info">
@@ -141,8 +141,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>As noted in the wikipedia links above, both island groups mentioned are disputed by a number of different states in the region. In cases like this, there's unlikely to be a suitable answer that's acceptable to all claimants.<br />
 </p>
-<p>An overview of the way that OpenStreetMap deals with disputes is described <a href="http://wiki.openstreetmap.org/wiki/Disputes">on this wiki page</a>. The normal way of resolving is the "on the ground" rule - "whatever name, designation, etc are used by the people on the ground at that location are used in the non-localized tags". Unfortunately in sparsely- or non-populated areas that's difficult to apply.</p>
-<p>Although a number of individual edits have been made in this area (and then changed by others of different political persuations), this isn't likely to provide a solution that all parties agree on - mediation via the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a> is likely to provide a better way forward.</p>
+<p>An overview of the way that OpenStreetMap deals with disputes is described <a href="https://wiki.openstreetmap.org/wiki/Disputes">on this wiki page</a>. The normal way of resolving is the "on the ground" rule - "whatever name, designation, etc are used by the people on the ground at that location are used in the non-localized tags". Unfortunately in sparsely- or non-populated areas that's difficult to apply.</p>
+<p>Although a number of individual edits have been made in this area (and then changed by others of different political persuations), this isn't likely to provide a solution that all parties agree on - mediation via the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a> is likely to provide a better way forward.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -226,7 +226,7 @@ osqa_accepted = false
 <div id="post-21172-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>old question <a href="https://help.openstreetmap.org/questions/5614/bing-satellite-imagery-coverage-zoom-level">https://help.openstreetmap.org/questions/5614/bing-satellite-imagery-coverage-zoom-level</a></p>
+<p>old question <a href="/questions/5614/bing-satellite-imagery-coverage-zoom-level">https://help.openstreetmap.org/questions/5614/bing-satellite-imagery-coverage-zoom-level</a></p>
 </div>
 <div id="comment-21172-info" class="comment-info">
 <span class="comment-age">(04 Apr '13, 12:15)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -237,7 +237,7 @@ osqa_accepted = false
 <div id="post-21173-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>this is near spratly ?? <a href="http://www.openstreetmap.org/?lat=9.83589&amp;lon=114.3307&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=9.83589&amp;lon=114.3307&amp;zoom=16&amp;layers=M</a></p>
+<p>this is near spratly ?? <a href="https://www.openstreetmap.org/?lat=9.83589&amp;lon=114.3307&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=9.83589&amp;lon=114.3307&amp;zoom=16&amp;layers=M</a></p>
 </div>
 <div id="comment-21173-info" class="comment-info">
 <span class="comment-age">(04 Apr '13, 12:22)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -279,7 +279,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/south_china_sea.JPG" alt="This shows some islands in the group that have outlines but let don&#39;t seem to have been mapped and tagged quite right,hopefully some one will tell us what is wrong " /></p>
+<p><img src="/upfiles/south_china_sea.JPG" alt="This shows some islands in the group that have outlines but let don&#39;t seem to have been mapped and tagged quite right,hopefully some one will tell us what is wrong " /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

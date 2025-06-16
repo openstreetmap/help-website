@@ -119,11 +119,11 @@ osqa_accepted = true
 <pre><code>highway = pedestrian
 + bicycle = yes (optional, because it is a subclass of vehicle)
 + vehicle = yes</code></pre>
-<p>The rest of the time, we need a value for "permit holders only". I'll chose <em>=private for the rest of this answer. (A more precise value might be</em> =license as proposed by <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/License">"License" proposal</a>, but it isn't widely used and very similar to *=private for most applications.) The resulting tags would be</p>
+<p>The rest of the time, we need a value for "permit holders only". I'll chose <em>=private for the rest of this answer. (A more precise value might be</em> =license as proposed by <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/License">"License" proposal</a>, but it isn't widely used and very similar to *=private for most applications.) The resulting tags would be</p>
 <pre><code>highway = pedestrian
 + bicycle = yes
 + vehicle = private</code></pre>
-<p>So what we need is a way to switch the vehicle key's value depending on the time. For this purpose, I recommend <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags">Extended conditions for access tags</a>. Using this proposal's syntax, we end up with</p>
+<p>So what we need is a way to switch the vehicle key's value depending on the time. For this purpose, I recommend <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags">Extended conditions for access tags</a>. Using this proposal's syntax, we end up with</p>
 <pre><code>highway = pedestrian
 + bicycle = yes
 + vehicle = private
@@ -210,7 +210,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Access">wiki entry about access restrictions</a>, which also details time-based restrictions.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Access">wiki entry about access restrictions</a>, which also details time-based restrictions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

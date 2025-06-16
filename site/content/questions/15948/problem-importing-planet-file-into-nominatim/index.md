@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After a gruesome night installing PostgreSQL 9.1, PostGIS 2 and Nominatim 2 on CentOS 6.3 using the instructions <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>, I am finally at the stage of importing a US planet file.</p>
+<p>After a gruesome night installing PostgreSQL 9.1, PostGIS 2 and Nominatim 2 on CentOS 6.3 using the instructions <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>, I am finally at the stage of importing a US planet file.</p>
 <p><strong>Problem:</strong> In <code>~/Nominatim/utils</code>, When I attempt to run <code>./setup.php --osm-file us-northeast.osm.pbf --all</code>, the output I get ends with:</p>
 <pre><code> [&quot;type&quot;]=&gt;
       string(2) &quot;-&gt;&quot;
@@ -134,7 +134,7 @@ DB Error: connect failed</code></pre>
 </div>
 <div class="comment-text">
 <p>If you cannot see a helpful answer here maybe your question is to specific for an FAQ.</p>
-<p>In this case you can try again on one of the OSM mailing lists ( <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a> ) or the OSM forum.</p>
+<p>In this case you can try again on one of the OSM mailing lists ( <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a> ) or the OSM forum.</p>
 </div>
 <div id="comment-15974-info" class="comment-info">
 <span class="comment-age">(11 Sep '12, 16:52)</span> <span class="comment-user userinfo">stephan75</span>

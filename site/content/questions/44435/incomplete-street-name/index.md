@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Duplicate of <a href="https://help.openstreetmap.org/questions/2756/how-do-i-change-a-street-name">How do I change a street name?</a>.</p>
+<p>Duplicate of <a href="/questions/2756/how-do-i-change-a-street-name">How do I change a street name?</a>.</p>
 </div>
 <div id="comment-44451-info" class="comment-info">
 <span class="comment-age">(27 Jul '15, 11:27)</span> <span class="comment-user userinfo">sleske</span>
@@ -129,7 +129,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can fix it yourself!</p>
-<p>At the top of the OpenStreetMap.org website there's a "<a href="http://www.openstreetmap.org/help">help</a>" link, which lists lots of resources such as a <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a>, and at the top is "<a href="http://www.openstreetmap.org/welcome">Welcome to OSM</a>". Follow that, and either start mapping yourself to fix it, or add a note.</p>
+<p>At the top of the OpenStreetMap.org website there's a "<a href="https://www.openstreetmap.org/help">help</a>" link, which lists lots of resources such as a <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a>, and at the top is "<a href="https://www.openstreetmap.org/welcome">Welcome to OSM</a>". Follow that, and either start mapping yourself to fix it, or add a note.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -179,7 +179,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap is a crowd sourced, community made map. That means that people like you can fix and improve the map yourself. <a href="http://www.openstreetmap.org/welcome">You can get another intro to OSM here.</a></p>
+<p>OpenStreetMap is a crowd sourced, community made map. That means that people like you can fix and improve the map yourself. <a href="https://www.openstreetmap.org/welcome">You can get another intro to OSM here.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

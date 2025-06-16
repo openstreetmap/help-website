@@ -49,7 +49,7 @@ lanes=1 (there are some rare 2 lane seasonal roads)<br />
 description=Seasonal use. This section is not plowed in winter.(Dec - Apr)<br />
 </p>
 <p>My worry is when you use the highway=track it switches to the pedestrian paved track presets, and I want to know if that would prevent vehicle travel from being routed over the way ever. Also is there a better/standard way to define the blockout months? None of the seasonal use roads that I have found in this area require special use vehicles (eg 4x4) when they are open.</p>
-<p>A sample can be found at <a href="http://www.openstreetmap.org/?lat=43.15087&amp;lon=-76.85124&amp;zoom=17">http://www.openstreetmap.org/?lat=43.15087&amp;lon=-76.85124&amp;zoom=17</a></p>
+<p>A sample can be found at <a href="https://www.openstreetmap.org/?lat=43.15087&amp;lon=-76.85124&amp;zoom=17">https://www.openstreetmap.org/?lat=43.15087&amp;lon=-76.85124&amp;zoom=17</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-seasonal" rel="tag" title="see questions tagged &#39;seasonal&#39;">seasonal</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-mapping" rel="tag" title="see questions tagged &#39;mapping&#39;">mapping</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span>
@@ -133,7 +133,7 @@ description=Seasonal use. This section is not plowed in winter.(Dec - Apr)<br />
 <div class="answer-body">
 <p>On seasonal roads you can put date_on=MM-DD and date_off=MM-DD.</p>
 <p>tracktype= provides classification on tracks and tells something about the type of vehicle you would put on the road. If it is not legal to drive anything other then terrain vehicles you can put 4wd_only=yes on the road.</p>
-<p>Otherwise you might want to take a look at the <a href="http://wiki.openstreetmap.org/wiki/Key:access">wiki</a> for more access tags.</p>
+<p>Otherwise you might want to take a look at the <a href="https://wiki.openstreetmap.org/wiki/Key:access">wiki</a> for more access tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows Mobile</a> ... there you can find many programs for your device that can record a GPS tracklog in order to load it into an editor on a PC or to upload it on the OSM server.</p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows Mobile</a> ... there you can find many programs for your device that can record a GPS tracklog in order to load it into an editor on a PC or to upload it on the OSM server.</p>
 <p>There are even nice apps that can display the recent OSM data by a rendered map and you can see whether the way you are moving at the moment is already in the OSM data or not.</p>
 <p>I would recommend NaviPOWM, next to Gosmore, Navit, OSMTracker, gpsVP and others</p>
 </div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Osmtracker">OSMTracker</a> which works very well at capturing data ready for import to OSM.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Osmtracker">OSMTracker</a> which works very well at capturing data ready for import to OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -208,7 +208,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi,</p>
 <p>I personally use gpsVP which can record tracks and display osm maps in Garmin format from a storage card. Not totally perfect but quite usable. Works good on my phone without a touchscreen. Biggest drawback for my device is a quite strong demand on battery power...</p>
-<p>See on the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/GpsVP"></a><a href="http://wiki.openstreetmap.org/wiki/GpsVP"></a><a href="http://wiki.openstreetmap.org/wiki/GpsVP">http://wiki.openstreetmap.org/wiki/GpsVP</a></p>
+<p>See on the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/GpsVP"></a><a href="https://wiki.openstreetmap.org/wiki/GpsVP"></a><a href="https://wiki.openstreetmap.org/wiki/GpsVP">https://wiki.openstreetmap.org/wiki/GpsVP</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

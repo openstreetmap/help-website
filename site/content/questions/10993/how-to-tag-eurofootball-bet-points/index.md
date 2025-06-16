@@ -156,9 +156,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>there's a new proposal for bookmakers here: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Bookmaker">http://wiki.openstreetmap.org/wiki/Proposed_features/Bookmaker</a></p>
+<p>there's a new proposal for bookmakers here: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Bookmaker">https://wiki.openstreetmap.org/wiki/Proposed_features/Bookmaker</a></p>
 <p>But it is quite a new a draft and not used much yet.</p>
-<p>There is another proposal for all kind of gambling here: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Gambling">http://wiki.openstreetmap.org/wiki/Proposed_features/Gambling</a> - it is from 2009/2010 but the discussion fell asleep, as it seems.</p>
+<p>There is another proposal for all kind of gambling here: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Gambling">https://wiki.openstreetmap.org/wiki/Proposed_features/Gambling</a> - it is from 2009/2010 but the discussion fell asleep, as it seems.</p>
 <p>If the place is also visited by a significant amount of guests not betting, but just sitting and watching the game on a screen, drinking beer, then you can additionally tag it as amenity=pub or amenity=cafe</p>
 <p>These places became quite popular in Europe, since major sports events are less and less shown on free TV but on expensive pay-per-view channels instead.</p>
 </div>

@@ -138,7 +138,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at the <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Examples">Nominatim Examples</a> in the OpenStreetMap Wiki!</p>
+<p>Take a look at the <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Examples">Nominatim Examples</a> in the OpenStreetMap Wiki!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -200,7 +200,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For a javascript search interface you might like to take a look at <a href="http://wiki.openstreetmap.org/wiki/FacilMap">FacilMap</a>, which bundles OpenLayers and add various bits. This includes an interface for searching, which calls the Nominatim search service, shows result matches, and places a marker (or markers) on the map.</p>
+<p>For a javascript search interface you might like to take a look at <a href="https://wiki.openstreetmap.org/wiki/FacilMap">FacilMap</a>, which bundles OpenLayers and add various bits. This includes an interface for searching, which calls the Nominatim search service, shows result matches, and places a marker (or markers) on the map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

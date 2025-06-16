@@ -112,10 +112,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The query button on the website is implemented using a publicly available service, Overpass-API:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
 <p>There is some discussion of it in the website code:</p>
 <p><a href="https://github.com/openstreetmap/openstreetmap-website/blob/e3357b27e61c3ee4f4cf51c87fdc94deeaaa7c6f/app/assets/javascripts/index/query.js#L262">https://github.com/openstreetmap/openstreetmap-website/blob/e3357b27e61c3ee4f4cf51c87fdc94deeaaa7c6f/app/assets/javascripts/index/query.js#L262</a></p>
-<p>(the query language used there is documented at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a> )</p>
+<p>(the query language used there is documented at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a> )</p>
 <p>You can experiment with Overpass-API using a convenient gui at Overpass Turbo:</p>
 <p><a href="http://overpass-turbo.eu/s/mC9">http://overpass-turbo.eu/s/mC9</a></p>
 <p>I've only added a piece of the query there, the is_in operator returns a subset of nearby objects, you'd need to add the around operators and experiment a bit to see if the output is useful for what you need.</p>
@@ -137,7 +137,7 @@ One Answer:
 <div id="post-54582-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson"></a><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Thanks so much for the answer! Run your is_in() function works perfectly. But how can I write the nearby function? According your query.js file, I made the nearby function. But it doesn't work.</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson"></a><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Thanks so much for the answer! Run your is_in() function works perfectly. But how can I write the nearby function? According your query.js file, I made the nearby function. But it doesn't work.</p>
 <p>(node(around:100, 51.645401, 12.052744); way(around:100, 51.645401, 12.052744));</p>
 <p>out tags;</p>
 <p>relation(around:10, 51.645401, 12.052744); out;</p>
@@ -166,7 +166,7 @@ One Answer:
 <div id="post-54586-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Thanks! I still have a little doubt, The gps point [51.645401, 12.052744] is actually in the "Farmland #6249468", but why it returned as a nearby feature?</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Thanks! I still have a little doubt, The gps point [51.645401, 12.052744] is actually in the "Farmland #6249468", but why it returned as a nearby feature?</p>
 </div>
 <div id="comment-54586-info" class="comment-info">
 <span class="comment-age">(10 Feb '17, 10:56)</span> <span class="comment-user userinfo">xirururu</span>

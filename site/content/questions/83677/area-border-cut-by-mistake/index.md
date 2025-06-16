@@ -221,7 +221,7 @@ osqa_accepted = false
 <p>Hi BC</p>
 <p>The multipolygon highlighted in red is the area in question and it looks great. I can only imagine I made my mistake after this changeset.I am attaching a jpeg of how oomap.co.uk looked at 10.30 this morning. It shows the wedge shaped area I added after I realised that the correct residential area had disappeared. As you can see it does not follow the outline of the correct residential area which I was trying to tweak. I am sorry for not paying better attention and not realising I had made a mistake straight away,</p>
 <p>Thank you</p>
-<p>Helen <img src="https://help.openstreetmap.org/upfiles/oom_6224cb228a885_YH0ccBT.jpg" alt="alt text" /></p>
+<p>Helen <img src="/upfiles/oom_6224cb228a885_YH0ccBT.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -283,7 +283,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Attached is a jpeg of the problem area, taken today<img src="https://help.openstreetmap.org/upfiles/IMG_3305_jdMSmhz.jpg" alt="alt text" /> showing how the area border is no longer joined</p>
+<p>Attached is a jpeg of the problem area, taken today<img src="/upfiles/IMG_3305_jdMSmhz.jpg" alt="alt text" /> showing how the area border is no longer joined</p>
 <p>Thanks</p>
 <p>helen</p>
 </div>

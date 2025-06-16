@@ -180,8 +180,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>.. but do bear in mind the answer to <a href="https://help.openstreetmap.org/questions/24436/how-to-make-use-of-the-osm-api">your other question</a> - the OSM API is designed to be used by editors to add data to OSM; you typically wouldn't use an OSM API call to obtain data for an interactive map.</p>
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> and <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> (effectively non-OSM API calls that might be useful to fetch specific items of data that you might want to overlay over a map that you've displayed based on data downloaded from e.g. <a href="http://wiki.openstreetmap.org/wiki/Extract">one of the sites here</a>.</p>
+<p>.. but do bear in mind the answer to <a href="/questions/24436/how-to-make-use-of-the-osm-api">your other question</a> - the OSM API is designed to be used by editors to add data to OSM; you typically wouldn't use an OSM API call to obtain data for an interactive map.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> and <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> (effectively non-OSM API calls that might be useful to fetch specific items of data that you might want to overlay over a map that you've displayed based on data downloaded from e.g. <a href="https://wiki.openstreetmap.org/wiki/Extract">one of the sites here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

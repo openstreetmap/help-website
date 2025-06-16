@@ -92,7 +92,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Path to jpg is shown below. You can see the destination is 11 mi yet route has me exit/reenter at every exit/entry. This continues along any route when on highways with controlled entry/exit (such as interstate highways). Doesn't happen on roads with no control access. Using V14.1.71386-google release</p>
-<p><a href="https://help.openstreetmap.org/upfiles/Screenshot_20220826-171913_MAPSME_z56v0zf.jpg">https://help.openstreetmap.org/upfiles/Screenshot_20220826-171913_MAPSME_z56v0zf.jpg</a></p>
+<p><span>/upfiles/Screenshot_20220826-171913_MAPSME_z56v0zf.jpg</span></p>
 </div>
 <div id="comment-85453-info" class="comment-info">
 <span class="comment-age">(27 Aug '22, 07:10)</span> <span class="comment-user userinfo">gjcnjc</span>

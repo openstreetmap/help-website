@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-14010-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I guess you are referring to <a href="http://www.openstreetmap.org/?lat=-33.9964&amp;lon=151.2029&amp;zoom=13&amp;layers=M">this area</a> and the change between zoom level 12 and 13 (can't see anything wrong at zoom level 6)?</p>
+<p>I guess you are referring to <a href="https://www.openstreetmap.org/?lat=-33.9964&amp;lon=151.2029&amp;zoom=13&amp;layers=M">this area</a> and the change between zoom level 12 and 13 (can't see anything wrong at zoom level 6)?</p>
 </div>
 <div id="comment-14010-info" class="comment-info">
 <span class="comment-age">(06 Jul '12, 06:14)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I managed to fix Botany Bay; the multipolygon had been broken in <a href="http://www.openstreetmap.org/browse/changeset/12116473">this changeset</a>.</p>
+<p>I managed to fix Botany Bay; the multipolygon had been broken in <a href="https://www.openstreetmap.org/browse/changeset/12116473">this changeset</a>.</p>
 <p>Generally it is recommended to mention such (usually temporary) map problems on IRC or the mailing list since they don't contribute to the helpful archive we're trying to build on this site.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to distinguish between small ferry terminals (e.g. <a href="http://www.openstreetmap.org/node/3456702076">node 3456702076</a>) and large ones (e.g. <a href="http://www.openstreetmap.org/node/3696675713">Tsawwassen Ferry Terminal</a>).</p>
+<p>I want to distinguish between small ferry terminals (e.g. <a href="https://www.openstreetmap.org/node/3456702076">node 3456702076</a>) and large ones (e.g. <a href="https://www.openstreetmap.org/node/3696675713">Tsawwassen Ferry Terminal</a>).</p>
 <p>In the ones I've examined there's nothing in the tagging that distinguishes them, and taginfo doesn't show any <a href="https://taginfo.openstreetmap.org/tags/?key=amenity&amp;value=ferry_terminal#combinations">commonly used tags with <code>amenity=ferry_terminal</code> that would help.</a></p>
 <p>What properties can a data consumer use to tell the difference between these?</p>
 </div>
@@ -137,7 +137,7 @@ osqa_accepted = false
 <div id="post-54199-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I thought about using spatial queries for footways or roads that connect to the terminal, but ran into the problem that <a href="http://www.openstreetmap.org/node/3696675713">some terminals don't connect at all</a> while foot terminals can be <a href="http://www.openstreetmap.org/node/3456702076">quite close to roads</a>, and could potentially connect to roads.</p>
+<p>I thought about using spatial queries for footways or roads that connect to the terminal, but ran into the problem that <a href="https://www.openstreetmap.org/node/3696675713">some terminals don't connect at all</a> while foot terminals can be <a href="https://www.openstreetmap.org/node/3456702076">quite close to roads</a>, and could potentially connect to roads.</p>
 <p>I will have <a href="https://github.com/ClearTables/ClearTables/issues/103">ferry route information available</a>, so could query against that. It's not as good as being able to tell the difference from the tags alone, but might work.</p>
 </div>
 <div id="comment-54199-info" class="comment-info">

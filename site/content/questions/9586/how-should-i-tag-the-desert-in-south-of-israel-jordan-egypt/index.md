@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How should I tag the desert (in south of Israel / Jordan / Egypt)"
-description = '''Is there any way to define a desert like the Negev desert (Israel) in OSM? I found a proposed feature for the desert that haven&#x27;t been approved. http://wiki.openstreetmap.org/wiki/Proposed_features/Deserts So how should a known desert be tagged?  - nature=desert is not approved.  - nature=sand is cu...'''
+description = '''Is there any way to define a desert like the Negev desert (Israel) in OSM? I found a proposed feature for the desert that haven&#x27;t been approved. https://wiki.openstreetmap.org/wiki/Proposed_features/Deserts So how should a known desert be tagged?  - nature=desert is not approved.  - nature=sand is cu...'''
 date = "2011-12-20T09:28:00Z"
 lastmod = "2011-12-29T15:58:00Z"
 weight = 9586
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there any way to define a desert like the Negev desert (Israel) in OSM?</p>
-<p>I found a proposed feature for the desert that haven't been approved. <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Deserts">http://wiki.openstreetmap.org/wiki/Proposed_features/Deserts</a></p>
+<p>I found a proposed feature for the desert that haven't been approved. <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Deserts">https://wiki.openstreetmap.org/wiki/Proposed_features/Deserts</a></p>
 <p>So how should a known desert be tagged? - nature=desert is not approved. - nature=sand is currently in use and will display the area in yellow.</p>
 <p>Would be interesting to hear you opinions....</p>
 </div>

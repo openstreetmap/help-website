@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi, I'm a user of JOSM, not a develloper. I have ask similar questions in the Dutch user forum, but only got replies like : "Yep, the validation in JOSM might not be optimal"</p>
 <p>I'm a user and editor of the recreational cycle network in The Netherlands and it can cost me considerable time to figure out what's wrong with network relations. Especially so when infact the error report is the only thing that's wrong :(</p>
 <p>Here is one of many examples :</p>
-<p>network=rcn note=23-62 route=bicycle type=route Relation ID=<a href="http://www.openstreetmap.org/relation/1263377#map=16/51.6589/5.2782">1263377</a></p>
+<p>network=rcn note=23-62 route=bicycle type=route Relation ID=<a href="https://www.openstreetmap.org/relation/1263377#map=16/51.6589/5.2782">1263377</a></p>
 <p>JOSM 7000 Validation : Role forward unknown Role backward unknown</p>
 <p><a href="http://ra.osmsurround.org/">http://ra.osmsurround.org/</a></p>
 <p>Great! This relation seems ok. This relation can be connected as one piece.</p>
@@ -78,12 +78,12 @@ osqa_accepted = false
 <div class="comment-text">
 <p>User SomeOneElse (Andy) mailed two very useful links. I copied them below to clarify a few points.</p>
 <p>The route looks like two letters Y joined together :</p>
-<p><a href="http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN">http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN</a></p>
+<p><a href="https://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN">https://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN</a></p>
 <p>It might look odd but Imo this is a combination of 3 factors :</p>
 <p>1) The elaborate cycle infra structure in The Netherlands. For our local hero have a look at this blog : <a href="http://bicycledutch.wordpress.com/">http://bicycledutch.wordpress.com/</a></p>
 <p>The two branches of the top Y are two completely separate bicycle tracks along a motorway. Same for the two branches of the lower Y.</p>
 <p>This piece :</p>
-<p><a href="http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN">http://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN</a></p>
+<p><a href="https://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN">https://www.openstreetmap.org/relation/1263377#map=17/51.66097/5.28077&amp;layers=CN</a></p>
 <p>has no attached role is an old village road with no separate bicycle tracks. The cycle route uses this piece both to travel from 23 to 62 as well as to travel from 62 to 23</p>
 <p>2) The actual route made by the people who maintain them. Which is apparent from the little whight/green cycle node signs. The little piece with the backward role is not a oneway road. It connects the residential road with the roundabout. You could travel in the other direction then the direction in which the road was drawn. Meaning you won't get trouble with the police. But the people who maintain the network decided that you should only use that piece opposite to the direction it was drawn.</p>
 <p>3) In which case Osm wants the role to be "backward" or I could change the direction of drawing of that piece of road to stop JOSM from cying "wolf" But that is not recommended and feels like tagging for the renderer.</p>

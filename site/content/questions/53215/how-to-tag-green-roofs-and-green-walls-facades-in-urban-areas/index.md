@@ -92,7 +92,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13042/essgame">@essgame</a> There's no precise definition for "consensus" in the OSM community, but looking at the wiki documentation and checking the popularity among mappers and developers (e.g. using <a href="http://taginfo.openstreetmap.org/">Taginfo</a> statistics) gets you pretty close.</p>
+<p><a href="https://help.openstreetmap.org/users/13042/essgame">@essgame</a> There's no precise definition for "consensus" in the OSM community, but looking at the wiki documentation and checking the popularity among mappers and developers (e.g. using <a href="http://taginfo.openstreetmap.org/">Taginfo</a> statistics) gets you pretty close.</p>
 <p>The keys building:material and roof:material, which I mentioned in my answer, have together been used over a million times, and are supported by numerous data consumers. This is as close to established consensus as you will ever get in OSM.</p>
 <p>The exact values to use for green roofs and walls (such as "grass" or "plants") are not really established yet, but introducing new keys won't help with that at all.</p>
 </div>
@@ -105,7 +105,7 @@ osqa_accepted = false
 <div id="post-53445-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Indeed follow <a href="http://help.openstreetmap.org/users/14/tordanik">@Tordanik</a>'s advice (&amp; if you feel inclined also additionally add one of the tags I suggest). These two approaches are compatible &amp; synergistic: roof:material &amp; building:material are widely used for 3D rendering, and values can be refined if actual composition of the plants is known, the green_roof tag allows one to find objects specifically known to be green roofs, whereas roof:material=plants may cover a wider range of roofs.</p>
+<p>Indeed follow <a href="https://help.openstreetmap.org/users/14/tordanik">@Tordanik</a>'s advice (&amp; if you feel inclined also additionally add one of the tags I suggest). These two approaches are compatible &amp; synergistic: roof:material &amp; building:material are widely used for 3D rendering, and values can be refined if actual composition of the plants is known, the green_roof tag allows one to find objects specifically known to be green roofs, whereas roof:material=plants may cover a wider range of roofs.</p>
 </div>
 <div id="comment-53445-info" class="comment-info">
 <span class="comment-age">(09 Dec '16, 21:36)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -292,7 +292,7 @@ osqa_accepted = false
 <li>green_roof=yes or green_wall=yes</li>
 <li>or man_made=green_roof, man_made=green_wall</li>
 </ul>
-<p>In practice green roofs and green walls usually only cover part of a roof or a single façade. Thus at least green roof tagging is often best combined with <a href="http://wiki.openstreetmap.org/wiki/Key:building:part">building:part</a></p>
+<p>In practice green roofs and green walls usually only cover part of a roof or a single façade. Thus at least green roof tagging is often best combined with <a href="https://wiki.openstreetmap.org/wiki/Key:building:part">building:part</a></p>
 <p>As I have stated elsewhere these are usually distinct structures from the building proper, but Tordanik clarifies that point.</p>
 <p>In most cases roof:material=grass for a green roof will be wrong, but it is difficult to ascertain the actual composition of the plants used in the green roof. Many green roofs will have different mixes of plants in zones across the roof:</p>
 <p><img src="http://s0.geograph.org.uk/geophotos/05/15/17/5151779_b4ce361d.jpg" alt="Green Roof Jubilee Campus" /></p>

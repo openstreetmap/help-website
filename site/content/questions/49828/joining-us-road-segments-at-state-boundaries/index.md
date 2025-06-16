@@ -125,7 +125,7 @@ One Answer:
 <div id="post-49830-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It seems that the roads are connected, but on different ways (i.e. sharing the connecting node, which sometimes also lies on the state border): e.g. here, the roads are obviously mapped as different types on each side of the border: <a href="http://www.openstreetmap.org/relation/224045#map=16/36.5444/-78.1401">http://www.openstreetmap.org/relation/224045#map=16/36.5444/-78.1401</a></p>
+<p>It seems that the roads are connected, but on different ways (i.e. sharing the connecting node, which sometimes also lies on the state border): e.g. here, the roads are obviously mapped as different types on each side of the border: <a href="https://www.openstreetmap.org/relation/224045#map=16/36.5444/-78.1401">https://www.openstreetmap.org/relation/224045#map=16/36.5444/-78.1401</a></p>
 </div>
 <div id="comment-49830-info" class="comment-info">
 <span class="comment-age">(25 May '16, 15:57)</span> <span class="comment-user userinfo">Piskvor</span>

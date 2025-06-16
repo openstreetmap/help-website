@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't think that anything exactly like this already exists, but have a look at the examples on the "monitoring" section of the <a href="http://wiki.openstreetmap.org/wiki/Quality_assurance">QA wiki page</a> just to make sure. The source is available for many of the tools there so you may be able to implement something that does what you want with a relatively small change.</p>
+<p>I don't think that anything exactly like this already exists, but have a look at the examples on the "monitoring" section of the <a href="https://wiki.openstreetmap.org/wiki/Quality_assurance">QA wiki page</a> just to make sure. The source is available for many of the tools there so you may be able to implement something that does what you want with a relatively small change.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>maybe you can have a look at the OWL history viewer:</p>
 <p><a href="https://github.com/ppawel/openstreetmap-website/commits/owl-history-tab">https://github.com/ppawel/openstreetmap-website/commits/owl-history-tab</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OWL">http://wiki.openstreetmap.org/wiki/OWL</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OWL">https://wiki.openstreetmap.org/wiki/OWL</a></p>
 <p>and <a href="http://owl.apis.dev.openstreetmap.org/">http://owl.apis.dev.openstreetmap.org</a></p>
 <p>But development has sadly got stuck.</p>
 </div>

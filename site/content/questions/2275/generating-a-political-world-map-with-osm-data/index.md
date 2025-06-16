@@ -201,9 +201,9 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I once had a comparable use case. You might try using <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>. The command was like this:</p>
+<p>I once had a comparable use case. You might try using <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>. The command was like this:</p>
 <pre><code>./osmfilter myMap.osm --keep=&quot;all boundary=administrative admin_level=2&quot; &gt;myMapjustBoundaries.osm.</code></pre>
-<p>This way you should end up with a file that contains only osm ways and osm relations that make up national boundaries. For coastlines you'd have to run it a second time with a different <em>--keep filter</em> and then merge the outcomesw with <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Merging_two_or_more_Geographical_Areas">osmconvert</a>.</p>
+<p>This way you should end up with a file that contains only osm ways and osm relations that make up national boundaries. For coastlines you'd have to run it a second time with a different <em>--keep filter</em> and then merge the outcomesw with <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Merging_two_or_more_Geographical_Areas">osmconvert</a>.</p>
 <p>Alternatively you could just download the polygon file for national boundaries at <a href="http://downloads.cloudmade.com/">Cloudmade</a>...</p>
 </div>
 <div class="answer-controls post-controls">
@@ -272,7 +272,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>Instead of downloading everything and then filtering you could also <strong>download the data selectively</strong> from one of the people that provide a service for this.</p>
-<p>You could for instance use one of the <a href="http://wiki.openstreetmap.org/wiki/XAPI">XAPI</a>-servers or the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass api</a>. Then you can render this extract with <a href="http://wiki.openstreetmap.org/wiki/Rendering#Rendering_Software">one of the renderers</a>, e.g. <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> or <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>.</p>
+<p>You could for instance use one of the <a href="https://wiki.openstreetmap.org/wiki/XAPI">XAPI</a>-servers or the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass api</a>. Then you can render this extract with <a href="https://wiki.openstreetmap.org/wiki/Rendering#Rendering_Software">one of the renderers</a>, e.g. <a href="https://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> or <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>.</p>
 <p>Be prepared that the resulting PDF (if vector) and SVG will become very big. For most usecases you might want to simplify the data before converting it (that's why the natural earth datasets might suit better your needs).</p>
 </div>
 <div class="answer-controls post-controls">

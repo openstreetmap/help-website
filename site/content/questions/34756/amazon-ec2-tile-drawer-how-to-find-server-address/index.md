@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I also followed the guide on <a href="http://tiledrawer.com/">http://tiledrawer.com/</a> and am running an instance. I want to check http://{address}/tiles/preview.html but don't know what is the address in my case. Where can I get this?</p>
-<p>(converted from comment on <a href="https://help.openstreetmap.org/questions/21512/amazon-ec2-tile-drawer-stuck-on-software-installing">this question</a>)</p>
+<p>(converted from comment on <a href="/questions/21512/amazon-ec2-tile-drawer-stuck-on-software-installing">this question</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tiledrawer" rel="tag" title="see questions tagged &#39;tiledrawer&#39;">tiledrawer</span> <span class="post-tag tag-link-ec2" rel="tag" title="see questions tagged &#39;ec2&#39;">ec2</span>

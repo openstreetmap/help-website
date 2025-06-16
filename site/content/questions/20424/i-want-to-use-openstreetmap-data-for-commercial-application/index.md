@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, there is a <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>.</p>
+<p>Yes, there is a <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -102,7 +102,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>That'd be somewhere here then I guess?:</p>
-<p><a href="http://www.openstreetmap.org/?lat=40.44329&amp;lon=-80.00238&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=40.44329&amp;lon=-80.00238&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=40.44329&amp;lon=-80.00238&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=40.44329&amp;lon=-80.00238&amp;zoom=17&amp;layers=M</a></p>
 <p>If you click that, and then the "edit" tab up at the top-left of the map, you should be taken into the on-line editor, with Bing aerial data as a background. If you know which one of the buildings on Duquesne Blvd is the convention center, then you can add it by dragging an icon onto the map.</p>
 </div>
 <div id="comment-5694-info" class="comment-info">
@@ -168,7 +168,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may have already read it, but just in case not - there's a <a href="http://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginner's guide</a> in the OSM wiki that contains a whole bunch of links about how to start.<br />
+<p>You may have already read it, but just in case not - there's a <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginner's guide</a> in the OSM wiki that contains a whole bunch of links about how to start.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

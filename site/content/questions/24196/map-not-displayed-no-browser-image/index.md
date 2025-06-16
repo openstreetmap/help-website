@@ -46,7 +46,7 @@ osqa_accepted = false
 <p>all i see is: renderd[35717]: DEBUG: Got command Render fd(16) xml(default), z(20), x(30), y(10) renderd[35717]: DEBUG: Connection 8, fd 28 closed, now 8 left</p>
 <p>Apache is started successfully (i think): [Sat Jul 13 08:22:16 2013] [warn] Could not determine host name of server to configure tile-json request. Using localhost instead [Sat Jul 13 08:22:16 2013] [notice] Loading tile config style2 at for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png ...done.</p>
 <p>Can someone please assist? What am i missing?</p>
-<p>I've also found this thread which also is similiar to my problem but still no luck: <a href="https://help.openstreetmap.org/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty">https://help.openstreetmap.org/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty</a></p>
+<p>I've also found this thread which also is similiar to my problem but still no luck: <a href="/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty">https://help.openstreetmap.org/questions/23257/map-not-displayed-in-the-browser-and-mod_tile-folder-is-empty</a></p>
 <p>Currently my renderd.conf is completely the same as described in this thread (only using my username and gis db).</p>
 <p>Any ideas ? How should i debugging this?</p>
 </div>
@@ -126,7 +126,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't think we have enough information to tell you where things are going wrong for you, but in general it's probably a good idea to do some checks. Did the Mapnik install go OK? Try using <code>generate_image.py</code> to generate a non-tiled image of a region of map data. No luck with that? Rewind a bit further. Did the postGIS database loading go OK? With psql command-line or using pgadmin tool, poke around in your database and see if there any records.</p>
-<p>The switch2osm docs are good but brief. There's more <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik &amp; OSM install documentation here</a>, which might give more clues when things go wrong.</p>
+<p>The switch2osm docs are good but brief. There's more <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik &amp; OSM install documentation here</a>, which might give more clues when things go wrong.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

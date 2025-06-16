@@ -245,7 +245,7 @@ osqa_accepted = true
 <p>Two points:</p>
 <p>One, the easiest way to trim the data is at recording time. Before starting an offroad section, you could stop the GPX trace recording, or start a new "segment" within the same trace (so when you get to a PC you can review the track at segment granularity, which would be much faster and more accurate). This has all the usual advantages of taking notes while surveying "in the field", such as not coming home, looking at the track, and realizing you don't remember which portions are/aren't offroad.</p>
 <p>Two, the traces are useful even in uncropped form: armchair mappers aren't just going to add a highway under any random GPS trace they see, but they will first validate (with e.g. aerial photos) that there is indeed a road in that area. (You can view these aerial photos yourself by opening your favourite map editor.) Also, I assume the offroad traces will be isolated (there will be no other traces parallel to them) whereas the onroad traces will be colocated with many other traces, which will make it easier for mappers to distinguish on- and offroad parts.</p>
-<p>You could also add appropriate area tags to the cross-country parts, e.g., <a href="http://wiki.openstreetmap.org/wiki/Key:landuse">landuse=*</a>.</p>
+<p>You could also add appropriate area tags to the cross-country parts, e.g., <a href="https://wiki.openstreetmap.org/wiki/Key:landuse">landuse=*</a>.</p>
 <p>And welcome!</p>
 </div>
 <div class="answer-controls post-controls">

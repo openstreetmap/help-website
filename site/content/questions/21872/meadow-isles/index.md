@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the Potlatch 2 example on <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">this page</a> - there are a series of screenshots that explain what you need to do.</p>
+<p>Have a look at the Potlatch 2 example on <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">this page</a> - there are a series of screenshots that explain what you need to do.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

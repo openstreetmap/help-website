@@ -199,8 +199,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For all I know, the people in the governments in the region of Ex-Yugoslavia are quite open to data donations in one form or another to OpenStreetMap. You should visit and ask them. If you get not maps but already preprocessed geodata you should go with the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a>.</p>
-<p>Additionally you could browse the wiki for available data sources or even for creating your own aerial imagery <a href="http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">like here</a>.</p>
+<p>For all I know, the people in the governments in the region of Ex-Yugoslavia are quite open to data donations in one form or another to OpenStreetMap. You should visit and ask them. If you get not maps but already preprocessed geodata you should go with the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a>.</p>
+<p>Additionally you could browse the wiki for available data sources or even for creating your own aerial imagery <a href="https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">like here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

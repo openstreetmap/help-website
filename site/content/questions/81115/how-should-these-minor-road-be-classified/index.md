@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>In my area of mapping (Thailand), I see a lot of inconsistencies in the classification of minor roads and I am looking for some feedback on best practices and hopefully some definitive answers. (Country wiki provides no guidelines)</p>
 <p>I will not provide real-world examples since my goal is not to fix specific OSM data, but to come up with a set of rules and guidelines. If the theoretical examples are not clear enough, please let me know in the comment section what other information you need.</p>
 <p>How should these minor roads be classified?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM_rxASZc3.png" alt="alt text" /></p>
+<p><img src="/upfiles/OSM_rxASZc3.png" alt="alt text" /></p>
 <p><strong>A) a minor road within a settlement has a few houses at the beginning but the rest of the road has only agricultural fields on each side.</strong><br />
 Should the road be tagged entirely as residential or only the first part and the second part marked as a track?</p>
 <p><strong>B) a minor road has mostly agricultural fields on each side but there could be 1 or 2 rare houses along.</strong> Should the road be tagged entirely as residential or track? Does a single house in a middle of a long minor road justify a residential classification?</p>
@@ -225,7 +225,7 @@ Should the road be tagged as service or track?</p>
 <p>Maybe also see <a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">https://wiki.openstreetmap.org/wiki/Duck_tagging</a></p>
 </blockquote>
 <p>Irrelevant here. We are talking about "highway" classification: the single, most basic tag for roads. Other tags can grow over time, great, but we can't even explain to existing mappers how to use the most basic one.</p>
-<p>No doubt most new mappers give up: <a href="https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
+<p>No doubt most new mappers give up: <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
 <p>Those brave enough to stay end up preaching their own interpretation or follow others. Some mappers end up silently changing others' changes because they would not agree together on an interpretation.</p>
 <p>Clearer guidelines would simply solve this. Wouldn't they?</p>
 </div>

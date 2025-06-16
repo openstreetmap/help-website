@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM2PGSQL unable to read .pbf files"
-description = '''Hi, I have installed osm2pgsql with all required dependencies (according to http://wiki.openstreetmap.org/wiki/Osm2pgsql), but when reading a .pbf file, I&#x27;m getting this message: ERROR: PBF support has not been compiled into this version of osm2pgsql, please either compile it with pbf support or use...'''
+description = '''Hi, I have installed osm2pgsql with all required dependencies (according to https://wiki.openstreetmap.org/wiki/Osm2pgsql), but when reading a .pbf file, I&#x27;m getting this message: ERROR: PBF support has not been compiled into this version of osm2pgsql, please either compile it with pbf support or use...'''
 date = "2014-02-04T10:10:00Z"
 lastmod = "2014-12-08T01:06:00Z"
 weight = 30435
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I have installed osm2pgsql with all required dependencies (according to <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql),">http://wiki.openstreetmap.org/wiki/Osm2pgsql),</a> but when reading a .pbf file, I'm getting this message:</p>
+<p>I have installed osm2pgsql with all required dependencies (according to <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql),">https://wiki.openstreetmap.org/wiki/Osm2pgsql),</a> but when reading a .pbf file, I'm getting this message:</p>
 <pre><code>ERROR: PBF support has not been compiled into this version of osm2pgsql, please either compile it with pbf support or use one of the other input formats</code></pre>
 <p>My version of osm2pgsql is 0.85.0, so I think it's supposed to read .pbf. Is there anything I can do about it?</p>
 <p>EDIT: OK, already solved - I've made some reinstalls, I've also tried some older versions, so I don't know what exactly caused this issue, but now everything, works fine.</p>

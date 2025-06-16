@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was about to ask <a href="https://help.openstreetmap.org/questions/7486/narrow-streets-in-old-cities">the same question</a>. I think, actually, that the situations I have found are even worse. I am talking about alleys where a car just won't fit and sometimes, due to steep slopes, they're accessible only through stairways. The combination highway=service,service=alley didn't look appropriate because it seems like suggesting that you could go there by car if you need to; highway=pedestrian seems to refer more to a broad road that could in theory be employed by cars but has been chosen to not be; so I went for highway=footway. I know it's wrong, but what should I do instead?</p>
+<p>I was about to ask <a href="/questions/7486/narrow-streets-in-old-cities">the same question</a>. I think, actually, that the situations I have found are even worse. I am talking about alleys where a car just won't fit and sometimes, due to steep slopes, they're accessible only through stairways. The combination highway=service,service=alley didn't look appropriate because it seems like suggesting that you could go there by car if you need to; highway=pedestrian seems to refer more to a broad road that could in theory be employed by cars but has been chosen to not be; so I went for highway=footway. I know it's wrong, but what should I do instead?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-narrow" rel="tag" title="see questions tagged &#39;narrow&#39;">narrow</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-alley" rel="tag" title="see questions tagged &#39;alley&#39;">alley</span>
@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If a car doesn't fit then just don't use a tag indicating a car-usable road. Why do you think highway=footway is wrong? It sounds really fine to me for your case. Additional <a href="http://wiki.openstreetmap.org/wiki/Key:access">access tags</a> might be needed if bicycles or mofas are allowed, for example.</p>
+<p>If a car doesn't fit then just don't use a tag indicating a car-usable road. Why do you think highway=footway is wrong? It sounds really fine to me for your case. Additional <a href="https://wiki.openstreetmap.org/wiki/Key:access">access tags</a> might be needed if bicycles or mofas are allowed, for example.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -143,7 +143,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Yes it would, see the <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions#Default">default access restrictions</a>. Note that path also allows horses. Likewise, adding <em>bicycle=yes</em> to <em>highway=footway</em> will also allow bicycles. Generally it can't hurt to specify some access restrictions explicitly, especially when using <em>highway=path</em>.</p>
+<p>Yes it would, see the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions#Default">default access restrictions</a>. Note that path also allows horses. Likewise, adding <em>bicycle=yes</em> to <em>highway=footway</em> will also allow bicycles. Generally it can't hurt to specify some access restrictions explicitly, especially when using <em>highway=path</em>.</p>
 </div>
 <div id="comment-40916-info" class="comment-info">
 <span class="comment-age">(10 Feb '15, 11:02)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -211,7 +211,7 @@ osqa_accepted = true
 <div id="post-40954-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/87/pieren">@Pieren</a> any of these <a href="https://en.wikipedia.org/wiki/City_car">https://en.wikipedia.org/wiki/City_car</a> can clearly navigate the street in my example.</p>
+<p><a href="https://help.openstreetmap.org/users/87/pieren">@Pieren</a> any of these <a href="https://en.wikipedia.org/wiki/City_car">https://en.wikipedia.org/wiki/City_car</a> can clearly navigate the street in my example.</p>
 </div>
 <div id="comment-40954-info" class="comment-info">
 <span class="comment-age">(11 Feb '15, 10:06)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -273,7 +273,7 @@ osqa_accepted = true
 <div id="post-40951-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Of course there are! Mofa, moped and motorcycle - see <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a> If you still don't like service/alley please consider highway=path which is the "universal footway" and hast bicycle already included.</p>
+<p>Of course there are! Mofa, moped and motorcycle - see <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> If you still don't like service/alley please consider highway=path which is the "universal footway" and hast bicycle already included.</p>
 </div>
 <div id="comment-40951-info" class="comment-info">
 <span class="comment-age">(11 Feb '15, 08:21)</span> <span class="comment-user userinfo">Jojo4u</span>
@@ -284,7 +284,7 @@ osqa_accepted = true
 <div id="post-40952-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you <a href="http://help.openstreetmap.org/users/10452/jojo4u">@Jojo4u</a> I see it under motorised and single track. The tag highway=path is a "generic path" which I believe means it has been created by common usage (as across an unused plot or countryside) and not purpose built such as the alley described above.</p>
+<p>Thank you <a href="https://help.openstreetmap.org/users/10452/jojo4u">@Jojo4u</a> I see it under motorised and single track. The tag highway=path is a "generic path" which I believe means it has been created by common usage (as across an unused plot or countryside) and not purpose built such as the alley described above.</p>
 </div>
 <div id="comment-40952-info" class="comment-info">
 <span class="comment-age">(11 Feb '15, 09:18)</span> <span class="comment-user userinfo">RAytoun</span>
@@ -295,7 +295,7 @@ osqa_accepted = true
 <div id="post-40953-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10287/raytoun"></a><a href="http://help.openstreetmap.org/users/10287/raytoun">@RAytoun</a> That's a common misconception resulting from the poor naming scheme. highway=path is not just limited to trails but can be used for artificial, paved ways, too. A common example is to use highway=path for cycleways (paved and unpaved), usually by adding bicycle=designated.</p>
+<p><a href="https://help.openstreetmap.org/users/10287/raytoun"></a><a href="https://help.openstreetmap.org/users/10287/raytoun">@RAytoun</a> That's a common misconception resulting from the poor naming scheme. highway=path is not just limited to trails but can be used for artificial, paved ways, too. A common example is to use highway=path for cycleways (paved and unpaved), usually by adding bicycle=designated.</p>
 </div>
 <div id="comment-40953-info" class="comment-info">
 <span class="comment-age">(11 Feb '15, 09:45)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -306,7 +306,7 @@ osqa_accepted = true
 <div id="post-40955-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> I thought that was what highway=cycleway was for. See Wiki for highway=path.... A non-specific path. Use highway=footway for paths mainly for walkers, highway=cycleway for one also usable by cyclists, highway=bridleway for ones available to horses as well as walkers and highway=track for ones which is passable by agriculture or similar vehicles.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> I thought that was what highway=cycleway was for. See Wiki for highway=path.... A non-specific path. Use highway=footway for paths mainly for walkers, highway=cycleway for one also usable by cyclists, highway=bridleway for ones available to horses as well as walkers and highway=track for ones which is passable by agriculture or similar vehicles.</p>
 </div>
 <div id="comment-40955-info" class="comment-info">
 <span class="comment-age">(11 Feb '15, 10:17)</span> <span class="comment-user userinfo">RAytoun</span>
@@ -360,7 +360,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>highway=service plus service=alley is the natural tag for narrow access roads where motorized traffic is allowed. Combine with est_width or really fancy vehicle:conditional=discouraged@(width&gt;1m)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">http://wiki.openstreetmap.org/wiki/Tag:service%3Dalley</a> "some medieval European settlements alleys may be the very narrow streets which run in-between buildings, providing public through-access."</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">https://wiki.openstreetmap.org/wiki/Tag:service%3Dalley</a> "some medieval European settlements alleys may be the very narrow streets which run in-between buildings, providing public through-access."</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

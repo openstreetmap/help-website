@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-50198-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>josm is an editor to change OpenStreetMap data, see <a href="http://wiki.openstreetmap.org/wiki/JOSM">its wiki page</a> it cannot be used to change website preferences (whatever site you are looking at) nor colours of maps displayed at a particular site.</p>
+<p>josm is an editor to change OpenStreetMap data, see <a href="https://wiki.openstreetmap.org/wiki/JOSM">its wiki page</a> it cannot be used to change website preferences (whatever site you are looking at) nor colours of maps displayed at a particular site.</p>
 </div>
 <div id="comment-50198-info" class="comment-info">
 <span class="comment-age">(14 Jun '16, 13:39)</span> <span class="comment-user userinfo">escada</span>

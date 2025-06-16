@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Normally we would not have tile borders in OSM - our data model is not tile based. Normally we would expect that someone who imports data from another source takes care to prepare the data to match OSM standards. However, CanVec importers have often done sloppy work and favoured speed and quantity of data over quality, hence the "tiled" woods in OSM (e.g. <a href="http://www.openstreetmap.org/relation/1504239">http://www.openstreetmap.org/relation/1504239</a> from your example).</p>
+<p>Normally we would not have tile borders in OSM - our data model is not tile based. Normally we would expect that someone who imports data from another source takes care to prepare the data to match OSM standards. However, CanVec importers have often done sloppy work and favoured speed and quantity of data over quality, hence the "tiled" woods in OSM (e.g. <a href="https://www.openstreetmap.org/relation/1504239">https://www.openstreetmap.org/relation/1504239</a> from your example).</p>
 <p>It is possible to write your map style in a way to gloss over these problems by applying a suitable gamma value to the "Polygon Symbolizer". It is possible that changes to this gamma value are responsible for the change you say you've observed.</p>
 </div>
 <div class="answer-controls post-controls">

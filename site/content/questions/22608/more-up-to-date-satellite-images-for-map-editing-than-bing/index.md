@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-22609-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Bing coverage varies and even in well populated well funded countries images can be a few years old. some countries its only possible to see just enough to trace a very big river. Ariel images are collected for commercial or strategic reasons and I assume quite expensive. more info <a href="http://wiki.openstreetmap.org/w/index.php?search=bing+coverage&amp;title=Special%3ASearch">http://wiki.openstreetmap.org/w/index.php?search=bing+coverage&amp;title=Special%3ASearch</a></p>
+<p>Bing coverage varies and even in well populated well funded countries images can be a few years old. some countries its only possible to see just enough to trace a very big river. Ariel images are collected for commercial or strategic reasons and I assume quite expensive. more info <a href="https://wiki.openstreetmap.org/w/index.php?search=bing+coverage&amp;title=Special%3ASearch">https://wiki.openstreetmap.org/w/index.php?search=bing+coverage&amp;title=Special%3ASearch</a></p>
 </div>
 <div id="comment-22609-info" class="comment-info">
 <span class="comment-age">(21 May '13, 22:14)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -169,7 +169,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/7617/old-satellite-image">https://help.openstreetmap.org/questions/7617/old-satellite-image</a></p>
+<p><a href="/questions/7617/old-satellite-image">https://help.openstreetmap.org/questions/7617/old-satellite-image</a></p>
 <p>This is the answer I was referring to.</p>
 </div>
 <div id="comment-22618-info" class="comment-info">

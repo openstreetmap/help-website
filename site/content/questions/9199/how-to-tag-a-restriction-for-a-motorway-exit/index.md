@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>access=no bus=yes taxi=yes</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Access">access tag</a> on the wiki.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Access">access tag</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

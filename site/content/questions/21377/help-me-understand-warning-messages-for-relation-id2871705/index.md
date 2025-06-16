@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Using JOSM I have just added a high school having two open atria, areas that have no roof and are surrounded by building. I used a multi-polygon with role "outer" to describe the outer building and two multi-polygons with roles "inner" to describe the enclosed open areas.</p>
-<p>When I upload the data to OSM I get assorted warnings about the multipolygons. It is <a href="http://www.openstreetmap.org/browse/relation/2871705">relation id 2871705</a>. Can anyone help explain what's going on?</p>
+<p>When I upload the data to OSM I get assorted warnings about the multipolygons. It is <a href="https://www.openstreetmap.org/browse/relation/2871705">relation id 2871705</a>. Can anyone help explain what's going on?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-warnings" rel="tag" title="see questions tagged &#39;warnings&#39;">warnings</span>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The main problem seems to be you have added an extra multipolygon relation in the same changeset, see <a href="http://www.openstreetmap.org/browse/relation/2871704">relation 2871704</a></p>
+<p>The main problem seems to be you have added an extra multipolygon relation in the same changeset, see <a href="https://www.openstreetmap.org/browse/relation/2871704">relation 2871704</a></p>
 <p>This only has a single inner member, so it doesn't make much sense, which is why JOSM has a warning. The other multipolygon (2871705) seems to be fine. So just delete relation 2871704, and it should fix the problem.</p>
 </div>
 <div class="answer-controls post-controls">

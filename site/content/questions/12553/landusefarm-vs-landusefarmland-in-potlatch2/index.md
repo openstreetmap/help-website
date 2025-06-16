@@ -42,11 +42,11 @@ osqa_accepted = false
 <p>Total confusion here.</p>
 <ol>
 <li>Potlatch2 offers as 1st choice (first icon) landuse=farm and landuse=farmland as 3rd choice</li>
-<li>The wiki redirects <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse=farmland">landuse=farmland</a> to <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarm">landuse=farm</a> and gives no further explanation on <em>landuse=farmland</em>, picture only mentions <em>landuse=farm</em></li>
+<li>The wiki redirects <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=farmland">landuse=farmland</a> to <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarm">landuse=farm</a> and gives no further explanation on <em>landuse=farmland</em>, picture only mentions <em>landuse=farm</em></li>
 </ol>
 <p>If concepts are the same, both should be maintained for backward compatibility. However, <strong>Potlatch2</strong> should only offer the less ambiguous but commmonly accepted one, i.e. farmland, and DROP farm.</p>
 <p>Not to mention, that for French speaking people, the farmyard is a <em>ferme</em>, a false friend of farm.</p>
-<p>I have also read the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/farmland">Proposed features/farmland</a> but conversation has been inactive for a while.</p>
+<p>I have also read the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/farmland">Proposed features/farmland</a> but conversation has been inactive for a while.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-farm" rel="tag" title="see questions tagged &#39;farm&#39;">farm</span> <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-farmland" rel="tag" title="see questions tagged &#39;farmland&#39;">farmland</span>

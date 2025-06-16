@@ -250,7 +250,7 @@ osqa_accepted = false
 <li>Double-click the row located in the lower table called "Relation"</li>
 </ul>
 <p>A new window should appear and you can edit the name of the county.</p>
-<p>(If the first step is difficult enough you can watch <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">these video-tutorials</a> to get started)</p>
+<p>(If the first step is difficult enough you can watch <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">these video-tutorials</a> to get started)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

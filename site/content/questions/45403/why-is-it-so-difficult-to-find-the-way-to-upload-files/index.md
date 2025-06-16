@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming it is GPS tracks, if you are logged into the main OSM website at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> there is a "GPS Traces" link at the top. Click on that and you will see a page of recent uploads. Near the top of that page is a link that says "Upload a trace", click that to upload your GPS tracks.</p>
+<p>Assuming it is GPS tracks, if you are logged into the main OSM website at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> there is a "GPS Traces" link at the top. Click on that and you will see a page of recent uploads. Near the top of that page is a link that says "Upload a trace", click that to upload your GPS tracks.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

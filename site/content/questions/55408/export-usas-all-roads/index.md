@@ -106,9 +106,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For such a large region you should download an extract and filter out the roads:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Regional_extract_sources">http://wiki.openstreetmap.org/wiki/Planet.osm#Regional_extract_sources</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Regional_extract_sources">https://wiki.openstreetmap.org/wiki/Planet.osm#Regional_extract_sources</a></p>
 <p>There are a variety of OSM specific tools that can do this filtering as they load data into a database:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

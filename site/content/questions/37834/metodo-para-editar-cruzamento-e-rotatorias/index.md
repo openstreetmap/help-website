@@ -124,7 +124,7 @@ One Answer:
 <div class="answer-body">
 <p>Não tem fórmula mágica ou regra que serve para todos os casos, mas neste exemplo que você deu a forma mais prática, funcional e simples seria:</p>
 <p><img src="http://i.imgur.com/6AsDO9D.png" alt="Solução" /></p>
-<p>Esse ponto azul com um triângulo branco é a representação de um <code>traffic_calming=island</code>, que é uma separação temporária da via: <a href="http://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland">http://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland</a></p>
+<p>Esse ponto azul com um triângulo branco é a representação de um <code>traffic_calming=island</code>, que é uma separação temporária da via: <a href="https://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland">https://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland</a></p>
 <p>Só precisa utilizar um ponto representando isso, sem separar as vias. Apenas para comparação com os dados atuais do seu exemplo, caso alguém modifique os dados posteriormente:</p>
 <p><img src="http://i.imgur.com/Lva6oxI.png" alt="Antigo" /></p>
 </div>
@@ -157,7 +157,7 @@ One Answer:
 <div id="post-37851-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>No fundo não faz diferença o editor que você usa. Eu uso e gosto muito do JOSM: <a href="http://wiki.openstreetmap.org/wiki/Josm">http://wiki.openstreetmap.org/wiki/Josm</a> e <a href="http://josm.openstreetmap.de/">http://josm.openstreetmap.de/</a></p>
+<p>No fundo não faz diferença o editor que você usa. Eu uso e gosto muito do JOSM: <a href="https://wiki.openstreetmap.org/wiki/Josm">https://wiki.openstreetmap.org/wiki/Josm</a> e <a href="http://josm.openstreetmap.de/">http://josm.openstreetmap.de/</a></p>
 <p>Mas ele possui uma curva de aprendizagem maior no começo (a impressão que ele passa, principalmente para quem está começando, é de que é mais "difícil").</p>
 <p>Acho que a resposta é: teste os editores e use o que mais te agradar :-)</p>
 </div>

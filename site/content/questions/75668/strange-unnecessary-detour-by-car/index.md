@@ -222,7 +222,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>But I presume that you drove along that way. Do you remember a police check point for coronavirus ? On the map, it is forbidden to continue on the main highway 104, it is compulsory to turn on the right. If you noticed nothing, We can remove all the previous restrictions (I have removed the first one before the fork).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/highway104.png" alt="Part of the highway is forbidden" /></p>
+<p><img src="/upfiles/highway104.png" alt="Part of the highway is forbidden" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

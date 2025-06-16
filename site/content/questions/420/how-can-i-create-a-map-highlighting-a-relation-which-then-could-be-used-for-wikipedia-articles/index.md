@@ -72,7 +72,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>You should not create "collection" relations (like "a relation of all harbours"). See <a href="http://wiki.openstreetmap.org/wiki/Relations_are_not_categories">Relations are not categories</a> on the OSM wiki.<br />
+<p>You should not create "collection" relations (like "a relation of all harbours"). See <a href="https://wiki.openstreetmap.org/wiki/Relations_are_not_categories">Relations are not categories</a> on the OSM wiki.<br />
 </p>
 </div>
 <div id="comment-421-info" class="comment-info">
@@ -131,8 +131,8 @@ One Answer:
 <li>Browse to where a member of the relation is on the map</li>
 <li>Click the blue/white '+' sign on the right-hand side of the map and check the 'Data' box (make sure you're zoomed all the way in).</li>
 <li>Click on the relation member in the map view and then click the 'Details' link in the box on the left.</li>
-<li>This will open a <a href="http://www.openstreetmap.org/browse/way/41970000">page describing the wa</a>y. At the bottom of it, there will be a list of all the relations this way is a member of. Clicking on the name of the relation in that list will take you to the <a href="http://www.openstreetmap.org/browse/relation/319128">relation description page</a>.</li>
-<li>On this page there is a map on the right-hand side under which are two links. Clicking on the 'View relation on larger map' will take you to a full-screen OSM map with the relation highlighted (something like <a href="http://www.openstreetmap.org/?relation=319128">this</a>).</li>
+<li>This will open a <a href="https://www.openstreetmap.org/browse/way/41970000">page describing the wa</a>y. At the bottom of it, there will be a list of all the relations this way is a member of. Clicking on the name of the relation in that list will take you to the <a href="https://www.openstreetmap.org/browse/relation/319128">relation description page</a>.</li>
+<li>On this page there is a map on the right-hand side under which are two links. Clicking on the 'View relation on larger map' will take you to a full-screen OSM map with the relation highlighted (something like <a href="https://www.openstreetmap.org/?relation=319128">this</a>).</li>
 </ol>
 <p>To export this map, just use the standard exporting methods (screenshot or the 'Export' tab) or use the 'Permalink' link at the bottom left.</p>
 </div>

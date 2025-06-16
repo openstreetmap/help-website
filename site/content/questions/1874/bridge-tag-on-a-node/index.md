@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Bridge tag on a node is allowed here: <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Properties">Map_Features#Properties</a></p>
-<p>But not here: <a href="http://wiki.openstreetmap.org/wiki/Key:bridge">Key:bridge</a></p>
+<p>Bridge tag on a node is allowed here: <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Properties">Map_Features#Properties</a></p>
+<p>But not here: <a href="https://wiki.openstreetmap.org/wiki/Key:bridge">Key:bridge</a></p>
 <p>So what is the official take on this?</p>
 <p>(one node bridge seems quite reasonable: do we really need to map precise length for a small footbridge over a ditch?)</p>
 </div>

@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that you really just want to have shots of someone using the main "slippy map" web site. I presume by 'cleared', you mean to get the appropriate permissions. This <strong><em>might</em></strong> be no more onerous than giving the appropriate credit. This page: <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> is probably the place to start looking for guidance.</p>
+<p>I suspect that you really just want to have shots of someone using the main "slippy map" web site. I presume by 'cleared', you mean to get the appropriate permissions. This <strong><em>might</em></strong> be no more onerous than giving the appropriate credit. This page: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> is probably the place to start looking for guidance.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

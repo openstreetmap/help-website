@@ -196,7 +196,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I came across <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">this page</a> on the OS Opendata Project which may be of help to UK OSM cartographers.</p>
+<p>I came across <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">this page</a> on the OS Opendata Project which may be of help to UK OSM cartographers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

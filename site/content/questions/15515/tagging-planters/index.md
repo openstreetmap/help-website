@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have been having trouble finding appropriate tags for planters. For any confused by the term, they are often placed in town squares and other landscaped areas, also referred to as raised or brick planters.</p>
 <p>I'm sure there must be examples out there but I can't find any.</p>
-<p>The area concerned is <a href="http://www.openstreetmap.org/?lat=52.447335&amp;lon=0.624305&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.447335&amp;lon=0.624305&amp;zoom=18&amp;layers=M</a> though not shown on the standard map (that is not my issue).</p>
+<p>The area concerned is <a href="https://www.openstreetmap.org/?lat=52.447335&amp;lon=0.624305&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.447335&amp;lon=0.624305&amp;zoom=18&amp;layers=M</a> though not shown on the standard map (that is not my issue).</p>
 <p>and webcam image at <a href="http://www.brandonsuffolk.com/webcam.asp">link text</a> wooden seats/planters are in the foreground of the top image, brick planter at the far edge of the square</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -176,7 +176,7 @@ osqa_accepted = false
 <p>To the best of my knowledge, there is no existing tagging scheme for planters.</p>
 <p>So it's now up to you (or anybody else who is interested in mapping them) to define a tag. Choose it in a manner that does not conflict with any existing tags, and that preferably makes it clear what the tag is intended for even without reading a definition.</p>
 <p>A straightforward pick would be to use "planter" as the value. I'm not sure about the best key, but man_made=planter might be a decent choice. Alternatively, you could make up an entirely new category of features with its own key that could also include other greenery details, such as individual bedding areas? In the past, people have asked how these should be mapped, too.</p>
-<p>No matter which solution you come up with, it would be helpful (not required, however) to discuss this with other mappers. Suitable places are the tagging <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a> or the <a href="http://wiki.openstreetmap.org/wiki/Forum">forums</a>. If people generally like your idea, a <a href="http://wiki.openstreetmap.org/wiki/Proposal">wiki proposal</a> is a possible next step, even though it is quite a bit of work.</p>
+<p>No matter which solution you come up with, it would be helpful (not required, however) to discuss this with other mappers. Suitable places are the tagging <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a> or the <a href="https://wiki.openstreetmap.org/wiki/Forum">forums</a>. If people generally like your idea, a <a href="https://wiki.openstreetmap.org/wiki/Proposal">wiki proposal</a> is a possible next step, even though it is quite a bit of work.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -228,8 +228,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I found the following discussion in september 2009 on the OSM main mailing list:</p>
 <p><a href="http://lists.openstreetmap.org/pipermail/talk/2009-June/037984.html">http://lists.openstreetmap.org/pipermail/talk/2009-June/037984.html</a> (and nexts)</p>
-<p>The sarcastic answers show that many people have doubts about tagging such things, especially if it is not permanent. If it's not the case, "<a href="http://wiki.openstreetmap.org/wiki/Barrier">barrier</a>" seems to be the most proposed key. Then choose a value, e.g. "bollard" like in the discussion mentionned above or why not a new value like "barrier=planter".</p>
-<p>But this should be discussed on the <a href="http://wiki.openstreetmap.org/wiki/MailingLists">tagging mailing list</a>; this help site is not the right place to start a discussion.</p>
+<p>The sarcastic answers show that many people have doubts about tagging such things, especially if it is not permanent. If it's not the case, "<a href="https://wiki.openstreetmap.org/wiki/Barrier">barrier</a>" seems to be the most proposed key. Then choose a value, e.g. "bollard" like in the discussion mentionned above or why not a new value like "barrier=planter".</p>
+<p>But this should be discussed on the <a href="https://wiki.openstreetmap.org/wiki/MailingLists">tagging mailing list</a>; this help site is not the right place to start a discussion.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -380,7 +380,7 @@ osqa_accepted = false
 <div id="post-15684-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Actully a planter would fit perfectly in the current definition of <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden</a> even without using a subtype.</p>
+<p>Actully a planter would fit perfectly in the current definition of <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden</a> even without using a subtype.</p>
 </div>
 <div id="comment-15684-info" class="comment-info">
 <span class="comment-age">(30 Aug '12, 16:17)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to delete a section of road without breaking a national cycle path"
-description = '''Can anyone help me with the mapping of Brunel Way (http://www.openstreetmap.org/#map=18/50.86491/-1.24169)? Brunel way ends at its junction with Barnes Wallis Road. It does not connect directly to the roundabout as shown on the map, although Barnes Wallis Road does. However, if I simply delete that ...'''
+description = '''Can anyone help me with the mapping of Brunel Way (https://www.openstreetmap.org/#map=18/50.86491/-1.24169)? Brunel way ends at its junction with Barnes Wallis Road. It does not connect directly to the roundabout as shown on the map, although Barnes Wallis Road does. However, if I simply delete that ...'''
 date = "2014-12-07T19:26:00Z"
 lastmod = "2014-12-09T08:12:00Z"
 weight = 39121
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can anyone help me with the mapping of Brunel Way (<a href="http://www.openstreetmap.org/#map=18/50.86491/-1.24169)?">http://www.openstreetmap.org/#map=18/50.86491/-1.24169)?</a> Brunel way ends at its junction with Barnes Wallis Road. It does not connect directly to the roundabout as shown on the map, although Barnes Wallis Road does. However, if I simply delete that section of Brunel Way, I suspect that I would break National Cycle Route 236, which is shown as including the non-existent section of Brunel Way. Probably the cycle route includes a section of Barnes Wallis Road, but I am reluctant to map it in that way as it would be pure speculation on my part. Can anyone tell me how to confirm the actual path of the cycle route?</p>
+<p>Can anyone help me with the mapping of Brunel Way (<a href="https://www.openstreetmap.org/#map=18/50.86491/-1.24169)?">https://www.openstreetmap.org/#map=18/50.86491/-1.24169)?</a> Brunel way ends at its junction with Barnes Wallis Road. It does not connect directly to the roundabout as shown on the map, although Barnes Wallis Road does. However, if I simply delete that section of Brunel Way, I suspect that I would break National Cycle Route 236, which is shown as including the non-existent section of Brunel Way. Probably the cycle route includes a section of Barnes Wallis Road, but I am reluctant to map it in that way as it would be pure speculation on my part. Can anyone tell me how to confirm the actual path of the cycle route?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-national" rel="tag" title="see questions tagged &#39;national&#39;">national</span> <span class="post-tag tag-link-cyclepath" rel="tag" title="see questions tagged &#39;cyclepath&#39;">cyclepath</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>IF you <a href="http://www.openstreetmap.org/relation/3172056">inspect the relation</a> and click on “view history”, Brunel Way was added in changeset 25254421 by user pompeybug. Although relation histories can be complicated by edits that split ways for other purposes your best bet is to talk to that user.</p>
+<p>IF you <a href="https://www.openstreetmap.org/relation/3172056">inspect the relation</a> and click on “view history”, Brunel Way was added in changeset 25254421 by user pompeybug. Although relation histories can be complicated by edits that split ways for other purposes your best bet is to talk to that user.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -124,7 +124,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Yes - the <a href="http://www.openstreetmap.org/way/22756331/history">way history</a> also shows that they extended Brunel Way to the roundabout. Maybe they were trying to fill in a gap in the cycle route? Asking them via an OSM message seems like the best idea. If it had been after the beginning of November, when Changeset Discussions were introduced, then a comment there would also have worked and would arguably have been better since it allows other people to be aware of the conversation.</p>
+<p>Yes - the <a href="https://www.openstreetmap.org/way/22756331/history">way history</a> also shows that they extended Brunel Way to the roundabout. Maybe they were trying to fill in a gap in the cycle route? Asking them via an OSM message seems like the best idea. If it had been after the beginning of November, when Changeset Discussions were introduced, then a comment there would also have worked and would arguably have been better since it allows other people to be aware of the conversation.</p>
 <p>If for any reason you can't get into contact with the previous mapper maybe add an OSM note asking locals exactly where the cycle route goes?</p>
 <p>(although here, from the aerial imagery, there don't seem to be a whole lot of other options)</p>
 </div>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Find a junction of a similar type that as been mapped already, then open your editor and inspect what they have done.Then exit without saving. To add a lane or slip road is the same procedure of creating a node and drawing a way from that point. ask again if not sure. The editing videos are very good have a look at those too. <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">http://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
+<p>Find a junction of a similar type that as been mapped already, then open your editor and inspect what they have done.Then exit without saving. To add a lane or slip road is the same procedure of creating a node and drawing a way from that point. ask again if not sure. The editing videos are very good have a look at those too. <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">https://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,12 +160,12 @@ osqa_accepted = false
 <p>There are multiple proposals on this on wiki. I would suggest to read the proposals on wiki, choose one, help it get better (approved) and use it. Apparently there is no clear straightforward way to do this.<br />
 I will not be any more specific, since I have not decided for any of them yet.</p>
 <p>The lane proposals (there might be more):</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Turn_Lanes">http://wiki.openstreetmap.org/wiki/Proposed_features/Turn_Lanes</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Lane">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Lane</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/lane_and_lane_group">http://wiki.openstreetmap.org/wiki/Proposed_features/lane_and_lane_group</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/turn_lanes">http://wiki.openstreetmap.org/wiki/Relations/Proposed/turn_lanes</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations">http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations/Examples">http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations/Examples</a><br />
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Turn_Lanes">https://wiki.openstreetmap.org/wiki/Proposed_features/Turn_Lanes</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Lane">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Lane</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/lane_and_lane_group">https://wiki.openstreetmap.org/wiki/Proposed_features/lane_and_lane_group</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/turn_lanes">https://wiki.openstreetmap.org/wiki/Relations/Proposed/turn_lanes</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations">https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations/Examples">https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_as_Relations/Examples</a><br />
 </p>
 </div>
 <div class="answer-controls post-controls">

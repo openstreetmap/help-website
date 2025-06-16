@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>We recently held a mapping event focusing on bicycle infrastructure. There were some questions about how to tag bicycle parking. Specifically, we were wondering which values to use for the bicycle_parking and capacity keys for the following bike racks:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/bike_rack_wavy_SNBHtdV.jpg" alt="wavy bike rack" /> <img src="http://help.openstreetmap.org/upfiles/bike_rack_decorative_HVWX07a.jpg" alt="decorative bike rack" /></p>
+<p><img src="/upfiles/bike_rack_wavy_SNBHtdV.jpg" alt="wavy bike rack" /> <img src="/upfiles/bike_rack_decorative_HVWX07a.jpg" alt="decorative bike rack" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bicycle" rel="tag" title="see questions tagged &#39;bicycle&#39;">bicycle</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span>
@@ -173,7 +173,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking"><code>amenity=bicycle_parking</code></a>, and then an appropriate <a href="http://wiki.openstreetmap.org/wiki/Key:bicycle_parking"><code>bicycle_parking</code></a> tag to specifiy what kind. (I'd suggest <code>bicycle_parking=stands</code>).</p>
+<p>I would use <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking"><code>amenity=bicycle_parking</code></a>, and then an appropriate <a href="https://wiki.openstreetmap.org/wiki/Key:bicycle_parking"><code>bicycle_parking</code></a> tag to specifiy what kind. (I'd suggest <code>bicycle_parking=stands</code>).</p>
 <p>OSM tagging is often meant to be <em>semantic</em>, you want to tell people that "this is a thing for parking your bike", and what kind of bike parking it is. The specifics (colour and design) are often less important. Though you're free to add that as well if you want.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -224,7 +224,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, I would use bicycle_parking=stands <a href="http://wiki.openstreetmap.org/wiki/Key:bicycle_parking">Look here</a> <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">Main bicycle_parking Page</a> <a href="http://wiki.openstreetmap.org/wiki/Map_Features">All Features</a></p>
+<p>Hi, I would use bicycle_parking=stands <a href="https://wiki.openstreetmap.org/wiki/Key:bicycle_parking">Look here</a> <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">Main bicycle_parking Page</a> <a href="https://wiki.openstreetmap.org/wiki/Map_Features">All Features</a></p>
 <p><a href="http://taginfo.openstreetmap.org/">Here</a> you can see how often the tag you like is used</p>
 </div>
 <div class="answer-controls post-controls">

@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/POI_Types">this list</a> on the wiki, for certain models of Garmin, based on people's observations. Having made maps for nuvi 200W and 1310 I can confirm there is some variation between models, particularly with regard to the points of interest supported.</p>
+<p>There is <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/POI_Types">this list</a> on the wiki, for certain models of Garmin, based on people's observations. Having made maps for nuvi 200W and 1310 I can confirm there is some variation between models, particularly with regard to the points of interest supported.</p>
 <p>Also you might find the mkgmap test map useful for identifying your own device's behaviour. The test map points are identified by the hex code.</p>
 </div>
 <div class="answer-controls post-controls">

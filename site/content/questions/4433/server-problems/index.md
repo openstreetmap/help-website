@@ -84,7 +84,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question - already asked and answered as http://help.openstreetmap.org/questions/1267/server-too-busy-to-export-a-map" by TomH 13 Apr '11, 18:38
+### The question has been closed for the following reason "Duplicate Question - already asked and answered as https://help.openstreetmap.org/questions/1267/server-too-busy-to-export-a-map" by TomH 13 Apr '11, 18:38
 
 </div>
 
@@ -173,7 +173,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are more possibilities to produce static map images, have a look at the OSM wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

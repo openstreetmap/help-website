@@ -139,7 +139,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At least <a href="http://www.openstreetmap.org/way/147743740">one part</a> of the Handy Cross roundabout seems to be missing the junction=roundabout tag. Looking at the roundabout, it isn't a typical roundabout as there is a shortcut across the middle, so it might be the junction=roundabout tags aren't appropriate in this case, but that will affect the directions that GPS apps give, generally, as they'll treat one way trunk roads differently from roundabouts. In this case it might be worth looking at using <a href="http://wiki.openstreetmap.org/wiki/Lanes">lane tagging</a> (lanes= and turn_lanes= ) which I believe at least OsmAnd uses giving on screen hints as to which lane you need.</p>
+<p>At least <a href="https://www.openstreetmap.org/way/147743740">one part</a> of the Handy Cross roundabout seems to be missing the junction=roundabout tag. Looking at the roundabout, it isn't a typical roundabout as there is a shortcut across the middle, so it might be the junction=roundabout tags aren't appropriate in this case, but that will affect the directions that GPS apps give, generally, as they'll treat one way trunk roads differently from roundabouts. In this case it might be worth looking at using <a href="https://wiki.openstreetmap.org/wiki/Lanes">lane tagging</a> (lanes= and turn_lanes= ) which I believe at least OsmAnd uses giving on screen hints as to which lane you need.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

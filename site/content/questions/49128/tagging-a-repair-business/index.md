@@ -229,7 +229,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><a href="http://taginfo.openstreetmap.org/search?q=repair">Searching taginfo for tag use</a> suggests that "repair=yes" is the one of the most common ways of tagging of "does do repair". Also you might get some suggestions from <a href="http://taginfo.openstreetmap.org/search?q=repair#values">taginfo value use</a>. Although "shop=repair" on it's own is one of the more widely used values, I'm not convinced that it's really a "class of thing" in its own right - a shop that repairs tractors and one that repairs watches are very different.</p>
-<p>As <a href="http://help.openstreetmap.org/users/12314/poornibadrinath">@poornibadrinath</a> suggests, I'd make something up along the lines of "shop=&lt;thing&gt;_repair".</p>
+<p>As <a href="https://help.openstreetmap.org/users/12314/poornibadrinath">@poornibadrinath</a> suggests, I'd make something up along the lines of "shop=&lt;thing&gt;_repair".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -249,7 +249,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I guess I see it as more of an iterative process, where it is OK to use a more general tag, and maybe add a subtag. Then as time goes on if people notice there's a lot of subtag X, they might decide it would be easier to make a more specific tag to use for them. With fuzzier categories like the variety of repair shops mentioned here, shop=&lt;thing&gt;_repair seems likely to be pretty unique (and thus not much more useful than just looking at the shop name). But YMMV! :) For people not familiar with these tensions in approaches to tagging, it might be useful to read the "duck tagging" page on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Duck_tagging">http://wiki.openstreetmap.org/wiki/Duck_tagging</a></p>
+<p>I guess I see it as more of an iterative process, where it is OK to use a more general tag, and maybe add a subtag. Then as time goes on if people notice there's a lot of subtag X, they might decide it would be easier to make a more specific tag to use for them. With fuzzier categories like the variety of repair shops mentioned here, shop=&lt;thing&gt;_repair seems likely to be pretty unique (and thus not much more useful than just looking at the shop name). But YMMV! :) For people not familiar with these tensions in approaches to tagging, it might be useful to read the "duck tagging" page on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">https://wiki.openstreetmap.org/wiki/Duck_tagging</a></p>
 </div>
 <div id="comment-50413-info" class="comment-info">
 <span class="comment-age">(23 Jun '16, 15:17)</span> <span class="comment-user userinfo">neuhausr</span>

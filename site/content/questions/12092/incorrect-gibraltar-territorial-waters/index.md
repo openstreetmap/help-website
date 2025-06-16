@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-12095-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/way/157318688">http://www.openstreetmap.org/browse/way/157318688</a> already has a FIXME tag.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/157318688">https://www.openstreetmap.org/browse/way/157318688</a> already has a FIXME tag.</p>
 </div>
 <div id="comment-12095-info" class="comment-info">
 <span class="comment-age">(17 Apr '12, 19:36)</span> <span class="comment-user userinfo">gnurk</span>
@@ -122,11 +122,11 @@ One Answer:
 <p><a href="http://openstreetbugs.schokokeks.org/?zoom=13&amp;lat=36.13538&amp;lon=-5.30656&amp;layers=B0T">http://openstreetbugs.schokokeks.org/?zoom=13&amp;lat=36.13538&amp;lon=-5.30656&amp;layers=B0T</a> <a href="http://www.mapdust.com/?zoom=13&amp;lat=4318618.72252&amp;lon=-593623.0607&amp;layers=B0T">http://www.mapdust.com/?zoom=13&amp;lat=4318618.72252&amp;lon=-593623.0607&amp;layers=B0T</a></p>
 <p>These sites are designed for mappers in the area to pick up the bug, assess it, and fix it if required.</p>
 <p>However, this page would suggest there is not much of an OSM community for Gibraltar:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Gibraltar">http://wiki.openstreetmap.org/wiki/WikiProject_Gibraltar</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/WikiProject_Gibraltar">https://wiki.openstreetmap.org/wiki/WikiProject_Gibraltar</a></p>
 <p>If you live there, why not start the community? The whole idea of OpenStreetMap is that you can edit it yourself. So I would encourage you to get involved. I would steer clear of mapping territorial water boundaries to begin with, as these are a little more complex and involved than some of the other tasks you could cut your teeth with, such as adding points of interest to the map. More information here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 <p>Once you have got the hang of the basics, you can move onto more involved things, such as borders. However, it is very important not to play out territorial disputes on OSM. Endless edit wars serve no one. More information about avoiding and dealing with disputes may be found here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Disputes">http://wiki.openstreetmap.org/wiki/Disputes</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Disputes">https://wiki.openstreetmap.org/wiki/Disputes</a></p>
 <p>The website you link to is clearly related to a dispute about fishing within the waters surrounding Gibraltar, so I would not rely on it as a neutral source of information. For what it's worth, I cannot find any evidence to support the view that Gibraltar's territorial waters extend to 12 nautical miles, so this is probably not something that would sensibly sit within OSM. All the sources I have found suggest that the government in Gibraltar asserts three nautical miles (whilst the view of the Spanish government is that it does not have any!):</p>
 <p><a href="http://www.panorama.gi/localnews/headlines.php?action=view_article&amp;article=7156&amp;offset=">http://www.panorama.gi/localnews/headlines.php?action=view_article&amp;article=7156&amp;offset=</a></p>
 </div>

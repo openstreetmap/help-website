@@ -135,8 +135,8 @@ One Answer:
 <div class="answer-body">
 <p>Several points about what you are trying to do:</p>
 <ul>
-<li><p>you cannot simply reuse OSM tile server resources for your mobile app. There is a "<a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile server usage policy</a>" defined in the wiki. Rendering and delivering map tiles is not free and OSM is a non-profit organisation with limited resources. You can find alternative OSM tiles providers on the referenced wiki page.</p></li>
-<li><p>be careful about the OSM license ODbL. Don't mix your dataset with OSM dataset. Check the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">Legal FAQ</a> and related wiki pages about the license.</p></li>
+<li><p>you cannot simply reuse OSM tile server resources for your mobile app. There is a "<a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile server usage policy</a>" defined in the wiki. Rendering and delivering map tiles is not free and OSM is a non-profit organisation with limited resources. You can find alternative OSM tiles providers on the referenced wiki page.</p></li>
+<li><p>be careful about the OSM license ODbL. Don't mix your dataset with OSM dataset. Check the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">Legal FAQ</a> and related wiki pages about the license.</p></li>
 </ul>
 <p>The best for you is to create an overlay either rendered locally on the mobile or through your own web server and with OSM map in background.</p>
 </div>

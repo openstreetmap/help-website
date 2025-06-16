@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not aware of a way of doing this. If it is possible, someone in the #osm-dev <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> channel will know (that's where the admins lurk).</p>
+<p>I'm not aware of a way of doing this. If it is possible, someone in the #osm-dev <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> channel will know (that's where the admins lurk).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi asd, since there is no registered activity with your 'asd' ID yet, please make your own choice and work with the address you prefer and keep mapping. Or read these pages if you really wont to delete a specific address, <a href="https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account">https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a> answered by TomH. with a link to the Wiki.</p>
+<p>Hi asd, since there is no registered activity with your 'asd' ID yet, please make your own choice and work with the address you prefer and keep mapping. Or read these pages if you really wont to delete a specific address, <a href="/questions/878/how-can-i-delete-my-account">https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a> answered by TomH. with a link to the Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>I guess <a href="http://help.openstreetmap.org/users/12780/asd">@asd</a> is trying to say that he has registered more usernames to edit osm and now wishes to combine 2 of these. I personally have my hands full just looking after the one <a href="http://help.openstreetmap.org/users/7380/nevw"></a><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a> :)</p>
+<p>I guess <a href="https://help.openstreetmap.org/users/12780/asd">@asd</a> is trying to say that he has registered more usernames to edit osm and now wishes to combine 2 of these. I personally have my hands full just looking after the one <a href="https://help.openstreetmap.org/users/7380/nevw"></a><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a> :)</p>
 </div>
 <div id="comment-52068-info" class="comment-info">
 <span class="comment-age">(16 Sep '16, 12:24)</span> <span class="comment-user userinfo">nevw</span>

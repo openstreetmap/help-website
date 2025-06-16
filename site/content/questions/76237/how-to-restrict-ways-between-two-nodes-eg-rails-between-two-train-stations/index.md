@@ -147,7 +147,7 @@ out body;
 &gt;;      
 out skel qt;</code></pre>
 <p>PS: I am interested only in the ways from Bhf. Wiedikon to HB Zürich, respectively the ways from the two nodes referenced by uic_ref above:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2020-08-20_at_5.44.57_PM.png" alt="Bhf. Wiedikon to HB Zürich" /></p>
+<p><img src="/upfiles/Screen_Shot_2020-08-20_at_5.44.57_PM.png" alt="Bhf. Wiedikon to HB Zürich" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why my editions are visible only when the zoom is  16 or less?"
-description = '''Hi, I have a problem with my work on OSM. Some of my edits can only be seen when the zoom is 16, but not closer. Why is this happening?? You can see the problem following the links: http://www.openstreetmap.org/?lat=4.60133&amp;amp;lon=-74.06543&amp;amp;zoom=16&amp;amp;layers=M http://www.openstreetmap.org/?lat...'''
+description = '''Hi, I have a problem with my work on OSM. Some of my edits can only be seen when the zoom is 16, but not closer. Why is this happening?? You can see the problem following the links: https://www.openstreetmap.org/?lat=4.60133&amp;amp;lon=-74.06543&amp;amp;zoom=16&amp;amp;layers=M https://www.openstreetmap.org/?lat...'''
 date = "2012-08-12T05:56:00Z"
 lastmod = "2012-08-13T02:00:00Z"
 weight = 14972
@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I have a problem with my work on OSM. Some of my edits can only be seen when the zoom is 16, but not closer. Why is this happening?? You can see the problem following the links:</p>
-<p><a href="http://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=16&amp;layers=M</a></p>
-<p><a href="http://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=17&amp;layers=M</a></p>
-<p>Note how the "universidad de los andes" appears and disappears. This is the link to the change set: <a href="http://www.openstreetmap.org/browse/changeset/12687084">http://www.openstreetmap.org/browse/changeset/12687084</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=4.60133&amp;lon=-74.06543&amp;zoom=17&amp;layers=M</a></p>
+<p>Note how the "universidad de los andes" appears and disappears. This is the link to the change set: <a href="https://www.openstreetmap.org/browse/changeset/12687084">https://www.openstreetmap.org/browse/changeset/12687084</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span> <span class="post-tag tag-link-visibility" rel="tag" title="see questions tagged &#39;visibility&#39;">visibility</span>

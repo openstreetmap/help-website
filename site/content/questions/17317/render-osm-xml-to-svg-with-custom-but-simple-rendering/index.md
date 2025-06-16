@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a> or about <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> in general .. all known renderers are listed there, so find out which is opensource.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a> or about <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> in general .. all known renderers are listed there, so find out which is opensource.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

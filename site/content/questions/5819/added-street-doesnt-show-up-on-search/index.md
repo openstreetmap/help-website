@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The name finder service <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> is not currently updating.</p>
+<p>The name finder service <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> is not currently updating.</p>
 <p>It ran out of 32-bit integers rather sooner than anticipated, and is being upgraded to use 64-bit integers.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -163,7 +163,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The search function (Nominatim) can take a while to update. Here's the wiki page on it:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_often_is_the_index_updated">http://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_often_is_the_index_updated</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_often_is_the_index_updated">https://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_often_is_the_index_updated</a></p>
 <p>You see there is also a latency graph so see how quickly the database is being updated at the moment.</p>
 <p>All the OSM functions (the render, nominatim, etc.) are all on a slight delay. If it's in the database (ie you see it in your editor when you reload the area), then there's nothing to worry about, and your data is in the system.</p>
 </div>

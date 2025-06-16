@@ -116,7 +116,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>You could either go to <a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> to select the rectangles that you need. Then you get an email with a link where you can download the requested files. The gmapsupp.img file can be copied directly to your Garmin device. Or to an SD-card that you put in your device</p>
 <p>An alternative is <a href="http://extract.bbbike.org/">http://extract.bbbike.org/</a> . There you can specify a free form area for which you can download a garmin specific file. Some more elaborate instructions can be found <a href="http://extract.bbbike.org/extract.html">http://extract.bbbike.org/extract.html</a> Make sure you download a gmapsupp.img file for Garmin that can be placed directly on the device.</p>
-<p>There are other sites that make maps based on OSM for Garmin devices: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> That page also contains some more information on installing maps based on OSM on your Garmin device.</p>
+<p>There are other sites that make maps based on OSM for Garmin devices: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> That page also contains some more information on installing maps based on OSM on your Garmin device.</p>
 <p>success !</p>
 </div>
 <div class="answer-controls post-controls">
@@ -193,7 +193,7 @@ This question is marked "community wiki".
 <div id="post-34646-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For a small area you could try this <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>For a small area you could try this <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-34646-info" class="comment-info">
 <span class="comment-age">(04 Jul '14, 20:20)</span> <span class="comment-user userinfo">andy mackey</span>

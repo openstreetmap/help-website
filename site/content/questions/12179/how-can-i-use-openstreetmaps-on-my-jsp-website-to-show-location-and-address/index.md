@@ -135,11 +135,11 @@ One Answer:
 <blockquote>
 <p>How can I use openstreetmaps on my JSP website to show location and address?</p>
 </blockquote>
-<p>There are various ways to to embed an OSM map into a website, such as using a static image, embedding the OSM "slippy map", or running your own servers. See <a href="http://help.openstreetmap.org/questions/48/can-i-use-these-maps-on-my-website">Can I use these maps on my website?</a></p>
+<p>There are various ways to to embed an OSM map into a website, such as using a static image, embedding the OSM "slippy map", or running your own servers. See <a href="/questions/48/can-i-use-these-maps-on-my-website">Can I use these maps on my website?</a></p>
 <blockquote>
 <p>For example how can I mark up different location information in the map or get data in database?</p>
 </blockquote>
-<p>How to put a marker on the map will depend on how you use the map :-). If you use OSM's "slippy map", see the question <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">How do I add a marker to a map?</a>.</p>
+<p>How to put a marker on the map will depend on how you use the map :-). If you use OSM's "slippy map", see the question <a href="/questions/25/how-do-i-add-a-marker-to-a-map">How do I add a marker to a map?</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

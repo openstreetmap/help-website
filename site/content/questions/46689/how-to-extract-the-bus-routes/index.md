@@ -140,8 +140,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> said: if you don't explain what you have tried and what you are trying to achieve, it's hard to answer questions. I'll make the assumption that it's a simple question.</p>
-<p>If you don't need a lot of bus routes (e.g. only bus routes in Colombia), you could use Overpass-turbo. You can find <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Bus_routes_.28also_trolley_bus.29">the data model here</a>. Overpass-turbo is almost self explanatory thanks to the wizard. Here's an example for getting bus rout relations: <a href="http://overpass-turbo.eu/s/cOK">http://overpass-turbo.eu/s/cOK</a> You can then use Export to download in a number of data formats.</p>
+<p>As <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> said: if you don't explain what you have tried and what you are trying to achieve, it's hard to answer questions. I'll make the assumption that it's a simple question.</p>
+<p>If you don't need a lot of bus routes (e.g. only bus routes in Colombia), you could use Overpass-turbo. You can find <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Bus_routes_.28also_trolley_bus.29">the data model here</a>. Overpass-turbo is almost self explanatory thanks to the wizard. Here's an example for getting bus rout relations: <a href="http://overpass-turbo.eu/s/cOK">http://overpass-turbo.eu/s/cOK</a> You can then use Export to download in a number of data formats.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

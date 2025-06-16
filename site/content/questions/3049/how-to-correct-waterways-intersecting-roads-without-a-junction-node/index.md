@@ -125,7 +125,7 @@ d) Go and check each one out individually, and then...?</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>Why mark it as a false positive when it isn't?</p>
-<p>Tunnels should not be marked as a junction nodes, but as ways. See: <a href="http://wiki.openstreetmap.org/wiki/Tunnel">Key:tunnel</a></p>
+<p>Tunnels should not be marked as a junction nodes, but as ways. See: <a href="https://wiki.openstreetmap.org/wiki/Tunnel">Key:tunnel</a></p>
 <p>I would suggest d). If the waterway flows in a culvert then enter it as a culvert. If the way runs over a bridge, then enter it as a bridge. If it's a ford, then enter it as a ford. If it's an aqueduct, then enter it as an aqueduct, etc, etc..</p>
 <p>I advice against filling the OSM database with guesses just to make our debugging tools happy. The tools are there to help us find issues where we may need to collect more fact.</p>
 <p>By the way I'm more worried about how the routing softwares handle those issues, than the prevalence of a minor artefact in a rendered map intended for the human eye. A strict routing software might refuse to route your wheelchair via the faintly defined crossing with the river.</p>
@@ -351,7 +351,7 @@ d) Go and check each one out individually, and then...?</p>
 <div class="answer-body">
 <p>I agree with Paul Johnson, the only nodes where roads/rail should intersect water would be fords (or boat ramps), everything else they should be unattached</p>
 <p>There is of course the odd time where the river (canal, ditch) is actually on a bridge.</p>
-<p>Of course there is also THIS... canal crosses a river, and Interstate 10 crosses both. Of course it doesn't render accurately. <a href="http://www.openstreetmap.org/?lat=30.04535&amp;lon=-94.149314&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=30.04535&amp;lon=-94.149314&amp;zoom=18&amp;layers=M</a></p>
+<p>Of course there is also THIS... canal crosses a river, and Interstate 10 crosses both. Of course it doesn't render accurately. <a href="https://www.openstreetmap.org/?lat=30.04535&amp;lon=-94.149314&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=30.04535&amp;lon=-94.149314&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -423,7 +423,7 @@ More importantly it does not seem to be mapped right. The river with riverbanks 
 <li>The routing tools are not confused either way.</li>
 <li>The solutions are often worse than the problem.</li>
 </ul>
-<p>If you feel compelled to act, and you know which streams cross at the same level as the road, you can create a junction node and tag it: <a href="http://wiki.openstreetmap.org/wiki/Key:ford">http://wiki.openstreetmap.org/wiki/Key:ford</a>. In times of high water knowing which road crossings are definitely wet can be helpful.</p>
+<p>If you feel compelled to act, and you know which streams cross at the same level as the road, you can create a junction node and tag it: <a href="https://wiki.openstreetmap.org/wiki/Key:ford">https://wiki.openstreetmap.org/wiki/Key:ford</a>. In times of high water knowing which road crossings are definitely wet can be helpful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

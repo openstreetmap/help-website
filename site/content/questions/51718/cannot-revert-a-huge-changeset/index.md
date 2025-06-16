@@ -151,7 +151,7 @@ One Answer:
 <div id="post-51723-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> : I sent the e-mail before asking here. I wasn't sure it was the correct way to handle this situation nor if my e-mail had been received/read by someone.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> : I sent the e-mail before asking here. I wasn't sure it was the correct way to handle this situation nor if my e-mail had been received/read by someone.</p>
 <p>I'd have hoped for a solution that I could try myself and not bother anyone with but... :( I'll be more careful next time.</p>
 </div>
 <div id="comment-51723-info" class="comment-info">
@@ -164,7 +164,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>For completeness the "can't revert" problem is further described in <a href="http://help.openstreetmap.org/questions/51646/how-to-revert-3-changesets-containing-136000-untagged-nodes/51648">http://help.openstreetmap.org/questions/51646/how-to-revert-3-changesets-containing-136000-untagged-nodes/51648</a> and the links from there (essentially the API allows more objects in one changeset than can be downloaded from the API before it times out).</p>
+<p>For completeness the "can't revert" problem is further described in <a href="/questions/51646/how-to-revert-3-changesets-containing-136000-untagged-nodes/51648">https://help.openstreetmap.org/questions/51646/how-to-revert-3-changesets-containing-136000-untagged-nodes/51648</a> and the links from there (essentially the API allows more objects in one changeset than can be downloaded from the API before it times out).</p>
 </div>
 <div id="comment-51742-info" class="comment-info">
 <span class="comment-age">(26 Aug '16, 18:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

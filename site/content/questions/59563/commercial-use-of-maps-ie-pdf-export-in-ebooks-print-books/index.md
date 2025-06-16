@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Commercial use of maps (i.e. pdf export) in ebooks / print books"
-description = '''Hi, i am still a bit confused by OSM´s licensing rules. If i use maps (eventually modified in photoshop) in ebooks etc. - only the (modified) picture of the map would have to be attributed and licensed according to http://www.openstreetmap.org/copyright. Not the whole work (i.e. ebook), right? '''
+description = '''Hi, i am still a bit confused by OSM´s licensing rules. If i use maps (eventually modified in photoshop) in ebooks etc. - only the (modified) picture of the map would have to be attributed and licensed according to https://www.openstreetmap.org/copyright. Not the whole work (i.e. ebook), right? '''
 date = "2017-09-12T08:42:00Z"
 lastmod = "2017-09-12T10:44:00Z"
 weight = 59563
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, i am still a bit confused by OSM´s licensing rules. If i use maps (eventually modified in photoshop) in ebooks etc. - only the (modified) picture of the map would have to be attributed and licensed according to <a href="http://www.openstreetmap.org/copyright.">http://www.openstreetmap.org/copyright.</a> Not the whole work (i.e. ebook), right?</p>
+<p>Hi, i am still a bit confused by OSM´s licensing rules. If i use maps (eventually modified in photoshop) in ebooks etc. - only the (modified) picture of the map would have to be attributed and licensed according to <a href="https://www.openstreetmap.org/copyright.">https://www.openstreetmap.org/copyright.</a> Not the whole work (i.e. ebook), right?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-print" rel="tag" title="see questions tagged &#39;print&#39;">print</span> <span class="post-tag tag-link-printing" rel="tag" title="see questions tagged &#39;printing&#39;">printing</span> <span class="post-tag tag-link-ebook" rel="tag" title="see questions tagged &#39;ebook&#39;">ebook</span> <span class="post-tag tag-link-commercial" rel="tag" title="see questions tagged &#39;commercial&#39;">commercial</span>

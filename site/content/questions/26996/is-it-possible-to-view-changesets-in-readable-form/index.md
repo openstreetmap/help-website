@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is it possible to view changesets in readable form?"
-description = '''For example this one: http://www.openstreetmap.org/browse/changeset/18226984 Default format is for me completely unreadable, is there any alternative? Is there something that is to default diff viewer as is http://owl.apis.dev.openstreetmap.org/ to default history tab?'''
+description = '''For example this one: https://www.openstreetmap.org/browse/changeset/18226984 Default format is for me completely unreadable, is there any alternative? Is there something that is to default diff viewer as is http://owl.apis.dev.openstreetmap.org/ to default history tab?'''
 date = "2013-10-07T19:10:00Z"
 lastmod = "2013-10-07T19:33:00Z"
 weight = 26996
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>For example this one: <a href="http://www.openstreetmap.org/browse/changeset/18226984">http://www.openstreetmap.org/browse/changeset/18226984</a></p>
+<p>For example this one: <a href="https://www.openstreetmap.org/browse/changeset/18226984">https://www.openstreetmap.org/browse/changeset/18226984</a></p>
 <p>Default format is for me completely unreadable, is there any alternative?</p>
 <p>Is there something that is to default diff viewer as is <a href="http://owl.apis.dev.openstreetmap.org/">http://owl.apis.dev.openstreetmap.org/</a> to default history tab?</p>
 </div>

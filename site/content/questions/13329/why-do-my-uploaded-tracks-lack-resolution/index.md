@@ -125,9 +125,9 @@ One Answer:
 <p>GPS traces are not suited for direct upload to OSM as already mentioned by SomeoneElse. They usually contain too many points and simply converting them to a way doesn't create the required junctions/connections with surrounding ways. You should always create the way by yourself, adding points where necessary and omitting points when the way is just straight.</p>
 <p>The Wiki has multiple pages about processing GPS traces:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Upload">uploading a GPX file</a>: this is not necessary for adding ways in OSM, but might help other people later when editing those ways again</li>
-<li>using a GPX file with <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch</a>: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#GPS_data_.2F_My_tracks">loading previously uploaded traces</a> and <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Creating_Features">creating points and ways</a></li>
-<li>using a GPX file with <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a>: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide#Load_a_local_GPX_file">loading a local trace</a> and <a href="http://wiki.openstreetmap.org/wiki/JOSM/Basic_editing#Adding_a_way">adding a way</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Upload">uploading a GPX file</a>: this is not necessary for adding ways in OSM, but might help other people later when editing those ways again</li>
+<li>using a GPX file with <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch</a>: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#GPS_data_.2F_My_tracks">loading previously uploaded traces</a> and <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Creating_Features">creating points and ways</a></li>
+<li>using a GPX file with <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a>: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide#Load_a_local_GPX_file">loading a local trace</a> and <a href="https://wiki.openstreetmap.org/wiki/JOSM/Basic_editing#Adding_a_way">adding a way</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

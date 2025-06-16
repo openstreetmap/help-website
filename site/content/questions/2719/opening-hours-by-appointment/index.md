@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Some shops around here are only open "by appointment." Sometimes they have specific hours for weekdays, but are open Saturday and Sunday by appointment only. Other times, the shop never has regular opening hours, but is only open by appointment. Is there any way to indicate this with the link:<a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a> tag?</p>
+<p>Some shops around here are only open "by appointment." Sometimes they have specific hours for weekdays, but are open Saturday and Sunday by appointment only. Other times, the shop never has regular opening hours, but is only open by appointment. Is there any way to indicate this with the link:<a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a> tag?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-opening_hours" rel="tag" title="see questions tagged &#39;opening_hours&#39;">opening_hours</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I wasn't able to find anything documented on <a href="http://taginfo.openstreetmap.de/search?q=by+appointment#keys">taginfo</a> to offer you guidance. A discussion took place on the <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:opening_hours#Museum_opens_only_on_request">opening_hours talk page</a> last year, but has not reached a conclusion. I've started a thread on this topic on the <a href="http://lists.openstreetmap.org/pipermail/tagging/2011-February/006762.html">tagging mailing list</a>, perhaps you'll enjoy participating in that conversation?</p>
+<p>I wasn't able to find anything documented on <a href="http://taginfo.openstreetmap.de/search?q=by+appointment#keys">taginfo</a> to offer you guidance. A discussion took place on the <a href="https://wiki.openstreetmap.org/wiki/Talk:Key:opening_hours#Museum_opens_only_on_request">opening_hours talk page</a> last year, but has not reached a conclusion. I've started a thread on this topic on the <a href="http://lists.openstreetmap.org/pipermail/tagging/2011-February/006762.html">tagging mailing list</a>, perhaps you'll enjoy participating in that conversation?</p>
 <p>We can update this answer after some discussion on the list.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -220,7 +220,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a> syntax has been updated to allow for a fallback rule in quotes.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a> syntax has been updated to allow for a fallback rule in quotes.</p>
 <pre><code>opening_hours=Mo-Fr 10:00-16:00 || &quot;Saturday and Sunday by appointment&quot;</code></pre>
 </div>
 <div class="answer-controls post-controls">

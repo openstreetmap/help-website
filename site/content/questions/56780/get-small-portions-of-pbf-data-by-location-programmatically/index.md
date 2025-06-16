@@ -125,7 +125,7 @@ osqa_accepted = false
 <ul>
 <li>Please do not use answers to expand or comment on questions.</li>
 <li>Your fixation on PBF format for transferring data from your proposed servers is misguided (that is the polite version), using geojosn, OSM xml or other far simpler formats makes a lot more sense. PARTICULARLY if you are a "beginner level hobby programmer on the base of spare time".</li>
-<li>a simple way of achieving what you want to do (without the PBF bit) would be to use queries to one of the public <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API servers</a>, but naturally there are many ways to skin a cat.</li>
+<li>a simple way of achieving what you want to do (without the PBF bit) would be to use queries to one of the public <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API servers</a>, but naturally there are many ways to skin a cat.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

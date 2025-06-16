@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I just searched the wiki for street light and it took me <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dstreet_lamp">here</a>. cctv cameras were a bit harder to find, but they are described <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurveillance">here</a>.</p>
+<p>I just searched the wiki for street light and it took me <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dstreet_lamp">here</a>. cctv cameras were a bit harder to find, but they are described <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurveillance">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ One Answer:
 <div id="post-11251-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also see <a href="http://wiki.openstreetmap.org/wiki/Key:lit">http://wiki.openstreetmap.org/wiki/Key:lit</a></p>
+<p>Also see <a href="https://wiki.openstreetmap.org/wiki/Key:lit">https://wiki.openstreetmap.org/wiki/Key:lit</a></p>
 </div>
 <div id="comment-11251-info" class="comment-info">
 <span class="comment-age">(16 Mar '12, 14:24)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

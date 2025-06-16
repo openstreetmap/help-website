@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Whenever I open openstreetmap.org in my laptop, the following error shows: <img src="https://help.openstreetmap.org/upfiles/Capture2_BxkHlIo.PNG" alt="Error page while opening openstreetmap.org" /></p>
+<p>Whenever I open openstreetmap.org in my laptop, the following error shows: <img src="/upfiles/Capture2_BxkHlIo.PNG" alt="Error page while opening openstreetmap.org" /></p>
 <p>The website works ok in my smartphone, so I have posted this through my phone.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

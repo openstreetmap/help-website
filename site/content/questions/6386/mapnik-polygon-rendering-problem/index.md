@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mapnik polygon rendering problem?"
-description = '''http://www.openstreetmap.org/?lat=37.89441&amp;amp;lon=-0.96381&amp;amp;zoom=16&amp;amp;layers=M if you look at the map above, the golf course (the bit in green) is sliced down the middle. At different levels of zoom the green and non-green swap sides. Osmarender shows it okay at all levels.'''
+description = '''https://www.openstreetmap.org/?lat=37.89441&amp;amp;lon=-0.96381&amp;amp;zoom=16&amp;amp;layers=M if you look at the map above, the golf course (the bit in green) is sliced down the middle. At different levels of zoom the green and non-green swap sides. Osmarender shows it okay at all levels.'''
 date = "2011-07-18T11:21:00Z"
 lastmod = "2011-07-20T15:51:00Z"
 weight = 6386
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=37.89441&amp;lon=-0.96381&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=37.89441&amp;lon=-0.96381&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=37.89441&amp;lon=-0.96381&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=37.89441&amp;lon=-0.96381&amp;zoom=16&amp;layers=M</a></p>
 <p>if you look at the map above, the golf course (the bit in green) is sliced down the middle. At different levels of zoom the green and non-green swap sides. Osmarender shows it okay at all levels.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -171,7 +171,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>A lot of QA tools can be found here: <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">http://wiki.openstreetmap.org/wiki/Quality_Assurance</a></p>
+<p>A lot of QA tools can be found here: <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">https://wiki.openstreetmap.org/wiki/Quality_Assurance</a></p>
 </div>
 <div id="comment-6456-info" class="comment-info">
 <span class="comment-age">(20 Jul '11, 15:51)</span> <span class="comment-user userinfo">RM87</span>

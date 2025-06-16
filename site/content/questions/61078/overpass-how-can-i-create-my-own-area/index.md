@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Is it possible to create an area, as part of an Overpass query, for an arbitrary multypolygon relation?</p>
 <p>Overpass does not create areas for multipolygons that have no name or postal code, according to <a href="https://github.com/drolbr/Overpass-API/blob/master/src/rules/areas.osm3s">areas.osm3s</a>.</p>
-<p>For example, I'd like to find all orphan nodes in the area defined by <a href="http://www.openstreetmap.org/relation/6195356">relation 6195356</a>.</p>
+<p>For example, I'd like to find all orphan nodes in the area defined by <a href="https://www.openstreetmap.org/relation/6195356">relation 6195356</a>.</p>
 <p><strong>If</strong> this relation had a built-in area, the Overpass query would be:</p>
 <pre><code>  node (area:3606195356);     // Find all nodes in multipolygon
   (._; - (way(bn);node(w));); // Remove nodes used by ways
@@ -143,7 +143,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There's a <code>map_to_area</code> operation that creates an area:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Map_way.2Frelation_to_area_.28map_to_area.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Map_way.2Frelation_to_area_.28map_to_area.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Map_way.2Frelation_to_area_.28map_to_area.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Map_way.2Frelation_to_area_.28map_to_area.29</a></p>
 <p>The documentation only says that the operation returns the area associated with the OSM object but it also appears to create it if it doesn't exist. I'm not sure how persistent the new areas are, but at the moment there is an area associated with that relation on the overpass-api.de server, apparently due to my experimenting.</p>
 </div>
 <div class="answer-controls post-controls">

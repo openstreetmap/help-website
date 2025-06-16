@@ -119,7 +119,7 @@ One Answer:
 <p><a href="http://openrouteservice.org/">http://openrouteservice.org/</a> has data age information on upper right corner and<br />
 <a href="http://www.yournavigation.org/">http://www.yournavigation.org/</a> on the bottom of page.</p>
 <p>Usually rendering data is fresher than routing data as it is easier to update.</p>
-<p>You can also take a look at the <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">list of other online routers</a>.</p>
+<p>You can also take a look at the <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">list of other online routers</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi there,</p>
 <p>Im working on an Android App and trying to highlight a complete street. Right now Im doing this by the coordinates which are given to me by making a HTTP Request to nominatim. But unfortunately it doesnt give me the whole street, but only a small part of it.</p>
-<p>So my question is: How can I achieve it, that I get all the coordinates which are shown to me when I search like this: <a href="http://www.openstreetmap.org/way/3957228">http://www.openstreetmap.org/way/3957228</a></p>
+<p>So my question is: How can I achieve it, that I get all the coordinates which are shown to me when I search like this: <a href="https://www.openstreetmap.org/way/3957228">https://www.openstreetmap.org/way/3957228</a></p>
 <p>Thanks for your help! cheers Jan</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> suggested you can use overpass api</p>
+<p>As <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> suggested you can use overpass api</p>
 <p>Get Method as JSON output:</p>
 <pre><code>http://overpass-api.de/api/interpreter?data=[out:json];way(24777894);(._;&gt;;);out;</code></pre>
 <p>Post Method with curl as XML output:</p>

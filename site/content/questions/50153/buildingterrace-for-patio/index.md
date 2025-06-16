@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello again. Thanks to those who responded to my previous question. This one applies to about 2,000 closed ways in the same area. They are tagged building=terrace and landuse=residential. I've looked at about 10 of these, and they all seem to define an area bordering a private home which is used as a patio, pool deck, or other outdoor landscaped area. This, to me, seems clearly incorrect according to the OSM documentation for the building=terrace tag. I haven't been able to find a method for tagging such a feature (a patio, veranda, terrace, deck etc.). Perhaps man_made=patio? Here is an example: <a href="http://www.openstreetmap.org/way/410965865">http://www.openstreetmap.org/way/410965865</a> Looking at the Google satellite view this is clearly a patio behind the actual structure. Thanks!!!</p>
+<p>Hello again. Thanks to those who responded to my previous question. This one applies to about 2,000 closed ways in the same area. They are tagged building=terrace and landuse=residential. I've looked at about 10 of these, and they all seem to define an area bordering a private home which is used as a patio, pool deck, or other outdoor landscaped area. This, to me, seems clearly incorrect according to the OSM documentation for the building=terrace tag. I haven't been able to find a method for tagging such a feature (a patio, veranda, terrace, deck etc.). Perhaps man_made=patio? Here is an example: <a href="https://www.openstreetmap.org/way/410965865">https://www.openstreetmap.org/way/410965865</a> Looking at the Google satellite view this is clearly a patio behind the actual structure. Thanks!!!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-man_made" rel="tag" title="see questions tagged &#39;man_made&#39;">man_made</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-50154-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>We can't use Google Satellite View for licence reasons, but the Bing imagery also shows <a href="http://www.openstreetmap.org/way/410965865">http://www.openstreetmap.org/way/410965865</a> as a flat concrete area with a swimming pool in it.</p>
+<p>We can't use Google Satellite View for licence reasons, but the Bing imagery also shows <a href="https://www.openstreetmap.org/way/410965865">https://www.openstreetmap.org/way/410965865</a> as a flat concrete area with a swimming pool in it.</p>
 </div>
 <div id="comment-50154-info" class="comment-info">
 <span class="comment-age">(11 Jun '16, 17:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most of the answers over at <a href="https://help.openstreetmap.org/questions/50139/tagging-residential-driveways">your other question</a> also apply here I think (contact the mapper, discuss in a wider forum).</p>
+<p>Most of the answers over at <a href="/questions/50139/tagging-residential-driveways">your other question</a> also apply here I think (contact the mapper, discuss in a wider forum).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

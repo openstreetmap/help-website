@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After following <a href="http://wiki.openstreetmap.org/wiki/Ubuntu_tile_server" title="Ubuntu tile server setup instructions">Ubuntu tile server setup instructions</a> I encounter the following segmentation fault any time Apache2 is started. I've attempted <a href="http://wiki.openstreetmap.org/wiki/Mod_tile#Install_mod_tile_From_Source" title="Install mod_tile from source">re-installing mod_tile from SVN</a> but still hit this crash.</p>
+<p>After following <a href="https://wiki.openstreetmap.org/wiki/Ubuntu_tile_server" title="Ubuntu tile server setup instructions">Ubuntu tile server setup instructions</a> I encounter the following segmentation fault any time Apache2 is started. I've attempted <a href="https://wiki.openstreetmap.org/wiki/Mod_tile#Install_mod_tile_From_Source" title="Install mod_tile from source">re-installing mod_tile from SVN</a> but still hit this crash.</p>
 <pre><code>user@host:~$ sudo /etc/init.d/apache2 start
  * Starting web server apache2                                                                                                                                                                                                                                                                                                [Fri Jan 11 13:25:59 2013] [notice] Committing tile config default
 [Fri Jan 11 13:25:59 2013] [notice] Loading tile config default at /osm/ for zooms 0 - 18 from tile directory /var/lib/mod_tile with extension .png and mime type image/png

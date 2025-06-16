@@ -172,8 +172,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You trace the outline of the entire mall building and tag it with <code>shop=mall</code>. Then you add nodes for individual shops inside the building's area, tagging them with <a href="https://wiki.openstreetmap.org/wiki/Key:shop"><code>shop=*</code></a> (or whatever is appropriate). For an example, see the <a href="http://www.openstreetmap.org/way/230777914">Eastgate Center</a> in Tulsa, OK.</p>
-<p>As was said in the answers to the <a href="https://help.openstreetmap.org/questions/24814/mapping-shops-in-a-retail-building-with-more-than-one-entrance">previous question</a>, this is the basic approach to mapping malls. If you have surveyed the mall in more detail you can add entrances to each of the shops (although given the topology of the typical mall, the location of the entrances is fairly obvious).</p>
+<p>You trace the outline of the entire mall building and tag it with <code>shop=mall</code>. Then you add nodes for individual shops inside the building's area, tagging them with <a href="https://wiki.openstreetmap.org/wiki/Key:shop"><code>shop=*</code></a> (or whatever is appropriate). For an example, see the <a href="https://www.openstreetmap.org/way/230777914">Eastgate Center</a> in Tulsa, OK.</p>
+<p>As was said in the answers to the <a href="/questions/24814/mapping-shops-in-a-retail-building-with-more-than-one-entrance">previous question</a>, this is the basic approach to mapping malls. If you have surveyed the mall in more detail you can add entrances to each of the shops (although given the topology of the typical mall, the location of the entrances is fairly obvious).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

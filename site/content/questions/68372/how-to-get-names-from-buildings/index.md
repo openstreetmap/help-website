@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I'm looking for a way to get the names of buildings in an overpasss query as result. As you can see in the picture below, the line 480228940 has the name "Ehemaliges Hallenbad Wallau". So I'm looking for a way to get all the coordinates of e.g. "Hallenbad" buildings in a specific bounding box.</p>
 <p>Unfortunately I don't have any clue how I to set up the query and any suggestions are welcome!</p>
 <p>BR, Tom</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Query.png" alt="alt text" /></p>
+<p><img src="/upfiles/Query.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-buildings" rel="tag" title="see questions tagged &#39;buildings&#39;">buildings</span> <span class="post-tag tag-link-lines" rel="tag" title="see questions tagged &#39;lines&#39;">lines</span> <span class="post-tag tag-link-names" rel="tag" title="see questions tagged &#39;names&#39;">names</span>

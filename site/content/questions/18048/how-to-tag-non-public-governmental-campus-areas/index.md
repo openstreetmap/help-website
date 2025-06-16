@@ -109,11 +109,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess you are just asking about the "area" access restriction here. Because OSM has a well established convention to specify access restrictions on roads (see the <a href="http://wiki.openstreetmap.org/wiki/Access">key access on the wiki</a>) and you should use them for all highways inside the restricted access areas (if any).</p>
+<p>I guess you are just asking about the "area" access restriction here. Because OSM has a well established convention to specify access restrictions on roads (see the <a href="https://wiki.openstreetmap.org/wiki/Access">key access on the wiki</a>) and you should use them for all highways inside the restricted access areas (if any).</p>
 <p>I see two options in your case. You can combine them.</p>
 <ul>
-<li>create a specific "<a href="http://wiki.openstreetmap.org/wiki/Key:landuse">landuse</a>" polygon (e.g. "landuse=government" ? not documented currently on the wiki) and add an "access=private" or "access=no" or "access=destination" depending on the degree of accessibility. But I'm not sure that any current software will try to interpret access tags on a landuse polygon. This landuse should not overlap with other landuse polygones othewise it could create some ambiguity.</li>
-<li>draw the surrounding fences/walls and tag them with the key "<a href="http://wiki.openstreetmap.org/wiki/Barrier">barrier</a>". This should prevent any routing software to cross the area by foot.</li>
+<li>create a specific "<a href="https://wiki.openstreetmap.org/wiki/Key:landuse">landuse</a>" polygon (e.g. "landuse=government" ? not documented currently on the wiki) and add an "access=private" or "access=no" or "access=destination" depending on the degree of accessibility. But I'm not sure that any current software will try to interpret access tags on a landuse polygon. This landuse should not overlap with other landuse polygones othewise it could create some ambiguity.</li>
+<li>draw the surrounding fences/walls and tag them with the key "<a href="https://wiki.openstreetmap.org/wiki/Barrier">barrier</a>". This should prevent any routing software to cross the area by foot.</li>
 </ul>
 <p>The advantage of the landuse polygon is that you can name it (e.g. "landuse=government" + "access=private" + "name=Ministry of Interior").</p>
 </div>

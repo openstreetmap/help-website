@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Is it <em>possible</em>? Yes (as you can see). Is it a <em>good idea</em>, is it something that <em>should be done in OSM</em>? No, not really.</p>
-<p>It sounds like a disagreement between you and the the other mapper. First try to contact them with the OSM in-built message system to find out what they are doing. Perhaps they don't know about the new name? If they are hostile, or unresponsive, you should contact the OSM <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a>, who handle disagreements between mappers, and block vandals. They can possible ban the account if the mapper is being hostile and a vandal.</p>
+<p>It sounds like a disagreement between you and the the other mapper. First try to contact them with the OSM in-built message system to find out what they are doing. Perhaps they don't know about the new name? If they are hostile, or unresponsive, you should contact the OSM <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a>, who handle disagreements between mappers, and block vandals. They can possible ban the account if the mapper is being hostile and a vandal.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,9 +126,9 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Wow - that's a lot of revisions:</p>
-<p><a href="http://www.openstreetmap.org/way/150515109/history">http://www.openstreetmap.org/way/150515109/history</a></p>
+<p><a href="https://www.openstreetmap.org/way/150515109/history">https://www.openstreetmap.org/way/150515109/history</a></p>
 <p>What I'd actually do <em>first</em> is to try and talk to the other mapper, to understand why they think the street doesn't have a name. I'd explain why you think that it <em>has</em> got a name, and how that name is observable. If that communication fails I'd discuss the issue with other mappers locally, so that it's not just a dispute between the two of you. I don't know where Portugese mappers normally communicate, but you should be able to find a mailing list or forum here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Contact_channels">http://wiki.openstreetmap.org/wiki/Contact_channels</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Contact_channels">https://wiki.openstreetmap.org/wiki/Contact_channels</a></p>
 <p>What I <em>would not do</em> is create 33 revisions of a street changing the name back and forth.</p>
 <p>(disclaimer - I'm a member of the DWG)</p>
 </div>
@@ -172,7 +172,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It would appear from how you have described the situation to be vandalism. Has the street level signage changed to the preferred name yet? You should contact the data working group to help resolve the situation. <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">http://wiki.openstreetmap.org/wiki/Data_working_group</a></p>
+<p>It would appear from how you have described the situation to be vandalism. Has the street level signage changed to the preferred name yet? You should contact the data working group to help resolve the situation. <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">https://wiki.openstreetmap.org/wiki/Data_working_group</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

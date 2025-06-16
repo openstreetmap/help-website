@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For hotels use the <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dhotel">tourism=hotel</a> tag. You can also provide additional information about the hotel as described on the wiki page and provide an <a href="http://wiki.openstreetmap.org/wiki/Key:addr">address</a>. You are <em>NOT</em> allowed to copy the position from Google Maps, but since you had been at the hotel you can easily estimate the position if you don't have any GPS device.</p>
+<p>For hotels use the <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dhotel">tourism=hotel</a> tag. You can also provide additional information about the hotel as described on the wiki page and provide an <a href="https://wiki.openstreetmap.org/wiki/Key:addr">address</a>. You are <em>NOT</em> allowed to copy the position from Google Maps, but since you had been at the hotel you can easily estimate the position if you don't have any GPS device.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In addition to what scai says there is good bing in tokyo (a back ground you can select in most editors) so you can trace features assuming you know the area well enough to identify them in the Ariel image.this is allowed copying from other maps is not.Note tracing from Bing is ok NOT other maps or Ariel photo stuff that we do not have permission to copy from. please read this <a href="http://wiki.openstreetmap.org/wiki/Copyright">http://wiki.openstreetmap.org/wiki/Copyright</a></p>
+<p>In addition to what scai says there is good bing in tokyo (a back ground you can select in most editors) so you can trace features assuming you know the area well enough to identify them in the Ariel image.this is allowed copying from other maps is not.Note tracing from Bing is ok NOT other maps or Ariel photo stuff that we do not have permission to copy from. please read this <a href="https://wiki.openstreetmap.org/wiki/Copyright">https://wiki.openstreetmap.org/wiki/Copyright</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -322,7 +322,7 @@ email=<br />
 <div id="post-7358-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There is an ongoing <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:phone#Reasons_why_we_should_not_map_phone_numbers_at_all">discussion</a> in the wiki whether we should map phone numbers at all.</p>
+<p>There is an ongoing <a href="https://wiki.openstreetmap.org/wiki/Talk:Key:phone#Reasons_why_we_should_not_map_phone_numbers_at_all">discussion</a> in the wiki whether we should map phone numbers at all.</p>
 </div>
 <div id="comment-7358-info" class="comment-info">
 <span class="comment-age">(27 Aug '11, 08:27)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -423,7 +423,7 @@ email=<br />
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/5547/why-cant-i-see-my-edits">http://help.openstreetmap.org/questions/5547/why-cant-i-see-my-edits</a></p>
+<p><a href="/questions/5547/why-cant-i-see-my-edits">https://help.openstreetmap.org/questions/5547/why-cant-i-see-my-edits</a></p>
 </div>
 <div id="comment-6362-info" class="comment-info">
 <span class="comment-age">(16 Jul '11, 17:36)</span> <span class="comment-user userinfo">andy mackey</span>

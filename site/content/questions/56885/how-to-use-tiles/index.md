@@ -278,9 +278,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In addition to Rorym's answer, there's another option mentioned over at <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> - if you're using the Chrome or Chromium browser you can add an add-on to that that allows you to rewrite parts of URLs. This allows you to see your tiles on the <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> site. Basically, install this add-on:</p>
+<p>In addition to Rorym's answer, there's another option mentioned over at <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> - if you're using the Chrome or Chromium browser you can add an add-on to that that allows you to rewrite parts of URLs. This allows you to see your tiles on the <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> site. Basically, install this add-on:</p>
 <pre><code>https://chrome.google.com/webstore/detail/switcheroo-redirector/cnmciclhnghalnpfhhleggldniplelbg?hl=en</code></pre>
-<p>Click on the little "S" that appears to the right of the address bar and add "<strong>tile-a.openstreetmap.fr/hot/</strong>" in the "From" column and something like "<strong>mywebserverurl/maps/hot/</strong>" in the "To" column, then add the same rule twice more for “<strong>tile-b</strong>” and “<strong>tile-c”</strong>. Then when you browse to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> (http, not https) and select the "Humanitarian" layer, you'll see your tiles.</p>
+<p>Click on the little "S" that appears to the right of the address bar and add "<strong>tile-a.openstreetmap.fr/hot/</strong>" in the "From" column and something like "<strong>mywebserverurl/maps/hot/</strong>" in the "To" column, then add the same rule twice more for “<strong>tile-b</strong>” and “<strong>tile-c”</strong>. Then when you browse to <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> (http, not https) and select the "Humanitarian" layer, you'll see your tiles.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -332,7 +332,7 @@ osqa_accepted = false
 <div id="post-56894-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/upfiles/screens_20170613_02010.png">Example screenshot</a></p>
+<p><span>Example screenshot</span></p>
 </div>
 <div id="comment-56894-info" class="comment-info">
 <span class="comment-age">(05 Jul '17, 13:39)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -343,7 +343,7 @@ osqa_accepted = false
 <div id="post-56895-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/2017-07-05_14_40_30-.png" alt="screenshot" /></p>
+<p><img src="/upfiles/2017-07-05_14_40_30-.png" alt="screenshot" /></p>
 <p>I've just realized... There is no "hot" folder on my server. Should it be put in /var/www/hot ?</p>
 </div>
 <div id="comment-56895-info" class="comment-info">

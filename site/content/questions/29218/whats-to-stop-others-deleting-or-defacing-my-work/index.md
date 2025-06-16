@@ -169,7 +169,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To turn the question around, would you want to prevent other contributors from improving an area ? Maps are never a finished product, and they need to remain open for edit. However much "perfect" your contribution is today, it doesn't make sense to mark the area as "read-only" or something similar. It is true that some edits deteriorate the map, but the vast majority of edits improve the map.</p>
-<p>That said, the best way to make sure that your favorite area of the map (whether you made an edit or not) remains error and vandalism-free is to keep an eye on edits made in the area. See <a href="https://help.openstreetmap.org/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed">this question</a> for various ways to monitor an area.</p>
+<p>That said, the best way to make sure that your favorite area of the map (whether you made an edit or not) remains error and vandalism-free is to keep an eye on edits made in the area. See <a href="/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed">this question</a> for various ways to monitor an area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd also recommend that you become familiar with the <a href="http://wiki.openstreetmap.org/wiki/Elements">data model</a>, <a href="http://wiki.openstreetmap.org/wiki/Best_practices">best practices</a> and generally agreed on <a href="http://wiki.openstreetmap.org/wiki/Map_features">tagging</a> that OSM uses, and try to fit your data to it if possible. If you start doing some very unusual things, it may get changed or deleted. The most examples I've seen are people adding data that shouldn't be in OSM at all, and/or mis-tagging things so they get rendered by one or another webmap.</p>
+<p>I'd also recommend that you become familiar with the <a href="https://wiki.openstreetmap.org/wiki/Elements">data model</a>, <a href="https://wiki.openstreetmap.org/wiki/Best_practices">best practices</a> and generally agreed on <a href="https://wiki.openstreetmap.org/wiki/Map_features">tagging</a> that OSM uses, and try to fit your data to it if possible. If you start doing some very unusual things, it may get changed or deleted. The most examples I've seen are people adding data that shouldn't be in OSM at all, and/or mis-tagging things so they get rendered by one or another webmap.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

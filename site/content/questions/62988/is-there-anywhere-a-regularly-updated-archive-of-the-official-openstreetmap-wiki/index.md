@@ -153,7 +153,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see <a href="https://help.openstreetmap.org/questions/50225/osm-wiki-backend-data">https://help.openstreetmap.org/questions/50225/osm-wiki-backend-data</a></p>
+<p>see <a href="/questions/50225/osm-wiki-backend-data">https://help.openstreetmap.org/questions/50225/osm-wiki-backend-data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

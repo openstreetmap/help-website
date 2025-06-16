@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Example area: London, Stretch of a Northern tube line between Edgware and Colindale (<a href="https://www.openstreetmap.org/#map=16/51.6014/-0.2575)">https://www.openstreetmap.org/#map=16/51.6014/-0.2575)</a> <img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-10-03_at_19.10.22.png" alt="See screenshot" /></p>
+<p>Example area: London, Stretch of a Northern tube line between Edgware and Colindale (<a href="https://www.openstreetmap.org/#map=16/51.6014/-0.2575)">https://www.openstreetmap.org/#map=16/51.6014/-0.2575)</a> <img src="/upfiles/Screenshot_2020-10-03_at_19.10.22.png" alt="See screenshot" /></p>
 <p>There are tracks and a fenced area with trees/bushes on both sides. As I understand that's a buffer zone which is maintained (or at least owned) by Tube/Rail company. I see it's mapped as <code>landuse=forest</code>, but from what I've learnt it's not the right usage of this tag. primarily, because nothing is harvested from this 'forest' and it's not really a forest.</p>
 <p>So what would you suggest as a better option?</p>
 </div>

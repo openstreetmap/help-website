@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>No. OpenStreetMap has the raw data from which you could extract such a list yourself, but there's no ready-made web service that does that for you.</p>
-<p>It is possible to go a little way in your direction with the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>; this allows you to ask for "all objects tagged <code>place=city</code> within the boundary described by the OpenStreetMap relation with the ID x". This requires that you first find out which relation you are interested in.</p>
+<p>It is possible to go a little way in your direction with the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>; this allows you to ask for "all objects tagged <code>place=city</code> within the boundary described by the OpenStreetMap relation with the ID x". This requires that you first find out which relation you are interested in.</p>
 <p>Say you wanted to find all cities in Moldova. <a href="http://www.google.com/search?q=openstreetmap+relation+moldova&amp;ie=utf-8&amp;oe=utf-8&amp;client=ubuntu&amp;channel=fs">Google</a> can be used to find out that the relation id you are looking for is 58974. Add 3600000000 to that number and use the following Overpass query:</p>
 <pre><code>&lt;query type=&quot;node&quot;&gt;
   &lt;has-kv k=&quot;place&quot; v=&quot;city&quot;/&gt;

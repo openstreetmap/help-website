@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Using overpass turbp, I often - but quite irregularly - receive this <strong>error</strong> message:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/err.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/err.jpg" alt="alt text" /></p>
 <p>It says that the request is <strong>rejected</strong> due to "e.g. server not found, request blocked by browser addon, request redirected, internal server errors, etc." I checked browser settings, the query itself, ran it on different devices, checked the status of Overpass etc. Sometimes, it affects even the smallest queries, e.g. the default one when loading overpass turbo.</p>
 <p>Here, some more information, there seems to be issues with both XML and Java. The messages are from the browser's <strong>debugging</strong> tool (F12):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/err2.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/err2.jpg" alt="alt text" /></p>
 <p>Has someone experienced the same problem (No 'Access-Control-Allow-Origin' header present, Cannot read property 'getBaseLayer')? How did you solve it? It seems always to be related to <em>turbo.4decdd916893e57ee8ff.js</em>. <strong>Thanks for all hints!</strong></p>
 <p>Below, all details of the debugging messages in text format:</p>
 <pre><code>Access to XMLHttpRequest at &#39;https://overpass.openstreetmap.fr/api/interpreterinterpreter&#39; from origin &#39;https://overpass-turbo.eu&#39; has been blocked by CORS policy: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource.

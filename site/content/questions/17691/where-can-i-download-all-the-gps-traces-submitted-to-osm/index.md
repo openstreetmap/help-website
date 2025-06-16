@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Planet.gpx">Planet.gpx</a> file contains all the GPS coordinate pairs submitted to the project.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Planet.gpx">Planet.gpx</a> file contains all the GPS coordinate pairs submitted to the project.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

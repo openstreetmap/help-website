@@ -337,7 +337,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>There's a long detailed answer about why edits show up when they do <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
+<p>There's a long detailed answer about why edits show up when they do <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
 </div>
 <div id="comment-27654-info" class="comment-info">
 <span class="comment-age">(30 Oct '13, 09:39)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

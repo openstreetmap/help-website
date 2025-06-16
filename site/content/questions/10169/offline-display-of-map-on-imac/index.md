@@ -165,8 +165,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>That would depend on the size of map you are interested in and what you want to do with it.<br />
 </p>
-<p>If it is small area and you just want to view it I reccomend you export to some image format (read <a href="http://wiki.openstreetmap.org/wiki/Export" title="here">here</a>, try by clicking the "Export" tab on the main page).</p>
-<p>If it is bigger or you want to do more you need some program and data for this program. Read <a href="http://wiki.openstreetmap.org/wiki/Editor">here</a> or <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">here</a>.</p>
+<p>If it is small area and you just want to view it I reccomend you export to some image format (read <a href="https://wiki.openstreetmap.org/wiki/Export" title="here">here</a>, try by clicking the "Export" tab on the main page).</p>
+<p>If it is bigger or you want to do more you need some program and data for this program. Read <a href="https://wiki.openstreetmap.org/wiki/Editor">here</a> or <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can have a look at the OSM wiki page about <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">Software</a> and pick some programs that are available to Apple OS X and that can store that map data or map tiles offline on a harddisk or similar.</p>
+<p>You can have a look at the OSM wiki page about <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">Software</a> and pick some programs that are available to Apple OS X and that can store that map data or map tiles offline on a harddisk or similar.</p>
 <p>(Edited and replaced iOS ... thanks for downvoting ...)</p>
 </div>
 <div class="answer-controls post-controls">

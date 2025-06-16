@@ -46,7 +46,7 @@ osqa_accepted = true
 <li><strong>Tag them with an "access"</strong></li>
 </ol>
 <p>While (1) seems like the easiest, I think leaving them out isn't fair to people who may be BJ's members who are looking for fuel in a new area.</p>
-<p>That leave's (2). The next question is "What <a href="http://wiki.openstreetmap.org/wiki/Access">access</a>?" Without creating a new access tag, I think either "private" or "customer" would work. I find myself more drawn to "private" as one could say "I am going to buy fuel there, therefore I am a 'customer'."</p>
+<p>That leave's (2). The next question is "What <a href="https://wiki.openstreetmap.org/wiki/Access">access</a>?" Without creating a new access tag, I think either "private" or "customer" would work. I find myself more drawn to "private" as one could say "I am going to buy fuel there, therefore I am a 'customer'."</p>
 <p>Thoughts?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -144,7 +144,7 @@ osqa_accepted = true
 <div id="post-6157-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@Vincent</span> I like the "access=member" and I see it is also in the RFC stage for "access restrictions 1.5" (<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/access_restrictions_1.5).">http://wiki.openstreetmap.org/wiki/Proposed_features/access_restrictions_1.5).</a></p>
+<p><span>@Vincent</span> I like the "access=member" and I see it is also in the RFC stage for "access restrictions 1.5" (<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/access_restrictions_1.5).">https://wiki.openstreetmap.org/wiki/Proposed_features/access_restrictions_1.5).</a></p>
 </div>
 <div id="comment-6157-info" class="comment-info">
 <span class="comment-age">(02 Jul '11, 20:22)</span> <span class="comment-user userinfo">jwernerny</span>

@@ -116,8 +116,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may need to rename <code>arm-mingw32ce-gosmore.exe</code> to match whatever your normal navigation application is called. <a href="http://wiki.openstreetmap.org/wiki/Gosmore">Gosmore's wiki page</a> suggests that <code>mobilenavigator.exe</code> may work for some devices.</p>
-<p>There are also some <a href="http://wiki.openstreetmap.org/wiki/Gosmore#Devices">reports</a> on that wiki page of users getting it to work on their Medion devices. Perhaps you could find out who they are from the wiki history and ask them what they did.</p>
+<p>You may need to rename <code>arm-mingw32ce-gosmore.exe</code> to match whatever your normal navigation application is called. <a href="https://wiki.openstreetmap.org/wiki/Gosmore">Gosmore's wiki page</a> suggests that <code>mobilenavigator.exe</code> may work for some devices.</p>
+<p>There are also some <a href="https://wiki.openstreetmap.org/wiki/Gosmore#Devices">reports</a> on that wiki page of users getting it to work on their Medion devices. Perhaps you could find out who they are from the wiki history and ask them what they did.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If the user had the same name on the wiki as their OSM account, you can contact them here: <a href="http://www.openstreetmap.org/message/new/osmmso">http://www.openstreetmap.org/message/new/osmmso</a></p>
+<p>If the user had the same name on the wiki as their OSM account, you can contact them here: <a href="https://www.openstreetmap.org/message/new/osmmso">https://www.openstreetmap.org/message/new/osmmso</a></p>
 </div>
 <div id="comment-370-info" class="comment-info">
 <span class="comment-age">(21 Jul '10, 01:44)</span> <span class="comment-user userinfo">David Dean</span>

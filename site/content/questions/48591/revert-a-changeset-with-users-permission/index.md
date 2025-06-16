@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>My edits match his in any case so once his changeset is reverted and I save my edits, the result should be the same.</p>
 <p>Many thanks, Gary</p>
 <p>Edit: error message below -</p>
-<p><img src="http://help.openstreetmap.org/upfiles/OSM_error.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/OSM_error.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span> <span class="post-tag tag-link-revert" rel="tag" title="see questions tagged &#39;revert&#39;">revert</span>
@@ -105,9 +105,9 @@ osqa_accepted = false
 <div id="post-48597-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>To echo what EdLoach said, a revert won't avoid the 409 error. <a href="http://help.openstreetmap.org/users/12070/gaz3434"></a><a href="http://help.openstreetmap.org/users/12070/gaz3434">@gaz3434</a> what editor were you using? Maybe there's some other way around the problem?</p>
+<p>To echo what EdLoach said, a revert won't avoid the 409 error. <a href="https://help.openstreetmap.org/users/12070/gaz3434"></a><a href="https://help.openstreetmap.org/users/12070/gaz3434">@gaz3434</a> what editor were you using? Maybe there's some other way around the problem?</p>
 <p>EDIT: Looks like iD from user's edit history. I suspect that there's no easy workaround. From memory someone did once manage to intercept the changes sent to the OSM server (details are on this site; maybe try searching the tag "ideditor") but it's far from straightforward. It's probably quicker to redo your changes.</p>
-<p>EDIT 2: Found it! See <a href="https://help.openstreetmap.org/questions/36044/error-saving-changes-version-mismatch">https://help.openstreetmap.org/questions/36044/error-saving-changes-version-mismatch</a> and <a href="https://help.openstreetmap.org/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340">https://help.openstreetmap.org/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340</a> . Still probably quicker to redo your edits though.</p>
+<p>EDIT 2: Found it! See <a href="/questions/36044/error-saving-changes-version-mismatch">https://help.openstreetmap.org/questions/36044/error-saving-changes-version-mismatch</a> and <a href="/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340">https://help.openstreetmap.org/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340</a> . Still probably quicker to redo your edits though.</p>
 </div>
 <div id="comment-48597-info" class="comment-info">
 <span class="comment-age">(09 Mar '16, 13:12)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -186,8 +186,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A revert of <a href="http://www.openstreetmap.org/changeset/37668263">http://www.openstreetmap.org/changeset/37668263</a> is irrelevant, actually - there are no new objects in there.</p>
-<p>If you can follow <a href="https://help.openstreetmap.org/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340">https://help.openstreetmap.org/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340</a> to work around the 409 error then good luck!</p>
+<p>A revert of <a href="https://www.openstreetmap.org/changeset/37668263">https://www.openstreetmap.org/changeset/37668263</a> is irrelevant, actually - there are no new objects in there.</p>
+<p>If you can follow <a href="/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340">https://help.openstreetmap.org/questions/34325/id-conflict-of-a-bigger-edit-not-resolvable-in-web-editor-because-of-changed-telephone-number?page=1&amp;focusedAnswerId=34340#34340</a> to work around the 409 error then good luck!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-51791-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1725/andy">@andy</a>-mackey this questioner is using the https version of the site; you're probably using the http version.</p>
+<p><a href="https://help.openstreetmap.org/users/1725/andy">@andy</a>-mackey this questioner is using the https version of the site; you're probably using the http version.</p>
 </div>
 <div id="comment-51791-info" class="comment-info">
 <span class="comment-age">(29 Aug '16, 14:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 <div id="post-51806-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12718/jorisvdb">@JorisVdB</a>: when did you contact (which medium) which author? Please keep in mind that those (and we all) are just volunteers with daytime jobs and so on.</p>
+<p><a href="https://help.openstreetmap.org/users/12718/jorisvdb">@JorisVdB</a>: when did you contact (which medium) which author? Please keep in mind that those (and we all) are just volunteers with daytime jobs and so on.</p>
 </div>
 <div id="comment-51806-info" class="comment-info">
 <span class="comment-age">(29 Aug '16, 22:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -222,7 +222,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can of course use the http version of the site, but see the explanation <a href="https://help.openstreetmap.org/questions/51558/opentopomap-doesnt-update-anymore">here</a> about why it does not update any more.</p>
+<p>You can of course use the http version of the site, but see the explanation <a href="/questions/51558/opentopomap-doesnt-update-anymore">here</a> about why it does not update any more.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -341,7 +341,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12718/jorisvdb">@JorisVdB</a> For some people making nice things is just a hobby. If they don't want to reorganize their hobby it's up to them. If they haven't got time for sorting out TLS certs, that's up to them too. They have no responsibility for their hobbies, the same way as someone isn't forced to keep running or cycling if that's their hobby either.</p>
+<p><a href="https://help.openstreetmap.org/users/12718/jorisvdb">@JorisVdB</a> For some people making nice things is just a hobby. If they don't want to reorganize their hobby it's up to them. If they haven't got time for sorting out TLS certs, that's up to them too. They have no responsibility for their hobbies, the same way as someone isn't forced to keep running or cycling if that's their hobby either.</p>
 <p>It's really not fair for you to be criticising like this.</p>
 </div>
 <div id="comment-51820-info" class="comment-info">
@@ -354,7 +354,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Assuming you charge your users xx € per year to visit and use your site and the availability of the map it of utmost importance, you should certainly look at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">buying professional service</a> and get your own OpenTopoMap server hosted. EoD.</p>
+<p>Assuming you charge your users xx € per year to visit and use your site and the availability of the map it of utmost importance, you should certainly look at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">buying professional service</a> and get your own OpenTopoMap server hosted. EoD.</p>
 </div>
 <div id="comment-51821-info" class="comment-info">
 <span class="comment-age">(30 Aug '16, 12:19)</span> <span class="comment-user userinfo">mmd</span>

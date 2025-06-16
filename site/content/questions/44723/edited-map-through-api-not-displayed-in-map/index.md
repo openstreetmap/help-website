@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Does the answer <a href="https://help.openstreetmap.org/questions/17450/point-rails-port-to-different-tile-server">here</a> help? I'm guessing a bit here, obviously.</p>
+<p>Does the answer <a href="/questions/17450/point-rails-port-to-different-tile-server">here</a> help? I'm guessing a bit here, obviously.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

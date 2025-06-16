@@ -113,12 +113,12 @@ osqa_accepted = false
 <p>You can try:</p>
 <p><strong>NaviPOWM</strong>: offline Maps that are renderes by vectors</p>
 <p><strong>Gosmore</strong>: very fast vector display, also search fution included</p>
-<p><strong><a href="http://wiki.openstreetmap.org/wiki/MapFactor_Navigator_Free">MapFactor Navigator Free</a></strong> is a navigation solution with search function, running also on Windows or Linux (via Wine)</p>
+<p><strong><a href="https://wiki.openstreetmap.org/wiki/MapFactor_Navigator_Free">MapFactor Navigator Free</a></strong> is a navigation solution with search function, running also on Windows or Linux (via Wine)</p>
 <p><strong>GpsMid</strong>: also offline and vector map ... originally for JavaME devices, but you can run it with <a href="http://www.microemu.org">microemu</a> on any desktop PC with Java (increase screen size of the emulated device!) ... new release with house number searching.</p>
 <p><strong>gpsVP</strong>: also offline, for OSM maps or Garmin maps.</p>
 <p><strong>Navit</strong>: also with navigation features, but but not so easy to configure due to the famous file navit.xml</p>
 <p><strong>MoNav</strong>: still in early development, but very promising</p>
-<p>Also have a look at the OSM wiki for programs that store theit map data offline at <a href="http://wiki.openstreetmap.org/wiki/Software">Software</a></p>
+<p>Also have a look at the OSM wiki for programs that store theit map data offline at <a href="https://wiki.openstreetmap.org/wiki/Software">Software</a></p>
 <p>When you have detailed questions about a programm or the map source for them, come to <a href="http://forum.osm.org">OSM forum</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -169,7 +169,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>A full list is at <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">http://wiki.openstreetmap.org/wiki/Software/Desktop</a><br />
+<p>A full list is at <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">https://wiki.openstreetmap.org/wiki/Software/Desktop</a><br />
 In general I agree with stephans answer but personally I would not recommend GpsMid (designed for mobile) and gpsVP (Garmin workaround).<br />
 Please also note that most OSM tools still are a bit 'uncomfortable' so you need to spend some time for setup etc...<br />
 But all in all they can do the job :)</p>

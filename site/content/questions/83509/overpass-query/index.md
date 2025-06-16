@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-83516-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Supplementary information has been provided in a closed question here: <a href="https://help.openstreetmap.org/questions/83512/overpass-api">https://help.openstreetmap.org/questions/83512/overpass-api</a></p>
+<p>Supplementary information has been provided in a closed question here: <a href="/questions/83512/overpass-api">https://help.openstreetmap.org/questions/83512/overpass-api</a></p>
 </div>
 <div id="comment-83516-info" class="comment-info">
 <span class="comment-age">(18 Feb '22, 08:43)</span> <span class="comment-user userinfo">InsertUser</span>

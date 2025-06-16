@@ -122,8 +122,8 @@ One Answer:
 <li>you own favorite ride through a national park, following a mix of signposted paths and other roads. You can upload those to e.g. wikiloc. gpsies, etc.</li>
 <li>Your own preferred streets for cycling (because of low traffic, etc..)</li>
 </ul>
-<p>Assuming you want to enter signposted cycle routes, take a look at the <a href="http://wiki.openstreetmap.org/wiki/Cycle_routes">wiki Cycle routes</a></p>
-<p>You can see the existing cycle routes, e.g. on <a href="http://www.openstreetmap.org/#map=15/51.1378/4.3472&amp;layers=C">the Cycle Map</a></p>
+<p>Assuming you want to enter signposted cycle routes, take a look at the <a href="https://wiki.openstreetmap.org/wiki/Cycle_routes">wiki Cycle routes</a></p>
+<p>You can see the existing cycle routes, e.g. on <a href="https://www.openstreetmap.org/#map=15/51.1378/4.3472&amp;layers=C">the Cycle Map</a></p>
 <p>Feel free to ask when you get stuck with the documentation on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">

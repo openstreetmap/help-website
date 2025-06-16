@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to map an artificial ground wall?"
-description = '''Hi all, I&#x27;m remapping the Bois helicopter field (http://www.openstreetmap.org/?lat=45.939232&amp;amp;lon=6.896469&amp;amp;zoom=18&amp;amp;layers=M), and I don&#x27;t know how to map the surrounding artificial ground walls, which can be seen for instance here: http://rocknrollcircuschx.free.fr/photos/DZ_des_bois_FSX_...'''
+description = '''Hi all, I&#x27;m remapping the Bois helicopter field (https://www.openstreetmap.org/?lat=45.939232&amp;amp;lon=6.896469&amp;amp;zoom=18&amp;amp;layers=M), and I don&#x27;t know how to map the surrounding artificial ground walls, which can be seen for instance here: http://rocknrollcircuschx.free.fr/photos/DZ_des_bois_FSX_...'''
 date = "2012-12-16T21:28:00Z"
 lastmod = "2012-12-18T07:26:00Z"
 weight = 18498
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all, I'm remapping the Bois helicopter field (<a href="http://www.openstreetmap.org/?lat=45.939232&amp;lon=6.896469&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=45.939232&amp;lon=6.896469&amp;zoom=18&amp;layers=M</a>), and I don't know how to map the surrounding artificial ground walls, which can be seen for instance here: <a href="http://rocknrollcircuschx.free.fr/photos/DZ_des_bois_FSX_1.jpg">http://rocknrollcircuschx.free.fr/photos/DZ_des_bois_FSX_1.jpg</a>. They are quite important as they define the boundary of the military zone. Any tips? Thanks, Ocirne</p>
+<p>Hi all, I'm remapping the Bois helicopter field (<a href="https://www.openstreetmap.org/?lat=45.939232&amp;lon=6.896469&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=45.939232&amp;lon=6.896469&amp;zoom=18&amp;layers=M</a>), and I don't know how to map the surrounding artificial ground walls, which can be seen for instance here: <a href="http://rocknrollcircuschx.free.fr/photos/DZ_des_bois_FSX_1.jpg">http://rocknrollcircuschx.free.fr/photos/DZ_des_bois_FSX_1.jpg</a>. They are quite important as they define the boundary of the military zone. Any tips? Thanks, Ocirne</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wall" rel="tag" title="see questions tagged &#39;wall&#39;">wall</span> <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span>
@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>barrier=wall comes closest to what it is. Behaves like a wall with at least one nearly-vertical side, prevents passage, non-transparent, solid material.</p>
-<p>A wall can be further defined by wall= <em>and material=</em>, check out the wiki-site for some suggestions: <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall</a></p>
+<p>A wall can be further defined by wall= <em>and material=</em>, check out the wiki-site for some suggestions: <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall</a></p>
 <p>so why not barrier=wall, wall=earth_bank, material=ground</p>
 </div>
 <div class="answer-controls post-controls">
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A few people have gone for "<a href="http://taginfo.openstreetmap.org/search?q=earth_bank#values">earth_bank</a>". Another possibility is "<a href="http://wiki.openstreetmap.org/wiki/Key:embankment">embankment</a>", but that doesn't seem quite right here.</p>
+<p>A few people have gone for "<a href="http://taginfo.openstreetmap.org/search?q=earth_bank#values">earth_bank</a>". Another possibility is "<a href="https://wiki.openstreetmap.org/wiki/Key:embankment">embankment</a>", but that doesn't seem quite right here.</p>
 <p>Perhaps this is a question that's best asked on the "<a href="http://lists.openstreetmap.org/listinfo/tagging">tagging</a>" mailing list? I'm sure that you'll get lots of different opinions there.</p>
 </div>
 <div class="answer-controls post-controls">

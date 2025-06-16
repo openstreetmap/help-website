@@ -168,7 +168,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you just want access to the map for navigating you could give OsmAnd a try on your Android phone.</p>
 <p>Go to menu/configure map/map language. That will allow you to choose between Local Language (of the mapped country) and a variety of other languages from a drop down list.</p>
-<p>Only ways/POIs etc which have been tagged with name:en=* will display in English - anything not so tagged will still display in the local language. Have a look at this wiki page re name tagging (<a href="http://wiki.openstreetmap.org/wiki/Multilingual_names#Japan)">http://wiki.openstreetmap.org/wiki/Multilingual_names#Japan)</a></p>
+<p>Only ways/POIs etc which have been tagged with name:en=* will display in English - anything not so tagged will still display in the local language. Have a look at this wiki page re name tagging (<a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Japan)">https://wiki.openstreetmap.org/wiki/Multilingual_names#Japan)</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

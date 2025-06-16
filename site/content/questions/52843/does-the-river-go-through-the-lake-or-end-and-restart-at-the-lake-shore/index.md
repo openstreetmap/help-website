@@ -224,7 +224,7 @@ You may decide to split the line that depicts the waterflow, but there should be
 <div id="post-57240-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>BTW avoiding the waterway through a pond/lake raises this error in osmose: <a href="http://wiki.openstreetmap.org/wiki/Osmose/issues#1220">http://wiki.openstreetmap.org/wiki/Osmose/issues#1220</a></p>
+<p>BTW avoiding the waterway through a pond/lake raises this error in osmose: <a href="https://wiki.openstreetmap.org/wiki/Osmose/issues#1220">https://wiki.openstreetmap.org/wiki/Osmose/issues#1220</a></p>
 </div>
 <div id="comment-57240-info" class="comment-info">
 <span class="comment-age">(23 Jul '17, 17:38)</span> <span class="comment-user userinfo">juminet</span>

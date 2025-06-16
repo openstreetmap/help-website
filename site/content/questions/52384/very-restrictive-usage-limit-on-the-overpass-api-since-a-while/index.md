@@ -74,7 +74,7 @@ Currently running queries (pid, space limit, time limit, start time):
 <ul>
 <li>Both servers have a total capacity of about 1.000.000 requests per day. You can safely assume that you don't disturb other users when you do less than 10.000 queries per day or download less than 5 GB data per day.</li>
 </ul>
-<p>PS2. Related question: <a href="https://help.openstreetmap.org/questions/52333">https://help.openstreetmap.org/questions/52333</a></p>
+<p>PS2. Related question: <a href="/questions/52333">https://help.openstreetmap.org/questions/52333</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-usage" rel="tag" title="see questions tagged &#39;usage&#39;">usage</span> <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-xapi" rel="tag" title="see questions tagged &#39;xapi&#39;">xapi</span> <span class="post-tag tag-link-limit" rel="tag" title="see questions tagged &#39;limit&#39;">limit</span> <span class="post-tag tag-link-overpass-api" rel="tag" title="see questions tagged &#39;overpass-api&#39;">overpass-api</span>

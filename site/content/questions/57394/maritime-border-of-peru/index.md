@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should discuss that with the Peruvian community: <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Peru">http://wiki.openstreetmap.org/wiki/WikiProject_Peru</a></p>
+<p>You should discuss that with the Peruvian community: <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Peru">https://wiki.openstreetmap.org/wiki/WikiProject_Peru</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

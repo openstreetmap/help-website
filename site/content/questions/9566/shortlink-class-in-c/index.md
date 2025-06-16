@@ -136,7 +136,7 @@ The source file containing this function is available at:<br />
                                        ByRef aCenterLatitude As Double, _
                                        ByRef aCenterLongitude As Double, _
                                        ByRef aZoom As Integer) As Boolean
-        &#39;http://osm.org/go/0MbEUuTq = http://www.openstreetmap.org/?lat=52.50547&amp;lon=13.36932&amp;zoom=16
+        &#39;http://osm.org/go/0MbEUuTq = https://www.openstreetmap.org/?lat=52.50547&amp;lon=13.36932&amp;zoom=16
         Dim x As Long = 0
         Dim y As Long = 0
         Dim z As Long = 0

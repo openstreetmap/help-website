@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi a look a like <a href="http://www.openstreetmap.org/#map=18/50.85427/6.07593">http://www.openstreetmap.org/#map=18/50.85427/6.07593</a> , a border between 2 countries with a street in the middle hope it helps. Just take or have a look at the tagging scheme.</p>
+<p>Hi a look a like <a href="https://www.openstreetmap.org/#map=18/50.85427/6.07593">https://www.openstreetmap.org/#map=18/50.85427/6.07593</a> , a border between 2 countries with a street in the middle hope it helps. Just take or have a look at the tagging scheme.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

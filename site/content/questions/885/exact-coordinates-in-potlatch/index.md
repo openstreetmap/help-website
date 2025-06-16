@@ -176,7 +176,7 @@ osqa_accepted = false
 <div id="post-53941-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: the question is not about the cursor position but about an option to enter a position in numbers.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: the question is not about the cursor position but about an option to enter a position in numbers.</p>
 </div>
 <div id="comment-53941-info" class="comment-info">
 <span class="comment-age">(09 Jan '17, 07:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -290,7 +290,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/Potlatch2_lat_lon_read_out.JPG" alt="alt text" />On the righthand side of P2 screen click options then tick show mouse lat lon that should help. If I zoom in as far as possible i can increment the mouse pointer in 0.00001 degree steps without any problems, that is about 1 meter resolution.</p>
+<p><img src="/upfiles/Potlatch2_lat_lon_read_out.JPG" alt="alt text" />On the righthand side of P2 screen click options then tick show mouse lat lon that should help. If I zoom in as far as possible i can increment the mouse pointer in 0.00001 degree steps without any problems, that is about 1 meter resolution.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

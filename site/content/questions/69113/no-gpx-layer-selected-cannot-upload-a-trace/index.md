@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm using <a href="https://wiki.openstreetmap.org/wiki/User:Subhodip/GSoC_Doc#DirectUpload_Plugin_in_JOSM_:">https://wiki.openstreetmap.org/wiki/User:Subhodip/GSoC_Doc#DirectUpload_Plugin_in_JOSM_:</a> to upload my GPS trace in my JOSM. But I'm getting the following error -</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2019-05-07_at_19.22.20.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2019-05-07_at_19.22.20.png" alt="alt text" /></p>
 <p>Can someone guide me on activating this GPX layer in OSM?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -207,7 +207,7 @@ One Answer:
 <div id="post-69142-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Do you mean something like this: <a href="https://help.openstreetmap.org/upfiles/Screenshot_2019-05-09_at_16.31.20.png">https://help.openstreetmap.org/upfiles/Screenshot_2019-05-09_at_16.31.20.png</a> where the white line is your GPX track ?</p>
+<p>Do you mean something like this: <span>/upfiles/Screenshot_2019-05-09_at_16.31.20.png</span> where the white line is your GPX track ?</p>
 </div>
 <div id="comment-69142-info" class="comment-info">
 <span class="comment-age">(09 May '19, 15:32)</span> <span class="comment-user userinfo">escada</span>

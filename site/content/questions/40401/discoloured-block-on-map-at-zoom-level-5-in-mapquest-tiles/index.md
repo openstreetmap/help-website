@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Discoloured Block on Map at Zoom Level 5 in MapQuest tiles"
-description = '''Hi, We&#x27;re using OpenStreetMap to display a map on a big screen (http://www.openstreetmap.org/#map=5/46.890/-72.664&amp;amp;layers=Q). There is a big white block on the map at zoom level 5. Is there a fix or workaround for this?  Update: '''
+description = '''Hi, We&#x27;re using OpenStreetMap to display a map on a big screen (https://www.openstreetmap.org/#map=5/46.890/-72.664&amp;amp;layers=Q). There is a big white block on the map at zoom level 5. Is there a fix or workaround for this?  Update: '''
 date = "2015-01-15T17:46:00Z"
 lastmod = "2015-01-16T02:16:00Z"
 weight = 40401
@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>We're using OpenStreetMap to display a map on a big screen (<a href="http://www.openstreetmap.org/#map=5/46.890/-72.664&amp;layers=Q">http://www.openstreetmap.org/#map=5/46.890/-72.664&amp;layers=Q</a>).</p>
+<p>We're using OpenStreetMap to display a map on a big screen (<a href="https://www.openstreetmap.org/#map=5/46.890/-72.664&amp;layers=Q">https://www.openstreetmap.org/#map=5/46.890/-72.664&amp;layers=Q</a>).</p>
 <p>There is a big white block on the map at zoom level 5. Is there a fix or workaround for this?</p>
-<p>Update: <img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2015-01-15_at_2.18.42_PM.png" alt="alt text" /></p>
+<p>Update: <img src="/upfiles/Screen_Shot_2015-01-15_at_2.18.42_PM.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mapquest" rel="tag" title="see questions tagged &#39;mapquest&#39;">mapquest</span> <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span> <span class="post-tag tag-link-display" rel="tag" title="see questions tagged &#39;display&#39;">display</span>

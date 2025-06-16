@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-21706-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Aseerel4c26, the number of buildings tagged building - yes confused me (93 %). Just a simplyfied square or a symbol. But I should have looked here, <a href="http://wiki.openstreetmap.org/wiki/Building">http://wiki.openstreetmap.org/wiki/Building</a> And will add buildings as good as its gets and keep an eye on the Wiki, just to improve the vieuw of OSM. Greetz</p>
+<p>Hi Aseerel4c26, the number of buildings tagged building - yes confused me (93 %). Just a simplyfied square or a symbol. But I should have looked here, <a href="https://wiki.openstreetmap.org/wiki/Building">https://wiki.openstreetmap.org/wiki/Building</a> And will add buildings as good as its gets and keep an eye on the Wiki, just to improve the vieuw of OSM. Greetz</p>
 </div>
 <div id="comment-21706-info" class="comment-info">
 <span class="comment-age">(22 Apr '13, 10:07)</span> <span class="comment-user userinfo">Hendrikklaas</span>

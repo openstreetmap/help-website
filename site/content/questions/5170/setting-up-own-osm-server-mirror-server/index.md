@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have the idea to setup my own Server with osm data so i dont have to take the server power from osm to download my maps to my android phone (locus). as an "output" i want to use the data on locus in sqlite format, not tiles.</p>
-<p>i tried to set up an ubuntu machine with help of the following instructions: <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> <a href="http://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu">http://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu</a> <a href="http://weait.com/content/build-your-own-openstreetmap-server">http://weait.com/content/build-your-own-openstreetmap-server</a></p>
+<p>i tried to set up an ubuntu machine with help of the following instructions: <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a> <a href="https://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu">https://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu</a> <a href="http://weait.com/content/build-your-own-openstreetmap-server">http://weait.com/content/build-your-own-openstreetmap-server</a></p>
 <p>all i get to now is what you can see here: <a href="http://217.92.52.58/">http://217.92.52.58/</a> im kinda stuck now and hope to get some help over here</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As I understand it Locus caches tiles rather than vector data in its sqlite database. You do not need the rails port to render tiles, just Postgres+Postgis and Mapnik are required.</p>
-<p>For a limited area you might choose to generate all tiles using the <a href="http://generate_tiles.py"><code>generate_tiles.py</code></a> python script provided with mapnik. For larger areas some kind of selectivity for tile generation is useful using <a href="http://wiki.openstreetmap.org/wiki/Mod_tile">mod_tile</a> and renderd/<a href="http://wiki.openstreetmap.org/wiki/Tirex">tirex</a>.</p>
+<p>For a limited area you might choose to generate all tiles using the <a href="http://generate_tiles.py"><code>generate_tiles.py</code></a> python script provided with mapnik. For larger areas some kind of selectivity for tile generation is useful using <a href="https://wiki.openstreetmap.org/wiki/Mod_tile">mod_tile</a> and renderd/<a href="https://wiki.openstreetmap.org/wiki/Tirex">tirex</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

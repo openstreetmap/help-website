@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's much better to use <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Overpass</a> for this type of query. It offloads a big <code>bbox GET</code> request from the API and you can filter by tags. See the wiki page for details, or use the xapi syntax as follows (example is for mapquest version, there are others, for instance on <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer">Overpass Turbo</a>):</p>
+<p>It's much better to use <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Overpass</a> for this type of query. It offloads a big <code>bbox GET</code> request from the API and you can filter by tags. See the wiki page for details, or use the xapi syntax as follows (example is for mapquest version, there are others, for instance on <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer">Overpass Turbo</a>):</p>
 <pre><code>http://open.mapquestapi.com/xapi/api/0.6/way[highway=*][bbox=lon_low,lat_low,lon_hi,lat_hi]</code></pre>
 </div>
 <div class="answer-controls post-controls">

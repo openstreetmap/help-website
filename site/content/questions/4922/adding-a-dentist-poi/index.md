@@ -189,7 +189,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To add your clinic to OSM, please create a node (a dot on the map), and tag it as <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddentist">"amenity=dentist"</a>.</p>
+<p>To add your clinic to OSM, please create a node (a dot on the map), and tag it as <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddentist">"amenity=dentist"</a>.</p>
 <blockquote>
 <p>Unfortunately, I didn't find an icon for dental centers</p>
 </blockquote>

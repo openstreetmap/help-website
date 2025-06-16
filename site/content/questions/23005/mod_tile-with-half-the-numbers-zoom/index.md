@@ -129,7 +129,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Khtml.maplib">Khtml.maplib</a> can zoom "continuously".</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Khtml.maplib">Khtml.maplib</a> can zoom "continuously".</p>
 <p>HTH /al</p>
 </div>
 <div class="answer-controls post-controls">

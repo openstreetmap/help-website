@@ -157,7 +157,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can open a troubleticket at our <a href="http://trac.openstreetmap.org/">trac</a> system (log in there with your OSM account)</p>
-<p>or contact one of the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">System_Administrators</a></p>
+<p>or contact one of the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">System_Administrators</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

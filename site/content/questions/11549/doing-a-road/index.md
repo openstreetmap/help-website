@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki page on <a href="http://wiki.openstreetmap.org/wiki/Lanes">Lanes</a> may help here. Also the Traffic Island could be mapped as <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">crossing=island</a></p>
+<p>The wiki page on <a href="https://wiki.openstreetmap.org/wiki/Lanes">Lanes</a> may help here. Also the Traffic Island could be mapped as <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">crossing=island</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

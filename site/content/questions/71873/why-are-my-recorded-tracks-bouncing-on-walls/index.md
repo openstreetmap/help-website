@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-71874-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>did you upload them as "public, unordered points" ? If so, see <a href="https://help.openstreetmap.org/questions/66689/what-does-unordered-mean-in-visibility-option-for-gps-traces">https://help.openstreetmap.org/questions/66689/what-does-unordered-mean-in-visibility-option-for-gps-traces</a></p>
+<p>did you upload them as "public, unordered points" ? If so, see <a href="/questions/66689/what-does-unordered-mean-in-visibility-option-for-gps-traces">https://help.openstreetmap.org/questions/66689/what-does-unordered-mean-in-visibility-option-for-gps-traces</a></p>
 </div>
 <div id="comment-71874-info" class="comment-info">
 <span class="comment-age">(27 Nov '19, 14:15)</span> <span class="comment-user userinfo">escada</span>
@@ -182,7 +182,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I agree with stf. This illustration shows a trace where i walked up and down a new Bridle Way, these are for foot, cycle and horse traffic only in England. This one is 4 meters wide and i walked north on one edge and south on the other ( I did move a bit to observe some other stuff). The trace was recorded with a Garmin Oregon 450 that i've used about four years i think. I carry it in a pouch at shoulder level on backpack strap, so my bodies obstruction of signal is reduced. I hope this picture is of help.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Potlatch2_and_a_trace.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Potlatch2_and_a_trace.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

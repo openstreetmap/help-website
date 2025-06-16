@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Importing data provided under CC-BY-SA license"
-description = '''Is data provided by third parties under a CC-BY-SA 3.0 license suitable to inclusion into OSM? The import catalog ( http://wiki.openstreetmap.org/wiki/Import/Catalogue ) lists several cases where CC-licensed data has been imported, but I want to double check.'''
+description = '''Is data provided by third parties under a CC-BY-SA 3.0 license suitable to inclusion into OSM? The import catalog ( https://wiki.openstreetmap.org/wiki/Import/Catalogue ) lists several cases where CC-licensed data has been imported, but I want to double check.'''
 date = "2013-10-08T15:42:00Z"
 lastmod = "2013-10-11T12:42:00Z"
 weight = 27017
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is data provided by third parties under a CC-BY-SA 3.0 license suitable to inclusion into OSM?</p>
-<p>The import catalog ( <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue">http://wiki.openstreetmap.org/wiki/Import/Catalogue</a> ) lists several cases where CC-licensed data has been imported, but I want to double check.</p>
+<p>The import catalog ( <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue">https://wiki.openstreetmap.org/wiki/Import/Catalogue</a> ) lists several cases where CC-licensed data has been imported, but I want to double check.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span> <span class="post-tag tag-link-license" rel="tag" title="see questions tagged &#39;license&#39;">license</span>
@@ -114,7 +114,7 @@ One Answer:
 <p>No, it isn't.</p>
 <p>Since OSM has moved to a combination of the Open Database Licence and our own Contributor Terms, we now provide data under a licence which is (in some ways) more permissive than CC-BY-SA. Therefore CC-BY-SA data can't be imported, because it doesn't grant these permissions.</p>
 <p>However, you can always approach the data owners, and ask for their permission to import it into OSM.</p>
-<p>Don't forget you must follow the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a>, including discussing your edits with the <a href="https://lists.openstreetmap.org/pipermail/imports/">imports@ mailing list</a> and your local mailing list <em>before</em> starting the import.</p>
+<p>Don't forget you must follow the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a>, including discussing your edits with the <a href="https://lists.openstreetmap.org/pipermail/imports/">imports@ mailing list</a> and your local mailing list <em>before</em> starting the import.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is an <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#GPS_traces">Editing API for downloading GPS points by bounding box</a> and there are also GPS trace tiles that can be used as an editor background.</p>
+<p>There is an <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#GPS_traces">Editing API for downloading GPS points by bounding box</a> and there are also GPS trace tiles that can be used as an editor background.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

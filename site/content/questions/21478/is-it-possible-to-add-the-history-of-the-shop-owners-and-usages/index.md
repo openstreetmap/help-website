@@ -65,7 +65,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This question was asked by a new contributor <a href="http://www.openstreetmap.org/user/andrewj74">andrewj74</a> as a comment in changeset <a href="http://www.openstreetmap.org/browse/changeset/15693142">15693142</a>. As this seemed interesting and pertinent I thought I'd add it to OSM Help.</p>
+<p>This question was asked by a new contributor <a href="https://www.openstreetmap.org/user/andrewj74">andrewj74</a> as a comment in changeset <a href="https://www.openstreetmap.org/browse/changeset/15693142">15693142</a>. As this seemed interesting and pertinent I thought I'd add it to OSM Help.</p>
 </div>
 <div id="comment-21479-info" class="comment-info">
 <span class="comment-age">(12 Apr '13, 17:15)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -130,10 +130,10 @@ One Answer:
 <ul>
 <li>Just adding a numerical suffix to the <code>old_xxx</code> tags. So <code>old_shop</code> would be previous usage, <code>old_shop2</code> the one before etc. This is a simple but maintenance gets complicated if usages are added out of sequence. Ideally this would be combined with start_date:old_shop and end_date:old_shop which would reduce this problem (although from personal experience it's extremely hard to find accurate values for these dates).</li>
 <li>Using the suffix after old, so that shop=general, with old_shop=convenience and old2_amenity=pub would better represent a broader range of multiple uses. Again date range tags make it easier to interpret the data.</li>
-<li>Date range namespaces to the key value, such as amenity:18970304:20121212=pub (roughly appropriate for the <a href="http://www.openstreetmap.org/browse/node/264961019">Golden Harp</a>). This is more complicated, requires that we know the date ranges and is much less obvious for people editing and inspecting the data.</li>
+<li>Date range namespaces to the key value, such as amenity:18970304:20121212=pub (roughly appropriate for the <a href="https://www.openstreetmap.org/browse/node/264961019">Golden Harp</a>). This is more complicated, requires that we know the date ranges and is much less obvious for people editing and inspecting the data.</li>
 </ul>
 <p>All these options really <strong>apply only</strong> to POIs with no changes in geography over time, but are widely applicable to shops, bars, pubs, restaurants etc.</p>
-<p>There are a number of people interested in problems such as this one with a mailing list at <a href="http://wiki.openstreetmap.org/wiki/Historical_OSM">Historical OSM</a>.</p>
+<p>There are a number of people interested in problems such as this one with a mailing list at <a href="https://wiki.openstreetmap.org/wiki/Historical_OSM">Historical OSM</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

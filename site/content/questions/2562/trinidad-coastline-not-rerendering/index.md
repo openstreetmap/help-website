@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see the <a href="http://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">previous answer</a> on this topic.</p>
+<p>Please see the <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">previous answer</a> on this topic.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

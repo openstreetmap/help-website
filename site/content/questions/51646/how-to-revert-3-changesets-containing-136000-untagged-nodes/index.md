@@ -108,7 +108,7 @@ One Answer:
 <p>First things first - thanks for letting us know!</p>
 <p>What I'd suggest now is to let the DWG have a bit of a head-scratch and we'll try and figure out the best way to revert this data. There are a couple of possible ways forward, some of which will require reconstructing the changeset .osc by other means.</p>
 <p>There's already a <a href="https://github.com/openstreetmap/openstreetmap-website/pull/1259">pull request</a> to try and prevent this being an issue in the future. It's something that seems to have happened more often in recent months (I can think of four examples I've had to do; other DWG members will have done others of course).</p>
-<p>For completeness, there's also a <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">wiki page</a> that explains what you're supposed to do before an import. One thing that I do note about that is that it's not translated to many languages, so one way that you can absolutely help while we're figuring out how to revert is to translate a copy of that into Persian (if you're unsure how translations are done, ask on <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> in #osm on OFTC and someone will help).</p>
+<p>For completeness, there's also a <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">wiki page</a> that explains what you're supposed to do before an import. One thing that I do note about that is that it's not translated to many languages, so one way that you can absolutely help while we're figuring out how to revert is to translate a copy of that into Persian (if you're unsure how translations are done, ask on <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> in #osm on OFTC and someone will help).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -139,7 +139,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>As was pointed out to you in <a href="https://help.openstreetmap.org/questions/51466/how-to-update-all-the-administrative-boundaries-for-a-country">https://help.openstreetmap.org/questions/51466/how-to-update-all-the-administrative-boundaries-for-a-country</a> you did not follow the import guidelines. They are there for a reason (a decade of bad imports) and you could have avoided the work other people have to do to clean up the mess if you had taken them seriously.</p>
+<p>As was pointed out to you in <a href="/questions/51466/how-to-update-all-the-administrative-boundaries-for-a-country">https://help.openstreetmap.org/questions/51466/how-to-update-all-the-administrative-boundaries-for-a-country</a> you did not follow the import guidelines. They are there for a reason (a decade of bad imports) and you could have avoided the work other people have to do to clean up the mess if you had taken them seriously.</p>
 </div>
 <div id="comment-51650-info" class="comment-info">
 <span class="comment-age">(22 Aug '16, 18:25)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have <a href="https://help.openstreetmap.org/questions/30407/plot-markers-on-offline-map-from-database">asked this question yesterday</a> and received an answer.</p>
+<p>You have <a href="/questions/30407/plot-markers-on-offline-map-from-database">asked this question yesterday</a> and received an answer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

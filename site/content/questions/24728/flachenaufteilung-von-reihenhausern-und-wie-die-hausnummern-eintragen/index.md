@@ -113,8 +113,8 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Meisten mal zeichne ich einen Fläche fur einen Haus. Nur wenn es zu kompliziert ist (zb Hausern übereinander) oder wirklish ein einziges Gebäude mit mehrere Addressen/POIs nutze ich ein einzelne Fläche.</p>
-<p>Wenn eine Fläche mehrere Addressen darstelt, kanst du <a href="http://wiki.openstreetmap.org/wiki/DE:Addresses#Geb.C3.A4ude_mit_mehreren_Hausnummern">"," und "-" benutzen</a>.</p>
-<p>Mit JOSM und das <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utils plugin</a> is es einfach, eine Fläche zu teilen : Erst das grosse Recheck zeichnen mit "extrude" (x), dann die Trennungen zeichnen, dann mit "split object" (Alt-x) eignetlish trennen.</p>
+<p>Wenn eine Fläche mehrere Addressen darstelt, kanst du <a href="https://wiki.openstreetmap.org/wiki/DE:Addresses#Geb.C3.A4ude_mit_mehreren_Hausnummern">"," und "-" benutzen</a>.</p>
+<p>Mit JOSM und das <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utils plugin</a> is es einfach, eine Fläche zu teilen : Erst das grosse Recheck zeichnen mit "extrude" (x), dann die Trennungen zeichnen, dann mit "split object" (Alt-x) eignetlish trennen.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Falls du mit dem Offline-Editor JOSM arbeitest, schau dir auch mal das Plugin <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">Terracer</a> an.</p>
+<p>Falls du mit dem Offline-Editor JOSM arbeitest, schau dir auch mal das Plugin <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">Terracer</a> an.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -232,7 +232,7 @@ osqa_accepted = true
 <div id="post-49955-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div id="comment-49955-info" class="comment-info">
 <span class="comment-age">(01 Jun '16, 14:21)</span> <span class="comment-user userinfo">andy mackey</span>

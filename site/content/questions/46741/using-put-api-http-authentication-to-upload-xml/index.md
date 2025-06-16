@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/osm_image_HgX2PyK.jpg" alt="alt text" /> how to upload the xml file to add POI? i want to use put api and http authentication. api url <a href="http://api06.dev.openstreetmap.org/api/0.6/changeset/create.">http://api06.dev.openstreetmap.org/api/0.6/changeset/create.</a> Can anyone help me to provide c# code for uploading xml file. xml looks like attached image.</p>
+<p><img src="/upfiles/osm_image_HgX2PyK.jpg" alt="alt text" /> how to upload the xml file to add POI? i want to use put api and http authentication. api url <a href="http://api06.dev.openstreetmap.org/api/0.6/changeset/create.">http://api06.dev.openstreetmap.org/api/0.6/changeset/create.</a> Can anyone help me to provide c# code for uploading xml file. xml looks like attached image.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-put" rel="tag" title="see questions tagged &#39;put&#39;">put</span> <span class="post-tag tag-link-xml" rel="tag" title="see questions tagged &#39;xml&#39;">xml</span> <span class="post-tag tag-link-authentication" rel="tag" title="see questions tagged &#39;authentication&#39;">authentication</span> <span class="post-tag tag-link-upload" rel="tag" title="see questions tagged &#39;upload&#39;">upload</span>
@@ -76,7 +76,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Allow me a note of caution:</p>
 <p>If you are doing this because you are writing a software that helps people "manage their online visibility" (i.e. some kind of SEO stuff) then please stop right now and don't pursue this further - we have had enough problems with people mass-adding data of questionable value. Among these problems were bad tagging, no respect for already existing data, geocoding from incompatible licenses, and lack of communication (i.e. users adding this data were unwilling or unable to reply when contacted about their edits).</p>
-<p>If you are planning any kind of automated data import, you will also be expected to respect our import guidelines as explained here <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> which include, among other things, a requirement of discussing things before importing.</p>
+<p>If you are planning any kind of automated data import, you will also be expected to respect our import guidelines as explained here <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> which include, among other things, a requirement of discussing things before importing.</p>
 <p>Your XML example contains a number of tagging errors that would make the data useless in OpenStreetMap. If you were to upload this, it would likely be removed again, and if you were to upload several items like that, your account would be blocked for violation of import policies.</p>
 </div>
 <div id="comment-46745-info" class="comment-info">

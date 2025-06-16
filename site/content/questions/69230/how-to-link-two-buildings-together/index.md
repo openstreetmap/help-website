@@ -214,7 +214,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Site relations might sound good for this but keep in mind that they're only visible in the data. They are neither rendered nor found by OpenStreetMap's search tool (also see <a href="https://help.openstreetmap.org/questions/60388/usage-of-typesite-relations">Usage of type=site relations</a> question on this site).</p>
+<p>Site relations might sound good for this but keep in mind that they're only visible in the data. They are neither rendered nor found by OpenStreetMap's search tool (also see <a href="/questions/60388/usage-of-typesite-relations">Usage of type=site relations</a> question on this site).</p>
 <p>So, if the hotel complex can't be put in a single closed way or the hotel consists of only disparate buildings, using a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> relation is a good solution as it is better supported by many tools. How to add a relation using JOSM is explained <a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Relations">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-9091-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I hoped that high points would show on the map but few seem bothered <a href="http://help.openstreetmap.org/questions/2390/noticeable-way-points-or-landmarks">http://help.openstreetmap.org/questions/2390/noticeable-way-points-or-landmarks</a></p>
+<p>I hoped that high points would show on the map but few seem bothered <a href="/questions/2390/noticeable-way-points-or-landmarks">https://help.openstreetmap.org/questions/2390/noticeable-way-points-or-landmarks</a></p>
 </div>
 <div id="comment-9091-info" class="comment-info">
 <span class="comment-age">(17 Nov '11, 23:50)</span> <span class="comment-user userinfo">andy mackey</span>

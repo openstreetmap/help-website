@@ -42,8 +42,8 @@ osqa_accepted = true
 <p>I notice that on the OSM wiki <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">Relation:multipolygon</a> says that any area that has an outline consisting of several ways joined together requires a multipolygon relation.<br />
 And also states "Mainly in Germany type=multipolygon has also been used instead of type=boundary for boundary relations. This method was not widely accepted and should be considered deprecated."</p>
 <p>This is confusing to me.<br />
-<a href="http://www.openstreetmap.org/relation/5973058">This is a boundary</a> with several ways joined together that I mapped. boundary=national_park, <strong>type=boundary</strong><br />
-This is <a href="http://www.openstreetmap.org/relation/5973059">another</a> with boundary=protected_area, <strong>type=multipolygon</strong></p>
+<a href="https://www.openstreetmap.org/relation/5973058">This is a boundary</a> with several ways joined together that I mapped. boundary=national_park, <strong>type=boundary</strong><br />
+This is <a href="https://www.openstreetmap.org/relation/5973059">another</a> with boundary=protected_area, <strong>type=multipolygon</strong></p>
 <p>Each consisted of a single enclosed area with multiple joined lines.</p>
 <p>Which is correct? <strong>type=boundary or type=multipolygon</strong></p>
 <p>Does <a href="http://tools.geofabrik.de/osmi/?view=multipolygon&amp;lon=145.13951&amp;lat=-30.65421&amp;zoom=8&amp;opacity=1.00&amp;overlays=invalid_geometry_hull,duplicate_ways,intersections,intersection_lines,ring_not_closed_hull,ring_not_closed,unconnected_end_nodes,touching_inner_rings_hull,touching_inner_rings,role_mismatch_hull,role_mismatch,duplicate_tags_hull,duplicate_tags,multipolygons_type_is_boundary,type_is_boundary,ways,role_markers,way_end_nodes,way_nodes">The OSM Inspector</a> tell me that it should be type=multipolygon?</p>

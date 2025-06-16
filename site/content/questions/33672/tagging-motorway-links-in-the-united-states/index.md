@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Tagging motorway links in the United States"
-description = '''Hello! Could anyone tell me whether this (November 2012) discussion was ever resolved, and if so, to what (and update the wiki accordingly)? http://wiki.openstreetmap.org/wiki/Key:exit_to#Discussion_about_exit_to Bottom line: I&#x27;d like to know how to properly add the information from a sign like this...'''
+description = '''Hello! Could anyone tell me whether this (November 2012) discussion was ever resolved, and if so, to what (and update the wiki accordingly)? https://wiki.openstreetmap.org/wiki/Key:exit_to#Discussion_about_exit_to Bottom line: I&#x27;d like to know how to properly add the information from a sign like this...'''
 date = "2014-06-04T15:50:00Z"
 lastmod = "2014-06-04T18:05:00Z"
 weight = 33672
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello! Could anyone tell me whether this (November 2012) discussion was ever resolved, and if so, to what (and update the wiki accordingly)?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:exit_to#Discussion_about_exit_to">http://wiki.openstreetmap.org/wiki/Key:exit_to#Discussion_about_exit_to</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:exit_to#Discussion_about_exit_to">https://wiki.openstreetmap.org/wiki/Key:exit_to#Discussion_about_exit_to</a></p>
 <p>Bottom line: I'd like to know how to properly add the information from a sign like this in the U.S. <a href="http://anationinperil.com/wp-content/uploads/2012/11/Black-Highway-Signs-0031.jpg">http://anationinperil.com/wp-content/uploads/2012/11/Black-Highway-Signs-0031.jpg</a></p>
 <pre><code>I already know that the motorway_junction gets name+ref both as &#39;40A&#39;, but that leaves the remainder, and I really can&#39;t find any clear answer from this (now 18 month old?) discussion. All of exit_to, destination, and relation:destination_sign are still at a status of &#39;unspecified&#39;.</code></pre>
 <p>Thanks much!</p>

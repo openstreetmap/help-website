@@ -184,7 +184,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>For traffic lights and in general traffic signals, here is the documentation:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -181,7 +181,7 @@ osqa_accepted = false
 <p>go to <a href="http://www.openstreetmap.org">www.openstreetmap.org</a>, choose the area you have been working on ans click on the white plus-symbol (+) at the upper right corner of the screen.</p>
 <p>Besides you can choose the renderer to display the map, you can choose the "data layer" to display the objects in the OSM data as they are in the data in the right moment now.</p>
 <p>There you can check your recently added objects about their position and tagging.</p>
-<p>(More details at <a href="http://wiki.openstreetmap.org/wiki/Data_layer"></a><a href="http://wiki.openstreetmap.org/wiki/Data_layer"></a><a href="http://wiki.openstreetmap.org/wiki/Data_layer">http://wiki.openstreetmap.org/wiki/Data_layer</a>)</p>
+<p>(More details at <a href="https://wiki.openstreetmap.org/wiki/Data_layer"></a><a href="https://wiki.openstreetmap.org/wiki/Data_layer"></a><a href="https://wiki.openstreetmap.org/wiki/Data_layer">https://wiki.openstreetmap.org/wiki/Data_layer</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

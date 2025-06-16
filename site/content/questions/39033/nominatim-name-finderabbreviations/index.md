@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I just added a new language (Malay) to the <a href="http://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations">Name finder:Abbreviations page</a>, but I wonder if the page is still relevant? I tried some abbreviations in the bigger languages and they seem to work on Nominatim search, so a lot of them should be already labelled as 'yes' for '<strong>implemented?</strong>'</p>
+<p>I just added a new language (Malay) to the <a href="https://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations">Name finder:Abbreviations page</a>, but I wonder if the page is still relevant? I tried some abbreviations in the bigger languages and they seem to work on Nominatim search, so a lot of them should be already labelled as 'yes' for '<strong>implemented?</strong>'</p>
 <p>Therefore, can someone confirm the relevance of this wiki page, and if it is not, where should enter new language/abbreviations?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

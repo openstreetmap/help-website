@@ -137,7 +137,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>... because SRTM data is NOT an element of OpenStreetMap data itself.</p>
 <p>You have to derive SRTM data from third parties.</p>
-<p>Last hint in this issue: <a href="http://wiki.openstreetmap.org/wiki/SRTM">http://wiki.openstreetmap.org/wiki/SRTM</a></p>
+<p>Last hint in this issue: <a href="https://wiki.openstreetmap.org/wiki/SRTM">https://wiki.openstreetmap.org/wiki/SRTM</a></p>
 </div>
 <div id="comment-22988-info" class="comment-info">
 <span class="comment-age">(03 Jun '13, 16:18)</span> <span class="comment-user userinfo">stephan75</span>
@@ -181,12 +181,12 @@ osqa_accepted = false
 <div class="answer-body">
 <p>OpenStreetMap does contain <em>some</em> elevation data. However one wouldn't consider it Topographical.</p>
 <p>As already posted, the public domain SRTM (Shuttle Radar Topography Mission) elevation data can be used in conjunction with OSM data, as performed in creation of the OpenCycleMaps.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/SRTM">http://wiki.openstreetmap.org/wiki/SRTM</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/SRTM">https://wiki.openstreetmap.org/wiki/SRTM</a></p>
 <p>OSM itself does contain some height/depths specified via the key <strong>ele</strong></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:ele">http://wiki.openstreetmap.org/wiki/Key:ele</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:ele">https://wiki.openstreetmap.org/wiki/Key:ele</a></p>
 <p>I would suggest this is best set on natural geographic features such as peaks, mountain passes, sea channel depths or on man made survey (trig) points. Many existing maps (including the current main Mapnik style[1]) show these values - mostly as 'spot' (i.e. single node) heights. Generally the 'spot' heights can not be determined accurately due to the limited resolution of the SRTM data, which is why it is useful information to record. Otherwise for most ways, interpolation from the Topo data should be sufficient for most uses.</p>
 <p>[1] The height, where available, is shown from zoom level 14 and higher, e.g. on the South Downs in the UK:</p>
-<p><a href="http://www.openstreetmap.org/?lat=50.9077&amp;lon=-0.6406&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=50.9077&amp;lon=-0.6406&amp;zoom=14&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=50.9077&amp;lon=-0.6406&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=50.9077&amp;lon=-0.6406&amp;zoom=14&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

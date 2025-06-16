@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In my area of the world (the US state of Vermont), some school zones don’t have <a href="https://help.openstreetmap.org/questions/15399/how-to-tag-a-time-based-maxspeed-for-school-zone">time-based restrictions (esp. maxspeed)</a>, but instead a flashing light or sign specifying “When children are present.” I’m familiar with <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restrictions</a> as advised in the answer to the aforelinked question regarding time-based restrictions, but I’m not sure how to appropriately designate “presence” or a flashing signal. How should one do so?</p>
+<p>In my area of the world (the US state of Vermont), some school zones don’t have <a href="/questions/15399/how-to-tag-a-time-based-maxspeed-for-school-zone">time-based restrictions (esp. maxspeed)</a>, but instead a flashing light or sign specifying “When children are present.” I’m familiar with <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restrictions</a> as advised in the answer to the aforelinked question regarding time-based restrictions, but I’m not sure how to appropriately designate “presence” or a flashing signal. How should one do so?</p>
 <p>Also included in the examples below is a strange one: a street is one-way when a signal is flashing.</p>
 <p>Examples:</p>
 <ol>

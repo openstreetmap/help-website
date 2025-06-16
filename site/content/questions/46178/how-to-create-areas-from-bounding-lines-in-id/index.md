@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>So I have a number of fields in an area I'm working on that are bounded by different boundaries - hedges, fences, ditches etc.</p>
 <p>It seems to make sense to draw all the boundaries in for a number of fields at once. For example, several fields may be bounded at some point by a single hedge that runs for some distance.</p>
 <p>So I can add and tag lines representing all the boundaries. But how can I then select multiple lines in iD and create an area within them?</p>
-<p><a href="http://www.openstreetmap.org/edit#map=16/50.2383/-3.8148">Example:</a> If I drew on all the boundaries in this area, how could I then create individual areas for the fields within those boundaries, without adding the areas manually?</p>
+<p><a href="https://www.openstreetmap.org/edit#map=16/50.2383/-3.8148">Example:</a> If I drew on all the boundaries in this area, how could I then create individual areas for the fields within those boundaries, without adding the areas manually?</p>
 <p>Thanks in advance. David</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -138,8 +138,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As already mentioned, one option is to add all the boundaries (hedges, gates, walls, etc.) and then use those linear features to create multipolygons. Unfortunately, if taken to the extreme, this will result in data that is essentially unmaintainable. An example of the problem can be seen <a href="http://www.openstreetmap.org/relation/5389986#map=15/53.2127/-1.4555">here</a>.</p>
-<p>At that location, "Walton Wood" is composed of a series of other patches of woodland, with different tree types, such as <a href="http://www.openstreetmap.org/relation/5397331">this one</a>. It was originally mapped exactly like this, with the individual patches of woodland as constituent parts of one named multipolygon relation "Walton Wood". Unfortunately, an armchair mapper edited it and the result is as you see now - there's no relation between the individual logical parts of the wood and the whole. Try editing it and you'll see the problem straight away - in order to map anything else here, I'll have to revert the problem changeset, separately resolve any other problems that it tried to resolve (as the same issue may be present there too), and then continue mapping.</p>
+<p>As already mentioned, one option is to add all the boundaries (hedges, gates, walls, etc.) and then use those linear features to create multipolygons. Unfortunately, if taken to the extreme, this will result in data that is essentially unmaintainable. An example of the problem can be seen <a href="https://www.openstreetmap.org/relation/5389986#map=15/53.2127/-1.4555">here</a>.</p>
+<p>At that location, "Walton Wood" is composed of a series of other patches of woodland, with different tree types, such as <a href="https://www.openstreetmap.org/relation/5397331">this one</a>. It was originally mapped exactly like this, with the individual patches of woodland as constituent parts of one named multipolygon relation "Walton Wood". Unfortunately, an armchair mapper edited it and the result is as you see now - there's no relation between the individual logical parts of the wood and the whole. Try editing it and you'll see the problem straight away - in order to map anything else here, I'll have to revert the problem changeset, separately resolve any other problems that it tried to resolve (as the same issue may be present there too), and then continue mapping.</p>
 <p>There are lots of places (islands in lakes is an obvious example) where multipolygons make perfect sense, and the geometry of the multipolygon matches the real world. However, in cases where you're using unrelated items to create a multipolygon I'd argue that the result probably doesn't match the real world, will be difficult to maintain going forward and therefore isn't a good idea. Instead, create an area (using the same nodes as fences etc. if appropriate) for farmland, so that it's clear to all future mappers what it is and how to maintain it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -190,7 +190,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: what I was doing was with areas; I've not tried with multipolygons.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: what I was doing was with areas; I've not tried with multipolygons.</p>
 <p>In iD I was creating an area, tagging it by landuse, then using the Split feature at different points on the area to break down the single boundary line into several lines; then tagging each line by boundary type.</p>
 <p>Note that this contradicts the concept raised here about leaving areas and boundaries as separate mapped entities.</p>
 </div>
@@ -299,7 +299,7 @@ osqa_accepted = true
 <div id="post-46201-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11555/david-r-french"></a><a href="http://help.openstreetmap.org/users/11555/david-r-french">@David R French</a>: I have extended my answer.</p>
+<p><a href="https://help.openstreetmap.org/users/11555/david-r-french"></a><a href="https://help.openstreetmap.org/users/11555/david-r-french">@David R French</a>: I have extended my answer.</p>
 <p>Yes, you can use the "create multipolygon" shortcut for this. It automatically sets the multipolygon tag to the relation object and sets the roles. As an alternative you can create a new relation and add the boundary ways manually to it.</p>
 <p>The error message suggests that you did not had a complete ring of ways in your selection. See my example image and try again. First try with just two or three test ways which form a ring (don't save them, of course).</p>
 </div>
@@ -349,7 +349,7 @@ osqa_accepted = true
 <div id="post-46230-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta: <a href="http://help.openstreetmap.org/users/11555/david-r-french">@David R French</a>: please, could you add your "long-winded" approach how to create such a multipolygon as an "answer" here? Great that you found out how it works!</p>
+<p>meta: <a href="https://help.openstreetmap.org/users/11555/david-r-french">@David R French</a>: please, could you add your "long-winded" approach how to create such a multipolygon as an "answer" here? Great that you found out how it works!</p>
 </div>
 <div id="comment-46230-info" class="comment-info">
 <span class="comment-age">(29 Oct '15, 19:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -360,7 +360,7 @@ osqa_accepted = true
 <div id="post-46231-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>: yes, turning a number of non-closed ways into an area works automatically with "create multipolygon" in JOSM - but the ways together need to really enclose an area, each of the ways (hedge) needs to be connected (shared node) with the next way (next hedge).</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>: yes, turning a number of non-closed ways into an area works automatically with "create multipolygon" in JOSM - but the ways together need to really enclose an area, each of the ways (hedge) needs to be connected (shared node) with the next way (next hedge).</p>
 </div>
 <div id="comment-46231-info" class="comment-info">
 <span class="comment-age">(29 Oct '15, 19:12)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -371,7 +371,7 @@ osqa_accepted = true
 <div id="post-46232-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: thanks, I didn't know that</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: thanks, I didn't know that</p>
 </div>
 <div id="comment-46232-info" class="comment-info">
 <span class="comment-age">(29 Oct '15, 19:13)</span> <span class="comment-user userinfo">escada</span>

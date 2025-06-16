@@ -45,7 +45,7 @@ osqa_accepted = false
 </p>
 <p>I came to a related problems with mapping riverbanks : first if the waterway=riverbank areas correspond to usual waterlevel - how should the area between the usual terrain and the place where water meets dry land mapped - if not riverbank as well or not at all? (<a href="http://img221.imageshack.us/img221/2787/riverksec.png">see image</a>)</p>
 <p>And since the renderers (at least Mapnik) seems to ignore river width for rendering how to make it look less weird when only the part of a river flowing through village is mapped in full width using riverbanks and the rest (before and after) gets rendered much thinner?</p>
-<p>It is all <a href="http://www.openstreetmap.org/?lat=49.921774&amp;lon=16.943006&amp;zoom=18&amp;layers=M">here</a></p>
+<p>It is all <a href="https://www.openstreetmap.org/?lat=49.921774&amp;lon=16.943006&amp;zoom=18&amp;layers=M">here</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-flood" rel="tag" title="see questions tagged &#39;flood&#39;">flood</span> <span class="post-tag tag-link-mapping" rel="tag" title="see questions tagged &#39;mapping&#39;">mapping</span>
@@ -125,9 +125,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can have a look at these tags:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Ddyke"><code>man_made=dyke</code></a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/sluice_gate"><code>waterway=flow_control</code></a> and <code>flow_control=sluice_gate</code></p>
-<p>Generally you will find information regarding <code>waterway</code>s <a href="http://wiki.openstreetmap.org/wiki/Key:waterway">here in the wiki</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Ddyke"><code>man_made=dyke</code></a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/sluice_gate"><code>waterway=flow_control</code></a> and <code>flow_control=sluice_gate</code></p>
+<p>Generally you will find information regarding <code>waterway</code>s <a href="https://wiki.openstreetmap.org/wiki/Key:waterway">here in the wiki</a>.</p>
 <p>If a feature is interrupted (e.g. for a street) you should interrupt it in OSM as well. For gates there is <code>barrier=gate</code>, maybe this can be used for your purpose.</p>
 <p>You should not judge only based on the current rendering appearance, rather try to give a precise and correct description of the feature you are going to map.</p>
 </div>

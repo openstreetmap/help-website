@@ -156,7 +156,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That sounds like a <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dlocality">place=locality</a> to me - somewhere that is referred to by a name, but isn't a "place" where someone lives, and isn't some other sort of feature.</p>
+<p>That sounds like a <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dlocality">place=locality</a> to me - somewhere that is referred to by a name, but isn't a "place" where someone lives, and isn't some other sort of feature.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

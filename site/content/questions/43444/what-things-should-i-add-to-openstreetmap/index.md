@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have looked at the <a href="http://wiki.openstreetmap.org/wiki/FAQ">FAQ</a> and <a href="http://wiki.openstreetmap.org/wiki/How_to_contribute">How to contribute</a> and searched the wiki and help sites for "what should I add to the map" and cant find an answer to this rather fundamental question. The nearest I can get is the <a href="http://wiki.openstreetmap.org/wiki/Good_practice">good practice</a> to map <strong>what</strong> is on the ground. My question is about the things that constitute that <strong>what</strong>. Is it every fixed object I can see? Or can some things be safely ignored? And if I do map everything, what is the priority? What should be mapped first, second, or left for later? Is it just the streets and public places? Or should I also consider mapping private places?</p>
+<p>I have looked at the <a href="https://wiki.openstreetmap.org/wiki/FAQ">FAQ</a> and <a href="https://wiki.openstreetmap.org/wiki/How_to_contribute">How to contribute</a> and searched the wiki and help sites for "what should I add to the map" and cant find an answer to this rather fundamental question. The nearest I can get is the <a href="https://wiki.openstreetmap.org/wiki/Good_practice">good practice</a> to map <strong>what</strong> is on the ground. My question is about the things that constitute that <strong>what</strong>. Is it every fixed object I can see? Or can some things be safely ignored? And if I do map everything, what is the priority? What should be mapped first, second, or left for later? Is it just the streets and public places? Or should I also consider mapping private places?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-what" rel="tag" title="see questions tagged &#39;what&#39;">what</span> <span class="post-tag tag-link-contribute" rel="tag" title="see questions tagged &#39;contribute&#39;">contribute</span> <span class="post-tag tag-link-mapping" rel="tag" title="see questions tagged &#39;mapping&#39;">mapping</span> <span class="post-tag tag-link-objects" rel="tag" title="see questions tagged &#39;objects&#39;">objects</span>
@@ -124,7 +124,7 @@ osqa_accepted = false
 <div id="post-43447-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What I am seeking an answer for is what is it that is important to map. Or at least map first. What things are of high value to be on the map? For example: Streets seem important but are the addresses, locations and boundaries of every individual residential property needed or is it sufficient to map a whole suburb as having the tag of <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> and the house numbers at each end of the street?</p>
+<p>What I am seeking an answer for is what is it that is important to map. Or at least map first. What things are of high value to be on the map? For example: Streets seem important but are the addresses, locations and boundaries of every individual residential property needed or is it sufficient to map a whole suburb as having the tag of <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> and the house numbers at each end of the street?</p>
 </div>
 <div id="comment-43447-info" class="comment-info">
 <span class="comment-age">(07 Jun '15, 13:50)</span> <span class="comment-user userinfo">Huttite</span>
@@ -135,7 +135,7 @@ osqa_accepted = false
 <div id="post-43448-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>User <a href="http://help.openstreetmap.org/users/107/harry-wood">Harry Wood</a>'s answer to the question "<a href="http://help.openstreetmap.org/questions/1236/should-i-map-sidewalks">Should I map sidewalks</a>" gives me better guidance!</p>
+<p>User <a href="https://help.openstreetmap.org/users/107/harry-wood">Harry Wood</a>'s answer to the question "<a href="/questions/1236/should-i-map-sidewalks">Should I map sidewalks</a>" gives me better guidance!</p>
 <p>For example: If I map a road with sidewalks, the sidewalks are attributes of the road, not separate mapable objects.</p>
 </div>
 <div id="comment-43448-info" class="comment-info">

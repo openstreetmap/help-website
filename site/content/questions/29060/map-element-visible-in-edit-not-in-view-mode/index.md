@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Map element visible in edit, not in &quot;view mode&quot;"
-description = '''Is it normal that an element that is visible in edit mode (e.g., see &quot;Fort de Ratonneau&quot;, perfectly visible in http://www.openstreetmap.org/edit?editor=id#map=16/43.2833/5.3085 or in http://www.openstreetmap.org/edit?editor=potlatch2#map=18/43.28297/5.31166) does not appear in &quot;view mode&quot; (see http:...'''
+description = '''Is it normal that an element that is visible in edit mode (e.g., see &quot;Fort de Ratonneau&quot;, perfectly visible in https://www.openstreetmap.org/edit?editor=id#map=16/43.2833/5.3085 or in https://www.openstreetmap.org/edit?editor=potlatch2#map=18/43.28297/5.31166) does not appear in &quot;view mode&quot; (see http:...'''
 date = "2013-12-14T13:57:00Z"
 lastmod = "2013-12-14T16:30:00Z"
 weight = 29060
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is it normal that an element that is visible in edit mode (e.g., see "Fort de Ratonneau", perfectly visible in <a href="http://www.openstreetmap.org/edit?editor=id#map=16/43.2833/5.3085">http://www.openstreetmap.org/edit?editor=id#map=16/43.2833/5.3085</a> or in <a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=18/43.28297/5.31166)">http://www.openstreetmap.org/edit?editor=potlatch2#map=18/43.28297/5.31166)</a> does not appear in "view mode" (see <a href="http://www.openstreetmap.org/#map=16/43.2833/5.3085)?">http://www.openstreetmap.org/#map=16/43.2833/5.3085)?</a></p>
+<p>Is it normal that an element that is visible in edit mode (e.g., see "Fort de Ratonneau", perfectly visible in <a href="https://www.openstreetmap.org/edit?editor=id#map=16/43.2833/5.3085">https://www.openstreetmap.org/edit?editor=id#map=16/43.2833/5.3085</a> or in <a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=18/43.28297/5.31166)">https://www.openstreetmap.org/edit?editor=potlatch2#map=18/43.28297/5.31166)</a> does not appear in "view mode" (see <a href="https://www.openstreetmap.org/#map=16/43.2833/5.3085)?">https://www.openstreetmap.org/#map=16/43.2833/5.3085)?</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bugorfeature" rel="tag" title="see questions tagged &#39;bugorfeature&#39;">bugorfeature</span>
@@ -176,7 +176,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hi take a look at these fortresses for more possible tags at Dinant <a href="http://www.openstreetmap.org/#map=16/50.4596/4.8626">http://www.openstreetmap.org/#map=16/50.4596/4.8626</a> and Givet <a href="http://www.openstreetmap.org/#map=15/50.1359/4.8063.">http://www.openstreetmap.org/#map=15/50.1359/4.8063.</a> There several examples by Vauban in France. Au revoir</p>
+<p>Hi take a look at these fortresses for more possible tags at Dinant <a href="https://www.openstreetmap.org/#map=16/50.4596/4.8626">https://www.openstreetmap.org/#map=16/50.4596/4.8626</a> and Givet <a href="https://www.openstreetmap.org/#map=15/50.1359/4.8063.">https://www.openstreetmap.org/#map=15/50.1359/4.8063.</a> There several examples by Vauban in France. Au revoir</p>
 </div>
 <div id="comment-29063-info" class="comment-info">
 <span class="comment-age">(14 Dec '13, 15:31)</span> <span class="comment-user userinfo">Hendrikklaas</span>

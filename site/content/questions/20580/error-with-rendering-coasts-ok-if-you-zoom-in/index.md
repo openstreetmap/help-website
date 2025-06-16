@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "error with rendering coasts, OK if you zoom in"
-description = '''I know about the method of adding /dirty to a tile-url to re render it. But this doesn&#x27;t works for low zoom levels and there seems a problem with rendering coasts. Actually I found an error in the rendering of the philippine Island Palawan:  http://www.openstreetmap.org/?lat=9.693&amp;amp;lon=118.507&amp;am...'''
+description = '''I know about the method of adding /dirty to a tile-url to re render it. But this doesn&#x27;t works for low zoom levels and there seems a problem with rendering coasts. Actually I found an error in the rendering of the philippine Island Palawan:  https://www.openstreetmap.org/?lat=9.693&amp;amp;lon=118.507&amp;am...'''
 date = "2013-03-07T21:47:00Z"
 lastmod = "2013-07-14T01:41:00Z"
 weight = 20580
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I know about the method of adding /dirty to a tile-url to re render it. But this doesn't works for low zoom levels and there seems a problem with rendering coasts. Actually I found an error in the rendering of the philippine Island Palawan: <a href="http://www.openstreetmap.org/?lat=9.693&amp;lon=118.507&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=9.693&amp;lon=118.507&amp;zoom=10&amp;layers=M</a> Here Palawan is flooded. If you zoom in it is ok. So this seems not to be an error in the database but an render error.</p>
+<p>I know about the method of adding /dirty to a tile-url to re render it. But this doesn't works for low zoom levels and there seems a problem with rendering coasts. Actually I found an error in the rendering of the philippine Island Palawan: <a href="https://www.openstreetmap.org/?lat=9.693&amp;lon=118.507&amp;zoom=10&amp;layers=M">https://www.openstreetmap.org/?lat=9.693&amp;lon=118.507&amp;zoom=10&amp;layers=M</a> Here Palawan is flooded. If you zoom in it is ok. So this seems not to be an error in the database but an render error.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span> <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span>

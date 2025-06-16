@@ -42,7 +42,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I what to create an area which includes all places within a certain distance from a way. How to do it?</p>
 <p>Real life example:</p>
-<p><a href="http://www.openstreetmap.org/way/38867099#map=8/51.931/99.796">This</a> is a section of the Russian-Mongolian border. How can I create an area that includes the space 25 km within the border on the Russian side, within Buryatia? Thanks</p>
+<p><a href="https://www.openstreetmap.org/way/38867099#map=8/51.931/99.796">This</a> is a section of the Russian-Mongolian border. How can I create an area that includes the space 25 km within the border on the Russian side, within Buryatia? Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-edit" rel="tag" title="see questions tagged &#39;edit&#39;">edit</span> <span class="post-tag tag-link-border" rel="tag" title="see questions tagged &#39;border&#39;">border</span> <span class="post-tag tag-link-way" rel="tag" title="see questions tagged &#39;way&#39;">way</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

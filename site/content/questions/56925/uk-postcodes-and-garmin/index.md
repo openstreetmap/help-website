@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A while ago I wrote a simple "how to use mkgmap to create a Garmin map" diary entry: <a href="http://www.openstreetmap.org/user/SomeoneElse/diary/38613">http://www.openstreetmap.org/user/SomeoneElse/diary/38613</a> . What that doesn't explain is how to combine a country .pbf file with your .osm file. I'd probably use osmosis for that, but other options are available.</p>
+<p>A while ago I wrote a simple "how to use mkgmap to create a Garmin map" diary entry: <a href="https://www.openstreetmap.org/user/SomeoneElse/diary/38613">https://www.openstreetmap.org/user/SomeoneElse/diary/38613</a> . What that doesn't explain is how to combine a country .pbf file with your .osm file. I'd probably use osmosis for that, but other options are available.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

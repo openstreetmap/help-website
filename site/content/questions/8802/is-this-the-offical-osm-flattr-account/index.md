@@ -130,7 +130,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Hmm, it's still not listed @ http://wiki.openstreetmap.org/wiki/Donations</p>
+<p>Hmm, it's still not listed @ https://wiki.openstreetmap.org/wiki/Donations</p>
 </div>
 <div id="comment-13030-info" class="comment-info">
 <span class="comment-age">(28 May '12, 18:49)</span> <span class="comment-user userinfo">Flow</span>

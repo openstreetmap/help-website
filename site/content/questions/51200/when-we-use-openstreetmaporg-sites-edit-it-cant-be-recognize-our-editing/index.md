@@ -69,7 +69,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Is this something that you added:</p>
-<p><a href="http://www.openstreetmap.org/way/433780722">http://www.openstreetmap.org/way/433780722</a></p>
+<p><a href="https://www.openstreetmap.org/way/433780722">https://www.openstreetmap.org/way/433780722</a></p>
 </div>
 <div id="comment-51201-info" class="comment-info">
 <span class="comment-age">(02 Aug '16, 11:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -92,7 +92,7 @@ osqa_accepted = false
 <div id="post-51213-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12598/pitort">@pitort</a>: don't the top questions at <a href="https://help.openstreetmap.org/tags/not_shown/?sort=mostvoted">https://help.openstreetmap.org/tags/not_shown/?sort=mostvoted</a> help you? Please describe your problem and what you did and what you expect with more words.</p>
+<p><a href="https://help.openstreetmap.org/users/12598/pitort">@pitort</a>: don't the top questions at <a href="https://help.openstreetmap.org/tags/not_shown/?sort=mostvoted">https://help.openstreetmap.org/tags/not_shown/?sort=mostvoted</a> help you? Please describe your problem and what you did and what you expect with more words.</p>
 </div>
 <div id="comment-51213-info" class="comment-info">
 <span class="comment-age">(02 Aug '16, 18:01)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

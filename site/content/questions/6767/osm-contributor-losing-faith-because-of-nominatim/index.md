@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I'm losing patience here and may altogether abandon contributing to the OSM project if I can't get this figured out. There's very little use in a digital map if it can't be searched upon.</p>
 <p>I've been adding all sorts of data to my home town (Montreal) and the map is starting to look great... but it can't be searched on.</p>
 <p>To make it useful, I began an attempt at importing addressing information from data provided by the Government of Canada.</p>
-<p>Link of where I`ve been working: <a href="http://www.openstreetmap.org/?lat=45.505931&amp;lon=-73.555187&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=45.505931&amp;lon=-73.555187&amp;zoom=18&amp;layers=M</a> (addressing data improted from CanVec)</p>
+<p>Link of where I`ve been working: <a href="https://www.openstreetmap.org/?lat=45.505931&amp;lon=-73.555187&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=45.505931&amp;lon=-73.555187&amp;zoom=18&amp;layers=M</a> (addressing data improted from CanVec)</p>
 <p>I try and search any of the interpolated addresses in Nominatim, and I get nothing!</p>
 <p>What am I doing wrong?</p>
 <p>Examples of searches that should give me something precise but do not: - 462 rue Saint-Jean-Baptiste, Montreal (finds the street but not the address point) - 220 Boulevard Saint-Laurent, Montreal (finds all sorts of segments across the length of the city, but not the address point).</p>
@@ -137,7 +137,7 @@ One Answer:
 <div class="answer-body">
 <p>Re: "What am I doing wrong?"</p>
 <p>Nothing. Nominatim isn't updating right now, and is still using data from several weeks (months?) ago.</p>
-<p>After looking a little further, I should direct you to this question: <a href="http://help.openstreetmap.org/questions/5819/added-street-doesnt-show-up-on-search">Added street doesn't show up on search</a></p>
+<p>After looking a little further, I should direct you to this question: <a href="/questions/5819/added-street-doesnt-show-up-on-search">Added street doesn't show up on search</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

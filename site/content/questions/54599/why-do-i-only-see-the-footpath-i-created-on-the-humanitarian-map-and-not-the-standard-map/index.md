@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Everything looks fine with the data, so you probably just need to wait for the map to re-render the necessary tiles. See <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this previous question</a> for more info.</p>
+<p>Everything looks fine with the data, so you probably just need to wait for the map to re-render the necessary tiles. See <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this previous question</a> for more info.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

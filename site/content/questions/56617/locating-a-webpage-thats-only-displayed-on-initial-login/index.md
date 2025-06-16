@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/welcome.html">This one?</a></p>
+<p><a href="https://www.openstreetmap.org/welcome.html">This one?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

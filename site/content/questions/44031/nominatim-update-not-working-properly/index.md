@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi to all,</p>
 <p>I have successfully installed nominatim. When I update data, i feel something may went to be wrong. My Last osmId in my DB is 2810212908.</p>
 <blockquote>
-<p>&lt;osm version="0.6" generator="CGImap 0.4.0 (29973 thorn-03.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/"&gt; &lt;node id="2810212908" visible="true" version="1" changeset="21875316" timestamp="**2014-04-22T23:58:31Z**" user="SomeoneElse" uid="61942" lat="53.1106656" lon="-1.5713721"/&gt; &lt;/osm&gt;</p>
+<p>&lt;osm version="0.6" generator="CGImap 0.4.0 (29973 thorn-03.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="https://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/"&gt; &lt;node id="2810212908" visible="true" version="1" changeset="21875316" timestamp="**2014-04-22T23:58:31Z**" user="SomeoneElse" uid="61942" lat="53.1106656" lon="-1.5713721"/&gt; &lt;/osm&gt;</p>
 </blockquote>
 <p>Now i want to update 1 hr data. My configuration.txt :</p>
 <blockquote>

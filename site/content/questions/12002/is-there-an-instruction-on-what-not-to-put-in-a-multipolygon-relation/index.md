@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is no such instruction; this is usually left to the mapper's judgement.</p>
-<p>See <a href="http://help.openstreetmap.org/questions/11287/house-in-the-forest">"House in the forest"</a> for an answer to a similar question.</p>
+<p>See <a href="/questions/11287/house-in-the-forest">"House in the forest"</a> for an answer to a similar question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

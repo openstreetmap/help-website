@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I prevent feature fadeout viewing from &gt;2000 feet (lower zoom levels)?"
-description = '''I can see electrical lines from viewing heights &amp;lt;2000 feet, but they fade out at &amp;gt;2000 feet. I need to view from &amp;gt;2000 feet to get a wide area view.  This issue occurs when I am on the website via Firefox http://www.openstreetmap.org/ I am viewing the default map (&quot;Standard&quot; under Map Layer...'''
+description = '''I can see electrical lines from viewing heights &amp;lt;2000 feet, but they fade out at &amp;gt;2000 feet. I need to view from &amp;gt;2000 feet to get a wide area view.  This issue occurs when I am on the website via Firefox https://www.openstreetmap.org/ I am viewing the default map (&quot;Standard&quot; under Map Layer...'''
 date = "2015-02-13T17:48:00Z"
 lastmod = "2015-02-13T18:30:00Z"
 weight = 40996
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I can see electrical lines from viewing heights &lt;2000 feet, but they fade out at &gt;2000 feet. I need to view from &gt;2000 feet to get a wide area view.</p>
-<p>This issue occurs when I am on the website via Firefox <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> I am viewing the default map ("Standard" under Map Layers) on the website.</p>
+<p>This issue occurs when I am on the website via Firefox <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> I am viewing the default map ("Standard" under Map Layers) on the website.</p>
 <p>Is there a way to prevent the fade out of these features?</p>
 <p>Thanks</p>
 </div>

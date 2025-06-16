@@ -195,7 +195,7 @@ This question is marked "community wiki".
 <div id="post-3707-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>while most edits are made with JOSM, the java desktop editor for OSM, potlatch being an online editor is a good tool for simple tasks like correcting incorrect names and refs. Basic help on editing with links how to edit in JOSM and Potlatch can be found here: <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a></p>
+<p>while most edits are made with JOSM, the java desktop editor for OSM, potlatch being an online editor is a good tool for simple tasks like correcting incorrect names and refs. Basic help on editing with links how to edit in JOSM and Potlatch can be found here: <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a></p>
 </div>
 <div id="comment-3707-info" class="comment-info">
 <span class="comment-age">(10 Mar '11, 19:29)</span> <span class="comment-user userinfo">dieterdreist</span>

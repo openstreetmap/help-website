@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Why are my edits not showing up in OSM? (but are showing up in map data)"
-description = '''I&#x27;m a new user and have started to map villages in Fiji, however they are not showing up. I can see that they are there when ticking the &#x27;Map data&#x27; box but do not show in the standard view. The villages can be seen (if the map data box is ticked) here: http://www.openstreetmap.org/#map=16/-18.0791/1...'''
+description = '''I&#x27;m a new user and have started to map villages in Fiji, however they are not showing up. I can see that they are there when ticking the &#x27;Map data&#x27; box but do not show in the standard view. The villages can be seen (if the map data box is ticked) here: https://www.openstreetmap.org/#map=16/-18.0791/1...'''
 date = "2016-04-07T22:48:00Z"
 lastmod = "2016-04-07T23:14:00Z"
 weight = 49095
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm a new user and have started to map villages in Fiji, however they are not showing up. I can see that they are there when ticking the 'Map data' box but do not show in the standard view. The villages can be seen (if the map data box is ticked) here: <a href="http://www.openstreetmap.org/#map=16/-18.0791/177.3792.">http://www.openstreetmap.org/#map=16/-18.0791/177.3792.</a></p>
+<p>I'm a new user and have started to map villages in Fiji, however they are not showing up. I can see that they are there when ticking the 'Map data' box but do not show in the standard view. The villages can be seen (if the map data box is ticked) here: <a href="https://www.openstreetmap.org/#map=16/-18.0791/177.3792.">https://www.openstreetmap.org/#map=16/-18.0791/177.3792.</a></p>
 <p>I also added a hospital as a point - and this only shows up on the humanitarian layer. I added a school as well which shows up fine.</p>
 <p>What am I doing wrong?</p>
 <p>[Edit: I have changed one of the villages from a place=village, to landuse=residential and it now shows up. So this was the problem?]</p>
@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi James, take a look at these pages, <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>Hi James, take a look at these pages, <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

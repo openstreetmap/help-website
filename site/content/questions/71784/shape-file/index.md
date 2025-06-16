@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap itself does not have shapefile downloads but this page has a good overview over third-party download sites, and options of making your own shape files: <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">http://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
+<p>OpenStreetMap itself does not have shapefile downloads but this page has a good overview over third-party download sites, and options of making your own shape files: <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">https://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

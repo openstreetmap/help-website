@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OSM API is an "Editing API" and does not support filtering etc. An alternative to extracting the data from the raw data (for example from <a href="https://mapzen.com/data/metro-extracts/">https://mapzen.com/data/metro-extracts/</a> ) is to use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> and/or <a href="http://overpass-turbo.eu/">Overpass Turbo</a>.</p>
+<p>The OSM API is an "Editing API" and does not support filtering etc. An alternative to extracting the data from the raw data (for example from <a href="https://mapzen.com/data/metro-extracts/">https://mapzen.com/data/metro-extracts/</a> ) is to use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> and/or <a href="http://overpass-turbo.eu/">Overpass Turbo</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

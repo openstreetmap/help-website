@@ -162,7 +162,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>While I don't know how the renderer works, my guess is that it is searching for the biggest square area to place the label in. And this happens to be at the center of the western cross.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_qFOxPAx.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm_qFOxPAx.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

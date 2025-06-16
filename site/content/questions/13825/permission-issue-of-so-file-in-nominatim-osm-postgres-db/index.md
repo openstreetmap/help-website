@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Permission issue of .so file in Nominatim osm postgres DB"
-description = '''I am following the steps as described in http://wiki.openstreetmap.org/wiki/Nominatim/Installation to install the nominatim osm db on my own server. I need to create some functions before doing  ./utils/setup.php &amp;lt;my-planet-file&amp;gt; --load-data  So to create those functions I am running this comm...'''
+description = '''I am following the steps as described in https://wiki.openstreetmap.org/wiki/Nominatim/Installation to install the nominatim osm db on my own server. I need to create some functions before doing  ./utils/setup.php &amp;lt;my-planet-file&amp;gt; --load-data  So to create those functions I am running this comm...'''
 date = "2012-06-27T07:24:00Z"
 lastmod = "2016-01-06T12:06:00Z"
 weight = 13825
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am following the steps as described in <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> to install the nominatim osm db on my own server. I need to create some functions before doing</p>
+<p>I am following the steps as described in <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> to install the nominatim osm db on my own server. I need to create some functions before doing</p>
 <p><code>./utils/setup.php &lt;my-planet-file&gt; --load-data</code></p>
 <p>So to create those functions I am running this command:</p>
 <pre><code>./utils/setup.php --create-functions</code></pre>

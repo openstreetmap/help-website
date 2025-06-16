@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I don't know why, but if you look at the following map, there obviously is one "Valmeinier" too much at the bottom of this map section. However, I cannot find the node or the outline where the name "Valmeinier" is specified. Would be great if someone could have a look at this and fix this.</p>
-<p><a href="http://www.openstreetmap.org/?lat=45.1659&amp;lon=6.5043&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=45.1659&amp;lon=6.5043&amp;zoom=14&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=45.1659&amp;lon=6.5043&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=45.1659&amp;lon=6.5043&amp;zoom=14&amp;layers=M</a></p>
 <p>Thanks, katze_sonne</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is the center of the <a href="http://www.openstreetmap.org/browse/relation/114157">boundary relation</a> for Valmeinier.</p>
+<p>This is the center of the <a href="https://www.openstreetmap.org/browse/relation/114157">boundary relation</a> for Valmeinier.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm at a bit of a loss for how to draw this feature correctly...</p>
-<p><img src="https://help.openstreetmap.org/upfiles/bandstand_AqRD44U.png" title="multi-level area" alt="multi-level area" /></p>
+<p><img src="/upfiles/bandstand_AqRD44U.png" title="multi-level area" alt="multi-level area" /></p>
 <p>I have been using <code>highway=pedestrian area=yes</code> to draw a promenade area because that seemed like the semantically correct method for a wide pedestrian space, but now I'm wondering if that was a mistake? I'm fairly new to this so any advice would be very welcome.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

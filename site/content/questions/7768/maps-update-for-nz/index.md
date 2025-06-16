@@ -130,8 +130,8 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>See the [beginner guide][<a href="http://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide%5D">http://wiki.openstreetmap.org/wiki/Beginner's_Guide]</a> to get started. It's not only usefull, it's fun :)</p>
-<p>You can also check if there are any active mappers near Cromwel, either by asking on a [local mailing list][<a href="http://wiki.openstreetmap.org/wiki/MailingLists%5D,">http://wiki.openstreetmap.org/wiki/MailingLists],</a> or by [watching for recent edits][<a href="http://wiki.openstreetmap.org/wiki/OWL_(OpenStreetMap_Watch_List)%5D">http://wiki.openstreetmap.org/wiki/OWL_(OpenStreetMap_Watch_List)]</a> in your area. They might be able to help more directly, especially if you team up with them.</p>
+<p>See the [beginner guide][<a href="https://wiki.openstreetmap.org/wiki/Beginner&#39;s_Guide%5D">https://wiki.openstreetmap.org/wiki/Beginner's_Guide]</a> to get started. It's not only usefull, it's fun :)</p>
+<p>You can also check if there are any active mappers near Cromwel, either by asking on a [local mailing list][<a href="https://wiki.openstreetmap.org/wiki/MailingLists%5D,">https://wiki.openstreetmap.org/wiki/MailingLists],</a> or by [watching for recent edits][<a href="https://wiki.openstreetmap.org/wiki/OWL_(OpenStreetMap_Watch_List)%5D">https://wiki.openstreetmap.org/wiki/OWL_(OpenStreetMap_Watch_List)]</a> in your area. They might be able to help more directly, especially if you team up with them.</p>
 </div>
 <div id="comment-7775-info" class="comment-info">
 <span class="comment-age">(10 Sep '11, 20:35)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -239,7 +239,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Aha - I found this...<a href="http://wiki.openstreetmap.org/wiki/LINZ">http://wiki.openstreetmap.org/wiki/LINZ</a></p>
+<p>Aha - I found this...<a href="https://wiki.openstreetmap.org/wiki/LINZ">https://wiki.openstreetmap.org/wiki/LINZ</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

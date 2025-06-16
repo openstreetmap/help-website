@@ -116,11 +116,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi - <a href="http://www.openstreetmap.org/browse/changeset/10947005">this</a> is the changeset. It adds a new footpath but somehow the R8 relation got deleted. I've reverted the original changeset and manually made the other change again.</p>
-<p>Relation <a href="http://www.openstreetmap.org/browse/relation/18379">18379</a> is back, but it's too big to get through the "browse" interface. If you do something like:</p>
+<p>Hi - <a href="https://www.openstreetmap.org/browse/changeset/10947005">this</a> is the changeset. It adds a new footpath but somehow the R8 relation got deleted. I've reverted the original changeset and manually made the other change again.</p>
+<p>Relation <a href="https://www.openstreetmap.org/browse/relation/18379">18379</a> is back, but it's too big to get through the "browse" interface. If you do something like:</p>
 <p>wget <a href="http://api.openstreetmap.org/api/0.6/relation/18379">http://api.openstreetmap.org/api/0.6/relation/18379</a></p>
 <p>it will retrieve OK. "wget", if you're not familiar with it, is a command-line program to get stuff from the Internet.</p>
-<p>The footway looks like <a href="http://www.openstreetmap.org/browse/way/79024281/history">this</a> now, which should be back how you left it.</p>
+<p>The footway looks like <a href="https://www.openstreetmap.org/browse/way/79024281/history">this</a> now, which should be back how you left it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

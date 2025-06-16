@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "gathering the information of schools - with overpass-api"
-description = '''i want to gather results with a search-request - suggested by the wiki.-page  btw see the central ressource for the tag-system http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool on overpass-api we can run this - as request for node, builiding and relaion: &amp;lt;!-- This query looks for nodes, way...'''
+description = '''i want to gather results with a search-request - suggested by the wiki.-page  btw see the central ressource for the tag-system https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool on overpass-api we can run this - as request for node, builiding and relaion: &amp;lt;!-- This query looks for nodes, way...'''
 date = "2014-06-21T07:23:00Z"
 lastmod = "2014-06-21T12:09:00Z"
 weight = 34206
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>i want to gather results with a search-request - suggested by the wiki.-page</p>
-<p>btw see the central ressource for the tag-system <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a></p>
+<p>btw see the central ressource for the tag-system <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a></p>
 <p>on overpass-api we can run this - as request for node, builiding and relaion:</p>
 <pre><code>&lt;!--
 This query looks for nodes, ways and relations 

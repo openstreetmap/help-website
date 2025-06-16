@@ -159,7 +159,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Presumably you're either (a) looking for the URL of a router (which JOSM isn't) or (b) looking to download some OSM data so that you can write a router to route between two locations?</p>
-<p>Assuming it's (b), the OpenStreetMap API is for mapping, so isn't really suitable for your purposes, but <a href="http://wiki.osm.org/wiki/Overpass_API">Overpass</a> may do what you want. However do be aware that if you want a reasonably large amount of data it would be more efficient to just <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">download an extract of the area you want once</a> rather than continually accessing an API.</p>
+<p>Assuming it's (b), the OpenStreetMap API is for mapping, so isn't really suitable for your purposes, but <a href="http://wiki.osm.org/wiki/Overpass_API">Overpass</a> may do what you want. However do be aware that if you want a reasonably large amount of data it would be more efficient to just <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">download an extract of the area you want once</a> rather than continually accessing an API.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I'd start by reading <a href="http://help.openstreetmap.org/questions/7313/is-there-an-osm-routing-api/7319">this answer to a previous question</a> - it links to the information that we have available.</p>
+<p>I'd start by reading <a href="/questions/7313/is-there-an-osm-routing-api/7319">this answer to a previous question</a> - it links to the information that we have available.</p>
 </div>
 <div id="comment-34644-info" class="comment-info">
 <span class="comment-age">(04 Jul '14, 17:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

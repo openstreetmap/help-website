@@ -210,7 +210,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's been asked <a href="http://help.openstreetmap.org/questions/11292/fit-files?page=1&amp;focusedAnswerId=11303#11303">before</a>, but the answer wasn't formally accepted (which doesn't mean that it doesn't work). Maybe you could try that and let us know if it works for you?</p>
+<p>That's been asked <a href="/questions/11292/fit-files?page=1&amp;focusedAnswerId=11303#11303">before</a>, but the answer wasn't formally accepted (which doesn't mean that it doesn't work). Maybe you could try that and let us know if it works for you?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -282,7 +282,7 @@ osqa_accepted = false
 <div id="post-42620-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I just tested if it might be converted to a comment if the comments were deleted but to no avail.....</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I just tested if it might be converted to a comment if the comments were deleted but to no avail.....</p>
 </div>
 <div id="comment-42620-info" class="comment-info">
 <span class="comment-age">(27 Apr '15, 18:44)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -293,7 +293,7 @@ osqa_accepted = false
 <div id="post-42622-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: okay. Yes ... nice osqa features ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: okay. Yes ... nice osqa features ;-)</p>
 </div>
 <div id="comment-42622-info" class="comment-info">
 <span class="comment-age">(27 Apr '15, 19:27)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -304,7 +304,7 @@ osqa_accepted = false
 <div id="post-42623-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10898/gillou-de-labas">@Gillou De Labas</a>: could you please use the "add new comment" button below the answer you are referring to (and delete this "answer")?</p>
+<p><a href="https://help.openstreetmap.org/users/10898/gillou-de-labas">@Gillou De Labas</a>: could you please use the "add new comment" button below the answer you are referring to (and delete this "answer")?</p>
 </div>
 <div id="comment-42623-info" class="comment-info">
 <span class="comment-age">(27 Apr '15, 19:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

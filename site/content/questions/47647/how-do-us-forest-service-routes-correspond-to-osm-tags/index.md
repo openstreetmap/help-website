@@ -113,13 +113,13 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is some discussion here: <a href="http://www.openstreetmap.org/user/Richard/diary/26099">http://www.openstreetmap.org/user/Richard/diary/26099</a></p>
+<p>There is some discussion here: <a href="https://www.openstreetmap.org/user/Richard/diary/26099">https://www.openstreetmap.org/user/Richard/diary/26099</a></p>
 <p>The paved and gravel roads should mostly be highway=unclassified, with the appropriate surface tag set. Sometimes a more significant road will be a tertiary or whatever.</p>
 <p>Motorized trails aren't totally settled, but some combination of access tags and/or maxwidth can accurately reflect the additional restrictions, as discussed here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation">http://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:atv">http://wiki.openstreetmap.org/wiki/Key:atv</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation">https://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:atv">https://wiki.openstreetmap.org/wiki/Key:atv</a></p>
 <p>I think given that the Forest Service uses them for publishing temporary closures and that they are often the most prominent signage present, it's also useful to put the road number in the ref tag. I've seen prefixes of (at least) FS, USFS and NF used for that, it would be good to eventually standardize those some.</p>
-<p>Later: Tracks that are closed to vehicles other than snowmobiles can be marked as vehicle=no, snowmobile=yes (<a href="https://help.openstreetmap.org/questions/16087/how-should-i-tag-a-snowmobile-trail">some discussion</a>). Motorcycles trails can use a similar scheme, vehicle=no, motorcycle=yes.</p>
+<p>Later: Tracks that are closed to vehicles other than snowmobiles can be marked as vehicle=no, snowmobile=yes (<a href="/questions/16087/how-should-i-tag-a-snowmobile-trail">some discussion</a>). Motorcycles trails can use a similar scheme, vehicle=no, motorcycle=yes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

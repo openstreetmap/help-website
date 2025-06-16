@@ -158,7 +158,7 @@ osqa_accepted = true
 <div id="post-18232-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a></p>
 </div>
 <div id="comment-18232-info" class="comment-info">
 <span class="comment-age">(06 Dec '12, 10:42)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -169,7 +169,7 @@ osqa_accepted = true
 <div id="post-18233-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p><a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 </div>
 <div id="comment-18233-info" class="comment-info">
 <span class="comment-age">(06 Dec '12, 10:43)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -323,7 +323,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have re-read your question and you seem to have too many decimal dots in your lat longs. OSM just uses degrees and decimal fractions of a degree like the following permalink so your numbers should read 52.25794 and 5.15097 note no minus sign which would be west of the Greenwich Medridian. I wonder if you have confused degrees minutes seconds on the garmin which is a poplular lat long read out with OSM's degreees only which I certainly think is easier to use. <a href="http://www.openstreetmap.org/?lat=52.25794&amp;lon=5.15097&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.25794&amp;lon=5.15097&amp;zoom=18&amp;layers=M</a> which seems to be close to your most recent edit. hope this helps a bit. EDIT A bit more info 52.25.794 and 5.15.097 degrees this the same postion as 52.15.464 and 5.09.049 degrees and minutes and minute decimals. I just created them as two separate marks on my Garmin vista HCX and one was under the other so problem solved.</p>
+<p>I have re-read your question and you seem to have too many decimal dots in your lat longs. OSM just uses degrees and decimal fractions of a degree like the following permalink so your numbers should read 52.25794 and 5.15097 note no minus sign which would be west of the Greenwich Medridian. I wonder if you have confused degrees minutes seconds on the garmin which is a poplular lat long read out with OSM's degreees only which I certainly think is easier to use. <a href="https://www.openstreetmap.org/?lat=52.25794&amp;lon=5.15097&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.25794&amp;lon=5.15097&amp;zoom=18&amp;layers=M</a> which seems to be close to your most recent edit. hope this helps a bit. EDIT A bit more info 52.25.794 and 5.15.097 degrees this the same postion as 52.15.464 and 5.09.049 degrees and minutes and minute decimals. I just created them as two separate marks on my Garmin vista HCX and one was under the other so problem solved.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -451,7 +451,7 @@ osqa_accepted = true
 <div id="post-18358-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="http://help.openstreetmap.org/upfiles/permalink_snip_1.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/permalink_snip_1.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-18358-info" class="comment-info">
 <span class="comment-age">(11 Dec '12, 09:27)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -473,7 +473,7 @@ osqa_accepted = true
 <div id="post-18375-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Andy, this should do, <a href="http://www.openstreetmap.org/?lat=52.25836&amp;lon=5.14985&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.25836&amp;lon=5.14985&amp;zoom=17&amp;layers=M</a> but the question was or is what is causing the discrepanty, between the map and the GPS. Greetz</p>
+<p>Hi Andy, this should do, <a href="https://www.openstreetmap.org/?lat=52.25836&amp;lon=5.14985&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.25836&amp;lon=5.14985&amp;zoom=17&amp;layers=M</a> but the question was or is what is causing the discrepanty, between the map and the GPS. Greetz</p>
 </div>
 <div id="comment-18375-info" class="comment-info">
 <span class="comment-age">(11 Dec '12, 22:43)</span> <span class="comment-user userinfo">Hendrikklaas</span>

@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is not the best place for feature requests for the main web site.</p>
-<p>Please see <a href="https://github.com/openstreetmap/openstreetmap-website">https://github.com/openstreetmap/openstreetmap-website</a> for that. However you should be aware that there is only a very small number of actually developing the code. The best way to get results is to set up an instance of the software yourself (see <a href="http://wiki.openstreetmap.org/wiki/Develop)">http://wiki.openstreetmap.org/wiki/Develop)</a> and build at least a prototype of the functinality yourself.</p>
+<p>Please see <a href="https://github.com/openstreetmap/openstreetmap-website">https://github.com/openstreetmap/openstreetmap-website</a> for that. However you should be aware that there is only a very small number of actually developing the code. The best way to get results is to set up an instance of the software yourself (see <a href="https://wiki.openstreetmap.org/wiki/Develop)">https://wiki.openstreetmap.org/wiki/Develop)</a> and build at least a prototype of the functinality yourself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

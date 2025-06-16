@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-55494-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Possibly related to previous question: <a href="https://help.openstreetmap.org/questions/55485/rendering-and-svg-vector-export">https://help.openstreetmap.org/questions/55485/rendering-and-svg-vector-export</a> .</p>
+<p>Possibly related to previous question: <a href="/questions/55485/rendering-and-svg-vector-export">https://help.openstreetmap.org/questions/55485/rendering-and-svg-vector-export</a> .</p>
 </div>
 <div id="comment-55494-info" class="comment-info">
 <span class="comment-age">(06 Apr '17, 14:05)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -121,8 +121,8 @@ osqa_accepted = false
 <p>Check out the following link:</p>
 <ol>
 <li><a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a> - This will allow you to download in .shape file (which is vector).</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Downloading_data">http://wiki.openstreetmap.org/wiki/Downloading_data</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Downloading_data">https://wiki.openstreetmap.org/wiki/Downloading_data</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a></li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

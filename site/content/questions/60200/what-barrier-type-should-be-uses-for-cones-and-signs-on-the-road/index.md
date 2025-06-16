@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have quite many barriers like these, where roads are completely blocked or only for motored vehicles. I didn't find a tag in the wiki that fits. How should these be tagged. (For now I just used barrier=yes.)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/web_IMG_5813.JPG" alt="no access at all" /> <img src="https://help.openstreetmap.org/upfiles/web_IMG_5651.JPG" alt="no motor vehicle access" /></p>
+<p><img src="/upfiles/web_IMG_5813.JPG" alt="no access at all" /> <img src="/upfiles/web_IMG_5651.JPG" alt="no motor vehicle access" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span>

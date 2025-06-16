@@ -138,7 +138,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>it's on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Platform">http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Platform</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop#Stop_area">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop#Stop_area</a></p>
+<p>it's on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Platform">https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Platform</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop#Stop_area">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop#Stop_area</a></p>
 </div>
 <div id="comment-29025-info" class="comment-info">
 <span class="comment-age">(13 Dec '13, 06:42)</span> <span class="comment-user userinfo">escada</span>

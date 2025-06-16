@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Whats the use of the directions in waterways ?"
-description = '''Hi at this point http://www.openstreetmap.org/?lat=51.984413&amp;amp;lon=5.216773&amp;amp;zoom=18&amp;amp;layers=M, the water in the north west corner looks to stream (pointers) into the south east direction, but the simple waterway on the right corner has the same pointers in the opposite direction into the no...'''
+description = '''Hi at this point https://www.openstreetmap.org/?lat=51.984413&amp;amp;lon=5.216773&amp;amp;zoom=18&amp;amp;layers=M, the water in the north west corner looks to stream (pointers) into the south east direction, but the simple waterway on the right corner has the same pointers in the opposite direction into the no...'''
 date = "2012-12-24T22:18:00Z"
 lastmod = "2016-03-25T13:16:00Z"
 weight = 18696
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi at this point <a href="http://www.openstreetmap.org/?lat=51.984413&amp;lon=5.216773&amp;zoom=18&amp;layers=M,">http://www.openstreetmap.org/?lat=51.984413&amp;lon=5.216773&amp;zoom=18&amp;layers=M,</a> the water in the north west corner looks to stream (pointers) into the south east direction, but the simple waterway on the right corner has the same pointers in the opposite direction into the north west. I cant find the meaning of the pointers in the advanced menu. Whats the meaning of them ? And where do they came from ? There seems to be no logic in them since I found them on borders alongside a canal pointing in opposite directions ? Greetz</p>
+<p>Hi at this point <a href="https://www.openstreetmap.org/?lat=51.984413&amp;lon=5.216773&amp;zoom=18&amp;layers=M,">https://www.openstreetmap.org/?lat=51.984413&amp;lon=5.216773&amp;zoom=18&amp;layers=M,</a> the water in the north west corner looks to stream (pointers) into the south east direction, but the simple waterway on the right corner has the same pointers in the opposite direction into the north west. I cant find the meaning of the pointers in the advanced menu. Whats the meaning of them ? And where do they came from ? There seems to be no logic in them since I found them on borders alongside a canal pointing in opposite directions ? Greetz</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-direction" rel="tag" title="see questions tagged &#39;direction&#39;">direction</span> <span class="post-tag tag-link-waterway" rel="tag" title="see questions tagged &#39;waterway&#39;">waterway</span> <span class="post-tag tag-link-pointers" rel="tag" title="see questions tagged &#39;pointers&#39;">pointers</span> <span class="post-tag tag-link-way" rel="tag" title="see questions tagged &#39;way&#39;">way</span>
@@ -110,7 +110,7 @@ Georges</p>
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12111/gddr">@GDDR</a> This would be best asked as a new question. It's precisely the sort of quirky thing that is relatively uncommon around the world which it's nice to get right on OSM.</p>
+<p><a href="https://help.openstreetmap.org/users/12111/gddr">@GDDR</a> This would be best asked as a new question. It's precisely the sort of quirky thing that is relatively uncommon around the world which it's nice to get right on OSM.</p>
 </div>
 <div id="comment-48845-info" class="comment-info">
 <span class="comment-age">(25 Mar '16, 10:50)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -122,8 +122,8 @@ Georges</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a> , makes sense, I'll do it, thanks for the advice!</p>
-<p><em>Edit</em>: I asked the question <a href="https://help.openstreetmap.org/questions/48849/mapping-waterway-navigation-in-venices-italy-unique-canal-network">there</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a> , makes sense, I'll do it, thanks for the advice!</p>
+<p><em>Edit</em>: I asked the question <a href="/questions/48849/mapping-waterway-navigation-in-venices-italy-unique-canal-network">there</a>.</p>
 </div>
 <div id="comment-48848-info" class="comment-info">
 <span class="comment-age">(25 Mar '16, 13:16)</span> <span class="comment-user userinfo">GDDR</span>

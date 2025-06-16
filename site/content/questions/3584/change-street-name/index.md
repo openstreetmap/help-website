@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Which editor did you use? Do you know about the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">beginner's guide</a>? Especially <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">the editing part of the tutorial</a>.</p>
+<p>Which editor did you use? Do you know about the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">beginner's guide</a>? Especially <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">the editing part of the tutorial</a>.</p>
 <p>Usually you modify the content of the name tag and upload this to openstreetmap. It may take a while until your modification is rendered on the map. You can check if you had success in changing the tag, if the data-view shows the modified value (hit the blue box on the main map and select "data").</p>
 </div>
 <div class="answer-controls post-controls">

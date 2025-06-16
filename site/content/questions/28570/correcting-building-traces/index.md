@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all. Looking at downtown <a href="http://www.openstreetmap.org/edit#map=19/13.35424/103.85454">Siem Reap, Cambodia</a> and the area as a whole, I was wondering whether it'd be okay to either tidy up or remove these rather (no offence) shoddily outlined buildings. Though they are very compact, should they be traced in this way? I was looking to tidy up and add to the area, but I'd rather not step on someone's toes if I go ahead.</p>
+<p>Hi all. Looking at downtown <a href="https://www.openstreetmap.org/edit#map=19/13.35424/103.85454">Siem Reap, Cambodia</a> and the area as a whole, I was wondering whether it'd be okay to either tidy up or remove these rather (no offence) shoddily outlined buildings. Though they are very compact, should they be traced in this way? I was looking to tidy up and add to the area, but I'd rather not step on someone's toes if I go ahead.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-correction" rel="tag" title="see questions tagged &#39;correction&#39;">correction</span> <span class="post-tag tag-link-outlines" rel="tag" title="see questions tagged &#39;outlines&#39;">outlines</span>
@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>IMHO it's ok to split them up and create smaller buildings using the old nodes (creates a usefull history). There is no formal definition, on which level buildings should be entered to be useful. You should also contact the local community about their opinion: <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Cambodia">http://wiki.openstreetmap.org/wiki/WikiProject_Cambodia</a></p>
+<p>IMHO it's ok to split them up and create smaller buildings using the old nodes (creates a usefull history). There is no formal definition, on which level buildings should be entered to be useful. You should also contact the local community about their opinion: <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Cambodia">https://wiki.openstreetmap.org/wiki/WikiProject_Cambodia</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

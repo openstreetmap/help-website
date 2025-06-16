@@ -66,7 +66,7 @@ osqa_accepted = false
 <p>Also you can see that I have tried to use a local copy of the 'OpenLayers.js', I don't know whether I should have it locally or always refer to 'www.openlayers.org', I believe referring local is good enough?</p>
 <p>Also as I wrote earlier, if I refer the local .js file, the red marker, the zoom buttons and the OSM link disappears.</p>
 <p>Can anyone help me out?</p>
-<p>I have tried to follow the guidelines below, but unsuccesful. <a href="http://wiki.openstreetmap.org/wiki/Marker_API">http://wiki.openstreetmap.org/wiki/Marker_API</a></p>
+<p>I have tried to follow the guidelines below, but unsuccesful. <a href="https://wiki.openstreetmap.org/wiki/Marker_API">https://wiki.openstreetmap.org/wiki/Marker_API</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-marker" rel="tag" title="see questions tagged &#39;marker&#39;">marker</span> <span class="post-tag tag-link-gis" rel="tag" title="see questions tagged &#39;gis&#39;">gis</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span>

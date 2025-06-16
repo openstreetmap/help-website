@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your question is about high-resolution displays in general and not specific to one phone type.</p>
-<p>OpenStreetMap.org does not provide double-resolution tiles. But <a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">you probably shouldn't be using OpenStreetMap.org's tiles for your iPhone app anyway.</a></p>
+<p>OpenStreetMap.org does not provide double-resolution tiles. But <a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">you probably shouldn't be using OpenStreetMap.org's tiles for your iPhone app anyway.</a></p>
 <p>Consequently you will need to either render your own tiles on your own server, or find a third-party service who can do this for you (probably at a cost). You can read a discussion on the OSM development mailing list in <a href="http://lists.openstreetmap.org/pipermail/dev/2012-June/date.html">June</a> and <a href="http://lists.openstreetmap.org/pipermail/dev/2012-July/date.html">July</a> last year; this suggests, to me, that Frederik Ramm's company <a href="http://www.geofabrik.de/">Geofabrik</a> would be good people to contact.</p>
 <p>If you wish to set up your own server, the basic instructions are at <a href="http://switch2osm.org/">switch2osm.org</a> but you'll need to adjust them along <a href="http://lists.openstreetmap.org/pipermail/dev/2012-July/025165.html">these lines</a>. This is unlikely to be suitable for someone without specialist OSM knowledge.</p>
 </div>

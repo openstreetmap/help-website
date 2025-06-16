@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this question: <a href="https://help.openstreetmap.org/questions/49167/which-ip-numbers-do-i-need-to-allow-access-to-if-i-want-to-use-osm">Which IP numbers do I need to allow access to if I want to use OSM?</a></p>
+<p>See this question: <a href="/questions/49167/which-ip-numbers-do-i-need-to-allow-access-to-if-i-want-to-use-osm">Which IP numbers do I need to allow access to if I want to use OSM?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

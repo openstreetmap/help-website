@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Building not rendered"
-description = '''Anyone knows why this building is not being rendered in mapnik? http://www.openstreetmap.org/way/129668329#map=19/43.72370/7.10629'''
+description = '''Anyone knows why this building is not being rendered in mapnik? https://www.openstreetmap.org/way/129668329#map=19/43.72370/7.10629'''
 date = "2016-07-01T21:34:00Z"
 lastmod = "2016-07-01T22:23:00Z"
 weight = 50550
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Anyone knows why this building is not being rendered in mapnik? <a href="http://www.openstreetmap.org/way/129668329#map=19/43.72370/7.10629">http://www.openstreetmap.org/way/129668329#map=19/43.72370/7.10629</a></p>
+<p>Anyone knows why this building is not being rendered in mapnik? <a href="https://www.openstreetmap.org/way/129668329#map=19/43.72370/7.10629">https://www.openstreetmap.org/way/129668329#map=19/43.72370/7.10629</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>

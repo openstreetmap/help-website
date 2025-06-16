@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>(converted a comment thread to an answer)</p>
-<p>You need to follow the instructions on the <a href="http://wiki.openstreetmap.org/wiki/Osmfilter#Keep_specific_Object_Type">relevant wiki page</a>. Use</p>
+<p>You need to follow the instructions on the <a href="https://wiki.openstreetmap.org/wiki/Osmfilter#Keep_specific_Object_Type">relevant wiki page</a>. Use</p>
 <pre><code>--keep= --keep-nodes=highway</code></pre>
 <p>If you want to also keep ways tagged with the highway tag (and use --keep-ways to that effect) then this will also add those nodes that do not have a highway tag, but are needed to construct a way with a highway tag. This can be switched off with <code>--ignore-dependencies</code>.</p>
 </div>

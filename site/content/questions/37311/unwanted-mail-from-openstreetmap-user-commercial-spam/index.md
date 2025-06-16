@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Unwanted mail from OpenStreetMap  user - commercial spam"
-description = '''Hello I had received unwanted mail from this user http://www.openstreetmap.org/user/D&amp;amp;G%20HOUSE%20-%20CASA%20VACANZA%20ROMA , and another user same days ago for commercial purpose. I Don&#x27;t know this user , I&#x27;have not published never about this user , it&#x27;s possible to block unwanted commercial sp...'''
+description = '''Hello I had received unwanted mail from this user https://www.openstreetmap.org/user/D&amp;amp;G%20HOUSE%20-%20CASA%20VACANZA%20ROMA , and another user same days ago for commercial purpose. I Don&#x27;t know this user , I&#x27;have not published never about this user , it&#x27;s possible to block unwanted commercial sp...'''
 date = "2014-10-05T11:34:00Z"
 lastmod = "2014-10-06T12:14:00Z"
 weight = 37311
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello I had received unwanted mail from this user <a href="http://www.openstreetmap.org/user/D&amp;G%20HOUSE%20-%20CASA%20VACANZA%20ROMA">http://www.openstreetmap.org/user/D&amp;G%20HOUSE%20-%20CASA%20VACANZA%20ROMA</a> , and another user same days ago for commercial purpose. I Don't know this user , I'have not published never about this user , it's possible to block unwanted commercial spam from this and other user ?</p>
+<p>Hello I had received unwanted mail from this user <a href="https://www.openstreetmap.org/user/D&amp;G%20HOUSE%20-%20CASA%20VACANZA%20ROMA">https://www.openstreetmap.org/user/D&amp;G%20HOUSE%20-%20CASA%20VACANZA%20ROMA</a> , and another user same days ago for commercial purpose. I Don't know this user , I'have not published never about this user , it's possible to block unwanted commercial spam from this and other user ?</p>
 <p>Thanks a lot</p>
 <p>Best Regards</p>
 <p>Andrea Gatti</p>
@@ -142,7 +142,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The help site is not the appropriate place for SPAM and other complaints. Please contact the system administrators for specific complaints <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">http://wiki.openstreetmap.org/wiki/System_Administrators</a> and for more generel issues, the appropriate working group: <a href="http://wiki.osmfoundation.org/wiki/Working_Groups">http://wiki.osmfoundation.org/wiki/Working_Groups</a></p>
+<p>The help site is not the appropriate place for SPAM and other complaints. Please contact the system administrators for specific complaints <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">https://wiki.openstreetmap.org/wiki/System_Administrators</a> and for more generel issues, the appropriate working group: <a href="http://wiki.osmfoundation.org/wiki/Working_Groups">http://wiki.osmfoundation.org/wiki/Working_Groups</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Turn restrictions are made by using relations, and you may read more about it on the wiki page: <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">http://wiki.openstreetmap.org/wiki/Relation:restriction</a></p>
+<p>Turn restrictions are made by using relations, and you may read more about it on the wiki page: <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">https://wiki.openstreetmap.org/wiki/Relation:restriction</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -129,7 +129,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>If you're using the in-browser editor from the OSM website, then have a look at <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">this wiki page</a> as well.</p>
+<p>If you're using the in-browser editor from the OSM website, then have a look at <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">this wiki page</a> as well.</p>
 </div>
 <div id="comment-17201-info" class="comment-info">
 <span class="comment-age">(26 Oct '12, 15:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

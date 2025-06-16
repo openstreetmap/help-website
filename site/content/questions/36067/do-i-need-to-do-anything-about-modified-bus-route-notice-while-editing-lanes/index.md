@@ -82,7 +82,7 @@ modified Bus Route: Lijn 103 Eindhoven Station NS - MMC Veldhoven via Airport</c
 <div id="post-36076-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Shouldn't I tell admins about it? Then I am back at my question about meta for this site. I don't know the default channel of getting in touch with admins. Is it the #osm-dev IRC channel?</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Shouldn't I tell admins about it? Then I am back at my question about meta for this site. I don't know the default channel of getting in touch with admins. Is it the #osm-dev IRC channel?</p>
 </div>
 <div id="comment-36076-info" class="comment-info">
 <span class="comment-age">(22 Aug '14, 13:33)</span> <span class="comment-user userinfo">Kotya</span>

@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>After a quick search, the tool <a href="http://wiki.openstreetmap.org/wiki/OSMLib">OSMLib</a> seems to do that, but isn't appropriate for a "non technical user". So, I've remembered about an OpenLayers <a href="http://openlayers.org/dev/examples/vector-formats.html">example</a>, and I've used it for producing what you want:</p>
+<p>After a quick search, the tool <a href="https://wiki.openstreetmap.org/wiki/OSMLib">OSMLib</a> seems to do that, but isn't appropriate for a "non technical user". So, I've remembered about an OpenLayers <a href="http://openlayers.org/dev/examples/vector-formats.html">example</a>, and I've used it for producing what you want:</p>
 <p><a href="http://osm.dumoulin63.net/osm2kml/">http://osm.dumoulin63.net/osm2kml/</a></p>
 <p>I hope that the produced results isn't wrong, and it will help you.</p>
 <p>Edit: Ok, you can also find online interface for gpslabel like this one at <a href="http://www.gpsvisualizer.com/gpsbabel/?lang=fr">gpsvisualizer.com</a></p>

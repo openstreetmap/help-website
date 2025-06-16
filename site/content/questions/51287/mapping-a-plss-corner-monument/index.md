@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>So, I've come across a <a href="https://en.wikipedia.org/wiki/Public_Land_Survey_System">Public Land Survey System</a> corner monument. This defines the boundary between Township 28 North Range 40 East Section 36 and T28N R41E S31, and their mutual boundary with T27N R40E S1.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/2016-08-06_14-53-38.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/2016-08-06_14-53-38.jpg" alt="alt text" /></p>
 <p>Is this a "man_made=survey_point", a "historic=boundary_stone", or something else entirely?</p>
 <p>As a bonus question, what about non-corner PLSS markers?</p>
 </div>
@@ -66,7 +66,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Fascinating, and proof that there may be on-the-ground evidence for PLSS townships &amp; ranges. As an experiment I mapped a very small number in Oregon (1 township <a href="http://www.openstreetmap.org/way/363580788">http://www.openstreetmap.org/way/363580788</a> &amp; 2 sections)</p>
+<p>Fascinating, and proof that there may be on-the-ground evidence for PLSS townships &amp; ranges. As an experiment I mapped a very small number in Oregon (1 township <a href="https://www.openstreetmap.org/way/363580788">https://www.openstreetmap.org/way/363580788</a> &amp; 2 sections)</p>
 </div>
 <div id="comment-51295-info" class="comment-info">
 <span class="comment-age">(07 Aug '16, 11:32)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -154,7 +154,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>From what I've seen, these sorts of survey markers are rarely historic, I doubt you'd want to add those sort of tags. Also, here's a link to the wiki page for survey points: <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point</a></p>
+<p>From what I've seen, these sorts of survey markers are rarely historic, I doubt you'd want to add those sort of tags. Also, here's a link to the wiki page for survey points: <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point</a></p>
 </div>
 <div id="comment-51303-info" class="comment-info">
 <span class="comment-age">(08 Aug '16, 13:58)</span> <span class="comment-user userinfo">neuhausr</span>

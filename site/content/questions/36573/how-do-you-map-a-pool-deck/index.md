@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There seems to be an answer here to a very similar question <a href="https://help.openstreetmap.org/questions/24164/paved-areas-around-swimming-pool-two-polygons">https://help.openstreetmap.org/questions/24164/paved-areas-around-swimming-pool-two-polygons</a></p>
+<p>There seems to be an answer here to a very similar question <a href="/questions/24164/paved-areas-around-swimming-pool-two-polygons">https://help.openstreetmap.org/questions/24164/paved-areas-around-swimming-pool-two-polygons</a></p>
 <p>I hope it at least starts to help you. Graham</p>
 </div>
 <div class="answer-controls post-controls">

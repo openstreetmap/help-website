@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>A parking have several small areas with gravel. How should these areas be marked? They are now mapped area=yes, surface=gravel. But OSMOSE doesn't like this.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Area.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Area.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span>

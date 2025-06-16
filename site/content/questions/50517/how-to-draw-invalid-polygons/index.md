@@ -48,7 +48,7 @@ WHERE r.tags-&gt;&#39;waterway&#39;=&#39;riverbank&#39;
 GROUP BY r.id</code></pre>
 <p>And the result is:</p>
 <pre><code>LWGEOM_GEOS_buildArea: TopologyException: Input geom 1 is invalid: Self-intersection at or near point 0.68302757542791204 46.349042878781603 at 0.68302757542791204 46.349042878781603</code></pre>
-<p>And the PostGIS is right, the relation 1085106 is self-intersecting ("inner" way intersects "outer" way). But OSM got it drawn anyway: <a href="http://www.openstreetmap.org/#map=20/46.34904/0.68303">http://www.openstreetmap.org/#map=20/46.34904/0.68303</a> As far as I know, Mapnik needs polygons, so the official map have to "fix" these data somehow to draw them. How is this done?</p>
+<p>And the PostGIS is right, the relation 1085106 is self-intersecting ("inner" way intersects "outer" way). But OSM got it drawn anyway: <a href="https://www.openstreetmap.org/#map=20/46.34904/0.68303">https://www.openstreetmap.org/#map=20/46.34904/0.68303</a> As far as I know, Mapnik needs polygons, so the official map have to "fix" these data somehow to draw them. How is this done?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span> <span class="post-tag tag-link-postgresql" rel="tag" title="see questions tagged &#39;postgresql&#39;">postgresql</span> <span class="post-tag tag-link-postgis" rel="tag" title="see questions tagged &#39;postgis&#39;">postgis</span>

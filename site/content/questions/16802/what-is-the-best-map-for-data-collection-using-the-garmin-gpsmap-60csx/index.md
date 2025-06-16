@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd recommend using <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> to create your own. You can then edit the style file however you like, and (for example) use that to highlight POIs that haven't been named, or don't have a tag that you'd expect them to have.</p>
+<p>I'd recommend using <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> to create your own. You can then edit the style file however you like, and (for example) use that to highlight POIs that haven't been named, or don't have a tag that you'd expect them to have.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

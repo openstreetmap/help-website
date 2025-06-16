@@ -115,8 +115,8 @@ osqa_accepted = false
 <p>When it comes to obtaining the map, you've got two basic options:</p>
 <p>1) Download a map from somewhere (easier, but less customisable)</p>
 <p>2) Create your own.</p>
-<p>If you want to download a map, there's a list of providers <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">here</a>. There are lots of options - some routeable and some not, customised for different uses, etc. I've heard people recommend <a href="http://talkytoaster.info/ukmaps.htm#GPSRs-Only">the ones here</a>.</p>
-<p>If you want to create your own, have a read of <a href="http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap">this answer</a> which is intended to be a quick "how to" for using mkgmap to create your own map. You don't export the map from the OSM web site; typically you'd use an extract of e.g. the UK data.</p>
+<p>If you want to download a map, there's a list of providers <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">here</a>. There are lots of options - some routeable and some not, customised for different uses, etc. I've heard people recommend <a href="http://talkytoaster.info/ukmaps.htm#GPSRs-Only">the ones here</a>.</p>
+<p>If you want to create your own, have a read of <a href="/questions/1809/how-to-install-mkgmap">this answer</a> which is intended to be a quick "how to" for using mkgmap to create your own map. You don't export the map from the OSM web site; typically you'd use an extract of e.g. the UK data.</p>
 <p>Edit: People are linking to this question, so it also makes sense to link to <a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">these step-by-step instructions</a> too.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -503,7 +503,7 @@ osqa_accepted = false
 <div id="post-20825-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Antnee My current talky toaster full GB map is only 500mb his instructions and maps ARE good. see my answer above and this one <a href="https://help.openstreetmap.org/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
+<p>Antnee My current talky toaster full GB map is only 500mb his instructions and maps ARE good. see my answer above and this one <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
 </div>
 <div id="comment-20825-info" class="comment-info">
 <span class="comment-age">(20 Mar '13, 11:46)</span> <span class="comment-user userinfo">andy mackey</span>

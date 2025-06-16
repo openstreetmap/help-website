@@ -55,7 +55,7 @@ osqa_accepted = true
 .posts is_in;
 area._[admin_level~&quot;[467]&quot;];
 out;</code></pre>
-<p>which is almost a direct copy from this post <a href="https://help.openstreetmap.org/questions/35976/add-reverse-geocoding-information-to-the-overpass-resulting-set">https://help.openstreetmap.org/questions/35976/add-reverse-geocoding-information-to-the-overpass-resulting-set</a></p>
+<p>which is almost a direct copy from this post <a href="/questions/35976/add-reverse-geocoding-information-to-the-overpass-resulting-set">https://help.openstreetmap.org/questions/35976/add-reverse-geocoding-information-to-the-overpass-resulting-set</a></p>
 <p>however I also need to add ways, since many of the shops have been charted that way. Therefore I tried the following;</p>
 <pre><code>[out:json][timeout:3000];
 &#10;{{geocodeArea:Poland}}-&gt;.searchArea;

@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/export_choices.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/export_choices.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/tags/export/?sort=mostvoted">https://help.openstreetmap.org/tags/export/?sort=mostvoted</a> → third question → <a href="https://help.openstreetmap.org/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013">https://help.openstreetmap.org/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013</a></p>
+<p>See <a href="https://help.openstreetmap.org/tags/export/?sort=mostvoted">https://help.openstreetmap.org/tags/export/?sort=mostvoted</a> → third question → <a href="/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013">https://help.openstreetmap.org/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

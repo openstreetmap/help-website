@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Dirk Baakstanier, try this methode <a href="http://www.openstreetmap.org/#map=18/52.35582/6.66787">http://www.openstreetmap.org/#map=18/52.35582/6.66787</a> each shop gets its own number together with the appartments on top of it. Or this one an even larger shopping centre called Hoog Catharijne, <a href="http://www.openstreetmap.org/#map=17/52.09077/5.11401">http://www.openstreetmap.org/#map=17/52.09077/5.11401</a></p>
+<p>Dirk Baakstanier, try this methode <a href="https://www.openstreetmap.org/#map=18/52.35582/6.66787">https://www.openstreetmap.org/#map=18/52.35582/6.66787</a> each shop gets its own number together with the appartments on top of it. Or this one an even larger shopping centre called Hoog Catharijne, <a href="https://www.openstreetmap.org/#map=17/52.09077/5.11401">https://www.openstreetmap.org/#map=17/52.09077/5.11401</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

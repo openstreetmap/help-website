@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am using OSM on my Garmin Nuvi device, but I do find it annoying that when I get to a crossing or exit that has road signs with directions the device does not show the direction that is on the road sign.</p>
-<p>E.g. I drive from home to work on the road that is called A9 near Amstelveen, The Netherlands. My driving direction is from East to West. When I get to <a href="http://www.openstreetmap.org/?lat=52.300437&amp;lon=4.858969&amp;zoom=18&amp;layers=M">the exit to Amstelveen</a> the road sign states <strong>Amstelveen</strong>. However my device tells me to use the exit to <strong>Keizer Karelweg (S108)</strong>. None of that information is on the road sign.</p>
+<p>E.g. I drive from home to work on the road that is called A9 near Amstelveen, The Netherlands. My driving direction is from East to West. When I get to <a href="https://www.openstreetmap.org/?lat=52.300437&amp;lon=4.858969&amp;zoom=18&amp;layers=M">the exit to Amstelveen</a> the road sign states <strong>Amstelveen</strong>. However my device tells me to use the exit to <strong>Keizer Karelweg (S108)</strong>. None of that information is on the road sign.</p>
 <p>Can somebody please explain step by step how I should feed OSM so that my Garmin device will tell me to take the exit to e.g. <strong>Amstelveen</strong>?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-21233-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Interestingly the <a href="http://www.openstreetmap.org/browse/way/7653701">motorway slip road</a> has "destination=Amstelveen" on it already.</p>
+<p>Interestingly the <a href="https://www.openstreetmap.org/browse/way/7653701">motorway slip road</a> has "destination=Amstelveen" on it already.</p>
 </div>
 <div id="comment-21233-info" class="comment-info">
 <span class="comment-age">(05 Apr '13, 13:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -218,14 +218,14 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Actually, I think that in the case of your junction all the data's already in OSM. You just need to create a map that uses it.</p>
-<p>I'm guessing that so far you've downloaded a map for your Nuvi, perhaps from somewhere like <a href="http://www.mkgmap.org.uk/doc/index.html">http://garmin.openstreetmap.nl/</a> (although there are <a href="http://www.mkgmap.org.uk/doc/index.html">lots of others</a>). Most of the maps at these download sites will have been created using <a href="http://www.openstreetmap.org/browse/way/7653701">mkgmap</a>. That's highly customisable - you can choose which things from OSM are used in the map on your Nuvi and what they are named, but in order to do this you'll need to create the map yourself. The way that customised maps are created is by using a particular mkgmap "style" - a folder of files describing how particular items should be processed.</p>
+<p>I'm guessing that so far you've downloaded a map for your Nuvi, perhaps from somewhere like <a href="http://www.mkgmap.org.uk/doc/index.html">http://garmin.openstreetmap.nl/</a> (although there are <a href="http://www.mkgmap.org.uk/doc/index.html">lots of others</a>). Most of the maps at these download sites will have been created using <a href="https://www.openstreetmap.org/browse/way/7653701">mkgmap</a>. That's highly customisable - you can choose which things from OSM are used in the map on your Nuvi and what they are named, but in order to do this you'll need to create the map yourself. The way that customised maps are created is by using a particular mkgmap "style" - a folder of files describing how particular items should be processed.</p>
 <p>You mention that your Nuvi knows the road as "Keizer Karelweg (S108)" - a combination of the road "name" and "ref" of [this road][4]. The lines in the default "lines" style file that control how name and ref are handled are these:</p>
 <pre><code># Set highway names to include the reference if there is one
 highway=motorway {name &#39;${ref|highway-symbol:hbox} ${name}&#39; | &#39;${ref|highway-symbol:hbox}&#39; | &#39;${name}&#39; }
 highway=trunk {name &#39;${ref|highway-symbol:hbox} ${name}&#39; | &#39;${ref|highway-symbol:hbox}&#39; | &#39;${name}&#39;; add display_name = &#39;${name} (${ref})&#39; }</code></pre>
 <p>It looks a bit complicated, but you can use the documentation on <a href="http://www.mkgmap.org.uk/doc/index.html">this page</a> to help understand what's going on.<br />
 </p>
-<p>What I suspect that you'll want to do is to create a rule for "motorway_link" that incorporates "destination" as well as "ref" (as in your case "destination=Amstelveen" is <a href="http://www.openstreetmap.org/browse/way/7653701">set on the motorway_link</a>). I suggest that you experiment with the style rules using a small area first (to save time when creating test maps and copying them to your Nuvi)</p>
+<p>What I suspect that you'll want to do is to create a rule for "motorway_link" that incorporates "destination" as well as "ref" (as in your case "destination=Amstelveen" is <a href="https://www.openstreetmap.org/browse/way/7653701">set on the motorway_link</a>). I suggest that you experiment with the style rules using a small area first (to save time when creating test maps and copying them to your Nuvi)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

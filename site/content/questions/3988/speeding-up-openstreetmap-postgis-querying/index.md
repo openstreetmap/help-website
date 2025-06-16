@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I asked this question <a href="http://gis.stackexchange.com/questions/7574/speeding-up-openstreetmap-postgis-querying">on</a> <a href="http://gis.stackexchange.com"></a><a href="http://gis.stackexchange.com">gis.stackexchange.com</a> as well, but hope to catch some more expertise here.</p>
-<p>I have OpenStreetMap data for the Netherlands loaded into a PostGIS database (PostgreSQL 8.3 / PostGIS 1.3.3) using the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup">osmosis schema</a>. This means all tags are stored in a <a href="http://www.postgresql.org/docs/8.3/interactive/hstore.html">hstore</a> field. In addition to the GIST index that osmosis creates on the geometry field, I created an additional GIST index on the tags field.</p>
+<p>I have OpenStreetMap data for the Netherlands loaded into a PostGIS database (PostgreSQL 8.3 / PostGIS 1.3.3) using the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup">osmosis schema</a>. This means all tags are stored in a <a href="http://www.postgresql.org/docs/8.3/interactive/hstore.html">hstore</a> field. In addition to the GIST index that osmosis creates on the geometry field, I created an additional GIST index on the tags field.</p>
 <p>Trying to query using both a spatial constraint and a constraint on the tags field, I find that it is slower than I would like. A query like this one:</p>
 <pre><code>SELECT n.geom,n.tags,n.tstamp,u.name FROM nodes AS n 
   INNER JOIN users AS u ON n.user_id = u.id 

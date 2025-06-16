@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is this ... <a href="http://wiki.openstreetmap.org/wiki/Key:toll">Key-toll</a></p>
+<p>There is this ... <a href="https://wiki.openstreetmap.org/wiki/Key:toll">Key-toll</a></p>
 <p>Use barrier=toll_booth to map the actual booths where fees are collected.</p>
 </div>
 <div class="answer-controls post-controls">

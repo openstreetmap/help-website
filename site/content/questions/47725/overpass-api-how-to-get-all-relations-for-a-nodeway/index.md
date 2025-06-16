@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[Overpass-api] How to get all relations for a node/way?"
-description = '''Speaking in Overpass QL I can select a node by its ID: node(3815147164);out; This however doesn&#x27;t provide any info about relations or ways this node is a part of. Going to OSM site: http://www.openstreetmap.org/node/3815147164 I can see at least which ways the node belongs to. And then to the way pa...'''
+description = '''Speaking in Overpass QL I can select a node by its ID: node(3815147164);out; This however doesn&#x27;t provide any info about relations or ways this node is a part of. Going to OSM site: https://www.openstreetmap.org/node/3815147164 I can see at least which ways the node belongs to. And then to the way pa...'''
 date = "2016-01-29T07:44:00Z"
 lastmod = "2016-01-29T14:59:00Z"
 weight = 47725
@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>Speaking in Overpass QL I can select a node by its ID:</p>
 <p><code>node(3815147164);out;</code></p>
 <p>This however doesn't provide any info about relations or ways this node is a part of.</p>
-<p>Going to OSM site: <a href="http://www.openstreetmap.org/node/3815147164">http://www.openstreetmap.org/node/3815147164</a> I can see at least which ways the node belongs to. And then to the way page: <a href="http://www.openstreetmap.org/way/136322077">http://www.openstreetmap.org/way/136322077</a> I see its relations.</p>
+<p>Going to OSM site: <a href="https://www.openstreetmap.org/node/3815147164">https://www.openstreetmap.org/node/3815147164</a> I can see at least which ways the node belongs to. And then to the way page: <a href="https://www.openstreetmap.org/way/136322077">https://www.openstreetmap.org/way/136322077</a> I see its relations.</p>
 <p>In Overpass relations are not returned, even for the way query:</p>
 <p><code>way(136322077);out;</code></p>
 <p>Any ideas how to get relations?</p>
@@ -114,14 +114,14 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Overpass API only returns objects that are explicitly included in the query. To fetch the parents of an input set, use <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_up_.28.3C.29">recurse up</a>:</p>
+<p>Overpass API only returns objects that are explicitly included in the query. To fetch the parents of an input set, use <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_up_.28.3C.29">recurse up</a>:</p>
 <pre><code>(node(3815147164);
 &lt;;
 );
 out geom;</code></pre>
 <p>Note that <code>&lt;</code> does not fetch the parents of relations, use <code>&lt;&lt;</code> for that.</p>
 <p>There are also some more fine grained operators if you only want the parent ways of nodes or whatever:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,8 +171,8 @@ out geom;</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/node/3815147164">Node 3815147164</a> is not part of any relation itself. It is part of <a href="http://www.openstreetmap.org/way/136322077">way 136322077</a> which in turn is part of a relation. You already seem to have figured this out by yourself but your question is still a little bit misleading.</p>
-<p>You don't need Overpass API for returning the ways a node is part of, see <a href="http://www.openstreetmap.org/api/0.6/node/3815147164/ways">http://www.openstreetmap.org/api/0.6/node/3815147164/ways</a>. And you don't need Overpass API for returning the relation a node or way is part of, see <a href="http://www.openstreetmap.org/api/0.6/way/136322077/relations">http://www.openstreetmap.org/api/0.6/way/136322077/relations</a>.</p>
+<p><a href="https://www.openstreetmap.org/node/3815147164">Node 3815147164</a> is not part of any relation itself. It is part of <a href="https://www.openstreetmap.org/way/136322077">way 136322077</a> which in turn is part of a relation. You already seem to have figured this out by yourself but your question is still a little bit misleading.</p>
+<p>You don't need Overpass API for returning the ways a node is part of, see <a href="https://www.openstreetmap.org/api/0.6/node/3815147164/ways">https://www.openstreetmap.org/api/0.6/node/3815147164/ways</a>. And you don't need Overpass API for returning the relation a node or way is part of, see <a href="https://www.openstreetmap.org/api/0.6/way/136322077/relations">https://www.openstreetmap.org/api/0.6/way/136322077/relations</a>.</p>
 <p>If this doesn't really answer your question then maybe someone can come up with an Overpass API query for returning the relation(s) containing way(s) a node is part of.</p>
 </div>
 <div class="answer-controls post-controls">

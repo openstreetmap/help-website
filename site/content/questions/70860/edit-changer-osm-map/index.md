@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-70861-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This was originally posted as an answer on <a href="https://help.openstreetmap.org/questions/70832/map-recovery-from-another-account">https://help.openstreetmap.org/questions/70832/map-recovery-from-another-account</a> . I've moved it here because it was not an answer to that question.</p>
+<p>This was originally posted as an answer on <a href="/questions/70832/map-recovery-from-another-account">https://help.openstreetmap.org/questions/70832/map-recovery-from-another-account</a> . I've moved it here because it was not an answer to that question.</p>
 </div>
 <div id="comment-70861-info" class="comment-info">
 <span class="comment-age">(20 Sep '19, 14:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

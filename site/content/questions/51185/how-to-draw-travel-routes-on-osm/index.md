@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My question is related to, but not the same as, this one posted a couple of years ago by someone else: <a href="https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx.">https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx.</a> One of the answers pointed to a list of "track drawing websites", but they all seem to relate to "sports activity" sites that allow one to upload a GPX track, not edit manually "on the map itself".</p>
+<p>My question is related to, but not the same as, this one posted a couple of years ago by someone else: <a href="/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx.">https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx.</a> One of the answers pointed to a list of "track drawing websites", but they all seem to relate to "sports activity" sites that allow one to upload a GPX track, not edit manually "on the map itself".</p>
 <p>I want to draw long travel routes, for completed as well as planned trips. At the moment I'm using Google My Maps, but it's not ideal. Here's an example of a trip to Andalucia in 2008: <a href="https://drive.google.com/open?id=155sh7BgtEABwG2nx73rnlGdQ_Qo&amp;usp=sharing.">https://drive.google.com/open?id=155sh7BgtEABwG2nx73rnlGdQ_Qo&amp;usp=sharing.</a></p>
 <p>If possible, I would like to differentiate (visually) between different legs of a journey. For example, sections travelled by train in one colour, sections travelled by boat in another, etc. I also want to add markers ("round blobs with labels") at specific locations, such as towns, landmarks, places of note. I also want to indicate direction of travel, such as by showing arrows on lines, either in the middle or at the end of some line segments.</p>
 <p>I can think of many other things I would like to be able to do but these are the essentials.</p>
@@ -205,7 +205,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Stefan, take a look at this old qestion and the answers <a href="https://help.openstreetmap.org/questions/27621/personalised-maps.">https://help.openstreetmap.org/questions/27621/personalised-maps.</a></p>
+<p>Hi Stefan, take a look at this old qestion and the answers <a href="/questions/27621/personalised-maps.">https://help.openstreetmap.org/questions/27621/personalised-maps.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

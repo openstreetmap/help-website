@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The "no programming" solution to your question is to use umap (for example umap.openstreetmap.fr) together with a query of the overpass API for the recycling locations. You can use <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> to design the query.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/UMap">http://wiki.openstreetmap.org/wiki/UMap</a> has some examples listed. In particular this one <a href="http://umap.openstreetmap.fr/en/map/pere-lachaise_6765#16/48.8613/2.3953">http://umap.openstreetmap.fr/en/map/pere-lachaise_6765#16/48.8613/2.3953</a> which uses that technique.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/UMap">https://wiki.openstreetmap.org/wiki/UMap</a> has some examples listed. In particular this one <a href="http://umap.openstreetmap.fr/en/map/pere-lachaise_6765#16/48.8613/2.3953">http://umap.openstreetmap.fr/en/map/pere-lachaise_6765#16/48.8613/2.3953</a> which uses that technique.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi</p>
 <p>Choansangil - incorrect - no road at all - it's a forest with big hills</p>
 <p>is it possible to delete this part?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm-Seoul-incorrect-road-Choansangil.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm-Seoul-incorrect-road-Choansangil.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-fix" rel="tag" title="see questions tagged &#39;fix&#39;">fix</span> <span class="post-tag tag-link-part" rel="tag" title="see questions tagged &#39;part&#39;">part</span> <span class="post-tag tag-link-erase" rel="tag" title="see questions tagged &#39;erase&#39;">erase</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-delete" rel="tag" title="see questions tagged &#39;delete&#39;">delete</span>
@@ -69,7 +69,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hi bdimych, if you go to <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> and put "Choansangil" in the search box you end up at <a href="http://www.openstreetmap.org/way/37402949#map=15/37.6405/127.0509">http://www.openstreetmap.org/way/37402949#map=15/37.6405/127.0509</a> On the left side it says : Way: Choansangil (37402949) (no comment)</p>
+<p>Hi bdimych, if you go to <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> and put "Choansangil" in the search box you end up at <a href="https://www.openstreetmap.org/way/37402949#map=15/37.6405/127.0509">https://www.openstreetmap.org/way/37402949#map=15/37.6405/127.0509</a> On the left side it says : Way: Choansangil (37402949) (no comment)</p>
 <p>Edited 10 months ago by aquilegia Version #4 · Changeset #23128583</p>
 <p>If you login you can click on "aquilegia" and send him/her an email to discuss this. I personally would not just delete a feature on Osm without discussion with its creator.</p>
 </div>
@@ -94,7 +94,7 @@ osqa_accepted = false
 <div id="post-42418-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10859/bdimych">@bdimych</a>: I think it would be useful (for this special case) if you could mention if you know the forest area in reality ("local knowledge") and know that there is no street.</p>
+<p><a href="https://help.openstreetmap.org/users/10859/bdimych">@bdimych</a>: I think it would be useful (for this special case) if you could mention if you know the forest area in reality ("local knowledge") and know that there is no street.</p>
 </div>
 <div id="comment-42418-info" class="comment-info">
 <span class="comment-age">(17 Apr '15, 22:40)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 <div id="post-42450-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10859/bdimych">@bdimych</a>: perfect, thanks!</p>
+<p><a href="https://help.openstreetmap.org/users/10859/bdimych">@bdimych</a>: perfect, thanks!</p>
 </div>
 <div id="comment-42450-info" class="comment-info">
 <span class="comment-age">(19 Apr '15, 16:19)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -196,7 +196,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a> How can you be sure that the aerial image is more recent than the last edit (10 month) ? What image are you referring to ?</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a> How can you be sure that the aerial image is more recent than the last edit (10 month) ? What image are you referring to ?</p>
 </div>
 <div id="comment-42402-info" class="comment-info">
 <span class="comment-age">(17 Apr '15, 10:16)</span> <span class="comment-user userinfo">Gys de Jongh</span>
@@ -208,7 +208,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>But version 1 is pretty old, it was created 6 years ago: <a href="http://www.openstreetmap.org/way/37402949/history">http://www.openstreetmap.org/way/37402949/history</a> and the additional tags (source, ncat, review) suggest it was imported from some external db. Without direct knowledge, from Bing imagery the southern portion looks like a road left unfinished.</p>
+<p>But version 1 is pretty old, it was created 6 years ago: <a href="https://www.openstreetmap.org/way/37402949/history">https://www.openstreetmap.org/way/37402949/history</a> and the additional tags (source, ncat, review) suggest it was imported from some external db. Without direct knowledge, from Bing imagery the southern portion looks like a road left unfinished.</p>
 </div>
 <div id="comment-42415-info" class="comment-info">
 <span class="comment-age">(17 Apr '15, 18:56)</span> <span class="comment-user userinfo">Alecs01</span>
@@ -219,7 +219,7 @@ One Answer:
 <div id="post-42416-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8791/gys-de-jongh">@Gys</a>: I said "plausible", not "sure".</p>
+<p><a href="https://help.openstreetmap.org/users/8791/gys-de-jongh">@Gys</a>: I said "plausible", not "sure".</p>
 </div>
 <div id="comment-42416-info" class="comment-info">
 <span class="comment-age">(17 Apr '15, 20:50)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -242,7 +242,7 @@ One Answer:
 <div id="post-42452-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10859/bdimych">@bdimych</a>: that looks fine!</p>
+<p><a href="https://help.openstreetmap.org/users/10859/bdimych">@bdimych</a>: that looks fine!</p>
 </div>
 <div id="comment-42452-info" class="comment-info">
 <span class="comment-age">(19 Apr '15, 16:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

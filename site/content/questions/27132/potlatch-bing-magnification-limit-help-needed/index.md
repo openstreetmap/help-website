@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello: I want to use Potlatch but at certain (max) magnification it only shows a map of the area. The lower magnification is too small to trace all the details shown on Bing aerial view. On the other hand, when I switch to iD, it does show the magnification as needed. (See photos) Any idea how to make it work in Potlatch? Thank you!</p>
-<p><img src="http://help.openstreetmap.org/upfiles/iD-editor-magnification_2.GIF" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Potlatch-editor-magnification_1.GIF" alt="alt text" /></p>
+<p><img src="/upfiles/iD-editor-magnification_2.GIF" alt="alt text" /></p>
+<p><img src="/upfiles/Potlatch-editor-magnification_1.GIF" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-magnification" rel="tag" title="see questions tagged &#39;magnification&#39;">magnification</span> <span class="post-tag tag-link-aerial" rel="tag" title="see questions tagged &#39;aerial&#39;">aerial</span>
@@ -136,7 +136,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I asked this some time ago maybe some of the answers I received will help you <a href="https://help.openstreetmap.org/questions/12256/potlatch2-why-does-backround-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level">https://help.openstreetmap.org/questions/12256/potlatch2-why-does-backround-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level</a></p>
+<p>I asked this some time ago maybe some of the answers I received will help you <a href="/questions/12256/potlatch2-why-does-backround-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level">https://help.openstreetmap.org/questions/12256/potlatch2-why-does-backround-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -109,8 +109,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Split the way.</p>
 <p>Splitting a road into multiple ways is absolutely fine and is necessary to map e.g. bridges, one-way sections, etc.</p>
-<p>For example, the <a href="http://www.openstreetmap.org/browse/way/24299099">southern part</a> of Heathfield Road is part of the <a href="http://www.openstreetmap.org/browse/relation/10952">Capital Ring</a> walking route, while the <a href="http://www.openstreetmap.org/browse/way/19785408">northern part</a> is not.</p>
-<p>If you want to be thorough, you can create a relation for the road itself (relation:route=road, for example <a href="http://www.openstreetmap.org/browse/relation/2303009">Trinity Road</a>), however most software will automatically consider adjoining road ways with the same name to be the same road anyway.</p>
+<p>For example, the <a href="https://www.openstreetmap.org/browse/way/24299099">southern part</a> of Heathfield Road is part of the <a href="https://www.openstreetmap.org/browse/relation/10952">Capital Ring</a> walking route, while the <a href="https://www.openstreetmap.org/browse/way/19785408">northern part</a> is not.</p>
+<p>If you want to be thorough, you can create a relation for the road itself (relation:route=road, for example <a href="https://www.openstreetmap.org/browse/relation/2303009">Trinity Road</a>), however most software will automatically consider adjoining road ways with the same name to be the same road anyway.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

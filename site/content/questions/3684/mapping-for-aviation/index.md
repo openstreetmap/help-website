@@ -108,7 +108,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Most information relevant to instrument flight - reporting points, fixes, airspace, as well as arrival and departure patterns - are defined without reference to the ground. A reporting point might be overhead some visible landmark but it will still be officially recorded at being at position so-and-so, rathern than "whereever that landmark is".</p>
 <p>This means that most of this is not visible on the ground and thus should not be in OSM. At the same time, because that kind of information is completely independent of what's on the ground, so it is easy to keep air navigation data in a separate database and just display it on top of OSM when rendering.</p>
-<p>It is possible to use software written for OSM to operate and edit a completely separate database which is probably what you should be looking at. You would only have to install the <a href="http://wiki.openstreetmap.org/wiki/Rails_port">Rails port</a> and then you can hammer away at it with your favourite OSM editor, possibly creating special presets and rendering rules for that editor. Later you would set up a rendering engine to render tiles from your database, and display them on top of OSM base tiles.</p>
+<p>It is possible to use software written for OSM to operate and edit a completely separate database which is probably what you should be looking at. You would only have to install the <a href="https://wiki.openstreetmap.org/wiki/Rails_port">Rails port</a> and then you can hammer away at it with your favourite OSM editor, possibly creating special presets and rendering rules for that editor. Later you would set up a rendering engine to render tiles from your database, and display them on top of OSM base tiles.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -295,7 +295,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've mapped all the UK VORs (as far as I'm aware of) from Bing and site visits. Unfortunately, I'm not a pilot myself, so don't know their frequencies.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dnavigationaid">http://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dnavigationaid</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dnavigationaid">https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dnavigationaid</a></p>
 <p>Hope this helps some, Chris</p>
 </div>
 <div class="answer-controls post-controls">

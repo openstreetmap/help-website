@@ -143,7 +143,7 @@ One Answer:
 <div class="answer-body">
 <p>It's an inconsistency in your .osm file, as you put in your question.</p>
 <p>The most likely cause of this is that you have an extract which was created with the standard osmosis settings - which means that if a way references nodes outside of the bbox requested, the extra nodes are not included and so the extract has "incomplete" ways. Or the same thing with relations.</p>
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#Area_Filtering_Tasks">Detailed Usage</a> description of the bbox tasks of osmosis for more details.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#Area_Filtering_Tasks">Detailed Usage</a> description of the bbox tasks of osmosis for more details.</p>
 <p>To solve this, you will either need to obtain an extract with completed ways and relations, or make your own with the "completeWays" and "completeRelations" flags set to true. Alternatively, you can use the "clipIncompleteEntities" to alter the ways and relations in order that they won't refer to missing entities.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -127,7 +127,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">This page</a> has relations on it and the links to the checker work from there.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">This page</a> has relations on it and the links to the checker work from there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

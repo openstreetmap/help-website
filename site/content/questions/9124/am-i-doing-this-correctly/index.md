@@ -202,7 +202,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you read the beginners guide and watched the video tutorials <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">http://wiki.openstreetmap.org/wiki/Video_tutorials</a> they could be a great help.Its good to upload the trace as others can use it to get a good average trace as most traces have some small and often larger errors. Using your knowledge gained when making your trace, and using the other traces together with the bing background (if available) will give the best results when you plot the nodes and make the ways. good luck<br />
+<p>Have you read the beginners guide and watched the video tutorials <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">https://wiki.openstreetmap.org/wiki/Video_tutorials</a> they could be a great help.Its good to upload the trace as others can use it to get a good average trace as most traces have some small and often larger errors. Using your knowledge gained when making your trace, and using the other traces together with the bing background (if available) will give the best results when you plot the nodes and make the ways. good luck<br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -253,7 +253,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Preferably draw them manually. A tool to merge multiple tracks into one average, more precise, would be nice, but I do not know about one. See this related question: <a href="http://help.openstreetmap.org/questions/8844/convert-track-to-road">http://help.openstreetmap.org/questions/8844/convert-track-to-road</a></p>
+<p>Preferably draw them manually. A tool to merge multiple tracks into one average, more precise, would be nice, but I do not know about one. See this related question: <a href="/questions/8844/convert-track-to-road">https://help.openstreetmap.org/questions/8844/convert-track-to-road</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

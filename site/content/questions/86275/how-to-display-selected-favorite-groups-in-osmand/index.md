@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>On Android it is possible to disable individual favorite groups in OsmAnd: Go to My Places / Favorites, then tap on the three dots menu for the favorite group you want to modify. This will provide you with the following settings where you can change their visibility, among other settings:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/photo_2022-12-01_10-07-58.jpg" alt="favorite settings" /></p>
+<p><img src="/upfiles/photo_2022-12-01_10-07-58.jpg" alt="favorite settings" /></p>
 <p>It is possible that this widget doesn't exist for the iOS version of OsmAnd. So far the iOS version has always been somewhat behind the Android version, feature-wise.</p>
 <p>One alternative is to use GPX files with waypoints instead of favorites. They share roughly the same functionality and tracks can also be enabled/disabled individually. In the Android version of OsmAnd you can convert favorites to GPX if you convert them to markers in-between. Maybe the same can be done on iOS so that you don't have to recreate all your favorites as GPX waypoints manually.</p>
 </div>

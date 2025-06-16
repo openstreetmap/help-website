@@ -142,7 +142,7 @@ One Answer:
 <div id="post-50451-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>if you wanto to deal with even bigger datasets, I recommand to download whole raw OSM data for a country or continent via <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a> ... and use <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p>if you wanto to deal with even bigger datasets, I recommand to download whole raw OSM data for a country or continent via <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a> ... and use <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 </div>
 <div id="comment-50451-info" class="comment-info">
 <span class="comment-age">(24 Jun '16, 21:05)</span> <span class="comment-user userinfo">stephan75</span>

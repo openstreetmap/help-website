@@ -253,7 +253,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's not too difficult to edit the map. You will find help here <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> I had to spend a few hours learning and understanding some of the processes before editing. It is probably simplest choose the iD editor. Alternatively you could add the a note to the map, which may get an active mapper to look at it.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/missi.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/missi.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

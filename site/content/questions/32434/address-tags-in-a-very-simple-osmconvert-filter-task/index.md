@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is basically the same question as in <a href="https://help.openstreetmap.org/questions/32442/using-overpass_api-for-a-simple-adress-tag-job">your other post</a>. Issue: there's an extra space between "name" and "addr:street" in your osmconvert csv string. Remove it and you're all set.</p>
+<p>This is basically the same question as in <a href="/questions/32442/using-overpass_api-for-a-simple-adress-tag-job">your other post</a>. Issue: there's an extra space between "name" and "addr:street" in your osmconvert csv string. Remove it and you're all set.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

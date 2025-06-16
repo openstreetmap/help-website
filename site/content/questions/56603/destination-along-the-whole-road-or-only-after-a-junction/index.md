@@ -128,7 +128,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>As for "no place else", <a href="http://wiki.openstreetmap.org/wiki/Key:destination">http://wiki.openstreetmap.org/wiki/Key:destination</a> says "Different destinations on the same sign are separated with semicolons". I see a <em>lot</em> of such signs on-the-ground (above the ground, to be precise ;))</p>
+<p>As for "no place else", <a href="https://wiki.openstreetmap.org/wiki/Key:destination">https://wiki.openstreetmap.org/wiki/Key:destination</a> says "Different destinations on the same sign are separated with semicolons". I see a <em>lot</em> of such signs on-the-ground (above the ground, to be precise ;))</p>
 </div>
 <div id="comment-56606-info" class="comment-info">
 <span class="comment-age">(13 Jun '17, 16:40)</span> <span class="comment-user userinfo">Piskvor</span>

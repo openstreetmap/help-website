@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/questions/1992/gdb-to-gpx">This earlier question</a> suggests you can use <a href="http://www.gpsbabel.org/">GPSBabel</a> to convert GDB to GPX and I've used it on Windows 7 64-bit OK (though not for GDB files, I should add).</p>
+<p><a href="/questions/1992/gdb-to-gpx">This earlier question</a> suggests you can use <a href="http://www.gpsbabel.org/">GPSBabel</a> to convert GDB to GPX and I've used it on Windows 7 64-bit OK (though not for GDB files, I should add).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

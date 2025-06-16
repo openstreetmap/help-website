@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This might just be that "map tiles don't get updated instantaneously". <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183</a> has some info on that.</p>
+<p>This might just be that "map tiles don't get updated instantaneously". <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183</a> has some info on that.</p>
 </div>
 <div id="comment-59742-info" class="comment-info">
 <span class="comment-age">(21 Sep '17, 10:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need not and should not do this. A bus stop doesn't only consist of the position and the name tag but also of the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">highway=bus_stop</a> tag. Consequently all the required information to distinguish it from a shop, a street or any other object is already there. Additionally any other tool would have to remove the "bus stop" string again in order to display the official name of the stop. Only tag the official name and don't use any custom additions. Also see the <a href="http://wiki.openstreetmap.org/wiki/Names#Notes">notes section</a> of the name tag.</p>
+<p>You need not and should not do this. A bus stop doesn't only consist of the position and the name tag but also of the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">highway=bus_stop</a> tag. Consequently all the required information to distinguish it from a shop, a street or any other object is already there. Additionally any other tool would have to remove the "bus stop" string again in order to display the official name of the stop. Only tag the official name and don't use any custom additions. Also see the <a href="https://wiki.openstreetmap.org/wiki/Names#Notes">notes section</a> of the name tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

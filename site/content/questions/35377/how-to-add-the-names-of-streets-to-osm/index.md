@@ -149,7 +149,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Welcome. Luckily the Ariel images of your town are quite good which means you can map without a gps. The beginners guide in the wiki is the best place to start. This is a screen image using Potlatch2 editor of part of your town with new street which would need tagging or naming. I created the way (our name for a line ) which can represent a roads, a path, a stream, a coastline or a part of a building. Hopefully the picture and a good read, will make sense, There are some demonstration videos which I' will look for. Good Luck, one video <a href="http://vimeo.com/24984085">http://vimeo.com/24984085</a> <img src="http://help.openstreetmap.org/upfiles/add_a_street_using_P2.JPG" alt="alt text" /><br />
+<p>Welcome. Luckily the Ariel images of your town are quite good which means you can map without a gps. The beginners guide in the wiki is the best place to start. This is a screen image using Potlatch2 editor of part of your town with new street which would need tagging or naming. I created the way (our name for a line ) which can represent a roads, a path, a stream, a coastline or a part of a building. Hopefully the picture and a good read, will make sense, There are some demonstration videos which I' will look for. Good Luck, one video <a href="http://vimeo.com/24984085">http://vimeo.com/24984085</a> <img src="/upfiles/add_a_street_using_P2.JPG" alt="alt text" /><br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -206,7 +206,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>¡Bienvenida Natalia! Great that you want to help OSM!</p>
 <p>You may want to use a printout of <span>Field Papers</span> to simply use a pen to note down the street names while walking around your town. Please note that, in general, we are <em>not</em> allowed to <em>use other maps</em> (for example printed maps or google maps) to collect the names. — Walking around in your town is more error-free, healthier and more fun anyway. :-)</p>
-<p>See <a href="/questions/6/">how-do-i-get-started-with-openstreetmap</a> for how to start editing OSM in general. For your special task of to assign a street name: in most OSM editors (we <span>have several</span>) click (in select mode) a street and then fill in the name field (or add a tag with the key <code>name</code> if there is no form with a name field). If a road changes its name but is not yet split in the needed sections, see <a href="https://help.openstreetmap.org/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor">this question about splitting a road</a>. Repeat this for all names you want to add. When you are finished … save with a summarizing comment of what you have changed.</p>
+<p>See <a href="/questions/6/">how-do-i-get-started-with-openstreetmap</a> for how to start editing OSM in general. For your special task of to assign a street name: in most OSM editors (we <span>have several</span>) click (in select mode) a street and then fill in the name field (or add a tag with the key <code>name</code> if there is no form with a name field). If a road changes its name but is not yet split in the needed sections, see <a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor">this question about splitting a road</a>. Repeat this for all names you want to add. When you are finished … save with a summarizing comment of what you have changed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -259,7 +259,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Natucha, welcome, you set the first step becoming a contributor. With your account you’re able to add the names to the streets of the village. Please read the beginners pages as well. <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> ,there a lot of handy hints.</p>
+<p>Hi Natucha, welcome, you set the first step becoming a contributor. With your account you’re able to add the names to the streets of the village. Please read the beginners pages as well. <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> ,there a lot of handy hints.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -107,7 +107,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's no "meta" for this site, but there is a meta for general <a href="http://www.osqa.net/">OSQA</a> functionality <a href="http://meta.osqa.net/">here</a>. Although personally I wouldn't try and overthink tagging etc. here, perhaps a mailing list might work as a discussion forum? If you want to contact the admins, your best place is probably the #osm-dev <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> channel.</p>
+<p>There's no "meta" for this site, but there is a meta for general <a href="http://www.osqa.net/">OSQA</a> functionality <a href="http://meta.osqa.net/">here</a>. Although personally I wouldn't try and overthink tagging etc. here, perhaps a mailing list might work as a discussion forum? If you want to contact the admins, your best place is probably the #osm-dev <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> channel.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

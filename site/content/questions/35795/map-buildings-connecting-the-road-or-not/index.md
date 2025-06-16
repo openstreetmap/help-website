@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Map buildings connecting the road or not?"
-description = '''If buildings are directly located near a road (e.g. access road), should at least one point of the building be on the road or not? May it be important for routing? This building, for example: http://www.openstreetmap.org/way/297602597/'''
+description = '''If buildings are directly located near a road (e.g. access road), should at least one point of the building be on the road or not? May it be important for routing? This building, for example: https://www.openstreetmap.org/way/297602597/'''
 date = "2014-08-13T22:10:00Z"
 lastmod = "2014-08-14T09:44:00Z"
 weight = 35795
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>If buildings are directly located near a road (e.g. access road), should at least one point of the building be on the road or not? May it be important for routing? This building, for example: <a href="http://www.openstreetmap.org/way/297602597/">http://www.openstreetmap.org/way/297602597/</a></p>
+<p>If buildings are directly located near a road (e.g. access road), should at least one point of the building be on the road or not? May it be important for routing? This building, for example: <a href="https://www.openstreetmap.org/way/297602597/">https://www.openstreetmap.org/way/297602597/</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-connection" rel="tag" title="see questions tagged &#39;connection&#39;">connection</span> <span class="post-tag tag-link-mapping" rel="tag" title="see questions tagged &#39;mapping&#39;">mapping</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>
@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-35811-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This pretty much the same issue as <a href="https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately">https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately</a></p>
+<p>This pretty much the same issue as <a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately">https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately</a></p>
 </div>
 <div id="comment-35811-info" class="comment-info">
 <span class="comment-age">(14 Aug '14, 09:18)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

@@ -101,7 +101,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Here is a recent query that may help <a href="https://help.openstreetmap.org/questions/38151/what-would-i-need-to-learn-to-develop-a-mobile-app-that-uses-osms-map-data">https://help.openstreetmap.org/questions/38151/what-would-i-need-to-learn-to-develop-a-mobile-app-that-uses-osms-map-data</a></p>
+<p>Here is a recent query that may help <a href="/questions/38151/what-would-i-need-to-learn-to-develop-a-mobile-app-that-uses-osms-map-data">https://help.openstreetmap.org/questions/38151/what-would-i-need-to-learn-to-develop-a-mobile-app-that-uses-osms-map-data</a></p>
 </div>
 <div id="comment-39970-info" class="comment-info">
 <span class="comment-age">(02 Jan '15, 12:50)</span> <span class="comment-user userinfo">nevw</span>

@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to your <a href="http://www.openstreetmap.org/traces/mine">list of traces</a> (<a href="http://www.openstreetmap.org/traces/mine">http://www.openstreetmap.org/traces/mine</a>) and click on the trace you want to delete (either its filename or the <strong>more</strong> link).</p>
+<p>Go to your <a href="https://www.openstreetmap.org/traces/mine">list of traces</a> (<a href="https://www.openstreetmap.org/traces/mine">https://www.openstreetmap.org/traces/mine</a>) and click on the trace you want to delete (either its filename or the <strong>more</strong> link).</p>
 <p>At the bottom of the page is a button labelled <strong>Delete this trace</strong>. Click this button!</p>
 </div>
 <div class="answer-controls post-controls">

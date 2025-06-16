@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You just follow instructions for <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Uploading_traces">API uploading traces</a>. The <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic auth</a> (which is deprecated and you should use <a href="http://wiki.openstreetmap.org/wiki/OAuth">OAuth</a> instead) is trivially encoded into URL, for example using POST to "http://username:password@api.openstreetmap.org/"</p>
+<p>You just follow instructions for <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Uploading_traces">API uploading traces</a>. The <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic auth</a> (which is deprecated and you should use <a href="https://wiki.openstreetmap.org/wiki/OAuth">OAuth</a> instead) is trivially encoded into URL, for example using POST to "http://username:password@api.openstreetmap.org/"</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

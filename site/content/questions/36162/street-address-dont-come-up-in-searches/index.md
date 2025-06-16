@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Street &amp; Address don&#x27;t come up in searches"
-description = '''My street, Creekview Drive, shows up on the map, but it doesn&#x27;t come up in a search, with or without my address. I live at 1700 Creekview Drive, Franklinton, NC 27525 My road can be seen on this map: http://www.openstreetmap.org/#map=16/36.1047/-78.5603 Is it possible to make it searchable? My goal ...'''
+description = '''My street, Creekview Drive, shows up on the map, but it doesn&#x27;t come up in a search, with or without my address. I live at 1700 Creekview Drive, Franklinton, NC 27525 My road can be seen on this map: https://www.openstreetmap.org/#map=16/36.1047/-78.5603 Is it possible to make it searchable? My goal ...'''
 date = "2014-08-26T03:04:00Z"
 lastmod = "2014-08-27T16:19:00Z"
 weight = 36162
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>My street, Creekview Drive, shows up on the map, but it doesn't come up in a search, with or without my address.</p>
 <p>I live at 1700 Creekview Drive, Franklinton, NC 27525</p>
 <p>My road can be seen on this map:</p>
-<p><a href="http://www.openstreetmap.org/#map=16/36.1047/-78.5603">http://www.openstreetmap.org/#map=16/36.1047/-78.5603</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/36.1047/-78.5603">https://www.openstreetmap.org/#map=16/36.1047/-78.5603</a></p>
 <p>Is it possible to make it searchable? My goal is to be able to use an Open Street Map Android GPS app to admit my house exists (i.e. for driving directions).</p>
 <p>Thanks,</p>
 <p>Joe</p>
@@ -197,7 +197,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Just looked and Sygic seems to use Tom-Tom for its maps. I don't see navUSA in the Android Play Store so I can't say what it uses for map data. So how long those will go before being updated to show your address is hard to say. For a list of Android apps that use OpenStreetMap data, see <a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a></p>
+<p>Just looked and Sygic seems to use Tom-Tom for its maps. I don't see navUSA in the Android Play Store so I can't say what it uses for map data. So how long those will go before being updated to show your address is hard to say. For a list of Android apps that use OpenStreetMap data, see <a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a></p>
 </div>
 <div id="comment-36288-info" class="comment-info">
 <span class="comment-age">(27 Aug '14, 16:19)</span> <span class="comment-user userinfo">n76</span>

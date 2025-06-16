@@ -131,7 +131,7 @@ One Answer:
 <div id="post-41943-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>… and there are "more": <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">https://wiki.openstreetmap.org/wiki/Track_drawing_websites</a> and <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services</a> . <a href="http://help.openstreetmap.org/users/10732/andresin">@Andresin</a>: try a "gpx track" – I <em>guess</em> that Sigma supports this usual format.</p>
+<p>… and there are "more": <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">https://wiki.openstreetmap.org/wiki/Track_drawing_websites</a> and <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services</a> . <a href="https://help.openstreetmap.org/users/10732/andresin">@Andresin</a>: try a "gpx track" – I <em>guess</em> that Sigma supports this usual format.</p>
 </div>
 <div id="comment-41943-info" class="comment-info">
 <span class="comment-age">(27 Mar '15, 13:56)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -154,7 +154,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10732/andresin"></a><a href="http://help.openstreetmap.org/users/10732/andresin">@Andresin</a>: in which program/tool does "does not allow me to cross the nain roads" happen? Or does it happen while cycling? And what exactly happens ("cross"?)?</p>
+<p><a href="https://help.openstreetmap.org/users/10732/andresin"></a><a href="https://help.openstreetmap.org/users/10732/andresin">@Andresin</a>: in which program/tool does "does not allow me to cross the nain roads" happen? Or does it happen while cycling? And what exactly happens ("cross"?)?</p>
 </div>
 <div id="comment-41948-info" class="comment-info">
 <span class="comment-age">(27 Mar '15, 22:36)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

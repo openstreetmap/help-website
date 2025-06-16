@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I can't understand how partial matches work in Nominatim. For example, let's take a look at <a href="http://www.openstreetmap.org/way/242174537">Sesame Lane Childcare Centre</a> in North Lakes, Australia. The following queries contain a partial name of this amenity and find it:</p>
+<p>I can't understand how partial matches work in Nominatim. For example, let's take a look at <a href="https://www.openstreetmap.org/way/242174537">Sesame Lane Childcare Centre</a> in North Lakes, Australia. The following queries contain a partial name of this amenity and find it:</p>
 <pre><code>Sesame Lane Childcare Centre
 Sesame Lane Childcare Centre north lakes
 Sesame north lakes</code></pre>
@@ -48,7 +48,7 @@ Sesame north lakes</code></pre>
 <pre><code>Sesame lane north lakes
 Sesame lane childcare north lakes
 Sesame lane centre north lakes</code></pre>
-<p>In contrary, let's consider <a href="http://www.openstreetmap.org/way/7305241">Palace of Culture and Science</a> in Warsaw, Poland. Every query containing a partial name of this building I tried finds this building:</p>
+<p>In contrary, let's consider <a href="https://www.openstreetmap.org/way/7305241">Palace of Culture and Science</a> in Warsaw, Poland. Every query containing a partial name of this building I tried finds this building:</p>
 <pre><code>palace culture warsaw
 science culture warsaw
 and culture warsaw
@@ -91,7 +91,7 @@ palace of science warsaw</code></pre>
 </div>
 <div class="comment-text">
 <p>I don't know the answer, but might be able to suggest further places to read and places to ask.</p>
-<p>I'd start with the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a>. That's not guaranteed to be 100% up to date, but it might be helpful. You may be already be aware of the <a href="http://nominatim.openstreetmap.org/search.php?q=Sesame+Lane+Childcare+Centre&amp;polygon=1&amp;viewbox=">direct front-end</a> for Nominatim - you can look at "details" of places that it can find which may help. Issues raised on github such as <a href="https://github.com/twain47/Nominatim/issues/415">this one</a> may also explain some of the inner workings.</p>
+<p>I'd start with the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a>. That's not guaranteed to be 100% up to date, but it might be helpful. You may be already be aware of the <a href="http://nominatim.openstreetmap.org/search.php?q=Sesame+Lane+Childcare+Centre&amp;polygon=1&amp;viewbox=">direct front-end</a> for Nominatim - you can look at "details" of places that it can find which may help. Issues raised on github such as <a href="https://github.com/twain47/Nominatim/issues/415">this one</a> may also explain some of the inner workings.</p>
 <p>With regard to the second part of the question (incomplete word matching) I don't believe that Nominatim does partial word (or misspelling) matching. One that does is <a href="https://mapzen.com/projects/search/?query=&amp;endpoint=autocomplete&amp;lng=-0.12257&amp;lat=51.49667&amp;zoom=12">Pelias</a> by Mapzen - and there may be others.</p>
 <p>You could also try asking in #osm or #osm-dev on IRC - people there may know more.</p>
 </div>

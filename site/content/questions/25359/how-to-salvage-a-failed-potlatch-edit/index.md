@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've had this problem before and found the instructions in <a href="http://help.openstreetmap.org/questions/10984/upload-potlatch2-xml-raw-data-using-josm/17009">this post</a> quite useful.</p>
+<p>I've had this problem before and found the instructions in <a href="/questions/10984/upload-potlatch2-xml-raw-data-using-josm/17009">this post</a> quite useful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>duplicate of <a href="https://help.openstreetmap.org/questions/53470/do-tile-server-and-nominatim-server-installation-using-the-same-data-importing">https://help.openstreetmap.org/questions/53470/do-tile-server-and-nominatim-server-installation-using-the-same-data-importing</a> (asked 10 minutes later)</p>
+<p>duplicate of <a href="/questions/53470/do-tile-server-and-nominatim-server-installation-using-the-same-data-importing">https://help.openstreetmap.org/questions/53470/do-tile-server-and-nominatim-server-installation-using-the-same-data-importing</a> (asked 10 minutes later)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

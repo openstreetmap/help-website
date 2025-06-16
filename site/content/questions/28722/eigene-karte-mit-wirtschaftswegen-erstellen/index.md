@@ -81,7 +81,7 @@ osqa_accepted = false
 <div id="post-28725-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hallo Dirk, im OSM wiki gibt es z.B. unter <a href="http://wiki.openstreetmap.org/wiki/DE:Using_OpenStreetMap">http://wiki.openstreetmap.org/wiki/DE:Using_OpenStreetMap</a> eine Auswahl von Karten mit anderen Stilen ... ist da was annähernd dabei?</p>
+<p>Hallo Dirk, im OSM wiki gibt es z.B. unter <a href="https://wiki.openstreetmap.org/wiki/DE:Using_OpenStreetMap">https://wiki.openstreetmap.org/wiki/DE:Using_OpenStreetMap</a> eine Auswahl von Karten mit anderen Stilen ... ist da was annähernd dabei?</p>
 </div>
 <div id="comment-28725-info" class="comment-info">
 <span class="comment-age">(03 Dec '13, 16:55)</span> <span class="comment-user userinfo">stephan75</span>
@@ -148,14 +148,14 @@ One Answer:
 <div class="answer-body">
 <p>Wie in den Kommentaren bereits ausgeführt, gibt es zahlreiche Karten von OSM und dazu noch auf verschiedensten Plattformen:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Software">http://wiki.openstreetmap.org/wiki/Software</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Maps">https://wiki.openstreetmap.org/wiki/Maps</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Software">https://wiki.openstreetmap.org/wiki/Software</a></li>
 </ul>
 <p>Das Erstellen eines eigenen Kartenstils ist durchaus eine sehr aufwändige Sache, die viel Zeit und Erfahrung bedarf. Wenn du es dennoch angehen willst, schau mal hier:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mkgmap">http://wiki.openstreetmap.org/wiki/Mkgmap</a> Garmin Karten erstellen</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mapnik#OSM_Standard_Mapnik_Style">http://wiki.openstreetmap.org/wiki/Mapnik#OSM_Standard_Mapnik_Style</a> Webkarte stylen (vorher am besten www.switch2osm.org anschauen)</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mkgmap">https://wiki.openstreetmap.org/wiki/Mkgmap</a> Garmin Karten erstellen</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mapnik#OSM_Standard_Mapnik_Style">https://wiki.openstreetmap.org/wiki/Mapnik#OSM_Standard_Mapnik_Style</a> Webkarte stylen (vorher am besten www.switch2osm.org anschauen)</li>
 <li><a href="http://wiki.navit-project.org/index.php/Layout">http://wiki.navit-project.org/index.php/Layout</a> z.B. bei Navit den Kartenstil anpassen</li>
 </ul>
 </div>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Probably yes, it is impossible to keep data about every single major flood. See also <a href="https://help.openstreetmap.org/questions/650/does-osm-use-any-historic-data-or-want-to">https://help.openstreetmap.org/questions/650/does-osm-use-any-historic-data-or-want-to</a></p>
+<p>Probably yes, it is impossible to keep data about every single major flood. See also <a href="/questions/650/does-osm-use-any-historic-data-or-want-to">https://help.openstreetmap.org/questions/650/does-osm-use-any-historic-data-or-want-to</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

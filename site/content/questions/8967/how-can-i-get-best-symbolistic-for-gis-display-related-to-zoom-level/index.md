@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The minimum and maximum zoom level at which a certain kind of object will be drawn depends on the renderer and its rules/stylesheet (the wiki has a <a href="http://wiki.openstreetmap.org/wiki/Mapnik#Stylesheet">section about mapnik's stylesheet</a>). You can use this as a starting point for rendering your own maps. Everything else doesn't seem to have much to do with OpenStreetMap.</p>
+<p>The minimum and maximum zoom level at which a certain kind of object will be drawn depends on the renderer and its rules/stylesheet (the wiki has a <a href="https://wiki.openstreetmap.org/wiki/Mapnik#Stylesheet">section about mapnik's stylesheet</a>). You can use this as a starting point for rendering your own maps. Everything else doesn't seem to have much to do with OpenStreetMap.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

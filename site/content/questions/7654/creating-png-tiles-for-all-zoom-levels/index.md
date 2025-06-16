@@ -118,7 +118,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use the python script <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/generate_tiles.py">generate_tiles.py</a> which is in the mapnik distribution to batch render areas. Another (more complicated) approach is using tile-server tools like renderd or tirex. You can find more information in the osm wiki, e.g. <a href="http://wiki.openstreetmap.org/wiki/Tiles">here</a> and <a href="http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">here</a>.</p>
+<p>You can use the python script <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/generate_tiles.py">generate_tiles.py</a> which is in the mapnik distribution to batch render areas. Another (more complicated) approach is using tile-server tools like renderd or tirex. You can find more information in the osm wiki, e.g. <a href="https://wiki.openstreetmap.org/wiki/Tiles">here</a> and <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

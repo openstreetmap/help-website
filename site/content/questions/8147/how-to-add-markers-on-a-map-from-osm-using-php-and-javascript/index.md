@@ -129,8 +129,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is certainly possible to place markers on a map using <a href="http://openlayers.org/">OpenLayers</a>. Have a look at the <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Dynamic_POI">Dynamic POI example</a> in our wiki.</p>
-<p>However for that you need to have the latitude and longitude of each point. If you lack that you can use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> to geocode the address information that you have and convert it into an usable format.</p>
+<p>It is certainly possible to place markers on a map using <a href="http://openlayers.org/">OpenLayers</a>. Have a look at the <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Dynamic_POI">Dynamic POI example</a> in our wiki.</p>
+<p>However for that you need to have the latitude and longitude of each point. If you lack that you can use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> to geocode the address information that you have and convert it into an usable format.</p>
 <p>In the end you are going to need a bit of programming skill or you'll need to pay somebody to do the coding for you as there is no readymade solution that accepts a list of addresses and automatically plots them.</p>
 </div>
 <div class="answer-controls post-controls">

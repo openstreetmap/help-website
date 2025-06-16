@@ -211,7 +211,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I guessed Puroprana wanted to save a link/bookmark to the osm homepage (<a href="http://www.openstreetmap.org"><code>http://www.openstreetmap.org</code></a>) without any parameters. That does not work currently (in Firefox): always the location parameters are added upon opening that page (if you have a location cookie)(<a href="http://www.openstreetmap.org/#map=15/50.0623/8.6587"><code>http://www.openstreetmap.org/#map=15/50.0623/8.6587</code></a>).</p>
+<p>I guessed Puroprana wanted to save a link/bookmark to the osm homepage (<a href="http://www.openstreetmap.org"><code>http://www.openstreetmap.org</code></a>) without any parameters. That does not work currently (in Firefox): always the location parameters are added upon opening that page (if you have a location cookie)(<a href="https://www.openstreetmap.org/#map=15/50.0623/8.6587"><code>https://www.openstreetmap.org/#map=15/50.0623/8.6587</code></a>).</p>
 </div>
 <div id="comment-27813-info" class="comment-info">
 <span class="comment-age">(05 Nov '13, 12:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

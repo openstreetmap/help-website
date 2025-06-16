@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>please see this older question: <a href="https://help.openstreetmap.org/questions/14805/how-do-i-display-names-in-latin-script">https://help.openstreetmap.org/questions/14805/how-do-i-display-names-in-latin-script</a></p>
+<p>please see this older question: <a href="/questions/14805/how-do-i-display-names-in-latin-script">https://help.openstreetmap.org/questions/14805/how-do-i-display-names-in-latin-script</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

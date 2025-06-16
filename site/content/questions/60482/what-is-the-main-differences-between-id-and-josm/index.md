@@ -92,7 +92,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Also see the related question <a href="https://help.openstreetmap.org/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm"><em>"What are the main things that I'm missing out by using the iD editor instead of JOSM?"</em></a> for additional answers.</p>
+<p>Also see the related question <a href="/questions/34749/what-are-the-main-things-that-im-missing-out-by-using-the-id-editor-instead-of-josm"><em>"What are the main things that I'm missing out by using the iD editor instead of JOSM?"</em></a> for additional answers.</p>
 </div>
 <div id="comment-60539-info" class="comment-info">
 <span class="comment-age">(10 Nov '17, 18:39)</span> <span class="comment-user userinfo">Tordanik</span>

@@ -126,7 +126,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>Short answer: Sometimes it takes a while; or, you may have added locations that are not rendered on the map that you are looking at (check if other locations of the same type are shown). Not every POI you can add in Potlatch does actually have an icon on every map.</p>
-<p>Longer answer: <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but thy don't show up on the map</a>.</p>
+<p>Longer answer: <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but thy don't show up on the map</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -45,7 +45,7 @@ osqa_accepted = false
 </blockquote>
 <p>Having a GPX file is somewhat crucial because some turns these routes make into some lost lanes are impossible to find when signs are missing or hidden in the vegetation.</p>
 <blockquote>
-<p>There is a website that looks quite helpful: <a href="http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_National_Cycle_Network/National_Routes#8x:_Wales">http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_National_Cycle_Network/National_Routes#8x:_Wales</a></p>
+<p>There is a website that looks quite helpful: <a href="https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_National_Cycle_Network/National_Routes#8x:_Wales">https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_National_Cycle_Network/National_Routes#8x:_Wales</a></p>
 <p>Unfortunately, when I click on one of the gpx links, like this one here for route number 3: <a href="http://osmrm.openstreetmap.de/gpx.jsp?id=72568">http://osmrm.openstreetmap.de/gpx.jsp?id=72568</a></p>
 <p>... well, then i only receive an emtpy gpx-template that goes like this (see below)</p>
 <p>Hope you can help me, before my trip starts next weekend!</p>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is essetially the same problem as described in <a href="https://help.openstreetmap.org/questions/41811/gpx-downloads-from-osm-long-distance-paths">this question</a>. Go to <a href="http://cycling.waymarkedtrails.org/en/?zoom=9&amp;lat=50.56143&amp;lon=-4.58471&amp;hill=0">http://cycling.waymarkedtrails.org/en/?zoom=9&amp;lat=50.56143&amp;lon=-4.58471&amp;hill=0</a> , select "routes", select "NCN 3" and then "GPX".</p>
+<p>This is essetially the same problem as described in <a href="/questions/41811/gpx-downloads-from-osm-long-distance-paths">this question</a>. Go to <a href="http://cycling.waymarkedtrails.org/en/?zoom=9&amp;lat=50.56143&amp;lon=-4.58471&amp;hill=0">http://cycling.waymarkedtrails.org/en/?zoom=9&amp;lat=50.56143&amp;lon=-4.58471&amp;hill=0</a> , select "routes", select "NCN 3" and then "GPX".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

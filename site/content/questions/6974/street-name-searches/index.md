@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's because <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, OpenStreetMaps search engine, has its own database and currently <a href="http://help.openstreetmap.org/questions/6742/available-address-in-osm-fails-in-lookup">yet another updating problem</a>. As you can see on the <a href="http://www.openstreetmap.org/browse/way/19677026/history">history page</a> the name for Ffordd Sackville has been added recently and thus cannot be found by Nominatim until the updating problem will be solved. But Twain just told me that he is working on a fix.</p>
+<p>That's because <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, OpenStreetMaps search engine, has its own database and currently <a href="/questions/6742/available-address-in-osm-fails-in-lookup">yet another updating problem</a>. As you can see on the <a href="https://www.openstreetmap.org/browse/way/19677026/history">history page</a> the name for Ffordd Sackville has been added recently and thus cannot be found by Nominatim until the updating problem will be solved. But Twain just told me that he is working on a fix.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

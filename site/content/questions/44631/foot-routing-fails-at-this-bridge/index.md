@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have looked at tags, and even remapped it, the only difference between this bridge and the next one over the weir is the level, is that the problem, or do i have to wait for recent data to get used by the routing enginefor it to work OK? see pic<img src="http://help.openstreetmap.org/upfiles/routeing_not_working_here,_why.JPG" alt="alt text" /></p>
+<p>I have looked at tags, and even remapped it, the only difference between this bridge and the next one over the weir is the level, is that the problem, or do i have to wait for recent data to get used by the routing enginefor it to work OK? see pic<img src="/upfiles/routeing_not_working_here,_why.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tag" rel="tag" title="see questions tagged &#39;tag&#39;">tag</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -65,7 +65,7 @@ osqa_accepted = true
 <div id="post-44632-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>easier link <a href="http://www.openstreetmap.org/#map=18/52.33064/-0.13220">http://www.openstreetmap.org/#map=18/52.33064/-0.13220</a></p>
+<p>easier link <a href="https://www.openstreetmap.org/#map=18/52.33064/-0.13220">https://www.openstreetmap.org/#map=18/52.33064/-0.13220</a></p>
 </div>
 <div id="comment-44632-info" class="comment-info">
 <span class="comment-age">(05 Aug '15, 18:42)</span> <span class="comment-user userinfo">andy mackey</span>

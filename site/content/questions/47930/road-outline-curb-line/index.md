@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Road outline / curb line"
-description = '''If I export a section of open street map to OSM format how can I find the curb lines for the streets it shows? e.x. at this URL: http://www.openstreetmap.org/export#map=19/40.66848/-73.94072 I found this data for &quot;President Street&quot; (replacing &quot;&amp;lt;&quot; with &quot;[&quot;) [way id=&quot;250220325&quot; visible=&quot;true&quot; versi...'''
+description = '''If I export a section of open street map to OSM format how can I find the curb lines for the streets it shows? e.x. at this URL: https://www.openstreetmap.org/export#map=19/40.66848/-73.94072 I found this data for &quot;President Street&quot; (replacing &quot;&amp;lt;&quot; with &quot;[&quot;) [way id=&quot;250220325&quot; visible=&quot;true&quot; versi...'''
 date = "2016-02-05T01:47:00Z"
 lastmod = "2016-02-05T18:19:00Z"
 weight = 47930
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>If I export a section of open street map to OSM format how can I find the curb lines for the streets it shows?</p>
-<p>e.x. at this URL: <a href="http://www.openstreetmap.org/export#map=19/40.66848/-73.94072">http://www.openstreetmap.org/export#map=19/40.66848/-73.94072</a></p>
+<p>e.x. at this URL: <a href="https://www.openstreetmap.org/export#map=19/40.66848/-73.94072">https://www.openstreetmap.org/export#map=19/40.66848/-73.94072</a></p>
 <p>I found this data for "President Street" (replacing "&lt;" with "[")</p>
 <p>[way id="250220325" visible="true" version="1" changeset="19296424" timestamp="2013-12-05T21:03:43Z" user="Rub21_nycbuildings" uid="1781294"] [nd ref="2567030383"/] [nd ref="2567030387"/] [nd ref="2567030377"/] [nd ref="2567030367"/] [nd ref="2567030359"/] [nd ref="2567030357"/] [nd ref="2567030369"/] [nd ref="2567030379"/] [nd ref="2567030385"/] [nd ref="2567030390"/] [nd ref="2567030692"/] [nd ref="2567030689"/] [nd ref="2567030871"/] [nd ref="2567030874"/] [nd ref="2567030988"/] [nd ref="2567030964"/] [nd ref="2567030675"/] [nd ref="2567030670"/] [nd ref="2567030383"/] [tag k="addr:housenumber" v="1419"/] [tag k="addr:postcode" v="11213"/] [tag k="addr:street" v="President Street"/] [tag k="building" v="yes"/] [tag k="height" v="9.2"/] [tag k="nycdoitt:bin" v="3033440"/] [/way]</p>
 <p>I understand that each node ([nd]) corresponds to a node with latitude/longitude but these are just down the center of the street.</p>

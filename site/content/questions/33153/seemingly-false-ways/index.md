@@ -76,7 +76,7 @@ Closed 1 day ago · #22287273</code></pre>
 <div id="post-33155-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi BCNorwich, it looks more like a series of accidently made ways. Sum Wum made them by moving the map around the screen with a mouse or pointer. Ask Sum Wum friendly to make things right again, by deleting the accidently made ways. And send this link over as well <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a></p>
+<p>Hi BCNorwich, it looks more like a series of accidently made ways. Sum Wum made them by moving the map around the screen with a mouse or pointer. Ask Sum Wum friendly to make things right again, by deleting the accidently made ways. And send this link over as well <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a></p>
 </div>
 <div id="comment-33155-info" class="comment-info">
 <span class="comment-age">(13 May '14, 21:36)</span> <span class="comment-user userinfo">Hendrikklaas</span>

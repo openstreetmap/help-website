@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to close your account, see the <a href="http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">FAQ</a>.</p>
+<p>If you want to close your account, see the <a href="https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">FAQ</a>.</p>
 <p>But really, there's no need - it just creates work for people. You can just leave your account dormant and that'll be fine. We won't ask you for money or anything. :)</p>
 </div>
 <div class="answer-controls post-controls">

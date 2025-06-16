@@ -114,7 +114,7 @@ osqa_accepted = false
 <p>Hallo Knuddel, willkommen bei OSM!</p>
 <p>Wie (mit welchen <span>Tags</span>) du Blitzer in die OSM-Datenbank eintragen kannst (dazu musst du dich bei OSM anmelden), ist auf der Doku-Wiki-Seite <span>highway=speed_camera</span> (danke für's Raussuchen <span><span>@escada</span></span>) beschrieben. Eine spezielle Blitzer-Eintragefunktion gibt es nicht.</p>
 <p>… Statt dessen musst du sie so eintragen, wie alle anderen Daten hier auch bearbeitet werden. In dem konkreten Fall wird ein (neuer) Punkt/Knoten mit dem passenden Tag gekennzeichnet. Eine allgemeine <span>Anleitung für OSM</span> gibt es auch. Du kannst auch direkt den neuen <span>Editor iD</span> verwenden, wenn du magst.</p>
-<p>Wenn dir das zu viel Arbeit ist (ein wenig Einarbeitungszeit ist nämlich schon nötig, aber es macht Spaß und hilft am meisten!), dann kannst du mit der "Fehler melden"-Funktion auf <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> (unten rechts) den Mitarbeitern in der Region einen Hinweis geben, dass noch ein Blitzer fehlt.</p>
+<p>Wenn dir das zu viel Arbeit ist (ein wenig Einarbeitungszeit ist nämlich schon nötig, aber es macht Spaß und hilft am meisten!), dann kannst du mit der "Fehler melden"-Funktion auf <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> (unten rechts) den Mitarbeitern in der Region einen Hinweis geben, dass noch ein Blitzer fehlt.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With one of the editors you can add a "blitzer", see the german page: <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dspeed_camera">http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dspeed_camera</a></p>
+<p>With one of the editors you can add a "blitzer", see the german page: <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dspeed_camera">https://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dspeed_camera</a></p>
 <p>This is not allowed for camera's in Switserland.</p>
 </div>
 <div class="answer-controls post-controls">

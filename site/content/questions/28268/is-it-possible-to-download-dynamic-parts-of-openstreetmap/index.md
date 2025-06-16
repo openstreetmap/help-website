@@ -157,7 +157,7 @@ One Answer:
 <p>Type "marker" in the text search box on the top of this FAQ site.</p>
 <p>There are many possibilities to display a zoomable map with tile graphics from internet or from a localhost.</p>
 <p>Then you have to decide how you want to save the markers you added. Do you only want to store text?</p>
-<p>Maybe you want something like a "private" system with features similar to <a href="http://wiki.openstreetmap.org/wiki/Notes">Notes</a> ?</p>
+<p>Maybe you want something like a "private" system with features similar to <a href="https://wiki.openstreetmap.org/wiki/Notes">Notes</a> ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

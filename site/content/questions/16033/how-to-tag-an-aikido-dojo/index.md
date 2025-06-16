@@ -161,7 +161,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There was a <a href="http://wiki.openstreetmap.org/wiki/Project_of_the_week/2011/May_04">project of the week</a> last year which included dojos, so there is some usage of amenity=dojo: <a href="http://taginfo.openstreetmap.org/search?q=dojo#values">http://taginfo.openstreetmap.org/search?q=dojo#values</a> leisure=sports_centre definitely doesn't seem appropriate! :)</p>
+<p>There was a <a href="https://wiki.openstreetmap.org/wiki/Project_of_the_week/2011/May_04">project of the week</a> last year which included dojos, so there is some usage of amenity=dojo: <a href="http://taginfo.openstreetmap.org/search?q=dojo#values">http://taginfo.openstreetmap.org/search?q=dojo#values</a> leisure=sports_centre definitely doesn't seem appropriate! :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

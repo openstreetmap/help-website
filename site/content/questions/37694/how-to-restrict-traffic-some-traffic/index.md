@@ -130,7 +130,7 @@ One Answer:
 <div id="post-37699-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> , Set point "barrier" "block" and "motor_vehicle" "no" Where can I see, trying out if the correction are what it must be in reality?</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> , Set point "barrier" "block" and "motor_vehicle" "no" Where can I see, trying out if the correction are what it must be in reality?</p>
 </div>
 <div id="comment-37699-info" class="comment-info">
 <span class="comment-age">(17 Oct '14, 15:28)</span> <span class="comment-user userinfo">Jakka</span>
@@ -225,7 +225,7 @@ One Answer:
 <div id="post-37737-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a>: gpsies uses graphhopper (with no specific details available).</p>
+<p><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a>: gpsies uses graphhopper (with no specific details available).</p>
 </div>
 <div id="comment-37737-info" class="comment-info">
 <span class="comment-age">(18 Oct '14, 14:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

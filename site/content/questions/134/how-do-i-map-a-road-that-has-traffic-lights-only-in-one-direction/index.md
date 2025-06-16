@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Sometimes I'll see a road that has a set of traffic lights that only applies in one direction.</p>
 <p>Typically this happens when the lights are staggered (i.e. there may be another set of lights some distance away that apply to the opposite lane) or when the lights control access to something like a temporary road or bridge.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Traffic_signals">Tag:traffic___signals in the OSM Wiki</a> does not offer a solution to this and the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Set_of_Traffic_Signals">proposed Set of Traffic Signals</a> seems to have been abandoned.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Traffic_signals">Tag:traffic___signals in the OSM Wiki</a> does not offer a solution to this and the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Set_of_Traffic_Signals">proposed Set of Traffic Signals</a> seems to have been abandoned.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-traffic_signals" rel="tag" title="see questions tagged &#39;traffic_signals&#39;">traffic_signals</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

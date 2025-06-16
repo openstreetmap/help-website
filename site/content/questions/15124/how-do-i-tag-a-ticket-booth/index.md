@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How should I tag the building or booth where one pays to enter for example a park? Often these buildings are combined with a gift shop and/or cafe (which both have clear tags), but I cannot seem to be able to find what tag to use for the actual place where entrance tickets are being sold.</p>
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Shop">shop</a>=ticket tag, but it's description ("A ticket shop or box office. Sells tickets for concerts, events, public transport, ...") seems to be for general ticket shops that sell all kinds of tickets. Should I use this tag, or is there a better one?</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Shop">shop</a>=ticket tag, but it's description ("A ticket shop or box office. Sells tickets for concerts, events, public transport, ...") seems to be for general ticket shops that sell all kinds of tickets. Should I use this tag, or is there a better one?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shop" rel="tag" title="see questions tagged &#39;shop&#39;">shop</span> <span class="post-tag tag-link-ticket" rel="tag" title="see questions tagged &#39;ticket&#39;">ticket</span> <span class="post-tag tag-link-booth" rel="tag" title="see questions tagged &#39;booth&#39;">booth</span>

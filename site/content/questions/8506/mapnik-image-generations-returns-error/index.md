@@ -196,7 +196,7 @@ Segmentation fault</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Ah, thats the point it stops. According to <a href="http://wiki.openstreetmap.org/wiki/Mapnik#PostgreSQL.2FPostGIS">http://wiki.openstreetmap.org/wiki/Mapnik#PostgreSQL.2FPostGIS</a> the _int.sql installed previous is interfering.</p>
+<p>Ah, thats the point it stops. According to <a href="https://wiki.openstreetmap.org/wiki/Mapnik#PostgreSQL.2FPostGIS">https://wiki.openstreetmap.org/wiki/Mapnik#PostgreSQL.2FPostGIS</a> the _int.sql installed previous is interfering.</p>
 </div>
 <div id="comment-8558-info" class="comment-info">
 <span class="comment-age">(21 Oct '11, 08:42)</span> <span class="comment-user userinfo">ajoessen</span>
@@ -207,7 +207,7 @@ Segmentation fault</code></pre>
 <div id="post-8559-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@ajoessen</span>, yes, i just fixed that by deleting my gis db and recreating it accordingly, with this fix : <a href="http://wiki.openstreetmap.org/wiki/Talk:Openptmap/Installation">http://wiki.openstreetmap.org/wiki/Talk:Openptmap/Installation</a> .<br />
+<p><span>@ajoessen</span>, yes, i just fixed that by deleting my gis db and recreating it accordingly, with this fix : <a href="https://wiki.openstreetmap.org/wiki/Talk:Openptmap/Installation">https://wiki.openstreetmap.org/wiki/Talk:Openptmap/Installation</a> .<br />
 <br />
 But i still have errors. Please help me to sort it out. Check my previous comments, i've edited them.</p>
 </div>
@@ -323,7 +323,7 @@ Unfortunately <a href="http://generate_tiles.py">generate_tiles.py</a> doesn't w
 <div class="comment-text">
 <p>Nope, that doesn't change anything. Are you sure this may be the cause for now? it says file not found though.</p>
 <p>EDIT: where is the xml generated anyway?</p>
-<p>Btw, is potlatch and gis db somehow connected? Because i've stumbled on an interesting change. Please visit this topic for relevancy: <a href="http://help.openstreetmap.org/questions/8561/potlatch2-loads-but-then-crashes-on-my-osm-server">http://help.openstreetmap.org/questions/8561/potlatch2-loads-but-then-crashes-on-my-osm-server</a></p>
+<p>Btw, is potlatch and gis db somehow connected? Because i've stumbled on an interesting change. Please visit this topic for relevancy: <a href="/questions/8561/potlatch2-loads-but-then-crashes-on-my-osm-server">https://help.openstreetmap.org/questions/8561/potlatch2-loads-but-then-crashes-on-my-osm-server</a></p>
 </div>
 <div id="comment-8570-info" class="comment-info">
 <span class="comment-age">(21 Oct '11, 10:02)</span> <span class="comment-user userinfo">alexz</span>
@@ -387,7 +387,7 @@ Unfortunately <a href="http://generate_tiles.py">generate_tiles.py</a> doesn't w
 </div>
 <div class="comment-text">
 <p>What do you expect when you import only moldava and render the hole world from -180° to +180°? Most of the tiles must be empty! To see them, you can set up a html-page with openlayers. My wiki-Page is only in German, but perhaps useful for you:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer">http://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer">https://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer</a></p>
 <p>You have to change the path for the tiles from <a href="http://osm.org">http://osm.org</a> to your local file system, or setup an apache server to use <a href="http://localhost">http://localhost</a> For your potlatch2 problem, I cant help you. I only use josm, but with the original osm servers.</p>
 </div>
 <div id="comment-8578-info" class="comment-info">
@@ -447,7 +447,7 @@ Unfortunately <a href="http://generate_tiles.py">generate_tiles.py</a> doesn't w
 <div id="post-8606-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sorry, but that facebook stuff is not my world. You can contact me over my osm profile: <a href="http://www.openstreetmap.org/user/ajoessen">http://www.openstreetmap.org/user/ajoessen</a></p>
+<p>Sorry, but that facebook stuff is not my world. You can contact me over my osm profile: <a href="https://www.openstreetmap.org/user/ajoessen">https://www.openstreetmap.org/user/ajoessen</a></p>
 </div>
 <div id="comment-8606-info" class="comment-info">
 <span class="comment-age">(24 Oct '11, 07:17)</span> <span class="comment-user userinfo">ajoessen</span>
@@ -541,7 +541,7 @@ Unfortunately <a href="http://generate_tiles.py">generate_tiles.py</a> doesn't w
 &#10;</div>
 <div class="comment-text">
 <p>3.What table are we looking for?<br />
-<img src="http://help.openstreetmap.org/upfiles/Screenshot_1.png" alt="alt text" /></p>
+<img src="/upfiles/Screenshot_1.png" alt="alt text" /></p>
 </div>
 <div id="comment-8512-info" class="comment-info">
 <span class="comment-age">(19 Oct '11, 17:12)</span> <span class="comment-user userinfo">alexz</span>

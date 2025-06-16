@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thanks for the idea of contributing to OSM. Please consult the US community before adding the data and read the ODbl rules too, <a href="http://opendatacommons.org/">http://opendatacommons.org/</a> <a href="http://forum.openstreetmap.org/viewforum.php?id=20">http://forum.openstreetmap.org/viewforum.php?id=20</a> And last but not least read these pages as well <a href="http://wiki.openstreetmap.org/wiki/Import_guidelines">http://wiki.openstreetmap.org/wiki/Import_guidelines</a> theres a discussions group about or concerning imports as well. Not the right subject but the adress goes with it, <a href="https://dub123.mail.live.com/?tid=cmVWunp1BC5BGoBgAiZMGX9A2&amp;fid=fltrash">https://dub123.mail.live.com/?tid=cmVWunp1BC5BGoBgAiZMGX9A2&amp;fid=fltrash</a></p>
+<p>Thanks for the idea of contributing to OSM. Please consult the US community before adding the data and read the ODbl rules too, <a href="http://opendatacommons.org/">http://opendatacommons.org/</a> <a href="http://forum.openstreetmap.org/viewforum.php?id=20">http://forum.openstreetmap.org/viewforum.php?id=20</a> And last but not least read these pages as well <a href="https://wiki.openstreetmap.org/wiki/Import_guidelines">https://wiki.openstreetmap.org/wiki/Import_guidelines</a> theres a discussions group about or concerning imports as well. Not the right subject but the adress goes with it, <a href="https://dub123.mail.live.com/?tid=cmVWunp1BC5BGoBgAiZMGX9A2&amp;fid=fltrash">https://dub123.mail.live.com/?tid=cmVWunp1BC5BGoBgAiZMGX9A2&amp;fid=fltrash</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

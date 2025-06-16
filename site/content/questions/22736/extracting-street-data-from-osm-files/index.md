@@ -111,7 +111,7 @@ osqa_accepted = false
 <p>The tag you'll find most streets under is <code>highway</code>. There are lots of different used values for <code>highway</code>, e.g. <code>highway=motorway</code>, <code>highway=residential</code>.</p>
 <p>Also, what is the lat/lon of a street in your context - the middle node?</p>
 <p>Suburbs and postcodes are not connected to streets other than through their respective geographic location, which means you need at least some kind of GIS-like functionality to get the suburb for a street (or hope there are addresses that reference the street).</p>
-<p>Probably you need to load a suitable OSM extract into a PostGIS database and work from there. You can start with <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">http://wiki.openstreetmap.org/wiki/Osm2pgsql</a> and read on from there.</p>
+<p>Probably you need to load a suitable OSM extract into a PostGIS database and work from there. You can start with <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">https://wiki.openstreetmap.org/wiki/Osm2pgsql</a> and read on from there.</p>
 <p>Also, note that OSM street data is not complete and that suburb data quality and quantity and suburb tagging may vary from country to country.</p>
 <p>So no, thats not a basic question.</p>
 </div>

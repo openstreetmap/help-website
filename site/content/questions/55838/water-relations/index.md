@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "water &amp; relations"
-description = '''Two questions: 1) In working with the &#x27;natural=water&#x27; closed-way features is it recommended to enter them into a relation with a country? What should be done if the water body crosses a country/administrative border? http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater 2) Also...is there any way t...'''
+description = '''Two questions: 1) In working with the &#x27;natural=water&#x27; closed-way features is it recommended to enter them into a relation with a country? What should be done if the water body crosses a country/administrative border? https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater 2) Also...is there any way t...'''
 date = "2017-04-24T23:51:00Z"
 lastmod = "2017-04-26T07:20:00Z"
 weight = 55838
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Two questions:</p>
-<p>1) In working with the 'natural=water' closed-way features is it recommended to enter them into a relation with a country? What should be done if the water body crosses a country/administrative border? <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater</a></p>
-<p>2) Also...is there any way to get a sense of how many entries (and where they are) with the 'natural=water' tag have a relation (I've looked at taginfo...here...but I'm the map distribution is not insightful on where the relation items are). <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater</a></p>
+<p>1) In working with the 'natural=water' closed-way features is it recommended to enter them into a relation with a country? What should be done if the water body crosses a country/administrative border? <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater</a></p>
+<p>2) Also...is there any way to get a sense of how many entries (and where they are) with the 'natural=water' tag have a relation (I've looked at taginfo...here...but I'm the map distribution is not insightful on where the relation items are). <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-waterway" rel="tag" title="see questions tagged &#39;waterway&#39;">waterway</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>

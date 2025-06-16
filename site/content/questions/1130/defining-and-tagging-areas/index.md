@@ -111,8 +111,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is both a technical and a ontological dimension to this question.</p>
-<p>Technically, the way to define an area, which is not a separate feature type in the OpenStreetMap data model, is to create a way (line) that has a common first and last point: a closed way. See <a href="http://wiki.openstreetmap.org/wiki/Elements#Area_.28closed_way_.29">here</a> for the relevant information on the OpenStreetMap Wiki.</p>
-<p>Depending on how you tag your closed way, it will be rendered as an area on the map. The <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page on the OpenStreetMap wiki will give you an indication as to which tags can be applied to closed ways in order to have them redered as visible areas. For example, tagging a closed way as <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Landuse"><code>landuse=village_green</code></a> will make that feature show up as a green area on the rendered map. Key-value combinations that apply to closed ways will be indicated by the area icon on this page: <img src="http://wiki.openstreetmap.org/w/images/8/83/Mf_area.png" alt="alt text" /></p>
+<p>Technically, the way to define an area, which is not a separate feature type in the OpenStreetMap data model, is to create a way (line) that has a common first and last point: a closed way. See <a href="https://wiki.openstreetmap.org/wiki/Elements#Area_.28closed_way_.29">here</a> for the relevant information on the OpenStreetMap Wiki.</p>
+<p>Depending on how you tag your closed way, it will be rendered as an area on the map. The <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page on the OpenStreetMap wiki will give you an indication as to which tags can be applied to closed ways in order to have them redered as visible areas. For example, tagging a closed way as <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Landuse"><code>landuse=village_green</code></a> will make that feature show up as a green area on the rendered map. Key-value combinations that apply to closed ways will be indicated by the area icon on this page: <img src="https://wiki.openstreetmap.org/w/images/8/83/Mf_area.png" alt="alt text" /></p>
 <p>Note that there are several similar key-value combinations for green areas in built-up areas: <code>leisure=park</code>, <code>landuse=village_green</code>, <code>landuse=grass</code>, <code>landuse=recreation_ground</code>, to name a few. Ask on your local mailing list or here to learn more about the sometimes intricate differences.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -164,7 +164,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Areas are ways that starts and ends in the same node. Just add a way around the area and add the appropriate tags. If the area is made up of several ways or have holes in it you might be interested in the <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> relation.</p>
+<p>Areas are ways that starts and ends in the same node. Just add a way around the area and add the appropriate tags. If the area is made up of several ways or have holes in it you might be interested in the <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> relation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

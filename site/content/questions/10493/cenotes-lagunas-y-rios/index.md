@@ -117,7 +117,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Cenote: natural=cliff (ancantilado) y, si el cenote teien agua, natural=water (usado para lagos)</p>
-<p>laguna: una laguna es natural=water tambien. Lagos y lagunas son areas de agua, la diferencia es solo en la ubicacion. Si la laguna tiene "tidal flats" o "saltmarsh" hay tags adicionales aqui (en ingles) <a href="http://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp">http://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp</a></p>
+<p>laguna: una laguna es natural=water tambien. Lagos y lagunas son areas de agua, la diferencia es solo en la ubicacion. Si la laguna tiene "tidal flats" o "saltmarsh" hay tags adicionales aqui (en ingles) <a href="https://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp">https://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp</a></p>
 <p>rio: area: waterway=riverbank linea: waterway=river</p>
 </div>
 <div class="answer-controls post-controls">
@@ -169,7 +169,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Cenote: natural=cliff (ancantilado) y, si el cenote tiene agua, natural=water (usado para lagos)</p>
-<p>laguna: una laguna es natural=water tambien. Lagos y lagunas son areas de agua, la diferencia es solo en la ubicacion. Si la laguna tiene "tidal flats" o "saltmarsh" hay tags adicionales aqui (en ingles) <a href="http://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp">http://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp</a></p>
+<p>laguna: una laguna es natural=water tambien. Lagos y lagunas son areas de agua, la diferencia es solo en la ubicacion. Si la laguna tiene "tidal flats" o "saltmarsh" hay tags adicionales aqui (en ingles) <a href="https://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp">https://wiki.openstreetmap.org/wiki/Tag:wetland%3Dswamp</a></p>
 <p>rio: area: waterway=riverbank linea: waterway=river</p>
 </div>
 <div class="answer-controls post-controls">

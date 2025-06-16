@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rendered maps show path, so does iD, but not Potlatch2 or JOSM why"
-description = '''I walked a path today that I hadn&#x27;t walked along ever before. This one http://www.openstreetmap.org/#map=20/52.32977/-0.06046&amp;amp;layers=H I was interested who had mapped it so I fired up Potlatch2 and even under the advance tab it shows as a residential boundary not a footpath, with no other info. ...'''
+description = '''I walked a path today that I hadn&#x27;t walked along ever before. This one https://www.openstreetmap.org/#map=20/52.32977/-0.06046&amp;amp;layers=H I was interested who had mapped it so I fired up Potlatch2 and even under the advance tab it shows as a residential boundary not a footpath, with no other info. ...'''
 date = "2014-10-30T19:53:00Z"
 lastmod = "2014-10-31T22:25:00Z"
 weight = 38127
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I walked a path today that I hadn't walked along ever before. This one <a href="http://www.openstreetmap.org/#map=20/52.32977/-0.06046&amp;layers=H">http://www.openstreetmap.org/#map=20/52.32977/-0.06046&amp;layers=H</a> I was interested who had mapped it so I fired up Potlatch2 and even under the advance tab it shows as a residential boundary not a footpath, with no other info. There is no footpath tag, i would expect to see both under advanced key (see screenshot below).</p>
+<p>I walked a path today that I hadn't walked along ever before. This one <a href="https://www.openstreetmap.org/#map=20/52.32977/-0.06046&amp;layers=H">https://www.openstreetmap.org/#map=20/52.32977/-0.06046&amp;layers=H</a> I was interested who had mapped it so I fired up Potlatch2 and even under the advance tab it shows as a residential boundary not a footpath, with no other info. There is no footpath tag, i would expect to see both under advanced key (see screenshot below).</p>
 <p>I tried iD and it there as a footpath but it don't see who mapped it. I then tried JOSM and it doesn't show a path just the residential boundary.</p>
 <p>I wondered if it had been deleted so I have waited 8 hours and the path is still rendered on all layers but can only be seen in the iD editor. WHY?</p>
 <p>A screenshot: <img src="/upfiles/Gone_again.JPG" alt="screenshot of Potlatch 2" /></p>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to deal with spam?"
-description = '''Hi, I don&#x27;t know where to address else, thus: Here is an active spammer &quot;contributing&quot; to OSM: http://www.openstreetmap.org/changeset/22984776 (see changeset comment, see node name, see profile). The changeset has been reversed (http://www.openstreetmap.org/changeset/22986188), however the user stil...'''
+description = '''Hi, I don&#x27;t know where to address else, thus: Here is an active spammer &quot;contributing&quot; to OSM: https://www.openstreetmap.org/changeset/22984776 (see changeset comment, see node name, see profile). The changeset has been reversed (https://www.openstreetmap.org/changeset/22986188), however the user stil...'''
 date = "2014-06-24T17:24:00Z"
 lastmod = "2014-06-24T18:11:00Z"
 weight = 34283
@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I don't know where to address else, thus: Here is an active spammer "contributing" to OSM: <a href="http://www.openstreetmap.org/changeset/22984776">http://www.openstreetmap.org/changeset/22984776</a> (see changeset comment, see node name, see profile).</p>
-<p>The changeset has been reversed (<a href="http://www.openstreetmap.org/changeset/22986188">http://www.openstreetmap.org/changeset/22986188</a>), however the user still has his spammy profile.</p>
+<p>Hi, I don't know where to address else, thus: Here is an active spammer "contributing" to OSM: <a href="https://www.openstreetmap.org/changeset/22984776">https://www.openstreetmap.org/changeset/22984776</a> (see changeset comment, see node name, see profile).</p>
+<p>The changeset has been reversed (<a href="https://www.openstreetmap.org/changeset/22986188">https://www.openstreetmap.org/changeset/22986188</a>), however the user still has his spammy profile.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lang-en" rel="tag" title="see questions tagged &#39;lang-en&#39;">lang-en</span> <span class="post-tag tag-link-spam" rel="tag" title="see questions tagged &#39;spam&#39;">spam</span>
@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is clearly spam in the OSM db. Quite rare but also hard to detect. The case should be reported to the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">DWG</a> where these guys should be able to ban this user forever.</p>
+<p>This is clearly spam in the OSM db. Quite rare but also hard to detect. The case should be reported to the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">DWG</a> where these guys should be able to ban this user forever.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

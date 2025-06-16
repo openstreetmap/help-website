@@ -135,7 +135,7 @@ One Answer:
 <div id="post-31882-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also, for sections that are only meant for mountain bikes, see the <a href="http://wiki.openstreetmap.org/wiki/MTB">MTB</a> page.</p>
+<p>Also, for sections that are only meant for mountain bikes, see the <a href="https://wiki.openstreetmap.org/wiki/MTB">MTB</a> page.</p>
 </div>
 <div id="comment-31882-info" class="comment-info">
 <span class="comment-age">(25 Mar '14, 10:13)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

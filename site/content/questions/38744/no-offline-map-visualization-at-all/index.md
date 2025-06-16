@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd ask the people who wrote OsmAnd. See <a href="https://help.openstreetmap.org/questions/24777/osmand-gps-status-application-not-installed-search-in-market">this previous answer</a> and <a href="https://groups.google.com/forum/#!forum/osmand">this google group</a>.</p>
+<p>I'd ask the people who wrote OsmAnd. See <a href="/questions/24777/osmand-gps-status-application-not-installed-search-in-market">this previous answer</a> and <a href="https://groups.google.com/forum/#!forum/osmand">this google group</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

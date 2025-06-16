@@ -47,7 +47,7 @@ osqa_accepted = false
 <p>I don't want to use JOSM, I don't want to use level0.</p>
 <p>How do I get that tank to that point?</p>
 <p>(Here are some screenshots from when I finally solved the problem later:)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/20211010T203100.jpg" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/20211010T203433.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/20211010T203100.jpg" alt="alt text" /> <img src="/upfiles/20211010T203433.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span>
@@ -357,7 +357,7 @@ osqa_accepted = false
 <div id="post-82101-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The saga continues at <a href="https://help.openstreetmap.org/questions/82091/putting-a-place-at-a-point-in-level0">https://help.openstreetmap.org/questions/82091/putting-a-place-at-a-point-in-level0</a> .</p>
+<p>The saga continues at <a href="/questions/82091/putting-a-place-at-a-point-in-level0">https://help.openstreetmap.org/questions/82091/putting-a-place-at-a-point-in-level0</a> .</p>
 </div>
 <div id="comment-82101-info" class="comment-info">
 <span class="comment-age">(09 Oct '21, 10:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -411,7 +411,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would agree with others opinions regarding GPS accuracy. You could create a short trace from a walk by the local road to then around the tank. Another solution if you are determined to use your co-ords is to substitute them into this link. <a href="https://www.openstreetmap.org/?mlat=52.3211&amp;mlon=-0.1864#map=15/52.3211/-0.1864">https://www.openstreetmap.org/?mlat=52.3211&amp;mlon=-0.1864#map=15/52.3211/-0.1864</a> then click on the + to magnify and zoom right in. Then open the iD editor. Your point should be in the centre of the display, or at least close enough to put a location for the tank. I just put your co-ords into the OSM map page search box and got this. just zoom in maybe.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/co_ords.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/co_ords.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

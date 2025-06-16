@@ -157,7 +157,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hallo! Du kannst mithilfe des "Ebenen"-Knopfes Fehlermeldungen sowohl anzeigen als auch ausblenden. Klicke dazu einfach auf das kleine Feld links von "Hinweise/Fehlermeldungen", um die Anzeige zu deaktivieren bzw. zu aktivieren.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Fehlermeldungen_gJPsLvI.gif" alt="alt text" /></p>
+<p><img src="/upfiles/Fehlermeldungen_gJPsLvI.gif" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

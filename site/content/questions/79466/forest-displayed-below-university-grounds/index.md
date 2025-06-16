@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>This happens on many renderings, including the default openstreetmap.org map and OSMAnd.</p>
 <p>On those maps, a part of forest I mapped (natural=wood) that intersects with a university campus (amenity=university) is displayed below the university campus instead of above it. I have seen many places with woods on campuses that were displayed fine, it's just this one, and I don't understand why. Should I map it differently?</p>
 <p>The area is question is <a href="https://www.openstreetmap.org/#map=19/59.21747/17.93989">here</a>.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/forest_campus.png" alt="illustration of the issue" /></p>
+<p><img src="/upfiles/forest_campus.png" alt="illustration of the issue" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-university" rel="tag" title="see questions tagged &#39;university&#39;">university</span> <span class="post-tag tag-link-forest" rel="tag" title="see questions tagged &#39;forest&#39;">forest</span>

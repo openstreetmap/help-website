@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>After getting more and more details in my surrounding I wanted to add turn lanes to the junctions I create or edit. So I created a proposal for this, because every given system is far away from easy, useful way to tag this.</p>
 <p>So I just wanted to ask here for your comments about using it, or change something =)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex">http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex">https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex</a></p>
 <p>Example junction is avaible here: <a href="http://osm.org/go/0GJTZ9OFx--">http://osm.org/go/0GJTZ9OFx--</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello All, I am a volunteer teacher helping the haitian immigrants. I am using osm to organise our community teaching work within a specific rural territory in dominican republic. I received an email this morning mentioning that a user I dont know of just deleted a polygon on which I worked for hours to define our working area;</p>
 <p>"4rch has left a comment on one of your changesets created at 2014-11-25 18:21:53 UTC without comment</p>
-<p>I've deleted the polygon as it covered a large area without residential landuse. <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential</a></p>
-<p>More details about the changeset can be found at <a href="http://www.openstreetmap.org/changeset/26898665">http://www.openstreetmap.org/changeset/26898665"</a></p>
+<p>I've deleted the polygon as it covered a large area without residential landuse. <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential</a></p>
+<p>More details about the changeset can be found at <a href="https://www.openstreetmap.org/changeset/26898665">https://www.openstreetmap.org/changeset/26898665"</a></p>
 <p>Can someone please help me undo this changeset and recover my work ? Can this type of behavior be restricted ?</p>
 <p>thanks in advance for your kind support</p>
 <p>jfricher</p>
@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This seems to be a duplicate of this <a href="https://help.openstreetmap.org/questions/38806/hours-of-my-work-deleted-by-an-unknown-user">immediately previous question</a>.</p>
+<p>This seems to be a duplicate of this <a href="/questions/38806/hours-of-my-work-deleted-by-an-unknown-user">immediately previous question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

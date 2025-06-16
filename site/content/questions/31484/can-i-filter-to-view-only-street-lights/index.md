@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Can I filter to view only street lights?"
-description = '''When using http://www.openstreetmap.org/ when I zoom in on a city I can see street lights on a junction. However they are not clearly visible due to their small size and the numerous other small symbols. I would like to view every traffic light in a city to compare with this post which displays ever...'''
+description = '''When using https://www.openstreetmap.org/ when I zoom in on a city I can see street lights on a junction. However they are not clearly visible due to their small size and the numerous other small symbols. I would like to view every traffic light in a city to compare with this post which displays ever...'''
 date = "2014-03-12T14:24:00Z"
 lastmod = "2014-03-12T15:56:00Z"
 weight = 31484
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When using <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> when I zoom in on a city I can see street lights on a junction. However they are not clearly visible due to their small size and the numerous other small symbols.</p>
+<p>When using <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> when I zoom in on a city I can see street lights on a junction. However they are not clearly visible due to their small size and the numerous other small symbols.</p>
 <p>I would like to view every traffic light in a city to compare with <a href="http://www.aviewfromthecyclepath.com/2014/02/every-traffic-light-in-assen.html">this post</a> which displays every traffic light in a Dutch city.</p>
 <p>Is there a way of filtering the key to only display traffic lights, and when zoomed out?</p>
 </div>
@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, this is possible. For example by using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a>.</p>
+<p>Yes, this is possible. For example by using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a>.</p>
 <p>Here is an example using overpass turbo:</p>
 <pre><code>&lt;osm-script output=&quot;json&quot;&gt;
   &lt;union&gt;

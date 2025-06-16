@@ -108,8 +108,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> to get data into database. You can then modify stylefile default.style to get only the polygons you want into database.</p>
-<p>You can find all necessary steps on <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">switch to osm page</a>. As you do not need the rendering part just read the parts that describe db setup and data import. In case you need to keep this db up to date also take a look at <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> to get data into database. You can then modify stylefile default.style to get only the polygons you want into database.</p>
+<p>You can find all necessary steps on <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">switch to osm page</a>. As you do not need the rendering part just read the parts that describe db setup and data import. In case you need to keep this db up to date also take a look at <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>You may begin with some smaller extracts from <a href="http://download.geofabrik.de/osm/">geofabrik</a>, so reaching those errors and retrying won't take long (some minutes for extra tiny area compared to some days for full planet). If everything goes well with small extract then everything should also go well with planet file.</p>
-<p>If you reach an error you could not figure out (even after refreshing break) then post it here, to the <a href="http://forum.openstreetmap.org/">forum</a> (better place for discussions) or ask on the <a href="http://wiki.openstreetmap.org/wiki/IRC">irc</a>.</p>
+<p>If you reach an error you could not figure out (even after refreshing break) then post it here, to the <a href="http://forum.openstreetmap.org/">forum</a> (better place for discussions) or ask on the <a href="https://wiki.openstreetmap.org/wiki/IRC">irc</a>.</p>
 </div>
 <div id="comment-13773-info" class="comment-info">
 <span class="comment-age">(25 Jun '12, 19:43)</span> <span class="comment-user userinfo">RM87</span>

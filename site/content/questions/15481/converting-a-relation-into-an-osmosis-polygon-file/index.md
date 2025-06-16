@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Converting a relation into an Osmosis polygon file"
-description = '''I&#x27;m trying to use the boundary of London as a bounding polygon for an osmembrane pipeline. How do I convert http://www.openstreetmap.org/browse/relation/175342 into something more like http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format so I can use it as the boundary polygon?'''
+description = '''I&#x27;m trying to use the boundary of London as a bounding polygon for an osmembrane pipeline. How do I convert https://www.openstreetmap.org/browse/relation/175342 into something more like https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format so I can use it as the boundary polygon?'''
 date = "2012-08-24T14:49:00Z"
 lastmod = "2018-12-06T09:05:00Z"
 weight = 15481
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to use the boundary of London as a bounding polygon for an osmembrane pipeline. How do I convert <a href="http://www.openstreetmap.org/browse/relation/175342">http://www.openstreetmap.org/browse/relation/175342</a> into something more like <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> so I can use it as the boundary polygon?</p>
+<p>I'm trying to use the boundary of London as a bounding polygon for an osmembrane pipeline. How do I convert <a href="https://www.openstreetmap.org/browse/relation/175342">https://www.openstreetmap.org/browse/relation/175342</a> into something more like <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> so I can use it as the boundary polygon?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-london" rel="tag" title="see questions tagged &#39;london&#39;">london</span> <span class="post-tag tag-link-bounding-polygon" rel="tag" title="see questions tagged &#39;bounding-polygon&#39;">bounding-polygon</span> <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span>

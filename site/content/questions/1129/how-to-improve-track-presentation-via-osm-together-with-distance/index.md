@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The <a href="http://openstreetmap.org">openstreetmap.org</a> website is not really designed for sharing GPS tracks. You can upload GPX traces, but that is primarily to assist with mapping.</p>
-<p>If you want to share GPS tracks there are other websites that can do this, some of which can show OSM based maps in the background. Some of these websites are listed in this article on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
+<p>If you want to share GPS tracks there are other websites that can do this, some of which can show OSM based maps in the background. Some of these websites are listed in this article on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
 <p>Most of these clearly show the track, with a thick line, as well as showing track statistics like the distance, time and elevation.</p>
 </div>
 <div class="answer-controls post-controls">

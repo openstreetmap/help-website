@@ -140,7 +140,7 @@ One Answer:
 <div id="post-42750-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>… see <a href="https://help.openstreetmap.org/questions/30688/cannot-launch-josm-from-openstreetmap-anymore">https://help.openstreetmap.org/questions/30688/cannot-launch-josm-from-openstreetmap-anymore</a></p>
+<p>… see <a href="/questions/30688/cannot-launch-josm-from-openstreetmap-anymore">https://help.openstreetmap.org/questions/30688/cannot-launch-josm-from-openstreetmap-anymore</a></p>
 </div>
 <div id="comment-42750-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 16:51)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

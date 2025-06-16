@@ -43,8 +43,8 @@ osqa_accepted = true
 <p>I'm mapping some local nordic trails following the guidelines for <a href="https://wiki.openstreetmap.org/wiki/Piste_Maps">Piste Maps</a> but I can't find conclusive info on how to mark certain trail signs. They're large numeric signs that are used as reference points for paper maps.</p>
 <p>I realize that most folks using OSM data will be using a GPS device so they're somewhat redundant but they do offer clear waypoints if you're traveling the path.</p>
 <p>Here's a couple examples:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2020-11-15_16-16-scweitzer-screencap_5iElWH7.png" alt="Schweitzer resort nordic trails" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/2020-11-15_16-18-salt-creek-summit_LMWkWN0.png" alt="Salt creek summit nordic trails" /></p>
+<p><img src="/upfiles/2020-11-15_16-16-scweitzer-screencap_5iElWH7.png" alt="Schweitzer resort nordic trails" /></p>
+<p><img src="/upfiles/2020-11-15_16-18-salt-creek-summit_LMWkWN0.png" alt="Salt creek summit nordic trails" /></p>
 <p>Do you think they'd work better as:</p>
 <p><code>information=trail_blaze name=1</code></p>
 <p>Which seems a little understated. There are numerous blue diamond blazes along all these routes.</p>

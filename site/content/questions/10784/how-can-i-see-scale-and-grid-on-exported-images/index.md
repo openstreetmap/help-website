@@ -154,8 +154,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can ahve a look at <a href="http://help.openstreetmap.org/questions/9273/coordinate-lines-in-josm">coordinate-lines-in-josm</a> ... there is a solution to get grid lines in any *.osm file via an editor.</p>
-<p>Or have a look at <a href="http://wiki.openstreetmap.org/wiki/Maposmatic">Maposmatic</a></p>
+<p>You can ahve a look at <a href="/questions/9273/coordinate-lines-in-josm">coordinate-lines-in-josm</a> ... there is a solution to get grid lines in any *.osm file via an editor.</p>
+<p>Or have a look at <a href="https://wiki.openstreetmap.org/wiki/Maposmatic">Maposmatic</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -263,7 +263,7 @@ osqa_accepted = false
 <p>So if you have a screen with 96 dpi, you get that one pixel is 1.1943 meters. And you get a scale of 1 : 4 231 which means that 1 cm on your screen is 42.3 m in reality.</p>
 <p>If you have a printer which prints 300 dpi … (now do the calculations yourself).</p>
 <hr />
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">wiki page about scaling</a>.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">wiki page about scaling</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

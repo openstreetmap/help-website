@@ -137,7 +137,7 @@ One Answer:
 <div id="post-20547-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In fact if you zoom out from here already the Rue de Washington symbol disappears. <a href="http://www.openstreetmap.org/?lat=48.871994&amp;lon=2.301995&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.871994&amp;lon=2.301995&amp;zoom=18&amp;layers=M</a></p>
+<p>In fact if you zoom out from here already the Rue de Washington symbol disappears. <a href="https://www.openstreetmap.org/?lat=48.871994&amp;lon=2.301995&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.871994&amp;lon=2.301995&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-20547-info" class="comment-info">
 <span class="comment-age">(07 Mar '13, 07:48)</span> <span class="comment-user userinfo">BCNorwich</span>
@@ -160,7 +160,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>This has been already explained <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a> (and in several other answers). Try to clear your browser cache, the tiles have already been updated.</p>
+<p>This has been already explained <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a> (and in several other answers). Try to clear your browser cache, the tiles have already been updated.</p>
 </div>
 <div id="comment-20558-info" class="comment-info">
 <span class="comment-age">(07 Mar '13, 09:24)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -165,9 +165,9 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Also have a look at</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a></p>
 <p>and</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 </div>
 <div id="comment-26796-info" class="comment-info">
 <span class="comment-age">(26 Sep '13, 18:29)</span> <span class="comment-user userinfo">stephan75</span>

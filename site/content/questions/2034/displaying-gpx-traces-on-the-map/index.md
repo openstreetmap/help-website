@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>and if you just want to see the traces on a map for visualisation purposes, some of the sites that allow you to do that are listed at <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">http://wiki.openstreetmap.org/wiki/Track_drawing_websites</a></p>
+<p>and if you just want to see the traces on a map for visualisation purposes, some of the sites that allow you to do that are listed at <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">https://wiki.openstreetmap.org/wiki/Track_drawing_websites</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap does not produce maps that show uploaded GPX traces. A pure GPX trace does not contain enough information to make a map, and often needs to be postprocessed for accuracy.</p>
-<p>You must load your GPX track in an editor (all OSM editors have the capability to display GPX traces - in <a href="http://wiki.openstreetmap.org/wiki/Potlatch">Potlatch 1</a>, type "g" to load GPS data, in <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a> select "GPS Data" from the GPS menu, in <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> and <a href="http://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a> you have to tick a box in the download dialog to load GPS data from the server). Then you can create nodes and ways on top of your traces. This is, by and large, a manual process in which you add extra information that cannot be extracted from the GPX data, like road types and names. After you have uploaded your new nodes and ways, they will show on the map. This may take a while (see question <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">"How often does the main (mapnik) map get updated"</a> for details).</p>
+<p>You must load your GPX track in an editor (all OSM editors have the capability to display GPX traces - in <a href="https://wiki.openstreetmap.org/wiki/Potlatch">Potlatch 1</a>, type "g" to load GPS data, in <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a> select "GPS Data" from the GPS menu, in <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> and <a href="https://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a> you have to tick a box in the download dialog to load GPS data from the server). Then you can create nodes and ways on top of your traces. This is, by and large, a manual process in which you add extra information that cannot be extracted from the GPX data, like road types and names. After you have uploaded your new nodes and ways, they will show on the map. This may take a while (see question <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">"How often does the main (mapnik) map get updated"</a> for details).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

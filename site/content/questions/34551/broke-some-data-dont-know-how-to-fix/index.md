@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>In future, it's helpful to add a link to the area (you can just copy the URL).</p>
-<p>Is this the changeset you're talking about? <a href="http://www.openstreetmap.org/changeset/23554274">http://www.openstreetmap.org/changeset/23554274</a> If so, I can see the one building (<a href="http://www.openstreetmap.org/way/55046262)">http://www.openstreetmap.org/way/55046262)</a> doesn't seem to be rendering, but I don't see any obvious reason why--the building=yes tag remains and it appears to be a closed way.</p>
+<p>Is this the changeset you're talking about? <a href="https://www.openstreetmap.org/changeset/23554274">https://www.openstreetmap.org/changeset/23554274</a> If so, I can see the one building (<a href="https://www.openstreetmap.org/way/55046262)">https://www.openstreetmap.org/way/55046262)</a> doesn't seem to be rendering, but I don't see any obvious reason why--the building=yes tag remains and it appears to be a closed way.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -157,7 +157,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="https://github.com/twain47/Nominatim/blob/master/lib/Geocode.php">Geocoder that extracts information from Nominatim's database</a> is written in PHP, so you could use that library in your code. Alternatively, you could extract the SQL statements the library uses to use in your own library if you want to reimplement it in another language. In either case you would import the OSM data using <code>osm2pgsql</code> in the same way as a <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">full Nominatim installation</a>.</p>
+<p>The <a href="https://github.com/twain47/Nominatim/blob/master/lib/Geocode.php">Geocoder that extracts information from Nominatim's database</a> is written in PHP, so you could use that library in your code. Alternatively, you could extract the SQL statements the library uses to use in your own library if you want to reimplement it in another language. In either case you would import the OSM data using <code>osm2pgsql</code> in the same way as a <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">full Nominatim installation</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

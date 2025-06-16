@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is it appropriate/acceptable to mark villages and other populated places on the map without visiting them or knowing their name?</p>
-<p>I am involved with mapping in Tanzania. Factors such as <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Tanzania/Tanzania_MSD_%26_JSI_road_import">imports</a> and improved imagery availability have improved road coverage on the map. However, especially in rural areas there are no villages or other indications along these roads.</p>
+<p>I am involved with mapping in Tanzania. Factors such as <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Tanzania/Tanzania_MSD_%26_JSI_road_import">imports</a> and improved imagery availability have improved road coverage on the map. However, especially in rural areas there are no villages or other indications along these roads.</p>
 <p>I would like use available satellite/aerial imagery to mark presumed villages/settlements and ask contributing volunteers (ex. HOT projects) to do the same even when the name of the place or the specific classification is not known. I see this as helping to show where things are along the road making the map more complete, providing on the ground surveyors with information on where they might go to get more data, and having less impact on contributes than asking them to map buildings. What I don't know is how acceptable this is for OpenStreetMap since the name of these places would not be known until someone visits or another data source becomes available and because the initial classification may be inaccurate (hamlet identified as village, etc.).</p>
 </div>
 <div id="question-tags" class="tags-container tags">

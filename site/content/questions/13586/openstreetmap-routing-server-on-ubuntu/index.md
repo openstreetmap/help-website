@@ -149,8 +149,8 @@ One Answer:
 <div id="post-13591-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The instructions that you linked to describe setting up a tile server (the same as the switch2osm instructions do). For routing, it's probably worth having a look at this <a href="http://wiki.openstreetmap.org/wiki/Routing">wiki</a> page, and also <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">this</a> one.</p>
-<p>Finally, it's worth mentioning the various OSM <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> channels. #osm-dev is the best place to ask software-setup-related questions, but there's also a more general channel #osm-fr (francophone).</p>
+<p>The instructions that you linked to describe setting up a tile server (the same as the switch2osm instructions do). For routing, it's probably worth having a look at this <a href="https://wiki.openstreetmap.org/wiki/Routing">wiki</a> page, and also <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">this</a> one.</p>
+<p>Finally, it's worth mentioning the various OSM <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> channels. #osm-dev is the best place to ask software-setup-related questions, but there's also a more general channel #osm-fr (francophone).</p>
 </div>
 <div id="comment-13591-info" class="comment-info">
 <span class="comment-age">(18 Jun '12, 14:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

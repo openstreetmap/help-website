@@ -108,7 +108,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Okay, le permalien vers OSM est : <a href="http://www.openstreetmap.org/?lat=43.52894&amp;lon=5.455279&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=43.52894&amp;lon=5.455279&amp;zoom=18&amp;layers=M</a></p>
+<p>Okay, le permalien vers OSM est : <a href="https://www.openstreetmap.org/?lat=43.52894&amp;lon=5.455279&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=43.52894&amp;lon=5.455279&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-15852-info" class="comment-info">
 <span class="comment-age">(06 Sep '12, 17:14)</span> <span class="comment-user userinfo">Pieren</span>
@@ -174,10 +174,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Je pourrais répondre en t'expliquant comment modifier les données géographiques d'OSM toi-même. Ou bien quelqu'un d'autre peut s'en charger à ta place.</p>
-<p>Le lycée est absent sur la carte. Les bâtiments sont là mais pas les tags pour dire qu'il y a une école. De plus, l'ENSAM qui se trouve au nord est mal taggué. Si je comprends bien, c'est une école d'ingénieurs qui devrait donc être taggué en <a href="http://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool">amenity=university (ou amenity=college)</a>. Mais en plus, le tag est collé à chaque bâtiment alors qu'on devrait tracer un polygone sur l'ensemble et y mettre les tags "amenity" et "name". Pour finir, l'abbréviation "ENSAM" devrait être mis dans un autre tag <a href="http://wiki.openstreetmap.org/wiki/FR:Key:name">"short_name" et pas dans le tag "name"</a>.<br />
+<p>Le lycée est absent sur la carte. Les bâtiments sont là mais pas les tags pour dire qu'il y a une école. De plus, l'ENSAM qui se trouve au nord est mal taggué. Si je comprends bien, c'est une école d'ingénieurs qui devrait donc être taggué en <a href="https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool">amenity=university (ou amenity=college)</a>. Mais en plus, le tag est collé à chaque bâtiment alors qu'on devrait tracer un polygone sur l'ensemble et y mettre les tags "amenity" et "name". Pour finir, l'abbréviation "ENSAM" devrait être mis dans un autre tag <a href="https://wiki.openstreetmap.org/wiki/FR:Key:name">"short_name" et pas dans le tag "name"</a>.<br />
 Il faut faire la même chose pour le lycée : tracer un polygone autour du périmètre du lycée et y mettre les tags "amenity=school" et le nom du lycée dans "name". On peut éventuellement ajouter le tag "name" sur chaque bâtiment si ceux-ci portent aussi un nom spécifique, genre "Bâtiment 1" ou "A1" ou "Cantine" par exemple.<br />
-Pour peaufiner, on peut finir en ajoutant les <a href="http://wiki.openstreetmap.org/wiki/FR:Key:addr">tags d'adresses</a> mais c'est une autre histoire.</p>
-<p>Si tu veux le faire toi-même, consulte la documentation pour <a href="http://wiki.openstreetmap.org/wiki/FR:Beginners%27_guide">les débutants sur le wiki</a>. Sinon, envoie nous une demande ici ou <a href="http://wiki.openstreetmap.org/wiki/FR:Contact">sur notre liste de diffusion ou sur un de nos forums</a> et demande que quelqu'un de la communautés des contributeurs plus expérimentés s'en charge (d'un autre côté, ça s'apprend très vite et si tu le fais toi-même, tu ne dépendras plus de personne pour d'autres corrections ultérieurement).</p>
+Pour peaufiner, on peut finir en ajoutant les <a href="https://wiki.openstreetmap.org/wiki/FR:Key:addr">tags d'adresses</a> mais c'est une autre histoire.</p>
+<p>Si tu veux le faire toi-même, consulte la documentation pour <a href="https://wiki.openstreetmap.org/wiki/FR:Beginners%27_guide">les débutants sur le wiki</a>. Sinon, envoie nous une demande ici ou <a href="https://wiki.openstreetmap.org/wiki/FR:Contact">sur notre liste de diffusion ou sur un de nos forums</a> et demande que quelqu'un de la communautés des contributeurs plus expérimentés s'en charge (d'un autre côté, ça s'apprend très vite et si tu le fais toi-même, tu ne dépendras plus de personne pour d'autres corrections ultérieurement).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

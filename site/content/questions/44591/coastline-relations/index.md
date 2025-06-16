@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I hope you can help me. How do you differentiate between geographical borders and political boundaries?</p>
-<p>For Example: <a href="http://www.openstreetmap.org/relation/3028095">Relation 3028095</a> is a political border. It's not a coastline. <a href="http://www.openstreetmap.org/relation/27335">Relation 27335</a> is a geographical boundary. As you can see in osm, it is exactly the coastline.</p>
+<p>For Example: <a href="https://www.openstreetmap.org/relation/3028095">Relation 3028095</a> is a political border. It's not a coastline. <a href="https://www.openstreetmap.org/relation/27335">Relation 27335</a> is a geographical boundary. As you can see in osm, it is exactly the coastline.</p>
 <p>But the tags which are used don't indicate it. So how do OSM know if it has to display the relation as landmass or not?</p>
 <p>Thank you very much</p>
 </div>
@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-44592-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>as far as I can see both are administrative boundaries (type=boundary, boundary=administrative, admin_level = 4). Don't know why you think one of them is a coastline. See <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> for more information about the coastline tagging</p>
+<p>as far as I can see both are administrative boundaries (type=boundary, boundary=administrative, admin_level = 4). Don't know why you think one of them is a coastline. See <a href="https://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> for more information about the coastline tagging</p>
 </div>
 <div id="comment-44592-info" class="comment-info">
 <span class="comment-age">(03 Aug '15, 12:05)</span> <span class="comment-user userinfo">escada</span>
@@ -126,7 +126,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not sure what your question has to do with the first relation, it doesn't match any coastline.</p>
-<p>The second relation is just an administrative border. For the coastline there is <a href="http://www.openstreetmap.org/way/12982100">another relation</a> which you seem to have missed.</p>
+<p>The second relation is just an administrative border. For the coastline there is <a href="https://www.openstreetmap.org/way/12982100">another relation</a> which you seem to have missed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -176,7 +176,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure what you're asking. There isn't really any "coastline relations". For drawing the map, and showing land or water, a separate file is used that is updated almost daily. Read more here: <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a>.</p>
+<p>I'm not sure what you're asking. There isn't really any "coastline relations". For drawing the map, and showing land or water, a separate file is used that is updated almost daily. Read more here: <a href="https://wiki.openstreetmap.org/wiki/Coastline">Coastline</a>.</p>
 <p>Often coutries are drawn with their administrative borders including the surrounding waters. Some lower admin levels aren't, which explains how you see two relations one which has sea, and the other which doesn't.</p>
 </div>
 <div class="answer-controls post-controls">

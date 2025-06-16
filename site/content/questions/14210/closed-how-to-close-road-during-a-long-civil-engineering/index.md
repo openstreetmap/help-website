@@ -190,7 +190,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Change the tag from "highway=VALUE" to "highway=construction" and add a tag "construction=VALUE".</p>
-<p>This gives even quite a nice rendering: <a href="http://www.openstreetmap.org/?lat=51.449863&amp;lon=7.015514&amp;zoom=18&amp;layers=M">A 40 under reconstruction</a></p>
+<p>This gives even quite a nice rendering: <a href="https://www.openstreetmap.org/?lat=51.449863&amp;lon=7.015514&amp;zoom=18&amp;layers=M">A 40 under reconstruction</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

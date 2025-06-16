@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>How should natural geothermal activity be tagged?</p>
-<p>In Kawerau, New Zealand, between the BMX park and the Recreation Centre, at the north end of the <a href="http://www.kaweraudc.govt.nz/myfiles/ReservesManagementPlan-7MonikaLanhamReserve.pdf">Monika Lanham Reserve</a> there is <a href="http://www.openstreetmap.org/#map=19/-38.08847/176.69911">an area of geothermally active ground</a>. The area emits steam and has a sulphurous smell. Although the surface is not hot, it looks like mud or damp earth. The area is fenced off to discourage entry. There is also a geothermal steam bore on the edge of the area that extracts steam to heat the local swimming pool.</p>
-<p>The only "geothermal" related tag that is documented on the wiki <a href="http://wiki.openstreetmap.org/wiki/Tag:generator:source%3Dgeothermal">relates to geothermal power stations</a>. Aside from <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dgeyser">geysers</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dhot_spring">hot springs</a> there is nothing about how to tag naturally occurring geothermal activity. Also the tag for a <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwell">well</a> or bore is deprecated. There is a <a href="https://taginfo.openstreetmap.org/keys/geothermal">geothermal key</a> in use but it is only used 4 times, in Iceland.</p>
+<p>In Kawerau, New Zealand, between the BMX park and the Recreation Centre, at the north end of the <a href="http://www.kaweraudc.govt.nz/myfiles/ReservesManagementPlan-7MonikaLanhamReserve.pdf">Monika Lanham Reserve</a> there is <a href="https://www.openstreetmap.org/#map=19/-38.08847/176.69911">an area of geothermally active ground</a>. The area emits steam and has a sulphurous smell. Although the surface is not hot, it looks like mud or damp earth. The area is fenced off to discourage entry. There is also a geothermal steam bore on the edge of the area that extracts steam to heat the local swimming pool.</p>
+<p>The only "geothermal" related tag that is documented on the wiki <a href="https://wiki.openstreetmap.org/wiki/Tag:generator:source%3Dgeothermal">relates to geothermal power stations</a>. Aside from <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dgeyser">geysers</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dhot_spring">hot springs</a> there is nothing about how to tag naturally occurring geothermal activity. Also the tag for a <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwell">well</a> or bore is deprecated. There is a <a href="https://taginfo.openstreetmap.org/keys/geothermal">geothermal key</a> in use but it is only used 4 times, in Iceland.</p>
 <p>How should this area and the geothermal bore be tagged?</p>
 <p>Is using the tags "natural=mud" and "geothermal=yes" ok?</p>
 </div>
@@ -140,7 +140,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Ok, I have added the page <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dgeothermal_field">Tag:natural=geothermal_field</a> to the wiki. But I notice that the tags <a href="http://taginfo.openstreetmap.org/tags/natural=geothermal">natural=geothermal</a> (used 3 times) and <a href="http://taginfo.openstreetmap.org/tags/natural=geothermal_area">natural=geothermal_area</a> (used twice) are also in use, as well as the <a href="http://taginfo.openstreetmap.org/keys/geothermal">key geothermal=*</a> (used 4 times). Should I add these to the wiki too?</p>
+<p>Ok, I have added the page <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dgeothermal_field">Tag:natural=geothermal_field</a> to the wiki. But I notice that the tags <a href="http://taginfo.openstreetmap.org/tags/natural=geothermal">natural=geothermal</a> (used 3 times) and <a href="http://taginfo.openstreetmap.org/tags/natural=geothermal_area">natural=geothermal_area</a> (used twice) are also in use, as well as the <a href="http://taginfo.openstreetmap.org/keys/geothermal">key geothermal=*</a> (used 4 times). Should I add these to the wiki too?</p>
 </div>
 <div id="comment-53790-info" class="comment-info">
 <span class="comment-age">(01 Jan '17, 10:46)</span> <span class="comment-user userinfo">Huttite</span>
@@ -162,7 +162,7 @@ One Answer:
 <div id="post-53792-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Huttite, its strange to notice that a large Geothermal Zone as Yellowstone National Park has tags like <a href="http://www.openstreetmap.org/#map=15/44.6223/-110.4302">http://www.openstreetmap.org/#map=15/44.6223/-110.4302</a> natural=geyser name=Mud Geyser. Just that and nothing more. Or the surroundings of Old Faithfull, <a href="http://www.openstreetmap.org/#map=15/44.4651/-110.8436">http://www.openstreetmap.org/#map=15/44.4651/-110.8436</a> with lots of thermal attractions none of them tagged with geothermal ? It seems your the first trying to use those tags ;-)</p>
+<p>Huttite, its strange to notice that a large Geothermal Zone as Yellowstone National Park has tags like <a href="https://www.openstreetmap.org/#map=15/44.6223/-110.4302">https://www.openstreetmap.org/#map=15/44.6223/-110.4302</a> natural=geyser name=Mud Geyser. Just that and nothing more. Or the surroundings of Old Faithfull, <a href="https://www.openstreetmap.org/#map=15/44.4651/-110.8436">https://www.openstreetmap.org/#map=15/44.4651/-110.8436</a> with lots of thermal attractions none of them tagged with geothermal ? It seems your the first trying to use those tags ;-)</p>
 </div>
 <div id="comment-53792-info" class="comment-info">
 <span class="comment-age">(01 Jan '17, 14:30)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -174,7 +174,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Perhaps it is because I am trying to map something that few people have thought to map before. However, the more I think about this the more I feel that <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dgeothermal_field">natural=geothermal_field</a> is not the best tag to use. The terminology for geothermal field is often used in the geothermal power industry in the same way as oil field or gas field, rather than as a farmed field.</p>
+<p>Perhaps it is because I am trying to map something that few people have thought to map before. However, the more I think about this the more I feel that <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dgeothermal_field">natural=geothermal_field</a> is not the best tag to use. The terminology for geothermal field is often used in the geothermal power industry in the same way as oil field or gas field, rather than as a farmed field.</p>
 <p>What should be mapped is what physically appears on the ground. i.e. the water or soil. The geothermal <em>activity</em> is an attribute, or property, of the ground surface. Boiling mud, bubbling pool, steaming ground, etc. Fumaroles, geysers and hot springs are physical features that are driven by the geothermal activity.</p>
 </div>
 <div id="comment-53809-info" class="comment-info">

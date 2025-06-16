@@ -109,8 +109,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Somebody else may be able to suggest a better overall approach, but here's a couple of pointers for you:</p>
-<p>You mention creating a .map file for AdvancedMapViewer, so I presume you're using the mapsforge and osmosis <a href="http://code.google.com/p/mapsforge/wiki/GettingStartedMapWriter">map writer plugin</a>. Don't know much about that myself, but I guess my first suggestion would be to take this out of the picture until you know you've got the data you want. Instead work with a small patch of data (e.g. just one city, perhaps using the <a href="http://metro.teczno.com/">metro extracts download service</a>) Try to filter by tags using osmosis, and write to an .osm file. Then use <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> to open this file and see if it worked (Note: JOSM will struggle if you try to open a very large amount of data)</p>
-<p>As for the actual tag filtering, are you using the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">--tag-filter option of Osmosis</a>? Scroll down in that doc section to see some examples. This talks about motorway tags, so just swap in some railway / bus tags. You may find this is a bit limited or longwinded to work with e.g. if wanted to include a large number of specific tags.</p>
+<p>You mention creating a .map file for AdvancedMapViewer, so I presume you're using the mapsforge and osmosis <a href="http://code.google.com/p/mapsforge/wiki/GettingStartedMapWriter">map writer plugin</a>. Don't know much about that myself, but I guess my first suggestion would be to take this out of the picture until you know you've got the data you want. Instead work with a small patch of data (e.g. just one city, perhaps using the <a href="http://metro.teczno.com/">metro extracts download service</a>) Try to filter by tags using osmosis, and write to an .osm file. Then use <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> to open this file and see if it worked (Note: JOSM will struggle if you try to open a very large amount of data)</p>
+<p>As for the actual tag filtering, are you using the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">--tag-filter option of Osmosis</a>? Scroll down in that doc section to see some examples. This talks about motorway tags, so just swap in some railway / bus tags. You may find this is a bit limited or longwinded to work with e.g. if wanted to include a large number of specific tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -145,7 +145,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>kris, also have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p>kris, also have a look at <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 </div>
 <div id="comment-12158-info" class="comment-info">
 <span class="comment-age">(19 Apr '12, 06:47)</span> <span class="comment-user userinfo">stephan75</span>

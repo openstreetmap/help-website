@@ -139,7 +139,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10008/seth">@seth</a> the line ends of an addr:interpolation are something that "have an address", so addr:postcode</p>
+<p><a href="https://help.openstreetmap.org/users/10008/seth">@seth</a> the line ends of an addr:interpolation are something that "have an address", so addr:postcode</p>
 </div>
 <div id="comment-45373-info" class="comment-info">
 <span class="comment-age">(18 Sep '15, 14:23)</span> <span class="comment-user userinfo">escada</span>
@@ -150,7 +150,7 @@ One Answer:
 <div id="post-45376-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> thanks.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> thanks.</p>
 </div>
 <div id="comment-45376-info" class="comment-info">
 <span class="comment-age">(18 Sep '15, 16:28)</span> <span class="comment-user userinfo">seth</span>

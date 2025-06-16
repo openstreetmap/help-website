@@ -91,7 +91,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p><span>@MaxBel</span>, thank you very much for your greetings. It's always nice to hear that our work makes sense :)<br />
-But as the others say, this is basically a support forum. So if you want to send out greetings to the local community, you should better pick <a href="http://wiki.openstreetmap.org/wiki/Contact">a different channel</a>. I would suggest the <a href="https://lists.openstreetmap.org/listinfo/talk-it">talk-it</a> mailinglist or <a href="http://wiki.openstreetmap.org/wiki/QA#Monitoring_Tools">identifing local mappers</a> and send them PMs.</p>
+But as the others say, this is basically a support forum. So if you want to send out greetings to the local community, you should better pick <a href="https://wiki.openstreetmap.org/wiki/Contact">a different channel</a>. I would suggest the <a href="https://lists.openstreetmap.org/listinfo/talk-it">talk-it</a> mailinglist or <a href="https://wiki.openstreetmap.org/wiki/QA#Monitoring_Tools">identifing local mappers</a> and send them PMs.</p>
 </div>
 <div id="comment-32834-info" class="comment-info">
 <span class="comment-age">(03 May '14, 09:03)</span> <span class="comment-user userinfo">iii</span>

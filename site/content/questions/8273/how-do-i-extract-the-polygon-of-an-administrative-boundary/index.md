@@ -199,7 +199,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>... and see <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> about more documentation for overpassAPI</p>
+<p>... and see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> about more documentation for overpassAPI</p>
 </div>
 <div id="comment-17464-info" class="comment-info">
 <span class="comment-age">(04 Nov '12, 17:38)</span> <span class="comment-user userinfo">stephan75</span>
@@ -268,7 +268,7 @@ osqa_accepted = false
 <div id="post-8275-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In addition to Frederick's suggestions above, I used <a href="http://osm2mp.googlecode.com/svn/trunk/getbound/getbound.pl">http://osm2mp.googlecode.com/svn/trunk/getbound/getbound.pl</a> to create a boundary polygon for my local district. I didn't simplify it though, and the speed comparisons mentioned at <a href="http://wiki.openstreetmap.org/wiki/Tendring(Essex_District)#Data_Extracts">http://wiki.openstreetmap.org/wiki/Tendring(Essex_District)#Data_Extracts</a> suggest polygon vs bbox is over 20 times slower in my case.</p>
+<p>In addition to Frederick's suggestions above, I used <a href="http://osm2mp.googlecode.com/svn/trunk/getbound/getbound.pl">http://osm2mp.googlecode.com/svn/trunk/getbound/getbound.pl</a> to create a boundary polygon for my local district. I didn't simplify it though, and the speed comparisons mentioned at <a href="https://wiki.openstreetmap.org/wiki/Tendring(Essex_District)#Data_Extracts">https://wiki.openstreetmap.org/wiki/Tendring(Essex_District)#Data_Extracts</a> suggest polygon vs bbox is over 20 times slower in my case.</p>
 </div>
 <div id="comment-8275-info" class="comment-info">
 <span class="comment-age">(04 Oct '11, 09:47)</span> <span class="comment-user userinfo">EdLoach ♦</span>

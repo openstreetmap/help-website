@@ -41,8 +41,8 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hello Mappers</p>
 <p>While we are fixing our city's subway lines, we noticed an issue with the tile server. We fixed <a href="https://www.openstreetmap.org/node/2588336399">this</a> station before but the blue square icon which should be small in normal circumstances won't be changed and stuck with the large one. Today, I moved the points to the center of the main halls of the station and now there are one large square and one small square. Query features can't detect anything on the large square and it stuck for over 1 year(maybe more than 1 year, not sure).</p>
-<p>Screenshot of the point: <img src="https://help.openstreetmap.org/upfiles/image_2022-06-22_152154633.png" alt="alt text" /></p>
-<p>Screenshot of the station relation: <img src="https://help.openstreetmap.org/upfiles/image_2022-06-22_152322318.png" alt="alt text" /></p>
+<p>Screenshot of the point: <img src="/upfiles/image_2022-06-22_152154633.png" alt="alt text" /></p>
+<p>Screenshot of the station relation: <img src="/upfiles/image_2022-06-22_152322318.png" alt="alt text" /></p>
 <p>What can we do about this issue?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -113,7 +113,7 @@ One Answer:
 <p>Unable to connect to PostgreSQL server: could not connect to server: Permission denied Is the server running locally and accepting connections on Unix domain socket</p>
 </blockquote>
 <p>It looks like the nominatim server cannot connect to the postgresql database. Is your database working OK?</p>
-<p>There might be more help in this other answer: <a href="https://help.openstreetmap.org/questions/15563/nominatim-install-problem-final-step-php">https://help.openstreetmap.org/questions/15563/nominatim-install-problem-final-step-php</a></p>
+<p>There might be more help in this other answer: <a href="/questions/15563/nominatim-install-problem-final-step-php">https://help.openstreetmap.org/questions/15563/nominatim-install-problem-final-step-php</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

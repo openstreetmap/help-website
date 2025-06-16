@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your extension doesn't embed a map - it embeds the whole of <a href="http://openstreetmap.org">openstreetmap.org</a> in an iframe. This isn't the correct way to include an OpenStreetMap-based map on a web page. Please use the <a href="http://wiki.openstreetmap.org/wiki/Export_tab">Export feature</a> or include your <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">own slippy map using OpenLayers</a> to display a map.</p>
+<p>Your extension doesn't embed a map - it embeds the whole of <a href="http://openstreetmap.org">openstreetmap.org</a> in an iframe. This isn't the correct way to include an OpenStreetMap-based map on a web page. Please use the <a href="https://wiki.openstreetmap.org/wiki/Export_tab">Export feature</a> or include your <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">own slippy map using OpenLayers</a> to display a map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,7 +163,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is a good starting point for the question you are asking. Several examples already out there...</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

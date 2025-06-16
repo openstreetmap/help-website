@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The server that does the name searches is currently broken. Admins are aware of it and will fix the problem. A first port of call for when things don't work is <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a> which will often tell you about known issues, or check on <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> whether the problem is there for everyone or just you.</p>
+<p>The server that does the name searches is currently broken. Admins are aware of it and will fix the problem. A first port of call for when things don't work is <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a> which will often tell you about known issues, or check on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> whether the problem is there for everyone or just you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

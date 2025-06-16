@@ -124,7 +124,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Note that whatever that is, it's a technical (probably transcient) problem and not a deliberate limitation. I'm not aware of any usage limit imposed on editing, other than big edits which take a while to process server-side.</p>
 <p>To mitigate the problem, save your work often and make sure you have a good internet connection. If you can reliably reproduce the problem, <a href="http://trac.openstreetmap.org/">tell the potlach developers</a>. But as with any network/load issue, it can be very hard to pin down.</p>
-<p>Another solution is to use an offline editor like <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> or <a href="http://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a>, which are much more resilient to network issues.</p>
+<p>Another solution is to use an offline editor like <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a> or <a href="https://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a>, which are much more resilient to network issues.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

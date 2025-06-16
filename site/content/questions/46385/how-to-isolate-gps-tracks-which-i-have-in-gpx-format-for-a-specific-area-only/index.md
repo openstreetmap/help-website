@@ -217,7 +217,7 @@ osqa_accepted = false
 <div id="post-46419-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5480/sdavies">@SDavies</a>: thanks for the feedback! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/5480/sdavies">@SDavies</a>: thanks for the feedback! :-)</p>
 </div>
 <div id="comment-46419-info" class="comment-info">
 <span class="comment-age">(06 Nov '15, 05:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -466,7 +466,7 @@ qgis london-trails.shp</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/gps_prune_pic.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/gps_prune_pic.JPG" alt="alt text" /></p>
 <p>This shows a picture of GPS prune with hundreds of footpath kml files of several counties, it will also display mutiple GPXes. Multiple traces can be added with ctrl select. If you zoom in and click on a trace it will tell you the trace's id and other info all displayed on over OSM. The kml are from <a href="http://www.rowmaps.com/">http://www.rowmaps.com/</a> and prune is from here <a href="http://activityworkshop.net/software/gpsprune/">http://activityworkshop.net/software/gpsprune/</a> Prune may help you. and if you have an interest England's Rights of Way the other link is very useful.</p>
 </div>
 <div class="answer-controls post-controls">

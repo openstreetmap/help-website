@@ -230,7 +230,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><strong><a href="http://help.openstreetmap.org/users/158/scai">@scai</a></strong>:</p>
+<p><strong><a href="https://help.openstreetmap.org/users/158/scai">@scai</a></strong>:</p>
 <p>Use "replace geometry" from utilsplugin2 when converting nodes to areas.</p>
 </div>
 <div id="comment-41050-info" class="comment-info">

@@ -48,7 +48,7 @@ osqa_accepted = false
  import OSM data into a PostGIS database, and then you can use e.g.
  Tilemill to batch-process</code></pre>
 <p>(Credits Frederik Ramm)</p>
-<p>Can someone translate this? How do I import OSM data into PostGIS database. Reference: <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">http://wiki.openstreetmap.org/wiki/Osm2pgsql</a></p>
+<p>Can someone translate this? How do I import OSM data into PostGIS database. Reference: <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">https://wiki.openstreetmap.org/wiki/Osm2pgsql</a></p>
 <pre><code>osm2pgsql -s -U postgres -d nameofdatabase /file/path/toosm/fileorpbf/name.osm</code></pre>
 <p>Will this work for .OSM.PBF?</p>
 <p>How do I use a Tilemill to do a batch process? What is the commandline arguments?</p>
@@ -192,7 +192,7 @@ Anyway, you should start with an pretty small area! An whole continent doesn't s
 <div id="post-44555-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@Someoneelse</a> can you let me know how to point TileMill to this database?</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@Someoneelse</a> can you let me know how to point TileMill to this database?</p>
 </div>
 <div id="comment-44555-info" class="comment-info">
 <span class="comment-age">(31 Jul '15, 02:56)</span> <span class="comment-user userinfo">Chathu</span>

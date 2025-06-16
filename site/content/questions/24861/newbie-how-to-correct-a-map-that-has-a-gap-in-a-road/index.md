@@ -105,13 +105,13 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/zzzz_open_street_co_ords_1.JPG" alt="alt text" />You have a few choices.</p>
+<p><img src="/upfiles/zzzz_open_street_co_ords_1.JPG" alt="alt text" />You have a few choices.</p>
 <ol>
 <li>Create a track in Basecamp and use that in your Garmin, as route locks onto existing paths and ways.</li>
 <li>When you have surveyed the missing bit and recorded a GPX race you could upload that to OSM.</li>
 <li>If you know the way is ok to use it should be possible to use Bing to draw it in, using one of the editors.</li>
 </ol>
-<p>Hope this is of some help. the beginners guide and docs will fill in the gaps (bad pun). When asking about a particular place it is good to show us where. You can do this with a permalink. From map page right click View tab. then left click copy link, paste this into your original question by editing it or posting it as a comment. note; it is possible the gap is already fixed in the main database as the Garmin downloads are older. The illustration shows if you put mouse over pointer over the View tab you get co_ords displayed at the bottom PLEASE show us where the problem is, someone may fix it, or even better you could, after reading this. <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">http://wiki.openstreetmap.org/wiki/Beginners_Guide</a><br />
+<p>Hope this is of some help. the beginners guide and docs will fill in the gaps (bad pun). When asking about a particular place it is good to show us where. You can do this with a permalink. From map page right click View tab. then left click copy link, paste this into your original question by editing it or posting it as a comment. note; it is possible the gap is already fixed in the main database as the Garmin downloads are older. The illustration shows if you put mouse over pointer over the View tab you get co_ords displayed at the bottom PLEASE show us where the problem is, someone may fix it, or even better you could, after reading this. <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">https://wiki.openstreetmap.org/wiki/Beginners_Guide</a><br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -147,7 +147,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>There are lots of different <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Maps for Garmin</a>. Most of these services display the date of the map data somewhere. To see whether the gap has already been fixed you can either open the editor or activate the data layer ("<em>Map Data</em>") via the sidebar.</p>
+<p>There are lots of different <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Maps for Garmin</a>. Most of these services display the date of the map data somewhere. To see whether the gap has already been fixed you can either open the editor or activate the data layer ("<em>Map Data</em>") via the sidebar.</p>
 </div>
 <div id="comment-24889-info" class="comment-info">
 <span class="comment-age">(04 Aug '13, 15:51)</span> <span class="comment-user userinfo">scai ♦</span>

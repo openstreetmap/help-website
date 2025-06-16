@@ -144,7 +144,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you using the "Greatmaps" library/framework? If yes, <a href="https://help.openstreetmap.org/questions/69383/error-code-403">https://help.openstreetmap.org/questions/69383/error-code-403</a> might provide some insight.</p>
+<p>Are you using the "Greatmaps" library/framework? If yes, <a href="/questions/69383/error-code-403">https://help.openstreetmap.org/questions/69383/error-code-403</a> might provide some insight.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

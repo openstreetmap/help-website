@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Similar to <a href="http://help.openstreetmap.org/questions/1980/installing-osmosis">this question</a> I am also having windows installation problems. I am using osmosis-0.39 and I have installed JRE, but when I run the batch file, it runs through some lines of code and then closes.<br />
+<p>Similar to <a href="/questions/1980/installing-osmosis">this question</a> I am also having windows installation problems. I am using osmosis-0.39 and I have installed JRE, but when I run the batch file, it runs through some lines of code and then closes.<br />
 </p>
 <p>When I run the batch file in cmd, it looks like everything has run, "org.openstreetmap.osmosis.core.Osmosis run, INFO: Total execution time: 562 milliseconds." but then what do I do?</p>
 <p>This might be an absolutely obvious questions, but where am I actually writing the java commands into?</p>

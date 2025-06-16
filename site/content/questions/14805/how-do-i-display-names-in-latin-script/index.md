@@ -229,7 +229,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Similar question here <a href="https://help.openstreetmap.org/questions/40850/map-not-in-english-most-countries-show-native-languages?page=1&amp;focusedAnswerId=40938#40938">https://help.openstreetmap.org/questions/40850/map-not-in-english-most-countries-show-native-languages?page=1&amp;focusedAnswerId=40938#40938</a></p>
+<p>Similar question here <a href="/questions/40850/map-not-in-english-most-countries-show-native-languages?page=1&amp;focusedAnswerId=40938#40938">https://help.openstreetmap.org/questions/40850/map-not-in-english-most-countries-show-native-languages?page=1&amp;focusedAnswerId=40938#40938</a></p>
 <p>Whichever solution you choose the English name will only display if the way/area/node is tagged with name:en=*</p>
 </div>
 <div class="answer-controls post-controls">

@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question see: http://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps" by RM87 19 Jun '12, 21:22
+### The question has been closed for the following reason "Duplicate Question see: https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps" by RM87 19 Jun '12, 21:22
 
 </div>
 

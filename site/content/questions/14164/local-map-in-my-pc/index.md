@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read the answers to <a href="http://help.openstreetmap.org/questions/5374/offline-map-software-for-windows">Offline Map Software for Windows</a> and if those don't help, ask a more precise question.</p>
+<p>Please read the answers to <a href="/questions/5374/offline-map-software-for-windows">Offline Map Software for Windows</a> and if those don't help, ask a more precise question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

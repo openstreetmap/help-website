@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-84924-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A similar earlier question at <a href="https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return">https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return</a> .</p>
+<p>A similar earlier question at <a href="/questions/51408/is-there-a-better-way-to-tag-a-bottle-return">https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return</a> .</p>
 </div>
 <div id="comment-84924-info" class="comment-info">
 <span class="comment-age">(30 Jun '22, 12:29)</span> <span class="comment-user userinfo">Richlv</span>
@@ -163,7 +163,7 @@ recycling:plastic_bottles=yes</code></pre>
 <div id="post-84925-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This does not address the problem, mentioned in <a href="https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return">https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return</a> - a deposit return place would not accept other packaging. Reverse vending at <a href="https://wiki.openstreetmap.org/wiki/Tag:vending%3Dbottle_return">https://wiki.openstreetmap.org/wiki/Tag:vending%3Dbottle_return</a> seems to work well, and a machine that does not give money would be just standard recycling stuff :)</p>
+<p>This does not address the problem, mentioned in <a href="/questions/51408/is-there-a-better-way-to-tag-a-bottle-return">https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return</a> - a deposit return place would not accept other packaging. Reverse vending at <a href="https://wiki.openstreetmap.org/wiki/Tag:vending%3Dbottle_return">https://wiki.openstreetmap.org/wiki/Tag:vending%3Dbottle_return</a> seems to work well, and a machine that does not give money would be just standard recycling stuff :)</p>
 </div>
 <div id="comment-84925-info" class="comment-info">
 <span class="comment-age">(30 Jun '22, 12:32)</span> <span class="comment-user userinfo">Richlv</span>

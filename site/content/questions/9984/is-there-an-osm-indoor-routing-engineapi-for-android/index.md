@@ -165,7 +165,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please spend a little bit of time and have an intensive look at the <a href="http://wiki.openstreetmap.org/wiki/Routing">routing</a> page in the OSM wiki.</p>
+<p>Please spend a little bit of time and have an intensive look at the <a href="https://wiki.openstreetmap.org/wiki/Routing">routing</a> page in the OSM wiki.</p>
 <p>If you have any detailed questions then, come to OSM forum or te Routing mailigng list.</p>
 </div>
 <div class="answer-controls post-controls">

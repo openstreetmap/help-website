@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can't import KML files directly into OpenStreetMap, but you can probably trace over them in one of the editors available. <a href="http://merkaartor.be/">Merkaartor</a> can open KML files directly, and if you <a href="http://wiki.openstreetmap.org/wiki/Converting_GPS_track_data_between_formats">convert the file to GPX</a> <a href="http://josm.openstreetmap.de/">JOSM</a> can display it.</p>
+<p>You can't import KML files directly into OpenStreetMap, but you can probably trace over them in one of the editors available. <a href="http://merkaartor.be/">Merkaartor</a> can open KML files directly, and if you <a href="https://wiki.openstreetmap.org/wiki/Converting_GPS_track_data_between_formats">convert the file to GPX</a> <a href="http://josm.openstreetmap.de/">JOSM</a> can display it.</p>
 <p>Even if you do convert your KML file to GPX, you won't be able to upload it to OpenStreetMap's traces, since it won't contain time stamps. This is done deliberately so that only traces gathered using a GPS receiver, rather than traced from an existing map, can be used as source material. Information traced from existing maps will be derived from those maps and carry their copyright, making them unsuitable to use as a source for OpenStreetMap.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -226,7 +226,7 @@ done</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can load a KML file as a vector background layer in Potlatch and then choose which features from it to merge into the main layer. There is more information in the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/vector_background_layers">wiki</a>.</p>
+<p>You can load a KML file as a vector background layer in Potlatch and then choose which features from it to merge into the main layer. There is more information in the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/vector_background_layers">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

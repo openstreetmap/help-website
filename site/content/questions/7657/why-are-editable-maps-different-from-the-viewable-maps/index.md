@@ -122,7 +122,7 @@ One Answer:
 <div class="answer-body">
 <p>OpenStreetMap is not a map in the first place; it is a database. An editor will usually show you all objects present in the database, whereas a map will usually only show a selection of features. This selection may be made for reasons of cartography, or rendering speed, or interest - a map for cyclists will certainly show other features than one for motorists.</p>
 <p>The map style used on the main "mapnik" layer on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> is the same for every place in the world, so if the Indian city you are looking at has a relatively low feature density in OSM you might be tempted to think: "Why aren't restaurants shown sooner, there's enough room on zoom level 12 but they only show up when I toom in to zoom level 17!" - but think of what that would do to a densely mapped place like central London.</p>
-<p>You are free to create your own rendering though, based on the same OpenStreetMap database, that shows any (or all) features. Some pointers are given in the answer to <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my Website?"</a>.</p>
+<p>You are free to create your own rendering though, based on the same OpenStreetMap database, that shows any (or all) features. Some pointers are given in the answer to <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my Website?"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

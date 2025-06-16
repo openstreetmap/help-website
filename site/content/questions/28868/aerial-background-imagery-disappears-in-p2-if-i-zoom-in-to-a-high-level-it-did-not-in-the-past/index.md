@@ -81,7 +81,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>A previous question with relevent aspects <a href="https://help.openstreetmap.org/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2">https://help.openstreetmap.org/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2</a></p>
+<p>A previous question with relevent aspects <a href="/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2">https://help.openstreetmap.org/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2</a></p>
 </div>
 <div id="comment-28872-info" class="comment-info">
 <span class="comment-age">(07 Dec '13, 13:40)</span> <span class="comment-user userinfo">nevw</span>
@@ -193,7 +193,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><span>@TheDutchMan13</span>: Available up to <a href="http://www.openstreetmap.org/#map=19/33.53921/-112.18628">z19 in Glendale, Arizon</a>. Same zoom level e.g. in Frankfurt am Main, Germany. But <a href="http://www.openstreetmap.org/#map=19/51.50730/-0.12806">z20 for London</a>.</p>
+<p><span>@TheDutchMan13</span>: Available up to <a href="https://www.openstreetmap.org/#map=19/33.53921/-112.18628">z19 in Glendale, Arizon</a>. Same zoom level e.g. in Frankfurt am Main, Germany. But <a href="https://www.openstreetmap.org/#map=19/51.50730/-0.12806">z20 for London</a>.</p>
 </div>
 <div id="comment-28894-info" class="comment-info">
 <span class="comment-age">(07 Dec '13, 22:29)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

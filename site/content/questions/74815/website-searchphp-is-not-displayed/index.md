@@ -182,7 +182,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>here is correct</p>
-<p><img src="https://help.openstreetmap.org/upfiles/4.png" alt="alt text" /></p>
+<p><img src="/upfiles/4.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's going to depend a bit on how you interpret "one business", but another possible way of tagging is shown <a href="http://www.openstreetmap.org/?lat=53.263174&amp;lon=-1.429695&amp;zoom=18&amp;layers=M">here</a>. There one "business" is split over two buildings but with five different brands. There is, for example, a telephone that will get answered as "Gordon Lamb Skoda" (one of the franchises) and an area of one of the buildings is Skoda-branded.</p>
+<p>It's going to depend a bit on how you interpret "one business", but another possible way of tagging is shown <a href="https://www.openstreetmap.org/?lat=53.263174&amp;lon=-1.429695&amp;zoom=18&amp;layers=M">here</a>. There one "business" is split over two buildings but with five different brands. There is, for example, a telephone that will get answered as "Gordon Lamb Skoda" (one of the franchises) and an area of one of the buildings is Skoda-branded.</p>
 <p>I've mapped it as individual shop=car nodes within a building=yes, with the nodes roughly corresponding to the branded sales areas at the front of the building.<br />
 </p>
 </div>

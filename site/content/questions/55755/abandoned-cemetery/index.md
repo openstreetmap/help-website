@@ -49,7 +49,7 @@ osqa_accepted = false
 <li>cemetery=abandoned</li>
 </ul>
 <p>(And also, I would like to see it somehow rendered nicely ;-).</p>
-<p>A picture of the place: <img src="https://help.openstreetmap.org/upfiles/ac.jpg" alt="abandoned cemetery" /></p>
+<p>A picture of the place: <img src="/upfiles/ac.jpg" alt="abandoned cemetery" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-historic" rel="tag" title="see questions tagged &#39;historic&#39;">historic</span> <span class="post-tag tag-link-cemetery" rel="tag" title="see questions tagged &#39;cemetery&#39;">cemetery</span> <span class="post-tag tag-link-lifecycle" rel="tag" title="see questions tagged &#39;lifecycle&#39;">lifecycle</span> <span class="post-tag tag-link-abandoned" rel="tag" title="see questions tagged &#39;abandoned&#39;">abandoned</span> <span class="post-tag tag-link-life_cycle" rel="tag" title="see questions tagged &#39;life_cycle&#39;">life_cycle</span>
@@ -77,7 +77,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Thank you for the two answers. I decided to use the following combination: <code>abandoned:landuse=cemetery</code>+ <code>historic=cemetery</code> + <code>natural=wood</code> + a name that indicates that it is a former cementery (EN:Former .. / DE:Ehemaliger ...).</p>
-<p>See: <a href="http://www.openstreetmap.org/way/488764765">Way488764765</a></p>
+<p>See: <a href="https://www.openstreetmap.org/way/488764765">Way488764765</a></p>
 </div>
 <div id="comment-55771-info" class="comment-info">
 <span class="comment-age">(23 Apr '17, 18:16)</span> <span class="comment-user userinfo">Nachtspazz</span>
@@ -273,7 +273,7 @@ osqa_accepted = false
 <div id="post-55881-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> my town also (see <a href="http://www.openstreetmap.org/way/30596483">http://www.openstreetmap.org/way/30596483</a> or <a href="http://www.openstreetmap.org/way/115554270).">http://www.openstreetmap.org/way/115554270).</a> Usually, this is relatively easy to determine, but sometimes they become both parks &amp; cemeteries (Abney Park &amp; Tower Hamlets Cemetery Park in London are both good examples).</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> my town also (see <a href="https://www.openstreetmap.org/way/30596483">https://www.openstreetmap.org/way/30596483</a> or <a href="https://www.openstreetmap.org/way/115554270).">https://www.openstreetmap.org/way/115554270).</a> Usually, this is relatively easy to determine, but sometimes they become both parks &amp; cemeteries (Abney Park &amp; Tower Hamlets Cemetery Park in London are both good examples).</p>
 </div>
 <div id="comment-55881-info" class="comment-info">
 <span class="comment-age">(26 Apr '17, 12:10)</span> <span class="comment-user userinfo">SK53 ♦</span>

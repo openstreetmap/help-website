@@ -106,8 +106,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bus Routes are generally relations, which are more complex in OSM. I would recommend you not try to edit them in iD as it's more difficult. You may find it easier to view (and edit) routes in Potlatch 2. (can't speak for JOSM, personally, sorry) In P2, you can select a way that's in a route relation (it'll probably have a blue outline), then it should display the routes in the sidebar. You can double click on one to view the relation, and switch to the Advanced view (scroll to the bottom) to see all the tags.</p>
-<p>To modify a route, conceptually, you add a way to a given route and optionally give it a role. See the <a href="http://wiki.openstreetmap.org/wiki/Route_relation">Route Relation</a> wiki page for details. Of course, you can remove a route from a way too.</p>
-<p>The other thing to remember is that the Transport map may not be updated as quickly as the other maps, so your changes may not be displayed right away. If you view a relation by ID, however (ie <a href="http://www.openstreetmap.org/relation/1878715">http://www.openstreetmap.org/relation/1878715</a>) it should be updated pretty instantly, however.</p>
+<p>To modify a route, conceptually, you add a way to a given route and optionally give it a role. See the <a href="https://wiki.openstreetmap.org/wiki/Route_relation">Route Relation</a> wiki page for details. Of course, you can remove a route from a way too.</p>
+<p>The other thing to remember is that the Transport map may not be updated as quickly as the other maps, so your changes may not be displayed right away. If you view a relation by ID, however (ie <a href="https://www.openstreetmap.org/relation/1878715">https://www.openstreetmap.org/relation/1878715</a>) it should be updated pretty instantly, however.</p>
 <p>One other option would be to add a Note on the OSM.org site, and hope that someone comes along to make the change for you, but I urge you to go for it! :)</p>
 </div>
 <div class="answer-controls post-controls">

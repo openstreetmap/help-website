@@ -121,8 +121,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a>, there you have several possibilities to create static maps with a bunch of pinpoints.</p>
-<p>If you need a slippy map like the one on <a href="http://osm.org">osm.org</a>, try the <a href="http://wiki.openstreetmap.org/wiki/Export">Export</a> function there, it generates HTML code to embed on a website where a marker can be set.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a>, there you have several possibilities to create static maps with a bunch of pinpoints.</p>
+<p>If you need a slippy map like the one on <a href="http://osm.org">osm.org</a>, try the <a href="https://wiki.openstreetmap.org/wiki/Export">Export</a> function there, it generates HTML code to embed on a website where a marker can be set.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,9 +162,9 @@ osqa_accepted = false
 <li>Share the URL that's now in your browser address bar.</li>
 </ol>
 <p>That'll be a URL something like:</p>
-<p><a href="http://www.openstreetmap.org/?lat=47.5433&amp;lon=-52.8734&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=47.5433&amp;lon=-52.8734&amp;zoom=12&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=47.5433&amp;lon=-52.8734&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=47.5433&amp;lon=-52.8734&amp;zoom=12&amp;layers=M</a></p>
 <p>If you like, you can change "lat" to "mlat" and "lon" to "mlon" to get a marker at the spot:</p>
-<p><a href="http://www.openstreetmap.org/?mlat=47.5433&amp;mlon=-52.8734&amp;zoom=12&amp;layers=M">www.openstreetmap.org/?mlat=47.5433&amp;mlon=-52.8734&amp;zoom=12&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=47.5433&amp;mlon=-52.8734&amp;zoom=12&amp;layers=M">www.openstreetmap.org/?mlat=47.5433&amp;mlon=-52.8734&amp;zoom=12&amp;layers=M</a></p>
 </div>
 <div id="comment-14380-info" class="comment-info">
 <span class="comment-age">(18 Jul '12, 21:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -269,7 +269,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes you can publish openstreetmap (note streetmap is not openstreetmap) on your web site but please credit openstreetmap. This Question will show how to put on a marker on it. <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a><br />
+<p>Yes you can publish openstreetmap (note streetmap is not openstreetmap) on your web site but please credit openstreetmap. This Question will show how to put on a marker on it. <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a><br />
 </p>
 </div>
 <div class="answer-controls post-controls">

@@ -147,7 +147,7 @@ One Answer:
 <div id="post-50457-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12466/randyaccv">@randyaccv</a>: could you please post a link to a search with an unabbreviated address, so we can reproduce your experience?</p>
+<p><a href="https://help.openstreetmap.org/users/12466/randyaccv">@randyaccv</a>: could you please post a link to a search with an unabbreviated address, so we can reproduce your experience?</p>
 </div>
 <div id="comment-50457-info" class="comment-info">
 <span class="comment-age">(25 Jun '16, 12:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -159,8 +159,8 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Looks like this query will do it: <a href="http://www.openstreetmap.org/search?query=1404%20West%20Covina%20Boulevard#map=16/34.1004/-117.8242">http://www.openstreetmap.org/search?query=1404%20West%20Covina%20Boulevard#map=16/34.1004/-117.8242</a></p>
-<p>The tiger tags ought to be removed from those road sections but regardless, I don't see why they are being picked over <a href="http://www.openstreetmap.org/way/426625081#map=19/34.09874/-117.83605">http://www.openstreetmap.org/way/426625081#map=19/34.09874/-117.83605</a> as the tagging on the church looks okay to me other than maybe adding a denomination tag which should not affect address based searches.</p>
+<p>Looks like this query will do it: <a href="https://www.openstreetmap.org/search?query=1404%20West%20Covina%20Boulevard#map=16/34.1004/-117.8242">https://www.openstreetmap.org/search?query=1404%20West%20Covina%20Boulevard#map=16/34.1004/-117.8242</a></p>
+<p>The tiger tags ought to be removed from those road sections but regardless, I don't see why they are being picked over <a href="https://www.openstreetmap.org/way/426625081#map=19/34.09874/-117.83605">https://www.openstreetmap.org/way/426625081#map=19/34.09874/-117.83605</a> as the tagging on the church looks okay to me other than maybe adding a denomination tag which should not affect address based searches.</p>
 </div>
 <div id="comment-50458-info" class="comment-info">
 <span class="comment-age">(25 Jun '16, 16:00)</span> <span class="comment-user userinfo">n76</span>

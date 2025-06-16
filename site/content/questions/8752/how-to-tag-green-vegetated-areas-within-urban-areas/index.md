@@ -109,7 +109,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you need to consider each patch individually. For some areas <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a> may be appropriate; for public gardens with flower beds then <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">leisure=garden</a> might apply. The <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a> link also lists other possibilities that you could consider.</p>
+<p>I think you need to consider each patch individually. For some areas <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a> may be appropriate; for public gardens with flower beds then <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">leisure=garden</a> might apply. The <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a> link also lists other possibilities that you could consider.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,9 +159,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a> if covered by grass. But I prefer <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">leisure=garden</a> for flowered beds.<br />
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">landuse=grass</a> if covered by grass. But I prefer <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">leisure=garden</a> for flowered beds.<br />
 </p>
-<p>Common taggging mistakes I have seen about such things is to use <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgreenfield">landuse=greenfield</a> ("land scheduled for new development") or <a href="http://Tag:landuse=village_green">landuse=village_green</a> ("distinctive part of a village centre", quite UK specific).</p>
+<p>Common taggging mistakes I have seen about such things is to use <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgreenfield">landuse=greenfield</a> ("land scheduled for new development") or <a href="http://Tag:landuse=village_green">landuse=village_green</a> ("distinctive part of a village centre", quite UK specific).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

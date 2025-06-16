@@ -178,7 +178,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are already opensource apps that are able to evaluate maxspedd values from vector data maps and do a compare with current position when going in the field with a device gps enabled.</p>
-<p>For example, have a look at <a href="http://wiki.openstreetmap.org/wiki/OsmAnd">Osmand</a></p>
+<p>For example, have a look at <a href="https://wiki.openstreetmap.org/wiki/OsmAnd">Osmand</a></p>
 <p>So your solution by creating artificial nodes (even internally and offline) sound a bit easy, but it is not a clear solution.</p>
 </div>
 <div class="answer-controls post-controls">

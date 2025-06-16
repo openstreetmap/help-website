@@ -105,10 +105,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki <a href="http://wiki.openstreetmap.org/wiki/Railway#Life-cycle">defines</a> the difference rather clearly:</p>
+<p>The wiki <a href="https://wiki.openstreetmap.org/wiki/Railway#Life-cycle">defines</a> the difference rather clearly:</p>
 <ul>
-<li><em>Disused</em> - the feature is <strong>still in working order</strong>, or <strong>could be brought back to working order</strong> easily. Use <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Ddisused">railway=disused</a>.</li>
-<li><em>Abandoned</em> - The <strong>track has been removed</strong> and the line may have been reused or left to decay <strong>but is still clearly visible</strong>, either from the replacement infrastructure, or purely from a line of trees around an original cutting or embankment. Use <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dabandoned">railway=abandoned</a>.</li>
+<li><em>Disused</em> - the feature is <strong>still in working order</strong>, or <strong>could be brought back to working order</strong> easily. Use <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Ddisused">railway=disused</a>.</li>
+<li><em>Abandoned</em> - The <strong>track has been removed</strong> and the line may have been reused or left to decay <strong>but is still clearly visible</strong>, either from the replacement infrastructure, or purely from a line of trees around an original cutting or embankment. Use <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dabandoned">railway=abandoned</a>.</li>
 </ul>
 <p>And if there is nothing left from the original railway then don't tag it as a railway.</p>
 </div>

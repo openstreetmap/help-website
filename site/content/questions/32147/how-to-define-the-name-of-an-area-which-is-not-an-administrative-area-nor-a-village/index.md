@@ -112,9 +112,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:place=locality">Place=locality</a> is quite correct for this usage, named places on earth that do not necessarily correspond to inhabited areas.</p>
-<p>There's also nothing wrong with that tag being used on an area. In fact it's the opposite: although the <a href="http://taginfo.openstreetmap.org/tags/place=locality">current stats</a> show that it is much more frequently used on a node, that kind of data naturally applies to an area, not a node. All those locality nodes are certainly approximations (and often imports). As an example of place=locality usage, that's how <a href="http://www.openstreetmap.org/relation/3011969">townlands are mapped in Ireland</a>.</p>
-<p>If your favorite rendering displays locality names for nodes but not for areas, you should probably file a bug with them. <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Don't tag for the renderer</a>. For the default "mapink" style on osm.org, see <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/">osm-carto</a>. Note that lately they did a fair amount of area vs node discrepency fixes.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:place=locality">Place=locality</a> is quite correct for this usage, named places on earth that do not necessarily correspond to inhabited areas.</p>
+<p>There's also nothing wrong with that tag being used on an area. In fact it's the opposite: although the <a href="http://taginfo.openstreetmap.org/tags/place=locality">current stats</a> show that it is much more frequently used on a node, that kind of data naturally applies to an area, not a node. All those locality nodes are certainly approximations (and often imports). As an example of place=locality usage, that's how <a href="https://www.openstreetmap.org/relation/3011969">townlands are mapped in Ireland</a>.</p>
+<p>If your favorite rendering displays locality names for nodes but not for areas, you should probably file a bug with them. <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Don't tag for the renderer</a>. For the default "mapink" style on osm.org, see <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/">osm-carto</a>. Note that lately they did a fair amount of area vs node discrepency fixes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -127,8 +127,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For producing your own tiles without installing big software frameworks have a look at</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Maps_on_a_Stick">Maps_on_a_Stick</a> or <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">OpenStreetMap-in-a-Box</a></p>
-<p>When you have detailed questions about one of this or other solutions, come over to the <a href="http://forum.osm.org">OSM forum</a> or the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">OSM mailinglists</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Maps_on_a_Stick">Maps_on_a_Stick</a> or <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">OpenStreetMap-in-a-Box</a></p>
+<p>When you have detailed questions about one of this or other solutions, come over to the <a href="http://forum.osm.org">OSM forum</a> or the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">OSM mailinglists</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

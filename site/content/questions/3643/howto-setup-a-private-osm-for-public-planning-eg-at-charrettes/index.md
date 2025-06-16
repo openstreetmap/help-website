@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How to setup a local, "private" OpenStreetMap for planning purposes, e.g., at public charrettes? Since this would be used to "map" hypothetical features, I am advised <strong>not</strong> to use the public instance of OSM, but to "create your own OSM stack and run it locally." I am also advised that "There's lots of documentation on the wiki," which is certainly true :-) Unfortunately my searches of <a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a>, <a href="http://lists.openstreetmap.org">lists.openstreetmap.org</a>, and <a href="http://help.openstreetmap.org">help.openstreetmap.org</a> have not found answers to this question, nor am I seeing anything about this in the <a href="http://wiki.openstreetmap.org/wiki/FAQ">FAQ</a>.</p>
+<p>How to setup a local, "private" OpenStreetMap for planning purposes, e.g., at public charrettes? Since this would be used to "map" hypothetical features, I am advised <strong>not</strong> to use the public instance of OSM, but to "create your own OSM stack and run it locally." I am also advised that "There's lots of documentation on the wiki," which is certainly true :-) Unfortunately my searches of <a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a>, <a href="http://lists.openstreetmap.org">lists.openstreetmap.org</a>, and <a href="http://help.openstreetmap.org">help.openstreetmap.org</a> have not found answers to this question, nor am I seeing anything about this in the <a href="https://wiki.openstreetmap.org/wiki/FAQ">FAQ</a>.</p>
 <p>Can someone point me to the appropriate documentation page(s), or other channel(s) for getting answers to this question? Regarding appropriateness: I have considerable background in systems (esp linux) and informatics generally, but not much specifically in GIS or OSM (of which I am mostly a read-only user, though I have edited).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want so set up your own OSM database server that can then be edited with standard OSM editors like JOSM, you need the <a href="http://wiki.openstreetmap.org/wiki/Rails_port">Rails Port</a>. If you want to fill that with some "real" data to begin with, you will need <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>. These steps however give you only the database side of things; if you then further want to create web maps from your database, you will need to set up a <a href="http://wiki.openstreetmap.org/wiki/Mapnik">tile server</a>, too.</p>
+<p>If you want so set up your own OSM database server that can then be edited with standard OSM editors like JOSM, you need the <a href="https://wiki.openstreetmap.org/wiki/Rails_port">Rails Port</a>. If you want to fill that with some "real" data to begin with, you will need <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>. These steps however give you only the database side of things; if you then further want to create web maps from your database, you will need to set up a <a href="https://wiki.openstreetmap.org/wiki/Mapnik">tile server</a>, too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

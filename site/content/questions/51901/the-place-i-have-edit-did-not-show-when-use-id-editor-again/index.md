@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have installed the rails port and built my local tile server, I use the iD editor to add a building in a place, and i use the osmosis command updata the tile server database, so the building appeared when i view the map. But when i click the edit button again, the building disappeared on the edit page. The details can be showed on the pictures blow.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/id2.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/id3.png" alt="alt text" /></p>
+<p><img src="/upfiles/id2.png" alt="alt text" /></p>
+<p><img src="/upfiles/id3.png" alt="alt text" /></p>
 <p>As it shows on this two picture, the number 6 building disappeared in the id editor page, as result, i can not delete it. What should i do to deal with this problem?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

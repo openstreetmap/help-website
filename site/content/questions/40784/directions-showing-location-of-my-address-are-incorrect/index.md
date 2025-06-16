@@ -203,7 +203,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10425/elan123"></a><a href="http://help.openstreetmap.org/users/10425/elan123">@elan123</a>: do you mean <span>node 3331150435</span>? You have created a new object (not moved an old one). And there is a problem: you new object will not really be helpful to anybody as it just is consisting of a "name". So, should this be house number 801 on the Highland Place Road? We can make it really useful then (Update: … in the meantime this already has been done by another user)!</p>
+<p><a href="https://help.openstreetmap.org/users/10425/elan123"></a><a href="https://help.openstreetmap.org/users/10425/elan123">@elan123</a>: do you mean <span>node 3331150435</span>? You have created a new object (not moved an old one). And there is a problem: you new object will not really be helpful to anybody as it just is consisting of a "name". So, should this be house number 801 on the Highland Place Road? We can make it really useful then (Update: … in the meantime this already has been done by another user)!</p>
 <p>So, now, users of automotive navigation systems which are based on OpenStreetMap data should find your correct location.</p>
 </div>
 <div id="comment-40793-info" class="comment-info">
@@ -249,7 +249,7 @@ One Answer:
 <div id="post-40812-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10425/elan123">@elan123</a>: See <a href="/questions/34318/">how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/10425/elan123">@elan123</a>: See <a href="/questions/34318/">how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered</a>.</p>
 </div>
 <div id="comment-40812-info" class="comment-info">
 <span class="comment-age">(05 Feb '15, 18:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

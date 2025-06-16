@@ -114,9 +114,9 @@ One Answer:
 <p>The problem is, that the mainservers are under heavy load, as a lot of users/scrips/... make use of this (static maps) export.</p>
 <p>But as the OSM data and toolchains are open and free available, there are third party services that allow you to get an file for print. Also you can use a desktop renderer like Maperitive (and OSM data extracts) to render your files locally. Please have a look here:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Staticmaps">http://wiki.openstreetmap.org/wiki/Staticmaps</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">http://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Staticmaps">https://wiki.openstreetmap.org/wiki/Staticmaps</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Maps">https://wiki.openstreetmap.org/wiki/Maps</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">https://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

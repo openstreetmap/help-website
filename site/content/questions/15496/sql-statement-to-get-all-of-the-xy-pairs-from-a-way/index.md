@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The database schema of the Rails-port is designed for the api which is mainly used by editors. Other applications like rendering or routing usually preprocess the raw osm data into another database scheme.</p>
-<p>For rendering the connectivity between ways (and areas) is irrelevant. So in a datamodel for rendering only the nodes for point features are retained with a geometry. For ways the geometry is calculated from their nodes during the prepocessing using tools like <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> and <a href="http://wiki.openstreetmap.org/wiki/Imposm">Imposm</a>. Both these tools are open source, so have a look at their code.</p>
+<p>For rendering the connectivity between ways (and areas) is irrelevant. So in a datamodel for rendering only the nodes for point features are retained with a geometry. For ways the geometry is calculated from their nodes during the prepocessing using tools like <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> and <a href="https://wiki.openstreetmap.org/wiki/Imposm">Imposm</a>. Both these tools are open source, so have a look at their code.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

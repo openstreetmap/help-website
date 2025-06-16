@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi kaldari (look here <a href="http://wiki.openstreetmap.org/wiki/Ruins">http://wiki.openstreetmap.org/wiki/Ruins</a> or <a href="http://wiki.openstreetmap.org/wiki/Historic)">http://wiki.openstreetmap.org/wiki/Historic)</a> but you've don that. You even could use both tags for the description of the remains. And please have a look at other geological / historical sites that have been tagged already. IMHO use historic=ruins, ruin_type=city / temple, civilisation=Mayan, historic:period=1300 - 1400, material=stone</p>
+<p>Hi kaldari (look here <a href="https://wiki.openstreetmap.org/wiki/Ruins">https://wiki.openstreetmap.org/wiki/Ruins</a> or <a href="https://wiki.openstreetmap.org/wiki/Historic)">https://wiki.openstreetmap.org/wiki/Historic)</a> but you've don that. You even could use both tags for the description of the remains. And please have a look at other geological / historical sites that have been tagged already. IMHO use historic=ruins, ruin_type=city / temple, civilisation=Mayan, historic:period=1300 - 1400, material=stone</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -229,7 +229,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One other thing to check in addition to the wiki and taginfo is the <a href="http://wiki.openstreetmap.org/wiki/Historical_Objects">Historical Objects</a> map, which shows a number of history-related tags. For example, you can view other Mayan sites like <a href="http://geschichtskarten.openstreetmap.de/historische_objekte/translate/en/index-en.html?zoom=16&amp;lat=20.68207&amp;lon=-88.56764&amp;layers=B0000FTFT">Chichen Itza</a> to see how they're tagged.</p>
+<p>One other thing to check in addition to the wiki and taginfo is the <a href="https://wiki.openstreetmap.org/wiki/Historical_Objects">Historical Objects</a> map, which shows a number of history-related tags. For example, you can view other Mayan sites like <a href="http://geschichtskarten.openstreetmap.de/historische_objekte/translate/en/index-en.html?zoom=16&amp;lat=20.68207&amp;lon=-88.56764&amp;layers=B0000FTFT">Chichen Itza</a> to see how they're tagged.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

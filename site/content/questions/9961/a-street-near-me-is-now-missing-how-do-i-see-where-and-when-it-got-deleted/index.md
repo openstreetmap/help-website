@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-9964-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question was originally part of <a href="http://help.openstreetmap.org/questions/9943/missing-street-part-in-de-71672-marbach-am-neckar">http://help.openstreetmap.org/questions/9943/missing-street-part-in-de-71672-marbach-am-neckar</a> , but is useful enough to have as a separate question.</p>
+<p>This question was originally part of <a href="/questions/9943/missing-street-part-in-de-71672-marbach-am-neckar">https://help.openstreetmap.org/questions/9943/missing-street-part-in-de-71672-marbach-am-neckar</a> , but is useful enough to have as a separate question.</p>
 </div>
 <div id="comment-9964-info" class="comment-info">
 <span class="comment-age">(14 Jan '12, 16:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -144,8 +144,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One of the areas in question is <a href="http://www.openstreetmap.org/?lat=48.9301&amp;lon=9.26654&amp;zoom=16&amp;layers=M">here</a> (see other help question for question in comment and picture).</p>
-<p>One method that you can use to see deleted ways is to use "Potlatch 1". First of all, zoom in to one end of the problem area. That takes us to <a href="http://www.openstreetmap.org/?lat=48.931732&amp;lon=9.26462&amp;zoom=18&amp;layers=M">here</a>. Next, move the mouse over the "edit" tab but don't click it. You should get an option to "<a href="http://www.openstreetmap.org/edit?editor=potlatch&amp;lat=48.931732&amp;lon=9.26462&amp;zoom=18">Edit with Potlatch 1</a>" as well as Potlatch 2 and Remote Control (of JOSM or Merkaartor). Click "Edit with Save" when prompted. Next, move the mouse down to "advanced" at the bottom and when the menu appears go up to "undelete" and release the mouse. Shortly a new red-coloured way will appear - that's the one that has been deleted. If you click it, you can see that it is <a href="http://www.openstreetmap.org/browse/way/10625304/history">this one</a> (that's the history link - if that doesn't work click <a href="http://www.openstreetmap.org/browse/way/10625304/">here</a>).<br />
+<p>One of the areas in question is <a href="https://www.openstreetmap.org/?lat=48.9301&amp;lon=9.26654&amp;zoom=16&amp;layers=M">here</a> (see other help question for question in comment and picture).</p>
+<p>One method that you can use to see deleted ways is to use "Potlatch 1". First of all, zoom in to one end of the problem area. That takes us to <a href="https://www.openstreetmap.org/?lat=48.931732&amp;lon=9.26462&amp;zoom=18&amp;layers=M">here</a>. Next, move the mouse over the "edit" tab but don't click it. You should get an option to "<a href="https://www.openstreetmap.org/edit?editor=potlatch&amp;lat=48.931732&amp;lon=9.26462&amp;zoom=18">Edit with Potlatch 1</a>" as well as Potlatch 2 and Remote Control (of JOSM or Merkaartor). Click "Edit with Save" when prompted. Next, move the mouse down to "advanced" at the bottom and when the menu appears go up to "undelete" and release the mouse. Shortly a new red-coloured way will appear - that's the one that has been deleted. If you click it, you can see that it is <a href="https://www.openstreetmap.org/browse/way/10625304/history">this one</a> (that's the history link - if that doesn't work click <a href="https://www.openstreetmap.org/browse/way/10625304/">here</a>).<br />
 </p>
 <p>It looks like someone has replaced the old "Poppenweiler Straße" with a new one, but not named it. Is it really just a track (the way that you're describing it it sounds like it may not be)? Anyway, you can now see from that link who deleted it and ask them about it, and perhaps work together to better describe the area.</p>
 </div>

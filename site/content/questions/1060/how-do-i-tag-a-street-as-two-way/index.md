@@ -131,7 +131,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Note that there <em>are</em> a few situations where oneway=yes is implied, and you need to add oneway=no to override that if needed. (See <a href="http://wiki.openstreetmap.org/wiki/Link_%28highway%29#Special_considerations_for_motorways">http://wiki.openstreetmap.org/wiki/Link_%28highway%29#Special_considerations_for_motorways</a>) However, renderers have problems with that…</p>
+<p>Note that there <em>are</em> a few situations where oneway=yes is implied, and you need to add oneway=no to override that if needed. (See <a href="https://wiki.openstreetmap.org/wiki/Link_%28highway%29#Special_considerations_for_motorways">https://wiki.openstreetmap.org/wiki/Link_%28highway%29#Special_considerations_for_motorways</a>) However, renderers have problems with that…</p>
 </div>
 <div id="comment-1071-info" class="comment-info">
 <span class="comment-age">(08 Oct '10, 14:59)</span> <span class="comment-user userinfo">Mormegil</span>
@@ -185,7 +185,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Sometimes ways which are two-way but look one-way are tagged with oneway=no</p>
-<p><a href="http://www.openstreetmap.org/browse/way/34152180">http://www.openstreetmap.org/browse/way/34152180</a> is an example of a case where there two parallel two-way motorways tagged with oneway=no and a note explaining that it really is a two-way route, but cases like that are exceptionally rare.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/34152180">https://www.openstreetmap.org/browse/way/34152180</a> is an example of a case where there two parallel two-way motorways tagged with oneway=no and a note explaining that it really is a two-way route, but cases like that are exceptionally rare.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

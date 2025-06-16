@@ -112,8 +112,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li><p>Use the key 'level=x' (see <a href="http://wiki.openstreetmap.org/wiki/Level)">http://wiki.openstreetmap.org/wiki/Level)</a> The level=0 represents the ground floor (for historical reasons, we use British English in tags). Then, in your case, I would create 3 nodes, one per address, attached on the building way (my preference is to put them on the front side where main entrance(s) is(are)). Then add the tags for individual addresses and the corresponding floor with 'level'.</p></li>
-<li><p>see answers on <a href="http://help.openstreetmap.org/questions/13483/how-to-tag-hr-block-a-tax-preparation-service">this identical question</a></p></li>
+<li><p>Use the key 'level=x' (see <a href="https://wiki.openstreetmap.org/wiki/Level)">https://wiki.openstreetmap.org/wiki/Level)</a> The level=0 represents the ground floor (for historical reasons, we use British English in tags). Then, in your case, I would create 3 nodes, one per address, attached on the building way (my preference is to put them on the front side where main entrance(s) is(are)). Then add the tags for individual addresses and the corresponding floor with 'level'.</p></li>
+<li><p>see answers on <a href="/questions/13483/how-to-tag-hr-block-a-tax-preparation-service">this identical question</a></p></li>
 <li><p>again, create two elements e.g. two nodes inside the building area where you add the appropriate 'amenity', 'shop' or 'whatever' keys plus the 'level' for each of them.</p></li>
 <li><p>if by "urls", you mean permalink when downloading a zone for edit, open the 'download' dialog then select the tab 'Bounding Box' and paste the url there.</p></li>
 </ol>
@@ -141,7 +141,7 @@ This answer is marked "community wiki".
 <div id="post-14884-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Re (2), <a href="http://help.openstreetmap.org/questions/13483/how-to-tag-hr-block-a-tax-preparation-service">this previous question</a> asked about tax preparation services; maybe it's related?</p>
+<p>Re (2), <a href="/questions/13483/how-to-tag-hr-block-a-tax-preparation-service">this previous question</a> asked about tax preparation services; maybe it's related?</p>
 </div>
 <div id="comment-14884-info" class="comment-info">
 <span class="comment-age">(07 Aug '12, 12:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

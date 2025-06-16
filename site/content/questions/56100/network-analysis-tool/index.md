@@ -79,7 +79,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I try to create access areas by roads (based on distances)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/p8p3-lg.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/p8p3-lg.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-56102-info" class="comment-info">
 <span class="comment-age">(09 May '17, 18:22)</span> <span class="comment-user userinfo">fhas33</span>

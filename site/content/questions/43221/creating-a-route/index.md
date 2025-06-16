@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try these track drawing sites that use the openstreetmap <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">link</a> Most/all likely offer a download of the gpx file for your gpsr</p>
+<p>Try these track drawing sites that use the openstreetmap <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">link</a> Most/all likely offer a download of the gpx file for your gpsr</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

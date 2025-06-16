@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "multiple entries in cycling routes"
-description = '''Hi, I just started using OSM for my road bike tours and realized, that there are multiple &quot;routes&quot; for the same track. Both in the OSM maps as well as in the OSM wiki ( http://wiki.openstreetmap.org/wiki/DE:Bicycle/Deutsche_Radfernwege ). The official name is &quot;EuroVelo15&quot; &quot;Rhine Cycle Route&quot; &quot;Rheinr...'''
+description = '''Hi, I just started using OSM for my road bike tours and realized, that there are multiple &quot;routes&quot; for the same track. Both in the OSM maps as well as in the OSM wiki ( https://wiki.openstreetmap.org/wiki/DE:Bicycle/Deutsche_Radfernwege ). The official name is &quot;EuroVelo15&quot; &quot;Rhine Cycle Route&quot; &quot;Rheinr...'''
 date = "2014-07-18T09:30:00Z"
 lastmod = "2014-07-19T06:19:00Z"
 weight = 34954
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I just started using OSM for my road bike tours and realized, that there are multiple "routes" for the same track. Both in the OSM maps as well as in the OSM wiki ( <a href="http://wiki.openstreetmap.org/wiki/DE:Bicycle/Deutsche_Radfernwege">http://wiki.openstreetmap.org/wiki/DE:Bicycle/Deutsche_Radfernwege</a> ).</p>
+<p>I just started using OSM for my road bike tours and realized, that there are multiple "routes" for the same track. Both in the OSM maps as well as in the OSM wiki ( <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Deutsche_Radfernwege">https://wiki.openstreetmap.org/wiki/DE:Bicycle/Deutsche_Radfernwege</a> ).</p>
 <p>The official name is "EuroVelo15" "Rhine Cycle Route" "Rheinradweg" or "Véloroute Rhin". Partially, it is similar to the German D8 route.</p>
 <p>How could this issue be solved to combine the various entries? How did you handled these kind of issues? (Also, there are several stages with alternative routes.) Is there an "official list" of cycling routes? This would help me to add single waypoints to an existing route.</p>
 <p>I am motivated to start contributing to OSM, especially with cycling routes. It would be great if you could provide me some information.</p>
@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A single track <em>can</em> be in multiple different routes, which is why <a href="http://wiki.openstreetmap.org/wiki/Relation:route">relations</a> are used to define each separate route. Relations take a bit of getting used to when you are new at contributing, and support for them varies with each different editor.</p>
+<p>A single track <em>can</em> be in multiple different routes, which is why <a href="https://wiki.openstreetmap.org/wiki/Relation:route">relations</a> are used to define each separate route. Relations take a bit of getting used to when you are new at contributing, and support for them varies with each different editor.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -136,7 +136,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>As Ed has pointed out, a single road/track/whatever segment can be part of multiple different routes. along the Rhine it is particularly complicated see <a href="http://cycling.waymarkedtrails.org/en/?zoom=13&amp;lat=47.5961&amp;lon=8.18128&amp;hill=0.25&amp;base=0.935&amp;route=1">http://cycling.waymarkedtrails.org/en/?zoom=13&amp;lat=47.5961&amp;lon=8.18128&amp;hill=0.25&amp;base=0.935&amp;route=1</a> for a random example.</p>
-<p>Suggested reading; <a href="http://wiki.openstreetmap.org/wiki/Cycle_routes">http://wiki.openstreetmap.org/wiki/Cycle_routes</a></p>
+<p>Suggested reading; <a href="https://wiki.openstreetmap.org/wiki/Cycle_routes">https://wiki.openstreetmap.org/wiki/Cycle_routes</a></p>
 <p>Note: most routes in Europe, with the exception of the Netherlands are based on way segements.</p>
 </div>
 <div id="comment-34978-info" class="comment-info">

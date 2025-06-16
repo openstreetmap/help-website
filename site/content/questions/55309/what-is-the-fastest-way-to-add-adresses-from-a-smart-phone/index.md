@@ -210,7 +210,7 @@ osqa_accepted = false
 <div id="post-56386-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>, I've tried to take advantage of the auto-complete feature that you were mentioning. Unfortunately I didn't find it reliably gave a useful result. In fact out of the 26 addresses I added with <a href="http://www.openstreetmap.org/changeset/48831990">this</a> edit it only guessed right once or twice. (perhaps the numbering scheme my city uses isn't well supported) The other times I had to edit the values it entered, house number but also often the street name. This made it more work for me.</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>, I've tried to take advantage of the auto-complete feature that you were mentioning. Unfortunately I didn't find it reliably gave a useful result. In fact out of the 26 addresses I added with <a href="https://www.openstreetmap.org/changeset/48831990">this</a> edit it only guessed right once or twice. (perhaps the numbering scheme my city uses isn't well supported) The other times I had to edit the values it entered, house number but also often the street name. This made it more work for me.</p>
 <p>As such I feel that, despite its many shortcomings, and the shortcomings of many of its users, Maps.me is the best choice to add addresses to buildings. I doubt it is a good choice for many other tasks. It is a very simple app, but for a simple task that's good.</p>
 </div>
 <div id="comment-56386-info" class="comment-info">

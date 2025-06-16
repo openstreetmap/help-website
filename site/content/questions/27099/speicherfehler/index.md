@@ -94,7 +94,7 @@ osqa_accepted = false
 <div id="post-40468-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>siehe auch <a href="https://help.openstreetmap.org/questions/40460/anderungen-speichern-nicht-moglich">https://help.openstreetmap.org/questions/40460/anderungen-speichern-nicht-moglich</a></p>
+<p>siehe auch <a href="/questions/40460/anderungen-speichern-nicht-moglich">https://help.openstreetmap.org/questions/40460/anderungen-speichern-nicht-moglich</a></p>
 </div>
 <div id="comment-40468-info" class="comment-info">
 <span class="comment-age">(18 Jan '15, 15:12)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

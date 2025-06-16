@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Why not shown toll stations in the map ? examples <a href="http://www.openstreetmap.org/node/299428073">47.43033/13.61084</a>, <a href="http://www.openstreetmap.org/node/1399722922">47.10425/12.99163</a>, <a href="http://www.openstreetmap.org/node/337649082">47.37681/13.60442</a></p>
+<p>Why not shown toll stations in the map ? examples <a href="https://www.openstreetmap.org/node/299428073">47.43033/13.61084</a>, <a href="https://www.openstreetmap.org/node/1399722922">47.10425/12.99163</a>, <a href="https://www.openstreetmap.org/node/337649082">47.37681/13.60442</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tollstation" rel="tag" title="see questions tagged &#39;tollstation&#39;">tollstation</span>
@@ -118,9 +118,9 @@ One Answer:
 <div class="answer-body">
 <p>See some general answers to "why is XYZ not shown" / "what can I do to get XYZ shown":</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/9159/buildings-and-names-showing-up-at-different-timesnot-showing-up">Change request / adding a feature to the default OSM Map style</a></li>
-<li><a href="https://help.openstreetmap.org/questions/6241/change-request-adding-a-feature-to-the-default-osm-map-style">buildings and names showing up at different times/not showing up</a></li>
-<li><a href="https://help.openstreetmap.org/questions/10748/why-cant-i-see-the-benches-and-picnic-tables-i-added-to-the-map">Why can't I see the benches and picnic tables I added to the map?</a></li>
+<li><a href="/questions/9159/buildings-and-names-showing-up-at-different-timesnot-showing-up">Change request / adding a feature to the default OSM Map style</a></li>
+<li><a href="/questions/6241/change-request-adding-a-feature-to-the-default-osm-map-style">buildings and names showing up at different times/not showing up</a></li>
+<li><a href="/questions/10748/why-cant-i-see-the-benches-and-picnic-tables-i-added-to-the-map">Why can't I see the benches and picnic tables I added to the map?</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

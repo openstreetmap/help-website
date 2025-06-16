@@ -47,7 +47,7 @@ osqa_accepted = false
 <li><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dexhibition_centre"><code>amenity=exhibition_centre</code></a></li>
 </ul>
 <p>But these facilities are not specifically any of these but all of these. I would say they are closest to a convention center (that doesn't seems like an existing tag) but usually those doesn't function as a sports center. Maybe an <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Events_centre">events center</a>? But that is just a proposal.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/1_Agl0orN.jpg" alt="exhibition" /> <img src="https://help.openstreetmap.org/upfiles/2_PRR72dg.jpg" alt="sports event" /> <img src="https://help.openstreetmap.org/upfiles/3_9km53dU.jpg" alt="concert" /> <img src="https://help.openstreetmap.org/upfiles/4.jpg" alt="trade show" /></p>
+<p><img src="/upfiles/1_Agl0orN.jpg" alt="exhibition" /> <img src="/upfiles/2_PRR72dg.jpg" alt="sports event" /> <img src="/upfiles/3_9km53dU.jpg" alt="concert" /> <img src="/upfiles/4.jpg" alt="trade show" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-events" rel="tag" title="see questions tagged &#39;events&#39;">events</span> <span class="post-tag tag-link-leisure" rel="tag" title="see questions tagged &#39;leisure&#39;">leisure</span>

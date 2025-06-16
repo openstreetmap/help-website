@@ -158,7 +158,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In <a href="http://www.openstreetmap.org/?lat=48.206&amp;lon=16.357&amp;zoom=13">Vienna</a>, <a href="http://www.wien.gv.at/stadtentwicklung/projekte/verkehrsplanung/strassen/bundesstrassen/hauptstrassen-ab.html">"B streets"</a> are tagged primary, secondary and tertiary are tagged based on their "importance" (how important are they to get from one part of the city to another ~ secondary; are they important to get into some neighbourhood district ~ tertiary). And yes, you have to know the local situation by heart to get a clue. You have to discuss&amp;decide this together with the other locals and come to a solution that fits your local city, FWICT.</p>
+<p>In <a href="https://www.openstreetmap.org/?lat=48.206&amp;lon=16.357&amp;zoom=13">Vienna</a>, <a href="http://www.wien.gv.at/stadtentwicklung/projekte/verkehrsplanung/strassen/bundesstrassen/hauptstrassen-ab.html">"B streets"</a> are tagged primary, secondary and tertiary are tagged based on their "importance" (how important are they to get from one part of the city to another ~ secondary; are they important to get into some neighbourhood district ~ tertiary). And yes, you have to know the local situation by heart to get a clue. You have to discuss&amp;decide this together with the other locals and come to a solution that fits your local city, FWICT.</p>
 <p>And if you want to map this in another city, ask the locals there.</p>
 <p>/al</p>
 </div>

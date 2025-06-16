@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is probably because nobody in OSM has mapped this area before. You are welcome to map this area yourself. Please visit the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners Guide</a> to get started. Or you might want to just file a bug report at <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a>.</p>
+<p>This is probably because nobody in OSM has mapped this area before. You are welcome to map this area yourself. Please visit the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners Guide</a> to get started. Or you might want to just file a bug report at <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>OpenStreetMap has started map the world from scratch. So start with empty map and contributors fill streets after streets, building global map. Place are still empty, probability to find this kind of place depend of place and country.</p>
 <p>You can start your self contributing at OpenStreetMap by surveying on ground or from your computer by using aerial imagery and so on.</p>
-<p>Look at <a href="http://wiki.osm.org"></a><a href="http://wiki.osm.org"></a><a href="http://wiki.osm.org">http://wiki.osm.org</a> and especially at <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide"></a><a href="http://wiki.openstreetmap.org/wiki/Beginners&#39;"></a><a href="http://wiki.openstreetmap.org/wiki/Beginners&#39;">http://wiki.openstreetmap.org/wiki/Beginners'</a> guide</p>
+<p>Look at <a href="http://wiki.osm.org"></a><a href="http://wiki.osm.org"></a><a href="http://wiki.osm.org">http://wiki.osm.org</a> and especially at <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide"></a><a href="https://wiki.openstreetmap.org/wiki/Beginners&#39;"></a><a href="https://wiki.openstreetmap.org/wiki/Beginners&#39;">https://wiki.openstreetmap.org/wiki/Beginners'</a> guide</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

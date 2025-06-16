@@ -62,7 +62,7 @@ osqa_accepted = true
 <div id="post-13540-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Similar question: <a href="http://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">http://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery</a></p>
+<p>Similar question: <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">https://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery</a></p>
 </div>
 <div id="comment-13540-info" class="comment-info">
 <span class="comment-age">(14 Jun '12, 15:08)</span> <span class="comment-user userinfo">sleske</span>
@@ -195,7 +195,7 @@ One Answer:
 <div id="post-13566-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... maybe <a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">http://wiki.openstreetmap.org/wiki/True_Offset_Process</a> can also help.</p>
+<p>... maybe <a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">https://wiki.openstreetmap.org/wiki/True_Offset_Process</a> can also help.</p>
 </div>
 <div id="comment-13566-info" class="comment-info">
 <span class="comment-age">(16 Jun '12, 21:54)</span> <span class="comment-user userinfo">stephan75</span>

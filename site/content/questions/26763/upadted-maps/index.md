@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-26770-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'll close this - the same person's asked the same question with more info <a href="https://help.openstreetmap.org/questions/26765/how-can-i-download-updated-maps-to-my-mobile">here</a>.</p>
+<p>I'll close this - the same person's asked the same question with more info <a href="/questions/26765/how-can-i-download-updated-maps-to-my-mobile">here</a>.</p>
 </div>
 <div id="comment-26770-info" class="comment-info">
 <span class="comment-age">(26 Sep '13, 10:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -43,9 +43,9 @@ osqa_accepted = true
 <p>For example, some small islands of this city, like St-Helen, are completely covered with water. While other area came out as land instead of water. Is this a known problem ? Do I need some special shapefile or something to render the map ?</p>
 <p><strong>2 screenshots:</strong></p>
 <p>*<em>Picture #1 : (1) The island is covered with water. (2) This area should have been covered with water.</em></p>
-<p><img src="http://help.openstreetmap.org/upfiles/prob1.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/prob1.jpg" alt="alt text" /></p>
 <p><em>Picture #2 : I commented the line: <strong><em>polygon-fill: @water;</em></strong> so it is disabled (see red square #2). The island look normal now. It looks like the water layer bypass the others. It still doesn't explain why there is no water fill in the #2 red square in picture #1</em></p>
-<p><img src="http://help.openstreetmap.org/upfiles/prob2_WxDNT9h.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/prob2_WxDNT9h.jpg" alt="alt text" /></p>
 <p>Any help would be greatly appreciated! Ty in advance!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -130,7 +130,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are a couple of possibilities - one is that the style you're using is getting confused by the riverbank (the relevant relation I think is <a href="http://www.openstreetmap.org/relation/1775822">this</a> one). The other is that someone that relation is somehow broken in your data. I wouldn't expect that to be the case, since that relation is fully within Quebec as defined at <a href="http://download.geofabrik.de/north-america/canada/quebec.html">Geofabrik</a>, assuming you didn't cut Quebec down any more before importing.</p>
+<p>There are a couple of possibilities - one is that the style you're using is getting confused by the riverbank (the relevant relation I think is <a href="https://www.openstreetmap.org/relation/1775822">this</a> one). The other is that someone that relation is somehow broken in your data. I wouldn't expect that to be the case, since that relation is fully within Quebec as defined at <a href="http://download.geofabrik.de/north-america/canada/quebec.html">Geofabrik</a>, assuming you didn't cut Quebec down any more before importing.</p>
 <p>Another possibility is how Tilemill is accessing the data. You're using Tilemill on Windows - is that using an osm2pgsql database to render from, or are you doing something else? If it is a database, what are you using to import the data? If not, how is Tilemill accessing it?</p>
 <p>In order to find out which is likely to be the problem, the first thing I'd do is to see if other similiar riverbank relations are rendered OK?</p>
 </div>
@@ -199,8 +199,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I did two tests from what you mentionned. First, I tried one specific area (ID : 156816898) from the <a href="http://www.openstreetmap.org/relation/1775822">link</a> you posted and I got the same problem. The island was also covered with water and St-Lawrence river was "land-filled". (sry no picture)</p>
-<p>Then I did another test with Quebec city and the result was exactly like as expected. <img src="http://help.openstreetmap.org/upfiles/Sans_titre.png" alt="alt text" /></p>
+<p>I did two tests from what you mentionned. First, I tried one specific area (ID : 156816898) from the <a href="https://www.openstreetmap.org/relation/1775822">link</a> you posted and I got the same problem. The island was also covered with water and St-Lawrence river was "land-filled". (sry no picture)</p>
+<p>Then I did another test with Quebec city and the result was exactly like as expected. <img src="/upfiles/Sans_titre.png" alt="alt text" /></p>
 <p>On the picture, you can see that the island on the top right is coming out correctly. Like you said, I’m supposing it is the style that get confused by the riverbank. But I don't know why the result is different for Montreal.</p>
 <p>To answer your questions, I'm using osm2pgsql (PostgreSQL with PostGIS) for importing data. I installed everything from the following <a href="https://ircama.github.io/osm-carto-tutorials/tilemill-osm-carto">procedure</a>. Do you think the problem might come from openstreetmap carto ?</p>
 <p>I also want to thank you for your elaborate answer. It's helping me and I’m feeling closer to a solution.</p>
@@ -466,7 +466,7 @@ So, if you still insist on vector (pre- or on-the-fly-) tiling, you must use a v
 <div id="post-53532-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3194/sanser">@sanser</a> - I'm sure that pull requests at <a href="https://github.com/openstreetmap/osmosis">https://github.com/openstreetmap/osmosis</a> would be welcomed :) Personally I think that the options that they're offering are more than adequate.</p>
+<p><a href="https://help.openstreetmap.org/users/3194/sanser">@sanser</a> - I'm sure that pull requests at <a href="https://github.com/openstreetmap/osmosis">https://github.com/openstreetmap/osmosis</a> would be welcomed :) Personally I think that the options that they're offering are more than adequate.</p>
 </div>
 <div id="comment-53532-info" class="comment-info">
 <span class="comment-age">(13 Dec '16, 11:21)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

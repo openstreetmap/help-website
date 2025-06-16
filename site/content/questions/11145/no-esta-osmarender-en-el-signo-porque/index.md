@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/questions/10933/tiles-home">Here</a> is the reason.</p>
+<p><a href="/questions/10933/tiles-home">Here</a> is the reason.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -129,7 +129,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In the iD editor, which it looks like you're using, after you've drawn a line the box at the top left will say "search". Type "pier" in there (or the name of any other feature) and a list of candidates will appear below. In your case, "pier" will be at the top of the list. Select that, and you've added a pier.</p>
-<p>Although it's not visible by default in the editor, the actual internal tag used within OpenStreetMap is "<a href="http://wiki.openstreetmap.org/wiki/Pier">man_made=pier</a>". You can see that on the browse page for the one <a href="http://www.openstreetmap.org/way/219418350">just to the north</a> of your new one.</p>
+<p>Although it's not visible by default in the editor, the actual internal tag used within OpenStreetMap is "<a href="https://wiki.openstreetmap.org/wiki/Pier">man_made=pier</a>". You can see that on the browse page for the one <a href="https://www.openstreetmap.org/way/219418350">just to the north</a> of your new one.</p>
 <p>(I'm guessing which are your edits based on the fact that there have only been two recent edits in Belize and only one of those added a pier).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -180,12 +180,12 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the osm pier tag <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier</a></p>
+<p>See the osm pier tag <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpier</a></p>
 <p>Very small piers as shown in josm below are barely discernible on the main osm map</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm_1.png" alt="josm view" /> <img src="http://help.openstreetmap.org/upfiles/osm_3.png" alt="osm" /></p>
+<p><img src="/upfiles/josm_1.png" alt="josm view" /> <img src="/upfiles/osm_3.png" alt="osm" /></p>
 <p>but larger structures appear ok</p>
-<p><img src="http://help.openstreetmap.org/upfiles/larger_1.png" alt="alt text" /> <img src="http://help.openstreetmap.org/upfiles/brighton_2.png" alt="alt text" /></p>
-<p>Check tags on <a href="http://www.openstreetmap.org/search?query=pier#map=17/50.81690/-0.13688">Brighton Pier</a> <img src="http://help.openstreetmap.org/upfiles/tags_2.png" alt="alt text" /></p>
+<p><img src="/upfiles/larger_1.png" alt="alt text" /> <img src="/upfiles/brighton_2.png" alt="alt text" /></p>
+<p>Check tags on <a href="https://www.openstreetmap.org/search?query=pier#map=17/50.81690/-0.13688">Brighton Pier</a> <img src="/upfiles/tags_2.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

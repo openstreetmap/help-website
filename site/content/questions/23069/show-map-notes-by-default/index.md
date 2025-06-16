@@ -120,7 +120,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is not a complete solution, but if you usually visit the OpenStreetMap website by clicking on a bookmark, then you can add the notes layer in the URL like this:</p>
-<p><a href="http://www.openstreetmap.org/?lat=59.277&amp;lon=17.662&amp;zoom=9&amp;layers=MN">http://www.openstreetmap.org/?lat=59.277&amp;lon=17.662&amp;zoom=9&amp;layers=MN</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=59.277&amp;lon=17.662&amp;zoom=9&amp;layers=MN">https://www.openstreetmap.org/?lat=59.277&amp;lon=17.662&amp;zoom=9&amp;layers=MN</a></p>
 <p>The "N" at the end turns on the notes layer.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A more versatile bookmarking option than the <code>layers=</code> parameter is to add <code>notes=yes</code>, e.g. <a href="http://www.openstreetmap.org/?notes=yes">http://www.openstreetmap.org/?notes=yes</a> -- this will retain the previous view and tiles/layer source (which I think is set by cookies).</p>
+<p>A more versatile bookmarking option than the <code>layers=</code> parameter is to add <code>notes=yes</code>, e.g. <a href="https://www.openstreetmap.org/?notes=yes">https://www.openstreetmap.org/?notes=yes</a> -- this will retain the previous view and tiles/layer source (which I think is set by cookies).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -222,7 +222,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe you should open such a feature request at one of the bugtracker systems used by the OSM maintainers:</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Bugs">wiki/Bugs</a> ... use your OSM account name and password for the TRAC system mentioned there ans choose component "website" or similar.</p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Bugs">wiki/Bugs</a> ... use your OSM account name and password for the TRAC system mentioned there ans choose component "website" or similar.</p>
 <p>Also found <a href="https://github.com/openstreetmap/openstreetmap-website/issues">github.com/openstreetmap/openstreetmap-website/issues</a> (will need a github account) which is NOT listet in the OSM wiki ... shame on us ...</p>
 </div>
 <div class="answer-controls post-controls">

@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These Q and As should help <a href="http://help.openstreetmap.org/questions/3785/osm-on-garmin">http://help.openstreetmap.org/questions/3785/osm-on-garmin</a> <a href="http://help.openstreetmap.org/questions/12666/osm-on-garmin-nuvi-205">http://help.openstreetmap.org/questions/12666/osm-on-garmin-nuvi-205</a></p>
+<p>These Q and As should help <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a> <a href="/questions/12666/osm-on-garmin-nuvi-205">https://help.openstreetmap.org/questions/12666/osm-on-garmin-nuvi-205</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

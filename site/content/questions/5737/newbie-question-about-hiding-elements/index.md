@@ -151,7 +151,7 @@ osqa_accepted = false
 <div id="post-13059-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can also generate your own tiles with Maperitive if you wanted to upload those to your site. You'd need some HTML to display them, perhaps based on my example here: <a href="http://wiki.openstreetmap.org/wiki/User:EdLoach#Using_Maperitive_Tiles">http://wiki.openstreetmap.org/wiki/User:EdLoach#Using_Maperitive_Tiles</a></p>
+<p>You can also generate your own tiles with Maperitive if you wanted to upload those to your site. You'd need some HTML to display them, perhaps based on my example here: <a href="https://wiki.openstreetmap.org/wiki/User:EdLoach#Using_Maperitive_Tiles">https://wiki.openstreetmap.org/wiki/User:EdLoach#Using_Maperitive_Tiles</a></p>
 </div>
 <div id="comment-13059-info" class="comment-info">
 <span class="comment-age">(29 May '12, 11:45)</span> <span class="comment-user userinfo">EdLoach ♦</span>

@@ -86,7 +86,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>See my answer <a href="https://help.openstreetmap.org/questions/6589/how-do-i-add-a-street">https://help.openstreetmap.org/questions/6589/how-do-i-add-a-street</a></p>
+<p>See my answer <a href="/questions/6589/how-do-i-add-a-street">https://help.openstreetmap.org/questions/6589/how-do-i-add-a-street</a></p>
 </div>
 <div id="comment-44339-info" class="comment-info">
 <span class="comment-age">(22 Jul '15, 10:19)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -123,7 +123,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Have a look at the OSM wiki about the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p>Have a look at the OSM wiki about the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 <p>or <a href="http://learnosm.org">http://learnosm.org</a></p>
 </div>
 <div id="comment-44366-info" class="comment-info">
@@ -135,7 +135,7 @@ osqa_accepted = true
 <div id="post-44557-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Many new users expect or hope that a trace could automatically become a road or a path but human input is needed to tidy trace, join the nodes and decide the type of road or path. I have used the trace you uploaded, <a href="http://www.openstreetmap.org/user/ZoomBali/traces">http://www.openstreetmap.org/user/ZoomBali/traces</a> to map the missing unknown road. which you (Xavier) has now named. happy mapping one step at a time!</p>
+<p>Many new users expect or hope that a trace could automatically become a road or a path but human input is needed to tidy trace, join the nodes and decide the type of road or path. I have used the trace you uploaded, <a href="https://www.openstreetmap.org/user/ZoomBali/traces">https://www.openstreetmap.org/user/ZoomBali/traces</a> to map the missing unknown road. which you (Xavier) has now named. happy mapping one step at a time!</p>
 </div>
 <div id="comment-44557-info" class="comment-info">
 <span class="comment-age">(31 Jul '15, 05:41)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -225,7 +225,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>There are several Android &amp; iPhone apps for collecting GPS traces, and also for directly editing OSM data: notably Vespucci and OSMAnd. There is far more information on the wiki( Android: <a href="http://wiki.openstreetmap.org/wiki/Android;">http://wiki.openstreetmap.org/wiki/Android;</a> iOS: <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS).">http://wiki.openstreetmap.org/wiki/Apple_iOS).</a> I would also suggest looking at Mapillary for collecting street level images which can be used for OSM mapping: this may be the simple way to start as the sequences provide a GPS trace too.</p>
+<p>There are several Android &amp; iPhone apps for collecting GPS traces, and also for directly editing OSM data: notably Vespucci and OSMAnd. There is far more information on the wiki( Android: <a href="https://wiki.openstreetmap.org/wiki/Android;">https://wiki.openstreetmap.org/wiki/Android;</a> iOS: <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS).">https://wiki.openstreetmap.org/wiki/Apple_iOS).</a> I would also suggest looking at Mapillary for collecting street level images which can be used for OSM mapping: this may be the simple way to start as the sequences provide a GPS trace too.</p>
 </div>
 <div id="comment-44321-info" class="comment-info">
 <span class="comment-age">(21 Jul '15, 14:57)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -267,7 +267,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/potlatch_edit_in_Bali_fVmGtLy.JPG" alt="alt text" /><br />
+<p><img src="/upfiles/potlatch_edit_in_Bali_fVmGtLy.JPG" alt="alt text" /><br />
 This is an illustration of Potlatch2. The cyan line is your trace. yellow way is the bit i mapped, note Bing looks OK to map from. note i used the gpx to get the check position of street and the aerial image to map the shape of road as a GPX will have faults.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -291,7 +291,7 @@ This is an illustration of Potlatch2. The cyan line is your trace. yellow way is
 <div id="post-44558-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/362045737">http://www.openstreetmap.org/way/362045737</a></p>
+<p><a href="https://www.openstreetmap.org/way/362045737">https://www.openstreetmap.org/way/362045737</a></p>
 </div>
 <div id="comment-44558-info" class="comment-info">
 <span class="comment-age">(31 Jul '15, 05:46)</span> <span class="comment-user userinfo">andy mackey</span>

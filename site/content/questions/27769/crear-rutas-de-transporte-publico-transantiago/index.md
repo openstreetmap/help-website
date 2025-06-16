@@ -113,7 +113,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>La pagina <a href="http://wiki.openstreetmap.org/wiki/Transporte_público">transporte público</a> en español todavía no la hay en la wiki. Pero la puedes leer <a href="http://wiki.openstreetmap.org/wiki/Public_transport">en ingles</a>, si quieres.</p>
+<p>La pagina <a href="https://wiki.openstreetmap.org/wiki/Transporte_público">transporte público</a> en español todavía no la hay en la wiki. Pero la puedes leer <a href="https://wiki.openstreetmap.org/wiki/Public_transport">en ingles</a>, si quieres.</p>
 <p>Si tienes dudas, pregunta.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -164,7 +164,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ahora acabo de traducir una parte de la página <a href="http://wiki.openstreetmap.org/wiki/ES:Buses">Buses</a> en español. Aparentemente hay más de un método. Tratá de que usar el mismo método que usaron para el recorrido de la 503, para ser consistente.</p>
+<p>Ahora acabo de traducir una parte de la página <a href="https://wiki.openstreetmap.org/wiki/ES:Buses">Buses</a> en español. Aparentemente hay más de un método. Tratá de que usar el mismo método que usaron para el recorrido de la 503, para ser consistente.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

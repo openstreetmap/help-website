@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I'm not sure why my question was ignored here. Maybe I asked it wrong.</p>
 <p>I need a GPX file of a route I would like to ride on my motorcycle, which I use MotionX for. I want a GPS trace of a specific road, and only that road, so I can import it into the app.</p>
 <p>I noticed that the "relation" of the Blue Ridge Parkway:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/55450">http://www.openstreetmap.org/browse/relation/55450</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/55450">https://www.openstreetmap.org/browse/relation/55450</a></p>
 <p>when I click "view relation on a larger map" I get a nice blue line, which I would like to export as a GPX. I don't care HOW I get the GPX, I just want the same thing as a GPX. How do I do this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

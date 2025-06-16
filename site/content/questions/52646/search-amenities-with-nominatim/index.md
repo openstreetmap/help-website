@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am looking for a possibility to query for places like restaurants, pubs etc in the suroundings of a given address.</p>
-<p>Unfortunately I'm a bit confused about the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim documentation</a>: It is written that there are special keywords like pub or restaurant but I can not find how to actually use them.</p>
+<p>Unfortunately I'm a bit confused about the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim documentation</a>: It is written that there are special keywords like pub or restaurant but I can not find how to actually use them.</p>
 <p>Can you help me and give an example how to find all restaurant 1km within a given address?</p>
 <p>Thanks!</p>
 </div>
@@ -64,7 +64,7 @@ osqa_accepted = true
 <div id="post-68211-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>May be overpass-turbo is more suitable for your task? See <a href="https://help.openstreetmap.org/questions/20616/how-to-find-a-nearest-toilet-in-openstreetmap/20633">https://help.openstreetmap.org/questions/20616/how-to-find-a-nearest-toilet-in-openstreetmap/20633</a></p>
+<p>May be overpass-turbo is more suitable for your task? See <a href="/questions/20616/how-to-find-a-nearest-toilet-in-openstreetmap/20633">https://help.openstreetmap.org/questions/20616/how-to-find-a-nearest-toilet-in-openstreetmap/20633</a></p>
 </div>
 <div id="comment-68211-info" class="comment-info">
 <span class="comment-age">(01 Mar '19, 20:26)</span> <span class="comment-user userinfo">Mappist</span>

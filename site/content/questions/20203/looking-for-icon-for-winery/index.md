@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I think there are a lot of tourist interested in that kind of tourism, to visit wineries along the journey.</p>
 <p>Is there any icon or is it possible to insert a new one for it by the management of OSM to be used of us mappers?</p>
 <p>Thanks very much and hope to hear from you soon. Katrin of simply walter</p>
-<p>Update for clarification: here <a href="http://www.openstreetmap.org/edit">http://www.openstreetmap.org/edit</a> (Potlatch 2 editor) I can't find an icon for winery</p>
+<p>Update for clarification: here <a href="https://www.openstreetmap.org/edit">https://www.openstreetmap.org/edit</a> (Potlatch 2 editor) I can't find an icon for winery</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-icon" rel="tag" title="see questions tagged &#39;icon&#39;">icon</span> <span class="post-tag tag-link-winery" rel="tag" title="see questions tagged &#39;winery&#39;">winery</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>
@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I cannot find an icon for winery either, but there are several mapped as a nominatim search reveals. You could use a polygon for the area or buildings like this one, as I assume you know. <a href="http://www.openstreetmap.org/?lat=-34.019148&amp;lon=18.802749&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-34.019148&amp;lon=18.802749&amp;zoom=18&amp;layers=M</a></p>
+<p>I cannot find an icon for winery either, but there are several mapped as a nominatim search reveals. You could use a polygon for the area or buildings like this one, as I assume you know. <a href="https://www.openstreetmap.org/?lat=-34.019148&amp;lon=18.802749&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-34.019148&amp;lon=18.802749&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -225,7 +225,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I have had a quick look at this and you may be able to suggest a new icon, sorry I'm short of time and haven't checked it out.http://wiki.openstreetmap.org/wiki/Map_Icons</p>
+<p>I have had a quick look at this and you may be able to suggest a new icon, sorry I'm short of time and haven't checked it out.https://wiki.openstreetmap.org/wiki/Map_Icons</p>
 </div>
 <div id="comment-20211-info" class="comment-info">
 <span class="comment-age">(24 Feb '13, 16:33)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -237,7 +237,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Looking in other questions and answers I've found this one: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Winery">http://wiki.openstreetmap.org/wiki/Proposed_features/Winery</a> but I did'nt understand it yet ... because I never insert something in a map yet (I registered only some hours ago). Maybe I have to try it. Or is here someone, how can explane me it in German or Italian? Nice Sunday-evening to all, K</p>
+<p>Looking in other questions and answers I've found this one: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Winery">https://wiki.openstreetmap.org/wiki/Proposed_features/Winery</a> but I did'nt understand it yet ... because I never insert something in a map yet (I registered only some hours ago). Maybe I have to try it. Or is here someone, how can explane me it in German or Italian? Nice Sunday-evening to all, K</p>
 </div>
 <div id="comment-20212-info" class="comment-info">
 <span class="comment-age">(24 Feb '13, 16:37)</span> <span class="comment-user userinfo">simply walter</span>
@@ -261,7 +261,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>excuse aseere14c26 I'm new here :O +++ thanks to Edloach and Andy M. +++ here <a href="http://www.openstreetmap.org/edit">http://www.openstreetmap.org/edit</a> I can't find an icon for winery (I'am simply waLter. Walter is my surname. simply wine is maybe better then simply water ;-))</p>
+<p>excuse aseere14c26 I'm new here :O +++ thanks to Edloach and Andy M. +++ here <a href="https://www.openstreetmap.org/edit">https://www.openstreetmap.org/edit</a> I can't find an icon for winery (I'am simply waLter. Walter is my surname. simply wine is maybe better then simply water ;-))</p>
 </div>
 <div id="comment-20219-info" class="comment-info">
 <span class="comment-age">(24 Feb '13, 18:00)</span> <span class="comment-user userinfo">simply walter</span>

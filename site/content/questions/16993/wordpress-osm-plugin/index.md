@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Just been tweaking our docs regarding wordpress and wordpress plugins: <a href="http://wiki.openstreetmap.org/wiki/Wordpress">http://wiki.openstreetmap.org/wiki/Wordpress</a> I guess you're referring to the Fotomobil.at 'OSM' plugin. There are several other options. This is just one plugin by one developer. Although they called it the "OSM" plugin. It's not an "official" plugin from OpenStreetMap. I will try to reach the developers and get them to answer your question</p>
+<p>Just been tweaking our docs regarding wordpress and wordpress plugins: <a href="https://wiki.openstreetmap.org/wiki/Wordpress">https://wiki.openstreetmap.org/wiki/Wordpress</a> I guess you're referring to the Fotomobil.at 'OSM' plugin. There are several other options. This is just one plugin by one developer. Although they called it the "OSM" plugin. It's not an "official" plugin from OpenStreetMap. I will try to reach the developers and get them to answer your question</p>
 </div>
 <div id="comment-17060-info" class="comment-info">
 <span class="comment-age">(21 Oct '12, 01:44)</span> <span class="comment-user userinfo">Harry Wood</span>

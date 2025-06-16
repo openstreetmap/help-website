@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>To get an estimate of the number of tiles you need to cover a state, go to map.geofabrik.de and activate the "tile coordinates" overlay (from the layer switcher in the top right corner of the map). Zoom in on the state you're interested in. You'll get something like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/tiles.png" alt="tiles colorado" /></p>
+<p><img src="/upfiles/tiles.png" alt="tiles colorado" /></p>
 <p>So, Colorado for example has about one and half tiles on zoom level 6. The number of tiles quadruples for each zoom level, so you are looking at...</p>
 <ul>
 <li>1.5 tiles on z6</li>

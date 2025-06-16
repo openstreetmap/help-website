@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi All,</p>
-<p>I'm trying to get tile coordinates of lat/lon points on various zoom level maps using the code shown <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#lon.2Flat_to_tile_numbers" title="here">in the OSM wiki</a>. I started testing with the following python code from the OSM wiki:</p>
+<p>I'm trying to get tile coordinates of lat/lon points on various zoom level maps using the code shown <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#lon.2Flat_to_tile_numbers" title="here">in the OSM wiki</a>. I started testing with the following python code from the OSM wiki:</p>
 <p>-- code ------------------</p>
 <pre><code>import math
 &#10;def deg2num(latdeg, londeg, zoom):  

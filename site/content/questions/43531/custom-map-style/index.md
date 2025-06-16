@@ -113,9 +113,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It sounds like you want to <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">set up your own tileserver</a>. You don't have to use MapBox, if you feel up to it, you can install the software on your own machine. Another option is to use desktop software like <a href="http://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a>. But that will not produce an interactive map.</p>
+<p>It sounds like you want to <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">set up your own tileserver</a>. You don't have to use MapBox, if you feel up to it, you can install the software on your own machine. Another option is to use desktop software like <a href="https://wiki.openstreetmap.org/wiki/Merkaartor">Merkaartor</a>. But that will not produce an interactive map.</p>
 <p>If you want something interactive, you'll have to process the OSM data to get what you want, then you can use something like <a href="http://leafletjs.com/">Leaflet</a> to make an interactive map. It really depends on what you want to do, and what sort of "interactivity" you want.</p>
-<p>However all this could be too complicated if you're not a programmer. <a href="http://wiki.openstreetmap.org/wiki/UMap">uMap</a> is another way to create an interactive web map</p>
+<p>However all this could be too complicated if you're not a programmer. <a href="https://wiki.openstreetmap.org/wiki/UMap">uMap</a> is another way to create an interactive web map</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,11 +110,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is no straightforward way for such a situation. Of course you can start right now and already create the new <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Bus_routes_.28also_trolley_bus.29">bus route relations</a> and add all related streets and the necessary tags. But how to mark these relations as not yet valid?</p>
+<p>There is no straightforward way for such a situation. Of course you can start right now and already create the new <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Bus_routes_.28also_trolley_bus.29">bus route relations</a> and add all related streets and the necessary tags. But how to mark these relations as not yet valid?</p>
 <ul>
-<li>According to the <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Tags">relation</a> wiki page you can add the <em>state=proposed</em> tag. Does any tool handle this correctly? If not it's the tool's fault, but still annoying.</li>
+<li>According to the <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Tags">relation</a> wiki page you can add the <em>state=proposed</em> tag. Does any tool handle this correctly? If not it's the tool's fault, but still annoying.</li>
 <li>You could leave out important tags, for example the <em>route</em> tag so that the route won't get displayed anywhere. But then quality assurance tools will complain about the relation being invalid and other users may add the missing tags. Better add a <em>note</em> tag explaining the situation.</li>
-<li>You could add a <a href="http://wiki.openstreetmap.org/wiki/Key:start_date">start_date=*</a> but I also doubt any tool will handle this correctly.</li>
+<li>You could add a <a href="https://wiki.openstreetmap.org/wiki/Key:start_date">start_date=*</a> but I also doubt any tool will handle this correctly.</li>
 <li>You could create/update the relations now and upload them later, but this will most likely lead to painful conflicts as the underlaying data can change anytime.</li>
 </ul>
 <p>I suggest using the <em>state</em> tag as it fits best and create bug reports for any tool which doesn't handle it correctly.</p>
@@ -198,8 +198,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>One can use JOSM to create/update the relations and save the edits to your local computer as an OSM change xml file. And then attempt to upload it later and sort out any conflicts...</p>
-<p><a href="https://help.openstreetmap.org/questions/4357/resolving-conflicts">https://help.openstreetmap.org/questions/4357/resolving-conflicts</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing">http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing</a> has notes about resolving conflicts.</p>
+<p><a href="/questions/4357/resolving-conflicts">https://help.openstreetmap.org/questions/4357/resolving-conflicts</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing">https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing</a> has notes about resolving conflicts.</p>
 <p>I can't say I've had any experience with it so I don't know how easy/worthwhile to do changes in advance.</p>
 <p>So there is a risk that any 'upfront' editing will be for nothing :(</p>
 <p>Conflicts only arise on the version numbers of the objects changed, so for example if I add some POIs in the area that won't effect your work, but if someone changes the actual objects you've edited - such as roads (which doesn't happen too much in Portsmouth area these days) then a conflict will arise.</p>

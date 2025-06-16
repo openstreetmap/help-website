@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "&quot;bar near moses lake, washington&quot; brings 0 results in search"
-description = '''When I search for &quot;bar near moses lake, washington&quot; on http://www.openstreetmap.org/ it brings no results. Am I using the wrong format?'''
+description = '''When I search for &quot;bar near moses lake, washington&quot; on https://www.openstreetmap.org/ it brings no results. Am I using the wrong format?'''
 date = "2013-11-27T20:58:00Z"
 lastmod = "2013-11-27T21:37:00Z"
 weight = 28556
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When I search for "bar near moses lake, washington" on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> it brings no results. Am I using the wrong format?</p>
+<p>When I search for "bar near moses lake, washington" on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> it brings no results. Am I using the wrong format?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-near" rel="tag" title="see questions tagged &#39;near&#39;">near</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-results" rel="tag" title="see questions tagged &#39;results&#39;">results</span> <span class="post-tag tag-link-format" rel="tag" title="see questions tagged &#39;format&#39;">format</span>

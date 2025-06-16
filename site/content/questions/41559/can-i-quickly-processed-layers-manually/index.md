@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The particular problem that caused across-the-board slow rendering recently has been <a href="https://lists.openstreetmap.org/pipermail/talk/2015-March/072273.html">tracked down</a>.</p>
-<p>A more general answer to "How often does the 'standard' map get updated" is <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>. That describes how to manually override the tile expiry mechanism, but that won't work when everyone is doing it because of a wider problem.</p>
+<p>A more general answer to "How often does the 'standard' map get updated" is <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>. That describes how to manually override the tile expiry mechanism, but that won't work when everyone is doing it because of a wider problem.</p>
 <p>If you can link to the area that you've updated, someone can have a look.</p>
 <p>One more question - which FAQ are you reading? One that mentions www.informationfreeway.org and "Tiles @ home" sounds out of date.</p>
 </div>

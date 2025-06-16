@@ -132,7 +132,7 @@ osqa_accepted = false
 <p>Hi Roy,</p>
 <p>Many GPS receivers can be made to behave like serial devices. They will provide position information every so often, and you can generally configure how often. So yes, you can capture that serial data, and provide it you whatever tools you wish to work with, to consume the data and plot a location on screen, or paper, or whatever your output device of choice might be.<br />
 </p>
-<p>Some navigation software will accept live gps data to place your position on a moving map. Perhaps have a look at <a href="http://wiki.openstreetmap.org/wiki/Gpsdrive">GPSDrive</a> to see if that gives you any ideas.<br />
+<p>Some navigation software will accept live gps data to place your position on a moving map. Perhaps have a look at <a href="https://wiki.openstreetmap.org/wiki/Gpsdrive">GPSDrive</a> to see if that gives you any ideas.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

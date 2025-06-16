@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I haves successfully built my tile server using the following <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">link</a> for UK. Now I need the my server to have the data of the entire planet. I was wondering how much memory would the database need?</p>
-<p>Also, I saw that the .pfb file for the entire planet is around 50-60GB then why is the disk space required mentioned over 1TB in this <a href="https://help.openstreetmap.org/questions/11949/server-spec-for-running-osm">answer</a> ?</p>
+<p>Also, I saw that the .pfb file for the entire planet is around 50-60GB then why is the disk space required mentioned over 1TB in this <a href="/questions/11949/server-spec-for-running-osm">answer</a> ?</p>
 <p>And how often is it advised to update the server from the OSM server? I see that there are daily, minutely and hourly difference updates. But if I update it once a week would it cost me more(in terms of time and disk space)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

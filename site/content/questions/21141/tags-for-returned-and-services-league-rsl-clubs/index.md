@@ -118,7 +118,7 @@ amenity=pub</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><strong>Edit: I found the answer!</strong> <a href="http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Licensed_Club">http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Licensed_Club</a></p>
+<p><strong>Edit: I found the answer!</strong> <a href="https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Licensed_Club">https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#Licensed_Club</a></p>
 <p><em>Use: amenity=licensed_club</em></p>
 <pre><code>+---------------+--------------------------+
 |     Key       |          Value           |
@@ -212,7 +212,7 @@ amenity=pub</code></pre>
 <div class="answer-body">
 <p>In principle the sensible tagging for these is <code>amenity=social_club</code> (<a href="http://taginfo.openstreetmap.org/tags/amenity=social_club">291 instances</a> on taginfo).</p>
 <p>I presume these clubs are member organisations, even if membership can be obtained at entry. For ones which it is practical for any passer-by the make use of the facilities then as you suggest <code>amenity=pub</code> may be appropriate: although if you do use such tagging, add something else like <code>social_club=yes</code> to show that it is different from a proper pub.</p>
-<p>This type of club is widespread in the UK (Royal British Legion, various forces associations), but I can also think of the Albanian club on Albulastrasse, Zurich, and the <a href="http://taginfo.openstreetmap.org/tags/amenity=social_club">Casa do Benfica</a> nearby on Mürtschenstrasse. Similarly I have mapped a pensioners club in Spain, <a href="http://www.openstreetmap.org/browse/node/643347542/history">Hogar del Pensionista</a> Alcollarin, as a cafe because that seemed to be how it worked.</p>
+<p>This type of club is widespread in the UK (Royal British Legion, various forces associations), but I can also think of the Albanian club on Albulastrasse, Zurich, and the <a href="http://taginfo.openstreetmap.org/tags/amenity=social_club">Casa do Benfica</a> nearby on Mürtschenstrasse. Similarly I have mapped a pensioners club in Spain, <a href="https://www.openstreetmap.org/browse/node/643347542/history">Hogar del Pensionista</a> Alcollarin, as a cafe because that seemed to be how it worked.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

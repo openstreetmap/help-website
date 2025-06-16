@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe a look at the source of <a href="http://wiki.openstreetmap.org/wiki/WIWOSM">WIWOSM</a> can help you.</p>
+<p>Maybe a look at the source of <a href="https://wiki.openstreetmap.org/wiki/WIWOSM">WIWOSM</a> can help you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the top answer to <a href="http://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">this question</a>. Have you already decided which OSM map you're going to use with your eTrex 20 yet (there are many available)?</p>
+<p>Have a look at the top answer to <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">this question</a>. Have you already decided which OSM map you're going to use with your eTrex 20 yet (there are many available)?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -279,7 +279,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at this Question <a href="http://help.openstreetmap.org/questions/3785/osm-on-garmin">http://help.openstreetmap.org/questions/3785/osm-on-garmin</a> in addition some garmins will allow you to choose from several maps in memory. My 1310 will, my etrex vista HCX will only load a map with the specific name mentioned, I think the etrex 20 will allow the selection of a choice of maps, be careful you don't name two the same and then loose one.I would suggest that you could swop SSDs to choose other maps,but only when powered off though or it may reset or damage your unit,Memory cards are the best place to record your track to besides internal memory, as in the Vista a long walk with regular logging will fill the inbuilt memory and according to set-up will stop recording or delete the oldest points. note downloading a GMapsupp zipped file can take 30 minutes or so on my set up so use a quicker connection if available. Good Luck</p>
+<p>Have a look at this Question <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a> in addition some garmins will allow you to choose from several maps in memory. My 1310 will, my etrex vista HCX will only load a map with the specific name mentioned, I think the etrex 20 will allow the selection of a choice of maps, be careful you don't name two the same and then loose one.I would suggest that you could swop SSDs to choose other maps,but only when powered off though or it may reset or damage your unit,Memory cards are the best place to record your track to besides internal memory, as in the Vista a long walk with regular logging will fill the inbuilt memory and according to set-up will stop recording or delete the oldest points. note downloading a GMapsupp zipped file can take 30 minutes or so on my set up so use a quicker connection if available. Good Luck</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

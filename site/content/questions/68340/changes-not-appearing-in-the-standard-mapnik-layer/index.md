@@ -126,7 +126,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are not missing anything, updates can sometimes take long while. This question comes up every few weeks e.g. <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> or <a href="https://help.openstreetmap.org/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker">Why isn't the mapnik map on the website updated quicker?</a> - just be a little patient.</p>
+<p>You are not missing anything, updates can sometimes take long while. This question comes up every few weeks e.g. <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> or <a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker">Why isn't the mapnik map on the website updated quicker?</a> - just be a little patient.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

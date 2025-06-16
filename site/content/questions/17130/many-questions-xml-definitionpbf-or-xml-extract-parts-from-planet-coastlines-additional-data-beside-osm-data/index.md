@@ -154,12 +154,12 @@ WS</code></pre>
 <div class="answer-body">
 <p>Many of the answers I think are on the wiki.</p>
 <ol>
-<li>Does <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML</a> cover things?</li>
+<li>Does <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML</a> cover things?</li>
 <li>The <code>&lt;nd ref="292403538"/&gt;</code> lines should be part of a &lt;way&gt; definition. A way is a sorted list of nodes, and the way can (probably will) have tags with key (k) and value (v). Nearer the start of the file you should find a &lt;node&gt; definition for the node with the relevant reference id, which will also have lat and lon values, version details, and may have tags with k/v properties as well.</li>
-<li>You might find there is an <a href="http://wiki.openstreetmap.org/wiki/Extract">extract</a> for your area of interest already available. If not look at <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> which can cut an area from a larger extract.</li>
+<li>You might find there is an <a href="https://wiki.openstreetmap.org/wiki/Extract">extract</a> for your area of interest already available. If not look at <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> which can cut an area from a larger extract.</li>
 <li>If they are generated at the same time they should hold the same information. I understand working with PBF for many uses is faster, but I think usually when rendering the data is imported into a spatial database rather than being processed directly from the OSM data (whether XML or PBF).</li>
-<li>I think the Coastline files are something Mapnik uses to speed things up. See the bit about the <a href="http://wiki.openstreetmap.org/wiki/Coastline_error_checker">coastline error checker</a>. Ah, and the bit about Rendering on <a href="http://wiki.openstreetmap.org/w/index.php?title=Coastline&amp;oldid=773274">this old edit</a> of the coastline page.</li>
-<li>I think VMAP1 is for vertical elevations. If so then the OSM Mapnik doesn't use it, but if you are writing your own then you might want to use it, or maybe <a href="http://wiki.openstreetmap.org/wiki/SRTM">SRTM</a>. The cyclemap includes contours and hill shading for example and this isn't from the OSM dataset.</li>
+<li>I think the Coastline files are something Mapnik uses to speed things up. See the bit about the <a href="https://wiki.openstreetmap.org/wiki/Coastline_error_checker">coastline error checker</a>. Ah, and the bit about Rendering on <a href="https://wiki.openstreetmap.org/w/index.php?title=Coastline&amp;oldid=773274">this old edit</a> of the coastline page.</li>
+<li>I think VMAP1 is for vertical elevations. If so then the OSM Mapnik doesn't use it, but if you are writing your own then you might want to use it, or maybe <a href="https://wiki.openstreetmap.org/wiki/SRTM">SRTM</a>. The cyclemap includes contours and hill shading for example and this isn't from the OSM dataset.</li>
 <li>Tricky. You might want to also look at the <a href="http://lists.openstreetmap.org/listinfo">mailing lists</a> and <a href="http://irc.openstreetmap.org/">irc channels</a>. My preferences are for email and irc, but also watch the help.osm.org rss feed. The forums as well take up too much of my time so I visit those rarely. Other people are active there though.</li>
 </ol>
 </div>
@@ -223,7 +223,7 @@ WS</code></pre>
 <td><div class="item-right">
 <div class="answer-body">
 <p>(a slightly tangential answer)</p>
-<p>What I'd suggest first is have a go at mapping something local to you and adding it to OSM (using either Potlatch in "advanced" mode so that you can see the tags and node numbers, or JOSM). Then have a go with something that <a href="http://wiki.openstreetmap.org/wiki/Rendering">renders the data</a> (not necessarily a full rendering database). That way you'll get familiar with the way the data is connected, and answers to questions like "what's an 'nd' in a way definition" will reveal themselves.</p>
+<p>What I'd suggest first is have a go at mapping something local to you and adding it to OSM (using either Potlatch in "advanced" mode so that you can see the tags and node numbers, or JOSM). Then have a go with something that <a href="https://wiki.openstreetmap.org/wiki/Rendering">renders the data</a> (not necessarily a full rendering database). That way you'll get familiar with the way the data is connected, and answers to questions like "what's an 'nd' in a way definition" will reveal themselves.</p>
 <p>On the last point, the questions that you're asking might fit here (though better one at a time!) or on the "dev" mailing list, or (with some context in a pastebin that you can refer to) one of the IRC channels. There is a "Development" area of the forum but it's relatively low traffic.</p>
 </div>
 <div class="answer-controls post-controls">

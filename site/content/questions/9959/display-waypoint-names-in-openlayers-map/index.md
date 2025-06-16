@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] display waypoint names in openlayers map"
-description = '''I can easily display a GPX track on an openlayers map using the example code at http://wiki.openstreetmap.org/wiki/Openlayers_Track_example or by using this alternative code I can also display waypoints (but not their names): var myStyleMap = new OpenLayers.StyleMap({&quot;default&quot;: new OpenLayers.Style(...'''
+description = '''I can easily display a GPX track on an openlayers map using the example code at https://wiki.openstreetmap.org/wiki/Openlayers_Track_example or by using this alternative code I can also display waypoints (but not their names): var myStyleMap = new OpenLayers.StyleMap({&quot;default&quot;: new OpenLayers.Style(...'''
 date = "2012-01-14T16:03:00Z"
 lastmod = "2013-03-28T16:57:00Z"
 weight = 9959
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I can easily display a GPX track on an openlayers map using the example code at <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">http://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a></p>
+<p>I can easily display a GPX track on an openlayers map using the example code at <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">https://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a></p>
 <p>or by using this alternative code I can also display waypoints (but not their names):</p>
 <pre><code>var myStyleMap = new OpenLayers.StyleMap({&quot;default&quot;: new OpenLayers.Style({pointRadius: 5, fillColor: &quot;darkred&quot;, strokeColor: &quot;red&quot;,    strokeWidth: 3  })
             });
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-18418-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As far as I'm concerned openlayers is linked with openstreetmap. If you look at the quote above you'll see the link <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">http://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a> The openlayers help is messy and confusing. The first line "How can I add a question to this FAQ?" does nothing to answer the question. Ironically.</p>
+<p>As far as I'm concerned openlayers is linked with openstreetmap. If you look at the quote above you'll see the link <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">https://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a> The openlayers help is messy and confusing. The first line "How can I add a question to this FAQ?" does nothing to answer the question. Ironically.</p>
 </div>
 <div id="comment-18418-info" class="comment-info">
 <span class="comment-age">(13 Dec '12, 15:16)</span> <span class="comment-user userinfo">digby</span>

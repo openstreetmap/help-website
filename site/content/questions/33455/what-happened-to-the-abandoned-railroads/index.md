@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most of the answers to <a href="https://help.openstreetmap.org/questions/31148/railroad-names-dont-show-on-tracks-anymore">your previous question</a> apply here too, I think. For a web-based map, <a href="http://www.openrailwaymap.org/?lang=en&amp;lat=38.40363064120209&amp;lon=-96.17989540100098&amp;zoom=13&amp;style=standard">OpenRailwayMap</a> is probably the best option - is there something that you'd like it to show that it doesn't?<br />
+<p>Most of the answers to <a href="/questions/31148/railroad-names-dont-show-on-tracks-anymore">your previous question</a> apply here too, I think. For a web-based map, <a href="http://www.openrailwaymap.org/?lang=en&amp;lat=38.40363064120209&amp;lon=-96.17989540100098&amp;zoom=13&amp;style=standard">OpenRailwayMap</a> is probably the best option - is there something that you'd like it to show that it doesn't?<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

@@ -88,7 +88,7 @@ osqa_accepted = false
 <div id="post-8935-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>i happen to come across this link <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
+<p>i happen to come across this link <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
 <p>i tried using Alternative tile server from <a href="http://tile.openstreetmap.org/3/2/1.png">http://tile.openstreetmap.org/3/2/1.png</a> to <a href="http://a.tile.openstreetmap.org/3/2/1.png">http://a.tile.openstreetmap.org/3/2/1.png</a> and the code works... i am not sure what is going on....</p>
 <p>why are the same restrictions not applied to <a href="http://a.tile">http://a.tile</a>..... as that of <a href="http://tile">http://tile</a>...</p>
 <p>Any advice?</p>

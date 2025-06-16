@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is it possible to download (archive, API, or whatever) the icon data set (if it is available under an Open Source license of course) which is actually used on <a href="https://www.openstreetmap.org">https://www.openstreetmap.org</a> as we can see some examples here:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_icons.png" alt="Screenshot OSM with plenty of nice icons" /><br />
+<p><img src="/upfiles/osm_icons.png" alt="Screenshot OSM with plenty of nice icons" /><br />
 Source: <a href="https://www.openstreetmap.org/#map=19/55.68783/12.56103">https://www.openstreetmap.org/#map=19/55.68783/12.56103</a></p>
 <p>I'd like to use some on a custom map.</p>
 </div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I've just upgraded JOSM to OpenWebStart version. I'm opening it with the command <code>javaws.exe josm.jnlp</code></p>
 <p>From the main website if I use remote control it loads data correctly into JOSM but I still receive this error:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_kuYx2Xh.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_kuYx2Xh.JPG" alt="alt text" /></p>
 <p>I don't receive it using Potlatch 3. Just me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

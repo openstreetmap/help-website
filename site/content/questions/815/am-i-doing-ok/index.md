@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I'm starting to map my home village.</p>
-<p>When i visualize the map the rendering seems weird. <a href="http://www.openstreetmap.org/?lat=46.6700&amp;lon=-1.311&amp;zoom=18">link to the exact place</a></p>
-<p>Could you please check i'm doing ok ? And for the rest of the mapping i did ? <a href="http://www.openstreetmap.org/?lat=46.6711&amp;lon=-1.2939&amp;zoom=15">link to my awsome village</a></p>
+<p>When i visualize the map the rendering seems weird. <a href="https://www.openstreetmap.org/?lat=46.6700&amp;lon=-1.311&amp;zoom=18">link to the exact place</a></p>
+<p>Could you please check i'm doing ok ? And for the rest of the mapping i did ? <a href="https://www.openstreetmap.org/?lat=46.6711&amp;lon=-1.2939&amp;zoom=15">link to my awsome village</a></p>
 <p>Thanks,</p>
 <p><img src="http://julien.guyonnet.free.fr/download/La_Chaize_Le_Vicomte.png" alt="zoom far" /></p>
 <p>The roundabouts are here...</p>

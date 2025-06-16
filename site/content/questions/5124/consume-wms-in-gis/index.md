@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-5237-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It's confusing the way you refer to this as "the OSM WMS". What is the IP address? Does this service have a better name? It's not listed on this page: <a href="http://wiki.openstreetmap.org/wiki/WMS">http://wiki.openstreetmap.org/wiki/WMS</a> Where did you find this IP address?</p>
+<p>It's confusing the way you refer to this as "the OSM WMS". What is the IP address? Does this service have a better name? It's not listed on this page: <a href="https://wiki.openstreetmap.org/wiki/WMS">https://wiki.openstreetmap.org/wiki/WMS</a> Where did you find this IP address?</p>
 <p>I found reference to it on <a href="http://lists.openstreetmap.org/pipermail/talk-fr/2010-September/026772.html">this French mailing list post</a>. Maybe there's an answer to your question there somewhere</p>
 </div>
 <div id="comment-5237-info" class="comment-info">

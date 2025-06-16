@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nominatim can fetch bboxes. <a href="https://help.openstreetmap.org/questions/25634/is-there-a-way-to-automatically-obtain-a-bbox-for-something-from-osm-or-other-api">Old thread</a>. You can test some limited areas and then build a batch or requests.</p>
+<p>Nominatim can fetch bboxes. <a href="/questions/25634/is-there-a-way-to-automatically-obtain-a-bbox-for-something-from-osm-or-other-api">Old thread</a>. You can test some limited areas and then build a batch or requests.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

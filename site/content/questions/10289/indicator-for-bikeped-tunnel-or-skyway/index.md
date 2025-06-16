@@ -138,7 +138,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just tag the cycleway/footway <a href="http://wiki.openstreetmap.org/wiki/Bicycle">as usual</a>, and add a "<a href="http://wiki.openstreetmap.org/wiki/Tunnel">tunnel</a>/<a href="http://wiki.openstreetmap.org/wiki/Bridge">bridge</a>=yes, layer=1/-1".</p>
+<p>Just tag the cycleway/footway <a href="https://wiki.openstreetmap.org/wiki/Bicycle">as usual</a>, and add a "<a href="https://wiki.openstreetmap.org/wiki/Tunnel">tunnel</a>/<a href="https://wiki.openstreetmap.org/wiki/Bridge">bridge</a>=yes, layer=1/-1".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -199,7 +199,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't think we need icon for them as they show on the map ok. This is a tunnel <a href="http://www.openstreetmap.org/?lat=52.149151&amp;lon=0.12454&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.149151&amp;lon=0.12454&amp;zoom=18&amp;layers=M</a> and this is a bridge <a href="http://www.openstreetmap.org/?lat=52.156688&amp;lon=0.135505&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.156688&amp;lon=0.135505&amp;zoom=18&amp;layers=M</a><br />
+<p>I don't think we need icon for them as they show on the map ok. This is a tunnel <a href="https://www.openstreetmap.org/?lat=52.149151&amp;lon=0.12454&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.149151&amp;lon=0.12454&amp;zoom=18&amp;layers=M</a> and this is a bridge <a href="https://www.openstreetmap.org/?lat=52.156688&amp;lon=0.135505&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.156688&amp;lon=0.135505&amp;zoom=18&amp;layers=M</a><br />
 you can open the editor to see what has been done.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -222,7 +222,7 @@ you can open the editor to see what has been done.</p>
 <div id="post-10329-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is a skyway? or high foot bridge although maybe it should have steps also <a href="http://www.openstreetmap.org/?lat=52.328535&amp;lon=-0.192545&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.328535&amp;lon=-0.192545&amp;zoom=18&amp;layers=M</a></p>
+<p>This is a skyway? or high foot bridge although maybe it should have steps also <a href="https://www.openstreetmap.org/?lat=52.328535&amp;lon=-0.192545&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.328535&amp;lon=-0.192545&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-10329-info" class="comment-info">
 <span class="comment-age">(30 Jan '12, 11:52)</span> <span class="comment-user userinfo">andy mackey</span>

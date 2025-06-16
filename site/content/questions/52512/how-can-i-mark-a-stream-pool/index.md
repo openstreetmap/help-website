@@ -148,7 +148,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>, a tagging proposal for a new value of an existing key seems like an overkill to me. Just add the value with a picture to the <a href="https://wiki.openstreetmap.org/wiki/Key:water">water</a> page on the wiki should be sufficient.</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>, a tagging proposal for a new value of an existing key seems like an overkill to me. Just add the value with a picture to the <a href="https://wiki.openstreetmap.org/wiki/Key:water">water</a> page on the wiki should be sufficient.</p>
 </div>
 <div id="comment-52570-info" class="comment-info">
 <span class="comment-age">(17 Oct '16, 12:47)</span> <span class="comment-user userinfo">escada</span>

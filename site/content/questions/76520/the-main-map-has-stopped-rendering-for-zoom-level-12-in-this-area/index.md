@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There are many edits in this area such as <a href="https://www.openstreetmap.org/changeset/90207780#map=12/26.6846/62.0872">this one</a> (more than one week old) that have not been rendered at zoom level &lt;= 12. Is this an issue/bug? If yes, is this the right place to report such issues?</p>
-<p>I have already read discussions like <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this one</a> talking about tens of minutes wait time to render a tile. Is there any other more recent (or live!) performance number/graph that can be used to get a more accurate estimation of the rendering time? e.g. any of <a href="https://munin.openstreetmap.org/renderd-day.html">the munin graphs</a> ?</p>
+<p>I have already read discussions like <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this one</a> talking about tens of minutes wait time to render a tile. Is there any other more recent (or live!) performance number/graph that can be used to get a more accurate estimation of the rendering time? e.g. any of <a href="https://munin.openstreetmap.org/renderd-day.html">the munin graphs</a> ?</p>
 <p><strong>Update:</strong> Changes in that area are now visible at all zoom levels after almost 4 weeks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

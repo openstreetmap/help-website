@@ -70,7 +70,7 @@ osqa_accepted = true
 <div id="post-68799-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've moved the new question that was "asked" as an answer here to <a href="https://help.openstreetmap.org/questions/68798/how-to-make-a-tile-server-on-my-lan-externally-accessible">https://help.openstreetmap.org/questions/68798/how-to-make-a-tile-server-on-my-lan-externally-accessible</a> .</p>
+<p>I've moved the new question that was "asked" as an answer here to <a href="/questions/68798/how-to-make-a-tile-server-on-my-lan-externally-accessible">https://help.openstreetmap.org/questions/68798/how-to-make-a-tile-server-on-my-lan-externally-accessible</a> .</p>
 </div>
 <div id="comment-68799-info" class="comment-info">
 <span class="comment-age">(15 Apr '19, 16:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

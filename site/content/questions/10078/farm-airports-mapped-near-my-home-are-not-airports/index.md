@@ -150,7 +150,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd probably ask about it on the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us</a> <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a>. At least one airport near you seems to have been created by <a href="http://www.openstreetmap.org/browse/changeset/95394">this changeset</a> which imported lots of USGS GNIS data. See <a href="http://wiki.openstreetmap.org/wiki/USGS_GNIS">this page</a> for more details.</p>
+<p>I'd probably ask about it on the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us</a> <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a>. At least one airport near you seems to have been created by <a href="https://www.openstreetmap.org/browse/changeset/95394">this changeset</a> which imported lots of USGS GNIS data. See <a href="https://wiki.openstreetmap.org/wiki/USGS_GNIS">this page</a> for more details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -200,7 +200,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check out the page on Airports on the wiki <a href="http://wiki.openstreetmap.org/wiki/Airports">http://wiki.openstreetmap.org/wiki/Airports</a>. I suspect it is finding aeroway=aerodrome.</p>
+<p>Check out the page on Airports on the wiki <a href="https://wiki.openstreetmap.org/wiki/Airports">https://wiki.openstreetmap.org/wiki/Airports</a>. I suspect it is finding aeroway=aerodrome.</p>
 <p>One of the problems is that there is little to differentiate a small dirt strip (assuming it also has aeroway=aerodrome somewhere) from an international airport.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -234,7 +234,7 @@ osqa_accepted = false
 <div id="post-54343-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>On 19 Nov 2012 <a href="http://www.openstreetmap.org/changeset/13927540">changeset 13927540</a> introduced the (undocumented) tag <a href="http://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairstrip">aeroway=airstrip</a> for about 3500 paddocks used as airstrips in New Zealand. This change removed the tag "type=airstrip" and the changeset note say it corrected an error. There are perhaps another 100 uses of the "aeroway=airstrip" tag elsewhere in the world. However this tag now makes up about 1% of all uses of the aeroway key. Most of these tags are nodes.</p>
+<p>On 19 Nov 2012 <a href="https://www.openstreetmap.org/changeset/13927540">changeset 13927540</a> introduced the (undocumented) tag <a href="https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Dairstrip">aeroway=airstrip</a> for about 3500 paddocks used as airstrips in New Zealand. This change removed the tag "type=airstrip" and the changeset note say it corrected an error. There are perhaps another 100 uses of the "aeroway=airstrip" tag elsewhere in the world. However this tag now makes up about 1% of all uses of the aeroway key. Most of these tags are nodes.</p>
 <p>Given the "aeroway=airstrip" tag is already in use it could be used for small agricultural airfields. Such airfields usually do not have an IATA or ICAO code and do not provide any passenger flights nor have related aviation services, such as air traffic control or landing aids. They might have an FAA or similar code.</p>
 </div>
 <div id="comment-54343-info" class="comment-info">
@@ -288,7 +288,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read also the related discussion: <a href="http://help.openstreetmap.org/questions/2220/aerowayaerodrome-also-for-small-airfields">http://help.openstreetmap.org/questions/2220/aerowayaerodrome-also-for-small-airfields</a></p>
+<p>Please read also the related discussion: <a href="/questions/2220/aerowayaerodrome-also-for-small-airfields">https://help.openstreetmap.org/questions/2220/aerowayaerodrome-also-for-small-airfields</a></p>
 <p>Also there there was no consensus reached yet.</p>
 </div>
 <div class="answer-controls post-controls">

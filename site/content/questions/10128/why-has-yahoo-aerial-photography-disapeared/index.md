@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the footnote at the quite visible big yellow strip: <a href="http://wiki.openstreetmap.org/wiki/Yahoo">http://wiki.openstreetmap.org/wiki/Yahoo</a></p>
+<p>See the footnote at the quite visible big yellow strip: <a href="https://wiki.openstreetmap.org/wiki/Yahoo">https://wiki.openstreetmap.org/wiki/Yahoo</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

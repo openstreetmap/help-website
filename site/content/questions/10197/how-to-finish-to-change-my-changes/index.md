@@ -105,9 +105,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's a bit difficult to know what the problem is that you're having. Could you perhaps describe it in a little more detail?</p>
-<p>Maybe you're editing using <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">the online editor</a> and want to know how to save your edits? Maybe you're drawing a way as described <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">here</a> and want to know how to stop when you've got to the end?</p>
-<p>From looking at this cycleway <a href="http://www.openstreetmap.org/browse/way/147161168">here</a> I suspect that it's the latter - and the answer is once you've clicked on the endpoint of the way (in the case of that cycleway it was the road to the left) just press return - that will stop drawing the way.</p>
-<p>There are some handy videos that you might find useful <a href="http://showmedo.com/videotutorials/series?name=mS2P1ZqS6">here</a>, and if you haven't already read it, the main "beginners' guide" is <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">here</a>.</p>
+<p>Maybe you're editing using <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">the online editor</a> and want to know how to save your edits? Maybe you're drawing a way as described <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">here</a> and want to know how to stop when you've got to the end?</p>
+<p>From looking at this cycleway <a href="https://www.openstreetmap.org/browse/way/147161168">here</a> I suspect that it's the latter - and the answer is once you've clicked on the endpoint of the way (in the case of that cycleway it was the road to the left) just press return - that will stop drawing the way.</p>
+<p>There are some handy videos that you might find useful <a href="http://showmedo.com/videotutorials/series?name=mS2P1ZqS6">here</a>, and if you haven't already read it, the main "beginners' guide" is <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

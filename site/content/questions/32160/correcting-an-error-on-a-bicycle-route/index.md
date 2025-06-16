@@ -83,7 +83,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>We offer a "notes" feature that allows you to post hints directly on the map itself:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Notes">http://wiki.openstreetmap.org/wiki/Notes</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Notes">https://wiki.openstreetmap.org/wiki/Notes</a><br />
 But as usually the notes refer to the default map style, you should explain, that your hint is aboout the opencyclemap.</p>
 </div>
 <div id="comment-32166-info" class="comment-info">
@@ -130,7 +130,7 @@ But as usually the notes refer to the default map style, you should explain, tha
 1
 </div>
 <div class="comment-text">
-<p>He seems to be talking about <a href="http://www.openstreetmap.org/#map=13/49.6283/8.8045&amp;layers=CN">this area</a>. There are indeed bicycle routes with several gaps.</p>
+<p>He seems to be talking about <a href="https://www.openstreetmap.org/#map=13/49.6283/8.8045&amp;layers=CN">this area</a>. There are indeed bicycle routes with several gaps.</p>
 </div>
 <div id="comment-32311-info" class="comment-info">
 <span class="comment-age">(11 Apr '14, 21:27)</span> <span class="comment-user userinfo">scai ♦</span>

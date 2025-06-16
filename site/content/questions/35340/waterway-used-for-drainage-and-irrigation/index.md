@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's better not to use a semi-colon (;) separator in the value tag of waterways, see <a href="http://wiki.openstreetmap.org/wiki/Semi-colon_value_separator#When_NOT_to_use_a_semi-colon_value_separator">http://wiki.openstreetmap.org/wiki/Semi-colon_value_separator#When_NOT_to_use_a_semi-colon_value_separator</a></p>
+<p>It's better not to use a semi-colon (;) separator in the value tag of waterways, see <a href="https://wiki.openstreetmap.org/wiki/Semi-colon_value_separator#When_NOT_to_use_a_semi-colon_value_separator">https://wiki.openstreetmap.org/wiki/Semi-colon_value_separator#When_NOT_to_use_a_semi-colon_value_separator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ osqa_accepted = false
 <pre><code>waterway=canal
 canal:irrigation=yes
 canal:drain=yes</code></pre>
-<p>or, taking inspiration by <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/service:bicycle">service:bicycle</a> something like this:</p>
+<p>or, taking inspiration by <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/service:bicycle">service:bicycle</a> something like this:</p>
 <pre><code>waterway=canal
 service:canal:irrigation=yes
 service:canal:drain=yes</code></pre>
@@ -199,7 +199,7 @@ service:canal:drain=yes</code></pre>
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think a waterway which is used both for irrigation and for drainage is well described by waterway=canal;drain<br />
-<a href="http://wiki.openstreetmap.org/wiki/Key:waterway">Key:waterway</a> notes that a canal is an artificial open waterway used for transportation, waterpower, <strong>or</strong> irrigation. (my emphasis)</p>
+<a href="https://wiki.openstreetmap.org/wiki/Key:waterway">Key:waterway</a> notes that a canal is an artificial open waterway used for transportation, waterpower, <strong>or</strong> irrigation. (my emphasis)</p>
 <p>Regional differences seem to cloud the issue as many consider that a canal implies being navigable by boats, though where live this would not necessarily be implied for a canal.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-47278-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For reference: <a href="http://www.openstreetmap.org/way/387430543">http://www.openstreetmap.org/way/387430543</a> That hotel is actually in Jackson, PA, but it doesn't show up when searching for "hotels in Jackson, PA" either.</p>
+<p>For reference: <a href="https://www.openstreetmap.org/way/387430543">https://www.openstreetmap.org/way/387430543</a> That hotel is actually in Jackson, PA, but it doesn't show up when searching for "hotels in Jackson, PA" either.</p>
 </div>
 <div id="comment-47278-info" class="comment-info">
 <span class="comment-age">(24 Dec '15, 21:30)</span> <span class="comment-user userinfo">alester</span>
@@ -95,7 +95,7 @@ osqa_accepted = false
 <div id="post-47279-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Well, here's one right in the heart of Erie, PA: <a href="http://www.openstreetmap.org/way/387545567">http://www.openstreetmap.org/way/387545567</a> Looking for 'Rodeway Inn, Erie, PA', no problem. But look for 'hotel, Erie, PA': nothing either.</p>
+<p>Well, here's one right in the heart of Erie, PA: <a href="https://www.openstreetmap.org/way/387545567">https://www.openstreetmap.org/way/387545567</a> Looking for 'Rodeway Inn, Erie, PA', no problem. But look for 'hotel, Erie, PA': nothing either.</p>
 </div>
 <div id="comment-47279-info" class="comment-info">
 <span class="comment-age">(24 Dec '15, 21:39)</span> <span class="comment-user userinfo">GoWestTravel</span>

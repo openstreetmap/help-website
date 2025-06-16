@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is not ideal, but I'm tempted to use <a href="http://wiki.openstreetmap.org/wiki/Historic">historic</a> for that. <a href="http://taginfo.openstreetmap.org/keys/historic:natural?filter=all#values">These tags</a> seem to have tried to tackle a similar issue. If this forest has an official "ancient" status, consider historic=heritage with the appropriate <a href="http://wiki.openstreetmap.org/wiki/Key:heritage">heritage=*</a> value.</p>
+<p>This is not ideal, but I'm tempted to use <a href="https://wiki.openstreetmap.org/wiki/Historic">historic</a> for that. <a href="http://taginfo.openstreetmap.org/keys/historic:natural?filter=all#values">These tags</a> seem to have tried to tackle a similar issue. If this forest has an official "ancient" status, consider historic=heritage with the appropriate <a href="https://wiki.openstreetmap.org/wiki/Key:heritage">heritage=*</a> value.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you consider using <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">natural=wood</a>? Compared to <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a> this tag is used for woodland with no forestry, i.e. without human intervention. Also see <a href="https://help.openstreetmap.org/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood">this question about the difference between landuse=forest and natural=wood</a>.</p>
+<p>Did you consider using <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">natural=wood</a>? Compared to <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a> this tag is used for woodland with no forestry, i.e. without human intervention. Also see <a href="/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood">this question about the difference between landuse=forest and natural=wood</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -218,7 +218,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi pmackay, try to find the age of the forest ead use for instance, start_date=~C13 (ungefähr im 13. Jahrhundert) Read the Wiki about it, <a href="http://wiki.openstreetmap.org/w/index.php?search=start_date&amp;title=Special%3ASearch">http://wiki.openstreetmap.org/w/index.php?search=start_date&amp;title=Special%3ASearch</a></p>
+<p>Hi pmackay, try to find the age of the forest ead use for instance, start_date=~C13 (ungefähr im 13. Jahrhundert) Read the Wiki about it, <a href="https://wiki.openstreetmap.org/w/index.php?search=start_date&amp;title=Special%3ASearch">https://wiki.openstreetmap.org/w/index.php?search=start_date&amp;title=Special%3ASearch</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

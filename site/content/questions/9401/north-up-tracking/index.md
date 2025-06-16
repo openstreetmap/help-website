@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question (http://help.openstreetmap.org/questions/9400/north-up-tracking)" by scai 09 Dec '11, 19:47
+### The question has been closed for the following reason "Duplicate Question (https://help.openstreetmap.org/questions/9400/north-up-tracking)" by scai 09 Dec '11, 19:47
 
 </div>
 

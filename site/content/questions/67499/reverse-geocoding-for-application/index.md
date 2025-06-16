@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-67502-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/67490/price-plan-for-queries">https://help.openstreetmap.org/questions/67490/price-plan-for-queries</a> which is a quite similar question asked just yesterday.</p>
+<p>See <a href="/questions/67490/price-plan-for-queries">https://help.openstreetmap.org/questions/67490/price-plan-for-queries</a> which is a quite similar question asked just yesterday.</p>
 </div>
 <div id="comment-67502-info" class="comment-info">
 <span class="comment-age">(08 Jan '19, 07:57)</span> <span class="comment-user userinfo">scai ♦</span>

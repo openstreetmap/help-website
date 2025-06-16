@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I'm planning on writing a small phone application which will show the users the current street and speed limit, I found that this information is easily accessible on the following link:</p>
 <p><a href="http://overpass-api.de/api/interpreter?data=%5Bout:json%5D;way(around:10,53.6788398,-1.4992124)%5Bmaxspeed%5D;out;">http://overpass-api.de/api/interpreter?data=[out:json];way(around:10,53.6788398,-1.4992124)[maxspeed];out;</a></p>
 <p>But since this will be a real time app and each user will probably ping the server at every 5 seconds, I have concluded that it will be against the current server fair usage limit so I have deployed a local copy to my own server, however I do not want to use the interpreter with Apache I will like to use my own php script which calls osm3s_query but I couldn't find a way to translate above query to work from the command line.</p>
-<p>I have read the documentation found here: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#.22around.22_-_finding_something_near_something_else">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#.22around.22_-_finding_something_near_something_else</a> about the around, but it doesn't give any explanation about how to use it with lat/long and creating a bounding box for this feels like an overkill to me.</p>
+<p>I have read the documentation found here: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#.22around.22_-_finding_something_near_something_else">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#.22around.22_-_finding_something_near_something_else</a> about the around, but it doesn't give any explanation about how to use it with lat/long and creating a bounding box for this feels like an overkill to me.</p>
 <p>As question number 2, is there any way to reduce the deployed osm data? I only need street names and speed limits, I do not need everything else, but I need this for the whole globe, and I need to updated it on daily or weekly basis. Again having a full OSM synced to my server fills a huge overkill.</p>
 <p>Thank you.</p>
 </div>
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Never mind, I found the solution here: <a href="https://help.openstreetmap.org/questions/60210/get-around-ways-more-data">https://help.openstreetmap.org/questions/60210/get-around-ways-more-data</a></p>
+<p>Never mind, I found the solution here: <a href="/questions/60210/get-around-ways-more-data">https://help.openstreetmap.org/questions/60210/get-around-ways-more-data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

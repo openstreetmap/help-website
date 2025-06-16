@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question: http://help.openstreetmap.org/questions/7313/osm-routing" by scai 12 Sep '11, 11:32
+### The question has been closed for the following reason "Duplicate Question: https://help.openstreetmap.org/questions/7313/osm-routing" by scai 12 Sep '11, 11:32
 
 </div>
 
@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes this is possible. The wiki has several pages about <a href="http://wiki.openstreetmap.org/wiki/Routing">routing</a> and a comparison of different <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">web-based</a> and <a href="http://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">offline</a> routers.</p>
+<p>Yes this is possible. The wiki has several pages about <a href="https://wiki.openstreetmap.org/wiki/Routing">routing</a> and a comparison of different <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">web-based</a> and <a href="https://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">offline</a> routers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

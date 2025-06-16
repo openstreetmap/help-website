@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How come the tag &quot;Hessen&quot; is missing"
-description = '''How come the tag &quot;Hessen&quot; is missing at the following view: http://www.openstreetmap.org/?lat=50.26&amp;amp;lon=9.35&amp;amp;zoom=7&amp;amp;layers=M'''
+description = '''How come the tag &quot;Hessen&quot; is missing at the following view: https://www.openstreetmap.org/?lat=50.26&amp;amp;lon=9.35&amp;amp;zoom=7&amp;amp;layers=M'''
 date = "2013-04-22T13:47:00Z"
 lastmod = "2013-04-22T21:35:00Z"
 weight = 21719
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How come the tag "Hessen" is missing at the following view:</p>
-<p><a href="http://www.openstreetmap.org/?lat=50.26&amp;lon=9.35&amp;zoom=7&amp;layers=M">http://www.openstreetmap.org/?lat=50.26&amp;lon=9.35&amp;zoom=7&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=50.26&amp;lon=9.35&amp;zoom=7&amp;layers=M">https://www.openstreetmap.org/?lat=50.26&amp;lon=9.35&amp;zoom=7&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-admin_boundary" rel="tag" title="see questions tagged &#39;admin_boundary&#39;">admin_boundary</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>
@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hesse <a href="http://www.openstreetmap.org/browse/relation/62650">is existing as border</a> (and <a href="http://ra.osmsurround.org/analyzeRelation?relationId=62650">valid/not broken</a>). It is just a problem of the map <span>rendering</span>. Not every name can appear (not enough space), so the renderer has to decide which names to display. One may like the decision or not (otherwise e.g. Gießen would not be displayed or "Hessen" would not be written in the centre). There are some other <span>maps and services</span> based on OSM data, some may display all "Länder" names.</p>
+<p>Hesse <a href="https://www.openstreetmap.org/browse/relation/62650">is existing as border</a> (and <a href="http://ra.osmsurround.org/analyzeRelation?relationId=62650">valid/not broken</a>). It is just a problem of the map <span>rendering</span>. Not every name can appear (not enough space), so the renderer has to decide which names to display. One may like the decision or not (otherwise e.g. Gießen would not be displayed or "Hessen" would not be written in the centre). There are some other <span>maps and services</span> based on OSM data, some may display all "Länder" names.</p>
 <p>Oh, and now I found a good other, answer to a similar question. Check it out: <span>how-country-name-is-selected-and-displayed-at-low-zoom-levels-for-small-countries-for-instance-cyprus</span></p>
 </div>
 <div class="answer-controls post-controls">

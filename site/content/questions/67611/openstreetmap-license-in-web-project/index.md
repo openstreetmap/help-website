@@ -157,7 +157,7 @@ One Answer:
 <div class="answer-body">
 <p>OSM data is free to use for any purpose, including commercial use, use is governed by our distribution licence, the ODbL, see</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></li>
+<li><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence">http://wiki.osmfoundation.org/wiki/Licence</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines">http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines</a></li>
 </ul>

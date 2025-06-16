@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>If you have a square building (equal length sides) that converge at line rather than a point, but it's not a central part of the feature would you call it pyramidal or hipped?</p>
-<p>This is not a satellite<img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-09-06_10-40-43.png" alt="alt text" /> artifact, we have a lot of these in the neighborhood.</p>
+<p>This is not a satellite<img src="/upfiles/Screenshot_2022-09-06_10-40-43.png" alt="alt text" /> artifact, we have a lot of these in the neighborhood.</p>
 <p>Is this a pyramidal or hipped roof?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

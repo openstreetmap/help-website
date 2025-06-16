@@ -138,7 +138,7 @@ One Answer:
 <div class="answer-body">
 <p>I have added <span><code>amenity=toilet</code></span> to tagging and it now works.</p>
 <p><img src="/upfiles/toilet.JPG" alt="I have added amenity=toilet tag" /></p>
-<p>see <a href="http://www.openstreetmap.org/#map=19/43.12691/12.05373">http://www.openstreetmap.org/#map=19/43.12691/12.05373</a></p>
+<p>see <a href="https://www.openstreetmap.org/#map=19/43.12691/12.05373">https://www.openstreetmap.org/#map=19/43.12691/12.05373</a></p>
 <p>In windows7 i had to press F5 a few times to get an update</p>
 <p>happy mapping</p>
 </div>

@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please tell us if you have read this page already:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
 <p>There are some hints about updating Nominatim's database.</p>
 </div>
 <div class="answer-controls post-controls">

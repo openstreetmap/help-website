@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>How can I a add a toilet to a existing restaurant?</p>
-<p><code>amenity=toilets</code> is only for public toilets. On the <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Drestaurant#Toilets.3F">wiki site of restaurants</a> the question is asked too.</p>
+<p><code>amenity=toilets</code> is only for public toilets. On the <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Drestaurant#Toilets.3F">wiki site of restaurants</a> the question is asked too.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-toilet" rel="tag" title="see questions tagged &#39;toilet&#39;">toilet</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-restaurant" rel="tag" title="see questions tagged &#39;restaurant&#39;">restaurant</span>

@@ -140,7 +140,7 @@ One Answer:
 <p>Yup. That was it.</p>
 <pre><code>2020-12-10 08:57:23  Osm2pgsql took 129s (2m 9s) overall.</code></pre>
 <p>Thanks!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture1_ENyfDaB.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture1_ENyfDaB.PNG" alt="alt text" /></p>
 </div>
 <div id="comment-77891-info" class="comment-info">
 <span class="comment-age">(10 Dec '20, 14:05)</span> <span class="comment-user userinfo">AndrewNDeBear</span>

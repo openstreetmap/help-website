@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, When you have the plugin downloaded to JOSM a new option appears in the File Menu of JOSM (Download OSM data continuously). <img src="https://help.openstreetmap.org/upfiles/JOSM.PNG" alt="alt text" /></p>
+<p>Hi, When you have the plugin downloaded to JOSM a new option appears in the File Menu of JOSM (Download OSM data continuously). <img src="/upfiles/JOSM.PNG" alt="alt text" /></p>
 <p>Click the option to turn it off, click it again to turn it on again, alternatively Ctrl+Alt+F1.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Not sure how to fix bridge mapping for side street"
-description = '''Greetings, Fairly new to OSM and I found a bug that I don&#x27;t quite know how to fix. I have been reading about the different ways of mapping a bridge, but I don&#x27;t see what is wrong. Here is the issue: http://www.openstreetmap.org/#map=17/38.93105/-94.64582 Lets say you are leaving Roe Avenue to go wes...'''
+description = '''Greetings, Fairly new to OSM and I found a bug that I don&#x27;t quite know how to fix. I have been reading about the different ways of mapping a bridge, but I don&#x27;t see what is wrong. Here is the issue: https://www.openstreetmap.org/#map=17/38.93105/-94.64582 Lets say you are leaving Roe Avenue to go wes...'''
 date = "2015-09-19T18:34:00Z"
 lastmod = "2015-09-20T15:41:00Z"
 weight = 45401
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Greetings,</p>
 <p>Fairly new to OSM and I found a bug that I don't quite know how to fix. I have been reading about the different ways of mapping a bridge, but I don't see what is wrong.</p>
-<p>Here is the issue: <a href="http://www.openstreetmap.org/#map=17/38.93105/-94.64582">http://www.openstreetmap.org/#map=17/38.93105/-94.64582</a></p>
+<p>Here is the issue: <a href="https://www.openstreetmap.org/#map=17/38.93105/-94.64582">https://www.openstreetmap.org/#map=17/38.93105/-94.64582</a></p>
 <p>Lets say you are leaving Roe Avenue to go west bound on 435. There is a on-ramp that has a divider between the on-ramp and the highway; This is the northern most highway traveling west bound on the map. That on ramp is shown correctly on the map that it goes under Nall Avenue then merges.</p>
 <p>However, if using the route calculation it /really/ wants you to exit at Nall, sit at the light, then merge back onto the on-ramp before merging onto 435.</p>
 <p>It is like it doesn't see and or recognize that instead of taking the right exit, you can (and should!) go straight under the bridge.</p>
@@ -82,7 +82,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/upfiles/OSMScreenshot.png">Sure!</a> Hope this helps.</p>
+<p><span>Sure!</span> Hope this helps.</p>
 <p>Red is the path it takes me (Off the highway, to a light, then back on the highway). Green is the path it should take me.</p>
 <p>Thanks!</p>
 </div>
@@ -107,8 +107,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada"></a><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>: That's a different location, isn't it? <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=38.93251%2C-94.64314%3B38.93097%2C-94.65697#map=17/38.93177/-94.65006">Here</a> is the one from the screenshot and the route seems fine. So the issue is not the data.</p>
-<p><a href="http://help.openstreetmap.org/users/11490/stackkorora"></a><a href="http://help.openstreetmap.org/users/11490/stackkorora">@StackKorora</a>: Which "route calculation" are you talking about? The OSM website? A specific app or device?</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>: That's a different location, isn't it? <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=38.93251%2C-94.64314%3B38.93097%2C-94.65697#map=17/38.93177/-94.65006">Here</a> is the one from the screenshot and the route seems fine. So the issue is not the data.</p>
+<p><a href="https://help.openstreetmap.org/users/11490/stackkorora"></a><a href="https://help.openstreetmap.org/users/11490/stackkorora">@StackKorora</a>: Which "route calculation" are you talking about? The OSM website? A specific app or device?</p>
 </div>
 <div id="comment-45415-info" class="comment-info">
 <span class="comment-age">(20 Sep '15, 09:31)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -119,7 +119,7 @@ osqa_accepted = false
 <div id="post-45417-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, you're right, ti should have been <a href="http://osrm.at/ftE">this</a>. I tried a few in the area and copied the wrong one, sorry</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, you're right, ti should have been <a href="http://osrm.at/ftE">this</a>. I tried a few in the area and copied the wrong one, sorry</p>
 </div>
 <div id="comment-45417-info" class="comment-info">
 <span class="comment-age">(20 Sep '15, 14:43)</span> <span class="comment-user userinfo">escada</span>

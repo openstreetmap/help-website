@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Overbridge linking buildings - how should it be mapped?"
-description = '''This is a totally enclosed overbridge linking 2 buildings on the Waikato Hospital Campus. It crosses over, but does not connect with, Pembroke Street below. http://www.openstreetmap.org/way/354971865 At present it is tagged &#x27;highway=pedestrian&#x27; and &#x27;bridge=yes&#x27; based on its appearance on Bing imager...'''
+description = '''This is a totally enclosed overbridge linking 2 buildings on the Waikato Hospital Campus. It crosses over, but does not connect with, Pembroke Street below. https://www.openstreetmap.org/way/354971865 At present it is tagged &#x27;highway=pedestrian&#x27; and &#x27;bridge=yes&#x27; based on its appearance on Bing imager...'''
 date = "2015-06-28T04:51:00Z"
 lastmod = "2015-06-30T17:40:00Z"
 weight = 43827
@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This is a totally enclosed overbridge linking 2 buildings on the Waikato Hospital Campus. It crosses over, but does not connect with, Pembroke Street below. <a href="http://www.openstreetmap.org/way/354971865">http://www.openstreetmap.org/way/354971865</a></p>
+<p>This is a totally enclosed overbridge linking 2 buildings on the Waikato Hospital Campus. It crosses over, but does not connect with, Pembroke Street below. <a href="https://www.openstreetmap.org/way/354971865">https://www.openstreetmap.org/way/354971865</a></p>
 <p>At present it is tagged 'highway=pedestrian' and 'bridge=yes' based on its appearance on Bing imagery and has given rise to this KeepRight alert <a href="http://keepright.ipax.at/report_map.php?schema=50&amp;error=78138632">http://keepright.ipax.at/report_map.php?schema=50&amp;error=78138632</a> - "way not connected with the rest of the map"</p>
-<p>In my opinion the tag 'highway' isn't the most appropriate and I wonder if the feature would be better drawn as an area (linked to the buildings on either side) and tagged 'building=bridge' and 'layer=1' http://wiki.openstreetmap.org/wiki/Tag:building%3Dbridge</p>
+<p>In my opinion the tag 'highway' isn't the most appropriate and I wonder if the feature would be better drawn as an area (linked to the buildings on either side) and tagged 'building=bridge' and 'layer=1' https://wiki.openstreetmap.org/wiki/Tag:building%3Dbridge</p>
 <p>Advice appreciated please.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ One Answer:
 <li>single way (highway=footway, bridge=yes, level=x, layer=x, covered=yes, ...)</li>
 <li>closed way (building:part=yes, ...)</li>
 </ol>
-<p>The first one is easier and maybe more useful for indoor routing, while the second one is more likely for 3D rendering. For example I took the last one <a href="http://www.openstreetmap.org/way/243021976">here in Rostock</a> or <a href="http://www.openstreetmap.org/way/219515347">here in Schwerin</a> for a similar solid bridge/tunnel.</p>
+<p>The first one is easier and maybe more useful for indoor routing, while the second one is more likely for 3D rendering. For example I took the last one <a href="https://www.openstreetmap.org/way/243021976">here in Rostock</a> or <a href="https://www.openstreetmap.org/way/219515347">here in Schwerin</a> for a similar solid bridge/tunnel.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

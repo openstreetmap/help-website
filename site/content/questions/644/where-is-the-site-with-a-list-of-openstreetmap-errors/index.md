@@ -123,7 +123,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are a few different services that allow you to add bugs, so it's hard to tell which one you were using previously. The most likely answer is that it was <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a></p>
-<p>If that's not the case, then you can look through the <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">list of Quality Assurance tools</a> that we have and see if you can find the one you used previously.</p>
+<p>If that's not the case, then you can look through the <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">list of Quality Assurance tools</a> that we have and see if you can find the one you used previously.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,10 +173,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Andy Allan pointed to the <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">list of Quality Assurance tools</a> that offer various services that allow to report bugs.</p>
+<p>Andy Allan pointed to the <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">list of Quality Assurance tools</a> that offer various services that allow to report bugs.</p>
 <p>I just want to state that based on my own limited experience, these can be recommended:</p>
 <ul>
-<li><a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a> is a nice and easy GUI and, the JOSM editor also features an <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenStreetBugs">integration plugin</a>.</li>
+<li><a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a> is a nice and easy GUI and, the JOSM editor also features an <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenStreetBugs">integration plugin</a>.</li>
 <li>What I find extremly nice done is <a href="http://www.skobbler.co.uk/osmbugs"></a><a href="http://skobbler.net"></a><a href="http://skobbler.net">skobbler.net</a>, which AFAIK integrates with the openstreetbugs database, and has bug reporting integrated in its turn-by-turn navigation. I have not tested their mobile apps though.</li>
 <li>Also worth mentioning: <a href="http://keepright.ipax.at/">keepright.ipax.at</a>, but that doesn't let you report errors, it generates bug reports automatically, similar to the JOSM validator.</li>
 </ul>

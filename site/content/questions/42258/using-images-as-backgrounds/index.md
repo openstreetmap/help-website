@@ -167,7 +167,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, apart from the caveats mentioned, Mapwarper is a fantastic service. If you havent used it before I've created a few videos on the basic task that you can check out here <a href="http://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">http://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands</a></p>
+<p>Hi, apart from the caveats mentioned, Mapwarper is a fantastic service. If you havent used it before I've created a few videos on the basic task that you can check out here <a href="https://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">https://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

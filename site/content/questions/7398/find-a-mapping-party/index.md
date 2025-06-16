@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/">wiki</a> has a list of <a href="http://wiki.openstreetmap.org/wiki/Current_events">current events</a> and there is also a page explaining <a href="http://wiki.openstreetmap.org/wiki/Mapping_Weekend_Howto">how to organize your own mapping party</a>.</p>
+<p>The <a href="https://wiki.openstreetmap.org/">wiki</a> has a list of <a href="https://wiki.openstreetmap.org/wiki/Current_events">current events</a> and there is also a page explaining <a href="https://wiki.openstreetmap.org/wiki/Mapping_Weekend_Howto">how to organize your own mapping party</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In addition to the places already listed, I'd have a look at the "Contact" section on the <a href="http://wiki.openstreetmap.org/wiki/Main_Page">main page</a> of the wiki. There are many country- and region-specific <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a>, and a post there might be the best way to get into contact with local mappers. Also, there are always people around on the #OSM <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC channel</a> (and there's a web interface for that if you don't already have an IRC client).</p>
+<p>In addition to the places already listed, I'd have a look at the "Contact" section on the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">main page</a> of the wiki. There are many country- and region-specific <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a>, and a post there might be the best way to get into contact with local mappers. Also, there are always people around on the #OSM <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC channel</a> (and there's a web interface for that if you don't already have an IRC client).</p>
 <p>You can also, of course, message individual local mappers through the OSM web site.</p>
 </div>
 <div class="answer-controls post-controls">

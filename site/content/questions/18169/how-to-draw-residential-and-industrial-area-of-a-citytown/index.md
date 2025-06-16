@@ -42,9 +42,9 @@ osqa_accepted = false
 <p>Hallo,</p>
 <p>I'm trying to display differentiate symbols between big cities and small town, the filter is based on the place tag and population: For big cities, I would like to display the residential and industrial areas belonging to these cities.</p>
 <p>I do not see how to get all the polygons (tagged with landuse) belonging to a given city.</p>
-<p>Starting from <a href="http://www.openstreetmap.org/browse/node/1559853166">http://www.openstreetmap.org/browse/node/1559853166</a></p>
-<p>I get the boundaries of the city at <a href="http://www.openstreetmap.org/browse/relation/62407">http://www.openstreetmap.org/browse/relation/62407</a></p>
-<p>but not the polygons inside it like this one <a href="http://www.openstreetmap.org/browse/relation/1394163">http://www.openstreetmap.org/browse/relation/1394163</a></p>
+<p>Starting from <a href="https://www.openstreetmap.org/browse/node/1559853166">https://www.openstreetmap.org/browse/node/1559853166</a></p>
+<p>I get the boundaries of the city at <a href="https://www.openstreetmap.org/browse/relation/62407">https://www.openstreetmap.org/browse/relation/62407</a></p>
+<p>but not the polygons inside it like this one <a href="https://www.openstreetmap.org/browse/relation/1394163">https://www.openstreetmap.org/browse/relation/1394163</a></p>
 <p>Any ideas how to get it right?</p>
 <p>regards</p>
 </div>
@@ -116,8 +116,8 @@ One Answer:
 <div class="answer-body">
 <p>As far as I know there is no connection between the unice place node of a city together with its boundary relataion AND any are that cobers a specific landuse.</p>
 <p>So you have to build the connection on your own.</p>
-<p>One possibility to solve this is to use the online service <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass_API</a>.</p>
-<p>There you can query for any kind of OSM objects, either limited by a bounding box OR limited by an area relation. The key parameter is area_query like described here: <a href="https://help.openstreetmap.org/questions/12608/extract-pois-for-a-region">extract-pois-for-a-region</a></p>
+<p>One possibility to solve this is to use the online service <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass_API</a>.</p>
+<p>There you can query for any kind of OSM objects, either limited by a bounding box OR limited by an area relation. The key parameter is area_query like described here: <a href="/questions/12608/extract-pois-for-a-region">extract-pois-for-a-region</a></p>
 <p>Or read all guides and examples about overpass API in the OSM wiki.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -151,7 +151,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>It depends on the size of the area but the Overpass API is usually better suited for large requests than most (if not all) other APIs. You can also increase the timeout as explained in the documentation if the default value is too low. But for really large requests you should better get a <a href="http://wiki.openstreetmap.org/wiki/Extract#Country_and_area_extracts">country or area extract</a>.</p>
+<p>It depends on the size of the area but the Overpass API is usually better suited for large requests than most (if not all) other APIs. You can also increase the timeout as explained in the documentation if the default value is too low. But for really large requests you should better get a <a href="https://wiki.openstreetmap.org/wiki/Extract#Country_and_area_extracts">country or area extract</a>.</p>
 </div>
 <div id="comment-18188-info" class="comment-info">
 <span class="comment-age">(04 Dec '12, 09:42)</span> <span class="comment-user userinfo">scai ♦</span>

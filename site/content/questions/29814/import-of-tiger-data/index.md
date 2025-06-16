@@ -64,8 +64,8 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Please also respect our rules about imports to make sure why our community is skeptical about it:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Automated_Edits">http://wiki.openstreetmap.org/wiki/Automated_Edits</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/TIGER">http://wiki.openstreetmap.org/wiki/TIGER</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Automated_Edits">https://wiki.openstreetmap.org/wiki/Automated_Edits</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/TIGER">https://wiki.openstreetmap.org/wiki/TIGER</a></li>
 </ul>
 </div>
 <div id="comment-29826-info" class="comment-info">

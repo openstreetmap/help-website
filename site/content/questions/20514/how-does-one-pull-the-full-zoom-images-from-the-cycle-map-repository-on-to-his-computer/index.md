@@ -112,10 +112,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First of all, <strong>DON'T EVEN TRY TO DO THIS</strong>. Read the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>.</p>
+<p>First of all, <strong>DON'T EVEN TRY TO DO THIS</strong>. Read the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>.</p>
 <p>Tile scraping imposes a very high load on servers and will result in your IP address being blocked. CycleMap is owned and run by a private individual who may have to meet server costs from his own income.</p>
 <p>Second, if you want a large volume of tiles, you must generate your own, or pay someone for them.</p>
-<p>If, as it appears from my reading of your question, you merely want tiles with contour lines, then it is fairly simple to generate your own (although for the whole world this will take a long time &amp; lots of disk space). <a href="http://wiki.openstreetmap.org/wiki/Srtm">SRTM</a> data can be downloaded and there are many tools for manipulating it.</p>
+<p>If, as it appears from my reading of your question, you merely want tiles with contour lines, then it is fairly simple to generate your own (although for the whole world this will take a long time &amp; lots of disk space). <a href="https://wiki.openstreetmap.org/wiki/Srtm">SRTM</a> data can be downloaded and there are many tools for manipulating it.</p>
 <p>Note that most tiled maps do not render more than a very small fraction of the most detailed tiles.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -148,7 +148,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>A quick look at this table will tell you how many tiles make up the world at each level: <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Zoom_levels.">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Zoom_levels.</a> With 68 700 million tiles at level 18 in a naive implementation you need that many file handles in your system and anywhere from a few hundred bytes / tile. I think you want to think about alternatives.</p>
+<p>A quick look at this table will tell you how many tiles make up the world at each level: <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Zoom_levels.">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Zoom_levels.</a> With 68 700 million tiles at level 18 in a naive implementation you need that many file handles in your system and anywhere from a few hundred bytes / tile. I think you want to think about alternatives.</p>
 </div>
 <div id="comment-20538-info" class="comment-info">
 <span class="comment-age">(06 Mar '13, 17:13)</span> <span class="comment-user userinfo">SK53 ♦</span>

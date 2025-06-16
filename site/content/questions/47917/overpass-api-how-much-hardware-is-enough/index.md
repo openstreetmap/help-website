@@ -44,7 +44,7 @@ osqa_accepted = false
 <pre><code>Name    Data coverage   Endpoint    Version     Attic data  Hardware    Usage policy
 Main Overpass API instance  Global  http://overpass-api.de/api/     0.7.52  Yes     4 physical cores, 32 GB RAM, SSD    Both servers have a total capacity of about 1.000.000 requests per day. You can safely assume that you don&#39;t disturb other users when you do less than 10.000 queries per day or download less than 5 GB data per day.
 Rambler Overpass API instance   Global  http://overpass.osm.rambler.ru/cgi/     0.7.52  Yes     8 cores, 64 GB RAM, hard disks</code></pre>
-<p>Taken from: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">http://wiki.openstreetmap.org/wiki/Overpass_API#Introduction</a></p>
+<p>Taken from: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction</a></p>
 <p>Does anyone have some more specific stats? The queries I'll be making are small 100m bbox queries mostly with around a max of 50,000 concurrent users. Could anyone please advise me?</p>
 <p>Thanks for your time.</p>
 </div>
@@ -96,7 +96,7 @@ Rambler Overpass API instance   Global  http://overpass.osm.rambler.ru/cgi/     
 <div id="post-47924-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11113/gmeister41"></a><a href="http://help.openstreetmap.org/users/11113/gmeister41">@gmeister41</a>: yes, the current answer is not that helpful, I rather mean if the question is the same. If it is, we should close this one and collect more helpful answers over there. :-)</p>
+<p><a href="https://help.openstreetmap.org/users/11113/gmeister41"></a><a href="https://help.openstreetmap.org/users/11113/gmeister41">@gmeister41</a>: yes, the current answer is not that helpful, I rather mean if the question is the same. If it is, we should close this one and collect more helpful answers over there. :-)</p>
 </div>
 <div id="comment-47924-info" class="comment-info">
 <span class="comment-age">(04 Feb '16, 20:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -118,7 +118,7 @@ Rambler Overpass API instance   Global  http://overpass.osm.rambler.ru/cgi/     
 <div id="post-47926-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11113/gmeister41"></a><a href="http://help.openstreetmap.org/users/11113/gmeister41">@gmeister41</a>: right, so - let's focus the collection over there (if you want otherwise, we can keep this one open too...). As a start you could post your finding of the public instance specs as an answer - at least this is a start.</p>
+<p><a href="https://help.openstreetmap.org/users/11113/gmeister41"></a><a href="https://help.openstreetmap.org/users/11113/gmeister41">@gmeister41</a>: right, so - let's focus the collection over there (if you want otherwise, we can keep this one open too...). As a start you could post your finding of the public instance specs as an answer - at least this is a start.</p>
 </div>
 <div id="comment-47926-info" class="comment-info">
 <span class="comment-age">(04 Feb '16, 21:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

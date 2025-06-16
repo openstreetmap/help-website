@@ -109,7 +109,7 @@ osqa_accepted = false
 <div id="post-50932-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12549/aakash002">@aakash002</a>: maybe I could make it a bit clearer for you: The core OpenStreetMap is just a database of the raw geodata. Nearly everything else is from the ecosystem around OpenStreetMap – often it is Free Software. You will find exactly what you are searching for in the OSM ecosystem (see Ed's answer).</p>
+<p><a href="https://help.openstreetmap.org/users/12549/aakash002">@aakash002</a>: maybe I could make it a bit clearer for you: The core OpenStreetMap is just a database of the raw geodata. Nearly everything else is from the ecosystem around OpenStreetMap – often it is Free Software. You will find exactly what you are searching for in the OSM ecosystem (see Ed's answer).</p>
 </div>
 <div id="comment-50932-info" class="comment-info">
 <span class="comment-age">(15 Jul '16, 19:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -163,7 +163,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you looked at all the options listed <a href="http://wiki.openstreetmap.org/wiki/Frameworks#Displaying_interactive_maps">in the wiki</a>?</p>
+<p>Have you looked at all the options listed <a href="https://wiki.openstreetmap.org/wiki/Frameworks#Displaying_interactive_maps">in the wiki</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

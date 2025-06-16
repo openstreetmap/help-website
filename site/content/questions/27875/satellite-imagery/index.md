@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-34926-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hmm, how come the close reason doesn't <strong>hyperlink</strong> to the question this was closed as a dupe of, <a href="https://help.openstreetmap.org/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map">https://help.openstreetmap.org/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map</a>?</p>
+<p>Hmm, how come the close reason doesn't <strong>hyperlink</strong> to the question this was closed as a dupe of, <a href="/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map">https://help.openstreetmap.org/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map</a>?</p>
 </div>
 <div id="comment-34926-info" class="comment-info">
 <span class="comment-age">(15 Jul '14, 19:05)</span> <span class="comment-user userinfo">SamB</span>
@@ -127,13 +127,13 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap does, unfortunately, not offer satellite imagery on the front page map. Our maps are created by volunteers on the ground, and satellite or aerial imagery cannot be created in the same crowd-sourced manner (although <a href="http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">some efforts</a> at a very early and experimental stage exist). It has to be bought at steep prices instead.</p>
+<p>OpenStreetMap does, unfortunately, not offer satellite imagery on the front page map. Our maps are created by volunteers on the ground, and satellite or aerial imagery cannot be created in the same crowd-sourced manner (although <a href="https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">some efforts</a> at a very early and experimental stage exist). It has to be bought at steep prices instead.</p>
 <p>However, there are a few external sites that combine OpenStreetMap maps with commercial satellite imagery. Examples include:</p>
 <ul>
 <li><a href="http://mapbox.com/">http://mapbox.com/</a></li>
 <li><a href="http://open.mapquest.com/">http://open.mapquest.com/</a></li>
 </ul>
-<p>Finally, please be aware that the above is only the case for <em>viewing</em> maps. If you want to <em>edit</em> and improve OpenStreetMap data, you <em>do</em> have access to imagery from other providers such as Bing and <a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">many others</a>. In editors such as iD (which you access by clicking the "Edit" button on osm.org), Bing imagery should be visible in the background by default.</p>
+<p>Finally, please be aware that the above is only the case for <em>viewing</em> maps. If you want to <em>edit</em> and improve OpenStreetMap data, you <em>do</em> have access to imagery from other providers such as Bing and <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">many others</a>. In editors such as iD (which you access by clicking the "Edit" button on osm.org), Bing imagery should be visible in the background by default.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to apply the tag <a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Dcity_gate">historic=city_gate</a> with Vespucci.</p>
+<p>I want to apply the tag <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dcity_gate">historic=city_gate</a> with Vespucci.</p>
 <p>Unfortunately, a search for "city gate" or "city_gate" does not show anything:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20171012-190123.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20171012-190123.png" alt="alt text" /></p>
 <p>What am I doing wrong?</p>
 <p>I am using Vespucci 0.9.9r1300</p>
 </div>

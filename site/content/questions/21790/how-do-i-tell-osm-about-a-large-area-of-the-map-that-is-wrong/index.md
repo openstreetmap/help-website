@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>How can I inform OSM about a map discrepancy (error) so they can update the tiles? For instance if you look at Columbia, SC there is a very large lake called Lake Murray. At zoom level 10 and lower it displays fine. If you zoom in to any levels above 10, the lake disappears and the islands in the lake look like little ponds instead of being green land.</p>
-<p>Here is a permalink to the area. This is level 10 which displays the lake, if you zoom in one more level it disappears: <a href="http://www.openstreetmap.org/?lat=34.111&amp;lon=-81.216&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=34.111&amp;lon=-81.216&amp;zoom=10&amp;layers=M</a></p>
+<p>Here is a permalink to the area. This is level 10 which displays the lake, if you zoom in one more level it disappears: <a href="https://www.openstreetmap.org/?lat=34.111&amp;lon=-81.216&amp;zoom=10&amp;layers=M">https://www.openstreetmap.org/?lat=34.111&amp;lon=-81.216&amp;zoom=10&amp;layers=M</a></p>
 <p>What is the standard way to report issues like this and how long does it typically take to resolve them? (I understand I'm not the only one in the world providing discrepencies, but just curious how long the average turn around time is on issues like this).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One great tool is <a href="http://tools.geofabrik.de/osmi/">OSM Inspector</a>, a QA tool which includes checks for Multipolygon geometry. As you can see at <a href="http://tools.geofabrik.de/osmi/?view=multipolygon&amp;lon=-81.43958&amp;lat=34.05725&amp;zoom=10&amp;opacity=0.62&amp;overlays=ring_not_closed_hull,unconnected_end_nodes">this link</a> (until it gets updated--<a href="http://www.openstreetmap.org/browse/changeset/15852306">I think I corrected the issue</a>) there was a gap in the outer ring of the multipolygon for the lake. Once the tiles get re-rendered, and you refresh your view, it should show correctly.</p>
+<p>One great tool is <a href="http://tools.geofabrik.de/osmi/">OSM Inspector</a>, a QA tool which includes checks for Multipolygon geometry. As you can see at <a href="http://tools.geofabrik.de/osmi/?view=multipolygon&amp;lon=-81.43958&amp;lat=34.05725&amp;zoom=10&amp;opacity=0.62&amp;overlays=ring_not_closed_hull,unconnected_end_nodes">this link</a> (until it gets updated--<a href="https://www.openstreetmap.org/browse/changeset/15852306">I think I corrected the issue</a>) there was a gap in the outer ring of the multipolygon for the lake. Once the tiles get re-rendered, and you refresh your view, it should show correctly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Great questions! OSM Inspector and KeepRight (<a href="http://keepright.ipax.at/)">http://keepright.ipax.at/)</a> are two of the best QA tools, IMO. You can find more on the wiki: <a href="http://wiki.openstreetmap.org/wiki/QA">http://wiki.openstreetmap.org/wiki/QA</a> Info on the xml format is also on the wiki: <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">http://wiki.openstreetmap.org/wiki/OSM_XML</a> To make a changeset, you just need to go to <a href="http://www.openstreetmap.org/,">http://www.openstreetmap.org/,</a> create a user account (sign up link in upper right), login, navigate to where you want to edit, click edit, and create, edit and tag features. Once you click Save, the editing application (default online is Potlatch 2) takes care of the xml, changeset, etc.</p>
+<p>Great questions! OSM Inspector and KeepRight (<a href="http://keepright.ipax.at/)">http://keepright.ipax.at/)</a> are two of the best QA tools, IMO. You can find more on the wiki: <a href="https://wiki.openstreetmap.org/wiki/QA">https://wiki.openstreetmap.org/wiki/QA</a> Info on the xml format is also on the wiki: <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">https://wiki.openstreetmap.org/wiki/OSM_XML</a> To make a changeset, you just need to go to <a href="https://www.openstreetmap.org/,">https://www.openstreetmap.org/,</a> create a user account (sign up link in upper right), login, navigate to where you want to edit, click edit, and create, edit and tag features. Once you click Save, the editing application (default online is Potlatch 2) takes care of the xml, changeset, etc.</p>
 </div>
 <div id="comment-21888-info" class="comment-info">
 <span class="comment-age">(26 Apr '13, 15:14)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -187,7 +187,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>(Although your original issue has already been solved, I wanted to give a general answer to the question of how to tell OSM about issues on the map)</p>
-<p>The best way to tell OpenStreetMap about an area that is wrong is by fixing it your self. Anyone can create an account on OSM.org and click the edit button and start improving the data. As the person who spotted the error, you are probably one of the best qualified to fix the issue with your knowledge about the problem and the local area. Once your changes are saved, they are immediately available to everyone who uses OSM data, so it is also the fastest way to ensure the issue gets resolved. (Although it might <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">take a while for the tiles to get re-rendered</a>).</p>
+<p>The best way to tell OpenStreetMap about an area that is wrong is by fixing it your self. Anyone can create an account on OSM.org and click the edit button and start improving the data. As the person who spotted the error, you are probably one of the best qualified to fix the issue with your knowledge about the problem and the local area. Once your changes are saved, they are immediately available to everyone who uses OSM data, so it is also the fastest way to ensure the issue gets resolved. (Although it might <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">take a while for the tiles to get re-rendered</a>).</p>
 <p>However, despite the effort to improve the editing tools for new users, not everyone might feel comfortable (or currently have the time) to edit the data directly, especially for some of the more complex features (like multi-polygons or other relations). Therefore it is now possible to leave a note on the map for other users or mappers to see. If you zoom in to where there is an issue with the map you can click on "add a note" in the bottom right corner of the page. This allows you to add a note to mappers which will then hopefully see it and fix the issue. Remember, the more precise the note is located and the issue described, the easier it is for someone else to fix the issue and likely the faster it gets resolved.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -238,7 +238,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The lake and the islands are part of a multipolygon see <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a> A quick look at two islands and two sections of the perimeter reveals they were formed in 2010 so if it was displaying OK I suspect someone as broken the lake polygon. It as a lot of nodes and it needs someone with some skill and confidence to sort it, It was also probably made with data other than BING which was unavailable at the time, so it may well be improved by being mapped from Bing by somebody who as the necessary skills.You could ask the original Mapper.<br />
+<p>The lake and the islands are part of a multipolygon see <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a> A quick look at two islands and two sections of the perimeter reveals they were formed in 2010 so if it was displaying OK I suspect someone as broken the lake polygon. It as a lot of nodes and it needs someone with some skill and confidence to sort it, It was also probably made with data other than BING which was unavailable at the time, so it may well be improved by being mapped from Bing by somebody who as the necessary skills.You could ask the original Mapper.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -280,7 +280,7 @@ osqa_accepted = true
 <div id="post-21797-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This Q&amp;A is part of what you want <a href="https://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper">https://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper</a></p>
+<p>This Q&amp;A is part of what you want <a href="/questions/10236/how-to-contact-another-mapper">https://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper</a></p>
 </div>
 <div id="comment-21797-info" class="comment-info">
 <span class="comment-age">(24 Apr '13, 20:34)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -291,7 +291,7 @@ osqa_accepted = true
 <div id="post-21798-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>and a bit more for JOSM users <a href="https://help.openstreetmap.org/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again">https://help.openstreetmap.org/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again</a></p>
+<p>and a bit more for JOSM users <a href="/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again">https://help.openstreetmap.org/questions/5356/who-edited-my-map-corrections-and-made-it-all-wrong-again</a></p>
 </div>
 <div id="comment-21798-info" class="comment-info">
 <span class="comment-age">(24 Apr '13, 20:41)</span> <span class="comment-user userinfo">andy mackey</span>

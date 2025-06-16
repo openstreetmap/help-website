@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-74609-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Converted to question from <a href="https://help.openstreetmap.org/questions/74044/umap-unable-to-edit-anymore">https://help.openstreetmap.org/questions/74044/umap-unable-to-edit-anymore</a></p>
+<p>Converted to question from <a href="/questions/74044/umap-unable-to-edit-anymore">https://help.openstreetmap.org/questions/74044/umap-unable-to-edit-anymore</a></p>
 </div>
 <div id="comment-74609-info" class="comment-info">
 <span class="comment-age">(04 May '20, 19:34)</span> <span class="comment-user userinfo">TZorn</span>

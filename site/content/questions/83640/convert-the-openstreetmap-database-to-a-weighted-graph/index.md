@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Don't reinvent the wheel. Use existing software like Graphhopper, OSRM, Valhalla if you want fast and powerful routing. If you are desperate to build your own (or need to because of educational project assignment etc.), at least look at Graphhopper or OSRM source code to understand how OSM data is converted into a graph. If you really really want to build your own from scratch, look at <a href="https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation</a></p>
+<p>Don't reinvent the wheel. Use existing software like Graphhopper, OSRM, Valhalla if you want fast and powerful routing. If you are desperate to build your own (or need to because of educational project assignment etc.), at least look at Graphhopper or OSRM source code to understand how OSM data is converted into a graph. If you really really want to build your own from scratch, look at <a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

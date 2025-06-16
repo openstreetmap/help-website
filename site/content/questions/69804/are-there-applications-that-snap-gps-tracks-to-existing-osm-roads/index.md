@@ -187,7 +187,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think that in this case, the road was traced from that particular GPX file, so it is the other way around, the road is snapped to the GPX. The main reason to think that is that the road is not drawn in the middle in this spot <img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2019-07-01_at_05.10.57.png" alt="alt text" /></p>
+<p>I think that in this case, the road was traced from that particular GPX file, so it is the other way around, the road is snapped to the GPX. The main reason to think that is that the road is not drawn in the middle in this spot <img src="/upfiles/Screen_Shot_2019-07-01_at_05.10.57.png" alt="alt text" /></p>
 <p>But of course that does make InsertUser's answer to your question incorrect.</p>
 </div>
 <div class="answer-controls post-controls">

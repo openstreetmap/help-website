@@ -108,8 +108,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes it is possible, however it is probably not quite ready for prime time yet.</p>
-<p>One implementation is Kothic JS, see <a href="http://wiki.openstreetmap.org/wiki/Kothic_JS">http://wiki.openstreetmap.org/wiki/Kothic_JS</a></p>
-<p>There is currently a GSOC project in the same context: <a href="http://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service">http://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service</a></p>
+<p>One implementation is Kothic JS, see <a href="https://wiki.openstreetmap.org/wiki/Kothic_JS">https://wiki.openstreetmap.org/wiki/Kothic_JS</a></p>
+<p>There is currently a GSOC project in the same context: <a href="https://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service">https://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012/Data_Tile_Service</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -139,7 +139,7 @@ One Answer:
 <div id="post-24272-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There is a whole wiki page about <a href="http://wiki.openstreetmap.org/wiki/Vector_tiles">vector tiles</a>.</p>
+<p>There is a whole wiki page about <a href="https://wiki.openstreetmap.org/wiki/Vector_tiles">vector tiles</a>.</p>
 </div>
 <div id="comment-24272-info" class="comment-info">
 <span class="comment-age">(15 Jul '13, 20:32)</span> <span class="comment-user userinfo">scai ♦</span>

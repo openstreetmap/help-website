@@ -131,7 +131,7 @@ One Answer:
 <div id="post-54495-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Should I use this tool?: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2</a></p>
+<p>Should I use this tool?: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2</a></p>
 </div>
 <div id="comment-54495-info" class="comment-info">
 <span class="comment-age">(06 Feb '17, 03:28)</span> <span class="comment-user userinfo">Rasvet</span>
@@ -142,7 +142,7 @@ One Answer:
 <div id="post-54496-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>..or this tool?: <a href="http://wiki.openstreetmap.org/wiki/ID">http://wiki.openstreetmap.org/wiki/ID</a></p>
+<p>..or this tool?: <a href="https://wiki.openstreetmap.org/wiki/ID">https://wiki.openstreetmap.org/wiki/ID</a></p>
 </div>
 <div id="comment-54496-info" class="comment-info">
 <span class="comment-age">(06 Feb '17, 04:09)</span> <span class="comment-user userinfo">nevw</span>
@@ -153,7 +153,7 @@ One Answer:
 <div id="post-54497-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've added marker <a href="https://yadi.sk/i/DfnI536l3D6k4J">https://yadi.sk/i/DfnI536l3D6k4J</a> , but no see it on general map <a href="http://www.openstreetmap.org/#map=18/55.09389/59.69411&amp;layers=N">http://www.openstreetmap.org/#map=18/55.09389/59.69411&amp;layers=N</a> Maybe we should wait for new point approving?</p>
+<p>I've added marker <a href="https://yadi.sk/i/DfnI536l3D6k4J">https://yadi.sk/i/DfnI536l3D6k4J</a> , but no see it on general map <a href="https://www.openstreetmap.org/#map=18/55.09389/59.69411&amp;layers=N">https://www.openstreetmap.org/#map=18/55.09389/59.69411&amp;layers=N</a> Maybe we should wait for new point approving?</p>
 </div>
 <div id="comment-54497-info" class="comment-info">
 <span class="comment-age">(06 Feb '17, 05:37)</span> <span class="comment-user userinfo">Rasvet</span>
@@ -187,7 +187,7 @@ One Answer:
 <div id="post-54512-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1725/andy">@andy</a> Good news. I added 2 objects: <a href="https://yadi.sk/i/w_38nOeK3D9Hcg">https://yadi.sk/i/w_38nOeK3D9Hcg</a> and <a href="https://yadi.sk/i/rUPq_XyP3D9HqT">https://yadi.sk/i/rUPq_XyP3D9HqT</a> Is it correct?</p>
+<p><a href="https://help.openstreetmap.org/users/1725/andy">@andy</a> Good news. I added 2 objects: <a href="https://yadi.sk/i/w_38nOeK3D9Hcg">https://yadi.sk/i/w_38nOeK3D9Hcg</a> and <a href="https://yadi.sk/i/rUPq_XyP3D9HqT">https://yadi.sk/i/rUPq_XyP3D9HqT</a> Is it correct?</p>
 </div>
 <div id="comment-54512-info" class="comment-info">
 <span class="comment-age">(06 Feb '17, 10:53)</span> <span class="comment-user userinfo">Rasvet</span>
@@ -198,7 +198,7 @@ One Answer:
 <div id="post-54533-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It would be easy for us to check if you post an OSM link like this <a href="http://www.openstreetmap.org/#map=17/52.34546/-0.19746">http://www.openstreetmap.org/#map=17/52.34546/-0.19746</a></p>
+<p>It would be easy for us to check if you post an OSM link like this <a href="https://www.openstreetmap.org/#map=17/52.34546/-0.19746">https://www.openstreetmap.org/#map=17/52.34546/-0.19746</a></p>
 </div>
 <div id="comment-54533-info" class="comment-info">
 <span class="comment-age">(07 Feb '17, 12:35)</span> <span class="comment-user userinfo">andy mackey</span>

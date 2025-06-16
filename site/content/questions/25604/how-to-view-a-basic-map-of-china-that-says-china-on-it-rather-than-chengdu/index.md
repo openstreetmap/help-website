@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The default osm rendering displays names in the local language, but other renderings choose to display other languages instead, like English. Try for example the mapquest rendering, by clicking the "layers" button on the right hand side of the osm.org map, and choosing "mapquest open" layer. There is also a proof-of-concept <a href="http://mlm.jochentopf.com/">multilingual map by Jochen Topf</a>.</p>
-<p>As always, the <a href="http://wiki.openstreetmap.org/wiki/Name">translated name</a> must be available in the underlying data; please help if you can.</p>
+<p>As always, the <a href="https://wiki.openstreetmap.org/wiki/Name">translated name</a> must be available in the underlying data; please help if you can.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -125,7 +125,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>see also OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">http://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
+<p>see also OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
 </div>
 <div id="comment-25609-info" class="comment-info">
 <span class="comment-age">(20 Aug '13, 16:20)</span> <span class="comment-user userinfo">stephan75</span>

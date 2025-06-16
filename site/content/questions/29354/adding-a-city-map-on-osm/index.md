@@ -132,7 +132,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Note that there may be license implications - if you are using an empty database and import a city shape file then you are fine, but if you pre-load the database with OSM data and your users use that OSM data when they submit updates, then these updates would be derived from OSM and have to be made available under the ODbL (see our <a href="http://wiki.openstreetmap.org/wiki/Legal%20FAQ">Legal FAQ).</a></p>
+<p>Note that there may be license implications - if you are using an empty database and import a city shape file then you are fine, but if you pre-load the database with OSM data and your users use that OSM data when they submit updates, then these updates would be derived from OSM and have to be made available under the ODbL (see our <a href="https://wiki.openstreetmap.org/wiki/Legal%20FAQ">Legal FAQ).</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -182,7 +182,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi feel free to build your map locally using OSM maps and probably copy protected data as long as it is not uploaded into the OSM database. Read these lines or pages as well, <a href="http://www.openstreetmap.org/copyright/en">http://www.openstreetmap.org/copyright/en</a> See these around or about making local maps as well, <a href="https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=local+maps&amp;Submit=Search&amp;t=question">https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=local+maps&amp;Submit=Search&amp;t=question</a></p>
+<p>Hi feel free to build your map locally using OSM maps and probably copy protected data as long as it is not uploaded into the OSM database. Read these lines or pages as well, <a href="https://www.openstreetmap.org/copyright/en">https://www.openstreetmap.org/copyright/en</a> See these around or about making local maps as well, <a href="https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=local+maps&amp;Submit=Search&amp;t=question">https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=local+maps&amp;Submit=Search&amp;t=question</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

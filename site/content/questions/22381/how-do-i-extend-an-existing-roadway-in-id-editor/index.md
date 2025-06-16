@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How does one extend an existing road/way in the iD editor? In Potlatch 2, you'd select the way, then select an end node and be on your way.</p>
-<p>[note: separated out from <a href="https://help.openstreetmap.org/questions/22224/id-editor-questions">https://help.openstreetmap.org/questions/22224/id-editor-questions</a>]</p>
+<p>[note: separated out from <a href="/questions/22224/id-editor-questions">https://help.openstreetmap.org/questions/22224/id-editor-questions</a>]</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-extension" rel="tag" title="see questions tagged &#39;extension&#39;">extension</span>
@@ -106,15 +106,15 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As of iD 1.2.1, the process is now as follows. Imagine that this is the way that you want to extend:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_01012.png" alt="way" /></p>
+<p><img src="/upfiles/screenshot_01012.png" alt="way" /></p>
 <p>Click the way:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_01013.png" alt="way selected" /></p>
+<p><img src="/upfiles/screenshot_01013.png" alt="way selected" /></p>
 <p>Click on the end node:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_01014.png" alt="end node selected" /></p>
+<p><img src="/upfiles/screenshot_01014.png" alt="end node selected" /></p>
 <p>Click the "continue this line" icon on the radial menu (which has a slightly different picture associated with it on the live server):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_01015.png" alt="continue this line" /></p>
+<p><img src="/upfiles/screenshot_01015.png" alt="continue this line" /></p>
 <p>And now you can add more nodes:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_01016.png" alt="adding more nodes" /></p>
+<p><img src="/upfiles/screenshot_01016.png" alt="adding more nodes" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

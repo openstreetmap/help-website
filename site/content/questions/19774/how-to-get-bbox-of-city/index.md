@@ -118,7 +118,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could extract the boundary=administrative areas for the cities you want with the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> (or <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>, but that has more limitations on use), convert the .osm file to a shapefile, then use <a href="http://www.gdal.org/ogr/">ogr</a> to extract the bounding box. In python, all you'd need would be something like the following, which you could then write to a new file. Note that many of the boundaries will be relations, but you can query for those too.</p>
+<p>You could extract the boundary=administrative areas for the cities you want with the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> (or <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>, but that has more limitations on use), convert the .osm file to a shapefile, then use <a href="http://www.gdal.org/ogr/">ogr</a> to extract the bounding box. In python, all you'd need would be something like the following, which you could then write to a new file. Note that many of the boundaries will be relations, but you can query for those too.</p>
 <pre><code>ds = ogr.Open(&quot;DatasourceName&quot;)
 lyr = ds.GetLayerByName(&quot;LayerName&quot;)   
 lyr.ResetReading()

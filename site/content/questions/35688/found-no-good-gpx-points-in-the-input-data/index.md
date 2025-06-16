@@ -174,7 +174,7 @@ osqa_accepted = false
 <div id="post-35690-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>These answers fixed it for me. <a href="https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
+<p>These answers fixed it for me. <a href="/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
 </div>
 <div id="comment-35690-info" class="comment-info">
 <span class="comment-age">(11 Aug '14, 07:56)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -253,7 +253,7 @@ osqa_accepted = false
 <p>(I'm guessing a lot here since I'm not familiar with .tcx)</p>
 <p>TCX seems to be "<a href="http://en.wikipedia.org/wiki/Training_Center_XML">Training Center XML</a>" - it's not GPX as such. Are both samples that you posted from <em>after</em> the conversion? Could you pastebin an original TCX file, the actual GPSBabel commands you used, and the resultant GPX file perhaps? It seems odd that your second XML seems to have "lap" etc. in there.<br />
 </p>
-<p>If you'd like to see what valid GPX traces look like, perhaps look at <a href="http://www.openstreetmap.org/user/SomeoneElse/traces">some of mine</a>. In case you haven't seen it, <a href="https://www.mapsmarker.com/docs/pro-version-docs/how-to-convert-a-non-gpx-track-file-into-a-gpx-track-file/">this external link</a> may be useful.<br />
+<p>If you'd like to see what valid GPX traces look like, perhaps look at <a href="https://www.openstreetmap.org/user/SomeoneElse/traces">some of mine</a>. In case you haven't seen it, <a href="https://www.mapsmarker.com/docs/pro-version-docs/how-to-convert-a-non-gpx-track-file-into-a-gpx-track-file/">this external link</a> may be useful.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

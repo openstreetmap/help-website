@@ -274,7 +274,7 @@ osqa_accepted = false
 </blockquote>
 <p>I'll make sure to do this going forward with OsmAnd, but the one that I have so far is just the dotted track in Maps.Me</p>
 <p>I don't think I'll be able to drive back &amp; re-record that correction, so trying to figure out how to save this.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20200927-111010_marked_UZqPlRC.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20200927-111010_marked_UZqPlRC.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

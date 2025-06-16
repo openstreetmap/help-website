@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I created a multipolygon a few weeks ago. It is the Harding Ice Field near Homer, Alaska. The individual members are glaciers and most of them have specific names. However, when viewed on the slippy map or in the web-based map at OpenStreetMap.org, the name of one of the glaciers is the only one visible, Nuka Glacier and it shows as the name of ALL of the glaciers. (Nuka Glacier (id:<a href="https://www.openstreetmap.org/way/272254378">272254378</a>))</p>
 <p>The Harding Ice Field is a multipolygon defined as: Relation Harding Ice Field (<a href="https://www.openstreetmap.org/relation/3632894">3632894</a>) (as outer)</p>
-<p>and a view of the general area is <a href="http://www.openstreetmap.org/way/272254378#map=13/59.6861/-150.8392">here</a> (zoom out to see the entire ice field)</p>
+<p>and a view of the general area is <a href="https://www.openstreetmap.org/way/272254378#map=13/59.6861/-150.8392">here</a> (zoom out to see the entire ice field)</p>
 <p>I've checked and rechecked but can find no reason for this behavior. Any suggestions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -114,7 +114,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are a lot of broken multipolygons in the world. The software that imports the OSM data for rendering tries to fix these. In this case it thinks the multipolygon is broken, because there is no tag on the multipolygon that defines <em>what</em> it is. There is only a name tag (and source, but that is ignored). So it uses the tags from one of the "outer" members for the whole multipolygon.</p>
-<p>Try putting <code>natural=glacier</code> on the multipolygon. Maybe with one of the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Glaciers_tags#Tagging">tags from the <em>Glaciers tags proposal</em></a>, so it can be distinguished from the individual glaciers. This might however cause the names of the individual glaciers to no longer be rendered.</p>
+<p>Try putting <code>natural=glacier</code> on the multipolygon. Maybe with one of the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Glaciers_tags#Tagging">tags from the <em>Glaciers tags proposal</em></a>, so it can be distinguished from the individual glaciers. This might however cause the names of the individual glaciers to no longer be rendered.</p>
 <p>Another option to try is using a new tag like <code>natural=ice_field</code>. But I don't know if an ice field is sufficiently different from a very big glacier to warrant it's own tag.</p>
 </div>
 <div class="answer-controls post-controls">

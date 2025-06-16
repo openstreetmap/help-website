@@ -69,7 +69,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Thanks all.</p>
 <p>Please see below map of Petionville, Haiti.</p>
-<p><a href="http://www.openstreetmap.org/?lat=18.516231&amp;lon=-72.290027&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=18.516231&amp;lon=-72.290027&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=18.516231&amp;lon=-72.290027&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=18.516231&amp;lon=-72.290027&amp;zoom=18&amp;layers=M</a></p>
 <p>I have asked the students to add a number of little icons and places as practice, which we will delete. Please look at the block square in the middle of the page and you will see Boite de la Musique. Efie's Shop and a few other icons on that block. Many of those icons have building outlines under them - but we can't see them until we use all data.</p>
 <p>We are going to be going out into the field and need to use this program, so we want to make sure what we make can be viewed all the time on OSM. I noticed other parts of Port au Prince are much more densely mapped and you can see everything.</p>
 <p>How come icons show up. but no building ourlines, or just names and no outlines?<br />

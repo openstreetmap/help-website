@@ -85,7 +85,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Since I cannot read Russian, it is diffult to answer myself. But check if they comply with the license requirements as specified here :<a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> (especially if they mention somewhere that the map data is coming from OSM (credits))</p>
+<p>Since I cannot read Russian, it is diffult to answer myself. But check if they comply with the license requirements as specified here :<a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> (especially if they mention somewhere that the map data is coming from OSM (credits))</p>
 </div>
 <div id="comment-11027-info" class="comment-info">
 <span class="comment-age">(07 Mar '12, 09:10)</span> <span class="comment-user userinfo">Pieren</span>
@@ -150,7 +150,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The current license cc-by-sa2.0 allows commercial reuse. If they credit OSM, that's fine. Check also the legal-FAQ on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
+<p>The current license cc-by-sa2.0 allows commercial reuse. If they credit OSM, that's fine. Check also the legal-FAQ on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

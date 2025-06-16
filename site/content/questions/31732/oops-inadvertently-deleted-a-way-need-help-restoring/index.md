@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I deleted a way and now the relation is broken. I've attempted to figure out how to <a href="http://wiki.openstreetmap.org/wiki/Undoing_Deletions">undelete</a> using but I can't get JOSM editor to open. and I can't download the missing way XML.</p>
+<p>I deleted a way and now the relation is broken. I've attempted to figure out how to <a href="https://wiki.openstreetmap.org/wiki/Undoing_Deletions">undelete</a> using but I can't get JOSM editor to open. and I can't download the missing way XML.</p>
 <p>I would like to learn how to fix my mistake but I think I would need a hand with those two issue to begin with.</p>
-<p>My changeset was <a href="http://www.openstreetmap.org/changeset/21219686">21219686</a></p>
-<p>The overall relation was <a href="http://www.openstreetmap.org/relation/207472/history">207472</a>,v6 Santa Rosa Mtn State Wilderness</p>
+<p>My changeset was <a href="https://www.openstreetmap.org/changeset/21219686">21219686</a></p>
+<p>The overall relation was <a href="https://www.openstreetmap.org/relation/207472/history">207472</a>,v6 Santa Rosa Mtn State Wilderness</p>
 <p>I think the way that needs restored is 39297877,v2 but I can not tell for certain because it isn't showing on map and no data show up when I try to open it.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -250,7 +250,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I just reverted changeset 21219686. Hopefully everything is fine now. See <a href="https://help.openstreetmap.org/questions/31804/problems-reverting-changeset">here</a> for more details.</p>
+<p>I just reverted changeset 21219686. Hopefully everything is fine now. See <a href="/questions/31804/problems-reverting-changeset">here</a> for more details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

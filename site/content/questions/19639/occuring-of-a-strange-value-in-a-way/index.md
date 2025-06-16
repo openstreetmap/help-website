@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Occuring of a strange value in a way"
-description = '''Hi I came across the following keys and value in a way AND_nosr_r 15461816 at http://www.openstreetmap.org/?lat=52.030335&amp;amp;lon=5.07523&amp;amp;zoom=18&amp;amp;layers=M.  Its not a common key and value, but present at several ways.  Whats the use of it, or should it be removed ? And is it just a left over...'''
+description = '''Hi I came across the following keys and value in a way AND_nosr_r 15461816 at https://www.openstreetmap.org/?lat=52.030335&amp;amp;lon=5.07523&amp;amp;zoom=18&amp;amp;layers=M.  Its not a common key and value, but present at several ways.  Whats the use of it, or should it be removed ? And is it just a left over...'''
 date = "2013-02-06T20:58:00Z"
 lastmod = "2013-02-07T00:35:00Z"
 weight = 19639
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi I came across the following keys and value in a <a href="http://www.openstreetmap.org/browse/way/7056542">way</a> AND_nosr_r 15461816 at <a href="http://www.openstreetmap.org/?lat=52.030335&amp;lon=5.07523&amp;zoom=18&amp;layers=M.">http://www.openstreetmap.org/?lat=52.030335&amp;lon=5.07523&amp;zoom=18&amp;layers=M.</a> Its not a common key and value, but present at several ways. Whats the use of it, or should it be removed ? And is it just a left over ? Greetz</p>
+<p>Hi I came across the following keys and value in a <a href="https://www.openstreetmap.org/browse/way/7056542">way</a> AND_nosr_r 15461816 at <a href="https://www.openstreetmap.org/?lat=52.030335&amp;lon=5.07523&amp;zoom=18&amp;layers=M.">https://www.openstreetmap.org/?lat=52.030335&amp;lon=5.07523&amp;zoom=18&amp;layers=M.</a> Its not a common key and value, but present at several ways. Whats the use of it, or should it be removed ? And is it just a left over ? Greetz</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-and" rel="tag" title="see questions tagged &#39;and&#39;">and</span> <span class="post-tag tag-link-leftover" rel="tag" title="see questions tagged &#39;leftover&#39;">leftover</span> <span class="post-tag tag-link-key" rel="tag" title="see questions tagged &#39;key&#39;">key</span> <span class="post-tag tag-link-value" rel="tag" title="see questions tagged &#39;value&#39;">value</span>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tag is <a href="http://taginfo.openstreetmap.org/keys/AND_nosr_r">very common</a> <a href="http://taginfo.openstreetmap.org/keys/AND_nosr_r#map">in The Netherlands</a>. It is a left over from the <a href="http://wiki.openstreetmap.org/wiki/AND_Data">AND Import</a>.</p>
+<p>The tag is <a href="http://taginfo.openstreetmap.org/keys/AND_nosr_r">very common</a> <a href="http://taginfo.openstreetmap.org/keys/AND_nosr_r#map">in The Netherlands</a>. It is a left over from the <a href="https://wiki.openstreetmap.org/wiki/AND_Data">AND Import</a>.</p>
 <p>If you are editing a way for some reason, then it can be safely removed. However don't go around to delete this tag everywhere you can find it. That just causes unnecessary bloat of the database.</p>
 </div>
 <div class="answer-controls post-controls">

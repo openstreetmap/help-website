@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "My Edits are not routable"
-description = '''Can you please tell me where I&#x27;m wrong? http://www.openstreetmap.org/browse/changeset/9866539 These tracks seems to be not routable (openrouteservice, or garmin export), but their attribute are exactly the same as other routable tracks. Many thanks in advance. Marco'''
+description = '''Can you please tell me where I&#x27;m wrong? https://www.openstreetmap.org/browse/changeset/9866539 These tracks seems to be not routable (openrouteservice, or garmin export), but their attribute are exactly the same as other routable tracks. Many thanks in advance. Marco'''
 date = "2011-11-21T07:33:00Z"
 lastmod = "2011-11-21T09:59:00Z"
 weight = 9144
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Can you please tell me where I'm wrong?</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/9866539">http://www.openstreetmap.org/browse/changeset/9866539</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/9866539">https://www.openstreetmap.org/browse/changeset/9866539</a></p>
 <p>These tracks seems to be not routable (openrouteservice, or garmin export), but their attribute are exactly the same as other routable tracks.</p>
 <p>Many thanks in advance. Marco</p>
 </div>
@@ -76,7 +76,7 @@ osqa_accepted = true
 <div id="post-9151-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=45.9570993483067&amp;lon=8.81209999322891&amp;zoom=17">http://www.openstreetmap.org/?lat=45.9570993483067&amp;lon=8.81209999322891&amp;zoom=17</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=45.9570993483067&amp;lon=8.81209999322891&amp;zoom=17">https://www.openstreetmap.org/?lat=45.9570993483067&amp;lon=8.81209999322891&amp;zoom=17</a></p>
 <p>is grade 4 and routable by:</p>
 <p><a href="http://openrouteservice.org/?zoom=17&amp;lat=45.95795&amp;lon=8.81362&amp;layers=TB000TFFTFTTTTTT">http://openrouteservice.org/?zoom=17&amp;lat=45.95795&amp;lon=8.81362&amp;layers=TB000TFFTFTTTTTT</a></p>
 <p>mine no... I'm missing where I'm wrong...</p>
@@ -158,7 +158,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I've tried a fast modification 2 days ago, but just because it seems to be not routed. The track upload date is last monday.</p>
-<p>I'm using <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>I'm using <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 <p>that shows me my tracks (map is updated on friday) but nor the garmin device, nor the online routing sites seems to route my tracks.</p>
 <p>Is there another option to get bicycle map for northern italy?</p>
 <p>I'll wait! Thanks It was just to check if something is wrong (it's my first mapping....)</p>

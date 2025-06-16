@@ -108,9 +108,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please do not ask two questions in one.</p>
-<p>You can use umap: umap.openstreetmap.fr for your first task. You will need to geocode the addresses first if they do not already have coordinate associated with them. You can do the later with nominatim see: <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p>You can use umap: umap.openstreetmap.fr for your first task. You will need to geocode the addresses first if they do not already have coordinate associated with them. You can do the later with nominatim see: <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
 <p>OSRM has support for generating distance matrices see <a href="http://project-osrm.org/">http://project-osrm.org/</a> and <a href="https://github.com/Project-OSRM/osrm-backend/wiki/Server-api">https://github.com/Project-OSRM/osrm-backend/wiki/Server-api</a></p>
-<p>Note: if you are using the public servers providing the above (instead of running them yourselve) you MUST conform to the respective acceptable use policies: <a href="http://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy">http://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy</a> and <a href="https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy">https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy</a></p>
+<p>Note: if you are using the public servers providing the above (instead of running them yourselve) you MUST conform to the respective acceptable use policies: <a href="https://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy">https://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy</a> and <a href="https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy">https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Cannot comment, still the second question was already asked and <a href="https://help.openstreetmap.org/questions/37861/distance-matrix-api">answered here</a></p>
+<p>Cannot comment, still the second question was already asked and <a href="/questions/37861/distance-matrix-api">answered here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

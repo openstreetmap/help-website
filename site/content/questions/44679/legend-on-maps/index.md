@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://help.openstreetmap.org/questions/43926/end-user-asking-how-to-interpret-the-various-line-types-on-a-map-legend/43932">this</a> previous answer to a similar question.</p>
+<p>See <a href="/questions/43926/end-user-asking-how-to-interpret-the-various-line-types-on-a-map-legend/43932">this</a> previous answer to a similar question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/map_key_arrow.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/map_key_arrow.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

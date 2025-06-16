@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Gate that is locked to vehicles but occasionally lets walkers and cyclists out."
-description = '''The gate here http://www.openstreetmap.org/#map=19/52.33809/-0.17666 has been closed to vehicles for a several years. It had a small hand gate for walkers and cyclists which saved a detour of one K or so. The College has some young students now so the small gate can&#x27;t be opened from Coxons Close eit...'''
+description = '''The gate here https://www.openstreetmap.org/#map=19/52.33809/-0.17666 has been closed to vehicles for a several years. It had a small hand gate for walkers and cyclists which saved a detour of one K or so. The College has some young students now so the small gate can&#x27;t be opened from Coxons Close eit...'''
 date = "2017-01-06T14:20:00Z"
 lastmod = "2017-01-11T19:00:00Z"
 weight = 53896
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The gate here <a href="http://www.openstreetmap.org/#map=19/52.33809/-0.17666">http://www.openstreetmap.org/#map=19/52.33809/-0.17666</a> has been closed to vehicles for a several years. It had a small hand gate for walkers and cyclists which saved a detour of one K or so. The College has some young students now so the small gate can't be opened from Coxons Close either since 2015. I'm told it is exit only at some times, A young woman I asked said "I have to take the long way around but a can get out after work by pressing a button on the inside to get out". I mapped it as barrier=gate, how do i add these conditional tags. I tried out the routers on the main map page. Car, cycle and foot all route through it. Should I just break the way to stop incorrect routing?</p>
+<p>The gate here <a href="https://www.openstreetmap.org/#map=19/52.33809/-0.17666">https://www.openstreetmap.org/#map=19/52.33809/-0.17666</a> has been closed to vehicles for a several years. It had a small hand gate for walkers and cyclists which saved a detour of one K or so. The College has some young students now so the small gate can't be opened from Coxons Close either since 2015. I'm told it is exit only at some times, A young woman I asked said "I have to take the long way around but a can get out after work by pressing a button on the inside to get out". I mapped it as barrier=gate, how do i add these conditional tags. I tried out the routers on the main map page. Car, cycle and foot all route through it. Should I just break the way to stop incorrect routing?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-conditional" rel="tag" title="see questions tagged &#39;conditional&#39;">conditional</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span> <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span> <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span>

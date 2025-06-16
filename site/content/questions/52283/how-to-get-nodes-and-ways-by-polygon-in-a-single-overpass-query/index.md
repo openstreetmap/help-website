@@ -106,8 +106,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Take a look at the union operator:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union</a></p>
-<p>You will have to repeat the poly statement. Here's the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_polygon_.28poly.29">poly example</a> from the docs wrapped in a union:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union</a></p>
+<p>You will have to repeat the poly statement. Here's the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_polygon_.28poly.29">poly example</a> from the docs wrapped in a union:</p>
 <pre><code>(
   node(poly:&quot;50.7 7.1 50.7 7.2 50.75 7.15&quot;);
   way(poly:&quot;50.7 7.1 50.7 7.2 50.75 7.15&quot;);

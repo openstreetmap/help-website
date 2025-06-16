@@ -67,7 +67,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>in Josm use the middle mouse button to cycle through the overlaying polygons to see which tags each polygon has. The second example has a second polygon drawn over the first using the same nodes.</p>
-<p>See 'overlapping ways' on this page <a href="http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing">http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing</a></p>
+<p>See 'overlapping ways' on this page <a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing">https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing</a></p>
 </div>
 <div id="comment-56420-info" class="comment-info">
 <span class="comment-age">(02 Jun '17, 16:31)</span> <span class="comment-user userinfo">nevw</span>

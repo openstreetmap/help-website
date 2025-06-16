@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>The Project is called "OpenStreetMap", not "OpenStreets".</p>
 <p>The map style we offer on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> is only one possible representation of the geodata we collect, and is really intended to be more like an "example" than a ready-made map for you to use in a navigation application!</p>
-<p>You can download our raw data and use that to make any map you want; depending on the software you use for doing so, rotated maps may or may not be an option. Some vector map clients for mobile devices do offer rotating map display. Check out the list on <a href="http://wiki.openstreetmap.org/wiki/Rendering">http://wiki.openstreetmap.org/wiki/Rendering</a> - CartoType is one of the engines that support rotating maps.</p>
+<p>You can download our raw data and use that to make any map you want; depending on the software you use for doing so, rotated maps may or may not be an option. Some vector map clients for mobile devices do offer rotating map display. Check out the list on <a href="https://wiki.openstreetmap.org/wiki/Rendering">https://wiki.openstreetmap.org/wiki/Rendering</a> - CartoType is one of the engines that support rotating maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

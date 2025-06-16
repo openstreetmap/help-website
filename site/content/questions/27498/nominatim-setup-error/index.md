@@ -146,7 +146,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You need to build the software first.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software">http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software">https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software</a></p>
 <pre><code> cd Nominatim
  ./autogen.sh
  ./configure

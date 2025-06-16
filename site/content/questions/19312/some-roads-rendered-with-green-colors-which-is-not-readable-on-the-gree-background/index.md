@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Some roads rendered with green colors which is not readable on the gree background"
-description = '''Hello, I&#x27;d like to ask if there any way to change color schema for roads? We noticed that on some zoom levels we see green roads on green background and it&#x27;s too difficult to work with such map (like read yellow text on white paper). Here is an example: http://www.openstreetmap.org/?box=yes&amp;amp;maxl...'''
+description = '''Hello, I&#x27;d like to ask if there any way to change color schema for roads? We noticed that on some zoom levels we see green roads on green background and it&#x27;s too difficult to work with such map (like read yellow text on white paper). Here is an example: https://www.openstreetmap.org/?box=yes&amp;amp;maxl...'''
 date = "2013-01-24T14:05:00Z"
 lastmod = "2015-11-05T06:18:00Z"
 weight = 19312
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I'd like to ask if there any way to change color schema for roads? We noticed that on some zoom levels we see green roads on green background and it's too difficult to work with such map (like read yellow text on white paper).</p>
-<p>Here is an example: <a href="http://www.openstreetmap.org/?box=yes&amp;maxlat=59.89933&amp;maxlon=30.56362&amp;minlat=59.87858&amp;minlon=30.51337">http://www.openstreetmap.org/?box=yes&amp;maxlat=59.89933&amp;maxlon=30.56362&amp;minlat=59.87858&amp;minlon=30.51337</a> (road running to right map border from the center of the map) while you zoom out this example - it becomes more difficult to see this road. This is federal road by the way.</p>
+<p>Here is an example: <a href="https://www.openstreetmap.org/?box=yes&amp;maxlat=59.89933&amp;maxlon=30.56362&amp;minlat=59.87858&amp;minlon=30.51337">https://www.openstreetmap.org/?box=yes&amp;maxlat=59.89933&amp;maxlon=30.56362&amp;minlat=59.87858&amp;minlon=30.51337</a> (road running to right map border from the center of the map) while you zoom out this example - it becomes more difficult to see this road. This is federal road by the way.</p>
 <p>May be there are any other solutions for this problem? I tried to switch to "MapQuest" layer and this problem is solved there but city map is better in default layer so I don't like the idea to switch to MapQuest.</p>
 <p>Thank you in advance! Jevgeni.</p>
 </div>

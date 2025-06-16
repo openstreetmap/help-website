@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Underlying problems to edit the map"
-description = '''When I edit the map in OpenStreetMap in the area of ​​Huesca, Spain, the bottom Bing not working. I leave a link on the exact spot where the problem begins: http://www.openstreetmap.org/edit?lat=42.05033&amp;amp;lon=-0.00051&amp;amp;zoom=15. Thank You!'''
+description = '''When I edit the map in OpenStreetMap in the area of ​​Huesca, Spain, the bottom Bing not working. I leave a link on the exact spot where the problem begins: https://www.openstreetmap.org/edit?lat=42.05033&amp;amp;lon=-0.00051&amp;amp;zoom=15. Thank You!'''
 date = "2012-09-09T10:06:00Z"
 lastmod = "2012-09-09T13:15:00Z"
 weight = 15913
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When I edit the map in OpenStreetMap in the area of ​​Huesca, Spain, the bottom Bing not working. I leave a link on the exact spot where the problem begins: <a href="http://www.openstreetmap.org/edit?lat=42.05033&amp;lon=-0.00051&amp;zoom=15.">http://www.openstreetmap.org/edit?lat=42.05033&amp;lon=-0.00051&amp;zoom=15.</a></p>
+<p>When I edit the map in OpenStreetMap in the area of ​​Huesca, Spain, the bottom Bing not working. I leave a link on the exact spot where the problem begins: <a href="https://www.openstreetmap.org/edit?lat=42.05033&amp;lon=-0.00051&amp;zoom=15.">https://www.openstreetmap.org/edit?lat=42.05033&amp;lon=-0.00051&amp;zoom=15.</a></p>
 <p>Thank You!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes you've found the edge of an area of high resolution Bing imagery. Unfortunately it's not available from bing to the east of that line. You can find out more about <a href="http://wiki.openstreetmap.org/wiki/Bing#Coverage">bing coverage here</a>. In general most of Spain is now covered but there's some patches, tending to be arranged in odd vertical strips, which are not.</p>
+<p>Yes you've found the edge of an area of high resolution Bing imagery. Unfortunately it's not available from bing to the east of that line. You can find out more about <a href="https://wiki.openstreetmap.org/wiki/Bing#Coverage">bing coverage here</a>. In general most of Spain is now covered but there's some patches, tending to be arranged in odd vertical strips, which are not.</p>
 <p>There's a tool which (in theory) should give mappers a good zoomed out view of where's available. Unfortunately it doesn't give a very helpful view at the moment <a href="http://ant.dev.openstreetmap.org/bingimageanalyzer/?lat=42.058296270126945&amp;lon=-0.00836350799559682&amp;zoom=8">in the spot you're looking at</a> The new Bing coverage in Spain should mean new green areas are added, but this tool has a problem that these areas remain red <em>until somebody zooms in pans around to turn them green</em>. You could, for the benefit of other mappers in the area, zoom in on there and fill in some more green patches, but until someone does that, the view is misleading/wrong (Anyone have a good solution to this?)</p>
 </div>
 <div class="answer-controls post-controls">

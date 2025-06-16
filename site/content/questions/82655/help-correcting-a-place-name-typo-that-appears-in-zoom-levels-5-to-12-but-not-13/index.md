@@ -44,7 +44,7 @@ osqa_accepted = true
 <p>I edited the name in the admin relation 16 days ago, but I am still seeing it as de=Nashik for zoom levels 5-12 (see below).</p>
 <p>Apologies if this is due to me not understanding the data model, and what governs the display of place names. If one zooms in to level 13 it shows the name correctly. Once I zoom to the level where I can use ID to edit I can no longer find the typo.</p>
 <p>Asking for help identifying where this needs to be corrected. Thanks!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2021-11-22_21-31-47.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2021-11-22_21-31-47.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-india" rel="tag" title="see questions tagged &#39;india&#39;">india</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-typo" rel="tag" title="see questions tagged &#39;typo&#39;">typo</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span>

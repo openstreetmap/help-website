@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-26022-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Today (2013, 3 years after starting this topic), particularly in Germany there is less need for tracks but much need for points. So what I think: we need something to import lists of waypoints. Will <a href="http://www.openstreetmap.org/trace/create">http://www.openstreetmap.org/trace/create</a> be able to upload gpx-files with waypoints?</p>
+<p>Today (2013, 3 years after starting this topic), particularly in Germany there is less need for tracks but much need for points. So what I think: we need something to import lists of waypoints. Will <a href="https://www.openstreetmap.org/trace/create">https://www.openstreetmap.org/trace/create</a> be able to upload gpx-files with waypoints?</p>
 </div>
 <div id="comment-26022-info" class="comment-info">
 <span class="comment-age">(31 Aug '13, 21:25)</span> <span class="comment-user userinfo">hfst</span>
@@ -220,7 +220,7 @@ osqa_accepted = false
 <p>I use the <em>"Tracks"</em> feature of the <a href="http://gps.motionx.com/">MotionX GPS app</a> to record GPS tracks. I then <em>"share"</em> them to my email address (which basically emails you a GPX file) and then I import that into OSM.</p>
 <p>That works pretty well.</p>
 <p>But you're right that waypoints are a little harder, because sharing a waypoint from MotionX doesn't seem to produce a GPX file that OSM likes. So instead I mark waypoints as I go then consult the MotionX map when I'm sat at the PC to manually position them in the right place in Potlatch (Note: MotionX uses OSM mapping, so I don't think this represents any licensing issue).</p>
-<p>You might also want to take a look at the <a href="http://wiki.openstreetmap.org/wiki/Mapzen_POI_Collector">Mapzen POI Collector app</a>, which is useful if you are going out just to record a number of POIs.</p>
+<p>You might also want to take a look at the <a href="https://wiki.openstreetmap.org/wiki/Mapzen_POI_Collector">Mapzen POI Collector app</a>, which is useful if you are going out just to record a number of POIs.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

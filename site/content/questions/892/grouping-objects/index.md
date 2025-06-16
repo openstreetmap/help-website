@@ -105,8 +105,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">API</a> limits the number of nodes a single way can have to 2.000 (this has been introduced with <a href="http://wiki.openstreetmap.org/wiki/API_changes_between_v0.5_and_v0.6#Ways">API version 0.6</a>). Therefore you probably won't be able to join a long river to one single way.</p>
-<p>There seems to be also a rather old <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Collected_Ways">proposal</a> for grouping streets, rivers, railways etc. with the help of a <a href="http://wiki.openstreetmap.org/wiki/Relations">relation</a>. A newer one for rivers can be found <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Waterway">here</a> or just take a look at this <a href="http://wiki.openstreetmap.org/wiki/Relations#Composition_and_sectioning_of_ways_and_tags">list</a>.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">API</a> limits the number of nodes a single way can have to 2.000 (this has been introduced with <a href="https://wiki.openstreetmap.org/wiki/API_changes_between_v0.5_and_v0.6#Ways">API version 0.6</a>). Therefore you probably won't be able to join a long river to one single way.</p>
+<p>There seems to be also a rather old <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Collected_Ways">proposal</a> for grouping streets, rivers, railways etc. with the help of a <a href="https://wiki.openstreetmap.org/wiki/Relations">relation</a>. A newer one for rivers can be found <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Waterway">here</a> or just take a look at this <a href="https://wiki.openstreetmap.org/wiki/Relations#Composition_and_sectioning_of_ways_and_tags">list</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For your example, the ways and polygons of a river may be placed into a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Collected_Ways">Collected Way</a> relation to indicate that the river is composed of those separate parts.</p>
+<p>For your example, the ways and polygons of a river may be placed into a <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Collected_Ways">Collected Way</a> relation to indicate that the river is composed of those separate parts.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

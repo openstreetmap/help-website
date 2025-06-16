@@ -144,7 +144,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>You're probably better off asking a separate question with a few more details of what you're trying to do. The answer to <a href="https://help.openstreetmap.org/questions/19213/osm-xml-into-graph">this question</a> my help (although that's essentially doing the reverse of what you're attempting).</p>
+<p>You're probably better off asking a separate question with a few more details of what you're trying to do. The answer to <a href="/questions/19213/osm-xml-into-graph">this question</a> my help (although that's essentially doing the reverse of what you're attempting).</p>
 </div>
 <div id="comment-20988-info" class="comment-info">
 <span class="comment-age">(26 Mar '13, 11:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -167,7 +167,7 @@ One Answer:
 <div id="post-20992-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have raised it as a seperate question: <a href="https://help.openstreetmap.org/questions/20990/to-find-the-start-and-end-coordinates-of-the-street-and-street-name-using-osmosis">https://help.openstreetmap.org/questions/20990/to-find-the-start-and-end-coordinates-of-the-street-and-street-name-using-osmosis</a></p>
+<p>I have raised it as a seperate question: <a href="/questions/20990/to-find-the-start-and-end-coordinates-of-the-street-and-street-name-using-osmosis">https://help.openstreetmap.org/questions/20990/to-find-the-start-and-end-coordinates-of-the-street-and-street-name-using-osmosis</a></p>
 </div>
 <div id="comment-20992-info" class="comment-info">
 <span class="comment-age">(26 Mar '13, 12:23)</span> <span class="comment-user userinfo">tfarooqi</span>

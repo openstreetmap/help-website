@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/FAQ">OSM FAQ</a> contains the following advice:</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/FAQ">OSM FAQ</a> contains the following advice:</p>
 <p>"If you can't get your GPX with timestamps with no mean, then you can use this command to fake them:</p>
 <pre><code>xmlstarlet ed -N x=http://www.topografix.com/GPX/1/0 -N y=http://www.topografix.com/GPX/1/1 \
     -s &#39;//x:trkpt|//y:trkpt&#39; -t elem -n time -v 1970-01-01T00:00:00Z track.gpx &gt; track-nulltime.gpx</code></pre>

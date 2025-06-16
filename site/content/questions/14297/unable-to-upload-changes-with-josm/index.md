@@ -96,7 +96,7 @@ osqa_accepted = true
 5
 </div>
 <div class="comment-text">
-<p>If you're new to OSM you should <em>not</em> be importing data. See <a href="http://wiki.openstreetmap.org/wiki/Imports">http://wiki.openstreetmap.org/wiki/Imports</a> : "Scripted imports and automated edits should only be carried out by those with experience and understanding of the way the OpenStreetMap community creates maps".</p>
+<p>If you're new to OSM you should <em>not</em> be importing data. See <a href="https://wiki.openstreetmap.org/wiki/Imports">https://wiki.openstreetmap.org/wiki/Imports</a> : "Scripted imports and automated edits should only be carried out by those with experience and understanding of the way the OpenStreetMap community creates maps".</p>
 </div>
 <div id="comment-14306-info" class="comment-info">
 <span class="comment-age">(16 Jul '12, 13:42)</span> <span class="comment-user userinfo">Richard ♦</span>

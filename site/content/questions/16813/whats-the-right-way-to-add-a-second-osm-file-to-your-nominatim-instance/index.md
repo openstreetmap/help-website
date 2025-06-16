@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've created a nominatim instance, run setup.php with the --all flag and imported one US city into it. I now want to add a second US city - whats the right way to do this? I referenced this <a href="https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim">post</a> but run into the following dead ends:<br />
+<p>I've created a nominatim instance, run setup.php with the --all flag and imported one US city into it. I now want to add a second US city - whats the right way to do this? I referenced this <a href="/questions/15505/import-more-osm-files-in-to-nominatim">post</a> but run into the following dead ends:<br />
 </p>
 <p>a) Running import data leads to a hang where it says "Setting up table: planet osm ways"<br />
 Command ./utils/setup.php --osm-file &lt;filename&gt; --import-data<br />

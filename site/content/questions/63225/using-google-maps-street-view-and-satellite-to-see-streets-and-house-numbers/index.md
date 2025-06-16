@@ -118,7 +118,7 @@ One Answer:
 </blockquote>
 <p>Taken <a href="https://forum.openstreetmap.org/viewtopic.php?id=61024">from this</a>.</p>
 <p>One of the third-party apps, to sketch 3D building - to be uploaded to OpenStreetMap - <a href="https://www.reddit.com/r/openstreetmap/comments/88llme/photomatch_on_sketchosm_is_amazing_to_add_new/">got so many flak</a> for deriving things with Google Street View on their demo video.</p>
-<p>Also, could refer to <a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps">a lengthy discussion over here</a>.</p>
+<p>Also, could refer to <a href="/questions/710/can-i-use-google-streetview-to-help-create-maps">a lengthy discussion over here</a>.</p>
 <p>From <a href="https://forum.openstreetmap.org/viewtopic.php?id=61024">the first link</a>, you can follow Google Maps/Google Earth Additional Terms of Service (last modified: January 31, 2018) which mentions</p>
 <blockquote>
 <p><strong>Prohibited Conduct.</strong> When using Google Maps/Google Earth, you <em>may not</em> (or allow those acting on your behalf to): use Google Maps/Google Earth to <em>create or augment any other mapping-related dataset</em> (including a mapping or navigation dataset, business listings database, mailing list, or telemarketing list) for use in a service that is a <em>substitute for, or a substantially similar service</em> to, Google Maps/Google Earth</p>
@@ -146,7 +146,7 @@ One Answer:
 <div id="post-63230-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for answering, just to clarify is taking street names or unit numbers from Google Street View not allowed? I remember some people saying it was ok just taking street names here: <a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps,">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps,</a> but it was from 2011 and might be outdated.</p>
+<p>Thanks for answering, just to clarify is taking street names or unit numbers from Google Street View not allowed? I remember some people saying it was ok just taking street names here: <a href="/questions/710/can-i-use-google-streetview-to-help-create-maps,">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps,</a> but it was from 2011 and might be outdated.</p>
 </div>
 <div id="comment-63230-info" class="comment-info">
 <span class="comment-age">(30 Apr '18, 10:39)</span> <span class="comment-user userinfo">aaronshenhao</span>
@@ -158,7 +158,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>No, you really can't use Google Street View. I also don't see that <a href="https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps</a> suggests that "some people saying it was ok just taking street names".</p>
+<p>No, you really can't use Google Street View. I also don't see that <a href="/questions/710/can-i-use-google-streetview-to-help-create-maps">https://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps</a> suggests that "some people saying it was ok just taking street names".</p>
 </div>
 <div id="comment-63231-info" class="comment-info">
 <span class="comment-age">(30 Apr '18, 10:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -148,7 +148,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm curious what the end goal is? If you're not totally dead set on using Flash, <a href="http://openlayers.org/">OpenLayers</a> will work with any browser that has Javascript, which will make your site accessible to a larger group than if you limit yourself to just people who have Flash. The <a href="http://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers entry on the OSM wiki</a> has some examples that you can give your webmaster to get started on setting up your own maps based on OSM and data sources with the locations of your properties.</p>
+<p>I'm curious what the end goal is? If you're not totally dead set on using Flash, <a href="http://openlayers.org/">OpenLayers</a> will work with any browser that has Javascript, which will make your site accessible to a larger group than if you limit yourself to just people who have Flash. The <a href="https://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers entry on the OSM wiki</a> has some examples that you can give your webmaster to get started on setting up your own maps based on OSM and data sources with the locations of your properties.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -220,7 +220,7 @@ osqa_accepted = false
 <div id="post-3233-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hadn't heard of that one before. Looks neat. I've added it to <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">the list</a></p>
+<p>Hadn't heard of that one before. Looks neat. I've added it to <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">the list</a></p>
 </div>
 <div id="comment-3233-info" class="comment-info">
 <span class="comment-age">(21 Feb '11, 14:10)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -312,7 +312,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We list many alternatives for <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">'Deploying your own Slippy Map'</a> on the OpenStreetMap wiki.</p>
+<p>We list many alternatives for <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">'Deploying your own Slippy Map'</a> on the OpenStreetMap wiki.</p>
 <p>Doing this in JavaScript using OpenLayers, is the most popular approach, but a number of flash based alternatives are listed.</p>
 </div>
 <div class="answer-controls post-controls">

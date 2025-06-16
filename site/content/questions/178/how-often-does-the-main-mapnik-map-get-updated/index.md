@@ -161,7 +161,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>more information about the coastline process in the wiki: <a href="http://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer">http://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer</a></p>
+<p>more information about the coastline process in the wiki: <a href="https://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer">https://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer</a></p>
 </div>
 <div id="comment-7977-info" class="comment-info">
 <span class="comment-age">(18 Sep '11, 16:40)</span> <span class="comment-user userinfo">dieterdreist</span>
@@ -231,7 +231,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13168/gbal45">@gbal45</a> pls do not add further questions to existing question and pls don't add them as answers. In any case you are simply seeing in browser caching effects. Refreshing and/or deleting the cache should help except if there is an overload situation on the tile servers.</p>
+<p><a href="https://help.openstreetmap.org/users/13168/gbal45">@gbal45</a> pls do not add further questions to existing question and pls don't add them as answers. In any case you are simply seeing in browser caching effects. Refreshing and/or deleting the cache should help except if there is an overload situation on the tile servers.</p>
 </div>
 <div id="comment-53910-info" class="comment-info">
 <span class="comment-age">(07 Jan '17, 20:07)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

@@ -167,7 +167,7 @@ osqa_accepted = false
 <div id="post-45229-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11393/vera-stein"></a><a href="http://help.openstreetmap.org/users/11393/vera-stein">@Vera Stein</a>: nein, es gab anscheinend früher mal die Karte mit einem Installer für MapSource, ich kann aber keinen mehr finden. Die Alternativmethoden um eine fertige Garminkarte nach MapSource einzubunden (<span>1</span>, <span>2</span>) sind nicht einfach.</p>
+<p><a href="https://help.openstreetmap.org/users/11393/vera-stein"></a><a href="https://help.openstreetmap.org/users/11393/vera-stein">@Vera Stein</a>: nein, es gab anscheinend früher mal die Karte mit einem Installer für MapSource, ich kann aber keinen mehr finden. Die Alternativmethoden um eine fertige Garminkarte nach MapSource einzubunden (<span>1</span>, <span>2</span>) sind nicht einfach.</p>
 <p>Tut mir leid – aber ich kann dir nur empfehlen, dich bei den aktuellen Karten umzusehen … vielleicht findest du ja doch eine dir Gefallende.</p>
 </div>
 <div id="comment-45229-info" class="comment-info">

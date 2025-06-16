@@ -105,8 +105,8 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Probably the answer you're looking for is...</p>
-<p>Draw a way around the outline of the building. This will involve clicking on each corner, and ensuring that it loops back on itself to create a closed area. Then add the tag <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=</a>residential to this way.</p>
-<p>But there's actually several ways of thinking about drawing houses. If this part of the map has lots of houses drawn already, and just a few missing, then follow the above approach to add them. If this bit of the map has no buildings, then you're embarking upon a big new level of detail if you start to draw houses in, so think about drawing more significant buildings first. In fact before you draw any buildings, you can draw an area of <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> around general areas of lots of houses (in a town or city). Do this first if it's not there already.</p>
+<p>Draw a way around the outline of the building. This will involve clicking on each corner, and ensuring that it loops back on itself to create a closed area. Then add the tag <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=</a>residential to this way.</p>
+<p>But there's actually several ways of thinking about drawing houses. If this part of the map has lots of houses drawn already, and just a few missing, then follow the above approach to add them. If this bit of the map has no buildings, then you're embarking upon a big new level of detail if you start to draw houses in, so think about drawing more significant buildings first. In fact before you draw any buildings, you can draw an area of <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> around general areas of lots of houses (in a town or city). Do this first if it's not there already.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

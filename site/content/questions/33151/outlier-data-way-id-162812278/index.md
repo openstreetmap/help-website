@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I was looking at the boundaries of latitude longitude on the map and I realized there are some weird lines in the database. As an example, I downloaded the data for Sweden and I realized there are negative longitude values, belonging to something called 'Arctic circle' <a href="http://www.openstreetmap.org/way/162812278">This example</a></p>
+<p>I was looking at the boundaries of latitude longitude on the map and I realized there are some weird lines in the database. As an example, I downloaded the data for Sweden and I realized there are negative longitude values, belonging to something called 'Arctic circle' <a href="https://www.openstreetmap.org/way/162812278">This example</a></p>
 <p>It is a straight line across the globe, I don't want it. How to filter such things out?</p>
 <p>Best Regards,</p>
 </div>
@@ -92,7 +92,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>Generally speaking, "unwanted deletions" of that sort are fairly rare (and relatively easily reverted by other members of the community). The <a href="http://wiki.openstreetmap.org/wiki/Vandalism">http://wiki.openstreetmap.org/wiki/Vandalism</a> wiki page and the links from there have a bit of information, but it might be easier just to ask the question on the #osm IRC channel and discuss with people there.</p>
+<p>Generally speaking, "unwanted deletions" of that sort are fairly rare (and relatively easily reverted by other members of the community). The <a href="https://wiki.openstreetmap.org/wiki/Vandalism">https://wiki.openstreetmap.org/wiki/Vandalism</a> wiki page and the links from there have a bit of information, but it might be easier just to ask the question on the #osm IRC channel and discuss with people there.</p>
 </div>
 <div id="comment-33170-info" class="comment-info">
 <span class="comment-age">(14 May '14, 09:14)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Holes in scrub (relations, inner &amp; outer)"
-description = '''At http://www.openstreetmap.org/?lat=46.84408&amp;amp;lon=11.69212&amp;amp;zoom=16&amp;amp;layers=M I have a scrub, where within there are some open areas with landuse=meadow (clearly visible in the data inspector). The scrub (way 85074083) is outer on relation 1270018, with 7 ways being inner in this relation,...'''
+description = '''At https://www.openstreetmap.org/?lat=46.84408&amp;amp;lon=11.69212&amp;amp;zoom=16&amp;amp;layers=M I have a scrub, where within there are some open areas with landuse=meadow (clearly visible in the data inspector). The scrub (way 85074083) is outer on relation 1270018, with 7 ways being inner in this relation,...'''
 date = "2010-11-13T00:58:00Z"
 lastmod = "2010-11-13T10:25:00Z"
 weight = 1535
@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>At <a href="http://www.openstreetmap.org/?lat=46.84408&amp;lon=11.69212&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=46.84408&amp;lon=11.69212&amp;zoom=16&amp;layers=M</a> I have a scrub, where within there are some open areas with landuse=meadow (clearly visible in the data inspector).</p>
+<p>At <a href="https://www.openstreetmap.org/?lat=46.84408&amp;lon=11.69212&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=46.84408&amp;lon=11.69212&amp;zoom=16&amp;layers=M</a> I have a scrub, where within there are some open areas with landuse=meadow (clearly visible in the data inspector).</p>
 <p>The scrub (way 85074083) is outer on relation 1270018, with 7 ways being inner in this relation, but they don't show up on mapnik. I don't have problems putting holes in forests though.</p>
-<p>On the other hand, <a href="http://www.openstreetmap.org/?lat=46.82837&amp;lon=11.775642&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=46.82837&amp;lon=11.775642&amp;zoom=18&amp;layers=M</a> shows a church inside a graveyard, but the graveyard is also over the church, even though I also made it a hole in the graveyard's releation. I don't see any difference (in tagging) to <a href="http://www.openstreetmap.org/?lat=46.843974&amp;lon=11.725565&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=46.843974&amp;lon=11.725565&amp;zoom=18&amp;layers=M</a> where it is rendered correctly. What am I doing wrong/what am I not seeing?</p>
+<p>On the other hand, <a href="https://www.openstreetmap.org/?lat=46.82837&amp;lon=11.775642&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=46.82837&amp;lon=11.775642&amp;zoom=18&amp;layers=M</a> shows a church inside a graveyard, but the graveyard is also over the church, even though I also made it a hole in the graveyard's releation. I don't see any difference (in tagging) to <a href="https://www.openstreetmap.org/?lat=46.843974&amp;lon=11.725565&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=46.843974&amp;lon=11.725565&amp;zoom=18&amp;layers=M</a> where it is rendered correctly. What am I doing wrong/what am I not seeing?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-inner" rel="tag" title="see questions tagged &#39;inner&#39;">inner</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>
@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You haven't tagged the relations correctly. For the scrub relation and the graveyard/church relation, they don't have any tags at all, though the ways that are part of them are tagged correctly. You have to tag the relations as <code>type=multipolygon</code></p>
-<p>Then the renderer will know it is a multipolygon relation, with separate outer and inner parts, and show it correctly. See the wiki page for details: <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">Relation:multipolygon</a> The second example graveyard/church relation is tagged as <code>type=multipolygon</code>, and as you say, it is rendered correctly.</p>
+<p>Then the renderer will know it is a multipolygon relation, with separate outer and inner parts, and show it correctly. See the wiki page for details: <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">Relation:multipolygon</a> The second example graveyard/church relation is tagged as <code>type=multipolygon</code>, and as you say, it is rendered correctly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for the explanation. Apparently, in woods the renderer renders holes just fine, so I didn't see the need for the multipolygon there. Don't remember how I did that for the one graveyard where it was already ok...</p>
-<p>It renders OK now, but here <a href="http://www.openstreetmap.org/?lat=46.84927&amp;lon=11.69452&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=46.84927&amp;lon=11.69452&amp;zoom=16&amp;layers=M</a> (in the center) the big area is tagged as wood=confierous,landuse=forest, but is not rendered as such... One other difference in the graveyards was the other one that worked was tagged cemetary. Once changed to grave_yard, making a hole doesn't work as expected anymore.</p>
+<p>It renders OK now, but here <a href="https://www.openstreetmap.org/?lat=46.84927&amp;lon=11.69452&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=46.84927&amp;lon=11.69452&amp;zoom=16&amp;layers=M</a> (in the center) the big area is tagged as wood=confierous,landuse=forest, but is not rendered as such... One other difference in the graveyards was the other one that worked was tagged cemetary. Once changed to grave_yard, making a hole doesn't work as expected anymore.</p>
 </div>
 <div id="comment-1537-info" class="comment-info">
 <span class="comment-age">(13 Nov '10, 10:25)</span> <span class="comment-user userinfo">Alexander Ro...</span>

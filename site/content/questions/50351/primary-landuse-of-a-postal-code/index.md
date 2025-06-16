@@ -74,7 +74,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>also see this answer for limitations of US zip code polygons: <a href="https://help.openstreetmap.org/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries">https://help.openstreetmap.org/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries</a></p>
+<p>also see this answer for limitations of US zip code polygons: <a href="/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries">https://help.openstreetmap.org/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries</a></p>
 </div>
 <div id="comment-50357-info" class="comment-info">
 <span class="comment-age">(21 Jun '16, 15:03)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -186,7 +186,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>The most userfriendly is overpass-turbo. See this example: <a href="http://overpass-turbo.eu/s/gV0">http://overpass-turbo.eu/s/gV0</a> . You can export the data as well as the query. It is possible to have Overpass geocode an area in stead of using a bounding box. You can learn more about the Overpass API on the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">wiki</a> and find many related questions on this forum.</p>
+<p>The most userfriendly is overpass-turbo. See this example: <a href="http://overpass-turbo.eu/s/gV0">http://overpass-turbo.eu/s/gV0</a> . You can export the data as well as the query. It is possible to have Overpass geocode an area in stead of using a bounding box. You can learn more about the Overpass API on the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">wiki</a> and find many related questions on this forum.</p>
 </div>
 <div id="comment-50375-info" class="comment-info">
 <span class="comment-age">(22 Jun '16, 09:55)</span> <span class="comment-user userinfo">joost schouppe</span>

@@ -124,7 +124,7 @@ One Answer:
 <div id="post-53989-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for pointing this out. I've been reading the policy (<a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines)">http://wiki.openstreetmap.org/wiki/Import/Guidelines)</a> in-depth and plan definitely to work through the human/consensus aspect before flipping the switch. I've already begun conversations regarding tagging etc. and plan to get input and consensus along the way, with a wiki page for the import process in draft. Just out of curiosity, have you worked with osmsync (<a href="http://wiki.openstreetmap.org/wiki/Osmsync)?">http://wiki.openstreetmap.org/wiki/Osmsync)?</a> And hadn't thought of POSM. I'll add that to my list!</p>
+<p>Thanks for pointing this out. I've been reading the policy (<a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines)">https://wiki.openstreetmap.org/wiki/Import/Guidelines)</a> in-depth and plan definitely to work through the human/consensus aspect before flipping the switch. I've already begun conversations regarding tagging etc. and plan to get input and consensus along the way, with a wiki page for the import process in draft. Just out of curiosity, have you worked with osmsync (<a href="https://wiki.openstreetmap.org/wiki/Osmsync)?">https://wiki.openstreetmap.org/wiki/Osmsync)?</a> And hadn't thought of POSM. I'll add that to my list!</p>
 </div>
 <div id="comment-53989-info" class="comment-info">
 <span class="comment-age">(11 Jan '17, 19:20)</span> <span class="comment-user userinfo">kidwellj</span>

@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There are quite a few mobile home estates (aka trailer parks) in my area. They were imported as "hamlets" from GNIS. There was one <a href="http://help.openstreetmap.org/questions/855/mobile-home-park-trailer-park-labeling">question</a> a while ago about this and one stub of a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Trailer_Park-">proposal</a> on wiki, which went nowhere.</p>
+<p>There are quite a few mobile home estates (aka trailer parks) in my area. They were imported as "hamlets" from GNIS. There was one <a href="/questions/855/mobile-home-park-trailer-park-labeling">question</a> a while ago about this and one stub of a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Trailer_Park-">proposal</a> on wiki, which went nowhere.</p>
 <p>Two questions:</p>
 <ol>
-<li><p>Are "mobile home estates" the same for all intents and purposes as trailer parks? I don't think these mobile homes are very mobile in the same way trailers are, but I have never lived in one or the other, so what do I know. Here's <a href="http://www.openstreetmap.org/browse/node/150934461">one</a> I am trying to retag.</p></li>
+<li><p>Are "mobile home estates" the same for all intents and purposes as trailer parks? I don't think these mobile homes are very mobile in the same way trailers are, but I have never lived in one or the other, so what do I know. Here's <a href="https://www.openstreetmap.org/browse/node/150934461">one</a> I am trying to retag.</p></li>
 <li><p>What to do with the existing GNIS-imported "hamlets"? Does it makes sense to<br />
 </p>
 <ul>

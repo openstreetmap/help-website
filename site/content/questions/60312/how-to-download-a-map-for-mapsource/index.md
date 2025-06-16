@@ -226,7 +226,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want a European map? most are just a one click, This is a much easier alternative <a href="http://garmin.opentopomap.org/">http://garmin.opentopomap.org/</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Some_of_the_one_click_downloads.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Some_of_the_one_click_downloads.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

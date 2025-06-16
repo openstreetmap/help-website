@@ -47,7 +47,7 @@ osqa_accepted = false
 <p>equipment- &gt; housing- &gt; Area Service and / or parking for campers -&gt; tourism = caravan site?</p>
 <p>There has however many campsites that are tagged caravan_site .</p>
 <p>Should not we use another term that caravan_site to avoid confusion ? and using camp_site for all "real" campsites</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site">http://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site">https://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site</a></p>
 <p>Vincent</p>
 <hr />
 <p>Bonjour,</p>
@@ -56,7 +56,7 @@ osqa_accepted = false
 <p>équipement-&gt; logement-&gt; Aire de Service et/ou stationnement pour camping car -&gt; tourism=caravan site ?</p>
 <p>Il y a pourtant de nombreux campings qui sont tagués caravan_site.</p>
 <p>Ne devrait on pas utiliser un autre terme que caravan_site pour éviter la confusion ? et utiliser camp_site pour tous les "vrais" campings</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site">http://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site">https://wiki.openstreetmap.org/wiki/Talk:Tag:tourism%3Dcaravan_site</a></p>
 <p>Vincent</p>
 </div>
 <div id="question-tags" class="tags-container tags">

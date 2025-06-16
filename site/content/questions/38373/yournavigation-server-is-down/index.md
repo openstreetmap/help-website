@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Yournavigation Server is down"
-description = '''I was using gosmore api from  http://www.yournavigation.org/api/1.0/gosmore.php  described in  http://wiki.openstreetmap.org/wiki/YOURS  Now the service is down for many days. The platform status  http://wiki.openstreetmap.org/wiki/Platform_Status  does not say anything about. It is possible to stil...'''
+description = '''I was using gosmore api from  http://www.yournavigation.org/api/1.0/gosmore.php  described in  https://wiki.openstreetmap.org/wiki/YOURS  Now the service is down for many days. The platform status  https://wiki.openstreetmap.org/wiki/Platform_Status  does not say anything about. It is possible to stil...'''
 date = "2014-11-08T07:43:00Z"
 lastmod = "2014-11-09T22:03:00Z"
 weight = 38373
@@ -43,10 +43,10 @@ osqa_accepted = true
 <p>I was using gosmore api from</p>
 <pre><code>http://www.yournavigation.org/api/1.0/gosmore.php</code></pre>
 <p>described in</p>
-<pre><code>http://wiki.openstreetmap.org/wiki/YOURS</code></pre>
+<pre><code>https://wiki.openstreetmap.org/wiki/YOURS</code></pre>
 <p>Now the service is down for many days.</p>
 <p>The platform status</p>
-<pre><code> http://wiki.openstreetmap.org/wiki/Platform_Status</code></pre>
+<pre><code> https://wiki.openstreetmap.org/wiki/Platform_Status</code></pre>
 <p>does not say anything about.</p>
 <p>It is possible to still rely on this service or something happened? I didn't find any useful information around the OSM wiki. This is not only a <em>transient</em> question, I would like also to ask if there is some status server where to check the availability of the <em>yournavigation.org</em> website since some software could rely on it, or, where it is possible to signal malfunctions.</p>
 </div>

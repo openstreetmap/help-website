@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think traffic_calming=bump</p>
-<p>See: <a href="http://wiki.openstreetmap.org/wiki/Speed_bump">http://wiki.openstreetmap.org/wiki/Speed_bump</a></p>
+<p>See: <a href="https://wiki.openstreetmap.org/wiki/Speed_bump">https://wiki.openstreetmap.org/wiki/Speed_bump</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

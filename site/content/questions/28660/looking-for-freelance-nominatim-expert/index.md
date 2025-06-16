@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a list of commercial service providers - sometimes larger companies, sometimes just individual freelancers - on the wiki page <a href="http://wiki.openstreetmap.org/w/index.php?title=Commercial_OSM_Software_and_Services">Commercial OSM Software and Services.</a> That page doesn't do a very good job at describing the specialities and competency of each of the businesses but it's a starting point.<br />
+<p>There's a list of commercial service providers - sometimes larger companies, sometimes just individual freelancers - on the wiki page <a href="https://wiki.openstreetmap.org/w/index.php?title=Commercial_OSM_Software_and_Services">Commercial OSM Software and Services.</a> That page doesn't do a very good job at describing the specialities and competency of each of the businesses but it's a starting point.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

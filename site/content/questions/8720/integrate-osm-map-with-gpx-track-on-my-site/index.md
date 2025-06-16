@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">Openlayers_Track_example</a></p>
+<p>Have a look at the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">Openlayers_Track_example</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Assumining you understand German (or use google), take a look at my wiki-page:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer">http://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer">https://wiki.openstreetmap.org/wiki/User:Ajoessen/Osmviewer_und_GPXviewer</a></p>
 <p>and an example from my site:</p>
 <p><a href="http://powerland.bplaced.net/bl/2304.htm">http://powerland.bplaced.net/bl/2304.htm</a></p>
 </div>

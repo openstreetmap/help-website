@@ -134,7 +134,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Just select the source object, hit ctrl+C on your keyboard, then hit ctrl+V on your keyboard and position the new (duplicated) object at the desired position with your mouse. See <a href="https://wiki.openstreetmap.org/wiki/ID/Shortcuts">https://wiki.openstreetmap.org/wiki/ID/Shortcuts</a> for more useful shortcuts.</p>
-<p>A related question is how to copy (possibly only some) tags from one object to another - see <a href="https://help.openstreetmap.org/questions/51910/how-do-i-copy-the-tags-from-another-node-or-way">https://help.openstreetmap.org/questions/51910/how-do-i-copy-the-tags-from-another-node-or-way</a> for this.</p>
+<p>A related question is how to copy (possibly only some) tags from one object to another - see <a href="/questions/51910/how-do-i-copy-the-tags-from-another-node-or-way">https://help.openstreetmap.org/questions/51910/how-do-i-copy-the-tags-from-another-node-or-way</a> for this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

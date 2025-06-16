@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>IMHO not a good idea (given that I was born there I'm allowed to have an opinion :-)), on the one hand I don't believe we've ever considered keeping tree canopy data in OSM in the first place and 2nd doing so would create a mass of extra polygons that would make editing a real pain. Further there is still lots of useful stuff missing from OSM in Melbourne (buildings, addresses, etc) which would be far higher priority than the proposed import.</p>
-<p>Not IMHO: you need to consult the local community and the import mailinglist, read <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> first.</p>
+<p>Not IMHO: you need to consult the local community and the import mailinglist, read <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> first.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

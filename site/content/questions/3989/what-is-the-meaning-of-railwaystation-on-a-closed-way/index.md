@@ -201,7 +201,7 @@ osqa_accepted = true
 <div id="post-48438-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#map=18/48.84448/2.37561">http://www.openstreetmap.org/#map=18/48.84448/2.37561</a> has a lot of indoor features <a href="http://www.openstreetmap.org/relation/5695079">http://www.openstreetmap.org/relation/5695079</a> a relation example complecated by being a multi use shed site</p>
+<p><a href="https://www.openstreetmap.org/#map=18/48.84448/2.37561">https://www.openstreetmap.org/#map=18/48.84448/2.37561</a> has a lot of indoor features <a href="https://www.openstreetmap.org/relation/5695079">https://www.openstreetmap.org/relation/5695079</a> a relation example complecated by being a multi use shed site</p>
 </div>
 <div id="comment-48438-info" class="comment-info">
 <span class="comment-age">(01 Mar '16, 17:43)</span> <span class="comment-user userinfo">Govanus</span>
@@ -212,7 +212,7 @@ osqa_accepted = true
 <div id="post-48439-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/333666174#map=18/51.61749/-1.24608">http://www.openstreetmap.org/way/333666174#map=18/51.61749/-1.24608</a> shows a way one renderer handels the small to large scal transition but it is a pure render choice</p>
+<p><a href="https://www.openstreetmap.org/way/333666174#map=18/51.61749/-1.24608">https://www.openstreetmap.org/way/333666174#map=18/51.61749/-1.24608</a> shows a way one renderer handels the small to large scal transition but it is a pure render choice</p>
 </div>
 <div id="comment-48439-info" class="comment-info">
 <span class="comment-age">(01 Mar '16, 17:47)</span> <span class="comment-user userinfo">Govanus</span>

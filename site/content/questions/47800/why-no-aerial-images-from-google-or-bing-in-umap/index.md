@@ -172,7 +172,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11946/big_borz">@Big_Borz</a>: are you talking about editing/contributing to OSM or just using OSM's data/maps somehow?</p>
+<p><a href="https://help.openstreetmap.org/users/11946/big_borz">@Big_Borz</a>: are you talking about editing/contributing to OSM or just using OSM's data/maps somehow?</p>
 </div>
 <div id="comment-47929-info" class="comment-info">
 <span class="comment-age">(04 Feb '16, 22:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -195,7 +195,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11946/big_borz"></a><a href="http://help.openstreetmap.org/users/11946/big_borz">@Big_Borz</a>: in case you mean editing (and mapping for) OSM data: please keep in mind that we are not allowed to use any other maps or aerial imagery - unless it is clearly allowed. E.g. google's imagery is not allowed to be used for your contributions at OSM. See <a href="https://wiki.osmfoundation.org/wiki/License/Contributor_Terms">1</a> and <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing">2</a>. So, unless you know better, please stick to the ones presented by default by your editor.</p>
+<p><a href="https://help.openstreetmap.org/users/11946/big_borz"></a><a href="https://help.openstreetmap.org/users/11946/big_borz">@Big_Borz</a>: in case you mean editing (and mapping for) OSM data: please keep in mind that we are not allowed to use any other maps or aerial imagery - unless it is clearly allowed. E.g. google's imagery is not allowed to be used for your contributions at OSM. See <a href="https://wiki.osmfoundation.org/wiki/License/Contributor_Terms">1</a> and <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing">2</a>. So, unless you know better, please stick to the ones presented by default by your editor.</p>
 </div>
 <div id="comment-47961-info" class="comment-info">
 <span class="comment-age">(05 Feb '16, 17:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -206,7 +206,7 @@ osqa_accepted = true
 <div id="post-47967-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Ok thanks. I guess I have to stick with the outdated Bing imagery.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Ok thanks. I guess I have to stick with the outdated Bing imagery.</p>
 </div>
 <div id="comment-47967-info" class="comment-info">
 <span class="comment-age">(05 Feb '16, 22:34)</span> <span class="comment-user userinfo">Big_Borz</span>
@@ -217,7 +217,7 @@ osqa_accepted = true
 <div id="post-47968-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11946/big_borz">@Big_Borz</a>: yes, and in some regions other aerial providers are available (e.g. mapbox), see the backgrounds menu of your editor. Of course going outside with your gps recording device, notepad, photo is always an option!</p>
+<p><a href="https://help.openstreetmap.org/users/11946/big_borz">@Big_Borz</a>: yes, and in some regions other aerial providers are available (e.g. mapbox), see the backgrounds menu of your editor. Of course going outside with your gps recording device, notepad, photo is always an option!</p>
 </div>
 <div id="comment-47968-info" class="comment-info">
 <span class="comment-age">(05 Feb '16, 23:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -228,7 +228,7 @@ osqa_accepted = true
 <div id="post-47981-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Thank you very much, sir.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Thank you very much, sir.</p>
 </div>
 <div id="comment-47981-info" class="comment-info">
 <span class="comment-age">(06 Feb '16, 16:19)</span> <span class="comment-user userinfo">Big_Borz</span>
@@ -239,7 +239,7 @@ osqa_accepted = true
 <div id="post-56616-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Update from the future: it is now possible to use DigitalGlobe maps, which are in many places more current and more detailed than Bing. <a href="http://wiki.openstreetmap.org/wiki/DigitalGlobe">http://wiki.openstreetmap.org/wiki/DigitalGlobe</a></p>
+<p>Update from the future: it is now possible to use DigitalGlobe maps, which are in many places more current and more detailed than Bing. <a href="https://wiki.openstreetmap.org/wiki/DigitalGlobe">https://wiki.openstreetmap.org/wiki/DigitalGlobe</a></p>
 </div>
 <div id="comment-56616-info" class="comment-info">
 <span class="comment-age">(14 Jun '17, 10:35)</span> <span class="comment-user userinfo">Piskvor</span>

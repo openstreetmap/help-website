@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you tag the <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dvillage">village</a> as a node, you are free to decide where to place the node. However, the wiki <a href="http://wiki.openstreetmap.org/wiki/Key:place#Positioning_a_central_place_node">suggests</a> that the position of the node "should be somewhere judged to be central to the place. This is not necessarily the geometrical centre, but <em>central in terms of transport routes / city density</em>".</p>
+<p>If you tag the <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dvillage">village</a> as a node, you are free to decide where to place the node. However, the wiki <a href="https://wiki.openstreetmap.org/wiki/Key:place#Positioning_a_central_place_node">suggests</a> that the position of the node "should be somewhere judged to be central to the place. This is not necessarily the geometrical centre, but <em>central in terms of transport routes / city density</em>".</p>
 <p>There is no direct way to specify where the name should be rendered, this is the decision of the renderer. Using a node, the name will usually show up at the node's position or somewhere in the near surrounding. If you map the village as an area (which is more exact but also more complicated) you can't decide at all where the name will be shown on the map. But as rendering isn't your job and one shouldn't map or tag for the renderer anyway, just stick to the suggestion of the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How about <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dvillage">place=village</a>?</p>
+<p>How about <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dvillage">place=village</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

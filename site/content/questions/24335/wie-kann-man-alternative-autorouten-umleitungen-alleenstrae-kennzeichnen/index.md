@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Das ist genauso möglich wie bei Bus-, Rad- und Wanderstrecken: über eine <a href="http://wiki.openstreetmap.org/wiki/Relation">Relation</a>, hier mit <em>type=route</em> und <em>route=road</em>. Die von dir genannte <a href="http://www.openstreetmap.org/browse/relation/916041">Deutsche Alleenstraße</a> ist beispielsweise auch bereits erfasst. Ob sie vollständig ist, kann ich dir allerdings nicht sagen.</p>
+<p>Das ist genauso möglich wie bei Bus-, Rad- und Wanderstrecken: über eine <a href="https://wiki.openstreetmap.org/wiki/Relation">Relation</a>, hier mit <em>type=route</em> und <em>route=road</em>. Die von dir genannte <a href="https://www.openstreetmap.org/browse/relation/916041">Deutsche Alleenstraße</a> ist beispielsweise auch bereits erfasst. Ob sie vollständig ist, kann ich dir allerdings nicht sagen.</p>
 <p>Temporäre Umleitungen zu erfassen halte ich allerdings für wenig sinnvoll und kann keinen rechten Nutzen erkennen.</p>
 </div>
 <div class="answer-controls post-controls">

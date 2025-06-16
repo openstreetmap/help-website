@@ -176,7 +176,7 @@ osqa_accepted = false
 <li>copy the values from the boxes on the left.</li>
 </ol>
 <p>in this case it would south-west: 59.31414,18.0406 and north-east: 59.31985,18.04848</p>
-<p><img src="http://help.openstreetmap.org/upfiles/choose_lat_lon_pairs.jpg" alt="export box" /></p>
+<p><img src="/upfiles/choose_lat_lon_pairs.jpg" alt="export box" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

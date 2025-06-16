@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are numerous possible ways to achieve your goal and it is a bit difficult to give an answer without knowing more about your environment. T would suggest having a look at the various software lists and libraries listed in our wiki <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a></p>
+<p>There are numerous possible ways to achieve your goal and it is a bit difficult to give an answer without knowing more about your environment. T would suggest having a look at the various software lists and libraries listed in our wiki <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

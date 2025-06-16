@@ -149,7 +149,7 @@ Another idea is to use the FF dev tools (or Firebug) to trace what happens with 
 1
 </div>
 <div class="comment-text">
-<p>Please note the github link above as cited by <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> is not the Potlatch 2 issue tracker - that resides on trac.openstreetmap.org.</p>
+<p>Please note the github link above as cited by <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> is not the Potlatch 2 issue tracker - that resides on trac.openstreetmap.org.</p>
 </div>
 <div id="comment-43866-info" class="comment-info">
 <span class="comment-age">(30 Jun '15, 13:19)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -377,7 +377,7 @@ Another idea is to use the FF dev tools (or Firebug) to trace what happens with 
 <div id="post-43307-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9409/padvinder"></a><a href="http://help.openstreetmap.org/users/9409/padvinder">@padvinder</a> - what happened was that someone moved your answer to a comment below the question, and my comment on your answer is now below that.</p>
+<p><a href="https://help.openstreetmap.org/users/9409/padvinder"></a><a href="https://help.openstreetmap.org/users/9409/padvinder">@padvinder</a> - what happened was that someone moved your answer to a comment below the question, and my comment on your answer is now below that.</p>
 <p>Re "https everywhere" - that'll be the problem then.</p>
 </div>
 <div id="comment-43307-info" class="comment-info">

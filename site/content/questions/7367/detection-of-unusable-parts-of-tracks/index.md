@@ -306,7 +306,7 @@ osqa_accepted = false
 <div id="post-7407-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What you're suggesting could work - I'd drop a mail to one of the mailing lists (see <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists).">http://wiki.openstreetmap.org/wiki/Mailing_lists).</a> There's a "talk-africa" list, but it doesn't seem very active (<a href="http://lists.openstreetmap.org/pipermail/talk-africa/).">http://lists.openstreetmap.org/pipermail/talk-africa/).</a> Maybe trying the main talk list (<a href="http://lists.openstreetmap.org/listinfo/talk)?">http://lists.openstreetmap.org/listinfo/talk)?</a></p>
+<p>What you're suggesting could work - I'd drop a mail to one of the mailing lists (see <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists).">https://wiki.openstreetmap.org/wiki/Mailing_lists).</a> There's a "talk-africa" list, but it doesn't seem very active (<a href="http://lists.openstreetmap.org/pipermail/talk-africa/).">http://lists.openstreetmap.org/pipermail/talk-africa/).</a> Maybe trying the main talk list (<a href="http://lists.openstreetmap.org/listinfo/talk)?">http://lists.openstreetmap.org/listinfo/talk)?</a></p>
 </div>
 <div id="comment-7407-info" class="comment-info">
 <span class="comment-age">(28 Aug '11, 21:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

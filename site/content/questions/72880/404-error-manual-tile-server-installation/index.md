@@ -256,7 +256,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi,</p>
 <p>Tiles for Malaysia, Singapore, Brunei is shown in the below format.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/WhatsApp_Image_2020-02-07_at_12.09.22.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/WhatsApp_Image_2020-02-07_at_12.09.22.jpeg" alt="alt text" /></p>
 <p>This map format/ style is very different than google map.</p>
 <p>Is there any way to change the format or style of the map?</p>
 <h2 id="purpose-of-map">Purpose of Map</h2>

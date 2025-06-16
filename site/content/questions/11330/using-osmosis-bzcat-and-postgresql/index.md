@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm using Osmosis to load an extract of OSM data for the USA into a Postgresql database. I have previously used osm2pgsql.exe to load data into a postgresql database, but it is taking an extremely long time to load on my computer (Win 7 64 bit) using osm2pgsql 32 bit with the <code>-s</code> argument. I'm a unclear about a couple of things using <code>osmosis</code> and <code>bzcat</code>. On the Osmosis wiki <a href="http://wiki.openstreetmap.org/wiki/Osmosis">page</a> I see the following instructions:</p>
+<p>I'm using Osmosis to load an extract of OSM data for the USA into a Postgresql database. I have previously used osm2pgsql.exe to load data into a postgresql database, but it is taking an extremely long time to load on my computer (Win 7 64 bit) using osm2pgsql 32 bit with the <code>-s</code> argument. I'm a unclear about a couple of things using <code>osmosis</code> and <code>bzcat</code>. On the Osmosis wiki <a href="https://wiki.openstreetmap.org/wiki/Osmosis">page</a> I see the following instructions:</p>
 <blockquote>
 <p>Import a planet file into a local PostgreSQL rails port database.</p>
 </blockquote>
@@ -72,7 +72,7 @@ org.openstreetmap.osmosis.core.OsmosisRuntimeException: Argument port for task 2
 <p>Where I can I pass the port-number? While I am using localhost, my port-number is 5436 for this database. More generally, what does a <code>rails port</code> mean? Do I need to create a set of tables to match what the data is importing?</p>
 <p>I am also trying to use <code>bzcat</code> to pull out an extract of the data so that I could use osm2pgsql.exe but this does not work.</p>
 <pre><code>bzcat J:\DATA\OSM\massachusetts.osm.bz2 | J:\osmosis-0.40.1\bin\osmosis.bat --read-xml enableDateParsing=no file= --bounding-box top=42.48 left=-71.31 bottom=42.23 right=42.48 --write-xml file=  | bzip2 &gt; J:\DATA\OSM\extracted.osm.bz2</code></pre>
-<p>When I ran this, I got an error message saying that bzip.dll was not on my system. I just saved the file linked on this <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Windows_notes">page</a> and tried running that but it seems not to work.</p>
+<p>When I ran this, I got an error message saying that bzip.dll was not on my system. I just saved the file linked on this <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Windows_notes">page</a> and tried running that but it seems not to work.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bzip2" rel="tag" title="see questions tagged &#39;bzip2&#39;">bzip2</span> <span class="post-tag tag-link-postgresql" rel="tag" title="see questions tagged &#39;postgresql&#39;">postgresql</span> <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span>

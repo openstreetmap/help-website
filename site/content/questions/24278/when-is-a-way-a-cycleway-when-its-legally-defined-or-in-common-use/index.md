@@ -122,7 +122,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p><em>The following answer relates to standard practice in the UK and is not intended to make any judgement about tagging practice elsewhere in the world.</em></p>
 <p>The <code>bicycle=</code> tag represents the legal status of the way. If bicycles are forbidden by an explicit sign, then it should be <code>bicycle=no</code>. Similarly, if there is a sign to expressly permit cycles, you should add <code>bicycle=yes</code> or use a tag which implies it (such as <code>highway=cycleway</code>).</p>
-<p>Cut-throughs between houses of the type you mention are best simply tagged with <code>highway=footway</code> and <code>surface=asphalt</code> (or whatever). Do not put <code>bicycle=yes</code> if it is of footpath construction (see the <a href="http://wiki.openstreetmap.org/wiki/Duck_tagging">Duck tagging</a> link posted by Cartinus) and there is no bicycle signage; to do so would be implying that there is official permission to cycle on this path. This is not "a technicality"; we record what's on the ground, and if there is no legal permission for cycling, we shouldn't record that there is.</p>
+<p>Cut-throughs between houses of the type you mention are best simply tagged with <code>highway=footway</code> and <code>surface=asphalt</code> (or whatever). Do not put <code>bicycle=yes</code> if it is of footpath construction (see the <a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">Duck tagging</a> link posted by Cartinus) and there is no bicycle signage; to do so would be implying that there is official permission to cycle on this path. This is not "a technicality"; we record what's on the ground, and if there is no legal permission for cycling, we shouldn't record that there is.</p>
 <p>Sensible cycle routers (such as <a href="http://cyclestreets.net/">CycleStreets</a>) will permit routing over such paths if it makes for a more efficient journey, though they may advise you to dismount. If the router you are using does not, that's a bug in that router.</p>
 <p>Roads blocked with bollards, but permitting cycle access, are indeed usually marked with <code>highway=cycleway</code>. Do add a <code>barrier=bollard</code> node as well.</p>
 </div>
@@ -174,7 +174,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Whether to use a strict legal definition or to use "<a href="http://wiki.openstreetmap.org/wiki/Duck_tagging">duck tagging</a>" is dependent on where you live. As this differs from country to country. I believe duck tagging is the more common approach in the UK.</p>
+<p>Whether to use a strict legal definition or to use "<a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">duck tagging</a>" is dependent on where you live. As this differs from country to country. I believe duck tagging is the more common approach in the UK.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

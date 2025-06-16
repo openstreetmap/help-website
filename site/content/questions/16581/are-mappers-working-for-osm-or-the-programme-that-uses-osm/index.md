@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap is about collecting the geodata, and providing a map that is rendered from the geodata, and much more.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/About">http://wiki.openstreetmap.org/wiki/About</a> for more details.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/About">https://wiki.openstreetmap.org/wiki/About</a> for more details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

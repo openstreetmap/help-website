@@ -77,7 +77,7 @@ osqa_accepted = false
 <div id="post-36776-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Based on your recent edits, is <a href="http://www.openstreetmap.org/relation/184633#map=6/28.417/84.125">http://www.openstreetmap.org/relation/184633#map=6/28.417/84.125</a> the one you are looking for?</p>
+<p>Based on your recent edits, is <a href="https://www.openstreetmap.org/relation/184633#map=6/28.417/84.125">https://www.openstreetmap.org/relation/184633#map=6/28.417/84.125</a> the one you are looking for?</p>
 </div>
 <div id="comment-36776-info" class="comment-info">
 <span class="comment-age">(12 Sep '14, 07:18)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -122,7 +122,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You talk about regional administrative boundaries then (admin_level 3), not the country (admin_level 2). You should edit and modify your original question. You should also enhance the wiki about administrative boundaries in Nepal : <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a></p>
+<p>You talk about regional administrative boundaries then (admin_level 3), not the country (admin_level 2). You should edit and modify your original question. You should also enhance the wiki about administrative boundaries in Nepal : <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a></p>
 </div>
 <div id="comment-36785-info" class="comment-info">
 <span class="comment-age">(12 Sep '14, 10:53)</span> <span class="comment-user userinfo">Pieren</span>

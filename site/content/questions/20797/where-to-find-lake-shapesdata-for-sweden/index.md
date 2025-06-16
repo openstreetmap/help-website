@@ -122,14 +122,14 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You cannot find all area objects in Geofabrik shapefiles. As said <a href="http://www.geofabrik.de/en/data/shapefiles.html">on their website</a>, these shapefiles do not contain so called multipolygons. <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">Multipolygons</a> are used for mapping large area (like Lake Vättern) and areas with holes (lakes with islands).</p>
+<p>You cannot find all area objects in Geofabrik shapefiles. As said <a href="http://www.geofabrik.de/en/data/shapefiles.html">on their website</a>, these shapefiles do not contain so called multipolygons. <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">Multipolygons</a> are used for mapping large area (like Lake Vättern) and areas with holes (lakes with islands).</p>
 <p>Not only a lot of lakes may be missing, these shapefiles may also not contain some landuse areas, some forests etc. Geofabrik wants to earn money and processing multipolygons and other types of relations takes a lot of time.</p>
 <p>There are two solutions:</p>
 <ol>
 <li>either you pay for a shapefile containing more data</li>
 <li>or you use their extracts in PBF oder OSM-XML format. This extracts are raw data extracts (small pieces of the OSM planet file, i.e. without version history of all objects) and contain everything.</li>
 </ol>
-<p>If you use option (2), then you have to use a PostgresSQL database as data source in TileMill. There are several tools to import OSM data in a PostgresSQL database – <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, <a href="http://imposm.org/">Imposm</a></p>
+<p>If you use option (2), then you have to use a PostgresSQL database as data source in TileMill. There are several tools to import OSM data in a PostgresSQL database – <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, <a href="http://imposm.org/">Imposm</a></p>
 <p>Or if you still want to use Shapefiles, you have to build shapefiles on your own. This is usually done using a PostgresSQL database.</p>
 <p>If you do not want to use a database you can use Maperitive as renderer. It does not use a database and that's why it is not suitable for large datasets.</p>
 </div>

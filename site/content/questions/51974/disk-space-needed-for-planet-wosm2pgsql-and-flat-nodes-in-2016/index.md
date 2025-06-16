@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How much disk space is currently necessary to load planet with psm2pgsql? Preferably in terms of both peak use during loading, and then afterward. I see one entry on benchmarks from 2013 saying 194GB[1] and then an answer here saying 700GB, also in 2013[2]. What disk is necessary in 2016?</p>
-<p>[1] <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks#Parallels_Virtual_Machine_on_15_inch_Retina_MacBook_Pro_.28Early_2013.29">http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks#Parallels_Virtual_Machine_on_15_inch_Retina_MacBook_Pro_.28Early_2013.29</a> [2] <a href="https://help.openstreetmap.org/questions/26900/import-error-could-not-extend-file">https://help.openstreetmap.org/questions/26900/import-error-could-not-extend-file</a></p>
+<p>[1] <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks#Parallels_Virtual_Machine_on_15_inch_Retina_MacBook_Pro_.28Early_2013.29">https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks#Parallels_Virtual_Machine_on_15_inch_Retina_MacBook_Pro_.28Early_2013.29</a> [2] <a href="/questions/26900/import-error-could-not-extend-file">https://help.openstreetmap.org/questions/26900/import-error-could-not-extend-file</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osm2pgsql" rel="tag" title="see questions tagged &#39;osm2pgsql&#39;">osm2pgsql</span> <span class="post-tag tag-link-tileserver" rel="tag" title="see questions tagged &#39;tileserver&#39;">tileserver</span>

@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The different map styles show different data at different zoom levels, and have different update schedules to re-render tiles for new data. As of now, I am seeing the Quiznos and bathrooms on the "Standard" map: <a href="http://www.openstreetmap.org/#map=18/51.84919/-8.48977">http://www.openstreetmap.org/#map=18/51.84919/-8.48977</a></p>
+<p>The different map styles show different data at different zoom levels, and have different update schedules to re-render tiles for new data. As of now, I am seeing the Quiznos and bathrooms on the "Standard" map: <a href="https://www.openstreetmap.org/#map=18/51.84919/-8.48977">https://www.openstreetmap.org/#map=18/51.84919/-8.48977</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

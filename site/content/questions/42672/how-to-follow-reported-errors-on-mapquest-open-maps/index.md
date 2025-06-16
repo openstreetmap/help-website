@@ -167,7 +167,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi and welcome to OpenStreetMap</p>
 <p>While reporting an error is naturally OK, OSM is really about fixing issues and mapping yourself. And, just on 1st principles, given that you are the person that has run in to an issue you are the best suited and motivated to resolve the problem.</p>
-<p>Most things in OSM are fairly easy to do, so you shouldn't have concerns. If you want to try and fix the issue yourself <a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a> Further there is a strong French OSM community that you can turn to for help <a href="http://openstreetmap.fr/">http://openstreetmap.fr/</a></p>
+<p>Most things in OSM are fairly easy to do, so you shouldn't have concerns. If you want to try and fix the issue yourself <a href="https://www.openstreetmap.org/fixthemap">https://www.openstreetmap.org/fixthemap</a> Further there is a strong French OSM community that you can turn to for help <a href="http://openstreetmap.fr/">http://openstreetmap.fr/</a></p>
 <p>Now back to your concrete issue: many organisations use OSM data to power their applications and MapQuest is one of them. There are a number of MQ employees in the active OSM community and I'll point your question out to them given that they know what is actually being done behind the scenes.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -235,7 +235,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Those errors go to <a href="http://wiki.openstreetmap.org/wiki/MapDust">MapDust</a>. In this particular case you can see that the OpenStreetMap-hosted Nominatim instance also <a href="http://nominatim.openstreetmap.org/search.php?q=rue+pasteur+villeneuve+d%27ascq+%28France%29">returns two results</a>, so there's nothing MapQuest specific happening with the error.</p>
+<p>Those errors go to <a href="https://wiki.openstreetmap.org/wiki/MapDust">MapDust</a>. In this particular case you can see that the OpenStreetMap-hosted Nominatim instance also <a href="http://nominatim.openstreetmap.org/search.php?q=rue+pasteur+villeneuve+d%27ascq+%28France%29">returns two results</a>, so there's nothing MapQuest specific happening with the error.</p>
 <p>This specific result appears to be because there are two streets named Rue Pasteur, one a <a href="http://nominatim.openstreetmap.org/details.php?place_id=89563321">tertiary highway</a> and the other a <a href="http://nominatim.openstreetmap.org/details.php?place_id=121180864">pedestrian highway</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -256,7 +256,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>A bit more clear (regarding the original question): so, to "follow reported errors on [Mapquest] maps" you need to go to <a href="http://www.mapdust.com">http://www.mapdust.com</a> and enter the error number in the big search box ("Bug ID") on the top. There you can see comments from other user and/or leave additional comments yourself.</p>
-<p>You may want to integrate this into your answer, <a href="http://help.openstreetmap.org/users/290/pnorman"></a><a href="http://help.openstreetmap.org/users/290/pnorman">@pnorman</a>.</p>
+<p>You may want to integrate this into your answer, <a href="https://help.openstreetmap.org/users/290/pnorman"></a><a href="https://help.openstreetmap.org/users/290/pnorman">@pnorman</a>.</p>
 </div>
 <div id="comment-42704-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 20:56)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -268,7 +268,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>regarding the problem itself and to make it explicit: as far as I can see this (several objects with the same street name) is a perfectly okay data situation (with our current, usual street data model/tagging). Nothing has to be fixed in the data here.</p>
-<p>Oh, wait, A Macquet says "only the first result is correct". Is the street named wrongly? Okay, well, we will discuss it at the bug report - that is the better location. The bug is there: <a href="http://www.mapdust.com/detail/3146532">http://www.mapdust.com/detail/3146532</a> - <a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@A</a> Macquet: please click on the "comments / additional info" tab to see my comment and leave your answer there.</p>
+<p>Oh, wait, A Macquet says "only the first result is correct". Is the street named wrongly? Okay, well, we will discuss it at the bug report - that is the better location. The bug is there: <a href="http://www.mapdust.com/detail/3146532">http://www.mapdust.com/detail/3146532</a> - <a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@A</a> Macquet: please click on the "comments / additional info" tab to see my comment and leave your answer there.</p>
 </div>
 <div id="comment-42706-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 21:06)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -280,7 +280,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Hi</p>
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> -&gt; thanks for the informations about mapdust. I answered you there for details about my request.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> -&gt; thanks for the informations about mapdust. I answered you there for details about my request.</p>
 </div>
 <div id="comment-42723-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 09:09)</span> <span class="comment-user userinfo">A Macquet</span>

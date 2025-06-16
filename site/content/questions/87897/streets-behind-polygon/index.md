@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, I mapped internal roads of a military area. I've choosen "highway=residential" and "access=destination" (don't know if it's correct). The real problem is that roads seems to be behind military-area-polygon as visible in picture. Have I done something wrong? Is there a way to push the polygon behind the roads? Thanks</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2023-10-12_103134.png" alt="Polygon hiding road" /></p>
+<p><img src="/upfiles/Screenshot_2023-10-12_103134.png" alt="Polygon hiding road" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-line" rel="tag" title="see questions tagged &#39;line&#39;">line</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Generally speaking, in OSM you'd use the name tag of a way to hold the name of that actual bit of path, not to hold the name of a long-distance trail that happens to run along it. For example, <a href="https://map.atownsend.org.uk/maps/map/map.html#zoom=16&amp;lat=51.5276&amp;lon=-1.17845">here</a> the Ridgeway long-distance path runs along a road called "Rectory Road". The name of one is in the name of the way, the name of the other is in the name of the relation.</p>
-<p>Sometimes people indulge in a bit of "tagging for the standard map renderer" (possibly <a href="http://www.openstreetmap.org/#map=15/51.5566/-1.3173">here</a>) because OSM's "standard" map doesn't show long distance paths, unlike maps such as "<a href="https://hiking.waymarkedtrails.org/#?map=11!51.5306!-1.481">Waymarked Trails</a>".</p>
+<p>Sometimes people indulge in a bit of "tagging for the standard map renderer" (possibly <a href="https://www.openstreetmap.org/#map=15/51.5566/-1.3173">here</a>) because OSM's "standard" map doesn't show long distance paths, unlike maps such as "<a href="https://hiking.waymarkedtrails.org/#?map=11!51.5306!-1.481">Waymarked Trails</a>".</p>
 <p>Another confusing example - <a href="https://map.atownsend.org.uk/maps/map/map.html#zoom=17&amp;lat=51.523023&amp;lon=-1.68703">here</a> there is a bit of the Ridgeway long-distance trail that runs along a bridleway and an actual road apparently called "The Ridgeway" to the north of it which is not part of the long-distance path.</p>
 <p>Obviously it can sometimes get confusing - sometimes the "name of a road or path" really <em>is</em> the same as the name of the long-distance path that runs along it (and I bet that there are parts of the Ridgeway LDP where people would say "that path there is named The Ridgeway") but more often than not, and especially with newer LDPs, it isn't.</p>
 </div>
@@ -132,7 +132,7 @@ One Answer:
 <div id="post-59789-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Related information. <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
+<p>Related information. <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
 </div>
 <div id="comment-59789-info" class="comment-info">
 <span class="comment-age">(23 Sep '17, 07:02)</span> <span class="comment-user userinfo">andy mackey</span>

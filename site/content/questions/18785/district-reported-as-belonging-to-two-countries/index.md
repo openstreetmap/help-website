@@ -120,9 +120,9 @@ il (Type: place:country_code, 0 GOTO)</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Because the way that defines <a href="http://www.openstreetmap.org/browse/way/34929243">Asdod city</a> overlaps the Israel boundary as defined in OSM. Follow the links from nominatim to the relations and ways, and this becomes clear.</p>
+<p>Because the way that defines <a href="https://www.openstreetmap.org/browse/way/34929243">Asdod city</a> overlaps the Israel boundary as defined in OSM. Follow the links from nominatim to the relations and ways, and this becomes clear.</p>
 <p>Whatch out when "fixing" what belongs to which country in an area of the world that suffers from tensions. Stick to internationaly-approved borders and do not start an edit war. Make sure that the agglomeration of Ashdod really does not cover both countries, for example.</p>
-<p>Note that there is also an <a href="http://www.openstreetmap.org/browse/relation/1380013">Ashdod administrative boundary</a> which looks similar but properly contained within Gaza. There is a fair chance that one of the Ashdod here is redundant; it's probably a good idea to merge the information from both objects and to keep a single corrected object.</p>
+<p>Note that there is also an <a href="https://www.openstreetmap.org/browse/relation/1380013">Ashdod administrative boundary</a> which looks similar but properly contained within Gaza. There is a fair chance that one of the Ashdod here is redundant; it's probably a good idea to merge the information from both objects and to keep a single corrected object.</p>
 <p>Once you are sure of what is correct, check the Ashdod way and any other osm feature that overlaps the Israel border (which I assume is itself correct). Either edit this way to get the proper geometry, or (if the way and the relation indeed are redundant), edit the relation's member to get the proper geometry, copy any missing tags from the way to the relation, and delete the way.</p>
 <p>It'll take a little while before nominatim picks up the changes.</p>
 </div>

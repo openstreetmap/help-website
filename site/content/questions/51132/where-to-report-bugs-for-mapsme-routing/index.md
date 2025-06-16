@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/routing_engines.JPG" alt="alt text" />You could ask here <a href="http://maps.me/en/contact">http://maps.me/en/contact</a> or you could test the same route by using the openstreetmap map page routing options. That appear when you click on the turn arrow.</p>
+<p><img src="/upfiles/routing_engines.JPG" alt="alt text" />You could ask here <a href="http://maps.me/en/contact">http://maps.me/en/contact</a> or you could test the same route by using the openstreetmap map page routing options. That appear when you click on the turn arrow.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

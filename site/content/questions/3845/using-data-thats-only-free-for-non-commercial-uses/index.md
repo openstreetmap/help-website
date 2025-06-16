@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are sure they are using a source which is for non-commercial use only, then you are correct that it shouldn't be used for OSM. Perhaps worth reporting the user to the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a> for them to investigate further.</p>
+<p>If you are sure they are using a source which is for non-commercial use only, then you are correct that it shouldn't be used for OSM. Perhaps worth reporting the user to the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a> for them to investigate further.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -109,7 +109,7 @@ osqa_accepted = false
 <p>The "no motor vehicles" sign does apply to buses and taxis, unless there is an exemption specifically for them, or a separate bus lane etc. So they would not be permitted to travel along that road, unless they were going to somewhere along that road.</p>
 <p>The correct way to tag this in OSM would <code>motor_vehicle=destination</code>. There is no need for any sort of <code>restriction=</code> tag.</p>
 <p>You could also tag <code>bicycle=yes</code>, <code>foot=yes</code>, <code>horse=yes</code>, to specify explicitly that they are allowed. Though this is usually implied by the highway tag, so isn't really necessary.</p>
-<p>You could also check the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">Road signs in the United Kingdom</a> (though it doesn't currently have an example of "except for access").</p>
+<p>You could also check the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">Road signs in the United Kingdom</a> (though it doesn't currently have an example of "except for access").</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

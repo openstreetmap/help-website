@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you want to do such a query by hand, try the following:</p>
 <p>go to <a href="http://nominatim.openstreetmap.org/">nominatim.openstreetmap.org</a> and type the name of the town in there.</p>
-<p>See the results whether you get an entry with a little symbol like this: <img src="http://help.openstreetmap.org/upfiles/poi_boundary_administrative.glow.32.png" alt="alt text" /></p>
+<p>See the results whether you get an entry with a little symbol like this: <img src="/upfiles/poi_boundary_administrative.glow.32.png" alt="alt text" /></p>
 <p>Then choose "details" about it and you will see its OSM id.</p>
 <p>Be aware: not all towns in the world have a valid boundary relation around.</p>
 </div>

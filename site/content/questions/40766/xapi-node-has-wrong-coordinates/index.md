@@ -77,7 +77,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>I use <a href="http://api.openstreetmap.fr/xapi">http://api.openstreetmap.fr/xapi</a></p>
-<p>Information on the wiki (<a href="http://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr#Data_a_little_older)">http://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr#Data_a_little_older)</a> says that it can be "1 or 2 minutes late"</p>
+<p>Information on the wiki (<a href="https://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr#Data_a_little_older)">https://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr#Data_a_little_older)</a> says that it can be "1 or 2 minutes late"</p>
 </div>
 <div id="comment-40768-info" class="comment-info">
 <span class="comment-age">(04 Feb '15, 09:45)</span> <span class="comment-user userinfo">sallesma</span>
@@ -132,7 +132,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You'll need to raise the problem with whoever looks after <a href="http://api.openstreetmap.fr/xapi">http://api.openstreetmap.fr/xapi</a> (I had no idea that it even existed).</p>
-<p>Try one of the other options at <a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a> .</p>
+<p>Try one of the other options at <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

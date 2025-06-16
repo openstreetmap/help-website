@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-37062-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave"></a><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: sure, I did not say that it is easy that way. But the question is quite unspecified currently. ;-) As far as I know the OpenCycleMap style is not open (I may be wrong), so there is not really another way (editing the OSM data is no option of course) if you really want the OpenCycleMap style.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave"></a><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: sure, I did not say that it is easy that way. But the question is quite unspecified currently. ;-) As far as I know the OpenCycleMap style is not open (I may be wrong), so there is not really another way (editing the OSM data is no option of course) if you really want the OpenCycleMap style.</p>
 </div>
 <div id="comment-37062-info" class="comment-info">
 <span class="comment-age">(26 Sep '14, 02:56)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -102,7 +102,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You might also take a look at: <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a> first, to see what other topographic map styles are available, the cyclemap is not the only one.</p>
+<p>You might also take a look at: <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a> first, to see what other topographic map styles are available, the cyclemap is not the only one.</p>
 </div>
 <div id="comment-37069-info" class="comment-info">
 <span class="comment-age">(26 Sep '14, 12:10)</span> <span class="comment-user userinfo">kamarc</span>

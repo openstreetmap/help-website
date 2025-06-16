@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It will soon show up, thanks to you! It is already visable on zoom 13-14, it will take some time for to show up at zoom 12 and lower. You can read <a href="http://help.openstreetmap.org/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker">this</a> if you want to know more about how Mapnik updates.</p>
+<p>It will soon show up, thanks to you! It is already visable on zoom 13-14, it will take some time for to show up at zoom 12 and lower. You can read <a href="/questions/8119/why-isnt-the-mapnik-map-on-the-website-updated-quicker">this</a> if you want to know more about how Mapnik updates.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

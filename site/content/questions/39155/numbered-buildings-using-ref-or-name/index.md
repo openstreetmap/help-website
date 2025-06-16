@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In industrial parks, the individual buildings are often referred to by number (example: the <a href="http://www.openstreetmap.org/#map=16/53.5422/9.8338">Airbus aircraft factory in Hamburg</a>). These are <em>not</em> street addresses (often, the entire factory has a single street address). Should I use <code>ref</code> or the <code>name</code> to tag these buildings? I have seen both tagging schemes being used.</p>
+<p>In industrial parks, the individual buildings are often referred to by number (example: the <a href="https://www.openstreetmap.org/#map=16/53.5422/9.8338">Airbus aircraft factory in Hamburg</a>). These are <em>not</em> street addresses (often, the entire factory has a single street address). Should I use <code>ref</code> or the <code>name</code> to tag these buildings? I have seen both tagging schemes being used.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-industry" rel="tag" title="see questions tagged &#39;industry&#39;">industry</span> <span class="post-tag tag-link-ref" rel="tag" title="see questions tagged &#39;ref&#39;">ref</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span>

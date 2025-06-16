@@ -136,7 +136,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I am not fully sure that I understand your idea, please comment or edit your question if needed.</p>
-<p>About the <em>legal issues</em>: <span>Commercial</span> use of OSM's data is possible (with <a href="http://www.openstreetmap.org/copyright">rest</a>ri<span>ctions</span>). <span>Private</span> maps are not (in the sense that the data is public for everyone if you enter it into OSM's database - only do so for useful data …). However, you can render your <span>own</span> private map style using OSM data.</p>
+<p>About the <em>legal issues</em>: <span>Commercial</span> use of OSM's data is possible (with <a href="https://www.openstreetmap.org/copyright">rest</a>ri<span>ctions</span>). <span>Private</span> maps are not (in the sense that the data is public for everyone if you enter it into OSM's database - only do so for useful data …). However, you can render your <span>own</span> private map style using OSM data.</p>
 <p>Update: Thanks for your addition. You can do dynamic overlays over a OSM map - as far as I know dynamic overlays (layers) are not restricted/covered by the typical copyright restrictions of the tiles (but you really should read about this on your own in the license texts and/or ask a lawyer). Also see our <span>legal FAQ</span>.</p>
 <p>About the <em>technical issues</em>: In case you did not know: OSM is basically (just) a database with many <span>services</span> around. So, the short answer to your question is: yes, it is possible. Someone else here might present you solution ideas (or link to some), but I suspect that your description is still too vague then.</p>
 </div>

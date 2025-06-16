@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You should take a look at the guidelines for uploading datasets from other sources:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines#Make_sure_data_license_is_OK">http://wiki.openstreetmap.org/wiki/Import/Guidelines#Make_sure_data_license_is_OK</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines#Make_sure_data_license_is_OK">https://wiki.openstreetmap.org/wiki/Import/Guidelines#Make_sure_data_license_is_OK</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -138,7 +138,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12701/louiepaul">@LouiePaul</a> you need to follow the import guidelines and please: they have been born out of a decade of bad imports and while might seem strict, are so because it is necessary.</p>
+<p><a href="https://help.openstreetmap.org/users/12701/louiepaul">@LouiePaul</a> you need to follow the import guidelines and please: they have been born out of a decade of bad imports and while might seem strict, are so because it is necessary.</p>
 <p>You will need community buy in and a plan how to conflate the imported data with existing data. This will be a fair bit of work.</p>
 </div>
 <div id="comment-51689-info" class="comment-info">
@@ -162,7 +162,7 @@ One Answer:
 <div id="post-51699-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you want a lat long it can be found moving the map centre then read the URL... so 13 is zoom level, 35.1541 North ( negative for South) and -90.0321 West ( positive = East) <a href="http://www.openstreetmap.org/search?query=forida#map=13/35.1541/-90.0321">http://www.openstreetmap.org/search?query=forida#map=13/35.1541/-90.0321</a></p>
+<p>If you want a lat long it can be found moving the map centre then read the URL... so 13 is zoom level, 35.1541 North ( negative for South) and -90.0321 West ( positive = East) <a href="https://www.openstreetmap.org/search?query=forida#map=13/35.1541/-90.0321">https://www.openstreetmap.org/search?query=forida#map=13/35.1541/-90.0321</a></p>
 </div>
 <div id="comment-51699-info" class="comment-info">
 <span class="comment-age">(24 Aug '16, 13:46)</span> <span class="comment-user userinfo">andy mackey</span>

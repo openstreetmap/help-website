@@ -70,7 +70,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Previously this question was added as an answer to this question:</p>
-<p><a href="https://help.openstreetmap.org/questions/42928/how-do-i-add-bus-route-information-to-bus-stops">https://help.openstreetmap.org/questions/42928/how-do-i-add-bus-route-information-to-bus-stops</a></p>
+<p><a href="/questions/42928/how-do-i-add-bus-route-information-to-bus-stops">https://help.openstreetmap.org/questions/42928/how-do-i-add-bus-route-information-to-bus-stops</a></p>
 </div>
 <div id="comment-43019-info" class="comment-info">
 <span class="comment-age">(11 May '15, 15:27)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Upload GPX track...no display on profile, no error of OSM server, no mail"
-description = '''Since Sunday, i have a problem to upload on OSM, my GPX track. I have create a new account, but i have the same problem related here : http://www.openstreetmap.org/user/RGPS/diary/12880 Have you any information about this problem ? (i don&#x27;t have mail from OSM server that i have successful or failed ...'''
+description = '''Since Sunday, i have a problem to upload on OSM, my GPX track. I have create a new account, but i have the same problem related here : https://www.openstreetmap.org/user/RGPS/diary/12880 Have you any information about this problem ? (i don&#x27;t have mail from OSM server that i have successful or failed ...'''
 date = "2011-01-24T12:18:00Z"
 lastmod = "2011-01-24T15:30:00Z"
 weight = 2408
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Since Sunday, i have a problem to upload on OSM, my GPX track. I have create a new account, but i have the same problem related here : <a href="http://www.openstreetmap.org/user/RGPS/diary/12880">http://www.openstreetmap.org/user/RGPS/diary/12880</a></p>
+<p>Since Sunday, i have a problem to upload on OSM, my GPX track. I have create a new account, but i have the same problem related here : <a href="https://www.openstreetmap.org/user/RGPS/diary/12880">https://www.openstreetmap.org/user/RGPS/diary/12880</a></p>
 <p>Have you any information about this problem ? (i don't have mail from OSM server that i have successful or failed the upload job).</p>
 <p>Thanks :)</p>
 </div>

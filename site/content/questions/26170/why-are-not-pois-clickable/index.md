@@ -166,7 +166,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><del>There is also a <a href="http://overpass.apis.dev.openstreetmap.org/">POI popup layer</a> based on the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. It is still a beta version but might eventually get integrated into the main map. You can read more about it on the <a href="http://wiki.openstreetmap.org/wiki/POI_display">wiki</a> and the <a href="http://lists.openstreetmap.org/pipermail/talk/2013-August/068071.html">mailing list</a>.</del></p>
+<p><del>There is also a <a href="http://overpass.apis.dev.openstreetmap.org/">POI popup layer</a> based on the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. It is still a beta version but might eventually get integrated into the main map. You can read more about it on the <a href="https://wiki.openstreetmap.org/wiki/POI_display">wiki</a> and the <a href="http://lists.openstreetmap.org/pipermail/talk/2013-August/068071.html">mailing list</a>.</del></p>
 <p>Meanwhile this feature has been integrated into the <a href="https://wiki.openstreetmap.org/wiki/Browsing">front page</a> and can be accessed via the <strong>?</strong> button.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -220,7 +220,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can. On the right side of the map at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> there are menus, click on the one labeled "layers" that looks like 3 stacked pieces of paper. scroll to the bottom and put a checkbox on "Map Data". Now you can click on POIs, ways etc. to get more info about them.</p>
+<p>You can. On the right side of the map at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> there are menus, click on the one labeled "layers" that looks like 3 stacked pieces of paper. scroll to the bottom and put a checkbox on "Map Data". Now you can click on POIs, ways etc. to get more info about them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

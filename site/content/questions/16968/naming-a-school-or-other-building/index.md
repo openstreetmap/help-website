@@ -109,8 +109,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The usual practice is <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>.</p>
-<p>In your specific case you should add an <em>area</em> outlining the whole school territory and add <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">amenity=school</a>, <em>name=</em>, <em><a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr</a></em> and whatever you like. Tag each single building with <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=school</a> (<em>building=yes</em> would also suffice) and remove the single school <em>node</em> as there is absolutely no need for it (see my first sentence).</p>
+<p>The usual practice is <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>.</p>
+<p>In your specific case you should add an <em>area</em> outlining the whole school territory and add <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">amenity=school</a>, <em>name=</em>, <em><a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr</a></em> and whatever you like. Tag each single building with <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=school</a> (<em>building=yes</em> would also suffice) and remove the single school <em>node</em> as there is absolutely no need for it (see my first sentence).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

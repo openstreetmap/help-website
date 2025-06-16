@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From reading <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">this wiki page</a> it looks like railway=crossing and crossing=uncontrolled are perhaps the tags you need.</p>
+<p>From reading <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">this wiki page</a> it looks like railway=crossing and crossing=uncontrolled are perhaps the tags you need.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

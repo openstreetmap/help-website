@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/BigMap">BigMap</a>, using the <a href="http://openstreetmap.gryph.de/bigmap.cgi?xmin=3&amp;xmax=4&amp;ymin=2&amp;ymax=3&amp;zoom=3&amp;scale=256&amp;baseurl=http%3A%2F%2Fb.www.toolserver.org%2Ftiles%2Fbw-noicons%2F!z%2F!x%2F!y.png">toolserver tiles url</a> for building a picture from an area with this style.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/BigMap">BigMap</a>, using the <a href="http://openstreetmap.gryph.de/bigmap.cgi?xmin=3&amp;xmax=4&amp;ymin=2&amp;ymax=3&amp;zoom=3&amp;scale=256&amp;baseurl=http%3A%2F%2Fb.www.toolserver.org%2Ftiles%2Fbw-noicons%2F!z%2F!x%2F!y.png">toolserver tiles url</a> for building a picture from an area with this style.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -206,7 +206,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap by itself is not supplying map styles (excepted the one identified as "Mapnik" on the main page). If you want a different map style, you can setup your own local rendering tool (<a href="http://wiki.openstreetmap.org/wiki/Rendering">check out on the wiki</a>) or use one published on the web like the <a href="http://maps.cloudmade.com/editor">Style Editor by Cloudmade</a>.</p>
+<p>OpenStreetMap by itself is not supplying map styles (excepted the one identified as "Mapnik" on the main page). If you want a different map style, you can setup your own local rendering tool (<a href="https://wiki.openstreetmap.org/wiki/Rendering">check out on the wiki</a>) or use one published on the web like the <a href="http://maps.cloudmade.com/editor">Style Editor by Cloudmade</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

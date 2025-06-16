@@ -213,7 +213,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Du könntest einen passenden Kartenstil von cloudmade verwenden - vielleicht <a href="http://maps.cloudmade.com/?lat=53.557302&amp;lng=8.592017&amp;zoom=16&amp;styleId=64570&amp;opened_tab=0">diesen</a>. Wenn er dir nicht puristisch genug ist, kannst du dort einen eigenen erstellen.</p>
-<p>Die Kacheln könntest du dann auf deiner eigenen Seite einbinden und per Overlays (OpenLayers oder Leaflet) deine selbst definierten Sachen darüber legen. Vielleicht kannst/magst du auch die <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass-API</a> nutzen: <a href="http://overpass-turbo.eu/s/3U">Beispiel</a></p>
+<p>Die Kacheln könntest du dann auf deiner eigenen Seite einbinden und per Overlays (OpenLayers oder Leaflet) deine selbst definierten Sachen darüber legen. Vielleicht kannst/magst du auch die <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass-API</a> nutzen: <a href="http://overpass-turbo.eu/s/3U">Beispiel</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

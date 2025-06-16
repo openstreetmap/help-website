@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I tag an elevated highway on a straight-walled embankment?"
-description = '''See this photo: http://www.tbssus.com/1240586401_Picture_425.jpg Often found leading up to a bridge (overpass). This seems similar to a viaduct, but the viaduct examples I&#x27;ve seen are open underneath. (see http://help.openstreetmap.org/questions/4363/how-do-i-tag-elevated-highways-and-roads) The oth...'''
+description = '''See this photo: http://www.tbssus.com/1240586401_Picture_425.jpg Often found leading up to a bridge (overpass). This seems similar to a viaduct, but the viaduct examples I&#x27;ve seen are open underneath. (see https://help.openstreetmap.org/questions/4363/how-do-i-tag-elevated-highways-and-roads) The oth...'''
 date = "2011-11-14T22:01:00Z"
 lastmod = "2011-11-15T13:23:00Z"
 weight = 8999
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>See this photo:</p>
 <p><a href="http://www.tbssus.com/1240586401_Picture_425.jpg">http://www.tbssus.com/1240586401_Picture_425.jpg</a></p>
-<p>Often found leading up to a bridge (overpass). This seems similar to a viaduct, but the viaduct examples I've seen are open underneath. (see <a href="http://help.openstreetmap.org/questions/4363/how-do-i-tag-elevated-highways-and-roads)">http://help.openstreetmap.org/questions/4363/how-do-i-tag-elevated-highways-and-roads)</a></p>
+<p>Often found leading up to a bridge (overpass). This seems similar to a viaduct, but the viaduct examples I've seen are open underneath. (see <a href="/questions/4363/how-do-i-tag-elevated-highways-and-roads)">https://help.openstreetmap.org/questions/4363/how-do-i-tag-elevated-highways-and-roads)</a></p>
 <p>The other closest physical description is an 'embankment' but the rendering with 'spikes' on the side would be inappropriate since the walls are vertical.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Map them as barrier=retaining_wall going along the road, under the bridge and than back (one way, see image), do not forget on correct level numbers. <img src="http://help.openstreetmap.org/upfiles/01_-_walled_embankment.png" alt="Tagging scheme" /> Embankment should not be needed than.</p>
+<p>Map them as barrier=retaining_wall going along the road, under the bridge and than back (one way, see image), do not forget on correct level numbers. <img src="/upfiles/01_-_walled_embankment.png" alt="Tagging scheme" /> Embankment should not be needed than.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -186,7 +186,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You could draw a parallel way on either side of the road and use [barrier=retaining_wall]. Draw it in the direction so that the lower side is on right side of way direction.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -122,7 +122,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are two ways to get offline map data onto the device, either as raster data or as vector data. You then need a piece of software that takes the raster tiles and displays them, or loads the vector data and draws it. I suggest that you peruse the <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> software list on our Wiki and check out some of the existing programs. Many are open-source so you can inspect the source code. There's a table at the bottom of the page detailing whether the software has bitmap or vector data, and supports offline maps.</p>
+<p>There are two ways to get offline map data onto the device, either as raster data or as vector data. You then need a piece of software that takes the raster tiles and displays them, or loads the vector data and draws it. I suggest that you peruse the <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> software list on our Wiki and check out some of the existing programs. Many are open-source so you can inspect the source code. There's a table at the bottom of the page detailing whether the software has bitmap or vector data, and supports offline maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

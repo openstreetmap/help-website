@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How about <code>capacity:disabled=yes</code> as mentioned on <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">amenity=parking</a>?</p>
+<p>How about <code>capacity:disabled=yes</code> as mentioned on <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">amenity=parking</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

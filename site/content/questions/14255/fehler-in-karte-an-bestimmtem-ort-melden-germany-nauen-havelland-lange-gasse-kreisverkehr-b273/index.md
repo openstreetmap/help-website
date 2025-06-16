@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Noch besser als das, von <a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a></a> genannte, Angeben eines Permalinks hier in deinem Fragetext, ist es, den Fehler mit aussagekräftigem Kommentar als <span>Fehlermeldung/Note direkt auf der osm.org-Website</span> zu melden; denn dieses Hilfesystem hier ist eigentlich nicht für konkrete Fehlermeldungen gedacht.</p>
+<p>Noch besser als das, von <a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a></a> genannte, Angeben eines Permalinks hier in deinem Fragetext, ist es, den Fehler mit aussagekräftigem Kommentar als <span>Fehlermeldung/Note direkt auf der osm.org-Website</span> zu melden; denn dieses Hilfesystem hier ist eigentlich nicht für konkrete Fehlermeldungen gedacht.</p>
 <p>Am besten ist natürlich, wenn du es <em>selbst korrigierst</em> (sofern du magst und kannst).</p>
 </div>
 <div class="answer-controls post-controls">

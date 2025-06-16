@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I haven't tried this JOSM plugin. There's not much information about it. But <a href="http://trac.openstreetmap.org/browser/applications/editors/josm/plugins/pdfimport/">looking at the code in trac</a>, we can see it was developed by user '<a href="http://www.openstreetmap.org/user/extropy">extropy</a>'. A Latvian chap. You could click 'send message' to contact him about it directly. Maybe you could link him to this question.</p>
+<p>I haven't tried this JOSM plugin. There's not much information about it. But <a href="http://trac.openstreetmap.org/browser/applications/editors/josm/plugins/pdfimport/">looking at the code in trac</a>, we can see it was developed by user '<a href="https://www.openstreetmap.org/user/extropy">extropy</a>'. A Latvian chap. You could click 'send message' to contact him about it directly. Maybe you could link him to this question.</p>
 <p>Alternatively you could ask a different question. Describe the type of PDF you are trying to convert and see what software/procedure people recommend. Direct conversion to OSM data may not be the best approach.</p>
 </div>
 <div class="answer-controls post-controls">

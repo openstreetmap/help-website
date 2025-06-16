@@ -42,13 +42,13 @@ osqa_accepted = false
 <p>I am writing software that is trying to find off ramps along the highways. To do this I find ways with a highway value of <code>motorway_link</code> or <code>secondary</code>. I then go through all of the <code>motorway_link</code> ways and see if any of the <code>nd ref="XXXX"</code> are in common with the <code>secondary</code> ways.</p>
 <p>This works pretty well, but it doesn't seem to work for all intersections/off-ramps. Here are two examples that don't work:</p>
 <ol>
-<li><a href="http://www.openstreetmap.org/#map=17/43.42071/-80.28191">http://www.openstreetmap.org/#map=17/43.42071/-80.28191</a></li>
-<li><a href="http://www.openstreetmap.org/#map=17/43.44879/-80.17669">http://www.openstreetmap.org/#map=17/43.44879/-80.17669</a></li>
+<li><a href="https://www.openstreetmap.org/#map=17/43.42071/-80.28191">https://www.openstreetmap.org/#map=17/43.42071/-80.28191</a></li>
+<li><a href="https://www.openstreetmap.org/#map=17/43.44879/-80.17669">https://www.openstreetmap.org/#map=17/43.44879/-80.17669</a></li>
 </ol>
 <p>And here are two examples that do:</p>
 <ol>
-<li><a href="http://www.openstreetmap.org/#map=17/43.45355/-80.12442">http://www.openstreetmap.org/#map=17/43.45355/-80.12442</a></li>
-<li><a href="http://www.openstreetmap.org/#map=17/43.49124/-79.98727">http://www.openstreetmap.org/#map=17/43.49124/-79.98727</a></li>
+<li><a href="https://www.openstreetmap.org/#map=17/43.45355/-80.12442">https://www.openstreetmap.org/#map=17/43.45355/-80.12442</a></li>
+<li><a href="https://www.openstreetmap.org/#map=17/43.49124/-79.98727">https://www.openstreetmap.org/#map=17/43.49124/-79.98727</a></li>
 </ol>
 <p>Can some one explain why the two I listed don't work? Any tricks or steps I need to add to my algorithm to make them work?</p>
 <p>EDIT: Here is a HTML file (that uses google maps) that shows all the intersections that I detect: <a href="http://pastie.org/private/wnakelvwdkndpgeafwdg">http://pastie.org/private/wnakelvwdkndpgeafwdg</a></p>

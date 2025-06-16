@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I'm trying to get the members (nodes) of a relation as a list. I'm using FME to read the PBF, which is basically using "drv_osm" from GDAL. I tried all options from the config file (osmconf_.ini) and FME itself (offers rarely any) but could not get the members. Instead, I just receive multilines consisting of all the ways/nodes of the relation.</p>
 <p>When I use Overpass Turbo and the following query, I get the desired list of members:</p>
 <p>relation(6794709); out;</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_overpassTurbo_queryRelation_zv4apu5.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm_overpassTurbo_queryRelation_zv4apu5.png" alt="alt text" /></p>
 <p>Is it possible to get this Information from the PDF raw data file somehow?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-56607-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The GDAL driver makes osm data fit into a typical GDAL use case. The solution is to access the data using a library that does not attempt to abstract away the OSM data model. <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">http://wiki.openstreetmap.org/wiki/PBF_Format</a> has some leads for libraries.</p>
+<p>The GDAL driver makes osm data fit into a typical GDAL use case. The solution is to access the data using a library that does not attempt to abstract away the OSM data model. <a href="https://wiki.openstreetmap.org/wiki/PBF_Format">https://wiki.openstreetmap.org/wiki/PBF_Format</a> has some leads for libraries.</p>
 </div>
 <div id="comment-56607-info" class="comment-info">
 <span class="comment-age">(13 Jun '17, 18:23)</span> <span class="comment-user userinfo">maxerickson</span>
@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that you would be best served by using <a href="http://wiki.openstreetmap.org/wiki/Osmium">osmium</a> in one of it incarnations/bindings.</p>
+<p>I suspect that you would be best served by using <a href="https://wiki.openstreetmap.org/wiki/Osmium">osmium</a> in one of it incarnations/bindings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

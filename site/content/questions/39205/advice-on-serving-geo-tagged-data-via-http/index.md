@@ -77,7 +77,7 @@ osqa_accepted = false
 <div id="post-39234-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/8189/alester">@alester</a>. I have updated the question. Thanks.</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>. I have updated the question. Thanks.</p>
 </div>
 <div id="comment-39234-info" class="comment-info">
 <span class="comment-age">(12 Dec '14, 01:47)</span> <span class="comment-user userinfo">mapgenius323</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 <div id="post-39251-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: No thats not what I'm asking about.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: No thats not what I'm asking about.</p>
 </div>
 <div id="comment-39251-info" class="comment-info">
 <span class="comment-age">(12 Dec '14, 23:07)</span> <span class="comment-user userinfo">mapgenius323</span>

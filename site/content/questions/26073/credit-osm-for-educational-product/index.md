@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://www.openstreetmap.org/copyright">openstreetmap.org/copyright</a> for details on how to credit OSM:</p>
+<p>See <a href="https://www.openstreetmap.org/copyright">openstreetmap.org/copyright</a> for details on how to credit OSM:</p>
 <blockquote>
 <p>We require that you use the credit “© OpenStreetMap contributors”... In media where links are not possible (e.g. printed works), we suggest you direct your readers to openstreetmap.org (perhaps by expanding 'OpenStreetMap' to this full address), to opendatacommons.org, and if relevant, to creativecommons.org.</p>
 </blockquote>
@@ -168,8 +168,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In general, your aim should be possible.</p>
-<p>There are even some <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> who offer digital and printed maps derived from OSM data, and they get payed for theit knowhow and work. But the data or maps are still free according to each licence.</p>
-<p>Some FAQs are here: <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal_FAQ</a></p>
+<p>There are even some <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> who offer digital and printed maps derived from OSM data, and they get payed for theit knowhow and work. But the data or maps are still free according to each licence.</p>
+<p>Some FAQs are here: <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal_FAQ</a></p>
 <p>Also search this FAQ site for "attribution", "licence", "commercial" or similar keywords.</p>
 </div>
 <div class="answer-controls post-controls">

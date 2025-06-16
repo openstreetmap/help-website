@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>. So even if it isn't listed in your GUI feel free to type it by hand. You can search at <a href="http://taginfo.openstreetmap.org/search?q=plant+nursery#values">Taginfo</a> if you wonder how well used a certain tag is.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>. So even if it isn't listed in your GUI feel free to type it by hand. You can search at <a href="http://taginfo.openstreetmap.org/search?q=plant+nursery#values">Taginfo</a> if you wonder how well used a certain tag is.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To tag a plant nursery, the tagging <strong>landuse=plant_nursery</strong> (<a href="http://wiki.openstreetmap.org/wiki/Tag:landuse=plant_nursery">wiki page</a>) seems a reasonably established practise. You may also add additional information as specified on the wiki page. landuse=plant_nursery is currently not rendered by osm's main rendering engine but, a feature request has been <a href="https://trac.openstreetmap.org/ticket/3664">submitted</a>.</p>
+<p>To tag a plant nursery, the tagging <strong>landuse=plant_nursery</strong> (<a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=plant_nursery">wiki page</a>) seems a reasonably established practise. You may also add additional information as specified on the wiki page. landuse=plant_nursery is currently not rendered by osm's main rendering engine but, a feature request has been <a href="https://trac.openstreetmap.org/ticket/3664">submitted</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

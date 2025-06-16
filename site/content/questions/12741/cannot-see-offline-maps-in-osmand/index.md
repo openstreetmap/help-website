@@ -259,7 +259,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Never used it, but the <a href="http://wiki.openstreetmap.org/wiki/Osmand">wiki page</a> links to a <a href="http://code.google.com/p/osmand/">project page</a> with some help on it, and also a link to <a href="http://groups.google.com/group/osmand?pli=1">this google group</a>. So I'd ask there...</p>
+<p>Never used it, but the <a href="https://wiki.openstreetmap.org/wiki/Osmand">wiki page</a> links to a <a href="http://code.google.com/p/osmand/">project page</a> with some help on it, and also a link to <a href="http://groups.google.com/group/osmand?pli=1">this google group</a>. So I'd ask there...</p>
 <p>As with many (all?) similar things, osmand isn't an "official" OSM application. It uses OSM data; but it is a third-party project that also uses other third-party resources. Someone might be able to solve your problem here, but I'd definitely try the application's own support forum first.</p>
 </div>
 <div class="answer-controls post-controls">

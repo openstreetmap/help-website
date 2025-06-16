@@ -129,7 +129,7 @@ out qt;</code></pre>
   way(r.relation:&quot;outer&quot;); );
 out qt;</code></pre>
 <p><a href="http://overpass-turbo.eu/s/4lX">Overpass Turbo link 2</a></p>
-<p>BTW: Don't forget to also check out the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">documentation on the Wiki page</a></p>
+<p>BTW: Don't forget to also check out the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">documentation on the Wiki page</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

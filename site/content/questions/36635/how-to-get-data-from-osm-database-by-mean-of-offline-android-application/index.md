@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Two nearly identical questions from you: <a href="https://help.openstreetmap.org/questions/36638/how-do-i-create-my-region-database-by-mean-of-osm-for-my-android-application">https://help.openstreetmap.org/questions/36638/how-do-i-create-my-region-database-by-mean-of-osm-for-my-android-application</a></p>
+<p>Two nearly identical questions from you: <a href="/questions/36638/how-do-i-create-my-region-database-by-mean-of-osm-for-my-android-application">https://help.openstreetmap.org/questions/36638/how-do-i-create-my-region-database-by-mean-of-osm-for-my-android-application</a></p>
 <p>The way that you can get your own OSM data into the OsmAnd app is to download the extract file for your region from <a href="http://download.geofabrik.de">http://download.geofabrik.de</a> These files are generated daily from the OSM database.</p>
 <p>Then convert/process the data as your app needs to work well. OsmAnd uses a program they created called OsmAndMapCreator which you can download from their home page at <a href="http://osmand.net">http://osmand.net</a></p>
 <p>For you own app you'll have to decide what data from OSM you want and what schema your on phone database will use and then create that from the extract file for your region(s) of interest.</p>

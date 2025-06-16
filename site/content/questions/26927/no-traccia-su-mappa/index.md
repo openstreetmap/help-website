@@ -123,8 +123,8 @@ One Answer:
 <div class="answer-body">
 <p>With the help of Google Translate it seems you ask why the gpx logs you uploaded don't show on the map.</p>
 <p>In this forum similar questions have been asked, this links should help you:<br />
-<a href="https://help.openstreetmap.org/questions/2034/displaying-gpx-traces-on-the-map">why GPX tracks don't show on osm.org</a><br />
-<a href="https://help.openstreetmap.org/questions/8720/integrate-osm-map-with-gpx-track-on-my-site">show GPX tracks on a map</a><br />
+<a href="/questions/2034/displaying-gpx-traces-on-the-map">why GPX tracks don't show on osm.org</a><br />
+<a href="/questions/8720/integrate-osm-map-with-gpx-track-on-my-site">show GPX tracks on a map</a><br />
 </p>
 <p>hth<br />
 malenki</p>

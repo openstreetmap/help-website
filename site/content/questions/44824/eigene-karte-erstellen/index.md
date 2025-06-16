@@ -168,7 +168,7 @@ One Answer:
 <div id="post-44827-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Meinst du so etwas wie <a href="http://wiki.openstreetmap.org/wiki/Taglocator">OpenPOIMap-Taglocator</a>?</p>
+<p>Meinst du so etwas wie <a href="https://wiki.openstreetmap.org/wiki/Taglocator">OpenPOIMap-Taglocator</a>?</p>
 </div>
 <div id="comment-44827-info" class="comment-info">
 <span class="comment-age">(19 Aug '15, 16:29)</span> <span class="comment-user userinfo">stephan75</span>
@@ -180,7 +180,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11385/ibposm">@ibposm</a>: welche Webseite ("Die Webseite") ist sehr karg? Meinst du <span>www.openstreetmap.org</span>? Die ist nicht direkt als Ersatz für z.B. die google-maps-Website gedacht. Statt dessen gibt es viele andere Dienste, die OSM verwenden – und jeder darf, unter Beachtung der Lizenzbedingungen, seinen eigenen Dienst basierend auf OSM anbieten (das ist das tolle an OSM). Z.B. <span>DE:List_of_OSM-based_services</span> führt dich ein wenig, wenn du mal etwas suchst. Oder frage einfach hier, wenn du keine alte ähnliche Frage findest.</p>
+<p><a href="https://help.openstreetmap.org/users/11385/ibposm">@ibposm</a>: welche Webseite ("Die Webseite") ist sehr karg? Meinst du <span>www.openstreetmap.org</span>? Die ist nicht direkt als Ersatz für z.B. die google-maps-Website gedacht. Statt dessen gibt es viele andere Dienste, die OSM verwenden – und jeder darf, unter Beachtung der Lizenzbedingungen, seinen eigenen Dienst basierend auf OSM anbieten (das ist das tolle an OSM). Z.B. <span>DE:List_of_OSM-based_services</span> führt dich ein wenig, wenn du mal etwas suchst. Oder frage einfach hier, wenn du keine alte ähnliche Frage findest.</p>
 </div>
 <div id="comment-44849-info" class="comment-info">
 <span class="comment-age">(20 Aug '15, 19:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -192,7 +192,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Danke für die Antworten und Hilfestellungen</p>
-<p>zu 1 <a href="http://help.openstreetmap.org/users/11385/ibposm"></a><a href="http://help.openstreetmap.org/users/11385/ibposm">@ibposm</a>: welche Webseite ("Die Webseite") ist sehr karg? Meinst du www.openstreetmap.org?</p>
+<p>zu 1 <a href="https://help.openstreetmap.org/users/11385/ibposm"></a><a href="https://help.openstreetmap.org/users/11385/ibposm">@ibposm</a>: welche Webseite ("Die Webseite") ist sehr karg? Meinst du www.openstreetmap.org?</p>
 <p>Nein, ich meinte die Webseite uMap.</p>
 <p>Vielleicht ist es hilfreich, wenn ich den Link zu der von mir in Google mymaps erstellten Karte angebe. Denn etwas in dieser Art würde ich gerne mt OSM entwickeln</p>
 <p><a href="https://www.google.com/maps/d/viewer?hl=de&amp;authuser=0&amp;mid=zHTw1bcpabqE.kSjU1FiPnQe0">https://www.google.com/maps/d/viewer?hl=de&amp;authuser=0&amp;mid=zHTw1bcpabqE.kSjU1FiPnQe0</a></p>

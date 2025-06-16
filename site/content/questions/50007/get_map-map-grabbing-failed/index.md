@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Likely the image area is too big or the server currently has too high load to process your special request. Also see <a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a> .</p>
+<p>Likely the image area is too big or the server currently has too high load to process your special request. Also see <a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a> .</p>
 <p>Use <a href="https://wiki.openstreetmap.org/wiki/Tiles">tiles</a> instead - they are usually pre-rendered and served via a CDN. Or use a different service (e.g. MapQuest Open Static Maps, see <span>OSM on paper</span>) which is based on OpenStreetMap data.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -177,7 +177,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/41673/get-open-street-map-in-r">this</a> previous question among others re R. The options at aseerel4c26's "OSM on paper" link are the way to go, if you want a rendered map (as opposed to the map data itself).</p>
+<p>See <a href="/questions/41673/get-open-street-map-in-r">this</a> previous question among others re R. The options at aseerel4c26's "OSM on paper" link are the way to go, if you want a rendered map (as opposed to the map data itself).</p>
 <p>Would it be possible to find out whose code it is (in whatever library or example) that contains the offending "http://tile.openstreetmap.org/cgi-bin/export?bbox=" request? I'd be happy to explain why what they are suggesting will almost never work.</p>
 </div>
 <div class="answer-controls post-controls">

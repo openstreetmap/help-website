@@ -118,8 +118,8 @@ osqa_accepted = false
 <p>Have a look at the OSM-Wiki¹. Right at the top you can read how to use OSM-maps with your Garmin device. If you want to navigate with the new map be sure to use a routable one.</p>
 <p>Don't forget to have a look at ² to enable detailed logging on your nuvi if you haven't done this already.</p>
 <p>hth malenki</p>
-<p>¹ <a href="http://wiki.openstreetmap.org/wiki/OSM%5FMap%5FOn%5FGarmin/Download">http://wiki.openstreetmap.org/wiki/OSM%5FMap%5FOn%5FGarmin/Download</a><br />
-² <a href="http://wiki.openstreetmap.org/wiki/Garmin/N%FCvi%5Fseries#Garmin%5FN.C3.BCvi%5FTrack%5FHack">http://wiki.openstreetmap.org/wiki/Garmin/N%FCvi%5Fseries#Garmin%5FN.C3.BCvi%5FTrack%5FHack</a></p>
+<p>¹ <a href="https://wiki.openstreetmap.org/wiki/OSM%5FMap%5FOn%5FGarmin/Download">https://wiki.openstreetmap.org/wiki/OSM%5FMap%5FOn%5FGarmin/Download</a><br />
+² <a href="https://wiki.openstreetmap.org/wiki/Garmin/N%FCvi%5Fseries#Garmin%5FN.C3.BCvi%5FTrack%5FHack">https://wiki.openstreetmap.org/wiki/Garmin/N%FCvi%5Fseries#Garmin%5FN.C3.BCvi%5FTrack%5FHack</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you don't want to go with (or can't find) a suitable download you can create your own maps from OSM using "mkgmap".</p>
 <p>It (and "splitter", which you'll probably also need) is available from here: <a href="http://www.mkgmap.org.uk/">http://www.mkgmap.org.uk/</a></p>
-<p>And an example of the process to go through to update maps is described here: <a href="http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap?page=1#2440">http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap?page=1#2440</a> it's the same on a Garmin eTrex and and a Garmin Nuvi.</p>
+<p>And an example of the process to go through to update maps is described here: <a href="/questions/1809/how-to-install-mkgmap?page=1#2440">https://help.openstreetmap.org/questions/1809/how-to-install-mkgmap?page=1#2440</a> it's the same on a Garmin eTrex and and a Garmin Nuvi.</p>
 <p>One other thing worth mentioning - with OSM maps installed you can turn them on or off from the Nuvi menus, so you can go back to using the Garmin-supplied maps easily.<br />
 </p>
 </div>
@@ -242,7 +242,7 @@ osqa_accepted = false
 <div id="post-12472-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What a luck that commercial data is always correct, complete and without any errors. :) (see <a href="http://wiki.openstreetmap.org/wiki/Catalog_of_Errors">http://wiki.openstreetmap.org/wiki/Catalog_of_Errors</a> )</p>
+<p>What a luck that commercial data is always correct, complete and without any errors. :) (see <a href="https://wiki.openstreetmap.org/wiki/Catalog_of_Errors">https://wiki.openstreetmap.org/wiki/Catalog_of_Errors</a> )</p>
 </div>
 <div id="comment-12472-info" class="comment-info">
 <span class="comment-age">(01 May '12, 11:07)</span> <span class="comment-user userinfo">malenki</span>

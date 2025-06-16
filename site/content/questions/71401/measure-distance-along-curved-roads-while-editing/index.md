@@ -62,7 +62,7 @@ R 1074 160
 ...</code></pre>
 <p>Therefore this is not good for a "batch edit job", but rather simple hand editing.</p>
 <p>Yes I read</p>
-<p><a href="https://help.openstreetmap.org/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point">https://help.openstreetmap.org/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point</a> <a href="https://help.openstreetmap.org/questions/3193/measuring-distance">https://help.openstreetmap.org/questions/3193/measuring-distance</a></p>
+<p><a href="/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point">https://help.openstreetmap.org/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point</a> <a href="/questions/3193/measuring-distance">https://help.openstreetmap.org/questions/3193/measuring-distance</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-distance" rel="tag" title="see questions tagged &#39;distance&#39;">distance</span> <span class="post-tag tag-link-curve" rel="tag" title="see questions tagged &#39;curve&#39;">curve</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span>

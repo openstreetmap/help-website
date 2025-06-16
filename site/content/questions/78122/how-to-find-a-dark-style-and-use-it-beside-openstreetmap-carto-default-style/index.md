@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's an extension called "<a href="https://darkreader.org">Dark Reader</a>" that can render OSM in dark style (see image below), but (at the moment) there's no official way to have a dark mode style on OSM <img src="https://help.openstreetmap.org/upfiles/image_31.png" alt="alt text" /></p>
+<p>There's an extension called "<a href="https://darkreader.org">Dark Reader</a>" that can render OSM in dark style (see image below), but (at the moment) there's no official way to have a dark mode style on OSM <img src="/upfiles/image_31.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

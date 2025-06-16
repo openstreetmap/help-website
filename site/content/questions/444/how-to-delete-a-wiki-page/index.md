@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to delete a wiki page"
-description = '''I moved the wiki page http://wiki.openstreetmap.org/wiki/DE:Relations to create a page with German title. Due to a typo the page http://wiki.openstreetmap.org/wiki/DE:Relatioen was created. Realising this I moved this wrong page to the desired page http://wiki.openstreetmap.org/wiki/DE:Relationen an...'''
+description = '''I moved the wiki page https://wiki.openstreetmap.org/wiki/DE:Relations to create a page with German title. Due to a typo the page https://wiki.openstreetmap.org/wiki/DE:Relatioen was created. Realising this I moved this wrong page to the desired page https://wiki.openstreetmap.org/wiki/DE:Relationen an...'''
 date = "2010-07-23T03:54:00Z"
 lastmod = "2013-10-29T21:19:00Z"
 weight = 444
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I moved the wiki page <a href="http://wiki.openstreetmap.org/wiki/DE:Relations">http://wiki.openstreetmap.org/wiki/DE:Relations</a> to create a page with German title. Due to a typo the page <a href="http://wiki.openstreetmap.org/wiki/DE:Relatioen">http://wiki.openstreetmap.org/wiki/DE:Relatioen</a> was created. Realising this I moved this wrong page to the desired page <a href="http://wiki.openstreetmap.org/wiki/DE:Relationen">http://wiki.openstreetmap.org/wiki/DE:Relationen</a> and fixed the redirect page <a href="http://wiki.openstreetmap.org/w/index.php?title=DE:Relations&amp;redirect=no">http://wiki.openstreetmap.org/w/index.php?title=DE:Relations&amp;redirect=no</a>. I couldn't delete the now obsolete redirect page <a href="http://wiki.openstreetmap.org/wiki/DE:Relatioen">http://wiki.openstreetmap.org/wiki/DE:Relatioen</a> but changed it at least.</p>
+<p>I moved the wiki page <a href="https://wiki.openstreetmap.org/wiki/DE:Relations">https://wiki.openstreetmap.org/wiki/DE:Relations</a> to create a page with German title. Due to a typo the page <a href="https://wiki.openstreetmap.org/wiki/DE:Relatioen">https://wiki.openstreetmap.org/wiki/DE:Relatioen</a> was created. Realising this I moved this wrong page to the desired page <a href="https://wiki.openstreetmap.org/wiki/DE:Relationen">https://wiki.openstreetmap.org/wiki/DE:Relationen</a> and fixed the redirect page <a href="https://wiki.openstreetmap.org/w/index.php?title=DE:Relations&amp;redirect=no">https://wiki.openstreetmap.org/w/index.php?title=DE:Relations&amp;redirect=no</a>. I couldn't delete the now obsolete redirect page <a href="https://wiki.openstreetmap.org/wiki/DE:Relatioen">https://wiki.openstreetmap.org/wiki/DE:Relatioen</a> but changed it at least.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-delete" rel="tag" title="see questions tagged &#39;delete&#39;">delete</span>
@@ -113,7 +113,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The answer is, you can't do it. <strong>As an ordinary user you can't delete a page</strong>. So the procedure is to remove all content from the page and replace it with {{Delete|reason}}. In this case you're removing the #REDIRECT and replace that with {{Delete|created by mistake}}. You can expect a wiki admin to delete the page fully within a few weeks.</p>
 <p>The <a href="http://www.mediawiki.org/wiki/Help:Deleting_a_page">MediaWiki user help has a section on deleting a page</a> written by some very wise chap :-) As explained on that site, there are often better alternatives to deleting, but in this case the page should be deleted. It's clear-cut.</p>
-<p>Note that the Delete label template is intended to be used in cases where the delete is clear-cut and should always <em>replace</em> all content of the page. In a case where you feel that a page should be deleted, but you're not confident enough to delete the content yourself (or disputed / potentially deputed deletes), you should use {{delete proposal}} instead (<a href="http://wiki.openstreetmap.org/wiki/Template:Delete_proposal">Template:Delete proposal</a>)</p>
+<p>Note that the Delete label template is intended to be used in cases where the delete is clear-cut and should always <em>replace</em> all content of the page. In a case where you feel that a page should be deleted, but you're not confident enough to delete the content yourself (or disputed / potentially deputed deletes), you should use {{delete proposal}} instead (<a href="https://wiki.openstreetmap.org/wiki/Template:Delete_proposal">Template:Delete proposal</a>)</p>
 <p>The reason a normal user is not allowed to delete a page, is the principle of <a href="http://meatballwiki.org/wiki/ReversibleChange">reversible change</a>. On a busy wikis which must also be vandal-proof, all user changes must be reversible <em>by other users</em>. In actual fact MediaWiki applies this principle to admin users too, so when an admin 'deletes' a page, this change can still be reversed by other admin users. So it turns out we never save any database space by deleting pages. The only benefit is de-cluttering search results.</p>
 </div>
 <div class="answer-controls post-controls">

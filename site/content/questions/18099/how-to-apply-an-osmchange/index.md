@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When it happened to me I edited the osmchange file to remove the conflict manually and used <a href="http://wiki.openstreetmap.org/wiki/Upload.py">Upload.py</a> to upload the result. That's a process that's not for the fainthearted though - if that looks complicated you might want to <a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a> someone on <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> and ask for help there.</p>
+<p>When it happened to me I edited the osmchange file to remove the conflict manually and used <a href="https://wiki.openstreetmap.org/wiki/Upload.py">Upload.py</a> to upload the result. That's a process that's not for the fainthearted though - if that looks complicated you might want to <a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a> someone on <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> and ask for help there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

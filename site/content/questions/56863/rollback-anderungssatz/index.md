@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Reverted in <a href="http://www.openstreetmap.org/changeset/50027511">http://www.openstreetmap.org/changeset/50027511</a></p>
+<p>Reverted in <a href="https://www.openstreetmap.org/changeset/50027511">https://www.openstreetmap.org/changeset/50027511</a></p>
 <p>Kannst du bitte das ganze kontrollieren ob jetzt alles OK ist? Der Changeset war etwas zu komplex für selektives Reverten, du musst also richtige Sachen die gemacht hast nochmals machen.</p>
 </div>
 <div class="answer-controls post-controls">

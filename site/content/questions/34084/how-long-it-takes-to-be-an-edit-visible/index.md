@@ -318,7 +318,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How long things take to render varies, depending on various factors. There's a <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">long and detailed answer here</a>.</p>
+<p>How long things take to render varies, depending on various factors. There's a <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">long and detailed answer here</a>.</p>
 <p>However if you added something two months ago, if it's going to render I'd expect it to be there by now - but not everything does show up on the "Standard" layer. Can you link to something that you've added that doesn't appear?</p>
 <p>EDIT:</p>
 <p>... and to answer the second part of the question (after discussion on IRC) - your new routes don't show up because you've added the nodes for the stops to the relation but not the ways. Compare for example <a href="https://www.openstreetmap.org/relation/2247618">this nearby bus relation</a> and <a href="https://www.openstreetmap.org/relation/3648493">yours</a>.</p>

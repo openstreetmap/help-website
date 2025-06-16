@@ -49,9 +49,9 @@ out body;
 &gt;;
 out skel qt;</code></pre>
 <p>When the edge of the forest intersects my bounding box, the query works as intended:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2018-11-27_at_10.09.23.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2018-11-27_at_10.09.23.png" alt="alt text" /></p>
 <p>But once the bounding box is completely inside of the forest, I receive no results:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2018-11-27_at_10.09.39.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2018-11-27_at_10.09.39.png" alt="alt text" /></p>
 <p>Is there any way to fix this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

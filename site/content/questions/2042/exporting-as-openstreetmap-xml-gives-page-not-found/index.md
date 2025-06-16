@@ -69,7 +69,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I'm a nOOb here, but am having the same problem exporting OSM data</p>
 <p>Here is the web page that is not found:</p>
-<p><a href="http://www.openstreetmap.org/export/finish">http://www.openstreetmap.org/export/finish</a></p>
+<p><a href="https://www.openstreetmap.org/export/finish">https://www.openstreetmap.org/export/finish</a></p>
 <p>Also, the area that one may select is fairly small, perhaps 50 x 25 miles.</p>
 </div>
 <div id="comment-2849-info" class="comment-info">
@@ -160,7 +160,7 @@ osqa_accepted = false
 <div id="post-17875-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I am having the same issue. When I try to export the URL i get is <a href="http://www.openstreetmap.org/export/finish">http://www.openstreetmap.org/export/finish</a></p>
+<p>I am having the same issue. When I try to export the URL i get is <a href="https://www.openstreetmap.org/export/finish">https://www.openstreetmap.org/export/finish</a></p>
 </div>
 <div id="comment-17875-info" class="comment-info">
 <span class="comment-age">(21 Nov '12, 19:45)</span> <span class="comment-user userinfo">Bigdog54</span>
@@ -183,7 +183,7 @@ osqa_accepted = false
 <div id="post-19396-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Which (for completeness) is also mentioned in <a href="https://help.openstreetmap.org/questions/19342/why-does-the-xml-export-fail">this question</a> and there was caused by trying to export too large an area. It's not a "real" page not found - I suspect more likely some browser timeout issue.</p>
+<p>Which (for completeness) is also mentioned in <a href="/questions/19342/why-does-the-xml-export-fail">this question</a> and there was caused by trying to export too large an area. It's not a "real" page not found - I suspect more likely some browser timeout issue.</p>
 </div>
 <div id="comment-19396-info" class="comment-info">
 <span class="comment-age">(28 Jan '13, 11:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -216,7 +216,7 @@ osqa_accepted = false
 <div id="post-42153-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10472/speedbiker">@speedbiker</a>: I also get a blank page at your URL. I guess it is simply too much data. Note that you are accessing the API which is made for editing – but not for data consuments. Try <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a></p>
+<p><a href="https://help.openstreetmap.org/users/10472/speedbiker">@speedbiker</a>: I also get a blank page at your URL. I guess it is simply too much data. Note that you are accessing the API which is made for editing – but not for data consuments. Try <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a></p>
 </div>
 <div id="comment-42153-info" class="comment-info">
 <span class="comment-age">(06 Apr '15, 19:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -395,7 +395,7 @@ This answer is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>This link will help if you want to download data for larger area: <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">http://wiki.openstreetmap.org/wiki/Downloading_data</a></p>
+<p>This link will help if you want to download data for larger area: <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">https://wiki.openstreetmap.org/wiki/Downloading_data</a></p>
 </div>
 <div id="comment-20993-info" class="comment-info">
 <span class="comment-age">(26 Mar '13, 12:57)</span> <span class="comment-user userinfo">tfarooqi</span>
@@ -408,7 +408,7 @@ This answer is marked "community wiki".
 <div class="comment-text">
 <pre><code>Ideally there should be a check or some warning if the application is not able to handle large areas selected on the map.</code></pre>
 <p>... now there is:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/export_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/export_1.png" alt="alt text" /></p>
 </div>
 <div id="comment-28698-info" class="comment-info">
 <span class="comment-age">(02 Dec '13, 16:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

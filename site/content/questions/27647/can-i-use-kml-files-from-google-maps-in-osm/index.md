@@ -43,7 +43,7 @@ osqa_accepted = true
 <pre><code>Public · 5 Collaborators · 100,748 views
 Created on Nov 20, 2009 · By dan.anderson · Updated yesterday</code></pre>
 <hr />
-<p>I am aware of the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">importing procedure</a>. My question is only about copyrights.</p>
+<p>I am aware of the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">importing procedure</a>. My question is only about copyrights.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span> <span class="post-tag tag-link-google" rel="tag" title="see questions tagged &#39;google&#39;">google</span> <span class="post-tag tag-link-copyright" rel="tag" title="see questions tagged &#39;copyright&#39;">copyright</span>

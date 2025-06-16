@@ -134,9 +134,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Relation type=route, route=canoe is documented: <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use">http://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use</a></p>
+<p>Relation type=route, route=canoe is documented: <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use">https://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use</a></p>
 <p>There is already 14 relations: <a href="http://taginfo.openstreetmap.org/tags/route=canoe">http://taginfo.openstreetmap.org/tags/route=canoe</a></p>
-<p>The ways composing your route can be tagged according to this scheme: <a href="http://wiki.openstreetmap.org/wiki/Whitewater_sports">http://wiki.openstreetmap.org/wiki/Whitewater_sports</a></p>
+<p>The ways composing your route can be tagged according to this scheme: <a href="https://wiki.openstreetmap.org/wiki/Whitewater_sports">https://wiki.openstreetmap.org/wiki/Whitewater_sports</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -205,7 +205,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p><span>@SomeoneElse</span>: I came to the same conclusion. Yet, those untagged ways do concern me. They are part of the route and that seems proper but isn't having untagged nodes/ways a problem?</p>
-<p>The area I'm working in is here: <a href="http://www.openstreetmap.org/search?query=60.6598348%2C%20-150.5846523#map=13/60.6871/-150.5893">http://www.openstreetmap.org/search?query=60.6598348%2C%20-150.5846523#map=13/60.6871/-150.5893</a></p>
+<p>The area I'm working in is here: <a href="https://www.openstreetmap.org/search?query=60.6598348%2C%20-150.5846523#map=13/60.6871/-150.5893">https://www.openstreetmap.org/search?query=60.6598348%2C%20-150.5846523#map=13/60.6871/-150.5893</a></p>
 <p><span>@Pieren</span>: This is a bonafide canoe route in the Kenai Wilderness Area, administered by the U.S. Fish &amp; Wildlife Service. I'm sure it's well marked but as I haven't been there personally in several years, cannot attest to same.</p>
 </div>
 <div id="comment-31477-info" class="comment-info">

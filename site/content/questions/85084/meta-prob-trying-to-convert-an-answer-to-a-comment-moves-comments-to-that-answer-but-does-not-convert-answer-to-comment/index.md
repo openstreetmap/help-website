@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>So we all know that OSQA is probably broken beyond repair... and I got a meta problem here in OSQAs convert handling.</p>
-<p>I just tried to convert an answer to a comment here in this thread: <a href="https://help.openstreetmap.org/questions/85038/hierarchie-von-ortsnamen">https://help.openstreetmap.org/questions/85038/hierarchie-von-ortsnamen</a> . The answer by altesCoon that I tried to convert had a comment by Discostu.</p>
+<p>I just tried to convert an answer to a comment here in this thread: <a href="/questions/85038/hierarchie-von-ortsnamen">https://help.openstreetmap.org/questions/85038/hierarchie-von-ortsnamen</a> . The answer by altesCoon that I tried to convert had a comment by Discostu.</p>
 <p>OSQA for some reason did not convert the answer to a comment but moved the comment by Discostu from answer to the other. If anyone has an idea how to fix this, please help. And sorry for the confusion, I now learned that some things in OSQA do not work as expected.</p>
 <p>Steps to reproduce the OSQA behavior: use the "more" -&gt; "convert answer to comment" on altesCoons answer and choose the answer by Discostu as target.</p>
-<p>Probably related (at least I got the same error modal): <a href="https://help.openstreetmap.org/questions/50830/unable-to-convert-comment-to-answer">https://help.openstreetmap.org/questions/50830/unable-to-convert-comment-to-answer</a></p>
+<p>Probably related (at least I got the same error modal): <a href="/questions/50830/unable-to-convert-comment-to-answer">https://help.openstreetmap.org/questions/50830/unable-to-convert-comment-to-answer</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osqa" rel="tag" title="see questions tagged &#39;osqa&#39;">osqa</span>

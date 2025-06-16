@@ -112,9 +112,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>My guess is that you could apply the same principles of the multilangual <a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a> for the tag <a href="http://wiki.openstreetmap.org/wiki/Key:ref">ref</a>.<br />
+<p>My guess is that you could apply the same principles of the multilangual <a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a> for the tag <a href="https://wiki.openstreetmap.org/wiki/Key:ref">ref</a>.<br />
 Which means something like "ref:de=LS 123", "ref:it=SP 123" and keep "ref=???" for what is visible on the ground.<br />
-But before you start something like this, you should first talk with the autrian <a href="http://wiki.openstreetmap.org/wiki/Contact#Country-Specific_Lists:">community of contributors</a>, find a consensus and <a href="http://wiki.openstreetmap.org/wiki/AT:Key:ref">document it on the wiki</a> (you can specify your own rules and not always rely on the german pages). Only the main tag "ref" will be used by most of the applications.<br />
+But before you start something like this, you should first talk with the autrian <a href="https://wiki.openstreetmap.org/wiki/Contact#Country-Specific_Lists:">community of contributors</a>, find a consensus and <a href="https://wiki.openstreetmap.org/wiki/AT:Key:ref">document it on the wiki</a> (you can specify your own rules and not always rely on the german pages). Only the main tag "ref" will be used by most of the applications.<br />
 To see the localized references, you will have to adapt the tools (renderers, etc). But this is the same issue for multilangual names.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -168,8 +168,8 @@ To see the localized references, you will have to adapt the tools (renderers, et
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your issues about multilingual names may be topic at <a href="http://wiki.openstreetmap.org/wiki/Key:name">Key:name</a>, about multiple ref at <a href="http://wiki.openstreetmap.org/wiki/Key:ref">Key:ref</a>.</p>
-<p>To show the map in different languages by using the special name:XX keys you can have a look at <a href="http://wiki.openstreetmap.org/wiki/Map_Internationalization">Map_Internationalization</a>.</p>
+<p>Your issues about multilingual names may be topic at <a href="https://wiki.openstreetmap.org/wiki/Key:name">Key:name</a>, about multiple ref at <a href="https://wiki.openstreetmap.org/wiki/Key:ref">Key:ref</a>.</p>
+<p>To show the map in different languages by using the special name:XX keys you can have a look at <a href="https://wiki.openstreetmap.org/wiki/Map_Internationalization">Map_Internationalization</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -240,7 +240,7 @@ To see the localized references, you will have to adapt the tools (renderers, et
 </div>
 <div class="comment-text">
 <p>Do you mean a wiki page, when you refer to "the rules"?</p>
-<p>Maybe this one? : <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names">http://wiki.openstreetmap.org/wiki/Multilingual_names</a></p>
+<p>Maybe this one? : <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names">https://wiki.openstreetmap.org/wiki/Multilingual_names</a></p>
 <p>And a little fodder for thought: I guess "the language spoken by the local citizens" does not exist, because there are obviously two languages in use in South Tyrol. - And where I am mapping there are 10 main languages spoken, that is why I am following this question.</p>
 </div>
 <div id="comment-1545-info" class="comment-info">

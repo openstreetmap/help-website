@@ -42,12 +42,12 @@ osqa_accepted = false
 <p>Basically, I would like to load the OSM data and render tiles directly from the source data using Java. I imagine there are a lot of steps in between. However, I'm just looking for some direction to get me started. Some examples would be nice, if available. Otherwise, specifics on what tools and frameworks are needed. So far, I've figured I need the following tools and frameworks to get stareted:</p>
 <ul>
 <li><p><a href="http://download.geofabrik.de/osm/north-america/">OSM Data</a></p></li>
-<li><p>A <a href="http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#Choice_of_DBMS">Database</a></p></li>
+<li><p>A <a href="https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#Choice_of_DBMS">Database</a></p></li>
 <li><a href="http://postgis.refractions.net/download/">PostGIS</a> schema or equivalent</li>
-<li><p><a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema</a></p></li>
+<li><p><a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema</a></p></li>
 <li><p>Osmosis framework for parsing PBF files and loading to database or <a href="https://github.com/openstreetmap/osm2pgsql/blob/master/README">preexisting loader</a></p></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OSM_file_formats">http://wiki.openstreetmap.org/wiki/OSM_file_formats</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/PBF_Format#The_code">http://wiki.openstreetmap.org/wiki/PBF_Format#The_code</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSM_file_formats">https://wiki.openstreetmap.org/wiki/OSM_file_formats</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/PBF_Format#The_code">https://wiki.openstreetmap.org/wiki/PBF_Format#The_code</a></li>
 <li><p><a href="https://github.com/openstreetmap/osmosis">https://github.com/openstreetmap/osmosis</a></p></li>
 <li><p>Mapnik Java framework for rendering tiles from database</p></li>
 <li><a href="https://github.com/SpatialInteractive/mapnik-jni">https://github.com/SpatialInteractive/mapnik-jni</a></li>
@@ -117,7 +117,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>About Java usage I can only hint at <a href="http://wiki.openstreetmap.org/wiki/Category:Java">http://wiki.openstreetmap.org/wiki/Category:Java</a></p>
+<p>About Java usage I can only hint at <a href="https://wiki.openstreetmap.org/wiki/Category:Java">https://wiki.openstreetmap.org/wiki/Category:Java</a></p>
 </div>
 <div id="comment-15861-info" class="comment-info">
 <span class="comment-age">(06 Sep '12, 21:02)</span> <span class="comment-user userinfo">stephan75</span>
@@ -173,7 +173,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You can also have a look at <a href="http://mapbox.com/tilemill/">Tilemill</a>.</p>
 <p>There are tutorials and howtos about using it on their website, too.</p>
-<p>EDIT: or even <a href="http://wiki.openstreetmap.org/wiki/Tirex">Tirex</a></p>
+<p>EDIT: or even <a href="https://wiki.openstreetmap.org/wiki/Tirex">Tirex</a></p>
 <p>and you already know <a href="http://switch2osm.org">switch2OSM</a>?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -227,7 +227,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If "Java" is not a high priority requirement, you may have a look at <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, which is a desktop application for rendering maps. It has a specialized language (kind of DSL) for the rendering rules and a scripting language to control the rendering process.</p>
+<p>If "Java" is not a high priority requirement, you may have a look at <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, which is a desktop application for rendering maps. It has a specialized language (kind of DSL) for the rendering rules and a scripting language to control the rendering process.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -277,8 +277,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As you have already integrated JOSM, would it be an option to directly render in JOSM using a <a href="http://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation">MapCSS</a> <a href="http://josm.openstreetmap.de/wiki/Styles">style</a>? There also seems to be a <a href="http://wiki.openstreetmap.org/wiki/JOSM/">PBF Plugin</a>.</p>
-<p>To avoid loading large files at once, <a href="http://wiki.openstreetmap.org/wiki/OSM2World">OSM2World</a> uses <a href="http://wiki.openstreetmap.org/wiki/Mapsplit">Mapsplit</a> to generate vector tiles.</p>
+<p>As you have already integrated JOSM, would it be an option to directly render in JOSM using a <a href="http://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation">MapCSS</a> <a href="http://josm.openstreetmap.de/wiki/Styles">style</a>? There also seems to be a <a href="https://wiki.openstreetmap.org/wiki/JOSM/">PBF Plugin</a>.</p>
+<p>To avoid loading large files at once, <a href="https://wiki.openstreetmap.org/wiki/OSM2World">OSM2World</a> uses <a href="https://wiki.openstreetmap.org/wiki/Mapsplit">Mapsplit</a> to generate vector tiles.</p>
 <p>The <a href="https://github.com/SpatialInteractive/mapnik-jni">mapnik-jni</a> seems <a href="https://groups.google.com/forum/?fromgroups=#!topic/mapnik/yW2fYN84124">not to work</a> on Windows.</p>
 </div>
 <div class="answer-controls post-controls">

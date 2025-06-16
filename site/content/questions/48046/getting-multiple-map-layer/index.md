@@ -90,7 +90,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11965/sitebox">@Sitebox</a> that's the same picture, again. It doesn't explain what you are trying to do and what does not work.</p>
+<p><a href="https://help.openstreetmap.org/users/11965/sitebox">@Sitebox</a> that's the same picture, again. It doesn't explain what you are trying to do and what does not work.</p>
 <p>Note that this help site is for OpenStreetMap generally, it is not a "support team" for whatever software it is that you are using (which we don't know).</p>
 </div>
 <div id="comment-48053-info" class="comment-info">

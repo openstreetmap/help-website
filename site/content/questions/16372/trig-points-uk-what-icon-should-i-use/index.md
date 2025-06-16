@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you try typing Trig point into the wiki search box it takes you to <a href="http://wiki.openstreetmap.org/wiki/Trig_point">this page</a>. These don't render on the default Mapnik rendering though; <a href="http://www.openstreetmap.org/?node=1118516172">an example is here</a>.</p>
+<p>If you try typing Trig point into the wiki search box it takes you to <a href="https://wiki.openstreetmap.org/wiki/Trig_point">this page</a>. These don't render on the default Mapnik rendering though; <a href="https://www.openstreetmap.org/?node=1118516172">an example is here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Getting directions is also called routing.</p>
-<p>The main Open Street Map site (the "slippy map") does not provide a routing service, although there are other sites that can do that based on the OSM data. See <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Routing online/routers</a> on the wiki for some links.</p>
+<p>The main Open Street Map site (the "slippy map") does not provide a routing service, although there are other sites that can do that based on the OSM data. See <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Routing online/routers</a> on the wiki for some links.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

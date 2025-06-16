@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to Taginfo the tag 'building=porch' has been used 13 times already so it looks like other users have gone down the same track as you. Not sure what to do about the material. There is a tag building:material=* <a href="http://wiki.openstreetmap.org/wiki/Key:building:material">http://wiki.openstreetmap.org/wiki/Key:building:material</a> which seems to relate to rendering on 3D maps. Perhaps someone else could advise whether it is ok to use this tag with the value 'screen'</p>
+<p>According to Taginfo the tag 'building=porch' has been used 13 times already so it looks like other users have gone down the same track as you. Not sure what to do about the material. There is a tag building:material=* <a href="https://wiki.openstreetmap.org/wiki/Key:building:material">https://wiki.openstreetmap.org/wiki/Key:building:material</a> which seems to relate to rendering on 3D maps. Perhaps someone else could advise whether it is ok to use this tag with the value 'screen'</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

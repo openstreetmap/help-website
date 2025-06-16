@@ -89,7 +89,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>When you failed did you perhaps not see <a href="http://help.openstreetmap.org/questions/32434/address-tags-in-a-very-simple-osmconvert-filter-task/32479">this answer</a> to your previous question that said "<code>Issue: there's an extra space between "name" and "addr:street" in your osmconvert csv string</code>".</p>
+<p>When you failed did you perhaps not see <a href="/questions/32434/address-tags-in-a-very-simple-osmconvert-filter-task/32479">this answer</a> to your previous question that said "<code>Issue: there's an extra space between "name" and "addr:street" in your osmconvert csv string</code>".</p>
 </div>
 <div id="comment-32552-info" class="comment-info">
 <span class="comment-age">(23 Apr '14, 10:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

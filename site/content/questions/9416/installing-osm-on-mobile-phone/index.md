@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Software/Mobile">http://wiki.openstreetmap.org/wiki/Software/Mobile</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Software/Mobile">https://wiki.openstreetmap.org/wiki/Software/Mobile</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

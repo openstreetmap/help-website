@@ -44,7 +44,7 @@ osqa_accepted = true
 <p>and this scheme:</p>
 <p><code>&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;Map background-color="white" srs="+proj=latlong +datum=WGS84"&gt; &lt;Style name="rail"&gt; &lt;Rule&gt; &lt;Filter&gt;[railway] = 'rail' &lt;/Filter&gt; &lt;LineSymbolizer stroke="black" stroke-width="1"/&gt; &lt;/Rule&gt; &lt;/Style&gt; &lt;Layer name="rails" status="on" srs="+proj=latlong +datum=WGS84"&gt; &lt;StyleName&gt;rail &lt;/StyleName&gt; &lt;Datasource&gt; &lt;Parameter name="type"&gt;osm &lt;/Parameter&gt; &lt;Parameter name="file"&gt;map.osm &lt;/Parameter&gt; &lt;/Datasource&gt; &lt;/Layer&gt; &lt;/Map&gt;</code></p>
 <p>To render tram lines I only changed filter to [railway] = 'tram'. I tried different filters to render bus routes, but nothing worked. I want only black lines 1pixel wide on white background. How can I do it?</p>
-<p><strong>Edit:</strong> I have rendered bus routes from postgis database. I imported the map.osm using osm2pgsl. And changed Datasource in schema.xml. The problem is different aspect ratio. This happen when i overlap the images <a href="http://help.openstreetmap.org/upfiles/overlap.png">(clipped overlaping images)</a>. Red - tram, azur - bus. Bus image has white border on left and right side.</p>
+<p><strong>Edit:</strong> I have rendered bus routes from postgis database. I imported the map.osm using osm2pgsl. And changed Datasource in schema.xml. The problem is different aspect ratio. This happen when i overlap the images <span>(clipped overlaping images)</span>. Red - tram, azur - bus. Bus image has white border on left and right side.</p>
 <p><strong>Edit2:</strong> Ratio problem solved, I have bad srs projection in layer</p>
 </div>
 <div id="question-tags" class="tags-container tags">

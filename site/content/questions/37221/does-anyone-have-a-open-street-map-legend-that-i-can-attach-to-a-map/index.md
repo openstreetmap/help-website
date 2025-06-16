@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-37223-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In answer to the "is it editable" part of the question, it sounds like you want to create your own map using OpenStreetMap data. The answers to <a href="https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">this previous question</a> might help.</p>
+<p>In answer to the "is it editable" part of the question, it sounds like you want to create your own map using OpenStreetMap data. The answers to <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">this previous question</a> might help.</p>
 </div>
 <div id="comment-37223-info" class="comment-info">
 <span class="comment-age">(02 Oct '14, 15:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

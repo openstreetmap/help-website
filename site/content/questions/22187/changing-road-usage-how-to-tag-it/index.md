@@ -149,7 +149,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Remark at the 5th action: if not already present a new node has to be inserted into the way (the road) at the desired place first. Also see this more general question: <a href="https://help.openstreetmap.org/questions/9785/changing-the-status-of-a-separate-section-of-a-road">changing-the-status-of-a-separate-section-of-a-road</a>.</p>
+<p>Remark at the 5th action: if not already present a new node has to be inserted into the way (the road) at the desired place first. Also see this more general question: <a href="/questions/9785/changing-the-status-of-a-separate-section-of-a-road">changing-the-status-of-a-separate-section-of-a-road</a>.</p>
 </div>
 <div id="comment-22304-info" class="comment-info">
 <span class="comment-age">(11 May '13, 14:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -203,7 +203,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use a <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">Turn Restriction</a> relation to define what is allowed to travel on a given part of the road. You can define the vehicle types ie restriction:motorcar=no_entry. Sat Nav applications should then pickup these relations (if they are any good). Turn restriction relations can be tricky to get right but the use of the <a href="http://wiki.openstreetmap.org/wiki/JOSM_Relations_and_Turn_Based_Restrictions">JOSM editor and the Turn Based Restrictions plugin</a> may help.</p>
+<p>You could use a <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">Turn Restriction</a> relation to define what is allowed to travel on a given part of the road. You can define the vehicle types ie restriction:motorcar=no_entry. Sat Nav applications should then pickup these relations (if they are any good). Turn restriction relations can be tricky to get right but the use of the <a href="https://wiki.openstreetmap.org/wiki/JOSM_Relations_and_Turn_Based_Restrictions">JOSM editor and the Turn Based Restrictions plugin</a> may help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -165,7 +165,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, you are not mistaken. I can observe the same behaviour. You might want to post the desired behaviour as a feature enhancement at the wiki: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements">Potlatch 2/Suggested enhancements</a>.</p>
+<p>No, you are not mistaken. I can observe the same behaviour. You might want to post the desired behaviour as a feature enhancement at the wiki: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements">Potlatch 2/Suggested enhancements</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

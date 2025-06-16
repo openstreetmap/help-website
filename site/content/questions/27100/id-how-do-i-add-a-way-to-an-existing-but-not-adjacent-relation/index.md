@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Imagine that I'm <a href="http://api06.dev.openstreetmap.org/#map=17/53.12991/-0.48733&amp;layers=D">here</a> and am trying to add <a href="http://api06.dev.openstreetmap.org/browse/way/4295042642">Road C</a> to <a href="http://api06.dev.openstreetmap.org/browse/relation/4294969114">this</a> existing relation.</p>
 <p>If I edit the area in iD, and select the "+" below "all relations" I get this box appear:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/iD_01.png" alt="iD Add relation box" /></p>
+<p><img src="/upfiles/iD_01.png" alt="iD Add relation box" /></p>
 <p>I don't want to create a new releation, because it already exists just to the west. Am I supposed to type something into the text box to search? There are no clues on screen. Is there any iD documentation somewhere that explains how to do this?</p>
 <p>(note all these links are on the api06 dev server - I'm not sure that they'll all work if you're not signed up there)</p>
 </div>

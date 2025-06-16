@@ -181,7 +181,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@Scai</a>, it stays questionable IMHO, even if is a message is translated, there’s a name listed.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@Scai</a>, it stays questionable IMHO, even if is a message is translated, there’s a name listed.</p>
 </div>
 <div id="comment-39846-info" class="comment-info">
 <span class="comment-age">(27 Dec '14, 09:56)</span> <span class="comment-user userinfo">Hendrikklaas</span>

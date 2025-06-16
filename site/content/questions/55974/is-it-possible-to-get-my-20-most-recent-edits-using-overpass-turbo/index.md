@@ -50,7 +50,7 @@ osqa_accepted = false
 out body;
 &gt;;
 out skel qt;</code></pre>
-<p>I've tried using the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Print_.28out.29">print actions found here</a> to limit on the <code>out</code> commands, but I haven't had any luck so far. I also tried on the <code>&gt;</code>, but that didn't seem to work either.</p>
+<p>I've tried using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Print_.28out.29">print actions found here</a> to limit on the <code>out</code> commands, but I haven't had any luck so far. I also tried on the <code>&gt;</code>, but that didn't seem to work either.</p>
 <p>Is there currently a way with Overpass to get my 20 most recent changes no matter what they are (point/line/polygon)?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

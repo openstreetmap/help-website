@@ -317,7 +317,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would just add a map note. see JPEG. Adding a barrier will stop the routers working and because of the lag between OSM data changes and map builds/downloads ( such as OSM on Garmin) and router downloads the barrier could stop the cleared path from being used for long after it has been cleared.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/map_note_Great_Ouse_way.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/map_note_Great_Ouse_way.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

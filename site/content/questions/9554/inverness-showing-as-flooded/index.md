@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Inverness showing as flooded!"
-description = '''Hello, A large area in and around Inverness is showing the sea inland: http://www.openstreetmap.org/?lat=57.53&amp;amp;lon=-3.949&amp;amp;zoom=10&amp;amp;layers=M I&#x27;ve opened the editor but I can&#x27;t see how to fix the issue I&#x27;m afraid. Kevin'''
+description = '''Hello, A large area in and around Inverness is showing the sea inland: https://www.openstreetmap.org/?lat=57.53&amp;amp;lon=-3.949&amp;amp;zoom=10&amp;amp;layers=M I&#x27;ve opened the editor but I can&#x27;t see how to fix the issue I&#x27;m afraid. Kevin'''
 date = "2011-12-16T09:33:00Z"
 lastmod = "2011-12-16T10:03:00Z"
 weight = 9554
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>A large area in and around Inverness is showing the sea inland:</p>
-<p><a href="http://www.openstreetmap.org/?lat=57.53&amp;lon=-3.949&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=57.53&amp;lon=-3.949&amp;zoom=10&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=57.53&amp;lon=-3.949&amp;zoom=10&amp;layers=M">https://www.openstreetmap.org/?lat=57.53&amp;lon=-3.949&amp;zoom=10&amp;layers=M</a></p>
 <p>I've opened the editor but I can't see how to fix the issue I'm afraid.</p>
 <p>Kevin</p>
 </div>
@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The coastline has already been fixed, but they aren't updated as often in Mapnik as other features. See <a href="http://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer">the wiki coastline page</a>, and perhaps check for Coastline tagged questions elsewhere on this help site, in particular "<a href="http://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">when does coastline changes appear on map</a>".</p>
+<p>The coastline has already been fixed, but they aren't updated as often in Mapnik as other features. See <a href="https://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer">the wiki coastline page</a>, and perhaps check for Coastline tagged questions elsewhere on this help site, in particular "<a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">when does coastline changes appear on map</a>".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

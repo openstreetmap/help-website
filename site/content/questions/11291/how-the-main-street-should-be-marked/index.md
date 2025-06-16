@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While it is possible to add road signs as points to the map, most of the time it does not make a lot of sense. There is a tagging suggestion here <a href="http://wiki.openstreetmap.org/wiki/Key:priority_road">http://wiki.openstreetmap.org/wiki/Key:priority_road</a> for road priority, however it has only been used 2000 times which is a very small number for all of OSM.</p>
+<p>While it is possible to add road signs as points to the map, most of the time it does not make a lot of sense. There is a tagging suggestion here <a href="https://wiki.openstreetmap.org/wiki/Key:priority_road">https://wiki.openstreetmap.org/wiki/Key:priority_road</a> for road priority, however it has only been used 2000 times which is a very small number for all of OSM.</p>
 <p>You -should- tag the main road appropriately (primary, secondary, tertiary and so one) according to the rules in use in the area you are mapping in. These can vary slightly from country to country and it is best to consult the wiki on local practice.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -188,7 +188,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@gorn</span> I already gave you the correct answer over 14 months ago (again see <a href="http://wiki.openstreetmap.org/wiki/Key:priority_road">http://wiki.openstreetmap.org/wiki/Key:priority_road</a> ) ... PLEASE let this question die at last</p>
+<p><span>@gorn</span> I already gave you the correct answer over 14 months ago (again see <a href="https://wiki.openstreetmap.org/wiki/Key:priority_road">https://wiki.openstreetmap.org/wiki/Key:priority_road</a> ) ... PLEASE let this question die at last</p>
 </div>
 <div id="comment-23206-info" class="comment-info">
 <span class="comment-age">(10 Jun '13, 23:46)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -231,7 +231,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have found a proposoal which adresses exactly what I am asking for:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Give_way">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Give_way</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Give_way">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Give_way</a></p>
 <p>However it is just a proposal.</p>
 <p>PS: It is quite strange that there is no solution to this problem yet - it seems to be in a draft stage.</p>
 </div>

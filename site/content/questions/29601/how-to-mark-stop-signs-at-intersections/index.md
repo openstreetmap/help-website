@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have found two resources on the wiki that describe different ways for adding stop signs: <a href="http://wiki.openstreetmap.org/wiki/Key:stop">Key:stop</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dstop">Tag:highway=stop</a>. The key:stop page has not been updated since 2010, so I am assuming that the highway=stop method is the preferred method going forward, but I am still confused by exactly how to place stop signs.</p>
+<p>I have found two resources on the wiki that describe different ways for adding stop signs: <a href="https://wiki.openstreetmap.org/wiki/Key:stop">Key:stop</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dstop">Tag:highway=stop</a>. The key:stop page has not been updated since 2010, so I am assuming that the highway=stop method is the preferred method going forward, but I am still confused by exactly how to place stop signs.</p>
 <p>From what I gather, it is necessary to add new nodes on the roads leading up to the intersection, and tag each new node with highway=stop and stop:direction=[forward|backward].</p>
 <p>This would mean that for a four-way-stop intersection, with single-way roads, four new nodes would have to be added, two marked with stop:direction=forward, and two marked with stop:direction=backward. Is this the proper procedure for adding stop signs? Thanks.</p>
 </div>
@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi you got to choose betweentag all the crossings or just the central node read this its an oldie <a href="https://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,.">https://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,.</a></p>
+<p>hi you got to choose betweentag all the crossings or just the central node read this its an oldie <a href="/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,.">https://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing,.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

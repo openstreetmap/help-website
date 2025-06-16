@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>Currently we have a consensus to not add parcels in OSM. What you can do is use them as external resource like aerial images when it can help tagging on-the-ground features e.g. walls, fences, landuses changes limits, etc. But when land boundary defining land owner are purely virtual, it would create unncessary complexity on the map edition for the future contributors and will be hard to maintain (constantly change by merges and splits).</p>
 <p>You can find a more developed list of arguments about parcels in OSM on this wiki page:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Parcel">http://wiki.openstreetmap.org/wiki/Parcel</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Parcel">https://wiki.openstreetmap.org/wiki/Parcel</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

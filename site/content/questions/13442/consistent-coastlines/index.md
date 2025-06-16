@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/OSMCoastline">OSMCoastline</a> ... it has a link where you can download coastline data as shapefiles.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/OSMCoastline">OSMCoastline</a> ... it has a link where you can download coastline data as shapefiles.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

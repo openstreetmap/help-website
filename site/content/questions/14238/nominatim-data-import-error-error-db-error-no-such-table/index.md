@@ -84,7 +84,7 @@ osqa_accepted = false
 <p>$ sudo add-apt-repository ppa:kakrueger/openstreetmap</p>
 <p>$ sudo apt-get -u update</p>
 <p>$ sudo aptitude install osm2pgsql</p>
-<p>(<a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql)">http://wiki.openstreetmap.org/wiki/Osm2pgsql)</a></p>
+<p>(<a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql)">https://wiki.openstreetmap.org/wiki/Osm2pgsql)</a></p>
 </div>
 <div id="comment-14240-info" class="comment-info">
 <span class="comment-age">(13 Jul '12, 07:12)</span> <span class="comment-user userinfo">grossetti</span>

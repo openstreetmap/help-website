@@ -76,7 +76,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Related question: <a href="https://help.openstreetmap.org/questions/16533/whats-the-difference-between-a-stream-and-a-river">https://help.openstreetmap.org/questions/16533/whats-the-difference-between-a-stream-and-a-river</a></p>
+<p>Related question: <a href="/questions/16533/whats-the-difference-between-a-stream-and-a-river">https://help.openstreetmap.org/questions/16533/whats-the-difference-between-a-stream-and-a-river</a></p>
 </div>
 <div id="comment-36789-info" class="comment-info">
 <span class="comment-age">(12 Sep '14, 11:54)</span> <span class="comment-user userinfo">Lightsider</span>
@@ -153,7 +153,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You have to break (split) the line(s) and tag the stream section as a "waterway=stream" and the river section as a "waterway=river". Keep the name on both sections (if they really have the same name since rivers have often more than one source/spring).<br />
-You can create a relation of type "<a href="http://wiki.openstreetmap.org/wiki/Relation:waterway">waterway</a>" to collect all sections in one OSM entity.</p>
+You can create a relation of type "<a href="https://wiki.openstreetmap.org/wiki/Relation:waterway">waterway</a>" to collect all sections in one OSM entity.</p>
 <p>You shouldn't care too much about the "rendering" which is something to treat separately (sometimes, rendering process generates its own errors). It is important that the OSM data reflects the reality : tag the stream as a stream and the river as a river.<br />
 The limit between a stream and a river is not clearly specified today in OSM but some national geographic agencies have their own definition (like based on the width or volumetric flow)</p>
 </div>
@@ -217,7 +217,7 @@ The limit between a stream and a river is not clearly specified today in OSM but
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi stweb, if you can not jump over the stream, it could roughly be a river. Read this as well, <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dstream">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dstream</a></p>
+<p>Hi stweb, if you can not jump over the stream, it could roughly be a river. Read this as well, <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dstream">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dstream</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

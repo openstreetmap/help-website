@@ -160,7 +160,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Frederik's previous answer <a href="http://help.openstreetmap.org/questions/710/can-i-use-google-streetview-to-help-create-maps/711">here</a> explains why we don't use sources such as "Here" maps that haven't given explicit permission (even for "roads you already know").</p>
+<p>Frederik's previous answer <a href="/questions/710/can-i-use-google-streetview-to-help-create-maps/711">here</a> explains why we don't use sources such as "Here" maps that haven't given explicit permission (even for "roads you already know").</p>
 </div>
 <div id="comment-32101-info" class="comment-info">
 <span class="comment-age">(03 Apr '14, 13:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

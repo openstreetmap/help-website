@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This wiki page should answer all of your questions: <a href="http://wiki.openstreetmap.org/wiki/DE:Konsolidierung_der_PLZ-Relationen_in_Deutschland_2013">http://wiki.openstreetmap.org/wiki/DE:Konsolidierung_der_PLZ-Relationen_in_Deutschland_2013</a></p>
+<p>This wiki page should answer all of your questions: <a href="https://wiki.openstreetmap.org/wiki/DE:Konsolidierung_der_PLZ-Relationen_in_Deutschland_2013">https://wiki.openstreetmap.org/wiki/DE:Konsolidierung_der_PLZ-Relationen_in_Deutschland_2013</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

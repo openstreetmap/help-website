@@ -124,7 +124,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>There are OSM maps in specific languages on Wikimedia Toolserver. eg <a href="http://toolserver.org/~osm/locale/en.html?zoom=5&amp;lat=29.97397&amp;lon=11.46973&amp;layers=BT">a map in English, of North Africa</a>.</p>
 <p>See the <a href="http://toolserver.org/~osm/locale/">full list of languages</a>.</p>
-<p>Also see the OSM wiki article on <a href="http://wiki.openstreetmap.org/wiki/Map_Internationalization">Map Internationalization</a>.</p>
+<p>Also see the OSM wiki article on <a href="https://wiki.openstreetmap.org/wiki/Map_Internationalization">Map Internationalization</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

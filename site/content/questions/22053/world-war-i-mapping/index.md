@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a recent initiative called 'Open Historical Map' (OHM), devoted to the whole field of historical mapping. They have a mailing list <a href="http://lists.openstreetmap.org/listinfo/historic">http://lists.openstreetmap.org/listinfo/historic</a> which you can subscribe to, a wiki area <a href="http://wiki.openstreetmap.org/wiki/OSM-Historic">http://wiki.openstreetmap.org/wiki/OSM-Historic</a>, and their own server running OSM software but against a separate database.</p>
+<p>There is a recent initiative called 'Open Historical Map' (OHM), devoted to the whole field of historical mapping. They have a mailing list <a href="http://lists.openstreetmap.org/listinfo/historic">http://lists.openstreetmap.org/listinfo/historic</a> which you can subscribe to, a wiki area <a href="https://wiki.openstreetmap.org/wiki/OSM-Historic">https://wiki.openstreetmap.org/wiki/OSM-Historic</a>, and their own server running OSM software but against a separate database.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is an <em>ad hoc</em> grouping <a href="http://wiki.openstreetmap.org/wiki/Historical_OSM">OSM Historical</a> interested in exactly the type of mapping problem you describe.</p>
+<p>There is an <em>ad hoc</em> grouping <a href="https://wiki.openstreetmap.org/wiki/Historical_OSM">OSM Historical</a> interested in exactly the type of mapping problem you describe.</p>
 <p>Determining the best way of mapping historical data is still open, let alone the complexities of developing a tool chain to support it. However, your approach is perfectly practical. You do need to be careful that the editor you use does not try and load the data to OSM!</p>
 <p>You may also need to think about how features changed even in the period of WWI (movement of trench lines etc.), so you may want to use some tag which indicates the period of time when objects existed. Then you could map the state at say mid-1915 and mid-1917 separately. I imagine there may be a lot of historical documents which you could also use in the mapping (old military maps come to mind).</p>
 <p>Probably the most practical approach would be to import your WWI data into a PostGIS database using osm2pgsql &amp; render it as transparent tiles with mapnik (a good example of this approach is Lonvia's hiking map).</p>

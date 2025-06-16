@@ -148,7 +148,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use this algorithm described in our Wiki: <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm">http://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm</a> - it works without looking at the roles.</p>
+<p>Use this algorithm described in our Wiki: <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm">https://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm</a> - it works without looking at the roles.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -211,7 +211,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I really think you should not be re-inventing the wheel. There are plenty of open source projects and code bases, also for Java, that can handle reading OSM data. Admittedly, the number of programs that properly handle multipolygons, is less, but nonetheless, there are several well maintained ones out there:</p>
 <ol>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a></li>
 <li><a href="https://github.com/osmcode/libosmium">https://github.com/osmcode/libosmium</a></li>
 <li><a href="https://github.com/osmcode/pyosmium">https://github.com/osmcode/pyosmium</a></li>
 </ol>

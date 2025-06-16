@@ -134,7 +134,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Zou hopelijk opgelost moeten zijn (<a href="https://www.openstreetmap.org/changeset/89322542">changeset</a>), rode gedeelte stond op bicycle=use_sidepath. <img src="https://help.openstreetmap.org/upfiles/Screenshot_199.png" alt="kaart" /></p>
+<p>Zou hopelijk opgelost moeten zijn (<a href="https://www.openstreetmap.org/changeset/89322542">changeset</a>), rode gedeelte stond op bicycle=use_sidepath. <img src="/upfiles/Screenshot_199.png" alt="kaart" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

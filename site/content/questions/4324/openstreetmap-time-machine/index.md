@@ -127,7 +127,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The API will only give you small amounts of data at a time. If you want to show a larger area on the map you'll need to download planet dumps. Or, there are some sites that split the planet dumps up by country and/or state. Check out the planet dumps wiki page:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="http://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="https://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a></p>
 <p>Some of the download folders have old planet dumps still available, like this one looks like it goes back about two years:</p>
 <p><a href="http://ftp.heanet.ie/mirrors/openstreetmap.org/"></a><a href="http://ftp.heanet.ie/mirrors/openstreetmap.org/"></a><a href="http://ftp.heanet.ie/mirrors/openstreetmap.org/">http://ftp.heanet.ie/mirrors/openstreetmap.org/</a></p>
 </div>

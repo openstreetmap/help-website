@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Other bays like <a href="http://www.openstreetmap.org/relation/1214649#map=12/-33.9818/151.1878">Botany Bay</a> in Sydney are tagged <code>natural=water</code> and <code>water=bay</code> which renders nicely.</p>
+<p>Other bays like <a href="https://www.openstreetmap.org/relation/1214649#map=12/-33.9818/151.1878">Botany Bay</a> in Sydney are tagged <code>natural=water</code> and <code>water=bay</code> which renders nicely.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -191,7 +191,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Maybe this depends on your definition/understanding of the term 'bay'.<br />
 Honestly first I thought more of a 'beach' while reading, that is already rendererd.<br />
-But your understanding is ok with the wiki: <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dbay">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dbay</a></p>
+But your understanding is ok with the wiki: <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dbay">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dbay</a></p>
 <blockquote>
 <p>A bay is an area of water mostly surrounded or otherwise demarcated by land.</p>
 </blockquote>

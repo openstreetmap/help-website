@@ -69,7 +69,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>do you mean the coordinates of the mouse cursor? Or really something with GPS? In case you did <em>not</em> mean GPS:</p>
-<p>See the very similar question <a href="https://help.openstreetmap.org/questions/53865/how-to-place-a-node-on-a-specific-coordinate">https://help.openstreetmap.org/questions/53865/how-to-place-a-node-on-a-specific-coordinate</a> for some hints.</p>
+<p>See the very similar question <a href="/questions/53865/how-to-place-a-node-on-a-specific-coordinate">https://help.openstreetmap.org/questions/53865/how-to-place-a-node-on-a-specific-coordinate</a> for some hints.</p>
 </div>
 <div id="comment-53920-info" class="comment-info">
 <span class="comment-age">(08 Jan '17, 14:44)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe a good starting point for this task can be <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> or <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a></p>
-<p>or <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> in general.</p>
+<p>Maybe a good starting point for this task can be <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> or <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a></p>
+<p>or <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> in general.</p>
 <p>Tell us if you have found any graphic that comes near your aim, then we can search for more.</p>
 <p>Also in this FAQ site there are many hints about printed maps or maps in an own style. Use the search ...</p>
 </div>

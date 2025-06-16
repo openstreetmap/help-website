@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>These data appear to be part of an ongoing import that is coordinated on the following wiki page. Make sure you have read <a href="http://wiki.openstreetmap.org/wiki/JA:YahooJapanALPS_Data/Highway">http://wiki.openstreetmap.org/wiki/JA:YahooJapanALPS_Data/Highway</a> and the general import guidelines <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
+<p>These data appear to be part of an ongoing import that is coordinated on the following wiki page. Make sure you have read <a href="https://wiki.openstreetmap.org/wiki/JA:YahooJapanALPS_Data/Highway">https://wiki.openstreetmap.org/wiki/JA:YahooJapanALPS_Data/Highway</a> and the general import guidelines <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
 </div>
 <div id="comment-11729-info" class="comment-info">
 <span class="comment-age">(05 Apr '12, 05:49)</span> <span class="comment-user userinfo">apmon</span>
@@ -148,7 +148,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Just to answer the technical part of your question:</p>
-<p>To upload OSM XML data to the server, you need to use one of several import mechanisms. The available mechanisms are described on the wiki pages <a href="http://wiki.openstreetmap.org/wiki/Import">Import</a> and <a href="http://wiki.openstreetmap.org/wiki/Import/Software#Importing_Data">Import/Software</a>.</p>
+<p>To upload OSM XML data to the server, you need to use one of several import mechanisms. The available mechanisms are described on the wiki pages <a href="https://wiki.openstreetmap.org/wiki/Import">Import</a> and <a href="https://wiki.openstreetmap.org/wiki/Import/Software#Importing_Data">Import/Software</a>.</p>
 <p>However, as explained in the comments, you should only import large amounts of data after consulting with the (local) community (mapper meetings, forum, mailing lists etc.). Otherwise you may well cause problems, both technically and with respect to data quality.</p>
 </div>
 <div class="answer-controls post-controls">

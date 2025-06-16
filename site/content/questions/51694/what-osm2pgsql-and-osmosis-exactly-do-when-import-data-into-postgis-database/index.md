@@ -43,9 +43,9 @@ osqa_accepted = false
 <p>I have dowmloaded the beijing_china.osm.pbf data file from the <a href="https://mapzen.com/data/metro-extracts/metro/beijing_china/">Metro Extracts</a>, then i use osm2pgsql to import data into the tile server database,such as "<strong>osm2pgsql --slim -d gis -C 1600 --number-processes 3 /usr/local/share/maps/planet/beijing_china.osm.pbf</strong>", and i use osmosis to import data into the rails port database,such as "<strong>./osmosis-latest/bin/osmosis --read-pbf /home/osm/planet/beijing_china.osm.pbf --write-apidb host="localhost" database="openstreetmap" user="osm" password="buaanlp" validateSchemaVersion="no"</strong>". What confuse me is that the table structure in this two database is quite different, then how could it use the same data file to import data?</p>
 <p>The table structure in the rails port database and in the tile server database can be showed as blow.</p>
 <p>rails port database</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osmdb.png" alt="alt text" /></p>
+<p><img src="/upfiles/osmdb.png" alt="alt text" /></p>
 <p>tile server database</p>
-<p><img src="http://help.openstreetmap.org/upfiles/R2K9W%60PLHG7280%5D80%7D0E2E6.png" alt="alt text" /></p>
+<p><img src="/upfiles/R2K9W%60PLHG7280%5D80%7D0E2E6.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osm2pgsql" rel="tag" title="see questions tagged &#39;osm2pgsql&#39;">osm2pgsql</span> <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span>

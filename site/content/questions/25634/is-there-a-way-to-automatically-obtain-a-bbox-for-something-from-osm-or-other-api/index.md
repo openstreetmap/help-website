@@ -125,7 +125,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are numerous ways to find a bbox manually: Overpass Turbo and the BBBike site are two which enable one to draw a box.</p>
-<p>You, however, ask for an automated way. Probably the easiest way is to use <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Search">Nominatim</a> which returns a bounding box as part of its XML format. Care needs to taken with this because you may find yourself getting the node which marks the centre of a city rather than its administrative extent. Also, if by Paris, you mean the Parisian Metropolitan area then I think you can't get this from Nominatim.</p>
+<p>You, however, ask for an automated way. Probably the easiest way is to use <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Search">Nominatim</a> which returns a bounding box as part of its XML format. Care needs to taken with this because you may find yourself getting the node which marks the centre of a city rather than its administrative extent. Also, if by Paris, you mean the Parisian Metropolitan area then I think you can't get this from Nominatim.</p>
 <p>Lastly, do not think of then using the bbox returned for direct API queries. The amount of data contained in the areas of large cities is very large, and this is not appropriate usage of the API: consider Overpass or similar methods.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -213,7 +213,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you know the coordinates, you can download the data with</p>
 <pre><code>http://overpass-api.de/api/map?bbox=lower_lon,lower_lat,upper_lon,upper_lat</code></pre>
-<p>Other options for larger cities are <a href="http://download.geofabrik.de/">downloads from the Geofabrik</a>. Or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout">setting a larger timeout</a> on the respective <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Simplest_possible_map_call">Overpass API map query</a>.</p>
+<p>Other options for larger cities are <a href="http://download.geofabrik.de/">downloads from the Geofabrik</a>. Or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout">setting a larger timeout</a> on the respective <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Simplest_possible_map_call">Overpass API map query</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

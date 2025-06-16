@@ -71,7 +71,7 @@ osqa_accepted = true
 <div id="post-65943-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor">english version of this question</a></p>
+<p><a href="/questions/29866/add-name-on-an-existing-road-which-changes-its-name-how-do-i-devide-the-road-in-2-sections-with-the-id-editor">english version of this question</a></p>
 </div>
 <div id="comment-65943-info" class="comment-info">
 <span class="comment-age">(17 Sep '18, 21:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

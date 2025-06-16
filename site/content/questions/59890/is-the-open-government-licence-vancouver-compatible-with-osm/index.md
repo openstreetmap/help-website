@@ -206,7 +206,7 @@ One Answer:
 <div id="post-59906-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A map produced from OSM data, containing the Vancouver data, will usually just be attributed "© OpenStreetMap". Vancouver's clear request above is that "You must... include any attribution statement specified by [the City of Vancouver]". They could well argue that just putting "© OpenStreetMap" doesn't qualify as that. Certainly noting them in the changeset comment ("edit summary") is almost certainly not good enough - at the very least they'd expect a mention on <a href="http://wiki.openstreetmap.org/wiki/Contributors,">http://wiki.openstreetmap.org/wiki/Contributors,</a> and in fact their name is already there, which suggests this might already have been cleared. Like I say, go talk to talk-ca.</p>
+<p>A map produced from OSM data, containing the Vancouver data, will usually just be attributed "© OpenStreetMap". Vancouver's clear request above is that "You must... include any attribution statement specified by [the City of Vancouver]". They could well argue that just putting "© OpenStreetMap" doesn't qualify as that. Certainly noting them in the changeset comment ("edit summary") is almost certainly not good enough - at the very least they'd expect a mention on <a href="https://wiki.openstreetmap.org/wiki/Contributors,">https://wiki.openstreetmap.org/wiki/Contributors,</a> and in fact their name is already there, which suggests this might already have been cleared. Like I say, go talk to talk-ca.</p>
 </div>
 <div id="comment-59906-info" class="comment-info">
 <span class="comment-age">(01 Oct '17, 13:01)</span> <span class="comment-user userinfo">Richard ♦</span>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Since some time there are problems with the availability of the XAPIs. To see the current status (there is 3 different servers), have a look here: <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
+<p>Since some time there are problems with the availability of the XAPIs. To see the current status (there is 3 different servers), have a look here: <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

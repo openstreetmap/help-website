@@ -135,7 +135,7 @@ And if it is fast food tag it as such. In my university there were all three typ
 1
 </div>
 <div class="comment-text">
-<p>Perhaps it would be good to revive the amenity-features proposal: <a href="http://wiki.openstreetmap.org/wiki/Amenity_features">http://wiki.openstreetmap.org/wiki/Amenity_features</a> The original author seems to left the discussion.</p>
+<p>Perhaps it would be good to revive the amenity-features proposal: <a href="https://wiki.openstreetmap.org/wiki/Amenity_features">https://wiki.openstreetmap.org/wiki/Amenity_features</a> The original author seems to left the discussion.</p>
 </div>
 <div id="comment-7181-info" class="comment-info">
 <span class="comment-age">(18 Aug '11, 08:23)</span> <span class="comment-user userinfo">SveLil</span>
@@ -178,7 +178,7 @@ And if it is fast food tag it as such. In my university there were all three typ
 <td><div class="item-right">
 <div class="answer-body">
 <p>how about a cafe? It serves not only coffee, but also some snacks, like sandwiches and cakes. Fast Food could also be an option... you get your food over the counter and usually a canteen in a university is designed to serve people in short times. They might only have 30 min between lectures. As I understand, fast food on OSM is not limited to Chains like McD &amp; co.</p>
-<p>Try looking at these: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe</a> <a href="http://wiki.openstreetmap.org/wiki/Tag:cuisine%3Dcoffee_shop">http://wiki.openstreetmap.org/wiki/Tag:cuisine%3Dcoffee_shop</a> <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfast_food">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfast_food</a></p>
+<p>Try looking at these: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe</a> <a href="https://wiki.openstreetmap.org/wiki/Tag:cuisine%3Dcoffee_shop">https://wiki.openstreetmap.org/wiki/Tag:cuisine%3Dcoffee_shop</a> <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfast_food">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfast_food</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -229,7 +229,7 @@ And if it is fast food tag it as such. In my university there were all three typ
 <td><div class="item-right">
 <div class="answer-body">
 <p>Although, may I add another question: Is the uni canteen open for public? I.e., if I go there as a tourist, can I eat there? Even if I am not a member of this university?</p>
-<p>If no, then maybe also tag it as access=private <a href="http://wiki.openstreetmap.org/wiki/Access">http://wiki.openstreetmap.org/wiki/Access</a></p>
+<p>If no, then maybe also tag it as access=private <a href="https://wiki.openstreetmap.org/wiki/Access">https://wiki.openstreetmap.org/wiki/Access</a></p>
 <p>Different countries, different approaches. In Austria, for example, everyone can enter the university and use the facilities like Café, Mensa, library, yes, even listen to lectures. When I was in Paris, the guards didn't even let me enter the university building without a student's or staff ID.</p>
 </div>
 <div class="answer-controls post-controls">

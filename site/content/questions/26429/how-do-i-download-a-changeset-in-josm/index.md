@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'd like to download a changeset in order to use the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM validator</a> to automatically fix some duplicate node issues. Using the <a href="http://josm.openstreetmap.de/wiki/Help/Dialog/ChangesetManager">changeset management dialogue</a>, I can query the changeset and "Download changeset content". Unfortunately this doesn't seem to download the objects referenced by a changeset. How do I do that?</p>
+<p>I'd like to download a changeset in order to use the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM validator</a> to automatically fix some duplicate node issues. Using the <a href="http://josm.openstreetmap.de/wiki/Help/Dialog/ChangesetManager">changeset management dialogue</a>, I can query the changeset and "Download changeset content". Unfortunately this doesn't seem to download the objects referenced by a changeset. How do I do that?</p>
 <p>There is a "select the primitives" option that's greyed out unless I've previously downloaded some random node to create a data layer, but it just gives a "none of the objects is available" message unless I've manually gone to the location of the data and downloaded everything there.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To download a changeset in JOSM use File -&gt; Open Location and paste the changeset URL e.g. <a href="http://www.openstreetmap.org/changeset/17871446">http://www.openstreetmap.org/changeset/17871446</a> , see <a href="https://josm.openstreetmap.de/wiki/Help/Action/OpenLocation">https://josm.openstreetmap.de/wiki/Help/Action/OpenLocation</a></p>
+<p>To download a changeset in JOSM use File -&gt; Open Location and paste the changeset URL e.g. <a href="https://www.openstreetmap.org/changeset/17871446">https://www.openstreetmap.org/changeset/17871446</a> , see <a href="https://josm.openstreetmap.de/wiki/Help/Action/OpenLocation">https://josm.openstreetmap.de/wiki/Help/Action/OpenLocation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -188,7 +188,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I can't see a way to do it using JOSM, but have managed what you want, I think.</p>
-<p>I started by looking at <a href="http://www.openstreetmap.org/browse/changeset/17871446">this changeset</a> and right-clicked on the <a href="http://www.openstreetmap.org/api/0.6/changeset/17871446/download">osmChange XML</a> and saved the linked content as download.osc</p>
+<p>I started by looking at <a href="https://www.openstreetmap.org/browse/changeset/17871446">this changeset</a> and right-clicked on the <a href="https://www.openstreetmap.org/api/0.6/changeset/17871446/download">osmChange XML</a> and saved the linked content as download.osc</p>
 <p>I then opened this .osc file in JOSM and used File, Update Data to check I had the current versions (as I don't really know what opening the .osc file will give me).</p>
 </div>
 <div class="answer-controls post-controls">

@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess you can just map it as boundary. Many boundaries actually have implicit access restriction; a <code>boundary=administrative admin_level=2</code> is a national boundary where you will often need a visa to enter, and a <code>boundary=protected_area</code> will often not be accessible to everyone either. So I suggest you check if <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area</a> has something for you, or else come up with your own boundary tag.</p>
+<p>I guess you can just map it as boundary. Many boundaries actually have implicit access restriction; a <code>boundary=administrative admin_level=2</code> is a national boundary where you will often need a visa to enter, and a <code>boundary=protected_area</code> will often not be accessible to everyone either. So I suggest you check if <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area</a> has something for you, or else come up with your own boundary tag.</p>
 <p>Don't expect your boundary to show up on the map on openstreetmap.org though; you'll probably have to set up your own rendering to display such specialist boundaries.</p>
 </div>
 <div class="answer-controls post-controls">

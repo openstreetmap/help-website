@@ -125,8 +125,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The addresses are inside the planet.osm dump ( <a href="http://planet.openstreetmap.org/">http://planet.openstreetmap.org/</a> ), but you'll have to extract/parse them yourself. Address tag format is described at <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a> .</p>
-<p>Probably you could also get something out of overpass API ( <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> ) , but I am not familiar with that.</p>
+<p>The addresses are inside the planet.osm dump ( <a href="http://planet.openstreetmap.org/">http://planet.openstreetmap.org/</a> ), but you'll have to extract/parse them yourself. Address tag format is described at <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a> .</p>
+<p>Probably you could also get something out of overpass API ( <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> ) , but I am not familiar with that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -246,9 +246,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>An alternative about using the overpass-API is to download some OSM data extracts for countries or part of each that you can find on geofabrik.de or other sources according to <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">/wiki/Planet.osm</a></p>
-<p>Then do a filtering with the tool called <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> about tags beginning with "addr:"</p>
-<p>If you need your data set in text form, try <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> and its CSV conversion feature.</p>
+<p>An alternative about using the overpass-API is to download some OSM data extracts for countries or part of each that you can find on geofabrik.de or other sources according to <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">/wiki/Planet.osm</a></p>
+<p>Then do a filtering with the tool called <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> about tags beginning with "addr:"</p>
+<p>If you need your data set in text form, try <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> and its CSV conversion feature.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

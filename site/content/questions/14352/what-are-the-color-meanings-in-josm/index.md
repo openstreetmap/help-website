@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>What is the exact meaning of colors of ways in JOSM. I presume they are different types of errors. I have some red ways as well as some muticolored ones - one is yellow, blue, green for example. I think it might be some sort of checking for errors.</p>
 <p>PS: I am cleaning after the licence bot ...</p>
-<p>Permalink: <a href="http://www.openstreetmap.org/?lat=49.933976&amp;lon=13.389381&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=49.933976&amp;lon=13.389381&amp;zoom=18&amp;layers=M</a></p>
+<p>Permalink: <a href="https://www.openstreetmap.org/?lat=49.933976&amp;lon=13.389381&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=49.933976&amp;lon=13.389381&amp;zoom=18&amp;layers=M</a></p>
 <p>Here is how it looks: <img src="http://i.imgur.com/5zOWb.png" alt="editing injosm" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -205,7 +205,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>The area in question is <a href="http://www.openstreetmap.org/?lat=49.94297&amp;lon=13.37545&amp;zoom=17&amp;layers=M">here</a> (better post a permalink next time). It seems that those colored ways that look like barriers/hedges/waterways indeed result from the validator as there are no such objects in the database. However, my validator doesn't show them and I have no idea why it draws colored ways next to the original ways instead of highlighting those ways which would be the usual behavior. Might still be some other plugin or you added those ways yourself. Can you select them? What tags are on them?</p>
+<p>The area in question is <a href="https://www.openstreetmap.org/?lat=49.94297&amp;lon=13.37545&amp;zoom=17&amp;layers=M">here</a> (better post a permalink next time). It seems that those colored ways that look like barriers/hedges/waterways indeed result from the validator as there are no such objects in the database. However, my validator doesn't show them and I have no idea why it draws colored ways next to the original ways instead of highlighting those ways which would be the usual behavior. Might still be some other plugin or you added those ways yourself. Can you select them? What tags are on them?</p>
 </div>
 <div id="comment-14392-info" class="comment-info">
 <span class="comment-age">(19 Jul '12, 05:41)</span> <span class="comment-user userinfo">scai ♦</span>

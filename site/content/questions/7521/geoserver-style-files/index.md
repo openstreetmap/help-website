@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://github.com/dwins/mapnik2geotools">mapnik2geotools</a> is a tool to convert Mapnik styles to SLD. You can get the <a href="http://osm.org">osm.org</a> Mapnik style files from the <a href="http://svn.openstreetmap.org/applications/rendering/mapnik">Subversion repository</a>, see also the <a href="http://wiki.openstreetmap.org/wiki/Mapnik#Rendering_with_Mapnik">Mapnik Wiki page</a>.</p>
+<p><a href="https://github.com/dwins/mapnik2geotools">mapnik2geotools</a> is a tool to convert Mapnik styles to SLD. You can get the <a href="http://osm.org">osm.org</a> Mapnik style files from the <a href="http://svn.openstreetmap.org/applications/rendering/mapnik">Subversion repository</a>, see also the <a href="https://wiki.openstreetmap.org/wiki/Mapnik#Rendering_with_Mapnik">Mapnik Wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

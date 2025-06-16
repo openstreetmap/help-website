@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "CT/ODBL compatibility after edits of non-accepters have been removed"
-description = '''Oh, dear, and now I have another question! (well, several, actually!) Consider this way: http://www.openstreetmap.org/browse/way/4852821/history It shows up in Potlatch as having licence problems, but is a clear example of the situation I&#x27;ve just highlighted, where it was created by an accepter, and...'''
+description = '''Oh, dear, and now I have another question! (well, several, actually!) Consider this way: https://www.openstreetmap.org/browse/way/4852821/history It shows up in Potlatch as having licence problems, but is a clear example of the situation I&#x27;ve just highlighted, where it was created by an accepter, and...'''
 date = "2012-01-20T11:20:00Z"
 lastmod = "2012-01-20T11:28:00Z"
 weight = 10104
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Oh, dear, and now I have another question! (well, several, actually!)</p>
-<p>Consider this way: <a href="http://www.openstreetmap.org/browse/way/4852821/history">http://www.openstreetmap.org/browse/way/4852821/history</a></p>
+<p>Consider this way: <a href="https://www.openstreetmap.org/browse/way/4852821/history">https://www.openstreetmap.org/browse/way/4852821/history</a></p>
 <p>It shows up in Potlatch as having licence problems, but is a clear example of the situation I've just highlighted, where it was created by an accepter, and has been edited by a couple of decliners as well as accepters. Recently, however, a user called woodpeck_fixbot has removed the edits made by the decliners.</p>
 <ul>
 <li>is the way OK now?</li>

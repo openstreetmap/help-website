@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Garmin">Garmin</a> ... there you have an overview about the different devices with als their cons, pros and features in general.</p>
+<p>Have a look at the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Garmin">Garmin</a> ... there you have an overview about the different devices with als their cons, pros and features in general.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

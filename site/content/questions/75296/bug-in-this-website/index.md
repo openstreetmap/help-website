@@ -214,7 +214,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at a previous question: <a href="https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work">https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work</a></p>
+<p>Have a look at a previous question: <a href="/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work">https://help.openstreetmap.org/questions/74831/why-does-the-add-a-new-comment-button-sometimes-not-work</a></p>
 <p>And welcome to participate in a talk mailinglist discussion I had started the last time this happened. Sadly, it died as so many other threads there: <a href="https://lists.openstreetmap.org/pipermail/talk/2020-May/084700.html">https://lists.openstreetmap.org/pipermail/talk/2020-May/084700.html</a> (some of the thread got split into a "digest" subject").</p>
 </div>
 <div class="answer-controls post-controls">

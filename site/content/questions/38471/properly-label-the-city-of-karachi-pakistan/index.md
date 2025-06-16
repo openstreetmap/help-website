@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>This seems like a glaring oversight to me, and I do not believe that I have corrected it in the correct manner. Karachi is the largest city in Pakistan. While also a district of the Sindh province, it is still a city in its own right and should be labeled on the Pakistan map accordingly. I placed a city point on the map, but don't believe it is reflected at the proper level.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Karachi">http://wiki.openstreetmap.org/wiki/Karachi</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Karachi">https://wiki.openstreetmap.org/wiki/Karachi</a></p>
 <p>The equivalent would be looking at a map of New York City, but never seeing "New York" on the map, only Queens, Brooklyn, etc.</p>
 <p>Maybe a veteran can assist and help correct this issue?</p>
 <p>Thanks,</p>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi gr8rgis, remember that the display of a city name depends on the renderer. Zoom in and youll get other and more area (city) names. For instance, take Birmingham at zoom level 15 the name disappears, nothing wrong with the tagging scheme. Karachi shows at level 14 and is lost at the levels 15 and 13. And please read this as well, <a href="http://wiki.openstreetmap.org/wiki/City">http://wiki.openstreetmap.org/wiki/City</a> with some explaining about taggng nodes, languages and areas. Since an area (conglomorate) could contain several city's.</p>
+<p>Hi gr8rgis, remember that the display of a city name depends on the renderer. Zoom in and youll get other and more area (city) names. For instance, take Birmingham at zoom level 15 the name disappears, nothing wrong with the tagging scheme. Karachi shows at level 14 and is lost at the levels 15 and 13. And please read this as well, <a href="https://wiki.openstreetmap.org/wiki/City">https://wiki.openstreetmap.org/wiki/City</a> with some explaining about taggng nodes, languages and areas. Since an area (conglomorate) could contain several city's.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -217,7 +217,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>The tagging of that city node is correct.</p>
-<p>Would guess that the name is not rendered on the main mapnik style because of the missing fonts of letters that make up that city name. You can see the city name rendered correctly with some other styles. For example on the <a href="http://www.openstreetmap.org/#map=10/24.9506/66.9905&amp;layers=Q">Mapquest open</a> and on the <a href="http://www.openstreetmap.org/#map=9/24.6932/67.5137&amp;layers=T">transportation</a> maps.</p>
+<p>Would guess that the name is not rendered on the main mapnik style because of the missing fonts of letters that make up that city name. You can see the city name rendered correctly with some other styles. For example on the <a href="https://www.openstreetmap.org/#map=10/24.9506/66.9905&amp;layers=Q">Mapquest open</a> and on the <a href="https://www.openstreetmap.org/#map=9/24.6932/67.5137&amp;layers=T">transportation</a> maps.</p>
 </div>
 <div id="comment-38523-info" class="comment-info">
 <span class="comment-age">(12 Nov '14, 16:14)</span> <span class="comment-user userinfo">RM87</span>

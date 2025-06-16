@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you read <a href="http://wiki.openstreetmap.org/wiki/Mod_tile#renderd">http://wiki.openstreetmap.org/wiki/Mod_tile#renderd</a> -&gt; tile expiry ?</p>
+<p>Did you read <a href="https://wiki.openstreetmap.org/wiki/Mod_tile#renderd">https://wiki.openstreetmap.org/wiki/Mod_tile#renderd</a> -&gt; tile expiry ?</p>
 <p>As long as you do not a full planet import which would update the import time stamp, tiles are not expired. You have to do this manually. For testing you could just delete the tile or all tiles from the tile-cache folder.</p>
 </div>
 <div class="answer-controls post-controls">

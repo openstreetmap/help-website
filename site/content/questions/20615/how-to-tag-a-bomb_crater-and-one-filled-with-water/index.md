@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The water part of the question is easy - yes, if it contains water tag it natural=water, see <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater</a> .</p>
+<p>The water part of the question is easy - yes, if it contains water tag it natural=water, see <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater</a> .</p>
 <p>I would tag the bomb craters as historic=bomb_crater</p>
 </div>
 <div class="answer-controls post-controls">

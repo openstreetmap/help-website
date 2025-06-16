@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should discuss this with the <a href="http://lists.openstreetmap.org/listinfo/talk-ca">Canadian mailing list</a>. Bear in mind that data imports <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">are not unquestioningly welcomed</a> in OpenStreetMap.</p>
+<p>You should discuss this with the <a href="http://lists.openstreetmap.org/listinfo/talk-ca">Canadian mailing list</a>. Bear in mind that data imports <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">are not unquestioningly welcomed</a> in OpenStreetMap.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

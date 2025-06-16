@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect Zoopla are creating boundaries based on postal codes. OpenStreetMap has <a href="http://www.openstreetmap.org/relation/181292#map=12/51.5968/-0.3356">this Borough relation for Harrow</a> which as you can see is not the same as Zoopla are using for the town of Harrow. Looking at <a href="http://www.free-postcode-maps.co.uk/postcode-maps/towns/harrow-postcode-map.php">this website</a> suggests they are using HA1, HA2 and HA3 as the Harrow boundary.</p>
+<p>I suspect Zoopla are creating boundaries based on postal codes. OpenStreetMap has <a href="https://www.openstreetmap.org/relation/181292#map=12/51.5968/-0.3356">this Borough relation for Harrow</a> which as you can see is not the same as Zoopla are using for the town of Harrow. Looking at <a href="http://www.free-postcode-maps.co.uk/postcode-maps/towns/harrow-postcode-map.php">this website</a> suggests they are using HA1, HA2 and HA3 as the Harrow boundary.</p>
 <p>As such you probably can't get the information out of OpenStreetMap. You could start with the <a href="http://www.ordnancesurvey.co.uk/business-and-government/products/code-point-open.html">Ordnance Survey CodePoint Open dataset</a> and approximate your own boundaries for each postal area, but you'd still need to decide which postal areas map to which town. Perhaps there is a source for this already, but I don't know of one.</p>
 </div>
 <div class="answer-controls post-controls">

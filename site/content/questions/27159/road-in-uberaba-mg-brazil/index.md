@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Road in Uberaba-MG Brazil"
-description = '''People de roads in Uberaba, MG (Brazil) is not showing enymore, whats going on? http://www.openstreetmap.org/#map=13/-19.7453/-47.9108'''
+description = '''People de roads in Uberaba, MG (Brazil) is not showing enymore, whats going on? https://www.openstreetmap.org/#map=13/-19.7453/-47.9108'''
 date = "2013-10-14T16:24:00Z"
 lastmod = "2013-10-17T09:39:00Z"
 weight = 27159
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>People de roads in Uberaba, MG (Brazil) is not showing enymore, whats going on?</p>
-<p><a href="http://www.openstreetmap.org/#map=13/-19.7453/-47.9108">http://www.openstreetmap.org/#map=13/-19.7453/-47.9108</a></p>
+<p><a href="https://www.openstreetmap.org/#map=13/-19.7453/-47.9108">https://www.openstreetmap.org/#map=13/-19.7453/-47.9108</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-uberaba" rel="tag" title="see questions tagged &#39;uberaba&#39;">uberaba</span> <span class="post-tag tag-link-redaction" rel="tag" title="see questions tagged &#39;redaction&#39;">redaction</span>
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think <a href="https://lists.openstreetmap.org/pipermail/talk-br/2013-October/004315.html">https://lists.openstreetmap.org/pipermail/talk-br/2013-October/004315.html</a> and <a href="http://www.openstreetmap.org/browse/changeset/18327828">http://www.openstreetmap.org/browse/changeset/18327828</a> relate (plus various earlier discussions on talk-br list).</p>
+<p>I think <a href="https://lists.openstreetmap.org/pipermail/talk-br/2013-October/004315.html">https://lists.openstreetmap.org/pipermail/talk-br/2013-October/004315.html</a> and <a href="https://www.openstreetmap.org/browse/changeset/18327828">https://www.openstreetmap.org/browse/changeset/18327828</a> relate (plus various earlier discussions on talk-br list).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

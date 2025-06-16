@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Re : bus stop missing in the OSM map legend Objet : arrêt de bus absent de la légende de la carte OSM</p>
 <p>J'ai affiché la légende par le lien "Légende de la carte".</p>
 <p>Nulle part n'apparait l'explication de l'icône de bus bleu...</p>
-<p>Related discussion - about distinction of railway / bus : Map key unclear <a href="http://help.openstreetmap.org/questions/10689/map-key-unclear">http://help.openstreetmap.org/questions/10689/map-key-unclear</a></p>
+<p>Related discussion - about distinction of railway / bus : Map key unclear <a href="/questions/10689/map-key-unclear">https://help.openstreetmap.org/questions/10689/map-key-unclear</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bus" rel="tag" title="see questions tagged &#39;bus&#39;">bus</span> <span class="post-tag tag-link-legend" rel="tag" title="see questions tagged &#39;legend&#39;">legend</span>

@@ -183,7 +183,7 @@ There are many ways to create a network in traffic simulation software, but impo
 <p>Thanks for your participation <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@someoneelse</a>.<br />
 Well, artificial nodes must be added into edges or links that are related to roads or highways. it doesn't matter how it should be added, just every edge or link should have enough number of artificial nodes to be ensured that elevation data are usefulness in the simulated network.<br />
 I can do this manually in JOSM, but this is not applicable for large networks.<br />
-To view the sample, see attached files that are manually created. (<a href="https://help.openstreetmap.org/upfiles/Before_aKbSrQw.jpg">Before</a> | <a href="https://help.openstreetmap.org/upfiles/After_ZqJuLOX.jpg">After</a>)</p>
+To view the sample, see attached files that are manually created. (<span>Before</span> | <span>After</span>)</p>
 </div>
 <div id="comment-70045-info" class="comment-info">
 <span class="comment-age">(13 Jul '19, 14:46)</span> <span class="comment-user userinfo">Mohsen Rahmati</span>

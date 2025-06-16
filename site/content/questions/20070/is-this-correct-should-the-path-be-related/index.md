@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>See the screenshot (arrow added by me, this is <a href="http://www.openstreetmap.org/?lat=45.413357&amp;lon=-75.668271&amp;zoom=18&amp;layers=M">at 45.413357,-75.668271</a>). This is a cyclepath that merges into the bridge, and the bridge does have a cycleway tag, but I'm not sure this would be acceptable for a trip planner.</p>
+<p>See the screenshot (arrow added by me, this is <a href="https://www.openstreetmap.org/?lat=45.413357&amp;lon=-75.668271&amp;zoom=18&amp;layers=M">at 45.413357,-75.668271</a>). This is a cyclepath that merges into the bridge, and the bridge does have a cycleway tag, but I'm not sure this would be acceptable for a trip planner.</p>
 <p>I'm not sure also that I should connect them, so I'm asking that here first.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

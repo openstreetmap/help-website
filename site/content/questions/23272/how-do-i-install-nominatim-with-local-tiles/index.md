@@ -70,7 +70,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>The details I suspect are here:</p>
-<p><a href="https://help.openstreetmap.org/questions/23250/osm2pgsql-import-for-geo-coding">https://help.openstreetmap.org/questions/23250/osm2pgsql-import-for-geo-coding</a></p>
+<p><a href="/questions/23250/osm2pgsql-import-for-geo-coding">https://help.openstreetmap.org/questions/23250/osm2pgsql-import-for-geo-coding</a></p>
 </div>
 <div id="comment-23281-info" class="comment-info">
 <span class="comment-age">(12 Jun '13, 15:36)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -125,10 +125,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim provides search functionality only, it does not provide a rendered map. For details on setting up tile rendering you may want to have a look at these help topics (there are probably others if you search)</p>
-<p><a href="https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a></p>
-<p><a href="https://help.openstreetmap.org/questions/8371/how-to-serve-tiles-from-my-own-server">https://help.openstreetmap.org/questions/8371/how-to-serve-tiles-from-my-own-server</a></p>
+<p><a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a></p>
+<p><a href="/questions/8371/how-to-serve-tiles-from-my-own-server">https://help.openstreetmap.org/questions/8371/how-to-serve-tiles-from-my-own-server</a></p>
 <p>There is also a virtual machine image setup to do both nominatim and tiles - although it currently has problems with more recent osm data in nominatim:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">http://wiki.openstreetmap.org/wiki/Virtual_machine_image</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Virtual_machine_image">https://wiki.openstreetmap.org/wiki/Virtual_machine_image</a></p>
 <p>By default Nominatim is setup to use OSM tiles, but there are other providers of pre-rendered tiles available, for instance MapQuest. Alternatively you can render your own and provide a custom url - but this requires additional software and another copy of the OSM database.</p>
 </div>
 <div class="answer-controls post-controls">

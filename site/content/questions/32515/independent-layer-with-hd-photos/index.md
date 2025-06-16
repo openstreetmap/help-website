@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I manage an OSM map for a client website, with some custom features on it.</p>
 <p>This client want me to add a specific layer on the map. This layer should be made of HD photos : basically, I have a whole french region to integrate as HD photos.</p>
 <p>I saw on OSM website that we can have multiple layers, but those are more like specific color schemes with specific data on it (classic layer, another layer which is dedicated to public transportation, etc...) :</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm-layers.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm-layers.png" alt="alt text" /></p>
 <p><strong>Is it possible to have two layers like this on my map :</strong></p>
 <ol>
 <li>Classic OSM map with my custom data</li>

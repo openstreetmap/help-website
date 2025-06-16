@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Update Error - name changes when I zoom in"
-description = '''I have updated a street name at http://www.openstreetmap.org/#map=17/56.62369/-6.06484 At a low resolution the name of the street appears in is old name of &#x27;Western Road&#x27; but as you zoom in the name changes to it new name of &#x27;Memorial Road&#x27;.'''
+description = '''I have updated a street name at https://www.openstreetmap.org/#map=17/56.62369/-6.06484 At a low resolution the name of the street appears in is old name of &#x27;Western Road&#x27; but as you zoom in the name changes to it new name of &#x27;Memorial Road&#x27;.'''
 date = "2014-03-16T18:21:00Z"
 lastmod = "2014-03-16T19:44:00Z"
 weight = 31609
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have updated a street name at <a href="http://www.openstreetmap.org/#map=17/56.62369/-6.06484">http://www.openstreetmap.org/#map=17/56.62369/-6.06484</a> At a low resolution the name of the street appears in is old name of 'Western Road' but as you zoom in the name changes to it new name of 'Memorial Road'.</p>
+<p>I have updated a street name at <a href="https://www.openstreetmap.org/#map=17/56.62369/-6.06484">https://www.openstreetmap.org/#map=17/56.62369/-6.06484</a> At a low resolution the name of the street appears in is old name of 'Western Road' but as you zoom in the name changes to it new name of 'Memorial Road'.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

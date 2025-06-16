@@ -143,8 +143,8 @@ One Answer:
 <div class="answer-body">
 <p>I'm sorry, but I don't speak (nor write) japanese :-/</p>
 <ol>
-<li>If you want to tag a bath within a building, you have to tag the polygon as building=yes (or anyone of the <a href="http://wiki.openstreetmap.org/wiki/Key:building">building values</a>) and to add a point to mark the entrance of the bath with the tag amenity=shower as listed on the <a href="http://wiki.openstreetmap.org/wiki/Amenity">amenity key documentation</a>.</li>
-<li>There is some <a href="http://wiki.openstreetmap.org/wiki/Roads">documentation</a> about the roads classification in OpenStreetMap and their associated tags.</li>
+<li>If you want to tag a bath within a building, you have to tag the polygon as building=yes (or anyone of the <a href="https://wiki.openstreetmap.org/wiki/Key:building">building values</a>) and to add a point to mark the entrance of the bath with the tag amenity=shower as listed on the <a href="https://wiki.openstreetmap.org/wiki/Amenity">amenity key documentation</a>.</li>
+<li>There is some <a href="https://wiki.openstreetmap.org/wiki/Roads">documentation</a> about the roads classification in OpenStreetMap and their associated tags.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

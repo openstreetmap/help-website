@@ -120,7 +120,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The /map query is part of the XAPI compatibility layer:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer">http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer">https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer</a></p>
 <p>Here's a roughly equivalent query using the Overpass API query language:</p>
 <p><a href="http://overpass-turbo.eu/s/foV">http://overpass-turbo.eu/s/foV</a></p>
 <p>(fetches nodes in the bounding box and also any parent objects. To see the query url, look under "Export" for the "raw data directly from Overpass API" link.)</p>
@@ -128,7 +128,7 @@ osqa_accepted = true
 <p><a href="http://overpass-turbo.eu/s/foW">http://overpass-turbo.eu/s/foW</a></p>
 <p>(returns nothing)</p>
 <p>It'll probably be some work to figure out what's in the diff and so on, but the global diff setting is what you are looking for. You may also want to take a look at the augmented diff:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Delta_between_two_dates_.28.22diff.22.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Delta_between_two_dates_.28.22diff.22.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Delta_between_two_dates_.28.22diff.22.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Delta_between_two_dates_.28.22diff.22.29</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -178,8 +178,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am quite unfamiliar with overpass but by coincidence have been perusing the web documentation in the last few hours and I found that 'newer' and 'changed' under Filters at this site may be what you need if you can download Attic data. The difference block statement may be suitable if you can do your query on both todays data and the date you did your extract. <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
-<p>Also as reference: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></p>
+<p>I am quite unfamiliar with overpass but by coincidence have been perusing the web documentation in the last few hours and I found that 'newer' and 'changed' under Filters at this site may be what you need if you can download Attic data. The difference block statement may be suitable if you can do your query on both todays data and the date you did your extract. <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
+<p>Also as reference: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

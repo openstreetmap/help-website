@@ -111,18 +111,18 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OpenStreetMap-data is used to create many different maps, often by different people and available on different websites. There are maps you can <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map" title="Slippy Map">view with your browser</a> and maps for other programs or even mobile devices (like <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin" title="OSM Map On Garmin">Garmin maps</a>).</p>
+<p>The OpenStreetMap-data is used to create many different maps, often by different people and available on different websites. There are maps you can <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map" title="Slippy Map">view with your browser</a> and maps for other programs or even mobile devices (like <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin" title="OSM Map On Garmin">Garmin maps</a>).</p>
 <p>Every one of these maps can be very different:</p>
 <ul>
 <li>Not everything that is in the data, is also shown on every map. Some features are only shown on specialized maps, some features aren't shown at all and are only used for other applications, e.g. routing.</li>
 <li>Some maps are updated every minute, others much less often (e.g. once a week or month). Sometimes the tiles (map images) are cached and it will take longer for new or changed stuff to appear. Check if the map you are using shows the update interval or actual date and time.</li>
 </ul>
-<p>When you talk about 'the map', you may mean the 'Mapnik'-layer on <a href="http://www.openstreetmap.org/" title="OpenStreetMap"></a><a href="http://OpenStreetMap.org"></a><a href="http://OpenStreetMap.org">OpenStreetMap.org</a>. That one should be updated every minute, but you still have to keep in mind that not everything is shown there.</p>
+<p>When you talk about 'the map', you may mean the 'Mapnik'-layer on <a href="https://www.openstreetmap.org/" title="OpenStreetMap"></a><a href="http://OpenStreetMap.org"></a><a href="http://OpenStreetMap.org">OpenStreetMap.org</a>. That one should be updated every minute, but you still have to keep in mind that not everything is shown there.</p>
 <p>If you checked the points above and you still think your changes should appear, you may indeed have done something wrong. Please consider doing the following:</p>
 <ul>
-<li>Check if your changes were indeed added to the database. You can view a history of all your edits in your profile on <a href="http://www.openstreetmap.org/" title="OpenStreetMap"></a><a href="http://OpenStreetMap.org"></a><a href="http://OpenStreetMap.org">OpenStreetMap.org</a> under 'my edits'.</li>
-<li>Check other examples of the features you have added or changed and see if they are mapped the same way. You may also want to check <a href="http://wiki.openstreetmap.org/wiki/Map_Features" title="Map Features">the map features</a> or other wiki pages for the correct tags.</li>
-<li>Ask <a href="http://wiki.openstreetmap.org/wiki/Contact" title="Contact">someone else</a> for help. Provide a link to the area you have edited or the changeset (that you can find in your edit history).</li>
+<li>Check if your changes were indeed added to the database. You can view a history of all your edits in your profile on <a href="https://www.openstreetmap.org/" title="OpenStreetMap"></a><a href="http://OpenStreetMap.org"></a><a href="http://OpenStreetMap.org">OpenStreetMap.org</a> under 'my edits'.</li>
+<li>Check other examples of the features you have added or changed and see if they are mapped the same way. You may also want to check <a href="https://wiki.openstreetmap.org/wiki/Map_Features" title="Map Features">the map features</a> or other wiki pages for the correct tags.</li>
+<li>Ask <a href="https://wiki.openstreetmap.org/wiki/Contact" title="Contact">someone else</a> for help. Provide a link to the area you have edited or the changeset (that you can find in your edit history).</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -147,7 +147,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>Very nice explanation!</p>
-<p>If you are interested in a more in depth explanation of the process of how the main map in the view tab on <a href="http://OpenStreetMap.org">OpenStreetMap.org</a> gets updated and why sometimes it is very up to date and sometimes not so much, see <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>If you are interested in a more in depth explanation of the process of how the main map in the view tab on <a href="http://OpenStreetMap.org">OpenStreetMap.org</a> gets updated and why sometimes it is very up to date and sometimes not so much, see <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div id="comment-5885-info" class="comment-info">
 <span class="comment-age">(19 Jun '11, 16:37)</span> <span class="comment-user userinfo">apmon</span>
@@ -252,7 +252,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map</a> for details on coastline.</p>
+<p>See <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map</a> for details on coastline.</p>
 </div>
 <div id="comment-18084-info" class="comment-info">
 <span class="comment-age">(28 Nov '12, 20:46)</span> <span class="comment-user userinfo">gormo</span>

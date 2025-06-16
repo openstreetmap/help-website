@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I correct a name for a golf course on the map?"
-description = '''The name of the business is Edgmont Country Club AKA Edgmont Golf Club. It is correct on bing and google and mapguest but not on openstreet http://www.openstreetmap.org/?lat=39.96532&amp;amp;lon=-75.46593&amp;amp;zoom=15 I&#x27;ve tried to correct it, but there is no icon for golf course. I did do the edit sever...'''
+description = '''The name of the business is Edgmont Country Club AKA Edgmont Golf Club. It is correct on bing and google and mapguest but not on openstreet https://www.openstreetmap.org/?lat=39.96532&amp;amp;lon=-75.46593&amp;amp;zoom=15 I&#x27;ve tried to correct it, but there is no icon for golf course. I did do the edit sever...'''
 date = "2012-01-20T05:24:00Z"
 lastmod = "2012-01-20T12:18:00Z"
 weight = 10084
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The name of the business is Edgmont Country Club AKA Edgmont Golf Club. It is correct on bing and google and mapguest but not on openstreet <a href="http://www.openstreetmap.org/?lat=39.96532&amp;lon=-75.46593&amp;zoom=15">http://www.openstreetmap.org/?lat=39.96532&amp;lon=-75.46593&amp;zoom=15</a></p>
+<p>The name of the business is Edgmont Country Club AKA Edgmont Golf Club. It is correct on bing and google and mapguest but not on openstreet <a href="https://www.openstreetmap.org/?lat=39.96532&amp;lon=-75.46593&amp;zoom=15">https://www.openstreetmap.org/?lat=39.96532&amp;lon=-75.46593&amp;zoom=15</a></p>
 <p>I've tried to correct it, but there is no icon for golf course. I did do the edit several days ago and it did not show up.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -111,9 +111,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing that <a href="http://www.openstreetmap.org/browse/node/1591089401">this</a> is the node that you added. If so, it's not showing as a golf course because it's not labelled as one. There is a tag "<a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course">leisure=golf_course</a>" that does this.</p>
+<p>I'm guessing that <a href="https://www.openstreetmap.org/browse/node/1591089401">this</a> is the node that you added. If so, it's not showing as a golf course because it's not labelled as one. There is a tag "<a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course">leisure=golf_course</a>" that does this.</p>
 <p>As you note above there's isn't an icon available to add to nodes to label them as golf courses. However, if you were to draw a way around a golf course and then label it you'd see "golf course" available under sport and leisure.</p>
-<p>You don't need to do this, though, because someone's already mapped the golf course <a href="http://www.openstreetmap.org/browse/way/133758138">here</a> - they've just misspelt the name. So if you edit your node by clicking <a href="http://www.openstreetmap.org/edit?lat=39.9670207&amp;lon=-75.4621693&amp;node=1591089401&amp;zoom=18">here</a>, zoom in a bit to make it easier to see what you're doing, delete it, and then move up a bit towards West Chester Pike, you can see the green outline of the golf course. Click that, and you can correct the spelling.</p>
+<p>You don't need to do this, though, because someone's already mapped the golf course <a href="https://www.openstreetmap.org/browse/way/133758138">here</a> - they've just misspelt the name. So if you edit your node by clicking <a href="https://www.openstreetmap.org/edit?lat=39.9670207&amp;lon=-75.4621693&amp;node=1591089401&amp;zoom=18">here</a>, zoom in a bit to make it easier to see what you're doing, delete it, and then move up a bit towards West Chester Pike, you can see the green outline of the golf course. Click that, and you can correct the spelling.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -164,7 +164,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Thank you for reporting this error.</p>
-<p>OpenStreetMap is a world-wide collaboration project where everyone can add their knowledge to the common database. You, too, can become a contributor, and fix this problem (as well as any others you might find) yourself. After you have submitted the change, it will become visible on the map at <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> almost immediately. Read our <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's guide</a> and get started today!</p>
+<p>OpenStreetMap is a world-wide collaboration project where everyone can add their knowledge to the common database. You, too, can become a contributor, and fix this problem (as well as any others you might find) yourself. After you have submitted the change, it will become visible on the map at <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> almost immediately. Read our <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's guide</a> and get started today!</p>
 <p>If you feel that direct contribution is too cumbersome for you, there's an alternative called <a href="http://www.osmbugs.org/">OpenStreetBugs</a> where you can click on a specific location and enter a bug report for that place, without having to sign up and without actually editing the map - OSM contributors will see your report and fix the map in due course.</p>
 <p>This particular help site is intended to find answers to <em>common</em> questions, with the hope of it becoming a work of reference for those using and contributing to OSM; questions about particular data items in OSM are not suitable for this site.</p>
 </div>

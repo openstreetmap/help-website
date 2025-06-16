@@ -145,7 +145,7 @@ osqa_accepted = false
 <div id="post-5936-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yet is there a way to incorporate in the address to the website a language specification? I am thinking of something like <a href="http://www.openstreetmap.org/?lang=es">http://www.openstreetmap.org/?lang=es</a> or so. Thanks a lot.</p>
+<p>Yet is there a way to incorporate in the address to the website a language specification? I am thinking of something like <a href="https://www.openstreetmap.org/?lang=es">https://www.openstreetmap.org/?lang=es</a> or so. Thanks a lot.</p>
 </div>
 <div id="comment-5936-info" class="comment-info">
 <span class="comment-age">(21 Jun '11, 21:53)</span> <span class="comment-user userinfo">GastonJumoke</span>
@@ -557,7 +557,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-12-30_at_13.38.16.png" alt="Welsh not appearing on map" /></p>
+<p><img src="/upfiles/Screenshot_2020-12-30_at_13.38.16.png" alt="Welsh not appearing on map" /></p>
 <p>Hi, I am having problems with this. I have set the language in both browser to "cy" and personal preferences to "cy-gb, cy". This changes the interface language, but for me, as you can see on the streenshot I am getting English-language content despite the map data / Wikidata names being pretty well translated.</p>
 <p>It strikes me that the map should default to the browser preference language, as well as the user preference, so any ideas why this is happening would be appreciated.</p>
 </div>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When I want to upload my changes, I always get this message: Version mismatch: Provided 1, server had: 2 of <a href="http://www.openstreetmap.org/node/3018345061">Node 3018345061</a></p>
+<p>When I want to upload my changes, I always get this message: Version mismatch: Provided 1, server had: 2 of <a href="https://www.openstreetmap.org/node/3018345061">Node 3018345061</a></p>
 <p>What should I do?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I believe that the questioner is using <a href="http://www.openstreetmap.org/changeset/24792282">iD</a>. Unfortunately, I don't think that there's an easy solution; You'll need to undo back past your change to the item and then save.</p>
+<p>I believe that the questioner is using <a href="https://www.openstreetmap.org/changeset/24792282">iD</a>. Unfortunately, I don't think that there's an easy solution; You'll need to undo back past your change to the item and then save.</p>
 <p>In the longer term, save early and save often.</p>
 </div>
 <div class="answer-controls post-controls">

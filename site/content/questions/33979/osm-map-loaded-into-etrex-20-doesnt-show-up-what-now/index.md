@@ -90,7 +90,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Your steps sound correct. Maybe your file is broken? Try to get another <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM map for Garmin</a>.</p>
+<p>Your steps sound correct. Maybe your file is broken? Try to get another <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM map for Garmin</a>.</p>
 </div>
 <div id="comment-33985-info" class="comment-info">
 <span class="comment-age">(15 Jun '14, 17:33)</span> <span class="comment-user userinfo">scai ♦</span>

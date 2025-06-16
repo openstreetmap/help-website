@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess this is a good chance to gain some points at the self test: <a href="http://wiki.openstreetmap.org/wiki/OSM_purity_self-test">http://wiki.openstreetmap.org/wiki/OSM_purity_self-test</a></p>
+<p>I guess this is a good chance to gain some points at the self test: <a href="https://wiki.openstreetmap.org/wiki/OSM_purity_self-test">https://wiki.openstreetmap.org/wiki/OSM_purity_self-test</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

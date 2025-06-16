@@ -105,10 +105,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Unfortunately as you've noticed, our introductory documentation is a bit <a href="http://wiki.openstreetmap.org/wiki/GPS_Reviews">out of date</a> and a bit rubbish (although <a href="http://lists.openstreetmap.org/pipermail/newbies/2013-January/007220.html">here</a> is a contribution that hopefully may be part of an improvement).</p>
+<p>Unfortunately as you've noticed, our introductory documentation is a bit <a href="https://wiki.openstreetmap.org/wiki/GPS_Reviews">out of date</a> and a bit rubbish (although <a href="http://lists.openstreetmap.org/pipermail/newbies/2013-January/007220.html">here</a> is a contribution that hopefully may be part of an improvement).</p>
 <p>At the top level, you've essentially got the choice between GPS loggers (like your friend is using now) and stand-alone devices, some of which can also display maps created from OSM data and direct you along routes based on that (like a car sat-nav).<br />
 </p>
-<p>The <a href="https://buy.garmin.com/shop/shop.do?pID=109827">Garmin Glo</a> and <a href="http://www.qstarz.com/Products/GPS%20Products/BT-Q818XT-F.htm">BT-Q818XT</a> are both GPS loggers. Unfortunately I'm familiar with neither - it's possible that someone who is may spot this question, but if they don't you might be better asking for a recommendation somewhere else - perhaps on the #osm <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC channel</a> (you can <a href="http://irc.openstreetmap.org/">connect on the web</a> if you don't have any IRC software).</p>
+<p>The <a href="https://buy.garmin.com/shop/shop.do?pID=109827">Garmin Glo</a> and <a href="http://www.qstarz.com/Products/GPS%20Products/BT-Q818XT-F.htm">BT-Q818XT</a> are both GPS loggers. Unfortunately I'm familiar with neither - it's possible that someone who is may spot this question, but if they don't you might be better asking for a recommendation somewhere else - perhaps on the #osm <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC channel</a> (you can <a href="http://irc.openstreetmap.org/">connect on the web</a> if you don't have any IRC software).</p>
 <p>What I can say is that any new logger will probably need to work with his existing phone, and preferably with any existing software - so it might be worth finding that out.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -161,7 +161,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi Inga,</p>
 <p>Reed this please;</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Gps">http://wiki.openstreetmap.org/wiki/Gps</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Gps">https://wiki.openstreetmap.org/wiki/Gps</a></p>
 <p>i hope youll find enough info to make a dicission.</p>
 <p>Happy trail</p>
 <p>Greetz hendrik</p>

@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Information on the legal aspects of using OSM data can be found here: <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>Information on the legal aspects of using OSM data can be found here: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 <p>The best source for information on running your own server is <a href="http://switch2osm.org/">http://switch2osm.org/</a></p>
 </div>
 <div class="answer-controls post-controls">

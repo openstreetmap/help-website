@@ -108,7 +108,7 @@ One Answer:
 <p>No surprise here. This kind of query is known to be slow. Moreover, the way you constructed the query would even return incorrect results, as you wouldn't get all communities in your department (only those up to 10km proximity to the border).</p>
 <p><strong>Note: I had to remove most parts of my previous answer, as it didn't properly take the 10km distance into account. Sorry for that.</strong></p>
 <p>I've submitted a <a href="https://github.com/drolbr/Overpass-API/pull/167">pull request</a> to improve the runtime of your query. Once that fix is in place, your query will run in about 2 minutes with the following result:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/role.png" alt="alt text" /></p>
+<p><img src="/upfiles/role.png" alt="alt text" /></p>
 <p>Link to previous (non-working) overpass turbo query: <a href="http://overpass-turbo.eu/s/6oX">http://overpass-turbo.eu/s/6oX</a></p>
 </div>
 <div class="answer-controls post-controls">

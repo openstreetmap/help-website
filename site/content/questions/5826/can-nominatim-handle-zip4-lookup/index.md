@@ -69,7 +69,7 @@ osqa_accepted = true
 <div id="post-5832-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>seen this? <a href="http://help.openstreetmap.org/questions/5819/added-street-doesnt-show-up-on-search">http://help.openstreetmap.org/questions/5819/added-street-doesnt-show-up-on-search</a></p>
+<p>seen this? <a href="/questions/5819/added-street-doesnt-show-up-on-search">https://help.openstreetmap.org/questions/5819/added-street-doesnt-show-up-on-search</a></p>
 </div>
 <div id="comment-5832-info" class="comment-info">
 <span class="comment-age">(16 Jun '11, 23:22)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -69,7 +69,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This sounds like you might want to use multipolygons instead of parallel boundaries: <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a> Multipolygons let you build areas out of other way segments by sharing them using relations.</p>
+<p>This sounds like you might want to use multipolygons instead of parallel boundaries: <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a> Multipolygons let you build areas out of other way segments by sharing them using relations.</p>
 <p>However, someone has to tell us how to do that in Potlach2 since I'm using JOSM myself.</p>
 </div>
 <div id="comment-2992-info" class="comment-info">

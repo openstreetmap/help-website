@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>It seems to me that most of the api providers listed <a href="http://wiki.openstreetmap.org/wiki/Xapi">here</a> are unreliable - they are either too busy, or does not work at 24/7. Can I install something on my pc to make it XAPI provider? I don't need write access or full-blown OSM server, just read-only implementation with filtering and finding stuff capabilities. It will be used by several different services that I'm developing.</p>
+<p>It seems to me that most of the api providers listed <a href="https://wiki.openstreetmap.org/wiki/Xapi">here</a> are unreliable - they are either too busy, or does not work at 24/7. Can I install something on my pc to make it XAPI provider? I don't need write access or full-blown OSM server, just read-only implementation with filtering and finding stuff capabilities. It will be used by several different services that I'm developing.</p>
 <p>I suppose I can obtain a copy of a planet dump. What software do I need besides that? I'm in a Linux environment.</p>
 <p>I suppose I can filter what I need with osmosis and work with the exported files, but I prefer to have a reliable and fast XAPI.</p>
 <p>According to the wiki page the XAPI source code is located <a href="http://xapi.openstreetmap.org/">here</a> but the site seems currently offline.</p>
@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you would like to install/use Overpass API instead of the older XAPI? If so, have a look at the <a href="http://wiki.openstreetmap.org/wiki/OSM3S/install">install guide</a>.</p>
+<p>Maybe you would like to install/use Overpass API instead of the older XAPI? If so, have a look at the <a href="https://wiki.openstreetmap.org/wiki/OSM3S/install">install guide</a>.</p>
 <p>I've been told it's quite simple but haven't tried on my own since I don't need one. (For running and providing I also have to little bandwidth.)</p>
 <p>hth malenki</p>
 </div>

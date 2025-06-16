@@ -176,7 +176,7 @@ osqa_accepted = false
 <div id="post-45876-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11353/penegal">@Penegal</a>, perhaps more useful would be to look how lines were originally mapped <em>before</em> the current wiki description was written. I know I always find the way this area is rendered annoying <a href="http://www.openstreetmap.org/#map=15/52.9236/-0.9574">http://www.openstreetmap.org/#map=15/52.9236/-0.9574</a> (two parallel lines on pylons).</p>
+<p><a href="https://help.openstreetmap.org/users/11353/penegal">@Penegal</a>, perhaps more useful would be to look how lines were originally mapped <em>before</em> the current wiki description was written. I know I always find the way this area is rendered annoying <a href="https://www.openstreetmap.org/#map=15/52.9236/-0.9574">https://www.openstreetmap.org/#map=15/52.9236/-0.9574</a> (two parallel lines on pylons).</p>
 </div>
 <div id="comment-45876-info" class="comment-info">
 <span class="comment-age">(14 Oct '15, 09:40)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -187,7 +187,7 @@ osqa_accepted = false
 <div id="post-45881-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a> ♦ Wow, this is weird, indeed, having the towers rendered but not the line. I don't see what you're getting at speaking of <em>before the wiki desc</em>, but, IMHO, the two lines should be mapped as <code>power=line</code>, as they seem to be quite obvious, even for miles.</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a> ♦ Wow, this is weird, indeed, having the towers rendered but not the line. I don't see what you're getting at speaking of <em>before the wiki desc</em>, but, IMHO, the two lines should be mapped as <code>power=line</code>, as they seem to be quite obvious, even for miles.</p>
 </div>
 <div id="comment-45881-info" class="comment-info">
 <span class="comment-age">(14 Oct '15, 16:27)</span> <span class="comment-user userinfo">Penegal</span>

@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/metal.jpeg" alt="alt text" /> Identified a metal recycler which does not scrap automobiles, as far as I can tell. It is also not a general purpose recycling center. Having trouble finding the right tags for OSM. What do you think? With the cost of metals going up all the time, these types of places are getting more popular. <a href="http://www.openstreetmap.org/#map=17/43.06043/-70.75978">Location on the map - change to satellite view...</a></p>
+<p><img src="/upfiles/metal.jpeg" alt="alt text" /> Identified a metal recycler which does not scrap automobiles, as far as I can tell. It is also not a general purpose recycling center. Having trouble finding the right tags for OSM. What do you think? With the cost of metals going up all the time, these types of places are getting more popular. <a href="https://www.openstreetmap.org/#map=17/43.06043/-70.75978">Location on the map - change to satellite view...</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-industrial" rel="tag" title="see questions tagged &#39;industrial&#39;">industrial</span> <span class="post-tag tag-link-recycling" rel="tag" title="see questions tagged &#39;recycling&#39;">recycling</span> <span class="post-tag tag-link-scrap_metal" rel="tag" title="see questions tagged &#39;scrap_metal&#39;">scrap_metal</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

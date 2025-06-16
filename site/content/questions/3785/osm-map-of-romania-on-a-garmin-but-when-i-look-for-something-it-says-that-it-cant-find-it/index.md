@@ -307,7 +307,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>so this sounds more like an issue of the programm (Garmin XT) you are using then of the actual map. On Garmin devices the search function is working. I suggest you have a look at alternative programms to bring the maps on your device, e.g. trekbuddy for maptiles or GPSmid (java-midlet) for routable vector maps: <a href="http://wiki.openstreetmap.org/wiki/Gpsmid">http://wiki.openstreetmap.org/wiki/Gpsmid</a></p>
+<p>so this sounds more like an issue of the programm (Garmin XT) you are using then of the actual map. On Garmin devices the search function is working. I suggest you have a look at alternative programms to bring the maps on your device, e.g. trekbuddy for maptiles or GPSmid (java-midlet) for routable vector maps: <a href="https://wiki.openstreetmap.org/wiki/Gpsmid">https://wiki.openstreetmap.org/wiki/Gpsmid</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -550,9 +550,9 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Well, Strada Putna's in OSM OK (<a href="http://www.openstreetmap.org/?lat=44.191748&amp;lon=28.612595&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=44.191748&amp;lon=28.612595&amp;zoom=18&amp;layers=M</a>). I'm not familiar with the Garmin-for-Windows-CE software but it sounds like you're hitting the general "address search" problems with mkgmap. There's work going on trying to improve address search, but it's not there yet.</p>
+<p>Well, Strada Putna's in OSM OK (<a href="https://www.openstreetmap.org/?lat=44.191748&amp;lon=28.612595&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=44.191748&amp;lon=28.612595&amp;zoom=18&amp;layers=M</a>). I'm not familiar with the Garmin-for-Windows-CE software but it sounds like you're hitting the general "address search" problems with mkgmap. There's work going on trying to improve address search, but it's not there yet.</p>
 <p>I'm guessing that searching for "points of interest" should work though? There aren't many POIs added to the map in Constanta, but there's a supermarket here:</p>
-<p><a href="http://www.openstreetmap.org/?lat=44.191282&amp;lon=28.600402&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=44.191282&amp;lon=28.600402&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=44.191282&amp;lon=28.600402&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=44.191282&amp;lon=28.600402&amp;zoom=18&amp;layers=M</a></p>
 <p>can you find that OK?</p>
 </div>
 <div id="comment-3851-info" class="comment-info">
@@ -575,7 +575,7 @@ osqa_accepted = false
 <div id="post-3866-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>How about <a href="http://wiki.openstreetmap.org/wiki/Gosmore">http://wiki.openstreetmap.org/wiki/Gosmore</a> ? I've never used it myself but the wiki page says that it supports CE.</p>
+<p>How about <a href="https://wiki.openstreetmap.org/wiki/Gosmore">https://wiki.openstreetmap.org/wiki/Gosmore</a> ? I've never used it myself but the wiki page says that it supports CE.</p>
 </div>
 <div id="comment-3866-info" class="comment-info">
 <span class="comment-age">(16 Mar '11, 23:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

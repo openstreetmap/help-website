@@ -152,10 +152,10 @@ osqa_accepted = false
 <div id="post-35864-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(By the way, I found <a href="http://wiki.openstreetmap.org/wiki/Indiana/Counties">Indiana/Counties</a> in the OSM wiki ... outdated and uncomplete?)</p>
-<p>Ok, then we have the "bigger" boundary of <a href="http://www.openstreetmap.org/relation/1812962">Marion county, Indiana</a></p>
-<p>and then <a href="http://www.openstreetmap.org/relation/127433">Beech Grove</a>, <a href="http://www.openstreetmap.org/relation/127435">Speedway</a> and <a href="http://www.openstreetmap.org/relation/127223">Southport</a> as areas that should be excluded.</p>
-<p>Then have a look at <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">Relation:boundary</a> in the OSM wiki how these three areas should be excluded from Marion County. But If you are not familiar with editing boundary relations in the relation editor of JOSM editor (not so easy), then I recommend that another mapper from US should verify and complete this task.</p>
+<p>(By the way, I found <a href="https://wiki.openstreetmap.org/wiki/Indiana/Counties">Indiana/Counties</a> in the OSM wiki ... outdated and uncomplete?)</p>
+<p>Ok, then we have the "bigger" boundary of <a href="https://www.openstreetmap.org/relation/1812962">Marion county, Indiana</a></p>
+<p>and then <a href="https://www.openstreetmap.org/relation/127433">Beech Grove</a>, <a href="https://www.openstreetmap.org/relation/127435">Speedway</a> and <a href="https://www.openstreetmap.org/relation/127223">Southport</a> as areas that should be excluded.</p>
+<p>Then have a look at <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">Relation:boundary</a> in the OSM wiki how these three areas should be excluded from Marion County. But If you are not familiar with editing boundary relations in the relation editor of JOSM editor (not so easy), then I recommend that another mapper from US should verify and complete this task.</p>
 </div>
 <div id="comment-35864-info" class="comment-info">
 <span class="comment-age">(15 Aug '14, 17:37)</span> <span class="comment-user userinfo">stephan75</span>
@@ -219,7 +219,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's as clear as mud to me :) From what I do understand, I think you may need to use multi-polygons in the relation to describe the boundaries, where a few of the inner polygons are not included in the larger boundary. There is a good help page on <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multi-polygons</a></p>
+<p>That's as clear as mud to me :) From what I do understand, I think you may need to use multi-polygons in the relation to describe the boundaries, where a few of the inner polygons are not included in the larger boundary. There is a good help page on <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multi-polygons</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

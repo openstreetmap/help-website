@@ -138,7 +138,7 @@ One Answer:
 <div id="post-41289-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>also have a look at <a href="http://wiki.openstreetmap.org/wiki/OsmSharp">http://wiki.openstreetmap.org/wiki/OsmSharp</a> ... it is said to work on iOS.</p>
+<p>also have a look at <a href="https://wiki.openstreetmap.org/wiki/OsmSharp">https://wiki.openstreetmap.org/wiki/OsmSharp</a> ... it is said to work on iOS.</p>
 </div>
 <div id="comment-41289-info" class="comment-info">
 <span class="comment-age">(23 Feb '15, 17:25)</span> <span class="comment-user userinfo">stephan75</span>

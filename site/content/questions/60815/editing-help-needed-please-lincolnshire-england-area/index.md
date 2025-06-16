@@ -81,7 +81,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>What's actually the problem? The Witham at Washingborough is at <a href="http://www.openstreetmap.org/#map=14/53.2221/-0.4758">http://www.openstreetmap.org/#map=14/53.2221/-0.4758</a> btw (just move the map at the URL updates). I've not been there for about 4 years (<a href="http://www.openstreetmap.org/changeset/15982784">http://www.openstreetmap.org/changeset/15982784</a> was the last time I think) but if you can describe the problem I'm sure we can help you fix it :)</p>
+<p>What's actually the problem? The Witham at Washingborough is at <a href="https://www.openstreetmap.org/#map=14/53.2221/-0.4758">https://www.openstreetmap.org/#map=14/53.2221/-0.4758</a> btw (just move the map at the URL updates). I've not been there for about 4 years (<a href="https://www.openstreetmap.org/changeset/15982784">https://www.openstreetmap.org/changeset/15982784</a> was the last time I think) but if you can describe the problem I'm sure we can help you fix it :)</p>
 </div>
 <div id="comment-60818-info" class="comment-info">
 <span class="comment-age">(27 Nov '17, 12:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -234,7 +234,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>KRB1 as put a note on the bridge, as suggested by SomeoneElse. The bridge does not have a cycle allowed tag<img src="https://help.openstreetmap.org/upfiles/cycle_unset.JPG" alt="alt text" /> which is why it doesn't get put on the cycle map. see pic</p>
+<p>KRB1 as put a note on the bridge, as suggested by SomeoneElse. The bridge does not have a cycle allowed tag<img src="/upfiles/cycle_unset.JPG" alt="alt text" /> which is why it doesn't get put on the cycle map. see pic</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

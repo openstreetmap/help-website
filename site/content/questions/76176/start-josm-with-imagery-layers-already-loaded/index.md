@@ -148,7 +148,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a> according to the answer to <a href="https://help.openstreetmap.org/questions/70538/disable-josm-overlay-layers">this</a> you need to close the layer using the right click menu rather than the button below the layer list.</p>
+<p><a href="https://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a> according to the answer to <a href="/questions/70538/disable-josm-overlay-layers">this</a> you need to close the layer using the right click menu rather than the button below the layer list.</p>
 </div>
 <div id="comment-76179-info" class="comment-info">
 <span class="comment-age">(18 Aug '20, 09:49)</span> <span class="comment-user userinfo">InsertUser</span>

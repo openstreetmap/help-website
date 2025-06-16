@@ -172,7 +172,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey"></a><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: according to <a href="https://wiki.openstreetmap.org/wiki/Key:species">https://wiki.openstreetmap.org/wiki/Key:species</a> the tag should be <code>genus:en=poplar</code> or better <code>genus=Populus</code> since <span>"poplar" is</span> the genus but not the species. <a href="https://taginfo.openstreetmap.org/keys/?key=genus#values">According</a> to Taginfo the genus is usually specified with the first letter capitalized.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey"></a><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: according to <a href="https://wiki.openstreetmap.org/wiki/Key:species">https://wiki.openstreetmap.org/wiki/Key:species</a> the tag should be <code>genus:en=poplar</code> or better <code>genus=Populus</code> since <span>"poplar" is</span> the genus but not the species. <a href="https://taginfo.openstreetmap.org/keys/?key=genus#values">According</a> to Taginfo the genus is usually specified with the first letter capitalized.</p>
 </div>
 <div id="comment-45807-info" class="comment-info">
 <span class="comment-age">(08 Oct '15, 14:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -218,7 +218,7 @@ osqa_accepted = true
 <div id="post-45813-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: sorry for that; when I saw your answer, I only focused on which tag to use for the plantation, not for the species.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: sorry for that; when I saw your answer, I only focused on which tag to use for the plantation, not for the species.</p>
 <p>So, I should go with <code>genus=Populus</code>, and possibly use <code>genus:LANG</code> to explicit the genus otherwise than with latin?</p>
 </div>
 <div id="comment-45813-info" class="comment-info">
@@ -230,7 +230,7 @@ osqa_accepted = true
 <div id="post-45821-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes, you could add any language you know in the menu, go for it and its Wiki's description, also take a look here <a href="http://wiki.openstreetmap.org/wiki/Names.">http://wiki.openstreetmap.org/wiki/Names.</a></p>
+<p>Yes, you could add any language you know in the menu, go for it and its Wiki's description, also take a look here <a href="https://wiki.openstreetmap.org/wiki/Names.">https://wiki.openstreetmap.org/wiki/Names.</a></p>
 </div>
 <div id="comment-45821-info" class="comment-info">
 <span class="comment-age">(09 Oct '15, 21:09)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -273,11 +273,11 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dorchard">landuse=orchard</a> on the wiki: "An orchard is an intentional planting of trees or shrubs maintained for food production."</p>
+<p>From <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dorchard">landuse=orchard</a> on the wiki: "An orchard is an intentional planting of trees or shrubs maintained for food production."</p>
 <p>..so that doesn't seem to fit at all, unless people are eating the poplars. :)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland">landuse=farmland</a> says: "An area of farmland used for tillage and pasture (animals, vegetables, flowers, fruit growing)."</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland">landuse=farmland</a> says: "An area of farmland used for tillage and pasture (animals, vegetables, flowers, fruit growing)."</p>
 <p>...so that doesn't fit either.</p>
-<p>I would go with <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a>. It best describes that it's land used for growing trees.</p>
+<p>I would go with <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a>. It best describes that it's land used for growing trees.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -297,7 +297,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I have seen single trees tagged, i suppose a species tag could also be added to a forest area <a href="http://wiki.openstreetmap.org/w/index.php?search=tree+species&amp;title=Special%3ASearch&amp;go=Go">http://wiki.openstreetmap.org/w/index.php?search=tree+species&amp;title=Special%3ASearch&amp;go=Go</a></p>
+<p>I have seen single trees tagged, i suppose a species tag could also be added to a forest area <a href="https://wiki.openstreetmap.org/w/index.php?search=tree+species&amp;title=Special%3ASearch&amp;go=Go">https://wiki.openstreetmap.org/w/index.php?search=tree+species&amp;title=Special%3ASearch&amp;go=Go</a></p>
 </div>
 <div id="comment-45259-info" class="comment-info">
 <span class="comment-age">(15 Sep '15, 20:38)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -339,7 +339,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Penegal consider lnduse=plant_nursery and read <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dplant_nursery">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dplant_nursery</a> Add plant=tree as well from the tagging examples.</p>
+<p>Penegal consider lnduse=plant_nursery and read <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dplant_nursery">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dplant_nursery</a> Add plant=tree as well from the tagging examples.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

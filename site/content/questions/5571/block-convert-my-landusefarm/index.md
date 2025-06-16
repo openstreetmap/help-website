@@ -101,7 +101,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><span>@Tordanik</span> Wow. I've been trying to explain to people what landuse=farm means for several years now, blogging and drawing pretty diagrams, and trying to understand why people think it's "ambiguous". But those little words you've written in brackets... I think maybe that's it! The justification for landuse=farmyard! See the (one-sided) discussion on this: <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#What.27s_wrong_with_landuse.3Dfarm.3F">What's wrong with landuse=farm?</a> Am I right?</p>
+<p><span>@Tordanik</span> Wow. I've been trying to explain to people what landuse=farm means for several years now, blogging and drawing pretty diagrams, and trying to understand why people think it's "ambiguous". But those little words you've written in brackets... I think maybe that's it! The justification for landuse=farmyard! See the (one-sided) discussion on this: <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#What.27s_wrong_with_landuse.3Dfarm.3F">What's wrong with landuse=farm?</a> Am I right?</p>
 </div>
 <div id="comment-5582-info" class="comment-info">
 <span class="comment-age">(06 Jun '11, 15:21)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -226,7 +226,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'm holding off on the conversion, as there is discussion ongoing here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#What.27s_wrong_with_landuse.3Dfarm.3F">http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#What.27s_wrong_with_landuse.3Dfarm.3F</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#What.27s_wrong_with_landuse.3Dfarm.3F">https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/farmland#What.27s_wrong_with_landuse.3Dfarm.3F</a></p>
 <p>Cheers Chris</p>
 </div>
 <div class="answer-controls post-controls">

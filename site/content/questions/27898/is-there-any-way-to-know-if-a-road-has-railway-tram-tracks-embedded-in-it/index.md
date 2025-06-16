@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The recommended way to specify that a road has tram tracks embedded is to "draw a new way for the tram tracks but reuse the nodes as the street where they run completely parallel." (<a href="http://wiki.openstreetmap.org/wiki/Tram">Tram Wiki Page</a>)<br />
+<p>The recommended way to specify that a road has tram tracks embedded is to "draw a new way for the tram tracks but reuse the nodes as the street where they run completely parallel." (<a href="https://wiki.openstreetmap.org/wiki/Tram">Tram Wiki Page</a>)<br />
 </p>
 <p>My question now is, if I want to mark a road as 'dangerous for cycling' because it has embedded tram tracks (just an exaple) how can I get that information?</p>
 <p>Is there any relation, or tag <em>on the street edge</em> that can be used to specify/know if there are tracks in it?</p>
@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the Netherlands it is common to map embedded tram tracks in a single way as the highway, and it is rendered without problems on Mapnik, see <a href="http://www.openstreetmap.org/browse/way/7372002">http://www.openstreetmap.org/browse/way/7372002</a> So I dont understand why this method isn't recommended in the wiki.</p>
+<p>In the Netherlands it is common to map embedded tram tracks in a single way as the highway, and it is rendered without problems on Mapnik, see <a href="https://www.openstreetmap.org/browse/way/7372002">https://www.openstreetmap.org/browse/way/7372002</a> So I dont understand why this method isn't recommended in the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -187,7 +187,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I agree using both the railway and highway tags seems to be the better solution, even after considering the shortcomings listed here (<a href="https://help.openstreetmap.org/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street).">https://help.openstreetmap.org/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street).</a> Using both tags would be coherent with the way cycleways and lanes are handled: adding cycleway=lane if shared, or creating a new way with highway=cycleway if separated, and using the oneway:bicycle for conflicts. (<a href="http://wiki.openstreetmap.org/wiki/Bicycle)">http://wiki.openstreetmap.org/wiki/Bicycle)</a><br />
+<p>I agree using both the railway and highway tags seems to be the better solution, even after considering the shortcomings listed here (<a href="/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street).">https://help.openstreetmap.org/questions/2306/what-is-the-proper-way-to-tag-tram-tracks-embedded-in-a-street).</a> Using both tags would be coherent with the way cycleways and lanes are handled: adding cycleway=lane if shared, or creating a new way with highway=cycleway if separated, and using the oneway:bicycle for conflicts. (<a href="https://wiki.openstreetmap.org/wiki/Bicycle)">https://wiki.openstreetmap.org/wiki/Bicycle)</a><br />
 Anyway, yes, I understand the reasons for the discussion.</p>
 </div>
 <div id="comment-27907-info" class="comment-info">
@@ -267,7 +267,7 @@ Anyway, yes, I understand the reasons for the discussion.</p>
 <div id="post-27965-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for the suggestions. The problem with the buffer is that when tracks are drawn individually it's difficult to understand if they are actually in shared space, or just on the side of the road (<a href="http://www.openstreetmap.org/#map=19/45.46340/9.18864).">http://www.openstreetmap.org/#map=19/45.46340/9.18864).</a> And if I understand correctly also the second option wouldn't work in this scenario.</p>
+<p>Thank you for the suggestions. The problem with the buffer is that when tracks are drawn individually it's difficult to understand if they are actually in shared space, or just on the side of the road (<a href="https://www.openstreetmap.org/#map=19/45.46340/9.18864).">https://www.openstreetmap.org/#map=19/45.46340/9.18864).</a> And if I understand correctly also the second option wouldn't work in this scenario.</p>
 </div>
 <div id="comment-27965-info" class="comment-info">
 <span class="comment-age">(11 Nov '13, 09:32)</span> <span class="comment-user userinfo">marcoq</span>

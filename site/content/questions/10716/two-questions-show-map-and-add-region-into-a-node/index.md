@@ -136,9 +136,9 @@ One Answer:
 <p>This is better, but still quite confusing. So here are a few comments, as opposed to proper answers:</p>
 <ul>
 <li>You're free to modify the data downloaded from OSM any way you fancy, that's one of the pillars of OSM's openess. Anything you do on your side is fair game.</li>
-<li>If on the other hand you want to modify data "upstream" in the main OSM database, you need to ask about that specifically, in map editing terms. Sounds like what you want is some kind of <a href="http://wiki.openstreetmap.org/wiki/Boundary">boundary</a> ?</li>
+<li>If on the other hand you want to modify data "upstream" in the main OSM database, you need to ask about that specifically, in map editing terms. Sounds like what you want is some kind of <a href="https://wiki.openstreetmap.org/wiki/Boundary">boundary</a> ?</li>
 <li>If you're writing both the server and mobile app, it's your choice how much is downloaded preemptively or dynamicaly. Usual tradeoffs apply, "best" choice depends on your use case. The android app can do routing or rendering itself, provided it has the data (regardless of how it got the data).</li>
-<li>There are already quite a few software doing <a href="http://wiki.openstreetmap.org/wiki/Routing">routing</a> or <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a>, both server-side and client-side. Maybe you should have a look at them first.</li>
+<li>There are already quite a few software doing <a href="https://wiki.openstreetmap.org/wiki/Routing">routing</a> or <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a>, both server-side and client-side. Maybe you should have a look at them first.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

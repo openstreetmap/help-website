@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've just added the POI of "<a href="http://www.openstreetmap.org/browse/node/2459409948">Castello di Vezio</a>" to OSM (Italy).</p>
+<p>I've just added the POI of "<a href="https://www.openstreetmap.org/browse/node/2459409948">Castello di Vezio</a>" to OSM (Italy).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

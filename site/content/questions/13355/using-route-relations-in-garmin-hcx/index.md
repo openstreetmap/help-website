@@ -227,7 +227,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Another possible way of getting relation details into a Garmin is to append the name of the relation to the ways that are part of it - have a look <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/style_rules#apply">here</a> for how to do that.</p>
+<p>Another possible way of getting relation details into a Garmin is to append the name of the relation to the ways that are part of it - have a look <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/style_rules#apply">here</a> for how to do that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

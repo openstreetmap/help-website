@@ -95,7 +95,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Thanks all for your help.</p>
-<p>Under the "Routable Bicycle (Openfietsmap Lite)" heading available: <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Routable_Bicycle_.28Openfietsmap_Lite.29">http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Routable_Bicycle_.28Openfietsmap_Lite.29</a></p>
+<p>Under the "Routable Bicycle (Openfietsmap Lite)" heading available: <a href="https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Routable_Bicycle_.28Openfietsmap_Lite.29">https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Routable_Bicycle_.28Openfietsmap_Lite.29</a></p>
 <p>It states: "Cartography is licensed under the cc by-nc-sa license. You are free to use and share the map for non-commercial purposes."</p>
 <p>Whilst on the creative commons page available: <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">http://creativecommons.org/licenses/by-nc-sa/3.0/</a></p>
 <p>It also states: "You may not use the material for commercial purposes."</p>
@@ -321,7 +321,7 @@ osqa_accepted = false
 <div id="post-48271-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F</a></p>
 <p>No. For example, if you have written a game or published an artistic map which includes OSM data, only the data is covered by the license. This is called a Produced Work.</p>
 <p>I am not a lawyer and you can discuss about the 'artistic' contents of those maps. Is the osm.org carto style a produced work?</p>
 </div>

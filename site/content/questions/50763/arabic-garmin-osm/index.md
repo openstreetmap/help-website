@@ -140,7 +140,7 @@ osqa_accepted = false
 <p>I downloaded as an .osm file the above area and ran Mkgmap using the --unicode switch and on my Garmin etrex it appears to be displaying Arabic to me (though I can't read Arabic)</p>
 <p>I suspect that the search function is probably unlikely to work with this unicode on the Garmin though but it reads ok.</p>
 <p>Incidentally, there is still a place=town tag with name=Ghayl Ba Wazir on the osm area that you edited.</p>
-<p>(this comment copied from <a href="https://help.openstreetmap.org/questions/50743/names-not-in-local-language-on-map">https://help.openstreetmap.org/questions/50743/names-not-in-local-language-on-map</a> and pasted here as this is more related question)</p>
+<p>(this comment copied from <a href="/questions/50743/names-not-in-local-language-on-map">https://help.openstreetmap.org/questions/50743/names-not-in-local-language-on-map</a> and pasted here as this is more related question)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -196,7 +196,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>It's Java and can run on Windows. I wrote a diary entry for a worked example (on Windows) here:</p>
-<p><a href="http://www.openstreetmap.org/user/SomeoneElse/diary/38613">http://www.openstreetmap.org/user/SomeoneElse/diary/38613</a></p>
+<p><a href="https://www.openstreetmap.org/user/SomeoneElse/diary/38613">https://www.openstreetmap.org/user/SomeoneElse/diary/38613</a></p>
 </div>
 <div id="comment-50814-info" class="comment-info">
 <span class="comment-age">(11 Jul '16, 12:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -263,7 +263,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Have a look here <a href="http://www.openstreetmap.org/#map=8/35.980/54.080">http://www.openstreetmap.org/#map=8/35.980/54.080</a> all those names look Arabic to me. Follow the same tagging protocol and your OSM garmin map should get Arabic as well.</p>
+<p>Hi Have a look here <a href="https://www.openstreetmap.org/#map=8/35.980/54.080">https://www.openstreetmap.org/#map=8/35.980/54.080</a> all those names look Arabic to me. Follow the same tagging protocol and your OSM garmin map should get Arabic as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

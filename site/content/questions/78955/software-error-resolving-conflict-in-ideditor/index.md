@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/OSM_ID_editor.jpg" alt="alt text" />I returned to a recent building addition using ID editor wanting to reposition it. Made change and went to save. For first time message said someone else had made recent change to path position asked me to resolve conflict. I reviewed path and building position and choose my edit. On saving it went into continuous conflict step process loop such that I had to close window. Tried it twice with same result.</p>
+<p><img src="/upfiles/OSM_ID_editor.jpg" alt="alt text" />I returned to a recent building addition using ID editor wanting to reposition it. Made change and went to save. For first time message said someone else had made recent change to path position asked me to resolve conflict. I reviewed path and building position and choose my edit. On saving it went into continuous conflict step process loop such that I had to close window. Tried it twice with same result.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-conflicts" rel="tag" title="see questions tagged &#39;conflicts&#39;">conflicts</span>

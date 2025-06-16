@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello everyone, I am new to OSM and pogramming in python i used the module Overpass to Query OSM information from python like the following image:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/query_LRswmVz.png" alt="alt text" /></p>
-<p>And the answer that i get is this one: <img src="http://help.openstreetmap.org/upfiles/resposta.png" alt="alt text" /></p>
+<p><img src="/upfiles/query_LRswmVz.png" alt="alt text" /></p>
+<p>And the answer that i get is this one: <img src="/upfiles/resposta.png" alt="alt text" /></p>
 <p>I would like to know how i can save the id and the tags from the Query in a file ?</p>
 <p>Thank you for all the help Francisco Costa</p>
 </div>

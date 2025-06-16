@@ -73,7 +73,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I'm guessing your house is located <a href="http://www.openstreetmap.org/?mlat=42.79588&amp;mlon=-72.16648#map=18/42.79577/-72.16725">here</a>. Then the road north of your house is called Holman Road on OSM, Holman Road on Google Maps and Holman Road AND Sunset Road on Bing Maps. Your private driveway doesn't seem to be mapped on OSM. According to you, where is Holman Road located?</p>
+<p>I'm guessing your house is located <a href="https://www.openstreetmap.org/?mlat=42.79588&amp;mlon=-72.16648#map=18/42.79577/-72.16725">here</a>. Then the road north of your house is called Holman Road on OSM, Holman Road on Google Maps and Holman Road AND Sunset Road on Bing Maps. Your private driveway doesn't seem to be mapped on OSM. According to you, where is Holman Road located?</p>
 </div>
 <div id="comment-34334-info" class="comment-info">
 <span class="comment-age">(25 Jun '14, 20:19)</span> <span class="comment-user userinfo">TheOddOne2</span>
@@ -140,7 +140,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi it’s the quickest way to do it yourself, but start reading the beginners guide <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> ,the second chapter Contributing to OSM, If you use Potlach 2 or ID the result of your work will be visible almost immediately. Welcome and keep mapping</p>
+<p>Hi it’s the quickest way to do it yourself, but start reading the beginners guide <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> ,the second chapter Contributing to OSM, If you use Potlach 2 or ID the result of your work will be visible almost immediately. Welcome and keep mapping</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

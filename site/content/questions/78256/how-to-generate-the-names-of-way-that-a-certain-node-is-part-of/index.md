@@ -111,7 +111,7 @@ One Answer:
 <div class="answer-body">
 <p>Hi, you don't need to use Overpass for this. Returning all the tags of all the ways that use a given node ID is a single command from the standard OSM api:</p>
 <pre><code>&gt;curl https://www.openstreetmap.org/api/0.6/node/42449597/ways
-&#10;&lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.8.3 (615120 spike-06.openstreetmap.org)&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;http://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;
+&#10;&lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.8.3 (615120 spike-06.openstreetmap.org)&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;https://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;
  &lt;way id=&quot;222299254&quot; visible=&quot;true&quot; version=&quot;11&quot; changeset=&quot;96751287&quot; timestamp=&quot;2020-12-31T21:07:57Z&quot; user=&quot;kguenther24&quot; uid=&quot;11697944&quot;&gt;
   &lt;nd ref=&quot;42429562&quot;/&gt;
   &lt;nd ref=&quot;8279851483&quot;/&gt;

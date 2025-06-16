@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>bridge = yes is always working. You can add more details for the bridge, too. E..g. bridge=swing - check here <a href="http://wiki.openstreetmap.org/wiki/Bridge">http://wiki.openstreetmap.org/wiki/Bridge</a></p>
+<p>bridge = yes is always working. You can add more details for the bridge, too. E..g. bridge=swing - check here <a href="https://wiki.openstreetmap.org/wiki/Bridge">https://wiki.openstreetmap.org/wiki/Bridge</a></p>
 <p>second question: maxweight=n whereas n is the maxweight value in metric tons, put this tag on the section that has a weight restriction.</p>
 </div>
 <div class="answer-controls post-controls">

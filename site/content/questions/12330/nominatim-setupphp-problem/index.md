@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You most likely forgot to set up your local configuration in <code>settings/local.php</code>. There you can state where your <code>osm2pgsql</code> binary resides. See the last step of <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software">Compiling the required software</a> in the installation instructions for an example.</p>
+<p>You most likely forgot to set up your local configuration in <code>settings/local.php</code>. There you can state where your <code>osm2pgsql</code> binary resides. See the last step of <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software">Compiling the required software</a> in the installation instructions for an example.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

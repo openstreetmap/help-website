@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The opening hours tag specification includes syntax to specify longer periods when a shop is closed. See <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">http://wiki.openstreetmap.org/wiki/Key:opening_hours</a></p>
+<p>The opening hours tag specification includes syntax to specify longer periods when a shop is closed. See <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">https://wiki.openstreetmap.org/wiki/Key:opening_hours</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -356,7 +356,7 @@ osqa_accepted = false
 <p>But I just published an Amsterdam OpenStreetMap extract to a Vector Tile service created with ArcGIS Pro, with all freaking 350+ thematic layers!</p>
 <p>There are some caveats though: - (Open cross) hatch polygon symbols are not yet supported in Vector Tiles, they end up being solid fills, which covers up stuff below it, which it really shouldn't. - Also hatched line symbols fail, and draw as a simple line feature - Random stipple pattern symbols seem replaced with equally spaced ones, meaning lesser cartography. - Symbols that use a reference scale for their size (e.g. 1:10k), and should be scaled in size / made bigger or smaller at other scales, don't. This doesn't work with Vector Tiles and the current client rendering. - Labelling is not as good as ESRI's Maplex label engine, there is quite a lot of labels missing.!But all in all, I am surprised to see this output so easily! I even published in a custom UTM zone 31N projection, instead of default Web Mercator.</p>
 <p>The attached image shows both the Vector Tile (Right) and a PDF of the same data as comparison (Left). Notice the solid fill instead of cross hatch near Amsterdam Central Station, and a lot of missing labels.</p>
-<p>Lastly, my first generation Tab S was able to handle opening this smaller extract as well. <img src="https://help.openstreetmap.org/upfiles/ArcGIS_Renderer_Vector_Tiles.png" alt="alt text" /></p>
+<p>Lastly, my first generation Tab S was able to handle opening this smaller extract as well. <img src="/upfiles/ArcGIS_Renderer_Vector_Tiles.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -480,7 +480,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a> no plans even for the long run? I doubt that.</p>
+<p><a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a> no plans even for the long run? I doubt that.</p>
 </div>
 <div id="comment-49781-info" class="comment-info">
 <span class="comment-age">(22 May '16, 07:54)</span> <span class="comment-user userinfo">scai ♦</span>

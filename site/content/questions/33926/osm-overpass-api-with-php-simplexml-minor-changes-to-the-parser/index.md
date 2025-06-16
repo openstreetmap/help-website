@@ -92,9 +92,9 @@ foreach ($schools as $index =&gt; $school)
                                                     ^^^^^^^^^^^^^^^
                                                 Provide Default Value</code></pre>
 <p>so far so good: <strong>note</strong>. i need to have the adress-data, of the school with</p>
-<p>cf <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a></p>
+<p>cf <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a></p>
 <p>and even more important</p>
-<p>cf <a href="http://wiki.openstreetmap.org/wiki/Key:contact">http://wiki.openstreetmap.org/wiki/Key:contact</a></p>
+<p>cf <a href="https://wiki.openstreetmap.org/wiki/Key:contact">https://wiki.openstreetmap.org/wiki/Key:contact</a></p>
 <pre><code>contact:phone 
 contact:fax     
 contact:website 
@@ -122,7 +122,7 @@ Query returned 1691 node(s) and took 3.34569 seconds.
 #15: ID:2358344885  [39.4854617,16.3832419]  Istituto Tecnico Statale Commerciale G. Falcone
 martin@linux-70ce:~/php&gt;</code></pre>
 <p>note. i need to have the adress-data, of the shool with</p>
-<p>and even more important <a href="http://wiki.openstreetmap.org/wiki/Key:contact">http://wiki.openstreetmap.org/wiki/Key:contact</a></p>
+<p>and even more important <a href="https://wiki.openstreetmap.org/wiki/Key:contact">https://wiki.openstreetmap.org/wiki/Key:contact</a></p>
 <pre><code>contact:phone 
 contact:fax     
 contact:website 
@@ -137,7 +137,7 @@ $data = new SimpleXMLElement($xml);
     [@attributes] =&gt; Array
         (
             [timestamp] =&gt; Sat, 15 Jun 13 20:02:13 +0000
-            [attribution] =&gt; Data ÂŠ OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright
+            [attribution] =&gt; Data ÂŠ OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright
             [querystring] =&gt; Bucharest-Romania
             [polygon] =&gt; false
             [exclude_place_ids] =&gt; 331526

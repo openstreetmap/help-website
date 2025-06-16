@@ -40,14 +40,14 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>When viewing the map on this website, you get the original/classic/retro OSM map style, and I really like that one. For example:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Offline_tile_jS5O6qL.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Offline_tile_jS5O6qL.jpg" alt="alt text" /></p>
 <p>I was planning to use this map style for offline usage on my phone so I've been looking on several websites to do this. Websites like:</p>
 <p><a href="http://download.mapsforge.org/">http://download.mapsforge.org/</a></p>
 <p><a href="https://www.geofabrik.de/en/index.html">https://www.geofabrik.de/en/index.html</a></p>
 <p>However, whenever I download these files (doesn't matter if the extension is <strong>.map</strong> or <strong>.osm</strong> or <strong>.osm.pbf</strong>, the map I see is always in another style, and I'm not sure why that is? Like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Online_tile.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Online_tile.jpg" alt="alt text" /></p>
 <p>Or</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20220812-143801_Locus_Map.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20220812-143801_Locus_Map.jpg" alt="alt text" /></p>
 <p>I'm not really sure what I'm doing wrong or something I yet don't understand correctly about OSM? I found out there are a lot of different map styles but how can you distinguish them correctly?</p>
 <p>At the end of the day I'm just interested in the original map style like your website.</p>
 <p><a href="https://www.openstreetmap.org/#map=13/51.5819/5.3681">https://www.openstreetmap.org/#map=13/51.5819/5.3681</a></p>

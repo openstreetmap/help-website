@@ -212,7 +212,7 @@ osqa_accepted = false
 <p>In the given example, it appears that Bing will be the lower resolution source, but have higher accuracy. And Maxar imagery will be higher resolution and lower accuracy. Note that this is not universally true. Most of these imagery providers buy pre-made sets of imagery, so they are not uniform in quality.</p>
 <p>And high-resolution imagery can be aligned quite precisely too, when local measurements are used (buildings are measured on the ground, and used as reference points). But this is a lot more costly to do, and probably only worth it in rich countries.</p>
 <p>Sometimes you can also find the places where the images are stitched together. Like in the example below, the street should clearly be connected.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2020-04-30-171425_461x282_scrot.png" alt="alt text" /></p>
+<p><img src="/upfiles/2020-04-30-171425_461x282_scrot.png" alt="alt text" /></p>
 <p>So in short, you can keep the alignment for a small group of features. But if you pan away, you will need to realign.</p>
 </div>
 <div class="answer-controls post-controls">

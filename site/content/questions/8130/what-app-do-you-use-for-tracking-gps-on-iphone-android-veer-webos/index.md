@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "There is an overview in the OSM wiki at http://wiki.openstreetmap.org/wiki/Software" by stephan75 27 Sep '11, 16:25
+### The question has been closed for the following reason "There is an overview in the OSM wiki at https://wiki.openstreetmap.org/wiki/Software" by stephan75 27 Sep '11, 16:25
 
 </div>
 

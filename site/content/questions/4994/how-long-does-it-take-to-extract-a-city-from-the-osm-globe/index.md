@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I just downloaded the OSM globe, and am testing out running an extract using the demonstration <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">code</a> and osmosis:</p>
+<p>I just downloaded the OSM globe, and am testing out running an extract using the demonstration <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">code</a> and osmosis:</p>
 <pre><code> bzcat downloaded.osm.bz2 | osmosis\
   --read-xml enableDateParsing=no file=-\
   --bounding-box top=49.5138 left=10.9351 bottom=49.3866 right=11.201 --write-xml file=-\
@@ -131,7 +131,7 @@ INFO: Pipeline executing, waiting for completion.</code></pre>
 <p>I can't tell you for sure, but I would expect it to take hours rather than days.</p>
 <p>However, there are two potential ways of speeding things up.</p>
 <p>1) Use the binary format <a href="http://planet.openstreetmap.org/pbf-experimental/">.osm.pbf</a> instead of the xml encoded version of the planet file. It is much more efficient to parse.</p>
-<p>2) If you only need a city, you probably don't want to start off with the whole planet. There are <a href="http://wiki.openstreetmap.org/wiki/Planet#Downloading">country sized extracts of the planet</a> available that are much more manageable.</p>
+<p>2) If you only need a city, you probably don't want to start off with the whole planet. There are <a href="https://wiki.openstreetmap.org/wiki/Planet#Downloading">country sized extracts of the planet</a> available that are much more manageable.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

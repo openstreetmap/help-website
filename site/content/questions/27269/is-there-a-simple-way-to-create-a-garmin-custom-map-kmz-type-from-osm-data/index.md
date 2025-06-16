@@ -155,7 +155,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You could do this using <a href="http://mobac.sourceforge.net/">Mobile Atlas Creator (MOBAC)</a>. It can download the tiles from OpenStreetMap, and save as a Garmin Custom Map KMZ file.</p>
-<p>Note if downloading tiles from openstreetmap.org, you should ensure you follow the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile usage policy</a>. As that says, bulk downloading is strongly discouraged. So downloading tiles for a small village or suburb at zoom 14 or 15 is probably OK. But don't download a large area at high zoom level. Otherwise, you will probably get blocked.</p>
+<p>Note if downloading tiles from openstreetmap.org, you should ensure you follow the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile usage policy</a>. As that says, bulk downloading is strongly discouraged. So downloading tiles for a small village or suburb at zoom 14 or 15 is probably OK. But don't download a large area at high zoom level. Otherwise, you will probably get blocked.</p>
 <p>You can use another tile server instead. eg Mapquest Open - it usually allows bulk downloading. Though it may not be as up to date as the openstreetmap.org server.</p>
 <p>Also note the Garmin Custom Maps are a bitmap format. This has some disadvantages, eg it only looks good at a particular zoom level. And text may not be very readable on a small screen. Also it doesn't support any routing or searching. So you may be better using a regular Garmin IMG map, generating an up to date version as in Vincent's answer.</p>
 </div>
@@ -272,8 +272,8 @@ There is the jnx format (Garmin Birdseye) with which you can cover much bigger a
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Garmin maps are created from OSM data using <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a>. You can download up to the minute osm data on <a href="http://www.openstreetmap.org/export">osm.org</a> for a small area, or daily data on <a href="http://download.geofabrik.de/">geofabrik</a> for bigger areas.</p>
-<p>Mkgmap is a flexible tool with many options and many downloadable img files tweak a lot of stuff, but <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">the basic commands</a> will get you something good already.</p>
+<p>Garmin maps are created from OSM data using <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a>. You can download up to the minute osm data on <a href="https://www.openstreetmap.org/export">osm.org</a> for a small area, or daily data on <a href="http://download.geofabrik.de/">geofabrik</a> for bigger areas.</p>
+<p>Mkgmap is a flexible tool with many options and many downloadable img files tweak a lot of stuff, but <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">the basic commands</a> will get you something good already.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

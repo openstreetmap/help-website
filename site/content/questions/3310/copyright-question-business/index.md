@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">the legal FAQ</a> (and talk to your lawyer if necessary) but the short answer is: Yes you may use the maps from Openstreetmap, as long as you add an appropriate attribution like "map (c) OpenStreetMap and contributors, licensed under CC-BY-SA".</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">the legal FAQ</a> (and talk to your lawyer if necessary) but the short answer is: Yes you may use the maps from Openstreetmap, as long as you add an appropriate attribution like "map (c) OpenStreetMap and contributors, licensed under CC-BY-SA".</p>
 <p>That means that whoever receives your printed map (either buys it, or gets it for free somewhere) is allowed to make copies of it, post it on the Internet, and so on.</p>
 </div>
 <div class="answer-controls post-controls">

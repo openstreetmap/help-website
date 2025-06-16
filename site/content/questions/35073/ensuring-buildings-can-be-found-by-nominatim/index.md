@@ -164,7 +164,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Could you elaborate on what constitutes "correct" tagging? I have tried adding many other buildings/areas/etc and nominatim can't find any of them. I just happened to give you an example with a bug. I tried using the "is_in" tag on the Mindspace technology park in Hyderabad, but Nominatim can only find the bus stop across the street: <a href="http://www.openstreetmap.org/node/655159152#map=19/17.44100/78.37798">http://www.openstreetmap.org/node/655159152#map=19/17.44100/78.37798</a></p>
+<p>Could you elaborate on what constitutes "correct" tagging? I have tried adding many other buildings/areas/etc and nominatim can't find any of them. I just happened to give you an example with a bug. I tried using the "is_in" tag on the Mindspace technology park in Hyderabad, but Nominatim can only find the bus stop across the street: <a href="https://www.openstreetmap.org/node/655159152#map=19/17.44100/78.37798">https://www.openstreetmap.org/node/655159152#map=19/17.44100/78.37798</a></p>
 </div>
 <div id="comment-35606-info" class="comment-info">
 <span class="comment-age">(07 Aug '14, 07:29)</span> <span class="comment-user userinfo">mikewilliamson</span>
@@ -198,7 +198,7 @@ One Answer:
 <div id="post-35810-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I guess Nominatim ignores <em>landuse</em> for address lookups. This might be intentional because they are usually not part of the address or it is just a shortcoming at the moment. Searching for "Building 9, HITEC City" won't work because the proper name seems to be "HITECH City" (including the <em>H</em>) and Nominatim is currently not able to correct spelling mistakes. However you can try to add an <a href="https://wiki.openstreetmap.org/wiki/Key:name">alt_name</a> to the <a href="http://www.openstreetmap.org/node/2926946739">suburb node</a>. But only if this alternative name is really in use, <em>alt_name</em> should not be used to correct spelling mistakes. Everything else has to be answered by one of the Nominatim developers which sometimes show up on help but apparently didn't looked at this question so far.</p>
+<p>I guess Nominatim ignores <em>landuse</em> for address lookups. This might be intentional because they are usually not part of the address or it is just a shortcoming at the moment. Searching for "Building 9, HITEC City" won't work because the proper name seems to be "HITECH City" (including the <em>H</em>) and Nominatim is currently not able to correct spelling mistakes. However you can try to add an <a href="https://wiki.openstreetmap.org/wiki/Key:name">alt_name</a> to the <a href="https://www.openstreetmap.org/node/2926946739">suburb node</a>. But only if this alternative name is really in use, <em>alt_name</em> should not be used to correct spelling mistakes. Everything else has to be answered by one of the Nominatim developers which sometimes show up on help but apparently didn't looked at this question so far.</p>
 </div>
 <div id="comment-35810-info" class="comment-info">
 <span class="comment-age">(14 Aug '14, 08:06)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>There is no way how to make <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> show only vegan restaurants.</p>
 <p>If you are looking for a web service then maybe <a href="http://www.openstreetbrowser.org/">OpenStreetBrowser</a> works for you; it has a way to make custom queries.</p>
-<p>You could also render your own map, then you can decide what gets shown and what not. <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> is one software that lets you do that, but there are loads of others; see e.g. the answers to <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my web site?</a> or <a href="http://help.openstreetmap.org/questions/4083/can-i-make-a-customized-map-just-for-me">Can I make a customized map just for me?</a></p>
+<p>You could also render your own map, then you can decide what gets shown and what not. <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> is one software that lets you do that, but there are loads of others; see e.g. the answers to <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my web site?</a> or <a href="/questions/4083/can-i-make-a-customized-map-just-for-me">Can I make a customized map just for me?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

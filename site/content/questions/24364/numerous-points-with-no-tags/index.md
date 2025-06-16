@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Numerous points with no tags"
-description = '''Hello: I came across this area, showing tons of points with no designation whatsoever. Can someone figure out what is going on&amp;gt;? Thank you http://www.openstreetmap.org/edit?editor=id&amp;amp;lat=38.593726&amp;amp;lon=-77.30567&amp;amp;zoom=17 I am not sure if this zoom level will show them, so adjust yours u...'''
+description = '''Hello: I came across this area, showing tons of points with no designation whatsoever. Can someone figure out what is going on&amp;gt;? Thank you https://www.openstreetmap.org/edit?editor=id&amp;amp;lat=38.593726&amp;amp;lon=-77.30567&amp;amp;zoom=17 I am not sure if this zoom level will show them, so adjust yours u...'''
 date = "2013-07-18T19:58:00Z"
 lastmod = "2013-07-19T01:13:00Z"
 weight = 24364
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello: I came across this area, showing tons of points with no designation whatsoever. Can someone figure out what is going on&gt;? Thank you <a href="http://www.openstreetmap.org/edit?editor=id&amp;lat=38.593726&amp;lon=-77.30567&amp;zoom=17">http://www.openstreetmap.org/edit?editor=id&amp;lat=38.593726&amp;lon=-77.30567&amp;zoom=17</a></p>
+<p>Hello: I came across this area, showing tons of points with no designation whatsoever. Can someone figure out what is going on&gt;? Thank you <a href="https://www.openstreetmap.org/edit?editor=id&amp;lat=38.593726&amp;lon=-77.30567&amp;zoom=17">https://www.openstreetmap.org/edit?editor=id&amp;lat=38.593726&amp;lon=-77.30567&amp;zoom=17</a></p>
 <p>I am not sure if this zoom level will show them, so adjust yours until they show up.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>They seem to be leftovers from the <a href="http://wiki.openstreetmap.org/wiki/TIGER">TIGER</a> import (see the <a href="http://www.openstreetmap.org/browse/node/218339867/history">history of one of these nodes</a>) and can be removed. The removal process is probably the most easiest when using JOSM as editor by searching for <em>type:node untagged -child</em>.</p>
+<p>They seem to be leftovers from the <a href="https://wiki.openstreetmap.org/wiki/TIGER">TIGER</a> import (see the <a href="https://www.openstreetmap.org/browse/node/218339867/history">history of one of these nodes</a>) and can be removed. The removal process is probably the most easiest when using JOSM as editor by searching for <em>type:node untagged -child</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are allowed filter from Planet.osm whatever you want. ZIP code coverage varies for different areas or countries.</p>
-<p>Please have a look at <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">http://wiki.openstreetmap.org/wiki/Key:postal_code</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:addr:postcode">http://wiki.openstreetmap.org/wiki/Key:addr:postcode</a></p>
+<p>Please have a look at <a href="https://wiki.openstreetmap.org/wiki/Key:postal_code">https://wiki.openstreetmap.org/wiki/Key:postal_code</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:addr:postcode">https://wiki.openstreetmap.org/wiki/Key:addr:postcode</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

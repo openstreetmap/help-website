@@ -191,10 +191,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use OpenStreetMap's <a href="http://wiki.openstreetmap.org/wiki/Notes">Notes</a> feature to mark places where you know there are features left to map. You can then refer to these notes yourself, or other mappers can see them, and complete the survey of the area you've marked.</p>
-<p>One of the easiest ways to do this is to find the place where the feature should be on <a href="http://www.openstreetmap.org/">openstreetmap.org</a>, and click the "Add a note" link in the bottom right-hand corner of the map. Fill in the note describing what's missing from the map, and submit the note.</p>
+<p>You can use OpenStreetMap's <a href="https://wiki.openstreetmap.org/wiki/Notes">Notes</a> feature to mark places where you know there are features left to map. You can then refer to these notes yourself, or other mappers can see them, and complete the survey of the area you've marked.</p>
+<p>One of the easiest ways to do this is to find the place where the feature should be on <a href="https://www.openstreetmap.org/">openstreetmap.org</a>, and click the "Add a note" link in the bottom right-hand corner of the map. Fill in the note describing what's missing from the map, and submit the note.</p>
 <p>If you're a registered osm.org user, make sure you're logged in before creating a note, and you'll get notifications when other people comment on your note, or close it after correcting the map.</p>
-<p>For more information on how to use Notes, see the <a href="http://wiki.openstreetmap.org/wiki/Notes">wiki page</a>.</p>
+<p>For more information on how to use Notes, see the <a href="https://wiki.openstreetmap.org/wiki/Notes">wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

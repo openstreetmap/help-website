@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-48133-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this question about umap? It seems to be a duplicate of <a href="https://help.openstreetmap.org/questions/48132/automatic-backup">https://help.openstreetmap.org/questions/48132/automatic-backup</a> which was tagged umap, but this one isn't.</p>
+<p>Is this question about umap? It seems to be a duplicate of <a href="/questions/48132/automatic-backup">https://help.openstreetmap.org/questions/48132/automatic-backup</a> which was tagged umap, but this one isn't.</p>
 </div>
 <div id="comment-48133-info" class="comment-info">
 <span class="comment-age">(15 Feb '16, 10:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-48134-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>yes, this question is about umap and i only realized after i got the answer of malenki that i was supposed to add a umap tag, so i asked it again as <a href="https://help.openstreetmap.org/questions/48132/automatic-backup">https://help.openstreetmap.org/questions/48132/automatic-backup</a> if this is confusing, please remove this first question!</p>
+<p>yes, this question is about umap and i only realized after i got the answer of malenki that i was supposed to add a umap tag, so i asked it again as <a href="/questions/48132/automatic-backup">https://help.openstreetmap.org/questions/48132/automatic-backup</a> if this is confusing, please remove this first question!</p>
 </div>
 <div id="comment-48134-info" class="comment-info">
 <span class="comment-age">(15 Feb '16, 10:47)</span> <span class="comment-user userinfo">stefxy</span>

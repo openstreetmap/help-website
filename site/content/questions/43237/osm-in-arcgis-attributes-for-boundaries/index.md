@@ -107,7 +107,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you only just need boundary data from OSM, check out <a href="https://osm.wno-edv-service.de/boundaries/">the excellent boundaries tool</a> by wambacher.</p>
 <p>Here you can download boundaries for any admin level that is correctly mapped in Openstreetmap, straight to .shp format. Click on the tiny white triangle left of the country name to drill down. The site is down right now, but it always comes back.</p>
-<p>In the case of Hanoi, the most detailed boundary available seems to be at <a href="http://www.openstreetmap.org/relation/1903516">a regional level</a>. As you can see, there is also a node used as a label. This node is not included in the boundaries tool, but most of the tags of the relation itself are in the file.</p>
+<p>In the case of Hanoi, the most detailed boundary available seems to be at <a href="https://www.openstreetmap.org/relation/1903516">a regional level</a>. As you can see, there is also a node used as a label. This node is not included in the boundaries tool, but most of the tags of the relation itself are in the file.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

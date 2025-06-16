@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>We have highway junctions in Finland where one of the junction lanes just goes to a bus stop. How should I mark those lanes as if they're just normal lanes, Osmand sees them as a shortcut and therefore navigates the traffic through them? I already made some changes but I'm not quite sure if this is correct: <a href="http://www.openstreetmap.org/browse/changeset/13748227">http://www.openstreetmap.org/browse/changeset/13748227</a></p>
+<p>We have highway junctions in Finland where one of the junction lanes just goes to a bus stop. How should I mark those lanes as if they're just normal lanes, Osmand sees them as a shortcut and therefore navigates the traffic through them? I already made some changes but I'm not quite sure if this is correct: <a href="https://www.openstreetmap.org/browse/changeset/13748227">https://www.openstreetmap.org/browse/changeset/13748227</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bus" rel="tag" title="see questions tagged &#39;bus&#39;">bus</span> <span class="post-tag tag-link-public-transport" rel="tag" title="see questions tagged &#39;public-transport&#39;">public-transport</span> <span class="post-tag tag-link-lanes" rel="tag" title="see questions tagged &#39;lanes&#39;">lanes</span> <span class="post-tag tag-link-motorway_junction" rel="tag" title="see questions tagged &#39;motorway_junction&#39;">motorway_junction</span>
@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:psv%3Dyes">http://wiki.openstreetmap.org/wiki/Tag:psv%3Dyes</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:psv%3Dyes">https://wiki.openstreetmap.org/wiki/Tag:psv%3Dyes</a></p>
 <p>Cheers.</p>
 </div>
 <div class="answer-controls post-controls">

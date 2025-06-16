@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I was rather surprised to not find anything related to this subjects as I think it would be great to be able to add these to the map. They are rather common on bigger bathing/swimming locations here in sweden.</p>
 <p>Any suggestions?</p>
 <p>Brgds, Johannes</p>
-<p><img src="http://help.openstreetmap.org/upfiles/diving_platform.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/diving_platform.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-pier" rel="tag" title="see questions tagged &#39;pier&#39;">pier</span> <span class="post-tag tag-link-diving" rel="tag" title="see questions tagged &#39;diving&#39;">diving</span> <span class="post-tag tag-link-beach" rel="tag" title="see questions tagged &#39;beach&#39;">beach</span> <span class="post-tag tag-link-leisure" rel="tag" title="see questions tagged &#39;leisure&#39;">leisure</span> <span class="post-tag tag-link-swimming" rel="tag" title="see questions tagged &#39;swimming&#39;">swimming</span>

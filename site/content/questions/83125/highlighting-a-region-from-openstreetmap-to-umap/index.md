@@ -42,9 +42,9 @@ osqa_accepted = false
 <p>Hello everyone,</p>
 <p>I would like to be able to highlight a state/region in umap by importing it from Openstreetmaps, rather than manually inputting it.</p>
 <p>Below, I use Colorado, USA as an example.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2022-01-18_16-53-35.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2022-01-18_16-53-35.png" alt="alt text" /></p>
 <p><strong>Currently, I have to use the create polygon tool to highlight a region</strong></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2022-01-18_16-53-56.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2022-01-18_16-53-56.png" alt="alt text" /></p>
 <p><strong>Colorado already exists in Openstreetmap. How do I use what Openstreetmap has highlighted, so I don't have to manually input it?</strong></p>
 <p>Let me know if I need to clarify. Thanks!</p>
 </div>

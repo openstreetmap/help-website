@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I downloaded the South America .img map by Ecuador Tour and loaded it on my Garmin 60CSx. I discovered that one street in Santiago, Chile, would not route correctly and checked it in P2 to see that traffic direction on it –as shown by the arrows– was in the wrong direction (to the south) so I edited it. Now in P2 the arrows point in the correct direction (north) but OpenStreetMap views still show the arrows pointing south. Would you please give me an insight on what is happening? Am I doing something wrong? Changeset is <a href="http://www.openstreetmap.org/browse/changeset/8065152">8065152</a>. Thanks.</p>
+<p>I downloaded the South America .img map by Ecuador Tour and loaded it on my Garmin 60CSx. I discovered that one street in Santiago, Chile, would not route correctly and checked it in P2 to see that traffic direction on it –as shown by the arrows– was in the wrong direction (to the south) so I edited it. Now in P2 the arrows point in the correct direction (north) but OpenStreetMap views still show the arrows pointing south. Would you please give me an insight on what is happening? Am I doing something wrong? Changeset is <a href="https://www.openstreetmap.org/browse/changeset/8065152">8065152</a>. Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-way" rel="tag" title="see questions tagged &#39;way&#39;">way</span> <span class="post-tag tag-link-arrow" rel="tag" title="see questions tagged &#39;arrow&#39;">arrow</span>
@@ -166,7 +166,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>please have a look at this question and the answers given to <a href="http://help.openstreetmap.org/questions/4705/why-havent-my-changes-appeared-on-the-map">Why haven't my changes appeared on the map?</a></p>
+<p>please have a look at this question and the answers given to <a href="/questions/4705/why-havent-my-changes-appeared-on-the-map">Why haven't my changes appeared on the map?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>you can do this by loading the <a href="http://wiki.openstreetmap.org/wiki/Planet">planetfile</a> (all osm-data) or an extract of it into a database. In OSM we use <a href="http://wiki.openstreetmap.org/wiki/Postgres">PostgreSQL</a> with the <a href="http://wiki.openstreetmap.org/wiki/PostGIS">PostGIS</a> extension. Then you can make queries on the database to get the answers to your questions. To get the downloaded data into your database, there are different solutions available, e.g. <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> (allowing for a full copy) or <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> (used to create extracts with only a part of the data according to tags you choose).</p>
+<p>you can do this by loading the <a href="https://wiki.openstreetmap.org/wiki/Planet">planetfile</a> (all osm-data) or an extract of it into a database. In OSM we use <a href="https://wiki.openstreetmap.org/wiki/Postgres">PostgreSQL</a> with the <a href="https://wiki.openstreetmap.org/wiki/PostGIS">PostGIS</a> extension. Then you can make queries on the database to get the answers to your questions. To get the downloaded data into your database, there are different solutions available, e.g. <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> (allowing for a full copy) or <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> (used to create extracts with only a part of the data according to tags you choose).</p>
 <p>If you want to analyze the data and obtain real lengths and areas you should not use the spherical mercator projection (900913) we generally use to render maps, because the results are not real world units in this projection.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -238,7 +238,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I linked you to several OSM-tools which are described on the pages. If you already have an extract covering exactly the area you want to analyze you can directly use the script Frederik linked above. Otherwise you will have to cut the desired area out of a bigger extract (if it is not very small and you can download it via JOSM). Cutting out of OSM data is usually done with Osmosis. You can download it from svn ( <a href="http://svn.openstreetmap.org/applications/utils/osmosis/trunk/">http://svn.openstreetmap.org/applications/utils/osmosis/trunk/</a> ). Examples and explanations (also for installing/compiling) are in the wiki: <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a></p>
+<p>I linked you to several OSM-tools which are described on the pages. If you already have an extract covering exactly the area you want to analyze you can directly use the script Frederik linked above. Otherwise you will have to cut the desired area out of a bigger extract (if it is not very small and you can download it via JOSM). Cutting out of OSM data is usually done with Osmosis. You can download it from svn ( <a href="http://svn.openstreetmap.org/applications/utils/osmosis/trunk/">http://svn.openstreetmap.org/applications/utils/osmosis/trunk/</a> ). Examples and explanations (also for installing/compiling) are in the wiki: <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a></p>
 </div>
 <div id="comment-4025-info" class="comment-info">
 <span class="comment-age">(23 Mar '11, 20:16)</span> <span class="comment-user userinfo">dieterdreist</span>
@@ -262,7 +262,7 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>Yes, there's a simpler way -- pay a consultant to produce the data for you. You could try the companies listed at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for a start.</p>
+<p>Yes, there's a simpler way -- pay a consultant to produce the data for you. You could try the companies listed at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for a start.</p>
 </div>
 <div id="comment-4029-info" class="comment-info">
 <span class="comment-age">(23 Mar '11, 21:43)</span> <span class="comment-user userinfo">Jonathan Ben...</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Where are translatable strings of wiki interface?</p>
-<p>I found the "Available languages" in <a href="https://wiki.openstreetmap.org/wiki/Template:Available_languages">this template</a>, but where is this one: <img src="https://help.openstreetmap.org/upfiles/Capture_qv4xQlZ.PNG" alt="alt text" /></p>
+<p>I found the "Available languages" in <a href="https://wiki.openstreetmap.org/wiki/Template:Available_languages">this template</a>, but where is this one: <img src="/upfiles/Capture_qv4xQlZ.PNG" alt="alt text" /></p>
 <p>Currently it has an incorrect translation in Persian.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

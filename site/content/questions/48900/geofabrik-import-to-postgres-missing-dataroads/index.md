@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I'll first start by saying that I'm new to the GIS world. I apologize if this has been posted before but I tried searching a lot and couldn't find the answer. Maybe I'm searching the wrong terms.</p>
 <p>I am playing around with visualizing some traffic information. I've been using GEOFABRIK to download large data sets for OSM (which I believe is the suggested way of doing it). So I'll download an entire state in the US (like Michigan) in the .osm.pbf format. Next, I use a standard osm2pgsql command to import all the data into a postgres gis db.</p>
 <pre><code>osm2pgsql --create --latlong --slim --drop  -U myusername -d gis wisconsin-latest.osm.pbf</code></pre>
-<p>All this seems to go fine. Imports run well. I am now trying to run some select statements to check on the data that has been loaded. It seems to me that many of the smaller side streets are missing from this data but are present in the OSM main site. For example, the way/road with Way: Ontario Road (21447015) (<a href="http://www.openstreetmap.org/way/21447015">http://www.openstreetmap.org/way/21447015</a>)</p>
+<p>All this seems to go fine. Imports run well. I am now trying to run some select statements to check on the data that has been loaded. It seems to me that many of the smaller side streets are missing from this data but are present in the OSM main site. For example, the way/road with Way: Ontario Road (21447015) (<a href="https://www.openstreetmap.org/way/21447015">https://www.openstreetmap.org/way/21447015</a>)</p>
 <p>But a query of:</p>
 <pre><code>select * from planet_osm_roads where osm_id=21447015;</code></pre>
 <p>results in 0 rows.</p>

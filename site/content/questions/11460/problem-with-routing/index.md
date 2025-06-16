@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I added a new road to openstreet map, i selected a small area with few roads and i exported the .osm file to computer.Than I converted .osm file to .img using mkgmap and send it to my gps (garmin nuvi 40 lm) with mapsource. When i try to navigate to a place on the new street that I<code>ve added, gps its going off-road directly to that place. What I did wrong?! I</code>ve atached a picture. Thank you<img src="http://help.openstreetmap.org/upfiles/osm.JPG" alt="alt text" /></p>
+<p>I added a new road to openstreet map, i selected a small area with few roads and i exported the .osm file to computer.Than I converted .osm file to .img using mkgmap and send it to my gps (garmin nuvi 40 lm) with mapsource. When i try to navigate to a place on the new street that I<code>ve added, gps its going off-road directly to that place. What I did wrong?! I</code>ve atached a picture. Thank you<img src="/upfiles/osm.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>
@@ -85,7 +85,7 @@ osqa_accepted = false
 <div id="post-11465-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That's <a href="http://www.openstreetmap.org/?lat=47.64246&amp;lon=26.16458&amp;zoom=16&amp;layers=M">here</a> I presume? Could you post the command line that you used to run mkgmap with?</p>
+<p>That's <a href="https://www.openstreetmap.org/?lat=47.64246&amp;lon=26.16458&amp;zoom=16&amp;layers=M">here</a> I presume? Could you post the command line that you used to run mkgmap with?</p>
 </div>
 <div id="comment-11465-info" class="comment-info">
 <span class="comment-age">(23 Mar '12, 10:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -150,7 +150,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You'll need, at the very least, to build a routable map. If you look at <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/routing">this page</a> you'll see that the example given is as follows:</p>
+<p>You'll need, at the very least, to build a routable map. If you look at <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/routing">this page</a> you'll see that the example given is as follows:</p>
 <pre><code>java -jar mkgmap.jar --route --remove-short-arcs *.osm.gz</code></pre>
 <p>You're not passing "--route", so it's not building a routable map, and instead your Garmin is probably routing over the Garmin basemap.</p>
 </div>

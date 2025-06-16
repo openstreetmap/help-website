@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>East Riding of Yorkshire Council have built kiosks in villages so villagers can contact the council by video link. What is the best way of tagging these? At the moment I have just tagged them as public buildings</p>
-<p>Example of kiosk in Stamford Bridge <a href="http://www.openstreetmap.org/way/182753784">www.openstreetmap.org/way/182753784</a></p>
+<p>Example of kiosk in Stamford Bridge <a href="https://www.openstreetmap.org/way/182753784">www.openstreetmap.org/way/182753784</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-video-conferencing" rel="tag" title="see questions tagged &#39;video-conferencing&#39;">video-conferencing</span>

@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>According to tag info there are 2 natural=cairn, and couple of cairn=yes (see <a href="http://taginfo.openstreetmap.org/keys/cairn#values">http://taginfo.openstreetmap.org/keys/cairn#values</a>), the most popular is man_made=cairn (1517 times) and landmark=cairn (73).</p>
-<p>I would therefore go for man_made=cairn (<a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcairn">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcairn</a>)</p>
+<p>I would therefore go for man_made=cairn (<a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcairn">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcairn</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

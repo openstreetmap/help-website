@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi, I'm starting a small company where many of the services I provide will include data from OSM, such as customized printed maps. I've been doing this for a while for other companies, so I'm aware of general attribution rules.</p>
 <p>Question is: I would like to include some OSM vector data in the logo for my new company. Would I then have to include '(c) OpenStreetMap Contributors' in or directly below the logo every time I use it, or is there some other more graphically acceptable way of doing it?</p>
 <p>I've searched around and found the advice that attribution should be "reasonable to the medium or means you are utilizing". I just don't know what that would be for a logo.</p>
-<p>( source: <a href="https://help.openstreetmap.org/questions/12861/can-attribution-be-given-to-openstreetmaps-at-the-end-of-the-television-show-instead-of-on-the-maps-during-the-show)">https://help.openstreetmap.org/questions/12861/can-attribution-be-given-to-openstreetmaps-at-the-end-of-the-television-show-instead-of-on-the-maps-during-the-show)</a></p>
+<p>( source: <a href="/questions/12861/can-attribution-be-given-to-openstreetmaps-at-the-end-of-the-television-show-instead-of-on-the-maps-during-the-show)">https://help.openstreetmap.org/questions/12861/can-attribution-be-given-to-openstreetmaps-at-the-end-of-the-television-show-instead-of-on-the-maps-during-the-show)</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-logo" rel="tag" title="see questions tagged &#39;logo&#39;">logo</span> <span class="post-tag tag-link-attribution" rel="tag" title="see questions tagged &#39;attribution&#39;">attribution</span> <span class="post-tag tag-link-legal" rel="tag" title="see questions tagged &#39;legal&#39;">legal</span>
@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>A reasonable solution to this is to not use real OpenStreetMap data and instead use fake data stylized in whatever way you think gets the message across.</p>
-<p>As to using real OSM data, likely anything useful as a logo will be so small that from an ODbL pov it will be a <a href="http://wiki.openstreetmap.org/wiki/Open_Data_License/Substantial_-_Guideline">non-substantial extract</a> and not be subject to the licence.<br />
+<p>As to using real OSM data, likely anything useful as a logo will be so small that from an ODbL pov it will be a <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/Substantial_-_Guideline">non-substantial extract</a> and not be subject to the licence.<br />
 </p>
 <p>However as I've said before the help site is the wrong place for legal consulting.</p>
 </div>

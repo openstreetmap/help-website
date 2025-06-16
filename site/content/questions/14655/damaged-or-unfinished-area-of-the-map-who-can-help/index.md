@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I noticed today that <strong>a part of a map</strong> previously OK <strong>is now missing</strong>. This is the area: <a href="http://www.openstreetmap.org/?box=yes&amp;maxlat=53.7308&amp;maxlon=16.7933&amp;minlat=53.6499&amp;minlon=16.6055">please see</a> I started fixing it ... but found out it was a tremendous work and did not finalize.</p>
+<p>Hi, I noticed today that <strong>a part of a map</strong> previously OK <strong>is now missing</strong>. This is the area: <a href="https://www.openstreetmap.org/?box=yes&amp;maxlat=53.7308&amp;maxlon=16.7933&amp;minlat=53.6499&amp;minlon=16.6055">please see</a> I started fixing it ... but found out it was a tremendous work and did not finalize.</p>
 <p>Since I am relatively new here please bear with my questions and try to help: 1) is there a moderator for a particular area of the map to make sure that it is not degraded? 2) could the moderator or could anyone go back and revert the changes that damaged the area that I am speaking about? 3) could sb. tell me if there is work on this area which is the cause of the damage? Thanks!</p>
 <p>P.S. I you can revert the area to it's original form it would be perfect ...</p>
 </div>

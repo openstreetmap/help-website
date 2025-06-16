@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In <a href="http://www.openstreetmap.org/#map=18/34.79115/136.02261&amp;layers=T">this view</a> there's a huge blue area visible only in the Transport layer, but it should be forest. (If this lake actually existed, it would be the 2nd largest in Japan; it's certainly not there).</p>
+<p>In <a href="https://www.openstreetmap.org/#map=18/34.79115/136.02261&amp;layers=T">this view</a> there's a huge blue area visible only in the Transport layer, but it should be forest. (If this lake actually existed, it would be the 2nd largest in Japan; it's certainly not there).</p>
 <p>The area had been a line, so in an attempt to fix it (turn it into forest) I added "area:yes" and "landuse:forest", but that doesn't seem to fix it.</p>
 <p>Short of just deleting the whole (big, complex) node, can it be turned into a normal forested area like those next to it?</p>
 <p>Thanks.</p>

@@ -167,7 +167,7 @@ One Answer:
 <div id="post-20653-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've added a new question about how to setup a notification for such nodes: <a href="https://help.openstreetmap.org/questions/20652/is-it-possible-to-setup-notifications-about-new-nodes-with-specific-tags">https://help.openstreetmap.org/questions/20652/is-it-possible-to-setup-notifications-about-new-nodes-with-specific-tags</a></p>
+<p>I've added a new question about how to setup a notification for such nodes: <a href="/questions/20652/is-it-possible-to-setup-notifications-about-new-nodes-with-specific-tags">https://help.openstreetmap.org/questions/20652/is-it-possible-to-setup-notifications-about-new-nodes-with-specific-tags</a></p>
 </div>
 <div id="comment-20653-info" class="comment-info">
 <span class="comment-age">(12 Mar '13, 01:18)</span> <span class="comment-user userinfo">int_ua</span>

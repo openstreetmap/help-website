@@ -78,7 +78,7 @@ However if one switches to Open Cycle Map, the added Road/Track can't be seen.<b
 <div id="post-13146-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Not a answer but this may be of interest regarding track surface notes <a href="http://wiki.openstreetmap.org/wiki/Photo_mapping#Synchronizing_GPS_and_camera">http://wiki.openstreetmap.org/wiki/Photo_mapping#Synchronizing_GPS_and_camera</a> will give some good ideas, it's also possible to geo locate video if time and date are synchronised to GPS and available. Great videos</p>
+<p>Not a answer but this may be of interest regarding track surface notes <a href="https://wiki.openstreetmap.org/wiki/Photo_mapping#Synchronizing_GPS_and_camera">https://wiki.openstreetmap.org/wiki/Photo_mapping#Synchronizing_GPS_and_camera</a> will give some good ideas, it's also possible to geo locate video if time and date are synchronised to GPS and available. Great videos</p>
 </div>
 <div id="comment-13146-info" class="comment-info">
 <span class="comment-age">(31 May '12, 09:43)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -144,7 +144,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a comprehensive answer about the update frequency of OpenCycleMap <a href="http://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">here</a>.</p>
+<p>There's a comprehensive answer about the update frequency of OpenCycleMap <a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

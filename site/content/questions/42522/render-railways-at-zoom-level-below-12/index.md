@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Near the very end. Usally a program that reads the raw data file such as a .osm XMLdata file: and then uses rules either fixed in the rendering program code, or a special format file such as .mapcss or other config file; to work out how to draw the features. If you are lucky you can find a format file in the tile making system you've just made that you can tweek to control specific problem. I'm personaly not to sure what system options you have but either others will fill in the details or I'll look into it in a bit. I'm downloading tilemill now. this page might help you in understanding the process:- <a href="http://wiki.openstreetmap.org/wiki/MapCSS">http://wiki.openstreetmap.org/wiki/MapCSS</a></p>
+<p>Near the very end. Usally a program that reads the raw data file such as a .osm XMLdata file: and then uses rules either fixed in the rendering program code, or a special format file such as .mapcss or other config file; to work out how to draw the features. If you are lucky you can find a format file in the tile making system you've just made that you can tweek to control specific problem. I'm personaly not to sure what system options you have but either others will fill in the details or I'll look into it in a bit. I'm downloading tilemill now. this page might help you in understanding the process:- <a href="https://wiki.openstreetmap.org/wiki/MapCSS">https://wiki.openstreetmap.org/wiki/MapCSS</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ One Answer:
 <p><a href="https://www.mapbox.com/editor/#style">https://www.mapbox.com/editor/#style</a></p>
 <p>tile maker seems to use .mss files which are working in a similar way to the mapcss page above.</p>
 <p>this page might help you as it seems to work with similar stylesheets to tilemaker:-</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Phyghtmap/CartoCSS">http://wiki.openstreetmap.org/wiki/Phyghtmap/CartoCSS</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Phyghtmap/CartoCSS">https://wiki.openstreetmap.org/wiki/Phyghtmap/CartoCSS</a></p>
 </div>
 <div id="comment-42525-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 16:48)</span> <span class="comment-user userinfo">Govanus</span>

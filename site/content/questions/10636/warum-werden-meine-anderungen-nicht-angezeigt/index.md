@@ -111,9 +111,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p><em>Translation/Übersetzung:</em> Wahrscheinlich liegt das daran, dass deine Änderungen noch nicht gerendert worden sind. Es findet keine Vorab-Kontrolle deiner Eingaben bei OSM statt.</p>
-<p>Siehe die FAQ: <a href="http://wiki.openstreetmap.org/wiki/DE:FAQ#Wann_werden_meine_.C3.84nderungen_auf_den_Karten_gezeigt.3F">Wann werden meine Änderungen auf den Karten gezeigt?</a></p>
+<p>Siehe die FAQ: <a href="https://wiki.openstreetmap.org/wiki/DE:FAQ#Wann_werden_meine_.C3.84nderungen_auf_den_Karten_gezeigt.3F">Wann werden meine Änderungen auf den Karten gezeigt?</a></p>
 <p><em>Englischer Originaltext:</em> Most likely it's because your changes haven't been rendered yet. There is no preaudit of what you have entered in OSM.</p>
-<p>See the FAQ: <a href="http://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a></p>
+<p>See the FAQ: <a href="https://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

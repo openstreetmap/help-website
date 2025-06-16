@@ -128,8 +128,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Rendering maps is covered in the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.5">Beginners Guide 1.5</a>. Also see the list of <a href="http://wiki.openstreetmap.org/wiki/Renderers">Rendering software</a>.</p>
-<p>You may also find an answer by looking at questions tagged <a href="http://help.openstreetmap.org/tags/rendering/">rendering</a>.</p>
+<p>Rendering maps is covered in the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.5">Beginners Guide 1.5</a>. Also see the list of <a href="https://wiki.openstreetmap.org/wiki/Renderers">Rendering software</a>.</p>
+<p>You may also find an answer by looking at questions tagged <a href="https://help.openstreetmap.org/tags/rendering/">rendering</a>.</p>
 <p>To summarize, you can make a map for yourself using an appropriate renderer on your own computer.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -182,8 +182,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The quick answer is render your own maps.</p>
 <p>The longer answer.</p>
-<p>The maps displayed on the main OSM page represent particular cartographic choices made by the people who design and implement the various map layers ('mapnik', 'osmarender' and <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap">OpenCycleMap</a>). They serve two main purposes: helping map contributors, and illustrating that OSM data can be used in different ways. These maps are all bitmaps, so although there is a recognisable cartographic symbol for different features on the map, they are not strictly icons.</p>
-<p>There are numerous ways that you can make your own maps, but usually people start with an easy to use tool such as <a href="http://wiki.openstreetmap.org/wiki/Kosmos">Kosmos</a> or <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, and then work through <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> to <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>. This is a rough ordering of the degree of complexity (software, technical knowledge, effort required).</p>
+<p>The maps displayed on the main OSM page represent particular cartographic choices made by the people who design and implement the various map layers ('mapnik', 'osmarender' and <a href="https://wiki.openstreetmap.org/wiki/OpenCycleMap">OpenCycleMap</a>). They serve two main purposes: helping map contributors, and illustrating that OSM data can be used in different ways. These maps are all bitmaps, so although there is a recognisable cartographic symbol for different features on the map, they are not strictly icons.</p>
+<p>There are numerous ways that you can make your own maps, but usually people start with an easy to use tool such as <a href="https://wiki.openstreetmap.org/wiki/Kosmos">Kosmos</a> or <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, and then work through <a href="https://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> to <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>. This is a rough ordering of the degree of complexity (software, technical knowledge, effort required).</p>
 <p>Other map providers (e.g., Cloudmade, Open MapQuest) may also have tiles which are suitable for your purposes. For instance, <a href="http://maps.cloudmade.com/">Cloudmade</a> also offer a (limited) customisable map.</p>
 <p>Questions related to adding icons will also contain other related information.</p>
 </div>

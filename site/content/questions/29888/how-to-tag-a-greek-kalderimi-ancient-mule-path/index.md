@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Mule paths have always been an interesting but minor issue in tagging. In the English Pennines there are many pack horse trails, often with distinctive bridges. There is a mule trail, the <a href="http://en.wikipedia.org/wiki/Bright_Angel_Trail">Bright Angel Trail</a> down to the bottom of the Grand Canyon, which is very narrow. There are many in Alpine areas too. I can also think of old mule paths in <a href="http://www.openstreetmap.org/#map=16/46.9615/9.0943">Glarus</a>, and up the hillside from <a href="http://www.openstreetmap.org/#map=16/45.8446/8.5664">Belgirate</a>. I've never been able to map these because they are totally shaded by trees.</p>
+<p>Mule paths have always been an interesting but minor issue in tagging. In the English Pennines there are many pack horse trails, often with distinctive bridges. There is a mule trail, the <a href="http://en.wikipedia.org/wiki/Bright_Angel_Trail">Bright Angel Trail</a> down to the bottom of the Grand Canyon, which is very narrow. There are many in Alpine areas too. I can also think of old mule paths in <a href="https://www.openstreetmap.org/#map=16/46.9615/9.0943">Glarus</a>, and up the hillside from <a href="https://www.openstreetmap.org/#map=16/45.8446/8.5664">Belgirate</a>. I've never been able to map these because they are totally shaded by trees.</p>
 <p>I think there are three basic/fundamental types of highways, that have existed in one form or another since mankind domesticated the horse: for 4-wheeled vehicles (roads/tracks), people on horseback (bridleways) and people on foot. (Obviously there are more recent special cases such as motorways and cycleways; I might be wrong but I don't believe <a href="http://en.wikipedia.org/wiki/Wheelbarrow#Ancient_China">wheelbarrows</a> ever received dedicated highways).</p>
 <p>Mule paths must belong to one or other of the latter categories. If they are not passable by a person on horseback I would suggest that they must be footway/path (according to choice). Obviously many old mule paths are wide enough now for 4-wheel vehicles and may be graded as tracks.</p>
 <p>Therefore in your case I would</p>
@@ -363,7 +363,7 @@ osqa_accepted = false
 <div id="post-30376-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>OSM has <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route relations</a> to express such things. Unfortunately they are a litte bit more complicated to understand at first.</p>
+<p>OSM has <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relations</a> to express such things. Unfortunately they are a litte bit more complicated to understand at first.</p>
 </div>
 <div id="comment-30376-info" class="comment-info">
 <span class="comment-age">(01 Feb '14, 16:52)</span> <span class="comment-user userinfo">scai ♦</span>

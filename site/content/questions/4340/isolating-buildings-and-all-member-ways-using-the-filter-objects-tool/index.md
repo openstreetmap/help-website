@@ -143,8 +143,8 @@ One Answer:
 <div id="post-4344-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You cannot trust that the building tag is placed on the outer polygons. In fact the recommended way is to put the tags on the relation itself: <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging">http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging</a></p>
-<p>The building in my answer is done like that: <a href="http://www.openstreetmap.org/browse/relation/1374453">http://www.openstreetmap.org/browse/relation/1374453</a></p>
+<p>You cannot trust that the building tag is placed on the outer polygons. In fact the recommended way is to put the tags on the relation itself: <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging">https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging</a></p>
+<p>The building in my answer is done like that: <a href="https://www.openstreetmap.org/browse/relation/1374453">https://www.openstreetmap.org/browse/relation/1374453</a></p>
 </div>
 <div id="comment-4344-info" class="comment-info">
 <span class="comment-age">(08 Apr '11, 17:50)</span> <span class="comment-user userinfo">gnurk</span>
@@ -168,7 +168,7 @@ One Answer:
 <div class="comment-text">
 <p>Your question has given me unexpected understanding why one should put the tags on the relation and not on the members.</p>
 <p>It may be easy for your specific task if there were building tags on every way, but what if two multipolygon buildings share the same wall and have different building=&lt;building typology=""&gt;?</p>
-<p>Outer-tagging gives you surprises in JOSM even with simple filters. Apply "-(parent building)" to Musée du Petit Palais <a href="http://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M</a> and watch which areas get selected.</p>
+<p>Outer-tagging gives you surprises in JOSM even with simple filters. Apply "-(parent building)" to Musée du Petit Palais <a href="https://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M</a> and watch which areas get selected.</p>
 <p>It took me hours to realize that it's not a bug in JOSM.</p>
 </div>
 <div id="comment-4349-info" class="comment-info">
@@ -228,7 +228,7 @@ One Answer:
 <div id="post-4354-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>But does your simple filter handle the case when the outer wall of a building also has the inner role of a surrounding area in another relation, like Musée du Petit Palais <a href="http://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M</a> ?</p>
+<p>But does your simple filter handle the case when the outer wall of a building also has the inner role of a surrounding area in another relation, like Musée du Petit Palais <a href="https://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.866102&amp;lon=2.315534&amp;zoom=18&amp;layers=M</a> ?</p>
 <p>'parent building' will select the relations for both the surrounding gravel area and the building, and then 'child parent building' selects both the house and the surroundings.</p>
 <p>It is complicated to cover all cases when multiple objects share the same way, and there may be houses inside houses and so on.</p>
 </div>

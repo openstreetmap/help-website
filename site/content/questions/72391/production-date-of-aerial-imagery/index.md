@@ -111,7 +111,7 @@ osqa_accepted = false
 <li><p>To see the tile information in JOSM, you can load various imagery layers, zoom in, right-click the map, select the name of one of the loaded imagery layers, and select "Show tile info" for the tile at that map position. Various info fields will be shown, and may include the imagery date. (Ignore the lastModification and expirationTime fields -- those refer to the current download of the tile, not the imagery itself.)</p></li>
 </ul>
 <p>But here's where things get weird: In my area I have imagery available from Bing, ESRI, and Mapbox. To see the Bing date info, I have to use JOSM -- it shows "Vintage Unknown" in iD. To see the ESRI date info, I have to use iD -- no production date shows up in the JOSM tile info dialog. So it seems like both the publishing of these data fields and the software support are not exactly standardized. (Mapbox doesn't appear to publish any tile date metadata at all.)</p>
-<p>See also this similar question: <a href="https://help.openstreetmap.org/questions/72212/how-to-ascertain-the-age-of-the-aerial-imagery-at-a-particular-location">https://help.openstreetmap.org/questions/72212/how-to-ascertain-the-age-of-the-aerial-imagery-at-a-particular-location</a></p>
+<p>See also this similar question: <a href="/questions/72212/how-to-ascertain-the-age-of-the-aerial-imagery-at-a-particular-location">https://help.openstreetmap.org/questions/72212/how-to-ascertain-the-age-of-the-aerial-imagery-at-a-particular-location</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

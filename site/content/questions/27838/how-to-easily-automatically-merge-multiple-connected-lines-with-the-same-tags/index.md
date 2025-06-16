@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While not a complete solution, the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/WaySelectorPlugin">way selector plugin</a> should help a bit.</p>
+<p>While not a complete solution, the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/WaySelectorPlugin">way selector plugin</a> should help a bit.</p>
 <p>Otherwise, sounds like a good idea for a plugin or even a validator check :)</p>
 </div>
 <div class="answer-controls post-controls">

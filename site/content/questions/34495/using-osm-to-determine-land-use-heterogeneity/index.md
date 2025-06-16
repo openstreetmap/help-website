@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using OSM to determine land use heterogeneity"
-description = '''I am looking for some advice and suggested workflow to solve a GIS problem with OSM. I would like to take some polygons of areas in which I am interested and calculate the land area occupied by each specific type of land use using the OSM land use taxonomy (http://wiki.openstreetmap.org/wiki/Key:lan...'''
+description = '''I am looking for some advice and suggested workflow to solve a GIS problem with OSM. I would like to take some polygons of areas in which I am interested and calculate the land area occupied by each specific type of land use using the OSM land use taxonomy (https://wiki.openstreetmap.org/wiki/Key:lan...'''
 date = "2014-07-01T15:55:00Z"
 lastmod = "2014-07-01T16:52:00Z"
 weight = 34495
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am looking for some advice and suggested workflow to solve a GIS problem with OSM. I would like to take some polygons of areas in which I am interested and calculate the land area occupied by each specific type of land use using the OSM land use taxonomy (<a href="http://wiki.openstreetmap.org/wiki/Key:landuse)">http://wiki.openstreetmap.org/wiki/Key:landuse)</a> I then would use these data to derive a measurement of how homogenous or heterogenous the use of land is in various localites as a variable in further analysis and modelling. I am not an experienced OSM user although I do use ArcGIS. I'm guessing that the workflow would involve importing an OSM view into ArcGIS and completing the analysis there but I'm not sure how the process of convrting the shaded areas in OSM into discrete polygons in Arc would work? If anyone has derived land use polygons in this way, I would be grateful for any advice.<br />
+<p>I am looking for some advice and suggested workflow to solve a GIS problem with OSM. I would like to take some polygons of areas in which I am interested and calculate the land area occupied by each specific type of land use using the OSM land use taxonomy (<a href="https://wiki.openstreetmap.org/wiki/Key:landuse)">https://wiki.openstreetmap.org/wiki/Key:landuse)</a> I then would use these data to derive a measurement of how homogenous or heterogenous the use of land is in various localites as a variable in further analysis and modelling. I am not an experienced OSM user although I do use ArcGIS. I'm guessing that the workflow would involve importing an OSM view into ArcGIS and completing the analysis there but I'm not sure how the process of convrting the shaded areas in OSM into discrete polygons in Arc would work? If anyone has derived land use polygons in this way, I would be grateful for any advice.<br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">

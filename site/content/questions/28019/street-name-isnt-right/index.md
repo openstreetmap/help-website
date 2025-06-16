@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thank you for the detailed report. The answers to the question <a href="https://help.openstreetmap.org/questions/27870/my-street-is-mirror-imaged-and-in-the-wrong-place">My street is mirror-imaged and in the wrong place</a> have some hints on how to increase the chances of this being fixed!</p>
+<p>Thank you for the detailed report. The answers to the question <a href="/questions/27870/my-street-is-mirror-imaged-and-in-the-wrong-place">My street is mirror-imaged and in the wrong place</a> have some hints on how to increase the chances of this being fixed!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

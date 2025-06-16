@@ -162,7 +162,7 @@ osqa_accepted = false
 <p>(Posting as an answer as I want to display an image)</p>
 <p>SHIFT + H within JOSM? That doesn't display anything. CTRL+H displays this dialog box Options to view the changeset on OSM.org, but I can't see one for individual objects.</p>
 <p>What flavour of JOSM are you using? Exe,jar?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_rNJHJ2F.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_rNJHJ2F.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

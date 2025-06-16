@@ -63,7 +63,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Based on what you've asked in previous questions, I'd take a step back and start from the "beginners' guide":</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 <p>As you go through that process you'll learn a bit more about how OSM data works (especially when you look at data in an editor, and look at the results of your editing).</p>
 </div>
 <div id="comment-43520-info" class="comment-info">

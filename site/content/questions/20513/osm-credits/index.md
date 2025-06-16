@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3._Using">Legal FAQ</a> gives you the details on how to give credit to OSM. I don't know if MapBox wants special credit for TileMill.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3._Using">Legal FAQ</a> gives you the details on how to give credit to OSM. I don't know if MapBox wants special credit for TileMill.</p>
 <p>/al</p>
 </div>
 <div class="answer-controls post-controls">

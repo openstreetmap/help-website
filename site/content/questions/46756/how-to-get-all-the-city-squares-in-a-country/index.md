@@ -118,7 +118,7 @@ One Answer:
 <div class="answer-body">
 <p>Get yourself a country extract and search for objects with</p>
 <p><code>highway=pedestrian and (area=yes and/or type=multipolygon) and name is not empty</code></p>
-<p>According to the tool you use the exact syntax will change. You can find documentation of suitable tools in the <a href="http://wiki.openstreetmap.org/wiki/Category:OSM_processing">osm wiki</a>, e.g. Osmosis, osmfilter, or use an online service like overpass.</p>
+<p>According to the tool you use the exact syntax will change. You can find documentation of suitable tools in the <a href="https://wiki.openstreetmap.org/wiki/Category:OSM_processing">osm wiki</a>, e.g. Osmosis, osmfilter, or use an online service like overpass.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

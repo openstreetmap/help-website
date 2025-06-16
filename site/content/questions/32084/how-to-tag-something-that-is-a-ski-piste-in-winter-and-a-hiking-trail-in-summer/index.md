@@ -106,8 +106,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming it is not in a urban/suburban area, I'd tag it as highway=path, piste:type=downhill/nordic/skitour (whichever type of skiing is appropriate) to cover the basics. For a more urban area I'd probably use highway=footway instead of path. For ski tagging see: <a href="http://wiki.openstreetmap.org/wiki/Piste_Maps">http://wiki.openstreetmap.org/wiki/Piste_Maps</a></p>
-<p>If pedestrian access is prohibited in winter, then I'd look at the seasonal and conditional access tags. See <a href="http://wiki.openstreetmap.org/wiki/Key:seasonal">http://wiki.openstreetmap.org/wiki/Key:seasonal</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:conditional">http://wiki.openstreetmap.org/wiki/Key:conditional</a> Maybe something like foot:conditional=no @ Nov-Apr.</p>
+<p>Assuming it is not in a urban/suburban area, I'd tag it as highway=path, piste:type=downhill/nordic/skitour (whichever type of skiing is appropriate) to cover the basics. For a more urban area I'd probably use highway=footway instead of path. For ski tagging see: <a href="https://wiki.openstreetmap.org/wiki/Piste_Maps">https://wiki.openstreetmap.org/wiki/Piste_Maps</a></p>
+<p>If pedestrian access is prohibited in winter, then I'd look at the seasonal and conditional access tags. See <a href="https://wiki.openstreetmap.org/wiki/Key:seasonal">https://wiki.openstreetmap.org/wiki/Key:seasonal</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:conditional">https://wiki.openstreetmap.org/wiki/Key:conditional</a> Maybe something like foot:conditional=no @ Nov-Apr.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

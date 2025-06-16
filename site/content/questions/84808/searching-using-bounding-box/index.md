@@ -120,7 +120,7 @@ out center;</code></pre>
 nwr[shop=supermarket](area);
 out center;</code></pre>
 <p>Also, take a look at my similar answer which gives you multiple options to do the same thing.</p>
-<p><a href="https://help.openstreetmap.org/questions/84723/use-polygon-for-an-overpass-turbo-query">https://help.openstreetmap.org/questions/84723/use-polygon-for-an-overpass-turbo-query</a></p>
+<p><a href="/questions/84723/use-polygon-for-an-overpass-turbo-query">https://help.openstreetmap.org/questions/84723/use-polygon-for-an-overpass-turbo-query</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

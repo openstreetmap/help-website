@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have been working in northern Wisconsin on some areas bordering Lake Superior. Some relations, such as nature reserves and administrative boundaries (counties, cities, villages, and towns/townships) use members of the relation for the lakeshore as part of them so that they completely follow the lakeshore. The problem with this is that I haven't been able to split more member ways of Lake Superior to create more relations using the lakeshore. Examples include the <a href="http://www.openstreetmap.org/relation/6278872">City of Washburn</a> and the <a href="http://www.openstreetmap.org/relation/6135991">Apostle Islands National Lakeshore</a>. My client (iD is what I usually use (so it crashes my browser), but I even got JOSM to try and do this) almost always crashes when I'm trying to save, and this is after I have to wait a long time. Is there any way that works to split members of Lake Superior to use in relations like these without crashing my client or anyone who is able to split them in parts along the Wisconsin coast/South Shore? Thanks!</p>
+<p>I have been working in northern Wisconsin on some areas bordering Lake Superior. Some relations, such as nature reserves and administrative boundaries (counties, cities, villages, and towns/townships) use members of the relation for the lakeshore as part of them so that they completely follow the lakeshore. The problem with this is that I haven't been able to split more member ways of Lake Superior to create more relations using the lakeshore. Examples include the <a href="https://www.openstreetmap.org/relation/6278872">City of Washburn</a> and the <a href="https://www.openstreetmap.org/relation/6135991">Apostle Islands National Lakeshore</a>. My client (iD is what I usually use (so it crashes my browser), but I even got JOSM to try and do this) almost always crashes when I'm trying to save, and this is after I have to wait a long time. Is there any way that works to split members of Lake Superior to use in relations like these without crashing my client or anyone who is able to split them in parts along the Wisconsin coast/South Shore? Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lakesuperior" rel="tag" title="see questions tagged &#39;lakesuperior&#39;">lakesuperior</span> <span class="post-tag tag-link-greatlakes" rel="tag" title="see questions tagged &#39;greatlakes&#39;">greatlakes</span> <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -61,7 +61,7 @@ osqa_accepted = true
 <div id="post-53389-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I may be misunderstanding " haven't been able to split more member ways of Lake Superior to create more relations" - do you want to split the lakeshore ways of where e.g. <a href="http://www.openstreetmap.org/relation/6278872">http://www.openstreetmap.org/relation/6278872</a> reaches the lake and add those ways to the lake?</p>
+<p>I may be misunderstanding " haven't been able to split more member ways of Lake Superior to create more relations" - do you want to split the lakeshore ways of where e.g. <a href="https://www.openstreetmap.org/relation/6278872">https://www.openstreetmap.org/relation/6278872</a> reaches the lake and add those ways to the lake?</p>
 </div>
 <div id="comment-53389-info" class="comment-info">
 <span class="comment-age">(08 Dec '16, 16:58)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -85,7 +85,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>To see if it was possible, I've just done Wasburn using Potlatch 2, as described below, in <a href="http://www.openstreetmap.org/changeset/44271191">http://www.openstreetmap.org/changeset/44271191</a> and <a href="http://www.openstreetmap.org/changeset/44271209">http://www.openstreetmap.org/changeset/44271209</a> . Do you want to have a go at the other city?</p>
+<p>To see if it was possible, I've just done Wasburn using Potlatch 2, as described below, in <a href="https://www.openstreetmap.org/changeset/44271191">https://www.openstreetmap.org/changeset/44271191</a> and <a href="https://www.openstreetmap.org/changeset/44271209">https://www.openstreetmap.org/changeset/44271209</a> . Do you want to have a go at the other city?</p>
 </div>
 <div id="comment-53419-info" class="comment-info">
 <span class="comment-age">(09 Dec '16, 01:38)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -194,7 +194,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>OK, just done it in P2 for Wasburn, exactly as described above. The result is <a href="http://www.openstreetmap.org/relation/6278872#map=13/46.6735/-90.8969">http://www.openstreetmap.org/relation/6278872#map=13/46.6735/-90.8969</a> .</p>
+<p>OK, just done it in P2 for Wasburn, exactly as described above. The result is <a href="https://www.openstreetmap.org/relation/6278872#map=13/46.6735/-90.8969">https://www.openstreetmap.org/relation/6278872#map=13/46.6735/-90.8969</a> .</p>
 </div>
 <div id="comment-53417-info" class="comment-info">
 <span class="comment-age">(09 Dec '16, 01:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

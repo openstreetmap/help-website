@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The is_in query does just that. Read all about it here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>You can use <code>out geom</code> to retrieve the geometry:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Print_.28out.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Print_.28out.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Print_.28out.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Print_.28out.29</a></p>
 <p>There is not support for KML output from Overpass API. You can look at Overpass Turbo for an example of converting the output, togpx and tokml here: <a href="https://github.com/tyrasd/overpass-turbo/tree/master/libs">https://github.com/tyrasd/overpass-turbo/tree/master/libs</a></p>
 </div>
 <div id="comment-47993-info" class="comment-info">

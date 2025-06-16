@@ -48,7 +48,7 @@ osqa_accepted = false
 <p>Because usually there is no big bush cover. Scrub looks like this <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Starr_010831-0015_Morella_faya.jpg/800px-Starr_010831-0015_Morella_faya.jpg" alt="scrub" /><img src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ftrailridesinflorida.com%2Fimages%2FForest%2FFlorida-Scrub.jpg&amp;f=1" alt="scrub" /></p>
 <h2 id="it-is-not-heat">It is NOT heat</h2>
 <p>I do not think it is a hear either. Glaze (mostly) does not contain any dwarf-shrub habitat neither any low growing woody vegetation. It is rare type of vegetation in Czechia.</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/8/8a/Heath.jpg" alt="heath" /><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Heath.jpg" alt="heath" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/8/8a/Heath.jpg" alt="heath" /><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Heath.jpg" alt="heath" /></p>
 <p>Looking at the answers I see so far the problem is that probably the land surface of the glaze is not what is that important (it may be grass or earth) but rather the "land use". And again these places are very common and easily recognizable (even from aerial photos).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,8 +118,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What about <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dheath">natural=heath</a>? That's supposed to be for "dwarf-shrub habitat, characterized by open, low growing woody vegetation".</p>
-<p>Or <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dgrassland">natural=grassland</a>? Where "vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants"</p>
+<p>What about <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dheath">natural=heath</a>? That's supposed to be for "dwarf-shrub habitat, characterized by open, low growing woody vegetation".</p>
+<p>Or <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dgrassland">natural=grassland</a>? Where "vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants"</p>
 <p>Else it sounds like you're talking about bare earth (possibly covered with leaf litter or something)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -182,7 +182,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you need a multipolygon. One polygon for the outside boundary of the forest and one for the clearing. The clearing could be tagged as neuhauser suggests "grassland" or "heath" or even "scrub". this question explains multipolygon procedure. <a href="https://help.openstreetmap.org/questions/34039/newbie-question-how-to-add-island-inside-lake">https://help.openstreetmap.org/questions/34039/newbie-question-how-to-add-island-inside-lake</a></p>
+<p>I think you need a multipolygon. One polygon for the outside boundary of the forest and one for the clearing. The clearing could be tagged as neuhauser suggests "grassland" or "heath" or even "scrub". this question explains multipolygon procedure. <a href="/questions/34039/newbie-question-how-to-add-island-inside-lake">https://help.openstreetmap.org/questions/34039/newbie-question-how-to-add-island-inside-lake</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -247,7 +247,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it's not anything obvious, don't map it as anything specific. It's possible for renderers to do something useful with that. As an example, <a href="https://map.atownsend.org.uk/maps/map/map.html#zoom=17&amp;lat=53.176347&amp;lon=-1.53944">here</a> is an area that's part of <a href="http://www.openstreetmap.org/way/112568972">a forestry area</a> that has no trees that isn't anything particular. A stand of a <a href="http://www.openstreetmap.org/way/390476749">particular set of trees</a> shows up in a different colour. Obviously tree/forest mapping is <a href="https://wiki.openstreetmap.org/wiki/Forest">contentious</a>, and this approach doesn't work with all ways of mapping forests.</p>
+<p>If it's not anything obvious, don't map it as anything specific. It's possible for renderers to do something useful with that. As an example, <a href="https://map.atownsend.org.uk/maps/map/map.html#zoom=17&amp;lat=53.176347&amp;lon=-1.53944">here</a> is an area that's part of <a href="https://www.openstreetmap.org/way/112568972">a forestry area</a> that has no trees that isn't anything particular. A stand of a <a href="https://www.openstreetmap.org/way/390476749">particular set of trees</a> shows up in a different colour. Obviously tree/forest mapping is <a href="https://wiki.openstreetmap.org/wiki/Forest">contentious</a>, and this approach doesn't work with all ways of mapping forests.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -298,7 +298,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thanks for clarifying what you mean by "glade". What you picture is an area of forest that has been cut. There is an OSM tag for this: <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dclearcut">man_made=clearcut</a></p>
+<p>Thanks for clarifying what you mean by "glade". What you picture is an area of forest that has been cut. There is an OSM tag for this: <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dclearcut">man_made=clearcut</a></p>
 <p>Just so you know, what you picture does not match well with the common English meaning of glade. To help understand the difference, see the <a href="https://en.wikipedia.org/wiki/Glade_(geography)">glade</a> and <a href="https://en.wikipedia.org/wiki/Clearcutting">clearcutting</a> pages on wikipedia.</p>
 </div>
 <div class="answer-controls post-controls">

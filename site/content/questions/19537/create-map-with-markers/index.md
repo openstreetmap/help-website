@@ -127,7 +127,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want to display one or more markers on a website based map (which you can even drag and zoom) then you should have a look at the libraries <a href="http://leafletjs.com">leaflet</a> or <a href="http://openlayers.org">openlayers</a> ... on their websites there are some examples how to display markers ... in case of doubt do a google-search.</p>
-<p>Or have a look at <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a></p>
+<p>Or have a look at <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>and even more: try <a href="http://sharemap.org">http://sharemap.org</a> or <a href="http://wiki.openstreetmap.org/wiki/UMap">http://wiki.openstreetmap.org/wiki/UMap</a></p>
+<p>and even more: try <a href="http://sharemap.org">http://sharemap.org</a> or <a href="https://wiki.openstreetmap.org/wiki/UMap">https://wiki.openstreetmap.org/wiki/UMap</a></p>
 </div>
 <div id="comment-37207-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 21:51)</span> <span class="comment-user userinfo">stephan75</span>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want to set a single marker (no additional info) on the slippy map, you can use <a href="http://m.osmtools.de/">http://m.osmtools.de/</a> . It's german, unfortunately. The relevant link is in the lower left corner ("Marker setzen"). You click this link, then somewhere on the map. Afterwards, to get a permalink, you click "Permalink (nur Marker)" in the lower right corner.</p>
-<p>See also this question: <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> .</p>
+<p>See also this question: <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

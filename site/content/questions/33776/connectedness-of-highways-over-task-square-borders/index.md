@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>While editing using the OSM Task Manager, should I stop mapping highways at the square border? I mean if everyone does that who will connect all the dangling ends in the end?</p>
-<p>I have not found this in the documentation (<a href="http://wiki.openstreetmap.org/wiki/OSM_Tasking_Manager">1</a>), so please clarify.</p>
+<p>I have not found this in the documentation (<a href="https://wiki.openstreetmap.org/wiki/OSM_Tasking_Manager">1</a>), so please clarify.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-highways" rel="tag" title="see questions tagged &#39;highways&#39;">highways</span> <span class="post-tag tag-link-manager" rel="tag" title="see questions tagged &#39;manager&#39;">manager</span> <span class="post-tag tag-link-task" rel="tag" title="see questions tagged &#39;task&#39;">task</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span>

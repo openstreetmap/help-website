@@ -166,9 +166,9 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Wer kontrollieren mag; das habe ich jetzt ergänzt:</p>
-<p><a href="http://www.openstreetmap.org/node/2579643504">http://www.openstreetmap.org/node/2579643504</a></p>
-<p><a href="http://www.openstreetmap.org/node/2579651941">http://www.openstreetmap.org/node/2579651941</a></p>
-<p><a href="http://www.openstreetmap.org/node/2579653641">http://www.openstreetmap.org/node/2579653641</a></p>
+<p><a href="https://www.openstreetmap.org/node/2579643504">https://www.openstreetmap.org/node/2579643504</a></p>
+<p><a href="https://www.openstreetmap.org/node/2579651941">https://www.openstreetmap.org/node/2579651941</a></p>
+<p><a href="https://www.openstreetmap.org/node/2579653641">https://www.openstreetmap.org/node/2579653641</a></p>
 <p>(Die Adressdaten habe ich bewusst weggelassen, da sie sich bereits am Gebäude befinden und ich dem Grundsatz folge, Dinge nur einmal zu mappen, wenn es sie nur einmal gibt.)</p>
 </div>
 <div id="comment-29064-info" class="comment-info">

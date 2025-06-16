@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to use address lookup when nominatim is installed on own server"
-description = '''Hi! I&#x27;ve just managed to install Nominatim, using the description found here: http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS on a CentOS 7. It all works fine, I&#x27;ve already imported a pbf of Luxembourg for testing purposes, it seems that the search is working, but I can&#x27;t find th...'''
+description = '''Hi! I&#x27;ve just managed to install Nominatim, using the description found here: https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS on a CentOS 7. It all works fine, I&#x27;ve already imported a pbf of Luxembourg for testing purposes, it seems that the search is working, but I can&#x27;t find th...'''
 date = "2016-02-20T18:41:00Z"
 lastmod = "2016-10-13T11:51:00Z"
 weight = 48243
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi!</p>
-<p>I've just managed to install Nominatim, using the description found here: <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS">http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS</a> on a CentOS 7. It all works fine, I've already imported a pbf of Luxembourg for testing purposes, it seems that the search is working, but I can't find the address lookup section of nominatim. The section, where I can enter node, way, or relation ids, to get information about them.</p>
+<p>I've just managed to install Nominatim, using the description found here: <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS">https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS</a> on a CentOS 7. It all works fine, I've already imported a pbf of Luxembourg for testing purposes, it seems that the search is working, but I can't find the address lookup section of nominatim. The section, where I can enter node, way, or relation ids, to get information about them.</p>
 <p>On the original Nominatim server, it can be found here: <a href="http://nominatim.openstreetmap.org/lookup">http://nominatim.openstreetmap.org/lookup</a></p>
 <p>I've searched in /Nominatim/website/ directory, and I have no lookup file there, but when I check this git, they indeed have a lookup file in the website directory: <a href="https://github.com/twain47/Nominatim">https://github.com/twain47/Nominatim</a></p>
 <p>Why am I missing the lookup file, I've followed the instalation instructions on the above url, to the letter, and downloaded the latest Nominatim version 2.4.0.</p>

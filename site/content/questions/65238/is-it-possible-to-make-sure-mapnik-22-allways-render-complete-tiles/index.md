@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi</p>
 <p>I have imported whole europe into database. When I select a bounding box that covers whole norway, and start pre-rendering the tiles, I see that last tile(s) vertically within the bounding box only get the map renderd in it's upper part.</p>
 <p>It looks like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/620.png" alt="alt text" /></p>
+<p><img src="/upfiles/620.png" alt="alt text" /></p>
 <p>I would like to be able to render map on the whole tile - the data for the map is in the database. If no map data in the database, then this partly rendered tile would be okay though.</p>
 <p>This has probably to do with my values for bbox in generate_tiles.py (and extent in the xml file), which currently is like this:</p>
 <p>in generate_tiles.py: <code> bbox = (3.98,57.69,32.23,71.46) </code></p>

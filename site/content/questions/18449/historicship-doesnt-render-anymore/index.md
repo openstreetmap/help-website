@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Historic=ship doesnt render anymore"
-description = '''Strange, historic=ship and dito aircraft doesnt render anymore. Here:  http://www.openstreetmap.org/?lat=55.852146&amp;amp;lon=37.457151&amp;amp;zoom=18 Any ideas why?'''
+description = '''Strange, historic=ship and dito aircraft doesnt render anymore. Here:  https://www.openstreetmap.org/?lat=55.852146&amp;amp;lon=37.457151&amp;amp;zoom=18 Any ideas why?'''
 date = "2012-12-14T12:50:00Z"
 lastmod = "2013-02-07T15:16:00Z"
 weight = 18449
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Strange, historic=ship and dito aircraft doesnt render anymore. Here:</p>
-<p><a href="http://www.openstreetmap.org/?lat=55.852146&amp;lon=37.457151&amp;zoom=18">http://www.openstreetmap.org/?lat=55.852146&amp;lon=37.457151&amp;zoom=18</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=55.852146&amp;lon=37.457151&amp;zoom=18">https://www.openstreetmap.org/?lat=55.852146&amp;lon=37.457151&amp;zoom=18</a></p>
 <p>Any ideas why?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,8 +112,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not all values for <a href="http://wiki.openstreetmap.org/wiki/Key:historic">historic</a> are rendered on the main map unless there are other specific tags.</p>
-<p>Until July this year <a href="http://www.openstreetmap.org/browse/way/122743551/history">both</a> <a href="http://www.openstreetmap.org/browse/way/122743553/history">objects</a> also had the building tag and therefore they had been rendered (because <a href="http://wiki.openstreetmap.org/wiki/Key:building">building</a>=* is rendered). But then this tag has been removed from both objects, which seems reasonable because they are not buildings. I guess the last time you saw them has been in or before July this year.</p>
+<p>Not all values for <a href="https://wiki.openstreetmap.org/wiki/Key:historic">historic</a> are rendered on the main map unless there are other specific tags.</p>
+<p>Until July this year <a href="https://www.openstreetmap.org/browse/way/122743551/history">both</a> <a href="https://www.openstreetmap.org/browse/way/122743553/history">objects</a> also had the building tag and therefore they had been rendered (because <a href="https://wiki.openstreetmap.org/wiki/Key:building">building</a>=* is rendered). But then this tag has been removed from both objects, which seems reasonable because they are not buildings. I guess the last time you saw them has been in or before July this year.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -188,7 +188,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, I reframed my question and placed it here. I thought it would be better to place and react here. I’m surprised to notice several historic ships at this place <a href="http://www.openstreetmap.org/?lat=49.312249&amp;lon=8.447212&amp;zoom=18&amp;layers=M.">http://www.openstreetmap.org/?lat=49.312249&amp;lon=8.447212&amp;zoom=18&amp;layers=M.</a> Why are these vessels visible, just because they’ve been tagged tourism attraction besides historic or because they happened to be out of the water ? And would that be the solution for the reappearance of the ships Maxmeles asked about ? Or is this just a creative way of tagging out of the Wiki ? Greetz</p>
+<p>Hi, I reframed my question and placed it here. I thought it would be better to place and react here. I’m surprised to notice several historic ships at this place <a href="https://www.openstreetmap.org/?lat=49.312249&amp;lon=8.447212&amp;zoom=18&amp;layers=M.">https://www.openstreetmap.org/?lat=49.312249&amp;lon=8.447212&amp;zoom=18&amp;layers=M.</a> Why are these vessels visible, just because they’ve been tagged tourism attraction besides historic or because they happened to be out of the water ? And would that be the solution for the reappearance of the ships Maxmeles asked about ? Or is this just a creative way of tagging out of the Wiki ? Greetz</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = false
 <div id="post-19691-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In <a href="http://www.openstreetmap.org/browse/way/75490849">this</a> case I'd guess that it was tourism=attraction that's causing it to be rendered, and in both these cases probably wouldn't be "tagging incorrectly for the renderer".</p>
+<p>In <a href="https://www.openstreetmap.org/browse/way/75490849">this</a> case I'd guess that it was tourism=attraction that's causing it to be rendered, and in both these cases probably wouldn't be "tagging incorrectly for the renderer".</p>
 <p>However, I wouldn't obsess too much about what appears on the standard map and what doesn't; on any sane map there are bound to be things that don't get rendered, and there are services (<a href="http://osm.dumoulin63.net/xapiviewer/?zoom=14&amp;lat=55.85215&amp;lon=37.45715&amp;layers=B0T&amp;icon=icons%2Fpoi_point_of_interest.n.32.png&amp;request=aircraft%3Atype%3Dground_effect_vehicle">like this one</a>) that can show even the most unusual tags.</p>
 </div>
 <div id="comment-19691-info" class="comment-info">

@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It looks like you're going to have to make some assumptions about what kind of waterway is navigable and what isn't. Only a few waterways have been tagged as <code>navigable=*</code>, possibly because it's hard to ensure the <a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a> of such a tag.</p>
+<p>It looks like you're going to have to make some assumptions about what kind of waterway is navigable and what isn't. Only a few waterways have been tagged as <code>navigable=*</code>, possibly because it's hard to ensure the <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a> of such a tag.</p>
 <p>Many waterways have been tagged with legal permissions using the <code>boat=*</code> tag, but obviously this says nothing about the suitability of such waterways for navigation.</p>
 </div>
 <div class="answer-controls post-controls">

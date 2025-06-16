@@ -106,7 +106,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Check out <a href="http://www.learnosm.org/beginners-guide/chapter-3-getting-started-with-josm/">Chapter 3 of learnosm.org 'Getting Started With JOSM'</a> and the nice <strong>video tutorial at the bottom of that page</strong>, which also shows installing java on a fresh windows machine.</p>
 <p>It should not be necessary to register a java account, although there may be some unhelpful marketing nonsense trying to direct you to do this. Try to skip those prompts. ...But actually before you do that, try just downloading <a href="http://josm.openstreetmap.de/josm-tested.jar">josm-test.jar</a> and double-clicking this file. Many machines have java on them already.</p>
-<p>There's more info on the osm wiki including <a href="http://wiki.openstreetmap.org/wiki/JOSM/Windows">specific notes for installing on windows</a>.</p>
+<p>There's more info on the osm wiki including <a href="https://wiki.openstreetmap.org/wiki/JOSM/Windows">specific notes for installing on windows</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

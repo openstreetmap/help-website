@@ -101,7 +101,7 @@ What I understand by README file- this is whole application to serve tiles, but 
 <div id="post-79277-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See laso: <a href="https://help.openstreetmap.org/questions/65257/how-to-convert-yml-to-mml-file">https://help.openstreetmap.org/questions/65257/how-to-convert-yml-to-mml-file</a></p>
+<p>See laso: <a href="/questions/65257/how-to-convert-yml-to-mml-file">https://help.openstreetmap.org/questions/65257/how-to-convert-yml-to-mml-file</a></p>
 </div>
 <div id="comment-79277-info" class="comment-info">
 <span class="comment-age">(15 Mar '21, 20:35)</span> <span class="comment-user userinfo">Marcos Dione</span>

@@ -172,7 +172,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The way <a href="http://www.openstreetmap.org/browse/way/40792177">HaGat</a> does not have any address information. There is no way looking at the OSM data to know where "HaGat 10" is. To find out more about address tags go to the <a href="http://wiki.openstreetmap.org/wiki/Address">wiki</a> and look at examples in the area. Addresses will show up on mapnik and osmarender.</p>
+<p>The way <a href="https://www.openstreetmap.org/browse/way/40792177">HaGat</a> does not have any address information. There is no way looking at the OSM data to know where "HaGat 10" is. To find out more about address tags go to the <a href="https://wiki.openstreetmap.org/wiki/Address">wiki</a> and look at examples in the area. Addresses will show up on mapnik and osmarender.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

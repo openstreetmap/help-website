@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Adding a hospital"
-description = '''Hi there, I&#x27;ve added the Evelina Children&#x27;s Hospital (which is part of St Thomas&#x27; hospital) in London. You can view it here: http://www.openstreetmap.org/?lat=51.498655&amp;amp;lon=-0.118001&amp;amp;zoom=18 It is just south of the two St Thomas&#x27; Hospital buildings. I have saved my edit but the hospital I&#x27;ve...'''
+description = '''Hi there, I&#x27;ve added the Evelina Children&#x27;s Hospital (which is part of St Thomas&#x27; hospital) in London. You can view it here: https://www.openstreetmap.org/?lat=51.498655&amp;amp;lon=-0.118001&amp;amp;zoom=18 It is just south of the two St Thomas&#x27; Hospital buildings. I have saved my edit but the hospital I&#x27;ve...'''
 date = "2011-06-06T19:42:00Z"
 lastmod = "2011-06-06T21:24:00Z"
 weight = 5591
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there,</p>
-<p>I've added the Evelina Children's Hospital (which is part of St Thomas' hospital) in London. You can view it here: <a href="http://www.openstreetmap.org/?lat=51.498655&amp;lon=-0.118001&amp;zoom=18">http://www.openstreetmap.org/?lat=51.498655&amp;lon=-0.118001&amp;zoom=18</a> It is just south of the two St Thomas' Hospital buildings. I have saved my edit but the hospital I've added only appears in edit mode and only as an outline.</p>
+<p>I've added the Evelina Children's Hospital (which is part of St Thomas' hospital) in London. You can view it here: <a href="https://www.openstreetmap.org/?lat=51.498655&amp;lon=-0.118001&amp;zoom=18">https://www.openstreetmap.org/?lat=51.498655&amp;lon=-0.118001&amp;zoom=18</a> It is just south of the two St Thomas' Hospital buildings. I have saved my edit but the hospital I've added only appears in edit mode and only as an outline.</p>
 <p>What would I be doing wrong?</p>
 <p>Cheers.</p>
 <p>Chris</p>

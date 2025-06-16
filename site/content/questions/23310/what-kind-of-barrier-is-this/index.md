@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>What should I call this barrier here?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/barrier.png" alt="barrier example sketch" /></p>
+<p><img src="/upfiles/barrier.png" alt="barrier example sketch" /></p>
 <p><em>Location on Geolocation.ws redacted because it includes Google map and aerial images.</em></p>
-<p>It's mostly like a barrier:<a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier">cycle_barrier</a>, except that it is used to block cars, not bikes.</p>
+<p>It's mostly like a barrier:<a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier">cycle_barrier</a>, except that it is used to block cars, not bikes.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span>
@@ -160,7 +160,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use this <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard</a> and tag foot=yes and other modes of transport according to signage.</p>
+<p>I would use this <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dbollard</a> and tag foot=yes and other modes of transport according to signage.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

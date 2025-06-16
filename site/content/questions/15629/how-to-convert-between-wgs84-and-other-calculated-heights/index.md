@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-15631-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This was previously added as an answer to <a href="http://help.openstreetmap.org/questions/15397/elevation-of-irish-mountains-why-the-discrepancy-osmwikipedia">this</a> question, but is really a question in its own right.</p>
+<p>This was previously added as an answer to <a href="/questions/15397/elevation-of-irish-mountains-why-the-discrepancy-osmwikipedia">this</a> question, but is really a question in its own right.</p>
 </div>
 <div id="comment-15631-info" class="comment-info">
 <span class="comment-age">(29 Aug '12, 09:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-15632-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>An example of an item with different elevations in different co-ordinate systems is <a href="http://www.openstreetmap.org/browse/node/332372557">Croagh Patrick</a> in the west of Ireland.</p>
+<p>An example of an item with different elevations in different co-ordinate systems is <a href="https://www.openstreetmap.org/browse/node/332372557">Croagh Patrick</a> in the west of Ireland.</p>
 </div>
 <div id="comment-15632-info" class="comment-info">
 <span class="comment-age">(29 Aug '12, 10:05)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

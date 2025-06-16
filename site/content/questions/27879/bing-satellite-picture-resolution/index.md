@@ -202,7 +202,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Var sa god og lese dette probleme og svare liste <a href="https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=bing+arials&amp;Submit=Search&amp;t=question">https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=bing+arials&amp;Submit=Search&amp;t=question</a> Med Google vare det ogsa a problem, nar de komme naer ved dette bild. Der ikke god og brukke bild av Google far bygning OSM ! Lese her <a href="http://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">http://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth</a> og vaer sa god og lese de <a href="http://wiki.openstreetmap.org/wiki/Sv:Main_Page">http://wiki.openstreetmap.org/wiki/Sv:Main_Page</a> Velkommen i OSM</p>
+<p>Var sa god og lese dette probleme og svare liste <a href="https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=bing+arials&amp;Submit=Search&amp;t=question">https://help.openstreetmap.org/search/?csrfmiddlewaretoken=05c414b585eec063c16f1338f1d620e9&amp;q=bing+arials&amp;Submit=Search&amp;t=question</a> Med Google vare det ogsa a problem, nar de komme naer ved dette bild. Der ikke god og brukke bild av Google far bygning OSM ! Lese her <a href="https://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">https://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth</a> og vaer sa god og lese de <a href="https://wiki.openstreetmap.org/wiki/Sv:Main_Page">https://wiki.openstreetmap.org/wiki/Sv:Main_Page</a> Velkommen i OSM</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

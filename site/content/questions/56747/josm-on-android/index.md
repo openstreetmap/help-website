@@ -126,7 +126,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The closest alternative is <a href="http://wiki.openstreetmap.org/wiki/Vespucci">vespucci</a> but you might want to check <a href="http://wiki.openstreetmap.org/wiki/Android">the whole list</a>.</p>
+<p>The closest alternative is <a href="https://wiki.openstreetmap.org/wiki/Vespucci">vespucci</a> but you might want to check <a href="https://wiki.openstreetmap.org/wiki/Android">the whole list</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

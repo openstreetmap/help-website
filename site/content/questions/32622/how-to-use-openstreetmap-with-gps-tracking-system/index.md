@@ -149,7 +149,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>At least <a href="http://opengts.sourceforge.net/">http://opengts.sourceforge.net/</a> likely does what you want and supports an OSM based map (naturally you should add attribution to the map if you are building a public service).</p>
-<p>There naturally may be other solutions, please have a look at <a href="https://help.openstreetmap.org/tags/tracking/">https://help.openstreetmap.org/tags/tracking/</a> , <a href="http://wiki.openstreetmap.org/wiki/Software">http://wiki.openstreetmap.org/wiki/Software</a> and naturally do a search with google.</p>
+<p>There naturally may be other solutions, please have a look at <a href="https://help.openstreetmap.org/tags/tracking/">https://help.openstreetmap.org/tags/tracking/</a> , <a href="https://wiki.openstreetmap.org/wiki/Software">https://wiki.openstreetmap.org/wiki/Software</a> and naturally do a search with google.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

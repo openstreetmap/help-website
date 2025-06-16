@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>First post here.</p>
 <p>How so I split a single line which is two separate trails?</p>
 <p>WV-Mike</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM-little_ct_Explorer.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/OSM-little_ct_Explorer.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-line" rel="tag" title="see questions tagged &#39;line&#39;">line</span> <span class="post-tag tag-link-split" rel="tag" title="see questions tagged &#39;split&#39;">split</span>

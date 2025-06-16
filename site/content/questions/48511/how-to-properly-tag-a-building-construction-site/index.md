@@ -42,8 +42,8 @@ osqa_accepted = true
 <div class="question-body">
 <p>I am confused by the documentation, so I am asking here:</p>
 <ul>
-<li>In <a href="http://wiki.openstreetmap.org/wiki/Key:construction">key:construction</a>, I am told to use <code>building=construction</code> and <code>construction=value</code>;</li>
-<li>In <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">Tag:landuse=construction</a>, it looks like the right method would be to use <code>landuse=construction</code> and <code>construction=value</code>, or just <code>landuse=construction</code> on its own.</li>
+<li>In <a href="https://wiki.openstreetmap.org/wiki/Key:construction">key:construction</a>, I am told to use <code>building=construction</code> and <code>construction=value</code>;</li>
+<li>In <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dconstruction">Tag:landuse=construction</a>, it looks like the right method would be to use <code>landuse=construction</code> and <code>construction=value</code>, or just <code>landuse=construction</code> on its own.</li>
 </ul>
 <p>So, if I understand well, it means that I should use the first method (<code>building=construction</code> + <code>construction=yes</code>) if the area will be one building when completed (<code>building=yes</code>), and the second method (<code>landuse=construction</code> + <code>construction=value</code>) if I am tagging a bigger area that will be tagged with <code>landuse=value</code> when completed (i.e. an area that would include several buildings) – or just with <code>landuse=construction</code> if I am not sure of the fate of the area. Is this right?</p>
 <p>In other words, the use <code>landuse=construction</code> + <code>construction=building</code> is not correct as there is no such thing as <code>landuse=building</code>, right?</p>
@@ -152,7 +152,7 @@ osqa_accepted = true
 <div id="post-48579-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5607/stephane-guillou"></a><a href="http://help.openstreetmap.org/users/5607/stephane-guillou">@stephane-guillou</a>: fine, I will try to have a look at those on the weekend. Update: I have tried to make those three pages more clear, please check: <span>Construction</span>, <span>landuse=construction</span>, <span>Key:construction</span>.</p>
+<p><a href="https://help.openstreetmap.org/users/5607/stephane-guillou"></a><a href="https://help.openstreetmap.org/users/5607/stephane-guillou">@stephane-guillou</a>: fine, I will try to have a look at those on the weekend. Update: I have tried to make those three pages more clear, please check: <span>Construction</span>, <span>landuse=construction</span>, <span>Key:construction</span>.</p>
 </div>
 <div id="comment-48579-info" class="comment-info">
 <span class="comment-age">(08 Mar '16, 20:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

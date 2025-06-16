@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>while working with tile server on ubuntu 14.04 at time of manually building the tile server at the time of rendering applying the following command sudo -u username renderd -f -c /usr/local/etc/renderd.conf <img src="http://help.openstreetmap.org/upfiles/Screenshot_from_2015-01-29_23:18:03.png" alt="alt text" /></p>
+<p>while working with tile server on ubuntu 14.04 at time of manually building the tile server at the time of rendering applying the following command sudo -u username renderd -f -c /usr/local/etc/renderd.conf <img src="/upfiles/Screenshot_from_2015-01-29_23:18:03.png" alt="alt text" /></p>
 <p>Can anyone suggest me ? actually its working on my local server but when i run it on my experimental server its shows " SOCKET BIND FAIL "</p>
 </div>
 <div id="question-tags" class="tags-container tags">

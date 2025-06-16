@@ -149,7 +149,7 @@ osqa_accepted = false
 <p>Thanks for your answer. I do see an output line:</p>
 <p>Step: 11 // --&gt; Map long/lat bbox: Box2d(2.53474181678,51.0,7.46525818322,54.0)</p>
 <p>I presume that is the notification of stretching it up.</p>
-<p>I am still puzzled about the image sizes you mention. In the past I have used (downloaded) OSM maps (scale ~1:500000), but there the img height depends on which latitude you are on, while all x values having the same nr of pix size. This made navigation possible using the OSM equations (<a href="http://wiki.openstreetmap.org/wiki/Mercator).">http://wiki.openstreetmap.org/wiki/Mercator).</a></p>
+<p>I am still puzzled about the image sizes you mention. In the past I have used (downloaded) OSM maps (scale ~1:500000), but there the img height depends on which latitude you are on, while all x values having the same nr of pix size. This made navigation possible using the OSM equations (<a href="https://wiki.openstreetmap.org/wiki/Mercator).">https://wiki.openstreetmap.org/wiki/Mercator).</a></p>
 <p>So, I want to say to nik2img: let one longitude be 795 pix; make a map like above (--bbox 4 51 6 54) with width 2x795 pix and height .... calculate it for I don't know.</p>
 <p>Do you think this would be possible?</p>
 </div>

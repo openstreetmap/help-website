@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>I'm trying to build the intersection graph of road network using OSM database. I've used the solution proposed <a href="https://help.openstreetmap.org/questions/15442/detection-of-intersections-in-the-maps">here</a> to extract the intersections for mainroad. Now I want to assign links between each two adjacent intersections and I can't find an algorithm to detect all these edges. Any hint or suggestion would be highly appreciated.<br />
+<p>I'm trying to build the intersection graph of road network using OSM database. I've used the solution proposed <a href="/questions/15442/detection-of-intersections-in-the-maps">here</a> to extract the intersections for mainroad. Now I want to assign links between each two adjacent intersections and I can't find an algorithm to detect all these edges. Any hint or suggestion would be highly appreciated.<br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">

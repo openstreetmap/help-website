@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You shouldn't stack them on top of each other. Use a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> for the farmland, so the other landuses are holes in it. Go to <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Potlatch_2_example">the bottom of the page</a> for a practical example.</p>
+<p>You shouldn't stack them on top of each other. Use a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon</a> for the farmland, so the other landuses are holes in it. Go to <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Potlatch_2_example">the bottom of the page</a> for a practical example.</p>
 <hr />
 <p>Reply to the first comment:</p>
 <p>If you have one big area of farmland and inside it are ten farmyards and twenty little patches of wood, then however you are going to map it, this requires you to draw 31 polygons. The multipolygon adds 1 (one) relation to it. One relation does not constitute a huge amount of data compared to the 31 other objects you have to map anyway.</p>

@@ -134,7 +134,7 @@ One Answer:
   &lt;tag k=&quot;species&quot; v=&quot;olea europaea&quot;/&gt;
   &lt;tag k=&quot;nature&quot; v=&quot;tree&quot;/&gt;
 &lt;/way&gt;</code></pre>
-<p>I have uploaded your data (changeset <a href="http://www.openstreetmap.org/browse/changeset/18340844">http://www.openstreetmap.org/browse/changeset/18340844</a>), please check that it as you expect.</p>
+<p>I have uploaded your data (changeset <a href="https://www.openstreetmap.org/browse/changeset/18340844">https://www.openstreetmap.org/browse/changeset/18340844</a>), please check that it as you expect.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

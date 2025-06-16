@@ -207,7 +207,7 @@ One Answer:
 <p>Having a quick look at the first mentioned, 20110925112722, and your SQL scripts, the line</p>
 <pre><code>rename_column :current_way_nodes, :id, :way_id</code></pre>
 <p>suggests to me that the current_way_nodes table should have a way_id field, and yours doesn't. This was just the first issue I found.</p>
-<p>The error when validation is switched off suggests you are trying to violate a unique constraint - is there some data in the tables already? The id in the error suggests it is <a href="http://www.openstreetmap.org/node/26032956">this node</a>.</p>
+<p>The error when validation is switched off suggests you are trying to violate a unique constraint - is there some data in the tables already? The id in the error suggests it is <a href="https://www.openstreetmap.org/node/26032956">this node</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

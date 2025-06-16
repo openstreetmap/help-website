@@ -71,7 +71,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Yes, this is a very frequently asked question: <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>Yes, this is a very frequently asked question: <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div id="comment-7754-info" class="comment-info">
 <span class="comment-age">(09 Sep '11, 12:09)</span> <span class="comment-user userinfo">Jonathan Ben...</span>

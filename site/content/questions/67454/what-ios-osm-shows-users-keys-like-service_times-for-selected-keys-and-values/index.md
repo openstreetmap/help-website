@@ -129,7 +129,7 @@ One Answer:
 <div id="post-67470-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>OsmAnd also shows <code>service_times</code>, at least the Android app version: <img src="https://help.openstreetmap.org/upfiles/photo_2019-01-07_08-46-36_IXqEOWr.jpg" alt="service_times" /></p>
+<p>OsmAnd also shows <code>service_times</code>, at least the Android app version: <img src="/upfiles/photo_2019-01-07_08-46-36_IXqEOWr.jpg" alt="service_times" /></p>
 </div>
 <div id="comment-67470-info" class="comment-info">
 <span class="comment-age">(07 Jan '19, 07:49)</span> <span class="comment-user userinfo">scai ♦</span>

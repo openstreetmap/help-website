@@ -309,7 +309,7 @@ The newer filter selects all elements that have been changed since the given dat
 <div id="post-54339-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I expect you cannot extract a moment in time as mentioned above. Maybe the only way to do it is to get the planet file for particular dates <a href="http://planet.osm.org/planet/">http://planet.osm.org/planet/</a> Then extract the area you need using Osmosis <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes</a> Then compare in Qgis.</p>
+<p>I expect you cannot extract a moment in time as mentioned above. Maybe the only way to do it is to get the planet file for particular dates <a href="http://planet.osm.org/planet/">http://planet.osm.org/planet/</a> Then extract the area you need using Osmosis <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes</a> Then compare in Qgis.</p>
 </div>
 <div id="comment-54339-info" class="comment-info">
 <span class="comment-age">(28 Jan '17, 14:46)</span> <span class="comment-user userinfo">nevw</span>

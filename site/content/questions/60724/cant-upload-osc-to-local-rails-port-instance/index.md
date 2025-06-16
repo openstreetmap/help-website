@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The versions of the objects in your .osc have somehow been incremented and no longer match what's in the database. As per <a href="http://wiki.openstreetmap.org/wiki/Elements">Elements</a>:</p>
+<p>The versions of the objects in your .osc have somehow been incremented and no longer match what's in the database. As per <a href="https://wiki.openstreetmap.org/wiki/Elements">Elements</a>:</p>
 <p>"Version: Integer - The edit version of the object. Newly created objects start at version 1 and the value is incremented by the server when a client uploads a new version of the object. <strong>The server will reject a new version of an object if the version sent by the client does not match the current version of the object in the database.</strong>"</p>
 <p>Once you upload the modified objects with the same version as in the database, the server will then increment the version number for you.</p>
 </div>

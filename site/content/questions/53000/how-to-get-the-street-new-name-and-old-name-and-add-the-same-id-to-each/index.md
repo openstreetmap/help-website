@@ -110,7 +110,7 @@ osqa_accepted = false
 <div id="post-53361-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12994/mik77">@Mik77</a> The 2nd comment means something like "Stalingrad" &amp; "Volgograd"?</p>
+<p><a href="https://help.openstreetmap.org/users/12994/mik77">@Mik77</a> The 2nd comment means something like "Stalingrad" &amp; "Volgograd"?</p>
 </div>
 <div id="comment-53361-info" class="comment-info">
 <span class="comment-age">(08 Dec '16, 10:01)</span> <span class="comment-user userinfo">Wetitpig0</span>

@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-49082-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Note that we have great instructions for Potlatch at <a href="https://help.openstreetmap.org/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">https://help.openstreetmap.org/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch</a> - this is specifically about iD</p>
+<p>Note that we have great instructions for Potlatch at <a href="/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">https://help.openstreetmap.org/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch</a> - this is specifically about iD</p>
 </div>
 <div id="comment-49082-info" class="comment-info">
 <span class="comment-age">(07 Apr '16, 10:35)</span> <span class="comment-user userinfo">Richlv</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM-Inspector, View Multipolygon, touching-inner-rings: are these errors or what is it that osm-inspector wants to tell us?"
-description = '''I use osm-inspector not only to verify my own work but to correct that of other contributors if they are within my areas of interest. I far as I understand the Multipolygon instructions touching-inner-rings are allowed in OSM in a multipolygon contruction: See http://wiki.openstreetmap.org/wiki/Rela...'''
+description = '''I use osm-inspector not only to verify my own work but to correct that of other contributors if they are within my areas of interest. I far as I understand the Multipolygon instructions touching-inner-rings are allowed in OSM in a multipolygon contruction: See https://wiki.openstreetmap.org/wiki/Rela...'''
 date = "2012-04-29T10:50:00Z"
 lastmod = "2012-05-03T06:43:00Z"
 weight = 12416
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I use osm-inspector not only to verify my own work but to correct that of other contributors if they are within my areas of interest.</p>
-<p>I far as I understand the Multipolygon instructions touching-inner-rings are allowed in OSM in a multipolygon contruction: See <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Touching_inner_rings">http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Touching_inner_rings</a></p>
+<p>I far as I understand the Multipolygon instructions touching-inner-rings are allowed in OSM in a multipolygon contruction: See <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Touching_inner_rings">https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Touching_inner_rings</a></p>
 <p>However the osm-inspector displays touching-inner-rings with the comment <code>[broken/lost image here]</code></p>
 <p>Are these then errors and if not what is the osmi trying to tell me?</p>
 </div>

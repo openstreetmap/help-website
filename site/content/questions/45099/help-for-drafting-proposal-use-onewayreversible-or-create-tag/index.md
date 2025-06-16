@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Discussion of proposals is not really suitable for this site. As explained in the <a href="https://help.openstreetmap.org/faq/">FAQ</a>, help.openstreetmap.org is for questions which have (at least in theory) a single, correct answer - something like <a href="https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">"How to make a hole in an area, eg woodland"</a>.</p>
+<p>Discussion of proposals is not really suitable for this site. As explained in the <a href="https://help.openstreetmap.org/faq/">FAQ</a>, help.openstreetmap.org is for questions which have (at least in theory) a single, correct answer - something like <a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">"How to make a hole in an area, eg woodland"</a>.</p>
 <p>Discussions should generally go on one of the <a href="https://lists.openstreetmap.org/">mailing lists</a>, or on IRC.</p>
 <p>For proposals, you could also just create the proposal. The whole point of a proposal is to initiate a discussion, so just propose what seems best to you, and indicate what alternatives you rejected, and why. Then all interested participants can discuss what will work best - that's why every Wiki page has a discussion page.</p>
 <p>Good luck with your proposal!</p>

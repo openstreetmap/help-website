@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check out the (outdated) <a href="http://wiki.openstreetmap.org/wiki/Develop/Frameworks#Single_Purpose_Client_Libraries_for_API0.6_.28the_RESTful_API.29">list of clients</a> on the wiki, and have a look at Ken Guest's <a href="https://github.com/kenguest/Services_Openstreetmap">Services_Openstreetmap</a> code.</p>
+<p>Check out the (outdated) <a href="https://wiki.openstreetmap.org/wiki/Develop/Frameworks#Single_Purpose_Client_Libraries_for_API0.6_.28the_RESTful_API.29">list of clients</a> on the wiki, and have a look at Ken Guest's <a href="https://github.com/kenguest/Services_Openstreetmap">Services_Openstreetmap</a> code.</p>
 <p>If you build something that can be used to edit OSM, please make use of the OAuth scheme, so that users of your web interface have to register with OSM first and their edits are later submitted under their own account. Web services where edits from all users are submitted under the same account can be a problem because OSM has no means to identify or contact the individual user.</p>
 </div>
 <div class="answer-controls post-controls">

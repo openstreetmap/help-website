@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you mean with the new release of OSM_SRTM_Germany file then probably some water related way is not complete on database. It might be a coastline, a lake, or river. As such things usually cause some "flooding" on the <a href="http://www.openstreetmap.org/">main map</a> you can try to find that place yourself.</p>
+<p>If you mean with the new release of OSM_SRTM_Germany file then probably some water related way is not complete on database. It might be a coastline, a lake, or river. As such things usually cause some "flooding" on the <a href="https://www.openstreetmap.org/">main map</a> you can try to find that place yourself.</p>
 <p>Also note that these things are usually fixed quite soon so it might be fixed already and you only have to wait till the next release of OSM_SRTM_Germany.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -100,7 +100,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Those packages suggest that you've set up a rendering server, not an API that people can use for map editing. You still haven't explained what your ultimate goal is.</p>
-<p>Just checking - have you read <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> and the various links from it?</p>
+<p>Just checking - have you read <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a> and the various links from it?</p>
 </div>
 <div id="comment-47795-info" class="comment-info">
 <span class="comment-age">(01 Feb '16, 13:11)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

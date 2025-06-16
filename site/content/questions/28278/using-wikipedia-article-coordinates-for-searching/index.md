@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using Wikipedia article-coordinates for searching"
-description = '''It would be nice if i could search for tourist attraction in osm. therefor could be used the wikipedia articel coordinates. Example: Search for &quot;Römersteinbruch Aflenz&quot; Then show a link to: http://www.openstreetmap.org/index.html?mlat=46.749167&amp;amp;mlon=15.549444&amp;amp;zoom=15#map=15/46.7492/15.5494 u...'''
+description = '''It would be nice if i could search for tourist attraction in osm. therefor could be used the wikipedia articel coordinates. Example: Search for &quot;Römersteinbruch Aflenz&quot; Then show a link to: https://www.openstreetmap.org/index.html?mlat=46.749167&amp;amp;mlon=15.549444&amp;amp;zoom=15#map=15/46.7492/15.5494 u...'''
 date = "2013-11-20T12:03:00Z"
 lastmod = "2013-11-22T09:20:00Z"
 weight = 28278
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>It would be nice if i could search for tourist attraction in osm. therefor could be used the wikipedia articel coordinates.</p>
-<p>Example: Search for "Römersteinbruch Aflenz" Then show a link to: <a href="http://www.openstreetmap.org/index.html?mlat=46.749167&amp;mlon=15.549444&amp;zoom=15#map=15/46.7492/15.5494">http://www.openstreetmap.org/index.html?mlat=46.749167&amp;mlon=15.549444&amp;zoom=15#map=15/46.7492/15.5494</a> using the coordinates in: <a href="http://de.wikipedia.org/wiki/R%C3%B6mersteinbruch_Aflenz">http://de.wikipedia.org/wiki/R%C3%B6mersteinbruch_Aflenz</a></p>
+<p>Example: Search for "Römersteinbruch Aflenz" Then show a link to: <a href="https://www.openstreetmap.org/index.html?mlat=46.749167&amp;mlon=15.549444&amp;zoom=15#map=15/46.7492/15.5494">https://www.openstreetmap.org/index.html?mlat=46.749167&amp;mlon=15.549444&amp;zoom=15#map=15/46.7492/15.5494</a> using the coordinates in: <a href="http://de.wikipedia.org/wiki/R%C3%B6mersteinbruch_Aflenz">http://de.wikipedia.org/wiki/R%C3%B6mersteinbruch_Aflenz</a></p>
 <p>if its not the right place here, please help me find the right place for this matter.</p>
 <p>best wishes moritz</p>
 </div>
@@ -109,7 +109,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Using Wikipedia's "name – geocoordinate" database for search results is only a matter of the search engine. You could program your own search engine and use the Wikipedia database as one of its sources. You can see all the Wikipedia articles (which have coordinates attached) on the iframe map on top of each article (click the OSM icon to open it). Same with the globe icon on another background map. See <span>Wikipedia:WikiProjekt_Georeferenzierung/Anwendungen</span> (German) for more applications. And, in fact here is the service you are imagining: <a href="http://www.geonames.org/wikipedia.html">http://www.geonames.org/wikipedia.html</a> (except that it does not seem to use OSM maps).</p>
 <p>Instead <em>we at OSM</em> collect our own data which is <span>used by many services</span> (maybe one of those even offers showing Wikipedia's coordinates). The Römersteinbruch could also be added to our OSM data (currently it seems that it is not), but we are not allowed to copy Wikipedia's coordinates (copyright).</p>
-<p>However, we also map such objects like historic quarries or other tourist attractions. <a href="http://www.openstreetmap.org/browse/way/42716614">Example</a>. You also can search our database for it (although the search on osm.org is limited - you will also notice that there is no routing, but many other OSM-based services offer it). We also add a reference to our objects if they have an wikipedia article. <a href="http://www.openstreetmap.org/browse/node/1442638546">Example</a>.</p>
+<p>However, we also map such objects like historic quarries or other tourist attractions. <a href="https://www.openstreetmap.org/browse/way/42716614">Example</a>. You also can search our database for it (although the search on osm.org is limited - you will also notice that there is no routing, but many other OSM-based services offer it). We also add a reference to our objects if they have an wikipedia article. <a href="https://www.openstreetmap.org/browse/node/1442638546">Example</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -164,14 +164,14 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Your hint refers to 2 aspects:</p>
 <p><strong>1. You like to find touristic destinations:</strong><br />
-That can already be done by a variety of <a href="wiki.openstreetmap.org/wiki/Software">tools</a> and <a href="http://wiki.openstreetmap.org/wiki/Maps">services</a>. Just to point to a few:<br />
+That can already be done by a variety of <a href="wiki.openstreetmap.org/wiki/Software">tools</a> and <a href="https://wiki.openstreetmap.org/wiki/Maps">services</a>. Just to point to a few:<br />
 <a href="http://maps.skobbler.de"></a><a href="http://maps.skobbler.de">http://maps.skobbler.de</a><br />
 <a href="http://openstreetbrowser.org"></a><a href="http://openstreetbrowser.org">http://openstreetbrowser.org</a><br />
-You can also query using the searchbox at www.osm.org via <em>'artwork near Berlin'</em> (see <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>).<br />
+You can also query using the searchbox at www.osm.org via <em>'artwork near Berlin'</em> (see <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>).<br />
 This IMHO not related to Wikipedia articles itself.<br />
 </p>
 <p><strong>2. You want to find Wikipedia objects:</strong><br />
-We have a good cooperation between WP and the OSM community. We enrich OSM objects using the <a href="http://wiki.openstreetmap.org/wiki/Key:wikipedia">wikipedia=* key</a> to refer to the articles. This informations get used by WP to visualize also the surroundings and not just point coordinates: <a href="http://wiki.openstreetmap.org/wiki/WIWOSM">WIWOSM</a>.<br />
+We have a good cooperation between WP and the OSM community. We enrich OSM objects using the <a href="https://wiki.openstreetmap.org/wiki/Key:wikipedia">wikipedia=* key</a> to refer to the articles. This informations get used by WP to visualize also the surroundings and not just point coordinates: <a href="https://wiki.openstreetmap.org/wiki/WIWOSM">WIWOSM</a>.<br />
 From this data benefit also all other OSM projects that make use of this tag, as for example <a href="http://openlinkmap.org"></a><a href="http://openlinkmap.org">http://openlinkmap.org</a></p>
 </div>
 <div class="answer-controls post-controls">

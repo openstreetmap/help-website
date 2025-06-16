@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I just completed my first planet download and seem to only have some issues with the labeling of North America. <img src="https://help.openstreetmap.org/upfiles/NorthAmericaProblem.PNG" alt="alt text" /></p>
+<p>I just completed my first planet download and seem to only have some issues with the labeling of North America. <img src="/upfiles/NorthAmericaProblem.PNG" alt="alt text" /></p>
 <p>Canada is not labeled, the United States is only labeled in Alaska and the Hudson Bay is in the wrong location. I am using the carto osm style, version 4.22.</p>
 <p>EDIT: Lake Ontario seems to also be missing, there is just a white blob where it is supposed to be.</p>
 </div>

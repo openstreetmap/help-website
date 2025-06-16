@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Golf_course#Paths_etc.">wiki</a> the accepted way to tag paths for golf carts is highway=track. Paths which are not usable by golf carts should be tagged highway=footway.</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Golf_course#Paths_etc.">wiki</a> the accepted way to tag paths for golf carts is highway=track. Paths which are not usable by golf carts should be tagged highway=footway.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

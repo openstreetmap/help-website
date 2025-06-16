@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Farm" title="Farm - OpenSteetMap Wiki">wiki entry for farm</a> suggests that the main farm buildings should be tagged with <code>landuse=farmyard</code> with the surrounding fields tagged as <code>landuse=farm</code> or <code>landuse=farmland</code></p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/8/86/Landuse%3Dfarmyard.jpg/500px-Landuse%3Dfarmyard.jpg" alt="Farmward depiction from Wiki" /></p>
-<p>However I see that there is a <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dfarm"><code>place=farm</code> tag suggested in the wiki</a> so when should this be used?</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Farm" title="Farm - OpenSteetMap Wiki">wiki entry for farm</a> suggests that the main farm buildings should be tagged with <code>landuse=farmyard</code> with the surrounding fields tagged as <code>landuse=farm</code> or <code>landuse=farmland</code></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/8/86/Landuse%3Dfarmyard.jpg/500px-Landuse%3Dfarmyard.jpg" alt="Farmward depiction from Wiki" /></p>
+<p>However I see that there is a <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dfarm"><code>place=farm</code> tag suggested in the wiki</a> so when should this be used?</p>
 <p>Experimenting shows that Mapnik does not render <code>place=farm</code>, but Osmarender does. Both render <code>landuse=farmyard</code> and display a name at close zoom levels.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,8 +108,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard">landuse=farmyard</a> with a polygon around the general area of the clutch of buildings making up a farm. You might then also do a few building=yes polygons for individual buildings if you have a way of mapping those accurately. That's pretty similar to how we map several buildings making up a school or a hospital.</p>
-<p>place=farm is confusing (and I must say I disagreed with its addition in the first place) but it's part of the family of tags on <a href="http://wiki.openstreetmap.org/wiki/Key:place">Key:place</a> which are for naming an area. So for example an area is known by the locals as "Upperknowle Farm". In fact there doesn't necessarily need to be an active farm there, or any buildings whatsoever. These can be labels for bits of moorland traced from old out of copyright maps for example, and maybe that's the best time to use it.</p>
+<p>Use <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard">landuse=farmyard</a> with a polygon around the general area of the clutch of buildings making up a farm. You might then also do a few building=yes polygons for individual buildings if you have a way of mapping those accurately. That's pretty similar to how we map several buildings making up a school or a hospital.</p>
+<p>place=farm is confusing (and I must say I disagreed with its addition in the first place) but it's part of the family of tags on <a href="https://wiki.openstreetmap.org/wiki/Key:place">Key:place</a> which are for naming an area. So for example an area is known by the locals as "Upperknowle Farm". In fact there doesn't necessarily need to be an active farm there, or any buildings whatsoever. These can be labels for bits of moorland traced from old out of copyright maps for example, and maybe that's the best time to use it.</p>
 <p>If you have an active visible farm with a particular name, I'd say it's better to tag it landuse=farmyard, name=x ...and forget about the place tag.</p>
 </div>
 <div class="answer-controls post-controls">

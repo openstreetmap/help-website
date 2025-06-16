@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to get POI by GPS coordinates(latitude and longitude)?"
-description = '''Hi,  I am new here so maybe I am missing something that is basic. I have a latitude and longitude data(specific point and not an box) and I want to know which place is it was. From my basic knowledge with osm, maybe i am looking for tags map(http://wiki.openstreetmap.org/wiki/Map_Features#Building )...'''
+description = '''Hi,  I am new here so maybe I am missing something that is basic. I have a latitude and longitude data(specific point and not an box) and I want to know which place is it was. From my basic knowledge with osm, maybe i am looking for tags map(https://wiki.openstreetmap.org/wiki/Map_Features#Building )...'''
 date = "2017-01-27T09:59:00Z"
 lastmod = "2017-01-30T12:13:00Z"
 weight = 54325
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I am new here so maybe I am missing something that is basic.</p>
 <p>I have a latitude and longitude data(specific point and not an box) and I want to know which place is it was.</p>
-<p>From my basic knowledge with osm, maybe i am looking for tags map(<a href="http://wiki.openstreetmap.org/wiki/Map_Features#Building">http://wiki.openstreetmap.org/wiki/Map_Features#Building</a> )?</p>
+<p>From my basic knowledge with osm, maybe i am looking for tags map(<a href="https://wiki.openstreetmap.org/wiki/Map_Features#Building">https://wiki.openstreetmap.org/wiki/Map_Features#Building</a> )?</p>
 <p>I will be also glad to have some basic tutorial how to work with osm through java/c# .</p>
 <p>Thanks for any help...</p>
 </div>
@@ -137,8 +137,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It sounds as if you might be looking for Reverse Geocoding, something you can do with <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">Nominatim</a>. Nominatim has a JSON API, so you can use standard web access methods to call it from Java or C#.</p>
-<p>If you plan to publish software that makes frequent use of Nominatim, you should probably set up your own Nominatim server instead of relying on the donation-funded server operated by OSM itself - see the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a>.</p>
+<p>It sounds as if you might be looking for Reverse Geocoding, something you can do with <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">Nominatim</a>. Nominatim has a JSON API, so you can use standard web access methods to call it from Java or C#.</p>
+<p>If you plan to publish software that makes frequent use of Nominatim, you should probably set up your own Nominatim server instead of relying on the donation-funded server operated by OSM itself - see the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

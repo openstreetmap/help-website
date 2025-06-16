@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I would also like to import some map data for a book of family day trip destinations around Eastern Mass. I have about 200 GPS coordinates and I'd like to generate printable map sections for each destination. Can I just do a private import for my own use? Happy to let others use them. What's the best course of action?</p>
-<p>(this was originally asked as an "answer" on <a href="https://help.openstreetmap.org/questions/4936/import-into-openstreetmap">this question</a>)</p>
+<p>(this was originally asked as an "answer" on <a href="/questions/4936/import-into-openstreetmap">this question</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-personal" rel="tag" title="see questions tagged &#39;personal&#39;">personal</span> <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span>
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No. OpenStreetMap is for <a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiable data</a> only.</p>
+<p>No. OpenStreetMap is for <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiable data</a> only.</p>
 <p>But you can combine OSM data with your data on your own computer. You can use third-party programs such as Maperitive or Mapnik/TileMill to do this.</p>
 <p>You can also use a third-party service such as <a href="http://umap.fluv.io/en/">uMap</a>.</p>
 </div>

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello. First time here, be gentle... I'd like to use the KML data in <a href="http://www.rowmaps.com/kmls/DY/">rowmaps</a> (containing public rights of way info) within OSM. The data are released under the OS OpenData Licence; can they be used directly, with appropriate attribution? Thanks!</p>
-<p>[edit: split off <a href="http://help.openstreetmap.org/questions/35938/">second question</a>]</p>
+<p>[edit: split off <a href="/questions/35938/">second question</a>]</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-opendata" rel="tag" title="see questions tagged &#39;opendata&#39;">opendata</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-kml" rel="tag" title="see questions tagged &#39;kml&#39;">kml</span> <span class="post-tag tag-link-copyright" rel="tag" title="see questions tagged &#39;copyright&#39;">copyright</span>

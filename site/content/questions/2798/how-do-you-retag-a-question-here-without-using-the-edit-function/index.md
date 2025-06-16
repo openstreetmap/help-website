@@ -147,7 +147,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>In the upper right corner you find a tiny link "faq". See: <a href="http://help.openstreetmap.org/faq/">http://help.openstreetmap.org/faq/</a></p>
+<p>In the upper right corner you find a tiny link "faq". See: <a href="https://help.openstreetmap.org/faq/">https://help.openstreetmap.org/faq/</a></p>
 </div>
 <div id="comment-2887-info" class="comment-info">
 <span class="comment-age">(10 Feb '11, 14:15)</span> <span class="comment-user userinfo">ALE</span>

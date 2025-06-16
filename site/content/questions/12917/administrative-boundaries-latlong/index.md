@@ -110,7 +110,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>You can get a file containing all such information for UK with the call</p>
 <pre><code>http://overpass-api.de/api/interpreter?data=[timeout:900][out:json];(rel[admin_level=4](50.0,-10.0,62.0,2.0);&gt;&gt;;);out;</code></pre>
-<p>Note that such a call may take up to 15 minutes and yield a file of several megabyte size. "(50.0,-10.0,62.0,2.0)" is the bounding box with latitude, then longitude, then lat and lon for the upper boundary and draw a boundary around UK. "[admin_level=4]" is the level of most important intra-nation borders. The levels are explained <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#admin_level">here</a>.</p>
+<p>Note that such a call may take up to 15 minutes and yield a file of several megabyte size. "(50.0,-10.0,62.0,2.0)" is the bounding box with latitude, then longitude, then lat and lon for the upper boundary and draw a boundary around UK. "[admin_level=4]" is the level of most important intra-nation borders. The levels are explained <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative#admin_level">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

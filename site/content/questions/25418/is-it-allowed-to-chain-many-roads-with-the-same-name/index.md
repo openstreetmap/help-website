@@ -65,7 +65,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Could you provide a link to an example? As you mention, the key is "provided the rest of the properties are the same". Depending on what you're looking at to view the data (e.g. an editor) you may not see all the properties.</p>
 <p>The browse page will however show all the properties, including relation memberships:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/156410284">http://www.openstreetmap.org/browse/way/156410284</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/156410284">https://www.openstreetmap.org/browse/way/156410284</a></p>
 </div>
 <div id="comment-25422-info" class="comment-info">
 <span class="comment-age">(15 Aug '13, 13:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -89,7 +89,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>For example: Biezen, Boskoop, Netherlands <a href="http://www.openstreetmap.org/#map=16/52.0776/4.6734">http://www.openstreetmap.org/#map=16/52.0776/4.6734</a></p>
+<p>For example: Biezen, Boskoop, Netherlands <a href="https://www.openstreetmap.org/#map=16/52.0776/4.6734">https://www.openstreetmap.org/#map=16/52.0776/4.6734</a></p>
 </div>
 <div id="comment-25428-info" class="comment-info">
 <span class="comment-age">(15 Aug '13, 13:50)</span> <span class="comment-user userinfo">pitdicker</span>
@@ -144,11 +144,11 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Looking at this example in Potlatch 2:</p>
-<p><a href="http://www.openstreetmap.org/edit#map=19/52.07832/4.67350">http://www.openstreetmap.org/edit#map=19/52.07832/4.67350</a></p>
+<p><a href="https://www.openstreetmap.org/edit#map=19/52.07832/4.67350">https://www.openstreetmap.org/edit#map=19/52.07832/4.67350</a></p>
 <p>it does look like there's some scope for merging. These ways were imported from AND. Here are the full set of tags on these three sections:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/7420687">http://www.openstreetmap.org/browse/way/7420687</a></p>
-<p><a href="http://www.openstreetmap.org/browse/way/7420579">http://www.openstreetmap.org/browse/way/7420579</a></p>
-<p><a href="http://www.openstreetmap.org/browse/way/7420684">http://www.openstreetmap.org/browse/way/7420684</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/7420687">https://www.openstreetmap.org/browse/way/7420687</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/7420579">https://www.openstreetmap.org/browse/way/7420579</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/7420684">https://www.openstreetmap.org/browse/way/7420684</a></p>
 <p>The left-hand and middle ones differ only in the "<code>AND_nosr_r</code>" tag. I'd check with the Dutch community to be sure, but I'd be surprised if that tag needs to be kept separate in the data now.</p>
 <p>The right hand one can't be merged however - it's the member of a bicycle route relation. Further east there's a bridge that also can't be merged into the same way.</p>
 <p>The second part of this is "even when there do need to be separate ways (such as for the bridge), wouldn't it be nice if rendering software could display only one name for a road if it doesn't change across several sections?" Unfortunately, I don't know of any rendering software that does do that with OSM data - perhaps someone else does?</p>
@@ -176,7 +176,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Thanks SomeoneElse!</p>
 <p>I will be careful not to break these things like bridges and routes (i use these routes for cycling myself)</p>
-<p>The wiki says about the AND_nosr_r that I may feel free to remove it: <a href="http://wiki.openstreetmap.org/wiki/Key:AND_nosr_r">http://wiki.openstreetmap.org/wiki/Key:AND_nosr_r</a></p>
+<p>The wiki says about the AND_nosr_r that I may feel free to remove it: <a href="https://wiki.openstreetmap.org/wiki/Key:AND_nosr_r">https://wiki.openstreetmap.org/wiki/Key:AND_nosr_r</a></p>
 </div>
 <div id="comment-25433-info" class="comment-info">
 <span class="comment-age">(15 Aug '13, 14:19)</span> <span class="comment-user userinfo">pitdicker</span>

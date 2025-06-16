@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-35816-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This was previously asked as an answer to <a href="https://help.openstreetmap.org/questions/23714/c-openstreetmap-offline-map-manipulation">this question</a>. It's also fairly similar to <a href="https://help.openstreetmap.org/questions/35802/how-to-use-openstreetmap-in-cnet-software-development">this</a> new one, so answers to that will also apply.</p>
+<p>This was previously asked as an answer to <a href="/questions/23714/c-openstreetmap-offline-map-manipulation">this question</a>. It's also fairly similar to <a href="/questions/35802/how-to-use-openstreetmap-in-cnet-software-development">this</a> new one, so answers to that will also apply.</p>
 </div>
 <div id="comment-35816-info" class="comment-info">
 <span class="comment-age">(14 Aug '14, 10:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

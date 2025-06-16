@@ -112,7 +112,7 @@ osqa_accepted = false
 <div id="post-38717-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10036/fabri"></a><a href="http://help.openstreetmap.org/users/10036/fabri">@Fabri</a>, which software or website do you mean?</p>
+<p><a href="https://help.openstreetmap.org/users/10036/fabri"></a><a href="https://help.openstreetmap.org/users/10036/fabri">@Fabri</a>, which software or website do you mean?</p>
 </div>
 <div id="comment-38717-info" class="comment-info">
 <span class="comment-age">(21 Nov '14, 19:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just zoom into the coordinates of the mouse position? Or is your question about the <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">slippy map tilenames</a>?</p>
+<p>Just zoom into the coordinates of the mouse position? Or is your question about the <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">slippy map tilenames</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

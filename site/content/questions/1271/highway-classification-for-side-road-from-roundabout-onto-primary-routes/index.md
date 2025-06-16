@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>So, I am trying to map a side road off a R/A. In Doha, major roundabouts will have a side road that are essentially so drivers can access the local neighborhood adjacent to either side of the highway (in this case, what I would designate as a primary road). The particular example is <a href="http://www.openstreetmap.org/browse/way/82496106">here</a>. If I am unclear, let me know and I will get pictures. This is a very common fixture of the Qatari road system, so I wanted to know if it is best to mark it as primary, second, tertiary, or unclassified. Does anyone have any hints?</p>
+<p>So, I am trying to map a side road off a R/A. In Doha, major roundabouts will have a side road that are essentially so drivers can access the local neighborhood adjacent to either side of the highway (in this case, what I would designate as a primary road). The particular example is <a href="https://www.openstreetmap.org/browse/way/82496106">here</a>. If I am unclear, let me know and I will get pictures. This is a very common fixture of the Qatari road system, so I wanted to know if it is best to mark it as primary, second, tertiary, or unclassified. Does anyone have any hints?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-classification" rel="tag" title="see questions tagged &#39;classification&#39;">classification</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span> <span class="post-tag tag-link-roundabout" rel="tag" title="see questions tagged &#39;roundabout&#39;">roundabout</span>

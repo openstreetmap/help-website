@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>If I type a street and town into the search box on the map page the nominatim finds the place on the map correctly but says that the street is in a nearby suburb which is incorrect.</p>
 <p>To fix this I have drawn a polygon and named it. This should contain it to its own area but it does not always work. Some mappers think the single node suburbs are the problem. Please try some address in your area for examples. There is also a delay as the nominatim is not being updated at the present time. What are your solutions or ideas on this problem. Note examples are now fixed</p>
 <p><em>Edit (extracted from comments):</em></p>
-<p>One example: <a href="http://www.openstreetmap.org/?minlon=-0.171881511807442&amp;minlat=52.3324775695801&amp;maxlon=-0.164698585867882&amp;maxlat=52.335319519043">http://www.openstreetmap.org/?minlon=-0.171881511807442&amp;minlat=52.3324775695801&amp;maxlon=-0.164698585867882&amp;maxlat=52.335319519043</a></p>
+<p>One example: <a href="https://www.openstreetmap.org/?minlon=-0.171881511807442&amp;minlat=52.3324775695801&amp;maxlon=-0.164698585867882&amp;maxlat=52.335319519043">https://www.openstreetmap.org/?minlon=-0.171881511807442&amp;minlat=52.3324775695801&amp;maxlon=-0.164698585867882&amp;maxlat=52.335319519043</a></p>
 <p>This is Hartford Road, Huntingdon, which appears as part of Stukeley Meadows(which is a polygon), whereas Stukeley Meadows is a suburb of Huntingdon. The name also appears in Godmanchester as well.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -177,9 +177,9 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>If you have questions about Nominatim search results, Nominatim lets you see how it reached its conclusions.</p>
 <p>To see it, do your search on <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> . In the result list, click on "details"; then you'll see exactly how Nominatim reached its conclusions.</p>
-<p>In your example, searching for "hartford road, huntingdon" on Nominatim will show you that the OSM DB contains a node called "Stukeley Meadows" ( <a href="http://www.openstreetmap.org/browse/node/280778644">http://www.openstreetmap.org/browse/node/280778644</a> ).</p>
+<p>In your example, searching for "hartford road, huntingdon" on Nominatim will show you that the OSM DB contains a node called "Stukeley Meadows" ( <a href="https://www.openstreetmap.org/browse/node/280778644">https://www.openstreetmap.org/browse/node/280778644</a> ).</p>
 <p>This node is tagged as <code>place = suburb</code>, and Nominatim apparently automatically considers all objects in the vicinity of a <code>place</code> node to be part of that place. This is probably a heuristic for cases where there is no poylgon for a place.</p>
-<p>In this case, as a Nominatim search for "stukeley meadows" shows, there are two objects named "Stukeley meadows": A node tagged <code>place=suburb</code> (see above), and a polygon ( <a href="http://www.openstreetmap.org/browse/way/112836767">http://www.openstreetmap.org/browse/way/112836767</a> ). The latter is probably the polygon you made.</p>
+<p>In this case, as a Nominatim search for "stukeley meadows" shows, there are two objects named "Stukeley meadows": A node tagged <code>place=suburb</code> (see above), and a polygon ( <a href="https://www.openstreetmap.org/browse/way/112836767">https://www.openstreetmap.org/browse/way/112836767</a> ). The latter is probably the polygon you made.</p>
 <p>In this case, I believe the best solution is to delete the place node (as the polygon you made is more precise). Then Nominatim should no longer consider Hartford Road to be in Stukeley Meadows.</p>
 <p>And BTW, please fix the capitalization of the name in the tags of your polygon :-).</p>
 </div>

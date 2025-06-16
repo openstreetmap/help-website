@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Seems like there is no XML schema or DTD. Neither does the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a> mention any nor does the <a href="http://trac.openstreetmap.org/browser/applications/utils/nominatim/">repository</a> include it. Also the query results would contain a schema/doctype line with a link to such a file if there were any, I guess.</p>
-<p>I think it would be the best to ask the maintainer <a href="http://wiki.openstreetmap.org/wiki/User:Twain">Twain</a> directly.</p>
+<p>Seems like there is no XML schema or DTD. Neither does the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a> mention any nor does the <a href="http://trac.openstreetmap.org/browser/applications/utils/nominatim/">repository</a> include it. Also the query results would contain a schema/doctype line with a link to such a file if there were any, I guess.</p>
+<p>I think it would be the best to ask the maintainer <a href="https://wiki.openstreetmap.org/wiki/User:Twain">Twain</a> directly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

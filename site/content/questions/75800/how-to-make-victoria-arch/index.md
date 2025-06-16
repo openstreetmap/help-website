@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am not sure if I am calling the structure correctly or not, but I mean such kind of structures which are made on roads:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/arch.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/arch.jpg" alt="alt text" /></p>
 <p>In many cases, such structures are not historical monuments.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>Pages such as <a href="http://odbl.de/">http://odbl.de/</a> give an idea of how many objects were either last edited by a non-CT-accepter, or where the v1 object was created by a non-CT-accepter, and never modified.</p>
 <p>When I turn on the licence highlighting feature in editors like Potlatch, it seems to highlight ways and nodes where any edit was made by a non-CT-accepter.</p>
 <p>Is there a method to get an idea of what percentage of ways are like this?</p>
-<p>To give an idea of what I'm talking about, consider this way: <a href="http://www.openstreetmap.org/browse/way/17558756">http://www.openstreetmap.org/browse/way/17558756</a></p>
+<p>To give an idea of what I'm talking about, consider this way: <a href="https://www.openstreetmap.org/browse/way/17558756">https://www.openstreetmap.org/browse/way/17558756</a></p>
 <p>It was created by me from a survey in 2007, and last edited by another CT accepter in June 2011, but edited by non-CT-accepters in between. Thus it shows as CT-ODbL accepting way at <a href="http://odbl.de/">http://odbl.de/</a> In Potlatch this way shows as red when you turn on the license tracking feature.</p>
 <p>How does one get an idea of what percentage of ways are like this in an area?</p>
 </div>

@@ -142,7 +142,7 @@ osqa_accepted = true
 <div id="post-17963-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please look at the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Ref">the tag ref</a>. You'll notice that in all the examples of the ref:something notation, it is used for references from specific named organizations/institutions. It is not used with generic terms like :school, :highway, etc. Neither will you find the generic terms on the first few pages of a <a href="http://taginfo.openstreetmap.org/search?q=ref">taginfo search for ref</a>.</p>
+<p>Please look at the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Ref">the tag ref</a>. You'll notice that in all the examples of the ref:something notation, it is used for references from specific named organizations/institutions. It is not used with generic terms like :school, :highway, etc. Neither will you find the generic terms on the first few pages of a <a href="http://taginfo.openstreetmap.org/search?q=ref">taginfo search for ref</a>.</p>
 </div>
 <div id="comment-17963-info" class="comment-info">
 <span class="comment-age">(25 Nov '12, 00:36)</span> <span class="comment-user userinfo">cartinus</span>
@@ -230,7 +230,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>France has a numbering system for schools too, and they use a special ref tag (ref:UAI - see <a href="http://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool">http://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool</a> ) for that.</p>
+<p>France has a numbering system for schools too, and they use a special ref tag (ref:UAI - see <a href="https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool">https://wiki.openstreetmap.org/wiki/FR:Tag:amenity%3Dschool</a> ) for that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

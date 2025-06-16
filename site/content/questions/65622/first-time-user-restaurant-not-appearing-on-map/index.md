@@ -116,7 +116,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Hi <a href="https://help.openstreetmap.org/users/15602/clee121">@clee121</a>,</p>
 <p>Thank you for contributing to OSM! The map on OSM website may take some time to render the feature after you added it. However, tried it on my browser and it's rendered very well now as you mapped it perfectly:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_du_2018-08-29_08-01-42.png" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_du_2018-08-29_08-01-42.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See both answers at <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> - most importantly for you since we others already see your new restaurant: do a map reload in your browser with forcing a cache refresh.</p>
+<p>See both answers at <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> - most importantly for you since we others already see your new restaurant: do a map reload in your browser with forcing a cache refresh.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

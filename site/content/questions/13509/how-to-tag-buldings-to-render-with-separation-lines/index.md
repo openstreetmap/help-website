@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm starting to draw buildings on my (small) hometown but the result is that mapnik renders adjacent buildings as a single pink swhadowed area.</p>
-<p>I'd like to get a nice result as you may see in Paris for instance link:<a href="http://www.openstreetmap.org/?lat=48.874958&amp;lon=2.292632&amp;zoom=18&amp;layers=M">Paris downtown</a> where there's a thin line separating the different buildings.</p>
+<p>I'd like to get a nice result as you may see in Paris for instance link:<a href="https://www.openstreetmap.org/?lat=48.874958&amp;lon=2.292632&amp;zoom=18&amp;layers=M">Paris downtown</a> where there's a thin line separating the different buildings.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-lines" rel="tag" title="see questions tagged &#39;lines&#39;">lines</span>
@@ -75,7 +75,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Sure, the buildings are closed ways and share points with adjacents.</p>
-<p>Example I mapped one hour ago link:(<a href="http://www.openstreetmap.org/?lat=48.874958&amp;lon=2.292632&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=48.874958&amp;lon=2.292632&amp;zoom=18&amp;layers=M)</a></p>
+<p>Example I mapped one hour ago link:(<a href="https://www.openstreetmap.org/?lat=48.874958&amp;lon=2.292632&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=48.874958&amp;lon=2.292632&amp;zoom=18&amp;layers=M)</a></p>
 </div>
 <div id="comment-13511-info" class="comment-info">
 <span class="comment-age">(13 Jun '12, 19:41)</span> <span class="comment-user userinfo">ClopezRozas</span>
@@ -182,7 +182,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Looks like you posted the Paris link again. But anyway...</p>
-<p>If you look thoroughly at way <a href="http://www.openstreetmap.org/browse/way/167229319">167229319</a> and <a href="http://www.openstreetmap.org/browse/way/167229276">167229276</a> you will see that those building just share the node <a href="http://www.openstreetmap.org/browse/node/1786347695">1786347695</a>. They don't have a common wall, because they don't share node <a href="http://www.openstreetmap.org/browse/node/1786347690">1786347690</a>. The buildings are in fact overlapping.</p>
+<p>If you look thoroughly at way <a href="https://www.openstreetmap.org/browse/way/167229319">167229319</a> and <a href="https://www.openstreetmap.org/browse/way/167229276">167229276</a> you will see that those building just share the node <a href="https://www.openstreetmap.org/browse/node/1786347695">1786347695</a>. They don't have a common wall, because they don't share node <a href="https://www.openstreetmap.org/browse/node/1786347690">1786347690</a>. The buildings are in fact overlapping.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

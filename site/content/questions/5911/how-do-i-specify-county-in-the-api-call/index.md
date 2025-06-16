@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I asked <a href="http://stackoverflow.com/questions/6364538/how-do-i-specify-the-county-in-openstreetmaps-nominatim-api">this here</a> on stackoverflow. Basically I have an address in New York County, which is part of New York City, which is part of New York state. There is a similar address in Staten Island. I am looking for a way to specify New York County to the geocoder and not have it return similar addresses in the other 4 counties in New York City.</p>
-<p>I believe the solution lies in the nominatim <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">special phrases</a>, However, <a href="http://help.openstreetmap.org/questions/5924/how-do-i-use-special-phrases-in-nominatim">I don't know how to use them</a>.</p>
+<p>I believe the solution lies in the nominatim <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">special phrases</a>, However, <a href="/questions/5924/how-do-i-use-special-phrases-in-nominatim">I don't know how to use them</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-special-phrases" rel="tag" title="see questions tagged &#39;special-phrases&#39;">special-phrases</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-geocoding" rel="tag" title="see questions tagged &#39;geocoding&#39;">geocoding</span>
@@ -108,7 +108,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Wiki page for Nominatim</a>, there are descriptions for adding additional parameters to the query, including a bounding box, which will do what you're asking about geographically focusing a query.</p>
+<p>On the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Wiki page for Nominatim</a>, there are descriptions for adding additional parameters to the query, including a bounding box, which will do what you're asking about geographically focusing a query.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

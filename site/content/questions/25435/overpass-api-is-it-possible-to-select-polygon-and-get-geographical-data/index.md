@@ -109,7 +109,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do you mean you want to download all data inside a non-rectangular polygon? That is explained on <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_Region_by_Polygon">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_Region_by_Polygon</a> .</p>
+<p>Do you mean you want to download all data inside a non-rectangular polygon? That is explained on <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_Region_by_Polygon">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_Region_by_Polygon</a> .</p>
 <pre><code>(
   node(poly:&quot;50.7 7.1 50.7 7.12 50.71 7.11&quot;);
   &lt;;
@@ -193,7 +193,7 @@ out meta;</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see <a href="https://help.openstreetmap.org/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api">how-to-query-all-elements-within-an-outline-way-from-overpass-api</a></p>
+<p>see <a href="/questions/20841/how-to-query-all-elements-within-an-outline-way-from-overpass-api">how-to-query-all-elements-within-an-outline-way-from-overpass-api</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "New cycle path not routing"
-description = '''I added a way joining an existing cycle path and a road. This is the way that I added: http://www.openstreetmap.org/browse/way/158514786 It shows that its end nodes are also parts of other ways, and it has also got the &quot;bicycle=designated&quot; attribute on. Yet when I go on www.openrouteservice.org and ...'''
+description = '''I added a way joining an existing cycle path and a road. This is the way that I added: https://www.openstreetmap.org/browse/way/158514786 It shows that its end nodes are also parts of other ways, and it has also got the &quot;bicycle=designated&quot; attribute on. Yet when I go on www.openrouteservice.org and ...'''
 date = "2012-05-09T16:47:00Z"
 lastmod = "2012-05-09T17:17:00Z"
 weight = 12644
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I added a way joining an existing cycle path and a road.</p>
-<p>This is the way that I added: <a href="http://www.openstreetmap.org/browse/way/158514786">http://www.openstreetmap.org/browse/way/158514786</a></p>
+<p>This is the way that I added: <a href="https://www.openstreetmap.org/browse/way/158514786">https://www.openstreetmap.org/browse/way/158514786</a></p>
 <p>It shows that its end nodes are also parts of other ways, and it has also got the "bicycle=designated" attribute on.</p>
 <p>Yet when I go on www.openrouteservice.org and try to do a bicycle route from say</p>
 <p>Pos@: -0.769655 53.227528</p>
@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openrouteservice.org/">http://www.openrouteservice.org/</a> says "OSM-Data for Routing: 11.03.12" and the first entry of <a href="http://www.openstreetmap.org/browse/way/158514786/history">http://www.openstreetmap.org/browse/way/158514786/history</a> says "Edited at: Sun, 08 Apr 2012 12:16:10 +0000".</p>
+<p><a href="http://www.openrouteservice.org/">http://www.openrouteservice.org/</a> says "OSM-Data for Routing: 11.03.12" and the first entry of <a href="https://www.openstreetmap.org/browse/way/158514786/history">https://www.openstreetmap.org/browse/way/158514786/history</a> says "Edited at: Sun, 08 Apr 2012 12:16:10 +0000".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

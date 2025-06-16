@@ -165,7 +165,7 @@ osqa_accepted = false
 <p>I previously didn't know there where some TagInfo sites available per country.</p>
 <p>A big thanks to the individual maintainers.</p>
 <p>A list of known instances is kept here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Taginfo/Sites">http://wiki.openstreetmap.org/wiki/Taginfo/Sites</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Taginfo/Sites">https://wiki.openstreetmap.org/wiki/Taginfo/Sites</a></p>
 </div>
 <div id="comment-25554-info" class="comment-info">
 <span class="comment-age">(18 Aug '13, 11:40)</span> <span class="comment-user userinfo">robbieonsea</span>
@@ -331,7 +331,7 @@ osqa_accepted = false
 <p>If you download an extract of the data you've got a couple of options of how to process it.<br />
 </p>
 <p>One is to download as a .osm.gz file and uncompress it to a raw xml .osm file. Then you can use standard command-line utilities like grep etc. to search for things in that data (have a look <a href="http://unxutils.sourceforge.net/">here</a> if you're on windows for how to get grep etc. for that platform). The downside to that approach is that .osm files for North America will be very big indeed (many 10s of Gb).</p>
-<p>Another is to download as a .pbf file and process that. The downside here is that you'll need something that can process the <a href="http://wiki.openstreetmap.org/wiki/Pbf">file format</a> - either write something yourself or use one of the tools on <a href="http://wiki.openstreetmap.org/wiki/PBF/Software_Compliance">this list</a>. Of those, <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> may be the place to start - it has lots of functionality (including geographical selection) and you may be able to pair it with <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to count things in a certain area.</p>
+<p>Another is to download as a .pbf file and process that. The downside here is that you'll need something that can process the <a href="https://wiki.openstreetmap.org/wiki/Pbf">file format</a> - either write something yourself or use one of the tools on <a href="https://wiki.openstreetmap.org/wiki/PBF/Software_Compliance">this list</a>. Of those, <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> may be the place to start - it has lots of functionality (including geographical selection) and you may be able to pair it with <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to count things in a certain area.</p>
 </div>
 <div id="comment-25505-info" class="comment-info">
 <span class="comment-age">(17 Aug '13, 10:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -137,7 +137,7 @@ One Answer:
 <div id="post-10141-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think aerial is created according to commercial or strategic value,There is a Bing coverage page in the wiki that explains this and the quality of it link <a href="http://wiki.openstreetmap.org/wiki/Bing/Coverage">http://wiki.openstreetmap.org/wiki/Bing/Coverage</a></p>
+<p>I think aerial is created according to commercial or strategic value,There is a Bing coverage page in the wiki that explains this and the quality of it link <a href="https://wiki.openstreetmap.org/wiki/Bing/Coverage">https://wiki.openstreetmap.org/wiki/Bing/Coverage</a></p>
 </div>
 <div id="comment-10141-info" class="comment-info">
 <span class="comment-age">(22 Jan '12, 22:22)</span> <span class="comment-user userinfo">andy mackey</span>

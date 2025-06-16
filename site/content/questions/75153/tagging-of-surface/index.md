@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello. I'm new on openstreetmap, so I'm not sure about how to answer certain quest given by StreetComplete.</p>
-<p>For example, in this instance (in the middle of <a href="https://www.openstreetmap.org/way/636409055">https://www.openstreetmap.org/way/636409055</a>), there is only one way for the stairs, and one way for the footway. Should I tag the footway with surface=concrete and stop there, or should I split the footway and the stairs in order to be more precise ? <img src="https://help.openstreetmap.org/upfiles/croisement.jpeg" alt="alt text" /></p>
-<p>In another case, there is a space between two part of the stairs. Should I tag surface=asphalt, or once again break in different part to tag more accurately ? <img src="https://help.openstreetmap.org/upfiles/stairs.jpeg" alt="alt text" /></p>
+<p>For example, in this instance (in the middle of <a href="https://www.openstreetmap.org/way/636409055">https://www.openstreetmap.org/way/636409055</a>), there is only one way for the stairs, and one way for the footway. Should I tag the footway with surface=concrete and stop there, or should I split the footway and the stairs in order to be more precise ? <img src="/upfiles/croisement.jpeg" alt="alt text" /></p>
+<p>In another case, there is a space between two part of the stairs. Should I tag surface=asphalt, or once again break in different part to tag more accurately ? <img src="/upfiles/stairs.jpeg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-surface" rel="tag" title="see questions tagged &#39;surface&#39;">surface</span>

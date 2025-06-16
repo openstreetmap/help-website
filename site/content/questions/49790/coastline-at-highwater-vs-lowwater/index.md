@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "coastline at highwater vs lowwater"
-description = '''It has been a long-held practice in OSM (2008 or earlier) to map coastlines at the Mean High Water Spring as stated here:  http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline People have questioned the wisdom of this on the Discussion Page. http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%...'''
+description = '''It has been a long-held practice in OSM (2008 or earlier) to map coastlines at the Mean High Water Spring as stated here:  https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline People have questioned the wisdom of this on the Discussion Page. https://wiki.openstreetmap.org/wiki/Talk:Tag:natural%...'''
 date = "2016-05-22T15:22:00Z"
 lastmod = "2021-12-14T22:47:00Z"
 weight = 49790
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>It has been a long-held practice in OSM (2008 or earlier) to map coastlines at the Mean High Water Spring as stated here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a></p>
-<p>People have questioned the wisdom of this on the Discussion Page. <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dcoastline">http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dcoastline</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a></p>
+<p>People have questioned the wisdom of this on the Discussion Page. <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dcoastline">https://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dcoastline</a></p>
 <p>There has been little discussion on the above page since 2009.</p>
 <p>Can somebody direct me to more up-to-date guidance?</p>
 <p>If there is no up-to-date guidance, how does one petition the OSM community to adopt standards for tidelands and other marine features such buoys, bathymetry, submerged hazard/rocks, etc?</p>

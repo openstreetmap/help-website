@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Some ways to print out road maps of areas include <a href="http://fieldpapers.org/">Field Papers</a>, <a href="http://walking-papers.org/">Walking Papers</a>, and <a href="http://www.maposmatic.org/">MapOSMatic</a>.</p>
-<p>These and other options are also on the <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> page on the wiki.</p>
+<p>These and other options are also on the <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> page on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

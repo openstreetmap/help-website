@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-42933-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>No its a real bridge, as placed outside the dikes of the river IJssel and it could be flooded when theres a lot of water coming in from Germany over the river Rine. Link <a href="http://ipvdelft.nl/portfolio-item/overstroombare-brug-fortmond/">http://ipvdelft.nl/portfolio-item/overstroombare-brug-fortmond/</a> Second link to the area, <a href="http://www.openstreetmap.org/#map=16/52.3688/6.0964">http://www.openstreetmap.org/#map=16/52.3688/6.0964</a></p>
+<p>No its a real bridge, as placed outside the dikes of the river IJssel and it could be flooded when theres a lot of water coming in from Germany over the river Rine. Link <a href="http://ipvdelft.nl/portfolio-item/overstroombare-brug-fortmond/">http://ipvdelft.nl/portfolio-item/overstroombare-brug-fortmond/</a> Second link to the area, <a href="https://www.openstreetmap.org/#map=16/52.3688/6.0964">https://www.openstreetmap.org/#map=16/52.3688/6.0964</a></p>
 </div>
 <div id="comment-42933-info" class="comment-info">
 <span class="comment-age">(06 May '15, 21:47)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -189,7 +189,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In theory you could use a <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restriction</a>, but for something as irregular as a flood it's probably not worth more than a <em>note=*</em> tag (unless the flooding is "more likely than not to happen every jan-feb" for example). Like traffic jams, it probably is information that OSM isn't suited for.</p>
+<p>In theory you could use a <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restriction</a>, but for something as irregular as a flood it's probably not worth more than a <em>note=*</em> tag (unless the flooding is "more likely than not to happen every jan-feb" for example). Like traffic jams, it probably is information that OSM isn't suited for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

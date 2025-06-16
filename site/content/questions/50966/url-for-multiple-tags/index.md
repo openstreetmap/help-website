@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can combine as many queries as you want in a union:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union</a></p>
 <p>Here's an Overpass Turbo Wizard generated example:</p>
 <p><a href="http://overpass-turbo.eu/s/hmK">http://overpass-turbo.eu/s/hmK</a></p>
 <p>Also, note the "raw data directly from Overpass API" option in the Export dialog. You can use Overpass Turbo to test out queries and then quickly get the query as a url.</p>
@@ -156,7 +156,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Yes, that's called Global bounding box and described <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Global_bounding_box_.28bbox.29">here</a>.</p>
+<p>Yes, that's called Global bounding box and described <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Global_bounding_box_.28bbox.29">here</a>.</p>
 </div>
 <div id="comment-50991-info" class="comment-info">
 <span class="comment-age">(19 Jul '16, 19:20)</span> <span class="comment-user userinfo">mmd</span>

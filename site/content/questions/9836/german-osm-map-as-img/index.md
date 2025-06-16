@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "German OSM Map as *.img"
-description = '''HI, on this page: http://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map/Regions#Deutschland_und_angrenzendes_L.C3.A4nder_.28.3C2GB.29 a german OSM Map *.img was planned. Could some tell me if this map exist already, where can i get it or are you aware of other sources to get this map. I partic...'''
+description = '''HI, on this page: https://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map/Regions#Deutschland_und_angrenzendes_L.C3.A4nder_.28.3C2GB.29 a german OSM Map *.img was planned. Could some tell me if this map exist already, where can i get it or are you aware of other sources to get this map. I partic...'''
 date = "2012-01-07T14:00:00Z"
 lastmod = "2012-01-09T09:24:00Z"
 weight = 9836
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>HI,</p>
-<p>on this page: <a href="http://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map/Regions#Deutschland_und_angrenzendes_L.C3.A4nder_.28.3C2GB.29">http://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map/Regions#Deutschland_und_angrenzendes_L.C3.A4nder_.28.3C2GB.29</a> a german OSM Map *.img was planned. Could some tell me if this map exist already, where can i get it or are you aware of other sources to get this map. I particlar im intrissted in the cycle tour tracks which are in the europa map, but only the german part of it.</p>
+<p>on this page: <a href="https://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map/Regions#Deutschland_und_angrenzendes_L.C3.A4nder_.28.3C2GB.29">https://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map/Regions#Deutschland_und_angrenzendes_L.C3.A4nder_.28.3C2GB.29</a> a german OSM Map *.img was planned. Could some tell me if this map exist already, where can i get it or are you aware of other sources to get this map. I particlar im intrissted in the cycle tour tracks which are in the europa map, but only the german part of it.</p>
 <p>Thanks for reply</p>
 <p>rgds</p>
 <p>Peter</p>
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see <a href="http://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map#andere_Gebiete_und_Kontinente">DE: All in one Garmin Map</a>, there are maps for <em>Germany</em>, <em>DACH+</em> (<a href="http://dev.openstreetmap.de/aio/dach/maps.html">coverage</a>) etc. There is also a list of <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries">premade maps for Garmin devices</a>, some of them are made especially for cyclists.</p>
+<p>Please see <a href="https://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map#andere_Gebiete_und_Kontinente">DE: All in one Garmin Map</a>, there are maps for <em>Germany</em>, <em>DACH+</em> (<a href="http://dev.openstreetmap.de/aio/dach/maps.html">coverage</a>) etc. There is also a list of <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries">premade maps for Garmin devices</a>, some of them are made especially for cyclists.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

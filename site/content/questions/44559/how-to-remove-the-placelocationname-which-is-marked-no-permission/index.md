@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-44560-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you try to correct the address of <a href="http://www.openstreetmap.org/node/3674372202">CWI Airsoft</a> <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">yourself</a>? Just try clicking on "Edit ▼".</p>
+<p>Did you try to correct the address of <a href="https://www.openstreetmap.org/node/3674372202">CWI Airsoft</a> <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">yourself</a>? Just try clicking on "Edit ▼".</p>
 </div>
 <div id="comment-44560-info" class="comment-info">
 <span class="comment-age">(31 Jul '15, 07:51)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi! Thanks for your interest in OSM.</p>
-<p>OSM is a crowd sourced map. If an address is wrong, you can edit it yourself. More information can be found in the <a href="http://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">Beginner's Guide</a>.</p>
+<p>OSM is a crowd sourced map. If an address is wrong, you can edit it yourself. More information can be found in the <a href="https://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">Beginner's Guide</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>According to <a href="http://taginfo.openstreetmap.org/keys/wifi#overview">taginfo</a>, there are a couple of thousand uses of wifi=something. Click the tabs on that link and you can see the values used and what other tags it is used with.</p>
-<p>To search for this, you can use something like the XAPI or Overpass - see <a href="http://wiki.openstreetmap.org/wiki/Xapi">this</a> wiki page and the links from it. As an example, this command:</p>
+<p>To search for this, you can use something like the XAPI or Overpass - see <a href="https://wiki.openstreetmap.org/wiki/Xapi">this</a> wiki page and the links from it. As an example, this command:</p>
 <pre><code>wget http://open.mapquestapi.com/xapi/api/0.6/*[wifi=*][bbox=-1.474,52.898,-1.454,52.938]</code></pre>
 <p>will search for nodes and ways in part of central England with "wifi" set to something.</p>
 <p>(If you're unfamilar with "wget", it's just a command used to get a web page and stick it in a file. It's standard in Unix-like operating systems and available for others)</p>
@@ -129,7 +129,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Note that OpenCycleMap shows pubs marked with wifi, with some 'radiation' coming out of the pint, e.g.:</p>
-<p><a href="http://www.openstreetmap.org/?lat=50.78708&amp;lon=-1.0803&amp;zoom=18&amp;layers=C">http://www.openstreetmap.org/?lat=50.78708&amp;lon=-1.0803&amp;zoom=18&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=50.78708&amp;lon=-1.0803&amp;zoom=18&amp;layers=C">https://www.openstreetmap.org/?lat=50.78708&amp;lon=-1.0803&amp;zoom=18&amp;layers=C</a></p>
 <p>Normally it would be free (for customers).</p>
 <p>OCM may show wifi on other places, cafes for example - but I'm not sure.</p>
 </div>
@@ -143,7 +143,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The tag <code>internet_access=wlan</code> is also in use for places with wifi (over 4000 uses according to Taginfo). See the wiki page <a href="http://wiki.openstreetmap.org/wiki/Key:internet_access">http://wiki.openstreetmap.org/wiki/Key:internet_access</a></p>
+<p>The tag <code>internet_access=wlan</code> is also in use for places with wifi (over 4000 uses according to Taginfo). See the wiki page <a href="https://wiki.openstreetmap.org/wiki/Key:internet_access">https://wiki.openstreetmap.org/wiki/Key:internet_access</a></p>
 </div>
 <div id="comment-12108-info" class="comment-info">
 <span class="comment-age">(18 Apr '12, 01:38)</span> <span class="comment-user userinfo">Vclaw</span>

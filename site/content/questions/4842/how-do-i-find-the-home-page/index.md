@@ -111,10 +111,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Home page is <a href="http://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a><br />
+<p>Home page is <a href="https://www.openstreetmap.org/"></a><a href="https://www.openstreetmap.org/"></a><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a><br />
 </p>
 <p>It automatically stores your last viewed location in your browser cookies, so when you open the openstreetmap webpage next time, you see the same place you were viewing last time.</p>
-<p>You may also have used a link similar to this: <a href="http://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M</a> which is a permalink to a certain location and which indeed shows every time the same place.</p>
+<p>You may also have used a link similar to this: <a href="https://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=33.71528&amp;lon=-117.7303&amp;zoom=16&amp;layers=M</a> which is a permalink to a certain location and which indeed shows every time the same place.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

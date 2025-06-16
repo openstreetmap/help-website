@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you could look at <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a>. It provides a simple interface for people to click on the map to add bugs, with a description etc. The interface is using Javascript, based on OpenLayers. The source code is available, so you could look at that. See the <a href="http://wiki.openstreetmap.org/wiki/OpenStreetBugs">OpenStreetBugs page</a> on the OSM wiki for more technical details.</p>
+<p>Maybe you could look at <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a>. It provides a simple interface for people to click on the map to add bugs, with a description etc. The interface is using Javascript, based on OpenLayers. The source code is available, so you could look at that. See the <a href="https://wiki.openstreetmap.org/wiki/OpenStreetBugs">OpenStreetBugs page</a> on the OSM wiki for more technical details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -215,7 +215,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe it could be an alternative to <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">use the potlatch2 code</a> and remove most of the features? If you can think of doing it in flash. This would solve you the user login and send to server part as well as the set poi-and-get-position-part.</p>
+<p>Maybe it could be an alternative to <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">use the potlatch2 code</a> and remove most of the features? If you can think of doing it in flash. This would solve you the user login and send to server part as well as the set poi-and-get-position-part.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

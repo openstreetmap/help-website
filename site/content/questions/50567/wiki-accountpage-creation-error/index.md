@@ -142,7 +142,7 @@ osqa_accepted = false
 <div id="post-50617-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>the same like <a href="https://help.openstreetmap.org/questions/48217/how-to-edit-wiki-content-error-to-protect-the-wiki-against-automated-spam">https://help.openstreetmap.org/questions/48217/how-to-edit-wiki-content-error-to-protect-the-wiki-against-automated-spam</a> , isn't it?</p>
+<p>the same like <a href="/questions/48217/how-to-edit-wiki-content-error-to-protect-the-wiki-against-automated-spam">https://help.openstreetmap.org/questions/48217/how-to-edit-wiki-content-error-to-protect-the-wiki-against-automated-spam</a> , isn't it?</p>
 </div>
 <div id="comment-50617-info" class="comment-info">
 <span class="comment-age">(04 Jul '16, 20:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

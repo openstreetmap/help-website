@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-86119-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/mceclip0.png" alt="alt text" /></p>
+<p><img src="/upfiles/mceclip0.png" alt="alt text" /></p>
 </div>
 <div id="comment-86119-info" class="comment-info">
 <span class="comment-age">(08 Nov '22, 14:11)</span> <span class="comment-user userinfo">Helena Karlsson</span>

@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I'd say "start with the general, visible outline, then come back to fill in the details". Check e.g. here: the buildings on the inside of the block are later additions - originally, someone just roughly mapped the street-facing parts. <a href="http://www.openstreetmap.org/search?commit=Hledat&amp;query=history#map=18/50.07376/14.49183">http://www.openstreetmap.org/search?commit=Hledat&amp;query=history#map=18/50.07376/14.49183</a> Whichever way you choose, I don't think there's one that's The Only Correct One ;)</p>
+<p>I'd say "start with the general, visible outline, then come back to fill in the details". Check e.g. here: the buildings on the inside of the block are later additions - originally, someone just roughly mapped the street-facing parts. <a href="https://www.openstreetmap.org/search?commit=Hledat&amp;query=history#map=18/50.07376/14.49183">https://www.openstreetmap.org/search?commit=Hledat&amp;query=history#map=18/50.07376/14.49183</a> Whichever way you choose, I don't think there's one that's The Only Correct One ;)</p>
 </div>
 <div id="comment-49764-info" class="comment-info">
 <span class="comment-age">(20 May '16, 16:17)</span> <span class="comment-user userinfo">Piskvor</span>

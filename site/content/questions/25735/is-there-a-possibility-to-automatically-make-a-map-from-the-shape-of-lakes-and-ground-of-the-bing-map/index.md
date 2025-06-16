@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is there a possibility to automatically make a map from the shape of lakes and ground of the bing map?"
-description = '''Is there a possibility to automatically make a map from the shape of lakes and ground of the bing map? E.g. for the northern areas in Canada.  http://www.openstreetmap.org/edit?editor=id#map=12/67.2172/-100.2529 '''
+description = '''Is there a possibility to automatically make a map from the shape of lakes and ground of the bing map? E.g. for the northern areas in Canada.  https://www.openstreetmap.org/edit?editor=id#map=12/67.2172/-100.2529 '''
 date = "2013-08-24T17:12:00Z"
 lastmod = "2013-09-20T04:05:00Z"
 weight = 25735
@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there a possibility to automatically make a map from the shape of lakes and ground of the bing map? E.g. for the northern areas in Canada.</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=id#map=12/67.2172/-100.2529">http://www.openstreetmap.org/edit?editor=id#map=12/67.2172/-100.2529</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=id#map=12/67.2172/-100.2529">https://www.openstreetmap.org/edit?editor=id#map=12/67.2172/-100.2529</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tracing" rel="tag" title="see questions tagged &#39;tracing&#39;">tracing</span> <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-aerial" rel="tag" title="see questions tagged &#39;aerial&#39;">aerial</span> <span class="post-tag tag-link-automatically" rel="tag" title="see questions tagged &#39;automatically&#39;">automatically</span>
@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-25791-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I would like to do Ellesmere Island <a href="http://www.openstreetmap.org/#map=4/79.38/-81.96">http://www.openstreetmap.org/#map=4/79.38/-81.96</a> but maybe thats too complicated for me in the moment. I will go there next year and would like to have a general map from ground and lakes.</p>
+<p>I would like to do Ellesmere Island <a href="https://www.openstreetmap.org/#map=4/79.38/-81.96">https://www.openstreetmap.org/#map=4/79.38/-81.96</a> but maybe thats too complicated for me in the moment. I will go there next year and would like to have a general map from ground and lakes.</p>
 </div>
 <div id="comment-25791-info" class="comment-info">
 <span class="comment-age">(26 Aug '13, 03:43)</span> <span class="comment-user userinfo">ivolino</span>

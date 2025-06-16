@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are sending an <a href="http://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> style request to the <a href="http://wiki.openstreetmap.org/wiki/API">Editing API</a>. This does not work. Choose one of the servers listed on the XAPI page, or if those don't work, try the <a href="http://wiki.openstreetmap.org/wiki/Overpass%20API">Overpass API</a>.</p>
+<p>You are sending an <a href="https://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> style request to the <a href="https://wiki.openstreetmap.org/wiki/API">Editing API</a>. This does not work. Choose one of the servers listed on the XAPI page, or if those don't work, try the <a href="https://wiki.openstreetmap.org/wiki/Overpass%20API">Overpass API</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

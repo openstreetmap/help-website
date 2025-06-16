@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-6070-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>One more thing - looking at Kumasi (<a href="http://www.openstreetmap.org/?lat=6.6895&amp;lon=-1.6148&amp;zoom=13&amp;layers=M)">http://www.openstreetmap.org/?lat=6.6895&amp;lon=-1.6148&amp;zoom=13&amp;layers=M)</a> the OSM data does look a little sparse - for example to the northwest of Kumasi there's a primary road that hasn't had its links to other roads added yet. Any GPS traces that you bring back will be really useful!</p>
+<p>One more thing - looking at Kumasi (<a href="https://www.openstreetmap.org/?lat=6.6895&amp;lon=-1.6148&amp;zoom=13&amp;layers=M)">https://www.openstreetmap.org/?lat=6.6895&amp;lon=-1.6148&amp;zoom=13&amp;layers=M)</a> the OSM data does look a little sparse - for example to the northwest of Kumasi there's a primary road that hasn't had its links to other roads added yet. Any GPS traces that you bring back will be really useful!</p>
 </div>
 <div id="comment-6070-info" class="comment-info">
 <span class="comment-age">(28 Jun '11, 20:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -116,7 +116,7 @@ osqa_accepted = false
 <div id="post-6087-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I downloaded it from the ofiicial site <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a></p>
+<p>I downloaded it from the ofiicial site <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></p>
 </div>
 <div id="comment-6087-info" class="comment-info">
 <span class="comment-age">(29 Jun '11, 13:14)</span> <span class="comment-user userinfo">Jan Mulder</span>
@@ -151,7 +151,7 @@ osqa_accepted = false
 <div id="post-6092-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What I suspect happened is that you clicked on the "documentation" link, did a search, and went to somewhere like <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download.">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download.</a> The links from there are all external. It would help us to know which link that you actually clicked on.</p>
+<p>What I suspect happened is that you clicked on the "documentation" link, did a search, and went to somewhere like <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download.">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download.</a> The links from there are all external. It would help us to know which link that you actually clicked on.</p>
 </div>
 <div id="comment-6092-info" class="comment-info">
 <span class="comment-age">(29 Jun '11, 17:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -230,11 +230,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are several methods of getting OSM maps onto Garmin, as discussed on <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">the wiki</a>.</p>
+<p>There are several methods of getting OSM maps onto Garmin, as discussed on <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">the wiki</a>.</p>
 <p>Using MapSource, as you describe that you're doing in the comments, is one of those ways.</p>
 <p>From the description of the behavior, it sounds like you've encountered a bug in MapSource and it's not able to properly process the data you're feeding it. Unfortunately, MapSource is a proprietary program written by Garmin. We didn't write MapSource, nor do we have any ability to control its behavior.</p>
-<p>I would suggest then that you look at one of the other ways to get OSM maps onto your Garmin device. Those ways are listed on the link above at the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Software">software section</a>.</p>
-<p>You can also find links to <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">ready-to-use Garmin maps</a> based on OSM data.</p>
+<p>I would suggest then that you look at one of the other ways to get OSM maps onto your Garmin device. Those ways are listed on the link above at the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Software">software section</a>.</p>
+<p>You can also find links to <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">ready-to-use Garmin maps</a> based on OSM data.</p>
 <p>By using these techniques, either downloading a ready made map, or one of the Free/Open Source programs that support OSM, you can avoid using MapSource and avoid the problem altogether.</p>
 </div>
 <div class="answer-controls post-controls">

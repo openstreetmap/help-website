@@ -124,7 +124,7 @@ osqa_accepted = false
 <div id="post-64581-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A similar recent question <a href="https://help.openstreetmap.org/questions/64545/residential-zones-disappear-when-i-zoom-in">https://help.openstreetmap.org/questions/64545/residential-zones-disappear-when-i-zoom-in</a></p>
+<p>A similar recent question <a href="/questions/64545/residential-zones-disappear-when-i-zoom-in">https://help.openstreetmap.org/questions/64545/residential-zones-disappear-when-i-zoom-in</a></p>
 </div>
 <div id="comment-64581-info" class="comment-info">
 <span class="comment-age">(08 Jul '18, 07:48)</span> <span class="comment-user userinfo">andy mackey</span>

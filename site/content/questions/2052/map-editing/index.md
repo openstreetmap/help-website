@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question - see http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated" by Andy Allan 07 Jan '11, 11:12
+### The question has been closed for the following reason "Duplicate Question - see https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated" by Andy Allan 07 Jan '11, 11:12
 
 </div>
 

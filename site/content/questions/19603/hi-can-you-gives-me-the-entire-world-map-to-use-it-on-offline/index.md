@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-19607-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Same question from same author here: <a href="https://help.openstreetmap.org/questions/19601/how-to-use-openmapstreet-offline">https://help.openstreetmap.org/questions/19601/how-to-use-openmapstreet-offline</a></p>
+<p>Same question from same author here: <a href="/questions/19601/how-to-use-openmapstreet-offline">https://help.openstreetmap.org/questions/19601/how-to-use-openmapstreet-offline</a></p>
 </div>
 <div id="comment-19607-info" class="comment-info">
 <span class="comment-age">(06 Feb '13, 12:22)</span> <span class="comment-user userinfo">Pieren</span>

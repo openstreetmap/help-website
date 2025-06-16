@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-39098-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>actually this question seems to be a duplicate of the older <a href="/questions/22065">added-map-not-listed-in-garmin-nuvi-2455lmt-mymap</a>. <a href="http://help.openstreetmap.org/users/10108/onlinepersona"></a><a href="http://help.openstreetmap.org/users/10108/onlinepersona">@onlinepersona</a>: could you please add your answer over there because it is the older question.</p>
+<p>actually this question seems to be a duplicate of the older <a href="/questions/22065">added-map-not-listed-in-garmin-nuvi-2455lmt-mymap</a>. <a href="https://help.openstreetmap.org/users/10108/onlinepersona"></a><a href="https://help.openstreetmap.org/users/10108/onlinepersona">@onlinepersona</a>: could you please add your answer over there because it is the older question.</p>
 </div>
 <div id="comment-39098-info" class="comment-info">
 <span class="comment-age">(05 Dec '14, 22:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

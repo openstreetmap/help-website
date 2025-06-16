@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "I deleted part of Ljubljana by mistake"
-description = '''Hello I had done some editing today and by mistake I deleted some area which I didn&#x27;t wanted to. I don&#x27;t know how this happened but it happened. It has ID 260167371, but I didn&#x27;t manage to undetelet it can someone help me to undelete it. http://www.openstreetmap.org/changeset/24056794 Thank you'''
+description = '''Hello I had done some editing today and by mistake I deleted some area which I didn&#x27;t wanted to. I don&#x27;t know how this happened but it happened. It has ID 260167371, but I didn&#x27;t manage to undetelet it can someone help me to undelete it. https://www.openstreetmap.org/changeset/24056794 Thank you'''
 date = "2014-07-10T06:55:00Z"
 lastmod = "2014-07-10T17:07:00Z"
 weight = 34788
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello</p>
-<p>I had done some editing today and by mistake I deleted some area which I didn't wanted to. I don't know how this happened but it happened. It has ID 260167371, but I didn't manage to undetelet it can someone help me to undelete it. <a href="http://www.openstreetmap.org/changeset/24056794">http://www.openstreetmap.org/changeset/24056794</a></p>
+<p>I had done some editing today and by mistake I deleted some area which I didn't wanted to. I don't know how this happened but it happened. It has ID 260167371, but I didn't manage to undetelet it can someone help me to undelete it. <a href="https://www.openstreetmap.org/changeset/24056794">https://www.openstreetmap.org/changeset/24056794</a></p>
 <p>Thank you</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Fixed in <a href="http://www.openstreetmap.org/changeset/24066833.">http://www.openstreetmap.org/changeset/24066833.</a></p>
+<p>Fixed in <a href="https://www.openstreetmap.org/changeset/24066833.">https://www.openstreetmap.org/changeset/24066833.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

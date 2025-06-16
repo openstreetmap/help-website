@@ -138,7 +138,7 @@ Radu-Stefan</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>The Snapshot database structure populated by Osmosis is very unsuitable for routing, at least in part because geometry for ways might not exist or be unsuitable and there is no geometry for relations. You really need to transform the data into a more suitable format. This data is really for people who want a pretty much exact copy of current data from the planet database for an area.</p>
-<p>I would start by reading the <a href="http://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools">wiki</a>.</p>
+<p>I would start by reading the <a href="https://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

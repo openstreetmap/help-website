@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Excuse me if this has been asked before or there's a simple explanation. I have been working on a project that overlays data over OSM which brought this truncation to my attention. It only happens on one zoom level, the default level shown on your homepage, which is a good example:</p>
-<p><a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a></p>
+<p><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></p>
 <p>If you look, the label for New Zealand and Fiji has been truncated, which suggests the loss of some data of some description.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It looks like the label's overlaying the 180 degree meridian:</p>
-<p><a href="http://www.openstreetmap.org/?lat=-30.3&amp;lon=-179.7&amp;zoom=2&amp;layers=M">http://www.openstreetmap.org/?lat=-30.3&amp;lon=-179.7&amp;zoom=2&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-30.3&amp;lon=-179.7&amp;zoom=2&amp;layers=M">https://www.openstreetmap.org/?lat=-30.3&amp;lon=-179.7&amp;zoom=2&amp;layers=M</a></p>
 <p>Maybe it's related to that?<br />
 </p>
 </div>

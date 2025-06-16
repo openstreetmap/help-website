@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi look here please, <a href="http://wiki.openstreetmap.org/wiki/Optician">http://wiki.openstreetmap.org/wiki/Optician</a> for the optician. for the crafts look at the same place. Ps ad them using the advanced menu in P2 accordingly to the key and value. Feel free to ad your shop or anything else thats besides a track or road. To be more polite heres another one <a href="http://wiki.openstreetmap.org/wiki/Key:craft">http://wiki.openstreetmap.org/wiki/Key:craft</a> for crafts.</p>
+<p>Hi look here please, <a href="https://wiki.openstreetmap.org/wiki/Optician">https://wiki.openstreetmap.org/wiki/Optician</a> for the optician. for the crafts look at the same place. Ps ad them using the advanced menu in P2 accordingly to the key and value. Feel free to ad your shop or anything else thats besides a track or road. To be more polite heres another one <a href="https://wiki.openstreetmap.org/wiki/Key:craft">https://wiki.openstreetmap.org/wiki/Key:craft</a> for crafts.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>You can add whatever you want in advanced mode, you just need to know the correct tags. In the green box on the right side of the key:shop page (<a href="http://wiki.openstreetmap.org/wiki/Shop),">http://wiki.openstreetmap.org/wiki/Shop),</a> it lists many common tags like the ones you mention, with links to each if you need more info on how to use them.</p>
+<p>You can add whatever you want in advanced mode, you just need to know the correct tags. In the green box on the right side of the key:shop page (<a href="https://wiki.openstreetmap.org/wiki/Shop),">https://wiki.openstreetmap.org/wiki/Shop),</a> it lists many common tags like the ones you mention, with links to each if you need more info on how to use them.</p>
 </div>
 <div id="comment-20391-info" class="comment-info">
 <span class="comment-age">(28 Feb '13, 15:21)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -243,7 +243,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Ritwick, since your new here, be welcome, keep adding and take a look at the Wiki. I hesitate to say but it’s a world apart and for almost any question you want to ask there is an answer in it. For instance ad value or key in the menu of at this address, <a href="http://wiki.openstreetmap.org/w/index.php?search=key&amp;title=Special%3ASearch,">http://wiki.openstreetmap.org/w/index.php?search=key&amp;title=Special%3ASearch,</a> and value gives you a view of many tags all together. Happy Mapping</p>
+<p>Hi Ritwick, since your new here, be welcome, keep adding and take a look at the Wiki. I hesitate to say but it’s a world apart and for almost any question you want to ask there is an answer in it. For instance ad value or key in the menu of at this address, <a href="https://wiki.openstreetmap.org/w/index.php?search=key&amp;title=Special%3ASearch,">https://wiki.openstreetmap.org/w/index.php?search=key&amp;title=Special%3ASearch,</a> and value gives you a view of many tags all together. Happy Mapping</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

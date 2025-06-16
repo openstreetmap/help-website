@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a plugin for JOSM that is called <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/TODO_list">todo</a>. It allows you to manage a todo list where you can add elements, iterate over them and remove (<em>mark</em>) them again.</p>
+<p>There is a plugin for JOSM that is called <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/TODO_list">todo</a>. It allows you to manage a todo list where you can add elements, iterate over them and remove (<em>mark</em>) them again.</p>
 <p>Another somewhat crippled solution is to just create a temporary relation and add all your objects to it. This solution works for all editors which support relations. But you have to remember to delete it after you finished your task.</p>
 </div>
 <div class="answer-controls post-controls">

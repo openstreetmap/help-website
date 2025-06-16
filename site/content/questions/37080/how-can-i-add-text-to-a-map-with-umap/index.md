@@ -207,7 +207,7 @@ osqa_accepted = false
 <div id="post-37084-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9724/roby44">@Roby44</a>: so your question is about uMap, right? Please add it to the title and tags.</p>
+<p><a href="https://help.openstreetmap.org/users/9724/roby44">@Roby44</a>: so your question is about uMap, right? Please add it to the title and tags.</p>
 </div>
 <div id="comment-37084-info" class="comment-info">
 <span class="comment-age">(27 Sep '14, 18:19)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

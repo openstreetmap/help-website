@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Some of the dams are just tags as <code>waterway=dam</code> (<a href="http://www.openstreetmap.org/edit#map=17/4.91797/18.00170">like Mbali Dam</a>), while others (<a href="http://www.openstreetmap.org/edit?way=100867335#map=19/36.01580/-114.73761">Like Hoover Dam</a>) are tagged as <code>building=yes</code> along with <code>waterway=dam</code>.</p>
+<p>Some of the dams are just tags as <code>waterway=dam</code> (<a href="https://www.openstreetmap.org/edit#map=17/4.91797/18.00170">like Mbali Dam</a>), while others (<a href="https://www.openstreetmap.org/edit?way=100867335#map=19/36.01580/-114.73761">Like Hoover Dam</a>) are tagged as <code>building=yes</code> along with <code>waterway=dam</code>.</p>
 <p>Is there a standard procedure for tagging these? I ask because one Mbali Dam appears as cyan colored while Hoover Dam appears as red (due to the <code>building=yes</code> tag) and I can imagine that might be confusing for some editors.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -75,7 +75,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a>: I wonder what that was <em>supposed</em> to mean - according to Wikipedia, <em>construction</em> has started in 1931, and finished in 1936. I don't think that the lifecycle tags have a provision for this; also, IMNSHO the construction dates are not something that's mappable (unless currently in long-term progress).</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>: I wonder what that was <em>supposed</em> to mean - according to Wikipedia, <em>construction</em> has started in 1931, and finished in 1936. I don't think that the lifecycle tags have a provision for this; also, IMNSHO the construction dates are not something that's mappable (unless currently in long-term progress).</p>
 </div>
 <div id="comment-49235-info" class="comment-info">
 <span class="comment-age">(15 Apr '16, 08:59)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -140,7 +140,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In general, dams are not buildings, though I'm sure there are a few exceptions. Hoover Dam has been tagged as a building since it was added to the map, likely to <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">make it show on the map</a> because <code>waterway=dam</code> wasn't rendered on the standard rendering until <a href="https://github.com/gravitystorm/openstreetmap-carto/pull/991">a year ago</a>. There's really no way you could validly consider Hoover Dam to be a building, because it's a solid block of concrete with only the occasional interior service space.</p>
+<p>In general, dams are not buildings, though I'm sure there are a few exceptions. Hoover Dam has been tagged as a building since it was added to the map, likely to <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">make it show on the map</a> because <code>waterway=dam</code> wasn't rendered on the standard rendering until <a href="https://github.com/gravitystorm/openstreetmap-carto/pull/991">a year ago</a>. There's really no way you could validly consider Hoover Dam to be a building, because it's a solid block of concrete with only the occasional interior service space.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

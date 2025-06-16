@@ -118,7 +118,7 @@ osqa_accepted = false
 <p>I suspect that the short answer on Windows is "no".</p>
 <p>Given the state of Windows support of some of the tools (being worked on, but not quite there yet, resulting in issues including <a href="https://github.com/openstreetmap/osm2pgsql/issues/117">this one</a>) it'll certainly be easier to install Linux in a VM and work there.</p>
 <p>For rendering slippymap tiles, I'd install Ubuntu 14.04 in a VM and then follow <a href="http://switch2osm.org/serving-tiles/">the switch2osm instructions</a>.</p>
-<p>For Nominatim (address lookups) I believe that <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">these instructions</a> are the current ones, and I'd be tempted to do it in a different VM, which might make it easier to balance memory usage on the VM host.</p>
+<p>For Nominatim (address lookups) I believe that <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">these instructions</a> are the current ones, and I'd be tempted to do it in a different VM, which might make it easier to balance memory usage on the VM host.</p>
 <p>If you really want to do it on Windows by all means have a go - there are various blog posts, SOTM presentations and bits of Github documentation that you'll need to draw on, so not really a "canned solution".</p>
 </div>
 <div class="answer-controls post-controls">

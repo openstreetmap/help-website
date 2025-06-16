@@ -40,12 +40,12 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>When editing, I've noticed that some businesses have their logos as part of the feature type. I assumed that this came from Wikidata, but looking further into it this doesn't always seem to be the case. For, example, in the following case we can see Home Bargains:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-08-04_OpenStreetMap(1).png" alt="Home Bargains Logo" /></p>
+<p><img src="/upfiles/Screenshot_2020-08-04_OpenStreetMap(1).png" alt="Home Bargains Logo" /></p>
 <p>The Wikidata code for this is Q5888229. Looking at <a href="https://www.wikidata.org/wiki/Q5888229">Wikidata for this</a>, there is no logo. I thought that maybe it is pulling it from the Wikipedia page, but <a href="https://en.wikipedia.org/wiki/Home_Bargains">that uses a different logo</a>.</p>
 <p>Update: Just speculating, but perhaps it gets it from Twitter. <a href="https://www.wikidata.org/wiki/Q5888229">The Wikidata page</a> references their <a href="https://twitter.com/homebargains">Twitter account</a>. The logo there looks to be the same:</p>
 <p><img src="https://pbs.twimg.com/profile_images/1190198057171849216/NRrcMQMj_400x400.jpg" alt="alt text" /></p>
 <p>Another update: This time looking at Aldi:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2020-08-04_15-33-48.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2020-08-04_15-33-48.png" alt="alt text" /></p>
 <p><a href="https://www.wikidata.org/wiki/Q125054">The Wikidata page</a> for this, has two logos which appears to be for both Aldi Nord and Aldi Süd. The logo used in OSM seems most similar to Aldi Süd but is not the same. The page, then has three Twitter accounts: Alid USA, Aldi UK and Aldi Ireland. It seems to have taken the logo for <a href="https://pbs.twimg.com/profile_images/1044279489868443649/lt3Lrt93_400x400.jpg">Aldi USA</a>. I guess because it is the first one.</p>
 <p>Does anyone know what the business logic is behind this? Why does a Twitter logo get used in preference to a Wikidata logo? Where else might it look?</p>
 </div>

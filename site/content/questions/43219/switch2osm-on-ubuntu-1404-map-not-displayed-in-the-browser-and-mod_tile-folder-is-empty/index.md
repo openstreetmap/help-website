@@ -190,12 +190,12 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/users/11025/rocko17">@rocko17</a> That console output says that:</p>
+<p><a href="https://help.openstreetmap.org/users/11025/rocko17">@rocko17</a> That console output says that:</p>
 <ol>
 <li>renderd is running OK and can load the fonts it needs</li>
 <li>It's not (at least in the snippet above) getting a request to render a tile</li>
 </ol>
-<p>The Apache restart says that it doesn't crash at that stage (unlike <a href="https://help.openstreetmap.org/questions/44098/switch2osm-on-ubuntu-1404-no-tiles-generated-suspected-apache-coredump">this</a> problem). There's no indication whether or not mod_tile is set up within Apache (it may be working but just not getting a request).</p>
+<p>The Apache restart says that it doesn't crash at that stage (unlike <a href="/questions/44098/switch2osm-on-ubuntu-1404-no-tiles-generated-suspected-apache-coredump">this</a> problem). There's no indication whether or not mod_tile is set up within Apache (it may be working but just not getting a request).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

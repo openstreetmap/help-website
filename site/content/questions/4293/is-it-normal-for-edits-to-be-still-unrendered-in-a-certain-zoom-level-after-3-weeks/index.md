@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is it normal for edits to be still unrendered in a certain zoom level after 3 weeks?"
-description = '''On the 16th March, 3 weeks ago, I added a load of roads in the region of http://www.openstreetmap.org/?lat=52.9403&amp;amp;lon=-6.2715&amp;amp;zoom=12&amp;amp;layers=M , and they were rendered in reasonable time in all appropriate zoom levels except level 12, which still has not been rendered. Could this be due...'''
+description = '''On the 16th March, 3 weeks ago, I added a load of roads in the region of https://www.openstreetmap.org/?lat=52.9403&amp;amp;lon=-6.2715&amp;amp;zoom=12&amp;amp;layers=M , and they were rendered in reasonable time in all appropriate zoom levels except level 12, which still has not been rendered. Could this be due...'''
 date = "2011-04-06T10:31:00Z"
 lastmod = "2011-04-06T14:04:00Z"
 weight = 4293
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>On the 16th March, 3 weeks ago, I added a load of roads in the region of <a href="http://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M</a> , and they were rendered in reasonable time in all appropriate zoom levels except level 12, which still has not been rendered. Could this be due to a fault somewhere in the system, or am I just being impatient?</p>
+<p>On the 16th March, 3 weeks ago, I added a load of roads in the region of <a href="https://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M</a> , and they were rendered in reasonable time in all appropriate zoom levels except level 12, which still has not been rendered. Could this be due to a fault somewhere in the system, or am I just being impatient?</p>
 <p>Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -64,7 +64,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>No, that does not sound normal. Max a day or two I guess, but then something is probably wrong. Normally my edits show up within a bunch of hours.</p>
 <p>First I had a hard time to see the problem because different zoom levels carry different amount of details, but here is a link to a road that is not visible in level 12 (but in the adjacent zoom levels) and its edited Mars 16th by you:</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M&amp;way=104384066">http://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M&amp;way=104384066</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M&amp;way=104384066">https://www.openstreetmap.org/?lat=52.9403&amp;lon=-6.2715&amp;zoom=12&amp;layers=M&amp;way=104384066</a></p>
 <p>Hopefully someone here has an explanation.</p>
 </div>
 <div id="comment-4294-info" class="comment-info">
@@ -131,7 +131,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'd suggest looking at this question and answer, about what happens when the queue is full and how to check the status of a tile and/or add it to the render queue:</p>
-<p><a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated"></a><a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated"></a><a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated"></a><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated"></a><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 <p>For example, this tile is one of the ones missing your roads:</p>
 <p><a href="http://tile.openstreetmap.org/12/1976/1335.png"></a><a href="http://tile.openstreetmap.org/12/1976/1335.png"></a><a href="http://tile.openstreetmap.org/12/1976/1335.png">http://tile.openstreetmap.org/12/1976/1335.png</a></p>
 <p>and</p>

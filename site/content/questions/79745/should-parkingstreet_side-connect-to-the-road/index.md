@@ -39,13 +39,13 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There are some street side parking spaces mapped by a particular user like this: <img src="https://help.openstreetmap.org/upfiles/original_O2vi3Fd.PNG" alt="alt text" /></p>
+<p>There are some street side parking spaces mapped by a particular user like this: <img src="/upfiles/original_O2vi3Fd.PNG" alt="alt text" /></p>
 <p>These small service roads don't really exist, but are used to fill the gap between a road mapped as a way without an area and a street side parking space.</p>
 <p>How do I go about correcting this? I see following options:</p>
 <ol>
 <li>parking:lane could be used, but I don't want to remove details added by other mapper.</li>
 <li><p>Tag:parking=street_side wiki article has a picture where street side parking space is not connected to the road at all. But imagine two parallel roads with parking spaces in between. There is no way of knowing from which road they are accessible. And shouldn't we try to connect all infrastructure, which is actually connected? <img src="https://wiki.openstreetmap.org/w/images/0/06/Street_side_parking_carto_rendering.png" alt="alt text" /></p></li>
-<li><p>I could connect street-side parking directly to the road, so that it would share one side with the road. But I don't actually know if this is acceptable. <img src="https://help.openstreetmap.org/upfiles/variant1_oGefjMw.png" alt="alt text" /></p></li>
+<li><p>I could connect street-side parking directly to the road, so that it would share one side with the road. But I don't actually know if this is acceptable. <img src="/upfiles/variant1_oGefjMw.png" alt="alt text" /></p></li>
 <li>Maybe I'm wrong and the fake service ways are actually acceptable.</li>
 </ol>
 <p>Personally, I think that option 3 is better, but since option 2 is mentioned in wiki, is it the only acceptable option?</p>

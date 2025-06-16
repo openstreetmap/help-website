@@ -124,9 +124,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe the renderer gets confused by the invalid overlapping of the <a href="http://www.openstreetmap.org/way/91497794">outer</a> and <a href="http://www.openstreetmap.org/way/91496519">inner</a> way.</p>
-<p>Or the overlapping with the <a href="http://www.openstreetmap.org/way/40893845#map=17/41.04237/-124.12084">mainland coastline</a> also causes issues. It should share nodes with the outer way. The same applies to the inner way and the island, they should be the same way, not two separate ones.</p>
-<p>You might also have a look at similar cases, e.g. <a href="http://www.openstreetmap.org/relation/3353645#map=14/53.5892/6.8756">this tidalflat</a>, which is properly visible. It is also tagged as natural=wetland instead of natural=water.</p>
+<p>Maybe the renderer gets confused by the invalid overlapping of the <a href="https://www.openstreetmap.org/way/91497794">outer</a> and <a href="https://www.openstreetmap.org/way/91496519">inner</a> way.</p>
+<p>Or the overlapping with the <a href="https://www.openstreetmap.org/way/40893845#map=17/41.04237/-124.12084">mainland coastline</a> also causes issues. It should share nodes with the outer way. The same applies to the inner way and the island, they should be the same way, not two separate ones.</p>
+<p>You might also have a look at similar cases, e.g. <a href="https://www.openstreetmap.org/relation/3353645#map=14/53.5892/6.8756">this tidalflat</a>, which is properly visible. It is also tagged as natural=wetland instead of natural=water.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

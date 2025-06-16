@@ -183,7 +183,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can retrieve boundaries from Overpass-API using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">is_in</a> query, but Overpass API does not support annotating the individual addresses with the information. So you'd end up implementing that aspect of Nominatim locally.</p>
-<p>Nominatim has an <a href="https://help.openstreetmap.org/questions/62048/return-all-elements-associated-with-address-overpass-api">api for retrieving the address information for a given coordinate</a>. You'd have to call that api for each location you wanted information about. Make sure to follow the <a href="https://operations.osmfoundation.org/policies/nominatim/">use policy</a> if you use the public server.</p>
+<p>Nominatim has an <a href="/questions/62048/return-all-elements-associated-with-address-overpass-api">api for retrieving the address information for a given coordinate</a>. You'd have to call that api for each location you wanted information about. Make sure to follow the <a href="https://operations.osmfoundation.org/policies/nominatim/">use policy</a> if you use the public server.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -81,7 +81,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>There's a previous question about Mapfactor <a href="https://help.openstreetmap.org/questions/15836/mapfactor-navigator-11-map-updates">here</a>. I'd be surprised if a it could understand a raw OSM PBF file.</p>
+<p>There's a previous question about Mapfactor <a href="/questions/15836/mapfactor-navigator-11-map-updates">here</a>. I'd be surprised if a it could understand a raw OSM PBF file.</p>
 <p>Mapfactor's own forum (where people are more likely to be familiar with the process) is <a href="http://forum.mapfactor.com/">here</a>.</p>
 </div>
 <div id="comment-27719-info" class="comment-info">

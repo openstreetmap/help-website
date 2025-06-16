@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Odd, I typed "Im Katterloch, worms" into the search box and found it <a href="http://www.openstreetmap.org/?lat=49.623436&amp;lon=8.356947&amp;zoom=18&amp;layers=M">straight away</a>.</p>
+<p>Odd, I typed "Im Katterloch, worms" into the search box and found it <a href="https://www.openstreetmap.org/?lat=49.623436&amp;lon=8.356947&amp;zoom=18&amp;layers=M">straight away</a>.</p>
 </div>
 <div id="comment-16926-info" class="comment-info">
 <span class="comment-age">(16 Oct '12, 15:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

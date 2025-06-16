@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>For Mapnik: I have a landuse=forest as outer in a multipolygon, with 67 members. The latest members, type natural=fell (around 10 of them or even more) don't show up on mapnik. It's relation 399078, and for example one 'hole' that doesn't show up, is 96386371.</p>
 <p>When switching to OSMrenderer, the holes show up, but the forest doesn't. It looks as eastward from a certain tile, the forest isn't rendered anymore. When zooming out, it appears this happens to more larger forests with almost the maximum of 2000 nodes.</p>
-<p>Location is <a href="http://www.openstreetmap.org/?lat=46.8380856513977&amp;lon=11.8127918243408&amp;zoom=15">http://www.openstreetmap.org/?lat=46.8380856513977&amp;lon=11.8127918243408&amp;zoom=15</a></p>
+<p>Location is <a href="https://www.openstreetmap.org/?lat=46.8380856513977&amp;lon=11.8127918243408&amp;zoom=15">https://www.openstreetmap.org/?lat=46.8380856513977&amp;lon=11.8127918243408&amp;zoom=15</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osmarenderer" rel="tag" title="see questions tagged &#39;osmarenderer&#39;">osmarenderer</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-renderer" rel="tag" title="see questions tagged &#39;renderer&#39;">renderer</span>

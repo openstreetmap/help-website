@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello. Options everything seems at the same stop, but the font is smaller at this stop and is only visible at the highest level. Please tell me, how can you want to add the special tag?</p>
-<p><a href="http://www.openstreetmap.org/#map=17/56.88007/53.19087">reference to the place on the map. Stop and School Fruit are not visible at the current scale</a> (ссылка на место на карте. Остановка Фруктовая и Школьная не видны при текущем масштабе)</p>
+<p><a href="https://www.openstreetmap.org/#map=17/56.88007/53.19087">reference to the place on the map. Stop and School Fruit are not visible at the current scale</a> (ссылка на место на карте. Остановка Фруктовая и Школьная не видны при текущем масштабе)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not_shown" rel="tag" title="see questions tagged &#39;not_shown&#39;">not_shown</span> <span class="post-tag tag-link-visible" rel="tag" title="see questions tagged &#39;visible&#39;">visible</span> <span class="post-tag tag-link-busstops" rel="tag" title="see questions tagged &#39;busstops&#39;">busstops</span> <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span> <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span>
@@ -112,7 +112,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Do you mean the name of <a href="https://www.openstreetmap.org/node/933689146">https://www.openstreetmap.org/node/933689146</a> ? The name seems to be not visible because there are other objects/names blocking its space. That's normal and you should not try to do something about it. Other maps will show it. Try the <a href="https://www.openstreetmap.org/#map=17/56.88147/53.19070&amp;layers=T">transport map</a> (see <a href="https://wiki.openstreetmap.org/wiki/Browsing#Layers">https://wiki.openstreetmap.org/wiki/Browsing#Layers</a> )</p>
-<p>See also <a href="https://help.openstreetmap.org/questions/34204/the-building-name-does-">https://help.openstreetmap.org/questions/34204/the-building-name-does-</a> not-appear-until-zooming-in</p>
+<p>See also <a href="/questions/34204/the-building-name-does-">https://help.openstreetmap.org/questions/34204/the-building-name-does-</a> not-appear-until-zooming-in</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -142,7 +142,7 @@ osqa_accepted = true
 <div id="post-46801-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11715/">@ИжГЭТ</a>: you can make suggestions for the map style at <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">https://github.com/gravitystorm/openstreetmap-carto/issues</a> . Note that a symbol was shown for your stop - just not the name in higher zoom levels.</p>
+<p><a href="https://help.openstreetmap.org/users/11715/">@ИжГЭТ</a>: you can make suggestions for the map style at <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">https://github.com/gravitystorm/openstreetmap-carto/issues</a> . Note that a symbol was shown for your stop - just not the name in higher zoom levels.</p>
 </div>
 <div id="comment-46801-info" class="comment-info">
 <span class="comment-age">(23 Nov '15, 19:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -153,7 +153,7 @@ osqa_accepted = true
 <div id="post-46806-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: In principle, I have enough to display the names of the stops on the maximum scale. It is bad that the names may be lost in the next update of layers. It would be good if in the future was invented a tag that displays the name on top of all layers. I'll try tinkered with tileMill, although it is too difficult for me, but I hope will help.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: In principle, I have enough to display the names of the stops on the maximum scale. It is bad that the names may be lost in the next update of layers. It would be good if in the future was invented a tag that displays the name on top of all layers. I'll try tinkered with tileMill, although it is too difficult for me, but I hope will help.</p>
 </div>
 <div id="comment-46806-info" class="comment-info">
 <span class="comment-age">(24 Nov '15, 04:52)</span> <span class="comment-user userinfo">ИжГЭТ</span>
@@ -165,7 +165,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11715/"></a><a href="http://help.openstreetmap.org/users/11715/">@ИжГЭТ</a>: as said below: we create and take care of data - not of a specific map. So there will not be a tag that "displays the name on top of all layers" because this is the choice of the person who makes the map / map style based on the factual tags describing the real-world object. The Transport Map displays the bus stop names up to quite high zoom levels. Our default map has no emphasis on public transport, so those bus stop names may be hidden if there are other more important (in the opinion of the map style makers) objects nearby.</p>
+<p><a href="https://help.openstreetmap.org/users/11715/"></a><a href="https://help.openstreetmap.org/users/11715/">@ИжГЭТ</a>: as said below: we create and take care of data - not of a specific map. So there will not be a tag that "displays the name on top of all layers" because this is the choice of the person who makes the map / map style based on the factual tags describing the real-world object. The Transport Map displays the bus stop names up to quite high zoom levels. Our default map has no emphasis on public transport, so those bus stop names may be hidden if there are other more important (in the opinion of the map style makers) objects nearby.</p>
 <p>Yes, with <span>TileMill</span> you could make your own map style.</p>
 </div>
 <div id="comment-46807-info" class="comment-info">
@@ -326,7 +326,7 @@ osqa_accepted = true
 <div id="post-46832-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11715/">@ИжГЭТ</a>: I have asked a Russian native speaker to help you here, wait a bit.</p>
+<p><a href="https://help.openstreetmap.org/users/11715/">@ИжГЭТ</a>: I have asked a Russian native speaker to help you here, wait a bit.</p>
 </div>
 <div id="comment-46832-info" class="comment-info">
 <span class="comment-age">(25 Nov '15, 06:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

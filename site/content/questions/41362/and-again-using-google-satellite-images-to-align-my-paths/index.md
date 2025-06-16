@@ -152,7 +152,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10569/roman-shuvalov"></a><a href="http://help.openstreetmap.org/users/10569/roman-shuvalov">@Roman Shuvalov</a>: The question is not about "prohibition of using their data" but <em>permission</em> (or why it is allowed to use it)! You need to reverse your default assumption.</p>
+<p><a href="https://help.openstreetmap.org/users/10569/roman-shuvalov"></a><a href="https://help.openstreetmap.org/users/10569/roman-shuvalov">@Roman Shuvalov</a>: The question is not about "prohibition of using their data" but <em>permission</em> (or why it is allowed to use it)! You need to reverse your default assumption.</p>
 <p>by the way: thank you very much for asking before just using Google!</p>
 </div>
 <div id="comment-41374-info" class="comment-info">
@@ -379,7 +379,7 @@ osqa_accepted = true
 <div id="post-50511-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2397/user8192">@user8192</a> your statements are simply nonsense, Landsat imagery has nominal resolution of around 30m which is not anything that anybody would write home about. It is commonly used by many players for lower zoom levels, but is not at all interesting for OSM.</p>
+<p><a href="https://help.openstreetmap.org/users/2397/user8192">@user8192</a> your statements are simply nonsense, Landsat imagery has nominal resolution of around 30m which is not anything that anybody would write home about. It is commonly used by many players for lower zoom levels, but is not at all interesting for OSM.</p>
 <p>Please a) don't repeat rubbish from trade rags here, and b) don't believe it in the first place.</p>
 </div>
 <div id="comment-50511-info" class="comment-info">

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In Bolivia, a huge amount of roads are tagged with maxspeed, where the value isn't the legal speed limit, but more like a practical speed. This is mostly one mappers choice, who told me he did this for better routing quality (there are only a few very active mappers there, giving each of us an abnormally large individual influence over the map). The difference in road quality between the (mostly) paved trunk roads and unpaved other roads is so vast, that even huge shortcuts would take longer in practice. The lower speed limits forces the router to keep you on the better roads. This does help to give routing advice.</p>
-<p>In my opinion, this data should be retagged as maxspeed:practical . The only downside is that this is a tag that, although widely used, has been voted out. It is not fun choosing between a disapproved tag and improper use of a tag :) The mapper has asked me if I see any other alternatives. I don't, so I would like your opinions. I also asked the opinion <a href="http://www.openstreetmap.org/user/51114u9">of the Bolivian community</a>.</p>
+<p>In my opinion, this data should be retagged as maxspeed:practical . The only downside is that this is a tag that, although widely used, has been voted out. It is not fun choosing between a disapproved tag and improper use of a tag :) The mapper has asked me if I see any other alternatives. I don't, so I would like your opinions. I also asked the opinion <a href="https://www.openstreetmap.org/user/51114u9">of the Bolivian community</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-maxspeed" rel="tag" title="see questions tagged &#39;maxspeed&#39;">maxspeed</span>

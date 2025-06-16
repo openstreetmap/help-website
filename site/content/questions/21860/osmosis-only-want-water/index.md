@@ -113,8 +113,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Though you seem to have found the solution for your problem I'd like to mention <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfiler</a>. It should do for your problem and as C-program is several times faster than osmosis.</p>
-<p>Probably you also want to retrieve just waterways (or what you need) from the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. So you'd get only the data you want - no filtering for areas and tags afterwards.</p>
+<p>Though you seem to have found the solution for your problem I'd like to mention <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfiler</a>. It should do for your problem and as C-program is several times faster than osmosis.</p>
+<p>Probably you also want to retrieve just waterways (or what you need) from the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. So you'd get only the data you want - no filtering for areas and tags afterwards.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

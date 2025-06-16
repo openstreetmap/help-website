@@ -108,9 +108,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are several open source <a href="http://wiki.openstreetmap.org/wiki/Android">Android Apps</a> that do offline vector rendering, like <a href="http://osmand.net">OsmAnd</a> or <a href="http://gpsmid.sourceforge.net/">GpsMid</a>. You might get some hints looking at how they do it.</p>
+<p>There are several open source <a href="https://wiki.openstreetmap.org/wiki/Android">Android Apps</a> that do offline vector rendering, like <a href="http://osmand.net">OsmAnd</a> or <a href="http://gpsmid.sourceforge.net/">GpsMid</a>. You might get some hints looking at how they do it.</p>
 <p><a href="http://code.google.com/p/mapsforge/">mapsforge</a> is a vector based Android map library intended to be used as a basis for own map applications. The vector data is stored in a <a href="http://code.google.com/p/mapsforge/wiki/ConceptualDesignMapFileFormat">binary file format</a>.</p>
-<p>There is also a new project <a href="http://wiki.openstreetmap.org/wiki/OSMT">OSMT</a> for tiling OSM XML files, but that is in early stages and does not support relations.</p>
+<p>There is also a new project <a href="https://wiki.openstreetmap.org/wiki/OSMT">OSMT</a> for tiling OSM XML files, but that is in early stages and does not support relations.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> is pretty much the first port of call for loading OSM data into a database, getting it out again, and chopping and changing along the way. You should investigate that as your first port of call.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> is pretty much the first port of call for loading OSM data into a database, getting it out again, and chopping and changing along the way. You should investigate that as your first port of call.</p>
 <p>Note that other providers, such as <a href="http://developers.cloudmade.com/projects/show/vector-tiles">CloudMade</a>, have already produced vector tiles. You may find it worthwhile seeing what they've done, too.</p>
 </div>
 <div class="answer-controls post-controls">

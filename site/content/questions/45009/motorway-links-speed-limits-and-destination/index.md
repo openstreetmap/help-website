@@ -136,7 +136,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think it's correct to use maxspeed:lanes and destination:lanes as you describe. AFAIK, OsmAnd only uses destination tags and not destination:lanes. I would add both. Please consider adding <a href="http://wiki.openstreetmap.org/wiki/Key:turn:lanes">turn:lanes</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/change">change:lanes</a> as well.</p>
+<p>I think it's correct to use maxspeed:lanes and destination:lanes as you describe. AFAIK, OsmAnd only uses destination tags and not destination:lanes. I would add both. Please consider adding <a href="https://wiki.openstreetmap.org/wiki/Key:turn:lanes">turn:lanes</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/change">change:lanes</a> as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim imports the 7 continents, but only as center point. So you can search for "Europe" only and get a result back.</p>
-<p>That means for example Europe <a href="http://www.openstreetmap.org/node/25871341">http://www.openstreetmap.org/node/25871341</a> is treated as a child of Germany, not its parent.</p>
+<p>That means for example Europe <a href="https://www.openstreetmap.org/node/25871341">https://www.openstreetmap.org/node/25871341</a> is treated as a child of Germany, not its parent.</p>
 <p>What is the usecase you need continents for? I wanted to add those to <a href="https://geocoder.opencagedata.com/">https://geocoder.opencagedata.com/</a> because we use multiple geocoders and some return a continent while others (like Nominatim) don't and that's inconsistent. I would probably use a fixed country=&gt;continent mapping though which might be incorrect for cities which are on two continents (Istanbul).</p>
 </div>
 <div class="answer-controls post-controls">

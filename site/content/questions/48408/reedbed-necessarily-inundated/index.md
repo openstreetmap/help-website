@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Penegal, Use natural=wetland, wetland=reedbedas stated in the Wiki. A reed_bed could be or is in a fluctuating water level. If it’s growing in a polder, the water level will be in a constant movement up and down. A river could cause fluctuating water levels as well. Have a look here <a href="http://www.openstreetmap.org/#map=17/52.48704/4.7763">http://www.openstreetmap.org/#map=17/52.48704/4.7763</a> Reed is a plant that conserves the soil and makes it dry in time. The area has been designated as natural wetland and nature reserve, partly meadow and sometimes even very wet or flooded, boots necessary with reedbeds all around, the only way to make a survey complete is by boat. Its even named Waterland the surface and water levels will change permanently or seasonal.</p>
+<p>Hi Penegal, Use natural=wetland, wetland=reedbedas stated in the Wiki. A reed_bed could be or is in a fluctuating water level. If it’s growing in a polder, the water level will be in a constant movement up and down. A river could cause fluctuating water levels as well. Have a look here <a href="https://www.openstreetmap.org/#map=17/52.48704/4.7763">https://www.openstreetmap.org/#map=17/52.48704/4.7763</a> Reed is a plant that conserves the soil and makes it dry in time. The area has been designated as natural wetland and nature reserve, partly meadow and sometimes even very wet or flooded, boots necessary with reedbeds all around, the only way to make a survey complete is by boat. Its even named Waterland the surface and water levels will change permanently or seasonal.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

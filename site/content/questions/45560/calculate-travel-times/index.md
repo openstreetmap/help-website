@@ -130,7 +130,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><a href="http://openrouteservice.org/">OpenRouteService.org</a> offers such an Accessibility Analysis service. I don't know exactly what OSM tags are taken into account for the analysis. Maybe you want to check their website for details.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/24-09-2015_15-49-55.png" alt="alt text" /></p>
+<p><img src="/upfiles/24-09-2015_15-49-55.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

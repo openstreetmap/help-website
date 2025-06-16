@@ -137,7 +137,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Maybe the problem is that the <code>619: Cadramazzo 1:40;619: Cuel de la Bareta 0:30 Val Dogna 2:00</code> part has been added in the <code>note</code> tag. As per the <a href="https://wiki.openstreetmap.org/wiki/CAI#Percorsi_escursionistici">CAI</a> page in the Wiki, the <code>619</code> should be added in a <code>ref</code> tag and the <code>Cadramazzo 1:40;Cuel de la Bareta 0:30;Val Dogna 2:00</code> should be in a <code>destination</code> tag</p>
 <p>EDIT: <a href="https://www.openstreetmap.org/changeset/90285367">I've edited</a> the guidepost's tag following the Wiki rules. I don't know how long will it take to OsmAnd to get the edits (at wors a month).</p>
-<p>EDIT2: I also see that OsmAnd displays the <code>note</code> tag in the information panel (<a href="https://help.openstreetmap.org/upfiles/photo_2020-09-02_09-39-49.jpg">see image</a>)</p>
+<p>EDIT2: I also see that OsmAnd displays the <code>note</code> tag in the information panel (<span>see image</span>)</p>
 </div>
 <div id="comment-76401-info" class="comment-info">
 <span class="comment-age">(02 Sep '20, 08:30)</span> <span class="comment-user userinfo">Mannivu</span>

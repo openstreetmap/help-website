@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/questions/11350/how-edit-a-country-wide-search-error/11355">This answer</a> explains how to find out what the problem is - it <a href="http://nominatim.openstreetmap.org/details.php?place_id=19535243">looks</a> like you're near <a href="http://www.openstreetmap.org/browse/node/158842914">this</a> place=suburb node. That screen has a "report a problem with these results" button which allows you to explain to the people who run Nominatim that it's wrong here.</p>
+<p><a href="/questions/11350/how-edit-a-country-wide-search-error/11355">This answer</a> explains how to find out what the problem is - it <a href="http://nominatim.openstreetmap.org/details.php?place_id=19535243">looks</a> like you're near <a href="https://www.openstreetmap.org/browse/node/158842914">this</a> place=suburb node. That screen has a "report a problem with these results" button which allows you to explain to the people who run Nominatim that it's wrong here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

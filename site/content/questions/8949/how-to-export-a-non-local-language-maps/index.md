@@ -175,7 +175,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It seems that a lot of villages (as <a href="http://www.openstreetmap.org/browse/node/768526392">this one</a>) and streets (as <a href="http://www.openstreetmap.org/browse/way/50211771">this one</a>) are tagged with their english names. But, it seems that the english names are not rendered on the default map. So you have to render your own map or find a provider that render the street names as you want.</p>
+<p>It seems that a lot of villages (as <a href="https://www.openstreetmap.org/browse/node/768526392">this one</a>) and streets (as <a href="https://www.openstreetmap.org/browse/way/50211771">this one</a>) are tagged with their english names. But, it seems that the english names are not rendered on the default map. So you have to render your own map or find a provider that render the street names as you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -236,7 +236,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe this answers can help you: <a href="http://help.openstreetmap.org/questions/3062/translating-names-and-tags">http://help.openstreetmap.org/questions/3062/translating-names-and-tags</a></p>
+<p>Maybe this answers can help you: <a href="/questions/3062/translating-names-and-tags">https://help.openstreetmap.org/questions/3062/translating-names-and-tags</a></p>
 <p>It is mainly answering regarding Israel but I the "problem" is the same.</p>
 </div>
 <div class="answer-controls post-controls">

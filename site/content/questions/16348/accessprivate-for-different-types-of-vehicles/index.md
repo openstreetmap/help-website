@@ -115,7 +115,7 @@ One Answer:
 <li>The landowner should know the legal status of his roads, but you can use <em>access=private</em> if only the owner is allowed to use the road.</li>
 <li>Depending on who can use it you can use <em>motor_vehicle=no</em> or <em>access=no</em>, <em>foot=yes</em> instead.</li>
 </ul>
-<p>Take a look at <a href="http://wiki.openstreetmap.org/wiki/Key:access">the documentation</a> for more info on how access tags work.</p>
+<p>Take a look at <a href="https://wiki.openstreetmap.org/wiki/Key:access">the documentation</a> for more info on how access tags work.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

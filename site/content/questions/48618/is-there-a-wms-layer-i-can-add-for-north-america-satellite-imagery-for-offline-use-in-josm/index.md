@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM has a <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">plugin that can read and display georeferenced imagery.</a> This will likely only work with smaller images.</p>
+<p>JOSM has a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">plugin that can read and display georeferenced imagery.</a> This will likely only work with smaller images.</p>
 <p>If you want to download and use detailed imagery for a whole state or the whole US, you'd have to set up your own, local WMS server (e.g. UMN Map Server, Geoserver, QGIS server) to serve that imagery to JOSM. The WMS provides the indexing (and often also caching) required to cope with the large amount of data. You'll have to install the WMS and configure your imagery as a data source, set the right projection etc., and then you can access the WMS from JOSM. You won't need the Internet after you have that set up.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In Germany there are several clinics of <a href="http://en.wikipedia.org/wiki/Forensic_psychiatry">forensic psychiatry</a>, such as the <a href="http://www.rk-essen.lvr.de/behandlungsangebote/klinikeninstitute/bd75db04-c596-45e8-9935-c8e75b064c51.htm">Klinik für Forensische Psychiatrie</a> in Essen (<a href="http://www.openstreetmap.org/browse/way/88446361">OSM object</a>). These are specialized clinics where people are kept who committed a crime, but were found not guilty by reason of insanity. I believe the closest equivalent in the UK would be a "psychiatric secure unit".</p>
+<p>In Germany there are several clinics of <a href="http://en.wikipedia.org/wiki/Forensic_psychiatry">forensic psychiatry</a>, such as the <a href="http://www.rk-essen.lvr.de/behandlungsangebote/klinikeninstitute/bd75db04-c596-45e8-9935-c8e75b064c51.htm">Klinik für Forensische Psychiatrie</a> in Essen (<a href="https://www.openstreetmap.org/browse/way/88446361">OSM object</a>). These are specialized clinics where people are kept who committed a crime, but were found not guilty by reason of insanity. I believe the closest equivalent in the UK would be a "psychiatric secure unit".</p>
 <p>These clinics look a lot like a prison, but they are run as clinics, and have a staff of doctors etc. Many also have an "open" section for normal, non-criminal patients.</p>
 <p>I'm unsure how to tag this. The clinic in Essen was tagged as "amenity=prison", which is not correct. I re-tagged it as "amenity=hospital", "health_specialty = forensic_psychiatry". However, I'm not sure if this is the best option.</p>
 <p>In particular, "amenity=hospital" seems problematic. Doesn't this tag imply that you can go there with general health problems? If you showed up at this clinic with a broken arm, you're unlikely to get help. So what's the best tagging?</p>
@@ -154,7 +154,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>You can add the tag emergency=no to specify that the hospital does not do accident and emergency. See <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital</a></p>
+<p>You can add the tag emergency=no to specify that the hospital does not do accident and emergency. See <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital</a></p>
 </div>
 <div id="comment-17615-info" class="comment-info">
 <span class="comment-age">(09 Nov '12, 16:59)</span> <span class="comment-user userinfo">Vclaw</span>

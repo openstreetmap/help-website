@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use OSM on air. You do not need to ask anyone for permission, just please conform to our standard licence conditions <a href="http://www.openstreetmap.org/copyright">regarding attribution</a>.</p>
+<p>You can use OSM on air. You do not need to ask anyone for permission, just please conform to our standard licence conditions <a href="https://www.openstreetmap.org/copyright">regarding attribution</a>.</p>
 <p>The usual forms of acceptable attribution are :</p>
 <ul>
 <li>a) in end credits (probably not appropriate for news, unless OSM is your regular source for maps).</li>

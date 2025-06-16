@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I have been looking in Germany and other "Example" countries, and still have not found a definitive answer. Some people put the Tags on the building polygon some put it on the area polygon when available. Some add the tags to a entrance node to the building and some add the tags to a node and move it to the center of the building while some move it near the entrance.</p>
 <p>Which way helps OSM the most and is the most useful way to tag them. I already know to use the addr: tags instead of relations since it is quicker to parse and use. Please chime in and give your case for the best way to tag. I want to start adding addresses and Store POIs in commercial districts and would like some solid advice.<br />
 </p>
-<p><a href="http://www.openstreetmap.org/?lat=41.20145693421364&amp;lon=-73.20170044898987&amp;zoom=18">Here is an example of a Hospital I fixed up.</a> And this is <a href="http://www.openstreetmap.org/?lat=41.17583245038986&amp;lon=-73.22762131690979&amp;zoom=18">an area I would like to add more POIs and make more consistent</a>. Please give me any helpful suggestions.<br />
+<p><a href="https://www.openstreetmap.org/?lat=41.20145693421364&amp;lon=-73.20170044898987&amp;zoom=18">Here is an example of a Hospital I fixed up.</a> And this is <a href="https://www.openstreetmap.org/?lat=41.17583245038986&amp;lon=-73.22762131690979&amp;zoom=18">an area I would like to add more POIs and make more consistent</a>. Please give me any helpful suggestions.<br />
 </p>
 <p>Also are there any good examples you could link to, because that would be great. I like learning by examining great examples. P.S. I am not that fond of relations but can do them if need be, I really want the best for this project.</p>
 </div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Why does my edit not show up?"
-description = '''I just added a missing footpath:  http://www.openstreetmap.org/browse/changeset/9225967 http://www.openstreetmap.org/browse/changeset/9226013  However, both changes are shown as “still editing” despite my having closed the editor; and the footpath is still not showing up in the main map. What do I n...'''
+description = '''I just added a missing footpath:  https://www.openstreetmap.org/browse/changeset/9225967 https://www.openstreetmap.org/browse/changeset/9226013  However, both changes are shown as “still editing” despite my having closed the editor; and the footpath is still not showing up in the main map. What do I n...'''
 date = "2011-09-06T11:43:00Z"
 lastmod = "2011-09-06T11:56:00Z"
 weight = 7666
@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>I just added a missing footpath:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/changeset/9225967">http://www.openstreetmap.org/browse/changeset/9225967</a></li>
-<li><a href="http://www.openstreetmap.org/browse/changeset/9226013">http://www.openstreetmap.org/browse/changeset/9226013</a></li>
+<li><a href="https://www.openstreetmap.org/browse/changeset/9225967">https://www.openstreetmap.org/browse/changeset/9225967</a></li>
+<li><a href="https://www.openstreetmap.org/browse/changeset/9226013">https://www.openstreetmap.org/browse/changeset/9226013</a></li>
 </ul>
 <p>However, both changes are shown as “still editing” despite my having closed the editor; and the footpath is still not showing up in the main map. What do I need to do for it to show up?</p>
 </div>
@@ -84,7 +84,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>See <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> for an explanation.</p>
+<p>See <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> for an explanation.</p>
 </div>
 <div id="comment-7668-info" class="comment-info">
 <span class="comment-age">(06 Sep '11, 11:54)</span> <span class="comment-user userinfo">Jonathan Ben...</span>
@@ -95,7 +95,7 @@ osqa_accepted = false
 <div id="post-7670-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question has been answered multiple times before, for example <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">here</a>.</p>
+<p>This question has been answered multiple times before, for example <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">here</a>.</p>
 </div>
 <div id="comment-7670-info" class="comment-info">
 <span class="comment-age">(06 Sep '11, 11:56)</span> <span class="comment-user userinfo">scai ♦</span>

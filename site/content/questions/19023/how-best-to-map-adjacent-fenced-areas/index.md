@@ -225,7 +225,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Having read some more about multipolygons (<a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon)">http://wiki.openstreetmap.org/wiki/Relation:multipolygon)</a> I would accept that method 3 is a perfectly good alternative to method 2. The choice probably depends which is easier to create, and which is easier to edit if anything changes. Does anyone know where I can find an example of method 3 in the map?</p>
+<p>Having read some more about multipolygons (<a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon)">https://wiki.openstreetmap.org/wiki/Relation:multipolygon)</a> I would accept that method 3 is a perfectly good alternative to method 2. The choice probably depends which is easier to create, and which is easier to edit if anything changes. Does anyone know where I can find an example of method 3 in the map?</p>
 </div>
 <div id="comment-19122-info" class="comment-info">
 <span class="comment-age">(15 Jan '13, 18:52)</span> <span class="comment-user userinfo">Madryn</span>
@@ -237,7 +237,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=51.94675&amp;lon=5.0223&amp;zoom=15&amp;layers=M">Here</a> is an example of method 3 with drains in stead of fences.</p>
+<p><a href="https://www.openstreetmap.org/?lat=51.94675&amp;lon=5.0223&amp;zoom=15&amp;layers=M">Here</a> is an example of method 3 with drains in stead of fences.</p>
 <p>The parcels were imported (not by me) as polygons. So there were two lines on top of each other. Adding the drains would have added a third line, which is irritating to edit in JOSM (the editor I use mainly). So I converted the polygons to "multipolygons", deduplicated the lines and added the waterway tags where appropriate.</p>
 </div>
 <div id="comment-19125-info" class="comment-info">

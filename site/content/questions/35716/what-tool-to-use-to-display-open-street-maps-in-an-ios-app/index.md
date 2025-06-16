@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/OsmSharp">OsmSharp</a> ... iOS is mentioned there as target platform.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/OsmSharp">OsmSharp</a> ... iOS is mentioned there as target platform.</p>
 <p>Alternatively, do a search on this FAQ site or in the OSM wiki about "iOS" ... there have been already questions similar to yours.</p>
 </div>
 <div class="answer-controls post-controls">

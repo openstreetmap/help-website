@@ -107,7 +107,7 @@ One Answer:
 <div class="answer-body">
 <p>Coastline editing is no different from other OpenStreetMap editing - choose an OSM editor of your liking, and fix the problems. Just make sure that your coastline always remains one connected, non-branched line (the number of ways does not matter as long as one ends in the same node where the next begins). The line must always be oriented such that the water is on the right of the line.<br />
 </p>
-<p>If you have never edited OpenStreetMap before, perhaps read some introductory material on the <a href="http://wiki.openstreetmap.org/">wiki.</a> - or if you don't fancy editing yourself then place a "note" in the location where the errors are and describe what is wrong.</p>
+<p>If you have never edited OpenStreetMap before, perhaps read some introductory material on the <a href="https://wiki.openstreetmap.org/">wiki.</a> - or if you don't fancy editing yourself then place a "note" in the location where the errors are and describe what is wrong.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

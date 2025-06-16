@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Lower zooms are more expensive to render (there's more data per tile to consider) and are typically only (re)rendered as a batch job when the rendering style gets updated, to cut down on frequent expensive renders.</p>
-<p>Can't find the reference to your specific question right now, but <a href="https://wiki.openstreetmap.org/wiki/Featured_tile_layers/Updates">Featured_tile_layers/Updates</a> and <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">how-often-does-the-main-mapnik-map-get-updated</a> have plenty of info.</p>
+<p>Can't find the reference to your specific question right now, but <a href="https://wiki.openstreetmap.org/wiki/Featured_tile_layers/Updates">Featured_tile_layers/Updates</a> and <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">how-often-does-the-main-mapnik-map-get-updated</a> have plenty of info.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-52827-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12869/vaslavn"></a><a href="http://help.openstreetmap.org/users/12869/vaslavn">@VaslavN</a> commented- I have recent (2016) satellite imagery that I could add if that is possible, and someone would tell me how to do it.</p>
+<p><a href="https://help.openstreetmap.org/users/12869/vaslavn"></a><a href="https://help.openstreetmap.org/users/12869/vaslavn">@VaslavN</a> commented- I have recent (2016) satellite imagery that I could add if that is possible, and someone would tell me how to do it.</p>
 </div>
 <div id="comment-52827-info" class="comment-info">
 <span class="comment-age">(04 Nov '16, 23:38)</span> <span class="comment-user userinfo">nevw</span>
@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-52828-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@Scai</a> commented- What is the license of this imagery? Where did you get it from?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@Scai</a> commented- What is the license of this imagery? Where did you get it from?</p>
 </div>
 <div id="comment-52828-info" class="comment-info">
 <span class="comment-age">(04 Nov '16, 23:40)</span> <span class="comment-user userinfo">nevw</span>
@@ -137,7 +137,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/users/12869/vaslavn">@VaslavN</a> if, as scai and nevw have already asked the legal side of things is in the clear it really depends on in which format the imagery is available and how large the dataset is.</p>
+<p><a href="https://help.openstreetmap.org/users/12869/vaslavn">@VaslavN</a> if, as scai and nevw have already asked the legal side of things is in the clear it really depends on in which format the imagery is available and how large the dataset is.</p>
 <p>If it is available from a public WMS or tile server you can add it to the <a href="https://github.com/osmlab/editor-layer-index">imagery index</a></p>
 <p>If you actually have the imagery available as files you can either host it yourself (or ask on a suitable mailing list / forum if somebody is willing to host it for you), or you might make it available to <a href="https://openaerialmap.org/">OpenAerialMap</a> (in both cases you would still need to create entries for <a href="https://github.com/osmlab/editor-layer-index">imagey index</a>.</p>
 </div>

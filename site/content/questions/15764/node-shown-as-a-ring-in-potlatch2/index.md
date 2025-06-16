@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Node shown as a ring in Potlatch2"
-description = '''Prompted by the OSM Inspector, I tried to correct a fault shown as &#x27;single node in way&#x27;. One of the building corner nodes at the centre of this view (http://www.openstreetmap.org/?lat=50.904897&amp;amp;lon=-1.335221&amp;amp;zoom=18&amp;amp;layers=M) was shown as an intersection, so I split it, dragged one of th...'''
+description = '''Prompted by the OSM Inspector, I tried to correct a fault shown as &#x27;single node in way&#x27;. One of the building corner nodes at the centre of this view (https://www.openstreetmap.org/?lat=50.904897&amp;amp;lon=-1.335221&amp;amp;zoom=18&amp;amp;layers=M) was shown as an intersection, so I split it, dragged one of th...'''
 date = "2012-09-03T19:10:00Z"
 lastmod = "2012-09-04T07:25:00Z"
 weight = 15764
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Prompted by the OSM Inspector, I tried to correct a fault shown as 'single node in way'. One of the building corner nodes at the centre of this view (<a href="http://www.openstreetmap.org/?lat=50.904897&amp;lon=-1.335221&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=50.904897&amp;lon=-1.335221&amp;zoom=18&amp;layers=M)</a> was shown as an intersection, so I split it, dragged one of the nodes away, and deleted it. The remaining node is still where it should be at the corner of the building, but Potlatch2 shows it as a red ring rather than as a filled circle. The node is now node 1895396700, and Potlatch considers that I created it. What have I done, and how do I put it right? I suppose that the obvious answer is to delete the node and create another one in the same place, but I would like to know what Potlatch is really trying to tell me.</p>
+<p>Prompted by the OSM Inspector, I tried to correct a fault shown as 'single node in way'. One of the building corner nodes at the centre of this view (<a href="https://www.openstreetmap.org/?lat=50.904897&amp;lon=-1.335221&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=50.904897&amp;lon=-1.335221&amp;zoom=18&amp;layers=M)</a> was shown as an intersection, so I split it, dragged one of the nodes away, and deleted it. The remaining node is still where it should be at the corner of the building, but Potlatch2 shows it as a red ring rather than as a filled circle. The node is now node 1895396700, and Potlatch considers that I created it. What have I done, and how do I put it right? I suppose that the obvious answer is to delete the node and create another one in the same place, but I would like to know what Potlatch is really trying to tell me.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-node" rel="tag" title="see questions tagged &#39;node&#39;">node</span> <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-ring" rel="tag" title="see questions tagged &#39;ring&#39;">ring</span>

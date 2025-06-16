@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find other similar services listed in this wiki page : <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">http://wiki.openstreetmap.org/wiki/Static_map_images</a> (or contact the German administrators of dev.openstreetmap.de)</p>
+<p>You can find other similar services listed in this wiki page : <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">https://wiki.openstreetmap.org/wiki/Static_map_images</a> (or contact the German administrators of dev.openstreetmap.de)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

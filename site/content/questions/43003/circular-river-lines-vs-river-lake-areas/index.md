@@ -102,9 +102,9 @@ I would be thankful for any references. Thanks in advance</p>
 <p>If I understand correctly, the question is about what Osmosis calls "Closed waterways":</p>
 <p><a href="http://osmose.openstreetmap.fr/en/errors/?item=1220&amp;class=12200">http://osmose.openstreetmap.fr/en/errors/?item=1220&amp;class=12200</a></p>
 <p>Some are just bad NHD imports:</p>
-<p><a href="http://www.openstreetmap.org/way/38672004#map=18/34.32973/-77.71119">http://www.openstreetmap.org/way/38672004#map=18/34.32973/-77.71119</a></p>
+<p><a href="https://www.openstreetmap.org/way/38672004#map=18/34.32973/-77.71119">https://www.openstreetmap.org/way/38672004#map=18/34.32973/-77.71119</a></p>
 <p>A few I looked at were ditches:</p>
-<p><a href="http://www.openstreetmap.org/way/238797117">http://www.openstreetmap.org/way/238797117</a></p>
+<p><a href="https://www.openstreetmap.org/way/238797117">https://www.openstreetmap.org/way/238797117</a></p>
 </div>
 <div id="comment-43037-info" class="comment-info">
 <span class="comment-age">(12 May '15, 22:13)</span> <span class="comment-user userinfo">maxerickson</span>
@@ -127,7 +127,7 @@ I would be thankful for any references. Thanks in advance</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3194/sanser">@sanser</a> that document has lots of text and pictures but no links. Can you provide a link to a circular waterway=river in OSM (preferably to the one of the ways, like maxerickson did above)? The "osmose" issues seem to be a mix of false positives (osmose not understanding the tagging), circular parts of drainage networks with no obvious direction, and simple tagging errors.</p>
+<p><a href="https://help.openstreetmap.org/users/3194/sanser">@sanser</a> that document has lots of text and pictures but no links. Can you provide a link to a circular waterway=river in OSM (preferably to the one of the ways, like maxerickson did above)? The "osmose" issues seem to be a mix of false positives (osmose not understanding the tagging), circular parts of drainage networks with no obvious direction, and simple tagging errors.</p>
 </div>
 <div id="comment-43046-info" class="comment-info">
 <span class="comment-age">(13 May '15, 15:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -138,7 +138,7 @@ I would be thankful for any references. Thanks in advance</p>
 <div id="post-43059-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>one of the first in the document is the river ways around the island linked in maxerickson's answer (<a href="http://www.openstreetmap.org/way/89569937)">http://www.openstreetmap.org/way/89569937)</a></p>
+<p>one of the first in the document is the river ways around the island linked in maxerickson's answer (<a href="https://www.openstreetmap.org/way/89569937)">https://www.openstreetmap.org/way/89569937)</a></p>
 </div>
 <div id="comment-43059-info" class="comment-info">
 <span class="comment-age">(13 May '15, 16:26)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -150,7 +150,7 @@ I would be thankful for any references. Thanks in advance</p>
 &#10;</div>
 <div class="comment-text">
 <p>That's a riverbank, not a river. One of the river ways there is not circular:</p>
-<p><a href="http://www.openstreetmap.org/way/30587867">http://www.openstreetmap.org/way/30587867</a></p>
+<p><a href="https://www.openstreetmap.org/way/30587867">https://www.openstreetmap.org/way/30587867</a></p>
 </div>
 <div id="comment-43067-info" class="comment-info">
 <span class="comment-age">(13 May '15, 17:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -217,10 +217,10 @@ I would be thankful for any references. Thanks in advance</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>waterway=riverbank should generally be an area tag, here is the missing island from one of your early examples:</p>
-<p><a href="http://www.openstreetmap.org/way/89569937">http://www.openstreetmap.org/way/89569937</a></p>
+<p><a href="https://www.openstreetmap.org/way/89569937">https://www.openstreetmap.org/way/89569937</a></p>
 <p>It appears to be the same object as your anomaly.</p>
 <p>The riverbank has the tags on the outer part of the multipolygon, which is maybe deprecated, but you will want to interpret it correctly:</p>
-<p><a href="http://www.openstreetmap.org/relation/1321026">http://www.openstreetmap.org/relation/1321026</a></p>
+<p><a href="https://www.openstreetmap.org/relation/1321026">https://www.openstreetmap.org/relation/1321026</a></p>
 <p>The surrounding waterway=river ways look like they make sense.</p>
 <p>It is also the case that a long thin area might be correctly tagged as natural=water.</p>
 <p>I think if you account for waterway=riverbank being an area, many of your anomalies will go away. I fear many of the remaining anomalies will be more nonsense than anything else (of course depending on what you have included as anomalous).</p>
@@ -284,7 +284,7 @@ I would be thankful for any references. Thanks in advance</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you're misunderstanding <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">waterway=river</a>. These are vector lines representing the channel of a waterway, so they might be traced to go on both sides of an island. If the direction of one of these ways was opposite, I could understand thinking of them as circular, but since they both head "downstream," that makes topological sense and follows OSM practice.</p>
+<p>I think you're misunderstanding <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">waterway=river</a>. These are vector lines representing the channel of a waterway, so they might be traced to go on both sides of an island. If the direction of one of these ways was opposite, I could understand thinking of them as circular, but since they both head "downstream," that makes topological sense and follows OSM practice.</p>
 <p>As pointed out separately, the island is accurately modeled in the waterway=riverbank version of the Thames.</p>
 <p>I'm not sure how you're doing your analysis, but it might be convenient to use river's waterway relations when they exist, such as <a href="https://www.openstreetmap.org/relation/2263653">https://www.openstreetmap.org/relation/2263653</a></p>
 </div>

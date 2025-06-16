@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is no key "parkingarea" as far as I know. Use amenity=parking for either a node or a closed way to define a parking area. If the imagery is poor, a single node will suffice. If you can see the area well, trace it out and apply the tag amenity=parking to the way. See <a href="http://wiki.openstreetmap.org/wiki/Parking">here</a> for more.</p>
+<p>There is no key "parkingarea" as far as I know. Use amenity=parking for either a node or a closed way to define a parking area. If the imagery is poor, a single node will suffice. If you can see the area well, trace it out and apply the tag amenity=parking to the way. See <a href="https://wiki.openstreetmap.org/wiki/Parking">here</a> for more.</p>
 <p>Cheers, Dave</p>
 </div>
 <div class="answer-controls post-controls">

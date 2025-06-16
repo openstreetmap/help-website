@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Filtering based on counting something is outside of the scope of Overpass API (as of today), so a bit of post processing is required.</p>
-<p>The closest way I could think of is the following: for each <code>barrier=lift_gate</code> node in a bbox, we first print the OSM node id, followed by the number of OSM ways, which are either living_street or residential. As an example, this query will return <a href="http://www.openstreetmap.org/node/304989602">node 304989602</a> with two connected ways. Your task would then be to filter out node ids with less than 2 ways, which could be done in Excel or LibreOffice.</p>
+<p>The closest way I could think of is the following: for each <code>barrier=lift_gate</code> node in a bbox, we first print the OSM node id, followed by the number of OSM ways, which are either living_street or residential. As an example, this query will return <a href="https://www.openstreetmap.org/node/304989602">node 304989602</a> with two connected ways. Your task would then be to filter out node ids with less than 2 ways, which could be done in Excel or LibreOffice.</p>
 <pre><code>[out:csv(::id,::count)]
 [bbox:{{bbox}}];
 node[barrier=lift_gate];

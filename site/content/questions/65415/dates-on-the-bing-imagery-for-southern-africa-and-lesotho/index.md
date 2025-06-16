@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Zoom in and right-click on the specific tile you want to check out, then click "Show tile info" and finally look for "Capture Date" <img src="https://help.openstreetmap.org/upfiles/JOSM_Tile_Info.png" alt="right-click" /></p>
+<p>Zoom in and right-click on the specific tile you want to check out, then click "Show tile info" and finally look for "Capture Date" <img src="/upfiles/JOSM_Tile_Info.png" alt="right-click" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

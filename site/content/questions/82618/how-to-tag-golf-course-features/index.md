@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-82621-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2021-11-20_100246.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2021-11-20_100246.jpg" alt="alt text" /></p>
 <p>Thanks Hendrikklaas. I have seen that but it doesn't address the landuse issue. The screenshot is from a very short while ago. Should I just accept the suggestion?</p>
 </div>
 <div id="comment-82621-info" class="comment-info">

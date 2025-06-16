@@ -184,7 +184,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Hello Tom, maybe you can have a look at "Pelias" which was now added in the OSM overwiew page <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a></p>
+<p>Hello Tom, maybe you can have a look at "Pelias" which was now added in the OSM overwiew page <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a></p>
 </div>
 <div id="comment-33048-info" class="comment-info">
 <span class="comment-age">(09 May '14, 15:10)</span> <span class="comment-user userinfo">stephan75</span>

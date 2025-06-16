@@ -107,7 +107,7 @@ One Answer:
 <p>In general I would recommend trying to preserve the history of objects and as a result would try to change the geometry of the existing ways if reasonably possible (JOSM has "replace geometry function that might be useful).</p>
 <p>Naturally you should:</p>
 <ul>
-<li>follow the import guidelines <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a></li>
+<li>follow the import guidelines <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></li>
 <li>including verifing that the licence of the data is compatible</li>
 <li>and including discussion with communities of the neighbouting countries in so far they exist and you are changeing their boundaries too</li>
 </ul>

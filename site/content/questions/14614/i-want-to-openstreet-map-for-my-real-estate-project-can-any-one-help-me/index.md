@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It sounds as if you might require more, and more customized, help than can be given in this forum. There's a list of professional consultants and service providers on the Wiki: <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
+<p>It sounds as if you might require more, and more customized, help than can be given in this forum. There's a list of professional consultants and service providers on the Wiki: <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
 <p>You don't need to buy anything from OSM however you might have to do some things yourself. Remember, OpenStreetMap is mainly a provider of free data, not a provider of free computing resources. You will need</p>
 <ul>
 <li>a JavaScript library to display the map and markers on your page (e.g. free OpenLayers, free Leaflet)</li>

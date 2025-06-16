@@ -77,7 +77,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#map=18/51.04595/13.75544&amp;layers=TN">Here</a>. Lots of tram lines, no numbers :(</p>
+<p><a href="https://www.openstreetmap.org/#map=18/51.04595/13.75544&amp;layers=TN">Here</a>. Lots of tram lines, no numbers :(</p>
 </div>
 <div id="comment-41750-info" class="comment-info">
 <span class="comment-age">(16 Mar '15, 21:17)</span> <span class="comment-user userinfo">scai ♦</span>

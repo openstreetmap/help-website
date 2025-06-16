@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might want to look here before: <a href="https://help.openstreetmap.org/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point">https://help.openstreetmap.org/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point</a><br />
+<p>You might want to look here before: <a href="/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point">https://help.openstreetmap.org/questions/30170/is-it-possible-to-render-road-distance-from-its-start-point</a><br />
 Please make yourself familar with the work of Pascal Neis who calculated distances/areas for firefighters.</p>
 </div>
 <div class="answer-controls post-controls">

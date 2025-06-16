@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Download of traces does not work for me at the moment"
-description = '''Hello, When I try to download a trace from openstreetmap.org, I always get an HTTP403 Forbidden response. Example: [12:13:37.697] GET http://www.openstreetmap.org/trace/1233555/data [HTTP/1.1 403 Forbidden 437ms] I am logged in. I tried with IE on Windows and with Firefox on Windows and Linux. And I...'''
+description = '''Hello, When I try to download a trace from openstreetmap.org, I always get an HTTP403 Forbidden response. Example: [12:13:37.697] GET https://www.openstreetmap.org/trace/1233555/data [HTTP/1.1 403 Forbidden 437ms] I am logged in. I tried with IE on Windows and with Firefox on Windows and Linux. And I...'''
 date = "2012-05-17T11:23:00Z"
 lastmod = "2012-05-20T20:59:00Z"
 weight = 12763
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hello,</p>
 <p>When I try to download a trace from openstreetmap.org, I always get an HTTP403 Forbidden response.</p>
-<p>Example: [12:13:37.697] GET <a href="http://www.openstreetmap.org/trace/1233555/data">http://www.openstreetmap.org/trace/1233555/data</a> [HTTP/1.1 403 Forbidden 437ms]</p>
+<p>Example: [12:13:37.697] GET <a href="https://www.openstreetmap.org/trace/1233555/data">https://www.openstreetmap.org/trace/1233555/data</a> [HTTP/1.1 403 Forbidden 437ms]</p>
 <p>I am logged in. I tried with IE on Windows and with Firefox on Windows and Linux. And I used different machines and even changed my IP address.</p>
 <p>There seems to be a problem at the server.</p>
 <p>Does anybody know if this is temporary or who needs to be informed to fix the problem?</p>

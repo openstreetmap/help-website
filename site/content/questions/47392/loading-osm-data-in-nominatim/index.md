@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Loading OSM Data in Nominatim"
-description = '''Hi All, I have installed nominatim with the instructions mentioned in the link -  http://wiki.openstreetmap.org/wiki/Nominatim/Installation Currently the database contains the data of Luxembourg. I would like to add the data of Great Britain. In order to do this i did the following  Downloaded engla...'''
+description = '''Hi All, I have installed nominatim with the instructions mentioned in the link -  https://wiki.openstreetmap.org/wiki/Nominatim/Installation Currently the database contains the data of Luxembourg. I would like to add the data of Great Britain. In order to do this i did the following  Downloaded engla...'''
 date = "2016-01-06T12:43:00Z"
 lastmod = "2016-01-18T16:06:00Z"
 weight = 47392
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi All,</p>
 <p>I have installed nominatim with the instructions mentioned in the link -</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
 <p>Currently the database contains the data of Luxembourg. I would like to add the data of Great Britain. In order to do this i did the following</p>
 <ul>
 <li>Downloaded england-latest.osm.pbf , scotland-latest.osm.pbf and wales-latest.osm.pbf from <a href="http://download.geofabrik.de/europe/great-britain.html">http://download.geofabrik.de/europe/great-britain.html</a></li>
@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Followed the solution mentioned in the post</p>
-<p><a href="https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim">https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim</a></p>
+<p><a href="/questions/15505/import-more-osm-files-in-to-nominatim">https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim</a></p>
 <p>The index is slow, but the process works !!!</p>
 </div>
 <div class="answer-controls post-controls">

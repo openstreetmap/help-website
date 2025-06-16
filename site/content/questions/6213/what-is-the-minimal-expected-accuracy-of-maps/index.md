@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>For example in <a href="http://www.openstreetmap.org/?lat=49.64404&amp;lon=15.44478&amp;zoom=16&amp;layers=M">this</a> view the road that ends in the middle of the woods (<a href="http://c.tile.openstreetmap.org/16/35580/22327.png">tile</a>) does not really end there, but goes to the village and connects to the main road near the pond (<a href="http://a.tile.openstreetmap.org/16/35578/22325.png">tile</a>).</p>
+<p>For example in <a href="https://www.openstreetmap.org/?lat=49.64404&amp;lon=15.44478&amp;zoom=16&amp;layers=M">this</a> view the road that ends in the middle of the woods (<a href="http://c.tile.openstreetmap.org/16/35580/22327.png">tile</a>) does not really end there, but goes to the village and connects to the main road near the pond (<a href="http://a.tile.openstreetmap.org/16/35578/22325.png">tile</a>).</p>
 <p>I am sure it is there and how it looks, but I cannot draw it precisely without GPS trace. Should I draw it as a straight line and correct later? There is valuable information added (points are connected and that is the important part for navigation).</p>
 <p>And how about GPS traces with limited accuracy?</p>
 </div>
@@ -310,7 +310,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>... or even more concisely "fixme=resurvey", as suggested at <a href="http://wiki.openstreetmap.org/wiki/Fixme">http://wiki.openstreetmap.org/wiki/Fixme</a> and widely used.</p>
+<p>... or even more concisely "fixme=resurvey", as suggested at <a href="https://wiki.openstreetmap.org/wiki/Fixme">https://wiki.openstreetmap.org/wiki/Fixme</a> and widely used.</p>
 </div>
 <div id="comment-6228-info" class="comment-info">
 <span class="comment-age">(08 Jul '11, 13:55)</span> <span class="comment-user userinfo">banoffee</span>

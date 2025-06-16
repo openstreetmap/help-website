@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I read this <a href="http://wiki.openstreetmap.org/wiki/Java_Access_Example">article</a> where I found exactly what I need.</p>
+<p>I read this <a href="https://wiki.openstreetmap.org/wiki/Java_Access_Example">article</a> where I found exactly what I need.</p>
 <p>Actually I use gmap to display the customers' addresses (signed with markers) at salesman. I can't print this map with markers. After a long effort I was unable to print and I looking other way. I'd like to try with openstreet.</p>
 <p>My software works under zk environment, tomcat and java. I don't like javascript...</p>
 <p>Thank's Luca</p>

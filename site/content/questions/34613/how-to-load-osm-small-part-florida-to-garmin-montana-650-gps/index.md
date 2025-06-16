@@ -74,7 +74,7 @@ This question is marked "community wiki".
 3
 </div>
 <div class="comment-text">
-<p>Please don't ask exactly the same question twice. If the answers given to you previously were not clear enough for you, then ask for clarification in <a href="https://help.openstreetmap.org/questions/34361/how-to-load-osm-small-part-florida-to-garmin-montana-650-gps">that previous question</a>.</p>
+<p>Please don't ask exactly the same question twice. If the answers given to you previously were not clear enough for you, then ask for clarification in <a href="/questions/34361/how-to-load-osm-small-part-florida-to-garmin-montana-650-gps">that previous question</a>.</p>
 </div>
 <div id="comment-34621-info" class="comment-info">
 <span class="comment-age">(04 Jul '14, 00:11)</span> <span class="comment-user userinfo">cartinus</span>

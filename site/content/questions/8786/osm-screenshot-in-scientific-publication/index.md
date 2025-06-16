@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Research">Reserach</a>... there are already many examples how students have used OSM data, materials and pictures for their work.</p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Research">Reserach</a>... there are already many examples how students have used OSM data, materials and pictures for their work.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -147,7 +147,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you want to produce maps from raw OSM data via the Tilemill framework, try to find that feature in the documentation of tilemill.</p>
 <p>If you cannot find anything there, try to ask the guys from <a href="http://mapbox.com">Mapbox</a> who develop tilemill.</p>
-<p>Or you can have have a look at some other <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering programs</a> like Maperitive ... maybe they have such a feature?</p>
+<p>Or you can have have a look at some other <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering programs</a> like Maperitive ... maybe they have such a feature?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

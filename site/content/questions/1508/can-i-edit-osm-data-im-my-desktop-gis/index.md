@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question: see http://help.openstreetmap.org/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program" by Richard 04 Sep '11, 20:31
+### The question has been closed for the following reason "Duplicate Question: see https://help.openstreetmap.org/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program" by Richard 04 Sep '11, 20:31
 
 </div>
 

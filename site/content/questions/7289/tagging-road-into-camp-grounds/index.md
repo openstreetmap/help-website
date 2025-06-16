@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Most of New York State's State Parks have some form of camping (cabins + tents + RVs (caravans)). These are typically separated from the the rest of the park in areas marked "For Campers Only".</p>
 <p>After a trip to one of these parks for a get away (and a bit of on-site surveying and GeoCaching), I am trying to add some of the details of the camping area loops. I have put the roads in, but am trying to figure out how to tag the ones into the camping area properly, particularly to indicate the restriction for campers only.</p>
-<p>Currently I have <code>highway=service</code>, <code>restriction=camping_only</code>. (see 95<a href="http://www.openstreetmap.org/?lat=42.69926&amp;lon=-76.41664&amp;zoom=17&amp;layers=M">OSM Map of Area</a>95)</p>
+<p>Currently I have <code>highway=service</code>, <code>restriction=camping_only</code>. (see 95<a href="https://www.openstreetmap.org/?lat=42.69926&amp;lon=-76.41664&amp;zoom=17&amp;layers=M">OSM Map of Area</a>95)</p>
 <p>For reference, here is the <a href="http://www.nysparks.com/parks/attachments/FillmoreGlenCampLoopMap.pdf">Park Map</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It seems like access=destination would be appropriate. See <a href="http://wiki.openstreetmap.org/wiki/Key:access">wiki</a>.</p>
+<p>It seems like access=destination would be appropriate. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

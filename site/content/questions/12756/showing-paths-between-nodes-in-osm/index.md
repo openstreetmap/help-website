@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>maybe a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> can be helpful ... see all sub pages there, too.</p>
+<p>maybe a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> can be helpful ... see all sub pages there, too.</p>
 <p>There are some opensource routing programs which you could examine.</p>
 </div>
 <div class="answer-controls post-controls">

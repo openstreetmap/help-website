@@ -107,7 +107,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I suppose that your question is not really <em>why</em> there is no link to explain the icons; the answer to that question would not help you find out about the "brown stain". So why not ask the question you want answered instead of one that is worded to vent your frustration and SHOUT AT US? You don't even say which map you are talking about.</p>
 <p>There's a wiki page that explains a lot - not all - of the features we map, and many of them also have an illustration of the icon used to represent that feature on the standard map on www.openstreetmap.org (which is by no means the only map you can make from OSM data).</p>
-<p>That wiki page is called <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>.</p>
+<p>That wiki page is called <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>.</p>
 <p>If that page does not answer your question then explain what you mean by "brown stain" and where you found it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -140,7 +140,7 @@ osqa_accepted = false
 <blockquote>
 <p>You don't even say which map you are talking about.</p>
 </blockquote>
-<p>I'd have thought that it's obvious. <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a></p>
+<p>I'd have thought that it's obvious. <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></p>
 </div>
 <div id="comment-13529-info" class="comment-info">
 <span class="comment-age">(14 Jun '12, 10:18)</span> <span class="comment-user userinfo">tt40</span>
@@ -157,7 +157,7 @@ osqa_accepted = false
 <p>If the item you're looking at isn't mentioned there, you could post a 'permalink' to the area here, and we can go from there.</p>
 <p>Feature requests should be logged at our bug-tracking system, <a href="http://trac.openstreetmap.org/,">http://trac.openstreetmap.org/,</a> not here.</p>
 <blockquote>
-<p>I'd have thought that it's obvious. <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a></p>
+<p>I'd have thought that it's obvious. <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></p>
 </blockquote>
 <p>Ah, but there are several maps available at osm.org - check the layer switcher in the top right.</p>
 </div>
@@ -214,7 +214,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There's now a map key among the icons at the right-hand side:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/mapkey.png" alt="Crude MSPaint arrow pointing at map key icon" /></p>
+<p><img src="/upfiles/mapkey.png" alt="Crude MSPaint arrow pointing at map key icon" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -276,7 +276,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As Richard has said, there is indeed a map key. If you'd like more information exactly how your "brown stain" was tagged, you could also have a look at the answer to <a href="http://help.openstreetmap.org/questions/13312/feature-not-found-in-map-key?page=1&amp;focusedAnswerId=13314#13314">this question</a>, and browse the map data for more information.</p>
+<p>As Richard has said, there is indeed a map key. If you'd like more information exactly how your "brown stain" was tagged, you could also have a look at the answer to <a href="/questions/13312/feature-not-found-in-map-key?page=1&amp;focusedAnswerId=13314#13314">this question</a>, and browse the map data for more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

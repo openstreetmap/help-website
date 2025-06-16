@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you just want a simple download, I'd start with <a href="http://garmin.openstreetmap.nl/">this site</a>, although there are <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">lots of others</a> featuring maps of different styles, and you can also <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">create your own</a> if you want.</p>
+<p>If you just want a simple download, I'd start with <a href="http://garmin.openstreetmap.nl/">this site</a>, although there are <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">lots of others</a> featuring maps of different styles, and you can also <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">create your own</a> if you want.</p>
 <p>If you get any problems, have a read of the Garmin questions <a href="https://help.openstreetmap.org/search/?q=garmin&amp;Submit=Search&amp;t=question">here</a> - the chances are that someone will already have a solution to it.</p>
 </div>
 <div class="answer-controls post-controls">

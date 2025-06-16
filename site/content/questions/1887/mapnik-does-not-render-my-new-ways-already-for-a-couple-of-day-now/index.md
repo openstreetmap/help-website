@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mapnik does not render my new ways already for a couple of day now"
-description = '''Dear all! I have a question: Mapnik does not render my new ways already for a couple of day now. If you look at http://www.openstreetmap.org/?lat=-26.8272&amp;amp;lon=-65.1402&amp;amp;zoom=13&amp;amp;layers=M you can see that there is a secondary road south of the Tucuman airport. In zoom level 12 this road dis...'''
+description = '''Dear all! I have a question: Mapnik does not render my new ways already for a couple of day now. If you look at https://www.openstreetmap.org/?lat=-26.8272&amp;amp;lon=-65.1402&amp;amp;zoom=13&amp;amp;layers=M you can see that there is a secondary road south of the Tucuman airport. In zoom level 12 this road dis...'''
 date = "2010-12-22T08:51:00Z"
 lastmod = "2010-12-22T13:30:00Z"
 weight = 1887
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Dear all!</p>
 <p>I have a question: Mapnik does not render my new ways already for a couple of day now.</p>
-<p>If you look at <a href="http://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M</a> you can see that there is a secondary road south of the Tucuman airport. In zoom level 12 this road disapears: <a href="http://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M</a> . Marking the respective tiles as dirty did not help. Reloading the map with Control+F5 also did not help.</p>
+<p>If you look at <a href="https://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=-26.8272&amp;lon=-65.1402&amp;zoom=13&amp;layers=M</a> you can see that there is a secondary road south of the Tucuman airport. In zoom level 12 this road disapears: <a href="https://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=-26.8094&amp;lon=-65.1664&amp;zoom=12&amp;layers=M</a> . Marking the respective tiles as dirty did not help. Reloading the map with Control+F5 also did not help.</p>
 <p>Do you have any other suggestions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

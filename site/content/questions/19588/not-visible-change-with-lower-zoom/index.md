@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi, it might exist some relevant answer for my question but I haven't found any so I allow to ask another one :-) I did some changes in openstreetmap through JOSM. These changes were visible almost immediately but only in higher zoom. In the lover zoom there was visible only the old state (without added roads, old types of roads...) What did I wrong?</p>
 <p>lower zoom:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/lover_zoom.png" alt="alt text" /></p>
-<p>higher zoom: <img src="http://help.openstreetmap.org/upfiles/higher_zoom_2.png" alt="alt text" /></p>
+<p><img src="/upfiles/lover_zoom.png" alt="alt text" /></p>
+<p>higher zoom: <img src="/upfiles/higher_zoom_2.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span>
@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-19591-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That's roughly <a href="http://www.openstreetmap.org/?lat=38.999&amp;lon=46.302&amp;zoom=11&amp;layers=M">here</a> I think...</p>
+<p>That's roughly <a href="https://www.openstreetmap.org/?lat=38.999&amp;lon=46.302&amp;zoom=11&amp;layers=M">here</a> I think...</p>
 </div>
 <div id="comment-19591-info" class="comment-info">
 <span class="comment-age">(05 Feb '13, 14:46)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -132,7 +132,7 @@ osqa_accepted = false
 <p>Therefore, the system separates the rendering process into low zoom and high zoom tiles. (I can't remember at which zoom level the switch is). The high zoom tiles get expired on a minutely basis (if the data in their area changes) and will therefore get rerendered quickly once viewed.</p>
 <p>Low zoom tiles are not re-rendered based on changes in the map data. Instead they are periodically re-rendered in full. Again, I don't know what this current update cycle is but it can be a week or longer.</p>
 <p>If you know an area has changed and it has caused a noticable visual change in low zoom tiles, you can manually request a rerender of those tiles. This is done by right clicking on the area in the map and selecting "copy image URL". This should give you a URL like <a href="http://b.tile.openstreetmap.org/11/1286/782.png">http://b.tile.openstreetmap.org/11/1286/782.png</a> Then you can request a rerender by opening the URL <a href="http://b.tile.openstreetmap.org/11/1286/782.png/dirty">http://b.tile.openstreetmap.org/11/1286/782.png/dirty</a> After a couple of minutes to an hour, you should see your changes on that tile as well.</p>
-<p>A more detailed description of the process can be found in <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this answer</a>.</p>
+<p>A more detailed description of the process can be found in <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this answer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -193,7 +193,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's sometimes a short delay before the update of the main map, as described in <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this answer</a>, which also explains how to speed the process up. Some of the new roads are now visible at higher zoom too.</p>
+<p>There's sometimes a short delay before the update of the main map, as described in <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this answer</a>, which also explains how to speed the process up. Some of the new roads are now visible at higher zoom too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

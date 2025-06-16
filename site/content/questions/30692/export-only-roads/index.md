@@ -145,8 +145,8 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>To know which highway tags are important for cars, have a look at these wiki pages:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Highway">http://wiki.openstreetmap.org/wiki/Highway</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Highway">https://wiki.openstreetmap.org/wiki/Highway</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 <p>As a start point, you should select ways (and only ways, not nodes) with:<br />
 - highway=motorway or highway=motorway_link<br />
 - highway=trunk or highway=trunk_link<br />
@@ -157,12 +157,12 @@ osqa_accepted = true
 - highway=residential or highway=residential_link<br />
 - highway=service or highway=service_link<br />
 - highway=living_street<br />
-- highway=track (possibly combined with a <a href="http://wiki.openstreetmap.org/wiki/Key:tracktype">graduation</a> tag)<br />
+- highway=track (possibly combined with a <a href="https://wiki.openstreetmap.org/wiki/Key:tracktype">graduation</a> tag)<br />
 - highway=path (only if combined with "motor_vehicle=yes" or "motorcar=yes")<br />
 - highway=road (might be ignored since the highway class is unknown and might be impassable for cars)<br />
 </p>
 <p>The tag "access" is important (the legal status). Absence of access tags means "allowed". Otherwise, look if "motor_vehicle=yes|no" or "motorcar=yes|no" is present. Otherwise, look for a general access definition like "access=yes|permissive" for "allowed" or "access=private|delivery|emergency|forestry|no" for "disallowed".</p>
-<p>If you care about direction, check the tag <a href="http://wiki.openstreetmap.org/wiki/Oneway">oneway=yes|-1|no</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">junction=roundabout</a></p>
+<p>If you care about direction, check the tag <a href="https://wiki.openstreetmap.org/wiki/Oneway">oneway=yes|-1|no</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">junction=roundabout</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -198,7 +198,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>There are also <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">implicit default access values</a> which <em>should</em> be used whenever there are no access tags present.</p>
+<p>There are also <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">implicit default access values</a> which <em>should</em> be used whenever there are no access tags present.</p>
 <p>But as already explained by SomeoneElse a missing access tag doesn't always mean that the default access restrictions apply. It could also indicate that nobody has checked the legal access status yet.</p>
 </div>
 <div id="comment-30728-info" class="comment-info">
@@ -290,7 +290,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>An easy way to get predefined data is the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> with its user friendly tool <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a>.<br />
+<p>An easy way to get predefined data is the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> with its user friendly tool <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a>.<br />
 I created a query for all highways except footway, path and pedestrian which you can find (and enhance) here: <a href="http://overpass-turbo.eu/s/2vM">http://overpass-turbo.eu/s/2vM</a></p>
 <p>hth<br />
 malenki</p>

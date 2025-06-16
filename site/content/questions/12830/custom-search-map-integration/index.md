@@ -179,8 +179,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A brief link for a start <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example</a> This is an example how to use OpenLayers to show POIs on top of a OpenStreetMap base map.</p>
-<p>The next step is to get that locations from a database: <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Dynamic_POI">http://wiki.openstreetmap.org/wiki/OpenLayers_Dynamic_POI</a></p>
+<p>A brief link for a start <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example</a> This is an example how to use OpenLayers to show POIs on top of a OpenStreetMap base map.</p>
+<p>The next step is to get that locations from a database: <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Dynamic_POI">https://wiki.openstreetmap.org/wiki/OpenLayers_Dynamic_POI</a></p>
 <p>Note that there are other frameworks too, for example <a href="http://leaflet.cloudmade.com/">Leaflet</a>. It could be even better suited, but I haven't yet used Leaflet.</p>
 </div>
 <div class="answer-controls post-controls">

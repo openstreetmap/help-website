@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Part of the rue Antoine-Julien Hénard in Paris (<a href="http://www.openstreetmap.org/browse/way/4236213">way 4236213</a>) had earlier been tagged oneway:yes, which is no longer correct (if it ever was). I removed the tag, but two routing sites that use OSM data (<a href="http://maps.cloudmade.com">maps.cloudmade.com</a> and <a href="http://ridewithgps.com">ridewithgps.com</a>) continue to route cars and bikes as if it were still a one-way street. Am I doing something wrong, or are those sites working with an old version of the OSM data? If I am doing something wrong, can you let me know what?</p>
+<p>Part of the rue Antoine-Julien Hénard in Paris (<a href="https://www.openstreetmap.org/browse/way/4236213">way 4236213</a>) had earlier been tagged oneway:yes, which is no longer correct (if it ever was). I removed the tag, but two routing sites that use OSM data (<a href="http://maps.cloudmade.com">maps.cloudmade.com</a> and <a href="http://ridewithgps.com">ridewithgps.com</a>) continue to route cars and bikes as if it were still a one-way street. Am I doing something wrong, or are those sites working with an old version of the OSM data? If I am doing something wrong, can you let me know what?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span> <span class="post-tag tag-link-oneway" rel="tag" title="see questions tagged &#39;oneway&#39;">oneway</span>

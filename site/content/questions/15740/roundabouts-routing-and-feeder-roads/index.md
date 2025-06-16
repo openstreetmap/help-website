@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I'm using OSM maps on my Garmin Nuvi and have noticed some strange routing issues that seem to be related to feeder roads on roundabouts.</p>
 <p>Assuming exit to the North is the assumed best route...</p>
 <p>If the on/off feeder is created as a single way, highlighted as below, I think the routing algorithm is seeing this as at least inefficient, doubling back, and finding a different route.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/snapshot_1.png" alt="snapshot" /></p>
+<p><img src="/upfiles/snapshot_1.png" alt="snapshot" /></p>
 <p>I can't find any info on this style so would appreciate any opinions.</p>
 <p>This may be specific to Garmin routing or even routing algorithm used to generate the maps so of little relevance to OSM.</p>
 </div>
@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There shouldn't be any difference for any routing algorithm and any end device as long as the data pre-processing is done correctly, and I doubt that <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> (used for creating <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">maps for Garmin devices</a>) cannot handle this situation correctly.</p>
+<p>There shouldn't be any difference for any routing algorithm and any end device as long as the data pre-processing is done correctly, and I doubt that <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> (used for creating <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">maps for Garmin devices</a>) cannot handle this situation correctly.</p>
 <p>Could you tell us where this happened, which of the various available Garmin maps you used and which start and end point you choosed for the route? You should also try different maps to check if all of them have this problem or if it is just a bug in a single map. In the latter case it is probably the best to contact the author of this map directly.</p>
 </div>
 <div class="answer-controls post-controls">

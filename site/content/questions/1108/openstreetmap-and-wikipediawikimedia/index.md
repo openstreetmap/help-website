@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>What is the current relation between these two? I see collaboration pages on <a href="http://wiki.openstreetmap.org/wiki/Collaboration_with_Wikipedia">the OSM wiki</a> as well as on <a href="http://meta.wikimedia.org/wiki/OpenStreetMap">Wikipedia</a>, but it is not very clear how an average editor can help in this area. Does it make sense to manually add Wikipedia tags to OSM while many Wikipedia articles have coordinates? Would it be better to partially automate this process, import Wikipedia coordinates to OSM and only correct mistakes?</p>
+<p>What is the current relation between these two? I see collaboration pages on <a href="https://wiki.openstreetmap.org/wiki/Collaboration_with_Wikipedia">the OSM wiki</a> as well as on <a href="http://meta.wikimedia.org/wiki/OpenStreetMap">Wikipedia</a>, but it is not very clear how an average editor can help in this area. Does it make sense to manually add Wikipedia tags to OSM while many Wikipedia articles have coordinates? Would it be better to partially automate this process, import Wikipedia coordinates to OSM and only correct mistakes?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wikimedia" rel="tag" title="see questions tagged &#39;wikimedia&#39;">wikimedia</span> <span class="post-tag tag-link-wikipedia" rel="tag" title="see questions tagged &#39;wikipedia&#39;">wikipedia</span>

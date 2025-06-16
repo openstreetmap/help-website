@@ -187,7 +187,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I created a custom set of buttons for OsmTracker that has a button for each of the normally encountered speed limits in my area all on a single (default) screen. I can just tap the appropriate button as I pass the speed limit sign.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20170219-090147_AWxgVpc.png" alt="Custom speed limit buttons" /></p>
+<p><img src="/upfiles/Screenshot_20170219-090147_AWxgVpc.png" alt="Custom speed limit buttons" /></p>
 <p>If desired, I could post the file and its associated button images but they are for US style MPH signs. No reason the concept couldn't be applied to other countries though.</p>
 </div>
 <div class="answer-controls post-controls">

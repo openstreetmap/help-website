@@ -180,7 +180,7 @@ osqa_accepted = true
 <div id="post-86407-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A damaged one I found a long time ago. <a href="https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired">https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired</a></p>
+<p>A damaged one I found a long time ago. <a href="/questions/42891/damaged-bridge-and-footpath-closed-until-repaired">https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired</a></p>
 </div>
 <div id="comment-86407-info" class="comment-info">
 <span class="comment-age">(01 Jan '23, 13:40)</span> <span class="comment-user userinfo">andy mackey</span>

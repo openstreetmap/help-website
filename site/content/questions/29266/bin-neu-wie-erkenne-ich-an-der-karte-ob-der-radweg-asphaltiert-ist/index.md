@@ -116,15 +116,15 @@ One Answer:
 <p>Hallo Wickie, dann herzlich willkommen bei OSM :)</p>
 <p>OSM selbst ist nur eine Geodatenbank und enthält viel mehr Daten als eine einzige Karte darstellen könnte. Deshalb haben einige Nutzer Karten entwickelt, die für bestimmte Anwendungszwecke "optimiert" sind.</p>
 <p>Für deinen Anwendungszweck würde ich mal nach "surface" in dieser Liste suchen:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Maps">https://wiki.openstreetmap.org/wiki/Maps</a><br />
 Außerdem gibt es für verschiedene mobile Plattformen und GPS Geräte auch eigene Software/Kartenpakete die entsprechend gestylt werden können:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Software">http://wiki.openstreetmap.org/wiki/Software</a><br />
+<li><a href="https://wiki.openstreetmap.org/wiki/Software">https://wiki.openstreetmap.org/wiki/Software</a><br />
 </li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></li>
 </ul>
 <p>Der einfachste Weg um Daten zurück an OSM zu melden ist das sog. "notes"/Notizen feature auf <a href="http://osm.org">osm.org</a> (rechte Toolbar unterster Button). Ansonsten ist auch das Editieren der Daten nicht sooo schwer, gerade wenn man klein anfängt und auch den ein oder anderen Fehler erlaubt :)<br />
-<a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">http://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">https://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
 <p>Unterstützung kannst du hier auf der help Plattform, oder im deutschen Forum bekommen: <a href="http://forum.openstreetmap.org/viewforum.php?id=14">http://forum.openstreetmap.org/viewforum.php?id=14</a><br />
 Auch ist das schöne bei OSM, dass es mit großer Wahrscheinlichkeit andere Mapper in deiner Umgebung gibt, die du um Hilfe bitten kannst, wenn es mal klemmt. Ein erster Ansatz wären die <a href="http://openstreetmap.de/karte.html">Stammtische</a>, die teilweise auch schon eingeschlafen sind. Ansonsten kannst du auch gerne Leute direkt kontaktieren, etwa in dem du mal in der Historie eines Objektes schaust. Meiner Erfahrung nach sind bei OSM die meisten wirklich sehr nett!</p>
 </div>

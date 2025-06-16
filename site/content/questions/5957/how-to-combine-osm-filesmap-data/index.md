@@ -147,8 +147,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <ul>
-<li><p>You can use <a href="http://download.geofabrik.de/osm/north-america/us/">Geofabric extracts</a> (New-York extract is the smallest one suitable for you). With osmosis you can then <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">extract Manhattan part out of it</a>. If you need then you can use osmosis for <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">filtering</a> streets and buildings out of it.</p></li>
-<li><p>Second possibility is to use <a href="http://wiki.openstreetmap.org/wiki/Xapi">jxapi</a> to extract streets and buildings of Manhattan. Afterwards you need osmosis to <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--merge_.28--m.29">merge</a> these files.</p></li>
+<li><p>You can use <a href="http://download.geofabrik.de/osm/north-america/us/">Geofabric extracts</a> (New-York extract is the smallest one suitable for you). With osmosis you can then <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">extract Manhattan part out of it</a>. If you need then you can use osmosis for <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">filtering</a> streets and buildings out of it.</p></li>
+<li><p>Second possibility is to use <a href="https://wiki.openstreetmap.org/wiki/Xapi">jxapi</a> to extract streets and buildings of Manhattan. Afterwards you need osmosis to <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--merge_.28--m.29">merge</a> these files.</p></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -200,7 +200,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Almost always the quickest &amp; easiest way to get data for a large city, such as New York City, is to find a prepared extract containing that city. Geofabrik offer downloads for many areas including individual US <a href="http://download.geofabrik.de/osm/north-america/us/">states</a>.</p>
-<p>So I would suggest downloading a NY state extract, and then using <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to cut out a bounding box from that file for your area of interest. Osmosis can also be used to merge OSM files (for instance if you also want parts of NJ).</p>
+<p>So I would suggest downloading a NY state extract, and then using <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to cut out a bounding box from that file for your area of interest. Osmosis can also be used to merge OSM files (for instance if you also want parts of NJ).</p>
 <p>Trying to download large areas directly from the main API database is likely to incur a block or rate-limiting on your IP address. So as well as being slow, frustrating it's also unlikely to work.</p>
 </div>
 <div class="answer-controls post-controls">

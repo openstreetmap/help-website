@@ -189,7 +189,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Likely the simplest way, assuming you want to make manual edits/additions, is to install the rails port (the ruby app that is openstreetmap.org) import some data and add to that.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

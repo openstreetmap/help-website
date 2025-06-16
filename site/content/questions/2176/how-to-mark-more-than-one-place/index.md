@@ -105,8 +105,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When you need a static image with more than one marker, have a look at <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a> and try all possibilities there, some are nicely wizard-driven.</p>
-<p>Or when you need a draggable and zoomable map with markers, have a look at <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">Openlayers_POI_layer_example</a> or <a href="http://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> in general. Maybe useful information can be found at <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">Deploying_your_own_Slippy_Map</a>.</p>
+<p>When you need a static image with more than one marker, have a look at <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a> and try all possibilities there, some are nicely wizard-driven.</p>
+<p>Or when you need a draggable and zoomable map with markers, have a look at <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">Openlayers_POI_layer_example</a> or <a href="https://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> in general. Maybe useful information can be found at <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">Deploying_your_own_Slippy_Map</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can look at this question <a href="http://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers">How can I display a map with multiple markers?</a></p>
+<p>You can look at this question <a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers">How can I display a map with multiple markers?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

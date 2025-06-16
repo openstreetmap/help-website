@@ -73,7 +73,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>This is a duplicate question, please see this question instead: <a href="https://help.openstreetmap.org/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg">https://help.openstreetmap.org/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg</a></p>
+<p>This is a duplicate question, please see this question instead: <a href="/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg">https://help.openstreetmap.org/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg</a></p>
 </div>
 <div id="comment-39901-info" class="comment-info">
 <span class="comment-age">(28 Dec '14, 22:13)</span> <span class="comment-user userinfo">scai ♦</span>

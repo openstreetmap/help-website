@@ -92,7 +92,7 @@ osqa_accepted = false
 <div id="post-52118-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9460/alan01730">@Alan01730</a>: uh, thanks for the comment, I will have a look. Hmm, see <span>this screenshot</span> (the button I've clicked on before, is indicated by my mouse pointer). Do you see a different popup window when you click this button while in edit mode? You can try that now, too - login and click edit below your question text.</p>
+<p><a href="https://help.openstreetmap.org/users/9460/alan01730">@Alan01730</a>: uh, thanks for the comment, I will have a look. Hmm, see <span>this screenshot</span> (the button I've clicked on before, is indicated by my mouse pointer). Do you see a different popup window when you click this button while in edit mode? You can try that now, too - login and click edit below your question text.</p>
 </div>
 <div id="comment-52118-info" class="comment-info">
 <span class="comment-age">(19 Sep '16, 21:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 <div id="post-52123-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9460/alan01730">@Alan01730</a>: that's quite the same. Please see my last question above: Don't you see the image upload button in the edit toolbar? If you see it, what happens when you click it?</p>
+<p><a href="https://help.openstreetmap.org/users/9460/alan01730">@Alan01730</a>: that's quite the same. Please see my last question above: Don't you see the image upload button in the edit toolbar? If you see it, what happens when you click it?</p>
 </div>
 <div id="comment-52123-info" class="comment-info">
 <span class="comment-age">(20 Sep '16, 06:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -140,7 +140,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9460/alan01730">@Alan01730</a>: ah, I see. In fact it this window is meant this way: enter an URL to an image <em>or</em> upload one from your computer. Thanks for your tries.</p>
+<p><a href="https://help.openstreetmap.org/users/9460/alan01730">@Alan01730</a>: ah, I see. In fact it this window is meant this way: enter an URL to an image <em>or</em> upload one from your computer. Thanks for your tries.</p>
 </div>
 <div id="comment-52136-info" class="comment-info">
 <span class="comment-age">(20 Sep '16, 19:27)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -202,9 +202,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't think there is one. As a workaround, you can get the latitude/longitude of the location you want by searching in Nominatim:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/nominatim.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/nominatim.PNG" alt="alt text" /></p>
 <p>Then enter the latitude/longitude in the keepright URL:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/keepright.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/keepright.PNG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -277,7 +277,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>ie in the green box on the right on this page <a href="http://wiki.openstreetmap.org/wiki/Philadelphia,_Pennsylvania">http://wiki.openstreetmap.org/wiki/Philadelphia,_Pennsylvania</a></p>
+<p>ie in the green box on the right on this page <a href="https://wiki.openstreetmap.org/wiki/Philadelphia,_Pennsylvania">https://wiki.openstreetmap.org/wiki/Philadelphia,_Pennsylvania</a></p>
 </div>
 <div id="comment-52112-info" class="comment-info">
 <span class="comment-age">(19 Sep '16, 16:40)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -289,7 +289,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: was too lazy to add an image</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: was too lazy to add an image</p>
 </div>
 <div id="comment-52113-info" class="comment-info">
 <span class="comment-age">(19 Sep '16, 17:14)</span> <span class="comment-user userinfo">SK53 ♦</span>

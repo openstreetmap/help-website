@@ -185,7 +185,7 @@ One Answer:
 <p>That does look like quite a large area:</p>
 <p><a href="http://owl.apis.dev.openstreetmap.org/?box=yes&amp;bbox=-93.7889,41.4486,-93.4082,41.7068#map=10/41.5778/-93.5986">http://owl.apis.dev.openstreetmap.org/?box=yes&amp;bbox=-93.7889,41.4486,-93.4082,41.7068#map=10/41.5778/-93.5986</a></p>
 <p>What I suspect is happening is that the editing API (which is what the tutorial is suggesting that you use) is refusing to serve quite so much data. Using a data extract (maybe a per-city one if it exists), or cutting down a larger one with Osmosis if it doesn't, would be better. See "country and area extracts" here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading</a></p>
 </div>
 <div id="comment-33671-info" class="comment-info">
 <span class="comment-age">(04 Jun '14, 15:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

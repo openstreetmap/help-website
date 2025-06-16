@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you're asking about downloading data from openstreetmap.org, it might help to read <a href="https://help.openstreetmap.org/search/?q=export&amp;Submit=search&amp;sort=ranking">these previous questions</a>.</p>
-<p>When you try and download a large area, like <a href="http://www.openstreetmap.org/export#map=10/51.1384/-2.8297">this</a>, you get a suggestion about what you should be doing instead ("... use one of the sources listed below for bulk data downloads.").</p>
+<p>When you try and download a large area, like <a href="https://www.openstreetmap.org/export#map=10/51.1384/-2.8297">this</a>, you get a suggestion about what you should be doing instead ("... use one of the sources listed below for bulk data downloads.").</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

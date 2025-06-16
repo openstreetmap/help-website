@@ -159,7 +159,7 @@ osqa_accepted = false
 <div id="post-11342-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlach2">http://wiki.openstreetmap.org/wiki/Potlach2</a> guide <a href="http://vimeo.com/24984085">http://vimeo.com/24984085</a> video</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlach2">https://wiki.openstreetmap.org/wiki/Potlach2</a> guide <a href="http://vimeo.com/24984085">http://vimeo.com/24984085</a> video</p>
 </div>
 <div id="comment-11342-info" class="comment-info">
 <span class="comment-age">(19 Mar '12, 19:29)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -293,7 +293,7 @@ osqa_accepted = false
 <div id="post-11345-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>might be security or firewall blocking it maybe. it did on my windows pc when I tried josm see <a href="http://help.openstreetmap.org/questions/3137/beginner-in-josm-stuck-at-download">http://help.openstreetmap.org/questions/3137/beginner-in-josm-stuck-at-download</a></p>
+<p>might be security or firewall blocking it maybe. it did on my windows pc when I tried josm see <a href="/questions/3137/beginner-in-josm-stuck-at-download">https://help.openstreetmap.org/questions/3137/beginner-in-josm-stuck-at-download</a></p>
 </div>
 <div id="comment-11345-info" class="comment-info">
 <span class="comment-age">(19 Mar '12, 19:56)</span> <span class="comment-user userinfo">andy mackey</span>

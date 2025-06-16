@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There doesn't seem to be full consensus yet, but plenty of documentation : <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare">healthcare</a>, <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0">healthcare2</a>, <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Medical">medical</a>. After a quick read it seems to me that the 1st proposal is the most interesting (see also <a href="http://taginfo.openstreetmap.org/search?q=healthcare#keys">popularity on taginfo</a>). So I'd go with :</p>
+<p>There doesn't seem to be full consensus yet, but plenty of documentation : <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare">healthcare</a>, <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0">healthcare2</a>, <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Medical">medical</a>. After a quick read it seems to me that the 1st proposal is the most interesting (see also <a href="http://taginfo.openstreetmap.org/search?q=healthcare#keys">popularity on taginfo</a>). So I'd go with :</p>
 <pre><code>amenity=doctors (generic, widely-recognised value for compatibility; will show an icon at least in osmarender)
 healthcare=alternative
 healthcare:speciality=chiropractic</code></pre>
@@ -140,7 +140,7 @@ healthcare:speciality=chiropractic</code></pre>
 <div id="post-10199-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>We can check what you've done if you provide a "permalink" - click where it says that at the bottom right-hand corner of the map. As Vincent de P... mentioned, it'll appear on the "osmarender" map but not the "Mapnik" one. <a href="http://www.openstreetmap.org/?lat=53.99836&amp;lon=-1.05759&amp;zoom=17&amp;layers=O">Here</a>, for example, is an "amenity=doctors" on the map.</p>
+<p>We can check what you've done if you provide a "permalink" - click where it says that at the bottom right-hand corner of the map. As Vincent de P... mentioned, it'll appear on the "osmarender" map but not the "Mapnik" one. <a href="https://www.openstreetmap.org/?lat=53.99836&amp;lon=-1.05759&amp;zoom=17&amp;layers=O">Here</a>, for example, is an "amenity=doctors" on the map.</p>
 </div>
 <div id="comment-10199-info" class="comment-info">
 <span class="comment-age">(25 Jan '12, 01:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -151,7 +151,7 @@ healthcare:speciality=chiropractic</code></pre>
 <div id="post-10219-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=46.070345&amp;lon=-72.81248&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=46.070345&amp;lon=-72.81248&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=46.070345&amp;lon=-72.81248&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=46.070345&amp;lon=-72.81248&amp;zoom=18&amp;layers=M</a></p>
 <p>Here it is. But you won't see the node until you go into the edit mode. I will put an hospital logo juste beside it.</p>
 </div>
 <div id="comment-10219-info" class="comment-info">
@@ -178,7 +178,7 @@ healthcare:speciality=chiropractic</code></pre>
 <div class="comment-text">
 <p>Please don't say that there is a hospital somewhere that there isn't one.<br />
 </p>
-<p>In an emergency someone could easily ask their satnav to "take me to the nearest hospital" and arrive on your doorstep wondering where the hospital is. As mentioned before, your office as originally added does appear on the <a href="http://www.openstreetmap.org/?lat=46.06942&amp;lon=-72.8122&amp;zoom=17&amp;layers=O">Osmarender map</a>, just not on the Mapnik one.</p>
+<p>In an emergency someone could easily ask their satnav to "take me to the nearest hospital" and arrive on your doorstep wondering where the hospital is. As mentioned before, your office as originally added does appear on the <a href="https://www.openstreetmap.org/?lat=46.06942&amp;lon=-72.8122&amp;zoom=17&amp;layers=O">Osmarender map</a>, just not on the Mapnik one.</p>
 </div>
 <div id="comment-10225-info" class="comment-info">
 <span class="comment-age">(25 Jan '12, 23:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

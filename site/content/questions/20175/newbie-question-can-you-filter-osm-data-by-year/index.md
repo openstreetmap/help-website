@@ -161,7 +161,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If you find the data you can perhaps upload it to: <a href="http://wiki.openstreetmap.org/wiki/Historical_OSM">http://wiki.openstreetmap.org/wiki/Historical_OSM</a> (when it gets going)</p>
+<p>If you find the data you can perhaps upload it to: <a href="https://wiki.openstreetmap.org/wiki/Historical_OSM">https://wiki.openstreetmap.org/wiki/Historical_OSM</a> (when it gets going)</p>
 </div>
 <div id="comment-20229-info" class="comment-info">
 <span class="comment-age">(24 Feb '13, 21:47)</span> <span class="comment-user userinfo">emj</span>

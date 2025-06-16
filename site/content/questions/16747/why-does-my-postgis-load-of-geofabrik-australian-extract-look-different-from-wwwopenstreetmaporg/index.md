@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have downloaded the Geofabrik Australia.osm.pbf extract dated 8/10/12 and loaded into a PostGIS database with osm2pgsql with no errors.</p>
 <p>However, when I display this data (using OpenLayers and MapServer), I see quite a different picture from what I see when I look at the same area on www.openstreetmap.org.</p>
-<p>At <a href="http://www.openstreetmap.org/?lat=-34.932&amp;lon=138.574&amp;zoom=10&amp;layers=M">www.openstreetmap.org lat=-34.932, lon=138.574, zoom=10</a>, I see red, orange and green streets, green park names and quite a few parks, lakes and streams.</p>
+<p>At <a href="https://www.openstreetmap.org/?lat=-34.932&amp;lon=138.574&amp;zoom=10&amp;layers=M">www.openstreetmap.org lat=-34.932, lon=138.574, zoom=10</a>, I see red, orange and green streets, green park names and quite a few parks, lakes and streams.</p>
 <p>The same area in my map shows no green streets, no park names and only a couple of parks and lakes: generally much less detail.</p>
 <p>Yesterday, I loaded the extract dated 7/10/12 and compared it with www.openstreetmap.org and saw much the same differences so it is not just a matter of missing a few updates.</p>
 <p>How can I best get the more detailed data?</p>

@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sure that is possible if the address is mapped. One possible way of doing it is using nominatims "search" function. For documentation how to do that see <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Search">the wikipage on nominatim</a>. If only the streetname is mapped but without house numbers your lat/lon might be off a bit.</p>
+<p>Sure that is possible if the address is mapped. One possible way of doing it is using nominatims "search" function. For documentation how to do that see <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Search">the wikipage on nominatim</a>. If only the streetname is mapped but without house numbers your lat/lon might be off a bit.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Possibilities for reverse geocoding might be given by the use of <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. See there the section about "Reverse Geocoding / Address lookup".</p>
+<p>Possibilities for reverse geocoding might be given by the use of <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. See there the section about "Reverse Geocoding / Address lookup".</p>
 <p>But you want the coordibates of a certain address? Then you have to meka sure that the given address is a certain point like a node in the OSM data. What coordinates should be given when no housenumbers are present in the OSM data, or the address is tagged to a (big) building?</p>
 </div>
 <div class="answer-controls post-controls">

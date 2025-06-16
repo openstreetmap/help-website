@@ -124,7 +124,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As <a href="https://help.openstreetmap.org/answer_link/39760/">stephan75 pointed out</a>: <a href="http://wiki.openstreetmap.org/wiki/Rendering">http://wiki.openstreetmap.org/wiki/Rendering</a> is a good resource. My recommendation is <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, with which you should try to render name:sr and name:sr-Latn. See also my remarks above.<br />
+<p>As <a href="https://help.openstreetmap.org/answer_link/39760/">stephan75 pointed out</a>: <a href="https://wiki.openstreetmap.org/wiki/Rendering">https://wiki.openstreetmap.org/wiki/Rendering</a> is a good resource. My recommendation is <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>, with which you should try to render name:sr and name:sr-Latn. See also my remarks above.<br />
 On <a href="http://mlm.jochentopf.com/?zoom=9&amp;lat=46.09442&amp;lon=20.18644&amp;layers=B0T&amp;lang=_%7Csr%7Csr-Latn">this map</a> you can see which Serbian and latinised Serbian names exist: <img src="http://malenki.ch/d/2014-12-24_101535_scrot.png" alt="Jochen Topf: Multilingual Map Test" /></p>
 </div>
 <div class="answer-controls post-controls">
@@ -176,7 +176,7 @@ On <a href="http://mlm.jochentopf.com/?zoom=9&amp;lat=46.09442&amp;lon=20.18644&
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It seems you will have to <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data">create your own map</a> from OSM data and take care you use name:sr and/or name:sr-Latn.<br />
+<p>It seems you will have to <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data">create your own map</a> from OSM data and take care you use name:sr and/or name:sr-Latn.<br />
 Since maybe Russian maps with Cyrillic letters may help you I asked in IRC for Russian OSM based maps and got pointed to <a href="http://gis-lab.info/data/mp/">this</a> (and maybe <a href="http://forum.openstreetmap.org/viewtopic.php?id=13875">this</a>) place. At gis-lab there are maps from outside Russia in Russian and native languages.</p>
 <p>hth<br />
 Thomas</p>

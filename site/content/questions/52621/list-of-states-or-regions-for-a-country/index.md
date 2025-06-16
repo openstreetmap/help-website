@@ -172,8 +172,8 @@ osqa_accepted = false
 relation[&quot;admin_level&quot;=&quot;4&quot;](area.searchArea);
 );
 out body;</code></pre>
-<p>This might even actually work for the whole US. If you need the geometry too, this is quite a heavy query to ask. It might like look <a href="http://overpass-turbo.eu/s/jzI">something like this</a>, but if it doesn't time out, it is sure to crash your browser. If you want the data without crashing your browser, <a href="https://help.openstreetmap.org/questions/41137/overpass-turbo-without-map-rendering">check the answer here</a>.</p>
-<p>But if you need a map, you're probably better of with either the Boundaries tool or extract the data yourself (which <a href="https://help.openstreetmap.org/questions/52364/how-can-i-get-all-columns-from-osm-to-csv-file?page=1&amp;focusedAnswerId=52566#52566">I would do like this</a>, but there are many ways up the mountain)</p>
+<p>This might even actually work for the whole US. If you need the geometry too, this is quite a heavy query to ask. It might like look <a href="http://overpass-turbo.eu/s/jzI">something like this</a>, but if it doesn't time out, it is sure to crash your browser. If you want the data without crashing your browser, <a href="/questions/41137/overpass-turbo-without-map-rendering">check the answer here</a>.</p>
+<p>But if you need a map, you're probably better of with either the Boundaries tool or extract the data yourself (which <a href="/questions/52364/how-can-i-get-all-columns-from-osm-to-csv-file?page=1&amp;focusedAnswerId=52566#52566">I would do like this</a>, but there are many ways up the mountain)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

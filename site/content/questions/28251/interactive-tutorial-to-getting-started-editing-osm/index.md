@@ -257,9 +257,9 @@ A logo in that box would draw a little more attention to the purpose of the help
 <div class="answer-body">
 <p>Marre86, at this site <a href="https://www.openstreetmap.org/">OpenStreetMap.org</a> you should see this...<br />
 If not try a couple of different browsers (I used Firefox)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-01_at_4.13.21_PM_r4gakfs.png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-01_at_4.14.16_PM.png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-01_at_4.14.40_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-01_at_4.13.21_PM_r4gakfs.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-01_at_4.14.16_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-01_at_4.14.40_PM.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

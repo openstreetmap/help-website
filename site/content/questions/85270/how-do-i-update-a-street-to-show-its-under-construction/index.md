@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This, I think is the area. <a href="https://www.openstreetmap.org/way/899293179#map=17/55.89846/-3.13699">https://www.openstreetmap.org/way/899293179#map=17/55.89846/-3.13699</a> I would draw a polygon of the construction site and tag it landuse=construction site With the aid of local info, surveys and Bing you can keep adjusting the area as sections are completed and accessible. You may be able to draw the buildings and add addresses and post codes. Drawing the buildings will require some estimation, aided by gps waypoints for example and possibly published site plans although copyright of the site plan may be an issue. If part of the road is closed to traffic maybe a barrier=fence or barrier=gate are required. Telling us which editor you use would allow someone with experience of that editor, to give detailed advice. You could just add some notes to the map maybe, which may get someone to map a barrier of the limit of access on the road.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/adding_a_note..jpg" alt="alt text" /></p>
+<p><img src="/upfiles/adding_a_note..jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

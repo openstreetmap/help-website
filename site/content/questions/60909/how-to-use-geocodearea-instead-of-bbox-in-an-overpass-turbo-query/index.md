@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I'd like to run this query</p>
 <p><code>way[building]({{bbox}})-&gt;.a; foreach .a ( way.a(around:400); way._(if:count(ways) == 1); out center; );</code></p>
-<p>I found <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Isolated_Buildings">here</a> but using <code>{{geocodeArea:"Burlats"}}</code> or <code>{{geocodeArea:"Boissezon"}}</code> or <code>{{geocodeArea:"Noailhac"}}</code> instead of the <code>{{bbox}}</code>parameter....It seems I'm doing something wrong because</p>
+<p>I found <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Isolated_Buildings">here</a> but using <code>{{geocodeArea:"Burlats"}}</code> or <code>{{geocodeArea:"Boissezon"}}</code> or <code>{{geocodeArea:"Noailhac"}}</code> instead of the <code>{{bbox}}</code>parameter....It seems I'm doing something wrong because</p>
 <p><code>way[building]({{geocodeArea:"Boissezon"}})-&gt;.a; foreach .a ( way.a(around:400); way._(if:count(ways) == 1); out center; );</code> just get me a syntax error message :)</p>
 <p>Thanks</p>
 </div>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The Overpass Turbo shortcut <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Turbo_Queries#Available_Shortcuts">replaces the geocodeArea with an area query</a>, which is not valid syntax for specifying the area in the way query.</p>
+<p>The Overpass Turbo shortcut <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Turbo_Queries#Available_Shortcuts">replaces the geocodeArea with an area query</a>, which is not valid syntax for specifying the area in the way query.</p>
 <p>The fix is to save the area result to a set first:</p>
 <pre><code>{{geocodeArea:&quot;Boissezon&quot;}}-&gt;.searchArea;
 way[building](area.searchArea)-&gt;.a;

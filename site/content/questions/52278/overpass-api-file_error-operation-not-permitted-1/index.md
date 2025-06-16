@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Overpass API FILE_ERROR Operation not permitted 1"
-description = '''I am following this http://wiki.openstreetmap.org/wiki/Overpass_API/Installation guide to install OSM3S server on Ubuntu using vagrant. After populating DB whenever i try to Start Dispatcher Deomon using the command: nohup $EXEC_DIR/bin/dispatcher --osm-base --db-dir=$DB_DIR &amp;amp;  I get the followi...'''
+description = '''I am following this https://wiki.openstreetmap.org/wiki/Overpass_API/Installation guide to install OSM3S server on Ubuntu using vagrant. After populating DB whenever i try to Start Dispatcher Deomon using the command: nohup $EXEC_DIR/bin/dispatcher --osm-base --db-dir=$DB_DIR &amp;amp;  I get the followi...'''
 date = "2016-09-28T15:22:00Z"
 lastmod = "2016-09-28T19:03:00Z"
 weight = 52278
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am following this <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation">http://wiki.openstreetmap.org/wiki/Overpass_API/Installation</a> guide to install OSM3S server on Ubuntu using vagrant.</p>
+<p>I am following this <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Installation">https://wiki.openstreetmap.org/wiki/Overpass_API/Installation</a> guide to install OSM3S server on Ubuntu using vagrant.</p>
 <p>After populating DB whenever i try to Start Dispatcher Deomon using the command:</p>
 <p>nohup $EXEC_DIR/bin/dispatcher --osm-base --db-dir=$DB_DIR &amp;</p>
 <p>I get the following error:</p>

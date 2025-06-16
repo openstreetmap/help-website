@@ -70,7 +70,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Is this not exactly the same as <a href="https://help.openstreetmap.org/questions/52402/how-to-find-out-if-a-person-has-entered-a-train-station">https://help.openstreetmap.org/questions/52402/how-to-find-out-if-a-person-has-entered-a-train-station</a> ?</p>
+<p>Is this not exactly the same as <a href="/questions/52402/how-to-find-out-if-a-person-has-entered-a-train-station">https://help.openstreetmap.org/questions/52402/how-to-find-out-if-a-person-has-entered-a-train-station</a> ?</p>
 </div>
 <div id="comment-52505-info" class="comment-info">
 <span class="comment-age">(12 Oct '16, 22:48)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

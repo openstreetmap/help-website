@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Missing tables during osm2pgsql import"
-description = '''I always get the following message during import of downloaded compressed osm data into my database (version 8.4). I can connect to the db via pgadmin tool. I have gone through the installation steps of the Mapnik Wiki Page (http://wiki.openstreetmap.org/wiki/Mapnik). Database is cool. But where are...'''
+description = '''I always get the following message during import of downloaded compressed osm data into my database (version 8.4). I can connect to the db via pgadmin tool. I have gone through the installation steps of the Mapnik Wiki Page (https://wiki.openstreetmap.org/wiki/Mapnik). Database is cool. But where are...'''
 date = "2011-04-28T13:53:00Z"
 lastmod = "2011-04-29T10:51:00Z"
 weight = 4888
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I always get the following message during import of downloaded compressed osm data into my database (version 8.4). I can connect to the db via pgadmin tool. I have gone through the installation steps of the Mapnik Wiki Page (<a href="http://wiki.openstreetmap.org/wiki/Mapnik">http://wiki.openstreetmap.org/wiki/Mapnik</a>). Database is cool. But where are the missing table?</p>
+<p>I always get the following message during import of downloaded compressed osm data into my database (version 8.4). I can connect to the db via pgadmin tool. I have gone through the installation steps of the Mapnik Wiki Page (<a href="https://wiki.openstreetmap.org/wiki/Mapnik">https://wiki.openstreetmap.org/wiki/Mapnik</a>). Database is cool. But where are the missing table?</p>
 <p>postgres@oli-VirtualBox:~$ osm2pgsql -m -d gis /oli/Downloads/baden-wuerttemberg.osm.bz2 osm2pgsql SVN version 0.69-</p>
 <p>Using projection SRS 900913 (Spherical Mercator) Setting up table: planet_osm_point ADVICE: Tabelle »planet_osm_point« doesn't exist, skipping ADVICE: Tabelle »planet_osm_point_tmp« doesn't exist, skipping SELECT AddGeometryColumn('planet_osm_point', 'way', 900913, 'POINT', 2 ); failed: ERROR: AddGeometryColumns() - invalid SRID CONTEXT: SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )" PL/pgSQL-Function »addgeometrycolumn« Zeile 4 at SQL-Statement</p>
 <p>Error occurred, cleaning up</p>
@@ -136,7 +136,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm no expert, but your error message looks similar to the <a href="http://wiki.openstreetmap.org/wiki/Mapnik#Invalid_projection_in_pgSQL">one described here.</a> Have you seen and tried that solution to see if it helps in your case?</p>
+<p>I'm no expert, but your error message looks similar to the <a href="https://wiki.openstreetmap.org/wiki/Mapnik#Invalid_projection_in_pgSQL">one described here.</a> Have you seen and tried that solution to see if it helps in your case?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

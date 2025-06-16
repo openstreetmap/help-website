@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-19513-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>hI? Permalink: <a href="http://www.openstreetmap.org/?lat=37.63098&amp;lon=27.17978&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=37.63098&amp;lon=27.17978&amp;zoom=16&amp;layers=M</a></p>
+<p>hI? Permalink: <a href="https://www.openstreetmap.org/?lat=37.63098&amp;lon=27.17978&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=37.63098&amp;lon=27.17978&amp;zoom=16&amp;layers=M</a></p>
 <p>I do have the same problem. Modifications appears only with scales 3000 ft, 500 ft, 300 ft and 100 ft. Thanks</p>
 </div>
 <div id="comment-19513-info" class="comment-info">
@@ -150,8 +150,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Next time please provide a <a href="http://wiki.openstreetmap.org/wiki/Permalink">permalink</a> to <a href="http://www.openstreetmap.org/?lat=-43.00089&amp;lon=147.33344&amp;zoom=16&amp;layers=M">the area you are talking about</a>.</p>
-<p>Here everything seems fine. Did you clear your browser cache? Did you <a href="http://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">wait</a> long enough for the <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">changes</a> to <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">appear</a>?</p>
+<p>Next time please provide a <a href="https://wiki.openstreetmap.org/wiki/Permalink">permalink</a> to <a href="https://www.openstreetmap.org/?lat=-43.00089&amp;lon=147.33344&amp;zoom=16&amp;layers=M">the area you are talking about</a>.</p>
+<p>Here everything seems fine. Did you clear your browser cache? Did you <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">wait</a> long enough for the <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">changes</a> to <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">appear</a>?</p>
 <p>As each zoom level (and each tile on each zoom level) is rendered individually the behavior you are expiring is not unusual if either your cache is not clean or not all tiles have been rendered yet.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For a whole country, generally you shouldn't seek to download the standard OpenStreetMap rendered map in tile format. Requesting so many tiles puts too much load on our servers, and is therefore discouraged or forbidden by our <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>.</p>
+<p>For a whole country, generally you shouldn't seek to download the standard OpenStreetMap rendered map in tile format. Requesting so many tiles puts too much load on our servers, and is therefore discouraged or forbidden by our <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>.</p>
 <p>Instead, you should download the raw (unrendered) data for your country. The best source for this is <a href="http://download.geofabrik.de/">Geofabrik's extract service</a>.</p>
 <p>You can then use a renderer on your computer to take this data and make a lovely map out of it. The best-known renderer is Mapnik, for which <a href="http://www.mapbox.com/tilemill/">TileMill</a> provides a (fairly) understandable package and frontend.</p>
 <p>You can keep your map up-to-date by downloading 'diff' files and applying them to it, but since these include all changes all over the world, your database will soon balloon way beyond the size of Ukraine. It's probably better just to download a new extract from Geofabrik every week.</p>

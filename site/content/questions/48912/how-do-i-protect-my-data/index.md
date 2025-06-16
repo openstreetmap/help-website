@@ -398,7 +398,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12126/_jk">@_jk</a>, there is so much more to OSM than positional data. You "seriously doubt anyone is going to beat that", but there is more data that you may not have considered. What if a new path joins up to it later? No, not allowed. They add street lighting? No, you can't add that, this is _jk's private data. A route is run over your way, <em>sharp intake of breath</em> Accept that when you upload that to OSM, you agree that it can and will be edited. You can't put it on a publically editable medium then get upset when people publically edit it.</p>
+<p><a href="https://help.openstreetmap.org/users/12126/_jk">@_jk</a>, there is so much more to OSM than positional data. You "seriously doubt anyone is going to beat that", but there is more data that you may not have considered. What if a new path joins up to it later? No, not allowed. They add street lighting? No, you can't add that, this is _jk's private data. A route is run over your way, <em>sharp intake of breath</em> Accept that when you upload that to OSM, you agree that it can and will be edited. You can't put it on a publically editable medium then get upset when people publically edit it.</p>
 </div>
 <div id="comment-48934-info" class="comment-info">
 <span class="comment-age">(30 Mar '16, 00:57)</span> <span class="comment-user userinfo">Deanna Earley</span>
@@ -409,7 +409,7 @@ osqa_accepted = true
 <div id="post-48935-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12126/_jk">@_jk</a>, Please don't take my comment as a reason to withhold your data. We want your data. I was simply pointing out that protecting it from the OSM community is not only not possible but not desirable.</p>
+<p><a href="https://help.openstreetmap.org/users/12126/_jk">@_jk</a>, Please don't take my comment as a reason to withhold your data. We want your data. I was simply pointing out that protecting it from the OSM community is not only not possible but not desirable.</p>
 </div>
 <div id="comment-48935-info" class="comment-info">
 <span class="comment-age">(30 Mar '16, 00:58)</span> <span class="comment-user userinfo">AlaskaDave</span>
@@ -420,7 +420,7 @@ osqa_accepted = true
 <div id="post-48936-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12126/_jk">@_jk</a>, "Just thought we would look into contributing to OSM quality but it's not wanted, like, at all. I get that now." You misunderstand. It is very much wanted, but once you make it available, you can not control it what happens to it.</p>
+<p><a href="https://help.openstreetmap.org/users/12126/_jk">@_jk</a>, "Just thought we would look into contributing to OSM quality but it's not wanted, like, at all. I get that now." You misunderstand. It is very much wanted, but once you make it available, you can not control it what happens to it.</p>
 </div>
 <div id="comment-48936-info" class="comment-info">
 <span class="comment-age">(30 Mar '16, 01:01)</span> <span class="comment-user userinfo">Deanna Earley</span>

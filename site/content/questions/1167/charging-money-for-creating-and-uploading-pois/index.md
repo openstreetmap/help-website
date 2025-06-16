@@ -178,7 +178,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is nothing in the license or other places that prohibits you from getting paid to work with OSM. In fact there are <a href="http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">several companies</a> offering geo services based on OSM. If you look at this from the businesses point of view if they do not hire you they have to give a paid employe the time to learn and import to OSM witch could cost them more and is no more free.</p>
+<p>There is nothing in the license or other places that prohibits you from getting paid to work with OSM. In fact there are <a href="https://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">several companies</a> offering geo services based on OSM. If you look at this from the businesses point of view if they do not hire you they have to give a paid employe the time to learn and import to OSM witch could cost them more and is no more free.</p>
 <p>If something is free does not mean that none have made money making it. It just means that you are not charged and you can do what you want with it.</p>
 </div>
 <div class="answer-controls post-controls">

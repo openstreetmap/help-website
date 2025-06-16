@@ -115,8 +115,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As far as I can see, Brussels is in the <a href="http://www.openstreetmap.org/browse/relation/78967">French Community</a> as well as being <a href="http://www.openstreetmap.org/browse/relation/54094">it's own region</a>.</p>
-<p>It does get a mention in the <a href="http://www.openstreetmap.org/browse/relation/53136">Flemish Community relation</a> too as the administrative centre. Is this not the case?</p>
+<p>As far as I can see, Brussels is in the <a href="https://www.openstreetmap.org/browse/relation/78967">French Community</a> as well as being <a href="https://www.openstreetmap.org/browse/relation/54094">it's own region</a>.</p>
+<p>It does get a mention in the <a href="https://www.openstreetmap.org/browse/relation/53136">Flemish Community relation</a> too as the administrative centre. Is this not the case?</p>
 <p>Searching for Brussels on the main site <a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">www.openstreetmap.org</a> returns "Brussels, French Community, Brussels-Capital Region, Belgium, Europe" as the top result.</p>
 <p>Edit: Having done a bit of reading in wikipedia, I think the issue might be that the region boundary ways should also be in the Flemish Community relation with roles of inner (to exclude the area from the Flemish Community). The node can remain as the administrative centre though as that does seem to be correct.</p>
 </div>

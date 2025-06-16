@@ -160,7 +160,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ok, en fait, il faut sélectionner un objet, cliquer sur avancé en bas à gauche (de la fenêtre, c'est une bascule) et tu suis cette doc. <a href="http://wiki.openstreetmap.org/wiki/FR:Howto_Map_A">http://wiki.openstreetmap.org/wiki/FR:Howto_Map_A</a></p>
+<p>Ok, en fait, il faut sélectionner un objet, cliquer sur avancé en bas à gauche (de la fenêtre, c'est une bascule) et tu suis cette doc. <a href="https://wiki.openstreetmap.org/wiki/FR:Howto_Map_A">https://wiki.openstreetmap.org/wiki/FR:Howto_Map_A</a></p>
 <p>Le reste est clair... c'est la méthode pour arriver aux champs "clé", "valeur" qui ne l'était pas.</p>
 </div>
 <div class="answer-controls post-controls">

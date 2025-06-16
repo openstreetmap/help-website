@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-72103-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>possible duplicate of <a href="https://help.openstreetmap.org/questions/20805/">How can I set up automatic notification whenever data that I've added to OSM is changed?</a></p>
+<p>possible duplicate of <a href="/questions/20805/">How can I set up automatic notification whenever data that I've added to OSM is changed?</a></p>
 </div>
 <div id="comment-72103-info" class="comment-info">
 <span class="comment-age">(13 Dec '19, 23:15)</span> <span class="comment-user userinfo">Andrew Kvalheim</span>

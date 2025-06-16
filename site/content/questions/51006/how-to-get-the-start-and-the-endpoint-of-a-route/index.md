@@ -117,7 +117,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>It is this route: <a href="http://www.openstreetmap.org/way/130768455">http://www.openstreetmap.org/way/130768455</a> Actually what I want to achieve is to know what destinations can be reached from a harbor (in this case: <span>node 2465989873</span>)</p>
+<p>It is this route: <a href="https://www.openstreetmap.org/way/130768455">https://www.openstreetmap.org/way/130768455</a> Actually what I want to achieve is to know what destinations can be reached from a harbor (in this case: <span>node 2465989873</span>)</p>
 </div>
 <div id="comment-51220-info" class="comment-info">
 <span class="comment-age">(02 Aug '16, 21:27)</span> <span class="comment-user userinfo">NLAnaconda</span>
@@ -223,7 +223,7 @@ One Answer:
 <div id="post-51223-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11351/nlanaconda"></a><a href="http://help.openstreetmap.org/users/11351/nlanaconda">@NLAnaconda</a>: thanks for the feedback! :-) Glad to help.</p>
+<p><a href="https://help.openstreetmap.org/users/11351/nlanaconda"></a><a href="https://help.openstreetmap.org/users/11351/nlanaconda">@NLAnaconda</a>: thanks for the feedback! :-) Glad to help.</p>
 </div>
 <div id="comment-51223-info" class="comment-info">
 <span class="comment-age">(02 Aug '16, 22:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

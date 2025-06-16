@@ -140,7 +140,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You can't do this on <a href="http://openstreetmap.org">openstreetmap.org</a> -- everything there is public data, by design. You can have your own points over an OpenStreetMap base layer, and there are a couple of ways to do this:</p>
 <ul>
-<li>You can build your own page to do this, by following the <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">OpenLayers POI example</a> in the wiki. You can then use standard HTTP access control to limit who can see your page.</li>
+<li>You can build your own page to do this, by following the <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">OpenLayers POI example</a> in the wiki. You can then use standard HTTP access control to limit who can see your page.</li>
 <li>You can use a third-party service such as <a href="http://geocommons.com/">GeoCommons</a>. This service isn't inherently private, but any information you upload only gets shown on your map, not anyone else's. There is also a paid version for truly private access.</li>
 </ul>
 </div>
@@ -196,8 +196,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can easily craft an url that will show a marker on the map. The limitation is that this marker has no name or other information, and that it is limited to one marker.</p>
-<p>Go to <a href="http://osm.org">osm.org</a>, zoom to the desired location, and click the "permalink" link on the bottom-left. Then edit the url in the browser address bar: add "&amp;mlat=12.345&amp;mlon=67.890" to the url (replace with desired coordinates, use the "lat=&amp;lon=" coordinates as a template). This is documented <a href="http://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker">here</a>. And <a href="http://www.openstreetmap.org/?lat=48.88749&amp;lon=2.33329&amp;mlat=48.88749&amp;mlon=2.33329&amp;zoom=17&amp;layers=M">here</a> is an example of such a url.</p>
-<p>If you want anything more complicated, you'll have to deploy your own web page somewhere and use for example the <a href="http://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a> library.</p>
+<p>Go to <a href="http://osm.org">osm.org</a>, zoom to the desired location, and click the "permalink" link on the bottom-left. Then edit the url in the browser address bar: add "&amp;mlat=12.345&amp;mlon=67.890" to the url (replace with desired coordinates, use the "lat=&amp;lon=" coordinates as a template). This is documented <a href="https://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker">here</a>. And <a href="https://www.openstreetmap.org/?lat=48.88749&amp;lon=2.33329&amp;mlat=48.88749&amp;mlon=2.33329&amp;zoom=17&amp;layers=M">here</a> is an example of such a url.</p>
+<p>If you want anything more complicated, you'll have to deploy your own web page somewhere and use for example the <a href="https://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a> library.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

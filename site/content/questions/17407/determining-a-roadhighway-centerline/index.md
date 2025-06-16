@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>A typical road is represented by a single osm way, which should already follow the centerline of the road. Dual carriageways are often represented by two osm mays (tagged as oneway=yes), but the principle is the same.</p>
-<p>If you want to go into more details, have a look at the <em>lanes</em> <a href="http://wiki.openstreetmap.org/wiki/Lane">tag</a> and <a href="http://wiki.openstreetmap.org/wiki/Lanes">tag suffix</a>. But there are a lot of ways that lack this detailed info (especially the suffix ones, as it is a fairly new scheme).</p>
+<p>If you want to go into more details, have a look at the <em>lanes</em> <a href="https://wiki.openstreetmap.org/wiki/Lane">tag</a> and <a href="https://wiki.openstreetmap.org/wiki/Lanes">tag suffix</a>. But there are a lot of ways that lack this detailed info (especially the suffix ones, as it is a fairly new scheme).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

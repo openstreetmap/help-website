@@ -111,7 +111,7 @@ One Answer:
 <p>Note a further way to save space is to use a normal file for node storage instead of the database table.</p>
 <p><em>the above notes are not directly relevant for the specific question</em></p>
 <p>Outside of the above you can simply edit the default.style file to control what gets imported and what not. There is no exact one to one relationship between OSM elements and tables in the osm2pgsql schema so asking to "exclude" tables doesn't make much sense. You can naturally simply drop any tables you don't want post import (assuming this is a one-off import)</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">http://wiki.openstreetmap.org/wiki/Osm2pgsql</a> and <a href="https://github.com/openstreetmap/osm2pgsql/blob/master/README.md">https://github.com/openstreetmap/osm2pgsql/blob/master/README.md</a> for more information.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">https://wiki.openstreetmap.org/wiki/Osm2pgsql</a> and <a href="https://github.com/openstreetmap/osm2pgsql/blob/master/README.md">https://github.com/openstreetmap/osm2pgsql/blob/master/README.md</a> for more information.</p>
 <p>It should be noted that this help site is not intended as a way to find people that can google for you, but far more for questions with non-obvious answers that cannot be easily found simply by reading the documentation.</p>
 </div>
 <div class="answer-controls post-controls">

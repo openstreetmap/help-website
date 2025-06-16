@@ -140,7 +140,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>The danger with mapping sidewalks as separate ways is that it doesn't work very well in places where pedestrians can cross roads wherever they like. Also, it can vastly overcomplicate things. For example, here:</p>
-<p><a href="http://www.openstreetmap.org/#map=19/53.95976/-1.08991">http://www.openstreetmap.org/#map=19/53.95976/-1.08991</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/53.95976/-1.08991">https://www.openstreetmap.org/#map=19/53.95976/-1.08991</a></p>
 <p>there are at least three ways alongside Leeman Road and a pedestrian crossing that simply don't exist in reality.</p>
 </div>
 <div id="comment-25798-info" class="comment-info">
@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think I may have found the answer here <a href="http://wiki.openstreetmap.org/wiki/Surface">http://wiki.openstreetmap.org/wiki/Surface</a> and also here <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway">http://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway</a></p>
+<p>I think I may have found the answer here <a href="https://wiki.openstreetmap.org/wiki/Surface">https://wiki.openstreetmap.org/wiki/Surface</a> and also here <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway">https://wiki.openstreetmap.org/wiki/Proposed_features/Advanced_footway_and_cycleway</a></p>
 <p>Thanks</p>
 </div>
 <div class="answer-controls post-controls">

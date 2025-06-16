@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I download all city streets to a gpx file? I saw some website can export the streets of a city in a vectorial file from OSM but thi type of file hasn't got the georeference so I'm nmot able to do a conversion and find the gpx file. in particular i want to do this job on Trieste (IT). <img src="https://help.openstreetmap.org/upfiles/Immagine_2022-05-06_094935_UzPSnKQ.jpg" alt="alt text" /> the image is from the vectorial file i can download, the site is <a href="https://anvaka.github.io/city-roads/">https://anvaka.github.io/city-roads/</a></p>
+<p>How can I download all city streets to a gpx file? I saw some website can export the streets of a city in a vectorial file from OSM but thi type of file hasn't got the georeference so I'm nmot able to do a conversion and find the gpx file. in particular i want to do this job on Trieste (IT). <img src="/upfiles/Immagine_2022-05-06_094935_UzPSnKQ.jpg" alt="alt text" /> the image is from the vectorial file i can download, the site is <a href="https://anvaka.github.io/city-roads/">https://anvaka.github.io/city-roads/</a></p>
 <p>thank you!!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

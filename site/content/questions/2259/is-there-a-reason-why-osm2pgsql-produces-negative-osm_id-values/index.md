@@ -143,7 +143,7 @@ One Answer:
 <div id="post-21130-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>More background Information is in Wiki <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Processed_Data">http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Processed_Data</a></p>
+<p>More background Information is in Wiki <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Processed_Data">https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema#Processed_Data</a></p>
 </div>
 <div id="comment-21130-info" class="comment-info">
 <span class="comment-age">(02 Apr '13, 14:13)</span> <span class="comment-user userinfo">geekQ</span>

@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Dave, use amenity=dive_centre and change dive into fishing, hunting and so on. And yes it’s not in the Wiki yet, but dive_centre sounds and matches the description for the other activities. <a href="http://wiki.openstreetmap.org/wiki/Key:amenity">http://wiki.openstreetmap.org/wiki/Key:amenity</a></p>
+<p>Hi Dave, use amenity=dive_centre and change dive into fishing, hunting and so on. And yes it’s not in the Wiki yet, but dive_centre sounds and matches the description for the other activities. <a href="https://wiki.openstreetmap.org/wiki/Key:amenity">https://wiki.openstreetmap.org/wiki/Key:amenity</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

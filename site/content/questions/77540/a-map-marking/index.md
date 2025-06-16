@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/I_button_map_key.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/I_button_map_key.JPG" alt="alt text" /></p>
 <p>The"i" button should show the map key/ legend.</p>
 </div>
 <div class="answer-controls post-controls">

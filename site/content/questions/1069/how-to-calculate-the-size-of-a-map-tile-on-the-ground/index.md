@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can calculate it yourself, based on <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">this wiki page</a>:</p>
+<p>You can calculate it yourself, based on <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">this wiki page</a>:</p>
 <pre><code>resolution = 156543.034 meters/pixel * cos(latitude) / (2 ^ zoomlevel)</code></pre>
 <p>The resolution means how many meters per pixel you get. If you want to know how many pixels per meter, just use the inverse. That is:</p>
 <pre><code>pixels = 1/resolution * distance</code></pre>

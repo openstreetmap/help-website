@@ -87,8 +87,8 @@ This question is marked "community wiki".
 </div>
 <div class="comment-text">
 <p>If you want similar output of OSM based maps, also have a look at</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">http://wiki.openstreetmap.org/wiki/OSM_on_Paper</a> and</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">https://wiki.openstreetmap.org/wiki/OSM_on_Paper</a> and</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 </div>
 <div id="comment-24813-info" class="comment-info">
 <span class="comment-age">(01 Aug '13, 19:27)</span> <span class="comment-user userinfo">stephan75</span>

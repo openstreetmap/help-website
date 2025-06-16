@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Download <a href="http://download.geofabrik.de/asia/india.html">the data of india</a> and filter with <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> for <em>address</em>.</p>
+<p>Download <a href="http://download.geofabrik.de/asia/india.html">the data of india</a> and filter with <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> for <em>address</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

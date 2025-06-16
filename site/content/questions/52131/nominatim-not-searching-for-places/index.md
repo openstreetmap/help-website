@@ -82,7 +82,7 @@ osqa_accepted = true
 <div id="post-52184-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I will note that. It was just not very clear for me whether help.openstreetmap.org and mailing lists are maintained by same community.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I will note that. It was just not very clear for me whether help.openstreetmap.org and mailing lists are maintained by same community.</p>
 </div>
 <div id="comment-52184-info" class="comment-info">
 <span class="comment-age">(22 Sep '16, 22:12)</span> <span class="comment-user userinfo">Andrey</span>
@@ -231,7 +231,7 @@ osqa_accepted = true
 <div id="post-52176-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a> it is very confusing because essentially there is no way to either filter out some results or figure out which administrative levels they represent.</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a> it is very confusing because essentially there is no way to either filter out some results or figure out which administrative levels they represent.</p>
 </div>
 <div id="comment-52176-info" class="comment-info">
 <span class="comment-age">(22 Sep '16, 20:13)</span> <span class="comment-user userinfo">Andrey</span>

@@ -169,7 +169,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Andy, why don’t you use the intermittent or seasonal tags, as been in use for rivers and streams ? Here’s a link to a similar situation in the middle of highways, with a flourishing wildlife, <a href="http://www.openstreetmap.org/#map=16/52.0657/5.0718">http://www.openstreetmap.org/#map=16/52.0657/5.0718</a> quit and hardly any humans in sight. It has been designed so that the ponds are filled with the rainfall on the infrastructural asphalt surfaces.</p>
+<p>Andy, why don’t you use the intermittent or seasonal tags, as been in use for rivers and streams ? Here’s a link to a similar situation in the middle of highways, with a flourishing wildlife, <a href="https://www.openstreetmap.org/#map=16/52.0657/5.0718">https://www.openstreetmap.org/#map=16/52.0657/5.0718</a> quit and hardly any humans in sight. It has been designed so that the ponds are filled with the rainfall on the infrastructural asphalt surfaces.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

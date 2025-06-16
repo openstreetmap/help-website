@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this previously-answered question: <a href="https://help.openstreetmap.org/questions/27342/how-to-tag-streets-with-reversed-lanes">How to tag streets with reversed lanes?</a></p>
-<p>In short, use the tag <a href="http://wiki.openstreetmap.org/wiki/Key:driving_side">driving_side=left/right</a> as applicable to map exceptions to national rules.</p>
+<p>See this previously-answered question: <a href="/questions/27342/how-to-tag-streets-with-reversed-lanes">How to tag streets with reversed lanes?</a></p>
+<p>In short, use the tag <a href="https://wiki.openstreetmap.org/wiki/Key:driving_side">driving_side=left/right</a> as applicable to map exceptions to national rules.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

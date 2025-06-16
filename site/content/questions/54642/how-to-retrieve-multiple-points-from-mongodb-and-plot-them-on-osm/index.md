@@ -79,7 +79,7 @@ console.log(&quot;connect to the port 4596&quot;);
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <p>on running the code of "app.js" and on opening "shows.html" from browser on localhost, the output is that all points (i.e dose_rate, x, y) of my "shows" collection in "video" database is displayed on HTML page as <a href="https://i.stack.imgur.com/6LZTp.png">this</a>.</p>
-<p>now i did get code for plotting a point on OSM as marker from this link--&gt; <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example</a> <strong>independently</strong> without app.js running in background as simple HTML page.</p>
+<p>now i did get code for plotting a point on OSM as marker from this link--&gt; <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example</a> <strong>independently</strong> without app.js running in background as simple HTML page.</p>
 <p><strong>I want to plot all my points stored in my collection "shows" as "x" and "y" from that db on OSM map, one by one, at once. I tried finding all reference to this problem but failed to find one. Please help me in doing so as i am new to OSM and nodejs or post any reference which i can read or tag someone who can help. THANK YOU IN ADVANCE</strong></p>
 </div>
 <div id="question-tags" class="tags-container tags">

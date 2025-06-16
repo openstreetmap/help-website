@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your question is not gone, it happily lives here: <a href="https://help.openstreetmap.org/questions/67578/trouble-overlaying-shapefile-street-centerlines-to-trace">https://help.openstreetmap.org/questions/67578/trouble-overlaying-shapefile-street-centerlines-to-trace</a></p>
+<p>Your question is not gone, it happily lives here: <a href="/questions/67578/trouble-overlaying-shapefile-street-centerlines-to-trace">https://help.openstreetmap.org/questions/67578/trouble-overlaying-shapefile-street-centerlines-to-trace</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

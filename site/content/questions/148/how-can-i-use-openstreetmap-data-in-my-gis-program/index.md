@@ -116,8 +116,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can download prepared shapefiles of OpenStreetMap data from <a href="http://downloads.cloudmade.com/">Cloudmade</a> or <a href="http://download.geofabrik.de/osm/">Geofabrik</a>, two companies providing specialist OSM-based services. Shape files for small areas can be extracted directly on the <a href="http://extract.bbbike.org/">BBBike</a> site, but please don't abuse this facility when suitable extracts are available elsewhere.</p>
-<p>It's also possible to create PostGIS databases of OpenStreetMap data using either <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, which will give you greater control over the types of features included, but is a more complicated procedure.</p>
-<p>Some GIS are starting to provide native support for OpenStreetMap XML data, including <a href="http://wiki.openstreetmap.org/wiki/ArcGIS">ArcGIS</a> and <a href="http://wiki.openstreetmap.org/wiki/QGIS">Quantum GIS</a>, but these are at an early stage of development and may not work as reliably as importing shapefiles yet. At present (June 2012) the QGIS OSM plugin is no longer supported, and requires workarounds in order to use OSM Data (see answers to <a href="https://help.openstreetmap.org/questions/21078/my-lines-and-polygons-have-turned-to-nodes-when-exported-as-osm-xml-data-and-imported-into-qgis">this question</a>.</p>
+<p>It's also possible to create PostGIS databases of OpenStreetMap data using either <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, which will give you greater control over the types of features included, but is a more complicated procedure.</p>
+<p>Some GIS are starting to provide native support for OpenStreetMap XML data, including <a href="https://wiki.openstreetmap.org/wiki/ArcGIS">ArcGIS</a> and <a href="https://wiki.openstreetmap.org/wiki/QGIS">Quantum GIS</a>, but these are at an early stage of development and may not work as reliably as importing shapefiles yet. At present (June 2012) the QGIS OSM plugin is no longer supported, and requires workarounds in order to use OSM Data (see answers to <a href="/questions/21078/my-lines-and-polygons-have-turned-to-nodes-when-exported-as-osm-xml-data-and-imported-into-qgis">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -243,7 +243,7 @@ osqa_accepted = false
 <div id="post-15911-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've just been setting up more info on the QGIS plugin: <a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a> For some reason it took me a while to find this: <a href="http://docs.qgis.org/user_guide/html/en/plugins/plugins_openstreetmap.html">http://docs.qgis.org/user_guide/html/en/plugins/plugins_openstreetmap.html</a></p>
+<p>I've just been setting up more info on the QGIS plugin: <a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a> For some reason it took me a while to find this: <a href="http://docs.qgis.org/user_guide/html/en/plugins/plugins_openstreetmap.html">http://docs.qgis.org/user_guide/html/en/plugins/plugins_openstreetmap.html</a></p>
 </div>
 <div id="comment-15911-info" class="comment-info">
 <span class="comment-age">(09 Sep '12, 04:35)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -286,7 +286,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>A complete solution for using OpenStreetMap data in QGIS is described here:</p>
-<p><a href="http://www.qgis.org/wiki/OpenStreetMap_data_rendered_with_QGIS">http://www.qgis.org/wiki/OpenStreetMap_data_rendered_with_QGIS</a> <a href="http://www.qgis.org/wiki/Using_OpenStreetMap_data">http://www.qgis.org/wiki/Using_OpenStreetMap_data</a> <a href="http://wiki.openstreetmap.org/wiki/Osm2postgresql">http://wiki.openstreetmap.org/wiki/Osm2postgresql</a></p>
+<p><a href="http://www.qgis.org/wiki/OpenStreetMap_data_rendered_with_QGIS">http://www.qgis.org/wiki/OpenStreetMap_data_rendered_with_QGIS</a> <a href="http://www.qgis.org/wiki/Using_OpenStreetMap_data">http://www.qgis.org/wiki/Using_OpenStreetMap_data</a> <a href="https://wiki.openstreetmap.org/wiki/Osm2postgresql">https://wiki.openstreetmap.org/wiki/Osm2postgresql</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -342,7 +342,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The GIS software <a href="http://wiki.openstreetmap.org/wiki/OpenJUMP">OpenJUMP</a> has a feature to import OSM data directly.</p>
+<p>The GIS software <a href="https://wiki.openstreetmap.org/wiki/OpenJUMP">OpenJUMP</a> has a feature to import OSM data directly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

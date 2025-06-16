@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Siehe das <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin">wiki</a>.</p>
+<p>Siehe das <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

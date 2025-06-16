@@ -79,8 +79,8 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Follow-up question, with more details: <a href="https://help.openstreetmap.org/questions/47014/link-streets-and-neighborhoods-into-single-file">https://help.openstreetmap.org/questions/47014/link-streets-and-neighborhoods-into-single-file</a> .</p>
-<p>(<a href="http://help.openstreetmap.org/users/11744/louiep">@LouieP</a>: In the future, it would be better to edit your original question instead of creating a new one.)</p>
+<p>Follow-up question, with more details: <a href="/questions/47014/link-streets-and-neighborhoods-into-single-file">https://help.openstreetmap.org/questions/47014/link-streets-and-neighborhoods-into-single-file</a> .</p>
+<p>(<a href="https://help.openstreetmap.org/users/11744/louiep">@LouieP</a>: In the future, it would be better to edit your original question instead of creating a new one.)</p>
 </div>
 <div id="comment-47028-info" class="comment-info">
 <span class="comment-age">(07 Dec '15, 10:58)</span> <span class="comment-user userinfo">Lightsider</span>

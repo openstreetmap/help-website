@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a tag for beaches, <a href="http://wiki.openstreetmap.org/wiki/Beach">natural=beach</a>. You can add supervised=yes if there are lifeguards, and you can add swimming=no, but those tags won't be visible in Mapnik. Only beach will be visible, as a yellow dotted surface. I don't know if other icons are planned.</p>
+<p>There is a tag for beaches, <a href="https://wiki.openstreetmap.org/wiki/Beach">natural=beach</a>. You can add supervised=yes if there are lifeguards, and you can add swimming=no, but those tags won't be visible in Mapnik. Only beach will be visible, as a yellow dotted surface. I don't know if other icons are planned.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

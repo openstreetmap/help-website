@@ -104,10 +104,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, first you should be aware, that the <strong>OSM community is very <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits">skeptical about automated edits / imports</a></strong> so please make sure, that you discuss it before you try to upload nodes that might cause problems:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">http://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Contact">http://wiki.openstreetmap.org/wiki/Contact</a></p>
-<p>You might want to create a local <a href="http://wiki.openstreetmap.org/wiki/XML">OSM XML</a> document first, before you start with doing real edits using the <a href="http://wiki.openstreetmap.org/wiki/API">OSM API</a> (first plz. use our <a href="http://wiki.openstreetmap.org/wiki/Using_the_dev_server">testservers API</a>). For contacting the API, you might checkout various libs that fit best for you: <a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a></p>
+<p>Hi, first you should be aware, that the <strong>OSM community is very <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits">skeptical about automated edits / imports</a></strong> so please make sure, that you discuss it before you try to upload nodes that might cause problems:<br />
+<a href="https://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">https://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Contact">https://wiki.openstreetmap.org/wiki/Contact</a></p>
+<p>You might want to create a local <a href="https://wiki.openstreetmap.org/wiki/XML">OSM XML</a> document first, before you start with doing real edits using the <a href="https://wiki.openstreetmap.org/wiki/API">OSM API</a> (first plz. use our <a href="https://wiki.openstreetmap.org/wiki/Using_the_dev_server">testservers API</a>). For contacting the API, you might checkout various libs that fit best for you: <a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

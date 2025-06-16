@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hallo, da das im Rendering ein bisschen seltsam aussieht, wollte ich kurz nachfragen, ob das so stimmt: <a href="http://www.openstreetmap.org/way/424793287">mini_roundabout</a></p>
+<p>Hallo, da das im Rendering ein bisschen seltsam aussieht, wollte ich kurz nachfragen, ob das so stimmt: <a href="https://www.openstreetmap.org/way/424793287">mini_roundabout</a></p>
 <p>Wurde hier der mini_roundabout (ist kein richtiger, "großer" roundabout) korrekt gesetzt oder muss hier nachgebessert werden?</p>
 <p>Danke, Gruß Kululu</p>
 </div>
@@ -70,7 +70,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Not directly related, but I notice that some bus routes are missing from e.g. <a href="http://www.openstreetmap.org/way/424793292">http://www.openstreetmap.org/way/424793292</a> .</p>
+<p>Not directly related, but I notice that some bus routes are missing from e.g. <a href="https://www.openstreetmap.org/way/424793292">https://www.openstreetmap.org/way/424793292</a> .</p>
 </div>
 <div id="comment-50223-info" class="comment-info">
 <span class="comment-age">(15 Jun '16, 12:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -160,7 +160,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Zum Glück habe ich nachgefragt :-)</p>
-<p>Vielen Dank für die Antwort. Ich denke ich habe den Fehler verstanden und es entsprechend <a href="http://www.openstreetmap.org/node/4241708095">korrigert.</a></p>
+<p>Vielen Dank für die Antwort. Ich denke ich habe den Fehler verstanden und es entsprechend <a href="https://www.openstreetmap.org/node/4241708095">korrigert.</a></p>
 <p>Danke, Gruß Kululu</p>
 </div>
 <div id="comment-50234-info" class="comment-info">

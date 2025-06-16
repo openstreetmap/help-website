@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think these places are are a type of depot, and would be covered by the proposed tag for <code>landuse=depot</code>. <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Depot">Proposed features/Depot</a>.</p>
+<p>I think these places are are a type of depot, and would be covered by the proposed tag for <code>landuse=depot</code>. <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Depot">Proposed features/Depot</a>.</p>
 <p>This tag has been discussed on the mailing lists previously, and is used several hundred times (<a href="http://taginfo.openstreetmap.org/tags/landuse=depot#wiki">according to Taginfo</a>)</p>
 <p>It would be useful to specify extra details of the depot using the tag <code>depot:type</code>. Possibly something like <code>depot:type=road_maintenance</code>. And you can also tag the name and operator etc.</p>
 </div>

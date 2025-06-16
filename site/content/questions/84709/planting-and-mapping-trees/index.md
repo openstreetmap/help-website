@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes it is. Here is one I mapped in a cemetery that has several large ones. <a href="https://www.openstreetmap.org/?mlat=52.29987&amp;mlon=-0.38781#map=19/52.29987/-0.38781&amp;layers=N">https://www.openstreetmap.org/?mlat=52.29987&amp;mlon=-0.38781#map=19/52.29987/-0.38781&amp;layers=N</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Kimboulton_Tree.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Kimboulton_Tree.jpg" alt="alt text" /></p>
 <p>If you have a location with GPS or phone you can also use the co-ordinates you have recorded. more information. <a href="https://wiki.openstreetmap.org/w/index.php?search=tree+mapping&amp;title=Special%3ASearch&amp;go=Go">https://wiki.openstreetmap.org/w/index.php?search=tree+mapping&amp;title=Special%3ASearch&amp;go=Go</a></p>
 </div>
 <div class="answer-controls post-controls">

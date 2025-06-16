@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>How would you map? Draw a single building shape? Put a tunnel=building_passage under ?</p>
 <p>Draw two buildings and connect them with the corner nodes? But then, it's not just a connecting point, it's an area.</p>
 <p>Draw two buildings and draw the middle bit out separately, and put layer=1 on the middle bit? But what would the middle bit tags be?</p>
-<p>This is the place, and one of them: <a href="https://www.openstreetmap.org/way/111713800">https://www.openstreetmap.org/way/111713800</a> <img src="https://help.openstreetmap.org/upfiles/2020-05-06_00-36-12_cUXuLjN.jpg" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/2020-05-06_00-34-56_iCdAwrQ.jpg" alt="alt text" /></p>
+<p>This is the place, and one of them: <a href="https://www.openstreetmap.org/way/111713800">https://www.openstreetmap.org/way/111713800</a> <img src="/upfiles/2020-05-06_00-36-12_cUXuLjN.jpg" alt="alt text" /> <img src="/upfiles/2020-05-06_00-34-56_iCdAwrQ.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building_passage" rel="tag" title="see questions tagged &#39;building_passage&#39;">building_passage</span> <span class="post-tag tag-link-buildings" rel="tag" title="see questions tagged &#39;buildings&#39;">buildings</span> <span class="post-tag tag-link-residential" rel="tag" title="see questions tagged &#39;residential&#39;">residential</span>

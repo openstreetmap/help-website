@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Fixed an error, but it is still displayed wrong (2 days ago)"
-description = '''Hi guys, I did fix some errors but on the main page it is still displayed as wrong, when I am on the edditing site it is displayed correctly. http://www.openstreetmap.org/?lat=48.625522&amp;amp;lon=9.340388&amp;amp;zoom=18  WHAT did I do wrong? Thanks D'''
+description = '''Hi guys, I did fix some errors but on the main page it is still displayed as wrong, when I am on the edditing site it is displayed correctly. https://www.openstreetmap.org/?lat=48.625522&amp;amp;lon=9.340388&amp;amp;zoom=18  WHAT did I do wrong? Thanks D'''
 date = "2013-02-09T12:11:00Z"
 lastmod = "2013-02-11T09:54:00Z"
 weight = 19777
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi guys,</p>
-<p>I did fix some errors but on the main page it is still displayed as wrong, when I am on the edditing site it is displayed correctly. <a href="http://www.openstreetmap.org/?lat=48.625522&amp;lon=9.340388&amp;zoom=18">http://www.openstreetmap.org/?lat=48.625522&amp;lon=9.340388&amp;zoom=18</a> WHAT did I do wrong?</p>
+<p>I did fix some errors but on the main page it is still displayed as wrong, when I am on the edditing site it is displayed correctly. <a href="https://www.openstreetmap.org/?lat=48.625522&amp;lon=9.340388&amp;zoom=18">https://www.openstreetmap.org/?lat=48.625522&amp;lon=9.340388&amp;zoom=18</a> WHAT did I do wrong?</p>
 <p>Thanks D</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -119,8 +119,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/19531/edits-do-not-appear-in-view-mode">edits-do-not-appear-in-view-mode</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">FAQ</a></li>
+<li><a href="/questions/19531/edits-do-not-appear-in-view-mode">edits-do-not-appear-in-view-mode</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">FAQ</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

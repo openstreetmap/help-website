@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After reading <a href="http://help.openstreetmap.org/users/87/pieren">Pieren</a>'s comment to <a href="http://help.openstreetmap.org/questions/7486/narrow-streets-in-old-cities/7487">this</a> <a href="http://help.openstreetmap.org/users/131/gnonthgol">Gnonthgol</a>'s answer and after having no response (not even negative one) to <a href="http://trac.openstreetmap.org/ticket/3984">this</a> enhancement ticket for Mapnik I started to wonder:<br />
+<p>After reading <a href="https://help.openstreetmap.org/users/87/pieren">Pieren</a>'s comment to <a href="/questions/7486/narrow-streets-in-old-cities/7487">this</a> <a href="https://help.openstreetmap.org/users/131/gnonthgol">Gnonthgol</a>'s answer and after having no response (not even negative one) to <a href="http://trac.openstreetmap.org/ticket/3984">this</a> enhancement ticket for Mapnik I started to wonder:<br />
 </p>
 <p><strong>What is the big obstacle that prevents rendering of real width for higher zoom levels?</strong><br />
 </p>
@@ -135,7 +135,7 @@ Somewhere someone mentioned that road importance is the key for rendered width. 
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The best solution for rivers is to draw the riverbank and tag it with <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">waterway=riverbank</a>. As I said in another question, the "width" tag solution works only if you put the tag everywhere along your feature (a road or a river). When the tag is not present, you can only estimate a default width which is very difficult because it is very cultural and country specific (the default width for a residential road is different between USA and Europe. Same for a default river width between Sudan and Switzerland). About rendering, the result might not be what you are expecting. Perhaps the segments with the tag "width" will be correct but the vast majority of the other segments will be incorrect. The resulting maps might be worst than not supporting the tag.</p>
+<p>The best solution for rivers is to draw the riverbank and tag it with <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">waterway=riverbank</a>. As I said in another question, the "width" tag solution works only if you put the tag everywhere along your feature (a road or a river). When the tag is not present, you can only estimate a default width which is very difficult because it is very cultural and country specific (the default width for a residential road is different between USA and Europe. Same for a default river width between Sudan and Switzerland). About rendering, the result might not be what you are expecting. Perhaps the segments with the tag "width" will be correct but the vast majority of the other segments will be incorrect. The resulting maps might be worst than not supporting the tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

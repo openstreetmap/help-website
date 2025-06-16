@@ -295,7 +295,7 @@ osqa_accepted = false
 <div id="post-25748-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here is one of the buildings I need help with: <a href="http://www.openstreetmap.org/#map=17/38.81607/-77.64559">http://www.openstreetmap.org/#map=17/38.81607/-77.64559</a></p>
+<p>Here is one of the buildings I need help with: <a href="https://www.openstreetmap.org/#map=17/38.81607/-77.64559">https://www.openstreetmap.org/#map=17/38.81607/-77.64559</a></p>
 </div>
 <div id="comment-25748-info" class="comment-info">
 <span class="comment-age">(25 Aug '13, 01:14)</span> <span class="comment-user userinfo">slover98</span>

@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The easiest method is to find a pre-built garmin map img from places like this. <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> but if you want to create a map yourself see <a href="http://wiki.openstreetmap.org/wiki/Topographic_maps_for_garmin_devices">http://wiki.openstreetmap.org/wiki/Topographic_maps_for_garmin_devices</a></p>
+<p>The easiest method is to find a pre-built garmin map img from places like this. <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> but if you want to create a map yourself see <a href="https://wiki.openstreetmap.org/wiki/Topographic_maps_for_garmin_devices">https://wiki.openstreetmap.org/wiki/Topographic_maps_for_garmin_devices</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

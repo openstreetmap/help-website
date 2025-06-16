@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>in your traces list , click on the file name, then click the left button on the bottom "edit this trace". There you should be able to change the visibility. <img src="https://help.openstreetmap.org/upfiles/Screenshot_20170214_232044.png" alt="screenshot" /></p>
+<p>in your traces list , click on the file name, then click the left button on the bottom "edit this trace". There you should be able to change the visibility. <img src="/upfiles/Screenshot_20170214_232044.png" alt="screenshot" /></p>
 <p><strong>However, currently, I can confirm</strong> that I experience the same issue: I cannot change the visibility (the page refreshes and a opening this page again confirms that nothing was changed. I suspect a website <strong>bug</strong>. Does it work for anybody?</p>
 <p>I have asked our admins/developers for help at <a href="https://trac.openstreetmap.org/ticket/5447">https://trac.openstreetmap.org/ticket/5447</a> .</p>
 </div>

@@ -169,7 +169,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Steve is correct that over time it will probably catch up, but I sped things up a bit and used the /dirty trick mentioned in the answer to <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a>.</p>
+<p>Steve is correct that over time it will probably catch up, but I sped things up a bit and used the /dirty trick mentioned in the answer to <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

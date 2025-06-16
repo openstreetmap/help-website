@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@resgi</span> A ".osm" files are just XML data files full of OSM map data (<a href="http://wiki.openstreetmap.org/wiki/OSM_XML).">http://wiki.openstreetmap.org/wiki/OSM_XML).</a> What do you want to do with the OSM data?</p>
+<p><span>@resgi</span> A ".osm" files are just XML data files full of OSM map data (<a href="https://wiki.openstreetmap.org/wiki/OSM_XML).">https://wiki.openstreetmap.org/wiki/OSM_XML).</a> What do you want to do with the OSM data?</p>
 </div>
 <div id="comment-12398-info" class="comment-info">
 <span class="comment-age">(27 Apr '12, 18:26)</span> <span class="comment-user userinfo">jwernerny</span>
@@ -93,7 +93,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>uploading a pure osm-file to a Garmin device will not help you. Have a look at <a href="http://wiki.openstreetmap.org/wiki/Garmin">http://wiki.openstreetmap.org/wiki/Garmin</a> to see how to use OSM data with those devices.</p>
+<p>uploading a pure osm-file to a Garmin device will not help you. Have a look at <a href="https://wiki.openstreetmap.org/wiki/Garmin">https://wiki.openstreetmap.org/wiki/Garmin</a> to see how to use OSM data with those devices.</p>
 </div>
 <div id="comment-12505-info" class="comment-info">
 <span class="comment-age">(02 May '12, 15:50)</span> <span class="comment-user userinfo">stephan75</span>
@@ -149,7 +149,7 @@ One Answer:
 <div class="answer-body">
 <p>What you'll probably have is either something like "<code>blah.osm</code>", "<code>blah.osm.pbf</code>" or "<code>blah.osm.bz2</code>".</p>
 <p>The first of these is just a text file (in XML format). The second is the same data in a binary protocol <a href="http://code.google.com/p/protobuf/">buffer format</a>, and because it's binary, the file's smaller. The third is the text XML version compressed with bzip2, and is slightly larger than the pbf version.</p>
-<p>To convert .osm.pbf data into .osm data you could use <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>. To unzip .bz2 files you'd use <a href="http://gnuwin32.sourceforge.net/packages/bzip2.htm">bunzip2</a>.</p>
+<p>To convert .osm.pbf data into .osm data you could use <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>. To unzip .bz2 files you'd use <a href="http://gnuwin32.sourceforge.net/packages/bzip2.htm">bunzip2</a>.</p>
 <p>Because it's just text, ordinarily you'd just be able to use a text editor or viewer to look at it. If you've obtained a country-sized amount of data to process for a GPS, the XML data file is likely to be quite large ("<code>great_britain.osm</code>" is 8Gb) so you're probably not going to be able to use any old text editor with it. You could try something like "<code>more blah.osm</code>" though, to look at the data a page at a time.</p>
 </div>
 <div class="answer-controls post-controls">

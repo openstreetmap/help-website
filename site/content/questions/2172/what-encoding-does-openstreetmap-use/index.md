@@ -242,7 +242,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Seems like you might use <a href="http://osm.kyblsoft.cz/archiv/">http://osm.kyblsoft.cz/archiv/</a> for the Czech republic.</p>
-<p>Taken from <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading</a> -&gt; Regional extract sources.</p>
+<p>Taken from <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading</a> -&gt; Regional extract sources.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

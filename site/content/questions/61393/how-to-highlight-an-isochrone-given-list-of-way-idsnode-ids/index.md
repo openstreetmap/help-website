@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to highlight an isochrone given list of way ids/node ids?"
-description = '''Hi, I calculated an isochrone using OSM data. Now I have a list of ways/nodes which are reachable from the starting point (original OSM ids are available). How can I highlight all the ways on a map? I only found out that a single way can be highlighted with http://www.openstreetmap.org/way/&amp;lt;id&amp;gt...'''
+description = '''Hi, I calculated an isochrone using OSM data. Now I have a list of ways/nodes which are reachable from the starting point (original OSM ids are available). How can I highlight all the ways on a map? I only found out that a single way can be highlighted with https://www.openstreetmap.org/way/&amp;lt;id&amp;gt...'''
 date = "2017-12-28T09:04:00Z"
 lastmod = "2018-01-08T09:00:00Z"
 weight = 61393
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I calculated an isochrone using OSM data. Now I have a list of ways/nodes which are reachable from the starting point (original OSM ids are available). How can I highlight all the ways on a map? I only found out that a single way can be highlighted with <a href="http://www.openstreetmap.org/way/">http://www.openstreetmap.org/way/</a>&lt;id&gt;.</p>
+<p>I calculated an isochrone using OSM data. Now I have a list of ways/nodes which are reachable from the starting point (original OSM ids are available). How can I highlight all the ways on a map? I only found out that a single way can be highlighted with <a href="https://www.openstreetmap.org/way/">https://www.openstreetmap.org/way/</a>&lt;id&gt;.</p>
 <p>I'm a beginner with OSM so any help is very much appreciated. Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

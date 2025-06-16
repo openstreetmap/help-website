@@ -65,7 +65,7 @@ osqa_accepted = true
 <div id="post-15454-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think that that's probably answered on <a href="http://help.openstreetmap.org/questions/15442/detection-of-intersections-in-the-maps">this related question</a>.</p>
+<p>I think that that's probably answered on <a href="/questions/15442/detection-of-intersections-in-the-maps">this related question</a>.</p>
 </div>
 <div id="comment-15454-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 15:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes. Technically, the order of the nd-entries in the way is what matters. The only exception is <code>oneway=-1</code> where it is in the opposite direction. <a href="http://wiki.openstreetmap.org/wiki/Key:oneway">http://wiki.openstreetmap.org/wiki/Key:oneway</a> tells you the details.</p>
+<p>Yes. Technically, the order of the nd-entries in the way is what matters. The only exception is <code>oneway=-1</code> where it is in the opposite direction. <a href="https://wiki.openstreetmap.org/wiki/Key:oneway">https://wiki.openstreetmap.org/wiki/Key:oneway</a> tells you the details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

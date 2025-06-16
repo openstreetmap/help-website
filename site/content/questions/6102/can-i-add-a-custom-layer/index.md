@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>You cannot add things to OSM if you don't want others to see them, because OSM is a publicly available database. However what you can do is use OSM as a "base map" and display your proprietary data on top. If your proprietary data is small in volume, this could be as easy as providing a KML file on a server you control (see e.g. the <a href="http://www.bestofosm.org">Best of OSM</a> web site that uses that technology). If you have more data then you'll probably want a more elaborate solution, either one were your additional data is retrieved from a database that you operate, or where it is even rendered directly into the map (using <a href="http://www.tilemill.com">TileMill</a> or other rendering technologies).</p>
 <p>So yes, you can use OpenStreetMap data, but OpenStreetMap doesn't provide free infrastructure to host your proprietary data - you'll have to do that yourself.</p>
-<p>Please also read the answers to <a href="http://help.openstreetmap.org/questions/5781/">Using maps in an application with a closed user group</a>.</p>
+<p>Please also read the answers to <a href="/questions/5781/">Using maps in an application with a closed user group</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

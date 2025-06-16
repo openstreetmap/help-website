@@ -133,7 +133,7 @@ osqa_accepted = false
 <li><strong>Gets stuck while Osmarender runs:</strong> Try another XSL processor</li>
 <li><strong>Gets stuck while displaying or printing the generated SVG:</strong> Try another vector graphics software or try the wireframe mode (if supported by your software)</li>
 </ul>
-<p>If there is no need to do the job using Osmarender it might be worth looking at other renders such as <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> or <a href="http://wiki.openstreetmap.org/wiki/Mapgen.pl">Mapgen</a>.</p>
+<p>If there is no need to do the job using Osmarender it might be worth looking at other renders such as <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> or <a href="https://wiki.openstreetmap.org/wiki/Mapgen.pl">Mapgen</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,8 +163,8 @@ osqa_accepted = false
 <div id="post-593-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm using xsltproc at the moment on Ubuntu which works fine for me. Wikipedia has a long list of other processors at <a href="http://en.wikipedia.org/wiki/XSLT_processor#Implementations">http://en.wikipedia.org/wiki/XSLT_processor#Implementations</a> . You might also want to try out <a href="http://wiki.openstreetmap.org/wiki/Orp">http://wiki.openstreetmap.org/wiki/Orp</a> that is a reimplementation of Osmarender without using XSLT but Perl instead.</p>
-<p>For a more general explanation see also <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website/207">http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website/207</a> and the links mentioned there.</p>
+<p>I'm using xsltproc at the moment on Ubuntu which works fine for me. Wikipedia has a long list of other processors at <a href="http://en.wikipedia.org/wiki/XSLT_processor#Implementations">http://en.wikipedia.org/wiki/XSLT_processor#Implementations</a> . You might also want to try out <a href="https://wiki.openstreetmap.org/wiki/Orp">https://wiki.openstreetmap.org/wiki/Orp</a> that is a reimplementation of Osmarender without using XSLT but Perl instead.</p>
+<p>For a more general explanation see also <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website/207">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website/207</a> and the links mentioned there.</p>
 </div>
 <div id="comment-593-info" class="comment-info">
 <span class="comment-age">(07 Aug '10, 23:10)</span> <span class="comment-user userinfo">Augustus Kling</span>
@@ -206,7 +206,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've only ever used a tile stitching approach using adapted versions of <a href="http://wiki.openstreetmap.org/wiki/BigMap">BigMap</a>. It's easy enough to point that script at osmarender tiles. But this is a raster printout, with the same problem of fonts being too small if you want to go for a high-res printout. Some more thoughts on this on <a href="http://www.harrywood.co.uk/blog/2009/12/10/openstreetmap-jigsaw/">my OSM jigsaw blog post</a>. This is also the approach used by Frederick when he does his big poster printouts. Vector is indeed problematic when it comes to printing a big complex city map without crashing your computer!</p>
+<p>I've only ever used a tile stitching approach using adapted versions of <a href="https://wiki.openstreetmap.org/wiki/BigMap">BigMap</a>. It's easy enough to point that script at osmarender tiles. But this is a raster printout, with the same problem of fonts being too small if you want to go for a high-res printout. Some more thoughts on this on <a href="http://www.harrywood.co.uk/blog/2009/12/10/openstreetmap-jigsaw/">my OSM jigsaw blog post</a>. This is also the approach used by Frederick when he does his big poster printouts. Vector is indeed problematic when it comes to printing a big complex city map without crashing your computer!</p>
 <p>The font size problem seems to be tackled nicely for Mapnik if you scroll down to <a href="http://lorien.ancalime.de/demo.html">'Mapnik maps for other resolutions' on this page</a>. Not tried it myself, but it looks neat. It seems like you need to do a similar style transformation for osmarender. Not sure how you would go about that though.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -263,7 +263,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do check out my responses to "<a href="http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas/23">how-do-i-export-map-images-of-larger-areas</a>". If you don't need customization those options should be easier to get large images. With osmarender and A0 sizes your are likely going to run into performance problems if you don't split up the area.</p>
+<p>Do check out my responses to "<a href="/questions/22/how-do-i-export-map-images-of-larger-areas/23">how-do-i-export-map-images-of-larger-areas</a>". If you don't need customization those options should be easier to get large images. With osmarender and A0 sizes your are likely going to run into performance problems if you don't split up the area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

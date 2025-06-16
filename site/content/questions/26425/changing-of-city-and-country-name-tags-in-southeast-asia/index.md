@@ -77,7 +77,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Only if you like names in countries with latin alphabets looking like this: "Berlin (Берлин ; برلين ; बर्लिन; ベルリン; 柏林)" (see <a href="http://www.openstreetmap.org/browse/node/240109189)">http://www.openstreetmap.org/browse/node/240109189)</a> to allow for some other major writing forms; AND you get consensus from the mappers who live in Laos, Thailand, Bangladesh etc.</p>
+<p>Only if you like names in countries with latin alphabets looking like this: "Berlin (Берлин ; برلين ; बर्लिन; ベルリン; 柏林)" (see <a href="https://www.openstreetmap.org/browse/node/240109189)">https://www.openstreetmap.org/browse/node/240109189)</a> to allow for some other major writing forms; AND you get consensus from the mappers who live in Laos, Thailand, Bangladesh etc.</p>
 <p>One of OSMs strengths is that we try to avoid not privileging one view of the world over others. We don't always succeed, but the main map on OSM is primarily to help mappers, who tend to orientate themselves with the local names for places in the local language &amp; script.</p>
 </div>
 <div id="comment-26430-info" class="comment-info">
@@ -143,7 +143,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am thinking don't do it. See for example this section of <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names#Thailand">Multilingual Names</a> and the link to <a href="http://thaimap.osm-tools.org">this example</a> where you can choose what language you see in the Thailand area. Just because not all languages show on the default OSM rendering isn't a reason to override the name tag with mixed languages.</p>
+<p>I am thinking don't do it. See for example this section of <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Thailand">Multilingual Names</a> and the link to <a href="http://thaimap.osm-tools.org">this example</a> where you can choose what language you see in the Thailand area. Just because not all languages show on the default OSM rendering isn't a reason to override the name tag with mixed languages.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

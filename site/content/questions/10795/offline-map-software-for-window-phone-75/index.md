@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ever had a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Windows_Phone">WindowsPhone</a> ?</p>
+<p>Ever had a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Windows_Phone">WindowsPhone</a> ?</p>
 <p>Or visit WindowsPhone marketplace via phone or desktop PC and do a simple search for OSM or Openstreetmap?</p>
 </div>
 <div class="answer-controls post-controls">

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use one of the boundary types on this <a href="http://wiki.openstreetmap.org/wiki/Key:boundary">page</a>, probably boundary=protected area, and then further characterize it using the <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area">protected area</a> definitions. You can also add tags for operator, owner, fee, access, etc.</p>
+<p>You can use one of the boundary types on this <a href="https://wiki.openstreetmap.org/wiki/Key:boundary">page</a>, probably boundary=protected area, and then further characterize it using the <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area">protected area</a> definitions. You can also add tags for operator, owner, fee, access, etc.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

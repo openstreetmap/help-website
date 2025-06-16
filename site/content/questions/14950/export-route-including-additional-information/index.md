@@ -109,8 +109,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> ... you can convert raw OSM data to CSV data. Define the columns that you need.</p>
-<p>Or choose another approach like the numerous opensource solutions you can find in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> ... you can convert raw OSM data to CSV data. Define the columns that you need.</p>
+<p>Or choose another approach like the numerous opensource solutions you can find in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -145,7 +145,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>I would ask that in one of the OS mailing lists about Developing or Routing ...</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-15030-info" class="comment-info">
 <span class="comment-age">(13 Aug '12, 16:51)</span> <span class="comment-user userinfo">stephan75</span>

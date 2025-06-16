@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>At the moment, Brunei has only 2 (or 3 if you include my small admin_level=10 boundary additions) admin boundary levels mapped: 1."Country boundary" (admin_level=2) for the country, 2."State boundary" (admin_level=4) for the districts. The capital city (the one and only city) has no boundary and is tagged admin_level=2.</p>
-<p>The OSMwiki table at <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">Tag:boundary=administrative page</a> doesn't have Brunei. Looking at closest neighbour Malaysia especially, but also all other countries generally, admin_level=4 for Brunei's districts are wrong. So if I add Brunei to the table, it should probably be something like:</p>
+<p>The OSMwiki table at <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">Tag:boundary=administrative page</a> doesn't have Brunei. Looking at closest neighbour Malaysia especially, but also all other countries generally, admin_level=4 for Brunei's districts are wrong. So if I add Brunei to the table, it should probably be something like:</p>
 <ul>
 <li>admin_level=2 for National Borders</li>
 <li>admin_level=6 for Districts (Daerahs)</li>
@@ -104,7 +104,7 @@ osqa_accepted = false
 <div id="post-38441-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">"Because ways have a maximum number of nodes, you are not required to loop around a whole administration with a single way to form a closed area (although this is a good idea for very small administrative areas)"</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">"Because ways have a maximum number of nodes, you are not required to loop around a whole administration with a single way to form a closed area (although this is a good idea for very small administrative areas)"</a></p>
 <p>And villages are the smallest admistrative areas, at least in Brunei.</p>
 </div>
 <div id="comment-38441-info" class="comment-info">
@@ -117,7 +117,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>A boundary is typically a relation. This relation exists of multiple (small) ways (aka lines). Each such way will belong to the boundaries of the villages that it is separating. There are never 2 parallel ways. Look e.g. at <a href="http://www.openstreetmap.org/relation/1323975">http://www.openstreetmap.org/relation/1323975</a> any of it's ways will also be part of the boundary of it's neighbours. The will also be reused in case there are subarea or larger areas with the same boundary Please don't use "subarea" as in the provided example</p>
+<p>A boundary is typically a relation. This relation exists of multiple (small) ways (aka lines). Each such way will belong to the boundaries of the villages that it is separating. There are never 2 parallel ways. Look e.g. at <a href="https://www.openstreetmap.org/relation/1323975">https://www.openstreetmap.org/relation/1323975</a> any of it's ways will also be part of the boundary of it's neighbours. The will also be reused in case there are subarea or larger areas with the same boundary Please don't use "subarea" as in the provided example</p>
 </div>
 <div id="comment-38442-info" class="comment-info">
 <span class="comment-age">(11 Nov '14, 07:17)</span> <span class="comment-user userinfo">escada</span>

@@ -132,7 +132,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See if my answer to <a href="https://help.openstreetmap.org/questions/34930/no-logging-services-sat-antenna-icon">https://help.openstreetmap.org/questions/34930/no-logging-services-sat-antenna-icon</a> works for you and let us know, please?</p>
+<p>See if my answer to <a href="/questions/34930/no-logging-services-sat-antenna-icon">https://help.openstreetmap.org/questions/34930/no-logging-services-sat-antenna-icon</a> works for you and let us know, please?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

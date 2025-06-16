@@ -138,7 +138,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I created and I run OpenCycleMap.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">explanation of the update cycle on the wiki</a> says:</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">explanation of the update cycle on the wiki</a> says:</p>
 <blockquote>
 <p>Since August 2010 the database is updated using diff updates, every few hours (currently every 24 hours). While the database could easily be updated more frequently than that (it has run hourly, in the past), there is always a huge backlog of tiles that need refreshing. Refreshing the tiles takes a few days. The system is self-correcting in that the more popular the tile, the sooner it gets refreshed.</p>
 </blockquote>
@@ -211,9 +211,9 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_list">http://wiki.openstreetmap.org/wiki/Mailing_list</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Irc#IRC">http://wiki.openstreetmap.org/wiki/Irc#IRC</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Forum">http://wiki.openstreetmap.org/wiki/Forum</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_list">https://wiki.openstreetmap.org/wiki/Mailing_list</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Irc#IRC">https://wiki.openstreetmap.org/wiki/Irc#IRC</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Forum">https://wiki.openstreetmap.org/wiki/Forum</a></p>
 </div>
 <div id="comment-4104-info" class="comment-info">
 <span class="comment-age">(25 Mar '11, 20:48)</span> <span class="comment-user userinfo">gnurk</span>

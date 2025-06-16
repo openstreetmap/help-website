@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Campgrounds: missing attributes"
-description = '''I look at http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site and don&#x27;t find there some important attributes of campgrounds.  primitive (yes/no): there are some campgrounds with limited services, usually also have no fee group (only/allow/no): there are some campgrounds that are only designat...'''
+description = '''I look at https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site and don&#x27;t find there some important attributes of campgrounds.  primitive (yes/no): there are some campgrounds with limited services, usually also have no fee group (only/allow/no): there are some campgrounds that are only designat...'''
 date = "2012-10-09T00:46:00Z"
 lastmod = "2012-10-10T06:22:00Z"
 weight = 16744
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I look at <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site">http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site</a> and don't find there some important attributes of campgrounds.</p>
+<p>I look at <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site">https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site</a> and don't find there some important attributes of campgrounds.</p>
 <ul>
 <li>primitive (yes/no): there are some campgrounds with limited services, usually also have no fee</li>
 <li>group (only/allow/no): there are some campgrounds that are only designates for groups, some that allow groups (have larger spots), and others aren't considered group campgrounds</li>
@@ -115,7 +115,7 @@ osqa_accepted = false
 <p>You can also use <a href="http://taginfo.openstreetmap.org">taginfo</a> to see what <a href="http://taginfo.openstreetmap.org/tags/tourism=camp_site#combinations">combinations are used with tourism=camp_site</a>, although as you'll see from that link people aren't tagging much else beyond name and address. There's also a <a href="http://lists.openstreetmap.org/listinfo/tagging">mailing list</a> about tagging - it might be helpful to discuss things there.<br />
 </p>
 <p>Generally it helps to be specific, and remember that this is a worldwide database. What might be "primitive" in one location may not be in another. Also, look at what tags are used for other features - <a href="http://taginfo.openstreetmap.org/keys/fee#values">fee</a>, for example is already in use. Finally try and use English rather than American for tags where there's an equivalent - I'm English and have no idea what "RV=*" would mean, but I do know the difference between a camp site and a caravan site. There's probably also a tag in use somewhere describing electrical hookups - asking on the tagging list would be a good way to discuss.</p>
-<p>Also maybe have a read of <a href="http://wiki.openstreetmap.org/wiki/User:Joto/How_to_invent_tags">this</a> (a personal page, but excellent advice).</p>
+<p>Also maybe have a read of <a href="https://wiki.openstreetmap.org/wiki/User:Joto/How_to_invent_tags">this</a> (a personal page, but excellent advice).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -197,7 +197,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:fee">Fees</a> can change everywhere, just the way speed limits, access restrictions and almost everything else can and will change. That's not an argument against tagging it.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:fee">Fees</a> can change everywhere, just the way speed limits, access restrictions and almost everything else can and will change. That's not an argument against tagging it.</p>
 </div>
 <div id="comment-16786-info" class="comment-info">
 <span class="comment-age">(10 Oct '12, 06:22)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -95,7 +95,7 @@ osqa_accepted = false
 <div id="post-81623-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you have JPEG you can use it to illustrate a question or an answer. see how here <a href="https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
+<p>If you have JPEG you can use it to illustrate a question or an answer. see how here <a href="/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
 </div>
 <div id="comment-81623-info" class="comment-info">
 <span class="comment-age">(05 Sep '21, 12:31)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -44,8 +44,8 @@ osqa_accepted = true
 <pre><code>fo.addVariable(&quot;lat&quot;,51.875);
 fo.addVariable(&quot;lon&quot;,-1.482);
 fo.addVariable(&quot;zoom&quot;,14);
-fo.addVariable(&quot;api&quot;,&quot;http://www.openstreetmap.org/api/0.6/&quot;);
-fo.addVariable(&quot;policy&quot;,&quot;http://www.openstreetmap.org/api/crossdomain.xml&quot;);
+fo.addVariable(&quot;api&quot;,&quot;https://www.openstreetmap.org/api/0.6/&quot;);
+fo.addVariable(&quot;policy&quot;,&quot;https://www.openstreetmap.org/api/crossdomain.xml&quot;);
 fo.addVariable(&quot;connection&quot;,&quot;AMF&quot;);
 fo.addVariable(&quot;responder&quot;,&quot;respond&quot;);
 fo.addVariable(&quot;tileurl&quot;,&quot;http://npe.openstreetmap.org/$z/$x/$y.png&quot;);

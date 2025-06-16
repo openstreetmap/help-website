@@ -168,7 +168,7 @@ I'm a non-techie, so please dumbify your answer accordingly. Thanks</p>
 <div id="post-48854-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada"></a><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> My application needs a CSV with each line a city and the metadata I bulleted above as columns in the file. Each city has a webpage that displays among other things city name and population (if avail from OSM). Each city has to be associated with country (and US State if in US) for search. I currently have such a file from geonames.org and want to swap out with OSM. It is probably 95% OK but from testing on Overpass Turbo I can see OSM has a more complete collection (and I trust their data better)</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> My application needs a CSV with each line a city and the metadata I bulleted above as columns in the file. Each city has a webpage that displays among other things city name and population (if avail from OSM). Each city has to be associated with country (and US State if in US) for search. I currently have such a file from geonames.org and want to swap out with OSM. It is probably 95% OK but from testing on Overpass Turbo I can see OSM has a more complete collection (and I trust their data better)</p>
 </div>
 <div id="comment-48854-info" class="comment-info">
 <span class="comment-age">(25 Mar '16, 18:54)</span> <span class="comment-user userinfo">kuroshhashemi</span>
@@ -242,7 +242,7 @@ I'm a non-techie, so please dumbify your answer accordingly. Thanks</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12105/kuroshhashemi"></a><a href="http://help.openstreetmap.org/users/12105/kuroshhashemi">@kuroshhashemi</a>: Oh, I did not guess that it cannot handle that amount. Well, okay, on a second thought all villages may be a bit too much. Yes, by default you get all data for each object - maybe that could be restricted with some advanced Overpass API command, I do not know.</p>
+<p><a href="https://help.openstreetmap.org/users/12105/kuroshhashemi"></a><a href="https://help.openstreetmap.org/users/12105/kuroshhashemi">@kuroshhashemi</a>: Oh, I did not guess that it cannot handle that amount. Well, okay, on a second thought all villages may be a bit too much. Yes, by default you get all data for each object - maybe that could be restricted with some advanced Overpass API command, I do not know.</p>
 </div>
 <div id="comment-48799-info" class="comment-info">
 <span class="comment-age">(23 Mar '16, 21:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -265,7 +265,7 @@ I'm a non-techie, so please dumbify your answer accordingly. Thanks</p>
 <div id="post-48836-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/2517/roland1407">@roland</a>-olbricht, yes I was thinking whether to workaround by splitting into smaller files like this... So many countries though =)</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/2517/roland1407">@roland</a>-olbricht, yes I was thinking whether to workaround by splitting into smaller files like this... So many countries though =)</p>
 </div>
 <div id="comment-48836-info" class="comment-info">
 <span class="comment-age">(24 Mar '16, 23:11)</span> <span class="comment-user userinfo">kuroshhashemi</span>

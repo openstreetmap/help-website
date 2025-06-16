@@ -124,7 +124,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tem alguns serviços que disponibilizam os dados do OSM em shapefile: <a href="http://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data">http://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data</a></p>
+<p>Tem alguns serviços que disponibilizam os dados do OSM em shapefile: <a href="https://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data">https://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

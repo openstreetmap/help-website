@@ -164,7 +164,7 @@ One Answer:
 <div id="post-8631-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you! That worked. I didn't realise i had to execute that command for every db. But i have an error with osmosis now. If you are competent with it and want to help out, please see this post <a href="http://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey">http://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey</a></p>
+<p>Thank you! That worked. I didn't realise i had to execute that command for every db. But i have an error with osmosis now. If you are competent with it and want to help out, please see this post <a href="/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey">https://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey</a></p>
 </div>
 <div id="comment-8631-info" class="comment-info">
 <span class="comment-age">(25 Oct '11, 08:19)</span> <span class="comment-user userinfo">alexz</span>

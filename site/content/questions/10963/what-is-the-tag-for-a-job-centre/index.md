@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are 48 uses of amenity=job_centre acording to <a href="http://taginfo.openstreetmap.org/search?q=job#values">taginfo</a>. You can use it and add some more information like name, <a href="http://wiki.openstreetmap.org/wiki/Address">address</a>, <a href="http://wiki.openstreetmap.org/wiki/Opening_hours">opening hours</a> (and any other useful information) if you know these.</p>
+<p>There are 48 uses of amenity=job_centre acording to <a href="http://taginfo.openstreetmap.org/search?q=job#values">taginfo</a>. You can use it and add some more information like name, <a href="https://wiki.openstreetmap.org/wiki/Address">address</a>, <a href="https://wiki.openstreetmap.org/wiki/Opening_hours">opening hours</a> (and any other useful information) if you know these.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -129,7 +129,7 @@ One Answer:
 <div id="post-10983-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks; the tagInfo link is definitely worth knowing about. I looked on the Map Features wiki at <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> but didn't find anything relevant to this question.</p>
+<p>Thanks; the tagInfo link is definitely worth knowing about. I looked on the Map Features wiki at <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> but didn't find anything relevant to this question.</p>
 </div>
 <div id="comment-10983-info" class="comment-info">
 <span class="comment-age">(05 Mar '12, 23:03)</span> <span class="comment-user userinfo">Madryn</span>

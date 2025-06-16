@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see <a href="https://help.openstreetmap.org/questions/14614/i-want-to-openstreet-map-for-my-real-estate-project-can-any-one-help-me">i-want-to-openstreet-map-for-my-real-estate-project-can-any-one-help-me</a></p>
+<p>see <a href="/questions/14614/i-want-to-openstreet-map-for-my-real-estate-project-can-any-one-help-me">i-want-to-openstreet-map-for-my-real-estate-project-can-any-one-help-me</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

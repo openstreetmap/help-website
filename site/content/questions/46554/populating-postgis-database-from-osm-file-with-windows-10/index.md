@@ -149,7 +149,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>as it turned out the link to cygwin on the osm wiki page is outdated by 50 builds. The most current one works, with --host localhost.</p>
-<p>I've updated the link on <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql#Cygwin">http://wiki.openstreetmap.org/wiki/Osm2pgsql#Cygwin</a> so that others won't fall into that pit too.</p>
+<p>I've updated the link on <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql#Cygwin">https://wiki.openstreetmap.org/wiki/Osm2pgsql#Cygwin</a> so that others won't fall into that pit too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

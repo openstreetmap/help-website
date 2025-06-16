@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Likely <a href="http://www.openstreetmap.org/browse/changeset/17267771">the editor Potlatch2 which you were using</a> messed up. You can try to hit the "undo" button until you can save. For example it seems there is a create command for a way with no nodes ("<code>&lt;way id="-17" version="0" changeset="17267771"/&gt;</code>").</p>
+<p>Likely <a href="https://www.openstreetmap.org/browse/changeset/17267771">the editor Potlatch2 which you were using</a> messed up. You can try to hit the "undo" button until you can save. For example it seems there is a create command for a way with no nodes ("<code>&lt;way id="-17" version="0" changeset="17267771"/&gt;</code>").</p>
 <p>Likely you will have to loose your changes and start again. Remember that with Potlatch2 you can save early - after doing only a part of your planned changes (e.g. after you completed one street/street block) and add later changes to the same changeset by hitting save again.</p>
 <p>Uploading (manual correction may be needed) the data (that is a <span>OsmChange file</span>) you posted here, would be <a href="/questions/18099/how-to-apply-an-osmchange">possible</a> (at least for users with enough knowledge to do so) in general. That <em>may</em> be more work than to do your changes again - I am not sure how look it took you.</p>
 </div>

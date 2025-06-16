@@ -75,8 +75,8 @@ osqa_accepted = false
 <p>Hi again,</p>
 <p>I've found a solution consisting in import map to mySQL:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osm.pm">http://wiki.openstreetmap.org/wiki/Osm.pm</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OsmDB.pm">http://wiki.openstreetmap.org/wiki/OsmDB.pm</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osm.pm">https://wiki.openstreetmap.org/wiki/Osm.pm</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OsmDB.pm">https://wiki.openstreetmap.org/wiki/OsmDB.pm</a></li>
 </ul>
 <p>I also have installed: MySQL and PERL</p>
 <p>The instructions are not clear for me...I dont know how to, import my .osm/.osm.bz2 maps into MySQL and, moreover, how to test distances/routes between two coordinates...</p>

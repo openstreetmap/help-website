@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi all, I was trying prerender some tiles using the render_list command. But it is showing the following error:</p>
 <p>socket connect failed for: /var/run/renderd/renderd.sock</p>
-<p>"renderd" directory has the right permission to create and connect to the socket. But I am not sure why is not working. Please help me to find out the reason. <img src="https://help.openstreetmap.org/upfiles/render_list.PNG" alt="alt text" /></p>
+<p>"renderd" directory has the right permission to create and connect to the socket. But I am not sure why is not working. Please help me to find out the reason. <img src="/upfiles/render_list.PNG" alt="alt text" /></p>
 <p>Thanks SJP</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This appears to be essentially a duplicate of <a href="https://help.openstreetmap.org/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">this question</a>. You're trying to use a cloud service for something it's not really designed for.</p>
+<p>This appears to be essentially a duplicate of <a href="/questions/62113/not-getting-output-from-tileserver-when-i-reduce-the-aws-rds-memory-size-to-16gb">this question</a>. You're trying to use a cloud service for something it's not really designed for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

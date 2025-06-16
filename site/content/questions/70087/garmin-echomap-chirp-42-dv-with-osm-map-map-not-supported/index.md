@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi everyone. I followed the instructions on <a href="https://help.openstreetmap.org/questions/1809/how-to-install-mkgmap">this</a> thread to create a custom map from OSM for Garmin with mkgmap. The whole process works well and gmapsupp.img + other files are created. I then copy them to a microSD under the Garmin directory but when I start the device I get a Map format not supported error.</p>
+<p>Hi everyone. I followed the instructions on <a href="/questions/1809/how-to-install-mkgmap">this</a> thread to create a custom map from OSM for Garmin with mkgmap. The whole process works well and gmapsupp.img + other files are created. I then copy them to a microSD under the Garmin directory but when I start the device I get a Map format not supported error.</p>
 <p>The same microSD used with Home port works well and I can see the map. Another issue I am facing is that when I create a route in Home POrt and transfer it to the SD it is not available on the Garmin Device.</p>
 <p>Any help appreciated! Thanks!</p>
 </div>

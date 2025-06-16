@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "python client with proxy"
-description = '''Hi,  since I needed to use the open street map python client I forked theOsmApi project from here http://wiki.openstreetmap.org/wiki/PythonOsmApi and I added the possibility to set an http proxy and go through it. I hope there is no issue with the license. In that case let me know and feel free the ...'''
+description = '''Hi,  since I needed to use the open street map python client I forked theOsmApi project from here https://wiki.openstreetmap.org/wiki/PythonOsmApi and I added the possibility to set an http proxy and go through it. I hope there is no issue with the license. In that case let me know and feel free the ...'''
 date = "2013-03-01T21:49:00Z"
 lastmod = "2013-03-04T15:17:00Z"
 weight = 20428
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, since I needed to use the open street map python client I forked theOsmApi project from here <a href="http://wiki.openstreetmap.org/wiki/PythonOsmApi">http://wiki.openstreetmap.org/wiki/PythonOsmApi</a> and I added the possibility to set an http proxy and go through it.</p>
+<p>Hi, since I needed to use the open street map python client I forked theOsmApi project from here <a href="https://wiki.openstreetmap.org/wiki/PythonOsmApi">https://wiki.openstreetmap.org/wiki/PythonOsmApi</a> and I added the possibility to set an http proxy and go through it.</p>
 <p>I hope there is no issue with the license. In that case let me know and feel free the merge my changes in the original codebase whether the are fine with you.</p>
 <p>Here my repository: <a href="https://github.com/uolter/PythonOsmApi">https://github.com/uolter/PythonOsmApi</a></p>
 <p>Cheers,</p>
@@ -177,7 +177,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Uolter, if youve doubts please read this <a href="http://www.openstreetmap.org/copyright/en">http://www.openstreetmap.org/copyright/en</a> and act accordingly.</p>
+<p>Hi Uolter, if youve doubts please read this <a href="https://www.openstreetmap.org/copyright/en">https://www.openstreetmap.org/copyright/en</a> and act accordingly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

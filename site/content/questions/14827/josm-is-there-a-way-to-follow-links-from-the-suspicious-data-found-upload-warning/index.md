@@ -39,10 +39,10 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've just uploaded changeset <a href="http://www.openstreetmap.org/browse/changeset/12607947">12607947</a>, and received a warning like this one:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm_01.png" alt="Suspicious data found. Upload anyway? highway=ford is deprecated" /></p>
-<p>It's slightly confusing, as I haven't changed any highway=ford items (as you can see from the <a href="http://www.openstreetmap.org/browse/changeset/12607947">changeset</a>). A way that I've extended does contain a highway=ford <a href="http://www.openstreetmap.org/?node=385948666">node</a>, though.</p>
-<p>Is there a way of getting from the "highway=ford is deprecated" line to the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dford">wiki page</a>, or from the third line to the <a href="http://www.openstreetmap.org/?node=385948666">node browse page</a>?</p>
+<p>I've just uploaded changeset <a href="https://www.openstreetmap.org/browse/changeset/12607947">12607947</a>, and received a warning like this one:</p>
+<p><img src="/upfiles/josm_01.png" alt="Suspicious data found. Upload anyway? highway=ford is deprecated" /></p>
+<p>It's slightly confusing, as I haven't changed any highway=ford items (as you can see from the <a href="https://www.openstreetmap.org/browse/changeset/12607947">changeset</a>). A way that I've extended does contain a highway=ford <a href="https://www.openstreetmap.org/?node=385948666">node</a>, though.</p>
+<p>Is there a way of getting from the "highway=ford is deprecated" line to the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dford">wiki page</a>, or from the third line to the <a href="https://www.openstreetmap.org/?node=385948666">node browse page</a>?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span>
@@ -139,7 +139,7 @@ One Answer:
 <div id="post-14852-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Wiki page of what? If you want to get from a node tagged highway=ford to <a href="http://wiki.openstreetmap.org/wiki/Key:ford">http://wiki.openstreetmap.org/wiki/Key:ford</a> then I did not find any way. From ford=yes you can get there.</p>
+<p>Wiki page of what? If you want to get from a node tagged highway=ford to <a href="https://wiki.openstreetmap.org/wiki/Key:ford">https://wiki.openstreetmap.org/wiki/Key:ford</a> then I did not find any way. From ford=yes you can get there.</p>
 </div>
 <div id="comment-14852-info" class="comment-info">
 <span class="comment-age">(05 Aug '12, 17:26)</span> <span class="comment-user userinfo">LM_1</span>

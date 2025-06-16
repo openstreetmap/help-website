@@ -219,9 +219,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The page on the .osm file format contains links to various tools for handling, importing, exporting osm xml files:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/.osm">http://wiki.openstreetmap.org/wiki/.osm</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/.osm">https://wiki.openstreetmap.org/wiki/.osm</a></p>
 <p>There may also be something useful to you in here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/API_v0.6">http://wiki.openstreetmap.org/wiki/API_v0.6</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/API_v0.6">https://wiki.openstreetmap.org/wiki/API_v0.6</a></p>
 <p>(I'm searching for something to support "mechanical edits" myself)</p>
 </div>
 <div class="answer-controls post-controls">

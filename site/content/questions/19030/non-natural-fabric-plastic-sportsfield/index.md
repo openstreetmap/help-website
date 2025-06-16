@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Start with <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch">leisure=pitch</a>. Then add the <a href="http://wiki.openstreetmap.org/wiki/Key:sport">sport</a>. Lastly tag the <a href="http://wiki.openstreetmap.org/wiki/Key:surface">surface</a>. Look at the first value in the surface table, it's the one you are looking for.</p>
+<p>Start with <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch">leisure=pitch</a>. Then add the <a href="https://wiki.openstreetmap.org/wiki/Key:sport">sport</a>. Lastly tag the <a href="https://wiki.openstreetmap.org/wiki/Key:surface">surface</a>. Look at the first value in the surface table, it's the one you are looking for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

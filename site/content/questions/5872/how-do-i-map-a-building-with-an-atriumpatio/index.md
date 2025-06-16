@@ -143,9 +143,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To add courtyards and other "holes" in buildings use a <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a> relation.</p>
+<p>To add courtyards and other "holes" in buildings use a <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a> relation.</p>
 <p>Add a relation with the tags <em>type=multipolygon</em> and <em>building=yes</em>, and a member #1 with role:outer and a member #2 with role:inner.</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/b/b4/Multipolygon_Illustration_1.svg/400px-Multipolygon_Illustration_1.svg.png" alt="alt text" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/b/b4/Multipolygon_Illustration_1.svg/400px-Multipolygon_Illustration_1.svg.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,7 +177,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>The ways does not have to have any tags at all. All building= <em>and addr</em> tags go on the relation. If you are unsure of the inner polygon leave that way without any tags. See the pentagon <a href="http://www.openstreetmap.org/browse/relation/89605">http://www.openstreetmap.org/browse/relation/89605</a> for reference.</p>
+<p>The ways does not have to have any tags at all. All building= <em>and addr</em> tags go on the relation. If you are unsure of the inner polygon leave that way without any tags. See the pentagon <a href="https://www.openstreetmap.org/browse/relation/89605">https://www.openstreetmap.org/browse/relation/89605</a> for reference.</p>
 <p>An atrium with a covered glass ceiling should be considered as part of the surounding building as it is part of the roof structure.</p>
 </div>
 <div id="comment-5879-info" class="comment-info">

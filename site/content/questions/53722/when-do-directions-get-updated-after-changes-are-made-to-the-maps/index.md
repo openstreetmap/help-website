@@ -196,7 +196,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I had to wait several days for the routing services to take into account the turn restrictions i struggled to map. I will link to the questions i asked and hopefully the time elapsed can be seen from the comments and dates. Hope this helps. <a href="https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
+<p>I had to wait several days for the routing services to take into account the turn restrictions i struggled to map. I will link to the questions i asked and hopefully the time elapsed can be seen from the comments and dates. Hope this helps. <a href="/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

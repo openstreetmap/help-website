@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>An OSM link will get us a quicker route to the problem. See my recent answer to this. <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p>An OSM link will get us a quicker route to the problem. See my recent answer to this. <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 </div>
 <div id="comment-76122-info" class="comment-info">
 <span class="comment-age">(15 Aug '20, 07:10)</span> <span class="comment-user userinfo">andy mackey</span>

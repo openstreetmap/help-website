@@ -118,7 +118,7 @@ One Answer:
 <p>Yes!</p>
 <p>However amending Potlatch2, will fix only Potlatch2 - it will have no effect on the maps rendered on <a href="http://openstreetmap.org/">http://openstreetmap.org/</a></p>
 <p>To adjust just Potlatch2 you will have to run your own instance of Potlatch2, see:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Developer_Documentation">http://wiki.openstreetmap.org/wiki/Potlatch_2/Developer_Documentation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Developer_Documentation">https://wiki.openstreetmap.org/wiki/Potlatch_2/Developer_Documentation</a></p>
 <p>You will need to make amendments to the file: resources/stylesheets/core_pois.css</p>
 <p>Looking at the code history within git, you should be able to see the way to amend Potlatch2. Such as my commit SHA1: ab28e8c69ee6e3091a01d8ab9bf276df5f974e6d</p>
 <p>Having said that - development focus especially for 'simple' editing has shifted to the pure javascript iD editor: <a href="http://ideditor.com/">http://ideditor.com/</a></p>

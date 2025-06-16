@@ -105,8 +105,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim works with URL's. You can find many examples on the wiki at:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Nominatim"></a><a href="http://wiki.openstreetmap.org/wiki/Nominatim"></a><a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
-<p>You already asked the same question <a href="http://help.openstreetmap.org/questions/1441/how-can-i-use-search-on-osm-in-my-program">here</a>. Once you read the specification, you have to adapt your code to handle URL's requests and returned XML data. This depends on your development/application and the question is not anymore specific to OSM and shouldn't be posted here. You might give a last try by asking on the OSM developers list ("dev"), see the details in <a href="http://wiki.openstreetmap.org/wiki/Contact">the wiki</a>.</p>
+<a href="https://wiki.openstreetmap.org/wiki/Nominatim"></a><a href="https://wiki.openstreetmap.org/wiki/Nominatim"></a><a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p>You already asked the same question <a href="/questions/1441/how-can-i-use-search-on-osm-in-my-program">here</a>. Once you read the specification, you have to adapt your code to handle URL's requests and returned XML data. This depends on your development/application and the question is not anymore specific to OSM and shouldn't be posted here. You might give a last try by asking on the OSM developers list ("dev"), see the details in <a href="https://wiki.openstreetmap.org/wiki/Contact">the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

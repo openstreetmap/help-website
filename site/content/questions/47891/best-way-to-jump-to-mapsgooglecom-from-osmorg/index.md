@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Best way to jump to maps.google.com from osm.org"
-description = ''' I am browsing e.g., http://www.openstreetmap.org/#map=18/54.36341/22.79176 I think &quot;how does this look in Google Maps?&quot; The best I could find is in the side panel a geo:54.36341,22.79176?z=18 URI, Alas I don&#x27;t know how to make chromium make this into a maps.google.com URI.  Yes I know there are tho...'''
+description = ''' I am browsing e.g., https://www.openstreetmap.org/#map=18/54.36341/22.79176 I think &quot;how does this look in Google Maps?&quot; The best I could find is in the side panel a geo:54.36341,22.79176?z=18 URI, Alas I don&#x27;t know how to make chromium make this into a maps.google.com URI.  Yes I know there are tho...'''
 date = "2016-02-04T09:09:00Z"
 lastmod = "2016-02-05T14:41:00Z"
 weight = 47891
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <ol>
-<li>I am browsing e.g., <a href="http://www.openstreetmap.org/#map=18/54.36341/22.79176">http://www.openstreetmap.org/#map=18/54.36341/22.79176</a></li>
+<li>I am browsing e.g., <a href="https://www.openstreetmap.org/#map=18/54.36341/22.79176">https://www.openstreetmap.org/#map=18/54.36341/22.79176</a></li>
 <li>I think "how does this look in Google Maps?"</li>
 <li>The best I could find is in the side panel a geo:54.36341,22.79176?z=18 URI, Alas I don't know how to make chromium make this into a maps.google.com URI.</li>
 </ol>
@@ -74,8 +74,8 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Related questions:</p>
-<p><a href="https://help.openstreetmap.org/questions/34526/is-there-a-firefox-extension-allowing-to-switch-between-osm-and-google-maps">https://help.openstreetmap.org/questions/34526/is-there-a-firefox-extension-allowing-to-switch-between-osm-and-google-maps</a></p>
-<p><a href="https://help.openstreetmap.org/questions/43176/osmjumper-alternative">https://help.openstreetmap.org/questions/43176/osmjumper-alternative</a></p>
+<p><a href="/questions/34526/is-there-a-firefox-extension-allowing-to-switch-between-osm-and-google-maps">https://help.openstreetmap.org/questions/34526/is-there-a-firefox-extension-allowing-to-switch-between-osm-and-google-maps</a></p>
+<p><a href="/questions/43176/osmjumper-alternative">https://help.openstreetmap.org/questions/43176/osmjumper-alternative</a></p>
 </div>
 <div id="comment-47955-info" class="comment-info">
 <span class="comment-age">(05 Feb '16, 14:41)</span> <span class="comment-user userinfo">MarkusHD</span>
@@ -163,7 +163,7 @@ osqa_accepted = false
 <div id="post-47897-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/6110/jidanni"></a><a href="http://help.openstreetmap.org/users/6110/jidanni">@jidanni</a>: sorry, what is "erie"? By the way: If you want to have your browser support the <a href="https://en.wikipedia.org/wiki/Geo_URI_scheme">geo URI link scheme</a> you may want to look for a browser extension, but that was not really your question here.</p>
+<p><a href="https://help.openstreetmap.org/users/6110/jidanni"></a><a href="https://help.openstreetmap.org/users/6110/jidanni">@jidanni</a>: sorry, what is "erie"? By the way: If you want to have your browser support the <a href="https://en.wikipedia.org/wiki/Geo_URI_scheme">geo URI link scheme</a> you may want to look for a browser extension, but that was not really your question here.</p>
 </div>
 <div id="comment-47897-info" class="comment-info">
 <span class="comment-age">(04 Feb '16, 09:55)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -210,7 +210,7 @@ osqa_accepted = false
 <div id="post-47902-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="http://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>: there are, but mapjumper needs more clicks to use and to setup and osmify replaces embedded google maps, if I understand correctly. Yes, both are related.</p>
+<p><a href="https://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>: there are, but mapjumper needs more clicks to use and to setup and osmify replaces embedded google maps, if I understand correctly. Yes, both are related.</p>
 </div>
 <div id="comment-47902-info" class="comment-info">
 <span class="comment-age">(04 Feb '16, 11:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

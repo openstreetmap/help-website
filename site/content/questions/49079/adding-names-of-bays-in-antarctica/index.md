@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>For small islands, a node with place=island, name=* will do the trick. You can also just add those tags to the encircling coastline if one is present. For bays and coves, points and capes, I add a node and tag it with natural=bay or natural=cape, add a name and source and call it good. I've experimented with adding bays as a long closed way but it's tricky to know where the "boundaries" are.</p>
-<p>Here is an area I've worked on: <a href="http://www.openstreetmap.org/query?lat=59.50353&amp;lon=-151.37398#map=13/59.4967/-151.4152">http://www.openstreetmap.org/query?lat=59.50353&amp;lon=-151.37398#map=13/59.4967/-151.4152</a></p>
+<p>Here is an area I've worked on: <a href="https://www.openstreetmap.org/query?lat=59.50353&amp;lon=-151.37398#map=13/59.4967/-151.4152">https://www.openstreetmap.org/query?lat=59.50353&amp;lon=-151.37398#map=13/59.4967/-151.4152</a></p>
 <p>Sadie Cove is a bay (SE in the window) that I defined as an area by making a copy of the coastline, closing the way at the "mouth", adjusting it and then retagging it as above. It's certainly much harder to do than merely adding a node. It doesn't supply much more information either because the bay is still pretty obvious when seen on a larger scale map.</p>
 <p>There are a few islands on the screen in that URL that are tagged using both conventions. Look at those lying due south of Hesketh Island.</p>
 <p>Cheers, Dave</p>

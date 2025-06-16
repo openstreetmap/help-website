@@ -120,7 +120,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Many thanks for your comments!</p>
-<p>I see your point. Then I wonder how OSM created those middle-scales and small-scales, from which different zoom levels (<a href="http://wiki.openstreetmap.org/wiki/Zoom_levels">http://wiki.openstreetmap.org/wiki/Zoom_levels</a>) were generated. Is there any standard for generating middle-scale and small-scales?</p>
+<p>I see your point. Then I wonder how OSM created those middle-scales and small-scales, from which different zoom levels (<a href="https://wiki.openstreetmap.org/wiki/Zoom_levels">https://wiki.openstreetmap.org/wiki/Zoom_levels</a>) were generated. Is there any standard for generating middle-scale and small-scales?</p>
 </div>
 <div id="comment-58834-info" class="comment-info">
 <span class="comment-age">(26 Aug '17, 21:30)</span> <span class="comment-user userinfo">binjiang</span>
@@ -188,7 +188,7 @@ osqa_accepted = false
 <p>NEWER styling, but only small image snippets: 1:2500 large scale:</p>
 <p><a href="https://forum.openstreetmap.org/viewtopic.php?pid=578345#p578345">https://forum.openstreetmap.org/viewtopic.php?pid=578345#p578345</a></p>
 <p>1:10k:</p>
-<p><a href="https://help.openstreetmap.org/questions/49697/is-a-vector-map-layer-planned-for-openstreetmaporg/55932">https://help.openstreetmap.org/questions/49697/is-a-vector-map-layer-planned-for-openstreetmaporg/55932</a></p>
+<p><a href="/questions/49697/is-a-vector-map-layer-planned-for-openstreetmaporg/55932">https://help.openstreetmap.org/questions/49697/is-a-vector-map-layer-planned-for-openstreetmaporg/55932</a></p>
 <p>+/- 1:25k:</p>
 <p><a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1500#issuecomment-96587116">https://github.com/gravitystorm/openstreetmap-carto/issues/1500#issuecomment-96587116</a></p>
 </div>

@@ -149,7 +149,7 @@ One Answer:
 <div id="post-39840-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I wouldn't open anything bigger than a few dozen MB with Marble. It just isn't the intended usecase. Try JOSM (with tweaks such as turning off anti-aliasing) for a medium-sized osm file, and otherwise have a look at <a href="http://wiki.openstreetmap.org/wiki/Rendering">renderers</a> such as Tilemill or Alacarte or Maperitive.</p>
+<p>I wouldn't open anything bigger than a few dozen MB with Marble. It just isn't the intended usecase. Try JOSM (with tweaks such as turning off anti-aliasing) for a medium-sized osm file, and otherwise have a look at <a href="https://wiki.openstreetmap.org/wiki/Rendering">renderers</a> such as Tilemill or Alacarte or Maperitive.</p>
 </div>
 <div id="comment-39840-info" class="comment-info">
 <span class="comment-age">(26 Dec '14, 23:18)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

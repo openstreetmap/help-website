@@ -46,9 +46,9 @@ osqa_accepted = false
 <p><a href="https://www.openstreetmap.org/changeset/109353945">contrib 2</a></p>
 <p><a href="https://www.openstreetmap.org/changeset/109353056#map=15/48.7213/8.6316">contrib 3</a></p>
 <p>However when I open OSM in the browser - any browser, also on a different computer - the newly added geometry is only partially displayed, depending on map scale. This is how it looks like:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Image_1121.png" alt="only partial geometry shown" /></p>
+<p><img src="/upfiles/Image_1121.png" alt="only partial geometry shown" /></p>
 <p>Nevertheless in the browser edit page it all looks fine. Routing services based on OSM show the same issues and seem not yet including the connectivity through the newly added links.</p>
-<p>This is how it is supposed to look like in a different map scale in OSM: <img src="https://help.openstreetmap.org/upfiles/Image_1122_9Fa2Knp.png" alt="different scale shows full geometry" /></p>
+<p>This is how it is supposed to look like in a different map scale in OSM: <img src="/upfiles/Image_1122_9Fa2Knp.png" alt="different scale shows full geometry" /></p>
 <p>To me it looks like the OSM tile update might not have worked, but I am not sure. Did I make a mistake? How to fix that, please?</p>
 <p>Help would be appreciated, thanks!</p>
 </div>

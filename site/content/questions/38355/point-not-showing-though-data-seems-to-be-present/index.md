@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Point Not Showing, Though Data Seems To Be Present"
-description = '''I added my first point using GPS coordinates for a local doctor&#x27;s office, and while the data seems to be on the map, the point does not show up on the map. The point in question is http://www.openstreetmap.org/node/3154208461#map=19/-1.14673/36.97175 As you can see, one can search for the point and ...'''
+description = '''I added my first point using GPS coordinates for a local doctor&#x27;s office, and while the data seems to be on the map, the point does not show up on the map. The point in question is https://www.openstreetmap.org/node/3154208461#map=19/-1.14673/36.97175 As you can see, one can search for the point and ...'''
 date = "2014-11-06T15:21:00Z"
 lastmod = "2014-11-06T16:47:00Z"
 weight = 38355
@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I added my first point using GPS coordinates for a local doctor's office, and while the data seems to be on the map, the point does not show up on the map. The point in question is <a href="http://www.openstreetmap.org/node/3154208461#map=19/-1.14673/36.97175">http://www.openstreetmap.org/node/3154208461#map=19/-1.14673/36.97175</a></p>
+<p>I added my first point using GPS coordinates for a local doctor's office, and while the data seems to be on the map, the point does not show up on the map. The point in question is <a href="https://www.openstreetmap.org/node/3154208461#map=19/-1.14673/36.97175">https://www.openstreetmap.org/node/3154208461#map=19/-1.14673/36.97175</a></p>
 <p>As you can see, one can search for the point and find it, but you would need to know of it beforehand</p>
 <p>I have tried various searches on the wiki to try and troubleshoot what the issue is, and came up with this links that seem to hint to the issue, but do not quite address it:</p>
-<p><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> <a href="https://help.openstreetmap.org/questions/24036/store-name-not-visible-on-map">https://help.openstreetmap.org/questions/24036/store-name-not-visible-on-map</a></p>
+<p><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> <a href="/questions/24036/store-name-not-visible-on-map">https://help.openstreetmap.org/questions/24036/store-name-not-visible-on-map</a></p>
 <p>I'd be glad if anyone would point me to what I'm doing wrong, so I can make better edits in the future</p>
 </div>
 <div id="question-tags" class="tags-container tags">

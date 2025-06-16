@@ -112,8 +112,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the top photo would just be <a href="http://wiki.openstreetmap.org/wiki/Key:cycleway">cycleway</a>=lane, at least for basic tagging. It seems to fit the "two-way streets where there are cycle lanes on both sides of the road." You wouldn't have to do anything else unless you wanted to get into a more detailed lane tagging. If you're interested in that, you can check out the <a href="http://wiki.openstreetmap.org/wiki/Lane">lanes</a> page, and note the many proposals linked at the bottom.</p>
-<p>For the second photo, I'm not very familiar with <a href="http://wiki.openstreetmap.org/wiki/Turn_restriction">turn restriction</a> tagging, but looking over that wiki page, seems to me it'd be type=restriction, restriction=no_right_turn, except=bicycle</p>
+<p>I think the top photo would just be <a href="https://wiki.openstreetmap.org/wiki/Key:cycleway">cycleway</a>=lane, at least for basic tagging. It seems to fit the "two-way streets where there are cycle lanes on both sides of the road." You wouldn't have to do anything else unless you wanted to get into a more detailed lane tagging. If you're interested in that, you can check out the <a href="https://wiki.openstreetmap.org/wiki/Lane">lanes</a> page, and note the many proposals linked at the bottom.</p>
+<p>For the second photo, I'm not very familiar with <a href="https://wiki.openstreetmap.org/wiki/Turn_restriction">turn restriction</a> tagging, but looking over that wiki page, seems to me it'd be type=restriction, restriction=no_right_turn, except=bicycle</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

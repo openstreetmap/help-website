@@ -192,7 +192,7 @@ Maybe one of the public transport apps that use the OSM data solve the task.</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>I haven't used an XML file but GPS Babel might convert it to a GPX. The GPX could then be read by several mapping apps to read the distance you want. I rough solution could be to use the route arrow on the map page to measure sections of the bus route.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Route_Measuring.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Route_Measuring.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -253,7 +253,7 @@ Then activate the measurement tool via Windows&gt;Measured values or activate it
 <p>The measurement tool is a plugin and you may also need the utilsplugin2, also may need to check 'Expert Mode' at the bottom left of the plugins page.<br />
 JOSM&gt;Preferences&gt;Plug-ins</p>
 <p>Edit: distance of total bus route is incorrect because segments of road that are travelled in both directions are only counted once in the measured total.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Josm_8oiUax9.png" alt="alt text" /></p>
+<p><img src="/upfiles/Josm_8oiUax9.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

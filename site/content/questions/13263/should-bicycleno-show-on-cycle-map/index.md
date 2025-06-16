@@ -219,7 +219,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe this map will be useful, it has a 'non-cyclable' layer which means highways with bicycle=no tag as well as other situations where cycling is not permitted (eg highway=footway without bicycle=yes, or roads with access=no without bicycle=yes tags on it): <a href="http://mijndev.openstreetmap.nl/~ligfietser/fiets/?map=cycleways&amp;zoom=14&amp;lat=52.14605&amp;lon=5.39463&amp;layers=B00000FFFFFFFFFFFFFFFFT">http://mijndev.openstreetmap.nl/~ligfietser/fiets/?map=cycleways&amp;zoom=14&amp;lat=52.14605&amp;lon=5.39463&amp;layers=B00000FFFFFFFFFFFFFFFFT</a></p>
-<p>See also the wiki page for this map: <a href="http://wiki.openstreetmap.org/wiki/Bicycle_tags_map">http://wiki.openstreetmap.org/wiki/Bicycle_tags_map</a></p>
+<p>See also the wiki page for this map: <a href="https://wiki.openstreetmap.org/wiki/Bicycle_tags_map">https://wiki.openstreetmap.org/wiki/Bicycle_tags_map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

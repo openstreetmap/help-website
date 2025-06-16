@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The figure of tunnel=building_passage is incorrect in the map, see foto.<img src="https://help.openstreetmap.org/upfiles/Brandt,_no_Tunnel.jpg" alt="alt text" /> [map=19/51.33938/7.39570]<a href="https://www.openstreetmap.org/#map=19/51.33938/7.39570">2</a> Fabrik Brandt, street level=0 How to map?</p>
+<p>The figure of tunnel=building_passage is incorrect in the map, see foto.<img src="/upfiles/Brandt,_no_Tunnel.jpg" alt="alt text" /> [map=19/51.33938/7.39570]<a href="https://www.openstreetmap.org/#map=19/51.33938/7.39570">2</a> Fabrik Brandt, street level=0 How to map?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tunnel" rel="tag" title="see questions tagged &#39;tunnel&#39;">tunnel</span> <span class="post-tag tag-link-building_passage" rel="tag" title="see questions tagged &#39;building_passage&#39;">building_passage</span> <span class="post-tag tag-link-level" rel="tag" title="see questions tagged &#39;level&#39;">level</span>
@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><code>covered=yes</code> and <code>tunnel=building_passage</code> should be removed from the ground level street. The building parts that extend over the street are already tagged fine.</p>
-<p>See also a <a href="https://help.openstreetmap.org/questions/71741/help-mapping-skyway-over-street">related recent question</a> for some further reading.</p>
+<p>See also a <a href="/questions/71741/help-mapping-skyway-over-street">related recent question</a> for some further reading.</p>
 <p>But there is also something else fishy on the road. It says oneway=-1 but it has forward and backward lanes and bus routes in both directions which doesn't really make sense.</p>
 </div>
 <div class="answer-controls post-controls">

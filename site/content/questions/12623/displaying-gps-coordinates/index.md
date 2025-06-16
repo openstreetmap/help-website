@@ -126,9 +126,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you right click permalink tab on the map page and then copy link address and then paste it you will get something like this. I have substituted your first pair of co-ords and it seems to work. <a href="http://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M</a></p>
+<p>If you right click permalink tab on the map page and then copy link address and then paste it you will get something like this. I have substituted your first pair of co-ords and it seems to work. <a href="https://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M</a></p>
 <p>also if you click on edit (potlach2) and sign in then click on options and one tick box offers to show mouse pointer lat log which may be of use</p>
-<p><img src="https://help.openstreetmap.org/upfiles/tick_marker_box.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/tick_marker_box.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -151,7 +151,7 @@ osqa_accepted = false
 <div id="post-83655-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Andy, how to display a marker in openstreetmap using those coordinates or url (<a href="http://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M).">http://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M).</a> I want to view it with a marker.</p>
+<p>Andy, how to display a marker in openstreetmap using those coordinates or url (<a href="https://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M).">https://www.openstreetmap.org/?lat=50.1373102630358&amp;lon=%2014.4652336835861&amp;zoom=17&amp;layers=M).</a> I want to view it with a marker.</p>
 </div>
 <div id="comment-83655-info" class="comment-info">
 <span class="comment-age">(05 Mar '22, 02:39)</span> <span class="comment-user userinfo">cybercrimeco...</span>
@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/users/10560/cendonuser"></a><a href="http://help.openstreetmap.org/users/10560/cendonuser">@cendonuser</a></a> If you select the direction arrows next to the search bar and drag the green marker to the osm the coords will appear in the 'from' box. You can drag the marker around the map to find other coords.</p>
+<p><a href="https://help.openstreetmap.org/users/10560/cendonuser"></a><a href="https://help.openstreetmap.org/users/10560/cendonuser">@cendonuser</a></a> If you select the direction arrows next to the search bar and drag the green marker to the osm the coords will appear in the 'from' box. You can drag the marker around the map to find other coords.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -313,7 +313,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You mean that you want to display a marker for these coordinates? If so, please read <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">this other question</a>.</p>
+<p>You mean that you want to display a marker for these coordinates? If so, please read <a href="/questions/25/how-do-i-add-a-marker-to-a-map">this other question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -364,7 +364,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you paste a pair of the coordinates into the osm, 50.1373102630358, 14.4652336835861 you get<br />
-<a href="http://www.openstreetmap.org/search?query=50.1373102630358%2C%2014.4652336835861#map=16/50.1373/14.4679">location</a> and if you mouse-over the cords it found (under Results from Internal) a marker will show you where it is. I think you can only do one set at a time.</p>
+<a href="https://www.openstreetmap.org/search?query=50.1373102630358%2C%2014.4652336835861#map=16/50.1373/14.4679">location</a> and if you mouse-over the cords it found (under Results from Internal) a marker will show you where it is. I think you can only do one set at a time.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

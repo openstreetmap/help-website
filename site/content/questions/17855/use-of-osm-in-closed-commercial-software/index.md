@@ -128,8 +128,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would suggest you to contact the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">'legal-talk' mailing list</a> and ask your question there (subscription required but you can then easily unsubscribe when you get your answer). The present Help site is more destinated to new contributors and your question involves legal expertise which is a rare commodity here.</p>
-<p>Also, you will have to clarify one point in your question : are you going to use the OSM map tiles only ? or the data directly ? This is important since the OSM data is licensed under ODbl but map tiles can be licensed differently (the main rendered map available at osm.org is released under cc-by-sa). Check the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> to understand the different licenses in OSM environment.</p>
+<p>I would suggest you to contact the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">'legal-talk' mailing list</a> and ask your question there (subscription required but you can then easily unsubscribe when you get your answer). The present Help site is more destinated to new contributors and your question involves legal expertise which is a rare commodity here.</p>
+<p>Also, you will have to clarify one point in your question : are you going to use the OSM map tiles only ? or the data directly ? This is important since the OSM data is licensed under ODbl but map tiles can be licensed differently (the main rendered map available at osm.org is released under cc-by-sa). Check the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> to understand the different licenses in OSM environment.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

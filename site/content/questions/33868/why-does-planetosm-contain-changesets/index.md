@@ -111,7 +111,7 @@ One Answer:
 <div class="answer-body">
 <p>The canonical answer is likely: "because that is what the dump script does". Nobody claims that there is a rigourous definition of the file format nor that we are following it. The changesets do contain some extra information that could potentially be useful.</p>
 <p>Given that our documentaion is on a wiki, the thing for you to do is to document the current practice.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a> contains some more information on the dump process.<br />
+<p><a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a> contains some more information on the dump process.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -205,8 +205,8 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><span></span><span>@snupo</span> ok that is a bit a different question, the changesets are a collection of edits of one user (roughly one editing session) see <a href="http://wiki.openstreetmap.org/wiki/Changeset">http://wiki.openstreetmap.org/wiki/Changeset</a> for more information. They do not have any transactional or similar property.</p>
-<p>What you may be thinking of are the diffs <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/diffs">http://wiki.openstreetmap.org/wiki/Planet.osm/diffs</a> , which -do- allow you, going forward, from a planet dump to follow the changes to the database.</p>
+<p><span></span><span>@snupo</span> ok that is a bit a different question, the changesets are a collection of edits of one user (roughly one editing session) see <a href="https://wiki.openstreetmap.org/wiki/Changeset">https://wiki.openstreetmap.org/wiki/Changeset</a> for more information. They do not have any transactional or similar property.</p>
+<p>What you may be thinking of are the diffs <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/diffs">https://wiki.openstreetmap.org/wiki/Planet.osm/diffs</a> , which -do- allow you, going forward, from a planet dump to follow the changes to the database.</p>
 </div>
 <div id="comment-33881-info" class="comment-info">
 <span class="comment-age">(11 Jun '14, 12:57)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

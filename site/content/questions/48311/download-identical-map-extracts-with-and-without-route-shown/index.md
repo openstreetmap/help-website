@@ -144,7 +144,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12021/openstreetdan">@openstreetdan</a>: use two tabs and move the maps until you see no small jump when you switch the tabs. Then take screenshots of both.</p>
+<p><a href="https://help.openstreetmap.org/users/12021/openstreetdan">@openstreetdan</a>: use two tabs and move the maps until you see no small jump when you switch the tabs. Then take screenshots of both.</p>
 </div>
 <div id="comment-48317-info" class="comment-info">
 <span class="comment-age">(23 Feb '16, 22:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -166,7 +166,7 @@ osqa_accepted = false
 <div id="post-48319-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12021/openstreetdan"></a><a href="http://help.openstreetmap.org/users/12021/openstreetdan">@openstreetdan</a>: yes, take two full screenshots and then <span>crop</span> them in, for example, <span>GIMP</span> while having loaded them in two <span>layers</span>. That way you get two identical cuts. Or do the positioning in GIMP instead of in the browser. Yes, it takes a while to get it right.</p>
+<p><a href="https://help.openstreetmap.org/users/12021/openstreetdan"></a><a href="https://help.openstreetmap.org/users/12021/openstreetdan">@openstreetdan</a>: yes, take two full screenshots and then <span>crop</span> them in, for example, <span>GIMP</span> while having loaded them in two <span>layers</span>. That way you get two identical cuts. Or do the positioning in GIMP instead of in the browser. Yes, it takes a while to get it right.</p>
 </div>
 <div id="comment-48319-info" class="comment-info">
 <span class="comment-age">(23 Feb '16, 22:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

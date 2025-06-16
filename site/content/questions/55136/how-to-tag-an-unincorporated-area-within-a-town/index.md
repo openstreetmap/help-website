@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Whether or not it has an administrative boundary, you can always add a place node. See the <a href="http://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural">Places - Populated Settlements - Urban and Rural</a> table for guidance about which value might be appropriate.</p>
+<p>Whether or not it has an administrative boundary, you can always add a place node. See the <a href="https://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural">Places - Populated Settlements - Urban and Rural</a> table for guidance about which value might be appropriate.</p>
 <p>These tags are not related to official designations. For example, a small incorporated city may be tagged as a town or village.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -148,7 +148,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p><a href="https://help.openstreetmap.org/users/12686/mtc"></a><a href="https://help.openstreetmap.org/users/12686/mtc">@mtc</a> What's the place name, where about's is it? How many inhabitants? place=village or place=hamlet?</p>
-<p>Sounds like a rural populated settlement, see <a href="http://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural">http://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural</a></p>
+<p>Sounds like a rural populated settlement, see <a href="https://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural">https://wiki.openstreetmap.org/wiki/Key:place#Populated_settlements.2C_urban_and_rural</a></p>
 </div>
 <div id="comment-55168-info" class="comment-info">
 <span class="comment-age">(17 Mar '17, 22:00)</span> <span class="comment-user userinfo">aharvey</span>

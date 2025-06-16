@@ -183,8 +183,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From your follow-up question I imagine this is due to the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> render. I presume that you have tagged some buildings on the university campus with <code>amenity=university</code>. Mapnik's render rules are biased towards showing large campus sites at fairly low zoom levels and use bold text. You may find these buildings are much more visible than adjacent suburbs, towns and villages.</p>
-<p>Basically its not good practice to tag individual buildings with <code>amenity=university</code> except when they are isolated. (See for instance this question: <a href="http://help.openstreetmap.org/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity</a>). Instead map the campus as an area and tag the buildings with <code>building=*</code>, where '*' can be values such as <code>yes</code>, <code>laboratory</code>, <code>residential_hall</code>. Use <a href="http://wiki.openstreetmap.org/wiki/Taginfo">taginfo</a> or <a href="http://wiki.openstreetmap.org/wiki/Tagwatch">tagwatch</a> to look for <a href="http://taginfo.openstreetmap.de/keys/?key=building#values">widely used values</a>.</p>
+<p>From your follow-up question I imagine this is due to the <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> render. I presume that you have tagged some buildings on the university campus with <code>amenity=university</code>. Mapnik's render rules are biased towards showing large campus sites at fairly low zoom levels and use bold text. You may find these buildings are much more visible than adjacent suburbs, towns and villages.</p>
+<p>Basically its not good practice to tag individual buildings with <code>amenity=university</code> except when they are isolated. (See for instance this question: <a href="/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity</a>). Instead map the campus as an area and tag the buildings with <code>building=*</code>, where '*' can be values such as <code>yes</code>, <code>laboratory</code>, <code>residential_hall</code>. Use <a href="https://wiki.openstreetmap.org/wiki/Taginfo">taginfo</a> or <a href="https://wiki.openstreetmap.org/wiki/Tagwatch">tagwatch</a> to look for <a href="http://taginfo.openstreetmap.de/keys/?key=building#values">widely used values</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -232,7 +232,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I've just re-read the</p>
-<p><a href="http://help.openstreetmap.org/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">http://help.openstreetmap.org/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity</a></p>
+<p><a href="/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">https://help.openstreetmap.org/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity</a></p>
 <p>post, and I'm still not clear about expressing the relationship between buildings which form part of an 'estate'.</p>
 </div>
 <div id="comment-5221-info" class="comment-info">

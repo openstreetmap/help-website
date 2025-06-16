@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I have downloaded latest .pbf files for arizona ans washington regions. I converted them to .osm files using osmconvert(windows platform) and I extracted sub regions from them using bounding box command. When I open those output files in Globalmapper road networks are coming like irregular multiple radial lines crossing through other features.</p>
-<p>I could not find where the problem occurs. Could you please help? <img src="http://help.openstreetmap.org/upfiles/washington_osm_2.jpg" alt="alt text" /></p>
+<p>I could not find where the problem occurs. Could you please help? <img src="/upfiles/washington_osm_2.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osmconvert" rel="tag" title="see questions tagged &#39;osmconvert&#39;">osmconvert</span> <span class="post-tag tag-link-export" rel="tag" title="see questions tagged &#39;export&#39;">export</span> <span class="post-tag tag-link-globalmapper" rel="tag" title="see questions tagged &#39;globalmapper&#39;">globalmapper</span>

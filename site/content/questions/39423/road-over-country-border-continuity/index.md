@@ -161,7 +161,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you have two extracts then you could try merging them, though if they are from different dates that alone might introduce extra problems (the roads they have in common might have changed between the two different times).</p>
-<p>For merging two extracts, you could look at <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Merging_two_or_more_Geographical_Areas">osmconvert</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--merge_.28--m.29">osmosis</a> for example.</p>
+<p>For merging two extracts, you could look at <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Merging_two_or_more_Geographical_Areas">osmconvert</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--merge_.28--m.29">osmosis</a> for example.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -192,7 +192,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>As <a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a> says the OSM data model offers NO SUPPORT for continuity across extract dates, so merging two different time periods may be a complex conflation job, and therefore impossible on a user platform.</p>
+<p>As <a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a> says the OSM data model offers NO SUPPORT for continuity across extract dates, so merging two different time periods may be a complex conflation job, and therefore impossible on a user platform.</p>
 </div>
 <div id="comment-39520-info" class="comment-info">
 <span class="comment-age">(15 Dec '14, 19:52)</span> <span class="comment-user userinfo">SK53 ♦</span>

@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-16130-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>User Waldrenner history seems ok from web side: <a href="http://www.openstreetmap.org/user/Waldrenner/">http://www.openstreetmap.org/user/Waldrenner/</a> Can you give some more details like what exactly you see on your user page and what is the url of your current user page?</p>
+<p>User Waldrenner history seems ok from web side: <a href="https://www.openstreetmap.org/user/Waldrenner/">https://www.openstreetmap.org/user/Waldrenner/</a> Can you give some more details like what exactly you see on your user page and what is the url of your current user page?</p>
 </div>
 <div id="comment-16130-info" class="comment-info">
 <span class="comment-age">(15 Sep '12, 22:22)</span> <span class="comment-user userinfo">RM87</span>

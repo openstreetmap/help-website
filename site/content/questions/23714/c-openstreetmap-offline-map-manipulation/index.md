@@ -149,7 +149,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>No, I meant a real database capable of geocoding, like <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> does. And the wiki is full of lists of <a href="http://wiki.openstreetmap.org/wiki/Routing/offline_routers">offline routers</a>, <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">Desktop</a> and <a href="http://wiki.openstreetmap.org/wiki/Android">Android software</a> using OSM, a description on <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">obtaining OSM data</a> and so on, just search a little.</p>
+<p>No, I meant a real database capable of geocoding, like <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> does. And the wiki is full of lists of <a href="https://wiki.openstreetmap.org/wiki/Routing/offline_routers">offline routers</a>, <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">Desktop</a> and <a href="https://wiki.openstreetmap.org/wiki/Android">Android software</a> using OSM, a description on <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">obtaining OSM data</a> and so on, just search a little.</p>
 </div>
 <div id="comment-23735-info" class="comment-info">
 <span class="comment-age">(26 Jun '13, 21:15)</span> <span class="comment-user userinfo">scai ♦</span>

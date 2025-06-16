@@ -130,7 +130,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>The paths can be tagged as highway=footway whether the signs are there or not. If they are signed, it is increasingly common that they are also tagged designation=public_footpath. The wiki is a mess on this topic, but there is a bit on <a href="http://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines">http://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines</a> under Copyright Issues which relates.</p>
+<p>The paths can be tagged as highway=footway whether the signs are there or not. If they are signed, it is increasingly common that they are also tagged designation=public_footpath. The wiki is a mess on this topic, but there is a bit on <a href="https://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines">https://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines</a> under Copyright Issues which relates.</p>
 </div>
 <div id="comment-2827-info" class="comment-info">
 <span class="comment-age">(09 Feb '11, 10:57)</span> <span class="comment-user userinfo">EdLoach ♦</span>

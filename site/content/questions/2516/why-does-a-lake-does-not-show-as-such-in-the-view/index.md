@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The problem in this case is that the ends of the way you drew haven't joined correctly. If you look at: <a href="http://www.openstreetmap.org/browse/way/96105269"></a><a href="http://www.openstreetmap.org/browse/way/96105269"></a><a href="http://www.openstreetmap.org/browse/way/96105269">http://www.openstreetmap.org/browse/way/96105269</a> you would expect for a closed way (representing an area) that the first and last node IDs would match. If you look closely the last node actually matches the second node in the list. The first node seems to be hidden under the node where the way joins (in Potlatch 1). I dragged the join node slightly and the extra node appeared. Select that node and delete it and I think the then closed way should render correctly.</p>
+<p>The problem in this case is that the ends of the way you drew haven't joined correctly. If you look at: <a href="https://www.openstreetmap.org/browse/way/96105269"></a><a href="https://www.openstreetmap.org/browse/way/96105269"></a><a href="https://www.openstreetmap.org/browse/way/96105269">https://www.openstreetmap.org/browse/way/96105269</a> you would expect for a closed way (representing an area) that the first and last node IDs would match. If you look closely the last node actually matches the second node in the list. The first node seems to be hidden under the node where the way joins (in Potlatch 1). I dragged the join node slightly and the extra node appeared. Select that node and delete it and I think the then closed way should render correctly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

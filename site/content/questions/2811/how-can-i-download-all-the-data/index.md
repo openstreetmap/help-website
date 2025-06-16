@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can I download all the data"
-description = '''I&#x27;m trying to download the contourlines for this area : http://www.openstreetmap.org/export/embed.html?bbox=-110.825,24.767,-110.387,25.187&amp;amp;amp;layer=cyclemap and when I go to export only exports the base layer with no info at all  Any suggestions??? Thanks '''
+description = '''I&#x27;m trying to download the contourlines for this area : https://www.openstreetmap.org/export/embed.html?bbox=-110.825,24.767,-110.387,25.187&amp;amp;amp;layer=cyclemap and when I go to export only exports the base layer with no info at all  Any suggestions??? Thanks '''
 date = "2011-02-08T23:17:00Z"
 lastmod = "2011-03-04T01:08:00Z"
 weight = 2811
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to download the contourlines for this area : <a href="http://www.openstreetmap.org/export/embed.html?bbox=-110.825,24.767,-110.387,25.187&amp;amp;layer=cyclemap">http://www.openstreetmap.org/export/embed.html?bbox=-110.825,24.767,-110.387,25.187&amp;amp;layer=cyclemap</a></p>
+<p>I'm trying to download the contourlines for this area : <a href="https://www.openstreetmap.org/export/embed.html?bbox=-110.825,24.767,-110.387,25.187&amp;amp;layer=cyclemap">https://www.openstreetmap.org/export/embed.html?bbox=-110.825,24.767,-110.387,25.187&amp;amp;layer=cyclemap</a></p>
 <p>and when I go to export only exports the base layer with no info at all</p>
 <p>Any suggestions???</p>
 <p>Thanks</p>
@@ -111,7 +111,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>The export function only exports the data stored in OpenStreetMap (and if you choose a non-raw-data form of export, e.g. a PNG or SVG image, then it will use the standard Mapnik style). Hill shading and contour lines are not part of the OpenStreetMap database.</p>
-<p>Depending on what exactly you want to do, one of the programs described on the wiki page <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static Map Images</a> might be of use. Note however that bulk downloading of tiles from OpenCycleMap is discouraged (and that is essentially what these programs do), so if you need to download a large amount of tiles, get in touch with the people running OCM.</p>
+<p>Depending on what exactly you want to do, one of the programs described on the wiki page <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static Map Images</a> might be of use. Note however that bulk downloading of tiles from OpenCycleMap is discouraged (and that is essentially what these programs do), so if you need to download a large amount of tiles, get in touch with the people running OCM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As Frederik said, the contour lines are not in the OSM database. They are from the SRTM-Mission of the NASA. They released them to the public domain and you can download them and use free tools (e.g. Grass GIS, srtm2osm, gdal_contour) to create your own contours. There is some hints how to do this in the wiki: <a href="http://wiki.openstreetmap.org/wiki/Contours">http://wiki.openstreetmap.org/wiki/Contours</a></p>
+<p>As Frederik said, the contour lines are not in the OSM database. They are from the SRTM-Mission of the NASA. They released them to the public domain and you can download them and use free tools (e.g. Grass GIS, srtm2osm, gdal_contour) to create your own contours. There is some hints how to do this in the wiki: <a href="https://wiki.openstreetmap.org/wiki/Contours">https://wiki.openstreetmap.org/wiki/Contours</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

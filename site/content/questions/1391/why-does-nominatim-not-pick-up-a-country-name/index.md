@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Data seem up to date and name is set on data. Same problem on <a href="http://nominatim.openstreetmap.org/details.php?place_id=972039">OSM nominatime server</a>.</p>
-<p>Look at <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> wiki page to create a test case or fill a bug report.</p>
+<p>Look at <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> wiki page to create a test case or fill a bug report.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -112,7 +112,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>For the first there is no good reason to delete an account. If you do not want the account any more you may just stop using it.</p>
 <p>For the system to be credible everything is verifyable by anybody. For this reason every change is stored and related to an account and it is easy to access that information. For instance anybody can verify the points of a user by checking who voted on his posts and see if the numbers add up. If you would be to remove an account you would have to delete all posts and votes to make the system verifyable. That would not be fair to anybody.</p>
-<p>If you realy want to delete your account you can try to contact one of the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">system administrators</a> with a <strong>realy</strong> good reason to have your account removed. Depending on your reason and the administrators state of mind you may get your account removed.</p>
+<p>If you realy want to delete your account you can try to contact one of the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">system administrators</a> with a <strong>realy</strong> good reason to have your account removed. Depending on your reason and the administrators state of mind you may get your account removed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -198,7 +198,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sorry you wish to leave,You'll find info here <a href="http://help.openstreetmap.org/questions/878/how-can-i-delete-my-account">http://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a></p>
+<p>Sorry you wish to leave,You'll find info here <a href="/questions/878/how-can-i-delete-my-account">https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

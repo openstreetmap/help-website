@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Maps changes not correctly displayed on rendered map version"
-description = '''I made some modification you can see in the screenshot, link text but when I try to display I can see this wrong visualization  link text You can see by yourself at the following link: http://www.openstreetmap.org/#map=19/44.44938/11.32179'''
+description = '''I made some modification you can see in the screenshot, link text but when I try to display I can see this wrong visualization  link text You can see by yourself at the following link: https://www.openstreetmap.org/#map=19/44.44938/11.32179'''
 date = "2014-06-29T11:37:00Z"
 lastmod = "2014-06-29T12:48:00Z"
 weight = 34431
@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I made some modification you can see in the screenshot,</p>
-<p><a href="http://help.openstreetmap.org/upfiles/good_visualization.png">link text</a></p>
+<p><span>link text</span></p>
 <p>but when I try to display I can see this wrong visualization</p>
-<p><a href="http://help.openstreetmap.org/upfiles/wrong_visualization.png">link text</a></p>
-<p>You can see by yourself at the following link: <a href="http://www.openstreetmap.org/#map=19/44.44938/11.32179">http://www.openstreetmap.org/#map=19/44.44938/11.32179</a></p>
+<p><span>link text</span></p>
+<p>You can see by yourself at the following link: <a href="https://www.openstreetmap.org/#map=19/44.44938/11.32179">https://www.openstreetmap.org/#map=19/44.44938/11.32179</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changes" rel="tag" title="see questions tagged &#39;changes&#39;">changes</span>
@@ -182,7 +182,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I had to look at the area edit history to see what change you've made to see what might be the problem - the thing that looked most obviously wrong was the imported buildings - but they were done two years ago.</p>
-<p>It looks like the question is "why aren't my footpath and road changes rendered immediately" and the most detailed answer to that is <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this one here</a>.</p>
+<p>It looks like the question is "why aren't my footpath and road changes rendered immediately" and the most detailed answer to that is <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this one here</a>.</p>
 <p>You'll see that your new road changes render OK.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Start with the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> and an Introduction for a specific editor, for example the <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Primer">Potlatch 2 Primer</a>. Then just add a <a href="http://wiki.openstreetmap.org/wiki/Elements">node</a> at the position of the peak and tag it by either using your editor's preset function or by adding <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dpeak">natural=peak</a> by hand. You can also add the <a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:ele">elevation</a> if known.</p>
+<p>Start with the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> and an Introduction for a specific editor, for example the <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Primer">Potlatch 2 Primer</a>. Then just add a <a href="https://wiki.openstreetmap.org/wiki/Elements">node</a> at the position of the peak and tag it by either using your editor's preset function or by adding <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dpeak">natural=peak</a> by hand. You can also add the <a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:ele">elevation</a> if known.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

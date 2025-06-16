@@ -125,7 +125,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>For a simple incomplete way, <a href="http://taginfo.openstreetmap.org/tags/fixme=continue">fixme=continue</a> on the end node seems the simplest, most concise way of tagging, and is quite commonly used. Also used on ways, although <a href="http://taginfo.openstreetmap.org/tags/fixme=incomplete">fixme=incomplete</a> or <a href="http://taginfo.openstreetmap.org/tags/FIXME=incomplete">FIXME=incomplete</a> seem the more common choice for those who choose to tag the way rather than the end node.</p>
 <p>Nodes tagged as fixme=continue are rendered in Osmarender at high zoom levels (a green oblique line through the node at a seemingly random angle).</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:fixme">wiki page</a> currently suggests combining fixme=continue with noexit=no, but that seems redundant as it doesn't provide any more information than the fixme tag and takes extra time to add and remove (noexit=yes, however, does seem useful in other contexts, as it can indicate "I didn't forget to add a fixme=continue")</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:fixme">wiki page</a> currently suggests combining fixme=continue with noexit=no, but that seems redundant as it doesn't provide any more information than the fixme tag and takes extra time to add and remove (noexit=yes, however, does seem useful in other contexts, as it can indicate "I didn't forget to add a fixme=continue")</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -293,7 +293,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Often when walking a path I will cross a farmers track for his use only (I guess) and might not ever get fully drawn as it is maybe private access, I will draw a bit from bing which gives a reference position for walkers with a paper map so that they do not mistake it for the path and follow that instead. example <a href="http://www.openstreetmap.org/?lat=52.34459&amp;lon=-0.29838&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=52.34459&amp;lon=-0.29838&amp;zoom=16&amp;layers=M</a> what do you think? Its important that they are rendered along with ponds, woods, hedges, pylons and other landmarks which aid locating your position on a paper map, I don't think fix-me or TBC always apply.</p>
+<p>Often when walking a path I will cross a farmers track for his use only (I guess) and might not ever get fully drawn as it is maybe private access, I will draw a bit from bing which gives a reference position for walkers with a paper map so that they do not mistake it for the path and follow that instead. example <a href="https://www.openstreetmap.org/?lat=52.34459&amp;lon=-0.29838&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=52.34459&amp;lon=-0.29838&amp;zoom=16&amp;layers=M</a> what do you think? Its important that they are rendered along with ponds, woods, hedges, pylons and other landmarks which aid locating your position on a paper map, I don't think fix-me or TBC always apply.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

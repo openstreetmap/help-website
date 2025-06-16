@@ -76,7 +76,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>You may want to take a look at: <a href="http://wiki.openstreetmap.org/wiki/LiveMapViewer">http://wiki.openstreetmap.org/wiki/LiveMapViewer</a> It is written in java, it uses "slippy map" and it's source code is available.</p>
+<p>You may want to take a look at: <a href="https://wiki.openstreetmap.org/wiki/LiveMapViewer">https://wiki.openstreetmap.org/wiki/LiveMapViewer</a> It is written in java, it uses "slippy map" and it's source code is available.</p>
 </div>
 <div id="comment-6889-info" class="comment-info">
 <span class="comment-age">(04 Aug '11, 19:26)</span> <span class="comment-user userinfo">RM87</span>
@@ -223,7 +223,7 @@ One Answer:
 <div class="comment-text">
 <p>The policies are generally written to prevent server overload from massive automated downloads, that can quickly rack up 10.000s of tiles.</p>
 <p>The policy kind of works as "if it causes troubles to the servers" it is "illegal". If the load is low and no admin notices it is fine. So what is allowed and what not is kind of fuzzy.</p>
-<p>To get an indication of what gets noticed: <a href="http://wiki.openstreetmap.org/wiki/Talk:Tile_usage_policy#Usage_stats_for_Monday_1st_March_2010">http://wiki.openstreetmap.org/wiki/Talk:Tile_usage_policy#Usage_stats_for_Monday_1st_March_2010</a> <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#mod_tile">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#mod_tile</a></p>
+<p>To get an indication of what gets noticed: <a href="https://wiki.openstreetmap.org/wiki/Talk:Tile_usage_policy#Usage_stats_for_Monday_1st_March_2010">https://wiki.openstreetmap.org/wiki/Talk:Tile_usage_policy#Usage_stats_for_Monday_1st_March_2010</a> <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#mod_tile">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#mod_tile</a></p>
 </div>
 <div id="comment-6923-info" class="comment-info">
 <span class="comment-age">(05 Aug '11, 22:41)</span> <span class="comment-user userinfo">apmon</span>

@@ -202,7 +202,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it is in a Uni building create a node with Tag:amenity=printer .Public Libraries usually have some printing facilities as well so i guess you could do a node for them as well. They may get rendered this one does, it's a business that i have found <a href="http://www.openstreetmap.org/node/2704917063#map=19/52.07690/4.35368">http://www.openstreetmap.org/node/2704917063#map=19/52.07690/4.35368</a></p>
+<p>If it is in a Uni building create a node with Tag:amenity=printer .Public Libraries usually have some printing facilities as well so i guess you could do a node for them as well. They may get rendered this one does, it's a business that i have found <a href="https://www.openstreetmap.org/node/2704917063#map=19/52.07690/4.35368">https://www.openstreetmap.org/node/2704917063#map=19/52.07690/4.35368</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

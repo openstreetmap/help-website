@@ -147,7 +147,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I ran into this today too (slightly different error). Was using an up-to-date version of Google Chrome.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2017-08-22_23-40-37.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2017-08-22_23-40-37.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://josm.openstreetmap.de/wiki/Plugins">dumbutils</a> plugin has this functionality, but it's going to be migrated into <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utilsplugin2</a></p>
+<p>The <a href="http://josm.openstreetmap.de/wiki/Plugins">dumbutils</a> plugin has this functionality, but it's going to be migrated into <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utilsplugin2</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

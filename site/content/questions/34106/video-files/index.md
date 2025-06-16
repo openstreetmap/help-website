@@ -116,7 +116,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap doesn't collect video files.</p>
-<p>It is however possible to use a video file that you have created for mapping, in conjunction with a GPS trace and the JOSM editor. See <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/VideoMapping">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/VideoMapping</a></p>
+<p>It is however possible to use a video file that you have created for mapping, in conjunction with a GPS trace and the JOSM editor. See <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/VideoMapping">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/VideoMapping</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

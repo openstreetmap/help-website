@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem installing gosmore?"
-description = '''Im tried to install in Ubuntu and it gave me installation errors at the end and I can not work. I had tested with the method of installation of the probe http://wiki.openstreetmap.org/wiki/Gosmore and also with synaptic. If someone could help me who had the same problem in the installation of Gosmor...'''
+description = '''Im tried to install in Ubuntu and it gave me installation errors at the end and I can not work. I had tested with the method of installation of the probe https://wiki.openstreetmap.org/wiki/Gosmore and also with synaptic. If someone could help me who had the same problem in the installation of Gosmor...'''
 date = "2010-08-19T19:16:00Z"
 lastmod = "2010-09-01T19:10:00Z"
 weight = 678
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Im tried to install in Ubuntu and it gave me installation errors at the end and I can not work.</p>
-<p>I had tested with the method of installation of the probe <a href="http://wiki.openstreetmap.org/wiki/Gosmore">http://wiki.openstreetmap.org/wiki/Gosmore</a> and also with synaptic.</p>
+<p>I had tested with the method of installation of the probe <a href="https://wiki.openstreetmap.org/wiki/Gosmore">https://wiki.openstreetmap.org/wiki/Gosmore</a> and also with synaptic.</p>
 <p>If someone could help me who had the same problem in the installation of Gosmore, giving the installation steps and need to make it work.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

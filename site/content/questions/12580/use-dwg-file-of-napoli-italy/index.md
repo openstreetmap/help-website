@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can get in contact with the Italian community <a href="http://wiki.openstreetmap.org/wiki/Italia">here</a></p>
+<p>You can get in contact with the Italian community <a href="https://wiki.openstreetmap.org/wiki/Italia">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -164,7 +164,7 @@ osqa_accepted = false
 <p>Welcome to OpenStreetMap, and thanks for your offer.</p>
 <p>OSM uses its own data format, and data in other formats must be imported. So a DWG file will probably only be useful with extra work. To be certain, you should probably post on the mailing list, or get in touch with your local OSM community.</p>
 <p>Also see this question:</p>
-<p><a href="http://help.openstreetmap.org/questions/4936/import-into-openstreetmap">http://help.openstreetmap.org/questions/4936/import-into-openstreetmap</a></p>
+<p><a href="/questions/4936/import-into-openstreetmap">https://help.openstreetmap.org/questions/4936/import-into-openstreetmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

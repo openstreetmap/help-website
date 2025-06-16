@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> for it.</p>
-<p>Or <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> (one key-value pair at a time).</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> for it.</p>
+<p>Or <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> (one key-value pair at a time).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

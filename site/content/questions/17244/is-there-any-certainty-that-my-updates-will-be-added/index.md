@@ -152,7 +152,7 @@ One Answer:
 <div id="post-17249-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>"It is always a good idea to include a permalink to the area you were working on, it makes it a lot easier and faster to check your edits." sorry.i did not know that permalink option means "permanent link". here it is: <a href="http://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M</a></p>
+<p>"It is always a good idea to include a permalink to the area you were working on, it makes it a lot easier and faster to check your edits." sorry.i did not know that permalink option means "permanent link". here it is: <a href="https://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M</a></p>
 <p>"Edits / additions to the OSM database are made essentially when you upload them."</p>
 <p>i saved them that means they were uploaded.</p>
 <p>"you are still viewing old tiles in your browser" how to make sure that my browser is showing new tiles. each time i just restarted my browser.</p>
@@ -170,9 +170,9 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I'm not quite sure how it happened, but if you look <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=24.366708&amp;lon=88.628634&amp;zoom=18">here</a> you'll see that the <a href="http://www.openstreetmap.org/browse/way/188166264">road in the middle of the screen</a> doesn't have any tags on it. If you click on it in the in-browser editor the left-hand side of the screen will say "no tags set". To the right of where it says "Unknown" there's a drop box that allows you to select the type of road.</p>
-<p>Also, if you <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=24.365687&amp;lon=88.628395&amp;zoom=20">zoom in a bit</a> you can see that it's not quite joined - it's important that roads that do join in reality are joined on the map, so that routing software can work correctly.</p>
-<p>If you have a look at the wiki pages that are linked from <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">here</a> you may find some helpful information.</p>
+<p>I'm not quite sure how it happened, but if you look <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=24.366708&amp;lon=88.628634&amp;zoom=18">here</a> you'll see that the <a href="https://www.openstreetmap.org/browse/way/188166264">road in the middle of the screen</a> doesn't have any tags on it. If you click on it in the in-browser editor the left-hand side of the screen will say "no tags set". To the right of where it says "Unknown" there's a drop box that allows you to select the type of road.</p>
+<p>Also, if you <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=24.365687&amp;lon=88.628395&amp;zoom=20">zoom in a bit</a> you can see that it's not quite joined - it's important that roads that do join in reality are joined on the map, so that routing software can work correctly.</p>
+<p>If you have a look at the wiki pages that are linked from <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">here</a> you may find some helpful information.</p>
 </div>
 <div id="comment-17250-info" class="comment-info">
 <span class="comment-age">(29 Oct '12, 09:11)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -183,7 +183,7 @@ One Answer:
 <div id="post-17252-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>ok.i have named all of them. <a href="http://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M</a></p>
+<p>ok.i have named all of them. <a href="https://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=24.36706&amp;lon=88.6296&amp;zoom=16&amp;layers=M</a></p>
 <p>let's see what happened now.</p>
 <p>"Also, if you zoom in a bit you can see that it's not quite joined - it's important that roads that do join in reality are joined on the map, so that routing software can work correctly."</p>
 <p>thanks.i did not pay attention on it. i will correct them as well.</p>
@@ -199,7 +199,7 @@ One Answer:
 <div id="post-17254-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>One more thing - you've added a number of the roads as motorways (<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway">highway=motorway</a>). As they're small roads within a university complex I'd have thought that "Minor Road" or "Service Road" would be more appropriate?</p>
+<p>One more thing - you've added a number of the roads as motorways (<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway">highway=motorway</a>). As they're small roads within a university complex I'd have thought that "Minor Road" or "Service Road" would be more appropriate?</p>
 </div>
 <div id="comment-17254-info" class="comment-info">
 <span class="comment-age">(29 Oct '12, 10:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

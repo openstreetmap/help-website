@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>What browser? Do all browsers show the same problem? Does <a href="http://www.openstreetmap.org/export?lat=51.0526&amp;lon=13.746&amp;zoom=13&amp;layers=M">this link</a> work?</p>
+<p>What browser? Do all browsers show the same problem? Does <a href="https://www.openstreetmap.org/export?lat=51.0526&amp;lon=13.746&amp;zoom=13&amp;layers=M">this link</a> work?</p>
 </div>
 <div id="comment-20949-info" class="comment-info">
 <span class="comment-age">(24 Mar '13, 12:36)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -185,7 +185,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>For info I still see the export button in IE8:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/ie8.png" alt="Partial screenshot showing export button" /></p>
+<p><img src="/upfiles/ie8.png" alt="Partial screenshot showing export button" /></p>
 </div>
 <div id="comment-20953-info" class="comment-info">
 <span class="comment-age">(24 Mar '13, 16:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

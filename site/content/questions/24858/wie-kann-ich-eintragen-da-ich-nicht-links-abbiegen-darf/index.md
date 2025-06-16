@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Das wird erst mit der kommenden Version 1.1 von iD möglich sein. Für <a href="http://wiki.openstreetmap.org/wiki/DE:Relation:restriction">Abbiegebeschränkungen</a> sind <a href="http://wiki.openstreetmap.org/wiki/DE:Relations">Relationen</a> notwendig, die bisher nicht von iD unterstützt werden, dafür aber von vielen anderen Editoren wie beispielsweise Potlatch 2 und JOSM. Es existieren sogar eigene Anleitungen zum Eintragen von Abbiegebeschränkungen für <a href="http://wiki.openstreetmap.org/wiki/DE:Potlatch_2/restrictions">Potlatch 2</a> und <a href="http://wiki.openstreetmap.org/wiki/DE:JOSM_Relations_and_Turn_Based_Restrictions">JOSM</a>.</p>
+<p>Das wird erst mit der kommenden Version 1.1 von iD möglich sein. Für <a href="https://wiki.openstreetmap.org/wiki/DE:Relation:restriction">Abbiegebeschränkungen</a> sind <a href="https://wiki.openstreetmap.org/wiki/DE:Relations">Relationen</a> notwendig, die bisher nicht von iD unterstützt werden, dafür aber von vielen anderen Editoren wie beispielsweise Potlatch 2 und JOSM. Es existieren sogar eigene Anleitungen zum Eintragen von Abbiegebeschränkungen für <a href="https://wiki.openstreetmap.org/wiki/DE:Potlatch_2/restrictions">Potlatch 2</a> und <a href="https://wiki.openstreetmap.org/wiki/DE:JOSM_Relations_and_Turn_Based_Restrictions">JOSM</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

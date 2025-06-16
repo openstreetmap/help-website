@@ -222,7 +222,7 @@ osqa_accepted = false
 <div id="post-7914-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Narrow parts of a road are not always the result of traffic calming. There is a more suitable tag called <a href="http://wiki.openstreetmap.org/wiki/Key:narrow">narrow=yes</a>.</p>
+<p>Narrow parts of a road are not always the result of traffic calming. There is a more suitable tag called <a href="https://wiki.openstreetmap.org/wiki/Key:narrow">narrow=yes</a>.</p>
 </div>
 <div id="comment-7914-info" class="comment-info">
 <span class="comment-age">(16 Sep '11, 06:45)</span> <span class="comment-user userinfo">scai ♦</span>

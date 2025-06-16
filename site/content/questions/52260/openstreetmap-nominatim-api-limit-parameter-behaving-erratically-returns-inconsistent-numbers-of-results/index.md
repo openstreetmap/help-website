@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to use the Nominatim API to geocode cities, with simple HTTP GET requests. I want to receive a specific number of possible matches, when available. The <a href="http://wiki.openstreetmap.org/wiki/Nominatim">documentation</a> indicates this is possible by using the "limit" parameter:</p>
+<p>I am trying to use the Nominatim API to geocode cities, with simple HTTP GET requests. I want to receive a specific number of possible matches, when available. The <a href="https://wiki.openstreetmap.org/wiki/Nominatim">documentation</a> indicates this is possible by using the "limit" parameter:</p>
 <pre><code>limit=integer
 Limit the number of returned results.</code></pre>
 <p>This works as expected for most queries. For example, if I request <a href="https://nominatim.openstreetmap.org/search?format=json&amp;limit=2&amp;polygon_geojson=1&amp;country=Mexico&amp;city=Mexico">limit=2</a>, I get the top 2 results and if I request <a href="https://nominatim.openstreetmap.org/search?format=json&amp;limit=3&amp;polygon_geojson=1&amp;country=Mexico&amp;city=Mexico">limit=3</a>, I get the top 3 results. But the limit parameter behaves erratically for some queries. For example, with Sonoma California:</p>
@@ -132,7 +132,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Sometimes you have several objects in OSM identifying the same place or object in reality. The simplest case is a street being split in many different OSM ways due to different characteristics. Nominatim will attempt to detect such duplicates and only return one match; this is controlled by the <code>dedupe</code> parameter which defaults to 1. Since the <code>limit</code> is, for reasons of efficiency, enforced before and not after de-duplicating, it is possible that de-duplicating leaves you with less results than requested.</p>
-<p>In your "Sonoma" case, when limit=2 and dedupe=0 are set, Nominatim returns the ways 33162431 and 33162426 (it should return <a href="http://www.openstreetmap.org/relation/113172">http://www.openstreetmap.org/relation/113172</a> instead and I don't know why it doesn't).</p>
+<p>In your "Sonoma" case, when limit=2 and dedupe=0 are set, Nominatim returns the ways 33162431 and 33162426 (it should return <a href="https://www.openstreetmap.org/relation/113172">https://www.openstreetmap.org/relation/113172</a> instead and I don't know why it doesn't).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

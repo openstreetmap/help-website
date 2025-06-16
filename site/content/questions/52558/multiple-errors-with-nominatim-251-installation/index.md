@@ -134,7 +134,7 @@ One Answer:
 <div id="post-52577-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm using these directions, <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS">http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS</a> and don't see a <em>build</em> directory.</p>
+<p>I'm using these directions, <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS">https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS</a> and don't see a <em>build</em> directory.</p>
 </div>
 <div id="comment-52577-info" class="comment-info">
 <span class="comment-age">(17 Oct '16, 18:18)</span> <span class="comment-user userinfo">cswrsinc</span>

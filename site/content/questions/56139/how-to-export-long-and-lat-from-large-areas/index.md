@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a> for up to date extracts of OSM data.</p>
-<p>If you are just getting started with raw OSM data, check <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> to see how things are organized. Some of the services at the above link also process OSM data into other formats.</p>
+<p>Take a look at <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a> for up to date extracts of OSM data.</p>
+<p>If you are just getting started with raw OSM data, check <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> to see how things are organized. Some of the services at the above link also process OSM data into other formats.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

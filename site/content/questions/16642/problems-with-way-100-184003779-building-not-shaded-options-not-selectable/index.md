@@ -108,9 +108,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The usual answer to this question is "<a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">why does something that I have added not show up immediately</a>".</p>
-<p>In this case though, looking at the resulting <a href="http://www.openstreetmap.org/browse/way/184003779">way</a> i can see that <a href="http://www.openstreetmap.org/browse/node/1944399924">these</a> <a href="http://www.openstreetmap.org/browse/node/1944399921">two</a> nodes are in the same place but different, so (at the time that I write this) the way isn't closed. Delete one of the duplicate nodes and join, and it should be fixed.</p>
-<p>In Potlatch 2 you can see the duplicate node highlighted: <img src="http://help.openstreetmap.org/upfiles/example_4.png" alt="duplicate node ring in P2" /></p>
+<p>The usual answer to this question is "<a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">why does something that I have added not show up immediately</a>".</p>
+<p>In this case though, looking at the resulting <a href="https://www.openstreetmap.org/browse/way/184003779">way</a> i can see that <a href="https://www.openstreetmap.org/browse/node/1944399924">these</a> <a href="https://www.openstreetmap.org/browse/node/1944399921">two</a> nodes are in the same place but different, so (at the time that I write this) the way isn't closed. Delete one of the duplicate nodes and join, and it should be fixed.</p>
+<p>In Potlatch 2 you can see the duplicate node highlighted: <img src="/upfiles/example_4.png" alt="duplicate node ring in P2" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -164,8 +164,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?lat=40.807721&amp;lon=-74.390218&amp;zoom=18&amp;layers=M">It</a> is visible here, try to clear your browser cache and see <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this question</a> for various other explanations. Rendering seems to be slow at the moment according to the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#renderd">renderd queue length</a>, so be patient when adding new data.</p>
-<p>Also please check the name of the buildings you added, I doubt the numbers are their official names. If you want to add addresses, use the <a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr</a> key. If these numbers are just some reference, use the <a href="http://wiki.openstreetmap.org/wiki/Key:ref">ref</a> key instead.</p>
+<p><a href="https://www.openstreetmap.org/?lat=40.807721&amp;lon=-74.390218&amp;zoom=18&amp;layers=M">It</a> is visible here, try to clear your browser cache and see <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this question</a> for various other explanations. Rendering seems to be slow at the moment according to the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#renderd">renderd queue length</a>, so be patient when adding new data.</p>
+<p>Also please check the name of the buildings you added, I doubt the numbers are their official names. If you want to add addresses, use the <a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr</a> key. If these numbers are just some reference, use the <a href="https://wiki.openstreetmap.org/wiki/Key:ref">ref</a> key instead.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

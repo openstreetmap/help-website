@@ -94,7 +94,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The above example is this node: <a href="http://www.openstreetmap.org/browse/node/1959963292">http://www.openstreetmap.org/browse/node/1959963292</a> if that helps the DWG at all.</p>
+<p>The above example is this node: <a href="https://www.openstreetmap.org/browse/node/1959963292">https://www.openstreetmap.org/browse/node/1959963292</a> if that helps the DWG at all.</p>
 </div>
 <div id="comment-19662-info" class="comment-info">
 <span class="comment-age">(07 Feb '13, 08:58)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -218,7 +218,7 @@ For the Data Working Group</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thank you for reporting this. OSM has the Data Working Group <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">http://wiki.openstreetmap.org/wiki/Data_working_group</a> to deal with such issues.</p>
+<p>Thank you for reporting this. OSM has the Data Working Group <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">https://wiki.openstreetmap.org/wiki/Data_working_group</a> to deal with such issues.</p>
 <p>I've sent them a mail with a pointer to this question. So I think you will get an answer in a couple of days here.</p>
 </div>
 <div class="answer-controls post-controls">

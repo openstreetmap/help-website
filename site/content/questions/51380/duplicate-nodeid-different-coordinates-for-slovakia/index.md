@@ -95,7 +95,7 @@ nodeid 35102865 49.2155225  19.6833409</code></pre>
 <div id="post-51441-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4879/kcjailbirds">@kcjailbirds</a>: thank you!</p>
+<p><a href="https://help.openstreetmap.org/users/4879/kcjailbirds">@kcjailbirds</a>: thank you!</p>
 </div>
 <div id="comment-51441-info" class="comment-info">
 <span class="comment-age">(16 Aug '16, 14:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

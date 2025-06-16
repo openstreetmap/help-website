@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>YuliaPro, do you mean the OSM map ? If so welcome, you have made an account, the first step and you are able to ad missing ways or names around your own town to improve the map, for starters. Please read the beginners guide to avoid mistakes and use the right tags (names and so on) for a way or building, follow this link, <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> . There is also a page, chapter 4, dedicated to the use of the editors used to ad material to OSM.</p>
+<p>YuliaPro, do you mean the OSM map ? If so welcome, you have made an account, the first step and you are able to ad missing ways or names around your own town to improve the map, for starters. Please read the beginners guide to avoid mistakes and use the right tags (names and so on) for a way or building, follow this link, <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> . There is also a page, chapter 4, dedicated to the use of the editors used to ad material to OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

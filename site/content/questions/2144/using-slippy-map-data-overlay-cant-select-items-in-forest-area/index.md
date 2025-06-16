@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>A region I've been working on has recently been covered by a mass-import of land-use (forest) data. Now, when I'm using the slippy-map data overlay, I can't select any of the ways that are now buried under the forest area (actually, "any" is not true, a few can be selected but it's not clear which ones); the entire forest area gets selected instead. Can anybody suggest how I might fix this? I've tried searching the wiki for stuff like z-ordering, but have come up with nothing useful.</p>
-<p>The region in question is <a href="http://www.openstreetmap.org/?lat=41.528812&amp;lon=1.2315&amp;zoom=18">http://www.openstreetmap.org/?lat=41.528812&amp;lon=1.2315&amp;zoom=18</a> . I've looked at other similar regions, where details have been covered by land-use areas; some of them seem to have the same problem, others do not.</p>
+<p>The region in question is <a href="https://www.openstreetmap.org/?lat=41.528812&amp;lon=1.2315&amp;zoom=18">https://www.openstreetmap.org/?lat=41.528812&amp;lon=1.2315&amp;zoom=18</a> . I've looked at other similar regions, where details have been covered by land-use areas; some of them seem to have the same problem, others do not.</p>
 <p>Thanks a lot.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Oh, I see it is a known problem: <a href="http://help.openstreetmap.org/questions/1406"></a><a href="http://help.openstreetmap.org/questions/1406"></a><a href="http://help.openstreetmap.org/questions/1406">http://help.openstreetmap.org/questions/1406</a></p>
+<p>Oh, I see it is a known problem: <a href="/questions/1406"></a><a href="/questions/1406"></a><a href="/questions/1406">https://help.openstreetmap.org/questions/1406</a></p>
 <p>Matter closed, I suppose.</p>
 </div>
 <div class="answer-controls post-controls">

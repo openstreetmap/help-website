@@ -106,8 +106,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'd suggest having a look Lambertus' page <a href="http://garmin.openstreetmap.nl/">here</a>. You can choose the country that you want and then select "Download map now!"</p>
-<p>As far as "purchase" goes, I'm not sure about that, but you can certainly <a href="http://wiki.openstreetmap.org/wiki/Donate">donate</a> to OSM. I'd include a donate link for Lambertus' page too but there doesn't seem to be one, but he does say:</p>
-<p>"OpenStreetMap data and the maps from this site are available for free. But OpenStreetMap totally relies on the input of it's users, so please consider <a href="http://wiki.openstreetmap.org/wiki/Upload#How_to_upload_a_GPX_file">contributing GPS traces</a> or by <a href="http://wiki.openstreetmap.org/wiki/Editing">mapping your surroundings</a> if you find this service useful. Thanks!"</p>
+<p>As far as "purchase" goes, I'm not sure about that, but you can certainly <a href="https://wiki.openstreetmap.org/wiki/Donate">donate</a> to OSM. I'd include a donate link for Lambertus' page too but there doesn't seem to be one, but he does say:</p>
+<p>"OpenStreetMap data and the maps from this site are available for free. But OpenStreetMap totally relies on the input of it's users, so please consider <a href="https://wiki.openstreetmap.org/wiki/Upload#How_to_upload_a_GPX_file">contributing GPS traces</a> or by <a href="https://wiki.openstreetmap.org/wiki/Editing">mapping your surroundings</a> if you find this service useful. Thanks!"</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

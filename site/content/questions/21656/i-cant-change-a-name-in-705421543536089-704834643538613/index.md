@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Name to change: IES Dionisio Gamallo Fierros to IES de Ribadeo. in <a href="http://www.openstreetmap.org/?box=yes&amp;bbox=-7.054215,43.536089,-7.048346,43.538613">-7.054215,43.536089,-7.048346,43.538613</a>. It's a legal change on the institution. I've created the new name to the building and place, but ancient name and shapes remain in OSM.</p>
+<p>Name to change: IES Dionisio Gamallo Fierros to IES de Ribadeo. in <a href="https://www.openstreetmap.org/?box=yes&amp;bbox=-7.054215,43.536089,-7.048346,43.538613">-7.054215,43.536089,-7.048346,43.538613</a>. It's a legal change on the institution. I've created the new name to the building and place, but ancient name and shapes remain in OSM.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-change" rel="tag" title="see questions tagged &#39;change&#39;">change</span>
@@ -178,7 +178,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Agremon, you probably mean <a href="http://www.openstreetmap.org/browse/way/172232784/history">http://www.openstreetmap.org/browse/way/172232784/history</a> (or one of the other building/area lines there), right? See <span>how-often-does-the-main-mapnik-map-get-updated</span> (if you mean the standard map view on osm.org). You just have to wait a bit (maybe only some minutes, maybe some days) and make sure that your browser does not cache a old map version.</p>
+<p>Hi Agremon, you probably mean <a href="https://www.openstreetmap.org/browse/way/172232784/history">https://www.openstreetmap.org/browse/way/172232784/history</a> (or one of the other building/area lines there), right? See <span>how-often-does-the-main-mapnik-map-get-updated</span> (if you mean the standard map view on osm.org). You just have to wait a bit (maybe only some minutes, maybe some days) and make sure that your browser does not cache a old map version.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

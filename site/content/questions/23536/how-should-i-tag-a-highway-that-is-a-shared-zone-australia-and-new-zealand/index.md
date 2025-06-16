@@ -199,7 +199,7 @@ One Answer:
 <div id="post-25527-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>well the question might not be related to the "shared space" concept, but google led me here when searching for it anyway... i have opened the "right" question <a href="https://help.openstreetmap.org/questions/25525/how-to-map-a-shared-space">here</a>.</p>
+<p>well the question might not be related to the "shared space" concept, but google led me here when searching for it anyway... i have opened the "right" question <a href="/questions/25525/how-to-map-a-shared-space">here</a>.</p>
 </div>
 <div id="comment-25527-info" class="comment-info">
 <span class="comment-age">(17 Aug '13, 23:36)</span> <span class="comment-user userinfo">stefanct</span>

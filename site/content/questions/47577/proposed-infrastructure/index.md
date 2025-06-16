@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would say "map as railway=abandoned,proposed=cycleway", and change to "construction=cycleway", eventually "highway=cycleway" (if it happens to proceed). See also the <a href="http://wiki.openstreetmap.org/wiki/Key:proposed">"proposed"</a> tag.</p>
+<p>I would say "map as railway=abandoned,proposed=cycleway", and change to "construction=cycleway", eventually "highway=cycleway" (if it happens to proceed). See also the <a href="https://wiki.openstreetmap.org/wiki/Key:proposed">"proposed"</a> tag.</p>
 <p>If this proposed trail is a major feature, I wouldn't hesitate to map it: proposed major roads are also mapped in OSM.</p>
 </div>
 <div class="answer-controls post-controls">

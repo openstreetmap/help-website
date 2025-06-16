@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi there are times when I would like to be able to select a length of a bendy way and apply a bezier function to smooth and then allow me to make further adjustments as necessary. Currently I add extra points drag around until satisfied. Creeks are a prime target that I can see in my area. Is this available in any of the editors for me to try. I am using JOSM and it seems not to have this feature or a plugin. I guess drawbacks may be that such functions would tend to add far more nodes that necessary and some may find it difficult to resist 'prettying' up their map and losing authenticity. I should add that I am not that familiar with doing this practically with mapping, so feel free to express contrary views to such a feature.</p>
 <hr />
-<p>edit: just found further info <a href="http://wiki.openstreetmap.org/wiki/Bezier_curves">bezier curves osm</a></p>
+<p>edit: just found further info <a href="https://wiki.openstreetmap.org/wiki/Bezier_curves">bezier curves osm</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bezier" rel="tag" title="see questions tagged &#39;bezier&#39;">bezier</span> <span class="post-tag tag-link-editors" rel="tag" title="see questions tagged &#39;editors&#39;">editors</span> <span class="post-tag tag-link-smooth-curves" rel="tag" title="see questions tagged &#39;smooth-curves&#39;">smooth-curves</span>
@@ -111,7 +111,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Just add enough points so that the way follows the shape of the feature, and don't worry too much about making it smooth. Renderers can smooth out the curves later. For example, have a look at:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/#map=18/56.31251/-4.72841">http://www.openstreetmap.org/#map=18/56.31251/-4.72841</a> - raw OSM data</li>
+<li><a href="https://www.openstreetmap.org/#map=18/56.31251/-4.72841">https://www.openstreetmap.org/#map=18/56.31251/-4.72841</a> - raw OSM data</li>
 <li><a href="http://www.opencyclemap.org/?zoom=17&amp;lat=56.31223&amp;lon=-4.728&amp;layers=000B">http://www.opencyclemap.org/?zoom=17&amp;lat=56.31223&amp;lon=-4.728&amp;layers=000B</a> - smoothed rivers and railways on my Outdoors layer.</li>
 </ul>
 <p>There's always plenty more things to map rather than spending excessive time on one particular feature! My rule of thumb is that if there's enough nodes that the edges stay within the width of the road on background imagery, that's enough. Alternatively, if the displacement of the midpoint of each pair of nodes from the real feature is less than 2 metres, that's enough too. Beyond that is usually just adding nodes without adding any real information.</p>

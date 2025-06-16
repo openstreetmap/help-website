@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Traffic Signals are tags on a node in a way, not a building. If you look at <a href="http://www.openstreetmap.org/?lat=43.1653395295143&amp;lon=-77.6912301778793&amp;zoom=17">these roads near Rochester, NY</a>, you will see the traffic lights are actually placed at a node in the way. In fact, the <a href="http://www.openstreetmap.org/browse/node/212668235">node that forms the 5 point junction</a> is tagged as "highway=traffic_signals".</p>
+<p>Traffic Signals are tags on a node in a way, not a building. If you look at <a href="https://www.openstreetmap.org/?lat=43.1653395295143&amp;lon=-77.6912301778793&amp;zoom=17">these roads near Rochester, NY</a>, you will see the traffic lights are actually placed at a node in the way. In fact, the <a href="https://www.openstreetmap.org/browse/node/212668235">node that forms the 5 point junction</a> is tagged as "highway=traffic_signals".</p>
 <p>The basic procedure for adding a traffic signal to a way is</p>
 <ol>
 <li>Start Potchlatch</li>

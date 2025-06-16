@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Canada as an <a href="http://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines#Mail_Box">established tagging scheme</a> for those. Until it, these use the normal amenity=post_box (because the Canadian ones, at least allow mail to be posted there, though smaller than at the traditional boxes), with the <code>type=cmb</code> identifying them. <a href="http://www.openstreetmap.org/browse/node/322886298">Here's one.</a></p>
+<p>Canada as an <a href="https://wiki.openstreetmap.org/wiki/Canadian_tagging_guidelines#Mail_Box">established tagging scheme</a> for those. Until it, these use the normal amenity=post_box (because the Canadian ones, at least allow mail to be posted there, though smaller than at the traditional boxes), with the <code>type=cmb</code> identifying them. <a href="https://www.openstreetmap.org/browse/node/322886298">Here's one.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

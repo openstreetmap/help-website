@@ -104,7 +104,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>ok, we have places, we have some airports, but "cloud"? I'm not sure I can follow you.</p>
 <p>What about buildings? If you don't need them then you don't want to convert a whole planet file either.</p>
-<p>BTW: Did you think about commercial OSM services before? Some of these companies might be able to help you with your requirement, see <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for contacts.</p>
+<p>BTW: Did you think about commercial OSM services before? Some of these companies might be able to help you with your requirement, see <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for contacts.</p>
 </div>
 <div id="comment-37038-info" class="comment-info">
 <span class="comment-age">(24 Sep '14, 19:42)</span> <span class="comment-user userinfo">mmd</span>

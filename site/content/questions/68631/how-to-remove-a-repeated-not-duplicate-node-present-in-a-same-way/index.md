@@ -41,10 +41,10 @@ osqa_accepted = false
 <div class="question-body">
 <p>I am working on importing a number of ways obtained as a result of vectorizing of a raster map. Because of the nature of the source data and as a result of chosen curve smoothing algorithm there are many cases when a single way intersects itself. In general, self-intersection has no automatic resolution in e.g. JOSM and requires human intervention, which in my case would be many hundreds of edits.</p>
 <p>However, in my case it is always a very specific type of self-intersection that should rather be described as a "self-touching way". Let me illustrate it.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/self-touching.JPG" alt="intersection" /></p>
+<p><img src="/upfiles/self-touching.JPG" alt="intersection" /></p>
 <p>On the image above pay attention that there is a node an the intersection point, at direction of individual segments make it so that the right part of the "eight"-like figure touches the left part of it in that point. So it is not two duplicate notes (different IDs but same coordinates) but rather a single node (the same ID) that is present two times in a same way. Inspecting the OSM XML confirms this observation.</p>
 <p>An algorithmic solution that is possible in this case is to remove one occurrence of that repeating node from the way. The result of such transformation for my example is below:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/split.JPG" alt="split" /></p>
+<p><img src="/upfiles/split.JPG" alt="split" /></p>
 <p>This transformation reaches the goal of preserving a "waistline" in the eight-shaped polygon, only making it slightly "thicker". This is an acceptable approximation given the resolution of the original raster data and noise already present in it.</p>
 <p>The same effect can be achieved manually: a) duplicate the node, b) delete one of the copied nodes.</p>
 <p>Such a solution is fine for my application and is guaranteed to create no new self-intersections because of the way the polygon is oriented (orientation of the top circle and the bottom circle always match).</p>

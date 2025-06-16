@@ -145,7 +145,7 @@ One Answer:
 <div id="post-32004-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yep, the <a href="http://www.openstreetmap.org/relation/188825">relation 188825</a> is pretty much useless :(</p>
+<p>Yep, the <a href="https://www.openstreetmap.org/relation/188825">relation 188825</a> is pretty much useless :(</p>
 </div>
 <div id="comment-32004-info" class="comment-info">
 <span class="comment-age">(30 Mar '14, 18:24)</span> <span class="comment-user userinfo">scai ♦</span>

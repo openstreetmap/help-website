@@ -111,7 +111,7 @@ One Answer:
 <li>Add a similar note in <a href="http://www.mapdust.com/">mapdust</a> or <a href="http://openstreetbugs.schokokeks.org/">openstreetbug</a>.</li>
 </ul>
 <p>All these notes can be searched for using various websites and editor features. Note that there is no point in adding a note for something that can already be automatically detected, such as a missing street name.</p>
-<p>Concerning the "problems in my area" question, I do not think that maproulette plans on adding that feature. It is purposefully limiting itself to problems that can be fixed by an armchair mapper, after all. On the other hand, maproulette is (or will soon be) fed by <a href="http://wiki.openstreetmap.org/wiki/QA">QA tools</a> such as <a href="http://keepright.at/">keeprigth</a> and <a href="http://tools.geofabrik.de/osmi/">osmi</a>. Take a look at your area using all these tools and you'll probably find many more things to fix.</p>
+<p>Concerning the "problems in my area" question, I do not think that maproulette plans on adding that feature. It is purposefully limiting itself to problems that can be fixed by an armchair mapper, after all. On the other hand, maproulette is (or will soon be) fed by <a href="https://wiki.openstreetmap.org/wiki/QA">QA tools</a> such as <a href="http://keepright.at/">keeprigth</a> and <a href="http://tools.geofabrik.de/osmi/">osmi</a>. Take a look at your area using all these tools and you'll probably find many more things to fix.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

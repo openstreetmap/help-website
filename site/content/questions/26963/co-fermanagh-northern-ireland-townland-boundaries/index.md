@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The OSM Irish community have an active project to map townland boundaries. See this <a href="http://www.irelandxo.com/node/10127">post</a> from last year. A listing of townlands which have already been mapped is available at : <a href="http://www.celtic-knot-creator.com/townland/">http://www.celtic-knot-creator.com/townland/</a>. I don't know if this site is up-to-date. Townlands are mapped as boundaries with <code>admin_level=10</code>.</p>
-<p>Currently a number of Irish mappers (including <a href="http://www.openstreetmap.org/user/rorym/edits">rorym</a>, <a href="http://www.openstreetmap.org/user/mackerski">mackerski</a>, and <a href="http://www.openstreetmap.org/user/ManAboutCouch">ManaboutCouch</a>) are working to rectify and tile military maps of Ireland (GSGS3906) from the early 20th century which show townland boundaries. You can see the <a href="http://maps.openstreetmap.ie/oocmaps.html?zoom=8&amp;lat=53.55822&amp;lon=-7.85303&amp;layers=000BFFFFFFFF">current state</a> of these maps at the OpenStreetMap Ireland website. At the moment it is mainly South Leinster which has the best coverage. It is probably best to wait until this process is completed as adding individual townland boundaries will otherwise be a painstaking project.</p>
+<p>Currently a number of Irish mappers (including <a href="https://www.openstreetmap.org/user/rorym/edits">rorym</a>, <a href="https://www.openstreetmap.org/user/mackerski">mackerski</a>, and <a href="https://www.openstreetmap.org/user/ManAboutCouch">ManaboutCouch</a>) are working to rectify and tile military maps of Ireland (GSGS3906) from the early 20th century which show townland boundaries. You can see the <a href="http://maps.openstreetmap.ie/oocmaps.html?zoom=8&amp;lat=53.55822&amp;lon=-7.85303&amp;layers=000BFFFFFFFF">current state</a> of these maps at the OpenStreetMap Ireland website. At the moment it is mainly South Leinster which has the best coverage. It is probably best to wait until this process is completed as adding individual townland boundaries will otherwise be a painstaking project.</p>
 <p>The best way to find out more &amp; how you can help is to ask on the all Ireland mailing list (talk-ie) or on the IRC channel for Ireland #osm-ie, or contact one of the mappers mentioned above directly.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,12 +156,12 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>User <a href="http://help.openstreetmap.org/users/5669/dacor">@DaCor</a> has spend a lot of time writing documentation and has created a large amount of screencasts that explain it all.</p>
+<p>User <a href="https://help.openstreetmap.org/users/5669/dacor">@DaCor</a> has spend a lot of time writing documentation and has created a large amount of screencasts that explain it all.</p>
 <ul>
-<li>Documentation: <a href="http://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">http://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands</a></li>
+<li>Documentation: <a href="https://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">https://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands</a></li>
 <li>Screencasts: <a href="https://www.youtube.com/playlist?list=PLwUy6ph8y4kFO8mmUgv87f16e4dxRh8NV">https://www.youtube.com/playlist?list=PLwUy6ph8y4kFO8mmUgv87f16e4dxRh8NV</a></li>
 </ul>
-<p>There's also <a href="http://www.townlands.ie/">Townlands.ie</a> which shows the townlands (etc) that are mapped. It's updated every day. <a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a> gave the old link.</p>
+<p>There's also <a href="http://www.townlands.ie/">Townlands.ie</a> which shows the townlands (etc) that are mapped. It's updated every day. <a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a> gave the old link.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

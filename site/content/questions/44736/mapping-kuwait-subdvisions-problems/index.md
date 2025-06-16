@@ -75,8 +75,8 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>So you say: I need a solution that will show both the block number and the area name in addresses.</p>
-<p>Where does this "show" take place? as a result on any geocoding service like the ones listet at <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> ?</p>
-<p>And about correct tagging of each house with an address: I think we need looking at <a href="http://wiki.openstreetmap.org/wiki/Addresses">http://wiki.openstreetmap.org/wiki/Addresses</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a></p>
+<p>Where does this "show" take place? as a result on any geocoding service like the ones listet at <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> ?</p>
+<p>And about correct tagging of each house with an address: I think we need looking at <a href="https://wiki.openstreetmap.org/wiki/Addresses">https://wiki.openstreetmap.org/wiki/Addresses</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a></p>
 <p>There we have tags like addr:suburb, addr:district or addr:subdistrict</p>
 <p>Can that be helpful?</p>
 </div>
@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-44745-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/99/stephan75"></a><a href="http://help.openstreetmap.org/users/99/stephan75">@Stephan75</a> That's what I am trying to achieve. As for your second comment, I was thinking about services like Mapquest, when the user righ-clicks somewhere, the pop-up will tell them that they're in Street X, Area, Governorate, Kuwait, which wouldn't be much useful. If we could remove the governorate and put the block number before the area that'd be problem solved.</p>
+<p><a href="https://help.openstreetmap.org/users/99/stephan75"></a><a href="https://help.openstreetmap.org/users/99/stephan75">@Stephan75</a> That's what I am trying to achieve. As for your second comment, I was thinking about services like Mapquest, when the user righ-clicks somewhere, the pop-up will tell them that they're in Street X, Area, Governorate, Kuwait, which wouldn't be much useful. If we could remove the governorate and put the block number before the area that'd be problem solved.</p>
 </div>
 <div id="comment-44745-info" class="comment-info">
 <span class="comment-age">(12 Aug '15, 18:01)</span> <span class="comment-user userinfo">Kuwaity26</span>
@@ -188,7 +188,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag%3Aplace%3Dcity_block">place=city_block</a> has <a href="http://taginfo.openstreetmap.org/tags/place=city_block#overview">some usage</a> (~4000). People have sometimes used it as a point, sometimes as an area. It's not clear to me how/if Nominatim or the standard rendering handle it. But it seems most important to get the data in, then you can figure out the rest.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag%3Aplace%3Dcity_block">place=city_block</a> has <a href="http://taginfo.openstreetmap.org/tags/place=city_block#overview">some usage</a> (~4000). People have sometimes used it as a point, sometimes as an area. It's not clear to me how/if Nominatim or the standard rendering handle it. But it seems most important to get the data in, then you can figure out the rest.</p>
 <p>On a related note, <a href="http://taginfo.openstreetmap.org/keys/addr%3Ablock_number">addr:block_number</a> is used quite a bit (~20K) in Japan on individual addresses.</p>
 </div>
 <div class="answer-controls post-controls">

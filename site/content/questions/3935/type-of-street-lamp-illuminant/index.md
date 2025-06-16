@@ -190,7 +190,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Also consider looking at a new proposed feature <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/lamp">lamp</a>. Under that scheme you would map it as <strong>lamp:light=mercury</strong>. That proposal also has many other options for adding detail, like the shape of the light produced, power source, color, and more. And if you think there's something wrong with the scheme, please add your comments to the talk page.</p>
+<p>Also consider looking at a new proposed feature <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/lamp">lamp</a>. Under that scheme you would map it as <strong>lamp:light=mercury</strong>. That proposal also has many other options for adding detail, like the shape of the light produced, power source, color, and more. And if you think there's something wrong with the scheme, please add your comments to the talk page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

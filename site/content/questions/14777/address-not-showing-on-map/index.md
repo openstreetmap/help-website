@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "address not showing on map"
-description = '''I added 2 entrances with addresses to a building. One of them appears when I look at the map but not the other. I don&#x27;t see any difference between them. Can someone tell me if I&#x27;ve done something wrong? Here is the link: http://www.openstreetmap.org/?lat=38.903014&amp;amp;lon=-77.038619&amp;amp;zoom=18&amp;amp;...'''
+description = '''I added 2 entrances with addresses to a building. One of them appears when I look at the map but not the other. I don&#x27;t see any difference between them. Can someone tell me if I&#x27;ve done something wrong? Here is the link: https://www.openstreetmap.org/?lat=38.903014&amp;amp;lon=-77.038619&amp;amp;zoom=18&amp;amp;...'''
 date = "2012-08-02T02:08:00Z"
 lastmod = "2012-08-02T10:38:00Z"
 weight = 14777
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I added 2 entrances with addresses to a building. One of them appears when I look at the map but not the other. I don't see any difference between them. Can someone tell me if I've done something wrong? Here is the link: <a href="http://www.openstreetmap.org/?lat=38.903014&amp;lon=-77.038619&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=38.903014&amp;lon=-77.038619&amp;zoom=18&amp;layers=M</a></p>
+<p>I added 2 entrances with addresses to a building. One of them appears when I look at the map but not the other. I don't see any difference between them. Can someone tell me if I've done something wrong? Here is the link: <a href="https://www.openstreetmap.org/?lat=38.903014&amp;lon=-77.038619&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=38.903014&amp;lon=-77.038619&amp;zoom=18&amp;layers=M</a></p>
 <p>The nodes I added are: 1840518774 (does not appear) and 1840535446 (does appear)</p>
 <p>Thanks.</p>
 </div>
@@ -107,7 +107,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Mapnik - the rendering program that creates this map from your data - will drop names and house numbers if they would intersect with some other icon or label on the map. It is likely that Mapnik tries to avoid a visual conflict with the "Dress Barn Woman" label in this case.</p>
-<p>I do not see any problem with your tagging. (Except maybe the use of <a href="http://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">abbreviations</a>, but that has nothing to do with the issue at hand.)</p>
+<p>I do not see any problem with your tagging. (Except maybe the use of <a href="https://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">abbreviations</a>, but that has nothing to do with the issue at hand.)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

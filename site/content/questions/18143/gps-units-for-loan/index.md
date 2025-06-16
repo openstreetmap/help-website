@@ -157,7 +157,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe it is not the best answer, but for a first try you could ask the <a href="http://wiki.openstreetmap.org/wiki/HOT">Humanitarian OSM Team</a>. Th email address is info@hotosm.org .<br />
+<p>Maybe it is not the best answer, but for a first try you could ask the <a href="https://wiki.openstreetmap.org/wiki/HOT">Humanitarian OSM Team</a>. Th email address is info@hotosm.org .<br />
 </p>
 <p>Regards<br />
 malenki</p>

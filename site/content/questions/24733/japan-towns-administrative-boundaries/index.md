@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-24736-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have problems understanding your question. As far as i understand, you have a list of openstreetmap nodes that represent towns in japan, and you want to create a relation that collects them all? I would strongly oppose a relation "All towns in japan". The wiki states that relations are "not designed to hold loosely associated but widely spread items" ( <a href="http://wiki.openstreetmap.org/wiki/Relations#Usage">http://wiki.openstreetmap.org/wiki/Relations#Usage</a> ). So please do not create such a relation!</p>
+<p>I have problems understanding your question. As far as i understand, you have a list of openstreetmap nodes that represent towns in japan, and you want to create a relation that collects them all? I would strongly oppose a relation "All towns in japan". The wiki states that relations are "not designed to hold loosely associated but widely spread items" ( <a href="https://wiki.openstreetmap.org/wiki/Relations#Usage">https://wiki.openstreetmap.org/wiki/Relations#Usage</a> ). So please do not create such a relation!</p>
 </div>
 <div id="comment-24736-info" class="comment-info">
 <span class="comment-age">(30 Jul '13, 15:34)</span> <span class="comment-user userinfo">gormo</span>
@@ -90,7 +90,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Janani, do you mean you are looking for something like this relation (<a href="http://www.openstreetmap.org/browse/relation/2679947">http://www.openstreetmap.org/browse/relation/2679947</a> Tateyama-shi in Chiba-ken) where the node and administrative boundary are both in the relation?</p>
+<p>Janani, do you mean you are looking for something like this relation (<a href="https://www.openstreetmap.org/browse/relation/2679947">https://www.openstreetmap.org/browse/relation/2679947</a> Tateyama-shi in Chiba-ken) where the node and administrative boundary are both in the relation?</p>
 </div>
 <div id="comment-24756-info" class="comment-info">
 <span class="comment-age">(30 Jul '13, 20:58)</span> <span class="comment-user userinfo">neuhausr</span>

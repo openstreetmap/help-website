@@ -108,9 +108,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Rossendale,</p>
-<p>If it's a polygon, then it's a closed way in the OSM database. You can find ways by id as simple as this: <a href="http://www.openstreetmap.org/way/305293190">http://www.openstreetmap.org/way/305293190</a></p>
-<p>If a specific node (the building blocks of ways) is giving a problem, the link would be <a href="http://www.openstreetmap.org/node/305293190">http://www.openstreetmap.org/node/305293190</a> .</p>
-<p>If it is a multipolygon (for example a building with a hole in it), the link would be <a href="http://www.openstreetmap.org/relation/305293190">http://www.openstreetmap.org/relation/305293190</a></p>
+<p>If it's a polygon, then it's a closed way in the OSM database. You can find ways by id as simple as this: <a href="https://www.openstreetmap.org/way/305293190">https://www.openstreetmap.org/way/305293190</a></p>
+<p>If a specific node (the building blocks of ways) is giving a problem, the link would be <a href="https://www.openstreetmap.org/node/305293190">https://www.openstreetmap.org/node/305293190</a> .</p>
+<p>If it is a multipolygon (for example a building with a hole in it), the link would be <a href="https://www.openstreetmap.org/relation/305293190">https://www.openstreetmap.org/relation/305293190</a></p>
 <p>I don't think your case is an error, but that would be the subject of a different question.</p>
 </div>
 <div class="answer-controls post-controls">

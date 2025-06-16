@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could try using a <a href="http://wiki.openstreetmap.org/wiki/Karlsruhe_Schema#Giving_hints_about_the_road-access_.28optional.29">roadAccess relation</a> although I'm not sure how many routing applications are aware of them, as there <a href="http://taginfo.openstreetmap.org/relations/roadAccess">aren't many in use</a>.</p>
+<p>You could try using a <a href="https://wiki.openstreetmap.org/wiki/Karlsruhe_Schema#Giving_hints_about_the_road-access_.28optional.29">roadAccess relation</a> although I'm not sure how many routing applications are aware of them, as there <a href="http://taginfo.openstreetmap.org/relations/roadAccess">aren't many in use</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

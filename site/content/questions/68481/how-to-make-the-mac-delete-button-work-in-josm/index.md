@@ -112,14 +112,14 @@ One Answer:
 <li>Select "Edit: Delete" and choose "Backspace" in the "Key" dropdown (usually near the top; you can also sequentially type "backs..." to jump to the correct entry).</li>
 <li>Click "OK"</li>
 </ul>
-<p><img src="https://help.openstreetmap.org/upfiles/josm-delete-linux_.png" alt="JOSM preferences on Linux" /></p>
+<p><img src="/upfiles/josm-delete-linux_.png" alt="JOSM preferences on Linux" /></p>
 <p><strong>When running JOSM directly in MacOS</strong></p>
 <ul>
 <li>Go to Main -&gt; Preferences (or press command + ,), switch to the keyboard tab (at the time of this writing, the tiny icons on the left - 7th from the top) and enter "delete" in the "Search" field.</li>
 <li>Select "Edit: Delete" and choose the arrow-like object that points to the left with an X on it in the "Key" dropdown (usually near the top; there does not seem to be an easy way to jump to it).</li>
 <li>Click "OK"</li>
 </ul>
-<p><img src="https://help.openstreetmap.org/upfiles/josm-delete-macos.png" alt="JOSM preferences on MacOS" /></p>
+<p><img src="/upfiles/josm-delete-macos.png" alt="JOSM preferences on MacOS" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

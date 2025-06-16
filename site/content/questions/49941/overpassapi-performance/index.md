@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>HI,</p>
 <p>I am new to OverPassAPI, and setup in my local server(using apache). But the performance is very bad.</p>
 <p>When I call 100 threads parallel through interpreter, 6 or 7 threads only executed at a time. How do i configure for execute more threads in parallel and improve performance.</p>
-<p>cc:<a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a></p>
+<p>cc:<a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpassapi" rel="tag" title="see questions tagged &#39;overpassapi&#39;">overpassapi</span> <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-threads" rel="tag" title="see questions tagged &#39;threads&#39;">threads</span> <span class="post-tag tag-link-overpass-api" rel="tag" title="see questions tagged &#39;overpass-api&#39;">overpass-api</span> <span class="post-tag tag-link-performance" rel="tag" title="see questions tagged &#39;performance&#39;">performance</span>

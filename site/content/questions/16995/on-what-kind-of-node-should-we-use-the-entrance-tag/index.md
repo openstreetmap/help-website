@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Usually, just inserting an entrance node (<a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance=yes</a>, or entrance=main/service/... if there are multiple entrances) into the building outline is enough. Routing engines will lead you to the point on a street that is nearest to your target, even without a mapped direct connection. Usually, this produces the desired result.</p>
+<p>Usually, just inserting an entrance node (<a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrance=yes</a>, or entrance=main/service/... if there are multiple entrances) into the building outline is enough. Routing engines will lead you to the point on a street that is nearest to your target, even without a mapped direct connection. Usually, this produces the desired result.</p>
 <p>If you want to work at a very high level of detail, you can also add a path between the street and the entrance (if such a path exists in reality). In that case, the entrance node should be a shared node of that path and the building outline.</p>
 <p>There is no need to use any relations for mapping this situation.</p>
 </div>
@@ -169,7 +169,7 @@ osqa_accepted = false
 <blockquote>
 <p>How should i set up the relations between the road and the building in order for them to be connected?</p>
 </blockquote>
-<p>You just add <a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr: tags</a> to the node, with the name of the street. The connection between road and building is then only implicit (by the name of the street). There is also a relation to make this explicit (<a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Street),">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Street),</a> but it's not used frequently.</p>
+<p>You just add <a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr: tags</a> to the node, with the name of the street. The connection between road and building is then only implicit (by the name of the street). There is also a relation to make this explicit (<a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Street),">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Street),</a> but it's not used frequently.</p>
 <blockquote>
 <p>How should i use the entrance tag in order to make this link?</p>
 </blockquote>

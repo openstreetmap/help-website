@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>My list of providers disapeared after I installed the Knife-Tool plug-in that I read about in today's Weekly OSM. I tried uninstalling the plug-in, reinstalling OSM and re-booting the windows 10 pc with no luck.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Imagery_RSuvY6b.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Imagery_RSuvY6b.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-preferences" rel="tag" title="see questions tagged &#39;preferences&#39;">preferences</span> <span class="post-tag tag-link-windows10" rel="tag" title="see questions tagged &#39;windows10&#39;">windows10</span>

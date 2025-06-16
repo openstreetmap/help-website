@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "my last 3 edits disapeared"
-description = '''Hi, I&#x27;ve done 3 edits today using JOSM. They were visible during a few hours and now everything is gone (those of yesterday also). http://www.openstreetmap.org/user/Leodium/edits It looks like somebody restored the image from a few days back. Any idea ? thanks'''
+description = '''Hi, I&#x27;ve done 3 edits today using JOSM. They were visible during a few hours and now everything is gone (those of yesterday also). https://www.openstreetmap.org/user/Leodium/edits It looks like somebody restored the image from a few days back. Any idea ? thanks'''
 date = "2013-01-04T17:56:00Z"
 lastmod = "2013-01-04T18:15:00Z"
 weight = 18846
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I've done 3 edits today using JOSM. They were visible during a few hours and now everything is gone (those of yesterday also). <a href="http://www.openstreetmap.org/user/Leodium/edits">http://www.openstreetmap.org/user/Leodium/edits</a></p>
+<p>I've done 3 edits today using JOSM. They were visible during a few hours and now everything is gone (those of yesterday also). <a href="https://www.openstreetmap.org/user/Leodium/edits">https://www.openstreetmap.org/user/Leodium/edits</a></p>
 <p>It looks like somebody restored the image from a few days back. Any idea ?</p>
 <p>thanks</p>
 </div>
@@ -135,7 +135,7 @@ One Answer:
 <div id="post-18848-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@Leodium</span>: To clarify: as long as you see the data / your edits and the edited objects in <a href="http://www.openstreetmap.org/user/Leodium/edits">http://www.openstreetmap.org/user/Leodium/edits</a> and while editing everything is fine - just wait. Also see <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F</a></p>
+<p><span>@Leodium</span>: To clarify: as long as you see the data / your edits and the edited objects in <a href="https://www.openstreetmap.org/user/Leodium/edits">https://www.openstreetmap.org/user/Leodium/edits</a> and while editing everything is fine - just wait. Also see <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F</a></p>
 </div>
 <div id="comment-18848-info" class="comment-info">
 <span class="comment-age">(04 Jan '13, 18:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

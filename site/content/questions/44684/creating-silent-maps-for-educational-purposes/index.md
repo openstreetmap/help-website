@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can find another approach via <a href="http://wiki.openstreetmap.org/wiki/Vector_tiles">Vector Tiles</a> ...</p>
+<p>Maybe you can find another approach via <a href="https://wiki.openstreetmap.org/wiki/Vector_tiles">Vector Tiles</a> ...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

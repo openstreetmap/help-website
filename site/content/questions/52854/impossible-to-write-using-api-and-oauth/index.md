@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "impossible to write using API and OAuth"
-description = '''Hello, I have build my own OSM server, then I am testing how to modify data on real OSM web sites before doing it on my own server. I followed the russian PHP example available at the end of this page : http://wiki.openstreetmap.org/wiki/OAuth/examples So everything works until I try to write in OSM...'''
+description = '''Hello, I have build my own OSM server, then I am testing how to modify data on real OSM web sites before doing it on my own server. I followed the russian PHP example available at the end of this page : https://wiki.openstreetmap.org/wiki/OAuth/examples So everything works until I try to write in OSM...'''
 date = "2016-11-07T10:30:00Z"
 lastmod = "2016-11-07T20:31:00Z"
 weight = 52854
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I have build my own OSM server, then I am testing how to modify data on real OSM web sites before doing it on my own server.</p>
-<p>I followed the russian PHP example available at the end of this page : <a href="http://wiki.openstreetmap.org/wiki/OAuth/examples">http://wiki.openstreetmap.org/wiki/OAuth/examples</a></p>
+<p>I followed the russian PHP example available at the end of this page : <a href="https://wiki.openstreetmap.org/wiki/OAuth/examples">https://wiki.openstreetmap.org/wiki/OAuth/examples</a></p>
 <p>So everything works until I try to write in OSM web site, neither in the development osm server (<a href="http://api06.dev.openstreetmap.org">http://api06.dev.openstreetmap.org</a>) nor in the production osm server (<a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>).</p>
 <p>Each time I am doing a PUT request, it fails with a '401 Unauthorized' message.</p>
 <p>Can somebody help me ?</p>

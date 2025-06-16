@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Shapefiles">http://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Shapefiles">https://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

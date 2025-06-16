@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Not sure if my maps are displaying correctly but everything seems to be blanked out as seen in the attached image. this is my first GPS so im not quite sure but i have been trying to figure this out for day now please help!<img src="http://help.openstreetmap.org/upfiles/778_W0biMJo.bmp" alt="alt text" /></p>
+<p>Not sure if my maps are displaying correctly but everything seems to be blanked out as seen in the attached image. this is my first GPS so im not quite sure but i have been trying to figure this out for day now please help!<img src="/upfiles/778_W0biMJo.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-dakota20" rel="tag" title="see questions tagged &#39;dakota20&#39;">dakota20</span> <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span>

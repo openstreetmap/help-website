@@ -119,8 +119,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think every thing you need is explained here .. <a href="http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs</a></p>
-<p>if it's for data, I believe you're looking for XAPI... <a href="http://wiki.openstreetmap.org/wiki/XAPI">http://wiki.openstreetmap.org/wiki/XAPI</a></p>
+<p>I think every thing you need is explained here .. <a href="https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs">https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs</a></p>
+<p>if it's for data, I believe you're looking for XAPI... <a href="https://wiki.openstreetmap.org/wiki/XAPI">https://wiki.openstreetmap.org/wiki/XAPI</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

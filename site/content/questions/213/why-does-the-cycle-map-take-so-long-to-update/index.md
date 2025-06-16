@@ -119,7 +119,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://www.openstreetmap.org/?layers=00B0FTF">cycle layer</a> is based on <a href="http://opencyclemap.org/"></a><a href="http://opencyclemap.org/"></a><a href="http://opencyclemap.org/">http://opencyclemap.org/</a> which is created by <a href="http://www.gravitystorm.co.uk/">Andy Allan</a> and Dave Stubbs in their spare time.</p>
+<p>The <a href="https://www.openstreetmap.org/?layers=00B0FTF">cycle layer</a> is based on <a href="http://opencyclemap.org/"></a><a href="http://opencyclemap.org/"></a><a href="http://opencyclemap.org/">http://opencyclemap.org/</a> which is created by <a href="http://www.gravitystorm.co.uk/">Andy Allan</a> and Dave Stubbs in their spare time.</p>
 <p>While resources are donated by <a href="http://cloudmade.com">cloudmade</a>, it is exactly that: a spare time hobby project. Also, I believe updating is a very resource-intensive process with parsing all the height data and stuff, so it can't just rerender things every day.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -227,7 +227,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>It's no longer quite the case - see <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">the wiki</a>.</p>
+<p>It's no longer quite the case - see <a href="https://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">the wiki</a>.</p>
 </div>
 <div id="comment-3968-info" class="comment-info">
 <span class="comment-age">(22 Mar '11, 09:04)</span> <span class="comment-user userinfo">Andy Allan</span>

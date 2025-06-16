@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Transmission line as part relation (administrative)"
-description = '''The link below points is a case where the neighborhood limit (administrative) coincides with a transmission line. http://www.openstreetmap.org/edit#map=20/-20.53192/-54.61887 Can I use part of this line (including in relation to the neighborhood) as a limit? Doubt is the fact that the transmission l...'''
+description = '''The link below points is a case where the neighborhood limit (administrative) coincides with a transmission line. https://www.openstreetmap.org/edit#map=20/-20.53192/-54.61887 Can I use part of this line (including in relation to the neighborhood) as a limit? Doubt is the fact that the transmission l...'''
 date = "2015-12-11T00:45:00Z"
 lastmod = "2015-12-11T22:19:00Z"
 weight = 47091
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>The link below points is a case where the neighborhood limit (administrative) coincides with a transmission line.</p>
-<p><a href="http://www.openstreetmap.org/edit#map=20/-20.53192/-54.61887">http://www.openstreetmap.org/edit#map=20/-20.53192/-54.61887</a></p>
+<p><a href="https://www.openstreetmap.org/edit#map=20/-20.53192/-54.61887">https://www.openstreetmap.org/edit#map=20/-20.53192/-54.61887</a></p>
 <p>Can I use part of this line (including in relation to the neighborhood) as a limit?</p>
 <p>Doubt is the fact that the transmission line be air and the limit neighborhood, though imaginary, earthly being (one is on top and the other is down).</p>
 <p>See which already has a line on site, which is part of the relationship between neighborhoods and is correct because it is two-way street, with flower bed in the middle.</p>
@@ -134,7 +134,7 @@ osqa_accepted = true
 <div id="post-47116-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>, thanks for your answer.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>, thanks for your answer.</p>
 </div>
 <div id="comment-47116-info" class="comment-info">
 <span class="comment-age">(11 Dec '15, 22:19)</span> <span class="comment-user userinfo">seth</span>

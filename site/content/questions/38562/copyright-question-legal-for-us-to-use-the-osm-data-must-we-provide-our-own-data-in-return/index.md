@@ -149,7 +149,7 @@ osqa_accepted = false
 <li>Have a separate private database with your proprietary data. From your question it seems that the depth data is the only thing you need to keep private.</li>
 <li>Submit all your road, buildings, shops, pubs, ATM and shoreline data updates to OSM.</li>
 </ol>
-<p>When you make your actual map(s), pull data from both OSM and your private data. In this case your map is being created with "collective data" per <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">http://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F</a> as you really don't need to transform the OSM data to merge it with your proprietary data. You are likely to simply use the OSM data as a base layer and then add a layer on top of that with your depth information.</p>
+<p>When you make your actual map(s), pull data from both OSM and your private data. In this case your map is being created with "collective data" per <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">https://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F</a> as you really don't need to transform the OSM data to merge it with your proprietary data. You are likely to simply use the OSM data as a base layer and then add a layer on top of that with your depth information.</p>
 <p>You will, of course, need to acknowledge the source of the OSM data to use it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -269,7 +269,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Openstreetmap data is free for to you to use, but we would like you to mention that you have part used osm data for the charts. We would appreciate useful additions to osm but it you don't have to, If you do add to OSM please do not copy stuff from copyrighted sources, such as aerial imagery (other then the Bing we can use in our editors), as it must not be used to add to OSM. Good Luck with your interesting project. EDIT Re Awakes comment here's a link to Bing terms <a href="http://wiki.openstreetmap.org/wiki/Bing#Bing_Aerial_Imagery">http://wiki.openstreetmap.org/wiki/Bing#Bing_Aerial_Imagery</a> if you add to OSM from other sources please read our wiki about copyright issues first.</p>
+<p>Openstreetmap data is free for to you to use, but we would like you to mention that you have part used osm data for the charts. We would appreciate useful additions to osm but it you don't have to, If you do add to OSM please do not copy stuff from copyrighted sources, such as aerial imagery (other then the Bing we can use in our editors), as it must not be used to add to OSM. Good Luck with your interesting project. EDIT Re Awakes comment here's a link to Bing terms <a href="https://wiki.openstreetmap.org/wiki/Bing#Bing_Aerial_Imagery">https://wiki.openstreetmap.org/wiki/Bing#Bing_Aerial_Imagery</a> if you add to OSM from other sources please read our wiki about copyright issues first.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

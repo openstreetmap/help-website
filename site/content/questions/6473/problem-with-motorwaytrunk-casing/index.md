@@ -80,7 +80,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>This seems to be a specific problem at a higher level of data processing.</p>
-<p>Maybe you can find better help at one of the OSM Mailing lists ( <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a> ) or at the OSM forum, see <a href="http://forum.osm.org">http://forum.osm.org</a></p>
+<p>Maybe you can find better help at one of the OSM Mailing lists ( <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a> ) or at the OSM forum, see <a href="http://forum.osm.org">http://forum.osm.org</a></p>
 </div>
 <div id="comment-6480-info" class="comment-info">
 <span class="comment-age">(21 Jul '11, 16:39)</span> <span class="comment-user userinfo">stephan75</span>

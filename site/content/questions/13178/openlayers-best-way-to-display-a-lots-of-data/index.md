@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Duplicate_nodes_map">duplicate nodes map</a> is an example of a map where a lot of vector data is first rendered onto transparent tiles and then sent to the browser.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Duplicate_nodes_map">duplicate nodes map</a> is an example of a map where a lot of vector data is first rendered onto transparent tiles and then sent to the browser.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

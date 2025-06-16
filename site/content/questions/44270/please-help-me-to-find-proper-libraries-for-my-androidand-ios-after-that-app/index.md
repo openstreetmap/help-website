@@ -96,7 +96,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>First of all, <a href="http://wiki.openstreetmap.org/wiki/API">openstreetmap.org's API</a> is for editing. You're not building a map editor, so it's not relevant to you. You will need to use third-party components based on OSM data. As it happens, since you want offline use, online "APIs" per se probably aren't much use.</p>
+<p>First of all, <a href="https://wiki.openstreetmap.org/wiki/API">openstreetmap.org's API</a> is for editing. You're not building a map editor, so it's not relevant to you. You will need to use third-party components based on OSM data. As it happens, since you want offline use, online "APIs" per se probably aren't much use.</p>
 <p>As SomeoneElse said, you need to break the question into parts - you have asked for simply too much. But at a very rough stab, look at GraphHopper for routing, and the Mapbox SDKs for map display. Traffic information is not included in OSM, nor are public transport timetables. I don't know of any modern, common library that uses the same info for map display and for routing.</p>
 </div>
 <div id="comment-44285-info" class="comment-info">
@@ -324,7 +324,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi youyeg, two rules for this forum; its specific for OSM troubles, not for developers and theyre troubleshooting. ask one question at the time, so that you end up whith an clear answer to your question. Greetz Ps Try to ask or take a look here <a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a></p>
+<p>Hi youyeg, two rules for this forum; its specific for OSM troubles, not for developers and theyre troubleshooting. ask one question at the time, so that you end up whith an clear answer to your question. Greetz Ps Try to ask or take a look here <a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

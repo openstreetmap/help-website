@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I often like to use upload notes from my phone, via OsmAnd's "Open OSM Note" feature. This works well to make notes about things to add later from my computer, combined with the phone's GPS this makes a really useful tool.</p>
 <p>I did a bicycle trip of a few days, a little while back, and am in the process of going through the notes I made, and adding the details to the map. I've took 200-300 notes, most of them are over a distance of a couple hundred km. Some I just look at my phone, and add the relevant details to the map, others it is more accurate to upload the note to the OSM's servers, and then download them to a JOSM layer.</p>
-<p>Should I be worried about "spamming" the OSM servers with notes of little importance? I was looking at my route and at the moment it looks pretty silly with <a href="http://www.openstreetmap.org/#map=10/49.6036/-122.0993&amp;layers=N">all those resolved notes</a>.</p>
+<p>Should I be worried about "spamming" the OSM servers with notes of little importance? I was looking at my route and at the moment it looks pretty silly with <a href="https://www.openstreetmap.org/#map=10/49.6036/-122.0993&amp;layers=N">all those resolved notes</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-notes" rel="tag" title="see questions tagged &#39;notes&#39;">notes</span> <span class="post-tag tag-link-mobile-editing" rel="tag" title="see questions tagged &#39;mobile-editing&#39;">mobile-editing</span> <span class="post-tag tag-link-bestpractice" rel="tag" title="see questions tagged &#39;bestpractice&#39;">bestpractice</span>

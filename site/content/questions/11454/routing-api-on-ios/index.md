@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki lists a few routing services: Online <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">http://wiki.openstreetmap.org/wiki/Routing/online_routers</a> and offline <a href="http://wiki.openstreetmap.org/wiki/Routing/offline_routers">http://wiki.openstreetmap.org/wiki/Routing/offline_routers</a></p>
+<p>The wiki lists a few routing services: Online <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">https://wiki.openstreetmap.org/wiki/Routing/online_routers</a> and offline <a href="https://wiki.openstreetmap.org/wiki/Routing/offline_routers">https://wiki.openstreetmap.org/wiki/Routing/offline_routers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

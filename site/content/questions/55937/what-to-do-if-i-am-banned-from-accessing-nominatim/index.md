@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You will get unbanned automatically after a couple of hours inactivity. You should take the time to read the <a href="https://operations.osmfoundation.org/policies/nominatim/">usage policy</a> very carefully and revisit your code to make sure that you comply with it.</p>
-<p>If automatic unbanning does not work for some reason, get in contact with one of the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">sysadmins</a>.</p>
+<p>If automatic unbanning does not work for some reason, get in contact with one of the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">sysadmins</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

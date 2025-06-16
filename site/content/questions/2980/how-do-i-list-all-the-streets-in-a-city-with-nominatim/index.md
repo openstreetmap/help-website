@@ -113,11 +113,11 @@ osqa_accepted = false
 <ol>
 <li><a href="http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.zip">download osmosis</a> (and perhaps <a href="http://osmembrane.de">osmembrane</a> which is a beta GUI for osmosis)</li>
 <li>download your country extract <a href="http://download.geofabrik.de/osm/europe/">netherlands.osm.pbf</a> (~430MB)</li>
-<li>create a <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">polygon file parseable</a> by osmois (see <a href="http://trac.openstreetmap.org/browser/applications/utils/osm-extract/polygons/osm2poly.pl">osm2polygon</a>)</li>
+<li>create a <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">polygon file parseable</a> by osmois (see <a href="http://trac.openstreetmap.org/browser/applications/utils/osm-extract/polygons/osm2poly.pl">osm2polygon</a>)</li>
 <li>run osmosis with the polygon and extract all ways that have the tags name=* and highway=residential
 <ol>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--way-key_.28--wk.29">way-key</a> name,highway</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">tag filter</a> reject-node, reject-relation</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--way-key_.28--wk.29">way-key</a> name,highway</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">tag filter</a> reject-node, reject-relation</li>
 </ol></li>
 </ol>
 <p>Then just filter out all the names in the resulting OSM xml file match all lines containing <code>k="name" v="</code> this can be done in many ways. Parsing Sweden (~70MB) with osmosis takes about 16 seconds on a 4 year old desktop machine..</p>

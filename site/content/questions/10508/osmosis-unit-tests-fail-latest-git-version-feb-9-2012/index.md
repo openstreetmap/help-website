@@ -150,7 +150,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This help forum is a place where we try to find answers of a general relevance, i.e. ideally answers that will be useful to other people than just you, and that will be valid over a longer period of time.</p>
-<p>On the <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis page in our Wiki</a>, under "getting help and reporting bugs", it says:</p>
+<p>On the <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis page in our Wiki</a>, under "getting help and reporting bugs", it says:</p>
 <pre><code>The best place to get answers to questions on osmosis usage is the osmosis dev mailing list.
 &#10;http://lists.openstreetmap.org/listinfo/osmosis-dev
 &#10;Please discuss potential bugs on the dev mailing list before creating new tickets. If you&#39;re confident you have discovered a bug, it can be logged in the OSM trac system against the &quot;osmosis&quot; component:

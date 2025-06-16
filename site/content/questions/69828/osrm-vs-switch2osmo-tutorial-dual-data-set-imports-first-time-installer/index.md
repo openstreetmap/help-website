@@ -65,7 +65,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/69829/appropriate-filter-parameters-for-optimal-vehicle-routing-first-time-installer/69847">this answer</a> to your other question.</p>
+<p>See <a href="/questions/69829/appropriate-filter-parameters-for-optimal-vehicle-routing-first-time-installer/69847">this answer</a> to your other question.</p>
 </div>
 <div id="comment-69848-info" class="comment-info">
 <span class="comment-age">(02 Jul '19, 15:08)</span> <span class="comment-user userinfo">scai ♦</span>

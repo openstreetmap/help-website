@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can i use Nominatim geocoding in commercial project. On nominatim usage policy <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a> is nothing about using it in commercial project only this:</p>
+<p>Can i use Nominatim geocoding in commercial project. On nominatim usage policy <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a> is nothing about using it in commercial project only this:</p>
 <blockquote>
 <p>Data is provided under the ODbL license which requires to share alike (although small extractions are likely to be covered by fair usage / fair dealing).</p>
 </blockquote>

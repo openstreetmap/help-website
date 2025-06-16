@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-79904-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(in case anyone hasn't seen it, this was also touched on in the discussion at <a href="https://help.openstreetmap.org/questions/79842/treatment-of-co-aligned-trails">https://help.openstreetmap.org/questions/79842/treatment-of-co-aligned-trails</a> )</p>
+<p>(in case anyone hasn't seen it, this was also touched on in the discussion at <a href="/questions/79842/treatment-of-co-aligned-trails">https://help.openstreetmap.org/questions/79842/treatment-of-co-aligned-trails</a> )</p>
 </div>
 <div id="comment-79904-info" class="comment-info">
 <span class="comment-age">(28 Apr '21, 16:14)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

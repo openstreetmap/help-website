@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Many maps around my area have the name of the location as clearly visible headings above the maps themselves. Should these be tagged using the <code>name</code> key?</p>
 <p>e.g.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/map_GJ9kDOD.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/map_GJ9kDOD.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-information" rel="tag" title="see questions tagged &#39;information&#39;">information</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span>

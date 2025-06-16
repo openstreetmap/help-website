@@ -227,7 +227,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Adding to what SK53 and stephen75 suggested.</p>
-<p>You can use <a href="http://polygons.openstreetmap.fr">http://polygons.openstreetmap.fr</a> to generate the .poly file. But you'll need the relation id of your polygon(for Melbourne, its <a href="http://www.openstreetmap.org/relation/2404870">2404870</a>). Save the generated .poly file and use it with <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_a_Polygon">osmconvert</a> and geofabrik's <a href="http://download.geofabrik.de/australia-oceania/australia.html">Australia</a> extract to get the data of only the Melbourne city.</p>
+<p>You can use <a href="http://polygons.openstreetmap.fr">http://polygons.openstreetmap.fr</a> to generate the .poly file. But you'll need the relation id of your polygon(for Melbourne, its <a href="https://www.openstreetmap.org/relation/2404870">2404870</a>). Save the generated .poly file and use it with <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_a_Polygon">osmconvert</a> and geofabrik's <a href="http://download.geofabrik.de/australia-oceania/australia.html">Australia</a> extract to get the data of only the Melbourne city.</p>
 <p>Alternatively, you can directly get the Melbourne city data from <a href="https://mapzen.com/metro-extracts">Mapzen metro extracts</a>. And <a href="http://global.mapit.mysociety.org/area/695105/covers.html">MapIt Global</a> provides the boundaries of areas covered by smaller city boundaries like Melbourne whose areas can be further used to get relation ids to get the poly files and then extract data from Melbourne using osmconvert.</p>
 </div>
 <div class="answer-controls post-controls">

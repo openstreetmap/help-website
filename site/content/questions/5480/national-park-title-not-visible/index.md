@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've recently added the boundary of the Link:<a href="http://www.openstreetmap.org/?lat=51.128&amp;lon=-3.169&amp;zoom=11&amp;layers=M&amp;way=113802638">Quantock Hills Area of Outstanding Natural Beauty</a> in England - the equivalent of a National Park.</p>
-<p>Other national parks are shown shaded green on the map, with the title of the park prominently shown. For example the Link:<a href="http://www.openstreetmap.org/?lat=52.095&amp;lon=-2.359&amp;zoom=11&amp;layers=M">Malvern Hills</a> and Link:<a href="http://www.openstreetmap.org/?lat=51.134&amp;lon=-3.67&amp;zoom=11&amp;layers=M">Exmoor</a>. This doesn't happen for the Quantock Hills, even though it is similarly tagged as a national park boundary and as an area. How can this be fixed?</p>
+<p>I've recently added the boundary of the Link:<a href="https://www.openstreetmap.org/?lat=51.128&amp;lon=-3.169&amp;zoom=11&amp;layers=M&amp;way=113802638">Quantock Hills Area of Outstanding Natural Beauty</a> in England - the equivalent of a National Park.</p>
+<p>Other national parks are shown shaded green on the map, with the title of the park prominently shown. For example the Link:<a href="https://www.openstreetmap.org/?lat=52.095&amp;lon=-2.359&amp;zoom=11&amp;layers=M">Malvern Hills</a> and Link:<a href="https://www.openstreetmap.org/?lat=51.134&amp;lon=-3.67&amp;zoom=11&amp;layers=M">Exmoor</a>. This doesn't happen for the Quantock Hills, even though it is similarly tagged as a national park boundary and as an area. How can this be fixed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-visible" rel="tag" title="see questions tagged &#39;visible&#39;">visible</span> <span class="post-tag tag-link-boundary" rel="tag" title="see questions tagged &#39;boundary&#39;">boundary</span> <span class="post-tag tag-link-park" rel="tag" title="see questions tagged &#39;park&#39;">park</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-title" rel="tag" title="see questions tagged &#39;title&#39;">title</span>
@@ -117,8 +117,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?way=113802638">Way 113802638</a> doesn't look like an area to me. An area is a closed way, but that way is an open one (although it has an area tag).</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Area#Area_.28closed_way_.29">Area (closed way)</a></p>
+<p><a href="https://www.openstreetmap.org/?way=113802638">Way 113802638</a> doesn't look like an area to me. An area is a closed way, but that way is an open one (although it has an area tag).</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Area#Area_.28closed_way_.29">Area (closed way)</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -151,7 +151,7 @@ One Answer:
 <div id="post-5648-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Policy on this? We could probably do with deciding something. I know the default <a href="http://www.openstreetmap.org/?lat=37.798&amp;lon=-122.472&amp;zoom=11">rendering of San Francisco</a> looks like it's suffered an attack of the green slime monster at the moment, because they've drawn the park boundaries out into the sea a bit.</p>
+<p>Policy on this? We could probably do with deciding something. I know the default <a href="https://www.openstreetmap.org/?lat=37.798&amp;lon=-122.472&amp;zoom=11">rendering of San Francisco</a> looks like it's suffered an attack of the green slime monster at the moment, because they've drawn the park boundaries out into the sea a bit.</p>
 </div>
 <div id="comment-5648-info" class="comment-info">
 <span class="comment-age">(09 Jun '11, 13:07)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -173,7 +173,7 @@ One Answer:
 <div id="post-5659-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>for more info on "f" for follow read this <a href="http://help.openstreetmap.org/questions/2986/potlach2-using-natural-boundaries-for-tagged-areas">http://help.openstreetmap.org/questions/2986/potlach2-using-natural-boundaries-for-tagged-areas</a> and vclaw's answer</p>
+<p>for more info on "f" for follow read this <a href="/questions/2986/potlach2-using-natural-boundaries-for-tagged-areas">https://help.openstreetmap.org/questions/2986/potlach2-using-natural-boundaries-for-tagged-areas</a> and vclaw's answer</p>
 </div>
 <div id="comment-5659-info" class="comment-info">
 <span class="comment-age">(09 Jun '11, 20:10)</span> <span class="comment-user userinfo">andy mackey</span>

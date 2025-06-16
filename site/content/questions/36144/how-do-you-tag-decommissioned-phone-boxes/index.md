@@ -166,7 +166,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If is decommissioned, an off topic answer would be to put some books into it. so it becomes amenity=library : name= used_book_exchange : old_phone_box=yes for more info Google "phone box libraries" legally the council should buy the box off BT. but as they cost a bit to remove some have been sold to the council for a £1. You will find some contacts when you Google. I have seen three in Cambridgeshire,at Upwood, Granchester and this one in Hemmingford <a href="http://www.openstreetmap.org/search?query=%2056%20-.2#map=19/52.32241/-0.11879&amp;layers=N">http://www.openstreetmap.org/search?query=%2056%20-.2#map=19/52.32241/-0.11879&amp;layers=N</a></p>
+<p>If is decommissioned, an off topic answer would be to put some books into it. so it becomes amenity=library : name= used_book_exchange : old_phone_box=yes for more info Google "phone box libraries" legally the council should buy the box off BT. but as they cost a bit to remove some have been sold to the council for a £1. You will find some contacts when you Google. I have seen three in Cambridgeshire,at Upwood, Granchester and this one in Hemmingford <a href="https://www.openstreetmap.org/search?query=%2056%20-.2#map=19/52.32241/-0.11879&amp;layers=N">https://www.openstreetmap.org/search?query=%2056%20-.2#map=19/52.32241/-0.11879&amp;layers=N</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

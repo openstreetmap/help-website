@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>My original goal is it, to get nominatim access from a windows application, where users can search for places etc. We are doing this since many years quite well with other providers (with google, bing, mapquest etc.) and i wanted to add nominatim as well. This is a c++ application on windows using boost::asio for https / https access. https works well for all other services.</p>
-<p>If I, instead, use <a href="https://help.openstreetmap.org/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection">wget, I get a "Unable to establish SSL connection." error</a> (other question entry).</p>
+<p>If I, instead, use <a href="/questions/66940/wget-to-nominatim-url-unable-to-establish-ssl-connection">wget, I get a "Unable to establish SSL connection." error</a> (other question entry).</p>
 <p>I did further inspections on access from my application. Indeed i get a "blocked" result:</p>
 <pre><code>Retrieving &quot;nominatim.openstreetmap.org/search?q=,berlin,,&amp;format=xml&amp;polygon=1&amp;addressdetails=1&quot;
 Connect HTTPS

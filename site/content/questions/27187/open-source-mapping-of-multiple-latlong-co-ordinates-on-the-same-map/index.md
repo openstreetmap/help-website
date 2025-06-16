@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>Hi Peter,</p>
 <p>Having a quick look at GPSVisualizer I seems to me that the website is somehow powered by googles engine, display and probably also the drawing part. (in the sandbox which I only tested).</p>
-<p>BUT: If you use OpenStreetMap data, your drawing will obviously not be copyrighted to Google, but i will be free to use (according to OpenStreetMap Licence (<a href="http://www.openstreetmap.org/copyright/en)">http://www.openstreetmap.org/copyright/en)</a> ). So having the goole logo on it is probably at least missleading, ifnot illegal. Can you please post an example of the final exported map?</p>
+<p>BUT: If you use OpenStreetMap data, your drawing will obviously not be copyrighted to Google, but i will be free to use (according to OpenStreetMap Licence (<a href="https://www.openstreetmap.org/copyright/en)">https://www.openstreetmap.org/copyright/en)</a> ). So having the goole logo on it is probably at least missleading, ifnot illegal. Can you please post an example of the final exported map?</p>
 <p>Thanks, nounours</p>
 </div>
 <div class="answer-controls post-controls">

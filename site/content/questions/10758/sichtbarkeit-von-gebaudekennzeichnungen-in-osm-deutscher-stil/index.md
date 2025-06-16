@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Ich habe im Standort "<a href="http://www.openstreetmap.org/relation/2928860">Industriepark Hoechst</a>" auf der Grundkarte OSM Standart (Mapnik) diverse Gebäudebezeichnungen eingetragen (C379, C399). Warum kann ich diese nicht auf der Grundkarte OSM deutscher Stil sehen. Ist das bewußt nicht gewollt oder kann man das einstellen ?</p>
+<p>Ich habe im Standort "<a href="https://www.openstreetmap.org/relation/2928860">Industriepark Hoechst</a>" auf der Grundkarte OSM Standart (Mapnik) diverse Gebäudebezeichnungen eingetragen (C379, C399). Warum kann ich diese nicht auf der Grundkarte OSM deutscher Stil sehen. Ist das bewußt nicht gewollt oder kann man das einstellen ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-sichtbarkeit" rel="tag" title="see questions tagged &#39;sichtbarkeit&#39;">sichtbarkeit</span> <span class="post-tag tag-link-mapnik-german" rel="tag" title="see questions tagged &#39;mapnik-german&#39;">mapnik-german</span> <span class="post-tag tag-link-gebäude" rel="tag" title="see questions tagged &#39;gebäude&#39;">gebäude</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-lang-de" rel="tag" title="see questions tagged &#39;lang-de&#39;">lang-de</span>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Auf <a href="http://www.openstreetmap.org/?lat=50.08438&amp;lon=8.53913&amp;zoom=17&amp;layers=M">openstreetmap<strong>.org</strong></a> werden die Gebäudenamen angezeigt.</p>
+<p>Auf <a href="https://www.openstreetmap.org/?lat=50.08438&amp;lon=8.53913&amp;zoom=17&amp;layers=M">openstreetmap<strong>.org</strong></a> werden die Gebäudenamen angezeigt.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

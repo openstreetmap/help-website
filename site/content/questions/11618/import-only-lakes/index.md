@@ -112,7 +112,7 @@ One Answer:
 <p>Hurray, I managed to do it. Here is how:</p>
 <ul>
 <li>installed JOSM, Java OpenStreetMap Editor</li>
-<li>found the relevant way of Zurich lake first (<a href="http://www.openstreetmap.org/api/0.6/way/120595133)">http://www.openstreetmap.org/api/0.6/way/120595133)</a> and then the relation it belongs to "Zürichsee"</li>
+<li>found the relevant way of Zurich lake first (<a href="https://www.openstreetmap.org/api/0.6/way/120595133)">https://www.openstreetmap.org/api/0.6/way/120595133)</a> and then the relation it belongs to "Zürichsee"</li>
 <li>the resulting downloaded collection i did store as an OSM file</li>
 <li>merged that osm file into the osm file I already had</li>
 <li>and imported the complete OSM file as described on <a href="http://weait.com/content/build-your-own-openstreetmap-server">http://weait.com/content/build-your-own-openstreetmap-server</a></li>

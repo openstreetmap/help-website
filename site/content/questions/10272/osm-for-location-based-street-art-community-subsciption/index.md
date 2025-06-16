@@ -197,7 +197,7 @@ osqa_accepted = false
 <p>There are two quite different ways to do this:</p>
 <ol>
 <li>you keep your own database of interesting points, totally independent from OSM. At render time you use OSM data as a background and your POI database as an overlay.</li>
-<li>you start mapping streetart features directly in OSM database. <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dartwork">tourism=artwork</a> might be of interest, especially with artwork_type=street_art. This might be controversial, because street art is usually illegal and challenging because it is not very permanent. You would than display your own rendering of OSM data.</li>
+<li>you start mapping streetart features directly in OSM database. <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dartwork">tourism=artwork</a> might be of interest, especially with artwork_type=street_art. This might be controversial, because street art is usually illegal and challenging because it is not very permanent. You would than display your own rendering of OSM data.</li>
 </ol>
 <p>If you plan to map the bigger and more permanent artworks, I would recommend the second option. If you plan to document every signature of someone, the first option is more appropriate.</p>
 </div>

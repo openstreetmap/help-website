@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] iD editor questions"
-description = '''A few questions I have after trying out the new iD editor:  Is there a way to view node or way ids?  How do you extend an existing road/line? Is there a list of the keyboard shortcuts? (a la http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts) '''
+description = '''A few questions I have after trying out the new iD editor:  Is there a way to view node or way ids?  How do you extend an existing road/line? Is there a list of the keyboard shortcuts? (a la https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts) '''
 date = "2013-05-09T15:36:00Z"
 lastmod = "2013-05-13T14:57:00Z"
 weight = 22224
@@ -43,7 +43,7 @@ osqa_accepted = false
 <ul>
 <li>Is there a way to view node or way ids?</li>
 <li>How do you extend an existing road/line?</li>
-<li>Is there a list of the keyboard shortcuts? (a la <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a>)</li>
+<li>Is there a list of the keyboard shortcuts? (a la <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a>)</li>
 </ul>
 </div>
 <div id="question-tags" class="tags-container tags">

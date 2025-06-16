@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am trying to work out what this is, perhaps someone else has seen these before? They are about 8 of them all with floodlights facing a lake (although I doubt the light would reach the lake due to bush on the shoreline of the lake).</p>
-<p>These are located on the eastern side of <a href="http://www.openstreetmap.org/?lat=-31.73525&amp;lon=115.78781&amp;zoom=17&amp;layers=M">Yellagonga Regional Park (Lake Joondalup)</a>.</p>
+<p>These are located on the eastern side of <a href="https://www.openstreetmap.org/?lat=-31.73525&amp;lon=115.78781&amp;zoom=17&amp;layers=M">Yellagonga Regional Park (Lake Joondalup)</a>.</p>
 <p><img src="http://i.imgur.com/32AfYSL.jpg" alt="What is this" /> <img src="http://i.imgur.com/OfdufOY.jpg" alt="What is this 2" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">

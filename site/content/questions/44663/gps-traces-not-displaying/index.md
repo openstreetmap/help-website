@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing that you're <a href="http://www.openstreetmap.org/user/edwardsaid/traces">this user</a>. Looking at <a href="http://www.openstreetmap.org/user/edwardsaid/traces/2012908">this trace</a>, it appears OK in the "Potlatch 2" editor (and I presume that it will in JOSM too). The "iD" editor (which you were using <a href="http://www.openstreetmap.org/changeset/28954808">here</a>) uses a "background overlay" of GPS map tiles. The relevant one for your trace is <a href="http://gps-b.tile.openstreetmap.org/lines/17/77510/56494.png">here</a>, but as you can see it doesn't include your trace. I believe that the software that updates iD's GPS background layer is <a href="https://github.com/ericfischer/gpx-updater">here</a>. Issues have been logged for update problems there in the past - <a href="https://github.com/ericfischer/gpx-updater/issues/1">this one</a> might be relevant if you've changed the permissions, and there's also <a href="https://github.com/ericfischer/gpx-updater/issues/2">this one</a>.</p>
-<p>There's another option, though - you can <a href="http://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-gps-track-overlayed-in-the-map-editor/24411">drag and drop</a> local GPS files into the iD editor. That should allow you see them there.</p>
+<p>I'm guessing that you're <a href="https://www.openstreetmap.org/user/edwardsaid/traces">this user</a>. Looking at <a href="https://www.openstreetmap.org/user/edwardsaid/traces/2012908">this trace</a>, it appears OK in the "Potlatch 2" editor (and I presume that it will in JOSM too). The "iD" editor (which you were using <a href="https://www.openstreetmap.org/changeset/28954808">here</a>) uses a "background overlay" of GPS map tiles. The relevant one for your trace is <a href="http://gps-b.tile.openstreetmap.org/lines/17/77510/56494.png">here</a>, but as you can see it doesn't include your trace. I believe that the software that updates iD's GPS background layer is <a href="https://github.com/ericfischer/gpx-updater">here</a>. Issues have been logged for update problems there in the past - <a href="https://github.com/ericfischer/gpx-updater/issues/1">this one</a> might be relevant if you've changed the permissions, and there's also <a href="https://github.com/ericfischer/gpx-updater/issues/2">this one</a>.</p>
+<p>There's another option, though - you can <a href="/questions/24410/is-there-a-way-to-see-my-gps-track-overlayed-in-the-map-editor/24411">drag and drop</a> local GPS files into the iD editor. That should allow you see them there.</p>
 <p>I'm not sure what "Go Map!!!" uses for GPS background, though (maybe someone can edit this answer and add details?).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -162,7 +162,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi edwardsaid, read this, <a href="https://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-gps-track-overlayed-in-the-map-editor,">https://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-gps-track-overlayed-in-the-map-editor,</a> the editor seems to be the bottle neck. Use JOSM and the file triggers the program and realizes the display of your trace.</p>
+<p>Hi edwardsaid, read this, <a href="/questions/24410/is-there-a-way-to-see-my-gps-track-overlayed-in-the-map-editor,">https://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-gps-track-overlayed-in-the-map-editor,</a> the editor seems to be the bottle neck. Use JOSM and the file triggers the program and realizes the display of your trace.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

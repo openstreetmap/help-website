@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There are many rivers which are heavily silted. Should the visible silted areas be drawn separately and tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dshingle">[shingle]</a>s or combined with the entire [riverbank] polygon?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/shingleOrRiverbank.png" alt="alt text" /></p>
+<p>There are many rivers which are heavily silted. Should the visible silted areas be drawn separately and tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dshingle">[shingle]</a>s or combined with the entire [riverbank] polygon?</p>
+<p><img src="/upfiles/shingleOrRiverbank.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shingle" rel="tag" title="see questions tagged &#39;shingle&#39;">shingle</span> <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-riverbank" rel="tag" title="see questions tagged &#39;riverbank&#39;">riverbank</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

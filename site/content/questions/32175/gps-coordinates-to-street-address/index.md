@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The process of converting lat/lon to an address is called "Reverse Geocoding". The OSM API is not suitable for that but the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim service</a> does a decent job at reverse geocoding. All that's left for you is send a HTTP request and parse the response. Note that this is subject to usage restrictions (don't bulk geocode tons of addresses).</p>
+<p>The process of converting lat/lon to an address is called "Reverse Geocoding". The OSM API is not suitable for that but the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim service</a> does a decent job at reverse geocoding. All that's left for you is send a HTTP request and parse the response. Note that this is subject to usage restrictions (don't bulk geocode tons of addresses).</p>
 <p>If you want to implement your own reverse geocoder (not recommended - lots of work to get it right) then you will probably want to import raw OSM data and preprocess it suitably. You could possibly use the Osmosis library for that (also Java).</p>
 </div>
 <div class="answer-controls post-controls">

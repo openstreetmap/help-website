@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers to <a href="http://help.openstreetmap.org/questions/4083/can-i-make-a-customized-map-just-for-me">Can I make a customized Map just for me?</a></p>
+<p>See the answers to <a href="/questions/4083/can-i-make-a-customized-map-just-for-me">Can I make a customized Map just for me?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Could you include a link about which maps you're installing? There are lots of possibilities (see <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">here</a>). Probably the easiest to use general maps are available from <a href="http://garmin.openstreetmap.nl/">here</a>.</p>
+<p>Could you include a link about which maps you're installing? There are lots of possibilities (see <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">here</a>). Probably the easiest to use general maps are available from <a href="http://garmin.openstreetmap.nl/">here</a>.</p>
 </div>
 <div id="comment-15955-info" class="comment-info">
 <span class="comment-age">(11 Sep '12, 09:15)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-15980-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This Q and A may help <a href="https://help.openstreetmap.org/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
+<p>This Q and A may help <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
 </div>
 <div id="comment-15980-info" class="comment-info">
 <span class="comment-age">(11 Sep '12, 19:37)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -85,7 +85,7 @@ osqa_accepted = false
 <div id="post-15981-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>and this <a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
+<p>and this <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
 </div>
 <div id="comment-15981-info" class="comment-info">
 <span class="comment-age">(11 Sep '12, 19:51)</span> <span class="comment-user userinfo">andy mackey</span>

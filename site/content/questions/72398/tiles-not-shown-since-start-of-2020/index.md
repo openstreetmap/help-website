@@ -77,7 +77,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>A link is a bit hard to provide as the data used need s a login. But a screenshoot might be helpfull?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/map_err.png" alt="alt text" /></p>
+<p><img src="/upfiles/map_err.png" alt="alt text" /></p>
 </div>
 <div id="comment-72401-info" class="comment-info">
 <span class="comment-age">(07 Jan '20, 12:20)</span> <span class="comment-user userinfo">Lars</span>

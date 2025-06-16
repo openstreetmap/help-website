@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How should the the turn restrictions for <a href="http://www.openstreetmap.org/node/1675447389">this junction</a> be represented in the OSM data?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm-complex-junction-crescent-salford-flat.png" alt="Complex junction in Salford" /></p>
+<p>How should the the turn restrictions for <a href="https://www.openstreetmap.org/node/1675447389">this junction</a> be represented in the OSM data?</p>
+<p><img src="/upfiles/osm-complex-junction-crescent-salford-flat.png" alt="Complex junction in Salford" /></p>
 <p>Also, some follow up questions:</p>
 <ul>
 <li>In iD I can only figure out how to add simple turn restrictions - from way, via node, to way - not the more complicated turn restrictions with ways as via elements. Is this expected?</li>
@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/edisonbell_turn_restiction.JPG" alt="alt text" />The tagging of the routing through any junction requires that " one ways" and junction "nodes" each have the correct restrictions. Once you have done all of them you will have to wait for the routing engines to use that data. This is my question when i struggled with a pair of simpler junctions <a href="https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a> you could also use an editor to inspect similar junctions, to learn by example. We now have some excellent routers accessible from the map page that can now be used to check routing .. but you may have to wait for recent edits to be used by the routing engines.</p>
+<p><img src="/upfiles/edisonbell_turn_restiction.JPG" alt="alt text" />The tagging of the routing through any junction requires that " one ways" and junction "nodes" each have the correct restrictions. Once you have done all of them you will have to wait for the routing engines to use that data. This is my question when i struggled with a pair of simpler junctions <a href="/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a> you could also use an editor to inspect similar junctions, to learn by example. We now have some excellent routers accessible from the map page that can now be used to check routing .. but you may have to wait for recent edits to be used by the routing engines.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at the present tagging of your junction it may not need any additional turn restrictions as the one ways seem to do the job. The jpeg shows the results that one router gives. Does this agree with the road signs?<img src="http://help.openstreetmap.org/upfiles/a_route_through_the_junction.JPG" alt="alt text" /></p>
+<p>Looking at the present tagging of your junction it may not need any additional turn restrictions as the one ways seem to do the job. The jpeg shows the results that one router gives. Does this agree with the road signs?<img src="/upfiles/a_route_through_the_junction.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -274,7 +274,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I was so impressed with iD's turn restriction implementation that I thought i would share them. It works like this. Start iD. Click on the junction node, click on the "in Way" and then "out ways" show red or green indicator, to change a red or a green one just click on it to toggle or swap over, Excellent. well done iD Guys.<img src="http://help.openstreetmap.org/upfiles/An_illustration_of_turn_restrictions_in_iD.JPG" alt="alt text" /></p>
+<p>I was so impressed with iD's turn restriction implementation that I thought i would share them. It works like this. Start iD. Click on the junction node, click on the "in Way" and then "out ways" show red or green indicator, to change a red or a green one just click on it to toggle or swap over, Excellent. well done iD Guys.<img src="/upfiles/An_illustration_of_turn_restrictions_in_iD.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

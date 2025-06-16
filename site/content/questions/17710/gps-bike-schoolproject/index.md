@@ -76,7 +76,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Your needs seem to be quite special.</p>
 <p>So if there will not be enough feedback on this FAQ site, try to ask at one of the OSM mailing lists, e.g. the dev-list.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-17714-info" class="comment-info">
 <span class="comment-age">(14 Nov '12, 16:49)</span> <span class="comment-user userinfo">stephan75</span>

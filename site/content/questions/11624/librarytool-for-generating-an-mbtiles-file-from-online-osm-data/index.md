@@ -112,7 +112,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It looks like you will either have to download the files first and then use <a href="https://github.com/mapbox/mbutil">mbutil</a> to make an MBTiles file, or you will have to modify that utility to read from the web instead of from a file.</p>
-<p>Be aware that while it is ok to use <em>data</em> from OpenStreetMap for your purpose, it is not acceptable that you use the OSM-provided tile server; you will have to set up your own tile server for that. See <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy.</a></p>
+<p>Be aware that while it is ok to use <em>data</em> from OpenStreetMap for your purpose, it is not acceptable that you use the OSM-provided tile server; you will have to set up your own tile server for that. See <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ osqa_accepted = false
 <div id="post-34782-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Well, planet.osm if 29GB (400GB uncompressed XML) so if possible start from a smaller part; see <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a></p>
+<p>Well, planet.osm if 29GB (400GB uncompressed XML) so if possible start from a smaller part; see <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a></p>
 </div>
 <div id="comment-34782-info" class="comment-info">
 <span class="comment-age">(09 Jul '14, 22:41)</span> <span class="comment-user userinfo">sesam</span>

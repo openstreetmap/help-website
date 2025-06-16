@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I'm try to find Singapore MRT line in a range like below:</p>
 <pre><code>[out:json][timeout:100];(node(around:1000,1.284249, 103.844004)[&quot;name&quot;~&quot;Downtown Line MRT&quot;];way(around:1000,1.284249, 103.844004)[&quot;name&quot;~&quot;Downtown Line MRT&quot;];);out body;._;&gt;;out skel qt;</code></pre>
 <p>(around:1000,1.284249, 103.844004) is a circle polygon and Downtown Line MRT is a line. How can I get the overlapping part only(red line in picture)? The query result will partially out of circle.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Noname.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Noname.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mrt" rel="tag" title="see questions tagged &#39;mrt&#39;">mrt</span> <span class="post-tag tag-link-line" rel="tag" title="see questions tagged &#39;line&#39;">line</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span> <span class="post-tag tag-link-overpass-ql" rel="tag" title="see questions tagged &#39;overpass-ql&#39;">overpass-ql</span>

@@ -166,7 +166,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/%C3%96pnvkarte">Öpnvkarte</a> as an alternative. If you compare a <a href="http://öpnvkarte.de/?zoom=17&amp;lat=51.41&amp;lon=-0.225&amp;layers=BT">typical urban area</a> with <a href="http://www.openstreetmap.org/#map=17/51.41/-0.225&amp;layers=T">the same area</a> on the transport layer, there are several more route numbers including some with letter prefixes.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/%C3%96pnvkarte">Öpnvkarte</a> as an alternative. If you compare a <a href="http://öpnvkarte.de/?zoom=17&amp;lat=51.41&amp;lon=-0.225&amp;layers=BT">typical urban area</a> with <a href="https://www.openstreetmap.org/#map=17/51.41/-0.225&amp;layers=T">the same area</a> on the transport layer, there are several more route numbers including some with letter prefixes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

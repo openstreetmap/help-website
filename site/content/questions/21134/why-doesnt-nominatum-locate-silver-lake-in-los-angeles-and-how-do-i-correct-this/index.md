@@ -43,8 +43,8 @@ osqa_accepted = true
 <p>I am attempting to correct the fact that Nominatum fails to geolocate Silver Lake, Los Angeles, CA. I am fully perplexed as to how to do this. Below is the result of my research.</p>
 <p>Here is what I want the end result to be: <a href="https://maps.google.com/maps?q=silver+lake,+los+angeles,+ca&amp;ie=UTF-8&amp;hq=&amp;hnear=0x80c2c73a7425883f:0xed2d053e27a4d706,Silver+Lake,+Los+Angeles,+CA&amp;gl=us&amp;ei=bApbUY6sCfS24APn14H4DA&amp;ved=0CLQBELYD">https://maps.google.com/maps?q=silver+lake,+los+angeles,+ca&amp;ie=UTF-8&amp;hq=&amp;hnear=0x80c2c73a7425883f:0xed2d053e27a4d706,Silver+Lake,+Los+Angeles,+CA&amp;gl=us&amp;ei=bApbUY6sCfS24APn14H4DA&amp;ved=0CLQBELYD</a></p>
 <p>When I go to openstreetmap.org and click edit, nothing exists about how to add a neighborhood, it's all physical points of interest (like businesses or landmarks).</p>
-<p>According to <a href="https://help.openstreetmap.org/questions/4431/how-can-i-name-subdivisions-or-neighborhoods-for-better-accuracy">this thread</a>, you can't name regions. This thread is two years old and hopefully someone has changed their mind about this.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Neighbourhood">This entry</a> suggests that neighborhoods are a concept, but doesn't indicate how you add one.</p>
+<p>According to <a href="/questions/4431/how-can-i-name-subdivisions-or-neighborhoods-for-better-accuracy">this thread</a>, you can't name regions. This thread is two years old and hopefully someone has changed their mind about this.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Neighbourhood">This entry</a> suggests that neighborhoods are a concept, but doesn't indicate how you add one.</p>
 <p><a href="http://openstreetbugs.schokokeks.org/?zoom=10&amp;lat=40.74489974975586&amp;lon=-73.97820281982426">This website</a> reportedly exists for bugs, but I cannot figure out if adding a bug here will do anything.</p>
 <p><a href="https://trac.openstreetmap.org/query?status=new&amp;status=assigned&amp;status=reopened&amp;component=nominatim&amp;order=priority">Trac exists for adding bugs</a>, but this seems to be for technical bugs, not missing data. Moreover, I don't appear to have access to enter mapping bugs.</p>
 <p>As I mentioned, I just want openstreetmaps.org to be able to geolocate Silver Lake!</p>
@@ -119,7 +119,7 @@ One Answer:
 <div class="answer-body">
 <p>If I understood you question correctly, you want to map a neighborhood ?</p>
 <p>The correct tags for that are place=neighborhood and name=Silver Lake You can add a Wikipedia entry for it as well.</p>
-<p>You can read more on <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dneighbourhood">http://wiki.openstreetmap.org/wiki/Tag:place%3Dneighbourhood</a></p>
+<p>You can read more on <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dneighbourhood">https://wiki.openstreetmap.org/wiki/Tag:place%3Dneighbourhood</a></p>
 <p>I'm not so familiar with Potlach2, the editor that starts when you click edit. I just tried it out and it has a section 'Places', which contains the 'neighborhood' tag.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -152,7 +152,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>And it is now the top search result - <a href="http://www.openstreetmap.org/?query=Silver%20Lake,%20Los%20Angeles,%20CA">http://www.openstreetmap.org/?query=Silver%20Lake,%20Los%20Angeles,%20CA</a></p>
+<p>And it is now the top search result - <a href="https://www.openstreetmap.org/?query=Silver%20Lake,%20Los%20Angeles,%20CA">https://www.openstreetmap.org/?query=Silver%20Lake,%20Los%20Angeles,%20CA</a></p>
 </div>
 <div id="comment-21140-info" class="comment-info">
 <span class="comment-age">(03 Apr '13, 08:42)</span> <span class="comment-user userinfo">EdLoach ♦</span>

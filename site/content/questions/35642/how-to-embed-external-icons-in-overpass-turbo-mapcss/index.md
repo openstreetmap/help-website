@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a documentation about icons in <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/mapcss">CSS section</a> of overpass-turbo in OSM wiki. Did you try and does it work?</p>
+<p>There is a documentation about icons in <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/mapcss">CSS section</a> of overpass-turbo in OSM wiki. Did you try and does it work?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -141,7 +141,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Odd. They appear in this screenshot:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/at_20120808_01001_1.png" alt="Picture showing an AT relation in P2" /></p>
+<p><img src="/upfiles/at_20120808_01001_1.png" alt="Picture showing an AT relation in P2" /></p>
 <p>To get to that I selected "advanced" below the member way, then double-clicked on the relation number. To see the raw tags in the relation I'd scroll down the "edit relation" box and select "advanced".</p>
 </div>
 <div id="comment-15035-info" class="comment-info">

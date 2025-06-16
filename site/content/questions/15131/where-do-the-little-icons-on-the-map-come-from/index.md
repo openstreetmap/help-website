@@ -109,9 +109,9 @@ One Answer:
 <p>Those icons are added automatically when the tag amenity=restaurant is set. But sometimes, you have to wait a few minutes to see it appearing on the map (it takes some time to make the new images). Also, if there is not enough place to display the icons, the renderer will choose at random which one will be displayed.</p>
 <p>Now, there is something else wrong with your data. There are three nodes:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1467035558">http://www.openstreetmap.org/browse/node/1467035558</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1868292779">http://www.openstreetmap.org/browse/node/1868292779</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/311562414">http://www.openstreetmap.org/browse/node/311562414</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1467035558">https://www.openstreetmap.org/browse/node/1467035558</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1868292779">https://www.openstreetmap.org/browse/node/1868292779</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/311562414">https://www.openstreetmap.org/browse/node/311562414</a></li>
 </ul>
 <p>One just with the restaurant tag, another one with the address tag and a third one with the tags combined. To not confuse any tools, I have merged them (so you will see two of them are deleted and one has all tags).</p>
 </div>

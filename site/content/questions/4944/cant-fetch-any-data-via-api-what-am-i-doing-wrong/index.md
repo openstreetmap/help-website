@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your first request is being made to the "api06" testing server - it doesn't contain much map data so it's quite likely that there won't be data in that area. You can edit the testing server to add some test data for whichever area you're interested in.</p>
-<p>The XAPI link is to servers using the "live" data from <a href="http://www.osm.org">www.osm.org</a> - but they are often overloaded. You can try the <a href="http://wiki.openstreetmap.org/wiki/Xapi">alternative XAPI servers</a> listed on the wiki - try the ones running the Java version of XAPI.</p>
+<p>The XAPI link is to servers using the "live" data from <a href="http://www.osm.org">www.osm.org</a> - but they are often overloaded. You can try the <a href="https://wiki.openstreetmap.org/wiki/Xapi">alternative XAPI servers</a> listed on the wiki - try the ones running the Java version of XAPI.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

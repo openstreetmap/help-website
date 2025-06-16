@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "possible vandalism or work in progress?"
-description = '''Sorry again for bothering the community: I found out, while looking over the map of Georgia, that in several cities there is lots of Geo missing. The cities of Batumi and Khashuri nearly completely disappeared :( Others I have not checked... e.g. here: http://www.openstreetmap.org/?lat=41.64467&amp;amp;...'''
+description = '''Sorry again for bothering the community: I found out, while looking over the map of Georgia, that in several cities there is lots of Geo missing. The cities of Batumi and Khashuri nearly completely disappeared :( Others I have not checked... e.g. here: https://www.openstreetmap.org/?lat=41.64467&amp;amp;...'''
 date = "2011-08-17T10:25:00Z"
 lastmod = "2011-08-17T21:54:00Z"
 weight = 7142
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Sorry again for bothering the community: I found out, while looking over the map of Georgia, that in several cities there is lots of Geo missing. The cities of Batumi and Khashuri nearly completely disappeared :( Others I have not checked... e.g. here: <a href="http://www.openstreetmap.org/?lat=41.64467&amp;lon=41.63406&amp;zoom=15">http://www.openstreetmap.org/?lat=41.64467&amp;lon=41.63406&amp;zoom=15</a> The Geo is not rendering on the map, neither is it present when opening podlatch2 for editing.</p>
+<p>Sorry again for bothering the community: I found out, while looking over the map of Georgia, that in several cities there is lots of Geo missing. The cities of Batumi and Khashuri nearly completely disappeared :( Others I have not checked... e.g. here: <a href="https://www.openstreetmap.org/?lat=41.64467&amp;lon=41.63406&amp;zoom=15">https://www.openstreetmap.org/?lat=41.64467&amp;lon=41.63406&amp;zoom=15</a> The Geo is not rendering on the map, neither is it present when opening podlatch2 for editing.</p>
 <p>Can this be vandalism? Or is there some work in progress (e.g. a large import), and the geo will show up again in several hours?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'm afraid this looks like vandalism.</p>
-<p>Most changesets by <a href="http://www.openstreetmap.org/user/kartveli">karveli</a> seem to involve deletion of nodes, ways, or tags. They signed-up for OSM only a few days ago. I have sent them a message asking that they explain the rationale for these edits to the community.</p>
+<p>Most changesets by <a href="https://www.openstreetmap.org/user/kartveli">karveli</a> seem to involve deletion of nodes, ways, or tags. They signed-up for OSM only a few days ago. I have sent them a message asking that they explain the rationale for these edits to the community.</p>
 <p>In the meantime it is best not to edit in the area as this will make reverting these edits easier if this is required.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -162,7 +162,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>I agree that there seems to be a "political" dimension to these edits: they are being reverted right now. The reverts can themselves be reverted if these prove to be valid contributions: I have not received a response yet.</p>
-<p>You should report this to the OSM-F data working group: <a href="http://wiki.openstreetmap.org/wiki/Data_working_group.">http://wiki.openstreetmap.org/wiki/Data_working_group.</a> Only they have any say over blocking users.</p>
+<p>You should report this to the OSM-F data working group: <a href="https://wiki.openstreetmap.org/wiki/Data_working_group.">https://wiki.openstreetmap.org/wiki/Data_working_group.</a> Only they have any say over blocking users.</p>
 </div>
 <div id="comment-7160-info" class="comment-info">
 <span class="comment-age">(17 Aug '11, 14:20)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -174,7 +174,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>All edits now reverted, see my changesets <a href="http://www.openstreetmap.org/user/SK53/edits">http://www.openstreetmap.org/user/SK53/edits</a></p>
+<p>All edits now reverted, see my changesets <a href="https://www.openstreetmap.org/user/SK53/edits">https://www.openstreetmap.org/user/SK53/edits</a></p>
 </div>
 <div id="comment-7173-info" class="comment-info">
 <span class="comment-age">(17 Aug '11, 21:54)</span> <span class="comment-user userinfo">SK53 ♦</span>

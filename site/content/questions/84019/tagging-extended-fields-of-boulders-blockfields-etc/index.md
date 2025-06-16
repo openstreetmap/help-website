@@ -117,7 +117,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is very limited usage of <code>[natural=boulder_field][1]</code> (a couple by me, but there are other contributors using the tag). Boulder fields may be created through a number of mechanisms: (geologically) recent massive rock fall; peri-glacial frost heave breaking up bare rock (good examples in <a href="https://boulderfieldpa.weebly.com/formation-of-boulder-field.html">Pennsylvania</a>); some raised beaches lifted by isostasy (Sweden).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_16957.jpg" alt="Città dei Sassi, an example of a field of massive boulders" /><br />
+<p><img src="/upfiles/IMG_16957.jpg" alt="Città dei Sassi, an example of a field of massive boulders" /><br />
 Città dei Sassi, an example of a field of massive boulders</p>
 <p>Specific examples of the phenomenon (not necessarily mapped as such):</p>
 <ul>

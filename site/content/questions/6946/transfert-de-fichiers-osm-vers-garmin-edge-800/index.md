@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Pour répondre à ta question il manque deux infos cruciales: à quel endroit tu a téléchargé le fichier, et quel méthode tu utilise pour transférer vers ton garmin. L'erreur classique est d'essayer d'utiliser un fichier au format .osm directement, alors qu'il n'est pas supporté par Garmin. Le wiki explique comment <a href="http://wiki.openstreetmap.org/wiki/FR:OSM_Map_On_Garmin">utiliser une carte osm sur un garmin</a>. Il y a beaucoup de personnes qui créent des fichiers utilisables sur garmin (voir 1er lien sur le wiki), et il donnent généralement un bref tutoriel. Généralement il suffit de connecter le garmin en mode "clef usb" et de copier GMAPSUPP.IMG au bon endroit.</p>
+<p>Pour répondre à ta question il manque deux infos cruciales: à quel endroit tu a téléchargé le fichier, et quel méthode tu utilise pour transférer vers ton garmin. L'erreur classique est d'essayer d'utiliser un fichier au format .osm directement, alors qu'il n'est pas supporté par Garmin. Le wiki explique comment <a href="https://wiki.openstreetmap.org/wiki/FR:OSM_Map_On_Garmin">utiliser une carte osm sur un garmin</a>. Il y a beaucoup de personnes qui créent des fichiers utilisables sur garmin (voir 1er lien sur le wiki), et il donnent généralement un bref tutoriel. Généralement il suffit de connecter le garmin en mode "clef usb" et de copier GMAPSUPP.IMG au bon endroit.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -133,7 +133,7 @@ One Answer:
 <div id="post-6967-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/3785/osm-on-garmin">http://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
+<p><a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
 </div>
 <div id="comment-6967-info" class="comment-info">
 <span class="comment-age">(08 Aug '11, 20:28)</span> <span class="comment-user userinfo">andy mackey</span>

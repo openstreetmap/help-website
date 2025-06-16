@@ -138,7 +138,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Works for me.</p>
-<p>Maybe there was service glitch at the time, although I can't see any evidence of this on the <a href="http://wiki.openstreetmap.org/wiki/Servers#Servers">munin stats</a></p>
+<p>Maybe there was service glitch at the time, although I can't see any evidence of this on the <a href="https://wiki.openstreetmap.org/wiki/Servers#Servers">munin stats</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

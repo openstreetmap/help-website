@@ -149,7 +149,7 @@ osqa_accepted = false
 <div id="post-37867-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2531/grillo">@Grillo</a>: ah, right. Yes, although you need to be knowing enough to construct your own search query. ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/2531/grillo">@Grillo</a>: ah, right. Yes, although you need to be knowing enough to construct your own search query. ;-)</p>
 </div>
 <div id="comment-37867-info" class="comment-info">
 <span class="comment-age">(22 Oct '14, 13:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

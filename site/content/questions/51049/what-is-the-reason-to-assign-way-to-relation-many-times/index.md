@@ -43,10 +43,10 @@ osqa_accepted = false
 From my point of view such ways are redundant, but maybe they have some hidden goal :)</p>
 <p>Can they be simply ignored in such case or have to be taken into account because of something?</p>
 <p>Samples:<br />
-Relation <a href="http://www.openstreetmap.org/relation/6172257">6172257</a> has way <a href="http://www.openstreetmap.org/way/385987825">385987825</a> assigned 10 times and way <a href="http://www.openstreetmap.org/way/385594983">385594983</a> assigned 9 times.<br />
-Relation <a href="http://www.openstreetmap.org/relation/6025059">6025059</a> has way <a href="http://www.openstreetmap.org/way/401613413">401613413</a> assigned 2 times.</p>
+Relation <a href="https://www.openstreetmap.org/relation/6172257">6172257</a> has way <a href="https://www.openstreetmap.org/way/385987825">385987825</a> assigned 10 times and way <a href="https://www.openstreetmap.org/way/385594983">385594983</a> assigned 9 times.<br />
+Relation <a href="https://www.openstreetmap.org/relation/6025059">6025059</a> has way <a href="https://www.openstreetmap.org/way/401613413">401613413</a> assigned 2 times.</p>
 <p>Top 20 :-)</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Top20Ways.png" alt="alt text" /></p>
+<p><img src="/upfiles/Top20Ways.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span> <span class="post-tag tag-link-shape" rel="tag" title="see questions tagged &#39;shape&#39;">shape</span>

@@ -119,7 +119,7 @@ I probably missed something.</p>
 <div class="answer-body">
 <p><a href="http://download.geofabrik.de/osm/">http://download.geofabrik.de/osm/</a> is a good source for planet.osm extracts. Basically you are downloading the osm data for a large region of the planet so you will want to look through the folders and find the smallest area which will contain Chicago, there are state sized regions.</p>
 <p>I would recommend picking the bzip version to download since this is an xml format which every openstreetmap tool can use.</p>
-<p>Now you have a large area of osm data which is too big, so you can use a tool called osmosis to cut out a square. You can find <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">instructions on the wiki</a>. (You can use the export tab to get the bounding box coordinates).</p>
+<p>Now you have a large area of osm data which is too big, so you can use a tool called osmosis to cut out a square. You can find <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">instructions on the wiki</a>. (You can use the export tab to get the bounding box coordinates).</p>
 <p>After that you should have a .osm file covering chicago. I just tested josm with an 80mb extract (Cambridgeshire in the UK, which is probably a bit larger than Chicago), it does slow down a bit but once you zoom in it seems to work reasonably, it used almost 700mb of memory.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -171,7 +171,7 @@ I probably missed something.</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>First of all, you must be aware that what you will be downloading, or editing in your editor, is raw data, not "a map". You will have a line tagged as "this is a road", another line tagged as "this is a building", but it is not a WYSIWYG editor. After you are done editing, you will have to create a map from your data, a process we call rendering. You will be using a different piece of software for that (Maperitive, Mapnik, Osmarender, Mapgen.pl or something).</p>
-<p>Now you didn't say why downloading with JOSM didn't work for you. My suspicion is that you might have tried to download a too large area. Try a city block first, to see if it works in principle. If it is really the size limit that is your problem, you will either have to use the <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> service (which is reportedly a bit flaky at the moment), or you should download a suitable <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm extract</a> and cut out your area of interest with a suitable program like <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>.</p>
+<p>Now you didn't say why downloading with JOSM didn't work for you. My suspicion is that you might have tried to download a too large area. Try a city block first, to see if it works in principle. If it is really the size limit that is your problem, you will either have to use the <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> service (which is reportedly a bit flaky at the moment), or you should download a suitable <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm extract</a> and cut out your area of interest with a suitable program like <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -66,7 +66,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If you don't get any reply on this help site, you might better contact the OSM developers community through its mailing list at dev@openstreetmap.org. (subscription required, see the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list doc</a>)</p>
+<p>If you don't get any reply on this help site, you might better contact the OSM developers community through its mailing list at dev@openstreetmap.org. (subscription required, see the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list doc</a>)</p>
 </div>
 <div id="comment-16079-info" class="comment-info">
 <span class="comment-age">(14 Sep '12, 11:41)</span> <span class="comment-user userinfo">Pieren</span>
@@ -77,7 +77,7 @@ osqa_accepted = false
 <div id="post-16224-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Based on the other information (socket bind failures etc.) I'm not sure that what you're seeing a purely a cross-site-scripting issue. As Pieren says, you'll probably get more response on the "dev" mailing list or perhaps on one of the <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC channels</a> (e.g. #osm or #osm-dev).</p>
+<p>Based on the other information (socket bind failures etc.) I'm not sure that what you're seeing a purely a cross-site-scripting issue. As Pieren says, you'll probably get more response on the "dev" mailing list or perhaps on one of the <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC channels</a> (e.g. #osm or #osm-dev).</p>
 <p>Is the Ubuntu server a physical box or a VM, and if a VM how is networking set up?</p>
 <p>When you say "I can browse the map" does that mean that you've got an OL or Leaflet-based map on the same Ubuntu server as well? If so, when you browse to the root of the webserver from your remote browser do you get an "It works!" page?</p>
 </div>

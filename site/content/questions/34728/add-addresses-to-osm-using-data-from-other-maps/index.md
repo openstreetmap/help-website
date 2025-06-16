@@ -137,7 +137,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>first of all make sure you really understand the ODbL license, see e.g. <a href="http://wiki.osmfoundation.org/wiki/License">http://wiki.osmfoundation.org/wiki/License</a> for more information. Then you can contact the copyright holder and ask them whether they are willing to release their data under this license. It's probably not enough to just contact your town hall, but you should also contact the makers of the map. you can also read <a href="http://wiki.openstreetmap.org/wiki/Potential_Datasources">http://wiki.openstreetmap.org/wiki/Potential_Datasources</a> or the import mailing list</p>
+<p>first of all make sure you really understand the ODbL license, see e.g. <a href="http://wiki.osmfoundation.org/wiki/License">http://wiki.osmfoundation.org/wiki/License</a> for more information. Then you can contact the copyright holder and ask them whether they are willing to release their data under this license. It's probably not enough to just contact your town hall, but you should also contact the makers of the map. you can also read <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">https://wiki.openstreetmap.org/wiki/Potential_Datasources</a> or the import mailing list</p>
 </div>
 <div id="comment-34731-info" class="comment-info">
 <span class="comment-age">(08 Jul '14, 15:28)</span> <span class="comment-user userinfo">escada</span>

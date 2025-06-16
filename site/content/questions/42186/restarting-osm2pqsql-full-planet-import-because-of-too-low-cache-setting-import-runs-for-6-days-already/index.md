@@ -45,7 +45,7 @@ osqa_accepted = true
 <pre><code>Processing: Node(2786658k 90.9k/s) Way(243561k 0.52k/s) Relation(0 0.00/s)</code></pre>
 <p>So nodes have been processed, ways almost, relations not yet.</p>
 <p>Is it possible to estimate how more days it will take to finalize?</p>
-<p>2nd point: I followed the instruction for optimizing PostgreSQL (set <code>autovacuum</code> <code>off</code>, incresed <code>checkpoint_segments</code>, etc.). But I only <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql#Parameters">now read</a> that my <code>--cache</code> setting of <code>14384</code> might be a too low for a full planet import:</p>
+<p>2nd point: I followed the instruction for optimizing PostgreSQL (set <code>autovacuum</code> <code>off</code>, incresed <code>checkpoint_segments</code>, etc.). But I only <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql#Parameters">now read</a> that my <code>--cache</code> setting of <code>14384</code> might be a too low for a full planet import:</p>
 <p><em>"osm2pgsql relies much on its node cache during import. If the nodes do not fit into the cache in slim mode it needs to do database lookups which slow down the process. (Without slim mode, it fails if the nodes do not fit in the cache). Use enough cache so all nodes are cached. <strong>-C 22000 seems to do the job</strong>, even if that means you have to configure more swap space."</em></p>
 <p>Does it make sense to kill the osm2pqsql process and restart with <code>--cache 28000</code>? (I have a total of 32GB RAM, 8 cores, 64bit CentOS). That is, throw away the last 6 days of importing because it will still take ages to finish, and with the increased Cache it will still be faster in the end?</p>
 </div>

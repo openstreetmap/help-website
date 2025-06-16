@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm having some trouble with extracting the number of lanes and appropriate turn restrictions in OSM. Take for example <a href="https://www.openstreetmap.org/way/54460235#map=19/40.46047/-79.92243">Penn Avenue</a>, at the intersection with Center Avenue in Pittsburgh. On the map you clearly see a purple road with a dotted center line which indicates multiple lanes. Yet in the data, there is no "lanes" tag. How can I get the number of lanes for this particular street? If it's not in OSM, is there some external source where I might be able to get this kind of data?</p>
-<p><strong>Update</strong>: Here is a screenshot of that particular intersection from Google maps satelite: <img src="http://help.openstreetmap.org/upfiles/pennAve_CenterAve.png" width="800" height="400" /> When coming from the street at the bottom left (Center ave), there are 2 lanes: one to go straight and one to go right. It is prohibited to turn left onto Penn Ave. The street from the top left to bottom right is Penn ave. As you can see, there are multiple lanes as well. When I export the OSM data for this intersection, there seems to be no information about the number of lanes, nor is there any information on the turn restrictions?</p>
+<p><strong>Update</strong>: Here is a screenshot of that particular intersection from Google maps satelite: <img src="/upfiles/pennAve_CenterAve.png" width="800" height="400" /> When coming from the street at the bottom left (Center ave), there are 2 lanes: one to go straight and one to go right. It is prohibited to turn left onto Penn Ave. The street from the top left to bottom right is Penn ave. As you can see, there are multiple lanes as well. When I export the OSM data for this intersection, there seems to be no information about the number of lanes, nor is there any information on the turn restrictions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lanes" rel="tag" title="see questions tagged &#39;lanes&#39;">lanes</span> <span class="post-tag tag-link-turn_restrictions" rel="tag" title="see questions tagged &#39;turn_restrictions&#39;">turn_restrictions</span>
@@ -235,11 +235,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>After being a bit familiar with OSM tagging schema for <a href="http://wiki.openstreetmap.org/wiki/Lanes">turn lanes</a> and <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">turn restrictions</a>, you can load that area for example in the offline editor <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>.</p>
+<p>After being a bit familiar with OSM tagging schema for <a href="https://wiki.openstreetmap.org/wiki/Lanes">turn lanes</a> and <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">turn restrictions</a>, you can load that area for example in the offline editor <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>.</p>
 <p>There you can see that right to this moment (maybe someone is adding tags in the next hours or days) thereis NO tagging about lanes, turn lanes and turn restrictions.</p>
 <p>In JOSM there are symbols for turn restrictions, and there is a mappaint style for lanes, and turn lanes!</p>
 <p>And I never came accross any legal data source with real data about lanes count and turn restriction for any area in the world.</p>
-<p>So it is hard work to derive that real world information by own knowledge, or any webservice where we have the explicit permission to use for OSM purposes, like mapillary.com, <a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">Bing aerial photos or Mapbox aerial photos</a></p>
+<p>So it is hard work to derive that real world information by own knowledge, or any webservice where we have the explicit permission to use for OSM purposes, like mapillary.com, <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">Bing aerial photos or Mapbox aerial photos</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

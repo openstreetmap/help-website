@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Welcome to OSM! Have a look at the wiki <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a> page. It's crucial that any such "import" is only done with the agreement of the local community; is not encumbered by copyright (e.g. if you created the locations by reference to a Google Map or similar); and is technically up to par, with sensible tags, no duplication of existing data, etc.</p>
+<p>Welcome to OSM! Have a look at the wiki <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a> page. It's crucial that any such "import" is only done with the agreement of the local community; is not encumbered by copyright (e.g. if you created the locations by reference to a Google Map or similar); and is technically up to par, with sensible tags, no duplication of existing data, etc.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ One Answer:
 <div id="post-10217-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It might be easiest to discuss your ideas and needs on IRC and then post the solution here for future reference. <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> I'd start with #osm channel.</p>
+<p>It might be easiest to discuss your ideas and needs on IRC and then post the solution here for future reference. <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a> I'd start with #osm channel.</p>
 </div>
 <div id="comment-10217-info" class="comment-info">
 <span class="comment-age">(25 Jan '12, 20:08)</span> <span class="comment-user userinfo">ChrisH</span>

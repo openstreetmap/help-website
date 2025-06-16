@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi NoirFM, the data of OSM is <a href="http://www.openstreetmap.org/copyright">free to access for everybody (with restrictions)</a>. Please help yourself, in general we don't have the capacity to help you with a specific task. You will find many answers on this site or in our wiki. To only get the Ukraine data from OSM you may use e.g. <a href="http://download.geofabrik.de/europe/ukraine.html">http://download.geofabrik.de/europe/ukraine.html</a></p>
+<p>Hi NoirFM, the data of OSM is <a href="https://www.openstreetmap.org/copyright">free to access for everybody (with restrictions)</a>. Please help yourself, in general we don't have the capacity to help you with a specific task. You will find many answers on this site or in our wiki. To only get the Ukraine data from OSM you may use e.g. <a href="http://download.geofabrik.de/europe/ukraine.html">http://download.geofabrik.de/europe/ukraine.html</a></p>
 <p>If you only need data of some specific cities <span>XAPI</span> or <span>overpass (turbo)</span> may be an option for you.</p>
 <p>You are probably interested in <span>info about downloading OSM data</span> and <span>info about addresses in OSM</span>.</p>
 </div>

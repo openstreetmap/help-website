@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi I am trying to import OSM data into my PostgreSQL database. I have already created database called city_routing in my prostgresql database. When I try to import data using folloeing command I am getting mapconfig.xml notfound error. Please help me. Thanks</p>
 <p><strong>Command</strong></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Inkederror2_LI.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Inkederror2_LI.jpg" alt="alt text" /></p>
 <p><strong>Error</strong></p>
-<p><img src="https://help.openstreetmap.org/upfiles/pgroutingError.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/pgroutingError.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-pgrouting" rel="tag" title="see questions tagged &#39;pgrouting&#39;">pgrouting</span>

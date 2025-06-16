@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to check Nominatim planet import execution is running in background or terminated?"
-description = '''I am doing Nominatim OSM installation as per the steps given in http://wiki.openstreetmap.org/wiki/Nominatim/Installation. Currently I am on following command   ./utils/setup.php --osm-file /usr/share/osmgeplanet/gujarat.osm.bz2 --all  Script is running and the last line of output is &quot;Partitions&quot; an...'''
+description = '''I am doing Nominatim OSM installation as per the steps given in https://wiki.openstreetmap.org/wiki/Nominatim/Installation. Currently I am on following command   ./utils/setup.php --osm-file /usr/share/osmgeplanet/gujarat.osm.bz2 --all  Script is running and the last line of output is &quot;Partitions&quot; an...'''
 date = "2012-06-25T13:35:00Z"
 lastmod = "2012-06-26T07:56:00Z"
 weight = 13762
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am doing Nominatim OSM installation as per the steps given in <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a>. Currently I am on following command</p>
+<p>I am doing Nominatim OSM installation as per the steps given in <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a>. Currently I am on following command</p>
 <blockquote>
 <p>./utils/setup.php --osm-file /usr/share/osmgeplanet/gujarat.osm.bz2 --all</p>
 </blockquote>
@@ -154,7 +154,7 @@ osqa_accepted = false
 <div id="post-13781-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can ignore the lines with &lt;idle&gt;, those are just open connections to the database. If there are no other lines, then it is not a database access that is stuck. I edited my answer to make that more clear. Finding another cause is more difficult. Just try to restart the import. It shouldn't take more than a few hours overall. If you get stuck again, ask over at the <a href="http://wiki.openstreetmap.org/wiki/Contact#IRC">IRC channel</a>.</p>
+<p>You can ignore the lines with &lt;idle&gt;, those are just open connections to the database. If there are no other lines, then it is not a database access that is stuck. I edited my answer to make that more clear. Finding another cause is more difficult. Just try to restart the import. It shouldn't take more than a few hours overall. If you get stuck again, ask over at the <a href="https://wiki.openstreetmap.org/wiki/Contact#IRC">IRC channel</a>.</p>
 </div>
 <div id="comment-13781-info" class="comment-info">
 <span class="comment-age">(26 Jun '12, 07:56)</span> <span class="comment-user userinfo">lonvia</span>

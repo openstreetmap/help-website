@@ -89,7 +89,7 @@ osqa_accepted = true
 <div id="post-52665-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5587/yvecai">@yvecai</a> We are willing to licence our data under ODbl as well and for example add a tag with a link to our data to the places in OSM. Due to the complexity of our data model I do not see how it could be completely integrated in OSM in a feasible way. We do want to give back to the community as much as possible and are open for suggestions.</p>
+<p><a href="https://help.openstreetmap.org/users/5587/yvecai">@yvecai</a> We are willing to licence our data under ODbl as well and for example add a tag with a link to our data to the places in OSM. Due to the complexity of our data model I do not see how it could be completely integrated in OSM in a feasible way. We do want to give back to the community as much as possible and are open for suggestions.</p>
 </div>
 <div id="comment-52665-info" class="comment-info">
 <span class="comment-age">(24 Oct '16, 20:03)</span> <span class="comment-user userinfo">acgjheeb</span>
@@ -100,7 +100,7 @@ osqa_accepted = true
 <div id="post-52666-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> You do mean the place_id? Thanks for the useful hint! I will keep that in mind!</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> You do mean the place_id? Thanks for the useful hint! I will keep that in mind!</p>
 </div>
 <div id="comment-52666-info" class="comment-info">
 <span class="comment-age">(24 Oct '16, 20:07)</span> <span class="comment-user userinfo">acgjheeb</span>
@@ -229,10 +229,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've got an answer from the email suggested by <a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a>.</p>
+<p>I've got an answer from the email suggested by <a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a>.</p>
 <p>It suggests to read the following pages:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></li>
+<li><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/License">http://wiki.osmfoundation.org/wiki/License</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/License/Community_Guidelines">http://wiki.osmfoundation.org/wiki/License/Community_Guidelines</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines/Collective_Database_Guideline_Guideline">http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines/Collective_Database_Guideline_Guideline</a></li>

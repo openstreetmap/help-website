@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-75092-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Converted comment (from <a href="https://help.openstreetmap.org/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response)">https://help.openstreetmap.org/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response)</a> to a question.</p>
+<p>Converted comment (from <a href="/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response)">https://help.openstreetmap.org/questions/12946/calculate-time-and-distance-between-two-latlng-points-with-a-json-response)</a> to a question.</p>
 </div>
 <div id="comment-75092-info" class="comment-info">
 <span class="comment-age">(02 Jun '20, 10:42)</span> <span class="comment-user userinfo">scai ♦</span>

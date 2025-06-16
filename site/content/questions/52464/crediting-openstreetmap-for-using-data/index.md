@@ -111,7 +111,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>You can find the official documentation on how to apply the licence on the following pages.</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></li>
+<li><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence">http://wiki.osmfoundation.org/wiki/Licence</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ">http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ</a></li>
 <li><a href="http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines">http://wiki.osmfoundation.org/wiki/Licence/Community_Guidelines</a></li>

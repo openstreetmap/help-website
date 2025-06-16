@@ -162,7 +162,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Here's one I did 5 hours ago: <a href="http://www.openstreetmap.org/node/4883663593">http://www.openstreetmap.org/node/4883663593</a> . There's no service road there because it's really just a patch of gravel at the side of the road. If there's something a bit more formal where there's a service road that moves away from the road I'd map that too.</p>
+<p>Here's one I did 5 hours ago: <a href="https://www.openstreetmap.org/node/4883663593">https://www.openstreetmap.org/node/4883663593</a> . There's no service road there because it's really just a patch of gravel at the side of the road. If there's something a bit more formal where there's a service road that moves away from the road I'd map that too.</p>
 </div>
 <div id="comment-56362-info" class="comment-info">
 <span class="comment-age">(29 May '17, 20:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -204,7 +204,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Amanning, no there not, just use the available tags, take a look here <a href="http://wiki.openstreetmap.org/wiki/File:Parking_and_picnic_area_at_Rest_And_Be_Thankful_-">http://wiki.openstreetmap.org/wiki/File:Parking_and_picnic_area_at_Rest_And_Be_Thankful_-</a><em>geograph.org.uk</em>-_1657648.jpg and specify the items that are present.</p>
+<p>Hi Amanning, no there not, just use the available tags, take a look here <a href="https://wiki.openstreetmap.org/wiki/File:Parking_and_picnic_area_at_Rest_And_Be_Thankful_-">https://wiki.openstreetmap.org/wiki/File:Parking_and_picnic_area_at_Rest_And_Be_Thankful_-</a><em>geograph.org.uk</em>-_1657648.jpg and specify the items that are present.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -246,7 +246,7 @@ osqa_accepted = true
 <div id="post-56363-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm guessing that the link is supposed to be <a href="http://www.geograph.org.uk/photo/1657648">http://www.geograph.org.uk/photo/1657648</a> , which is <a href="http://www.openstreetmap.org/#map=18/56.22568/-4.85615">http://www.openstreetmap.org/#map=18/56.22568/-4.85615</a> in OSM. I wouldn't call it a layby to be honest - it's a parking and picnic area off the side of the road.</p>
+<p>I'm guessing that the link is supposed to be <a href="http://www.geograph.org.uk/photo/1657648">http://www.geograph.org.uk/photo/1657648</a> , which is <a href="https://www.openstreetmap.org/#map=18/56.22568/-4.85615">https://www.openstreetmap.org/#map=18/56.22568/-4.85615</a> in OSM. I wouldn't call it a layby to be honest - it's a parking and picnic area off the side of the road.</p>
 </div>
 <div id="comment-56363-info" class="comment-info">
 <span class="comment-age">(29 May '17, 20:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

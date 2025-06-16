@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The complete list of tags won't give you much information. Better determine the most used tags via <a href="http://taginfo.openstreetmap.org/">taginfo</a> as already explained by Jonathan and Frederik or take a look at the <a href="http://wiki.openstreetmap.org/wiki/Map_features">map features page</a> in the wiki.</p>
+<p>The complete list of tags won't give you much information. Better determine the most used tags via <a href="http://taginfo.openstreetmap.org/">taginfo</a> as already explained by Jonathan and Frederik or take a look at the <a href="https://wiki.openstreetmap.org/wiki/Map_features">map features page</a> in the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

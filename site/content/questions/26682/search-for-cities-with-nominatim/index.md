@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at the <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Parameters">parameters</a>. If you want to limit your search to cities and countries only then just set the <em>city</em> or <em>country</em> parameter, e.g.</p>
+<p>Take a look at the <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Parameters">parameters</a>. If you want to limit your search to cities and countries only then just set the <em>city</em> or <em>country</em> parameter, e.g.</p>
 <p><a href="http://nominatim.openstreetmap.org/search?city=Köln">http://nominatim.openstreetmap.org/search?city=Köln</a></p>
 <p>and</p>
 <p><a href="http://nominatim.openstreetmap.org/search?country=Croatia">http://nominatim.openstreetmap.org/search?country=Croatia</a></p>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe a look at <a href="http://wiki.openstreetmap.org/wiki/Photon">Photon</a> can be helpful?</p>
+<p>Maybe a look at <a href="https://wiki.openstreetmap.org/wiki/Photon">Photon</a> can be helpful?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

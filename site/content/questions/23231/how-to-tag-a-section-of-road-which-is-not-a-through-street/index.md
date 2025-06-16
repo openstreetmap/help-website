@@ -115,8 +115,8 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I'm also new at this but I think you can mark the ends of the restricted section by adding barrier=bollard (or barrier=gate, or whatever seems best), access=official, foot=yes to nodes at either end of the restricted area.</p>
 <p><a href="http://taginfo.openstreetmap.org/keys/barrier#values">http://taginfo.openstreetmap.org/keys/barrier#values</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Barriers">http://wiki.openstreetmap.org/wiki/Barriers</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Barriers">https://wiki.openstreetmap.org/wiki/Barriers</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 <p>You might also want to split the way and add a surface=unpaved for the dirt section too.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -264,7 +264,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi you could also add just one barrier at the point where you can’t get through by motorized vehicles, like here <a href="http://www.openstreetmap.org/?lat=52.340901&amp;lon=6.679669&amp;zoom=18&amp;layers=M.">http://www.openstreetmap.org/?lat=52.340901&amp;lon=6.679669&amp;zoom=18&amp;layers=M.</a> But since threes a piece in the middle with 2 barriers, tag the way in 3 ways and mark the middle one motor vehicles no and any vehicle that can’t get through. Tag the barriers accordingly <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">http://wiki.openstreetmap.org/wiki/Key:barrier</a> for instance barrier = log or debris. the other parts do need an extra tag noexit = yes.</p>
+<p>Hi you could also add just one barrier at the point where you can’t get through by motorized vehicles, like here <a href="https://www.openstreetmap.org/?lat=52.340901&amp;lon=6.679669&amp;zoom=18&amp;layers=M.">https://www.openstreetmap.org/?lat=52.340901&amp;lon=6.679669&amp;zoom=18&amp;layers=M.</a> But since threes a piece in the middle with 2 barriers, tag the way in 3 ways and mark the middle one motor vehicles no and any vehicle that can’t get through. Tag the barriers accordingly <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">https://wiki.openstreetmap.org/wiki/Key:barrier</a> for instance barrier = log or debris. the other parts do need an extra tag noexit = yes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

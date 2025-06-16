@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Why doesn't <a href="http://www.openstreetmap.org/node/2686506425">this</a> trigger a slippy link at the Wikipedia article. What am I missing?</p>
+<p>Why doesn't <a href="https://www.openstreetmap.org/node/2686506425">this</a> trigger a slippy link at the Wikipedia article. What am I missing?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiwosm" rel="tag" title="see questions tagged &#39;wiwosm&#39;">wiwosm</span> <span class="post-tag tag-link-wikipedia" rel="tag" title="see questions tagged &#39;wikipedia&#39;">wikipedia</span>

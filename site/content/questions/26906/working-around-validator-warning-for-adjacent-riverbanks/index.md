@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I finally understood (I think !) the reason why some mappers add a node where a riverbank way ends and another begins:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/riverbank_overlap.png" alt="alt text" /></p>
+<p><img src="/upfiles/riverbank_overlap.png" alt="alt text" /></p>
 <p>This is, as far as I can figure out, a way to avoid JOSM validator's "ovelapping ways" warning.</p>
 <p>Of course, the warning is yet another anoying false-positive, but to me it seems like the workaround is an actual semantic error (overlapping areas as opposed to areas sharing an edge). I should probably file a bug to the validator, but I wonder what people think. Is this workaround a good thing ? Wouldn't validators other than the JOSM one complain about this ?</p>
 </div>

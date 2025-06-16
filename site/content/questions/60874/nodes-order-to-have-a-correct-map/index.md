@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am not familiar with bulkDB.pl - Are you talking about this collection of scripts? <a href="http://wiki.openstreetmap.org/wiki/OsmDB.pm">http://wiki.openstreetmap.org/wiki/OsmDB.pm</a></p>
+<p>I am not familiar with bulkDB.pl - Are you talking about this collection of scripts? <a href="https://wiki.openstreetmap.org/wiki/OsmDB.pm">https://wiki.openstreetmap.org/wiki/OsmDB.pm</a></p>
 <p>If so, it looks like there is a table named <code>waynodes</code> which maps nodes to ways. The second column in this table (named "s" which is not very descriptive) indicates the order of the nodes in the way, starting at 0. So whatever query you are using to get the nodes out of the database needs to somehow include a <code>sort by s</code> clause in it.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -170,10 +170,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>So when you need a visualisation for many markers on a map in a PDF file, have a look at</p>
-<p>OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM-on-paper</a> and <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a> (but maybe there is no solutiuon to include many markers out-of-the-box</p>
+<p>OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM-on-paper</a> and <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a> (but maybe there is no solutiuon to include many markers out-of-the-box</p>
 <p><a href="http://cartodb.com">cartoDB</a> or <a href="https://www.mapbox.com/tilemill/">MapBox Studio</a> (formerly known as TileMill) (but I don't know about their Bitmap/PDF export features)</p>
 <p>But tell us whether any solution comes near your aim! Then we can try to investigate further.</p>
-<p>EDIT: or try <a href="http://wiki.openstreetmap.org/wiki/Geojson.io">Geojson.io</a> or <a href="http://sharemap.org">sharemap</a> or <a href="http://wiki.openstreetmap.org/wiki/UMap">uMap</a></p>
+<p>EDIT: or try <a href="https://wiki.openstreetmap.org/wiki/Geojson.io">Geojson.io</a> or <a href="http://sharemap.org">sharemap</a> or <a href="https://wiki.openstreetmap.org/wiki/UMap">uMap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

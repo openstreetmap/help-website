@@ -115,8 +115,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For a map of Germany with only all buildings you should have first a look at <a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">another topic</a> here dealing with rendering such big maps.</p>
-<p>When you only want to render a smaller area I recommend <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> .. there you can edit the style file only to render buildings. Have a look there at "Sample Renderings"</p>
+<p>For a map of Germany with only all buildings you should have first a look at <a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">another topic</a> here dealing with rendering such big maps.</p>
+<p>When you only want to render a smaller area I recommend <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> .. there you can edit the style file only to render buildings. Have a look there at "Sample Renderings"</p>
 <p>(When you want to dig deeper in that topic in German language there is also the <a href="http://forum.openstreetmap.org/">OSM forum</a> with a german sub section. Log in there with your OSM account.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -191,8 +191,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Looking for something like this?</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/d/de/UserABRobMaperitive_RegelnSchwarzplan.png/500px-UserABRobMaperitive_RegelnSchwarzplan.png" alt="alt text" /></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings">http://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings</a></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/d/de/UserABRobMaperitive_RegelnSchwarzplan.png/500px-UserABRobMaperitive_RegelnSchwarzplan.png" alt="alt text" /></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings">https://wiki.openstreetmap.org/wiki/Maperitive/SampleRenderings</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

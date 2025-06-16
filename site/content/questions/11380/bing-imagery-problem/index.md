@@ -73,7 +73,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Not sure how to permalink a Bing map, but here is a link to the area: <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=59.51176&amp;lon=10.68141&amp;zoom=15">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=59.51176&amp;lon=10.68141&amp;zoom=15</a></p>
+<p>Not sure how to permalink a Bing map, but here is a link to the area: <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=59.51176&amp;lon=10.68141&amp;zoom=15">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=59.51176&amp;lon=10.68141&amp;zoom=15</a></p>
 </div>
 <div id="comment-11386-info" class="comment-info">
 <span class="comment-age">(21 Mar '12, 13:39)</span> <span class="comment-user userinfo">Honning</span>
@@ -200,7 +200,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a related question about realignment <a href="http://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery">http://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery</a><br />
+<p>This is a related question about realignment <a href="/questions/6385/alignment-of-track-vs-background-imagery">https://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery</a><br />
 The photos are "stuck" together and its more noticeable when the light as changed between pics.I have noticed when tracing over bing that the shadow of adjacent buildings occasionally points from a different direction,indicating a join, you could get a fairly precise time and date (or season) from the length of shadow and bearing but it's only of incidental interest. The images will be their most accurate in the centre, that is vertically below the camera the greater the angle from vertical the greater the distortion as the edges of images are further away from camera than the middle so they must stretch a bit. The higher the altitude the less distortion but the optics will need to be better and I suppose there will be some distortion for the greater depth of atmosphere that may have varying densities that will bend the light (as in heat shimmer). The wiki will I'm sure have some professional words on all of this.<br />
 </p>
 </div>
@@ -252,7 +252,7 @@ The photos are "stuck" together and its more noticeable when the light as change
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One suggestion as to how to deal with this issue is the "True Offset Process", described <a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">here</a>. As far as I know, there's no editor support for it (yet) and I would imagine that collating different people's impression of how much imagery is offset may prove difficult. In your area it's obvious that there's a discontinuity, but (especially in hilly areas) there can be problems with both imagery and GPS traces being (differently) offset. Even in non-hilly areas there can be problems (like <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.975887&amp;lon=-0.632661&amp;zoom=18">here</a> for example).<br />
+<p>One suggestion as to how to deal with this issue is the "True Offset Process", described <a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">here</a>. As far as I know, there's no editor support for it (yet) and I would imagine that collating different people's impression of how much imagery is offset may prove difficult. In your area it's obvious that there's a discontinuity, but (especially in hilly areas) there can be problems with both imagery and GPS traces being (differently) offset. Even in non-hilly areas there can be problems (like <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.975887&amp;lon=-0.632661&amp;zoom=18">here</a> for example).<br />
 </p>
 <p>Basically, the more good GPS traces there are the better you can align imagery (and tell which GPS traces are good ones).</p>
 </div>
@@ -349,7 +349,7 @@ The photos are "stuck" together and its more noticeable when the light as change
 <div id="post-11429-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper">http://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper</a> part solution</p>
+<p><a href="/questions/10236/how-to-contact-another-mapper">https://help.openstreetmap.org/questions/10236/how-to-contact-another-mapper</a> part solution</p>
 </div>
 <div id="comment-11429-info" class="comment-info">
 <span class="comment-age">(22 Mar '12, 19:27)</span> <span class="comment-user userinfo">andy mackey</span>

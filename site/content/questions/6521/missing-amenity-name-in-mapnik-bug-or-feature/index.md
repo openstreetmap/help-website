@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I recently added two pubs (that are in the same building) to the map and both showed up quite fast. But one got rendered without the name even though the name is there and there is place for it. Does this have some deeper meaning or is it a bug? If so - how should it be reported?</p>
 <p><img src="http://b.tile.openstreetmap.org/18/143161/89796.png" alt="name missing" /></p>
-<p><a href="http://www.openstreetmap.org/?lat=49.206109&amp;lon=16.602617&amp;zoom=18&amp;layers=M">Permalink</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=49.206109&amp;lon=16.602617&amp;zoom=18&amp;layers=M">Permalink</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>
@@ -113,7 +113,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is not a bug. Currently <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> (the main renderer for OSM) isn't really smart about symbols and names that are very close to each other so it will sometimes leave the name or even the symbol out if they would overlap otherwise. You can activate the <a href="http://wiki.openstreetmap.org/wiki/Osmarender">osmarender</a> layer to see the same map rendered by an alternative program which does not have this "feature" and leads in more detailed areas to overlapping names which isn't very nice, too.</p>
+<p>It is not a bug. Currently <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> (the main renderer for OSM) isn't really smart about symbols and names that are very close to each other so it will sometimes leave the name or even the symbol out if they would overlap otherwise. You can activate the <a href="https://wiki.openstreetmap.org/wiki/Osmarender">osmarender</a> layer to see the same map rendered by an alternative program which does not have this "feature" and leads in more detailed areas to overlapping names which isn't very nice, too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

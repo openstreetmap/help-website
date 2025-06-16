@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Use <a href="http://overpass-turbo.eu/">Overpass Turbo</a> , enter amenity=bicycle_parking into the wizard and build the query, use the map to move to the location you want the data for, run the query, then export the data to a form you can use.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">Wiki on Tag:amenity=bicycle_parking</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">Wiki on Tag:amenity=bicycle_parking</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

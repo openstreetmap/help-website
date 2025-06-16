@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problems with relation"
-description = '''Hi all, anybody knows why this island is not rendered? The relation seems to be correct. http://www.openstreetmap.org/way/268014778 Thanks René'''
+description = '''Hi all, anybody knows why this island is not rendered? The relation seems to be correct. https://www.openstreetmap.org/way/268014778 Thanks René'''
 date = "2015-01-29T21:48:00Z"
 lastmod = "2015-01-30T21:18:00Z"
 weight = 40704
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi all,</p>
 <p>anybody knows why this island is not rendered? The relation seems to be correct.</p>
-<p><a href="http://www.openstreetmap.org/way/268014778">http://www.openstreetmap.org/way/268014778</a></p>
+<p><a href="https://www.openstreetmap.org/way/268014778">https://www.openstreetmap.org/way/268014778</a></p>
 <p>Thanks René</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>My guessing: you should delete natural=water from the outer ring (<a href="http://www.openstreetmap.org/way/313399158),">http://www.openstreetmap.org/way/313399158),</a> it is a redundancy of the riverbank relation (one feature, one element); right now, it's like having two objects overlapping: a riverbank with some islands inside, and a sort of lake covering them all. Also, those ways should have "inner" role: <a href="http://www.openstreetmap.org/way/313647459">http://www.openstreetmap.org/way/313647459</a> and <a href="http://www.openstreetmap.org/way/313647754">http://www.openstreetmap.org/way/313647754</a></p>
+<p>My guessing: you should delete natural=water from the outer ring (<a href="https://www.openstreetmap.org/way/313399158),">https://www.openstreetmap.org/way/313399158),</a> it is a redundancy of the riverbank relation (one feature, one element); right now, it's like having two objects overlapping: a riverbank with some islands inside, and a sort of lake covering them all. Also, those ways should have "inner" role: <a href="https://www.openstreetmap.org/way/313647459">https://www.openstreetmap.org/way/313647459</a> and <a href="https://www.openstreetmap.org/way/313647754">https://www.openstreetmap.org/way/313647754</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

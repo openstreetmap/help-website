@@ -182,7 +182,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Here's <a href="http://www.openstreetmap.org/way/160402280">one example</a>. You can use those keys and values to <a href="http://taginfo.openstreetmap.org/search?q=communications_dish#values">search</a> <a href="http://taginfo.openstreetmap.org/tags/?key=building&amp;value=ground_station">taginfo</a>, and see what other people have used. Also look at other similar things elsewhere to come up with other suggestions.</p>
+<p>Here's <a href="https://www.openstreetmap.org/way/160402280">one example</a>. You can use those keys and values to <a href="http://taginfo.openstreetmap.org/search?q=communications_dish#values">search</a> <a href="http://taginfo.openstreetmap.org/tags/?key=building&amp;value=ground_station">taginfo</a>, and see what other people have used. Also look at other similar things elsewhere to come up with other suggestions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm producing an interpreter file using the command from <a href="https://help.openstreetmap.org/questions/21555/overpass-get-output-structured-with-hierarchy-not-flat">another question</a>.</p>
+<p>I'm producing an interpreter file using the command from <a href="/questions/21555/overpass-get-output-structured-with-hierarchy-not-flat">another question</a>.</p>
 <p>That file I then parse with php... Iterate relation, then in the order the ways are printed I read their ref, take the referenced way, then I iterate the nodes of the way and read each node in the order it was printed.</p>
 <p>The lon and lat of each node I then put into a string like that</p>
 <pre><code>lon1,lat1,0

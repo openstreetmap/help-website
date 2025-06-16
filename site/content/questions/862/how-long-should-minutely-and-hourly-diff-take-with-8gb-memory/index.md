@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki page for <a href="http://wiki.openstreetmap.org/wiki/SotM_2010_session:Tuning_the_Mapnik_Rendering_Chain">my SotM performance talk</a> has an SVG image for a 8 GB RAM machine showing that you should be able to process a daily diff in under 10 hours. This is an osm2pgsql import however; in case you are talking about an APIDB import using Osmosis, that is likely to take longer. For osm2pgsql, we have seen that using PostgreSQL 8.4 was much slower than 8.3, so make sure you're not running 8.4. Of course, the usual database tuning tips apply (are your imports perhaps interrupted by an auto-vacuum process? can you afford the risk of having fsync=off? have you increased your shared_buffers from the default?). Sometimes, running an "analyze" command on the database also helps.</p>
+<p>The wiki page for <a href="https://wiki.openstreetmap.org/wiki/SotM_2010_session:Tuning_the_Mapnik_Rendering_Chain">my SotM performance talk</a> has an SVG image for a 8 GB RAM machine showing that you should be able to process a daily diff in under 10 hours. This is an osm2pgsql import however; in case you are talking about an APIDB import using Osmosis, that is likely to take longer. For osm2pgsql, we have seen that using PostgreSQL 8.4 was much slower than 8.3, so make sure you're not running 8.4. Of course, the usual database tuning tips apply (are your imports perhaps interrupted by an auto-vacuum process? can you afford the risk of having fsync=off? have you increased your shared_buffers from the default?). Sometimes, running an "analyze" command on the database also helps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

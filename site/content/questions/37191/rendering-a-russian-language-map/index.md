@@ -107,7 +107,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'd load it with osm2pgsql, but use a <a href="https://github.com/openstreetmap/osm2pgsql/blob/master/docs/lua.md">lua tag transformation</a> to move whatever's in "name:ru" to "name", if there is a "name:ru".</p>
-<p>I've done that, not for names, but for <a href="https://github.com/SomeoneElseOSM/designation-style">certain other map features</a>. Some brief notes are <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver_load">here</a>.</p>
+<p>I've done that, not for names, but for <a href="https://github.com/SomeoneElseOSM/designation-style">certain other map features</a>. Some brief notes are <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver_load">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Starting hints should be found in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a></p>
+<p>Starting hints should be found in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

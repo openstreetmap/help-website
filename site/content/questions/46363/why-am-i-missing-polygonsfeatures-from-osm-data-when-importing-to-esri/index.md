@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>Are there possible issues that the Areas features are not being imported or created from the nodes and can this be fixed?</p>
 <p>Many thanks</p>
 <p>Jon</p>
-<p><img src="http://help.openstreetmap.org/upfiles/OSM_Bulgaria_ESRI_Import.png" alt="alt text" /></p>
+<p><img src="/upfiles/OSM_Bulgaria_ESRI_Import.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shapefile" rel="tag" title="see questions tagged &#39;shapefile&#39;">shapefile</span> <span class="post-tag tag-link-esri" rel="tag" title="see questions tagged &#39;esri&#39;">esri</span> <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>
@@ -166,7 +166,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>That depends on the kind of issue. If you spot a specific mistake, you're best of making a "Note" (available on the main website, right hand side of the map) describing the problem. If it is something more general, a good plpace to start might be the country specific mailing list <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists">http://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists</a> or forum <a href="http://forum.openstreetmap.org/">http://forum.openstreetmap.org/</a></p>
+<p>That depends on the kind of issue. If you spot a specific mistake, you're best of making a "Note" (available on the main website, right hand side of the map) describing the problem. If it is something more general, a good plpace to start might be the country specific mailing list <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists">https://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists</a> or forum <a href="http://forum.openstreetmap.org/">http://forum.openstreetmap.org/</a></p>
 </div>
 <div id="comment-46387-info" class="comment-info">
 <span class="comment-age">(04 Nov '15, 16:06)</span> <span class="comment-user userinfo">joost schouppe</span>

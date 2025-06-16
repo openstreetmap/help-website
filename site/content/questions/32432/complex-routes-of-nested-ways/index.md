@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi each section of a trail using a way should be part of a relation. Please read this section of the WIKI complicated yes, <a href="http://wiki.openstreetmap.org/wiki/Route#Bus_routes_.28also_trolley_bus.29">http://wiki.openstreetmap.org/wiki/Route#Bus_routes_.28also_trolley_bus.29</a> There is even a specific section for bicycle routes as well. If you follow these guidelines the renderer can read your contributions correctly.</p>
+<p>Hi each section of a trail using a way should be part of a relation. Please read this section of the WIKI complicated yes, <a href="https://wiki.openstreetmap.org/wiki/Route#Bus_routes_.28also_trolley_bus.29">https://wiki.openstreetmap.org/wiki/Route#Bus_routes_.28also_trolley_bus.29</a> There is even a specific section for bicycle routes as well. If you follow these guidelines the renderer can read your contributions correctly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -193,7 +193,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12525/robinottawa">@robinottawa</a> Generally speaking, you'd split a way into sections for which the tagging is unique. For example, this bit of road <a href="http://www.openstreetmap.org/way/31559293">http://www.openstreetmap.org/way/31559293</a> has mostly the same tags as an adjacent bit <a href="http://www.openstreetmap.org/way/283948074">http://www.openstreetmap.org/way/283948074</a> , but the speed limits are different. If you tried to add "speed_limit=40 mph;50 mph" you wouldn't know which bit had which speed limit.</p>
+<p><a href="https://help.openstreetmap.org/users/12525/robinottawa">@robinottawa</a> Generally speaking, you'd split a way into sections for which the tagging is unique. For example, this bit of road <a href="https://www.openstreetmap.org/way/31559293">https://www.openstreetmap.org/way/31559293</a> has mostly the same tags as an adjacent bit <a href="https://www.openstreetmap.org/way/283948074">https://www.openstreetmap.org/way/283948074</a> , but the speed limits are different. If you tried to add "speed_limit=40 mph;50 mph" you wouldn't know which bit had which speed limit.</p>
 </div>
 <div id="comment-50724-info" class="comment-info">
 <span class="comment-age">(07 Jul '16, 23:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

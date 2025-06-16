@@ -74,7 +74,7 @@ Barrier=curb, curb=intermittent or something like it and ad the height of the ba
 <div id="post-36139-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Andy, is there a good method to import jpgs ? I tried but no luck. <a href="https://www.google.nl/maps/%3Ca%20href="></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9">@51</a>.992736,5.096189,3a,75y,254.71h,52.33t/data=!3m4!1e1!3m2!1sYG0aTgiavVo6Diqi33k8kA!2e0"&gt;https://www.google.nl/maps/<a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9">@51</a>.992736,5.096189,3a,75y,254.71h,52.33t/data=!3m4!1e1!3m2!1sYG0aTgiavVo6Diqi33k8kA!2e0 This seems reluctantly to go, heres the other one <a href="https://www.google.nl/maps/%3Ca%20href="></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9">@51</a>.99283,5.096832,3a,75y,131.26h,60.32t/data=!3m4!1e1!3m2!1sOlFxQ1631IEJOVpbGSTgmQ!2e0"&gt;https://www.google.nl/maps/<a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9"></a><a href="http://help.openstreetmap.org/users/7558/51114u9">@51</a>.99283,5.096832,3a,75y,131.26h,60.32t/data=!3m4!1e1!3m2!1sOlFxQ1631IEJOVpbGSTgmQ!2e0</p>
+<p>Hi Andy, is there a good method to import jpgs ? I tried but no luck. <a href="https://www.google.nl/maps/%3Ca%20href="></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9">@51</a>.992736,5.096189,3a,75y,254.71h,52.33t/data=!3m4!1e1!3m2!1sYG0aTgiavVo6Diqi33k8kA!2e0"&gt;https://www.google.nl/maps/<a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9">@51</a>.992736,5.096189,3a,75y,254.71h,52.33t/data=!3m4!1e1!3m2!1sYG0aTgiavVo6Diqi33k8kA!2e0 This seems reluctantly to go, heres the other one <a href="https://www.google.nl/maps/%3Ca%20href="></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9">@51</a>.99283,5.096832,3a,75y,131.26h,60.32t/data=!3m4!1e1!3m2!1sOlFxQ1631IEJOVpbGSTgmQ!2e0"&gt;https://www.google.nl/maps/<a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9"></a><a href="https://help.openstreetmap.org/users/7558/51114u9">@51</a>.99283,5.096832,3a,75y,131.26h,60.32t/data=!3m4!1e1!3m2!1sOlFxQ1631IEJOVpbGSTgmQ!2e0</p>
 </div>
 <div id="comment-36139-info" class="comment-info">
 <span class="comment-age">(24 Aug '14, 12:08)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -159,7 +159,7 @@ One Answer:
 <div id="post-49948-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
+<p><a href="/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
 </div>
 <div id="comment-49948-info" class="comment-info">
 <span class="comment-age">(01 Jun '16, 09:46)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -170,7 +170,7 @@ One Answer:
 <div id="post-50462-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, this should be a pic <img src="http://help.openstreetmap.org/upfiles/IMG_7343_1_64FDEcQ.jpg" alt="alt text" /> Sorry for the B&amp;W but its a clear pic without colour an poornibadrinath its intermittent=yes</p>
+<p>Hi, this should be a pic <img src="/upfiles/IMG_7343_1_64FDEcQ.jpg" alt="alt text" /> Sorry for the B&amp;W but its a clear pic without colour an poornibadrinath its intermittent=yes</p>
 </div>
 <div id="comment-50462-info" class="comment-info">
 <span class="comment-age">(25 Jun '16, 21:42)</span> <span class="comment-user userinfo">Hendrikklaas</span>

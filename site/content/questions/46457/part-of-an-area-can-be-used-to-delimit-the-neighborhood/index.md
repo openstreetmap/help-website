@@ -47,8 +47,8 @@ osqa_accepted = false
 <ul>
 <li>Area: Aera Base / Campo Grande.</li>
 <li>Relationship / neighborhood limit: Taveirópolis (5636496, v4)</li>
-<li>Edit mode: <a href="http://www.openstreetmap.org/edit?editor=id&amp;node=1997383636#map=16/-20.4845/-54.6818">http://www.openstreetmap.org/edit?editor=id&amp;node=1997383636#map=16/-20.4845/-54.6818</a></li>
-<li>Standard Map: <a href="http://www.openstreetmap.org/#map=16/-20.4877/-54.6835">http://www.openstreetmap.org/#map=16/-20.4877/-54.6835</a></li>
+<li>Edit mode: <a href="https://www.openstreetmap.org/edit?editor=id&amp;node=1997383636#map=16/-20.4845/-54.6818">https://www.openstreetmap.org/edit?editor=id&amp;node=1997383636#map=16/-20.4845/-54.6818</a></li>
+<li>Standard Map: <a href="https://www.openstreetmap.org/#map=16/-20.4877/-54.6835">https://www.openstreetmap.org/#map=16/-20.4877/-54.6835</a></li>
 </ul>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The edits look generally reasonable, the military base is not showing up on the standard map because there is a small gap in the relation:</p>
-<p><a href="http://www.openstreetmap.org/relation/5638018#map=19/-20.47106/-54.65796">http://www.openstreetmap.org/relation/5638018#map=19/-20.47106/-54.65796</a></p>
+<p><a href="https://www.openstreetmap.org/relation/5638018#map=19/-20.47106/-54.65796">https://www.openstreetmap.org/relation/5638018#map=19/-20.47106/-54.65796</a></p>
 <p>I found the issue by opening the relation in JOSM and using the validator, another way is <a href="http://tools.geofabrik.de/osmi/?view=multipolygon&amp;lon=-54.66309&amp;lat=-20.46791&amp;zoom=14&amp;overlays=invalid_geometry_hull,duplicate_ways,intersections,intersection_lines,ring_not_closed_hull,ring_not_closed,unconnected_end_nodes,touching_inner_rings_hull,touching_inner_rings,role_mismatch_hull,role_mismatch,duplicate_tags_hull,duplicate_tags,multipolygons_type_is_boundary,type_is_boundary,ways,role_markers,way_end_nodes,way_nodes">this tool, which shows similar errors.</a></p>
 <p>Edit to add: there was a gap right there, someone decided it urgently needed fixing.</p>
 </div>

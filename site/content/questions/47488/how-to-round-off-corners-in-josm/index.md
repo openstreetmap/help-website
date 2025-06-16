@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I haven't used it but the 'fillet' command in the following looks promising for rounding corners in a neat and consistent manner. <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine</a></p>
+<p>I haven't used it but the 'fillet' command in the following looks promising for rounding corners in a neat and consistent manner. <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -132,7 +132,7 @@ osqa_accepted = false
 <div id="post-47503-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Great idea. I installed the Command Line Plug-in and couldn't make it work. After reading the command line wiki <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine</a> I got lost when told to install the "Python interpreter".</p>
+<p>Great idea. I installed the Command Line Plug-in and couldn't make it work. After reading the command line wiki <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/CommandLine</a> I got lost when told to install the "Python interpreter".</p>
 </div>
 <div id="comment-47503-info" class="comment-info">
 <span class="comment-age">(13 Jan '16, 22:55)</span> <span class="comment-user userinfo">Alan01730</span>
@@ -174,7 +174,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Splinex">Splinex</a> plugin also looks promissing, although it seems to be broken for current JOSM versions.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Splinex">Splinex</a> plugin also looks promissing, although it seems to be broken for current JOSM versions.</p>
 <p>That said, in my area road curves are very irregular, and I doubt that a bezier tool would be better (time to trace vs smoothness/accuracy of curve) than standard <a href="http://josm.openstreetmap.de/wiki/Help/Action/ImproveWayAccuracy">Improve way accuracy</a> and a good pointing device.</p>
 </div>
 <div class="answer-controls post-controls">

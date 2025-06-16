@@ -77,7 +77,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>Do you mean where landuse is glued to roads, like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm_01005.png" alt="landuse glued to roads" /></p>
+<p><img src="/upfiles/josm_01005.png" alt="landuse glued to roads" /></p>
 <p>(that's a screenshot of the Potlatch 2 editor)</p>
 <p>It might help to say what editor you're using to edit OpenStreetMap, as the method to fix will vary depending on which one you're using.</p>
 </div>

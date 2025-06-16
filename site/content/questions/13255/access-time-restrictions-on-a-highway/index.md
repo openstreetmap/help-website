@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a proposal about <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags#Examples">extended access conditions</a> that can handle such special cases. I'll try to find the right tags for your conditions:</p>
+<p>There is a proposal about <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags#Examples">extended access conditions</a> that can handle such special cases. I'll try to find the right tags for your conditions:</p>
 <p><em>foot=yes</em><br />
 <em>vehicle=yes</em> (includes bicycle, bus, taxi, ...)<br />
 <em>vehicle:(11:00-18:00)=destination</em> (there might be a better tag for "city permit" than <em>destination</em>)<br />

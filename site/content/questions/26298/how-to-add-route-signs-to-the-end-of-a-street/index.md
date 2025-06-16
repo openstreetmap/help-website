@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I would like to add a route sign to the end of the street tag would be highway=stop. And what to do with the related picture for example: traffic_sign=DE:206. I could not find any useful info in the related <a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">wiki</a> I only found possibilities for turning route signs. Can you help me? (off: I would like to define all the route signs for my hometown - so my mother would be alerted by OSMand)<br />
-<strong>Edit:</strong> info how to define restriction can be found <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">here</a><br />
+<p>I would like to add a route sign to the end of the street tag would be highway=stop. And what to do with the related picture for example: traffic_sign=DE:206. I could not find any useful info in the related <a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">wiki</a> I only found possibilities for turning route signs. Can you help me? (off: I would like to define all the route signs for my hometown - so my mother would be alerted by OSMand)<br />
+<strong>Edit:</strong> info how to define restriction can be found <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">here</a><br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -175,7 +175,7 @@ osqa_accepted = true
 <div id="post-26369-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>please have a look on my proposal regarding to this: <a href="http://wiki.openstreetmap.org/wiki/Stop_and_Give_a_way_route_signs_as_restrictions">http://wiki.openstreetmap.org/wiki/Stop_and_Give_a_way_route_signs_as_restrictions</a></p>
+<p>please have a look on my proposal regarding to this: <a href="https://wiki.openstreetmap.org/wiki/Stop_and_Give_a_way_route_signs_as_restrictions">https://wiki.openstreetmap.org/wiki/Stop_and_Give_a_way_route_signs_as_restrictions</a></p>
 </div>
 <div id="comment-26369-info" class="comment-info">
 <span class="comment-age">(15 Sep '13, 19:06)</span> <span class="comment-user userinfo">Hib</span>
@@ -218,7 +218,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The wiki is the right place. For the "DE:206" stop sign, check this page for all German road signs:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/DE:Road_signs_in_Germany#Vorschriftszeichen">http://wiki.openstreetmap.org/wiki/DE:Road_signs_in_Germany#Vorschriftszeichen</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/DE:Road_signs_in_Germany#Vorschriftszeichen">https://wiki.openstreetmap.org/wiki/DE:Road_signs_in_Germany#Vorschriftszeichen</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -251,7 +251,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>two hints:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/RoadSigns">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/RoadSigns</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/RoadSigns">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/RoadSigns</a></p>
 <p>That is a plugin for the offline OSM editor JOSM.</p>
 <p>and</p>
 <p>go to <a href="http://taginfo.openstreetmap.org">http://taginfo.openstreetmap.org</a> and enter any value for a street sign you want to use in its search box, like traffic_sign=DE:206</p>

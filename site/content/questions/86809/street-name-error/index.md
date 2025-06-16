@@ -159,7 +159,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hello,</p>
 <p>I don’t find the edit button, where is it ? I use phone, maybe is it on computer ?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/3DF3802C-A763-4B21-B6C9-C7B0B560048D.png" alt="H" /></p>
+<p><img src="/upfiles/3DF3802C-A763-4B21-B6C9-C7B0B560048D.png" alt="H" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -376,8 +376,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>But on the main map, the right name La Janaie don’t appear. The right name appear just on the Edit page.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/06F7416D-3C0B-432E-88DD-2372D7A62E94.png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/D3BBF8AB-885B-4AA6-A4FB-CC7E20B58CF2.png" alt="alt text" /></p>
+<p><img src="/upfiles/06F7416D-3C0B-432E-88DD-2372D7A62E94.png" alt="alt text" /></p>
+<p><img src="/upfiles/D3BBF8AB-885B-4AA6-A4FB-CC7E20B58CF2.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -488,8 +488,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Ok, I try an other browsers and I see the modification. When zoom on it, the old name appears.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/611997EB-D7CD-4076-8F04-9EBCBDB00CC0.png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/F9532433-BE5D-4A17-9315-0284D7D62FB6.png" alt="alt text" /></p>
+<p><img src="/upfiles/611997EB-D7CD-4076-8F04-9EBCBDB00CC0.png" alt="alt text" /></p>
+<p><img src="/upfiles/F9532433-BE5D-4A17-9315-0284D7D62FB6.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

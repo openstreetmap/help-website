@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers to a similar question: <a href="https://help.openstreetmap.org/questions/61136/pokemon-go-osm-map-updates">https://help.openstreetmap.org/questions/61136/pokemon-go-osm-map-updates</a></p>
+<p>See the answers to a similar question: <a href="/questions/61136/pokemon-go-osm-map-updates">https://help.openstreetmap.org/questions/61136/pokemon-go-osm-map-updates</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

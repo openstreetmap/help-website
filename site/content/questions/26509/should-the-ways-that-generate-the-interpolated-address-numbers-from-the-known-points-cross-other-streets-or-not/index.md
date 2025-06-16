@@ -40,14 +40,14 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am surveying (on foot, using "analog" notes - pen and paper that is) the area near my workplace for house numbers. Since I do not have time and resources to tag <em>every house/building</em> that exists, I am using the information very conveniently made available on small road signs placed on almost all street corners. Example:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Address_Sign.jpg" alt="Address Sign" /></p>
-<p>The numbers show the first and last existing address number in each direction of each side (there are usually four of these signs at each street intersection) of the street, and sometimes, also information about the ZIP code of the area. Because of this, I am using the <a href="http://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">Karlsruhe Schema</a> to add this information to the map.</p>
+<p><img src="/upfiles/Address_Sign.jpg" alt="Address Sign" /></p>
+<p>The numbers show the first and last existing address number in each direction of each side (there are usually four of these signs at each street intersection) of the street, and sometimes, also information about the ZIP code of the area. Because of this, I am using the <a href="https://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">Karlsruhe Schema</a> to add this information to the map.</p>
 <p>Now, my question is:</p>
 <p><em>"Should the ways that generate the interpolated address numbers from the known points cross other streets or not?"</em></p>
 <p>Example of interpolation ways crossing street (not yet uploaded):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Interpolation_crossing_streets.jpg" alt="Interpolation way crossing street" /></p>
+<p><img src="/upfiles/Interpolation_crossing_streets.jpg" alt="Interpolation way crossing street" /></p>
 <p>Example of interpolation ways <em>not</em> crossing street (not yet uploaded):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Interpolation_not_crossing_streets.jpg" alt="Interpolation way not crossing street" /></p>
+<p><img src="/upfiles/Interpolation_not_crossing_streets.jpg" alt="Interpolation way not crossing street" /></p>
 <p>If the interpolation way cross the streets between known points, it would be possible to generate "approximate locations" for address numbers that do not exist in reality (and never will - they would be ON the street that was crossed!), overcoming the limitation of Nominatim for address numbers outside of existing ranges defined by the interpolation ways. However, it would be a completely artificial construct.</p>
 <p>For example, search (in Brazil) for: - Rua João Mafra, 25 (return is correct) - Rua João Mafra, 201 (return is "not correct" - should be between 201 and 239 points)</p>
 </div>
@@ -271,7 +271,7 @@ osqa_accepted = false
 </ul>
 <p>That would mean that the address interpolation way <em>will cross other ways</em> if one or both address numbers of adjacent blocks corners are not known (because in this case, there is the possibility of street numbers between the known corner and the non-corner street number) and <em>will not cross</em> other ways only if both of them are known (because, in this case, the street numbers between them are _known to be non-existent).</p>
 <p>One image says a lot more than one thousand words, so:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Address_Interpolation_ways_1.jpg" alt="Address Interpolation ways crossing/not crossing streets" /></p>
+<p><img src="/upfiles/Address_Interpolation_ways_1.jpg" alt="Address Interpolation ways crossing/not crossing streets" /></p>
 <ul>
 <li>The green arrows point known house numbers that are exactly on the block's corners</li>
 <li>The red arrows show address interpolation ways that cross the adjacent streets because one or both of the house numbers of its block's corners are not known</li>

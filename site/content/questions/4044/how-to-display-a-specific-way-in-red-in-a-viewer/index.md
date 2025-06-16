@@ -91,7 +91,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Just checking - do you perhaps mean "josm" (the Java-based Openstreetmap editor) rather than "Gosm" (the Openstreetmap viewer for Linux <a href="http://wiki.openstreetmap.org/wiki/Gosm">http://wiki.openstreetmap.org/wiki/Gosm</a> )?</p>
+<p>Just checking - do you perhaps mean "josm" (the Java-based Openstreetmap editor) rather than "Gosm" (the Openstreetmap viewer for Linux <a href="https://wiki.openstreetmap.org/wiki/Gosm">https://wiki.openstreetmap.org/wiki/Gosm</a> )?</p>
 </div>
 <div id="comment-4054-info" class="comment-info">
 <span class="comment-age">(24 Mar '11, 20:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -208,7 +208,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can highlight (in blue) an object within OSM database by browsing it - for example see <a href="http://www.openstreetmap.org/browse/way/89696929">http://www.openstreetmap.org/browse/way/89696929</a>. You only change the way number to yours. You can also use this type of link for nodes and relations - just change the "way" for "node" or "relation" with corresponding object number. If you do not know the object number, go to the map of your area and select "data" from the right menu (collapsed as "+" by default), then click on your object and you will see its number in left column.</p>
+<p>You can highlight (in blue) an object within OSM database by browsing it - for example see <a href="https://www.openstreetmap.org/browse/way/89696929">https://www.openstreetmap.org/browse/way/89696929</a>. You only change the way number to yours. You can also use this type of link for nodes and relations - just change the "way" for "node" or "relation" with corresponding object number. If you do not know the object number, go to the map of your area and select "data" from the right menu (collapsed as "+" by default), then click on your object and you will see its number in left column.</p>
 <p>However, this will only work for data that are already present in the OSM map database and thus are visible to EVERYONE (with or without highlighting). If your object has no geographical value and you only want to show random vector data to your friends, you should NOT use OSM database for this kind of activity and rather find other way of sharing private information.</p>
 </div>
 <div class="answer-controls post-controls">

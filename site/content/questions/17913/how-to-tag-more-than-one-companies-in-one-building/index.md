@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check this reply: <a href="https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility">https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a></p>
+<p>Check this reply: <a href="/questions/2969/how-to-tag-a-multi-function-facility">https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a></p>
 <p>or find other similar questions with the 'search' feature on top of this web site <a href="https://help.openstreetmap.org/tags/">link text</a>and/or "Tags" list (e.g. about "buildings").</p>
 </div>
 <div class="answer-controls post-controls">

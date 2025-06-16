@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap is not a route-drawing site in the manner of MapMyRide, Bikely, or BikeRouteToaster. If you want to create a track by tracing over OSM and then download that to your GPS, you'll need to use one of those sites. <a href="http://www.bikeroutetoaster.com/">BikeRouteToaster</a> offers OSM mapping and is a good one to choose.</p>
-<p>However, if you have a GPS with mapping functionality, you may be able to load a full set of OSM maps onto your GPS. The most common units used for this are the Garmin models. The OSM wiki has <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">extensive instructions</a> on loading OSM maps onto a Garmin GPS.</p>
+<p>However, if you have a GPS with mapping functionality, you may be able to load a full set of OSM maps onto your GPS. The most common units used for this are the Garmin models. The OSM wiki has <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">extensive instructions</a> on loading OSM maps onto a Garmin GPS.</p>
 <p>If the roads you want to drive/cycle/walk aren't already in OSM, then you can use your GPS for good! Upload the tracklogs to OSM when you've finished, then update the map by tracing over them. There are many more instructions both on the wiki and in the 'Help' function of Potlatch, the online map editor that appears when you click 'Edit'.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,7 +174,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Depends what do you mean by tracks? If you mean general ways which are not yet in your GPS map, then yes you can. Simplest way would be to 1. use "edit" tab in <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> to add the tracks. Be sure to tag them correctly 2. then pick one of the Garmin GPS exports from <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> with your area.</p>
+<p>Depends what do you mean by tracks? If you mean general ways which are not yet in your GPS map, then yes you can. Simplest way would be to 1. use "edit" tab in <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> to add the tracks. Be sure to tag them correctly 2. then pick one of the Garmin GPS exports from <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> with your area.</p>
 <p>Note that the exports are not live - take a look to "update frequency" field, so most probably there is 1-day delay between the two steps. And only GPS device make which supports update of maps is Garmin.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -84,7 +84,7 @@ And are part of the Grand Bahama Shipyard Limited see here some pictures as well
 <div id="post-60248-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>He seems to be talking about floating drydocks (tagged in OSM as <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway=dock">waterway=dock</a>). <a href="https://www.openstreetmap.org/way/178248195">Here</a>'s one of them in the area in question (there are others adjacent to it).</p>
+<p>He seems to be talking about floating drydocks (tagged in OSM as <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway=dock">waterway=dock</a>). <a href="https://www.openstreetmap.org/way/178248195">Here</a>'s one of them in the area in question (there are others adjacent to it).</p>
 </div>
 <div id="comment-60248-info" class="comment-info">
 <span class="comment-age">(23 Oct '17, 16:59)</span> <span class="comment-user userinfo">alester</span>

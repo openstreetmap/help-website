@@ -74,7 +74,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Related question: <a href="https://help.openstreetmap.org/questions/48283/create-image-of-map-and-route-on-a-mac-view-osm-data-and-import-kml-file.">https://help.openstreetmap.org/questions/48283/create-image-of-map-and-route-on-a-mac-view-osm-data-and-import-kml-file.</a> Maybe it already contains an useful answer for you.</p>
+<p>Related question: <a href="/questions/48283/create-image-of-map-and-route-on-a-mac-view-osm-data-and-import-kml-file.">https://help.openstreetmap.org/questions/48283/create-image-of-map-and-route-on-a-mac-view-osm-data-and-import-kml-file.</a> Maybe it already contains an useful answer for you.</p>
 </div>
 <div id="comment-48354-info" class="comment-info">
 <span class="comment-age">(25 Feb '16, 12:39)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -85,7 +85,7 @@ osqa_accepted = false
 <div id="post-48356-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: thanks for your answer!</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: thanks for your answer!</p>
 </div>
 <div id="comment-48356-info" class="comment-info">
 <span class="comment-age">(25 Feb '16, 13:46)</span> <span class="comment-user userinfo">Charlie18</span>
@@ -96,7 +96,7 @@ osqa_accepted = false
 <div id="post-48365-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12028/charlie18">@Charlie18</a>: do you still have questions or is everything fine now?</p>
+<p><a href="https://help.openstreetmap.org/users/12028/charlie18">@Charlie18</a>: do you still have questions or is everything fine now?</p>
 </div>
 <div id="comment-48365-info" class="comment-info">
 <span class="comment-age">(25 Feb '16, 19:58)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -108,7 +108,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I'd say it's ok for now. Thanks!</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I'd say it's ok for now. Thanks!</p>
 </div>
 <div id="comment-48367-info" class="comment-info">
 <span class="comment-age">(26 Feb '16, 10:24)</span> <span class="comment-user userinfo">Charlie18</span>

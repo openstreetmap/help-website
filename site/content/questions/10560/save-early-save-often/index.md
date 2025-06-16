@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see my question <a href="http://help.openstreetmap.org/questions/2983/potlach-2-save-and-continue-edit-note">http://help.openstreetmap.org/questions/2983/potlach-2-save-and-continue-edit-note</a></p>
+<p>see my question <a href="/questions/2983/potlach-2-save-and-continue-edit-note">https://help.openstreetmap.org/questions/2983/potlach-2-save-and-continue-edit-note</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

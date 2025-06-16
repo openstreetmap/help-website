@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-42164-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It doesn't matter, but I need to repeat this process for a large number of addresses. <a href="http://help.openstreetmap.org/users/80/addismap_alexander"></a><a href="http://help.openstreetmap.org/users/80/addismap_alexander">@AddisMap_Ale</a>...</p>
+<p>It doesn't matter, but I need to repeat this process for a large number of addresses. <a href="https://help.openstreetmap.org/users/80/addismap_alexander"></a><a href="https://help.openstreetmap.org/users/80/addismap_alexander">@AddisMap_Ale</a>...</p>
 </div>
 <div id="comment-42164-info" class="comment-info">
 <span class="comment-age">(07 Apr '15, 10:24)</span> <span class="comment-user userinfo">Fabio</span>
@@ -200,7 +200,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>... and about geocoding of addresses, see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a></p>
+<p>... and about geocoding of addresses, see <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

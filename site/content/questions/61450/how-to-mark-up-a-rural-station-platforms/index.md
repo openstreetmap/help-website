@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi, John:</p>
-<p>Platforms should't be connected to the railway. See the picture of this link: <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation#A_Simple_Railway_Station">A Simple Railway Station</a></p>
+<p>Platforms should't be connected to the railway. See the picture of this link: <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation#A_Simple_Railway_Station">A Simple Railway Station</a></p>
 <p>I also see that the South Milford station is duplicated. It should have only one node (or area, as you decide), and the two nodes on the railways should be tagged as <strong>railway=stop</strong> (or <strong>public_transport=stop_position</strong>) + <strong>name=South Milford</strong>.</p>
 </div>
 <div class="answer-controls post-controls">

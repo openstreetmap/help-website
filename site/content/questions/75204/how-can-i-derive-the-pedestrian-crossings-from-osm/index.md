@@ -68,7 +68,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Converted to question from <a href="https://help.openstreetmap.org/questions/64714/">How do I tag a zebra crossing? crossing_ref=zebra or crossing=zebra?</a></p>
+<p>Converted to question from <a href="/questions/64714/">How do I tag a zebra crossing? crossing_ref=zebra or crossing=zebra?</a></p>
 <p>Please always create a new question for your inquiries.</p>
 </div>
 <div id="comment-75213-info" class="comment-info">

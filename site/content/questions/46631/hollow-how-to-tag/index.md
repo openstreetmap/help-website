@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>VitCiobanu I would go for a term of smoothness for a short or longer part of the road and read these pages for a good decision <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/smoothness">http://wiki.openstreetmap.org/wiki/Proposed_features/smoothness</a></p>
+<p>VitCiobanu I would go for a term of smoothness for a short or longer part of the road and read these pages for a good decision <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/smoothness">https://wiki.openstreetmap.org/wiki/Proposed_features/smoothness</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why doesn&#x27;t Visual Basic WebBrowser control show OSM anymore?"
-description = '''Hi everyone! This newbie has an urgent question: I am using the following URL in a Visual Basic (2010) program to show the OSM map in a web browser control. (The VB Webbrowser control uses the settings of the IE on the machine the software runs on.) Me.Map.Navigate(&quot;http://www.openstreetmap.org/?mla...'''
+description = '''Hi everyone! This newbie has an urgent question: I am using the following URL in a Visual Basic (2010) program to show the OSM map in a web browser control. (The VB Webbrowser control uses the settings of the IE on the machine the software runs on.) Me.Map.Navigate(&quot;https://www.openstreetmap.org/?mla...'''
 date = "2013-09-25T09:37:00Z"
 lastmod = "2013-09-25T11:08:00Z"
 weight = 26703
@@ -41,12 +41,12 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi everyone!</p>
 <p>This newbie has an urgent question: I am using the following URL in a Visual Basic (2010) program to show the OSM map in a web browser control. (The VB Webbrowser control uses the settings of the IE on the machine the software runs on.)</p>
-<p>Me.Map.Navigate("http://www.openstreetmap.org/?mlat=" &amp; lat &amp; "&amp;mlon=" &amp; lon &amp; "&amp;zoom=" &amp; level)</p>
+<p>Me.Map.Navigate("https://www.openstreetmap.org/?mlat=" &amp; lat &amp; "&amp;mlon=" &amp; lon &amp; "&amp;zoom=" &amp; level)</p>
 <p>Thus, the URL given to the control looks something like this at runtime:</p>
-<p><a href="http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17">http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17">https://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17</a></p>
 <p>This always worked for the last three years. But strangely, it doesn't work anymore since yesterday(or maybe the day before, I don't know for sure). When I paste the URL into IE, it shows the map as usual, but when my software is told to open the link, it only shows a white page with the OSM Navigation bar on the left and nothing else.</p>
 <p>Can anyone help me with this, or at least tell me if anything has been changed in OSM lately? It does look like it, because the above mentioned URL automatically gets changed to the following when opened in a web browser:</p>
-<p><a href="http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17#map=17/51.91120/8.13180">http://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17#map=17/51.91120/8.13180</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17#map=17/51.91120/8.13180">https://www.openstreetmap.org/?mlat=51.9112&amp;mlon=8.1318&amp;zoom=17#map=17/51.91120/8.13180</a></p>
 <p>The last part beginning with #map seems to be new to me. But even when I change the URL in my program to the above, extended version, the map won't get shown.</p>
 <p>Any help would be very much appreciated, as my software runs on several computers and people start asking me what's wrong.</p>
 <p>Thanks,</p>
@@ -73,7 +73,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Not sure why your application can't handle the page anymore but this is actually not an <em>extended</em> version but a <em>shorter</em> one: <a href="http://www.openstreetmap.org/#map=17/51.91120/8.13180">http://www.openstreetmap.org/#map=17/51.91120/8.13180</a> (zoom/lat/lon) is now the new format.</p>
+<p>Not sure why your application can't handle the page anymore but this is actually not an <em>extended</em> version but a <em>shorter</em> one: <a href="https://www.openstreetmap.org/#map=17/51.91120/8.13180">https://www.openstreetmap.org/#map=17/51.91120/8.13180</a> (zoom/lat/lon) is now the new format.</p>
 </div>
 <div id="comment-26706-info" class="comment-info">
 <span class="comment-age">(25 Sep '13, 10:09)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Can I revert part of a changeset without affecting the rest?"
-description = '''I was adding all AH-roads in the south caucasus as relations just recently. Nevertheless, the relation http://www.openstreetmap.org/browse/relation/1770126 of the AH-81 is now empty except of one member. This happened in changeset http://www.openstreetmap.org/browse/changeset/9571754 Is it possible ...'''
+description = '''I was adding all AH-roads in the south caucasus as relations just recently. Nevertheless, the relation https://www.openstreetmap.org/browse/relation/1770126 of the AH-81 is now empty except of one member. This happened in changeset https://www.openstreetmap.org/browse/changeset/9571754 Is it possible ...'''
 date = "2011-11-07T13:16:00Z"
 lastmod = "2012-02-17T10:31:00Z"
 weight = 8863
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was adding all AH-roads in the south caucasus as relations just recently. Nevertheless, the relation <a href="http://www.openstreetmap.org/browse/relation/1770126">http://www.openstreetmap.org/browse/relation/1770126</a> of the AH-81 is now empty except of one member. This happened in changeset <a href="http://www.openstreetmap.org/browse/changeset/9571754">http://www.openstreetmap.org/browse/changeset/9571754</a></p>
+<p>I was adding all AH-roads in the south caucasus as relations just recently. Nevertheless, the relation <a href="https://www.openstreetmap.org/browse/relation/1770126">https://www.openstreetmap.org/browse/relation/1770126</a> of the AH-81 is now empty except of one member. This happened in changeset <a href="https://www.openstreetmap.org/browse/changeset/9571754">https://www.openstreetmap.org/browse/changeset/9571754</a></p>
 <p>Is it possible to revert the changes on the relations, without reverting the rest of the changeset? It seems that user baxi does valuable contributions on the map of Azerbaijan.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -241,7 +241,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Another problem... in the changeset, several relations were emptied. I tried it now with relation 176922 (Asian Highway AH5), but I get the error: Upload failed, because the dataset does not fulfill one condition. Response Code = 412, Error Header=&lt;precondition failed:="" relation="" with="" id="" 176922="" cannot="" be="" saved="" due="" to="" way="" with="" id="" 127474940=""&gt;</p>
-<p>The conflicting way is this one, <a href="http://www.openstreetmap.org/browse/way/127474940/history">http://www.openstreetmap.org/browse/way/127474940/history</a> a road that has later been deleted due to road construction in this area :(</p>
+<p>The conflicting way is this one, <a href="https://www.openstreetmap.org/browse/way/127474940/history">https://www.openstreetmap.org/browse/way/127474940/history</a> a road that has later been deleted due to road construction in this area :(</p>
 </div>
 <div id="comment-10619-info" class="comment-info">
 <span class="comment-age">(17 Feb '12, 10:11)</span> <span class="comment-user userinfo">moszkva ter</span>
@@ -252,7 +252,7 @@ osqa_accepted = false
 <div id="post-10621-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Er - <a href="http://www.openstreetmap.org/browse/way/127474940/history">http://www.openstreetmap.org/browse/way/127474940/history</a> was deleted 28th Nov and says "New road in Igoeti". The coords of one node are 41.999649, 44.389927 - I doubt you can get bitterballen there!</p>
+<p>Er - <a href="https://www.openstreetmap.org/browse/way/127474940/history">https://www.openstreetmap.org/browse/way/127474940/history</a> was deleted 28th Nov and says "New road in Igoeti". The coords of one node are 41.999649, 44.389927 - I doubt you can get bitterballen there!</p>
 </div>
 <div id="comment-10621-info" class="comment-info">
 <span class="comment-age">(17 Feb '12, 10:31)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

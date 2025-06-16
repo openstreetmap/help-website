@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First of all, you have to understand that the administrators will remove data from Odbl/Contributor Terms decliners and you cannot re-introduce them afterwards yourself. Second, there is a wiki page about remapping the data here : <a href="http://wiki.openstreetmap.org/wiki/Remapping">http://wiki.openstreetmap.org/wiki/Remapping</a></p>
+<p>First of all, you have to understand that the administrators will remove data from Odbl/Contributor Terms decliners and you cannot re-introduce them afterwards yourself. Second, there is a wiki page about remapping the data here : <a href="https://wiki.openstreetmap.org/wiki/Remapping">https://wiki.openstreetmap.org/wiki/Remapping</a></p>
 <p>&gt; Do I simply delete the existing 'bad' ways and draw in my own 'good' ways?<br />
 If you know them and use an appropriate source (like Bing imagery) for the position, then yes. But you cannot reuse the previous shapes, positions or information coming from decliners.</p>
 <p>&gt; am I able to copy the information provided by accepters to my new way ?<br />
@@ -284,7 +284,7 @@ The important thing about any licence is that it allows something, not restricts
 <div id="post-10101-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think the effort to contact decliners and an action plan is provided on the remapping page: <a href="http://wiki.openstreetmap.org/wiki/Remapping">http://wiki.openstreetmap.org/wiki/Remapping</a> however, it could be more streamlined.</p>
+<p>I think the effort to contact decliners and an action plan is provided on the remapping page: <a href="https://wiki.openstreetmap.org/wiki/Remapping">https://wiki.openstreetmap.org/wiki/Remapping</a> however, it could be more streamlined.</p>
 </div>
 <div id="comment-10101-info" class="comment-info">
 <span class="comment-age">(20 Jan '12, 10:58)</span> <span class="comment-user userinfo">woowoowoo</span>
@@ -295,7 +295,7 @@ The important thing about any licence is that it allows something, not restricts
 <div id="post-10103-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Re who/what/when/how, most of the answers to that are on the <a href="http://wiki.openstreetmap.org/wiki/Remapping">http://wiki.openstreetmap.org/wiki/Remapping</a> page. Mappers who have not yet accepted the CTs will have had emails sent to the address that they have registered at OSM, but that may not still be valid of course. Other people have tried to track them down via other means, such as social media.</p>
+<p>Re who/what/when/how, most of the answers to that are on the <a href="https://wiki.openstreetmap.org/wiki/Remapping">https://wiki.openstreetmap.org/wiki/Remapping</a> page. Mappers who have not yet accepted the CTs will have had emails sent to the address that they have registered at OSM, but that may not still be valid of course. Other people have tried to track them down via other means, such as social media.</p>
 <p>I'd be tempted to start by contacting the rest of the local community and using the tools on the Remapping page to see who the priority mappers to contact are and see what may be lost.</p>
 </div>
 <div id="comment-10103-info" class="comment-info">

@@ -44,9 +44,9 @@ osqa_accepted = false
 Tried on <strong>Chrome</strong> and <strong>IE9</strong> - same results.<br />
 System: <strong>Win7</strong>.<br />
 <br />
-I have found a question about similar difficulties with Potlatch2 and Ubuntu - <a href="http://help.openstreetmap.org/questions/8905/potlatch-not-working-under-ubuntu-linux/8948">here</a>.<br />
+I have found a question about similar difficulties with Potlatch2 and Ubuntu - <a href="/questions/8905/potlatch-not-working-under-ubuntu-linux/8948">here</a>.<br />
 Any ideas?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Potlatch2_error.png" alt="screenshot" /></p>
+<p><img src="/upfiles/Potlatch2_error.png" alt="screenshot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-windows" rel="tag" title="see questions tagged &#39;windows&#39;">windows</span>

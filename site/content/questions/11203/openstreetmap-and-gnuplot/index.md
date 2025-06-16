@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OpenStreetMap and Gnuplot"
-description = '''HELLO, I am trying to use OSM and Gnuplot. In http://wiki.openstreetmap.org/wiki/Print_OpenStreetMap_with_Gnuplot there is a tutorial which explains how to do it. However, the script that transforms the OSM file to the gnuplot readable file DOESNT WORK! It creates the nodes file but then never fills...'''
+description = '''HELLO, I am trying to use OSM and Gnuplot. In https://wiki.openstreetmap.org/wiki/Print_OpenStreetMap_with_Gnuplot there is a tutorial which explains how to do it. However, the script that transforms the OSM file to the gnuplot readable file DOESNT WORK! It creates the nodes file but then never fills...'''
 date = "2012-03-14T18:01:00Z"
 lastmod = "2012-03-14T18:44:00Z"
 weight = 11203
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>HELLO,</p>
-<p>I am trying to use OSM and Gnuplot. In <a href="http://wiki.openstreetmap.org/wiki/Print_OpenStreetMap_with_Gnuplot">http://wiki.openstreetmap.org/wiki/Print_OpenStreetMap_with_Gnuplot</a> there is a tutorial which explains how to do it. However, the script that transforms the OSM file to the gnuplot readable file DOESNT WORK! It creates the nodes file but then never fills the OpenStreetMap file.</p>
+<p>I am trying to use OSM and Gnuplot. In <a href="https://wiki.openstreetmap.org/wiki/Print_OpenStreetMap_with_Gnuplot">https://wiki.openstreetmap.org/wiki/Print_OpenStreetMap_with_Gnuplot</a> there is a tutorial which explains how to do it. However, the script that transforms the OSM file to the gnuplot readable file DOESNT WORK! It creates the nodes file but then never fills the OpenStreetMap file.</p>
 <p>I hope someone can help me with this.</p>
 <p>Cheers!</p>
 </div>

@@ -123,7 +123,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The first OSM editor was the <a href="http://wiki.openstreetmap.org/wiki/Java_Applet">Java Applet.</a> While sharing the programming language with JOSM, it was a totally different code base.</p>
+<p>The first OSM editor was the <a href="https://wiki.openstreetmap.org/wiki/Java_Applet">Java Applet.</a> While sharing the programming language with JOSM, it was a totally different code base.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>There were actually two distinct Java applets: the first one written by Steve in 2004, the second written by Tom Carden in 2005 using Processing.</p>
-<p>There was also a Qt-based editor, osmeditor, released (I think) in 2005 by Nick Whitelegg. Wiki page still survives at <a href="http://wiki.openstreetmap.org/wiki/Osmeditor_(QT)">http://wiki.openstreetmap.org/wiki/Osmeditor_(QT)</a> .</p>
+<p>There was also a Qt-based editor, osmeditor, released (I think) in 2005 by Nick Whitelegg. Wiki page still survives at <a href="https://wiki.openstreetmap.org/wiki/Osmeditor_(QT)">https://wiki.openstreetmap.org/wiki/Osmeditor_(QT)</a> .</p>
 </div>
 <div id="comment-53087-info" class="comment-info">
 <span class="comment-age">(23 Nov '16, 13:09)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -158,7 +158,7 @@ osqa_accepted = true
 <div id="post-53089-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard"></a><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a>: thanks! I have added both details, with dates, to the history wiki page. Please check that I've got it right.</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard"></a><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a>: thanks! I have added both details, with dates, to the history wiki page. Please check that I've got it right.</p>
 <p>Do you know if <a href="https://wiki.openstreetmap.org/wiki/File:OSM-new-edit.jpg">OSM-new-edit.jpg</a> shows Steve's or Tom's version? The upload comment and date suggests that it already is Tom's — although it was not yet on the main homepage.</p>
 </div>
 <div id="comment-53089-info" class="comment-info">

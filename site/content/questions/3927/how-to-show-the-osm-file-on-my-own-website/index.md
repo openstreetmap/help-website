@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To view an .osm file you first have to render it using a <a href="http://wiki.openstreetmap.org/wiki/Renderer">renderer</a>. If you are not not happy with just a dead picture of the map then you may also need some kind of slippy map implementation, like <a href="http://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a>.</p>
+<p>To view an .osm file you first have to render it using a <a href="https://wiki.openstreetmap.org/wiki/Renderer">renderer</a>. If you are not not happy with just a dead picture of the map then you may also need some kind of slippy map implementation, like <a href="https://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a>.</p>
 <p>You will probably get a more specific answer from someone if you describe more in detail what kind of map you would like to put on your website.</p>
 </div>
 <div class="answer-controls post-controls">

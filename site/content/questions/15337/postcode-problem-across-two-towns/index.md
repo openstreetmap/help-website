@@ -136,7 +136,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Les codes postales viennent du OSM comme tous les données. Ils sont calculés á partir du tag <a href="http://wiki.openstreetmap.org/wiki/FR:Key:addr">addr:postcode</a>. En général, tu peux améliorer les résultats en ajoutant des adresses au OSM.</p>
+<p>Les codes postales viennent du OSM comme tous les données. Ils sont calculés á partir du tag <a href="https://wiki.openstreetmap.org/wiki/FR:Key:addr">addr:postcode</a>. En général, tu peux améliorer les résultats en ajoutant des adresses au OSM.</p>
 <p>Mais il y a quelque chose à savoir: Nominatim n'est pas encore capable de mettre à jour les codes postales correctement. Le CP 17263, qui apparait à La Chaussée-Saint-Victor, semble venir d'un objet qui était déjà effacé mais se trouve encore dans la base de données de Nominatim. On travaille sur ca, mais pour l'instant ce n'est pas possible de corriger cet erreur.</p>
 </div>
 <div class="answer-controls post-controls">

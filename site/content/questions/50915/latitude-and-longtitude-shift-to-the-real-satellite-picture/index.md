@@ -137,7 +137,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>see <a href="https://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery">https://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery</a> you need several GPX traces to be confident before dragging the aerial into alignment.</p>
+<p>see <a href="/questions/6385/alignment-of-track-vs-background-imagery">https://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery</a> you need several GPX traces to be confident before dragging the aerial into alignment.</p>
 </div>
 <div id="comment-50919-info" class="comment-info">
 <span class="comment-age">(15 Jul '16, 10:59)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -161,7 +161,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: just to clarify (for newbies): also tracks uploaded with the <span>visibility option</span> "private" help for the issue mentioned in this question.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: just to clarify (for newbies): also tracks uploaded with the <span>visibility option</span> "private" help for the issue mentioned in this question.</p>
 </div>
 <div id="comment-50933-info" class="comment-info">
 <span class="comment-age">(15 Jul '16, 19:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -184,7 +184,7 @@ One Answer:
 <div id="post-50935-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: thanks, oh, really? I did not know that. Sorry, I am a newbie to iD. ;-) Nobody was speaking of iD, were them? ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: thanks, oh, really? I did not know that. Sorry, I am a newbie to iD. ;-) Nobody was speaking of iD, were them? ;-)</p>
 </div>
 <div id="comment-50935-info" class="comment-info">
 <span class="comment-age">(15 Jul '16, 20:35)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

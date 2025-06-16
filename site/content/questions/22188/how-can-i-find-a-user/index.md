@@ -166,9 +166,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As an example, consider this fish and chip shop:</p>
-<p><a href="http://www.openstreetmap.org/?lat=53.225065&amp;lon=-1.433938&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=53.225065&amp;lon=-1.433938&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=53.225065&amp;lon=-1.433938&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=53.225065&amp;lon=-1.433938&amp;zoom=18&amp;layers=M</a></p>
 <p>To see the data on the map, zoom in and click the layer selector at the top right. Then click "browse map data". Click on the item that you're interested in (you might need to click "hide areas" at top left too) and then click "details" followed by "view history".</p>
-<p>Now you'll see a <a href="http://www.openstreetmap.org/browse/node/322914925/history">complete history of the item</a> - who added it, and who has edited it since. To send a message to one of those people click on their name, and then on "Send Message".</p>
+<p>Now you'll see a <a href="https://www.openstreetmap.org/browse/node/322914925/history">complete history of the item</a> - who added it, and who has edited it since. To send a message to one of those people click on their name, and then on "Send Message".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -229,7 +229,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/message/new/USERNAME">http://www.openstreetmap.org/message/new/USERNAME</a>, where USERNAME is the name of the user you would like to contact.</p>
+<p><a href="https://www.openstreetmap.org/message/new/USERNAME">https://www.openstreetmap.org/message/new/USERNAME</a>, where USERNAME is the name of the user you would like to contact.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

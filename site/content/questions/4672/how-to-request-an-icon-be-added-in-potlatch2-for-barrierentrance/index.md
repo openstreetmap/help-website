@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>You have a few choices:</p>
 <ol>
-<li>Add it to the "<a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#Requests_for_additional_map_features">Suggested Enhancements</a>" page on the wiki</li>
+<li>Add it to the "<a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#Requests_for_additional_map_features">Suggested Enhancements</a>" page on the wiki</li>
 <li>Add an enhancement request on <a href="http://trac.openstreetmap.org/">trac</a></li>
 <li>Better still - Have a look at the <a href="https://github.com/openstreetmap/potlatch2/tree/master/resources/map_features">map_features definitions</a> and come up with a suggested change to the definitions and an icon to go with it.</li>
 </ol>
@@ -137,7 +137,7 @@ One Answer:
 <p>All:</p>
 <p>Fyi, I received an email repsonse to this post (not seen in the forum here):</p>
 <p>Herve5 has just posted a comment on the question How to request an icon be added in Potlatch2 for barrier=entrance? Don't take this for a criticism, but what difference do you do with "barrier=gate" which has its icon in Potlatch? H.</p>
-<p>I'd like to just respond here please: (No criticism taken. No worries.) At: <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Barrier">http://wiki.openstreetmap.org/wiki/Map_Features#Barrier</a> under "Access nodes", there are: entrance: A hole in a linear barrier with no specific construction that limits passing through. and gate: An entrance that can be opened or closed to get through the barrier.</p>
+<p>I'd like to just respond here please: (No criticism taken. No worries.) At: <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Barrier">https://wiki.openstreetmap.org/wiki/Map_Features#Barrier</a> under "Access nodes", there are: entrance: A hole in a linear barrier with no specific construction that limits passing through. and gate: An entrance that can be opened or closed to get through the barrier.</p>
 <p>The node I am mapping cannot be opened or closed; it's just a gap in the fence, so entrance seems best.</p>
 <p>Potlatch does not seem to render an entrance, but Josm does (using a black icon with two white opposing arrows, to indicate that one can pass thru at the node). As a start, I added a suggestion for it to the "Suggested Enhancements" page on the wiki.</p>
 </div>

@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If your map is centering off the african coast around here: <a href="http://www.openstreetmap.org/?mlat=0&amp;mlon=0&amp;zoom=4&amp;layers=M">http://www.openstreetmap.org/?mlat=0&amp;mlon=0&amp;zoom=4&amp;layers=M</a></p>
+<p>If your map is centering off the african coast around here: <a href="https://www.openstreetmap.org/?mlat=0&amp;mlon=0&amp;zoom=4&amp;layers=M">https://www.openstreetmap.org/?mlat=0&amp;mlon=0&amp;zoom=4&amp;layers=M</a></p>
 <p>Then your coordinates are not working correctly. that location is the 0,0 of lat/long. Do a thorough check on whether your GeoPoint is working properly</p>
 </div>
 <div class="answer-controls post-controls">

@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>If you're referring to <a href="http://www.openstreetmap.org/changeset/23861924">this changeset</a>, I'm sure that someone would be able to revert it - but you'll need to confirm that that is indeed the one with the changes that need undoing.</p>
+<p>If you're referring to <a href="https://www.openstreetmap.org/changeset/23861924">this changeset</a>, I'm sure that someone would be able to revert it - but you'll need to confirm that that is indeed the one with the changes that need undoing.</p>
 <p>Some of the more general issues around changeset reverting can be found in <a href="https://help.openstreetmap.org/search/?q=revert&amp;Submit=Search&amp;t=question">these previous questions</a>.</p>
 </div>
 <div id="comment-34606-info" class="comment-info">
@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I presume you mean this changeset : <a href="http://www.openstreetmap.org/changeset/23861924.">http://www.openstreetmap.org/changeset/23861924.</a></p>
+<p>I presume you mean this changeset : <a href="https://www.openstreetmap.org/changeset/23861924.">https://www.openstreetmap.org/changeset/23861924.</a></p>
 <p>The best way is to use JOSM and the revert changeset option. If you are not familiar with JOSM it is best to ask someone to do this for you. It is fairly simple once one is familiar with the process, but lack of familiarity could make things <strong>worse</strong>.</p>
 <p>There are a number of other questions of a similar kind on this site.</p>
 </div>
@@ -161,7 +161,7 @@ One Answer:
 <div id="post-34674-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>JOSM is a Java based editor for OpenStreetMap that has a plugin for reverting changesets. If you are not familiar with it please read some of the tutorials (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide)">http://wiki.openstreetmap.org/wiki/JOSM/Guide)</a> before trying anything too ambitious.</p>
+<p>JOSM is a Java based editor for OpenStreetMap that has a plugin for reverting changesets. If you are not familiar with it please read some of the tutorials (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide)">https://wiki.openstreetmap.org/wiki/JOSM/Guide)</a> before trying anything too ambitious.</p>
 </div>
 <div id="comment-34674-info" class="comment-info">
 <span class="comment-age">(06 Jul '14, 13:43)</span> <span class="comment-user userinfo">InsertUser</span>
@@ -173,7 +173,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>For info, looks like they were able to do the revert:</p>
-<p><a href="http://www.openstreetmap.org/changeset/23910216">http://www.openstreetmap.org/changeset/23910216</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/23910216">https://www.openstreetmap.org/changeset/23910216</a></p>
 </div>
 <div id="comment-36273-info" class="comment-info">
 <span class="comment-age">(27 Aug '14, 14:11)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

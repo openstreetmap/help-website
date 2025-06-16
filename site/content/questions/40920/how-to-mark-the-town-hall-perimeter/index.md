@@ -76,7 +76,7 @@ osqa_accepted = false
 <div id="post-40930-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you all for the responses. As <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> pointed out, it seems to be a rendering issue. At least I'm now sure that I was on the right track. However, until the rendering issues are sorted out many people might resort to ugly hacks to get items shown on the map. It's strange that landuse areas are rendered in distinct colours, while Office, Historic, and Amenity features without the accompanying building tags are completely ignored, even if these features have names on them (as in <a href="https://www.openstreetmap.org/way/49781808">example 2</a> above).</p>
+<p>Thank you all for the responses. As <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> pointed out, it seems to be a rendering issue. At least I'm now sure that I was on the right track. However, until the rendering issues are sorted out many people might resort to ugly hacks to get items shown on the map. It's strange that landuse areas are rendered in distinct colours, while Office, Historic, and Amenity features without the accompanying building tags are completely ignored, even if these features have names on them (as in <a href="https://www.openstreetmap.org/way/49781808">example 2</a> above).</p>
 <p>Maybe I should raise the issue with the OSM team. The way the standard layer is rendered, discourages my particular approach. Anyone knows how to file a bug report?</p>
 </div>
 <div id="comment-40930-info" class="comment-info">
@@ -211,7 +211,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Likel the best solution to your problem from a data perspective is likely a site relation <a href="http://wiki.openstreetmap.org/wiki/Relation:site">http://wiki.openstreetmap.org/wiki/Relation:site</a> (no idea how it gets rendered though).</p>
+<p>Likel the best solution to your problem from a data perspective is likely a site relation <a href="https://wiki.openstreetmap.org/wiki/Relation:site">https://wiki.openstreetmap.org/wiki/Relation:site</a> (no idea how it gets rendered though).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -298,7 +298,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There has been <a href="https://lists.openstreetmap.org/pipermail/tagging/2014-March/016842.html">discussion on the tagging list</a> of a landuse value for government administration buildings and surrounding land, and a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/landuse%3Dcivic">proposal</a> (see also the talk page), but as far as I know, it hasn't come to any consensus yet.</p>
+<p>There has been <a href="https://lists.openstreetmap.org/pipermail/tagging/2014-March/016842.html">discussion on the tagging list</a> of a landuse value for government administration buildings and surrounding land, and a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/landuse%3Dcivic">proposal</a> (see also the talk page), but as far as I know, it hasn't come to any consensus yet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

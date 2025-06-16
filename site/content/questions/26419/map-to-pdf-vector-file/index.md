@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Duplicate - <a href="https://help.openstreetmap.org/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013">https://help.openstreetmap.org/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013</a></p>
+<p>Duplicate - <a href="/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013">https://help.openstreetmap.org/questions/24991/export-formats-png-pdf-etc-on-osmorg-have-suddenly-disappeared-in-august-2013</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

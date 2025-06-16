@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Download a suitable subset of OSM data from the web (e.g. the <a href="http://download.geofabrik.de/osm/europe/great_britain/england.osm.pbf">England</a> extract from Geofabrik), then run <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to cut out your region of interest from that.</p>
+<p>Download a suitable subset of OSM data from the web (e.g. the <a href="http://download.geofabrik.de/osm/europe/great_britain/england.osm.pbf">England</a> extract from Geofabrik), then run <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to cut out your region of interest from that.</p>
 <p>A possible Osmosis command line to cut out the M25 rectangle from the England extract is:</p>
 <pre><code>osmosis --read-pbf england.osm.pbf --bb left=-0.55 right=0.29 top=51.72 bottom=51.25 clipIncompleteEntities=true --write-xml london-m25.osm</code></pre>
 <ul>

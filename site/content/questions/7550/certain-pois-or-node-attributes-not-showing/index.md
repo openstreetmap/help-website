@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-7557-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hopefully this will show an example:- <a href="http://www.openstreetmap.org/?lat=51.593062&amp;lon=-1.862417&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=51.593062&amp;lon=-1.862417&amp;zoom=18&amp;layers=M</a> There should be 3 stiles here - one on each side of the railway plus another</p>
+<p>Hopefully this will show an example:- <a href="https://www.openstreetmap.org/?lat=51.593062&amp;lon=-1.862417&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=51.593062&amp;lon=-1.862417&amp;zoom=18&amp;layers=M</a> There should be 3 stiles here - one on each side of the railway plus another</p>
 </div>
 <div id="comment-7557-info" class="comment-info">
 <span class="comment-age">(02 Sep '11, 19:14)</span> <span class="comment-user userinfo">flightmaker</span>
@@ -94,7 +94,7 @@ osqa_accepted = false
 <div id="post-7558-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>And here:- <a href="http://www.openstreetmap.org/?lat=50.13853&amp;lon=-5.5769&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=50.13853&amp;lon=-5.5769&amp;zoom=17&amp;layers=M</a> I added the footpath and the car park, which both show on the rendered map, and the Celtic Chapel, a ruin, which doesn't show. The Madron Well which was added by Chris Parker a couple of years ago, also a ruin, does not show either.</p>
+<p>And here:- <a href="https://www.openstreetmap.org/?lat=50.13853&amp;lon=-5.5769&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=50.13853&amp;lon=-5.5769&amp;zoom=17&amp;layers=M</a> I added the footpath and the car park, which both show on the rendered map, and the Celtic Chapel, a ruin, which doesn't show. The Madron Well which was added by Chris Parker a couple of years ago, also a ruin, does not show either.</p>
 </div>
 <div id="comment-7558-info" class="comment-info">
 <span class="comment-age">(02 Sep '11, 19:15)</span> <span class="comment-user userinfo">flightmaker</span>
@@ -105,7 +105,7 @@ osqa_accepted = false
 <div id="post-7559-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Now, if you look here:- <a href="http://www.openstreetmap.org/?lat=50.148483&amp;lon=-5.635984&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=50.148483&amp;lon=-5.635984&amp;zoom=18&amp;layers=M</a> there are two archaeological POIs - one called Covered Chamber which I added, and another called Chun Castle, which somebody else added. Both of these are rendered.</p>
+<p>Now, if you look here:- <a href="https://www.openstreetmap.org/?lat=50.148483&amp;lon=-5.635984&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=50.148483&amp;lon=-5.635984&amp;zoom=18&amp;layers=M</a> there are two archaeological POIs - one called Covered Chamber which I added, and another called Chun Castle, which somebody else added. Both of these are rendered.</p>
 <p>Surely, if a POI type is included in Potlatch, it should be shown on the rendering? Otherwise there's no point in having it in the editor in the first place?</p>
 </div>
 <div id="comment-7559-info" class="comment-info">

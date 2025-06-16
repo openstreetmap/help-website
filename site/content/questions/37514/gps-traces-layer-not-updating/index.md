@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this question and the answers: <a href="https://help.openstreetmap.org/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces">https://help.openstreetmap.org/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces</a></p>
+<p>See this question and the answers: <a href="/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces">https://help.openstreetmap.org/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

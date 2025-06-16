@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-73395-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Anbei weitere POI, die nah beieinander liegen (s. Anlage). Weiter habe ich POI unter der Rubrik 'Recycling' gefunden, dabei handelt es sich um Altglascontainer! Kann ich denn als Nutzer diese POI auf meiner Karte nicht einfach löschen?<img src="https://help.openstreetmap.org/upfiles/20200305_121650.jpg" alt="alt text" />. Als Wanderer bzw. Radfahrer interessieren diese POI wohl kaum, dies interessiert bestenfalls die Anwohner und die brauchen keinen Hinweis auf einer Karte.</p>
+<p>Anbei weitere POI, die nah beieinander liegen (s. Anlage). Weiter habe ich POI unter der Rubrik 'Recycling' gefunden, dabei handelt es sich um Altglascontainer! Kann ich denn als Nutzer diese POI auf meiner Karte nicht einfach löschen?<img src="/upfiles/20200305_121650.jpg" alt="alt text" />. Als Wanderer bzw. Radfahrer interessieren diese POI wohl kaum, dies interessiert bestenfalls die Anwohner und die brauchen keinen Hinweis auf einer Karte.</p>
 </div>
 <div id="comment-73395-info" class="comment-info">
 <span class="comment-age">(05 Mar '20, 13:10)</span> <span class="comment-user userinfo">Volker</span>

@@ -566,7 +566,7 @@ You may have downloaded the Windows or Linux file by mistake or got amongst the 
 <div id="post-67338-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think this is the same as the current <a href="https://help.openstreetmap.org/questions/40523/importing-maps-to-basecamp-mac/54565">top answer</a> but you are using the GUI (maybe easier for some people) instead of the command line/terminal. Thanks!</p>
+<p>I think this is the same as the current <a href="/questions/40523/importing-maps-to-basecamp-mac/54565">top answer</a> but you are using the GUI (maybe easier for some people) instead of the command line/terminal. Thanks!</p>
 </div>
 <div id="comment-67338-info" class="comment-info">
 <span class="comment-age">(24 Dec '18, 09:23)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

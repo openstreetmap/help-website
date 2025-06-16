@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers for <a href="https://help.openstreetmap.org/questions/24299/first-time-mapping-w-gps">First time mapping w/GPS</a> which cover this issue in depth.</p>
+<p>See the answers for <a href="/questions/24299/first-time-mapping-w-gps">First time mapping w/GPS</a> which cover this issue in depth.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

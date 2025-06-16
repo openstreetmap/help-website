@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="https://help.openstreetmap.org/questions/22127/what-is-this-some-sort-of-conservation-monitor">My other question</a> answered what-the-hell (see question for pictures) they were. So now the question that remains is, how do I tag a rather decently sized, pole mounted bug zapper located in a park?</p>
+<p><a href="/questions/22127/what-is-this-some-sort-of-conservation-monitor">My other question</a> answered what-the-hell (see question for pictures) they were. So now the question that remains is, how do I tag a rather decently sized, pole mounted bug zapper located in a park?</p>
 <p>I was thinking man_made=bug_zapper.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Wikipedia calls it a <a href="http://en.wikipedia.org/wiki/Bug_zapper">bug zapper</a>, so sure, why not? :) I wonder if <a href="http://wiki.openstreetmap.org/wiki/Key:leisure">leisure</a> might be a better key than <a href="http://wiki.openstreetmap.org/wiki/Key:man_made">man_made</a>, though?</p>
+<p>Wikipedia calls it a <a href="http://en.wikipedia.org/wiki/Bug_zapper">bug zapper</a>, so sure, why not? :) I wonder if <a href="https://wiki.openstreetmap.org/wiki/Key:leisure">leisure</a> might be a better key than <a href="https://wiki.openstreetmap.org/wiki/Key:man_made">man_made</a>, though?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

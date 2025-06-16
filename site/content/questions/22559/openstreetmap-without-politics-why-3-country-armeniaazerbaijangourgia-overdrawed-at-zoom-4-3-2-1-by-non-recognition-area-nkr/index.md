@@ -110,7 +110,7 @@ One Answer:
 <p>Different issues:</p>
 <ul>
 <li><p>On some zoom levels, not all country or region names may fit on the map. In these cases the renderer will choose arbitrarily which to draw.</p></li>
-<li><p>The country node for the area in question <a href="http://www.openstreetmap.org/browse/node/1696853468/history">(node 1696853468)</a> is currently tagged <code>name = Լեռնային Ղարաբաղի Հանրապետությու (Nagorno-Karabakh Republic)</code>. This is relatively long and unusual; it would be customary to <strong>only</strong> use the national language in the name and not add a transcribed version in parentheses. That way, it would use less space on the map.</p></li>
+<li><p>The country node for the area in question <a href="https://www.openstreetmap.org/browse/node/1696853468/history">(node 1696853468)</a> is currently tagged <code>name = Լեռնային Ղարաբաղի Հանրապետությու (Nagorno-Karabakh Republic)</code>. This is relatively long and unusual; it would be customary to <strong>only</strong> use the national language in the name and not add a transcribed version in parentheses. That way, it would use less space on the map.</p></li>
 <li><p>Whether or not something is "recognized" is not necessarily a deciding factor in OSM.</p></li>
 <li><p>On the default map, settlements will be labeled with the contents of the "name" tag. By common agreement this should be the name used by the people on the ground who live there; which country an area belongs to is irrelevant. Other languages for the place may however be recorded using "name:xx" tags (where xx is the language code), and can then be displayed by maps rendered specifically in that language.</p></li>
 </ul>

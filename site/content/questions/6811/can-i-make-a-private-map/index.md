@@ -120,13 +120,13 @@ One Answer:
 <div class="answer-body">
 <p>The following existing answers might help:</p>
 <ul>
-<li><a href="http://help.openstreetmap.org/questions/6329/create-private-overlays">Create private overlays?</a></li>
-<li><a href="http://help.openstreetmap.org/questions/6102/can-i-add-a-custom-layer">Can I add a custom layer?</a></li>
-<li><a href="http://help.openstreetmap.org/questions/4196/can-i-create-a-private-map-showing-my-clients">Can I create a private map showing my clients?</a></li>
+<li><a href="/questions/6329/create-private-overlays">Create private overlays?</a></li>
+<li><a href="/questions/6102/can-i-add-a-custom-layer">Can I add a custom layer?</a></li>
+<li><a href="/questions/4196/can-i-create-a-private-map-showing-my-clients">Can I create a private map showing my clients?</a></li>
 </ul>
 <p>And also, regarding not the data on the map but the style,</p>
 <ul>
-<li><a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a></li>
+<li><a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

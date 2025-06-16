@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Navit">navit</a> project has a separate <a href="http://wiki.navit-project.org/index.php/Main_Page">website</a>. For updating your map use the <a href="http://maps6.navit-project.org/">planet extractor</a> as described in the <a href="http://wiki.navit-project.org/index.php/OpenStreetMap#Quick_Start">quick start</a>.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Navit">navit</a> project has a separate <a href="http://wiki.navit-project.org/index.php/Main_Page">website</a>. For updating your map use the <a href="http://maps6.navit-project.org/">planet extractor</a> as described in the <a href="http://wiki.navit-project.org/index.php/OpenStreetMap#Quick_Start">quick start</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

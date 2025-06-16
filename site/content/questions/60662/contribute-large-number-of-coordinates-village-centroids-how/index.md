@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you are planning to do is a data import. <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">There are rules for it</a> - and you've made a good start by telling us about it instead of just dumping it in ;)</p>
+<p>What you are planning to do is a data import. <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">There are rules for it</a> - and you've made a good start by telling us about it instead of just dumping it in ;)</p>
 <p>The important bits are probably going to be: Don't lose any data that is already there; let us see the data before you contribute; try to involve locals where possible (i.e. if there's a healthy OSM community in countries where you have a lot to import, maybe hand the data over to them and they can do it); ensure the license is ok (we'd need a little more than your word for it - an email from the institution who created the data set would probably be ok). Read the guidelines, and then you'll likely want to take discussion to the "imports" mailing list.</p>
 </div>
 <div class="answer-controls post-controls">

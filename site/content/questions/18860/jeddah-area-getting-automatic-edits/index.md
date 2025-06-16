@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at <a href="http://www.openstreetmap.org/browse/way/161147071/history">http://www.openstreetmap.org/browse/way/161147071/history</a> as one example it appears that General Dreedle has removed RR8's edits and actually reverted it back to your last version.</p>
+<p>Looking at <a href="https://www.openstreetmap.org/browse/way/161147071/history">https://www.openstreetmap.org/browse/way/161147071/history</a> as one example it appears that General Dreedle has removed RR8's edits and actually reverted it back to your last version.</p>
 <p>Do you have an example of an object where your edits were reverted?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -172,9 +172,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Actually, it's not just General Dreedle who is editing here. <a href="http://www.openstreetmap.org/browse/way/129972636/history">Here's</a> an example of another deleted way of yours.</p>
+<p>Actually, it's not just General Dreedle who is editing here. <a href="https://www.openstreetmap.org/browse/way/129972636/history">Here's</a> an example of another deleted way of yours.</p>
 <p>If you want to look at deleted ways you can go into the old Potlatch editor by adding "&amp;editor=potlatch" to the end of the edit URL:</p>
-<p><a href="http://www.openstreetmap.org/edit?lat=22.41948&amp;lon=39.20067&amp;zoom=16&amp;way=161147071&amp;editor=potlatch">http://www.openstreetmap.org/edit?lat=22.41948&amp;lon=39.20067&amp;zoom=16&amp;way=161147071&amp;editor=potlatch</a></p>
+<p><a href="https://www.openstreetmap.org/edit?lat=22.41948&amp;lon=39.20067&amp;zoom=16&amp;way=161147071&amp;editor=potlatch">https://www.openstreetmap.org/edit?lat=22.41948&amp;lon=39.20067&amp;zoom=16&amp;way=161147071&amp;editor=potlatch</a></p>
 <p>and then select advanced / undelete. You'll get a bit of a rat's nest though, and you'll need to manually join undeleted ways to current ones. There's no Bing imagery there either.</p>
 </div>
 <div class="answer-controls post-controls">

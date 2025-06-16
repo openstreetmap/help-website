@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-55537-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Simplest is to do a screen grab. The screen will have the copyright notice on it. It is free to use. You will have to draw in your route with a marker or import the image into a paint prog and draw on that so you can print several copies. see <a href="https://help.openstreetmap.org/questions/28928/how-do-i-print-a-map">https://help.openstreetmap.org/questions/28928/how-do-i-print-a-map</a></p>
+<p>Simplest is to do a screen grab. The screen will have the copyright notice on it. It is free to use. You will have to draw in your route with a marker or import the image into a paint prog and draw on that so you can print several copies. see <a href="/questions/28928/how-do-i-print-a-map">https://help.openstreetmap.org/questions/28928/how-do-i-print-a-map</a></p>
 </div>
 <div id="comment-55537-info" class="comment-info">
 <span class="comment-age">(09 Apr '17, 23:28)</span> <span class="comment-user userinfo">andy mackey</span>

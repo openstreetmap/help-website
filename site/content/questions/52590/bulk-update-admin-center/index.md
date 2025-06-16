@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-52611-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, we have that experience and meanwhile work with data received from the national cadastre offices for our layers. We still use OSM to review and also to display our maps. But we started off using OSM data and I simply thought we could help.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, we have that experience and meanwhile work with data received from the national cadastre offices for our layers. We still use OSM to review and also to display our maps. But we started off using OSM data and I simply thought we could help.</p>
 <p>Again. If anyone can and is interested to help us to bulk-add the "admin centers" we researched, to the municipalities that have no admin centers associated, such improving OSM ... Please contact us.</p>
 </div>
 <div id="comment-52611-info" class="comment-info">
@@ -124,7 +124,7 @@ osqa_accepted = false
 <div id="post-52614-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada"></a><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>. You don't get it. We cover Europe and add more. More than 30 countries and growing. This is NOT a regional issue. The three countries were EXAMPLES to show that this is nothing for individual update. No matter how you try to make it one and discourage me to help. If you have helpful, constructive reply, you're welcome. Else, let people answer (or not) who might be interested in offering solutions.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>. You don't get it. We cover Europe and add more. More than 30 countries and growing. This is NOT a regional issue. The three countries were EXAMPLES to show that this is nothing for individual update. No matter how you try to make it one and discourage me to help. If you have helpful, constructive reply, you're welcome. Else, let people answer (or not) who might be interested in offering solutions.</p>
 <p>Side note: Assigning our "admin center" manually so it makes sense, we cover some 100 per hour. You can imagine the workload/knowledge. This is what we offer to share, hoping someone a little more visionary understanding the issue and helping us improving OSM might respond.</p>
 </div>
 <div id="comment-52614-info" class="comment-info">
@@ -137,9 +137,9 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12279/osm_ccom"></a><a href="http://help.openstreetmap.org/users/12279/osm_ccom">@Osm_ccom</a> as a first step you could consider publishing something like <a href="http://resultmaps.neis-one.org/unmapped#2/23.7/3.5">http://resultmaps.neis-one.org/unmapped#2/23.7/3.5</a> showing the data you have that is not yet in OSM (there's some more info about that map here: <a href="http://neis-one.org/2016/06/unmapped-places-osm/">http://neis-one.org/2016/06/unmapped-places-osm/</a> ). I don't mean to compare your data to the data shown on that map, just the presentation, using javascript to layer the data of interest over tiles.</p>
+<p><a href="https://help.openstreetmap.org/users/12279/osm_ccom"></a><a href="https://help.openstreetmap.org/users/12279/osm_ccom">@Osm_ccom</a> as a first step you could consider publishing something like <a href="http://resultmaps.neis-one.org/unmapped#2/23.7/3.5">http://resultmaps.neis-one.org/unmapped#2/23.7/3.5</a> showing the data you have that is not yet in OSM (there's some more info about that map here: <a href="http://neis-one.org/2016/06/unmapped-places-osm/">http://neis-one.org/2016/06/unmapped-places-osm/</a> ). I don't mean to compare your data to the data shown on that map, just the presentation, using javascript to layer the data of interest over tiles.</p>
 <p>I guess even before that you would need to think about the provenance of the data. If some of it comes from sources that are not compatible with the license OSM is shared under, then it isn't suitable for contribution to OSM.</p>
-<p>In general, there's no click-done interface for bulk adding data to OSM, for a variety of reasons. There's some guidelines discussed here: <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> . So to follow those guidelines, you either need to be prepared to do it yourselves or find people that are interested in doing it, that's why escada is suggesting making contact with local communities.</p>
+<p>In general, there's no click-done interface for bulk adding data to OSM, for a variety of reasons. There's some guidelines discussed here: <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> . So to follow those guidelines, you either need to be prepared to do it yourselves or find people that are interested in doing it, that's why escada is suggesting making contact with local communities.</p>
 </div>
 <div id="comment-52616-info" class="comment-info">
 <span class="comment-age">(20 Oct '16, 01:12)</span> <span class="comment-user userinfo">maxerickson</span>

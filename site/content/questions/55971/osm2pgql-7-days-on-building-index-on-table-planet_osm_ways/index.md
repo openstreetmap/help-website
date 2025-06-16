@@ -50,7 +50,7 @@ checkpoint_completion_target = 0.9</code></pre>
 <p>I'm using <code>osm2pgsql</code> to execute the import. Here's the command:</p>
 <p><code>osm2pgsql -c -d gis --number-processes 12 --slim -C 64000 --flat-nodes /data-cache/flat-node-cache/flat.nodes /data-postgres/planet-latest.osm.pbf</code></p>
 <p>The initial steps of the import have gone extremely fast, but its been sitting at <code>Building index on table: planet_osm_ways</code> for days without change. <code>htop</code> indicates active Postgres processeses for <code>checkpoint process</code> and <code>CREATE INDEX</code>. When I log into Postgres and check <code>select * from pg_stat_activity;</code> I see an <code>active</code> state for <code>CREATE INDEX planet_osm_ways_nodes ON planet_osm_ways USING gin (nodes) WITH (FASTUPDATE=OFF) ;</code></p>
-<p>Following the advice in this <a href="https://help.openstreetmap.org/questions/27587/data-import-stuck-at-create-index">post</a> I looked for the table <code>place</code>, but the response was <code>Did not find any relation named "place".</code></p>
+<p>Following the advice in this <a href="/questions/27587/data-import-stuck-at-create-index">post</a> I looked for the table <code>place</code>, but the response was <code>Did not find any relation named "place".</code></p>
 <p>Does this sound normal? This is time-sensitive and having already been waiting the better part of a week, I am a little worried something has wrong. Are their other Postgres settings that could speed this part of the process?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

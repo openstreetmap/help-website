@@ -107,8 +107,8 @@ One Answer:
 <div class="answer-body">
 <p>In general stick with widely used tags, natural for trees and any patches of wood and bushes (but not for plantings of shrubs). You can also use landuse=grass, but at the very least subtag it in some way (e.g. grass=*). Add paths (whether on grass or not), and other amenities (benches, waste baskets, drinking water etc).</p>
 <p>The main problem of using landcover tags is that they represent '''another''' way of tagging things for which there already exist well-established tags which have been in use for over 10 years. This is an example of the problem alluded to here by <a href="https://xkcd.com/927/">XKCD</a></p>
-<p>You can change the landuse=cemetery tag to disused:landuse=cemetery, which conveys useful information. I know of at least one cemetery in London which is also a park, a nature reserve and a wood. Although burials no longer take place there, it is emphatically still a cemetery: <a href="http://www.openstreetmap.org/query?lat=52.95697&amp;lon=-1.14118">Abney Park</a>.</p>
-<p>This is <a href="http://www.openstreetmap.org/query?lat=52.95697&amp;lon=-1.14118">one example</a> of a park with similar origins. The areas described as meadows are 'no-mow' places which because the park grass has not been fertilised are florally divers.</p>
+<p>You can change the landuse=cemetery tag to disused:landuse=cemetery, which conveys useful information. I know of at least one cemetery in London which is also a park, a nature reserve and a wood. Although burials no longer take place there, it is emphatically still a cemetery: <a href="https://www.openstreetmap.org/query?lat=52.95697&amp;lon=-1.14118">Abney Park</a>.</p>
+<p>This is <a href="https://www.openstreetmap.org/query?lat=52.95697&amp;lon=-1.14118">one example</a> of a park with similar origins. The areas described as meadows are 'no-mow' places which because the park grass has not been fertilised are florally divers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ One Answer:
 <div id="post-49788-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What do you mean by subtagging the grass? I couldn't find any info on the wiki (<a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass).">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass).</a> I'll ask from others and visit the park again before retagging as disused:landuse=cemetery, but thanks for the suggestion.</p>
+<p>What do you mean by subtagging the grass? I couldn't find any info on the wiki (<a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass).">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass).</a> I'll ask from others and visit the park again before retagging as disused:landuse=cemetery, but thanks for the suggestion.</p>
 </div>
 <div id="comment-49788-info" class="comment-info">
 <span class="comment-age">(22 May '16, 12:08)</span> <span class="comment-user userinfo">valtteri</span>

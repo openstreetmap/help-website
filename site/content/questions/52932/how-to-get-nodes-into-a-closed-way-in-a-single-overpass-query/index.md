@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-52946-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>take a look at <a href="https://help.openstreetmap.org/questions/47548/overpass-ql-return-all-parks-with-playgrounds-within-polygon">https://help.openstreetmap.org/questions/47548/overpass-ql-return-all-parks-with-playgrounds-within-polygon</a></p>
+<p>take a look at <a href="/questions/47548/overpass-ql-return-all-parks-with-playgrounds-within-polygon">https://help.openstreetmap.org/questions/47548/overpass-ql-return-all-parks-with-playgrounds-within-polygon</a></p>
 <p>I guess the feature is still not available on the main public servers, I didn't check if it is still available on the dev server mentioned in the answer.</p>
 </div>
 <div id="comment-52946-info" class="comment-info">

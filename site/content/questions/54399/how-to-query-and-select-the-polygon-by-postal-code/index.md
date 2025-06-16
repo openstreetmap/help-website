@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is of course possible to extract the addresses. Take a look at <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p>It is of course possible to extract the addresses. Take a look at <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
 <p>It depends on where you are located, but there is a good chance that there won't be polygon features associated with postal codes, or perhaps even much address data at all.</p>
 </div>
 <div class="answer-controls post-controls">

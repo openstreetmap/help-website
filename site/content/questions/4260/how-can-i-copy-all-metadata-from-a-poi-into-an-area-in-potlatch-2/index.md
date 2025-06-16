@@ -129,7 +129,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Thanks, that's good to know. It appears that this question may have already been <a href="http://help.openstreetmap.org/questions/3384/is-there-a-way-to-quickly-copy-all-tags-from-a-node-to-a-way-in-potlatch2">asked</a></p>
+<p>Thanks, that's good to know. It appears that this question may have already been <a href="/questions/3384/is-there-a-way-to-quickly-copy-all-tags-from-a-node-to-a-way-in-potlatch2">asked</a></p>
 <p>so perhaps these questions could be merged? (not sure how to do that).</p>
 </div>
 <div id="comment-4263-info" class="comment-info">

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>This sign displays the name of the walkway, with information concerning its length and duration:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2019-12-28_12-49-31_resized.jpg" alt="The aforementioned sign." /></p>
+<p><img src="/upfiles/2019-12-28_12-49-31_resized.jpg" alt="The aforementioned sign." /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-information" rel="tag" title="see questions tagged &#39;information&#39;">information</span> <span class="post-tag tag-link-signs" rel="tag" title="see questions tagged &#39;signs&#39;">signs</span>

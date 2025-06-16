@@ -119,10 +119,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It might be worth having a read of <a href="http://help.openstreetmap.org/users/647/sk53">SK53</a>'s answer to <a href="http://help.openstreetmap.org/questions/7015/tagging-public-footpaths-for-routing">this question</a>. Ignore the the England-and-Wales specific stuff (we have "Public Footpaths" here - a curious system of legalised access across other people's land) but the Path vs Footway comments should still apply.</p>
+<p>It might be worth having a read of <a href="https://help.openstreetmap.org/users/647/sk53">SK53</a>'s answer to <a href="/questions/7015/tagging-public-footpaths-for-routing">this question</a>. Ignore the the England-and-Wales specific stuff (we have "Public Footpaths" here - a curious system of legalised access across other people's land) but the Path vs Footway comments should still apply.</p>
 <p>As Frederik says, "footway" just means "mainly/exclusively for pedestrians" - there's no presumption that it's a nicely surfaced footpath in a city as opposed to a rough hiking path (or vice versa).</p>
 <p>"path" just means "not wide enough to be a track". There are a bunch of other tags that you can use with "path" to give more information, but "highway=path" on its own doesn't really say much.</p>
-<p>There's more detail about the general approach (from Richard) <a href="http://wiki.openstreetmap.org/wiki/Duck_tagging">here</a>.</p>
+<p>There's more detail about the general approach (from Richard) <a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">here</a>.</p>
 <p>Finally, it's also worth talking to other local mappers. In your case they seem to be mainly using "footway", but in some places they may have decided as a group that "highway=path" (with other tags as appropriate) best fits local usage and laws.</p>
 <p>On the etiquette thing, personally if I find a hiking trail locally that I'd normally map as "highway=footway" mapped by another mapper as "highway=path" I wouldn't normally change it but would try and add tags to make it more clear what it was, simply on the grounds that life's too short for unproductive arguments.</p>
 </div>
@@ -174,7 +174,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Our wiki certainly isn't gospel but it doesn't hurt to look things up there. On the <a href="http://wiki.openstreetmap.org/wiki/Key:highway">Key:highway page</a> you'll find the statement that <code>highway=footway</code> is</p>
+<p>Our wiki certainly isn't gospel but it doesn't hurt to look things up there. On the <a href="https://wiki.openstreetmap.org/wiki/Key:highway">Key:highway page</a> you'll find the statement that <code>highway=footway</code> is</p>
 <blockquote>
 <p><em>for designated footpaths; i.e., mainly/exclusively for pedestrians. <strong>This includes walking tracks and gravel paths.</strong> If bicycles are allowed as well, you can indicate this by adding a bicycle=yes tag. Should not be used for paths where the primary or intended usage is unknown.</em></p>
 </blockquote>

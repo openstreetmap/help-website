@@ -215,10 +215,10 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Please respect the answer of aseerel4c26 about possible <em>copyright infrigement</em>.</p>
 <p>Also important is, that OSM is <strong>created by a community</strong>, so you should respect how they is working and what rules exist. For example "we" are very sceptical about fully automated imports:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a></p>
-<p>Thus I recommend you, to contact the <strong>local OSM community</strong> to ask them how to do a good merge with existing collected data and about possible pitfals. <a href="http://wiki.openstreetmap.org/wiki/Contact">http://wiki.openstreetmap.org/wiki/Contact</a> (you might try the local mailinglist or forum)</p>
+<a href="https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a></p>
+<p>Thus I recommend you, to contact the <strong>local OSM community</strong> to ask them how to do a good merge with existing collected data and about possible pitfals. <a href="https://wiki.openstreetmap.org/wiki/Contact">https://wiki.openstreetmap.org/wiki/Contact</a> (you might try the local mailinglist or forum)</p>
 <p>You can use an extension to <strong>import KML files</strong> into the JOSM editor:<br />
-<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData#KML.2FKMZ_files</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

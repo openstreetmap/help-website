@@ -73,7 +73,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>For an up-to-the-minute answer to "is X working" you'd be better off asking on <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a>, as by its very nature you'll get an immediate reply. Whether the wiki was or was not down at 3:08 on 12th July 2013 isn't going to be especially relevant to someone in 2 month's time.</p>
+<p>For an up-to-the-minute answer to "is X working" you'd be better off asking on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a>, as by its very nature you'll get an immediate reply. Whether the wiki was or was not down at 3:08 on 12th July 2013 isn't going to be especially relevant to someone in 2 month's time.</p>
 </div>
 <div id="comment-24187-info" class="comment-info">
 <span class="comment-age">(12 Jul '13, 14:50)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-24188-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Or you could consult the <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">Platform Status</a> page on the wi... oh. Forget I said that.</p>
+<p>Or you could consult the <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">Platform Status</a> page on the wi... oh. Forget I said that.</p>
 </div>
 <div id="comment-24188-info" class="comment-info">
 <span class="comment-age">(12 Jul '13, 15:35)</span> <span class="comment-user userinfo">Richard ♦</span>

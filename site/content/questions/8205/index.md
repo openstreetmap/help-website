@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>As far as I understand your question from Google translate, the problem is that it takes time for changes to show up on the map.<br />
-See <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+See <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

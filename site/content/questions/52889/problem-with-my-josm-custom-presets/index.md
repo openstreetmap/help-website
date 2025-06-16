@@ -160,7 +160,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi <a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>,<br />
+<p>Hi <a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>,<br />
 Looks like the default="" in the multiselect is causing the problem. I removed the default and source:name came up properly. By the way, as per the documentation (<a href="https://josm.openstreetmap.de/wiki/TaggingPresets">https://josm.openstreetmap.de/wiki/TaggingPresets</a>) delete_if_empty attribute is deprecated. The modified entry looks like as follows: <code> &lt;multiselect key="source:name" text="Source(s) of name" values="personal_knowledge;survey;USGS Topo;MSR Topo;physical sign on bridge" /&gt; </code></p>
 <p>However, I could not figure out how to get the default value for optional attributes for nodes/ways with pre-existing tags. Could not find anything in the documentation. I would imagine that it is the normal behavior. If the tags are already present, one may not be required to put a default attribute which is optional.</p>
 <p>Hope this helps.<br />

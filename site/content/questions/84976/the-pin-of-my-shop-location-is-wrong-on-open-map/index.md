@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20220706-171942_Gallery.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20220706-171942_Gallery.jpg" alt="alt text" /></p>
 <p>its wrongly pinned on IG map</p>
 </div>
 <div class="answer-controls post-controls">

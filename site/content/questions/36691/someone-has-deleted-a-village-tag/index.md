@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The only OSM object decribing the place you mentioned seems to be the boundary relation <a href="http://www.openstreetmap.org/relation/341275">341275</a> .</p>
+<p>The only OSM object decribing the place you mentioned seems to be the boundary relation <a href="https://www.openstreetmap.org/relation/341275">341275</a> .</p>
 <p>So it seems there is no single node (point) with place=xxx for that village. (verified via overpass-turbo.eu by zooming to that area, choosing wizard modus and do a query for place=* )</p>
 <p>Either there has never been an node for that place, or a node with that information has been deleted.</p>
 <p>The easiest way would be do create a new node and add all tags from other villages around, and adjust them to that place.</p>
@@ -146,7 +146,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Looking at relation history (<a href="http://www.openstreetmap.org/relation/341275/history),">http://www.openstreetmap.org/relation/341275/history),</a> there was indeed a place node deleted a couple years ago (<a href="http://www.openstreetmap.org/node/527829933/history),">http://www.openstreetmap.org/node/527829933/history),</a> it can be restored if needed.</p>
+<p>Looking at relation history (<a href="https://www.openstreetmap.org/relation/341275/history),">https://www.openstreetmap.org/relation/341275/history),</a> there was indeed a place node deleted a couple years ago (<a href="https://www.openstreetmap.org/node/527829933/history),">https://www.openstreetmap.org/node/527829933/history),</a> it can be restored if needed.</p>
 </div>
 <div id="comment-36716-info" class="comment-info">
 <span class="comment-age">(09 Sep '14, 19:34)</span> <span class="comment-user userinfo">Alecs01</span>
@@ -188,7 +188,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sometimes a node can cause problem when doing a search for a street. the street may get linked to the nearest town node, which may be incorrect. Some consider a town polygon only is best. see <a href="https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
+<p>Sometimes a node can cause problem when doing a search for a street. the street may get linked to the nearest town node, which may be incorrect. Some consider a town polygon only is best. see <a href="/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

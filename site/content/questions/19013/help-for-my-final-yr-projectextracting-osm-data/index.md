@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to the OSM wiki and have a look at the tag called "<a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed</a>".</p>
-<p>And if you want to filter the raw OSM data for special tags like maxspeed or others, have a look for <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpassAPI</a> ... in the wiki and also on this FAQ site.</p>
+<p>Go to the OSM wiki and have a look at the tag called "<a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed</a>".</p>
+<p>And if you want to filter the raw OSM data for special tags like maxspeed or others, have a look for <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpassAPI</a> ... in the wiki and also on this FAQ site.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

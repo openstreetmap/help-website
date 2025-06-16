@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please look at the answers to the question <a href="https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a> and especially at <a href="http://wiki.openstreetmap.org/wiki/Bigmap">Bigmap (2)</a> and its <a href="http://bigmap.osmz.ru/">web service</a>.</p>
+<p>Please look at the answers to the question <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a> and especially at <a href="https://wiki.openstreetmap.org/wiki/Bigmap">Bigmap (2)</a> and its <a href="http://bigmap.osmz.ru/">web service</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

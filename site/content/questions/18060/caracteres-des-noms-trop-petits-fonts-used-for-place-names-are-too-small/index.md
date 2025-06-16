@@ -44,8 +44,8 @@ osqa_accepted = false
 <p>Re : fonts used for place names are too small For people who use OpenStreetMap as an atlas, the names of cities are too small. Is it possible to enlarge them ?</p>
 <p>Key word: toponyms , size ; Mapnik</p>
 <p>Discussions liées / Related discussions :</p>
-<p>1) Font size seems inappropriate to scale <a href="https://help.openstreetmap.org/questions/13546/font-size-seems-inappropriate-to-scale">https://help.openstreetmap.org/questions/13546/font-size-seems-inappropriate-to-scale</a></p>
-<p>2) Font size and adding scale to map <a href="https://help.openstreetmap.org/questions/8467/font-size-and-adding-scale-to-map">https://help.openstreetmap.org/questions/8467/font-size-and-adding-scale-to-map</a></p>
+<p>1) Font size seems inappropriate to scale <a href="/questions/13546/font-size-seems-inappropriate-to-scale">https://help.openstreetmap.org/questions/13546/font-size-seems-inappropriate-to-scale</a></p>
+<p>2) Font size and adding scale to map <a href="/questions/8467/font-size-and-adding-scale-to-map">https://help.openstreetmap.org/questions/8467/font-size-and-adding-scale-to-map</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-font" rel="tag" title="see questions tagged &#39;font&#39;">font</span> <span class="post-tag tag-link-toponyms" rel="tag" title="see questions tagged &#39;toponyms&#39;">toponyms</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-names" rel="tag" title="see questions tagged &#39;names&#39;">names</span>
@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-18062-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It seems to me that Andy Allan's answer <a href="http://help.openstreetmap.org/questions/13546/font-size-seems-inappropriate-to-scale/13548">here</a> exactly answers your question. Have I misunderstood; is there anything else that you're asking?</p>
+<p>It seems to me that Andy Allan's answer <a href="/questions/13546/font-size-seems-inappropriate-to-scale/13548">here</a> exactly answers your question. Have I misunderstood; is there anything else that you're asking?</p>
 </div>
 <div id="comment-18062-info" class="comment-info">
 <span class="comment-age">(28 Nov '12, 14:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -138,9 +138,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>What I was trying to say by linking to Andy Allan's answer was that OpenStreetMap is really all about the data. Sure, there is a map on the main page, but it's just one example of what you can do with the data.</p>
-<p>If you want to create a map with the same data but with larger fonts used for text, you can. The answer to <a href="https://help.openstreetmap.org/questions/8467/font-size-and-adding-scale-to-map">the other question that you linked to</a> explains a bit about it, although it might take a little while to get your head around the <code>osm.xml</code> file used to control how things are displayed by the standard OSM rendering stack. The <a href="http://switch2osm.org/serving-tiles/">switch2osm</a> site describes setting up your own tile server in some detail.</p>
+<p>If you want to create a map with the same data but with larger fonts used for text, you can. The answer to <a href="/questions/8467/font-size-and-adding-scale-to-map">the other question that you linked to</a> explains a bit about it, although it might take a little while to get your head around the <code>osm.xml</code> file used to control how things are displayed by the standard OSM rendering stack. The <a href="http://switch2osm.org/serving-tiles/">switch2osm</a> site describes setting up your own tile server in some detail.</p>
 <p>If you really think that what the map on the main page does right now is wrong, then you can add an enhancement request <a href="https://trac.openstreetmap.org/">here</a>. Unfortunately, there can be conflicting requests (e.g. "make the text bigger", "show more things", "make it cleaner and easier to read") so not everything is possible.</p>
-<p>Finally, someone may already have created the map (with larger text labels) that you're looking for. There's a wiki page <a href="http://wiki.openstreetmap.org/wiki/OSM_for_the_blind">here</a> which might have some useful links on it, and a mailing list <a href="http://lists.openstreetmap.org/listinfo/accessibility">here</a>.</p>
+<p>Finally, someone may already have created the map (with larger text labels) that you're looking for. There's a wiki page <a href="https://wiki.openstreetmap.org/wiki/OSM_for_the_blind">here</a> which might have some useful links on it, and a mailing list <a href="http://lists.openstreetmap.org/listinfo/accessibility">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

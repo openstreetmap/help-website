@@ -118,7 +118,7 @@ One Answer:
 <p>A couple of useful links to get you started:<br />
 </p>
 <p>1) The <a href="http://switch2osm.org/">switch2osm</a> site describes how to serve map tiles based on OSM data, and how to overlay your own data over those map tiles.</p>
-<p>2) <a href="http://www.openstreetmap.org/copyright">This page</a> clearly describes how you must credit OpenStreetMap.</p>
+<p>2) <a href="https://www.openstreetmap.org/copyright">This page</a> clearly describes how you must credit OpenStreetMap.</p>
 <p>There are Flash applications that work with OpenStreetMap data (the editor built in to the website is flash based) but you don't need an "API" in order to access OSM data, you can <a href="http://planet.openstreetmap.org/">just download it</a> (you'll probably want one of the smaller geographic "Extracts" linked from that page).</p>
 </div>
 <div class="answer-controls post-controls">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="https://help.openstreetmap.org/upfiles/Screenshot_from_2019-07-05_21-59-47.png">image sample</a> Sir the map squares and rectangles are not exactly on the buildings. They are most of the time slightly away from them . i want to upload the image but i am not allowed as i am a newcomer with no points. I can align them but the work is vast.</p>
+<p><span>image sample </span>Sir the map squares and rectangles are not exactly on the buildings. They are most of the time slightly away from them . i want to upload the image but i am not allowed as i am a newcomer with no points. I can align them but the work is vast.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not" rel="tag" title="see questions tagged &#39;not&#39;">not</span> <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-square" rel="tag" title="see questions tagged &#39;square&#39;">square</span> <span class="post-tag tag-link-matching" rel="tag" title="see questions tagged &#39;matching&#39;">matching</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>
@@ -125,7 +125,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If building outlines do not match the aerial. First thing to do is to check the aerial is correctly aligned. Alignment can be checked and adjusted if there are several GPX traces otherwise best not to move any outlines. Before mapping a lot of buildings always check the aerial. see <a href="https://wiki.openstreetmap.org/wiki/Good_practice">https://wiki.openstreetmap.org/wiki/Good_practice</a> EDIT jpeg of iD with all traces selected.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/iD_and_all_traces_WiqdDbX.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/iD_and_all_traces_WiqdDbX.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

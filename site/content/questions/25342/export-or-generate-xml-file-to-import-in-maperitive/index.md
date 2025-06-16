@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "export or generate XML file to import in Maperitive"
-description = '''I opened in www.openstreetmap a map,selected a custom part and selected export. I did not find the option to preselect XML output. The example on http://wiki.openstreetmap.org/wiki/Export shows the option in the left sided part of the screenshot which does not pop-up on my system. What happens is th...'''
+description = '''I opened in www.openstreetmap a map,selected a custom part and selected export. I did not find the option to preselect XML output. The example on https://wiki.openstreetmap.org/wiki/Export shows the option in the left sided part of the screenshot which does not pop-up on my system. What happens is th...'''
 date = "2013-08-13T22:52:00Z"
 lastmod = "2013-08-15T10:34:00Z"
 weight = 25342
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I opened in www.openstreetmap a map,selected a custom part and selected export. I did not find the option to preselect XML output.</p>
-<p>The example on <a href="http://wiki.openstreetmap.org/wiki/Export">http://wiki.openstreetmap.org/wiki/Export</a> shows the option in the left sided part of the screenshot which does not pop-up on my system.</p>
+<p>The example on <a href="https://wiki.openstreetmap.org/wiki/Export">https://wiki.openstreetmap.org/wiki/Export</a> shows the option in the left sided part of the screenshot which does not pop-up on my system.</p>
 <p>What happens is that my browser opens with <a href="http://api.openstreetmap.org/api/0.6/map?bbox=4.6297,51.9346,4.743,52.0031.">http://api.openstreetmap.org/api/0.6/map?bbox=4.6297,51.9346,4.743,52.0031.</a> Nothing happens anymore.</p>
 <p>What did I do wrong? Please advise me for a remedy.</p>
 </div>
@@ -165,7 +165,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See question <a href="https://help.openstreetmap.org/questions/25303/howwhere-to-download-osm-file-on-the-website?page=1&amp;focusedAnswerId=25305#25305">How/where to download osm file on the website.</a></p>
+<p>See question <a href="/questions/25303/howwhere-to-download-osm-file-on-the-website?page=1&amp;focusedAnswerId=25305#25305">How/where to download osm file on the website.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

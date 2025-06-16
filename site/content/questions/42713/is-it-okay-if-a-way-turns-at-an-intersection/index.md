@@ -41,9 +41,9 @@ osqa_accepted = true
 <div class="question-body">
 <p>I've come across a few single ways which someone would have to make a turn to follow.</p>
 <p>Examples (images linked to the locations):</p>
-<p><a href="http://www.openstreetmap.org/way/108893824#map=18/39.86001/-76.72910"><img src="/upfiles/fairway-court-u-turn.png" alt="Fairway Court is a residential highway. It begins at Reynolds Mill Road as a divided highway. It becomes an undivided highway just 60m in. One of the ways for Fairway Court starts at Reynolds Mill Road, makes a U-turn where the roadways join, and follows opposite roadway back." /></a></p>
+<p><a href="https://www.openstreetmap.org/way/108893824#map=18/39.86001/-76.72910"><img src="/upfiles/fairway-court-u-turn.png" alt="Fairway Court is a residential highway. It begins at Reynolds Mill Road as a divided highway. It becomes an undivided highway just 60m in. One of the ways for Fairway Court starts at Reynolds Mill Road, makes a U-turn where the roadways join, and follows opposite roadway back." /></a></p>
 <p>I would have used two ways that meet where the roadways join for this single way.</p>
-<p><a href="http://www.openstreetmap.org/way/233534656#map=17/39.93420/-76.69238"><img src="/upfiles/service-road-right-turn.png" alt="A highway=service way near a strip mall turns right at a T-junction." /></a></p>
+<p><a href="https://www.openstreetmap.org/way/233534656#map=17/39.93420/-76.69238"><img src="/upfiles/service-road-right-turn.png" alt="A highway=service way near a strip mall turns right at a T-junction." /></a></p>
 <p>I would have had one way going straight through the T-junction and another way ending at it, or, if I wanted to tag the two parts of the road that goes straight differently, I would use three ways for the two nodes, all meeting at the intersection.</p>
 <p>These seem wrong to me. I'm worried that navigation systems will see these ways and think that a route that turns goes straight or vice versa. Are my fears unfounded? Should I change these to how I would have mapped them?</p>
 </div>
@@ -163,7 +163,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>See for example <a href="http://osrm.at/c55">http://osrm.at/c55</a> which are <a href="http://www.openstreetmap.org/way/200810428">separate</a> <a href="http://www.openstreetmap.org/way/200810427">roads</a>, yet OSRM doesn't tell you to perform a sharp turn. In contrast, see <a href="http://osrm.at/c57">http://osrm.at/c57</a> where the routing instructions contain a sharp turn, probably because the street <em>names</em> differ. The same applies for GraphHopper: <a href="https://graphhopper.com/maps/?point=51.03232%2C13.823006&amp;point=51.03234%2C13.822925">one</a> <a href="https://graphhopper.com/maps/?point=51.050793%2C13.776185&amp;point=51.050611%2C13.776072">two</a>.</p>
+<p>See for example <a href="http://osrm.at/c55">http://osrm.at/c55</a> which are <a href="https://www.openstreetmap.org/way/200810428">separate</a> <a href="https://www.openstreetmap.org/way/200810427">roads</a>, yet OSRM doesn't tell you to perform a sharp turn. In contrast, see <a href="http://osrm.at/c57">http://osrm.at/c57</a> where the routing instructions contain a sharp turn, probably because the street <em>names</em> differ. The same applies for GraphHopper: <a href="https://graphhopper.com/maps/?point=51.03232%2C13.823006&amp;point=51.03234%2C13.822925">one</a> <a href="https://graphhopper.com/maps/?point=51.050793%2C13.776185&amp;point=51.050611%2C13.776072">two</a>.</p>
 </div>
 <div id="comment-42760-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 18:43)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -175,7 +175,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> This is on the todo list and will be improved. In general I recommend to avoid mapping for the router :)</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> This is on the todo list and will be improved. In general I recommend to avoid mapping for the router :)</p>
 </div>
 <div id="comment-42764-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 21:31)</span> <span class="comment-user userinfo">peatar</span>
@@ -249,7 +249,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: the same what I wrote in my "answer". Also directly mapping them separately means a more clear history later on (no split which creates one way with a new id).</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: the same what I wrote in my "answer". Also directly mapping them separately means a more clear history later on (no split which creates one way with a new id).</p>
 </div>
 <div id="comment-42762-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 20:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -339,7 +339,7 @@ osqa_accepted = true
 <div id="post-42718-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10917/beep21">@Beep21</a>: as far as I know (I only remotely dived into routing software/algorithms) the OSM data is transformed into a routing graph possibly loosing all "ways". So at each intersection the turn advise has to be generated based on the angle of the connections between two nodes. Your southernmost node? Let's <span>turn "Sharp right"</span>. Did you fear that a router might say "go straight" / "follow the way"?</p>
+<p><a href="https://help.openstreetmap.org/users/10917/beep21">@Beep21</a>: as far as I know (I only remotely dived into routing software/algorithms) the OSM data is transformed into a routing graph possibly loosing all "ways". So at each intersection the turn advise has to be generated based on the angle of the connections between two nodes. Your southernmost node? Let's <span>turn "Sharp right"</span>. Did you fear that a router might say "go straight" / "follow the way"?</p>
 </div>
 <div id="comment-42718-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 00:52)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

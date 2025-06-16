@@ -65,9 +65,9 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I don't think that it's named wrong - it's a rendering effect on the standard layer, I believe.</p>
-<p><a href="http://www.openstreetmap.org/relation/2214683">http://www.openstreetmap.org/relation/2214683</a></p>
+<p><a href="https://www.openstreetmap.org/relation/2214683">https://www.openstreetmap.org/relation/2214683</a></p>
 <p>However, it is an interesting question as to why at this zoom level the names display as they do:</p>
-<p><a href="http://www.openstreetmap.org/#map=6/28.507/-15.776">http://www.openstreetmap.org/#map=6/28.507/-15.776</a></p>
+<p><a href="https://www.openstreetmap.org/#map=6/28.507/-15.776">https://www.openstreetmap.org/#map=6/28.507/-15.776</a></p>
 <p>(it's been discussed in the style's Github repository but not here I believe)</p>
 </div>
 <div id="comment-40744-info" class="comment-info">
@@ -80,7 +80,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Could original poster please provide a link where one can the the "wrong" name?</p>
-<p>About the zoom level 6: At this level cities seem to rendered rather prominent, showing "Las Palmas de Gran Canaria" http://www.openstreetmap.org/relation/340783</p>
+<p>About the zoom level 6: At this level cities seem to rendered rather prominent, showing "Las Palmas de Gran Canaria" https://www.openstreetmap.org/relation/340783</p>
 </div>
 <div id="comment-40898-info" class="comment-info">
 <span class="comment-age">(09 Feb '15, 20:31)</span> <span class="comment-user userinfo">Jojo4u</span>

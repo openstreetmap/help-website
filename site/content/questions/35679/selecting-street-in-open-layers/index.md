@@ -123,9 +123,9 @@ One Answer:
 <div class="answer-body">
 <p>It might be helpful to have a little more information about what you're trying to do.<br />
 </p>
-<p>Are you trying to make a personalised map? If so something like <a href="http://wiki.openstreetmap.org/wiki/UMap">uMap</a> allows you to highlight certain things, and may do what you want. Another helpful source of information is the <a href="http://switch2osm.org/using-tiles/">switch2osm</a> site - <a href="http://switch2osm.org/using-tiles/getting-started-with-leaflet/">there</a> (though using Leaflet rather than OpenLayers) there's an example of reading data from an external source (e.g. things you want to highlight).</p>
-<p>Alternatively you may just be asking a more general question about "how do I tag something in OSM" in which case the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> (or more specifically <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">this section</a> of it) might be what you want.</p>
-<p>One thing that you will need to bear in mind is that everyone sees the same OpenStreetMap data - any changes you make will also appear in everyone else's data, so it's not really appropriate to add "special" tags just because they're useful to help something get displayed on one website. See also the <a href="http://www.openstreetmap.org/welcome">welcome</a> page and <a href="http://wiki.openstreetmap.org/wiki/Verifiable">this page</a> in the wiki.</p>
+<p>Are you trying to make a personalised map? If so something like <a href="https://wiki.openstreetmap.org/wiki/UMap">uMap</a> allows you to highlight certain things, and may do what you want. Another helpful source of information is the <a href="http://switch2osm.org/using-tiles/">switch2osm</a> site - <a href="http://switch2osm.org/using-tiles/getting-started-with-leaflet/">there</a> (though using Leaflet rather than OpenLayers) there's an example of reading data from an external source (e.g. things you want to highlight).</p>
+<p>Alternatively you may just be asking a more general question about "how do I tag something in OSM" in which case the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> (or more specifically <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">this section</a> of it) might be what you want.</p>
+<p>One thing that you will need to bear in mind is that everyone sees the same OpenStreetMap data - any changes you make will also appear in everyone else's data, so it's not really appropriate to add "special" tags just because they're useful to help something get displayed on one website. See also the <a href="https://www.openstreetmap.org/welcome">welcome</a> page and <a href="https://wiki.openstreetmap.org/wiki/Verifiable">this page</a> in the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>I'm still not sure what you mean by "<code>I want add tag for street in my town</code>". If you mean "I want to tag the fact that a particular street is within my town" then you shouldn't need to do this - if you're using something like <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Overpass</a> to select the data for display then you should be able to select what you want without explicit tagging that way.</p>
+<p>I'm still not sure what you mean by "<code>I want add tag for street in my town</code>". If you mean "I want to tag the fact that a particular street is within my town" then you shouldn't need to do this - if you're using something like <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Overpass</a> to select the data for display then you should be able to select what you want without explicit tagging that way.</p>
 </div>
 <div id="comment-35685-info" class="comment-info">
 <span class="comment-age">(10 Aug '14, 16:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

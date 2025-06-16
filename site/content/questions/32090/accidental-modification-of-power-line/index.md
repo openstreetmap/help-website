@@ -152,7 +152,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>If you look at the <a href="https://www.openstreetmap.org/way/133152959">"browse" page for the power line</a>, you can see against node 2356324445 that it says "(part of way 226907037)" where it joins a cycleway. The <a href="https://www.openstreetmap.org/node/2356324445">browse page for that node</a> shows it too. I think what's happening is that the iD editor is joining things together based on the closeness of a new node to another feature. Usually that's a good idea (so that you don't get gaps in roads) but sometimes creates issues of the type that you've spotted.</p>
-<p>There are lots of <a href="http://wiki.openstreetmap.org/wiki/QA">QA tools</a> listed in the wiki. I've you just just mapped somewhere it can be useful to use them to check what you've just added to look for things that "can't possibly be correct".</p>
+<p>There are lots of <a href="https://wiki.openstreetmap.org/wiki/QA">QA tools</a> listed in the wiki. I've you just just mapped somewhere it can be useful to use them to check what you've just added to look for things that "can't possibly be correct".</p>
 </div>
 <div id="comment-32111-info" class="comment-info">
 <span class="comment-age">(03 Apr '14, 16:58)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

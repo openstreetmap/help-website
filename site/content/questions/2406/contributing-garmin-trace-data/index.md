@@ -156,8 +156,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A good starting point is reading the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a>, and then you have to tell us where you get stuck.</p>
-<p>As a note beforehand, you can upload the traces yourself on the <a href="http://www.openstreetmap.org/trace/create">Upload GPS Trace</a> page as described in the guide above. The traces have to be in the gpx format.</p>
+<p>A good starting point is reading the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a>, and then you have to tell us where you get stuck.</p>
+<p>As a note beforehand, you can upload the traces yourself on the <a href="https://www.openstreetmap.org/trace/create">Upload GPS Trace</a> page as described in the guide above. The traces have to be in the gpx format.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

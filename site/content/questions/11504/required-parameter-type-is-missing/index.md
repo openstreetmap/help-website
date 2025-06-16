@@ -4394,7 +4394,7 @@ Settings for your postgres setup.
   &lt;body&gt;
     &lt;div id=&quot;banner&quot;&gt;
       &lt;div id=&quot;header&quot;&gt;
-        &lt;a id=&quot;logo&quot; href=&quot;http://www.openstreetmap.org/&quot;&gt;&lt;img src=&quot;/chrome/site/osm.png&quot; alt=&quot;OpenStreetMap&quot; height=&quot;80&quot; width=&quot;228&quot; /&gt;&lt;/a&gt;
+        &lt;a id=&quot;logo&quot; href=&quot;https://www.openstreetmap.org/&quot;&gt;&lt;img src=&quot;/chrome/site/osm.png&quot; alt=&quot;OpenStreetMap&quot; height=&quot;80&quot; width=&quot;228&quot; /&gt;&lt;/a&gt;
       &lt;/div&gt;
       &lt;form id=&quot;search&quot; action=&quot;/search&quot; method=&quot;get&quot;&gt;
         &lt;div&gt;
@@ -4486,7 +4486,7 @@ Also renamed .example files to .template&lt;br /&gt;
         Powered by &lt;a href=&quot;/about&quot;&gt;&lt;strong&gt;Trac 0.11.7&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
         By &lt;a href=&quot;http://www.edgewall.org/&quot;&gt;Edgewall Software&lt;/a&gt;.
       &lt;/p&gt;
-      &lt;p class=&quot;right&quot;&gt;Visit the map at&lt;br /&gt;&lt;a href=&quot;http://www.openstreetmap.org/&quot;&gt;http://www.openstreetmap.org/&lt;/a&gt;&lt;/p&gt;
+      &lt;p class=&quot;right&quot;&gt;Visit the map at&lt;br /&gt;&lt;a href=&quot;https://www.openstreetmap.org/&quot;&gt;https://www.openstreetmap.org/&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>

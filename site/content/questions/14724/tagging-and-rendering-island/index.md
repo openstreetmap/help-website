@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The page on proper entering of island can be found <a href="http://wiki.openstreetmap.org/wiki/Island">here</a>.</p>
+<p>The page on proper entering of island can be found <a href="https://wiki.openstreetmap.org/wiki/Island">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In addition to adding the island and giving the building on the island a name, you probably also want to label it as an <a href="http://wiki.openstreetmap.org/wiki/Hotel">tourism=hotel</a>. Also, the roads should probably join? Both the service road to the car park and the "tertiary" road to the west of the car park? I also suspect, from looking at the Bing imagery, that the "tertiary" road is probably more like a service road (no dotted line, no access other than to the golf course) than a tertiary?</p>
+<p>In addition to adding the island and giving the building on the island a name, you probably also want to label it as an <a href="https://wiki.openstreetmap.org/wiki/Hotel">tourism=hotel</a>. Also, the roads should probably join? Both the service road to the car park and the "tertiary" road to the west of the car park? I also suspect, from looking at the Bing imagery, that the "tertiary" road is probably more like a service road (no dotted line, no access other than to the golf course) than a tertiary?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -174,7 +174,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>related Q&amp;A <a href="http://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations">http://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
+<p>related Q&amp;A <a href="/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
 </div>
 <div id="comment-14744-info" class="comment-info">
 <span class="comment-age">(01 Aug '12, 08:53)</span> <span class="comment-user userinfo">andy mackey</span>

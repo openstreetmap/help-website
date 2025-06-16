@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "License: Can I protect a product created from OpenStreetMap data and proprietary data?"
-description = '''If I create for example navigation maps from OSM and copyrighted sources (where I have the copyright) - is it possible to protect this final work against re-distribution? Actually http://www.openstreetmap.org/copyright states clearly that &quot;if you alter or build upon our data, you may distribute the ...'''
+description = '''If I create for example navigation maps from OSM and copyrighted sources (where I have the copyright) - is it possible to protect this final work against re-distribution? Actually https://www.openstreetmap.org/copyright states clearly that &quot;if you alter or build upon our data, you may distribute the ...'''
 date = "2012-10-10T18:47:00Z"
 lastmod = "2012-10-10T21:11:00Z"
 weight = 16815
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>If I create for example navigation maps from OSM and copyrighted sources (where I have the copyright) - is it possible to protect this final work against re-distribution?</p>
-<p>Actually <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> states clearly that "if you alter or build upon our data, you may distribute the result only under the same licence".</p>
+<p>Actually <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> states clearly that "if you alter or build upon our data, you may distribute the result only under the same licence".</p>
 <p>One side note:</p>
 <p>But even the OpenStreetMap.org map tiles that build on the OSM database are not distributed under the (exactly) same license - it is CC-BY-SA instead.</p>
 <p>But I guess those licenses are somehow compatible - but the first sentence is misleading.</p>
@@ -176,7 +176,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's always good to read the FAQ :-)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">See license FAQ - section 3d</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">See license FAQ - section 3d</a></p>
 <p>I think the answer is: No, the product can be shared under a proprietary license, for example if additional POIs are added that were collected independently from the OpenStreetMap data:</p>
 </div>
 <div class="answer-controls post-controls">

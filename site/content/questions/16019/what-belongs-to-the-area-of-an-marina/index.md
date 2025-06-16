@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For reference: <a href="http://wiki.openstreetmap.org/wiki/Marina">http://wiki.openstreetmap.org/wiki/Marina</a></p>
+<p>For reference: <a href="https://wiki.openstreetmap.org/wiki/Marina">https://wiki.openstreetmap.org/wiki/Marina</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

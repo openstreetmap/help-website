@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><code>Building=dormitory</code> is already accepted. A student center will probably have some amenity tags to it, so <code>building=civic</code> would?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:building">http://wiki.openstreetmap.org/wiki/Key:building</a> lists the specific tags most recommended for building=.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:building">https://wiki.openstreetmap.org/wiki/Key:building</a> lists the specific tags most recommended for building=.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

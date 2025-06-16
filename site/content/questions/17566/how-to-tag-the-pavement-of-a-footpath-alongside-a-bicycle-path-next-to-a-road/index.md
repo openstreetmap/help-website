@@ -127,7 +127,7 @@ One Answer:
 <div id="post-17623-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Brian, thats just the problem. The road has a separated bicyclepath with a footpath at both sides every now and then in rural areas. But someone has tagged it separate alongside the road. Look here <a href="http://www.openstreetmap.org/?lat=51.983202&amp;lon=5.780007&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=51.983202&amp;lon=5.780007&amp;zoom=18&amp;layers=M</a> Im curious or make my day. Greetz</p>
+<p>Hi Brian, thats just the problem. The road has a separated bicyclepath with a footpath at both sides every now and then in rural areas. But someone has tagged it separate alongside the road. Look here <a href="https://www.openstreetmap.org/?lat=51.983202&amp;lon=5.780007&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=51.983202&amp;lon=5.780007&amp;zoom=18&amp;layers=M</a> Im curious or make my day. Greetz</p>
 </div>
 <div id="comment-17623-info" class="comment-info">
 <span class="comment-age">(09 Nov '12, 21:48)</span> <span class="comment-user userinfo">Hendrikklaas</span>

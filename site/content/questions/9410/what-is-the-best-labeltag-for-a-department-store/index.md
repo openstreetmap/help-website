@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><code>shop=department_store</code> see <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Ddepartment_store">http://wiki.openstreetmap.org/wiki/Tag:shop%3Ddepartment_store</a></p>
+<p><code>shop=department_store</code> see <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Ddepartment_store">https://wiki.openstreetmap.org/wiki/Tag:shop%3Ddepartment_store</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

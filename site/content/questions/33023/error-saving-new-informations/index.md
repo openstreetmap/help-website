@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Searching for "Version mismatch" will give you dozens of answers, for example <a href="https://help.openstreetmap.org/questions/32830/error-saving-changes-what-does-version-mismatch-provided-1-server-had-2-of-way-250295839-mean">https://help.openstreetmap.org/questions/32830/error-saving-changes-what-does-version-mismatch-provided-1-server-had-2-of-way-250295839-mean</a></p>
+<p>Searching for "Version mismatch" will give you dozens of answers, for example <a href="/questions/32830/error-saving-changes-what-does-version-mismatch-provided-1-server-had-2-of-way-250295839-mean">https://help.openstreetmap.org/questions/32830/error-saving-changes-what-does-version-mismatch-provided-1-server-had-2-of-way-250295839-mean</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

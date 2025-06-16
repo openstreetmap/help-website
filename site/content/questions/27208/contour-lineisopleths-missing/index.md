@@ -127,7 +127,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... see also <a href="http://wiki.openstreetmap.org/wiki/SRTM">http://wiki.openstreetmap.org/wiki/SRTM</a></p>
+<p>... see also <a href="https://wiki.openstreetmap.org/wiki/SRTM">https://wiki.openstreetmap.org/wiki/SRTM</a></p>
 </div>
 <div id="comment-27236-info" class="comment-info">
 <span class="comment-age">(16 Oct '13, 17:34)</span> <span class="comment-user userinfo">stephan75</span>

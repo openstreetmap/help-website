@@ -111,7 +111,7 @@ osqa_accepted = false
 <div id="post-53720-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/UAV">http://wiki.openstreetmap.org/wiki/UAV</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/UAV">https://wiki.openstreetmap.org/wiki/UAV</a></p>
 </div>
 <div id="comment-53720-info" class="comment-info">
 <span class="comment-age">(25 Dec '16, 13:39)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -228,7 +228,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Walking around the area with a GPS a Camera and a note book. Field Papers would also help as you can draw and write notes on the sheet. The GPX trace, or several will give a good positional accuracy of all the accessible places. You can mark way-points that align with the edge of a lake you will need a second point at the other end of the same sight line, this will give a good basis drawing an estimated lake shape and position. You can only do the best you can until Bing is updated, a slightly inaccurate feature is better than non at all . Old Bing will often give a good clue to the position of new stuff in my experience. Field Papers can have the old Bing as a background so you could try that. I like mapping new stuff, enjoy. <a href="http://wiki.openstreetmap.org/wiki/Field_Papers">http://wiki.openstreetmap.org/wiki/Field_Papers</a> other possibilities <a href="https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></p>
+<p>Walking around the area with a GPS a Camera and a note book. Field Papers would also help as you can draw and write notes on the sheet. The GPX trace, or several will give a good positional accuracy of all the accessible places. You can mark way-points that align with the edge of a lake you will need a second point at the other end of the same sight line, this will give a good basis drawing an estimated lake shape and position. You can only do the best you can until Bing is updated, a slightly inaccurate feature is better than non at all . Old Bing will often give a good clue to the position of new stuff in my experience. Field Papers can have the old Bing as a background so you could try that. I like mapping new stuff, enjoy. <a href="https://wiki.openstreetmap.org/wiki/Field_Papers">https://wiki.openstreetmap.org/wiki/Field_Papers</a> other possibilities <a href="https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

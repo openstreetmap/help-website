@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>similar problem <a href="https://help.openstreetmap.org/questions/35389/track-appears-just-at-close-zoom-in-others-appear-at-any-zoom-level">https://help.openstreetmap.org/questions/35389/track-appears-just-at-close-zoom-in-others-appear-at-any-zoom-level</a></p>
+<p>similar problem <a href="/questions/35389/track-appears-just-at-close-zoom-in-others-appear-at-any-zoom-level">https://help.openstreetmap.org/questions/35389/track-appears-just-at-close-zoom-in-others-appear-at-any-zoom-level</a></p>
 </div>
 <div id="comment-35426-info" class="comment-info">
 <span class="comment-age">(01 Aug '14, 23:49)</span> <span class="comment-user userinfo">andy mackey</span>

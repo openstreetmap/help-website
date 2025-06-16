@@ -69,7 +69,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You might be referring to <a href="http://www.openstreetmap.org/browse/way/43323982">this footpath</a>? You'll notice that the mapping includes:</p>
+<p>You might be referring to <a href="https://www.openstreetmap.org/browse/way/43323982">this footpath</a>? You'll notice that the mapping includes:</p>
 <pre><code>description = Definitely a climb but simple. Care needed when water running in spate.
 sac_scale = demanding_alpine_hiking</code></pre>
 </div>

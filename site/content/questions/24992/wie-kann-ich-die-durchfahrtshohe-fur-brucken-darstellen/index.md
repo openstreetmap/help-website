@@ -118,11 +118,11 @@ One Answer:
 <p>Was dir OsmAnd anzeigt hängt davon ab welche Karte du darin benutzt. Und was alles in der Karte dargestellt wird, musst du die Ersteller jener fragen. Vielleicht gibt es auch eine spezielle Marine-Karte - z.B. <span>FreieTonne</span>. <span>OpenSeaMap</span> gibt es auch noch (<span>umfangreiche Liste mit vielen OSM-basierten Diensten</span>). Ob du die in OsmAnd hineinbekommst, ist eine andere Frage.</p>
 <p>Völlig von der Anzeige auf Karten (es gibt ja viele) getrennt, ist das, was bei uns (OpenStreetMap) in der Datenbank steht.</p>
 <p>Ich habe mal etwas für dich im Wiki gesucht: Die Karte FreieTonne interpretiert (Symbol) wohl <span><code>waterway:sign=maxheight</code></span>, was aber wohl nur ein Hinweis auf ein Höhenbeschränkungsschild sein soll. Die erlaubte Höhe kannst du vielleicht an dem betroffenen Waterway-Stück mit <span><code>maxheight</code></span><code>=4.1</code> kennzeichnen (so wie das auf der FreiTonne-Seite auch für <span>Hochspannungsleitungen</span> steht, allerdings steht auf der Wikiseite zum Key nichts von waterways). Es gibt auch <span><code>maxheight:marine</code></span>, das ist vielleicht sinnvoller (soll allerdings wohl, anders als bei Straßen, an die Brücke und nicht an den Waterway gehängt werden: "put on the objects above the water". Weiterhin ist das Tag sehr wenig verwendet, nicht etabliert und eine Abstimmung war nicht erfolgreich).</p>
-<p>Weiterhin habe ich mir mal Brücken in Gebieten angeschaut, die nahe großer Häfen sind - <a href="http://www.openstreetmap.org/#map=18/54.36857/10.12176&amp;layers=DN">Beispiel</a>. Ich konnte jene Objekte finden, wo dir ein mögliches Tagging anschauen kannst:</p>
+<p>Weiterhin habe ich mir mal Brücken in Gebieten angeschaut, die nahe großer Häfen sind - <a href="https://www.openstreetmap.org/#map=18/54.36857/10.12176&amp;layers=DN">Beispiel</a>. Ich konnte jene Objekte finden, wo dir ein mögliches Tagging anschauen kannst:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1772738152">http://www.openstreetmap.org/browse/node/1772738152</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1772738156">http://www.openstreetmap.org/browse/node/1772738156</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1803739020">http://www.openstreetmap.org/browse/node/1803739020</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1772738152">https://www.openstreetmap.org/browse/node/1772738152</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1772738156">https://www.openstreetmap.org/browse/node/1772738156</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1803739020">https://www.openstreetmap.org/browse/node/1803739020</a></li>
 </ul>
 <p>Immer aber auch mit <a href="http://taginfo.openstreetmap.org/">Taginfo</a> und <span>Wiki</span> nachschauen, wie weit die entsprechenden Tags verwendet sind oder ob es Diskussionen und Abstimmungen gab.</p>
 </div>

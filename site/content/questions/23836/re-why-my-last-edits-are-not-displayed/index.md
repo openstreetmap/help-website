@@ -39,12 +39,12 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My last edits are <a href="http://www.openstreetmap.org/edit?lat=44.466418&amp;lon=0.106374&amp;zoom=18">visible in the OSM online editors ID and Polach</a>, but doesn't appear in the OSM view mode.</p>
+<p>My last edits are <a href="https://www.openstreetmap.org/edit?lat=44.466418&amp;lon=0.106374&amp;zoom=18">visible in the OSM online editors ID and Polach</a>, but doesn't appear in the OSM view mode.</p>
 <hr />
 <p><strong>EDIT1 : It doesn't seems to be...</strong></p>
 <ol>
 <li>On my userpage <a href="http://openstreetmap.org/user/Wikipedia/edits">1</a>, I noticed my last edits (16758129, 16757928) were marked <em>"(en cours de modification)"</em> (French for <strong>"currently under modification")</strong> while others have a date such <em>"samedi 29 juin 2013 20:23"</em>. But when one of them turned to a date, nothing associated appeared on th view mode.</li>
-<li>I then suspected a <strong>tile bug</strong> since one of the houses I added have just one angle displayed<a href="http://www.openstreetmap.org/?lat=44.4626&amp;lon=0.093386&amp;zoom=23">2</a> This house is located on 2 tiles jointure, So it seems the right side tiles are not up to date. But actually, there are still a hand of houses disapearing from the view mode without reasons. (They are all building &gt; family houses )</li>
+<li>I then suspected a <strong>tile bug</strong> since one of the houses I added have just one angle displayed<a href="https://www.openstreetmap.org/?lat=44.4626&amp;lon=0.093386&amp;zoom=23">2</a> This house is located on 2 tiles jointure, So it seems the right side tiles are not up to date. But actually, there are still a hand of houses disapearing from the view mode without reasons. (They are all building &gt; family houses )</li>
 </ol>
 <p>Any solution ?</p>
 <hr />
@@ -234,7 +234,7 @@ osqa_accepted = false
 <div id="post-23840-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I can only see that <a href="http://www.openstreetmap.org/browse/changeset/16758653">http://www.openstreetmap.org/browse/changeset/16758653</a> has been added in your edit history after changeset 16758129. If you have done any other additions and closed your browser they a probably gone.</p>
+<p>I can only see that <a href="https://www.openstreetmap.org/browse/changeset/16758653">https://www.openstreetmap.org/browse/changeset/16758653</a> has been added in your edit history after changeset 16758129. If you have done any other additions and closed your browser they a probably gone.</p>
 <p>Letting the changeset timeout after one hour is not the normal workflow, but a protection against browser crashes and similar. I rarely use the iD and Potlatch editors (I'm mostly a JOSM user), so it's not obvious to me what you likely are doing wrong.</p>
 </div>
 <div id="comment-23840-info" class="comment-info">

@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <ol>
 <li>What do you mean "available"? Many maps only render <code>access=</code>. Routers may not support <code>*:conditional=</code>.</li>
-<li>Short term construction works not lasting more than a few months are not represented, to cater for varying data update frequency in applications. <code>*:conditional=</code> vs <code>temporary:*=</code> was mentioned in a similar question <a href="https://help.openstreetmap.org/questions/81353/how-to-add-construction-with-conditional-access">https://help.openstreetmap.org/questions/81353/how-to-add-construction-with-conditional-access</a> last week.</li>
+<li>Short term construction works not lasting more than a few months are not represented, to cater for varying data update frequency in applications. <code>*:conditional=</code> vs <code>temporary:*=</code> was mentioned in a similar question <a href="/questions/81353/how-to-add-construction-with-conditional-access">https://help.openstreetmap.org/questions/81353/how-to-add-construction-with-conditional-access</a> last week.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

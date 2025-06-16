@@ -49,7 +49,7 @@ osqa_accepted = false
 <p>[EDIT] Getting better here. After the first response, I realized a picture or two just might be worth a thousand words, or two. In the first image, you can see the red nodes on a CS map, and they correspond to points on the OSM map, below. Had I been to these nodes, CS would display them in green. Note that Bear Hollow "ends" on the north side of Keller Pkwy (in OSM). I would not be able to complete Bear Hollow, without crossing Keller Pkwy. If Bear Hollow "ended" on the south side of Keller Pkwy, I could.</p>
 <p>I don't know the algorithm employed by CS, but it seems to be pretty good. On wide, divided, roads, if I run/walk one side, I will only collect those nodes on the side I traversed. I might go this Bear Hollow and just do one side to see what happens if I just traverse one side.</p>
 <p>So, what is more proper by OXM standards, for Bear Hollow to terminate at the east bound lanes, or west bound, of Keller Pkwy?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Bear_Hollow_CS.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/Bear_Hollow_OSM_2.png" alt="alt text" /></p>
+<p><img src="/upfiles/Bear_Hollow_CS.png" alt="alt text" /> <img src="/upfiles/Bear_Hollow_OSM_2.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-citystrides" rel="tag" title="see questions tagged &#39;citystrides&#39;">citystrides</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span>

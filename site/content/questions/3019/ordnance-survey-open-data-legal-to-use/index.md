@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata</a> , especially</p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata</a> , especially</p>
 <blockquote>
 <p>License</p>
 <p>According to the OpenData License Terms and Conditions, all data can be safely assumed to be under a licence which is interoperable with a CC-by 3.0 license - the T&amp;C Explicitly say so. What is less clear is whether the OS OpenData licence is compatible with the OSM Contributor Terms (as of 6 Feb 2011 compatability is subject to legal review).</p>
@@ -159,7 +159,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><span>@andy</span>: the License Working Group and the <em>majority</em> of people on the mailing lists now say that the OS OpenData is compatible with the new Terms and Conditions, though there are still a few voices who say otherwise. See <a href="http://help.openstreetmap.org/questions/5792/can-i-accept-the-new-contributor-terms-if-ive-contributed-data-from-ordnance-survey-opendata">http://help.openstreetmap.org/questions/5792/can-i-accept-the-new-contributor-terms-if-ive-contributed-data-from-ordnance-survey-opendata</a></p>
+<p><span>@andy</span>: the License Working Group and the <em>majority</em> of people on the mailing lists now say that the OS OpenData is compatible with the new Terms and Conditions, though there are still a few voices who say otherwise. See <a href="/questions/5792/can-i-accept-the-new-contributor-terms-if-ive-contributed-data-from-ordnance-survey-opendata">https://help.openstreetmap.org/questions/5792/can-i-accept-the-new-contributor-terms-if-ive-contributed-data-from-ordnance-survey-opendata</a></p>
 </div>
 <div id="comment-6685-info" class="comment-info">
 <span class="comment-age">(29 Jul '11, 09:34)</span> <span class="comment-user userinfo">GrahamS</span>

@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-49122-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a> It doesn't have to be a dead-end. It could be a very long oneway road that would make you drive twice as long to go to your target location</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a> It doesn't have to be a dead-end. It could be a very long oneway road that would make you drive twice as long to go to your target location</p>
 </div>
 <div id="comment-49122-info" class="comment-info">
 <span class="comment-age">(08 Apr '16, 19:32)</span> <span class="comment-user userinfo">shiro900</span>
@@ -118,7 +118,7 @@ osqa_accepted = false
 <div id="post-49126-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12082/shiro900">@shiro900</a>: why "google maps"? Did you hear of OSM already? ;-) Please use OSM!</p>
+<p><a href="https://help.openstreetmap.org/users/12082/shiro900">@shiro900</a>: why "google maps"? Did you hear of OSM already? ;-) Please use OSM!</p>
 </div>
 <div id="comment-49126-info" class="comment-info">
 <span class="comment-age">(08 Apr '16, 22:31)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Allgemein siehe: <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin</a></p>
+<p>Allgemein siehe: <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin</a></p>
 <p>Speziell kann man die Karten von openmtbmap auch in einer Version beziehen die sich in Mapsource installieren lässt: <a href="http://openmtbmap.org/de/tutorials/install/">http://openmtbmap.org/de/tutorials/install/</a></p>
 </div>
 <div class="answer-controls post-controls">

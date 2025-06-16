@@ -123,7 +123,7 @@ One Answer:
 <div id="post-27235-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... see also <a href="http://wiki.openstreetmap.org/wiki/OSM_on_paper">http://wiki.openstreetmap.org/wiki/OSM_on_paper</a> ... or type "print" in the text search box of this FAQ site.</p>
+<p>... see also <a href="https://wiki.openstreetmap.org/wiki/OSM_on_paper">https://wiki.openstreetmap.org/wiki/OSM_on_paper</a> ... or type "print" in the text search box of this FAQ site.</p>
 </div>
 <div id="comment-27235-info" class="comment-info">
 <span class="comment-age">(16 Oct '13, 17:31)</span> <span class="comment-user userinfo">stephan75</span>

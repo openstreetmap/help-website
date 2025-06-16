@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is normal, as there is quite a bit of detail missing from the map. You can improve it by reading the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners guide</a> and watching the <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">instructional videos</a> and learning how to map it. If good quality aerial imagery of the area is available (usually Bing is best), it makes tracing lakes and water ways easy, so please get involved.</p>
+<p>It is normal, as there is quite a bit of detail missing from the map. You can improve it by reading the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners guide</a> and watching the <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">instructional videos</a> and learning how to map it. If good quality aerial imagery of the area is available (usually Bing is best), it makes tracing lakes and water ways easy, so please get involved.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

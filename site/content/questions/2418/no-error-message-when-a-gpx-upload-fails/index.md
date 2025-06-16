@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] No error message when a GPX upload fails?"
-description = '''http://www.openstreetmap.org/user/jan_olieslagers/diary/12892 Not much more to report: on Sunday evening Jan. 23rd I uploaded 2 .gpx files, produced by the same utility that produced successful files in the past. Got the usual information about the 30 minutes it might take to upload. Patiently waite...'''
+description = '''https://www.openstreetmap.org/user/jan_olieslagers/diary/12892 Not much more to report: on Sunday evening Jan. 23rd I uploaded 2 .gpx files, produced by the same utility that produced successful files in the past. Got the usual information about the 30 minutes it might take to upload. Patiently waite...'''
 date = "2011-01-24T22:07:00Z"
 lastmod = "2011-01-25T15:42:00Z"
 weight = 2418
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/user/jan_olieslagers/diary/12892">http://www.openstreetmap.org/user/jan_olieslagers/diary/12892</a></p>
+<p><a href="https://www.openstreetmap.org/user/jan_olieslagers/diary/12892">https://www.openstreetmap.org/user/jan_olieslagers/diary/12892</a></p>
 <p>Not much more to report: on Sunday evening Jan. 23rd I uploaded 2 .gpx files, produced by the same utility that produced successful files in the past. Got the usual information about the 30 minutes it might take to upload. Patiently waited 24 hours - no sign. Then uploaded again - still no sign.</p>
 <p>Really frustrating to get no kind of error report - something must be wrong, but for all my effort I am not judged worth of knowing what. BAH!</p>
 </div>

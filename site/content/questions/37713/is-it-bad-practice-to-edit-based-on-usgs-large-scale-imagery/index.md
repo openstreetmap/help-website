@@ -47,7 +47,7 @@ osqa_accepted = true
 <p>Meanwhile USGS Large Scale Imagery shows the building fully constructed as well as the grass around the building matured.</p>
 <p>My question is: is it bad practice to edit the map based on the USGS Large Scale Imagery? Is the default Bing? Would this cause confusion?</p>
 <p>Thanks for any help I really like the project.</p>
-<p>Edit: The area in question is here <a href="http://www.openstreetmap.org/#map=19/40.57336/-105.08409">http://www.openstreetmap.org/#map=19/40.57336/-105.08409</a></p>
+<p>Edit: The area in question is here <a href="https://www.openstreetmap.org/#map=19/40.57336/-105.08409">https://www.openstreetmap.org/#map=19/40.57336/-105.08409</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-imagerydifferences" rel="tag" title="see questions tagged &#39;imagerydifferences&#39;">imagerydifferences</span>

@@ -74,7 +74,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Osmconvert supports polygons as boundary. Maybe you could use them.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_a_Polygon">http://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_a_Polygon</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_a_Polygon">https://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_a_Polygon</a></p>
 <p>BTW: you've posted the exact same question on the German forum just a few minutes ago. For the future please decide which channel you want to use for your questions. Crossposting is not really nice.</p>
 <p><a href="http://forum.openstreetmap.org/viewtopic.php?pid=415273#p415273">http://forum.openstreetmap.org/viewtopic.php?pid=415273#p415273</a></p>
 </div>

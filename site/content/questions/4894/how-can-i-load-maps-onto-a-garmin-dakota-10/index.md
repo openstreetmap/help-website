@@ -139,9 +139,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are running Windows and if it's possible to put a Dakota 10 in mass storage mode this question may help you: <a href="http://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">basic guide to download OSM to Garmin GPS</a></p>
-<p>Dakota 10 is not on the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode">OSM Map On Garmin/Mass Storage Mode</a> list, but maybe it's supported anyway.</p>
-<p>Otherwise you have to use a program like sendmap or similar, see: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin</a></p>
+<p>If you are running Windows and if it's possible to put a Dakota 10 in mass storage mode this question may help you: <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">basic guide to download OSM to Garmin GPS</a></p>
+<p>Dakota 10 is not on the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode">OSM Map On Garmin/Mass Storage Mode</a> list, but maybe it's supported anyway.</p>
+<p>Otherwise you have to use a program like sendmap or similar, see: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -194,7 +194,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The Dakota 10 as limited memory space so look for OSM on Garmin of the area you want and download, unzip it, and put that map.img file on a memory stick. Install Garmin Basecamp which is free from Garmin. You should be able to load the map from the stick and see in on your PC screen with Basecamp. Basecamp can then be used export a selected part of the map to the Dakota 10 that is small enough to fit the memory available. An alternative for a small area is to create and install a Garmin Custom map. To get a USB connection you will have to read the Dakota instructions and select set-up, interface, garmin spanner mode or similar, so that it goes into mass storage mode and appears as a memory device when connected via USB, Some USB leads are for power only and won't work. The one you got with the Dakota should be fine. <a href="http://www.garmin.com/us/products/onthetrail/custommaps">http://www.garmin.com/us/products/onthetrail/custommaps</a> <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>The Dakota 10 as limited memory space so look for OSM on Garmin of the area you want and download, unzip it, and put that map.img file on a memory stick. Install Garmin Basecamp which is free from Garmin. You should be able to load the map from the stick and see in on your PC screen with Basecamp. Basecamp can then be used export a selected part of the map to the Dakota 10 that is small enough to fit the memory available. An alternative for a small area is to create and install a Garmin Custom map. To get a USB connection you will have to read the Dakota instructions and select set-up, interface, garmin spanner mode or similar, so that it goes into mass storage mode and appears as a memory device when connected via USB, Some USB leads are for power only and won't work. The one you got with the Dakota should be fine. <a href="http://www.garmin.com/us/products/onthetrail/custommaps">http://www.garmin.com/us/products/onthetrail/custommaps</a> <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

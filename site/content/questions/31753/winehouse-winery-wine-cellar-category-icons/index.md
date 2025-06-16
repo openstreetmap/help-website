@@ -125,9 +125,9 @@ One Answer:
 <div class="answer-body">
 <ol>
 <li>I've been in something like you describe so I know what you're talking about, but I can't find any existing tags that would fit. You might just have to make up your own or do a bunch of <a href="http://taginfo.osm.org/">Taginfo</a> searching. Maybe something along the lines of <del>attraction</del> tourism=wine_cellar?</li>
-<li>There's a proposal for the tag <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Winery">man_made=winery</a> and it's being used 243 times</li>
+<li>There's a proposal for the tag <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Winery">man_made=winery</a> and it's being used 243 times</li>
 <li>This sounds like you could use amenity=restaurant with cuisine=wine (already used 31 times)</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dwine">shop=wine</a> is documented and being used</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dwine">shop=wine</a> is documented and being used</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

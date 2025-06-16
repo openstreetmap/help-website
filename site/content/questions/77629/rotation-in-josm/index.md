@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don’t believe it can be done. I asked the same question some time ago <a href="https://help.openstreetmap.org/questions/40276/josm-change-compass-orientation-on-screen">https://help.openstreetmap.org/questions/40276/josm-change-compass-orientation-on-screen</a></p>
+<p>I don’t believe it can be done. I asked the same question some time ago <a href="/questions/40276/josm-change-compass-orientation-on-screen">https://help.openstreetmap.org/questions/40276/josm-change-compass-orientation-on-screen</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

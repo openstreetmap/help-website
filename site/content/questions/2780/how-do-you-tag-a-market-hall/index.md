@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can tag that as <code>amenity=marketplace</code> + <code>building=yes</code>.</p>
-<p>You can also tag the name and the opening hours etc. See <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace">amenity=marketplace</a></p>
+<p>You can also tag the name and the opening hours etc. See <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmarketplace">amenity=marketplace</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -172,7 +172,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Good question</p>
-<p><a href="http://www.openstreetmap.org/browse/node/29834876/history">Hötorgshallen</a> in Stockholm has been tagged as:</p>
+<p><a href="https://www.openstreetmap.org/browse/node/29834876/history">Hötorgshallen</a> in Stockholm has been tagged as:</p>
 <pre><code>shop=deli
 description=Basement fish and food market with eating place
 note=What is this?</code></pre>

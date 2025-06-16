@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>The changeset <a href="http://www.openstreetmap.org/changeset/5592567">5592567</a> seems to be adding lots of unwanted nodes. What is the best way to proceed here ? I contacted the author but he does not answer. I would review all the added nodes and revert(delete) only those who don't make sense. Unfortunately there are LOTS of nodes, it's hard to decide wether a node is useful AND some nodes have been already fixed or edited to something meaningful.</p>
+<p>The changeset <a href="https://www.openstreetmap.org/changeset/5592567">5592567</a> seems to be adding lots of unwanted nodes. What is the best way to proceed here ? I contacted the author but he does not answer. I would review all the added nodes and revert(delete) only those who don't make sense. Unfortunately there are LOTS of nodes, it's hard to decide wether a node is useful AND some nodes have been already fixed or edited to something meaningful.</p>
 <p>What's the best to do here ? Just revert the entire changeset ? Manual review ? Anyone volunteer ?</p>
 <p>Thanks, Exxos. p.s. btw the nodes with name "GC?????" are actually GeoCache nodes.</p>
 </div>

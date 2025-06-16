@@ -88,7 +88,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>… yes. Answering would be possible, but would involve much guessing or listing of multiple, different options. It is more efficient to first clarify the question. <a href="http://help.openstreetmap.org/users/9549/snope"></a><a href="http://help.openstreetmap.org/users/9549/snope">@Snope</a>: Please just use the "edit" (be logged-in) below your question text to add more explanation.</p>
+<p>… yes. Answering would be possible, but would involve much guessing or listing of multiple, different options. It is more efficient to first clarify the question. <a href="https://help.openstreetmap.org/users/9549/snope"></a><a href="https://help.openstreetmap.org/users/9549/snope">@Snope</a>: Please just use the "edit" (be logged-in) below your question text to add more explanation.</p>
 </div>
 <div id="comment-36375-info" class="comment-info">
 <span class="comment-age">(29 Aug '14, 20:46)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

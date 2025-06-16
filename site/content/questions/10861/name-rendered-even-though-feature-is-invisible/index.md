@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "name=* rendered, even though feature is invisible"
-description = '''I currently have created a boundary for a religious administration, following this proposal: http://wiki.openstreetmap.org/wiki/User:FrViPofm/Tag:boundary%3Dreligious_administration Now, if I put the name= tag on the relation, mapnik doesn&#x27;t render the boundaries (which is OK, since I don&#x27;t want to ...'''
+description = '''I currently have created a boundary for a religious administration, following this proposal: https://wiki.openstreetmap.org/wiki/User:FrViPofm/Tag:boundary%3Dreligious_administration Now, if I put the name= tag on the relation, mapnik doesn&#x27;t render the boundaries (which is OK, since I don&#x27;t want to ...'''
 date = "2012-02-28T16:00:00Z"
 lastmod = "2012-03-01T07:04:00Z"
 weight = 10861
@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I currently have created a boundary for a religious administration, following this proposal: <a href="http://wiki.openstreetmap.org/wiki/User:FrViPofm/Tag:boundary%3Dreligious_administration">http://wiki.openstreetmap.org/wiki/User:FrViPofm/Tag:boundary%3Dreligious_administration</a></p>
-<p>Now, if I put the name= tag on the relation, mapnik doesn't render the boundaries (which is OK, since I don't want to boundaries to appear in the main map, but the name still appears (see Pfarrei St. Sigmund: <a href="http://www.openstreetmap.org/?lat=46.806582&amp;lon=11.794158&amp;zoom=18&amp;layers=M).">http://www.openstreetmap.org/?lat=46.806582&amp;lon=11.794158&amp;zoom=18&amp;layers=M).</a></p>
-<p>The same goes for ski slopes that are named and are rendered by osmarenderer, but not by mapnik, but the names still appear (see Pramstall: <a href="http://www.openstreetmap.org/?lat=46.748114&amp;lon=11.957553&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=46.748114&amp;lon=11.957553&amp;zoom=18&amp;layers=M)</a> Is this done on purpose?</p>
+<p>I currently have created a boundary for a religious administration, following this proposal: <a href="https://wiki.openstreetmap.org/wiki/User:FrViPofm/Tag:boundary%3Dreligious_administration">https://wiki.openstreetmap.org/wiki/User:FrViPofm/Tag:boundary%3Dreligious_administration</a></p>
+<p>Now, if I put the name= tag on the relation, mapnik doesn't render the boundaries (which is OK, since I don't want to boundaries to appear in the main map, but the name still appears (see Pfarrei St. Sigmund: <a href="https://www.openstreetmap.org/?lat=46.806582&amp;lon=11.794158&amp;zoom=18&amp;layers=M).">https://www.openstreetmap.org/?lat=46.806582&amp;lon=11.794158&amp;zoom=18&amp;layers=M).</a></p>
+<p>The same goes for ski slopes that are named and are rendered by osmarenderer, but not by mapnik, but the names still appear (see Pramstall: <a href="https://www.openstreetmap.org/?lat=46.748114&amp;lon=11.957553&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=46.748114&amp;lon=11.957553&amp;zoom=18&amp;layers=M)</a> Is this done on purpose?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-render" rel="tag" title="see questions tagged &#39;render&#39;">render</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>
@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-10895-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>same here: <a href="http://www.openstreetmap.org/?lat=41.51902&amp;lon=44.51956&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=41.51902&amp;lon=44.51956&amp;zoom=16&amp;layers=M</a> I added a small part of the Baku-Tbilisi-Ceyhan-Pipeline, which is not rendered, but the name is.</p>
+<p>same here: <a href="https://www.openstreetmap.org/?lat=41.51902&amp;lon=44.51956&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=41.51902&amp;lon=44.51956&amp;zoom=16&amp;layers=M</a> I added a small part of the Baku-Tbilisi-Ceyhan-Pipeline, which is not rendered, but the name is.</p>
 <p>Same goes for disused features, that are named. I.e. aerialway=disused, disused=cable_car</p>
 </div>
 <div id="comment-10895-info" class="comment-info">

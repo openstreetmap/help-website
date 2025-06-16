@@ -92,7 +92,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If you are using iD editor see this question <a href="https://help.openstreetmap.org/questions/31260/how-to-show-my-traces-on-a-map">https://help.openstreetmap.org/questions/31260/how-to-show-my-traces-on-a-map</a></p>
+<p>If you are using iD editor see this question <a href="/questions/31260/how-to-show-my-traces-on-a-map">https://help.openstreetmap.org/questions/31260/how-to-show-my-traces-on-a-map</a></p>
 </div>
 <div id="comment-31313-info" class="comment-info">
 <span class="comment-age">(05 Mar '14, 06:51)</span> <span class="comment-user userinfo">andy mackey</span>

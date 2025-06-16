@@ -65,7 +65,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/81415/mapsme-osm-profile">You are not alone</a>.</p>
+<p><a href="/questions/81415/mapsme-osm-profile">You are not alone</a>.</p>
 </div>
 <div id="comment-81490-info" class="comment-info">
 <span class="comment-age">(25 Aug '21, 22:19)</span> <span class="comment-user userinfo">TZorn</span>

@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I have often found it perplexing to use OpenStreetMap as a general-reference map (either from the "slippy" web interface or via third-party applications) due to my inability to find a key or legend to the symbols/styles used in the default mapnik tiles.</p>
-<p>For example, what's the difference between blue dashed lines and brown dashed lines? (Based on perusing the data layers, it appears to have to do with whether a trail is predominantly a cycleway or footpath.) But there's no easy way to find that out, aside from looking at the data layers, as above, or the <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> wiki page, which is hard to find (it took me quite some time to happen across it, and definitely not via any straightforward googling for "legend" etc.), aimed at editors not end-users, and finally, incomplete.</p>
+<p>For example, what's the difference between blue dashed lines and brown dashed lines? (Based on perusing the data layers, it appears to have to do with whether a trail is predominantly a cycleway or footpath.) But there's no easy way to find that out, aside from looking at the data layers, as above, or the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> wiki page, which is hard to find (it took me quite some time to happen across it, and definitely not via any straightforward googling for "legend" etc.), aimed at editors not end-users, and finally, incomplete.</p>
 <p>Indeed, I once got rather lost following what I thought to be a foot-trail track, which, on later examination, turned out to be a county boundary instead.</p>
 <p>So: is there some reference somewhere which has a clear explication of the various styles used in the default mapnik render? I really can't recommend OpenStreetMap to any of my less-technical friends without something like this, given the trouble I've had myself!</p>
 </div>
@@ -461,7 +461,7 @@ osqa_accepted = true
 <div id="post-14987-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/4329/cycle-map-key/4330">Here</a>'s a link to a previous answer to that question.</p>
+<p><a href="/questions/4329/cycle-map-key/4330">Here</a>'s a link to a previous answer to that question.</p>
 </div>
 <div id="comment-14987-info" class="comment-info">
 <span class="comment-age">(12 Aug '12, 21:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

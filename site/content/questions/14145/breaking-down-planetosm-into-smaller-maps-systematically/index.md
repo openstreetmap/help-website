@@ -161,7 +161,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not a direct answer to your question, but just in case you're not aware - there are a number of places where regularly updated planet <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extracts</a> are available. Depending on what you want to do with the data, it might be easier using one or more of those than trying to process the whole planet.</p>
+<p>Not a direct answer to your question, but just in case you're not aware - there are a number of places where regularly updated planet <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extracts</a> are available. Depending on what you want to do with the data, it might be easier using one or more of those than trying to process the whole planet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -138,7 +138,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Openstreetmap is a project that concentrates on creating a database of open geodata. While there are some services on the main project website, we rely on other parties to provide a myriad of services based on our geodata.</p>
 <p>In our wiki we have a list of places that offer ready made maps for Garmin GPSs.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM Map On Garmin/Download</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM Map On Garmin/Download</a></p>
 <p>P.S. Simply searching this help site for "Garmin" would have given you the same answer much faster.</p>
 </div>
 <div class="answer-controls post-controls">

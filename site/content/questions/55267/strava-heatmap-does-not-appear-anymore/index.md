@@ -311,7 +311,7 @@ osqa_accepted = true
 <div id="post-70139-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes, you can use cookies from your browser and use them for layer in JOSM <a href="https://help.openstreetmap.org/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do?page=1&amp;focusedAnswerId=70138#70138">https://help.openstreetmap.org/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do?page=1&amp;focusedAnswerId=70138#70138</a></p>
+<p>Yes, you can use cookies from your browser and use them for layer in JOSM <a href="/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do?page=1&amp;focusedAnswerId=70138#70138">https://help.openstreetmap.org/questions/62803/strava-heatmap-no-longer-useful-for-osm-mappers-anything-we-can-do?page=1&amp;focusedAnswerId=70138#70138</a></p>
 </div>
 <div id="comment-70139-info" class="comment-info">
 <span class="comment-age">(20 Jul '19, 10:11)</span> <span class="comment-user userinfo">asdqweasd</span>

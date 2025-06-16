@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>We reserve the word "scraping" for people who, to our dismay, write clumsy scripts that make tons of individual requests against our API or web site. Don't do that - we're an open data project and we make our data available for download!</p>
-<p>Grab a data extract for the UK e.g. from the <a href="http://download.geofabrik.de/">Geofabrik download server</a>, then use a program like <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to filter out only highways:</p>
+<p>Grab a data extract for the UK e.g. from the <a href="http://download.geofabrik.de/">Geofabrik download server</a>, then use a program like <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to filter out only highways:</p>
 <pre><code>osmosis --read-pbf file.osm.pbf --tf accept-ways highway=\* --write-xml myfile.osm</code></pre>
 <p>From the resulting XML file, extract all names - easiest on Linux with something like</p>
 <pre><code>grep &#39;k=&quot;name&quot;&#39; myfile.osm | cut -d\&quot; -f4</code></pre>

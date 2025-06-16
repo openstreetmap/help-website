@@ -131,7 +131,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>More specifically, it looks like you are trying to delete way <a href="http://www.openstreetmap.org/browse/way/32252146">http://www.openstreetmap.org/browse/way/32252146</a> which is used in relation <a href="http://www.openstreetmap.org/browse/relation/101635">http://www.openstreetmap.org/browse/relation/101635</a> and the deletion isn't also removing it from the relation. If you do want to delete that way, a workaround might be to delete the relation first (as that is the only way still in it).</p>
+<p>More specifically, it looks like you are trying to delete way <a href="https://www.openstreetmap.org/browse/way/32252146">https://www.openstreetmap.org/browse/way/32252146</a> which is used in relation <a href="https://www.openstreetmap.org/browse/relation/101635">https://www.openstreetmap.org/browse/relation/101635</a> and the deletion isn't also removing it from the relation. If you do want to delete that way, a workaround might be to delete the relation first (as that is the only way still in it).</p>
 </div>
 <div id="comment-10857-info" class="comment-info">
 <span class="comment-age">(28 Feb '12, 11:57)</span> <span class="comment-user userinfo">EdLoach ♦</span>

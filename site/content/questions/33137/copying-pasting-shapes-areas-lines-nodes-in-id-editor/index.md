@@ -109,7 +109,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Aram, I don’t know for ID but in JOSM it’s possible, rotate, mirror and copying, but keep an eye on the correct tags. Otherwise you end up copying things you don’t won’t too. Read this as well before you start editing, <a href="http://wiki.openstreetmap.org/wiki/Josm">http://wiki.openstreetmap.org/wiki/Josm</a> Just have a look and consider this editor (JOSM) instead of ID. Or use ID to gather information and edit in JOSM.</p>
+<p>Hi Aram, I don’t know for ID but in JOSM it’s possible, rotate, mirror and copying, but keep an eye on the correct tags. Otherwise you end up copying things you don’t won’t too. Read this as well before you start editing, <a href="https://wiki.openstreetmap.org/wiki/Josm">https://wiki.openstreetmap.org/wiki/Josm</a> Just have a look and consider this editor (JOSM) instead of ID. Or use ID to gather information and edit in JOSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Within iD editor you can use CTRL-C to copy, CTRL-V to paste. Not sure if this is official, but this and many more shortcuts are documented here: <a href="http://wiki.openstreetmap.org/wiki/ID/Shortcuts">http://wiki.openstreetmap.org/wiki/ID/Shortcuts</a></p>
+<p>Within iD editor you can use CTRL-C to copy, CTRL-V to paste. Not sure if this is official, but this and many more shortcuts are documented here: <a href="https://wiki.openstreetmap.org/wiki/ID/Shortcuts">https://wiki.openstreetmap.org/wiki/ID/Shortcuts</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

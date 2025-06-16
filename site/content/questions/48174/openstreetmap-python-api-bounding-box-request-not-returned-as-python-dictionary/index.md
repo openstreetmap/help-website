@@ -51,7 +51,7 @@ max_lat = max(lats)
 api = overpass.API()
 map_query = overpass.MapQuery(min_lat,min_long,max_lat,max_long)
 response = api.Get(map_query)</code></pre>
-<p>The output is not wrapped in a Python dictionary like <a href="https://help.openstreetmap.org/questions/47075/overpass-api-python-save-tags">here</a>. The response appears to be xml.</p>
+<p>The output is not wrapped in a Python dictionary like <a href="/questions/47075/overpass-api-python-save-tags">here</a>. The response appears to be xml.</p>
 <p>Anybody have an idea of what is going on here? Thanks in advance!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -169,7 +169,7 @@ response = api.Get(map_query)</code></pre>
 <div id="post-48183-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Interesting <a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, are you using version 0.3.1 as well? Sounds like something with my installation is off.:-/</p>
+<p>Interesting <a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, are you using version 0.3.1 as well? Sounds like something with my installation is off.:-/</p>
 </div>
 <div id="comment-48183-info" class="comment-info">
 <span class="comment-age">(16 Feb '16, 18:34)</span> <span class="comment-user userinfo">jlgutenson</span>

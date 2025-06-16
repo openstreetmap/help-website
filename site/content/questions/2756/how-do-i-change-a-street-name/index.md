@@ -213,7 +213,7 @@ osqa_accepted = false
 <div id="post-2764-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>"If you don't already have an account": <a href="http://www.openstreetmap.org/user/donkensler">http://www.openstreetmap.org/user/donkensler</a> was created before the original question was posted. That's one of the nice things about the primary login method for this site being the standard OSM login. :)</p>
+<p>"If you don't already have an account": <a href="https://www.openstreetmap.org/user/donkensler">https://www.openstreetmap.org/user/donkensler</a> was created before the original question was posted. That's one of the nice things about the primary login method for this site being the standard OSM login. :)</p>
 </div>
 <div id="comment-2764-info" class="comment-info">
 <span class="comment-age">(07 Feb '11, 18:19)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -255,10 +255,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you using the OSM web page at <a href="http://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> ?</p>
+<p>Are you using the OSM web page at <a href="https://www.openstreetmap.org/"></a><a href="https://www.openstreetmap.org/"></a><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> ?</p>
 <p>If so then you can edit the map directly on that page. Just position yourself at the area showing your street, hover over the "Edit" tab till you get the drop-down menu and select "Edit with Potlatch 2 (in-browser editor)"</p>
 <p>This will start the Potlatch editor, where you will be able to click the street and change its name then save your change. That's it.</p>
-<p>For more information see <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide (OSM Wiki).</a></p>
+<p>For more information see <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide (OSM Wiki).</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

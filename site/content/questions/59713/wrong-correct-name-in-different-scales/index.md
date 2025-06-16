@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your path is <a href="http://www.openstreetmap.org/way/380872148#map=16/47.3463/9.8048">here</a>, and your spelling correction is already visible at some map scales.</p>
-<p>There's a fairly detailed old answer <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a> which explains how the "standard" map gets updated. It's still mostly correct. What is slowing things down currently is a map style update. You don't need to do anything - the map tiles will catch up.</p>
+<p>Your path is <a href="https://www.openstreetmap.org/way/380872148#map=16/47.3463/9.8048">here</a>, and your spelling correction is already visible at some map scales.</p>
+<p>There's a fairly detailed old answer <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a> which explains how the "standard" map gets updated. It's still mostly correct. What is slowing things down currently is a map style update. You don't need to do anything - the map tiles will catch up.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

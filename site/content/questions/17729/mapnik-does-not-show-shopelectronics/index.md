@@ -110,9 +110,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As <a href="https://help.openstreetmap.org/users/87/pieren">Pieren</a> said, "why is XYZ not rendered on the main map" is a question that is asked quite frequently. <a href="https://help.openstreetmap.org/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map">This</a> is a question from someone from Sweden about "shop=alcohol". <a href="http://help.openstreetmap.org/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map/17643">Frederik's answer</a> explains where the code is and what the mechanism currently is for requesting changes to it.</p>
+<p>As <a href="https://help.openstreetmap.org/users/87/pieren">Pieren</a> said, "why is XYZ not rendered on the main map" is a question that is asked quite frequently. <a href="/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map">This</a> is a question from someone from Sweden about "shop=alcohol". <a href="/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map/17643">Frederik's answer</a> explains where the code is and what the mechanism currently is for requesting changes to it.</p>
 <p>However, it's worth expanding a little on that. <a href="http://lists.openstreetmap.org/pipermail/dev/2012-November/026125.html">This mailing list thread</a> discusses the current problems with main map style and how easy it is (or not) to contribute to it. In some cases the problem is that the data currently isn't in the rendering database so adding it requires more than just a style file change (I don't think that that's the case with "shop", though)</p>
-<p>With regard to the second part of your question "in Potlatch you cannot select this shop type", have a look at <a href="https://help.openstreetmap.org/questions/4672/how-to-request-an-icon-be-added-in-potlatch2-for-barrierentrance">this previous question</a>. The procedure's similar to the main map style - log a bug in <a href="http://trac.openstreetmap.org/">trac</a> using your normal OSM login, assign it to the correct area (in this case "potlatch2"), and offer whatever help (icons etc.) that you can. In the case of Potlatch new trac entries are forwarded to a <a href="http://lists.openstreetmap.org/pipermail/potlatch-dev/">mailing list</a> where they can be discussed further.</p>
+<p>With regard to the second part of your question "in Potlatch you cannot select this shop type", have a look at <a href="/questions/4672/how-to-request-an-icon-be-added-in-potlatch2-for-barrierentrance">this previous question</a>. The procedure's similar to the main map style - log a bug in <a href="http://trac.openstreetmap.org/">trac</a> using your normal OSM login, assign it to the correct area (in this case "potlatch2"), and offer whatever help (icons etc.) that you can. In the case of Potlatch new trac entries are forwarded to a <a href="http://lists.openstreetmap.org/pipermail/potlatch-dev/">mailing list</a> where they can be discussed further.</p>
 <p>In Potlatch you can, of course, always select "advanced" mode and add whatever tags you like.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -213,7 +213,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please use the 'search' function to find previous questions about the same topic. E.g. <a href="https://help.openstreetmap.org/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">https://help.openstreetmap.org/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer</a></p>
+<p>Please use the 'search' function to find previous questions about the same topic. E.g. <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">https://help.openstreetmap.org/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

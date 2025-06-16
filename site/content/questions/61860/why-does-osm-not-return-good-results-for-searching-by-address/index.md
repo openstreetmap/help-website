@@ -153,7 +153,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>While others may disagree with me, my favorite app for adding address from my phone is <a href="https://maps.me/download/">Maps.me</a>.</p>
-<p>It is a very limited editor, but that is perfect for when doing something simple and repetitive like adding an address. See the <a href="https://help.openstreetmap.org/questions/55309/what-is-the-fastest-way-to-add-adresses-from-a-smart-phone">question I asked</a>, then ended up answering myself, for more info on maps.me, and other options.</p>
+<p>It is a very limited editor, but that is perfect for when doing something simple and repetitive like adding an address. See the <a href="/questions/55309/what-is-the-fastest-way-to-add-adresses-from-a-smart-phone">question I asked</a>, then ended up answering myself, for more info on maps.me, and other options.</p>
 </div>
 <div id="comment-61890-info" class="comment-info">
 <span class="comment-age">(29 Jan '18, 21:44)</span> <span class="comment-user userinfo">keithonearth</span>

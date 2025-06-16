@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem with the map on Mezzovico, Switzerland (CH)"
-description = '''HI, i have a problem In this area, i have modified the forest limits, but when i zooming out the forest limits change and in JOMS is impossibile to select or modify. I think is a bug. Anyone can help me to improve my region pls. Region bugged: http://www.openstreetmap.org/?lat=46.0907&amp;amp;lon=8.9077...'''
+description = '''HI, i have a problem In this area, i have modified the forest limits, but when i zooming out the forest limits change and in JOMS is impossibile to select or modify. I think is a bug. Anyone can help me to improve my region pls. Region bugged: https://www.openstreetmap.org/?lat=46.0907&amp;amp;lon=8.9077...'''
 date = "2012-07-18T13:40:00Z"
 lastmod = "2012-07-18T18:10:00Z"
 weight = 14366
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>HI, i have a problem In this area, i have modified the forest limits, but when i zooming out the forest limits change and in JOMS is impossibile to select or modify. I think is a bug. Anyone can help me to improve my region pls.</p>
-<p>Region bugged: <a href="http://www.openstreetmap.org/?lat=46.0907&amp;lon=8.9077&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=46.0907&amp;lon=8.9077&amp;zoom=12&amp;layers=M</a> Try zoom.</p>
+<p>Region bugged: <a href="https://www.openstreetmap.org/?lat=46.0907&amp;lon=8.9077&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=46.0907&amp;lon=8.9077&amp;zoom=12&amp;layers=M</a> Try zoom.</p>
 <p>Sorry for my english.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The landuse areas in question have been modified by the redaction process and need to be remapped.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Remapping">http://wiki.openstreetmap.org/wiki/Remapping</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Remapping">https://wiki.openstreetmap.org/wiki/Remapping</a></p>
 <p>I would further suggest at least subscribing to the Swiss general OSM mailling list: <a href="http://lists.openstreetmap.ch/mailman/listinfo/talk-ch">http://lists.openstreetmap.ch/mailman/listinfo/talk-ch</a></p>
 <p>This will keep you up to date at least on the most important issues.</p>
 </div>

@@ -63,7 +63,7 @@ osqa_accepted = true
 <div id="post-52861-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Related question: <a href="https://help.openstreetmap.org/questions/48735/address-information-in-poi-and-building">Address information in POI <em>and</em> building?</a>.</p>
+<p>Related question: <a href="/questions/48735/address-information-in-poi-and-building">Address information in POI <em>and</em> building?</a>.</p>
 </div>
 <div id="comment-52861-info" class="comment-info">
 <span class="comment-age">(07 Nov '16, 15:55)</span> <span class="comment-user userinfo">sleske</span>
@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This question is not a first time topic, and is related to <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One_feature,_one_OSM_element</a></p>
+<p>This question is not a first time topic, and is related to <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One_feature,_one_OSM_element</a></p>
 <p>When you have a bigger building as a closed way in OSM data, and there are three or four shops inside in real world, it should be enough to give the address tags only to the building outline. There is no need to add address information to each shop (which can be mapped as a single node) inside that building.</p>
 <p>It is a question of redundancy.</p>
 </div>

@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-31567-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">http://wiki.openstreetmap.org/wiki/Map_internationalization</a> for some examples ...</p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a> for some examples ...</p>
 </div>
 <div id="comment-31567-info" class="comment-info">
 <span class="comment-age">(15 Mar '14, 16:56)</span> <span class="comment-user userinfo">stephan75</span>
@@ -143,7 +143,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Re the Mapfactor part, this previous question covers the "when is it updated" bit:</p>
-<p><a href="https://help.openstreetmap.org/questions/30911/how-to-download-map-data-with-my-new-edits-for-mapfactor-phone-navigation">https://help.openstreetmap.org/questions/30911/how-to-download-map-data-with-my-new-edits-for-mapfactor-phone-navigation</a></p>
+<p><a href="/questions/30911/how-to-download-map-data-with-my-new-edits-for-mapfactor-phone-navigation">https://help.openstreetmap.org/questions/30911/how-to-download-map-data-with-my-new-edits-for-mapfactor-phone-navigation</a></p>
 <p>You'd have to talk to MapFactor about producing a version with English names, though.</p>
 <p>Of course, plenty of other Android applications are available, many with more open map formats.</p>
 </div>

@@ -140,7 +140,7 @@ One Answer:
 <p>Thanks, but I don't find any stylesheet "default.style" there (maybe because the server</p>
 <p>seems to be kind of down..) or did you think of the osm.xml?</p>
 <p>Yesterday I downloaded a newer "default.style" to fix another Error</p>
-<p><a href="http://help.openstreetmap.org/questions/11542/error-column-generatorsource-does-not-exist">http://help.openstreetmap.org/questions/11542/error-column-generatorsource-does-not-exist</a></p>
+<p><a href="/questions/11542/error-column-generatorsource-does-not-exist">https://help.openstreetmap.org/questions/11542/error-column-generatorsource-does-not-exist</a></p>
 <p>How can I fix both of them? Is there any possibility to fill in the missing column by hand/manually? .. column "length" is also missing ..</p>
 </div>
 <div id="comment-11586-info" class="comment-info">

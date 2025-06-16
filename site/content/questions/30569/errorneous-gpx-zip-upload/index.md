@@ -73,7 +73,7 @@ XML parser at line 1 column 2</code></pre>
 <div id="post-30570-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you use it on <a href="http://www.openstreetmap.org/trace/create">http://www.openstreetmap.org/trace/create</a> ?</p>
+<p>Did you use it on <a href="https://www.openstreetmap.org/trace/create">https://www.openstreetmap.org/trace/create</a> ?</p>
 <p>I don't think it accepts <code>.zip</code> files.</p>
 </div>
 <div id="comment-30570-info" class="comment-info">

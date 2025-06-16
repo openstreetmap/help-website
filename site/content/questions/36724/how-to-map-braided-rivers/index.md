@@ -134,7 +134,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The only mention about "braid rivers" I found in the wiki are <a href="http://wiki.openstreetmap.org/wiki/LINZ_Trial_Import#Braided_rivers">here</a> about an import and mainly <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank#Varying_water_level_river">there</a> about riverbanks.</p>
+<p>The only mention about "braid rivers" I found in the wiki are <a href="https://wiki.openstreetmap.org/wiki/LINZ_Trial_Import#Braided_rivers">here</a> about an import and mainly <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank#Varying_water_level_river">there</a> about riverbanks.</p>
 <p>I don't think we have currently a suitable and widely approved solution for your problem. You say the full width is sediments and is covered only during floods but I think it's not always the case. As wikipedia says, it's also common in mountains e.g. exposed to heavy rains (this is the only real cases I met in my mapping experience about this).<br />
 I wouldn't discuss here for a solution since we don't have a black or white answer. I would suggest to post your question again to a more appropriate environment for an open discussion like on the <a href="http://forum.openstreetmap.org/">forum</a> or even better the <a href="https://lists.openstreetmap.org/listinfo/tagging">tagging mailing list</a>.</p>
 </div>
@@ -188,14 +188,14 @@ I wouldn't discuss here for a solution since we don't have a black or white answ
 <div class="answer-body">
 <p>There seem to be <em>at least</em> three approaches:</p>
 <ol>
-<li><p>You could just map river channels using waterway=river and not worry about the riverbank (see the <a href="http://www.openstreetmap.org/#map=12/-43.4482/172.2498">Waimakariri River</a>)</p></li>
-<li><p>You could map waterway=riverbank by the "usual flow", and trace major islands (multipolygon inner role) as seems appropriate. (maybe the <a href="http://www.openstreetmap.org/#map=11/66.4564/-146.7217">Yukon Rive</a>r is an example?)</p></li>
+<li><p>You could just map river channels using waterway=river and not worry about the riverbank (see the <a href="https://www.openstreetmap.org/#map=12/-43.4482/172.2498">Waimakariri River</a>)</p></li>
+<li><p>You could map waterway=riverbank by the "usual flow", and trace major islands (multipolygon inner role) as seems appropriate. (maybe the <a href="https://www.openstreetmap.org/#map=11/66.4564/-146.7217">Yukon Rive</a>r is an example?)</p></li>
 </ol>
-<p>2a. The <a href="http://www.openstreetmap.org/#map=16/45.8511/12.0459">Piave</a> does this, and adds natural=riverbed, surface=gravel for the surrounding area of irregular flow</p>
+<p>2a. The <a href="https://www.openstreetmap.org/#map=16/45.8511/12.0459">Piave</a> does this, and adds natural=riverbed, surface=gravel for the surrounding area of irregular flow</p>
 <ol>
-<li>You could map waterway=riverbank as the maximum flow area, and trace islands, and use water=river for the main channel (see the <a href="http://www.openstreetmap.org/#map=14/46.2035/12.9870">Tagliamento</a>)</li>
+<li>You could map waterway=riverbank as the maximum flow area, and trace islands, and use water=river for the main channel (see the <a href="https://www.openstreetmap.org/#map=14/46.2035/12.9870">Tagliamento</a>)</li>
 </ol>
-<p>I would look at other rivers in the region, and consider how often a river gets that higher flow level. Fundamentally, OSM doesn't handle changes in water level well (we don't map flood plains), so I wouldn't stress about what is "approved" or not. After all, the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Water_details">proposal</a> to get rid of waterway=riverbank was approved three years ago! :)</p>
+<p>I would look at other rivers in the region, and consider how often a river gets that higher flow level. Fundamentally, OSM doesn't handle changes in water level well (we don't map flood plains), so I wouldn't stress about what is "approved" or not. After all, the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Water_details">proposal</a> to get rid of waterway=riverbank was approved three years ago! :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -235,7 +235,7 @@ I wouldn't discuss here for a solution since we don't have a black or white answ
 <div id="post-36768-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/87/pieren">@Pieren</a>, all good points/questions. As you say, it'd be good topic for someone to bring up on the tagging list--after a week or two, there might be some consensus! :) For now, though, I just wanted to help answer the question, so I described in untechnical terms what I saw when I looked at some of the different braided river examples mentioned in wikipedia.</p>
+<p><a href="https://help.openstreetmap.org/users/87/pieren">@Pieren</a>, all good points/questions. As you say, it'd be good topic for someone to bring up on the tagging list--after a week or two, there might be some consensus! :) For now, though, I just wanted to help answer the question, so I described in untechnical terms what I saw when I looked at some of the different braided river examples mentioned in wikipedia.</p>
 </div>
 <div id="comment-36768-info" class="comment-info">
 <span class="comment-age">(11 Sep '14, 16:56)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -328,7 +328,7 @@ I wouldn't discuss here for a solution since we don't have a black or white answ
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Map like neuhausr stated, add intermittent=yes, if there is every now and then a river or stream, <a href="http://wiki.openstreetmap.org/wiki/Intermittent">http://wiki.openstreetmap.org/wiki/Intermittent</a> And let mappers include yourself change the streams after flooding. OSM is a actual map, it changes everyday, like a stream.</p>
+<p>Map like neuhausr stated, add intermittent=yes, if there is every now and then a river or stream, <a href="https://wiki.openstreetmap.org/wiki/Intermittent">https://wiki.openstreetmap.org/wiki/Intermittent</a> And let mappers include yourself change the streams after flooding. OSM is a actual map, it changes everyday, like a stream.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

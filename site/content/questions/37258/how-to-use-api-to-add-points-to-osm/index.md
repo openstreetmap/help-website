@@ -151,9 +151,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>general hints about your aim can be found in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Import">Imports</a>.</p>
+<p>general hints about your aim can be found in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Import">Imports</a>.</p>
 <p>Read all instructions there carefully!</p>
-<p>and there are already some solutions maybe similar to yours: <a href="http://yapis.geoclub.de">Yapis</a> and <a href="http://wiki.openstreetmap.org/wiki/Wheelmap">wheelmap.org</a></p>
+<p>and there are already some solutions maybe similar to yours: <a href="http://yapis.geoclub.de">Yapis</a> and <a href="https://wiki.openstreetmap.org/wiki/Wheelmap">wheelmap.org</a></p>
 <p>EDIT: also found one more opensource webservice: <a href="http://poichecker.de">poickecker.de</a></p>
 </div>
 <div class="answer-controls post-controls">
@@ -236,8 +236,8 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>I would start reading at <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">http://wiki.openstreetmap.org/wiki/API_v0.6</a></p>
-<p>Or see <a href="http://wiki.openstreetmap.org/wiki/Editing">http://wiki.openstreetmap.org/wiki/Editing</a> and look further for opensource software there.</p>
+<p>I would start reading at <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">https://wiki.openstreetmap.org/wiki/API_v0.6</a></p>
+<p>Or see <a href="https://wiki.openstreetmap.org/wiki/Editing">https://wiki.openstreetmap.org/wiki/Editing</a> and look further for opensource software there.</p>
 </div>
 <div id="comment-37277-info" class="comment-info">
 <span class="comment-age">(03 Oct '14, 20:33)</span> <span class="comment-user userinfo">stephan75</span>

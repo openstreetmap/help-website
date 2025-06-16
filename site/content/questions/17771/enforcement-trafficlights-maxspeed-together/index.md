@@ -104,8 +104,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You cannot have a <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dspeed_camera">highway=speed_camera</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals">highway=traffic_signals</a> on the same <a href="http://wiki.openstreetmap.org/wiki/Elements">element</a> because they obviously share the same <em>key</em>. Create a separate element for each.</p>
-<p>Another common approach is to use a <a href="http://wiki.openstreetmap.org/wiki/Semi-colon_value_separator">semicolon</a> to separate multiple values for the same key. But don't expect all tools to handle this correctly.</p>
+<p>You cannot have a <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dspeed_camera">highway=speed_camera</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals">highway=traffic_signals</a> on the same <a href="https://wiki.openstreetmap.org/wiki/Elements">element</a> because they obviously share the same <em>key</em>. Create a separate element for each.</p>
+<p>Another common approach is to use a <a href="https://wiki.openstreetmap.org/wiki/Semi-colon_value_separator">semicolon</a> to separate multiple values for the same key. But don't expect all tools to handle this correctly.</p>
 <p>I don't understand your maxspeed problem though.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -152,7 +152,7 @@ osqa_accepted = true
 <div id="post-17809-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, would this format do without any complaints ? Enforcement - traffic_signals / maxspeed, I'd already added it here ; <a href="http://www.openstreetmap.org/edit?lat=52.3295&amp;lon=6.6467&amp;zoom=17">http://www.openstreetmap.org/edit?lat=52.3295&amp;lon=6.6467&amp;zoom=17</a> Greetz</p>
+<p>Hi, would this format do without any complaints ? Enforcement - traffic_signals / maxspeed, I'd already added it here ; <a href="https://www.openstreetmap.org/edit?lat=52.3295&amp;lon=6.6467&amp;zoom=17">https://www.openstreetmap.org/edit?lat=52.3295&amp;lon=6.6467&amp;zoom=17</a> Greetz</p>
 </div>
 <div id="comment-17809-info" class="comment-info">
 <span class="comment-age">(19 Nov '12, 17:45)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -164,7 +164,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>No <a href="http://www.openstreetmap.org/browse/node/2020443461">it</a> won't. Why are you asking if you are ignoring the answer anyway?</p>
+<p>No <a href="https://www.openstreetmap.org/browse/node/2020443461">it</a> won't. Why are you asking if you are ignoring the answer anyway?</p>
 </div>
 <div id="comment-17810-info" class="comment-info">
 <span class="comment-age">(19 Nov '12, 18:11)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -248,7 +248,7 @@ osqa_accepted = true
 <div id="post-17825-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks, done <a href="http://www.openstreetmap.org/edit?lat=52.36018&amp;lon=6.54994&amp;zoom=16,">http://www.openstreetmap.org/edit?lat=52.36018&amp;lon=6.54994&amp;zoom=16,</a> even the shadow is recognisable !</p>
+<p>Thanks, done <a href="https://www.openstreetmap.org/edit?lat=52.36018&amp;lon=6.54994&amp;zoom=16,">https://www.openstreetmap.org/edit?lat=52.36018&amp;lon=6.54994&amp;zoom=16,</a> even the shadow is recognisable !</p>
 </div>
 <div id="comment-17825-info" class="comment-info">
 <span class="comment-age">(20 Nov '12, 20:08)</span> <span class="comment-user userinfo">Hendrikklaas</span>

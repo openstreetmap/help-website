@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'd like to find an application that would let me "check in" to different locations using OSM data or letting me improve it, while posting a picture of the map area where I am to services like identi.ca or Facebook. If anyone here uses FourSquare or Gowalla, that's what I'd like to have.</p>
-<p>Maverick for Android lets me share a snapshot and corresponding civic address, plus link to a map, which is the closest I have found, but I wanted to know if other apps for Android do anything similar to this. I don't have much time to test the impressive list at <a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a> and itmay not be an exhaustive list so I wanted to ask here first.</p>
+<p>Maverick for Android lets me share a snapshot and corresponding civic address, plus link to a map, which is the closest I have found, but I wanted to know if other apps for Android do anything similar to this. I don't have much time to test the impressive list at <a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a> and itmay not be an exhaustive list so I wanted to ask here first.</p>
 <p>Any suggestions are welcome.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

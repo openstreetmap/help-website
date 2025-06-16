@@ -135,7 +135,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The issue <a href="http://help.openstreetmap.org/users/339/edloach"></a><a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a></a> is facing is pretty much unrelated to the <em>area update</em> issue. In fact his query doesn't even use the word <code>area</code> in there, so there's nothing to worry about. It would have worked all the time.</p>
+<p>The issue <a href="https://help.openstreetmap.org/users/339/edloach"></a><a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a></a> is facing is pretty much unrelated to the <em>area update</em> issue. In fact his query doesn't even use the word <code>area</code> in there, so there's nothing to worry about. It would have worked all the time.</p>
 <p>Now, the reason for the 504 Gateway issue is the <em>way</em> too large timeout value. I'd suggest to reduce that at least down to 3600 seconds or even lower. 24hours timeout is deemed to be a resource killer by Overpass API and the query get immediately canceled.</p>
 <p>Here's my log for the same query with 3600 seconds timeout - results returned back in 1 minute 30 seconds.</p>
 <pre><code>wget &quot;http://overpass-api.de/api/interpreter?data=[timeout:3600];(rel[&quot;boundary&quot;](50.06419,-11.1621,59.04055,2.19727););( ._;way(r););out meta;&quot; -O res.osm
@@ -147,7 +147,7 @@ Length: unspecified [application/osm3s+xml]
 Saving to: &#39;res.osm&#39;
 &#10;    [                              &lt;=&gt;                                             ] 326,493,532 28.3MB/s   in 8.3s
 &#10;2015-12-11 17:12:52 (37.6 MB/s) - &#39;res.osm&#39; saved [326493532]</code></pre>
-<p>NB: The issue on the French server was reported some time back but I don't have an up to date status from <a href="http://help.openstreetmap.org/users/3436/sly">@sly</a>. The Russian server is facing some hard disk issues now and then. The issue on the German server was reported back in November, but I also don't have a feedback from Roland, why the update job stopped. Nevertheless, the area creation job was scheduled again on overpass-api.de, so you should get up-to-date areas now.</p>
+<p>NB: The issue on the French server was reported some time back but I don't have an up to date status from <a href="https://help.openstreetmap.org/users/3436/sly">@sly</a>. The Russian server is facing some hard disk issues now and then. The issue on the German server was reported back in November, but I also don't have a feedback from Roland, why the update job stopped. Nevertheless, the area creation job was scheduled again on overpass-api.de, so you should get up-to-date areas now.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

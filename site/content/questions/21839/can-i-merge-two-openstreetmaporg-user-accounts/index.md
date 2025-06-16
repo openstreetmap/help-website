@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>No, it's not possible to merge two user accounts at present. If someone develops a user merge function this may become technically possible, but the OSM community would still need to decide whether this was something they needed before it could be made available on osm.org.</p>
-<p>For how to recover an account with a lost email/password, see <a href="https://help.openstreetmap.org/questions/2336/how-do-i-recover-my-account-details">https://help.openstreetmap.org/questions/2336/how-do-i-recover-my-account-details</a></p>
+<p>For how to recover an account with a lost email/password, see <a href="/questions/2336/how-do-i-recover-my-account-details">https://help.openstreetmap.org/questions/2336/how-do-i-recover-my-account-details</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

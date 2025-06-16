@@ -133,7 +133,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Thank you for your quick reply! I just want to check whether I have made the right calculation for the number of tiles served. This concerns about 20.000 page views a day of pages containing an OSM.</p>
-<p>Based on another question on this forum (<a href="https://help.openstreetmap.org/questions/12070/usage-policy">https://help.openstreetmap.org/questions/12070/usage-policy</a> ) I have multiplied this by (an average of) 20 tiles per view in order to reach the conclusion that this amounts to about 400.000 tiles per day.</p>
+<p>Based on another question on this forum (<a href="/questions/12070/usage-policy">https://help.openstreetmap.org/questions/12070/usage-policy</a> ) I have multiplied this by (an average of) 20 tiles per view in order to reach the conclusion that this amounts to about 400.000 tiles per day.</p>
 <p>Is this the correct calculation in your opinion?</p>
 <p>You suggest we can install our own tile server. Can you tell me if there are other options we can use to make sure we are making the right contribution to the OSM community?</p>
 </div>

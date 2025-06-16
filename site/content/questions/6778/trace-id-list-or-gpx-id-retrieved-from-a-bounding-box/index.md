@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Trace id list or (gpx id) retrieved from a bounding box"
-description = '''I&#x27;d like the same thing than what&#x27;s here (more a less) : http://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces 1/ but in XAPI I don&#x27;t want to log in just for retrieving gps traces. 2/ and I just need the IDs Here what I have from your exemple with api v0.6  &amp;lt;trk&amp;gt;  &amp;lt;name&amp;gt;20110625.gpx&amp;lt;...'''
+description = '''I&#x27;d like the same thing than what&#x27;s here (more a less) : https://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces 1/ but in XAPI I don&#x27;t want to log in just for retrieving gps traces. 2/ and I just need the IDs Here what I have from your exemple with api v0.6  &amp;lt;trk&amp;gt;  &amp;lt;name&amp;gt;20110625.gpx&amp;lt;...'''
 date = "2011-08-02T13:49:00Z"
 lastmod = "2011-08-02T18:47:00Z"
 weight = 6778
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'd like the same thing than what's here (more a less) : <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces">http://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces</a></p>
+<p>I'd like the same thing than what's here (more a less) : <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces">https://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces</a></p>
 <p>1/ but in XAPI I don't want to log in just for retrieving gps traces.</p>
 <p>2/ and I just need the IDs Here what I have from your exemple with api v0.6<br />
 &lt;trk&gt;<br />
@@ -145,7 +145,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Neither <a href="http://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> nor the new <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> seem to support GPS traces. Hence you have to get them through the OSM API.</p>
+<p>Neither <a href="https://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> nor the new <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> seem to support GPS traces. Hence you have to get them through the OSM API.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

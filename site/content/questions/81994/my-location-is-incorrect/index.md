@@ -137,7 +137,7 @@ One Answer:
 <div id="post-82014-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>More info <a href="https://help.openstreetmap.org/questions/75039/my-location-on-the-map-is-wrong">https://help.openstreetmap.org/questions/75039/my-location-on-the-map-is-wrong</a></p>
+<p>More info <a href="/questions/75039/my-location-on-the-map-is-wrong">https://help.openstreetmap.org/questions/75039/my-location-on-the-map-is-wrong</a></p>
 </div>
 <div id="comment-82014-info" class="comment-info">
 <span class="comment-age">(02 Oct '21, 08:24)</span> <span class="comment-user userinfo">andy mackey</span>

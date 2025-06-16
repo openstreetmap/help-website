@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-78487-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/4091/new-road-has-different-name-on-opposite-sides">https://help.openstreetmap.org/questions/4091/new-road-has-different-name-on-opposite-sides</a></p>
+<p>See <a href="/questions/4091/new-road-has-different-name-on-opposite-sides">https://help.openstreetmap.org/questions/4091/new-road-has-different-name-on-opposite-sides</a></p>
 </div>
 <div id="comment-78487-info" class="comment-info">
 <span class="comment-age">(25 Jan '21, 07:44)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If the owner of a track has made it <code>Public</code> or <code>Identifiable</code> you can download the original file from OpenStreetMap including any information not used by OSM itself. For tracks that are <code>trackable</code> you may be able to reconstruct the trace using JOSM or Merkaartor, but it will be a time-consuming and error-prone process.</p>
-<p>How useful these tracks are is another question. Some will be <a href="http://www.openstreetmap.org/user/Jonathan%20Bennett/traces/564418">specific mapping trips</a>, but they may also be <a href="http://www.openstreetmap.org/user/Jonathan%20Bennett/traces/163289">a journey a mapper was going on anyway</a>. In either case, they may not be much use for navigation. For that you're better off using one of the <a href="http://wiki.openstreetmap.org/wiki/Putting_OSM_maps_on_a_GPS">map generation packages</a> for your model of GPS.</p>
+<p>How useful these tracks are is another question. Some will be <a href="https://www.openstreetmap.org/user/Jonathan%20Bennett/traces/564418">specific mapping trips</a>, but they may also be <a href="https://www.openstreetmap.org/user/Jonathan%20Bennett/traces/163289">a journey a mapper was going on anyway</a>. In either case, they may not be much use for navigation. For that you're better off using one of the <a href="https://wiki.openstreetmap.org/wiki/Putting_OSM_maps_on_a_GPS">map generation packages</a> for your model of GPS.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

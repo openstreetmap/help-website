@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Export to kml format a planned road drawn on OpenStreetMap"
-description = '''Export to kml format a planned road drawn on OpenStreetMap How can I export to kml format this planned road: http://www.openstreetmap.org/way/421129199 drawn by somebody on openstreetmap. I have tried to use http://overpass-turbo.eu/ but I do not know what query to run to have the kml file of http:/...'''
+description = '''Export to kml format a planned road drawn on OpenStreetMap How can I export to kml format this planned road: https://www.openstreetmap.org/way/421129199 drawn by somebody on openstreetmap. I have tried to use http://overpass-turbo.eu/ but I do not know what query to run to have the kml file of http:/...'''
 date = "2016-10-29T16:47:00Z"
 lastmod = "2016-10-29T16:47:00Z"
 weight = 52731
@@ -41,8 +41,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p><strong>Export to kml format a planned road drawn on OpenStreetMap</strong></p>
-<p>How can I export to kml format this planned road: <a href="http://www.openstreetmap.org/way/421129199">http://www.openstreetmap.org/way/421129199</a> drawn by somebody on openstreetmap.</p>
-<p>I have tried to use <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> but I do not know what query to run to have the kml file of <a href="http://www.openstreetmap.org/way/421129199">http://www.openstreetmap.org/way/421129199</a> generated.</p>
+<p>How can I export to kml format this planned road: <a href="https://www.openstreetmap.org/way/421129199">https://www.openstreetmap.org/way/421129199</a> drawn by somebody on openstreetmap.</p>
+<p>I have tried to use <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> but I do not know what query to run to have the kml file of <a href="https://www.openstreetmap.org/way/421129199">https://www.openstreetmap.org/way/421129199</a> generated.</p>
 <p><strong>UPDATE:</strong></p>
 <p>Finally I have found a procedure. In the left panel of <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> I wrote the sequence of commands you can see below (it is for a group of planned roads) and then pressed <strong>Run</strong> followed by <strong>Export</strong> and after that I selected <strong>as KML</strong> option.</p>
 <p>way(421129199); out geom; way(255186883); out geom; way(257366617); out geom; way(254417023); out geom; way(403116840); out geom; way(420106776); out geom; way(167390508); out geom; way(233974332); out geom; way(167252854); out geom; way(283351409); out geom; way(283923219); out geom;</p>

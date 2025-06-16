@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Some time ago I added a pub near where I live to the map. It has recently closed and now remains as the same building but boarded up and not open for business.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">The OSM Wiki's opening hours page</a> doesn't mention things that never open, and doesn't seem quite right. How should I tag it as closed?</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">The OSM Wiki's opening hours page</a> doesn't mention things that never open, and doesn't seem quite right. How should I tag it as closed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-pub" rel="tag" title="see questions tagged &#39;pub&#39;">pub</span> <span class="post-tag tag-link-disused" rel="tag" title="see questions tagged &#39;disused&#39;">disused</span> <span class="post-tag tag-link-closed" rel="tag" title="see questions tagged &#39;closed&#39;">closed</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -160,7 +160,7 @@ osqa_accepted = false
 6
 </div>
 <div class="comment-text">
-<p>Not sure when it was changed, but I have noticed the wiki currently recommends <a href="http://wiki.openstreetmap.org/w/index.php?title=Key:disused&amp;oldid=646737#Examples">what looks like an improvement</a> on the combination petschge mentions here. It suggests <code>disused:amenity=*</code>. This retains the original context/key. It seems the concept could be extended into the <code>demolished</code> and <code>abandoned</code> keys, too (e.g. <code>demolished:amenity=pub</code>). I'm using that to tag earthquake-affected premises in Christchurch, New Zealand.</p>
+<p>Not sure when it was changed, but I have noticed the wiki currently recommends <a href="https://wiki.openstreetmap.org/w/index.php?title=Key:disused&amp;oldid=646737#Examples">what looks like an improvement</a> on the combination petschge mentions here. It suggests <code>disused:amenity=*</code>. This retains the original context/key. It seems the concept could be extended into the <code>demolished</code> and <code>abandoned</code> keys, too (e.g. <code>demolished:amenity=pub</code>). I'm using that to tag earthquake-affected premises in Christchurch, New Zealand.</p>
 </div>
 <div id="comment-11304-info" class="comment-info">
 <span class="comment-age">(18 Mar '12, 20:27)</span> <span class="comment-user userinfo">hughbris</span>
@@ -256,7 +256,7 @@ osqa_accepted = false
 <div id="post-778-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Now I see the point, but it still doesn't seem right. The wiki page for the 'disused' key (<a href="http://wiki.openstreetmap.org/wiki/Key:disused">http://wiki.openstreetmap.org/wiki/Key:disused</a>) doesn't say you can use whatever value you wish, it says only 'yes' for a valid usage. If the application can't recognize the disused key you couldn't know how it will react to such a 'disused=*' combination. So which is more important - to view some object as 'not used now' and nothing more or view its amenity type? I think people have a different answers for that.</p>
+<p>Now I see the point, but it still doesn't seem right. The wiki page for the 'disused' key (<a href="https://wiki.openstreetmap.org/wiki/Key:disused">https://wiki.openstreetmap.org/wiki/Key:disused</a>) doesn't say you can use whatever value you wish, it says only 'yes' for a valid usage. If the application can't recognize the disused key you couldn't know how it will react to such a 'disused=*' combination. So which is more important - to view some object as 'not used now' and nothing more or view its amenity type? I think people have a different answers for that.</p>
 </div>
 <div id="comment-778-info" class="comment-info">
 <span class="comment-age">(10 Sep '10, 21:30)</span> <span class="comment-user userinfo">ivanatora</span>
@@ -270,7 +270,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>The wiki page is just a guide, and in this case it's a poor guide. In OpenStreetMap you can use Any Tags You Like[1], so just because a wiki page doesn't list an option you think is appropriate, it doesn't mean you can't use it. It's just that someone hasn't got round to updating the documentation.</p>
 <p>If an application doesn't understand <code>amenity=disused</code>, it simply doesn't show <em>anything</em> at that point on the map, and no-one gets misled. If an application doesn't understand <code>disused=no</code>, it will show that disused feature as in use.</p>
-<p>[1] <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">http://wiki.openstreetmap.org/wiki/Any_tags_you_like</a></p>
+<p>[1] <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">https://wiki.openstreetmap.org/wiki/Any_tags_you_like</a></p>
 </div>
 <div id="comment-780-info" class="comment-info">
 <span class="comment-age">(11 Sep '10, 00:51)</span> <span class="comment-user userinfo">Jonathan Ben...</span>

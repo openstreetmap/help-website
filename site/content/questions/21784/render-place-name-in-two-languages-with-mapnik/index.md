@@ -113,7 +113,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes. You can see the MapQuest rendering already does something like this: <a href="http://osm.org/go/0t2tSf--?layers=Q">http://osm.org/go/0t2tSf--?layers=Q</a></p>
-<p>For your own rendering, the best way to do this is likely in your PostgreSQL query. There you can add some logic to make sure all of the labels make sense, such as not including the English translation if it is the same as the local name. You'll need to make sure you have imported the <code>name:en</code> column as well as the local name. (If you are using osm2pgsql you will need to adjust your <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql#Import_style">import style</a>, or you can use hstore to import all tags, option <code>-k</code> (or <code>--hstore</code>), which obviates the need to change the default style.)</p>
+<p>For your own rendering, the best way to do this is likely in your PostgreSQL query. There you can add some logic to make sure all of the labels make sense, such as not including the English translation if it is the same as the local name. You'll need to make sure you have imported the <code>name:en</code> column as well as the local name. (If you are using osm2pgsql you will need to adjust your <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql#Import_style">import style</a>, or you can use hstore to import all tags, option <code>-k</code> (or <code>--hstore</code>), which obviates the need to change the default style.)</p>
 <p>Here is an example query from an osm2pgsql import for a places layer. If there is a <code>name:en</code> tag for a place that is different from the <code>name</code> tag, the name will look like "Local Name (English Name)", otherwise you will just get "Local Name".</p>
 <pre><code>( select way,
     case when &quot;name:en&quot; is not null and &quot;name:en&quot; &lt;&gt; name
@@ -181,7 +181,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Like in <a href="http://osm-tools.org/">http://osm-tools.org</a> -&gt; thaimap ?</p>
 <p>Ask the maintainer of that site: scroll down the page to see contact data. Or read his explanation how he did that.</p>
-<p>Also see <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a> in general.</p>
+<p>Also see <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a> in general.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you use the official umap site, then safe number of concurrent editing users was 1. Probably is still.</p>
-<p>See : <a href="https://help.openstreetmap.org/questions/48708/multiple-editors">https://github.com/umap-project/umap/issues/468</a></p>
+<p>See : <a href="/questions/48708/multiple-editors">https://github.com/umap-project/umap/issues/468</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>In a nearby park there is a line of 5 pine trees, close enough that their trunks are almost touching.</p>
 <p>Are there enough trees to justify adding them as a tree row?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20200102_212116_com.android.gallery3d_LX5uLZ2.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20200102_212116_com.android.gallery3d_LX5uLZ2.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tree_row" rel="tag" title="see questions tagged &#39;tree_row&#39;">tree_row</span> <span class="post-tag tag-link-trees" rel="tag" title="see questions tagged &#39;trees&#39;">trees</span>

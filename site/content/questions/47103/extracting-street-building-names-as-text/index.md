@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I didn't know a way to get this data straight away as a file with just the names. But then <a href="http://help.openstreetmap.org/users/8708/mmd"></a><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a></a> corrected <a href="http://overpass-turbo.eu/s/de1">my example</a> on how to get all the named roads within a bounding box. If you run <a href="http://overpass-turbo.eu/s/de4">his variant</a>, you get a clean CSV file straight away. Only thing left to do is remove duplicates.</p>
+<p>I didn't know a way to get this data straight away as a file with just the names. But then <a href="https://help.openstreetmap.org/users/8708/mmd"></a><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a></a> corrected <a href="http://overpass-turbo.eu/s/de1">my example</a> on how to get all the named roads within a bounding box. If you run <a href="http://overpass-turbo.eu/s/de4">his variant</a>, you get a clean CSV file straight away. Only thing left to do is remove duplicates.</p>
 <p>The query was generated with the wizard you see at the top of the screen. I only wrote: highway= <em>and name=</em> . For buildings, you would just need to change highway to building.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -141,7 +141,7 @@ One Answer:
 <div id="post-47114-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> ! Updated my answer to include your example.</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> ! Updated my answer to include your example.</p>
 </div>
 <div id="comment-47114-info" class="comment-info">
 <span class="comment-age">(11 Dec '15, 21:08)</span> <span class="comment-user userinfo">joost schouppe</span>
@@ -200,7 +200,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Something that might be of use too, is to look for streets within a neighborhood instead of within a bounding box. This query <a href="http://overpass-turbo.eu/s/df9">http://overpass-turbo.eu/s/df9</a> will return all the named roads that have at least one node within the village of Zwalm. But if you need to be sure of getting the correct result (i.e. looking for Rome, U.S.A instead of Rome, Italy), you can include some information to limit results. For example, looking up Zwalm in OSM <a href="http://www.openstreetmap.org/relation/416206">http://www.openstreetmap.org/relation/416206</a> I find that it is a level 8 administrative relation. So this query is more likely to turn up exactly what we need: <a href="http://overpass-turbo.eu/s/dfa">http://overpass-turbo.eu/s/dfa</a></p>
+<p>Something that might be of use too, is to look for streets within a neighborhood instead of within a bounding box. This query <a href="http://overpass-turbo.eu/s/df9">http://overpass-turbo.eu/s/df9</a> will return all the named roads that have at least one node within the village of Zwalm. But if you need to be sure of getting the correct result (i.e. looking for Rome, U.S.A instead of Rome, Italy), you can include some information to limit results. For example, looking up Zwalm in OSM <a href="https://www.openstreetmap.org/relation/416206">https://www.openstreetmap.org/relation/416206</a> I find that it is a level 8 administrative relation. So this query is more likely to turn up exactly what we need: <a href="http://overpass-turbo.eu/s/dfa">http://overpass-turbo.eu/s/dfa</a></p>
 </div>
 <div id="comment-47132-info" class="comment-info">
 <span class="comment-age">(13 Dec '15, 12:32)</span> <span class="comment-user userinfo">joost schouppe</span>

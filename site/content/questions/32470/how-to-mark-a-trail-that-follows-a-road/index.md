@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Additionally to the <em>horse=designated</em> tag you should add a <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route relation</a>.</p>
-<p>Such <a href="http://wiki.openstreetmap.org/wiki/Relation">relations</a> are used to define relationships between different elements, in your case between ways. Add <em>all</em> ways belonging to the <em>Trans Canada Trail</em> to this relation. Then tag the relation as <em>type=route</em>, <em><a href="http://taginfo.openstreetmap.org/tags/route=horse">route=horse</a></em> and <em>name=Trans Canada Trail</em>. The wiki page contains some more tags you can add if you have more information about this trail.</p>
+<p>Additionally to the <em>horse=designated</em> tag you should add a <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relation</a>.</p>
+<p>Such <a href="https://wiki.openstreetmap.org/wiki/Relation">relations</a> are used to define relationships between different elements, in your case between ways. Add <em>all</em> ways belonging to the <em>Trans Canada Trail</em> to this relation. Then tag the relation as <em>type=route</em>, <em><a href="http://taginfo.openstreetmap.org/tags/route=horse">route=horse</a></em> and <em>name=Trans Canada Trail</em>. The wiki page contains some more tags you can add if you have more information about this trail.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

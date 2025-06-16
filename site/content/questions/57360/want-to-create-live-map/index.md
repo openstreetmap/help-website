@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>What you are asking for is a larger, commercial-grade system and you will have to do a lot of research yourself, but as a general sketch you are looking for:</p>
 <ol>
-<li>a background map that simply shows roads, place names and so on; this is usually made from tiles and these tiles are made from OpenStreetMap data; you can install the software that makes these tiles yourself, or you can buy the service from a vendor like Mapbox (see <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for other vendors).</li>
+<li>a background map that simply shows roads, place names and so on; this is usually made from tiles and these tiles are made from OpenStreetMap data; you can install the software that makes these tiles yourself, or you can buy the service from a vendor like Mapbox (see <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for other vendors).</li>
 <li>a database in which you keep your own annotations (custom symbols for roads etc.) because you don't want to upload that to OpenStreetMap</li>
 <li>a system that collects the vehicle locatios and stores them in a database</li>
 <li>a front-end that displays the background map, your annotation overlay, and a vehicle overlay; some tile vendors will have their own libraries you can use, or you could use the Open Source libraries Leaflet or OpenLayers (for a web app)</li>

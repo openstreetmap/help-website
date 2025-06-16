@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm new to Overpass Turbo QL and I have searched everywhere about this but unable to merge parallel railway lines/railroads into one in the <a href="https://help.openstreetmap.org/upfiles/Screenshot_(380)_UFxT0X5.png">Map</a></p>
+<p>I'm new to Overpass Turbo QL and I have searched everywhere about this but unable to merge parallel railway lines/railroads into one in the <span>Map</span></p>
 <p>I found that tracks tag may work but unable to find the right syntax. I have tried this query so far but it is showing all the tracks individually.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -65,7 +65,7 @@ This question is marked "community wiki".
 <div id="post-88179-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I don't know if Overpass supports this for lines, but <a href="https://help.openstreetmap.org/questions/43114/how-can-i-dissolve-intersecting-polygons-with-overpass">here</a> is a similar question about areas. Where the answer was basically to do it was a post-processing step.</p>
+<p>I don't know if Overpass supports this for lines, but <a href="/questions/43114/how-can-i-dissolve-intersecting-polygons-with-overpass">here</a> is a similar question about areas. Where the answer was basically to do it was a post-processing step.</p>
 </div>
 <div id="comment-88179-info" class="comment-info">
 <span class="comment-age">(20 Jan '24, 01:16)</span> <span class="comment-user userinfo">InsertUser</span>

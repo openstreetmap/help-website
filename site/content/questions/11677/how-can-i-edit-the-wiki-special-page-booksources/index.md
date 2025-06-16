@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I would like to enhance the <a href="http://wiki.openstreetmap.org/wiki/Special:BookSources">BookSources</a> wiki page by adding automatic links to <a href="http://en.wikipedia.org/w/index.php?title=Special%3ABookSources">Wikipedia Book sources</a> in different languages. But I cannot find the edit button for this special page.</p>
+<p>I would like to enhance the <a href="https://wiki.openstreetmap.org/wiki/Special:BookSources">BookSources</a> wiki page by adding automatic links to <a href="http://en.wikipedia.org/w/index.php?title=Special%3ABookSources">Wikipedia Book sources</a> in different languages. But I cannot find the edit button for this special page.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-booksources" rel="tag" title="see questions tagged &#39;booksources&#39;">booksources</span> <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-wikipedia" rel="tag" title="see questions tagged &#39;wikipedia&#39;">wikipedia</span>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>try <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap:Book_sources">http://wiki.openstreetmap.org/wiki/OpenStreetMap:Book_sources</a> created a few minutes ago. Previous text/links were hard coded in MediaWiki or something like that</p>
+<p>try <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap:Book_sources">https://wiki.openstreetmap.org/wiki/OpenStreetMap:Book_sources</a> created a few minutes ago. Previous text/links were hard coded in MediaWiki or something like that</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

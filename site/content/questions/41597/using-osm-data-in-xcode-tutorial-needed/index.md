@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The app <a href="http://wiki.openstreetmap.org/wiki/OsmAnd">Osmand</a> is opensource, and so far only released as android app,</p>
+<p>The app <a href="https://wiki.openstreetmap.org/wiki/OsmAnd">Osmand</a> is opensource, and so far only released as android app,</p>
 <p>but programming tasks are very active the last month to release it also for iOS (is said to come the next weeks or month in 2015)</p>
 <p>See the github repo of Osmand to get in touch with its sourcecode, partly also for iOS.</p>
 </div>

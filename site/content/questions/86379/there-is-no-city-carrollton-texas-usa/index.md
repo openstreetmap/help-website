@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-86383-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I moved this "answer" to <a href="https://help.openstreetmap.org/questions/14495/change-of-city-name">https://help.openstreetmap.org/questions/14495/change-of-city-name</a> to it's own question.</p>
+<p>I moved this "answer" to <a href="/questions/14495/change-of-city-name">https://help.openstreetmap.org/questions/14495/change-of-city-name</a> to it's own question.</p>
 <p>Can you explain what you are trying to do and what does not work for you?</p>
 </div>
 <div id="comment-86383-info" class="comment-info">

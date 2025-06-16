@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi</p>
 <p>I'm wondering how to change imperial units in scale indicator (upper left map corner) to metric units (meters).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2023-01-02_22-59.png" alt="screenshot" /></p>
+<p><img src="/upfiles/2023-01-02_22-59.png" alt="screenshot" /></p>
 <p>I've searched in configuration but didn't found.</p>
 <p>Thanks</p>
 </div>
@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Self answering: click on the bottom length measurement tool</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2023-01-02_23-05.png" alt="alt text" /></p>
+<p><img src="/upfiles/2023-01-02_23-05.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

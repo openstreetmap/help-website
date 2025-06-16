@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/49587/indias-administrative-boundary-issue.">https://help.openstreetmap.org/questions/49587/indias-administrative-boundary-issue.</a></p>
+<p>See <a href="/questions/49587/indias-administrative-boundary-issue.">https://help.openstreetmap.org/questions/49587/indias-administrative-boundary-issue.</a></p>
 </div>
 <div id="comment-74448-info" class="comment-info">
 <span class="comment-age">(28 Apr '20, 15:23)</span> <span class="comment-user userinfo">scai ♦</span>

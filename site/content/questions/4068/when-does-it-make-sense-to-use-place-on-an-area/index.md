@@ -43,12 +43,12 @@ osqa_accepted = true
 <p>When tagging a village/town/city, I can use <code>place=city/town/suburb...</code> to mark it as a town etc.</p>
 <p>I'm not quite clear on how to use this tag:</p>
 <ul>
-<li>If I understand correctly, the Wiki recommends: 1) putting the <code>place=</code> tag on a node in the center, and 2) drawing the official boundary of the place as a way and tagging it with <code>administrative=boundary</code> (<a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a> , section "Core values / As areas" ).</li>
+<li>If I understand correctly, the Wiki recommends: 1) putting the <code>place=</code> tag on a node in the center, and 2) drawing the official boundary of the place as a way and tagging it with <code>administrative=boundary</code> (<a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a> , section "Core values / As areas" ).</li>
 <li>However, in the database I sometimes see places which have both an area tagged <code>place=</code> <em>and</em> a (different) area tagged <code>boundary=administrative</code>. One example would be Dieren (NL) (search for "Dieren" on Nominatim).</li>
 </ul>
 <p>What is the point of this? Isn't this contradictory? Or are there situations where the area of the place differs from its official boundary?</p>
 <p>So should I use <code>place=</code> on a node or on an area? If the latter, when would the area of a <code>place=*</code>, be different from its official boundary?</p>
-<p><em>This question was prompted by the discussion on my answer to <a href="http://help.openstreetmap.org/questions/3892/way-in-wrong-country">Way in wrong country</a>.</em></p>
+<p><em>This question was prompted by the discussion on my answer to <a href="/questions/3892/way-in-wrong-country">Way in wrong country</a>.</em></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-boundaries" rel="tag" title="see questions tagged &#39;boundaries&#39;">boundaries</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-place" rel="tag" title="see questions tagged &#39;place&#39;">place</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-4808-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Does this <a href="http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative#4736">http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative#4736</a> answer your question? I ended up asking practically the same question as you as I felt that we weren't getting far here.</p>
+<p>Does this <a href="/questions/4658/tagging-areas-as-place-vs-boundaryadministrative#4736">https://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative#4736</a> answer your question? I ended up asking practically the same question as you as I felt that we weren't getting far here.</p>
 </div>
 <div id="comment-4808-info" class="comment-info">
 <span class="comment-age">(25 Apr '11, 19:29)</span> <span class="comment-user userinfo">ponzu</span>
@@ -226,7 +226,7 @@ osqa_accepted = true
 <div id="post-4497-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The solution for rendering (and programmatically identifying) the "center" of any admin boundary lies with the use of the "admin_centre" role and, perhaps, the "label" role as documented here: <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">http://wiki.openstreetmap.org/wiki/Relation:boundary</a> Unfortunately, few mappers and even fewer renderers honor this improved schema.</p>
+<p>The solution for rendering (and programmatically identifying) the "center" of any admin boundary lies with the use of the "admin_centre" role and, perhaps, the "label" role as documented here: <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">https://wiki.openstreetmap.org/wiki/Relation:boundary</a> Unfortunately, few mappers and even fewer renderers honor this improved schema.</p>
 <p>Note how it suggests that you take an existing object, such as city hall or market square and add it as a role=admin_centre to the relation. That's just one reminder to keep entities to a necessary minimum. (Hint: having a node and a boundary for the same place is bad.)</p>
 </div>
 <div id="comment-4497-info" class="comment-info">
@@ -353,7 +353,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>have a look at <a href="http://help.openstreetmap.org/questions/3942/how-to-map-inhabited-places-settlements">this question</a>, which seems to cover the same topic:</p>
+<p>have a look at <a href="/questions/3942/how-to-map-inhabited-places-settlements">this question</a>, which seems to cover the same topic:</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

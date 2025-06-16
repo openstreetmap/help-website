@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I need to map a U-turn, like the one in the picture:<img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2021-08-23_at_10.38.28_PM.png" alt="alt text" /></p>
+<p>I need to map a U-turn, like the one in the picture:<img src="/upfiles/Screen_Shot_2021-08-23_at_10.38.28_PM.png" alt="alt text" /></p>
 <p>This is a residential highway, in Bogota, Colombia, where "Calle"s go from east to west, and "Carrera"s go from north to south. I need to put the name to this U-turn, because a Residential highway should have a name, otherwise this will be considered as an error. However, this particular U-turn actually goes from east to west, and I am not sure if I should put the name of the Carrera for the U-turn, even if this goes against the definition of Carrera that go from north to south.</p>
 <p>In fact, I need to put a name because Residential highway should have one. However, I do not know which one to put. Also, I will not have that problem if residential_link would exist.</p>
 </div>

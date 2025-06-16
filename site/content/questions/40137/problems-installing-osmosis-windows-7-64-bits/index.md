@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problems installing Osmosis Windows 7 64 bits"
-description = '''Hi everybody, I am having some problems to install Osmosis in my Windows 7 64 bits. I downloaded the last versión available (0.47.1 in http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip). I followed the install guide (http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Window...'''
+description = '''Hi everybody, I am having some problems to install Osmosis in my Windows 7 64 bits. I downloaded the last versión available (0.47.1 in http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip). I followed the install guide (https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Window...'''
 date = "2015-01-08T11:54:00Z"
 lastmod = "2015-03-25T14:36:00Z"
 weight = 40137
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi everybody,</p>
-<p>I am having some problems to install Osmosis in my Windows 7 64 bits. I downloaded the last versión available (0.47.1 in <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip).">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip).</a> I followed the install guide (<a href="http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)">http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)</a> and <a href="http://learnosm.org/en/osm-data/osmosis/#install-osmosis).">http://learnosm.org/en/osm-data/osmosis/#install-osmosis).</a></p>
+<p>I am having some problems to install Osmosis in my Windows 7 64 bits. I downloaded the last versión available (0.47.1 in <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip).">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip).</a> I followed the install guide (<a href="https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)">https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)</a> and <a href="http://learnosm.org/en/osm-data/osmosis/#install-osmosis).">http://learnosm.org/en/osm-data/osmosis/#install-osmosis).</a></p>
 <p>I also changed the java issues as It is recommended in the guide:</p>
 <ul>
 <li>Find the java application (exe file)</li>

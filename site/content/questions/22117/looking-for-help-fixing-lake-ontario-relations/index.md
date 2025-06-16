@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I've been adding data for parks, etc., along the south shore of Lake Ontario between Fort Niagara and Rochester. JOSM displays blue shading that extends well into the land area for a mile or so in many places as though there is a relation that's not closed somewhere. There are three relations that pertain to this area:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/1124369">1124369/101 Group: Great Lakes</a></p>
-<p><a href="http://www.openstreetmap.org/browse/relation/1740344">1740344/238 Collection : Lake Ontario - Outer Shore</a></p>
-<p><a href="http://www.openstreetmap.org/browse/relation/1205140">1205140/44 Collection : Lake Ontario - South Shore</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/1124369">1124369/101 Group: Great Lakes</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/1740344">1740344/238 Collection : Lake Ontario - Outer Shore</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/1205140">1205140/44 Collection : Lake Ontario - South Shore</a></p>
 <p>These relations are bizarre too. Most contain a bunch of members labeled "incomplete" and that cannot be found by zooming to inside JOSM. Many of those have no "roles" assigned.</p>
 <p>Can anyone explain this to me? Why are there three separate relations describing this lakeshore? Can anyone help fix it, if indeed it is "broken"?</p>
 <p>The shoreline renders properly in Mapnik/Potlatch2 and also in my downloaded maps on my GPS. You need to look at the shoreline in JOSM to see what I'm asking about.</p>
@@ -120,7 +120,7 @@ One Answer:
 <p>When you download data with JOSM this is usually all data within a bounding box. Since Lake Ontario is so large a lot of the ways making up the shoreline will be outside the bounding box, so these will not be downloaded to your local computer. Therefore the renderer inside JOSM is not not able to make correct assumptions as to where there is lake and where there is land.</p>
 <p>If this was a smaller lake, then I would advise you to use the button "download incomplete members" in the relation dialog. However depending on how powerful your computer is, JOSM may become very slow, if you download all the shorelines of the Great Lakes. Try this first with the South Shore relation.</p>
 <hr />
-<p>Depending on the tool you use, Lake Ontario is coloured blue, because the shores are tagged with natural=coastline or because there is a <a href="http://www.openstreetmap.org/browse/relation/1206310">multipolygon relation tagged with natural=water</a>. (The multipolygon is not one of the three relations you mention above.)</p>
+<p>Depending on the tool you use, Lake Ontario is coloured blue, because the shores are tagged with natural=coastline or because there is a <a href="https://www.openstreetmap.org/browse/relation/1206310">multipolygon relation tagged with natural=water</a>. (The multipolygon is not one of the three relations you mention above.)</p>
 <p>The "group" and "collection" relations you mention above have nothing to do with the rendering of the lake in any tool I know off. My guess is, they were created to easily select and/or check the lakeshore at a time we didn't use multipolygons for such gigantic area's.</p>
 <p>Maybe you can look at the history of the relations and message the mapper who created them.</p>
 </div>

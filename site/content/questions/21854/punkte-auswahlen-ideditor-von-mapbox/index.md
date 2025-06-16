@@ -104,7 +104,7 @@ osqa_accepted = false
 <div id="post-21885-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span></span><span>@scai</span>: naja, es geht um <span>iD</span> - insofern haben wir schon was damit zu tun. <a href="http://openstreetmap.us/iD/release">http://openstreetmap.us/iD/release</a> verlinkt unten am Bildrand wirklich mit Betitelung "Programmfehler melden" direkt <a href="https://help.openstreetmap.org/questions/ask/">hierher</a>. In der Tat etwas ungünstig - für Bearbeitungshilfe ist diese Seite vielleicht angebracht, oder für Newbies, die es nicht schaffen einen Bugtracker zu bedienen. Also vielleicht hier her verlinken, aber mit Vorabinfo, was hier und was im Bugtracker gemeldet werden kann/sollte.</p>
+<p><span></span><span>@scai</span>: naja, es geht um <span>iD</span> - insofern haben wir schon was damit zu tun. <a href="http://openstreetmap.us/iD/release">http://openstreetmap.us/iD/release</a> verlinkt unten am Bildrand wirklich mit Betitelung "Programmfehler melden" direkt <a href="/questions/ask/">hierher</a>. In der Tat etwas ungünstig - für Bearbeitungshilfe ist diese Seite vielleicht angebracht, oder für Newbies, die es nicht schaffen einen Bugtracker zu bedienen. Also vielleicht hier her verlinken, aber mit Vorabinfo, was hier und was im Bugtracker gemeldet werden kann/sollte.</p>
 </div>
 <div id="comment-21885-info" class="comment-info">
 <span class="comment-age">(26 Apr '13, 15:12)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

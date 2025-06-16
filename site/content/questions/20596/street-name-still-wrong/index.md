@@ -62,7 +62,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Where did you download your garmin map? There are dozens of <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">different garmin maps based on OSM data</a> available.</p>
+<p>Where did you download your garmin map? There are dozens of <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">different garmin maps based on OSM data</a> available.</p>
 </div>
 <div id="comment-20597-info" class="comment-info">
 <span class="comment-age">(09 Mar '13, 14:16)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi gator, If the correct name is Philip St then you should take a look at this point <a href="http://www.openstreetmap.org/?lat=36.52704&amp;lon=-79.6933&amp;zoom=15&amp;layers=M.">http://www.openstreetmap.org/?lat=36.52704&amp;lon=-79.6933&amp;zoom=15&amp;layers=M.</a> It looks like the problem of the incorrect name is solved ! Greetz Hendrik Ps but if someone else system takes a vieuw or link of the map, its possible that youre looking or working with older material. It depends on the update time or frequenty of the service. Have a good trip</p>
+<p>Hi gator, If the correct name is Philip St then you should take a look at this point <a href="https://www.openstreetmap.org/?lat=36.52704&amp;lon=-79.6933&amp;zoom=15&amp;layers=M.">https://www.openstreetmap.org/?lat=36.52704&amp;lon=-79.6933&amp;zoom=15&amp;layers=M.</a> It looks like the problem of the incorrect name is solved ! Greetz Hendrik Ps but if someone else system takes a vieuw or link of the map, its possible that youre looking or working with older material. It depends on the update time or frequenty of the service. Have a good trip</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

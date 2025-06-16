@@ -87,7 +87,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Different from <a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/traces</a> somehow? (i.e. upload to OSM, get the GPS trace number, then invoke iD with that trace number).</p>
+<p>Different from <a href="https://www.openstreetmap.org/traces">https://www.openstreetmap.org/traces</a> somehow? (i.e. upload to OSM, get the GPS trace number, then invoke iD with that trace number).</p>
 </div>
 <div id="comment-40506-info" class="comment-info">
 <span class="comment-age">(21 Jan '15, 09:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

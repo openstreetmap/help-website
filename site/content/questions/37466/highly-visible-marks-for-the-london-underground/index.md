@@ -65,7 +65,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Does the <a href="http://www.openstreetmap.org/#layers=TN">transport layer</a> fit your needs?</p>
+<p>Does the <a href="https://www.openstreetmap.org/#layers=TN">transport layer</a> fit your needs?</p>
 </div>
 <div id="comment-37467-info" class="comment-info">
 <span class="comment-age">(09 Oct '14, 18:11)</span> <span class="comment-user userinfo">scai ♦</span>

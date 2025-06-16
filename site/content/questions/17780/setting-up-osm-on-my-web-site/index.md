@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Displaying a web site that contains an OSM map does not require MySQL or PHP. You will only have to write a litte HTML and JavaScript.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a> for details, or look at <a href="http://switch2osm.org/using-tiles/">http://switch2osm.org/using-tiles/</a> which has excellent examples for both the OpenLayers and the Leaflet library!</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a> for details, or look at <a href="http://switch2osm.org/using-tiles/">http://switch2osm.org/using-tiles/</a> which has excellent examples for both the OpenLayers and the Leaflet library!</p>
 <p>You can have it even easier if you go to www.openstreetmap.org, zoom to your area of interest, click the "export" tab, select "embeddable HTML", and copy+paste the resulting HTML code.</p>
 </div>
 <div class="answer-controls post-controls">

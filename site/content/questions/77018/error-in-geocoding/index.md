@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-77019-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>previous posting: <a href="https://help.openstreetmap.org/questions/76960/error-in-geocoding">https://help.openstreetmap.org/questions/76960/error-in-geocoding</a></p>
+<p>previous posting: <a href="/questions/76960/error-in-geocoding">https://help.openstreetmap.org/questions/76960/error-in-geocoding</a></p>
 </div>
 <div id="comment-77019-info" class="comment-info">
 <span class="comment-age">(09 Oct '20, 05:57)</span> <span class="comment-user userinfo">nevw</span>

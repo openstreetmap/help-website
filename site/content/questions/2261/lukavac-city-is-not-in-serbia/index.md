@@ -135,7 +135,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The answer is that until recently the Bosnia and Herzegovina polygon (<a href="http://www.openstreetmap.org/browse/relation/214908">http://www.openstreetmap.org/browse/relation/214908</a>) was broken. Without a valid polygon all Nominatim can do is to select the nearest country node which is mostly wrong, but better than nothing.</p>
+<p>The answer is that until recently the Bosnia and Herzegovina polygon (<a href="https://www.openstreetmap.org/browse/relation/214908">https://www.openstreetmap.org/browse/relation/214908</a>) was broken. Without a valid polygon all Nominatim can do is to select the nearest country node which is mostly wrong, but better than nothing.</p>
 <p>Unfortunately, because of resource limits, Nominatim can not currently update an entire countries worth of data when the polygon was fixed and so country level polygons are deliberately excluded from triggering re-indexing.</p>
 <p>When you recently edited the Lukavac node you caused it to re-index this point and the data now works. It would have started working without the is_in tag - it just needed anything that triggered re-indexing.</p>
 <p>This is a problem and it is being worked on.</p>
@@ -188,16 +188,16 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps adding is_in:country = "Bosnia and Herzegovina" to <a href="http://www.openstreetmap.org/browse/node/367404258">the node for Lukavac</a>, the search is only as good as the data.</p>
+<p>Perhaps adding is_in:country = "Bosnia and Herzegovina" to <a href="https://www.openstreetmap.org/browse/node/367404258">the node for Lukavac</a>, the search is only as good as the data.</p>
 <p>Compare the tags:</p>
 <pre><code>name=Lukavac
 is_in=Bosnia and Herzegovina
 place=town</code></pre>
-<p>The <a href="http://www.openstreetmap.org/browse/node/275005833">Tuzla node</a> (which shown as Bosnia &amp; Herzegovina</p>
+<p>The <a href="https://www.openstreetmap.org/browse/node/275005833">Tuzla node</a> (which shown as Bosnia &amp; Herzegovina</p>
 <pre><code>is_in=Tuzla, Federation, Bosnia and Herzegovina
 is_in:continent=Europe
 name=Tuzla</code></pre>
-<p>The <a href="http://www.openstreetmap.org/browse/node/25929985">Stockholm node</a> has a lot of tags for these kind of searches. e.g.:</p>
+<p>The <a href="https://www.openstreetmap.org/browse/node/25929985">Stockholm node</a> has a lot of tags for these kind of searches. e.g.:</p>
 <pre><code>is_in:city = Stockholm
 is_in:continent = Europe
 is_in:country = Sweden

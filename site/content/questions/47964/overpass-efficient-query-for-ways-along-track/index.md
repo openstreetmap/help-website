@@ -114,7 +114,7 @@ One Answer:
 <div class="answer-body">
 <p>If I am not wrong, the around parameter works with a real circle ... that clipping is very time consuming for the server, I assume.</p>
 <p>So a better way can be that you calculate rectengular bounding boxes around each point, and the you do overpass-api queries by those boxes as parameter, that should be quite faster.</p>
-<p>Or download a country extract from raw OSM data from any sourve mentioned at <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">planet.osm</a>, and do some filtering and clipping with your batch calculated mini bounding boxes with tools like <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>, <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> .</p>
+<p>Or download a country extract from raw OSM data from any sourve mentioned at <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">planet.osm</a>, and do some filtering and clipping with your batch calculated mini bounding boxes with tools like <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>, <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

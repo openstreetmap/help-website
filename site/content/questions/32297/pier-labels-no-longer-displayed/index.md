@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Good Day. We maintain a section that has about 350 manmade piers that all have specific number associated with them. This morning I noticed that someone came along and changed the key and the name (in this case pier number) no longer displays..? I have two questions: 1.) Can I identify who made the changes? 2.) All the "Name" values are still in there, and correct, is there a way for them to display? I would prefer to keep the changes the user performed because they are more properly represent what is actually there, but not at the cost of loosing the labeling in view mode on the internet.</p>
-<p>(One of the example ways is # <a href="http://www.openstreetmap.org/browse/way/151393896">151393896</a> -83.45842 x 41.73366</p>
+<p>(One of the example ways is # <a href="https://www.openstreetmap.org/browse/way/151393896">151393896</a> -83.45842 x 41.73366</p>
 <p>I would really appreciate help here as I have a LOT of hours in this..</p>
 <p>Thanks, and All the Best! Bill</p>
 </div>
@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To see all changes made to a particular way you have to take a look at the corresponding <a href="http://www.openstreetmap.org/way/151393896/history">way history</a> (in this case for your way with the ID <em>151393896</em>). As you can see, the last change has been done 2 years ago.</p>
+<p>To see all changes made to a particular way you have to take a look at the corresponding <a href="https://www.openstreetmap.org/way/151393896/history">way history</a> (in this case for your way with the ID <em>151393896</em>). As you can see, the last change has been done 2 years ago.</p>
 <p>So why did the rendering change nevertheless? Because the rules defining how something is rendered are defined somewhere else: in the <a href="https://wiki.openstreetmap.org/wiki/Stylesheet">stylesheet</a> of the corresponding renderer. So it is very likely that these rules did change instead of the data.</p>
 <p>The stylesheet used for the default OSM layer is maintained at the <a href="https://github.com/gravitystorm/openstreetmap-carto/">openstreetmap-carto GitHub project</a>. There have been some recent changes regarding the <em>name</em> tag which probably lead to the fact that <em>name</em> on <em>man_made=pier</em> will be ignored. This doesn't necessarily mean that this is intended behavior, it could also be a mistake. And if you think you found a bug then you can create a <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/new">new issue</a> for openstreetmap-carto (unfortunately this requires a separate GitHub account).</p>
 <p>However I think there is a mistake in the <em>data</em>. In my opinion those numbers aren't names. <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">The <em>name</em> tag should contain the name only</a>. Therefore the numbers belong to the <a href="https://wiki.openstreetmap.org/wiki/Key:ref">ref</a> tag and I suggest you should fix the piers accordingly.</p>
@@ -178,8 +178,8 @@ osqa_accepted = false
 <p>For that you should tag your "ferry line navigation" as <code>seamark:type=recommended_track</code> and your "submerged island highway" as <code>seamark:type=sea_area + seamark:sea_area:category=shoal</code>. I already did this for you. I recommend you delete the tags <code>route=ferry</code> and <code>highway=unclassified</code>.</p>
 <p>In case the lighthouses on your navigation lines actually exist as buoys, you should tag them as e.g. <code>seamark:type=buoy_special_purpose + seamark:buoy_special_purpose:shape=spherical</code></p>
 <p>You will find even more marine tagging here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/User:Skippern/INT-1">http://wiki.openstreetmap.org/wiki/User:Skippern/INT-1</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OpenSeaMap/Seamark_Objects">http://wiki.openstreetmap.org/wiki/OpenSeaMap/Seamark_Objects</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/User:Skippern/INT-1">https://wiki.openstreetmap.org/wiki/User:Skippern/INT-1</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OpenSeaMap/Seamark_Objects">https://wiki.openstreetmap.org/wiki/OpenSeaMap/Seamark_Objects</a></p>
 <p>For onboard navigation with OpenSeaMap on iPad I recommend the <a href="https://itunes.apple.com/de/app/rivers-seas-boot-navi/id524356586?mt=8">app Rivers &amp; Seas</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -257,7 +257,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You also might want to go through them all and fix the tagging. I just checked a few, and there are some that are missing the man_made=pier tag, but do have all sorts of wacky tags like amenity=parking, highway=unclassified, and waterway=dock. There are also many that don't connect to anything else, or cross another way without a node joining them. In short, there are bigger problems with the underlying data that should be resolved before worrying about how their labels render on one particular map.</p>
-<p>Edit: I just zoomed out, and there's some wacky tagging going on in the surrounding areas too. There are ferry routes that aren't actually ferry routes, buoys/markers with names that are clearly not names, rectangular closed-loop tracks that don't connect to anything else, etc. It seems like there's a lot of <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the renderer</a> going on in this area.</p>
+<p>Edit: I just zoomed out, and there's some wacky tagging going on in the surrounding areas too. There are ferry routes that aren't actually ferry routes, buoys/markers with names that are clearly not names, rectangular closed-loop tracks that don't connect to anything else, etc. It seems like there's a lot of <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the renderer</a> going on in this area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -113,7 +113,7 @@ name=Swing Bridge</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bridges can be mapped as areas tagged with the widely-supported <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbridge"><code>man_made=bridge</code></a> tag. By mapping the bridge and the road as separate objects, each object can carry its own <code>name</code> tag. (There is also the option of mapping the bridge as a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">relation</a>, but this is rarely necessary.)</p>
+<p>Bridges can be mapped as areas tagged with the widely-supported <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbridge"><code>man_made=bridge</code></a> tag. By mapping the bridge and the road as separate objects, each object can carry its own <code>name</code> tag. (There is also the option of mapping the bridge as a <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">relation</a>, but this is rarely necessary.)</p>
 <p>If the bridge is not (yet) mapped as a separate object, the <a href="https://wiki.openstreetmap.org/wiki/Key:bridge:name"><code>bridge:name</code></a> is commonly used on the road to record the name of the bridge it is running across.</p>
 <p><em>(Best practices have evolved a lot in the decade since this question was asked and there are now well-established solutions. This answer was rewritten in 2021 to reflect these changes.)</em></p>
 </div>
@@ -280,7 +280,7 @@ name=Swing Bridge</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>you can create a relation for the bridge, look there: <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels</a></p>
+<p>you can create a relation for the bridge, look there: <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

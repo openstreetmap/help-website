@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>dog=yes/no/leashed is similar to other access tags. You can see it used in <a href="http://taginfo.openstreetmap.org/keys/dog">taginfo</a> and documented as draft in the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Key:Dog">wiki</a>.</p>
+<p>dog=yes/no/leashed is similar to other access tags. You can see it used in <a href="http://taginfo.openstreetmap.org/keys/dog">taginfo</a> and documented as draft in the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Key:Dog">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -184,7 +184,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:leisure=dog_park">Tag:leisure=dog_park</a> ? It's in JOSM presets so I knew I saw that somewhere.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:leisure=dog_park">Tag:leisure=dog_park</a> ? It's in JOSM presets so I knew I saw that somewhere.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

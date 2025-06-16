@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can find JOSM documentation on different locations:<br />
-- on the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Josm"></a><a href="http://wiki.openstreetmap.org/wiki/Josm"></a><a href="http://wiki.openstreetmap.org/wiki/Josm">http://wiki.openstreetmap.org/wiki/Josm</a> (then "JOSM/Guide" -&gt; "Advanced editing" -&gt; "Relations")<br />
+- on the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Josm"></a><a href="https://wiki.openstreetmap.org/wiki/Josm"></a><a href="https://wiki.openstreetmap.org/wiki/Josm">https://wiki.openstreetmap.org/wiki/Josm</a> (then "JOSM/Guide" -&gt; "Advanced editing" -&gt; "Relations")<br />
 - on the JOSM home server at <a href="http://josm.openstreetmap.de/wiki/Help"></a><a href="http://josm.openstreetmap.de/wiki/Help"></a><a href="http://josm.openstreetmap.de/wiki/Help">http://josm.openstreetmap.de/wiki/Help</a> (then "Other dialogs" -&gt; "Relation Editor")<br />
 </p>
 <p>The point is that JOSM is continuously evolving by an active group of developpers so the documentation is sometimes a little bit behind the latest features.</p>

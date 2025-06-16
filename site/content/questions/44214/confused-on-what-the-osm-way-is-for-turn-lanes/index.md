@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Confused on what the &#x27;OSM way&#x27; is for turn lanes"
-description = '''I am a new mapper on Open Street Map (today is my 1 month anniversary of joining) I have read the turn lane wiki (http://wiki.openstreetmap.org/wiki/Key:turn:lanes) several times and am still confused on how to do turning lanes. I think what is confusing me is when it states &quot;View the road in the di...'''
+description = '''I am a new mapper on Open Street Map (today is my 1 month anniversary of joining) I have read the turn lane wiki (https://wiki.openstreetmap.org/wiki/Key:turn:lanes) several times and am still confused on how to do turning lanes. I think what is confusing me is when it states &quot;View the road in the di...'''
 date = "2015-07-16T08:48:00Z"
 lastmod = "2015-07-16T14:25:00Z"
 weight = 44214
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am a new mapper on Open Street Map (today is my 1 month anniversary of joining) I have read the turn lane wiki (<a href="http://wiki.openstreetmap.org/wiki/Key:turn:lanes)">http://wiki.openstreetmap.org/wiki/Key:turn:lanes)</a> several times and am still confused on how to do turning lanes. I think what is confusing me is when it states "View the road in the direction of the osm-way.". The osm way term is mentioned several times, and I do not understand what that is. Can somebody please explain what the 'osm way' is? Thanks, Michael Jones</p>
+<p>I am a new mapper on Open Street Map (today is my 1 month anniversary of joining) I have read the turn lane wiki (<a href="https://wiki.openstreetmap.org/wiki/Key:turn:lanes)">https://wiki.openstreetmap.org/wiki/Key:turn:lanes)</a> several times and am still confused on how to do turning lanes. I think what is confusing me is when it states "View the road in the direction of the osm-way.". The osm way term is mentioned several times, and I do not understand what that is. Can somebody please explain what the 'osm way' is? Thanks, Michael Jones</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-turnlanes" rel="tag" title="see questions tagged &#39;turnlanes&#39;">turnlanes</span>
@@ -168,7 +168,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Within OSM, a way is a line (and sometimes an area). Whenever you draw a road, or a building outline, or a hedge, you are drawing a way. Ways have a direction. For a lot of things it doesn't matter. A wall is a wall whether it was drawn from one end to another or the other way around. For one-way roads though, we use the direction. The direction means which way down the one way street you can drive. Likewise the direction of the way is important for turning lanes.</p>
-<p>Read more here <a href="http://wiki.openstreetmap.org/wiki/Forward_%26_backward,">http://wiki.openstreetmap.org/wiki/Forward_%26_backward,</a><em>left</em>%26_right</p>
+<p>Read more here <a href="https://wiki.openstreetmap.org/wiki/Forward_%26_backward,">https://wiki.openstreetmap.org/wiki/Forward_%26_backward,</a><em>left</em>%26_right</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

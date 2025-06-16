@@ -137,7 +137,7 @@ Use building=apartments for the building outlines.</p>
 You can combine them with building=entrance or create them as separate nodes. I am not sure what is better. For the entrance name addr:entrance seems reasonable, it even has a few uses already. Having a complete address on each entrance is a good idea for routing and similar purposes.<br />
 At first it seemed odd that a single housename should be used multiple times (not once on the building itself), but city, street and other information is used multiple times as well...<br />
 </p>
-<p>Having said that, I have to admit, that I contradict my <a href="http://help.openstreetmap.org/questions/9343">previous answer on similar question</a>. You probably wont't go wrong either way (all on entrance/housename on building, entrance names on entrances).<br />
+<p>Having said that, I have to admit, that I contradict my <a href="/questions/9343">previous answer on similar question</a>. You probably wont't go wrong either way (all on entrance/housename on building, entrance names on entrances).<br />
 Also consider adding generic name=* on the building if it has one.<br />
 </p>
 <p>That is all from me, if I were to think about this any longer, I would have to come up with some complicated relation based addressing scheme that would perfectly describe any address without duplicating information and that no one, me including, would understand.</p>

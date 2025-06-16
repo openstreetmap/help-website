@@ -126,7 +126,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>+1 to access=private, but I doubt leisure=sports_centre is appropriate for most cases--just tag individual features (tennis courts, golf course, swimming pool, etc). <a href="http://help.openstreetmap.org/users/11143/carciofo">@carciofo</a>, if you're looking for a "landuse"-type of tag, I don't know of a widely used one. Place tags seem incorrect to use. Using club=* might be an option? (see <a href="http://wiki.openstreetmap.org/wiki/Key:club)">http://wiki.openstreetmap.org/wiki/Key:club)</a></p>
+<p>+1 to access=private, but I doubt leisure=sports_centre is appropriate for most cases--just tag individual features (tennis courts, golf course, swimming pool, etc). <a href="https://help.openstreetmap.org/users/11143/carciofo">@carciofo</a>, if you're looking for a "landuse"-type of tag, I don't know of a widely used one. Place tags seem incorrect to use. Using club=* might be an option? (see <a href="https://wiki.openstreetmap.org/wiki/Key:club)">https://wiki.openstreetmap.org/wiki/Key:club)</a></p>
 </div>
 <div id="comment-43754-info" class="comment-info">
 <span class="comment-age">(24 Jun '15, 14:23)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -138,7 +138,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>I'd certainly agree with <a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>'s suggestion of using a club=* tag. I'm less keen on leisure=sports_centre which is becoming rather ambiguous. For flat grassy areas with a number of pitches I would suggest leisure=recreation_ground (yes I know it has acquired an - unfortunate - literal meaning in the US).</p>
+<p>I'd certainly agree with <a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>'s suggestion of using a club=* tag. I'm less keen on leisure=sports_centre which is becoming rather ambiguous. For flat grassy areas with a number of pitches I would suggest leisure=recreation_ground (yes I know it has acquired an - unfortunate - literal meaning in the US).</p>
 </div>
 <div id="comment-43755-info" class="comment-info">
 <span class="comment-age">(24 Jun '15, 19:15)</span> <span class="comment-user userinfo">SK53 ♦</span>

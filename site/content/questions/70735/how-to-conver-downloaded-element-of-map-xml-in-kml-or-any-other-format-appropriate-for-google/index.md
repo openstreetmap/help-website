@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The "Download XML" link mentioned in the question just gives the relation members (ways), and not their member nodes so there will be no latitudes and longitudes. I think you can add /full on the end, but wouldn't recommend it for this rather long relation due to the load on the API. See perhaps instead this question:</p>
-<p><a href="https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml</a></p>
+<p><a href="/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml</a></p>
 <p>The accepted answer there is to use Overpass Turbo, like this:</p>
 <p><a href="http://overpass-turbo.eu/s/Meo">http://overpass-turbo.eu/s/Meo</a></p>
 <p>Run the query, then choose an export option.</p>
@@ -160,8 +160,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>see</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/10503/simple-convert-osm-to-kml">https://help.openstreetmap.org/questions/10503/simple-convert-osm-to-kml</a></li>
-<li><a href="https://help.openstreetmap.org/questions/849/how-to-convert-osm-to-kml-format">https://help.openstreetmap.org/questions/849/how-to-convert-osm-to-kml-format</a></li>
+<li><a href="/questions/10503/simple-convert-osm-to-kml">https://help.openstreetmap.org/questions/10503/simple-convert-osm-to-kml</a></li>
+<li><a href="/questions/849/how-to-convert-osm-to-kml-format">https://help.openstreetmap.org/questions/849/how-to-convert-osm-to-kml-format</a></li>
 </ul>
 <p>or perhaps</p>
 <p><a href="https://www.gpsvisualizer.com/gpsbabel/">https://www.gpsvisualizer.com/gpsbabel/</a> (if OpenStreetMap data files are indeed the format you downloaded)</p>

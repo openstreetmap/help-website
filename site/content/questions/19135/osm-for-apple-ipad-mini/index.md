@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>iOS apps are listed on the following OSM wiki page: <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
+<p>iOS apps are listed on the following OSM wiki page: <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">https://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
 <p>I'm using OpenMaps to view maps, and Pushpin to do basic edits.</p>
 </div>
 <div class="answer-controls post-controls">

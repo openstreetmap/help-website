@@ -71,7 +71,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>seen this? <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">http://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification</a></p>
+<p>seen this? <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">https://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification</a></p>
 </div>
 <div id="comment-7954-info" class="comment-info">
 <span class="comment-age">(16 Sep '11, 21:01)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -137,7 +137,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this proposal on the wiki : <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">http://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification</a></p>
+<p>See this proposal on the wiki : <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification">https://wiki.openstreetmap.org/wiki/Proposed_features/Garden_specification</a></p>
 <p>Althougth the proposal has a status 'abandonned', you should interpret it more as 'inactive'. But it does not mean that your are not allowed to use it if there is no better proposal. I re-enabled this feature proposal and feel free to add your comments there or just use it (of course, it is always better if you promote the tags you are using).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -242,7 +242,7 @@ osqa_accepted = false
 <p>I'm a newbie as of a few minutes ago, but for <a href="http://lund.co.uk/balgf/?page_id=21">the project I have in mind</a>, which is to move from using a Google Map for a <a href="http://www.balgf.org/">web site I did a while back</a> for allotments in the London Borough of Bromley, I'd want to use a tag such as</p>
 <p>garden:type=allotment</p>
 <p>since'allotment' is the word wanted, with a very precise meaning here in the UK, which means something like community garden, or leisure garden, or kleingarten in Germany, but is not one of those.</p>
-<p>Sorry guys - just found <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dallotments">landuse=allotments</a> which is exactly what I need :)</p>
+<p>Sorry guys - just found <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dallotments">landuse=allotments</a> which is exactly what I need :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -276,7 +276,7 @@ Suprising to me, this concept isn't known everywhere in the world, or it's lifed
 <div id="post-29383-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If it's useful for your case, there is also allotments=plot, which is an approved (though largely unused) tag for the plots within an area of allotments: <a href="http://wiki.openstreetmap.org/wiki/Tag:allotments%3Dplot">http://wiki.openstreetmap.org/wiki/Tag:allotments%3Dplot</a></p>
+<p>If it's useful for your case, there is also allotments=plot, which is an approved (though largely unused) tag for the plots within an area of allotments: <a href="https://wiki.openstreetmap.org/wiki/Tag:allotments%3Dplot">https://wiki.openstreetmap.org/wiki/Tag:allotments%3Dplot</a></p>
 </div>
 <div id="comment-29383-info" class="comment-info">
 <span class="comment-age">(27 Dec '13, 17:17)</span> <span class="comment-user userinfo">neuhausr</span>

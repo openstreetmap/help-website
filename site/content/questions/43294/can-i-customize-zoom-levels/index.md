@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is limited options to changing the zoom level on the main OSM map on www.openstreetmap.org. However the data is freely available for everyone to use to make their own map. You could use Merkaator to generate a map locally, or several companies provide <a href="http://wiki.openstreetmap.org/wiki/WMS">WMS</a>, meaning you can use arbitrary zoom.</p>
+<p>There is limited options to changing the zoom level on the main OSM map on www.openstreetmap.org. However the data is freely available for everyone to use to make their own map. You could use Merkaator to generate a map locally, or several companies provide <a href="https://wiki.openstreetmap.org/wiki/WMS">WMS</a>, meaning you can use arbitrary zoom.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

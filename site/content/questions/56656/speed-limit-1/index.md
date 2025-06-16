@@ -208,7 +208,7 @@ osqa_accepted = false
 <p>The -1 is possibly an display bug in Potlatch 2.</p>
 <p>The history has it as maxspeed:none[1] and that is the correct way to tag no speed limit[2] A road with no maxspeed tag implies that the speed is unknown.</p>
 <p>What app are you using? Sounds like it don't know how to handle none numeric data and defaulted to a standard motorway speed.</p>
-<p>[1]<a href="http://www.openstreetmap.org/way/271008234/history">http://www.openstreetmap.org/way/271008234/history</a><br />
+<p>[1]<a href="https://www.openstreetmap.org/way/271008234/history">https://www.openstreetmap.org/way/271008234/history</a><br />
 [2]<a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">https://wiki.openstreetmap.org/wiki/Key:maxspeed</a></p>
 </div>
 <div class="answer-controls post-controls">

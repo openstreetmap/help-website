@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>For (2), there is no notification system for changes made after you uploaded data to the server. Not for updates, not for deletes. Luckily I would say, especially for heavy mappers who touched thousands of objects.</p>
-<p>However, there are some tools to keep track of changes in a particular area. See e.g. <a href="https://help.openstreetmap.org/questions/760/user-friendly-tool-for-tracking-changes-in-an-area">https://help.openstreetmap.org/questions/760/user-friendly-tool-for-tracking-changes-in-an-area</a></p>
+<p>However, there are some tools to keep track of changes in a particular area. See e.g. <a href="/questions/760/user-friendly-tool-for-tracking-changes-in-an-area">https://help.openstreetmap.org/questions/760/user-friendly-tool-for-tracking-changes-in-an-area</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

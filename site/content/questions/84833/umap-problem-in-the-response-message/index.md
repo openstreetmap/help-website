@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi everyone!</p>
-<p>Does anyone know WTF with this "Problem in the response" red tag? I got one in one of my maps, and have no idea what to do? I cannot see or reach data from any of the slides, all hidden and blocked<img src="https://help.openstreetmap.org/upfiles/Captura_de_pantalla_2022-06-20_17.43.26.png" alt="alt text" /></p>
+<p>Does anyone know WTF with this "Problem in the response" red tag? I got one in one of my maps, and have no idea what to do? I cannot see or reach data from any of the slides, all hidden and blocked<img src="/upfiles/Captura_de_pantalla_2022-06-20_17.43.26.png" alt="alt text" /></p>
 <p>Will be so much grateful!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

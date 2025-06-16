@@ -123,7 +123,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The tracks you load to the openstreetmap are used for editing the map. If you open the 'Edit' button you will see your track (drag and drop your gpx track into iD is probably easiest) and then be able to make additions/alterations to the map using your new gps trace as a guide. Thanks for adding your gps trace to the openstreetmap to assist other mappers make the map.</p>
-<p>If you want to see your gpx track with the openstreetmap as a background you should use one of these <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">track drawing websites</a></p>
+<p>If you want to see your gpx track with the openstreetmap as a background you should use one of these <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">track drawing websites</a></p>
 <p>My favourite is <a href="http://www.gpsvisualizer.com/map_input?bg_map=google_openstreetmap&amp;form=google&amp;width=1200">GPS Visualizer</a> ... just load your gpx and 'Draw the map'</p>
 <p>As for adding the map to your site, I will leave for others to assist, but Umap might be a good option.</p>
 </div>
@@ -274,7 +274,7 @@ osqa_accepted = false
 <div id="post-52612-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: yes, but the question is also about "load the map on my site" (I guess "my website" is meant) – a local program does not help with this.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: yes, but the question is also about "load the map on my site" (I guess "my website" is meant) – a local program does not help with this.</p>
 </div>
 <div id="comment-52612-info" class="comment-info">
 <span class="comment-age">(19 Oct '16, 17:47)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -316,7 +316,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the answer to your question is given in <a href="https://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-uploaded-gps-track-overlayed-in-the-map-editor">https://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-uploaded-gps-track-overlayed-in-the-map-editor</a></p>
+<p>I think the answer to your question is given in <a href="/questions/24410/is-there-a-way-to-see-my-uploaded-gps-track-overlayed-in-the-map-editor">https://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-uploaded-gps-track-overlayed-in-the-map-editor</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

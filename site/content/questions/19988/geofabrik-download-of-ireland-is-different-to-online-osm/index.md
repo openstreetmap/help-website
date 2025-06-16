@@ -45,7 +45,7 @@ osqa_accepted = false
 <li>The lakes: they mostly appear as lines, not as areas. (I use Global Mapper GIS and when I filter to show only area vectors, the lakes do not show). When I show the rivers, I can see the lake boundaries. However, it looks just fine on OSM in the browser.</li>
 <li>County boundaries: In the Geofabrik data, some of the county boundaries are missing. I do notice that if I filter the line vectors to show admin levels 5 and 6 that the most of the boundaries show, but even then, there are gaps, usually where a piece of a river forms the boundary. Again, in OSM, all looks great with county boundaries on top of rivers that form county boundaries. I downloaded the Geofabrik data for Ireland (meant to be all data for the selection) here <a href="http://download.geofabrik.de/openstreetmap/europe/">http://download.geofabrik.de/openstreetmap/europe/</a></li>
 </ol>
-<p>The data I am comparing is on the OSM Ireland map. All the major lakes do not feature as areas in the Geofabrik data (I can see their outline mostly as lines). In the same OSM map, the county boundaries are correct and distinct from any river vector that forms part of that boundary, whereas in the Geofabrik data much of these boundaries are missing. For example, in the GeoFabrik data the Black river forms part of the Galway-Mayo county boundary but this part of the boundary is missing from the Geofabrik data but is not missing in the OSM map on the browser. <a href="http://www.openstreetmap.org/?lat=53.47938537597656&amp;lon=-9.161224365234375&amp;zoom=13">http://www.openstreetmap.org/?lat=53.47938537597656&amp;lon=-9.161224365234375&amp;zoom=13</a></p>
+<p>The data I am comparing is on the OSM Ireland map. All the major lakes do not feature as areas in the Geofabrik data (I can see their outline mostly as lines). In the same OSM map, the county boundaries are correct and distinct from any river vector that forms part of that boundary, whereas in the Geofabrik data much of these boundaries are missing. For example, in the GeoFabrik data the Black river forms part of the Galway-Mayo county boundary but this part of the boundary is missing from the Geofabrik data but is not missing in the OSM map on the browser. <a href="https://www.openstreetmap.org/?lat=53.47938537597656&amp;lon=-9.161224365234375&amp;zoom=13">https://www.openstreetmap.org/?lat=53.47938537597656&amp;lon=-9.161224365234375&amp;zoom=13</a></p>
 <p>Why does the data seem to be different? Is it something to do with licensing? Are those data not open source perhaps?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-20009-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... yes, Conor, please give us some <a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a> to places where you found differences.</p>
+<p>... yes, Conor, please give us some <a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a> to places where you found differences.</p>
 </div>
 <div id="comment-20009-info" class="comment-info">
 <span class="comment-age">(17 Feb '13, 18:37)</span> <span class="comment-user userinfo">stephan75</span>
@@ -154,7 +154,7 @@ osqa_accepted = false
 </li>
 <li>Regarding the second point: maybe your software (or how you use it) has problems interpreting relations correctly. <span>Country borders</span> may reuse lines (relation) which are also used to represent a waterway.</li>
 </ol>
-<p>All OSM data is freely licensed. See <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>All OSM data is freely licensed. See <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -204,7 +204,7 @@ This answer is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>It is always "nice" when someone (in this case Global Mapper) tells that something (in this case the OSM data) is broken/wrong, when in fact they simply don't understand it. <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">Boundaries</a> and <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">complex areas</a> are mapped using relations. Nothing in the current data model of OSM requires relations to have a specific order. Ordering the items in a relation is the responsibility of the data consumer.</p>
+<p>It is always "nice" when someone (in this case Global Mapper) tells that something (in this case the OSM data) is broken/wrong, when in fact they simply don't understand it. <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">Boundaries</a> and <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">complex areas</a> are mapped using relations. Nothing in the current data model of OSM requires relations to have a specific order. Ordering the items in a relation is the responsibility of the data consumer.</p>
 </div>
 <div id="comment-20169-info" class="comment-info">
 <span class="comment-age">(22 Feb '13, 23:50)</span> <span class="comment-user userinfo">cartinus</span>
@@ -316,7 +316,7 @@ This answer is marked "community wiki".
 <div class="answer-body">
 <p>Hi Conor, you have absolutely right. The confusion comes from logical errors in OSM data (dump). Most of the data interpreters and mapping/rendering systems are checking data for formal errors and eventually correct them (like in case of areas, for gaps on the area border polygons, self-crossings on border polygons, orientation and so on). But one huge class of logical errors is rarely (maybe never) checked and corrected. Because these errors are not show stoppers, many rendering systems may live with them. But the displayed/rendered map may vary from case to case and that is what you have discovered in case of the lakes area class for Ireland.</p>
 <p>For illustration, let us take the natural_water (lakes) area class from the Planet_dump just before the “integer-overflow” (some weeks ago). There are many thousands of replicated lakes. There are cases where the outer/container border polygon is exactly repeated but the hole/island contents are different, cases where some of the border polygons are almost overlapping and so on. Let us take the lake around (-1 064 290; 6 807 950) Mercator (X,Y) point in southwest Ireland, or permalink:</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.0352&amp;lon=-9.5397&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=52.0352&amp;lon=-9.5397&amp;zoom=13&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.0352&amp;lon=-9.5397&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=52.0352&amp;lon=-9.5397&amp;zoom=13&amp;layers=M</a></p>
 <p>This lake is repeated once with no holes/islands (L1) and once with 11 islands (L2). Now, if the rendering/mapping system does not render the border polygons in another color you will never see any islands. The same happens if the rendering order is L2, L1. If the rendering order L1, L2 and the border lines are rendered with a color not the same as used for the water, you will see the mentioned strange lines over the water. So, in my opinion, the problem is not the file you have downloaded, it is inherited from the state in the OSM data.</p>
 <p>Finally, note also that there are many similar cases but much more complex and complicated when replications (overlaps) happen between objects from different classes. For example: when two objects (one from rivers and one from lakes) with different hole contents partly or fully overlap, or when a lake fully or partly overlap some water areas from the planet_land with different hole/island contents and so on.</p>
 </div>

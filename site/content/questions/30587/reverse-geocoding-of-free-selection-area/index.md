@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Reverse geocoding of free selection area"
-description = '''Hi,  I have discovered a possibility to get addresses of a map area.  The first thing that should be done is to create an Area via http://www.openstreetmap.org/edit#map=  After it has been save, I can have the id of this area (example: http://www.openstreetmap.org/way/260934781) But when I try to to...'''
+description = '''Hi,  I have discovered a possibility to get addresses of a map area.  The first thing that should be done is to create an Area via https://www.openstreetmap.org/edit#map=  After it has been save, I can have the id of this area (example: https://www.openstreetmap.org/way/260934781) But when I try to to...'''
 date = "2014-02-10T15:35:00Z"
 lastmod = "2014-02-12T12:11:00Z"
 weight = 30587
@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I have discovered a possibility to get addresses of a map area. The first thing that should be done is to create an Area via <a href="http://www.openstreetmap.org/edit#map=">http://www.openstreetmap.org/edit#map=</a> After it has been save, I can have the id of this area (example: <a href="http://www.openstreetmap.org/way/260934781)">http://www.openstreetmap.org/way/260934781)</a> But when I try to to compose a request to get the addresses of this area, I get</p>
+<p>Hi, I have discovered a possibility to get addresses of a map area. The first thing that should be done is to create an Area via <a href="https://www.openstreetmap.org/edit#map=">https://www.openstreetmap.org/edit#map=</a> After it has been save, I can have the id of this area (example: <a href="https://www.openstreetmap.org/way/260934781)">https://www.openstreetmap.org/way/260934781)</a> But when I try to to compose a request to get the addresses of this area, I get</p>
 <blockquote>
-<p>This XML file does not appear to have any style information associated with it. The document tree is shown below. &lt;reversegeocode timestamp="Mon, 10 Feb 14 15:31:59 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;http://www.openstreetmap.org/copyright" querystring="format=xml&amp;osm_type=W&amp;osm_id=260934781"&gt; &lt;error&gt;Unable to geocode&lt;/error&gt; &lt;/reversegeocode&gt;</p>
+<p>This XML file does not appear to have any style information associated with it. The document tree is shown below. &lt;reversegeocode timestamp="Mon, 10 Feb 14 15:31:59 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;https://www.openstreetmap.org/copyright" querystring="format=xml&amp;osm_type=W&amp;osm_id=260934781"&gt; &lt;error&gt;Unable to geocode&lt;/error&gt; &lt;/reversegeocode&gt;</p>
 </blockquote>
 <p>Please give me a hint what can be wrong?</p>
 <p>Thank you!</p>
@@ -67,7 +67,7 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>Please don't create areas such as <a href="http://www.openstreetmap.org/way/260934781">way 260934781</a> that don't actually refer to anything in the real world!</p>
+<p>Please don't create areas such as <a href="https://www.openstreetmap.org/way/260934781">way 260934781</a> that don't actually refer to anything in the real world!</p>
 <p>It would help if you could describe the problem that you're trying to solve first, rather than how you're trying to solve it (that doesn't work). So - what is it that you actually want to do?</p>
 </div>
 <div id="comment-30589-info" class="comment-info">
@@ -181,7 +181,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think what you are really looking for is the "<em>Where am I?</em>" link in <a href="http://www.openstreetmap.org/?locale=en">OpenStretMap</a>'s search box, or whatever is shown in your locale(with roughly the same meaning).</p>
+<p>I think what you are really looking for is the "<em>Where am I?</em>" link in <a href="https://www.openstreetmap.org/?locale=en">OpenStretMap</a>'s search box, or whatever is shown in your locale(with roughly the same meaning).</p>
 <p>That link will give you the coordinate of the center point of your current view, and try to reverse geocode the address.</p>
 <p>Alternatively, you can click into the <em>Layers</em> button and check the <em>Map Data</em> checkbox. This way you can click on the elements to see their attributes. If they have their address there, it will be shown. (if the object has a name, you can simply search for it).</p>
 <p>EDIT:</p>

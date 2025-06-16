@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use OWL (more info here: <a href="http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29</a> ) and the service from ITOWorld (more info here: <a href="http://wiki.openstreetmap.org/wiki/OSM_Mapper">http://wiki.openstreetmap.org/wiki/OSM_Mapper</a> ).</p>
+<p>You can use OWL (more info here: <a href="https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29</a> ) and the service from ITOWorld (more info here: <a href="https://wiki.openstreetmap.org/wiki/OSM_Mapper">https://wiki.openstreetmap.org/wiki/OSM_Mapper</a> ).</p>
 <p>Both services are delayed in showing what has changed, both provide an RSS feed for a specified area.</p>
 </div>
 <div class="answer-controls post-controls">

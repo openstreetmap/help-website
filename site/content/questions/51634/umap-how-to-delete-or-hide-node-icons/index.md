@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Im using uMap. How can I delete or hide the circle icons quickly? I imported map from JOSM but unnecessary icons appear everyroad. I just use 'delete this feature' to remove it but too slow for many icons like that</p>
 <p>Could you give me some advices?</p>
 <p>Many thanks!</p>
-<p><a href="https://umap.openstreetmap.fr/en/map/ipcoms_99279#6/51.000/2.000">https://umap.openstreetmap.fr/en/map/ipcoms_99279#6/51.000/2.000</a> <img src="http://help.openstreetmap.org/upfiles/2016-08-22_17_04_16-New_notification_iNVAGFk.jpg" alt="alt text" /></p>
+<p><a href="https://umap.openstreetmap.fr/en/map/ipcoms_99279#6/51.000/2.000">https://umap.openstreetmap.fr/en/map/ipcoms_99279#6/51.000/2.000</a> <img src="/upfiles/2016-08-22_17_04_16-New_notification_iNVAGFk.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-symbol" rel="tag" title="see questions tagged &#39;symbol&#39;">symbol</span> <span class="post-tag tag-link-remove" rel="tag" title="see questions tagged &#39;remove&#39;">remove</span> <span class="post-tag tag-link-icons" rel="tag" title="see questions tagged &#39;icons&#39;">icons</span>

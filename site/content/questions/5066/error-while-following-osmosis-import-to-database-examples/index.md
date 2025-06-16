@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Error while following osmosis import to database examples"
-description = '''Hello, I have problems to follow the examples on: http://wiki.openstreetmap.org/wiki/Osmosis  While I am trying to start: &#x27;osmosis --read-xml file=&quot;myosm.osm&quot; --write-apidb host=&quot;localhost&quot; database=&quot;postgis&quot; user=&quot;postgres&quot; password=&quot;xxx&quot;&#x27; I get the following errors. The database is fresh and clean...'''
+description = '''Hello, I have problems to follow the examples on: https://wiki.openstreetmap.org/wiki/Osmosis  While I am trying to start: &#x27;osmosis --read-xml file=&quot;myosm.osm&quot; --write-apidb host=&quot;localhost&quot; database=&quot;postgis&quot; user=&quot;postgres&quot; password=&quot;xxx&quot;&#x27; I get the following errors. The database is fresh and clean...'''
 date = "2011-05-09T09:49:00Z"
 lastmod = "2011-05-10T16:50:00Z"
 weight = 5066
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I have problems to follow the examples on: <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a></p>
+<p>I have problems to follow the examples on: <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a></p>
 <p>While I am trying to start: 'osmosis --read-xml file="myosm.osm" --write-apidb host="localhost" database="postgis" user="postgres" password="xxx"' I get the following errors.</p>
 <p>The database is fresh and clean. My OS is Win x64</p>
 <p>Here is the exception trace:</p>
@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at this answer <a href="http://help.openstreetmap.org/questions/4331/error-loading-the-osm-file-into-the-database.">http://help.openstreetmap.org/questions/4331/error-loading-the-osm-file-into-the-database.</a> You do not appear to have installed the database tables in PostGIS.</p>
+<p>Have a look at this answer <a href="/questions/4331/error-loading-the-osm-file-into-the-database.">https://help.openstreetmap.org/questions/4331/error-loading-the-osm-file-into-the-database.</a> You do not appear to have installed the database tables in PostGIS.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -134,7 +134,7 @@ osqa_accepted = false
 <div id="post-5079-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is there a complete script/application for windows? 'http://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup' and especially the 9.04 section is useless for windows because of environment variables/ user restrictions and other things.</p>
+<p>Is there a complete script/application for windows? 'https://wiki.openstreetmap.org/wiki/Osmosis/PostGIS_Setup' and especially the 9.04 section is useless for windows because of environment variables/ user restrictions and other things.</p>
 </div>
 <div id="comment-5079-info" class="comment-info">
 <span class="comment-age">(09 May '11, 19:03)</span> <span class="comment-user userinfo">asdfasdfasdf</span>
@@ -211,15 +211,15 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You've tried loading the data into the format used by the "<a href="http://wiki.openstreetmap.org/wiki/Rails_port">Rails Port</a>" by using the --write-apidb flag. Osmosis is checking for the tables it expects to find, but you say you have a clean database so it's failing. Note that the apidb format is designed for use with the web front end and only uses Postgres types (i.e. no spatial columns) so might not be what you are looking for.</p>
+<p>You've tried loading the data into the format used by the "<a href="https://wiki.openstreetmap.org/wiki/Rails_port">Rails Port</a>" by using the --write-apidb flag. Osmosis is checking for the tables it expects to find, but you say you have a clean database so it's failing. Note that the apidb format is designed for use with the web front end and only uses Postgres types (i.e. no spatial columns) so might not be what you are looking for.</p>
 <p>You need to decide what format you want the tables to be in, since osmosis supports a few different database structures. These can be chosen with the following options.</p>
 <ul>
 <li>--write-apidb</li>
 <li>--write-pgsql</li>
 <li>--write-pgsimp</li>
 </ul>
-<p>You need to investigate and decide which is the most appropriate. In every case you need to have the correct database tables set up before loading with osmosis. Instructions are available on the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage">Osmosis Detailed Usage</a> page.</p>
-<p>For loading data into postgres for use with mapnik you should look at <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> instead, which uses yet another choice of table layouts.</p>
+<p>You need to investigate and decide which is the most appropriate. In every case you need to have the correct database tables set up before loading with osmosis. Instructions are available on the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage">Osmosis Detailed Usage</a> page.</p>
+<p>For loading data into postgres for use with mapnik you should look at <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> instead, which uses yet another choice of table layouts.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -46,7 +46,7 @@ osqa_accepted = false
 <code>building:part=residential</code> -&gt; <code>min_level:3, building:levels=8</code></p>
 <p>Then the parking garage entrance -&gt; <code>parking=multi-story</code>.<br />
 The entrance is obviously at ground level but parking is on the 1st and 2nd level.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_0275_-_Copy_RQo3NUP.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/IMG_0275_-_Copy_RQo3NUP.JPG" alt="alt text" /></p>
 <p>Would the same rational apply if the parking is underground?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

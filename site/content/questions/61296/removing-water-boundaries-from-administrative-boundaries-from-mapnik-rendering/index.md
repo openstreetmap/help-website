@@ -50,7 +50,7 @@ osqa_accepted = false
 <p>I researched this question before asking and these were the possible solutions that I came across and the end result.</p>
 <p>(1) I have tried to change the query in mapnik.xml that controls the admin_boundaries and added a new parameter: boundary=administrative AND NOT boundary_type=maritime. This did not render any results for me in the boundaries. Data set was azerbaijan.osm.pbf from tutorial</p>
 <p>(2) <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/621">https://github.com/gravitystorm/openstreetmap-carto/issues/621</a> has a query that should remove water boundaries from the map written by nebulon42 but it leaves certain boundaries in water intact. Tested using myanmar.osm.pbf</p>
-<p>(3) <a href="https://help.openstreetmap.org/questions/34000/problem-hidding-a-maritime-border-with-mapnik">https://help.openstreetmap.org/questions/34000/problem-hidding-a-maritime-border-with-mapnik</a> suggests changing the ordering of the rendering but I do not know how to do that so I was unable to test this one.</p>
+<p>(3) <a href="/questions/34000/problem-hidding-a-maritime-border-with-mapnik">https://help.openstreetmap.org/questions/34000/problem-hidding-a-maritime-border-with-mapnik</a> suggests changing the ordering of the rendering but I do not know how to do that so I was unable to test this one.</p>
 <p><strong>Current Solution</strong></p>
 <p>I am removing the way tags from the osm file that correspond to the boundaries and replacing them with latitude and longitude acquired from <a href="https://wambachers-osm.website/boundaries/">https://wambachers-osm.website/boundaries/</a> and selecting land. In a small sample size it has worked but I am wondering if there is an easier way to do so from mapnik.xml either using a specific query or tag.</p>
 <p>Any help is appreciated and Thank you.</p>
@@ -185,7 +185,7 @@ end</code></pre>
 <div id="post-61317-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I am trying to remove the water boundaries now using osmfilter by trying to remove all ways with tags on maritime=yes and border_type=territorial based on the information written in <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime</a> but it still seems to keep water boundaries on provincial levels (admin_level &gt; 4). It produces the same result as nebulon42's query from attempted solution 2.</p>
+<p>I am trying to remove the water boundaries now using osmfilter by trying to remove all ways with tags on maritime=yes and border_type=territorial based on the information written in <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime</a> but it still seems to keep water boundaries on provincial levels (admin_level &gt; 4). It produces the same result as nebulon42's query from attempted solution 2.</p>
 </div>
 <div id="comment-61317-info" class="comment-info">
 <span class="comment-age">(21 Dec '17, 20:55)</span> <span class="comment-user userinfo">Ujjawal</span>

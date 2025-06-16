@@ -168,7 +168,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>For current field boundaries bing imagery is the way to go as you do need to specify if it is a hedge, or fence. OS maps only show field boundaries. Again you should only add current boundaries to the OSM database, but historic boundaries can be added to openhistoricalmap.</p>
-<p>I am a bit of a field boundary mapper myself, but more from a navigating PROWs basis. <a href="http://www.openstreetmap.org/#map=16/52.8637/-2.7215">http://www.openstreetmap.org/#map=16/52.8637/-2.7215</a></p>
+<p>I am a bit of a field boundary mapper myself, but more from a navigating PROWs basis. <a href="https://www.openstreetmap.org/#map=16/52.8637/-2.7215">https://www.openstreetmap.org/#map=16/52.8637/-2.7215</a></p>
 </div>
 <div id="comment-47793-info" class="comment-info">
 <span class="comment-age">(01 Feb '16, 12:54)</span> <span class="comment-user userinfo">trigpoint</span>

@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This "image size" means that the coordinates, at the given scale, make for an 888 pixel by 845 pixel image.</p>
-<p>There is no way (with the export tab) to request exactly 600 by 600 pixels in size (but there might be with some of the <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static Maps</a> scripts), nor is there a way (with the export tab) to say "i want 800 by 800 metres" but if you have your coordinates right then it will give you that area on the ground.</p>
+<p>There is no way (with the export tab) to request exactly 600 by 600 pixels in size (but there might be with some of the <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static Maps</a> scripts), nor is there a way (with the export tab) to say "i want 800 by 800 metres" but if you have your coordinates right then it will give you that area on the ground.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

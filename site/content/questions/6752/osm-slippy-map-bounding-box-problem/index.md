@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM Slippy Map Bounding Box problem"
-description = '''Hi all, Can someone give me a reason to explain why this bounding box url zooms to the bounding box: http://www.openstreetmap.org/?minlon=22.3418234&amp;amp;minlat=57.5129102&amp;amp;maxlon=22.5739625&amp;amp;maxlat=57.6287332&amp;amp;box=yes  And this one doesn&#x27;t? http://www.openstreetmap.org/?minlon=-0.7600&amp;amp;m...'''
+description = '''Hi all, Can someone give me a reason to explain why this bounding box url zooms to the bounding box: https://www.openstreetmap.org/?minlon=22.3418234&amp;amp;minlat=57.5129102&amp;amp;maxlon=22.5739625&amp;amp;maxlat=57.6287332&amp;amp;box=yes  And this one doesn&#x27;t? https://www.openstreetmap.org/?minlon=-0.7600&amp;amp;m...'''
 date = "2011-08-01T11:19:00Z"
 lastmod = "2011-08-01T11:27:00Z"
 weight = 6752
@@ -41,9 +41,9 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi all,</p>
 <p>Can someone give me a reason to explain why this bounding box url zooms to the bounding box:<br />
-<a href="http://www.openstreetmap.org/?minlon=22.3418234&amp;minlat=57.5129102&amp;maxlon=22.5739625&amp;maxlat=57.6287332&amp;box=yes">http://www.openstreetmap.org/?minlon=22.3418234&amp;minlat=57.5129102&amp;maxlon=22.5739625&amp;maxlat=57.6287332&amp;box=yes</a><br />
+<a href="https://www.openstreetmap.org/?minlon=22.3418234&amp;minlat=57.5129102&amp;maxlon=22.5739625&amp;maxlat=57.6287332&amp;box=yes">https://www.openstreetmap.org/?minlon=22.3418234&amp;minlat=57.5129102&amp;maxlon=22.5739625&amp;maxlat=57.6287332&amp;box=yes</a><br />
 And this one doesn't?<br />
-<a href="http://www.openstreetmap.org/?minlon=-0.7600&amp;minlat=9.3500&amp;maxlon=-0.9200&amp;maxlat=9.4800&amp;box=yes">http://www.openstreetmap.org/?minlon=-0.7600&amp;minlat=9.3500&amp;maxlon=-0.9200&amp;maxlat=9.4800&amp;box=yes</a></p>
+<a href="https://www.openstreetmap.org/?minlon=-0.7600&amp;minlat=9.3500&amp;maxlon=-0.9200&amp;maxlat=9.4800&amp;box=yes">https://www.openstreetmap.org/?minlon=-0.7600&amp;minlat=9.3500&amp;maxlon=-0.9200&amp;maxlat=9.4800&amp;box=yes</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openlayers" rel="tag" title="see questions tagged &#39;openlayers&#39;">openlayers</span> <span class="post-tag tag-link-bbox" rel="tag" title="see questions tagged &#39;bbox&#39;">bbox</span> <span class="post-tag tag-link-slippymap" rel="tag" title="see questions tagged &#39;slippymap&#39;">slippymap</span>

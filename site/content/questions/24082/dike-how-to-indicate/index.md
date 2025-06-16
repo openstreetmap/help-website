@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Both the <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dembankment"><code>man_made=embankment</code></a> and the <a href="http://wiki.openstreetmap.org/wiki/Key:embankment"><code>Key:embankment</code></a> wiki pages mention "It can also be an artificial bank raised above the immediately-surrounding land" - in their example to redirect water or prevent flooding, but both pages also mention iron age hill forts, so just use <code>man_made=embankment</code> for any form of embankment (except perhaps where <code>natural=cliff</code> would be more appropriate).</p>
+<p>Both the <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dembankment"><code>man_made=embankment</code></a> and the <a href="https://wiki.openstreetmap.org/wiki/Key:embankment"><code>Key:embankment</code></a> wiki pages mention "It can also be an artificial bank raised above the immediately-surrounding land" - in their example to redirect water or prevent flooding, but both pages also mention iron age hill forts, so just use <code>man_made=embankment</code> for any form of embankment (except perhaps where <code>natural=cliff</code> would be more appropriate).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

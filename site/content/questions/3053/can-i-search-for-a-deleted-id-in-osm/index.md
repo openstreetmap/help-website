@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can access details about any historic object even if it has been deleted, through an URL of the form</p>
-<pre><code>http://www.openstreetmap.org/browse/way/place_your_way_id_here/history</code></pre>
+<pre><code>https://www.openstreetmap.org/browse/way/place_your_way_id_here/history</code></pre>
 <p>(works for nodes and relations too).</p>
 <p>What you cannot do so easily is search for something if you do not know the id ("show me all deleted objects that used to be in this area", "find something that was called Foo Road somewhere in this city"). For such an endeavour, it may be best to download an old planet file from <a href="http://planet.openstreetmap.org">planet.openstreetmap.org</a> and search in there, or if you know that the object vanished on a certain date you could also check that day's diff file.</p>
 </div>

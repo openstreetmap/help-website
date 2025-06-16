@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>The URL I'm using is this: <a href="https://api.openstreetmap.org/api/0.6/map?bbox=11.54,48.14,11.543,48.145">https://api.openstreetmap.org/api/0.6/map?bbox=11.54,48.14,11.543,48.145</a></p>
 <p>Update: What I'm attempting to do is simply execute the "Export" function that OpenStreetMap's website has but from MATLAB. The OSM files I download do not appear to have any nodes as shown below:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.6.1 (1926 thorn-01.openstreetmap.org)&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;http://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;
+&lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.6.1 (1926 thorn-01.openstreetmap.org)&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;https://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;
  &lt;bounds minlat=&quot;48.1398000&quot; minlon=&quot;11.5402000&quot; maxlat=&quot;48.1402000&quot; maxlon=&quot;11.5402000&quot;/&gt;
 &lt;/osm&gt;</code></pre>
 <p>Thanks.</p>

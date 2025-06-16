@@ -115,9 +115,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When I wanted to do a map showing the route to walk from a railway station to a beer festival, I downloaded the area I wanted in JOSM, added a relation for the route (which I didn't upload afterwards), saved that as a .OSM file, then used <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to generate <a href="http://www.tendringcamra.org.uk/clactondirections2011.pdf">the map</a>. The letters A to D were added on top to allow me to put the directions down the side.</p>
+<p>When I wanted to do a map showing the route to walk from a railway station to a beer festival, I downloaded the area I wanted in JOSM, added a relation for the route (which I didn't upload afterwards), saved that as a .OSM file, then used <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to generate <a href="http://www.tendringcamra.org.uk/clactondirections2011.pdf">the map</a>. The letters A to D were added on top to allow me to put the directions down the side.</p>
 <p>(Before Maperitive, there was Kosmos which produced <a href="http://www.tendringcamra.org.uk/clactondirections2010.pdf">this earlier version</a>, but Maperitive is better as is the quality of data in OSM).</p>
-<p>For larger areas you might need to start with an <a href="http://wiki.openstreetmap.org/wiki/Extract">extract</a>, rather than downloading the area you want.</p>
+<p>For larger areas you might need to start with an <a href="https://wiki.openstreetmap.org/wiki/Extract">extract</a>, rather than downloading the area you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,11 +167,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are various <a href="http://wiki.openstreetmap.org/wiki/OSM_on_paper">OSM on Paper</a> web services, including:</p>
+<p>There are various <a href="https://wiki.openstreetmap.org/wiki/OSM_on_paper">OSM on Paper</a> web services, including:</p>
 <ul>
-<li><a href="http://maposmatic.org/">MapOSMatic</a> (<a href="http://wiki.openstreetmap.org/wiki/Maposmatic">wiki</a>) for high quality city maps including street including an street index</li>
-<li><a href="http://walking-papers.org/">Walking Papers</a> (<a href="http://wiki.openstreetmap.org/wiki/Walking_Papers">wiki</a>) for a map suitable for collecting information and drawing on them, but the scanning seems to be broken at the moment according to the wiki</li>
-<li><a href="http://fieldpapers.org/">Field Papers</a> (<a href="http://wiki.openstreetmap.org/wiki/Field_Papers">wiki</a>) which is some kind of successor of Walking Papers</li>
+<li><a href="http://maposmatic.org/">MapOSMatic</a> (<a href="https://wiki.openstreetmap.org/wiki/Maposmatic">wiki</a>) for high quality city maps including street including an street index</li>
+<li><a href="http://walking-papers.org/">Walking Papers</a> (<a href="https://wiki.openstreetmap.org/wiki/Walking_Papers">wiki</a>) for a map suitable for collecting information and drawing on them, but the scanning seems to be broken at the moment according to the wiki</li>
+<li><a href="http://fieldpapers.org/">Field Papers</a> (<a href="https://wiki.openstreetmap.org/wiki/Field_Papers">wiki</a>) which is some kind of successor of Walking Papers</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is probably somewhat answered in the FAQ by <a href="http://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a>. The tile database is huge and it takes time to render all zoom levels. So sometimes you will for example see half houses when one out of two adjacent tiles have been rendered, and sometimes you will see objects in some zoom levels while they are now visible in others. "Just wait and it will show up after a (sometimes long) while".</p>
-<p>You can read more about the rendering in the answer of <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a> .</p>
+<p>This is probably somewhat answered in the FAQ by <a href="https://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a>. The tile database is huge and it takes time to render all zoom levels. So sometimes you will for example see half houses when one out of two adjacent tiles have been rendered, and sometimes you will see objects in some zoom levels while they are now visible in others. "Just wait and it will show up after a (sometimes long) while".</p>
+<p>You can read more about the rendering in the answer of <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

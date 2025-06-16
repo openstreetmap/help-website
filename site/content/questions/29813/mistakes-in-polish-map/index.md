@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you already asked this topic in the <a href="http://forum.openstreetmap.org">polish OSM forum</a> or any <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a>?</p>
+<p>Have you already asked this topic in the <a href="http://forum.openstreetmap.org">polish OSM forum</a> or any <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a>?</p>
 <p>Before deleting anything, be sure that those objects with that tagging do have a special purpose.</p>
 </div>
 <div class="answer-controls post-controls">

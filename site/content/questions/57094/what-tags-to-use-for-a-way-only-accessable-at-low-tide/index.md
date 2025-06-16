@@ -62,7 +62,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>It occurred to me that there are some famous castles in Europe that are only accessible at low tide. I looked one up in OSM, and I see even these are not using special tags for tidal access. They put the information in the name (gasp!) <a href="http://www.openstreetmap.org/way/79577445">http://www.openstreetmap.org/way/79577445</a></p>
+<p>It occurred to me that there are some famous castles in Europe that are only accessible at low tide. I looked one up in OSM, and I see even these are not using special tags for tidal access. They put the information in the name (gasp!) <a href="https://www.openstreetmap.org/way/79577445">https://www.openstreetmap.org/way/79577445</a></p>
 </div>
 <div id="comment-57098-info" class="comment-info">
 <span class="comment-age">(14 Jul '17, 15:51)</span> <span class="comment-user userinfo">mtc</span>
@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-57183-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Your link and this one both put tide warnings in the name box which do warn many map browsers although this method is not liked by many. <a href="http://www.openstreetmap.org/#map=17/50.12027/-5.47646">http://www.openstreetmap.org/#map=17/50.12027/-5.47646</a></p>
+<p>Your link and this one both put tide warnings in the name box which do warn many map browsers although this method is not liked by many. <a href="https://www.openstreetmap.org/#map=17/50.12027/-5.47646">https://www.openstreetmap.org/#map=17/50.12027/-5.47646</a></p>
 </div>
 <div id="comment-57183-info" class="comment-info">
 <span class="comment-age">(19 Jul '17, 17:24)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -85,7 +85,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Or indeed this one <a href="http://www.openstreetmap.org/way/177923987.">http://www.openstreetmap.org/way/177923987.</a> In the absence of explicit rendering for tidal areas this is probably sensible.</p>
+<p>Or indeed this one <a href="https://www.openstreetmap.org/way/177923987.">https://www.openstreetmap.org/way/177923987.</a> In the absence of explicit rendering for tidal areas this is probably sensible.</p>
 </div>
 <div id="comment-57185-info" class="comment-info">
 <span class="comment-age">(19 Jul '17, 19:14)</span> <span class="comment-user userinfo">SK53 ♦</span>

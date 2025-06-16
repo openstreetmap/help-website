@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-37006-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@Escada</a>: Honestly, I don't remember what it looks like in reality. I'll add a note there.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@Escada</a>: Honestly, I don't remember what it looks like in reality. I'll add a note there.</p>
 </div>
 <div id="comment-37006-info" class="comment-info">
 <span class="comment-age">(23 Sep '14, 12:45)</span> <span class="comment-user userinfo">Kotya</span>
@@ -189,7 +189,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Kotya, I’m missing the entrance and the exit of the underground parking space, use indoor tagging scheme. You could add a one-way (in - out). The parking space 2&lt; in front of the building, behind the rolling green gate the same color as the fence. A maxheight could be there too to prevent high vehicles to enter the lot. The address node can be added to the building, like this <a href="http://www.openstreetmap.org/#map=19/51.49035/5.89514">http://www.openstreetmap.org/#map=19/51.49035/5.89514</a> The entrance at the main fence is IMHO a gate. The whole fence and gate are made of material=steel. And add all the specifics you remember from your stay at this apartments, holyday building (discussed earlier), it does nt look like a specific Hotel.</p>
+<p>Hi Kotya, I’m missing the entrance and the exit of the underground parking space, use indoor tagging scheme. You could add a one-way (in - out). The parking space 2&lt; in front of the building, behind the rolling green gate the same color as the fence. A maxheight could be there too to prevent high vehicles to enter the lot. The address node can be added to the building, like this <a href="https://www.openstreetmap.org/#map=19/51.49035/5.89514">https://www.openstreetmap.org/#map=19/51.49035/5.89514</a> The entrance at the main fence is IMHO a gate. The whole fence and gate are made of material=steel. And add all the specifics you remember from your stay at this apartments, holyday building (discussed earlier), it does nt look like a specific Hotel.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -220,7 +220,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>For <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_entrance">parking entrance</a>, you don't need <a href="https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">indoor tagging</a> IMHO</p>
+<p>For <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_entrance">parking entrance</a>, you don't need <a href="https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">indoor tagging</a> IMHO</p>
 <p>As for holiday flats, <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/holiday_flat">here</a> is the wikipage</p>
 </div>
 <div id="comment-37002-info" class="comment-info">
@@ -232,7 +232,7 @@ osqa_accepted = false
 <div id="post-37005-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>: The <code>tourism=appartment</code> "does not offer services like reception". Villa Romana does. What they don't have is the breakfast (though you can order bread and coffee through them) and the daily cleaning. I will try asking on the forum how I should tag it. I probably agree with you on the indoor, but it's still interesting to have learnt about it. I would have loved to have known it while back in my university, a huge and complex building.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>: The <code>tourism=appartment</code> "does not offer services like reception". Villa Romana does. What they don't have is the breakfast (though you can order bread and coffee through them) and the daily cleaning. I will try asking on the forum how I should tag it. I probably agree with you on the indoor, but it's still interesting to have learnt about it. I would have loved to have known it while back in my university, a huge and complex building.</p>
 </div>
 <div id="comment-37005-info" class="comment-info">
 <span class="comment-age">(23 Sep '14, 12:39)</span> <span class="comment-user userinfo">Kotya</span>

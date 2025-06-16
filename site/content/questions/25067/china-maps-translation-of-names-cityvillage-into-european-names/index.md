@@ -124,7 +124,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>also have a look at <a href="http://wiki.openstreetmap.org/wiki/Multilingual_maps">http://wiki.openstreetmap.org/wiki/Multilingual_maps</a> in general</p>
+<p>also have a look at <a href="https://wiki.openstreetmap.org/wiki/Multilingual_maps">https://wiki.openstreetmap.org/wiki/Multilingual_maps</a> in general</p>
 </div>
 <div id="comment-25211-info" class="comment-info">
 <span class="comment-age">(11 Aug '13, 21:06)</span> <span class="comment-user userinfo">stephan75</span>

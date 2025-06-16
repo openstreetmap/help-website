@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Duplicate road network"
-description = '''In the area of Napetvrebi, near Tbilisi, Georgia, the whole road network is duplicated - looks like one is a GPS-track, the other an import. Anyway, the roads are nearly identical and cluttering the map.  http://www.openstreetmap.org/?lat=41.73371&amp;amp;lon=44.66292&amp;amp;zoom=16 How can I find out, whi...'''
+description = '''In the area of Napetvrebi, near Tbilisi, Georgia, the whole road network is duplicated - looks like one is a GPS-track, the other an import. Anyway, the roads are nearly identical and cluttering the map.  https://www.openstreetmap.org/?lat=41.73371&amp;amp;lon=44.66292&amp;amp;zoom=16 How can I find out, whi...'''
 date = "2011-08-17T09:09:00Z"
 lastmod = "2011-08-17T12:00:00Z"
 weight = 7135
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In the area of Napetvrebi, near Tbilisi, Georgia, the whole road network is duplicated - looks like one is a GPS-track, the other an import. Anyway, the roads are nearly identical and cluttering the map. <a href="http://www.openstreetmap.org/?lat=41.73371&amp;lon=44.66292&amp;zoom=16">http://www.openstreetmap.org/?lat=41.73371&amp;lon=44.66292&amp;zoom=16</a></p>
+<p>In the area of Napetvrebi, near Tbilisi, Georgia, the whole road network is duplicated - looks like one is a GPS-track, the other an import. Anyway, the roads are nearly identical and cluttering the map. <a href="https://www.openstreetmap.org/?lat=41.73371&amp;lon=44.66292&amp;zoom=16">https://www.openstreetmap.org/?lat=41.73371&amp;lon=44.66292&amp;zoom=16</a></p>
 <p>How can I find out, which track is more accurate (except driving it myself) and how to contact the user, who updated it? I do not want to delete geometry in which someone put much effort without asking first.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you open the map in JOSM you can see the author of each object, there is even a button leading you to its osm user page - from where you can send him a message.<br />
-For how to deal with duplicate ways see <a href="http://help.openstreetmap.org/questions/7102/merging-duplicate-ways-river">this question</a> asking almost the same, just for a river.</p>
+For how to deal with duplicate ways see <a href="/questions/7102/merging-duplicate-ways-river">this question</a> asking almost the same, just for a river.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

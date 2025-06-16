@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Off the topic - airplane on aerial view"
-description = '''Just a little break from our serious work. Check this out: http://www.openstreetmap.org/edit?editor=id#map=19/38.83861/-77.44032 zoom in if needed to see the airplane in the view .... how to map that? Just kidding...Cheers and have a good day.'''
+description = '''Just a little break from our serious work. Check this out: https://www.openstreetmap.org/edit?editor=id#map=19/38.83861/-77.44032 zoom in if needed to see the airplane in the view .... how to map that? Just kidding...Cheers and have a good day.'''
 date = "2013-08-17T14:01:00Z"
 lastmod = "2013-08-17T15:25:00Z"
 weight = 25513
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Just a little break from our serious work. Check this out: <a href="http://www.openstreetmap.org/edit?editor=id#map=19/38.83861/-77.44032">http://www.openstreetmap.org/edit?editor=id#map=19/38.83861/-77.44032</a></p>
+<p>Just a little break from our serious work. Check this out: <a href="https://www.openstreetmap.org/edit?editor=id#map=19/38.83861/-77.44032">https://www.openstreetmap.org/edit?editor=id#map=19/38.83861/-77.44032</a></p>
 <p>zoom in if needed to see the airplane in the view .... how to map that? Just kidding...Cheers and have a good day.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-25516-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please read this chapter <a href="http://wiki.openstreetmap.org/wiki/Layer">http://wiki.openstreetmap.org/wiki/Layer</a></p>
+<p>Please read this chapter <a href="https://wiki.openstreetmap.org/wiki/Layer">https://wiki.openstreetmap.org/wiki/Layer</a></p>
 </div>
 <div id="comment-25516-info" class="comment-info">
 <span class="comment-age">(17 Aug '13, 15:25)</span> <span class="comment-user userinfo">Hendrikklaas</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Export Paris map"
-description = '''I have troubles exporting this map: http://www.openstreetmap.org/?lat=48.87601&amp;amp;lon=2.33668&amp;amp;zoom=15&amp;amp;layers=M On a different scale or any other maps I wanted to export works, just this not. Can anyone help? Thanks. Sabina'''
+description = '''I have troubles exporting this map: https://www.openstreetmap.org/?lat=48.87601&amp;amp;lon=2.33668&amp;amp;zoom=15&amp;amp;layers=M On a different scale or any other maps I wanted to export works, just this not. Can anyone help? Thanks. Sabina'''
 date = "2012-06-26T11:09:00Z"
 lastmod = "2012-06-26T13:39:00Z"
 weight = 13787
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have troubles exporting this map: <a href="http://www.openstreetmap.org/?lat=48.87601&amp;lon=2.33668&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=48.87601&amp;lon=2.33668&amp;zoom=15&amp;layers=M</a></p>
+<p>I have troubles exporting this map: <a href="https://www.openstreetmap.org/?lat=48.87601&amp;lon=2.33668&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=48.87601&amp;lon=2.33668&amp;zoom=15&amp;layers=M</a></p>
 <p>On a different scale or any other maps I wanted to export works, just this not. Can anyone help?</p>
 <p>Thanks. Sabina</p>
 </div>

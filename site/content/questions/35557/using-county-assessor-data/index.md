@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using County Assessor data"
-description = '''I was looking at the local county assessor site, and I started to wonder if I could use their information in OpenStreetMap. There seems to be two conflicting opinions: http://wiki.openstreetmap.org/wiki/Parcel (says you can) http://comments.gmane.org/gmane.comp.gis.openstreetmap.region.us/5504 (one ...'''
+description = '''I was looking at the local county assessor site, and I started to wonder if I could use their information in OpenStreetMap. There seems to be two conflicting opinions: https://wiki.openstreetmap.org/wiki/Parcel (says you can) http://comments.gmane.org/gmane.comp.gis.openstreetmap.region.us/5504 (one ...'''
 date = "2014-08-05T22:28:00Z"
 lastmod = "2014-08-05T22:28:00Z"
 weight = 35557
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I was looking at the local county assessor site, and I started to wonder if I could use their information in OpenStreetMap.</p>
-<p>There seems to be two conflicting opinions: <a href="http://wiki.openstreetmap.org/wiki/Parcel">http://wiki.openstreetmap.org/wiki/Parcel</a> (says you can) <a href="http://comments.gmane.org/gmane.comp.gis.openstreetmap.region.us/5504">http://comments.gmane.org/gmane.comp.gis.openstreetmap.region.us/5504</a> (one of the posts says you can't). And then the county website: <a href="http://www.mesacounty.us/template.aspx?id=45">http://www.mesacounty.us/template.aspx?id=45</a></p>
+<p>There seems to be two conflicting opinions: <a href="https://wiki.openstreetmap.org/wiki/Parcel">https://wiki.openstreetmap.org/wiki/Parcel</a> (says you can) <a href="http://comments.gmane.org/gmane.comp.gis.openstreetmap.region.us/5504">http://comments.gmane.org/gmane.comp.gis.openstreetmap.region.us/5504</a> (one of the posts says you can't). And then the county website: <a href="http://www.mesacounty.us/template.aspx?id=45">http://www.mesacounty.us/template.aspx?id=45</a></p>
 <p>The county has a (blanket) copyright notice for their information, and as far as I can tell, the state of Colorado has no laws affected copyright status either way. I'll keep on using general knowledge of my area and places that I go to for now though.</p>
 <p>----EDIT----</p>
 <p>Ok, I did some more searching, and found their data download portion: <a href="http://gis.mesacounty.us/datamap.aspx">http://gis.mesacounty.us/datamap.aspx</a></p>

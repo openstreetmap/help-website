@@ -39,11 +39,11 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In the <a href="http://www.openstreetmap.org/#map=19/47.51532/19.06019">following place</a> when we take a right turn from Váci út before the intersection we have to decide which lane will we use. The right turn road has two lanes: left lane merges into the crossing Ferdinánd híd and the right lane goes to a parking garage. From the right lane we can't go to the left one but we can go to the right one from the left, because otherwise the cars coming through the intersection to Ferdinánd híd's way wouldn't be able to go to the parking garage. Check the place in real life on <a href="https://www.google.hu/maps/@47.515352,19.059739,3a,75y,102.09h,79.65t/data=!3m4!1e1!3m2!1shmtKTGpgtsvD8mvfi_eMeg!2e0?hl=hu">Google Street View</a></p>
+<p>In the <a href="https://www.openstreetmap.org/#map=19/47.51532/19.06019">following place</a> when we take a right turn from Váci út before the intersection we have to decide which lane will we use. The right turn road has two lanes: left lane merges into the crossing Ferdinánd híd and the right lane goes to a parking garage. From the right lane we can't go to the left one but we can go to the right one from the left, because otherwise the cars coming through the intersection to Ferdinánd híd's way wouldn't be able to go to the parking garage. Check the place in real life on <a href="https://www.google.hu/maps/@47.515352,19.059739,3a,75y,102.09h,79.65t/data=!3m4!1e1!3m2!1shmtKTGpgtsvD8mvfi_eMeg!2e0?hl=hu">Google Street View</a></p>
 <p>It is mapped like this now:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2015-05-11_at_07.18.08_eNNcPgw.png" alt="Intersection in Budapest, Hungary" /></p>
+<p><img src="/upfiles/Screen_Shot_2015-05-11_at_07.18.08_eNNcPgw.png" alt="Intersection in Budapest, Hungary" /></p>
 <p>I think it is misleading because it suggests there is an intersection and a separate road for those who exit from Ferdinánd híd to the parking garage. Could it be done better?</p>
-<p>I think the direction to the solution would be the example in the <a href="http://wiki.openstreetmap.org/wiki/Lanes">Lanes wiki's</a> motorway example. I would draw one right turn road from Váci út to Ferdinánd híd, then a bit later I would draw a way branching off from Ferdinánd híd going to the parking garage. Between these two intersections I would mark that the cars in the rightmost lane cant't go to the left but this lane is accessible from the second rightmost lane. However I don't know if there are <code>lanes:*</code> tags for barrage lines...</p>
+<p>I think the direction to the solution would be the example in the <a href="https://wiki.openstreetmap.org/wiki/Lanes">Lanes wiki's</a> motorway example. I would draw one right turn road from Váci út to Ferdinánd híd, then a bit later I would draw a way branching off from Ferdinánd híd going to the parking garage. Between these two intersections I would mark that the cars in the rightmost lane cant't go to the left but this lane is accessible from the second rightmost lane. However I don't know if there are <code>lanes:*</code> tags for barrage lines...</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-intersection" rel="tag" title="see questions tagged &#39;intersection&#39;">intersection</span> <span class="post-tag tag-link-lanes" rel="tag" title="see questions tagged &#39;lanes&#39;">lanes</span> <span class="post-tag tag-link-mapping" rel="tag" title="see questions tagged &#39;mapping&#39;">mapping</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span>
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to use a combination of <a href="http://wiki.openstreetmap.org/wiki/Key:turn">turn:lanes</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/change">change:lanes</a>.</p>
+<p>You need to use a combination of <a href="https://wiki.openstreetmap.org/wiki/Key:turn">turn:lanes</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/change">change:lanes</a>.</p>
 <p>On the Ferdinánd híd from left to right (from the point where there is a half circle to the north)</p>
 <pre><code>lanes=4
 lanes:forward=2

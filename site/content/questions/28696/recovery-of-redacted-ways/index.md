@@ -110,7 +110,7 @@ osqa_accepted = true
 <blockquote>
 <p>If I recover deleted ways from this polygon using Potlatch or JOSM, will this cause a copyright problem? Or is problematic data automatically excluded from the undelete tools?</p>
 </blockquote>
-<p>If you are able to recover it from the API, you are legally okay. For the particular relation you linked, I checked a couple of ways (e.g. <a href="http://www.openstreetmap.org/way/46774466">46774466</a>), there is nothing that can be recovered, which you can see in that all the previous versions are hidden (redacted)</p>
+<p>If you are able to recover it from the API, you are legally okay. For the particular relation you linked, I checked a couple of ways (e.g. <a href="https://www.openstreetmap.org/way/46774466">46774466</a>), there is nothing that can be recovered, which you can see in that all the previous versions are hidden (redacted)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>This data was excluded because the user that added it originally didn't agree with the new terms of use, which, mainly, changed the licensing of the OSM data. Sometimes, during the process of removal of this data, damage occurred.</p>
 <p>You may add the missing data, provided that you use fully authorized sources, without any risk of automatic exclusions or copyright infringement (provided your data source really is fully authorized of course...)</p>
-<p>Please see <a href="http://wiki.openstreetmap.org/wiki/ODBL">this</a> for more information on the ODBL licence, <a href="http://wiki.openstreetmap.org/wiki/Open_Database_License/Implementation_Plan">this</a> for some of the history behind the change.</p>
+<p>Please see <a href="https://wiki.openstreetmap.org/wiki/ODBL">this</a> for more information on the ODBL licence, <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License/Implementation_Plan">this</a> for some of the history behind the change.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

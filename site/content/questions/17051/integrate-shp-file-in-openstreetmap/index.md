@@ -67,7 +67,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>When you say "Then, I completed those datas with the ArcGis software" where did you get the information about the location about the missing stations from? Did you go out and survey them, or get the information from some other source? See <a href="http://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">the wiki</a> for more info.</p>
+<p>When you say "Then, I completed those datas with the ArcGis software" where did you get the information about the location about the missing stations from? Did you go out and survey them, or get the information from some other source? See <a href="https://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">the wiki</a> for more info.</p>
 </div>
 <div id="comment-17053-info" class="comment-info">
 <span class="comment-age">(20 Oct '12, 13:43)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

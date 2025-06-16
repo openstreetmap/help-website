@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, found this question when I was looking for <a href="https://help.openstreetmap.org/questions/22493/how-to-tag-a-party-hall">this one about "party halls"</a>. My answer there was <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Devents_venue">amenity=events_venue</a>, which was added to the wiki in 2014.</p>
+<p>Hi, found this question when I was looking for <a href="/questions/22493/how-to-tag-a-party-hall">this one about "party halls"</a>. My answer there was <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Devents_venue">amenity=events_venue</a>, which was added to the wiki in 2014.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>To get the hall to show on the map, draw the outline of the building and tag it with <em>building=yes</em> and give it a <em>name</em> tag. I would also give it an <em>operator</em> tag, with <em>phone</em> and <em>website</em> if this information is available.</p>
 <p>I suggest the <em>amenity=hall</em> tag which is in use by others, (another posibility might be <em>conferance_centre</em>), but looking at <a href="http://tagwatch.stoecker.eu/Great_britain/En/ignored_amenity.html">tagwatch</a> may give you some further ideas for <a href="http://taginfo.openstreetmap.org/search?q=amenity=hall#tags">halls</a> and <a href="http://taginfo.openstreetmap.org/search?q=amenity=centre#tags">centres</a>.</p>
-<p>I agree that <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre"><em>amenity=community_centre</em></a> is probably not correct as the implication here is that it is run on a "not for profit" or a charitable basis by a local community rather than as a buisness.</p>
+<p>I agree that <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre"><em>amenity=community_centre</em></a> is probably not correct as the implication here is that it is run on a "not for profit" or a charitable basis by a local community rather than as a buisness.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

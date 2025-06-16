@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-74302-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Converted from an answer to a question from <a href="https://help.openstreetmap.org/questions/28433/anderungssatz-ruckgangig-machen-bzw-loschen-wie-geht-das">https://help.openstreetmap.org/questions/28433/anderungssatz-ruckgangig-machen-bzw-loschen-wie-geht-das</a></p>
+<p>Converted from an answer to a question from <a href="/questions/28433/anderungssatz-ruckgangig-machen-bzw-loschen-wie-geht-das">https://help.openstreetmap.org/questions/28433/anderungssatz-ruckgangig-machen-bzw-loschen-wie-geht-das</a></p>
 </div>
 <div id="comment-74302-info" class="comment-info">
 <span class="comment-age">(21 Apr '20, 08:03)</span> <span class="comment-user userinfo">scai ♦</span>

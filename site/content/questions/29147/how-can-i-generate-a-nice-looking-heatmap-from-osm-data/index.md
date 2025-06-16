@@ -203,7 +203,7 @@ import csv
 &#10;if __name__ == &quot;__main__&quot;:
     main(sys.argv[1:])</code></pre>
 <p>Running the resulting gnuplot script generates the following image</p>
-<p><img src="http://help.openstreetmap.org/upfiles/heatmap_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/heatmap_1.png" alt="alt text" /></p>
 <p>Color palette, size, and relative intensity of the dots can be tweaked but this should at least give you an idea how to generate heatmaps.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -82,7 +82,7 @@ out body;</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Passing the track as a linestring to around might be an improvement, see <a href="https://help.openstreetmap.org/questions/65796/querying-the-osm-data-for-peaks-or-other-features-which-are-nearby-a-gpx-track/65904">https://help.openstreetmap.org/questions/65796/querying-the-osm-data-for-peaks-or-other-features-which-are-nearby-a-gpx-track/65904</a></p>
+<p>Passing the track as a linestring to around might be an improvement, see <a href="/questions/65796/querying-the-osm-data-for-peaks-or-other-features-which-are-nearby-a-gpx-track/65904">https://help.openstreetmap.org/questions/65796/querying-the-osm-data-for-peaks-or-other-features-which-are-nearby-a-gpx-track/65904</a></p>
 </div>
 <div id="comment-68143-info" class="comment-info">
 <span class="comment-age">(25 Feb '19, 16:30)</span> <span class="comment-user userinfo">ikonor</span>

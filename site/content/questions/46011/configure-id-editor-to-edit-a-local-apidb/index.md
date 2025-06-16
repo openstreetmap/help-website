@@ -42,9 +42,9 @@ osqa_accepted = true
 <p>Hello everyone,</p>
 <p>I have successfully set up the openstreetmap website under the rails port and with integreted versions of Potlatch, Potlatch 2 and iD editors.</p>
 <p>I used the OAuth settings to generate a key and now I'am able to add new spatial objects (point, line, polygon) with ID Editor <strong>but not to edit my own apidb that I have set up with osmosis</strong></p>
-<p>In the <a href="http://help.openstreetmap.org/upfiles/edit.png">configuration page</a> - Populating database section, the <a href="https://github.com/openstreetmap/openstreetmap-website/issues/282">yet-to-be-written script</a> link doesn't point to a ready for use solution.</p>
+<p>In the <span>configuration page</span> - Populating database section, the <a href="https://github.com/openstreetmap/openstreetmap-website/issues/282">yet-to-be-written script</a> link doesn't point to a ready for use solution.</p>
 <p>Do I have to create this script myself ? How can I edit an existing apidb the same way like in the openstreetmap public website ?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/edit.png" alt="alt text" /></p>
+<p><img src="/upfiles/edit.png" alt="alt text" /></p>
 <p>Thank you</p>
 </div>
 <div id="question-tags" class="tags-container tags">

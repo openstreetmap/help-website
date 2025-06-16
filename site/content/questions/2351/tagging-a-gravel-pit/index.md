@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That should be tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dquarry">landuse=quarry</a>.</p>
-<p>If possible, you can draw it as an area, to indicate how big it is. You could also add an appropriate tag for <a href="http://wiki.openstreetmap.org/wiki/Key:resource">resource=*</a> to specify what is being extracted.</p>
+<p>That should be tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dquarry">landuse=quarry</a>.</p>
+<p>If possible, you can draw it as an area, to indicate how big it is. You could also add an appropriate tag for <a href="https://wiki.openstreetmap.org/wiki/Key:resource">resource=*</a> to specify what is being extracted.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

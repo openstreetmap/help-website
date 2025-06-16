@@ -108,7 +108,7 @@ osqa_accepted = false
 <p>Unfortunately, because there are an infinite number of possible tags, every feature can't be displayed and still have the map look legible, so not every "please can the standard map render X" request can be accommodated. So as result only small but the most important part of the data is used in generating map.</p>
 <p>Obviously, sometimes authors of the map style missed some important tags, there is a beter way to do things that was missed or nobody had time to improve/update map style.</p>
 <p>The stylesheet used by the "standard" style on OpenStreetMap.org is here: <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> In case of reasonable ideas (like this one) it is possible to make change to map style (it is quite easy but not trivial) and propose including it. It is also possible to (after checking whatever it was not already suggested) request it at <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">https://github.com/gravitystorm/openstreetmap-carto/issues</a> and wait till somebody else will do the necessary work.</p>
-<p>(based on answer to <a href="https://help.openstreetmap.org/questions/30019/plant_nursery-not-rendered-on-the-map">https://help.openstreetmap.org/questions/30019/plant_nursery-not-rendered-on-the-map</a> )</p>
+<p>(based on answer to <a href="/questions/30019/plant_nursery-not-rendered-on-the-map">https://help.openstreetmap.org/questions/30019/plant_nursery-not-rendered-on-the-map</a> )</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Interestingly <a href="http://www.openstreetmap.org/#map=15/51.2640/14.5733">some lakes</a> are rendered. But the humanitarian layer seems to be the only one which <a href="http://www.openstreetmap.org/#map=12/45.6478/10.6801&amp;layers=H">renders Lake Garda</a> and other lakes. I can't find any pattern. Maybe its just because the humanitarian layer is less cluttered or has different priorities? However it seems worth to create a ticket for this because lakes are important map features.</p>
+<p>Interestingly <a href="https://www.openstreetmap.org/#map=15/51.2640/14.5733">some lakes</a> are rendered. But the humanitarian layer seems to be the only one which <a href="https://www.openstreetmap.org/#map=12/45.6478/10.6801&amp;layers=H">renders Lake Garda</a> and other lakes. I can't find any pattern. Maybe its just because the humanitarian layer is less cluttered or has different priorities? However it seems worth to create a ticket for this because lakes are important map features.</p>
 </div>
 <div id="comment-34599-info" class="comment-info">
 <span class="comment-age">(03 Jul '14, 17:13)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -231,7 +231,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span></span><span>@andy mackey</span> <a href="http://www.openstreetmap.org/relation/8569">The lake</a> <em>has</em> a lake tag. It is tagged as <em>natural=water</em>, <em>water=lake</em> and the last change has been 11 days ago. You probably looked at the wrong object.</p>
+<p><span></span><span>@andy mackey</span> <a href="https://www.openstreetmap.org/relation/8569">The lake</a> <em>has</em> a lake tag. It is tagged as <em>natural=water</em>, <em>water=lake</em> and the last change has been 11 days ago. You probably looked at the wrong object.</p>
 </div>
 <div id="comment-34598-info" class="comment-info">
 <span class="comment-age">(03 Jul '14, 17:10)</span> <span class="comment-user userinfo">scai ♦</span>

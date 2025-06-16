@@ -201,7 +201,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See also <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfirepit">leisure=firepit</a>.</p>
+<p>See also <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dfirepit">leisure=firepit</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -258,7 +258,7 @@ openfire = yes
 tents = no
 tourism = camp_site</code></pre>
 <p>this is inspired by <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site">https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site</a></p>
-<p>also se an example at <a href="http://www.openstreetmap.org/browse/node/2286210862">http://www.openstreetmap.org/browse/node/2286210862</a></p>
+<p>also se an example at <a href="https://www.openstreetmap.org/browse/node/2286210862">https://www.openstreetmap.org/browse/node/2286210862</a></p>
 <p>What do you think?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -314,7 +314,7 @@ tourism = camp_site</code></pre>
 3
 </div>
 <div class="comment-text">
-<p>Allowing camping by one tag and forbidding it by another one is just wrong. I bet there are multiple tools which won't handle this correctly. And what's your reason for doing this? <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Just to get it rendered</a>? There is no established tag yet for a single fire place so <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any meaningful tag is correct</a> as long as it is not wrong, but yours is obviously wrong.</p>
+<p>Allowing camping by one tag and forbidding it by another one is just wrong. I bet there are multiple tools which won't handle this correctly. And what's your reason for doing this? <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Just to get it rendered</a>? There is no established tag yet for a single fire place so <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any meaningful tag is correct</a> as long as it is not wrong, but yours is obviously wrong.</p>
 </div>
 <div id="comment-22687-info" class="comment-info">
 <span class="comment-age">(23 May '13, 12:32)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -107,10 +107,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Any commercial companies making use of OSM data should be collected in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a>.</p>
+<p>Any commercial companies making use of OSM data should be collected in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a>.</p>
 <p>But as far as I have investigated, there is no of them using JMapViewer explicitly.</p>
 <p>Maybe the guys and girls from geofabrik.de are the nearest to it ... try to ask in detail to them.</p>
-<p>So the main app that is using JMapviewer seems to be <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> which is actively developed by very skilled OSM proigrammers for years now.</p>
+<p>So the main app that is using JMapviewer seems to be <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> which is actively developed by very skilled OSM proigrammers for years now.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

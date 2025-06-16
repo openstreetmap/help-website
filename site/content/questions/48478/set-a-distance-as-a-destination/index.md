@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-48480-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What have you tried? What worked? What didn't? (Specifically for pedestrian routing: which router(s) did you try? <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">http://wiki.openstreetmap.org/wiki/Routing/online_routers</a> )</p>
+<p>What have you tried? What worked? What didn't? (Specifically for pedestrian routing: which router(s) did you try? <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">https://wiki.openstreetmap.org/wiki/Routing/online_routers</a> )</p>
 </div>
 <div id="comment-48480-info" class="comment-info">
 <span class="comment-age">(03 Mar '16, 12:10)</span> <span class="comment-user userinfo">Piskvor</span>

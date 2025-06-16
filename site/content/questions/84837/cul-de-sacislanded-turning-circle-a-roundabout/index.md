@@ -304,7 +304,7 @@ osqa_accepted = true
 <div id="post-84855-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you. Will zap the junction=roundabout in things like (currently version 3) of <a href="http://www.openstreetmap.org/way/191085659">http://www.openstreetmap.org/way/191085659</a> because this is not a roundabout as I thought. I constantly see these being put in when they put the (implicit/explicit) oneway direction in wrong, and just wanted to make sure I was aware of all the rules for these because they keep popping up. Perhaps the wiki needs an explicit "cul-de-sacs are not roundabouts" :)</p>
+<p>Thank you. Will zap the junction=roundabout in things like (currently version 3) of <a href="https://www.openstreetmap.org/way/191085659">https://www.openstreetmap.org/way/191085659</a> because this is not a roundabout as I thought. I constantly see these being put in when they put the (implicit/explicit) oneway direction in wrong, and just wanted to make sure I was aware of all the rules for these because they keep popping up. Perhaps the wiki needs an explicit "cul-de-sacs are not roundabouts" :)</p>
 </div>
 <div id="comment-84855-info" class="comment-info">
 <span class="comment-age">(22 Jun '22, 19:31)</span> <span class="comment-user userinfo">gpserror</span>

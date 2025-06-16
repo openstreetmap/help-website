@@ -113,7 +113,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>With regard to the Pennine Bridleway, the National Byway has a main-route-with-loops structure that is a bit similar (but longer) and there's a wiki page that describes how that's been done here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/National_Byway">http://wiki.openstreetmap.org/wiki/National_Byway</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/National_Byway">https://wiki.openstreetmap.org/wiki/National_Byway</a></p>
 <p>A similar approach for the Pennine Bridleway may work, but it's probably a question for the talk-gb mailing list rather than here.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -215,9 +215,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li>I'm not sure "<a href="http://taginfo.openstreetmap.org/keys/route#values">bridleway</a>" is a proper value for the <a href="http://wiki.openstreetmap.org/wiki/Route">route tag</a>. I'd probably go with "hiking", as that's what bridleways are used for nowadays. I could imagine highway=bridleway if the road type was distinctive enough to have its own category, but really highway=track (or whatever's appropriate) should be used instead.</li>
+<li>I'm not sure "<a href="http://taginfo.openstreetmap.org/keys/route#values">bridleway</a>" is a proper value for the <a href="https://wiki.openstreetmap.org/wiki/Route">route tag</a>. I'd probably go with "hiking", as that's what bridleways are used for nowadays. I could imagine highway=bridleway if the road type was distinctive enough to have its own category, but really highway=track (or whatever's appropriate) should be used instead.</li>
 <li>The tools (mapnik, mkgmap...) aren't great at displaying/finding routes right now. Try contacting the particular tool's authors about routes (although I'm sure it's already on their long todo-list).</li>
-<li>As a somewhat-satisfactory workaround, you can tag the way if a section of the route is exclusively used for that route (I've done that <a href="http://www.openstreetmap.org/browse/relation/1534823">here</a> for example).</li>
+<li>As a somewhat-satisfactory workaround, you can tag the way if a section of the route is exclusively used for that route (I've done that <a href="https://www.openstreetmap.org/browse/relation/1534823">here</a> for example).</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">
@@ -281,7 +281,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>IMHO we should differentiate in the mapping in order to try to represent the real world entities the best in OSM. I don't know this particular way, that's why I'll answer generally.</p>
-<p><strong>If</strong> there is a thing like "the Pennine Bridleway" that is <strong>a national route for equestrians</strong> then you can represent this in OSM with a relation <code>type=route</code>,<code>route=horse</code> (according to <a href="http://taginfo.openstreetmap.org/keys/route#values">taginfo</a> and the <a href="http://wiki.openstreetmap.org/wiki/Relation:route">wiki</a>) and after looking into <a href="http://taginfo.openstreetmap.org/keys/network#values">taginfo</a> also with <code>network=national</code> according to this proposal: <a href="http://wiki.openstreetmap.org/wiki/Proposed_Features/Importance">importance</a>. There is proposed <code>network</code> values for walking (nwn) and cycling networks (ncn) on the <a href="http://wiki.openstreetmap.org/wiki/Relation:route">description of the route-key</a>, but no suggestion for horseriding. I'd <strong>not</strong> continue this logics (e.g. nrn, national-riding-network) because it is not really self-explaining and uses abbreviations, and it doesn't seem there is any actual use of horse-specific network-tags.</p>
+<p><strong>If</strong> there is a thing like "the Pennine Bridleway" that is <strong>a national route for equestrians</strong> then you can represent this in OSM with a relation <code>type=route</code>,<code>route=horse</code> (according to <a href="http://taginfo.openstreetmap.org/keys/route#values">taginfo</a> and the <a href="https://wiki.openstreetmap.org/wiki/Relation:route">wiki</a>) and after looking into <a href="http://taginfo.openstreetmap.org/keys/network#values">taginfo</a> also with <code>network=national</code> according to this proposal: <a href="https://wiki.openstreetmap.org/wiki/Proposed_Features/Importance">importance</a>. There is proposed <code>network</code> values for walking (nwn) and cycling networks (ncn) on the <a href="https://wiki.openstreetmap.org/wiki/Relation:route">description of the route-key</a>, but no suggestion for horseriding. I'd <strong>not</strong> continue this logics (e.g. nrn, national-riding-network) because it is not really self-explaining and uses abbreviations, and it doesn't seem there is any actual use of horse-specific network-tags.</p>
 <p>If there are <em>other</em> routes for walking or cycling I'd make distinct route relations for them.</p>
 <p>If there is routes with mixed designation (they are all the same network) things become more difficult. You might either</p>
 <ul>

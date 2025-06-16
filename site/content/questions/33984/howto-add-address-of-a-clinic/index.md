@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>You have a couple of options:</p>
 <p>One is to use <a href="http://onosm.org/">http://onosm.org/</a> to add a note to the map, so that someone else can add it.</p>
-<p>Another is to add it yourself, following the steps described <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">here</a>.</p>
+<p>Another is to add it yourself, following the steps described <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

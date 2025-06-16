@@ -132,7 +132,7 @@ osqa_accepted = true
 <li>ask questions on IRC/gis.stackexchange.</li>
 </ul>
 <p>I know it doesn't involve OSM toolchain but it works, if the data about the cameras are from OSM data you can find them by using the QuickOSM plugin, then you only have to add the polygons manually.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/qgis_edit_camera.png" alt="editting data in Qgis with two layers and Openstreetmap base map" /> (The polygon layer is in edit mode that's why those red crosses are there, I'm modifying the yellow polygon when this screen shot was taken)</p>
+<p><img src="/upfiles/qgis_edit_camera.png" alt="editting data in Qgis with two layers and Openstreetmap base map" /> (The polygon layer is in edit mode that's why those red crosses are there, I'm modifying the yellow polygon when this screen shot was taken)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

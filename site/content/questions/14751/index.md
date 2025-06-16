@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is possible that you just have to wait a bit. See the answers to <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a>.</p>
+<p>It is possible that you just have to wait a bit. See the answers to <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

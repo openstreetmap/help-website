@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>welcome. I addition to LM-1's answer a good place to start is <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> You can also learn lots from the documentation link on the map page and searching these help pages. If you are in an area with good bing Ariel images, that's a traceable background that you may draw over in the editors,with local knowledge you can do a lot without even stepping outside,but is more interesting to survey on the ground especailly if your ipod as a GPS. good luck edit extra their are also some good tutorial videos <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">http://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
+<p>welcome. I addition to LM-1's answer a good place to start is <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> You can also learn lots from the documentation link on the map page and searching these help pages. If you are in an area with good bing Ariel images, that's a traceable background that you may draw over in the editors,with local knowledge you can do a lot without even stepping outside,but is more interesting to survey on the ground especailly if your ipod as a GPS. good luck edit extra their are also some good tutorial videos <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">https://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -273,7 +273,7 @@ The web-based editor (Potlatch) uses Flash so it will not run on an iPad. JSOM i
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can have a look at <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">Apple_iOS</a> to find some software that works on iOS devices. Maybe there are apps that are able to record tracks, display and/or edit the raw map data.</p>
+<p>You can have a look at <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">Apple_iOS</a> to find some software that works on iOS devices. Maybe there are apps that are able to record tracks, display and/or edit the raw map data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

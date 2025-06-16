@@ -117,7 +117,7 @@ One Answer:
 <div class="answer-body">
 <ol>
 <li>Acho que tanto faz, embora seja interessante que a cidade siga um padrão.</li>
-<li>Por extenso. Mas pode ser uma boa ideia adicionar uma tag <code>alt_name</code> com o valor numérico. Por exemplo: <a href="http://www.openstreetmap.org/way/291689173">http://www.openstreetmap.org/way/291689173</a></li>
+<li>Por extenso. Mas pode ser uma boa ideia adicionar uma tag <code>alt_name</code> com o valor numérico. Por exemplo: <a href="https://www.openstreetmap.org/way/291689173">https://www.openstreetmap.org/way/291689173</a></li>
 </ol>
 <p>A exceção para esse argumento seria ruas com numeração muito alta, <em>na minha opinião</em>. "Rua Cento e Vinte e Três" ia ficar meio ilegível no mapa. Nesse caso, eu colocaria <code>name=Rua 123</code> e <code>alt_name=Rua Cento e Vinte e Três</code>. De qualquer maneira é importante ter a versão abreviada e a versão por extenso para que o sistema aceite buscas das duas formas.</p>
 </div>
@@ -154,7 +154,7 @@ One Answer:
 <div id="post-38637-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>seth, não tenho uma resposta pronta, mas olhando o mapa de Brasília (por exemplo: <a href="http://www.openstreetmap.org/#map=17/-15.80632/-47.89408">http://www.openstreetmap.org/#map=17/-15.80632/-47.89408</a> ) posso ver que os mapeadores de lá adotaram a convenção <code>Nome 123/456</code> e <code>Nome1 123 / Nome2 456</code> para indicar as vias (que na verdade não tem nome, apenas os blocos são nomeados). Dessa forma, seguindo o exemplo, seria <code>Blocos 110/120</code>.</p>
+<p>seth, não tenho uma resposta pronta, mas olhando o mapa de Brasília (por exemplo: <a href="https://www.openstreetmap.org/#map=17/-15.80632/-47.89408">https://www.openstreetmap.org/#map=17/-15.80632/-47.89408</a> ) posso ver que os mapeadores de lá adotaram a convenção <code>Nome 123/456</code> e <code>Nome1 123 / Nome2 456</code> para indicar as vias (que na verdade não tem nome, apenas os blocos são nomeados). Dessa forma, seguindo o exemplo, seria <code>Blocos 110/120</code>.</p>
 </div>
 <div id="comment-38637-info" class="comment-info">
 <span class="comment-age">(17 Nov '14, 23:24)</span> <span class="comment-user userinfo">Nighto</span>

@@ -42,9 +42,9 @@ osqa_accepted = false
 <p>Hey everyone,</p>
 <p>I wanted to see if I could get an opinion on whether data from a government source could be added to OSM. This data is at <a href="http://opendata.peelregion.ca">opendata.peelregion.ca</a> and is released under the UK Government's Open Government License for Public Sector Information with some modifications (<a href="http://opendata.peelregion.ca/terms-of-use.aspx">license</a>).</p>
 <p>I've reviewed the <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">Potential Datasources</a> wiki page as well as the OSM copyright page. Reading the <strong>Licenses</strong> bullet on the former page would make me think that this data cannot be used since it's not public domain, but the <a href="https://wiki.openstreetmap.org/wiki/Natural_England">Natural England</a> data uses the unmodified OGL license and can be used in OSM, which is what has brought me here for clarification.</p>
-<p>N.B. I do work for Peel, but I am posting this as a <a href="http://www.openstreetmap.org/user/Kevo">member</a> of the OSM community outside of work, so I am not representing the Region.</p>
+<p>N.B. I do work for Peel, but I am posting this as a <a href="https://www.openstreetmap.org/user/Kevo">member</a> of the OSM community outside of work, so I am not representing the Region.</p>
 <p>Thanks,<br />
-Kevin F. (<a href="http://www.openstreetmap.org/user/Kevo">Kevo</a>)</p>
+Kevin F. (<a href="https://www.openstreetmap.org/user/Kevo">Kevo</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-license" rel="tag" title="see questions tagged &#39;license&#39;">license</span>
@@ -71,7 +71,7 @@ Kevin F. (<a href="http://www.openstreetmap.org/user/Kevo">Kevo</a>)</p>
 </div>
 <div class="comment-text">
 <p>If you cannot get any answer here, try the legal-talk-mailinglist or general-talk-mailinglist:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-21007-info" class="comment-info">
 <span class="comment-age">(26 Mar '13, 16:50)</span> <span class="comment-user userinfo">stephan75</span>

@@ -96,7 +96,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>To make it easier, <a href="http://www.openstreetmap.org/browse/way/182240694">here</a> is the way and <a href="http://keepright.ipax.at/report_map.php?zoom=17&amp;lat=52.01848&amp;lon=5.06802&amp;layers=B0T&amp;ch=0%2C30%2C40%2C50%2C60%2C70%2C90%2C100%2C110%2C120%2C130%2C150%2C160%2C170%2C180%2C191%2C192%2C193%2C194%2C195%2C196%2C197%2C198%2C201%2C202%2C203%2C204%2C205%2C206%2C207%2C208%2C210%2C220%2C231%2C232%2C270%2C281%2C282%2C283%2C284%2C285%2C291%2C292%2C293%2C294%2C311%2C312%2C313%2C320%2C350%2C370%2C380%2C401%2C402%2C411%2C412%2C413%2C20%2C300%2C360%2C390&amp;show_ign=0&amp;show_tmpign=0">this</a> is the keepright link.</p>
+<p>To make it easier, <a href="https://www.openstreetmap.org/browse/way/182240694">here</a> is the way and <a href="http://keepright.ipax.at/report_map.php?zoom=17&amp;lat=52.01848&amp;lon=5.06802&amp;layers=B0T&amp;ch=0%2C30%2C40%2C50%2C60%2C70%2C90%2C100%2C110%2C120%2C130%2C150%2C160%2C170%2C180%2C191%2C192%2C193%2C194%2C195%2C196%2C197%2C198%2C201%2C202%2C203%2C204%2C205%2C206%2C207%2C208%2C210%2C220%2C231%2C232%2C270%2C281%2C282%2C283%2C284%2C285%2C291%2C292%2C293%2C294%2C311%2C312%2C313%2C320%2C350%2C370%2C380%2C401%2C402%2C411%2C412%2C413%2C20%2C300%2C360%2C390&amp;show_ign=0&amp;show_tmpign=0">this</a> is the keepright link.</p>
 <p>(the easiest way to create links like this on a comment is probably to add an answer and then convert it to a comment)</p>
 </div>
 <div id="comment-16728-info" class="comment-info">

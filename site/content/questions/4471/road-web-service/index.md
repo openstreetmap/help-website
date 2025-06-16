@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You already mention one option, namely <a href="http://OpenRouteService.org">OpenRouteService.org</a>. They have <a href="http://wiki.openstreetmap.org/wiki/OpenRouteService#ORS_.22API.22">an API you can use</a>. Have you tried this? If you had problems, consider editing your question with more information (or posting a separate question).</p>
-<p>Other routing options are listed under <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">online routers in the OSM wiki</a>. You might want to try these as well. Unfortunately, the page does not list which ones provide a web-based API. If you find out, consider adding the information to the page.</p>
+<p>You already mention one option, namely <a href="http://OpenRouteService.org">OpenRouteService.org</a>. They have <a href="https://wiki.openstreetmap.org/wiki/OpenRouteService#ORS_.22API.22">an API you can use</a>. Have you tried this? If you had problems, consider editing your question with more information (or posting a separate question).</p>
+<p>Other routing options are listed under <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">online routers in the OSM wiki</a>. You might want to try these as well. Unfortunately, the page does not list which ones provide a web-based API. If you find out, consider adding the information to the page.</p>
 <p>Good luck!</p>
 </div>
 <div class="answer-controls post-controls">

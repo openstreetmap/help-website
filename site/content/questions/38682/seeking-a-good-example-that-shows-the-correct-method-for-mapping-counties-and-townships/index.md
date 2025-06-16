@@ -105,8 +105,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/Admin_level#10_admin_level_values_for_specific_countries,">http://wiki.openstreetmap.org/wiki/Admin_level#10_admin_level_values_for_specific_countries,</a> townships should be admin_level=7 in most of the US.</p>
-<p>I would highly recommend using type=boundary, boundary=administrative relations for these. Then those boundary ways can be reused for multiple townships/cities/counties/etc. Here's an example of a township done with relation: <a href="http://www.openstreetmap.org/relation/2342528">http://www.openstreetmap.org/relation/2342528</a></p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/Admin_level#10_admin_level_values_for_specific_countries,">https://wiki.openstreetmap.org/wiki/Admin_level#10_admin_level_values_for_specific_countries,</a> townships should be admin_level=7 in most of the US.</p>
+<p>I would highly recommend using type=boundary, boundary=administrative relations for these. Then those boundary ways can be reused for multiple townships/cities/counties/etc. Here's an example of a township done with relation: <a href="https://www.openstreetmap.org/relation/2342528">https://www.openstreetmap.org/relation/2342528</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -169,7 +169,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look at Ireland. In Ireland, we're adding <code>admin_level=10</code>'s (which we call townlands). The ways that make them up are shared with the higher level admin boundaries (like <code>admin_level=9/6/etc.</code>)</p>
-<p>e.g. <a href="http://www.openstreetmap.org/relation/4118986">http://www.openstreetmap.org/relation/4118986</a></p>
+<p>e.g. <a href="https://www.openstreetmap.org/relation/4118986">https://www.openstreetmap.org/relation/4118986</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've been doing the same in Pennsylvania and have Clarion, Butler, Armstrong, and Greene Counties completed. You can take a look at <a href="http://www.openstreetmap.org/user/vinlendingur/history">some of my more recent edits</a> to see how I've done these township relationships. The only difference you would have is admin_level... PA has incorporated townships, so their level is 8, while OH would use level 7.</p>
+<p>I've been doing the same in Pennsylvania and have Clarion, Butler, Armstrong, and Greene Counties completed. You can take a look at <a href="https://www.openstreetmap.org/user/vinlendingur/history">some of my more recent edits</a> to see how I've done these township relationships. The only difference you would have is admin_level... PA has incorporated townships, so their level is 8, while OH would use level 7.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

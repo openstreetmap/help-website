@@ -68,7 +68,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I have an imac and java 8 and GpsMaster_0.63.00.jar works fine so installing java 8 might be easiest temporary solution for now.<br />
-There is a developer contact listed near the end of this page... <a href="http://wiki.openstreetmap.org/wiki/GpsMaster">http://wiki.openstreetmap.org/wiki/GpsMaster</a></p>
+There is a developer contact listed near the end of this page... <a href="https://wiki.openstreetmap.org/wiki/GpsMaster">https://wiki.openstreetmap.org/wiki/GpsMaster</a></p>
 </div>
 <div id="comment-60547-info" class="comment-info">
 <span class="comment-age">(11 Nov '17, 12:19)</span> <span class="comment-user userinfo">nevw</span>

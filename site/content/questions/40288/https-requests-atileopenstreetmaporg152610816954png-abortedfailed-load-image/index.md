@@ -119,7 +119,7 @@ osqa_accepted = false
 <div id="post-40304-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10318/don-lego">@don lego</a>: thanks for your images (I have added them to your question text).</p>
+<p><a href="https://help.openstreetmap.org/users/10318/don-lego">@don lego</a>: thanks for your images (I have added them to your question text).</p>
 </div>
 <div id="comment-40304-info" class="comment-info">
 <span class="comment-age">(13 Jan '15, 17:18)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -130,7 +130,7 @@ osqa_accepted = false
 <div id="post-40305-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10318/don-lego"></a><a href="http://help.openstreetmap.org/users/10318/don-lego">@don lego</a>: does it work for you if you do not access via httpS but via http?</p>
+<p><a href="https://help.openstreetmap.org/users/10318/don-lego"></a><a href="https://help.openstreetmap.org/users/10318/don-lego">@don lego</a>: does it work for you if you do not access via httpS but via http?</p>
 <p>Regarding your question: yes, <a href="https://www.openstreetmap.org">https://www.openstreetmap.org</a> works for me - including tiles (Germany) and I do not see conspicuous patterns in <a href="http://munin.openstreetmap.org/openstreetmap/tile.openstreetmap/index.html">munin</a> for the last 3 days (looks normal). Do the alternative <a href="https://www.openstreetmap.org/#&amp;layers=Q">tiles from MapQuest</a> work?</p>
 </div>
 <div id="comment-40305-info" class="comment-info">
@@ -275,7 +275,7 @@ osqa_accepted = false
 <div id="post-40414-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/48/firefishy"></a><a href="http://help.openstreetmap.org/users/48/firefishy">@Firefishy</a>: meta: Huh, why did you vote down my answer? Is there anything unhelpful?!</p>
+<p><a href="https://help.openstreetmap.org/users/48/firefishy"></a><a href="https://help.openstreetmap.org/users/48/firefishy">@Firefishy</a>: meta: Huh, why did you vote down my answer? Is there anything unhelpful?!</p>
 </div>
 <div id="comment-40414-info" class="comment-info">
 <span class="comment-age">(15 Jan '15, 18:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

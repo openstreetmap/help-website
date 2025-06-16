@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I created an <a href="http://overpass-turbo.eu/s/dtF">Overpass query</a> to search for areas to see if there were any unlabeled areas because I sometimes forget to mark buildings and was wondering if other people made the same mistake, and I found strange things like <a href="http://www.openstreetmap.org/way/386282789">buildings marked as areas</a> with "area=yes" tags. Should buildings be marked like this? I have also found <a href="http://www.openstreetmap.org/way/350097943">rest areas</a>, which are places where drivers can stop and potentially use the bathroom and ask for directions, marked with the "area=yes" tag.</p>
+<p>I created an <a href="http://overpass-turbo.eu/s/dtF">Overpass query</a> to search for areas to see if there were any unlabeled areas because I sometimes forget to mark buildings and was wondering if other people made the same mistake, and I found strange things like <a href="https://www.openstreetmap.org/way/386282789">buildings marked as areas</a> with "area=yes" tags. Should buildings be marked like this? I have also found <a href="https://www.openstreetmap.org/way/350097943">rest areas</a>, which are places where drivers can stop and potentially use the bathroom and ask for directions, marked with the "area=yes" tag.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-newbie" rel="tag" title="see questions tagged &#39;newbie&#39;">newbie</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>
@@ -111,9 +111,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The Wiki says that for service areas that use the tag highway=services one should be sure to include an area=yes tag, "because it is not considered the default for closed ways"</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservices#Notes">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservices#Notes</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dservices#Notes">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dservices#Notes</a></p>
 <p>An identical situation exists for the tag highway=rest__area:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Drest_area#Notes">http://wiki.openstreetmap.org/wiki/Tag:highway%3Drest_area#Notes</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Drest_area#Notes">https://wiki.openstreetmap.org/wiki/Tag:highway%3Drest_area#Notes</a></p>
 <p>Buildings probably should not use the area tag nor should either landuse or landcover objects.</p>
 <p>Cheers, Dave</p>
 </div>

@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Before doing a bigger import of data via a bulk upload, you should check <a href="http://wiki.openstreetmap.org/wiki/Import">http://wiki.openstreetmap.org/wiki/Import</a> and the mentioned guidelines there.</p>
+<p>Before doing a bigger import of data via a bulk upload, you should check <a href="https://wiki.openstreetmap.org/wiki/Import">https://wiki.openstreetmap.org/wiki/Import</a> and the mentioned guidelines there.</p>
 </div>
 <div id="comment-16016-info" class="comment-info">
 <span class="comment-age">(12 Sep '12, 16:29)</span> <span class="comment-user userinfo">stephan75</span>
@@ -129,7 +129,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The bigger question is whether there is an equivalent stand already in OSM. If it's slightly off in terms of accuracy, that shouldn't be a problem, and will be fixed at a later stage by anyone else resurveying the area.</p>
-<p>One option may be to use the <a href="http://wiki.openstreetmap.org/wiki/Snapshot_Server">Snapshot Server tool</a>, which is used by the <a href="http://wiki.openstreetmap.org/wiki/England_Cycling_Data_project">England cycling data project</a>. This gives a manual process to import them, however as each of them are imported, people can check to see the surrounding area to see if there is already one nearby, and if it needs a closer survey.</p>
+<p>One option may be to use the <a href="https://wiki.openstreetmap.org/wiki/Snapshot_Server">Snapshot Server tool</a>, which is used by the <a href="https://wiki.openstreetmap.org/wiki/England_Cycling_Data_project">England cycling data project</a>. This gives a manual process to import them, however as each of them are imported, people can check to see the surrounding area to see if there is already one nearby, and if it needs a closer survey.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

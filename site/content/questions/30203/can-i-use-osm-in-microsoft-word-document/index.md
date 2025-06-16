@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The easyest way is probably to export the rendered map as a png image by clicking on the <em>share button</em> on the right hand side, then add your dots using your favorite image manipulation program, and then import the image into your word document. Don't forget to <a href="http://www.openstreetmap.org/copyright">attribute OSM</a> somewhere in your document if it is going to be distributed to anybody.</p>
+<p>The easyest way is probably to export the rendered map as a png image by clicking on the <em>share button</em> on the right hand side, then add your dots using your favorite image manipulation program, and then import the image into your word document. Don't forget to <a href="https://www.openstreetmap.org/copyright">attribute OSM</a> somewhere in your document if it is going to be distributed to anybody.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -153,7 +153,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>For copyright details please see <a href="http://www.openstreetmap.org/copyright">osm.org/copyright</a>. If you respect those guideline you are welcome to edit and distribute the new map. Note that those are valid only for the Standard view (and generally for the base data). The other layers may have different terms (e.g. for the <a href="http://www.opencyclemap.org/docs/">cycling layer see about map tiles there</a>). A side note: Please focus on one problem – using in word – in this question thread.</p>
+<p>For copyright details please see <a href="https://www.openstreetmap.org/copyright">osm.org/copyright</a>. If you respect those guideline you are welcome to edit and distribute the new map. Note that those are valid only for the Standard view (and generally for the base data). The other layers may have different terms (e.g. for the <a href="http://www.opencyclemap.org/docs/">cycling layer see about map tiles there</a>). A side note: Please focus on one problem – using in word – in this question thread.</p>
 </div>
 <div id="comment-30211-info" class="comment-info">
 <span class="comment-age">(25 Jan '14, 14:16)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

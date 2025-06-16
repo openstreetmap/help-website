@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Relevant: <a href="https://help.openstreetmap.org/questions/39500/dutch-cycle-paths-with-cars-as-guests">https://help.openstreetmap.org/questions/39500/dutch-cycle-paths-with-cars-as-guests</a></p>
+<p>Relevant: <a href="/questions/39500/dutch-cycle-paths-with-cars-as-guests">https://help.openstreetmap.org/questions/39500/dutch-cycle-paths-with-cars-as-guests</a></p>
 <p>The traffic sign: <a href="https://www.informatiebord.nl/oefenen/verkeersborden-overzicht/2335/l51-fietsstraat/">https://www.informatiebord.nl/oefenen/verkeersborden-overzicht/2335/l51-fietsstraat/</a></p>
 <p>Example: <a href="https://www.openstreetmap.org/way/251672751#map=15/51.4572/5.4427">https://www.openstreetmap.org/way/251672751#map=15/51.4572/5.4427</a></p>
 <p>The example, and more toward the north west, is a Fietsstraat. Both bicycles and cars are allowed, but it's mostly a cycling path, not a car street. Visually it's exactly like other (real) car streets, not like a cycling path. In this case that's confusing. Is that how OSM works? If cars are allowed, it looks like a car street? Or does it look like that because <code>highway=residential</code>? Maybe removing <code>highway</code> is better?, since there's also a <code>motor_vehicle=destination</code>? Or is <code>motor_vehicle</code> only a subspecification of <code>highway</code>?</p>

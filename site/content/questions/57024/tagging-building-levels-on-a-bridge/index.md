@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, don’t tag a bridge with building levels. The way / bridge gets a layer because its crossing over something. But have a look at the bridge here, <a href="http://www.openstreetmap.org/#map=14/44.0851/3.0263">http://www.openstreetmap.org/#map=14/44.0851/3.0263</a> its 270 m above the ground that’s roughly 10 building levels but it only gets layer=1. Use level in or connected to buildings and floors and use layers for ways over each other. As pointed layer=1 could be sky high, but level=1 is only the first floor.</p>
+<p>Hi, don’t tag a bridge with building levels. The way / bridge gets a layer because its crossing over something. But have a look at the bridge here, <a href="https://www.openstreetmap.org/#map=14/44.0851/3.0263">https://www.openstreetmap.org/#map=14/44.0851/3.0263</a> its 270 m above the ground that’s roughly 10 building levels but it only gets layer=1. Use level in or connected to buildings and floors and use layers for ways over each other. As pointed layer=1 could be sky high, but level=1 is only the first floor.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

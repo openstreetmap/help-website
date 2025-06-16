@@ -281,7 +281,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>There's a couple different ways, including maperitive.</p>
-<p>I have also created maps without text using <a href="http://wiki.openstreetmap.org/wiki/Osmarender">osmarender</a>. You'll have to edit your rules file a bit (make sure to have backups of rule files). There also may be an easier way to do this in the rules file, and I'm not 100% sure if this does it [been a few weeks since I last did it] but I removed each line that began with: <code>&lt;caption k="name"</code></p>
+<p>I have also created maps without text using <a href="https://wiki.openstreetmap.org/wiki/Osmarender">osmarender</a>. You'll have to edit your rules file a bit (make sure to have backups of rule files). There also may be an easier way to do this in the rules file, and I'm not 100% sure if this does it [been a few weeks since I last did it] but I removed each line that began with: <code>&lt;caption k="name"</code></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

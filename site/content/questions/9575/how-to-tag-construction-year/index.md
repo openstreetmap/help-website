@@ -109,8 +109,8 @@ osqa_accepted = true
 <ul>
 <li>building=residential</li>
 <li>construction_date=2008-2011</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:start_date">start_date</a>=2011</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:architect">architect</a>=Åwl; Frans Bengtsson</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:start_date">start_date</a>=2011</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:architect">architect</a>=Åwl; Frans Bengtsson</li>
 </ul>
 <p>And the landuse=construction would have been tagged with:</p>
 <ul>
@@ -172,7 +172,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking through the wiki it seems <a href="http://wiki.openstreetmap.org/wiki/Key:start_date">start_date</a> is the most likely key to use. I also searched <a href="http://taginfo.openstreetmap.org">taginfo.openstreetmap.org</a> for the words constructed and built, which are little used in comparison:</p>
+<p>Looking through the wiki it seems <a href="https://wiki.openstreetmap.org/wiki/Key:start_date">start_date</a> is the most likely key to use. I also searched <a href="http://taginfo.openstreetmap.org">taginfo.openstreetmap.org</a> for the words constructed and built, which are little used in comparison:</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

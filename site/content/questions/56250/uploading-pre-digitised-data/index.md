@@ -107,8 +107,8 @@ One Answer:
 <p>As your question has essentially no details the answer can't be specific, so:</p>
 <ul>
 <li>you need to understand that OSM has no layer concept, anything you add to the database needs to be merged properly with the existing data (that means you can and should not upload directly with the API).</li>
-<li>depending on the amount of data, coverage and source, adding the data may be considered an import and you will need to follow the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a></li>
-<li>if your application supports shapefiles output, you could convert to OSM data by using <a href="http://wiki.openstreetmap.org/wiki/Ogr2osm">ogr2osm</a> and then load that as a separate layer in JOSM for conflation</li>
+<li>depending on the amount of data, coverage and source, adding the data may be considered an import and you will need to follow the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a></li>
+<li>if your application supports shapefiles output, you could convert to OSM data by using <a href="https://wiki.openstreetmap.org/wiki/Ogr2osm">ogr2osm</a> and then load that as a separate layer in JOSM for conflation</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Fixing a multipolygon lake"
-description = '''I started to combine the parts of differend lakes but the lake seems to be inverted. How do it fix it? http://www.openstreetmap.org/relation/7379046#map=10/61.2134/28.3070 And whats the best way to combine it with the next part?  http://www.openstreetmap.org/relation/404644#map=10/61.3375/28.1133'''
+description = '''I started to combine the parts of differend lakes but the lake seems to be inverted. How do it fix it? https://www.openstreetmap.org/relation/7379046#map=10/61.2134/28.3070 And whats the best way to combine it with the next part?  https://www.openstreetmap.org/relation/404644#map=10/61.3375/28.1133'''
 date = "2017-07-25T00:17:00Z"
 lastmod = "2017-07-25T14:06:00Z"
 weight = 57262
@@ -40,8 +40,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I started to combine the parts of differend lakes but the lake seems to be inverted. How do it fix it? <a href="http://www.openstreetmap.org/relation/7379046#map=10/61.2134/28.3070">http://www.openstreetmap.org/relation/7379046#map=10/61.2134/28.3070</a></p>
-<p>And whats the best way to combine it with the next part? <a href="http://www.openstreetmap.org/relation/404644#map=10/61.3375/28.1133">http://www.openstreetmap.org/relation/404644#map=10/61.3375/28.1133</a></p>
+<p>I started to combine the parts of differend lakes but the lake seems to be inverted. How do it fix it? <a href="https://www.openstreetmap.org/relation/7379046#map=10/61.2134/28.3070">https://www.openstreetmap.org/relation/7379046#map=10/61.2134/28.3070</a></p>
+<p>And whats the best way to combine it with the next part? <a href="https://www.openstreetmap.org/relation/404644#map=10/61.3375/28.1133">https://www.openstreetmap.org/relation/404644#map=10/61.3375/28.1133</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lake" rel="tag" title="see questions tagged &#39;lake&#39;">lake</span> <span class="post-tag tag-link-saimaa" rel="tag" title="see questions tagged &#39;saimaa&#39;">saimaa</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>

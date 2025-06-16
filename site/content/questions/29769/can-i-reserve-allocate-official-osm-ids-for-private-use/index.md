@@ -123,10 +123,10 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Sorry, but AFAIK there is no way to reserver/lock IDs without real payload.</p>
-<p>If you start from an empty dataset, you might use your own (nonnegative) IDs and keep them in a local xml file. Another way would be to setup your own <a href="http://wiki.openstreetmap.org/wiki/Rails_Port">rails port server</a> with own API etc. that keeps your stuff seperated from OSM DB, while allowing multiple users to edit this data.</p>
-<p>I'm not an expert but I guess there might be <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">legal problems</a> if you mix OSM data with non free (as you aren't allowed to publish) informations on a dataset level.<br />
+<p>If you start from an empty dataset, you might use your own (nonnegative) IDs and keep them in a local xml file. Another way would be to setup your own <a href="https://wiki.openstreetmap.org/wiki/Rails_Port">rails port server</a> with own API etc. that keeps your stuff seperated from OSM DB, while allowing multiple users to edit this data.</p>
+<p>I'm not an expert but I guess there might be <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">legal problems</a> if you mix OSM data with non free (as you aren't allowed to publish) informations on a dataset level.<br />
 </p>
-<p>There is also a small but nice existing <a href="http://wiki.openstreetmap.org/wiki/Indoor">indoor community</a> at OSM :)</p>
+<p>There is also a small but nice existing <a href="https://wiki.openstreetmap.org/wiki/Indoor">indoor community</a> at OSM :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -332,7 +332,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Why do you even worry about conflicting IDs if you don't intend to upload your results anyway ? Put your objects in your own db, and use a mashup to display your indoor map on top of the osm basemap.</p>
-<p>You can "seed" your work using an extract of OSM data if you want, say the town your school resides in. That would just be a snapshot of osm data; updating said data after you modified it <a href="http://wiki.openstreetmap.org/wiki/Osmosis">should be possible</a>, but is likely to run into problems now and then. Also, remember that if you seed your own map this way, it certainly constitute a derived work and you would <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3b._If_I_have_data_derived_from_OSM_data.2C_do_I_have_to_distribute_it.3F">have to redistribute it</a>, making the whole effort of keeping your work separate a bit pointless.</p>
+<p>You can "seed" your work using an extract of OSM data if you want, say the town your school resides in. That would just be a snapshot of osm data; updating said data after you modified it <a href="https://wiki.openstreetmap.org/wiki/Osmosis">should be possible</a>, but is likely to run into problems now and then. Also, remember that if you seed your own map this way, it certainly constitute a derived work and you would <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3b._If_I_have_data_derived_from_OSM_data.2C_do_I_have_to_distribute_it.3F">have to redistribute it</a>, making the whole effort of keeping your work separate a bit pointless.</p>
 <p>If you ever want to merge your data with the osm data (assuming you didn't seed it with osm data, and kept it separate), just extract your db as a *.osm file, negate all the ids, load it into josm, check for problems, and upload to osm.</p>
 </div>
 <div class="answer-controls post-controls">

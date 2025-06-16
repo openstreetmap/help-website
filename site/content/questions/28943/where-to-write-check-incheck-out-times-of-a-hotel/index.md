@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Where to write check-in/check-out times of a hotel?"
-description = '''I am generating an OSM XML file using all POI data from the collaborative tourism guide Wikivoyage. All hotels in Wikivoyage contain a check-in and check-out time. What is the best way to embed this information into the OSM XML file? http://wiki.openstreetmap.org/wiki/Hotel does not have such fields...'''
+description = '''I am generating an OSM XML file using all POI data from the collaborative tourism guide Wikivoyage. All hotels in Wikivoyage contain a check-in and check-out time. What is the best way to embed this information into the OSM XML file? https://wiki.openstreetmap.org/wiki/Hotel does not have such fields...'''
 date = "2013-12-10T08:34:00Z"
 lastmod = "2013-12-10T09:51:00Z"
 weight = 28943
@@ -39,10 +39,10 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am generating an <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML</a> file using all POI data from the <a href="https://en.wikivoyage.org">collaborative tourism guide Wikivoyage</a>.</p>
+<p>I am generating an <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML</a> file using all POI data from the <a href="https://en.wikivoyage.org">collaborative tourism guide Wikivoyage</a>.</p>
 <p>All hotels in Wikivoyage contain a <strong>check-in</strong> and <strong>check-out time</strong>.</p>
 <p>What is the best way to embed this information into the OSM XML file?<br />
-<a href="http://wiki.openstreetmap.org/wiki/Hotel">http://wiki.openstreetmap.org/wiki/Hotel</a> does not have such fields.</p>
+<a href="https://wiki.openstreetmap.org/wiki/Hotel">https://wiki.openstreetmap.org/wiki/Hotel</a> does not have such fields.</p>
 <p>This file will be used by travellers (via offline apps like OsmAnd), and it would be very convenient if they could have a look at checkin/checkout times from the apps, as many don't have an Internet connection (abroad/plane).</p>
 </div>
 <div id="question-tags" class="tags-container tags">

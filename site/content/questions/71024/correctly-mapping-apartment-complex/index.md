@@ -46,7 +46,7 @@ osqa_accepted = false
 <li>Has a pool in the area</li>
 </ul>
 <p>The complex looks roughly like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/pngout.png" alt="alt text" /></p>
+<p><img src="/upfiles/pngout.png" alt="alt text" /></p>
 <p>My issue is that I found a few posts with instructions on how to map things similar to this, but some were a bit old and seemed to offer conclicting advice. Some questions:</p>
 <ul>
 <li>What type of area should the outline be? <code>landuse=residential</code>, <code>type=site</code>, <code>building=apartments</code>? What about the multiple entrance/addresses? What kinds of elements are they and what tags should I apply?</li>

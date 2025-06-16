@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>What is the reporting mechanism for rendering problems. I have plotted several stretches of riverbank on the Norfolk Broads but one bit is giving me grief. Downstream from Acle Bridge for about 2 miles Mapnik rendering is patchy at different magnifications. If one tile is rendered correctly then the next is not, but change the magnification and the error is reversed. I use Potlatch 2.</p>
 <p><em>Edit:</em></p>
-<p>Permalink: <a href="http://www.openstreetmap.org/?lat=52.64297&amp;lon=1.56577&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.64297&amp;lon=1.56577&amp;zoom=17&amp;layers=M</a></p>
+<p>Permalink: <a href="https://www.openstreetmap.org/?lat=52.64297&amp;lon=1.56577&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.64297&amp;lon=1.56577&amp;zoom=17&amp;layers=M</a></p>
 <p>You can see that the upper (northern) half of the river is rendered as a wide blue band; the lower part is a lot more narrow.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -148,7 +148,7 @@ One Answer:
 <div class="answer-body">
 <p>A general answer about Mapnik:</p>
 <p>If you edit the map, it will take a while before the changes become visible on the Mapnik layer. Also, different tiles &amp; different magnfications may update at different times, so things may look funny for a few days.</p>
-<p>See e.g. this question <a href="http://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">http://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile</a> for more information.</p>
+<p>See e.g. this question <a href="/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile">https://help.openstreetmap.org/questions/1049/how-to-trigger-a-repaint-for-a-specific-osm-map-tile</a> for more information.</p>
 <p><em>Edit:</em></p>
 <p>Looking at the permalink above, yes, it does look like a simple Mapnik update problem. The mapping and tagging looks ok, and the Osmarender layer shows the river correctly (the Osmarender layer is typically update more frequently than the Mapnik layer). So the problem will likely go away in a few days or so.</p>
 </div>

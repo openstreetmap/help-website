@@ -117,7 +117,7 @@ osqa_accepted = true
 <pre><code>building=yes   # or better still: the same as an adjoining building
 level=1
 bridge=yes</code></pre>
-<p>and be sure to share 2 nodes or more in common with the adjoining buildings on each side. Here's one of the examples from the wikipedia link in OSM: <a href="http://www.openstreetmap.org/browse/way/62333303">"Bridge of Sighs", Oxford</a>.</p>
+<p>and be sure to share 2 nodes or more in common with the adjoining buildings on each side. Here's one of the examples from the wikipedia link in OSM: <a href="https://www.openstreetmap.org/browse/way/62333303">"Bridge of Sighs", Oxford</a>.</p>
 <hr />
 <p>For lighter, longer constructions of metal, say - "raised covered pedestrian walkways", "<a href="http://en.wikipedia.org/wiki/Pedway">pedways</a>" such as they have in big cities in very cold or very wet places, I would suggest</p>
 <pre><code>highway=pedestrian
@@ -300,7 +300,7 @@ covered=yes   # idea stolen from bicycle parking :)</code></pre>
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you go the the OSM wiki and search for "skywalk", you find:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Escalator">http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Escalator</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Escalator">https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Escalator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

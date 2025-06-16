@@ -234,7 +234,7 @@ This answer is marked "community wiki".
 &#10;</div>
 <div class="comment-text">
 <p><a href="https://help.openstreetmap.org/users/17146/naytay55">@NayTay55</a> Someone from Facebook may correct me, but I suspect that yours is a slightly different problem - in your case the name of a street (on the background) is wrong; in <a href="https://help.openstreetmap.org/users/17099/warden">@warden</a>'s case it was a "place", which isn't actually from OSM. As I understand it background street data in Facebook does sometimes come from OSM, but very slowly.</p>
-<p>Perhaps <a href="https://help.openstreetmap.org/users/17106/rvr004">@RVR004</a> could clarify that by answering your original <a href="https://help.openstreetmap.org/questions/70650/old-street-name-is-showing-on-facebook-map">question</a>?</p>
+<p>Perhaps <a href="https://help.openstreetmap.org/users/17106/rvr004">@RVR004</a> could clarify that by answering your original <a href="/questions/70650/old-street-name-is-showing-on-facebook-map">question</a>?</p>
 </div>
 <div id="comment-70660-info" class="comment-info">
 <span class="comment-age">(06 Sep '19, 10:36)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -326,7 +326,7 @@ This answer is marked "community wiki".
 <p>Page with correction:</p>
 <p><a href="https://www.facebook.com/riversidec2/">https://www.facebook.com/riversidec2/</a></p>
 <p>Map with correction:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/MapPinsMatchesFBPageAddress.png" alt="alt text" /></p>
+<p><img src="/upfiles/MapPinsMatchesFBPageAddress.png" alt="alt text" /></p>
 <p>Best regards,</p>
 <p>Yunzhi</p>
 <p>Maps Data Team, Facebook</p>

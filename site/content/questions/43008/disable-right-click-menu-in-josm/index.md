@@ -91,7 +91,7 @@ osqa_accepted = false
 <div id="post-43072-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a>, yes, it seems to be the menu of the tiled image source (e.g. bing) – and I never used this menu while doing 1418 JOSM changesets, if I remember correctly.</p>
+<p><a href="https://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a>, yes, it seems to be the menu of the tiled image source (e.g. bing) – and I never used this menu while doing 1418 JOSM changesets, if I remember correctly.</p>
 <p>Why "check my PC mouse"? The described behaviour is perfectly normal/expected (note that the mouse is not moved while the button is down).</p>
 </div>
 <div id="comment-43072-info" class="comment-info">

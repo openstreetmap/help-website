@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My favourite online bicycle map is: standard OSM background (Mapnik?) + "CyclOSM lite" transparent layer. It has bright bicycle infrastructure, even for zoom = 11. For example, <a href="https://www.cyclosm.org/#map=12/51.1018/17.0391/openstreetmap-cyclosmlite">https://www.cyclosm.org/#map=12/51.1018/17.0391/openstreetmap-cyclosmlite</a> :<img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-06-05_21-06-51_cyclosm.org.png" alt="alt text" /></p>
+<p>My favourite online bicycle map is: standard OSM background (Mapnik?) + "CyclOSM lite" transparent layer. It has bright bicycle infrastructure, even for zoom = 11. For example, <a href="https://www.cyclosm.org/#map=12/51.1018/17.0391/openstreetmap-cyclosmlite">https://www.cyclosm.org/#map=12/51.1018/17.0391/openstreetmap-cyclosmlite</a> :<img src="/upfiles/Screenshot_2022-06-05_21-06-51_cyclosm.org.png" alt="alt text" /></p>
 <p>When I ride a bicycle, I use Android smartphone + OsmAnd app, with Cycling profile and map style "OsmAnd". But I see bicycle infrastructure only for a limited amount of zoom levels, and even then the infrastructure is not highlighted.</p>
 <p>Probably, I have to create a custom rendering style, based on <code>default.render.xml</code>. But maybe somebody already created it, or have another idea?</p>
 </div>
@@ -127,7 +127,7 @@ One Answer:
 <div id="post-84721-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've already enabled bicycle routes (thanks to <em>joost schouppe</em> in <a href="https://help.openstreetmap.org/questions/44132/open-cycle-map">https://help.openstreetmap.org/questions/44132/open-cycle-map</a> ), but in my opinion bicycle route is not a bicycle infrastructure. At least here in Wrocław (Poland), a lot of routes are going through ground tracks and plain roads.</p>
+<p>I've already enabled bicycle routes (thanks to <em>joost schouppe</em> in <a href="/questions/44132/open-cycle-map">https://help.openstreetmap.org/questions/44132/open-cycle-map</a> ), but in my opinion bicycle route is not a bicycle infrastructure. At least here in Wrocław (Poland), a lot of routes are going through ground tracks and plain roads.</p>
 </div>
 <div id="comment-84721-info" class="comment-info">
 <span class="comment-age">(07 Jun '22, 10:36)</span> <span class="comment-user userinfo">Vazhnov Alexey</span>

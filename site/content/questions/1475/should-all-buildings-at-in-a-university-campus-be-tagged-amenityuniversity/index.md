@@ -158,7 +158,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>ivanatora, in my view,</p>
-<p>In the case where the grounds are separated, you could group them together with the multipolygon relation setting each area as role=outer, then put the amenity=university on the relation (for example <a href="http://www.openstreetmap.org/browse/relation/1173288">http://www.openstreetmap.org/browse/relation/1173288</a>).</p>
+<p>In the case where the grounds are separated, you could group them together with the multipolygon relation setting each area as role=outer, then put the amenity=university on the relation (for example <a href="https://www.openstreetmap.org/browse/relation/1173288">https://www.openstreetmap.org/browse/relation/1173288</a>).</p>
 <p>However if they are different campuses with a different name, it would probably be best to do it as you have suggested where you add amenity=university to each group of university buildings (each campus).</p>
 </div>
 <div id="comment-1484-info" class="comment-info">
@@ -201,7 +201,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki for schools actually delved into a similar issue they advised you tag the grounds as amenity=school and each building separate building as building=school. <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a></p>
+<p>The wiki for schools actually delved into a similar issue they advised you tag the grounds as amenity=school and each building separate building as building=school. <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

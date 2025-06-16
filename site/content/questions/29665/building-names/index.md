@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Building names"
-description = '''This is my first attempt at using OSM and I&#x27;ve hit a problem I don&#x27;t understand.  Our museum in Wakefield: http://www.openstreetmap.org/#map=18/53.68361/-1.50150 ...has moved to a new location and the building - which was formerly marked as Wakefield museum - now has another use. I used the editor t...'''
+description = '''This is my first attempt at using OSM and I&#x27;ve hit a problem I don&#x27;t understand.  Our museum in Wakefield: https://www.openstreetmap.org/#map=18/53.68361/-1.50150 ...has moved to a new location and the building - which was formerly marked as Wakefield museum - now has another use. I used the editor t...'''
 date = "2014-01-08T10:29:00Z"
 lastmod = "2014-01-08T20:11:00Z"
 weight = 29665
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>This is my first attempt at using OSM and I've hit a problem I don't understand.</p>
 <p>Our museum in Wakefield:</p>
-<p><a href="http://www.openstreetmap.org/#map=18/53.68361/-1.50150">http://www.openstreetmap.org/#map=18/53.68361/-1.50150</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/53.68361/-1.50150">https://www.openstreetmap.org/#map=18/53.68361/-1.50150</a></p>
 <p>...has moved to a new location and the building - which was formerly marked as Wakefield museum - now has another use.</p>
 <p>I used the editor to change the name of the building - and that seemed to work OK but I still see Wakefield Museum when I look at the map. When I zoom in I see the new name I entered - but when I zoom out it shows as Wakefield Museum.</p>
 <p>What's going on? Can someone enlighten me?</p>
@@ -164,7 +164,7 @@ One Answer:
 <div id="post-29688-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info, there's a detailed previous answer <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a> that might help.</p>
+<p>For info, there's a detailed previous answer <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a> that might help.</p>
 </div>
 <div id="comment-29688-info" class="comment-info">
 <span class="comment-age">(08 Jan '14, 15:39)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -175,7 +175,7 @@ One Answer:
 <div id="post-29689-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Nothing to do with layers. Slippy map is composed of map tiles, a simple image. What do see on this link : <a href="http://b.tile.openstreetmap.org/19/259957/169119.png">http://b.tile.openstreetmap.org/19/259957/169119.png</a> If you see the new name, it should work as well using the main site. If you see the old name and you see it on other computers, then you have to refresh the image cache, as EdLoach said. If it does not work, then the cache is somewhere between your machine and OSM servers. This could be your local network or your ISP. It could be also a problem with your local tile CDN (<a href="http://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)">http://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)</a></p>
+<p>Nothing to do with layers. Slippy map is composed of map tiles, a simple image. What do see on this link : <a href="http://b.tile.openstreetmap.org/19/259957/169119.png">http://b.tile.openstreetmap.org/19/259957/169119.png</a> If you see the new name, it should work as well using the main site. If you see the old name and you see it on other computers, then you have to refresh the image cache, as EdLoach said. If it does not work, then the cache is somewhere between your machine and OSM servers. This could be your local network or your ISP. It could be also a problem with your local tile CDN (<a href="https://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)">https://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)</a></p>
 </div>
 <div id="comment-29689-info" class="comment-info">
 <span class="comment-age">(08 Jan '14, 15:59)</span> <span class="comment-user userinfo">Pieren</span>

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello</p>
-<p>I am using the xml information of the nodes for creating my keywords. Now I found a node which have information (and detailed ones) in the <a href="http://www.openstreetmap.org/browse/node/2423996408">frontend at openstretmap</a> . When I am opening the <a href="http://www.openstreetmap.org/api/0.6/node/2423996408">xml file</a> it is responsing nothing and getting a 404.</p>
+<p>I am using the xml information of the nodes for creating my keywords. Now I found a node which have information (and detailed ones) in the <a href="https://www.openstreetmap.org/browse/node/2423996408">frontend at openstretmap</a> . When I am opening the <a href="https://www.openstreetmap.org/api/0.6/node/2423996408">xml file</a> it is responsing nothing and getting a 404.</p>
 <p>Is there a problem at the server or what is the problem there?</p>
 <p>Thanks for your help Robert</p>
 </div>
@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There was a recently fixed <a href="https://github.com/zerebubuth/openstreetmap-cgimap/commit/e3c3fb1b412d6281f752fced12d8cd8a2eb4ef43">bug</a> with cgimap, the software that powers these API calls. Everything now appears to be working.</p>
-<p>Keep in mind that if you need multiple nodes, the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Multi_fetch:_GET_.2Fapi.2F0.6.2F.5Bnodes.7Cways.7Crelations.5D.3F.23parameters">nodes call</a> is faster.</p>
+<p>Keep in mind that if you need multiple nodes, the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Multi_fetch:_GET_.2Fapi.2F0.6.2F.5Bnodes.7Cways.7Crelations.5D.3F.23parameters">nodes call</a> is faster.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

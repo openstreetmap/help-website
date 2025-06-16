@@ -107,10 +107,10 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As Andy MacKey says, draw each building as a polygon and tag with <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments"><code>building=apartments</code></a> to show that this is what the original purpose of the building (other tags may be appropriate, such as <a href="http://taginfo.openstreetmap.org/tags/building%3Ause=apartments"><code>building:use=apartments</code></a> if the building was originally built for another purpose, such as a factory, warehouse or church).</p>
-<p>If the area of the apartment complex is widely known, and/or signposted as such, then you can also create a landuse=residential polygon and add the name of the complex to that polygon (example <a href="http://www.openstreetmap.org/way/40448227">here</a>).</p>
+<p>If the area of the apartment complex is widely known, and/or signposted as such, then you can also create a landuse=residential polygon and add the name of the complex to that polygon (example <a href="https://www.openstreetmap.org/way/40448227">here</a>).</p>
 <p>If the name is not widely used, or only used in an address context, then just use this on address nodes. The preferred way to map addresses for apartments is to add them to a node which is the main entrance of the building (tag entrance=main). A typical combination will be <code>addr:flats=1-n; addr:interpolation=all; addr:housename=Complex Name; addr:street=Main Street</code>. The details of this have recently been discussed on the <a href="https://lists.openstreetmap.org/pipermail/tagging/2014-August/018888.html">tagging list</a>, specifically the use of the interpolation tag for flats. There is good additional information from experienced address mappers in the posts.</p>
 <p>Note that addr:flats is not shown on the main Carto (aka Mapnik) map style, the housenumber or name is instead. However the data are there and usable.</p>
-<p>I have documented some of this on the wiki at <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments">building=apartments</a> (including an example of a <a href="http://www.openstreetmap.org/way/158513353">converted church</a>).</p>
+<p>I have documented some of this on the wiki at <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments">building=apartments</a> (including an example of a <a href="https://www.openstreetmap.org/way/158513353">converted church</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>How can it be unambiguous when you have addr:housenumber=67-75, addr:flats=1=100, on the same node ?</p>
 <p>In such case one would need addr:interpolation=odd for the housenumbers and all for the flats ... I just assume somewhere in the world such an example exists.</p>
-<p>Furthermore the wiki states for addr:interpolation "How to interpolate the house numbers belonging to the way along the respective street. " So please update the documentation on the wiki when it can be used for addr:flats (and perhaps addr:units) as well. (<a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a> )</p>
+<p>Furthermore the wiki states for addr:interpolation "How to interpolate the house numbers belonging to the way along the respective street. " So please update the documentation on the wiki when it can be used for addr:flats (and perhaps addr:units) as well. (<a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a> )</p>
 </div>
 <div id="comment-36539-info" class="comment-info">
 <span class="comment-age">(03 Sep '14, 06:11)</span> <span class="comment-user userinfo">escada</span>
@@ -239,8 +239,8 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>It seems that my answers don't appear.</p>
-<p>It this does so, thanks <a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>. Your answer was very clarifying.</p>
-<p>I came across these question ( <a href="https://help.openstreetmap.org/questions/9343/drawing-and-addressing-apartment-complexes">https://help.openstreetmap.org/questions/9343/drawing-and-addressing-apartment-complexes</a> ) and this wiki entry ( <a href="http://wiki.openstreetmap.org/wiki/Key:addr:flats">http://wiki.openstreetmap.org/wiki/Key:addr:flats</a> ), which answer also my question.</p>
+<p>It this does so, thanks <a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>. Your answer was very clarifying.</p>
+<p>I came across these question ( <a href="/questions/9343/drawing-and-addressing-apartment-complexes">https://help.openstreetmap.org/questions/9343/drawing-and-addressing-apartment-complexes</a> ) and this wiki entry ( <a href="https://wiki.openstreetmap.org/wiki/Key:addr:flats">https://wiki.openstreetmap.org/wiki/Key:addr:flats</a> ), which answer also my question.</p>
 </div>
 <div id="comment-36673-info" class="comment-info">
 <span class="comment-age">(08 Sep '14, 04:36)</span> <span class="comment-user userinfo">xoko</span>
@@ -283,7 +283,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>H xoko, tag like Andy said and ad the address numbers like this, <a href="http://www.openstreetmap.org/#map=18/51.82707/4.97768">http://www.openstreetmap.org/#map=18/51.82707/4.97768</a> So youll have space for specific building tags as you described.</p>
+<p>H xoko, tag like Andy said and ad the address numbers like this, <a href="https://www.openstreetmap.org/#map=18/51.82707/4.97768">https://www.openstreetmap.org/#map=18/51.82707/4.97768</a> So youll have space for specific building tags as you described.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -325,7 +325,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9575/xoko">@xoko</a> I think the addresses in the link are from an import of government data; they may be accurately located, but they are not very useful for actually finding the addresses &amp; routing to them.</p>
+<p><a href="https://help.openstreetmap.org/users/9575/xoko">@xoko</a> I think the addresses in the link are from an import of government data; they may be accurately located, but they are not very useful for actually finding the addresses &amp; routing to them.</p>
 </div>
 <div id="comment-36648-info" class="comment-info">
 <span class="comment-age">(06 Sep '14, 08:04)</span> <span class="comment-user userinfo">SK53 ♦</span>

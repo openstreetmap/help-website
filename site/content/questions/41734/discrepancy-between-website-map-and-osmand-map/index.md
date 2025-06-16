@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is basically a feature request to a software provider and is better directed at the <a href="https://groups.google.com/forum/#!forum/osmand">OSMAND forum</a>.</p>
-<p>If maps with the most current data from OSM are really important for your needs then you probably need to create your own. See details of OsmAndMapCreator on the <a href="http://wiki.openstreetmap.org/wiki/OsmAndMapCreator">wiki</a> for how to do this.</p>
+<p>If maps with the most current data from OSM are really important for your needs then you probably need to create your own. See details of OsmAndMapCreator on the <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">wiki</a> for how to do this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is the wrong place for OSMand support, I believe they provide support via their forum: <a href="https://groups.google.com/forum/#!forum/osmand">https://groups.google.com/forum/#!forum/osmand</a></p>
-<p>Note on the side, for the more popular countries the OSMand developers provide updates every fortnight, which would ssem to be quite frequent, however if that is not often enough you can create your own maps with <a href="http://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a>.</p>
+<p>Note on the side, for the more popular countries the OSMand developers provide updates every fortnight, which would ssem to be quite frequent, however if that is not often enough you can create your own maps with <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Osmand maps start a new generation cycle every 10 days on the 10th, 20th and 30th of the month, and usually takes several days to complete. That said, if you want it right now, you might try <a href="http://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a></p>
+<p>Osmand maps start a new generation cycle every 10 days on the 10th, 20th and 30th of the month, and usually takes several days to complete. That said, if you want it right now, you might try <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

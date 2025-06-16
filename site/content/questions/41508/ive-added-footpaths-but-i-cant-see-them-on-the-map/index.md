@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-41517-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#map=18/32.71410/35.12651">http://www.openstreetmap.org/#map=18/32.71410/35.12651</a> this is the location. i don't see the pathways. how can i send a link to the object if i don't see it on the basemap?</p>
+<p><a href="https://www.openstreetmap.org/#map=18/32.71410/35.12651">https://www.openstreetmap.org/#map=18/32.71410/35.12651</a> this is the location. i don't see the pathways. how can i send a link to the object if i don't see it on the basemap?</p>
 </div>
 <div id="comment-41517-info" class="comment-info">
 <span class="comment-age">(05 Mar '15, 21:52)</span> <span class="comment-user userinfo">asafche</span>
@@ -164,8 +164,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This is one of the paths you have added and it looks fine so it should show up in the default time but it seems there is currently a delay in the map updating. <a href="http://www.openstreetmap.org/way/331440700">http://www.openstreetmap.org/way/331440700</a></p>
-<p>It is showing on the "Humanitarian" map layer. <a href="http://www.openstreetmap.org/#map=18/32.70700/35.12346&amp;layers=H">http://www.openstreetmap.org/#map=18/32.70700/35.12346&amp;layers=H</a></p>
+<p>This is one of the paths you have added and it looks fine so it should show up in the default time but it seems there is currently a delay in the map updating. <a href="https://www.openstreetmap.org/way/331440700">https://www.openstreetmap.org/way/331440700</a></p>
+<p>It is showing on the "Humanitarian" map layer. <a href="https://www.openstreetmap.org/#map=18/32.70700/35.12346&amp;layers=H">https://www.openstreetmap.org/#map=18/32.70700/35.12346&amp;layers=H</a></p>
 </div>
 <div id="comment-41519-info" class="comment-info">
 <span class="comment-age">(05 Mar '15, 21:53)</span> <span class="comment-user userinfo">LivingWithDr...</span>
@@ -176,7 +176,7 @@ osqa_accepted = false
 <div id="post-41520-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10615/asafche">@asafche</a>: Likely you just have to wait (and/or clear your browser's cache). Please provide a location/object link.</p>
+<p><a href="https://help.openstreetmap.org/users/10615/asafche">@asafche</a>: Likely you just have to wait (and/or clear your browser's cache). Please provide a location/object link.</p>
 </div>
 <div id="comment-41520-info" class="comment-info">
 <span class="comment-age">(05 Mar '15, 21:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -187,7 +187,7 @@ osqa_accepted = false
 <div id="post-41523-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2528/livingwithdragons">@LivingWithDragons</a>: do you know why its on the Humanitarian map layer?</p>
+<p><a href="https://help.openstreetmap.org/users/2528/livingwithdragons">@LivingWithDragons</a>: do you know why its on the Humanitarian map layer?</p>
 </div>
 <div id="comment-41523-info" class="comment-info">
 <span class="comment-age">(05 Mar '15, 21:59)</span> <span class="comment-user userinfo">asafche</span>
@@ -199,7 +199,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10615/asafche">@asafche</a>: All layers use the same data but each layer is updated individually. Usually the default layer is updated the fastest but not always, depending on the current server load.</p>
+<p><a href="https://help.openstreetmap.org/users/10615/asafche">@asafche</a>: All layers use the same data but each layer is updated individually. Usually the default layer is updated the fastest but not always, depending on the current server load.</p>
 </div>
 <div id="comment-41536-info" class="comment-info">
 <span class="comment-age">(06 Mar '15, 10:36)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -241,9 +241,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that the problem here is actually a timing one - see <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> for a detailed answer. Footpaths are something that's generally shown on the main map, so they should appear, provided that they have been tagged correctly. As aseerel4c26 said above, if you provide a link to the area we'll be able to check that.</p>
+<p>I suspect that the problem here is actually a timing one - see <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> for a detailed answer. Footpaths are something that's generally shown on the main map, so they should appear, provided that they have been tagged correctly. As aseerel4c26 said above, if you provide a link to the area we'll be able to check that.</p>
 <p>(adding to this now that we know the location)</p>
-<p>If you zoom in to a reasonable amount (your <a href="http://www.openstreetmap.org/#map=18/32.71410/35.12839">zoom level 18 link</a> is fine) and then select the layer switcher (the "stack of books" at the right). You can then tick a box for "map data" and some blue lines will appear. You can click on them, and that allows you to link to an object, such as <a href="http://www.openstreetmap.org/way/331344011#map=18/32.71409/35.12726&amp;layers=D">your new footpath</a>. It looks like it's tagged correctly to me, so will show up when the rendering servers (which are very busy right now) get around to it. It normally happens fast than it's happening at the moment.</p>
+<p>If you zoom in to a reasonable amount (your <a href="https://www.openstreetmap.org/#map=18/32.71410/35.12839">zoom level 18 link</a> is fine) and then select the layer switcher (the "stack of books" at the right). You can then tick a box for "map data" and some blue lines will appear. You can click on them, and that allows you to link to an object, such as <a href="https://www.openstreetmap.org/way/331344011#map=18/32.71409/35.12726&amp;layers=D">your new footpath</a>. It looks like it's tagged correctly to me, so will show up when the rendering servers (which are very busy right now) get around to it. It normally happens fast than it's happening at the moment.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -298,7 +298,7 @@ osqa_accepted = false
 <div id="post-41534-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> It doesn't effectively communicate that. It does, in a lower paragraph, say "Check if the map you are using shows the update interval or actual date and time" but it's mostly about "I've mapped something that isn't rendered on the main map; how do I see it".</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> It doesn't effectively communicate that. It does, in a lower paragraph, say "Check if the map you are using shows the update interval or actual date and time" but it's mostly about "I've mapped something that isn't rendered on the main map; how do I see it".</p>
 </div>
 <div id="comment-41534-info" class="comment-info">
 <span class="comment-age">(06 Mar '15, 10:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

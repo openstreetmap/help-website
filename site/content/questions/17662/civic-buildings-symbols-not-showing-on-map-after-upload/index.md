@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not every possible <a href="http://wiki.openstreetmap.org/wiki/Map_Features">map feature</a> will be rendered on our main map because there are just too many things you can map, this has already been <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">answered multiple times</a> here. However if you have good areal imagery in this area you can draw the building outlines, add <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=yes</a> and all the tags from your nodes (and delete the original node), then you will see the building on the map and most probably also the name if there is enough space to draw it.</p>
+<p>Not every possible <a href="https://wiki.openstreetmap.org/wiki/Map_Features">map feature</a> will be rendered on our main map because there are just too many things you can map, this has already been <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">answered multiple times</a> here. However if you have good areal imagery in this area you can draw the building outlines, add <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=yes</a> and all the tags from your nodes (and delete the original node), then you will see the building on the map and most probably also the name if there is enough space to draw it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

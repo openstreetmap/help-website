@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM / JAVA : latitude &amp; longitude for each point of the tile"
-description = '''Hi everyone It&#x27;s my first time using osm, which is a great project. I am using osm tiles in a java program. I get each tile using url like : http://a.tile.openstreetmap.org/zoom/x/y.png I choose latitude &amp;amp; longitude and get x &amp;amp; y, thanks to the wiki : http://wiki.openstreetmap.org/wiki/Slipp...'''
+description = '''Hi everyone It&#x27;s my first time using osm, which is a great project. I am using osm tiles in a java program. I get each tile using url like : http://a.tile.openstreetmap.org/zoom/x/y.png I choose latitude &amp;amp; longitude and get x &amp;amp; y, thanks to the wiki : https://wiki.openstreetmap.org/wiki/Slipp...'''
 date = "2013-01-31T22:02:00Z"
 lastmod = "2013-01-31T22:02:00Z"
 weight = 19502
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi everyone</p>
 <p>It's my first time using osm, which is a great project. I am using osm tiles in a java program. I get each tile using url like : <a href="http://a.tile.openstreetmap.org/zoom/x/y.png">http://a.tile.openstreetmap.org/zoom/x/y.png</a></p>
-<p>I choose latitude &amp; longitude and get x &amp; y, thanks to the wiki : <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a> But i only know the latitude &amp; longitude in the middle of my tile. How could i know latitude &amp; longitude for each point of the tile ?</p>
+<p>I choose latitude &amp; longitude and get x &amp; y, thanks to the wiki : <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a> But i only know the latitude &amp; longitude in the middle of my tile. How could i know latitude &amp; longitude for each point of the tile ?</p>
 <p>Thanks Gabriel</p>
 </div>
 <div id="question-tags" class="tags-container tags">

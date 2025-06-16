@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "deleted node?"
-description = '''After a few years my node dissapeared? What is a reason for this? And how to appear again? http://www.openstreetmap.org/browse/node/1534483028/history'''
+description = '''After a few years my node dissapeared? What is a reason for this? And how to appear again? https://www.openstreetmap.org/browse/node/1534483028/history'''
 date = "2013-05-14T23:21:00Z"
 lastmod = "2013-05-15T08:44:00Z"
 weight = 22443
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>After a few years my node dissapeared? What is a reason for this? And how to appear again?</p>
-<p><a href="http://www.openstreetmap.org/browse/node/1534483028/history">http://www.openstreetmap.org/browse/node/1534483028/history</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/1534483028/history">https://www.openstreetmap.org/browse/node/1534483028/history</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span>

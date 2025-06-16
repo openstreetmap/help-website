@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've been editing the wetland along the Akagera River and it is surrounded by an extensive wetland. But in one section, there is a glitch; the wetland becomes inverted. Basically, the wetland side of the area is facing the land. It looks like there is a kind of <em>ghost</em> wetland area designation that is causing this inversion, but I cannot edit or even select this feature as no nodes are visible. When I try to select it, all editing features are greyed out. Here is the link: ﻿﻿﻿﻿<a href="http://www.openstreetmap.org/edit#map=16/-1.9066/30.8882">http://www.openstreetmap.org/edit#map=16/-1.9066/30.8882</a> Thanks for your help.</p>
+<p>I've been editing the wetland along the Akagera River and it is surrounded by an extensive wetland. But in one section, there is a glitch; the wetland becomes inverted. Basically, the wetland side of the area is facing the land. It looks like there is a kind of <em>ghost</em> wetland area designation that is causing this inversion, but I cannot edit or even select this feature as no nodes are visible. When I try to select it, all editing features are greyed out. Here is the link: ﻿﻿﻿﻿<a href="https://www.openstreetmap.org/edit#map=16/-1.9066/30.8882">https://www.openstreetmap.org/edit#map=16/-1.9066/30.8882</a> Thanks for your help.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-reversed" rel="tag" title="see questions tagged &#39;reversed&#39;">reversed</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span> <span class="post-tag tag-link-inverted" rel="tag" title="see questions tagged &#39;inverted&#39;">inverted</span>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't see it rendering at all, and I actually wouldn't expect it to. There seems to be a break in <a href="http://www.openstreetmap.org/relation/1709600">the relation</a>, which makes the multipolygon unclosed and unable to render. You can see where the gap is (around the north end of Lake Ihema) by putting relation 1709600 into <a href="http://analyser.openstreetmap.fr/cgi-bin/index.py">this relation analyzer</a>.</p>
+<p>I don't see it rendering at all, and I actually wouldn't expect it to. There seems to be a break in <a href="https://www.openstreetmap.org/relation/1709600">the relation</a>, which makes the multipolygon unclosed and unable to render. You can see where the gap is (around the north end of Lake Ihema) by putting relation 1709600 into <a href="http://analyser.openstreetmap.fr/cgi-bin/index.py">this relation analyzer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -132,7 +132,7 @@ One Answer:
 <div id="post-45583-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks Alester. I've closed in the area (but there seem to be a few additional problems. Have a look at this: <a href="http://www.openstreetmap.org/edit#map=16/-1.8985/30.7949">http://www.openstreetmap.org/edit#map=16/-1.8985/30.7949</a></p>
+<p>Thanks Alester. I've closed in the area (but there seem to be a few additional problems. Have a look at this: <a href="https://www.openstreetmap.org/edit#map=16/-1.8985/30.7949">https://www.openstreetmap.org/edit#map=16/-1.8985/30.7949</a></p>
 <p>Can you point me in the direction of documentation for the relation analyzer (where did you get the number 1709600 to drop into the analyzer?). I thought I had Lake Ihema mapped very nicely, and then someone duplicated a number of areas leaving some of them incomplete and it's a bit of a mess right now (I would also like to find out how to contact another mapper to work out a solution to this kind of problem). Thanks again.</p>
 </div>
 <div id="comment-45583-info" class="comment-info">
@@ -145,7 +145,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11510/pastorj">@PastorJ</a>: regarding your <em>second paragraph</em>: <span>this is the only short docu</span> which I could find. The "number" is the relations object id in the OSM data (this is nothing "analyzer" specific)- see <a href="/questions/22378/is-there-a-way-to-view-node-or-way-ids-in-the-id-editor">there</a> or <span>there</span> how to find it out. And see <a href="/questions/10236/how-to-contact-another-mapper">there</a> for how to contact. Try to search this page and the wiki first, is a good idea if you have questions.</p>
+<p><a href="https://help.openstreetmap.org/users/11510/pastorj">@PastorJ</a>: regarding your <em>second paragraph</em>: <span>this is the only short docu</span> which I could find. The "number" is the relations object id in the OSM data (this is nothing "analyzer" specific)- see <a href="/questions/22378/is-there-a-way-to-view-node-or-way-ids-in-the-id-editor">there</a> or <span>there</span> how to find it out. And see <a href="/questions/10236/how-to-contact-another-mapper">there</a> for how to contact. Try to search this page and the wiki first, is a good idea if you have questions.</p>
 </div>
 <div id="comment-45584-info" class="comment-info">
 <span class="comment-age">(25 Sep '15, 06:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

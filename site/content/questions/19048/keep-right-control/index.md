@@ -68,7 +68,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>A very specific thing: Is that really wrongly shown as a potential problem? The restaurant is named <a href="http://www.openstreetmap.org/browse/node/1752415109">'t Lagerhuis</a> in OSM but its website only mentions <em>'t Lagerhuys</em>.</p>
+<p>A very specific thing: Is that really wrongly shown as a potential problem? The restaurant is named <a href="https://www.openstreetmap.org/browse/node/1752415109">'t Lagerhuis</a> in OSM but its website only mentions <em>'t Lagerhuys</em>.</p>
 </div>
 <div id="comment-19051-info" class="comment-info">
 <span class="comment-age">(14 Jan '13, 00:23)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

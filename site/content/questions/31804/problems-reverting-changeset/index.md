@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>As a continuation of <a href="https://help.openstreetmap.org/questions/31732/oops-inadvertently-deleted-a-way-need-help-restoring">this question</a> I would like to revert changeset <a href="http://www.openstreetmap.org/changeset/21219686">21219686</a>. But I am having trouble doing this with two different methods.</p>
+<p>As a continuation of <a href="/questions/31732/oops-inadvertently-deleted-a-way-need-help-restoring">this question</a> I would like to revert changeset <a href="https://www.openstreetmap.org/changeset/21219686">21219686</a>. But I am having trouble doing this with two different methods.</p>
 <ol>
 <li><p>JOSM reverter plugin - the connection times out.</p></li>
 <li><p>Perl script - I get the following error:</p>

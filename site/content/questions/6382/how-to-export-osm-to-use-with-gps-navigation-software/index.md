@@ -110,8 +110,8 @@ osqa_accepted = false
 <li>Download the data from OSM and convert it into something that your GPS device can understand.</li>
 <li>Download data that your GPS device can understand from someone who's already converted it for you.</li>
 </ol>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Planet">Planet</a> page in the wiki describes various ways of getting raw data that you could use to convert it yourself. If you want to download maps ready to go, then your best bet is to search the OSM wiki (and this help site) for the brand of your GPS device.</p>
-<p>Taking a specific example, if you've got a Garmin device, then <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">this page</a> describes information both about "Pre-made maps" and "Creating your own maps from OSM data".</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Planet">Planet</a> page in the wiki describes various ways of getting raw data that you could use to convert it yourself. If you want to download maps ready to go, then your best bet is to search the OSM wiki (and this help site) for the brand of your GPS device.</p>
+<p>Taking a specific example, if you've got a Garmin device, then <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">this page</a> describes information both about "Pre-made maps" and "Creating your own maps from OSM data".</p>
 <p>If you have a GPS device that isn't mentioned on the wiki or in other help questions, then it's still worth asking whether there's any way of getting an OSM map onto it - someone may have done it even though it's not documented here yet.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -162,9 +162,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>if you're talking about offline navigation, then it still depends on your GPS device. If it's an Android phone, I'd highly recommend using <a href="http://wiki.openstreetmap.org/wiki/Osmand">OsmAnd</a></p>
+<p>if you're talking about offline navigation, then it still depends on your GPS device. If it's an Android phone, I'd highly recommend using <a href="https://wiki.openstreetmap.org/wiki/Osmand">OsmAnd</a></p>
 <p>You can load your gpx tracks in addition to offline maps (by regions). I find it really conveniant.</p>
-<p>Anyway, if you have a standard GPS device such as Tomtom, I don't think it's possible to load extra updated OSM maps within its closed source navigation software: <a href="http://wiki.openstreetmap.org/wiki/Tomtom">http://wiki.openstreetmap.org/wiki/Tomtom</a></p>
+<p>Anyway, if you have a standard GPS device such as Tomtom, I don't think it's possible to load extra updated OSM maps within its closed source navigation software: <a href="https://wiki.openstreetmap.org/wiki/Tomtom">https://wiki.openstreetmap.org/wiki/Tomtom</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

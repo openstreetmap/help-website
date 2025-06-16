@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>There used to appear a plus sign between two connected nodes after selecting a path for editing in JOSM. Clicking that plus sign after selecting the path , used to add another node between two nodes. I'm not seeing this anymore for several days. I have tried many ways, also searched on internet, found nowhere about this problem. In this time, i've updated several times my josm, reset my config file {by crash or by myself }, still that plus sign never came.</p>
 <p>anybody can help me about it? this feature is so needy. To add nodes on existing way, every time clicking draw node [A], then adding node and pressing esc is annoying.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/no_plus_sign_between_two_nodes_in_josm.png" alt="no plus sign between two nodes in josm" /></p>
+<p><img src="/upfiles/no_plus_sign_between_two_nodes_in_josm.png" alt="no plus sign between two nodes in josm" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-node" rel="tag" title="see questions tagged &#39;node&#39;">node</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span>

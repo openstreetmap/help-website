@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "I added some road name and are not found on nominatim"
-description = '''After 6 days since I inserted the street names I still can&#x27;t search for this street information. I visited this page http://wiki.openstreetmap.org/wiki/Nominatim/FAQ  My data is still missing and it&#x27;s been several days Check the date of the latest data refresh at the top of http://nominatim.openstre...'''
+description = '''After 6 days since I inserted the street names I still can&#x27;t search for this street information. I visited this page https://wiki.openstreetmap.org/wiki/Nominatim/FAQ  My data is still missing and it&#x27;s been several days Check the date of the latest data refresh at the top of http://nominatim.openstre...'''
 date = "2011-01-30T20:56:00Z"
 lastmod = "2011-01-31T04:19:00Z"
 weight = 2572
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After 6 days since I inserted the street names I still can't search for this street information. I visited this page <a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ"></a><a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ"></a><a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ">http://wiki.openstreetmap.org/wiki/Nominatim/FAQ</a></p>
+<p>After 6 days since I inserted the street names I still can't search for this street information. I visited this page <a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ"></a><a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ"></a><a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ">https://wiki.openstreetmap.org/wiki/Nominatim/FAQ</a></p>
 <blockquote>
 My data is still missing and it's been several days Check the date of the latest data refresh at the top of <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> as there may be a delay with the refresh. If it's up to date, you can verify if your data has been loaded and force it to be indexed using the following url <a href="http://nominatim.openstreetmap.org/details?osmtype=%5BN%7CW%7CR%5D&amp;osmid=">http://nominatim.openstreetmap.org/details?osmtype=[N|W|R]&amp;osmid=</a>&lt;idnumber&gt; If no item is found then your data has not been loaded, please report the problem and the osm id number of the feature using <a href="http://trac.openstreetmap.org">trac.openstreetmap.org</a>.
 </blockquote>
@@ -130,7 +130,7 @@ One Answer:
 <div id="post-2577-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The talk page for Nominatim seems to suggest that it is not currently updating. <a href="http://wiki.openstreetmap.org/wiki/Talk:Nominatim#nominatim_not_up_to_date_.28january_2011.29">http://wiki.openstreetmap.org/wiki/Talk:Nominatim#nominatim_not_up_to_date_.28january_2011.29</a></p>
+<p>The talk page for Nominatim seems to suggest that it is not currently updating. <a href="https://wiki.openstreetmap.org/wiki/Talk:Nominatim#nominatim_not_up_to_date_.28january_2011.29">https://wiki.openstreetmap.org/wiki/Talk:Nominatim#nominatim_not_up_to_date_.28january_2011.29</a></p>
 </div>
 <div id="comment-2577-info" class="comment-info">
 <span class="comment-age">(31 Jan '11, 04:19)</span> <span class="comment-user userinfo">Ebenezer</span>

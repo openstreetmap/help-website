@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've been following the directions located <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql#From_source_.28generic.29">here</a>, but when I run "./configure" I get this at the bottom:<br />
+<p>I've been following the directions located <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql#From_source_.28generic.29">here</a>, but when I run "./configure" I get this at the bottom:<br />
 <br />
 checking for xml2-config... /usr/bin/xml2-config<br />
 checking for xml2 libraries... yes<br />

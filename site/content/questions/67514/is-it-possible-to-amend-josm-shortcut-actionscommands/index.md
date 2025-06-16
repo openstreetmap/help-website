@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There may be a better way, but you can cheat a little bit and add the action to the toolbar. It will then appear as an entry in the keyboard shortcut panel:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2019-01-08_14-17-37b.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2019-01-08_14-17-37b.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

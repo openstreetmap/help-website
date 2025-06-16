@@ -112,7 +112,7 @@ So how to tag this -------^ part of the street?
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed#Driving_direction">http://wiki.openstreetmap.org/wiki/Key:maxspeed#Driving_direction</a> Note you will have to split the street multiple times for this to work.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed#Driving_direction">https://wiki.openstreetmap.org/wiki/Key:maxspeed#Driving_direction</a> Note you will have to split the street multiple times for this to work.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

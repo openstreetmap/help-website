@@ -157,7 +157,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please see <span>this other answer how to report bugs/problems at specific places of the map</span>. Thank you!</p>
-<p>Okay, <a href="http://www.openstreetmap.org/browse/changeset/15661081">it seems that you already have deleted the old road</a>. Anyway, if you find problems which you cannot solve yourself report them in OpenStreetBugs (see my first link) or ask/search here how to do the edit.</p>
+<p>Okay, <a href="https://www.openstreetmap.org/browse/changeset/15661081">it seems that you already have deleted the old road</a>. Anyway, if you find problems which you cannot solve yourself report them in OpenStreetBugs (see my first link) or ask/search here how to do the edit.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,7 +210,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you read the beginers guide you will find it is a fairly simple edit. Hi light the bit that as gone and either down grade it if it can be used in any way (walking for example) or if dug up delete it. It is here I think <a href="http://www.openstreetmap.org/?lat=12.6816&amp;lon=-87.2239&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=12.6816&amp;lon=-87.2239&amp;zoom=14&amp;layers=M</a> just checked and old road is deleted so link only shows replacement.</p>
+<p>If you read the beginers guide you will find it is a fairly simple edit. Hi light the bit that as gone and either down grade it if it can be used in any way (walking for example) or if dug up delete it. It is here I think <a href="https://www.openstreetmap.org/?lat=12.6816&amp;lon=-87.2239&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=12.6816&amp;lon=-87.2239&amp;zoom=14&amp;layers=M</a> just checked and old road is deleted so link only shows replacement.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

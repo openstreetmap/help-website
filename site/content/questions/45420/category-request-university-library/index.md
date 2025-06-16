@@ -77,7 +77,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>If you come across some new feature that no-one has mapped before you don't need to "ask for a category to be added" - you can use any tags you like. This page</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">http://wiki.openstreetmap.org/wiki/Any_tags_you_like</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">https://wiki.openstreetmap.org/wiki/Any_tags_you_like</a></p>
 <p>explains a bit about when that's a good idea. In this case however each one is clearly a library, albeit with rules about who's allowed in and what people are allowed to borrow, so I don't think that a "new category" is needed at all.</p>
 </div>
 <div id="comment-45473-info" class="comment-info">

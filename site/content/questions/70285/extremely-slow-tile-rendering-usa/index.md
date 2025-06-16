@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Tile generation is extremely slow for all of USA at least: <a href="https://www.openstreetmap.org/#map=19/39.94884/-75.16229">https://www.openstreetmap.org/#map=19/39.94884/-75.16229</a></p>
 <p>However, the .DE version (German style) works great and fast. <a href="https://www.openstreetmap.de/karte.html">https://www.openstreetmap.de/karte.html</a></p>
 <p><strong>Questions:</strong> Why does this issue occur? Is there any estimations of when it will be back to normal speed? Any ideas of how to use this map on my application without it being slow? I use Leaflet.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/slow_render.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/slow_render.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span> <span class="post-tag tag-link-slow" rel="tag" title="see questions tagged &#39;slow&#39;">slow</span>

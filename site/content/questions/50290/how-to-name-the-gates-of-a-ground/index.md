@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's a tricky question. Personally I wouldn't actually go for "XX Univ Northern Gate" unless that really is the name of the gate (e.g. on a sign). If it doesn't have a name at all I probably wouldn't give it one. As an example, I didn't name either of the entrances to <a href="http://www.openstreetmap.org/way/4634851">BBC Studios Elstree</a>, but did add "entrance=main" and "entrance=audience" as that's what they're labelled as. I wouldn't expect a search engine such as Nominatim to be able to use that though; ultimately a human is making the journey and they'll be able to say to themselves "this is a gate into XX Univ, and it is the northernmost of all of such gates, so it is where I want to go".</p>
+<p>It's a tricky question. Personally I wouldn't actually go for "XX Univ Northern Gate" unless that really is the name of the gate (e.g. on a sign). If it doesn't have a name at all I probably wouldn't give it one. As an example, I didn't name either of the entrances to <a href="https://www.openstreetmap.org/way/4634851">BBC Studios Elstree</a>, but did add "entrance=main" and "entrance=audience" as that's what they're labelled as. I wouldn't expect a search engine such as Nominatim to be able to use that though; ultimately a human is making the journey and they'll be able to say to themselves "this is a gate into XX Univ, and it is the northernmost of all of such gates, so it is where I want to go".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

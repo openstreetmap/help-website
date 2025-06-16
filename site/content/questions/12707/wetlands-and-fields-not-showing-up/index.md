@@ -104,9 +104,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At least <a href="http://www.openstreetmap.org/browse/way/163534673">way 163534673</a> is visible to me.</p>
-<p>I think the problem is that you didn't wait long enough to let the renderer handle your edits, as described in the FAQ: <a href="http://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a></p>
-<p>A potential problem is that you have added overlapping land usages. I if an area is covered by both landuse A and landuse B then, depending of how the renderer is constructed, it may be a matter of coincidence which landuse is rendered over the other. The solution to that is to use a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relation</a> and for example cut holes in the forest where you put your lakes, meadows etc.</p>
+<p>At least <a href="https://www.openstreetmap.org/browse/way/163534673">way 163534673</a> is visible to me.</p>
+<p>I think the problem is that you didn't wait long enough to let the renderer handle your edits, as described in the FAQ: <a href="https://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a></p>
+<p>A potential problem is that you have added overlapping land usages. I if an area is covered by both landuse A and landuse B then, depending of how the renderer is constructed, it may be a matter of coincidence which landuse is rendered over the other. The solution to that is to use a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relation</a> and for example cut holes in the forest where you put your lakes, meadows etc.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

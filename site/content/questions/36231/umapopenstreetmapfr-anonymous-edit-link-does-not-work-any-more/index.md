@@ -74,7 +74,7 @@ osqa_accepted = true
 <div id="post-36234-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Yes, sounds like the same problem, although that reporter did not mention "umap" or any specific URL.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Yes, sounds like the same problem, although that reporter did not mention "umap" or any specific URL.</p>
 </div>
 <div id="comment-36234-info" class="comment-info">
 <span class="comment-age">(26 Aug '14, 23:49)</span> <span class="comment-user userinfo">lathspell</span>
@@ -86,7 +86,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Thanks for the report <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, it should be fixed now!</p>
+<p>Thanks for the report <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, it should be fixed now!</p>
 </div>
 <div id="comment-36247-info" class="comment-info">
 <span class="comment-age">(27 Aug '14, 08:36)</span> <span class="comment-user userinfo">ybon</span>
@@ -98,7 +98,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Yes, works again, thanks <a href="http://help.openstreetmap.org/users/4961/ybon">@ybon</a>!</p>
+<p>Yes, works again, thanks <a href="https://help.openstreetmap.org/users/4961/ybon">@ybon</a>!</p>
 </div>
 <div id="comment-36251-info" class="comment-info">
 <span class="comment-age">(27 Aug '14, 09:16)</span> <span class="comment-user userinfo">lathspell</span>
@@ -175,7 +175,7 @@ One Answer:
 <div id="post-36235-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The feedback button points to <a href="http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a> and from there I got the link to this forum :-)</p>
+<p>The feedback button points to <a href="https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a> and from there I got the link to this forum :-)</p>
 </div>
 <div id="comment-36235-info" class="comment-info">
 <span class="comment-age">(26 Aug '14, 23:53)</span> <span class="comment-user userinfo">lathspell</span>

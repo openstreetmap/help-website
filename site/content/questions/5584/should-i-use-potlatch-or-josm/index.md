@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The difference between the two "big" editors - <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> and <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a> - isn't as large as it used to be:</p>
+<p>The difference between the two "big" editors - <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> and <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a> - isn't as large as it used to be:</p>
 <ul>
 <li>both now use explicit "uploads", rather than live edits like Potlatch 1</li>
 <li>both support aerial imagery out of the box</li>
@@ -195,7 +195,7 @@ osqa_accepted = false
 </ul>
 <p>However, JOSM offers several unique advanced features that are <em>afaik</em> unparalleled in Potlatch 2. This includes:</p>
 <ul>
-<li>support for more mapping styles: <a href="http://wiki.openstreetmap.org/wiki/Audio_mapping">audio mapping</a>, <a href="http://wiki.openstreetmap.org/wiki/Photo_mapping">photo mapping</a></li>
+<li>support for more mapping styles: <a href="https://wiki.openstreetmap.org/wiki/Audio_mapping">audio mapping</a>, <a href="https://wiki.openstreetmap.org/wiki/Photo_mapping">photo mapping</a></li>
 <li>some additional geometry tools</li>
 <li>a powerful search function for complex selections and edits</li>
 <li>the ability to easily install plugins, and configure various aspects of the editor in detail</li>
@@ -204,7 +204,7 @@ osqa_accepted = false
 </ul>
 <p>Potlatch 2 can be useful if you need to perform a quick edit on a computer where no JOSM installation is present. JOSM <em>can</em> be used without installation using the "Web Start" feature on <a href="http://josm.openstreetmap.de/">josm.openstreetmap.de</a>, but Flash is more likely installed on foreign computers than Java, and Potlatch 2 is clearly optimized for online use.</p>
 <p>If you are looking for the editor that offers most functionality, I clearly recommend JOSM. Look into Potlatch 2 if you value a more gentle learning curve or want the easy online access. And don't stop learning once you know how to use your first editor.</p>
-<p>Btw, while JOSM and Potlatch (2) are the most popular choices, you might want to see what else the OSM developer community has to offer. Have a look at the wiki's <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">Comparison of editors</a> for some pros/cons of the available editing tools.</p>
+<p>Btw, while JOSM and Potlatch (2) are the most popular choices, you might want to see what else the OSM developer community has to offer. Have a look at the wiki's <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">Comparison of editors</a> for some pros/cons of the available editing tools.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

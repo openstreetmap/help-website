@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] How to remove mass spam in User Diaries?"
-description = '''Hi, Is there any way to remove mass spamming here please? http://www.openstreetmap.org/user/%E5%A4%A9%E9%81%93%E5%B0%8F%E5%AD%90 At least 400 entries within the past hour. I&#x27;m willing to help with removal if it is something that I can do. Just tell me the steps please.'''
+description = '''Hi, Is there any way to remove mass spamming here please? https://www.openstreetmap.org/user/%E5%A4%A9%E9%81%93%E5%B0%8F%E5%AD%90 At least 400 entries within the past hour. I&#x27;m willing to help with removal if it is something that I can do. Just tell me the steps please.'''
 date = "2014-07-09T06:45:00Z"
 lastmod = "2014-07-09T13:38:00Z"
 weight = 34750
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, Is there any way to remove mass spamming here please? <a href="http://www.openstreetmap.org/user/%E5%A4%A9%E9%81%93%E5%B0%8F%E5%AD%90">http://www.openstreetmap.org/user/%E5%A4%A9%E9%81%93%E5%B0%8F%E5%AD%90</a> At least 400 entries within the past hour.</p>
+<p>Hi, Is there any way to remove mass spamming here please? <a href="https://www.openstreetmap.org/user/%E5%A4%A9%E9%81%93%E5%B0%8F%E5%AD%90">https://www.openstreetmap.org/user/%E5%A4%A9%E9%81%93%E5%B0%8F%E5%AD%90</a> At least 400 entries within the past hour.</p>
 <p>I'm willing to help with removal if it is something that I can do. Just tell me the steps please.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -69,7 +69,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/9533/spam-in-user-diaries">https://help.openstreetmap.org/questions/9533/spam-in-user-diaries</a></p>
+<p>See <a href="/questions/9533/spam-in-user-diaries">https://help.openstreetmap.org/questions/9533/spam-in-user-diaries</a></p>
 </div>
 <div id="comment-34754-info" class="comment-info">
 <span class="comment-age">(09 Jul '14, 08:06)</span> <span class="comment-user userinfo">hfs</span>

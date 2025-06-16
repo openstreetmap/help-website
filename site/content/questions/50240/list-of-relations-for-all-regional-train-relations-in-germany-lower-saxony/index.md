@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a rather special question: Is it useful to a have a list of all regional train relations (in Germany)? It might be vastly out-of-date if no one keeps track of it. In my user space I already prepared <a href="http://wiki.openstreetmap.org/wiki/User:Nobelium/WikiProject_Germany/Nahverkehr/Niedersachsen">a version</a> for the state Lower Saxony.</p>
+<p>I have a rather special question: Is it useful to a have a list of all regional train relations (in Germany)? It might be vastly out-of-date if no one keeps track of it. In my user space I already prepared <a href="https://wiki.openstreetmap.org/wiki/User:Nobelium/WikiProject_Germany/Nahverkehr/Niedersachsen">a version</a> for the state Lower Saxony.</p>
 <hr />
-<p>Ich habe eine eher spezielle Frage: Ist es sinnvoll eine Liste mit allen RE und RB Relationen zu haben? Es mag ziemlich schnell veralten, wenn es niemand pflegt. In meinem Userspace habe ich bereits <a href="http://wiki.openstreetmap.org/wiki/User:Nobelium/WikiProject_Germany/Nahverkehr/Niedersachsen">eine Version</a> für Niedersachsen erstellt.</p>
+<p>Ich habe eine eher spezielle Frage: Ist es sinnvoll eine Liste mit allen RE und RB Relationen zu haben? Es mag ziemlich schnell veralten, wenn es niemand pflegt. In meinem Userspace habe ich bereits <a href="https://wiki.openstreetmap.org/wiki/User:Nobelium/WikiProject_Germany/Nahverkehr/Niedersachsen">eine Version</a> für Niedersachsen erstellt.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-germany" rel="tag" title="see questions tagged &#39;germany&#39;">germany</span> <span class="post-tag tag-link-train" rel="tag" title="see questions tagged &#39;train&#39;">train</span> <span class="post-tag tag-link-osmwiki" rel="tag" title="see questions tagged &#39;osmwiki&#39;">osmwiki</span>

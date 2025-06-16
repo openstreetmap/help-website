@@ -184,7 +184,7 @@ GR</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Chrome has to be updated (Help --&gt; About Chrome). Afterwards everything works fine again. Question was already asked. Thanks to Amaryllis for the answer. <a href="https://help.openstreetmap.org/questions/41129/id-editor-in-chrome-browser-i-click-on-existing-objects-and-it-does-not-select-them/42698">https://help.openstreetmap.org/questions/41129/id-editor-in-chrome-browser-i-click-on-existing-objects-and-it-does-not-select-them/42698</a></p>
+<p>Chrome has to be updated (Help --&gt; About Chrome). Afterwards everything works fine again. Question was already asked. Thanks to Amaryllis for the answer. <a href="/questions/41129/id-editor-in-chrome-browser-i-click-on-existing-objects-and-it-does-not-select-them/42698">https://help.openstreetmap.org/questions/41129/id-editor-in-chrome-browser-i-click-on-existing-objects-and-it-does-not-select-them/42698</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

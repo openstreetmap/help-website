@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a frequently asked question. Please read the answers to the existing question, <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>. The next time you have a question please use the search function to check if the question has already been asked and answered before posting.</p>
+<p>This is a frequently asked question. Please read the answers to the existing question, <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>. The next time you have a question please use the search function to check if the question has already been asked and answered before posting.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

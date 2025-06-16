@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there some documentation on the response of Nominatim search? For instance, what are the possible values for type or class? Is the importance a measure of how close my search was to the result?</p>
-<p>I have seen the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a>, but i think it lacks such info.</p>
+<p>I have seen the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a>, but i think it lacks such info.</p>
 <p>I would also like to know if there is such documentation for the response of the Reverse service.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -199,11 +199,11 @@ osqa_accepted = false
 <li>The magnification and triple tap on the phone is a good suggestion. Allthough I do not neeed that when watching other maps. I will try to add some screenshots here of my basic code, the map I see on my phone and a few maps like googlemaps, here (we go) and gigitravel. They are just screenshots from my phone while on wifi viewing the sites. Of course the size on a big screen doesn't correspond the mobilephone size in my examples, but it gives an idea of the size of the city names relative to the mobile screen (shot I just made). So first my code, then my result page and after that google maps, here we go and gigitravel on my phone.</li>
 </ul>
 <p>I will continue the other suggestions after these screenshots loaded well.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/code0.jpg" alt="my code" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-03-27-10-18-20.png" alt="my result page" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-03-27-10-11-18.png" alt="google maps" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-03-27-10-13-03.png" alt="here we go" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-03-27-10-08-50.png" alt="gigitravel" /></p>
+<p><img src="/upfiles/code0.jpg" alt="my code" /></p>
+<p><img src="/upfiles/Screenshot_2020-03-27-10-18-20.png" alt="my result page" /></p>
+<p><img src="/upfiles/Screenshot_2020-03-27-10-11-18.png" alt="google maps" /></p>
+<p><img src="/upfiles/Screenshot_2020-03-27-10-13-03.png" alt="here we go" /></p>
+<p><img src="/upfiles/Screenshot_2020-03-27-10-08-50.png" alt="gigitravel" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

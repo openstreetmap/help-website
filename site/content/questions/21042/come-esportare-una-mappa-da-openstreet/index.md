@@ -297,7 +297,7 @@ osqa_accepted = false
 <div id="post-21049-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Mario, thanks, did you look at this site ? <a href="http://wiki.openstreetmap.org/w/index.php?search=exporting+OSM+maps&amp;title=Special%3ASearch&amp;fulltext=1">http://wiki.openstreetmap.org/w/index.php?search=exporting+OSM+maps&amp;title=Special%3ASearch&amp;fulltext=1</a> There should be an answer for your question somewhere. Or just ad your question how to export OSM maps, in the blank window on top of this question menu right below the dark blue Qestions. Keep mapping</p>
+<p>Hi Mario, thanks, did you look at this site ? <a href="https://wiki.openstreetmap.org/w/index.php?search=exporting+OSM+maps&amp;title=Special%3ASearch&amp;fulltext=1">https://wiki.openstreetmap.org/w/index.php?search=exporting+OSM+maps&amp;title=Special%3ASearch&amp;fulltext=1</a> There should be an answer for your question somewhere. Or just ad your question how to export OSM maps, in the blank window on top of this question menu right below the dark blue Qestions. Keep mapping</p>
 </div>
 <div id="comment-21049-info" class="comment-info">
 <span class="comment-age">(28 Mar '13, 12:35)</span> <span class="comment-user userinfo">Hendrikklaas</span>

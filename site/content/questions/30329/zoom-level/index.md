@@ -109,7 +109,7 @@ osqa_accepted = false
 <ul>
 <li>in Potlatch 2, hold down "space" and drag the background</li>
 <li>in iD, open the Background menu, at the bottom there is a Fix Alignment menu with arrows you can use to make adjustments</li>
-<li>in JOSM, offset settings can be found at Imagery -&gt; Imagery offset. There is also an <a href="http://wiki.openstreetmap.org/wiki/Imagery_Offset_Database">imagery offset database</a> which can be <a href="http://wiki.openstreetmap.org/wiki/Imagery_Offset_Database/Quick_Start">used in JOSM via the imagery_offset_db plugin</a>.</li>
+<li>in JOSM, offset settings can be found at Imagery -&gt; Imagery offset. There is also an <a href="https://wiki.openstreetmap.org/wiki/Imagery_Offset_Database">imagery offset database</a> which can be <a href="https://wiki.openstreetmap.org/wiki/Imagery_Offset_Database/Quick_Start">used in JOSM via the imagery_offset_db plugin</a>.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -133,7 +133,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>JOSM's offset settings can be found at <em>Imagery -&gt; Imagery offset</em>. There is also an <a href="http://wiki.openstreetmap.org/wiki/Imagery_Offset_Database">imagery offset database</a> which can be <a href="http://wiki.openstreetmap.org/wiki/Imagery_Offset_Database/Quick_Start">used in JOSM via the imagery_offset_db plugin</a>.</p>
+<p>JOSM's offset settings can be found at <em>Imagery -&gt; Imagery offset</em>. There is also an <a href="https://wiki.openstreetmap.org/wiki/Imagery_Offset_Database">imagery offset database</a> which can be <a href="https://wiki.openstreetmap.org/wiki/Imagery_Offset_Database/Quick_Start">used in JOSM via the imagery_offset_db plugin</a>.</p>
 </div>
 <div id="comment-30335-info" class="comment-info">
 <span class="comment-age">(30 Jan '14, 17:09)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, could you post a link to the location where your footpaths are or where you want them to add ? Feel free to add your footpaths anyway and keep a close watch at the area to see if they need to be moved. If you make a GPS track, make sure there’s a road of any significance in your track to control the rest of the track. If the control points are at the right place, go ahead and trust your own track. Dont look to much to the changes in the zoom levels, they could change slightly as well. Welcome and keep mapping. Please reed the beginners pages here <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p>Hi, could you post a link to the location where your footpaths are or where you want them to add ? Feel free to add your footpaths anyway and keep a close watch at the area to see if they need to be moved. If you make a GPS track, make sure there’s a road of any significance in your track to control the rest of the track. If the control points are at the right place, go ahead and trust your own track. Dont look to much to the changes in the zoom levels, they could change slightly as well. Welcome and keep mapping. Please reed the beginners pages here <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

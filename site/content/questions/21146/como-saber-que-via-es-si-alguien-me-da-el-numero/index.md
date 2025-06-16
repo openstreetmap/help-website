@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Alguien cree que instrascendente la vía (way) <a href="http://www.openstreetmap.org/browse/way/208638001">208638001</a> ¿como hago para buscarla sin necesidad de revisarlas una por una en el buscador?</p>
+<p>Alguien cree que instrascendente la vía (way) <a href="https://www.openstreetmap.org/browse/way/208638001">208638001</a> ¿como hago para buscarla sin necesidad de revisarlas una por una en el buscador?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-busca" rel="tag" title="see questions tagged &#39;busca&#39;">busca</span> <span class="post-tag tag-link-lang-es" rel="tag" title="see questions tagged &#39;lang-es&#39;">lang-es</span> <span class="post-tag tag-link-vía" rel="tag" title="see questions tagged &#39;vía&#39;">vía</span>
@@ -126,7 +126,7 @@ One Answer:
 <div class="answer-body">
 <p>These "imagery boundaries" was discussed very recently on the "talk" mailing list. See <a href="http://lists.openstreetmap.org/pipermail/talk/2013-March/066627.html">this message</a>, and subsequent ones (and it also spills over into April). In that thread people have contributed various opinions (that they shouldn't be in the database because they're not data and not even metadata, or that they're really useful for remote mapping). I'd read that those messages before deciding what to do on a case-by-case basis.</p>
 <p>However, this particular example dates from 2011, and a quick check shows that the Bing imagery there has been updated, so I'd delete it.</p>
-<p>Each OSM item has a "browse" page associated with it, like this: <a href="http://www.openstreetmap.org/browse/way/208638001">http://www.openstreetmap.org/browse/way/208638001</a></p>
+<p>Each OSM item has a "browse" page associated with it, like this: <a href="https://www.openstreetmap.org/browse/way/208638001">https://www.openstreetmap.org/browse/way/208638001</a></p>
 <p>If someone gives you a different number, you can navigate manually to the relevant browse page by typing it in.</p>
 <p>To find other similar ways, you can use <a href="http://taginfo.openstreetmap.org/tags/boundary=imagery">taginfo</a>.</p>
 </div>

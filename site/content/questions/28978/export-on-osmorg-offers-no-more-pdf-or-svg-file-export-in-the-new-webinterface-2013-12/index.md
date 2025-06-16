@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/25118/export-function-cancelled-i-miss-it-on-osmorg-since-2013-08">Export function cancelled? I miss it on osm.org since 2013-08</a></p>
+<p>See <a href="/questions/25118/export-function-cancelled-i-miss-it-on-osmorg-since-2013-08">Export function cancelled? I miss it on osm.org since 2013-08</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

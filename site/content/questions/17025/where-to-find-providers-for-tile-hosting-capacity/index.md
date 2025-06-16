@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are details of companies providing commercial OSM services <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">here in the Wiki</a>. Some of them provide tile servers; some provide custom renders to suit your application.</p>
+<p>There are details of companies providing commercial OSM services <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">here in the Wiki</a>. Some of them provide tile servers; some provide custom renders to suit your application.</p>
 <p>You can also find details about rendering your own tiles at <a href="http://switch2osm.org">switch2osm</a></p>
 </div>
 <div class="answer-controls post-controls">
@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>... also see <a href="http://wiki.openstreetmap.org/wiki/Tiles">http://wiki.openstreetmap.org/wiki/Tiles</a> for a selection of OSM based tiles.</p>
+<p>... also see <a href="https://wiki.openstreetmap.org/wiki/Tiles">https://wiki.openstreetmap.org/wiki/Tiles</a> for a selection of OSM based tiles.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

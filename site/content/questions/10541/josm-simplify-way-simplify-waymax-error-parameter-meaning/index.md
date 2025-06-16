@@ -126,7 +126,7 @@ One Answer:
 <div class="comment-text">
 <p>Yes, it is worth noting that you <strong>should generally NOT APPLY this function to geometry other then what you entered yourself!</strong> This algorithm is <strong>harming the geometry seriously</strong> in some cases (narrow curves), because it is not aware of angles but only of differences in position in metres.</p>
 <p>Application of this function has to be considered a <strong>kind of automated edit</strong> and is therefor subject to the special rules we have for this kind of edits.</p>
-<p>Look at this for more info: <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits">http://wiki.openstreetmap.org/wiki/Automated_Edits</a></p>
+<p>Look at this for more info: <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits">https://wiki.openstreetmap.org/wiki/Automated_Edits</a></p>
 </div>
 <div id="comment-10809-info" class="comment-info">
 <span class="comment-age">(26 Feb '12, 12:27)</span> <span class="comment-user userinfo">dieterdreist</span>

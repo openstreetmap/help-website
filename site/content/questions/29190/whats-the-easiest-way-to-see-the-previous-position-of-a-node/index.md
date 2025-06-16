@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I recently moved <a href="http://www.openstreetmap.org/node/1784789012/history">this node</a> to a new location. What's the easiest way to show it on a map, and a marker where the previous location was?</p>
+<p>I recently moved <a href="https://www.openstreetmap.org/node/1784789012/history">this node</a> to a new location. What's the easiest way to show it on a map, and a marker where the previous location was?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-location" rel="tag" title="see questions tagged &#39;location&#39;">location</span> <span class="post-tag tag-link-history" rel="tag" title="see questions tagged &#39;history&#39;">history</span>
@@ -117,10 +117,10 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Currently, you don't have an "easy way" like in 2 mouse clicks to do this. But...</p>
 <p>Here is one method I found:</p>
-<p>- from the <a href="http://www.openstreetmap.org/node/1784789012/history">node history</a>, you can copy the previous coordinates (in version 1 : "53.5999303, -1.0152212")<br />
-- click the button "share" and copy the "link" field <a href="http://www.openstreetmap.org/#map=19/53.59996/-1.01558">http://www.openstreetmap.org/#map=19/53.59996/-1.01558</a> into your browser<br />
+<p>- from the <a href="https://www.openstreetmap.org/node/1784789012/history">node history</a>, you can copy the previous coordinates (in version 1 : "53.5999303, -1.0152212")<br />
+- click the button "share" and copy the "link" field <a href="https://www.openstreetmap.org/#map=19/53.59996/-1.01558">https://www.openstreetmap.org/#map=19/53.59996/-1.01558</a> into your browser<br />
 - edit the URL and replace the older coordinates by the ones you got from the node history version 1 : "mlat=53.59993&amp;mlon=-1.01522#map=19/53.5999303/-1.0152212" .(the "mlat" and "mlon" define the marker position and "#map" the slippy map central position)<br />
-- You get <a href="http://www.openstreetmap.org/?mlat=53.59993&amp;mlon=-1.01522#map=19/53.59993/-1.01522">this result</a>.</p>
+- You get <a href="https://www.openstreetmap.org/?mlat=53.59993&amp;mlon=-1.01522#map=19/53.59993/-1.01522">this result</a>.</p>
 <p>That's it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -213,10 +213,10 @@ osqa_accepted = false
 <ol>
 <li>do for all location links:
 <ol>
-<li>(on the <a href="http://www.openstreetmap.org/node/1784789012/history">history page</a>) right click one of the location links (e.g. <a href="http://www.openstreetmap.org/?lat=53.5999607&amp;lon=-1.0152429&amp;zoom=18">http://www.openstreetmap.org/?lat=53.5999607&amp;lon=-1.0152429&amp;zoom=18</a> )</li>
+<li>(on the <a href="https://www.openstreetmap.org/node/1784789012/history">history page</a>) right click one of the location links (e.g. <a href="https://www.openstreetmap.org/?lat=53.5999607&amp;lon=-1.0152429&amp;zoom=18">https://www.openstreetmap.org/?lat=53.5999607&amp;lon=-1.0152429&amp;zoom=18</a> )</li>
 <li>open a new tab</li>
 <li>paste the URL (do <em>not</em> open yet)</li>
-<li>edit the URL: insert two "m" (before lat and lon) (e.g. <a href="http://www.openstreetmap.org/?mlat=53.5999607&amp;mlon=-1.0152429&amp;zoom=18">http://www.openstreetmap.org/?mlat=53.5999607&amp;mlon=-1.0152429&amp;zoom=18</a> )</li>
+<li>edit the URL: insert two "m" (before lat and lon) (e.g. <a href="https://www.openstreetmap.org/?mlat=53.5999607&amp;mlon=-1.0152429&amp;zoom=18">https://www.openstreetmap.org/?mlat=53.5999607&amp;mlon=-1.0152429&amp;zoom=18</a> )</li>
 <li>open this URL</li>
 </ol></li>
 </ol>

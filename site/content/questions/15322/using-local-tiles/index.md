@@ -182,7 +182,7 @@ One Answer:
 <div id="post-15334-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes, I can access the tiles using html sample code given on link below. <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example.">http://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example.</a></p>
+<p>Yes, I can access the tiles using html sample code given on link below. <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example.">https://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example.</a></p>
 <p>Only if I add the same code in a jsp page, it does not display the images, but on mouse over, lat long is displayed.</p>
 </div>
 <div id="comment-15334-info" class="comment-info">

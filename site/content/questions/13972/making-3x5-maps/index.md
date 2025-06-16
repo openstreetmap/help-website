@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A search of this site for "<a href="http://help.openstreetmap.org/search/?q=paper&amp;Submit=search&amp;t=question">paper</a>" produces a few hits - are they any use?</p>
+<p>A search of this site for "<a href="https://help.openstreetmap.org/search/?q=paper&amp;Submit=search&amp;t=question">paper</a>" produces a few hits - are they any use?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,7 +210,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the map page there is an export tab this will export a square of map. by experimenting with modified latitudes and longitudes you should get the next and the next,you may even be able to get jpegs or pngs in 3 by 5 ratio. The two screens should make this clearer. Geeks will have more automated solutions maybe.<img src="http://help.openstreetmap.org/upfiles/export_1.JPG" alt="alt text" /></p>
+<p>On the map page there is an export tab this will export a square of map. by experimenting with modified latitudes and longitudes you should get the next and the next,you may even be able to get jpegs or pngs in 3 by 5 ratio. The two screens should make this clearer. Geeks will have more automated solutions maybe.<img src="/upfiles/export_1.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -230,7 +230,7 @@ osqa_accepted = false
 <div id="post-13982-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>exported image <img src="http://help.openstreetmap.org/upfiles/map_(16)_1.png" alt="alt text" /></p>
+<p>exported image <img src="/upfiles/map_(16)_1.png" alt="alt text" /></p>
 </div>
 <div id="comment-13982-info" class="comment-info">
 <span class="comment-age">(04 Jul '12, 16:13)</span> <span class="comment-user userinfo">andy mackey</span>

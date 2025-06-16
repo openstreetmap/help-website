@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, there is a web-based "raw editor" that lets you edit the XML directly. See <a href="http://wiki.openstreetmap.org/wiki/RawEditor">the wiki article</a> for details.</p>
+<p>Yes, there is a web-based "raw editor" that lets you edit the XML directly. See <a href="https://wiki.openstreetmap.org/wiki/RawEditor">the wiki article</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>And for the second part of the question, you can find the wanted ways using a <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI request</a>, as for example the <a href="http://open.mapquestapi.com/xapi/">mapquest xapi service</a>.</p>
+<p>And for the second part of the question, you can find the wanted ways using a <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI request</a>, as for example the <a href="http://open.mapquestapi.com/xapi/">mapquest xapi service</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

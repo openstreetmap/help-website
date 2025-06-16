@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "highway-name und addr:street bei Ortsteilen / Weiler ohne Straßennamen"
-description = '''Hi, in meiner Gegend gibt es Ortsteile / Weiler bei denen die Straßen keinen Namen haben z.B. Braseenberg: http://www.openstreetmap.org/?lat=48.11964&amp;amp;lon=9.62506&amp;amp;zoom=17&amp;amp;layers=M  Dobel: http://www.openstreetmap.org/?lat=48.190613&amp;amp;lon=9.590059&amp;amp;zoom=18&amp;amp;layers=M Bei Dobel habe ...'''
+description = '''Hi, in meiner Gegend gibt es Ortsteile / Weiler bei denen die Straßen keinen Namen haben z.B. Braseenberg: https://www.openstreetmap.org/?lat=48.11964&amp;amp;lon=9.62506&amp;amp;zoom=17&amp;amp;layers=M  Dobel: https://www.openstreetmap.org/?lat=48.190613&amp;amp;lon=9.590059&amp;amp;zoom=18&amp;amp;layers=M Bei Dobel habe ...'''
 date = "2013-07-30T10:35:00Z"
 lastmod = "2013-07-30T15:14:00Z"
 weight = 24721
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, in meiner Gegend gibt es Ortsteile / Weiler bei denen die Straßen keinen Namen haben z.B. Braseenberg: <a href="http://www.openstreetmap.org/?lat=48.11964&amp;lon=9.62506&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=48.11964&amp;lon=9.62506&amp;zoom=17&amp;layers=M</a> Dobel: <a href="http://www.openstreetmap.org/?lat=48.190613&amp;lon=9.590059&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.190613&amp;lon=9.590059&amp;zoom=18&amp;layers=M</a></p>
+<p>Hi, in meiner Gegend gibt es Ortsteile / Weiler bei denen die Straßen keinen Namen haben z.B. Braseenberg: <a href="https://www.openstreetmap.org/?lat=48.11964&amp;lon=9.62506&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=48.11964&amp;lon=9.62506&amp;zoom=17&amp;layers=M</a> Dobel: <a href="https://www.openstreetmap.org/?lat=48.190613&amp;lon=9.590059&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.190613&amp;lon=9.590059&amp;zoom=18&amp;layers=M</a></p>
 <p>Bei Dobel habe ich als Straßennamen und für addr:street den Ortsteil-Namen Dobel verwendet, bei Brasenberg fehlen diese Angaben noch.</p>
 <p>Ist die Verwendung des Ortsteil-Namens als Straßennamen und für addr:street korrekt oder wie soll hier verfahren werden ?</p>
 </div>
@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>IMHO</p>
 <p>Wenn die Strasse keinen Namen hat, dann hat sie keinen Namen (kannst du mit noname=yes gegebenfalls festhalten). Nach Möglichkeit OSM nicht googlefizieren (google klemmt alles mögliche and Strassen).</p>
-<p>Für die "Suche" kannst du addr:place verwenden <a href="http://wiki.openstreetmap.org/wiki/Key:addr:place">http://wiki.openstreetmap.org/wiki/Key:addr:place</a> wird von Nominatim unterstützt.</p>
+<p>Für die "Suche" kannst du addr:place verwenden <a href="https://wiki.openstreetmap.org/wiki/Key:addr:place">https://wiki.openstreetmap.org/wiki/Key:addr:place</a> wird von Nominatim unterstützt.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

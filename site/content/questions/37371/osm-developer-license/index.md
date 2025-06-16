@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I have some questions about the license issues.</p>
 <p>We are now suppposed to develope a system using OpenStreetMap and have questions about license fees for both research respect and commercial product respect. If there are license fees or rules, (eg. free for research but fee for commercial product or just labling "ⓒ OpenStreetMap contributors" is enough.) please let us know the details.</p>
 <p>We found that there are very rough explanation about this issue (3e and 3f)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F</a></p>
 <p>Thank you in advance.</p>
 <p>Changhyun Kim</p>
 </div>
@@ -141,7 +141,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd start by following the links from the copyright page <a href="http://www.openstreetmap.org/copyright">here</a> - there's a link to the full text of the licence from there too. You'll notice that there is no commercial / non-commercial split, and no "licence fees" as such - just restrictions on what you can do with the data as set out and linked from on the copyright page.</p>
+<p>I'd start by following the links from the copyright page <a href="https://www.openstreetmap.org/copyright">here</a> - there's a link to the full text of the licence from there too. You'll notice that there is no commercial / non-commercial split, and no "licence fees" as such - just restrictions on what you can do with the data as set out and linked from on the copyright page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

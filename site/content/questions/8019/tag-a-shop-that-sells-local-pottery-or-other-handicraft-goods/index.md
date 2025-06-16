@@ -109,8 +109,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=pottery">wiki</a> is always a good place to look for tags. Searching for pottery yields <a href="http://wiki.openstreetmap.org/wiki/Tag:craft%3Dpottery">craft=pottey</a> as a result. Another place to look for this tag is <a href="http://taginfo.openstreetmap.org/search?q=pottery#values">taginfo</a> which shows 82 objects tagged as <em>craft=pottery</em> and 69 tagged as <em>shop=pottery</em>. However the latter has never been approved so I suggest to tag it as <em>craft=pottery</em> and remove the <em>amenity=marketplace</em> tag which is wrong.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:craft">craft</a> key is relatively new and has lots of values for locally produced goods and handicraft. Unfortunately it doesn't get rendered so far, but this will probably change.</p>
+<p>The <a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=pottery">wiki</a> is always a good place to look for tags. Searching for pottery yields <a href="https://wiki.openstreetmap.org/wiki/Tag:craft%3Dpottery">craft=pottey</a> as a result. Another place to look for this tag is <a href="http://taginfo.openstreetmap.org/search?q=pottery#values">taginfo</a> which shows 82 objects tagged as <em>craft=pottery</em> and 69 tagged as <em>shop=pottery</em>. However the latter has never been approved so I suggest to tag it as <em>craft=pottery</em> and remove the <em>amenity=marketplace</em> tag which is wrong.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:craft">craft</a> key is relatively new and has lots of values for locally produced goods and handicraft. Unfortunately it doesn't get rendered so far, but this will probably change.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -81,7 +81,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I fear that your questions are anything other but FAQs ...</p>
 <p>So If you won't get any answer here, try one of the OSM mailing lists about licencing or similar topics.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-14538-info" class="comment-info">
 <span class="comment-age">(24 Jul '12, 16:08)</span> <span class="comment-user userinfo">stephan75</span>

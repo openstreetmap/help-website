@@ -246,7 +246,7 @@ Ivan.</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I recommend you use an RSS feed thanks to <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance#WhoDidIt">WhoDidIt</a>.</p>
+<p>I recommend you use an RSS feed thanks to <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance#WhoDidIt">WhoDidIt</a>.</p>
 <p>Here is a <a href="http://simon04.dev.openstreetmap.org/whodidit/">live implementation</a> that works great for me.</p>
 <p>I get all the changes of the defined area in my RSS feed.</p>
 </div>

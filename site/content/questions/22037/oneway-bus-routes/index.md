@@ -110,9 +110,9 @@ osqa_accepted = false
 <p>In JOSM you choose for the direction of all ways to be shown by setting an option. JOSM also has more features for adding bus routes, but I suspect these might be overly complex for what you want to do right now.</p>
 <p>Here are example ways with this type of tagging on bus routes (you could open them in an editor to inspect how they appear:</p>
 <ul>
-<li><a href="http://osm.org/go/eu8Y~y39?layers=T">City Loop, Nottingham</a> (many buses do a one way loop around the city centre for instance on <a href="http://www.openstreetmap.org/browse/way/16202048">Middle Hill</a> ),</li>
-<li><a href="http://osm.org/go/eu8Sp2w9?layers=T">Inham Nook, Chilwell</a> (final part of route is a <a href="http://www.openstreetmap.org/browse/way/12355557">loop</a>),</li>
-<li><a href="http://osm.org/go/eus6a41Z--?layers=T">Maidenhead</a> (a number of buses go only one way on roads at the NW side of town, including <a href="http://www.openstreetmap.org/browse/way/4261323">Cranbrook Drive</a>).</li>
+<li><a href="http://osm.org/go/eu8Y~y39?layers=T">City Loop, Nottingham</a> (many buses do a one way loop around the city centre for instance on <a href="https://www.openstreetmap.org/browse/way/16202048">Middle Hill</a> ),</li>
+<li><a href="http://osm.org/go/eu8Sp2w9?layers=T">Inham Nook, Chilwell</a> (final part of route is a <a href="https://www.openstreetmap.org/browse/way/12355557">loop</a>),</li>
+<li><a href="http://osm.org/go/eus6a41Z--?layers=T">Maidenhead</a> (a number of buses go only one way on roads at the NW side of town, including <a href="https://www.openstreetmap.org/browse/way/4261323">Cranbrook Drive</a>).</li>
 </ul>
 <p>Here are links to each of these sites on OePNV Map another visualisation of public transport which does show one direction segments : <a href="http://www.öpnvkarte.de/?zoom=17&amp;lat=52.95081&amp;lon=-1.14637&amp;layers=TBTTT">Middle Hill</a>, <a href="http://www.öpnvkarte.de/?zoom=18&amp;lat=52.92275&amp;lon=-1.24838&amp;layers=TBTTT">Inham Nook</a>, <a href="http://www.öpnvkarte.de/?zoom=17&amp;lat=51.53396&amp;lon=-0.74806&amp;layers=TBTTT">Cranbrook Drive</a>.</p>
 </div>
@@ -224,7 +224,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bus routes are mapped using a relation to link together the ways that make up the route. It is usual to create a relation for each direction (and each variant) of the route. These can then be linked together using the Route Master relation. See <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Route">Public Transport Route</a> for more information. However the way Transport Map and other renderers display the route may be an issue.</p>
+<p>Bus routes are mapped using a relation to link together the ways that make up the route. It is usual to create a relation for each direction (and each variant) of the route. These can then be linked together using the Route Master relation. See <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Route">Public Transport Route</a> for more information. However the way Transport Map and other renderers display the route may be an issue.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

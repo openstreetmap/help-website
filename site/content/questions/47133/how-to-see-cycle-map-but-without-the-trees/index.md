@@ -112,7 +112,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The "layers" that you can see on openstreetmap.org are images built from individual bitmaps aka "tiles", there is no simple way to remove features from these bitmaps after they have been generated.</p>
-<p>The rules that turn OSM data (typically already processed in one way or another) in to bitmaps are called "styles". So what you want is a style without forests or a style with more visible contours. If you are not happy with one of the many many ready made maps generated from OSM data (see <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services</a> for some of them) then you will have to produce one yourself, see for example: <a href="https://switch2osm.org/">https://switch2osm.org/</a> and other similar questions on this site.</p>
+<p>The rules that turn OSM data (typically already processed in one way or another) in to bitmaps are called "styles". So what you want is a style without forests or a style with more visible contours. If you are not happy with one of the many many ready made maps generated from OSM data (see <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services</a> for some of them) then you will have to produce one yourself, see for example: <a href="https://switch2osm.org/">https://switch2osm.org/</a> and other similar questions on this site.</p>
 <p>For the pundits: yes, vector tiles could address the issue this to a certain point, however would still require a mechanism to change the style on the fly or for the user to provide a custom version.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -196,7 +196,7 @@ osqa_accepted = false
 <div id="post-47143-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
 </div>
 <div id="comment-47143-info" class="comment-info">
 <span class="comment-age">(13 Dec '15, 22:04)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -218,7 +218,7 @@ osqa_accepted = false
 <div id="post-47145-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/TYP_files">http://wiki.openstreetmap.org/wiki/Mkgmap/help/TYP_files</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/TYP_files">https://wiki.openstreetmap.org/wiki/Mkgmap/help/TYP_files</a></p>
 </div>
 <div id="comment-47145-info" class="comment-info">
 <span class="comment-age">(13 Dec '15, 22:07)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -271,7 +271,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi did you read these pages, <a href="http://wiki.openstreetmap.org/wiki/Cycle_routes">http://wiki.openstreetmap.org/wiki/Cycle_routes</a> with a lot of links to already made selections. Use the Garmin maps based on OSM or follow this link to <a href="http://www.openfietsmap.nl/">http://www.openfietsmap.nl/</a> Im not shure if it is what your looking for, but other bicyclist use them frequently.</p>
+<p>Hi did you read these pages, <a href="https://wiki.openstreetmap.org/wiki/Cycle_routes">https://wiki.openstreetmap.org/wiki/Cycle_routes</a> with a lot of links to already made selections. Use the Garmin maps based on OSM or follow this link to <a href="http://www.openfietsmap.nl/">http://www.openfietsmap.nl/</a> Im not shure if it is what your looking for, but other bicyclist use them frequently.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

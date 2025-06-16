@@ -107,7 +107,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There are many many way to do this. The first three that come to mind:</p>
 <ul>
-<li>Use the <a href="http://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">www.openstreetmap.org</a> website and hover the mouse pointer over the "permalink" link. The status bar in your browser should display the URL of the current map view which includes latitude and longitude of the map center. Or click the "export" tab which allows you to draw a rectangle on the map and see its edge coordinates.</li>
+<li>Use the <a href="https://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">www.openstreetmap.org</a> website and hover the mouse pointer over the "permalink" link. The status bar in your browser should display the URL of the current map view which includes latitude and longitude of the map center. Or click the "export" tab which allows you to draw a rectangle on the map and see its edge coordinates.</li>
 <li>Use the <a href="http://www.informationfreeway.org/"></a><a href="http://www.informationfreeway.org"></a><a href="http://www.informationfreeway.org">www.informationfreeway.org</a> website which offers a fullscreen map view and a coordinate display for the position of the mouse pointer in the lower right corner.</li>
 <li>Use the <a href="http://gll.petschge.de/">gll.petschge.de</a> website which offers a crosshair at the center of the map view and a coordinate display at the top of the page. If you sufficiently bribe me I might even add a coordinate display in UTM.</li>
 </ul>

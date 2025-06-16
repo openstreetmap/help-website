@@ -152,7 +152,7 @@ osqa_accepted = true
 <div id="post-41529-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/14/tordanik">@Tordanik</a>: yes, I think that is the what I am commenting on in my comment below the question. It would be good if <a href="http://help.openstreetmap.org/users/10543/sergey-karavay">@Sergey</a> could clarify this.</p>
+<p><a href="https://help.openstreetmap.org/users/14/tordanik">@Tordanik</a>: yes, I think that is the what I am commenting on in my comment below the question. It would be good if <a href="https://help.openstreetmap.org/users/10543/sergey-karavay">@Sergey</a> could clarify this.</p>
 </div>
 <div id="comment-41529-info" class="comment-info">
 <span class="comment-age">(06 Mar '15, 01:58)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

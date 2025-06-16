@@ -157,9 +157,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Those queries shouldn't timeout, as they are very simple and return less than 100 items. When I <a href="http://overpass-turbo.eu/s/2fk">search for confectionary</a> for example, it finishes in less than 30 seconds. Perhaps you were unlucky and arrived at a time where the server was very busy.</p>
-<p>For other cases, you can tweak your query for example by raising the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout">timeout parameter</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#element-limit">limiting the output</a> to fewer items. Another important trick is to only query the necessary element types (for example in <a href="http://overpass-turbo.eu/s/2fk">my query</a> I did not query relations, only nodes and ways). Remember that there are <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">multiple installations of the overpass API</a>; if one is too busy maybe try the other one.</p>
+<p>For other cases, you can tweak your query for example by raising the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#timeout">timeout parameter</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#element-limit">limiting the output</a> to fewer items. Another important trick is to only query the necessary element types (for example in <a href="http://overpass-turbo.eu/s/2fk">my query</a> I did not query relations, only nodes and ways). Remember that there are <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">multiple installations of the overpass API</a>; if one is too busy maybe try the other one.</p>
 <p>For the specific issue of misspelled tags, <a href="http://keepright.ipax.at/report_map.php?zoom=6&amp;lat=51.11099&amp;lon=-0.09721&amp;layers=B0T&amp;ch=0%2C220%2C60&amp;show_ign=0&amp;show_tmpign=0">keepright</a> and <a href="http://tools.geofabrik.de/osmi/?view=tagging&amp;lon=-2.72754&amp;lat=50.99578&amp;zoom=5&amp;overlays=nodes_with_empty_k,ways_with_empty_k,nodes_with_empty_v,ways_with_empty_v,node_tags_with_whitespace,way_tags_with_whitespace,misspelled_node_keys,misspelled_way_keys,node_with_unusual_char,way_with_unusual_char,node_with_short_or_long_key,way_with_short_or_long_key,unwayed_segments,ways_without_tags">OSMI</a> have checks that will find some of them. But beware of false positives.</p>
-<p>Lastly, please be conservative when doing that kind of semi-automated edits with JOSM. Double-check everything by hand. Correcting &lt; 100 clear-cut typos like this is ok, but don't fix thousands of items at a time or convert "deprecated" tagging without discussing it with the community beforehand (see the <a href="http://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">mechanical edits policy</a>).</p>
+<p>Lastly, please be conservative when doing that kind of semi-automated edits with JOSM. Double-check everything by hand. Correcting &lt; 100 clear-cut typos like this is ok, but don't fix thousands of items at a time or convert "deprecated" tagging without discussing it with the community beforehand (see the <a href="https://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">mechanical edits policy</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do <em>not</em> bulk-replace what you believe to be typos without discussing them on a suitable mailing list (that covers the area you intend to make edits in). Such un-discussed mass edits violate our <a href="http://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">Mechanical Edit Policy</a> and will be reverted.</p>
+<p>Do <em>not</em> bulk-replace what you believe to be typos without discussing them on a suitable mailing list (that covers the area you intend to make edits in). Such un-discussed mass edits violate our <a href="https://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">Mechanical Edit Policy</a> and will be reverted.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

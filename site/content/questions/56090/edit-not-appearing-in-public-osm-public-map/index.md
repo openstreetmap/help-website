@@ -157,7 +157,7 @@ A blue dotted line indicates a cycleway. Your corrected position maps it as a fo
 4
 </div>
 <div class="comment-text">
-<p>Also see the answers to this question: <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> .</p>
+<p>Also see the answers to this question: <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> .</p>
 </div>
 <div id="comment-56094-info" class="comment-info">
 <span class="comment-age">(09 May '17, 08:05)</span> <span class="comment-user userinfo">scai ♦</span>

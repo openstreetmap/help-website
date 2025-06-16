@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Weg wird bei verschiedenen Zoomstufen unterbrochen dargestellt"
-description = '''Hallo! Ich habe einen Wanderweg (Wanderweg 64) lt. meinen GPS Aufzeichnungen mit Potlatch2 korrigiert. Im Bearbeitungsmodus hat alles korrekt ausgesehen, daher hab ich die Korrektur auch gespeichert. Leider wird bei einigen Zoomstufen der Weg unterbrochen dargestellt. http://www.openstreetmap.org/?m...'''
+description = '''Hallo! Ich habe einen Wanderweg (Wanderweg 64) lt. meinen GPS Aufzeichnungen mit Potlatch2 korrigiert. Im Bearbeitungsmodus hat alles korrekt ausgesehen, daher hab ich die Korrektur auch gespeichert. Leider wird bei einigen Zoomstufen der Weg unterbrochen dargestellt. https://www.openstreetmap.org/?m...'''
 date = "2012-12-06T14:01:00Z"
 lastmod = "2012-12-08T15:46:00Z"
 weight = 18245
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hallo!</p>
 <p>Ich habe einen Wanderweg (Wanderweg 64) lt. meinen GPS Aufzeichnungen mit Potlatch2 korrigiert. Im Bearbeitungsmodus hat alles korrekt ausgesehen, daher hab ich die Korrektur auch gespeichert.</p>
 <p>Leider wird bei einigen Zoomstufen der Weg unterbrochen dargestellt.</p>
-<p><a href="http://www.openstreetmap.org/?minlon=14.0701265335083&amp;minlat=48.3707046508789&amp;maxlon=14.0803871154785&amp;maxlat=48.3793258666992">http://www.openstreetmap.org/?minlon=14.0701265335083&amp;minlat=48.3707046508789&amp;maxlon=14.0803871154785&amp;maxlat=48.3793258666992</a></p>
+<p><a href="https://www.openstreetmap.org/?minlon=14.0701265335083&amp;minlat=48.3707046508789&amp;maxlon=14.0803871154785&amp;maxlat=48.3793258666992">https://www.openstreetmap.org/?minlon=14.0701265335083&amp;minlat=48.3707046508789&amp;maxlon=14.0803871154785&amp;maxlat=48.3793258666992</a></p>
 <p>z.B. 100m --&gt; OK 50m --&gt; unterbrochen</p>
 <p>Was mache ich falsch? Bitte um Hilfe!</p>
 </div>
@@ -86,7 +86,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Schau dir mal bitte die Antworten zu <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">dieser</a> Frage an.</p>
+<p>Schau dir mal bitte die Antworten zu <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">dieser</a> Frage an.</p>
 </div>
 <div id="comment-18265-info" class="comment-info">
 <span class="comment-age">(07 Dec '12, 07:27)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -183,8 +183,8 @@ One Answer:
 <div id="post-18263-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I also wonder whether the section of Oberwallsee shown at <a href="http://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M</a> should be a minor road. It looks more like a road than a track on Bing.</p>
-<p>Ich frage mich auch, ob der Abschnitt Oberwallsee am <a href="http://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M</a> gezeigt, sollte eine kleine Straße. Es sieht eher wie eine Straße, als eine Spur auf Bing.</p>
+<p>I also wonder whether the section of Oberwallsee shown at <a href="https://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M</a> should be a minor road. It looks more like a road than a track on Bing.</p>
+<p>Ich frage mich auch, ob der Abschnitt Oberwallsee am <a href="https://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.378746&amp;lon=14.076515&amp;zoom=18&amp;layers=M</a> gezeigt, sollte eine kleine Straße. Es sieht eher wie eine Straße, als eine Spur auf Bing.</p>
 </div>
 <div id="comment-18263-info" class="comment-info">
 <span class="comment-age">(06 Dec '12, 23:11)</span> <span class="comment-user userinfo">Madryn</span>

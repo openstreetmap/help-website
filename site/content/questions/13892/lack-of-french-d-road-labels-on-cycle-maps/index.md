@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>By "D road", you probably mean the "Départementale" reference number. In OSM, <a href="http://wiki.openstreetmap.org/wiki/FR:France_roads_tagging#R.C3.A9f.C3.A9rences_des_voies">we use the tag "ref"</a> for this. If it is not rendered on cycle map, it is a choice of the style map designer. Go to the <a href="http://www.opencyclemap.org/">cycle map home page</a> and try to contact the creators (email provided on the web site) and ask them why they decided to not render the "ref" tag.</p>
+<p>By "D road", you probably mean the "Départementale" reference number. In OSM, <a href="https://wiki.openstreetmap.org/wiki/FR:France_roads_tagging#R.C3.A9f.C3.A9rences_des_voies">we use the tag "ref"</a> for this. If it is not rendered on cycle map, it is a choice of the style map designer. Go to the <a href="http://www.opencyclemap.org/">cycle map home page</a> and try to contact the creators (email provided on the web site) and ask them why they decided to not render the "ref" tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

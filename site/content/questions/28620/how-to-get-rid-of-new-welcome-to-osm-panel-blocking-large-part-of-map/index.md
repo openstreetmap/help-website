@@ -113,7 +113,7 @@ osqa_accepted = true
 <p>There's now an [X] button with which to close the message. It also goes away by itself when you log in. If neither of these work for you, consider a GreaseMonkey script like this:</p>
 <pre><code>// ==UserScript==
 // @name     Remove OSM welcome box
-// @include  http://www.openstreetmap.org/*
+// @include  https://www.openstreetmap.org/*
 // ==/UserScript==
 &#10;var welcome = $(&quot;div.welcome&quot;);
 if (welcome) welcome.remove ();</code></pre>

@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-42538-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7421/nemo_bis">@Nemo_bis</a>: Stephan did not say this. I rather think that he meant to know where this text appears (which website).</p>
+<p><a href="https://help.openstreetmap.org/users/7421/nemo_bis">@Nemo_bis</a>: Stephan did not say this. I rather think that he meant to know where this text appears (which website).</p>
 </div>
 <div id="comment-42538-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 22:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -169,7 +169,7 @@ One Answer:
 <div id="post-54390-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13273/kiwiowen">@kiwiowen</a>: thanks for any feedback — that helps others with the same question, too!</p>
+<p><a href="https://help.openstreetmap.org/users/13273/kiwiowen">@kiwiowen</a>: thanks for any feedback — that helps others with the same question, too!</p>
 </div>
 <div id="comment-54390-info" class="comment-info">
 <span class="comment-age">(31 Jan '17, 23:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -203,7 +203,7 @@ One Answer:
 <div id="post-54431-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13273/kiwiowen">@kiwiowen</a>: where did you find the "USA Basiskarte"? Translated to English it means: "USA base map TK-USA-Basemap.7z (MD5) 2016-11-04, 13:52 2804 MB Base (streets, areas, routing, address search, POIs)."</p>
+<p><a href="https://help.openstreetmap.org/users/13273/kiwiowen">@kiwiowen</a>: where did you find the "USA Basiskarte"? Translated to English it means: "USA base map TK-USA-Basemap.7z (MD5) 2016-11-04, 13:52 2804 MB Base (streets, areas, routing, address search, POIs)."</p>
 <p>Thank you for the feedback regarding a working map.</p>
 </div>
 <div id="comment-54431-info" class="comment-info">

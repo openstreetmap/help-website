@@ -126,7 +126,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I was running Firefox 30.something and I thought that was old. And Windows XP is no longer supported by Microsoft and is very insecure. I hope you don't do anything on that computer that involve personal or financial information as you are just begging to be hacked.</p>
-<p>If your machine supports it, you should update your operating system. I don't know what the latest Firefox version is that will run on XP but at the least you should update whatever it is. For what it is worth, the much later version of Firefox I am using seems to work on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> properly.</p>
+<p>If your machine supports it, you should update your operating system. I don't know what the latest Firefox version is that will run on XP but at the least you should update whatever it is. For what it is worth, the much later version of Firefox I am using seems to work on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> properly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -187,8 +187,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10528/carozwei"></a><a href="http://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: hmm, strange. Does <a href="http://www.openstreetmap.de/karte.html?layers=000BTF&amp;zoom=4&amp;lat=-36.70769&amp;lon=-73.26201">openstreetmap.de</a> show a usable map for you?</p>
-<p>Do you use any "internet security" whatever blocker programs? Personal Firewall? Firefox addons? Could you try <a href="http://www.openstreetmap.org/">osm.org</a> with another browser or under a different user account (windows) / user profile (Firefox)?</p>
+<p><a href="https://help.openstreetmap.org/users/10528/carozwei"></a><a href="https://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: hmm, strange. Does <a href="http://www.openstreetmap.de/karte.html?layers=000BTF&amp;zoom=4&amp;lat=-36.70769&amp;lon=-73.26201">openstreetmap.de</a> show a usable map for you?</p>
+<p>Do you use any "internet security" whatever blocker programs? Personal Firewall? Firefox addons? Could you try <a href="https://www.openstreetmap.org/">osm.org</a> with another browser or under a different user account (windows) / user profile (Firefox)?</p>
 </div>
 <div id="comment-41240-info" class="comment-info">
 <span class="comment-age">(22 Feb '15, 16:32)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -213,7 +213,7 @@ osqa_accepted = false
 <div id="post-41245-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10528/carozwei"></a><a href="http://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: I guess you only have IE8 on your WinXP? <a href="/questions/41205/ie8-fails-with-new-release">does not work (currently at least</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/10528/carozwei"></a><a href="https://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: I guess you only have IE8 on your WinXP? <a href="/questions/41205/ie8-fails-with-new-release">does not work (currently at least</a>.</p>
 <p>You could try with e.g. a Chromium-based browser like <span>Iron</span> or Opera … but a fresh/clean Firefox profile would also be okay. Zone Alarm should not be a problem unless you have set it up to block, for example, specific requests. Check its log. Similarly with an adblocker – if you configure it to block <code>*tile*</code> then you will not see a map. Also it might be interesting if it works on other computers in the same network.</p>
 </div>
 <div id="comment-41245-info" class="comment-info">
@@ -225,7 +225,7 @@ osqa_accepted = false
 <div id="post-41246-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: do other map styles/"layers" (top right menu) on .de or .org work?</p>
+<p><a href="https://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: do other map styles/"layers" (top right menu) on .de or .org work?</p>
 </div>
 <div id="comment-41246-info" class="comment-info">
 <span class="comment-age">(22 Feb '15, 17:44)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -251,7 +251,7 @@ osqa_accepted = false
 <div id="post-41250-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: Ouch, that's expensive. It is really hard to try to debug from remote. I assume the website should run without problems on WinWP with Firefox, so I do not really know what else can be wrong (and can be easily tested). The only thing left is: try in a new browser / user profile (without that adblocker) or just switch it off temporarily.</p>
+<p><a href="https://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: Ouch, that's expensive. It is really hard to try to debug from remote. I assume the website should run without problems on WinWP with Firefox, so I do not really know what else can be wrong (and can be easily tested). The only thing left is: try in a new browser / user profile (without that adblocker) or just switch it off temporarily.</p>
 <p>last try: try <a href="http://mc.bbbike.org/mc/?lon=-71.431783&amp;lat=-31.65382&amp;zoom=6&amp;num=1&amp;mt0=skobbler&amp;marker=">mc.bbbike.org with skobbler's OSM-based map</a> (which shows many osm-based maps - mostly as service for our contributors not for end users).</p>
 </div>
 <div id="comment-41250-info" class="comment-info">
@@ -340,7 +340,7 @@ osqa_accepted = false
 <div id="post-41292-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: To test <em>JavaScript</em>, just click my link: the page will tell you if you have it or not. Well, you have it enabled, otherwise you could not even add a "comment" here.</p>
+<p><a href="https://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: To test <em>JavaScript</em>, just click my link: the page will tell you if you have it or not. Well, you have it enabled, otherwise you could not even add a "comment" here.</p>
 <p>No, <em>Flash</em> is only needed for our "Potlatch" editors (there are also non-Flash editors, btw). But Flash is not needed to view the maps I've linked to (I do not have Flash myself in my Firefox).</p>
 </div>
 <div id="comment-41292-info" class="comment-info">
@@ -352,7 +352,7 @@ osqa_accepted = false
 <div id="post-41293-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10528/carozwei"></a><a href="http://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: Okay, for <em>Garmin</em> maps, see <span>our wiki page with pre-made Garmin maps</span>, or one of the many <span>garmin questions</span> here. I personally suggest you start with a map from <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> (select "Chile", "Download map now!" (80MB), download the gmapsupp.zip file. It is possible to also only download a part of Chile (smaller download), but that requires the map on that page to work (I can assist you <span>by mail</span> if that map does not work too)</p>
+<p><a href="https://help.openstreetmap.org/users/10528/carozwei"></a><a href="https://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: Okay, for <em>Garmin</em> maps, see <span>our wiki page with pre-made Garmin maps</span>, or one of the many <span>garmin questions</span> here. I personally suggest you start with a map from <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> (select "Chile", "Download map now!" (80MB), download the gmapsupp.zip file. It is possible to also only download a part of Chile (smaller download), but that requires the map on that page to work (I can assist you <span>by mail</span> if that map does not work too)</p>
 </div>
 <div id="comment-41293-info" class="comment-info">
 <span class="comment-age">(23 Feb '15, 19:16)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -363,7 +363,7 @@ osqa_accepted = false
 <div id="post-41294-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10528/carozwei"></a><a href="http://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: Doing anything useful with the <em>tablet</em> will be hard without Internet access.</p>
+<p><a href="https://help.openstreetmap.org/users/10528/carozwei"></a><a href="https://help.openstreetmap.org/users/10528/carozwei">@Carozwei</a>: Doing anything useful with the <em>tablet</em> will be hard without Internet access.</p>
 <p>A very simple, easy, very low internet traffic option is to <em>contribute</em>/upload your GPS traces/tracks ("active track") to help other OSM mappers to trace the streets/paths. Of course, still someone needs to do it. Again, if you need help with this, please ask a new question so we can focus on the strange map display problem here.</p>
 </div>
 <div id="comment-41294-info" class="comment-info">

@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you just have the address then you have to do reverse-geocoding for each address first. This can be done by using <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">Nominatim</a>.</p>
-<p>But take a look at the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> first before you try to start bulk queries for all of your addresses. Instead of OSM's official Nominatim instance you can either use an <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Alternatives">alternative instance</a> with a less-restrictive usage policy or <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">install</a> your own one.</p>
+<p>If you just have the address then you have to do reverse-geocoding for each address first. This can be done by using <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">Nominatim</a>.</p>
+<p>But take a look at the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> first before you try to start bulk queries for all of your addresses. Instead of OSM's official Nominatim instance you can either use an <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Alternatives">alternative instance</a> with a less-restrictive usage policy or <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">install</a> your own one.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

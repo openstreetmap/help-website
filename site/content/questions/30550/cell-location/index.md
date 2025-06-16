@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Currently there are tags that describe the cell towers <a href="http://wiki.openstreetmap.org/wiki/User:!i!/telecommunication">http://wiki.openstreetmap.org/wiki/User:!i!/telecommunication</a> but on the ground you don't see the MNC/LAC so we can't tag them.</p>
+<p>Currently there are tags that describe the cell towers <a href="https://wiki.openstreetmap.org/wiki/User:!i!/telecommunication">https://wiki.openstreetmap.org/wiki/User:!i!/telecommunication</a> but on the ground you don't see the MNC/LAC so we can't tag them.</p>
 <p>What you are looking for are projects like the following to lookup GSM cell ids:</p>
 <ul>
 <li><a href="http://www.opencellid.org">http://www.opencellid.org</a></li>

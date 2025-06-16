@@ -39,10 +39,10 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I found a <a href="http://www.openstreetmap.org/?lat=59.1391&amp;lon=15.9716&amp;zoom=13">former limestone quarry</a>, which is now (and was) a tourist attraction. How should I map this? Suggestions or a link to good documentation pages on the wiki is very much appreciated.</p>
+<p>I found a <a href="https://www.openstreetmap.org/?lat=59.1391&amp;lon=15.9716&amp;zoom=13">former limestone quarry</a>, which is now (and was) a tourist attraction. How should I map this? Suggestions or a link to good documentation pages on the wiki is very much appreciated.</p>
 <p>These are the questions I can't really answer:</p>
 <ul>
-<li>the <a href="http://wiki.openstreetmap.org/wiki/Key:disused">disused=landuse</a>; landuse=quarry seems strange to use on a landuse? Any alternatives?</li>
+<li>the <a href="https://wiki.openstreetmap.org/wiki/Key:disused">disused=landuse</a>; landuse=quarry seems strange to use on a landuse? Any alternatives?</li>
 <li>Is there a relation I can use to connect the aerialway, viewpoints, tourism center and the limestone quarry pit in some way</li>
 <li>tagging for the lake that forms in quarries.</li>
 <li>very often a mine is not just a mine, but also processes the goods in some way. Does anyone know how to map that for lime quarries?</li>

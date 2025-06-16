@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>for hiking I started using OpenHikingMap. However I wonder what some of the symbols in this map mean and up to now I was unable to find a complete legend. Look at <a href="http://wiki.openstreetmap.org/w/images/2/2d/Demo-openhikingmap.png">the map tile in this link</a></p>
+<p>for hiking I started using OpenHikingMap. However I wonder what some of the symbols in this map mean and up to now I was unable to find a complete legend. Look at <a href="https://wiki.openstreetmap.org/w/images/2/2d/Demo-openhikingmap.png">the map tile in this link</a></p>
 <p>What is the meaning of the unfilled brown double line with intersections visible in the upper left side of the png? What do red lines and white lines stand for? Is there a legend somewhere, that explains the symbols?</p>
 <p>Thanks a lot Rainer</p>
 </div>
@@ -65,7 +65,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>The wiki page for it is <a href="http://wiki.openstreetmap.org/wiki/Hiking/openhikingmap">here</a>, and the author requests "Questions/Suggestions/bug reports" via the <a href="http://wiki.openstreetmap.org/wiki/Talk:Hiking/openhikingmap">talk page</a>, so I'd ask there.</p>
+<p>The wiki page for it is <a href="https://wiki.openstreetmap.org/wiki/Hiking/openhikingmap">here</a>, and the author requests "Questions/Suggestions/bug reports" via the <a href="https://wiki.openstreetmap.org/wiki/Talk:Hiking/openhikingmap">talk page</a>, so I'd ask there.</p>
 </div>
 <div id="comment-12135-info" class="comment-info">
 <span class="comment-age">(18 Apr '12, 13:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

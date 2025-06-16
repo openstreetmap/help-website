@@ -120,7 +120,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could take a look at this place they have several old airplanes standing around. <a href="http://www.openstreetmap.org/?lat=49.310717&amp;lon=8.446043&amp;zoom=18&amp;layers=M,">http://www.openstreetmap.org/?lat=49.310717&amp;lon=8.446043&amp;zoom=18&amp;layers=M,</a> which are tagged <code>historic=aircraft</code> (<a href="http://taginfo.openstreetmap.org/tags/historic=aircraft#overview">used 425 times</a>).</p>
+<p>You could take a look at this place they have several old airplanes standing around. <a href="https://www.openstreetmap.org/?lat=49.310717&amp;lon=8.446043&amp;zoom=18&amp;layers=M,">https://www.openstreetmap.org/?lat=49.310717&amp;lon=8.446043&amp;zoom=18&amp;layers=M,</a> which are tagged <code>historic=aircraft</code> (<a href="http://taginfo.openstreetmap.org/tags/historic=aircraft#overview">used 425 times</a>).</p>
 <p>Greetz</p>
 </div>
 <div class="answer-controls post-controls">
@@ -146,7 +146,7 @@ osqa_accepted = true
 <div id="post-20271-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>OSM Wiki page now created (based on this answer): <a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Daircraft">http://wiki.openstreetmap.org/wiki/Tag:historic%3Daircraft</a></p>
+<p>OSM Wiki page now created (based on this answer): <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Daircraft">https://wiki.openstreetmap.org/wiki/Tag:historic%3Daircraft</a></p>
 </div>
 <div id="comment-20271-info" class="comment-info">
 <span class="comment-age">(25 Feb '13, 15:45)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -188,7 +188,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://www.openstreetmap.org/browse/node/771811198">plane outside Heathrow</a> has been tagged as tourism=artwork. I suspect building=plane <a href="http://osm.org/go/0jfNgiwZ1-">as seen here</a> is NOT recommended. There is one instance of <a href="http://www.openstreetmap.org/browse/node/1801436222/history">tourism=artwork/artwork=gate_guardian</a> in the database according to <a href="http://taginfo.openstreetmap.org/search?q=gate_guardian">taginfo</a> (where I found all these examples).</p>
+<p>The <a href="https://www.openstreetmap.org/browse/node/771811198">plane outside Heathrow</a> has been tagged as tourism=artwork. I suspect building=plane <a href="http://osm.org/go/0jfNgiwZ1-">as seen here</a> is NOT recommended. There is one instance of <a href="https://www.openstreetmap.org/browse/node/1801436222/history">tourism=artwork/artwork=gate_guardian</a> in the database according to <a href="http://taginfo.openstreetmap.org/search?q=gate_guardian">taginfo</a> (where I found all these examples).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

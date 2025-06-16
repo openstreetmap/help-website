@@ -44,8 +44,8 @@ I expected that the bounds of the area could be tagged with<br />
 landuse=recreation_ground + aeroway=model_aerodrome or sport=model_aerodrome<br />
 aeroway=model_runway for defined/mown_grass/marked runways or aeroway=model_airstrip for more general runway area<br />
 ref=02/20;14/32 for runway orientation</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Model_Aerodrome">Proposed features/Model Aerodrome</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Aeroways">Aeroways</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Model_Aerodrome">Proposed features/Model Aerodrome</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Aeroways">Aeroways</a></p>
 <p>Would like further advice and comments or a good example of a well mapped/tagged model aerodrome thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

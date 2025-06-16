@@ -110,7 +110,7 @@ One Answer:
 <p><a href="http://overpass-turbo.eu/s/seM">http://overpass-turbo.eu/s/seM</a></p>
 <p>(click on <code>show data</code> when the warning pops up)</p>
 <p>The <code>geocodeArea:Thailand</code> is a feature of the Overpass Turbo website, to do the query directly against Overpass API it needs to be replaced with a reference to the OSM object the Overpass API area object is created from:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
 <p><a href="http://overpass-turbo.eu/s/seN">A query like area["name:en"="Thailand"][admin_level="2"]-&gt;.searchArea;</a> should also usually work.</p>
 <p>Overpass API doesn't support queries against changeset tags, but if the tags are on the objects you want to review, just putting something like <code>import=yes and source=digitalglobe</code> into the Overpass Turbo wizard will return objects with those tags. There are some resource limits on the public instances, so queries returning a large number of objects may time out. Limiting the query to some smaller bounding box is one way to deal with that.</p>
 </div>

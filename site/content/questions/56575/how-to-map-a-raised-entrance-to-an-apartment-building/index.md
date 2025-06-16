@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, if there is some building level beneath the raised entrance, tag the path with layer=1 and add steps and the ramp to the way or incline=yes (<a href="http://wiki.openstreetmap.org/wiki/Key:incline)">http://wiki.openstreetmap.org/wiki/Key:incline)</a> to the specific part. And ad the width of the path to it as well.</p>
+<p>Hi, if there is some building level beneath the raised entrance, tag the path with layer=1 and add steps and the ramp to the way or incline=yes (<a href="https://wiki.openstreetmap.org/wiki/Key:incline)">https://wiki.openstreetmap.org/wiki/Key:incline)</a> to the specific part. And ad the width of the path to it as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

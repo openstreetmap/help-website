@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi everyone,</p>
 <p>I need to simplify script or find public transport in Helsinki.</p>
 <p>My script: (rel(141534);&gt;&gt;)-&gt;.a;(node.a[highway=bus_stop]; node.a[railway=halt]; node.a[railway=tram_stop]; node.a[railway=station];&gt;;); out meta;</p>
-<p>by <a href="http://wiki.openstreetmap.org/wiki/Finland:Helsinki/Joukkoliikenne">link</a> would enter the session had perhaps 400 times but it is impossible because I would fall firefox. Not give all sessions buses put into one session?</p>
+<p>by <a href="https://wiki.openstreetmap.org/wiki/Finland:Helsinki/Joukkoliikenne">link</a> would enter the session had perhaps 400 times but it is impossible because I would fall firefox. Not give all sessions buses put into one session?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-public-transport" rel="tag" title="see questions tagged &#39;public-transport&#39;">public-transport</span> <span class="post-tag tag-link-overpass-turbo" rel="tag" title="see questions tagged &#39;overpass-turbo&#39;">overpass-turbo</span> <span class="post-tag tag-link-script" rel="tag" title="see questions tagged &#39;script&#39;">script</span>

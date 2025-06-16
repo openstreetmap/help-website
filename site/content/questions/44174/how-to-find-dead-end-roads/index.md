@@ -252,7 +252,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#PostGIS_Tasks_.28Snapshot_Schema.29">pgsnapshot schema from osmosis</a> should be able to help here. You get a SQL version of the OSM data model, and can write SQL queries to find nodes that are only at the start or end of an OSM way with the tags that you want.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#PostGIS_Tasks_.28Snapshot_Schema.29">pgsnapshot schema from osmosis</a> should be able to help here. You get a SQL version of the OSM data model, and can write SQL queries to find nodes that are only at the start or end of an OSM way with the tags that you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Overpass area"
-description = '''Hello, i am trying to get areas working on my overpass interpreter following this tutorial: http://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Area_creation when i run the loop i get these errors in my nohup.out (many times) but the loop keeps running and the files are created. i can query...'''
+description = '''Hello, i am trying to get areas working on my overpass interpreter following this tutorial: https://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Area_creation when i run the loop i get these errors in my nohup.out (many times) but the loop keeps running and the files are created. i can query...'''
 date = "2017-04-27T13:02:00Z"
 lastmod = "2017-10-22T18:54:00Z"
 weight = 55910
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>i am trying to get areas working on my overpass interpreter following this tutorial: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Area_creation">http://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Area_creation</a></p>
+<p>i am trying to get areas working on my overpass interpreter following this tutorial: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Area_creation">https://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Area_creation</a></p>
 <p>when i run the loop i get these errors in my nohup.out (many times) but the loop keeps running and the files are created. i can query the areas but i get no elements:</p>
 <ul>
 <li>bin/rules_loop.sh: line 40: db//rules_loop.log: No such file or directory</li>

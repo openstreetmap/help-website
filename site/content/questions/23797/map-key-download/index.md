@@ -113,7 +113,7 @@ osqa_accepted = false
 <p>Well yes and no :-)</p>
 <p>OpenStreetMap is a geo-data project and so there is no one single map and associated key for the features,</p>
 <p>If you are referring to a map key for the "standard" rendering of the data, there is a link on the left hand side of the page labled "Map key" that provides what you want. Outside of that it really depends on the provider of the online map if there is a key available or not.</p>
-<p>If your question is more about all the possible features that can be included in OSM (and displayed if somebody creates a map that shows them), your best place to look is: <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a></p>
+<p>If your question is more about all the possible features that can be included in OSM (and displayed if somebody creates a map that shows them), your best place to look is: <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a></p>
 <p>However be aware that the list is by no means complete. OSM allows a great freedom in tagging real world objects and a great many schemes are in use that are not properly documented.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -167,8 +167,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Is it the <a href="http://www.openstreetmap.org/key">Map Key</a>, that can be found in the left column of <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a>, you are looking for?</p>
-<p>Or do you want a list and explanation of all 42,300 <a href="http://taginfo.openstreetmap.org/keys">keys</a> currently in use? Well... far from all of them are documented, but the <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> wiki page is a good starting point.</p>
+<p>Is it the <a href="https://www.openstreetmap.org/key">Map Key</a>, that can be found in the left column of <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a>, you are looking for?</p>
+<p>Or do you want a list and explanation of all 42,300 <a href="http://taginfo.openstreetmap.org/keys">keys</a> currently in use? Well... far from all of them are documented, but the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> wiki page is a good starting point.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

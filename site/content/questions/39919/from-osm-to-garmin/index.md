@@ -145,7 +145,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>a ready made map downloaded is a the easier way <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
+<p>a ready made map downloaded is a the easier way <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
 </div>
 <div id="comment-39929-info" class="comment-info">
 <span class="comment-age">(30 Dec '14, 10:29)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -168,7 +168,7 @@ osqa_accepted = false
 <div id="post-39931-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>or this <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>or this <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-39931-info" class="comment-info">
 <span class="comment-age">(30 Dec '14, 10:33)</span> <span class="comment-user userinfo">andy mackey</span>

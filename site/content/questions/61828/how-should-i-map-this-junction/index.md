@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi This is what I have:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/20180126_205440.jpg" alt="description for mapping" /></p>
+<p><img src="/upfiles/20180126_205440.jpg" alt="description for mapping" /></p>
 <p>There is no traffic signal, road marking or physical separation.</p>
 <p>Moving from one way to another is always possible, except it has opposite direction.</p>
 <p>Blue arrows are u-turns.</p>
@@ -51,7 +51,7 @@ osqa_accepted = false
 <h2 id="update">UPDATE</h2>
 <p>Both valuable answers of <a href="https://help.openstreetmap.org/users/3339/edvac"></a><a href="https://help.openstreetmap.org/users/3339/edvac">@edvac</a></a> and <a href="https://help.openstreetmap.org/users/10935/chachafish"></a><a href="https://help.openstreetmap.org/users/10935/chachafish">@chachafish</a></a> seems better than what I mapped. Maybe the main problem of my map is that it doesn't fit the rule "One feature, one OSM element" for highways at the junction.<br />
 My mapping:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_7WPqdPu.PNG" alt="My Mapping" /></p>
+<p><img src="/upfiles/Capture_7WPqdPu.PNG" alt="My Mapping" /></p>
 <p>But I have two considerations here (Sorry for adding to question, but I think then it will make the question more general to benefit others, too).</p>
 <p>In both mappings:</p>
 <ol>
@@ -150,7 +150,7 @@ My mapping:</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This will work as well. The barrier is a kerb with trees.<img src="https://help.openstreetmap.org/upfiles/gbage_66k5bgk.jpg" alt="alt text" /></p>
+<p>This will work as well. The barrier is a kerb with trees.<img src="/upfiles/gbage_66k5bgk.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -203,7 +203,7 @@ My mapping:</p>
 <div class="answer-body">
 <p>I would simplify the junction, eliminating <a href="https://www.openstreetmap.org/way/555968601">this way</a> and joining its two nodes in one, and also delete the two u-turn ways that connect both sides of the road for each of the green-separated roads.</p>
 <p>One possibility would be like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/junction_fxXcxgQ.png" alt="alt text" /></p>
+<p><img src="/upfiles/junction_fxXcxgQ.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

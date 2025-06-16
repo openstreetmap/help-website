@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>not short, not really for "novices", but still for drawing buildings with aerial images in Potlatch2 and with good information and screenshots: <a href="http://wiki.openstreetmap.org/wiki/Roof_modelling">http://wiki.openstreetmap.org/wiki/Roof_modelling</a></p>
+<p>not short, not really for "novices", but still for drawing buildings with aerial images in Potlatch2 and with good information and screenshots: <a href="https://wiki.openstreetmap.org/wiki/Roof_modelling">https://wiki.openstreetmap.org/wiki/Roof_modelling</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The best tutorials in this case are the good examples set by sucessfull mappers such as to one in this area. To learn and study it you/they will have to open an editor of course, or you or someone seeing that their is a need, could write and submit an article to the Wiki to solve the problem. <a href="http://www.openstreetmap.org/?lat=52.216242&amp;lon=-0.066028&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.216242&amp;lon=-0.066028&amp;zoom=18&amp;layers=M</a> after you have read and used the excellent info pointed to by aseerel4c26 <a href="http://wiki.openstreetmap.org/wiki/Roof_modelling">http://wiki.openstreetmap.org/wiki/Roof_modelling</a></p>
+<p>The best tutorials in this case are the good examples set by sucessfull mappers such as to one in this area. To learn and study it you/they will have to open an editor of course, or you or someone seeing that their is a need, could write and submit an article to the Wiki to solve the problem. <a href="https://www.openstreetmap.org/?lat=52.216242&amp;lon=-0.066028&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.216242&amp;lon=-0.066028&amp;zoom=18&amp;layers=M</a> after you have read and used the excellent info pointed to by aseerel4c26 <a href="https://wiki.openstreetmap.org/wiki/Roof_modelling">https://wiki.openstreetmap.org/wiki/Roof_modelling</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -310,7 +310,7 @@ osqa_accepted = false
 <div id="post-23703-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>and some on building tags <a href="http://wiki.openstreetmap.org/wiki/Key:building">http://wiki.openstreetmap.org/wiki/Key:building</a></p>
+<p>and some on building tags <a href="https://wiki.openstreetmap.org/wiki/Key:building">https://wiki.openstreetmap.org/wiki/Key:building</a></p>
 </div>
 <div id="comment-23703-info" class="comment-info">
 <span class="comment-age">(25 Jun '13, 22:30)</span> <span class="comment-user userinfo">andy mackey</span>

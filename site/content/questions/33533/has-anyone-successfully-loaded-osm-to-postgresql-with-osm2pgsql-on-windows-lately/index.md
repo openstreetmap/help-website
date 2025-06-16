@@ -91,7 +91,7 @@ osqa_accepted = false
 <div id="post-33544-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In particular check this question: <a href="https://help.openstreetmap.org/questions/24070/failed-error-duplicate-key-value-violates-unique-constraint">https://help.openstreetmap.org/questions/24070/failed-error-duplicate-key-value-violates-unique-constraint</a></p>
+<p>In particular check this question: <a href="/questions/24070/failed-error-duplicate-key-value-violates-unique-constraint">https://help.openstreetmap.org/questions/24070/failed-error-duplicate-key-value-violates-unique-constraint</a></p>
 </div>
 <div id="comment-33544-info" class="comment-info">
 <span class="comment-age">(28 May '14, 21:49)</span> <span class="comment-user userinfo">SK53 ♦</span>

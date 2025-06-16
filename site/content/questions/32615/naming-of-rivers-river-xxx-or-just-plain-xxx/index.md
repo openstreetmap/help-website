@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Here comes a simple straightforward question.</p>
 <p>In English, should river names be spelled "Danube River", "Elbe River", "River Thames" etc, or just plain Volga, Rhine, Mississipi and so on? Is there any agreed rule on this?</p>
-<p>I realize this is a fundamental thing that has probably been around since day one on OSM, but searching gives no definite answer. It seems to me the <a href="http://wiki.openstreetmap.org/wiki/River">recommendation</a> is to use a "River" suffix or prefix, but in reality most rivers are tagged without.</p>
+<p>I realize this is a fundamental thing that has probably been around since day one on OSM, but searching gives no definite answer. It seems to me the <a href="https://wiki.openstreetmap.org/wiki/River">recommendation</a> is to use a "River" suffix or prefix, but in reality most rivers are tagged without.</p>
 <p>Thinking of it, I realize in some cases the "River" prefix is probably useful, like The Congo River. But it seems to me one could do without when not necessary?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-6043-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This looks like the road for info - <a href="http://www.openstreetmap.org/?lat=49.200159&amp;lon=16.575967&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=49.200159&amp;lon=16.575967&amp;zoom=18&amp;layers=M</a></p>
+<p>This looks like the road for info - <a href="https://www.openstreetmap.org/?lat=49.200159&amp;lon=16.575967&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=49.200159&amp;lon=16.575967&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-6043-info" class="comment-info">
 <span class="comment-age">(28 Jun '11, 01:10)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-6045-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>And this is the detail info for the road: <a href="http://www.openstreetmap.org/browse/way/118852654">http://www.openstreetmap.org/browse/way/118852654</a></p>
+<p>And this is the detail info for the road: <a href="https://www.openstreetmap.org/browse/way/118852654">https://www.openstreetmap.org/browse/way/118852654</a></p>
 </div>
 <div id="comment-6045-info" class="comment-info">
 <span class="comment-age">(28 Jun '11, 01:17)</span> <span class="comment-user userinfo">sleske</span>
@@ -240,7 +240,7 @@ osqa_accepted = false
 <div id="post-6044-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For a bit of the technical background to OpenRouteService, have a read of <a href="http://wiki.openstreetmap.org/wiki/OpenRouteService">http://wiki.openstreetmap.org/wiki/OpenRouteService</a> - that says more about what happens to the data between you adding it to OSM and being able to route using it.</p>
+<p>For a bit of the technical background to OpenRouteService, have a read of <a href="https://wiki.openstreetmap.org/wiki/OpenRouteService">https://wiki.openstreetmap.org/wiki/OpenRouteService</a> - that says more about what happens to the data between you adding it to OSM and being able to route using it.</p>
 </div>
 <div id="comment-6044-info" class="comment-info">
 <span class="comment-age">(28 Jun '11, 01:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -282,7 +282,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Often (but not in your case) a common reason for routing not working properly is that roads haven't been joined up properly. The picture attached to the top answer to <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">this help question</a> shows the problem - if a router thinks that roads don't join then it won't route you from one to the other.</p>
+<p>Often (but not in your case) a common reason for routing not working properly is that roads haven't been joined up properly. The picture attached to the top answer to <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">this help question</a> shows the problem - if a router thinks that roads don't join then it won't route you from one to the other.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -332,7 +332,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>related question and answers <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>related question and answers <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

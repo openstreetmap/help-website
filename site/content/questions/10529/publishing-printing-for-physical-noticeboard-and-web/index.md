@@ -108,8 +108,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might want to have a look at the tools on the Wiki page <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a>. It has a listing of tools for generating paper maps from OSM data. <a href="http://maposmatic.org/">MapOSMatic</a> and <a href="http://wiki.openstreetmap.org/wiki/TownGuide">Townguide</a> look like they may be good places to start with what you want to do.</p>
-<p>Beyond that, there are a bunch of other tools that may help you get the OSM data in a graphic format (rendered). There's a list of them on the Wiki page <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>. From a quick look, <a href="http://mapgen.pl">mapgen.pl</a> and its successor <a href="http://wiki.openstreetmap.org/wiki/Mapweaver">MapWeaver</a> look very interesting.</p>
+<p>You might want to have a look at the tools on the Wiki page <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a>. It has a listing of tools for generating paper maps from OSM data. <a href="http://maposmatic.org/">MapOSMatic</a> and <a href="https://wiki.openstreetmap.org/wiki/TownGuide">Townguide</a> look like they may be good places to start with what you want to do.</p>
+<p>Beyond that, there are a bunch of other tools that may help you get the OSM data in a graphic format (rendered). There's a list of them on the Wiki page <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>. From a quick look, <a href="http://mapgen.pl">mapgen.pl</a> and its successor <a href="https://wiki.openstreetmap.org/wiki/Mapweaver">MapWeaver</a> look very interesting.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Anybody else getting this message on loading the website? Only site affected in Firefox,IE &amp; Chrome. UK based. Never seen this problem before.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_if3FiLV.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_if3FiLV.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-loading" rel="tag" title="see questions tagged &#39;loading&#39;">loading</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

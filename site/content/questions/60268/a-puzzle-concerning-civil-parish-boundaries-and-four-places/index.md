@@ -113,7 +113,7 @@ osqa_accepted = false
 <p>Hi, I just looked at the first node you mentioned (Aston Tirrold) and it is a "place" node for that village which is a member of the boundary relation with the role "admin_centre". This is normal practise for a council area.</p>
 <p>When I get home I will check out the others.</p>
 <p>You can see the whole relation for Aston Tirrold civil parish here:</p>
-<p><a href="http://www.openstreetmap.org/relation/77789">http://www.openstreetmap.org/relation/77789</a></p>
+<p><a href="https://www.openstreetmap.org/relation/77789">https://www.openstreetmap.org/relation/77789</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

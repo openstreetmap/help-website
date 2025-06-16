@@ -129,7 +129,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Potlatch and iD are not general-purpose shapefile editors and are not really suitable for your task. They are intended for editing the single worldwide OpenStreetMap database.</p>
-<p>If you intend to add information from the shapefile to the OpenStreetMap database, such that everyone can see and edit it, you must make sure that you follow the <a href="http://wiki.openstreetmap.org/wiki/Import_guidelines">Import Guidelines</a>.</p>
+<p>If you intend to add information from the shapefile to the OpenStreetMap database, such that everyone can see and edit it, you must make sure that you follow the <a href="https://wiki.openstreetmap.org/wiki/Import_guidelines">Import Guidelines</a>.</p>
 <p>However, if you simply need to edit a shapefile, you should choose a more appropriate tool, such as <a href="http://qgis.org/en/site/">QGIS</a>. (At a pinch you could install the full "Rails port" OpenStreetMap server stack on your own machine, but this would be massive overkill.)</p>
 </div>
 <div class="answer-controls post-controls">

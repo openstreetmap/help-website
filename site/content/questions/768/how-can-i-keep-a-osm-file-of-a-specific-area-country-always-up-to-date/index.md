@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Daily_update_an_OSM_XML_file">http://wiki.openstreetmap.org/wiki/Daily_update_an_OSM_XML_file</a> : This page describes how to hold a local .osm file up-to-date.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Daily_update_an_OSM_XML_file">https://wiki.openstreetmap.org/wiki/Daily_update_an_OSM_XML_file</a> : This page describes how to hold a local .osm file up-to-date.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -274,7 +274,7 @@ osqa_accepted = false
 <div id="post-2898-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>you might be able to do this with the RemoteControl plugin (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/RemoteControl">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/RemoteControl</a>). leave JOSM running and periodically (via cron) give it commands to import / load data.</p>
+<p>you might be able to do this with the RemoteControl plugin (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/RemoteControl">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/RemoteControl</a>). leave JOSM running and periodically (via cron) give it commands to import / load data.</p>
 </div>
 <div id="comment-2898-info" class="comment-info">
 <span class="comment-age">(10 Feb '11, 18:12)</span> <span class="comment-user userinfo">axk</span>
@@ -316,7 +316,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis#Usage">Osmosis</a> can combine change files with an OSM file, resulting in a updated OSM file. It will contain all updates from the change file, so you have to filter it with a bounding box.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis#Usage">Osmosis</a> can combine change files with an OSM file, resulting in a updated OSM file. It will contain all updates from the change file, so you have to filter it with a bounding box.</p>
 <pre><code>osmosis  --read-xml-change file=&quot;planetdiff-1-2.osc&quot; \ 
 --read-xml file=&quot;planet1.osm&quot; --apply-change \ 
 --bounding-box top=59.485 left=17.872 bottom=59.161 right=18.264 \ 

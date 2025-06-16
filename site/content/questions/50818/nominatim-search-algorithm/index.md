@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is there an updated doc with the search algorithm for Nominatim? On the wiki <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">HERE</a> it's still listed as a <code>TODO</code>, just curious if it's been uploaded elsewhere and the wiki hasn't been updated.</p>
+<p>Is there an updated doc with the search algorithm for Nominatim? On the wiki <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">HERE</a> it's still listed as a <code>TODO</code>, just curious if it's been uploaded elsewhere and the wiki hasn't been updated.</p>
 <p>Thanks in advance.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

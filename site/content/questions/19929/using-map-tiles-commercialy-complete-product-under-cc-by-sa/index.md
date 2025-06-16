@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using Map tiles commercialy -&gt; complete product under CC-BY-SA??"
-description = '''Hi, we want to embed OSM map tiles into our commercial (windows) application. We want to show different locations within our application and we do not want to build up our own tile server. Using the OSM tiles ( http://www.openstreetmap.org/ ) are under the CC-BY-SA license. Do we have to put our own...'''
+description = '''Hi, we want to embed OSM map tiles into our commercial (windows) application. We want to show different locations within our application and we do not want to build up our own tile server. Using the OSM tiles ( https://www.openstreetmap.org/ ) are under the CC-BY-SA license. Do we have to put our own...'''
 date = "2013-02-14T13:46:00Z"
 lastmod = "2013-02-14T16:31:00Z"
 weight = 19929
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>we want to embed OSM map tiles into our commercial (windows) application. We want to show different locations within our application and we do not want to build up our own tile server. Using the OSM tiles ( <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> ) are under the CC-BY-SA license.</p>
+<p>we want to embed OSM map tiles into our commercial (windows) application. We want to show different locations within our application and we do not want to build up our own tile server. Using the OSM tiles ( <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> ) are under the CC-BY-SA license.</p>
 <p>Do we have to put our own product completely under this license (make it open source)? Or may we only put the displayed maps (OSM maps with some markers in it) under this license?</p>
 <p>Thanks :-)</p>
 </div>
@@ -114,9 +114,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Konrad! Glad to hear that you want to use OSM in your application.</p>
-<p>I do not want to give you legal advice on which you cannot rely, therefore I try to enable you to help yourself: <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> should be your main resource. <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a> is also helpful, but is edited by the community. The copyright page exactly lists what is available under which license and how to credit. You are also encouraged to read the licenses themselves - that are a legally binding documents. If you have doubt, please ask a lawyer.</p>
+<p>I do not want to give you legal advice on which you cannot rely, therefore I try to enable you to help yourself: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> should be your main resource. <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a> is also helpful, but is edited by the community. The copyright page exactly lists what is available under which license and how to credit. You are also encouraged to read the licenses themselves - that are a legally binding documents. If you have doubt, please ask a lawyer.</p>
 <p>My opinion, with relation to the CC-BY-SA licensing of the tiles (specifically the SA - share alike - part): if someone just displays the tiles in an application and overlays information on demand he does not need to make any part of your application also available under CC-BY-SA since that tile part is somehow separated and just displayed but not modified. "[...] this does not require the <em>Collective Work</em> apart from the Work itself to be made subject to the terms of this License." (emphasis from me) (see <a href="http://creativecommons.org/licenses/by-sa/2.0/legalcode">http://creativecommons.org/licenses/by-sa/2.0/legalcode</a> )</p>
-<p>A important side note (not the main part of your question): you are right that the tiles are available under CC-BY-SA - that relates to copyright. However, the osm.org servers which are serving the tiles are not free to use with no limit - please see <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
+<p>A important side note (not the main part of your question): you are right that the tiles are available under CC-BY-SA - that relates to copyright. However, the osm.org servers which are serving the tiles are not free to use with no limit - please see <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
 <p>Please use the "comment" function for commenting on my answer or add additional / clarifying info to your original question if needed.</p>
 </div>
 <div class="answer-controls post-controls">

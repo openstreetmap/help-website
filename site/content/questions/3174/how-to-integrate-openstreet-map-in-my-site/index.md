@@ -78,7 +78,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question (Duplicate of http://help.openstreetmap.org/questions/3157/)" by Frederik Ramm 19 Feb '11, 10:29
+### The question has been closed for the following reason "Duplicate Question (Duplicate of https://help.openstreetmap.org/questions/3157/)" by Frederik Ramm 19 Feb '11, 10:29
 
 </div>
 

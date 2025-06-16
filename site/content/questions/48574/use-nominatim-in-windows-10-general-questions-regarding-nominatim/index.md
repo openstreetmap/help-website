@@ -117,7 +117,7 @@ One Answer:
 <p>Yes you need all these prerequisites, and you cannot run it on Windows, you need to use a Linux VM. What you could do is install "photon" instead of Nominiatim, it's a different geocoder but it has the advantage that ready-made data downloads are available so you don't need to go through the data preparation steps. Being written in Java, it might even run on Windows:</p>
 <p><a href="https://github.com/komoot/photon">https://github.com/komoot/photon</a></p>
 <p>You can definitely not download 100k addresses from OSM's Nominatim on a regular basis, but of course what you could do is find a commercial geocoding provider who runs Nominatim and lets you use that for a fee.</p>
-<p>Also with regards to your "enriching" data, be advised that according to many people's interpretation the lat/lon data in your database will remain under the ODbL license and you might be required to share it on request. The exact application of the ODbL license to geocoding results is a <a href="http://wiki.openstreetmap.org/wiki/Open_Data_License/Geocoding_-_Guideline">topic under discussion.</a></p>
+<p>Also with regards to your "enriching" data, be advised that according to many people's interpretation the lat/lon data in your database will remain under the ODbL license and you might be required to share it on request. The exact application of the ODbL license to geocoding results is a <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/Geocoding_-_Guideline">topic under discussion.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

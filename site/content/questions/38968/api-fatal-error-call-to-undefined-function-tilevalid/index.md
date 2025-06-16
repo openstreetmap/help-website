@@ -69,7 +69,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Please see this answer: <a href="https://help.openstreetmap.org/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg">https://help.openstreetmap.org/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg</a></p>
+<p>Please see this answer: <a href="/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg">https://help.openstreetmap.org/questions/26293/error-on-image-stream-using-ojwdevopenstreetmaporg</a></p>
 <p>-&gt; service was shut down due to very high load in the past, not a production service.</p>
 <p>Closing as duplicate question.</p>
 </div>

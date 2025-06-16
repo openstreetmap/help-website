@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">The Tile Usage Policy</a> states that you should</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">The Tile Usage Policy</a> states that you should</p>
 <blockquote>
 <p>Cache Tile downloads locally according to HTTP Expiry Header, alternatively a minimum of 7 days.</p>
 </blockquote>
@@ -189,7 +189,7 @@ Connection: close</code></pre>
 <blockquote>
 <p>Cache Tile downloads locally according to HTTP Expiry Header, alternatively a minimum of 7 days.</p>
 </blockquote>
-<p>From <a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">the Tile Usage Policy</a>.</p>
+<p>From <a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">the Tile Usage Policy</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

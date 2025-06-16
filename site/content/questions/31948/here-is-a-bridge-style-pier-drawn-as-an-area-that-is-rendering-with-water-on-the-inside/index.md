@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>here is a bridge style pier drawn as an area that is rendering with water on the inside</p>
 <p>I was wondering if [this][1] is an known issue/bug or if there is a standardized way of dealing with piers with two or more ways for example making it a multipolygon relation.</p>
 <p>thanks.</p>
-<p>[1]: &lt;iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-117.17080682516097%2C32.69890634180274%2C-117.16898828744887%2C32.70030801191927&amp;amp;layer=mapnik&amp;amp;marker=32.69960605105383%2C-117.16989755630493" style="border: 1px solid black"&gt;&lt;/iframe&gt;<br />
-<span class="small"><a href="http://www.openstreetmap.org/?mlat=32.69961&amp;mlon=-117.16990#map=19/32.69961/-117.16990&amp;layers=N">View Larger Map</a></span></p>
+<p>[1]: &lt;iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-117.17080682516097%2C32.69890634180274%2C-117.16898828744887%2C32.70030801191927&amp;amp;layer=mapnik&amp;amp;marker=32.69960605105383%2C-117.16989755630493" style="border: 1px solid black"&gt;&lt;/iframe&gt;<br />
+<span class="small"><a href="https://www.openstreetmap.org/?mlat=32.69961&amp;mlon=-117.16990#map=19/32.69961/-117.16990&amp;layers=N">View Larger Map</a></span></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-marine" rel="tag" title="see questions tagged &#39;marine&#39;">marine</span> <span class="post-tag tag-link-openseamap" rel="tag" title="see questions tagged &#39;openseamap&#39;">openseamap</span>

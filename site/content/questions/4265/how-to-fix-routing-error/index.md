@@ -90,7 +90,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>OK, we are approximately here...</p>
-<p><a href="http://www.openstreetmap.org/?lat=-30.369273&amp;lon=153.101309&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-30.369273&amp;lon=153.101309&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-30.369273&amp;lon=153.101309&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-30.369273&amp;lon=153.101309&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-4301-info" class="comment-info">
 <span class="comment-age">(06 Apr '11, 14:07)</span> <span class="comment-user userinfo">gnurk</span>
@@ -189,13 +189,13 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Wow, you don't make it easy for people. A link to the area on the map (like this <a href="http://www.openstreetmap.org/?lat=-30.368927&amp;lon=153.100585&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-30.368927&amp;lon=153.100585&amp;zoom=18&amp;layers=M</a>) would be far more likely to get people to look at your problem. I only noticed the latlong when coming back to answer this question. Nor is this really the site for asking specific questions about the behaviour of individual apps or pieces of OSM data (once such problems are resolved, the question is unlikely to help others).</p>
+<p>Wow, you don't make it easy for people. A link to the area on the map (like this <a href="https://www.openstreetmap.org/?lat=-30.368927&amp;lon=153.100585&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-30.368927&amp;lon=153.100585&amp;zoom=18&amp;layers=M</a>) would be far more likely to get people to look at your problem. I only noticed the latlong when coming back to answer this question. Nor is this really the site for asking specific questions about the behaviour of individual apps or pieces of OSM data (once such problems are resolved, the question is unlikely to help others).</p>
 <p>Interestingly there is a MapDust bug for this issue too: <a href="http://www.mapdust.com/detail/177415">177415</a>(was that you?):.</p>
 <p>I'll try and answer the interesting question: I have a problem with routing, how do I find out if its my app or OpenStreetMap data.</p>
 <p>Firstly, its a good idea to check online routing sites such as those at OpenRouteService, Cloudmade, Yours etc. Not all cover the whole world. If you can see the same routing error on one of these services then chances are that its a genuine data problem.</p>
 <p>Secondly, check to see if the data has been edited recently. Often routing providers are using data which is not as up-to-date as the main OSM Planet. It's important to not trouble people with problems with old data which as likely as not have been fixed. Unfortunately unless you edit an area its not always easy to determine the currency of routing data.</p>
 <p>Thirdly check the junction which you think is wrong. check that all the ways actually connect to the junction (and also inspect one-ways and possible turn restrictions). The easiest way to do this is to use the Data layer (available on the (+) layer selector at the RHS of the screen on the main OSM site). Each way can be clicked on, and inspected in detail by clicking on "Detail" in the left-hand pane. This shows the browse/way page. Of course you can also inspect the data in the editor.</p>
-<p>In this later step it is apparent that way <a href="http://www.openstreetmap.org/browse/way/28988062">28988062</a> is not connected to Second Avenue at all (nor indeed is the other direction of First Avenue). I have fixed this in changeset <a href="http://www.openstreetmap.org/browse/changeset/7784895">7784895</a> which you might like to look at to understand what was wrong.</p>
+<p>In this later step it is apparent that way <a href="https://www.openstreetmap.org/browse/way/28988062">28988062</a> is not connected to Second Avenue at all (nor indeed is the other direction of First Avenue). I have fixed this in changeset <a href="https://www.openstreetmap.org/browse/changeset/7784895">7784895</a> which you might like to look at to understand what was wrong.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -273,8 +273,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that you're talking about Sawtell, NSW, Australia, <a href="http://www.openstreetmap.org/?lat=-30.369097&amp;lon=153.100093&amp;zoom=18&amp;layers=M">here</a>.</p>
-<p>I suspect that the reason for the routing is that First Avenue has a maximum speed set on it and a 40 km/h speed limit (see <a href="http://www.openstreetmap.org/browse/way/28988061">here</a>), whereas the road parallel to that (<a href="http://www.openstreetmap.org/browse/way/23921738">this one</a>) doesn't have an maximum speed indicated and is added as "highway = unclassified". It may be that Navdroid** thinks that speeds considerably in excess of 40 km/h are possible there and so the "round the block" route is quicker.</p>
+<p>I suspect that you're talking about Sawtell, NSW, Australia, <a href="https://www.openstreetmap.org/?lat=-30.369097&amp;lon=153.100093&amp;zoom=18&amp;layers=M">here</a>.</p>
+<p>I suspect that the reason for the routing is that First Avenue has a maximum speed set on it and a 40 km/h speed limit (see <a href="https://www.openstreetmap.org/browse/way/28988061">here</a>), whereas the road parallel to that (<a href="https://www.openstreetmap.org/browse/way/23921738">this one</a>) doesn't have an maximum speed indicated and is added as "highway = unclassified". It may be that Navdroid** thinks that speeds considerably in excess of 40 km/h are possible there and so the "round the block" route is quicker.</p>
 <p>From looking at the Bing imagery in the area it looks like the parallel road might actually be better described as residential - I'd have a chat with the guy that mapped it. If there is a maximum speed indicated you could certainly add that, as you've done for First Avenue.<br />
 </p>
 <p>** I have never used Navdroid and so am only guessing about why it might be routing you this way.</p>

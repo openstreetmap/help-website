@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would recommend using osm2pgsql. <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">See the page on the OSM wiki</a></p>
+<p>I would recommend using osm2pgsql. <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">See the page on the OSM wiki</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

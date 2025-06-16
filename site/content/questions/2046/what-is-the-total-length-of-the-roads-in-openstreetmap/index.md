@@ -232,7 +232,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Old numbers and more stats are here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Statistics">http://wiki.openstreetmap.org/wiki/Statistics</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Statistics">https://wiki.openstreetmap.org/wiki/Statistics</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -306,7 +306,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You find the length of the roadnet mentioned from time to time in publications,</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_in_the_media/2010">http://wiki.openstreetmap.org/wiki/OpenStreetMap_in_the_media/2010</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap_in_the_media/2010">https://wiki.openstreetmap.org/wiki/OpenStreetMap_in_the_media/2010</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

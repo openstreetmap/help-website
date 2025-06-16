@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do you mean <a href="http://overpass-turbo.eu/s/id">such query</a>? <a href="http://www.openstreetmap.org/?mlat=48.21&amp;mlon=16.371&amp;zoom=18">The location</a> I assumed.</p>
+<p>Do you mean <a href="http://overpass-turbo.eu/s/id">such query</a>? <a href="https://www.openstreetmap.org/?mlat=48.21&amp;mlon=16.371&amp;zoom=18">The location</a> I assumed.</p>
 <p>/al</p>
 </div>
 <div class="answer-controls post-controls">

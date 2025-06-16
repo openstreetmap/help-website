@@ -221,7 +221,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/answer_link/4257/">In some cases</a> you might search "cafe near X" in osm.org and actually find what you need. The result is generally unpredictable, but chances of success increase if you can <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">learn the magic words</a> and maybe <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">translate them on translatewiki.net</a>.</p>
+<p><a href="https://help.openstreetmap.org/answer_link/4257/">In some cases</a> you might search "cafe near X" in osm.org and actually find what you need. The result is generally unpredictable, but chances of success increase if you can <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">learn the magic words</a> and maybe <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">translate them on translatewiki.net</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -337,7 +337,7 @@ This answer is marked "community wiki".
 <div class="answer-body">
 <p>I found that the easiest option by far is to <a href="https://duckduckgo.com">search DuckDuckGo</a> for <a href="https://duckduckgo.com/?q=pizza+near+me&amp;ia=places">X near Y</a>: a "Places" tab will appear and if you click one of the options a map shows up.</p>
 <p>It's proprietary and it mostly seems to use Yelp data, which cannot be edited freely, but at least it doesn't track you and it shows an OpenStreetMap map (via Mapbox), which is an encouragement to improve it. Maybe as the OSM coverage of shops and other points of interests increase DuckDuckGo will be able to ditch Yelp and others will be able to achieve something similar?</p>
-<p>How it looks: <img src="https://help.openstreetmap.org/upfiles/Screenshot_20171004_124654.png" alt="Searching a coffee in Helsinki via DuckDuckGo (in an Italian interface browser)" /></p>
+<p>How it looks: <img src="/upfiles/Screenshot_20171004_124654.png" alt="Searching a coffee in Helsinki via DuckDuckGo (in an Italian interface browser)" /></p>
 <p>They also have a <a href="https://duck.co/blog/blog/post/291/directions">blog post on directions in DuckDuckGo</a>.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "rename is not displayed"
-description = '''I have renamed a park (http://www.openstreetmap.org/?lat=50.964052&amp;amp;lon=6.965101&amp;amp;zoom=18&amp;amp;layers=M) but the new name is not displayed. How can I enforce an update of the tile cache?'''
+description = '''I have renamed a park (https://www.openstreetmap.org/?lat=50.964052&amp;amp;lon=6.965101&amp;amp;zoom=18&amp;amp;layers=M) but the new name is not displayed. How can I enforce an update of the tile cache?'''
 date = "2012-07-12T10:30:00Z"
 lastmod = "2012-07-12T13:44:00Z"
 weight = 14221
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have renamed a park (<a href="http://www.openstreetmap.org/?lat=50.964052&amp;lon=6.965101&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=50.964052&amp;lon=6.965101&amp;zoom=18&amp;layers=M)</a> but the new name is not displayed. How can I enforce an update of the tile cache?</p>
+<p>I have renamed a park (<a href="https://www.openstreetmap.org/?lat=50.964052&amp;lon=6.965101&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=50.964052&amp;lon=6.965101&amp;zoom=18&amp;layers=M)</a> but the new name is not displayed. How can I enforce an update of the tile cache?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rename" rel="tag" title="see questions tagged &#39;rename&#39;">rename</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You will need to wait until the rendering server <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/replication_delay.html">catches up</a> with your changes first, then follow the instructions about adding /dirty in the answer to <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this earlier question</a>.</p>
+<p>You will need to wait until the rendering server <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/replication_delay.html">catches up</a> with your changes first, then follow the instructions about adding /dirty in the answer to <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this earlier question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The map tiles re-generation is stoped currently. Watch the 'tile service' status on this wiki: <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
+<p>The map tiles re-generation is stoped currently. Watch the 'tile service' status on this wiki: <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
 </div>
 <div id="comment-14228-info" class="comment-info">
 <span class="comment-age">(12 Jul '12, 13:02)</span> <span class="comment-user userinfo">Pieren</span>
@@ -138,7 +138,7 @@ One Answer:
 <div id="post-14230-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... and it's working now. Also, you can take "<a href="http://wiki.openstreetmap.org/wiki/Key:designation">designation</a>" off as that's about the "legal classification" rather than the "name".</p>
+<p>... and it's working now. Also, you can take "<a href="https://wiki.openstreetmap.org/wiki/Key:designation">designation</a>" off as that's about the "legal classification" rather than the "name".</p>
 <p>For example, a number of footpaths in England and Wales (but not all) have a legal status of "Public Footpath" and that's what therefore get marked with an appropriate "designation" tag. It's not intended to be used for "name", "description" or "note".</p>
 </div>
 <div id="comment-14230-info" class="comment-info">

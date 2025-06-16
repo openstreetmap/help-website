@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My Etsy stats had linked this image to openstreetmap. I want to take a screenshot, but the image won't let me receive the full globe, so information is missing. Can you help me acquire the full globe image?<img src="https://help.openstreetmap.org/upfiles/Screen_shot_2017-11-19_at_6.48.39_PM.png" alt="alt text" /></p>
+<p>My Etsy stats had linked this image to openstreetmap. I want to take a screenshot, but the image won't let me receive the full globe, so information is missing. Can you help me acquire the full globe image?<img src="/upfiles/Screen_shot_2017-11-19_at_6.48.39_PM.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span> <span class="post-tag tag-link-etsystats" rel="tag" title="see questions tagged &#39;etsystats&#39;">etsystats</span>

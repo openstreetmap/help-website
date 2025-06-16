@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is possible to download a Mapsource upgrade for free from Garmin. If you try to install it, it will refuse saying a previous version of Mapsource is not installed, but there are ways around this. An easy way is to first download and install Garmin Training Center, then installing Mapsource will work.</p>
-<p>You then have to get some maps for Mapsource. If you look at this page, it will list some of the OSM maps available, and which have installers to get them into Mapsource: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a></p>
+<p>You then have to get some maps for Mapsource. If you look at this page, it will list some of the OSM maps available, and which have installers to get them into Mapsource: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a></p>
 <p>Once you have some maps in Mapsource, you can then select some of the tiles, and use the "Send to device" option to load them onto Etrex. Note that as the Vista C doesn't have much memory, you will be a bit limited in how large an area you can load onto it.</p>
 </div>
 <div class="answer-controls post-controls">

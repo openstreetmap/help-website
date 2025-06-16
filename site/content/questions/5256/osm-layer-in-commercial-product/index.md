@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>Yes you can</p>
 <p>No it's not</p>
-<p>You just have to follow the <a href="http://www.openstreetmap.org/copyright">instructions on this page</a> regarding attribution.</p>
+<p>You just have to follow the <a href="https://www.openstreetmap.org/copyright">instructions on this page</a> regarding attribution.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

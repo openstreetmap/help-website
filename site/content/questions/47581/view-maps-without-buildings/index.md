@@ -129,7 +129,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The standard and MapQuest Open layers use pre-rendered tiles. That is, they take the OSM data, apply certain rules that they've determined ahead of time to define how objects should be rendered, and then static image files are created. There are no overlays, so if someone wanted to remove some objects, such a change would have to occur earlier in the rendering process by changing the rules.</p>
-<p>If you want a rendering without buildings, you'll have to look at alternate providers. <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">This list</a> is a good starting point, but there are probably many others out there that may not be on this list.</p>
+<p>If you want a rendering without buildings, you'll have to look at alternate providers. <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">This list</a> is a good starting point, but there are probably many others out there that may not be on this list.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

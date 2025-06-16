@@ -116,7 +116,7 @@ One Answer:
 <div class="answer-body">
 <p>You can download an extract of OpenStreetMap data for Botswana for example here <a href="http://download.geofabrik.de/africa/botswana.html">http://download.geofabrik.de/africa/botswana.html</a></p>
 <p>It could be that the shapefile (.shp) format extract might already be enough if you are simply looking for administrative areas (as far as they have been added). If you are looking for different äreas it probably makes sense to determine if OSM actually has the data you are looking for.</p>
-<p>Outside of that it really depends on what kind of geo/gis library you are goign to be using (I'm afraid I have no idea about VB and no idea if there is any support for geographic information). See <a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a> for a list of perhaps relevant software.</p>
+<p>Outside of that it really depends on what kind of geo/gis library you are goign to be using (I'm afraid I have no idea about VB and no idea if there is any support for geographic information). See <a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a> for a list of perhaps relevant software.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

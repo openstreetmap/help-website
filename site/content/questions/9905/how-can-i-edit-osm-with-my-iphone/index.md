@@ -104,14 +104,14 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are various ways of using an iPhone in your mapping workflow. Rather than attempting to do full editing with it. Personally I often use my iPhone as a camera. With geo-tagging enabled, I capture data by taking lots of photos (<em>much</em> quicker than trying to type in tags on the move) and then back at home I use the <a href="http://wiki.openstreetmap.org/wiki/Photomapping_In_JOSM">JOSM photo mapping features</a>. You might also try to record a <a href="https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone">GPS trace on an iPhone</a></p>
+<p>There are various ways of using an iPhone in your mapping workflow. Rather than attempting to do full editing with it. Personally I often use my iPhone as a camera. With geo-tagging enabled, I capture data by taking lots of photos (<em>much</em> quicker than trying to type in tags on the move) and then back at home I use the <a href="https://wiki.openstreetmap.org/wiki/Photomapping_In_JOSM">JOSM photo mapping features</a>. You might also try to record a <a href="/questions/3675/gps-trace-on-iphone">GPS trace on an iPhone</a></p>
 <p>But if you're more interested in how to edit OpenStreetMap directly (the full mapping workflow) while on the move, there's couple of free iPhone/iPad apps which popped up over the past year, allowing you place new data or edit existing elements on a bing aerial imagery background:</p>
 <p><strong><a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=592990211&amp;mt=8">Go Map!!</a></strong> is a fully functional editor app, by which I mean you can edit geometry as well as node features. Geometry editing on a small touchscreen seems a bit nuts, but this app is surprisingly intuitive and usable .</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/2/21/Go_Map_Buildings_and_Selection.png/133px-Go_Map_Buildings_and_Selection.png" alt="alt text" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/2/21/Go_Map_Buildings_and_Selection.png/133px-Go_Map_Buildings_and_Selection.png" alt="alt text" /></p>
 <p><strong><a href="https://itunes.apple.com/us/app/pushpin-osm/id565850639?mt=8">PushpinOSM</a></strong> is limited to editing/adding points of interest data, although it does permit editing tags where a POI is represented as a way. This simplification makes things easier, and it's fine for adding in your local restaurant, and those kinds of simple changes.</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/7/74/Pushpin_OSM_screenshot.png/133px-Pushpin_OSM_screenshot.png" alt="alt text" /></p>
-<p>You should (in theory at least) be able to use the new <a href="http://wiki.openstreetmap.org/wiki/ID">iD editor</a>, just on the OpenStreetMap.org homepage in your mobile browser. Maybe this works better on an iPad, but on an iPhone it has some screen layout problems. Generally the above native apps work better.</p>
-<p>We have a <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">wiki list of Apple iOS apps</a> including a <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS#OpenStreetMap_editing_features">section on editing features.</a></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/7/74/Pushpin_OSM_screenshot.png/133px-Pushpin_OSM_screenshot.png" alt="alt text" /></p>
+<p>You should (in theory at least) be able to use the new <a href="https://wiki.openstreetmap.org/wiki/ID">iD editor</a>, just on the OpenStreetMap.org homepage in your mobile browser. Maybe this works better on an iPad, but on an iPhone it has some screen layout problems. Generally the above native apps work better.</p>
+<p>We have a <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">wiki list of Apple iOS apps</a> including a <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS#OpenStreetMap_editing_features">section on editing features.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -189,7 +189,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Although I am not an iPhone user, the overall approach is similar. You'll need applications that allow you capture tracks and waypoint data on the iPhone. Use this page to get an overview of the tools that are out there.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">https://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
 <p>You may want to use tools like GPSVisualizer, GPSBabel to review and edit your data.</p>
 <p>Thereafter the primary tools for uploading and editing OSM are Potlach and JOSM, both well described in the above wiki. This type of work is normally suited a desktop/PC/Mac activity, rather than a smart phone.</p>
 <p>Andy</p>
@@ -236,7 +236,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>There's a list on <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a> - see the "make track" column,</p>
+<p>There's a list on <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">https://wiki.openstreetmap.org/wiki/Apple_iOS</a> - see the "make track" column,</p>
 </div>
 <div id="comment-9938-info" class="comment-info">
 <span class="comment-age">(13 Jan '12, 14:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -248,7 +248,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Nowadays there's also a couple pretty nice apps for doing editing directly while on the move. See my answer. There's another question here about recording GPS traces on iphone <a href="https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone">https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone</a> (The answer to which is still quite unsatisfactory at the moment actually)</p>
+<p>Nowadays there's also a couple pretty nice apps for doing editing directly while on the move. See my answer. There's another question here about recording GPS traces on iphone <a href="/questions/3675/gps-trace-on-iphone">https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone</a> (The answer to which is still quite unsatisfactory at the moment actually)</p>
 </div>
 <div id="comment-25040-info" class="comment-info">
 <span class="comment-age">(07 Aug '13, 16:03)</span> <span class="comment-user userinfo">Harry Wood</span>

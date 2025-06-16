@@ -161,7 +161,7 @@ osqa_accepted = false
 <div id="post-42987-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: hmm, I would rather have it near the initial suggestions (maybe as a "comment" to mmd's suggestion which could be an "answer" too). In any case and whereever, "what did not work" is a very useful info. Okay... maybe delete our comments when read. ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: hmm, I would rather have it near the initial suggestions (maybe as a "comment" to mmd's suggestion which could be an "answer" too). In any case and whereever, "what did not work" is a very useful info. Okay... maybe delete our comments when read. ;-)</p>
 </div>
 <div id="comment-42987-info" class="comment-info">
 <span class="comment-age">(09 May '15, 11:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

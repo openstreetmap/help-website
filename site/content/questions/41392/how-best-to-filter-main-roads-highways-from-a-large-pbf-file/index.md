@@ -177,7 +177,7 @@ highway=primary_link</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Osmosis can do the job with the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29"><code>--tag-filter</code> option</a>. You may need a lot of memory to store all the nodes (since you'll have to use the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--used-node_.28--un.29"><code>--used-node</code> option</a>). How much memory do you have? The amount of harddisk space you'll need will be less than the europe-latest.osm.pbf file, so as long as you have at least 15GB you should be fine. If I were you, I'd just run it, and if it runs out of memory, it runs out of memory. You'll know in a few hours.</p>
+<p>Osmosis can do the job with the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29"><code>--tag-filter</code> option</a>. You may need a lot of memory to store all the nodes (since you'll have to use the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--used-node_.28--un.29"><code>--used-node</code> option</a>). How much memory do you have? The amount of harddisk space you'll need will be less than the europe-latest.osm.pbf file, so as long as you have at least 15GB you should be fine. If I were you, I'd just run it, and if it runs out of memory, it runs out of memory. You'll know in a few hours.</p>
 <p>If want to do this in a memory effecient manner, you'd have to write your own programme, e.g. using the <a href="http://osmcode.org/libosmium/">Osmium library</a></p>
 </div>
 <div class="answer-controls post-controls">

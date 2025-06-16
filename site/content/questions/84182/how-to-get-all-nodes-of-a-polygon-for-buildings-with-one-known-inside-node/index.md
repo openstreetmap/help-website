@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I'm now using OSMnx to extract data for buildings. What I need is the addresses for buildings along with their footprint data. The question I met is about some of the buildings have multiple addresses, thus there are no address data for that building's polygon.</p>
 <p>For example, the building 'Furutorpsgatan 49A' (in Helsingborg, Sweden) has three nodes you can search for, which are:</p>
 <p>Furutorpsgatan 49A; Furutorpsgatan 49B; Gustav Adolfs Gata 23</p>
-<p><img src="https://help.openstreetmap.org/upfiles/footprint.png" alt="alt text" /></p>
+<p><img src="/upfiles/footprint.png" alt="alt text" /></p>
 <p>but if you export the geometry data (polygon), <strong>there's no address data at all!</strong></p>
 <p>I was trying to use OSMid for polygons to match the position, but I can't find the building with OSMid 'w483244917'</p>
 <p>Then I'm thinking is there any method I can <strong>export the polygon data through one or several nodes inside?</strong></p>

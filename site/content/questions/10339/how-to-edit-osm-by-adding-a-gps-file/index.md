@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>Navigate to the place in question on the main map. Zoom in as much as you can, click edit. Click GPS Data (upper right corner) and select your recorded track, it will display on the map. Draw the new way along the recorded track and tag it as path/tack/whatever it is. Do not forget to connect it where it should be connected. Click Save. Done.</p>
 <p>Alternative: If you plan to do more than just adding this way, download <a href="http://josm.openstreetmap.de/">JOSM</a> (more buttons, more features). Click download, select the area for editing (right mouse button for map moving). Draw the way. Tag it as what it is (hit F3 and start typing). When you are done, click Upload. Done</p>
-<p>Reading <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">this</a> won't hurt you.</p>
+<p>Reading <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">this</a> won't hurt you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -81,7 +81,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=56.8870%2C-3.4145%3B57.0070%2C-3.3986#map=12/56.9471/-3.4020">This route</a>? Looks fine to me.</p>
+<p><a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=56.8870%2C-3.4145%3B57.0070%2C-3.3986#map=12/56.9471/-3.4020">This route</a>? Looks fine to me.</p>
 </div>
 <div id="comment-41761-info" class="comment-info">
 <span class="comment-age">(17 Mar '15, 10:26)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -163,7 +163,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9730/happy-tourer"></a><a href="http://help.openstreetmap.org/users/9730/happy-tourer">@Happy Tourer</a>: and if it should be OSM's problem, they should tell where exactly the problem is. I have checked all road pieces of the A93 for tags possibly causing routing problems: none. And the pieces are obviously connected with each other (since other routing works). You may want to try <span>another app</span>.</p>
+<p><a href="https://help.openstreetmap.org/users/9730/happy-tourer"></a><a href="https://help.openstreetmap.org/users/9730/happy-tourer">@Happy Tourer</a>: and if it should be OSM's problem, they should tell where exactly the problem is. I have checked all road pieces of the A93 for tags possibly causing routing problems: none. And the pieces are obviously connected with each other (since other routing works). You may want to try <span>another app</span>.</p>
 <p>However, thank you for your help to improve OSM!</p>
 </div>
 <div id="comment-41884-info" class="comment-info">

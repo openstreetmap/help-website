@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>.1. Not sure what is the best way to create a kml file, but you can export kml from a postgresql/postgis database. To get the osm data into the database there are several programs available (which either use predefined schemes or require from you to define a scheme) like osmosis, osm2pgsql, imposm and others. The <a href="http://wiki.openstreetmap.org/wiki/Develop">openstreetmap-wiki</a> contains descriptions about these tools.</p>
+<p>.1. Not sure what is the best way to create a kml file, but you can export kml from a postgresql/postgis database. To get the osm data into the database there are several programs available (which either use predefined schemes or require from you to define a scheme) like osmosis, osm2pgsql, imposm and others. The <a href="https://wiki.openstreetmap.org/wiki/Develop">openstreetmap-wiki</a> contains descriptions about these tools.</p>
 <p>.3. You can do this for example with Openlayers.</p>
 </div>
 <div class="answer-controls post-controls">

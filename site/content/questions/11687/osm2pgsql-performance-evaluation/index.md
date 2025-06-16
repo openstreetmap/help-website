@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I just got a dedicated server for our planet osm2pgsql database. It has 32 GB RAM, two Opteron processors (6212) (16 cores in total), a software RAID1 for the system and a software RAID0 for the database. The database disks are 10k Raptor drives, so nothing too slow. I tested an import of the planet during the weekend and I think the performance of the import could be better, especially when reviewing Frederiks <a href="http://wiki.openstreetmap.org/wiki/SotM_2010_session:Tuning_the_Mapnik_Rendering_Chain">SotM presentation</a> in 2010 where the import is done within some hours (regard the slim planet import whith R0, -C8000).</p>
+<p>I just got a dedicated server for our planet osm2pgsql database. It has 32 GB RAM, two Opteron processors (6212) (16 cores in total), a software RAID1 for the system and a software RAID0 for the database. The database disks are 10k Raptor drives, so nothing too slow. I tested an import of the planet during the weekend and I think the performance of the import could be better, especially when reviewing Frederiks <a href="https://wiki.openstreetmap.org/wiki/SotM_2010_session:Tuning_the_Mapnik_Rendering_Chain">SotM presentation</a> in 2010 where the import is done within some hours (regard the slim planet import whith R0, -C8000).</p>
 <p>The planet.osm.bz2 is on the RAID1, the import command was:</p>
 <blockquote>
 <p>osm2pgsql -d osm -s -S /home/brfr/default.style -C 16000 -U postgres -H localhost -k --number-processes 16 planet-latest.osm.bz2</p>
@@ -118,7 +118,7 @@ Relation stats: total(1342628), max(2092829) in 18429s</p>
 <div id="post-11858-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>FYI: I added my server and results (~50hrs) to the <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">benchmark</a> table ...</p>
+<p>FYI: I added my server and results (~50hrs) to the <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">benchmark</a> table ...</p>
 </div>
 <div id="comment-11858-info" class="comment-info">
 <span class="comment-age">(10 Apr '12, 08:14)</span> <span class="comment-user userinfo">frabron</span>
@@ -236,7 +236,7 @@ Relation stats: total(1342628), max(2092829) in 18429s</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>You might check this wiki page collecting several osm2pgsql performance measurements (and add yours):</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

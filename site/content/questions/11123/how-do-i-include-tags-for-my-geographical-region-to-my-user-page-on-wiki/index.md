@@ -109,7 +109,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>The first step for doing any editing in the wiki is creating a wiki account. These are independent from your OpenStreetMap account, but it is probably a good idea to choose the same username you are using for OSM.</p>
 <p>When you have a wiki account, go to the URL of your user page in the wiki. If you are browsing the wiki and are currently logged in with your wiki account, there will be a link to your user page in the top right corner.</p>
-<p>You will then be informed that the page does not exist yet, and there will be a link letting you create the page. Use this link and a text area will let you enter any text you want. For example, you can include categories such as your example <a href="http://wiki.openstreetmap.org/wiki/Category:Users_in_Liguria">"Users in Liguria"</a> by simply inserting the text <code>[[Category:Users in Liguria|Your user name]]</code>.</p>
+<p>You will then be informed that the page does not exist yet, and there will be a link letting you create the page. Use this link and a text area will let you enter any text you want. For example, you can include categories such as your example <a href="https://wiki.openstreetmap.org/wiki/Category:Users_in_Liguria">"Users in Liguria"</a> by simply inserting the text <code>[[Category:Users in Liguria|Your user name]]</code>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

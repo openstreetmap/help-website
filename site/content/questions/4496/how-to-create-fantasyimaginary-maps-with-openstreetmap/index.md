@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Hello,</p>
 <p>let's say we want to create something like Tolkien's Middle Earth map with OSM. What would be the best way for achieving this?</p>
 <p>I've drawn a fantasy map on Inkscape and Gimp. Now that I've discovered OSM, I think it would allow to get much more details and expressions than with those tools. I've begun to import the svg trace into JOSM. It's working great and it's quite easy to use. But now the problem is for rendering it. When using Osmarender (from josm or from the command line with xsltproc), I can get a SVG file, which is too wide for Inkscape (the map is 1800 km wide). Besides, the rendering is not complete, I have several parts which are not shown.</p>
-<p>That's why I think it may be appropriate to launch my own OSM server and database, for filling it with this fantasy world (of could it would be completely independant from the official OSM) I've read the tutorial on <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> and installed it on my server. It's working, but from the beginning, it loads data (maps) from the official OSM server. I'd like to get an empty map (yet my database should be empty).</p>
+<p>That's why I think it may be appropriate to launch my own OSM server and database, for filling it with this fantasy world (of could it would be completely independant from the official OSM) I've read the tutorial on <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a> and installed it on my server. It's working, but from the beginning, it loads data (maps) from the official OSM server. I'd like to get an empty map (yet my database should be empty).</p>
 <p>Maybe there is an easier way for doing this? I'd prefer if possible to create everything within JOSM, and render my .osm file for getting a jpg or png file. But it doesn't seem the rendering tools are supposed to render a whole world. Is it possible to do it easily with Mapnik? I'd also like to browse tiles of different parts of this world, like we do with OSM.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -124,7 +124,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should be able to achieve a considerable map size even without your own database. I should think that you would hit the editor size limit first, before you start to see rendering problems. Maybe you should try <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> instead of Osmarender. (Note however that Maperitive is not Open Source so you if think you may need modifications over and above what you can achieve with style sheets then Maperitive may not be the way to go.) You can also use the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> rendering engine, either running directly on your .osm file or running on a PostGIS database created with osm2pgsql; this also does not require the rails port.</p>
+<p>You should be able to achieve a considerable map size even without your own database. I should think that you would hit the editor size limit first, before you start to see rendering problems. Maybe you should try <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> instead of Osmarender. (Note however that Maperitive is not Open Source so you if think you may need modifications over and above what you can achieve with style sheets then Maperitive may not be the way to go.) You can also use the <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> rendering engine, either running directly on your .osm file or running on a PostGIS database created with osm2pgsql; this also does not require the rails port.</p>
 <p>Tiles can be created with Mapnik (that's how most people do it) but also with Maperitive and with Osmarender (via the tiles@home software), and tile creation is independent of running a rails port.</p>
 <p>Both Mapnik and Maperitive can output directly to PNG, and both will happily render the whole world.</p>
 <p>The rails port really only comes into play if you want a proper database with versioning and multiple users and partial editing and so on; as long as you have one big file that you're working on alone and that can be loaded fully into JOSM, there's no reason why you would install the rails port.</p>
@@ -175,7 +175,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Hello, thank you for your explanations! I wasn't sure how to use Mapnik, and you helped me to go further into this direction.</p>
 <p>I managed to get something interesting, even though it will be maybe a bit longer than I expected, because Mapnik, and probably other tools as well, need some rules for processing the osm file directly. In a way, it's not that bad because a fantasy map ought to look different than a map for driving a car.</p>
-<p>I found some enlightning receipes there: <a href="http://wiki.openstreetmap.org/wiki/Mapnik:_Map_from_scratch">http://wiki.openstreetmap.org/wiki/Mapnik:_Map_from_scratch</a></p>
+<p>I found some enlightning receipes there: <a href="https://wiki.openstreetmap.org/wiki/Mapnik:_Map_from_scratch">https://wiki.openstreetmap.org/wiki/Mapnik:_Map_from_scratch</a></p>
 <p>I'll post later with some working examples.</p>
 </div>
 <div id="comment-4547-info" class="comment-info">
@@ -188,7 +188,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Finally, I managed to achieve what I wanted by using <a href="http://wiki.openstreetmap.org/wiki/Ceyx">ceyx</a>.</p>
+<p>Finally, I managed to achieve what I wanted by using <a href="https://wiki.openstreetmap.org/wiki/Ceyx">ceyx</a>.</p>
 <p>I posted a description of this on cartographersguild (last post, at the moment):</p>
 <p><a href="http://www.cartographersguild.com/showthread.php?5409-A-world-without-name">http://www.cartographersguild.com/showthread.php?5409-A-world-without-name</a></p>
 <p>If you're not registered on their forum, you can get the images there: <a href="http://anamnese.online.fr/site2/index.php?page=monde">http://anamnese.online.fr/site2/index.php?page=monde</a></p>

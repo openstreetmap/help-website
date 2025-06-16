@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The best solution would be making a correct <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">administrative boundary</a> for both citys. This way you don't need to add addr tags to streets.</p>
+<p>The best solution would be making a correct <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">administrative boundary</a> for both citys. This way you don't need to add addr tags to streets.</p>
 <p>If the tools that are used to prepare maps for gps device are configured correctly, then streets that are on the admin boundary are visible under both admin units.</p>
 </div>
 <div class="answer-controls post-controls">

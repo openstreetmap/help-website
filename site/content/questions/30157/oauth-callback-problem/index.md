@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Oauth Callback Problem"
-description = '''http://www.openstreetmap.org/oauth/request_token?oauth_callback=josm&amp;amp;oauth_consumer_key=SsVhEirBhBt9KnIjAIloQaImFsBvoL7mbVDJCZS5%20&amp;amp;oauth_nonce=1390495191213&amp;amp;oauth_signature=xRlIuHwFbe%2B3DyVstyQazDhkxrA%3D&amp;amp;oauth_signature_method=HMAC-SHA1&amp;amp;oauth_timestamp=1390495191&amp;amp;oauth_ver...'''
+description = '''https://www.openstreetmap.org/oauth/request_token?oauth_callback=josm&amp;amp;oauth_consumer_key=SsVhEirBhBt9KnIjAIloQaImFsBvoL7mbVDJCZS5%20&amp;amp;oauth_nonce=1390495191213&amp;amp;oauth_signature=xRlIuHwFbe%2B3DyVstyQazDhkxrA%3D&amp;amp;oauth_signature_method=HMAC-SHA1&amp;amp;oauth_timestamp=1390495191&amp;amp;oauth_ver...'''
 date = "2014-01-23T16:45:00Z"
 lastmod = "2014-01-23T18:09:00Z"
 weight = 30157
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/oauth/request_token?oauth_callback=josm&amp;oauth_consumer_key=SsVhEirBhBt9KnIjAIloQaImFsBvoL7mbVDJCZS5%20&amp;oauth_nonce=1390495191213&amp;oauth_signature=xRlIuHwFbe%2B3DyVstyQazDhkxrA%3D&amp;oauth_signature_method=HMAC-SHA1&amp;oauth_timestamp=1390495191&amp;oauth_version=1.0">http://www.openstreetmap.org/oauth/request_token?oauth_callback=josm&amp;oauth_consumer_key=SsVhEirBhBt9KnIjAIloQaImFsBvoL7mbVDJCZS5%20&amp;oauth_nonce=1390495191213&amp;oauth_signature=xRlIuHwFbe%2B3DyVstyQazDhkxrA%3D&amp;oauth_signature_method=HMAC-SHA1&amp;oauth_timestamp=1390495191&amp;oauth_version=1.0</a></p>
+<p><a href="https://www.openstreetmap.org/oauth/request_token?oauth_callback=josm&amp;oauth_consumer_key=SsVhEirBhBt9KnIjAIloQaImFsBvoL7mbVDJCZS5%20&amp;oauth_nonce=1390495191213&amp;oauth_signature=xRlIuHwFbe%2B3DyVstyQazDhkxrA%3D&amp;oauth_signature_method=HMAC-SHA1&amp;oauth_timestamp=1390495191&amp;oauth_version=1.0">https://www.openstreetmap.org/oauth/request_token?oauth_callback=josm&amp;oauth_consumer_key=SsVhEirBhBt9KnIjAIloQaImFsBvoL7mbVDJCZS5%20&amp;oauth_nonce=1390495191213&amp;oauth_signature=xRlIuHwFbe%2B3DyVstyQazDhkxrA%3D&amp;oauth_signature_method=HMAC-SHA1&amp;oauth_timestamp=1390495191&amp;oauth_version=1.0</a></p>
 <p>whats wrong in this request token?</p>
 <p>thanks in advance Kenji</p>
 </div>

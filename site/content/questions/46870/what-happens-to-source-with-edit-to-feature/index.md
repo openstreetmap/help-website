@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're editing an element with a "source" tag already on it, I'd edit the source tag on the element so that it best reflects the current source of the data. To take a specific example, if you walk past where <a href="http://www.openstreetmap.org/way/32552759">this building</a> is and find that it is a different shape now, I'd change the "source" key on the object to "survey".</p>
+<p>If you're editing an element with a "source" tag already on it, I'd edit the source tag on the element so that it best reflects the current source of the data. To take a specific example, if you walk past where <a href="https://www.openstreetmap.org/way/32552759">this building</a> is and find that it is a different shape now, I'd change the "source" key on the object to "survey".</p>
 <p>However, on that there's also an "attribution" key and several "canvec:*" keys. I'd probably leave those but other people may remove them - it doesn't matter too much since they were just created by the original bulk import many years ago. They'll still be in OSM's object history of course.</p>
 <p>Also, what scai says above is true - if all of the edits in one changeset are from one source then putting the new source tag on the changeset (rather than repeating it on every object) makes sense. Likewise using namespaced source tags can make sense in some cases too (perhaps "source=Bing;survey"; "source:name=survey").</p>
 <p>I wouldn't overthink it though - "not mapping" is a far more heinous crime than "forgetting to update the source tag" :)</p>

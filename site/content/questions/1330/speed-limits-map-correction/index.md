@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Roads don't usually change classification when the speed limit changes. The way should still be tagged with <code>highway=trunk</code>, and you can also add a <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed"><code>maxspeed=*</code></a> tag to specify the new speed limit.</p>
+<p>Roads don't usually change classification when the speed limit changes. The way should still be tagged with <code>highway=trunk</code>, and you can also add a <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed"><code>maxspeed=*</code></a> tag to specify the new speed limit.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

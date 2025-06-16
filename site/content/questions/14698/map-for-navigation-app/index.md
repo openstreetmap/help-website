@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Part of what I wrote <a href="http://help.openstreetmap.org/questions/14633/i-want-to-create-gps-tracer-with-my-smartphone?page=1&amp;focusedAnswerId=14702#14702">as an answer to another question may be helpful</a>, in particular the vector vs non-vector rendering decision.</p>
+<p>Part of what I wrote <a href="/questions/14633/i-want-to-create-gps-tracer-with-my-smartphone?page=1&amp;focusedAnswerId=14702#14702">as an answer to another question may be helpful</a>, in particular the vector vs non-vector rendering decision.</p>
 <p>I've no idea what "every map has GPS details so it can work with navigator server" means. Is that a statement or a question?<br />
 </p>
 <p>Perhaps you could expand your question with a bit more information about what you're trying to do?</p>

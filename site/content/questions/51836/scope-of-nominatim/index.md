@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi, I set up my own Nominatim instance, because I wanted to generate Latitude / Longitude for all addresses in germany.</p>
 <p>Before I did that, I found an .csv file online with Lat / Lon for all german addresses, it had almost 11 millionen entries.</p>
 <p>When I was checking randomly the missing addresses on my Nominatim instance, I found out that it doesnt provide me with more addresses. The only thing that Nominatim does, when u enter an address with a housenumbeer that seemed to not exist, is to give back lat / long for an already existing address with a lower housenumber.</p>
-<p>I did convert the germany-latest.osm.pbf to a .o5m-file and then checked the following with osmfilter: <img src="http://help.openstreetmap.org/upfiles/osm_adressenzahl11millionen.png" alt="alt text" /></p>
+<p>I did convert the germany-latest.osm.pbf to a .o5m-file and then checked the following with osmfilter: <img src="/upfiles/osm_adressenzahl11millionen.png" alt="alt text" /></p>
 <p>My question is now: Even with my own Nominatim Instance, if I use it with the germany-latest.osm.pbf file, it wont provide me with more addresses then the germany-latest.osm.pbf contains (red square), is that correct? Or is there some kind of a trick, that Nominatim can calculate new addresses with an algorithm or anything similar (that was what I expected to be honoust)?</p>
 <p>Thank in advance, Stephano</p>
 </div>

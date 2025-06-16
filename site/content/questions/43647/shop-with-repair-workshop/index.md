@@ -114,7 +114,7 @@ osqa_accepted = false
 <p>For bicycle shops there is the option of adding additional tags like;</p>
 <p>service:bicycle:repair=yes</p>
 <p>service:bicycle:retail=yes</p>
-<p>from: <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dbicycle#Additional_keys">http://wiki.openstreetmap.org/wiki/Tag:shop%3Dbicycle#Additional_keys</a></p>
+<p>from: <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbicycle#Additional_keys">https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbicycle#Additional_keys</a></p>
 <p>Would something similar be suitable for musical instrument shops that offer repair service?</p>
 <p><em>(sorry, I put this as a comment rather than an answer first)</em></p>
 </div>
@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There doesn't seem to be a tag for just repair. But if we look at the <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar">car</a> tag and the <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle">motorcycle</a> tag. Both say they sell and repair. There doesn't seem to be anything in the amenity tag or the craft tag. As of now there doesn't seem to be a way to tag music repair shop</p>
+<p>There doesn't seem to be a tag for just repair. But if we look at the <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar">car</a> tag and the <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle">motorcycle</a> tag. Both say they sell and repair. There doesn't seem to be anything in the amenity tag or the craft tag. As of now there doesn't seem to be a way to tag music repair shop</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you could just use the tag 'repair=yes/welcome/only_sold' - see this wiki <a href="http://wiki.openstreetmap.org/wiki/Key:repair">http://wiki.openstreetmap.org/wiki/Key:repair</a></p>
+<p>I think you could just use the tag 'repair=yes/welcome/only_sold' - see this wiki <a href="https://wiki.openstreetmap.org/wiki/Key:repair">https://wiki.openstreetmap.org/wiki/Key:repair</a></p>
 <p>I've certainly used 'repair=yes' for computer shops which I've added to the map.</p>
 </div>
 <div class="answer-controls post-controls">

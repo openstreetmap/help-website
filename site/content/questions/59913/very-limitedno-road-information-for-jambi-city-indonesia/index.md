@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Our company relies a lot on the road information provided by OSM but unfortunately, we are facing a lot of issues in Jambi which is one of the cities we are operating at having very minimum road information.</p>
 <p>Need your intervention to fix this as soon as possible since it would be difficult to operate in cities with little/no information.</p>
 <p>Thanks!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-10-02_at_14.46.33.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-10-02_at_14.46.33.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-jambi" rel="tag" title="see questions tagged &#39;jambi&#39;">jambi</span> <span class="post-tag tag-link-indonesia" rel="tag" title="see questions tagged &#39;indonesia&#39;">indonesia</span> <span class="post-tag tag-link-missing_path" rel="tag" title="see questions tagged &#39;missing_path&#39;">missing_path</span>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap relies on the contributions of volunteers on the ground. You say your company uses OSM a lot - why not give something back and have your people on the ground record data for OpenStreetMap, <em>and</em> profit from a better map in return? Anyone can contribute. Check our <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> for details!</p>
+<p>OpenStreetMap relies on the contributions of volunteers on the ground. You say your company uses OSM a lot - why not give something back and have your people on the ground record data for OpenStreetMap, <em>and</em> profit from a better map in return? Anyone can contribute. Check our <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> for details!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

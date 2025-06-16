@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>I live on Creekside Dr, Franklinton, NC 27525</p>
 <p>My house doesn't show on openstreetmap GPS systems, so I took a look on the openstreetmap website.</p>
 <p>If I search for my street/address, nothing comes up. If I go to the location, zoomed out I see my housing devlopment. Zoomed in, it goes away.</p>
-<p>Zoomed Out (housing development is present): <a href="http://www.openstreetmap.org/export#map=16/36.1040/-78.5602">http://www.openstreetmap.org/export#map=16/36.1040/-78.5602</a></p>
-<p>Zoomed In(housing development is gone): <a href="http://www.openstreetmap.org/export#map=17/36.10573/-78.56135">http://www.openstreetmap.org/export#map=17/36.10573/-78.56135</a></p>
+<p>Zoomed Out (housing development is present): <a href="https://www.openstreetmap.org/export#map=16/36.1040/-78.5602">https://www.openstreetmap.org/export#map=16/36.1040/-78.5602</a></p>
+<p>Zoomed In(housing development is gone): <a href="https://www.openstreetmap.org/export#map=17/36.10573/-78.56135">https://www.openstreetmap.org/export#map=17/36.10573/-78.56135</a></p>
 <p>I'd really like to be able to use one of the free Android GPS systems, but they are not usable without the map being correct.</p>
 <p>Does anyone know what is going on here or how to fix it?</p>
 <p>Thanks,</p>

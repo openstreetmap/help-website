@@ -105,7 +105,7 @@ osqa_accepted = false
 <div id="post-58424-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Using <a href="http://www.openstreetmap.org/#map=7/43.644/21.731">http://www.openstreetmap.org/#map=7/43.644/21.731</a> , can you zoom in somewhere where there is a problem and then paste the URL here?</p>
+<p>Using <a href="https://www.openstreetmap.org/#map=7/43.644/21.731">https://www.openstreetmap.org/#map=7/43.644/21.731</a> , can you zoom in somewhere where there is a problem and then paste the URL here?</p>
 </div>
 <div id="comment-58424-info" class="comment-info">
 <span class="comment-age">(21 Aug '17, 10:10)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect it will be something like <code>motor_vehicle:conditional = no @ (closure times)</code> as described on <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">this wiki page</a></p>
+<p>I suspect it will be something like <code>motor_vehicle:conditional = no @ (closure times)</code> as described on <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">this wiki page</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

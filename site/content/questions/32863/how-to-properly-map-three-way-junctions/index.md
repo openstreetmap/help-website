@@ -40,10 +40,10 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello all, I'm not sure how's the accepted way to map three-way junctions, please see the two examples below.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Example_1_small.jpg" alt="Example 1" /></p>
+<p><img src="/upfiles/Example_1_small.jpg" alt="Example 1" /></p>
 <p>Larger version: <a href="https://i.imgur.com/NfASboD.jpg">https://i.imgur.com/NfASboD.jpg</a></p>
 <p>In the example above I followed the generally accepted rule of mapping ways as the middle point of the road.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Example_2_small.jpg" alt="Example 2" /></p>
+<p><img src="/upfiles/Example_2_small.jpg" alt="Example 2" /></p>
 <p>Larger version: <a href="https://i.imgur.com/5LRmUky.jpg">https://i.imgur.com/5LRmUky.jpg</a></p>
 <p>In this example I just connected the road coming from the left to the already existing road that goes vertically.</p>
 <p>Thanks in advance.</p>
@@ -113,13 +113,13 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your question example shows what in Britain is often called a "T" junction with a major road running from the top of the picture to the bottom with a minor or side road ending at the Main road. In general from what I've seen from the imports and official maps from the ordanance survey in the UK (which affects where I normally contribute) the main road traffic runs straight regardless of the other road joining on the side so the routing line runs straight on like in your last example.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Untitled_1.jpg" alt="Junction on the the A4 in the UK showing a T-junction and highway area use." /></p>
+<p><img src="/upfiles/Untitled_1.jpg" alt="Junction on the the A4 in the UK showing a T-junction and highway area use." /></p>
 <p>this shows a big "T" with the white lines showing how the main road passes by straigt (at possibly speeds upto 60MPH). Also shown is the addition of highway areas and the footway (aka pavement/sidewalk) being added. The hedges marking the sightlines are yet to be added. At this detail level confidance in possitional accuracy stretched a lot when relying on arial photos, and ground surveys are important to understand the grainy photos properly.</p>
 <p>the headges sugest it is a cross-roads with two "T" junctions meeting from both sides with a slight offset. as both roads approch at 90 degrees the routeing line leaves the road area of the main road at 90 degrees. I've left the kink in at the moment to show its the same junction and the routeing lines with fall all crossing the road area of the main carrageway.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Untitled2.jpg" alt="This picture shows two &quot;T&quot; juction in a urban setting with the priorty and shape of junction painted on in white lines and on junction has Highway areas applied for the footway and main carrageway." /> In this 2nd example has two "T" juctions arriving simaler to the first but in a urban setting and no connection to each other. The priorty and shape of junction is clearly painted on in white lines on the lower junction with the upperon already haveing had Highway areas applied for the footway and main carrageway.</p>
+<p><img src="/upfiles/Untitled2.jpg" alt="This picture shows two &quot;T&quot; juction in a urban setting with the priorty and shape of junction painted on in white lines and on junction has Highway areas applied for the footway and main carrageway." /> In this 2nd example has two "T" juctions arriving simaler to the first but in a urban setting and no connection to each other. The priorty and shape of junction is clearly painted on in white lines on the lower junction with the upperon already haveing had Highway areas applied for the footway and main carrageway.</p>
 <p>both routeing lines approach at same angle as the roads with the main road staying straight.</p>
 <p>I tried looking for a fork with road joing at an angle but most example i went for seemed to try and straighten right at the end as it is easier to take the hair-pin [narrow angle] bend to travel between the two roads on that angle. an old solution was the "country roundabout" shown bellow:-</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Untitled3.jpg" alt="A view of &quot;country roundabout&quot; at speen in Newbury UK were coaching roads meet an ealier alternative route into town alos shown is a memorial in the middle." /></p>
+<p><img src="/upfiles/Untitled3.jpg" alt="A view of &quot;country roundabout&quot; at speen in Newbury UK were coaching roads meet an ealier alternative route into town alos shown is a memorial in the middle." /></p>
 <p>In this example and many other link road joinings and roundabouts the routing line meets the main at an angle but the main stays straight (Or on its own bigger curve in roundabouts).</p>
 <p>This area was mapped at a larger scale than I normally work these days which is why there is a lot of dissplacement issues and I could have tried for a better alignment too.</p>
 <p>These " country roundabouts formed when (before traffic laws carrages, waggons and other traffic took the shortest path. so genrally didn't go into the middle of the road space when turning some are big enough to form three forks while others just get converted to other big junction types that reuse the middle.</p>
@@ -239,7 +239,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I think your second example gives a much better representation of what is on the ground and also a better guide to how traffic moves through the ways.</p>
 <p>I feel your first version is more suited to the following ways</p>
-<p><img src="http://help.openstreetmap.org/upfiles/wiggly_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/wiggly_1.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

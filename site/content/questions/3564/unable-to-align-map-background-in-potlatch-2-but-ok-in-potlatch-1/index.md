@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We're always anxious to hear of bugs like this that can be consistently reproduced. There are some simple <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Using_Flash_Debug_Player">debugging instructions on the wiki</a> that will help you file bug reports so we can nail it down. Thanks in advance. :)</p>
+<p>We're always anxious to hear of bugs like this that can be consistently reproduced. There are some simple <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Using_Flash_Debug_Player">debugging instructions on the wiki</a> that will help you file bug reports so we can nail it down. Thanks in advance. :)</p>
 <p>It's worth noting that the version on <a href="http://osm.org">osm.org</a> is not always the latest version of the code. You can test whether the bug has already been fixed by using the <a href="http://random.dev.openstreetmap.org/potlatch2/potlatch2.html">test build at</a> <a href="http://random.dev.openstreetmap.org"></a><a href="http://random.dev.openstreetmap.org">random.dev.openstreetmap.org</a>. (It talks to a test database, not the main OSM database, so you can mess around to your heart's content.)</p>
 </div>
 <div class="answer-controls post-controls">

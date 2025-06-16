@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You don't have to add a building outline. If you know lat and lon of the address, it is enough to <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">add</a> a node with the <a href="http://wiki.openstreetmap.org/wiki/Addr">addr</a> key. Adding a whole <a href="http://wiki.openstreetmap.org/wiki/Buildings">building</a> just allows to draw a nice looking map but is not required for finding the address.</p>
+<p>You don't have to add a building outline. If you know lat and lon of the address, it is enough to <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">add</a> a node with the <a href="https://wiki.openstreetmap.org/wiki/Addr">addr</a> key. Adding a whole <a href="https://wiki.openstreetmap.org/wiki/Buildings">building</a> just allows to draw a nice looking map but is not required for finding the address.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

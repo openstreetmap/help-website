@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hello, your question is answered in this thread with specific reference to the iD editor :- <a href="https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland</a> Specificaly your outer ways should be all joined together, either as individual ways or (which should be easiest), one continuous way, and all tagged as waterway=riverbank. The island drawn as a continuous way and tagged as landuse=residential. A multipolygon can then be created by selecting all ways at the same time, with the river banks as outer roles and island as an inner role. Check the roles after creating the multipolygon. As is explained here :- <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a> This is a fairly simple procedure in JOSM but iD might not be so.</p>
+<p>Hello, your question is answered in this thread with specific reference to the iD editor :- <a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland</a> Specificaly your outer ways should be all joined together, either as individual ways or (which should be easiest), one continuous way, and all tagged as waterway=riverbank. The island drawn as a continuous way and tagged as landuse=residential. A multipolygon can then be created by selecting all ways at the same time, with the river banks as outer roles and island as an inner role. Check the roles after creating the multipolygon. As is explained here :- <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a> This is a fairly simple procedure in JOSM but iD might not be so.</p>
 <p>Also with regard to this particular water way, the new waterway should be joined to the existing waterway Periyar to make the various sections of water one complete body. The middle new arm joins correctly but both the north west and the eastern arms do not. Lastly don't forget to add the two bridges to the road under which your new water flows.</p>
 <p>Regards</p>
 <p>PS If you still have trouble I can fix it for you, you'll then see how it could be achieved.</p>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Muzirian, be shure to connect both riverbanks together by cutting the river, stream or lake into, <a href="http://www.openstreetmap.org/#map=17/52.48985/4.78471">http://www.openstreetmap.org/#map=17/52.48985/4.78471</a> and please read these pages too, <a href="http://wiki.openstreetmap.org/wiki/River">http://wiki.openstreetmap.org/wiki/River</a></p>
+<p>Muzirian, be shure to connect both riverbanks together by cutting the river, stream or lake into, <a href="https://www.openstreetmap.org/#map=17/52.48985/4.78471">https://www.openstreetmap.org/#map=17/52.48985/4.78471</a> and please read these pages too, <a href="https://wiki.openstreetmap.org/wiki/River">https://wiki.openstreetmap.org/wiki/River</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -285,7 +285,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I haven't used id for polygons I use Potlatch2. but the riverbank polygon needs to form a complete polygon, you can split the river in sections to do that, otherwise the polygon would be too big.It can't be tagged as a riverbank polygon until its end join up. The islands first and last node(s) must also join to become one. When both polygons are done they both have to be selected so cntl click both then select multipolygon. If you search these questions for islands you will get lots of similar Q and As. If you search the map for an island in a river you could carefully open your editor and use that as an example. I just tried to sort a bit of the riverbank with iD but i/you would need the plot an area not a line. So I have edited the section with potlatch2. This is the section I've re-done for you to study. for details see my editing note. <a href="http://www.openstreetmap.org/search?query=%2056%20-.2#map=16/10.1835/76.2141">http://www.openstreetmap.org/search?query=%2056%20-.2#map=16/10.1835/76.2141</a></p>
+<p>I haven't used id for polygons I use Potlatch2. but the riverbank polygon needs to form a complete polygon, you can split the river in sections to do that, otherwise the polygon would be too big.It can't be tagged as a riverbank polygon until its end join up. The islands first and last node(s) must also join to become one. When both polygons are done they both have to be selected so cntl click both then select multipolygon. If you search these questions for islands you will get lots of similar Q and As. If you search the map for an island in a river you could carefully open your editor and use that as an example. I just tried to sort a bit of the riverbank with iD but i/you would need the plot an area not a line. So I have edited the section with potlatch2. This is the section I've re-done for you to study. for details see my editing note. <a href="https://www.openstreetmap.org/search?query=%2056%20-.2#map=16/10.1835/76.2141">https://www.openstreetmap.org/search?query=%2056%20-.2#map=16/10.1835/76.2141</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -307,7 +307,7 @@ osqa_accepted = false
 <div id="post-32904-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>here is a similar question <a href="https://help.openstreetmap.org/questions/22483/islands-in-lakes-not-showing">https://help.openstreetmap.org/questions/22483/islands-in-lakes-not-showing</a></p>
+<p>here is a similar question <a href="/questions/22483/islands-in-lakes-not-showing">https://help.openstreetmap.org/questions/22483/islands-in-lakes-not-showing</a></p>
 </div>
 <div id="comment-32904-info" class="comment-info">
 <span class="comment-age">(06 May '14, 14:45)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -330,7 +330,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Muzirian, some remarks, read the River pages in the Wiki. Please look at the ways carefully. I have added some. Theres a node in the river but different from the riverbanks name ? Connect the triangle ways and the riverbanks by selecting them and connect them. Read the Wiki <a href="http://wiki.openstreetmap.org/wiki/Wood">http://wiki.openstreetmap.org/wiki/Wood</a> as well. You have drawn single ways; a way has always to tags at each side, riverbank and forest. You’ll have to draw each line 2 times and connect them, look at the island. Please look at the work of other mappers in your area and communicate with them. Keep mapping and welcome</p>
+<p>Muzirian, some remarks, read the River pages in the Wiki. Please look at the ways carefully. I have added some. Theres a node in the river but different from the riverbanks name ? Connect the triangle ways and the riverbanks by selecting them and connect them. Read the Wiki <a href="https://wiki.openstreetmap.org/wiki/Wood">https://wiki.openstreetmap.org/wiki/Wood</a> as well. You have drawn single ways; a way has always to tags at each side, riverbank and forest. You’ll have to draw each line 2 times and connect them, look at the island. Please look at the work of other mappers in your area and communicate with them. Keep mapping and welcome</p>
 </div>
 <div id="comment-32921-info" class="comment-info">
 <span class="comment-age">(07 May '14, 00:55)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -341,7 +341,7 @@ osqa_accepted = false
 <div id="post-32969-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have asked a related Q <a href="https://help.openstreetmap.org/questions/32968/id-editor-lines-and-areas">https://help.openstreetmap.org/questions/32968/id-editor-lines-and-areas</a></p>
+<p>I have asked a related Q <a href="/questions/32968/id-editor-lines-and-areas">https://help.openstreetmap.org/questions/32968/id-editor-lines-and-areas</a></p>
 </div>
 <div id="comment-32969-info" class="comment-info">
 <span class="comment-age">(08 May '14, 11:26)</span> <span class="comment-user userinfo">andy mackey</span>

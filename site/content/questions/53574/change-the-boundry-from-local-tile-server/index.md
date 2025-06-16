@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is some information in <a href="http://www.openstreetmap.org/user/PlaneMad/diary/38176">this diary entry</a> that might help. If the results of the Overpass query don't get exactlly what you want then you should be able to infer something from the tags it's looking for, and fill in the gaps yourself.</p>
+<p>There is some information in <a href="https://www.openstreetmap.org/user/PlaneMad/diary/38176">this diary entry</a> that might help. If the results of the Overpass query don't get exactlly what you want then you should be able to infer something from the tags it's looking for, and fill in the gaps yourself.</p>
 <p>Then, depending on what sort of tile server you're running and how it displays boundary data, update OSM's on-the-ground boundary data with the claim of a particular country.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -188,7 +188,7 @@ One Answer:
 <div class="comment-text">
 <p>Somewhere you'll have a file "renderd.conf". In there there will probably be a line "XML=" that points to a file like "mapnik.xml". That probably came from from the PPA that you used to set up the server. If you're lucky, you'll also have a file "project.mml" or "project.yaml" that is part of the source of that style (from which mapnik.xml is created).</p>
 <p>If you don't have that, I wouldn't recommend trying to edit mapnik.xml manually - I'd download a different map style, install it as per its installation instructions, and have "renderd.conf" point at that.</p>
-<p>I wrote a guide <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load">here</a> that goes through the process for one map style. You may be able to use some of that to help set up a map style of your choice (see the sections below <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Setting_up_a_stylesheet">here</a> particularly). If you want to install a version of the "standard" map style used at openstreetmap.org read <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md">this</a>, but do check that the pre-requisites for that (e.g mapnik version).</p>
+<p>I wrote a guide <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load">here</a> that goes through the process for one map style. You may be able to use some of that to help set up a map style of your choice (see the sections below <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1604_tileserver_load#Setting_up_a_stylesheet">here</a> particularly). If you want to install a version of the "standard" map style used at openstreetmap.org read <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md">this</a>, but do check that the pre-requisites for that (e.g mapnik version).</p>
 </div>
 <div id="comment-53743-info" class="comment-info">
 <span class="comment-age">(27 Dec '16, 12:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

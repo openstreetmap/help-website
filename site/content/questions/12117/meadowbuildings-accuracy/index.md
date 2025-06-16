@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello all I'm trying to draw some meadow areas around my <a href="http://www.openstreetmap.org/?lat=41.062298&amp;lon=-8.545524&amp;zoom=18&amp;layers=M" title="village">village</a>...</p>
+<p>Hello all I'm trying to draw some meadow areas around my <a href="https://www.openstreetmap.org/?lat=41.062298&amp;lon=-8.545524&amp;zoom=18&amp;layers=M" title="village">village</a>...</p>
 <p>the thing is should I intersect the "area" points with the "ways" points to avoid the gap areas between the way and the buildings/nature areas?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -137,7 +137,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>That's it, don't worry about the rendering; correct data is more important. Related to <a href="http://wiki.openstreetmap.org/wiki/Don&#39;t_tag_for_the_renderer">http://wiki.openstreetmap.org/wiki/Don't_tag_for_the_renderer</a></p>
+<p>That's it, don't worry about the rendering; correct data is more important. Related to <a href="https://wiki.openstreetmap.org/wiki/Don&#39;t_tag_for_the_renderer">https://wiki.openstreetmap.org/wiki/Don't_tag_for_the_renderer</a></p>
 <p>One thing you can do is specify width=* on the highway. Mapnik doesn't yet take it into account, but I'm confident someday it will, improving the rendering.</p>
 </div>
 <div id="comment-12141-info" class="comment-info">

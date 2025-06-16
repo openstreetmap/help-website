@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I'm currently confused by tags like building=detached building=semidetached_house building=apartments. So surely a "detached" house can the an apartments building. But I guess I should tag it as "appartments" ? (not "detached") A house can share one wall with another one - but does this define a "semidetached_house" - or only what I would term a "Doppelhaushälfte" in German; this is what I assume.</p>
 <p>More generally: At least on first look, the tags seem to specify different "dimensions" of a house. But it seems that this is not the case. There more seems to be a sort of hierarchy and I should use the first tag matching. (e.g. probably 'apartments' before 'detached')</p>
 <p>Is there some generic discussion of that ? I searched but so far missed.</p>
-<p>And yes, this is the reason I asked <a href="https://help.openstreetmap.org/questions/79157/how-can-i-find-my-changes-with-a-specific-comment">How can I find my changes with a specific comment ?</a></p>
+<p>And yes, this is the reason I asked <a href="/questions/79157/how-can-i-find-my-changes-with-a-specific-comment">How can I find my changes with a specific comment ?</a></p>
 <p>I need to recheck what I did - as soon as I understood, how to do it correctly.... I've checked <a href="https://taginfo.openstreetmap.org/keys/building#values">DE:Gebäude</a> but I'm still wondering....</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I see there are other questions on POI not appearing after editing but none of them answers my question. In one edit session I added three POI, a water plant, a farm and a therapist and named one road. After saving I waited a few minutes and refreshed my browser and i see the farm and the road name but not the other POI, I changed the therapist to a herbalist and now the poi appears. I view map data and I see blank circles where I added POI but no text and no icon. I changed the water plant to be 'wastewater plant' which according to <a href="http://wiki.openstreetmap.org/wiki/Key:man%20made?uselang=en-US">http://wiki.openstreetmap.org/wiki/Key:man%20made?uselang=en-US</a> does have an icon defined but still no luck. The same happened to a graveyard I edited two days previously.</p>
-<p>The map area is <a href="http://www.openstreetmap.org/#map=17/-4.26933/-79.21994">http://www.openstreetmap.org/#map=17/-4.26933/-79.21994</a></p>
+<p>I see there are other questions on POI not appearing after editing but none of them answers my question. In one edit session I added three POI, a water plant, a farm and a therapist and named one road. After saving I waited a few minutes and refreshed my browser and i see the farm and the road name but not the other POI, I changed the therapist to a herbalist and now the poi appears. I view map data and I see blank circles where I added POI but no text and no icon. I changed the water plant to be 'wastewater plant' which according to <a href="https://wiki.openstreetmap.org/wiki/Key:man%20made?uselang=en-US">https://wiki.openstreetmap.org/wiki/Key:man%20made?uselang=en-US</a> does have an icon defined but still no luck. The same happened to a graveyard I edited two days previously.</p>
+<p>The map area is <a href="https://www.openstreetmap.org/#map=17/-4.26933/-79.21994">https://www.openstreetmap.org/#map=17/-4.26933/-79.21994</a></p>
 <p>So the question is why are my edits not visible? if this is because, as I read, some renderers don't display all information then how can I know in advance whether my edits are going to appear?. Why would a farm be deemed more relevant to display than a wastewater plant or a graveyard?.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -142,7 +142,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>And a comment on the wastewater icon - that was uploaded in 2010, but <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant#Rendering">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant#Rendering</a> says that the plants aren't rendered as at March 2013, so if they did ever render the stylesheet was amended between those two dates. Certainly it doesn't currently: <a href="https://github.com/gravitystorm/openstreetmap-carto/search?utf8=✓&amp;q=water">https://github.com/gravitystorm/openstreetmap-carto/search?utf8=✓&amp;q=water</a></p>
+<p>And a comment on the wastewater icon - that was uploaded in 2010, but <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant#Rendering">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant#Rendering</a> says that the plants aren't rendered as at March 2013, so if they did ever render the stylesheet was amended between those two dates. Certainly it doesn't currently: <a href="https://github.com/gravitystorm/openstreetmap-carto/search?utf8=✓&amp;q=water">https://github.com/gravitystorm/openstreetmap-carto/search?utf8=✓&amp;q=water</a></p>
 </div>
 <div id="comment-39592-info" class="comment-info">
 <span class="comment-age">(16 Dec '14, 08:33)</span> <span class="comment-user userinfo">EdLoach ♦</span>

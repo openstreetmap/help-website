@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I extracted both nodes and ways from <a href="http://openstreetmap.org/">OpenStreetMap</a> in PostgreSQL with <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>. I'm looking for all restaurants in a given area. The issue is that some of them are coded in OSM as nodes and others as ways.</p>
+<p>I extracted both nodes and ways from <a href="http://openstreetmap.org/">OpenStreetMap</a> in PostgreSQL with <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>. I'm looking for all restaurants in a given area. The issue is that some of them are coded in OSM as nodes and others as ways.</p>
 <p>How is it possible to have only one point when it is represented both as a node and a way?</p>
 <p>The intuitive answer is to intersect the ways with the nodes. If a node is inside a way, they will both count as one. Otherwise, if there is only a node or only a way without nodes inside, it's fine.</p>
 <p>The 'geometry' column in the 'ways' table does not contain information (it has something like a geometry, but all values are similar). Or maybe it is possible to use the 'nodes' table?</p>

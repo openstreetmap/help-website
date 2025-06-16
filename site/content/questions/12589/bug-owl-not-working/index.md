@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] BUG - OWL not working"
-description = '''http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29 Ruby on Rails application could not be started These are the possible causes: There may be a syntax error in the application&#x27;s code. Please check for such errors and fix them. A required library may not installed. Please install a...'''
+description = '''https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29 Ruby on Rails application could not be started These are the possible causes: There may be a syntax error in the application&#x27;s code. Please check for such errors and fix them. A required library may not installed. Please install a...'''
 date = "2012-05-07T10:34:00Z"
 lastmod = "2012-05-07T10:34:00Z"
 weight = 12589
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29</a></p>
 <p>Ruby on Rails application could not be started These are the possible causes:</p>
 <pre><code>There may be a syntax error in the application&#39;s code. Please check for such errors and fix them.
 A required library may not installed. Please install all libraries that this application requires.

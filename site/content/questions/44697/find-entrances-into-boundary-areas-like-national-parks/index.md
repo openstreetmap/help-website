@@ -186,7 +186,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/327080110">Way 327080110</a> seems to be on the border. However, if you zoom in a bit, you'll notice that it actually crosses the border somewhere near node <a href="http://www.openstreetmap.org/node/3337923111">3337923111</a>.. that's why this way is also included in the result.</p>
+<p><a href="https://www.openstreetmap.org/way/327080110">Way 327080110</a> seems to be on the border. However, if you zoom in a bit, you'll notice that it actually crosses the border somewhere near node <a href="https://www.openstreetmap.org/node/3337923111">3337923111</a>.. that's why this way is also included in the result.</p>
 </div>
 <div id="comment-44715-info" class="comment-info">
 <span class="comment-age">(11 Aug '15, 10:10)</span> <span class="comment-user userinfo">mmd</span>

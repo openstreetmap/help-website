@@ -139,7 +139,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you are back in the UK the nearest meetup will be the monthly East Midlands one which is in nottingham or Derby.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup">http://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup">https://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup</a></p>
 <p>We will be happy to discuss it with you at one of those.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -159,7 +159,7 @@ osqa_accepted = false
 <div id="post-51419-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup">http://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup</a> has some info, and the next one is next week: "Tuesday 23rd August Derby 19:30. Old Silk Mill" (that's <a href="http://www.openstreetmap.org/way/55082687">http://www.openstreetmap.org/way/55082687</a> ). It's very near the bus station and not far from the railway station.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup">https://wiki.openstreetmap.org/wiki/Nottingham/Pub_Meetup</a> has some info, and the next one is next week: "Tuesday 23rd August Derby 19:30. Old Silk Mill" (that's <a href="https://www.openstreetmap.org/way/55082687">https://www.openstreetmap.org/way/55082687</a> ). It's very near the bus station and not far from the railway station.</p>
 </div>
 <div id="comment-51419-info" class="comment-info">
 <span class="comment-age">(15 Aug '16, 12:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This seems like an import to me, so a good place to start would be to read <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
+<p>This seems like an import to me, so a good place to start would be to read <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
 <p>Some important points</p>
 <ul>
 <li>where did you get the data from and under which license are they available ?</li>
@@ -261,7 +261,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>If it's surveyed data, great ! That's more than welcome. The "small" amount from plans might violate the license.</p>
-<p>You might have a chat with the person that last modified <a href="http://www.openstreetmap.org/way/395464497">http://www.openstreetmap.org/way/395464497</a> so see how he/she came to the current representation and how it can be improved with your findings. OSM is not just map data, it is community, so talking/writing to previous mappers is important.</p>
+<p>You might have a chat with the person that last modified <a href="https://www.openstreetmap.org/way/395464497">https://www.openstreetmap.org/way/395464497</a> so see how he/she came to the current representation and how it can be improved with your findings. OSM is not just map data, it is community, so talking/writing to previous mappers is important.</p>
 <p>Furthermore such campusses might be represented in different ways, which all can be correct. I hope some of the UK members will participate here (or you could go to the UK mailing list), as the Vipassana Meditation Centre (see way above) was mapped as part of the UK school quarterly project.</p>
 </div>
 <div id="comment-51368-info" class="comment-info">

@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>we had this question before: <a href="https://help.openstreetmap.org/questions/50567/wiki-accountpage-creation-error">https://help.openstreetmap.org/questions/50567/wiki-accountpage-creation-error</a> . Your issue may be the same (sadly not really a solution). Sorry about this - please just try again. Maybe with another browser. We have big spam problems, so the annoying captchas are needed.</p>
+<p>we had this question before: <a href="/questions/50567/wiki-accountpage-creation-error">https://help.openstreetmap.org/questions/50567/wiki-accountpage-creation-error</a> . Your issue may be the same (sadly not really a solution). Sorry about this - please just try again. Maybe with another browser. We have big spam problems, so the annoying captchas are needed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7436/logrady">@logrady</a>: just for info, at <a href="https://wiki.openstreetmap.org/wiki/Accounts">https://wiki.openstreetmap.org/wiki/Accounts</a> the different accounts are listed. Wiki account is clearly a separate one from the "osm account". Yes, you may have used the same username and password for this separate wiki registration (which is not a bad decision, in my opinion).</p>
+<p><a href="https://help.openstreetmap.org/users/7436/logrady">@logrady</a>: just for info, at <a href="https://wiki.openstreetmap.org/wiki/Accounts">https://wiki.openstreetmap.org/wiki/Accounts</a> the different accounts are listed. Wiki account is clearly a separate one from the "osm account". Yes, you may have used the same username and password for this separate wiki registration (which is not a bad decision, in my opinion).</p>
 </div>
 <div id="comment-52096-info" class="comment-info">
 <span class="comment-age">(18 Sep '16, 11:12)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

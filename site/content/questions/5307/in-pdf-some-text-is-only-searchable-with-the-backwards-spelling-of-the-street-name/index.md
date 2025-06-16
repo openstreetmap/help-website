@@ -227,9 +227,9 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>When this result is given by the export tab function from the main <a href="http://openstreetmap.org">openstreetmap.org</a> site you can try some other apps to produce pdf files containing rendered OSM areas:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> ... <a href="http://wiki.openstreetmap.org/wiki/MapOSMatic">Maposmatic</a> ... <a href="http://wiki.openstreetmap.org/wiki/Mapgen.pl">mapgen.pl</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> ... <a href="https://wiki.openstreetmap.org/wiki/MapOSMatic">Maposmatic</a> ... <a href="https://wiki.openstreetmap.org/wiki/Mapgen.pl">mapgen.pl</a></p>
 <p>Maybe that street names are searchable in the output files ...</p>
-<p>When you want to search for more possibilities to render the map and have a PDF as result, have a look at <a href="http://wiki.openstreetmap.org/wiki/Rendering">"Rendering"</a> in the OSM wiki.</p>
+<p>When you want to search for more possibilities to render the map and have a PDF as result, have a look at <a href="https://wiki.openstreetmap.org/wiki/Rendering">"Rendering"</a> in the OSM wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

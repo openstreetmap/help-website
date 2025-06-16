@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/distance_between_stops.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/distance_between_stops.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

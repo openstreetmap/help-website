@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would go for access=private. The <a href="http://wiki.openstreetmap.org/wiki/Key:access">access page</a> states</p>
+<p>I would go for access=private. The <a href="https://wiki.openstreetmap.org/wiki/Key:access">access page</a> states</p>
 <blockquote>
 <p>private Only with permission of the owner on an individual basis</p>
 </blockquote>

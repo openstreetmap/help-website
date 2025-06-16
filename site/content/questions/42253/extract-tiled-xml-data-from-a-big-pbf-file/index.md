@@ -137,7 +137,7 @@ osqa_accepted = false
 <div id="post-42309-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10818/marian">@Marian</a> Please install <code>libboost-dev</code>.</p>
+<p><a href="https://help.openstreetmap.org/users/10818/marian">@Marian</a> Please install <code>libboost-dev</code>.</p>
 </div>
 <div id="comment-42309-info" class="comment-info">
 <span class="comment-age">(13 Apr '15, 08:01)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -213,7 +213,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> ... it has several clipping features.</p>
+<p>You can try <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> ... it has several clipping features.</p>
 <p>Read the instructions in wiki page carefully.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -245,7 +245,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Did you try the clear example at</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_Longitude_and_Latitude">http://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_Longitude_and_Latitude</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_Longitude_and_Latitude">https://wiki.openstreetmap.org/wiki/Osmconvert#Clipping_based_on_Longitude_and_Latitude</a></p>
 <p>If you want two bboxes extracted, you should call this command twice with diferent parameters ... Success?</p>
 </div>
 <div id="comment-42261-info" class="comment-info">

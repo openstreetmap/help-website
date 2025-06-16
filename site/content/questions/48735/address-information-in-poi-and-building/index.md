@@ -65,7 +65,7 @@ osqa_accepted = true
 <div id="post-48993-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Similar question: <a href="https://help.openstreetmap.org/questions/47319/osmose-error-number-twice-in-the-street-when-adding-a-poi-with-house-number">https://help.openstreetmap.org/questions/47319/osmose-error-number-twice-in-the-street-when-adding-a-poi-with-house-number</a></p>
+<p>Similar question: <a href="/questions/47319/osmose-error-number-twice-in-the-street-when-adding-a-poi-with-house-number">https://help.openstreetmap.org/questions/47319/osmose-error-number-twice-in-the-street-when-adding-a-poi-with-house-number</a></p>
 </div>
 <div id="comment-48993-info" class="comment-info">
 <span class="comment-age">(01 Apr '16, 10:58)</span> <span class="comment-user userinfo">sleske</span>
@@ -151,7 +151,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12091/rabon">@rabon</a>: One building often with several addresses can be elegantly tagged by tagging the entrances, as usually each entrance is assigned one address. If not, you can tag a range (addr:housenumber=33-37). Some mappers also create separate address nodes, but I would not consider that a good idea. Address information should be attached to some object that "has" that address (be it an area, a building, or an entrance).</p>
+<p><a href="https://help.openstreetmap.org/users/12091/rabon">@rabon</a>: One building often with several addresses can be elegantly tagged by tagging the entrances, as usually each entrance is assigned one address. If not, you can tag a range (addr:housenumber=33-37). Some mappers also create separate address nodes, but I would not consider that a good idea. Address information should be attached to some object that "has" that address (be it an area, a building, or an entrance).</p>
 </div>
 <div id="comment-48992-info" class="comment-info">
 <span class="comment-age">(01 Apr '16, 10:57)</span> <span class="comment-user userinfo">sleske</span>
@@ -162,7 +162,7 @@ osqa_accepted = true
 <div id="post-49017-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/666/sleske">@sleske</a>: I think this is a great point. I am currently surveying and mapping in the Washington, DC, area. Most buildings, streets and addresses here come from public GIS data sets. Many of these tag the addresses in a single node on the building (which often comprises several addresses). I realy like the sound of your solution, and will consider it for future mapping. For now, the quasi-standard seems to be individual address nodes on buildings. Which, I agree with you, is not optimal.</p>
+<p><a href="https://help.openstreetmap.org/users/666/sleske">@sleske</a>: I think this is a great point. I am currently surveying and mapping in the Washington, DC, area. Most buildings, streets and addresses here come from public GIS data sets. Many of these tag the addresses in a single node on the building (which often comprises several addresses). I realy like the sound of your solution, and will consider it for future mapping. For now, the quasi-standard seems to be individual address nodes on buildings. Which, I agree with you, is not optimal.</p>
 </div>
 <div id="comment-49017-info" class="comment-info">
 <span class="comment-age">(04 Apr '16, 04:13)</span> <span class="comment-user userinfo">rabon</span>
@@ -206,7 +206,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I see no problem with adding the address information to the POI as well.</p>
 <p>The very nature of tags in OSM mean that we do duplicate information all over the place so trying to avoid it for notions of a clean dataset is probably self defeating. People who do want this type of clean dataset already have to implement suitable data cleansing processes on OSM data; and this should be good practise for any one using OSM as a source.</p>
-<p>Furthermore a clean implementation of addresses would treat them as first class objects and not as attributes, so any OSM approach to addresses will <strong>never</strong> satisfy the requirements of a truly elegant approach (here just one example of a different issue, <a href="http://www.openstreetmap.org/relation/2164745#map=17/59.45200/24.73431">multiple buildings</a> all having the same address). However, rest assured we are not alone, almost every customer system in the world treats addresses as attributes.</p>
+<p>Furthermore a clean implementation of addresses would treat them as first class objects and not as attributes, so any OSM approach to addresses will <strong>never</strong> satisfy the requirements of a truly elegant approach (here just one example of a different issue, <a href="https://www.openstreetmap.org/relation/2164745#map=17/59.45200/24.73431">multiple buildings</a> all having the same address). However, rest assured we are not alone, almost every customer system in the world treats addresses as attributes.</p>
 <p>Having to query buildings or parcels for associated address information does impose more complications for people consuming the information. So the duplication of data may assist people not interested in using the building data.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -250,7 +250,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> yes, very good point which I should have made.</p>
+<p><a href="https://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> yes, very good point which I should have made.</p>
 </div>
 <div id="comment-48742-info" class="comment-info">
 <span class="comment-age">(18 Mar '16, 19:25)</span> <span class="comment-user userinfo">SK53 ♦</span>

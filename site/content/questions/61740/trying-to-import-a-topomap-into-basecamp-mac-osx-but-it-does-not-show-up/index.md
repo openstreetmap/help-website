@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><span class="small">(converted from "answer" to <a href="https://help.openstreetmap.org/questions/40523">importing-maps-to-basecamp-mac</a>to a new "question")</span></p>
+<p><span class="small">(converted from "answer" to <a href="/questions/40523">importing-maps-to-basecamp-mac</a>to a new "question")</span></p>
 <p>Hi guys, I am for days trying to import a Topomap (Topohispania = Topo of Spain) into my Basecamp (Mac OSX El Capitan). I download it but it does not show up neither in Mapmanager nor in Basecamp. I also tried to change the filename from .gmapi to .gmap but does not help. I seems to import but does not show up.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

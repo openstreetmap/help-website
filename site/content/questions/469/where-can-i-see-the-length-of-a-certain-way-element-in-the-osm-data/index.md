@@ -174,7 +174,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Found one more on my own:</p>
-<p>Maybe the <em>most simple</em> way to see the length of an OSM way element in a kind of data layer is to load the area (or just the way) in the editor Merkaartor <a href="http://wiki.openstreetmap.org/wiki/Merkaartor"></a><a href="http://wiki.openstreetmap.org/wiki/Merkaartor"></a><a href="http://wiki.openstreetmap.org/wiki/Merkaartor">http://wiki.openstreetmap.org/wiki/Merkaartor</a>.</p>
+<p>Maybe the <em>most simple</em> way to see the length of an OSM way element in a kind of data layer is to load the area (or just the way) in the editor Merkaartor <a href="https://wiki.openstreetmap.org/wiki/Merkaartor"></a><a href="https://wiki.openstreetmap.org/wiki/Merkaartor"></a><a href="https://wiki.openstreetmap.org/wiki/Merkaartor">https://wiki.openstreetmap.org/wiki/Merkaartor</a>.</p>
 <p>You only need to hover over the way with the mouse, or select it. The length is displayed in the information panel on the right of the screen.</p>
 </div>
 <div class="answer-controls post-controls">

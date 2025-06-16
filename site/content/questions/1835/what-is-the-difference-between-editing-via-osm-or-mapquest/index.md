@@ -115,7 +115,7 @@ One Answer:
 <div class="answer-body">
 <p>The versions of the application are slightly different - there are differences in the way the buttons and navigation controls look, for example. But the differences between them are minimal and are mainly configurations differences - different stylesheets, for example, to help fit in better with the rest of the MapQuest Open sites.</p>
 <p>The update process is just the same for both of them - the Potlatch2 instance on MapQuest talks directly to the XML API on <a href="http://osm.org">osm.org</a>, in exactly the same way as the instance on the main <a href="http://osm.org">osm.org</a> site does. There's nothing to choose between them there.</p>
-<p>Feel free to use either copy, or indeed any of the other <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2#Customised_versions_already_up_and_running">customised installations of Potlatch2 that are listed on the wiki</a>.</p>
+<p>Feel free to use either copy, or indeed any of the other <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2#Customised_versions_already_up_and_running">customised installations of Potlatch2 that are listed on the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

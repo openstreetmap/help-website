@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As stated <a href="http://wiki.openstreetmap.org/wiki/Bing#Bing_Aerial_Imagery">here in the wiki</a>, "the only legal use of Bing maps is to use the aerial imagery layer as background to do your own OSM drawing (also known as "tracing"). It is not legal to use any other information from Bing maps (like street names, street view etc). "</p>
+<p>As stated <a href="https://wiki.openstreetmap.org/wiki/Bing#Bing_Aerial_Imagery">here in the wiki</a>, "the only legal use of Bing maps is to use the aerial imagery layer as background to do your own OSM drawing (also known as "tracing"). It is not legal to use any other information from Bing maps (like street names, street view etc). "</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#2a._Can_I_trace_data_from_Google_Maps.2FNokia_Maps.2F....3F">legal FAQ</a> could also be helpful - it's one of the core principles of OSM that we're not allowed to copy maps that others have made, as maps are copyrighted.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2a._Can_I_trace_data_from_Google_Maps.2FNokia_Maps.2F....3F">legal FAQ</a> could also be helpful - it's one of the core principles of OSM that we're not allowed to copy maps that others have made, as maps are copyrighted.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

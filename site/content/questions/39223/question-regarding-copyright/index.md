@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is a misunderstanding. Of course OSM is allowed to include information that can also be found in commercial maps. The difference is that you are not allowed to <em>copy</em> information from commercial maps or other sources that are protected by a copyright.</p>
-<p>Also see the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1">beginner's guide about collecting data</a> as well as the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing">Legal FAQ about contributing</a>.</p>
+<p>Also see the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1">beginner's guide about collecting data</a> as well as the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing">Legal FAQ about contributing</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

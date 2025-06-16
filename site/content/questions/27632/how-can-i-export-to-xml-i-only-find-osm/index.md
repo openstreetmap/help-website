@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>.osm is the file extension you get by default for XML files from the OSM website's "export" function:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/q2_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/q2_1.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

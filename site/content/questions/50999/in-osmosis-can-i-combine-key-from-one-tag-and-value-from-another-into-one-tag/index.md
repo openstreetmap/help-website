@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>which I'd like to turn into:</p>
 <pre><code>          &lt;tag k=&quot;highway&quot; v=&quot;primary&quot; /&gt;</code></pre>
 <p>(Before anyone asks, this is <em>not</em> for data that will result in any kind of importing into OSM! Am merely using the OSM toolchain, but with data coming from a shapefile.)</p>
-<p>I can't work out from the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/TagTransform#Specifying_a_transform">Osmosis Tag transform documentation</a> how to do this, if it is even possible.</p>
+<p>I can't work out from the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/TagTransform#Specifying_a_transform">Osmosis Tag transform documentation</a> how to do this, if it is even possible.</p>
 <p>I suppose I am thinking something along these lines, but this doesn't work:</p>
 <pre><code>      &lt;translation&gt;
         &lt;name&gt;Convert from Shapefile headings to OSM key-value pairs&lt;/name&gt;

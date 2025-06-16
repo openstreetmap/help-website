@@ -66,7 +66,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Looks like a duplicate question of <a href="https://help.openstreetmap.org/questions/72426/error-429-in-mapinfo-with-osm-tile-server">https://help.openstreetmap.org/questions/72426/error-429-in-mapinfo-with-osm-tile-server</a> .</p>
+<p>Looks like a duplicate question of <a href="/questions/72426/error-429-in-mapinfo-with-osm-tile-server">https://help.openstreetmap.org/questions/72426/error-429-in-mapinfo-with-osm-tile-server</a> .</p>
 <p>As Richard said there "Better contact Pitney Bowes to ask them to fix the bug in their software. The problem is caused by them not observing OSM's Tile Usage Policy, so they need to fix it."</p>
 </div>
 <div id="comment-74196-info" class="comment-info">

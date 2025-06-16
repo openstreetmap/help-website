@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "osmconvert gives back no adress: city, street and housenumber - not in 15000 result-records"
-description = '''hello dear osm-experts with an update: scroll down the key question is, how can we write the request: that takes up the adress-tags correctly: http://wiki.openstreetmap.org/wiki/Key:addr while trying to gather information about european schools - note i try it with different approaches  with the tar...'''
+description = '''hello dear osm-experts with an update: scroll down the key question is, how can we write the request: that takes up the adress-tags correctly: https://wiki.openstreetmap.org/wiki/Key:addr while trying to gather information about european schools - note i try it with different approaches  with the tar...'''
 date = "2014-06-21T12:10:00Z"
 lastmod = "2014-06-22T07:13:00Z"
 weight = 34214
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>hello dear osm-experts</p>
-<p>with <strong>an update: scroll down</strong> the key question is, how can we write the request: that takes up the adress-tags correctly: <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a></p>
+<p>with <strong>an update: scroll down</strong> the key question is, how can we write the request: that takes up the adress-tags correctly: <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a></p>
 <p>while trying to gather information about european schools - note i try it with different approaches with the target-goal to gather</p>
 <pre><code>name
 adress
@@ -71,7 +71,7 @@ and then - if possible website -adress</code></pre>
 <pre><code>./osmconvert dutch-schools-results.o5m --csv=&quot;name addr:city website&quot; -o=dutch-schools-results.csv</code></pre>
 <p>and see the code you mentioend - in the formerly thread</p>
 <pre><code>./osmconvert restaurant_2.o5m --csv=&quot;@id @lon @lat shop name  addr:street addr:housenumber addr:city website email&quot; --csv-headline -o=restaurant_2.csv</code></pre>
-<p>comment: sure thing, this so called "restaurant" -code has an <strong>extra</strong> space - subsequently it had to fail - there were no streets no housenumbers and cities thread: <a href="https://help.openstreetmap.org/questions/32434/address-tags-in-a-very-simple-osmconvert-filter-task">https://help.openstreetmap.org/questions/32434/address-tags-in-a-very-simple-osmconvert-filter-task</a></p>
+<p>comment: sure thing, this so called "restaurant" -code has an <strong>extra</strong> space - subsequently it had to fail - there were no streets no housenumbers and cities thread: <a href="/questions/32434/address-tags-in-a-very-simple-osmconvert-filter-task">https://help.openstreetmap.org/questions/32434/address-tags-in-a-very-simple-osmconvert-filter-task</a></p>
 <p>so - i am not convinced - since i do not see an similar error!?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

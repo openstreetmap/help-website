@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>You need a map display program that uses mapa data that you can generate on your own.</p>
 <p>And that runs on both, Android and Desktop PC</p>
-<p>The only program that can do that is (as far as I know) <a href="http://wiki.openstreetmap.org/wiki/Navit">Navit</a></p>
+<p>The only program that can do that is (as far as I know) <a href="https://wiki.openstreetmap.org/wiki/Navit">Navit</a></p>
 <p>If you need a map with only railways, get an extract of your area from download.geofabrik.de and do a filtering with osmfilter or osmosis.</p>
 <p>Consult the OSM-wiki how to use them.</p>
 </div>
@@ -142,7 +142,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>So you know where your railway track is, and it is not included in the map data on the main OSM server (that means you cannot see it on osm.org)?</p>
-<p>Then you can add that track to the general OSM data by the use of an OSM editor. See <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and read and try, bit by bit.</p>
+<p>Then you can add that track to the general OSM data by the use of an OSM editor. See <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and read and try, bit by bit.</p>
 <p>Or if you don't want to upload your track to the OSM server, create it with one of the offline OSM editors like JOSM or Merkaartor and save the data as an .osm file only to your harddisk. Then feed Navit's mapcreator (or try Osmand and its mapcreator) with your local .osm file.</p>
 </div>
 <div id="comment-14955-info" class="comment-info">

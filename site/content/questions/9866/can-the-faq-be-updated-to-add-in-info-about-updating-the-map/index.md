@@ -118,8 +118,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Getting Started</a> link in a fairly prominent position on the <a href="http://wiki.openstreetmap.org/wiki/Main_Page">Documentation</a> front page, which is itself the link just below the one that comes here to the <a href="http://help.openstreetmap.org/">Help Centre</a>. There's been a fair bit of discussion about what should be on the website front page with, it's fair to say, no concensus yet.</p>
-<p>But yes, the help centre <a href="http://help.openstreetmap.org/faq/">FAQ</a> really ought to make it clearer what it's the FAQ for. Unfortunately, someone needs to volunteer to change it and (as with every volunteer project) that takes time...</p>
+<p>There's a <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Getting Started</a> link in a fairly prominent position on the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">Documentation</a> front page, which is itself the link just below the one that comes here to the <a href="https://help.openstreetmap.org/">Help Centre</a>. There's been a fair bit of discussion about what should be on the website front page with, it's fair to say, no concensus yet.</p>
+<p>But yes, the help centre <a href="https://help.openstreetmap.org/faq/">FAQ</a> really ought to make it clearer what it's the FAQ for. Unfortunately, someone needs to volunteer to change it and (as with every volunteer project) that takes time...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

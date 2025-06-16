@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>First off: that's great! Information for beginning mappers is linked from this wiki page: <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> . I hope this will help you through the process.</p>
+<p>First off: that's great! Information for beginning mappers is linked from this wiki page: <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> . I hope this will help you through the process.</p>
 </div>
 <div id="comment-25111-info" class="comment-info">
 <span class="comment-age">(09 Aug '13, 08:15)</span> <span class="comment-user userinfo">gormo</span>

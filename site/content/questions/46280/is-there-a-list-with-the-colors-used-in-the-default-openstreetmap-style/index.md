@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hello everyone.</p>
 <p>I'm writing a small android application with osmdroid that shows the map and uses the landcover information of the current position for some features. Since the tiles are being stored on the filesystem of the device either way by osmdroid, i had the idea to analyse them instead of using another service like overpass api, to reduce the traffic caused by my application and to allow usage in areas with bad or no internet.</p>
-<p>On <a href="http://wiki.openstreetmap.org/wiki/Mapnik">http://wiki.openstreetmap.org/wiki/Mapnik</a> it says that <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> is the official style of openstreetmap. Distributed over the relevant .mss files i can find a lot of color hex codes.</p>
+<p>On <a href="https://wiki.openstreetmap.org/wiki/Mapnik">https://wiki.openstreetmap.org/wiki/Mapnik</a> it says that <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> is the official style of openstreetmap. Distributed over the relevant .mss files i can find a lot of color hex codes.</p>
 <p>But for example the green <a href="http://www.color-hex.com/color/c8f9cc">#c8f9cc</a> which is used in the park at <a href="http://a.tile.openstreetmap.org/16/34126/21791.png">http://a.tile.openstreetmap.org/16/34126/21791.png</a> can't be found anywhere, neither by manual search (going into the files and strg+f) nor with the github search function. looking into the mss file it should be <a href="http://www.color-hex.com/color/c8facc">#c8facc</a></p>
 <p>Another example would be the yellow <a href="http://www.color-hex.com/color/fef0ba">#fef0ba</a> which is used in this tile: <a href="http://c.tile.openstreetmap.org/19/274603/166642.png">http://c.tile.openstreetmap.org/19/274603/166642.png</a> where the beach is marked with natural=beach, so it should be <a href="http://www.color-hex.com/color/fff1ba">#fff1ba</a>.</p>
 <p>Should be values are based on <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/landcover.mss">https://github.com/gravitystorm/openstreetmap-carto/blob/master/landcover.mss</a></p>
@@ -95,7 +95,7 @@ osqa_accepted = true
 <div id="post-46283-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> that might be possible. At the green area ~1/4th directly below the the New York label the dark green changes from #AACAAE to #AACBAF</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> that might be possible. At the green area ~1/4th directly below the the New York label the dark green changes from #AACAAE to #AACBAF</p>
 </div>
 <div id="comment-46283-info" class="comment-info">
 <span class="comment-age">(01 Nov '15, 08:32)</span> <span class="comment-user userinfo">EinFreierNick</span>
@@ -107,7 +107,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>meta: Welcome to OSM, <a href="http://help.openstreetmap.org/users/11637/einfreiernick"></a><a href="http://help.openstreetmap.org/users/11637/einfreiernick">@EinFreierNick</a>!</p>
+<p>meta: Welcome to OSM, <a href="https://help.openstreetmap.org/users/11637/einfreiernick"></a><a href="https://help.openstreetmap.org/users/11637/einfreiernick">@EinFreierNick</a>!</p>
 </div>
 <div id="comment-46285-info" class="comment-info">
 <span class="comment-age">(01 Nov '15, 09:07)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

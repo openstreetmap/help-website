@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would usually map these separately, although the lockable bollard and the cattle grid do co-incide, but the centre point of the the cattle grid is not where the bollard is located. An example of a gate and a stile: <a href="http://www.openstreetmap.org/#map=19/52.81546/-0.85105&amp;layers=D">http://www.openstreetmap.org/#map=19/52.81546/-0.85105&amp;layers=D</a></p>
+<p>I would usually map these separately, although the lockable bollard and the cattle grid do co-incide, but the centre point of the the cattle grid is not where the bollard is located. An example of a gate and a stile: <a href="https://www.openstreetmap.org/#map=19/52.81546/-0.85105&amp;layers=D">https://www.openstreetmap.org/#map=19/52.81546/-0.85105&amp;layers=D</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

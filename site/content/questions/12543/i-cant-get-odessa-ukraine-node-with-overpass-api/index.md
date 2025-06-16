@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I <a href="http://www.openstreetmap.org/browse/changeset/11506004">restored</a> the deleted place node. After the Overpass server gets the update, you should be fine again.</p>
+<p>I <a href="https://www.openstreetmap.org/browse/changeset/11506004">restored</a> the deleted place node. After the Overpass server gets the update, you should be fine again.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

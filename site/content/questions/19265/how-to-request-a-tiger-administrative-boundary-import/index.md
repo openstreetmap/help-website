@@ -110,7 +110,7 @@ One Answer:
 <ul>
 <li>The TIGER data is in public domain so you can fetch it.<br />
 </li>
-<li>There are the <a href="http://wiki.openstreetmap.org/wiki/Import">import guidelines</a>. (Take care not to skip some for convenience, especially do talk to the locals in whose regions you want to import to!)</li>
+<li>There are the <a href="https://wiki.openstreetmap.org/wiki/Import">import guidelines</a>. (Take care not to skip some for convenience, especially do talk to the locals in whose regions you want to import to!)</li>
 <li>Put some real effort in all of it, not at last in converting and cleaning the data</li>
 </ul>
 <p>-&gt; you can import the data you need yourself.</p>

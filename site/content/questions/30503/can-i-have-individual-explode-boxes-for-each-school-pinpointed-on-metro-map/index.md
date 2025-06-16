@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Regarding OpenStreetMap, you can definitely make sure the schools are in the OSM database, and <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">download the data</a>.</p>
+<p>Regarding OpenStreetMap, you can definitely make sure the schools are in the OSM database, and <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">download the data</a>.</p>
 <p>However, after that, you're pretty much outside the scope of OSM. In general to do what you describe, you will need to 1) join the extracted OSM data with your achievement data, and 2) find a way to present that, most likely in a webmap, for example using <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>.</p>
 </div>
 <div class="answer-controls post-controls">

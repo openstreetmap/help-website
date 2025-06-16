@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you did get permission you would need to then go through the import process documented at <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> which includes consulting with each community affected.</p>
+<p>If you did get permission you would need to then go through the import process documented at <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> which includes consulting with each community affected.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

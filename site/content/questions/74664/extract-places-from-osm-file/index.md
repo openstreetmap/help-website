@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Answered here: <a href="https://help.openstreetmap.org/questions/15/getting-point-of-interest-data-from-openstreetmap">https://help.openstreetmap.org/questions/15/getting-point-of-interest-data-from-openstreetmap</a></p>
+<p>Answered here: <a href="/questions/15/getting-point-of-interest-data-from-openstreetmap">https://help.openstreetmap.org/questions/15/getting-point-of-interest-data-from-openstreetmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

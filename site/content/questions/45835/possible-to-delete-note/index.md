@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It appears that the referenced section of the Notes wiki page has been removed: <a href="https://help.openstreetmap.org/questions/30774/note-removal">Note Removal</a></p>
+<p>It appears that the referenced section of the Notes wiki page has been removed: <a href="/questions/30774/note-removal">Note Removal</a></p>
 <p>How does one delete a note?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

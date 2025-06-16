@@ -65,7 +65,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>The answers and comments on your <a href="https://help.openstreetmap.org/questions/71693/openstreetmap-integration-in-react-native-application">previous question</a> apply here too, including Stackoverflow's <a href="https://stackoverflow.com/help/how-to-ask">"how to ask a good question"</a>.</p>
+<p>The answers and comments on your <a href="/questions/71693/openstreetmap-integration-in-react-native-application">previous question</a> apply here too, including Stackoverflow's <a href="https://stackoverflow.com/help/how-to-ask">"how to ask a good question"</a>.</p>
 </div>
 <div id="comment-72404-info" class="comment-info">
 <span class="comment-age">(07 Jan '20, 12:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

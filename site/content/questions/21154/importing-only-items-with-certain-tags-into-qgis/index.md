@@ -159,8 +159,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a></p>
-<p>And if you are really working with the OSM-import-plugin from QGIS; be aware that it <strong>cannot handle</strong> OSM objects with 64bit long identifiers, see hint at <a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">QGIS_OSM_Plugin</a></p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a></p>
+<p>And if you are really working with the OSM-import-plugin from QGIS; be aware that it <strong>cannot handle</strong> OSM objects with 64bit long identifiers, see hint at <a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">QGIS_OSM_Plugin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There was a proposal to create amenity=donation for things like this but it was <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Donation">rejected</a>. Given there are ~40K <a href="https://taginfo.openstreetmap.org/keys/recycling%3Aclothes">amenity=recycling recycling:clothes=*</a>, I think it's pretty well established alternative.</p>
+<p>There was a proposal to create amenity=donation for things like this but it was <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Donation">rejected</a>. Given there are ~40K <a href="https://taginfo.openstreetmap.org/keys/recycling%3Aclothes">amenity=recycling recycling:clothes=*</a>, I think it's pretty well established alternative.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

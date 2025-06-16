@@ -142,7 +142,7 @@ osqa_accepted = true
 <div id="post-53966-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Either manually (which is what I tend to do) or programmatically using ogr2osm <a href="http://wiki.openstreetmap.org/wiki/Ogr2osm">http://wiki.openstreetmap.org/wiki/Ogr2osm</a> (and possibly ogr2ogr too).</p>
+<p>Either manually (which is what I tend to do) or programmatically using ogr2osm <a href="https://wiki.openstreetmap.org/wiki/Ogr2osm">https://wiki.openstreetmap.org/wiki/Ogr2osm</a> (and possibly ogr2ogr too).</p>
 </div>
 <div id="comment-53966-info" class="comment-info">
 <span class="comment-age">(10 Jan '17, 09:05)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -203,7 +203,7 @@ osqa_accepted = true
 <div id="post-54522-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That looks good ... I want to have the OSM-tagged data ... so 60 minutes later I have 600 MB file with the borders and I fail to simplify them with Osmosis ... <a href="https://help.openstreetmap.org/questions/54521/cant-get-osmosis-to-read-a-pbf">https://help.openstreetmap.org/questions/54521/cant-get-osmosis-to-read-a-pbf</a></p>
+<p>That looks good ... I want to have the OSM-tagged data ... so 60 minutes later I have 600 MB file with the borders and I fail to simplify them with Osmosis ... <a href="/questions/54521/cant-get-osmosis-to-read-a-pbf">https://help.openstreetmap.org/questions/54521/cant-get-osmosis-to-read-a-pbf</a></p>
 </div>
 <div id="comment-54522-info" class="comment-info">
 <span class="comment-age">(06 Feb '17, 20:27)</span> <span class="comment-user userinfo">AddisMap_Ale...</span>

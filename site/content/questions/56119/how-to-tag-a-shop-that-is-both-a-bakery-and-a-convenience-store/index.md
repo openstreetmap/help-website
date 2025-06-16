@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a shop that is both a bakery and a convenience store ?"
-description = '''I want to correctly tag a shop that is both a bakery and a convenience store (without one role being more important than the other). I&#x27;ve seen that there is the possibility to use several values for the shop tag, but it should be avoided (http://wiki.openstreetmap.org/wiki/Multiple_values ). Should ...'''
+description = '''I want to correctly tag a shop that is both a bakery and a convenience store (without one role being more important than the other). I&#x27;ve seen that there is the possibility to use several values for the shop tag, but it should be avoided (https://wiki.openstreetmap.org/wiki/Multiple_values ). Should ...'''
 date = "2017-05-10T22:58:00Z"
 lastmod = "2017-05-12T04:46:00Z"
 weight = 56119
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I want to correctly tag a shop that is both a bakery and a convenience store (without one role being more important than the other).</p>
-<p>I've seen that there is the possibility to use several values for the shop tag, but it should be avoided (<a href="http://wiki.openstreetmap.org/wiki/Multiple_values">http://wiki.openstreetmap.org/wiki/Multiple_values</a> ). Should I use <strong><code>shop=bakery;convenience</code></strong> ?</p>
+<p>I've seen that there is the possibility to use several values for the shop tag, but it should be avoided (<a href="https://wiki.openstreetmap.org/wiki/Multiple_values">https://wiki.openstreetmap.org/wiki/Multiple_values</a> ). Should I use <strong><code>shop=bakery;convenience</code></strong> ?</p>
 <p>Currently, there are 2 nodes for the same shop, which is not correct.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

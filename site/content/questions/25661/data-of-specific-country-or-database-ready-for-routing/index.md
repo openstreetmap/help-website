@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find information in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
+<p>You can find information in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
 <p>Read that page intensively, and also the sub pages about online and offline routers.</p>
 <p>There are some of them (as webservice or app) that are opensource.</p>
 <p>Read Information about each of them, and try to understand how they do preprocessing by converting raw OSM data into data for routing.</p>

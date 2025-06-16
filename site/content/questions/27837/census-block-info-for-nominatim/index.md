@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-28342-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Can you please explain what 'census' means in your opinion? I don't know it from the Nominatim context :/ <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p>Can you please explain what 'census' means in your opinion? I don't know it from the Nominatim context :/ <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
 </div>
 <div id="comment-28342-info" class="comment-info">
 <span class="comment-age">(21 Nov '13, 16:07)</span> <span class="comment-user userinfo">iii</span>

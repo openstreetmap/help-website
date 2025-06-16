@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Overpass returns node&#x27;s data with area&#x27;s information that should not exist"
-description = '''There is such village: http://www.openstreetmap.org/node/337512354 I want to get all relationships of this village. In order to get it, I do request: http://overpass-api.de/api/interpreter?data=node(337512354);is_in;out; In this file the top one area record shows:  &amp;lt;area id=&quot;2430719979&quot;&amp;gt;  &amp;lt;...'''
+description = '''There is such village: https://www.openstreetmap.org/node/337512354 I want to get all relationships of this village. In order to get it, I do request: http://overpass-api.de/api/interpreter?data=node(337512354);is_in;out; In this file the top one area record shows:  &amp;lt;area id=&quot;2430719979&quot;&amp;gt;  &amp;lt;...'''
 date = "2016-06-07T08:14:00Z"
 lastmod = "2016-06-07T09:26:00Z"
 weight = 50056
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There is such village: <a href="http://www.openstreetmap.org/node/337512354">http://www.openstreetmap.org/node/337512354</a></p>
+<p>There is such village: <a href="https://www.openstreetmap.org/node/337512354">https://www.openstreetmap.org/node/337512354</a></p>
 <p>I want to get all relationships of this village.<br />
 In order to get it, I do request: <a href="http://overpass-api.de/api/interpreter?data=node(337512354);is_in;out;">http://overpass-api.de/api/interpreter?data=node(337512354);is_in;out;</a></p>
 <p>In this file the top one area record shows:<br />
@@ -47,7 +47,7 @@ In order to get it, I do request: <a href="http://overpass-api.de/api/interprete
 &lt;tag k="name" v="Пересіка"/&gt;<br />
 &lt;tag k="place" v="village"/&gt;<br />
 &lt;/area&gt;</p>
-<p>The page of this area (way) is: <a href="http://www.openstreetmap.org/way/30719979">http://www.openstreetmap.org/way/30719979</a> As we can see, on this page there are no any tags at all.</p>
+<p>The page of this area (way) is: <a href="https://www.openstreetmap.org/way/30719979">https://www.openstreetmap.org/way/30719979</a> As we can see, on this page there are no any tags at all.</p>
 <p>My questions:<br />
 1. Where\why does overpass take &lt;area id="2430719979"&gt; tag name\tag place &lt;/area&gt; from?<br />
 2. How\where to fix this? (Remove this tags as this way should not have those tags)</p>

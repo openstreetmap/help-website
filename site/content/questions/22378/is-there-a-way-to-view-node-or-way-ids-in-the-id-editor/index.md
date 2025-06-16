@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there a way to view node or way IDs in the iD editor?</p>
-<p>[note: separated out from <a href="https://help.openstreetmap.org/questions/22224/id-editor-questions">https://help.openstreetmap.org/questions/22224/id-editor-questions</a>)</p>
+<p>[note: separated out from <a href="/questions/22224/id-editor-questions">https://help.openstreetmap.org/questions/22224/id-editor-questions</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-id" rel="tag" title="see questions tagged &#39;id&#39;">id</span>

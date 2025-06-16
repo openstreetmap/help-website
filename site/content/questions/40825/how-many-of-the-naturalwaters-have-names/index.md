@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Got a great answer about the numbers of waters in OSM here: <a href="https://help.openstreetmap.org/questions/40778/how-many-naturalwater-are-in-osm">https://help.openstreetmap.org/questions/40778/how-many-naturalwater-are-in-osm</a></p>
+<p>Got a great answer about the numbers of waters in OSM here: <a href="/questions/40778/how-many-naturalwater-are-in-osm">https://help.openstreetmap.org/questions/40778/how-many-naturalwater-are-in-osm</a></p>
 <p>My next question is: <strong>How many of these have names?</strong></p>
 </div>
 <div id="question-tags" class="tags-container tags">

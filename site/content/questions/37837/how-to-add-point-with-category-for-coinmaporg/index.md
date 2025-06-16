@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to know how to add that a shop accepts bitcoins, please see <a href="https://help.openstreetmap.org/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap">https://help.openstreetmap.org/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap</a> .</p>
+<p>If you want to know how to add that a shop accepts bitcoins, please see <a href="/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap">https://help.openstreetmap.org/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

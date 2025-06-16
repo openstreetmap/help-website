@@ -139,7 +139,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>And you can use "bridge=aqueduct" as suggested on the wiki:<a href="http://wiki.openstreetmap.org/wiki/Bridge">http://wiki.openstreetmap.org/wiki/Bridge</a></p>
+<p>And you can use "bridge=aqueduct" as suggested on the wiki:<a href="https://wiki.openstreetmap.org/wiki/Bridge">https://wiki.openstreetmap.org/wiki/Bridge</a></p>
 </div>
 <div id="comment-11552-info" class="comment-info">
 <span class="comment-age">(28 Mar '12, 12:29)</span> <span class="comment-user userinfo">Pieren</span>

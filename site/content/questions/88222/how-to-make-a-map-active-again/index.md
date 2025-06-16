@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can either duplicate the map and edit the duplicate or contact the operator of that particular instance of uMap. See <a href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map">this question</a> for additional information.</p>
+<p>You can either duplicate the map and edit the duplicate or contact the operator of that particular instance of uMap. See <a href="/questions/69710/umap-openstreetmap-change-map">this question</a> for additional information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

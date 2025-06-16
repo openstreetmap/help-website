@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd have a read of the answers to <a href="http://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">this question</a> - it contains lots of links to places that explain where you can get maps from (and how you can create your own) and how to transfer them to the Garmin.</p>
+<p>I'd have a read of the answers to <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">this question</a> - it contains lots of links to places that explain where you can get maps from (and how you can create your own) and how to transfer them to the Garmin.</p>
 <p>Although that question was asked about a Garmin eTrex Legend HCx, I suspect the principle will apply to your zūmo as well.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Welcome John. please read this <a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=zumo&amp;button=">http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=zumo&amp;button=</a> and the beginners guide <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and if you get stuck ask here again.</p>
+<p>Welcome John. please read this <a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=zumo&amp;button=">https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=zumo&amp;button=</a> and the beginners guide <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and if you get stuck ask here again.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -180,7 +180,7 @@ osqa_accepted = false
 <div id="post-7127-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I not sure now now,if you are trying use the Garmin Zumo to record traces for adding to OSM or you wish to put the OSM on your garmin, If The latter try this <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
+<p>I not sure now now,if you are trying use the Garmin Zumo to record traces for adding to OSM or you wish to put the OSM on your garmin, If The latter try this <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
 </div>
 <div id="comment-7127-info" class="comment-info">
 <span class="comment-age">(16 Aug '11, 17:47)</span> <span class="comment-user userinfo">andy mackey</span>

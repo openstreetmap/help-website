@@ -122,7 +122,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is now a JOSM plugin for Mapillary under active development. <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Mapillary">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Mapillary</a> . It is very easy to use. You can download it from the plugins in the preference and start using it.</p>
+<p>There is now a JOSM plugin for Mapillary under active development. <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Mapillary">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Mapillary</a> . It is very easy to use. You can download it from the plugins in the preference and start using it.</p>
 <p>If you are interested in contributing code the github repo is present at <a href="https://github.com/floscher/josm-mapillary-plugin">https://github.com/floscher/josm-mapillary-plugin</a> .</p>
 </div>
 <div class="answer-controls post-controls">

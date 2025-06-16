@@ -108,8 +108,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There have already been questions like your one:</p>
-<p><a href="http://help.openstreetmap.org/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">how-do-i-ensure-that-ways-are-connected-in-potlatch</a></p>
-<p><a href="http://help.openstreetmap.org/questions/2266/can-two-ways-be-made-into-one-in-potlatch2">can-two-ways-be-made-into-one-in-potlatch2</a></p>
+<p><a href="/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">how-do-i-ensure-that-ways-are-connected-in-potlatch</a></p>
+<p><a href="/questions/2266/can-two-ways-be-made-into-one-in-potlatch2">can-two-ways-be-made-into-one-in-potlatch2</a></p>
 <p>Add a <em>comment</em> if anything is still unclear.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -143,7 +143,7 @@ One Answer:
 <div class="comment-text">
 <p>You can edit any data you like, but (especially if you're new to mapping) it's a good idea to be careful about what you're doing at first.<br />
 </p>
-<p>If you have any questions, or are unsure about how to do something, there are lots of options that allow you to <a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a> other mappers. <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> can be particularly helpful as it allows you to talk to people in real time.</p>
+<p>If you have any questions, or are unsure about how to do something, there are lots of options that allow you to <a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a> other mappers. <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> can be particularly helpful as it allows you to talk to people in real time.</p>
 <p>Also worth mentioning when asking "have I done something correctly" is to include a permalink (using the button at the bottom-right of the map page) to the area that you're working in.</p>
 </div>
 <div id="comment-15211-info" class="comment-info">
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-61541-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For iD, see the question at <a href="https://help.openstreetmap.org/questions/49081/how-do-i-ensure-that-ways-are-connected-in-id?">https://help.openstreetmap.org/questions/49081/how-do-i-ensure-that-ways-are-connected-in-id?</a> .</p>
+<p>For iD, see the question at <a href="/questions/49081/how-do-i-ensure-that-ways-are-connected-in-id?">https://help.openstreetmap.org/questions/49081/how-do-i-ensure-that-ways-are-connected-in-id?</a> .</p>
 </div>
 <div id="comment-61541-info" class="comment-info">
 <span class="comment-age">(09 Jan '18, 12:53)</span> <span class="comment-user userinfo">Richlv</span>

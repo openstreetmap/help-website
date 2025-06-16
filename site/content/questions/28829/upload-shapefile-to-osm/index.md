@@ -132,7 +132,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First of all, have a look at <a href="http://wiki.openstreetmap.org/wiki/Import">import</a> on the wiki and read carefully the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>. The guidelines exist to ensure that :</p>
+<p>First of all, have a look at <a href="https://wiki.openstreetmap.org/wiki/Import">import</a> on the wiki and read carefully the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>. The guidelines exist to ensure that :</p>
 <ul>
 <li>The data source can legally be imported to OSM (essentially: no copyright issue, can be relicensed as odbl, can be redistributed).</li>
 <li>The import quality is correct (proper tags, geometry, etc).</li>
@@ -140,7 +140,7 @@ osqa_accepted = false
 <p>Once you understand that, one way to proceed is :</p>
 <ul>
 <li>Create a wiki page YourUserName/ImportName with all the info about your import.</li>
-<li><a href="https://wiki.openstreetmap.org/wiki/Shp-to-osm.jar">Convert your shp files</a> to osm format, load that into <a href="http://wiki.openstreetmap.org/wiki/Josm">josm</a>, review and eventually tweak it, and save the file localy.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Shp-to-osm.jar">Convert your shp files</a> to osm format, load that into <a href="https://wiki.openstreetmap.org/wiki/Josm">josm</a>, review and eventually tweak it, and save the file localy.</li>
 <li>Upload the osm file somewhere (not in the osm database), and link to it on the wiki page.</li>
 <li>Send a message to the <a href="https://lists.openstreetmap.org/listinfo/imports">imports mailing list</a> pointing to the wiki page</li>
 <li>Wait for reactions and take comments into account</li>
@@ -219,7 +219,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><span>@HaldimandGIS</span> I think your question is replied in the following thread: <a href="https://help.openstreetmap.org/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2">https://help.openstreetmap.org/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2</a></p>
+<p><span>@HaldimandGIS</span> I think your question is replied in the following thread: <a href="/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2">https://help.openstreetmap.org/questions/11603/importing-shapefile-and-saving-to-osm-with-potlatch2</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

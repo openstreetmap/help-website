@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Landuse will mostly be on ways, so you will need a way filter to extract them (you currently have --node-key-value, which is what it sounds like).</p>
-<p>If you are just getting started working with OSM data, take a look at <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a></p>
+<p>If you are just getting started working with OSM data, take a look at <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

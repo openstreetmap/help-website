@@ -206,7 +206,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If it's a highway and it's official source, you could do:</p>
 <p>highway=proposed proposed=residential (for example) source=....</p>
-<p>See more in <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Highway">http://wiki.openstreetmap.org/wiki/Map_Features#Highway</a></p>
+<p>See more in <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Highway">https://wiki.openstreetmap.org/wiki/Map_Features#Highway</a></p>
 <p>If the plans are for buildings... you could mark as landuse=greenfield.</p>
 <p>Cheers, Xan.</p>
 </div>

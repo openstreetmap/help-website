@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>This is in continuation with below two queries that have been marked as closed. <a href="https://help.openstreetmap.org/questions/12810/kashmir-india">https://help.openstreetmap.org/questions/12810/kashmir-india</a> <a href="https://help.openstreetmap.org/questions/49587/indias-administrative-boundary-issue">https://help.openstreetmap.org/questions/49587/indias-administrative-boundary-issue</a></p>
+<p>This is in continuation with below two queries that have been marked as closed. <a href="/questions/12810/kashmir-india">https://help.openstreetmap.org/questions/12810/kashmir-india</a> <a href="/questions/49587/indias-administrative-boundary-issue">https://help.openstreetmap.org/questions/49587/indias-administrative-boundary-issue</a></p>
 <p>In both the threads it was suggested to use <a href="http://openstreetmap.in/">http://openstreetmap.in/</a> in stead of .org link. However, this link is broken. Please help.</p>
 <p>Regards Pramod</p>
 </div>

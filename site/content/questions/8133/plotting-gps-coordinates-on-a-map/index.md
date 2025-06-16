@@ -213,7 +213,7 @@ select your track and job done! :-)</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can achieve that easily with the javascript library <a href="http://openlayers.org/">OpenLayers</a> or using a web service such as <a href="http://syj.renevier.net/">ShowYourJourney</a>. For the home-made solution, using OpenLayers, you can find <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">some examples on the wiki</a>. For example, I've also published an <a href="http://osm.dumoulin63.net/gpx/">example</a>.</p>
+<p>You can achieve that easily with the javascript library <a href="http://openlayers.org/">OpenLayers</a> or using a web service such as <a href="http://syj.renevier.net/">ShowYourJourney</a>. For the home-made solution, using OpenLayers, you can find <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">some examples on the wiki</a>. For example, I've also published an <a href="http://osm.dumoulin63.net/gpx/">example</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

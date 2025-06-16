@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I get the ID of the newest GPX file uploaded to OpenStreetMap?"
-description = '''I have a program that downloads and process GPX tracks from OpenStreetMap using: http://www.openstreetmap.org/traces/{ID}/data But how can I find the ID of the latest uploaded GPX file? Currently I get the ID from: http://www.openstreetmap.org/traces But that data is mostly meant to be read by human...'''
+description = '''I have a program that downloads and process GPX tracks from OpenStreetMap using: https://www.openstreetmap.org/traces/{ID}/data But how can I find the ID of the latest uploaded GPX file? Currently I get the ID from: https://www.openstreetmap.org/traces But that data is mostly meant to be read by human...'''
 date = "2010-09-08T07:15:00Z"
 lastmod = "2010-09-10T16:23:00Z"
 weight = 752
@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have a program that downloads and process GPX tracks from OpenStreetMap using:</p>
-<p><a href="http://www.openstreetmap.org/traces/%7BID%7D/data">http://www.openstreetmap.org/traces/{ID}/data</a></p>
+<p><a href="https://www.openstreetmap.org/traces/%7BID%7D/data">https://www.openstreetmap.org/traces/{ID}/data</a></p>
 <p>But how can I find the ID of the latest uploaded GPX file?</p>
 <p>Currently I get the ID from:</p>
-<p><a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/traces</a></p>
+<p><a href="https://www.openstreetmap.org/traces">https://www.openstreetmap.org/traces</a></p>
 <p>But that data is mostly meant to be read by humans, and needs a lot of parsing - is there a better way?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -121,18 +121,18 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well you can always use <a href="http://www.openstreetmap.org/traces/rss">the rss feed</a>, just extracting the link element with a regexp will work.</p>
+<p>Well you can always use <a href="https://www.openstreetmap.org/traces/rss">the rss feed</a>, just extracting the link element with a regexp will work.</p>
 <pre><code>([0-9]*)&lt;/link&gt;</code></pre>
 <p>e.g</p>
-<pre><code>curl http://www.openstreetmap.org/traces/rss |
+<pre><code>curl https://www.openstreetmap.org/traces/rss |
 sed -r &#39;s|.+s/([0-9]+)&lt;/link&gt;|\1|;t;d&#39;|
 head -1</code></pre>
 <p>But compare that to parsing the html page there is almost no gain.</p>
 <pre><code>href=&quot;/user/[^/]*/traces/([0-9]*)&quot;
 href=&quot;/edit?gpx=([0-9]*)&quot;</code></pre>
 <p>e.g.:</p>
-<pre><code>wget -O - &quot;http://www.openstreetmap.org/traces&quot; |
-sed &#39;/traces/!d; s|.* href=&quot;/user/[^/]*/traces/\([0-9]*\)&quot; .*|http://www.openstreetmap.org/traces/\1/data|;t;d&#39;|
+<pre><code>wget -O - &quot;https://www.openstreetmap.org/traces&quot; |
+sed &#39;/traces/!d; s|.* href=&quot;/user/[^/]*/traces/\([0-9]*\)&quot; .*|https://www.openstreetmap.org/traces/\1/data|;t;d&#39;|
 head -1</code></pre>
 </div>
 <div class="answer-controls post-controls">
@@ -186,8 +186,8 @@ head -1</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces">API</a> doesn't seem to have a way of retrieving the newest GPX trace ID, here is an example of a shell command to grab the ID from the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces">traces page</a>:</p>
-<pre><code>curl -s &quot;http://www.openstreetmap.org/traces&quot; | grep -m 1 &quot;/edit?gpx=&quot; | cut -d &quot;=&quot; -f3 | cut -d &quot;\&quot;&quot; -f1</code></pre>
+<p>As the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces">API</a> doesn't seem to have a way of retrieving the newest GPX trace ID, here is an example of a shell command to grab the ID from the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#GPS_Traces">traces page</a>:</p>
+<pre><code>curl -s &quot;https://www.openstreetmap.org/traces&quot; | grep -m 1 &quot;/edit?gpx=&quot; | cut -d &quot;=&quot; -f3 | cut -d &quot;\&quot;&quot; -f1</code></pre>
 <p>But of course this might stop working in the future as the layout of the page may change.</p>
 </div>
 <div class="answer-controls post-controls">

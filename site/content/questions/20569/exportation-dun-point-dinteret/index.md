@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Exportation d&#x27;un point d&#x27;intéret"
-description = '''J&#x27;ai créé un restaurant sur une carte et il n&#x27;apparaît pas lorsque je fais un export image de cette carte. Y a t&#x27;il un moyen de le faire ? Update: The place is here: http://www.openstreetmap.org/browse/node/2189947016 -  waypoint: &quot;maison portugaise&quot; restaurant'''
+description = '''J&#x27;ai créé un restaurant sur une carte et il n&#x27;apparaît pas lorsque je fais un export image de cette carte. Y a t&#x27;il un moyen de le faire ? Update: The place is here: https://www.openstreetmap.org/browse/node/2189947016 -  waypoint: &quot;maison portugaise&quot; restaurant'''
 date = "2013-03-07T17:34:00Z"
 lastmod = "2013-03-07T19:06:00Z"
 weight = 20569
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>J'ai créé un restaurant sur une carte et il n'apparaît pas lorsque je fais un export image de cette carte. Y a t'il un moyen de le faire ?</p>
-<p><em>Update:</em> The place is here: <a href="http://www.openstreetmap.org/browse/node/2189947016">http://www.openstreetmap.org/browse/node/2189947016</a> - waypoint: "maison portugaise" restaurant</p>
+<p><em>Update:</em> The place is here: <a href="https://www.openstreetmap.org/browse/node/2189947016">https://www.openstreetmap.org/browse/node/2189947016</a> - waypoint: "maison portugaise" restaurant</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not" rel="tag" title="see questions tagged &#39;not&#39;">not</span> <span class="post-tag tag-link-lang-fr" rel="tag" title="see questions tagged &#39;lang-fr&#39;">lang-fr</span> <span class="post-tag tag-link-appear" rel="tag" title="see questions tagged &#39;appear&#39;">appear</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>

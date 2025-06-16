@@ -79,7 +79,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Aside from the technical question, make sure that you are aware that there are <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">quality standards</a> for imports. In particular, consensus in the local community and documentation are mandatory. It's also good to have solid previous experience with OSM before performing an import.</p>
+<p>Aside from the technical question, make sure that you are aware that there are <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">quality standards</a> for imports. In particular, consensus in the local community and documentation are mandatory. It's also good to have solid previous experience with OSM before performing an import.</p>
 </div>
 <div id="comment-22578-info" class="comment-info">
 <span class="comment-age">(20 May '13, 21:48)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a OpenData plugin (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)</a> for the JOSM editor. It allows one to import CSV-files and can convert from a number of coordinate systems, such as Lambert. But as others wrote, the import of data has to be described on the wiki</p>
+<p>There is a OpenData plugin (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)</a> for the JOSM editor. It allows one to import CSV-files and can convert from a number of coordinate systems, such as Lambert. But as others wrote, the import of data has to be described on the wiki</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -245,7 +245,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I usually convert csv to OSM format using awk, but you are maybe more happy with <a href="http://wiki.openstreetmap.org/wiki/User:Lübeck/csv2osm_local/source">this csv2osm script</a>.</p>
+<p>I usually convert csv to OSM format using awk, but you are maybe more happy with <a href="https://wiki.openstreetmap.org/wiki/User:Lübeck/csv2osm_local/source">this csv2osm script</a>.</p>
 <p>hth<br />
 malenki</p>
 </div>
@@ -294,7 +294,7 @@ malenki</p>
 &#10;</div>
 <div class="comment-text">
 <p>After converting you can load the OSM file with QGis or JOSM and check if the data is located and tagged correctly.</p>
-<p>Before you upload anything you should have ticked off every point of the <a href="http://wiki.openstreetmap.org/wiki/FR:Import/Guidelines">Import Guidelines</a> - maybe compare if the English version of the guideline has some more information.</p>
+<p>Before you upload anything you should have ticked off every point of the <a href="https://wiki.openstreetmap.org/wiki/FR:Import/Guidelines">Import Guidelines</a> - maybe compare if the English version of the guideline has some more information.</p>
 <p>btw: I am less coder then you are. The little HTML I made I just copied. ;)</p>
 </div>
 <div id="comment-22613-info" class="comment-info">

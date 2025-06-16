@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-20176-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hendrik, this link by changing XXXXX to a user name will find all of their edits <a href="http://www.openstreetmap.org/user/XXXXX/edits">http://www.openstreetmap.org/user/XXXXX/edits</a></p>
+<p>Hendrik, this link by changing XXXXX to a user name will find all of their edits <a href="https://www.openstreetmap.org/user/XXXXX/edits">https://www.openstreetmap.org/user/XXXXX/edits</a></p>
 </div>
 <div id="comment-20176-info" class="comment-info">
 <span class="comment-age">(23 Feb '13, 15:31)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-20179-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Andy, Thanks I didnt use that kind of link before. Im dont travel around OSM to control the system or its members, there lot of active contollers garding OSM. Hi Tairmuir, I should say welcome to you as a NB, youve been quit active in a few days. I didnt find the missing spots but I found at least 3 loose nodes just above this green triangel, here <a href="http://www.openstreetmap.org/?lat=56.431195&amp;lon=-3.152494&amp;zoom=18&amp;layers=M,">http://www.openstreetmap.org/?lat=56.431195&amp;lon=-3.152494&amp;zoom=18&amp;layers=M,</a> I connected the stream to the drain, by placing the nodes on top of eachother and press j. Greetz</p>
+<p>Hi Andy, Thanks I didnt use that kind of link before. Im dont travel around OSM to control the system or its members, there lot of active contollers garding OSM. Hi Tairmuir, I should say welcome to you as a NB, youve been quit active in a few days. I didnt find the missing spots but I found at least 3 loose nodes just above this green triangel, here <a href="https://www.openstreetmap.org/?lat=56.431195&amp;lon=-3.152494&amp;zoom=18&amp;layers=M,">https://www.openstreetmap.org/?lat=56.431195&amp;lon=-3.152494&amp;zoom=18&amp;layers=M,</a> I connected the stream to the drain, by placing the nodes on top of eachother and press j. Greetz</p>
 </div>
 <div id="comment-20179-info" class="comment-info">
 <span class="comment-age">(23 Feb '13, 16:24)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -95,8 +95,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I guess you are talking about <a href="http://www.openstreetmap.org/browse/changeset/15117091">this</a> changeset.</p>
-<p>Besides your problem I see several duplicated objects there. For example this <a href="http://www.openstreetmap.org/browse/node/2166056901">node</a> which has already been added as a <a href="http://www.openstreetmap.org/browse/way/117335482">way</a> in 2011 (but misses the <em>castle</em> tag). Please try to avoid creating duplicated objects. Also whenever possible try to add ways (outlines) instead of single nodes because they provide more detail (and are also nicer to view on the map :)).</p>
+<p>I guess you are talking about <a href="https://www.openstreetmap.org/browse/changeset/15117091">this</a> changeset.</p>
+<p>Besides your problem I see several duplicated objects there. For example this <a href="https://www.openstreetmap.org/browse/node/2166056901">node</a> which has already been added as a <a href="https://www.openstreetmap.org/browse/way/117335482">way</a> in 2011 (but misses the <em>castle</em> tag). Please try to avoid creating duplicated objects. Also whenever possible try to add ways (outlines) instead of single nodes because they provide more detail (and are also nicer to view on the map :)).</p>
 </div>
 <div id="comment-20182-info" class="comment-info">
 <span class="comment-age">(23 Feb '13, 17:54)</span> <span class="comment-user userinfo">scai ♦</span>

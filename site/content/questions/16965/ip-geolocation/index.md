@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How to <a href="https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers">display a map with multiple markers</a> has already been answered and IP Geolocation is out of the scope of OSM (and there are multiple possibilities like a simple geoip database and the HTML5 geolocation feature).</p>
+<p>How to <a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers">display a map with multiple markers</a> has already been answered and IP Geolocation is out of the scope of OSM (and there are multiple possibilities like a simple geoip database and the HTML5 geolocation feature).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -284,7 +284,7 @@ osqa_accepted = false
 <p>Yes, you can use free IP geolocation API that provides point coordinates based on the IP address.</p>
 <p>There are tonnes of IP geolocation APIs which can do the job. Try <a href="https://www.bigdatacloud.com/ip-geolocation-apis/ip-address-geolocation-with-confidence-area-and-hazard-report-api">BigDataCloud's IP geolocation API</a> which provides not just the coordinates of the IP address but also the area where the IP address might have been allocated. This is unique data that might be helpful.</p>
 <p>They provide 10K queries per month for free and can be upgraded at a nominal feed.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2021-03-01_at_11.58.51_am.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2021-03-01_at_11.58.51_am.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

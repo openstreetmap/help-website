@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:access">access wiki page</a> describes value <em>private</em> as <em>Only with permission of the owner on an individual basis</em> which perfectly fits your described situation. <em>permissive</em> instead doesn't fit because the waste container is <em>not</em> open to everyone until revoked.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:access">access wiki page</a> describes value <em>private</em> as <em>Only with permission of the owner on an individual basis</em> which perfectly fits your described situation. <em>permissive</em> instead doesn't fit because the waste container is <em>not</em> open to everyone until revoked.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

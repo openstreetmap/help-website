@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "green dots??"
-description = '''where does the little green dots come from? what do they mean? i cannot find them in the map legend http://www.openstreetmap.org/?lat=52.507703&amp;amp;lon=13.297542&amp;amp;zoom=18&amp;amp;layers=M on Pestalozzi-Str.'''
+description = '''where does the little green dots come from? what do they mean? i cannot find them in the map legend https://www.openstreetmap.org/?lat=52.507703&amp;amp;lon=13.297542&amp;amp;zoom=18&amp;amp;layers=M on Pestalozzi-Str.'''
 date = "2011-08-17T10:22:00Z"
 lastmod = "2011-08-17T19:38:00Z"
 weight = 7141
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>where does the little green dots come from? what do they mean? i cannot find them in the map legend</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.507703&amp;lon=13.297542&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.507703&amp;lon=13.297542&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.507703&amp;lon=13.297542&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.507703&amp;lon=13.297542&amp;zoom=18&amp;layers=M</a></p>
 <p>on Pestalozzi-Str.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

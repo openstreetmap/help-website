@@ -47,7 +47,7 @@ osqa_accepted = true
 <p>So, anyone helps me out with declaring a small lake inside a reed area inside a bog area without declaring all the borders twice and third?</p>
 <p>Thanks in advance,</p>
 <p>Rob</p>
-<p>PS: This is the region in question, without any edits from me, for sure: <a href="http://www.openstreetmap.org/#map=16/47.5780/13.3388">http://www.openstreetmap.org/#map=16/47.5780/13.3388</a> View it in jOSM with geoimage.at layer enabled to see what I want to achieve. :)</p>
+<p>PS: This is the region in question, without any edits from me, for sure: <a href="https://www.openstreetmap.org/#map=16/47.5780/13.3388">https://www.openstreetmap.org/#map=16/47.5780/13.3388</a> View it in jOSM with geoimage.at layer enabled to see what I want to achieve. :)</p>
 <p>PPS: In the above mentioned, unedited version, the lake is tagged as a bog, which in fact it isn't, and it is named "Egelsee", which is wrong, too.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -143,9 +143,9 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Thank you very much, now I got it to show correctly:</p>
-<p><a href="http://www.openstreetmap.org/#map=16/47.5777/13.3389">http://www.openstreetmap.org/#map=16/47.5777/13.3389</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/47.5777/13.3389">https://www.openstreetmap.org/#map=16/47.5777/13.3389</a></p>
 <p>It's changeset 17545301:</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/17545301">http://www.openstreetmap.org/browse/changeset/17545301</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/17545301">https://www.openstreetmap.org/browse/changeset/17545301</a></p>
 <p>Visit that lake, it's beautiful :-)</p>
 <p>Rob</p>
 </div>

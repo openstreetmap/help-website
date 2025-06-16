@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-28336-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Does the comment by Vincent to <a href="https://help.openstreetmap.org/questions/19525/error-when-try-to-use-nominatim-pgsql-role-www-data-is-not-permitted-to-log-in">this answer</a> resolve the problem?</p>
+<p>Does the comment by Vincent to <a href="/questions/19525/error-when-try-to-use-nominatim-pgsql-role-www-data-is-not-permitted-to-log-in">this answer</a> resolve the problem?</p>
 </div>
 <div id="comment-28336-info" class="comment-info">
 <span class="comment-age">(21 Nov '13, 13:17)</span> <span class="comment-user userinfo">scai ♦</span>

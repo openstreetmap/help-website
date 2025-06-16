@@ -137,7 +137,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>In the non XML query language you can pass a bbox to a filter:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Bounding_box">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Bounding_box</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Bounding_box">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Bounding_box</a></p>
 <p>I don't know if there is an equivalent in the XML. In any case, a union of such queries should work for your query:</p>
 <pre><code>(
 node(50.6,7.0,50.8,7.3)[leisure=park];

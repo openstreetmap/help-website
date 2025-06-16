@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can find someone to help you on the ground at WikiProject Brazil: <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Brazil">http://wiki.openstreetmap.org/wiki/WikiProject_Brazil</a> . Also, you could try to connect with a geography/geodesy department of an university in your area.</p>
+<p>Maybe you can find someone to help you on the ground at WikiProject Brazil: <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Brazil">https://wiki.openstreetmap.org/wiki/WikiProject_Brazil</a> . Also, you could try to connect with a geography/geodesy department of an university in your area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

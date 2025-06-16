@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "the existing street is incorrectly split. How to split correctly?"
-description = '''Hi, I&#x27;m trying to enter some missing street names, but the existing street is incorrectly split. See http://www.openstreetmap.org/edit?lat=59.39869&amp;amp;lon=17.99103&amp;amp;zoom=17 I entered the name Linvävarvägen, but this street actually stretches all the way till it meets Rådanvägen. And there should...'''
+description = '''Hi, I&#x27;m trying to enter some missing street names, but the existing street is incorrectly split. See https://www.openstreetmap.org/edit?lat=59.39869&amp;amp;lon=17.99103&amp;amp;zoom=17 I entered the name Linvävarvägen, but this street actually stretches all the way till it meets Rådanvägen. And there should...'''
 date = "2010-12-26T11:31:00Z"
 lastmod = "2010-12-29T19:57:00Z"
 weight = 1918
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I'm trying to enter some missing street names, but the existing street is incorrectly split. See <a href="http://www.openstreetmap.org/edit?lat=59.39869&amp;lon=17.99103&amp;zoom=17">http://www.openstreetmap.org/edit?lat=59.39869&amp;lon=17.99103&amp;zoom=17</a> I entered the name Linvävarvägen, but this street actually stretches all the way till it meets Rådanvägen. And there should be three separate ways joining it (I just entered Lingränd). See what it should really be here <a href="http://www.hitta.se/LargeMap.aspx?var=linv%e4varv%e4gen">http://www.hitta.se/LargeMap.aspx?var=linv%e4varv%e4gen</a></p>
+<p>Hi, I'm trying to enter some missing street names, but the existing street is incorrectly split. See <a href="https://www.openstreetmap.org/edit?lat=59.39869&amp;lon=17.99103&amp;zoom=17">https://www.openstreetmap.org/edit?lat=59.39869&amp;lon=17.99103&amp;zoom=17</a> I entered the name Linvävarvägen, but this street actually stretches all the way till it meets Rådanvägen. And there should be three separate ways joining it (I just entered Lingränd). See what it should really be here <a href="http://www.hitta.se/LargeMap.aspx?var=linv%e4varv%e4gen">http://www.hitta.se/LargeMap.aspx?var=linv%e4varv%e4gen</a></p>
 <p>I browsed the docs, but can't see anything about this? /Hans</p>
 </div>
 <div id="question-tags" class="tags-container tags">

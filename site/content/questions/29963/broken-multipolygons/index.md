@@ -41,8 +41,8 @@ osqa_accepted = true
 <div class="question-body">
 <p>What is the story with the following multipolygons?</p>
 <ul>
-<li>New Jersey, USA: <a href="http://www.openstreetmap.org/relation/235961">235961</a>, <a href="http://www.openstreetmap.org/relation/276888">276888</a></li>
-<li>Georgia, USA: <a href="http://www.openstreetmap.org/relation/143646">143646</a>, <a href="http://www.openstreetmap.org/relation/143639">143639</a>, <a href="http://www.openstreetmap.org/relation/143464">143464</a></li>
+<li>New Jersey, USA: <a href="https://www.openstreetmap.org/relation/235961">235961</a>, <a href="https://www.openstreetmap.org/relation/276888">276888</a></li>
+<li>Georgia, USA: <a href="https://www.openstreetmap.org/relation/143646">143646</a>, <a href="https://www.openstreetmap.org/relation/143639">143639</a>, <a href="https://www.openstreetmap.org/relation/143464">143464</a></li>
 </ul>
 <p>JOSM and Mapnik seem to say they are legal, complete loops.<br />
 However OSM Inspector says they are unclosed rings.</p>
@@ -118,7 +118,7 @@ However OSM Inspector says they are unclosed rings.</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>The OSM Inspector sometimes claims that a ring is not closed when instead the polygon has an inner ring touching an outer ring. This may occasionally confuse the ring building logic in OSMI, leading to the "ring not closed" complaint instead of correctly saying "inner touches outer".</p>
-<p>I checked one of your examples and found exactly that: <a href="http://www.openstreetmap.org/relation/143464#map=16/33.2530/-84.5717">http://www.openstreetmap.org/relation/143464#map=16/33.2530/-84.5717</a> (right edge of the "hole" in the forest).</p>
+<p>I checked one of your examples and found exactly that: <a href="https://www.openstreetmap.org/relation/143464#map=16/33.2530/-84.5717">https://www.openstreetmap.org/relation/143464#map=16/33.2530/-84.5717</a> (right edge of the "hole" in the forest).</p>
 <p>The data also contains a ton of useless tags that should never have been imported in the first place.</p>
 </div>
 <div class="answer-controls post-controls">

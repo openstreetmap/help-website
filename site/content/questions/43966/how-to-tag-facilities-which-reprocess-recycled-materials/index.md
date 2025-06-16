@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I went with just man_made=works on <a href="http://www.openstreetmap.org/way/310864914">one near me</a>. You can use whatever tags you like, so it's perfectly OK to make something up and use that as a lower-level key,</p>
+<p>I went with just man_made=works on <a href="https://www.openstreetmap.org/way/310864914">one near me</a>. You can use whatever tags you like, so it's perfectly OK to make something up and use that as a lower-level key,</p>
 <p>However, obviously it helps to try and find one that's already been used to mean the same thing, so you can see what values people have used previously for <a href="http://taginfo.openstreetmap.org/keys/works#values">"works"</a>, and also perhaps <a href="http://taginfo.openstreetmap.org/keys/industrial#values">"industrial"</a>, to see if anything fits. Also of course search keys and values for <a href="http://taginfo.openstreetmap.org/search?q=recycling#keys">"recycling"</a> - there might be something there.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -153,7 +153,7 @@ osqa_accepted = false
 <div id="post-43981-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Ah, I hadnt realised that <code>works</code> is used as a key as well. Its not referenced on the <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dworks">man_made=works</a> page.</p>
+<p>Ah, I hadnt realised that <code>works</code> is used as a key as well. Its not referenced on the <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dworks">man_made=works</a> page.</p>
 <p>To get a new wiki page for <code>tag:works</code> does it need to be setup as a Proposal or can a documentation page just be created?</p>
 </div>
 <div id="comment-43981-info" class="comment-info">

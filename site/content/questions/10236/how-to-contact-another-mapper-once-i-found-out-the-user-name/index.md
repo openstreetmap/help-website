@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can send another mapper a message using the OSM messaging system. If you know their username you can go to their user page (<a href="http://www.openstreetmap.org/user/">http://www.openstreetmap.org/user/</a>&lt;username&gt;) and click on the "send message" link at the top.</p>
+<p>You can send another mapper a message using the OSM messaging system. If you know their username you can go to their user page (<a href="https://www.openstreetmap.org/user/">https://www.openstreetmap.org/user/</a>&lt;username&gt;) and click on the "send message" link at the top.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -134,7 +134,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>... like it is written in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Contact#Contact_a_single_mapper">http://wiki.openstreetmap.org/wiki/Contact#Contact_a_single_mapper</a></p>
+<p>... like it is written in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Contact#Contact_a_single_mapper">https://wiki.openstreetmap.org/wiki/Contact#Contact_a_single_mapper</a></p>
 </div>
 <div id="comment-10238-info" class="comment-info">
 <span class="comment-age">(26 Jan '12, 16:18)</span> <span class="comment-user userinfo">stephan75</span>

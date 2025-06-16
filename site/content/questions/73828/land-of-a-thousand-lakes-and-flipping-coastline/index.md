@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I am new here and fixing coastlines in Finland. There is some lakes where coastline flipping peculiarly. We have very fragmented coastlines with hunders of smaller island in it.</p>
 <p>Is there any easy fix for this? Thanks for helping newbie!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/coastline_mNFR39g.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/coastline_mNFR39g.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span>

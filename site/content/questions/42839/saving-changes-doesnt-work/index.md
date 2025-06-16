@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is the same issue as <a href="https://help.openstreetmap.org/questions/42842/cant-save-edits-with-id-server-returns-status-code-404">https://help.openstreetmap.org/questions/42842/cant-save-edits-with-id-server-returns-status-code-404</a> which should be resolved as I type this.</p>
+<p>This is the same issue as <a href="/questions/42842/cant-save-edits-with-id-server-returns-status-code-404">https://help.openstreetmap.org/questions/42842/cant-save-edits-with-id-server-returns-status-code-404</a> which should be resolved as I type this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some hints about dealing with shapefiles an OSM data are collected in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a>.</p>
+<p>Some hints about dealing with shapefiles an OSM data are collected in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a>.</p>
 <p>Beside that, read the OSM wiki in general to get familiar with OSM structures. Things get easier then.</p>
 </div>
 <div class="answer-controls post-controls">

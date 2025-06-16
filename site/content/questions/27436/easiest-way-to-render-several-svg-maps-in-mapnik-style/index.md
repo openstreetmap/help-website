@@ -43,19 +43,19 @@ osqa_accepted = true
 <p>I want to render some <strong>SVG maps</strong> in <strong>original Mapnik style</strong> (as seen on the osm.org website).</p>
 <p>I know already</p>
 <ul>
-<li>there are <a href="http://wiki.openstreetmap.org/wiki/Extract">extracts</a> from the whole planet which are much smaller in download size</li>
-<li>there is something called <a href="http://wiki.openstreetmap.org/wiki/Tilemill">TileMill</a> to render map images with a GUI – output could be PDF, but are these PDF documents vector images?</li>
+<li>there are <a href="https://wiki.openstreetmap.org/wiki/Extract">extracts</a> from the whole planet which are much smaller in download size</li>
+<li>there is something called <a href="https://wiki.openstreetmap.org/wiki/Tilemill">TileMill</a> to render map images with a GUI – output could be PDF, but are these PDF documents vector images?</li>
 <li><p>several instruction pages which — I assume — wont lead to the same result, as they consist of quite different instructions. Namely there are:</p></li>
-<li><p><a href="http://wiki.openstreetmap.org/wiki/Mapnik">http://wiki.openstreetmap.org/wiki/Mapnik</a></p></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mapnik/Installation">http://wiki.openstreetmap.org/wiki/Mapnik/Installation</a></li>
+<li><p><a href="https://wiki.openstreetmap.org/wiki/Mapnik">https://wiki.openstreetmap.org/wiki/Mapnik</a></p></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mapnik/Installation">https://wiki.openstreetmap.org/wiki/Mapnik/Installation</a></li>
 <li><a href="https://github.com/mapnik/mapnik/wiki/Mapnik-Installation">https://github.com/mapnik/mapnik/wiki/Mapnik-Installation</a></li>
 <li><a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/</a></li>
 </ul>
-<p><a href="http://help.openstreetmap.org/questions/24833/rendering-a-map-with-mapnik-and-postgis/24849">This answer</a> from Andy Allen suggests to use <a href="https://github.com/springmeyer/nik2img">Nik2img.py</a> (where another confusion arises, as there is that just mentioned Nik2img source at Github and another one at <a href="http://code.google.com/p/mapnik-utils/wiki/Nik2Img">Google-Code</a> – both the same?)</p>
+<p><a href="/questions/24833/rendering-a-map-with-mapnik-and-postgis/24849">This answer</a> from Andy Allen suggests to use <a href="https://github.com/springmeyer/nik2img">Nik2img.py</a> (where another confusion arises, as there is that just mentioned Nik2img source at Github and another one at <a href="http://code.google.com/p/mapnik-utils/wiki/Nik2Img">Google-Code</a> – both the same?)</p>
 <ol>
 <li>Can Nik2Img create SVG or any other vector files?</li>
 <li>Do I need a database (e.g. PostGIS) or can I render directly from a given osm extract file?</li>
-<li>I have read, that some instructions are outdated, because <a href="http://wiki.openstreetmap.org/wiki/Carto">Carto is used in the rendering process</a> of the Mapnik map tiles of OSM.org since August 2013. Where can I find latest instructions on how to install a Mapnik rendering instance?</li>
+<li>I have read, that some instructions are outdated, because <a href="https://wiki.openstreetmap.org/wiki/Carto">Carto is used in the rendering process</a> of the Mapnik map tiles of OSM.org since August 2013. Where can I find latest instructions on how to install a Mapnik rendering instance?</li>
 </ol>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -178,7 +178,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I remember correctly, <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> can produce vector graphic output, and it has a map style available that comes close to mapnik.</p>
+<p>If I remember correctly, <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> can produce vector graphic output, and it has a map style available that comes close to mapnik.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

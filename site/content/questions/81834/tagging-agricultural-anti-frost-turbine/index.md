@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Clipboard01_cPf8DPy.jpg" alt="Frost Buster" /></p>
+<p><img src="/upfiles/Clipboard01_cPf8DPy.jpg" alt="Frost Buster" /></p>
 <p>I wrongly tagged this object with:</p>
 <pre><code>  generator:method = wind_turbine
   generator:source = wind

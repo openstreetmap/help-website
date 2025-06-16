@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To change only part of a way you first have to split it. Check in <a href="https://help.openstreetmap.org/questions/81312">this related question</a> on how to do that.</p>
+<p>To change only part of a way you first have to split it. Check in <a href="/questions/81312">this related question</a> on how to do that.</p>
 <p>After splitting you remove the section that is gone. But there are a few things to look out for.</p>
 <ul>
 <li>if the path is not completely gone, instead of deleting it consider applying other keys describing its condition like <a href="https://wiki.openstreetmap.org/wiki/Key:surface"><code>surface</code></a>, <a href="https://wiki.openstreetmap.org/wiki/Key:trail_visibility"><code>trail_visibility</code></a>, <a href="https://wiki.openstreetmap.org/wiki/Key:smoothness"><code>smoothness</code></a>.</li>

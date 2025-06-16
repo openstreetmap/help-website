@@ -63,7 +63,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I'm guessing you're asking about <a href="http://www.openstreetmap.org/way/307751073">http://www.openstreetmap.org/way/307751073</a> which is actually tagged as a "highway=pedestrian"? If so, that sounds pretty much correct based on your description.</p>
+<p>I'm guessing you're asking about <a href="https://www.openstreetmap.org/way/307751073">https://www.openstreetmap.org/way/307751073</a> which is actually tagged as a "highway=pedestrian"? If so, that sounds pretty much correct based on your description.</p>
 </div>
 <div id="comment-57413-info" class="comment-info">
 <span class="comment-age">(01 Aug '17, 17:00)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -97,7 +97,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/281488723">http://www.openstreetmap.org/way/281488723</a> perhaps?</p>
+<p><a href="https://www.openstreetmap.org/way/281488723">https://www.openstreetmap.org/way/281488723</a> perhaps?</p>
 </div>
 <div id="comment-57418-info" class="comment-info">
 <span class="comment-age">(01 Aug '17, 19:05)</span> <span class="comment-user userinfo">EdLoach ♦</span>

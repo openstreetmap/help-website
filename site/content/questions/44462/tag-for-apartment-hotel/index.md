@@ -230,7 +230,7 @@ osqa_accepted = false
 <li>Use the tourism key</li>
 <li>make use of an existing value add use a subkey</li>
 </ul>
-<p>I would, however, suggest that <a href="http://wiki.openstreetmap.org/wiki/Tag%3Atourism%3Dapartment">tourism=apartment</a> is probably more appropriate than tourism=hotel. The choice of tag will really depend on the range of facilities offered outside individual apartments (e.g., bars, restaurants, leisure facilities etc.)</p>
+<p>I would, however, suggest that <a href="https://wiki.openstreetmap.org/wiki/Tag%3Atourism%3Dapartment">tourism=apartment</a> is probably more appropriate than tourism=hotel. The choice of tag will really depend on the range of facilities offered outside individual apartments (e.g., bars, restaurants, leisure facilities etc.)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

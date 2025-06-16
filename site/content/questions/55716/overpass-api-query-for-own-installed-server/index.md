@@ -112,7 +112,7 @@ One Answer:
 <p>Here I've replaced the Overpass Turbo geocode function with a direct reference to the Paris area id, to make the query work directly against Overpass API:</p>
 <p><a href="http://overpass-turbo.eu/s/ou5">http://overpass-turbo.eu/s/ou5</a></p>
 <p>The id for the area is related to the id for the OSM object, as described here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

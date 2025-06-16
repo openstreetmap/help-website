@@ -108,9 +108,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is not something you can edit by just changing a simple text from "is in this county" to "is in other county". OpenStreetMap (or more precisely, the OpenStreetMap geocoder, Nominatim) <em>deduces</em> the information from the county boundaries. Here are what OpenStreetMap believes to be the county boundaries for Suffolk</p>
-<p><a href="http://www.openstreetmap.org/relation/2298154">http://www.openstreetmap.org/relation/2298154</a></p>
+<p><a href="https://www.openstreetmap.org/relation/2298154">https://www.openstreetmap.org/relation/2298154</a></p>
 <p>and Norfolk</p>
-<p><a href="http://www.openstreetmap.org/relation/1840539">http://www.openstreetmap.org/relation/1840539</a></p>
+<p><a href="https://www.openstreetmap.org/relation/1840539">https://www.openstreetmap.org/relation/1840539</a></p>
 <p>As you can see (at least at the time of writing this), the city of Brookline is clearly in Suffolk County according to these boundaries. If Brookline is in Norfolk, as you say, then both these boundaries are wrong and need to be changed. This is something that everyone can do (from a "having the permission to do it" point of view), but for a new signup editing boundaries can be a daunting task since they are often not drawn as stand-alone geometries, but re-use roads or rivers to form the boundary, and if you are not careful you can break other parts of the map by changing a geometry.</p>
 <p>Perhaps you could point us to a source from which we could derive the correct boundaries and then an experienced mapper could look at the problem?</p>
 </div>
@@ -161,7 +161,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>It was ok in late 2014: <a href="http://overpass-turbo.eu/s/qib">http://overpass-turbo.eu/s/qib</a> - it got broken in this edit <a href="http://www.openstreetmap.org/changeset/25407313">http://www.openstreetmap.org/changeset/25407313</a> and then wrongly "repaired" in this <a href="http://www.openstreetmap.org/changeset/25426805">http://www.openstreetmap.org/changeset/25426805</a></p>
+<p>It was ok in late 2014: <a href="http://overpass-turbo.eu/s/qib">http://overpass-turbo.eu/s/qib</a> - it got broken in this edit <a href="https://www.openstreetmap.org/changeset/25407313">https://www.openstreetmap.org/changeset/25407313</a> and then wrongly "repaired" in this <a href="https://www.openstreetmap.org/changeset/25426805">https://www.openstreetmap.org/changeset/25426805</a></p>
 </div>
 <div id="comment-56986-info" class="comment-info">
 <span class="comment-age">(10 Jul '17, 08:05)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>
@@ -172,7 +172,7 @@ One Answer:
 <div id="post-56989-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I posted <a href="https://lists.openstreetmap.org/pipermail/talk-us/2017-July/017529.html">https://lists.openstreetmap.org/pipermail/talk-us/2017-July/017529.html</a> , and got a reply saying it's fixed in <a href="https://www.openstreetmap.org/changeset/50175342">https://www.openstreetmap.org/changeset/50175342</a> . The above links <a href="http://www.openstreetmap.org/relation/2298154">http://www.openstreetmap.org/relation/2298154</a> and <a href="http://www.openstreetmap.org/relation/1840539">http://www.openstreetmap.org/relation/1840539</a> appear to be correct now, though a search for "Brookline, MA" on OpenStreetMap.org still says "Suffolk County". How long does the fix take to propagate?</p>
+<p>I posted <a href="https://lists.openstreetmap.org/pipermail/talk-us/2017-July/017529.html">https://lists.openstreetmap.org/pipermail/talk-us/2017-July/017529.html</a> , and got a reply saying it's fixed in <a href="https://www.openstreetmap.org/changeset/50175342">https://www.openstreetmap.org/changeset/50175342</a> . The above links <a href="https://www.openstreetmap.org/relation/2298154">https://www.openstreetmap.org/relation/2298154</a> and <a href="https://www.openstreetmap.org/relation/1840539">https://www.openstreetmap.org/relation/1840539</a> appear to be correct now, though a search for "Brookline, MA" on OpenStreetMap.org still says "Suffolk County". How long does the fix take to propagate?</p>
 </div>
 <div id="comment-56989-info" class="comment-info">
 <span class="comment-age">(10 Jul '17, 13:37)</span> <span class="comment-user userinfo">robatino</span>

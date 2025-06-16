@@ -119,7 +119,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Information about things like number of lanes and speed limits may exist in the OSM database, but of course it depends on the mappers if the information is entered for a specific highway or not.</p>
-<p>The maximum theoretical resolution of the map is 1 cm at the equator: <a href="http://help.openstreetmap.org/questions/7307/how-precise-can-osm-get">How precise can OSM get?</a></p>
+<p>The maximum theoretical resolution of the map is 1 cm at the equator: <a href="/questions/7307/how-precise-can-osm-get">How precise can OSM get?</a></p>
 <p>The accuracy may be improved by summing up lot of GPS tracks, but on the other hand you don't know if the mapper drove the car in the middle of the street or more statutorily kept the vehicle to the right/left. So at least I tend to more trust my own tracks than the noise of other mappers.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -173,7 +173,7 @@ osqa_accepted = false
 <p>Accuracy is on the whole not a top priority for OSM. GPS tracks can easily deviate 10 metres from reality, and the Bing aerial imagery we often use nowadays often only offers slightly better positional accuracy than that.</p>
 <p>In theory, looking at the way we store coordinates internally, OSM offers a precision of one ten-millionth degree, or about 1cm. That's precision, not accuracy.</p>
 <p>Averaging several consumer GPS tracks does help to get rid of measurement errors but there's a limit of how much you can achieve with that.</p>
-<p>Speed limits available where recorded; check out the <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">relevant wiki documentation</a> where you'll also find a link to a specialist map depicting speed limits.</p>
+<p>Speed limits available where recorded; check out the <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">relevant wiki documentation</a> where you'll also find a link to a specialist map depicting speed limits.</p>
 <p>Lanes are usually not recorded with a geometry of their own but only as an attribute (e.g. "this road has three lanes"). No consensus has yet emerged on how turning lanes could be mapped in a useful way but discussions are ongoing.</p>
 </div>
 <div class="answer-controls post-controls">

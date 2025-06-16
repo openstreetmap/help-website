@@ -128,7 +128,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Huts are dwellings for humans, but <a href="http://help.openstreetmap.org/users/4984/iii">@iii</a> already said they aren't residential buildings. If they're used for storage, I'd say the best choice would be building=shed.</p>
+<p>Huts are dwellings for humans, but <a href="https://help.openstreetmap.org/users/4984/iii">@iii</a> already said they aren't residential buildings. If they're used for storage, I'd say the best choice would be building=shed.</p>
 </div>
 <div id="comment-44461-info" class="comment-info">
 <span class="comment-age">(27 Jul '15, 21:28)</span> <span class="comment-user userinfo">alester</span>
@@ -152,7 +152,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4984/iii">@iii</a> Great idea for the poll, but wide disparity of values shows little consensus. Rather surprised that building=shed is so disliked: some of the examples look distinctly like sheds to me.</p>
+<p><a href="https://help.openstreetmap.org/users/4984/iii">@iii</a> Great idea for the poll, but wide disparity of values shows little consensus. Rather surprised that building=shed is so disliked: some of the examples look distinctly like sheds to me.</p>
 </div>
 <div id="comment-44586-info" class="comment-info">
 <span class="comment-age">(02 Aug '15, 14:51)</span> <span class="comment-user userinfo">SK53 ♦</span>

@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For tile based layers you can set zoomOffset and resolutions. See Wiki <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example#Restricting_the_bounds_.26_zoom_levels">Restricting the bounds &amp; zoom levels</a> and example <a href="http://www.wightpaths.co.uk/">Isle of Wight Paths</a>. Setting maxResolution and numZoomLevels along with serverResolutions should also work, see <a href="http://openlayers.org/dev/examples/bing-tiles-restrictedzoom.html">Bing Tiles with a Subset of Resolutions Example</a>.</p>
+<p>For tile based layers you can set zoomOffset and resolutions. See Wiki <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example#Restricting_the_bounds_.26_zoom_levels">Restricting the bounds &amp; zoom levels</a> and example <a href="http://www.wightpaths.co.uk/">Isle of Wight Paths</a>. Setting maxResolution and numZoomLevels along with serverResolutions should also work, see <a href="http://openlayers.org/dev/examples/bing-tiles-restrictedzoom.html">Bing Tiles with a Subset of Resolutions Example</a>.</p>
 <p>For convenience, I use the serverResolutions array defined in the Bing layer, which corresponds to OSM resolutions (apart from extending to level 21):</p>
 <pre><code>var resolutions = OpenLayers.Layer.Bing.prototype.serverResolutions.slice(14, 19);
 map.addLayer(new OpenLayers.Layer.OSM(null, null, {zoomOffset: 14, resolutions: resolutions}));

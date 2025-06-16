@@ -173,8 +173,8 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I'd have a look at the data in a text editor to make sure it does look like OSM XML. The first two lines should be something like:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.2.0&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;http://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;</code></pre>
-<p>When I select "export data" I don't get a choice of format (and I wouldn't expect one). One thing that's definitely worth mentioning is that if you want a lot of data you're better off using one of the data extracts on <a href="http://wiki.openstreetmap.org/wiki/Extract">this page</a>.</p>
+&lt;osm version=&quot;0.6&quot; generator=&quot;CGImap 0.2.0&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;https://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;</code></pre>
+<p>When I select "export data" I don't get a choice of format (and I wouldn't expect one). One thing that's definitely worth mentioning is that if you want a lot of data you're better off using one of the data extracts on <a href="https://wiki.openstreetmap.org/wiki/Extract">this page</a>.</p>
 </div>
 <div id="comment-24985-info" class="comment-info">
 <span class="comment-age">(06 Aug '13, 14:12)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "I see some nodes on the map, but I can&#x27;t find them in Planet.osm. Why?"
-description = '''I want to get some node (for example, schools, kindergartens) from Planet.osm (http://wiki.openstreetmap.org/wiki/Planet.osm).  I can see necessary objects on the map http://www.openstreetmap.org/?lat=59.87326&amp;amp;lon=30.3124&amp;amp;zoom=17&amp;amp;layers=M (school #509, kindergarten #108 and kindergarten ...'''
+description = '''I want to get some node (for example, schools, kindergartens) from Planet.osm (https://wiki.openstreetmap.org/wiki/Planet.osm).  I can see necessary objects on the map https://www.openstreetmap.org/?lat=59.87326&amp;amp;lon=30.3124&amp;amp;zoom=17&amp;amp;layers=M (school #509, kindergarten #108 and kindergarten ...'''
 date = "2011-01-28T09:58:00Z"
 lastmod = "2011-01-28T10:45:00Z"
 weight = 2505
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to get some node (for example, schools, kindergartens) from Planet.osm (<a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a>). I can see necessary objects on the map <a href="http://www.openstreetmap.org/?lat=59.87326&amp;lon=30.3124&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=59.87326&amp;lon=30.3124&amp;zoom=17&amp;layers=M</a> (school #509, kindergarten #108 and kindergarten #390). But I can't find them in the XML file! I got all nodes, which have Latitude &gt; 59.86 and Latitude &lt; 59.88 and Longitude &gt; 30.31 and Longitude &lt; 30.32 (this part of map). I've got 42 objects with any tags, but I couldn't find school #509, kindergarten #108 and kindergartens #390. Why?</p>
+<p>I want to get some node (for example, schools, kindergartens) from Planet.osm (<a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a>). I can see necessary objects on the map <a href="https://www.openstreetmap.org/?lat=59.87326&amp;lon=30.3124&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=59.87326&amp;lon=30.3124&amp;zoom=17&amp;layers=M</a> (school #509, kindergarten #108 and kindergarten #390). But I can't find them in the XML file! I got all nodes, which have Latitude &gt; 59.86 and Latitude &lt; 59.88 and Longitude &gt; 30.31 and Longitude &lt; 30.32 (this part of map). I've got 42 objects with any tags, but I couldn't find school #509, kindergarten #108 and kindergartens #390. Why?</p>
 <p>Are the information on the map and in the XML file quite different? Why I can't find map's object in the XML file?</p>
 <p>Thank you!</p>
 </div>
@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Yan,</p>
-<p>I think the problem is that you are searching for nodes, when what you are looking for are drawn as ways (e.g. <a href="http://www.openstreetmap.org/browse/way/47661121"></a><a href="http://www.openstreetmap.org/browse/way/47661121"></a><a href="http://www.openstreetmap.org/browse/way/47661121">http://www.openstreetmap.org/browse/way/47661121</a>)</p>
+<p>I think the problem is that you are searching for nodes, when what you are looking for are drawn as ways (e.g. <a href="https://www.openstreetmap.org/browse/way/47661121"></a><a href="https://www.openstreetmap.org/browse/way/47661121"></a><a href="https://www.openstreetmap.org/browse/way/47661121">https://www.openstreetmap.org/browse/way/47661121</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

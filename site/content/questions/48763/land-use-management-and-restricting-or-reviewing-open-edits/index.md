@@ -120,8 +120,8 @@ One Answer:
 <p>Straight out &amp; out vandalism is fairly rare.</p>
 <p>More awkward is that OSM is primarily based on what is actually physically on the ground. So we have no problems with the mapping of an illicit trail compared to an official one: provided both exist. Censoring data on OSM for some meritorious motive has received a little attention over the years, for instance the removal of dangerous trails is advocated from time to time. Mostly such censoring is a judgement of a mapper not to add certain data to OSM. Some of the answers to other relevant queries on this site also address this issue:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/47455/user-deletes-large-amount-of-objects-within-military-areas">Removing mapping of military areas</a>.</li>
-<li><a href="https://help.openstreetmap.org/questions/26940/data-posted-by-another-user-poses-a-security-risk-to-our-organization?page=1&amp;focusedAnswerId=26942#26942">School claims security risk</a></li>
+<li><a href="/questions/47455/user-deletes-large-amount-of-objects-within-military-areas">Removing mapping of military areas</a>.</li>
+<li><a href="/questions/26940/data-posted-by-another-user-poses-a-security-risk-to-our-organization?page=1&amp;focusedAnswerId=26942#26942">School claims security risk</a></li>
 </ul>
 <p>As a cheeky aside, can I ask if you will be asking Strava &amp; Runkeeper similar questions about moderating their data for the Clemson Forest.</p>
 </div>

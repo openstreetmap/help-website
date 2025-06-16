@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I have recently added a building using iD. It took some time to start appearing but now it started to appear, but only on certain zoom levels 1- Max Zoom, does not appear <img src="https://help.openstreetmap.org/upfiles/Max_zoom._No_building.PNG" alt="alt text" /></p>
-<p>2- Zoom out. It appears. <img src="https://help.openstreetmap.org/upfiles/Zoom_level_2._Appears.png" alt="alt text" /></p>
+<p>Hi, I have recently added a building using iD. It took some time to start appearing but now it started to appear, but only on certain zoom levels 1- Max Zoom, does not appear <img src="/upfiles/Max_zoom._No_building.PNG" alt="alt text" /></p>
+<p>2- Zoom out. It appears. <img src="/upfiles/Zoom_level_2._Appears.png" alt="alt text" /></p>
 <p>3- I zoom out again. Disappears</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Zoom_level_3._No_building.png" alt="alt text" /></p>
+<p><img src="/upfiles/Zoom_level_3._No_building.png" alt="alt text" /></p>
 <p>Note that the other buildings are not affected. They always appear. Is this issue due to some sort of caching of tiles on some zoom levels, and after some time it will appear on all zoom level?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

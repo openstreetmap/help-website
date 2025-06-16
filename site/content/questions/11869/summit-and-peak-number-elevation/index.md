@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>The summit icon will often have a number after it. I assume this number is elevation (in meters?). Can someone confirm? This is not explained in the map key (It shows the icon with the description "Summit and Peak") -- perhaps that should be added?</p>
-<p>This number is also not documented here: <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Natural">http://wiki.openstreetmap.org/wiki/Map_Features#Natural</a></p>
+<p>This number is also not documented here: <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Natural">https://wiki.openstreetmap.org/wiki/Map_Features#Natural</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-summit" rel="tag" title="see questions tagged &#39;summit&#39;">summit</span> <span class="post-tag tag-link-elevation" rel="tag" title="see questions tagged &#39;elevation&#39;">elevation</span> <span class="post-tag tag-link-hill" rel="tag" title="see questions tagged &#39;hill&#39;">hill</span> <span class="post-tag tag-link-peak" rel="tag" title="see questions tagged &#39;peak&#39;">peak</span>

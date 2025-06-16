@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hey all, I don't see any documentation for how to mark <a href="https://en.wikipedia.org/wiki/Parking_meter">metered parking</a>. The <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">Tag:amenity=parking</a> page has the tag &lt;parking meter=""&gt; but I don't see any information about them. Thanks</p>
+<p>Hey all, I don't see any documentation for how to mark <a href="https://en.wikipedia.org/wiki/Parking_meter">metered parking</a>. The <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">Tag:amenity=parking</a> page has the tag &lt;parking meter=""&gt; but I don't see any information about them. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-meter" rel="tag" title="see questions tagged &#39;meter&#39;">meter</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span>
@@ -62,7 +62,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>How about fee=yes and if appropiate opening_hours <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">http://wiki.openstreetmap.org/wiki/Key:opening_hours</a></p>
+<p>How about fee=yes and if appropiate opening_hours <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">https://wiki.openstreetmap.org/wiki/Key:opening_hours</a></p>
 <p>Whether a parking area is metered or not is not important: The fee is!</p>
 </div>
 <div id="comment-24218-info" class="comment-info">
@@ -97,7 +97,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Key:parking:lane">parking:lane</a> tag which supports more conditions than the regular parking tag.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Key:parking:lane">parking:lane</a> tag which supports more conditions than the regular parking tag.</p>
 </div>
 <div id="comment-24245-info" class="comment-info">
 <span class="comment-age">(15 Jul '13, 07:44)</span> <span class="comment-user userinfo">scai ♦</span>

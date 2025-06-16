@@ -105,7 +105,7 @@ osqa_accepted = false
 <div id="post-60401-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've just tried "share as" at <a href="http://www.openstreetmap.org/#map=16/51.6468/-0.4335">http://www.openstreetmap.org/#map=16/51.6468/-0.4335</a> and got a "map.pdf" that looked OK.</p>
+<p>I've just tried "share as" at <a href="https://www.openstreetmap.org/#map=16/51.6468/-0.4335">https://www.openstreetmap.org/#map=16/51.6468/-0.4335</a> and got a "map.pdf" that looked OK.</p>
 <p>The resulting PDF is 771648 bytes and the md5sum is 429c1f83e33a36db98d423527afaf9ab .</p>
 <p>Perhaps there's a problem with the PDF viewer you are trying to open it in?</p>
 </div>

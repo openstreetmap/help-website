@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-79908-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There was a <a href="https://help.openstreetmap.org/questions/79336/new-zealand-paper-roads">similar question</a> asked just recently. Have a look there.</p>
+<p>There was a <a href="/questions/79336/new-zealand-paper-roads">similar question</a> asked just recently. Have a look there.</p>
 </div>
 <div id="comment-79908-info" class="comment-info">
 <span class="comment-age">(28 Apr '21, 17:52)</span> <span class="comment-user userinfo">TZorn</span>

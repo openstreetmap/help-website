@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-52892-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes, this is off-topic, as it is not about OpenStreetMap, so I closed the question. As pointed out by <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, you might ask on <a href="http://gis.stackexchange.com/">http://gis.stackexchange.com/</a> , or on <a href="http://stackoverflow.com/">http://stackoverflow.com/</a> . However, you'll need to provider more details - specifically, what kind of image do you want to create, how is that image specified (zoom level etc.), what is the context. And finally, what have you tried already. Otherwise you will probably not get an answer.</p>
+<p>Yes, this is off-topic, as it is not about OpenStreetMap, so I closed the question. As pointed out by <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, you might ask on <a href="http://gis.stackexchange.com/">http://gis.stackexchange.com/</a> , or on <a href="http://stackoverflow.com/">http://stackoverflow.com/</a> . However, you'll need to provider more details - specifically, what kind of image do you want to create, how is that image specified (zoom level etc.), what is the context. And finally, what have you tried already. Otherwise you will probably not get an answer.</p>
 </div>
 <div id="comment-52892-info" class="comment-info">
 <span class="comment-age">(11 Nov '16, 12:27)</span> <span class="comment-user userinfo">sleske</span>

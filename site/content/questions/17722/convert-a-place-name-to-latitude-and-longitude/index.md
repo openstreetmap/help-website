@@ -110,10 +110,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM uses <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> for geocoding. If you have a look at that wiki page you'll see some examples, and the output format can be varied, so that for example:</p>
+<p>OSM uses <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> for geocoding. If you have a look at that wiki page you'll see some examples, and the output format can be varied, so that for example:</p>
 <pre><code>http://nominatim.openstreetmap.org/search?format=xml&amp;q=london</code></pre>
 <p>produces <a href="http://nominatim.openstreetmap.org/search?format=xml&amp;q=london">these results</a>.</p>
-<p>If you plan to call it more than once you'll need to read the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> that goes with OSM's nominatim instance. Mapquest also run a <a href="http://open.mapquestapi.com/nominatim/">Nominatim instance</a>, with their own terms of use.</p>
+<p>If you plan to call it more than once you'll need to read the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> that goes with OSM's nominatim instance. Mapquest also run a <a href="http://open.mapquestapi.com/nominatim/">Nominatim instance</a>, with their own terms of use.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

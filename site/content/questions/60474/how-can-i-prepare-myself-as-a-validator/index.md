@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well, everything you need is on the wiki. Look here <a href="http://wiki.openstreetmap.org/wiki/OSM_Tasking_Manager/Validating_data">http://wiki.openstreetmap.org/wiki/OSM_Tasking_Manager/Validating_data</a>. But generally, to be a good validator you need to be a good mapper first. So keep training by contributing on as various area as you can. It'll be easier for you to spot mistakes on the map, the more you're used to it.</p>
+<p>Well, everything you need is on the wiki. Look here <a href="https://wiki.openstreetmap.org/wiki/OSM_Tasking_Manager/Validating_data">https://wiki.openstreetmap.org/wiki/OSM_Tasking_Manager/Validating_data</a>. But generally, to be a good validator you need to be a good mapper first. So keep training by contributing on as various area as you can. It'll be easier for you to spot mistakes on the map, the more you're used to it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

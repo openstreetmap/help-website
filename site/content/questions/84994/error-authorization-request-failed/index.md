@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello,</p>
 <p>When trying to connect to my OpenStreetMap account from Gnome Maps on Linux Mint 20.3 Una, it give me that error:</p>
 <p>"Authorization request failed"</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_at_2022-07-07_00-10-05.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_at_2022-07-07_00-10-05.png" alt="alt text" /></p>
 <p>I tried to close and relaunch the app and also I do tried a new account without any success.</p>
 <p>What I need to do to be able to login?</p>
 <p>Best regards,</p>
@@ -127,7 +127,7 @@ osqa_accepted = false
 <p>Hello,</p>
 <p>After looking at their GitLab, the issues was fixed in a update.</p>
 <p>I'm running a outdated version of Gnome Maps.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_at_2022-07-07_16-57-11.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_at_2022-07-07_16-57-11.png" alt="alt text" /></p>
 <p>The version from the repos that Linux Mint is using seem to be outdated:</p>
 <pre><code>root@workstation-dc:/home/guillaumesoucy# apt-get install gnome-maps
 Reading package lists... Done

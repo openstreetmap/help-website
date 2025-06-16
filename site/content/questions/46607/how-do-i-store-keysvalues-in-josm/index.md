@@ -170,7 +170,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can simply create a preset for the specific tags if none already exists, see:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Customising_JOSM_Presets">http://wiki.openstreetmap.org/wiki/Customising_JOSM_Presets</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Customising_JOSM_Presets">https://wiki.openstreetmap.org/wiki/Customising_JOSM_Presets</a></p>
 <p>and</p>
 <p><a href="https://josm.openstreetmap.de/wiki/TaggingPresets">https://josm.openstreetmap.de/wiki/TaggingPresets</a></p>
 </div>

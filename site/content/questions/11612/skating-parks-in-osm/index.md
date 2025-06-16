@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have used <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch">leisure=pitch</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:sport">sport=skateboard</a> in the past for the area. The standard rendering does not draw a symbol (as yet) but colours the area green.</p>
+<p>I have used <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch">leisure=pitch</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:sport">sport=skateboard</a> in the past for the area. The standard rendering does not draw a symbol (as yet) but colours the area green.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

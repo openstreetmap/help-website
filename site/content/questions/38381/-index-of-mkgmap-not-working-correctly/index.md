@@ -206,7 +206,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am not familiar with the town, but when you try a ready made garmin suitable from one of the many <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">providers</a> such as <a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> are more streets found.</p>
+<p>I am not familiar with the town, but when you try a ready made garmin suitable from one of the many <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">providers</a> such as <a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> are more streets found.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For viewing purposes, Wikimedia's toolserver has a number of non-local-language maps. <a href="http://toolserver.org/~osm/locale/en.html">Here's</a> the English one.</p>
-<p>When editing, Arabic placenames often have English and other language alternatives. See for example <a href="http://www.openstreetmap.org/browse/node/768581954">this node</a> - you can see "name" is in the local language, and there's also "name:en" (and name:de, name:fr etc.).</p>
+<p>When editing, Arabic placenames often have English and other language alternatives. See for example <a href="https://www.openstreetmap.org/browse/node/768581954">this node</a> - you can see "name" is in the local language, and there's also "name:en" (and name:de, name:fr etc.).</p>
 <p>I don't think that you'd want to change the "name" tag to a non-local name. If there's no English name for a place on the map and you know what it is (via a source valid for OSM) then you might want to add a "name:en" for it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -193,7 +193,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OpenStreetMap German community has a <a href="http://openstreetmap.de/karte.html">German Map</a>. It is world-wide and uses a <a href="http://wiki.openstreetmap.org/wiki/German_Style">German style</a>. It displays the German name if it's set, but it also automatically transliterates non-latin-alphabetic names (cf. <a href="http://openstreetmap.de/karte.html?zoom=15&amp;lat=29.67037&amp;lon=115.95848&amp;layers=B000TT">this small area in China</a>, one of the <a href="http://www.openstreetmap.org/way/263492307">streets there</a> only has a Chinese name).</p>
+<p>The OpenStreetMap German community has a <a href="http://openstreetmap.de/karte.html">German Map</a>. It is world-wide and uses a <a href="https://wiki.openstreetmap.org/wiki/German_Style">German style</a>. It displays the German name if it's set, but it also automatically transliterates non-latin-alphabetic names (cf. <a href="http://openstreetmap.de/karte.html?zoom=15&amp;lat=29.67037&amp;lon=115.95848&amp;layers=B000TT">this small area in China</a>, one of the <a href="https://www.openstreetmap.org/way/263492307">streets there</a> only has a Chinese name).</p>
 <p>For Arabic countries, there is probably not many <code>name:de</code> (German names), so it'll latinize to be something that's basically "English", and hence should be suitable for your purposes.</p>
 <p>For those interested, the automatic transliteration is detailed here: <a href="http://blog.gegg.us/2013/09/a-simple-way-to-localize-latinize-an-openstreetmap-style/">A simple way to localize (latinize) an Openstreetmap style</a></p>
 </div>
@@ -215,7 +215,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>... yes, and see <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">http://wiki.openstreetmap.org/wiki/Map_internationalization</a> for a general overview.</p>
+<p>... yes, and see <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a> for a general overview.</p>
 </div>
 <div id="comment-47079-info" class="comment-info">
 <span class="comment-age">(09 Dec '15, 17:20)</span> <span class="comment-user userinfo">stephan75</span>

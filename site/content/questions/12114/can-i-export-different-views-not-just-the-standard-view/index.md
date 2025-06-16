@@ -73,7 +73,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>No, as Richard says, this isn't available - the <a href="http://wiki.openstreetmap.org/wiki/TransportMap">TransportMap</a> layer uses external tiles from Andy Allan. However, other transport maps are available and some of them may support export - see the "Maps" section of <a href="http://wiki.openstreetmap.org/wiki/Public_transport">this page</a>.</p>
+<p>No, as Richard says, this isn't available - the <a href="https://wiki.openstreetmap.org/wiki/TransportMap">TransportMap</a> layer uses external tiles from Andy Allan. However, other transport maps are available and some of them may support export - see the "Maps" section of <a href="https://wiki.openstreetmap.org/wiki/Public_transport">this page</a>.</p>
 </div>
 <div id="comment-12542-info" class="comment-info">
 <span class="comment-age">(04 May '12, 10:07)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This previous question might help? <a href="http://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator">http://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator</a></p>
+<p>This previous question might help? <a href="/questions/1455/using-map-in-adobe-illustrator">https://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -196,7 +196,7 @@ osqa_accepted = false
 <div id="post-12548-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... but maybe some further informations at <a href="http://wiki.openstreetmap.org/wiki/SRTM">http://wiki.openstreetmap.org/wiki/SRTM</a> can help to find a solution via other projects or web services.</p>
+<p>... but maybe some further informations at <a href="https://wiki.openstreetmap.org/wiki/SRTM">https://wiki.openstreetmap.org/wiki/SRTM</a> can help to find a solution via other projects or web services.</p>
 </div>
 <div id="comment-12548-info" class="comment-info">
 <span class="comment-age">(04 May '12, 19:35)</span> <span class="comment-user userinfo">stephan75</span>

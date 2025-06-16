@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your tile server database (likely a osm2pgsql schema DB) needs to be updated from the data in the rails port database. If it is a small area it probably doesn't make sense to use the minutely diff mechanism for updating,</p>
-<p>Exporting the data in OSM XML format from the rails-port DB can likely be done with osmosis, see <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.46">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.46</a></p>
+<p>Exporting the data in OSM XML format from the rails-port DB can likely be done with osmosis, see <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.46">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.46</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

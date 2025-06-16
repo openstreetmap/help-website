@@ -126,9 +126,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you mean that you used the map api that is used by all the editors it gives you every node in the bounding box, all the ways that have one or more of these nodes, all nodes that is part of those ways and all relations that referance any of theese. You can read more about it on <a href="http://wiki.openstreetmap.org/wiki/Map_call#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap">the wiki</a>.</p>
+<p>If you mean that you used the map api that is used by all the editors it gives you every node in the bounding box, all the ways that have one or more of these nodes, all nodes that is part of those ways and all relations that referance any of theese. You can read more about it on <a href="https://wiki.openstreetmap.org/wiki/Map_call#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap">the wiki</a>.</p>
 <p>This means that you will get complete ways that touch your area but can go far away.</p>
-<p>Note that if you are using Potlatch, Potlatch 2 or the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/continuosDownload">continuous download plugin</a> for JOSM it will download the area you are panning to automatically so that it would seem like you have the whole world downloaded. This is also the way that the aerial image layers work.</p>
+<p>Note that if you are using Potlatch, Potlatch 2 or the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/continuosDownload">continuous download plugin</a> for JOSM it will download the area you are panning to automatically so that it would seem like you have the whole world downloaded. This is also the way that the aerial image layers work.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

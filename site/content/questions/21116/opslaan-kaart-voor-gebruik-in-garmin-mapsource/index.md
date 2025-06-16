@@ -160,9 +160,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ik neem aan dat je de kaarten download van <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl</a> In dat geval (en andere) kun je de tool <a href="http://www.javawa.nl/gmtk.html">JaVaWa GMTK</a> gebruiken om de geinstalleerde kaart een andere family ID te geven. Daarna kun je een andere kaart installeren. Enzovoort. Zie ook punt 2.2. van de <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">FAQ</a>.</p>
+<p>Ik neem aan dat je de kaarten download van <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl</a> In dat geval (en andere) kun je de tool <a href="http://www.javawa.nl/gmtk.html">JaVaWa GMTK</a> gebruiken om de geinstalleerde kaart een andere family ID te geven. Daarna kun je een andere kaart installeren. Enzovoort. Zie ook punt 2.2. van de <a href="https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">FAQ</a>.</p>
 <hr />
-<p>I assume that you download the maps from <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl</a> In that case (and other cases) you can use the tool <a href="http://www.javawa.nl/gmtk_en.html">JaVaWa GMTK</a> to give the already installed map a different family ID. After that you can install another map. Etcetera. See also point 2.2. in the <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">FAQ</a>.</p>
+<p>I assume that you download the maps from <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl</a> In that case (and other cases) you can use the tool <a href="http://www.javawa.nl/gmtk_en.html">JaVaWa GMTK</a> to give the already installed map a different family ID. After that you can install another map. Etcetera. See also point 2.2. in the <a href="https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">FAQ</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -297,7 +297,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">lots</a> of downloadable Garmin maps based on OSM data, but perhaps the easiest for you would be to go to <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> and select the tiles that you want.</p>
+<p>There are <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">lots</a> of downloadable Garmin maps based on OSM data, but perhaps the easiest for you would be to go to <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> and select the tiles that you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

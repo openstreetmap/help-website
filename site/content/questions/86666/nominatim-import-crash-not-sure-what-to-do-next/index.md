@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Greetings again!</p>
-<p>For reference, here's my previous thread. Newbie here with this software. <a href="https://help.openstreetmap.org/questions/86651/third-time-apologies-if-this-is-a-repeat-nominatim-install-woes">https://help.openstreetmap.org/questions/86651/third-time-apologies-if-this-is-a-repeat-nominatim-install-woes</a></p>
+<p>For reference, here's my previous thread. Newbie here with this software. <a href="/questions/86651/third-time-apologies-if-this-is-a-repeat-nominatim-install-woes">https://help.openstreetmap.org/questions/86651/third-time-apologies-if-this-is-a-repeat-nominatim-install-woes</a></p>
 <p>I was doing so great! I thought I was gonna break some kind of speed record, because this was going to complete in like one day (or so I thought). But it didn't - crashed and burned. (crys)</p>
 <p>Below is the output...any help? What do I do now?</p>
 <p>$ nominatim import --osm-file planet-latest.osm 2&gt;&amp;1 | tee setup.log</p>

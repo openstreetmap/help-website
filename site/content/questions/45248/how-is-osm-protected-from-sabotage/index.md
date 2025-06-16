@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Search for "vandalism" on this forum for some hints. See for example <a href="https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism">this</a>. There is no sabotage protection present, but a lot of people do keep an eye on the map using numerous tools. And you can revert changes using a JOSM plugin, and get help here or by contacting the Data Working Group (DWG).</p>
+<p>Search for "vandalism" on this forum for some hints. See for example <a href="/questions/216/what-should-i-do-about-vandalism">this</a>. There is no sabotage protection present, but a lot of people do keep an eye on the map using numerous tools. And you can revert changes using a JOSM plugin, and get help here or by contacting the Data Working Group (DWG).</p>
 <p>In practice, vandalism isn't very common, though it does sometimes take very long to be detected.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -139,7 +139,7 @@ One Answer:
 <div id="post-45256-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/6904/scott07"></a><a href="http://help.openstreetmap.org/users/6904/scott07">@Scott07</a>: Also see the question about our <a href="/questions/20312/">data-verification-process</a> - quite the same, isn't it? :-)</p>
+<p><a href="https://help.openstreetmap.org/users/6904/scott07"></a><a href="https://help.openstreetmap.org/users/6904/scott07">@Scott07</a>: Also see the question about our <a href="/questions/20312/">data-verification-process</a> - quite the same, isn't it? :-)</p>
 </div>
 <div id="comment-45256-info" class="comment-info">
 <span class="comment-age">(15 Sep '15, 19:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

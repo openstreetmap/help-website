@@ -170,7 +170,7 @@ One Answer:
 <div id="post-58907-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I seem to have an issue with Nodes with no tags. e.g. <a href="http://www.openstreetmap.org/node/3058674907">http://www.openstreetmap.org/node/3058674907</a> <a href="http://www.openstreetmap.org/node/4254730815">http://www.openstreetmap.org/node/4254730815</a></p>
+<p>I seem to have an issue with Nodes with no tags. e.g. <a href="https://www.openstreetmap.org/node/3058674907">https://www.openstreetmap.org/node/3058674907</a> <a href="https://www.openstreetmap.org/node/4254730815">https://www.openstreetmap.org/node/4254730815</a></p>
 <p>This is puzzling me as the nodes themselves are the end of a line or area and probably should not be there, but I've no idea how to edit them out.</p>
 </div>
 <div id="comment-58907-info" class="comment-info">

@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-46961-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11735/jason-hh"></a><a href="http://help.openstreetmap.org/users/11735/jason-hh">@Jason HH</a>: I tried to do my best to rephrase your question and comment into a real <span>question</span> for this site, please edit if you can improve it.</p>
+<p><a href="https://help.openstreetmap.org/users/11735/jason-hh"></a><a href="https://help.openstreetmap.org/users/11735/jason-hh">@Jason HH</a>: I tried to do my best to rephrase your question and comment into a real <span>question</span> for this site, please edit if you can improve it.</p>
 </div>
 <div id="comment-46961-info" class="comment-info">
 <span class="comment-age">(03 Dec '15, 20:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

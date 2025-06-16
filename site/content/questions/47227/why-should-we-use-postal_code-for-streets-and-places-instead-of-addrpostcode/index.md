@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In my opinion you shouldn't use addr:postcode= <em>on a street because it is intended for tagging addresses, and the street has no "address" per se. postal_code=</em> has a slightly different meaning, which is "all addresses along this street share this postal code", the same applies to areas, see also the wiki: <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">http://wiki.openstreetmap.org/wiki/Key:postal_code</a></p>
+<p>In my opinion you shouldn't use addr:postcode= <em>on a street because it is intended for tagging addresses, and the street has no "address" per se. postal_code=</em> has a slightly different meaning, which is "all addresses along this street share this postal code", the same applies to areas, see also the wiki: <a href="https://wiki.openstreetmap.org/wiki/Key:postal_code">https://wiki.openstreetmap.org/wiki/Key:postal_code</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = false
 <div id="post-47248-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> so I take it that you're against mapping addresses by an iterative process</p>
+<p><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> so I take it that you're against mapping addresses by an iterative process</p>
 </div>
 <div id="comment-47248-info" class="comment-info">
 <span class="comment-age">(21 Dec '15, 10:20)</span> <span class="comment-user userinfo">SK53 ♦</span>

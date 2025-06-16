@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I've been editing HOT tasks, using JOSM. It auto generates an edit summary for me, but mine is full of the type of markup that is used in URLs to encode less common characters. Like "%23" instead of "#". It leaves my edit summaries almost unreadable. Is this a known issue? Any known workarounds? I don't see any obvious links on the HOT website to submit bug reports.</p>
 <p>I'm viewing the HOT website on firefox, my computer is running Ubuntu 14.10, and the most up to date version of JOSM (Version 8279).</p>
-<p><strong>edit:</strong> <a href="http://www.openstreetmap.org/changeset/30633750">example</a></p>
+<p><strong>edit:</strong> <a href="https://www.openstreetmap.org/changeset/30633750">example</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-hot" rel="tag" title="see questions tagged &#39;hot&#39;">hot</span> <span class="post-tag tag-link-nepal" rel="tag" title="see questions tagged &#39;nepal&#39;">nepal</span> <span class="post-tag tag-link-changeset_comment" rel="tag" title="see questions tagged &#39;changeset_comment&#39;">changeset_comment</span>

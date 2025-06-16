@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why are my changes not shown?"
-description = '''I&#x27;ve been mapping my university (http://www.openstreetmap.org/?lat=39.992924&amp;amp;lon=-82.940206&amp;amp;zoom=18) using Potlatch 2. I close each changeset I make, but my changes aren&#x27;t reflected on the online map. Why?'''
+description = '''I&#x27;ve been mapping my university (https://www.openstreetmap.org/?lat=39.992924&amp;amp;lon=-82.940206&amp;amp;zoom=18) using Potlatch 2. I close each changeset I make, but my changes aren&#x27;t reflected on the online map. Why?'''
 date = "2012-12-09T21:11:00Z"
 lastmod = "2012-12-14T11:23:00Z"
 weight = 18318
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've been mapping my university (<a href="http://www.openstreetmap.org/?lat=39.992924&amp;lon=-82.940206&amp;zoom=18)">http://www.openstreetmap.org/?lat=39.992924&amp;lon=-82.940206&amp;zoom=18)</a> using Potlatch 2. I close each changeset I make, but my changes aren't reflected on the online map. Why?</p>
+<p>I've been mapping my university (<a href="https://www.openstreetmap.org/?lat=39.992924&amp;lon=-82.940206&amp;zoom=18)">https://www.openstreetmap.org/?lat=39.992924&amp;lon=-82.940206&amp;zoom=18)</a> using Potlatch 2. I close each changeset I make, but my changes aren't reflected on the online map. Why?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span>

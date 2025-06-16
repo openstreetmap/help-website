@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe <a href="http://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a> can be useful for you. Try it for the area you need, and tell us here if you get stuck anywhere.</p>
+<p>Maybe <a href="https://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a> can be useful for you. Try it for the area you need, and tell us here if you get stuck anywhere.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -107,9 +107,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Many countries that have English as an official or commonly-used language have different terms for different things. OpenStreetMap tends to use British English, because that's where the project was started. If you look through the wiki you'll see <a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=british+english">lots of pages</a> that say "OSM uses X because that's what British English does".</p>
-<p>In this case the actual tag used is "<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel">amenity=fuel</a>" - designed to work in Britain (where we have "Petrol Stations"), the USA ("Gas Stations") and presumably also in India. In the online editor, it's listed as "fuel" under the "transport" category (as Richard has noted).</p>
-<p>If you're starting out editing, you'll probably have lots of questions like this. Everything's documented somewhere, but unfortunately where isn't always obvious to someone just starting with the project, although it's getting better. The main page of the <a href="http://wiki.openstreetmap.org/wiki/Main_Page">wiki</a> now has links to "places to get help from" (including this site and the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide pages</a>, which if you've not already seen are definitely worth reading. The <a href="http://wiki.openstreetmap.org/wiki/Contact">Contact</a> page is also useful, as is (if you just want a quick answer to something) <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> - just join the channel and ask a question. There are also several <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> including <a href="http://lists.openstreetmap.org/listinfo/newbies">one for new users</a> that is perfect for questions like this one.</p>
+<p>Many countries that have English as an official or commonly-used language have different terms for different things. OpenStreetMap tends to use British English, because that's where the project was started. If you look through the wiki you'll see <a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=british+english">lots of pages</a> that say "OSM uses X because that's what British English does".</p>
+<p>In this case the actual tag used is "<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel">amenity=fuel</a>" - designed to work in Britain (where we have "Petrol Stations"), the USA ("Gas Stations") and presumably also in India. In the online editor, it's listed as "fuel" under the "transport" category (as Richard has noted).</p>
+<p>If you're starting out editing, you'll probably have lots of questions like this. Everything's documented somewhere, but unfortunately where isn't always obvious to someone just starting with the project, although it's getting better. The main page of the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">wiki</a> now has links to "places to get help from" (including this site and the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide pages</a>, which if you've not already seen are definitely worth reading. The <a href="https://wiki.openstreetmap.org/wiki/Contact">Contact</a> page is also useful, as is (if you just want a quick answer to something) <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> - just join the channel and ask a question. There are also several <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> including <a href="http://lists.openstreetmap.org/listinfo/newbies">one for new users</a> that is perfect for questions like this one.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,7 +163,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You want the 'Fuel' preset:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2012-12-06_at_10.18.50.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2012-12-06_at_10.18.50.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

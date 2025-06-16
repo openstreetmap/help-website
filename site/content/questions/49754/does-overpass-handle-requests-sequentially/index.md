@@ -134,7 +134,7 @@ osqa_accepted = false
 <div id="post-49756-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>thanx for the info <a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> I'll debug my web server configuration's and look for issues anywhere else.</p>
+<p>thanx for the info <a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> I'll debug my web server configuration's and look for issues anywhere else.</p>
 </div>
 <div id="comment-49756-info" class="comment-info">
 <span class="comment-age">(20 May '16, 12:03)</span> <span class="comment-user userinfo">Arun Gowtham</span>
@@ -145,7 +145,7 @@ osqa_accepted = false
 <div id="post-49757-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>hi <a href="http://help.openstreetmap.org/users/8708/mmd"></a><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a></p>
+<p>hi <a href="https://help.openstreetmap.org/users/8708/mmd"></a><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a></p>
 <p>Here's the case am trying to solve:</p>
 <p>My query: [out:json];area[name='Tamil Nadu'];node(area)[amenity='atm'];out count;</p>
 <p>The time taken for this single request is :</p>
@@ -189,7 +189,7 @@ osqa_accepted = false
 <div id="post-49761-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> actually my machine is 32 core cpu...</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> actually my machine is 32 core cpu...</p>
 </div>
 <div id="comment-49761-info" class="comment-info">
 <span class="comment-age">(20 May '16, 14:25)</span> <span class="comment-user userinfo">Arun Gowtham</span>

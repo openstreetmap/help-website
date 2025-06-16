@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I came across a footpath that wasn't closed, but the land owners are asking you not to use it due to Erosion Control. I've tagged this as <code>avoid</code>: <code>erosion</code> and this can be seen here: <a href="https://www.openstreetmap.org/way/920052194">https://www.openstreetmap.org/way/920052194</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_20210320_163644_WOzETHA.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/IMG_20210320_163644_WOzETHA.jpg" alt="alt text" /></p>
 <p>I've no idea if this is the best way to do this though and as it is not a standard tag routers won't pick it up. Is there a better tag for this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -113,7 +113,7 @@ osqa_accepted = false
 <li>Gosmore</li>
 <li>Navit</li>
 </ul>
-<p>to name but a few. More are listed here: <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop----">Desktop</a></p>
+<p>to name but a few. More are listed here: <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop----">Desktop</a></p>
 <p>You can differentiate between programs that can preload tile data to display a kind of map, or binary map data that is displayed as vector data with even better zooming features by using less space on your harddisk.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -333,8 +333,8 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Not sure about using 'highway=living_street' for such driveways/access roads. 'Living streets' are a very specific type of highway described in the Map Features wiki as "residential streets where pedestrians have legal priority over cars, speeds are kept very low and where children are allowed to play on the street." Here are the relevant links <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Highway">http://wiki.openstreetmap.org/wiki/Map_Features#Highway</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street</a></p>
+<p>Not sure about using 'highway=living_street' for such driveways/access roads. 'Living streets' are a very specific type of highway described in the Map Features wiki as "residential streets where pedestrians have legal priority over cars, speeds are kept very low and where children are allowed to play on the street." Here are the relevant links <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Highway">https://wiki.openstreetmap.org/wiki/Map_Features#Highway</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street</a></p>
 </div>
 <div id="comment-35075-info" class="comment-info">
 <span class="comment-age">(21 Jul '14, 23:21)</span> <span class="comment-user userinfo">NZGraham</span>

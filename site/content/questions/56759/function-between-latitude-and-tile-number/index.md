@@ -44,11 +44,11 @@ osqa_accepted = true
 So anyone knows the function? Or maybe how to convert the tile numbers to meters? If you're wondering why I don't just simply implement osm to my game ... one reason is that I need to deactivate some labels for my game.</p>
 <p>I attached three screenshots with the graph, the value table and the tiles for better understanding.</p>
 <p>Full graph:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/graph.JPG" alt="full graph" /></p>
+<p><img src="/upfiles/graph.JPG" alt="full graph" /></p>
 <p>Part of the graph with value table:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/function.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/function.JPG" alt="alt text" /></p>
 <p>Tiles generated with Maperitive (zoom level 16):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/tiles.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/tiles.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-function" rel="tag" title="see questions tagged &#39;function&#39;">function</span> <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span> <span class="post-tag tag-link-maperitive" rel="tag" title="see questions tagged &#39;maperitive&#39;">maperitive</span>
@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a></p>
+<p>Take a look at <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

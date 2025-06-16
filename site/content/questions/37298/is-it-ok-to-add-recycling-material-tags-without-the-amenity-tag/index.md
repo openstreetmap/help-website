@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi if it’s behind the door, inside the building use the amenity key and add access=no / private and use these attributes, <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Drecycling">http://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Drecycling</a> Your allowed to make your own proposal to add some tags to the OSM system tags. Take a look here as well <a href="http://wiki.openstreetmap.org/wiki/Proposal">http://wiki.openstreetmap.org/wiki/Proposal</a></p>
+<p>Hi if it’s behind the door, inside the building use the amenity key and add access=no / private and use these attributes, <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Drecycling">https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Drecycling</a> Your allowed to make your own proposal to add some tags to the OSM system tags. Take a look here as well <a href="https://wiki.openstreetmap.org/wiki/Proposal">https://wiki.openstreetmap.org/wiki/Proposal</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I know one can name points, which is used in naming places, hamlets, etc.</p>
 <p>Is there a way to specify a name for a valley, or a mountain ridge, which usually extend for a few kilometers. In printed maps, these usually show up a long, spaced names along the running of the valley.</p>
-<p>compare <a href="http://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M</a> (the original) versus this mockup: <a href="http://yfrog.com/03valleynamesp"></a><a href="http://yfrog.com/03valleynamesp"></a><a href="http://yfrog.com/03valleynamesp">http://yfrog.com/03valleynamesp</a></p>
+<p>compare <a href="https://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=46.8674&amp;lon=11.7551&amp;zoom=12&amp;layers=M</a> (the original) versus this mockup: <a href="http://yfrog.com/03valleynamesp"></a><a href="http://yfrog.com/03valleynamesp"></a><a href="http://yfrog.com/03valleynamesp">http://yfrog.com/03valleynamesp</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -116,13 +116,13 @@ osqa_accepted = false
 <p>1 - Tagging - How tag natural region area ?</p>
 <p>There is not tagging schema yet. Some old proposals are available, but no really in use :</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Valley">Proposed_features/Valley</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Valley">Relations/Proposed/Region</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mountain_mapping">Mountain_mapping</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Valley">Proposed_features/Valley</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Valley">Relations/Proposed/Region</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mountain_mapping">Mountain_mapping</a></li>
 </ul>
 <p>This kind of place are often fuzzy.</p>
 <p>2 - Map display</p>
-<p>Display problem depends on renderer, there is many renderer and many way to do this job. Look at <a href="http://wiki.openstreetmap.org/wiki/Renderer">Renderer</a> on wiki</p>
+<p>Display problem depends on renderer, there is many renderer and many way to do this job. Look at <a href="https://wiki.openstreetmap.org/wiki/Renderer">Renderer</a> on wiki</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

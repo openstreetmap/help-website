@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi, I'm using android studio for my android app with OSM just to see the map with a marker of my current location.</p>
 <p>My problem is I have 2 fragment (f1 and f2), I put the OSM(org.osmdroid:osmdroid-android:6.1.13) in f1 and it works perfectly, I can see the map and the marker of my current location, but when I go to f2 and go back again in f1 the map became full of blank tiles and a marker of my current location. How can I resolve this ?</p>
-<p>Scenario 1: it's working fine <img src="https://help.openstreetmap.org/upfiles/0-02-06-3f2ab6ee004b7f879d939efa01a75aa93d56a27c4a7a848a931d305183aad14f_39ee3942a6bd1cf9.jpg" alt="alt text" /></p>
-<p>Scenario 2: I swipe left and go to History Scenario 3: I swipe right to go back to Home and this is what happened <img src="https://help.openstreetmap.org/upfiles/0-02-06-2c4d5843455f7e8a2d48212ab4566cedec01efde58ebabf81bc9b2f20d5eb78b_106da7d7dd1349d.jpg" alt="alt text" /></p>
+<p>Scenario 1: it's working fine <img src="/upfiles/0-02-06-3f2ab6ee004b7f879d939efa01a75aa93d56a27c4a7a848a931d305183aad14f_39ee3942a6bd1cf9.jpg" alt="alt text" /></p>
+<p>Scenario 2: I swipe left and go to History Scenario 3: I swipe right to go back to Home and this is what happened <img src="/upfiles/0-02-06-2c4d5843455f7e8a2d48212ab4566cedec01efde58ebabf81bc9b2f20d5eb78b_106da7d7dd1349d.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mobile" rel="tag" title="see questions tagged &#39;mobile&#39;">mobile</span> <span class="post-tag tag-link-studio" rel="tag" title="see questions tagged &#39;studio&#39;">studio</span> <span class="post-tag tag-link-android" rel="tag" title="see questions tagged &#39;android&#39;">android</span> <span class="post-tag tag-link-osmdroid" rel="tag" title="see questions tagged &#39;osmdroid&#39;">osmdroid</span> <span class="post-tag tag-link-java" rel="tag" title="see questions tagged &#39;java&#39;">java</span>

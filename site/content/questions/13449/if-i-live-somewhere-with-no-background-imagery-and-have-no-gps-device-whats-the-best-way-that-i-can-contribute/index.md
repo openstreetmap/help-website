@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>If I live somewhere like <a href="http://www.openstreetmap.org/?lat=45.6583&amp;lon=-74.9347&amp;zoom=14&amp;layers=M">here</a>, where there isn't any usable background imagery, and I don't have a GPS device, how best can I contribute to OSM? The road that I live on hasn't been added to OSM yet - I'd like to do that first.</p>
-<p>(prompted by <a href="http://help.openstreetmap.org/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor">this</a> question)</p>
+<p>If I live somewhere like <a href="https://www.openstreetmap.org/?lat=45.6583&amp;lon=-74.9347&amp;zoom=14&amp;layers=M">here</a>, where there isn't any usable background imagery, and I don't have a GPS device, how best can I contribute to OSM? The road that I live on hasn't been added to OSM yet - I'd like to do that first.</p>
+<p>(prompted by <a href="/questions/13395/how-to-add-yahoo-imagery-to-my-potlatch-editor">this</a> question)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span>
@@ -332,7 +332,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I don't think your answer works as a joke. But look at the bright side: This seems like a good chance for you to win the rare bronze <a href="http://help.openstreetmap.org/badges/"><em>Peer pressure</em> badge</a>. ;-)</p>
+<p>I don't think your answer works as a joke. But look at the bright side: This seems like a good chance for you to win the rare bronze <a href="https://help.openstreetmap.org/badges/"><em>Peer pressure</em> badge</a>. ;-)</p>
 </div>
 <div id="comment-13822-info" class="comment-info">
 <span class="comment-age">(26 Jun '12, 22:49)</span> <span class="comment-user userinfo">Tordanik</span>

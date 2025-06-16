@@ -181,7 +181,7 @@ This answer is marked "community wiki".
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9159/mateusz-konieczny">@Mateusz Konieczny</a>: Looks more like <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier</a> than <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier</a> to me...</p>
+<p><a href="https://help.openstreetmap.org/users/9159/mateusz-konieczny">@Mateusz Konieczny</a>: Looks more like <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dmotorcycle_barrier</a> than <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dcycle_barrier</a> to me...</p>
 </div>
 <div id="comment-40062-info" class="comment-info">
 <span class="comment-age">(06 Jan '15, 14:41)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -192,7 +192,7 @@ This answer is marked "community wiki".
 <div id="post-40091-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a>: I agree that the left-hand side looks more like a motorcycle barrier than a cycle barrier (as in the wiki photos). <a href="http://help.openstreetmap.org/users/9159/mateusz-konieczny">@Mateusz Konieczny</a>: Getting through on the left-hand side on a bicycle is relatively easy. You need to stop, turn the handlebars to the side, and bump/carry the front wheel through. It's restrictive but not impassible. (Some narrow cycles don't need to stop, just slow down.)</p>
+<p><a href="https://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a>: I agree that the left-hand side looks more like a motorcycle barrier than a cycle barrier (as in the wiki photos). <a href="https://help.openstreetmap.org/users/9159/mateusz-konieczny">@Mateusz Konieczny</a>: Getting through on the left-hand side on a bicycle is relatively easy. You need to stop, turn the handlebars to the side, and bump/carry the front wheel through. It's restrictive but not impassible. (Some narrow cycles don't need to stop, just slow down.)</p>
 <p>I think the general intention was to impede all non-authorised motorised vehicles (except motorised wheelchairs etc.).</p>
 <p>I've updated the map with deference to the advice given. Thanks to all.</p>
 </div>
@@ -216,7 +216,7 @@ This answer is marked "community wiki".
 <div id="post-40127-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>, Until you gave me the link I didn't know anything about the TagInfo sub-site and it looks very interesting. Thanks for the pointer; I'm sure it will come in very handy. As for tagging the barrier with "cycle_barrier=squeeze", I think I'll wait a while before making a change. As you say it's not exactly popular, so I don't want to propagate further something that may not be right. Of course, I can always change it later.</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>, Until you gave me the link I didn't know anything about the TagInfo sub-site and it looks very interesting. Thanks for the pointer; I'm sure it will come in very handy. As for tagging the barrier with "cycle_barrier=squeeze", I think I'll wait a while before making a change. As you say it's not exactly popular, so I don't want to propagate further something that may not be right. Of course, I can always change it later.</p>
 </div>
 <div id="comment-40127-info" class="comment-info">
 <span class="comment-age">(08 Jan '15, 10:02)</span> <span class="comment-user userinfo">Garry Patchett</span>
@@ -239,7 +239,7 @@ This answer is marked "community wiki".
 <div id="post-40143-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>. I've just had a quick look - and used Overpass Turbo for the first time (it looks very useful) - and there's even more of interest there than I first realised. "barrier=shoulder_squeeze" is an interesting option that looks relevant (I just wish I could see a photo of one of the nodes of interest). I'm still learning so I'll not make any changes just yet (I'd have to make an en-masse change so they're all the same), but there's a lot for me to look at and try to understand (fingers crossed). Cheers.</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>. I've just had a quick look - and used Overpass Turbo for the first time (it looks very useful) - and there's even more of interest there than I first realised. "barrier=shoulder_squeeze" is an interesting option that looks relevant (I just wish I could see a photo of one of the nodes of interest). I'm still learning so I'll not make any changes just yet (I'd have to make an en-masse change so they're all the same), but there's a lot for me to look at and try to understand (fingers crossed). Cheers.</p>
 </div>
 <div id="comment-40143-info" class="comment-info">
 <span class="comment-age">(08 Jan '15, 12:47)</span> <span class="comment-user userinfo">Garry Patchett</span>
@@ -313,7 +313,7 @@ This answer is marked "community wiki".
 <div id="post-40128-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/10287/raytoun">@RAytoun</a>. The path is currently mapped as a bridle path but it is also part of a major cross-country walking route, that is also used as a cycle route (in parts). It's very confusing as to how to best tag it but I'm still learning so I'll look at what you've said and do what I can.</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/10287/raytoun">@RAytoun</a>. The path is currently mapped as a bridle path but it is also part of a major cross-country walking route, that is also used as a cycle route (in parts). It's very confusing as to how to best tag it but I'm still learning so I'll look at what you've said and do what I can.</p>
 <p>As for horses using the soft verge, after seeing the sort of stuff that's lying around on the verge, I think the riders would prefer to use the asphalt path for horse-safety reasons. But your suggestion is something I'll keep in mind for other paths.</p>
 </div>
 <div id="comment-40128-info" class="comment-info">
@@ -325,7 +325,7 @@ This answer is marked "community wiki".
 <div id="post-40130-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, I think the barrier is meant to make cyclists actually come to a stop and lift their bikes over the right-hand side but people will always try and get round restrictions when they can. You just can't fight human nature. Well, you can, but it tends to fight back sneakier!</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, I think the barrier is meant to make cyclists actually come to a stop and lift their bikes over the right-hand side but people will always try and get round restrictions when they can. You just can't fight human nature. Well, you can, but it tends to fight back sneakier!</p>
 </div>
 <div id="comment-40130-info" class="comment-info">
 <span class="comment-age">(08 Jan '15, 10:09)</span> <span class="comment-user userinfo">Garry Patchett</span>
@@ -398,7 +398,7 @@ This answer is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>. That's a really good suggestion but I've a feeling that I'd be endlessly passed from pillar to post without getting to someone who could give me the relevant information, or just ignored completely.</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>. That's a really good suggestion but I've a feeling that I'd be endlessly passed from pillar to post without getting to someone who could give me the relevant information, or just ignored completely.</p>
 <p>The next time I'm passing one I'll try and see if there's a manufacturers' stamp/plate - making sure no-one else is looking at the "weirdo with the barrier fetish"! - and maybe take it from there. (However, I've a feeling that these things were made "in-house" by the local council, so I might not get anywhere that way.)</p>
 </div>
 <div id="comment-40126-info" class="comment-info">

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would suggest checking the question <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here regarding how often the tiles get rendered</a>.</p>
+<p>I would suggest checking the question <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here regarding how often the tiles get rendered</a>.</p>
 <p>My initial suspicions are that there are some old tiles cached somewhere between you and the server. Shift-refresh in most browsers will request the new images (though not always).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -143,7 +143,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Another question to check is <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>Another question to check is <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div id="comment-6121-info" class="comment-info">
 <span class="comment-age">(30 Jun '11, 21:58)</span> <span class="comment-user userinfo">apmon</span>

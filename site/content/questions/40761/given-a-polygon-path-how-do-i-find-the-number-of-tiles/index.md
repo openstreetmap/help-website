@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Given a latitude and longitude, I can find the correct tile number. In Javascript like <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#ECMAScript_.28JavaScript.2FActionScript.2C_etc..29">this</a></p>
+<p>Given a latitude and longitude, I can find the correct tile number. In Javascript like <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#ECMAScript_.28JavaScript.2FActionScript.2C_etc..29">this</a></p>
 <pre><code>function long2tile(lon,zoom)  {
     return (Math.floor((lon+180)/360*Math.pow(2,zoom)));
 }

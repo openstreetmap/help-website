@@ -104,12 +104,12 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a Public Transport scheme created last April that you should digest if you're interested - see <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport">Public Transport</a></p>
+<p>There is a Public Transport scheme created last April that you should digest if you're interested - see <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport">Public Transport</a></p>
 <p>You only need to add it once per route.</p>
 <p>EITHER add the <strong>colour</strong> key to your <em>route_master</em> relation; OR add the <strong>colour</strong> key to the <em>route</em> relation if you're not using a <em>route_master</em>.</p>
 <p>Note the British spelling of this key: <strong>colour</strong></p>
 <p>The allowed values are either HTML named colour, or HEX colour. E.g. <strong>colour=#00FF00</strong> gives you green. There are resources on the internet to help you with colour codes.</p>
-<p>The specific information you want relates to public transport <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Route">route</a>, and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Route_master">route_master</a></p>
+<p>The specific information you want relates to public transport <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Route">route</a>, and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport#Route_master">route_master</a></p>
 <p>Please note that the Public Transport maps layer that you're probably familiar with does not actually render these colours. From my experience, it just makes all bus routes red, all rail lines black, etc... but I believe there are other systems out there that will use the value of the colour tag.</p>
 </div>
 <div class="answer-controls post-controls">

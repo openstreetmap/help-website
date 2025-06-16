@@ -299,7 +299,7 @@ Content-Length: 42</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The detail is on the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Create:_PUT_.2Fapi.2F0.6.2Fchangeset.2Fcreate">wiki page</a>. You need to submit the page with an HTTP PUT.</p>
+<p>The detail is on the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Create:_PUT_.2Fapi.2F0.6.2Fchangeset.2Fcreate">wiki page</a>. You need to submit the page with an HTTP PUT.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -329,7 +329,7 @@ Content-Length: 42</code></pre>
 <div id="post-17728-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You may have an authentication problem. Check this page about OAuth in OSM : <a href="http://wiki.openstreetmap.org/wiki/OAuth">http://wiki.openstreetmap.org/wiki/OAuth</a></p>
+<p>You may have an authentication problem. Check this page about OAuth in OSM : <a href="https://wiki.openstreetmap.org/wiki/OAuth">https://wiki.openstreetmap.org/wiki/OAuth</a></p>
 </div>
 <div id="comment-17728-info" class="comment-info">
 <span class="comment-age">(15 Nov '12, 12:51)</span> <span class="comment-user userinfo">Pieren</span>
@@ -362,7 +362,7 @@ Content-Length: 42</code></pre>
 <div id="post-46735-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11577/er-pawan-verma"></a><a href="http://help.openstreetmap.org/users/11577/er-pawan-verma">@Er Pawan Verma</a>: to the node object. See the documentation for the API - e.g. <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Create:_PUT_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2Fcreate">about nodes</a>. Please keep in mind that you should not create objects <a href="https://wiki.openstreetmap.org/wiki/Automated_edits">automatically</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/11577/er-pawan-verma"></a><a href="https://help.openstreetmap.org/users/11577/er-pawan-verma">@Er Pawan Verma</a>: to the node object. See the documentation for the API - e.g. <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Create:_PUT_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2Fcreate">about nodes</a>. Please keep in mind that you should not create objects <a href="https://wiki.openstreetmap.org/wiki/Automated_edits">automatically</a>.</p>
 </div>
 <div id="comment-46735-info" class="comment-info">
 <span class="comment-age">(20 Nov '15, 05:58)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -384,7 +384,7 @@ Content-Length: 42</code></pre>
 <div id="post-46743-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please don't hijack other people's question. Ask a new question instead (which you already did <a href="https://help.openstreetmap.org/questions/46741/using-put-api-http-authentication-to-upload-xml">here</a>).</p>
+<p>Please don't hijack other people's question. Ask a new question instead (which you already did <a href="/questions/46741/using-put-api-http-authentication-to-upload-xml">here</a>).</p>
 </div>
 <div id="comment-46743-info" class="comment-info">
 <span class="comment-age">(20 Nov '15, 07:49)</span> <span class="comment-user userinfo">scai ♦</span>

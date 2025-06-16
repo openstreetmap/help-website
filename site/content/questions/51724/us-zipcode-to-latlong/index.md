@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries">https://help.openstreetmap.org/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries</a></p>
+<p>See <a href="/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries">https://help.openstreetmap.org/questions/46371/need-help-showing-zip-codes-on-map-and-their-boundaries</a></p>
 <p>Note this site has a search function and before posing a new question you should use it first.</p>
 </div>
 <div class="answer-controls post-controls">

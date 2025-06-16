@@ -111,7 +111,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Welcome to OSM!</p>
 <p>The answer to your question is probably: Just wait!</p>
-<p>You may read more in the FAQ under the subject <a href="http://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a></p>
+<p>You may read more in the FAQ under the subject <a href="https://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

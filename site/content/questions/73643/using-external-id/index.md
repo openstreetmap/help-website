@@ -139,7 +139,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>As pointed out in a <a href="https://help.openstreetmap.org/questions/73633/difference-between-osm-and-overpass-turbo">recent question</a>, different types of element <em>can</em> have the same id, but they are unique within each type.</p>
+<p>As pointed out in a <a href="/questions/73633/difference-between-osm-and-overpass-turbo">recent question</a>, different types of element <em>can</em> have the same id, but they are unique within each type.</p>
 </div>
 <div id="comment-73648-info" class="comment-info">
 <span class="comment-age">(20 Mar '20, 15:09)</span> <span class="comment-user userinfo">H_mlet</span>

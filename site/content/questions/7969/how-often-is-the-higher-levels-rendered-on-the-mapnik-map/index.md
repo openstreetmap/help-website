@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Often when I edit the map and a bit later look at that area on the main website, and <strong>zoom in</strong> to a lower level (closer to the ground), I see the updated tiles. But when I zoom out, those tiles in the higher levels (e.g. airplane perspective) seem to be rarely updated / rendered. How often are the higher levels updated?</p>
-<p>I have read the question <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a> and it's answer. But I think that is mostly how it works on the lower levels, and not in the higher levels when the map is <strong>zoomed out</strong>.</p>
+<p>I have read the question <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a> and it's answer. But I think that is mostly how it works on the lower levels, and not in the higher levels when the map is <strong>zoomed out</strong>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-updates" rel="tag" title="see questions tagged &#39;updates&#39;">updates</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span>
@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are right that the described process is not complete for all zoom levels, but there also seems to be a confusion about how <em>low zoom level</em> is usually referred to in OSM. The <em>lower</em> the number (starting from 0) the <em>lower</em> we call the zoom. So zooming in would be going to higher zoomlevels. The low-zoom-tiles (which show a bigger part of the earth therefore containing much more data) are rendered only from time to time in a batch-like process.</p>
-<p>Another specialty is the <a href="http://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer">coastline process</a>, which makes changes to coastlines take much more time until the modifications actually go in the rendering.</p>
+<p>Another specialty is the <a href="https://wiki.openstreetmap.org/wiki/Coastline#Main_Mapnik_layer">coastline process</a>, which makes changes to coastlines take much more time until the modifications actually go in the rendering.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

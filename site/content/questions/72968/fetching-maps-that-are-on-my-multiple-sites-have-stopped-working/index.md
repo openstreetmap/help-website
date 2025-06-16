@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Map loading on the web stops working, shows only gray area, see n image. Thank you in advance for your help ...</p>
-<p><img src="https://help.openstreetmap.org/upfiles/1_4PV4dcF.png" alt="alt text" /></p>
+<p><img src="/upfiles/1_4PV4dcF.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not" rel="tag" title="see questions tagged &#39;not&#39;">not</span> <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-working" rel="tag" title="see questions tagged &#39;working&#39;">working</span>

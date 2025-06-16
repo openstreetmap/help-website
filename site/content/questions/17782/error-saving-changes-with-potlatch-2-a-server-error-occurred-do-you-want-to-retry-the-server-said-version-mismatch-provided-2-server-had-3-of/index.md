@@ -106,7 +106,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/browse/way/174845593/history">Way 174845593</a> has been changed by a different user <em>after</em> you downloaded it and <em>before</em> you tried to uploaded it again. This results in a conflict because you try to overwrite the newer version of the way with an older version. As far as I know Potlatch doesn't have any conflict resolving mechanism like JOSM has, so you have to do your work again. Therefore you should upload your changes often as the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.2">Beginners' Guide</a> tells you to keep the possibility of conflicts to a minimum.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/174845593/history">Way 174845593</a> has been changed by a different user <em>after</em> you downloaded it and <em>before</em> you tried to uploaded it again. This results in a conflict because you try to overwrite the newer version of the way with an older version. As far as I know Potlatch doesn't have any conflict resolving mechanism like JOSM has, so you have to do your work again. Therefore you should upload your changes often as the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.2">Beginners' Guide</a> tells you to keep the possibility of conflicts to a minimum.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Although you aren't able to reconcile your changes with other people's in Potlatch, you can at least save the changes that you were trying to make - if you say "no" and then "view data" you'll get a screen showing the "osmchange" XML. If it happens again, I'd contact someone via the #OSM <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> channel and they'll be able to help - it's possible to edit the osmchange XML and then upload via another mechanism, such as <a href="http://wiki.openstreetmap.org/wiki/Upload.py">upload.py</a>, but it's not for the faint-hearted.</p>
+<p>Although you aren't able to reconcile your changes with other people's in Potlatch, you can at least save the changes that you were trying to make - if you say "no" and then "view data" you'll get a screen showing the "osmchange" XML. If it happens again, I'd contact someone via the #OSM <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> channel and they'll be able to help - it's possible to edit the osmchange XML and then upload via another mechanism, such as <a href="https://wiki.openstreetmap.org/wiki/Upload.py">upload.py</a>, but it's not for the faint-hearted.</p>
 </div>
 <div id="comment-17806-info" class="comment-info">
 <span class="comment-age">(19 Nov '12, 13:48)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

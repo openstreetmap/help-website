@@ -125,9 +125,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To add a "point feature" (something that OpenStreetMap calls a "node**") in the online editor, just double-click. You can then choose from a series of lists what to label something as, or you can click "advanced" at the bottom left and type in tags and values manually. I think that for a single tree you'll need to do that.</p>
-<p>I see you have some idea already what tags you'd like to use so I'm guessing you've already seen these, but just in case you haven't there's also information about the sort of things that you might want to store against a tree <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree">here</a>, and <a href="http://taginfo.openstreetmap.org/tags/natural=tree#combinations">this page</a> shows you what other mappers have used previously.</p>
-<p>Also, if you haven't seen it, the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> is well worth a read.</p>
-<p>** See <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">here</a> for more details</p>
+<p>I see you have some idea already what tags you'd like to use so I'm guessing you've already seen these, but just in case you haven't there's also information about the sort of things that you might want to store against a tree <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree">here</a>, and <a href="http://taginfo.openstreetmap.org/tags/natural=tree#combinations">this page</a> shows you what other mappers have used previously.</p>
+<p>Also, if you haven't seen it, the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> is well worth a read.</p>
+<p>** See <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">here</a> for more details</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

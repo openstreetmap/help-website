@@ -56,7 +56,7 @@ osqa_accepted = false
 <p>For sure, if that project will generate income (from adverts, I guess), I will like to share it in form of donation.</p>
 <p>If I will find, for example, that the localisation of "club X" is on wrong street, I can correct it on OpenStreetMap as well (I guess license demands it?).</p>
 <h2 id="similar-situation">Similar situation</h2>
-<p>From <a href="https://help.openstreetmap.org/questions/4669/can-i-use-openstreetmap-in-a-commercial-product">https://help.openstreetmap.org/questions/4669/can-i-use-openstreetmap-in-a-commercial-product</a> I have read that:</p>
+<p>From <a href="/questions/4669/can-i-use-openstreetmap-in-a-commercial-product">https://help.openstreetmap.org/questions/4669/can-i-use-openstreetmap-in-a-commercial-product</a> I have read that:</p>
 <blockquote>
 <p>It is fully possible to use OpenStreetMap in a commercial product. The only thing we require is that you credit OpenStreetMap. However we would prefer donations and that you help making the map better.</p>
 </blockquote>
@@ -146,7 +146,7 @@ One Answer:
 <div class="answer-body">
 <p>Neither open source nor commercial matter for using OpenStreetMap data. The OSM license does not discriminate against commercial use, nor require software processing OpenStreetMap data be open source.</p>
 <p>This is the same as any open data license, including CC BY-SA.</p>
-<p>Please note that OpenStreetMap <em>servers</em> are subject to usage limits, in particular, the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> is relevant if you expect heavy usage. Additionally, if you build your own closed-source tools, you're likely to get limited help and have to re-invent a lot of components already written.</p>
+<p>Please note that OpenStreetMap <em>servers</em> are subject to usage limits, in particular, the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> is relevant if you expect heavy usage. Additionally, if you build your own closed-source tools, you're likely to get limited help and have to re-invent a lot of components already written.</p>
 <p>For the data, it depends what is a "derivative database" and what is a "collective database". Your question mainly focused on the software, which isn't an issue, not on how you're handling the data, so it's a bit hard to say.</p>
 <p>The essence of the license is that if you are taking OpenStreetMap data and modifying it, you have to make the modifications available under the same license.</p>
 </div>

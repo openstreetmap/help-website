@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] potlatch2"
-description = '''Hi, I need to add a small town to the map. I used potlatch2 to do that. I start with few links, when I zoom out my new links disappear even I wait hours for it to render, anyone can help me please. Here is the area in question: http://www.openstreetmap.org/edit?editor=potlatch2&amp;amp;lat=52.0523&amp;amp;l...'''
+description = '''Hi, I need to add a small town to the map. I used potlatch2 to do that. I start with few links, when I zoom out my new links disappear even I wait hours for it to render, anyone can help me please. Here is the area in question: https://www.openstreetmap.org/edit?editor=potlatch2&amp;amp;lat=52.0523&amp;amp;l...'''
 date = "2012-09-16T13:31:00Z"
 lastmod = "2012-09-16T17:59:00Z"
 weight = 16142
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I need to add a small town to the map. I used potlatch2 to do that. I start with few links, when I zoom out my new links disappear even I wait hours for it to render, anyone can help me please. Here is the area in question: <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14</a> Regards.</p>
+<p>Hi, I need to add a small town to the map. I used potlatch2 to do that. I start with few links, when I zoom out my new links disappear even I wait hours for it to render, anyone can help me please. Here is the area in question: <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14</a> Regards.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-link_disappear" rel="tag" title="see questions tagged &#39;link_disappear&#39;">link_disappear</span>

@@ -79,7 +79,7 @@ osqa_accepted = true
 <div id="post-50199-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: there is no reason why this question should be closed. It is already marked as "answered" - why more? Maybe someone else has another good answer, no need to shut them out.</p>
+<p>meta <a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: there is no reason why this question should be closed. It is already marked as "answered" - why more? Maybe someone else has another good answer, no need to shut them out.</p>
 </div>
 <div id="comment-50199-info" class="comment-info">
 <span class="comment-age">(14 Jun '16, 19:44)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

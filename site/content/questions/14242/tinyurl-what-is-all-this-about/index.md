@@ -132,7 +132,7 @@ One Answer:
 <p>Valid host aliases are: a.tile.openstreetmap.org, b.tile.openstreetmap.org, c.tile.openstreetmap.org, tile.osm.org, a.tile.osm.org, b.tile.osm.org and c.tile.osm.org</p>
 </blockquote>
 <p>Other variants do no longer work. But instead of just rejecting those old variants, the server has been configured to return tiles with an embedded error message such as this one (which is presumably what you are seeing):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/error_tinyurl_osmtile1.png" alt="tile containing tinyurl.com/osmtile1 as text and QR code" /></p>
+<p><img src="/upfiles/error_tinyurl_osmtile1.png" alt="tile containing tinyurl.com/osmtile1 as text and QR code" /></p>
 <p>The idea is to give those who have not yet updated their websites and applications a chance to learn about the change and the necessary steps to get the tiles working correctly again by following the URL given there.</p>
 <p>By the way, the black-and-white pattern is a <a href="http://en.wikipedia.org/wiki/QR_code">QR Code</a>. It represents the same link as above in a format that can be read by mobile devices with cameras.</p>
 </div>

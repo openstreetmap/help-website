@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Enter the word "private" in the search box above and study the results; you will find some suggestions on how you could create a private database or a private overlay (e.g. <a href="http://help.openstreetmap.org/questions/6329/create-private-overlays).">http://help.openstreetmap.org/questions/6329/create-private-overlays).</a> Depending on how you want to present your own data, a KML file displayed on top of OSM using OpenLayers might be a good idea; if you want to privately modify OSM data then you will have to set up your own rendering (plenty of answers to that on this site as well).</p>
+<p>Enter the word "private" in the search box above and study the results; you will find some suggestions on how you could create a private database or a private overlay (e.g. <a href="/questions/6329/create-private-overlays).">https://help.openstreetmap.org/questions/6329/create-private-overlays).</a> Depending on how you want to present your own data, a KML file displayed on top of OSM using OpenLayers might be a good idea; if you want to privately modify OSM data then you will have to set up your own rendering (plenty of answers to that on this site as well).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

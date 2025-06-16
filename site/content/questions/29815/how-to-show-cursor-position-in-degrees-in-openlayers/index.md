@@ -52,7 +52,7 @@ osqa_accepted = true
     map.zoomToMaxExtent();
 &lt;/script&gt;</code></pre>
 <p>Edit. Here's a screenshot clip of the map from the code above shown in Firefox:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot-OpenLayers_Mouse_Location_Test_-_Mozilla_Firefox.png" alt="Example map. Cursor is between Spain and Italy, and the widget displays &quot;694659.71296, 4921321.62843&quot;." /></p>
+<p><img src="/upfiles/Screenshot-OpenLayers_Mouse_Location_Test_-_Mozilla_Firefox.png" alt="Example map. Cursor is between Spain and Italy, and the widget displays &quot;694659.71296, 4921321.62843&quot;." /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-cursor" rel="tag" title="see questions tagged &#39;cursor&#39;">cursor</span> <span class="post-tag tag-link-degrees" rel="tag" title="see questions tagged &#39;degrees&#39;">degrees</span> <span class="post-tag tag-link-meters" rel="tag" title="see questions tagged &#39;meters&#39;">meters</span> <span class="post-tag tag-link-mouseposition" rel="tag" title="see questions tagged &#39;mouseposition&#39;">mouseposition</span> <span class="post-tag tag-link-openlayers" rel="tag" title="see questions tagged &#39;openlayers&#39;">openlayers</span>
@@ -132,7 +132,7 @@ osqa_accepted = true
         controls: [
           new OpenLayers.Control.LayerSwitcher({roundedCornerColor: &quot;#575757&quot;}),
           new OpenLayers.Control.Permalink(&#39;permalink&#39;),
-          new OpenLayers.Control.Permalink(&#39;editlink&#39;, &#39;http://www.openstreetmap.org/edit.html&#39;),
+          new OpenLayers.Control.Permalink(&#39;editlink&#39;, &#39;https://www.openstreetmap.org/edit.html&#39;),
           new OpenLayers.Control.Attribution(),
           new OpenLayers.Control.PanZoomBar(),
           new OpenLayers.Control.Navigation()

@@ -112,8 +112,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a> + <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dtrack">leisure=track</a> is probably the best for the physical description.<br />
-About the <a href="http://wiki.openstreetmap.org/wiki/Access">access restriction</a>, It depends if the race track is also open to the public or not. I would suggest something more specific like access=no + bicycle=destination for the first or access=no + bicycle=private for the second.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a> + <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dtrack">leisure=track</a> is probably the best for the physical description.<br />
+About the <a href="https://wiki.openstreetmap.org/wiki/Access">access restriction</a>, It depends if the race track is also open to the public or not. I would suggest something more specific like access=no + bicycle=destination for the first or access=no + bicycle=private for the second.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,8 +163,8 @@ About the <a href="http://wiki.openstreetmap.org/wiki/Access">access restriction
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Wiki page about <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dtrack">leisure=track</a> doesn't specify circularity about the way. So it can be open. May be some renderer are waiting for closed way, don't tag for renderer. Renderer may be bugged or use some specif way to draw feature. Tag reality as it is.</p>
-<p>Btw, are you sure about <a href="http://wiki.openstreetmap.org/wiki/Key:access">access=no</a> ?</p>
+<p>Wiki page about <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dtrack">leisure=track</a> doesn't specify circularity about the way. So it can be open. May be some renderer are waiting for closed way, don't tag for renderer. Renderer may be bugged or use some specif way to draw feature. Tag reality as it is.</p>
+<p>Btw, are you sure about <a href="https://wiki.openstreetmap.org/wiki/Key:access">access=no</a> ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -220,7 +220,7 @@ About the <a href="http://wiki.openstreetmap.org/wiki/Access">access restriction
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I do not see that <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dtrack">leisure=track</a> expects the track to be circular. It can be a way as well. Also you might want to see the page <a href="http://wiki.openstreetmap.org/wiki/Mountainbike">mountainbike</a> at the wiki as it list a bunch of relevated tags to mountainbiking.</p>
+<p>I do not see that <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dtrack">leisure=track</a> expects the track to be circular. It can be a way as well. Also you might want to see the page <a href="https://wiki.openstreetmap.org/wiki/Mountainbike">mountainbike</a> at the wiki as it list a bunch of relevated tags to mountainbiking.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>The wiki page for OSM-in-a-box, <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">http://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box</a> , states the project is out of date with current OSM infrastructure. Depending on what you want to do, <a href="http://switch2osm.org/">http://switch2osm.org/</a> could be helpful to you.</p>
+<p>The wiki page for OSM-in-a-box, <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">https://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box</a> , states the project is out of date with current OSM infrastructure. Depending on what you want to do, <a href="http://switch2osm.org/">http://switch2osm.org/</a> could be helpful to you.</p>
 </div>
 <div id="comment-23555-info" class="comment-info">
 <span class="comment-age">(20 Jun '13, 13:12)</span> <span class="comment-user userinfo">gormo</span>
@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The project OSM-in-a-box was a time limited student project which now is unmaintained. Having said this we're still open for funding and support. End of march 2013 there was a small update so I updated the wiki page too: <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">http://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box</a> .</p>
+<p>The project OSM-in-a-box was a time limited student project which now is unmaintained. Having said this we're still open for funding and support. End of march 2013 there was a small update so I updated the wiki page too: <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">https://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box</a> .</p>
 <p>Yours, S.</p>
 </div>
 <div class="answer-controls post-controls">

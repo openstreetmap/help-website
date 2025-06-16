@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-57216-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/Kommentar.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Kommentar.PNG" alt="alt text" /></p>
 <p>clear only yellow listings</p>
 </div>
 <div id="comment-57216-info" class="comment-info">

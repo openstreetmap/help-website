@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>You can find that <a href="http://www.openstreetmap.org/#map=19/22.28706/114.21775">there</a> is a swimming pool which I want to map. However, the swimming pool is missing even if I tagged layer=3. What happened and how can I make it appear? Thanks!</p>
+<p>You can find that <a href="https://www.openstreetmap.org/#map=19/22.28706/114.21775">there</a> is a swimming pool which I want to map. However, the swimming pool is missing even if I tagged layer=3. What happened and how can I make it appear? Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-swimmingfacility" rel="tag" title="see questions tagged &#39;swimmingfacility&#39;">swimmingfacility</span> <span class="post-tag tag-link-layer" rel="tag" title="see questions tagged &#39;layer&#39;">layer</span> <span class="post-tag tag-link-disappear" rel="tag" title="see questions tagged &#39;disappear&#39;">disappear</span>

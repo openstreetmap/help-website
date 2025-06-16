@@ -153,7 +153,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>www.switch2osm.org has instructions about setting up your own tile server. A couple million tiles a day can be delivered from a single server, but you may want to consider having several, for availability. Free help is available on this help system, and some professional consultants are listed on our <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">wiki page.</a></p>
+<p>www.switch2osm.org has instructions about setting up your own tile server. A couple million tiles a day can be delivered from a single server, but you may want to consider having several, for availability. Free help is available on this help system, and some professional consultants are listed on our <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">wiki page.</a></p>
 </div>
 <div id="comment-49057-info" class="comment-info">
 <span class="comment-age">(05 Apr '16, 21:39)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>
@@ -167,7 +167,7 @@ One Answer:
 <div class="comment-text">
 <p>Leaflet is a javascript library to display a slippymap, and Mapbox users often use leaflet too.</p>
 <p>I encourage you to try runing your own tile server, but also check the total cost of doing so. The price of the Mapbox service might seem much more reasonable once you know what build-your-own entails.</p>
-<p>For some details about using the tiles from openstreetmap.org, see <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a> .</p>
+<p>For some details about using the tiles from openstreetmap.org, see <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a> .</p>
 </div>
 <div id="comment-49066-info" class="comment-info">
 <span class="comment-age">(06 Apr '16, 10:50)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

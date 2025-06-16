@@ -105,8 +105,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>about which object are you talking? Please provide a link. However,</p>
-<p>Is this the object in question? <a href="http://www.openstreetmap.org/browse/node/869565029">http://www.openstreetmap.org/browse/node/869565029</a></p>
-<p>If it seems to be just a spelling/typing error, see this <a href="/questions/21090/part-of-a-road-is-missing-in-osm-how-do-i-report-this-so-that-it-can-be-updated?page=1&amp;focusedAnswerId=21093#21093">answer to another question</a> for what you should do. To edit yourself, (sign in) go to <a href="http://www.openstreetmap.org/browse/node/869565029">http://www.openstreetmap.org/browse/node/869565029</a> and click the edit link.</p>
+<p>Is this the object in question? <a href="https://www.openstreetmap.org/browse/node/869565029">https://www.openstreetmap.org/browse/node/869565029</a></p>
+<p>If it seems to be just a spelling/typing error, see this <a href="/questions/21090/part-of-a-road-is-missing-in-osm-how-do-i-report-this-so-that-it-can-be-updated?page=1&amp;focusedAnswerId=21093#21093">answer to another question</a> for what you should do. To edit yourself, (sign in) go to <a href="https://www.openstreetmap.org/browse/node/869565029">https://www.openstreetmap.org/browse/node/869565029</a> and click the edit link.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

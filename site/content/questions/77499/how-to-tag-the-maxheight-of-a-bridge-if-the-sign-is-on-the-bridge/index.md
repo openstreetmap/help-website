@@ -48,7 +48,7 @@ maxheight=3.8 m</p>
 <p>2 Do I tag the road below the bridge?</p>
 <p>highway=primary<br />
 maxheight=3.8 m</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Mapillary.png" alt="This is a sample image of a bridge with a maxheight sign" /></p>
+<p><img src="/upfiles/Mapillary.png" alt="This is a sample image of a bridge with a maxheight sign" /></p>
 <p>There is also the tag maxheight:physical. Which to use?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

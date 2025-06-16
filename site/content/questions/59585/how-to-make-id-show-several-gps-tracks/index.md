@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I know how to <a href="https://help.openstreetmap.org/questions/24410/is-there-a-way-to-see-my-uploaded-gps-track-overlayed-in-the-map-editor/59530">make iD show a GPS track</a>.</p>
+<p>I know how to <a href="/questions/24410/is-there-a-way-to-see-my-uploaded-gps-track-overlayed-in-the-map-editor/59530">make iD show a GPS track</a>.</p>
 <p>But how to make iD (or any other OSM editor, but preferably iD) show <strong>several</strong> GPS tracks?</p>
 <p>Why? Smartphone GPS sometimes get way off, making the GPS track unreliable. But since I carry two phones (in different pockets, with time perfectly synchronized), by seing the two tracks I would be able to see what parts are reliable (both tracks are close) and what parts are unreliable (tracks differ).</p>
 </div>
@@ -131,7 +131,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/iD_muti_traces.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/iD_muti_traces.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -227,7 +227,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/iD_pair_of_files.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/iD_pair_of_files.JPG" alt="alt text" /></p>
 <p>I joined my pair of traces by uploading both into GPS Prune. I saved ( exported) them, I browsed to them in iD and it worked see pic.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -271,7 +271,7 @@ osqa_accepted = true
 <div id="post-59646-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>URL: <a href="http://wiki.openstreetmap.org/wiki/GpsPrune">http://wiki.openstreetmap.org/wiki/GpsPrune</a></p>
+<p>URL: <a href="https://wiki.openstreetmap.org/wiki/GpsPrune">https://wiki.openstreetmap.org/wiki/GpsPrune</a></p>
 </div>
 <div id="comment-59646-info" class="comment-info">
 <span class="comment-age">(16 Sep '17, 04:02)</span> <span class="comment-user userinfo">Nicolas Raoul</span>

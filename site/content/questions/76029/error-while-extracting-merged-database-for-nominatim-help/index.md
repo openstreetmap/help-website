@@ -127,7 +127,7 @@ string(7) &quot;No Data&quot;</code></pre>
 <div id="post-76033-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sorry for not giving a proper description. I have added a new question with proper details. Link: <a href="https://help.openstreetmap.org/questions/76032/error-while-extracting-merged-database-for-nominatim">https://help.openstreetmap.org/questions/76032/error-while-extracting-merged-database-for-nominatim</a></p>
+<p>Sorry for not giving a proper description. I have added a new question with proper details. Link: <a href="/questions/76032/error-while-extracting-merged-database-for-nominatim">https://help.openstreetmap.org/questions/76032/error-while-extracting-merged-database-for-nominatim</a></p>
 </div>
 <div id="comment-76033-info" class="comment-info">
 <span class="comment-age">(06 Aug '20, 08:06)</span> <span class="comment-user userinfo">Saurav1997</span>

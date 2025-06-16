@@ -141,7 +141,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>Anyone volunteers to update the wiki page? Thanks.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">http://wiki.openstreetmap.org/wiki/Overpass_turbo</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">https://wiki.openstreetmap.org/wiki/Overpass_turbo</a></p>
 </div>
 <div id="comment-36085-info" class="comment-info">
 <span class="comment-age">(22 Aug '14, 19:31)</span> <span class="comment-user userinfo">mmd</span>

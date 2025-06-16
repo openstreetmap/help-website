@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>(assuming we're talking about <a href="http://www.openstreetmap.org/?lat=33.39176&amp;lon=-84.57129&amp;zoom=17">here</a>)</p>
+<p>(assuming we're talking about <a href="https://www.openstreetmap.org/?lat=33.39176&amp;lon=-84.57129&amp;zoom=17">here</a>)</p>
 <p>The rendering of "highway=footway" in red is probably a historical artefact - footpaths on GB Ordnance Survey 1:50,000 maps are shown in red, and I suspect that it seemed like a good idea on OSM too (the same as with blue motorways).</p>
 <p>If the OSM home page's "Standard" rendering isn't working for you you shouldn't need to change the data; just use a different renderer. It might be that the "Cycle Map" on OSM's home page works better for you (that shows them in brown rather than red, or maybe you might want to create your own maps based on OSM data.<br />
 </p>

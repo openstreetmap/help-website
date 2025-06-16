@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Seems deleted by accident, I think in this changesset <a href="http://www.openstreetmap.org/changeset/32147922">http://www.openstreetmap.org/changeset/32147922</a></p>
+<p>Seems deleted by accident, I think in this changesset <a href="https://www.openstreetmap.org/changeset/32147922">https://www.openstreetmap.org/changeset/32147922</a></p>
 <p>Can anybody revert this?</p>
 </div>
 <div class="answer-controls post-controls">

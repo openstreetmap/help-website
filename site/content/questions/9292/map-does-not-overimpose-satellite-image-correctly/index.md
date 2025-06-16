@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The alignment of imagery relies on the provider of the imagery aligning it correctly. If you have GPS traces to confirm it isn't the data in OSM that is wrongly aligned, then it is possible to <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Realigning_the_Background_Layer">tweak the position of the background images</a>.</p>
+<p>The alignment of imagery relies on the provider of the imagery aligning it correctly. If you have GPS traces to confirm it isn't the data in OSM that is wrongly aligned, then it is possible to <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Realigning_the_Background_Layer">tweak the position of the background images</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I would like to point out that the issues with alignment (and missing) Bing imagery in central and northern Switzerland have been discussed more than once on the Swiss OSM mailling list (and on the corresponding forum), see</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/DE:WikiProject_Switzerland">http://wiki.openstreetmap.org/wiki/DE:WikiProject_Switzerland</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/DE:WikiProject_Switzerland">https://wiki.openstreetmap.org/wiki/DE:WikiProject_Switzerland</a></p>
 <p>It makes far more sense to discuss local problems on your corresponding local list than here.</p>
 </div>
 <div id="comment-9316-info" class="comment-info">

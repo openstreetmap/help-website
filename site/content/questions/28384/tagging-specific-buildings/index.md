@@ -144,7 +144,7 @@ osqa_accepted = true
 <p>If you're asking why you're unable to find specific tags for buildings which you wish to add (e.g. only finding tags for about 9% of the buildings you're adding). Then my answer would be:</p>
 <p>OSM is community driven, people aren't trying to map those features in that detail. You can tag them how you want, but if it is unlikely you'll get common usage without push a standard tagging suggestion to handle the different buildings.</p>
 <p>As for the specific question, "no sign of the tag farm [..] why?"</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarm">A farm does exist</a>. I don't see why you'd expect it to be a building.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarm">A farm does exist</a>. I don't see why you'd expect it to be a building.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you are asking about <strong>how to tag a barn building</strong> at a farmyard please use building=barn<br />
-<a href="http://wiki.openstreetmap.org/wiki/Key:building">http://wiki.openstreetmap.org/wiki/Key:building</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Key:building">https://wiki.openstreetmap.org/wiki/Key:building</a></p>
 <p>If you are asking <strong>why people don't use specialized building tags</strong>, this is an open question. My explanation would be, that if you really want to gain good speed by tracing building outlines on aerial imagery, you can't always switch between types. Or maybe we just don't have such ability in the editors jet. Currently there is also no map that makes use of this specific tags. I only know <a href="http://maps.osm2world.org"></a><a href="http://maps.osm2world.org">http://maps.osm2world.org</a> that analyses building=garage to switch to dedicated modelling.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -227,7 +227,7 @@ osqa_accepted = true
 <div id="post-28442-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>hi iii, Id like to read the map include the buildings as they are. Some mappers tag other details as shops, it just comes to the details, so its partly a mappers problem. JOSM has excellent tools to scale and detail a structure like an unique type of lock, <a href="http://www.openstreetmap.org/#map=19/51.87651/5.11739,">http://www.openstreetmap.org/#map=19/51.87651/5.11739,</a> read my other comment as well. Mail for help if needed.</p>
+<p>hi iii, Id like to read the map include the buildings as they are. Some mappers tag other details as shops, it just comes to the details, so its partly a mappers problem. JOSM has excellent tools to scale and detail a structure like an unique type of lock, <a href="https://www.openstreetmap.org/#map=19/51.87651/5.11739,">https://www.openstreetmap.org/#map=19/51.87651/5.11739,</a> read my other comment as well. Mail for help if needed.</p>
 </div>
 <div id="comment-28442-info" class="comment-info">
 <span class="comment-age">(25 Nov '13, 00:38)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -270,9 +270,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Hendrikklaas, "farm" has an ambiguous meaning. See the discussion here :</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland</a></p>
 <p>Tag:landuse=farm An area of farmland used for tillage and pasture (animals, vegetables, flowers, fruit growing). Caution: landuse=farm has been incorrectly used to tag farmyards (this was a result of the ambiguous meaning of the word farm in English and even more in the German translations). Currently, landuse=farmland is used as equivalent for landuse=farm and used about the same number of times. To tag an area of land with farm buildings like farmhouses, dwellings, farmsteads, sheds, stables, barns, equipment sheds, feed bunkers, etc. plus the open space in between them and the shrubbery/trees around them, the tag landuse=farmyard should be used.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard</a></p>
 <p>Tag:landuse=farmyard An area of land with farm buildings like farmhouse, dwellings, farmsteads, sheeds, stables, barns, equipment sheds, feed bunkers, etc. plus the open space in between them and the shrubbery/trees around them. These areas are often fenced in. (american english: barnyard)</p>
 <p>When to use landuse=farm This tag landuse=farmyard was introduced to resolve the ambiguous use of landuse=farm in the past, as some mappers used it to tag farmland, other to tag farmyards (this was a result of the ambiguous meaning of the word farm in the english language and even more in the german translations). As a consequence the tag landuse=farm is now only used for farm land (i.e. areas used for tillage and pasture), and not the areas which are better described as a farmyard.</p>
 </div>

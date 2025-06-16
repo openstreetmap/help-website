@@ -111,7 +111,7 @@ osqa_accepted = false
 <div id="post-17084-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I cannot see 12 tagged here <a href="http://www.openstreetmap.org/?lat=50.018583&amp;lon=8.165287&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=50.018583&amp;lon=8.165287&amp;zoom=18&amp;layers=M</a></p>
+<p>I cannot see 12 tagged here <a href="https://www.openstreetmap.org/?lat=50.018583&amp;lon=8.165287&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=50.018583&amp;lon=8.165287&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-17084-info" class="comment-info">
 <span class="comment-age">(22 Oct '12, 07:33)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -122,7 +122,7 @@ osqa_accepted = false
 <div id="post-17085-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>but this works ok in nominatim as it's tagged <a href="http://www.openstreetmap.org/?lat=50.13723&amp;lon=8.682621&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=50.13723&amp;lon=8.682621&amp;zoom=18&amp;layers=M</a></p>
+<p>but this works ok in nominatim as it's tagged <a href="https://www.openstreetmap.org/?lat=50.13723&amp;lon=8.682621&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=50.13723&amp;lon=8.682621&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-17085-info" class="comment-info">
 <span class="comment-age">(22 Oct '12, 07:36)</span> <span class="comment-user userinfo">andy mackey</span>

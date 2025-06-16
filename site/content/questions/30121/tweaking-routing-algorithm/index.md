@@ -121,11 +121,11 @@ One Answer:
 <p>Welcome to OSM and our OSQA support forum :)</p>
 <p>As data and (most) tools are open, it's straight forward to realize this task:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Routing">routing wikipage</a> will present you existing solutions and which OSM tags might be important</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Routing">routing wikipage</a> will present you existing solutions and which OSM tags might be important</li>
 <li>after checking which of your features are already realized, you pick a router that you want to modify</li>
 <li>adapt the source of a router/navigation solution</li>
 </ul>
-<p>You might also check out the <a href="http://code.google.com/p/trafficmining/">Trafficmining framework</a> that is build to develop and benchmark routing algorithms on OSM. But I don't know if you get access to all OSM tags or just get the most usual ones ... You can lookup all relevant OSM tags at <a href="http://wiki.openstreetmap.org/wiki/Map_features">Map features list</a>.</p>
+<p>You might also check out the <a href="http://code.google.com/p/trafficmining/">Trafficmining framework</a> that is build to develop and benchmark routing algorithms on OSM. But I don't know if you get access to all OSM tags or just get the most usual ones ... You can lookup all relevant OSM tags at <a href="https://wiki.openstreetmap.org/wiki/Map_features">Map features list</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Please stop creating dupe crossposting <a href="https://help.openstreetmap.org/questions/30121/tweaking-routing-algorithm">https://help.openstreetmap.org/questions/30121/tweaking-routing-algorithm</a> <a href="https://stackoverflow.com/questions/21207220/osm-editing-routing-algorithm/21208259">https://stackoverflow.com/questions/21207220/osm-editing-routing-algorithm/21208259</a></p>
+<p>Please stop creating dupe crossposting <a href="/questions/30121/tweaking-routing-algorithm">https://help.openstreetmap.org/questions/30121/tweaking-routing-algorithm</a> <a href="https://stackoverflow.com/questions/21207220/osm-editing-routing-algorithm/21208259">https://stackoverflow.com/questions/21207220/osm-editing-routing-algorithm/21208259</a></p>
 </div>
 <div id="comment-30141-info" class="comment-info">
 <span class="comment-age">(23 Jan '14, 06:57)</span> <span class="comment-user userinfo">iii</span>

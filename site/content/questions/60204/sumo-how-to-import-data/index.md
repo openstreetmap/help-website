@@ -68,7 +68,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I'd suggest adding a bit more detail explaining what you're trying to do, and what you've done so far to try and solve your problem. Until you do that people will not be able to help you.</p>
-<p>Also note that there's at least one other question that might be helpful <a href="https://help.openstreetmap.org/questions/57429/export-specific-roads-for-sumo-simulation">https://help.openstreetmap.org/questions/57429/export-specific-roads-for-sumo-simulation</a> .</p>
+<p>Also note that there's at least one other question that might be helpful <a href="/questions/57429/export-specific-roads-for-sumo-simulation">https://help.openstreetmap.org/questions/57429/export-specific-roads-for-sumo-simulation</a> .</p>
 </div>
 <div id="comment-60206-info" class="comment-info">
 <span class="comment-age">(21 Oct '17, 18:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

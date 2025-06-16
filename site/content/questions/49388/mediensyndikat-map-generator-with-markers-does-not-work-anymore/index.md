@@ -151,7 +151,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12225/freifrank85">@Freifrank</a>: Support service: see the page's footer: <a href="http://www.mediafant.de/">http://www.mediafant.de/</a> . Very likely you (also) get paid-for service there, which might be interesting <em>if</em> you are representing a company just wanting to have a solution. If you need more help, there are other <span>commercial service providers around OSM</span>. We are just freaky volunteers here.</p>
+<p><a href="https://help.openstreetmap.org/users/12225/freifrank85">@Freifrank</a>: Support service: see the page's footer: <a href="http://www.mediafant.de/">http://www.mediafant.de/</a> . Very likely you (also) get paid-for service there, which might be interesting <em>if</em> you are representing a company just wanting to have a solution. If you need more help, there are other <span>commercial service providers around OSM</span>. We are just freaky volunteers here.</p>
 <p>I guess your html file just contains the markers and links to libraries hosted somewhere else and loads the map also from somewhere else (likely tile.openstreetmap.org). It would be helpful, if you could mention a link to your map.</p>
 <p>For umap you would need to recreate the markers, unless you can import your old ones somehow.</p>
 <p>What is too "much" traffic for the tile servers is a bit undefined - see the tile usage policy. "Many thousands" sounds like it is too much (also depends a bit on what your visitors do with the map - do they just view one area or do they move around and zoom).</p>
@@ -177,7 +177,7 @@ One Answer:
 <div id="post-49393-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12225/freifrank85">@Freifrank85</a>: thank you for the updates!</p>
+<p><a href="https://help.openstreetmap.org/users/12225/freifrank85">@Freifrank85</a>: thank you for the updates!</p>
 </div>
 <div id="comment-49393-info" class="comment-info">
 <span class="comment-age">(24 Apr '16, 18:32)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

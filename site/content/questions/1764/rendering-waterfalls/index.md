@@ -223,7 +223,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?lat=38.0347&amp;lon=-122.72433&amp;zoom=17&amp;layers=M">Here's the link</a>. Would consider filling out a bug report if you think I've tagged it correctly.</p>
+<p><a href="https://www.openstreetmap.org/?lat=38.0347&amp;lon=-122.72433&amp;zoom=17&amp;layers=M">Here's the link</a>. Would consider filling out a bug report if you think I've tagged it correctly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -276,7 +276,7 @@ osqa_accepted = false
 <div id="post-1787-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You're right--I hadn't made the distinction. With further experimentation though, I'm wondering if this is a broader issue. In this example, the way I added (highway=path) shows, but the node I added (natural=beach) doesn't. <a href="http://www.openstreetmap.org/?lat=19.47191&amp;lon=-155.92497&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=19.47191&amp;lon=-155.92497&amp;zoom=17&amp;layers=M</a></p>
+<p>You're right--I hadn't made the distinction. With further experimentation though, I'm wondering if this is a broader issue. In this example, the way I added (highway=path) shows, but the node I added (natural=beach) doesn't. <a href="https://www.openstreetmap.org/?lat=19.47191&amp;lon=-155.92497&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=19.47191&amp;lon=-155.92497&amp;zoom=17&amp;layers=M</a></p>
 <p>So a newbie question: is OSM--at least for its two main rendering engines--geared more for urban mapping in the features it displays? In other words, it's not so much the specific icon I'm wondering about, but the visibility--in any form--of the node.</p>
 </div>
 <div id="comment-1787-info" class="comment-info">

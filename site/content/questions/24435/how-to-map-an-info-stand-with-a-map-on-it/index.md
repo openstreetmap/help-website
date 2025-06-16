@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi at <a href="http://wiki.openstreetmap.org/wiki/Key:information">http://wiki.openstreetmap.org/wiki/Key:information</a> youll find map or board, the last looks okay</p>
+<p>hi at <a href="https://wiki.openstreetmap.org/wiki/Key:information">https://wiki.openstreetmap.org/wiki/Key:information</a> youll find map or board, the last looks okay</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

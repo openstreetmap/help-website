@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should start by looking at <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> and <a href="http://www.openlayers.org/">openlayers</a>. In particular have a look at <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Marker_Example">the openlayers marker example</a>. I hope this provides a good starting point, but be prepared for a couple of weeks of learning and testing. Openstreetmap does not provide turn-key solutions for every possible website containing a map but concentrates on collecting the raw geodata.</p>
+<p>You should start by looking at <a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> and <a href="http://www.openlayers.org/">openlayers</a>. In particular have a look at <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Marker_Example">the openlayers marker example</a>. I hope this provides a good starting point, but be prepared for a couple of weeks of learning and testing. Openstreetmap does not provide turn-key solutions for every possible website containing a map but concentrates on collecting the raw geodata.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -166,7 +166,7 @@ One Answer:
 <div id="post-50267-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>and if <a href="http://help.openstreetmap.org/users/12427/feargal">@Feargal</a> does not know how to change the tags (since the question is about "how [to] edit"), see the bottom of <a href="https://wiki.openstreetmap.org/wiki/Tag#Use_in_an_editor">https://wiki.openstreetmap.org/wiki/Tag#Use_in_an_editor</a> .</p>
+<p>and if <a href="https://help.openstreetmap.org/users/12427/feargal">@Feargal</a> does not know how to change the tags (since the question is about "how [to] edit"), see the bottom of <a href="https://wiki.openstreetmap.org/wiki/Tag#Use_in_an_editor">https://wiki.openstreetmap.org/wiki/Tag#Use_in_an_editor</a> .</p>
 </div>
 <div id="comment-50267-info" class="comment-info">
 <span class="comment-age">(17 Jun '16, 06:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -179,7 +179,7 @@ One Answer:
 <div class="comment-text">
 <p>@Hendrikaas It's supposed to be finished this side of Christmas. We'll see. I haven't walked down to the bridge itself to check if it is passable by pedestrians just now, but the construction plan is to remove the entire span, rebuild the supports and replace the span, so if it is not currently impassable to peds, it will be soon. I will try to get a closer look over the weekend.</p>
 <p>Background is that the bridge has been damaged twice in recent years by floods, and repaired poorly both times. So this repair job is going back to basics and ostensibly rebuilding from scratch.</p>
-<p><a href="http://help.openstreetmap.org/users/5153/paul">@Paul</a> Thanks for that. It makes sense. On a more general note, should bridges be tagged as part of the highway normally or as standalone objects?</p>
+<p><a href="https://help.openstreetmap.org/users/5153/paul">@Paul</a> Thanks for that. It makes sense. On a more general note, should bridges be tagged as part of the highway normally or as standalone objects?</p>
 </div>
 <div id="comment-50273-info" class="comment-info">
 <span class="comment-age">(17 Jun '16, 09:23)</span> <span class="comment-user userinfo">Feargal</span>
@@ -191,7 +191,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Tip: In general it's better to ask totally different question as separate questions, and not use comments for that.</p>
-<p>You should at least tag the way with <a href="http://wiki.openstreetmap.org/wiki/Key:bridge">bridge=yes</a>, layer=1 You could add a <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbridge">man_made=bridge</a>, layer=1 as well.</p>
+<p>You should at least tag the way with <a href="https://wiki.openstreetmap.org/wiki/Key:bridge">bridge=yes</a>, layer=1 You could add a <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dbridge">man_made=bridge</a>, layer=1 as well.</p>
 </div>
 <div id="comment-50279-info" class="comment-info">
 <span class="comment-age">(17 Jun '16, 10:17)</span> <span class="comment-user userinfo">escada</span>

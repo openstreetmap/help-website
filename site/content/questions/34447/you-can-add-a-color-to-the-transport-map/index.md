@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are a few different varieties of transport maps listed near the bottom of <a href="http://wiki.openstreetmap.org/wiki/Public_transport">Public_transport wiki</a><br />
+<p>There are a few different varieties of transport maps listed near the bottom of <a href="https://wiki.openstreetmap.org/wiki/Public_transport">Public_transport wiki</a><br />
 eg<br />
 <a href="http://openmap.lt/#l=52.52023,13.39078,14,MT">openmap.lt</a><br />
 <a href="http://openptmap.org/?zoom=11&amp;lat=51.19242&amp;lon=6.92888&amp;layers=B0000TFFT">openptmap.org</a><br />

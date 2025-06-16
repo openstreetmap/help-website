@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A similar question like this openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android and more can be found here <a href="https://help.openstreetmap.org/search/?csrfmiddlewaretoken=85752786635483b786b551929d4b0952&amp;q=commercial+use+of+OSM&amp;Submit=Search&amp;t=question.">https://help.openstreetmap.org/search/?csrfmiddlewaretoken=85752786635483b786b551929d4b0952&amp;q=commercial+use+of+OSM&amp;Submit=Search&amp;t=question.</a> Did you read the License part of the welcome page of Open Street Map, <a href="http://www.openstreetmap.org/copyright/en">http://www.openstreetmap.org/copyright/en</a> as well ? Hope that helps to answer your question.</p>
+<p>A similar question like this openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android and more can be found here <a href="https://help.openstreetmap.org/search/?csrfmiddlewaretoken=85752786635483b786b551929d4b0952&amp;q=commercial+use+of+OSM&amp;Submit=Search&amp;t=question.">https://help.openstreetmap.org/search/?csrfmiddlewaretoken=85752786635483b786b551929d4b0952&amp;q=commercial+use+of+OSM&amp;Submit=Search&amp;t=question.</a> Did you read the License part of the welcome page of Open Street Map, <a href="https://www.openstreetmap.org/copyright/en">https://www.openstreetmap.org/copyright/en</a> as well ? Hope that helps to answer your question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

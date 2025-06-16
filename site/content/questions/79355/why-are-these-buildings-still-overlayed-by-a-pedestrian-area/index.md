@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I asked a different question on <a href="https://www.openstreetmap.org/way/907510872">these</a> <a href="https://www.openstreetmap.org/way/907510871">buildings</a> before <a href="https://help.openstreetmap.org/questions/79285/why-are-these-buildings-not-rendered">here</a>, and we came to the conclusion that the <a href="https://www.openstreetmap.org/relation/2578511">pedestrian area</a> is rendered on top of them. Now, I have made them to be the 'inner' of the ped area multipolygon, just like the grass areas southwest of these buildings. However, the pedestrian area is still rendered above them - why?</p>
+<p>I asked a different question on <a href="https://www.openstreetmap.org/way/907510872">these</a> <a href="https://www.openstreetmap.org/way/907510871">buildings</a> before <a href="/questions/79285/why-are-these-buildings-not-rendered">here</a>, and we came to the conclusion that the <a href="https://www.openstreetmap.org/relation/2578511">pedestrian area</a> is rendered on top of them. Now, I have made them to be the 'inner' of the ped area multipolygon, just like the grass areas southwest of these buildings. However, the pedestrian area is still rendered above them - why?</p>
 <p>Fairly certain it is user error, I just want to find the error of my ways O:)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

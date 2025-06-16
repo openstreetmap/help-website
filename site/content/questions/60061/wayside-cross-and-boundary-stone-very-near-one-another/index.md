@@ -120,7 +120,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is common that some features that exist in the data are not rendered on a map, whether due to there not being room, or the maintainers of that map choosing not to display certain features.</p>
-<p>As to the tag, it is still a boundary stone, so <a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Dboundary_stone">historic=boundary_stone</a> seems correct. Maybe add a note that it no longer reflects current boundaries?</p>
+<p>As to the tag, it is still a boundary stone, so <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dboundary_stone">historic=boundary_stone</a> seems correct. Maybe add a note that it no longer reflects current boundaries?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -106,15 +106,15 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Every user can see the history of their edits. For you it is:</p>
-<p><a href="http://www.openstreetmap.org/user/xurdeast/edits">http://www.openstreetmap.org/user/xurdeast/edits</a></p>
+<p><a href="https://www.openstreetmap.org/user/xurdeast/edits">https://www.openstreetmap.org/user/xurdeast/edits</a></p>
 <p>You can download each of your edits as a changeset XML file. I'm not aware of an existing program to automate getting <em>all</em> of ones edits, but it should not be too hard to write some scripts (not that I'm volunteering).</p>
 <p>I believe that having downloaded the changeset data, you will not be able to (re)apply it again since the change is against <em>old</em> versions of data.</p>
 <p>If the data is subsequently changed to what you believe is now made incorrect, the proper procedure is to ask the user why the change was made (e.g. accidental or deliberate).</p>
 <p>If the change needs to be reverted, then if the scale of the change is small - simply manually fix it. Otherwise seek help on IRC or the mailing lists to discuss having changes reverted.</p>
 <p>Also see:</p>
-<p><a href="https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
+<p><a href="/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
 <p>To follow changes in areas you have edited see:</p>
-<p><a href="https://help.openstreetmap.org/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed">https://help.openstreetmap.org/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed</a></p>
+<p><a href="/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed">https://help.openstreetmap.org/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For a collection of tools, see the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Quality_assurance">Quality_assurance</a> --&gt; Monitoring Tools</p>
+<p>For a collection of tools, see the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Quality_assurance">Quality_assurance</a> --&gt; Monitoring Tools</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

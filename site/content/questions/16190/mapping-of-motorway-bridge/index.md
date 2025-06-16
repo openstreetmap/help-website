@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mapping of motorway bridge"
-description = '''Can anyone advise me how to map the bridge where the M27 motorway crosses the Wallington River (http://www.openstreetmap.org/?lat=50.86206&amp;amp;lon=-1.165718&amp;amp;zoom=18&amp;amp;layers=M)? A single bridge carries the motorway across both the river and a footpath immediately west of the river. The map sho...'''
+description = '''Can anyone advise me how to map the bridge where the M27 motorway crosses the Wallington River (https://www.openstreetmap.org/?lat=50.86206&amp;amp;lon=-1.165718&amp;amp;zoom=18&amp;amp;layers=M)? A single bridge carries the motorway across both the river and a footpath immediately west of the river. The map sho...'''
 date = "2012-09-17T22:08:00Z"
 lastmod = "2012-09-18T20:46:00Z"
 weight = 16190
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can anyone advise me how to map the bridge where the M27 motorway crosses the Wallington River (<a href="http://www.openstreetmap.org/?lat=50.86206&amp;lon=-1.165718&amp;zoom=18&amp;layers=M)?">http://www.openstreetmap.org/?lat=50.86206&amp;lon=-1.165718&amp;zoom=18&amp;layers=M)?</a> A single bridge carries the motorway across both the river and a footpath immediately west of the river. The map shows the two main carriageways of the motorway, and the start/end of two slip roads, as four separate ways at that point. Mapping four separate bridges would be seriously misleading, not least because it is possible to swap between the main carriageways and the slip roads at that point. The usual solution would be to show the river running in a tunnel (culvert), but then how could the map show that the footpath runs through the same tunnel? Any help would be appreciated.</p>
+<p>Can anyone advise me how to map the bridge where the M27 motorway crosses the Wallington River (<a href="https://www.openstreetmap.org/?lat=50.86206&amp;lon=-1.165718&amp;zoom=18&amp;layers=M)?">https://www.openstreetmap.org/?lat=50.86206&amp;lon=-1.165718&amp;zoom=18&amp;layers=M)?</a> A single bridge carries the motorway across both the river and a footpath immediately west of the river. The map shows the two main carriageways of the motorway, and the start/end of two slip roads, as four separate ways at that point. Mapping four separate bridges would be seriously misleading, not least because it is possible to swap between the main carriageways and the slip roads at that point. The usual solution would be to show the river running in a tunnel (culvert), but then how could the map show that the footpath runs through the same tunnel? Any help would be appreciated.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-motorway" rel="tag" title="see questions tagged &#39;motorway&#39;">motorway</span> <span class="post-tag tag-link-bridge" rel="tag" title="see questions tagged &#39;bridge&#39;">bridge</span>
@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At the moment there is only little support in tagging multiple ways over a single bridge. You can create a <a href="http://wiki.openstreetmap.org/wiki/Relation:bridge">bridge relation</a> (the <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">proposal</a> is more detailed) and group all ways belonging to the same bridge with a relation but I don't know of any renderer or other tool supporting this so far.</p>
+<p>At the moment there is only little support in tagging multiple ways over a single bridge. You can create a <a href="https://wiki.openstreetmap.org/wiki/Relation:bridge">bridge relation</a> (the <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">proposal</a> is more detailed) and group all ways belonging to the same bridge with a relation but I don't know of any renderer or other tool supporting this so far.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At the moment these situations are often mapped with multiple bridges for every road, see for example here: <a href="http://www.openstreetmap.org/?lat=49.2714&amp;lon=6.798964&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=49.2714&amp;lon=6.798964&amp;zoom=18&amp;layers=M</a></p>
+<p>At the moment these situations are often mapped with multiple bridges for every road, see for example here: <a href="https://www.openstreetmap.org/?lat=49.2714&amp;lon=6.798964&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=49.2714&amp;lon=6.798964&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -268,7 +268,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When I started to contribute in OSM, one person said that when a bridge was wider than longer, he tagged the underways as "tunnels". I'm still following this hint altough a civil engineer will tell you here that a bridge has to be mapped as a bridge, always. (Un)fortunatelly, we are not all civil engineers and you are still able to decide yourself the level of your contributions accuracy.<br />
-In your case, I would also tag both the river and the footpath as tunnels separately (tunnel=culvert and tunnel=yes). I don't think that modelizing a group of tunnels in a relation is very popular today (probably not, like for bridges). The <a href="http://wiki.openstreetmap.org/wiki/Tag:tunnel%3Dculvert">wiki about culvert</a> suggests that you could simply add a "foot=yes" on the waterway culvert which is maybe an alternative solution.</p>
+In your case, I would also tag both the river and the footpath as tunnels separately (tunnel=culvert and tunnel=yes). I don't think that modelizing a group of tunnels in a relation is very popular today (probably not, like for bridges). The <a href="https://wiki.openstreetmap.org/wiki/Tag:tunnel%3Dculvert">wiki about culvert</a> suggests that you could simply add a "foot=yes" on the waterway culvert which is maybe an alternative solution.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

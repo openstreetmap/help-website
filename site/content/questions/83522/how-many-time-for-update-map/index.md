@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-83523-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The answers found here might be helpful: <a href="https://help.openstreetmap.org/questions/83241/changes-only-on-some-zoom-levels-visible">https://help.openstreetmap.org/questions/83241/changes-only-on-some-zoom-levels-visible</a></p>
+<p>The answers found here might be helpful: <a href="/questions/83241/changes-only-on-some-zoom-levels-visible">https://help.openstreetmap.org/questions/83241/changes-only-on-some-zoom-levels-visible</a></p>
 </div>
 <div id="comment-83523-info" class="comment-info">
 <span class="comment-age">(18 Feb '22, 16:08)</span> <span class="comment-user userinfo">Spiekerooger</span>

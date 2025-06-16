@@ -121,7 +121,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Jochen is right, Osmium is much more fexible if you want to do special data processing. However, what you want to accomplish can be done with <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>/<a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> too. For example:<br />
+<p>Jochen is right, Osmium is much more fexible if you want to do special data processing. However, what you want to accomplish can be done with <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>/<a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> too. For example:<br />
 <br />
 </p>
 <p>$ ./osmfilter bremen.o5m --keep="addr:country= and addr:city= and addr:street=" --ignore-dependencies | ./osmconvert - --csv="@oname <span>@id</span> <span>@lon</span> @lat addr:country addr:city addr:street"<br />
@@ -209,7 +209,7 @@ node 175675316 8.9675299 53.0574772 DE Oyten Oyterdamm<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am not sure I understand exactly what you want, but if you find that osmconvert doesn't do what you need, you might want to try <a href="http://wiki.openstreetmap.org/wiki/Osmium">Osmium</a>, specifically the "osmjs" utility that comes with it. Osmjs can also create CSV files and you can write small Javascript snippets to define exactly what you need, so it is rather flexible. There are examples in the "osmjs" directory in the distribution.</p>
+<p>I am not sure I understand exactly what you want, but if you find that osmconvert doesn't do what you need, you might want to try <a href="https://wiki.openstreetmap.org/wiki/Osmium">Osmium</a>, specifically the "osmjs" utility that comes with it. Osmjs can also create CSV files and you can write small Javascript snippets to define exactly what you need, so it is rather flexible. There are examples in the "osmjs" directory in the distribution.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

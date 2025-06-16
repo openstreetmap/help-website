@@ -121,9 +121,9 @@ One Answer:
 <div class="answer-body">
 <p>This is a very frequently asked question. Check out the following existing answers:</p>
 <ul>
-<li><a href="http://help.openstreetmap.org/questions/6892/displaying-only-specific-pois-on-the-map">Displaying only specific POIs on the map</a></li>
-<li><a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a></li>
-<li><a href="http://help.openstreetmap.org/questions/4083/can-i-make-a-customized-map-just-for-me">Can I make a customized map just for me?</a></li>
+<li><a href="/questions/6892/displaying-only-specific-pois-on-the-map">Displaying only specific POIs on the map</a></li>
+<li><a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a></li>
+<li><a href="/questions/4083/can-i-make-a-customized-map-just-for-me">Can I make a customized map just for me?</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

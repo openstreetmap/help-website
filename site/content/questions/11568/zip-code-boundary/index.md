@@ -108,11 +108,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/MapCSS/Examples">MapCSS/Examples</a>.</p>
+<p>Have a look in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/MapCSS/Examples">MapCSS/Examples</a>.</p>
 <p>First, download the raw OSM data from one of the mentioned sources.</p>
 <p>Then, do a filtering via osmfilter by choosing --keep="postal_code="</p>
 <p>Finally adapt the mentiones CSS stylefile to display the postalcode within each area.</p>
-<p>You can also try any other <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering Software</a> to produce an optical output.</p>
+<p>You can also try any other <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering Software</a> to produce an optical output.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

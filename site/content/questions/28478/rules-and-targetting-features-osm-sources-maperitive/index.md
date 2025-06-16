@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some hints are also inside the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> ... there are links to a HowTo etc.</p>
+<p>Some hints are also inside the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> ... there are links to a HowTo etc.</p>
 <p>For detailed questions I would recommend the Maperitive googlegroup mailinglist.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -93,7 +93,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>The problem with .osm files is that they tend to be large, so "opening it with an editor" might not be straightforward. Users of Unix-like operating systems already have tools such as "more", "head", "tail", "grep" etc. that make extracting data from large files relatively easy, but there isn't anything built-in on Windows, although versions of many of them compiled for Windows are available <a href="http://unxutils.sourceforge.net/">here</a>.</p>
 <p>That said, it's often easier to deal with OSM data in a compressed format. If you have a look at <a href="http://download.geofabrik.de/osm/europe/">Geofabrik's download page</a>, you can see that the 5Gb spain.osm is only 292MB as a .pbf file (which is <a href="http://code.google.com/p/protobuf/">this</a> format). The <a href="http://switch2osm.org/serving-tiles/building-a-tile-server-from-packages/">switch2osm pages</a> suggest using .pbf files because they're smaller, and recent versions of the OSM tools and things such as <a href="http://www.mkgmap.org.uk/">mkgmap</a> can work with them.</p>
-<p>If you need to convert between .pbf and .osm formats, you can use <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> to do that.</p>
+<p>If you need to convert between .pbf and .osm formats, you can use <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> to do that.</p>
 </div>
 <div id="comment-14031-info" class="comment-info">
 <span class="comment-age">(06 Jul '12, 12:07)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -105,7 +105,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>One thing to mention - I notice that on the page <a href="http://downloads.cloudmade.com/europe/southern_europe/spain#downloads_breadcrumbs">that you probably downloaded from</a> it says "Last maps update: 13 December 2011". If that date's accurate, you may want to consider using a more recent extact - there's a list <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">here</a>. Personnally I've found <a href="http://download.geofabrik.de/osm/europe/">Geofabrik's</a> to be up to date and reliable, but plenty of others are available.</p>
+<p>One thing to mention - I notice that on the page <a href="http://downloads.cloudmade.com/europe/southern_europe/spain#downloads_breadcrumbs">that you probably downloaded from</a> it says "Last maps update: 13 December 2011". If that date's accurate, you may want to consider using a more recent extact - there's a list <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">here</a>. Personnally I've found <a href="http://download.geofabrik.de/osm/europe/">Geofabrik's</a> to be up to date and reliable, but plenty of others are available.</p>
 </div>
 <div id="comment-14033-info" class="comment-info">
 <span class="comment-age">(06 Jul '12, 12:12)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

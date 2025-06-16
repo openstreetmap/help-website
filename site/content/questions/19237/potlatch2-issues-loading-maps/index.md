@@ -81,7 +81,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Sure, this is the url that loads when i try to edit the map in a given area. I realized by looking at the longitude in the url that it is erroneous. If I fix the longitude in the url it works and I can pan around and edit the map. Weird....</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=33.83378&amp;lon=-477.55268&amp;zoom=15">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=33.83378&amp;lon=-477.55268&amp;zoom=15</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=33.83378&amp;lon=-477.55268&amp;zoom=15">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=33.83378&amp;lon=-477.55268&amp;zoom=15</a></p>
 </div>
 <div id="comment-19243-info" class="comment-info">
 <span class="comment-age">(21 Jan '13, 19:59)</span> <span class="comment-user userinfo">choyado</span>
@@ -93,7 +93,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span></span><span>@choyado</span>: It indeed should be lon=-117.5532 (360 degrees less). I confirm the error. The error arises from an API0.6 error (URL shown in error by potlatch: <a href="http://www.openstreetmap.org/api/0.6/map?bbox=-477.5672669255066,33.8187604481031,-477.5380930744934,33.848797371129365).">http://www.openstreetmap.org/api/0.6/map?bbox=-477.5672669255066,33.8187604481031,-477.5380930744934,33.848797371129365).</a> If called directly this error text is shown: "The latitudes must be between -90 and 90, longitudes between -180 and 180 and the minima must be less than the maxima." If the API does not accept higher-than-needed coordinates so I think Potlatch also should not. The only question is: how/where did you get this wrong URL.</p>
+<p><span></span><span>@choyado</span>: It indeed should be lon=-117.5532 (360 degrees less). I confirm the error. The error arises from an API0.6 error (URL shown in error by potlatch: <a href="https://www.openstreetmap.org/api/0.6/map?bbox=-477.5672669255066,33.8187604481031,-477.5380930744934,33.848797371129365).">https://www.openstreetmap.org/api/0.6/map?bbox=-477.5672669255066,33.8187604481031,-477.5380930744934,33.848797371129365).</a> If called directly this error text is shown: "The latitudes must be between -90 and 90, longitudes between -180 and 180 and the minima must be less than the maxima." If the API does not accept higher-than-needed coordinates so I think Potlatch also should not. The only question is: how/where did you get this wrong URL.</p>
 </div>
 <div id="comment-19245-info" class="comment-info">
 <span class="comment-age">(21 Jan '13, 20:32)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -106,7 +106,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Ha! Good one. To reproduce, click the map on osm.org. Zoom out. Using the mouse, pan right a few times (going "around the world"). Click "permalink" and you get e.g.:</p>
-<p><a href="http://www.openstreetmap.org/?lat=28&amp;lon=963&amp;zoom=2&amp;layers=M">http://www.openstreetmap.org/?lat=28&amp;lon=963&amp;zoom=2&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=28&amp;lon=963&amp;zoom=2&amp;layers=M">https://www.openstreetmap.org/?lat=28&amp;lon=963&amp;zoom=2&amp;layers=M</a></p>
 </div>
 <div id="comment-19246-info" class="comment-info">
 <span class="comment-age">(21 Jan '13, 20:38)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

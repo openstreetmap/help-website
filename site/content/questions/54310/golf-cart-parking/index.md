@@ -42,11 +42,11 @@ osqa_accepted = true
 <p>Which tags should be used for golf cart parking? The golf course I'm mapping parks their carts on a fenced off section of the car parking lot.</p>
 <p>The tags I plan to use are:</p>
 <p>amenity=parking</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:golf_cart">golf_cart=designated</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:golf_cart">golf_cart=designated</a></p>
 <p>motor_vehicle=no</p>
 <p>I'm questioning the use of "amenity=parking" as the wiki description is "A place for parking cars".</p>
-<p>There is the "<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmotorcycle_parking">amenity=motorcycle parking</a>" tag, so would "amenity=golfcart_parking" be valid?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot-11_i5orEMh.png" alt="alt text" /></p>
+<p>There is the "<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dmotorcycle_parking">amenity=motorcycle parking</a>" tag, so would "amenity=golfcart_parking" be valid?</p>
+<p><img src="/upfiles/Screenshot-11_i5orEMh.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-golf" rel="tag" title="see questions tagged &#39;golf&#39;">golf</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span>

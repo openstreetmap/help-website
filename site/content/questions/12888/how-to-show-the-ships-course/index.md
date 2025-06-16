@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You would probably want to look at using Openlayers to add your own custom defined markers, I think?</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">this example</a> as a very basic example for displaying your own markers. You would need to define the icons and update the textfile.txt as the direction of the ship changes to refer to the new icon. There are other examples <a href="http://wiki.openstreetmap.org/wiki/OpenLayers">on the wiki</a> and on the <a href="http://openlayers.org/dev/examples/">OpenLayers site</a> (although the latter aren't Openstreetmap specific).</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">this example</a> as a very basic example for displaying your own markers. You would need to define the icons and update the textfile.txt as the direction of the ship changes to refer to the new icon. There are other examples <a href="https://wiki.openstreetmap.org/wiki/OpenLayers">on the wiki</a> and on the <a href="http://openlayers.org/dev/examples/">OpenLayers site</a> (although the latter aren't Openstreetmap specific).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

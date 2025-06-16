@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The answer to this question may be relevant: <a href="https://help.openstreetmap.org/questions/24164/paved-areas-around-swimming-pool-two-polygons">paved areas around swimming pool two polygons</a></p>
+<p>The answer to this question may be relevant: <a href="/questions/24164/paved-areas-around-swimming-pool-two-polygons">paved areas around swimming pool two polygons</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

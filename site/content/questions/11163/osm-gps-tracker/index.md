@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is no "official" OSM application for Android. Most applications are written by individuals not necessarily connected to OSM; check who has written yours. If it is Open Source, then you or anybody else can modify it; if it is proprietary software, then only the owner can do that. If you are talking about "Open GPS Tracker", that's Open Source and you can download it <a href="http://code.google.com/p/open-gpstracker/">here</a>.</p>
-<p>Other Android software is listed on <a href="http://wiki.openstreetmap.org/wiki/Android">the Android page on our wiki.</a></p>
+<p>Other Android software is listed on <a href="https://wiki.openstreetmap.org/wiki/Android">the Android page on our wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you referring to OSMTracker (<a href="http://wiki.openstreetmap.org/wiki/OSMtracker_%28Android%29">wiki</a>, <a href="https://code.google.com/p/osmtracker-android/">project</a>, <a href="https://github.com/nguillaumin/osmtracker-android">code</a>)? If so, then yes, as the code is open source and licensed under the GPLv3. However, it has not seen much development recently. I hope to get involved some day, but I'm not sure when. Check out the <a href="https://code.google.com/p/osmtracker-android/issues/list">issues list</a> and see if the features you want are there; if so, then star them so others know if a request is popular, if not then add your request. There's also the possibility of someone working on this or a related Android application as part of the <a href="http://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012">Google Summer of Code 2012</a>.</p>
+<p>Are you referring to OSMTracker (<a href="https://wiki.openstreetmap.org/wiki/OSMtracker_%28Android%29">wiki</a>, <a href="https://code.google.com/p/osmtracker-android/">project</a>, <a href="https://github.com/nguillaumin/osmtracker-android">code</a>)? If so, then yes, as the code is open source and licensed under the GPLv3. However, it has not seen much development recently. I hope to get involved some day, but I'm not sure when. Check out the <a href="https://code.google.com/p/osmtracker-android/issues/list">issues list</a> and see if the features you want are there; if so, then star them so others know if a request is popular, if not then add your request. There's also the possibility of someone working on this or a related Android application as part of the <a href="https://wiki.openstreetmap.org/wiki/Google_Summer_of_Code/2012">Google Summer of Code 2012</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

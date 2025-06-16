@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Why is encryption via <a href="https://en.wikipedia.org/wiki/Https">HTTPS</a> not used throughout <a href="http://www.openstreetmap.org/">openstreetmap.org</a>? It seems that only <a href="https://www.openstreetmap.org/login">login functionality</a> is handled this way.</p>
+<p>Why is encryption via <a href="https://en.wikipedia.org/wiki/Https">HTTPS</a> not used throughout <a href="https://www.openstreetmap.org/">openstreetmap.org</a>? It seems that only <a href="https://www.openstreetmap.org/login">login functionality</a> is handled this way.</p>
 <p>I guess in the light of recent privacy issues complete encryption would be a good idea (ideally with an <a href="https://www.ssllabs.com/ssltest/analyze.html?d=ssllabs.com">A rating</a>).</p>
 </div>
 <div id="question-tags" class="tags-container tags">

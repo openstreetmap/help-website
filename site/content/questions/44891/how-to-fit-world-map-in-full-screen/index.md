@@ -40,13 +40,13 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi to all,</p>
-<p>I need to fit the whole world in a screen like as image1.<img src="http://help.openstreetmap.org/upfiles/image1_Zbj4spH.png" alt="alt text" /></p>
-<p>I have tried as <strong>map.fitWorld().zoomIn()</strong>, But it shows some extra location(area) like as image2.<img src="http://help.openstreetmap.org/upfiles/image2_CAcPSdH.png" alt="alt text" /></p>
-<p>Also tried as <strong>noWrap:true</strong> , It shows single map correclty, But the alignment not good in min zoom levels, refer image3 <img src="http://help.openstreetmap.org/upfiles/image3.png" alt="alt text" /></p>
+<p>I need to fit the whole world in a screen like as image1.<img src="/upfiles/image1_Zbj4spH.png" alt="alt text" /></p>
+<p>I have tried as <strong>map.fitWorld().zoomIn()</strong>, But it shows some extra location(area) like as image2.<img src="/upfiles/image2_CAcPSdH.png" alt="alt text" /></p>
+<p>Also tried as <strong>noWrap:true</strong> , It shows single map correclty, But the alignment not good in min zoom levels, refer image3 <img src="/upfiles/image3.png" alt="alt text" /></p>
 <p>Kindly help me to show whole world image only in a screen.</p>
 <p>EDIT:</p>
 <p>tileSize : 300</p>
-<p><img src="http://help.openstreetmap.org/upfiles/image4.png" alt="alt text" /></p>
+<p><img src="/upfiles/image4.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-leaflet" rel="tag" title="see questions tagged &#39;leaflet&#39;">leaflet</span> <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-bounds" rel="tag" title="see questions tagged &#39;bounds&#39;">bounds</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-world" rel="tag" title="see questions tagged &#39;world&#39;">world</span>
@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-44896-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: Yes i posted in both <a href="https://help.openstreetmap.org">https://help.openstreetmap.org</a> &amp; <a href="http://stackoverflow.com/">http://stackoverflow.com/</a> :)</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: Yes i posted in both <a href="https://help.openstreetmap.org">https://help.openstreetmap.org</a> &amp; <a href="http://stackoverflow.com/">http://stackoverflow.com/</a> :)</p>
 </div>
 <div id="comment-44896-info" class="comment-info">
 <span class="comment-age">(24 Aug '15, 19:28)</span> <span class="comment-user userinfo">Rajavelu_M</span>
@@ -162,7 +162,7 @@ One Answer:
 <div id="post-44899-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> : Thanks for your suggestion. What about <strong>tileSize</strong> property? I increased tile size 256 to 300. But some part of map not shown.(screenshot added above)</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> : Thanks for your suggestion. What about <strong>tileSize</strong> property? I increased tile size 256 to 300. But some part of map not shown.(screenshot added above)</p>
 </div>
 <div id="comment-44899-info" class="comment-info">
 <span class="comment-age">(25 Aug '15, 06:35)</span> <span class="comment-user userinfo">Rajavelu_M</span>

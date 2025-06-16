@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi what kind of road are you talking about, paved or unpaved, path, track or motorway ? Consider using <a href="http://wiki.openstreetmap.org/wiki/Key:smoothness">http://wiki.openstreetmap.org/wiki/Key:smoothness</a> for a stretch of a way as long as potholes are present to describe to state of the road. You’ll have to cut the way into stretches first, on the spot or elsewhere.</p>
+<p>Hi what kind of road are you talking about, paved or unpaved, path, track or motorway ? Consider using <a href="https://wiki.openstreetmap.org/wiki/Key:smoothness">https://wiki.openstreetmap.org/wiki/Key:smoothness</a> for a stretch of a way as long as potholes are present to describe to state of the road. You’ll have to cut the way into stretches first, on the spot or elsewhere.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

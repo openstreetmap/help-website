@@ -47,7 +47,7 @@ Processing 01001...
                   ^
 SyntaxError: invalid syntax
 Failed parse (/usr/src/nominatim/data/tiger/ftp2.census.gov/geo/tiger/TIGER2011/EDGES/tl_2011_01001_edges.zip)</code></pre>
-<p>I am following the directions from the answer to this question: <a href="https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance">https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance</a></p>
+<p>I am following the directions from the answer to this question: <a href="/questions/12150/missing-house-numbers-in-local-nominatim-instance">https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance</a></p>
 <p>Does this still work?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

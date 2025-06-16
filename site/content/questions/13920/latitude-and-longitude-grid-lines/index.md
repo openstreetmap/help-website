@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://help.openstreetmap.org/questions/10784/how-can-i-see-scale-and-grid-on-exported-images">http://help.openstreetmap.org/questions/10784/how-can-i-see-scale-and-grid-on-exported-images</a></p>
+<p>See <a href="/questions/10784/how-can-i-see-scale-and-grid-on-exported-images">https://help.openstreetmap.org/questions/10784/how-can-i-see-scale-and-grid-on-exported-images</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

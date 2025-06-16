@@ -128,8 +128,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <h2 id="uploading-gpx-tracks">Uploading GPX Tracks</h2>
-<p>The easiest thing for you to do to sort out your GPX tracks is to <a href="http://wiki.openstreetmap.org/wiki/Upload">upload them to OSM</a>.</p>
-<p>OSM has multiple mechanisms for handling GPX data, including <a href="http://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">setting privacy policies on your data</a>, including setting the GPX tracks to private, if that's what you want to do.</p>
+<p>The easiest thing for you to do to sort out your GPX tracks is to <a href="https://wiki.openstreetmap.org/wiki/Upload">upload them to OSM</a>.</p>
+<p>OSM has multiple mechanisms for handling GPX data, including <a href="https://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">setting privacy policies on your data</a>, including setting the GPX tracks to private, if that's what you want to do.</p>
 <p>Once your tracks are uploaded to OSM, you can access them at any time from any computer, and you can retrieve them at any time. You can also tag them for later recall, as well as using them within either Josm or Potlatch.</p>
 <h2 id="renaming-the-gpx-track-files">Renaming the GPX Track Files</h2>
 <p>From your comment, it sounds like you want a tool to look at your tracks, extrapolate a location and rename the file accordingly.</p>
@@ -138,7 +138,7 @@ One Answer:
 <p>The <a href="http://gdal.org/">gdal</a> library support GPX and so you should be able to use it to open your GPX track and find the envelope/bbox extents. From there you can get the centroid of your bounding box.</p>
 <p>You may also be able to do more complex analysis, such as the area you're in most</p>
 <h2 id="nominatim">nominatim</h2>
-<p>Once you know the location you want to reverse geo-code, you can use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">to reverse geocode</a> the location, and use whichever fields you feel are appropriate in your result (street, city, country, etc.).</p>
+<p>Once you know the location you want to reverse geo-code, you can use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">to reverse geocode</a> the location, and use whichever fields you feel are appropriate in your result (street, city, country, etc.).</p>
 <p>Once you have the fields, you can just concatenate the field names as you like and rename the file.</p>
 <p>Lastly, this is an OpenStreetMap specific forum. Since your question is more general, you may also have better luck on a more general programming forum such as <a href="http://stackoverflow.com">Stack Overflow</a>.</p>
 </div>

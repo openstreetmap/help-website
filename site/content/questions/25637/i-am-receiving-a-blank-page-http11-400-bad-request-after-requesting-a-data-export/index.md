@@ -137,7 +137,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... or try alternatively <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>... or try alternatively <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
 </div>
 <div id="comment-25667-info" class="comment-info">
 <span class="comment-age">(22 Aug '13, 17:51)</span> <span class="comment-user userinfo">stephan75</span>

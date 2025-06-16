@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is commendable that you set up a cache to save bandwidth, however even then, the bulk downloading from OSM or OpenCycleMap is discouraged (in the case of OSM, <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a>) or strictly forbidden (in the case of OpenCycleMap, <a href="http://thunderforest.com/terms/">http://thunderforest.com/terms/</a>). So if you need local OSM tiles for your applications, you will have to set up your own tile server. Some pointers to that are on <a href="http://switch2osm.org/">http://switch2osm.org/</a>.</p>
+<p>It is commendable that you set up a cache to save bandwidth, however even then, the bulk downloading from OSM or OpenCycleMap is discouraged (in the case of OSM, <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a>) or strictly forbidden (in the case of OpenCycleMap, <a href="http://thunderforest.com/terms/">http://thunderforest.com/terms/</a>). So if you need local OSM tiles for your applications, you will have to set up your own tile server. Some pointers to that are on <a href="http://switch2osm.org/">http://switch2osm.org/</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

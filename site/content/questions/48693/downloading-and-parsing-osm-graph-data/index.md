@@ -119,7 +119,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can get city specific datasets e.g. at <a href="https://mapzen.com/data/metro-extracts/">mapzen</a>, e.g. <a href="https://s3.amazonaws.com/metro-extracts.mapzen.com/athens_greece.osm.bz2">OSM XML format for Athens</a>.</p>
-<p>There you have all the nodes of the city. Read about the <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML file format</a>.</p>
+<p>There you have all the nodes of the city. Read about the <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML file format</a>.</p>
 <p>Write a script in your favourite programming language to parse this, extract the nodes that you need, calculate the distance and write out the list format (CSV, whatever) that you need.</p>
 <p>For geographical distance calculations, you need an appropriate geo library, e.g. <a href="https://github.com/OSGeo/proj.4/wiki">Proj</a>. I can’t help you with that, it’s over my head.</p>
 <p>Another approach might be feeding the data into a geo enabled database like <a href="http://www.postgis.net">PostGIS</a> und use its functions.</p>

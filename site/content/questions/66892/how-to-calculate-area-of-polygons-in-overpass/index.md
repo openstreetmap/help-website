@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Is there a way to calculate the area of a polygon (i.e. a relation) based on the results I receive from a query?</p>
 <p>I have a query that finds the "landuse" of the area around a certain radius. I planned to calculate the area of the of each type of landuse that was returned by the API. But I am unable to find any resource for something like this.</p>
 <p>This is my query: <code>relation(around:600,28.595262,77.240308)["landuse"];</code></p>
-<p><img src="https://help.openstreetmap.org/upfiles/overpass_turbo.png" alt="overpass turbo screenshot" /></p>
+<p><img src="/upfiles/overpass_turbo.png" alt="overpass turbo screenshot" /></p>
 <p>So how can I calculate those areas, if its possible?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

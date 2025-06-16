@@ -152,7 +152,7 @@ out meta;</code></pre>
 &#10;</div>
 <div class="comment-text">
 <p><span>@aliekor</span>: or do you want to limit the area by a bounding box where the query should be made from?</p>
-<p>If yes, this is possible: Read <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> very intensively ... there are many possibilities.</p>
+<p>If yes, this is possible: Read <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> very intensively ... there are many possibilities.</p>
 </div>
 <div id="comment-26310-info" class="comment-info">
 <span class="comment-age">(12 Sep '13, 16:53)</span> <span class="comment-user userinfo">stephan75</span>

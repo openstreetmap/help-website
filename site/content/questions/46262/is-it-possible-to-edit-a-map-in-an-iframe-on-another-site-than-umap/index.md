@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>And I have to say that the website where the map is embedded is accessed localy, but it does access the internet to display the map with no issue. So my website is actually only <a href="http://localhost">http://localhost</a></p>
 <p>Is this error normal or should I be able to anonymously edit this map? Here it is: <a href="https://umap.openstreetmap.fr/fr/map/grenoble-libre-edition_58385">https://umap.openstreetmap.fr/fr/map/grenoble-libre-edition_58385</a></p>
 <p>I hope someone could enlighten me...</p>
-<p><strong>Edit:</strong> Here is a picture of the error after creating a new marker and trying to save it in the iframe <img src="http://help.openstreetmap.org/upfiles/iframe_error.jpg" alt="alt text" /></p>
+<p><strong>Edit:</strong> Here is a picture of the error after creating a new marker and trying to save it in the iframe <img src="/upfiles/iframe_error.jpg" alt="alt text" /></p>
 <p><strong>Edit 2:</strong> Here are the iframe element parameters (I removed the first iframe tag because it wouldn't display the code correctly):</p>
 <pre><code>width=&quot;980px&quot; height=&quot;550px&quot; frameBorder=&quot;0&quot; src=&quot;https://umap.openstreetmap.fr/fr/map/grenoble-libre-edition_58385?scaleControl=true&amp;miniMap=true&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;allowEdit=true&amp;moreControl=false&amp;datalayersControl=false&amp;onLoadPanel=undefined&amp;captionBar=false&amp;editInOSMControl=true&quot;&gt;</code></pre>
 </div>
@@ -106,7 +106,7 @@ osqa_accepted = false
 <div id="post-46279-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11634/racco">@racco</a>: sorry, I copied the wrong one, I meant "allowEdit"</p>
+<p><a href="https://help.openstreetmap.org/users/11634/racco">@racco</a>: sorry, I copied the wrong one, I meant "allowEdit"</p>
 </div>
 <div id="comment-46279-info" class="comment-info">
 <span class="comment-age">(31 Oct '15, 21:45)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

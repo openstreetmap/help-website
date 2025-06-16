@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You want Geocoding. Type "<a href="http://help.openstreetmap.org/search/?q=geocoding&amp;Submit=search&amp;t=question">Geocoding</a>" in the search box above and read the results. "Nominatim" is the software (or service) that you might be using for that.</p>
+<p>You want Geocoding. Type "<a href="https://help.openstreetmap.org/search/?q=geocoding&amp;Submit=search&amp;t=question">Geocoding</a>" in the search box above and read the results. "Nominatim" is the software (or service) that you might be using for that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -169,9 +169,9 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Dear Ria Lingerie,</p>
 <p>please understand that OSM is a project <strong>driven by volunteers</strong> that try to do the best to contribute data that seem to be important to their personal perspective. The focus is usually more on public infrastructure and depends also on the size of the local community if they have the ability to add (and maintain) all the local shops etc.</p>
-<p>You already found out how to make use of our <strong><a href="http://www.openstreetmap.org/note/101906#map=17/51.14702/4.62381&amp;layers=N">notes feature</a></strong> to give feedback on our map. Usually it takes some time till somebody reviews and adds your informations, as we usually prefer 'on the ground' surveys as we like to map the reality. (But now I added your company already)</p>
+<p>You already found out how to make use of our <strong><a href="https://www.openstreetmap.org/note/101906#map=17/51.14702/4.62381&amp;layers=N">notes feature</a></strong> to give feedback on our map. Usually it takes some time till somebody reviews and adds your informations, as we usually prefer 'on the ground' surveys as we like to map the reality. (But now I added your company already)</p>
 <p>As you also already signed-up at osm.org you could have easily contribute your POI on your own: <a href="http://learnosm.org">http://learnosm.org</a></p>
-<p><em>Please note: This is a support forum for working with OSM and not requesting OSM edits in general. Please also be aware that titles with extra-signs ??? or a rude tone are not only against the netiquette, but also <a href="http://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do">not useful</a> if you want to get some help.</em></p>
+<p><em>Please note: This is a support forum for working with OSM and not requesting OSM edits in general. Please also be aware that titles with extra-signs ??? or a rude tone are not only against the netiquette, but also <a href="https://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do">not useful</a> if you want to get some help.</em></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

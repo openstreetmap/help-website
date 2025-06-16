@@ -82,7 +82,7 @@ foundorder  ?</code></pre>
 <div id="post-28341-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As you also ask for (at least for me) obvious details, I like to ask if you already read: <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Parameters">http://wiki.openstreetmap.org/wiki/Nominatim#Parameters</a> ?</p>
+<p>As you also ask for (at least for me) obvious details, I like to ask if you already read: <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Parameters">https://wiki.openstreetmap.org/wiki/Nominatim#Parameters</a> ?</p>
 </div>
 <div id="comment-28341-info" class="comment-info">
 <span class="comment-age">(21 Nov '13, 16:05)</span> <span class="comment-user userinfo">iii</span>

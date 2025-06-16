@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">list of companies offering commercial OSM services</a> on the wiki.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">list of companies offering commercial OSM services</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -125,7 +125,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Also, if your fleet management really is big (how many vehicles ?), it'd be relatively little extra effort to serve the map yourself. <a href="http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles</a></p>
+<p>Also, if your fleet management really is big (how many vehicles ?), it'd be relatively little extra effort to serve the map yourself. <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles</a></p>
 </div>
 <div id="comment-11941-info" class="comment-info">
 <span class="comment-age">(12 Apr '12, 15:20)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

@@ -107,10 +107,10 @@ osqa_accepted = true
 <p>There's a better, easier, faster way than Vclaw's answer as of recently, thanks to the <strong>utilsplugin2</strong> plugin for JOSM.</p>
 <p>Download and start JOSM from <a href="http://josm.openstreetmap.de/">here</a>, then:</p>
 <ol>
-<li>Install the <em>utilsplugins2</em> plugin and restart JOSM (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins#With_the_plugin_manager">help</a>)</li>
-<li>Download the area which has the two objects (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide#Download_data">help</a>)</li>
+<li>Install the <em>utilsplugins2</em> plugin and restart JOSM (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins#With_the_plugin_manager">help</a>)</li>
+<li>Download the area which has the two objects (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide#Download_data">help</a>)</li>
 <li>Select both the node and the way using <strong><code>Shift+Click</code></strong> (<a href="http://josm.openstreetmap.de/wiki/Help/Action/Move/Move#Selectingsingleobjects">help</a>)</li>
-<li>Go to the <strong>More tools</strong> menu, and select <strong>Replace Geometry</strong> ((<a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Replace_Geometry">help</a>)</li>
+<li>Go to the <strong>More tools</strong> menu, and select <strong>Replace Geometry</strong> ((<a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Replace_Geometry">help</a>)</li>
 <li>If both objects have tags, a dialog will appear so you can check and merge the differences (no help yet))</li>
 </ol>
 <p>The way Vclaw describes is how I used to do this, but I've recently added functionality to the utilsplugin2 to do this all in one step, with the addition of resolving tag conflicts and preserving history. Note that <strong>Replace Geometry</strong> can also replace or <em>upgrade</em> a node to a multipolygon.</p>

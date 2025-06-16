@@ -131,8 +131,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As Jonas_ says, the main OSM database is really for mapping things as they are.</p>
-<p>You could however use some of the OSM software that is available to produce older maps if you wanted. In theory you could set yourself up with a whole copy of the software stack which <a href="http://wiki.openstreetmap.org/wiki/Rails_port">stores the main database</a>, and the database used by Mapnik for rendering. This might be a lot of work and can be tricky to do for a beginner.</p>
-<p>Perhaps simpler would be to use <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> to draw your maps, then save your work as a .osm file WITHOUT uploading it, and use something like <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to render a map from the .osm file.</p>
+<p>You could however use some of the OSM software that is available to produce older maps if you wanted. In theory you could set yourself up with a whole copy of the software stack which <a href="https://wiki.openstreetmap.org/wiki/Rails_port">stores the main database</a>, and the database used by Mapnik for rendering. This might be a lot of work and can be tricky to do for a beginner.</p>
+<p>Perhaps simpler would be to use <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> to draw your maps, then save your work as a .osm file WITHOUT uploading it, and use something like <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> to render a map from the .osm file.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -183,7 +183,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can use OSM for how the village is today, but not so much about how it was before.</p>
-<p>See also <a href="http://help.openstreetmap.org/questions/650/does-osm-use-any-historic-data-or-want-to/654">Gnonthgol's answer to Does OSM use any historic data? or want to?</a></p>
+<p>See also <a href="/questions/650/does-osm-use-any-historic-data-or-want-to/654">Gnonthgol's answer to Does OSM use any historic data? or want to?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

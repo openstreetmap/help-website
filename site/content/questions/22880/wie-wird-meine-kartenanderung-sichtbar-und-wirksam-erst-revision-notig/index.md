@@ -75,7 +75,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>Auch der Brouser auf Deinem Rechner muss die OSM-Karte (<a href="http://www.openstreetmap.org/)">http://www.openstreetmap.org/)</a> aktualisieren, der FF macht es hier nach 5x "Strg + F5" drücken. Dabei ist die eingestellte Zoomstufe zu berücksichtigen.</p>
+<p>Auch der Brouser auf Deinem Rechner muss die OSM-Karte (<a href="https://www.openstreetmap.org/)">https://www.openstreetmap.org/)</a> aktualisieren, der FF macht es hier nach 5x "Strg + F5" drücken. Dabei ist die eingestellte Zoomstufe zu berücksichtigen.</p>
 </div>
 <div id="comment-22888-info" class="comment-info">
 <span class="comment-age">(30 May '13, 11:22)</span> <span class="comment-user userinfo">ThG_</span>

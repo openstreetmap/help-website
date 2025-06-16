@@ -72,7 +72,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>For info, there is an "Open Historical Map" project that's related to OSM:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Open_Historical_Map">http://wiki.openstreetmap.org/wiki/Open_Historical_Map</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Open_Historical_Map">https://wiki.openstreetmap.org/wiki/Open_Historical_Map</a></p>
 </div>
 <div id="comment-36509-info" class="comment-info">
 <span class="comment-age">(02 Sep '14, 15:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

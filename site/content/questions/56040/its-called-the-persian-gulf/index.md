@@ -80,7 +80,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>As far as I can see, Persian Gulf is called Persian Gulf in OSM in all the languages I can read (and in those I can paste into GTranslate as well): <a href="http://www.openstreetmap.org/node/305639193#map=4/35.50/98.09">http://www.openstreetmap.org/node/305639193#map=4/35.50/98.09</a></p>
+<p>As far as I can see, Persian Gulf is called Persian Gulf in OSM in all the languages I can read (and in those I can paste into GTranslate as well): <a href="https://www.openstreetmap.org/node/305639193#map=4/35.50/98.09">https://www.openstreetmap.org/node/305639193#map=4/35.50/98.09</a></p>
 </div>
 <div id="comment-56044-info" class="comment-info">
 <span class="comment-age">(05 May '17, 10:05)</span> <span class="comment-user userinfo">Piskvor</span>

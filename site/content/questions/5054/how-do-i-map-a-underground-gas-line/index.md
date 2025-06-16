@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you read the <a href="http://wiki.openstreetmap.org/wiki/Pipeline">pipeline</a> section in the wiki?</p>
+<p>Have you read the <a href="https://wiki.openstreetmap.org/wiki/Pipeline">pipeline</a> section in the wiki?</p>
 <p>Something like this may be used for an underground gas line:</p>
 <ul>
 <li>man_made=pipeline</li>
@@ -139,7 +139,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>By the way, when trying to find the pipeline i stumbled upon <a href="http://www.openstreetmap.org/browse/changeset/7902323">http://www.openstreetmap.org/browse/changeset/7902323</a> which says "Reference Source: Google Maps". Google Maps is not a valid source for OSM mapping.</p>
+<p>By the way, when trying to find the pipeline i stumbled upon <a href="https://www.openstreetmap.org/browse/changeset/7902323">https://www.openstreetmap.org/browse/changeset/7902323</a> which says "Reference Source: Google Maps". Google Maps is not a valid source for OSM mapping.</p>
 </div>
 <div id="comment-5058-info" class="comment-info">
 <span class="comment-age">(08 May '11, 23:45)</span> <span class="comment-user userinfo">gnurk</span>
@@ -161,7 +161,7 @@ osqa_accepted = false
 <div id="post-5180-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=47.7187018096447&amp;lon=-122.050284147263&amp;zoom=18">http://www.openstreetmap.org/?lat=47.7187018096447&amp;lon=-122.050284147263&amp;zoom=18</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=47.7187018096447&amp;lon=-122.050284147263&amp;zoom=18">https://www.openstreetmap.org/?lat=47.7187018096447&amp;lon=-122.050284147263&amp;zoom=18</a></p>
 </div>
 <div id="comment-5180-info" class="comment-info">
 <span class="comment-age">(13 May '11, 21:02)</span> <span class="comment-user userinfo">blueal</span>
@@ -236,7 +236,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Interesting. Is there some kind of layer restriction?</p>
-<p>There's a pipeline here; but it doesn't appear in osmarender: <a href="http://www.openstreetmap.org/?lat=53.12567&amp;lon=-1.50013&amp;zoom=15&amp;layers=O&amp;way=108162769">http://www.openstreetmap.org/?lat=53.12567&amp;lon=-1.50013&amp;zoom=15&amp;layers=O&amp;way=108162769</a></p>
+<p>There's a pipeline here; but it doesn't appear in osmarender: <a href="https://www.openstreetmap.org/?lat=53.12567&amp;lon=-1.50013&amp;zoom=15&amp;layers=O&amp;way=108162769">https://www.openstreetmap.org/?lat=53.12567&amp;lon=-1.50013&amp;zoom=15&amp;layers=O&amp;way=108162769</a></p>
 <p>(maybe it's just waiting to be rendered?)</p>
 </div>
 <div id="comment-5101-info" class="comment-info">

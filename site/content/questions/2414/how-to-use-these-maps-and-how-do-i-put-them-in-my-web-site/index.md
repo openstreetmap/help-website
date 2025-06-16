@@ -121,9 +121,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Start with the beginners' guide in the Wiki <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a>. This will help you understand the principles of OSM.</p>
+<p>Start with the beginners' guide in the Wiki <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a>. This will help you understand the principles of OSM.</p>
 <p>To include a map on your website you can use the Export tab on the main OSM page to get the html for a small map on a web page. If you want something more sophisticated you might like to look at OpenLayers to add a slippy map in a div on a web page.</p>
-<p>You can also create a map as a static image based on OSM data by rendering it yourself. Try looking at Maperitive <a href="http://wiki.openstreetmap.org/wiki/Maperitive">http://wiki.openstreetmap.org/wiki/Maperitive</a></p>
+<p>You can also create a map as a static image based on OSM data by rendering it yourself. Try looking at Maperitive <a href="https://wiki.openstreetmap.org/wiki/Maperitive">https://wiki.openstreetmap.org/wiki/Maperitive</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The Open Layers page on the wiki has some good examples: <a href="http://wiki.openstreetmap.org/wiki/Open_Layers">http://wiki.openstreetmap.org/wiki/Open_Layers</a></p>
+<p>The Open Layers page on the wiki has some good examples: <a href="https://wiki.openstreetmap.org/wiki/Open_Layers">https://wiki.openstreetmap.org/wiki/Open_Layers</a></p>
 </div>
 <div id="comment-2421-info" class="comment-info">
 <span class="comment-age">(25 Jan '11, 06:23)</span> <span class="comment-user userinfo">Ebenezer</span>

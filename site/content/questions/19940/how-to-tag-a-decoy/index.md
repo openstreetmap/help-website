@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I stumbled over a specific example of landuse. It’s a small pond surrounded by trees or a forest with small branches of water to catch ducks and other water birds. Nowadays mostly used for tagging water birds for studying migration patterns. I didn’t find a tag or example in the Wiki, I would like to tag it landuse - decoy, name - Bartelskooi (Bartelscage) any idea or suggestions ? We got several of them in Holland. Take a look here <a href="http://www.openstreetmap.org/?lat=53.40694&amp;lon=5.40496&amp;zoom=16&amp;layers=M,">http://www.openstreetmap.org/?lat=53.40694&amp;lon=5.40496&amp;zoom=16&amp;layers=M,</a> there 3 of them here close to each other.</p>
+<p>I stumbled over a specific example of landuse. It’s a small pond surrounded by trees or a forest with small branches of water to catch ducks and other water birds. Nowadays mostly used for tagging water birds for studying migration patterns. I didn’t find a tag or example in the Wiki, I would like to tag it landuse - decoy, name - Bartelskooi (Bartelscage) any idea or suggestions ? We got several of them in Holland. Take a look here <a href="https://www.openstreetmap.org/?lat=53.40694&amp;lon=5.40496&amp;zoom=16&amp;layers=M,">https://www.openstreetmap.org/?lat=53.40694&amp;lon=5.40496&amp;zoom=16&amp;layers=M,</a> there 3 of them here close to each other.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-decoy" rel="tag" title="see questions tagged &#39;decoy&#39;">decoy</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-forest" rel="tag" title="see questions tagged &#39;forest&#39;">forest</span> <span class="post-tag tag-link-pond" rel="tag" title="see questions tagged &#39;pond&#39;">pond</span>
@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've been reading a bit about <a href="http://en.wikipedia.org/wiki/Duck_decoy_(structure)">decoy ponds</a> and think that you could probably tag them as <code>natural=water, water=decoy, name=Bartelskooi (Bartelscage)</code> in a similar way to how <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater#Simple_Lake">the wiki</a> suggests lakes can be tagged <code>natural=water, water=lake, name=whatever</code>.</p>
-<p>The trees I would probably tag as <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest"><code>landuse=forest</code></a>.</p>
+<p>I've been reading a bit about <a href="http://en.wikipedia.org/wiki/Duck_decoy_(structure)">decoy ponds</a> and think that you could probably tag them as <code>natural=water, water=decoy, name=Bartelskooi (Bartelscage)</code> in a similar way to how <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater#Simple_Lake">the wiki</a> suggests lakes can be tagged <code>natural=water, water=lake, name=whatever</code>.</p>
+<p>The trees I would probably tag as <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest"><code>landuse=forest</code></a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

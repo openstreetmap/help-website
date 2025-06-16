@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think that the wiki page for GNIS has some guidance here: <a href="http://wiki.openstreetmap.org/wiki/GNIS">http://wiki.openstreetmap.org/wiki/GNIS</a></p>
+<p>I think that the wiki page for GNIS has some guidance here: <a href="https://wiki.openstreetmap.org/wiki/GNIS">https://wiki.openstreetmap.org/wiki/GNIS</a></p>
 <p>Specifically "If you come across a feature that no longer exists in the real world, feel free to delete it."</p>
 <p>On the mailing talk-us mail list I got the impression that if any ruins or old remains are physically still present then the tag might want to be kept. But if there is no trace of the named items, feel free to remove the node.</p>
 </div>

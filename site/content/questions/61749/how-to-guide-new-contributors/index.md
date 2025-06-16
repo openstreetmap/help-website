@@ -145,7 +145,7 @@ One Answer:
 <div id="post-61766-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also worth a read <a href="https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
+<p>Also worth a read <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a></p>
 </div>
 <div id="comment-61766-info" class="comment-info">
 <span class="comment-age">(22 Jan '18, 16:41)</span> <span class="comment-user userinfo">andy mackey</span>

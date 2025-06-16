@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Do you mean "A Coventry Way" <a href="http://www.openstreetmap.org/relation/557483">http://www.openstreetmap.org/relation/557483</a> ? Also, what sort of walking directions do you want? Do you mean "human" directions like "cross the road and turn right", or something you can look at on a phone screen, or something you can send to a GPS such as a Garmin device?</p>
+<p>Do you mean "A Coventry Way" <a href="https://www.openstreetmap.org/relation/557483">https://www.openstreetmap.org/relation/557483</a> ? Also, what sort of walking directions do you want? Do you mean "human" directions like "cross the road and turn right", or something you can look at on a phone screen, or something you can send to a GPS such as a Garmin device?</p>
 <p>Depending on what you want, <a href="https://hiking.waymarkedtrails.org/#route?id=557483">https://hiking.waymarkedtrails.org/#route?id=557483</a> might be useful.</p>
 </div>
 <div id="comment-59656-info" class="comment-info">

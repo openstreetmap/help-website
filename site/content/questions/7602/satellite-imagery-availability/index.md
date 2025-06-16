@@ -149,7 +149,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>You can have a look at <a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">http://wiki.openstreetmap.org/wiki/Aerial_imagery</a> and linked pages.</p>
+<p>You can have a look at <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">https://wiki.openstreetmap.org/wiki/Aerial_imagery</a> and linked pages.</p>
 </div>
 <div id="comment-7616-info" class="comment-info">
 <span class="comment-age">(04 Sep '11, 18:27)</span> <span class="comment-user userinfo">petschge</span>

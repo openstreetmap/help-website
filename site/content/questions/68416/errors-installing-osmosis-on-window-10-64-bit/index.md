@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi OpenStreetmap experts,</p>
 <p>I am having problems trying to installing Osmosis in my Windows 10 64-bits. I downloaded the lastest Java SE 32-bit &amp; 64-bit as well as the latest osmosis version from <a href="http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip.">http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.zip.</a></p>
-<p>I tried to followed the installation guide from <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)">http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)</a> and <a href="http://learnosm.org/en/osm-data/osmosis/#install-osmosis,">http://learnosm.org/en/osm-data/osmosis/#install-osmosis,</a> and thoroughly tried all the questions related to the trouble shooting on this forum and still don't get it to work.</p>
+<p>I tried to followed the installation guide from <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)">https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)</a> and <a href="http://learnosm.org/en/osm-data/osmosis/#install-osmosis,">http://learnosm.org/en/osm-data/osmosis/#install-osmosis,</a> and thoroughly tried all the questions related to the trouble shooting on this forum and still don't get it to work.</p>
 <p>In summary I have tried to</p>
 <p>1) Edit the system environment variables and added the directory where osmosis.bat is located to the System variable (I tried both locations C:\Program Files (x86)\osmosis\bin\ and C:\osmosis\bin\ amongst my various attempts to get it to work).</p>
 <p>2) Edit C:\Program Files (x86)\osmosis\bin\osmosis.bat and tried to point the Java application to both 32-bit and 64-bit versions in various attempts</p>

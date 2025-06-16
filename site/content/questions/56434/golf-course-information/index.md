@@ -105,9 +105,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The forms are tied to the type of feature being added. The <code>Golf Hole</code> form is activated for lines, as shown below:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2017-06-04_08-35-55.png" alt="Adding a golf hole" /></p>
+<p><img src="/upfiles/Screenshot_2017-06-04_08-35-55.png" alt="Adding a golf hole" /></p>
 <p>Once <code>Golf Hole</code> is selected the form appears:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2017-06-04_08-37-14.png" alt="Filling in info for the hole" /></p>
+<p><img src="/upfiles/Screenshot_2017-06-04_08-37-14.png" alt="Filling in info for the hole" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi is this a helpfull link ? <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course</a></p>
+<p>Hi is this a helpfull link ? <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -241,7 +241,7 @@ osqa_accepted = false
 <div id="post-56440-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM">http://wiki.openstreetmap.org/wiki/JOSM</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM">https://wiki.openstreetmap.org/wiki/JOSM</a></p>
 </div>
 <div id="comment-56440-info" class="comment-info">
 <span class="comment-age">(04 Jun '17, 08:49)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -338,7 +338,7 @@ General preset info here: <a href="http://learnosm.org/en/josm/">http://learnosm
 </div>
 <div class="comment-text">
 <p>Please don't make up text to put into the name/title just because it shows on a particular map. By putting the information into the specific tags, a given map rendering can easily choose whether to show them or not. Putting the information in the name so that it is shown on one particular map breaks this.</p>
-<p>This is a frequent discussion for OSM: <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer</a></p>
+<p>This is a frequent discussion for OSM: <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer</a></p>
 </div>
 <div id="comment-56455-info" class="comment-info">
 <span class="comment-age">(05 Jun '17, 17:13)</span> <span class="comment-user userinfo">maxerickson</span>

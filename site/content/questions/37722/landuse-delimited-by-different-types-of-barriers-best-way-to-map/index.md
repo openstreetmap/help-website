@@ -70,7 +70,7 @@ osqa_accepted = true
 <div id="post-53467-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Similar question: <a href="https://help.openstreetmap.org/questions/38273/how-to-map-barriers-like-fences-on-landuse-borders?">How to map barriers like fences on landuse borders?</a></p>
+<p>Similar question: <a href="/questions/38273/how-to-map-barriers-like-fences-on-landuse-borders?">How to map barriers like fences on landuse borders?</a></p>
 </div>
 <div id="comment-53467-info" class="comment-info">
 <span class="comment-age">(10 Dec '16, 16:36)</span> <span class="comment-user userinfo">sleske</span>
@@ -204,7 +204,7 @@ At a later stage if the boundary, fence or wall are altered the map editor won't
 <div class="answer-body">
 <p>Sounds like you will want to use a relation to specify the area. Pretty easy with JOSM: Just select the ways forming the perimeter and hit the button icon for new relation. The tags you would have put on the area you put on the relation.</p>
 <p>The slightly confusing part is that there is no simple area relation, so you will use the multipolygon relation type and all the ways will have a role of "outer"</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Area#A_multipolygon_area">http://wiki.openstreetmap.org/wiki/Area#A_multipolygon_area</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Area#A_multipolygon_area">https://wiki.openstreetmap.org/wiki/Area#A_multipolygon_area</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

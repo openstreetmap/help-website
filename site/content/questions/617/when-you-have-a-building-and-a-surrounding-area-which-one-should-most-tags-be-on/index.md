@@ -131,7 +131,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The school building and its grounds should not both be tagged as amenity=school.</p>
-<p>Per the <a href="http://wiki.openstreetmap.org/wiki/Good_practice">good practice</a> of "One feature, one OSM-object", only one object should be tagged as amenity=school (assuming there is only one school at that location).</p>
+<p>Per the <a href="https://wiki.openstreetmap.org/wiki/Good_practice">good practice</a> of "One feature, one OSM-object", only one object should be tagged as amenity=school (assuming there is only one school at that location).</p>
 <p>And assuming the school grounds are mapped, it should be tagged as amenity=school, plus name= and operator= etc as appropriate. The school building should be tagged as building=yes, or something like building=school if you want to be more specific.</p>
 <p><strong>Note:</strong></p>
 <p>The above is for information that applies to the school <em>as a whole</em>, like the name and the type of school. Information specific to one element should still be tagged on that element. For example, if one school building has its own name, or if different buildings have different postal addresses, they should get their own <code>name=</code> or <code>addr:</code> tags.</p>
@@ -172,7 +172,7 @@ One Answer:
 <div id="post-630-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You'd probably have a separate node for the entrance connected to the "site" with a relation. I don't think there are established tags for this, but it may be possible to combine <a href="http://wiki.openstreetmap.org/wiki/Tag:building%3Dentrance">http://wiki.openstreetmap.org/wiki/Tag:building%3Dentrance</a> and <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site</a> .</p>
+<p>You'd probably have a separate node for the entrance connected to the "site" with a relation. I don't think there are established tags for this, but it may be possible to combine <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dentrance">https://wiki.openstreetmap.org/wiki/Tag:building%3Dentrance</a> and <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site</a> .</p>
 </div>
 <div id="comment-630-info" class="comment-info">
 <span class="comment-age">(11 Aug '10, 14:13)</span> <span class="comment-user userinfo">RoToRa</span>

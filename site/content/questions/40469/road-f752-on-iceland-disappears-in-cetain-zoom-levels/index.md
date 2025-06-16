@@ -43,8 +43,8 @@ osqa_accepted = false
 <p>If I use the map (www.openstreetmap.org) and follow the F752 the road disappears in certain zoom leves. Also lakes or part of the lake vanish.</p>
 <p>Therefore the Mapfactor software, using OSM data, does not show the full road and cannot navigate on it.</p>
 <p>The data is in OSM but not on all leves displayed ! I was unable to find a contact to report this issue. May be here is the correct place. I can provide screenshots if needed. But try this</p>
-<p><a href="http://www.openstreetmap.org/#map=13/65.2075/-18.9179">http://www.openstreetmap.org/#map=13/65.2075/-18.9179</a></p>
-<p><a href="http://www.openstreetmap.org/#map=13/65.1832/-18.8006">http://www.openstreetmap.org/#map=13/65.1832/-18.8006</a></p>
+<p><a href="https://www.openstreetmap.org/#map=13/65.2075/-18.9179">https://www.openstreetmap.org/#map=13/65.2075/-18.9179</a></p>
+<p><a href="https://www.openstreetmap.org/#map=13/65.1832/-18.8006">https://www.openstreetmap.org/#map=13/65.1832/-18.8006</a></p>
 <p>and zoom in or out one level to see the effect.</p>
 <p>I hope this can be fixed soon.</p>
 </div>
@@ -129,8 +129,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If something is displayed in the "standard" OSM style has nothing (really nothing) to do with if a third party application works or not.</p>
-<p>In this case there seem to be recent improvements to the road in question <a href="http://www.openstreetmap.org/way/307228941/history#map=14/65.2147/-18.9109">http://www.openstreetmap.org/way/307228941/history#map=14/65.2147/-18.9109</a> that likely simply haven't found there way in to the mapfactor provided maps yet.</p>
-<p>As to the object appearing/not appearing at certain zoom levels, see for example <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>In this case there seem to be recent improvements to the road in question <a href="https://www.openstreetmap.org/way/307228941/history#map=14/65.2147/-18.9109">https://www.openstreetmap.org/way/307228941/history#map=14/65.2147/-18.9109</a> that likely simply haven't found there way in to the mapfactor provided maps yet.</p>
+<p>As to the object appearing/not appearing at certain zoom levels, see for example <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -153,7 +153,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>yes – the main (demo) instances of <a href="http://map.project-osrm.org/?loc=65.323299,-19.083252&amp;loc=65.177265,-18.760529">OSRM</a> seems to already have the new data available, <a href="https://graphhopper.com/maps/?point=65.334763%2C-19.077759&amp;point=65.177265%2C-18.760529&amp;layer=OpenStreetMap">graphhopper</a> not yet. <a href="http://help.openstreetmap.org/users/10352/fware"></a><a href="http://help.openstreetmap.org/users/10352/fware">@fware</a>: just wait and get new maps/data from mapfactor as soon as <em>they</em> have updated them. By the way, the road and two lakes show correctly on all zoom levels I tried. It is part of the normal map update process that the zoom levels are updated independently.</p>
+<p>yes – the main (demo) instances of <a href="http://map.project-osrm.org/?loc=65.323299,-19.083252&amp;loc=65.177265,-18.760529">OSRM</a> seems to already have the new data available, <a href="https://graphhopper.com/maps/?point=65.334763%2C-19.077759&amp;point=65.177265%2C-18.760529&amp;layer=OpenStreetMap">graphhopper</a> not yet. <a href="https://help.openstreetmap.org/users/10352/fware"></a><a href="https://help.openstreetmap.org/users/10352/fware">@fware</a>: just wait and get new maps/data from mapfactor as soon as <em>they</em> have updated them. By the way, the road and two lakes show correctly on all zoom levels I tried. It is part of the normal map update process that the zoom levels are updated independently.</p>
 </div>
 <div id="comment-40472-info" class="comment-info">
 <span class="comment-age">(18 Jan '15, 17:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

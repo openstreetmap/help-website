@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>My new trail appears then disappears then re appears while zooming in and out. Did I upload it incorrectly?</p>
-<p>The trail is called <a href="http://www.openstreetmap.org/way/361777823">Sir Good Martin</a> in North Vancouver.</p>
+<p>The trail is called <a href="https://www.openstreetmap.org/way/361777823">Sir Good Martin</a> in North Vancouver.</p>
 <p>GPS N49 20.112' W122 58.840'</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's normal. See <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">this previous answer</a> for details of exactly how the map gets updated.</p>
+<p>It's normal. See <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">this previous answer</a> for details of exactly how the map gets updated.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

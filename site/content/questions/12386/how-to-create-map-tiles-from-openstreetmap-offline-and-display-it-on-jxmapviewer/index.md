@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally we don't allow bulk downloads from OpenStreetMap (see <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>). However if you really only want a world overview map (without zooming in) then that would amount to just a handful of tiles and you could probably download them without causing trouble.</p>
+<p>Generally we don't allow bulk downloads from OpenStreetMap (see <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a>). However if you really only want a world overview map (without zooming in) then that would amount to just a handful of tiles and you could probably download them without causing trouble.</p>
 <p>If, on the other hand, you want to be able to zoom in, then you will need many more tiles and you will have to produce them yourself. You will have to install a tile generator like TileMill, or plain Mapnik with the generate_tiles.py script, or even Maperitive (works for smaller areas, not whole world). You will also need some space for a database (about 300 GB) to import OSM data into, and depending on what zoom level you want to go up to, you will need a lot of time for rendering the tiles. (All programs mentioned in this paragraph have pages on our wiki.)</p>
 </div>
 <div class="answer-controls post-controls">

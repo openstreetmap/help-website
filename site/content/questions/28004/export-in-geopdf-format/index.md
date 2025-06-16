@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><a href="http://www.gdal.org/">GDal</a> has some support for <a href="https://en.wikipedia.org/wiki/Geospatial_PDF">Geospatial PDF</a>, but I'm really not sure of what the conversion chain would be.</p>
-<p>However, there are better ways to view the map on a tablet than using pdf. The wiki has a long list of <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">map viewing apps for iOS</a> to suit all tastes. I dont know the iOS ecosystem much, but MapsWithMe and ForeverMaps are ones that people seem to like.</p>
+<p>However, there are better ways to view the map on a tablet than using pdf. The wiki has a long list of <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">map viewing apps for iOS</a> to suit all tastes. I dont know the iOS ecosystem much, but MapsWithMe and ForeverMaps are ones that people seem to like.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

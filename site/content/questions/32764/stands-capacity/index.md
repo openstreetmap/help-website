@@ -129,7 +129,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Tag the bike parking with the number of bikes that can be parked there. For example, if you can park 4 bikes, then use "capacity=4"</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_parking</a></p>
 <p>There is no such thing as an 'assumed capacity'.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair=yes</a> tag is used as a general-purpose solution for indicating wheelchair accessibility.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair=yes</a> tag is used as a general-purpose solution for indicating wheelchair accessibility.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -185,7 +185,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>There is a whole wiki page on <a href="http://wiki.openstreetmap.org/wiki/Wheelchair_routing">wheelchair routing</a>.</p>
+<p>There is a whole wiki page on <a href="https://wiki.openstreetmap.org/wiki/Wheelchair_routing">wheelchair routing</a>.</p>
 </div>
 <div id="comment-19849-info" class="comment-info">
 <span class="comment-age">(12 Feb '13, 06:01)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -209,7 +209,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I would prefer maxwidth:physical over maxwidth:practical - <a href="http://wiki.openstreetmap.org/wiki/Key:maxheight:physical">max<em>height</em>=physical</a> is a documented and somewhat more widely used tag, so the transfer to maxwidth seems logical.</p>
+<p>I would prefer maxwidth:physical over maxwidth:practical - <a href="https://wiki.openstreetmap.org/wiki/Key:maxheight:physical">max<em>height</em>=physical</a> is a documented and somewhat more widely used tag, so the transfer to maxwidth seems logical.</p>
 </div>
 <div id="comment-19867-info" class="comment-info">
 <span class="comment-age">(12 Feb '13, 13:30)</span> <span class="comment-user userinfo">Tordanik</span>

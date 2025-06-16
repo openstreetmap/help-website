@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Parks commonly have maps at the entrances, showing paths and amenities like play areas and toilets. A possible short-cut to adding these features to OSM is to photograph the map, use <a href="http://mapwarper.net/">mapwarper</a> to make a base image and trace it. I've done this experimentally for <a href="http://www.openstreetmap.org/#map=17/51.50363/0.09032">Gallions Reach Park (OSM)</a>, (See also <a href="http://www.mapwarper.net/maps/20121">mapwarper record</a> and <a href="http://www.openstreetmap.org/changeset/47919736#map=15/51.5005/0.0900">changeset</a>).</p>
+<p>Parks commonly have maps at the entrances, showing paths and amenities like play areas and toilets. A possible short-cut to adding these features to OSM is to photograph the map, use <a href="http://mapwarper.net/">mapwarper</a> to make a base image and trace it. I've done this experimentally for <a href="https://www.openstreetmap.org/#map=17/51.50363/0.09032">Gallions Reach Park (OSM)</a>, (See also <a href="http://www.mapwarper.net/maps/20121">mapwarper record</a> and <a href="https://www.openstreetmap.org/changeset/47919736#map=15/51.5005/0.0900">changeset</a>).</p>
 <p>I've been saving up other public maps to process in the same way - is there likely to be an objection on copyright or other grounds?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

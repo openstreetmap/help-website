@@ -176,7 +176,7 @@ One Answer:
 <p>Fixed 32 px filter was just an initial proposition - look at the softer "progressive" filtering demo, which I hope we will merge eventually:</p>
 <p><a href="http://bl.ocks.org/math1985/raw/af7a602c222dbf1ff1a2c0d84ed755b7/#6.00/62.408/-102.033">http://bl.ocks.org/math1985/raw/af7a602c222dbf1ff1a2c0d84ed755b7/#6.00/62.408/-102.033</a></p>
 <p>And if you like new parking lots, just look at the center of Detroit now and try to imagine it in previous yellow version... =} :</p>
-<p><a href="http://www.openstreetmap.org/#map=16/42.3339/-83.0492">http://www.openstreetmap.org/#map=16/42.3339/-83.0492</a></p>
+<p><a href="https://www.openstreetmap.org/#map=16/42.3339/-83.0492">https://www.openstreetmap.org/#map=16/42.3339/-83.0492</a></p>
 </div>
 <div id="comment-60800-info" class="comment-info">
 <span class="comment-age">(26 Nov '17, 05:50)</span> <span class="comment-user userinfo">kocio</span>

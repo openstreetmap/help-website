@@ -337,7 +337,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dbrownfield">Tag:landuse=brownfield</a> would match what you describe as abandoned industrial buildings.</p>
+<p>I think the <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dbrownfield">Tag:landuse=brownfield</a> would match what you describe as abandoned industrial buildings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The image on the wiki for <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Delectronics">shop=electronics</a> is of a Currys shop. I believe this is what you were looking for.</p>
+<p>The image on the wiki for <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Delectronics">shop=electronics</a> is of a Currys shop. I believe this is what you were looking for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

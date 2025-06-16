@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/tombs">tomb proposal</a> which suggests to use <em>historic=tomb</em> and <em>tomb=columbarium</em>. One could argue if historic is the right category, but according to the proposal description it doesn't have to be a historic tomb.</p>
-<p>You could also use this tag for a dust or scatter field by tagging <em>historic=tomb</em> and <em>tomb=dust_field</em> or <em>tomb=scatter_field</em>. It might be a good idea to mention these two tags on the proposal's <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/tombs">discussion page</a> then so that other people know about it.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/tombs">tomb proposal</a> which suggests to use <em>historic=tomb</em> and <em>tomb=columbarium</em>. One could argue if historic is the right category, but according to the proposal description it doesn't have to be a historic tomb.</p>
+<p>You could also use this tag for a dust or scatter field by tagging <em>historic=tomb</em> and <em>tomb=dust_field</em> or <em>tomb=scatter_field</em>. It might be a good idea to mention these two tags on the proposal's <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/tombs">discussion page</a> then so that other people know about it.</p>
 <p>Also take a look at <a href="http://taginfo.openstreetmap.org/keys/tomb#values">taginfo</a> to see the currently used values for <em>tomb=</em>.</p>
 </div>
 <div class="answer-controls post-controls">

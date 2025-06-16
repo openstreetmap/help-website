@@ -196,7 +196,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Another option would be to preprocess the data using <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> with the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/TagTransform">TagTransform</a> plugin. eg you could write rules to copy anything in the name:en or int_name tag to the name tag.</p>
+<p>Another option would be to preprocess the data using <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> with the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/TagTransform">TagTransform</a> plugin. eg you could write rules to copy anything in the name:en or int_name tag to the name tag.</p>
 <p>This can output in .osm format, which you can then use as input for any of the usual rendering software (Maperitive, Mapnik, Mkgmap etc), and you don't have to change any of the rendering rules.</p>
 </div>
 <div class="answer-controls post-controls">

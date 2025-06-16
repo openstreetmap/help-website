@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your edits do show up for me. It is normal for edits to take a while to make their way onto the rendered map. See <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> for more details about rendering and delays.</p>
+<p>Your edits do show up for me. It is normal for edits to take a while to make their way onto the rendered map. See <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> for more details about rendering and delays.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

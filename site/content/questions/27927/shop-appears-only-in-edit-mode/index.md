@@ -63,7 +63,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>find it here: <a href="http://www.openstreetmap.org/#map=19/46.06975/12.58766">http://www.openstreetmap.org/#map=19/46.06975/12.58766</a></p>
+<p>find it here: <a href="https://www.openstreetmap.org/#map=19/46.06975/12.58766">https://www.openstreetmap.org/#map=19/46.06975/12.58766</a></p>
 </div>
 <div id="comment-27928-info" class="comment-info">
 <span class="comment-age">(09 Nov '13, 11:13)</span> <span class="comment-user userinfo">hfst</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The problem is that any particular map (such as the "standard" map on the OSM website) can't show everything - there are an infinite number of possible tags and values. A previous question discussing what shops are shown and what are not is <a href="https://help.openstreetmap.org/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map">here</a>.</p>
+<p>The problem is that any particular map (such as the "standard" map on the OSM website) can't show everything - there are an infinite number of possible tags and values. A previous question discussing what shops are shown and what are not is <a href="/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map">here</a>.</p>
 <p>There's another issue that might come into play in crowded areas - you'll notice that in "crowded" areas some text isn't displayed on the standard map until you zoom in. That's because the renderer doesn't display text over the top of other text because it wouldn't be possible to read it.</p>
 <p>That said, there probably is a map somewhere that tries to do a "good" rendering of all shops in a given area (at the expense of other data) and hopefully someone can add a link to it to this question.</p>
 </div>
@@ -231,7 +231,7 @@ makes them useless to the end-user, and results in wasting many good first-impre
 <p>yore´re perfectly right, objects in the database who are not showing is a non sense.</p>
 <p>Just to improve my knowledge in OSM editing I´ve been investigating that village in Italy and searched for the local vet, Address Via Mazzini 28, that I personally know - I am a vet as well, but <em>I am not updating my own practice</em> - the only link I have with that village in Italy is that my parents live there.<br />
 </p>
-<p>Again in the edit mode the practice is there, someone has placed it and marked it as amenity:veterinary. I´m very much pleased to hear that going to the vet is an amenity and not a necessity... Anyway, this tag has been discussed and approved in 2008, it is also <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Veterinary">rendered</a> .</p>
+<p>Again in the edit mode the practice is there, someone has placed it and marked it as amenity:veterinary. I´m very much pleased to hear that going to the vet is an amenity and not a necessity... Anyway, this tag has been discussed and approved in 2008, it is also <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Veterinary">rendered</a> .</p>
 <p>Since then nothing really happened and I understand Mapnik maintainers/authors either don´t like vets (just kidding) or don´t care that so many approved and rendered tags could be seen from users. It´s a bit of a shame in my opinion and definitely doesn´t attract contributors. I´m asking myself why should I waste time editing something that never shows in the map.</p>
 <p>Nonetheless I invested a bit more time and changed the tag of the confectionery, address Viale San Giorgio 9, to "Bar" because the place is also a bar where you can sit and have a coffee. Now it shows in the view mode, but there is no way to know the place is offering delicious home made stuff, a "property" that other bars in town do not offer.</p>
 <p>A nice Sunday to everyone reading this (long) comment.</p>

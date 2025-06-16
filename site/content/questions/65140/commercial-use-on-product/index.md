@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Similar questions have been asked before, e.g. <a href="https://help.openstreetmap.org/questions/4669/can-i-use-openstreetmap-in-a-commercial-product">Can I use OpenStreetMap in a commercial product?</a>, <a href="https://help.openstreetmap.org/questions/3440/cost-of-commercial-use?">Cost of Commercial use</a>. Answer is yes, but see the <a href="https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ">Licence and Legal FAQ</a>.</p>
+<p>Similar questions have been asked before, e.g. <a href="/questions/4669/can-i-use-openstreetmap-in-a-commercial-product">Can I use OpenStreetMap in a commercial product?</a>, <a href="/questions/3440/cost-of-commercial-use?">Cost of Commercial use</a>. Answer is yes, but see the <a href="https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ">Licence and Legal FAQ</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

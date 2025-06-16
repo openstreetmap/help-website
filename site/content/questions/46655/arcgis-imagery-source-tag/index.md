@@ -129,7 +129,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Esri itself is currently investigating this issue, after I raised the <a href="https://github.com/Esri/arcgis-osm-editor/issues/104">issue on Github</a> and <a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a></a> and <a href="http://help.openstreetmap.org/users/9580/mboeringa"></a><a href="http://help.openstreetmap.org/users/9580/mboeringa">@mboeringa</a></a> got involved in the discussion. They will need some time. When they answer, I shall update this answer with theirs. (unless someone beats me to it)</p>
+<p>Esri itself is currently investigating this issue, after I raised the <a href="https://github.com/Esri/arcgis-osm-editor/issues/104">issue on Github</a> and <a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a></a> and <a href="https://help.openstreetmap.org/users/9580/mboeringa"></a><a href="https://help.openstreetmap.org/users/9580/mboeringa">@mboeringa</a></a> got involved in the discussion. They will need some time. When they answer, I shall update this answer with theirs. (unless someone beats me to it)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -151,7 +151,7 @@ osqa_accepted = false
 <div id="post-46805-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>, just to avoid misunderstandings: I am not working for ESRI, I am just a proficient ArcGIS user with almost two decades experience working with ESRI software, who also got involved with OSM on its own account. So I am not the one who is going to answer this question, ESRI is...</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>, just to avoid misunderstandings: I am not working for ESRI, I am just a proficient ArcGIS user with almost two decades experience working with ESRI software, who also got involved with OSM on its own account. So I am not the one who is going to answer this question, ESRI is...</p>
 </div>
 <div id="comment-46805-info" class="comment-info">
 <span class="comment-age">(23 Nov '15, 22:45)</span> <span class="comment-user userinfo">mboeringa</span>
@@ -228,7 +228,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1212/jostof">@jost</a> schouppe I would in general not rely on marketing copy for correct legal advice, and besides the point you raise (that they might not actually have the necessary rights to grant usage by us), they don't actually really say that you can use it from a legal pov.</p>
+<p><a href="https://help.openstreetmap.org/users/1212/jostof">@jost</a> schouppe I would in general not rely on marketing copy for correct legal advice, and besides the point you raise (that they might not actually have the necessary rights to grant usage by us), they don't actually really say that you can use it from a legal pov.</p>
 </div>
 <div id="comment-46660-info" class="comment-info">
 <span class="comment-age">(17 Nov '15, 14:48)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -264,7 +264,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> : there is an answer, but not quite convincing. I think anything short of an explicit permission for OSM tracing from both Esri and the "community maps" data providers would be unsatisfactory, right?</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> : there is an answer, but not quite convincing. I think anything short of an explicit permission for OSM tracing from both Esri and the "community maps" data providers would be unsatisfactory, right?</p>
 </div>
 <div id="comment-46699-info" class="comment-info">
 <span class="comment-age">(19 Nov '15, 07:42)</span> <span class="comment-user userinfo">joost schouppe</span>

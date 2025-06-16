@@ -115,8 +115,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not everything shows up immediately; have a look at <a href="https://help.openstreetmap.org/questions/5865/newly-saved-roads-not-showing-up-in-view-tab">this previous question</a> for one possible explanation. If you <a href="https://help.openstreetmap.org/search/?q=visible&amp;Submit=Search&amp;t=question">search the help site for "visible"</a> you'll see some other questions and answers that may help.</p>
-<p>You can see your edits <a href="http://www.openstreetmap.org/user/Wave68/edits">here</a>. If I click through to <a href="http://www.openstreetmap.org/browse/way/224731341">one item in there</a> I can <a href="http://www.openstreetmap.org/?way=224731341">see it on the main OSM map</a>.</p>
+<p>Not everything shows up immediately; have a look at <a href="/questions/5865/newly-saved-roads-not-showing-up-in-view-tab">this previous question</a> for one possible explanation. If you <a href="https://help.openstreetmap.org/search/?q=visible&amp;Submit=Search&amp;t=question">search the help site for "visible"</a> you'll see some other questions and answers that may help.</p>
+<p>You can see your edits <a href="https://www.openstreetmap.org/user/Wave68/edits">here</a>. If I click through to <a href="https://www.openstreetmap.org/browse/way/224731341">one item in there</a> I can <a href="https://www.openstreetmap.org/?way=224731341">see it on the main OSM map</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

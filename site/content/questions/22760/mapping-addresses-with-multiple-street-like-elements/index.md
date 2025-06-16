@@ -45,7 +45,7 @@ osqa_accepted = false
 <li>8, <strong>The Galeb</strong>, <strong>Leen Court</strong>, Leen Gate, Nottingham</li>
 </ul>
 <p>The former is a retail unit in part of what was a railway station. The other is a block of flats in an old factory where each staircase of flat has a separate name: there are multiple flats sharing the no. 8 in the building, so the entire address is required.</p>
-<p>I'd be interested in suggestions as to how to map these in such a way to maintain reasonable compatibility with the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema">Karlsruhe Schema</a> other than using the <code>addr:full</code> tag.</p>
+<p>I'd be interested in suggestions as to how to map these in such a way to maintain reasonable compatibility with the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema">Karlsruhe Schema</a> other than using the <code>addr:full</code> tag.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-address" rel="tag" title="see questions tagged &#39;address&#39;">address</span> <span class="post-tag tag-link-streetnames" rel="tag" title="see questions tagged &#39;streetnames&#39;">streetnames</span> <span class="post-tag tag-link-karlsruhe" rel="tag" title="see questions tagged &#39;karlsruhe&#39;">karlsruhe</span> <span class="post-tag tag-link-schema" rel="tag" title="see questions tagged &#39;schema&#39;">schema</span>
@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The bold parts are names of (parts of) buildings, so I would put them in the addr:housename tag. I wouldn't worry too much about the "or" in the proposal in "housename or housenumber", as I can't find the "or" on the <a href="http://wiki.openstreetmap.org/wiki/Key:addr">feature page</a>.</p>
+<p>The bold parts are names of (parts of) buildings, so I would put them in the addr:housename tag. I wouldn't worry too much about the "or" in the proposal in "housename or housenumber", as I can't find the "or" on the <a href="https://wiki.openstreetmap.org/wiki/Key:addr">feature page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

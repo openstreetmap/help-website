@@ -172,7 +172,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>People sometimes use a <a href="http://wiki.openstreetmap.org/wiki/Relation">relation</a> for this. A relation is a grouping of several simple objects; in this case you would make your three ways members of the relation, and tag the relation <a href="http://wiki.openstreetmap.org/wiki/Relation:street">"type=street"</a> and "name=Rua Santo António da Glória". This is a good way to say that these three bits form one and the same road. However, this is not very common, and thus most software does not work well with such modeling. For example, JOSM is likely to warn you about a "street with no name" when you upload, and the main page Mapnik rendering will not show the name either.</p>
+<p>People sometimes use a <a href="https://wiki.openstreetmap.org/wiki/Relation">relation</a> for this. A relation is a grouping of several simple objects; in this case you would make your three ways members of the relation, and tag the relation <a href="https://wiki.openstreetmap.org/wiki/Relation:street">"type=street"</a> and "name=Rua Santo António da Glória". This is a good way to say that these three bits form one and the same road. However, this is not very common, and thus most software does not work well with such modeling. For example, JOSM is likely to warn you about a "street with no name" when you upload, and the main page Mapnik rendering will not show the name either.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

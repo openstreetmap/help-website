@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The web site on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> does not have a dedicated coordinate input field, but you can easily construct an URL that gets you to a set of coordinates by writing</p>
-<p><a href="http://www.openstreetmap.org/?mlat=">http://www.openstreetmap.org/?mlat=</a><em>latitude</em>&amp;mlon=<em>longitude</em>&amp;zoom=12</p>
+<p><a href="https://www.openstreetmap.org/?mlat=">https://www.openstreetmap.org/?mlat=</a><em>latitude</em>&amp;mlon=<em>longitude</em>&amp;zoom=12</p>
 <p>You can also enter <em>latitude</em>,<em>longitude</em> in the search box which will then present you with a pseudo "search result" consisting of exactly such a link.</p>
 <p>It would be trivial to set up your own OpenLayers web site that has a dedicated latitude/longitude input box if that is important to you.</p>
 </div>
@@ -186,7 +186,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I am glad for all the answers, and i know that osm.org is not a website, it`s a database.</p>
 <p><span>@Frederik</span> i am saying strong statements because i`m sick of seeing people contributing to the wrong project (by wrong i reffer to closed sourced ) instead of osm because they will not use 10 different websites when they could use only one.</p>
-<p>I do workshops and presentations where i present osm and the advantages, asked the romanian users of google map maker why they contribute,etc. As i posted in my diary, a osm website 2.0 it`s useful. <a href="http://www.openstreetmap.org/user/baditaflorin/diary/16914">http://www.openstreetmap.org/user/baditaflorin/diary/16914</a></p>
+<p>I do workshops and presentations where i present osm and the advantages, asked the romanian users of google map maker why they contribute,etc. As i posted in my diary, a osm website 2.0 it`s useful. <a href="https://www.openstreetmap.org/user/baditaflorin/diary/16914">https://www.openstreetmap.org/user/baditaflorin/diary/16914</a></p>
 </div>
 <div id="comment-16083-info" class="comment-info">
 <span class="comment-age">(14 Sep '12, 14:05)</span> <span class="comment-user userinfo">Badita Florin</span>
@@ -228,7 +228,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the map page you will have something like this <a href="http://www.openstreetmap.org/#map=9/-38.3266/144.8781">http://www.openstreetmap.org/#map=9/-38.3266/144.8781</a></p>
+<p>On the map page you will have something like this <a href="https://www.openstreetmap.org/#map=9/-38.3266/144.8781">https://www.openstreetmap.org/#map=9/-38.3266/144.8781</a></p>
 <p>just edit the latitude and longitude. and the map can jump to the new location.</p>
 <p>note negative is used for west and south and positive for north and east. If you wish convert Degrees Minutes and seconds to decimal degrees then you can use this site <a href="http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html">http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html</a> (note link not working now) minutes are 1/60 of a degree and seconds are 1/60 of a minute.... you'll need to do the maths. So 52 : 25 : 46 would become 52 + 25/60 + 46/3600 decimal degrees for example.</p>
 </div>
@@ -462,7 +462,7 @@ osqa_accepted = false
 <div id="post-60076-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?mlat=53.9027&amp;mlon=-1.2717&amp;layers=C">http://www.openstreetmap.org/?mlat=53.9027&amp;mlon=-1.2717&amp;layers=C</a> ?</p>
+<p><a href="https://www.openstreetmap.org/?mlat=53.9027&amp;mlon=-1.2717&amp;layers=C">https://www.openstreetmap.org/?mlat=53.9027&amp;mlon=-1.2717&amp;layers=C</a> ?</p>
 </div>
 <div id="comment-60076-info" class="comment-info">
 <span class="comment-age">(12 Oct '17, 07:04)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I added bike routes to my locale. It clutters the map. Now I can’t get rid of them. Any ideas? Thanks<img src="https://help.openstreetmap.org/upfiles/2AB80E9E-950C-471A-895F-1F4BC48A401B.png" alt="link text" /></p>
+<p>I added bike routes to my locale. It clutters the map. Now I can’t get rid of them. Any ideas? Thanks<img src="/upfiles/2AB80E9E-950C-471A-895F-1F4BC48A401B.png" alt="link text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-routes" rel="tag" title="see questions tagged &#39;routes&#39;">routes</span> <span class="post-tag tag-link-maps.me" rel="tag" title="see questions tagged &#39;maps.me&#39;">maps.me</span> <span class="post-tag tag-link-bike" rel="tag" title="see questions tagged &#39;bike&#39;">bike</span> <span class="post-tag tag-link-remove" rel="tag" title="see questions tagged &#39;remove&#39;">remove</span>

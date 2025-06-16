@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/aeZVbG7hsoA.jpg" alt="alt text" /> У меня вопрос, почему прошло уже пять месяцев а заметка до сих пор не обработана ????????????</p>
+<p><img src="/upfiles/aeZVbG7hsoA.jpg" alt="alt text" /> У меня вопрос, почему прошло уже пять месяцев а заметка до сих пор не обработана ????????????</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lang-ru" rel="tag" title="see questions tagged &#39;lang-ru&#39;">lang-ru</span> <span class="post-tag tag-link-notes" rel="tag" title="see questions tagged &#39;notes&#39;">notes</span> <span class="post-tag tag-link-заметка" rel="tag" title="see questions tagged &#39;заметка&#39;">заметка</span>

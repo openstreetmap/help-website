@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try "<a href="http://wiki.openstreetmap.org/wiki/Api06#Ways_for_node:_GET_.2Fapi.2F0.6.2Fnode.2F.23id.2Fways">ways for node</a>" perhaps.</p>
+<p>Try "<a href="https://wiki.openstreetmap.org/wiki/Api06#Ways_for_node:_GET_.2Fapi.2F0.6.2Fnode.2F.23id.2Fways">ways for node</a>" perhaps.</p>
 <p>Edit: Sorry, I read "in-familiar" as familiar. So, for example, for node 1818806301</p>
 <p><a href="http://api.openstreetmap.org/api/0.6/node/1818806301/ways">http://api.openstreetmap.org/api/0.6/node/1818806301/ways</a></p>
 </div>

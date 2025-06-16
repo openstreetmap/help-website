@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes it is normal. It is due to the fact that there is no one update, but an on-demand per tile updating mechanism that is sometimes overloaded. Have a look at <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> for a more detailed answer</p>
+<p>Yes it is normal. It is due to the fact that there is no one update, but an on-demand per tile updating mechanism that is sometimes overloaded. Have a look at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> for a more detailed answer</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -217,7 +217,7 @@ osqa_accepted = false
 <p><img src="/upfiles/OSMedit.gif" alt="alt text" /></p>
 <p>The selected one and the one slightly to its upper left are both ruins, with the same tag as shown, just different names. The other, to the left, is a "No Entry" tag at the end point of a way.</p>
 <p>Here is the link to the map.</p>
-<p><a href="http://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=-34.21&amp;lon=18.445&amp;zoom=15&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -238,7 +238,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>How do you think the map should look like? As already explained, not every feature will get rendered. For example <a href="http://wiki.openstreetmap.org/wiki/Key:historic">historic=ruins</a> will not, as can be seen at the wiki. Consequently, also the names of the ruins won't show up in mapnik, but they do in the osmarender layer.</p>
+<p>How do you think the map should look like? As already explained, not every feature will get rendered. For example <a href="https://wiki.openstreetmap.org/wiki/Key:historic">historic=ruins</a> will not, as can be seen at the wiki. Consequently, also the names of the ruins won't show up in mapnik, but they do in the osmarender layer.</p>
 </div>
 <div id="comment-1214-info" class="comment-info">
 <span class="comment-age">(17 Oct '10, 11:30)</span> <span class="comment-user userinfo">scai ♦</span>

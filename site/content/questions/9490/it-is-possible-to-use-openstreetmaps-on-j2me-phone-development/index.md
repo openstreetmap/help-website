@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes it is possible - see <a href="http://wiki.openstreetmap.org/wiki/Software/J2ME">this list</a>.</p>
+<p>Yes it is possible - see <a href="https://wiki.openstreetmap.org/wiki/Software/J2ME">this list</a>.</p>
 <p>But apart from that part of your question, all the answers to your previous question about doing the same on Android still apply.</p>
 </div>
 <div class="answer-controls post-controls">

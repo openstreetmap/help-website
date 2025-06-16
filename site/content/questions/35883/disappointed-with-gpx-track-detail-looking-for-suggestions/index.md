@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-36499-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have used 3 Garmins, a yellow Etrex, a Vista HCX and an Oregon 450, I have also used a Motorola Defy, Out of town they have all recorded good traces. The Oregon gets a fix within 30 seconds of putting in batteries and switching on.to see quality of my traces <a href="http://www.openstreetmap.org/user/andy%20mackey/traces">http://www.openstreetmap.org/user/andy%20mackey/traces</a> and all the Garmins work as well as when new.</p>
+<p>I have used 3 Garmins, a yellow Etrex, a Vista HCX and an Oregon 450, I have also used a Motorola Defy, Out of town they have all recorded good traces. The Oregon gets a fix within 30 seconds of putting in batteries and switching on.to see quality of my traces <a href="https://www.openstreetmap.org/user/andy%20mackey/traces">https://www.openstreetmap.org/user/andy%20mackey/traces</a> and all the Garmins work as well as when new.</p>
 </div>
 <div id="comment-36499-info" class="comment-info">
 <span class="comment-age">(02 Sep '14, 10:30)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -124,7 +124,7 @@ osqa_accepted = false
 <p>I have been quite happy with the free Maprika app on the iphone. I use my etrex which has a 'most often' gpx points setting and sometimes start a gpx track Maprika too and there is very little difference in the track detail so far, though the extrex is better and this may be more apparent in gps challenged terrain. I have noticed that starting a track in MotionX-gps and Maprika at the same time 'seems' to result in a better track, but I suspect this could well be nonsense and just my imagination running a bit wild.<br />
 You need to use satellite imagery in addition to the gpx tracks if possible for finer details or refining the map at a later date when suitable imagery becomes available.<br />
 Here are a couple of cycling examples (Maprika in red, etrex 30 in blue)<br />
-<img src="http://help.openstreetmap.org/upfiles/ex1.png" alt="one" /> <img src="http://help.openstreetmap.org/upfiles/ex2.png" alt="two" /></p>
+<img src="/upfiles/ex1.png" alt="one" /> <img src="/upfiles/ex2.png" alt="two" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

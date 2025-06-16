@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>How can I scale the JOSM GUI so its a bit more readable on a high resolution screen? See the attached picture for an illustration.</p>
 <p>I'm guessing it might be some java environment variables, but which, and where do I set them?</p>
 <p>I'm using Ubuntu 17.10.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/JOSM4k.png" width="400" height="225" /></p>
+<p><img src="/upfiles/JOSM4k.png" width="400" height="225" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-gui" rel="tag" title="see questions tagged &#39;gui&#39;">gui</span> <span class="post-tag tag-link-hidpi" rel="tag" title="see questions tagged &#39;hidpi&#39;">hidpi</span> <span class="post-tag tag-link-uhd" rel="tag" title="see questions tagged &#39;uhd&#39;">uhd</span> <span class="post-tag tag-link-4k" rel="tag" title="see questions tagged &#39;4k&#39;">4k</span>

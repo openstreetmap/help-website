@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Of the <a href="http://taginfo.openstreetmap.org/keys/landuse#values">tags in use</a>, I'd probably go for "landuse=commercial" rather than industrial. Alternatively, you could have a look at similar facilities like <a href="http://www.openstreetmap.org/?lat=51.65813&amp;lon=-1.22863&amp;zoom=16&amp;layers=M">this one</a> (no clues there though), or pick something yourself that seems appropriate.</p>
+<p>Of the <a href="http://taginfo.openstreetmap.org/keys/landuse#values">tags in use</a>, I'd probably go for "landuse=commercial" rather than industrial. Alternatively, you could have a look at similar facilities like <a href="https://www.openstreetmap.org/?lat=51.65813&amp;lon=-1.22863&amp;zoom=16&amp;layers=M">this one</a> (no clues there though), or pick something yourself that seems appropriate.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

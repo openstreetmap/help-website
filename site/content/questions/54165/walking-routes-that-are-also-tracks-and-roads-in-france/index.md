@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I asked a similar question, the answers could help you as well. <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
+<p>I asked a similar question, the answers could help you as well. <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
 </div>
 <div id="comment-54171-info" class="comment-info">
 <span class="comment-age">(19 Jan '17, 19:05)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -224,7 +224,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This illustrates how you create a route relation with Potlatch2 <img src="http://help.openstreetmap.org/upfiles/Potlatch2_route_relation.JPG" alt="alt text" /></p>
+<p>This illustrates how you create a route relation with Potlatch2 <img src="/upfiles/Potlatch2_route_relation.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

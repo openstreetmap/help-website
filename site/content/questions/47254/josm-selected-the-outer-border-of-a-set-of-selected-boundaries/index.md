@@ -42,12 +42,12 @@ osqa_accepted = false
 <p>Bit of a niche question. I am mapping administrative boundaries that are build up of smaller admin bonders. It's a bit of a pain to manually select all the constituant ways all the way around the borders.</p>
 <p>If I have 4 admin relations selected, is there any way, in JOSM, to select only the outer ways, i.e. to deselect the duplicate, inner borders.</p>
 <p>For example, pretend I have these smaller admin areas:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/td-ex1.png" alt="alt text" /></p>
+<p><img src="/upfiles/td-ex1.png" alt="alt text" /></p>
 <p>And then I select these 4 boundaries (e.g. from the relation pane):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/td-ex2.png" alt="alt text" /></p>
+<p><img src="/upfiles/td-ex2.png" alt="alt text" /></p>
 <p>(Notice how the "inner boundaries" are selected too.</p>
 <p>Is there any JOSM feature/keypress/plugin that will turn that into this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/td-ex3.png" alt="alt text" /></p>
+<p><img src="/upfiles/td-ex3.png" alt="alt text" /></p>
 <p>Such that only the "outer border" is selected?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

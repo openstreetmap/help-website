@@ -115,7 +115,7 @@ osqa_accepted = false
 <p>First of all the general caveat. <strong>DO NOT MAP BIRD NESTING SITES</strong> unless they are extremely obvious and well-known.</p>
 <p>People steal bird's eggs (including at least one <a href="http://www.bbc.co.uk/news/uk-england-suffolk-20084944x">policeman</a> dedicated to protecting them). Other people shoot them. Most wildlife organisations do not even publicise breeding by certain birds until after fledging. Therefore improving the data available for these types of people should be avoided.</p>
 <p>That being said there are types of bird colonies, and a limited type of nest, specifically Stork's Nests, which can generally be mapped without impairing the safety of breeding success. The most obvious ones are : Sea-bird colonies of large size (such as the Gannetery at <a href="http://osm.org/go/ev1SqwcCI-">Bass Rock</a>, which was sufficiently well known 200+ years ago for Gannets to be named after it by Linneaus - <em>Sula bassana</em>); some colonial raptor breeding sites in protected areas (such as <a href="http://osm.org/go/b8rOEldE">Peña Halcón</a> at National Parque de Monfraque); and possibly Heronries and Rookeries. A useful rule is that if the quantity of guano is still obvious outside the nesting season then the place is likely to be well-known.</p>
-<p>I think one or two have been mapped but I cant find how they were tagged, but this seems to me to a good case of <a href="http://wiki.openstreetmap.org/wiki/Duck_tagging">duck-tagging</a> (pun intended), so I would suggest <strong><code>natural=bird_colony</code></strong>, with suitable <code>taxon=*</code> or genus/species tags.</p>
+<p>I think one or two have been mapped but I cant find how they were tagged, but this seems to me to a good case of <a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">duck-tagging</a> (pun intended), so I would suggest <strong><code>natural=bird_colony</code></strong>, with suitable <code>taxon=*</code> or genus/species tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,7 +177,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could try using <a href="http://wiki.openstreetmap.org/wiki/Key:taxon">http://wiki.openstreetmap.org/wiki/Key:taxon</a> or <a href="http://wiki.openstreetmap.org/wiki/Key:habitat">http://wiki.openstreetmap.org/wiki/Key:habitat</a> , although they seem to focus on plants.</p>
+<p>You could try using <a href="https://wiki.openstreetmap.org/wiki/Key:taxon">https://wiki.openstreetmap.org/wiki/Key:taxon</a> or <a href="https://wiki.openstreetmap.org/wiki/Key:habitat">https://wiki.openstreetmap.org/wiki/Key:habitat</a> , although they seem to focus on plants.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

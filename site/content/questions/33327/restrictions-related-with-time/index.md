@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Conditional restrictions already exist: <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">http://wiki.openstreetmap.org/wiki/Conditional_restrictions</a></p>
+<p>Conditional restrictions already exist: <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">https://wiki.openstreetmap.org/wiki/Conditional_restrictions</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

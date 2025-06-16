@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How avoiding double housenumbers, and how forcing missing icon?"
-description = '''Hi everybody,  as of Oct. 4, 2013 in the following map: http://www.openstreetmap.org/#map=19/52.48565/13.38569 you see the house number twice, but you do not see the  actual icon for the laundry. How do I force an icon to  be visible, and how do I avoid double house numbers  (building without number...'''
+description = '''Hi everybody,  as of Oct. 4, 2013 in the following map: https://www.openstreetmap.org/#map=19/52.48565/13.38569 you see the house number twice, but you do not see the  actual icon for the laundry. How do I force an icon to  be visible, and how do I avoid double house numbers  (building without number...'''
 date = "2013-10-04T15:41:00Z"
 lastmod = "2013-10-05T17:02:00Z"
 weight = 26950
@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi everybody,</p>
-<p>as of Oct. 4, 2013 in the following map: <a href="http://www.openstreetmap.org/#map=19/52.48565/13.38569">http://www.openstreetmap.org/#map=19/52.48565/13.38569</a> you see the house number twice, but you do not see the actual icon for the laundry. How do I force an icon to be visible, and how do I avoid double house numbers (building without number, knot with house number, and specific facility in the same place with house number but without knot)?</p>
+<p>as of Oct. 4, 2013 in the following map: <a href="https://www.openstreetmap.org/#map=19/52.48565/13.38569">https://www.openstreetmap.org/#map=19/52.48565/13.38569</a> you see the house number twice, but you do not see the actual icon for the laundry. How do I force an icon to be visible, and how do I avoid double house numbers (building without number, knot with house number, and specific facility in the same place with house number but without knot)?</p>
 <p>Thanks</p>
 <p>--</p>
 <p>I'll mark this as resolved by Wednesday, I guess</p>
@@ -119,7 +119,7 @@ One Answer:
 <p>The building has been tagged using address interpolation to give a # 124. The laundry has also been given an address # 124. Probably only solution is to delete the # 124 on the laundry tag leaving the other one if you prefer that. I think I would prefer to leave as is because we shouldn't leave out info to please the renderer?</p>
 <p>The renderer (in the link above the openstreetmap.org mapnik version) does not display the laundry tag (It also does not display other tags such as a bench I think) All the renderers have a different priority with types of things they display and how it is displayed depending on their particular target users.</p>
 <p>But be assured that you data is valued elsewhere. The maps would be too cluttered if everything was displayed on the map. It would be ideal if the renderer was able to work out that 2 # 124's on the same building and it was unnecessary to display both and choose to use just one of them but it seems not clever enough yet.</p>
-<p>There is another reason that the map may not display immediately something that you have edited as a good explanation is here <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></p>
+<p>There is another reason that the map may not display immediately something that you have edited as a good explanation is here <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

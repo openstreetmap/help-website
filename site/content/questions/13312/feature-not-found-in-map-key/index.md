@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Feature not found in Map Key"
-description = '''With reference the following  http://www.openstreetmap.org/?minlon=-1.4948992729187&amp;amp;minlat=52.4003982543945&amp;amp;maxlon=-1.49384331703186&amp;amp;maxlat=52.4012298583984 zoomed to -1 of maximum zoom, I cannot find the reference to the grey dashed line in the Map Key. Not unless this line is represent...'''
+description = '''With reference the following  https://www.openstreetmap.org/?minlon=-1.4948992729187&amp;amp;minlat=52.4003982543945&amp;amp;maxlon=-1.49384331703186&amp;amp;maxlat=52.4012298583984 zoomed to -1 of maximum zoom, I cannot find the reference to the grey dashed line in the Map Key. Not unless this line is represent...'''
 date = "2012-06-07T19:45:00Z"
 lastmod = "2012-06-07T20:09:00Z"
 weight = 13312
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>With reference the following</p>
-<p><a href="http://www.openstreetmap.org/?minlon=-1.4948992729187&amp;minlat=52.4003982543945&amp;maxlon=-1.49384331703186&amp;maxlat=52.4012298583984">http://www.openstreetmap.org/?minlon=-1.4948992729187&amp;minlat=52.4003982543945&amp;maxlon=-1.49384331703186&amp;maxlat=52.4012298583984</a></p>
+<p><a href="https://www.openstreetmap.org/?minlon=-1.4948992729187&amp;minlat=52.4003982543945&amp;maxlon=-1.49384331703186&amp;maxlat=52.4012298583984">https://www.openstreetmap.org/?minlon=-1.4948992729187&amp;minlat=52.4003982543945&amp;maxlon=-1.49384331703186&amp;maxlat=52.4012298583984</a></p>
 <p>zoomed to -1 of maximum zoom, I cannot find the reference to the grey dashed line in the Map Key. Not unless this line is represented by 'Track' but this looks like a dark purple colour rather than grey.</p>
 <p>Please advise</p>
 </div>
@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's a "<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a>". You can find that out by selecting "browse map data" from below the "edit" menu and clicking on it. Basically, it's something that's not wide enough to be a track (i.e. not wide enough for a four-wheeled vehicle), and normally other tags provide other information (Are you allowed to walk down it? Cycle along it?) but in this case there aren't any. There has been some discussion over the use of highway=path vs e.g. highway=footway - if you're interested you can search the mailing lists and the wiki for that.</p>
+<p>It's a "<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a>". You can find that out by selecting "browse map data" from below the "edit" menu and clicking on it. Basically, it's something that's not wide enough to be a track (i.e. not wide enough for a four-wheeled vehicle), and normally other tags provide other information (Are you allowed to walk down it? Cycle along it?) but in this case there aren't any. There has been some discussion over the use of highway=path vs e.g. highway=footway - if you're interested you can search the mailing lists and the wiki for that.</p>
 <p>It does appear to be missing from the map key. If you want to see if anyone's logged this as a bug before, you can search <a href="https://trac.openstreetmap.org/">trac</a> for it, and if they haven't, log a bug there against component "mapnik". However, the usual caveat applies - the maintainers are all volunteers, and might not get around to adding it to the map key immediately.</p>
 </div>
 <div class="answer-controls post-controls">

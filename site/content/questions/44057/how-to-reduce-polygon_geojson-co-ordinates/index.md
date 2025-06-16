@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-44060-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: yes. An algorithm for simplifying a polygon is fine. For example <a href="http://nominatim.openstreetmap.org/search?q=India&amp;polygon_geojson=1&amp;format=json">http://nominatim.openstreetmap.org/search?q=India&amp;polygon_geojson=1&amp;format=json</a> The above url gives 1.5MB data. I want to reduce co-ordinates and the size to around 200kb.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: yes. An algorithm for simplifying a polygon is fine. For example <a href="http://nominatim.openstreetmap.org/search?q=India&amp;polygon_geojson=1&amp;format=json">http://nominatim.openstreetmap.org/search?q=India&amp;polygon_geojson=1&amp;format=json</a> The above url gives 1.5MB data. I want to reduce co-ordinates and the size to around 200kb.</p>
 </div>
 <div id="comment-44060-info" class="comment-info">
 <span class="comment-age">(09 Jul '15, 10:35)</span> <span class="comment-user userinfo">Rajavelu_M</span>

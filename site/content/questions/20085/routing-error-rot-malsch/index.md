@@ -177,7 +177,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Then I guess all those routing engines handle bicycle=dismount the same way as bicycle=no and try to avoid the bridge. This is a problem if those routers, you shouldn't change the tag because it is correct.</p>
-<p>By the way I saw you added a name tag to the <a href="http://www.openstreetmap.org/browse/way/24581166">bridge</a>. This tag is only for the <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only"><em>official</em> name</a> of the object and not for a description. Use the <a href="https://wiki.openstreetmap.org/wiki/Key:description">description</a> or <a href="https://wiki.openstreetmap.org/wiki/Key:note">note</a> tag instead.</p>
+<p>By the way I saw you added a name tag to the <a href="https://www.openstreetmap.org/browse/way/24581166">bridge</a>. This tag is only for the <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only"><em>official</em> name</a> of the object and not for a description. Use the <a href="https://wiki.openstreetmap.org/wiki/Key:description">description</a> or <a href="https://wiki.openstreetmap.org/wiki/Key:note">note</a> tag instead.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -143,8 +143,8 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>or see <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
-<p>Also you can try to install an own instance of <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> on your own hardware where you can import a clone of OSM main database and make queries as many as you want.</p>
+<p>or see <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
+<p>Also you can try to install an own instance of <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> on your own hardware where you can import a clone of OSM main database and make queries as many as you want.</p>
 </div>
 <div id="comment-37393-info" class="comment-info">
 <span class="comment-age">(07 Oct '14, 17:18)</span> <span class="comment-user userinfo">stephan75</span>

@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To reveal a software with that features you can have a look at the <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">OSM wiki (Software/Desktop)</a> and sort the first table there for the column "Mac versions".</p>
+<p>To reveal a software with that features you can have a look at the <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">OSM wiki (Software/Desktop)</a> and sort the first table there for the column "Mac versions".</p>
 <p>Then scroll down that wiki page to find the table for Map Display features. Look at the column "Stores map-data on-board" ... any result?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -172,7 +172,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>QGIS may be more than you want, but it can import/export gpx and kml, and download and edit OSM data. See <a href="http://wiki.openstreetmap.org/wiki/QGIS">http://wiki.openstreetmap.org/wiki/QGIS</a></p>
+<p>QGIS may be more than you want, but it can import/export gpx and kml, and download and edit OSM data. See <a href="https://wiki.openstreetmap.org/wiki/QGIS">https://wiki.openstreetmap.org/wiki/QGIS</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -121,7 +121,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you can see your added data in edit mode it will show in a day or so, if you have tagged it correctly. Zooming in and out will probably show it at some zoom levels. If you post a change set or the url like this one of your work someone will, i guess look at it for you. <a href="https://www.openstreetmap.org/#map=17/52.33410/-0.25001">https://www.openstreetmap.org/#map=17/52.33410/-0.25001</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/the_URL.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/the_URL.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "error in OSM? New motorway appeared"
-description = '''Hi A new &#x27;motorway&#x27; has appeared near Wythenshaw Manchester, UK. It&#x27;s in the shape of a &#x27;D&#x27; and has no roads at it&#x27;s start or finish. You can see it at: http://www.openstreetmap.org/#map=14/53.4009/-2.2709 I presume it&#x27;s been added erroneously'''
+description = '''Hi A new &#x27;motorway&#x27; has appeared near Wythenshaw Manchester, UK. It&#x27;s in the shape of a &#x27;D&#x27; and has no roads at it&#x27;s start or finish. You can see it at: https://www.openstreetmap.org/#map=14/53.4009/-2.2709 I presume it&#x27;s been added erroneously'''
 date = "2014-08-18T18:42:00Z"
 lastmod = "2014-08-19T16:24:00Z"
 weight = 35960
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi A <a href="http://www.openstreetmap.org/way/298216984">new 'motorway'</a> has appeared near Wythenshaw Manchester, UK. It's in the shape of a 'D' and has no roads at it's start or finish. You can see it at: <a href="http://www.openstreetmap.org/#map=14/53.4009/-2.2709">http://www.openstreetmap.org/#map=14/53.4009/-2.2709</a></p>
+<p>Hi A <a href="https://www.openstreetmap.org/way/298216984">new 'motorway'</a> has appeared near Wythenshaw Manchester, UK. It's in the shape of a 'D' and has no roads at it's start or finish. You can see it at: <a href="https://www.openstreetmap.org/#map=14/53.4009/-2.2709">https://www.openstreetmap.org/#map=14/53.4009/-2.2709</a></p>
 <p>I presume it's been added erroneously</p>
 </div>
 <div id="question-tags" class="tags-container tags">

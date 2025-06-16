@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It would probably be best to add your requests to this place on the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#Requests_for_additional_map_features">http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#Requests_for_additional_map_features</a></p>
+<p>It would probably be best to add your requests to this place on the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#Requests_for_additional_map_features">https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#Requests_for_additional_map_features</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

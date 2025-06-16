@@ -140,7 +140,7 @@ One Answer:
 <div id="post-17832-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/16121/road-link-disappear-when-zoomed-out">Yes</a></p>
+<p><a href="/questions/16121/road-link-disappear-when-zoomed-out">Yes</a></p>
 </div>
 <div id="comment-17832-info" class="comment-info">
 <span class="comment-age">(21 Nov '12, 00:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

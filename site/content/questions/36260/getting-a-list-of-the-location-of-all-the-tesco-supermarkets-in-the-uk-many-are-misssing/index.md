@@ -159,7 +159,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Non-exact_names">wiki page</a> suggests you can get names that start Tesco by changing <code>v=</code> to <code>regv=</code> if I've understood correctly.</p>
+<p>This <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Non-exact_names">wiki page</a> suggests you can get names that start Tesco by changing <code>v=</code> to <code>regv=</code> if I've understood correctly.</p>
 <p>Also, it looks like you are only querying named ways, rather than also checking node POIs and relations.</p>
 <p>Finally, I doubt all Tesco stores are mapped. <a href="http://taginfo.openstreetmap.org.uk/search?q=Tesco#values">Taginfo</a> can perhaps show you how many to expect</p>
 </div>
@@ -184,7 +184,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Given that I added one yesterday, I also doubt that it was the last one to be mapped! <a href="http://www.openstreetmap.org/node/3043305147">http://www.openstreetmap.org/node/3043305147</a></p>
+<p>Given that I added one yesterday, I also doubt that it was the last one to be mapped! <a href="https://www.openstreetmap.org/node/3043305147">https://www.openstreetmap.org/node/3043305147</a></p>
 </div>
 <div id="comment-36286-info" class="comment-info">
 <span class="comment-age">(27 Aug '14, 16:06)</span> <span class="comment-user userinfo">Andy Allan</span>

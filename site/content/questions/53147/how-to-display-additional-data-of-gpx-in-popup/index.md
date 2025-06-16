@@ -121,7 +121,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13028/amithanwate">@Amithanwate</a> Can you try and add a lot more detail to what you are asking above? We seem to be playing <a href="https://en.wikipedia.org/wiki/Twenty_Questions">"twenty questions"</a> here.</p>
+<p><a href="https://help.openstreetmap.org/users/13028/amithanwate">@Amithanwate</a> Can you try and add a lot more detail to what you are asking above? We seem to be playing <a href="https://en.wikipedia.org/wiki/Twenty_Questions">"twenty questions"</a> here.</p>
 </div>
 <div id="comment-53180-info" class="comment-info">
 <span class="comment-age">(30 Nov '16, 13:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -176,8 +176,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can accomplish the essence of what you want using <a href="http://wiki.openstreetmap.org/wiki/GpsPrune">GPSPrune</a> excepting the point info is at the top right box of screen. Selecting the earth icon displays the OSM.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2016-11-29_at_3.58.56_PM.png" alt="screenshot" /></p>
+<p>You can accomplish the essence of what you want using <a href="https://wiki.openstreetmap.org/wiki/GpsPrune">GPSPrune</a> excepting the point info is at the top right box of screen. Selecting the earth icon displays the OSM.</p>
+<p><img src="/upfiles/Screen_Shot_2016-11-29_at_3.58.56_PM.png" alt="screenshot" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

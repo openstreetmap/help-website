@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These should be tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Demergency_access_point"><code>highway=emergency_access_point</code></a></p>
+<p>These should be tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Demergency_access_point"><code>highway=emergency_access_point</code></a></p>
 <p>You can also add the tag for <code>ref</code> for the reference number on the sign.</p>
 </div>
 <div class="answer-controls post-controls">

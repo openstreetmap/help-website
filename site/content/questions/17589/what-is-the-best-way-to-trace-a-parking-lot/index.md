@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would draw a polygon of the hard area with the main service roads. Any paths or tracks should connect to the roads for routing purposes.Prices, retrictions,the number of spaces should be added and possibly height restrictions so hiking groups or camper vans may know it's suitable. I think adding all the lanes is a bit excessive but in some areas mappers do the lot and that is ok if consistant with other work in the area. see <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a></p>
+<p>I would draw a polygon of the hard area with the main service roads. Any paths or tracks should connect to the roads for routing purposes.Prices, retrictions,the number of spaces should be added and possibly height restrictions so hiking groups or camper vans may know it's suitable. I think adding all the lanes is a bit excessive but in some areas mappers do the lot and that is ok if consistant with other work in the area. see <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

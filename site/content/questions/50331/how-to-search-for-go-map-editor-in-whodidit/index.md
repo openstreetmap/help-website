@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I know how to search for edits made by maps.me users in whodidit by entering maps.me in the editor search box. I cannot find a way to search for Go Map!! edits. I've tried Go Map!! "Go Map!!", GoMap!, GoMap!!, gomap.</p>
 <p>whodidit is at <a href="http://simon04.dev.openstreetmap.org/whodidit/">http://simon04.dev.openstreetmap.org/whodidit/</a></p>
-<p>Go Map!! is an IOS editor for OSM <a href="http://wiki.openstreetmap.org/wiki/Go_Map!!">http://wiki.openstreetmap.org/wiki/Go_Map!!</a></p>
+<p>Go Map!! is an IOS editor for OSM <a href="https://wiki.openstreetmap.org/wiki/Go_Map!!">https://wiki.openstreetmap.org/wiki/Go_Map!!</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-whodidit" rel="tag" title="see questions tagged &#39;whodidit&#39;">whodidit</span>

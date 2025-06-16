@@ -215,7 +215,7 @@ nominatim module not built</code></pre>
 <pre><code>&lt;?php if (CONST_Search_AreaPolygons) { ?&gt;&lt;td style=&quot;width:100px;&quot;&gt;&lt;input type=&quot;checkbox&quot; value=&quot;1&quot; name=&quot;polygon&quot; &lt;?php if ($bSh$
 &lt;td style=&quot;text-align:right;&quot;&gt;Data: &lt;?php echo $sDataDate; ?&gt;&lt;/td&gt;
 &lt;td style=&quot;text-align:right;&quot;&gt;
-&lt;a href=&quot;http://wiki.openstreetmap.org/wiki/Nominatim&quot; target=&quot;_blank&quot;&gt;Documentation&lt;/a&gt; | &lt;a href=&quot;http://wiki.openstreetmap.org/wiki/Nominatim/FAQ&quot; 
+&lt;a href=&quot;https://wiki.openstreetmap.org/wiki/Nominatim&quot; target=&quot;_blank&quot;&gt;Documentation&lt;/a&gt; | &lt;a href=&quot;https://wiki.openstreetmap.org/wiki/Nominatim/FAQ&quot; 
 target=&quot;_blank&quot;&gt;FAQ&lt;/a&gt;&lt;/td&gt;</code></pre>
 <p>&lt;?php }</p>
 <p>Then i see on nominatim folder /setting/setting.php and i get that constanta have value :</p>

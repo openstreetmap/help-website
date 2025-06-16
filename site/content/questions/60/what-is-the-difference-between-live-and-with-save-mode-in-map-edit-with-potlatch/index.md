@@ -113,7 +113,7 @@ One Answer:
 <p>In "live" mode any changes you make are saved immediately to the OpenStreetMap server whenever you deselect an item -- this operates a lot like a very frequent autosave feature. In "save" mode Potlatch collects the changes together and does not save them until you click the "Save" button.</p>
 <p>If you are a new user then you will want to use the "save" mode. This way if you make mistakes while editing you can always abandon the changes and restart without affecting OpenStreetMap in any way.</p>
 <p>Once you gain more experience, and know what you are doing both with OpenStreetMap and Potlatch, then you might choose to use "live" mode. Edits are made on a regular basis and you can browse away from the edit page without fear of losing your edits. Many experienced users are still much happier using "save" mode though.</p>
-<p>For more information see the <a href="http://wiki.openstreetmap.org/wiki/Potlatch">Potlatch wiki page</a>.</p>
+<p>For more information see the <a href="https://wiki.openstreetmap.org/wiki/Potlatch">Potlatch wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

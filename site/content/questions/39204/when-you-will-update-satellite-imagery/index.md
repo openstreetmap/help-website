@@ -126,7 +126,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10130/k_aa">@K_AA</a>, if you'd like to help, perhaps you could negotiate with Yandex for us to be able to trace over their satellite imagery?</p>
+<p><a href="https://help.openstreetmap.org/users/10130/k_aa">@K_AA</a>, if you'd like to help, perhaps you could negotiate with Yandex for us to be able to trace over their satellite imagery?</p>
 </div>
 <div id="comment-39213-info" class="comment-info">
 <span class="comment-age">(11 Dec '14, 11:29)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/35399/help-finding-mapbox-satellite-imagery-request-web-page">help-finding-mapbox-satellite-imagery-request-web-page</a> ... you are not the first one asking for this ...</p>
+<p>See <a href="/questions/35399/help-finding-mapbox-satellite-imagery-request-web-page">help-finding-mapbox-satellite-imagery-request-web-page</a> ... you are not the first one asking for this ...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

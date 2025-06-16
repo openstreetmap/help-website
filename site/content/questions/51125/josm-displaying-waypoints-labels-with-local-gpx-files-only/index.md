@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'd like to display waypoints labels for a GPX file inside JOSM. This post could be considered as a duplicate of <a href="https://help.openstreetmap.org/questions/37093/josm-gpx-not-displaying-waypoints">this post</a> but it is more about local vs. uploaded GPX files and the way that waypoints display in JOSM.</p>
+<p>I'd like to display waypoints labels for a GPX file inside JOSM. This post could be considered as a duplicate of <a href="/questions/37093/josm-gpx-not-displaying-waypoints">this post</a> but it is more about local vs. uploaded GPX files and the way that waypoints display in JOSM.</p>
 <p>I have uploaded on OSM server a GPX file containing both tracks and waypoints (<a href="https://www.openstreetmap.org/user/wiltomap/traces">see here</a> for testing, file name is <code>boulingrin_poitiers.gpx</code>). Waypoints are labelled with <code>name</code> tags (id number) and <code>desc</code> tags (custom name). JOSM perfectly displays either <code>name</code> or <code>desc</code> fields if I load the GPX file from my computer. On the other hand, it does not if I download the file in JOSM from OSM server. JOSM preferences for GPS Points are set identically for both cases...</p>
 <p>Could anybody try my file or have an idea on this issue?</p>
 </div>
@@ -66,7 +66,7 @@ osqa_accepted = true
 <div id="post-51131-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info what I see when I invoke "edit" from the traces list (with JOSM running and remote control enabled, and when on the http osm site)is that the "map" part of the edit URL is honoured (e.g. <a href="http://www.openstreetmap.org/edit?gpx=2160201#map=19/53.14600/-1.35612">http://www.openstreetmap.org/edit?gpx=2160201#map=19/53.14600/-1.35612</a> ) but not the "gpx" part - I don't see the GPS trace at all (no waypoints, no track - nothing).</p>
+<p>For info what I see when I invoke "edit" from the traces list (with JOSM running and remote control enabled, and when on the http osm site)is that the "map" part of the edit URL is honoured (e.g. <a href="https://www.openstreetmap.org/edit?gpx=2160201#map=19/53.14600/-1.35612">https://www.openstreetmap.org/edit?gpx=2160201#map=19/53.14600/-1.35612</a> ) but not the "gpx" part - I don't see the GPS trace at all (no waypoints, no track - nothing).</p>
 </div>
 <div id="comment-51131-info" class="comment-info">
 <span class="comment-age">(27 Jul '16, 11:07)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -145,7 +145,7 @@ One Answer:
 <div id="post-51141-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, this is the good way. I indeed used the "GPS raw data" option. I tested the "Open location" and it goes fine! I just had to modify the URL I gave in my post to follow your syntax: <a href="https://www.openstreetmap.org/user/wiltomap/traces"><code>https://www.openstreetmap.org/user/wiltomap/traces</code></a> becomes <a href="https://www.openstreetmap.org/trace/2210235/data"><code>https://www.openstreetmap.org/trace/2210235/data</code></a>.</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, this is the good way. I indeed used the "GPS raw data" option. I tested the "Open location" and it goes fine! I just had to modify the URL I gave in my post to follow your syntax: <a href="https://www.openstreetmap.org/user/wiltomap/traces"><code>https://www.openstreetmap.org/user/wiltomap/traces</code></a> becomes <a href="https://www.openstreetmap.org/trace/2210235/data"><code>https://www.openstreetmap.org/trace/2210235/data</code></a>.</p>
 </div>
 <div id="comment-51141-info" class="comment-info">
 <span class="comment-age">(28 Jul '16, 07:02)</span> <span class="comment-user userinfo">wiltomap</span>
@@ -156,7 +156,7 @@ One Answer:
 <div id="post-51142-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10989/wiltomap"></a><a href="http://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a>: Yes, the URL you need to provide is just the "Download" link on the uploaded gpx file's detail page (right click, copy link address).</p>
+<p><a href="https://help.openstreetmap.org/users/10989/wiltomap"></a><a href="https://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a>: Yes, the URL you need to provide is just the "Download" link on the uploaded gpx file's detail page (right click, copy link address).</p>
 </div>
 <div id="comment-51142-info" class="comment-info">
 <span class="comment-age">(28 Jul '16, 07:07)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -167,7 +167,7 @@ One Answer:
 <div id="post-51143-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a>: maybe this evening I will <em>think</em> about changing the description of the checkbox in JOSM from "GPS raw data" to "raw GPS traces (no waypoints)" (no, that's much too long), or something.</p>
+<p><a href="https://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a>: maybe this evening I will <em>think</em> about changing the description of the checkbox in JOSM from "GPS raw data" to "raw GPS traces (no waypoints)" (no, that's much too long), or something.</p>
 </div>
 <div id="comment-51143-info" class="comment-info">
 <span class="comment-age">(28 Jul '16, 07:18)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

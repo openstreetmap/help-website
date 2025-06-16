@@ -71,7 +71,7 @@ This question is marked "community wiki".
 <div id="post-67313-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>likely the same as <a href="https://help.openstreetmap.org/questions/58913/mapnik-svg-output-not-working">https://help.openstreetmap.org/questions/58913/mapnik-svg-output-not-working</a> (older) or <a href="https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports">https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports</a> (newer)</p>
+<p>likely the same as <a href="/questions/58913/mapnik-svg-output-not-working">https://help.openstreetmap.org/questions/58913/mapnik-svg-output-not-working</a> (older) or <a href="/questions/65497/is-there-any-change-in-svg-exports">https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports</a> (newer)</p>
 </div>
 <div id="comment-67313-info" class="comment-info">
 <span class="comment-age">(21 Dec '18, 22:06)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/2756/">how-do-i-change-a-street-name</a> is outdated since we have iD instead of Potlatch now. <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners's Guide</a> should be a good starting point. For the names of highways look at <a href="http://wiki.openstreetmap.org/wiki/Highways#Names_and_references">this wiki article</a>. What kind of wrong are they?</p>
+<p><a href="/questions/2756/">how-do-i-change-a-street-name</a> is outdated since we have iD instead of Potlatch now. <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners's Guide</a> should be a good starting point. For the names of highways look at <a href="https://wiki.openstreetmap.org/wiki/Highways#Names_and_references">this wiki article</a>. What kind of wrong are they?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

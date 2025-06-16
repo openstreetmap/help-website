@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The wiki and the tile-server seem to be unavailable, we've tried at multiple locations and even <a href="http://www.downforeveryoneorjustme.com/http://wiki.openstreetmap.org/">downforeveryoneorjustforme</a> says its down. The frontpage seems to work fine.</p>
+<p>The wiki and the tile-server seem to be unavailable, we've tried at multiple locations and even <a href="http://www.downforeveryoneorjustme.com/https://wiki.openstreetmap.org/">downforeveryoneorjustforme</a> says its down. The frontpage seems to work fine.</p>
 <p>Is this a known issue, and when will this be resolved?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may like to have a look at the <a href="http://wiki.openstreetmap.org/wiki/Australian_Roads_Tagging#Unsealed_and_4wd_Roads">Australian Tagging Guidelines</a> which incorporate 3 additional tracktype tags for 2WD/4WD useability. It is often a matter of high importance to have appropriate tags for road condition attributes as it may be a matter of survivability, and the smoothness tags and surface tags are simply not indicative enough.<br />
+<p>You may like to have a look at the <a href="https://wiki.openstreetmap.org/wiki/Australian_Roads_Tagging#Unsealed_and_4wd_Roads">Australian Tagging Guidelines</a> which incorporate 3 additional tracktype tags for 2WD/4WD useability. It is often a matter of high importance to have appropriate tags for road condition attributes as it may be a matter of survivability, and the smoothness tags and surface tags are simply not indicative enough.<br />
 </p>
 <p>The sheer size of the Australian continent precludes signage on the ground for the plethora of existing tracks, and we place high regard on the opinion of drivers who have gone before and rated these tracks. There are enough subsequent vehicles to provide ongoing verifiability of the track condition, as this is a constant requirement for a country where sand blowouts, storms and floods are relatively frequent.</p>
 <p>p.s. The 4WD sand track type that you mentioned occurs frequently throughout Australia.</p>
@@ -176,8 +176,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It depends on whether those tags would be based on some objective, <a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiable</a> criteria, or just your opinion. Are these roads signposted in some way, or otherwise designated by a local authority as only being suitable for high ground clearance/4wd vehicles, or do you just think they are.</p>
-<p>The existing <a href="http://wiki.openstreetmap.org/wiki/Tag:4wd_only%3Dyes"><code>4wd_only=*</code></a> tag should be used for roads that have been signposted that way, but not for roads where you just think you should use a 4wd. If another mapper comes along at a different time and thinks the road <em>doesn't</em> need a 4wd vehicle, the only way to resolve such a disagreement is to rely on what's "on the ground", so we need a sign present to use this tag.</p>
+<p>It depends on whether those tags would be based on some objective, <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiable</a> criteria, or just your opinion. Are these roads signposted in some way, or otherwise designated by a local authority as only being suitable for high ground clearance/4wd vehicles, or do you just think they are.</p>
+<p>The existing <a href="https://wiki.openstreetmap.org/wiki/Tag:4wd_only%3Dyes"><code>4wd_only=*</code></a> tag should be used for roads that have been signposted that way, but not for roads where you just think you should use a 4wd. If another mapper comes along at a different time and thinks the road <em>doesn't</em> need a 4wd vehicle, the only way to resolve such a disagreement is to rely on what's "on the ground", so we need a sign present to use this tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

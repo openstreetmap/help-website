@@ -108,7 +108,7 @@ osqa_accepted = false
 <div id="post-53768-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a> Thankyou for aiming to understand (: yes some of it is however it's really outdated, and when you do run into an issue it seems like you go down a rabbit trail for explanation.</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a> Thankyou for aiming to understand (: yes some of it is however it's really outdated, and when you do run into an issue it seems like you go down a rabbit trail for explanation.</p>
 </div>
 <div id="comment-53768-info" class="comment-info">
 <span class="comment-age">(30 Dec '16, 19:51)</span> <span class="comment-user userinfo">Jeflex</span>
@@ -119,7 +119,7 @@ osqa_accepted = false
 <div id="post-53769-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Thankyou for replying (: I'll contact the Google group for more assistance, but yes a lot of it is outdated and difficult to follow. Push come to shove I'll take initiative and begin a top to bottom run through because it's long overdue.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Thankyou for replying (: I'll contact the Google group for more assistance, but yes a lot of it is outdated and difficult to follow. Push come to shove I'll take initiative and begin a top to bottom run through because it's long overdue.</p>
 </div>
 <div id="comment-53769-info" class="comment-info">
 <span class="comment-age">(30 Dec '16, 19:58)</span> <span class="comment-user userinfo">Jeflex</span>

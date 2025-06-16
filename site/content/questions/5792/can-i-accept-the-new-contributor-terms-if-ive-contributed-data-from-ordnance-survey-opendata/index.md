@@ -40,8 +40,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've traced (to a limited extent) data from <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">Ordnance Survey OpenData</a>. Everything that I have added to the map derived from there is tagged either <code>source=OS_OpenData_StreetView</code> or <code>source:name=OS_OpenData_StreetView</code>. Because my contributions from the Ordnance Survey are fairly minimal, far more of my edits come from Bing for example, then it seems a shame to have to decline the new Contributor Terms and lose all my hard work.</p>
-<p><a href="http://help.openstreetmap.org/questions/624/can-i-use-or-trace-from-cc-by-data-under-the-new-contributor-terms">Some time ago</a> it was said that those who contributed data from OpenData couldn't accept the new Contributor Terms. I think I've heard since that the Ordnance Survey decided to release OpenData under the new OSM license, is that correct?</p>
+<p>I've traced (to a limited extent) data from <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">Ordnance Survey OpenData</a>. Everything that I have added to the map derived from there is tagged either <code>source=OS_OpenData_StreetView</code> or <code>source:name=OS_OpenData_StreetView</code>. Because my contributions from the Ordnance Survey are fairly minimal, far more of my edits come from Bing for example, then it seems a shame to have to decline the new Contributor Terms and lose all my hard work.</p>
+<p><a href="/questions/624/can-i-use-or-trace-from-cc-by-data-under-the-new-contributor-terms">Some time ago</a> it was said that those who contributed data from OpenData couldn't accept the new Contributor Terms. I think I've heard since that the Ordnance Survey decided to release OpenData under the new OSM license, is that correct?</p>
 <p>Seeing as in the next few days then I will be barred from editing if I don't accept the Contributor Terms, I'd like to ask: can I accept the new Contributor Terms if I've contributed data from Ordnance Survey OpenData?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

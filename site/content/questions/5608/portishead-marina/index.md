@@ -146,7 +146,7 @@ osqa_accepted = false
 <div id="post-5647-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Where do you get this from? Coastlines are even used for big lakes. The wiki ( <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a> ) has remarks for usage on non tidal waters, but the lock gates IMHO indicate that here are indeed tidal waters. I also don't think that a marina is necessarily a water area, instead it usually will have parts in the water and parts on land. The leisure=marina tag is about usage / function, not a physical tag (but it might have physical implications, agreed).</p>
+<p>Where do you get this from? Coastlines are even used for big lakes. The wiki ( <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a> ) has remarks for usage on non tidal waters, but the lock gates IMHO indicate that here are indeed tidal waters. I also don't think that a marina is necessarily a water area, instead it usually will have parts in the water and parts on land. The leisure=marina tag is about usage / function, not a physical tag (but it might have physical implications, agreed).</p>
 </div>
 <div id="comment-5647-info" class="comment-info">
 <span class="comment-age">(09 Jun '11, 11:48)</span> <span class="comment-user userinfo">dieterdreist</span>
@@ -224,7 +224,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can read more specific information about the tagging of a <a href="http://wiki.openstreetmap.org/wiki/Marina">marina</a> in the OSM wiki.</p>
+<p>You can read more specific information about the tagging of a <a href="https://wiki.openstreetmap.org/wiki/Marina">marina</a> in the OSM wiki.</p>
 <p>There are also some hints whethet the land elements or the water elements should be tagged with the marina key.</p>
 </div>
 <div class="answer-controls post-controls">

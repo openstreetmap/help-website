@@ -109,7 +109,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, a command-line Java application, will do this and more.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>, a command-line Java application, will do this and more.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Also try <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
+<p>Also try <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

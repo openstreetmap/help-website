@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>have a look at the similar question about <a href="http://help.openstreetmap.org/questions/7026/creating-reduced-detail-maps-to-use-in-pr-materials">creating-reduced-detail-maps-to-use-in-pr-materials</a></p>
+<p>have a look at the similar question about <a href="/questions/7026/creating-reduced-detail-maps-to-use-in-pr-materials">creating-reduced-detail-maps-to-use-in-pr-materials</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

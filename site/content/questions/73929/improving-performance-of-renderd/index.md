@@ -88,7 +88,7 @@ Apr  1 09:00:17 ip-172-30-0-160 renderd[30679]: DEBUG: DONE TILE ajt 6 40-47 16-
 FROM pg_stat_all_indexes 
 WHERE schemaname = &#39;public&#39; order by 1;</code></pre>
 <p>Here is the output</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2020-04-01_at_9.12.25_AM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2020-04-01_at_9.12.25_AM.png" alt="alt text" /></p>
 <p>Can anyone comment on my setup and / or suggest any way of speeding up Renderd/PostgreSQL?</p>
 <p>I also tried running render_list to pre-render tiles but it ran for several hours without giving me any indication that it was doing anything - there were no messages on the screen indicating any progress, and "ps -aux" indicated that the total time run by render_list was 0:00. Maybe I was looking in the wrong place for progress information?</p>
 </div>

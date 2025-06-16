@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mapnik not rendering riverbanks"
-description = '''The banks of part of the Chao Phraya River flowing through Bangkok, Thailand are missing from the Mapnik rendering (http://www.openstreetmap.org/?lat=13.6671&amp;amp;lon=100.5497&amp;amp;zoom=13&amp;amp;layers=M ). Map tiles older than August still show the proper rendering and they seem fine in Osmarender. The...'''
+description = '''The banks of part of the Chao Phraya River flowing through Bangkok, Thailand are missing from the Mapnik rendering (https://www.openstreetmap.org/?lat=13.6671&amp;amp;lon=100.5497&amp;amp;zoom=13&amp;amp;layers=M ). Map tiles older than August still show the proper rendering and they seem fine in Osmarender. The...'''
 date = "2011-09-06T18:47:00Z"
 lastmod = "2011-09-07T11:43:00Z"
 weight = 7692
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The banks of part of the Chao Phraya River flowing through Bangkok, Thailand are missing from the Mapnik rendering (<a href="http://www.openstreetmap.org/?lat=13.6671&amp;lon=100.5497&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=13.6671&amp;lon=100.5497&amp;zoom=13&amp;layers=M</a> ). Map tiles older than August still show the proper rendering and they seem fine in Osmarender. The ways/areas are tagged only with waterway=riverbank. What could be causing this?</p>
+<p>The banks of part of the Chao Phraya River flowing through Bangkok, Thailand are missing from the Mapnik rendering (<a href="https://www.openstreetmap.org/?lat=13.6671&amp;lon=100.5497&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=13.6671&amp;lon=100.5497&amp;zoom=13&amp;layers=M</a> ). Map tiles older than August still show the proper rendering and they seem fine in Osmarender. The ways/areas are tagged only with waterway=riverbank. What could be causing this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-riverbank" rel="tag" title="see questions tagged &#39;riverbank&#39;">riverbank</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>
@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-7702-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>rivers are natural water bodies and this is even mentioned on riverbank wiki article <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a></p>
+<p>rivers are natural water bodies and this is even mentioned on riverbank wiki article <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a></p>
 </div>
 <div id="comment-7702-info" class="comment-info">
 <span class="comment-age">(07 Sep '11, 10:16)</span> <span class="comment-user userinfo">LM_1</span>
@@ -152,8 +152,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you look carefully the <a href="http://www.openstreetmap.org/browse/way/23060205">way 23060205</a>, you may notice that the polyline is self-intersecting in the right upper corner. Such geometry errors can disturb software applications trying to convert closed ways to polygons like osm2pgsql/Mapnik. Fix the self-intersecting way and problem should be solved.</p>
-<p>Note that <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">some quality assurance tools</a> can report such errors.</p>
+<p>If you look carefully the <a href="https://www.openstreetmap.org/browse/way/23060205">way 23060205</a>, you may notice that the polyline is self-intersecting in the right upper corner. Such geometry errors can disturb software applications trying to convert closed ways to polygons like osm2pgsql/Mapnik. Fix the self-intersecting way and problem should be solved.</p>
+<p>Note that <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">some quality assurance tools</a> can report such errors.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are several broken multipolygon relations in that area, though I'm not sure if they would affect rendering of the river.</p>
-<p>See for example <a href="http://www.openstreetmap.org/browse/relation/1171990">Relation 1171990</a> and <a href="http://www.openstreetmap.org/browse/relation/1171991">Relation 1171991</a>. Both of these contain several ways which don't make closed areas, plus the parts with role inner are actually outside the polygon. Loading the area in JOSM and running the validator highlights these problems (plus more errors in that area).</p>
+<p>See for example <a href="https://www.openstreetmap.org/browse/relation/1171990">Relation 1171990</a> and <a href="https://www.openstreetmap.org/browse/relation/1171991">Relation 1171991</a>. Both of these contain several ways which don't make closed areas, plus the parts with role inner are actually outside the polygon. Loading the area in JOSM and running the validator highlights these problems (plus more errors in that area).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

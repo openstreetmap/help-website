@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Short answer: Because no-one has programmed that feature yet.</p>
-<p>Long answer: This is a <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks#Clickable_POIs_on_the_frontpage">long-term ambition for OSM</a>. However, the map rendering software that we use (Mapnik) does not currently support it: the feature is <a href="https://github.com/mapnik/mapnik/wiki/MetaWriter">currently disabled</a> in Mapnik and <a href="https://github.com/mapnik/mapnik/issues/1240">needs to be rewritten</a>. If you have software development skills and can lend them to the project, I'm sure the Mapnik team would be delighted to benefit from your help.</p>
+<p>Long answer: This is a <a href="https://wiki.openstreetmap.org/wiki/Top_Ten_Tasks#Clickable_POIs_on_the_frontpage">long-term ambition for OSM</a>. However, the map rendering software that we use (Mapnik) does not currently support it: the feature is <a href="https://github.com/mapnik/mapnik/wiki/MetaWriter">currently disabled</a> in Mapnik and <a href="https://github.com/mapnik/mapnik/issues/1240">needs to be rewritten</a>. If you have software development skills and can lend them to the project, I'm sure the Mapnik team would be delighted to benefit from your help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

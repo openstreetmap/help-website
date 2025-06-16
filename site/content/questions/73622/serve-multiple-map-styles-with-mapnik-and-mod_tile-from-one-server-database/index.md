@@ -57,7 +57,7 @@ TILEDIR=/var/lib/mod_tile
 TILESIZE=256
 XML=/home/osm/openstreetmap-carto-4.24.1/style.xml
 DESCRIPTION=Default map style
-;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;http://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;http://wiki.openstreetmap.org/w\
+;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;https://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;https://wiki.openstreetmap.org/w\
 iki/Contributors\&quot;&gt;contributors&lt;/a&gt;, &lt;a href=\&quot;http://creativecommons.org/licenses/by-sa/2.0/\&quot;&gt;CC-BY-SA&lt;/a&gt;
 ;HOST=http://myserverurl
 ;SERVER_ALIAS=http://a.tile.openstreetmap.org
@@ -69,7 +69,7 @@ TILEDIR=/var/lib/mod_tile
 TILESIZE=512
 XML=/home/osm/openstreetmap-carto-4.24.1/print/style.xml
 DESCRIPTION=print map style
-;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;http://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;http://wiki.openstreetmap.org/w\
+;ATTRIBUTION=&amp;copy;&lt;a href=\&quot;https://www.openstreetmap.org/\&quot;&gt;OpenStreetMap&lt;/a&gt; and &lt;a href=\&quot;https://wiki.openstreetmap.org/w\
 iki/Contributors\&quot;&gt;contributors&lt;/a&gt;, &lt;a href=\&quot;http://creativecommons.org/licenses/by-sa/2.0/\&quot;&gt;CC-BY-SA&lt;/a&gt;
 ;HOST=http://myserverurl
 ;SERVER_ALIAS=http://a.tile.openstreetmap.org

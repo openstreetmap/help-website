@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I would like to edit the map for my local area in Kampala Uganda and also in the <a href="http://www.openstreetmap.org/?lat=-1.002&amp;lon=29.768&amp;zoom=11&amp;layers=M">Bwindi National Park</a>. Home of the Mountain gorillas, however the Images are very old, is it possible to update the images for Uganda. I have noticed that on <a href="http://www.africantourismportal.com/"></a><a href="http://www.africantourismportal.com/"></a><a href="http://www.africantourismportal.com/">http://www.africantourismportal.com/</a> the images are quite new, about 4 months old. rgds</p>
+<p>Hello, I would like to edit the map for my local area in Kampala Uganda and also in the <a href="https://www.openstreetmap.org/?lat=-1.002&amp;lon=29.768&amp;zoom=11&amp;layers=M">Bwindi National Park</a>. Home of the Mountain gorillas, however the Images are very old, is it possible to update the images for Uganda. I have noticed that on <a href="http://www.africantourismportal.com/"></a><a href="http://www.africantourismportal.com/"></a><a href="http://www.africantourismportal.com/">http://www.africantourismportal.com/</a> the images are quite new, about 4 months old. rgds</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-images" rel="tag" title="see questions tagged &#39;images&#39;">images</span> <span class="post-tag tag-link-tracing" rel="tag" title="see questions tagged &#39;tracing&#39;">tracing</span> <span class="post-tag tag-link-legal" rel="tag" title="see questions tagged &#39;legal&#39;">legal</span>

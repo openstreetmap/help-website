@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While it's normally used on a country-wide boundary, you should probably add <a href="http://wiki.openstreetmap.org/wiki/Key:driving_side">driving_side=left/right</a> to the way itself. I doubt if this tag is used by any routing engine or other data consumer, however.</p>
+<p>While it's normally used on a country-wide boundary, you should probably add <a href="https://wiki.openstreetmap.org/wiki/Key:driving_side">driving_side=left/right</a> to the way itself. I doubt if this tag is used by any routing engine or other data consumer, however.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Seems to be <a href="http://taginfo.openstreetmap.org/keys/driving_side#combinations">currently used on 13 highway-tagged objects</a>. Most are in Rio de Janeiro, Brazil (e.g. <a href="http://www.openstreetmap.org/browse/way/93268229">way 93268229</a> and some short turnlanes). Not sure if that are mistakes or real examples. One example is in Graz, Austria (<a href="http://www.openstreetmap.org/browse/way/4100061">way 4100061</a> which I guess is not really correct as the note comment suggests that it only applies to the buses).</p>
+<p>Seems to be <a href="http://taginfo.openstreetmap.org/keys/driving_side#combinations">currently used on 13 highway-tagged objects</a>. Most are in Rio de Janeiro, Brazil (e.g. <a href="https://www.openstreetmap.org/browse/way/93268229">way 93268229</a> and some short turnlanes). Not sure if that are mistakes or real examples. One example is in Graz, Austria (<a href="https://www.openstreetmap.org/browse/way/4100061">way 4100061</a> which I guess is not really correct as the note comment suggests that it only applies to the buses).</p>
 </div>
 <div id="comment-27383-info" class="comment-info">
 <span class="comment-age">(21 Oct '13, 14:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Unexplained edits"
-description = '''Hi, I have been investigating mysterious disappearances of street light, street name and sidewalk data and it appears that this user at http://www.openstreetmap.org/user/Joe%20Strummer/edits seem to have randomly deleting and replacing ways without explanation and therefore I am confused. I have sen...'''
+description = '''Hi, I have been investigating mysterious disappearances of street light, street name and sidewalk data and it appears that this user at https://www.openstreetmap.org/user/Joe%20Strummer/edits seem to have randomly deleting and replacing ways without explanation and therefore I am confused. I have sen...'''
 date = "2013-04-12T00:06:00Z"
 lastmod = "2013-04-12T11:23:00Z"
 weight = 21418
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I have been investigating mysterious disappearances of street light, street name and sidewalk data and it appears that this user at <a href="http://www.openstreetmap.org/user/Joe%20Strummer/edits">http://www.openstreetmap.org/user/Joe%20Strummer/edits</a> seem to have randomly deleting and replacing ways without explanation and therefore I am confused. I have sent the user a message regarding this yesterday but it seems he has continued the edits today without giving a explanation for doing so.</p>
+<p>I have been investigating mysterious disappearances of street light, street name and sidewalk data and it appears that this user at <a href="https://www.openstreetmap.org/user/Joe%20Strummer/edits">https://www.openstreetmap.org/user/Joe%20Strummer/edits</a> seem to have randomly deleting and replacing ways without explanation and therefore I am confused. I have sent the user a message regarding this yesterday but it seems he has continued the edits today without giving a explanation for doing so.</p>
 <p>Can you please investigate, thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -81,7 +81,7 @@ osqa_accepted = true
 <div id="post-21427-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Examples: <a href="http://www.openstreetmap.org/browse/changeset/15658486">http://www.openstreetmap.org/browse/changeset/15658486</a> (Cromwell Road Way 42709089 shortened a new way put in without explanation); <a href="http://www.openstreetmap.org/browse/changeset/15693969">http://www.openstreetmap.org/browse/changeset/15693969</a> (roundabout Way 3987803 deleted and recreated without explanation)</p>
+<p>Examples: <a href="https://www.openstreetmap.org/browse/changeset/15658486">https://www.openstreetmap.org/browse/changeset/15658486</a> (Cromwell Road Way 42709089 shortened a new way put in without explanation); <a href="https://www.openstreetmap.org/browse/changeset/15693969">https://www.openstreetmap.org/browse/changeset/15693969</a> (roundabout Way 3987803 deleted and recreated without explanation)</p>
 <p>It is likely that the user is unaware of my efforts put into adding the lighting data and recently, sidewalks, especially that I have recently upgraded some junctions with intricate crossing data that Google Maps don't do.</p>
 </div>
 <div id="comment-21427-info" class="comment-info">
@@ -159,8 +159,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think what's happening with Cromwell Road ("Way 42709089 shortened a new way put in") is that the <a href="http://www.openstreetmap.org/?relation=2868135">no 14 bus</a> among others approaches the NHM from the south and then turns right along the "new" bit of the Cromwell road, but doesn't run along the "old" bit of the Cromwell Road.</p>
-<p>Unfortunately it's not easy to see what relations <a href="http://www.openstreetmap.org/browse/way/3987803/history">way 3987803</a> was part of, but perhaps that's also related to a bus route relation add?</p>
+<p>I think what's happening with Cromwell Road ("Way 42709089 shortened a new way put in") is that the <a href="https://www.openstreetmap.org/?relation=2868135">no 14 bus</a> among others approaches the NHM from the south and then turns right along the "new" bit of the Cromwell road, but doesn't run along the "old" bit of the Cromwell Road.</p>
+<p>Unfortunately it's not easy to see what relations <a href="https://www.openstreetmap.org/browse/way/3987803/history">way 3987803</a> was part of, but perhaps that's also related to a bus route relation add?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -203,7 +203,7 @@ One Answer:
 <div id="post-21454-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Kind general reminder posted at <a href="http://www.openstreetmap.org/user/Amaroussi/diary/19021">http://www.openstreetmap.org/user/Amaroussi/diary/19021</a></p>
+<p>Kind general reminder posted at <a href="https://www.openstreetmap.org/user/Amaroussi/diary/19021">https://www.openstreetmap.org/user/Amaroussi/diary/19021</a></p>
 </div>
 <div id="comment-21454-info" class="comment-info">
 <span class="comment-age">(12 Apr '13, 11:23)</span> <span class="comment-user userinfo">Amaroussi</span>

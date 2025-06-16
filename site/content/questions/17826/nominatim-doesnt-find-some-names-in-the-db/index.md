@@ -142,8 +142,8 @@ One Answer:
 <li><p>Yes, I find places in "Antioquia", example: the city of <a href="http://201.245.166.77/nominatim/search?q=envigado&amp;format=xml">Envigado</a>, the County of <a href="http://201.245.166.77/nominatim/search?q=sabaneta&amp;format=xml">Sabaneta</a>, but no details of Antioquia state.</p></li>
 <li><p>In the database there is a state "Antioquia", attached images with table and the polygon in gvSIG.</p></li>
 </ol>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_1.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot2.png" alt="alt text" /></p>
+<p><img src="/upfiles/screenshot_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/screenshot2.png" alt="alt text" /></p>
 </div>
 <div id="comment-17869-info" class="comment-info">
 <span class="comment-age">(21 Nov '12, 17:02)</span> <span class="comment-user userinfo">alveniz</span>

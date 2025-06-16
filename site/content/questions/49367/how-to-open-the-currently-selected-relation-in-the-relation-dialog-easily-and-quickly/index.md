@@ -118,7 +118,7 @@ One Answer:
 <div class="answer-body">
 <p>The default is <strong>Shitf+Escape</strong>.</p>
 <p>You can quickly discover keyboard shortcuts like this by going into <strong>preferences -&gt; keyboard shortcuts</strong> and browsing or typing a search keyword. In this case, typing <strong>relation</strong> brings up the <strong>Relation editor: Open recent relation</strong> action (and lets you assign a different shortcut).</p>
-<p>You might also find the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Relation_Toolbox">reltoolbox plugin</a> useful.</p>
+<p>You might also find the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Relation_Toolbox">reltoolbox plugin</a> useful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

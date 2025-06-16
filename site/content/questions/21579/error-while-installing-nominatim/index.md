@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Error while installing Nominatim"
-description = '''I am following steps given on http://wiki.openstreetmap.org/wiki/Nominatim/Installation to install Nominatim on my system. But while setting up postgresql, when I enter command - sudo service postgresql initdb, I receive an error message: &quot;Missing SERVICE_URI environment variable&quot; I don&#x27;t understand...'''
+description = '''I am following steps given on https://wiki.openstreetmap.org/wiki/Nominatim/Installation to install Nominatim on my system. But while setting up postgresql, when I enter command - sudo service postgresql initdb, I receive an error message: &quot;Missing SERVICE_URI environment variable&quot; I don&#x27;t understand...'''
 date = "2013-04-16T11:16:00Z"
 lastmod = "2016-12-13T07:45:00Z"
 weight = 21579
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am following steps given on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> to install Nominatim on my system. But while setting up postgresql, when I enter command - sudo service postgresql initdb, I receive an error message: "Missing SERVICE_URI environment variable" I don't understand what value should I set for SERVICE_URI as environment variable. I searched over internet, but couldn't find any solution to it. Please help me with this.</p>
+<p>I am following steps given on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> to install Nominatim on my system. But while setting up postgresql, when I enter command - sudo service postgresql initdb, I receive an error message: "Missing SERVICE_URI environment variable" I don't understand what value should I set for SERVICE_URI as environment variable. I searched over internet, but couldn't find any solution to it. Please help me with this.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-postgresql" rel="tag" title="see questions tagged &#39;postgresql&#39;">postgresql</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-installation" rel="tag" title="see questions tagged &#39;installation&#39;">installation</span>

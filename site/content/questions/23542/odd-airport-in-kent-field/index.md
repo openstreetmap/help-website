@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Odd Airport in Kent field?"
-description = '''I&#x27;m pretty sure there is no airport near Edenbridge, Kent, UK - http://www.openstreetmap.org/?lat=51.18744&amp;amp;lon=0.04521&amp;amp;zoom=15&amp;amp;layers=M - I&#x27;ve looked through the history but I can&#x27;t seem to find any reference to them. EDIT: I&#x27;ve updated the surface tags to unpaved to make clear that they...'''
+description = '''I&#x27;m pretty sure there is no airport near Edenbridge, Kent, UK - https://www.openstreetmap.org/?lat=51.18744&amp;amp;lon=0.04521&amp;amp;zoom=15&amp;amp;layers=M - I&#x27;ve looked through the history but I can&#x27;t seem to find any reference to them. EDIT: I&#x27;ve updated the surface tags to unpaved to make clear that they...'''
 date = "2013-06-20T10:56:00Z"
 lastmod = "2013-06-20T23:57:00Z"
 weight = 23542
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm pretty sure there is no airport near Edenbridge, Kent, UK - <a href="http://www.openstreetmap.org/?lat=51.18744&amp;lon=0.04521&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=51.18744&amp;lon=0.04521&amp;zoom=15&amp;layers=M</a> - I've looked through the history but I can't seem to find any reference to them.</p>
+<p>I'm pretty sure there is no airport near Edenbridge, Kent, UK - <a href="https://www.openstreetmap.org/?lat=51.18744&amp;lon=0.04521&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=51.18744&amp;lon=0.04521&amp;zoom=15&amp;layers=M</a> - I've looked through the history but I can't seem to find any reference to them.</p>
 <p>EDIT:</p>
 <p>I've updated the surface tags to unpaved to make clear that they aren't a misplaced airport for the next person who falls across them.</p>
 </div>
@@ -113,7 +113,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The best thing to do is to contact the mapper who added them in the first place to find out why they did it. It may be that there really is an airstrip in that place, and it's just not obvious unless you know what to look for.</p>
-<p>You certainly shouldn't delete things that you don't know for certain are wrong. I've had some of my mapping deleted by people who, for instance, didn't believe there could be a 100m long dead-end footpath off a primary road, yet <a href="http://www.openstreetmap.org/?way=29434579">there really is one</a>. Communication is the key to everything in OSM, and that's the best way of solving this issue.</p>
+<p>You certainly shouldn't delete things that you don't know for certain are wrong. I've had some of my mapping deleted by people who, for instance, didn't believe there could be a 100m long dead-end footpath off a primary road, yet <a href="https://www.openstreetmap.org/?way=29434579">there really is one</a>. Communication is the key to everything in OSM, and that's the best way of solving this issue.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

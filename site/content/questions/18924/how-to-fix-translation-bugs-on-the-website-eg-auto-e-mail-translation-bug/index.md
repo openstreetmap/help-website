@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A quick google search will lead you to <a href="http://wiki.openstreetmap.org/wiki/Translation">translation</a> and <a href="http://wiki.openstreetmap.org/wiki/Website_Internationalization">website internationalisation</a> wiki pages, which eventually lead you to the <a href="http://translatewiki.net/wiki/Translating:OpenStreetMap">translatewiki</a> website where you can open an account and start translating. Thanks in advance :)</p>
+<p>A quick google search will lead you to <a href="https://wiki.openstreetmap.org/wiki/Translation">translation</a> and <a href="https://wiki.openstreetmap.org/wiki/Website_Internationalization">website internationalisation</a> wiki pages, which eventually lead you to the <a href="http://translatewiki.net/wiki/Translating:OpenStreetMap">translatewiki</a> website where you can open an account and start translating. Thanks in advance :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

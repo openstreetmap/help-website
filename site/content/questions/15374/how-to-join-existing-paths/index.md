@@ -45,7 +45,7 @@ osqa_accepted = false
 <li>when both paths (horizontal and vertical) exist, I can drag red dot from the vertical one over the horizontal one, and no blue dot appears, and I cannot create a join</li>
 </ul>
 <p>Question: how to join two existing paths?</p>
-<p><em>I am motivated by <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a> to fix this. The mentioned J key does not work.</em></p>
+<p><em>I am motivated by <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make</a> to fix this. The mentioned J key does not work.</em></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-path" rel="tag" title="see questions tagged &#39;path&#39;">path</span> <span class="post-tag tag-link-joining" rel="tag" title="see questions tagged &#39;joining&#39;">joining</span>
@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This has been already asked here:</p>
-<p><a href="http://help.openstreetmap.org/questions/1172/making-junctions-in-potlatch">http://help.openstreetmap.org/questions/1172/making-junctions-in-potlatch</a></p>
+<p><a href="/questions/1172/making-junctions-in-potlatch">https://help.openstreetmap.org/questions/1172/making-junctions-in-potlatch</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

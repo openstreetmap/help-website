@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>What means the "Designation" in P2 building preset ? We have now "Name", "Building name" and "Designation" which is very confusing for newcomers (they simply copy/paste the same text 3 times, see <a href="http://www.openstreetmap.org/browse/way/55501882">this example</a>). And the wiki about the key "designation" is about highways, not buildings. Would not be 'access' more appropriate ?</p>
+<p>What means the "Designation" in P2 building preset ? We have now "Name", "Building name" and "Designation" which is very confusing for newcomers (they simply copy/paste the same text 3 times, see <a href="https://www.openstreetmap.org/browse/way/55501882">this example</a>). And the wiki about the key "designation" is about highways, not buildings. Would not be 'access' more appropriate ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-preset" rel="tag" title="see questions tagged &#39;preset&#39;">preset</span>
@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That is a bug in Potlatch2. As <a href="http://wiki.openstreetmap.org/wiki/Key:designation">explained in the wiki</a>, the key <code>designation</code> is used for indicating the "legal classification of a way." So it only makes sense for ways, not for buildings, but Potlatch also offers it for buildings (and even for POIs).</p>
+<p>That is a bug in Potlatch2. As <a href="https://wiki.openstreetmap.org/wiki/Key:designation">explained in the wiki</a>, the key <code>designation</code> is used for indicating the "legal classification of a way." So it only makes sense for ways, not for buildings, but Potlatch also offers it for buildings (and even for POIs).</p>
 <p>This has been filed as a bug: <a href="https://trac.openstreetmap.org/ticket/4231">#4231 - In simple mode, the entry for the designation tag needs better explanation</a></p>
 <p>For now, just ignore the "Designation" field if you don't want to map rights of way.</p>
 </div>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:designation">wiki page</a> talks about "legal classification" - although many of the examples on that page are for highways, it doesn't limit itself to those. An example of a building with a legal classification in the designation tag is <a href="http://www.openstreetmap.org/browse/way/30168087">this one</a>.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:designation">wiki page</a> talks about "legal classification" - although many of the examples on that page are for highways, it doesn't limit itself to those. An example of a building with a legal classification in the designation tag is <a href="https://www.openstreetmap.org/browse/way/30168087">this one</a>.</p>
 <p>Whether P2's tag presets should or should not contain something is probably best discussed on trac or the potlatch-dev list rather than here. Certainly where new mappers local to may start tagging inappropriately (e.g. using "name" for something that isn't actually a name, so that it shows up on standard view) I'd send them a "hello-and-welcome-and-by-the-way" mail about it; it would make sense for misuse of designation too.</p>
 </div>
 <div class="answer-controls post-controls">

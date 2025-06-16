@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to locate cities/addresses near from a specific address"
-description = '''Hello everbody ! I am making a website in which I would like to use openStreeMap.  I have found http://wiki.openstreetmap.org/wiki/Nominatim to search for addresses and locate them on map, but I would like to locate points near a specific address. I explain :  I will have persons registered with the...'''
+description = '''Hello everbody ! I am making a website in which I would like to use openStreeMap.  I have found https://wiki.openstreetmap.org/wiki/Nominatim to search for addresses and locate them on map, but I would like to locate points near a specific address. I explain :  I will have persons registered with the...'''
 date = "2016-07-22T14:40:00Z"
 lastmod = "2016-07-22T14:40:00Z"
 weight = 51063
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello everbody !</p>
-<p>I am making a website in which I would like to use openStreeMap. I have found <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a> to search for addresses and locate them on map, but I would like to locate points near a specific address. I explain : I will have persons registered with their addresses, and anyone can search for people around his position, for example 30km from where he is. As all the addresses will be in a database, I thought I could search for cities near the address, and then search for these cities on my database.</p>
+<p>I am making a website in which I would like to use openStreeMap. I have found <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a> to search for addresses and locate them on map, but I would like to locate points near a specific address. I explain : I will have persons registered with their addresses, and anyone can search for people around his position, for example 30km from where he is. As all the addresses will be in a database, I thought I could search for cities near the address, and then search for these cities on my database.</p>
 <p>So my question is : do you know how to find cities around a specific addresses ? Or maybe (an idea that comes now) there is something to do with coordinates ??</p>
 <p>Thanks for you help !</p>
 <p>Jonathan</p>

@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see <a href="https://help.openstreetmap.org/questions/61136/pokemon-go-osm-map-updates">answers to a similar question</a> like yours.</p>
+<p>Please see <a href="/questions/61136/pokemon-go-osm-map-updates">answers to a similar question</a> like yours.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

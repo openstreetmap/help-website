@@ -82,7 +82,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> I think this is talking about what I'd call a storm drain (see <a href="http://en.wikipedia.org/wiki/Storm_drain">http://en.wikipedia.org/wiki/Storm_drain</a> ). In places subject to cyclones such as parts of Australia, then can be quite large and quite a hazard.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> I think this is talking about what I'd call a storm drain (see <a href="http://en.wikipedia.org/wiki/Storm_drain">http://en.wikipedia.org/wiki/Storm_drain</a> ). In places subject to cyclones such as parts of Australia, then can be quite large and quite a hazard.</p>
 </div>
 <div id="comment-40674-info" class="comment-info">
 <span class="comment-age">(28 Jan '15, 21:19)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -163,7 +163,7 @@ One Answer:
 <p>The best fitting tag currently in use is:</p>
 <pre><code>manhole=drain</code></pre>
 <p>This tag has been used 4157 times. I couldn't find a good alternative on <a href="http://taginfo.openstreetmap.org/keys/manhole#values">taginfo</a> or in the wiki.</p>
-<p>Edit: Because of the discussion on this question and answer, I have started a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Utility_Schema">proposal</a> and would appreciate all your input.</p>
+<p>Edit: Because of the discussion on this question and answer, I have started a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Utility_Schema">proposal</a> and would appreciate all your input.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -187,8 +187,8 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>I'm not sure that's quite the same thing. "manhole=drain" is mostly used on nodes above the drain, which might be what the questioner was asking, but might not. If you look at an example one:</p>
-<p><a href="http://www.openstreetmap.org/node/3097308015">http://www.openstreetmap.org/node/3097308015</a></p>
-<p>you can see that the drain itself has been mapped as <a href="http://www.openstreetmap.org/way/300811530">http://www.openstreetmap.org/way/300811530</a> (waterway=ditch, tunnel=culvert). In the case of the storm sewer itself, I'd probably go with waterway=drain (and appropriate layer and tunnel tags).</p>
+<p><a href="https://www.openstreetmap.org/node/3097308015">https://www.openstreetmap.org/node/3097308015</a></p>
+<p>you can see that the drain itself has been mapped as <a href="https://www.openstreetmap.org/way/300811530">https://www.openstreetmap.org/way/300811530</a> (waterway=ditch, tunnel=culvert). In the case of the storm sewer itself, I'd probably go with waterway=drain (and appropriate layer and tunnel tags).</p>
 </div>
 <div id="comment-42830-info" class="comment-info">
 <span class="comment-age">(03 May '15, 13:03)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -273,7 +273,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>Not having the expertise of <a href="http://help.openstreetmap.org/users/10924/ashley-laurens">@Ashley Laurens</a>, but it does seem that we are missing tags for something relevant. I believe these are called gullies in the UK, which might be a starting point (at least that's what the council call them if I need to report a blocked one). (Intrigued because I noticed kerbstones with circular holes in the other day and discover this is a new type).</p>
+<p>Not having the expertise of <a href="https://help.openstreetmap.org/users/10924/ashley-laurens">@Ashley Laurens</a>, but it does seem that we are missing tags for something relevant. I believe these are called gullies in the UK, which might be a starting point (at least that's what the council call them if I need to report a blocked one). (Intrigued because I noticed kerbstones with circular holes in the other day and discover this is a new type).</p>
 </div>
 <div id="comment-42890-info" class="comment-info">
 <span class="comment-age">(05 May '15, 11:44)</span> <span class="comment-user userinfo">SK53 ♦</span>

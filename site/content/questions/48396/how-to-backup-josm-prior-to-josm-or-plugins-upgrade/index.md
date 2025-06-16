@@ -137,7 +137,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>For OSX, see at the end of page <a href="http://wiki.openstreetmap.org/wiki/JOSM/Mac,">http://wiki.openstreetmap.org/wiki/JOSM/Mac,</a> the presents are in ~/Library/JOSM/ (earlier versions used ~/.josm though) The cache tile can be found under ~/Library/Caches/JOSM/tiles (see advanced settings in JOSM)</p>
+<p>For OSX, see at the end of page <a href="https://wiki.openstreetmap.org/wiki/JOSM/Mac,">https://wiki.openstreetmap.org/wiki/JOSM/Mac,</a> the presents are in ~/Library/JOSM/ (earlier versions used ~/.josm though) The cache tile can be found under ~/Library/Caches/JOSM/tiles (see advanced settings in JOSM)</p>
 </div>
 <div id="comment-48435-info" class="comment-info">
 <span class="comment-age">(01 Mar '16, 16:36)</span> <span class="comment-user userinfo">escada</span>
@@ -149,7 +149,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a> josm-latest also uses <code>~/.josm/</code>.</p>
+<p><a href="https://help.openstreetmap.org/users/9641/piskvor">@Piskvor</a> josm-latest also uses <code>~/.josm/</code>.</p>
 </div>
 <div id="comment-48437-info" class="comment-info">
 <span class="comment-age">(01 Mar '16, 17:38)</span> <span class="comment-user userinfo">scai ♦</span>

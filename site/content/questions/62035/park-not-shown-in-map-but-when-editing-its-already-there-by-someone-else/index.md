@@ -141,7 +141,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Updates usually happen within minutes - see <a href="https://help.openstreetmap.org/questions/178">how-often-does-the-main-mapnik-map-get-updated</a>.</p>
+<p>Updates usually happen within minutes - see <a href="/questions/178">how-often-does-the-main-mapnik-map-get-updated</a>.</p>
 <p>In your case <a href="https://www.openstreetmap.org/way/100699948">https://www.openstreetmap.org/way/100699948</a> is also still tagged as <code>landuse=village_green</code>. Apparently in the default map this takes priority over the park colour, so it shows up in a slightly different green. Other maps which are OSM-based may handle this differently.</p>
 <p>Please check if the definition of village_green <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:landuse%3Dvillage_green">https://wiki.openstreetmap.org/wiki/DE:Tag:landuse%3Dvillage_green</a> matches the real-world presence/use of St Alban-Tor Park. If not it may be good to remove the additional <code>village_green</code> tag.</p>
 </div>
@@ -194,7 +194,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You misunderstood the Overpass query you got. Look at the first line of it. That will explain why you don't see it.</p>
-<p>Also, have a look at <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> (which is not really relevant, as the parks is already there on the map, only your query won't show it!)</p>
+<p>Also, have a look at <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> (which is not really relevant, as the parks is already there on the map, only your query won't show it!)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

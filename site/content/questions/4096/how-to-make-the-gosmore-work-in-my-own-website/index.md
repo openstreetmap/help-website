@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to make the gosmore work in my own website"
-description = '''http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine I installed the Gosmore engine as it says in that web pag(i built an apache server),but it did not work. i am not very sure about my operation. Gosmore can not find the Pak file.'''
+description = '''https://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine I installed the Gosmore engine as it says in that web pag(i built an apache server),but it did not work. i am not very sure about my operation. Gosmore can not find the Pak file.'''
 date = "2011-03-25T19:30:00Z"
 lastmod = "2011-03-28T15:14:00Z"
 weight = 4096
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine">http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine">https://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine</a></p>
 <p>I installed the Gosmore engine as it says in that web pag(i built an apache server),but it did not work. i am not very sure about my operation. Gosmore can not find the Pak file.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you see the description of gosmores CGI interface in the <a href="http://wiki.openstreetmap.org/wiki/Gosmore#Cgi_Routing_Interface">wiki</a>?</p>
+<p>Did you see the description of gosmores CGI interface in the <a href="https://wiki.openstreetmap.org/wiki/Gosmore#Cgi_Routing_Interface">wiki</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ osqa_accepted = false
 <div id="post-4098-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes ,i read it,but i am not very clear. when i installed the engine，i just read the pag <a href="http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine">http://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine</a></p>
+<p>Yes ,i read it,but i am not very clear. when i installed the engine，i just read the pag <a href="https://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine">https://wiki.openstreetmap.org/wiki/YOURS#Installing_Gosmore_routing_engine</a></p>
 </div>
 <div id="comment-4098-info" class="comment-info">
 <span class="comment-age">(25 Mar '11, 19:44)</span> <span class="comment-user userinfo">monument</span>
@@ -240,7 +240,7 @@ osqa_accepted = false
 <p>Firstly note that I forked YOURS to make the <a href="http://Osm.org">Osm.org</a> Routing Demo. You can grab <a href="http://nroets.dev.openstreetmap.org/">my latest tarball</a>. My changes include support for IE, restricting jQuery to it's own namespace, making routes dragable and many bug fixes.</p>
 <p>The best way to install gosmore is to follow the instructions on the Gosmore wiki page, i.e. svn co, configure and make. The "make install" step is not necessary. Then rebuild with an extract and test it e.g.</p>
 <p>QUERY_STRING="flat=45.303213&amp;flon=-63.304713&amp;tlat=44.6890011&amp;tlon=-63.8092375fast=1&amp;v=motorcar" ./gosmore</p>
-<p>Although there are scripts for rebuilding the complete planet (in 2 sections), it is strongly advised that you use the <a href="http://wiki.openstreetmap.org/wiki/Osm.org_Routing_Demo#Can_I_use_the_service_in_other_websites_.2F_applications_.3F">shared infrastructure</a>.</p>
+<p>Although there are scripts for rebuilding the complete planet (in 2 sections), it is strongly advised that you use the <a href="https://wiki.openstreetmap.org/wiki/Osm.org_Routing_Demo#Can_I_use_the_service_in_other_websites_.2F_applications_.3F">shared infrastructure</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

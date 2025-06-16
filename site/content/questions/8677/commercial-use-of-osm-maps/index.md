@@ -83,7 +83,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question -- there are many answers to this question already on this site. See http://help.openstreetmap.org/questions/3440/cost-of-commercial-use for just one." by Jonathan Bennett 27 Oct '11, 08:40
+### The question has been closed for the following reason "Duplicate Question -- there are many answers to this question already on this site. See https://help.openstreetmap.org/questions/3440/cost-of-commercial-use for just one." by Jonathan Bennett 27 Oct '11, 08:40
 
 </div>
 

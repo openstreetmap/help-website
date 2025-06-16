@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm not sure when this issue popped up, but if you are in Standard layer (not edit mode), and you are zoomed out far enough, the City name changes to Abilene Courthouse. If you zoom in, closer to town it changes back to just Abilene, and the name does seem to center on the actual Taylor County Courthouse, recently edited by another user. But I don't see anything there that would effect city data. Other layers or edit mode seems fine. <img src="https://help.openstreetmap.org/upfiles/osm.jpg" alt="alt text" /></p>
+<p>I'm not sure when this issue popped up, but if you are in Standard layer (not edit mode), and you are zoomed out far enough, the City name changes to Abilene Courthouse. If you zoom in, closer to town it changes back to just Abilene, and the name does seem to center on the actual Taylor County Courthouse, recently edited by another user. But I don't see anything there that would effect city data. Other layers or edit mode seems fine. <img src="/upfiles/osm.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-layer" rel="tag" title="see questions tagged &#39;layer&#39;">layer</span> <span class="post-tag tag-link-cityname" rel="tag" title="see questions tagged &#39;cityname&#39;">cityname</span> <span class="post-tag tag-link-standard" rel="tag" title="see questions tagged &#39;standard&#39;">standard</span>

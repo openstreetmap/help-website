@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>An unspecific answer to an unspecific question: <a href="http://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="http://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a></p>
+<p>An unspecific answer to an unspecific question: <a href="https://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="https://wiki.openstreetmap.org/wiki/Planet.osm"></a><a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

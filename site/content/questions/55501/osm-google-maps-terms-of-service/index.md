@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hey guys! Quick question here!</p>
 <p>So, I'm working on a web-based system for a company. The system requires a map to be accessed by the employees. I tried my luck with Google Maps, and, of course, it was a no-go for intranets unless you have a premium membership ($10,000 a year, ouch).</p>
-<p>So I started looking online and I found this beautiful piece of open source software. I checked the Terms of Service and, indeed, it allowed intranet maps. And then I started looking for the API, and was a bit confused (and still am, I'm a newbie here), until I found this: <span></span><a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">http://wiki.openstreetmap.org/wiki/Google_Maps_Example</a>.</p>
+<p>So I started looking online and I found this beautiful piece of open source software. I checked the Terms of Service and, indeed, it allowed intranet maps. And then I started looking for the API, and was a bit confused (and still am, I'm a newbie here), until I found this: <span></span><a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">https://wiki.openstreetmap.org/wiki/Google_Maps_Example</a>.</p>
 <p>"Great!" I thought to myself, this is easy! But then the question came to me: which Terms of Service apply for that example, OSM's or Google Maps'? Because technically you're using the Google Maps API, but also you're technically using OSM.</p>
 <p>Any thoughts on this conundrum?</p>
 <p><em>Help! (I need somebody's) Help!</em></p>

@@ -141,7 +141,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2:">http://wiki.openstreetmap.org/wiki/Potlatch_2:</a></p>
+<p>From <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2:">https://wiki.openstreetmap.org/wiki/Potlatch_2:</a></p>
 <ul>
 <li><a href="http://vimeo.com/24992100">A video demonstrating how to add points of interest (POIs) in Potlatch 2</a></li>
 <li><a href="http://vimeo.com/24984085">A video demonstrating how to add roads, paths and areas in Potlatch 2</a></li>

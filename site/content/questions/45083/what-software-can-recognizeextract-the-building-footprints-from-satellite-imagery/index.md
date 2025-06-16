@@ -154,7 +154,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11442/jzq">@jzq</a>, you could try asking your question at a site like <a href="http://gis.stackexchange.com/.">http://gis.stackexchange.com/.</a></p>
+<p><a href="https://help.openstreetmap.org/users/11442/jzq">@jzq</a>, you could try asking your question at a site like <a href="http://gis.stackexchange.com/.">http://gis.stackexchange.com/.</a></p>
 </div>
 <div id="comment-45111-info" class="comment-info">
 <span class="comment-age">(08 Sep '15, 07:49)</span> <span class="comment-user userinfo">Lightsider</span>

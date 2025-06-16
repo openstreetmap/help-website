@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>osm2po is <a href="https://help.openstreetmap.org/questions/30874/osm2po-source-code">not an open source project</a> and as such, not widely used in OpenStreetMap. You should try one of the alternatives listed in that link where you are more likely to find people who can help, or else contact the makers of osm2po directly.</p>
+<p>osm2po is <a href="/questions/30874/osm2po-source-code">not an open source project</a> and as such, not widely used in OpenStreetMap. You should try one of the alternatives listed in that link where you are more likely to find people who can help, or else contact the makers of osm2po directly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -135,7 +135,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Would this help? <a href="https://help.openstreetmap.org/questions/31199/how-to-import-osm-files-to-postgis">https://help.openstreetmap.org/questions/31199/how-to-import-osm-files-to-postgis</a></p>
+<p>Would this help? <a href="/questions/31199/how-to-import-osm-files-to-postgis">https://help.openstreetmap.org/questions/31199/how-to-import-osm-files-to-postgis</a></p>
 </div>
 <div id="comment-33244-info" class="comment-info">
 <span class="comment-age">(16 May '14, 16:36)</span> <span class="comment-user userinfo">neuhausr</span>

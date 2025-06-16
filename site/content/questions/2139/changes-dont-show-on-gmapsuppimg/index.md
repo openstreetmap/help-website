@@ -164,7 +164,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Re the first question, you're probably nothing wrong - as petschge said, you'll need to wait until whoever creates that file for you creates a new version. An alternative might be to use something like "mkgmap" to create a map yourself (see <a href="http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap">my answer here</a> if you want to do that).<br />
+<p>Re the first question, you're probably nothing wrong - as petschge said, you'll need to wait until whoever creates that file for you creates a new version. An alternative might be to use something like "mkgmap" to create a map yourself (see <a href="/questions/1809/how-to-install-mkgmap">my answer here</a> if you want to do that).<br />
 </p>
 <p>Re the second question:</p>
 <ol>

@@ -113,7 +113,7 @@ One Answer:
 <p>The map call on the main API searches for nodes within the bounding box only and not for intersecting way segments.</p>
 <p>You can use Overpass API instead, for example via <a href="http://overpass-turbo.eu/s/rm">Overpass Turbo</a>:</p>
 <pre><code>(way(34.02306804799843,-118.28183448540011,34.023833568382074,-118.28091502587874);&gt;;);out meta;</code></pre>
-<p>This finds all ways that intersect the given bounding box. For more details, please read about some map call variants in the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Sample_map_calls">Overpass API documentation</a>.</p>
+<p>This finds all ways that intersect the given bounding box. For more details, please read about some map call variants in the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Sample_map_calls">Overpass API documentation</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

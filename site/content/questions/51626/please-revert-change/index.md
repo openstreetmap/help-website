@@ -139,7 +139,7 @@ One Answer:
 <div id="post-51631-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info I've also commented on <a href="http://www.openstreetmap.org/changeset/41425802">http://www.openstreetmap.org/changeset/41425802</a> by a different mapper which (presumably by accident) added highway=primary to some things, including the national park, there.</p>
+<p>For info I've also commented on <a href="https://www.openstreetmap.org/changeset/41425802">https://www.openstreetmap.org/changeset/41425802</a> by a different mapper which (presumably by accident) added highway=primary to some things, including the national park, there.</p>
 </div>
 <div id="comment-51631-info" class="comment-info">
 <span class="comment-age">(22 Aug '16, 09:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -174,7 +174,7 @@ One Answer:
 <div id="post-51708-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12691/1248"></a><a href="http://help.openstreetmap.org/users/12691/1248">@1248</a>: meta: is everything okay again now? <del>Please could you <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark an answer as accepted</a> if it solves your problem.</del></p>
+<p><a href="https://help.openstreetmap.org/users/12691/1248"></a><a href="https://help.openstreetmap.org/users/12691/1248">@1248</a>: meta: is everything okay again now? <del>Please could you <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark an answer as accepted</a> if it solves your problem.</del></p>
 </div>
 <div id="comment-51708-info" class="comment-info">
 <span class="comment-age">(24 Aug '16, 22:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -186,7 +186,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/changeset/41425802">http://www.openstreetmap.org/changeset/41425802</a> is still a highway by mistake, I think.</p>
+<p><a href="https://www.openstreetmap.org/changeset/41425802">https://www.openstreetmap.org/changeset/41425802</a> is still a highway by mistake, I think.</p>
 </div>
 <div id="comment-51709-info" class="comment-info">
 <span class="comment-age">(24 Aug '16, 22:29)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -197,8 +197,8 @@ One Answer:
 <div id="post-51710-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Thanks! <a href="https://www.openstreetmap.org/way/436999444">https://www.openstreetmap.org/way/436999444</a> if I see correctly.</p>
-<p><a href="http://help.openstreetmap.org/users/12691/1248">@1248</a>: Could you please comment at <a href="http://www.openstreetmap.org/changeset/41425802">http://www.openstreetmap.org/changeset/41425802</a> ?</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Thanks! <a href="https://www.openstreetmap.org/way/436999444">https://www.openstreetmap.org/way/436999444</a> if I see correctly.</p>
+<p><a href="https://help.openstreetmap.org/users/12691/1248">@1248</a>: Could you please comment at <a href="https://www.openstreetmap.org/changeset/41425802">https://www.openstreetmap.org/changeset/41425802</a> ?</p>
 </div>
 <div id="comment-51710-info" class="comment-info">
 <span class="comment-age">(24 Aug '16, 22:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

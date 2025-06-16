@@ -126,7 +126,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://project-osrm.org">OSRM</a> as a back-end routing engine. If OSRM doesn't fit your needs (although seems as though it does) you can check out other routing engines on the <a href="http://wiki.openstreetmap.org/wiki/Routing">Wiki</a> page.</p>
+<p>You can use <a href="http://project-osrm.org">OSRM</a> as a back-end routing engine. If OSRM doesn't fit your needs (although seems as though it does) you can check out other routing engines on the <a href="https://wiki.openstreetmap.org/wiki/Routing">Wiki</a> page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

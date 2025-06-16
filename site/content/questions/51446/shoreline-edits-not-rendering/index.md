@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Shoreline edits not rendering"
-description = '''I&#x27;ve made some edits to the shore of some islands in Antarctica. My island features are rendering, but the shoreline changes are not. This is causing the map to look really weird. See here: http://www.openstreetmap.org/#map=14/-64.7702/-64.0699 Since I adjust the location of some islands, and moved ...'''
+description = '''I&#x27;ve made some edits to the shore of some islands in Antarctica. My island features are rendering, but the shoreline changes are not. This is causing the map to look really weird. See here: https://www.openstreetmap.org/#map=14/-64.7702/-64.0699 Since I adjust the location of some islands, and moved ...'''
 date = "2016-08-16T15:22:00Z"
 lastmod = "2016-08-17T13:03:00Z"
 weight = 51446
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've made some edits to the shore of some islands in Antarctica. My island features are rendering, but the shoreline changes are not. This is causing the map to look really weird. See here: <a href="http://www.openstreetmap.org/#map=14/-64.7702/-64.0699">http://www.openstreetmap.org/#map=14/-64.7702/-64.0699</a></p>
+<p>I've made some edits to the shore of some islands in Antarctica. My island features are rendering, but the shoreline changes are not. This is causing the map to look really weird. See here: <a href="https://www.openstreetmap.org/#map=14/-64.7702/-64.0699">https://www.openstreetmap.org/#map=14/-64.7702/-64.0699</a></p>
 <p>Since I adjust the location of some islands, and moved the shoreline to reflect the current glacier retreat, the render is all messed up.</p>
 <ul>
 <li>Is there a way to force the shoreline to render?</li>

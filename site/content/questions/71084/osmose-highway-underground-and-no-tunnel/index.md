@@ -171,7 +171,7 @@ osqa_accepted = false
 <blockquote>
 <p>When editing, the <code>layer=*</code> tag is used to describe vertical relationships between crossing or overlapping elements, e.g. a bridge over a street.</p>
 </blockquote>
-<p>So the pedestrian area and the ways should be on the same level as <a href="https://help.openstreetmap.org/questions/71084/osmose-highway-underground-and-no-tunnel/71085">scai said</a>. In other words, the layer keys should be removed.</p>
+<p>So the pedestrian area and the ways should be on the same level as <a href="/questions/71084/osmose-highway-underground-and-no-tunnel/71085">scai said</a>. In other words, the layer keys should be removed.</p>
 <p>Mapping is about modelling real life objects and their relations to each other. <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">You shouldn't map to the renderer</a> thus You shouldn't care about how the rendering engine will show the given way inside that area.</p>
 </div>
 <div class="answer-controls post-controls">

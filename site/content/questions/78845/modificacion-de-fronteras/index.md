@@ -114,7 +114,7 @@ One Answer:
 <p>Western Sahara is not mapped as a country in OSM as far as I can see: <a href="https://www.openstreetmap.org/relation/2559126#map=6/24.161/-13.008">https://www.openstreetmap.org/relation/2559126#map=6/24.161/-13.008</a></p>
 <p>Please do not change this border, there have been plenty of discussions in the past, see</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/53812/contested-border-sahrawi-morocco-decision-to-display">on this help site</a></li>
+<li><a href="/questions/53812/contested-border-sahrawi-morocco-decision-to-display">on this help site</a></li>
 <li>and on the forum <a href="https://forum.openstreetmap.org/viewtopic.php?pid=606038#p606038">DWG point of view</a> although that post is form 2016, but I doubt it has been changed</li>
 </ul>
 </div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm using mapnik together with the wordpress plugin for local cycle route planning. In the maps the standard forest color is far too dominant. For some pictures I have manually remapped the color as shown in the attached image which looks much more professional. Is there a way to influence and improve mapnik rendering?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/green.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/green.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-colors" rel="tag" title="see questions tagged &#39;colors&#39;">colors</span> <span class="post-tag tag-link-forest" rel="tag" title="see questions tagged &#39;forest&#39;">forest</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>

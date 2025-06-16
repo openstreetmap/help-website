@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Different data on maps"
-description = '''Hello. On http://www.openstreetmap.org/ the roads and tracks in my area is correct using &quot;Standard&quot; view. But when i chose &quot;Bicycle&quot; view, a lot af tracks is missing? and also some named roads. Can you tell me why. Kind regard Fisker'''
+description = '''Hello. On https://www.openstreetmap.org/ the roads and tracks in my area is correct using &quot;Standard&quot; view. But when i chose &quot;Bicycle&quot; view, a lot af tracks is missing? and also some named roads. Can you tell me why. Kind regard Fisker'''
 date = "2012-06-17T20:45:00Z"
 lastmod = "2012-06-17T21:15:00Z"
 weight = 13578
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello. On <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> the roads and tracks in my area is correct using "Standard" view. But when i chose "Bicycle" view, a lot af tracks is missing? and also some named roads. Can you tell me why. Kind regard Fisker</p>
+<p>Hello. On <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> the roads and tracks in my area is correct using "Standard" view. But when i chose "Bicycle" view, a lot af tracks is missing? and also some named roads. Can you tell me why. Kind regard Fisker</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>
@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a question that's asked fairly often. If you type something into the search box above, such as "opencyclemap update" you'll get a <a href="http://help.openstreetmap.org/search/?q=opencyclemap+update&amp;Submit=search&amp;t=question">list</a> of previous questions and answers, which should give you chapter and verse in response to the question.</p>
+<p>This is a question that's asked fairly often. If you type something into the search box above, such as "opencyclemap update" you'll get a <a href="https://help.openstreetmap.org/search/?q=opencyclemap+update&amp;Submit=search&amp;t=question">list</a> of previous questions and answers, which should give you chapter and verse in response to the question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

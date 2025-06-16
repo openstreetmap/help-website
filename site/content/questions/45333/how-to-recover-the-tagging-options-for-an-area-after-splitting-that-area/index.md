@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Several question have been asked about this in the past ( <a href="https://help.openstreetmap.org/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">1</a>, <a href="https://help.openstreetmap.org/questions/27594/can-you-change-a-closed-line-into-an-area">2</a>, <a href="https://help.openstreetmap.org/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue">3</a> ), and all answers have been at best dubious and at worst completely mistaken.</p>
+<p>Several question have been asked about this in the past ( <a href="/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">1</a>, <a href="/questions/27594/can-you-change-a-closed-line-into-an-area">2</a>, <a href="/questions/25707/area-creation-in-id-continuous-addition-of-points-drops-how-to-continue">3</a> ), and all answers have been at best dubious and at worst completely mistaken.</p>
 <p>The problem is that iD, for some unfathomable reason, refuses to offer tags for areas if the feature was not started as an area or has had its "area-type" tags removed. This usually occurs when splitting areas (because you tend to delete the relations that iD create before you tag the new areas) or because any area of significant complexity or size is usually more convenient to create using the line tool. Once the line is closed and you try to tag it, you will be unable to search for the area tag settings, such as natural, landuse or building tag settings. iD simply will never offer them up.</p>
 <p>If you have such a closed line that you need to tag using area tags, the only solution (if they can even figure that out) is usually to select an arbitrary tag (you can't even manually type a tag to a new feature <em>because iD forces you to use a preset for a new feature</em>!) an then go in an manually set an area tag.</p>
 <p><strong><em>Is there a simpler solution to apply area tags in such a situation?</em></strong></p>
@@ -109,7 +109,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> I actually tend to alternate between them because they do some things more conveniently. E.g. iD is a godsend for separating conjoined or overlapping areas and for rapidly adding addresses. On the other hand, Potlatch is needed for adding distant relationships and (for the reason mentioned above) is usually somewhat more convenient for splitting areas. Also the area of the screen where you can't click because of button or the editor think it's too close to the edge of the editing area is quite a bit smaller or inexistant.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> I actually tend to alternate between them because they do some things more conveniently. E.g. iD is a godsend for separating conjoined or overlapping areas and for rapidly adding addresses. On the other hand, Potlatch is needed for adding distant relationships and (for the reason mentioned above) is usually somewhat more convenient for splitting areas. Also the area of the screen where you can't click because of button or the editor think it's too close to the edge of the editing area is quite a bit smaller or inexistant.</p>
 </div>
 <div id="comment-45343-info" class="comment-info">
 <span class="comment-age">(17 Sep '15, 18:24)</span> <span class="comment-user userinfo">Circeus</span>
@@ -120,7 +120,7 @@ osqa_accepted = false
 <div id="post-45345-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2838/circeus">@Circeus</a> +1 There's definitely things I appreciate about iD, but they're outweighed by annoyances (get that context menu out of my way!) So I tend to only use it for specific tasks, or if forced to (for example, MapRoulette or certain HOT tasks)</p>
+<p><a href="https://help.openstreetmap.org/users/2838/circeus">@Circeus</a> +1 There's definitely things I appreciate about iD, but they're outweighed by annoyances (get that context menu out of my way!) So I tend to only use it for specific tasks, or if forced to (for example, MapRoulette or certain HOT tasks)</p>
 </div>
 <div id="comment-45345-info" class="comment-info">
 <span class="comment-age">(17 Sep '15, 19:08)</span> <span class="comment-user userinfo">neuhausr</span>

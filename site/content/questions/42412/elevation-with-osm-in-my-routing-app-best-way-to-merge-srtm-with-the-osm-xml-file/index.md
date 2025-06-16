@@ -166,9 +166,9 @@ osqa_accepted = false
 <p>You might want to have a look at other open source <a href="https://wiki.openstreetmap.org/wiki/Routing">routing</a> applications. E.g. graphhopper (<a href="https://graphhopper.com/maps/?point=49.993615%2C10.546875&amp;point=48.458352%2C11.601563&amp;vehicle=foot&amp;locale=de&amp;elevation=true">demo</a>) - uses the elevation data for routing (i.e. avoiding or targeting mountains). See this very recent blog post: <span>Elevation data and OpenStreetMap</span> (by karussell).</p>
 <p>Also see</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/3089/are-contour-lines-available">https://help.openstreetmap.org/questions/3089/are-contour-lines-available</a></li>
-<li><a href="https://help.openstreetmap.org/questions/3069/elevation-maps">https://help.openstreetmap.org/questions/3069/elevation-maps</a></li>
-<li><a href="https://help.openstreetmap.org/questions/10498/what-is-this-strm-thing">https://help.openstreetmap.org/questions/10498/what-is-this-strm-thing</a></li>
+<li><a href="/questions/3089/are-contour-lines-available">https://help.openstreetmap.org/questions/3089/are-contour-lines-available</a></li>
+<li><a href="/questions/3069/elevation-maps">https://help.openstreetmap.org/questions/3069/elevation-maps</a></li>
+<li><a href="/questions/10498/what-is-this-strm-thing">https://help.openstreetmap.org/questions/10498/what-is-this-strm-thing</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -203,7 +203,7 @@ osqa_accepted = false
 <div id="post-42625-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10729/peatar"></a><a href="http://help.openstreetmap.org/users/10729/peatar">@peatar</a>: thanks! I have fixed it in my text and also linked the recent blog post about this.</p>
+<p><a href="https://help.openstreetmap.org/users/10729/peatar"></a><a href="https://help.openstreetmap.org/users/10729/peatar">@peatar</a>: thanks! I have fixed it in my text and also linked the recent blog post about this.</p>
 </div>
 <div id="comment-42625-info" class="comment-info">
 <span class="comment-age">(27 Apr '15, 22:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

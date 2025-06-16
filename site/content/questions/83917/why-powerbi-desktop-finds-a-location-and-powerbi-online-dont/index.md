@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-83920-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/imagem_2022-03-18_105812.png" alt="alt text" /></p>
+<p><img src="/upfiles/imagem_2022-03-18_105812.png" alt="alt text" /></p>
 </div>
 <div id="comment-83920-info" class="comment-info">
 <span class="comment-age">(18 Mar '22, 13:58)</span> <span class="comment-user userinfo">Tcunha</span>

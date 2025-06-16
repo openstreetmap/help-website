@@ -70,10 +70,10 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Do you have a link or coordinates to the roads involved so we know what we are discussing?</p>
-<p>Is is maybe this change set you mean? <a href="http://www.openstreetmap.org/browse/changeset/8787795">http://www.openstreetmap.org/browse/changeset/8787795</a></p>
+<p>Is is maybe this change set you mean? <a href="https://www.openstreetmap.org/browse/changeset/8787795">https://www.openstreetmap.org/browse/changeset/8787795</a></p>
 <p>Some links that may be relevant to the subject:</p>
-<p><a href="http://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism">http://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Vandalism">http://wiki.openstreetmap.org/wiki/Vandalism</a></p>
+<p><a href="/questions/216/what-should-i-do-about-vandalism">https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Vandalism">https://wiki.openstreetmap.org/wiki/Vandalism</a></p>
 </div>
 <div id="comment-6499-info" class="comment-info">
 <span class="comment-age">(22 Jul '11, 19:20)</span> <span class="comment-user userinfo">gnurk</span>
@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-6578-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Dear all, please, can anybody do something? If you need the link of the area with this problem visit: <a href="http://www.openstreetmap.org/?lat=41.3201808929443&amp;lon=19.8184776306152&amp;zoom=13">http://www.openstreetmap.org/?lat=41.3201808929443&amp;lon=19.8184776306152&amp;zoom=13</a> on zoom 13x, and this is the differences on the zoom 12x: <a href="http://www.openstreetmap.org/?lat=41.3336563110352&amp;lon=19.8179626464844&amp;zoom=12">http://www.openstreetmap.org/?lat=41.3336563110352&amp;lon=19.8179626464844&amp;zoom=12</a></p>
+<p>Dear all, please, can anybody do something? If you need the link of the area with this problem visit: <a href="https://www.openstreetmap.org/?lat=41.3201808929443&amp;lon=19.8184776306152&amp;zoom=13">https://www.openstreetmap.org/?lat=41.3201808929443&amp;lon=19.8184776306152&amp;zoom=13</a> on zoom 13x, and this is the differences on the zoom 12x: <a href="https://www.openstreetmap.org/?lat=41.3336563110352&amp;lon=19.8179626464844&amp;zoom=12">https://www.openstreetmap.org/?lat=41.3336563110352&amp;lon=19.8179626464844&amp;zoom=12</a></p>
 </div>
 <div id="comment-6578-info" class="comment-info">
 <span class="comment-age">(26 Jul '11, 19:28)</span> <span class="comment-user userinfo">kaprik</span>
@@ -95,7 +95,7 @@ osqa_accepted = false
 <div id="post-6845-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>No one can delete his projects on real maps: <a href="http://www.openstreetmap.org/user/KristiG/edits">http://www.openstreetmap.org/user/KristiG/edits</a> ?!</p>
+<p>No one can delete his projects on real maps: <a href="https://www.openstreetmap.org/user/KristiG/edits">https://www.openstreetmap.org/user/KristiG/edits</a> ?!</p>
 </div>
 <div id="comment-6845-info" class="comment-info">
 <span class="comment-age">(03 Aug '11, 15:45)</span> <span class="comment-user userinfo">kaprik</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 <div id="post-6868-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you RM87! Very good work! I saw your changes and it looks ok now. But maybe you can check, what is the problem in this 2 or 3 black lines in this 2 roads near Tirana, <a href="http://www.openstreetmap.org/?lat=41.3695992529392&amp;lon=19.6911478042603&amp;zoom=17">http://www.openstreetmap.org/?lat=41.3695992529392&amp;lon=19.6911478042603&amp;zoom=17</a> This roads are edited also be me in the past...</p>
+<p>Thank you RM87! Very good work! I saw your changes and it looks ok now. But maybe you can check, what is the problem in this 2 or 3 black lines in this 2 roads near Tirana, <a href="https://www.openstreetmap.org/?lat=41.3695992529392&amp;lon=19.6911478042603&amp;zoom=17">https://www.openstreetmap.org/?lat=41.3695992529392&amp;lon=19.6911478042603&amp;zoom=17</a> This roads are edited also be me in the past...</p>
 </div>
 <div id="comment-6868-info" class="comment-info">
 <span class="comment-age">(04 Aug '11, 10:55)</span> <span class="comment-user userinfo">kaprik</span>
@@ -130,7 +130,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p><span></span><span>@kaprik</span> an entirely separate issue... but if you look at that area in a suitable data validation tool such as <a href="http://keepright.ipax.at/report_map.php?zoom=17&amp;lat=41.36954&amp;lon=19.69086">http://keepright.ipax.at/report_map.php?zoom=17&amp;lat=41.36954&amp;lon=19.69086</a> one of the reported problems is:</p>
 <blockquote>
-<p><strong>loopings, way <a href="http://www.openstreetmap.org/browse/way/109285552">109285552</a></strong></p>
+<p><strong>loopings, way <a href="https://www.openstreetmap.org/browse/way/109285552">109285552</a></strong></p>
 <p>This way has only two different nodes and contains one of them more than once</p>
 </blockquote>
 <p>It might be worth trying to fix that problem with the data and see if the rendering issue goes away... and asking a <em>new</em> question if you have any further issues unrelated to this original question.</p>
@@ -190,7 +190,7 @@ One Answer:
 <div class="answer-body">
 <p>Thanks for the links. But I could not find any roads on the map that are not on the Bing images. It seems that everything is looking good. Have someone already removed the roads you are talking about?</p>
 <p>However it seems that there are a lot of primary and seccondary roads and almost no tertiary or resedential roads that you might expect in a city.</p>
-<p><strong>Update:</strong> Thanks for the new links and an explenation of what is wrong. You can send a message to the <a href="http://www.openstreetmap.org/message/new/KristiG">user</a> and ask nice where this information comes from. If he does not respond within a reasnable time and you are sure that it is vandalism you can <a href="http://wiki.openstreetmap.org/wiki/Change_rollback">revert</a> the changesets.</p>
+<p><strong>Update:</strong> Thanks for the new links and an explenation of what is wrong. You can send a message to the <a href="https://www.openstreetmap.org/message/new/KristiG">user</a> and ask nice where this information comes from. If he does not respond within a reasnable time and you are sure that it is vandalism you can <a href="https://wiki.openstreetmap.org/wiki/Change_rollback">revert</a> the changesets.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ One Answer:
 <div id="post-6581-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is steel there, for example on this xoom 15x: <a href="http://www.openstreetmap.org/?lat=41.286803483963&amp;lon=19.7455430030823&amp;zoom=15">http://www.openstreetmap.org/?lat=41.286803483963&amp;lon=19.7455430030823&amp;zoom=15</a> this airport for example doesn't exists!!! Also all motorway roads on blue color for example doesn't exists on all area of the Tirana city area: <a href="http://www.openstreetmap.org/?lat=41.3223266601562&amp;lon=19.808349609375&amp;zoom=13">http://www.openstreetmap.org/?lat=41.3223266601562&amp;lon=19.808349609375&amp;zoom=13</a> ..doesn't exists so much rail lines etc.</p>
+<p>Is steel there, for example on this xoom 15x: <a href="https://www.openstreetmap.org/?lat=41.286803483963&amp;lon=19.7455430030823&amp;zoom=15">https://www.openstreetmap.org/?lat=41.286803483963&amp;lon=19.7455430030823&amp;zoom=15</a> this airport for example doesn't exists!!! Also all motorway roads on blue color for example doesn't exists on all area of the Tirana city area: <a href="https://www.openstreetmap.org/?lat=41.3223266601562&amp;lon=19.808349609375&amp;zoom=13">https://www.openstreetmap.org/?lat=41.3223266601562&amp;lon=19.808349609375&amp;zoom=13</a> ..doesn't exists so much rail lines etc.</p>
 </div>
 <div id="comment-6581-info" class="comment-info">
 <span class="comment-age">(26 Jul '11, 20:21)</span> <span class="comment-user userinfo">kaprik</span>
@@ -237,7 +237,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Recieved an answer from KristiG. It came out that these "contributions" were not ment to appear publically. She is sorry for trouble she made.</p>
-<p>If anyone has time and knowledge dealing with conflicts then 12 changesets await reverting. <a href="http://www.openstreetmap.org/user/KristiG/edits">http://www.openstreetmap.org/user/KristiG/edits</a> (edits that were made on 21 and 22 july).</p>
+<p>If anyone has time and knowledge dealing with conflicts then 12 changesets await reverting. <a href="https://www.openstreetmap.org/user/KristiG/edits">https://www.openstreetmap.org/user/KristiG/edits</a> (edits that were made on 21 and 22 july).</p>
 </div>
 <div id="comment-6631-info" class="comment-info">
 <span class="comment-age">(27 Jul '11, 22:02)</span> <span class="comment-user userinfo">RM87</span>
@@ -248,7 +248,7 @@ One Answer:
 <div id="post-6638-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Dear Gnonthgol, I wrote to KristiG and asked him about this changes and he told me, that he is disappointed about this chaos. He didn't know that this changes must be published and viewed to whole. Please, maybe you must delete all <a href="http://www.openstreetmap.org/user/KristiG/edits">http://www.openstreetmap.org/user/KristiG/edits</a> (edits that were made on 21 and 22 july). Because this edits are just a projects (fantasy) from him for urbanistic task on the university, and aren't true and realistic.</p>
+<p>Dear Gnonthgol, I wrote to KristiG and asked him about this changes and he told me, that he is disappointed about this chaos. He didn't know that this changes must be published and viewed to whole. Please, maybe you must delete all <a href="https://www.openstreetmap.org/user/KristiG/edits">https://www.openstreetmap.org/user/KristiG/edits</a> (edits that were made on 21 and 22 july). Because this edits are just a projects (fantasy) from him for urbanistic task on the university, and aren't true and realistic.</p>
 </div>
 <div id="comment-6638-info" class="comment-info">
 <span class="comment-age">(28 Jul '11, 10:35)</span> <span class="comment-user userinfo">kaprik</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "newly added routes not taken into consideration in the directions"
-description = '''Hello, I have created new routes, new points , new areas. All my changes appear on the map. but when i choose to get directions from point A to point B (where both are created newly) , the new routes are not choosen on the map :( here&#x27;s my map http://www.openstreetmap.org/#map=19/34.36605/35.78139'''
+description = '''Hello, I have created new routes, new points , new areas. All my changes appear on the map. but when i choose to get directions from point A to point B (where both are created newly) , the new routes are not choosen on the map :( here&#x27;s my map https://www.openstreetmap.org/#map=19/34.36605/35.78139'''
 date = "2015-07-02T08:41:00Z"
 lastmod = "2015-07-02T19:20:00Z"
 weight = 43905
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I have created new routes, new points , new areas. All my changes appear on the map. but when i choose to get directions from point A to point B (where both are created newly) , the new routes are not choosen on the map :(</p>
-<p>here's my map <a href="http://www.openstreetmap.org/#map=19/34.36605/35.78139">http://www.openstreetmap.org/#map=19/34.36605/35.78139</a></p>
+<p>here's my map <a href="https://www.openstreetmap.org/#map=19/34.36605/35.78139">https://www.openstreetmap.org/#map=19/34.36605/35.78139</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>

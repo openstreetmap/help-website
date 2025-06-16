@@ -159,7 +159,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>OSM does not provide an "offline map service" it is mainly a (geo-)data collection undertaking.</p>
 <p>There are many ways to use OSM data offline on an android device, please have a look at</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mapsforge">http://wiki.openstreetmap.org/wiki/Mapsforge</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mapsforge">https://wiki.openstreetmap.org/wiki/Mapsforge</a></p>
 <p>and</p>
 <p><a href="https://github.com/nkostelnik/libosmscout">https://github.com/nkostelnik/libosmscout</a></p>
 <p>for offline OSM usage.</p>

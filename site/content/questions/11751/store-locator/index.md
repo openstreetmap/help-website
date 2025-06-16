@@ -107,7 +107,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There's no such thing as an API key for OSM. You just specify your user agent (http-style) and you're done.</p>
-<p>A store locator should be easy to write using either <a href="http://leaflet.cloudmade.com/">leaflet</a> or <a href="http://www.openlayers.org/">openlayers</a>. Use your own json object for the list of stores, and one of the available tiles for the map background (be sure to respect the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>).</p>
+<p>A store locator should be easy to write using either <a href="http://leaflet.cloudmade.com/">leaflet</a> or <a href="http://www.openlayers.org/">openlayers</a>. Use your own json object for the list of stores, and one of the available tiles for the map background (be sure to respect the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>).</p>
 <p>There may be ready-made wordpress plugins for that, I don't know.</p>
 <p>If your needs are more complex than the simple json-based solution can provide, you'll have to give us more details,</p>
 </div>
@@ -172,7 +172,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Without giving concrete hints about your aims, you can have a look at the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Wordpress">Wordpress</a> ... follow all subpages, too.</p>
+<p>Without giving concrete hints about your aims, you can have a look at the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Wordpress">Wordpress</a> ... follow all subpages, too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -142,7 +142,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A line of trees is mapped as a way with the <strong><a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree_row">natural=tree_row</a></strong> tag.</p>
+<p>A line of trees is mapped as a way with the <strong><a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree_row">natural=tree_row</a></strong> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -226,7 +226,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just make sure you draw your line from left to right as with <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcliff">natural=cliff</a> else your trees in the polyline may be upside down</p>
+<p>Just make sure you draw your line from left to right as with <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcliff">natural=cliff</a> else your trees in the polyline may be upside down</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I created translated "Hiking" page in wiki to Fa (فارسی) language. It worked very well for more than one year, but now the link is dead without source edition. So, translated page is not available from english page. What's the problem?</p>
 <p>English page: <a href="https://wiki.openstreetmap.org/wiki/Hiking">Hiking</a></p>
-<p>Fa page: <a href="http://wiki.openstreetmap.org/wiki/Fa:کوهنوردی">Fa:کوهنوردی</a></p>
+<p>Fa page: <a href="https://wiki.openstreetmap.org/wiki/Fa:کوهنوردی">Fa:کوهنوردی</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-translation" rel="tag" title="see questions tagged &#39;translation&#39;">translation</span> <span class="post-tag tag-link-hiking" rel="tag" title="see questions tagged &#39;hiking&#39;">hiking</span>
@@ -179,7 +179,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Working for me <img src="https://help.openstreetmap.org/upfiles/ghhg.png" alt="alt text" /></p>
+<p>Working for me <img src="/upfiles/ghhg.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

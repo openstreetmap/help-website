@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-38542-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9955/pitney">@pitney</a>: and now your file is not smaller any more?</p>
+<p><a href="https://help.openstreetmap.org/users/9955/pitney">@pitney</a>: and now your file is not smaller any more?</p>
 </div>
 <div id="comment-38542-info" class="comment-info">
 <span class="comment-age">(13 Nov '14, 18:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -111,7 +111,7 @@ osqa_accepted = false
 <div id="post-38543-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9955/pitney"></a><a href="http://help.openstreetmap.org/users/9955/pitney">@pitney</a>: If mmd's comment would be an "answer", you could <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">accept</a> it. Converting would also work, but not currently (software bug). I have closed this question in the alternative.</p>
+<p><a href="https://help.openstreetmap.org/users/9955/pitney"></a><a href="https://help.openstreetmap.org/users/9955/pitney">@pitney</a>: If mmd's comment would be an "answer", you could <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">accept</a> it. Converting would also work, but not currently (software bug). I have closed this question in the alternative.</p>
 </div>
 <div id="comment-38543-info" class="comment-info">
 <span class="comment-age">(13 Nov '14, 18:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

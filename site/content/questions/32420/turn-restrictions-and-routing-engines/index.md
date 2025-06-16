@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Turn restrictions and routing engines"
-description = '''I have recently mapped a new road Edison Bell Way Huntingdon http://www.openstreetmap.org/#map=16/52.3319/-0.1923  I think I have the turn restrictions correct ( they are no right when heading west on Brampton road into Edison Bell Way, and No right turn from Edison Bell Way to Ermine Street to go E...'''
+description = '''I have recently mapped a new road Edison Bell Way Huntingdon https://www.openstreetmap.org/#map=16/52.3319/-0.1923  I think I have the turn restrictions correct ( they are no right when heading west on Brampton road into Edison Bell Way, and No right turn from Edison Bell Way to Ermine Street to go E...'''
 date = "2014-04-17T23:08:00Z"
 lastmod = "2015-09-17T21:03:00Z"
 weight = 32420
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have recently mapped a new road Edison Bell Way Huntingdon <a href="http://www.openstreetmap.org/#map=16/52.3319/-0.1923">http://www.openstreetmap.org/#map=16/52.3319/-0.1923</a> I think I have the turn restrictions correct ( they are no right when heading west on Brampton road into Edison Bell Way, and No right turn from Edison Bell Way to Ermine Street to go East. Routing with <a href="http://osrm.at/5NZ">http://osrm.at/5NZ</a> goes wrong. Is it that OSRM needs a while for my updates to feed through? I looked for info on the date of their data but couldn't see it. link to way <a href="https://www.openstreetmap.org/way/180042644">https://www.openstreetmap.org/way/180042644</a></p>
+<p>I have recently mapped a new road Edison Bell Way Huntingdon <a href="https://www.openstreetmap.org/#map=16/52.3319/-0.1923">https://www.openstreetmap.org/#map=16/52.3319/-0.1923</a> I think I have the turn restrictions correct ( they are no right when heading west on Brampton road into Edison Bell Way, and No right turn from Edison Bell Way to Ermine Street to go East. Routing with <a href="http://osrm.at/5NZ">http://osrm.at/5NZ</a> goes wrong. Is it that OSRM needs a while for my updates to feed through? I looked for info on the date of their data but couldn't see it. link to way <a href="https://www.openstreetmap.org/way/180042644">https://www.openstreetmap.org/way/180042644</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-turn_restriction" rel="tag" title="see questions tagged &#39;turn_restriction&#39;">turn_restriction</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>

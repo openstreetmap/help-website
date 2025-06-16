@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Where do these ugly markers on the osm.org map come from?"
-description = '''Did I miss something ? After reading a question about heights, the whole OSM mapnik presentation seems to be filled with markers. For instance http://www.openstreetmap.org/#map=14/51.5160/-0.1457&amp;amp;layers=N. They were first behind the KR button or similar control tools. How to avoid there presents...'''
+description = '''Did I miss something ? After reading a question about heights, the whole OSM mapnik presentation seems to be filled with markers. For instance https://www.openstreetmap.org/#map=14/51.5160/-0.1457&amp;amp;layers=N. They were first behind the KR button or similar control tools. How to avoid there presents...'''
 date = "2013-11-13T12:01:00Z"
 lastmod = "2013-11-13T13:15:00Z"
 weight = 28035
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Did I miss something ? After reading a question about heights, the whole OSM mapnik presentation seems to be filled with markers. For instance <a href="http://www.openstreetmap.org/#map=14/51.5160/-0.1457&amp;layers=N.">http://www.openstreetmap.org/#map=14/51.5160/-0.1457&amp;layers=N.</a> They were first behind the KR button or similar control tools.</p>
+<p>Did I miss something ? After reading a question about heights, the whole OSM mapnik presentation seems to be filled with markers. For instance <a href="https://www.openstreetmap.org/#map=14/51.5160/-0.1457&amp;layers=N.">https://www.openstreetmap.org/#map=14/51.5160/-0.1457&amp;layers=N.</a> They were first behind the KR button or similar control tools.</p>
 <p>How to avoid there presents on my screen, they’re annoying.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

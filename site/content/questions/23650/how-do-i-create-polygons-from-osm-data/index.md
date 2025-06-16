@@ -197,8 +197,8 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Okay, fine! I think you could write an entry about your progress with OSM-derived artwork in <a href="http://www.openstreetmap.org/user/gui2one/diary">your user blog</a> if you want to. At least I would be interested.</p>
-<p>By the way: <a href="http://www.openstreetmap.org/copyright">Please</a> don't forget to attribute OSM and mention the OSM license if you publish your works, so others know where you got that great, open, free geo data from. :-)</p>
+<p>Okay, fine! I think you could write an entry about your progress with OSM-derived artwork in <a href="https://www.openstreetmap.org/user/gui2one/diary">your user blog</a> if you want to. At least I would be interested.</p>
+<p>By the way: <a href="https://www.openstreetmap.org/copyright">Please</a> don't forget to attribute OSM and mention the OSM license if you publish your works, so others know where you got that great, open, free geo data from. :-)</p>
 </div>
 <div id="comment-23655-info" class="comment-info">
 <span class="comment-age">(25 Jun '13, 03:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

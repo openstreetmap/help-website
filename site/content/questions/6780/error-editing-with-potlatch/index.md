@@ -122,9 +122,9 @@ osqa_accepted = false
 <p>This can have several reasons:</p>
 <ul>
 <li>be sure that you have flash player installed on your PC ... did you ever see tha map data displayed in any version of Potlatch?-</li>
-<li>be sure that there is no problem with the OSM servers that deliver the raw OSM data to display the elements ... check <a href="http://wiki.openstreetmap.org/wiki/Platform_Status-">Platform Status</a> in the OSM wiki--</li>
+<li>be sure that there is no problem with the OSM servers that deliver the raw OSM data to display the elements ... check <a href="https://wiki.openstreetmap.org/wiki/Platform_Status-">Platform Status</a> in the OSM wiki--</li>
 <li><p>are you able to download the OSM map data with any offline editor like Merkaartor or JOSM? -</p></li>
-<li><p>We also need to know whether you are using (old) <a href="http://wiki.openstreetmap.org/wiki/Potlatch_1">Potlatch1</a> or recent <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch2</a> ... can you edit your question and tell us more?</p></li>
+<li><p>We also need to know whether you are using (old) <a href="https://wiki.openstreetmap.org/wiki/Potlatch_1">Potlatch1</a> or recent <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch2</a> ... can you edit your question and tell us more?</p></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

@@ -114,9 +114,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Since the arrival of free and good quality aerial images, the gathering of GPX data has become a lot less important. As such, mappers also don't add many traces to the DB anymore. Uploading traces mostly happens when the imagery is outdated or unclear (f.e. obscured by trees).</p>
-<p>Next to that, OSM editors have access to <a href="http://wiki.openstreetmap.org/wiki/Strava#Global_Heatmap">Strava data</a>. which offers a lot more points than our GPX database, so the Strava database can even be used to align imagery (something that would be hard with the our GPX database).</p>
+<p>Next to that, OSM editors have access to <a href="https://wiki.openstreetmap.org/wiki/Strava#Global_Heatmap">Strava data</a>. which offers a lot more points than our GPX database, so the Strava database can even be used to align imagery (something that would be hard with the our GPX database).</p>
 <p>As a result, there's not a lot of people who really want that file to be updated. So it doesn't look very good for you.</p>
-<p>If you really need that database, You could probably contact <a href="http://wiki.openstreetmap.org/wiki/User:Firefishy">Firefishy</a> as a start. He's the system admin who made the first wiki page about <a href="http://wiki.openstreetmap.org/w/index.php?title=Planet.gpx&amp;action=history">planet.gpx</a></p>
+<p>If you really need that database, You could probably contact <a href="https://wiki.openstreetmap.org/wiki/User:Firefishy">Firefishy</a> as a start. He's the system admin who made the first wiki page about <a href="https://wiki.openstreetmap.org/w/index.php?title=Planet.gpx&amp;action=history">planet.gpx</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -136,7 +136,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Do you have any actual evidence for that? An entirely unscientific quick check today shows around 9 pages worth of public traces in the last 24 hours; going back a couple of years to <a href="http://www.openstreetmap.org/traces/page/9011">http://www.openstreetmap.org/traces/page/9011</a> shows around 11 pages in 24 hours. Looking at <a href="http://wiki.openstreetmap.org/wiki/Stats#Users_and_GPX_uploads">http://wiki.openstreetmap.org/wiki/Stats#Users_and_GPX_uploads</a> shows a fairly flat accumulation of GPX trackpoints.</p>
+<p>Do you have any actual evidence for that? An entirely unscientific quick check today shows around 9 pages worth of public traces in the last 24 hours; going back a couple of years to <a href="https://www.openstreetmap.org/traces/page/9011">https://www.openstreetmap.org/traces/page/9011</a> shows around 11 pages in 24 hours. Looking at <a href="https://wiki.openstreetmap.org/wiki/Stats#Users_and_GPX_uploads">https://wiki.openstreetmap.org/wiki/Stats#Users_and_GPX_uploads</a> shows a fairly flat accumulation of GPX trackpoints.</p>
 </div>
 <div id="comment-46055-info" class="comment-info">
 <span class="comment-age">(22 Oct '15, 14:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -148,7 +148,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Uploading GPX files stagnated (with a slow drop since 2009), while adding nodes keeps rising: <a href="http://wiki.openstreetmap.org/wiki/File:Osmdbstats4A.png">http://wiki.openstreetmap.org/wiki/File:Osmdbstats4A.png</a></p>
+<p>Uploading GPX files stagnated (with a slow drop since 2009), while adding nodes keeps rising: <a href="https://wiki.openstreetmap.org/wiki/File:Osmdbstats4A.png">https://wiki.openstreetmap.org/wiki/File:Osmdbstats4A.png</a></p>
 <p>So relatively, GPX files have lost their attraction for the main public.</p>
 </div>
 <div id="comment-46056-info" class="comment-info">
@@ -171,7 +171,7 @@ One Answer:
 <div id="post-46075-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/280/sanderd17">@Sanderd17</a> I'd agree with "stagnating" but don't think that that quite equates to "mappers also don't add many traces to the DB anymore" :)</p>
+<p><a href="https://help.openstreetmap.org/users/280/sanderd17">@Sanderd17</a> I'd agree with "stagnating" but don't think that that quite equates to "mappers also don't add many traces to the DB anymore" :)</p>
 <p>Back in 2009 there was much less aerial imagery available so people essentially didn't have a choice if they wanted to get something into OSM. My first interaction with one of the stalwarts of the local community here was contacting them saying "that railway you added from Yahoo is actually a hedge".</p>
 </div>
 <div id="comment-46075-info" class="comment-info">
@@ -184,7 +184,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/280/sanderd17">@Sanderd17</a> GPS traces are still very valuable. Strava coverage is actually fairly localised, albeit better for image alignment. GPS traces are still essential for new developments, many footways in the countryside, developing countries etc. Just look at a recent blog post by a mapper in Lesotho <a href="https://maplesotho.wordpress.com/2015/10/21/use-of-apps-in-mapillary-phones-make-maplesotho-enjoyable/.">https://maplesotho.wordpress.com/2015/10/21/use-of-apps-in-mapillary-phones-make-maplesotho-enjoyable/.</a> I am particularly struck by how just as for many of us starting out with GPS traces aerial photos made mapping easier, the reverse is just as applicable.</p>
+<p><a href="https://help.openstreetmap.org/users/280/sanderd17">@Sanderd17</a> GPS traces are still very valuable. Strava coverage is actually fairly localised, albeit better for image alignment. GPS traces are still essential for new developments, many footways in the countryside, developing countries etc. Just look at a recent blog post by a mapper in Lesotho <a href="https://maplesotho.wordpress.com/2015/10/21/use-of-apps-in-mapillary-phones-make-maplesotho-enjoyable/.">https://maplesotho.wordpress.com/2015/10/21/use-of-apps-in-mapillary-phones-make-maplesotho-enjoyable/.</a> I am particularly struck by how just as for many of us starting out with GPS traces aerial photos made mapping easier, the reverse is just as applicable.</p>
 </div>
 <div id="comment-46077-info" class="comment-info">
 <span class="comment-age">(23 Oct '15, 12:02)</span> <span class="comment-user userinfo">SK53 ♦</span>

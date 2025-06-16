@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have a question about old addresses of buildings and if / how to include them into OSM. I came across several buildings in my neighbourhood that have official address X-street 7 but still additionally signposted their old address Y-street 63a. So the service road accessing these buildings from Y-street recieved its own name some time in the past and also the accessed buildings were renumbered.</p>
 <p>I think, it would still make sense to retain the old addresses, as in my city (Tbilisi, Georgia), many buildings were re-addressed in the past, and are still continually re-addressed. When going to one certain property, someone might use old or not updated guidebooks et al.</p>
-<p>Anyway, the Wiki <a href="http://wiki.openstreetmap.org/wiki/Addr">http://wiki.openstreetmap.org/wiki/Addr</a> does not cover old addresses.</p>
+<p>Anyway, the Wiki <a href="https://wiki.openstreetmap.org/wiki/Addr">https://wiki.openstreetmap.org/wiki/Addr</a> does not cover old addresses.</p>
 <p>Can I include the info like this or in which way? addr:street = X-street addr:housenumber = 7 old_addr:street = Y-street old_addr:housenumber = 63a</p>
 <p>Thanks for feedback and suggestions <em>thumbs up</em></p>
 </div>
@@ -242,7 +242,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Inventing a new tag by prefixing it with old_ does not seem a good solution to me. If it changes again you will need older_ or put multiple values in it...<br />
-If the numbers were not reassigned, independent node with addr:* should be fine with some time information like <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/temporary">http://wiki.openstreetmap.org/wiki/Proposed_features/temporary</a><br />
+If the numbers were not reassigned, independent node with addr:* should be fine with some time information like <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/temporary">https://wiki.openstreetmap.org/wiki/Proposed_features/temporary</a><br />
 If the numbers were used again it cannot be really used (there would be two places with the same address)</p>
 </div>
 <div class="answer-controls post-controls">

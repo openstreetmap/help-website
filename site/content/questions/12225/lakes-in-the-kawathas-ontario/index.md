@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One starting point can be <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners_guide</a></p>
+<p>One starting point can be <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners_guide</a></p>
 <p>Have a special look there about "Editing".</p>
 </div>
 <div class="answer-controls post-controls">

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>It seems that routing does not work on pedestrian areas, as I can see it in this place <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=43.18409%2C-2.47186%3B43.18343%2C-2.47295#map=19/43.18349/-2.47138">https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=43.18409%2C-2.47186%3B43.18343%2C-2.47295#map=19/43.18349/-2.47138</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/routing.png" alt="Routing not working through pedestrian area" /></p>
+<p><img src="/upfiles/routing.png" alt="Routing not working through pedestrian area" /></p>
 <p>So, how should we be tagging so that tracking works in these areas?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most routing engines provide you with instructions which often contain markers where you cross the border. You may use these points to calculate the distance within a given country (like MapQuest Open). Often even if it's missing (osrm, openrouteservice, YOURS, graphhopper) there is an indicator of border crossing like roads changing their names, which could help you. (There's a few link on my <a href="http://wiki.openstreetmap.org/wiki/User:Grin/bookmarks#routing">bookmark page</a>.)</p>
+<p>Most routing engines provide you with instructions which often contain markers where you cross the border. You may use these points to calculate the distance within a given country (like MapQuest Open). Often even if it's missing (osrm, openrouteservice, YOURS, graphhopper) there is an indicator of border crossing like roads changing their names, which could help you. (There's a few link on my <a href="https://wiki.openstreetmap.org/wiki/User:Grin/bookmarks#routing">bookmark page</a>.)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

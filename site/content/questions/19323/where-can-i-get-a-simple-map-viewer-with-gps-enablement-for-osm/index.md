@@ -172,7 +172,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It depends what system you are using. On my Windows Mobile smartphone, I use OSMTracker for that purpose (despite it's originally a GPS tracker, but I simply ignore the tracking functionality). For other software, there is an extensive overview on the <a href="http://wiki.openstreetmap.org/wiki/Software">wiki</a>.</p>
+<p>It depends what system you are using. On my Windows Mobile smartphone, I use OSMTracker for that purpose (despite it's originally a GPS tracker, but I simply ignore the tracking functionality). For other software, there is an extensive overview on the <a href="https://wiki.openstreetmap.org/wiki/Software">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

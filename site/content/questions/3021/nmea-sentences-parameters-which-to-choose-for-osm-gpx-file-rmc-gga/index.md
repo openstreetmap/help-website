@@ -136,8 +136,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I addition to the already suggested lat, long and timestamp I would recommend you to provide <strong>HDOP</strong>, the <em>Horizontal Dilution Of Precision</em>. HDOP is used by the <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> editor when the option "Draw a circle from HDOP value" is enabled. That's a nice tool to judge the quality of the trace. You'll get the HDOP from the <strong>GGA</strong> sentence.</p>
-<p>It's also possible to use the <a href="http://wiki.openstreetmap.org/wiki/Gpsbabel">gpsbabel</a> command to wash the gps traces and remove points with too high HDOP. The gpsbabel command can filter by other quality parameters as well, but HDOP is probably the most important one since OSM is (almost) 2D.</p>
+<p>I addition to the already suggested lat, long and timestamp I would recommend you to provide <strong>HDOP</strong>, the <em>Horizontal Dilution Of Precision</em>. HDOP is used by the <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a> editor when the option "Draw a circle from HDOP value" is enabled. That's a nice tool to judge the quality of the trace. You'll get the HDOP from the <strong>GGA</strong> sentence.</p>
+<p>It's also possible to use the <a href="https://wiki.openstreetmap.org/wiki/Gpsbabel">gpsbabel</a> command to wash the gps traces and remove points with too high HDOP. The gpsbabel command can filter by other quality parameters as well, but HDOP is probably the most important one since OSM is (almost) 2D.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -190,7 +190,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just in case you haven't seen it, you've had a read of <a href="http://wiki.openstreetmap.org/wiki/NMEA">http://wiki.openstreetmap.org/wiki/NMEA</a> already presumably? That makes some recommendations (and there's a link from there about converting to gpx using e.g. gpsbabel).</p>
+<p>Just in case you haven't seen it, you've had a read of <a href="https://wiki.openstreetmap.org/wiki/NMEA">https://wiki.openstreetmap.org/wiki/NMEA</a> already presumably? That makes some recommendations (and there's a link from there about converting to gpx using e.g. gpsbabel).</p>
 <p>If you have seen that page already, and wanted to ask what people generally use when extracting NMEA data, then the silence here probably suggests that not many people are actually doing it. If you're asking because the wiki page or linked information seems incomplete or wrong I'd update it.</p>
 </div>
 <div class="answer-controls post-controls">

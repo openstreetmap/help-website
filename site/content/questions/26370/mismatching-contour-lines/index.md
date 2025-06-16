@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mismatching contour lines"
-description = '''Hi, there is a problem with the contour lines used here http://www.openstreetmap.org/?note=30872 I placed a note quite a bit of time ago, but nobody ever replied. It is not a local problem, I scrolled vertically a lot, looks like it is constant at that longitude. Anybody knows who is in charge of th...'''
+description = '''Hi, there is a problem with the contour lines used here https://www.openstreetmap.org/?note=30872 I placed a note quite a bit of time ago, but nobody ever replied. It is not a local problem, I scrolled vertically a lot, looks like it is constant at that longitude. Anybody knows who is in charge of th...'''
 date = "2013-09-15T21:35:00Z"
 lastmod = "2013-09-24T20:10:00Z"
 weight = 26370
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>there is a problem with the contour lines used here <a href="http://www.openstreetmap.org/?note=30872">http://www.openstreetmap.org/?note=30872</a></p>
+<p>there is a problem with the contour lines used here <a href="https://www.openstreetmap.org/?note=30872">https://www.openstreetmap.org/?note=30872</a></p>
 <p>I placed a note quite a bit of time ago, but nobody ever replied. It is not a local problem, I scrolled vertically a lot, looks like it is constant at that longitude.</p>
 <p>Anybody knows who is in charge of this?</p>
 </div>

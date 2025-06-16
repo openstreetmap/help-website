@@ -134,7 +134,7 @@ osqa_accepted = true
 <p>o All commands disappear from the command stack.</p>
 <p>o The other changes have been made to the data layer, but not to OSM, so when you exit JOSM you'll get a warning. When you do an "upload data" it does upload the rest.</p>
 <p>Unfortunately it appears that you can only select one item at once on JOSM's command stack. You can, however, select more than one item at once on the map.</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/10815119">http://www.openstreetmap.org/browse/changeset/10815119</a> is an example of me selecting 2 items of 3 changes on the map and uploading them, and then discarding the one remaining change to the data layer when exiting JOSM.</p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/10815119">https://www.openstreetmap.org/browse/changeset/10815119</a> is an example of me selecting 2 items of 3 changes on the map and uploading them, and then discarding the one remaining change to the data layer when exiting JOSM.</p>
 </div>
 <div id="comment-10848-info" class="comment-info">
 <span class="comment-age">(28 Feb '12, 01:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -205,8 +205,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The scale that you get when you search for something is dependant on the size of the thing that you find. If I search for "Everest" I get <a href="http://www.openstreetmap.org/node/164979149">a node</a>, and I'm zoomed right in (even though it's a node that represents something quite large).</p>
-<p>If I search for something that returns a way or <a href="http://www.openstreetmap.org/relation/57398">relation</a> then the resulting map is sized based on that way or relation.</p>
+<p>The scale that you get when you search for something is dependant on the size of the thing that you find. If I search for "Everest" I get <a href="https://www.openstreetmap.org/node/164979149">a node</a>, and I'm zoomed right in (even though it's a node that represents something quite large).</p>
+<p>If I search for something that returns a way or <a href="https://www.openstreetmap.org/relation/57398">relation</a> then the resulting map is sized based on that way or relation.</p>
 <p>The problem with not zooming in on nodes so much would be that in some circumstances (shops in a shopping centre, for example) you would want to zoom right in.</p>
 <p>It's not currently possible to change the zoom level you get when you click on a node search result.</p>
 </div>

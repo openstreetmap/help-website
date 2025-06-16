@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is quite a common problem, but has not been fully resolved for tagging.</p>
-<p>I would recommend reading the following two wiki pages (and their discussion pages) to get some ideas: <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcutline">man_made=cutline</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Section">place=section</a>. A <strong>cutline</strong> will typically be used to mark parcel boundaries, whereas there is no common way of marking the actual parcel numbers (except that there is widespread agreement that they should be placed in a ref tag). In many European countries the parcel numbers are displayed prominently at the corners of the parcel and are frequently shown on maps (e.g., IGN Top25 Foret de Fontainebleau, Białowieża Primeval Forest MAP). In large homogeneous forest stands they are an important navigation aid.</p>
+<p>I would recommend reading the following two wiki pages (and their discussion pages) to get some ideas: <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcutline">man_made=cutline</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Section">place=section</a>. A <strong>cutline</strong> will typically be used to mark parcel boundaries, whereas there is no common way of marking the actual parcel numbers (except that there is widespread agreement that they should be placed in a ref tag). In many European countries the parcel numbers are displayed prominently at the corners of the parcel and are frequently shown on maps (e.g., IGN Top25 Foret de Fontainebleau, Białowieża Primeval Forest MAP). In large homogeneous forest stands they are an important navigation aid.</p>
 <p>The general idea is that the parcels are delineated by natural or artificial features (roads, cutlines, rivers) and that a relation is created to mark the polygon which is the forest parcel. What we have not yet agreed is a common way to tag these polygons (the purpose of the proposed section tag).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,7 +156,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/Id_example_of_forest.JPG" alt="alt text" />If you are using the iD editor the upper red circle is the polygon tool and after clicking on landuse and forest choose the type, deciduous or coniferous.</p>
+<p><img src="/upfiles/Id_example_of_forest.JPG" alt="alt text" />If you are using the iD editor the upper red circle is the polygon tool and after clicking on landuse and forest choose the type, deciduous or coniferous.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,7 +210,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I draw a polygon tracing from bing, then add tags for managed forest landuse=forest or for naturally occurring I would use natural=wood see <a href="http://wiki.openstreetmap.org/wiki/Forest">http://wiki.openstreetmap.org/wiki/Forest</a> and if the forests have lakes or clearings see <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
+<p>I draw a polygon tracing from bing, then add tags for managed forest landuse=forest or for naturally occurring I would use natural=wood see <a href="https://wiki.openstreetmap.org/wiki/Forest">https://wiki.openstreetmap.org/wiki/Forest</a> and if the forests have lakes or clearings see <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -267,7 +267,7 @@ osqa_accepted = true
 5
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">Don't put the parcel number into the name tag</a>. The <a href="http://wiki.openstreetmap.org/wiki/Key:ref">ref tag</a> is fine.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">Don't put the parcel number into the name tag</a>. The <a href="https://wiki.openstreetmap.org/wiki/Key:ref">ref tag</a> is fine.</p>
 </div>
 <div id="comment-23956-info" class="comment-info">
 <span class="comment-age">(04 Jul '13, 08:37)</span> <span class="comment-user userinfo">scai ♦</span>

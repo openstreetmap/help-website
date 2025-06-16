@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to TagInfo around <a href="http://taginfo.openstreetmap.org/keys/listed_status#values">1000 buildings have been marked using the <code>listed_status=*</code> tag</a>. This tag hasn't been documented, but TagInfo shows you how other mappers have been using it. You should also add a tag explaining the source you've used, as everything in OpenStreetMap should be <a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiable</a>.</p>
+<p>According to TagInfo around <a href="http://taginfo.openstreetmap.org/keys/listed_status#values">1000 buildings have been marked using the <code>listed_status=*</code> tag</a>. This tag hasn't been documented, but TagInfo shows you how other mappers have been using it. You should also add a tag explaining the source you've used, as everything in OpenStreetMap should be <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiable</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

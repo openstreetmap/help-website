@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The source given on the boundary ways is <a href="https://www.eea.europa.eu/data-and-maps/data/maritime-boundaries">https://www.eea.europa.eu/data-and-maps/data/maritime-boundaries</a> Original changeset <a href="http://www.openstreetmap.org/changeset/3385604#map=7/38.824/27.091">http://www.openstreetmap.org/changeset/3385604#map=7/38.824/27.091</a></p>
+<p>The source given on the boundary ways is <a href="https://www.eea.europa.eu/data-and-maps/data/maritime-boundaries">https://www.eea.europa.eu/data-and-maps/data/maritime-boundaries</a> Original changeset <a href="https://www.openstreetmap.org/changeset/3385604#map=7/38.824/27.091">https://www.openstreetmap.org/changeset/3385604#map=7/38.824/27.091</a></p>
 <p>There is no reason to believe that this information is incorrect (some of these boundaries are disputed by the involved parties, but see our <a href="http://wiki.osmfoundation.org/w/images/d/d8/DisputedTerritoriesInformation.pdf">policy</a> on such matters).</p>
 <p>Note: it is not clear if this is a legit source for OpenStreetMap, but that is a different question.</p>
 </div>

@@ -137,7 +137,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>further reference <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map_MediaWiki_Extension">http://wiki.openstreetmap.org/wiki/Slippy_Map_MediaWiki_Extension</a></p>
+<p>further reference <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map_MediaWiki_Extension">https://wiki.openstreetmap.org/wiki/Slippy_Map_MediaWiki_Extension</a></p>
 </div>
 <div id="comment-3784-info" class="comment-info">
 <span class="comment-age">(14 Mar '11, 05:49)</span> <span class="comment-user userinfo">katpatuka</span>

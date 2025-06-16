@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You're not the first person to ask this ...</p>
-<p><a href="https://help.openstreetmap.org/questions/19213/osm-xml-into-graph">https://help.openstreetmap.org/questions/19213/osm-xml-into-graph</a></p>
+<p><a href="/questions/19213/osm-xml-into-graph">https://help.openstreetmap.org/questions/19213/osm-xml-into-graph</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -132,7 +132,7 @@ One Answer:
 <div id="post-38334-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... also have a look at all opensource solutions listed at <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></p>
+<p>... also have a look at all opensource solutions listed at <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a></p>
 </div>
 <div id="comment-38334-info" class="comment-info">
 <span class="comment-age">(05 Nov '14, 17:25)</span> <span class="comment-user userinfo">stephan75</span>

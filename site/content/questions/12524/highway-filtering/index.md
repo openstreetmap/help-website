@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> can be your friend!</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> can be your friend!</p>
 <p>Read all instrucions at the wiki page and when starting that programm with -h</p>
 <p>First, try all options with a small raw osm-file.</p>
 <p>You have to decide to choose the drop feature or keep feature ... or both?</p>

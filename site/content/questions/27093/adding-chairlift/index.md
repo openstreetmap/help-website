@@ -63,7 +63,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Would it be possible to say where the chairlift that you've added is?</p>
-<p>If you view it on the map and then look at the address bar you should see something like <a href="http://www.openstreetmap.org/#map=19/51.51899/-0.17436&amp;layers=N">http://www.openstreetmap.org/#map=19/51.51899/-0.17436&amp;layers=N</a> (only with different numbers of course) - that helps people to see where it is so that they can look at what the problem might be.</p>
+<p>If you view it on the map and then look at the address bar you should see something like <a href="https://www.openstreetmap.org/#map=19/51.51899/-0.17436&amp;layers=N">https://www.openstreetmap.org/#map=19/51.51899/-0.17436&amp;layers=N</a> (only with different numbers of course) - that helps people to see where it is so that they can look at what the problem might be.</p>
 </div>
 <div id="comment-27094-info" class="comment-info">
 <span class="comment-age">(11 Oct '13, 19:11)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -75,7 +75,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The chairlift I added is at <a href="http://www.openstreetmap.org/#map=15/46.5189/-67.8178">http://www.openstreetmap.org/#map=15/46.5189/-67.8178</a> I will try to add the correct tag that Hedrikklaas suggested.</p>
+<p>The chairlift I added is at <a href="https://www.openstreetmap.org/#map=15/46.5189/-67.8178">https://www.openstreetmap.org/#map=15/46.5189/-67.8178</a> I will try to add the correct tag that Hedrikklaas suggested.</p>
 </div>
 <div id="comment-27098-info" class="comment-info">
 <span class="comment-age">(12 Oct '13, 03:10)</span> <span class="comment-user userinfo">dkwolf</span>
@@ -129,7 +129,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi take a look here <a href="http://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dchair_lift">http://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dchair_lift</a></p>
+<p>Hi take a look here <a href="https://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dchair_lift">https://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dchair_lift</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

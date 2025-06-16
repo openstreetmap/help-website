@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Standard tiles refuse to update between levels 12 to 10"
-description = '''Hi,  I am struggling to attempt to get levels 12 to 10 of the standard mapnik displaying the latest changes. Take for example this farmland at http://www.openstreetmap.org/#map=12/-34.3281/141.2430 If you zoom in one level you will see it in detail whilst content now over 2 months old is not display...'''
+description = '''Hi,  I am struggling to attempt to get levels 12 to 10 of the standard mapnik displaying the latest changes. Take for example this farmland at https://www.openstreetmap.org/#map=12/-34.3281/141.2430 If you zoom in one level you will see it in detail whilst content now over 2 months old is not display...'''
 date = "2017-04-20T15:33:00Z"
 lastmod = "2017-04-23T12:06:00Z"
 weight = 55717
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I am struggling to attempt to get levels 12 to 10 of the standard mapnik displaying the latest changes. Take for example this farmland at <a href="http://www.openstreetmap.org/#map=12/-34.3281/141.2430">http://www.openstreetmap.org/#map=12/-34.3281/141.2430</a></p>
+<p>Hi, I am struggling to attempt to get levels 12 to 10 of the standard mapnik displaying the latest changes. Take for example this farmland at <a href="https://www.openstreetmap.org/#map=12/-34.3281/141.2430">https://www.openstreetmap.org/#map=12/-34.3281/141.2430</a></p>
 <p>If you zoom in one level you will see it in detail whilst content now over 2 months old is not displayed. I have attempted appending /dirty to the individual tile urls by using <a href="http://www.informationfreeway.org/">http://www.informationfreeway.org/</a> to no avail. These are not small changes either so it's not activity is too poor to have it activate a render.</p>
 <p>Any ideas please?</p>
 </div>

@@ -41,8 +41,8 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi,</p>
 <p>Which one is the best between this picture, perheaps something else, I don't know :/</p>
-<p>Complex: <img src="https://help.openstreetmap.org/upfiles/Complex.PNG" alt="alt text" /></p>
-<p>Simple: <img src="https://help.openstreetmap.org/upfiles/Simple.PNG" alt="alt text" /></p>
+<p>Complex: <img src="/upfiles/Complex.PNG" alt="alt text" /></p>
+<p>Simple: <img src="/upfiles/Simple.PNG" alt="alt text" /></p>
 <p>Thank for the help,</p>
 </div>
 <div id="question-tags" class="tags-container tags">

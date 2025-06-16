@@ -149,7 +149,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>There is maintenance this weekend. The mapnik layer is not currently updating. See: <a href="http://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">http://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011</a></p>
+<p>There is maintenance this weekend. The mapnik layer is not currently updating. See: <a href="https://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">https://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011</a></p>
 </div>
 <div id="comment-6733-info" class="comment-info">
 <span class="comment-age">(31 Jul '11, 11:22)</span> <span class="comment-user userinfo">Firefishy ♦♦</span>

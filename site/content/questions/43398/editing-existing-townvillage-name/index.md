@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As you can see <a href="http://www.openstreetmap.org/relation/1309674#map=13/51.1798/14.4199">here</a>, the Sorbian name is already in the database. It is just that the rendering on openstreetmap.org does not show the Sorbian name. I think you should discuss with the German community, e.g. on the <a href="http://forum.openstreetmap.org/viewforum.php?id=14">forum</a> whether it is desired to change the value of the name field.</p>
+<p>As you can see <a href="https://www.openstreetmap.org/relation/1309674#map=13/51.1798/14.4199">here</a>, the Sorbian name is already in the database. It is just that the rendering on openstreetmap.org does not show the Sorbian name. I think you should discuss with the German community, e.g. on the <a href="http://forum.openstreetmap.org/viewforum.php?id=14">forum</a> whether it is desired to change the value of the name field.</p>
 <p>I know that in Belgium the name field contains both the French and Dutch name (in some areas), but I do not know what the solution is that the German community took</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap stores more information in the database than is shown on the map. Just because it is not shown on the map doesn't mean it is not stored. The <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names"><code>name:XX</code> tags</a> are used to store the name of an object in different languages.</p>
+<p>OpenStreetMap stores more information in the database than is shown on the map. Just because it is not shown on the map doesn't mean it is not stored. The <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names"><code>name:XX</code> tags</a> are used to store the name of an object in different languages.</p>
 <p>If you would like to <em>show</em> a map with Sorbian names, that's a different question. You'll need to set up your own tileserver to display the names this way (rather than do the default of just use the <code>name</code> tag).</p>
 </div>
 <div class="answer-controls post-controls">

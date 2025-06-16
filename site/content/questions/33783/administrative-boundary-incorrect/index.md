@@ -107,7 +107,7 @@ One Answer:
 <p>Welcome to OpenStreetMap. Nice to see you mapping in Windsor.<br />
 </p>
 <p>Boundaries are a little complicated to map, so I wouldn't recommend that you try to fix it yourself until you have some more experience mapping other objects as relations. To be clear, you absolutely may fix this yourself if you care to do so. Please proceed with caution. :-)</p>
-<p>If you are asking for another mapper to sort it out for you, or to help you to sort it out, please provide a link to the area or object in question. I had a quick look in Windsor and saw <a href="http://www.openstreetmap.org/#map=17/42.24968/-82.96001">this area</a> where there appear to be duplicate boundaries that could use rationalization. I don't have enough local Windsor context to say which of the borders there are least-broken.<br />
+<p>If you are asking for another mapper to sort it out for you, or to help you to sort it out, please provide a link to the area or object in question. I had a quick look in Windsor and saw <a href="https://www.openstreetmap.org/#map=17/42.24968/-82.96001">this area</a> where there appear to be duplicate boundaries that could use rationalization. I don't have enough local Windsor context to say which of the borders there are least-broken.<br />
 </p>
 <p>Consider joining the <a href="https://lists.openstreetmap.org/listinfo/talk-ca">Canadian mailing list</a>. You could ask there for other local mappers to help you.<br />
 </p>

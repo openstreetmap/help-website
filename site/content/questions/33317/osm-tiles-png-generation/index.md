@@ -126,7 +126,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <pre><code>I think the .xml is not made properly (it has written path as reference to current path) but maybe I am wrong.</code></pre>
-<p>When exporting from TileMill, I've seen the same effect when moving to a different machine where paths are different. I got around it (with the "standard" OSM map style, not OSMBright) by editing paths where they varied to match the target machine. Using the "carto" utility to do the export rather than TileMill (as mentioned <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver">here</a>) may also fix the problem, but I've not tried that with OSMBright, and I've not tried that on a machine with TileMill also installed, so I can't guarantee there won't be node.js package mismatches between what TileMill needs and what carto does.</p>
+<p>When exporting from TileMill, I've seen the same effect when moving to a different machine where paths are different. I got around it (with the "standard" OSM map style, not OSMBright) by editing paths where they varied to match the target machine. Using the "carto" utility to do the export rather than TileMill (as mentioned <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver">here</a>) may also fix the problem, but I've not tried that with OSMBright, and I've not tried that on a machine with TileMill also installed, so I can't guarantee there won't be node.js package mismatches between what TileMill needs and what carto does.</p>
 <p>(someone please edit if that last sentence is me worrying unnecessarily).</p>
 </div>
 <div class="answer-controls post-controls">

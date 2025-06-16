@@ -240,7 +240,7 @@ Buildings usually have an automatic higher priority too, just not over highways.
 No, you can not walk under the tower: it's a closed buiding that you can't enter in.<br />
 The issue is that the building is not displayed by mapnik/OSM-Standard map. So I tried to add the tag layer=1, to see if it will be displayed above the pedestrian area.<br />
 Actually I was searching for other examples of buildings built in the middle of pedestrian places, and I figured out that they are usually mapped using multipolygons. It seems that you have to make a "hole" inside your highway=pedestrian, and fill it with the building.<br />
-See for example : <a href="http://www.openstreetmap.org/relation/556816#map=19/48.86143/2.35226">http://www.openstreetmap.org/relation/556816#map=19/48.86143/2.35226</a><br />
+See for example : <a href="https://www.openstreetmap.org/relation/556816#map=19/48.86143/2.35226">https://www.openstreetmap.org/relation/556816#map=19/48.86143/2.35226</a><br />
 I have been told to try replacing area=yes by place=square. But it does not seems to work either.<br />
 And using OverpassTurbo, I saw that very very few place=square are used in France. weird.<br />
 With this work, the building does not overlap with any other area and is thus rendered correctly.<br />

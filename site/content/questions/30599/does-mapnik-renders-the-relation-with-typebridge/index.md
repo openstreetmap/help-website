@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Today I was looking at the following case:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/bridge.png" alt="alt text" /></p>
-<p>These 3 bridges are supposed to be only one. I searched around the wiki, and found <a href="http://wiki.openstreetmap.org/wiki/Relation:bridge">a page</a> that linked to a proposal that described a solution. It seems like this proposal was never voted on... However <a href="http://taginfo.openstreetmap.org/tags/?key=type&amp;value=bridge">currently it is used 3576 times according to taginfo</a>. Turns out it's probably because it's officially supported by JOSM.</p>
-<p>So I <a href="http://www.openstreetmap.org/relation/3503937">tried using this relation type</a>, but with no success.</p>
+<p><img src="/upfiles/bridge.png" alt="alt text" /></p>
+<p>These 3 bridges are supposed to be only one. I searched around the wiki, and found <a href="https://wiki.openstreetmap.org/wiki/Relation:bridge">a page</a> that linked to a proposal that described a solution. It seems like this proposal was never voted on... However <a href="http://taginfo.openstreetmap.org/tags/?key=type&amp;value=bridge">currently it is used 3576 times according to taginfo</a>. Turns out it's probably because it's officially supported by JOSM.</p>
+<p>So I <a href="https://www.openstreetmap.org/relation/3503937">tried using this relation type</a>, but with no success.</p>
 <p>Am I doing something wrong, or is it really not rendered by Mapnik currently?</p>
 <p>Thanks</p>
 <p>PS: to clarify, the renderer should be rendering this as one bridge, not three how it's shown in the screenshot.</p>

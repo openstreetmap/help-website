@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's wiki page about data importing <a href="http://wiki.openstreetmap.org/wiki/Import">here</a>, and that links to guidelines that you'll need to follow before doing any imports. When it comes to discussing people in the Australian community directly, you'll probably get more feedback via the <a href="http://lists.openstreetmap.org/listinfo/talk-au">country mailing list</a> rather than here.</p>
+<p>There's wiki page about data importing <a href="https://wiki.openstreetmap.org/wiki/Import">here</a>, and that links to guidelines that you'll need to follow before doing any imports. When it comes to discussing people in the Australian community directly, you'll probably get more feedback via the <a href="http://lists.openstreetmap.org/listinfo/talk-au">country mailing list</a> rather than here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

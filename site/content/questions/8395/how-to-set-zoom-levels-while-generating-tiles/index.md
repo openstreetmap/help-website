@@ -137,7 +137,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>As Jonas said it, you should keep the legal mention of OSM paternity and license. Although, you're rendering your own tiles, you're doing that with OSM data. I suppose you're using OpenLayers, and for your information, you can modify the "attribution" attribute in the Layer constructor.</p>
-<p>For generating tiles, you can use the <em><a href="http://generate_tiles.py">generate_tiles.py</a></em> script provided by mapnik, see this <a href="http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles#Creating_tiles_using_Mapnik_and_generate_tiles.py">documentation</a></p>
+<p>For generating tiles, you can use the <em><a href="http://generate_tiles.py">generate_tiles.py</a></em> script provided by mapnik, see this <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles#Creating_tiles_using_Mapnik_and_generate_tiles.py">documentation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

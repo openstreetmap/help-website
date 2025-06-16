@@ -66,7 +66,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>You might also read the answer to this question: <a href="https://help.openstreetmap.org/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">https://help.openstreetmap.org/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes</a></p>
+<p>You might also read the answer to this question: <a href="/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">https://help.openstreetmap.org/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes</a></p>
 </div>
 <div id="comment-42790-info" class="comment-info">
 <span class="comment-age">(01 May '15, 17:40)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am also new and have seen it done both ways. The wiki page <a href="http://wiki.openstreetmap.org/wiki/Addresses">http://wiki.openstreetmap.org/wiki/Addresses</a> also states that it can be done either way.</p>
+<p>I am also new and have seen it done both ways. The wiki page <a href="https://wiki.openstreetmap.org/wiki/Addresses">https://wiki.openstreetmap.org/wiki/Addresses</a> also states that it can be done either way.</p>
 <p>I would think that consistency within a local geographic area will be the better policy. Looking at the changesets (assuming you are using a consistent username) attributed to you both styles seem to be being used in the area of Baltimore you are mapping.</p>
 <p>It appears that previous mappers in your area have adopted a style of assigning single values to the ways of buildings where there is one housenumber per building and to nodes where there are multiple housenumbers per building.</p>
 </div>
@@ -154,7 +154,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Ok. Had another look at the Arbutus Fire Station I see you've updated a couple of times. I do see a problem in that you are 'double documenting' by having data in the feature (i.e. in way <a href="http://www.openstreetmap.org/way/174393132)">http://www.openstreetmap.org/way/174393132)</a> and in a node created just to hold data (i.e. node <a href="http://www.openstreetmap.org/node/3485419135).">http://www.openstreetmap.org/node/3485419135).</a> In a case like this where there is an existing feature, which contains some data you could have just added the address data to the feature as additional tags or you could do what you did and add a node. Doing both should be avoided because of redundancy issues.</p>
+<p>Ok. Had another look at the Arbutus Fire Station I see you've updated a couple of times. I do see a problem in that you are 'double documenting' by having data in the feature (i.e. in way <a href="https://www.openstreetmap.org/way/174393132)">https://www.openstreetmap.org/way/174393132)</a> and in a node created just to hold data (i.e. node <a href="https://www.openstreetmap.org/node/3485419135).">https://www.openstreetmap.org/node/3485419135).</a> In a case like this where there is an existing feature, which contains some data you could have just added the address data to the feature as additional tags or you could do what you did and add a node. Doing both should be avoided because of redundancy issues.</p>
 </div>
 <div id="comment-42786-info" class="comment-info">
 <span class="comment-age">(01 May '15, 16:12)</span> <span class="comment-user userinfo">Ashley Laurens</span>
@@ -243,7 +243,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I think that if a building has just one address then put the address details in the building. If there are two users (commercial, administrative or otherwise) I put the organisation specific data into a node for that organisation.</p>
-<p>An example of how I did it is at <a href="http://www.openstreetmap.org/way/341995888">http://www.openstreetmap.org/way/341995888</a> which is our local fire &amp; ambulance station. Here they are run by two organisations but in my town share a building. This does mean that if you search for 110 Bilton Steet (the building's address) you do get 3 results. The building, the fire station and the ambulance station.</p>
+<p>An example of how I did it is at <a href="https://www.openstreetmap.org/way/341995888">https://www.openstreetmap.org/way/341995888</a> which is our local fire &amp; ambulance station. Here they are run by two organisations but in my town share a building. This does mean that if you search for 110 Bilton Steet (the building's address) you do get 3 results. The building, the fire station and the ambulance station.</p>
 </div>
 <div id="comment-42787-info" class="comment-info">
 <span class="comment-age">(01 May '15, 16:18)</span> <span class="comment-user userinfo">Ashley Laurens</span>

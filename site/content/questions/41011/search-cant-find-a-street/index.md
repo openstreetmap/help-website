@@ -111,10 +111,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I can find correctly Архітектора Городецького вулиця<br />
-<a href="http://www.openstreetmap.org/way/4357025">http://www.openstreetmap.org/way/4357025</a><br />
-<a href="http://www.openstreetmap.org/way/216848471">http://www.openstreetmap.org/way/216848471</a><br />
+<a href="https://www.openstreetmap.org/way/4357025">https://www.openstreetmap.org/way/4357025</a><br />
+<a href="https://www.openstreetmap.org/way/216848471">https://www.openstreetmap.org/way/216848471</a><br />
 but if I search for only the middle part Городецького it finds a mountain pass only.<br />
-<a href="http://www.openstreetmap.org/node/1740532433">http://www.openstreetmap.org/node/1740532433</a></p>
+<a href="https://www.openstreetmap.org/node/1740532433">https://www.openstreetmap.org/node/1740532433</a></p>
 <p>Curious? ...something to do with the language sets I guess.<br />
 Appears to be in Ukraine.</p>
 <p><img src="/upfiles/Screen_Shot_2015-02-15_at_7.24.08_pm.png" alt="tags screenshot" /></p>

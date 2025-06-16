@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Tiles">page in the OSM wiki about tiles</a> that probably has the answer you're looking for.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Tiles">page in the OSM wiki about tiles</a> that probably has the answer you're looking for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

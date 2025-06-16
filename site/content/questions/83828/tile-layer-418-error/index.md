@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I use Open Street Map tile layer. It worked fine a few days ago but today it has 418 error in console and can't load tile layer. I know this error is related to OpenStreetMap's Tile Usage Policy: <a href="https://operations.osmfoundation.org/policies/tiles/">https://operations.osmfoundation.org/policies/tiles/</a> But I don't know to fix it and make work again. Can you help me ? <img src="https://help.openstreetmap.org/upfiles/418error_ZzKFRZF.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/code_9Hv1zzk.PNG" alt="alt text" /> Regards.</p>
+<p>Hi, I use Open Street Map tile layer. It worked fine a few days ago but today it has 418 error in console and can't load tile layer. I know this error is related to OpenStreetMap's Tile Usage Policy: <a href="https://operations.osmfoundation.org/policies/tiles/">https://operations.osmfoundation.org/policies/tiles/</a> But I don't know to fix it and make work again. Can you help me ? <img src="/upfiles/418error_ZzKFRZF.png" alt="alt text" /> <img src="/upfiles/code_9Hv1zzk.PNG" alt="alt text" /> Regards.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tile_usage_policy" rel="tag" title="see questions tagged &#39;tile_usage_policy&#39;">tile_usage_policy</span>
@@ -164,7 +164,7 @@ osqa_accepted = false
 <div id="post-83833-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, Thanks for reply. I use the standard tile layer. It's free. Now it works again. What is the problem ? <img src="https://help.openstreetmap.org/upfiles/Untitled_XMTx6cl.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/map_gUnaWfU.png" alt="alt text" /> Regards.</p>
+<p>Hi, Thanks for reply. I use the standard tile layer. It's free. Now it works again. What is the problem ? <img src="/upfiles/Untitled_XMTx6cl.png" alt="alt text" /> <img src="/upfiles/map_gUnaWfU.png" alt="alt text" /> Regards.</p>
 </div>
 <div id="comment-83833-info" class="comment-info">
 <span class="comment-age">(13 Mar '22, 14:53)</span> <span class="comment-user userinfo">phuc1102</span>

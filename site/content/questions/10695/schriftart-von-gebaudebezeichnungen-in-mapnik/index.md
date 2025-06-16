@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?way=106297737">Here</a> is the building.</p>
+<p><a href="https://www.openstreetmap.org/?way=106297737">Here</a> is the building.</p>
 <p>You added the building number to C379 as "addr:housenumber", whereas when you did C399 next door you added the building number as "name" (either could be correct - you're local, I'm not!). The Mapnik renderer is rendering "addr:housenumber" differently to "name".<br />
 </p>
 </div>

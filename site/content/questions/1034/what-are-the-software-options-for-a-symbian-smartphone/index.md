@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Symbian phones support running apps of various different languages and development platforms and as such there are a number of different options. Apart from native C++ apps, they also support JavaME, for which several OSM apps exist.</p>
-<p>The wiki page on <a href="http://wiki.openstreetmap.org/wiki/Software/Mobilephones">Software for Mobilephones</a> has a good list of available options and describes their features, ranging from simple online map viewers to offline routers.</p>
+<p>The wiki page on <a href="https://wiki.openstreetmap.org/wiki/Software/Mobilephones">Software for Mobilephones</a> has a good list of available options and describes their features, ranging from simple online map viewers to offline routers.</p>
 <p>If they are "decent" is rather dependent on the person who asks, so I'll let everyone judge the quality themselves.</p>
 </div>
 <div class="answer-controls post-controls">

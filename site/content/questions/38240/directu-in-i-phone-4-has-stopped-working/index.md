@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>On the wiki <a href="http://wiki.openstreetmap.org/wiki/DirectU">http://wiki.openstreetmap.org/wiki/DirectU</a></p>
+<p>On the wiki <a href="https://wiki.openstreetmap.org/wiki/DirectU">https://wiki.openstreetmap.org/wiki/DirectU</a></p>
 </div>
 <div id="comment-38242-info" class="comment-info">
 <span class="comment-age">(02 Nov '14, 10:52)</span> <span class="comment-user userinfo">nevw</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-38248-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9936/yegor_c">@yegor_c</a>: Do you have more details than "can not run"? Any error message?</p>
+<p><a href="https://help.openstreetmap.org/users/9936/yegor_c">@yegor_c</a>: Do you have more details than "can not run"? Any error message?</p>
 </div>
 <div id="comment-38248-info" class="comment-info">
 <span class="comment-age">(02 Nov '14, 12:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

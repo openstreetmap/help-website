@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-11651-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just checking - do you mean the "cycle map" style on the main OSM website (as seen <a href="http://www.openstreetmap.org/?lat=18.55295&amp;lon=-72.33328&amp;zoom=15&amp;layers=C">here</a>) or something else?</p>
+<p>Just checking - do you mean the "cycle map" style on the main OSM website (as seen <a href="https://www.openstreetmap.org/?lat=18.55295&amp;lon=-72.33328&amp;zoom=15&amp;layers=C">here</a>) or something else?</p>
 </div>
 <div id="comment-11651-info" class="comment-info">
 <span class="comment-age">(30 Mar '12, 17:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

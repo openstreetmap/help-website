@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-86216-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/4426/insertuser">@InsertUser</a>'s answer (and <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>'s comment) are both correct, but aside from that I'd expect that using "http://www.openstreetmap.org/" as an API URL is wrong for a couple of reasons.</p>
+<p><a href="https://help.openstreetmap.org/users/4426/insertuser">@InsertUser</a>'s answer (and <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>'s comment) are both correct, but aside from that I'd expect that using "https://www.openstreetmap.org/" as an API URL is wrong for a couple of reasons.</p>
 <p>One is that its http not https (an http request will result in the client being told to use https, but not all clients follow redirects).</p>
 <p>The other is that I'd actually expect the API URL for the live database to be <a href="https://api.openstreetmap.org/api/0.6/">https://api.openstreetmap.org/api/0.6/</a> .</p>
 </div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Looking at this national park <a href="http://www.openstreetmap.org/relation/911663">Puinawai Natural Reserve</a> you can clearly see the river is intended to run around the boundary of the park (i.e. the river is meant to be the boundary/part of the boundary), however they are off by a decent amount. Is this an error in the data or is there some explanation I'm missing? Thanks</p>
+<p>Looking at this national park <a href="https://www.openstreetmap.org/relation/911663">Puinawai Natural Reserve</a> you can clearly see the river is intended to run around the boundary of the park (i.e. the river is meant to be the boundary/part of the boundary), however they are off by a decent amount. Is this an error in the data or is there some explanation I'm missing? Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-national_park" rel="tag" title="see questions tagged &#39;national_park&#39;">national_park</span> <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

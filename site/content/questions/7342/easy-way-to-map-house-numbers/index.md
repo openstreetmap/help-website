@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-9239-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/7335/how-to-add-an-house-number">http://help.openstreetmap.org/questions/7335/how-to-add-an-house-number</a> and now you can click the link..</p>
+<p><a href="/questions/7335/how-to-add-an-house-number">https://help.openstreetmap.org/questions/7335/how-to-add-an-house-number</a> and now you can click the link..</p>
 </div>
 <div id="comment-9239-info" class="comment-info">
 <span class="comment-age">(26 Nov '11, 23:24)</span> <span class="comment-user userinfo">emj</span>
@@ -136,7 +136,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On Android there is <a href="http://wiki.openstreetmap.org/wiki/OsmPad">OsmPad</a> for entering data on a displayed map and <a href="http://wiki.openstreetmap.org/wiki/Keypad-Mapper_3">Keypad mapper</a> for when you want to record addresses when you're out and about. Unfortunately for your situation neither of them upload directly to OpenStreetMap, although in the case of Keypad Mapper you would need to "tweak" the locations of the nodes in an editor before upload anyway. If you want to stay on Android (and are familiar with the file system) you can open the files these produce in <a href="https://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a> in order to upload them (I would tend to use JOSM though).</p>
+<p>On Android there is <a href="https://wiki.openstreetmap.org/wiki/OsmPad">OsmPad</a> for entering data on a displayed map and <a href="https://wiki.openstreetmap.org/wiki/Keypad-Mapper_3">Keypad mapper</a> for when you want to record addresses when you're out and about. Unfortunately for your situation neither of them upload directly to OpenStreetMap, although in the case of Keypad Mapper you would need to "tweak" the locations of the nodes in an editor before upload anyway. If you want to stay on Android (and are familiar with the file system) you can open the files these produce in <a href="https://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a> in order to upload them (I would tend to use JOSM though).</p>
 <p>On a desktop, the current default editor (<a href="https://wiki.openstreetmap.org/wiki/Id">iD</a>) has quite a good interface for adding addresses. The address fields show up by default when an area is tagged as building and they can be added quite easily to a point through the same interface when you search for "address" using the search bar at the top.</p>
 </div>
 <div class="answer-controls post-controls">

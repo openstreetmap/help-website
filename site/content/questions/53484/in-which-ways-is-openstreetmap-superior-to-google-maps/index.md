@@ -234,7 +234,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is great that OpenStreetMap can be used with very few restrictions (see <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> ) or cost (but note <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">http://wiki.openstreetmap.org/wiki/API_usage_policy</a> if you are using osm.org's tiles).</p>
+<p>It is great that OpenStreetMap can be used with very few restrictions (see <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> ) or cost (but note <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">https://wiki.openstreetmap.org/wiki/API_usage_policy</a> if you are using osm.org's tiles).</p>
 <p>I am a hiker and I found that it disappointing that i couldn't easily and legally share most maps and routes because of copyright, with openstreetmap i am allowed to share them. I couldn't legally draw a route on a most maps, then pass it to friends as a photocopy, email it or publish it. I know you can maybe do some of this with Google maps, but most footpaths and trails will be missing. If they are missing from OSM we can walk them, record them as a GPX, and add them to OSM. Because the use of OSM data is free lots of navigation apps for smart phones and Garmins have been created that are free or very low cost without OSM they couldn't exist. Well done OSM!</p>
 </div>
 <div class="answer-controls post-controls">
@@ -260,7 +260,7 @@ osqa_accepted = false
 <div id="post-53503-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/1725/andy">@andy</a>-mackey, In your second line about copyright issue are you talking about OSM or Google maps?</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/1725/andy">@andy</a>-mackey, In your second line about copyright issue are you talking about OSM or Google maps?</p>
 </div>
 <div id="comment-53503-info" class="comment-info">
 <span class="comment-age">(12 Dec '16, 09:55)</span> <span class="comment-user userinfo">Gagan</span>
@@ -360,7 +360,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>Its mission to show my/your own neighborhood map by me/you</strong> not by mercy of others with their interest to earn money on your information.</p>
-<p>As your question is very vague, in practicality it lot depends on your application, effort you can put for part of maps work related to your application and last how much control do you want. These three points are in addition to <a href="http://help.openstreetmap.org/users/13030/skorbut"></a><a href="http://help.openstreetmap.org/users/13030/skorbut">@skorbut</a></a> point related to pricing/free data.</p>
+<p>As your question is very vague, in practicality it lot depends on your application, effort you can put for part of maps work related to your application and last how much control do you want. These three points are in addition to <a href="https://help.openstreetmap.org/users/13030/skorbut"></a><a href="https://help.openstreetmap.org/users/13030/skorbut">@skorbut</a></a> point related to pricing/free data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

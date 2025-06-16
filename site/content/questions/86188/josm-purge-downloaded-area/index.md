@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I accidentally downloaded a region separate from the area I want to edit in the current file.</p>
 <p>I was able to purge the objects using the "Purge" action, but it still tries to re-download the area when I use "Update data". Can I somehow mark the area un-downloaded?</p>
 <p>See the black rectangle in the top right of the screenshot:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20221119_132153.png" alt="screenshot" /></p>
+<p><img src="/upfiles/Screenshot_20221119_132153.png" alt="screenshot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-download" rel="tag" title="see questions tagged &#39;download&#39;">download</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-purge" rel="tag" title="see questions tagged &#39;purge&#39;">purge</span>

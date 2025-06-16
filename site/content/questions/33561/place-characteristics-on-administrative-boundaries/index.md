@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Place characteristics on administrative boundaries"
-description = '''Background:  http://wiki.openstreetmap.org/wiki/Relation:boundary describes boundary relations, with the parent article http://wiki.openstreetmap.org/wiki/Boundaries explaining:  &#x27;The original accepted usage was to only apply (the boundary) tag to areas. However there now seems to be a consensus of ...'''
+description = '''Background:  https://wiki.openstreetmap.org/wiki/Relation:boundary describes boundary relations, with the parent article https://wiki.openstreetmap.org/wiki/Boundaries explaining:  &#x27;The original accepted usage was to only apply (the boundary) tag to areas. However there now seems to be a consensus of ...'''
 date = "2014-05-30T03:29:00Z"
 lastmod = "2014-05-31T04:35:00Z"
 weight = 33561
@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>Background:</p>
 <hr />
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">http://wiki.openstreetmap.org/wiki/Relation:boundary</a> describes boundary relations, with the parent article <a href="http://wiki.openstreetmap.org/wiki/Boundaries">http://wiki.openstreetmap.org/wiki/Boundaries</a> explaining:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">https://wiki.openstreetmap.org/wiki/Relation:boundary</a> describes boundary relations, with the parent article <a href="https://wiki.openstreetmap.org/wiki/Boundaries">https://wiki.openstreetmap.org/wiki/Boundaries</a> explaining:</p>
 <p>'The original accepted usage was to only apply (the boundary) tag to areas. However there now seems to be a consensus of using the boundary key also on linear ways, with relations used to aggregate these ways if needed.'</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Place#Administrative_boundaries">http://wiki.openstreetmap.org/wiki/Place#Administrative_boundaries</a> is the best description I can find of how to do this. It prescribes (one boundary relation) (per administrative boundary), which will have:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Place#Administrative_boundaries">https://wiki.openstreetmap.org/wiki/Place#Administrative_boundaries</a> is the best description I can find of how to do this. It prescribes (one boundary relation) (per administrative boundary), which will have:</p>
 <ol>
 <li>One or more ways of role 'outer'/'inner', which themselves are tagged with boundary and admin_level tags</li>
 <li>Zero or one nodes of role 'admin_centre', for the 'center' of the administrative area</li>

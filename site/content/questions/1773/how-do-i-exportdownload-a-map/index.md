@@ -171,8 +171,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For making a printable map I advise you to look at the <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">wiki</a> for options. There are ways of stitching the png tiles together again to form a big map, or rendering your own map in svg format optionally tweaking the rendering to your liking.</p>
-<p>As for a slippy map on a web site you can check out <a href="http://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a> witch is the nice open source slippy map used on the main page.</p>
+<p>For making a printable map I advise you to look at the <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">wiki</a> for options. There are ways of stitching the png tiles together again to form a big map, or rendering your own map in svg format optionally tweaking the rendering to your liking.</p>
+<p>As for a slippy map on a web site you can check out <a href="https://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a> witch is the nice open source slippy map used on the main page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -222,7 +222,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Bigmap">http://wiki.openstreetmap.org/wiki/Bigmap</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bigmap">https://wiki.openstreetmap.org/wiki/Bigmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

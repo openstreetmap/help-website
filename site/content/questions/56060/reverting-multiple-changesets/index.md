@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>why didn't you send an email to the data working group? <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">http://wiki.openstreetmap.org/wiki/Data_working_group</a></p>
+<p>why didn't you send an email to the data working group? <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">https://wiki.openstreetmap.org/wiki/Data_working_group</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

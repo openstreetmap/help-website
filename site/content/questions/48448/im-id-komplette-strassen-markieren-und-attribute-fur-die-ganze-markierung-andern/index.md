@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-48504-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Siehe <a href="https://help.openstreetmap.org/questions/48500/josm-remote-control-funktioniert-nicht">https://help.openstreetmap.org/questions/48500/josm-remote-control-funktioniert-nicht</a></p>
+<p>Siehe <a href="/questions/48500/josm-remote-control-funktioniert-nicht">https://help.openstreetmap.org/questions/48500/josm-remote-control-funktioniert-nicht</a></p>
 </div>
 <div id="comment-48504-info" class="comment-info">
 <span class="comment-age">(04 Mar '16, 19:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

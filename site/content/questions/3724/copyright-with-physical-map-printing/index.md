@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">legal FAQ</a>. In short is says: do what you would do if you had to credit a commerical data source.</p>
+<p>Have a look at the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">legal FAQ</a>. In short is says: do what you would do if you had to credit a commerical data source.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I open the map with QUO or you could just view the map,then do a screen grab paste it into word and print it put the CC-SA bit any where that is convenient for you.also see question <a href="http://help.openstreetmap.org/questions/3330/why-doesnt-openstreetmaporg-show-attribution-and-copyright-notice">http://help.openstreetmap.org/questions/3330/why-doesnt-openstreetmaporg-show-attribution-and-copyright-notice</a></p>
+<p>I open the map with QUO or you could just view the map,then do a screen grab paste it into word and print it put the CC-SA bit any where that is convenient for you.also see question <a href="/questions/3330/why-doesnt-openstreetmaporg-show-attribution-and-copyright-notice">https://help.openstreetmap.org/questions/3330/why-doesnt-openstreetmaporg-show-attribution-and-copyright-notice</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

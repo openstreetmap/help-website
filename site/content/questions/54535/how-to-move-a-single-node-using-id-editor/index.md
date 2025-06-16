@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-54537-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this the same behavior as described here? <a href="https://help.openstreetmap.org/questions/54353/problem-with-id-editor">https://help.openstreetmap.org/questions/54353/problem-with-id-editor</a></p>
+<p>Is this the same behavior as described here? <a href="/questions/54353/problem-with-id-editor">https://help.openstreetmap.org/questions/54353/problem-with-id-editor</a></p>
 </div>
 <div id="comment-54537-info" class="comment-info">
 <span class="comment-age">(07 Feb '17, 14:12)</span> <span class="comment-user userinfo">scai ♦</span>

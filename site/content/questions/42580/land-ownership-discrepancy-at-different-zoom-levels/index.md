@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Land ownership discrepancy at different zoom levels"
-description = '''First of all my apologies if I tag this incorrectly this is my first post. I&#x27;ve been working In this area http://www.openstreetmap.org/#map=11/46.6746/-122.3664 and decided to fix up the administrative boundaries. It hasn&#x27;t updated all the tiles as my posting just yet, but the issue I&#x27;m having is th...'''
+description = '''First of all my apologies if I tag this incorrectly this is my first post. I&#x27;ve been working In this area https://www.openstreetmap.org/#map=11/46.6746/-122.3664 and decided to fix up the administrative boundaries. It hasn&#x27;t updated all the tiles as my posting just yet, but the issue I&#x27;m having is th...'''
 date = "2015-04-24T21:54:00Z"
 lastmod = "2015-04-26T08:32:00Z"
 weight = 42580
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>First of all my apologies if I tag this incorrectly this is my first post.</p>
-<p>I've been working In this area <a href="http://www.openstreetmap.org/#map=11/46.6746/-122.3664">http://www.openstreetmap.org/#map=11/46.6746/-122.3664</a> and decided to fix up the administrative boundaries. It hasn't updated all the tiles as my posting just yet, but the issue I'm having is that as you zoom in the land owner changes back and forth from Snoqualmie National Forest to Gifford-Pinchot National Forest.</p>
+<p>I've been working In this area <a href="https://www.openstreetmap.org/#map=11/46.6746/-122.3664">https://www.openstreetmap.org/#map=11/46.6746/-122.3664</a> and decided to fix up the administrative boundaries. It hasn't updated all the tiles as my posting just yet, but the issue I'm having is that as you zoom in the land owner changes back and forth from Snoqualmie National Forest to Gifford-Pinchot National Forest.</p>
 <p>I'm not sure where to change this as it seems I don't understand how it changes as I zoom in to begin with.</p>
 <p>The forest is owned by the Mt. Baker-Snoqualmie National Forest but administered by the Gifford-Pinchot National Forest so it's unclear to me how to set this up also.</p>
 <p>I guess I need to explicitly ask a question.</p>
@@ -156,7 +156,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are two relations, one for <a href="http://www.openstreetmap.org/relation/2455752">Gifford Pinchot National Forest</a> and one for <a href="http://www.openstreetmap.org/relation/4827232">Snoqualmie National Forest</a>. They have the same members and hence the same geometry. So its not clear for the renderer which name to show. The second relation has been created by you, by the way.</p>
+<p>There are two relations, one for <a href="https://www.openstreetmap.org/relation/2455752">Gifford Pinchot National Forest</a> and one for <a href="https://www.openstreetmap.org/relation/4827232">Snoqualmie National Forest</a>. They have the same members and hence the same geometry. So its not clear for the renderer which name to show. The second relation has been created by you, by the way.</p>
 <p>I'm not sure which name to keep. Usually the <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">name is the name only</a> and should be neither the operator nor the administrator. How is this forest called locally?</p>
 </div>
 <div class="answer-controls post-controls">

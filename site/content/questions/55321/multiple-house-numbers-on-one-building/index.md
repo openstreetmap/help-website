@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there an established way of tagging house numbers on buildings which have more than one number (typically one for each entrance/staircase), without going into micro-mapping the actual positions of the entrances?</p>
-<p><a href="http://www.openstreetmap.org/way/345070158">Here</a>, somebody put a range in addr:housenumber. Do routers in general understand this (mapnik apparently renders it). Do semicolons work (addr:housenumber=91;93;95)?</p>
-<p><a href="http://www.openstreetmap.org/?mlat=59.61559&amp;mlon=17.83362#map=17/59.61559/17.83362">Here</a>, I copped out and just dropped nodes in approximate locations (most of those buildings have two entrances, on opposite sides, for each number). Is that better?</p>
+<p><a href="https://www.openstreetmap.org/way/345070158">Here</a>, somebody put a range in addr:housenumber. Do routers in general understand this (mapnik apparently renders it). Do semicolons work (addr:housenumber=91;93;95)?</p>
+<p><a href="https://www.openstreetmap.org/?mlat=59.61559&amp;mlon=17.83362#map=17/59.61559/17.83362">Here</a>, I copped out and just dropped nodes in approximate locations (most of those buildings have two entrances, on opposite sides, for each number). Is that better?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-housenumbers" rel="tag" title="see questions tagged &#39;housenumbers&#39;">housenumbers</span>
@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This example looks ok here <a href="https://www.openstreetmap.org/search?query=163-185%20jeavons%20lane#map=19/52.21058/-0.07114">https://www.openstreetmap.org/search?query=163-185%20jeavons%20lane#map=19/52.21058/-0.07114</a> but to find the houses with nominatim 165 jeavons lane doesn't work but 163-185 jeavons lane together does?? so we need more info on how to enter those numbers. For semi- detached pairs ( two houses joined ) a search works. more dense numbers are messy with two or three story flats. nominatim finds this one (of a pair_ "20, Drivers Avenue, Huntingdon CP (Hunts), Huntingdon, Cambridgeshire, East of England, England, PE29 1UP, United Kingdom" here <a href="http://www.openstreetmap.org/#map=19/52.33466/-0.17465">http://www.openstreetmap.org/#map=19/52.33466/-0.17465</a> The house numbering here works fine, try it. <a href="https://www.openstreetmap.org/way/159765075#map=18/44.74378/-63.46505">https://www.openstreetmap.org/way/159765075#map=18/44.74378/-63.46505</a> There a bit here on flats <a href="http://wiki.openstreetmap.org/wiki/Key:addr:flats">http://wiki.openstreetmap.org/wiki/Key:addr:flats</a></p>
+<p>This example looks ok here <a href="https://www.openstreetmap.org/search?query=163-185%20jeavons%20lane#map=19/52.21058/-0.07114">https://www.openstreetmap.org/search?query=163-185%20jeavons%20lane#map=19/52.21058/-0.07114</a> but to find the houses with nominatim 165 jeavons lane doesn't work but 163-185 jeavons lane together does?? so we need more info on how to enter those numbers. For semi- detached pairs ( two houses joined ) a search works. more dense numbers are messy with two or three story flats. nominatim finds this one (of a pair_ "20, Drivers Avenue, Huntingdon CP (Hunts), Huntingdon, Cambridgeshire, East of England, England, PE29 1UP, United Kingdom" here <a href="https://www.openstreetmap.org/#map=19/52.33466/-0.17465">https://www.openstreetmap.org/#map=19/52.33466/-0.17465</a> The house numbering here works fine, try it. <a href="https://www.openstreetmap.org/way/159765075#map=18/44.74378/-63.46505">https://www.openstreetmap.org/way/159765075#map=18/44.74378/-63.46505</a> There a bit here on flats <a href="https://wiki.openstreetmap.org/wiki/Key:addr:flats">https://wiki.openstreetmap.org/wiki/Key:addr:flats</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -302,7 +302,7 @@ osqa_accepted = false
 <div id="post-55358-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It may look ok on the map if there isn't too many numbers but if you try nominatim address search including a number it does not find these terraces, but without a number it does work. <a href="http://www.openstreetmap.org/search?query=OCTAVIA%20TERRACE%20HUNTINGDON#map=18/52.34012/-0.16779">http://www.openstreetmap.org/search?query=OCTAVIA%20TERRACE%20HUNTINGDON#map=18/52.34012/-0.16779</a></p>
+<p>It may look ok on the map if there isn't too many numbers but if you try nominatim address search including a number it does not find these terraces, but without a number it does work. <a href="https://www.openstreetmap.org/search?query=OCTAVIA%20TERRACE%20HUNTINGDON#map=18/52.34012/-0.16779">https://www.openstreetmap.org/search?query=OCTAVIA%20TERRACE%20HUNTINGDON#map=18/52.34012/-0.16779</a></p>
 </div>
 <div id="comment-55358-info" class="comment-info">
 <span class="comment-age">(30 Mar '17, 08:31)</span> <span class="comment-user userinfo">andy mackey</span>

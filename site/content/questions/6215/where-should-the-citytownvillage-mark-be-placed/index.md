@@ -154,7 +154,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Key:place#Positioning_a_central_place_node">http://wiki.openstreetmap.org/wiki/Key:place#Positioning_a_central_place_node</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Key:place#Positioning_a_central_place_node">https://wiki.openstreetmap.org/wiki/Key:place#Positioning_a_central_place_node</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

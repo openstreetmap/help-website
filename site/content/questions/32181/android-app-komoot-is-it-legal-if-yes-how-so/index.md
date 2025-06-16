@@ -161,7 +161,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><span></span><span>@tuxator</span>: Charging for OSM data is not a license violation and completely fine, see the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3e._Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">Legal FAQ</a>. This applies to almost any open source software, too.</p>
+<p><span></span><span>@tuxator</span>: Charging for OSM data is not a license violation and completely fine, see the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3e._Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">Legal FAQ</a>. This applies to almost any open source software, too.</p>
 </div>
 <div id="comment-32211-info" class="comment-info">
 <span class="comment-age">(08 Apr '14, 19:12)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -203,7 +203,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> will answer most of your questions. Selling OSM data is generally allowed but it must be under the ODbL license which has certain requirements.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> will answer most of your questions. Selling OSM data is generally allowed but it must be under the ODbL license which has certain requirements.</p>
 <p>Using OSM data without attribution (i.e. without saying that you use OSM data) is not allowed. Note however that sometimes, OSM and another dataset may derive their addresses from the same source, e.g. a government public domain data publication, and in such cases you'd find that the other dataset has the same missing addresses as OSM even though it isn't using OSM.</p>
 </div>
 <div class="answer-controls post-controls">

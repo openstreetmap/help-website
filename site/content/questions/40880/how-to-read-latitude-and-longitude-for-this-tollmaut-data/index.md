@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "how to read latitude and longitude for this toll/maut data"
-description = '''Hi, i need to calculate the distance route with and without toll access in germany i got a toll gate data in http://wiki.openstreetmap.org/wiki/Mautdaten , or download here : http://www.openstreetmap.de/download/mautknoten/mautknoten_4326.zip  Anyone know how to read this toll gate data? so far i do...'''
+description = '''Hi, i need to calculate the distance route with and without toll access in germany i got a toll gate data in https://wiki.openstreetmap.org/wiki/Mautdaten , or download here : http://www.openstreetmap.de/download/mautknoten/mautknoten_4326.zip  Anyone know how to read this toll gate data? so far i do...'''
 date = "2015-02-09T09:44:00Z"
 lastmod = "2015-02-09T12:05:00Z"
 weight = 40880
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>i need to calculate the distance route with and without toll access in germany</p>
-<p>i got a toll gate data in <a href="http://wiki.openstreetmap.org/wiki/Mautdaten">http://wiki.openstreetmap.org/wiki/Mautdaten</a> , or download here : <a href="http://www.openstreetmap.de/download/mautknoten/mautknoten_4326.zip">http://www.openstreetmap.de/download/mautknoten/mautknoten_4326.zip</a> Anyone know how to read this toll gate data?</p>
+<p>i got a toll gate data in <a href="https://wiki.openstreetmap.org/wiki/Mautdaten">https://wiki.openstreetmap.org/wiki/Mautdaten</a> , or download here : <a href="http://www.openstreetmap.de/download/mautknoten/mautknoten_4326.zip">http://www.openstreetmap.de/download/mautknoten/mautknoten_4326.zip</a> Anyone know how to read this toll gate data?</p>
 <p>so far i dont see latitude and longitude that i can use for checking on route if it is use toll or not. i want to check on route if the toll point (gate) defined by latitude and longitude is on the route.</p>
 <p>my idea is by comparing the route and toll gate data to know if it used toll or not</p>
 </div>

@@ -110,7 +110,7 @@ osqa_accepted = false
 <li>If a relation describes a turn restriction, then the members will usually be two ways. The roles "from" and "to" are used to indicate the direction of the turn restriction. E.g. if turning from "main road" to "Lancaster road" is prohibited, you'd have relation members "from"="main road", "to=Lancaster road". The roles are important because turn restrictions often only apply in one direction.</li>
 <li>For multipolygons, roles are used to describe whether a single closed way is an "inner" or "outer" way.</li>
 </ul>
-<p>See the wiki for details: <a href="http://wiki.openstreetmap.org/wiki/Relation">http://wiki.openstreetmap.org/wiki/Relation</a></p>
+<p>See the wiki for details: <a href="https://wiki.openstreetmap.org/wiki/Relation">https://wiki.openstreetmap.org/wiki/Relation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The general idea is that while there might be relations where all members are of the same kind (e.g. a route relation that simply collects all pieces making up the I12345 or so), there could be other relations where it makes a huge difference in what role you participiate (for a simple example think of a hypothetical ownership relation in which you can either participate as the "owner" or as the "owned").</p>
-<p>The roles that make sense in a given context (i.e. in a given relation type) are usually described in the relation detail; see links collected on the <a href="http://wiki.openstreetmap.org/wiki/Relation#Proposed_uses_of_relations">relations page</a> on the wiki.</p>
+<p>The roles that make sense in a given context (i.e. in a given relation type) are usually described in the relation detail; see links collected on the <a href="https://wiki.openstreetmap.org/wiki/Relation#Proposed_uses_of_relations">relations page</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -254,11 +254,11 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Additionally I think the main point is that the OSM Editor software (JOSM / Potlatch2) should automatically fill in the role when creating common relations (e.g. for turn restrictions or a multi-polygon).</p>
 <p>'power' users can edit/set this value should they think it is necessary. E.g. in creating new kinds of relations not supported by editor presets or for fixing previously created but incorrect values.</p>
-<p>In much the same way as you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tag</a> the value of the role can be anything.</p>
+<p>In much the same way as you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tag</a> the value of the role can be anything.</p>
 <p>Some values for roles depends on the type of relation as noted in these wiki pages for common usage:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">http://wiki.openstreetmap.org/wiki/Relation:boundary</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">http://wiki.openstreetmap.org/wiki/Relation:restriction</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:waterway">http://wiki.openstreetmap.org/wiki/Relation:waterway</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">https://wiki.openstreetmap.org/wiki/Relation:boundary</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">https://wiki.openstreetmap.org/wiki/Relation:restriction</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:waterway">https://wiki.openstreetmap.org/wiki/Relation:waterway</a></p>
 <p>One can always leave it blank if you feel adding a value brings little or no benefit.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -46,7 +46,7 @@ osqa_accepted = false
 <p>What do you think about extending OSM to indoor mapping?</p>
 <p>Thanks,<br />
 Audrey</p>
-<p>[1] <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">Rails Port</a><br />
+<p>[1] <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">Rails Port</a><br />
 [2] <a href="http://weait.com/content/build-your-own-openstreetmap-server">Own OSM Server</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -144,7 +144,7 @@ One Answer:
 <div id="post-44742-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Does the answer <a href="https://help.openstreetmap.org/questions/17450/point-rails-port-to-different-tile-server">here</a> help? I'm guessing a bit here, obviously.</p>
+<p>Does the answer <a href="/questions/17450/point-rails-port-to-different-tile-server">here</a> help? I'm guessing a bit here, obviously.</p>
 </div>
 <div id="comment-44742-info" class="comment-info">
 <span class="comment-age">(12 Aug '15, 16:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

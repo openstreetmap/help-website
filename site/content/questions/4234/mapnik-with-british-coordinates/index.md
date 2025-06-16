@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mapnik with British Coordinates"
-description = '''I am trying to create a slippy map of the area of Wrexham, but using the British Coordinate System (by following http://wiki.openstreetmap.org/wiki/Mapnik_GB_Projection) I can produce the maps in the standard spherical projection, using osm2psql to upload the vectors in a box (-b -3.4,52.85,-2.7,53....'''
+description = '''I am trying to create a slippy map of the area of Wrexham, but using the British Coordinate System (by following https://wiki.openstreetmap.org/wiki/Mapnik_GB_Projection) I can produce the maps in the standard spherical projection, using osm2psql to upload the vectors in a box (-b -3.4,52.85,-2.7,53....'''
 date = "2011-03-31T20:27:00Z"
 lastmod = "2017-01-05T20:17:00Z"
 weight = 4234
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to create a slippy map of the area of Wrexham, but using the British Coordinate System (by following <a href="http://wiki.openstreetmap.org/wiki/Mapnik_GB_Projection">http://wiki.openstreetmap.org/wiki/Mapnik_GB_Projection</a>)</p>
+<p>I am trying to create a slippy map of the area of Wrexham, but using the British Coordinate System (by following <a href="https://wiki.openstreetmap.org/wiki/Mapnik_GB_Projection">https://wiki.openstreetmap.org/wiki/Mapnik_GB_Projection</a>)</p>
 <p>I can produce the maps in the standard spherical projection, using osm2psql to upload the vectors in a box (-b -3.4,52.85,-2.7,53.15) to PostgreSQL, and create the tiles defining the same box in generate_tiles.py.</p>
 <p>I then change the coordinate system in PostgreSQL with PostGIS extension using the command <code>sudo osm2pgsql -v -H localhost -P 5433 -U gisuser -W -C 4096 -b -3.4,52.85,-2.7,53.15 -S /home/m/bin/welsh.style united_kingdom.osm.bz2</code></p>
 <p>Checking the data in Qgis shows everything looks fine and the coordinates are what would be expected. For mapnik, I have changed the srs attribute in osm.xml to <code>+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.999601 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +towgs84=446.448,-125.157,542.060,0.1502,0.2470,0.8421,-20.4894 +units=m +nodefs</code></p>

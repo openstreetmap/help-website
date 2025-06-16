@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>AS I mentioned I was able to sort out roughly about 2000+ elevations each with their Name, Height and Geolocation.</p>
 <p>So... How do we go about adding this.... :-)</p>
 <h1 id="letsgetiton">LetsGetItOn</h1>
-<p><img src="https://help.openstreetmap.org/upfiles/DR_elevationsmapped_in_GMaps.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/DR_elevationsmapped_in_GMaps.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bulk" rel="tag" title="see questions tagged &#39;bulk&#39;">bulk</span> <span class="post-tag tag-link-newbie" rel="tag" title="see questions tagged &#39;newbie&#39;">newbie</span> <span class="post-tag tag-link-elevation" rel="tag" title="see questions tagged &#39;elevation&#39;">elevation</span> <span class="post-tag tag-link-dominican" rel="tag" title="see questions tagged &#39;dominican&#39;">dominican</span> <span class="post-tag tag-link-bulk_editing" rel="tag" title="see questions tagged &#39;bulk_editing&#39;">bulk_editing</span>

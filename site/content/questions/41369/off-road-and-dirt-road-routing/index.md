@@ -94,7 +94,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>yes <a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, routing for off-road motorcycling is what I'm hoping to be able to do.</p>
+<p>yes <a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, routing for off-road motorcycling is what I'm hoping to be able to do.</p>
 </div>
 <div id="comment-41439-info" class="comment-info">
 <span class="comment-age">(01 Mar '15, 20:04)</span> <span class="comment-user userinfo">AdvMap</span>
@@ -181,7 +181,7 @@ osqa_accepted = false
 <div id="post-41442-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Interesting links, they look a little more rigid in the types of routes they want to work with. The BRouter Web link below looks more configurable. Thank for the links <a href="http://help.openstreetmap.org/users/30/rorym">@rorym</a>!</p>
+<p>Interesting links, they look a little more rigid in the types of routes they want to work with. The BRouter Web link below looks more configurable. Thank for the links <a href="https://help.openstreetmap.org/users/30/rorym">@rorym</a>!</p>
 </div>
 <div id="comment-41442-info" class="comment-info">
 <span class="comment-age">(01 Mar '15, 20:15)</span> <span class="comment-user userinfo">AdvMap</span>
@@ -318,7 +318,7 @@ osqa_accepted = false
 <div id="post-41441-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That's an interesting site. Looks like I could create my own profile to prefer specific road types and then if I cleaned up some data in my area I could be good to go. Thanks for the link <a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a>!</p>
+<p>That's an interesting site. Looks like I could create my own profile to prefer specific road types and then if I cleaned up some data in my area I could be good to go. Thanks for the link <a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a>!</p>
 </div>
 <div id="comment-41441-info" class="comment-info">
 <span class="comment-age">(01 Mar '15, 20:12)</span> <span class="comment-user userinfo">AdvMap</span>
@@ -393,7 +393,7 @@ osqa_accepted = false
 <div id="post-41417-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta: <a href="http://help.openstreetmap.org/users/10571/advmap"></a><a href="http://help.openstreetmap.org/users/10571/advmap">@AdvMap</a>: you should describe what you mean by "OSM routing functionality" – in your question text (although it is a bit late now after all these more general answers …). Do you mean the basic routing function now on www.openstreetmap.org?</p>
+<p>meta: <a href="https://help.openstreetmap.org/users/10571/advmap"></a><a href="https://help.openstreetmap.org/users/10571/advmap">@AdvMap</a>: you should describe what you mean by "OSM routing functionality" – in your question text (although it is a bit late now after all these more general answers …). Do you mean the basic routing function now on www.openstreetmap.org?</p>
 </div>
 <div id="comment-41417-info" class="comment-info">
 <span class="comment-age">(27 Feb '15, 13:51)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -435,7 +435,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, the main map now has the ability to route with options of Bicycle, Car or Foot. At the moment limited to start and finish, no via points. Several other online OSM sites allow various forms of routing, have a look here :- <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">http://wiki.openstreetmap.org/wiki/Routing/online_routers</a></p>
+<p>Hi, the main map now has the ability to route with options of Bicycle, Car or Foot. At the moment limited to start and finish, no via points. Several other online OSM sites allow various forms of routing, have a look here :- <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">https://wiki.openstreetmap.org/wiki/Routing/online_routers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

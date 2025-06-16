@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Car/truck towing business"
-description = '''Hi guys, as the title says, how am I supposed to tag a business that is focused on car towing, truck towing and roadside assistance? I&#x27;ve given a quick look at few towing companies already added to the map and they were tagged as shop=car__repair, but the wiki (http://wiki.openstreetmap.org/wiki/Tag...'''
+description = '''Hi guys, as the title says, how am I supposed to tag a business that is focused on car towing, truck towing and roadside assistance? I&#x27;ve given a quick look at few towing companies already added to the map and they were tagged as shop=car__repair, but the wiki (https://wiki.openstreetmap.org/wiki/Tag...'''
 date = "2015-12-14T18:08:00Z"
 lastmod = "2015-12-21T22:46:00Z"
 weight = 47158
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi guys, as the title says, how am I supposed to tag a business that is focused on car towing, truck towing and roadside assistance? I've given a quick look at few towing companies already added to the map and they were tagged as shop=car__repair, but the wiki (<a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar_repair)">http://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar_repair)</a> doesn't mention anything about towing in that page. Any suggestion would be much appreciated. Thanks</p>
+<p>Hi guys, as the title says, how am I supposed to tag a business that is focused on car towing, truck towing and roadside assistance? I've given a quick look at few towing companies already added to the map and they were tagged as shop=car__repair, but the wiki (<a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar_repair)">https://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar_repair)</a> doesn't mention anything about towing in that page. Any suggestion would be much appreciated. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-howto" rel="tag" title="see questions tagged &#39;howto&#39;">howto</span> <span class="post-tag tag-link-car" rel="tag" title="see questions tagged &#39;car&#39;">car</span> <span class="post-tag tag-link-towing" rel="tag" title="see questions tagged &#39;towing&#39;">towing</span> <span class="post-tag tag-link-tow" rel="tag" title="see questions tagged &#39;tow&#39;">tow</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I looked <a href="http://taginfo.openstreetmap.org/tags/shop=towing#overview">here</a>, and it looks like three places have been tagged as shop=towing. At the bottom of <a href="http://wiki.openstreetmap.org/wiki/Key:shop">this page</a>, there is a place for "user defined", and it seems like there is a way to propose new features, but I do not quite understand the details of how that works or if this should be proposed as a new feature.</p>
+<p>I looked <a href="http://taginfo.openstreetmap.org/tags/shop=towing#overview">here</a>, and it looks like three places have been tagged as shop=towing. At the bottom of <a href="https://wiki.openstreetmap.org/wiki/Key:shop">this page</a>, there is a place for "user defined", and it seems like there is a way to propose new features, but I do not quite understand the details of how that works or if this should be proposed as a new feature.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

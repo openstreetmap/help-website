@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to load your OSM data into PostGIS using <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a></p>
+<p>You need to load your OSM data into PostGIS using <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

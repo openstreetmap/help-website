@@ -184,7 +184,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Here one i mapped sometime ago <a href="https://www.openstreetmap.org/#map=17/52.33574/-0.29337">https://www.openstreetmap.org/#map=17/52.33574/-0.29337</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/transport_site_UR6q5mP.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/transport_site_UR6q5mP.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

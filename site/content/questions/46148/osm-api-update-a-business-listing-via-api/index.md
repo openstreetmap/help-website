@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OSM API described <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">on the Wiki</a> is the one you would use for any attempt at modifying existing OSM data or adding new data. There are also a couple of libraries in various programming languages that make talking to the API easier.</p>
+<p>The OSM API described <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">on the Wiki</a> is the one you would use for any attempt at modifying existing OSM data or adding new data. There are also a couple of libraries in various programming languages that make talking to the API easier.</p>
 <p>The opening hours syntax in your example is different from what is used in OSM (where day name abbreviations are used).</p>
 <p>Please also note that OSM is not primarily a business directory. In the past, people adding business information have made all or some of the following mistakes:</p>
 <ul>
@@ -129,7 +129,7 @@ One Answer:
 <li>hiding the source of the data - one "online visibility expert" created many OSM accounts in order to hide the fact that he was behind all these edits.</li>
 <li>using data sources that are not license-compatible with OSM, for example: company has a list of their branches with addresses but not geo locations, service provider runs the addresses through Google to obtain locations, then adds them to OSM - this is a violation of Google's copyright or terms of use.</li>
 <li>building mechanical processes that feed data into OSM but neglecting to read and respond to messages that the community sends in response to these edits, e.g. asking questions or criticising something.</li>
-<li>adding "advertising" messages to OSM - see e.g. <a href="https://help.openstreetmap.org/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap">https://help.openstreetmap.org/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap</a> for more.</li>
+<li>adding "advertising" messages to OSM - see e.g. <a href="/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap">https://help.openstreetmap.org/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap</a> for more.</li>
 </ul>
 <p>Please do not repeat these mistakes.</p>
 </div>
@@ -172,7 +172,7 @@ One Answer:
 <p>A Python API is available <a href="https://github.com/metaodi/osmapi/blob/develop/osmapi/OsmApi.py.">https://github.com/metaodi/osmapi/blob/develop/osmapi/OsmApi.py.</a> During development be sure to use the dev server as described on the API wiki page, not the live server.</p>
 <p>You will need to use the NodeCreate/NodeUpdate calls from the Python API, or if you are updating a POI that is recorded in OSM as an area not a point you will need to use WayUpdate. It is imperative to get this right - if you create a new node because you didn't notice that there is already a way that describes the POI then you will create duplicates.</p>
 <p>Your clients will have to register an account with OpenStreetMap to make their uploads; you cannot register an account for yourself and let all your clients use that because OSM requests the ability to get in touch with the person who uploads data - which is your clients, not you.</p>
-<p>Opening Hours syntax is described <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">on the Wiki</a>.</p>
+<p>Opening Hours syntax is described <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">on the Wiki</a>.</p>
 <p>I cannot overstate how important it is to get this right - if you try to dump data into OSM with no regard for the community and its norms then your data will be thrown out, your software blocked and you embarrassed before your clients.</p>
 </div>
 <div id="comment-46156-info" class="comment-info">

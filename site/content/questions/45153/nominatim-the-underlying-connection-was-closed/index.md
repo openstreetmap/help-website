@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-45231-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> : Is there any possible way to do this ?</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> : Is there any possible way to do this ?</p>
 </div>
 <div id="comment-45231-info" class="comment-info">
 <span class="comment-age">(14 Sep '15, 07:31)</span> <span class="comment-user userinfo">SpiderCode</span>

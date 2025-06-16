@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "parking area not showing / appears green in editor"
-description = '''Hi everyone. It&#x27;s been two weeks since I signalled the existence of a parking area (at: http://www.openstreetmap.org/#map=19/39.40062/-8.49077) and still it doesn&#x27;t show up in the map. I&#x27;ve noticed, when I use the editor, that (unlike other parking areas, that I&#x27;ve created, that appear in yellow) th...'''
+description = '''Hi everyone. It&#x27;s been two weeks since I signalled the existence of a parking area (at: https://www.openstreetmap.org/#map=19/39.40062/-8.49077) and still it doesn&#x27;t show up in the map. I&#x27;ve noticed, when I use the editor, that (unlike other parking areas, that I&#x27;ve created, that appear in yellow) th...'''
 date = "2017-03-17T06:36:00Z"
 lastmod = "2017-03-17T09:29:00Z"
 weight = 55140
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi everyone.</p>
-<p>It's been two weeks since I signalled the existence of a parking area (at: <a href="http://www.openstreetmap.org/#map=19/39.40062/-8.49077)">http://www.openstreetmap.org/#map=19/39.40062/-8.49077)</a> and still it doesn't show up in the map.</p>
+<p>It's been two weeks since I signalled the existence of a parking area (at: <a href="https://www.openstreetmap.org/#map=19/39.40062/-8.49077)">https://www.openstreetmap.org/#map=19/39.40062/-8.49077)</a> and still it doesn't show up in the map.</p>
 <p>I've noticed, when I use the editor, that (unlike other parking areas, that I've created, that appear in yellow) this particular parking area, that doesn't show up in the map, appears in green.</p>
 <p>(Can it be because it has trees on top of it - in the satellite picture - and the map automatically thinks it's a "green"/forest area, instead?)</p>
 <p>I've tried adding the two tiny access paths that connect it to the road - but, still the map doesn't show the parking area, while already showing the tiny access paths.</p>

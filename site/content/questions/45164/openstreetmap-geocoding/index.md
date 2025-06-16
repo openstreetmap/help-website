@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Unlike Google Maps (at least their free version) you can use OpenStreetMap data behind firewalls, in private projects and charge your users/customers money for usage. We ask for attribution, e.g. the text/link "© OpenStreetMap contributors" either on the map or other part of the page. See <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
-<p>OpenStreetMaps' geocoding API has usage limits as well: <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a> With dozens of GPS devices sending data every minute you can easily reach the limits of 1 request/sec. The page also lists third-party alternatives. They cost money but you'll see they're much cheaper that Google Maps.</p>
+<p>Unlike Google Maps (at least their free version) you can use OpenStreetMap data behind firewalls, in private projects and charge your users/customers money for usage. We ask for attribution, e.g. the text/link "© OpenStreetMap contributors" either on the map or other part of the page. See <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
+<p>OpenStreetMaps' geocoding API has usage limits as well: <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a> With dozens of GPS devices sending data every minute you can easily reach the limits of 1 request/sec. The page also lists third-party alternatives. They cost money but you'll see they're much cheaper that Google Maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

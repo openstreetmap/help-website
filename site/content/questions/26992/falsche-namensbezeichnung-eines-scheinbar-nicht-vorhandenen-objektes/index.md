@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Eine einfache Suche auf www.openstreetmap.org nach "Briefverteilzentrum Radefeld" liefert <a href="http://www.openstreetmap.org/browse/way/218563422">dieses Gebäude</a> als Treffer. Der Name ist also direkt am Gebäude, nicht an dem Multipolygon.</p>
+<p>Eine einfache Suche auf www.openstreetmap.org nach "Briefverteilzentrum Radefeld" liefert <a href="https://www.openstreetmap.org/browse/way/218563422">dieses Gebäude</a> als Treffer. Der Name ist also direkt am Gebäude, nicht an dem Multipolygon.</p>
 <p>Im Editor (ich nehme mal an es handelt sich bei dir um iD) kannst du übrigens auch suchen. Solange keine Objekte ausgewählt sind, befindet sich am linken Rand ein Eingabefeld mit Suchfunktion, welches dieses Gebäude ebenfalls findet.</p>
 </div>
 <div class="answer-controls post-controls">

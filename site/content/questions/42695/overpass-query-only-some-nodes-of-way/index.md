@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Is it possible in overpass-turbo to query only some of the nodes of a way?</p>
 <p>I want to query a wide selection of ways, and then only get some of the nodes as a result. First, make me a list of all the ways (that are highway at least tertiary and surface=paved or similar), then give me the first node of any way, and a following node only if it is a least a 100 meters away from the first node. Then follow the way untill you find another node at leat 100m away, and so on untill the end of the way.</p>
 <p>The idea is to reduce the waiting and downloading time, so it might be counterproductive to try this?</p>
-<p>This question is related to my previous post <a href="https://help.openstreetmap.org/questions/40932/a-umap-with-lots-of-data-through-overpass">https://help.openstreetmap.org/questions/40932/a-umap-with-lots-of-data-through-overpass</a></p>
+<p>This question is related to my previous post <a href="/questions/40932/a-umap-with-lots-of-data-through-overpass">https://help.openstreetmap.org/questions/40932/a-umap-with-lots-of-data-through-overpass</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-overpass-turbo" rel="tag" title="see questions tagged &#39;overpass-turbo&#39;">overpass-turbo</span>

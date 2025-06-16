@@ -191,8 +191,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li>highway=service, <a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">service=alley</a>, foot=yes. That should be understood by renderers and routing engines just fine. You may want more specific <a href="http://wiki.openstreetmap.org/wiki/Key:access">access tags</a> but that will depend on the case I guess.</li>
-<li>Add a <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">barrier=gate</a> to the correct location. If it really is almost always closed then <a href="http://wiki.openstreetmap.org/wiki/Key:access">access=no</a> would represent that.</li>
+<li>highway=service, <a href="https://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">service=alley</a>, foot=yes. That should be understood by renderers and routing engines just fine. You may want more specific <a href="https://wiki.openstreetmap.org/wiki/Key:access">access tags</a> but that will depend on the case I guess.</li>
+<li>Add a <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">barrier=gate</a> to the correct location. If it really is almost always closed then <a href="https://wiki.openstreetmap.org/wiki/Key:access">access=no</a> would represent that.</li>
 <li>I would just tag the non-private way in the standard form with something like highway=unclassified.</li>
 </ol>
 </div>

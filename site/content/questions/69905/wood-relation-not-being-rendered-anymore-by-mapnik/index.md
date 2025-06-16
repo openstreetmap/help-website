@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Please have a look at <a href="https://www.openstreetmap.org/#map=10/39.8170/140.2508">this</a>: <img src="https://help.openstreetmap.org/upfiles/Screenshot_20190706_200402.png" alt="Mapnik ScreenShot" /></p>
-<p>You see the big white space north and west of 秋田市. This used to be wood and as far as I remember it was correctly rendered yesterday/the day before yesterday. I checked in JOSM, and the wood relation seems to look fine: <img src="https://help.openstreetmap.org/upfiles/Screenshot_20190706_200656.png" alt="JSOM ScreenShot" /></p>
+<p>Please have a look at <a href="https://www.openstreetmap.org/#map=10/39.8170/140.2508">this</a>: <img src="/upfiles/Screenshot_20190706_200402.png" alt="Mapnik ScreenShot" /></p>
+<p>You see the big white space north and west of 秋田市. This used to be wood and as far as I remember it was correctly rendered yesterday/the day before yesterday. I checked in JOSM, and the wood relation seems to look fine: <img src="/upfiles/Screenshot_20190706_200656.png" alt="JSOM ScreenShot" /></p>
 <p>Any idea how this happened and how to fix this? I looked through a lot of changesets, but I couldn't find anything matching (maybe <a href="https://www.openstreetmap.org/changeset/71320028#map=6/40.631/137.889">this</a>, but probably not). If you can't have a look at the data but have some hints I'd be grateful too.</p>
 <p>(If you know a method how to properly search and display changesets it would be a big help too (I am using the history feature of osm.org which is quite inconvenient + changeset_viewer plugin of josm))</p>
 </div>

@@ -181,7 +181,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This project seems to use existing tile servers (OpenStreetMap.org, cyclestreet) which are not customizable. If you have special needs, either check/contact one OSM tiles provider (list available on the wiki) or set-up your own tile server where you will be free to change styles and updates intervals.</p>
-<p>Please search existing replies about 'how to render or customize my own map' on this help site, e.g. <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">this one</a>. Also check <a href="http://wiki.openstreetmap.org/wiki/Renderer">the wiki</a> reflecting the latest info about rendering OSM data (e.g. with TileMill).</p>
+<p>Please search existing replies about 'how to render or customize my own map' on this help site, e.g. <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">this one</a>. Also check <a href="https://wiki.openstreetmap.org/wiki/Renderer">the wiki</a> reflecting the latest info about rendering OSM data (e.g. with TileMill).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -266,7 +266,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You'll need to create some tiles displaying only the information that you want, and then use those (online or more probably offline) in Osmdroid.</p>
 <p>A quick web search found <a href="http://www.haakseth.com/?p=30">this tutorial</a> about configuring an Osmdroid project to work with offline tiles.</p>
-<p>The process of creating the tiles is called "rendering" and there are many, many different options. I'd start with <a href="https://help.openstreetmap.org/search/?q=rendering&amp;Submit=Search&amp;t=question">a search for rendering questions on this help site</a>, and also <a href="http://wiki.openstreetmap.org/wiki/Rendering">this page on the OSM wiki</a>.</p>
+<p>The process of creating the tiles is called "rendering" and there are many, many different options. I'd start with <a href="https://help.openstreetmap.org/search/?q=rendering&amp;Submit=Search&amp;t=question">a search for rendering questions on this help site</a>, and also <a href="https://wiki.openstreetmap.org/wiki/Rendering">this page on the OSM wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

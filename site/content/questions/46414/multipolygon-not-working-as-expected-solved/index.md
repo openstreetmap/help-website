@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there, I have added some water elements in an area of meadows (grass-type vegetation).</p>
-<p>The larger area is marked with way <a href="http://www.openstreetmap.org/way/346287712">346287712</a>. This way has a relation: multipolygon <a href="http://www.openstreetmap.org/relation/5640835">5640835</a>. The selected role is 'outer'. The relation has the following two keys/values: landuse/meadow and type/multipolygon. This part seems to work, as can be seen here:</p>
-<p><a href="http://www.openstreetmap.org/#map=16/52.2843/5.5249">link to the map</a></p>
-<p>Inside of the multipolygon I created a number of lakes. The lake that is most south ('Zuiderzee') has an island in it, so I had to create <a href="http://www.openstreetmap.org/relation/5640834">another relation</a> (multopolygon) for the lake. The island is rendered correctly. The water is also rendered, but it has the small tree icons through it, just like the surrounding land.</p>
+<p>The larger area is marked with way <a href="https://www.openstreetmap.org/way/346287712">346287712</a>. This way has a relation: multipolygon <a href="https://www.openstreetmap.org/relation/5640835">5640835</a>. The selected role is 'outer'. The relation has the following two keys/values: landuse/meadow and type/multipolygon. This part seems to work, as can be seen here:</p>
+<p><a href="https://www.openstreetmap.org/#map=16/52.2843/5.5249">link to the map</a></p>
+<p>Inside of the multipolygon I created a number of lakes. The lake that is most south ('Zuiderzee') has an island in it, so I had to create <a href="https://www.openstreetmap.org/relation/5640834">another relation</a> (multopolygon) for the lake. The island is rendered correctly. The water is also rendered, but it has the small tree icons through it, just like the surrounding land.</p>
 <p>So my question is: how do I make the water completely blue, without the small tree icons in it?</p>
 <p>I have already tried making the water without any relations, this can be seen in the third lake from the south called 't Aelmare. This brings up the same problem.</p>
 </div>
@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-46416-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Your edit is recent, it will take time for it to render, if time does not fix it maybe this is the answer--- <a href="http://wiki.openstreetmap.org/wiki/Multipolygon_Examples#Forest_with_two_lakes_and_an_island_.28Nested_multipolygons.29">http://wiki.openstreetmap.org/wiki/Multipolygon_Examples#Forest_with_two_lakes_and_an_island_.28Nested_multipolygons.29</a></p>
+<p>Your edit is recent, it will take time for it to render, if time does not fix it maybe this is the answer--- <a href="https://wiki.openstreetmap.org/wiki/Multipolygon_Examples#Forest_with_two_lakes_and_an_island_.28Nested_multipolygons.29">https://wiki.openstreetmap.org/wiki/Multipolygon_Examples#Forest_with_two_lakes_and_an_island_.28Nested_multipolygons.29</a></p>
 </div>
 <div id="comment-46416-info" class="comment-info">
 <span class="comment-age">(05 Nov '15, 19:58)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -129,7 +129,7 @@ But cannot imagine it has anything to do with the data anyway, must be some serv
 <div id="post-52425-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this the "way going through the middle of a new lake"? <a href="http://www.openstreetmap.org/?mlat=52.28860&amp;mlon=5.52322#map=17/52.28860/5.52322">http://www.openstreetmap.org/?mlat=52.28860&amp;mlon=5.52322#map=17/52.28860/5.52322</a></p>
+<p>Is this the "way going through the middle of a new lake"? <a href="https://www.openstreetmap.org/?mlat=52.28860&amp;mlon=5.52322#map=17/52.28860/5.52322">https://www.openstreetmap.org/?mlat=52.28860&amp;mlon=5.52322#map=17/52.28860/5.52322</a></p>
 <p>I think that's a typical database bug. Something went wrong during the update or the diffs were broken. Now the way remains in the database until someone touches it again or until a complete re-import occurs. Here, touching the way means doing an undelete and then deleting it again. A re-import probably won't happen any time soon since it is very ressource-intensive.</p>
 </div>
 <div id="comment-52425-info" class="comment-info">

@@ -109,9 +109,9 @@ One Answer:
 <div class="answer-body">
 <p>Yes:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmium">Osmium</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmium">Osmium</a></li>
 </ul>
 <p>You may find <a href="http://switch2osm.org/">switch2osm.org</a> has helpful resources, too.</p>
 </div>

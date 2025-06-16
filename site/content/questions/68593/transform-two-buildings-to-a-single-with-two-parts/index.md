@@ -202,7 +202,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Instead of individually merging the nodes, you can use JOSM's validator. It shows error messages for duplicate building nodes, and can automatically fix them. When you select the heading in the JOSM validator panel (where it describes the kind of error) rather than one of the individual errors listed below it, clicking the Fix button will merge them all at once.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/JOSM_validator_fix_duplicate.png" alt="JOSM validator panel" /></p>
+<p><img src="/upfiles/JOSM_validator_fix_duplicate.png" alt="JOSM validator panel" /></p>
 <p>That's quite nice already when used for a single building's nodes, but it can really save time if you do it only once at the end of your editing session. However, you <em>must</em> make sure that you do not "fix" anything except the building outlines you've just added!</p>
 <p>Luckily, the validator runs only on the currently selected elements when clicking the Validation button. To select only the ways you've created or re-tagged in the current session, you can open JOSM's search (Ctrl-F) and enter the search string <code>type:way modified</code>.</p>
 <p>Additional ideas:</p>

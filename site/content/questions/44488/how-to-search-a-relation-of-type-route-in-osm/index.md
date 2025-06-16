@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to search a relation of type route in OSM?"
-description = '''I created a relation (data below) route type and like to know how search it in OSM (Nominatim). Do not assign name to it. I can only find it by searching for the tag:ref their main route (MS-166). Data relation/route:  link relation: http://www.openstreetmap.org/relation/5391799  tags:  nome: no add...'''
+description = '''I created a relation (data below) route type and like to know how search it in OSM (Nominatim). Do not assign name to it. I can only find it by searching for the tag:ref their main route (MS-166). Data relation/route:  link relation: https://www.openstreetmap.org/relation/5391799  tags:  nome: no add...'''
 date = "2015-07-28T23:11:00Z"
 lastmod = "2015-07-30T18:50:00Z"
 weight = 44488
@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>Do not assign name to it. I can only find it by searching for the tag:ref their main route (MS-166).</p>
 <p>Data relation/route:</p>
 <ul>
-<li>link relation: <a href="http://www.openstreetmap.org/relation/5391799">http://www.openstreetmap.org/relation/5391799</a></li>
+<li>link relation: <a href="https://www.openstreetmap.org/relation/5391799">https://www.openstreetmap.org/relation/5391799</a></li>
 </ul>
 <p>tags:</p>
 <ul>

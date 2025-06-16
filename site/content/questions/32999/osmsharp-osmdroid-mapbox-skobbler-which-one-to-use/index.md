@@ -119,12 +119,12 @@ osqa_accepted = false
 <p>As others say, it's not a simple yes/no question, so I just will try to help with links:<br />
 </p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a> - using/comparing existing libs<br />
+<li><a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a> - using/comparing existing libs<br />
 </li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a> - recycling code of existing solutions</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a> - recycling code of existing solutions</li>
 </ul>
 <p>My personal (IMHO!) perspective (as non Android dev) is that as others say there is currently no ready-to-use open source lib thats easy to use, embedd and extend. This reflects featurerichness, compatibility, existing support and documentation.</p>
-<p>Please also have a look at <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> if you plan to ship a product with OSM etc. You might also consider to pay for consulting for <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">GIS company that has already experience with OSM</a>.</p>
+<p>Please also have a look at <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> if you plan to ship a product with OSM etc. You might also consider to pay for consulting for <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">GIS company that has already experience with OSM</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -175,8 +175,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>About recent activities at MapBox for an android SDK, see the blog about <a href="https://www.mapbox.com/blog/looking-android-developers/">looking-android-developers</a></p>
-<p>Also see <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> framework where version 0.4.0 was released these days.</p>
-<p>Or <a href="http://wiki.openstreetmap.org/wiki/Libosmscout">Libosmscout</a></p>
+<p>Also see <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> framework where version 0.4.0 was released these days.</p>
+<p>Or <a href="https://wiki.openstreetmap.org/wiki/Libosmscout">Libosmscout</a></p>
 <p>I fear that it is not easy for you to find personal opinions about each solution ... you can search more the OSM wiki about development and android ... but find out on your own what framework fits in your needs.</p>
 </div>
 <div class="answer-controls post-controls">

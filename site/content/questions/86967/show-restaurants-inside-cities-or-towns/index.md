@@ -57,7 +57,7 @@ out geom;
 map_to_area;
 node(area)[&quot;amenity&quot;=&quot;restaurant&quot;];
 out qt;</code></pre>
-<p>there is 1 restaurant inside Ararat town <img src="https://help.openstreetmap.org/upfiles/Screenshot_2023-03-22_at_12.55.02.png" alt="alt text" /></p>
+<p>there is 1 restaurant inside Ararat town <img src="/upfiles/Screenshot_2023-03-22_at_12.55.02.png" alt="alt text" /></p>
 <p>What is the difference between the 2 queries? and how can I show restaurants inside cities or towns? not inside province or state!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

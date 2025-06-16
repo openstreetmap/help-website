@@ -134,7 +134,7 @@ One Answer:
 <div class="comment-text">
 <p>see also <a href="http://tools.geofabrik.de/map/">http://tools.geofabrik.de/map/</a> ... there are many more.</p>
 <p>... or to have an overview about routing:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters</a></p>
 </div>
 <div id="comment-15655-info" class="comment-info">
 <span class="comment-age">(29 Aug '12, 16:55)</span> <span class="comment-user userinfo">stephan75</span>
@@ -146,7 +146,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>...or have a look at a lot of OSM-based stuff at all: <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
+<p>...or have a look at a lot of OSM-based stuff at all: <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
 </div>
 <div id="comment-15690-info" class="comment-info">
 <span class="comment-age">(30 Aug '12, 17:22)</span> <span class="comment-user userinfo">malenki</span>

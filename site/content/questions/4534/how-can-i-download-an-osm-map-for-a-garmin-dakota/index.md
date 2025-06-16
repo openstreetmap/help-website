@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find a list of garmin map providers at <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">the wiki</a>.</p>
+<p>You can find a list of garmin map providers at <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I've added a note this effect on <a href="http://wiki.openstreetmap.org/wiki/Garmin/Dakota_series#Dakota_20">the Dakota 20 information</a></p>
+<p>I've added a note this effect on <a href="https://wiki.openstreetmap.org/wiki/Garmin/Dakota_series#Dakota_20">the Dakota 20 information</a></p>
 </div>
 <div id="comment-4599-info" class="comment-info">
 <span class="comment-age">(18 Apr '11, 16:55)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This sort of question has been asked quite a few times before - have a look <a href="http://help.openstreetmap.org/search/?q=%2Bgmapsupp+%2Bdakota&amp;Submit=search&amp;t=question">at this list</a>. As Gnonthgol said, there are lots of downloadable maps that should work on your Dakota - the tricky bit is picking the one that is appropriate for you. If you need more help (like how to actually get the map onto your Dakota once you've downloaded it) don't hesitate to ask!</p>
+<p>This sort of question has been asked quite a few times before - have a look <a href="https://help.openstreetmap.org/search/?q=%2Bgmapsupp+%2Bdakota&amp;Submit=search&amp;t=question">at this list</a>. As Gnonthgol said, there are lots of downloadable maps that should work on your Dakota - the tricky bit is picking the one that is appropriate for you. If you need more help (like how to actually get the map onto your Dakota once you've downloaded it) don't hesitate to ask!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -312,8 +312,8 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>The same place as mentioned above (<a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a>) - the same data can be copied to a Nuvi (as well as a Dakota, or an eTrex...).</p>
-<p>Plenty of people have asked questions about OSM data on Nuvis before - it might be helpful to read some previous answers: <a href="http://help.openstreetmap.org/search/?q=%2Bgmapsupp+%2Bnuvi&amp;Submit=search&amp;t=question">http://help.openstreetmap.org/search/?q=%2Bgmapsupp+%2Bnuvi&amp;Submit=search&amp;t=question</a></p>
+<p>The same place as mentioned above (<a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a>) - the same data can be copied to a Nuvi (as well as a Dakota, or an eTrex...).</p>
+<p>Plenty of people have asked questions about OSM data on Nuvis before - it might be helpful to read some previous answers: <a href="https://help.openstreetmap.org/search/?q=%2Bgmapsupp+%2Bnuvi&amp;Submit=search&amp;t=question">https://help.openstreetmap.org/search/?q=%2Bgmapsupp+%2Bnuvi&amp;Submit=search&amp;t=question</a></p>
 </div>
 <div id="comment-4845-info" class="comment-info">
 <span class="comment-age">(27 Apr '11, 10:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

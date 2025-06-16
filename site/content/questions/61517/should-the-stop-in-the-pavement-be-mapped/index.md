@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm wondering if it's needed to add a highway=stop node where it says stop in the street. It's not a stop sign but its still a stop. I'm confused and I'd like to know if it's good to add a stop for that type of stop, or if it's not necessary.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-01-06_at_4.18.59_PM.png" alt="Google Earth Screensot" /></p>
+<p><img src="/upfiles/Screen_Shot_2018-01-06_at_4.18.59_PM.png" alt="Google Earth Screensot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-stop" rel="tag" title="see questions tagged &#39;stop&#39;">stop</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

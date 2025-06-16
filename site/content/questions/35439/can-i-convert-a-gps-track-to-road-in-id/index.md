@@ -179,7 +179,7 @@ But I do see the advantages of getting the editor to convert it, especially wher
 <li>Tag it as road or path and name it if it a a name.</li>
 <li>Is it all OK then SAVE it.</li>
 </ol>
-<p><img src="http://help.openstreetmap.org/upfiles/ID_editor_gpx_trace.JPG" alt="screenshot of iD" /></p>
+<p><img src="/upfiles/ID_editor_gpx_trace.JPG" alt="screenshot of iD" /></p>
 <p>when I have time I'll see how it works on a Android Tab</p>
 </div>
 <div class="answer-controls post-controls">

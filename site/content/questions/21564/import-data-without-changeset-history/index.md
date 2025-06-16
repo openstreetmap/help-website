@@ -195,7 +195,7 @@ This 3 requests will return the same place. The latitude and longitude values ar
 1
 </div>
 <div class="comment-text">
-<p>Did you look at the data? The first two nodes are part of <a href="http://www.openstreetmap.org/browse/way/44490528">this footway</a> and the third one belongs to <a href="http://www.openstreetmap.org/browse/way/124808569">this building</a>. These are three more or less independent nodes and each of them is useful. They don't have anything to do with a history.</p>
+<p>Did you look at the data? The first two nodes are part of <a href="https://www.openstreetmap.org/browse/way/44490528">this footway</a> and the third one belongs to <a href="https://www.openstreetmap.org/browse/way/124808569">this building</a>. These are three more or less independent nodes and each of them is useful. They don't have anything to do with a history.</p>
 </div>
 <div id="comment-21590-info" class="comment-info">
 <span class="comment-age">(16 Apr '13, 12:53)</span> <span class="comment-user userinfo">scai ♦</span>

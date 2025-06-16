@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps using the <code>sac_scale</code>? <a href="http://wiki.openstreetmap.org/wiki/Key:sac_scale"></a><a href="http://wiki.openstreetmap.org/wiki/Key:sac_scale"></a><a href="http://wiki.openstreetmap.org/wiki/Key:sac_scale">http://wiki.openstreetmap.org/wiki/Key:sac_scale</a></p>
+<p>Perhaps using the <code>sac_scale</code>? <a href="https://wiki.openstreetmap.org/wiki/Key:sac_scale"></a><a href="https://wiki.openstreetmap.org/wiki/Key:sac_scale"></a><a href="https://wiki.openstreetmap.org/wiki/Key:sac_scale">https://wiki.openstreetmap.org/wiki/Key:sac_scale</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

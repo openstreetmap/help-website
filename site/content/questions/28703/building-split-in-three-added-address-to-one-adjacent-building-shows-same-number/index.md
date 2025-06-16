@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi,</p>
 <p>in trying to add my employer's office to OSM, I split the large building that contains the office into three using JOSM's utils2 plugin. I added the address including housenumber to the middle building and also added a point tagged with company information. Now OSM shows two buildings with the same housenumber. Even giving that second building its own housenumber does make the correct number show up.</p>
-<p>Here's a map link: <a href="http://www.openstreetmap.org/way/56002419#map=19/48.13039/11.61799">http://www.openstreetmap.org/way/56002419#map=19/48.13039/11.61799</a> This is the adjacent building with the wrong number, it should be 62. The 64 to the right is correct and that is the number I originally created.</p>
+<p>Here's a map link: <a href="https://www.openstreetmap.org/way/56002419#map=19/48.13039/11.61799">https://www.openstreetmap.org/way/56002419#map=19/48.13039/11.61799</a> This is the adjacent building with the wrong number, it should be 62. The 64 to the right is correct and that is the number I originally created.</p>
 <p>Thanks for any help,</p>
 <p>Sebastian</p>
 </div>
@@ -117,7 +117,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>I think it is all correct too and that the map tiles are still awaiting rendering for whatever reason.<br />
-<a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 <p>A search for 62 Berg-am-Laim-Straße, München or 64 Berg-am-Laim-Straße, München will find the correct location.</p>
 </div>
 <div id="comment-28795-info" class="comment-info">
@@ -206,7 +206,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There was one unnecessary <a href="http://www.openstreetmap.org/relation/1319742">multipolygon relation</a> that had that building as single outer member. After you split the building in three the relation bonded these three buildings into one in some strange way.</p>
+<p>There was one unnecessary <a href="https://www.openstreetmap.org/relation/1319742">multipolygon relation</a> that had that building as single outer member. After you split the building in three the relation bonded these three buildings into one in some strange way.</p>
 <p>It should appear normal soon.</p>
 </div>
 <div class="answer-controls post-controls">

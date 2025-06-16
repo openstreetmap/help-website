@@ -158,7 +158,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>OpenRouteService seems to be not maintained anymore. Look at <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Routing">the wiki</a> to find up-to-date routering services.</p>
+<p>OpenRouteService seems to be not maintained anymore. Look at <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Routing">the wiki</a> to find up-to-date routering services.</p>
 </div>
 <div id="comment-23124-info" class="comment-info">
 <span class="comment-age">(09 Jun '13, 04:06)</span> <span class="comment-user userinfo">malenki</span>

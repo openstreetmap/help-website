@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi TylerSchwend, if the buildings are separate tag them accordingly as three buildings even if theres a layer on top. And add levels as well. Or tag it using the 3 D rules, look here <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings</a></p>
+<p>Hi TylerSchwend, if the buildings are separate tag them accordingly as three buildings even if theres a layer on top. And add levels as well. Or tag it using the 3 D rules, look here <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

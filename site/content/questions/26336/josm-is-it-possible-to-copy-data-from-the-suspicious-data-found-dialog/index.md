@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>On a JOSM upload, if a potential problem such as a single-node way is found, a dialog box appears:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm_01007_1.png" alt="JOSM validator box" /></p>
+<p><img src="/upfiles/josm_01007_1.png" alt="JOSM validator box" /></p>
 <p>Is it possible to copy details of the errors from this? It seems not to be.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

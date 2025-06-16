@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>file_get_contents can open a file or a URL. For a URL the setting <code>allow_url_fopen</code> needs to be enabled on your system. I think that's enabled by default, but doublecheck. See <a href="https://www.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen">https://www.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen</a></p>
-<p>Make sure you're sending the HTTP UserAgent or Referer as required by <a href="https://operations.osmfoundation.org/policies/nominatim/">https://operations.osmfoundation.org/policies/nominatim/</a> , see <a href="https://help.openstreetmap.org/questions/59788/calling-nominatim-with-file_get_contents">https://help.openstreetmap.org/questions/59788/calling-nominatim-with-file_get_contents</a></p>
+<p>Make sure you're sending the HTTP UserAgent or Referer as required by <a href="https://operations.osmfoundation.org/policies/nominatim/">https://operations.osmfoundation.org/policies/nominatim/</a> , see <a href="/questions/59788/calling-nominatim-with-file_get_contents">https://help.openstreetmap.org/questions/59788/calling-nominatim-with-file_get_contents</a></p>
 <p><code>$address</code> might contain special characters or spaces, the value needs to be URI encoded, see <a href="https://www.php.net/manual/en/function.urlencode.php">https://www.php.net/manual/en/function.urlencode.php</a></p>
 <p><code>&amp;polygon=1</code> still works but is deprecated, instead specify which format the polygon would have, see <a href="https://nominatim.org/release-docs/latest/api/Search/#polygon-output">https://nominatim.org/release-docs/latest/api/Search/#polygon-output</a></p>
 </div>
@@ -135,7 +135,7 @@ One Answer:
 <p>Thanks,</p>
 <p>I saw all the links,</p>
 <p>The below link has information that email address is required.</p>
-<p><a href="https://help.openstreetmap.org/questions/59788/calling-nominatim-with-file_get_contents/65036">https://help.openstreetmap.org/questions/59788/calling-nominatim-with-file_get_contents/65036</a></p>
+<p><a href="/questions/59788/calling-nominatim-with-file_get_contents/65036">https://help.openstreetmap.org/questions/59788/calling-nominatim-with-file_get_contents/65036</a></p>
 <p>This worked for me.</p>
 <p>Regards.</p>
 </div>

@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can either download a ready made extract from <a href="http://metro.teczno.com/">http://metro.teczno.com/</a> or extract it yourself from the complete planet or an extract of Japan with osmosis (see <a href="http://wiki.openstreetmap.org/wiki/Osmosis).">http://wiki.openstreetmap.org/wiki/Osmosis).</a> The later would require you to have a ploygon covering the region in question.</p>
+<p>You can either download a ready made extract from <a href="http://metro.teczno.com/">http://metro.teczno.com/</a> or extract it yourself from the complete planet or an extract of Japan with osmosis (see <a href="https://wiki.openstreetmap.org/wiki/Osmosis).">https://wiki.openstreetmap.org/wiki/Osmosis).</a> The later would require you to have a ploygon covering the region in question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

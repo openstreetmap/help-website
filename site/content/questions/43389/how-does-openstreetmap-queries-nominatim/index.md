@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When searching for "London Eye" on Open Street Map I get 3 results from Nominatim (1 attraction + 2 bus stops): <a href="http://www.openstreetmap.org/search?query=london%20eye&amp;xhr=1">OSM - London Eye</a>.</p>
+<p>When searching for "London Eye" on Open Street Map I get 3 results from Nominatim (1 attraction + 2 bus stops): <a href="https://www.openstreetmap.org/search?query=london%20eye&amp;xhr=1">OSM - London Eye</a>.</p>
 <p>When I do the same search on Nominatim I only get 2 results (2 bus stops): <a href="http://nominatim.openstreetmap.org/search.php?q=London+Eye&amp;viewbox=-101.78%2C54.06%2C101.78%2C-54.06">Nominatim - London Eye</a>. This is consistent with the results I get when I use the Nominatim API.</p>
 <p>Why are the results different? Shouldn't OSM be showing the same results as the Nominatim API?</p>
 </div>

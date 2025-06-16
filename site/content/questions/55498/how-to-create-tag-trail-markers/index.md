@@ -106,9 +106,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at <a href="http://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a>.</p>
+<p>Take a look at <a href="https://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a>.</p>
 <p>I guess the example labels you give would go in the "ref" tag.</p>
-<p>The <a href="http://www.openstreetmap.org/node/252482490">rendering on openstreetmap.org</a> does not include the ref, but a more specialized map might.</p>
+<p>The <a href="https://www.openstreetmap.org/node/252482490">rendering on openstreetmap.org</a> does not include the ref, but a more specialized map might.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

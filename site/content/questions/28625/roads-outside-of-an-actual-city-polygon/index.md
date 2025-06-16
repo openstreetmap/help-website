@@ -66,7 +66,7 @@ osqa_accepted = false
 <div id="post-28640-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I don't think there's any automatic tagging, no, in part because there's no deterministic way to know what "town name" to attach the road to. I asked a related question a while back ( <a href="https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a> ) and the only answer I got was to manually add addr:city tags....</p>
+<p>I don't think there's any automatic tagging, no, in part because there's no deterministic way to know what "town name" to attach the road to. I asked a related question a while back ( <a href="/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a> ) and the only answer I got was to manually add addr:city tags....</p>
 </div>
 <div id="comment-28640-info" class="comment-info">
 <span class="comment-age">(01 Dec '13, 08:51)</span> <span class="comment-user userinfo">blahedo</span>
@@ -161,7 +161,7 @@ osqa_accepted = false
 <div id="post-28670-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This directly contradicts the advice given on my question ( <a href="https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a> ), where moreover one of the comments says that addr:city is <em>only</em> relevant on streets, not addressable nodes.</p>
+<p>This directly contradicts the advice given on my question ( <a href="/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a> ), where moreover one of the comments says that addr:city is <em>only</em> relevant on streets, not addressable nodes.</p>
 </div>
 <div id="comment-28670-info" class="comment-info">
 <span class="comment-age">(01 Dec '13, 20:45)</span> <span class="comment-user userinfo">blahedo</span>
@@ -212,10 +212,10 @@ I was sadly unable to find your example, but if the road doesn't touch the offic
 On the other hand, you might use <strong>nominatims "near" operator</strong> to find a road that is close to a spec. city like "my road near Glen Rock, PA".</p></li>
 <li><p><strong>use addr: tag fixes:</strong><br />
 Corresponding to the wiki, the addr: key is only used for buildings or POIs?<br />
-<a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">http://wiki.openstreetmap.org/wiki/Karlsruhe_Schema</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Addresses">http://wiki.openstreetmap.org/wiki/Addresses</a><br />
-I only know <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">postal_code=*</a> that is tagged to the streets directly. So for me this sounds a bit like <a href="http://wiki.openstreetmap.org/wiki/Best_practices#Don.27t_map_for_the_renderer">'tagging for renderer'</a> (here: geocoder) to fix specific misbehavior of a product and that should avoided. So we need to discuss to find the technical reasons and <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits">avoid mechanical edits</a>. Please hop in the forums or the mailinglists :)</p></li>
+<a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">https://wiki.openstreetmap.org/wiki/Karlsruhe_Schema</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Addresses">https://wiki.openstreetmap.org/wiki/Addresses</a><br />
+I only know <a href="https://wiki.openstreetmap.org/wiki/Key:postal_code">postal_code=*</a> that is tagged to the streets directly. So for me this sounds a bit like <a href="https://wiki.openstreetmap.org/wiki/Best_practices#Don.27t_map_for_the_renderer">'tagging for renderer'</a> (here: geocoder) to fix specific misbehavior of a product and that should avoided. So we need to discuss to find the technical reasons and <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits">avoid mechanical edits</a>. Please hop in the forums or the mailinglists :)</p></li>
 </ol>
 </div>
 <div class="answer-controls post-controls">
@@ -235,7 +235,7 @@ I only know <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">postal_
 <div id="post-28669-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Your answer presumes that all roads associated with a town are within the borders of that town, which may be true in some jurisdictions but is emphatically <em>not</em> true in much of the US (and Ireland, apparently). This is not a question of tagging for the renderer. See my other question ( <a href="https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a> ) for more details of the situation. The specific advice there was to use addr:city on the streets.</p>
+<p>Your answer presumes that all roads associated with a town are within the borders of that town, which may be true in some jurisdictions but is emphatically <em>not</em> true in much of the US (and Ireland, apparently). This is not a question of tagging for the renderer. See my other question ( <a href="/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a> ) for more details of the situation. The specific advice there was to use addr:city on the streets.</p>
 </div>
 <div id="comment-28669-info" class="comment-info">
 <span class="comment-age">(01 Dec '13, 20:43)</span> <span class="comment-user userinfo">blahedo</span>

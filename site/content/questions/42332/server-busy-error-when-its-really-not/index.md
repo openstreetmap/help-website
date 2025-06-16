@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I've been trying to download a section of a map as a PDF for many days but have been unable to. I keep getting an error page that reads "The server is too busy at the moment. Please wait a few minutes before trying again."</p>
-<p>In looking at other similar questions that have been asked, the typical response is "because the servers are overloaded. Wait until they're below 25", as seen in this question/answer <a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
+<p>In looking at other similar questions that have been asked, the typical response is "because the servers are overloaded. Wait until they're below 25", as seen in this question/answer <a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
 <p>It's recommended to check this page to make sure that the level is below 25. I'm seeing that it's well below 25 (below 10 even) and yet I still keep getting this error.</p>
 <p><a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/load.html">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/load.html</a></p>
 <p>I have tried exporting a smaller chunk of the map but that still doesn't help. Any help or advice would be appreciated. Much thanks ahead of time!</p>
@@ -95,7 +95,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Also take a look at similar questions, for example <a href="https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a>.</p>
+<p>Also take a look at similar questions, for example <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a>.</p>
 </div>
 <div id="comment-42358-info" class="comment-info">
 <span class="comment-age">(15 Apr '15, 19:39)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -106,8 +106,8 @@ osqa_accepted = false
 <div id="post-42359-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: right, other options exist.</p>
-<p><a href="http://help.openstreetmap.org/users/10841/echrisdenney"></a><a href="http://help.openstreetmap.org/users/10841/echrisdenney">@EChrisDenney</a>: Yes, I meant the server admins (I can do that for you, of course). I will try an PDF export of a small, not densely mapped area later to see if it works for me. If it works for someone, please mention here.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: right, other options exist.</p>
+<p><a href="https://help.openstreetmap.org/users/10841/echrisdenney"></a><a href="https://help.openstreetmap.org/users/10841/echrisdenney">@EChrisDenney</a>: Yes, I meant the server admins (I can do that for you, of course). I will try an PDF export of a small, not densely mapped area later to see if it works for me. If it works for someone, please mention here.</p>
 </div>
 <div id="comment-42359-info" class="comment-info">
 <span class="comment-age">(15 Apr '15, 20:12)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -119,7 +119,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I'm actually trying to export a very small area, just one street in a quiet suburban neighborhood. <a href="https://www.openstreetmap.org/#map=18/42.13273/-72.73832">https://www.openstreetmap.org/#map=18/42.13273/-72.73832</a></p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I'm actually trying to export a very small area, just one street in a quiet suburban neighborhood. <a href="https://www.openstreetmap.org/#map=18/42.13273/-72.73832">https://www.openstreetmap.org/#map=18/42.13273/-72.73832</a></p>
 </div>
 <div id="comment-42362-info" class="comment-info">
 <span class="comment-age">(15 Apr '15, 20:52)</span> <span class="comment-user userinfo">EChrisDenney</span>
@@ -143,7 +143,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Thank you so much <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>. I really hope I can use this tool again as it was very valuable to me.</p>
+<p>Thank you so much <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>. I really hope I can use this tool again as it was very valuable to me.</p>
 </div>
 <div id="comment-42391-info" class="comment-info">
 <span class="comment-age">(16 Apr '15, 16:45)</span> <span class="comment-user userinfo">EChrisDenney</span>
@@ -198,7 +198,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I had asked the admins: <a href="https://trac.openstreetmap.org/ticket/5308">https://trac.openstreetmap.org/ticket/5308</a> . It looks like there was an error in the webserver program code, which has been fixed now (thank you, <a href="http://help.openstreetmap.org/users/1/tomh">@TomH</a>). Except than in the very busiest periods you now should be able to do exports. I tried to export a whole small city to pdf (server load is at 170 - quite a busy time): works.</p>
+<p>I had asked the admins: <a href="https://trac.openstreetmap.org/ticket/5308">https://trac.openstreetmap.org/ticket/5308</a> . It looks like there was an error in the webserver program code, which has been fixed now (thank you, <a href="https://help.openstreetmap.org/users/1/tomh">@TomH</a>). Except than in the very busiest periods you now should be able to do exports. I tried to export a whole small city to pdf (server load is at 170 - quite a busy time): works.</p>
 <p>The server <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/load.html">load</a> number is no direct limit any more, but you may use it to to spot not-that-busy periods in case it does not work at a specific point in time.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -218,7 +218,7 @@ One Answer:
 <div id="post-42392-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It's fixed! Oh my goodness thank you so much. This was very stressful for me as I had a very important project I was working on. Thank you so much <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a></p>
+<p>It's fixed! Oh my goodness thank you so much. This was very stressful for me as I had a very important project I was working on. Thank you so much <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a></p>
 </div>
 <div id="comment-42392-info" class="comment-info">
 <span class="comment-age">(16 Apr '15, 16:52)</span> <span class="comment-user userinfo">EChrisDenney</span>

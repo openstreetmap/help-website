@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>If you work with raw OSM data (either in a program you've written yourself, perhaps using the Osmium library, or through a Postgres setup where you have imported the data with osmosis and not osm2pgsql) then you have easy access to the node IDs used by a way; it would then be relatively easy to do something like "if two ways have the same name and share a start/end node, connect them into one object".</p>
 <p>If you work with geometry data, i.e. OSM imported with osm2pgsql, then you have lost the topology (way ends in node ID X) but you have gained geometry; now it will be easy to run something like "if to ways have the same name and lie within 100 metres of each other, treat them as one object".</p>
-<p>It depends on what you want to achieve really. Keep in mind that streets often don't have one start and one end point; there are streets shaped like a Christmas tree or <a href="http://www.openstreetmap.org/#map=19/49.00165/8.39601">having loops,</a> there are streets that are interrupted by a plaza or a piece of another street, or streets with separately mapped parallel lanes.</p>
+<p>It depends on what you want to achieve really. Keep in mind that streets often don't have one start and one end point; there are streets shaped like a Christmas tree or <a href="https://www.openstreetmap.org/#map=19/49.00165/8.39601">having loops,</a> there are streets that are interrupted by a plaza or a piece of another street, or streets with separately mapped parallel lanes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

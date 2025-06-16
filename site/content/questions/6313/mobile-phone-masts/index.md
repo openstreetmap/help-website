@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It seems to be <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower</a>, and tower:type=communication</p>
+<p>It seems to be <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower</a>, and tower:type=communication</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

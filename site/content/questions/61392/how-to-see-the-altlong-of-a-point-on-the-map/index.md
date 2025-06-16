@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For nodes it's quite easy - just look at the data of the object and there it is in the header (just before tags), for example:</p>
-<p><a href="http://www.openstreetmap.org/node/240866019">http://www.openstreetmap.org/node/240866019</a></p>
+<p><a href="https://www.openstreetmap.org/node/240866019">https://www.openstreetmap.org/node/240866019</a></p>
 <p>50,8449819, 4,3499862</p>
 <p>For ways and relations it's simply not available, since they are just the lists of nodes, each with its own lat/lon, so you would have to find centroid, but there's no single method to calculate this.</p>
 </div>

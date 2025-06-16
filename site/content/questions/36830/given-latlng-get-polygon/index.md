@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-36832-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> I am more than new in this thing, so you may be correct. I really do not know what my options are though :-) . I will check out this link. Thanks.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> I am more than new in this thing, so you may be correct. I really do not know what my options are though :-) . I will check out this link. Thanks.</p>
 </div>
 <div id="comment-36832-info" class="comment-info">
 <span class="comment-age">(15 Sep '14, 11:09)</span> <span class="comment-user userinfo">jyparask</span>
@@ -132,7 +132,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thanks to <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> and a bit of reading on the documentation he provided, i found out the actual solution.</p>
+<p>Thanks to <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> and a bit of reading on the documentation he provided, i found out the actual solution.</p>
 <p>Having <code>lat</code> and <code>lng</code> i am doing a reverse call on <a href="http://nominatim.openstreetmap.org/reverse">nominatim reverse</a> providing <code>lat</code> and <code>lon</code> as parameters. Then i do a second call on <a href="http://nominatim.openstreetmap.org/search">nominatim search</a> providing <code>country</code> and <code>county</code> from the previous result. This will give me the polygon if request it.</p>
 <p>Since i use <code>json</code>, i add <code>polygon_geojson=1</code> in the query string.</p>
 </div>
@@ -153,7 +153,7 @@ One Answer:
 <div id="post-36978-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>also see some more options at <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a></p>
+<p>also see some more options at <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a></p>
 </div>
 <div id="comment-36978-info" class="comment-info">
 <span class="comment-age">(22 Sep '14, 18:52)</span> <span class="comment-user userinfo">stephan75</span>

@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-29128-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Crosslink to another question on essentially the same problem: <a href="https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a></p>
+<p>Crosslink to another question on essentially the same problem: <a href="/questions/19407/how-to-make-post-office-town-available-to-nominatim">https://help.openstreetmap.org/questions/19407/how-to-make-post-office-town-available-to-nominatim</a></p>
 </div>
 <div id="comment-29128-info" class="comment-info">
 <span class="comment-age">(16 Dec '13, 19:20)</span> <span class="comment-user userinfo">blahedo</span>
@@ -199,7 +199,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This question is a bit too technical for this help site. What you need is some support from the geocoding tool '<a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>' used by the main OSM site. The best I would suggest is that you ask again your question on the dedicated mailing list for geocoding : <a href="http://lists.openstreetmap.org/listinfo/geocoding">http://lists.openstreetmap.org/listinfo/geocoding</a> (subscription is required to post a question but you can easily unsubscribe once your problem is solved)</p>
+<p>This question is a bit too technical for this help site. What you need is some support from the geocoding tool '<a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>' used by the main OSM site. The best I would suggest is that you ask again your question on the dedicated mailing list for geocoding : <a href="http://lists.openstreetmap.org/listinfo/geocoding">http://lists.openstreetmap.org/listinfo/geocoding</a> (subscription is required to post a question but you can easily unsubscribe once your problem is solved)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

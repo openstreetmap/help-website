@@ -267,7 +267,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/SDC14789_1.JPG" alt="--" />This is a Vista tones menu. Does the Dakota 20 have this option. On my Vista HCX I can set up proximity alarms so as I approach a way point I get a beep or if I go off course I get another customizable beep. I couldn't find if the Dakota as this facility but if it is available and you convert the track to a route using Basecamp you could get a beep to notify you when a turn is coming up. The OSM map I have on my garmin (Gb from talky toaster) is routable i just have pick a waypoint, mark, town or address and it will calculate a route from my present position to the chosen place. note not all maps are routable.</p>
+<p><img src="/upfiles/SDC14789_1.JPG" alt="--" />This is a Vista tones menu. Does the Dakota 20 have this option. On my Vista HCX I can set up proximity alarms so as I approach a way point I get a beep or if I go off course I get another customizable beep. I couldn't find if the Dakota as this facility but if it is available and you convert the track to a route using Basecamp you could get a beep to notify you when a turn is coming up. The OSM map I have on my garmin (Gb from talky toaster) is routable i just have pick a waypoint, mark, town or address and it will calculate a route from my present position to the chosen place. note not all maps are routable.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

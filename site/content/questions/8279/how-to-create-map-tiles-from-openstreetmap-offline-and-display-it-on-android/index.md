@@ -182,7 +182,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmand">OsmAnd</a> is an Android app that can display maps offline and has a Java-written tool called <a href="http://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmand">OsmAnd</a> is an Android app that can display maps offline and has a Java-written tool called <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">OsmAndMapCreator</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>also have a look ath the other question here:</p>
-<p><a href="http://help.openstreetmap.org/questions/8238/tool-for-creating-vector-tiles">http://help.openstreetmap.org/questions/8238/tool-for-creating-vector-tiles</a></p>
+<p><a href="/questions/8238/tool-for-creating-vector-tiles">https://help.openstreetmap.org/questions/8238/tool-for-creating-vector-tiles</a></p>
 </div>
 <div id="comment-8319-info" class="comment-info">
 <span class="comment-age">(05 Oct '11, 16:54)</span> <span class="comment-user userinfo">stephan75</span>

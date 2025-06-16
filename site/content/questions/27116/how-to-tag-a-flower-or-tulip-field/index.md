@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a flower- or tulip field"
-description = '''The WIKI key landuse has values as grass, farm, farmland or farmyard versus agriculture or plant_nursery. The fields in the area are tagged grass or farm, IMHO not true. The region is a long stretch of colored fields.  http://www.openstreetmap.org/#map=15/52.5718/4.6652 Wouldn’t be better to tag it ...'''
+description = '''The WIKI key landuse has values as grass, farm, farmland or farmyard versus agriculture or plant_nursery. The fields in the area are tagged grass or farm, IMHO not true. The region is a long stretch of colored fields.  https://www.openstreetmap.org/#map=15/52.5718/4.6652 Wouldn’t be better to tag it ...'''
 date = "2013-10-12T22:37:00Z"
 lastmod = "2013-10-14T12:00:00Z"
 weight = 27116
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The WIKI key landuse has values as grass, farm, farmland or farmyard versus agriculture or plant_nursery. The fields in the area are tagged grass or farm, IMHO not true. The region is a long stretch of colored fields. <a href="http://www.openstreetmap.org/#map=15/52.5718/4.6652">http://www.openstreetmap.org/#map=15/52.5718/4.6652</a> Wouldn’t be better to tag it landuse=plant-nursery with plant=bulb, just to avoid a struggle between for instance lilies and tulips.</p>
+<p>The WIKI key landuse has values as grass, farm, farmland or farmyard versus agriculture or plant_nursery. The fields in the area are tagged grass or farm, IMHO not true. The region is a long stretch of colored fields. <a href="https://www.openstreetmap.org/#map=15/52.5718/4.6652">https://www.openstreetmap.org/#map=15/52.5718/4.6652</a> Wouldn’t be better to tag it landuse=plant-nursery with plant=bulb, just to avoid a struggle between for instance lilies and tulips.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bulb" rel="tag" title="see questions tagged &#39;bulb&#39;">bulb</span> <span class="post-tag tag-link-lily" rel="tag" title="see questions tagged &#39;lily&#39;">lily</span> <span class="post-tag tag-link-plantnursery" rel="tag" title="see questions tagged &#39;plantnursery&#39;">plantnursery</span> <span class="post-tag tag-link-tulip" rel="tag" title="see questions tagged &#39;tulip&#39;">tulip</span>

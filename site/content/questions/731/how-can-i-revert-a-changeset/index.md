@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki page '<a href="http://wiki.openstreetmap.org/wiki/Change_rollback">Change Rollback</a>' lists various options. None of them are completely straightforward though.</p>
+<p>The wiki page '<a href="https://wiki.openstreetmap.org/wiki/Change_rollback">Change Rollback</a>' lists various options. None of them are completely straightforward though.</p>
 <p>Although we model OpenStreetMap on wiki principles, change rollback is not as simple as with a textual wiki. Within our interlinked vector geo-data, if edits from different users start to overlap, it can be extremely awkward.</p>
 <p>In the future, with more careful design and development work we may be able to present change rollback tools to "mainstream" users. In the meantime the wiki page lists "power user" tools, which you should not use if you are inexperienced (Ask for help instead)</p>
 </div>
@@ -210,7 +210,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For the first part <strong>don't delete other peoples work</strong> without contacting them first.</p>
-<p>Changesets can not be "deleted" but can be reverted with another changeset. Take care that none of the objects changed has since been changed again that could lead to conflicts. If you can use JOSM probably the easiest way is to use the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">reverter plugin</a>. Otherwise there are <a href="http://wiki.openstreetmap.org/wiki/Revert_scripts">revert scripts</a> that can revert the changeset from the command line.</p>
+<p>Changesets can not be "deleted" but can be reverted with another changeset. Take care that none of the objects changed has since been changed again that could lead to conflicts. If you can use JOSM probably the easiest way is to use the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">reverter plugin</a>. Otherwise there are <a href="https://wiki.openstreetmap.org/wiki/Revert_scripts">revert scripts</a> that can revert the changeset from the command line.</p>
 <p>If you have trouble or doubt about how to or if you should do an revert you should contact someone on IRC or a mailing list that can revert the changeset for you.</p>
 </div>
 <div class="answer-controls post-controls">

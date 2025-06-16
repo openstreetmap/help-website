@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is there a website that I can use to show &quot;historic=memorial&quot;?"
-description = '''Hi I am unable to show &quot;http://www.openstreetmap.org/browse/node/2305033472&quot;. It is  historic = memorial name = La Madonnella  and I&#x27;ve tried with several OpenStreetBrowser , Amenity Editor , and others Could you please help me with step-by-step guide to show it ? thanks'''
+description = '''Hi I am unable to show &quot;https://www.openstreetmap.org/browse/node/2305033472&quot;. It is  historic = memorial name = La Madonnella  and I&#x27;ve tried with several OpenStreetBrowser , Amenity Editor , and others Could you please help me with step-by-step guide to show it ? thanks'''
 date = "2013-05-17T13:10:00Z"
 lastmod = "2013-05-18T00:09:00Z"
 weight = 22510
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi I am unable to show "<a href="http://www.openstreetmap.org/browse/node/2305033472">http://www.openstreetmap.org/browse/node/2305033472</a>". It is</p>
+<p>Hi I am unable to show "<a href="https://www.openstreetmap.org/browse/node/2305033472">https://www.openstreetmap.org/browse/node/2305033472</a>". It is</p>
 <pre><code>historic = memorial
 name = La Madonnella</code></pre>
 <p>and I've tried with several OpenStreetBrowser , Amenity Editor , and others</p>
@@ -71,7 +71,7 @@ name = La Madonnella</code></pre>
 <div id="post-22512-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Converted to question from an answer to <a href="https://help.openstreetmap.org/questions/6333/how-to-get-all-pois-on-a-map">this question</a>.</p>
+<p>Converted to question from an answer to <a href="/questions/6333/how-to-get-all-pois-on-a-map">this question</a>.</p>
 </div>
 <div id="comment-22512-info" class="comment-info">
 <span class="comment-age">(17 May '13, 13:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -187,7 +187,7 @@ name = La Madonnella</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This one uses a monument icon which does render. I did a nominatim search for memorials and it came up. <a href="http://www.openstreetmap.org/?lat=-8.731299&amp;lon=125.567368&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=-8.731299&amp;lon=125.567368&amp;zoom=18&amp;layers=M</a></p>
+<p>This one uses a monument icon which does render. I did a nominatim search for memorials and it came up. <a href="https://www.openstreetmap.org/?lat=-8.731299&amp;lon=125.567368&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=-8.731299&amp;lon=125.567368&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

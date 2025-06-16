@@ -170,7 +170,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>I would recommend GPS Prune. Loading the trace into prune shows the GPX on an OSM map. This gives you the chance to see if your trace shows new ways or existing ones that may be off line, I use an average of all public traces to check bing and to decide if a way is a little off line. see <a href="https://help.openstreetmap.org/questions/54125/gpx-editor-with-direct-upload-to-osm">https://help.openstreetmap.org/questions/54125/gpx-editor-with-direct-upload-to-osm</a></p>
+<p>I would recommend GPS Prune. Loading the trace into prune shows the GPX on an OSM map. This gives you the chance to see if your trace shows new ways or existing ones that may be off line, I use an average of all public traces to check bing and to decide if a way is a little off line. see <a href="/questions/54125/gpx-editor-with-direct-upload-to-osm">https://help.openstreetmap.org/questions/54125/gpx-editor-with-direct-upload-to-osm</a></p>
 </div>
 <div id="comment-60774-info" class="comment-info">
 <span class="comment-age">(25 Nov '17, 10:43)</span> <span class="comment-user userinfo">andy mackey</span>

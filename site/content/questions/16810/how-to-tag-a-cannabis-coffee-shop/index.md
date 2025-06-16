@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>shop=cannabis tag is still underway. <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/shop%3Dcannabis.">http://wiki.openstreetmap.org/wiki/Proposed_features/shop%3Dcannabis.</a> If it is a lounge or a place where they serve coffee, as in cafe, it can be tagged with those appropriate tags.</p>
+<p>shop=cannabis tag is still underway. <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/shop%3Dcannabis.">https://wiki.openstreetmap.org/wiki/Proposed_features/shop%3Dcannabis.</a> If it is a lounge or a place where they serve coffee, as in cafe, it can be tagged with those appropriate tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

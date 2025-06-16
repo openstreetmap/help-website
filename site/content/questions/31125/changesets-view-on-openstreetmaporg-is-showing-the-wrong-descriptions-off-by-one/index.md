@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Changesets view on openstreetmap.org is showing the wrong descriptions (off by one)"
-description = '''For example, on my changeset history page:  http://www.openstreetmap.org/user/bdiscoe/history The description for each changeset is actually the description of the previous changeset; it is off by one all the way. This is confusing and wrong (and does not show the description of the latest changeset...'''
+description = '''For example, on my changeset history page:  https://www.openstreetmap.org/user/bdiscoe/history The description for each changeset is actually the description of the previous changeset; it is off by one all the way. This is confusing and wrong (and does not show the description of the latest changeset...'''
 date = "2014-03-01T00:26:00Z"
 lastmod = "2014-03-01T02:38:00Z"
 weight = 31125
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>For example, on my changeset history page: <a href="http://www.openstreetmap.org/user/bdiscoe/history">http://www.openstreetmap.org/user/bdiscoe/history</a></p>
+<p>For example, on my changeset history page: <a href="https://www.openstreetmap.org/user/bdiscoe/history">https://www.openstreetmap.org/user/bdiscoe/history</a></p>
 <p>The description for each changeset is actually the description of the <em>previous</em> changeset; it is off by one all the way. This is confusing and wrong (and does not show the description of the latest changeset at all).</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-16283-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>An <a href="http://www.openstreetmap.org/browse/node/1225269473">example</a>.</p>
+<p>An <a href="https://www.openstreetmap.org/browse/node/1225269473">example</a>.</p>
 </div>
 <div id="comment-16283-info" class="comment-info">
 <span class="comment-age">(20 Sep '12, 17:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-16305-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here's <a href="http://www.openstreetmap.org/?lat=-41.286&amp;lon=175.262&amp;zoom=10&amp;layers=M">an example permalink</a> - you can see Wellington (proper big airport) to the west, Martinborough (named node with little other information) in the middle, and also a bunch of LINZ-imported nodes to the east.</p>
+<p>Here's <a href="https://www.openstreetmap.org/?lat=-41.286&amp;lon=175.262&amp;zoom=10&amp;layers=M">an example permalink</a> - you can see Wellington (proper big airport) to the west, Martinborough (named node with little other information) in the middle, and also a bunch of LINZ-imported nodes to the east.</p>
 </div>
 <div id="comment-16305-info" class="comment-info">
 <span class="comment-age">(21 Sep '12, 11:40)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -126,7 +126,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the example gives a few hints. The airstrips have been imported from LINZ data. Click on the <a href="http://www.openstreetmap.org/user/LINZ%20Data%20Upload">username</a> and then the <a href="http://wiki.openstreetmap.org/wiki/LINZ">wiki link</a> to find out more about what has been/will be imported.</p>
+<p>I think the example gives a few hints. The airstrips have been imported from LINZ data. Click on the <a href="https://www.openstreetmap.org/user/LINZ%20Data%20Upload">username</a> and then the <a href="https://wiki.openstreetmap.org/wiki/LINZ">wiki link</a> to find out more about what has been/will be imported.</p>
 <p>Just think of it as airstrips currently being better mapped than everything else, perhaps?</p>
 <p>It might be that you think they should only appear when you zoom in closer - if so then there used to be a <a href="https://trac.openstreetmap.org/ticket/1835">trac ticket</a> for that, but without some standard way of distinguishing large airports from small airports it looks like the ticket is currently closed.</p>
 </div>
@@ -169,7 +169,7 @@ One Answer:
 <div id="post-16304-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm sure that the data is "correct" as far as it goes - as I understand it, these small "airports" are basically farm paddocks that can be used by the farmer to get from A to B. It's an issue that's been <a href="https://help.openstreetmap.org/questions/10078/farm-airports-mapped-near-my-home-are-not-airports">raised</a> <a href="http://ksmapper.blogspot.co.uk/2011/01/airports-part-1.html">before</a>. What's missing, I think, is the next step - actual surveying to figure out which are "real" airports that the public use and which spend most of their time as a bovine toilet.</p>
+<p>I'm sure that the data is "correct" as far as it goes - as I understand it, these small "airports" are basically farm paddocks that can be used by the farmer to get from A to B. It's an issue that's been <a href="/questions/10078/farm-airports-mapped-near-my-home-are-not-airports">raised</a> <a href="http://ksmapper.blogspot.co.uk/2011/01/airports-part-1.html">before</a>. What's missing, I think, is the next step - actual surveying to figure out which are "real" airports that the public use and which spend most of their time as a bovine toilet.</p>
 <p>Also, as the trac ticket says, until there's a consensus about how to distinguish the former from the latter there's not a lot that renderers can do - but even a "note" against an airport saying "just a paddock, not really an airport" could be brought into a future tagging scheme.<br />
 </p>
 </div>

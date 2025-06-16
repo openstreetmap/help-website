@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is answered in <a href="https://help.openstreetmap.org/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces">https://help.openstreetmap.org/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces</a> And here in the mapbox blog <a href="https://blog.mapbox.com/9-years-of-openstreetmap-gps-tracks-available-for-mapping-47f6074c0688">https://blog.mapbox.com/9-years-of-openstreetmap-gps-tracks-available-for-mapping-47f6074c0688</a></p>
+<p>This is answered in <a href="/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces">https://help.openstreetmap.org/questions/33175/why-tile-layer-with-gps-traces-different-from-downloaded-traces</a> And here in the mapbox blog <a href="https://blog.mapbox.com/9-years-of-openstreetmap-gps-tracks-available-for-mapping-47f6074c0688">https://blog.mapbox.com/9-years-of-openstreetmap-gps-tracks-available-for-mapping-47f6074c0688</a></p>
 <p>tl;dr version the "Identifiable" and "Public" traces are shown.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "embed.html Marker Problem"
-description = '''I haVe embeded a OSM-POI in a Website using the Iframe-Method (Export to HTML). In Firefox and Chrome this works like a charm. In Inernet Explorer (versions 10 and 11) the iframe remains grey. If i open the embeded url (http://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.5488...'''
+description = '''I haVe embeded a OSM-POI in a Website using the Iframe-Method (Export to HTML). In Firefox and Chrome this works like a charm. In Inernet Explorer (versions 10 and 11) the iframe remains grey. If i open the embeded url (https://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.5488...'''
 date = "2015-02-24T11:04:00Z"
 lastmod = "2015-02-24T16:50:00Z"
 weight = 41312
@@ -41,15 +41,15 @@ osqa_accepted = true
 <div class="question-body">
 <p>I haVe embeded a OSM-POI in a Website using the Iframe-Method (Export to HTML).</p>
 <p>In Firefox and Chrome this works like a charm. In Inernet Explorer (versions 10 and 11) the iframe remains grey.</p>
-<p>If i open the embeded url (<a href="http://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik&amp;marker=48.55201942461214%2C15.424504280090332"><code>http://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik&amp;marker=48.55201942461214%2C15.424504280090332</code></a>) in a new Browser Window i get the following error in the javascript console:</p>
+<p>If i open the embeded url (<a href="https://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik&amp;marker=48.55201942461214%2C15.424504280090332"><code>https://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik&amp;marker=48.55201942461214%2C15.424504280090332</code></a>) in a new Browser Window i get the following error in the javascript console:</p>
 <pre><code>SCRIPT5009: &quot;OSM&quot; ist undefiniert
 Datei: embed-5dc5be9a8305fd6a9248aec4b2960eca.js, Zeile: 4, Spalte: 32013</code></pre>
 <p>Example Website (in german): <a href="http://www.kfz-gassner.at/">http://www.kfz-gassner.at/</a></p>
 <p>Is there something wrong with osm's embed.html?</p>
 <p>EDIT: It seems other Browsers have the same Problem. The reason why it worked in FF an Chrome was because elements were retrieved from cache.</p>
-<p>EDIT 2: The Javascript error is related with setting markers. If i open the url <a href="http://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik"><code>http://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik</code></a> (without <code>&amp;marker=48.55201942461214%2C15.424504280090332</code>) the map shows up. Firefox javascript error with marker:</p>
+<p>EDIT 2: The Javascript error is related with setting markers. If i open the url <a href="https://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik"><code>https://www.openstreetmap.org/export/embed.html?bbox=15.417423248291016%2C48.54885900556121%2C15.431585311889647%2C48.55517964627281&amp;layer=mapnik</code></a> (without <code>&amp;marker=48.55201942461214%2C15.424504280090332</code>) the map shows up. Firefox javascript error with marker:</p>
 <pre><code>ReferenceError: OSM is not defined
-http://www.openstreetmap.org/assets/embed-5dc5be9a8305fd6a9248aec4b2960eca.js
+https://www.openstreetmap.org/assets/embed-5dc5be9a8305fd6a9248aec4b2960eca.js
 Line 4
 ...arker(e.marker.split(&quot;,&quot;),{icon:L.icon({iconUrl:OSM.MARKER_ICON,iconSize:new L.P...</code></pre>
 <p>EDIT 3: Now (14:55) the Bug is fixed.</p>
@@ -84,7 +84,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>and what is the fix to the bug?! Let others with the same problem know it. Update: thanks, <a href="http://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="http://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent</a>!</p>
+<p>and what is the fix to the bug?! Let others with the same problem know it. Update: thanks, <a href="https://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent</a>!</p>
 </div>
 <div id="comment-41318-info" class="comment-info">
 <span class="comment-age">(24 Feb '15, 14:45)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

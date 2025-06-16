@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><em>Where</em> can you not sign in? Here? On <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> ?</p>
+<p><em>Where</em> can you not sign in? Here? On <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> ?</p>
 </div>
 <div id="comment-57127-info" class="comment-info">
 <span class="comment-age">(17 Jul '17, 09:57)</span> <span class="comment-user userinfo">sleske</span>

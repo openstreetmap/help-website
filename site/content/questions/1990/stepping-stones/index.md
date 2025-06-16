@@ -115,7 +115,7 @@ osqa_accepted = false
 </li>
 <li>ford=stepping_stones 32 usages</li>
 </ul>
-<p>The last one is also documented in <a href="http://wiki.openstreetmap.org/wiki/Key:ford">wiki</a> and it is probably the best way to tag stepping stones.</p>
+<p>The last one is also documented in <a href="https://wiki.openstreetmap.org/wiki/Key:ford">wiki</a> and it is probably the best way to tag stepping stones.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

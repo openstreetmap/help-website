@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "where is the map with the aviation data?"
-description = '''Hi, I saw this page: http://wiki.openstreetmap.org/wiki/Aviation But i cannot find the link to see the map with the aviation data. I know the map is operational because i have an ipad app that uses the map with the data. I can see the map in the ipad app, but i can&#x27;t find it in the internet. Thanks'''
+description = '''Hi, I saw this page: https://wiki.openstreetmap.org/wiki/Aviation But i cannot find the link to see the map with the aviation data. I know the map is operational because i have an ipad app that uses the map with the data. I can see the map in the ipad app, but i can&#x27;t find it in the internet. Thanks'''
 date = "2013-06-11T15:48:00Z"
 lastmod = "2013-06-12T15:38:00Z"
 weight = 23228
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I saw this page:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Aviation">http://wiki.openstreetmap.org/wiki/Aviation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Aviation">https://wiki.openstreetmap.org/wiki/Aviation</a></p>
 <p>But i cannot find the link to see the map with the aviation data. I know the map is operational because i have an ipad app that uses the map with the data. I can see the map in the ipad app, but i can't find it in the internet.</p>
 <p>Thanks</p>
 </div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I installed the openstreet map in my Garmin 57LM, simulated a routing trip but there is an error in the routing. The trip is from Lucerne to Munich, Google Map suggested 360km, but Openstreet suggested a detour at Berlin, which the total distance is 1500km+, which is incorrect, is there an error in Openstreetmap routing??</p>
 <p>The openstreet map was downloaded from this website <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Openstreet_routing_problem.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Openstreet_routing_problem.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

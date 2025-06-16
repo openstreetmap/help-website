@@ -153,7 +153,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Assuming your app is going to be used by a number of people, you may fall under the "heavy user" category of the terms of use and if so your app may be blocked. See <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">http://wiki.openstreetmap.org/wiki/API_usage_policy</a></p>
+<p>Assuming your app is going to be used by a number of people, you may fall under the "heavy user" category of the terms of use and if so your app may be blocked. See <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">https://wiki.openstreetmap.org/wiki/API_usage_policy</a></p>
 </div>
 <div id="comment-53404-info" class="comment-info">
 <span class="comment-age">(08 Dec '16, 23:56)</span> <span class="comment-user userinfo">n76</span>

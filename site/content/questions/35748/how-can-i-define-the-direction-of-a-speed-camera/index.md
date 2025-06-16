@@ -71,8 +71,8 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Thanks for your help.</p>
 <p>I'm not sure if I understood the Wiki correct. But please have a look.</p>
-<p>I have found a speed_camera inside OSM here, but if I understand it correct, this one is not correct inside OSM: <a href="http://www.openstreetmap.org/edit?way=296449989#map=21/48.18224/16.31885">http://www.openstreetmap.org/edit?way=296449989#map=21/48.18224/16.31885</a></p>
-<p>So I added my first own speed_camera here. This is a speed camera like "Example 3c" (Speed camera making pictures from the back). This camera makes pictures from cars, which drives from Buckalgasse to Löwenthalgasse. <a href="http://www.openstreetmap.org/edit?way=289875094#map=20/48.13317/16.27551">http://www.openstreetmap.org/edit?way=289875094#map=20/48.13317/16.27551</a></p>
+<p>I have found a speed_camera inside OSM here, but if I understand it correct, this one is not correct inside OSM: <a href="https://www.openstreetmap.org/edit?way=296449989#map=21/48.18224/16.31885">https://www.openstreetmap.org/edit?way=296449989#map=21/48.18224/16.31885</a></p>
+<p>So I added my first own speed_camera here. This is a speed camera like "Example 3c" (Speed camera making pictures from the back). This camera makes pictures from cars, which drives from Buckalgasse to Löwenthalgasse. <a href="https://www.openstreetmap.org/edit?way=289875094#map=20/48.13317/16.27551">https://www.openstreetmap.org/edit?way=289875094#map=20/48.13317/16.27551</a></p>
 <p>Is it correct or what do I need to change?</p>
 <p>Thanks!</p>
 </div>
@@ -98,7 +98,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Thank you, your video was very helpful for me! Now I changed my first speed_camera. Please can you have a look again. <a href="http://www.openstreetmap.org/edit?way=289875094#map=19/48.13333/16.27561">http://www.openstreetmap.org/edit?way=289875094#map=19/48.13333/16.27561</a></p>
+<p>Thank you, your video was very helpful for me! Now I changed my first speed_camera. Please can you have a look again. <a href="https://www.openstreetmap.org/edit?way=289875094#map=19/48.13333/16.27561">https://www.openstreetmap.org/edit?way=289875094#map=19/48.13333/16.27561</a></p>
 </div>
 <div id="comment-35762-info" class="comment-info">
 <span class="comment-age">(12 Aug '14, 16:15)</span> <span class="comment-user userinfo">Phipsiii</span>
@@ -152,7 +152,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I use OsmAnd and the cameras I have mapped as nodes at the side of the road have not triggered the warning that nodes as part of the way do. However, checking the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dspeed_camera">speed camera</a> suggests that OsmAnd now processes <a href="http://wiki.openstreetmap.org/wiki/Relation:enforcement">enforcement relations</a>, which looks like a more complicated but more accurate way of mapping speed cameras.</p>
+<p>I use OsmAnd and the cameras I have mapped as nodes at the side of the road have not triggered the warning that nodes as part of the way do. However, checking the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dspeed_camera">speed camera</a> suggests that OsmAnd now processes <a href="https://wiki.openstreetmap.org/wiki/Relation:enforcement">enforcement relations</a>, which looks like a more complicated but more accurate way of mapping speed cameras.</p>
 <p>If I've read if correctly, you would:</p>
 <ol>
 <li>add a highway=speed_camera node where the camera is (e.g. side of the road)</li>

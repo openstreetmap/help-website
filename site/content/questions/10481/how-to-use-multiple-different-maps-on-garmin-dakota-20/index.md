@@ -118,7 +118,7 @@ One Answer:
 Once you have that, if your dakota's firmware is recent enough, you should be able to switch between maps by going into
 <pre><code>setup -&gt; map -&gt; select map</code></pre>
 <p>If your device only shows zero/one map there, maybe it is because you have an old firmware that only handles one gmapsupp at a time. Go to the garming website and follow instructions to update your firmware.</p>
-<p>See also <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#What_if_I_have_an_existing_gmapsupp.img_file.3F">the wiki</a> of course.</p>
+<p>See also <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#What_if_I_have_an_existing_gmapsupp.img_file.3F">the wiki</a> of course.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

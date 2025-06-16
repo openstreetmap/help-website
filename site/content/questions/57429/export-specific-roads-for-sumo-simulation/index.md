@@ -112,8 +112,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out:.29">xml</a> option on Overpass-API is what you would expect in a .osm file.</p>
-<p>If you have locations associated with your testing you could use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29">around filter</a> with a suitable distance to find the highways of interest.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out:.29">xml</a> option on Overpass-API is what you would expect in a .osm file.</p>
+<p>If you have locations associated with your testing you could use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29">around filter</a> with a suitable distance to find the highways of interest.</p>
 <p>Otherwise you will probably have to resort to a manual process. One way to do it would be to download just the highways in the area of interest using Overpass-API and then pare that data down in JOSM (being careful not to upload damaging deletions). File-&gt;Save in JOSM will output the same osm xml.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/JMapViewer">JMapViewer</a> might be a starting point. Unlike Mapsforge though, this is based on bitmap tiles, i.e. you can't download a large map for offline use, instead it loads individual map tiles (PNGs) from the server as needed. Also JMapViewer has limited options of displaying vector data on top of the map, AFAIK it only supports markers (not highlighted streets etc) but that is something that you could probably add given some Java knowledge.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JMapViewer">JMapViewer</a> might be a starting point. Unlike Mapsforge though, this is based on bitmap tiles, i.e. you can't download a large map for offline use, instead it loads individual map tiles (PNGs) from the server as needed. Also JMapViewer has limited options of displaying vector data on top of the map, AFAIK it only supports markers (not highlighted streets etc) but that is something that you could probably add given some Java knowledge.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ osqa_accepted = false
 <div id="post-43916-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11170/madalina_iasmina">@madalina_iasmina</a> It is not clear what you mean. Try asking a new question with more words explaining what you are trying to do. You can ask in whatever language you want</p>
+<p><a href="https://help.openstreetmap.org/users/11170/madalina_iasmina">@madalina_iasmina</a> It is not clear what you mean. Try asking a new question with more words explaining what you are trying to do. You can ask in whatever language you want</p>
 <p>(guessing)</p>
 <p>Nu este clar ce vrei să spui. Încercați pune o nouă întrebare cu mai multe cuvinte explica ceea ce încercăm să facem. Puteți solicita în orice limbă doriți</p>
 </div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Atlas_(navigation_application)">Atlas</a> ... it is written in Java for desktop PC and is based on mapsforge.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Atlas_(navigation_application)">Atlas</a> ... it is written in Java for desktop PC and is based on mapsforge.</p>
 <p>Unfortunately it is closed source by user emux (see github about mapsforge, he is one of the core developers of mapsforge)</p>
 <p>But maybe he can give you the right entry point in the mapsforge mailing list how to get started more easily with mapsforge in Java / PC. Read the mailing list before, maybe there has been already a similar question.</p>
 </div>

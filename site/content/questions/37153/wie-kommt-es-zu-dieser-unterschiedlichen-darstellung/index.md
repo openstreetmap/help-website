@@ -165,7 +165,7 @@ One Answer:
 <div id="post-37165-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7274/tracker51"></a><a href="http://help.openstreetmap.org/users/7274/tracker51">@tracker51</a>: wie Simon schon gesagt hat: wahrscheinlich unterschiedliche Renderer-Stylesheet-Versionen. Die Gleise dort <span>sind alle ein einziger Weg</span>, somit kann eigentlich nur im Zeitverlauf verschiedenes Rendering "schuld" sein. Am besten einfach abwarten!</p>
+<p><a href="https://help.openstreetmap.org/users/7274/tracker51"></a><a href="https://help.openstreetmap.org/users/7274/tracker51">@tracker51</a>: wie Simon schon gesagt hat: wahrscheinlich unterschiedliche Renderer-Stylesheet-Versionen. Die Gleise dort <span>sind alle ein einziger Weg</span>, somit kann eigentlich nur im Zeitverlauf verschiedenes Rendering "schuld" sein. Am besten einfach abwarten!</p>
 <p>Damit du zufrieden bist, habe ich den Renderer angewiesen dort an der Stelle bitte neu zu rendern. :-) Nun sehe ich bei mir keine Unterschiede mehr an den Kachelgrenzen. Drücke Strg+F5 zum Neuladen der Karte.</p>
 </div>
 <div id="comment-37165-info" class="comment-info">
@@ -188,7 +188,7 @@ One Answer:
 <div id="post-37209-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8753/maturi0n"></a><a href="http://help.openstreetmap.org/users/8753/maturi0n">@Maturi0n</a>: das ist normal, weil die einzelnen Zoomstufen unabhängig voneinander erzeugt werden. Übrigens: diese Unstimmigkeiten werden in Kauf genommen, weil so sehr sehr sehr viel weniger Rechenleistung benötigt wird, als wenn immer alles bei jeder kleinen Stiländerung neu erzeugt werden müsste (schon gar nicht ist das mit unseren Servern machbar, die nur auf Spenden basieren). Nach und nach wird das alles richtig werden. Dank dir in jeden Fall für deine Aufmerksamkeit und Interesse! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/8753/maturi0n"></a><a href="https://help.openstreetmap.org/users/8753/maturi0n">@Maturi0n</a>: das ist normal, weil die einzelnen Zoomstufen unabhängig voneinander erzeugt werden. Übrigens: diese Unstimmigkeiten werden in Kauf genommen, weil so sehr sehr sehr viel weniger Rechenleistung benötigt wird, als wenn immer alles bei jeder kleinen Stiländerung neu erzeugt werden müsste (schon gar nicht ist das mit unseren Servern machbar, die nur auf Spenden basieren). Nach und nach wird das alles richtig werden. Dank dir in jeden Fall für deine Aufmerksamkeit und Interesse! :-)</p>
 </div>
 <div id="comment-37209-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 22:27)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

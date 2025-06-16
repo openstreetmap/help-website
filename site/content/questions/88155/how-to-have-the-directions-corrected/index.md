@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Yesterday Ive added a missing road next to the marker shown. Its a paved road and I marked it as accessible to cars. However when I ask OSM for directions it is still showing an incorrect route to the street next to the house. What needs to be changed so that OSM shows the route correctly via the road that I added ?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/map_tb.png" alt="alt text" /></p>
+<p><img src="/upfiles/map_tb.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-directions" rel="tag" title="see questions tagged &#39;directions&#39;">directions</span>

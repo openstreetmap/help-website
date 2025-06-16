@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>On <a href="http://www.openstreetmap.org/?lat=52.35123&amp;lon=-2.1283&amp;zoom=15&amp;layers=M">this OpenStreetMap</a> the woodland at the bottom is incorrectly marked as pine plantation. It also lacks a name, which is Cutpursey Coppice. You can see it named and marked as deciduous woods on <a href="http://t.co/sW0pFXr">Streetmap.co.uk here</a>.</p>
+<p>On <a href="https://www.openstreetmap.org/?lat=52.35123&amp;lon=-2.1283&amp;zoom=15&amp;layers=M">this OpenStreetMap</a> the woodland at the bottom is incorrectly marked as pine plantation. It also lacks a name, which is Cutpursey Coppice. You can see it named and marked as deciduous woods on <a href="http://t.co/sW0pFXr">Streetmap.co.uk here</a>.</p>
 <p>I’ve no idea how to make these corrections and have had trouble loading the data to look at editing, even. Any help appreciated,</p>
 <p>Thanks,</p>
 <p>Jim</p>
@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-3398-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I can't see that any other tag than "landuse = forest" has ever been used on that woodland: <a href="http://www.openstreetmap.org/browse/way/42236654/history">http://www.openstreetmap.org/browse/way/42236654/history</a></p>
+<p>I can't see that any other tag than "landuse = forest" has ever been used on that woodland: <a href="https://www.openstreetmap.org/browse/way/42236654/history">https://www.openstreetmap.org/browse/way/42236654/history</a></p>
 <p>What makes you draw the conclusion that it's marked as pine plantation?</p>
 </div>
 <div id="comment-3398-info" class="comment-info">

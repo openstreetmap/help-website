@@ -179,7 +179,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Fairly old <a href="http://wiki.openstreetmap.org/wiki/Video_Mapping_with_the_ContourGPS_Helmet_Camera">http://wiki.openstreetmap.org/wiki/Video_Mapping_with_the_ContourGPS_Helmet_Camera</a> the wiki further has a section on video mapping that is even older.</p>
+<p>Fairly old <a href="https://wiki.openstreetmap.org/wiki/Video_Mapping_with_the_ContourGPS_Helmet_Camera">https://wiki.openstreetmap.org/wiki/Video_Mapping_with_the_ContourGPS_Helmet_Camera</a> the wiki further has a section on video mapping that is even older.</p>
 <p>Note that I would not recommend any specific current device.</p>
 </div>
 <div class="answer-controls post-controls">

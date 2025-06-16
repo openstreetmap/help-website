@@ -85,7 +85,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Currently the couple of examples that I've looked at use ferry_terminal <a href="http://www.openstreetmap.org/node/304064845#map=19/46.99032/8.52667">http://www.openstreetmap.org/node/304064845#map=19/46.99032/8.52667</a> I would say if passengers are allowed to board/unboard then ferry_terminal is not wrong regardless if it is essentially just a pier.</p>
+<p>Currently the couple of examples that I've looked at use ferry_terminal <a href="https://www.openstreetmap.org/node/304064845#map=19/46.99032/8.52667">https://www.openstreetmap.org/node/304064845#map=19/46.99032/8.52667</a> I would say if passengers are allowed to board/unboard then ferry_terminal is not wrong regardless if it is essentially just a pier.</p>
 </div>
 <div id="comment-59676-info" class="comment-info">
 <span class="comment-age">(18 Sep '17, 12:26)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

@@ -106,8 +106,8 @@ One Answer:
 <div class="answer-body">
 <p>The short reply is: Google NO, Yahoo (aerial imagery) yes.</p>
 <p>The long reply is: Although it is legaly disputed whether one infringes on copyright by tracing from aerial imagery, it is not disputed that one has to stay within the Terms of Service of the offered service. And Google clearly seems to prohibit tracing, so don't do that. If I remember correctly, they even seem to imply that it would impose a copyright infringement. (although as I said, it is questionable if that is true)</p>
-<p>Yahoo's terms of service don't prohibit that and there has been communication with Yahoo people and they have confirmed that tracing Yahoo aerial imagery seems to be within the terms of service and should be possible (but they gave no explicit permission to OSM). See our wiki item on the <a href="http://wiki.openstreetmap.org/wiki/Yahoo#Legalities">legalities</a> and history of communication of tracing from Yahoo.</p>
-<p>There is also a <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F">brief entry</a> on the legal FAQ on this issue.</p>
+<p>Yahoo's terms of service don't prohibit that and there has been communication with Yahoo people and they have confirmed that tracing Yahoo aerial imagery seems to be within the terms of service and should be possible (but they gave no explicit permission to OSM). See our wiki item on the <a href="https://wiki.openstreetmap.org/wiki/Yahoo#Legalities">legalities</a> and history of communication of tracing from Yahoo.</p>
+<p>There is also a <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F">brief entry</a> on the legal FAQ on this issue.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

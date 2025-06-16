@@ -117,21 +117,21 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is an interesting question, but IMHO there is (currently) no definitive answer. I will try to summarize what I know so far and might apply here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Good_practice">http://wiki.openstreetmap.org/wiki/Good_practice</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Good_practice">https://wiki.openstreetmap.org/wiki/Good_practice</a></p>
 <ul>
 <li>"Map what's on the ground", "Verifiability" seem to be OSM words for what Wikipedians call 'neutral point of view'. So a company should only share informations at OSM, that are objective and can be verified. "best hotel ever!!!" is definitly not, but address, website and contacts are.</li>
 </ul>
-<p><a href="http://wiki.openstreetmap.org/wiki/Notes">http://wiki.openstreetmap.org/wiki/Notes</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Notes">https://wiki.openstreetmap.org/wiki/Notes</a></p>
 <ul>
 <li>Says the messages should not be to general or personal/subjective. So a company advertising "big big business!!!" is definitly wrong, while a local store that submits it's position, the type and a weblink can be ok.</li>
 </ul>
-<p><a href="http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">http://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting">https://wiki.openstreetmap.org/wiki/List_of_Companies_offering_OSM_Consulting</a></p>
 <ul>
 <li>Lists various companies that help people to add their POIs to OSM. I guess they are experienced in how the community work to avoid spamming for their customers. Anyway, there is no kind of 'codex' etc. on how to behave and what to do/avoid while contributing and keeping customer data.</li>
 </ul>
 <p>More: AFAIK most of the osm.org website uses robots.txt and nofollow directives to avoid that link spamming makes sense. Anyway, some tools/apps use description=* field and might trigger on that spam. In heavy uses, you might consider contacting the <a href="http://wiki.osmfoundation.org/wiki/Data_Working_Group">data workinggroup</a> to fight against this antisocial behaviour, if the author doesn't react on direct messages.</p>
 <p>P.S. If you like to add the antispamming-clause here, feel free to :)<br />
-<a href="http://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do">http://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do">https://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -195,7 +195,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The changeset comment is solely for describing the edit; putting information about how great a business is in the changeset comment is spam and will lead to the account being investigated and likely terminated.</p>
-<p>Information about businesses is ok in OSM as long as it remains factual. This may include contact details like a phone number or web site or even a free-form tag that describes what the business does, but advertising is not acceptable. See also <a href="https://help.openstreetmap.org/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap">"How to add the tag payment:bitcoin=yes in an OpenStreetMap editor for the CoinMap?"</a></p>
+<p>Information about businesses is ok in OSM as long as it remains factual. This may include contact details like a phone number or web site or even a free-form tag that describes what the business does, but advertising is not acceptable. See also <a href="/questions/29078/how-to-add-the-tag-paymentbitcoinyes-in-an-openstreetmap-editor-for-the-coinmap">"How to add the tag payment:bitcoin=yes in an OpenStreetMap editor for the CoinMap?"</a></p>
 <p>If a normal mapper occasionally adds inappropriate content then you can point this out to them, and ask them to remove it - or remove it yourself if they don't respond. If however you have the impression that an account, or a series of accounts, has been created solely for adding inappropriate advertising to OSM, please email data@osmfoundation.org with your findings.</p>
 </div>
 <div class="answer-controls post-controls">

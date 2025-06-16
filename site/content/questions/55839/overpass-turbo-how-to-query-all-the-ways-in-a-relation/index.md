@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "overpass turbo : how to query all the ways in a relation"
-description = '''I&#x27;m trying to query the Great Lakes in overpass using the id (http://www.openstreetmap.org/relation/1124369)...is this plausible? Here is what I have so far. [out:json][timeout:2500];  ( relation[&quot;name&quot;=&quot;Great Lakes&quot;][ref=1124369]; way(r); node(w); );  out skel qt; '''
+description = '''I&#x27;m trying to query the Great Lakes in overpass using the id (https://www.openstreetmap.org/relation/1124369)...is this plausible? Here is what I have so far. [out:json][timeout:2500];  ( relation[&quot;name&quot;=&quot;Great Lakes&quot;][ref=1124369]; way(r); node(w); );  out skel qt; '''
 date = "2017-04-25T00:54:00Z"
 lastmod = "2017-04-26T22:03:00Z"
 weight = 55839
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to query the Great Lakes in overpass using the id (<a href="http://www.openstreetmap.org/relation/1124369)...is">http://www.openstreetmap.org/relation/1124369)...is</a> this plausible?</p>
+<p>I'm trying to query the Great Lakes in overpass using the id (<a href="https://www.openstreetmap.org/relation/1124369)...is">https://www.openstreetmap.org/relation/1124369)...is</a> this plausible?</p>
 <p>Here is what I have so far.</p>
 <pre><code>[out:json][timeout:2500];
 &#10;(   relation[&quot;name&quot;=&quot;Great Lakes&quot;][ref=1124369];   way(r);   node(w); );
@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>To query by OSM id, do something like <code>rel(1124369);</code></p>
-<p>Once you have that object you need to use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_down_relations_.28.3E.3E.29">recurse down relations</a> operator:</p>
+<p>Once you have that object you need to use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_down_relations_.28.3E.3E.29">recurse down relations</a> operator:</p>
 <pre><code>[out:json][timeout:25];
 rel(1124369);
 (._;&gt;&gt;;);

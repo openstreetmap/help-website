@@ -55,7 +55,7 @@ osqa_accepted = false
 <li>Use osm2poly.pl script for generate the poly file : perl osm2poly.pl data.osm &gt; data.poly</li>
 </ol>
 <p>But then i get multiple polylines. How can i merge these relations?</p>
-<p><em>Add. I based my actions on <a href="https://help.openstreetmap.org/questions/15481/converting-a-relation-into-an-osmosis-polygon-file">https://help.openstreetmap.org/questions/15481/converting-a-relation-into-an-osmosis-polygon-file</a></em></p>
+<p><em>Add. I based my actions on <a href="/questions/15481/converting-a-relation-into-an-osmosis-polygon-file">https://help.openstreetmap.org/questions/15481/converting-a-relation-into-an-osmosis-polygon-file</a></em></p>
 <p>Regards, Ed'</p>
 </div>
 <div id="question-tags" class="tags-container tags">

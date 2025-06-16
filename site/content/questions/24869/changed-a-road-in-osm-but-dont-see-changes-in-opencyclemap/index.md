@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a></p>
+<p>See <a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

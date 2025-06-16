@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Historic City walls"
-description = '''Is  barrier=city_wall historics=citywall the correct tag for a wall that is (partially) not there anymore? I think barrier should be removed? http://www.openstreetmap.org/way/279549513 edit: A part is still intact, for those the tags make sense, I agree. Other parts are completely gone. Should the h...'''
+description = '''Is  barrier=city_wall historics=citywall the correct tag for a wall that is (partially) not there anymore? I think barrier should be removed? https://www.openstreetmap.org/way/279549513 edit: A part is still intact, for those the tags make sense, I agree. Other parts are completely gone. Should the h...'''
 date = "2015-07-14T08:43:00Z"
 lastmod = "2015-07-17T15:22:00Z"
 weight = 44170
@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Is</p>
 <p>barrier=city_wall historics=citywall</p>
 <p>the correct tag for a wall that is (partially) not there anymore? I think barrier should be removed?</p>
-<p><a href="http://www.openstreetmap.org/way/279549513">http://www.openstreetmap.org/way/279549513</a></p>
+<p><a href="https://www.openstreetmap.org/way/279549513">https://www.openstreetmap.org/way/279549513</a></p>
 <p>edit:</p>
 <p>A part is still intact, for those the tags make sense, I agree. Other parts are completely gone. Should the historic be kept? On other parts, there is a special pavement indicating that there was a wall in ancient times. What about those?</p>
 </div>

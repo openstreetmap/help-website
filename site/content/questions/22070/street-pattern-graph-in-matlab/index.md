@@ -66,7 +66,7 @@ osqa_accepted = false
 <div id="post-22072-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>People have tried turning OSM data into a (mathematical) graph before - <a href="https://help.openstreetmap.org/search/?q=graph&amp;Submit=Search&amp;t=question">search this help site for "graph"</a> and you'll get some helpful answers. Also, if you've not already read it, have a read of <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this page of the "Beginners' Guide"</a> that explains what sort of data (in the sense of "what's in the XML file that you download")</p>
+<p>People have tried turning OSM data into a (mathematical) graph before - <a href="https://help.openstreetmap.org/search/?q=graph&amp;Submit=Search&amp;t=question">search this help site for "graph"</a> and you'll get some helpful answers. Also, if you've not already read it, have a read of <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">this page of the "Beginners' Guide"</a> that explains what sort of data (in the sense of "what's in the XML file that you download")</p>
 </div>
 <div id="comment-22072-info" class="comment-info">
 <span class="comment-age">(03 May '13, 12:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -88,7 +88,7 @@ osqa_accepted = false
 <div id="post-22079-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are multiple possibilities. You can use <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> after you obtained the data or you can use some API that supports filtering like the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> (also take a look at <a href="http://overpass-turbo.eu/">Overpass Turbo</a>). Or you skip the uninteresting parts while parsing a data export.</p>
+<p>There are multiple possibilities. You can use <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> after you obtained the data or you can use some API that supports filtering like the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> (also take a look at <a href="http://overpass-turbo.eu/">Overpass Turbo</a>). Or you skip the uninteresting parts while parsing a data export.</p>
 </div>
 <div id="comment-22079-info" class="comment-info">
 <span class="comment-age">(03 May '13, 14:32)</span> <span class="comment-user userinfo">scai ♦</span>

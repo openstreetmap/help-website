@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I'm not sure what I've screwed up here - there's a body of water near where I am known collectively as the "five lakes". Today, I went in and tried to correctly mark the five sections by splitting the outer polygon in a few places and drawing separating ways, then giving the appropriate names to the individual sections (and tagging them "natural=water" and "name=[fill in name here]").</p>
 <p>In potlatch2 it looked like I was doing things correctly and everything looked fine in the browser at zoom level 12, but at 13 or closer sections of the lake (including some that I would swear I hadn't touched) "disappear" (with the islands showing up in blue as though those sections had gotten "inverted" somehow).</p>
-<p>The section I was editing may be seen at <a href="http://www.openstreetmap.org/#map=12/45.6254/-68.8537">this section of the map</a>, and you should be able to see the effect I'm describing by zooming in one more level from that link. South Twin Lake (the left side of the dividing line that I added there) appears "filled in" while North Twin Lake (the right side, obviously) looks okay. A similar effect appears to be happening at the northernmost section of the lake, and to a couple of lakes next to this one that I swear I didn't knowingly edit at all (the "Jo Mary" lake et al).</p>
+<p>The section I was editing may be seen at <a href="https://www.openstreetmap.org/#map=12/45.6254/-68.8537">this section of the map</a>, and you should be able to see the effect I'm describing by zooming in one more level from that link. South Twin Lake (the left side of the dividing line that I added there) appears "filled in" while North Twin Lake (the right side, obviously) looks okay. A similar effect appears to be happening at the northernmost section of the lake, and to a couple of lakes next to this one that I swear I didn't knowingly edit at all (the "Jo Mary" lake et al).</p>
 <p>(At least, I'm ASSUMING everyone else can see it - I see the effect in both Firefox and Chromium.)</p>
 <p>Can anyone tell what it is that I screwed up, what I should have done instead, and how to fix it short of finding some way to just revert changesets 17322213 and 17320149 (also an option assuming I can figure out how, since I'm pretty sure I'm the only one making edits in this area right now)?</p>
 </div>
@@ -131,7 +131,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hello There, The area of South Twin Lake is not a closed area. The problem is at the bottom of the join to North Twin Lake, this corner :- <a href="http://www.openstreetmap.org/#map=18/45.60663/-68.82014">http://www.openstreetmap.org/#map=18/45.60663/-68.82014</a></p>
+<p>Hello There, The area of South Twin Lake is not a closed area. The problem is at the bottom of the join to North Twin Lake, this corner :- <a href="https://www.openstreetmap.org/#map=18/45.60663/-68.82014">https://www.openstreetmap.org/#map=18/45.60663/-68.82014</a></p>
 <p>Regards</p>
 </div>
 <div class="answer-controls post-controls">
@@ -287,7 +287,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I see the answer above is accepted (and correctly so), but wanted to point out this additional issue: the multipolygon relation (<a href="http://www.openstreetmap.org/browse/relation/2851500">relation 2851500</a>) that used to cover the whole lake area is now messed up. Both Ambajejus Lake and Pemadumcook Lake are still in that same multipolygon relation, with multiple islands within each. Typically in OSM, each lake and its islands will be in its own multipolygon relation. When "inner" ways are outside of "outer" ways, often rendering gets weird. Also, often the tags (natural=water, name, etc) will be moved to the relation and off the ways. If there is a reason to have those lakes joined together (say, if they're known collectively as the Five Lakes), it's possible to use a "<a href="http://wiki.openstreetmap.org/wiki/Super-Relation">superrelation</a>" which gathers the smaller relations.</p>
+<p>I see the answer above is accepted (and correctly so), but wanted to point out this additional issue: the multipolygon relation (<a href="https://www.openstreetmap.org/browse/relation/2851500">relation 2851500</a>) that used to cover the whole lake area is now messed up. Both Ambajejus Lake and Pemadumcook Lake are still in that same multipolygon relation, with multiple islands within each. Typically in OSM, each lake and its islands will be in its own multipolygon relation. When "inner" ways are outside of "outer" ways, often rendering gets weird. Also, often the tags (natural=water, name, etc) will be moved to the relation and off the ways. If there is a reason to have those lakes joined together (say, if they're known collectively as the Five Lakes), it's possible to use a "<a href="https://wiki.openstreetmap.org/wiki/Super-Relation">superrelation</a>" which gathers the smaller relations.</p>
 <p>In Potlatch 2, relations are listed in the Advanced tab at the bottom. In iD, any relations are listed at the bottom of the Edit Feature window.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -322,7 +322,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>I have screwed up many multipolygons in my time, don't sweat it! ...although it's great if you can clean up any messes you make :) Basically, I'd suggest moving all of the Ambajejus Lake ways (the outer and all inner ways, aka islands) to a new relation and removing them from the other relation. Along the boundary between the lakes, the same way will be included in both relations.</p>
-<p>Regarding tags, I should've been stronger: on the wiki it says "Tags describing the multipolygon (e.g., landuse=forest) should go on the relation" http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Usage</p>
+<p>Regarding tags, I should've been stronger: on the wiki it says "Tags describing the multipolygon (e.g., landuse=forest) should go on the relation" https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Usage</p>
 </div>
 <div id="comment-25448-info" class="comment-info">
 <span class="comment-age">(15 Aug '13, 17:00)</span> <span class="comment-user userinfo">neuhausr</span>

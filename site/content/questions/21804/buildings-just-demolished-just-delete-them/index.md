@@ -73,7 +73,7 @@ osqa_accepted = false
 <li>I have left the pub and marked it as demolished-yes.</li>
 </ol>
 <p>The pub had a long history, so I'd like to see the tag stay as people will refer to it locally for a long time.</p>
-<p><a href="http://www.openstreetmap.org/edit?lat=51.65875&amp;lon=-0.085927&amp;zoom=18">http://www.openstreetmap.org/edit?lat=51.65875&amp;lon=-0.085927&amp;zoom=18</a></p>
+<p><a href="https://www.openstreetmap.org/edit?lat=51.65875&amp;lon=-0.085927&amp;zoom=18">https://www.openstreetmap.org/edit?lat=51.65875&amp;lon=-0.085927&amp;zoom=18</a></p>
 <p>This looks like the right thing to do.</p>
 </div>
 <div id="comment-21845-info" class="comment-info">
@@ -86,7 +86,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>As I already explained in a comment below Andy's answer you should use the disused tag. In your case, change "amenity=pub" to "disused:amenity=pub" because <a href="http://www.openstreetmap.org/browse/node/1288208200/history">it</a> is obviously not a pub anymore.</p>
+<p>As I already explained in a comment below Andy's answer you should use the disused tag. In your case, change "amenity=pub" to "disused:amenity=pub" because <a href="https://www.openstreetmap.org/browse/node/1288208200/history">it</a> is obviously not a pub anymore.</p>
 </div>
 <div id="comment-21847-info" class="comment-info">
 <span class="comment-age">(25 Apr '13, 13:01)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -175,7 +175,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use the landuse=construction like this one <em><a href="http://www.openstreetmap.org/?lat=52.350307&amp;lon=-0.176417&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.350307&amp;lon=-0.176417&amp;zoom=18&amp;layers=M</a></em> I used the old pub name then and intend to use a new name if the builders sign it. That way anyone doing a search for it should have a chance of success.</p>
+<p>I would use the landuse=construction like this one <em><a href="https://www.openstreetmap.org/?lat=52.350307&amp;lon=-0.176417&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.350307&amp;lon=-0.176417&amp;zoom=18&amp;layers=M</a></em> I used the old pub name then and intend to use a new name if the builders sign it. That way anyone doing a search for it should have a chance of success.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -198,7 +198,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If the building is still visible on Bing you can change the building tag to "disused:building=yes" so that other people don't add it again. See the <a href="http://wiki.openstreetmap.org/wiki/Key:disused">wiki page about the disused key</a> for further information.</p>
+<p>If the building is still visible on Bing you can change the building tag to "disused:building=yes" so that other people don't add it again. See the <a href="https://wiki.openstreetmap.org/wiki/Key:disused">wiki page about the disused key</a> for further information.</p>
 </div>
 <div id="comment-21822-info" class="comment-info">
 <span class="comment-age">(25 Apr '13, 09:06)</span> <span class="comment-user userinfo">scai ♦</span>

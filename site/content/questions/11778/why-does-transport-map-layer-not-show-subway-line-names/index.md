@@ -150,7 +150,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>As I wrote above these are example maps, I would not infer any specific quality metrics from the fact that they have been chosen for inclusion on the main map page other than the criteria specified here <a href="http://wiki.openstreetmap.org/wiki/Strategic_working_group/New_Tile_Layer_Guidelines">http://wiki.openstreetmap.org/wiki/Strategic_working_group/New_Tile_Layer_Guidelines</a></p>
+<p>As I wrote above these are example maps, I would not infer any specific quality metrics from the fact that they have been chosen for inclusion on the main map page other than the criteria specified here <a href="https://wiki.openstreetmap.org/wiki/Strategic_working_group/New_Tile_Layer_Guidelines">https://wiki.openstreetmap.org/wiki/Strategic_working_group/New_Tile_Layer_Guidelines</a></p>
 <p>Note that the help site is not intended for policy discussions, please adress either the responsible working group or use one of the mailing lists to discuss such matters</p>
 </div>
 <div id="comment-12314-info" class="comment-info">

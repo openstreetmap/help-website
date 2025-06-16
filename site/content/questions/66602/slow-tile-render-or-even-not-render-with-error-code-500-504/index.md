@@ -85,7 +85,7 @@ osqa_accepted = false
   })
 };</code></pre>
 <p>But sometimes tile loading is very slow or even not loading.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/map1_4WuMymD.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/map2.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/map3.png" alt="alt text" /></p>
+<p><img src="/upfiles/map1_4WuMymD.png" alt="alt text" /> <img src="/upfiles/map2.png" alt="alt text" /> <img src="/upfiles/map3.png" alt="alt text" /></p>
 </div>
 <div id="comment-66606-info" class="comment-info">
 <span class="comment-age">(01 Nov '18, 08:44)</span> <span class="comment-user userinfo">jedi</span>

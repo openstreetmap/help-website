@@ -63,7 +63,7 @@ osqa_accepted = true
 <div id="post-41566-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Not to answer your question, but for the avoidance of doubt, help.openstreetmap.org is linked to from <a href="http://www.openstreetmap.org/help">http://www.openstreetmap.org/help</a> (from the help button on openstreetmap.org), along with the "welcome" page and the wiki.</p>
+<p>Not to answer your question, but for the avoidance of doubt, help.openstreetmap.org is linked to from <a href="https://www.openstreetmap.org/help">https://www.openstreetmap.org/help</a> (from the help button on openstreetmap.org), along with the "welcome" page and the wiki.</p>
 </div>
 <div id="comment-41566-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 00:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -117,8 +117,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is no "the mysql database" - see <a href="http://wiki.openstreetmap.org/wiki/MySQL">this page</a> for info.</p>
-<p>If you want to know about the "main" OpenStreetMap PostgreSQL database (used by what is referred to as the "Rails Port") see <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">here</a> and <a href="https://github.com/openstreetmap/openstreetmap-website">here</a>, and follow the links from those pages. If you want to know about how to store data so that it can be rendered, then the actual database structure can depend on the data selected to be rendered. <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/openstreetmap-carto.style">This file</a> determines the columns used by OpenStreetMap's "standard" style.</p>
+<p>There is no "the mysql database" - see <a href="https://wiki.openstreetmap.org/wiki/MySQL">this page</a> for info.</p>
+<p>If you want to know about the "main" OpenStreetMap PostgreSQL database (used by what is referred to as the "Rails Port") see <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">here</a> and <a href="https://github.com/openstreetmap/openstreetmap-website">here</a>, and follow the links from those pages. If you want to know about how to store data so that it can be rendered, then the actual database structure can depend on the data selected to be rendered. <a href="https://github.com/gravitystorm/openstreetmap-carto/blob/master/openstreetmap-carto.style">This file</a> determines the columns used by OpenStreetMap's "standard" style.</p>
 <p>Of course, depending on what you want to do with OSM data, it's perfectly possible to think of ways to store it in MySQL, so a bit more information about what you're trying to do here would really help.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -160,7 +160,7 @@ One Answer:
 <div id="post-41579-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10629/john215">@John215</a> It wasn't me that deleted them :) I received the notification emails for them but they were gone when I read the question. I'm not aware of a way of seeing revisions of a deleted comment. Maybe have a look over on <a href="http://meta.osqa.net/">http://meta.osqa.net/</a> , but probably not worth asking there as it's pretty moribund these days.</p>
+<p><a href="https://help.openstreetmap.org/users/10629/john215">@John215</a> It wasn't me that deleted them :) I received the notification emails for them but they were gone when I read the question. I'm not aware of a way of seeing revisions of a deleted comment. Maybe have a look over on <a href="http://meta.osqa.net/">http://meta.osqa.net/</a> , but probably not worth asking there as it's pretty moribund these days.</p>
 </div>
 <div id="comment-41579-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 15:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -205,7 +205,7 @@ One Answer:
 <div id="post-41621-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: Just to put it straight, I make one comment to this: I first posted on stackoverflow a couple of questions about OSM, and I never got a real answer there, because most people over there simply don't know. - If you would mind to read the text consciously that you are commenting on, you would know by now, that I only yesterday found this help system here on OSM - and then I immediatly made an account here and asked here. And see! Here I got the right answer. Plain, fast, exactly to the point. (Ty again <a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>!) - (No Ty to you, Scai, sorry.) And OSM!=SO.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: Just to put it straight, I make one comment to this: I first posted on stackoverflow a couple of questions about OSM, and I never got a real answer there, because most people over there simply don't know. - If you would mind to read the text consciously that you are commenting on, you would know by now, that I only yesterday found this help system here on OSM - and then I immediatly made an account here and asked here. And see! Here I got the right answer. Plain, fast, exactly to the point. (Ty again <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>!) - (No Ty to you, Scai, sorry.) And OSM!=SO.</p>
 </div>
 <div id="comment-41621-info" class="comment-info">
 <span class="comment-age">(10 Mar '15, 20:41)</span> <span class="comment-user userinfo">John215</span>
@@ -216,7 +216,7 @@ One Answer:
 <div id="post-41622-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@Scai</a>: Now that I am at it, a really last comment. I also found similiar questions on stackoverflow, that were some years old, and got no answer, or even got downvoted. - Most people over there just do not know anything about OSM, at least when it comes to putting a 40+GByte osm-file into a database. Answers on that specific topic usually use words like: Should, may, might, could, and 'I haven't tried it myself'.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@Scai</a>: Now that I am at it, a really last comment. I also found similiar questions on stackoverflow, that were some years old, and got no answer, or even got downvoted. - Most people over there just do not know anything about OSM, at least when it comes to putting a 40+GByte osm-file into a database. Answers on that specific topic usually use words like: Should, may, might, could, and 'I haven't tried it myself'.</p>
 </div>
 <div id="comment-41622-info" class="comment-info">
 <span class="comment-age">(10 Mar '15, 20:47)</span> <span class="comment-user userinfo">John215</span>
@@ -228,7 +228,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10629/john215"></a><a href="http://help.openstreetmap.org/users/10629/john215">@John215</a>: Stack Overflow is about <em>programming</em>. Your question is not about programming, hence it is completely offtopic for Stack Overflow and people will start downvoting it. However it might be ontopic for <a href="http://gis.stackexchange.com">http://gis.stackexchange.com</a> where you will also find way more more people with OSM knowledge than at SO. Also you didn't really get my point from my previous comment. And this is the wrong place for this discussion.</p>
+<p><a href="https://help.openstreetmap.org/users/10629/john215"></a><a href="https://help.openstreetmap.org/users/10629/john215">@John215</a>: Stack Overflow is about <em>programming</em>. Your question is not about programming, hence it is completely offtopic for Stack Overflow and people will start downvoting it. However it might be ontopic for <a href="http://gis.stackexchange.com">http://gis.stackexchange.com</a> where you will also find way more more people with OSM knowledge than at SO. Also you didn't really get my point from my previous comment. And this is the wrong place for this discussion.</p>
 </div>
 <div id="comment-41629-info" class="comment-info">
 <span class="comment-age">(11 Mar '15, 07:49)</span> <span class="comment-user userinfo">scai ♦</span>

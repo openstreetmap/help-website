@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Area is declared as farmland but is not shown as is..."
-description = '''What can I do about it? landuse=farmland http://www.openstreetmap.org/browse/way/160761438'''
+description = '''What can I do about it? landuse=farmland https://www.openstreetmap.org/browse/way/160761438'''
 date = "2012-04-23T17:25:00Z"
 lastmod = "2012-04-23T19:49:00Z"
 weight = 12294
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>What can I do about it? landuse=farmland <a href="http://www.openstreetmap.org/browse/way/160761438">http://www.openstreetmap.org/browse/way/160761438</a></p>
+<p>What can I do about it? landuse=farmland <a href="https://www.openstreetmap.org/browse/way/160761438">https://www.openstreetmap.org/browse/way/160761438</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not" rel="tag" title="see questions tagged &#39;not&#39;">not</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-farmland" rel="tag" title="see questions tagged &#39;farmland&#39;">farmland</span> <span class="post-tag tag-link-displayed" rel="tag" title="see questions tagged &#39;displayed&#39;">displayed</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=51.341457&amp;lon=6.971528&amp;zoom=23">edit one of the end nodes</a> and zoom right in you'll see that it doesn't quite join - click on one of the end nodes, delete it, move the mouse over the other end node, and click. You'll notice when you do this that the cursor changes as you hover over the other node.</p>
+<p>If you <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=51.341457&amp;lon=6.971528&amp;zoom=23">edit one of the end nodes</a> and zoom right in you'll see that it doesn't quite join - click on one of the end nodes, delete it, move the mouse over the other end node, and click. You'll notice when you do this that the cursor changes as you hover over the other node.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Yes - if you look at the <a href="http://www.openstreetmap.org/browse/way/160761438">browse link</a> and the first node and the last node aren't the same it isn't joined. To see the problem, zoom in on the first or last node until you can see the two very-close-but-not-joined nodes.</p>
+<p>Yes - if you look at the <a href="https://www.openstreetmap.org/browse/way/160761438">browse link</a> and the first node and the last node aren't the same it isn't joined. To see the problem, zoom in on the first or last node until you can see the two very-close-but-not-joined nodes.</p>
 </div>
 <div id="comment-12305-info" class="comment-info">
 <span class="comment-age">(23 Apr '12, 19:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

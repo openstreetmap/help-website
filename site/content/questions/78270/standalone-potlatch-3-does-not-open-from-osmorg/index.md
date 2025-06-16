@@ -180,7 +180,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>It works for me. I downloaded it from a link here <a href="https://www.openstreetmap.org/user/Richard/diary/395259">https://www.openstreetmap.org/user/Richard/diary/395259</a> when you run it you get a world map.One option is to zoom all the way in.. which isn't so convenient. A better solution is zoom into the map as we did with Potlatch2 then reduce this window to a half screen. Start Potlatch3 app and reduce that window to the other half of the screen. Go back to the zommed window and click on the Remote edit box. The Potlatch3 window will then be in edit mode, change it to full screen and it is just like using Potlatch2. See JPEG</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Potlatch3_windows_start.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Potlatch3_windows_start.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

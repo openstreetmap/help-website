@@ -160,7 +160,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Contact the local OSM user group in the area you are interested in.</p>
-<p>We have a list of communities at <a href="http://wiki.openstreetmap.org/wiki/Category:Meetings_in_Germany">http://wiki.openstreetmap.org/wiki/Category:Meetings_in_Germany</a> .</p>
+<p>We have a list of communities at <a href="https://wiki.openstreetmap.org/wiki/Category:Meetings_in_Germany">https://wiki.openstreetmap.org/wiki/Category:Meetings_in_Germany</a> .</p>
 <p>Also you could try asking at the forum, <a href="http://forum.openstreetmap.org/viewforum.php?id=14">http://forum.openstreetmap.org/viewforum.php?id=14</a> .</p>
 </div>
 <div class="answer-controls post-controls">

@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have set up the rails port on ubuntu14.04, and then I build my local tile server under the instruction of "<a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">Manually building a tile server (14.04)</a>". And I have changed the OSM map to my local tile server. The nominatim is still use the <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a></p>
 <p>Now I confused that how does the nominatim work with the tile server and rails port. As I konw there are three database being used in the project: openstreetmap database used in the rails port, gis database used in the tile server and a nominatim database. If I make a search request on the <a href="http://localhost:3000">http://localhost:3000</a> website, first it will ask <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> and return several results, and if I click on one of the result, it returns "Sorry, relation #912940 could not be found."</p>
-<p><img src="http://help.openstreetmap.org/upfiles/search_msrsPtt.png" alt="alt text" /></p>
-<p>From the terminal, I find that it make a request to the openstreetmap database. <img src="http://help.openstreetmap.org/upfiles/wxid_kqsz0bmthrsb22_1471612339340_40.png" alt="alt text" /> I want to know how does the nominatim connect to the openstreetmap database. I also want to know how does the nominatim work with my local tile server. Hope someone can help me, thanks.</p>
+<p><img src="/upfiles/search_msrsPtt.png" alt="alt text" /></p>
+<p>From the terminal, I find that it make a request to the openstreetmap database. <img src="/upfiles/wxid_kqsz0bmthrsb22_1471612339340_40.png" alt="alt text" /> I want to know how does the nominatim connect to the openstreetmap database. I also want to know how does the nominatim work with my local tile server. Hope someone can help me, thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-rubyonrails" rel="tag" title="see questions tagged &#39;rubyonrails&#39;">rubyonrails</span> <span class="post-tag tag-link-tileserver" rel="tag" title="see questions tagged &#39;tileserver&#39;">tileserver</span>
@@ -109,8 +109,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The server(s) behind <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> have loaded the full planet data once and apply minutely updates since them. In theory it finds every (named) OSM feature. The database is completely separate from tiles or the rails port. It runs on the nominatim.openstreetmap.org servers and takes about 700GB-1TB in size.</p>
-<p>The rails port sends a HTTP/REST query to Nominatim <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Search">http://wiki.openstreetmap.org/wiki/Nominatim#Search</a> and receives a data structure (JSON? XML?).</p>
-<p>You can setup your own Nominatim instance and database of course, it's not part of the tile server instructions. You can then import the pull planet or an extract, e.g. a country. Nominatim can be installed on the same server on a separate server. <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
+<p>The rails port sends a HTTP/REST query to Nominatim <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Search">https://wiki.openstreetmap.org/wiki/Nominatim#Search</a> and receives a data structure (JSON? XML?).</p>
+<p>You can setup your own Nominatim instance and database of course, it's not part of the tile server instructions. You can then import the pull planet or an extract, e.g. a country. Nominatim can be installed on the same server on a separate server. <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

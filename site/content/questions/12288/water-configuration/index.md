@@ -73,8 +73,8 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Have you found these wiki pages?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Water">http://wiki.openstreetmap.org/wiki/Water</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:waterway">http://wiki.openstreetmap.org/wiki/Key:waterway</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Water">https://wiki.openstreetmap.org/wiki/Water</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:waterway">https://wiki.openstreetmap.org/wiki/Key:waterway</a></p>
 </div>
 <div id="comment-12292-info" class="comment-info">
 <span class="comment-age">(23 Apr '12, 17:13)</span> <span class="comment-user userinfo">gnurk</span>
@@ -128,10 +128,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page, which is the first place to look for commonly used tags, has a <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Waterway">waterway</a> section.</p>
+<p>The wiki <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page, which is the first place to look for commonly used tags, has a <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Waterway">waterway</a> section.</p>
 <p>This includes canal, river, stream, drain and ditch.</p>
 <p>Lakes, ponds and other closed bodies of water use natural=water (even if it is man made).</p>
-<p>Larger rivers can have their banks drawn to create a wider body of water using the <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbank</a> tag.</p>
+<p>Larger rivers can have their banks drawn to create a wider body of water using the <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbank</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -186,8 +186,8 @@ osqa_accepted = true
 <li>How do I map water features?</li>
 <li>How do I make the water features that I've mapped look nice on the map?</li>
 </ol>
-<p>With regard to (1), English simply doesn't have the huge range of words for canal features that exist in Dutch (not in common use, anyway). The <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Waterway">waterway</a> section of the <a href="http://wiki.openstreetmap.org/wiki/Map_Features">map features</a> page that <a href="http://help.openstreetmap.org/users/34/chrish">ChrisH</a> pointed to is an excellent place to start, but it might be worth <a href="http://wiki.openstreetmap.org/wiki/NL:Contact">asking around in the NL community</a> to see if there are any standards in use there for mapping the extra detail.</p>
-<p>With regard to (2), it's worth bearing in mind that the <a href="http://www.openstreetmap.org/">standard</a> <a href="http://www.openstreetmap.nl/">maps</a> are just examples of how the data can be represented. There's no explicit information that says "this label goes here" - the rendered (in the case of the "standard" map a <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm.xml">stylesheet</a> for the <a href="http://mapnik.org/">Mapnik</a> library) figures out where best to fit text on the fly. If you were designing a map to be printed out for publication, you'd probably take more care of it and manually arrange labels, but that's information you'd add at the "map creation" stage, not at "data entry".</p>
+<p>With regard to (1), English simply doesn't have the huge range of words for canal features that exist in Dutch (not in common use, anyway). The <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Waterway">waterway</a> section of the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">map features</a> page that <a href="https://help.openstreetmap.org/users/34/chrish">ChrisH</a> pointed to is an excellent place to start, but it might be worth <a href="https://wiki.openstreetmap.org/wiki/NL:Contact">asking around in the NL community</a> to see if there are any standards in use there for mapping the extra detail.</p>
+<p>With regard to (2), it's worth bearing in mind that the <a href="https://www.openstreetmap.org/">standard</a> <a href="http://www.openstreetmap.nl/">maps</a> are just examples of how the data can be represented. There's no explicit information that says "this label goes here" - the rendered (in the case of the "standard" map a <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm.xml">stylesheet</a> for the <a href="http://mapnik.org/">Mapnik</a> library) figures out where best to fit text on the fly. If you were designing a map to be printed out for publication, you'd probably take more care of it and manually arrange labels, but that's information you'd add at the "map creation" stage, not at "data entry".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

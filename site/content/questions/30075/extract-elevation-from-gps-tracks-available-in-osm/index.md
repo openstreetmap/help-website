@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I understand (from the links bellow) that OSM does not contain elevation data, and that elevation is not compatible with the data structure. Also that vertical precision (elevation) from GPSs is not very good (1.5 times horizontal precision, correct ? )</p>
 <p>Some years GPS devices have barometers included. Since about 2012 higher end android smartphones also feature that. Is it possible to distinguish, in the GPS track "GPS elevation" from "barometer/altimeter" elevation?</p>
 <p>regards Lucas</p>
-<p><a href="https://help.openstreetmap.org/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">https://help.openstreetmap.org/questions/999/how-to-extract-elevation-information-from-tracks-in-josm</a></p>
+<p><a href="/questions/999/how-to-extract-elevation-information-from-tracks-in-josm">https://help.openstreetmap.org/questions/999/how-to-extract-elevation-information-from-tracks-in-josm</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-brazil" rel="tag" title="see questions tagged &#39;brazil&#39;">brazil</span> <span class="post-tag tag-link-accuracy" rel="tag" title="see questions tagged &#39;accuracy&#39;">accuracy</span> <span class="post-tag tag-link-elevation" rel="tag" title="see questions tagged &#39;elevation&#39;">elevation</span> <span class="post-tag tag-link-brasil" rel="tag" title="see questions tagged &#39;brasil&#39;">brasil</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span>
@@ -127,11 +127,11 @@ osqa_accepted = false
 <p>I see here 2 questions mixed and will try to answer them one by one</p>
 <ol>
 <li><p><strong>GPS traces of OSM</strong><br />
-They are available but contain only point cloud for privacy reasons: <a href="http://wiki.openstreetmap.org/wiki/Planet.gpx">http://wiki.openstreetmap.org/wiki/Planet.gpx</a><br />
-Indeed you can crawl via the <a href="http://wiki.openstreetmap.org/wiki/API">OSM API</a> and scan and find if users have published raw traces in GPX format that might contain also ALT data. For example, I have some public traces: <a href="https://www.openstreetmap.org/user/!i!/traces/1112661">https://www.openstreetmap.org/user/!i!/traces/1112661</a></p></li>
+They are available but contain only point cloud for privacy reasons: <a href="https://wiki.openstreetmap.org/wiki/Planet.gpx">https://wiki.openstreetmap.org/wiki/Planet.gpx</a><br />
+Indeed you can crawl via the <a href="https://wiki.openstreetmap.org/wiki/API">OSM API</a> and scan and find if users have published raw traces in GPX format that might contain also ALT data. For example, I have some public traces: <a href="https://www.openstreetmap.org/user/!i!/traces/1112661">https://www.openstreetmap.org/user/!i!/traces/1112661</a></p></li>
 <li><p><strong>DGM trough GPS 3D data</strong><br />
 This is pretty hard for crowdsourcing as you say there are various different aspects that influence the quality. AFAIK neither GPX nor NMEA contain information about the Z-quality, but call me wrong.<br />
-But there are some approaches to work on that topic as <a href="http://opendem.info">http://opendem.info</a> which seems now to put a focus esp. in barometric recordings (subsea height). Also <a href="http://wiki.openstreetmap.org/wiki/OSM2World">OSM2World</a> has some approaches to make use of OSM tagged height informations to improve the DEM shape locally, but AFAIK this is still WIP and not pushed in the mainline client.</p></li>
+But there are some approaches to work on that topic as <a href="http://opendem.info">http://opendem.info</a> which seems now to put a focus esp. in barometric recordings (subsea height). Also <a href="https://wiki.openstreetmap.org/wiki/OSM2World">OSM2World</a> has some approaches to make use of OSM tagged height informations to improve the DEM shape locally, but AFAIK this is still WIP and not pushed in the mainline client.</p></li>
 </ol>
 </div>
 <div class="answer-controls post-controls">
@@ -165,7 +165,7 @@ But there are some approaches to work on that topic as <a href="http://opendem.i
 &#10;</div>
 <div class="comment-text">
 <p>to 1.) You can use e.g. scrapy to realize such an crawler easily. Please respect the terms of service and setup your service to do a min load. You might also consider to contact the <a href="https://wiki.osmfoundation.org/wiki/Data_Working_Group">OSMF data working group</a> maybe they can help you to get the GPX.</p>
-<p>to 2.) I can just suggest recommend to talk to the <a href="http://wiki.openstreetmap.org/wiki/3D_Development">3D folks</a> as this is in general interest :)</p>
+<p>to 2.) I can just suggest recommend to talk to the <a href="https://wiki.openstreetmap.org/wiki/3D_Development">3D folks</a> as this is in general interest :)</p>
 </div>
 <div id="comment-30106-info" class="comment-info">
 <span class="comment-age">(22 Jan '14, 16:59)</span> <span class="comment-user userinfo">iii</span>
@@ -229,7 +229,7 @@ But there are some approaches to work on that topic as <a href="http://opendem.i
 1
 </div>
 <div class="comment-text">
-<p>If you want an example of a GPS trace in OSM with elavations from a barometric altimeter, there's one <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1644247">here</a>, from a Garmin eTrex Vista HCx. Nothing in there shouts out to me "these elevations are via a barometric altimeter". If you look at the numbers you'll see another problem - despite being calibrated to think that it was at 8m a couple of times during the day (the area of the trace is extremely flat) the recorded elevation drifted down consistently during the day.</p>
+<p>If you want an example of a GPS trace in OSM with elavations from a barometric altimeter, there's one <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1644247">here</a>, from a Garmin eTrex Vista HCx. Nothing in there shouts out to me "these elevations are via a barometric altimeter". If you look at the numbers you'll see another problem - despite being calibrated to think that it was at 8m a couple of times during the day (the area of the trace is extremely flat) the recorded elevation drifted down consistently during the day.</p>
 </div>
 <div id="comment-30085-info" class="comment-info">
 <span class="comment-age">(22 Jan '14, 14:15)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -296,7 +296,7 @@ But there are some approaches to work on that topic as <a href="http://opendem.i
 <div class="answer-body">
 <p>Update and further questions:</p>
 <p>1)Following the suggestions above, I built the web scrapper (programmed it in Stata a statistical package whose programming language I´m familiar with). It works like this:</p>
-<p>a)run a loop through every "menu pape" (like this page: <a href="http://www.openstreetmap.org/traces/page/1)">http://www.openstreetmap.org/traces/page/1)</a> parsing the HTML to extract information (url, contributor name and date) of each fo the 20 tracks per page. There are about 47000 menu pages. Joining the info on all "menu pages" I have a list of the URLs for each track (like this: <a href="http://www.openstreetmap.org/user/kwiky/traces/1651084)">http://www.openstreetmap.org/user/kwiky/traces/1651084)</a> and also the URL to download the file.</p>
+<p>a)run a loop through every "menu pape" (like this page: <a href="https://www.openstreetmap.org/traces/page/1)">https://www.openstreetmap.org/traces/page/1)</a> parsing the HTML to extract information (url, contributor name and date) of each fo the 20 tracks per page. There are about 47000 menu pages. Joining the info on all "menu pages" I have a list of the URLs for each track (like this: <a href="https://www.openstreetmap.org/user/kwiky/traces/1651084)">https://www.openstreetmap.org/user/kwiky/traces/1651084)</a> and also the URL to download the file.</p>
 <p>b) For each track in the list created above, visit the specific ulr and extract the initial coordinate.</p>
 <p>c) If that coordinate falls within Brazil, download the data.</p>
 <p>I think I got it to work, but OSM server seems to be cutting me off "a)", after about 500 or so "menu pages" scrapped. Does any one know what is happening? I tried slowing the process down, making the computer stop for 2 seconds after scrapping every page but that did not work either.</p>
@@ -331,7 +331,7 @@ But there are some approaches to work on that topic as <a href="http://opendem.i
 <div id="post-30416-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Re "getting cut off" I'd be tempted to ask on <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC in #osm-dev</a>. Re the usefulness or otherwise of <a href="http://planet.osm.org/gps/">http://planet.osm.org/gps/</a>, <a href="http://wiki.openstreetmap.org/wiki/Planet.gpx">this page</a> suggests it's just lat and long, so probably not helpful to you.</p>
+<p>Re "getting cut off" I'd be tempted to ask on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC in #osm-dev</a>. Re the usefulness or otherwise of <a href="http://planet.osm.org/gps/">http://planet.osm.org/gps/</a>, <a href="https://wiki.openstreetmap.org/wiki/Planet.gpx">this page</a> suggests it's just lat and long, so probably not helpful to you.</p>
 </div>
 <div id="comment-30416-info" class="comment-info">
 <span class="comment-age">(03 Feb '14, 19:22)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

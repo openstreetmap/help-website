@@ -207,7 +207,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See answers to <a href="https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data">https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data</a></p>
+<p>See answers to <a href="/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data">https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

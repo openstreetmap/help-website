@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-64203-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This Q and A may help <a href="https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id">https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id</a></p>
+<p>This Q and A may help <a href="/questions/35439/can-i-convert-a-gps-track-to-road-in-id">https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id</a></p>
 </div>
 <div id="comment-64203-info" class="comment-info">
 <span class="comment-age">(13 Jun '18, 20:05)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see <a href="https://help.openstreetmap.org/questions/37514/gps-traces-layer-not-updating">https://help.openstreetmap.org/questions/37514/gps-traces-layer-not-updating</a> respectively <a href="https://github.com/openstreetmap/iD/issues/5057">https://github.com/openstreetmap/iD/issues/5057</a> . I guess the biggest issue is that the layer is not updating often.</p>
+<p>see <a href="/questions/37514/gps-traces-layer-not-updating">https://help.openstreetmap.org/questions/37514/gps-traces-layer-not-updating</a> respectively <a href="https://github.com/openstreetmap/iD/issues/5057">https://github.com/openstreetmap/iD/issues/5057</a> . I guess the biggest issue is that the layer is not updating often.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

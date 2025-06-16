@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The general consensus on <a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr:* tags</a> now seems to be to put the main number in addr:housenumber and the minor number in addr:unit. In the example above for 25 Maple St Unit 3, we would have the following:</p>
+<p>The general consensus on <a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr:* tags</a> now seems to be to put the main number in addr:housenumber and the minor number in addr:unit. In the example above for 25 Maple St Unit 3, we would have the following:</p>
 <pre><code>addr:housenumber=25
 addr:street=Maple Street
 addr:unit=3</code></pre>

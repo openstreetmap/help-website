@@ -107,7 +107,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Before mass adding information of such kind please check whether you are really the copyright holder of the information or whether you have downloaded or otherwise acquired the information from somewhere / someone. In the latter case you should not upload the information without proper permission by the copyright holder to publish the information under a free license (in our case CC-BY-SA 2.0 currently and ODbL in the near future).</p>
-<p>Therefore, as a first step please read the <a href="http://www.openstreetmap.org/copyright?copyright_locale=en">Copyright notice</a> and <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1">The Beginner's Guide</a> .</p>
+<p>Therefore, as a first step please read the <a href="https://www.openstreetmap.org/copyright?copyright_locale=en">Copyright notice</a> and <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1">The Beginner's Guide</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,7 +163,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Data imports - where someone has data for us but there's nobody to maintain the data once in OSM - are not universally welcomed in OSM. You must meet certain requirements (e.g. discuss your planned import on the appropriate mailing list) before you can proceed. Have a look at the <a href="http://wiki.openstreetmap.org/wiki/Imports">Imports wiki page</a> which links to these requirements and also lists available software.</p>
+<p>Data imports - where someone has data for us but there's nobody to maintain the data once in OSM - are not universally welcomed in OSM. You must meet certain requirements (e.g. discuss your planned import on the appropriate mailing list) before you can proceed. Have a look at the <a href="https://wiki.openstreetmap.org/wiki/Imports">Imports wiki page</a> which links to these requirements and also lists available software.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -123,7 +123,7 @@ osqa_accepted = false
 <div id="post-53174-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12298/ziggie71">@Ziggie71</a>: although I do not know the answer, maybe a bit more information could help: until when did you see the distances? Did you see them on the same map? Did you change the map since then? Which distance did you show - one from self-drawn routes or from OSM routes?</p>
+<p><a href="https://help.openstreetmap.org/users/12298/ziggie71">@Ziggie71</a>: although I do not know the answer, maybe a bit more information could help: until when did you see the distances? Did you see them on the same map? Did you change the map since then? Which distance did you show - one from self-drawn routes or from OSM routes?</p>
 </div>
 <div id="comment-53174-info" class="comment-info">
 <span class="comment-age">(29 Nov '16, 23:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

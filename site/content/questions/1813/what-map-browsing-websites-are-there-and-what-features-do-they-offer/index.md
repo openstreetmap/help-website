@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What map-browsing websites are there, and what features do they offer?"
-description = '''Besides the most known map renderings which you see on http://www.openstreetmap.org/ there many more, but I could not find a good overview of map websites.  As far as I know, those sites are different in the map layers they have, in the basic user inteface, and the features they offer. Please post a...'''
+description = '''Besides the most known map renderings which you see on https://www.openstreetmap.org/ there many more, but I could not find a good overview of map websites.  As far as I know, those sites are different in the map layers they have, in the basic user inteface, and the features they offer. Please post a...'''
 date = "2010-12-15T10:40:00Z"
 lastmod = "2010-12-16T08:51:00Z"
 weight = 1813
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Besides the most known map renderings which you see on <a href="http://www.openstreetmap.org/" title="http://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org/"></a><a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> there many more, but I could not find a good overview of map websites.</p>
+<p>Besides the most known map renderings which you see on <a href="https://www.openstreetmap.org/" title="https://www.openstreetmap.org/"></a><a href="https://www.openstreetmap.org/"></a><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> there many more, but I could not find a good overview of map websites.</p>
 <p>As far as I know, those sites are different in the map layers they have, in the basic user inteface, and the features they offer.</p>
 <p>Please post any OSM-Browsing websites you know along with some details. I'll go ahead an post the ones I know, one site per answer.</p>
 <p>Edit: <em>Maybe this should not be a question but a wiki post - but now it's to late, the question is posted :)</em></p>
@@ -136,8 +136,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List of OSM based Services</a> on the wiki.</p>
-<p>There are several other lists on the wiki which might be useful, eg <a href="http://wiki.openstreetmap.org/wiki/Software">Software</a> or <a href="http://wiki.openstreetmap.org/wiki/Applications">Applications</a>. These lists are probably incomplete, so you can add other services that you know of.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">List of OSM based Services</a> on the wiki.</p>
+<p>There are several other lists on the wiki which might be useful, eg <a href="https://wiki.openstreetmap.org/wiki/Software">Software</a> or <a href="https://wiki.openstreetmap.org/wiki/Applications">Applications</a>. These lists are probably incomplete, so you can add other services that you know of.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 <div id="post-1831-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There is also a wiki page <a href="http://wiki.openstreetmap.org/wiki/OSM_Online_Browsing">OSM Online Browsing</a>, which partially overlaps with the List of OSM based Services.</p>
+<p>There is also a wiki page <a href="https://wiki.openstreetmap.org/wiki/OSM_Online_Browsing">OSM Online Browsing</a>, which partially overlaps with the List of OSM based Services.</p>
 </div>
 <div id="comment-1831-info" class="comment-info">
 <span class="comment-age">(16 Dec '10, 08:51)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -198,7 +198,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<h2 id="openstreetmap.org"><a href="http://www.openstreetmap.org/--"></a><a href="http://openstreetmap.org"></a><a href="http://openstreetmap.org">openstreetmap.org</a></h2>
+<h2 id="openstreetmap.org"><a href="https://www.openstreetmap.org/--"></a><a href="http://openstreetmap.org"></a><a href="http://openstreetmap.org">openstreetmap.org</a></h2>
 <p><strong>Layers:</strong></p>
 <ul>
 <li><strong>Mapnik:</strong> The basic map that you all knwo</li>

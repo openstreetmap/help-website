@@ -71,7 +71,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>What does the node represent? If it has a name then there must be some <a href="http://wiki.openstreetmap.org/wiki/Map_Features">feature</a>. Just a name isn't enough to appear on the map.</p>
+<p>What does the node represent? If it has a name then there must be some <a href="https://wiki.openstreetmap.org/wiki/Map_Features">feature</a>. Just a name isn't enough to appear on the map.</p>
 </div>
 <div id="comment-38609-info" class="comment-info">
 <span class="comment-age">(16 Nov '14, 21:03)</span> <span class="comment-user userinfo">scai ♦</span>

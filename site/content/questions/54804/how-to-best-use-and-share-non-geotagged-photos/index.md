@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I have a collection of 71 photos that captures the store fronts of just under 1km of a dense retail area. Non of them are geotagged, but as I know where I started, what direction I was going, and each overlaps somewhat with neighbouring images, it is useful for me for mapping purposes.</p>
 <p>I think they could be useful for others too, but it's not clear to me how I'd be able to share the images while providing the context that makes the images useful. I think Mapillary requires geotagged photos.</p>
-<p>(These images are taken of the Main Bazzar of <a href="http://www.openstreetmap.org/#map=13/34.1651/77.5724">Leh</a>, Ladakh, India.)</p>
+<p>(These images are taken of the Main Bazzar of <a href="https://www.openstreetmap.org/#map=13/34.1651/77.5724">Leh</a>, Ladakh, India.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-photos" rel="tag" title="see questions tagged &#39;photos&#39;">photos</span> <span class="post-tag tag-link-photomapping" rel="tag" title="see questions tagged &#39;photomapping&#39;">photomapping</span> <span class="post-tag tag-link-streetview" rel="tag" title="see questions tagged &#39;streetview&#39;">streetview</span> <span class="post-tag tag-link-mapillary" rel="tag" title="see questions tagged &#39;mapillary&#39;">mapillary</span>

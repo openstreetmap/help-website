@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to edit wiki content? Error: &quot;To protect the wiki against automated spam …&quot;"
-description = '''Hello, i&#x27;m trying to edit the following page: http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services Since i add a link in the modification i get this message: Your edit includes new external links. To protect the wiki against automated spam, we kindly ask you to type the two words you see in...'''
+description = '''Hello, i&#x27;m trying to edit the following page: https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services Since i add a link in the modification i get this message: Your edit includes new external links. To protect the wiki against automated spam, we kindly ask you to type the two words you see in...'''
 date = "2016-02-19T09:30:00Z"
 lastmod = "2016-07-16T12:39:00Z"
 weight = 48217
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, i'm trying to edit the following page: <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services</a></p>
+<p>Hello, i'm trying to edit the following page: <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services</a></p>
 <p>Since i add a link in the modification i get this message:</p>
 <p><em>Your edit includes new external links. To protect the wiki against automated spam, we kindly ask you to type the two words you see in the box below:</em></p>
 <p>But there is no code below :(</p>
@@ -96,7 +96,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Reproduced and reported: <a href="http://wiki.openstreetmap.org/wiki/Talk:Wiki#Bug:_.22type_the_two_words_you_see_in_the_box_below.22_but_no_box">http://wiki.openstreetmap.org/wiki/Talk:Wiki#Bug:_.22type_the_two_words_you_see_in_the_box_below.22_but_no_box</a></p>
+<p>Reproduced and reported: <a href="https://wiki.openstreetmap.org/wiki/Talk:Wiki#Bug:_.22type_the_two_words_you_see_in_the_box_below.22_but_no_box">https://wiki.openstreetmap.org/wiki/Talk:Wiki#Bug:_.22type_the_two_words_you_see_in_the_box_below.22_but_no_box</a></p>
 </div>
 <div id="comment-49063-info" class="comment-info">
 <span class="comment-age">(06 Apr '16, 08:25)</span> <span class="comment-user userinfo">Nicolas Raoul</span>
@@ -214,7 +214,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/w/index.php?title=Special:Preferences">http://wiki.openstreetmap.org/w/index.php?title=Special:Preferences</a> Found a solution. I restored all the settings, then the box came up. This is still a bug though. so silly.</p>
+<p><a href="https://wiki.openstreetmap.org/w/index.php?title=Special:Preferences">https://wiki.openstreetmap.org/w/index.php?title=Special:Preferences</a> Found a solution. I restored all the settings, then the box came up. This is still a bug though. so silly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

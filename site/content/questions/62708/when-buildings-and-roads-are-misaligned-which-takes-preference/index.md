@@ -137,7 +137,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To check the alignment, or accuracy, of a area it is best done when there are lots of public traces. I would encourage everyone to upload their traces as public. One GPX may be a bit off but with several available a good average can choosen. Averaged way points can also be used. ( some GPSes can record a fixed position for several minutes improving the accuracy over time.) This Jpeg shows a roundabout nearby with all traces displayed (in CYAN). The Aerial can then be dragged into alignment, then the roads, tracks and other data. It is of course a problem if lots of mapping has been added using misaligned aerial backgrounds. So please upload those GPXes.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/traces_by_the_roundabout.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/traces_by_the_roundabout.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -301,7 +301,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Answers to similar Question may help. <a href="https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone">https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone</a></p>
+<p>Answers to similar Question may help. <a href="/questions/3675/gps-trace-on-iphone">https://help.openstreetmap.org/questions/3675/gps-trace-on-iphone</a></p>
 </div>
 <div id="comment-62734-info" class="comment-info">
 <span class="comment-age">(19 Mar '18, 22:08)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>When visiting openstreetmap.org with Firefox on my Android phone, it looks different than on the desktop. So I assume there is a special mobile variant. It looks like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot_2012-09-11-00-06-10-996811803.png" alt="Screenshot of osm.org on Firefox Mobile" /></p>
+<p><img src="/upfiles/Screenshot_2012-09-11-00-06-10-996811803.png" alt="Screenshot of osm.org on Firefox Mobile" /></p>
 <p>The left bar with the search box is not shown. Also I can't scroll the page as this only scrolls the map area. How can I search for an address on this page?</p>
-<p><strong>Update:</strong> No search bar in landscape mode either, even though it is 1280 pixel wide. Also the Firefox option to request the desktop variant doesn't change anything. <img src="http://help.openstreetmap.org/upfiles/Screenshot_2012-09-11-09-36-17-405259083.png" alt="Screenshot in landscape mode" /></p>
+<p><strong>Update:</strong> No search bar in landscape mode either, even though it is 1280 pixel wide. Also the Firefox option to request the desktop variant doesn't change anything. <img src="/upfiles/Screenshot_2012-09-11-09-36-17-405259083.png" alt="Screenshot in landscape mode" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mobile" rel="tag" title="see questions tagged &#39;mobile&#39;">mobile</span> <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-firefox" rel="tag" title="see questions tagged &#39;firefox&#39;">firefox</span> <span class="post-tag tag-link-android" rel="tag" title="see questions tagged &#39;android&#39;">android</span>

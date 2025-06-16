@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is only one editing API for OSM and that is documented <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">on the Wiki.</a> Of course for the user interface you could either write your own, or build on top of existing OSM editors like iD (Javascript), Potlatch (Flash), or JOSM (Java).</p>
+<p>There is only one editing API for OSM and that is documented <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">on the Wiki.</a> Of course for the user interface you could either write your own, or build on top of existing OSM editors like iD (Javascript), Potlatch (Flash), or JOSM (Java).</p>
 <p>Anyone who wants to make edits in OSM needs to register their own account.</p>
 <p>Please note that OSM is mainly a place for geodata. We do occasionally collect some additional information about businesses like opening times or what type of food they offer or what goods they sell, but this is really just ancillary information and anything that even remotely looks like advertising will be removed from OSM.</p>
 </div>

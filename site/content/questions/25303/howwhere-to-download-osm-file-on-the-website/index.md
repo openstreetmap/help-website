@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A recent UI change has removed the old "export" tab. Currently, the link is now in the left-hand side bar under the "Data" heading. Or go directly to <a href="http://www.openstreetmap.org/export">"Export Data".</a></p>
+<p>A recent UI change has removed the old "export" tab. Currently, the link is now in the left-hand side bar under the "Data" heading. Or go directly to <a href="https://www.openstreetmap.org/export">"Export Data".</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

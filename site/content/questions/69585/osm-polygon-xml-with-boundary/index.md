@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am looking for a snippet of the xml for the OSM Polygon layer. I am looking to add in the attributes listed here <a href="https://wiki.openstreetmap.org/wiki/Key:boundary">OSM Wiki</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2019-06-11_11-23-39.png" alt="alt text" /> I would like to see how to place these attributes into my code for building the .xml style file. Thank you for you help. Zac</p>
+<p><img src="/upfiles/Screenshot_from_2019-06-11_11-23-39.png" alt="alt text" /> I would like to see how to place these attributes into my code for building the .xml style file. Thank you for you help. Zac</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-xml" rel="tag" title="see questions tagged &#39;xml&#39;">xml</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span>

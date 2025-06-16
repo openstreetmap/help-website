@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Try the options on this page.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">http://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -267,7 +267,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi read these pages and give it a try, <a href="https://help.openstreetmap.org/questions/1966/how-to-select-language-for-main-map-page">https://help.openstreetmap.org/questions/1966/how-to-select-language-for-main-map-page</a></p>
+<p>Hi read these pages and give it a try, <a href="/questions/1966/how-to-select-language-for-main-map-page">https://help.openstreetmap.org/questions/1966/how-to-select-language-for-main-map-page</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

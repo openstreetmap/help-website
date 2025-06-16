@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>One famous street in Hamburg with roles for oneway changing over day is the <a href="http://de.wikipedia.org/wiki/Sierichstra%C3%9Fe_(Hamburg)">Sierichstraße</a> in Hamburg ...</p>
-<p>see one of its <a href="http://www.openstreetmap.org/way/38910458">elements</a> how it is tagged there.</p>
+<p>see one of its <a href="https://www.openstreetmap.org/way/38910458">elements</a> how it is tagged there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

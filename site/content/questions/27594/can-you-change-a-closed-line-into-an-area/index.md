@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-27595-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I asked a similar question in <a href="https://help.openstreetmap.org/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">https://help.openstreetmap.org/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id</a></p>
+<p>I asked a similar question in <a href="/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id">https://help.openstreetmap.org/questions/27591/how-to-combine-several-lines-to-an-area-with-editor-id</a></p>
 </div>
 <div id="comment-27595-info" class="comment-info">
 <span class="comment-age">(28 Oct '13, 20:17)</span> <span class="comment-user userinfo">hfst</span>
@@ -255,7 +255,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10128/mapgenius323">@mapgenius323</a>, it depends on what you are tagging. Tags are defined by convention to be areas, you need to check the wiki to see if the tag is an area, line, or point.</p>
+<p><a href="https://help.openstreetmap.org/users/10128/mapgenius323">@mapgenius323</a>, it depends on what you are tagging. Tags are defined by convention to be areas, you need to check the wiki to see if the tag is an area, line, or point.</p>
 </div>
 <div id="comment-40735-info" class="comment-info">
 <span class="comment-age">(01 Feb '15, 07:07)</span> <span class="comment-user userinfo">he_the_great</span>

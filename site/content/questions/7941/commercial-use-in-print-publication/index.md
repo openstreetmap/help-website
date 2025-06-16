@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, as long as you also include the name of the licence the maps are offered under ("CC-BY-SA").</p>
-<p>You can read a simple guide at <a href="http://www.openstreetmap.org/copyright">www.openstreetmap.org/copyright</a>.</p>
+<p>You can read a simple guide at <a href="https://www.openstreetmap.org/copyright">www.openstreetmap.org/copyright</a>.</p>
 <p>(And thanks for using OpenStreetMap!)</p>
 </div>
 <div class="answer-controls post-controls">

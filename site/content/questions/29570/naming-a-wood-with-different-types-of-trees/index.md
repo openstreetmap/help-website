@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It is not uncommon for a named area of woodland to consist of parcels or compartments of different tree types. When these consist of solid blocks of coniferous trees on the one hand, and of broad-leaved deciduous trees on the other, it does not seem to be straightforward to map the complete wood without duplicating the name. The example I have in mind is <a href="http://www.openstreetmap.org/#map=16/53.1127/-4.1162">Coed Victoria, Llanberis</a>, which consists of oak woodland on the south and spruce plantations to the north.</p>
+<p>It is not uncommon for a named area of woodland to consist of parcels or compartments of different tree types. When these consist of solid blocks of coniferous trees on the one hand, and of broad-leaved deciduous trees on the other, it does not seem to be straightforward to map the complete wood without duplicating the name. The example I have in mind is <a href="https://www.openstreetmap.org/#map=16/53.1127/-4.1162">Coed Victoria, Llanberis</a>, which consists of oak woodland on the south and spruce plantations to the north.</p>
 <p>Has anyone got better ideas of how to map such places than my current attempt?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For starters, I wouldn't distinguish them by using landuse=forest for one and natural=wood for the other, unless you really have just the west parcel used for forestry / harvesting (or whatever your position on the <a href="http://wiki.openstreetmap.org/wiki/Tag:natural=wood#Notes">wood/forest debate</a> may be).</p>
+<p>For starters, I wouldn't distinguish them by using landuse=forest for one and natural=wood for the other, unless you really have just the west parcel used for forestry / harvesting (or whatever your position on the <a href="https://wiki.openstreetmap.org/wiki/Tag:natural=wood#Notes">wood/forest debate</a> may be).</p>
 <p>To me, the cleanest way to represent this is a multipolygon relation containing two outer ways. Put the common tags (name=Coed Victoria, source:name=*, natural=wood) on the multipolygon, and the differing tags (wood=*, deciduous=*, coniferous=*) on the individual ways.</p>
 </div>
 <div class="answer-controls post-controls">

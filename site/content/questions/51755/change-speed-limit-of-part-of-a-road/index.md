@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I've been using <a href="https://en.wikipedia.org/wiki/OsmAnd">osmAnd~</a> for navigation in Sweden and found that a road with a speed limit of 90km/h has a section of several kilometers that allow 100km/h.</p>
 <p>What steps do I have to do in the default web-based OSM editor to change the speed limit of a part of the road?</p>
-<p>Neither <a href="http://wiki.openstreetmap.org/wiki/Speed_limits">wiki:Speed limits</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">wiki:maxspeed</a> nor <a href="https://help.openstreetmap.org/questions/1330/speed-limits-map-correction">Speed Limits map correction</a> give any help on this.</p>
+<p>Neither <a href="https://wiki.openstreetmap.org/wiki/Speed_limits">wiki:Speed limits</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">wiki:maxspeed</a> nor <a href="/questions/1330/speed-limits-map-correction">Speed Limits map correction</a> give any help on this.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-speedlimit" rel="tag" title="see questions tagged &#39;speedlimit&#39;">speedlimit</span>

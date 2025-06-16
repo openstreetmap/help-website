@@ -100,7 +100,7 @@ osqa_accepted = true
 <div id="post-47100-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11756/arik">@Arik</a> Would it be possible to describe the sort of queries that you might want to do? Not in query language - just at the level of "I want to find houses near a road called X" or similar.</p>
+<p><a href="https://help.openstreetmap.org/users/11756/arik">@Arik</a> Would it be possible to describe the sort of queries that you might want to do? Not in query language - just at the level of "I want to find houses near a road called X" or similar.</p>
 </div>
 <div id="comment-47100-info" class="comment-info">
 <span class="comment-age">(11 Dec '15, 15:14)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -50,7 +50,7 @@ osqa_accepted = false
   &lt;area-query ref=&quot;2501518744&quot;/&gt;
 &lt;/query&gt;</code></pre>
 <p><a href="http://overpass-turbo.eu/?Q=%3Cosm-script%20output%3D%22json%22%3E%0A%20%20%3Cquery%20type%3D%22node%22%3E%0A%20%20%20%20%3Carea-query%20ref%3D%222501518744%22%2F%3E%0A%20%20%3C%2Fquery%3E%0A%20%20%3Cprint%20mode%3D%22body%22%2F%3E%0A%3C%2Fosm-script%3E&amp;C=48.56936;13.44751;18&amp;R"><em>(Overpass Turbo)</em></a></p>
-<p>This example query for way <a href="http://www.openstreetmap.org/browse/way/101518744">101518744</a> should return <a href="http://www.openstreetmap.org/browse/node/1172225070">1172225070</a> as well as other nodes, but the result is empty. Is there something I'm missing?</p>
+<p>This example query for way <a href="https://www.openstreetmap.org/browse/way/101518744">101518744</a> should return <a href="https://www.openstreetmap.org/browse/node/1172225070">1172225070</a> as well as other nodes, but the result is empty. Is there something I'm missing?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span> <span class="post-tag tag-link-closed_way" rel="tag" title="see questions tagged &#39;closed_way&#39;">closed_way</span> <span class="post-tag tag-link-query" rel="tag" title="see questions tagged &#39;query&#39;">query</span>

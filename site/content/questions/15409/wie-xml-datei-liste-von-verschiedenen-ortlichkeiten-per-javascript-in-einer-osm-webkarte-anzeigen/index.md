@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Wie xml-Datei (Liste von verschiedenen Örtlichkeiten) per JavaScript in einer OSM-Webkarte anzeigen?"
-description = '''Moin, wie muss man vorgehen,um eine xml-Datei(Liste von verschiedenen Örtlichkeiten) in einer Openstreetmap-Karte angezeigt zu bekommen? Beispiel für eine Gestaltung einer Grundkarte in einer Html mittels CSS und Javascript ist hier: http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden ...'''
+description = '''Moin, wie muss man vorgehen,um eine xml-Datei(Liste von verschiedenen Örtlichkeiten) in einer Openstreetmap-Karte angezeigt zu bekommen? Beispiel für eine Gestaltung einer Grundkarte in einer Html mittels CSS und Javascript ist hier: https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden ...'''
 date = "2012-08-22T21:20:00Z"
 lastmod = "2012-08-25T08:56:00Z"
 weight = 15409
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Moin,</p>
 <p>wie muss man vorgehen,um eine xml-Datei(Liste von verschiedenen Örtlichkeiten) in einer Openstreetmap-Karte angezeigt zu bekommen?</p>
-<p>Beispiel für eine Gestaltung einer Grundkarte in einer Html mittels CSS und Javascript ist hier: <a href="http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden">http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden</a></p>
+<p>Beispiel für eine Gestaltung einer Grundkarte in einer Html mittels CSS und Javascript ist hier: <a href="https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden">https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden</a></p>
 <p>Aber wie muss ich dann weiter gehen?</p>
 <p>Gruß</p>
 <p>Thal</p>
@@ -159,7 +159,7 @@ osqa_accepted = false
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;ie_map.css&quot;&gt;&lt;/link&gt;
 &lt;![endif]--&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.openlayers.org/api/OpenLayers.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.openstreetmap.org/openlayers/OpenStreetMap.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.openstreetmap.org/openlayers/OpenStreetMap.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;tom.js&quot;&gt;&lt;/script&gt;
 &#10;&lt;script type=&quot;text/javascript&quot;&gt;
 //&lt;![CDATA[
@@ -204,7 +204,7 @@ var layer_markers;
 &#10;  &lt;div id=&quot;header&quot;&gt;
    &lt;div id=&quot;content&quot;&gt;Karte (Testversion)&lt;/div&gt;
    &lt;div id=&quot;osm&quot;&gt;© &lt;a href=&quot;http://www.openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt;
-     und &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;Mitwirkende&lt;/a&gt;,
+     und &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;Mitwirkende&lt;/a&gt;,
      &lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/deed.de&quot;&gt;CC-BY-SA&lt;/a&gt;
    &lt;/div&gt;
   &lt;/div&gt;
@@ -213,7 +213,7 @@ var layer_markers;
 &#10;&lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <p>In welcher Datei muss man dann den xml-Link zur Datei hinzufügen. Natürlich sollen mittels der XML-Datei die Marker aus dem Code heraus ausgelagert werden.</p>
-<p>Dieser oben genannte Code stammt von hier: <a href="http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden">http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden</a></p>
+<p>Dieser oben genannte Code stammt von hier: <a href="https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden">https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden</a></p>
 <p>Ich hoffe ich habe dabei nichts übersehen,wie man zu einer Lösung kommt.</p>
 <p>Gruß</p>
 <p>Thal</p>

@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your trail appears to be drawn OK on the standard map see: <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">how often does the main mapnik map get updated</a> If you are looking at the cycle map then it may take a bit longer before it is updated.</p>
+<p>Your trail appears to be drawn OK on the standard map see: <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">how often does the main mapnik map get updated</a> If you are looking at the cycle map then it may take a bit longer before it is updated.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -188,7 +188,7 @@ osqa_accepted = true
 <div id="post-53425-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Thanks, I have updated my answer. Apparently this does not work with the current Leaflet, yes.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Thanks, I have updated my answer. Apparently this does not work with the current Leaflet, yes.</p>
 </div>
 <div id="comment-53425-info" class="comment-info">
 <span class="comment-age">(09 Dec '16, 07:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

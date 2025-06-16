@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are already lots of <a href="http://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools">libraries</a> as well as <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">online offline</a> and <a href="http://wiki.openstreetmap.org/wiki/Routing/offline_routers">offline routers</a> and <a href="http://wiki.openstreetmap.org/wiki/Routing#See_also">general information about routing with OSM</a>.</p>
+<p>There are already lots of <a href="https://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools">libraries</a> as well as <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">online offline</a> and <a href="https://wiki.openstreetmap.org/wiki/Routing/offline_routers">offline routers</a> and <a href="https://wiki.openstreetmap.org/wiki/Routing#See_also">general information about routing with OSM</a>.</p>
 <p>If you want to implement your own routing solution, you need a proper routing graph. Use the search words "network" or "graph" on this help site to find previous questions that deal with extracting routing graphs from OSM data.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you add a marker to the map or even a map note to indicate the warehouse someone may add the name, the address and website to the data. <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> Looking at the area shows large buildings that look like warehouses but I can only guess their numbers and your companies location.</p>
+<p>If you add a marker to the map or even a map note to indicate the warehouse someone may add the name, the address and website to the data. <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> Looking at the area shows large buildings that look like warehouses but I can only guess their numbers and your companies location.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

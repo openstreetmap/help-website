@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Der OSM-Anfänger ist mal wieder verwirrt ...</p>
-<p>Ich habe folgende Tankstelle editiert: <a href="http://www.openstreetmap.org/?lat=51.952854&amp;lon=8.86359&amp;zoom=19">diese</a>.</p>
-<p>Gemäß <a href="http://wiki.openstreetmap.org/wiki/Tankstelle">diesem Wiki-Artikel</a> habe ich Einzelheiten zur Tankstelle ergänzen wollen. Das Problem ist, dass im o.g. Kartenausschnitt einfach nicht der Tankstellen-Name angezeigt wird. Auch der Shop-Node wird nicht angezeigt - nur im Editiermodus. Warum?</p>
+<p>Ich habe folgende Tankstelle editiert: <a href="https://www.openstreetmap.org/?lat=51.952854&amp;lon=8.86359&amp;zoom=19">diese</a>.</p>
+<p>Gemäß <a href="https://wiki.openstreetmap.org/wiki/Tankstelle">diesem Wiki-Artikel</a> habe ich Einzelheiten zur Tankstelle ergänzen wollen. Das Problem ist, dass im o.g. Kartenausschnitt einfach nicht der Tankstellen-Name angezeigt wird. Auch der Shop-Node wird nicht angezeigt - nur im Editiermodus. Warum?</p>
 <p>Ursprünglich habe ich das gesamte Tankstellenareal eingezeichnet (war blöd, plötzlich war trotz amenity=fuel auch das Tankstellensymbol weg), die Überdachung und den Shop-Bereich laut Artikel separat ausgewiesen ... Egal wie ich es mache, der Name wird nicht angezeigt. Aktuell habe ich nur noch ein building=yes, und Shop &amp; Poststelle (befindet sich innerhalb des Shops) sind je ein separater Node. Kann es sein, dass der Tankstellen-Name nur dann angezeigt wird, wenn ich einen Node statt Area benutze? Ich habe Beispiele in anderen Karten gesucht. Dort fand ich z.B. einen Node mit den Infos plus ein building ohne weitere Eigenschaften. Dort aber wird der Tankstellen-Name angezeigt.</p>
 <p>Was ist im Zweifel "richtiger" - alles so eintragen dass es in der Karte "lesbar" wird, oder so, wie es datentechnsich sinnvoller erscheint?</p>
 <p>Soll ich eigentlich die Autowaschanlage als Gebäude taggen?</p>
@@ -83,7 +83,7 @@ osqa_accepted = true
 <div id="post-24898-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Adressen sind (wie so vielen im OSM-Dschungel) auf mehrere Möglichkeiten möglich. Siehe <span>DE:Addresses</span>. Auch ein separater Knoten mit den Adressinformationen ist möglich. Deine Überlegung hört sich sinnvoll an. Damit es etwas konkreter wird: Da wo das Hauptgebäude ist (was wohl mit der Postlieferung übereinstimmt) würde <em>ich</em> einen Adressknoten in die Nähe des Einganges setzen (<a href="http://www.openstreetmap.org/?mlat=50.02994&amp;mlon=8.787378&amp;zoom=18&amp;layers=M">Beispiel</a>).</p>
+<p>Adressen sind (wie so vielen im OSM-Dschungel) auf mehrere Möglichkeiten möglich. Siehe <span>DE:Addresses</span>. Auch ein separater Knoten mit den Adressinformationen ist möglich. Deine Überlegung hört sich sinnvoll an. Damit es etwas konkreter wird: Da wo das Hauptgebäude ist (was wohl mit der Postlieferung übereinstimmt) würde <em>ich</em> einen Adressknoten in die Nähe des Einganges setzen (<a href="https://www.openstreetmap.org/?mlat=50.02994&amp;mlon=8.787378&amp;zoom=18&amp;layers=M">Beispiel</a>).</p>
 </div>
 <div id="comment-24898-info" class="comment-info">
 <span class="comment-age">(04 Aug '13, 22:29)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

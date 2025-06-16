@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>"Totally impressive GPS unit in every regard" says the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/Garmin/GPS_series#GPSMAP_60C.28S.29x_and_76C.28S.29x_series">GPSMAP 60C(S)x and 76C(S)x series</a>,</p>
+<p>"Totally impressive GPS unit in every regard" says the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/Garmin/GPS_series#GPSMAP_60C.28S.29x_and_76C.28S.29x_series">GPSMAP 60C(S)x and 76C(S)x series</a>,</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

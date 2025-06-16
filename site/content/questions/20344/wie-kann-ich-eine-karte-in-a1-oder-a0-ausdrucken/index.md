@@ -165,8 +165,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Suche mal hier auf help.osm.org nach Schlüsselwörtern wie print big map ...</p>
-<p>da gibt es Themen wie <a href="https://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers</a> oder</p>
-<p><a href="https://help.openstreetmap.org/questions/560/how-can-we-print-a-big-map-using-osmarender-a0-size">how-can-we-print-a-big-map-using-osmarender-a0-size</a></p>
+<p>da gibt es Themen wie <a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers</a> oder</p>
+<p><a href="/questions/560/how-can-we-print-a-big-map-using-osmarender-a0-size">how-can-we-print-a-big-map-using-osmarender-a0-size</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

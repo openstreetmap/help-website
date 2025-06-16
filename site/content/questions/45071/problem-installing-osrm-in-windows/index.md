@@ -159,7 +159,7 @@ queue=0    devid=0
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11438/a6datta"></a><a href="http://help.openstreetmap.org/users/11438/a6datta">@a6datta</a>: could you please write about the problem and solution here - for other people with the same issue.</p>
+<p><a href="https://help.openstreetmap.org/users/11438/a6datta"></a><a href="https://help.openstreetmap.org/users/11438/a6datta">@a6datta</a>: could you please write about the problem and solution here - for other people with the same issue.</p>
 </div>
 <div id="comment-45078-info" class="comment-info">
 <span class="comment-age">(06 Sep '15, 01:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

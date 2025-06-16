@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I need to find the original creator of <a href="http://www.openstreetmap.org/relation/3228572">a large relation</a>. But osm.org always times out and <a href="http://osmhv.openstreetmap.de/">OSM history viewer</a> returns an error. Is there any other way to get the past editors of this object?</p>
+<p>Hi, I need to find the original creator of <a href="https://www.openstreetmap.org/relation/3228572">a large relation</a>. But osm.org always times out and <a href="http://osmhv.openstreetmap.de/">OSM history viewer</a> returns an error. Is there any other way to get the past editors of this object?</p>
 <p>(Context: this relation is part of the E2 walking path, but this part is identical with GR5 Vlaanderen, relation 3121667. So it would seem more logical to only map it once, and have relation 3228572 only contain the relation making GR5. But maybe there is some unknown reason they do need to be duplicated - and I'd like to ask the original creator about that)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

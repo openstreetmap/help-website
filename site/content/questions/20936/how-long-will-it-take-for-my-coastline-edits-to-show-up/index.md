@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Why not bother with the the search function?<br />
-<a href="https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Result</a><br />
+<a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Result</a><br />
 </p>
 </div>
 <div class="answer-controls post-controls">

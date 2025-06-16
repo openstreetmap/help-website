@@ -71,7 +71,7 @@ osqa_accepted = false
 <p>A question (with answers) focusing on "mapping errors" (not necessarily on missing data as it is in the question here) is at <a href="/questions/10986/">i-dont-want-to-fix-an-mapping-error-but-i-do-want-to-report-one</a>.</p>
 <p>Citation of two old answers to this question <span class="small">(moved from <a href="/questions/6/how-do-i-get-started-with-openstreetmap">there</a> – where the question also moved from)</span>:</p>
 <ul>
-<li>You can point to such errors using OSM's QA tools, see <a href="http://help.openstreetmap.org/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">http://help.openstreetmap.org/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors</a> – <span class="small"><span>Breki</span> (16 Sep '10, 04:27)</span></li>
+<li>You can point to such errors using OSM's QA tools, see <a href="/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">https://help.openstreetmap.org/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors</a> – <span class="small"><span>Breki</span> (16 Sep '10, 04:27)</span></li>
 <li>you might want to check out: <a href="http://www.skobbler.net">http://www.skobbler.net</a> . They offer a similar bug reporting service and they have both android and iphone apps. I haven't tested either, so I am not sure how well a bug reporting is integrated in those phone apps. – <span class="small"><span>spaetz</span> (17 Sep '10, 07:29)</span></li>
 </ul>
 </div>
@@ -128,7 +128,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM has QA tools that shows mappers questionable data, including unnamed roads. For example, <a href="http://tools.geofabrik.de/osmi/?view=highways&amp;lon=175.04792&amp;lat=-40.86261&amp;zoom=9&amp;opacity=0.73&amp;overlays=name_missing_major,name_missing_minor,name_fixme">OSM Inspector's Highways layer</a> or <a href="http://qa.poole.ch/">Simon Poole's No Name map</a>. For a full list of QA tools, see<br />
-<a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">http://wiki.openstreetmap.org/wiki/Quality_Assurance</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">https://wiki.openstreetmap.org/wiki/Quality_Assurance</a></p>
 <p>But your feedback is highly welcome :) You can use the <strong>'notes' tool</strong> at <a href="http://www.osm.org"></a><a href="http://www.osm.org">http://www.osm.org</a> to drop a short note about a missing/wrong feature directly at the map. Just click the last button on the sidebar at the right side of that page. Then drag the marker to an appropriate position and write short text that helps mappers (even non local ones) to verify and solve the problem. Please be patient, as not everybody monitors it's area regularly for such notes ;)</p>
 </div>
 <div class="answer-controls post-controls">

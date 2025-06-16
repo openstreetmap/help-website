@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I made a number of edits filed under set <a href="http://www.openstreetmap.org/browse/changeset/13811497">13811497</a> that I thought were being saved under multiple sets. For example, I added some retention/detention ponds that got included in an edit for a swimming pool. How can I separate them out? Also, it say I am still editing. How do I complete an edit? While I'm waiting for a reply, I'll reread the documentation. I must have missed something.</p>
+<p>I made a number of edits filed under set <a href="https://www.openstreetmap.org/browse/changeset/13811497">13811497</a> that I thought were being saved under multiple sets. For example, I added some retention/detention ponds that got included in an edit for a swimming pool. How can I separate them out? Also, it say I am still editing. How do I complete an edit? While I'm waiting for a reply, I'll reread the documentation. I must have missed something.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-completing" rel="tag" title="see questions tagged &#39;completing&#39;">completing</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-splitting" rel="tag" title="see questions tagged &#39;splitting&#39;">splitting</span>

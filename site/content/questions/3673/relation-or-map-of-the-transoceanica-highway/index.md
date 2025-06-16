@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Unfortunately, it looks like you're out of luck. That part of the world seems to be poorly served in OSM right now.</p>
-<p>Looking at <a href="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/23/100823104146_transoceanica-mapa.jpg?w=466">this map of the Peruvian bit</a> suggested that the main road past Lake Titicaca ought to be part of it. That's <a href="http://www.openstreetmap.org/browse/way/30617662">way 30617662</a> and while it is part of a relation, <a href="http://www.openstreetmap.org/browse/relation/251335">that relation</a> seems to be a NW-SE link.</p>
+<p>Looking at <a href="http://wscdn.bbc.co.uk/worldservice/assets/images/2010/08/23/100823104146_transoceanica-mapa.jpg?w=466">this map of the Peruvian bit</a> suggested that the main road past Lake Titicaca ought to be part of it. That's <a href="https://www.openstreetmap.org/browse/way/30617662">way 30617662</a> and while it is part of a relation, <a href="https://www.openstreetmap.org/browse/relation/251335">that relation</a> seems to be a NW-SE link.</p>
 <p>Maybe it's worth trying to contact some of the mappers who have added things in that area to see if they can suggest any other sources?</p>
 </div>
 <div class="answer-controls post-controls">

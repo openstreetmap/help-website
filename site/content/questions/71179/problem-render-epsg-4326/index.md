@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi! I am using openlayers to get map with openstreetmap with projection: 'EPSG:4326', but always, In the same position I see the map badly (as you can see in the photo). I am not sure how I can solve this.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/openlayers.png" alt="alt text" /></p>
+<p><img src="/upfiles/openlayers.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-openlayers" rel="tag" title="see questions tagged &#39;openlayers&#39;">openlayers</span> <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span>

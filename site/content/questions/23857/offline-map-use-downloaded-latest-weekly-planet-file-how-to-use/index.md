@@ -221,7 +221,7 @@ osqa_accepted = false
 <div id="post-23883-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The simplest solution is. Garmin BaseCamp is a free download and as a basic world map. If you wish to use OSM with it, and with more detail you can by downloading a garmin.img file see OSM on Garmin in the wiki for details. <a href="http://wiki.openstreetmap.org/w/index.php?search=basecamp&amp;title=Special%3ASearch">http://wiki.openstreetmap.org/w/index.php?search=basecamp&amp;title=Special%3ASearch</a></p>
+<p>The simplest solution is. Garmin BaseCamp is a free download and as a basic world map. If you wish to use OSM with it, and with more detail you can by downloading a garmin.img file see OSM on Garmin in the wiki for details. <a href="https://wiki.openstreetmap.org/w/index.php?search=basecamp&amp;title=Special%3ASearch">https://wiki.openstreetmap.org/w/index.php?search=basecamp&amp;title=Special%3ASearch</a></p>
 </div>
 <div id="comment-23883-info" class="comment-info">
 <span class="comment-age">(01 Jul '13, 21:51)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -244,7 +244,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@TM23</span> At least Marble is able to cache tiles and to download tiles for user-defined areas. However you have to respect the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> and keep in mind that <a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">tiles are large</a>.</p>
+<p><span>@TM23</span> At least Marble is able to cache tiles and to download tiles for user-defined areas. However you have to respect the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> and keep in mind that <a href="https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">tiles are large</a>.</p>
 </div>
 <div id="comment-23890-info" class="comment-info">
 <span class="comment-age">(02 Jul '13, 08:44)</span> <span class="comment-user userinfo">scai ♦</span>

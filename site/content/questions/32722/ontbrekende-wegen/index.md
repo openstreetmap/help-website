@@ -127,7 +127,7 @@ osqa_accepted = false
 <p>Mappers kunnen zich op 2 zaken baseren om het fietspad te tekenen: satelliet foto's (eind 2012 voor Vlaanderen) of kennis/survey, m.a.w. ze moeten dan zelfs met een GPS langs deze fietspaden rijden om ze nadien te traceren. Het is dus best mogelijk dat er niemand in die buurt woont en dat ze daarom nog niet getekend zijn.</p>
 <p>Zoals Hendrik Klaas aanhaalt, is iedereen vrij om toevoegingen te doen. Als dat te moeilijk is, kan je ook "notes" achterlaten op de kaart op osm.org en hopen dat een mapper de nodige fietspaden gaat toevoegen. Dat is echter geen garantie voor een snelle oplossing voor jouw probleem.</p>
 <p>Ik kan de vraag stellen op de Belgische mailing list of er iemand vertrouwd is met dat gebied en de fietspaden zou kunnen bijtekenen. Ook dat is weer geen garantie.</p>
-<p>Zelf doen gaat het snelste resultaat opleveren. Je kan je ook aanmelden op de Belgische mailing list, zie <a href="http://wiki.openstreetmap.org/wiki/Mailing_Lists#Country-Specific_Lists">http://wiki.openstreetmap.org/wiki/Mailing_Lists#Country-Specific_Lists</a> . Het forum is nogal doods.</p>
+<p>Zelf doen gaat het snelste resultaat opleveren. Je kan je ook aanmelden op de Belgische mailing list, zie <a href="https://wiki.openstreetmap.org/wiki/Mailing_Lists#Country-Specific_Lists">https://wiki.openstreetmap.org/wiki/Mailing_Lists#Country-Specific_Lists</a> . Het forum is nogal doods.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,7 +177,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Beste Ghiskie, Welkom ge hebt de eerste stap genomen om ontbrekende paden aan OSM toe te voegen. De kaart van ons allen. Ge kunt uw account dadelijk benutten om die weggetjes aan OSM toe te voegen en daarmee voor iedereen zichtbaar en berijdbaar te maken. Lees voor ge begint deze help adviezen hier, <a href="http://wiki.openstreetmap.org/wiki/Help:Inhoud">http://wiki.openstreetmap.org/wiki/Help:Inhoud</a></p>
+<p>Beste Ghiskie, Welkom ge hebt de eerste stap genomen om ontbrekende paden aan OSM toe te voegen. De kaart van ons allen. Ge kunt uw account dadelijk benutten om die weggetjes aan OSM toe te voegen en daarmee voor iedereen zichtbaar en berijdbaar te maken. Lees voor ge begint deze help adviezen hier, <a href="https://wiki.openstreetmap.org/wiki/Help:Inhoud">https://wiki.openstreetmap.org/wiki/Help:Inhoud</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-46158-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11624/archergb">@Archergb</a>: meta: I have highlighted your overall question and added a title, I hope I got this right.</p>
+<p><a href="https://help.openstreetmap.org/users/11624/archergb">@Archergb</a>: meta: I have highlighted your overall question and added a title, I hope I got this right.</p>
 </div>
 <div id="comment-46158-info" class="comment-info">
 <span class="comment-age">(28 Oct '15, 05:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -147,7 +147,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most people arrive on OSM with a specific contribution idea in mind. Maybe you want to fix a mistaken street name or oneway you encountered during driving, or want to add your favorite restaurant and walking trail, or want to help with a particular humanitarian crisis, etc. In any case, almost every contributor is a volunteer so we never tell people what they should work on, we can just <a href="https://help.openstreetmap.org/questions/35262/places-needing-mapping">offer suggestions</a>.</p>
+<p>Most people arrive on OSM with a specific contribution idea in mind. Maybe you want to fix a mistaken street name or oneway you encountered during driving, or want to add your favorite restaurant and walking trail, or want to help with a particular humanitarian crisis, etc. In any case, almost every contributor is a volunteer so we never tell people what they should work on, we can just <a href="/questions/35262/places-needing-mapping">offer suggestions</a>.</p>
 <p>If you came to OSM after reading the article SK53 pointed out, You probably want to help with some humanitarian crisis. I won't attempt to point to the "best" task you should contribute to, but have a look at the <a href="http://hotosm.org/get-involved">hotosm</a> and/or <a href="http://www.missingmaps.org/contribute/">missingmaps</a> beginners introductions. Pick a <a href="http://tasks.hotosm.org/">task</a> that resonates with you (sadly there's plenty of choice), dive into it, and come back here if you've got questions.</p>
 </div>
 <div class="answer-controls post-controls">

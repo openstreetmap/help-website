@@ -130,7 +130,7 @@ One Answer:
 <div id="post-54275-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is there a way to see what portion of total OSM edits is done via MAPS.ME (or other editors)? I just found this: <a href="http://wiki.openstreetmap.org/wiki/Editor_usage_stats">http://wiki.openstreetmap.org/wiki/Editor_usage_stats</a></p>
+<p>Is there a way to see what portion of total OSM edits is done via MAPS.ME (or other editors)? I just found this: <a href="https://wiki.openstreetmap.org/wiki/Editor_usage_stats">https://wiki.openstreetmap.org/wiki/Editor_usage_stats</a></p>
 </div>
 <div id="comment-54275-info" class="comment-info">
 <span class="comment-age">(24 Jan '17, 22:18)</span> <span class="comment-user userinfo">Kozuch</span>

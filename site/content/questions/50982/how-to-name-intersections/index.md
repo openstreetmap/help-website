@@ -88,7 +88,7 @@ osqa_accepted = true
 <div id="post-51003-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a>: displacing seems to be "<span>Tagging for the renderer</span>". Please do not do it. Displacing labels or symbols is the renderer's job (if wished for a specific map).</p>
+<p><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a>: displacing seems to be "<span>Tagging for the renderer</span>". Please do not do it. Displacing labels or symbols is the renderer's job (if wished for a specific map).</p>
 </div>
 <div id="comment-51003-info" class="comment-info">
 <span class="comment-age">(20 Jul '16, 21:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -167,7 +167,7 @@ Roundabouts can be named too. I would be surprised if the names are rendered on 
 6
 </div>
 <div class="comment-text">
-<p>Named junctions show-up in the main style (Carto-CSS) <a href="http://www.openstreetmap.org/node/27258564">http://www.openstreetmap.org/node/27258564</a></p>
+<p>Named junctions show-up in the main style (Carto-CSS) <a href="https://www.openstreetmap.org/node/27258564">https://www.openstreetmap.org/node/27258564</a></p>
 </div>
 <div id="comment-50984-info" class="comment-info">
 <span class="comment-age">(19 Jul '16, 15:41)</span> <span class="comment-user userinfo">SK53 ♦</span>

@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For displaying routes you can use <a href="http://openlayers.org">OpenLayers</a> and a simple GPX file. This is really easy as you can see on an <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">example</a> in our wiki. There are also <a href="http://openlayers.org/dev/examples/">lots of other examples</a> you might be interested in.</p>
+<p>For displaying routes you can use <a href="http://openlayers.org">OpenLayers</a> and a simple GPX file. This is really easy as you can see on an <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">example</a> in our wiki. There are also <a href="http://openlayers.org/dev/examples/">lots of other examples</a> you might be interested in.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

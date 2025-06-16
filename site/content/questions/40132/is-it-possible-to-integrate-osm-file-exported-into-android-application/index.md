@@ -95,7 +95,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Do you really need to provide raw map data or is it enough to display a few <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">markers</a>, optionally with popups?</p>
+<p>Do you really need to provide raw map data or is it enough to display a few <a href="/questions/25/how-do-i-add-a-marker-to-a-map">markers</a>, optionally with popups?</p>
 </div>
 <div id="comment-40140-info" class="comment-info">
 <span class="comment-age">(08 Jan '15, 12:17)</span> <span class="comment-user userinfo">scai ♦</span>

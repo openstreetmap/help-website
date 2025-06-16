@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a large number of places of historical interest in the United States that were imported from a source called <a href="http://wiki.openstreetmap.org/wiki/USGS_GNIS">GNIS</a>, which contains many thousands of historical schools, churches and so on. Many of these no longer exist and were imported incorrectly. Feel free to remove features that no longer exist in the real world.</p>
+<p>There is a large number of places of historical interest in the United States that were imported from a source called <a href="https://wiki.openstreetmap.org/wiki/USGS_GNIS">GNIS</a>, which contains many thousands of historical schools, churches and so on. Many of these no longer exist and were imported incorrectly. Feel free to remove features that no longer exist in the real world.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

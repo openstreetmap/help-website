@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What type of wood should I use, and why doesn&#x27;t a forest show up in mapnik"
-description = '''In http://www.openstreetmap.org/?lat=46.81373&amp;amp;lon=11.75608&amp;amp;zoom=16&amp;amp;layers=M, what is north should be covered in wood (same as what is in the south, the only thing i changed was adding some nodes on the contour to match it better with the current situation (previously, it was very crude)....'''
+description = '''In https://www.openstreetmap.org/?lat=46.81373&amp;amp;lon=11.75608&amp;amp;zoom=16&amp;amp;layers=M, what is north should be covered in wood (same as what is in the south, the only thing i changed was adding some nodes on the contour to match it better with the current situation (previously, it was very crude)....'''
 date = "2010-10-11T08:40:00Z"
 lastmod = "2010-10-11T11:31:00Z"
 weight = 1116
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In <a href="http://www.openstreetmap.org/?lat=46.81373&amp;lon=11.75608&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=46.81373&amp;lon=11.75608&amp;zoom=16&amp;layers=M</a>, what is north should be covered in wood (same as what is in the south, the only thing i changed was adding some nodes on the contour to match it better with the current situation (previously, it was very crude). Now it doesn't show up at all in mapnik, but in osmarenderer it does.</p>
+<p>In <a href="https://www.openstreetmap.org/?lat=46.81373&amp;lon=11.75608&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=46.81373&amp;lon=11.75608&amp;zoom=16&amp;layers=M</a>, what is north should be covered in wood (same as what is in the south, the only thing i changed was adding some nodes on the contour to match it better with the current situation (previously, it was very crude). Now it doesn't show up at all in mapnik, but in osmarenderer it does.</p>
 <p>Then there is another thing with wood besides the river, which is <code>wood=mixed</code>, but is it also to be tagged <code>landuse=forest</code>?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>That forest area was in two parts(small section near Lienerweg was apart from main part). Fixed it.</p>
 <p>Forest areas should be tagged as <code>landuse=forest</code> (if forest is being maintained) or <code>natural=wood</code> (when it is not maintained). On both cases use <code>wood=*</code> to indicate what type of trees grow in that forest.</p>
-<p>Another strange (and wrong) thing in that area is usage of <code>layer=*</code> tag. It should not be used on areas like landuse and natural. Take a look at: <a href="http://wiki.openstreetmap.org/wiki/Key:layer">http://wiki.openstreetmap.org/wiki/Key:layer</a></p>
+<p>Another strange (and wrong) thing in that area is usage of <code>layer=*</code> tag. It should not be used on areas like landuse and natural. Take a look at: <a href="https://wiki.openstreetmap.org/wiki/Key:layer">https://wiki.openstreetmap.org/wiki/Key:layer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

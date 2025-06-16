@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Due to a large amount of geocoding tasks (around 1,3 million queries only for Germany) I want to install Nominatim on my laptop for which I followed the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">official manual</a>. I installed the required software without problems, however when installing Nominatim itself as follows</p>
+<p>Due to a large amount of geocoding tasks (around 1,3 million queries only for Germany) I want to install Nominatim on my laptop for which I followed the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">official manual</a>. I installed the required software without problems, however when installing Nominatim itself as follows</p>
 <pre><code>./configure
 make</code></pre>
 <p>I encounter the following error</p>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How to delete the incorrect blocks using a non-UK non-US key-board on the existing map ?</p>
-<p>Copied by gnurk from <a href="http://help.openstreetmap.org/questions/3563/">link text</a>:</p>
+<p>Copied by gnurk from <a href="/questions/3563/">link text</a>:</p>
 <blockquote>
 <p>a block is nothing but a polygon that we edit.. in general we wanted to know as to how to delete something if we go wrong while drawing</p>
 </blockquote>
@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-3561-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Same questions as last time: What do you mean with "block"? Plus this is really a duplicate of <a href="http://help.openstreetmap.org/questions/3552">http://help.openstreetmap.org/questions/3552</a>.</p>
+<p>Same questions as last time: What do you mean with "block"? Plus this is really a duplicate of <a href="/questions/3552">https://help.openstreetmap.org/questions/3552</a>.</p>
 </div>
 <div id="comment-3561-info" class="comment-info">
 <span class="comment-age">(05 Mar '11, 09:59)</span> <span class="comment-user userinfo">petschge</span>

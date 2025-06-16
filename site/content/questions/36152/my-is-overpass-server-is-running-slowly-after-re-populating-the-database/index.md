@@ -98,7 +98,7 @@ osqa_accepted = false
 <div id="post-42084-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>judging from the question text of <a href="/questions/36464/">overpass-api-area-query-does-not-recognise-all-areas</a> this particular "slow" problem may be solved. <a href="http://help.openstreetmap.org/users/8446/gmeister4"></a><a href="http://help.openstreetmap.org/users/8446/gmeister4">@gmeister4</a>: Is it? How exactly?</p>
+<p>judging from the question text of <a href="/questions/36464/">overpass-api-area-query-does-not-recognise-all-areas</a> this particular "slow" problem may be solved. <a href="https://help.openstreetmap.org/users/8446/gmeister4"></a><a href="https://help.openstreetmap.org/users/8446/gmeister4">@gmeister4</a>: Is it? How exactly?</p>
 <p>If possible, please focus on one problem per question here on this help site (for more usefulness to other users with similar problems), unless you think that the problems may be due to the same reason, of course.</p>
 </div>
 <div id="comment-42084-info" class="comment-info">

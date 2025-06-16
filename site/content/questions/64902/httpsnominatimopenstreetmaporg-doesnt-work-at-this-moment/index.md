@@ -193,7 +193,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I just searched for two local places. Then i used a router successfully. What failed for both of you?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/local_foot_route.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/local_foot_route.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -255,7 +255,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi read these lines, <a href="http://wiki.openstreetmap.org/wiki/Key:access,">http://wiki.openstreetmap.org/wiki/Key:access,</a> following that you should use access=private and you could add access:conditional=customers "name". And add operator="name" to the area as well.</p>
+<p>Hi read these lines, <a href="https://wiki.openstreetmap.org/wiki/Key:access,">https://wiki.openstreetmap.org/wiki/Key:access,</a> following that you should use access=private and you could add access:conditional=customers "name". And add operator="name" to the area as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

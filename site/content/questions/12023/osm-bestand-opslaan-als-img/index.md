@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> ;-)</p>
-<p>Of als je het zelf wil doen. <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/How_to_create_a_map">http://wiki.openstreetmap.org/wiki/Mkgmap/How_to_create_a_map</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> ;-)</p>
+<p>Of als je het zelf wil doen. <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/How_to_create_a_map">https://wiki.openstreetmap.org/wiki/Mkgmap/How_to_create_a_map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

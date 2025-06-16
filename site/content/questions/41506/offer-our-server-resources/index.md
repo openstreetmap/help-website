@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Great to hear that you are willing to help! The relevant page on our Wiki is <a href="http://wiki.openstreetmap.org/wiki/Servers/Tile_CDN">Tile CDN;</a> it lists the requirements for a tile cache, and also states that "If you are able and willing to provide such setup, please write a letter to operations@osmfoundation.org."</p>
+<p>Great to hear that you are willing to help! The relevant page on our Wiki is <a href="https://wiki.openstreetmap.org/wiki/Servers/Tile_CDN">Tile CDN;</a> it lists the requirements for a tile cache, and also states that "If you are able and willing to provide such setup, please write a letter to operations@osmfoundation.org."</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

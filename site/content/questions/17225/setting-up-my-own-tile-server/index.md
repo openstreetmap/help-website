@@ -111,7 +111,7 @@ One Answer:
 <p>"osm_tiles2" is defined in /usr/local/etc/renderd.conf:</p>
 <pre><code>[default]
 URI=/osm_tiles2/</code></pre>
-<p>The "<code>osm_tiles2</code>" folder doesn't actually exist. The tiles aren't stored as .png files on disk - they're stored as <a href="http://wiki.openstreetmap.org/wiki/Meta_tiles">metatiles</a> below "/var/lib/mod_tile/default".</p>
+<p>The "<code>osm_tiles2</code>" folder doesn't actually exist. The tiles aren't stored as .png files on disk - they're stored as <a href="https://wiki.openstreetmap.org/wiki/Meta_tiles">metatiles</a> below "/var/lib/mod_tile/default".</p>
 <p>If you actually want to generate some real tiles you can do so with "generate_tiles.py" (in the mapnik-style folder).</p>
 <p>If you've followed the instructions you'll already have your imported data in the database. If you want to quickly check that the city that you've imported is in there, navigate to it on the main OSM site, zoom in quite a lot, and right click and select "view image". You'll get a URL like:</p>
 <pre><code>http://a.tile.openstreetmap.org/16/32486/21104.png</code></pre>

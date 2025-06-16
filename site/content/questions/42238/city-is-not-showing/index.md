@@ -123,7 +123,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I assume this is because Tracy is mapped as a <a href="http://www.openstreetmap.org/node/150936809">node</a> To fix this it has to be mapped as a boundary relation.</p>
+<p>I assume this is because Tracy is mapped as a <a href="https://www.openstreetmap.org/node/150936809">node</a> To fix this it has to be mapped as a boundary relation.</p>
 <p>Similar questions have been asked in the past so you can search here, or maybe someone else will do it for you. (I'm too lazy to do it)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,7 +156,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10816/franco-l"></a><a href="http://help.openstreetmap.org/users/10816/franco-l">@Franco L</a>: for positions closer to the city centre Tracy is returned (you can test with "Where am I?"). I <em>guess</em> that position is too far away from the city centre to guess that it also belongs to the city. We often have the opposite problem, that Nominatim searches for the closest town, finds a node and uses it, although a particular place does not belong to this town. E.g. <a href="/questions/25364/">reverse-geocoding-picks-up-a-distant-housing-estate</a> . Update: not really... I found the boundary relation …</p>
+<p><a href="https://help.openstreetmap.org/users/10816/franco-l"></a><a href="https://help.openstreetmap.org/users/10816/franco-l">@Franco L</a>: for positions closer to the city centre Tracy is returned (you can test with "Where am I?"). I <em>guess</em> that position is too far away from the city centre to guess that it also belongs to the city. We often have the opposite problem, that Nominatim searches for the closest town, finds a node and uses it, although a particular place does not belong to this town. E.g. <a href="/questions/25364/">reverse-geocoding-picks-up-a-distant-housing-estate</a> . Update: not really... I found the boundary relation …</p>
 </div>
 <div id="comment-42586-info" class="comment-info">
 <span class="comment-age">(25 Apr '15, 12:45)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

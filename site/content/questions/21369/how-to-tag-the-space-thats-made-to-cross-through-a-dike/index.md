@@ -192,7 +192,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd map the dike as <code>man_made=embankment</code> or <code>=dyke</code> (but see <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Ddyke">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Ddyke</a> ) ,the proposal seems to be abandoned.</p>
+<p>I'd map the dike as <code>man_made=embankment</code> or <code>=dyke</code> (but see <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Ddyke">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Ddyke</a> ) ,the proposal seems to be abandoned.</p>
 <p>I'd map the gate as <code>barrier=gate</code>, <code>access=yes</code>.</p>
 </div>
 <div class="answer-controls post-controls">

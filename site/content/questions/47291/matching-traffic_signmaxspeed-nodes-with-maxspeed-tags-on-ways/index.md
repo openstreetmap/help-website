@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've started to notice speed limit signs on the side of the road. I've been adding these to OSM as Nodes with the tags <a href="http://wiki.openstreetmap.org/wiki/Key:traffic_sign">traffic_sign</a>=maxspeed, maxspeed=[<em>the speed limit</em>], <a href="http://wiki.openstreetmap.org/wiki/Key:direction">direction</a>=[<em>the cardinal direction the sign is facing</em>].</p>
-<p>Ideally, I would also like to update the <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed</a> tag on the Way. However, by just looking at a single speed limit sign, I don't have enough information to update the maxspeed tag on the road. When I'm walking it is also not always practical to walk to the end of the road (or to the next speed limit sign that is different).</p>
+<p>I've started to notice speed limit signs on the side of the road. I've been adding these to OSM as Nodes with the tags <a href="https://wiki.openstreetmap.org/wiki/Key:traffic_sign">traffic_sign</a>=maxspeed, maxspeed=[<em>the speed limit</em>], <a href="https://wiki.openstreetmap.org/wiki/Key:direction">direction</a>=[<em>the cardinal direction the sign is facing</em>].</p>
+<p>Ideally, I would also like to update the <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed</a> tag on the Way. However, by just looking at a single speed limit sign, I don't have enough information to update the maxspeed tag on the road. When I'm walking it is also not always practical to walk to the end of the road (or to the next speed limit sign that is different).</p>
 <p>Are there any OSM analysis tools that check for maxspeed traffic_sign Nodes next to road to see if the maxspeed tag on the road matches?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-45007-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here is the location in question: <a href="http://www.openstreetmap.org/#map=19/29.09735/-110.93091">http://www.openstreetmap.org/#map=19/29.09735/-110.93091</a> Next time please give us a link, it's time-consuming to copy the coordinates from your image. While fixing the routing also try to look at other tags. For example <a href="https://www.openstreetmap.org/way/366857236">way 366857236</a> seems to be the result of a merge. The maxspeed, lanes and surface tags don't make any sense. Also the name seems to be a mixup of several names which is usually wrong.</p>
+<p>Here is the location in question: <a href="https://www.openstreetmap.org/#map=19/29.09735/-110.93091">https://www.openstreetmap.org/#map=19/29.09735/-110.93091</a> Next time please give us a link, it's time-consuming to copy the coordinates from your image. While fixing the routing also try to look at other tags. For example <a href="https://www.openstreetmap.org/way/366857236">way 366857236</a> seems to be the result of a merge. The maxspeed, lanes and surface tags don't make any sense. Also the name seems to be a mixup of several names which is usually wrong.</p>
 </div>
 <div id="comment-45007-info" class="comment-info">
 <span class="comment-age">(01 Sep '15, 07:42)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-45002-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>my related Question <a href="https://help.openstreetmap.org/questions/44631/foot-routing-fails-at-this-bridge">https://help.openstreetmap.org/questions/44631/foot-routing-fails-at-this-bridge</a></p>
+<p>my related Question <a href="/questions/44631/foot-routing-fails-at-this-bridge">https://help.openstreetmap.org/questions/44631/foot-routing-fails-at-this-bridge</a></p>
 </div>
 <div id="comment-45002-info" class="comment-info">
 <span class="comment-age">(31 Aug '15, 19:30)</span> <span class="comment-user userinfo">andy mackey</span>

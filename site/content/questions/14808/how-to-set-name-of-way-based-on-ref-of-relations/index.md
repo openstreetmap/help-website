@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You would normally import your data into a database prior to rendering it. The <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> tool - one of several tools that can do this - can generate linestring geometries for relations which you can then draw.</p>
+<p>You would normally import your data into a database prior to rendering it. The <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> tool - one of several tools that can do this - can generate linestring geometries for relations which you can then draw.</p>
 <p>You could also check out Maperitive which works on raw OSM data, without database import, and it has relation support as well: <a href="http://maperitive.net/docs/manual/FAQ.html#How%20do%20I%20define%20a%20relation%20rule?">http://maperitive.net/docs/manual/FAQ.html#How%20do%20I%20define%20a%20relation%20rule?</a></p>
 </div>
 <div class="answer-controls post-controls">

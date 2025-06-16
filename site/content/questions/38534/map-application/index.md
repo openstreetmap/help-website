@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-39989-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The links from the answers to a similar question <a href="http://help.openstreetmap.org/questions/38151/what-would-i-need-to-learn-to-develop-a-mobile-app-that-uses-osms-map-data/38157">here</a> might be useful.</p>
+<p>The links from the answers to a similar question <a href="/questions/38151/what-would-i-need-to-learn-to-develop-a-mobile-app-that-uses-osms-map-data/38157">here</a> might be useful.</p>
 </div>
 <div id="comment-39989-info" class="comment-info">
 <span class="comment-age">(02 Jan '15, 17:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> in the OSM wiki ... search for apps with features "opensource" and "offline"</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> in the OSM wiki ... search for apps with features "opensource" and "offline"</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

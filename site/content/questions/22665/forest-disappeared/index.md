@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Forest disappeared"
-description = '''Hi, I made some little changes a few days ago, and now the complete forest has disappeared: http://www.openstreetmap.org/?lat=50.1628&amp;amp;lon=7.371&amp;amp;zoom=14&amp;amp;layers=M Keepright displays no relevant errors in this area. Please help!!! :) Stefan (badelectron77)'''
+description = '''Hi, I made some little changes a few days ago, and now the complete forest has disappeared: https://www.openstreetmap.org/?lat=50.1628&amp;amp;lon=7.371&amp;amp;zoom=14&amp;amp;layers=M Keepright displays no relevant errors in this area. Please help!!! :) Stefan (badelectron77)'''
 date = "2013-05-23T06:33:00Z"
 lastmod = "2013-05-23T10:53:00Z"
 weight = 22665
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi,</p>
 <p>I made some little changes a few days ago, and now the complete forest has disappeared:</p>
-<p><a href="http://www.openstreetmap.org/?lat=50.1628&amp;lon=7.371&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=50.1628&amp;lon=7.371&amp;zoom=14&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=50.1628&amp;lon=7.371&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=50.1628&amp;lon=7.371&amp;zoom=14&amp;layers=M</a></p>
 <p>Keepright displays no relevant errors in this area.</p>
 <p>Please help!!! :)</p>
 <p>Stefan (badelectron77)</p>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This looks like a rendering issue. The <a href="http://www.openstreetmap.org/browse/way/199029224">forest</a> is still there but is now interspersed with areas of scrub and grassland. I think that Mapnik is ignoring the forest and rendering only the sub-areas. To fix the problem you will need to make the forest the outer of a multipolygon with the sub areas inners of the same multipolygon.</p>
+<p>This looks like a rendering issue. The <a href="https://www.openstreetmap.org/browse/way/199029224">forest</a> is still there but is now interspersed with areas of scrub and grassland. I think that Mapnik is ignoring the forest and rendering only the sub-areas. To fix the problem you will need to make the forest the outer of a multipolygon with the sub areas inners of the same multipolygon.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

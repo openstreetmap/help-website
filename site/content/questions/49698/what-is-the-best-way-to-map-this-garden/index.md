@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Johnny, Many gardens are just marked with a boundary, even the famous Keukenhof has one border, <a href="http://www.openstreetmap.org/#map=15/52.2695/4.5406">http://www.openstreetmap.org/#map=15/52.2695/4.5406</a> and none of the flower beds is marked individually. Your question is almost the same as this problem, the exact border or some that looks like as a question passed some time ago, <a href="https://help.openstreetmap.org/questions/49606/mapping-park-boundaries-de-facto-or-de-jure">https://help.openstreetmap.org/questions/49606/mapping-park-boundaries-de-facto-or-de-jure</a><br />
+<p>Hi Johnny, Many gardens are just marked with a boundary, even the famous Keukenhof has one border, <a href="https://www.openstreetmap.org/#map=15/52.2695/4.5406">https://www.openstreetmap.org/#map=15/52.2695/4.5406</a> and none of the flower beds is marked individually. Your question is almost the same as this problem, the exact border or some that looks like as a question passed some time ago, <a href="/questions/49606/mapping-park-boundaries-de-facto-or-de-jure">https://help.openstreetmap.org/questions/49606/mapping-park-boundaries-de-facto-or-de-jure</a><br />
 I would go for a less correct border (de-jure) and specify the individual patches with the actually species growing there, using the already present multipolygone.</p>
 </div>
 <div class="answer-controls post-controls">

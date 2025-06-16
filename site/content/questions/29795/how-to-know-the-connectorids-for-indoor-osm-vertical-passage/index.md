@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all, we currently are modelling an indoor osm map following the <a href="http://wiki.openstreetmap.org/wiki/IndoorOSM">Indoor Schema</a>. There is also a part in which <a href="http://wiki.openstreetmap.org/wiki/IndoorOSM#Modeling_connections_between_different_levels">vertical passages</a> are described. It connects the doors of elevators, stairs and others with the doors above and below it. That means you have to know the doors' ids of both "neighboring" doors. The connection is done by the tag connector:ids:</p>
+<p>Hi all, we currently are modelling an indoor osm map following the <a href="https://wiki.openstreetmap.org/wiki/IndoorOSM">Indoor Schema</a>. There is also a part in which <a href="https://wiki.openstreetmap.org/wiki/IndoorOSM#Modeling_connections_between_different_levels">vertical passages</a> are described. It connects the doors of elevators, stairs and others with the doors above and below it. That means you have to know the doors' ids of both "neighboring" doors. The connection is done by the tag connector:ids:</p>
 <pre><code>      &lt;node id=&#39;-245&#39; action=&#39;modify&#39; visible=&#39;true&#39; lat=&#39;52.39349018473089&#39; lon=&#39;13.130163004646104&#39;&gt;
       &lt;tag k=&#39;connector:ids&#39; v=&#39;&lt;id_door_above&gt;, &lt;id_door_below&gt;&#39; /&gt;
       &lt;tag k=&#39;door&#39; v=&#39;yes&#39; /&gt;

@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi,</p>
 <p>In my part of the world we have traffic zones called "School Zones" where all the streets in close proximity to a school are speed limited (usually to 40km/h) on School Days between hours of 0800-0930 and 1430-1600.</p>
-<p>There appears to be a proposal underway to handle such situations <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags#Voting">Extended conditions for access tags</a></p>
+<p>There appears to be a proposal underway to handle such situations <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags#Voting">Extended conditions for access tags</a></p>
 <p>According to the proposal I would tag along the lines of: maxspeed = 60 (or whatever the "normal" speed limit is) maxspeed:(Mo-Fr 08:00-09:30, 14:30-16:00; PH off; SH off) = 40</p>
 <p>When I've tried this, JOSM throws up a warning about whitespace in the key... and it makes me wonder about whether I should even be using it. I understand it's just a proposal and there seems to be some sensible objection to using values to make up a part of the key in such a way - which makes me reluctant to use it.</p>
 <p>Is there a better way in which I should tag these restrictions for now?</p>
@@ -176,9 +176,9 @@ osqa_accepted = true
 <p>Meanwhile <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restrictions</a> are widely in use. They are very flexible and allow to specify various access restrictions based on time (based on the <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a> syntax), transportation mode, purpose of access and many more.</p>
 <p>See David Dean's answer for a good example.</p>
 <p>Old, outdated answer:</p>
-<p><del>First, JOSM and other editors never know all tags in use and especially not every proposal because you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>. Whitespaces are unusual for most keys but they can still be valid.</del></p>
+<p><del>First, JOSM and other editors never know all tags in use and especially not every proposal because you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>. Whitespaces are unusual for most keys but they can still be valid.</del></p>
 <del></del>
-<p>And you are right, these extended access conditions are just a proposal. Yet it seems that there is no better way of specifying such conditions at the moment. The <a href="http://wiki.openstreetmap.org/wiki/Key:access">access wiki page</a> also lists <a href="http://wiki.openstreetmap.org/wiki/Key:access#Access_time_restrictions">date_on, date_off etc.</a> which aren't much easier to use and which can't handle such complex conditions at all, especially when having multiple time ranges.</p>
+<p>And you are right, these extended access conditions are just a proposal. Yet it seems that there is no better way of specifying such conditions at the moment. The <a href="https://wiki.openstreetmap.org/wiki/Key:access">access wiki page</a> also lists <a href="https://wiki.openstreetmap.org/wiki/Key:access#Access_time_restrictions">date_on, date_off etc.</a> which aren't much easier to use and which can't handle such complex conditions at all, especially when having multiple time ranges.</p>
 <p>Furthermore, most current tools won't be able to parse any of those tags as they aren't widely in use and require a rather complex parser. Also most end devices like sat navs don't support such complex conditions anyway.</p>
 <p>Still there is a valid reason to include them in OSM as they probably will become more important in the future. Even if the syntax changes, conditions like <em>Mo-Fr 08:00-09:30, 14:30-16:00</em> can be converted to other formats with only little work. They are also easy to read for humans so that a simple tool can at least just display them without parsing.</p>
 </strike>

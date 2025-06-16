@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to get Haiti cycle map?"
-description = '''I read this post: http://help.openstreetmap.org/questions/11650/haiti-topography and saw the link given: http://www.openstreetmap.org/?lat=18.55295&amp;amp;lon=-72.33328&amp;amp;zoom=15&amp;amp;layers=C My question, I guess you you, SomeoneElse (since you replied to the post), is how do I get that map into a fo...'''
+description = '''I read this post: https://help.openstreetmap.org/questions/11650/haiti-topography and saw the link given: https://www.openstreetmap.org/?lat=18.55295&amp;amp;lon=-72.33328&amp;amp;zoom=15&amp;amp;layers=C My question, I guess you you, SomeoneElse (since you replied to the post), is how do I get that map into a fo...'''
 date = "2012-04-20T18:15:00Z"
 lastmod = "2012-04-23T01:23:00Z"
 weight = 12209
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I read this post: <a href="http://help.openstreetmap.org/questions/11650/haiti-topography">http://help.openstreetmap.org/questions/11650/haiti-topography</a> and saw the link given: <a href="http://www.openstreetmap.org/?lat=18.55295&amp;lon=-72.33328&amp;zoom=15&amp;layers=C">http://www.openstreetmap.org/?lat=18.55295&amp;lon=-72.33328&amp;zoom=15&amp;layers=C</a></p>
+<p>I read this post: <a href="/questions/11650/haiti-topography">https://help.openstreetmap.org/questions/11650/haiti-topography</a> and saw the link given: <a href="https://www.openstreetmap.org/?lat=18.55295&amp;lon=-72.33328&amp;zoom=15&amp;layers=C">https://www.openstreetmap.org/?lat=18.55295&amp;lon=-72.33328&amp;zoom=15&amp;layers=C</a></p>
 <p>My question, I guess you you, SomeoneElse (since you replied to the post), is how do I get that map into a format I can use on my Garmin Vista HCx?</p>
 <p>Thanks for you help!</p>
 </div>
@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Okay, thanks robbieonsea and SomeoneElse. I got pretty much what I needed here: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> like robbieonsea suggested. There IS a map for Haiti (Hispanola, actually, which is fine). It's near the bottom of the page under "Caribbean." And thanks SomeoneElse for you description. I appreciate both of your help and quick response.</p>
+<p>Okay, thanks robbieonsea and SomeoneElse. I got pretty much what I needed here: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> like robbieonsea suggested. There IS a map for Haiti (Hispanola, actually, which is fine). It's near the bottom of the page under "Caribbean." And thanks SomeoneElse for you description. I appreciate both of your help and quick response.</p>
 </div>
 <div id="comment-12221-info" class="comment-info">
 <span class="comment-age">(20 Apr '12, 22:31)</span> <span class="comment-user userinfo">DHilliard</span>
@@ -132,11 +132,11 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There are two kinds of ways.</p>
 <p>.1. Hope someone else (not SomeoneElse!) has done the hard work and converted OSM data into a compatible format for Garmin devices. Various worldwide conversions are listed here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 <p>.2. It doesn't seem Haiti is in the list, so you can create them yourself, guides are also in the wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data</a></p>
 <p>Note the default map renderings won't show cycling routes like those in the OpenCycleMap style, so be sure to also check out these instructions:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -194,7 +194,7 @@ osqa_accepted = false
 <p>Both the OSM Standard and Cycle maps use one way of representing that data - as a series of picture "tiles" that you can view in a web browser. If you right-click on the cycle map in the middle of Port-au-Prince you'll see a URL such as <a href="http://b.tile.opencyclemap.org/cycle/17/39200/58659.png">http://b.tile.opencyclemap.org/cycle/17/39200/58659.png</a>. The cycle map is designed to show features of particular use to cyclists (you'll notice that drinking water is more prominent on the cycle map than the standard one).</p>
 <p>Your Garmin handheld doesn't use map tiles though - it uses a vector representation (at its simplest, a series of different style lines joining points represented by icons). Just like the OSM Standard and Cycle maps are different representations of the same data, there are also many different styles of Garmin OSM maps.</p>
 <p>For a simple download, I'd probably start <a href="http://garmin.openstreetmap.nl/">here</a> on Lambertus' site. You can define the areas that you want fairly easily and generate the maps that you want (there are lots of instructions on the page).</p>
-<p>If you want to customise maps to show cycle-specific data (perhaps highligh drinking water like the OSM Cycle map tiles do) then you can follow robbieonsea's links and create your own maps. Most people use <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap</a> for this purpose, and it supports a style file that allows you to easily map OSM tags to Garmin features.<br />
+<p>If you want to customise maps to show cycle-specific data (perhaps highligh drinking water like the OSM Cycle map tiles do) then you can follow robbieonsea's links and create your own maps. Most people use <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap</a> for this purpose, and it supports a style file that allows you to easily map OSM tags to Garmin features.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

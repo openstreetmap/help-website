@@ -163,7 +163,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Trying to fix these problems automatically would probably not be helpful. But there are some tools which can be useful in finding these sort of errors.</p>
 <p>One useful tool is <a href="http://keepright.ipax.at/">Keep Right</a>. It shows a map of "overlapping ways" and "intersections without junctions", which seem to be part of the problems you are describing. So worth checking your local area on there, and fixing any errors.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM Validator</a> can also highlight these problems.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM Validator</a> can also highlight these problems.</p>
 <p>Also, as much of these errors are probably from the TIGER import, you could look at the <code>tiger:reviewed</code> tag. If something is tagged as <code>tiger:reviewed=no</code>, that means no one has checked it, so there may be problems with it. I think JOSM highlights everything that has this tag. If you have checked a road, and are pretty sure it is correct, then you can remove this tag.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -107,7 +107,7 @@ osqa_accepted = false
 <p>Yes, the contributor terms mean that you can only import data that is (effectively) public domain data or data for which you have explicit permission to import it into OSM.</p>
 <p>public domain in this context includes CC0, WTFPL, Unlicense, etc.</p>
 <hr />
-<p>Also note the other pitfalls for imports mentioned many times in other responses here and on the <a href="http://wiki.openstreetmap.org/wiki/Import">wiki</a>.</p>
+<p>Also note the other pitfalls for imports mentioned many times in other responses here and on the <a href="https://wiki.openstreetmap.org/wiki/Import">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The contributor terms require that "You have the right to authorize OSMF to use and distribute those Contents." This means that what you import must be able to be distributed under the ODbL. This would include public domain, but also include ODbL licensed data. The license status should be made clear when <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">consulting with the imports@ list on the import</a>.</p>
+<p>The contributor terms require that "You have the right to authorize OSMF to use and distribute those Contents." This means that what you import must be able to be distributed under the ODbL. This would include public domain, but also include ODbL licensed data. The license status should be made clear when <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">consulting with the imports@ list on the import</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -173,7 +173,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you'd like (and if appropriate for your area) you're welcome to add unusual fuel types, such as compressed natural gas (CNG).</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:fuel">See here on the OSM wiki for what can be used.</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:fuel">See here on the OSM wiki for what can be used.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

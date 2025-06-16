@@ -191,7 +191,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Also Merkaartor can load osc files.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Merkaartor">http://wiki.openstreetmap.org/wiki/Merkaartor</a> for details, ans see the Merkaartor mailinglist for downloading recent test releases if you want.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Merkaartor">https://wiki.openstreetmap.org/wiki/Merkaartor</a> for details, ans see the Merkaartor mailinglist for downloading recent test releases if you want.</p>
 </div>
 <div id="comment-47978-info" class="comment-info">
 <span class="comment-age">(06 Feb '16, 12:20)</span> <span class="comment-user userinfo">stephan75</span>

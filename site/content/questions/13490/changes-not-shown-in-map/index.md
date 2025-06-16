@@ -107,7 +107,7 @@ osqa_accepted = false
 <p>It is not a matter of a donation or similar. Most of the time, it is just a question of you seeing old data in your browser due to the map tiles being cached.</p>
 <p>So that we can debug the issue please supply a link to the object in question: zoom in to the area where your shop is, select "Browse Map Data" from the "Edit" menu. On the left hand side you should see a list with all the objects in view, select the node for your shop and then "Details", and the resulting link to your question.</p>
 <p>As EdLoach points out the issue you are seeing is likely due to shop=gift not being rendered (drawn on a map) in the standard style map.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Shop">http://wiki.openstreetmap.org/wiki/Map_Features#Shop</a> for a list of shops with indication what is currently displayed.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Shop">https://wiki.openstreetmap.org/wiki/Map_Features#Shop</a> for a list of shops with indication what is currently displayed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming <a href="http://www.openstreetmap.org/browse/node/1677579067">this node</a> is the shop you added, it is currently rendering as just the house number, as gift shops don't have any special rules for rendering in the default map you see at www.osm.org. You can however use the search box on the left of the screen to enter the shop name which will find it.</p>
+<p>Assuming <a href="https://www.openstreetmap.org/browse/node/1677579067">this node</a> is the shop you added, it is currently rendering as just the house number, as gift shops don't have any special rules for rendering in the default map you see at www.osm.org. You can however use the search box on the left of the screen to enter the shop name which will find it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am at 240 edits. I decided this is past time to save. The issue is I cannot. How do I save my changes? I know how to save and except that button is visible but greyed out. I cannot use that button to save. Will somebody please help? I use Safari on MacBook to edit. That took time to make that many changes. I signed into OSM again so that I could ask this question. I did not log out first. <img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2022-10-10_at_3.49.27_AM_RABHT10.png" alt="alt text" /></p>
+<p>I am at 240 edits. I decided this is past time to save. The issue is I cannot. How do I save my changes? I know how to save and except that button is visible but greyed out. I cannot use that button to save. Will somebody please help? I use Safari on MacBook to edit. That took time to make that many changes. I signed into OSM again so that I could ask this question. I did not log out first. <img src="/upfiles/Screen_Shot_2022-10-10_at_3.49.27_AM_RABHT10.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-save" rel="tag" title="see questions tagged &#39;save&#39;">save</span>

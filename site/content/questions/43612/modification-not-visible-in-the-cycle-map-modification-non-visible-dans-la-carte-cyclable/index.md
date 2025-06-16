@@ -105,11 +105,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The "main" map on openstreetmap.org is updated every few minutes. The "Cycle Map" is updated less frequently; it may take up to 24 hours for your changes to appear (see the <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">wiki</a> for more details). All the maps (cycle, transport...) are based on the same database, so once you make a change it will (eventually - some are faster than others) show up on all maps.</p>
+<p>The "main" map on openstreetmap.org is updated every few minutes. The "Cycle Map" is updated less frequently; it may take up to 24 hours for your changes to appear (see the <a href="https://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">wiki</a> for more details). All the maps (cycle, transport...) are based on the same database, so once you make a change it will (eventually - some are faster than others) show up on all maps.</p>
 <p>Some similar questions, which may also be interesting for you:</p>
 <ul>
-<li>"<a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map.</a>"</li>
-<li>"<a href="https://help.openstreetmap.org/questions/14079/edits-show-only-on-standard-map-not-cycle-map-etc">Edits show only on standard map, not cycle map, etc.</a>"</li>
+<li>"<a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map.</a>"</li>
+<li>"<a href="/questions/14079/edits-show-only-on-standard-map-not-cycle-map-etc">Edits show only on standard map, not cycle map, etc.</a>"</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

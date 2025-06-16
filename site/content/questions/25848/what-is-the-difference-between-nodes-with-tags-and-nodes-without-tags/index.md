@@ -74,7 +74,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Not directly related to the question, but related to the fact that you're hitting the API directly - have you had a read of the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API terms of use</a>?</p>
+<p>Not directly related to the question, but related to the fact that you're hitting the API directly - have you had a read of the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API terms of use</a>?</p>
 </div>
 <div id="comment-25856-info" class="comment-info">
 <span class="comment-age">(27 Aug '13, 14:29)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -149,7 +149,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Also have a look at the relevant page of <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">the beginners' guide</a> - that explains the sorts of data contained within OSM.</p>
+<p>Also have a look at the relevant page of <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">the beginners' guide</a> - that explains the sorts of data contained within OSM.</p>
 </div>
 <div id="comment-25855-info" class="comment-info">
 <span class="comment-age">(27 Aug '13, 14:24)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -192,7 +192,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Any node can have tags. Nodes without tags are usually points that help define the geometry of a way (as the latitude and longitude are properties of the node). Some nodes in ways may have tags (such as highway=crossing) but many won't. Nodes that have no tags and aren't part of a way can just be ignored generally.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Elements">This page</a> might help.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Elements">This page</a> might help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

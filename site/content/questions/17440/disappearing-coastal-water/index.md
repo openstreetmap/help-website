@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "disappearing coastal water"
-description = '''I was wondering if anyone could help me solve a problem. At some point in the last few weeks the water (bay) area has been disappearing from the following area. http://www.openstreetmap.org/?lat=26.441774368286133&amp;amp;lon=-81.88591003417969&amp;amp;zoom=13 . I don&#x27;t know if I did this inadvertently or s...'''
+description = '''I was wondering if anyone could help me solve a problem. At some point in the last few weeks the water (bay) area has been disappearing from the following area. https://www.openstreetmap.org/?lat=26.441774368286133&amp;amp;lon=-81.88591003417969&amp;amp;zoom=13 . I don&#x27;t know if I did this inadvertently or s...'''
 date = "2012-11-03T11:15:00Z"
 lastmod = "2012-11-05T16:32:00Z"
 weight = 17440
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was wondering if anyone could help me solve a problem. At some point in the last few weeks the water (bay) area has been disappearing from the following area. <a href="http://www.openstreetmap.org/?lat=26.441774368286133&amp;lon=-81.88591003417969&amp;zoom=13">http://www.openstreetmap.org/?lat=26.441774368286133&amp;lon=-81.88591003417969&amp;zoom=13</a> . I don't know if I did this inadvertently or someone else. I do make a lot of edits in Lee County, FL. I cannot figure out what is wrong or how to get it back. Thanks for any advice or help you can give me.</p>
+<p>I was wondering if anyone could help me solve a problem. At some point in the last few weeks the water (bay) area has been disappearing from the following area. <a href="https://www.openstreetmap.org/?lat=26.441774368286133&amp;lon=-81.88591003417969&amp;zoom=13">https://www.openstreetmap.org/?lat=26.441774368286133&amp;lon=-81.88591003417969&amp;zoom=13</a> . I don't know if I did this inadvertently or someone else. I do make a lot of edits in Lee County, FL. I cannot figure out what is wrong or how to get it back. Thanks for any advice or help you can give me.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-disappearing" rel="tag" title="see questions tagged &#39;disappearing&#39;">disappearing</span>

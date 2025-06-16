@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Seems to be a duplicate of <a href="https://help.openstreetmap.org/questions/38365/where-can-i-buy-world-tiles-with-all-zoom-levels">https://help.openstreetmap.org/questions/38365/where-can-i-buy-world-tiles-with-all-zoom-levels</a></p>
+<p>Seems to be a duplicate of <a href="/questions/38365/where-can-i-buy-world-tiles-with-all-zoom-levels">https://help.openstreetmap.org/questions/38365/where-can-i-buy-world-tiles-with-all-zoom-levels</a></p>
 </div>
 <div id="comment-38366-info" class="comment-info">
 <span class="comment-age">(07 Nov '14, 09:21)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -90,7 +90,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "https://help.openstreetmap.org/questions/38365/where-can-i-buy-world-tiles-with-all-zoom-levels" by scai 07 Nov '14, 09:55
+### The question has been closed for the following reason "/questions/38365/where-can-i-buy-world-tiles-with-all-zoom-levels" by scai 07 Nov '14, 09:55
 
 </div>
 

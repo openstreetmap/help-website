@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "In JOSM, can one select objects within a given country outline?"
-description = '''Is it possible with JOSM to select objects inside the bounding box of a given country? Say, for example: http://www.openstreetmap.org/relation/47796'''
+description = '''Is it possible with JOSM to select objects inside the bounding box of a given country? Say, for example: https://www.openstreetmap.org/relation/47796'''
 date = "2015-03-16T05:31:00Z"
 lastmod = "2015-04-25T20:23:00Z"
 weight = 41728
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is it possible with JOSM to select objects inside the bounding box of a given country? Say, for example: <a href="http://www.openstreetmap.org/relation/47796">http://www.openstreetmap.org/relation/47796</a></p>
+<p>Is it possible with JOSM to select objects inside the bounding box of a given country? Say, for example: <a href="https://www.openstreetmap.org/relation/47796">https://www.openstreetmap.org/relation/47796</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-selection" rel="tag" title="see questions tagged &#39;selection&#39;">selection</span>
@@ -193,7 +193,7 @@ One Answer:
 <div id="post-42570-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/667/bryce-c-nesbitt">@Bryce C Nesbitt</a>: I am a bit confused … "inside the bounding box of a given country" is what Vincent's suggestion does (with the mentioned bits to be worked around). What do you mean by "within the outline"? Do you mean ON the outline? Members of the outline relation?</p>
+<p><a href="https://help.openstreetmap.org/users/667/bryce-c-nesbitt">@Bryce C Nesbitt</a>: I am a bit confused … "inside the bounding box of a given country" is what Vincent's suggestion does (with the mentioned bits to be worked around). What do you mean by "within the outline"? Do you mean ON the outline? Members of the outline relation?</p>
 </div>
 <div id="comment-42570-info" class="comment-info">
 <span class="comment-age">(24 Apr '15, 12:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -204,7 +204,7 @@ One Answer:
 <div id="post-42577-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I mean "find all Beer Gardens in Germany", or <a href="https://help.openstreetmap.org/questions/42564/how-to-do-a-contains-search-eg-find-all-nodes-within-a-given-way-type">https://help.openstreetmap.org/questions/42564/how-to-do-a-contains-search-eg-find-all-nodes-within-a-given-way-type</a></p>
+<p>I mean "find all Beer Gardens in Germany", or <a href="/questions/42564/how-to-do-a-contains-search-eg-find-all-nodes-within-a-given-way-type">https://help.openstreetmap.org/questions/42564/how-to-do-a-contains-search-eg-find-all-nodes-within-a-given-way-type</a></p>
 </div>
 <div id="comment-42577-info" class="comment-info">
 <span class="comment-age">(24 Apr '15, 18:04)</span> <span class="comment-user userinfo">Bryce C Nesbitt</span>

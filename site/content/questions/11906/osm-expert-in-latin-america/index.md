@@ -125,9 +125,9 @@ osqa_accepted = false
 <p>There are no "official OSM experts", since this is a (mostly) volunteer organization.</p>
 <p>However, there are several ways to get in touch with people who know about OSM:</p>
 <ul>
-<li>Contact a <a href="http://wiki.openstreetmap.org/wiki/User_group">local user group</a>, there may be someone who can help. A <a href="http://usergroups.openstreetmap.de/">map of user groups</a> is available.</li>
-<li>Ask on one of the <a href="http://wiki.openstreetmap.org/wiki/Local_contacts">local mailing lists</a></li>
-<li>There are many <a href="http://wiki.openstreetmap.org/wiki/Companies">companies who offer services around OSM</a>. They may be available for consulting (of course this will usually not be free).</li>
+<li>Contact a <a href="https://wiki.openstreetmap.org/wiki/User_group">local user group</a>, there may be someone who can help. A <a href="http://usergroups.openstreetmap.de/">map of user groups</a> is available.</li>
+<li>Ask on one of the <a href="https://wiki.openstreetmap.org/wiki/Local_contacts">local mailing lists</a></li>
+<li>There are many <a href="https://wiki.openstreetmap.org/wiki/Companies">companies who offer services around OSM</a>. They may be available for consulting (of course this will usually not be free).</li>
 <li>Finally: Ask your (concrete) question here on help.openstreetmap.org. Maybe someone can help.</li>
 </ul>
 </div>
@@ -246,7 +246,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure, but I think one of the go-to people in Chile does something very similar to this question. See <a href="http://www.openstreetmap.org/user/Zambelli%20Limitada">http://www.openstreetmap.org/user/Zambelli%20Limitada</a> and <a href="http://www.zambelli.cl/">http://www.zambelli.cl/</a></p>
+<p>I'm not sure, but I think one of the go-to people in Chile does something very similar to this question. See <a href="https://www.openstreetmap.org/user/Zambelli%20Limitada">https://www.openstreetmap.org/user/Zambelli%20Limitada</a> and <a href="http://www.zambelli.cl/">http://www.zambelli.cl/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

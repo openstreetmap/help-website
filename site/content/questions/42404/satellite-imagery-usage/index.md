@@ -114,7 +114,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10862/withnail72">@Withnail72</a>: Have a look at <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">https://wiki.openstreetmap.org/wiki/Potential_Datasources</a> or <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">https://wiki.openstreetmap.org/wiki/Aerial_imagery</a> (e.g. (more or less raw and coarse resolution) images from landsat may have no/very soft license restrictions. Some of those may be useful for you, too. However, remember that "somehow usable for OSM contributors" does not necessarily mean the same for your use.</p>
+<p><a href="https://help.openstreetmap.org/users/10862/withnail72">@Withnail72</a>: Have a look at <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">https://wiki.openstreetmap.org/wiki/Potential_Datasources</a> or <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">https://wiki.openstreetmap.org/wiki/Aerial_imagery</a> (e.g. (more or less raw and coarse resolution) images from landsat may have no/very soft license restrictions. Some of those may be useful for you, too. However, remember that "somehow usable for OSM contributors" does not necessarily mean the same for your use.</p>
 </div>
 <div id="comment-42469-info" class="comment-info">
 <span class="comment-age">(20 Apr '15, 13:59)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

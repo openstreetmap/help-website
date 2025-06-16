@@ -135,7 +135,7 @@ One Answer:
 <div id="post-72159-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/shot_bCi4Q4W.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/shot_bCi4Q4W.PNG" alt="alt text" /></p>
 </div>
 <div id="comment-72159-info" class="comment-info">
 <span class="comment-age">(18 Dec '19, 15:06)</span> <span class="comment-user userinfo">Ri Sergey</span>

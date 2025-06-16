@@ -104,7 +104,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Petar, if you want to use raw OSM data for your aims you should at least get familiar with the model of OSM elements ... see <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> as a starting point.</p>
+<p>Petar, if you want to use raw OSM data for your aims you should at least get familiar with the model of OSM elements ... see <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> as a starting point.</p>
 <p>You wrote: "I extracted the cities successfully" ... How did you do that in detail?? Tell us please so that we can lead you to a solution.</p>
 <p>Getting a list of all streets belonging to a certain city is definitively possible with OSM data.</p>
 </div>
@@ -206,7 +206,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>OK, but how does the server that you're talking to know whether it's in a city or not? A way in OSM will NOT have an attribute of what city it's in - it just has nodes, each of which has a latitude and longitude value (as previously mentioned, see <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> for more info).</p>
+<p>OK, but how does the server that you're talking to know whether it's in a city or not? A way in OSM will NOT have an attribute of what city it's in - it just has nodes, each of which has a latitude and longitude value (as previously mentioned, see <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> for more info).</p>
 </div>
 <div id="comment-32303-info" class="comment-info">
 <span class="comment-age">(11 Apr '14, 14:54)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

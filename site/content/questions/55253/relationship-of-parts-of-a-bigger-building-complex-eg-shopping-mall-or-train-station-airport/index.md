@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Dear all, i want to render a map related to a bigger venue / building which contains other smaller entities. Take a mall or a train station and their respective shops and parking as an example.</p>
 <p>Some elements e.g. for a train station are covered by the public transport relations, however in particular the shops are usually not.</p>
 <blockquote>
-<p>What is the best way to filter the XML to all elements that belong to a logical building? As far as i'm aware it is not allowed to map a relationship as a building (<a href="http://wiki.openstreetmap.org/wiki/Key:building)">http://wiki.openstreetmap.org/wiki/Key:building)</a> so how would you do this?</p>
+<p>What is the best way to filter the XML to all elements that belong to a logical building? As far as i'm aware it is not allowed to map a relationship as a building (<a href="https://wiki.openstreetmap.org/wiki/Key:building)">https://wiki.openstreetmap.org/wiki/Key:building)</a> so how would you do this?</p>
 </blockquote>
 </div>
 <div id="question-tags" class="tags-container tags">

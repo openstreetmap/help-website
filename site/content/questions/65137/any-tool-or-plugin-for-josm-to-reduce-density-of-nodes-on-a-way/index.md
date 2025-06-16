@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, <a href="https://josm.openstreetmap.de/wiki/Help/Action/SimplifyWay">Simplify Way</a>.</p>
-<p>You might want to tune the advanced parameter <code>simplify-way.max-error</code> as explained in <a href="https://help.openstreetmap.org/questions/10541/josm-simplify-way-simplify-waymax-error-parameter-meaning">this question</a>.</p>
+<p>You might want to tune the advanced parameter <code>simplify-way.max-error</code> as explained in <a href="/questions/10541/josm-simplify-way-simplify-waymax-error-parameter-meaning">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

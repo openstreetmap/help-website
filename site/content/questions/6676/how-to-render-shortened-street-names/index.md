@@ -146,7 +146,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is actually a list of common abbreviations for various languages used by Name Finder and Nominatim: <a href="http://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations">http://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations</a></p>
+<p>There is actually a list of common abbreviations for various languages used by Name Finder and Nominatim: <a href="https://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations">https://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations</a></p>
 <p>I can't speak for Mapnik, but as the developer of <a href="http://maperitive.net">Maperitive</a>, I intend to add support for user-defined abbreviations in Maperitive in the near future.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -269,7 +269,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the case of Mapquest, they already do this for the USA (have a look <a href="http://www.openstreetmap.org/?lat=37.45939&amp;lon=-122.43269&amp;zoom=15&amp;layers=Q">here</a> for an example). You could try and influence them to do the same (with presumably different abbreviations) for your country too.</p>
+<p>In the case of Mapquest, they already do this for the USA (have a look <a href="https://www.openstreetmap.org/?lat=37.45939&amp;lon=-122.43269&amp;zoom=15&amp;layers=Q">here</a> for an example). You could try and influence them to do the same (with presumably different abbreviations) for your country too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

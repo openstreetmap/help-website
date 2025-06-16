@@ -91,7 +91,7 @@ You might need to clear your browser's cache to see the newly rendered map.</p>
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "It is a duplicate of http://help.openstreetmap.org/questions/6729 and/or http://help.openstreetmap.org/questions/102" by LM_1 12 Sep '11, 18:37
+### The question has been closed for the following reason "It is a duplicate of https://help.openstreetmap.org/questions/6729 and/or https://help.openstreetmap.org/questions/102" by LM_1 12 Sep '11, 18:37
 
 </div>
 
@@ -130,7 +130,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is no way you can change the style used on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> for your village, but you can render your own map, on when doing so, you decide what gets shown on which zoom level.</p>
-<p>Numerous questions on this site deal with rendering your own maps, e.g. <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my website?"</a></p>
+<p>Numerous questions on this site deal with rendering your own maps, e.g. <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my website?"</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

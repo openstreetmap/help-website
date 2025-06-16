@@ -151,7 +151,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/14044/nhbiker">@NHBiker</a>, the DATA is there, but it is not RENDERED on map currently. (see <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map)">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map)</a></p>
+<p><a href="https://help.openstreetmap.org/users/14044/nhbiker">@NHBiker</a>, the DATA is there, but it is not RENDERED on map currently. (see <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map)">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map)</a></p>
 </div>
 <div id="comment-60871-info" class="comment-info">
 <span class="comment-age">(29 Nov '17, 14:30)</span> <span class="comment-user userinfo">neuhausr</span>

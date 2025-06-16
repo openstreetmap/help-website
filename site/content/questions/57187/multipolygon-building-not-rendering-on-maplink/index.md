@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "multipolygon building not rendering on maplink"
-description = '''It&#x27;s about this building: http://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79028 My main goals for this building was to test 3D buildings and try to include the building as accurate as possible. The problem now ist that the building does not render on maplink and I don&#x27;t know why. It...'''
+description = '''It&#x27;s about this building: https://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79028 My main goals for this building was to test 3D buildings and try to include the building as accurate as possible. The problem now ist that the building does not render on maplink and I don&#x27;t know why. It...'''
 date = "2017-07-19T21:15:00Z"
 lastmod = "2017-10-10T08:17:00Z"
 weight = 57187
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It's about this building: <a href="http://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79028">http://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79028</a></p>
+<p>It's about this building: <a href="https://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79028">https://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79028</a></p>
 <p>My main goals for this building was to test 3D buildings and try to include the building as accurate as possible.</p>
 <p>The <em>problem</em> now ist that the building does not render on maplink and I don't know why. It does show up on f4map ( <a href="http://demo.f4map.com/#lat=48.0134937&amp;lon=16.7904739&amp;zoom=20&amp;camera.theta=74.099&amp;camera.phi=-8.251">http://demo.f4map.com/#lat=48.0134937&amp;lon=16.7904739&amp;zoom=20&amp;camera.theta=74.099&amp;camera.phi=-8.251</a> ) even it's missing the name tag.</p>
 <p>Any ideas?</p>
@@ -175,7 +175,7 @@ osqa_accepted = false
 <div id="post-57207-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>, on the Simple 3D wiki page it says "A relation tagged with type=building groups building outline and all building parts together. It is highly recommended to use the relation if there is at least one building part." Is this no longer accurate? <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_relation">http://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_relation</a></p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>, on the Simple 3D wiki page it says "A relation tagged with type=building groups building outline and all building parts together. It is highly recommended to use the relation if there is at least one building part." Is this no longer accurate? <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_relation">https://wiki.openstreetmap.org/wiki/Simple_3D_buildings#Building_relation</a></p>
 </div>
 <div id="comment-57207-info" class="comment-info">
 <span class="comment-age">(20 Jul '17, 17:12)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -265,8 +265,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello, you actually have two multipolygons for this building,</p>
-<p>relation #7367544 (which contains most of the structural details (but no name)). This area is not the whole outline of the building :- <a href="http://www.openstreetmap.org/relation/7367544#map=19/48.01331/16.79062">http://www.openstreetmap.org/relation/7367544#map=19/48.01331/16.79062</a></p>
-<p>and relation #7367542 (less detail but has the building name) This outline is of the whole building :- <a href="http://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79062">http://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79062</a></p>
+<p>relation #7367544 (which contains most of the structural details (but no name)). This area is not the whole outline of the building :- <a href="https://www.openstreetmap.org/relation/7367544#map=19/48.01331/16.79062">https://www.openstreetmap.org/relation/7367544#map=19/48.01331/16.79062</a></p>
+<p>and relation #7367542 (less detail but has the building name) This outline is of the whole building :- <a href="https://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79062">https://www.openstreetmap.org/relation/7367542#map=19/48.01331/16.79062</a></p>
 <p>I would imagine there must be a conflict as the details are spread over two relations. I would suggest removing one of the relations consolidating all information on the remaining relation.</p>
 <p>Regards</p>
 </div>

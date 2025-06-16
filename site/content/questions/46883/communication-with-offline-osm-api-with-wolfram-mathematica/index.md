@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Sounds like you are looking for an offline router. JOSM is an editor and although it has some routing plugins it is not really suitable for your job.</p>
-<p>Instead take a look at the various <a href="https://wiki.openstreetmap.org/wiki/Routing#End_users:_Routing_software">routing solutions for OSM</a>. You should probably try a local <a href="https://wiki.openstreetmap.org/wiki/Open_Source_Routing_Machine">OSRM</a> or <a href="https://wiki.openstreetmap.org/wiki/GraphHopper">GraphHopper</a> installation. This has also already been answered in <a href="https://help.openstreetmap.org/questions/46873/limits-per-day-problem-supply-chain-optimization-algorithm">your previous question</a>.</p>
+<p>Instead take a look at the various <a href="https://wiki.openstreetmap.org/wiki/Routing#End_users:_Routing_software">routing solutions for OSM</a>. You should probably try a local <a href="https://wiki.openstreetmap.org/wiki/Open_Source_Routing_Machine">OSRM</a> or <a href="https://wiki.openstreetmap.org/wiki/GraphHopper">GraphHopper</a> installation. This has also already been answered in <a href="/questions/46873/limits-per-day-problem-supply-chain-optimization-algorithm">your previous question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -164,7 +164,7 @@ One Answer:
 <div id="post-46897-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11730/valentasg">@ValentasG</a> GraphHopper is open source (well, except for some advanced services like its Geocoder) so there is no need for an API key if you run your own instance. Your other questions seem too broad to be answered on help.openstreetmap.org.</p>
+<p><a href="https://help.openstreetmap.org/users/11730/valentasg">@ValentasG</a> GraphHopper is open source (well, except for some advanced services like its Geocoder) so there is no need for an API key if you run your own instance. Your other questions seem too broad to be answered on help.openstreetmap.org.</p>
 </div>
 <div id="comment-46897-info" class="comment-info">
 <span class="comment-age">(30 Nov '15, 08:41)</span> <span class="comment-user userinfo">scai ♦</span>

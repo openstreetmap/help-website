@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to find out why relation does not render in Mapnik (error)?"
-description = '''I have added some inner boundaries to a relation (forest) that somehow have broken it. The relation is: http://www.openstreetmap.org/browse/relation/1364273 Previously, the multipoligon was shown correctly in Mapnik as a forest, but not anymore. I have even removed the new inner boundaries from the ...'''
+description = '''I have added some inner boundaries to a relation (forest) that somehow have broken it. The relation is: https://www.openstreetmap.org/browse/relation/1364273 Previously, the multipoligon was shown correctly in Mapnik as a forest, but not anymore. I have even removed the new inner boundaries from the ...'''
 date = "2012-11-10T23:13:00Z"
 lastmod = "2012-11-11T00:23:00Z"
 weight = 17639
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I have added some inner boundaries to a relation (forest) that somehow have broken it.</p>
-<p>The relation is: <a href="http://www.openstreetmap.org/browse/relation/1364273">http://www.openstreetmap.org/browse/relation/1364273</a></p>
+<p>The relation is: <a href="https://www.openstreetmap.org/browse/relation/1364273">https://www.openstreetmap.org/browse/relation/1364273</a></p>
 <p>Previously, the multipoligon was shown correctly in Mapnik as a forest, but not anymore.</p>
 <p>I have even removed the new inner boundaries from the relation to try to restore it and get it to render correclty in Mapnik, but this has not helped. I suppose some of my changes from 10.11.2012 have damaged the realtion, because up to today my changes to the ralation were shown correctly.</p>
 <p>Is there a straightforwad way to find out where the problem might lie?</p>

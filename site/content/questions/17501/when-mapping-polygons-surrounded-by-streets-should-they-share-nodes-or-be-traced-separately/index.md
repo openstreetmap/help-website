@@ -42,8 +42,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>When Mapping Polygons surrounded by streets should they share nodes or be traced separately?</p>
 <p>I don't know what the best practice is for parks or other polygons that are surrounded by streets, should it be traced around on it's own or should it be traced on top of the street nodes. This question has been bugging me for some time.</p>
-<p><a href="http://www.openstreetmap.org/?lat=41.162901520729065&amp;lon=-73.21826845407486&amp;zoom=18">Example This way</a></p>
-<p><a href="http://www.openstreetmap.org/?lat=41.18011996150017&amp;lon=-73.22644114494324&amp;zoom=17">Or this way</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=41.162901520729065&amp;lon=-73.21826845407486&amp;zoom=18">Example This way</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=41.18011996150017&amp;lon=-73.22644114494324&amp;zoom=17">Or this way</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tracing" rel="tag" title="see questions tagged &#39;tracing&#39;">tracing</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-park" rel="tag" title="see questions tagged &#39;park&#39;">park</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span> <span class="post-tag tag-link-shared" rel="tag" title="see questions tagged &#39;shared&#39;">shared</span>
@@ -164,7 +164,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Now I am really confused. Take a look at:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/File:Multipolygon-example_forest-2water-scrub-boundary-highway.svg">http://wiki.openstreetmap.org/wiki/File:Multipolygon-example_forest-2water-scrub-boundary-highway.svg</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/File:Multipolygon-example_forest-2water-scrub-boundary-highway.svg">https://wiki.openstreetmap.org/wiki/File:Multipolygon-example_forest-2water-scrub-boundary-highway.svg</a></p>
 <p>I have always considered it to be that areas and ways could share the same boundaries, but it seems that I am wrong! Please clarify.</p>
 </div>
 <div id="comment-18547-info" class="comment-info">

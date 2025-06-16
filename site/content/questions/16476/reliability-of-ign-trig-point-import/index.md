@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Reliability of IGN trig point import"
-description = '''Lots of things have been imported into OSM from IGM as &quot;trig points&quot;  QV - http://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res But some of these &quot;trig points&quot; don&#x27;t have any evidence on the ground. For instance, node 670525588 says &quot;Cimetiere : Mur d...'''
+description = '''Lots of things have been imported into OSM from IGM as &quot;trig points&quot;  QV - https://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res But some of these &quot;trig points&quot; don&#x27;t have any evidence on the ground. For instance, node 670525588 says &quot;Cimetiere : Mur d...'''
 date = "2012-09-26T10:01:00Z"
 lastmod = "2012-10-04T13:09:00Z"
 weight = 16476
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Lots of things have been imported into OSM from IGM as "trig points"</p>
-<p>QV - <a href="http://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res">http://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res</a></p>
+<p>QV - <a href="https://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res">https://wiki.openstreetmap.org/wiki/WikiProject_France/Repères_Géodésiques#Permanence_des_rep.C3.A8res</a></p>
 <p>But some of these "trig points" don't have any evidence on the ground. For instance, node 670525588 says "Cimetiere : Mur de cloture : Face Ouest : Boulon scellé - Point constaté détruit en 2002" so should it be included, even if no visible trace of it exists, if it is used to survey other things that do exist?</p>
 <p>Also, some of these "trig points" are very small and you would have to look very hard to find them - I think "Boulon scellé" means bolthead? Isn't it mainly useful to have them as landmarks?</p>
 </div>

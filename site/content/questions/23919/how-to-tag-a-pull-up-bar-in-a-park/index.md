@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">name is the name only</a>. Don't put any categories or descriptions into the name tag.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">name is the name only</a>. Don't put any categories or descriptions into the name tag.</p>
 <p>It seems like there is no established tagging scheme for a pull-up / chin-up bar yet, but according to taginfo there are already two objects tagged as <a href="http://taginfo.openstreetmap.org/tags/sport=Chin-up">sport=Chin-up</a>. I suggest to use the same tag but in lowercase (<em>sport=chin-up</em>). And I suggest to correct the few wrongly tagged objects in your area, ideally contacting the author(s) and explaining why the previously used tag was wrong.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -159,9 +159,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I agree using name=* is ugly.</p>
-<p>My recommendation is to use sport=gymnastics (with <a href="http://taginfo.openstreetmap.org/tags/sport=gymnastics">3143 tagged</a> objects) as this is documented for <a href="http://wiki.openstreetmap.org/wiki/Switzerland/Parcoursvita">Swiss Parcoursvita</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag%3Aleisure%3Dfitness_station"><code>leisure=fitness_station</code></a> (with <a href="http://">1000+ tagged</a> objects) which appears to be used in practice (e.g., <a href="http://www.openstreetmap.org/browse/relation/1002071">here</a> at the Vita Parcours Düdingen).</p>
+<p>My recommendation is to use sport=gymnastics (with <a href="http://taginfo.openstreetmap.org/tags/sport=gymnastics">3143 tagged</a> objects) as this is documented for <a href="https://wiki.openstreetmap.org/wiki/Switzerland/Parcoursvita">Swiss Parcoursvita</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag%3Aleisure%3Dfitness_station"><code>leisure=fitness_station</code></a> (with <a href="http://">1000+ tagged</a> objects) which appears to be used in practice (e.g., <a href="https://www.openstreetmap.org/browse/relation/1002071">here</a> at the Vita Parcours Düdingen).</p>
 <p>There is a little used tag <code>fitness_station:type</code> which could be used for chin-up, or they may fall into the <code>man_made=*</code> category, for instance <code>man_made=chinup_bar</code>.</p>
-<p>Other likely associated tags which might be appropriate are a relation of type <a href="http://wiki.openstreetmap.org/wiki/Tag:route%3Dfitness_trail"><code>fitness_trail</code></a> (as used for Vita parcours) or the poorly used <code>leisure=outdoor_gym</code>.</p>
+<p>Other likely associated tags which might be appropriate are a relation of type <a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dfitness_trail"><code>fitness_trail</code></a> (as used for Vita parcours) or the poorly used <code>leisure=outdoor_gym</code>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

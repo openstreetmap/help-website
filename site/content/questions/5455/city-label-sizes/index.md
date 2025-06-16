@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I make cities' labels appear larger than others? (for example: Oceanside, CA appears larger than Carlsbad, CA) <a href="http://www.openstreetmap.org/?lat=33.1749&amp;lon=-117.332&amp;zoom=13&amp;layers=M">(Map here)</a> There are numerous cities that should be tagged with the larger label due to their importance but I can't figure out how to do so.</p>
+<p>How can I make cities' labels appear larger than others? (for example: Oceanside, CA appears larger than Carlsbad, CA) <a href="https://www.openstreetmap.org/?lat=33.1749&amp;lon=-117.332&amp;zoom=13&amp;layers=M">(Map here)</a> There are numerous cities that should be tagged with the larger label due to their importance but I can't figure out how to do so.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-labels" rel="tag" title="see questions tagged &#39;labels&#39;">labels</span> <span class="post-tag tag-link-cities" rel="tag" title="see questions tagged &#39;cities&#39;">cities</span>
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You (currently) can't. And you should not start using any wild workarounds to change the size of the labels either (e.g. tagging one as an island). That would be considered "<a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>" which is really frowned upon in the OpenStreetMap community.</p>
+<p>You (currently) can't. And you should not start using any wild workarounds to change the size of the labels either (e.g. tagging one as an island). That would be considered "<a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>" which is really frowned upon in the OpenStreetMap community.</p>
 <p>There were quite a few discussions about tagging population, relative importance, touristic attractiveness and other features to allow renderers (as well as search engines) to assign priorities to cities (or other items of seemingly equal rank) but so for non of these methods is widely accepted or implemented by the major renderers.</p>
 </div>
 <div class="answer-controls post-controls">

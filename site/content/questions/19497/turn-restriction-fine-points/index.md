@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Take a look at <a href="http://www.openstreetmap.org/browse/relation/2732863">relation 2732863</a>. I added the turn restriction but do not completely understand how it works despite reading all the available help I could find.</p>
+<p>Take a look at <a href="https://www.openstreetmap.org/browse/relation/2732863">relation 2732863</a>. I added the turn restriction but do not completely understand how it works despite reading all the available help I could find.</p>
 <p>The restriction is only_right_turn when approaching the intersection from the south. The way forward (north) is blocked by a barrier and the road you're turning onto is one way going east to west. However, if coming from the north the restriction changes to only_right_turn. The same barrier is there to block southerly travel and the same east-west, one-way road forces the right turn.</p>
 <p>Therefore the same intersection has two distinct turn restrictions depending on the direction of approach. But how does one specify that?</p>
 <p>In the wiki I read about From: and To: members of a relation but can't figure out how to assign those roles to the ways in my turn restriction dialog in either Potlatch or JOSM.</p>
@@ -163,8 +163,8 @@ One Answer:
 </div>
 <div class="comment-text">
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/JOSM_Relations_and_Turn_Based_Restrictions">Howto in Josm</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">Howto in Potlatch2</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/JOSM_Relations_and_Turn_Based_Restrictions">Howto in Josm</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">Howto in Potlatch2</a></li>
 </ul>
 <p>If anything on those pages is not clear, please tell us what that is, so they can be improved.</p>
 </div>

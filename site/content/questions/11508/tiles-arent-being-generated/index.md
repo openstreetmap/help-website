@@ -70,7 +70,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Please edit your question and tell us:</p>
 <p>Do you see any progress indicator that tiles are downloaded at all?</p>
-<p>Try to start JTiledownloader from Windows' command prompt like described at <a href="http://wiki.openstreetmap.org/wiki/JTileDownloader">http://wiki.openstreetmap.org/wiki/JTileDownloader</a></p>
+<p>Try to start JTiledownloader from Windows' command prompt like described at <a href="https://wiki.openstreetmap.org/wiki/JTileDownloader">https://wiki.openstreetmap.org/wiki/JTileDownloader</a></p>
 <p>As a Java app, maybe you can see any error messges there.</p>
 </div>
 <div id="comment-11510-info" class="comment-info">

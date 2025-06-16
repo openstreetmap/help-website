@@ -116,7 +116,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The cc-by-sa states: "You must keep intact all copyright notices for the Work and give the Original Author credit <em>reasonable to the medium or means</em> You are utilizing by conveying the name (or pseudonym if applicable) of the Original Author if supplied". From my understanding, in a book it might be sufficient to state: "all maps (c) openstreetmap contributors, cc-by-sa 2.0" at the end or beginning of the book, where other credits are given. In a tv-feature the reasonable way to give credit might be the closing credits, and so on. I am not a lawyer and this is not legal advice but my personal interpretation (matured in discussions in the community).</p>
-<p>OSM states in its <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F----">Wiki</a> for the <strong>how</strong>:</p>
+<p>OSM states in its <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F----">Wiki</a> for the <strong>how</strong>:</p>
 <ul>
 <li><p>If you are using OpenStreetMap tiles (e.g. Mapnik or Osmarender/tiles@home), we request that your credit reads at least "(c) OpenStreetMap contributors, CC-BY-SA".</p></li>
 <li><p>If you are using OpenStreetMap data only, we request that your credit reads at least "Map data (c) OpenStreetMap contributors, CC-BY-SA".</p></li>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Orkneys..."
-description = '''It would seem one of the Orkney islands has gone missing from Mapnik. It works in Osmarender... http://www.openstreetmap.org/?lat=59.037&amp;amp;lon=-2.997&amp;amp;zoom=10&amp;amp;layers=M Maybe not the right place to point this out, but anyway.'''
+description = '''It would seem one of the Orkney islands has gone missing from Mapnik. It works in Osmarender... https://www.openstreetmap.org/?lat=59.037&amp;amp;lon=-2.997&amp;amp;zoom=10&amp;amp;layers=M Maybe not the right place to point this out, but anyway.'''
 date = "2011-12-27T17:52:00Z"
 lastmod = "2011-12-28T20:35:00Z"
 weight = 9632
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>It would seem one of the Orkney islands has gone missing from Mapnik. It works in Osmarender...</p>
-<p><a href="http://www.openstreetmap.org/?lat=59.037&amp;lon=-2.997&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=59.037&amp;lon=-2.997&amp;zoom=10&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=59.037&amp;lon=-2.997&amp;zoom=10&amp;layers=M">https://www.openstreetmap.org/?lat=59.037&amp;lon=-2.997&amp;zoom=10&amp;layers=M</a></p>
 <p>Maybe not the right place to point this out, but anyway.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -129,7 +129,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe the reason for this is in this changeset:</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/10204487">http://www.openstreetmap.org/browse/changeset/10204487</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/10204487">https://www.openstreetmap.org/browse/changeset/10204487</a></p>
 <p>But experts are needed to examine the coastline in detail and maybe revert the malicious changeset or repair tha way.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -141,7 +141,7 @@ Btw: there are plenty of overpass api threads around here. Did you already take 
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>please look at the anwers to this question: <a href="https://help.openstreetmap.org/questions/37216/how-to-download-data-bus-stations-with-locations-poi">https://help.openstreetmap.org/questions/37216/how-to-download-data-bus-stations-with-locations-poi</a></p>
+<p>please look at the anwers to this question: <a href="/questions/37216/how-to-download-data-bus-stations-with-locations-poi">https://help.openstreetmap.org/questions/37216/how-to-download-data-bus-stations-with-locations-poi</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -213,7 +213,7 @@ Btw: there are plenty of overpass api threads around here. Did you already take 
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try this one <a href="http://overpass-turbo.eu/s/5pa,">http://overpass-turbo.eu/s/5pa,</a> it's based upon an <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/Examples#Part_of_a_.28route.29_relation">example</a> for part of a hiking route. That same page also has an example for the complete route, but then you have to specify the name or ref of the route</p>
+<p>Try this one <a href="http://overpass-turbo.eu/s/5pa,">http://overpass-turbo.eu/s/5pa,</a> it's based upon an <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Examples#Part_of_a_.28route.29_relation">example</a> for part of a hiking route. That same page also has an example for the complete route, but then you have to specify the name or ref of the route</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

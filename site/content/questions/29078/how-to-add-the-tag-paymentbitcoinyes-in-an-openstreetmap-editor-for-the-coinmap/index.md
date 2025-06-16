@@ -344,7 +344,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, take a look here <a href="http://www.openstreetmap.org/#map=19/52.08724/5.12155">http://www.openstreetmap.org/#map=19/52.08724/5.12155</a> and tag the shop or business the same way as Sociabol.</p>
+<p>Hi, take a look here <a href="https://www.openstreetmap.org/#map=19/52.08724/5.12155">https://www.openstreetmap.org/#map=19/52.08724/5.12155</a> and tag the shop or business the same way as Sociabol.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

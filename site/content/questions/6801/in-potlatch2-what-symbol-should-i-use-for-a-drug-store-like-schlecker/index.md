@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you asking about the correct tag? If so, <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dchemist">shop=chemist</a> fits perfectly. You may also add additional tags like address, opening_hours and so on.</p>
+<p>Are you asking about the correct tag? If so, <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dchemist">shop=chemist</a> fits perfectly. You may also add additional tags like address, opening_hours and so on.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -178,7 +178,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>For learning how to edit with Potlatch2, please take a look at the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">wiki</a>.</p>
+<p>For learning how to edit with Potlatch2, please take a look at the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">wiki</a>.</p>
 </div>
 <div id="comment-6832-info" class="comment-info">
 <span class="comment-age">(03 Aug '11, 11:50)</span> <span class="comment-user userinfo">scai ♦</span>

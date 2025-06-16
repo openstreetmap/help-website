@@ -175,8 +175,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is possible to view the history for that area, and see what has changed there, including things being deleted. See this previous question, and its answers: <a href="http://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area">How do I see the history for my area?</a> Also see this page on the wiki for more options: <a href="http://wiki.openstreetmap.org/wiki/Change_monitoring">Change monitoring</a></p>
-<p>The most useful tool for this is probably <a href="http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL (OpenStreetMap Watch List)</a></p>
+<p>It is possible to view the history for that area, and see what has changed there, including things being deleted. See this previous question, and its answers: <a href="/questions/7/how-do-i-see-the-history-for-my-area">How do I see the history for my area?</a> Also see this page on the wiki for more options: <a href="https://wiki.openstreetmap.org/wiki/Change_monitoring">Change monitoring</a></p>
+<p>The most useful tool for this is probably <a href="https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL (OpenStreetMap Watch List)</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

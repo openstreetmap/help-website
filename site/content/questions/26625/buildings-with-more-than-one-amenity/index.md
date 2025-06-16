@@ -119,7 +119,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I'll split this answer into two parts: How to map the amenities, and how to map the addresses.</p>
 <h2 id="mapping-multiple-amenities-in-a-building">Mapping multiple amenities in a building</h2>
-<p>The easiest and most common solution is to create <strong>one node per amenity</strong>. As you noticed yourself, using only one element for all of them would cause conflicts between their attributes. Therefore, using one node, way, or relation for each "thing" – no more, no less – is a common principle in OSM tagging known as <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>.</p>
+<p>The easiest and most common solution is to create <strong>one node per amenity</strong>. As you noticed yourself, using only one element for all of them would cause conflicts between their attributes. Therefore, using one node, way, or relation for each "thing" – no more, no less – is a common principle in OSM tagging known as <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>.</p>
 <p>If you want to add more detail, though, you might be interested in concepts from <strong>indoor mapping</strong>. With a tagging style such as <a href="https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">Simple Indoor Tagging</a> (see the <a href="https://wiki.openstreetmap.org/wiki/Indoor_Mapping">overview</a> for alternatives), this can be as simple as adding level tags to each amenity. On the other end of the spectrum, you might see amenities mapped as areas which represent their share of the floor, together with hallways, staircases and other features.</p>
 <h2 id="mapping-multiple-amenities-with-the-same-address">Mapping multiple amenities with the same address</h2>
 <p>Adding the shared address to the <strong>building outline</strong> is a good start. Not only does it avoid duplication, it's also entirely possible for programs to find out which amenities are inside the building outline, and conclude that they share the building's address. In practice, however, not many programs actually support that feature, so mappers often decide to tag the <strong>address on the amenities</strong> as well as the building outline. If there is already a consensus among mappers in your area, it's best to stick to that.</p>
@@ -173,8 +173,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, A good question which I hoped someone else might answer before me as I have a similar problem with this building which is a health centre accommodating doctors, dentist, pharmacy &amp; physiotherapist all having different opening hours and contact details <a href="http://www.openstreetmap.org/browse/way/223249817">http://www.openstreetmap.org/browse/way/223249817</a></p>
-<p>The multiple values in the amenity tag don't really work and I think I will replace them with the single value 'clinic' http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dclinic This would apply to the building which would continue to be tagged with the name Hillcrest Healthcare. I'd also delete the tag 'dispensing=yes' which only applies to the pharmacy part of the clinic.</p>
+<p>Hi, A good question which I hoped someone else might answer before me as I have a similar problem with this building which is a health centre accommodating doctors, dentist, pharmacy &amp; physiotherapist all having different opening hours and contact details <a href="https://www.openstreetmap.org/browse/way/223249817">https://www.openstreetmap.org/browse/way/223249817</a></p>
+<p>The multiple values in the amenity tag don't really work and I think I will replace them with the single value 'clinic' https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dclinic This would apply to the building which would continue to be tagged with the name Hillcrest Healthcare. I'd also delete the tag 'dispensing=yes' which only applies to the pharmacy part of the clinic.</p>
 <p>I'd then put on separate nodes for each of the amenities with specified data about them as you suggest. I'm not sure what to do about addresses – just one for the building or individual ones for each amenity? Perhaps someone can advise.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -195,7 +195,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Following the principle "<a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>", I tag the address only once on the building polyogon or on a node attached to the facade. But some people don't think that address is a feature and repeats the same information on all POI's. It's a point of view question : if you are interrested by the dentist, you like to see immediatly his adress attached to its node. If you are interrested by addresses, you don't like unnecessary duplicates.</p>
+<p>Following the principle "<a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one OSM element</a>", I tag the address only once on the building polyogon or on a node attached to the facade. But some people don't think that address is a feature and repeats the same information on all POI's. It's a point of view question : if you are interrested by the dentist, you like to see immediatly his adress attached to its node. If you are interrested by addresses, you don't like unnecessary duplicates.</p>
 </div>
 <div id="comment-26642-info" class="comment-info">
 <span class="comment-age">(23 Sep '13, 14:31)</span> <span class="comment-user userinfo">Pieren</span>
@@ -237,7 +237,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In my city ( <a href="http://www.openstreetmap.org/#map=17/50.06186/19.93749">http://www.openstreetmap.org/#map=17/50.06186/19.93749</a> ) I see two methods: ignore less important places (Sukiennice are filled with multiple shops, none is marked) or mark amenity as point objects (some buildings have 5 or more amenities).</p>
+<p>In my city ( <a href="https://www.openstreetmap.org/#map=17/50.06186/19.93749">https://www.openstreetmap.org/#map=17/50.06186/19.93749</a> ) I see two methods: ignore less important places (Sukiennice are filled with multiple shops, none is marked) or mark amenity as point objects (some buildings have 5 or more amenities).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

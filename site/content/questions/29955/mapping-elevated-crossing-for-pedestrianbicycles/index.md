@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>An elevated crossing? This sounds like a <span>bridge</span> (<a href="http://www.openstreetmap.org/way/15089713">example</a>)?! the ramp could simply be tagged as having an <span><code>incline</code></span> (a simple up or down is better than nothing but measured percent would be great, <a href="http://www.openstreetmap.org/way/27088088">example</a>).</p>
+<p>An elevated crossing? This sounds like a <span>bridge</span> (<a href="https://www.openstreetmap.org/way/15089713">example</a>)?! the ramp could simply be tagged as having an <span><code>incline</code></span> (a simple up or down is better than nothing but measured percent would be great, <a href="https://www.openstreetmap.org/way/27088088">example</a>).</p>
 <p>For mapping the elevator you could see <span>Tag:highway=elevator</span> in the wiki.</p>
 </div>
 <div class="answer-controls post-controls">

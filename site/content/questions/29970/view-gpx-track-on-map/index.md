@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Thanks for contributing your track to our DB, so we can use it to improve OSM :)<br />
-At your OSM profile page, there is a tab 'GPS traces' (e.g. <a href="http://www.openstreetmap.org/user/!i!/traces">my one</a>) that lists all submitted tracks. Depending on how you decided to publish the data private/anonymous/... only some are visible and some might be in a anonymous cloud so we don't know that it was you who submitted this track.</p>
+At your OSM profile page, there is a tab 'GPS traces' (e.g. <a href="https://www.openstreetmap.org/user/!i!/traces">my one</a>) that lists all submitted tracks. Depending on how you decided to publish the data private/anonymous/... only some are visible and some might be in a anonymous cloud so we don't know that it was you who submitted this track.</p>
 <p>If you indeed just wanted to share a GPX on top of OSM with your friends, you might choose a different portal: <span>List of OSM based Services</span> or <span>Track_drawing_websites</span> (of which many allow gpx imports).</p>
 </div>
 <div class="answer-controls post-controls">

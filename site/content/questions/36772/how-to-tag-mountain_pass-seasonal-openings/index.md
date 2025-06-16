@@ -40,8 +40,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Looking at the wiki <a href="http://wiki.openstreetmap.org/wiki/Key:mountain_pass">page</a>, I don't see any key to indicate the season that the pass is normally open. (In fact that page seems to be a bit of a mess) I believe seasonable openings would seem to be a useful thing to include. Many passes are closed for similar months each winter. So my question is is there a conventional way to describe this. As a newbie, I don't really understand the process of putting new tags forward, and if this would be appropriate I'd be interested to know more.</p>
-<p><strong>Update:</strong> I have found the <a href="http://wiki.openstreetmap.org/wiki/Key:seasonal">Key:seasonal</a>, that seems to be what I am looking for. Input would be appreciated.</p>
+<p>Looking at the wiki <a href="https://wiki.openstreetmap.org/wiki/Key:mountain_pass">page</a>, I don't see any key to indicate the season that the pass is normally open. (In fact that page seems to be a bit of a mess) I believe seasonable openings would seem to be a useful thing to include. Many passes are closed for similar months each winter. So my question is is there a conventional way to describe this. As a newbie, I don't really understand the process of putting new tags forward, and if this would be appropriate I'd be interested to know more.</p>
+<p><strong>Update:</strong> I have found the <a href="https://wiki.openstreetmap.org/wiki/Key:seasonal">Key:seasonal</a>, that seems to be what I am looking for. Input would be appreciated.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-seasonal" rel="tag" title="see questions tagged &#39;seasonal&#39;">seasonal</span> <span class="post-tag tag-link-mountain" rel="tag" title="see questions tagged &#39;mountain&#39;">mountain</span> <span class="post-tag tag-link-mountain_pass" rel="tag" title="see questions tagged &#39;mountain_pass&#39;">mountain_pass</span> <span class="post-tag tag-link-newbie" rel="tag" title="see questions tagged &#39;newbie&#39;">newbie</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -128,7 +128,7 @@ osqa_accepted = false
 <div id="post-36809-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, Thanks for your answer! I didn't know about the <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">Access:conditional</a> tag, so reading the wiki page on it was helpful, and the tag seems somewhat appropriate. I'm not sure however that it is quite right. I probably should have mentioned that I'm thinking of using it on both public roads and hiking trails. I'm not sure that this tag is appropriate for a trail, as it seems to reflect legal restrictions more than practical ones.</p>
+<p>Hi, Thanks for your answer! I didn't know about the <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">Access:conditional</a> tag, so reading the wiki page on it was helpful, and the tag seems somewhat appropriate. I'm not sure however that it is quite right. I probably should have mentioned that I'm thinking of using it on both public roads and hiking trails. I'm not sure that this tag is appropriate for a trail, as it seems to reflect legal restrictions more than practical ones.</p>
 </div>
 <div id="comment-36809-info" class="comment-info">
 <span class="comment-age">(13 Sep '14, 22:05)</span> <span class="comment-user userinfo">keithonearth</span>
@@ -151,7 +151,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a> Currently almost all restrictions in OSM are legal ones and so far there is no well established scheme for tagging practical restrictions.</p>
+<p><a href="https://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a> Currently almost all restrictions in OSM are legal ones and so far there is no well established scheme for tagging practical restrictions.</p>
 </div>
 <div id="comment-36812-info" class="comment-info">
 <span class="comment-age">(14 Sep '14, 09:06)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -162,9 +162,9 @@ osqa_accepted = false
 <div id="post-36820-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> thanks for your answer. I didn't know that was the case.</p>
-<p>I have found the <a href="http://wiki.openstreetmap.org/wiki/Key:seasonal">Key:seasonal</a> that seems to be what I'm looking for. Care to give your impression?</p>
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> I'm afraid I don't quite follow you.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> thanks for your answer. I didn't know that was the case.</p>
+<p>I have found the <a href="https://wiki.openstreetmap.org/wiki/Key:seasonal">Key:seasonal</a> that seems to be what I'm looking for. Care to give your impression?</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> I'm afraid I don't quite follow you.</p>
 </div>
 <div id="comment-36820-info" class="comment-info">
 <span class="comment-age">(14 Sep '14, 20:01)</span> <span class="comment-user userinfo">keithonearth</span>
@@ -187,7 +187,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Many trails have legal restrictions on them and are can be closed for various reasons. There's no reason why the access or conditional tags can't be used for trails.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Many trails have legal restrictions on them and are can be closed for various reasons. There's no reason why the access or conditional tags can't be used for trails.</p>
 </div>
 <div id="comment-36849-info" class="comment-info">
 <span class="comment-age">(15 Sep '14, 17:45)</span> <span class="comment-user userinfo">alester</span>
@@ -230,7 +230,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening hours</a> for that.</p>
+<p>You could use <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening hours</a> for that.</p>
 <p>e.g. opening_hours=Apr-Oct: 24/7</p>
 </div>
 <div class="answer-controls post-controls">

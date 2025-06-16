@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi read these messages too, <a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a> And try to download smaller segments bit by bit or tile by tile. Welcome anyway</p>
+<p>Hi read these messages too, <a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a> And try to download smaller segments bit by bit or tile by tile. Welcome anyway</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

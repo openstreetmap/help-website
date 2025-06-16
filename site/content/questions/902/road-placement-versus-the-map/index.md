@@ -44,7 +44,7 @@ osqa_accepted = false
 </p>
 <p>I've noticed that the placement of roads and other items differs slightly from the yahoo map background. Is this just a problem with the alignment, or are these items mis-located slightly? Should I move streets and building tags to match the yahoo map perfectly?<br />
 </p>
-<p>I'm specifically looking at about Washington, Pennsylvania, USA, between <a href="http://www.openstreetmap.org/?lat=40.17184&amp;lon=-80.24072&amp;zoom=16&amp;layers=M">College Street and Lincoln Street</a>.</p>
+<p>I'm specifically looking at about Washington, Pennsylvania, USA, between <a href="https://www.openstreetmap.org/?lat=40.17184&amp;lon=-80.24072&amp;zoom=16&amp;layers=M">College Street and Lincoln Street</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-placement" rel="tag" title="see questions tagged &#39;placement&#39;">placement</span> <span class="post-tag tag-link-tracing" rel="tag" title="see questions tagged &#39;tracing&#39;">tracing</span>
@@ -139,7 +139,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>No, you shouldn't move the roads <em>just</em> to match the imagery. The images may have had some corrections applied to them, they won't be perfect and could well be out of alignment themselves in some places.</p>
-<p>Instead you should look at all the evidence available to determine the position of a road, including GPS traces from mappers, imagery, other data sets and any other survey information. The imagery may well provide better positioning than some sources of data — low quality imports such as <a href="http://wiki.openstreetmap.org/wiki/TIGER">TIGER</a>, for example — but that's not guaranteed to be the case. If you're not sure where the road should really be, just leave it where it is until we have better information, of whatever form.</p>
+<p>Instead you should look at all the evidence available to determine the position of a road, including GPS traces from mappers, imagery, other data sets and any other survey information. The imagery may well provide better positioning than some sources of data — low quality imports such as <a href="https://wiki.openstreetmap.org/wiki/TIGER">TIGER</a>, for example — but that's not guaranteed to be the case. If you're not sure where the road should really be, just leave it where it is until we have better information, of whatever form.</p>
 <p>Having a road a few metres out isn't going to create massive problems, but trying to make the roads fit images when it may be the images that are wrong is just a waste of your time.</p>
 </div>
 <div class="answer-controls post-controls">

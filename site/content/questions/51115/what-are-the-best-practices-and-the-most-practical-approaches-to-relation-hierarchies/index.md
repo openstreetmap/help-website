@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm wanting to know about the best practices and the most practical approaches to relation hierarchies. And importantly if the ideal approach is different from the practical approach.</p>
-<p>Specifically, I've recently added a relation for the <a href="https://en.wikipedia.org/wiki/Haida_Gwaii">Haida Gwaii</a> island group (<a href="http://www.openstreetmap.org/changeset/41045130">edit</a>). It is a major island group and had not been labelled correctly. As many of the islands were already mapped as multipolygons, I added these mulitpolygons to the relation. Now when I look at <a href="http://www.openstreetmap.org/relation/6439518#map=7/53.199/-131.320">the relation</a> it only shows the islands mapped as a single way.</p>
+<p>Specifically, I've recently added a relation for the <a href="https://en.wikipedia.org/wiki/Haida_Gwaii">Haida Gwaii</a> island group (<a href="https://www.openstreetmap.org/changeset/41045130">edit</a>). It is a major island group and had not been labelled correctly. As many of the islands were already mapped as multipolygons, I added these mulitpolygons to the relation. Now when I look at <a href="https://www.openstreetmap.org/relation/6439518#map=7/53.199/-131.320">the relation</a> it only shows the islands mapped as a single way.</p>
 <p>I'm not sure if this is a problem. Perhaps it's suboptimal, but at present the best solution.</p>
 <p>My main goal in mapping this group of islands was to have it mapped in a meaningful way in the database, but it'd be nice if it would display in a meaningful way when searched for, and if a label was rendered.</p>
 </div>
@@ -112,19 +112,19 @@ One Answer:
 <p>To map the whole Haida Gwaii archipelago as type=multipolygon relation, you have to download all the natural=coastline ways of the archipelago (3,843 ways), download the relation and open it, delete all members, then select all those 3,843 ways, add them to the relation as outer and upload.</p>
 <p><strong>Procedure with JOSM</strong>:</p>
 <p>To download all the coastline ways, you better use <strong>overpass with JOSM (Shift + Alt + UpArrow)</strong>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/overpass_YCDQ4mq.png" alt="downloading coastlines with overpass" /></p>
+<p><img src="/upfiles/overpass_YCDQ4mq.png" alt="downloading coastlines with overpass" /></p>
 <p>Next, you <strong>download the relation</strong>. For that, you first <strong>get its id</strong>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/idRelation.png" alt="relation id" /></p>
+<p><img src="/upfiles/idRelation.png" alt="relation id" /></p>
 <p>We see that it is <em>6439518</em>. Now we download the relation with <strong>Download object... (Ctrl + Shift + O)</strong> (we only download the relation members and not in a separate layer):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/downloadRelation_oBfBexG.png" alt="download relation" /></p>
+<p><img src="/upfiles/downloadRelation_oBfBexG.png" alt="download relation" /></p>
 <p>Now, we open the relation, <strong>select all its current members</strong> and we <strong>delete them</strong>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/deleteAllCurrentMembers_owPl6W0.png" alt="delete all current relation members" /></p>
+<p><img src="/upfiles/deleteAllCurrentMembers_owPl6W0.png" alt="delete all current relation members" /></p>
 <p>Now, we set two filters, <strong>natural="coastline"</strong> and <strong>type:node</strong> as follows:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/filtersActive.png" alt="filters" /></p>
+<p><img src="/upfiles/filtersActive.png" alt="filters" /></p>
 <p>And <strong>select all coastline ways</strong>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/selectAllCoastlineWays.png" alt="select all coastline ways" /></p>
+<p><img src="/upfiles/selectAllCoastlineWays.png" alt="select all coastline ways" /></p>
 <p>You <strong>add them to the Haida Gwaii</strong> archipelago multipolygon relation, with role <strong>outer</strong>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/addCoastlineWaysToRelation.png" alt="add all coastlines to relation as outer" /></p>
+<p><img src="/upfiles/addCoastlineWaysToRelation.png" alt="add all coastlines to relation as outer" /></p>
 <p>And now you are ready to <strong>upload the modified relation to OSM</strong>.</p>
 </div>
 <div class="answer-controls post-controls">

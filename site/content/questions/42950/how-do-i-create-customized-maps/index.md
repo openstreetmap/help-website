@@ -148,7 +148,7 @@ osqa_accepted = true
 <div id="post-42969-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>this was a comment i've converted to an answer from an answer deleted by <a href="http://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a></p>
+<p>this was a comment i've converted to an answer from an answer deleted by <a href="https://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a></p>
 </div>
 <div id="comment-42969-info" class="comment-info">
 <span class="comment-age">(08 May '15, 16:38)</span> <span class="comment-user userinfo">Harald Hartmann</span>
@@ -171,7 +171,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a>: the wizard is your best friend: <a href="http://overpass-turbo.eu/s/9fv">amenity=place_of_worship and religion=muslim in Netherlands</a></p>
+<p><a href="https://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a>: the wizard is your best friend: <a href="http://overpass-turbo.eu/s/9fv">amenity=place_of_worship and religion=muslim in Netherlands</a></p>
 </div>
 <div id="comment-42972-info" class="comment-info">
 <span class="comment-age">(08 May '15, 18:39)</span> <span class="comment-user userinfo">Harald Hartmann</span>
@@ -258,7 +258,7 @@ osqa_accepted = true
 <div id="post-42962-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a> - is it fast enough for your needs (see the comment below where Harald Hartmann mentioned overpass earlier)?</p>
+<p><a href="https://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a> - is it fast enough for your needs (see the comment below where Harald Hartmann mentioned overpass earlier)?</p>
 </div>
 <div id="comment-42962-info" class="comment-info">
 <span class="comment-age">(08 May '15, 16:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -269,7 +269,7 @@ osqa_accepted = true
 <div id="post-42966-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>,</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>,</p>
 <p>I didn't see HH's comment till now. I agree it's slow, but is there anything faster with the same ease of use?</p>
 </div>
 <div id="comment-42966-info" class="comment-info">
@@ -282,7 +282,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a> I can't think of anything with the same ease of use, no. The next nearest would probably be umap, and DaCor's linked RobJN's tutorials already. It might be worth having a look at the earlier one too:</p>
+<p><a href="https://help.openstreetmap.org/users/10957/lydscottcape">@LydScottCape</a> I can't think of anything with the same ease of use, no. The next nearest would probably be umap, and DaCor's linked RobJN's tutorials already. It might be worth having a look at the earlier one too:</p>
 <p><a href="http://www.mappa-mercia.org/2014/08/openstreetmap-alternatives-to-googles-maps-engine-and-fusion-tables.html">http://www.mappa-mercia.org/2014/08/openstreetmap-alternatives-to-googles-maps-engine-and-fusion-tables.html</a></p>
 <p>that covers the "non-updated-on-the-fly" situation.</p>
 </div>
@@ -381,7 +381,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10952/harald-hartmann">@Harald Hartmann</a>, thanks. Didn't see your comment till now. I agree its slow, but in the end I do get what I want.</p>
+<p><a href="https://help.openstreetmap.org/users/10952/harald-hartmann">@Harald Hartmann</a>, thanks. Didn't see your comment till now. I agree its slow, but in the end I do get what I want.</p>
 </div>
 <div id="comment-42965-info" class="comment-info">
 <span class="comment-age">(08 May '15, 16:30)</span> <span class="comment-user userinfo">LydScottCape</span>

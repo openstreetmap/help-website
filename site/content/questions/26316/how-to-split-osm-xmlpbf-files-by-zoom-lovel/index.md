@@ -92,7 +92,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>IMHO such a splitting feature has necer been implemented in any solution.</p>
-<p>If you want to filter raw OSM data, have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p>If you want to filter raw OSM data, have a look at <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 <p>The "filtering" inside any rendering program is realized by style files ... there you define for each zoom level what raw data should be displayed, and what not.</p>
 </div>
 <div id="comment-26395-info" class="comment-info">
@@ -148,7 +148,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Use the search bar with the word 'split' and you find some similar questions, e.g.</p>
-<p><a href="https://help.openstreetmap.org/questions/14151/split-osm-file-without-fragmenting-ways-and-relations">https://help.openstreetmap.org/questions/14151/split-osm-file-without-fragmenting-ways-and-relations</a></p>
+<p><a href="/questions/14151/split-osm-file-without-fragmenting-ways-and-relations">https://help.openstreetmap.org/questions/14151/split-osm-file-without-fragmenting-ways-and-relations</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

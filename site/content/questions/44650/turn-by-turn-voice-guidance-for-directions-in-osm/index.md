@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see the OSM Wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
+<p>Please see the OSM Wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
 <p>There are already some opensource solutions for routing with voice guidance. Especially there are some android apps.</p>
 </div>
 <div class="answer-controls post-controls">

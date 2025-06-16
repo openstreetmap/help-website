@@ -234,7 +234,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the meantime … you can use the OSM website via HTTPS together with JOSM's remote control. You just need to switch it on in JOSM and accept JOSM's self-signed certificate in your browser. See <a href="https://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm">https://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm</a></p>
+<p>In the meantime … you can use the OSM website via HTTPS together with JOSM's remote control. You just need to switch it on in JOSM and accept JOSM's self-signed certificate in your browser. See <a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm">https://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

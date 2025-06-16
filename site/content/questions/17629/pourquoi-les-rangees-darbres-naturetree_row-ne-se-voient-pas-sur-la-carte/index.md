@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>D'après <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree_row">cette page du wiki</a>, le tag correct est "natural=tree_row" et pas "nature=tree_row". Ca ne présume pas non plus qu'il sera affiché sur la carte mais au moins, il faut utiliser le bon tag.</p>
+<p>D'après <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree_row">cette page du wiki</a>, le tag correct est "natural=tree_row" et pas "nature=tree_row". Ca ne présume pas non plus qu'il sera affiché sur la carte mais au moins, il faut utiliser le bon tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

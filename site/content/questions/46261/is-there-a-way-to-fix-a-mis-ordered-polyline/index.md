@@ -116,14 +116,14 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>As user_5359 suggests, nodes are only ordered within each Openstreetmap way. Your lower image contains multiple ways starting with</p>
-<p><a href="http://www.openstreetmap.org/way/8766694">http://www.openstreetmap.org/way/8766694</a> in the north, then</p>
-<p><a href="http://www.openstreetmap.org/way/8767452">http://www.openstreetmap.org/way/8767452</a></p>
-<p><a href="http://www.openstreetmap.org/way/101458166">http://www.openstreetmap.org/way/101458166</a></p>
-<p><a href="http://www.openstreetmap.org/way/101458163">http://www.openstreetmap.org/way/101458163</a></p>
-<p><a href="http://www.openstreetmap.org/way/8768186">http://www.openstreetmap.org/way/8768186</a></p>
+<p><a href="https://www.openstreetmap.org/way/8766694">https://www.openstreetmap.org/way/8766694</a> in the north, then</p>
+<p><a href="https://www.openstreetmap.org/way/8767452">https://www.openstreetmap.org/way/8767452</a></p>
+<p><a href="https://www.openstreetmap.org/way/101458166">https://www.openstreetmap.org/way/101458166</a></p>
+<p><a href="https://www.openstreetmap.org/way/101458163">https://www.openstreetmap.org/way/101458163</a></p>
+<p><a href="https://www.openstreetmap.org/way/8768186">https://www.openstreetmap.org/way/8768186</a></p>
 <p>after which it gets a bit more complicated as there are dual carriageway sections with one way in each direction (both of which join to that last way I mentioned).</p>
-<p><a href="http://www.openstreetmap.org/way/8767828">http://www.openstreetmap.org/way/8767828</a></p>
-<p><a href="http://www.openstreetmap.org/way/33824767">http://www.openstreetmap.org/way/33824767</a></p>
+<p><a href="https://www.openstreetmap.org/way/8767828">https://www.openstreetmap.org/way/8767828</a></p>
+<p><a href="https://www.openstreetmap.org/way/33824767">https://www.openstreetmap.org/way/33824767</a></p>
 <p>If you are trying to draw a route you will need to select the ways that are needed depending on direction of travel, in the correct order, and depending which way the way nodes are ordered you may need to reverse the list for individual ways. In the above example if you were heading north from the one way section you might also want to exclude the section of way 8768186 that you wouldn't travel on when you turn left onto it (most routers pre-process the data I believe).</p>
 </div>
 <div class="answer-controls post-controls">

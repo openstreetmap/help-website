@@ -278,7 +278,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p><em>SK53 wrote: <strong>I suspect there is a simpler case which is to treat "!" at the start of a word as a character not punctuation. The Mapnik text symbolizer's rebric says it breaks on spaces, which does not seem to be consistent with this problem.</strong></em></p>
 <p>I'll try it now with Unicode additionally for the "exclamation marks" (U+01C3 latin letter retroflex click/0451) and can report the result in a few days.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/african_letters_for_clicks.png" alt="alt text" /></p>
+<p><img src="/upfiles/african_letters_for_clicks.png" alt="alt text" /></p>
 <p>(Figure from Wikipedia)</p>
 <p><em>SK53 wrote: <strong>Perhaps the best approach in Carto would be to do something using LUA.</strong></em></p>
 <p>Unfortunately, I don't know what is meant by 'Carto' and 'LUA'.</p>

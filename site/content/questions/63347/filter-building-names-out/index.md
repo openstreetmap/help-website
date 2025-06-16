@@ -249,7 +249,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>The point about loading it into a database is that you can then run SQL statements on it as complicated as you like to remove some names and not others, depending on any rules that you care to set yourself.</p>
-<p>You haven't said in the question what you're actually trying to achieve here (i.e. what you're going to do with the data afterwards), but I'm guessing that this is a rendering question largely because <a href="https://help.openstreetmap.org/questions/63004/rendering-tiles-of-specific-state">your other question</a> was.</p>
+<p>You haven't said in the question what you're actually trying to achieve here (i.e. what you're going to do with the data afterwards), but I'm guessing that this is a rendering question largely because <a href="/questions/63004/rendering-tiles-of-specific-state">your other question</a> was.</p>
 </div>
 <div id="comment-63446-info" class="comment-info">
 <span class="comment-age">(13 May '18, 20:42)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

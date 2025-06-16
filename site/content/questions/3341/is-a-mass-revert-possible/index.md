@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You should definitely talk to the guy first. Don't worry, if things need to get reverted it is still possible to do so a week later. But often a few polite words between mappers can fix things quickly.</p>
-<p>Please also read the answer to <a href="http://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism">"What should I do about vandalism"</a>.</p>
+<p>Please also read the answer to <a href="/questions/216/what-should-i-do-about-vandalism">"What should I do about vandalism"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -132,8 +132,8 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I addition to the answer above, two other links for further reading:</p>
-<p><a href="http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Vandalism">http://wiki.openstreetmap.org/wiki/Vandalism</a></p>
+<p><a href="/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Vandalism">https://wiki.openstreetmap.org/wiki/Vandalism</a></p>
 </div>
 <div id="comment-3345-info" class="comment-info">
 <span class="comment-age">(24 Feb '11, 13:22)</span> <span class="comment-user userinfo">gnurk</span>

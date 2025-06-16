@@ -130,7 +130,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>The <em>operator=*</em> may be used with, or as an alternative to <em>brand=*</em> see <a href="http://wiki.openstreetmap.org/wiki/Key:operator">http://wiki.openstreetmap.org/wiki/Key:operator</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:brand">http://wiki.openstreetmap.org/wiki/Key:brand</a></p>
+<p>The <em>operator=*</em> may be used with, or as an alternative to <em>brand=*</em> see <a href="https://wiki.openstreetmap.org/wiki/Key:operator">https://wiki.openstreetmap.org/wiki/Key:operator</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:brand">https://wiki.openstreetmap.org/wiki/Key:brand</a></p>
 </div>
 <div id="comment-7758-info" class="comment-info">
 <span class="comment-age">(09 Sep '11, 13:38)</span> <span class="comment-user userinfo">srbrook</span>

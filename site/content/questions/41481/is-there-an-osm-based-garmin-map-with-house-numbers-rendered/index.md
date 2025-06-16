@@ -240,7 +240,7 @@ java -jar mkgmap.jar adress.txt<br />
 This creates address.typ.<br />
 (Found this fact in the <a href="http://forum.openstreetmap.org/viewtopic.php?pid=347718#p347718">German forum</a>)<br />
 But: The resulting img my Garmin doesn't display. Loading and exporting it with QLandkarteGT creates a visible map, though.</p>
-<p><a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: a link to the matching wiki page would be helpful.</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>: a link to the matching wiki page would be helpful.</p>
 </div>
 <div id="comment-46115-info" class="comment-info">
 <span class="comment-age">(25 Oct '15, 21:01)</span> <span class="comment-user userinfo">malenki</span>

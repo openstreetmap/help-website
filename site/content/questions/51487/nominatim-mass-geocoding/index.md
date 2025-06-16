@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim isn't different from other geocoders in that regard. There is an API, you request a URL in the programming language of your choice and receive a JSON or XML data structure back. Every programming language can do that.</p>
-<p>The search parameters are documented here <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Search">http://wiki.openstreetmap.org/wiki/Nominatim#Search</a> and you would run a query against your own Nominatim server, e.g. <a href="http://localhost:8080/nominatim/search.php?...&amp;format=json">http://localhost:8080/nominatim/search.php?...&amp;format=json</a></p>
+<p>The search parameters are documented here <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Search">https://wiki.openstreetmap.org/wiki/Nominatim#Search</a> and you would run a query against your own Nominatim server, e.g. <a href="http://localhost:8080/nominatim/search.php?...&amp;format=json">http://localhost:8080/nominatim/search.php?...&amp;format=json</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -175,7 +175,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> They have set up their own Nominatim server, so the Nominatim usage policy doesn't apply. (Wanting to do mass geocoding is one good reason for setting up your own server).</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> They have set up their own Nominatim server, so the Nominatim usage policy doesn't apply. (Wanting to do mass geocoding is one good reason for setting up your own server).</p>
 </div>
 <div id="comment-51515-info" class="comment-info">
 <span class="comment-age">(18 Aug '16, 09:43)</span> <span class="comment-user userinfo">rorym</span>

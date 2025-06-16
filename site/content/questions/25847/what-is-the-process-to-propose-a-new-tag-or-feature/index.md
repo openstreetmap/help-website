@@ -45,7 +45,7 @@ osqa_accepted = true
 <li>What are the rules for proposing a new tag?</li>
 <li>How does the procedure work?</li>
 </ul>
-<p>Update: It seems like I've missed the <a href="http://wiki.openstreetmap.org/wiki/Proposal">wiki page about how to make a proposal</a>. What this page doesn't talk about is what happens after, how long does it take to get accepted, what are reasons to reject it, who decides about it?</p>
+<p>Update: It seems like I've missed the <a href="https://wiki.openstreetmap.org/wiki/Proposal">wiki page about how to make a proposal</a>. What this page doesn't talk about is what happens after, how long does it take to get accepted, what are reasons to reject it, who decides about it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-proposal" rel="tag" title="see questions tagged &#39;proposal&#39;">proposal</span> <span class="post-tag tag-link-bestpractice" rel="tag" title="see questions tagged &#39;bestpractice&#39;">bestpractice</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span>
@@ -125,7 +125,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think it's pretty well explained on the OSM wiki's <a href="http://wiki.openstreetmap.org/wiki/Proposal">Proposal</a> page. Additionally, I would recommend you check in <a href="http://taginfo.openstreetmap.org/">taginfo</a> to look for how the tags you have in mind are used, or for similar tags. Proposing something totally new is a higher bar than a proposal for tagging that is already in use.<br />
+<p>I think it's pretty well explained on the OSM wiki's <a href="https://wiki.openstreetmap.org/wiki/Proposal">Proposal</a> page. Additionally, I would recommend you check in <a href="http://taginfo.openstreetmap.org/">taginfo</a> to look for how the tags you have in mind are used, or for similar tags. Proposing something totally new is a higher bar than a proposal for tagging that is already in use.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

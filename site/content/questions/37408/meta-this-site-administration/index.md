@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>This site contains a lot of nice information, and has an advantage over the forum that this information is shaped better. However I think it lacks a more active administration, which would help make it more user-friendly. <a href="https://help.openstreetmap.org/faq/">Its own FAQ</a> could be expanded to include information from <a href="https://help.openstreetmap.org/tags/meta/">questions tagged META</a>, some features could be enabled, tags could be unified. And, most importantly, when someone asks an admin-related question, this question should be answered, the person shouldn't be sent to "probably one's best option --- an IRC channel". Although IRC's are great, a lot of people have never used them and may prefer the Web-style of <a href="http://stackexchange.com">SE</a>-like services.</p>
 <p>So my question is: who administers this site and whether it is possible to contribute?</p>
 <hr />
-Please note that a <a href="https://help.openstreetmap.org/questions/763">question with a closely related title</a> relates unfortunately to a very different issue and was therefore never answered.
+Please note that a <a href="/questions/763">question with a closely related title</a> relates unfortunately to a very different issue and was therefore never answered.
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-admin" rel="tag" title="see questions tagged &#39;admin&#39;">admin</span> <span class="post-tag tag-link-meta" rel="tag" title="see questions tagged &#39;meta&#39;">meta</span>
@@ -67,7 +67,7 @@ Please note that a <a href="https://help.openstreetmap.org/questions/763">questi
 <div id="post-37444-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, if you convert your comment to an answer, I would accept it. And also add a couple of remarks/questions as a comment :) Maybe you can answer one from the beginning: Does this site have an admin role at all? Or is it just a part of the OSM software, and so admins are the same here and there? If the former, I'd like to join to contribute. Sorry, I cannot guess who has an admin role here. At SE, admins are marked with diamonds. Here I haven't seen it.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, if you convert your comment to an answer, I would accept it. And also add a couple of remarks/questions as a comment :) Maybe you can answer one from the beginning: Does this site have an admin role at all? Or is it just a part of the OSM software, and so admins are the same here and there? If the former, I'd like to join to contribute. Sorry, I cannot guess who has an admin role here. At SE, admins are marked with diamonds. Here I haven't seen it.</p>
 </div>
 <div id="comment-37444-info" class="comment-info">
 <span class="comment-age">(08 Oct '14, 23:16)</span> <span class="comment-user userinfo">Kotya</span>

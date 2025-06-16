@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't think there's currently any common or documented tag for this. But I think it would be useful, so I've created a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/social_club">proposal for leisure=social_club</a>.</p>
+<p>I don't think there's currently any common or documented tag for this. But I think it would be useful, so I've created a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/social_club">proposal for leisure=social_club</a>.</p>
 <p>This is currently just a first draft, comments and suggestions welcome.</p>
 </div>
 <div class="answer-controls post-controls">

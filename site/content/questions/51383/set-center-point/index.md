@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-51386-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12521/jatin-patel"></a><a href="http://help.openstreetmap.org/users/12521/jatin-patel">@Jatin Patel</a>: please describe with more words what you are doing. You are developing an own program? Do you use any geo libraries? What is the problem with setting the centre of the map? Or do you mean "get"? Compare your title and text.</p>
+<p><a href="https://help.openstreetmap.org/users/12521/jatin-patel"></a><a href="https://help.openstreetmap.org/users/12521/jatin-patel">@Jatin Patel</a>: please describe with more words what you are doing. You are developing an own program? Do you use any geo libraries? What is the problem with setting the centre of the map? Or do you mean "get"? Compare your title and text.</p>
 </div>
 <div id="comment-51386-info" class="comment-info">
 <span class="comment-age">(13 Aug '16, 11:55)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -113,7 +113,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12521/jatin-patel">@Jatin Patel</a>: I think no one here will be able to help you, unless you better describe your setup. How do you "plot", what is "the map"?</p>
+<p><a href="https://help.openstreetmap.org/users/12521/jatin-patel">@Jatin Patel</a>: I think no one here will be able to help you, unless you better describe your setup. How do you "plot", what is "the map"?</p>
 <p>Guessing: If you use some <a href="https://wiki.openstreetmap.org/wiki/Frameworks#Displaying_interactive_maps">map display framework</a>, you likely need to read its manual to find the appropriate map centre method.</p>
 </div>
 <div id="comment-51388-info" class="comment-info">

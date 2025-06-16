@@ -61,7 +61,7 @@ osqa_accepted = true
 <div id="post-50804-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>What maps they use is irrelevant, IMHO. There was an import based on their data recently? According to the wiki, this was imported in 2010: <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports">http://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports</a></p>
+<p>What maps they use is irrelevant, IMHO. There was an import based on their data recently? According to the wiki, this was imported in 2010: <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports">https://wiki.openstreetmap.org/wiki/Import/Catalogue#One-Time_Imports</a></p>
 <p>Perhaps the data became outdated?</p>
 </div>
 <div id="comment-50804-info" class="comment-info">
@@ -86,7 +86,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>The following areas ; <a href="http://www.openstreetmap.org/#map=14/42.8672/1.1316">http://www.openstreetmap.org/#map=14/42.8672/1.1316</a> <a href="http://www.openstreetmap.org/#map=18/42.88829/0.49839">http://www.openstreetmap.org/#map=18/42.88829/0.49839</a> are marked airfield or airoway, both areas leave no sign of it on the ground's surface. Ive also asked the mapper who has contributed another airfield, <a href="http://www.openstreetmap.org/#map=15/42.7937/0.4583">http://www.openstreetmap.org/#map=15/42.7937/0.4583</a> If he made a survey, but no reaction yet. On all spots there’s no sign of anything or traces of any facility on the surface. And above all the places don’t look ideal for an airfield at all, slopes and trees nearby or only used during wintertime, but there’s no mentioning of it. A helicopter could land there anytime, but no mentioning of it either. Could the trick be hidden in the name Altisurface de Pene de Soulit.</p>
+<p>The following areas ; <a href="https://www.openstreetmap.org/#map=14/42.8672/1.1316">https://www.openstreetmap.org/#map=14/42.8672/1.1316</a> <a href="https://www.openstreetmap.org/#map=18/42.88829/0.49839">https://www.openstreetmap.org/#map=18/42.88829/0.49839</a> are marked airfield or airoway, both areas leave no sign of it on the ground's surface. Ive also asked the mapper who has contributed another airfield, <a href="https://www.openstreetmap.org/#map=15/42.7937/0.4583">https://www.openstreetmap.org/#map=15/42.7937/0.4583</a> If he made a survey, but no reaction yet. On all spots there’s no sign of anything or traces of any facility on the surface. And above all the places don’t look ideal for an airfield at all, slopes and trees nearby or only used during wintertime, but there’s no mentioning of it. A helicopter could land there anytime, but no mentioning of it either. Could the trick be hidden in the name Altisurface de Pene de Soulit.</p>
 </div>
 <div id="comment-50843-info" class="comment-info">
 <span class="comment-age">(11 Jul '16, 22:03)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -164,9 +164,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To address piskvor's comment above first, what map they use is very relevant. In the case of <a href="http://ourairports.com/">http://ourairports.com/</a> the <a href="http://ourairports.com/about.html#credits">credits</a> page lists both Wikipedia and Google Maps. Wikipedia's licence is strictly speaking <a href="https://en.wikipedia.org/wiki/Wikipedia:Copyrights">incompatible</a> with OSM (though it probably wasn't at the time of the ourairports.com import) and Google is <a href="http://wiki.openstreetmap.org/wiki/FAQ#What_images_and_maps_may_I_use_to_make_maps_from.3F">off-limits</a> too.</p>
+<p>To address piskvor's comment above first, what map they use is very relevant. In the case of <a href="http://ourairports.com/">http://ourairports.com/</a> the <a href="http://ourairports.com/about.html#credits">credits</a> page lists both Wikipedia and Google Maps. Wikipedia's licence is strictly speaking <a href="https://en.wikipedia.org/wiki/Wikipedia:Copyrights">incompatible</a> with OSM (though it probably wasn't at the time of the ourairports.com import) and Google is <a href="https://wiki.openstreetmap.org/wiki/FAQ#What_images_and_maps_may_I_use_to_make_maps_from.3F">off-limits</a> too.</p>
 <p>If you see an airport in OSM that doesn't exist on the ground, I'd delete it. "Dodgy airports" is something that I look for if I'm visiting a new area, and if it's clear that what should be a grass strip is actually a cornfield, I'll delete it.</p>
-<p>Whether a redaction of <a href="http://www.openstreetmap.org/changeset/6682943">this changeset</a> and the others is needed is probably something that we need to discuss. In some cases airports added initially from ourairports.com will have been comprehensively remapped from survey, and so shouldn't obviously be deleted (e.g. <a href="http://www.openstreetmap.org/node/1042032756/history">Gamston</a>). Another complication here is that the import looks like it was a bit of a mess - duplicates were imported and then deleted, and "things that are not airfields" such as "places where planes could land in an emergency" such as <a href="https://www.openstreetmap.org/node/1042037271">node 1042037271</a> were also imported.</p>
+<p>Whether a redaction of <a href="https://www.openstreetmap.org/changeset/6682943">this changeset</a> and the others is needed is probably something that we need to discuss. In some cases airports added initially from ourairports.com will have been comprehensively remapped from survey, and so shouldn't obviously be deleted (e.g. <a href="https://www.openstreetmap.org/node/1042032756/history">Gamston</a>). Another complication here is that the import looks like it was a bit of a mess - duplicates were imported and then deleted, and "things that are not airfields" such as "places where planes could land in an emergency" such as <a href="https://www.openstreetmap.org/node/1042037271">node 1042037271</a> were also imported.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,7 +210,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@hendrikklaas</a> , citogenesis:</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@hendrikklaas</a> , citogenesis:</p>
 <p><a href="https://xkcd.com/978/">https://xkcd.com/978/</a></p>
 <p>Wikipedia, the usual culprit, of course has a list:</p>
 <p><a href="https://en.wikipedia.org/wiki/Wikipedia:List_of_citogenesis_incidents">https://en.wikipedia.org/wiki/Wikipedia:List_of_citogenesis_incidents</a></p>

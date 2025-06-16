@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-33212-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The large white island carries ID 3645243/5 outer, <a href="http://www.openstreetmap.org/#map=17/52.48753/4.77726">http://www.openstreetmap.org/#map=17/52.48753/4.77726</a> I wont to change it into for instance 3645243/0 because its the outer rim. But I did not find a method the change it other then remove the group 3645243.</p>
+<p>The large white island carries ID 3645243/5 outer, <a href="https://www.openstreetmap.org/#map=17/52.48753/4.77726">https://www.openstreetmap.org/#map=17/52.48753/4.77726</a> I wont to change it into for instance 3645243/0 because its the outer rim. But I did not find a method the change it other then remove the group 3645243.</p>
 </div>
 <div id="comment-33212-info" class="comment-info">
 <span class="comment-age">(15 May '14, 20:47)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -85,7 +85,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Note that if you're trying to fix why that island isn't rendered with the landuse=grass green, it's because the outer way isn't a closed loop. There's a break at this node: <a href="http://www.openstreetmap.org/node/2784295245">http://www.openstreetmap.org/node/2784295245</a></p>
+<p>Note that if you're trying to fix why that island isn't rendered with the landuse=grass green, it's because the outer way isn't a closed loop. There's a break at this node: <a href="https://www.openstreetmap.org/node/2784295245">https://www.openstreetmap.org/node/2784295245</a></p>
 </div>
 <div id="comment-33215-info" class="comment-info">
 <span class="comment-age">(16 May '14, 00:21)</span> <span class="comment-user userinfo">alester</span>

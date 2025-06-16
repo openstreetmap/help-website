@@ -94,7 +94,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12265/cellington"></a><a href="http://help.openstreetmap.org/users/12265/cellington">@Cellington</a>: just to clarify, our wiki is powered by <span>MediaWiki</span> (not <span>Wikimedia</span> – the organization behind Wikipedia)</p>
+<p><a href="https://help.openstreetmap.org/users/12265/cellington"></a><a href="https://help.openstreetmap.org/users/12265/cellington">@Cellington</a>: just to clarify, our wiki is powered by <span>MediaWiki</span> (not <span>Wikimedia</span> – the organization behind Wikipedia)</p>
 </div>
 <div id="comment-50258-info" class="comment-info">
 <span class="comment-age">(16 Jun '16, 19:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -171,7 +171,7 @@ One Answer:
 <div id="post-50284-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I will give it a go.</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I will give it a go.</p>
 </div>
 <div id="comment-50284-info" class="comment-info">
 <span class="comment-age">(17 Jun '16, 12:52)</span> <span class="comment-user userinfo">Cellington</span>

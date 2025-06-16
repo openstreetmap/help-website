@@ -235,7 +235,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might look at the <a href="http://wiki.openstreetmap.org/wiki/WikiProject_United_States_Long_Distance_Trails">WikiProject US Long Distance Trails</a> page for reference/comparison, and consider adding the Backbone Trail there. Also, it's handy to view the trail relation on the <a href="http://hiking.waymarkedtrails.org/en/">Waymarked Trails</a> map.</p>
+<p>You might look at the <a href="https://wiki.openstreetmap.org/wiki/WikiProject_United_States_Long_Distance_Trails">WikiProject US Long Distance Trails</a> page for reference/comparison, and consider adding the Backbone Trail there. Also, it's handy to view the trail relation on the <a href="http://hiking.waymarkedtrails.org/en/">Waymarked Trails</a> map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -331,8 +331,8 @@ osqa_accepted = false
 <p>Is it really the consensus among US mappers to do this differently than in the rest of the world? If so, is this documented somewhere? If not it might be smart to do so.</p>
 <p>Global standard:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Relation:route">Relation:route</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Walking_Routes">Walking_Routes</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Relation:route">Relation:route</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Walking_Routes">Walking_Routes</a></li>
 </ul>
 </div>
 <div id="comment-19768-info" class="comment-info">

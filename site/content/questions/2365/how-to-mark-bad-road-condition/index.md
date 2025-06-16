@@ -270,7 +270,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I've never heared of designation=* key. I see there is currently proposed feature: <a href="http://wiki.openstreetmap.org/wiki/Key:designation">http://wiki.openstreetmap.org/wiki/Key:designation</a>. Is this it?</p>
+<p>I've never heared of designation=* key. I see there is currently proposed feature: <a href="https://wiki.openstreetmap.org/wiki/Key:designation">https://wiki.openstreetmap.org/wiki/Key:designation</a>. Is this it?</p>
 </div>
 <div id="comment-2378-info" class="comment-info">
 <span class="comment-age">(23 Jan '11, 07:13)</span> <span class="comment-user userinfo">ivanatora</span>
@@ -374,7 +374,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are some additional keys for tagging road conditions such as <a href="http://wiki.openstreetmap.org/wiki/Key:smoothness">smoothness</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/usability">usability</a>, but renderers and probably most routing engines don't support them. You should use them nevertheless, but as already mentioned consider tagging the road as highway=track with an appropriate <a href="http://wiki.openstreetmap.org/wiki/Tracktype">tracktype</a>.</p>
+<p>There are some additional keys for tagging road conditions such as <a href="https://wiki.openstreetmap.org/wiki/Key:smoothness">smoothness</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/usability">usability</a>, but renderers and probably most routing engines don't support them. You should use them nevertheless, but as already mentioned consider tagging the road as highway=track with an appropriate <a href="https://wiki.openstreetmap.org/wiki/Tracktype">tracktype</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

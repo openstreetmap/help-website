@@ -151,7 +151,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Das klingt, als würde dein Flash-Plugin abstürzen. Falls das Problem auch bei der Verwendung anderer Browser (Firefox, Chromium, Opera) weiterhin besteht, kannst du den anderen weit verbreiteten <span>OSM-Editor</span> ausprobieren: <span>JOSM</span></p>
-<p>Hier gibt es eine Anleitung: <a href="http://wiki.openstreetmap.org/wiki/DE:Beginners_Guide_1.3">DE:Beginners_Guide_1.3</a>.</p>
+<p>Hier gibt es eine Anleitung: <a href="https://wiki.openstreetmap.org/wiki/DE:Beginners_Guide_1.3">DE:Beginners_Guide_1.3</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

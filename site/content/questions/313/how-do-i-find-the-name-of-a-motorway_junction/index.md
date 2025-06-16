@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-63388-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>related Q <a href="https://help.openstreetmap.org/questions/63387/mapping-junction-numbers">https://help.openstreetmap.org/questions/63387/mapping-junction-numbers</a></p>
+<p>related Q <a href="/questions/63387/mapping-junction-numbers">https://help.openstreetmap.org/questions/63387/mapping-junction-numbers</a></p>
 </div>
 <div id="comment-63388-info" class="comment-info">
 <span class="comment-age">(09 May '18, 05:44)</span> <span class="comment-user userinfo">andy mackey</span>

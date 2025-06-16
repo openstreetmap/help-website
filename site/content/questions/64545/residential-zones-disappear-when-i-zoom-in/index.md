@@ -114,7 +114,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Rendering of the higher zoom tiles seems to have simply hadn't happened it seems or you had cached old images, refresh your browser and you should see the new images.</p>
-<p>See <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>See <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

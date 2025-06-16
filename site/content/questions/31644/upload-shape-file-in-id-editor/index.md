@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM has it's own datamodel and isn't compatible with default GIS formats out-of-the-box. Esp. the iD editor is very limited to make OSM editing for new users very easy. AFAIK it doesn't offer shapefile import.</p>
-<p>What you can do is to <a href="http://wiki.openstreetmap.org/wiki/Shapefile">convert/import your shapefile</a> to an OSM structure, edit it with JOSM and convert the OSM XML back to shapefile.</p>
+<p>What you can do is to <a href="https://wiki.openstreetmap.org/wiki/Shapefile">convert/import your shapefile</a> to an OSM structure, edit it with JOSM and convert the OSM XML back to shapefile.</p>
 <p>Personally I would recommend to use QGIS or OpenJUMP to work directly with your shapefile and avoid OSM editors (if you don't have very good reasons to use them).</p>
 </div>
 <div class="answer-controls post-controls">

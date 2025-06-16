@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>osmdroid provides an almost drop-in replacement for the default Google maps services: <a href="http://wiki.openstreetmap.org/wiki/Osmdroid">http://wiki.openstreetmap.org/wiki/Osmdroid</a></p>
+<p>osmdroid provides an almost drop-in replacement for the default Google maps services: <a href="https://wiki.openstreetmap.org/wiki/Osmdroid">https://wiki.openstreetmap.org/wiki/Osmdroid</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

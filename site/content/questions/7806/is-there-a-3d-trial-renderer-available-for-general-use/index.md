@@ -117,10 +117,10 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I have no idea what a "trial" renderer is, but I know a few 3D renderers:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Czechia/OpenK%C3%BDbl3DMap">OpenKýbl3DMap</a> (<a href="http://osm.kyblsoft.cz/3dmapa">web</a>) converts OSM data to .pov files which can be rendered by <a href="http://www.povray.org/">POVRay</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/WikiProject_Czechia/OpenK%C3%BDbl3DMap">OpenKýbl3DMap</a> (<a href="http://osm.kyblsoft.cz/3dmapa">web</a>) converts OSM data to .pov files which can be rendered by <a href="http://www.povray.org/">POVRay</a></li>
 <li><a href="http://wiki.openstreetmap.or">OSM2World</a> (<a href="http://osm2world.org">web</a>) converts OSM data to .pov files, .obj files (for modellers like <a href="http://www.blender.org/">Blender</a>), or renders .png files directly through OpenGL</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Glosm">Glosm</a> is a hardware-accelerated OpenGL-based viewer/renderer</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OSM-3D">OSM-3D</a> (<a href="http://www.osm-3d.org/map.htm">web</a>) is an interactive virtual globe. The viewer and protocol documentation are freely avaliable, but afaik the backend is not.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Glosm">Glosm</a> is a hardware-accelerated OpenGL-based viewer/renderer</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSM-3D">OSM-3D</a> (<a href="http://www.osm-3d.org/map.htm">web</a>) is an interactive virtual globe. The viewer and protocol documentation are freely avaliable, but afaik the backend is not.</li>
 <li>OSM2XP (<a href="http://osm2xp.com/">web</a>) creates scenery for the commercial flight simulator XPlane</li>
 </ul>
 </div>
@@ -225,7 +225,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki has a <a href="http://wiki.openstreetmap.org/wiki/Renderers#3D_Rendering">list of renderers</a>, there are also two 3D renderers mentioned.</p>
+<p>The wiki has a <a href="https://wiki.openstreetmap.org/wiki/Renderers#3D_Rendering">list of renderers</a>, there are also two 3D renderers mentioned.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -197,7 +197,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/McCormickCountyNearGC4FGeocache.jpg" alt="Modoc GeoCache - GC4F - McCormick County" /></p>
+<p><img src="/upfiles/McCormickCountyNearGC4FGeocache.jpg" alt="Modoc GeoCache - GC4F - McCormick County" /></p>
 <p>First, this is a new area of exposure for us, thus we are reluctant to undertake any changes without the direct oversight by an experienced OSM member. You may infer that we are not confident that the boundaries are inaccurate, only that we are unable to reconcile our TIGER download and plot against what we are finding on this site.</p>
 <p>The issue arises in connection with GeoCaching and, in particular, the location of South Carolina's oldest geocache, Modoc, GC4F, shown by a "pin" on the attached Google Earth Pro/TIGER plot. The TIGER data shows the county demarcation closely following the creek and squarely placing the subject GC4F cache in McCormick County.</p>
 <p>Your further elucidation and suggestions are greatly appreciated.</p>

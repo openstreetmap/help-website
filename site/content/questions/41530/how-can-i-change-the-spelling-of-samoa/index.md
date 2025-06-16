@@ -109,8 +109,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For Samoa the name is set twice: There is a <a href="http://www.openstreetmap.org/node/1529444079">node</a> for the label and there is a <a href="http://www.openstreetmap.org/relation/1872673">relation</a> for the country. So you should probably adjust the name for both. If you open the node for editing the editor should show a link to the relation.</p>
-<p>Please be aware that countries have a lot of localized names defined. Most towns will not have that many tags. The wiki page <a href="http://wiki.openstreetmap.org/wiki/Names">Names</a> has a explanation of the different tags. For example there probably should be an additonal 'name:sm' tag for the name in Samoan.</p>
+<p>For Samoa the name is set twice: There is a <a href="https://www.openstreetmap.org/node/1529444079">node</a> for the label and there is a <a href="https://www.openstreetmap.org/relation/1872673">relation</a> for the country. So you should probably adjust the name for both. If you open the node for editing the editor should show a link to the relation.</p>
+<p>Please be aware that countries have a lot of localized names defined. Most towns will not have that many tags. The wiki page <a href="https://wiki.openstreetmap.org/wiki/Names">Names</a> has a explanation of the different tags. For example there probably should be an additonal 'name:sm' tag for the name in Samoan.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

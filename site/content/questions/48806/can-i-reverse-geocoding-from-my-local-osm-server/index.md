@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You will have to set up a Nominatim server for address search and reverse geocoding. Check out <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> for detailed instructions.</p>
+<p>You will have to set up a Nominatim server for address search and reverse geocoding. Check out <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> for detailed instructions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

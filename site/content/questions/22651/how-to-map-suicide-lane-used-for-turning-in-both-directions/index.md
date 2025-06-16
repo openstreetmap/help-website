@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Look at this <a href="http://www.openstreetmap.org/?lat=45.772782&amp;lon=-108.521879&amp;zoom=18&amp;layers=M">example</a> there are two lanes in both directions and one middle lane in the middle which serves for cars turning left in both directions (the best is to look at the Aerial background to understand the situation). Currently each direction has its own way, which is good, but it makes it somehow difficult to map the middle lane.</p>
+<p>Look at this <a href="https://www.openstreetmap.org/?lat=45.772782&amp;lon=-108.521879&amp;zoom=18&amp;layers=M">example</a> there are two lanes in both directions and one middle lane in the middle which serves for cars turning left in both directions (the best is to look at the Aerial background to understand the situation). Currently each direction has its own way, which is good, but it makes it somehow difficult to map the middle lane.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-leftover" rel="tag" title="see questions tagged &#39;leftover&#39;">leftover</span> <span class="post-tag tag-link-lanes" rel="tag" title="see questions tagged &#39;lanes&#39;">lanes</span> <span class="post-tag tag-link-turnlanes" rel="tag" title="see questions tagged &#39;turnlanes&#39;">turnlanes</span>
@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-22698-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/upfiles/zzzzzz_turns_2.JPG">screenshot</a> - in answer to your comment gorn these are the arrows that don't match the junctions.</p>
+<p><span>screenshot</span> - in answer to your comment gorn these are the arrows that don't match the junctions.</p>
 </div>
 <div id="comment-22698-info" class="comment-info">
 <span class="comment-age">(23 May '13, 14:39)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -192,7 +192,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try something like <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/lanes_General_Extension/ProposalPreVoting#Center.2Fmedian_turn_lanes">this</a> ???</p>
+<p>Try something like <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/lanes_General_Extension/ProposalPreVoting#Center.2Fmedian_turn_lanes">this</a> ???</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -415,7 +415,7 @@ osqa_accepted = false
 <div id="post-22673-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>is this wrong then <a href="http://www.openstreetmap.org/?lat=52.12167&amp;lon=-0.295907&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.12167&amp;lon=-0.295907&amp;zoom=18&amp;layers=M</a></p>
+<p>is this wrong then <a href="https://www.openstreetmap.org/?lat=52.12167&amp;lon=-0.295907&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.12167&amp;lon=-0.295907&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-22673-info" class="comment-info">
 <span class="comment-age">(23 May '13, 11:17)</span> <span class="comment-user userinfo">andy mackey</span>

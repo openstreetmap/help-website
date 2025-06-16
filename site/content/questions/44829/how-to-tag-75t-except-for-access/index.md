@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I checked a section of road and the signage today after a query about it. The sign restricts trucks over 7.5 Ton except for access. How should I tag this?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Papworth_Everard_small.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Papworth_Everard_small.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-exception" rel="tag" title="see questions tagged &#39;exception&#39;">exception</span> <span class="post-tag tag-link-with" rel="tag" title="see questions tagged &#39;with&#39;">with</span> <span class="post-tag tag-link-retricted" rel="tag" title="see questions tagged &#39;retricted&#39;">retricted</span> <span class="post-tag tag-link-an" rel="tag" title="see questions tagged &#39;an&#39;">an</span>
@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tag the general <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> as usual, and then add a <a href="http://wiki.openstreetmap.org/wiki/Key:conditional">conditional restriction</a> such as <em>access:conditional=destination @ (weight &gt; 7.5)</em>.</p>
+<p>Tag the general <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> as usual, and then add a <a href="https://wiki.openstreetmap.org/wiki/Key:conditional">conditional restriction</a> such as <em>access:conditional=destination @ (weight &gt; 7.5)</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

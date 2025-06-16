@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-47873-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>, I really recommend doing the walkthrough in the iD editor if you haven't. It's quick and does a great job of giving you the basics of how to edit OSM with it.</p>
+<p><a href="https://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>, I really recommend doing the walkthrough in the iD editor if you haven't. It's quick and does a great job of giving you the basics of how to edit OSM with it.</p>
 </div>
 <div id="comment-47873-info" class="comment-info">
 <span class="comment-age">(03 Feb '16, 14:52)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -200,7 +200,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>When I click the Edit button, the map switches to an aerial photograph for some reason and the little brown point (which I want to move) has disappeared!</p>
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> - yes, I know for a fact that the point is in the wrong location. It is one street over.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> - yes, I know for a fact that the point is in the wrong location. It is one street over.</p>
 </div>
 <div id="comment-47854-info" class="comment-info">
 <span class="comment-age">(03 Feb '16, 11:16)</span> <span class="comment-user userinfo">Stuart T</span>
@@ -211,7 +211,7 @@ osqa_accepted = false
 <div id="post-47857-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: the aerial background is just a supporting background which you <em>can</em> (but not must) use for your edits. Could you please provide a link to the location where the "brown point" is? Just move the map to the right place, zoom in as much as possible and copy and paste the URL.</p>
+<p><a href="https://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: the aerial background is just a supporting background which you <em>can</em> (but not must) use for your edits. Could you please provide a link to the location where the "brown point" is? Just move the map to the right place, zoom in as much as possible and copy and paste the URL.</p>
 </div>
 <div id="comment-47857-info" class="comment-info">
 <span class="comment-age">(03 Feb '16, 11:30)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -233,7 +233,7 @@ osqa_accepted = false
 <div id="post-47866-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: okay, if you want to move an object it really should be moved (instead of deleted and re-created) since this preserves the object's history in our database. (Discussion to be <a href="https://help.openstreetmap.org/questions/47816/how-do-i-name-a-point-i-have-just-added">continued</a>)</p>
+<p><a href="https://help.openstreetmap.org/users/11938/stuart-t">@Stuart T</a>: okay, if you want to move an object it really should be moved (instead of deleted and re-created) since this preserves the object's history in our database. (Discussion to be <a href="/questions/47816/how-do-i-name-a-point-i-have-just-added">continued</a>)</p>
 </div>
 <div id="comment-47866-info" class="comment-info">
 <span class="comment-age">(03 Feb '16, 12:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I don't understand the problem. If the roads inside the cemetary are properly mapped then routing engines should work as expected, e.g. in this case: <a href="http://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.6659%2C-122.4561%3B37.6680%2C-122.4588">http://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.6659%2C-122.4561%3B37.6680%2C-122.4588</a></p>
+<p>I don't understand the problem. If the roads inside the cemetary are properly mapped then routing engines should work as expected, e.g. in this case: <a href="https://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.6659%2C-122.4561%3B37.6680%2C-122.4588">https://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.6659%2C-122.4561%3B37.6680%2C-122.4588</a></p>
 </div>
 <div id="comment-57017-info" class="comment-info">
 <span class="comment-age">(11 Jul '17, 18:53)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -74,7 +74,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Presumably routes like <a href="http://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.66590%2C-122.45610%3B37.66701%2C-122.45955#map=17/37.66615/-122.45796">http://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.66590%2C-122.45610%3B37.66701%2C-122.45955#map=17/37.66615/-122.45796</a> are the issue.</p>
+<p>Presumably routes like <a href="https://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.66590%2C-122.45610%3B37.66701%2C-122.45955#map=17/37.66615/-122.45796">https://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=37.66590%2C-122.45610%3B37.66701%2C-122.45955#map=17/37.66615/-122.45796</a> are the issue.</p>
 <p>The general purpose routing engines on OSM.org won't account for a barrier or wall that isn't connected to a highway that is a possible route. They tend to be car focused on don't focus on pedestrian convenience at the end of the route.</p>
 <p>Such questions also come up when routing to a school or something like that where there is no established way to hint where in the school grounds would be the best place to stop a vehicle.</p>
 </div>

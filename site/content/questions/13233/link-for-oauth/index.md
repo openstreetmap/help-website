@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Link for OAuth"
-description = '''In http://wiki.openstreetmap.org/wiki/OAuth under section &quot;Registering your application as OAuth consumer&quot; it says,  &quot;Scroll to the bottom of your preferences page Click on View my OAuth details&quot;  I can&#x27;t find such place when when I logged in.  I also not clear about &quot;you register your application (...'''
+description = '''In https://wiki.openstreetmap.org/wiki/OAuth under section &quot;Registering your application as OAuth consumer&quot; it says,  &quot;Scroll to the bottom of your preferences page Click on View my OAuth details&quot;  I can&#x27;t find such place when when I logged in.  I also not clear about &quot;you register your application (...'''
 date = "2012-06-03T19:11:00Z"
 lastmod = "2012-06-04T13:27:00Z"
 weight = 13233
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In <a href="http://wiki.openstreetmap.org/wiki/OAuth">http://wiki.openstreetmap.org/wiki/OAuth</a> under section "Registering your application as OAuth consumer" it says, "Scroll to the bottom of your preferences page Click on View my OAuth details" I can't find such place when when I logged in.</p>
+<p>In <a href="https://wiki.openstreetmap.org/wiki/OAuth">https://wiki.openstreetmap.org/wiki/OAuth</a> under section "Registering your application as OAuth consumer" it says, "Scroll to the bottom of your preferences page Click on View my OAuth details" I can't find such place when when I logged in.</p>
 <p>I also not clear about "you register your application (consumer) and supply CONSUMER_KEY + CONSUMER_SECRET into it" step.</p>
 <p>I need a help to solve this conflicting thing, pls</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This have changed in the recent redesigns of the web pages. The OAuth setting is now linked from the user page. I have changed the wiki page to link directly to the <a href="http://www.openstreetmap.org/user/username/oauth_clients/new">correct page</a>.</p>
+<p>This have changed in the recent redesigns of the web pages. The OAuth setting is now linked from the user page. I have changed the wiki page to link directly to the <a href="https://www.openstreetmap.org/user/username/oauth_clients/new">correct page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

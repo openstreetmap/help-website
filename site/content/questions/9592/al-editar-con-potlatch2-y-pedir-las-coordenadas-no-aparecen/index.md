@@ -143,7 +143,7 @@ One Answer:
 <li>Double-click the node number that is shown at the top left</li>
 <li>A "browse node" window will appear like this one:</li>
 </ul>
-<p><a href="http://www.openstreetmap.org/browse/node/123456">http://www.openstreetmap.org/browse/node/123456</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/123456">https://www.openstreetmap.org/browse/node/123456</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

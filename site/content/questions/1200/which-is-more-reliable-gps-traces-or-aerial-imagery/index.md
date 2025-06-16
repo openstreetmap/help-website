@@ -95,7 +95,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>There is a page on accuracy problems in the Wiki: <a href="http://wiki.openstreetmap.org/wiki/Accuracy">http://wiki.openstreetmap.org/wiki/Accuracy</a> That may partially answer your question.</p>
+<p>There is a page on accuracy problems in the Wiki: <a href="https://wiki.openstreetmap.org/wiki/Accuracy">https://wiki.openstreetmap.org/wiki/Accuracy</a> That may partially answer your question.</p>
 </div>
 <div id="comment-3642-info" class="comment-info">
 <span class="comment-age">(08 Mar '11, 11:57)</span> <span class="comment-user userinfo">sleske</span>
@@ -107,7 +107,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Another interesting page might be <a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">http://wiki.openstreetmap.org/wiki/True_Offset_Process</a></p>
+<p>Another interesting page might be <a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">https://wiki.openstreetmap.org/wiki/True_Offset_Process</a></p>
 </div>
 <div id="comment-4374-info" class="comment-info">
 <span class="comment-age">(11 Apr '11, 01:27)</span> <span class="comment-user userinfo">sleske</span>
@@ -576,8 +576,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki page on <a href="http://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery/Accuracy">Yahoo! Aerial Imagery/Accuracy</a>, should answer your question.</p>
-<p><em>"If you think you've discovered an area where yahoo imagery is offset from reality, please bear in mind first of all that it's actually far more likely that your GPS trace is wrong!" ...<a href="http://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery/Accuracy">read more</a></em></p>
+<p>The wiki page on <a href="https://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery/Accuracy">Yahoo! Aerial Imagery/Accuracy</a>, should answer your question.</p>
+<p><em>"If you think you've discovered an area where yahoo imagery is offset from reality, please bear in mind first of all that it's actually far more likely that your GPS trace is wrong!" ...<a href="https://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery/Accuracy">read more</a></em></p>
 <p>This page also has a section where we can list examples of Yahoo! imagery inaccuracy. So far not many. Please edit the page to add examples. This might help us get a more concrete feel the extent of inaccuracy.</p>
 </div>
 <div class="answer-controls post-controls">

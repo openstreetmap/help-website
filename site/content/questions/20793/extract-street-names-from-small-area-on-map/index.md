@@ -109,7 +109,7 @@ One Answer:
 <p>You'll get that with a query like</p>
 <pre><code>way   [&quot;highway&quot;][&quot;name&quot;]({{bbox}});
 (._;&gt;;);out;</code></pre>
-<p>Find a reference of the language used for querying overpass api at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></p>
+<p>Find a reference of the language used for querying overpass api at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></p>
 <p>If you want to draw the streets overlain on your photo, you'll probably be best off with e.g. Quantum GIS/ArcGIS as a tool. Quality of the result will depend on how good the georeferencing of your photo is.</p>
 <p>This will be quite difficult if you don't have any background in GIS.</p>
 </div>

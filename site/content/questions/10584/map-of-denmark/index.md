@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to export a map from tiles services as you can see on the main map layer <a href="http://osm.org">osm.org</a>, see this <a href="http://help.openstreetmap.org/questions/10385/download-highres-map-from-country/10390">previous answer</a>.</p>
+<p>If you want to export a map from tiles services as you can see on the main map layer <a href="http://osm.org">osm.org</a>, see this <a href="/questions/10385/download-highres-map-from-country/10390">previous answer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

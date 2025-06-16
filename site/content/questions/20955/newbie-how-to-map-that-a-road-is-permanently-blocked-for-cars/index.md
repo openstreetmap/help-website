@@ -116,7 +116,7 @@ Jesper Carstensen</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>Most probably you want to use motor_vehicle=no<br />
-For more details, see <a href="http://wiki.openstreetmap.org/wiki/Access">Access in the wiki</a><br />
+For more details, see <a href="https://wiki.openstreetmap.org/wiki/Access">Access in the wiki</a><br />
 </p>
 <p>hth<br />
 malenki</p>
@@ -169,7 +169,7 @@ malenki</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the map page click on documentation and in the search box type beginners guide. I would suggest using the potlatch2 when editing. There are some videos on editing again search for these as well. This link is about the roads that have restricted access <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p>On the map page click on documentation and in the search box type beginners guide. I would suggest using the potlatch2 when editing. There are some videos on editing again search for these as well. This link is about the roads that have restricted access <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

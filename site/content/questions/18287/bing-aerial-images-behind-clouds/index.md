@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Look at this <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=37.46811&amp;lon=57.33606&amp;zoom=16">area</a> in potlatch2 with Bing Aerial Images as background. As you see part of city is behind the clouds! Is there a way to report this or make a request for update? Thanks.</p>
+<p>Look at this <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=37.46811&amp;lon=57.33606&amp;zoom=16">area</a> in potlatch2 with Bing Aerial Images as background. As you see part of city is behind the clouds! Is there a way to report this or make a request for update? Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a wiki page <a href="http://wiki.openstreetmap.org/wiki/Bing/Priorities">here</a> that explains part of the story. You could try adding your city to that list.</p>
+<p>There's a wiki page <a href="https://wiki.openstreetmap.org/wiki/Bing/Priorities">here</a> that explains part of the story. You could try adding your city to that list.</p>
 <p>Whether Bing are actually in a position to process any of these requests I have no idea though; they're a commercial entity with their own commercial priorities.</p>
 </div>
 <div class="answer-controls post-controls">

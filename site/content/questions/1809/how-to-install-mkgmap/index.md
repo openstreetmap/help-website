@@ -109,7 +109,7 @@ osqa_accepted = false
 <pre><code>java -jar  mkgmap.jar</code></pre>
 <p>This command won't actually do anything, except output details of how to use Mkgmap. To actually generate a Garmin map, you will have to specify an input file, and probably some other options, depending on what you want to do. eg something like this will generate a map, with routing enabled, and a tdb file for Mapsource:</p>
 <pre><code>java -ea -jar mkgmap.jar --tdbfile --route data.osm</code></pre>
-<p>There is more details of how to use Mkgmap, and all of the available options, on the <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap wiki page</a>.</p>
+<p>There is more details of how to use Mkgmap, and all of the available options, on the <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It seems every time I find a Masonic Lodge (dedicated building) I can't remember how I tagged them previously. I've just searched and found two discussions I had on IRC and also this question. And, since this question was first asked and I last searched, there is now the option of <a href="http://wiki.openstreetmap.org/wiki/Key:club">club=freemasonry</a> on the wiki (which as I'm mapping the building as an area I'll add as well as a building tag). As I type there are no uses of club=freemasonry in the UK and only 2 in the whole database (according to <a href="http://taginfo.openstreetmap.org/search?q=freemasonry#values">Taginfo</a>), however I'm about to use it on the Masonic Lodge I'm currently mapping and the 2 I can remember mapping previously.</p>
+<p>It seems every time I find a Masonic Lodge (dedicated building) I can't remember how I tagged them previously. I've just searched and found two discussions I had on IRC and also this question. And, since this question was first asked and I last searched, there is now the option of <a href="https://wiki.openstreetmap.org/wiki/Key:club">club=freemasonry</a> on the wiki (which as I'm mapping the building as an area I'll add as well as a building tag). As I type there are no uses of club=freemasonry in the UK and only 2 in the whole database (according to <a href="http://taginfo.openstreetmap.org/search?q=freemasonry#values">Taginfo</a>), however I'm about to use it on the Masonic Lodge I'm currently mapping and the 2 I can remember mapping previously.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

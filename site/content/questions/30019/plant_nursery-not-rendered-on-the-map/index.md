@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "plant_nursery not rendered on the map"
-description = '''Hello, At this point: http://www.openstreetmap.org/#map=17/38.15330/-4.05164 I have some areas tagged with landuse=plant_nursery. According to the features-wiki this should be rendered with a color different than white but it isn&#x27;t. Any explanation? Marc.'''
+description = '''Hello, At this point: https://www.openstreetmap.org/#map=17/38.15330/-4.05164 I have some areas tagged with landuse=plant_nursery. According to the features-wiki this should be rendered with a color different than white but it isn&#x27;t. Any explanation? Marc.'''
 date = "2014-01-20T14:06:00Z"
 lastmod = "2014-01-20T21:25:00Z"
 weight = 30019
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>At this point: <a href="http://www.openstreetmap.org/#map=17/38.15330/-4.05164">http://www.openstreetmap.org/#map=17/38.15330/-4.05164</a></p>
+<p>At this point: <a href="https://www.openstreetmap.org/#map=17/38.15330/-4.05164">https://www.openstreetmap.org/#map=17/38.15330/-4.05164</a></p>
 <p>I have some areas tagged with landuse=plant_nursery.</p>
 <p>According to the features-wiki this should be rendered with a color different than white but it isn't. Any explanation? Marc.</p>
 </div>
@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't think the default rendering has ever rendered plant nursery (certainly not since I first mapped one). The no longer existing Osmarender layer might have done. The image on the wiki, if you look back to the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Plant_nursery">original proposal</a> is just a suggested rendering. Every stylesheet can make their own decision, and currently I'm fairly sure it just isn't rendered on the default layer at osm.org.</p>
+<p>I don't think the default rendering has ever rendered plant nursery (certainly not since I first mapped one). The no longer existing Osmarender layer might have done. The image on the wiki, if you look back to the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Plant_nursery">original proposal</a> is just a suggested rendering. Every stylesheet can make their own decision, and currently I'm fairly sure it just isn't rendered on the default layer at osm.org.</p>
 <p>I just checked and it has been a wish list item since probably <a href="https://trac.openstreetmap.org/ticket/3664">this ticket</a>, and is still an issue according to <a href="https://trac.openstreetmap.org/ticket/4493">this duplicate</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -163,7 +163,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The explanation is that the <a href="http://wiki.osm.org/wiki/Proposed_features/Plant_nursery">wiki page</a> is just a suggestion to renderers of how items might be rendered. Editing a wiki page is easy; creating a map style that reflects lots of conflicting requirements is hard, which is why the former gets done more than the latter.</p>
 <p>The stylesheet used by the "standard" style on OpenStreetMap.org is <a href="http://wiki.osm.org/wiki/Proposed_features/Plant_nursery">here</a>. I can't see any reference to "plant_nursery" in it, so the place to start if you think that the standard map ought to render it is at the <a href="https://github.com/gravitystorm/openstreetmap-carto/issues?state=open">issues list there</a>. Unfortunately, because there are an infinite number of possible tags, every feature can't be displayed and still have the map look legible, so not every "please can the standard map render X" request can be accommodated.</p>
-<p>Of course, if you want to create a map yourself that renders plant_nursery, you can, by modifying the style file (perhaps using something like <a href="https://www.mapbox.com/tilemill/">TileMill</a> to help), or if 15,000 lines of XML is scary and you're happy with plant nurseries looking like some existing feature, then you could take <a href="https://help.openstreetmap.org/questions/28465/osm2pqsql-and-lua">this approach</a>.</p>
+<p>Of course, if you want to create a map yourself that renders plant_nursery, you can, by modifying the style file (perhaps using something like <a href="https://www.mapbox.com/tilemill/">TileMill</a> to help), or if 15,000 lines of XML is scary and you're happy with plant nurseries looking like some existing feature, then you could take <a href="/questions/28465/osm2pqsql-and-lua">this approach</a>.</p>
 <p>Someone may, of course, have already done this. May try asking people who've mapped "plant_nursery", or the proposer of the wiki page?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -229,7 +229,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Marc welcome, as you could read in the WIKI as well, the image is the result of our (your) work and the renderer. The rendering is out of our hands, dont tag for the renderer, please read these pages as well <a href="http://wiki.openstreetmap.org/wiki/Rendering_maps.">http://wiki.openstreetmap.org/wiki/Rendering_maps.</a> If the nurserys are part of a complex, you could join them all together in multypoligones.</p>
+<p>Marc welcome, as you could read in the WIKI as well, the image is the result of our (your) work and the renderer. The rendering is out of our hands, dont tag for the renderer, please read these pages as well <a href="https://wiki.openstreetmap.org/wiki/Rendering_maps.">https://wiki.openstreetmap.org/wiki/Rendering_maps.</a> If the nurserys are part of a complex, you could join them all together in multypoligones.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -249,7 +249,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Thank you for that answer. I did read the page you pointed me to, but I'm not tagging for the renderer but for the map to show faithfully what is "on the ground". I probably don't understand the rules/backgrounds of rendering. When I tag some piece of land as "orchard" or "forest" it shows up on the basic OSM map with different colors withing seconds after I made the change. If I follow this:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_Features#Landuse">http://wiki.openstreetmap.org/wiki/Map_Features#Landuse</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_Features#Landuse">https://wiki.openstreetmap.org/wiki/Map_Features#Landuse</a></p>
 <p>my understanding is that if I tag according to what is in the <strong>value</strong> column, the map should show what is in the <strong>rendering</strong> column. This indeed happens with "orchard", "basin", "forest", resedential" and many others. Why then not with "plant_nursery"?</p>
 <p>Thanks for helping me any further with this,</p>
 <p>Marc.</p>

@@ -134,7 +134,7 @@ One Answer:
 <p>Warnings are of suspicious looking items, it's generally a good idea to check these carefully to make sure you haven't made a mistake. If everything looks OK then you should be OK to upload.</p>
 <p>In the case you mentioned I would think your edits are fine, I think the building:part=* tag isn't something the JOSM developers expected when they wrote the Validator.</p>
 <p>More information on the validator can be found at the link below.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Validator">http://wiki.openstreetmap.org/wiki/JOSM/Validator</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Validator">https://wiki.openstreetmap.org/wiki/JOSM/Validator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

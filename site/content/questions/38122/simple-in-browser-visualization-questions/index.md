@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-38124-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9924/gregsharp"></a><a href="http://help.openstreetmap.org/users/9924/gregsharp">@gregsharp</a>: could you please tell us your intention/purpose? Do you want to contribute to OSM or do you just want to show whatever data (to yourself or to others)? Which data? That may help to know.</p>
+<p><a href="https://help.openstreetmap.org/users/9924/gregsharp"></a><a href="https://help.openstreetmap.org/users/9924/gregsharp">@gregsharp</a>: could you please tell us your intention/purpose? Do you want to contribute to OSM or do you just want to show whatever data (to yourself or to others)? Which data? That may help to know.</p>
 </div>
 <div id="comment-38124-info" class="comment-info">
 <span class="comment-age">(30 Oct '14, 16:31)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -139,7 +139,7 @@ One Answer:
 <blockquote>
 <p>In viewing mode (i.e. before clicking edit button), is it possible to show data overlaid on satellite?</p>
 </blockquote>
-<p>No, at least not on the standard map shown on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> . If you implement your own map, you can do a lot more, of course.</p>
+<p>No, at least not on the standard map shown on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> . If you implement your own map, you can do a lot more, of course.</p>
 <blockquote>
 <p>In editing mode, is it possible to hide the data and see only satellite? Sometimes the roads cover up too much of the satellite photo and I can't see what is underneath.</p>
 </blockquote>
@@ -166,7 +166,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Thank you Sleske. Very helpful. I did not see the feature in Potlach2, but I'm not sure I fully understood. Therefore I will keep trying.</p>
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, Yes, I was trying to edit. That is why I wanted to go back and forth between the two views.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, Yes, I was trying to edit. That is why I wanted to go back and forth between the two views.</p>
 </div>
 <div id="comment-38194-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 20:59)</span> <span class="comment-user userinfo">gregsharp</span>
@@ -178,7 +178,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9924/gregsharp">@gregsharp</a>: just add more comments if you are not sure and want more explanation on this topic.</p>
+<p><a href="https://help.openstreetmap.org/users/9924/gregsharp">@gregsharp</a>: just add more comments if you are not sure and want more explanation on this topic.</p>
 </div>
 <div id="comment-38195-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 21:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

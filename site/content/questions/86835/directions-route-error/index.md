@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-86855-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/Apple_Maps_(correct_route).jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/Apple_Maps_(correct_route).jpeg" alt="alt text" /></p>
 </div>
 <div id="comment-86855-info" class="comment-info">
 <span class="comment-age">(02 Mar '23, 18:20)</span> <span class="comment-user userinfo">The Ranch at...</span>

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>When an institution moves to another building arcoss the town, is there a way to directly edit the coordinates of the place marker? I tried to drag the marker, but it was painfully slow, and also it seems the editor tried to load everything I passed over, causing it to eat enormous amounts of memory and eventually crash the browser.</p>
-<p>The answer to <a href="https://help.openstreetmap.org/questions/40342/change-the-location-of-a-object?">https://help.openstreetmap.org/questions/40342/change-the-location-of-a-object?</a> suggests basically just deleting the institution and recreating it at the new location, but I would like to hope there is a better way.</p>
+<p>The answer to <a href="/questions/40342/change-the-location-of-a-object?">https://help.openstreetmap.org/questions/40342/change-the-location-of-a-object?</a> suggests basically just deleting the institution and recreating it at the new location, but I would like to hope there is a better way.</p>
 <p>I'm using the iD editor by default, if this makes a difference.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

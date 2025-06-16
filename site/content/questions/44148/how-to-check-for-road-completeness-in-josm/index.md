@@ -170,7 +170,7 @@ way[highway]&gt;[index=-1] node!:connection{
 <div id="post-45306-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... is that this question <a href="https://help.openstreetmap.org/questions/45305/how-to-overlay-a-grid-in-josm-and-use-the-validator-on-each-individual-square-of-the-grid">https://help.openstreetmap.org/questions/45305/how-to-overlay-a-grid-in-josm-and-use-the-validator-on-each-individual-square-of-the-grid</a> ?</p>
+<p>... is that this question <a href="/questions/45305/how-to-overlay-a-grid-in-josm-and-use-the-validator-on-each-individual-square-of-the-grid">https://help.openstreetmap.org/questions/45305/how-to-overlay-a-grid-in-josm-and-use-the-validator-on-each-individual-square-of-the-grid</a> ?</p>
 </div>
 <div id="comment-45306-info" class="comment-info">
 <span class="comment-age">(16 Sep '15, 21:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

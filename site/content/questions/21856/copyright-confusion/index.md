@@ -249,7 +249,7 @@ osqa_accepted = false
 6
 </div>
 <div class="comment-text">
-<p>We want to reinvent a wheel which everybody is allowed to use anywhere in any way he likes. To do so we must not copy parts from a proprietary, unfree wheel. See also <a href="http://wiki.openstreetmap.org/wiki/Copyright">here</a> and <a href="http://wiki.openstreetmap.org/wiki/About">here</a>.<br />
+<p>We want to reinvent a wheel which everybody is allowed to use anywhere in any way he likes. To do so we must not copy parts from a proprietary, unfree wheel. See also <a href="https://wiki.openstreetmap.org/wiki/Copyright">here</a> and <a href="https://wiki.openstreetmap.org/wiki/About">here</a>.<br />
 (I'd really like to know why quite often people want to contribute to <strong>Open</strong>StreetMaps by coping from copyrighted sources!)</p>
 </div>
 <div id="comment-21912-info" class="comment-info">

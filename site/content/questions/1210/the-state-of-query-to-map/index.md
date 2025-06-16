@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Query-to-map">Query-to-map</a> is not really working for me. Is it still being developed? Are there any alternatives?</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Query-to-map">Query-to-map</a> is not really working for me. Is it still being developed? Are there any alternatives?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-query-to-map" rel="tag" title="see questions tagged &#39;query-to-map&#39;">query-to-map</span> <span class="post-tag tag-link-tag" rel="tag" title="see questions tagged &#39;tag&#39;">tag</span>
@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The wikimedia toolserver with Query-to-map seem work for me.</p>
-<p>Never the less there is other way to query data : - Obtain row data with <a href="http://wiki.openstreetmap.org/wiki/Xapi">Xapi</a> - Use <a href="http://www.openstreetbrowser.org/">OpenStreetBrowser</a> or <a href="http://www.lenz-online.de/cgi-bin/osm/osmpoinit.pl/">osmpoinit</a> for browse</p>
+<p>Never the less there is other way to query data : - Obtain row data with <a href="https://wiki.openstreetmap.org/wiki/Xapi">Xapi</a> - Use <a href="http://www.openstreetbrowser.org/">OpenStreetBrowser</a> or <a href="http://www.lenz-online.de/cgi-bin/osm/osmpoinit.pl/">osmpoinit</a> for browse</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

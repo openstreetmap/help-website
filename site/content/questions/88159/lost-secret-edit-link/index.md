@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-88175-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/80169/umap-secret-edit-link-lost">https://help.openstreetmap.org/questions/80169/umap-secret-edit-link-lost</a></p>
+<p>See also <a href="/questions/80169/umap-secret-edit-link-lost">https://help.openstreetmap.org/questions/80169/umap-secret-edit-link-lost</a></p>
 </div>
 <div id="comment-88175-info" class="comment-info">
 <span class="comment-age">(19 Jan '24, 18:06)</span> <span class="comment-user userinfo">InsertUser</span>

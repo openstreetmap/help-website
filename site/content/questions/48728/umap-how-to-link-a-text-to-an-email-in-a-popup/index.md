@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-48768-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Maybe you should have a look at <a href="http://wiki.openstreetmap.org/wiki/UMap">http://wiki.openstreetmap.org/wiki/UMap</a> -&gt; Feedbak and help ... there is a mailing list where you can ask.</p>
+<p>Maybe you should have a look at <a href="https://wiki.openstreetmap.org/wiki/UMap">https://wiki.openstreetmap.org/wiki/UMap</a> -&gt; Feedbak and help ... there is a mailing list where you can ask.</p>
 </div>
 <div id="comment-48768-info" class="comment-info">
 <span class="comment-age">(21 Mar '16, 19:31)</span> <span class="comment-user userinfo">stephan75</span>

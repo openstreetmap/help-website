@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Adding image and video is out of scope for OpenStreetMap. There are plenty of other sites that host photos/videos/etc geolocalised on an OSM map however (and if your favorite media hosting site isn't using OSM to geolocalize stuff, <a href="http://switch2osm.org/">show them the way</a> :) ). I'm not posting any links as I'm not sure what kind of video you have in mind ?</p>
 <p>Concerning "posting comments", if you are thinking of OSM Notes, they are are actually not intended for discussion, opinion, or private markers : their purpose is to give feedback on the map data. If you can't or don't want to edit the map yourself, add a note so that other contributors can do it for you. A typical example would be a missing shop or oneway restriction.</p>
-<p>It is sometimes hard to figure out what belong in OSM or not. The data must be <em>factual</em> (as opposed to subjective), <em>discreete</em> (as opposed to continuous), and <a href="http://www.openstreetmap.org/copyright">licence-compatible</a>. Some would add <em>parseable</em>, and <em>useful</em>, but that in itself is subjective. Remember that OSM is a tool, not a one-stop do-it-all website.</p>
+<p>It is sometimes hard to figure out what belong in OSM or not. The data must be <em>factual</em> (as opposed to subjective), <em>discreete</em> (as opposed to continuous), and <a href="https://www.openstreetmap.org/copyright">licence-compatible</a>. Some would add <em>parseable</em>, and <em>useful</em>, but that in itself is subjective. Remember that OSM is a tool, not a one-stop do-it-all website.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -149,7 +149,7 @@ osqa_accepted = false
 <div id="post-27298-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It sounds like the events that you're talking about are (hopefully) of a relatively short-term nature - the answers to <a href="https://help.openstreetmap.org/questions/27199/offshore-military-exercises-and-oil-surveys">this previous question</a> may help (and see also <a href="http://www.reddit.com/r/openstreetmap/comments/1oj42b/seeking_help_with_osm_and_leaflet/">here</a>).</p>
+<p>It sounds like the events that you're talking about are (hopefully) of a relatively short-term nature - the answers to <a href="/questions/27199/offshore-military-exercises-and-oil-surveys">this previous question</a> may help (and see also <a href="http://www.reddit.com/r/openstreetmap/comments/1oj42b/seeking_help_with_osm_and_leaflet/">here</a>).</p>
 </div>
 <div id="comment-27298-info" class="comment-info">
 <span class="comment-age">(18 Oct '13, 10:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

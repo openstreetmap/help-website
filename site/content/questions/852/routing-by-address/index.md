@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>OpenStreetMap's <a href="http://nominatim.openstreetmap.org/">Nominatim</a> search function is excellent at street-level addressing. However, OpenStreetMap does not have consistent good house address data, and sadly, even the cleverest routing algorithm in the world can't find 57 Frog Street if no-one has tagged Frog Street with house numbers in OSM.</p>
 <p>So if you want a complete addressing solution, you're better off looking elsewhere. The well-known Skobbler routing software, for example, uses OpenStreetMap for routing but Google for addressing.</p>
-<p>If, however, you're happy to sacrifice addressing quality, you may consider <a href="http://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a> as offline routing software. Alternatively, CloudMade and MapQuest offer online routing services.</p>
+<p>If, however, you're happy to sacrifice addressing quality, you may consider <a href="https://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a> as offline routing software. Alternatively, CloudMade and MapQuest offer online routing services.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

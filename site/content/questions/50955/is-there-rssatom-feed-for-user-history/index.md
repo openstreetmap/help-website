@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is there RSS/Atom feed for user history?"
-description = '''I&#x27;d like to share my OSM activity and it&#x27;d be nice to do it over RSS/Atom. Where could I get the URL of it? Like http://www.openstreetmap.org/user/&amp;lt;username&amp;gt;/history, but with feed'''
+description = '''I&#x27;d like to share my OSM activity and it&#x27;d be nice to do it over RSS/Atom. Where could I get the URL of it? Like https://www.openstreetmap.org/user/&amp;lt;username&amp;gt;/history, but with feed'''
 date = "2016-07-17T13:55:00Z"
 lastmod = "2016-07-17T15:12:00Z"
 weight = 50955
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'd like to share my OSM activity and it'd be nice to do it over RSS/Atom. Where could I get the URL of it? Like <a href="http://www.openstreetmap.org/user/">http://www.openstreetmap.org/user/</a>&lt;username&gt;/history, but with feed</p>
+<p>I'd like to share my OSM activity and it'd be nice to do it over RSS/Atom. Where could I get the URL of it? Like <a href="https://www.openstreetmap.org/user/">https://www.openstreetmap.org/user/</a>&lt;username&gt;/history, but with feed</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rss" rel="tag" title="see questions tagged &#39;rss&#39;">rss</span> <span class="post-tag tag-link-history" rel="tag" title="see questions tagged &#39;history&#39;">history</span> <span class="post-tag tag-link-activity" rel="tag" title="see questions tagged &#39;activity&#39;">activity</span> <span class="post-tag tag-link-atom" rel="tag" title="see questions tagged &#39;atom&#39;">atom</span>
@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Simply use <a href="http://www.openstreetmap.org/user/">http://www.openstreetmap.org/user/</a>&lt;username&gt;/history/feed :) I think there has been a similar question here already but I couldn't find it.</p>
+<p>Simply use <a href="https://www.openstreetmap.org/user/">https://www.openstreetmap.org/user/</a>&lt;username&gt;/history/feed :) I think there has been a similar question here already but I couldn't find it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

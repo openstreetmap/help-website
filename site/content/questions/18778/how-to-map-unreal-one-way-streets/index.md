@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the end of that street has a no-entry sign on it, then you can make a <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">turn restriction</a> for it.</p>
+<p>If the end of that street has a no-entry sign on it, then you can make a <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">turn restriction</a> for it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -145,8 +145,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Please take a look at relations <a href="http://www.openstreetmap.org/browse/relation/2669845">2669845</a> and <a href="http://www.openstreetmap.org/browse/relation/2669845">2669845</a> that user <a href="http://www.openstreetmap.org/user/wambacher">wambacher</a> just created. This is one way how a turn restriction can be added to that crossing.</p>
-<p>As it seems you are not familiar with relations, you may want to read the <a href="http://wiki.openstreetmap.org/wiki/Relation">relations page</a> on wiki (and pages it links to).</p>
+<p>Please take a look at relations <a href="https://www.openstreetmap.org/browse/relation/2669845">2669845</a> and <a href="https://www.openstreetmap.org/browse/relation/2669845">2669845</a> that user <a href="https://www.openstreetmap.org/user/wambacher">wambacher</a> just created. This is one way how a turn restriction can be added to that crossing.</p>
+<p>As it seems you are not familiar with relations, you may want to read the <a href="https://wiki.openstreetmap.org/wiki/Relation">relations page</a> on wiki (and pages it links to).</p>
 </div>
 <div id="comment-18783-info" class="comment-info">
 <span class="comment-age">(30 Dec '12, 18:34)</span> <span class="comment-user userinfo">RM87</span>
@@ -206,7 +206,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For the opposite situation, where you can only leave the intersection on a particular way, make it one-way from the intersection to the first point that allows two-way movement.</p>
-<p><a href="http://www.openstreetmap.org/?lat=44.932969&amp;lon=-123.011902&amp;zoom=18&amp;layers=M">Example in Salem Oregon</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=44.932969&amp;lon=-123.011902&amp;zoom=18&amp;layers=M">Example in Salem Oregon</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

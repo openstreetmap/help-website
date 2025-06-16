@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>With my tile server up and running, I went to experiment with updating the data.</p>
 <p>My original data covered the US state California (2018-05-28T20:00:02Z). In <code>openstreetmap-tiles-update-expire</code> my changes included <code>-b -124.0 30.0 -113.0 42.0</code> which, unless I goofed something, should encompass the geographic mass desired.</p>
 <p>Here was my command: <code>sudo ~/src/mod_tile/openstreetmap-tiles-update-expire 2018-05-28T20:00:02Z</code></p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM_Update_Results_9AUnsuP.png" alt="alt text" /></p>
+<p><img src="/upfiles/OSM_Update_Results_9AUnsuP.png" alt="alt text" /></p>
 <p>And the content of <code>state.txt</code>:</p>
 <pre><code>#original-source: http://planet.openstreetmap.org/replication/minute/002/990/717.state.txt
 #generated-by: https://replicate-sequences.osm.mazdermind.de/?2018-05-28T20:00:02ZT00:00:00Z

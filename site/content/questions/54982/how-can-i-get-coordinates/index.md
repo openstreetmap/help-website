@@ -109,7 +109,7 @@ osqa_accepted = false
 <div id="post-85863-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>So you want to do geocoding? <a href="https://help.openstreetmap.org/questions/12057/bulk-geo-coding-of-business-addresses">https://help.openstreetmap.org/questions/12057/bulk-geo-coding-of-business-addresses</a></p>
+<p>So you want to do geocoding? <a href="/questions/12057/bulk-geo-coding-of-business-addresses">https://help.openstreetmap.org/questions/12057/bulk-geo-coding-of-business-addresses</a></p>
 </div>
 <div id="comment-85863-info" class="comment-info">
 <span class="comment-age">(11 Oct '22, 22:23)</span> <span class="comment-user userinfo">xerusf</span>
@@ -214,7 +214,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The Radisson Hotel, La Paz, Bolivia is not yet in OSM, as far as I can see. So I took another Radisson hotel.</p>
-<p>Click, the share button and add a marker. When you place the marker over the hotel, you will see the coordinates in the URL <img src="https://help.openstreetmap.org/upfiles/Screenshot_2017-03-08_05.22.37.png" alt="alt text" /></p>
+<p>Click, the share button and add a marker. When you place the marker over the hotel, you will see the coordinates in the URL <img src="/upfiles/Screenshot_2017-03-08_05.22.37.png" alt="alt text" /></p>
 <p>Of course, this technique works best for the occasional lookup. You need another workflow in case you have to do hunderds of addresses</p>
 </div>
 <div class="answer-controls post-controls">
@@ -235,7 +235,7 @@ osqa_accepted = false
 <div id="post-54993-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As an aside, the La Paz hotel seems to be this one: <a href="http://www.openstreetmap.org/way/440048789/history">http://www.openstreetmap.org/way/440048789/history</a> but is no longer a Radisson branded one.</p>
+<p>As an aside, the La Paz hotel seems to be this one: <a href="https://www.openstreetmap.org/way/440048789/history">https://www.openstreetmap.org/way/440048789/history</a> but is no longer a Radisson branded one.</p>
 </div>
 <div id="comment-54993-info" class="comment-info">
 <span class="comment-age">(08 Mar '17, 10:32)</span> <span class="comment-user userinfo">EdLoach ♦</span>

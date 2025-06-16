@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Ddance">leisure=dance</a> tag you can use. Additionally you can specify the dance style via the mentioned <em>dance:style</em> key, in your case <em>dance:style=ballroom</em> as mentioned in the corresponding <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/dance">proposal</a>. According to <a href="http://taginfo.openstreetmap.org/tags/dance%3Astyle=ballroom">taginfo</a> this has already been used 44 times.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Ddance">leisure=dance</a> tag you can use. Additionally you can specify the dance style via the mentioned <em>dance:style</em> key, in your case <em>dance:style=ballroom</em> as mentioned in the corresponding <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/dance">proposal</a>. According to <a href="http://taginfo.openstreetmap.org/tags/dance%3Astyle=ballroom">taginfo</a> this has already been used 44 times.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

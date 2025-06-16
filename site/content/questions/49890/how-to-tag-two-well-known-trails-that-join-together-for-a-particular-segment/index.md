@@ -169,7 +169,7 @@ osqa_accepted = true
 5
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12350/srosset">@srosset</a> The data is not only used by renderers but also by routers, geocoders and various other tools. That's why certain rules should be followed to keep the data usable for more than just a single purpose.</p>
+<p><a href="https://help.openstreetmap.org/users/12350/srosset">@srosset</a> The data is not only used by renderers but also by routers, geocoders and various other tools. That's why certain rules should be followed to keep the data usable for more than just a single purpose.</p>
 </div>
 <div id="comment-49902-info" class="comment-info">
 <span class="comment-age">(30 May '16, 07:40)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -181,7 +181,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>This may be of interest <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
+<p>This may be of interest <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
 </div>
 <div id="comment-49911-info" class="comment-info">
 <span class="comment-age">(30 May '16, 17:00)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -273,7 +273,7 @@ osqa_accepted = true
 <div id="post-51097-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12574/will-i-am"></a><a href="http://help.openstreetmap.org/users/12574/will-i-am">@will-i-am</a>: just for reference: link to the way in question <a href="https://www.openstreetmap.org/way/432825147">https://www.openstreetmap.org/way/432825147</a> . Showing hiking routes: Well, the default map also does not show cycling routes and bus routes for example. I understand your thoughts about it, and share them partly. However, it <em>might</em> make the map very cluttered if it would show all routes, so that might be a deliberate setup. Th option to only show the routes in the highest zoom level (as it is done for waste bins and park benches) would not make much sense - as oppose You could make a suggestion at the <span>standard style</span>'s github issues page (but check the old issues for duplicates first and link here once you've created a new issue).</p>
+<p><a href="https://help.openstreetmap.org/users/12574/will-i-am"></a><a href="https://help.openstreetmap.org/users/12574/will-i-am">@will-i-am</a>: just for reference: link to the way in question <a href="https://www.openstreetmap.org/way/432825147">https://www.openstreetmap.org/way/432825147</a> . Showing hiking routes: Well, the default map also does not show cycling routes and bus routes for example. I understand your thoughts about it, and share them partly. However, it <em>might</em> make the map very cluttered if it would show all routes, so that might be a deliberate setup. Th option to only show the routes in the highest zoom level (as it is done for waste bins and park benches) would not make much sense - as oppose You could make a suggestion at the <span>standard style</span>'s github issues page (but check the old issues for duplicates first and link here once you've created a new issue).</p>
 </div>
 <div id="comment-51097-info" class="comment-info">
 <span class="comment-age">(26 Jul '16, 06:35)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -387,7 +387,7 @@ osqa_accepted = true
 <div id="post-49935-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11758/ljb_nj"></a><a href="http://help.openstreetmap.org/users/11758/ljb_nj">@ljb_nj</a>: I would not say that it is vandalism. However, since you know that the "red"/"blue" trail names/markings do not belong to the footway or track but to a long route, you should not tag them on the footway or track. It is also obvious in reality that those markings do not belong to the single footways or tracks. And, by the way, what's the name of <a href="https://www.openstreetmap.org/way/24522789">this</a> track (note the route relations of which it is part of)? ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/11758/ljb_nj"></a><a href="https://help.openstreetmap.org/users/11758/ljb_nj">@ljb_nj</a>: I would not say that it is vandalism. However, since you know that the "red"/"blue" trail names/markings do not belong to the footway or track but to a long route, you should not tag them on the footway or track. It is also obvious in reality that those markings do not belong to the single footways or tracks. And, by the way, what's the name of <a href="https://www.openstreetmap.org/way/24522789">this</a> track (note the route relations of which it is part of)? ;-)</p>
 </div>
 <div id="comment-49935-info" class="comment-info">
 <span class="comment-age">(31 May '16, 22:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

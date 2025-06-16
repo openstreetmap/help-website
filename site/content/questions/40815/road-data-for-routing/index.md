@@ -80,7 +80,7 @@ osqa_accepted = false
 <li><p>When your "own" roads are based on a free data source, at least no licence breaking when using them for OSM purposes, why not adding them directly to the main OSM database?</p></li>
 <li><p>by using an internet search engine I found the following hints:</p></li>
 </ol>
-<p><a href="https://help.openstreetmap.org/questions/10817/how-to-use-my-private-data-with-osm">https://help.openstreetmap.org/questions/10817/how-to-use-my-private-data-with-osm</a></p>
+<p><a href="/questions/10817/how-to-use-my-private-data-with-osm">https://help.openstreetmap.org/questions/10817/how-to-use-my-private-data-with-osm</a></p>
 <p><a href="http://inasafe.org/en/training/intermediate/osm/305-using-private-data-store.html">http://inasafe.org/en/training/intermediate/osm/305-using-private-data-store.html</a></p>
 <p><a href="http://gis.stackexchange.com/questions/28898/conflate-merge-private-shapefile-data-with-osm-data">http://gis.stackexchange.com/questions/28898/conflate-merge-private-shapefile-data-with-osm-data</a></p>
 </div>
@@ -170,9 +170,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want smaller amounts of data, you can download country (or region) specific extracts from <a href="http://download.geofabrik.de/">Geofabrik download service</a>. The <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">OSM API</a> can provide (much) smaller boxes of data.</p>
-<p>It really depends what you want to do. Do you want to write a routing algorithm from scratch? In which case you should look at the <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML schema</a> (sometimes you will get <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">PBF files</a>) and learn about the <a href="http://wiki.openstreetmap.org/wiki/Elements">OSM Data model</a>.</p>
-<p>However, there are numerous <a href="http://wiki.openstreetmap.org/wiki/Routing">existing routing software libraries</a> that can be used with OSM data (e.g <a href="http://wiki.openstreetmap.org/wiki/Open_Source_Routing_Machine">OSRM</a> or <a href="http://wiki.openstreetmap.org/wiki/GraphHopper">GraphHopper</a>)</p>
+<p>If you want smaller amounts of data, you can download country (or region) specific extracts from <a href="http://download.geofabrik.de/">Geofabrik download service</a>. The <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">OSM API</a> can provide (much) smaller boxes of data.</p>
+<p>It really depends what you want to do. Do you want to write a routing algorithm from scratch? In which case you should look at the <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML schema</a> (sometimes you will get <a href="https://wiki.openstreetmap.org/wiki/PBF_Format">PBF files</a>) and learn about the <a href="https://wiki.openstreetmap.org/wiki/Elements">OSM Data model</a>.</p>
+<p>However, there are numerous <a href="https://wiki.openstreetmap.org/wiki/Routing">existing routing software libraries</a> that can be used with OSM data (e.g <a href="https://wiki.openstreetmap.org/wiki/Open_Source_Routing_Machine">OSRM</a> or <a href="https://wiki.openstreetmap.org/wiki/GraphHopper">GraphHopper</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <div id="post-40821-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Take a look at <a href="http://wiki.openstreetmap.org/wiki/Tags">tags</a> and <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing">tags for routing</a>. It will also be helpful to look at other existing routing engines that are based on OSM data.</p>
+<p>Take a look at <a href="https://wiki.openstreetmap.org/wiki/Tags">tags</a> and <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing">tags for routing</a>. It will also be helpful to look at other existing routing engines that are based on OSM data.</p>
 </div>
 <div id="comment-40821-info" class="comment-info">
 <span class="comment-age">(06 Feb '15, 12:05)</span> <span class="comment-user userinfo">scai ♦</span>

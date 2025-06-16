@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am interested in creating a CSV file of addresses from the the Milton Keynes area (in the format <strong>street name, town, postcode, city, latitude, longitude</strong>).</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Capture_8.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_8.PNG" alt="alt text" /></p>
 <p><strong>This is what I've done so far:</strong></p>
 <p>1) Download osm files for the UK at <a href="http://nick.dev.openstreetmap.org/downloads/planet/">http://nick.dev.openstreetmap.org/downloads/planet/</a></p>
 <p>2) Run osmfilter:</p>
@@ -119,7 +119,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>nominatim (the engine behind the search on the map on osm.org) builds hierarchies out of the OSM data and does not return results based on the unprocessed OSM data. For example if there is a house with just a number it will match that with the nearest road and so on, without doing such processing you will not get the same results.</p>
-<p>Back to your question: osmconvert supports clipping on a bounding box or a polygon, see the OSM wiki section on <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Applying_Geographical_Borders">"Applying Geographical Borders"</a>. Using a bounding box is likely to be simplest for starters (you already have one displayed in the picture you supplied).</p>
+<p>Back to your question: osmconvert supports clipping on a bounding box or a polygon, see the OSM wiki section on <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Applying_Geographical_Borders">"Applying Geographical Borders"</a>. Using a bounding box is likely to be simplest for starters (you already have one displayed in the picture you supplied).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -181,7 +181,7 @@ osqa_accepted = false
 <p>About administrative borders, see <a href="http://openmapsurfer.uni-hd.de">openmapsurfer</a> (choose grayscale layer with borders overlay) or <a href="https://osm.wno-edv-service.de/boundaries/">wambacher's boundary display</a></p>
 <p>Then you have to adjust your osmfilter commands, and find a solution how to determine in which area you have each street.</p>
 <p>OR alternatively:</p>
-<p>when your area has almost complete <a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr: data</a>, try keeping it with osmfilter</p>
+<p>when your area has almost complete <a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr: data</a>, try keeping it with osmfilter</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

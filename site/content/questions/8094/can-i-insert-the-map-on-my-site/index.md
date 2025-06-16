@@ -126,8 +126,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You're welcome to use OpenStreetMap on your own website provided you're <a href="http://www.openstreetmap.org/copyright">giving us credit correctly</a>. Some different ways of <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">deploying your own Slippy Map</a>.</p>
-<p>For the search features you want, you may want to look at using the Nominatim search service (and in conjunction with a slippy map you may want to look at a library such as <a href="http://wiki.openstreetmap.org/wiki/FacilMap">Facilmap</a> for a drop-in search interface)</p>
+<p>You're welcome to use OpenStreetMap on your own website provided you're <a href="https://www.openstreetmap.org/copyright">giving us credit correctly</a>. Some different ways of <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">deploying your own Slippy Map</a>.</p>
+<p>For the search features you want, you may want to look at using the Nominatim search service (and in conjunction with a slippy map you may want to look at a library such as <a href="https://wiki.openstreetmap.org/wiki/FacilMap">Facilmap</a> for a drop-in search interface)</p>
 <p>However you may find that Nominatim doesn't do the kind of searching you want. "find a store / vendor" might require something a bit more bespoke. If you're only looking at doing a particular city, it's very feasible to extract and index the raw OSM data yourself in some way.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -179,7 +179,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've removed your site link. The nature of your site and your affiliate links are irrelevant to the questions.<br />
-May you use OpenStreetMap on your web site or on mobile applications? Yes, you may, under the terms of the <a href="http://wiki.openstreetmap.org/wiki/License">OpenStreetMap license</a>.</p>
+May you use OpenStreetMap on your web site or on mobile applications? Yes, you may, under the terms of the <a href="https://wiki.openstreetmap.org/wiki/License">OpenStreetMap license</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

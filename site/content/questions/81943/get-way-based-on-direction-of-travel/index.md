@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have this simple query, assuming that we know which direction and road the user travelling (heading), I want to get only that side of the highway, if it's a two way road that should also be selected.</p>
-<p><a href="https://help.openstreetmap.org/upfiles/map1_k5Hxsco.png">Picture example of what I'm looking for</a></p>
+<p><span>Picture example of what I'm looking for</span></p>
 <pre><code>{{geocodeArea:Hamburg}}-&gt;.searchArea;
 way[name=&quot;Sülldorfer Landstraße&quot;](area.searchArea);
 out geom;</code></pre>

@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-40628-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10384/mickyduck">@mickyduck</a>: no, I cannot find one (and I am not aware of Garmin maps from ito).</p>
+<p><a href="https://help.openstreetmap.org/users/10384/mickyduck">@mickyduck</a>: no, I cannot find one (and I am not aware of Garmin maps from ito).</p>
 </div>
 <div id="comment-40628-info" class="comment-info">
 <span class="comment-age">(26 Jan '15, 16:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

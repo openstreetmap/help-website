@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "mountain pass not showing on map"
-description = '''Hi! I&#x27;m new in OSM even if I have heard about it previously as an open source supporter. Today I made my first edit but I have a question. I edited the mountain pass at this point of the map: http://www.openstreetmap.org/edit#map=17/43.11804/-3.70322 My intention was to change the real name of the m...'''
+description = '''Hi! I&#x27;m new in OSM even if I have heard about it previously as an open source supporter. Today I made my first edit but I have a question. I edited the mountain pass at this point of the map: https://www.openstreetmap.org/edit#map=17/43.11804/-3.70322 My intention was to change the real name of the m...'''
 date = "2013-10-21T02:29:00Z"
 lastmod = "2013-10-21T11:54:00Z"
 weight = 27370
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi! I'm new in OSM even if I have heard about it previously as an open source supporter. Today I made my first edit but I have a question.</p>
-<p>I edited the mountain pass at this point of the map: <a href="http://www.openstreetmap.org/edit#map=17/43.11804/-3.70322">http://www.openstreetmap.org/edit#map=17/43.11804/-3.70322</a></p>
+<p>I edited the mountain pass at this point of the map: <a href="https://www.openstreetmap.org/edit#map=17/43.11804/-3.70322">https://www.openstreetmap.org/edit#map=17/43.11804/-3.70322</a></p>
 <p>My intention was to change the real name of the mountain pass, but in addition to that, I removed the <strong>tourism=attraction</strong> tag as I guessed that the more precise <strong>mountain_pass=yes</strong> tag was enough. However, now I can't see the point in the map (but I know it is saved because the real name can be used in the search box and it appears when you try to edit the point).</p>
 <p>I know that the classic OSM map doesn't show all the information. If I want, as it was before, a mountain pass to appear on this map, must it be tagged as a tourist attraction, even if in reality it's not anything for tourists but quite interesting for this region of the map where there's not too much information at all (it's the countryside)?</p>
 <p>Thanks!</p>
@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Adding tourism=attraction to render it is called <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> and not done on OSM. The cycle map layer wil eventually show those mountain passes or you can make another <a href="https://trac.openstreetmap.org/ticket/2140">request</a> to render it on the mapnik layer (it has been asked 4 yrs ago but nothing has happened). Another "trick" that I have seen often is adding <a href="http://www.openstreetmap.org/browse/node/80033715">place=locality</a>, this will render on the Mapnik layer.</p>
+<p>Adding tourism=attraction to render it is called <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> and not done on OSM. The cycle map layer wil eventually show those mountain passes or you can make another <a href="https://trac.openstreetmap.org/ticket/2140">request</a> to render it on the mapnik layer (it has been asked 4 yrs ago but nothing has happened). Another "trick" that I have seen often is adding <a href="https://www.openstreetmap.org/browse/node/80033715">place=locality</a>, this will render on the Mapnik layer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -141,9 +141,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki has a long list of "<em><a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">community layers</a></em>". We cannot display them on the main website because of resource requirements. Many of them are hosted on private servers. Exposing them to all visitors would surely exceed their traffic limit and other resources.</p>
+<p>The wiki has a long list of "<em><a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">community layers</a></em>". We cannot display them on the main website because of resource requirements. Many of them are hosted on private servers. Exposing them to all visitors would surely exceed their traffic limit and other resources.</p>
 <p>If you want to create your own layer then it depends on what you want to achieve.</p>
-<p>How to render your own <a href="https://wiki.openstreetmap.org/wiki/Tiles">tiles</a> is described on <a href="http://switch2osm.org/serving-tiles/">switch2osm</a>. This step is only necessary if you want to change the <em>style</em> of the tiles. <a href="http://wiki.openstreetmap.org/wiki/TileMill">TileMill</a> is another approach for rendering your own tiles, among <a href="https://wiki.openstreetmap.org/wiki/Rendering">many many others</a>.</p>
+<p>How to render your own <a href="https://wiki.openstreetmap.org/wiki/Tiles">tiles</a> is described on <a href="http://switch2osm.org/serving-tiles/">switch2osm</a>. This step is only necessary if you want to change the <em>style</em> of the tiles. <a href="https://wiki.openstreetmap.org/wiki/TileMill">TileMill</a> is another approach for rendering your own tiles, among <a href="https://wiki.openstreetmap.org/wiki/Rendering">many many others</a>.</p>
 <p>If you are instead just interested in adding a custom <em>overlay</em>, then go for <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>. These libraries allow you to add markers, photos, polygons, popups, GPX/KML/... tracks and similar things <em>on top</em> of already existing tiles.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -167,7 +167,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>Just to expand a little bit on that - since OpenStreetMap is at its heart a big lump of data rather than a map, many "layers" are data representations that aren't maps, and many OSM maps aren't web tile layers (such as <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">maps displayed in handheld GPSs</a> and offline maps displayed by e.g. <a href="http://wiki.openstreetmap.org/wiki/Osmand">OSmAnd</a> on mobile phones)</p>
+<p>Just to expand a little bit on that - since OpenStreetMap is at its heart a big lump of data rather than a map, many "layers" are data representations that aren't maps, and many OSM maps aren't web tile layers (such as <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">maps displayed in handheld GPSs</a> and offline maps displayed by e.g. <a href="https://wiki.openstreetmap.org/wiki/Osmand">OSmAnd</a> on mobile phones)</p>
 </div>
 <div id="comment-32159-info" class="comment-info">
 <span class="comment-age">(06 Apr '14, 11:15)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -213,7 +213,7 @@ One Answer:
 <div id="post-39203-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> Leaflet and OpenLayers are both front end libraries for visualizing data pulled from tile or map servers, not "solutions to creating personalized markers". uMap seem to be a front end as well. Argh. Visualizing <em>tiles</em> and implementing tile map servers seems to be covered fairly well. But serving geo data that is not tiles is not. Maybe people just assume its not worth standardizing? I dont know.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> Leaflet and OpenLayers are both front end libraries for visualizing data pulled from tile or map servers, not "solutions to creating personalized markers". uMap seem to be a front end as well. Argh. Visualizing <em>tiles</em> and implementing tile map servers seems to be covered fairly well. But serving geo data that is not tiles is not. Maybe people just assume its not worth standardizing? I dont know.</p>
 </div>
 <div id="comment-39203-info" class="comment-info">
 <span class="comment-age">(11 Dec '14, 06:40)</span> <span class="comment-user userinfo">mapgenius323</span>

@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The short answer is that you can get from OSM anything that mappers have cared to contribute - in some places, detailed boundaries, streets, individual houses, or even trees; in other places you're lucky if the major road and a place name is mapped. Have a look at the <a href="http://wiki.openstreetmap.org/wiki/Map%20Features">Map Features</a> page on the wiki to get an idea of things we map, but always keep in mind there is zero guarantee that any of the features listed there will be actually mapped in your area of interest.</p>
+<p>The short answer is that you can get from OSM anything that mappers have cared to contribute - in some places, detailed boundaries, streets, individual houses, or even trees; in other places you're lucky if the major road and a place name is mapped. Have a look at the <a href="https://wiki.openstreetmap.org/wiki/Map%20Features">Map Features</a> page on the wiki to get an idea of things we map, but always keep in mind there is zero guarantee that any of the features listed there will be actually mapped in your area of interest.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I located and fixed some issues in my area using <a href="http://wiki.openstreetmap.org/wiki/OSM_Inspector">OSM Inspector</a> - great tool, by the way, thanks! When can I inspect them to drop off the map?</p>
+<p>I located and fixed some issues in my area using <a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector">OSM Inspector</a> - great tool, by the way, thanks! When can I inspect them to drop off the map?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tools" rel="tag" title="see questions tagged &#39;tools&#39;">tools</span> <span class="post-tag tag-link-osminspector" rel="tag" title="see questions tagged &#39;osminspector&#39;">osminspector</span> <span class="post-tag tag-link-fixup" rel="tag" title="see questions tagged &#39;fixup&#39;">fixup</span>

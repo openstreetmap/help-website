@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>if this is single database, then yes, you must follow ODbL license and attribute as defined on <a href="http://www.openstreetmap.org/copyright">OSM Copyright page</a> and <a href="http://www.osmfoundation.org/wiki/License#How_should_I_attribute_you.3F">OSMF License page</a></p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">If I use your data together with someone else's data, do I have to apply your license to their data too?</a> wiki page for more info (for example, if you separate data in two databases, you do not need to relicence user "Private" database under ODbL)</p>
+<p>if this is single database, then yes, you must follow ODbL license and attribute as defined on <a href="https://www.openstreetmap.org/copyright">OSM Copyright page</a> and <a href="http://www.osmfoundation.org/wiki/License#How_should_I_attribute_you.3F">OSMF License page</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">If I use your data together with someone else's data, do I have to apply your license to their data too?</a> wiki page for more info (for example, if you separate data in two databases, you do not need to relicence user "Private" database under ODbL)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><strong>Meta: this was originally asked as a follow-up to this question: <a href="https://help.openstreetmap.org/questions/62614/how-can-i-remove-the-camera-icon-which-data-point-is-associated-with-this-icon">https://help.openstreetmap.org/questions/62614/how-can-i-remove-the-camera-icon-which-data-point-is-associated-with-this-icon</a> by user CueContext.</strong> It is a complex question which deserves an depth answer:</p>
+<p><strong>Meta: this was originally asked as a follow-up to this question: <a href="/questions/62614/how-can-i-remove-the-camera-icon-which-data-point-is-associated-with-this-icon">https://help.openstreetmap.org/questions/62614/how-can-i-remove-the-camera-icon-which-data-point-is-associated-with-this-icon</a> by user CueContext.</strong> It is a complex question which deserves an depth answer:</p>
 <p>If I may, I would like to request further guidance, as this is not a personal view but rather a request from the Zoo executive team taking a pro-active role to improve (in their view) how their zoo is represented - based on how they wish to use OSM. To make this thread more complete, let me ask the question more generally in the following ways:</p>
 <p>Case 1: In the case of private property, can / should the land owners be able to manage the OSM attributes for their land?</p>
 <p>Case2: In the case of a non-profit that serves the public, can / should the land managers be able to manage their OSM attributes in ways that they feel best serve their mission and guest experience?</p>

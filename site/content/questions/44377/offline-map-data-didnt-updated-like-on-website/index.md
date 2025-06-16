@@ -139,7 +139,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/OsmAnd">OSMAnd</a> may not have the most frequent map updates, but its map file creation process is well-documented, so you could set up daily map updates yourself with a reasonable amount of work.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OsmAnd">OSMAnd</a> may not have the most frequent map updates, but its map file creation process is well-documented, so you could set up daily map updates yourself with a reasonable amount of work.</p>
 </div>
 <div id="comment-44391-info" class="comment-info">
 <span class="comment-age">(23 Jul '15, 10:55)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

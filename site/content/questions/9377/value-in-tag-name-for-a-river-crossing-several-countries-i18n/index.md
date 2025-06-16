@@ -316,7 +316,7 @@ But what about the tag "name" itself which is used by many rendering engines whe
 <td><div class="item-right">
 <div class="answer-body">
 <p>River-as-border: since not all renderers support the "name:&lt;lang&gt;" tags, I think it's good practice to provide a default "name" tag as a fallback value. The Rhine river, bordering France and Germany, is probably a good example.</p>
-<p><a href="http://www.openstreetmap.org/browse/way/91320954">http://www.openstreetmap.org/browse/way/91320954</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/91320954">https://www.openstreetmap.org/browse/way/91320954</a></p>
 <p>To remain neutral, names in the "name" tag could simply be in Unicode alphabetical order.</p>
 <p>If the river borders many countries, using all the names on the "name" tag would be too verbose I think. You may consider a system of relations: one "master" relation for the entire river, using only "name:&lt;lang&gt;" and without a "name" tag; and one "minor" relation for each part of the river that borders a pair of countries, including "name:&lt;lang&gt;" for the languages of these two countries and a fallback "name" tag combining these two names.</p>
 <p>This has several advantages: the "master" relation can be linked from the main Wikipedia article; the "master" and the "minor" relations would be returned by Nominatim and would fit different user's needs; there's no need to tag each way individually, minimizing maintenance; most maps (particularly Mapnik) would render an acceptable river name.</p>

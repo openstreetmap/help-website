@@ -121,7 +121,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Do you <em>may</em> enter the road with a car from both side or are you really <em>allowed</em> to do it? You should tag the road according to the local street signs.</p>
-<p>Concerning the blockade, there are various <a href="http://wiki.openstreetmap.org/wiki/Barrier">barrier types</a> that you can tag, just use the appropriate one and use additional tags like foot=yes and bicycle=yes to define more detailed restrictions.</p>
+<p>Concerning the blockade, there are various <a href="https://wiki.openstreetmap.org/wiki/Barrier">barrier types</a> that you can tag, just use the appropriate one and use additional tags like foot=yes and bicycle=yes to define more detailed restrictions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -198,7 +198,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://www.openstreetmap.org/browse/way/6860690/history">way in question</a> hasn't changed since it was imported (other than someone linking a bike path to it), so like scai said it needs the barrier adding to the map with the correct tags</p>
+<p>The <a href="https://www.openstreetmap.org/browse/way/6860690/history">way in question</a> hasn't changed since it was imported (other than someone linking a bike path to it), so like scai said it needs the barrier adding to the map with the correct tags</p>
 <p>You'll then need to make sure that your Garmin map recognises the barrier, which probably means using the "<code>--link-pois-to-ways</code>" flag when creating it.<br />
 </p>
 </div>
@@ -233,7 +233,7 @@ osqa_accepted = false
 <p>I'm guessing that the reason why it's "highway = unclassified" is because the AND import didn't distinguish between them, perhaps?<br />
 </p>
 <p>Elsewhere (picking a street in the Netherlands that I'm familar with and is what I'd describe as residential) I notice that this street:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/7068635/history">http://www.openstreetmap.org/browse/way/7068635/history</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/7068635/history">https://www.openstreetmap.org/browse/way/7068635/history</a></p>
 <p>came in via AND as "unclassified" and has been since marked as residential by a local mapper.</p>
 </div>
 <div id="comment-6591-info" class="comment-info">
@@ -380,7 +380,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>No, currently there is no official routing engine for OSM but several community projects providing routing. Each of them has its strengths and weaknesses as described <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">here</a>. Note: They need time to update their internal routing database and not all support restrictions like bollards. Also, some provide self-rendered tiles and update them way more often than their routing database which may be rather confusing.</p>
+<p>No, currently there is no official routing engine for OSM but several community projects providing routing. Each of them has its strengths and weaknesses as described <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">here</a>. Note: They need time to update their internal routing database and not all support restrictions like bollards. Also, some provide self-rendered tiles and update them way more often than their routing database which may be rather confusing.</p>
 </div>
 <div id="comment-6568-info" class="comment-info">
 <span class="comment-age">(26 Jul '11, 17:04)</span> <span class="comment-user userinfo">scai ♦</span>

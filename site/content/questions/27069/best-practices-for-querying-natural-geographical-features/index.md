@@ -155,7 +155,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Using overpass-api is already a filtered download.</p>
-<p>Alternatively, download the whole complete raw OSM data for a specific region from any source listed at <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a> ... and do a filtering via <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p>Alternatively, download the whole complete raw OSM data for a specific region from any source listed at <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a> ... and do a filtering via <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 </div>
 <div id="comment-27082-info" class="comment-info">
 <span class="comment-age">(10 Oct '13, 16:28)</span> <span class="comment-user userinfo">stephan75</span>

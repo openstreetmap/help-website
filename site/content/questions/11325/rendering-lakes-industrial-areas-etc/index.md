@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you edit in potlatch2 and you have a good Bing image of the lake (that's the aerial image you can select in the editor) and you have some traces to check the alignment then you can draw around the lake as before just make sure the last node joins the first this will reveal lake as among the water features for you to choose. see <a href="http://wiki.openstreetmap.org/wiki/Lakes">http://wiki.openstreetmap.org/wiki/Lakes</a> I understand there is a need to trace lakes and islands in opposite directions to set water to left or right of line hopefully some body will add that information for us.</p>
+<p>If you edit in potlatch2 and you have a good Bing image of the lake (that's the aerial image you can select in the editor) and you have some traces to check the alignment then you can draw around the lake as before just make sure the last node joins the first this will reveal lake as among the water features for you to choose. see <a href="https://wiki.openstreetmap.org/wiki/Lakes">https://wiki.openstreetmap.org/wiki/Lakes</a> I understand there is a need to trace lakes and islands in opposite directions to set water to left or right of line hopefully some body will add that information for us.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ osqa_accepted = false
 <div id="post-11340-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>linked question <a href="http://help.openstreetmap.org/questions/11214/two-separate-boundaries-do-not-make-an-island">http://help.openstreetmap.org/questions/11214/two-separate-boundaries-do-not-make-an-island</a></p>
+<p>linked question <a href="/questions/11214/two-separate-boundaries-do-not-make-an-island">https://help.openstreetmap.org/questions/11214/two-separate-boundaries-do-not-make-an-island</a></p>
 </div>
 <div id="comment-11340-info" class="comment-info">
 <span class="comment-age">(19 Mar '12, 19:16)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -151,7 +151,7 @@ osqa_accepted = false
 <div id="post-11354-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here's some info regarding direction of way for coastlines which logically is relevant. So have the land to left and water to right so go anti clock around an island and clockwise around a lake. <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a></p>
+<p>Here's some info regarding direction of way for coastlines which logically is relevant. So have the land to left and water to right so go anti clock around an island and clockwise around a lake. <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a></p>
 </div>
 <div id="comment-11354-info" class="comment-info">
 <span class="comment-age">(20 Mar '12, 09:36)</span> <span class="comment-user userinfo">andy mackey</span>

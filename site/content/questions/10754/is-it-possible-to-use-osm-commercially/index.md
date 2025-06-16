@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a FAQ answered in many places. The answer is <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">yes</a>. You need to <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">attribute OSM</a> for the data.</p>
+<p>This is a FAQ answered in many places. The answer is <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_charge_for_distributing_OSM_data_or_data_derived_from_OSM_data.3F">yes</a>. You need to <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">attribute OSM</a> for the data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "GPX downloads from &#x27;OSM Long Distance Paths&#x27;"
-description = '''Each route relation listed in &quot;http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths&quot; contains a link for downloading the GPX for that route. This used to work well, but now the downloads contain no coordinate information and therefore no GPX track. This negates the purpo...'''
+description = '''Each route relation listed in &quot;https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths&quot; contains a link for downloading the GPX for that route. This used to work well, but now the downloads contain no coordinate information and therefore no GPX track. This negates the purpo...'''
 date = "2015-03-20T08:14:00Z"
 lastmod = "2015-03-20T10:42:00Z"
 weight = 41811
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Each route relation listed in "<a href="http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths</a>" contains a link for downloading the GPX for that route. This used to work well, but now the downloads contain no coordinate information and therefore no GPX track. This negates the purpose that the link wasa intended to serve. Perhaps this is just an error with the query?</p>
+<p>Each route relation listed in "<a href="https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths</a>" contains a link for downloading the GPX for that route. This used to work well, but now the downloads contain no coordinate information and therefore no GPX track. This negates the purpose that the link wasa intended to serve. Perhaps this is just an error with the query?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-routes" rel="tag" title="see questions tagged &#39;routes&#39;">routes</span> <span class="post-tag tag-link-download" rel="tag" title="see questions tagged &#39;download&#39;">download</span> <span class="post-tag tag-link-gpx" rel="tag" title="see questions tagged &#39;gpx&#39;">gpx</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These links are to a separate site, <a href="http://wiki.openstreetmap.org/wiki/OSM_Route_Manager">OpenStreetMap Route Manager</a>, and are provided as part of the standard functionality of the BrowseRelation template on the wiki. You might like to take up this issue on the bug tracker listed on the wiki page (see link above).</p>
+<p>These links are to a separate site, <a href="https://wiki.openstreetmap.org/wiki/OSM_Route_Manager">OpenStreetMap Route Manager</a>, and are provided as part of the standard functionality of the BrowseRelation template on the wiki. You might like to take up this issue on the bug tracker listed on the wiki page (see link above).</p>
 <p>My impression was that the list of relations was largely there to assist people in finding the correct relation when adding parts of a long-distance path. Certainly at one time some paths had several relations, and it was tricky to find the right one from within an editor.</p>
 <p>As it appears what you want is a gpx download of a path I would suggest using Waymarked Trails, a site which is designed to support exactly such usage, for instance here is the area with the <a href="http://waymarkedtrails.org/en/?zoom=10&amp;lat=54.40327&amp;lon=-0.78683&amp;hill=0#routes">Cleveland Way.</a></p>
 </div>

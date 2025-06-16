@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi</p>
-<p>a GPS workout tracking and analysis service I use, Runkeeper, recently switched to Openstreetmap for mapping backgrounds. It is not working well, because my municipality, <a href="http://www.openstreetmap.org/relation/412418">Gjøvik</a>, has not been updated with (much of) the public Norwegian map data, at least not in my part of the municipality. I live in <a href="http://www.openstreetmap.org/#map=14/60.9543/10.6124">Biri</a>.</p>
+<p>a GPS workout tracking and analysis service I use, Runkeeper, recently switched to Openstreetmap for mapping backgrounds. It is not working well, because my municipality, <a href="https://www.openstreetmap.org/relation/412418">Gjøvik</a>, has not been updated with (much of) the public Norwegian map data, at least not in my part of the municipality. I live in <a href="https://www.openstreetmap.org/#map=14/60.9543/10.6124">Biri</a>.</p>
 <p>I don't have the geodata knowhow to contribute, or else I would. I am well versed in GPS technology and an avid map user, but I am not trained, nor do I have the tools to work the databases.</p>
 <p>The neighbouring municipalities Lillehammer, Ringsaker, Østre and Vestre Toten all seem to be updated with much better detail.</p>
 <p>So, I am wondering how long it might be before Openstreetmap is useful for reading outdoor workout tracks in my area; Biri in Gjøvik, Norway.</p>
@@ -103,7 +103,7 @@ osqa_accepted = false
 <div id="post-33601-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As far as I know, CC-BY is <em>not</em> compatible with OSM's ODbL license. Furthermore, imports are usually discouraged and would have to follow the rather strict <a href="http://wiki.openstreetmap.org/wiki/Import_guidelines">import guidelines</a>. Therefore, an import of this data is not likely to happen.</p>
+<p>As far as I know, CC-BY is <em>not</em> compatible with OSM's ODbL license. Furthermore, imports are usually discouraged and would have to follow the rather strict <a href="https://wiki.openstreetmap.org/wiki/Import_guidelines">import guidelines</a>. Therefore, an import of this data is not likely to happen.</p>
 </div>
 <div id="comment-33601-info" class="comment-info">
 <span class="comment-age">(01 Jun '14, 12:44)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -171,9 +171,9 @@ One Answer:
 <div class="answer-body">
 <p>I would encourage you to have a go at mapping it yourself, especially as you are using a gps. The gpx tracks it creates in combination with the Bing satellite imagery are all you need. It is a fairly straight forward process to begin editing the map and doesn't require geodata knowhow or any knowledge of databases unless you want to develop your own mapping tools and map servers.</p>
 <p>There are many tutorials to help you get started<br />
-<a href="http://www.openstreetmap.org/welcome">welcome</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Main_Page">The wiki</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a><br />
+<a href="https://www.openstreetmap.org/welcome">welcome</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Main_Page">The wiki</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a><br />
 </p>
 <p>There are 3 main editors... iD, Potlatch and JOSM and I found JOSM to be the most intuitive to use but give them all a run to see what you prefer.</p>
 <p>Once you finish reading the beginners help and begin to have a go you will find that all you need to do (using the josm editor) is load you gpx track, download the existing openstreetmap data along the route, download the Bing Satellite imagery and start clicking along the track to create the roads or track.</p>

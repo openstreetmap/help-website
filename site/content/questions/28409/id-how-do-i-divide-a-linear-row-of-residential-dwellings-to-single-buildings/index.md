@@ -237,7 +237,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, I can't answer for idEditor but if you are willing to give JOSM a try there is a plugin for just that purpose <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer</a> I used it on the terraced buildings here <a href="http://www.openstreetmap.org/#map=19/-37.79265/175.28948">http://www.openstreetmap.org/#map=19/-37.79265/175.28948</a></p>
+<p>Hi, I can't answer for idEditor but if you are willing to give JOSM a try there is a plugin for just that purpose <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer</a> I used it on the terraced buildings here <a href="https://www.openstreetmap.org/#map=19/-37.79265/175.28948">https://www.openstreetmap.org/#map=19/-37.79265/175.28948</a></p>
 <p>JOSM looked complicated and frightening to me at first after having used Potlatch but it is now my preferred editor. Graham</p>
 </div>
 <div class="answer-controls post-controls">

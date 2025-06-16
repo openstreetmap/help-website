@@ -68,7 +68,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Hi the search goes on, theres a similar situation at <a href="http://www.openstreetmap.org/?lat=51.75419&amp;lon=-1.2577&amp;zoom=16&amp;layers=0B00FTT.">http://www.openstreetmap.org/?lat=51.75419&amp;lon=-1.2577&amp;zoom=16&amp;layers=0B00FTT.</a> With just one in the middle, one for all. So the question has been solved.</p>
+<p>Hi the search goes on, theres a similar situation at <a href="https://www.openstreetmap.org/?lat=51.75419&amp;lon=-1.2577&amp;zoom=16&amp;layers=0B00FTT.">https://www.openstreetmap.org/?lat=51.75419&amp;lon=-1.2577&amp;zoom=16&amp;layers=0B00FTT.</a> With just one in the middle, one for all. So the question has been solved.</p>
 </div>
 <div id="comment-15404-info" class="comment-info">
 <span class="comment-age">(22 Aug '12, 20:58)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -170,7 +170,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>You don't need to log a POI for every single bollard to map them. When I have to map a row of bollards I collect the beginning, the end (which both you can also triangulate by other objects like traffic lights, building entrances, trees etc.) and the number of the bollards.<br />
-<a href="http://www.openstreetmap.org/#map=19/50.92001/13.34090">One</a> example and <a href="http://www.openstreetmap.org/#map=19/50.86754/13.32084">another</a>.</p>
+<a href="https://www.openstreetmap.org/#map=19/50.92001/13.34090">One</a> example and <a href="https://www.openstreetmap.org/#map=19/50.86754/13.32084">another</a>.</p>
 </div>
 <div id="comment-35365-info" class="comment-info">
 <span class="comment-age">(31 Jul '14, 12:49)</span> <span class="comment-user userinfo">malenki</span>

@@ -55,7 +55,7 @@ osqa_accepted = false
 </blockquote>
 <p>Do concrete plates have to "pre-fabricated", which for me means fabricated off-site?</p>
 <p>And specifically are roads that are poured one panel at a time, like this "plates"?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/maxresdefault.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/maxresdefault.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-concrete" rel="tag" title="see questions tagged &#39;concrete&#39;">concrete</span>
@@ -231,9 +231,9 @@ osqa_accepted = false
 <p><strong>This means that tagging concrete poured on site with <em>"regular gaps in between"</em> as <code>concrete:plates</code> is wrong</strong>.</p>
 <hr />
 <p>Here is a road built with pre-fabricate pre-set stressed concrete plates,</p>
-<p><img src="https://help.openstreetmap.org/upfiles/1_bqspFy2.png" alt="alt text" /></p>
+<p><img src="/upfiles/1_bqspFy2.png" alt="alt text" /></p>
 <p>Here is an example of the construction with one such plate,</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2_ELoIWVq.png" alt="alt text" /></p>
+<p><img src="/upfiles/2_ELoIWVq.png" alt="alt text" /></p>
 <p>Here is another method by the GOT</p>
 <p><img src="https://roadsandbridges.s3.amazonaws.com/s3fs-public/Photo%201%20-%20Precast%20deck%20panels%20in%20place.JPG" alt="alt text" /></p>
 </div>

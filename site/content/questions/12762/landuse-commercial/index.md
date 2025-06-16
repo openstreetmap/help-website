@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>A question about landuse = commercial: On the Wiki, the tag is not well documented, it sais "Predominantly offices, business parks, etc. ", that's all.</p>
 <p>Well, In the central part of my city, there are several non-residential buildings concentrated in an area, but many of them are also not offices. They consist of hotels, museums, theatres, some official buildings (like parliament and gouvernmental buildings), also schools and universities.</p>
-<p>Is in that case landuse=commercial appropriate, or is there another tag better? It is definitely not an office park, but the central district of a metropolis: <a href="http://www.openstreetmap.org/?lat=41.69495&amp;lon=44.80104&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=41.69495&amp;lon=44.80104&amp;zoom=17&amp;layers=M</a></p>
-<p>How about this tag centre_zone=yes? It is abandoned, but how do you think? <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/centre_zone">http://wiki.openstreetmap.org/wiki/Proposed_features/centre_zone</a></p>
+<p>Is in that case landuse=commercial appropriate, or is there another tag better? It is definitely not an office park, but the central district of a metropolis: <a href="https://www.openstreetmap.org/?lat=41.69495&amp;lon=44.80104&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=41.69495&amp;lon=44.80104&amp;zoom=17&amp;layers=M</a></p>
+<p>How about this tag centre_zone=yes? It is abandoned, but how do you think? <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/centre_zone">https://wiki.openstreetmap.org/wiki/Proposed_features/centre_zone</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-city" rel="tag" title="see questions tagged &#39;city&#39;">city</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-commercial" rel="tag" title="see questions tagged &#39;commercial&#39;">commercial</span>

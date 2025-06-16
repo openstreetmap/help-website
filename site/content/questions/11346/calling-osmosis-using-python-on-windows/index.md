@@ -46,7 +46,7 @@ subprocess.call([&#39;J:/osmosis-0.40.1/bin/osmosis.bat&#39;])</code></pre>
 <p>If try passing more arguments using this approach I get an error:</p>
 <pre><code>import subprocess    
 subprocess.call([&#39;J:/osmosis-0.40.1/bin/osmosis.bat&#39;, &#39;--read-xml&#39;, &#39;enableDateParsing=no&#39;, &#39;file=&quot;J:/DATA/OSM/massachusetts.osm.bz2&quot;&#39;, &#39;--bounding-box top=42.48 left=-71.31 bottom=42.23 right=42.48&#39;, &#39;--write-xml&#39;, &#39;file=&quot;J:/DATA/OSM/extracted_using_py.osm.bz2&quot;&#39;])</code></pre>
-<p>This question is based on my earlier <a href="http://help.openstreetmap.org/questions/11330/using-osmosis-bzcat-and-postgresql">question</a> today about using osmosis/bzcat. I'm not sure how to break up my arguments (and I've tried a lot of different options).</p>
+<p>This question is based on my earlier <a href="/questions/11330/using-osmosis-bzcat-and-postgresql">question</a> today about using osmosis/bzcat. I'm not sure how to break up my arguments (and I've tried a lot of different options).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-python" rel="tag" title="see questions tagged &#39;python&#39;">python</span> <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span>

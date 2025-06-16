@@ -51,10 +51,10 @@ Is there a way to make all these possible:<br />
 - edit downloaded <strong>.osm</strong> file in <a href="http://josm.openstreetmap.de">JOSM</a> editor;<br />
 - set up <a href="http://www.postgresql.org">PostreSQL</a>;<br />
 - set up <a href="http://www.postgis.org">PostGIS</a> extension to PostgreSQL;<br />
-- import local (edited) <strong>.osm</strong> file into PostgreSQL using <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>;<br />
+- import local (edited) <strong>.osm</strong> file into PostgreSQL using <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>;<br />
 - set up <a href="www.mapnik.org">Mapnik</a> to generate tiles from PostgreSQL/PostGIS;<br />
-- set up <a href="http://httpd.apache.org">Apache Web Server</a> with <a href="http://wiki.openstreetmap.org/wiki/Mod_tile">mod_tile</a>;<br />
-- create Java desktop (Swing) application with <a href="http://wiki.openstreetmap.org/wiki/JMapViewer">JMapViewer</a> component.<br />
+- set up <a href="http://httpd.apache.org">Apache Web Server</a> with <a href="https://wiki.openstreetmap.org/wiki/Mod_tile">mod_tile</a>;<br />
+- create Java desktop (Swing) application with <a href="https://wiki.openstreetmap.org/wiki/JMapViewer">JMapViewer</a> component.<br />
 </p>
 <p>If I put down everything correctly <strong>:)</strong>, I want to ask some questions:<br />
 - is described way correct? or there is some other (simpler) ways to do that - may be to use <strong>Shapefiles</strong> and <a href="http://geotools.org">geotools</a> instead of Mapnik?<br />
@@ -178,7 +178,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Routing is a very different problem from displaying a map and not one that is tackled very often. There is more information here: <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a> A tool to create maps or map tiles will usually be separate from the tool that displays the maps tiles and a different tool will handle routing, probably providing an overlay drawn over the map tiles. Using Maperative or Mapnik (or anything else) to render the map is not going to provide routing, just the place to display the calculated route.</p>
+<p>Routing is a very different problem from displaying a map and not one that is tackled very often. There is more information here: <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a> A tool to create maps or map tiles will usually be separate from the tool that displays the maps tiles and a different tool will handle routing, probably providing an overlay drawn over the map tiles. Using Maperative or Mapnik (or anything else) to render the map is not going to provide routing, just the place to display the calculated route.</p>
 <p>Of course, you might create a wonderful app that does everything.</p>
 </div>
 <div id="comment-13128-info" class="comment-info">

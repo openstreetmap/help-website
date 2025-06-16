@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="https://help.openstreetmap.org/questions/46867/how-to-use-overpass-api-for-specific-boundingbox">I found this similar question</a>. I tried this on my queries, but none worked as when using <code>{{bbbox}}</code>.</p>
+<p><a href="/questions/46867/how-to-use-overpass-api-for-specific-boundingbox">I found this similar question</a>. I tried this on my queries, but none worked as when using <code>{{bbbox}}</code>.</p>
 <p>My coordinates are the following: <code>-56.236095,-34.927072,-56.094131,-34.849064</code>, which were generated using <a href="http://lxbarth.com/bbox/">http://lxbarth.com/bbox/</a></p>
 <p>In the following query, if I use <code>{{bbox}}</code> instead of the coordinates, I do get the corresponding information. If I put the coords, then the results are empty.</p>
 <pre><code>/*

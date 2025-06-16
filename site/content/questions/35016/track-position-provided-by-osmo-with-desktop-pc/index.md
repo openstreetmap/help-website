@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We have a rather long list of desktop applications here <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">http://wiki.openstreetmap.org/wiki/Software/Desktop</a> Some of them support tracking functionality, however you will have to investigate further yourself.</p>
+<p>We have a rather long list of desktop applications here <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">https://wiki.openstreetmap.org/wiki/Software/Desktop</a> Some of them support tracking functionality, however you will have to investigate further yourself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

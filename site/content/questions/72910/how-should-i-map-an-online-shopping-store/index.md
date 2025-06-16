@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hi Picknhook, you have asked this before: <a href="https://help.openstreetmap.org/questions/72845/how-do-i-map-my-business">How do I map my business?</a></p>
+<p>Hi Picknhook, you have asked this before: <a href="/questions/72845/how-do-i-map-my-business">How do I map my business?</a></p>
 <p>Have you read the answer there?</p>
 </div>
 <div id="comment-72913-info" class="comment-info">

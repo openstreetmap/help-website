@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Building an app with google maps and osmdroid data"
-description = '''Hi all, I am new to android programming and I am currently working on Google maps API to build a map application for educational purpose. My question is can I use OSMDroid data on top of google maps in the application?? As per - http://help.openstreetmap.org/questions/615/can-google-maps-take-osm-da...'''
+description = '''Hi all, I am new to android programming and I am currently working on Google maps API to build a map application for educational purpose. My question is can I use OSMDroid data on top of google maps in the application?? As per - https://help.openstreetmap.org/questions/615/can-google-maps-take-osm-da...'''
 date = "2012-07-08T18:17:00Z"
 lastmod = "2012-07-08T23:54:00Z"
 weight = 14082
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all, I am new to android programming and I am currently working on Google maps API to build a map application for educational purpose. My question is can I use OSMDroid data on top of google maps in the application?? As per - <a href="http://help.openstreetmap.org/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">http://help.openstreetmap.org/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps</a> I can use it. Can some one help me how to build an overlay of traffic data from OSMDroid on google maps for android application? I installed android-osmdroid....jar and some other supporting libraries...</p>
+<p>Hi all, I am new to android programming and I am currently working on Google maps API to build a map application for educational purpose. My question is can I use OSMDroid data on top of google maps in the application?? As per - <a href="/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">https://help.openstreetmap.org/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps</a> I can use it. Can some one help me how to build an overlay of traffic data from OSMDroid on google maps for android application? I installed android-osmdroid....jar and some other supporting libraries...</p>
 <p>Thanks, Chanukya</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -148,7 +148,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>You say "traffic data from OSMDroid" but as described <a href="http://code.google.com/p/osmdroid/">here</a> there's no mention of OSMDroid containing any data at all - in fact OSMDroid's wiki <a href="http://code.google.com/p/osmdroid/wiki/MobileAtlasCreator">here</a> suggests using Mobile Atlas Creator to scrape OSM tiles, but as described <a href="http://wiki.openstreetmap.org/wiki/MOBAC">here</a></p>
+<p>You say "traffic data from OSMDroid" but as described <a href="http://code.google.com/p/osmdroid/">here</a> there's no mention of OSMDroid containing any data at all - in fact OSMDroid's wiki <a href="http://code.google.com/p/osmdroid/wiki/MobileAtlasCreator">here</a> suggests using Mobile Atlas Creator to scrape OSM tiles, but as described <a href="https://wiki.openstreetmap.org/wiki/MOBAC">here</a></p>
 <blockquote>
 <p>This tool results in heavy traffic for the OSM tile servers and is likely to be blocked. Please don't use it.</p>
 </blockquote>

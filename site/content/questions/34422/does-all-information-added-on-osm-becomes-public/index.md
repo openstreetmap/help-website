@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Jski, the OSM map is not your own, anything added to it is visible for all of to see. Please read this explanation as well, <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ.">http://wiki.openstreetmap.org/wiki/Legal_FAQ.</a> By making an account you just made the first step to become a OSM contributor, welcome. But feel free to use the OSM data within the legal rules found at the link above.</p>
+<p>Hi Jski, the OSM map is not your own, anything added to it is visible for all of to see. Please read this explanation as well, <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ.">https://wiki.openstreetmap.org/wiki/Legal_FAQ.</a> By making an account you just made the first step to become a OSM contributor, welcome. But feel free to use the OSM data within the legal rules found at the link above.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,8 +210,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Note that I have absolutely no involvement with OpenStreetMap or any organization related to it. I'm only a contributor who has read up on what would be involved with using OSM as our company map background. Note that we're not doing it and have no immediate plans to use OSM data as a map background.</p>
 <p>I speak only for myself and from my own experience.</p>
-<p>The answer to your question is, basically, yes. See the links under Legal Issues from <a href="http://wiki.openstreetmap.org/wiki/Contribute_map_data">Contribute map data</a></p>
-<p>Be aware that you'll also probably be using their tile servers, and there's more information about how to go about getting permission to do that (and what not to do) at <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a></p>
+<p>The answer to your question is, basically, yes. See the links under Legal Issues from <a href="https://wiki.openstreetmap.org/wiki/Contribute_map_data">Contribute map data</a></p>
+<p>Be aware that you'll also probably be using their tile servers, and there's more information about how to go about getting permission to do that (and what not to do) at <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a></p>
 <p>Also, please don't mark this as the answer. Hopefully someone from OSM will come along and give a more correct and authoritative answer. I'm just trying to point you at some reading material.</p>
 </div>
 <div class="answer-controls post-controls">

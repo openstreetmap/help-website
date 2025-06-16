@@ -228,7 +228,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The OSM wiki can be your friend!</p>
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a> and its subpage /Download</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a> and its subpage /Download</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -279,9 +279,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've not seen a dedicated beginners guide, but there are a lot of useful OSM on Garmin info here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Garmin">http://wiki.openstreetmap.org/wiki/Garmin</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Garmin">https://wiki.openstreetmap.org/wiki/Garmin</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

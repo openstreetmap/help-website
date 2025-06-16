@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find the unnamed highways through several <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">quality ensurance tools</a>, for example with <a href="http://tools.geofabrik.de/osmi/?view=highways&amp;lon=3.11629&amp;lat=45.75526&amp;zoom=15&amp;overlays=name_missing_major,name_missing_minor">Osm Inspector</a>.</p>
+<p>You can find the unnamed highways through several <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">quality ensurance tools</a>, for example with <a href="http://tools.geofabrik.de/osmi/?view=highways&amp;lon=3.11629&amp;lat=45.75526&amp;zoom=15&amp;overlays=name_missing_major,name_missing_minor">Osm Inspector</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

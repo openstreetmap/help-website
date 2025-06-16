@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I am going travelling around Croatia, Montenegro and Bosnia next week and have been trying in vain to put a Balkans map on my Garmin GPSMAP 62s. I can work on both PC and Mac but have had no luck with ether – either the software or the Garmin device does not recognise the map. I have downloaded tiles from a German and Norwegian site on the OSM site and can get neither to work. I have changed the name to gpmapsupp as is usually reuired but my device still does not recognise any extra files even though it is therein the Garmin folder. All I want to do is put a Balkans map on my device in order to know ehere I am going and to show where I have been. What am I doing wrong? Thanks, Lee</p>
 <p>(Additional info what I did:)</p>
-<p>I downloaded the Italia tiles from www.wanderreitkarte.de on the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> site as this contained tiles for the Balkans in 1.4Gb and included gmapsupp.img</p>
+<p>I downloaded the Italia tiles from www.wanderreitkarte.de on the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> site as this contained tiles for the Balkans in 1.4Gb and included gmapsupp.img</p>
 <p>I also downloaded various files from garmin.openstreetmap.nl where I selected several tiles to make up the Balkans but the file size was smaller. Four files were sent to me: windows.exe, macosx.zip, gmapsupp.zip and tiles.zip</p>
 <p>I backed up my Garmin files and loaded on the gmapsupp.zip (which i decompressed first) but still can't vend the map on my device. Incidentally, when looking in the folder named Garmin on my device, there was no existing gmapsupp.img which I thought there might be. I assumed I should just copy the new gmapsupp.img to the Garmin folder.</p>
 </div>
@@ -132,7 +132,7 @@ osqa_accepted = false
 <li><span>Garmin/GPS_series#GPSMAP_62_and_78_series</span> - your device</li>
 <li><span>OSM_Map_On_Garmin/Download</span> - download links for pre-made maps for Garmin</li>
 </ul>
-<p>It may also be worth to look at this closely similar question: <a href="https://help.openstreetmap.org/questions/11736/garminosm-beginners-guide">https://help.openstreetmap.org/questions/11736/garminosm-beginners-guide</a></p>
+<p>It may also be worth to look at this closely similar question: <a href="/questions/11736/garminosm-beginners-guide">https://help.openstreetmap.org/questions/11736/garminosm-beginners-guide</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -208,7 +208,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Searching this help forum gives amongst others this helpful answer:<br />
-<a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">basic guide to download OSM to Garmin GPS</a><br />
+<a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">basic guide to download OSM to Garmin GPS</a><br />
 </p>
 <p>hth<br />
 malenki</p>
@@ -261,7 +261,7 @@ malenki</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have you tried from here <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries</a></p>
+<p>Have you tried from here <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

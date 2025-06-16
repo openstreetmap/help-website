@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a question that crops up here fairly frequently - do a <a href="http://help.openstreetmap.org/search/?&amp;q=garmin&amp;Submit=search&amp;t=question">search</a> for Garmin and information about all of the options (download a map in one of many styles, create a map yourself in either a standard style or one of your own) are explained.</p>
+<p>This is a question that crops up here fairly frequently - do a <a href="https://help.openstreetmap.org/search/?&amp;q=garmin&amp;Submit=search&amp;t=question">search</a> for Garmin and information about all of the options (download a map in one of many styles, create a map yourself in either a standard style or one of your own) are explained.</p>
 <p>It might help to explain a bit more about what you've done so far (I'm not exactly sure what "by using that Request Feature" means, for example - I can guess, but might be guessing wrong). Also when you say "but, no streets" do you mean "no streets display" or "if I search for a street it doesn't find it"?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,13 +174,13 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can download ready-made Garmin maps for many countries from the web sites listed on</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 <p>for example this site is listed as having Ecuador maps:</p>
 <p><a href="http://www.ecuadortur.com/maps.php">http://www.ecuadortur.com/maps.php</a></p>
 <p>If none of these are to your liking then you can download the raw OpenStreetMap data from here</p>
 <p><a href="http://download.geofabrik.de/osm/south-america/ecuador.osm.pbf">http://download.geofabrik.de/osm/south-america/ecuador.osm.pbf</a></p>
 <p>and then follow the instructions on</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data</a></p>
 <p>to make your own map.</p>
 </div>
 <div class="answer-controls post-controls">

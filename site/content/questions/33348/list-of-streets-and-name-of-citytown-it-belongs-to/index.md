@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>Before that, I already read that one, <a href="https://help.openstreetmap.org/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter,">https://help.openstreetmap.org/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter,</a> and to my knowledge, didn't see any answer.</p>
+<p>Before that, I already read that one, <a href="/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter,">https://help.openstreetmap.org/questions/32163/how-to-filter-only-street-names-and-city-id-in-osmfilter,</a> and to my knowledge, didn't see any answer.</p>
 <p>So I am willing to use osmfilter and extract the list of street alongside the lat and alt and the city/town/whatever it belongs to.</p>
 <p>So for streets it is that: osmfilter 1.o5m --keep="highway=cycleway highway=path highway=primary highway=residential highway=tertiary highway=living_street"</p>
-<p>Cities: spain.o5m --keep-nodes="place=city =town =village =hamlet =suburb =province" --keep-ways= --keep-relations= &gt;mycity.osm which I got from here: <a href="https://help.openstreetmap.org/questions/29597/write-error-when-filtering-nodes-with-osmfilter-on-windows">https://help.openstreetmap.org/questions/29597/write-error-when-filtering-nodes-with-osmfilter-on-windows</a></p>
+<p>Cities: spain.o5m --keep-nodes="place=city =town =village =hamlet =suburb =province" --keep-ways= --keep-relations= &gt;mycity.osm which I got from here: <a href="/questions/29597/write-error-when-filtering-nodes-with-osmfilter-on-windows">https://help.openstreetmap.org/questions/29597/write-error-when-filtering-nodes-with-osmfilter-on-windows</a></p>
 <p>Now, how do I mix them and afterwards I am able to extract the list in a csv of the street, its lat and alt and the city it belongs to.</p>
 <p>Thanks for the help!</p>
 </div>
@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The one answer to your two questions is <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
+<p>The one answer to your two questions is <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
 <p>Do a search on that wiki page about "merge" and "csv".</p>
 </div>
 <div class="answer-controls post-controls">

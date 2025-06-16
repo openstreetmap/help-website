@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-48423-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Isn't this a duplicate of your other question? <a href="https://help.openstreetmap.org/questions/48389/save-my-offline-osm-mapsmobac-mbtiles-to-the-sqlite-database">https://help.openstreetmap.org/questions/48389/save-my-offline-osm-mapsmobac-mbtiles-to-the-sqlite-database</a></p>
+<p>Isn't this a duplicate of your other question? <a href="/questions/48389/save-my-offline-osm-mapsmobac-mbtiles-to-the-sqlite-database">https://help.openstreetmap.org/questions/48389/save-my-offline-osm-mapsmobac-mbtiles-to-the-sqlite-database</a></p>
 </div>
 <div id="comment-48423-info" class="comment-info">
 <span class="comment-age">(29 Feb '16, 22:55)</span> <span class="comment-user userinfo">alester</span>
@@ -120,9 +120,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can have a look at the following opensource android apps to see how other developers did their work:</p>
-<p>Osmand, Maps.Me, Navit, <a href="http://wiki.openstreetmap.org/wiki/Pocketmaps">Pocketmaps</a> , ZANavi ...</p>
-<p>also see <a href="https://github.com/mapsforge/mapsforge/blob/master/docs/Mapsforge-Applications.md">Mapsforge-Applications.md</a>, <a href="http://wiki.openstreetmap.org/wiki/OsmSharp">OSMSharp</a> and <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> in the OSM wiki.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Cruiser">Cruiser</a> and <a href="http://wiki.openstreetmap.org/wiki/Atlas_(navigation_application)">Atlas</a> are mapsforge based with POI serach feature, but closed source.</p>
+<p>Osmand, Maps.Me, Navit, <a href="https://wiki.openstreetmap.org/wiki/Pocketmaps">Pocketmaps</a> , ZANavi ...</p>
+<p>also see <a href="https://github.com/mapsforge/mapsforge/blob/master/docs/Mapsforge-Applications.md">Mapsforge-Applications.md</a>, <a href="https://wiki.openstreetmap.org/wiki/OsmSharp">OSMSharp</a> and <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> in the OSM wiki.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Cruiser">Cruiser</a> and <a href="https://wiki.openstreetmap.org/wiki/Atlas_(navigation_application)">Atlas</a> are mapsforge based with POI serach feature, but closed source.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

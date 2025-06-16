@@ -129,7 +129,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Although <a href="http://wiki.openstreetmap.org/wiki/Xapi">this page</a> doesn't explicitly say where xapi.opentreetmap.org points to these days, it does say that jxapi.openstreetmap.org (which it might point to) is down for maintenance right now. However, Mapquests's jxapi instance should be up, so you should be able to do that. I've just tried this:</p>
+<p>Although <a href="https://wiki.openstreetmap.org/wiki/Xapi">this page</a> doesn't explicitly say where xapi.opentreetmap.org points to these days, it does say that jxapi.openstreetmap.org (which it might point to) is down for maintenance right now. However, Mapquests's jxapi instance should be up, so you should be able to do that. I've just tried this:</p>
 <pre><code>wget http://open.mapquestapi.com/xapi/api/0.6/node[amenity=restaurant][bbox=9.4908142,48.7810801,9.5660019,48.8387351]</code></pre>
 <p>and it works. Note that there's an extra "/api" in the Mapquest xapi URL. The bbox is currently limited to 10 square degrees. See the various links from the XAPI wiki page for more info, including the terms of service for the Mapquest instance of the XAPI.</p>
 </div>

@@ -122,7 +122,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tag it with <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpipeline">man_made=pipeline</a> + bridge=yes + layer=1 . If you know the contents of pipe, then add type tag also (for example type=oil).</p>
+<p>Tag it with <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpipeline">man_made=pipeline</a> + bridge=yes + layer=1 . If you know the contents of pipe, then add type tag also (for example type=oil).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -222,7 +222,7 @@ One Answer:
 <div class="answer-body">
 <ol>
 <li>If you have a .osm file it is easy to open it in JOSM or Merkaator and upload it from there. Just click upload after opening the file.</li>
-<li>Mapnik has a limitasions of shields of 8 characters. In addition there might be other rendering logic that prevents the highway shields from being rendered. But according to <a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging#State_Highways">the wiki</a> the "US:" part of the ref is optional. You might get a better result if you use "ref=VI 104".</li>
+<li>Mapnik has a limitasions of shields of 8 characters. In addition there might be other rendering logic that prevents the highway shields from being rendered. But according to <a href="https://wiki.openstreetmap.org/wiki/United_States_roads_tagging#State_Highways">the wiki</a> the "US:" part of the ref is optional. You might get a better result if you use "ref=VI 104".</li>
 <li>Coastline calculations are a costly operation that is done once a weak, be patient. This might not be obvious in the case of an island, but how does the renderer know that it is an island and not a lake without knowing every coastline in the world?</li>
 <li>I have not seen any renderers use this tag yet. But OSM is all about the data and not so much about the rendering. Any tag can be useful for somebody in the future. The surface tag might be in use by route planers, or as statistics.</li>
 </ol>

@@ -186,7 +186,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>It's not too hard,have a read <a href="http://wiki.openstreetmap.org/wiki/Potlach2">http://wiki.openstreetmap.org/wiki/Potlach2</a></p>
+<p>It's not too hard,have a read <a href="https://wiki.openstreetmap.org/wiki/Potlach2">https://wiki.openstreetmap.org/wiki/Potlach2</a></p>
 </div>
 <div id="comment-6364-info" class="comment-info">
 <span class="comment-age">(16 Jul '11, 18:28)</span> <span class="comment-user userinfo">andy mackey</span>

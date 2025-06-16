@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>So what do you want to realise? Just displaying a map (online or offline)? Or also POI search, routing, ...? A first starting point is <a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a></p>
+<p>So what do you want to realise? Just displaying a map (online or offline)? Or also POI search, routing, ...? A first starting point is <a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a></p>
 </div>
 <div id="comment-29927-info" class="comment-info">
 <span class="comment-age">(18 Jan '14, 09:14)</span> <span class="comment-user userinfo">iii</span>

@@ -108,7 +108,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Have a look at <a href="http://www.maposmatic.org/">mapOSMatic</a>, it will render city maps for you. mapOSMatic is free software, so you can build upon that software and improve it or change it o your liking.<br />
 </p>
-<p>You are correct, understanding that it is not permitted to delete items from the map simply because you don't want to see them for your purposes. This demonstrates the difference between the OpenStreetMap data and your speciality rendering. Data users will often have a group of objects that they wish to emphasize on the map and perhaps other objects they wish to de-emphasize. <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> the the process you follow to consume the OpenStreetMap data, and display it in the manner that meets your needs.</p>
+<p>You are correct, understanding that it is not permitted to delete items from the map simply because you don't want to see them for your purposes. This demonstrates the difference between the OpenStreetMap data and your speciality rendering. Data users will often have a group of objects that they wish to emphasize on the map and perhaps other objects they wish to de-emphasize. <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> the the process you follow to consume the OpenStreetMap data, and display it in the manner that meets your needs.</p>
 <p>Again, you understand correctly, don't change the database to meet your needs. Make a local copy of the data, and present it in a sensible way by rendering it for your needs.<br />
 </p>
 </div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Enter "printing" in the search box above and read some of the answers, e.g. <a href="http://help.openstreetmap.org/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">"How do I create a map for printing with specific POI?"</a></p>
+<p>Enter "printing" in the search box above and read some of the answers, e.g. <a href="/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">"How do I create a map for printing with specific POI?"</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

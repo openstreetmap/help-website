@@ -107,9 +107,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can extract data, edit it, and then use it for navigation devices such as those from <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">Garmin</a>. It isn't, as far as I am aware possible to create something using uMap (which creates a web map) and then from that extract data in a format that e.g. a satnav can understand. If you could provide a bit more detail about what you're trying to do it would be easier to reply.</p>
+<p>You can extract data, edit it, and then use it for navigation devices such as those from <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">Garmin</a>. It isn't, as far as I am aware possible to create something using uMap (which creates a web map) and then from that extract data in a format that e.g. a satnav can understand. If you could provide a bit more detail about what you're trying to do it would be easier to reply.</p>
 <p>It is possible to create a custom map using OSM tools, but please don't upload it to OSM unless it reflects the reality on the ground, and don't add tags that are useful for "my satnav" but not for anyone else.</p>
-<p>For licensing questions, follow the links from the "<a href="http://www.openstreetmap.org/copyright">copyright</a>" page.</p>
+<p>For licensing questions, follow the links from the "<a href="https://www.openstreetmap.org/copyright">copyright</a>" page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To start with the last part of your question: yes, you can use OSM dereived data commercially, there may be some restrictions on how and certain obligations on your behalf depending on the specifics.</p>
-<p>See <a href="http://www.openstreetmap.org/copyright,">http://www.openstreetmap.org/copyright,</a> <a href="http://wiki.osmfoundation.org/wiki/License/Community_Guidelines">http://wiki.osmfoundation.org/wiki/License/Community_Guidelines</a> and <a href="http://wiki.osmfoundation.org/wiki/License">http://wiki.osmfoundation.org/wiki/License</a></p>
+<p>See <a href="https://www.openstreetmap.org/copyright,">https://www.openstreetmap.org/copyright,</a> <a href="http://wiki.osmfoundation.org/wiki/License/Community_Guidelines">http://wiki.osmfoundation.org/wiki/License/Community_Guidelines</a> and <a href="http://wiki.osmfoundation.org/wiki/License">http://wiki.osmfoundation.org/wiki/License</a></p>
 <p>Back to the start, in general POI data, speed limits, street names etc. should be recorded in the OSM data set, "custom maps" should be produced by taking the OSM data and filtering for what you actually want to use. Without specifics about the target navigation device it is difficult to be more specific than this.</p>
 </div>
 <div class="answer-controls post-controls">

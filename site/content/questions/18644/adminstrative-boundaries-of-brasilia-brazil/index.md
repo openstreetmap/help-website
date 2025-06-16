@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Try to get contact to <a href="http://www.openstreetmap.org/user/Skippern">/user/Skippern</a> ... if I remember correctly he has done some editing in Brasilian local boundaries.</p>
+<p>Try to get contact to <a href="https://www.openstreetmap.org/user/Skippern">/user/Skippern</a> ... if I remember correctly he has done some editing in Brasilian local boundaries.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -125,9 +125,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, you are very welcome to use the osm data and rendering for your project. The <a href="http://www.openstreetmap.org/copyright">only thing we ask</a> is that you give credit OSM. If you are printing a guide book, credit is typically printed either on each map, below each map, or at the end of the book with all the other credits and references.</p>
-<p>Note that wether you sell your guide book or not, how many people see it or what you do with the data in general doesn't mater : as long as you give credit, do not relicence the data, and <a href="http://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy">do not abuse</a> the server resources, we're happy to see the data being used.</p>
-<p>And of course, do not hesitate to <a href="http://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">contribute to osm</a> by improving the map of Chisinau, if you see anything that can be improved :)</p>
+<p>Yes, you are very welcome to use the osm data and rendering for your project. The <a href="https://www.openstreetmap.org/copyright">only thing we ask</a> is that you give credit OSM. If you are printing a guide book, credit is typically printed either on each map, below each map, or at the end of the book with all the other credits and references.</p>
+<p>Note that wether you sell your guide book or not, how many people see it or what you do with the data in general doesn't mater : as long as you give credit, do not relicence the data, and <a href="https://wiki.openstreetmap.org/wiki/Acceptable_Use_Policy">do not abuse</a> the server resources, we're happy to see the data being used.</p>
+<p>And of course, do not hesitate to <a href="https://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">contribute to osm</a> by improving the map of Chisinau, if you see anything that can be improved :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -191,7 +191,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Dear Julia, thanks for wanting to use OSM!</p>
 <p>You will not get legally binding advice here (lawyers can provide such). However, the facts are pretty clear, and answered many times (not legally binding) on this help site (you can search for previous questions and answers or have a look at the related questions (right panel) or click on the tags).</p>
-<p>In short: <em>Everybody is allowed</em> and even encouraged to use and modify OSM's data - also for commercial uses. However that allowance is <em>with restrictions</em>/conditions. Please see <a href="http://www.openstreetmap.org/copyright">OSM copyright</a> and <span>legal FAQ</span> for the restrictions. I am sure that these restrictions (that is, most importantly, a specific credit) are totally acceptable for you.</p>
+<p>In short: <em>Everybody is allowed</em> and even encouraged to use and modify OSM's data - also for commercial uses. However that allowance is <em>with restrictions</em>/conditions. Please see <a href="https://www.openstreetmap.org/copyright">OSM copyright</a> and <span>legal FAQ</span> for the restrictions. I am sure that these restrictions (that is, most importantly, a specific credit) are totally acceptable for you.</p>
 <p>Please use the "add a comment" link below this answer to comment on this specific answer. If you want to add clarifying info to your question please use the "edit" link below it.</p>
 <p>Best wishes for your project!</p>
 <p>A off-topic, technical sidenote: you can use the export function instead of taking screenshots.</p>

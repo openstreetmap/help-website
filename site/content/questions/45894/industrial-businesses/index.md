@@ -106,8 +106,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>So you want to tag a "factory" of some kind ?</p>
-<p>I suggest to use <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dworks">man_made=works</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:product">product=spring</a></p>
-<p>and the area around it (including parkings etc.) as <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dindustrial">landuse=industrial</a></p>
+<p>I suggest to use <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dworks">man_made=works</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:product">product=spring</a></p>
+<p>and the area around it (including parkings etc.) as <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dindustrial">landuse=industrial</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can tag various levels of detail. From a simple <code>building=yes</code>, or <code>building=industrial</code> or even <code>man_made=works</code> as <a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> says.</p>
+<p>You can tag various levels of detail. From a simple <code>building=yes</code>, or <code>building=industrial</code> or even <code>man_made=works</code> as <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> says.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

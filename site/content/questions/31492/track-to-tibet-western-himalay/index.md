@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is a very basic question, anyway I will try to give you a short answer:</p>
-<p>Please look at the desired region using www.openstreetmap.org and checkout if a track/road/... already exists. If the area appear to be mapped already, you might try a <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">routing service</a> with global coverage and your desired routing profile to calculate a way trough this region.<br />
+<p>Please look at the desired region using www.openstreetmap.org and checkout if a track/road/... already exists. If the area appear to be mapped already, you might try a <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">routing service</a> with global coverage and your desired routing profile to calculate a way trough this region.<br />
 If there are no streets mapped in that region it might be possible that this is the real situation or that noone mapped there before. In last case, we would appreciate any contribution back to OSM :)</p>
 <p><strong>Be warned</strong>, I would <strong>never rely only on one source</strong> of information if I would plan a long trip in a unknown country. So better get feedback by local guides/books/...</p>
 </div>

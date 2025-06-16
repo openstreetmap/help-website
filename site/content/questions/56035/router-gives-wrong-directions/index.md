@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>If one tries this <a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=58.8809%2C5.6254%3B58.9864%2C6.1886#map=11/58.9027/5.9254">routing from SVG airport to Preikestolen</a>, a popular tourist attraction in Norway the router is very misleading.</p>
+<p>If one tries this <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=58.8809%2C5.6254%3B58.9864%2C6.1886#map=11/58.9027/5.9254">routing from SVG airport to Preikestolen</a>, a popular tourist attraction in Norway the router is very misleading.</p>
 <p>From this picture one can see that the router tries to navigate south of the fjord (marked in blue) and I marked the expected road in red marker and the expected footpath from there with yellow marker.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2017-05-04_20-02-56.png" alt="Routing from OSM.org" /></p>
+<p><img src="/upfiles/Screenshot_from_2017-05-04_20-02-56.png" alt="Routing from OSM.org" /></p>
 <p>Is there a way to tag to help the router here?<br />
 Or is this a bug in the Open Source Routing Machine?</p>
 </div>

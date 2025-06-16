@@ -211,7 +211,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11981/kushagra-bhargava">@Kushagra</a> OSM has a quite unrestricted tagging approach. If you think that you do not want to stick to established tag keys/values then you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>, hence <code>barrier=tr</code> is not wrong per so ... but it may be not that useful (in fact I guess it is a typing accident).</p>
+<p><a href="https://help.openstreetmap.org/users/11981/kushagra-bhargava">@Kushagra</a> OSM has a quite unrestricted tagging approach. If you think that you do not want to stick to established tag keys/values then you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>, hence <code>barrier=tr</code> is not wrong per so ... but it may be not that useful (in fact I guess it is a typing accident).</p>
 </div>
 <div id="comment-48128-info" class="comment-info">
 <span class="comment-age">(14 Feb '16, 22:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

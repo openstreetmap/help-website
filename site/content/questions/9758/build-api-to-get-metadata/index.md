@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-9760-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It would help to add a bit more description about what you want to do, since in OSM "API" can refer to the way that the map is edited, as well as the placename lookup mechanism <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, and also the read-only <a href="http://wiki.openstreetmap.org/Xapi">Xapi</a>. What do you actually want to do?</p>
+<p>It would help to add a bit more description about what you want to do, since in OSM "API" can refer to the way that the map is edited, as well as the placename lookup mechanism <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, and also the read-only <a href="https://wiki.openstreetmap.org/Xapi">Xapi</a>. What do you actually want to do?</p>
 </div>
 <div id="comment-9760-info" class="comment-info">
 <span class="comment-age">(03 Jan '12, 07:50)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

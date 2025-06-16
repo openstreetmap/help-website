@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm looking to use OSM data as the basis for a series of prints. The data will be stylized into a more artistic representation of the data. I see the license allows me to sell these prints but do I need to offer the final artwork under the CC BY-SA license as well or will I satisfy the terms of the license by simply stating the required copyright statement from the page below on the website through which I will be selling the prints?:</p>
-<p><a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 <p>Follow up question: if I need to offer the final artwork under the CC BY-SA license, does this need to be reflected on each print or does mentioning it on the website along my other sources satisfy the conditions of the license?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

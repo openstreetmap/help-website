@@ -208,7 +208,7 @@ osqa_accepted = false
 <div id="post-17050-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Madeira used to be offset by a tens of meters. It's not now; it looks like Bing have <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=32.74308&amp;lon=-16.69701&amp;zoom=17">fixed</a> their imagery (it now aligns with our tracks). <a href="https://help.openstreetmap.org/questions/5954/meine-gps-tracks-vs-schon-vorhandene-tracks">This question</a> refers obliquely to the problem.</p>
+<p>Madeira used to be offset by a tens of meters. It's not now; it looks like Bing have <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=32.74308&amp;lon=-16.69701&amp;zoom=17">fixed</a> their imagery (it now aligns with our tracks). <a href="/questions/5954/meine-gps-tracks-vs-schon-vorhandene-tracks">This question</a> refers obliquely to the problem.</p>
 </div>
 <div id="comment-17050-info" class="comment-info">
 <span class="comment-age">(20 Oct '12, 12:22)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

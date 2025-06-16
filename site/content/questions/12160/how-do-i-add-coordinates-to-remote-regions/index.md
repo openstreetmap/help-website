@@ -105,8 +105,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Just map the areas to the best of your abilities. In principle, mapping a remote area is no different from mapping a city. It's just that there are less buildings :-).</p>
-<p>There are many well-mapped remote areas in OSM, such as <a href="http://www.openstreetmap.org/?lat=44.1568&amp;lon=2.5484&amp;zoom=12&amp;layers=M">this area in the Auvergne (France)</a>. Just map whatever you find interesting, rivers, tracks, forests, local borders, hamlets and isolated buildings etc.</p>
-<p>To get you started, see the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a>.</p>
+<p>There are many well-mapped remote areas in OSM, such as <a href="https://www.openstreetmap.org/?lat=44.1568&amp;lon=2.5484&amp;zoom=12&amp;layers=M">this area in the Auvergne (France)</a>. Just map whatever you find interesting, rivers, tracks, forests, local borders, hamlets and isolated buildings etc.</p>
+<p>To get you started, see the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

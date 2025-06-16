@@ -68,7 +68,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator">Does this help</a>?</p>
+<p><a href="/questions/1455/using-map-in-adobe-illustrator">Does this help</a>?</p>
 </div>
 <div id="comment-33316-info" class="comment-info">
 <span class="comment-age">(20 May '14, 10:57)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -169,7 +169,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I fixed it with our desktop editor JOSM, it might have worked with our alternative embedded editor P2 too, but that would have to be checked.</p>
-<p>Layer attribute: <a href="http://wiki.openstreetmap.org/wiki/Key:layer">http://wiki.openstreetmap.org/wiki/Key:layer</a></p>
+<p>Layer attribute: <a href="https://wiki.openstreetmap.org/wiki/Key:layer">https://wiki.openstreetmap.org/wiki/Key:layer</a></p>
 </div>
 <div id="comment-37947-info" class="comment-info">
 <span class="comment-age">(24 Oct '14, 23:46)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

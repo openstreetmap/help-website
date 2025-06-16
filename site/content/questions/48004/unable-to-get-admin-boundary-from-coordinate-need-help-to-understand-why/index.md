@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Unable to get admin boundary from coordinate. Need help to understand why"
-description = '''Hi, I cannot understand how I shall fix the error that causes the admin boundary that should cover the coordinate in the link below: http://www.openstreetmap.org/query?lat=57.7585&amp;amp;lon=12.2652 It should belong to &quot;Lerums kommun&quot; Admin level 07. It does exist, but the query cannot find it. What is...'''
+description = '''Hi, I cannot understand how I shall fix the error that causes the admin boundary that should cover the coordinate in the link below: https://www.openstreetmap.org/query?lat=57.7585&amp;amp;lon=12.2652 It should belong to &quot;Lerums kommun&quot; Admin level 07. It does exist, but the query cannot find it. What is...'''
 date = "2016-02-08T22:34:00Z"
 lastmod = "2016-02-09T13:55:00Z"
 weight = 48004
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I cannot understand how I shall fix the error that causes the admin boundary that should cover the coordinate in the link below:</p>
-<p><a href="http://www.openstreetmap.org/query?lat=57.7585&amp;lon=12.2652">http://www.openstreetmap.org/query?lat=57.7585&amp;lon=12.2652</a></p>
+<p><a href="https://www.openstreetmap.org/query?lat=57.7585&amp;lon=12.2652">https://www.openstreetmap.org/query?lat=57.7585&amp;lon=12.2652</a></p>
 <p>It should belong to "Lerums kommun" Admin level 07. It does exist, but the query cannot find it.</p>
 <p>What is wrong with the administrative border, and how do I correct it?</p>
 </div>

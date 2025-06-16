@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-44197-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Duplicate of <a href="https://help.openstreetmap.org/questions/16703/addresses-without-streetnames">Addresses without streetnames</a></p>
+<p>Duplicate of <a href="/questions/16703/addresses-without-streetnames">Addresses without streetnames</a></p>
 </div>
 <div id="comment-44197-info" class="comment-info">
 <span class="comment-age">(15 Jul '15, 11:38)</span> <span class="comment-user userinfo">sleske</span>
@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi CrazyBanana, read this <a href="https://help.openstreetmap.org/questions/16703/addresses-without-streetnames">https://help.openstreetmap.org/questions/16703/addresses-without-streetnames</a> And these lines as well <a href="http://wiki.openstreetmap.org/wiki/Addresses">http://wiki.openstreetmap.org/wiki/Addresses</a> An address is useable even if it does not include a street name, but some kind of specific code, like RR 12OSM456 (Road route 12OSM456).</p>
+<p>Hi CrazyBanana, read this <a href="/questions/16703/addresses-without-streetnames">https://help.openstreetmap.org/questions/16703/addresses-without-streetnames</a> And these lines as well <a href="https://wiki.openstreetmap.org/wiki/Addresses">https://wiki.openstreetmap.org/wiki/Addresses</a> An address is useable even if it does not include a street name, but some kind of specific code, like RR 12OSM456 (Road route 12OSM456).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

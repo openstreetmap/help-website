@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How do I tag this object which serves as the entrance of a village? I'm considering city gate or height restrictor, but none seems a good fit.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Webp.net-resizeimage_30naklQ.jpg" alt="the object to be tagged" /></p>
+<p><img src="/upfiles/Webp.net-resizeimage_30naklQ.jpg" alt="the object to be tagged" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-79413-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>These may be worth a dedicated tag: see also <a href="https://help.openstreetmap.org/questions/49706/how-should-i-tag-a-archway-over-a-road">this question</a> for one in Milwaukee.</p>
+<p>These may be worth a dedicated tag: see also <a href="/questions/49706/how-should-i-tag-a-archway-over-a-road">this question</a> for one in Milwaukee.</p>
 </div>
 <div id="comment-79413-info" class="comment-info">
 <span class="comment-age">(27 Mar '21, 14:47)</span> <span class="comment-user userinfo">InsertUser</span>

@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>There are some shops that focus on selling animal feed and other farming supplies. For example, <a href="http://linntonfeed.com/products/">Linnton Feed and Seed</a>. I'm trying to find a good tag for this and similar stores. I'm thinking maybe one of the following tags:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dgarden_centre">shop=garden_centre</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware">shop=hardware</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dpet">shop=pet</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dgarden_centre">shop=garden_centre</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware">shop=hardware</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dpet">shop=pet</a></li>
 </ul>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -233,7 +233,7 @@ osqa_accepted = false
 <div id="post-47486-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm not convinced that <a href="http://taginfo.openstreetmap.org/tags/trade=agricultural_supplies">http://taginfo.openstreetmap.org/tags/trade=agricultural_supplies</a> implies "feed". Looking at the usage, the two examples closest to me are <a href="http://www.openstreetmap.org/way/80504058">http://www.openstreetmap.org/way/80504058</a> and <a href="http://www.openstreetmap.org/way/114308872">http://www.openstreetmap.org/way/114308872</a> , which are <a href="http://www.tornevalley.co.uk/">http://www.tornevalley.co.uk/</a> and <a href="http://www.molecountrystores.co.uk/our-products">http://www.molecountrystores.co.uk/our-products</a> . The first majors on lawnmowers, the second does sell feed but also the full "country stores" range.</p>
+<p>I'm not convinced that <a href="http://taginfo.openstreetmap.org/tags/trade=agricultural_supplies">http://taginfo.openstreetmap.org/tags/trade=agricultural_supplies</a> implies "feed". Looking at the usage, the two examples closest to me are <a href="https://www.openstreetmap.org/way/80504058">https://www.openstreetmap.org/way/80504058</a> and <a href="https://www.openstreetmap.org/way/114308872">https://www.openstreetmap.org/way/114308872</a> , which are <a href="http://www.tornevalley.co.uk/">http://www.tornevalley.co.uk/</a> and <a href="http://www.molecountrystores.co.uk/our-products">http://www.molecountrystores.co.uk/our-products</a> . The first majors on lawnmowers, the second does sell feed but also the full "country stores" range.</p>
 </div>
 <div id="comment-47486-info" class="comment-info">
 <span class="comment-age">(12 Jan '16, 21:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -245,7 +245,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> would completely agree with this. "Country Stores" are really common in East Mids: there are a couple in Melton &amp; at least one in Oakham. They are retail, not trade outlets: and I suspect a typical customer is someone with a few acres of paddock for their horses. Product mix is diverse: clothing, pet supplies, animal feed etc.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> would completely agree with this. "Country Stores" are really common in East Mids: there are a couple in Melton &amp; at least one in Oakham. They are retail, not trade outlets: and I suspect a typical customer is someone with a few acres of paddock for their horses. Product mix is diverse: clothing, pet supplies, animal feed etc.</p>
 </div>
 <div id="comment-47524-info" class="comment-info">
 <span class="comment-age">(15 Jan '16, 15:06)</span> <span class="comment-user userinfo">SK53 ♦</span>

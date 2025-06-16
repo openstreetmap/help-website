@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>In the last couple of days I've noticed in the open street map editor that the map and the satellite imagery are now not aligned correctly.</p>
 <p>It looks like most objects (not just ones I've added and updated) are now a little south east of their positions on the satellite imagery, was there a recent update where the alignment was adjusted?</p>
 <p>Thanks, Mark</p>
-<p><img src="https://help.openstreetmap.org/upfiles/scot_map_alignment.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/scot_map_alignment.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-satellite-images" rel="tag" title="see questions tagged &#39;satellite-images&#39;">satellite-images</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span> <span class="post-tag tag-link-alignment" rel="tag" title="see questions tagged &#39;alignment&#39;">alignment</span>
@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-75591-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/71775/is-there-a-way-to-align-offset-of-satellite-images-while-editing">https://help.openstreetmap.org/questions/71775/is-there-a-way-to-align-offset-of-satellite-images-while-editing</a></p>
+<p><a href="/questions/71775/is-there-a-way-to-align-offset-of-satellite-images-while-editing">https://help.openstreetmap.org/questions/71775/is-there-a-way-to-align-offset-of-satellite-images-while-editing</a></p>
 </div>
 <div id="comment-75591-info" class="comment-info">
 <span class="comment-age">(08 Jul '20, 07:25)</span> <span class="comment-user userinfo">andy mackey</span>

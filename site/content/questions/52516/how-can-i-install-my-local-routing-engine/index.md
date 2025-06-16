@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The realistic choices for running your own routing engines are likely</p>
-<p>graphhopper - <a href="http://wiki.openstreetmap.org/wiki/GraphHopper">http://wiki.openstreetmap.org/wiki/GraphHopper</a></p>
+<p>graphhopper - <a href="https://wiki.openstreetmap.org/wiki/GraphHopper">https://wiki.openstreetmap.org/wiki/GraphHopper</a></p>
 <p>mapzen - <a href="https://github.com/valhalla">https://github.com/valhalla</a></p>
 <p>OSRM - <a href="https://github.com/Project-OSRM">https://github.com/Project-OSRM</a></p>
 <p>Which one is best suited for your needs depends really on your criteria, for example how large the area is you want to route over, if you want to be able to adjust routing parameters on the fly, what resources you have access to and so on.</p>

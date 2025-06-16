@@ -220,7 +220,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi take a look here at the Vennbahnweg, <a href="http://www.openstreetmap.org/#map=17/50.73378/6.17174">http://www.openstreetmap.org/#map=17/50.73378/6.17174</a> using all the tags you want.</p>
+<p>Hi take a look here at the Vennbahnweg, <a href="https://www.openstreetmap.org/#map=17/50.73378/6.17174">https://www.openstreetmap.org/#map=17/50.73378/6.17174</a> using all the tags you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

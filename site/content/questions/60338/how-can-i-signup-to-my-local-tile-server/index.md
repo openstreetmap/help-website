@@ -109,7 +109,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>For info for anyone looking to answer there's a bit more info on a related question from the same person <a href="https://help.openstreetmap.org/questions/60716/how-can-edit-my-local-tile-server-without-uploading-changes-to-openstreetmap-server">https://help.openstreetmap.org/questions/60716/how-can-edit-my-local-tile-server-without-uploading-changes-to-openstreetmap-server</a> that adds a bit of context here.</p>
+<p>For info for anyone looking to answer there's a bit more info on a related question from the same person <a href="/questions/60716/how-can-edit-my-local-tile-server-without-uploading-changes-to-openstreetmap-server">https://help.openstreetmap.org/questions/60716/how-can-edit-my-local-tile-server-without-uploading-changes-to-openstreetmap-server</a> that adds a bit of context here.</p>
 </div>
 <div id="comment-60764-info" class="comment-info">
 <span class="comment-age">(24 Nov '17, 11:21)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

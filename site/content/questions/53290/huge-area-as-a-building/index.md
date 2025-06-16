@@ -107,8 +107,8 @@ Thanks!</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>Since these are obviously not buildings, I would remove the building tag.</p>
-<p>As to what these are, the area to the east (<a href="http://www.openstreetmap.org/way/241938436">Tambak Garam</a>) seems to be salt ponds, which would be tagged landuse=salt_pond</p>
-<p>The areas to the west (<a href="http://www.openstreetmap.org/way/244163704">such as way 244163704</a>) are tagged farmland:type_idn=sawah, and sawah is rice paddy. Tagging for these seems to be landuse=farmland, crop=rice.</p>
+<p>As to what these are, the area to the east (<a href="https://www.openstreetmap.org/way/241938436">Tambak Garam</a>) seems to be salt ponds, which would be tagged landuse=salt_pond</p>
+<p>The areas to the west (<a href="https://www.openstreetmap.org/way/244163704">such as way 244163704</a>) are tagged farmland:type_idn=sawah, and sawah is rice paddy. Tagging for these seems to be landuse=farmland, crop=rice.</p>
 <p>As Hendrikklaas said, it would be good to contact the mapper too (or make a comment on the changeset) as locals might have more accurate or detailed information than we could gather remotely.</p>
 </div>
 <div class="answer-controls post-controls">

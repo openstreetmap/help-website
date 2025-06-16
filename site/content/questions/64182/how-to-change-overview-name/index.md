@@ -137,7 +137,7 @@ One Answer:
 <div id="post-64186-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also see <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>Also see <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div id="comment-64186-info" class="comment-info">
 <span class="comment-age">(12 Jun '18, 21:12)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -104,8 +104,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You probably want to use <a href="http://wiki.openstreetmap.org/wiki/Key:traffic_sign">traffic_sign=city_limit</a> instead.</p>
-<p>Note that the main use of these tags is to be a guide to map the city limits as an actual closed way or relation (see <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">administrative boundaries</a>), which would be more useful.</p>
+<p>You probably want to use <a href="https://wiki.openstreetmap.org/wiki/Key:traffic_sign">traffic_sign=city_limit</a> instead.</p>
+<p>Note that the main use of these tags is to be a guide to map the city limits as an actual closed way or relation (see <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">administrative boundaries</a>), which would be more useful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

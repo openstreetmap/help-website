@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, use nodes to add the shop names and other data and the addresses of the apartments as well. Take a look here <a href="http://www.openstreetmap.org/#map=18/51.83702/4.96108">http://www.openstreetmap.org/#map=18/51.83702/4.96108</a> theres a mall with shops and appartments.</p>
+<p>Hi, use nodes to add the shop names and other data and the addresses of the apartments as well. Take a look here <a href="https://www.openstreetmap.org/#map=18/51.83702/4.96108">https://www.openstreetmap.org/#map=18/51.83702/4.96108</a> theres a mall with shops and appartments.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

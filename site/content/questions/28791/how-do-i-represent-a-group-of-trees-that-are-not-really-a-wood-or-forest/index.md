@@ -106,7 +106,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>My practise for mapping (including on golf courses) is for any area of trees is to use natural=wood as this simply defines the area to have some trees in it! Although sometimes I don't map all the 'smaller' trees - it's a judgement call on to how keen you are / how much time you have to map it.</p>
 <p>For reference you can view the OS Streetview Layer which contains wooded green areas for even smallest groups of trees.</p>
-<p>NB There is the option for landuse=forest too (see <a href="http://help.openstreetmap.org/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood">http://help.openstreetmap.org/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood</a> for further discussions).</p>
+<p>NB There is the option for landuse=forest too (see <a href="/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood">https://help.openstreetmap.org/questions/324/when-should-we-use-landuseforest-rather-than-naturalwood</a> for further discussions).</p>
 <p>In the absence of any specific name on the group of trees probably means it's not a wood in the sense that I think you've thinking of: i.e. a reasonably largish area sustaining typical woodland flora and fauna.</p>
 <p>For golf courses, especially for big single tree(s) that one considers to be part of the hole or an obstacle on it, I like to mark these individually with a natural=tree at the appropriate places.</p>
 </div>
@@ -213,8 +213,8 @@ osqa_accepted = true
 <p>You have the following alternatives:</p>
 <ul>
 <li>Follow robbieonsea's advice and use <code>natural=wood</code> or <code>landuse=forest</code>, with the longer term disadvantages outlined above.</li>
-<li>Use <code>natural=tree</code> with a closed way (area) or open way (line). This has been suggested for <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/tree_row">a long time</a> as a way of mapping such groups of trees. Although there are 2000 instances of this on OSM (<a href="http://taginfo.openstreetmap.org/tags/natural=tree?filter=ways">taginfo</a>, <a href="http://overpass-turbo.eu/?key=natural&amp;value=tree&amp;type=way&amp;template=key-value-type">OverpassTurbo query for Germany</a>), some are nothing more than oddly octagonal individual trees (not recommended), so again the meaning of the tag is unlikely to be clear.</li>
-<li>The <a href="http://wiki.openstreetmap.org/wiki/Key%3Adenotation">denotation</a> tag has a value which is meant for identifying trees in groups, denotation=cluster. Unfortunately a mass edit added this particular tag to well over 300,000 tree nodes. Again the (abuse) of the tag has devalued its meaning.</li>
+<li>Use <code>natural=tree</code> with a closed way (area) or open way (line). This has been suggested for <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/tree_row">a long time</a> as a way of mapping such groups of trees. Although there are 2000 instances of this on OSM (<a href="http://taginfo.openstreetmap.org/tags/natural=tree?filter=ways">taginfo</a>, <a href="http://overpass-turbo.eu/?key=natural&amp;value=tree&amp;type=way&amp;template=key-value-type">OverpassTurbo query for Germany</a>), some are nothing more than oddly octagonal individual trees (not recommended), so again the meaning of the tag is unlikely to be clear.</li>
+<li>The <a href="https://wiki.openstreetmap.org/wiki/Key%3Adenotation">denotation</a> tag has a value which is meant for identifying trees in groups, denotation=cluster. Unfortunately a mass edit added this particular tag to well over 300,000 tree nodes. Again the (abuse) of the tag has devalued its meaning.</li>
 <li>Use method 1 and add another tag to disambiguate these groups of trees from true woodland.</li>
 <li>Invent some other tag entirely.</li>
 </ul>

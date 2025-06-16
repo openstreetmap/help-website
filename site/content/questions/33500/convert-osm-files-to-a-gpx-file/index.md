@@ -193,7 +193,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are trying to load an OSM map for use in your garmin then similar questions have been asked before "SomeoneElse"'s answer is the best one, see <a href="https://help.openstreetmap.org/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a> you will probably need a memory card to put the map on, and that is safer than using the internal memory of your garmin. Once un-zipped and installed on the card and into the Nuvi look through the garmin device menus to select or deselect the map you want to use. I am guessing a bit as I don't have Nuvi 40 but that is how it works on Nuvi 1310t and Oregons.</p>
+<p>If you are trying to load an OSM map for use in your garmin then similar questions have been asked before "SomeoneElse"'s answer is the best one, see <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a> you will probably need a memory card to put the map on, and that is safer than using the internal memory of your garmin. Once un-zipped and installed on the card and into the Nuvi look through the garmin device menus to select or deselect the map you want to use. I am guessing a bit as I don't have Nuvi 40 but that is how it works on Nuvi 1310t and Oregons.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

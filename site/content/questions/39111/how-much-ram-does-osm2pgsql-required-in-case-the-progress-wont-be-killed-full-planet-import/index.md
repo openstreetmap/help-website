@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-39115-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> It's a different question</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> It's a different question</p>
 </div>
 <div id="comment-39115-info" class="comment-info">
 <span class="comment-age">(07 Dec '14, 11:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -199,7 +199,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi studiousdavid, welcome, you might or please read this <a href="https://help.openstreetmap.org/questions/12318/why-is-my-import-of-planet-latestosm-killed">https://help.openstreetmap.org/questions/12318/why-is-my-import-of-planet-latestosm-killed</a> and other import related questions. Just by adding import or osm2pgsql into the blank line above.</p>
+<p>Hi studiousdavid, welcome, you might or please read this <a href="/questions/12318/why-is-my-import-of-planet-latestosm-killed">https://help.openstreetmap.org/questions/12318/why-is-my-import-of-planet-latestosm-killed</a> and other import related questions. Just by adding import or osm2pgsql into the blank line above.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

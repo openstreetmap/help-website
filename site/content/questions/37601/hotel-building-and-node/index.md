@@ -62,7 +62,7 @@ osqa_accepted = true
 <div id="post-37603-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you'd like nodes instead of ways in OSM data, I'd suggest that you look at the "<code>--all-to-nodes</code>" option of <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
+<p>If you'd like nodes instead of ways in OSM data, I'd suggest that you look at the "<code>--all-to-nodes</code>" option of <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
 </div>
 <div id="comment-37603-info" class="comment-info">
 <span class="comment-age">(13 Oct '14, 22:36)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Two frequent <a href="http://wiki.openstreetmap.org/wiki/Good_practice">good practice</a> advice are <em>don't tag for the renderer</em> and <em>one feature, one OSM element</em>. You shouldn't add a hotel node if there already is a hotel area (it's actually common practice to "upgrade" a feature from a node to an area when adding details to the map).</p>
+<p>Two frequent <a href="https://wiki.openstreetmap.org/wiki/Good_practice">good practice</a> advice are <em>don't tag for the renderer</em> and <em>one feature, one OSM element</em>. You shouldn't add a hotel node if there already is a hotel area (it's actually common practice to "upgrade" a feature from a node to an area when adding details to the map).</p>
 <p>Instead, you should either get your software to handle areas or, as SomeoneElse suggested, convert areas to nodes (in your local import, not in the osm db!) before using osmconvert's --all-to--nodes option.</p>
 </div>
 <div class="answer-controls post-controls">

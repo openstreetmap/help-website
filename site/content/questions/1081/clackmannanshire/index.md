@@ -113,9 +113,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello, and welcome, and great to hear you are finding OpenStreetMap to be useful.</p>
-<p>As OpenStreetMap is a map that anyone can edit, the best way to improve it is usually to update it yourself. You can start with the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a> for instructions. You can also encourage others in you local area to get involved, and contributing to the map. Maybe also contact community groups that could help out.</p>
-<p>One good way to get people involved in mapping a particular area, would be to organise a <a href="http://wiki.openstreetmap.org/wiki/Mapping_parties">mapping party</a>. This means experienced mappers can help beginners, it can attract publicity in the local community, and help get a town mapped well.</p>
-<p>You could also contact some of the people involved in <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Scotland">WikiProject Scotland</a>. They have regular social meetings in Glasgow and Edinburgh, and I'm sure some would be willing to travel to Clackmannanshire to map there, and possibly help organise a mapping party.</p>
+<p>As OpenStreetMap is a map that anyone can edit, the best way to improve it is usually to update it yourself. You can start with the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a> for instructions. You can also encourage others in you local area to get involved, and contributing to the map. Maybe also contact community groups that could help out.</p>
+<p>One good way to get people involved in mapping a particular area, would be to organise a <a href="https://wiki.openstreetmap.org/wiki/Mapping_parties">mapping party</a>. This means experienced mappers can help beginners, it can attract publicity in the local community, and help get a town mapped well.</p>
+<p>You could also contact some of the people involved in <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Scotland">WikiProject Scotland</a>. They have regular social meetings in Glasgow and Edinburgh, and I'm sure some would be willing to travel to Clackmannanshire to map there, and possibly help organise a mapping party.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

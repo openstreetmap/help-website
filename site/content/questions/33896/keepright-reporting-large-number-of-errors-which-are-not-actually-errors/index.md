@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Keepright reporting large number of errors which are not actually errors"
-description = '''Not sure if this is the right place to ask about keepright. I just realized that keepright is reporting lot of errors which are actually not errors. Both keepright site and Keepright in QAT script (http://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script) reports these errors. There are lot...'''
+description = '''Not sure if this is the right place to ask about keepright. I just realized that keepright is reporting lot of errors which are actually not errors. Both keepright site and Keepright in QAT script (https://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script) reports these errors. There are lot...'''
 date = "2014-06-12T05:06:00Z"
 lastmod = "2014-06-18T05:00:00Z"
 weight = 33896
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Not sure if this is the right place to ask about keepright.</p>
-<p>I just realized that keepright is reporting lot of errors which are actually not errors. Both keepright site and Keepright in QAT script (<a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)">http://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)</a> reports these errors.</p>
+<p>I just realized that keepright is reporting lot of errors which are actually not errors. Both keepright site and Keepright in QAT script (<a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)">https://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)</a> reports these errors.</p>
 <p>There are lot of "This highway intersects the highway #nnnnnnn but there is no junction node" errors around my neighbourhood. When I open them in JOSM, I can see that there are junction nodes (<a href="http://keepright.ipax.at/report_map.php?schema=48&amp;error=61177150)">http://keepright.ipax.at/report_map.php?schema=48&amp;error=61177150)</a></p>
 <p>Tagging these as false positive is not a practical as there are large number of such errors being reported. How can I report this issue to the developers?</p>
 </div>

@@ -207,7 +207,7 @@ osqa_accepted = true
 <p>&lt;node id="221454099" version="4" timestamp="2016-02-19T01:31:31Z" uid="1708958" user="Nodes&amp;amp;Roads" changeset="37300193" lat="28.5580746" lon="98.4585189"/&gt;</p>
 <p>Another is :</p>
 <p>&lt;node id="224205729" version="3" timestamp="2016-02-20T00:02:20Z" uid="3642735" user="Nodes&amp;amp;Roads" changeset="37320893" lat="28.0394804" lon="99.5276968"/&gt;</p>
-<p>Maybe we can change one of the display_name in the .osc file to solve the problem. But if i want use the .pbf file, what should i do? I don't know how to edit the .pbf file, i also asked another question <a href="https://help.openstreetmap.org/questions/52262/two-user_id-use-the-same-display_name-in-the-pbf-data-file">here</a>. If someone have some ideal, please answer <a href="https://help.openstreetmap.org/questions/52262/two-user_id-use-the-same-display_name-in-the-pbf-data-file">here</a>.</p>
+<p>Maybe we can change one of the display_name in the .osc file to solve the problem. But if i want use the .pbf file, what should i do? I don't know how to edit the .pbf file, i also asked another question <a href="/questions/52262/two-user_id-use-the-same-display_name-in-the-pbf-data-file">here</a>. If someone have some ideal, please answer <a href="/questions/52262/two-user_id-use-the-same-display_name-in-the-pbf-data-file">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

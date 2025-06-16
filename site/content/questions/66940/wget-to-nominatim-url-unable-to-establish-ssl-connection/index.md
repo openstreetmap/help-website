@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have possibly the same problem as <a href="https://help.openstreetmap.org/questions/45261/error-nomination-geocode-with-wget">that older question</a>; I copied the url to a windows 10 installation. result:</p>
+<p>I have possibly the same problem as <a href="/questions/45261/error-nomination-geocode-with-wget">that older question</a>; I copied the url to a windows 10 installation. result:</p>
 <pre><code>  wget &quot;http://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281&quot;
     --21:36:57--  http://nominatim.openstreetmap.org/reverse?format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281
                =&gt; `reverse@format=xml&amp;limit=1&amp;addressdetails=1&amp;zoom=18&amp;email=&amp;lat=-0.24136&amp;lon=98.48281&#39;

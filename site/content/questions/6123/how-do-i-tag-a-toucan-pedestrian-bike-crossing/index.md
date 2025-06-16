@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>A <a href="http://en.wikipedia.org/wiki/Toucan_crossing">toucan crossing</a> is a road crossing where pedestrians and bikes can cross together (typically used to cross a road between two segregated cycle paths).</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">OSM Wiki for "crossing"</a> states that I can either use:</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">OSM Wiki for "crossing"</a> states that I can either use:</p>
 <pre><code>highway=crossing
 crossing=traffic_signals
 bicycle=yes
@@ -162,7 +162,7 @@ crossing_ref=toucan</code></pre>
 <p>Pro crossing=toucan</p>
 <ul>
 <li>historically, crossing=toucan predates crossing_ref=toucan and even the international crossing tags</li>
-<li>it is currently documented in the wiki (<a href="http://wiki.openstreetmap.org/w/index.php?title=Key%3Acrossing&amp;action=historysubmit&amp;diff=556201&amp;oldid=552677">attempts to change this have been reverted</a>)</li>
+<li>it is currently documented in the wiki (<a href="https://wiki.openstreetmap.org/w/index.php?title=Key%3Acrossing&amp;action=historysubmit&amp;diff=556201&amp;oldid=552677">attempts to change this have been reverted</a>)</li>
 </ul>
 <p>Pro crossing_ref=toucan</p>
 <ul>

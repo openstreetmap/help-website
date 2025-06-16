@@ -132,7 +132,7 @@ One Answer:
 <div id="post-11116-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... and a further collection of possibilities can be found at <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">http://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></p>
+<p>... and a further collection of possibilities can be found at <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">https://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></p>
 </div>
 <div id="comment-11116-info" class="comment-info">
 <span class="comment-age">(11 Mar '12, 10:17)</span> <span class="comment-user userinfo">stephan75</span>

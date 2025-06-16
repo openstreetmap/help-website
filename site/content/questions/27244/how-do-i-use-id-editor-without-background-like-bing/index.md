@@ -238,7 +238,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Nearly! if you enter localhost/z/x/y.jpg iD queries <a href="http://www.openstreetmap.org/localhost/z/x/y.jpg">http://www.openstreetmap.org/localhost/z/x/y.jpg</a> (which returns a HTTP 404 error). What you wanted is likely <a href="http://localhost">http://localhost</a> (no parameters needed for no function). The network debug view of firefox shows no queries then. <span>nothinghere://example.com</span> as entry works too. 0 % brightness is not needed as black is black for me.</p>
+<p>Nearly! if you enter localhost/z/x/y.jpg iD queries <a href="https://www.openstreetmap.org/localhost/z/x/y.jpg">https://www.openstreetmap.org/localhost/z/x/y.jpg</a> (which returns a HTTP 404 error). What you wanted is likely <a href="http://localhost">http://localhost</a> (no parameters needed for no function). The network debug view of firefox shows no queries then. <span>nothinghere://example.com</span> as entry works too. 0 % brightness is not needed as black is black for me.</p>
 <p>The real solution (a "no" background entry) may be too difficult to understand for id users (in the programmers view) ... since gps traces are not really supported - what else would you want to use to work with? ;-)</p>
 </div>
 <div id="comment-27251-info" class="comment-info">
@@ -263,7 +263,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>You could also take a look at <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a>, which lets you have no background (or more than one) and generally has good performance compared to iD or Potlach.</p>
+<p>You could also take a look at <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a>, which lets you have no background (or more than one) and generally has good performance compared to iD or Potlach.</p>
 </div>
 <div id="comment-27264-info" class="comment-info">
 <span class="comment-age">(17 Oct '13, 15:35)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

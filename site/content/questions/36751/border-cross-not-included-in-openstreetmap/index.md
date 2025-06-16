@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, <a href="http://www.openstreetmap.org/#map=13/49.3656/19.7660">OpenStreetmap knows about that border crossing</a>. You need to talk to the provider of your routing software. I've tried routing between those locations by car using <a href="http://project-osrm.org/">OSRM</a>, and it worked OK.</p>
+<p>Yes, <a href="https://www.openstreetmap.org/#map=13/49.3656/19.7660">OpenStreetmap knows about that border crossing</a>. You need to talk to the provider of your routing software. I've tried routing between those locations by car using <a href="http://project-osrm.org/">OSRM</a>, and it worked OK.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

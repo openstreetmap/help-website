@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Recently I've added 2 roundabouts to the location near my home, as they were not in the maps yet. The first seems to be ok, but the second is somehow wrong, because the navigation, that uses openstreetmaps as a source for generating map files for itself, refuses to route a way through it.</p>
 <p>It's most probably my mistake as I am quite new to this editation, though I have experience with vector editors etc.</p>
 <p>Is it possible to test the changes made using some kind of website map?</p>
-<p>This is the roundabout <a href="http://www.openstreetmap.org/edit?lat=49.640189&amp;lon=17.319912&amp;zoom=18">http://www.openstreetmap.org/edit?lat=49.640189&amp;lon=17.319912&amp;zoom=18</a></p>
+<p>This is the roundabout <a href="https://www.openstreetmap.org/edit?lat=49.640189&amp;lon=17.319912&amp;zoom=18">https://www.openstreetmap.org/edit?lat=49.640189&amp;lon=17.319912&amp;zoom=18</a></p>
 <p>Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

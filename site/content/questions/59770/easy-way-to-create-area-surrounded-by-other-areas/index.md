@@ -222,7 +222,7 @@ osqa_accepted = false
 <div id="post-59830-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Simple example: white area <a href="http://www.openstreetmap.org/#map=16/59.3613/24.6874">http://www.openstreetmap.org/#map=16/59.3613/24.6874</a> must be natural=scrub</p>
+<p>Simple example: white area <a href="https://www.openstreetmap.org/#map=16/59.3613/24.6874">https://www.openstreetmap.org/#map=16/59.3613/24.6874</a> must be natural=scrub</p>
 </div>
 <div id="comment-59830-info" class="comment-info">
 <span class="comment-age">(25 Sep '17, 18:49)</span> <span class="comment-user userinfo">juhanjuku</span>

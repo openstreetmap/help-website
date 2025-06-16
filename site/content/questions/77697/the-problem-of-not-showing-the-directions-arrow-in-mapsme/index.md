@@ -81,7 +81,7 @@ osqa_accepted = false
 <div id="post-77713-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/929F75CA-1D4F-47E8-9131-F2D48763B51F.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/929F75CA-1D4F-47E8-9131-F2D48763B51F.jpeg" alt="alt text" /></p>
 </div>
 <div id="comment-77713-info" class="comment-info">
 <span class="comment-age">(25 Nov '20, 22:36)</span> <span class="comment-user userinfo">الويباري</span>
@@ -92,7 +92,7 @@ osqa_accepted = false
 <div id="post-77714-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/93AE5EBE-6BCC-4780-B457-FF132A0882C6.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/93AE5EBE-6BCC-4780-B457-FF132A0882C6.jpeg" alt="alt text" /></p>
 </div>
 <div id="comment-77714-info" class="comment-info">
 <span class="comment-age">(25 Nov '20, 22:38)</span> <span class="comment-user userinfo">الويباري</span>

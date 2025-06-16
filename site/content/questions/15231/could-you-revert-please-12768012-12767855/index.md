@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>could you revert please #<a href="http://www.openstreetmap.org/browse/changeset/12768012">12768012</a> #<a href="http://www.openstreetmap.org/browse/changeset/12767855">12767855</a>, I did not know that changes are immediately reflected on the common map:(</p>
+<p>could you revert please #<a href="https://www.openstreetmap.org/browse/changeset/12768012">12768012</a> #<a href="https://www.openstreetmap.org/browse/changeset/12767855">12767855</a>, I did not know that changes are immediately reflected on the common map:(</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-revert" rel="tag" title="see questions tagged &#39;revert&#39;">revert</span>
@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-18468-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sanderd seems to have taken care of: <a href="http://www.openstreetmap.org/browse/changeset/12773494">revert changeset 12767855</a>, 12768012: <a href="http://www.openstreetmap.org/browse/relation/1816280/history">way</a> and <a href="http://www.openstreetmap.org/browse/way/4522857/history">relation</a></p>
+<p>Sanderd seems to have taken care of: <a href="https://www.openstreetmap.org/browse/changeset/12773494">revert changeset 12767855</a>, 12768012: <a href="https://www.openstreetmap.org/browse/relation/1816280/history">way</a> and <a href="https://www.openstreetmap.org/browse/way/4522857/history">relation</a></p>
 </div>
 <div id="comment-18468-info" class="comment-info">
 <span class="comment-age">(15 Dec '12, 14:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

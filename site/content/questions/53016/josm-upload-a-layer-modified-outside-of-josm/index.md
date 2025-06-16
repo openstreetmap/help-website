@@ -105,7 +105,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>No! This is the changeset: <a href="http://www.openstreetmap.org/changeset/43777145">http://www.openstreetmap.org/changeset/43777145</a></p>
+<p>No! This is the changeset: <a href="https://www.openstreetmap.org/changeset/43777145">https://www.openstreetmap.org/changeset/43777145</a></p>
 </div>
 <div id="comment-53039-info" class="comment-info">
 <span class="comment-age">(19 Nov '16, 20:24)</span> <span class="comment-user userinfo">Davide_sd</span>

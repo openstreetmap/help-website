@@ -87,7 +87,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If you cannot get any answer here, try to ask at <a href="http://forum.osm.org">http://forum.osm.org</a> or at one of the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p>If you cannot get any answer here, try to ask at <a href="http://forum.osm.org">http://forum.osm.org</a> or at one of the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-14931-info" class="comment-info">
 <span class="comment-age">(09 Aug '12, 17:25)</span> <span class="comment-user userinfo">stephan75</span>

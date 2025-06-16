@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>While editing some cities I see a lot of unneeded/excessive nodes. For example, here:</p>
 <p><img src="http://i.imgur.com/wk4jMHc.png" alt="Unneeded node" /></p>
-<p>See that the street is straight and the left middle node is unneeded. I found <a href="https://help.openstreetmap.org/questions/8348/is-there-an-efficient-way-to-delete-excessiveredundant-nodes">question 8348</a> but I just can't select everything and simplify (it can remove valid nodes or just can't remove the node (caused by too high or too low max-error value)) nor I can select everything and straight them too.</p>
+<p>See that the street is straight and the left middle node is unneeded. I found <a href="/questions/8348/is-there-an-efficient-way-to-delete-excessiveredundant-nodes">question 8348</a> but I just can't select everything and simplify (it can remove valid nodes or just can't remove the node (caused by too high or too low max-error value)) nor I can select everything and straight them too.</p>
 <p>While looking at the data with a lower zoom level it's also difficult to spot this small square in JOSM.</p>
 <p>Another example:</p>
 <p><img src="http://i.imgur.com/9IC9H6r.png" alt="Nodes" /></p>
@@ -98,7 +98,7 @@ osqa_accepted = false
 <div id="post-22472-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Although <a href="http://wiki.openstreetmap.org/wiki/JOSM/Search_function">JOSM's search function</a> is very powerful it doesn't seem to support all of your constraints.</p>
+<p>Although <a href="https://wiki.openstreetmap.org/wiki/JOSM/Search_function">JOSM's search function</a> is very powerful it doesn't seem to support all of your constraints.</p>
 </div>
 <div id="comment-22472-info" class="comment-info">
 <span class="comment-age">(16 May '13, 12:07)</span> <span class="comment-user userinfo">scai ♦</span>

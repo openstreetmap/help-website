@@ -157,7 +157,7 @@ One Answer:
 <div id="post-48250-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12005/nixwiehier"></a><a href="http://help.openstreetmap.org/users/12005/nixwiehier">@nixwiehier</a>: Thanks! Just for reference: <a href="https://en.wikipedia.org/wiki/Ghat">Wikipedia about "Ghats"</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/12005/nixwiehier"></a><a href="https://help.openstreetmap.org/users/12005/nixwiehier">@nixwiehier</a>: Thanks! Just for reference: <a href="https://en.wikipedia.org/wiki/Ghat">Wikipedia about "Ghats"</a>.</p>
 <p>So, not its name is "Ghat", but it is rather a <a href="https://wiki.openstreetmap.org/wiki/Key:description">description</a> of the object, so first the name tag should be changed into <code>description=Ghat</code>.</p>
 <p>If it is a place of worship, <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">tag it as such</a>, yes. I think that would be the best thing to do. Also attach a tag for the religion. I could not find specific tags for ghats. The description tag tells other mappers and end users what this object specifically is, and, hence, if somebody knows better tags they can add them.</p>
 <p>You could also add the tag <code>highway=steps</code>, but rather to a separate linear object which is connected to the next footway/street.</p>
@@ -182,7 +182,7 @@ One Answer:
 <div id="post-48254-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12005/nixwiehier"></a><a href="http://help.openstreetmap.org/users/12005/nixwiehier">@nixwiehier</a>: Not all useful tags show up on our default map, but it is not the only one, there are many other map styles and uses of our data. However, as far as I know places of worship are rendered by our default map. And in fact it is (after your changes) already shown (press ctrl+F5 if not yet for you). Well done! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/12005/nixwiehier"></a><a href="https://help.openstreetmap.org/users/12005/nixwiehier">@nixwiehier</a>: Not all useful tags show up on our default map, but it is not the only one, there are many other map styles and uses of our data. However, as far as I know places of worship are rendered by our default map. And in fact it is (after your changes) already shown (press ctrl+F5 if not yet for you). Well done! :-)</p>
 <p>I would remove "<code>name = Ghat</code>" because it is <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">not its name</a> but only its description.</p>
 <p>Regarding <code>highway = steps</code>: I am not sure if it is a good idea to add this tag also to this area object, because – for example – the direction of the stairs is not known this way and because this tag is usually used on linear ways. I would suggest to use <code>area:highway = steps</code> (an <a href="https://www.openstreetmap.org/way/362293328">example</a> and <a href="http://taginfo.openstreetmap.org/tags/area%3Ahighway=steps">current usage</a>) instead.</p>
 </div>

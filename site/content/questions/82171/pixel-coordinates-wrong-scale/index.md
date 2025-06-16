@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>Hello,i use rhinoceros 3d to open geojson file, everything works fine except the scale When i import geojson file the dimensions always bigger than the real one What is wrong? I use the equations from microsoft page and openstreet wiki, and i got the same result but wrong scale</p>
 <p><a href="https://docs.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system?redirectedfrom=MSDN">https://docs.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system?redirectedfrom=MSDN</a></p>
 <p><a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/we.JPG" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/t.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/we.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/t.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span> <span class="post-tag tag-link-pixel" rel="tag" title="see questions tagged &#39;pixel&#39;">pixel</span>

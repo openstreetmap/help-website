@@ -66,7 +66,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>quite the same question as <a href="https://help.openstreetmap.org/questions/23631/how-do-i-find-and-recover-a-deleted-way">https://help.openstreetmap.org/questions/23631/how-do-i-find-and-recover-a-deleted-way</a> , isn't it?</p>
+<p>quite the same question as <a href="/questions/23631/how-do-i-find-and-recover-a-deleted-way">https://help.openstreetmap.org/questions/23631/how-do-i-find-and-recover-a-deleted-way</a> , isn't it?</p>
 </div>
 <div id="comment-50722-info" class="comment-info">
 <span class="comment-age">(07 Jul '16, 21:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-50759-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/583/malenki"></a><a href="http://help.openstreetmap.org/users/583/malenki">@malenki</a>: then update it! ;-) People will still find the old question.</p>
+<p><a href="https://help.openstreetmap.org/users/583/malenki"></a><a href="https://help.openstreetmap.org/users/583/malenki">@malenki</a>: then update it! ;-) People will still find the old question.</p>
 </div>
 <div id="comment-50759-info" class="comment-info">
 <span class="comment-age">(09 Jul '16, 14:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -144,7 +144,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you know where data is amiss you can use use <a href="https://overpass-turbo.eu/">Overpass Turbo</a> to display the data of that region at a certain date or between two dates.</p>
-<p>To do so you go to the place where you miss the data (zoom in as far as possible to minimize the server load), paste the <a href="http://wiki.openstreetmap.org/wiki/User:Malenki#Overpass_Turbo_Queries">query</a> of your desire at the left side and click "Run".</p>
+<p>To do so you go to the place where you miss the data (zoom in as far as possible to minimize the server load), paste the <a href="https://wiki.openstreetmap.org/wiki/User:Malenki#Overpass_Turbo_Queries">query</a> of your desire at the left side and click "Run".</p>
 <p>To restore data you can either click on the data you look for and use the changeset or way/node ID for an undeletion in JOSM with reverter or undelete plugin. Or you try some of the possibilities "export" offers (although only "raw data" worked for me while testing it now.</p>
 <p>(I tried to paste the queries here but they aren't shown, thus just the link.)</p>
 <p><a href="https://malenki.ch/d/2016-07-08_220708_scrot_example_overpass_turbo_undeleted_way.png"><img src="https://malenki.ch/d/2016-07-08_220708_scrot_example_overpass_turbo_undeleted_way.png" alt="screenshot of Overpass Turbo showing deleted objects" /></a></p>
@@ -266,7 +266,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Potlatch_1/Primer#Undoing_mistakes">Potlatch 1</a> to look for deleted ways in an area. There isn't an easy way of looking for deleted nodes.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Potlatch_1/Primer#Undoing_mistakes">Potlatch 1</a> to look for deleted ways in an area. There isn't an easy way of looking for deleted nodes.</p>
 <p>If someone's deleted something and replaced it with something else then you can of course look for nodes that were deleted in the changeset that added the new thing, but with large changesets that'll be a challenge.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -340,7 +340,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="https://help.openstreetmap.org/questions/50707/locating-deleted-items/50737">answer that is now at the top</a> guided me in the right direction when I now had this problem (was wondering why there was no building on the map where I remember one being in reality), but may be confusing to some people; it certainly was for me.</p>
+<p>The <a href="/questions/50707/locating-deleted-items/50737">answer that is now at the top</a> guided me in the right direction when I now had this problem (was wondering why there was no building on the map where I remember one being in reality), but may be confusing to some people; it certainly was for me.</p>
 <p><a href="https://overpass-turbo.eu/">Overpass Turbo</a> is indeed the right tool for this job. A query that finds historical data there looks something like this:</p>
 <pre><code>[out:json][timeout:25];
 retro (&#39;2022-01-01T00:00:00Z&#39;) {

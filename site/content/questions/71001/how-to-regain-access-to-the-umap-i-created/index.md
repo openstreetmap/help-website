@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I have a related problem to <a href="https://help.openstreetmap.org/questions/70832/map-recovery-from-another-account">map-recovery-from-another-account</a>.</p>
+<p>I have a related problem to <a href="/questions/70832/map-recovery-from-another-account">map-recovery-from-another-account</a>.</p>
 <p>I created a UMAP ( m3_365901 ), but I can not access it anymore (it is not in My Maps). No other maintainer exists! I can read the map, but can not edit anymore.</p>
 <p>How to regain access to the Map I created?</p>
 <p>Greetings,</p>

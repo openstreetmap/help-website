@@ -132,7 +132,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Always use the full or official name (Rua NNN), otherwise we won't know if it's a Rua, Avenida, Travessa, Beco, etc.</p>
-<p>If the street is locally known by other names you can use <code>alt_name</code>, <code>short_name</code>, <code>loc_name</code>, etc (see <a href="http://wiki.openstreetmap.org/wiki/Name">http://wiki.openstreetmap.org/wiki/Name</a>)</p>
+<p>If the street is locally known by other names you can use <code>alt_name</code>, <code>short_name</code>, <code>loc_name</code>, etc (see <a href="https://wiki.openstreetmap.org/wiki/Name">https://wiki.openstreetmap.org/wiki/Name</a>)</p>
 <p>If the app is including or inferring something that doesn't exist then it's a problem with the app (and not in OSM data).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -230,7 +230,7 @@ osqa_accepted = true
 <div id="post-37842-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>, you have a point. But here most of the locals just refer to them as, for example, "Three Hundred". The street most of the time is omitted. So, my doubt still prevails. What I was looking was some pattern to follow.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>, you have a point. But here most of the locals just refer to them as, for example, "Three Hundred". The street most of the time is omitted. So, my doubt still prevails. What I was looking was some pattern to follow.</p>
 </div>
 <div id="comment-37842-info" class="comment-info">
 <span class="comment-age">(21 Oct '14, 17:42)</span> <span class="comment-user userinfo">Eitz</span>

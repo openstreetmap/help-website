@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-20322-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=40.24350&amp;lon=-3.76842&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=40.24350&amp;lon=-3.76842&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=40.24350&amp;lon=-3.76842&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=40.24350&amp;lon=-3.76842&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-20322-info" class="comment-info">
 <span class="comment-age">(26 Feb '13, 19:33)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -120,8 +120,8 @@ osqa_accepted = false
 <p>First, I want to welcome you to the OpenStreetMap community.</p>
 <p>I don't want to rob you of your first edit. Don't be afraid to get your feet wet. Here are some links to guide you through the process.</p>
 <p><a href="https://www.openstreetmap.org/user/new">First sign up</a></p>
-<p>Second, log in and <a href="http://www.openstreetmap.org/?lat=40.243703&amp;lon=-3.768249&amp;zoom=18&amp;layers=M">zoom to your location</a>.</p>
-<p>Third click the edit tab at the top of the map, It now should load Potlach 2 and you should see the map and a satellite map background. <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">For more information on how to edit with Potlach 2 read more here</a></p>
+<p>Second, log in and <a href="https://www.openstreetmap.org/?lat=40.243703&amp;lon=-3.768249&amp;zoom=18&amp;layers=M">zoom to your location</a>.</p>
+<p>Third click the edit tab at the top of the map, It now should load Potlach 2 and you should see the map and a satellite map background. <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">For more information on how to edit with Potlach 2 read more here</a></p>
 <p>Fourth, just click on your road and then there should be an area that has name, you then just Type in your street name as the street sign reads(no abbreviations) and then click save in the upper right hand corner. You now would have your first edit. Good luck and the best of wishes for you.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can add it yourself: <a href="http://wiki.openstreetmap.org/wiki/ES:Beginners%27_guide">Beginners' guide in Spanish</a></p>
+<p>You can add it yourself: <a href="https://wiki.openstreetmap.org/wiki/ES:Beginners%27_guide">Beginners' guide in Spanish</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

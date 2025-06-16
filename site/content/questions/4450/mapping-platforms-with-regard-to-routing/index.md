@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When trying to get some walking directions using some OSM routing services all of them failed to route through a bridge specifically marked for pedestrians. (Here is a <a href="http://www.openstreetmap.org/?lat=47.467064&amp;lon=19.016944&amp;zoom=18&amp;layers=M">permalink</a> to the bridge.)</p>
+<p>When trying to get some walking directions using some OSM routing services all of them failed to route through a bridge specifically marked for pedestrians. (Here is a <a href="https://www.openstreetmap.org/?lat=47.467064&amp;lon=19.016944&amp;zoom=18&amp;layers=M">permalink</a> to the bridge.)</p>
 <p>Examining the issue it turned out that the problem is NOT with the bridge but with a way marked as highway=platform that 'leads' to the bridge. At least the original mapper assumed that the platform will be considered by routing services as something that can be traversed by foot.</p>
 <p>I'm not sure what the correct solution to this is. Is it correct to assume that this is a bug in the routing engines (strangely all of them ignore highway=platform)?</p>
 <p>Or should I draw a highway=pedestrian beside the platform so that it is obvious that you can pass there?</p>
@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>My advice is to do the same as with the renderers: don't map for routing engines. <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dplatform">highway=platform</a> is a legal way that can be used by passengers. There are lots of tags currently ignored by most routing engines or insufficiently used (like areas). It's a bug that should be reported and not circumvented by mapping an additional, non-existing way.</p>
+<p>My advice is to do the same as with the renderers: don't map for routing engines. <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dplatform">highway=platform</a> is a legal way that can be used by passengers. There are lots of tags currently ignored by most routing engines or insufficiently used (like areas). It's a bug that should be reported and not circumvented by mapping an additional, non-existing way.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

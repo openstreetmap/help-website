@@ -107,7 +107,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Standard practice in OpenStreetMap is only to add routes that are already waymarked by an external body. OSM is not a site for sharing your favourite routes and recmomending them to others.</p>
-<p>If the routes that you'd like to add are indeed waymarked, have a look at the <a href="http://wiki.openstreetmap.org/wiki/Relation:route">Route relations</a> page on the OSM wiki for how to map them.</p>
+<p>If the routes that you'd like to add are indeed waymarked, have a look at the <a href="https://wiki.openstreetmap.org/wiki/Relation:route">Route relations</a> page on the OSM wiki for how to map them.</p>
 <p>If not, you might like to look at a third-party site that uses OSM data, such as <a href="http://www.mapmytracks.com/">MapMyTracks</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -129,7 +129,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>thank you for taking time to answer my friend</p>
-<p>i was looking in wiki , i found that:<a href="http://wiki.openstreetmap.org/wiki/Mapping_projects">http://wiki.openstreetmap.org/wiki/Mapping_projects</a></p>
+<p>i was looking in wiki , i found that:<a href="https://wiki.openstreetmap.org/wiki/Mapping_projects">https://wiki.openstreetmap.org/wiki/Mapping_projects</a></p>
 <p>"Accessibility: Accessibility, (mapping for inclusive accessibility using OpenStreetMap for various groups, including the blind (se OSM for the blind), <strong>Routing for people in wheelchairs</strong> (see Rollstuhlfahrer-Routing) "</p>
 <p>Can i make a project similar to that for my town ? how can someone start a project like that?</p>
 </div>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Rollstuhlfahrer-Routing">wheelchair routing</a> project certainly looks like a good place to start. Another example worth checking is <a href="http://wheelmap.org/en">wheelmap</a>; they seem to have an active comunity even outside of OSM. Tag the ways accordingly (wheelchair, surface, incline, steps, etc) and an existing routing engine with a wheelchair setting will be able to use the data.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Rollstuhlfahrer-Routing">wheelchair routing</a> project certainly looks like a good place to start. Another example worth checking is <a href="http://wheelmap.org/en">wheelmap</a>; they seem to have an active comunity even outside of OSM. Tag the ways accordingly (wheelchair, surface, incline, steps, etc) and an existing routing engine with a wheelchair setting will be able to use the data.</p>
 <p>First try contacting one of those projects to see if they can be used for your goals. Help them by tagging, testing, or even working on that new feature you need. Of course you could also start your own website from scratch (search the wiki to get started installing the stack) but it's easyer and safer if you can piggy-back an established project.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -67,7 +67,7 @@ osqa_accepted = false
 <p>This question is better suited to a discussion forum at the moment. Once the community reaches a resolution, we can add a definitive answer here.<br />
 </p>
 <p>A previous, and unresolved discussion can be found on the wiki.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Key:boundary#First_Nations">http://wiki.openstreetmap.org/wiki/Talk:Key:boundary#First_Nations</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Key:boundary#First_Nations">https://wiki.openstreetmap.org/wiki/Talk:Key:boundary#First_Nations</a></p>
 </div>
 <div id="comment-3046-info" class="comment-info">
 <span class="comment-age">(14 Feb '11, 21:47)</span> <span class="comment-user userinfo">Richard Weait</span>

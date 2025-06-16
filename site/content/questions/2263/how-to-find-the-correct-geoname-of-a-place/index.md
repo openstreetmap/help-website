@@ -111,7 +111,7 @@ One Answer:
 <p>It's really hard to look at map rendered in Arabic Abja, good luck with the search.</p>
 <ul>
 <li>Alexandria National Musuem is located at Tariq Al-Horreya Street (former Rue Fouad) according to wikipedia, but those names are not available in OSM.</li>
-<li><a href="http://www.openstreetmap.org/browse/way/28826432">The citadel is in OSM</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/28826432">The citadel is in OSM</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Diese werden genauso als Parkplätze eingetragen, du solltest jedoch zusätzlich zu <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">amenity=parking</a> auch <a href="http://wiki.openstreetmap.org/wiki/Key:access">access=permissive</a> setzen (es gibt auch access=customer, aber darüber ist man sich noch nicht ganz einig).</p>
+<p>Diese werden genauso als Parkplätze eingetragen, du solltest jedoch zusätzlich zu <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">amenity=parking</a> auch <a href="https://wiki.openstreetmap.org/wiki/Key:access">access=permissive</a> setzen (es gibt auch access=customer, aber darüber ist man sich noch nicht ganz einig).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-21559-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@cartinus</span>: It is true there is some discussion about the <code>access=customer</code> tagging, but <code>access=permissive</code> is definitely wrong, as explained by Tordanik. The alternatives usually proposed for <code>access=customer</code> are <code>access=destination</code> or <code>access=customers</code>; see <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/customer">http://wiki.openstreetmap.org/wiki/Proposed_features/customer</a> and its talk page.</p>
+<p><span>@cartinus</span>: It is true there is some discussion about the <code>access=customer</code> tagging, but <code>access=permissive</code> is definitely wrong, as explained by Tordanik. The alternatives usually proposed for <code>access=customer</code> are <code>access=destination</code> or <code>access=customers</code>; see <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/customer">https://wiki.openstreetmap.org/wiki/Proposed_features/customer</a> and its talk page.</p>
 </div>
 <div id="comment-21559-info" class="comment-info">
 <span class="comment-age">(15 Apr '13, 22:41)</span> <span class="comment-user userinfo">sleske</span>

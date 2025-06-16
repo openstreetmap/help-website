@@ -162,7 +162,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Carnildo, just tag it as a one way street and make explicit tags for the group that allowed going reversed or the opposite direction, see these pages like <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p>Hi Carnildo, just tag it as a one way street and make explicit tags for the group that allowed going reversed or the opposite direction, see these pages like <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

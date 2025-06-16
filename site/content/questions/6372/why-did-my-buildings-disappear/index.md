@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are currently <a href="http://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">undergoing maintenance</a> at one of the data centers. The tile rendering of the mapnik layer is halted until this is done. It seems you got the lower zoom levels rendered just before the maintenance but the higher zoom levels have not been rerendered after your change. After the maintenance is done theese tiles will be rerendered.</p>
+<p>There are currently <a href="https://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">undergoing maintenance</a> at one of the data centers. The tile rendering of the mapnik layer is halted until this is done. It seems you got the lower zoom levels rendered just before the maintenance but the higher zoom levels have not been rerendered after your change. After the maintenance is done theese tiles will be rerendered.</p>
 <p>Be assured that your changes have been correct and therefore other maps like osmarender will continue to render tiles with your changes.</p>
 </div>
 <div class="answer-controls post-controls">

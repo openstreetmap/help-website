@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch</a> (1 and 2) is Free software, so you can <a href="https://github.com/systemed/potlatch2/blob/master/LICENCE.txt">do whatever you like with it</a> without breaking its licence conditions. However, Google's terms of service probably will not allow you to derive a separate database of information from its maps and imagery unless you use its Map API at least.</p>
-<p>If you do deploy a version of Potlatch for this project, it must not connect to OSM in any way, so you would need to provide your own servers to store your data on. This would have to run the OSM "<a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">Rails Port</a>" as it's known, as Potlatch can't save data to any other type of server.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch</a> (1 and 2) is Free software, so you can <a href="https://github.com/systemed/potlatch2/blob/master/LICENCE.txt">do whatever you like with it</a> without breaking its licence conditions. However, Google's terms of service probably will not allow you to derive a separate database of information from its maps and imagery unless you use its Map API at least.</p>
+<p>If you do deploy a version of Potlatch for this project, it must not connect to OSM in any way, so you would need to provide your own servers to store your data on. This would have to run the OSM "<a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">Rails Port</a>" as it's known, as Potlatch can't save data to any other type of server.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

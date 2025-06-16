@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you don't understand a tag you find in the map, start by reading the corresponding wiki page. Addresses for pages describing tags look like <a href="http://wiki.openstreetmap.org/wiki/Key:lanes">http://wiki.openstreetmap.org/wiki/Key:lanes</a> for keys or <a href="http://wiki.openstreetmap.org/wiki/Tag:cycleway%3Dlane">http://wiki.openstreetmap.org/wiki/Tag:cycleway=lane</a> for values. Alternatively the wiki has a search function.</p>
+<p>If you don't understand a tag you find in the map, start by reading the corresponding wiki page. Addresses for pages describing tags look like <a href="https://wiki.openstreetmap.org/wiki/Key:lanes">https://wiki.openstreetmap.org/wiki/Key:lanes</a> for keys or <a href="https://wiki.openstreetmap.org/wiki/Tag:cycleway%3Dlane">https://wiki.openstreetmap.org/wiki/Tag:cycleway=lane</a> for values. Alternatively the wiki has a search function.</p>
 <p>Now there are plenty of pages on the wiki that are unclear. If you don't understand something <strong>after</strong> reading the wiki or you think it contradicts information you got from somewhere else, feel free to ask about it here. The page about lanes however is perfectly clear about the question you ask above.</p>
 </div>
 <div class="answer-controls post-controls">

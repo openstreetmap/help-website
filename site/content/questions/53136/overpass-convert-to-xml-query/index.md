@@ -240,7 +240,7 @@ out meta;</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There has been a recent <a href="https://help.openstreetmap.org/questions/52932/how-to-get-nodes-into-a-closed-way-in-a-single-overpass-query">similar query</a> regarding extracting nodes within a closed way that may help.</p>
+<p>There has been a recent <a href="/questions/52932/how-to-get-nodes-into-a-closed-way-in-a-single-overpass-query">similar query</a> regarding extracting nodes within a closed way that may help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

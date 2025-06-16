@@ -256,7 +256,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a link to the wiki <a href="http://wiki.openstreetmap.org/wiki/Potlach2">http://wiki.openstreetmap.org/wiki/Potlach2</a> for more info</p>
+<p>This is a link to the wiki <a href="https://wiki.openstreetmap.org/wiki/Potlach2">https://wiki.openstreetmap.org/wiki/Potlach2</a> for more info</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

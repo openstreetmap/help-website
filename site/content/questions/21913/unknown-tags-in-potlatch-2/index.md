@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "&#x27;unknown&#x27; tags in Potlatch 2"
-description = '''In Potlatch, if I want to place an amenity that isn&#x27;t one of the default potlatch ones, it appears as &quot;unknown&quot; if I add it in the advanced section. Why is this? I was trying to add a Retirement Home using a tag I found in the wiki: http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home'''
+description = '''In Potlatch, if I want to place an amenity that isn&#x27;t one of the default potlatch ones, it appears as &quot;unknown&quot; if I add it in the advanced section. Why is this? I was trying to add a Retirement Home using a tag I found in the wiki: https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home'''
 date = "2013-04-27T12:24:00Z"
 lastmod = "2015-03-10T23:42:00Z"
 weight = 21913
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In Potlatch, if I want to place an amenity that isn't one of the default potlatch ones, it appears as "unknown" if I add it in the advanced section. Why is this?</p>
-<p>I was trying to add a Retirement Home using a tag I found in the wiki: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home</a></p>
+<p>I was trying to add a Retirement Home using a tag I found in the wiki: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-21916-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This seems to be the case for amenity=retirement_home (<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home)">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home)</a></p>
+<p>This seems to be the case for amenity=retirement_home (<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home)">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dretirement_home)</a></p>
 </div>
 <div id="comment-21916-info" class="comment-info">
 <span class="comment-age">(27 Apr '13, 13:12)</span> <span class="comment-user userinfo">Russkel</span>
@@ -91,7 +91,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Sorry. Perhaps I should have made it clear I was punting a question from Russkel (<a href="http://www.openstreetmap.org/user/Russkel/diary/19139">http://www.openstreetmap.org/user/Russkel/diary/19139</a> ) into here. I'll also 'retirement home' as an example to the question</p>
+<p>Sorry. Perhaps I should have made it clear I was punting a question from Russkel (<a href="https://www.openstreetmap.org/user/Russkel/diary/19139">https://www.openstreetmap.org/user/Russkel/diary/19139</a> ) into here. I'll also 'retirement home' as an example to the question</p>
 </div>
 <div id="comment-21918-info" class="comment-info">
 <span class="comment-age">(27 Apr '13, 13:20)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -159,8 +159,8 @@ One Answer:
 <div class="answer-body">
 <p>"unknown" message is nothing to worry about. At least it doesn't necessarily mean something is wrong.</p>
 <p>OpenStreetMap lets you add any arbitrary text as a name and value in a tag, and as you've seen, the potlatch editor (the 'edit' tab) lets you see and edit these as freeform text on the 'advanced' tab there.</p>
-<p>But to make things simpler potlatch also presents a set of 'presets'. These cover most of the more widely used features, but you will come across things which aren't in there, and it's fine to use the advanced tab to add in different tags. These tags might be ones which you know about from seeing other map data, from looking at the tag stats on <a href="http://taginfo.openstreetmap.org">taginfo</a>, from reading the <a href="http://wiki.openstreetmap.org/">openstreetmap wiki</a> (Potlatch does not have all the same tags as presets, as those documented in the wiki) You can even make up your own tags, although generally you're unlikely to find a feature in the real world which has never been mapped before by anyone else!</p>
-<p>You can read much more about how tags work on this other question: <a href="https://help.openstreetmap.org/questions/116/which-tags-do-i-use">"which tags do I use?"</a></p>
+<p>But to make things simpler potlatch also presents a set of 'presets'. These cover most of the more widely used features, but you will come across things which aren't in there, and it's fine to use the advanced tab to add in different tags. These tags might be ones which you know about from seeing other map data, from looking at the tag stats on <a href="http://taginfo.openstreetmap.org">taginfo</a>, from reading the <a href="https://wiki.openstreetmap.org/">openstreetmap wiki</a> (Potlatch does not have all the same tags as presets, as those documented in the wiki) You can even make up your own tags, although generally you're unlikely to find a feature in the real world which has never been mapped before by anyone else!</p>
+<p>You can read much more about how tags work on this other question: <a href="/questions/116/which-tags-do-i-use">"which tags do I use?"</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10370/tgmm">@tgmm</a> patches welcome!</p>
+<p><a href="https://help.openstreetmap.org/users/10370/tgmm">@tgmm</a> patches welcome!</p>
 </div>
 <div id="comment-41627-info" class="comment-info">
 <span class="comment-age">(10 Mar '15, 23:42)</span> <span class="comment-user userinfo">Richard ♦</span>

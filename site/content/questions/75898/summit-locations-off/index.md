@@ -73,8 +73,8 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Example as requested, the pic of data is what my Android app pulls up from the imported part of the the Database (DoBIH) &amp; the map is an OpenAndroMap with the blue pin the waypoint (from the DoBIH) overlayed on the map. Which indicates that there is about 200ft error</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20200725-182441.png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20200725-182424.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20200725-182441.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20200725-182424.png" alt="alt text" /></p>
 <p>So this has been discused before &amp; I think I get that the database has a differnt openlicence &amp; possible copyright of the database as a whole but that alows free use of its data, but not the wholesale import without credit &amp; presumably there's no way to credit it. Having skimmed through the link provided it would take me a chuck of time to truly understand the fine detail of the liscenceing &amp; copyright issues, so I'll leave that to those with greater understanding.</p>
 <p>I do personally use the maps here <a href="https://www.walklakes.co.uk/maps/">https://www.walklakes.co.uk/maps/</a> that incorporate OSM &amp; different data sets but the "about link" in the muneu gives credit &amp; the footer copyright link gives more detail on sources. It seems a pity that something similar can't be done with the source OSM.</p>
 </div>

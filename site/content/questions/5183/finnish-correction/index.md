@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Finnish correction"
-description = '''Sorry, if my english is not perfect. And I&#x27;m sorry, if I tell this in wrong place. I have one suggestion for correction to Copyrights / Tietoja tästä käännöksestä http://www.openstreetmap.org/copyright &quot;Siinä tapauksessa, että tämän käännetyn sivun ja englanninenkielisen alkuperäisversion välillä on...'''
+description = '''Sorry, if my english is not perfect. And I&#x27;m sorry, if I tell this in wrong place. I have one suggestion for correction to Copyrights / Tietoja tästä käännöksestä https://www.openstreetmap.org/copyright &quot;Siinä tapauksessa, että tämän käännetyn sivun ja englanninenkielisen alkuperäisversion välillä on...'''
 date = "2011-05-14T12:46:00Z"
 lastmod = "2011-05-15T02:27:00Z"
 weight = 5183
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Sorry, if my english is not perfect. And I'm sorry, if I tell this in wrong place.</p>
-<p>I have one suggestion for correction to Copyrights / Tietoja tästä käännöksestä <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>I have one suggestion for correction to Copyrights / Tietoja tästä käännöksestä <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 <p>"Siinä tapauksessa, että tämän käännetyn sivun ja englanninenkielisen alkuperäisversion välillä on ristiriita englanninkielinen sivu on etusijalla. "</p>
 <p>Might be correct is:</p>
 <p>Siinä tapauksessa, että tämän käännetyn sivun ja englanninkielisen alkuperäisversion välillä on ristiriita, englanninkielinen sivu on etusijalla.</p>
@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thanks for you help, but this help board is the wrong place. These suggestions should go directly into <a href="http://translatewiki.net/wiki/Translating:OpenStreetMap">translatewiki</a> or into a <a href="http://trac.openstreetmap.org/">trac</a> ticket with component "website". For further documentation please have a look at <a href="http://wiki.openstreetmap.org/wiki/Website_Internationalization">our wiki</a>.</p>
+<p>Thanks for you help, but this help board is the wrong place. These suggestions should go directly into <a href="http://translatewiki.net/wiki/Translating:OpenStreetMap">translatewiki</a> or into a <a href="http://trac.openstreetmap.org/">trac</a> ticket with component "website". For further documentation please have a look at <a href="https://wiki.openstreetmap.org/wiki/Website_Internationalization">our wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -121,7 +121,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I'm sure that you're not suggesting this, but for the avoidance of doubt and for the benefit of anyone new to the project <a href="http://wiki.openstreetmap.org/wiki/FAQ#What_images_and_maps_may_I_use_to_make_maps_from.3F">you should not use copyrighted maps in any way while editing OpenStreetMap</a> (unless it is compatible with <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">our license</a>).</p>
+<p>I'm sure that you're not suggesting this, but for the avoidance of doubt and for the benefit of anyone new to the project <a href="https://wiki.openstreetmap.org/wiki/FAQ#What_images_and_maps_may_I_use_to_make_maps_from.3F">you should not use copyrighted maps in any way while editing OpenStreetMap</a> (unless it is compatible with <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap_License">our license</a>).</p>
 </div>
 <div id="comment-14595-info" class="comment-info">
 <span class="comment-age">(25 Jul '12, 21:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

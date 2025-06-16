@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to download the data within Tokyo (<a href="https://www.openstreetmap.org/export#map=11/35.7000/139.7502).">https://www.openstreetmap.org/export#map=11/35.7000/139.7502).</a> The boundary is [139.5,140,35.5,35.9]. However, the downloaded data is only 496 bytes. No data included in the downloaded file. I want to know why? <img src="https://help.openstreetmap.org/upfiles/1_ejZVs7x.png" alt="alt text" /></p>
+<p>I want to download the data within Tokyo (<a href="https://www.openstreetmap.org/export#map=11/35.7000/139.7502).">https://www.openstreetmap.org/export#map=11/35.7000/139.7502).</a> The boundary is [139.5,140,35.5,35.9]. However, the downloaded data is only 496 bytes. No data included in the downloaded file. I want to know why? <img src="/upfiles/1_ejZVs7x.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-download" rel="tag" title="see questions tagged &#39;download&#39;">download</span>

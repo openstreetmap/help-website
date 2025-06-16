@@ -142,7 +142,7 @@ osqa_accepted = true
   &lt;tag k=&quot;building&quot; v=&quot;yes&quot; /&gt;
 &lt;/way&gt;</code></pre>
 <p>A polygon is just a way where first and last nodes are the same, and where the tags indicate that it is an area. (The same structure with a tag of <code>junction=roundabout</code> would not be interpreted as an area.)</p>
-<p>More complex polygons - those with holes or where the outline is made up of several ways - are modeled using the <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon relations</a> which is a bit of a misnomer since it is also used for polygons that are not "multi".</p>
+<p>More complex polygons - those with holes or where the outline is made up of several ways - are modeled using the <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon relations</a> which is a bit of a misnomer since it is also used for polygons that are not "multi".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

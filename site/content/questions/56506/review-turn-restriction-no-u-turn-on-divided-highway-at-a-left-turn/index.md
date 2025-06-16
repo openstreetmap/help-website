@@ -130,7 +130,7 @@ One Answer:
 <div id="post-56542-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>, done in <a href="http://www.openstreetmap.org/changeset/49385838">http://www.openstreetmap.org/changeset/49385838</a> .</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>, done in <a href="https://www.openstreetmap.org/changeset/49385838">https://www.openstreetmap.org/changeset/49385838</a> .</p>
 </div>
 <div id="comment-56542-info" class="comment-info">
 <span class="comment-age">(09 Jun '17, 06:13)</span> <span class="comment-user userinfo">dsh4</span>

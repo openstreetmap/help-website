@@ -81,7 +81,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a> Mod_tile, renderd, mapnik, osm2pgsql and a postgresql/postgis database</p>
+<p><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a> Mod_tile, renderd, mapnik, osm2pgsql and a postgresql/postgis database</p>
 </div>
 <div id="comment-50170-info" class="comment-info">
 <span class="comment-age">(13 Jun '16, 08:18)</span> <span class="comment-user userinfo">H_N</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Is showing Golan as part of Israel illegal? Ist die Darstellung der Golanhöhen als Teil des Staates Israels illegal in Deutschland?"
-description = '''Though I see no restriction to the English language in the site rules, here is the short version in English: OpenStreetMap clearly shows the occupied Heights of Golan as part of the State of Israel:  http://www.openstreetmap.org/#map=10/33.0334/35.7646 When accessing the site with an IP from Germany...'''
+description = '''Though I see no restriction to the English language in the site rules, here is the short version in English: OpenStreetMap clearly shows the occupied Heights of Golan as part of the State of Israel:  https://www.openstreetmap.org/#map=10/33.0334/35.7646 When accessing the site with an IP from Germany...'''
 date = "2016-03-30T22:52:00Z"
 lastmod = "2024-02-20T22:42:00Z"
 weight = 48961
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Though I see no restriction to the English language in the site rules, here is the short version in English: OpenStreetMap clearly shows the occupied Heights of Golan as part of the State of Israel:<br />
-<a href="http://www.openstreetmap.org/#map=10/33.0334/35.7646">http://www.openstreetmap.org/#map=10/33.0334/35.7646</a></p>
+<a href="https://www.openstreetmap.org/#map=10/33.0334/35.7646">https://www.openstreetmap.org/#map=10/33.0334/35.7646</a></p>
 <p>When accessing the site with an IP from Germany (or depended on the Browser-ID) the webpage is shown with German menus, so it clearly addresses audience in Germany, and therefore is triable in Germany.</p>
 <p>Position of the official entities of the BRD is, that this area is not a part of Israel. In older cases where radicals and populists showed maps (of other world areas) with borders that don't adhere to the official position there were cases of legal complains. (I don't know of the outcome.)</p>
 <p>Presenting occupied territory as part of the repressing occupiers' country could be viewed as incitement of the masses (Volksverhetzung).</p>
@@ -60,7 +60,7 @@ osqa_accepted = false
 <p>Abgesehen davon, dass die Golanhöhen nur von 3 oder 4 (laut Presseberichten in reputablen Medien gekauften) Regierungen offiziell als Teil Israels bezeichnet werden, also eine klare Minderheit, und sich daher die Frage ergibt, wie solche Entscheidungen in OpenStreetMap getroffen werden.</p>
 <p>Wenn die Darstellung so bleibt, und sich also OpenStreetMap demjenigen anschließt, der mit Waffengewalt, Repression, Vertreibung und Aufhetzung Grenzen ziehen will, dann antworten sie bitte entsprechend. Dann mache ich einen Fork. (Und ich habe die technischen Möglichkeiten dazu.)</p>
 <p>a) <a href="http://www.auswaertiges-amt.de/DE/Aussenpolitik/Laender/Laenderinfos/01-Nodes_Uebersichtsseiten/Israel_node.html">http://www.auswaertiges-amt.de/DE/Aussenpolitik/Laender/Laenderinfos/01-Nodes_Uebersichtsseiten/Israel_node.html</a> Annektierung "international nicht anerkannt".</p>
-<p>Im Gegensatz dazu Openstreetmap mit Menus, die sich klar an Nutzer in Deutschland wendet: b) <a href="http://www.openstreetmap.org/#map=10/33.0334/35.7646">http://www.openstreetmap.org/#map=10/33.0334/35.7646</a></p>
+<p>Im Gegensatz dazu Openstreetmap mit Menus, die sich klar an Nutzer in Deutschland wendet: b) <a href="https://www.openstreetmap.org/#map=10/33.0334/35.7646">https://www.openstreetmap.org/#map=10/33.0334/35.7646</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-incitement" rel="tag" title="see questions tagged &#39;incitement&#39;">incitement</span> <span class="post-tag tag-link-disputes" rel="tag" title="see questions tagged &#39;disputes&#39;">disputes</span> <span class="post-tag tag-link-germany" rel="tag" title="see questions tagged &#39;germany&#39;">germany</span> <span class="post-tag tag-link-legal" rel="tag" title="see questions tagged &#39;legal&#39;">legal</span> <span class="post-tag tag-link-oppressive" rel="tag" title="see questions tagged &#39;oppressive&#39;">oppressive</span>
@@ -121,7 +121,7 @@ osqa_accepted = false
 <div id="post-48966-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Meine Frage impliziert an keiner Stelle, dass ich OpenStreetMap für ein Gericht halte. Wenn Sie trotzdem der Ansicht sind, dann begründen sie das bitte, so dass ich es nachvollziehen kann. Dann werde ich den Titel entsprechend ändern. - OpenStreetMap hat sich schon oft mit rechtlichen Fragen beschäftigen müssen. Generell gehören rechtliche Fragen also ganz offensichtlich zu diesen Daten und deren Verwendung dazu.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Meine Frage impliziert an keiner Stelle, dass ich OpenStreetMap für ein Gericht halte. Wenn Sie trotzdem der Ansicht sind, dann begründen sie das bitte, so dass ich es nachvollziehen kann. Dann werde ich den Titel entsprechend ändern. - OpenStreetMap hat sich schon oft mit rechtlichen Fragen beschäftigen müssen. Generell gehören rechtliche Fragen also ganz offensichtlich zu diesen Daten und deren Verwendung dazu.</p>
 </div>
 <div id="comment-48966-info" class="comment-info">
 <span class="comment-age">(30 Mar '16, 23:12)</span> <span class="comment-user userinfo">r2222 b</span>
@@ -132,7 +132,7 @@ osqa_accepted = false
 <div id="post-48968-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12131/r2222-b">@r2222 b</a>: du fragst, ob eine ganz bestimmte Ansicht legal ist, oder nicht. Das ist keine Frage für ein Projekt für Geodaten. Weiterhin entspricht es nicht dem Inhalt deines Fragentexts (dort geht es nicht im die Legalität dieser Ansicht, sonder eher darum ob und wieso OSM eine bestimmte Region als zu einem bestimmten Staat gehörig darstellt).</p>
+<p><a href="https://help.openstreetmap.org/users/12131/r2222-b">@r2222 b</a>: du fragst, ob eine ganz bestimmte Ansicht legal ist, oder nicht. Das ist keine Frage für ein Projekt für Geodaten. Weiterhin entspricht es nicht dem Inhalt deines Fragentexts (dort geht es nicht im die Legalität dieser Ansicht, sonder eher darum ob und wieso OSM eine bestimmte Region als zu einem bestimmten Staat gehörig darstellt).</p>
 </div>
 <div id="comment-48968-info" class="comment-info">
 <span class="comment-age">(30 Mar '16, 23:16)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -143,7 +143,7 @@ osqa_accepted = false
 <div id="post-48969-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Ich entnehme ihrer Antwort, dass sie zumindest davon abgerückt sind, die Frage würde implizieren, OpenStreetMap wäre eine "Gericht". - Ein Titel soll zum Ausdruck bringen, um was es im Haupttext geht. Die Punkte 1. und 2. sind nur bereits Folgefragen. Soll ich für jede Folgefrage einen eigenen Thread aufmachen? Sie werden kaum darauf mit ja antworten. - Dass die Frage hier richtig ist, ist ja wohl offensichtlich: Das Projekt heißt "Open", weil jeder die Daten weiterverwenden kann. Und bei der Weiterverwendung steht derjenige dann als Verantwortlicher da. Wenn das Projekt illegale Behauptungen verbreiten sollte, dann sind die Daten im Sinne von "Open" wertlos. (Heute ist es eine Grenze, aber wo ist ab dann die Grenze für die Beliebigkeit? Worauf kann sich der Verwender noch verlassen?)</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Ich entnehme ihrer Antwort, dass sie zumindest davon abgerückt sind, die Frage würde implizieren, OpenStreetMap wäre eine "Gericht". - Ein Titel soll zum Ausdruck bringen, um was es im Haupttext geht. Die Punkte 1. und 2. sind nur bereits Folgefragen. Soll ich für jede Folgefrage einen eigenen Thread aufmachen? Sie werden kaum darauf mit ja antworten. - Dass die Frage hier richtig ist, ist ja wohl offensichtlich: Das Projekt heißt "Open", weil jeder die Daten weiterverwenden kann. Und bei der Weiterverwendung steht derjenige dann als Verantwortlicher da. Wenn das Projekt illegale Behauptungen verbreiten sollte, dann sind die Daten im Sinne von "Open" wertlos. (Heute ist es eine Grenze, aber wo ist ab dann die Grenze für die Beliebigkeit? Worauf kann sich der Verwender noch verlassen?)</p>
 </div>
 <div id="comment-48969-info" class="comment-info">
 <span class="comment-age">(30 Mar '16, 23:24)</span> <span class="comment-user userinfo">r2222 b</span>
@@ -155,7 +155,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12131/r2222-b"></a><a href="http://help.openstreetmap.org/users/12131/r2222-b">@r2222 b</a>: Nein, ich bin nicht von "Gericht" "abgerückt".<br />
+<p><a href="https://help.openstreetmap.org/users/12131/r2222-b"></a><a href="https://help.openstreetmap.org/users/12131/r2222-b">@r2222 b</a>: Nein, ich bin nicht von "Gericht" "abgerückt".<br />
 <span>prinzipiell</span> ja, bitte eröffne für neue Fragen einen neuen Frageneintrag. Dies hier ist kein klassisches Web-Forum, sondern eine Frage-Antwort-Sammlung. Das gilt natürlich nur, sofern die Frage hier überhaupt angemessen ist.</p>
 <p>Ja, jeder, der die Lizenz einhält, darf sehr gerne unsere Daten verwenden. Derjenige darf auch sehr gerne prüfen, bevor er verwendet. Derjenige darf auch gerne Modifikationen vor der Weiterverwendung vornehmen. Siehe auch <a href="https://wiki.openstreetmap.org/wiki/About_OpenStreetMap">https://wiki.openstreetmap.org/wiki/About_OpenStreetMap</a> und unsere dortig verlinkte Lizenz.</p>
 <p>Achja, und in meiner "Antwort" unten, habe ich lesenswertes verlinkt.</p>
@@ -169,7 +169,7 @@ osqa_accepted = false
 <div id="post-48971-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Wenn sie nicht 'von "Gericht" "abgerückt"' sind, dann hätten sie doch bestimmt auf meine Frage geantwortet.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Wenn sie nicht 'von "Gericht" "abgerückt"' sind, dann hätten sie doch bestimmt auf meine Frage geantwortet.</p>
 <p>Was das Eröffnen von mehreren Fragen angeht: Das werde ich machen. Allerdings wäre es sicher vor Schließung der Frage durch "Frederik Ramm" besser gewesen, zu antworten, was denn an meinen Fragen nicht den "site rules" entspricht. Dann würde ich die Fragen entsprechen anpassen.</p>
 <p>Dafür hätte sich Ramm die Beleidigung, die jetzt gelöscht wurde (und die ich darum HIER nicht wiederholen werde), sparen können. Ich hatte wegen der Beleidigung schon unter "report user" auf seinem Profil eine Nachricht an "OpenStreetMap" geschickt. Ich hoffe mal, gemeldete Moderatorn bekommen die Meldung nicht DIREKT persönlich zugeschickt, denn sie war an die rechtlich Verantwortlichen bei OpenStreetMap gerichtet. An Ramm werde ich mich schriftlich wenden. Solch unprofessionelles Verhalten diskrediert die Firma, mit der er sich öffentlich in seinem Profil in Verbindung bringt. (Im Gegensatz zu ihnen, bei dem ich ja nicht weiss, wer sie sind.)</p>
 <p>Im übrigen: Inhaltlich haben sie noch auf keine meiner Fragen geantwortet. Solches Verhalten entspricht sicher nicht den "site rules".</p>
@@ -205,7 +205,7 @@ osqa_accepted = false
 <div id="post-49340-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can create your own OSM-based map if you like. Import everything except boundaries, import your own boundaries, done. See the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">legal FAQ</a> for the implications.</p>
+<p>You can create your own OSM-based map if you like. Import everything except boundaries, import your own boundaries, done. See the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">legal FAQ</a> for the implications.</p>
 </div>
 <div id="comment-49340-info" class="comment-info">
 <span class="comment-age">(21 Apr '16, 13:23)</span> <span class="comment-user userinfo">scai ♦</span>

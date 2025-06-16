@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hola! Abro esta inquietud debido a que cuando busco una dirección dentro del mapa me aparecen resultados de otros paises, o simplemente no aparece. Por ejemplo: situo el mapa en Santiago, Chile, y busco la calle San Pablo 8444. Me salen diversos resultados, pero ningúno, es donde realmente está (lo marque en azul el lugar aprox.). <img src="http://help.openstreetmap.org/upfiles/Captura.JPG" alt="alt text" /></p>
+<p>Hola! Abro esta inquietud debido a que cuando busco una dirección dentro del mapa me aparecen resultados de otros paises, o simplemente no aparece. Por ejemplo: situo el mapa en Santiago, Chile, y busco la calle San Pablo 8444. Me salen diversos resultados, pero ningúno, es donde realmente está (lo marque en azul el lugar aprox.). <img src="/upfiles/Captura.JPG" alt="alt text" /></p>
 <p>Esto me parece preocupante a la hora de difundir la la utilización de OSM, ya que la gente usa los mapas para realizar busquedas, y si estas son deficientes y erroneas, terminará usando otros mapas como el de la gran G.</p>
 <p>¿A que se debe esto?, ¿Cómo se puede solucionar? Muchas Gracias!</p>
 </div>

@@ -255,7 +255,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you were to use <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> instead you'd be less likely to hit the limit, since it gives more control over what data gets downloaded when.</p>
+<p>If you were to use <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> instead you'd be less likely to hit the limit, since it gives more control over what data gets downloaded when.</p>
 <p>That's probably not a very helpful suggestion because it's a whole new software to learn/teach but perhaps it's an option for you. JOSM is not as difficult for new users as people sometimes suggest.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -410,7 +410,7 @@ osqa_accepted = false
 <div id="post-5983-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The server admin guys are listed at <a href="http://wiki.openstreetmap.org/wiki/Sysadmin">http://wiki.openstreetmap.org/wiki/Sysadmin</a></p>
+<p>The server admin guys are listed at <a href="https://wiki.openstreetmap.org/wiki/Sysadmin">https://wiki.openstreetmap.org/wiki/Sysadmin</a></p>
 </div>
 <div id="comment-5983-info" class="comment-info">
 <span class="comment-age">(24 Jun '11, 19:21)</span> <span class="comment-user userinfo">apmon</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to edit the website information"
-description = '''How can I change the information &quot;website&quot;. For example http://www.openstreetmap.org/relation/2682667'''
+description = '''How can I change the information &quot;website&quot;. For example https://www.openstreetmap.org/relation/2682667'''
 date = "2014-04-17T11:17:00Z"
 lastmod = "2014-04-25T13:00:00Z"
 weight = 32405
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I change the information "website". For example <a href="http://www.openstreetmap.org/relation/2682667">http://www.openstreetmap.org/relation/2682667</a></p>
+<p>How can I change the information "website". For example <a href="https://www.openstreetmap.org/relation/2682667">https://www.openstreetmap.org/relation/2682667</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-information" rel="tag" title="see questions tagged &#39;information&#39;">information</span> <span class="post-tag tag-link-url" rel="tag" title="see questions tagged &#39;url&#39;">url</span> <span class="post-tag tag-link-source" rel="tag" title="see questions tagged &#39;source&#39;">source</span>
@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a></p>
+<p>See <a href="https://www.openstreetmap.org/fixthemap">https://www.openstreetmap.org/fixthemap</a></p>
 <p>However in this case (relation objects can be a bit tricky) I'll fix it for you.</p>
 </div>
 <div class="answer-controls post-controls">

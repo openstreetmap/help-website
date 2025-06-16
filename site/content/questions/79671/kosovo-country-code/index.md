@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>On the map, hovering over Kosovo brings up a pop up description 'Kosovo (CS-KM').</p>
 <p>We have had a customer who asked if this can be changed to 'Kosovo (RKS)', to reflect the name that the UK Government officially recognises for this country?</p>
-<p>How do I do about doing this?<img src="https://help.openstreetmap.org/upfiles/Screenshot_2021-04-14_at_16.12.41.png" alt="alt text" /></p>
+<p>How do I do about doing this?<img src="/upfiles/Screenshot_2021-04-14_at_16.12.41.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-kosovo" rel="tag" title="see questions tagged &#39;kosovo&#39;">kosovo</span>

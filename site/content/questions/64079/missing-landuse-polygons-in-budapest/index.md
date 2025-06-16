@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>I would like to ask if someone could repair the landuse polygons in Budapest.<br />
 It's looking good in <a href="https://www.openstreetmap.org/#map=12/47.5041/19.0997">https://www.openstreetmap.org/#map=12/47.5041/19.0997</a>, but when I download the data (via geofabrik, or overpass turbo), a lot of the residential area is missing.<br />
 Thank you for your help.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/budapest_osm.png" alt="alt text" /></p>
+<p><img src="/upfiles/budapest_osm.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-budapest" rel="tag" title="see questions tagged &#39;budapest&#39;">budapest</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-polygons" rel="tag" title="see questions tagged &#39;polygons&#39;">polygons</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>

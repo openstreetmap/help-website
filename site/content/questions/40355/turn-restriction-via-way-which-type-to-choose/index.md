@@ -44,9 +44,9 @@ osqa_accepted = false
 <p>Which kind of turn restriction do I have to choose in a case like that? Is the turn restriction type based on the from way or on the via way? In this case it is kind of a u-Turn, but it is mapped as separate ways. So you are allowed to turn left, but not again left.</p>
 <p>//edit: I try to explain it more in detail:</p>
 <p>these to routes are <strong>allowed</strong>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot_from_2015-01-14_19:57:08.png" alt="alt text" /> <img src="http://help.openstreetmap.org/upfiles/Screenshot_from_2015-01-14_19:56:57.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2015-01-14_19:57:08.png" alt="alt text" /> <img src="/upfiles/Screenshot_from_2015-01-14_19:56:57.png" alt="alt text" /></p>
 <p>this one is <strong>not allowed</strong>:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot_from_2015-01-14_19:57:02.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2015-01-14_19:57:02.png" alt="alt text" /></p>
 <p>in reality there is a sign that forbids u-turn. so logically it is a u-turn restriction, but does a routing software counts turning left twice (like the ways are orientated on OSM) as u-turn or turnleft restriction type?</p>
 <p>Thanks</p>
 </div>
@@ -245,7 +245,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I asked this question and the using OSRM may be a way to test the no uturn <a href="https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
+<p>I asked this question and the using OSRM may be a way to test the no uturn <a href="/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
 </div>
 <div id="comment-40375-info" class="comment-info">
 <span class="comment-age">(14 Jan '15, 21:16)</span> <span class="comment-user userinfo">andy mackey</span>

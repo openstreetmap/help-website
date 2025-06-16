@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers to <a href="https://help.openstreetmap.org/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">Should the edges of landuse or boundary areas share points with streets that form their borders</a> which will likely fit your question too.</p>
+<p>See the answers to <a href="/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">Should the edges of landuse or boundary areas share points with streets that form their borders</a> which will likely fit your question too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

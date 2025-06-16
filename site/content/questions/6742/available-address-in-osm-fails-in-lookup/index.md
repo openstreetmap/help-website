@@ -165,7 +165,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems that you have entered that address in the search field of the main site of <a href="http://osm.org">osm.org</a></p>
-<p>The search engine behind that is called <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. You can have a look at all related pages in the OSM wiki to find possible cases where search result is similar to your one.</p>
+<p>The search engine behind that is called <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. You can have a look at all related pages in the OSM wiki to find possible cases where search result is similar to your one.</p>
 <p>Sometimes it seems that the Nominatim methods to find a place are a little bit weird. But then we can only collect test cases to find out where the error can be located.</p>
 <p>So try to find more hints in the wiki, or here at <a href="http://help.osm.org">help.osm.org</a> by searchimg for text or tags "nominatim".</p>
 <p>Or have a look at the detailed search result of Nominatim when you go to its <a href="http://nominatim.openstreetmap.org/">website</a></p>
@@ -222,7 +222,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This seems to be similar to <a href="http://help.openstreetmap.org/questions/5819/added-street-doesnt-show-up-on-search">this question</a>.</p>
+<p>This seems to be similar to <a href="/questions/5819/added-street-doesnt-show-up-on-search">this question</a>.</p>
 <p>Currently there seems to be a problem with nominatim not importing updates for some weeks.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -290,7 +290,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://help.openstreetmap.org/questions/642/issues-with-httpnominatimopenstreetmaporg">this question</a>. Quote: "This is probably not the correct place to report bugs in services. For errors in Nominatim (and most other Open Street Map software) you are best off using the <a href="http://trac.openstreetmap.org/newticket?component=nominatim">Open Street Map bug tracker</a>".</p>
+<p>See <a href="/questions/642/issues-with-httpnominatimopenstreetmaporg">this question</a>. Quote: "This is probably not the correct place to report bugs in services. For errors in Nominatim (and most other Open Street Map software) you are best off using the <a href="http://trac.openstreetmap.org/newticket?component=nominatim">Open Street Map bug tracker</a>".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

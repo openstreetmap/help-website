@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Enter "graph" in the search box above to find existing answers, like this: <a href="https://help.openstreetmap.org/questions/19213/osm-xml-into-graph">OSM XML into Graph</a></p>
+<p>Enter "graph" in the search box above to find existing answers, like this: <a href="/questions/19213/osm-xml-into-graph">OSM XML into Graph</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,9 +165,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM data consists of three basic types, called <a href="http://wiki.openstreetmap.org/wiki/Elements">elements</a>. These are <a href="http://wiki.openstreetmap.org/wiki/Node">nodes</a>, <a href="http://wiki.openstreetmap.org/wiki/Way">ways</a> and <a href="http://wiki.openstreetmap.org/wiki/Relation">relations</a>. Each of these elements can have additional <a href="http://wiki.openstreetmap.org/wiki/Tag">tags</a> in order to describe them.</p>
-<p>There are various ways of <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">downloading OSM data</a>. The <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet</a> contains all of these elements with all their tags for the whole wold and consequently it is very large. There are also <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extracts</a> for continents and countries available. For even smaller areas you can either use the <a href="http://wiki.openstreetmap.org/wiki/API">API</a> directly or with the help of an editor like <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> which is probably easier.</p>
-<p>Then there is also the possibility of filtering data to reduce its size and strip unneeded elements or tags. You can filter the data before downloading it by using the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. And you can filter the data after downloading by using <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> / <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
+<p>OSM data consists of three basic types, called <a href="https://wiki.openstreetmap.org/wiki/Elements">elements</a>. These are <a href="https://wiki.openstreetmap.org/wiki/Node">nodes</a>, <a href="https://wiki.openstreetmap.org/wiki/Way">ways</a> and <a href="https://wiki.openstreetmap.org/wiki/Relation">relations</a>. Each of these elements can have additional <a href="https://wiki.openstreetmap.org/wiki/Tag">tags</a> in order to describe them.</p>
+<p>There are various ways of <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">downloading OSM data</a>. The <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet</a> contains all of these elements with all their tags for the whole wold and consequently it is very large. There are also <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extracts</a> for continents and countries available. For even smaller areas you can either use the <a href="https://wiki.openstreetmap.org/wiki/API">API</a> directly or with the help of an editor like <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> which is probably easier.</p>
+<p>Then there is also the possibility of filtering data to reduce its size and strip unneeded elements or tags. You can filter the data before downloading it by using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>. And you can filter the data after downloading by using <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> / <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

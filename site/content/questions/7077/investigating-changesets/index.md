@@ -44,9 +44,9 @@ osqa_accepted = false
 <p>The only two things I've find was:</p>
 <ul>
 <li><a href="http://osmhv.openstreetmap.de/changeset.jsp?id=8987983">OSM history/changeset Vizualizer</a> which tries to declutter a changeset, with vectors on a map.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmdiff">osmdiff</a> renders a map and prints a report with all changed tags and geometries.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmdiff">osmdiff</a> renders a map and prints a report with all changed tags and geometries.</li>
 </ul>
-<p>Take this changeset on <a href="http://www.openstreetmap.org/browse/changeset/8987983">OSM main site</a> and on <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=8987983">OSM History Vizualizer</a>, it's very hard to figure out exactly what happend. (I'm not pointing fingers at the creator of the changeset, I just haven't been bothered to find a changeset where I have recreated and removed lots of stuff.)</p>
+<p>Take this changeset on <a href="https://www.openstreetmap.org/browse/changeset/8987983">OSM main site</a> and on <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=8987983">OSM History Vizualizer</a>, it's very hard to figure out exactly what happend. (I'm not pointing fingers at the creator of the changeset, I just haven't been bothered to find a changeset where I have recreated and removed lots of stuff.)</p>
 <p>So to restate some questions.</p>
 <ol>
 <li>what do you look for when you look at a changeset?</li>

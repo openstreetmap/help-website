@@ -176,7 +176,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Keep in mind that Nominatim limits usage of the public instance. See <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Bulk_Geocoding">http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Bulk_Geocoding</a></p>
+<p>Keep in mind that Nominatim limits usage of the public instance. See <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Bulk_Geocoding">https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy#Bulk_Geocoding</a></p>
 </div>
 <div id="comment-26991-info" class="comment-info">
 <span class="comment-age">(07 Oct '13, 17:53)</span> <span class="comment-user userinfo">gormo</span>

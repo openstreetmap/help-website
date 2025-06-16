@@ -115,8 +115,8 @@ One Answer:
 <div class="answer-body">
 <p>Hi Bobo,</p>
 <p>if you use Linux you can follow the HowTo I wrote this year for exactly this use case:<br />
-<a href="http://www.openstreetmap.org/user/malenki/diary/19973">Importing collected waypoints I</a><br />
-<a href="http://www.openstreetmap.org/user/malenki/diary/19981">Importing collected waypoints II</a><br />
+<a href="https://www.openstreetmap.org/user/malenki/diary/19973">Importing collected waypoints I</a><br />
+<a href="https://www.openstreetmap.org/user/malenki/diary/19981">Importing collected waypoints II</a><br />
 Be aware that Germany is well mapped and you probably will find a lot of your POI already existing.</p>
 <p>hth<br />
 malenki</p>

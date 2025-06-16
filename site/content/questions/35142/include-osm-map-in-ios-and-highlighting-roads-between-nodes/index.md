@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am just new here and want to include osm maps to my app of iphone because i think apple and google maps don't fulfill my requirement of highlighting the road between 2 nodes on just 1 tap or click on the road.Please guide me. or if u have any alternative idea? Below is the given image what i exactly want. Thanks in advance.<img src="http://help.openstreetmap.org/upfiles/Park-and-go-picc.png" alt="alt text" /></p>
+<p>I am just new here and want to include osm maps to my app of iphone because i think apple and google maps don't fulfill my requirement of highlighting the road between 2 nodes on just 1 tap or click on the road.Please guide me. or if u have any alternative idea? Below is the given image what i exactly want. Thanks in advance.<img src="/upfiles/Park-and-go-picc.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ios" rel="tag" title="see questions tagged &#39;ios&#39;">ios</span>
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">iOS</a> ...</p>
+<p>Please have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">iOS</a> ...</p>
 <p>maybe there is already an app that comes near your aims, or there are some opensource efforts to display an OSM based map with additional graphic layer.</p>
 <p>Tell us when you have found an app similar to your aims, and maybe we cann tell you how to include such feature in your app.</p>
 <p>Also have a look at <a href="http://mapbox.com">mapbox</a> ... they have an SDK for iOS.</p>

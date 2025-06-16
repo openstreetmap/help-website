@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I tried to get a route and found an error here.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Routing_Error.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Routing_Error.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-tag" rel="tag" title="see questions tagged &#39;tag&#39;">tag</span> <span class="post-tag tag-link-no_entry" rel="tag" title="see questions tagged &#39;no_entry&#39;">no_entry</span> <span class="post-tag tag-link-turn_restriction" rel="tag" title="see questions tagged &#39;turn_restriction&#39;">turn_restriction</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

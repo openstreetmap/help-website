@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm looking for turn signal data on OSM. For example, an intersection-related key that indicates whether an intersection has the dedicated left turn signal (green left-oriented arrow). Although existing <a href="http://wiki.openstreetmap.org/wiki/Key:turn">tun key</a> (turn=*) shows whether a lane leads to turning or merging, it may not replace the applicability of turn signal.</p>
-<p>I aware a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/turn_signals#Traffic_signal_only_for_traffic_that_turns_left">proposed feature</a> (traffic_signals:turn=*) reflect exacts my requirements. I wonder how long it may take for proposed features to become real ones?</p>
+<p>I'm looking for turn signal data on OSM. For example, an intersection-related key that indicates whether an intersection has the dedicated left turn signal (green left-oriented arrow). Although existing <a href="https://wiki.openstreetmap.org/wiki/Key:turn">tun key</a> (turn=*) shows whether a lane leads to turning or merging, it may not replace the applicability of turn signal.</p>
+<p>I aware a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/turn_signals#Traffic_signal_only_for_traffic_that_turns_left">proposed feature</a> (traffic_signals:turn=*) reflect exacts my requirements. I wonder how long it may take for proposed features to become real ones?</p>
 <p>Thank you!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

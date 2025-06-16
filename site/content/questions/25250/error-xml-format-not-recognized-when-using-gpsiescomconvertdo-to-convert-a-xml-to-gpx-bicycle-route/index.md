@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "error &quot;XML format not recognized&quot; when using gpsies.com/convert.do to convert a XML to gpx (bicycle route)"
-description = '''Hi, Using the by Mio recommended http://www.gpsies.com/convert.do , XML files from http://wiki.openstreetmap.org/wiki/DK:Bicycle/Network-Routes are not recognized. How can that be? I need a GPX file for Mio. So I tried download the direct GPX version of the file from the above page, but it gave me a...'''
+description = '''Hi, Using the by Mio recommended http://www.gpsies.com/convert.do , XML files from https://wiki.openstreetmap.org/wiki/DK:Bicycle/Network-Routes are not recognized. How can that be? I need a GPX file for Mio. So I tried download the direct GPX version of the file from the above page, but it gave me a...'''
 date = "2013-08-12T16:15:00Z"
 lastmod = "2013-08-12T16:59:00Z"
 weight = 25250
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, Using the by Mio recommended <a href="http://www.gpsies.com/convert.do">http://www.gpsies.com/convert.do</a> , XML files from <a href="http://wiki.openstreetmap.org/wiki/DK:Bicycle/Network-Routes">http://wiki.openstreetmap.org/wiki/DK:Bicycle/Network-Routes</a> are not recognized. How can that be?</p>
+<p>Hi, Using the by Mio recommended <a href="http://www.gpsies.com/convert.do">http://www.gpsies.com/convert.do</a> , XML files from <a href="https://wiki.openstreetmap.org/wiki/DK:Bicycle/Network-Routes">https://wiki.openstreetmap.org/wiki/DK:Bicycle/Network-Routes</a> are not recognized. How can that be?</p>
 <p>I need a GPX file for Mio. So I tried download the direct GPX version of the file from the above page, but it gave me a gpx.jsp file, which puzzles me too.</p>
 <p>Hope you can help.</p>
 </div>

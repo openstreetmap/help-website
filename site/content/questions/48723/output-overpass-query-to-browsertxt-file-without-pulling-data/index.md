@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the documentation <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Counting_of_elements">Overpass_QL#Counting_of_elements</a> ...</p>
+<p>Have a look at the documentation <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Counting_of_elements">Overpass_QL#Counting_of_elements</a> ...</p>
 <p>Success?</p>
 </div>
 <div class="answer-controls post-controls">

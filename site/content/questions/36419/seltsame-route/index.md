@@ -153,7 +153,7 @@ One Answer:
 <div id="post-36427-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9559/gluckerfix"></a><a href="http://help.openstreetmap.org/users/9559/gluckerfix">@gluckerfix</a>: Super. Danke für die Rückmeldung! Und was war das Problem bei Mapquest?</p>
+<p><a href="https://help.openstreetmap.org/users/9559/gluckerfix"></a><a href="https://help.openstreetmap.org/users/9559/gluckerfix">@gluckerfix</a>: Super. Danke für die Rückmeldung! Und was war das Problem bei Mapquest?</p>
 </div>
 <div id="comment-36427-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 22:48)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -107,7 +107,7 @@ One Answer:
 <p>You should not remove a tag like "tourism=chalet" just because you have a rendering issue. What you can do is:</p>
 <ol>
 <li>submit a ticket on the <a href="https://trac.openstreetmap.org/">trac</a> system to change the rendering rules on Mapnik for your case. But this would fix it for one renderer, not for all. (BTW, your issue is maybe nonexistent on other maps)</li>
-<li>or use an alternative tagging method. I tried to put the address on a node on the facade instead of the building itself <a href="http://www.openstreetmap.org/browse/way/180816909">here</a>. This is a very usual method of tagging addresses in major cities and is supported by applications like Nominatim. You can even improve it by moving the node to the entrance and add the "<a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a>" tag. The result <a href="http://www.openstreetmap.org/?lat=63.399968&amp;lon=12.972376&amp;zoom=18&amp;layers=M">works fine with the highest zoom only</a> but is better than nothing.</li>
+<li>or use an alternative tagging method. I tried to put the address on a node on the facade instead of the building itself <a href="https://www.openstreetmap.org/browse/way/180816909">here</a>. This is a very usual method of tagging addresses in major cities and is supported by applications like Nominatim. You can even improve it by moving the node to the entrance and add the "<a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a>" tag. The result <a href="https://www.openstreetmap.org/?lat=63.399968&amp;lon=12.972376&amp;zoom=18&amp;layers=M">works fine with the highest zoom only</a> but is better than nothing.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

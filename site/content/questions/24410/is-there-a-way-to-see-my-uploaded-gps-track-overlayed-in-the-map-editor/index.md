@@ -211,7 +211,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: steevithak is talking about gps tracks which are <em>not</em> available as a file on a pc but are available under the uploaded traces ("my traces") of the user's OSM.org account.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: steevithak is talking about gps tracks which are <em>not</em> available as a file on a pc but are available under the uploaded traces ("my traces") of the user's OSM.org account.</p>
 </div>
 <div id="comment-46842-info" class="comment-info">
 <span class="comment-age">(25 Nov '15, 18:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -254,7 +254,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/aa_drag_a_trace_into_iD.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/aa_drag_a_trace_into_iD.JPG" alt="alt text" /></p>
 <p>On a Win 7 PC i had the traces in a folder. I opened the iD editor made the window smaller and dragged the gpx file into the id window and this is the result.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -324,7 +324,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Here are some of my findings on iD, Background setting will show all traces ( in the area) if you tick openstreetmap gps traces this has the advantage that a path or road can be positioned useing an average of all available gpxes. see pic<img src="http://help.openstreetmap.org/upfiles/iD_and_traces_as_a_background.JPG" alt="alt text" /></p>
+<p>Here are some of my findings on iD, Background setting will show all traces ( in the area) if you tick openstreetmap gps traces this has the advantage that a path or road can be positioned useing an average of all available gpxes. see pic<img src="/upfiles/iD_and_traces_as_a_background.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -358,7 +358,7 @@ osqa_accepted = true
 <div id="post-51338-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>And the different colours are N S E W see <a href="https://help.openstreetmap.org/questions/27564/how-to-find-out-about-the-openstreetmap-gps-traces-option-on-the-stack-of-books-menu-available-in-the-id-ui">https://help.openstreetmap.org/questions/27564/how-to-find-out-about-the-openstreetmap-gps-traces-option-on-the-stack-of-books-menu-available-in-the-id-ui</a></p>
+<p>And the different colours are N S E W see <a href="/questions/27564/how-to-find-out-about-the-openstreetmap-gps-traces-option-on-the-stack-of-books-menu-available-in-the-id-ui">https://help.openstreetmap.org/questions/27564/how-to-find-out-about-the-openstreetmap-gps-traces-option-on-the-stack-of-books-menu-available-in-the-id-ui</a></p>
 </div>
 <div id="comment-51338-info" class="comment-info">
 <span class="comment-age">(10 Aug '16, 21:45)</span> <span class="comment-user userinfo">andy mackey</span>

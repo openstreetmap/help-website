@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Except in a very loose way, the answer is no. The OSM API is primarly for editing OSM data and doesn't do very much outside of providing you with the data for a specific region.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> provides more in the way of advanced queries, but I suspect your requirements will require loading OSM data in to a geo-aware database (for example Postgres with the PostGIS extension) and performing the corresponding spatial queries yourself. Before you do that you should read up on the OSM data model and the various possible database schemas.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> provides more in the way of advanced queries, but I suspect your requirements will require loading OSM data in to a geo-aware database (for example Postgres with the PostGIS extension) and performing the corresponding spatial queries yourself. Before you do that you should read up on the OSM data model and the various possible database schemas.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -175,7 +175,7 @@ out meta;</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/280/sanderd17"></a><a href="http://help.openstreetmap.org/users/280/sanderd17">@Sanderd17</a>:</p>
+<p><a href="https://help.openstreetmap.org/users/280/sanderd17"></a><a href="https://help.openstreetmap.org/users/280/sanderd17">@Sanderd17</a>:</p>
 <blockquote>
 <p>Overpass API is one of the public instances that you can call via HTTP requests.</p>
 </blockquote>

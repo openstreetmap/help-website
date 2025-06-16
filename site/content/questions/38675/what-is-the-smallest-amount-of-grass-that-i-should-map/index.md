@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I was looking for the garden city of my local area and it looks like there isn't really too much things to map. Buildings, fences, housenumbers and the area is almost done. There is not much parking or shops, etc, just houses. In the map it looks like a big grey area with some houses whereas in real life it's more of a green place.</p>
-<p>I was thinking about mapping the green areas so I looked for well mapped regions in earth and there are different aproaches for the amount of detail in mapping. I even found <a href="http://www.openstreetmap.org/#map=18/39.76637/-105.00570">a place in Denver</a> where somebody mapped every single square foot of grass.</p>
+<p>I was thinking about mapping the green areas so I looked for well mapped regions in earth and there are different aproaches for the amount of detail in mapping. I even found <a href="https://www.openstreetmap.org/#map=18/39.76637/-105.00570">a place in Denver</a> where somebody mapped every single square foot of grass.</p>
 <p>So what is the smallest amount of grass that I should map? Should I map grass between the road and the footway? Should I map gardens along house entrances? Should I map grass in backyards? What is a garden that is big enough to map its green area, because there are some pretty big gardens out there. Also I don't want to overkill because if I map everything then the underlying grey (residental), purple (industrial), etc area would be unseen, so maping landuses would be pointless. Are there best practices or is this just a mater of taste question?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

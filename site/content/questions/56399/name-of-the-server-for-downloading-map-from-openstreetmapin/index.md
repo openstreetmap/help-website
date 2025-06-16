@@ -108,7 +108,7 @@ One Answer:
 <p>Most servers don't like people bulk downloading from them, because it prevents server resources from being used by people who just want to browse 1 or 2 tiles.</p>
 <p>In the case of <a href="http://openstreetmap.in">openstreetmap.in</a>, you'll need to check with them whether your tile downloading would be a problem, though the "using this map" <a href="https://github.com/osm-in/openstreetmap.in#using-this-map">link</a> suggests that your use might be acceptable.</p>
 <p>Another option would be to create map tiles yourself. There are a few ways to do this - <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> describes how to set up your own server that isn't dependent on any external map data servers; and openstreetmap.in is created using <a href="http://mapbox.com">Mapbox</a> tools.</p>
-<p>If you want your map to include the "claimed" rather than the "actual" boundaries of India, read <a href="http://www.openstreetmap.org/user/PlaneMad/diary/38176">this diary entry</a> by <a href="http://www.openstreetmap.org/user/PlaneMad">PlaneMad</a>, the same person behind openstreetmap.in, for some information about how to do that.</p>
+<p>If you want your map to include the "claimed" rather than the "actual" boundaries of India, read <a href="https://www.openstreetmap.org/user/PlaneMad/diary/38176">this diary entry</a> by <a href="https://www.openstreetmap.org/user/PlaneMad">PlaneMad</a>, the same person behind openstreetmap.in, for some information about how to do that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

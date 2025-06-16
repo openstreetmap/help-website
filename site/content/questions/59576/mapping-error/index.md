@@ -155,7 +155,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>You created a note, which is a way to give map feedback. I've created a POI: <a href="http://www.openstreetmap.org/node/5102160315">http://www.openstreetmap.org/node/5102160315</a></p>
+<p>You created a note, which is a way to give map feedback. I've created a POI: <a href="https://www.openstreetmap.org/node/5102160315">https://www.openstreetmap.org/node/5102160315</a></p>
 <p>If you want to change it or move it or whatever, click the "Edit" button while looking at it. There is a short walk thru of the editor the first time you use it. Make sure to save after you have made any changes.</p>
 </div>
 <div id="comment-59584-info" class="comment-info">

@@ -71,7 +71,7 @@ Creating a changeset using the following URL:</p>
 </blockquote>
 <p>This gives me the following response:</p>
 <p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />
-&lt;osm version="0.6" generator="OpenStreetMap server" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/"&gt;<br />
+&lt;osm version="0.6" generator="OpenStreetMap server" copyright="OpenStreetMap and contributors" attribution="https://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/"&gt;<br />
 &lt;api&gt;<br />
 &lt;version minimum="0.6" maximum="0.6"/&gt;<br />
 &lt;area maximum="0.25"/&gt;<br />
@@ -87,7 +87,7 @@ Creating a changeset using the following URL:</p>
 <p>Now I want to get some data using the API, so I've tested this by using the following GET request, but there is nothing as a output. But actually this should give me the same output than using the openstreetmao.org link below, shouldn't it?</p>
 <blockquote>
 <p>localhost:3000/api/0.6/node/271428118<br />
-<a href="http://www.openstreetmap.org/api/0.6/node/271428118">http://www.openstreetmap.org/api/0.6/node/271428118</a></p>
+<a href="https://www.openstreetmap.org/api/0.6/node/271428118">https://www.openstreetmap.org/api/0.6/node/271428118</a></p>
 </blockquote>
 <p>I've also tested it with a request using a bounding box, which offers, using the openstreetmap.org website a map.osm file download. Using my localhost instance, I get nothing. The site/connection is not available.</p>
 <hr />

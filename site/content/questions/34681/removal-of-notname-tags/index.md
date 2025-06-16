@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First of all, I had to <a href="http://wiki.openstreetmap.org/wiki/OSM_and_OSL_differences_analysis">dig into the wiki</a> to understand what the "not:name" tag is:</p>
+<p>First of all, I had to <a href="https://wiki.openstreetmap.org/wiki/OSM_and_OSL_differences_analysis">dig into the wiki</a> to understand what the "not:name" tag is:</p>
 <p>"If the name in OS Locator does not match with the name on the street, or with any other official source, then tag this using not:name=* tag. "</p>
 <p>Also the <a href="http://itoworld.blogspot.ch/2010/07/new-openstreetmap-analysis-service.html">ITO's blog</a> is explaining that "If errors are found in the Ordnance Survey's data by a mapper, which do sometimes occur, then the special 'not:name' field in OpenStreetMap can be used to report this and the discrepancy will no longer appear in the above reports and mapping. Information in the 'not:name' field can also be used by the Ordnance Survey to help them improve their data quality by giving them an addition source of possible errors to check."</p>
 <p>Which means that if the OS name is matching the OSM name, you just use the OSM standard "name" tag and keep only the "not:name" tag when the OS name is wrong.</p>

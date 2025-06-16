@@ -176,7 +176,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not explicitly tried it for this, but <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> might be worth a look (apparently it supports <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation">negation</a>)</p>
+<p>Not explicitly tried it for this, but <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> might be worth a look (apparently it supports <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation">negation</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In addition to the answer given at <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">your other question</a> you could look at <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> which is a desktop application which allows you to tweak the style of map quite finely. It is designed for generating static maps so it fits your use-case quite well.</p>
+<p>In addition to the answer given at <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">your other question</a> you could look at <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> which is a desktop application which allows you to tweak the style of map quite finely. It is designed for generating static maps so it fits your use-case quite well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -215,7 +215,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While <a href="http://wiki.openstreetmap.org/wiki/Osmarender">osmarender</a> can be used to render your own map it's not wysiwyg, nor has a fancy default style. You can try if the <a href="http://wiki.openstreetmap.org/wiki/Osmarender_Frontend">osmarender-frontend</a> is userfriendly enough for you needs, or you can have a look at Cloudmade's <a href="http://cloudmade.com/products/style-editor">style editor</a>.</p>
+<p>While <a href="https://wiki.openstreetmap.org/wiki/Osmarender">osmarender</a> can be used to render your own map it's not wysiwyg, nor has a fancy default style. You can try if the <a href="https://wiki.openstreetmap.org/wiki/Osmarender_Frontend">osmarender-frontend</a> is userfriendly enough for you needs, or you can have a look at Cloudmade's <a href="http://cloudmade.com/products/style-editor">style editor</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

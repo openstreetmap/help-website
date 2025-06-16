@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/way/274892271">Yes</a></p>
+<p><a href="https://www.openstreetmap.org/way/274892271">Yes</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ One Answer:
 <div id="post-49875-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Actually, look at <a href="http://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=53.12639%2C-1.55722%3B53.12670%2C-1.55760#map=19/53.12654/-1.55741">this</a> osm routing query. GraphHopper routing engine registered this edge as double way...</p>
+<p>Actually, look at <a href="https://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=53.12639%2C-1.55722%3B53.12670%2C-1.55760#map=19/53.12654/-1.55741">this</a> osm routing query. GraphHopper routing engine registered this edge as double way...</p>
 </div>
 <div id="comment-49875-info" class="comment-info">
 <span class="comment-age">(27 May '16, 17:49)</span> <span class="comment-user userinfo">shiro900</span>
@@ -141,7 +141,7 @@ One Answer:
 <p>Here's an overpass query that shows that it's not too common:</p>
 <p><a href="http://overpass-turbo.eu/s/gtK">http://overpass-turbo.eu/s/gtK</a></p>
 <p>Some routing engines will get things wrong; Graphhopper clearly has here. Some of the examples are a bit "open to interpretation", such as:</p>
-<p><a href="http://www.openstreetmap.org/way/75665826">http://www.openstreetmap.org/way/75665826</a></p>
+<p><a href="https://www.openstreetmap.org/way/75665826">https://www.openstreetmap.org/way/75665826</a></p>
 </div>
 <div id="comment-49876-info" class="comment-info">
 <span class="comment-age">(27 May '16, 17:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

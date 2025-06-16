@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've traced a few streets and there are some places where my GPS trace is slightly off from the existing data in OSM. I'm not sure if the map information is incorrect or if my GPS wasn't accurate. According to a <a href="http://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">past question on here</a>, one way to find the reliability of the information is to check the other GPS traces in the area and see if they're consistent with my traces.</p>
+<p>I've traced a few streets and there are some places where my GPS trace is slightly off from the existing data in OSM. I'm not sure if the map information is incorrect or if my GPS wasn't accurate. According to a <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">past question on here</a>, one way to find the reliability of the information is to check the other GPS traces in the area and see if they're consistent with my traces.</p>
 <p>How then do I find the past GPS traces of a particular area ? Are they included in <a href="http://josm.openstreetmap.de/wiki/Help/Dialog/History">history of JOSM</a> ? Would they be included on the history page of a particular way ?</p>
-<p>I'm editing using Josm and this is <a href="http://www.openstreetmap.org/browse/way/11801776/history">one of the ways</a> that I've traced in my question.</p>
+<p>I'm editing using Josm and this is <a href="https://www.openstreetmap.org/browse/way/11801776/history">one of the ways</a> that I've traced in my question.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span> <span class="post-tag tag-link-traces" rel="tag" title="see questions tagged &#39;traces&#39;">traces</span> <span class="post-tag tag-link-history" rel="tag" title="see questions tagged &#39;history&#39;">history</span>
@@ -112,8 +112,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download GPS traces in JOSM with the same dialog you use to download OSM map data (<a href="http://wiki.openstreetmap.org/wiki/File:JOSM_download_dialog_3744_en.png">screenshot</a>). There is a checkbox that lets you choose whether you want to download GPS tracks for the area.</p>
-<p>See also: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide#Download_other_people.27s_traces">Download other people's traces</a> in the wiki's JOSM Guide.</p>
+<p>You can download GPS traces in JOSM with the same dialog you use to download OSM map data (<a href="https://wiki.openstreetmap.org/wiki/File:JOSM_download_dialog_3744_en.png">screenshot</a>). There is a checkbox that lets you choose whether you want to download GPS tracks for the area.</p>
+<p>See also: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide#Download_other_people.27s_traces">Download other people's traces</a> in the wiki's JOSM Guide.</p>
 <p>In this case, it seems that there is only a single downloadable trace available in the area. It is likely that this way was not created based on GPS data.</p>
 </div>
 <div class="answer-controls post-controls">

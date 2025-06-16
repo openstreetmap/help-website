@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The lower road gets the tag <a href="http://wiki.openstreetmap.org/wiki/Key:cutting">cutting=yes</a> for the sunken part.</p>
-<p>The higher road gets the tag <a href="http://wiki.openstreetmap.org/wiki/Key:embankment">embankment=yes</a> for the raised part (if it is raised on something closed and not on pillars). Except for the viaduct, which gets the usual tags of <a href="http://wiki.openstreetmap.org/wiki/Key:bridge">bridge=yes</a> + <a href="http://wiki.openstreetmap.org/wiki/Key:layer">layer=1</a>.</p>
+<p>The lower road gets the tag <a href="https://wiki.openstreetmap.org/wiki/Key:cutting">cutting=yes</a> for the sunken part.</p>
+<p>The higher road gets the tag <a href="https://wiki.openstreetmap.org/wiki/Key:embankment">embankment=yes</a> for the raised part (if it is raised on something closed and not on pillars). Except for the viaduct, which gets the usual tags of <a href="https://wiki.openstreetmap.org/wiki/Key:bridge">bridge=yes</a> + <a href="https://wiki.openstreetmap.org/wiki/Key:layer">layer=1</a>.</p>
 <p>Note: The embankment and cutting tags are usually only applied on longer raised / lowered sections of road. So not every ramp up a bridge / down a tunnel gets them.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -128,7 +128,7 @@ One Answer:
 <div id="post-15669-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>according this ground level is layer=0 so maybe for this example you should use layer=1 and layer=-1 <a href="http://wiki.openstreetmap.org/wiki/Key:layer">http://wiki.openstreetmap.org/wiki/Key:layer</a></p>
+<p>according this ground level is layer=0 so maybe for this example you should use layer=1 and layer=-1 <a href="https://wiki.openstreetmap.org/wiki/Key:layer">https://wiki.openstreetmap.org/wiki/Key:layer</a></p>
 </div>
 <div id="comment-15669-info" class="comment-info">
 <span class="comment-age">(29 Aug '12, 23:24)</span> <span class="comment-user userinfo">andy mackey</span>

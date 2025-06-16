@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>In the city where I live was made public <a href="http://www.emsa.gob.bo/rutas/San%20Pedro-UMSS%20CH-19.pdf">the routes and schedules of garbage trucks</a> in PDF format. Editing the relations of the routes for public transport I asked myself, why not do it for those routes too?</p>
-<p>Reading the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Relation:route">relations of the routes</a> I didn't find information or specific tags</p>
+<p>Reading the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Relation:route">relations of the routes</a> I didn't find information or specific tags</p>
 <p>Someone did something similar?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,8 +109,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://mappa-mercia.org/gritting-map.shtml">Gritting routes</a> have been mapped in some places. These were done by adding <code>maintenance=gritting</code> and other gritting prefixed tags to the ways rather than using route relations. <a href="http://www.openstreetmap.org/way/38791082">A link to an example way</a>.</p>
-<p>I would be tempted though, if you decide to add (and maintain) the information, to use route relations with the tag <code>route=waste_collection</code> or similar (as waste seems to be used more in OSM for related items than garbage - see <a href="http://taginfo.openstreetmap.org/search?q=waste#values">taginfo</a>). This allows for multiple routes along the same way without needing to semi-colon separate references (for example) as in <code>gritting_route_ref=B;H</code> <a href="http://www.openstreetmap.org/way/7984151">here</a>.</p>
+<p><a href="http://mappa-mercia.org/gritting-map.shtml">Gritting routes</a> have been mapped in some places. These were done by adding <code>maintenance=gritting</code> and other gritting prefixed tags to the ways rather than using route relations. <a href="https://www.openstreetmap.org/way/38791082">A link to an example way</a>.</p>
+<p>I would be tempted though, if you decide to add (and maintain) the information, to use route relations with the tag <code>route=waste_collection</code> or similar (as waste seems to be used more in OSM for related items than garbage - see <a href="http://taginfo.openstreetmap.org/search?q=waste#values">taginfo</a>). This allows for multiple routes along the same way without needing to semi-colon separate references (for example) as in <code>gritting_route_ref=B;H</code> <a href="https://www.openstreetmap.org/way/7984151">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

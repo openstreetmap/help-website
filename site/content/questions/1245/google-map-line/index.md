@@ -223,7 +223,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You absolutely must not do this. Your work will be deleted from OSM if you do.</p>
-<p>Please see the <a href="http://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">FAQ entry</a>.</p>
+<p>Please see the <a href="https://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">FAQ entry</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

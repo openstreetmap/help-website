@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The most widely used software used to create Garmin maps from OSM data is <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a>. There's lots of information in the OSM wiki, various pre-built styles and many download sites.</p>
+<p>The most widely used software used to create Garmin maps from OSM data is <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a>. There's lots of information in the OSM wiki, various pre-built styles and many download sites.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find some hints and examples in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a></p>
+<p>You can find some hints and examples in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,10 +155,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're creating a "slippy map" for a website, you'd probably do something similar to the process described <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">on the switch2osm site here</a>. That uses <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, which <a href="https://github.com/openstreetmap/osm2pgsql/blob/master/README_lua.md">supports tag transformations using external lua scripts</a>.<br />
+<p>If you're creating a "slippy map" for a website, you'd probably do something similar to the process described <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">on the switch2osm site here</a>. That uses <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, which <a href="https://github.com/openstreetmap/osm2pgsql/blob/master/README_lua.md">supports tag transformations using external lua scripts</a>.<br />
 </p>
 <p>If you can find an automatic way of translating names from one language to another that you can call from a script, you can probably use that. Maybe you could set the "name" value in the database used by your map to something like "Chinese Name (Romanized name)" and just display "name" on your map?</p>
-<p>I've used a similar approach to render England/Wales access "designations" in preference to highway or tracktype (while using the standard OSM carto style) and it <a href="https://help.openstreetmap.org/questions/28465/osm2pqsql-and-lua">was fairly easy to do</a>.</p>
+<p>I've used a similar approach to render England/Wales access "designations" in preference to highway or tracktype (while using the standard OSM carto style) and it <a href="/questions/28465/osm2pqsql-and-lua">was fairly easy to do</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

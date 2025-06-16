@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It depends. First of all check the list of your <a href="http://www.openstreetmap.org/user/Kozuch/edits">edits</a> to see what really got uploaded. In the default setting, an upload in JOSM is <strong>all or nothing</strong>, i.e. either the upload is complete or the changeset is empty. If, like you say, the upload is partial, this means you uploaded in chunked mode. Now there are 2 possibilities:</p>
+<p>It depends. First of all check the list of your <a href="https://www.openstreetmap.org/user/Kozuch/edits">edits</a> to see what really got uploaded. In the default setting, an upload in JOSM is <strong>all or nothing</strong>, i.e. either the upload is complete or the changeset is empty. If, like you say, the upload is partial, this means you uploaded in chunked mode. Now there are 2 possibilities:</p>
 <p>Either JOSM got the server response from the last successfully uploaded chunk, or it missed this response. In the first case, everything is fine and you can just try to upload again. In the second case you have a problem:</p>
 <p>There will be a number of objects in your dataset that are already uploaded, but JOSM does not know this and will try to upload them again. If all these objects are new, the upload will succeed and create lots of duplicates. If one of the objects is modified or deleted, the server will refuse the upload due to version mismatch. Now, what you can do is <em>File &gt; Update data</em>.</p>
 <p>Afterwards, you may have plenty of duplicates in your dataset. Validator helps to find and clean these up. When everything is in order, you can proceed with the upload.</p>

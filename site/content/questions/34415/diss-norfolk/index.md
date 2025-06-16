@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-34418-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Are you talking about that <a href="http://www.openstreetmap.org/way/26135496">city of diss</a> at England?</p>
+<p>Are you talking about that <a href="https://www.openstreetmap.org/way/26135496">city of diss</a> at England?</p>
 </div>
 <div id="comment-34418-info" class="comment-info">
 <span class="comment-age">(28 Jun '14, 20:41)</span> <span class="comment-user userinfo">iii</span>
@@ -148,8 +148,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that it's being displayed differently because Diss is mapped as a <a href="http://www.openstreetmap.org/way/26135496">way</a> rather than a node, which most towns are mapped as. It's not just the standard layer either - try different layers at different zoom levels and you'll see towns mapped as ways seem less prominent.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tag:place=town">wiki</a> suggests mapping towns as closed ways isn't wrong, so it might be worth mentioning on Github (for those layers that have a presence there; the "standard" layer for example is <a href="https://github.com/gravitystorm/openstreetmap-carto/issues?state=open">here</a>).</p>
+<p>I suspect that it's being displayed differently because Diss is mapped as a <a href="https://www.openstreetmap.org/way/26135496">way</a> rather than a node, which most towns are mapped as. It's not just the standard layer either - try different layers at different zoom levels and you'll see towns mapped as ways seem less prominent.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tag:place=town">wiki</a> suggests mapping towns as closed ways isn't wrong, so it might be worth mentioning on Github (for those layers that have a presence there; the "standard" layer for example is <a href="https://github.com/gravitystorm/openstreetmap-carto/issues?state=open">here</a>).</p>
 <p>Interestingly, an Overpass search for towns mapped as ways finds lots of towns mapped both as ways and as nodes (which is surely wrong, although looking at the <a href="http://nominatim.openstreetmap.org/details.php?place_id=96201539">Nominatim results for an example</a> it seems to be smart enough to figure out what is happening).</p>
 </div>
 <div class="answer-controls post-controls">

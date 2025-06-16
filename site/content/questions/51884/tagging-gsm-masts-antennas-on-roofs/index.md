@@ -40,11 +40,11 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/1/1a/Gsm_antenne.JPG/320px-Gsm_antenne.JPG" alt="alt text" /></p>
-<p>Hi, triggered by the <a href="http://newcloudatlas.org">newcloudatlas.org</a> initiative <a href="http://wiki.openstreetmap.org/wiki/Talk:WikiProject_Telecoms#GSM_poles_masts_on_roof.3F">I'm asking</a> how do we map the usual mobile communication antennas that are mounted on roofs? I never found a good answer and in german lang pole / mast / antenna are pretty close and I'm not sure if we need (an full) technical term for tagging?</p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/1/1a/Gsm_antenne.JPG/320px-Gsm_antenne.JPG" alt="alt text" /></p>
+<p>Hi, triggered by the <a href="http://newcloudatlas.org">newcloudatlas.org</a> initiative <a href="https://wiki.openstreetmap.org/wiki/Talk:WikiProject_Telecoms#GSM_poles_masts_on_roof.3F">I'm asking</a> how do we map the usual mobile communication antennas that are mounted on roofs? I never found a good answer and in german lang pole / mast / antenna are pretty close and I'm not sure if we need (an full) technical term for tagging?</p>
 <ul>
 <li><code>telecom=antenna</code> - seems to be obvious, but this is (technically) only a single component of the setup. Also there other <a href="https://wiki.openstreetmap.org/wiki/Telecommunication#reality">other very big structures</a> which might be clother to this tag ?</li>
-<li><code>man_made=mast, mast:type=communication, communication:mobile_phone=yes</code> - <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Telecoms#Masts">wiki says</a> standalone, which isn't the case? (also rendered at osm.org which point that they are somewhat landmarks?)</li>
+<li><code>man_made=mast, mast:type=communication, communication:mobile_phone=yes</code> - <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Telecoms#Masts">wiki says</a> standalone, which isn't the case? (also rendered at osm.org which point that they are somewhat landmarks?)</li>
 <li><code>man_made=tower, tower:type=communication, communication:mobile_phone=yes</code> - well it's not that a solid installation?</li>
 </ul>
 <p>So what do you choose or recommend?</p>

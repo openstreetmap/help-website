@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/RoughTrail.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/RoughTrail.jpg" alt="alt text" /></p>
 <p>Legally, you are allowed to ride your mountain bike on this trail. From a practical standpoint, you are allowed to <em>carry</em> your mountain bike on this trail.</p>
 <p>How would I indicate to a routing engine that this trail is impassible to bicycles, a bit on the rough side for hikers and horseback riders, and perfectly fine for skiers and snowmobile riders, but that all of these uses are legal?</p>
 </div>
@@ -92,7 +92,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>, in the winter, the snow is deep enough to cover the logs. The trail is maintained on a "when money is available" basis, and since it's in a little-used corner of the park, that means the fallen trees are cleared out ever few decades.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>, in the winter, the snow is deep enough to cover the logs. The trail is maintained on a "when money is available" basis, and since it's in a little-used corner of the park, that means the fallen trees are cleared out ever few decades.</p>
 </div>
 <div id="comment-51795-info" class="comment-info">
 <span class="comment-age">(29 Aug '16, 16:58)</span> <span class="comment-user userinfo">Carnildo</span>
@@ -103,7 +103,7 @@ osqa_accepted = false
 <div id="post-51808-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is much of the trail like this? I would use the lifecycle prefix (perhaps disused) <a href="http://wiki.openstreetmap.org/wiki/Lifecycle_prefix">http://wiki.openstreetmap.org/wiki/Lifecycle_prefix</a></p>
+<p>Is much of the trail like this? I would use the lifecycle prefix (perhaps disused) <a href="https://wiki.openstreetmap.org/wiki/Lifecycle_prefix">https://wiki.openstreetmap.org/wiki/Lifecycle_prefix</a></p>
 </div>
 <div id="comment-51808-info" class="comment-info">
 <span class="comment-age">(29 Aug '16, 23:30)</span> <span class="comment-user userinfo">mtc</span>
@@ -114,7 +114,7 @@ osqa_accepted = false
 <div id="post-51810-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12686/mtc">@mtc</a>, it's not something you can see in a picture, but around here, trails that have been disused for more than a few years build up a layer of debris that gives them a "crunchy" feel to walk on. This trail was quite firm underfoot.</p>
+<p><a href="https://help.openstreetmap.org/users/12686/mtc">@mtc</a>, it's not something you can see in a picture, but around here, trails that have been disused for more than a few years build up a layer of debris that gives them a "crunchy" feel to walk on. This trail was quite firm underfoot.</p>
 <p>Also not visible in the picture: all of the logs had wear patterns from people climbing over them, and some had un-weathered scratch marks from hiking poles or other hard objects.</p>
 </div>
 <div id="comment-51810-info" class="comment-info">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "is it allowed to use the default aerial photos in the iD editor for drawing house outlines?"
-description = '''Hi I&#x27;m having a hard time figuring out how to get started with OSM editing. People point to pages like http://wiki.openstreetmap.org/wiki/Addresses which are completely useless for beginners, I don&#x27;t understand a thing it says there. Can someone look at http://www.openstreetmap.org/changeset/3573457...'''
+description = '''Hi I&#x27;m having a hard time figuring out how to get started with OSM editing. People point to pages like https://wiki.openstreetmap.org/wiki/Addresses which are completely useless for beginners, I don&#x27;t understand a thing it says there. Can someone look at https://www.openstreetmap.org/changeset/3573457...'''
 date = "2015-12-03T20:15:00Z"
 lastmod = "2015-12-05T16:25:00Z"
 weight = 46960
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi</p>
-<p>I'm having a hard time figuring out how to get started with OSM editing. People point to pages like <a href="http://wiki.openstreetmap.org/wiki/Addresses">http://wiki.openstreetmap.org/wiki/Addresses</a> which are completely useless for beginners, I don't understand a thing it says there.</p>
-<p>Can someone look at <a href="http://www.openstreetmap.org/changeset/35734576">http://www.openstreetmap.org/changeset/35734576</a> please? Is that ok? I'd like to know if it is before I go write down the house numbers.</p>
+<p>I'm having a hard time figuring out how to get started with OSM editing. People point to pages like <a href="https://wiki.openstreetmap.org/wiki/Addresses">https://wiki.openstreetmap.org/wiki/Addresses</a> which are completely useless for beginners, I don't understand a thing it says there.</p>
+<p>Can someone look at <a href="https://www.openstreetmap.org/changeset/35734576">https://www.openstreetmap.org/changeset/35734576</a> please? Is that ok? I'd like to know if it is before I go write down the house numbers.</p>
 <p>What I want is to add a house number for each house on this street, and am not sure if using the aerial photos from OSM was an acceptable source of data for drawing the house outlines.</p>
 <p>Thanks in advance.</p>
 </div>
@@ -118,7 +118,7 @@ osqa_accepted = false
 <div id="post-46978-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: hmm, that should <a href="https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=43.83088%2C-79.40898%3B43.82816%2C-79.40760">work quite well</a> too with interpolation. See: However, single numbers are better! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: hmm, that should <a href="https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=43.83088%2C-79.40898%3B43.82816%2C-79.40760">work quite well</a> too with interpolation. See: However, single numbers are better! :-)</p>
 </div>
 <div id="comment-46978-info" class="comment-info">
 <span class="comment-age">(04 Dec '15, 18:30)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -129,7 +129,7 @@ osqa_accepted = false
 <div id="post-46990-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: One would think so but AFAIK that doesn't work at all in OsmAnd, which is where I use OpenSteetMap most.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: One would think so but AFAIK that doesn't work at all in OsmAnd, which is where I use OpenSteetMap most.</p>
 </div>
 <div id="comment-46990-info" class="comment-info">
 <span class="comment-age">(05 Dec '15, 15:10)</span> <span class="comment-user userinfo">Mig21</span>
@@ -140,7 +140,7 @@ osqa_accepted = false
 <div id="post-46991-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: yes, could be. That depends on how the data consumer processes our data.</p>
+<p><a href="https://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: yes, could be. That depends on how the data consumer processes our data.</p>
 </div>
 <div id="comment-46991-info" class="comment-info">
 <span class="comment-age">(05 Dec '15, 16:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -203,7 +203,7 @@ One Answer:
 <p>OsmTracker does not have a good way of typing in house numbers but it does have a geo referenced voice record feature which I used to use. As you walk by a house, tap the record button and speak the number. It helps if you have a hands free earphone/microphone. The main issue with that is it takes about as long to enter the data in the computer when you get home as it did to walk the streets and sometimes the ambient noise on the recording makes it hard to understand the numbers.</p>
 <p>So nowadays I use Keypad Mapper2 (not Keypad Mapper3 which collects cell data for OpenCell ID). It is fairly old and you have to compile it from the github sources yourself but works for me. The advantage is that it generates .osm files with all the address tags reasonably well located. It only takes a short while to adjust the locations from where I recorded them to where the satellite imagery shows the buildings and verify the street names were typed in correctly, so post processing is very easy. Not sure what iD can to with a .osm file but this works really well with JOSM so I hope it works with iD.</p>
 <p>In any case, try out various address collection techniques, there are several, and see what works best for you.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/KeypadMapper">http://wiki.openstreetmap.org/wiki/KeypadMapper</a> <a href="http://wiki.openstreetmap.org/wiki/OSMtracker_(Android)">http://wiki.openstreetmap.org/wiki/OSMtracker_(Android)</a> <a href="http://wiki.openstreetmap.org/wiki/Vespucci">http://wiki.openstreetmap.org/wiki/Vespucci</a> <a href="http://wiki.openstreetmap.org/wiki/Field_Papers">http://wiki.openstreetmap.org/wiki/Field_Papers</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/KeypadMapper">https://wiki.openstreetmap.org/wiki/KeypadMapper</a> <a href="https://wiki.openstreetmap.org/wiki/OSMtracker_(Android)">https://wiki.openstreetmap.org/wiki/OSMtracker_(Android)</a> <a href="https://wiki.openstreetmap.org/wiki/Vespucci">https://wiki.openstreetmap.org/wiki/Vespucci</a> <a href="https://wiki.openstreetmap.org/wiki/Field_Papers">https://wiki.openstreetmap.org/wiki/Field_Papers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -247,7 +247,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5918/stf"></a><a href="http://help.openstreetmap.org/users/5918/stf">@stf</a>: iD can "square" closed ways (<a href="https://wiki.openstreetmap.org/wiki/ID/Shortcuts">shortcut</a> or in the radial context menu). <a href="http://help.openstreetmap.org/users/11739/mig21"></a><a href="http://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: often it is useful to rotate and move after squaring to get the best fit. Also keep in mind that not all building outlines feature rectangular angles only ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/5918/stf"></a><a href="https://help.openstreetmap.org/users/5918/stf">@stf</a>: iD can "square" closed ways (<a href="https://wiki.openstreetmap.org/wiki/ID/Shortcuts">shortcut</a> or in the radial context menu). <a href="https://help.openstreetmap.org/users/11739/mig21"></a><a href="https://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: often it is useful to rotate and move after squaring to get the best fit. Also keep in mind that not all building outlines feature rectangular angles only ;-)</p>
 </div>
 <div id="comment-46979-info" class="comment-info">
 <span class="comment-age">(04 Dec '15, 18:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

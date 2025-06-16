@@ -65,7 +65,7 @@ current. The street is going straight from the crosspoint "Bahnhofstrasse" and "
 <div id="post-9956-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info I think that <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=48.942524&amp;lon=9.266271&amp;zoom=18">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=48.942524&amp;lon=9.266271&amp;zoom=18</a> is the area concerned.</p>
+<p>For info I think that <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=48.942524&amp;lon=9.266271&amp;zoom=18">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=48.942524&amp;lon=9.266271&amp;zoom=18</a> is the area concerned.</p>
 </div>
 <div id="comment-9956-info" class="comment-info">
 <span class="comment-age">(14 Jan '12, 15:10)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -76,7 +76,7 @@ current. The street is going straight from the crosspoint "Bahnhofstrasse" and "
 <div id="post-9963-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I just looked about my way to drive every day and found the next street part (red air lines) which is cut out - the "Poppenweiler Straße". This part is also in the older OSM maps and now missing. That looks like <strong>sabotage</strong> of this area! Who is doing that!? He/Her should be found in the history of changing maps who deletes all that parts! <strong>That is against the OSM idea because nobody can use the OSM maps if they are damaged in that way and important streets are cut out.</strong> <img src="http://help.openstreetmap.org/upfiles/20120114-marbach-street-missing_2_1.jpg" alt="alt text" /></p>
+<p>I just looked about my way to drive every day and found the next street part (red air lines) which is cut out - the "Poppenweiler Straße". This part is also in the older OSM maps and now missing. That looks like <strong>sabotage</strong> of this area! Who is doing that!? He/Her should be found in the history of changing maps who deletes all that parts! <strong>That is against the OSM idea because nobody can use the OSM maps if they are damaged in that way and important streets are cut out.</strong> <img src="/upfiles/20120114-marbach-street-missing_2_1.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-9963-info" class="comment-info">
 <span class="comment-age">(14 Jan '12, 16:48)</span> <span class="comment-user userinfo">der-sigi</span>
@@ -87,7 +87,7 @@ current. The street is going straight from the crosspoint "Bahnhofstrasse" and "
 <div id="post-9968-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have a look here: <a href="http://help.openstreetmap.org/questions/9961/a-street-near-me-is-now-missing-how-do-i-see-where-and-when-it-got-deleted/9966">http://help.openstreetmap.org/questions/9961/a-street-near-me-is-now-missing-how-do-i-see-where-and-when-it-got-deleted/9966</a></p>
+<p>Have a look here: <a href="/questions/9961/a-street-near-me-is-now-missing-how-do-i-see-where-and-when-it-got-deleted/9966">https://help.openstreetmap.org/questions/9961/a-street-near-me-is-now-missing-how-do-i-see-where-and-when-it-got-deleted/9966</a></p>
 <p>for how to find out what's happened here.</p>
 </div>
 <div id="comment-9968-info" class="comment-info">
@@ -99,7 +99,7 @@ current. The street is going straight from the crosspoint "Bahnhofstrasse" and "
 <div id="post-9969-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Next I found in "Steinheim an der Murr". That two missing parts (red air lines) are also in the older OSM maps. <img src="http://help.openstreetmap.org/upfiles/20120114-steinheim-street-missing.jpg" alt="alt text" /></p>
+<p>Next I found in "Steinheim an der Murr". That two missing parts (red air lines) are also in the older OSM maps. <img src="/upfiles/20120114-steinheim-street-missing.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-9969-info" class="comment-info">
 <span class="comment-age">(14 Jan '12, 17:23)</span> <span class="comment-user userinfo">der-sigi</span>
@@ -121,7 +121,7 @@ current. The street is going straight from the crosspoint "Bahnhofstrasse" and "
 <div id="post-9971-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In this case it looks like someone's remapping for the licence change. You can see the new way here: <a href="http://www.openstreetmap.org/browse/way/145228280">http://www.openstreetmap.org/browse/way/145228280</a></p>
+<p>In this case it looks like someone's remapping for the licence change. You can see the new way here: <a href="https://www.openstreetmap.org/browse/way/145228280">https://www.openstreetmap.org/browse/way/145228280</a></p>
 <p>They seem to have forgotten to add any tags to the new way, though. Also, it might be worth contacting them to ask what source they're using for the new data - perhaps you can help fill in some of the gaps in their knowledge?</p>
 </div>
 <div id="comment-9971-info" class="comment-info">
@@ -133,7 +133,7 @@ current. The street is going straight from the crosspoint "Bahnhofstrasse" and "
 <div id="post-9978-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, sorry for the missing data. (1) <a href="http://www.openstreetmap.org/?lat=48.94468&amp;lon=9.27036&amp;zoom=16">http://www.openstreetmap.org/?lat=48.94468&amp;lon=9.27036&amp;zoom=16</a> (2) <a href="http://www.openstreetmap.org/?lat=48.93061&amp;lon=9.2659&amp;zoom=17">http://www.openstreetmap.org/?lat=48.93061&amp;lon=9.2659&amp;zoom=17</a> (3) <a href="http://www.openstreetmap.org/?lat=48.96644&amp;lon=9.27742&amp;zoom=17">http://www.openstreetmap.org/?lat=48.96644&amp;lon=9.27742&amp;zoom=17</a> Sigi</p>
+<p>Hi, sorry for the missing data. (1) <a href="https://www.openstreetmap.org/?lat=48.94468&amp;lon=9.27036&amp;zoom=16">https://www.openstreetmap.org/?lat=48.94468&amp;lon=9.27036&amp;zoom=16</a> (2) <a href="https://www.openstreetmap.org/?lat=48.93061&amp;lon=9.2659&amp;zoom=17">https://www.openstreetmap.org/?lat=48.93061&amp;lon=9.2659&amp;zoom=17</a> (3) <a href="https://www.openstreetmap.org/?lat=48.96644&amp;lon=9.27742&amp;zoom=17">https://www.openstreetmap.org/?lat=48.96644&amp;lon=9.27742&amp;zoom=17</a> Sigi</p>
 </div>
 <div id="comment-9978-info" class="comment-info">
 <span class="comment-age">(14 Jan '12, 19:52)</span> <span class="comment-user userinfo">der-sigi</span>
@@ -199,10 +199,10 @@ current. The street is going straight from the crosspoint "Bahnhofstrasse" and "
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The first highway you mentioned I undeleted in <a href="http://www.openstreetmap.org/browse/changeset/10410393">this changeset</a>. It had been deleted <a href="http://www.openstreetmap.org/browse/way/10625304">here</a><br />
+<p>The first highway you mentioned I undeleted in <a href="https://www.openstreetmap.org/browse/changeset/10410393">this changeset</a>. It had been deleted <a href="https://www.openstreetmap.org/browse/way/10625304">here</a><br />
 </p>
-<p>Two highways near the railway station of Marbach I undeleted <a href="http://www.openstreetmap.org/browse/changeset/10410180">here</a>.<br />
-The Rielingshäuser Straße had been deleted <a href="http://www.openstreetmap.org/browse/way/36876486/history">here</a>.<br />
+<p>Two highways near the railway station of Marbach I undeleted <a href="https://www.openstreetmap.org/browse/changeset/10410180">here</a>.<br />
+The Rielingshäuser Straße had been deleted <a href="https://www.openstreetmap.org/browse/way/36876486/history">here</a>.<br />
 I guess the comment means double way. Sunce I saw the complete deleted way the user who deleted it maybe oversaw that there was some useful data at the mostly roguh, badly drawn way he deleted.</p>
 <p>PS: In Marbach there are some undecided mappers. You should contact them and ask kindly if they wouldn't accept the new license.</p>
 </div>
@@ -303,7 +303,7 @@ I guess the comment means double way. Sunce I saw the complete deleted way the u
 <div id="post-9948-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for your help, Gnonthgol. When I go to edit a new page comes up and no (!!!) map is drawn. The map area takes a little comment in red color: "Falsche Zi..." (German). The edit link was <a href="http://www.openstreetmap.org/edit?lat=48.94367&amp;lon=9.27139&amp;zoom=16">link text</a>. It is not possible to edit like you explained. Sorry.</p>
+<p>Thanks for your help, Gnonthgol. When I go to edit a new page comes up and no (!!!) map is drawn. The map area takes a little comment in red color: "Falsche Zi..." (German). The edit link was <a href="https://www.openstreetmap.org/edit?lat=48.94367&amp;lon=9.27139&amp;zoom=16">link text</a>. It is not possible to edit like you explained. Sorry.</p>
 </div>
 <div id="comment-9948-info" class="comment-info">
 <span class="comment-age">(14 Jan '12, 12:50)</span> <span class="comment-user userinfo">der-sigi</span>
@@ -327,8 +327,8 @@ I guess the comment means double way. Sunce I saw the complete deleted way the u
 2
 </div>
 <div class="comment-text">
-<p>You have created this way: <a href="http://www.openstreetmap.org/browse/way/145560025">http://www.openstreetmap.org/browse/way/145560025</a></p>
-<p>But all tags are still missing! Have a look at <a href="http://www.openstreetmap.org/browse/way/36876508">http://www.openstreetmap.org/browse/way/36876508</a> ... have a careful look whether you can transfer all these tags to your new way.</p>
+<p>You have created this way: <a href="https://www.openstreetmap.org/browse/way/145560025">https://www.openstreetmap.org/browse/way/145560025</a></p>
+<p>But all tags are still missing! Have a look at <a href="https://www.openstreetmap.org/browse/way/36876508">https://www.openstreetmap.org/browse/way/36876508</a> ... have a careful look whether you can transfer all these tags to your new way.</p>
 <p>And the mentioned way is even a menber of a relation, soo it is quite possible that your new way has to be added to that relation, too.</p>
 </div>
 <div id="comment-9955-info" class="comment-info">
@@ -382,8 +382,8 @@ I guess the comment means double way. Sunce I saw the complete deleted way the u
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As an introduction to OpenStreetMap editing, it might be worth a look at the top answer to <a href="http://help.openstreetmap.org/questions/6/how-do-i-get-started-with-openstreetmap">this question</a>, especially the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners' Guide</a> (<a href="http://wiki.openstreetmap.org/wiki/DE:Beginners_Guide">Deutsch)</a>.</p>
-<p>One thing to watch out for when you add the road in is to make sure that it joins the other roads that it is connected to - have a look at <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">this answer</a> for details.</p>
+<p>As an introduction to OpenStreetMap editing, it might be worth a look at the top answer to <a href="/questions/6/how-do-i-get-started-with-openstreetmap">this question</a>, especially the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners' Guide</a> (<a href="https://wiki.openstreetmap.org/wiki/DE:Beginners_Guide">Deutsch)</a>.</p>
+<p>One thing to watch out for when you add the road in is to make sure that it joins the other roads that it is connected to - have a look at <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">this answer</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

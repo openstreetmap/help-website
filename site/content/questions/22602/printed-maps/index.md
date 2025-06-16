@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://help.openstreetmap.org/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">How do I create a map for printing with specific POI?</a> and other answers found by entering "print" in the search box above.</p>
+<p>See <a href="/questions/1311/how-do-i-create-a-map-for-printing-with-specific-poi">How do I create a map for printing with specific POI?</a> and other answers found by entering "print" in the search box above.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

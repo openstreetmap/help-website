@@ -107,7 +107,7 @@ One Answer:
 <div class="answer-body">
 <p>Unfortunately, this isn't really practical. Illustrator files aren't georeferenced in any way - that is, there's no way of stating within the file that a certain point on the map relates to a certain location in the world. So you'd have to find some way of getting that information in, then translating to a format that an OSM editor can read (say, shapefiles).</p>
 <p>It might be possible for really clever people with maximum GDAL-fu, or by using an Illustrator plug-in such as the (paid-for) <a href="http://www.avenza.com/mapublisher">MAPublisher</a>. But even as an inveterate Illustrator user and author of one of OSM's editor programs, I wouldn't attempt it.</p>
-<p>One possible compromise is to save the maps from Illustrator as raster images (using the Save For Web... command), then use the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">PicLayer plugin</a> for the JOSM editor to help you trace them into OSM. You'll still have to do the laborious tracing work, but at least you'll have your original maps to work from.</p>
+<p>One possible compromise is to save the maps from Illustrator as raster images (using the Save For Web... command), then use the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">PicLayer plugin</a> for the JOSM editor to help you trace them into OSM. You'll still have to do the laborious tracing work, but at least you'll have your original maps to work from.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -141,7 +141,7 @@ One Answer:
 <div id="post-23504-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This Q may help if any shapes are repeated <a href="https://help.openstreetmap.org/questions/5753/can-shapes-be-copied">https://help.openstreetmap.org/questions/5753/can-shapes-be-copied</a></p>
+<p>This Q may help if any shapes are repeated <a href="/questions/5753/can-shapes-be-copied">https://help.openstreetmap.org/questions/5753/can-shapes-be-copied</a></p>
 </div>
 <div id="comment-23504-info" class="comment-info">
 <span class="comment-age">(18 Jun '13, 19:58)</span> <span class="comment-user userinfo">andy mackey</span>

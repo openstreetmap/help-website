@@ -151,7 +151,7 @@ osqa_accepted = false
 <p>A friend of mine has the same problem and seems to be common amongst many users. All my maps (over 10) are OK.</p>
 <p>Hopefully they'll reappear but might be worth noting you can always do a back up of your uMaps. Save the resulting file and that can be reimported into a new one. Screenshot of how to do it attached.</p>
 <p>Phil.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2023-02-19_at_15.47.52.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2023-02-19_at_15.47.52.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I would like to compile a map of Turkey using map tiles from OSM by downloading the tiles as .img files to a folder on my PC and then use MapSetToolKit to install the map into Mapsource. I have selected the OSM tile numbers needed to create the mapset by using the "Convert Coordinates to OSM Tile Numbers" link on the website: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data</a> but am confused as to how to go about actually finding and downloading these tiles to my computer.</p>
+<p>I would like to compile a map of Turkey using map tiles from OSM by downloading the tiles as .img files to a folder on my PC and then use MapSetToolKit to install the map into Mapsource. I have selected the OSM tile numbers needed to create the mapset by using the "Convert Coordinates to OSM Tile Numbers" link on the website: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_Your_Own_Maps_from_OSM_Data</a> but am confused as to how to go about actually finding and downloading these tiles to my computer.</p>
 <p>Please help.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

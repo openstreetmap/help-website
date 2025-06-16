@@ -131,7 +131,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>Tagging is open but it is also a good practice to document the tags on the wiki. So if you decide to use ISO 639-2 in tag "name:*", you should explain it in <a href="http://wiki.openstreetmap.org/wiki/Name">http://wiki.openstreetmap.org/wiki/Name</a>, section i18n</p>
+<p>Tagging is open but it is also a good practice to document the tags on the wiki. So if you decide to use ISO 639-2 in tag "name:*", you should explain it in <a href="https://wiki.openstreetmap.org/wiki/Name">https://wiki.openstreetmap.org/wiki/Name</a>, section i18n</p>
 </div>
 <div id="comment-3113-info" class="comment-info">
 <span class="comment-age">(16 Feb '11, 17:18)</span> <span class="comment-user userinfo">Pieren</span>
@@ -154,7 +154,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>There is also the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names">http://wiki.openstreetmap.org/wiki/Multilingual_names</a></p>
+<p>There is also the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names">https://wiki.openstreetmap.org/wiki/Multilingual_names</a></p>
 <p>It says to use the language's ISO 639-1 code, or ISO 639-2 if an ISO 639-1 code doesn't exist. The Wiki page for key:name should probably mention this, and link to that page.</p>
 </div>
 <div id="comment-3115-info" class="comment-info">

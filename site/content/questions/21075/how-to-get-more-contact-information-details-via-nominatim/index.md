@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nominatim can only return information that's stored in the OSM database. In the case of the <a href="http://www.openstreetmap.org/browse/node/892447817">first cafe on the list</a>, that information isn't stored. If you want OSM to know what each cafe's contact information is, you need to visit them, ask them what their contact information is and add it to OSM.</p>
+<p>Nominatim can only return information that's stored in the OSM database. In the case of the <a href="https://www.openstreetmap.org/browse/node/892447817">first cafe on the list</a>, that information isn't stored. If you want OSM to know what each cafe's contact information is, you need to visit them, ask them what their contact information is and add it to OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

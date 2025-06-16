@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I noticed <a href="http://overpass-turbo.eu/s/ajV">a minor import in Bolivia</a>, which didn't follow any of the guidelines for imports. User <a href="http://help.openstreetmap.org/users/7558/51114u9">@51114u9</a> (main Bolivian mapper) was in contact with the original mapper, and apparently after all this time, it looks like the data licence is not compatible with OSM. He suggested removing the data. I'm just wondering whether we should do this ourselves, or bother the DWG with a small import like this. Someone might obviously undelete the data if it is not redacted.</p>
+<p>I noticed <a href="http://overpass-turbo.eu/s/ajV">a minor import in Bolivia</a>, which didn't follow any of the guidelines for imports. User <a href="https://help.openstreetmap.org/users/7558/51114u9">@51114u9</a> (main Bolivian mapper) was in contact with the original mapper, and apparently after all this time, it looks like the data licence is not compatible with OSM. He suggested removing the data. I'm just wondering whether we should do this ourselves, or bother the DWG with a small import like this. Someone might obviously undelete the data if it is not redacted.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span> <span class="post-tag tag-link-redaction" rel="tag" title="see questions tagged &#39;redaction&#39;">redaction</span>

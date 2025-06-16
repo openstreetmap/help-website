@@ -164,7 +164,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Besides, the center of the universe is in tulsa. <a href="http://www.openstreetmap.org/#map=19/36.15688/-95.99209">http://www.openstreetmap.org/#map=19/36.15688/-95.99209</a></p>
+<p>Besides, the center of the universe is in tulsa. <a href="https://www.openstreetmap.org/#map=19/36.15688/-95.99209">https://www.openstreetmap.org/#map=19/36.15688/-95.99209</a></p>
 </div>
 <div id="comment-30395-info" class="comment-info">
 <span class="comment-age">(02 Feb '14, 04:46)</span> <span class="comment-user userinfo">Baloo Uriza</span>

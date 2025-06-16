@@ -180,7 +180,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Welcome to OSM.</p>
-<p>Map each half of the road separately. If no-one at all can cross the barrier leave the two halves unjoined with a gap. If there is a space for pedestrians, join the halves with a <a href="http://wiki.openstreetmap.org/wiki/Tag:highway=footway">highway=footway</a> or if vehicles can pass with the permission of the residents map a road with <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> tags. Get in <a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a> with the community if you have any more questions.</p>
+<p>Map each half of the road separately. If no-one at all can cross the barrier leave the two halves unjoined with a gap. If there is a space for pedestrians, join the halves with a <a href="https://wiki.openstreetmap.org/wiki/Tag:highway=footway">highway=footway</a> or if vehicles can pass with the permission of the residents map a road with <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> tags. Get in <a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a> with the community if you have any more questions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

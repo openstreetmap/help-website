@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "About wiki :why the image is shown neither on the template nor on the wiki pages?"
-description = '''I&#x27;ve uploaded the image http://wiki.openstreetmap.org/wiki/File:Wooden-bridge.jpg and added the file name to the template page http://wiki.openstreetmap.org/wiki/Template:Map_Features:surface but the image appears neither on the template nor on the wiki page http://wiki.openstreetmap.org/wiki/Key:su...'''
+description = '''I&#x27;ve uploaded the image https://wiki.openstreetmap.org/wiki/File:Wooden-bridge.jpg and added the file name to the template page https://wiki.openstreetmap.org/wiki/Template:Map_Features:surface but the image appears neither on the template nor on the wiki page https://wiki.openstreetmap.org/wiki/Key:su...'''
 date = "2011-03-14T20:27:00Z"
 lastmod = "2011-03-14T20:45:00Z"
 weight = 3802
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've uploaded the image <a href="http://wiki.openstreetmap.org/wiki/File:Wooden-bridge.jpg">http://wiki.openstreetmap.org/wiki/File:Wooden-bridge.jpg</a> and added the file name to the template page <a href="http://wiki.openstreetmap.org/wiki/Template:Map_Features:surface">http://wiki.openstreetmap.org/wiki/Template:Map_Features:surface</a> but the image appears neither on the template nor on the wiki page <a href="http://wiki.openstreetmap.org/wiki/Key:surface">http://wiki.openstreetmap.org/wiki/Key:surface</a>.</p>
+<p>I've uploaded the image <a href="https://wiki.openstreetmap.org/wiki/File:Wooden-bridge.jpg">https://wiki.openstreetmap.org/wiki/File:Wooden-bridge.jpg</a> and added the file name to the template page <a href="https://wiki.openstreetmap.org/wiki/Template:Map_Features:surface">https://wiki.openstreetmap.org/wiki/Template:Map_Features:surface</a> but the image appears neither on the template nor on the wiki page <a href="https://wiki.openstreetmap.org/wiki/Key:surface">https://wiki.openstreetmap.org/wiki/Key:surface</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-image" rel="tag" title="see questions tagged &#39;image&#39;">image</span> <span class="post-tag tag-link-template" rel="tag" title="see questions tagged &#39;template&#39;">template</span>

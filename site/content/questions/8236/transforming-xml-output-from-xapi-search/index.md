@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to create a relation for a river. I do a XAPI name tag search and save the XML file in my computer. How do I transform the XML - I need to filter way ids and transform them into XML relation members for input with <a href="http://wiki.openstreetmap.org/wiki/RawEditor">RawEditor</a>. I have an XSLT stylesheet ready but I have trouble displaying the result in Firefox (shows blank page).</p>
+<p>I want to create a relation for a river. I do a XAPI name tag search and save the XML file in my computer. How do I transform the XML - I need to filter way ids and transform them into XML relation members for input with <a href="https://wiki.openstreetmap.org/wiki/RawEditor">RawEditor</a>. I have an XSLT stylesheet ready but I have trouble displaying the result in Firefox (shows blank page).</p>
 <p>The stylesheet is here:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
@@ -121,7 +121,7 @@ One Answer:
 <p>I wouldn't worry about XML transformations, myself - you're just after filling in the list for the rawedit upload, so that's a bunch of lines like:</p>
 <pre><code>&lt;member type=&quot;way&quot; ref=&quot;1234&quot; role=&quot;&quot;/&gt;</code></pre>
 <p>I'd create a list of ways that you want to use from the XAPI output and then convert into the required "member" list using an editing macro in your favourite text editor. Obviously you'll then need to check the list of omissions and things that shouldn't be in it manually (have a look at the wiki "browserelation" links).</p>
-<p>Then, re-order in the order that you want by following EdLoach's answer to <a href="http://help.openstreetmap.org/questions/8197/re-ordering-ways-in-a-relation">this question</a>.</p>
+<p>Then, re-order in the order that you want by following EdLoach's answer to <a href="/questions/8197/re-ordering-ways-in-a-relation">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

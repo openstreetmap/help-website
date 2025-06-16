@@ -228,7 +228,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With regards Colsterworth, I am not sure what you were trying to achieve, but your edits in <a href="http://www.openstreetmap.org/browse/changeset/11764913">this changeset</a> now have the one way slip road which enables you to get on the A1 southbound not connected, so you can't get on southbound. Is this correct, or does <a href="http://www.openstreetmap.org/browse/way/8274231">this way</a> need rejoining to the two way road to the east of it?</p>
+<p>With regards Colsterworth, I am not sure what you were trying to achieve, but your edits in <a href="https://www.openstreetmap.org/browse/changeset/11764913">this changeset</a> now have the one way slip road which enables you to get on the A1 southbound not connected, so you can't get on southbound. Is this correct, or does <a href="https://www.openstreetmap.org/browse/way/8274231">this way</a> need rejoining to the two way road to the east of it?</p>
 <p>The red line in Potlatch2 shows where it will draw a line if you click again. To get rid of it, pressing the Escape key should cancel the way drawing. To reverse the direction of a one way arrow you need to click on the existing way (the line), and there will be an arrow in the toolbox in the bottom right hand corner that you can click to reverse the direction.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>I would like to know how can I map the smoothness of the different ways to do skating. For a normal way, the surface tag indicates the material, but not the smoothness. Skating can be done ovew few materials, but most important is the smootness of them. Paved is too generic, there is a rough paved or fine paved, and the last one is continuosly seached for skaters.</p>
 <p>I have seen the following tags that can be used for that, but I want to read your opinions:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Surface_Quality">surface:grade</a> but this is a little generic, and it does not define rough or fine paved. Fine could be 3, and rough could be 2.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:smoothness">Smoothness</a> This is closed to what I am looking for, but this is a proposal.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Surface_Quality">surface:grade</a> but this is a little generic, and it does not define rough or fine paved. Fine could be 3, and rough could be 2.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:smoothness">Smoothness</a> This is closed to what I am looking for, but this is a proposal.</li>
 </ul>
 <p>What should I do? which tag should I use?</p>
 </div>

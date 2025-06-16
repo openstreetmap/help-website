@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Batam Island, Indonesia"
-description = '''Hi, Batam seems to have lost its coastline at certain zoom levels: http://www.openstreetmap.org/#map=11/1.0272/104.0426 I checked the data, and the coastline seems to be there, and I know coastlines can be slower to update themselves. Is this just a caching issue, or has it been wrongly changed? Tha...'''
+description = '''Hi, Batam seems to have lost its coastline at certain zoom levels: https://www.openstreetmap.org/#map=11/1.0272/104.0426 I checked the data, and the coastline seems to be there, and I know coastlines can be slower to update themselves. Is this just a caching issue, or has it been wrongly changed? Tha...'''
 date = "2014-04-09T00:49:00Z"
 lastmod = "2014-04-11T00:53:00Z"
 weight = 32213
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>Batam seems to have lost its coastline at certain zoom levels: <a href="http://www.openstreetmap.org/#map=11/1.0272/104.0426">http://www.openstreetmap.org/#map=11/1.0272/104.0426</a></p>
+<p>Batam seems to have lost its coastline at certain zoom levels: <a href="https://www.openstreetmap.org/#map=11/1.0272/104.0426">https://www.openstreetmap.org/#map=11/1.0272/104.0426</a></p>
 <p>I checked the data, and the coastline seems to be there, and I know coastlines can be slower to update themselves. Is this just a caching issue, or has it been wrongly changed?</p>
 <p>Thanks! Rollo.</p>
 </div>

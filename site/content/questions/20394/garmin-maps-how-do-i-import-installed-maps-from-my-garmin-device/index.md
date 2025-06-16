@@ -127,7 +127,7 @@ osqa_accepted = false
 <p>There's not really any easy way of transferring a map from the Garmin to MapSource. The file on the device is a single gmapsupp.img file, whereas MapSource needs individual map tiles, plus a tdb file, and appropriate registry entries.</p>
 <p>The easiest option is to get a ready-made OSM map with an installer for MapSource. eg from <a href="http://garmin.openstreetmap.nl/">Garmin.OpenStreetMap.nl</a>. Just download the Windows version, and run the .exe file to install the maps in MapSource.</p>
 <p>If this isn't possible, you could try using <a href="http://www.gmaptool.eu/en/content/gmaptool">GMapTool</a>. It can split up a gmapsupp.img file, and install in MapSource.</p>
-<p>Or you could use <a href="http://wiki.openstreetmap.org/wiki/BaseCamp">Garmin BaseCamp</a> instead. In many ways this is a replacement for MapSource, and it can read the maps directly from the device, and display them in your computer. Though this only works while your Garmin device is plugged in. So it may be faster and more convenient to just install some maps in BaseCamp anyway.</p>
+<p>Or you could use <a href="https://wiki.openstreetmap.org/wiki/BaseCamp">Garmin BaseCamp</a> instead. In many ways this is a replacement for MapSource, and it can read the maps directly from the device, and display them in your computer. Though this only works while your Garmin device is plugged in. So it may be faster and more convenient to just install some maps in BaseCamp anyway.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

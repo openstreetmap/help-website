@@ -157,7 +157,7 @@ This question is marked "community wiki".
 <div id="post-37206-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>or try <a href="http://wiki.openstreetmap.org/wiki/Geojson.io">http://wiki.openstreetmap.org/wiki/Geojson.io</a> or <a href="http://sharemap.org">http://sharemap.org</a></p>
+<p>or try <a href="https://wiki.openstreetmap.org/wiki/Geojson.io">https://wiki.openstreetmap.org/wiki/Geojson.io</a> or <a href="http://sharemap.org">http://sharemap.org</a></p>
 </div>
 <div id="comment-37206-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 21:43)</span> <span class="comment-user userinfo">stephan75</span>
@@ -199,7 +199,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>All OSM data is public. However, through the tags that are applied to the data, you can indicate who is allowed access to certain features "on the ground". See the <a href="http://wiki.openstreetmap.org/wiki/Access">access=*</a> page for details.</p>
+<p>All OSM data is public. However, through the tags that are applied to the data, you can indicate who is allowed access to certain features "on the ground". See the <a href="https://wiki.openstreetmap.org/wiki/Access">access=*</a> page for details.</p>
 <p>As an example, you might tag a garden with access=private. Anyone will be able to download that data, and see from the access tag that you can visit the garden "Only with permission of the owner on an individual basis".</p>
 </div>
 <div class="answer-controls post-controls">

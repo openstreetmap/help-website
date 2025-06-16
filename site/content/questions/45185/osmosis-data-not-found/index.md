@@ -210,7 +210,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For this type of operation I would strongly suggest using <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
+<p>For this type of operation I would strongly suggest using <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>.</p>
 <p>Osmosis has had issues with its Windows distribution for at least <a href="http://forum.openstreetmap.org/viewtopic.php?id=4039">6 years</a>. As SomeoneElse shows they can be fixed, but there are other less painful routes.</p>
 </div>
 <div class="answer-controls post-controls">

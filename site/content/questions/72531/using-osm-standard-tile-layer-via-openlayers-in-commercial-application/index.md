@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I am using OpenLayers library for embedding maps into a commercial browser application. I am using OSM as tile server (<a href="https://openlayers.org/en/latest/examples/simple.html">https://openlayers.org/en/latest/examples/simple.html</a> ) with OpenLayers API. The embedded map contains some markers with tooltips. I want to embed OSM map () into a commercial browser application. Open Layers has BSD 2 licence and using the OSM tiles ( <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> ) are under the CC-BY-SA license.</p>
+<p>I am using OpenLayers library for embedding maps into a commercial browser application. I am using OSM as tile server (<a href="https://openlayers.org/en/latest/examples/simple.html">https://openlayers.org/en/latest/examples/simple.html</a> ) with OpenLayers API. The embedded map contains some markers with tooltips. I want to embed OSM map () into a commercial browser application. Open Layers has BSD 2 licence and using the OSM tiles ( <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> ) are under the CC-BY-SA license.</p>
 <p>Below are my queries:</p>
 <ol>
 <li>Can I use OSM via OpenLayers in commercial application ? If yes, what should be the licence of the commercial product ?</li>

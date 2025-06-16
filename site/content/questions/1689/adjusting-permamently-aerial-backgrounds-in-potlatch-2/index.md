@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Adjusting PERMAMENTLY aerial backgrounds in Potlatch 2"
-description = '''As mentioned in a similar question (see: http://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2) the background imagery of Bing often does not match the GPS traces and existing ways. In the answers to the above mentioned question it was explained that holding the spa...'''
+description = '''As mentioned in a similar question (see: https://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2) the background imagery of Bing often does not match the GPS traces and existing ways. In the answers to the above mentioned question it was explained that holding the spa...'''
 date = "2010-12-01T12:56:00Z"
 lastmod = "2012-08-27T14:01:00Z"
 weight = 1689
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>As mentioned in a similar question (see: <a href="http://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2"></a><a href="http://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2"></a><a href="http://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2">http://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2</a>) the background imagery of Bing often does not match the GPS traces and existing ways.</p>
+<p>As mentioned in a similar question (see: <a href="/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2"></a><a href="/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2"></a><a href="/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2">https://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2</a>) the background imagery of Bing often does not match the GPS traces and existing ways.</p>
 <p>In the answers to the above mentioned question it was explained that holding the space key allow for moving/adjusting the background. This is nice to know, but is there a way to <strong>permanently</strong> adjust the offset of background imagery?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -130,7 +130,7 @@ One Answer:
 <div id="post-1730-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The project ideas are documented on the wiki here: <a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">http://wiki.openstreetmap.org/wiki/True_Offset_Process</a></p>
+<p>The project ideas are documented on the wiki here: <a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">https://wiki.openstreetmap.org/wiki/True_Offset_Process</a></p>
 </div>
 <div id="comment-1730-info" class="comment-info">
 <span class="comment-age">(05 Dec '10, 20:06)</span> <span class="comment-user userinfo">Claudius Hen...</span>

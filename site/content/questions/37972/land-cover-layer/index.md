@@ -63,7 +63,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Do you mean in this changeset:</p>
-<p><a href="http://www.openstreetmap.org/changeset/26281834">http://www.openstreetmap.org/changeset/26281834</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/26281834">https://www.openstreetmap.org/changeset/26281834</a></p>
 <p>If so I can have a go at reverting it for you</p>
 </div>
 <div id="comment-37973-info" class="comment-info">
@@ -130,7 +130,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OK, that's all done:</p>
-<p><a href="http://www.openstreetmap.org/changeset/26350752">http://www.openstreetmap.org/changeset/26350752</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/26350752">https://www.openstreetmap.org/changeset/26350752</a></p>
 <p>and the next 3 changesets. Does everything look OK now?</p>
 </div>
 <div class="answer-controls post-controls">

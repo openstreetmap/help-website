@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hallo,</p>
-<p>je vindt een lange lijst van mogelijkheden op <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">deze wiki pagina</a></p>
+<p>je vindt een lange lijst van mogelijkheden op <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">deze wiki pagina</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

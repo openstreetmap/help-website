@@ -189,7 +189,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I agree, but one thing you can use to make it a little better in iD is some of the keyboard shortcuts. For example, after you double-click to finish an area, click somewhere else to unselect it, then press 3 and you'll be in Area-drawing mode again. A list of the shortcuts is on the wiki: <a href="http://wiki.openstreetmap.org/wiki/ID/Shortcuts">http://wiki.openstreetmap.org/wiki/ID/Shortcuts</a></p>
+<p>I agree, but one thing you can use to make it a little better in iD is some of the keyboard shortcuts. For example, after you double-click to finish an area, click somewhere else to unselect it, then press 3 and you'll be in Area-drawing mode again. A list of the shortcuts is on the wiki: <a href="https://wiki.openstreetmap.org/wiki/ID/Shortcuts">https://wiki.openstreetmap.org/wiki/ID/Shortcuts</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

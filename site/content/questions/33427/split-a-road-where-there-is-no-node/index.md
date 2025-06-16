@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Grahaml, with P2 just push shift and push the left mouse button and there’s a new node in the way. Add all the tags to the road before cutting it, with the cutting tool the scissor hand in the right lower corner. The tutorial is here <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2</a> Joining them is selecting them with your pointer again while pushing the ctrl button and the chain button in the right lower window. In JOSM it’s done by these rules <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Add_nodes_at_intersections_.28Shift.2BI.29">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Add_nodes_at_intersections_.28Shift.2BI.29</a> If you’re using ID I don’t know but there is a tutorial as well, <a href="http://wiki.openstreetmap.org/wiki/ID">http://wiki.openstreetmap.org/wiki/ID</a></p>
+<p>Hi Grahaml, with P2 just push shift and push the left mouse button and there’s a new node in the way. Add all the tags to the road before cutting it, with the cutting tool the scissor hand in the right lower corner. The tutorial is here <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2</a> Joining them is selecting them with your pointer again while pushing the ctrl button and the chain button in the right lower window. In JOSM it’s done by these rules <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Add_nodes_at_intersections_.28Shift.2BI.29">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2#Add_nodes_at_intersections_.28Shift.2BI.29</a> If you’re using ID I don’t know but there is a tutorial as well, <a href="https://wiki.openstreetmap.org/wiki/ID">https://wiki.openstreetmap.org/wiki/ID</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ One Answer:
 <div id="post-33441-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Alester, yould rather 've seen this one <a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide">http://wiki.openstreetmap.org/wiki/JOSM/Guide</a> ?</p>
+<p>Hi Alester, yould rather 've seen this one <a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide">https://wiki.openstreetmap.org/wiki/JOSM/Guide</a> ?</p>
 </div>
 <div id="comment-33441-info" class="comment-info">
 <span class="comment-age">(23 May '14, 23:32)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -165,7 +165,7 @@ One Answer:
 <div id="post-33442-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This one would be best: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Basic_editing">http://wiki.openstreetmap.org/wiki/JOSM/Basic_editing</a> It covers both adding a node to a way and splitting.</p>
+<p>This one would be best: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Basic_editing">https://wiki.openstreetmap.org/wiki/JOSM/Basic_editing</a> It covers both adding a node to a way and splitting.</p>
 </div>
 <div id="comment-33442-info" class="comment-info">
 <span class="comment-age">(23 May '14, 23:50)</span> <span class="comment-user userinfo">alester</span>
@@ -188,7 +188,7 @@ One Answer:
 <div id="post-33457-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Graham try this one <a href="https://help.openstreetmap.org/questions/22393/how-can-i-merge-two-paths-in-the-id-editor">https://help.openstreetmap.org/questions/22393/how-can-i-merge-two-paths-in-the-id-editor</a> I just added ID in the blank window just below Questions together with ways et voila, succes.</p>
+<p>Hi Graham try this one <a href="/questions/22393/how-can-i-merge-two-paths-in-the-id-editor">https://help.openstreetmap.org/questions/22393/how-can-i-merge-two-paths-in-the-id-editor</a> I just added ID in the blank window just below Questions together with ways et voila, succes.</p>
 </div>
 <div id="comment-33457-info" class="comment-info">
 <span class="comment-age">(25 May '14, 08:35)</span> <span class="comment-user userinfo">Hendrikklaas</span>

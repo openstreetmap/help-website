@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-58383-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Duplicate - see <a href="https://help.openstreetmap.org/questions/12810/kashmir-india">this previous question</a> and the answers there.</p>
+<p>Duplicate - see <a href="/questions/12810/kashmir-india">this previous question</a> and the answers there.</p>
 </div>
 <div id="comment-58383-info" class="comment-info">
 <span class="comment-age">(18 Aug '17, 14:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

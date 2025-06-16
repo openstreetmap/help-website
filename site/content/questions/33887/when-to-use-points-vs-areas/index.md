@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>At the right of this page is a column with related questions.</p>
-<p>The top one at the moment is: <a href="https://help.openstreetmap.org/questions/22962/should-i-use-pois-or-areas-to-identify-shops">Should I use POIs or areas to identify shops?</a></p>
+<p>The top one at the moment is: <a href="/questions/22962/should-i-use-pois-or-areas-to-identify-shops">Should I use POIs or areas to identify shops?</a></p>
 <p>For your question there is no effective difference between mapping shops or restaurants.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -210,7 +210,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9740/pmackay">@pmackay</a> In general it is not needed to merge the building and the node of the POI. It might even give problems in case the building has a name that is different from the POI. You should only do this when the POI occupies the complete building, the address is the same for the whole building, etc.</p>
+<p><a href="https://help.openstreetmap.org/users/9740/pmackay">@pmackay</a> In general it is not needed to merge the building and the node of the POI. It might even give problems in case the building has a name that is different from the POI. You should only do this when the POI occupies the complete building, the address is the same for the whole building, etc.</p>
 </div>
 <div id="comment-46925-info" class="comment-info">
 <span class="comment-age">(01 Dec '15, 16:39)</span> <span class="comment-user userinfo">escada</span>
@@ -222,7 +222,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> I'm definitely only thinking of situations where the building completely represents the POI. Otherwise I agree they are better separate.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> I'm definitely only thinking of situations where the building completely represents the POI. Otherwise I agree they are better separate.</p>
 </div>
 <div id="comment-46926-info" class="comment-info">
 <span class="comment-age">(01 Dec '15, 18:22)</span> <span class="comment-user userinfo">pmackay</span>

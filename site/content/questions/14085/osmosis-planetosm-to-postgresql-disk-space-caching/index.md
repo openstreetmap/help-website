@@ -119,7 +119,7 @@ One Answer:
 <div class="answer-body">
 <p>You can set a different temporary directory with the command</p>
 <pre><code>export JAVACMD_OPTIONS=&quot;-Djava.io.tmpdir=/dir/to/osm/tmp&quot;</code></pre>
-<p>Also read the information about the <code>nodeLocationStorage</code> parameter on the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.41#--write-pgsql_.28--wp.29">Osmosis wiki page</a>.</p>
+<p>Also read the information about the <code>nodeLocationStorage</code> parameter on the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.41#--write-pgsql_.28--wp.29">Osmosis wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

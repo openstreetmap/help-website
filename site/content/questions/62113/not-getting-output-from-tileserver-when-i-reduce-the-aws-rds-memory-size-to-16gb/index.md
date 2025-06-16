@@ -271,7 +271,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/tiles000.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/tiles000.PNG" alt="alt text" /></p>
 <p>Please find the attached image here with. This is the error message showing file rendering a world map(example.com/0/0/0.png).</p>
 <p>Does it have anything to do with database upload? Database has been uploaded successfully.</p>
 </div>

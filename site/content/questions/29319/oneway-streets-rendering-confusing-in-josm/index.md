@@ -233,7 +233,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Alaskadave, visualizing a way is part of the rendering, you won’t be able to change that. The direction of a way is managed with the tags in the advanced menus. Look here, <a href="http://wiki.openstreetmap.org/wiki/Key:oneway.">http://wiki.openstreetmap.org/wiki/Key:oneway.</a></p>
+<p>Alaskadave, visualizing a way is part of the rendering, you won’t be able to change that. The direction of a way is managed with the tags in the advanced menus. Look here, <a href="https://wiki.openstreetmap.org/wiki/Key:oneway.">https://wiki.openstreetmap.org/wiki/Key:oneway.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

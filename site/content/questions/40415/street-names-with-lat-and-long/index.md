@@ -97,7 +97,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10337/bdaventura"></a><a href="http://help.openstreetmap.org/users/10337/bdaventura">@bdaventura</a>: okay, what is the source of the names? Were you walking in the streets and looking at the signs while looking on your gps device to get the position? Update: Oh, I just see that you likely already answered this: "The street names were tagged using latlong.net following a Bermuda map". If you got the names from another map we are not allowed to use them, unless we get a permission from the map data company. We cannot just use other maps. Also this is bad because other maps are wrong. We want to be better!</p>
+<p><a href="https://help.openstreetmap.org/users/10337/bdaventura"></a><a href="https://help.openstreetmap.org/users/10337/bdaventura">@bdaventura</a>: okay, what is the source of the names? Were you walking in the streets and looking at the signs while looking on your gps device to get the position? Update: Oh, I just see that you likely already answered this: "The street names were tagged using latlong.net following a Bermuda map". If you got the names from another map we are not allowed to use them, unless we get a permission from the map data company. We cannot just use other maps. Also this is bad because other maps are wrong. We want to be better!</p>
 </div>
 <div id="comment-40426-info" class="comment-info">
 <span class="comment-age">(15 Jan '15, 23:08)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -120,7 +120,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10337/bdaventura"></a><a href="http://help.openstreetmap.org/users/10337/bdaventura">@bdaventura</a>: this ("clustering") is a totally different question, right? Could you please open a new question for this (if you cannot find a previous old question about the same). Clustering is definitely possible with some web map tools from the OSM ecosystem.</p>
+<p><a href="https://help.openstreetmap.org/users/10337/bdaventura"></a><a href="https://help.openstreetmap.org/users/10337/bdaventura">@bdaventura</a>: this ("clustering") is a totally different question, right? Could you please open a new question for this (if you cannot find a previous old question about the same). Clustering is definitely possible with some web map tools from the OSM ecosystem.</p>
 </div>
 <div id="comment-40428-info" class="comment-info">
 <span class="comment-age">(15 Jan '15, 23:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -143,7 +143,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10337/bdaventura">@bdaventura</a>: yes, that matters, sorry. We cannot use phonebook's data. See <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing">https://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing</a> and <a href="https://en.wikipedia.org/wiki/Sui_generis_database_right">https://en.wikipedia.org/wiki/Sui_generis_database_right</a> . In short: This is because we want to keep our data free and that is only possible if we do not infringe other people's rights (because then users of our data would do so too). Please do not use this data set if it is derived from a phone book.</p>
+<p><a href="https://help.openstreetmap.org/users/10337/bdaventura">@bdaventura</a>: yes, that matters, sorry. We cannot use phonebook's data. See <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing">https://wiki.openstreetmap.org/wiki/Legal_FAQ#2._Contributing</a> and <a href="https://en.wikipedia.org/wiki/Sui_generis_database_right">https://en.wikipedia.org/wiki/Sui_generis_database_right</a> . In short: This is because we want to keep our data free and that is only possible if we do not infringe other people's rights (because then users of our data would do so too). Please do not use this data set if it is derived from a phone book.</p>
 <p>Regarding "better": if we would just reuse bad data, be cannot get better. Going out and really looking which name is there makes us better.</p>
 </div>
 <div id="comment-40446-info" class="comment-info">

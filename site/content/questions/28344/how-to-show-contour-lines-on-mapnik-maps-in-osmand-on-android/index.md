@@ -179,7 +179,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can do, but it requires some work: <a href="http://wiki.openstreetmap.org/wiki/Contour">http://wiki.openstreetmap.org/wiki/Contour</a><br />
+<p>You can do, but it requires some work: <a href="https://wiki.openstreetmap.org/wiki/Contour">https://wiki.openstreetmap.org/wiki/Contour</a><br />
 There are already compiled packages, that need to be integrated manually: <a href="http://opendem.info/download_contours.html">http://opendem.info/download_contours.html</a></p>
 </div>
 <div class="answer-controls post-controls">

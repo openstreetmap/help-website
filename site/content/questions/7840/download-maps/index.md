@@ -104,10 +104,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should be more specific, OpenStreetMap data can be <a href="http://wiki.openstreetmap.org/wiki/Map_Usage">used in various ways</a>.</p>
-<p>If you want to use it on a Garmin GPS device, you should take a look at the wiki page about <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download/Comparison_Matrix">available maps for Garmin devices</a>. You might also be interested in <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">other things you can do with Garmin devices</a>.</p>
-<p>There is also a list about <a href="http://wiki.openstreetmap.org/wiki/Software">desktop software and mobile devices</a> you can use with OSM.</p>
-<p>Furthermore there are lots of other possibilities, like <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a> your own maps or just analyzing the data of a specific area.</p>
+<p>You should be more specific, OpenStreetMap data can be <a href="https://wiki.openstreetmap.org/wiki/Map_Usage">used in various ways</a>.</p>
+<p>If you want to use it on a Garmin GPS device, you should take a look at the wiki page about <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download/Comparison_Matrix">available maps for Garmin devices</a>. You might also be interested in <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">other things you can do with Garmin devices</a>.</p>
+<p>There is also a list about <a href="https://wiki.openstreetmap.org/wiki/Software">desktop software and mobile devices</a> you can use with OSM.</p>
+<p>Furthermore there are lots of other possibilities, like <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a> your own maps or just analyzing the data of a specific area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

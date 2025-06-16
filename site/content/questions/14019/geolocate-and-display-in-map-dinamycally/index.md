@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-14025-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Vencent de P's answer <a href="http://help.openstreetmap.org/questions/13995/how-can-i-plot-the-route-of-a-device-as-its-gps-position-changes">here</a> is an answer to this question.</p>
+<p>Vencent de P's answer <a href="/questions/13995/how-can-i-plot-the-route-of-a-device-as-its-gps-position-changes">here</a> is an answer to this question.</p>
 </div>
 <div id="comment-14025-info" class="comment-info">
 <span class="comment-age">(06 Jul '12, 11:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

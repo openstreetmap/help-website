@@ -105,13 +105,13 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you mean by using this filter ...</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_shot_2013-10-13_at_3.46.10_PM.png" alt="Filter Window" /></p>
+<p><img src="/upfiles/Screen_shot_2013-10-13_at_3.46.10_PM.png" alt="Filter Window" /></p>
 <hr />
 <p>Then this appears to work ok, though it counts the nodes in each segment if a way is split, which may not be ideal for what you want to achieve.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_shot_2013-10-13_at_3.41.51_PM.png" alt="filter string" /></p>
+<p><img src="/upfiles/Screen_shot_2013-10-13_at_3.41.51_PM.png" alt="filter string" /></p>
 <hr />
 <p>and with these options set you will only see those with more than 50 nodes</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_shot_2013-10-13_at_5.07.05_PM.png" alt="options" /></p>
+<p><img src="/upfiles/Screen_shot_2013-10-13_at_5.07.05_PM.png" alt="options" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -129,11 +129,11 @@ comment this lines and add the bellow line /* <em>"http://a.tile.openstreetmap.o
 <p><br />
 <strong>2- vendor/assets/leaflet/leaflet.osm.js<br />
 </strong> comment those lines and add the lines bellow<br />
-/** L.OSM.TileLayer = L.TileLayer.extend({ options: { url: document.location.protocol === 'https:' ? 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' },</p>
+/** L.OSM.TileLayer = L.TileLayer.extend({ options: { url: document.location.protocol === 'https:' ? 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' },</p>
 <p>initialize: function (options) { options = L.Util.setOptions(this, options); L.TileLayer.prototype.initialize.call(this, options.url); } });</p>
 <p>L.OSM.Mapnik = L.OSM.TileLayer.extend({ options: { url: document.location.protocol === 'https:' ? 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', maxZoom: 19 } }); */<br />
 </p>
-<p>L.OSM.TileLayer = L.TileLayer.extend({ options: { url: document.location.protocol === 'http:' ? 'http://localhost/osm_tiles/{z}/{x}/{y}.png' : 'http://localhost/osm_tiles/{z}/{x}/{y}.png', attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' },</p>
+<p>L.OSM.TileLayer = L.TileLayer.extend({ options: { url: document.location.protocol === 'http:' ? 'http://localhost/osm_tiles/{z}/{x}/{y}.png' : 'http://localhost/osm_tiles/{z}/{x}/{y}.png', attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' },</p>
 <p>initialize: function (options) { options = L.Util.setOptions(this, options); L.TileLayer.prototype.initialize.call(this, options.url); } });</p>
 <p>L.OSM.Mapnik = L.OSM.TileLayer.extend({ options: { url: document.location.protocol === 'http:' ? 'http://localhost/osm_tiles/{z}/{x}/{y}.png' : 'http://localhost/osm_tiles/{z}/{x}/{y}.png', maxZoom: 19 } });</p>
 <p><strong>restart the rails port :</strong> sudo bundle exec rails server</p>

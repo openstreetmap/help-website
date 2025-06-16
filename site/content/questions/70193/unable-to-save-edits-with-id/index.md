@@ -45,7 +45,7 @@ osqa_accepted = true
 <li>Firefox 68.0.1</li>
 <li>Manjaro Linux</li>
 </ul>
-<p>Screenshot:<img src="https://help.openstreetmap.org/upfiles/Screenshot_2019-07-26_OpenStreetMap.jpg" alt="alt text" /></p>
+<p>Screenshot:<img src="/upfiles/Screenshot_2019-07-26_OpenStreetMap.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span> <span class="post-tag tag-link-save-changes" rel="tag" title="see questions tagged &#39;save-changes&#39;">save-changes</span>

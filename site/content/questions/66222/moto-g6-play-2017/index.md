@@ -192,7 +192,7 @@ osqa_accepted = false
 <div id="post-66230-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This previous Question seems to cover the same ground. <a href="https://help.openstreetmap.org/questions/24777/osmand-gps-status-application-not-installed-search-in-market">https://help.openstreetmap.org/questions/24777/osmand-gps-status-application-not-installed-search-in-market</a></p>
+<p>This previous Question seems to cover the same ground. <a href="/questions/24777/osmand-gps-status-application-not-installed-search-in-market">https://help.openstreetmap.org/questions/24777/osmand-gps-status-application-not-installed-search-in-market</a></p>
 </div>
 <div id="comment-66230-info" class="comment-info">
 <span class="comment-age">(08 Oct '18, 23:04)</span> <span class="comment-user userinfo">andy mackey</span>

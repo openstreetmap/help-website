@@ -193,7 +193,7 @@ osqa_accepted = true
 <div id="post-4457-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here it is: <a href="http://www.openstreetmap.org/?lat=33.72226&amp;lon=-117.76505&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=33.72226&amp;lon=-117.76505&amp;zoom=17&amp;layers=M</a> Not dotted or dashed. I think I might open a Trac ticket.</p>
+<p>Here it is: <a href="https://www.openstreetmap.org/?lat=33.72226&amp;lon=-117.76505&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=33.72226&amp;lon=-117.76505&amp;zoom=17&amp;layers=M</a> Not dotted or dashed. I think I might open a Trac ticket.</p>
 </div>
 <div id="comment-4457-info" class="comment-info">
 <span class="comment-age">(13 Apr '11, 19:44)</span> <span class="comment-user userinfo">ponzu</span>
@@ -239,7 +239,7 @@ osqa_accepted = true
 <div id="post-37624-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5918/stf">@stf</a>: Yes, I was mistaken, the standard OSM map still ignores the intermittent tag. However, recently a bug was opened to get this fixed: <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/805">https://github.com/gravitystorm/openstreetmap-carto/issues/805</a> So there is hope :-).</p>
+<p><a href="https://help.openstreetmap.org/users/5918/stf">@stf</a>: Yes, I was mistaken, the standard OSM map still ignores the intermittent tag. However, recently a bug was opened to get this fixed: <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/805">https://github.com/gravitystorm/openstreetmap-carto/issues/805</a> So there is hope :-).</p>
 </div>
 <div id="comment-37624-info" class="comment-info">
 <span class="comment-age">(15 Oct '14, 11:46)</span> <span class="comment-user userinfo">sleske</span>
@@ -293,7 +293,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>An alternative tag for creeks, washes, arroyos etc, is waterway=wadi <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi</a></p>
+<p>An alternative tag for creeks, washes, arroyos etc, is waterway=wadi <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi</a></p>
 <p>Currently this is rendered correctly in Mapnik as a dotted blue line, though it doesn't display any naming. Unfortunately some renderers don't seem to recognize this tag at all - e.g. Mapquest, which won't display waterways tagged this way.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -482,7 +482,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While there has been talk of deprecating the tag Waterway=wadi I am against this. The word wadi is putting people off using this tag and maybe the wording should be changed to waterway=dry_river which would then be far more acceptable to more people. Intermittent is usually accepted as being a stream but can be dry during some parts of the year. A wadi is dry most of the time, even years before a sufficiently heavy downpour will turn it into a flowing waterway that will dry up again when the rains stop and is therefore more of a feature than a waterway. Which is what is described by <a href="http://help.openstreetmap.org/users/831/ponzu"></a><a href="http://help.openstreetmap.org/users/831/ponzu">@ponzu</a></a>. I would still go with waterway=wadi which I would recommend being a pecked brown line rather than blue, but we are restricted to what is available at the present. If there is sufficient use of the tag waterway=wadi then there will be sufficient case for renaming and/or rendering it differently. The present opposition to the brown pecked line is the clash with highway=track. The discussion regarding rendering is here <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/805">https://github.com/gravitystorm/openstreetmap-carto/issues/805</a> and <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1255#issuecomment-71403860">https://github.com/gravitystorm/openstreetmap-carto/issues/1255#issuecomment-71403860</a></p>
+<p>While there has been talk of deprecating the tag Waterway=wadi I am against this. The word wadi is putting people off using this tag and maybe the wording should be changed to waterway=dry_river which would then be far more acceptable to more people. Intermittent is usually accepted as being a stream but can be dry during some parts of the year. A wadi is dry most of the time, even years before a sufficiently heavy downpour will turn it into a flowing waterway that will dry up again when the rains stop and is therefore more of a feature than a waterway. Which is what is described by <a href="https://help.openstreetmap.org/users/831/ponzu"></a><a href="https://help.openstreetmap.org/users/831/ponzu">@ponzu</a></a>. I would still go with waterway=wadi which I would recommend being a pecked brown line rather than blue, but we are restricted to what is available at the present. If there is sufficient use of the tag waterway=wadi then there will be sufficient case for renaming and/or rendering it differently. The present opposition to the brown pecked line is the clash with highway=track. The discussion regarding rendering is here <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/805">https://github.com/gravitystorm/openstreetmap-carto/issues/805</a> and <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1255#issuecomment-71403860">https://github.com/gravitystorm/openstreetmap-carto/issues/1255#issuecomment-71403860</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

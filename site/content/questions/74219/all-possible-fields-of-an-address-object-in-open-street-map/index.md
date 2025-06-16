@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I am developping a web application and I use Nominatin service to get addresses.</p>
 <p>In JSON format, Nominatin sends an address object like this : "address": {"road": "Hillcrest Road", "suburb": "Gidea Park", "city": "London Borough of Havering", "state_district": "Grand Londres","state": "Angleterre", "postcode": "RM11 1EA", "country": "Royaume-Uni", "country_code": "gb"}. Of course, address fields change depending on the country.</p>
 <p>In the database of our web application, we would like to build a table to store all fields of an address object of OSM, because we want to be compatible to all addresses around the world. I've been looking for days, for the list of all fields contained in an address object of OSM : on the net, in documentations, in nominatim and osm2pgsql code.</p>
-<p>I saw this post on Open Street Map Help : "https://help.openstreetmap.org/questions/61683/all-possible-fields-of-address-object".</p>
+<p>I saw this post on Open Street Map Help : "/questions/61683/all-possible-fields-of-address-object".</p>
 <p>But :</p>
 <ul>
 <li>1) it was in January 2018,</li>

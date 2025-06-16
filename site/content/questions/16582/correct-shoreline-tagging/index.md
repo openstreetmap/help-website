@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Correct shoreline tagging?"
-description = '''Could someone please check the shoreline tagging in this area http://www.openstreetmap.org/?lat=57.27087&amp;amp;lon=-5.99339&amp;amp;zoom=17&amp;amp;layers=M , and tell me whether there are errors in the shoreline? I know the shoreline shapefiles are recreated at larger intervals. Is there a way of knowing whe...'''
+description = '''Could someone please check the shoreline tagging in this area https://www.openstreetmap.org/?lat=57.27087&amp;amp;lon=-5.99339&amp;amp;zoom=17&amp;amp;layers=M , and tell me whether there are errors in the shoreline? I know the shoreline shapefiles are recreated at larger intervals. Is there a way of knowing whe...'''
 date = "2012-10-01T16:44:00Z"
 lastmod = "2012-10-01T18:39:00Z"
 weight = 16582
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Could someone please check the shoreline tagging in this area <a href="http://www.openstreetmap.org/?lat=57.27087&amp;lon=-5.99339&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=57.27087&amp;lon=-5.99339&amp;zoom=17&amp;layers=M</a> , and tell me whether there are errors in the shoreline?</p>
+<p>Could someone please check the shoreline tagging in this area <a href="https://www.openstreetmap.org/?lat=57.27087&amp;lon=-5.99339&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=57.27087&amp;lon=-5.99339&amp;zoom=17&amp;layers=M</a> , and tell me whether there are errors in the shoreline?</p>
 <p>I know the shoreline shapefiles are recreated at larger intervals. Is there a way of knowing when the next shoreline update will take place?</p>
 <p>Thanks!</p>
 </div>

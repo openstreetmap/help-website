@@ -157,7 +157,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Your information about details how you have generated your SVG file and about the concrete errors in Illustrator is quite poor!</p>
 <p>So I cannot give you a concrete hint ...</p>
-<p>But you can try other possibilities to work with SVG from OSM data according to the OSM wiki, see <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a></p>
+<p>But you can try other possibilities to work with SVG from OSM data according to the OSM wiki, see <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

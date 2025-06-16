@@ -153,7 +153,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I have successfully loaded a 300 MB AI file of Finland and that's 75% the size of the UK map. Even though Illustrator is not a 64bit application it might still depend on your OS and Illustrator version.</p>
 <p>I appreciate that there is a fair chance that a 4 GB AI file will not load, but nevertheless I'd like to give it a go. If it doesn't work, then strip the OSM file down further, until it does.</p>
-<p>I have downloaded my OSM file from one of the sites listed at <a href="http://wiki.openstreetmap.org/wiki/Planet.osm,">http://wiki.openstreetmap.org/wiki/Planet.osm,</a> but I forget which one specifically. In any case, I've tried the script on several OSM's acquired from multiple sources.</p>
+<p>I have downloaded my OSM file from one of the sites listed at <a href="https://wiki.openstreetmap.org/wiki/Planet.osm,">https://wiki.openstreetmap.org/wiki/Planet.osm,</a> but I forget which one specifically. In any case, I've tried the script on several OSM's acquired from multiple sources.</p>
 <p>Basically the errors (warnings?) go like this:</p>
 <p>With OSGB projection:</p>
 <p>Use of uninitialized value $lon in multiplication (*) at C:/strawberry/perl/site/lib/Geo/Coordinates/OSGB.pm line 78. Use of uninitialized value $_[-1] in hash element at C:/strawberry/perl/site/lib/Geo/Coordinates/OSGB.pm line 64. Use of uninitialized value $lat in pattern match (m//) at C:/strawberry/perl/site/lib/Geo/Coordinates/OSGB.pm line 68.</p>
@@ -222,7 +222,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For other possibilities to load OSM data in Adobe Illustrator have a look at <a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">Exporting_to_Adobe_Illustrator</a> in the OSM wiki. Maybe that helps?</p>
+<p>For other possibilities to load OSM data in Adobe Illustrator have a look at <a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">Exporting_to_Adobe_Illustrator</a> in the OSM wiki. Maybe that helps?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

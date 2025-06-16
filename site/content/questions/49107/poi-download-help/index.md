@@ -69,7 +69,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Crossposting and an answer at <a href="http://www.openstreetmap.org/user/Adinas/diary/38394">http://www.openstreetmap.org/user/Adinas/diary/38394</a></p>
+<p>Crossposting and an answer at <a href="https://www.openstreetmap.org/user/Adinas/diary/38394">https://www.openstreetmap.org/user/Adinas/diary/38394</a></p>
 </div>
 <div id="comment-49116-info" class="comment-info">
 <span class="comment-age">(08 Apr '16, 18:22)</span> <span class="comment-user userinfo">stephan75</span>

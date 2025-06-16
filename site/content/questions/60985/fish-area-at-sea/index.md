@@ -62,7 +62,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>Did you see this <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture</a></p>
+<p>Did you see this <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture</a></p>
 </div>
 <div id="comment-60988-info" class="comment-info">
 <span class="comment-age">(04 Dec '17, 09:22)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That could be <code>seamark:type=marine_farm</code> , listed on <a href="http://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Objects">http://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Objects</a></p>
+<p>That could be <code>seamark:type=marine_farm</code> , listed on <a href="https://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Objects">https://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Objects</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

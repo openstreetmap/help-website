@@ -140,7 +140,7 @@ One Answer:
 <div id="post-22322-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>hazard=minefield sounds good, see for example this proposal: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/hazard">http://wiki.openstreetmap.org/wiki/Proposed_features/hazard</a> .</p>
+<p>hazard=minefield sounds good, see for example this proposal: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/hazard">https://wiki.openstreetmap.org/wiki/Proposed_features/hazard</a> .</p>
 </div>
 <div id="comment-22322-info" class="comment-info">
 <span class="comment-age">(11 May '13, 23:20)</span> <span class="comment-user userinfo">gormo</span>

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Start learning at <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
+<p>Start learning at <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

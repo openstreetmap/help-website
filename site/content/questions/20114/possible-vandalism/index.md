@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Possible vandalism"
-description = '''http://www.openstreetmap.org/user/tridesign/edits It appears that the user is deleting nodes and pasting false data relating to &quot;Praha&quot; in London. Please revert the edits and block the user if necessary, thanks.'''
+description = '''https://www.openstreetmap.org/user/tridesign/edits It appears that the user is deleting nodes and pasting false data relating to &quot;Praha&quot; in London. Please revert the edits and block the user if necessary, thanks.'''
 date = "2013-02-21T14:03:00Z"
 lastmod = "2013-02-22T12:04:00Z"
 weight = 20114
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/user/tridesign/edits">http://www.openstreetmap.org/user/tridesign/edits</a></p>
+<p><a href="https://www.openstreetmap.org/user/tridesign/edits">https://www.openstreetmap.org/user/tridesign/edits</a></p>
 <p>It appears that the user is deleting nodes and pasting false data relating to "Praha" in London. Please revert the edits and block the user if necessary, thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -62,7 +62,7 @@ osqa_accepted = true
 <div id="post-20151-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A note: <a href="http://www.openstreetmap.org/user/tridesign/blocks">the user is not blocked yet</a>. Has someone send him a message?</p>
+<p>A note: <a href="https://www.openstreetmap.org/user/tridesign/blocks">the user is not blocked yet</a>. Has someone send him a message?</p>
 </div>
 <div id="comment-20151-info" class="comment-info">
 <span class="comment-age">(22 Feb '13, 12:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -117,9 +117,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Changesets reverted:</p>
-<pre><code>[http://www.openstreetmap.org/browse/changeset/15113164 ]
-[http://www.openstreetmap.org/browse/changeset/15113142 ]
-[http://www.openstreetmap.org/browse/changeset/15113116 ]</code></pre>
+<pre><code>[https://www.openstreetmap.org/browse/changeset/15113164 ]
+[https://www.openstreetmap.org/browse/changeset/15113142 ]
+[https://www.openstreetmap.org/browse/changeset/15113116 ]</code></pre>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

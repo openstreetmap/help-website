@@ -182,7 +182,7 @@ One Answer:
 <div id="post-48717-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5517/erik">@erik</a> Re: EPSG:4082. Yes I'd have told you that but thought I was wasting my time with my answer. However I thought what I had written might be of some use to someone else.</p>
+<p><a href="https://help.openstreetmap.org/users/5517/erik">@erik</a> Re: EPSG:4082. Yes I'd have told you that but thought I was wasting my time with my answer. However I thought what I had written might be of some use to someone else.</p>
 </div>
 <div id="comment-48717-info" class="comment-info">
 <span class="comment-age">(16 Mar '16, 21:37)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -193,7 +193,7 @@ One Answer:
 <div id="post-48718-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Would you mind telling me how to do so? I mean, how to translate MGRS to UTM with cs2cs? Or is that impossible? Maybe another commandline tool?</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Would you mind telling me how to do so? I mean, how to translate MGRS to UTM with cs2cs? Or is that impossible? Maybe another commandline tool?</p>
 </div>
 <div id="comment-48718-info" class="comment-info">
 <span class="comment-age">(17 Mar '16, 00:56)</span> <span class="comment-user userinfo">erik</span>

@@ -299,7 +299,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Another option is to use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">CSV output format</a>, with the <code>::lat</code> and <code>::lon</code> columns, which gives you the lat/lon of the 'centre' of a polygon or the location of the point. You can add extra tags as columns. This will only give you points, not polygons.</p>
+<p>Another option is to use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">CSV output format</a>, with the <code>::lat</code> and <code>::lon</code> columns, which gives you the lat/lon of the 'centre' of a polygon or the location of the point. You can add extra tags as columns. This will only give you points, not polygons.</p>
 <p>QGis can support <a href="http://www.qgistutorials.com/en/docs/importing_spreadsheets_csv.html">Deliminted Text (like CSV)</a>, so you should be able to open the file in it.</p>
 </div>
 <div class="answer-controls post-controls">

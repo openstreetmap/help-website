@@ -69,7 +69,7 @@ at prompt type:
 <p>From a webpage on the same PC I did a REST query for a small region that is inside Bonn:</p>
 <pre><code>localhost:3000/api/0.6/map?bbox=7.0974,50.7321,7.0982,50.7325</code></pre>
 <p>I got a response so I know the server is running, but the response just contained the following:</p>
-<pre><code>   &lt;osm version=&quot;0.6&quot; generator=&quot;OpenStreetMap server&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;http://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;
+<pre><code>   &lt;osm version=&quot;0.6&quot; generator=&quot;OpenStreetMap server&quot; copyright=&quot;OpenStreetMap and contributors&quot; attribution=&quot;https://www.openstreetmap.org/copyright&quot; license=&quot;http://opendatacommons.org/licenses/odbl/1-0/&quot;&gt;
 &#10;        &lt;bounds minlat=&quot;50.7321&quot; minlon=&quot;7.0974&quot; maxlat=&quot;50.7325&quot; maxlon=&quot;7.0982&quot;&gt;
 &#10;    &lt;/osm&gt;</code></pre>
 <p>So I'm just getting the wrapper nodes with no data for the region inside the bounding box.</p>
@@ -113,7 +113,7 @@ at prompt type:
 <div id="post-51288-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> I need to perform a map query to get the nodes and ways (not interested in image tiles) on an array of approx 2km x 2km tiles covering most of central Europe. Plus we need to edit the database locally using other GIS tools in ways that would not be beneficial to the OSM community, so it would not be right to do it to the public copy. I am definitely looking at Overpass as a possibility for reading the finished map in a more efficient manner. I'm kinda new to OSM so still trying to figure out what is possible.</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> I need to perform a map query to get the nodes and ways (not interested in image tiles) on an array of approx 2km x 2km tiles covering most of central Europe. Plus we need to edit the database locally using other GIS tools in ways that would not be beneficial to the OSM community, so it would not be right to do it to the public copy. I am definitely looking at Overpass as a possibility for reading the finished map in a more efficient manner. I'm kinda new to OSM so still trying to figure out what is possible.</p>
 </div>
 <div id="comment-51288-info" class="comment-info">
 <span class="comment-age">(07 Aug '16, 07:16)</span> <span class="comment-user userinfo">techtonic</span>

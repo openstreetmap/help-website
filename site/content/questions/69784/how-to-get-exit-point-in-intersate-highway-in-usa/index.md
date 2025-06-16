@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The osm map page has a routing feature which should do the job. Like this <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=32.7975%2C-97.7109%3B32.7091%2C-96.0150#map=10/32.7030/-97.0498">https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=32.7975%2C-97.7109%3B32.7091%2C-96.0150#map=10/32.7030/-97.0498</a> or the jpeg</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Routing_in_USA.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Routing_in_USA.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

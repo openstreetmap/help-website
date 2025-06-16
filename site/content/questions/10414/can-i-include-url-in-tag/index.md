@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Can I include url in tag?"
-description = '''Is it possible to add a URL to a tag, have read everywhere but getting more &amp;amp; more confused? I want to include the club&#x27;s website http://www.capeboatandskiboatclub.co.za/ to this tag. http://www.openstreetmap.org/browse/way/148736453 I possible, can someone do it for me so I can learn something....'''
+description = '''Is it possible to add a URL to a tag, have read everywhere but getting more &amp;amp; more confused? I want to include the club&#x27;s website http://www.capeboatandskiboatclub.co.za/ to this tag. https://www.openstreetmap.org/browse/way/148736453 I possible, can someone do it for me so I can learn something....'''
 date = "2012-02-04T19:28:00Z"
 lastmod = "2012-02-05T05:27:00Z"
 weight = 10414
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is it possible to add a URL to a tag, have read everywhere but getting more &amp; more confused? I want to include the club's website <a href="http://www.capeboatandskiboatclub.co.za/">http://www.capeboatandskiboatclub.co.za/</a> to this tag. <a href="http://www.openstreetmap.org/browse/way/148736453">http://www.openstreetmap.org/browse/way/148736453</a> I possible, can someone do it for me so I can learn something. Thanks</p>
+<p>Is it possible to add a URL to a tag, have read everywhere but getting more &amp; more confused? I want to include the club's website <a href="http://www.capeboatandskiboatclub.co.za/">http://www.capeboatandskiboatclub.co.za/</a> to this tag. <a href="https://www.openstreetmap.org/browse/way/148736453">https://www.openstreetmap.org/browse/way/148736453</a> I possible, can someone do it for me so I can learn something. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-url" rel="tag" title="see questions tagged &#39;url&#39;">url</span> <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span>
@@ -112,9 +112,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There seems to be at least three ways to do it:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:url">Key:url</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:website">Key:website</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:contact:website">Key:contact:website</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:url">Key:url</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:website">Key:website</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:contact:website">Key:contact:website</a></p>
 <p>The last one is not very common and Key:website occurs more often than Key:url.</p>
 </div>
 <div class="answer-controls post-controls">

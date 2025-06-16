@@ -152,10 +152,10 @@ out tags bb;
 out ids geom(46.65114479792893,11.154974699020386,46.65802297900334,11.171818971633911);
 relation(pivot.a);
 out tags bb;</code></pre>
-<p>Here is the description for Overpass QL is_in statement <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29</a></p>
+<p>Here is the description for Overpass QL is_in statement <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_areas_.28is_in.29</a></p>
 <p>The important part:</p>
 <p><strong>Area creation depends on some specific extraction rules, there's no area counterpart for each and very OSM way or relation!</strong></p>
-<p>And here are some details of how the areas for Overpass API are produced <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Areas">http://wiki.openstreetmap.org/wiki/Overpass_API/Areas</a></p>
+<p>And here are some details of how the areas for Overpass API are produced <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Areas">https://wiki.openstreetmap.org/wiki/Overpass_API/Areas</a></p>
 <p>In the nut shell, <strong>it should be named multypoligon/administartive boundary or postal_code area</strong>.</p>
 </div>
 <div class="answer-controls post-controls">

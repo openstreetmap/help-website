@@ -124,7 +124,7 @@ One Answer:
 <div id="post-60991-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/48466/how-to-configure-offline-imagery-for-josm">https://help.openstreetmap.org/questions/48466/how-to-configure-offline-imagery-for-josm</a></p>
+<p>See also <a href="/questions/48466/how-to-configure-offline-imagery-for-josm">https://help.openstreetmap.org/questions/48466/how-to-configure-offline-imagery-for-josm</a></p>
 </div>
 <div id="comment-60991-info" class="comment-info">
 <span class="comment-age">(04 Dec '17, 10:54)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

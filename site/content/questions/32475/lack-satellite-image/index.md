@@ -124,7 +124,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Por desgracia, el FAQ legal dice que <a href="http://wiki.openstreetmap.org/wiki/ES:Legal_FAQ#.C2.BFPuedo_utilizar_los_datos_de_Google_Maps.2C_Virtual_Earth.2C_etc._para_crear_nueva_cartograf.C3.ADa.3F">no</a>.</p>
+<p>Por desgracia, el FAQ legal dice que <a href="https://wiki.openstreetmap.org/wiki/ES:Legal_FAQ#.C2.BFPuedo_utilizar_los_datos_de_Google_Maps.2C_Virtual_Earth.2C_etc._para_crear_nueva_cartograf.C3.ADa.3F">no</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

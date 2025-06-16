@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It all explained here,see link. Personally I use potlatch2 which I have used the most. flash needs installing so it is for desktop PC not an android. iD is more suited for android. JOSM needs JAVA installed and is most comprehensive editor. see <a href="http://wiki.openstreetmap.org/wiki/Editors">http://wiki.openstreetmap.org/wiki/Editors</a></p>
+<p>It all explained here,see link. Personally I use potlatch2 which I have used the most. flash needs installing so it is for desktop PC not an android. iD is more suited for android. JOSM needs JAVA installed and is most comprehensive editor. see <a href="https://wiki.openstreetmap.org/wiki/Editors">https://wiki.openstreetmap.org/wiki/Editors</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

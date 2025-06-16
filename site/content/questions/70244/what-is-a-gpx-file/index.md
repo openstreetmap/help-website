@@ -140,7 +140,7 @@ see <a href="https://wiki.openstreetmap.org/wiki/Upload_GPS_tracks">https://wiki
 <div id="post-70248-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
+<p><a href="/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
 </div>
 <div id="comment-70248-info" class="comment-info">
 <span class="comment-age">(31 Jul '19, 09:02)</span> <span class="comment-user userinfo">andy mackey</span>

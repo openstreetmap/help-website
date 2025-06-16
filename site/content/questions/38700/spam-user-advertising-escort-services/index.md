@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Spam user advertising escort services"
-description = '''I just got a friend add from this user account http://www.openstreetmap.org/user/jenniferhines It&#x27;s obviously an account designed to advertise adult services. I see no way of reporting it for being a fake account. How do I flag and get the account removed?'''
+description = '''I just got a friend add from this user account https://www.openstreetmap.org/user/jenniferhines It&#x27;s obviously an account designed to advertise adult services. I see no way of reporting it for being a fake account. How do I flag and get the account removed?'''
 date = "2014-11-21T15:20:00Z"
 lastmod = "2023-05-14T12:07:00Z"
 weight = 38700
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I just got a friend add from this user account</p>
-<p><a href="http://www.openstreetmap.org/user/jenniferhines">http://www.openstreetmap.org/user/jenniferhines</a></p>
+<p><a href="https://www.openstreetmap.org/user/jenniferhines">https://www.openstreetmap.org/user/jenniferhines</a></p>
 <p>It's obviously an account designed to advertise adult services. I see no way of reporting it for being a fake account. How do I flag and get the account removed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -219,7 +219,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Currently, if you alert the admins in the <a href="irc://irc.oftc.net/osm-dev">#osm-dev</a> <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> channel to the problem they'll delete such users (you'll notice that this one no longer exists).</p>
+<p>Currently, if you alert the admins in the <a href="irc://irc.oftc.net/osm-dev">#osm-dev</a> <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> channel to the problem they'll delete such users (you'll notice that this one no longer exists).</p>
 <p>In the longer term, the idea is that there will be a moderation system (described <a href="https://lists.openstreetmap.org/pipermail/talk/2014-September/070792.html">here</a>), but that doesn't exist yet.</p>
 </div>
 <div class="answer-controls post-controls">

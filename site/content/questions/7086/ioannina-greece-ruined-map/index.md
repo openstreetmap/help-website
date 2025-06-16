@@ -79,7 +79,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I suspect that <a href="http://www.openstreetmap.org/browse/changeset/9010189">http://www.openstreetmap.org/browse/changeset/9010189</a> may be the changeset.</p>
+<p>I suspect that <a href="https://www.openstreetmap.org/browse/changeset/9010189">https://www.openstreetmap.org/browse/changeset/9010189</a> may be the changeset.</p>
 </div>
 <div id="comment-7088-info" class="comment-info">
 <span class="comment-age">(14 Aug '11, 16:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -161,7 +161,7 @@ One Answer:
 <div id="post-7090-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanx a lot! This is the changeset: <a href="http://www.openstreetmap.org/browse/changeset/9010189">http://www.openstreetmap.org/browse/changeset/9010189</a></p>
+<p>Thanx a lot! This is the changeset: <a href="https://www.openstreetmap.org/browse/changeset/9010189">https://www.openstreetmap.org/browse/changeset/9010189</a></p>
 <p>But who's gonna do the revert?</p>
 </div>
 <div id="comment-7090-info" class="comment-info">

@@ -107,8 +107,8 @@ One Answer:
 <div class="answer-body">
 <p>I assume you are talking about the online Potlatch-2 editor.</p>
 <p>The range of icons displayed ('presets') can be extended, but requires work on a) creating suitable icons, b) adding them to the style sheet, and c) testing them &amp; incorporating such changes into the code base. If you have the skills to contribute this I am sure the developers would welcome assistance.</p>
-<p>In the meantime you can add vets and other healthcare POIs through using the Advanced mode of the editor which allows free form text entry of key-value pairs. For vets <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dveterinary">amenity=veterinary</a> will work. There are suggestions for very elaborate tagging of aspects of healthcare on the wiki, but be warned, that there is little to no support for such information in renderers and other data consumers.</p>
-<p>One of the off-line editors, <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a>, offers additional presets for health.</p>
+<p>In the meantime you can add vets and other healthcare POIs through using the Advanced mode of the editor which allows free form text entry of key-value pairs. For vets <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dveterinary">amenity=veterinary</a> will work. There are suggestions for very elaborate tagging of aspects of healthcare on the wiki, but be warned, that there is little to no support for such information in renderers and other data consumers.</p>
+<p>One of the off-line editors, <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a>, offers additional presets for health.</p>
 <p>Lastly you can add website address using the advanced tab using the key website. <a href="http://olm.openstreetmap.de/">OpenLinkMap</a> visualises such entries.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -129,8 +129,8 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Just to add some helpful links to the OSM wiki for other editor programs:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Editing">http://wiki.openstreetmap.org/wiki/Editing</a></p>
-<p>and: <a href="http://wiki.openstreetmap.org/wiki/Key:website">http://wiki.openstreetmap.org/wiki/Key:website</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Editing">https://wiki.openstreetmap.org/wiki/Editing</a></p>
+<p>and: <a href="https://wiki.openstreetmap.org/wiki/Key:website">https://wiki.openstreetmap.org/wiki/Key:website</a></p>
 </div>
 <div id="comment-4327-info" class="comment-info">
 <span class="comment-age">(07 Apr '11, 16:42)</span> <span class="comment-user userinfo">stephan75</span>

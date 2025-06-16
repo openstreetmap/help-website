@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, so ive done lots of streetnaming and adding Poi's and directions, but i know there are lots of speedcams over here so i wanna add those too.</p>
-<p>Now the first question is how, i created this node (<a href="http://www.openstreetmap.org/browse/node/2087379550">2087379550</a>) as type=enforcement, enforcement=maxspeed, maxspeed=70.</p>
+<p>Now the first question is how, i created this node (<a href="https://www.openstreetmap.org/browse/node/2087379550">2087379550</a>) as type=enforcement, enforcement=maxspeed, maxspeed=70.</p>
 <p>Is that good or do i have to add highway= speed_cam and name?</p>
 <p>Second, if i used an enforcement like above can i add a second one too? Because they check both speed and red light.</p>
 </div>
@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, this could be youre solution, <a href="http://www.openstreetmap.org/?lat=52.3596&amp;lon=6.547814&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.3596&amp;lon=6.547814&amp;zoom=18&amp;layers=M</a> There two cameras on each side for speedlinits and redlight. Greetz</p>
+<p>Hi, this could be youre solution, <a href="https://www.openstreetmap.org/?lat=52.3596&amp;lon=6.547814&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.3596&amp;lon=6.547814&amp;zoom=18&amp;layers=M</a> There two cameras on each side for speedlinits and redlight. Greetz</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ One Answer:
 <p>Thanks, but its only one pole with surprisingly a double function. Just add a extra node on top of the other one ?</p>
 <p>Although having two nodes on the exact same location is usually discouraged it seems to be a valid solution here.</p>
 <p>I just corrected the situation and added the right tags</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.32924&amp;lon=6.651133&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.32924&amp;lon=6.651133&amp;zoom=18&amp;layers=M</a> The link above is the same, but has only one pole. So according to Scai there two possibillyties, adding 2 nodes ontop of eachother or adding the semicolon. I choose for 1 node with 2 tags, like this: enforcement traffic_signals;maxspeed plus maxspeed 70 happy cartering and a good 2013</p>
+<p><a href="https://www.openstreetmap.org/?lat=52.32924&amp;lon=6.651133&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.32924&amp;lon=6.651133&amp;zoom=18&amp;layers=M</a> The link above is the same, but has only one pole. So according to Scai there two possibillyties, adding 2 nodes ontop of eachother or adding the semicolon. I choose for 1 node with 2 tags, like this: enforcement traffic_signals;maxspeed plus maxspeed 70 happy cartering and a good 2013</p>
 </div>
 <div id="comment-18762-info" class="comment-info">
 <span class="comment-age">(29 Dec '12, 22:37)</span> <span class="comment-user userinfo">Hendrikklaas</span>

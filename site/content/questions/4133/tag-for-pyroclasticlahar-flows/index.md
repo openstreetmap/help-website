@@ -105,8 +105,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>As this has not been answered up until now, I will respond with my initial reaction.</p>
-<p>Use <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Drock">natural=rock</a>, with an additional tag something like rock=lava. Further keys could be used to add information about the type of lava. Alternatively, if you consider lahar not to be a rock then consider creating a tag value which can encompass other types of destructive debris flows (avalanche, mudflow, landslips, <a href="http://de.wikipedia.org/wiki/Bergsturz">Bergstürzen</a>, and so-on), perhaps natural=debris_flow (my preference) or natural=landslip, again with additional tags to provide more information.</p>
-<p>There is also a little-used key <a href="http://wiki.openstreetmap.org/wiki/Key:geological">geological=*</a>, which may be applicable in this situation.</p>
+<p>Use <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Drock">natural=rock</a>, with an additional tag something like rock=lava. Further keys could be used to add information about the type of lava. Alternatively, if you consider lahar not to be a rock then consider creating a tag value which can encompass other types of destructive debris flows (avalanche, mudflow, landslips, <a href="http://de.wikipedia.org/wiki/Bergsturz">Bergstürzen</a>, and so-on), perhaps natural=debris_flow (my preference) or natural=landslip, again with additional tags to provide more information.</p>
+<p>There is also a little-used key <a href="https://wiki.openstreetmap.org/wiki/Key:geological">geological=*</a>, which may be applicable in this situation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

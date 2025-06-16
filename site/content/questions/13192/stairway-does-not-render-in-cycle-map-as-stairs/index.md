@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Stairway does not render in cycle map as stairs."
-description = '''I modified a portion of gladstone street on the map below to be highway=stair. However on the cycle map, it still renders as a street. It appears as stairs on the regular street map. How can I correct this? http://www.openstreetmap.org/?lat=40.41772&amp;amp;lon=-79.93964&amp;amp;zoom=17'''
+description = '''I modified a portion of gladstone street on the map below to be highway=stair. However on the cycle map, it still renders as a street. It appears as stairs on the regular street map. How can I correct this? https://www.openstreetmap.org/?lat=40.41772&amp;amp;lon=-79.93964&amp;amp;zoom=17'''
 date = "2012-06-01T15:04:00Z"
 lastmod = "2012-06-01T16:00:00Z"
 weight = 13192
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I modified a portion of gladstone street on the map below to be highway=stair. However on the cycle map, it still renders as a street. It appears as stairs on the regular street map. How can I correct this?</p>
-<p><a href="http://www.openstreetmap.org/?lat=40.41772&amp;lon=-79.93964&amp;zoom=17">http://www.openstreetmap.org/?lat=40.41772&amp;lon=-79.93964&amp;zoom=17</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=40.41772&amp;lon=-79.93964&amp;zoom=17">https://www.openstreetmap.org/?lat=40.41772&amp;lon=-79.93964&amp;zoom=17</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-retagging" rel="tag" title="see questions tagged &#39;retagging&#39;">retagging</span> <span class="post-tag tag-link-opencyclemap" rel="tag" title="see questions tagged &#39;opencyclemap&#39;">opencyclemap</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -108,7 +108,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please be patient. OpenCycleMap layer takes a little longer to update. See this answer: <a href="http://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">When does a change get updated on the OpenCycleMap?</a>.</p>
+<p>Please be patient. OpenCycleMap layer takes a little longer to update. See this answer: <a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">When does a change get updated on the OpenCycleMap?</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looks fine, you were probably just impatient. See the <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering">slippy map page on the wiki</a> for a technique to make sure that the tile is up to date.</p>
+<p>Looks fine, you were probably just impatient. See the <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering">slippy map page on the wiki</a> for a technique to make sure that the tile is up to date.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

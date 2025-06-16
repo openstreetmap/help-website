@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I came across this node today with only these tags ...</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_eW69gon.png" alt="screen_shot" /></p>
+<p><img src="/upfiles/Screen_eW69gon.png" alt="screen_shot" /></p>
 <p>The lake itself is of no particular interest and is just part of the main watercourse</p>
 <p>Does it serve as an aid to a Nominatim search or to routing engines? It does no harm I guess and are these common elsewhere.</p>
 <p>Should I leave alone or delete it or attach them to the lake boundary instead or probably more suitable on the locality name? If these are necessary, would the addr: tags be more suitable.</p>
@@ -140,7 +140,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>(and for completeness) the reason that it hs <em>only</em> those tags is that previous ones were removed as part of the licence change process:</p>
-<p><a href="http://www.openstreetmap.org/node/88672045/history">http://www.openstreetmap.org/node/88672045/history</a></p>
+<p><a href="https://www.openstreetmap.org/node/88672045/history">https://www.openstreetmap.org/node/88672045/history</a></p>
 <p>I'm guessing that it was a place name of some sort, and has probably been replaced by a newer node (probably one of the ones you added!).</p>
 </div>
 <div id="comment-40915-info" class="comment-info">

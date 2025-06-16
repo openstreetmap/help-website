@@ -108,8 +108,8 @@ One Answer:
 <p>According to OpenStreetMap there are two places coded as place=hamlet (probably incorrectly, many small areas of cities were so coded when GNIS data were imported) in PA. One is the one you refer to, Holiday Park, Allegheny Co, but the other is very close to your latlon reference in Dauphin Co.</p>
 <p>There are the two relevant nodes, and their associated Nominatim info:</p>
 <ul>
-<li>Holiday Park, Allegheny Co: <a href="http://www.openstreetmap.org/node/158282935">OSM</a>, <a href="http://nominatim.openstreetmap.org/details.php?place_id=503343">Nominatim</a></li>
-<li>Holiday Park, Dauphin Co: <a href="http://www.openstreetmap.org/node/158580514">OSM</a>, <a href="http://nominatim.openstreetmap.org/details.php?place_id=446712">Nominatim</a></li>
+<li>Holiday Park, Allegheny Co: <a href="https://www.openstreetmap.org/node/158282935">OSM</a>, <a href="http://nominatim.openstreetmap.org/details.php?place_id=503343">Nominatim</a></li>
+<li>Holiday Park, Dauphin Co: <a href="https://www.openstreetmap.org/node/158580514">OSM</a>, <a href="http://nominatim.openstreetmap.org/details.php?place_id=446712">Nominatim</a></li>
 </ul>
 <p>Many places in the US could do with better information regarding their relative status: in particular many places named hamlet would be better classified as suburbs, or neighbourhoods. In the main more information as to the bounds of the area a node refers to makes Nominatim's task easier.</p>
 </div>

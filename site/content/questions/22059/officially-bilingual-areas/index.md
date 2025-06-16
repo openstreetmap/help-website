@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A similar question has been answered here: <a href="https://help.openstreetmap.org/questions/11120/bilingual-country-names">https://help.openstreetmap.org/questions/11120/bilingual-country-names</a></p>
+<p>A similar question has been answered here: <a href="/questions/11120/bilingual-country-names">https://help.openstreetmap.org/questions/11120/bilingual-country-names</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -242,7 +242,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In Belgium, a trilingual country, in some places we have bilingual street names. What do we do: under the name tag we put both names separated with a dash ('-'). Furthermore we use name:fr and name:nl to put the respective French and Dutch names. See e.g. <a href="http://www.openstreetmap.org/way/64487885">http://www.openstreetmap.org/way/64487885</a></p>
+<p>In Belgium, a trilingual country, in some places we have bilingual street names. What do we do: under the name tag we put both names separated with a dash ('-'). Furthermore we use name:fr and name:nl to put the respective French and Dutch names. See e.g. <a href="https://www.openstreetmap.org/way/64487885">https://www.openstreetmap.org/way/64487885</a></p>
 <p>This is something that was agreed upon by the Belgian community. Other countries might have different conventions.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -362,7 +362,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a> ... there is a link to a we map service about Thailand and other countries on <a href="http://osm-tools.org">osm-tools.org</a> ... ask the author.</p>
+<p>See the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">Map_internationalization</a> ... there is a link to a we map service about Thailand and other countries on <a href="http://osm-tools.org">osm-tools.org</a> ... ask the author.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

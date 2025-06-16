@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Duplicate: <a href="https://help.openstreetmap.org/questions/80351/why-didnt-i-get-the-tutorial">why didnt i get the tutorial?</a></p>
+<p>Duplicate: <a href="/questions/80351/why-didnt-i-get-the-tutorial">why didnt i get the tutorial?</a></p>
 </div>
 <div id="comment-80358-info" class="comment-info">
 <span class="comment-age">(31 May '21, 09:12)</span> <span class="comment-user userinfo">TZorn</span>

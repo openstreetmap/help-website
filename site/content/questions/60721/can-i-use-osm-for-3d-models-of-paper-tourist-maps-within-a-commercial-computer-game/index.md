@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, as long as you credit OSM as required by the licence (and fulfil any 'share-alike' requirements if adding to the map data, but this is unlikely to be relevant in your case). See more at <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> .</p>
+<p>Yes, as long as you credit OSM as required by the licence (and fulfil any 'share-alike' requirements if adding to the map data, but this is unlikely to be relevant in your case). See more at <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -161,7 +161,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/iD_muti_traces_7Ctuoqu.JPG" alt="alt text" /> I just tried iD and it worked for me. Backgrounds: GPX traces. If this isn't quite what you wanted i think GPS prune will join several traces into one.</p>
+<p><img src="/upfiles/iD_muti_traces_7Ctuoqu.JPG" alt="alt text" /> I just tried iD and it worked for me. Backgrounds: GPX traces. If this isn't quite what you wanted i think GPS prune will join several traces into one.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

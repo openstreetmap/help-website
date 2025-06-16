@@ -111,9 +111,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>iD has support for editing the Wood relation directly rather than trying to use the merge tool (which seems to have difficulty with merging the relations). It seems the most difficult part is selecting the Dam, the only way I can figure how to do it is to first select another part of the lake, select the lake relation from there and then select the Dam from the relation members panel:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2017-08-20_09-57-47-dam.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2017-08-20_09-57-47-dam.png" alt="alt text" /></p>
 <p>Once the Dam is selected, use the "All relations" panel to add the Dam to the "Wood" relation with role inner:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2017-08-20_09-59-46-select-wood.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2017-08-20_09-59-46-select-wood.png" alt="alt text" /></p>
 <p>Then add the other two parts of the lake to the wood relation the same way.</p>
 <p>If there are multiple wood relations, a temporary name on the relation of interest can make the whole process simpler, just make sure to delete the name before saving.</p>
 </div>
@@ -243,7 +243,7 @@ osqa_accepted = true
 If you wish to leave the reservoir multi-polygon as is you can:<br />
 Open a relations window, select the wood multi-polygon, select the relations editor in the relations window, right-click on the Camp Red Cedars reservoir multi-polygon in the relations window and select relation, then in the relations editor add the reservoir to the left side panel, add an inner role to it, then ok and save. I didn't save the above to check but it should work ok.<br />
 An image may help...<br />
-<img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-08-20_at_6.01.22_PM.png" alt="alt text" /></p>
+<img src="/upfiles/Screen_Shot_2017-08-20_at_6.01.22_PM.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

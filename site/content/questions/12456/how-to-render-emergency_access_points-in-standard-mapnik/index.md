@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/DE:Howto_Map_A#Anfahrpunkt_f.C3.BCr_Rettungsfahrzeuge">Rettungspunkte</a> (highway=emergeny_access_point) are important points for everyone who is walking, cycling or working outside the cities. So it would be important that they are rendered on the maps usually used by those people.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/DE:Howto_Map_A#Anfahrpunkt_f.C3.BCr_Rettungsfahrzeuge">Rettungspunkte</a> (highway=emergeny_access_point) are important points for everyone who is walking, cycling or working outside the cities. So it would be important that they are rendered on the maps usually used by those people.</p>
 <p>How can I activate the rendering in the default mapnik map?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I think nobody would disagree with your statement "So it would be important that they are rendered on the maps usually used by those people".</p>
 <p>However why do you believe that the "default mapnik map" is the "map usually used by those people".</p>
-<p>In any case please see <a href="http://wiki.openstreetmap.org/wiki/Mapnik#Bugs_and_rendering_suggestions">http://wiki.openstreetmap.org/wiki/Mapnik#Bugs_and_rendering_suggestions</a></p>
+<p>In any case please see <a href="https://wiki.openstreetmap.org/wiki/Mapnik#Bugs_and_rendering_suggestions">https://wiki.openstreetmap.org/wiki/Mapnik#Bugs_and_rendering_suggestions</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

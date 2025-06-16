@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity=marketplace?uselang=en-US">amenity=marketplace</a> is how I usually see it tagged in the US.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity=marketplace?uselang=en-US">amenity=marketplace</a> is how I usually see it tagged in the US.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>What would be the best way to map two roads separated by a gate that is normally locked? Both roads are ordinary residential roads with unrestricted access, but they are separated by a gate that normally prevents any access (including pedestrian) from either road to the other. Presumably the gate could be opened by the emergency services if necessary. The roads in question are Glenelg and Sunlight Gardens (<a href="http://www.openstreetmap.org/?lat=50.858033&amp;lon=-1.197324&amp;zoom=18&amp;layers=M).">http://www.openstreetmap.org/?lat=50.858033&amp;lon=-1.197324&amp;zoom=18&amp;layers=M).</a></p>
+<p>What would be the best way to map two roads separated by a gate that is normally locked? Both roads are ordinary residential roads with unrestricted access, but they are separated by a gate that normally prevents any access (including pedestrian) from either road to the other. Presumably the gate could be opened by the emergency services if necessary. The roads in question are Glenelg and Sunlight Gardens (<a href="https://www.openstreetmap.org/?lat=50.858033&amp;lon=-1.197324&amp;zoom=18&amp;layers=M).">https://www.openstreetmap.org/?lat=50.858033&amp;lon=-1.197324&amp;zoom=18&amp;layers=M).</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-gate" rel="tag" title="see questions tagged &#39;gate&#39;">gate</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -61,7 +61,7 @@ osqa_accepted = true
 <div id="post-16490-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For info, <a href="https://help.openstreetmap.org/questions/16048/how-to-map-a-permanent-barrier-across-a-road">this</a> is a similar, though not quite the same, question.</p>
+<p>For info, <a href="/questions/16048/how-to-map-a-permanent-barrier-across-a-road">this</a> is a similar, though not quite the same, question.</p>
 </div>
 <div id="comment-16490-info" class="comment-info">
 <span class="comment-age">(26 Sep '12, 22:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -73,7 +73,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>If anyone wonders** how particular routers manage with a gate like this, <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.728606&amp;lon=-0.627191&amp;zoom=22">here</a> is one that I mapped a while back. This one's got a footway to one side of the gate, so try e.g. car-based routing.</p>
+<p>If anyone wonders** how particular routers manage with a gate like this, <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.728606&amp;lon=-0.627191&amp;zoom=22">here</a> is one that I mapped a while back. This one's got a footway to one side of the gate, so try e.g. car-based routing.</p>
 <p>** not that we should "tag for the router" - just offering this as an example.</p>
 </div>
 <div id="comment-16491-info" class="comment-info">
@@ -86,7 +86,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Another similar question: <a href="https://help.openstreetmap.org/questions/4817/how-to-tag-a-fire-department-controlled-gate">How to tag a fire department-controlled gate?</a></p>
+<p>Another similar question: <a href="/questions/4817/how-to-tag-a-fire-department-controlled-gate">How to tag a fire department-controlled gate?</a></p>
 </div>
 <div id="comment-16497-info" class="comment-info">
 <span class="comment-age">(27 Sep '12, 15:33)</span> <span class="comment-user userinfo">sleske</span>
@@ -152,7 +152,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would simply tag the gate with <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier=gate">barrier=gate</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:access">access=no</a> and no other tags.</p>
+<p>I would simply tag the gate with <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier=gate">barrier=gate</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:access">access=no</a> and no other tags.</p>
 <p>The emergency access is just a wild guess on your side. On top of that I wouldn't tag any emergency access modifier on something that is not accessible when the emergency services are in a hurry.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -276,7 +276,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Access conditions are usually tagged with the <a href="http://wiki.openstreetmap.org/wiki/Access">access</a> key, in your specific case <a href="http://taginfo.openstreetmap.org/tags/access=emergency">access=emergency</a> would fit best.</p>
+<p>Access conditions are usually tagged with the <a href="https://wiki.openstreetmap.org/wiki/Access">access</a> key, in your specific case <a href="http://taginfo.openstreetmap.org/tags/access=emergency">access=emergency</a> would fit best.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -296,7 +296,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>-1 The established tag is <code>access=no</code> with <code>emergency=yes</code>, not <code>access=emergency</code>. See <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a> , under "Transport mode restrictions"</p>
+<p>-1 The established tag is <code>access=no</code> with <code>emergency=yes</code>, not <code>access=emergency</code>. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> , under "Transport mode restrictions"</p>
 </div>
 <div id="comment-16498-info" class="comment-info">
 <span class="comment-age">(27 Sep '12, 15:37)</span> <span class="comment-user userinfo">sleske</span>
@@ -307,7 +307,7 @@ osqa_accepted = true
 <div id="post-16501-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm not quite sure whether you are completely right. To me this is somewhat confusing because the <a href="http://wiki.openstreetmap.org/wiki/Key:emergency">emergency=*</a> key is usually used to tag actual emergency objects and not access conditions. Furthermore in my opinion <em>access=emergency</em> falls into the same category as for example <em>access=delivery</em> and therefore should be a valid value for the access key. But if you are strictly following the wiki then you are right.</p>
+<p>I'm not quite sure whether you are completely right. To me this is somewhat confusing because the <a href="https://wiki.openstreetmap.org/wiki/Key:emergency">emergency=*</a> key is usually used to tag actual emergency objects and not access conditions. Furthermore in my opinion <em>access=emergency</em> falls into the same category as for example <em>access=delivery</em> and therefore should be a valid value for the access key. But if you are strictly following the wiki then you are right.</p>
 </div>
 <div id="comment-16501-info" class="comment-info">
 <span class="comment-age">(27 Sep '12, 17:54)</span> <span class="comment-user userinfo">scai ♦</span>

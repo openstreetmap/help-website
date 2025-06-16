@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I am interested in using an API that would do the following:</p>
 <p>Input: a geographic bounding box Output: a list of OSM contributors, ordered by the number of edited ways, nodes and relations from that bounding box.</p>
-<p>I checked the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">OSM API</a>, but I didn’t find anything helpful. The <a href="http://www.openstreetmap.org/history">history section</a> displays recent changesets from the visible map, very similar to what I would need. Is it using an internal API? Would it be possible to implement the API myself if it's not available? If yes, what would be the easiest way to do so?</p>
+<p>I checked the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">OSM API</a>, but I didn’t find anything helpful. The <a href="https://www.openstreetmap.org/history">history section</a> displays recent changesets from the visible map, very similar to what I would need. Is it using an internal API? Would it be possible to implement the API myself if it's not available? If yes, what would be the easiest way to do so?</p>
 <p>Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -182,7 +182,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a closer look at <a href="http://wiki.openstreetmap.org/wiki/OSM_Mapper">OSM_Mapper</a> by ITO-World ... it has several features, like nshowing most active mappers in a defined bounding box.</p>
+<p>Have a closer look at <a href="https://wiki.openstreetmap.org/wiki/OSM_Mapper">OSM_Mapper</a> by ITO-World ... it has several features, like nshowing most active mappers in a defined bounding box.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -376,7 +376,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There might be issues with using other files than history files. If using a current world dump, you will miss a lot of contributors with few changesets. I wrote a bit about that <a href="http://www.openstreetmap.org/user/joost%20schouppe/diary/26259">in this post</a>.</p>
+<p>There might be issues with using other files than history files. If using a current world dump, you will miss a lot of contributors with few changesets. I wrote a bit about that <a href="https://www.openstreetmap.org/user/joost%20schouppe/diary/26259">in this post</a>.</p>
 <p>If this is an issue, you could use <a href="http://osm.personalwerk.de/full-history-extracts/latest/">these</a> regularly updated full history dumps. Using the <a href="https://github.com/MaZderMind/osm-history-splitter">history splitter</a> you can make a full history dump for the bounding box that interests you. The <a href="https://github.com/MaZderMind/osm-history-renderer">history-renderer</a> imports this into a Postgress database which you could easily use to export the data you need.</p>
 </div>
 <div class="answer-controls post-controls">

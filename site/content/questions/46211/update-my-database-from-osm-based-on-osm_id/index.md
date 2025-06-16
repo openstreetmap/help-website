@@ -158,7 +158,7 @@ One Answer:
 <div id="post-46228-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you already check <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Augmented_Delta_between_two_dates_.28.22adiff.22.29"><code>[adiff: ]</code></a> in the Overpass API documentation? This may be exactly what you're looking for.</p>
+<p>Did you already check <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Augmented_Delta_between_two_dates_.28.22adiff.22.29"><code>[adiff: ]</code></a> in the Overpass API documentation? This may be exactly what you're looking for.</p>
 </div>
 <div id="comment-46228-info" class="comment-info">
 <span class="comment-age">(29 Oct '15, 18:01)</span> <span class="comment-user userinfo">mmd</span>

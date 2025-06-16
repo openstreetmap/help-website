@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Note OpenCycleMap also has contour lines and hill shading. This is not from the OpenStreetMap data - it is from NASA SRTM data. You can download this SRTM data for free, then convert it to OSM XML format, then combine it with data from OpenStreetMap to produce a map. See the <a href="http://wiki.openstreetmap.org/wiki/SRTM">SRTM wiki page</a> for details.</p>
+<p>Note OpenCycleMap also has contour lines and hill shading. This is not from the OpenStreetMap data - it is from NASA SRTM data. You can download this SRTM data for free, then convert it to OSM XML format, then combine it with data from OpenStreetMap to produce a map. See the <a href="https://wiki.openstreetmap.org/wiki/SRTM">SRTM wiki page</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -252,7 +252,7 @@ osqa_accepted = false
 <p>OSM does not contain elevation data except the height of some peaks.</p>
 <p>OSM does contain trails, tracks, roads, footpaths and the like.</p>
 <p>Andy, who created the cyclemap, made a lovely map by carefully selecting OSM data that is useful for cycling, rendering it with his own style which included overlaying the contour and hill shading from another source.</p>
-<p>You can use OSM data for any purpose, commercial or not, paid-for or not. You just need to respect the licence: <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>You can use OSM data for any purpose, commercial or not, paid-for or not. You just need to respect the licence: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 <p>Parts of the OSM data is available for download from <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a></p>
 </div>
 <div id="comment-10273-info" class="comment-info">
@@ -265,7 +265,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>And no, OSM trails and roads are not 'essentially an ordered set of GPS points with supplemental data indicating type of road, etc'. GPS points are just used as a background for tracing OSM elements (essentially nodes and ways, see the 'Beginners Guide, <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3).">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3).</a> But we use other sources like Bing aerial imagery.</p>
+<p>And no, OSM trails and roads are not 'essentially an ordered set of GPS points with supplemental data indicating type of road, etc'. GPS points are just used as a background for tracing OSM elements (essentially nodes and ways, see the 'Beginners Guide, <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3).">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3).</a> But we use other sources like Bing aerial imagery.</p>
 </div>
 <div id="comment-10280-info" class="comment-info">
 <span class="comment-age">(27 Jan '12, 15:28)</span> <span class="comment-user userinfo">Pieren</span>
@@ -276,7 +276,7 @@ osqa_accepted = false
 <div id="post-10377-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>indeed OSM almost doesn't contain any altitude data; this issue was discuted a couple of times (see for instance <a href="http://help.openstreetmap.org/questions/9681/adding-elevation-data-to-existing-routes-conflation">http://help.openstreetmap.org/questions/9681/adding-elevation-data-to-existing-routes-conflation</a> ). There seems to be a consensus around the idea (which I disagree) that altitudes should be handled elsewhere. Personally I definitely consider altitude data should be allowed, and if possible added by default e. g. from SRTM) to "our" points. This opens for many more applications, but I've been teached, by people infinitely more active than myself here, that this is bad.</p>
+<p>indeed OSM almost doesn't contain any altitude data; this issue was discuted a couple of times (see for instance <a href="/questions/9681/adding-elevation-data-to-existing-routes-conflation">https://help.openstreetmap.org/questions/9681/adding-elevation-data-to-existing-routes-conflation</a> ). There seems to be a consensus around the idea (which I disagree) that altitudes should be handled elsewhere. Personally I definitely consider altitude data should be allowed, and if possible added by default e. g. from SRTM) to "our" points. This opens for many more applications, but I've been teached, by people infinitely more active than myself here, that this is bad.</p>
 </div>
 <div id="comment-10377-info" class="comment-info">
 <span class="comment-age">(01 Feb '12, 20:43)</span> <span class="comment-user userinfo">Herve5</span>

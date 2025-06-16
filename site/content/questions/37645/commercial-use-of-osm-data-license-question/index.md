@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3b._If_I_have_data_derived_from_OSM_data.2C_do_I_have_to_distribute_it.3F">Legal FAQ on the wiki</a>, especially the point 3b :</p>
+<p>Check the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3b._If_I_have_data_derived_from_OSM_data.2C_do_I_have_to_distribute_it.3F">Legal FAQ on the wiki</a>, especially the point 3b :</p>
 <p>"But if you do distribute or publicly use anything derived from it - a Derivative Database - then the derivative database must be available under the same licence as the OSM data (the Open Database License). You must make the derivative database available on request to anyone who received your data, viewed the work made from it, or used your service. You could do this by putting it on a site for free download, or offering your users the option of emailing you for a copy."</p>
 </div>
 <div class="answer-controls post-controls">

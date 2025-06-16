@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using potlatch2 off line as a teaching tool"
-description = '''Having looked at this question http://help.openstreetmap.org/questions/7723/teacher-needs-help  I wonder if it is possible (easily) for P2 to be installed and used off line for pupils to play with and learn and how could this be done. '''
+description = '''Having looked at this question https://help.openstreetmap.org/questions/7723/teacher-needs-help  I wonder if it is possible (easily) for P2 to be installed and used off line for pupils to play with and learn and how could this be done. '''
 date = "2011-09-08T13:28:00Z"
 lastmod = "2011-09-08T14:54:00Z"
 weight = 7735
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Having looked at this question <a href="http://help.openstreetmap.org/questions/7723/teacher-needs-help">http://help.openstreetmap.org/questions/7723/teacher-needs-help</a> I wonder if it is possible (easily) for P2 to be installed and used off line for pupils to play with and learn and how could this be done.</p>
+<p>Having looked at this question <a href="/questions/7723/teacher-needs-help">https://help.openstreetmap.org/questions/7723/teacher-needs-help</a> I wonder if it is possible (easily) for P2 to be installed and used off line for pupils to play with and learn and how could this be done.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-teaching-tool" rel="tag" title="see questions tagged &#39;teaching-tool&#39;">teaching-tool</span> <span class="post-tag tag-link-offline" rel="tag" title="see questions tagged &#39;offline&#39;">offline</span>

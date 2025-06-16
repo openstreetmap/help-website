@@ -166,7 +166,7 @@ This question is marked "community wiki".
 <div id="post-41792-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Nope. I followed overpass and had this query which is resolved. <a href="https://help.openstreetmap.org/questions/41754/extracting-node-from-highways">https://help.openstreetmap.org/questions/41754/extracting-node-from-highways</a></p>
+<p>Nope. I followed overpass and had this query which is resolved. <a href="/questions/41754/extracting-node-from-highways">https://help.openstreetmap.org/questions/41754/extracting-node-from-highways</a></p>
 </div>
 <div id="comment-41792-info" class="comment-info">
 <span class="comment-age">(18 Mar '15, 20:57)</span> <span class="comment-user userinfo">Manish Bansal</span>
@@ -209,7 +209,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>Solution is available at:</p>
-<p><a href="https://help.openstreetmap.org/questions/41754/extracting-node-from-highways">https://help.openstreetmap.org/questions/41754/extracting-node-from-highways</a></p>
+<p><a href="/questions/41754/extracting-node-from-highways">https://help.openstreetmap.org/questions/41754/extracting-node-from-highways</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

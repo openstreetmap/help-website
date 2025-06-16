@@ -107,9 +107,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most of the rivers and streams that I have mapped were from Bing aerial images. It is an ideal tool for water and lakes and other areas we can't get to. see <a href="http://wiki.openstreetmap.org/wiki/Bing">http://wiki.openstreetmap.org/wiki/Bing</a><br />
-Bing is one of the backgrounds we can trace from. The quality and coverage of aerial varies from country to country and area to area it may not be good enough. I have just checked and in that area you have the choice of three aerial providers. Bing, MapBox and Mapquest which look useable. Other open source maps may be in among the background as well. more info <a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">http://wiki.openstreetmap.org/wiki/Aerial_imagery</a> and</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">http://wiki.openstreetmap.org/wiki/Beginners_Guide</a> this about aerial <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1.2">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1.2</a></p>
+<p>Most of the rivers and streams that I have mapped were from Bing aerial images. It is an ideal tool for water and lakes and other areas we can't get to. see <a href="https://wiki.openstreetmap.org/wiki/Bing">https://wiki.openstreetmap.org/wiki/Bing</a><br />
+Bing is one of the backgrounds we can trace from. The quality and coverage of aerial varies from country to country and area to area it may not be good enough. I have just checked and in that area you have the choice of three aerial providers. Bing, MapBox and Mapquest which look useable. Other open source maps may be in among the background as well. more info <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">https://wiki.openstreetmap.org/wiki/Aerial_imagery</a> and</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">https://wiki.openstreetmap.org/wiki/Beginners_Guide</a> this about aerial <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1.2">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.1.2</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ Bing is one of the backgrounds we can trace from. The quality and coverage of ae
 <div class="comment-text">
 <p>aseerel4c26: it <em>is</em> allowed to use USGS data and/or maps. In fact, USGS Topo Maps are a default layer in iD and Potlatch 2.<br />
 </p>
-<p>Just for completeness sake, I will also mention the National Hydrographic Dataset which is another potential datasource. You can view it at the National Map: <a href="http://viewer.nationalmap.gov/viewer/">http://viewer.nationalmap.gov/viewer/</a> Although it is technically possible to import from it, that is highly discouraged: <a href="http://wiki.openstreetmap.org/wiki/Nhd">http://wiki.openstreetmap.org/wiki/Nhd</a></p>
+<p>Just for completeness sake, I will also mention the National Hydrographic Dataset which is another potential datasource. You can view it at the National Map: <a href="http://viewer.nationalmap.gov/viewer/">http://viewer.nationalmap.gov/viewer/</a> Although it is technically possible to import from it, that is highly discouraged: <a href="https://wiki.openstreetmap.org/wiki/Nhd">https://wiki.openstreetmap.org/wiki/Nhd</a></p>
 </div>
 <div id="comment-25038-info" class="comment-info">
 <span class="comment-age">(07 Aug '13, 15:58)</span> <span class="comment-user userinfo">neuhausr</span>

@@ -109,9 +109,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is something called <a href="http://wiki.openstreetmap.org/wiki/Libosmscout">Libosmscout</a> but I am not sure whether it is usable on android devices.</p>
-<p>All known solutions should be collected at <a href="http://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a>, <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> and <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a></p>
-<p>Maybe you should have a closer look at <a href="http://wiki.openstreetmap.org/wiki/GraphHopper">Graphhopper</a></p>
+<p>There is something called <a href="https://wiki.openstreetmap.org/wiki/Libosmscout">Libosmscout</a> but I am not sure whether it is usable on android devices.</p>
+<p>All known solutions should be collected at <a href="https://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a>, <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> and <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a></p>
+<p>Maybe you should have a closer look at <a href="https://wiki.openstreetmap.org/wiki/GraphHopper">Graphhopper</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,7 +130,7 @@ osqa_accepted = false
 <div id="post-23755-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This android app may be of use <a href="http://wiki.openstreetmap.org/wiki/AFTrack_GPS-Tracking">http://wiki.openstreetmap.org/wiki/AFTrack_GPS-Tracking</a></p>
+<p>This android app may be of use <a href="https://wiki.openstreetmap.org/wiki/AFTrack_GPS-Tracking">https://wiki.openstreetmap.org/wiki/AFTrack_GPS-Tracking</a></p>
 </div>
 <div id="comment-23755-info" class="comment-info">
 <span class="comment-age">(27 Jun '13, 19:54)</span> <span class="comment-user userinfo">andy mackey</span>

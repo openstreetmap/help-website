@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi all</p>
 <p>I have setup an osm tile server (following switch2osm) and wrote a simple openlayers script to browse the content. I have seen a problem that is for certain parts on the map when I zoomed into certain levels, the tiles were just missing and the missing areas were simply blank squares. I have checked the tiles that are missing are always for the same areas at the same zoom level.</p>
 <p>I downloaded the osm data from bbbike.org. Any idea on how this happens and what I should do to fix it? Thanks. I have uploaded a screen-shot as well as a Youtube video that can visually show the problem. Video: <a href="http://youtu.be/vkp3JTbPepo">link text</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot_from_2015-09-08_15:49:24.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2015-09-08_15:49:24.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span> <span class="post-tag tag-link-tileserver" rel="tag" title="see questions tagged &#39;tileserver&#39;">tileserver</span>
@@ -81,7 +81,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> you hit the point. First I deleted all the rendered tiles from /var/lib/mod_tile, observed not exactly the same tiles missing. Some missing tiles come back. Then I tried to clear my browser's cache and problem seems solved. The previous missing tiles appeared. Thanks for your enlightening. But I still want to figure out the reason behind this why it is happening.</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> you hit the point. First I deleted all the rendered tiles from /var/lib/mod_tile, observed not exactly the same tiles missing. Some missing tiles come back. Then I tried to clear my browser's cache and problem seems solved. The previous missing tiles appeared. Thanks for your enlightening. But I still want to figure out the reason behind this why it is happening.</p>
 </div>
 <div id="comment-45161-info" class="comment-info">
 <span class="comment-age">(10 Sep '15, 11:18)</span> <span class="comment-user userinfo">dalishi</span>
@@ -147,7 +147,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> hit the nail on the head above - the renderer isn't able to render tiles fast enough for them to appear in the browser. When I see this problem I do the following:</p>
+<p>I suspect that <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> hit the nail on the head above - the renderer isn't able to render tiles fast enough for them to appear in the browser. When I see this problem I do the following:</p>
 <pre><code>sudo tail -f /var/log/syslog | grep &quot;TILE &quot;</code></pre>
 <p>(note the space after "TILE")</p>
 <p>You should see "START TILE" and "DONE TILE" lines in response for tile requests. If a tile fails to appear, wait for the "DONE TILE" line and then refresh the request for it in the browser and you should see it.</p>
@@ -230,7 +230,7 @@ osqa_accepted = false
 <div id="post-45162-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> thanks for your reply. The problem seems because my browser's cache. I did what <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> suggested and problem solved. Still try to figure out what's going on behind. Thanks.</p>
+<p>Hi <a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> thanks for your reply. The problem seems because my browser's cache. I did what <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> suggested and problem solved. Still try to figure out what's going on behind. Thanks.</p>
 </div>
 <div id="comment-45162-info" class="comment-info">
 <span class="comment-age">(10 Sep '15, 11:20)</span> <span class="comment-user userinfo">dalishi</span>

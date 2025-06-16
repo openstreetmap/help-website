@@ -159,7 +159,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use the disused: prefix for the old function: <a href="http://wiki.openstreetmap.org/wiki/Key:disused:">http://wiki.openstreetmap.org/wiki/Key:disused:</a> I used at least once disused:amenity=place_of_worship for a church converted into a library: <a href="http://www.openstreetmap.org/way/42206561">http://www.openstreetmap.org/way/42206561</a></p>
+<p>I would use the disused: prefix for the old function: <a href="https://wiki.openstreetmap.org/wiki/Key:disused:">https://wiki.openstreetmap.org/wiki/Key:disused:</a> I used at least once disused:amenity=place_of_worship for a church converted into a library: <a href="https://www.openstreetmap.org/way/42206561">https://www.openstreetmap.org/way/42206561</a></p>
 <p>[edit: See also <a href="https://wiki.openstreetmap.org/wiki/Lifecycle_prefix">other lifecycle prefixes</a>]</p>
 </div>
 <div class="answer-controls post-controls">

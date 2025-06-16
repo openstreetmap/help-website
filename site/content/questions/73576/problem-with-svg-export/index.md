@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Is there a setting I've missed or some other way to prevent this extended black background from the SVG export?</p>
 <p>The attached screenshot shows the problem. This is a cropped screenshot. The black background in the actual file exported from OPS is much larger.</p>
 <p>Thank you for any advise or help.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM_ss_2020-03-17_qmS8RLu.png" alt="Screenshot" /></p>
+<p><img src="/upfiles/OSM_ss_2020-03-17_qmS8RLu.png" alt="Screenshot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-svg" rel="tag" title="see questions tagged &#39;svg&#39;">svg</span> <span class="post-tag tag-link-export" rel="tag" title="see questions tagged &#39;export&#39;">export</span>

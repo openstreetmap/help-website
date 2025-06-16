@@ -231,7 +231,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See also <a href="https://help.openstreetmap.org/questions/34313/in-id-i-cant-select-a-way-by-clicking-on-it-in-chrome-only">this answer</a> just posted by <span>@wncoutdoors</span></p>
+<p>See also <a href="/questions/34313/in-id-i-cant-select-a-way-by-clicking-on-it-in-chrome-only">this answer</a> just posted by <span>@wncoutdoors</span></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

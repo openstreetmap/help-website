@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Of course you can download all the data (this is one of the main benefits of OSM, the download is called the "planet", more information can be found <a href="http://wiki.openstreetmap.org/wiki/Planet">here</a>) and use it for any purpose, including commercial ones.</p>
-<p>But: if you publish derived results (like rendered maps) you currently have to license them in cc-by-sa2.0. For the future it is planned to move to <a href="http://wiki.openstreetmap.org/wiki/ODBL">ODBL</a>. This will change slightly the way you have to license your work because you will then also have to publish the modifications which you apply to the database (or the modified database or you document how you did the modifications so that others can redo this and get the same result).</p>
+<p>Of course you can download all the data (this is one of the main benefits of OSM, the download is called the "planet", more information can be found <a href="https://wiki.openstreetmap.org/wiki/Planet">here</a>) and use it for any purpose, including commercial ones.</p>
+<p>But: if you publish derived results (like rendered maps) you currently have to license them in cc-by-sa2.0. For the future it is planned to move to <a href="https://wiki.openstreetmap.org/wiki/ODBL">ODBL</a>. This will change slightly the way you have to license your work because you will then also have to publish the modifications which you apply to the database (or the modified database or you document how you did the modifications so that others can redo this and get the same result).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I mark part of the Road as One Way"
-description = '''Kasthuriyar Road (http://www.openstreetmap.org/way/71841406#map=16/9.6739/80.0127) here in Sri Lanka partly one way. I mean from the Hospital Road Kasthuriyar Road juction to Stanley Road Kasthuriyar Road one way (opposite direction to Old post office road which is some what parallel) but after that...'''
+description = '''Kasthuriyar Road (https://www.openstreetmap.org/way/71841406#map=16/9.6739/80.0127) here in Sri Lanka partly one way. I mean from the Hospital Road Kasthuriyar Road juction to Stanley Road Kasthuriyar Road one way (opposite direction to Old post office road which is some what parallel) but after that...'''
 date = "2015-05-29T11:15:00Z"
 lastmod = "2015-05-29T15:53:00Z"
 weight = 43301
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Kasthuriyar Road (<a href="http://www.openstreetmap.org/way/71841406#map=16/9.6739/80.0127)">http://www.openstreetmap.org/way/71841406#map=16/9.6739/80.0127)</a> here in Sri Lanka partly one way. I mean from the Hospital Road Kasthuriyar Road juction to Stanley Road Kasthuriyar Road one way (opposite direction to Old post office road which is some what parallel) but after that it's two. How do I map in Open Streetmap.</p>
+<p>Kasthuriyar Road (<a href="https://www.openstreetmap.org/way/71841406#map=16/9.6739/80.0127)">https://www.openstreetmap.org/way/71841406#map=16/9.6739/80.0127)</a> here in Sri Lanka partly one way. I mean from the Hospital Road Kasthuriyar Road juction to Stanley Road Kasthuriyar Road one way (opposite direction to Old post office road which is some what parallel) but after that it's two. How do I map in Open Streetmap.</p>
 <p>When I choose Road in Potlatch it marks the whole road whole road as one way so I have given up. Please let me know how to do that. Thanks in advance.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>if your problem is to only select a part of the road (to be able to edit its tags/properties), but you cannot because every time the whole road gets selected, then …</p>
 <ul>
-<li>you first need to <em>split the road</em>. Select the node where it should be split and click the scissors icon in the toolbox. Maybe (I cannot run Potlatch 2 myself and do not remember if Potlatch 2 has this feature) you could select the node <em>and</em> the road's way to avoid also splitting the crossing roads' ways. Also see: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Advanced_edits">https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Advanced_edits</a> and <a href="https://help.openstreetmap.org/questions/42398/how-to-delete-a-part-of-road">https://help.openstreetmap.org/questions/42398/how-to-delete-a-part-of-road</a> and <a href="https://help.openstreetmap.org/tags/split/?sort=mostvoted">https://help.openstreetmap.org/tags/split/?sort=mostvoted</a> .</li>
+<li>you first need to <em>split the road</em>. Select the node where it should be split and click the scissors icon in the toolbox. Maybe (I cannot run Potlatch 2 myself and do not remember if Potlatch 2 has this feature) you could select the node <em>and</em> the road's way to avoid also splitting the crossing roads' ways. Also see: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Advanced_edits">https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer#Advanced_edits</a> and <a href="/questions/42398/how-to-delete-a-part-of-road">https://help.openstreetmap.org/questions/42398/how-to-delete-a-part-of-road</a> and <a href="https://help.openstreetmap.org/tags/split/?sort=mostvoted">https://help.openstreetmap.org/tags/split/?sort=mostvoted</a> .</li>
 <li>Afterwards you should be able to select each part individually and make your oneway change.</li>
 </ul>
 </div>
@@ -150,7 +150,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11043/umapathy"></a><a href="http://help.openstreetmap.org/users/11043/umapathy">@Umapathy</a>: Fine, happy mapping! :-) by the way, you have made edited <span>a part of Kankasanthurai Road</span> and made it oneway – not the road you are mentioning (and linking) in your question text. But I guess that was intentional by you.</p>
+<p><a href="https://help.openstreetmap.org/users/11043/umapathy"></a><a href="https://help.openstreetmap.org/users/11043/umapathy">@Umapathy</a>: Fine, happy mapping! :-) by the way, you have made edited <span>a part of Kankasanthurai Road</span> and made it oneway – not the road you are mentioning (and linking) in your question text. But I guess that was intentional by you.</p>
 <p>Please could you <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark my answer as accepted</a> if you do not need more answers.</p>
 </div>
 <div id="comment-43305-info" class="comment-info">

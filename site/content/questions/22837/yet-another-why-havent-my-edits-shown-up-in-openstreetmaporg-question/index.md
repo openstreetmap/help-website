@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I’m a new user and I know this question has been asked before and I’ve seen replies elsewhere but none of them seem to work for me.</p>
 <p>I have added some street names, added a missing street and extended a road that terminates prematurely in and around the following area:</p>
-<p><a href="http://www.openstreetmap.org/?box=yes&amp;maxlat=38.70916&amp;maxlon=0.13382&amp;minlat=38.69975&amp;minlon=0.11734">http://www.openstreetmap.org/?box=yes&amp;maxlat=38.70916&amp;maxlon=0.13382&amp;minlat=38.69975&amp;minlon=0.11734</a></p>
+<p><a href="https://www.openstreetmap.org/?box=yes&amp;maxlat=38.70916&amp;maxlon=0.13382&amp;minlat=38.69975&amp;minlon=0.11734">https://www.openstreetmap.org/?box=yes&amp;maxlat=38.70916&amp;maxlon=0.13382&amp;minlat=38.69975&amp;minlon=0.11734</a></p>
 <p>The changes show up inside the editor but they don’t show up in openstreetmap.org.</p>
 <p>I’ve cleared the browser cache and wait several minutes but it hasn’t worked.</p>
 <p>Have I done something wrong?</p>
@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-22838-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this <a href="http://www.openstreetmap.org/browse/changeset/16335060">http://www.openstreetmap.org/browse/changeset/16335060</a> the changeset you mean?</p>
+<p>Is this <a href="https://www.openstreetmap.org/browse/changeset/16335060">https://www.openstreetmap.org/browse/changeset/16335060</a> the changeset you mean?</p>
 <p>Your tagging seems good to me.</p>
 <p>I'd just wait a day or two, and then see what happens. If nothing, then you can worry again ;-)</p>
 </div>
@@ -133,11 +133,11 @@ One Answer:
 <div class="answer-body">
 <p>While edits are <em>usually</em> quick to show up on the map, it can <em>occasionally</em> take longer; other answers, that you have read, explain this in more detail. Please tell us in what way these other responses do "not work for you" so that we may improve them.</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> (explains requesting the re-rendering of tiles)</li>
-<li><a href="https://help.openstreetmap.org/questions/6729/some-of-my-edits-show-in-the-map-only-in-some-resolutions-or-not-at-all">some of my edits show in the map only in some resolutions or not at all</a> (explains that it can take "several days")</li>
-<li><a href="https://help.openstreetmap.org/questions/14450/newbie-question-how-do-i-make-my-final-edit-show-on-the-map">Newbie question how do I make my final edit show on the map?</a> (advises patience and links to <a href="http://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">wiki article that answers this FAQ)</a></li>
-<li><a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a> (has a very long and good explanation with links to Munin graphs)</li>
-<li><a href="https://help.openstreetmap.org/questions/7969/how-often-is-the-higher-levels-rendered-on-the-mapnik-map">How often is the higher levels rendered on the mapnik map?</a> (talks about the lower zoom tiles)</li>
+<li><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a> (explains requesting the re-rendering of tiles)</li>
+<li><a href="/questions/6729/some-of-my-edits-show-in-the-map-only-in-some-resolutions-or-not-at-all">some of my edits show in the map only in some resolutions or not at all</a> (explains that it can take "several days")</li>
+<li><a href="/questions/14450/newbie-question-how-do-i-make-my-final-edit-show-on-the-map">Newbie question how do I make my final edit show on the map?</a> (advises patience and links to <a href="https://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">wiki article that answers this FAQ)</a></li>
+<li><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a> (has a very long and good explanation with links to Munin graphs)</li>
+<li><a href="/questions/7969/how-often-is-the-higher-levels-rendered-on-the-mapnik-map">How often is the higher levels rendered on the mapnik map?</a> (talks about the lower zoom tiles)</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

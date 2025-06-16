@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Flaw when turning on same road"
-description = '''Hi, taking a question from http://forum.mapfactor.com/discussion/6883/flaw-when-turning-on-same-road#Item_1 to this forum to see if it is OSM map related. Please have a look at this navigation: http://www.openstreetmap.org/directions?engine=osrm_car&amp;amp;route=46.77741%2C15.52429%3B46.77636%2C15.5241...'''
+description = '''Hi, taking a question from http://forum.mapfactor.com/discussion/6883/flaw-when-turning-on-same-road#Item_1 to this forum to see if it is OSM map related. Please have a look at this navigation: https://www.openstreetmap.org/directions?engine=osrm_car&amp;amp;route=46.77741%2C15.52429%3B46.77636%2C15.5241...'''
 date = "2015-09-18T12:44:00Z"
 lastmod = "2015-09-18T13:09:00Z"
 weight = 45363
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi, taking a question from <a href="http://forum.mapfactor.com/discussion/6883/flaw-when-turning-on-same-road#Item_1">http://forum.mapfactor.com/discussion/6883/flaw-when-turning-on-same-road#Item_1</a> to this forum to see if it is OSM map related.</p>
 <p>Please have a look at this navigation:</p>
-<p><a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=46.77741%2C15.52429%3B46.77636%2C15.52410#map=19/46.77691/15.52411">http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=46.77741%2C15.52429%3B46.77636%2C15.52410#map=19/46.77691/15.52411</a></p>
+<p><a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=46.77741%2C15.52429%3B46.77636%2C15.52410#map=19/46.77691/15.52411">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=46.77741%2C15.52429%3B46.77636%2C15.52410#map=19/46.77691/15.52411</a></p>
 <p>That's about what I experience with MapFactor: no indication for taking a turn.</p>
 <p>Whose fault?</p>
 </div>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/mapquest.JPG" alt="alt text" /> This is what mapquest does, so i suspect osm data is OK.</p>
+<p><img src="/upfiles/mapquest.JPG" alt="alt text" /> This is what mapquest does, so i suspect osm data is OK.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

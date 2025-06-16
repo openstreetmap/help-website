@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am trying to find the best way to tag the following situation:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/crossing2.png" alt="alt text" /></p>
+<p><img src="/upfiles/crossing2.png" alt="alt text" /></p>
 <p>It is a bike path that starts near the intersection of two streets. It is necessary to somehow indicate that the path communicates with the roads. One way to do it of course is by adding the red line shown in the picture, and tagging it as highway=cycleway.</p>
 <p>Is there a more accurate way to tag this, that will still work well with routing? How about tagging the red segment as cycleway=crossing (without any other tags)?</p>
 </div>

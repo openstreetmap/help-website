@@ -111,9 +111,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Duplicate question: <a href="https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism">https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism</a></p>
-<p>On the wiki: <a href="http://wiki.openstreetmap.org/wiki/Vandalism">http://wiki.openstreetmap.org/wiki/Vandalism</a></p>
-<p>Note that if you don't want to wait on DWG and you are sure that's vandalism, you can revert yourself his edits with JOSM and the plugin <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">reverter</a>. If you don't feel enough confortable with JOSM and reverts, you may contact your <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:">local mailing list</a> and ask support from more experimented contributors (explaine the case with references to user name and locations/objects/changesets details).</p>
+<p>Duplicate question: <a href="/questions/216/what-should-i-do-about-vandalism">https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism</a></p>
+<p>On the wiki: <a href="https://wiki.openstreetmap.org/wiki/Vandalism">https://wiki.openstreetmap.org/wiki/Vandalism</a></p>
+<p>Note that if you don't want to wait on DWG and you are sure that's vandalism, you can revert yourself his edits with JOSM and the plugin <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">reverter</a>. If you don't feel enough confortable with JOSM and reverts, you may contact your <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:">local mailing list</a> and ask support from more experimented contributors (explaine the case with references to user name and locations/objects/changesets details).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

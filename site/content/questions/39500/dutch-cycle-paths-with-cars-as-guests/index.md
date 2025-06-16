@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It would be easier to give a reasonable answer if you could provide a link to the relevant traffic signs. Germany has something along such lines <a href="http://wiki.openstreetmap.org/wiki/Key:bicycle_road">http://wiki.openstreetmap.org/wiki/Key:bicycle_road</a> (which would however require a motorcar=yes or similar to allow cars).</p>
-<p>Naturally the place where you should be looking is the Dutch part of the wiki <a href="http://wiki.openstreetmap.org/wiki/Netherlands">http://wiki.openstreetmap.org/wiki/Netherlands</a> and / or asking on the Dutch forum ( <a href="http://forum.openstreetmap.org/viewforum.php?id=12">http://forum.openstreetmap.org/viewforum.php?id=12</a> ) or the mailing list ( <a href="https://lists.openstreetmap.org/listinfo/talk-nl">https://lists.openstreetmap.org/listinfo/talk-nl</a> ) given that it is unlikely that this has not been discussed before if it is a common Dutch speciality.</p>
+<p>It would be easier to give a reasonable answer if you could provide a link to the relevant traffic signs. Germany has something along such lines <a href="https://wiki.openstreetmap.org/wiki/Key:bicycle_road">https://wiki.openstreetmap.org/wiki/Key:bicycle_road</a> (which would however require a motorcar=yes or similar to allow cars).</p>
+<p>Naturally the place where you should be looking is the Dutch part of the wiki <a href="https://wiki.openstreetmap.org/wiki/Netherlands">https://wiki.openstreetmap.org/wiki/Netherlands</a> and / or asking on the Dutch forum ( <a href="http://forum.openstreetmap.org/viewforum.php?id=12">http://forum.openstreetmap.org/viewforum.php?id=12</a> ) or the mailing list ( <a href="https://lists.openstreetmap.org/listinfo/talk-nl">https://lists.openstreetmap.org/listinfo/talk-nl</a> ) given that it is unlikely that this has not been discussed before if it is a common Dutch speciality.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

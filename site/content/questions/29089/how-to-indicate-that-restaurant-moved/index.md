@@ -129,7 +129,7 @@ If you just want to push this information to the (local) OSM community, you can 
 <li><strong>Move a POI in OSM</strong><br />
 If you are able to edit OSM on your own, you can move the POI of course. For example in JOSM you download the current area with the POI, then the new area. Then by pressing F3 you zoomout so both areas are visible and you can just drag the POI to a new location. Maybe you want to merge the POI with a building outline, that can be done by CTRL+C copy the object to clipboard and CTRL+SHIFT+V on the selected building outline to paste all the tags. Don't forget to give good summary in your edit commit message.</li>
 <li><strong>Tag restaurant that it had been moved</strong><br />
-Currently OSM has no good/unique way to model time based informaton: <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts">http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts</a><br />
+Currently OSM has no good/unique way to model time based informaton: <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts">https://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts</a><br />
 A simple idea can be to keep an information as <em>old_name=</em>* tag at the old POI, so it may help people for orientation ("go till the building where XYZ was in before..:").</li>
 </ol>
 </div>
@@ -181,7 +181,7 @@ A simple idea can be to keep an information as <em>old_name=</em>* tag at the ol
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the POI is a node, the best for OSM is to move the existing POI to its new location, therefore we preserve its history. If the POI includes address tags, then update the address. For the previous location, you can create a new node for its new feature (e.g. a new"shop" key + new "name") or if it's not occupied at the moment, a tag <a href="http://wiki.openstreetmap.org/wiki/Key:disused">"disused:shop=yes"</a>. In addition, you could add a tag "<a href="http://wiki.openstreetmap.org/wiki/Key:note">note</a>" explaining that the old shop has been moved or a tag "<a href="http://wiki.openstreetmap.org/wiki/Key:name">old_name</a>" containing the previous shop name.<br />
+<p>If the POI is a node, the best for OSM is to move the existing POI to its new location, therefore we preserve its history. If the POI includes address tags, then update the address. For the previous location, you can create a new node for its new feature (e.g. a new"shop" key + new "name") or if it's not occupied at the moment, a tag <a href="https://wiki.openstreetmap.org/wiki/Key:disused">"disused:shop=yes"</a>. In addition, you could add a tag "<a href="https://wiki.openstreetmap.org/wiki/Key:note">note</a>" explaining that the old shop has been moved or a tag "<a href="https://wiki.openstreetmap.org/wiki/Key:name">old_name</a>" containing the previous shop name.<br />
 If the POI was previously on the building polygon, it might be easier to move the tags from the previous building to the new one and update the tags on the previous building as I said for the nodes.</p>
 </div>
 <div class="answer-controls post-controls">

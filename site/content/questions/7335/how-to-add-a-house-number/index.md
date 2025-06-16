@@ -146,7 +146,7 @@ osqa_accepted = false
 <div id="post-40758-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10419/neppern">@neppern</a>: are you talking of a newly drawn building? Then you first need to "tag" it as building. Select "building" in that option view ("roads, barriers, places").</p>
+<p><a href="https://help.openstreetmap.org/users/10419/neppern">@neppern</a>: are you talking of a newly drawn building? Then you first need to "tag" it as building. Select "building" in that option view ("roads, barriers, places").</p>
 </div>
 <div id="comment-40758-info" class="comment-info">
 <span class="comment-age">(03 Feb '15, 07:59)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -157,7 +157,7 @@ osqa_accepted = false
 <div id="post-40759-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10419/neppern">@neppern</a> Below "roads" in the list that you see is "buildings". Select that, and then the "address" tab will appear.</p>
+<p><a href="https://help.openstreetmap.org/users/10419/neppern">@neppern</a> Below "roads" in the list that you see is "buildings". Select that, and then the "address" tab will appear.</p>
 </div>
 <div id="comment-40759-info" class="comment-info">
 <span class="comment-age">(03 Feb '15, 09:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -200,7 +200,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The easiest way is using <a href="http://josm.openstreetmap.de/">JOSM</a>, possibly with some <a href="http://josm.openstreetmap.de/wiki/Plugins">plugin</a>. Unless you map the Czech Republic you have to enter the address manually (address interpolation can make this easier for places with consecutive numbering.<br />
-For more advances features look <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema">here</a>.</p>
+For more advances features look <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema">here</a>.</p>
 <p>In JOSM select the building, click Presets from the main menu-&gt;Annotations-&gt;Addresses, fill in the info, click Apply.<br />
 If there is more addresses you can use interpolation or copy the address to all buildings (Ctrl+C, Ctrl+Shift+V - copies tags) and change the numbers only.</p>
 </div>
@@ -270,7 +270,7 @@ If there is more addresses you can use interpolation or copy the address to all 
 <td><div class="item-right">
 <div class="answer-body">
 <p>The simplest way is to have one node per property (house). Tag the node with addr:housenumber. A good search engine, such as Nominatim, will then associate it with the nearest street. So the streetname is usually optional.</p>
-<p>There are a number of mobile apps for collecting addresses on a large scale. For example <a href="http://wiki.openstreetmap.org/wiki/KeypadMapper">wiki.openstreetmap.org/wiki/KeypadMapper</a></p>
+<p>There are a number of mobile apps for collecting addresses on a large scale. For example <a href="https://wiki.openstreetmap.org/wiki/KeypadMapper">wiki.openstreetmap.org/wiki/KeypadMapper</a></p>
 <p>And if you combine it with addr:interpolation, you can add a thousand address or more in a single day.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -334,7 +334,7 @@ If there is more addresses you can use interpolation or copy the address to all 
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The "R" short cut could help you in copying the address into each tag of each house but you will have to edit the number of course. there is more info <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
+<p>The "R" short cut could help you in copying the address into each tag of each house but you will have to edit the number of course. there is more info <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -384,7 +384,7 @@ If there is more addresses you can use interpolation or copy the address to all 
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the pattern is regular you can draw a single way for each side of a street, using address interpolation: <a href="http://wiki.openstreetmap.org/wiki/Key:addr#Using_interpolation">http://wiki.openstreetmap.org/wiki/Key:addr#Using_interpolation</a></p>
+<p>If the pattern is regular you can draw a single way for each side of a street, using address interpolation: <a href="https://wiki.openstreetmap.org/wiki/Key:addr#Using_interpolation">https://wiki.openstreetmap.org/wiki/Key:addr#Using_interpolation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?page=1&amp;focusedAnswerId=24321#24321">This previous answer</a> describes the problem - your GPX file has only waypoints in it, but no GPS track. Add a couple of track points (as per <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1056198">this</a> test example), and you will be able to upload it, and you'll then be able to process the waypoints.</p>
+<p><a href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping?page=1&amp;focusedAnswerId=24321#24321">This previous answer</a> describes the problem - your GPX file has only waypoints in it, but no GPS track. Add a couple of track points (as per <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1056198">this</a> test example), and you will be able to upload it, and you'll then be able to process the waypoints.</p>
 <p>However, in this case there doesn't seem to be much information in the waypoints - is there any reason why you're uploading those rather than a GPS trace?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -133,7 +133,7 @@ One Answer:
 <div id="post-51028-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>! I'm gonna try this. I do need this waypoints file for it contains thousands of plotted trees, benches, street lights, etc. What I'll do next time is to put my waypoints inside a trace file before uploading!</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>! I'm gonna try this. I do need this waypoints file for it contains thousands of plotted trees, benches, street lights, etc. What I'll do next time is to put my waypoints inside a trace file before uploading!</p>
 </div>
 <div id="comment-51028-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 13:07)</span> <span class="comment-user userinfo">wiltomap</span>
@@ -156,7 +156,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> - uploading waypoints to OSM in traces is exactly how I map <em>all the time</em> , as per <a href="https://github.com/SomeoneElseOSM/osmimport_02">https://github.com/SomeoneElseOSM/osmimport_02</a> !</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> - uploading waypoints to OSM in traces is exactly how I map <em>all the time</em> , as per <a href="https://github.com/SomeoneElseOSM/osmimport_02">https://github.com/SomeoneElseOSM/osmimport_02</a> !</p>
 </div>
 <div id="comment-51032-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 13:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -167,7 +167,7 @@ One Answer:
 <div id="post-51035-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> I'm not a beginner and used to JOSM. I need waypoints to position point elements such as street lights, trees, etc. I perfectly know that I will have to create manually as many points with an editor. I perfectly know that there is nothing 'magic', as you say.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> I'm not a beginner and used to JOSM. I need waypoints to position point elements such as street lights, trees, etc. I perfectly know that I will have to create manually as many points with an editor. I perfectly know that there is nothing 'magic', as you say.</p>
 </div>
 <div id="comment-51035-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 15:00)</span> <span class="comment-user userinfo">wiltomap</span>
@@ -224,7 +224,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a> It depends on what you'd like to see in the waypoint, but the problem I had when I last tried it was <a href="https://help.openstreetmap.org/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">https://help.openstreetmap.org/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details</a> .</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a> It depends on what you'd like to see in the waypoint, but the problem I had when I last tried it was <a href="/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">https://help.openstreetmap.org/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details</a> .</p>
 </div>
 <div id="comment-51044-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 17:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -236,7 +236,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Gotcha, I always put the relevant information in the name so it hasn't been a problem for me, but I can see how it could be a problem if you use the description.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Gotcha, I always put the relevant information in the name so it hasn't been a problem for me, but I can see how it could be a problem if you use the description.</p>
 </div>
 <div id="comment-51047-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 18:34)</span> <span class="comment-user userinfo">alester</span>
@@ -247,7 +247,7 @@ One Answer:
 <div id="post-51056-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10989/wiltomap"></a><a href="http://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a>: regarding html: I have made the experience that the preview here is not really a preview. The final rendering is different. The preview of <a href="https://daringfireball.net/projects/markdown/dingus">https://daringfireball.net/projects/markdown/dingus</a> is better to preview. In fact, it works to indent with 4 spaces.</p>
+<p><a href="https://help.openstreetmap.org/users/10989/wiltomap"></a><a href="https://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a>: regarding html: I have made the experience that the preview here is not really a preview. The final rendering is different. The preview of <a href="https://daringfireball.net/projects/markdown/dingus">https://daringfireball.net/projects/markdown/dingus</a> is better to preview. In fact, it works to indent with 4 spaces.</p>
 </div>
 <div id="comment-51056-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 23:29)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

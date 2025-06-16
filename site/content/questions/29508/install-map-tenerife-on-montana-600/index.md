@@ -79,7 +79,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>There is a link here that lists the Canary Islands <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>There is a link here that lists the Canary Islands <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div id="comment-29510-info" class="comment-info">
 <span class="comment-age">(01 Jan '14, 14:41)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -150,7 +150,7 @@ One Answer:
 </li>
 <li>Download and maybe unzip the file.<br />
 </li>
-<li>Follow the top answer <a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">from here</a>.</li>
+<li>Follow the top answer <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">from here</a>.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

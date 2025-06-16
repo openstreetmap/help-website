@@ -128,8 +128,8 @@ One Answer:
 <li>Render it locally (make a pretty picture from the raw data).</li>
 </ol>
 <p>Obviously it's important that you DON'T upload something that doesn't exist back to OSM, but as long as you don't do that, you can edit away to your heart's content.</p>
-<p>For a brief introduction to how OSM data is structured, I'd start <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">here</a>. The most used OSM offline editor is <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a>. It allows you to edit your local data and overlay the results over different background imagery, so you can compare your "imaginary" places to the real ones.</p>
-<p>There are several <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a> options, one of which is <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>. Even if it isn't ideal for you, searching this site for <a href="https://help.openstreetmap.org/search/?q=maperitive&amp;Submit=Search&amp;t=question">Maperitive</a> will get you a list of answers to previous "how do I render my data" questions.</p>
+<p>For a brief introduction to how OSM data is structured, I'd start <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">here</a>. The most used OSM offline editor is <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a>. It allows you to edit your local data and overlay the results over different background imagery, so you can compare your "imaginary" places to the real ones.</p>
+<p>There are several <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a> options, one of which is <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>. Even if it isn't ideal for you, searching this site for <a href="https://help.openstreetmap.org/search/?q=maperitive&amp;Submit=Search&amp;t=question">Maperitive</a> will get you a list of answers to previous "how do I render my data" questions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

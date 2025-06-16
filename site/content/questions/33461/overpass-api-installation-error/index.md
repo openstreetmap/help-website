@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I am trying to install the overpass API on my server but im getting an error. I'm following <a href="http://wiki.openstreetmap.org/wiki/OSM3S/install">these instructions</a>.</p>
+<p>I am trying to install the overpass API on my server but im getting an error. I'm following <a href="https://wiki.openstreetmap.org/wiki/OSM3S/install">these instructions</a>.</p>
 <p>After importing a .bz2 file of great Britain (<code>wget -O planet.osm.bz2 "http://download.geofabrik.de/europe/great-britain/england-latest.osm.bz2"</code>), I'm now trying to populate the database with the following command:</p>
 <pre><code>nohup /root/osm-3s_v0.7.3/src/bin/init_osm3s.sh ../root/planet.osm.bz2 `pwd`/../ /root/osm-3s_v0.7.3 &amp;
 tail -f nohup.out</code></pre>

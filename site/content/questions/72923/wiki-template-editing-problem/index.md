@@ -43,12 +43,12 @@ osqa_accepted = false
 <p><a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dtrain_station">https://wiki.openstreetmap.org/wiki/Tag:building%3Dtrain_station</a></p>
 <p>I'm trying to edit the right hand side template.</p>
 <p>Before:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/before.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/before.JPG" alt="alt text" /></p>
 <p>I click 'edit source' for the whole page, select &amp; edit the template.</p>
 <p>I delete the highlighted line.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/edit.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/edit.JPG" alt="alt text" /></p>
 <p>Not only does it keep the existing, but it now adds in a name option!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/after.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/after.JPG" alt="alt text" /></p>
 <p>What is going on?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

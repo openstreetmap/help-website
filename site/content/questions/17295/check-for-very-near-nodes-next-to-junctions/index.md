@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The extra node there isn't causing any massive problem, so I guess the first thing to say is, this problem is low priority compared to some other problems we detect with automated checks.</p>
-<p>In particular "connectivity problems" are more severe. I mean for example if the way on the right hand side there actually stopped short of the junction at the extra node. Such problems are identified by <a href="http://wiki.openstreetmap.org/wiki/Keep_Right">Keep Right</a>, and also shown as fixable little tasks in the awesome new <a href="https://oegeo.wordpress.com/2012/10/29/new-maproulette-challenge-connectivity-bugs/">MapRoulette challenge</a>.</p>
+<p>In particular "connectivity problems" are more severe. I mean for example if the way on the right hand side there actually stopped short of the junction at the extra node. Such problems are identified by <a href="https://wiki.openstreetmap.org/wiki/Keep_Right">Keep Right</a>, and also shown as fixable little tasks in the awesome new <a href="https://oegeo.wordpress.com/2012/10/29/new-maproulette-challenge-connectivity-bugs/">MapRoulette challenge</a>.</p>
 <p>But if this is just a case of one too many nodes, I don't think we have a tool to detect that. It's a problem we see a bit in the TIGER data. It's not just at junctions. We also see too many nodes forming fiddly bits on boundary ways (a larger class of problems where we might say we just need to do some 'simplifying' algorithm) In a way I suppose it's a somewhat subjective choice, whether this node is unnecessary.</p>
 </div>
 <div class="answer-controls post-controls">

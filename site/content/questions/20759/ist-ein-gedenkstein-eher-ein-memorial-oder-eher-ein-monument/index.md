@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic%3Dmemorial">Memorial</a> ist für kleine Gedänkstätten besser geeignet. <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic%3Dmonument">Monument</a> wird hingegen eher für größere Objekte verwendet. Siehe auch <a href="http://wiki.openstreetmap.org/wiki/DE:Howto_Map_A#Gedenkst.C3.A4tte">How to map a - Gedänkstätte</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/DE:Tag:historic%3Dmemorial">Memorial</a> ist für kleine Gedänkstätten besser geeignet. <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:historic%3Dmonument">Monument</a> wird hingegen eher für größere Objekte verwendet. Siehe auch <a href="https://wiki.openstreetmap.org/wiki/DE:Howto_Map_A#Gedenkst.C3.A4tte">How to map a - Gedänkstätte</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

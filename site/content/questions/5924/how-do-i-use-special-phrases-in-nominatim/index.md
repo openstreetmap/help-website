@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim wiki page</a> links to a page of <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">special phrases</a> that apparently can be used as part of a query. It doesn't clearly explain how to use these phrases. So how would I for example search for JFK airport, or search for an address in a specific county with these special phrases?</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim wiki page</a> links to a page of <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">special phrases</a> that apparently can be used as part of a query. It doesn't clearly explain how to use these phrases. So how would I for example search for JFK airport, or search for an address in a specific county with these special phrases?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-special-phrases" rel="tag" title="see questions tagged &#39;special-phrases&#39;">special-phrases</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span>
@@ -135,7 +135,7 @@ osqa_accepted = false
 <div id="post-5933-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The nominatim special phrases are for better interaction with humens. What you want is probably more in the lines of the <a href="http://wiki.openstreetmap.org/wiki/Xapi">Xapi</a>.</p>
+<p>The nominatim special phrases are for better interaction with humens. What you want is probably more in the lines of the <a href="https://wiki.openstreetmap.org/wiki/Xapi">Xapi</a>.</p>
 </div>
 <div id="comment-5933-info" class="comment-info">
 <span class="comment-age">(21 Jun '11, 21:20)</span> <span class="comment-user userinfo">Gnonthgol ♦</span>

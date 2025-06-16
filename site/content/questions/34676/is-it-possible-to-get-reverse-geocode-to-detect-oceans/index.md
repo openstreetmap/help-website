@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi there,</p>
 <p>I was just wondering if there is a way to get Open Street Map to detect the major oceans? When I use the reverse geocoding api on a position above an ocean I get - <strong>&lt; error &gt;Unable to geocode&lt; /error &gt;</strong></p>
-<p>I found this in the wiki and I was wondering if I was missing something? <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dsea">http://wiki.openstreetmap.org/wiki/Tag:place%3Dsea</a></p>
+<p>I found this in the wiki and I was wondering if I was missing something? <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dsea">https://wiki.openstreetmap.org/wiki/Tag:place%3Dsea</a></p>
 <p>Thanks, Pete</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can try some other engines listed in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a></p>
+<p>Maybe you can try some other engines listed in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,7 +177,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Hey thanks for the reply, I thought nominatim was a part of OpenStreetMap! That's what I'm using for the reverse geocoding. I'll check out the other search engines on the wiki and see if I can figure out something.</p>
-<p>That link i mentioned before though, is that a feature that is not yet available? <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dsea">http://wiki.openstreetmap.org/wiki/Tag:place%3Dsea</a></p>
+<p>That link i mentioned before though, is that a feature that is not yet available? <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dsea">https://wiki.openstreetmap.org/wiki/Tag:place%3Dsea</a></p>
 <p>Thanks, Pete</p>
 </div>
 <div id="comment-34684-info" class="comment-info">

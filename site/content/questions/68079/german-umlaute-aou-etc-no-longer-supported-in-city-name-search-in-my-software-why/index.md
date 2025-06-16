@@ -120,7 +120,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>And the problem doesn't seem to be OSM website related, as <a href="http://www.openstreetmap.org/search?query=München">http://www.openstreetmap.org/search?query=München</a> seems to work as I'd expect.</p>
+<p>And the problem doesn't seem to be OSM website related, as <a href="https://www.openstreetmap.org/search?query=München">https://www.openstreetmap.org/search?query=München</a> seems to work as I'd expect.</p>
 </div>
 <div id="comment-68087-info" class="comment-info">
 <span class="comment-age">(21 Feb '19, 11:36)</span> <span class="comment-user userinfo">EdLoach ♦</span>

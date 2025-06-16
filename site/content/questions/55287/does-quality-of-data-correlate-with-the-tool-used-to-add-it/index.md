@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I feel that the quality of Open Street Map data depends on the tool (editor) that the users use. My conjecture is, some tools make it hard to add correct data:</p>
 <ul>
-<li>Don't check for basic mistakes (e.g. <a href="https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">unconnected ways</a>)</li>
+<li>Don't check for basic mistakes (e.g. <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">unconnected ways</a>)</li>
 <li>Don't remind the user to add various frequently-used data fields (e.g. changeset description)</li>
 <li>Make it possible to degrade (e.g. delete) data inadvertently</li>
 </ul>

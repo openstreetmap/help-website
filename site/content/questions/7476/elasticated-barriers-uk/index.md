@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've used <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">barrier=gate</a> for these. Even if they don't look like gates looked like in the old good days it tells the map user what the functionality is.</p>
+<p>I've used <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">barrier=gate</a> for these. Even if they don't look like gates looked like in the old good days it tells the map user what the functionality is.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

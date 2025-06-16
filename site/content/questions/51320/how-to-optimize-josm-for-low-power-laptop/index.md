@@ -96,7 +96,7 @@ osqa_accepted = false
 <div id="post-51357-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a>, thanks for the info. Looks like it should be possible, but I like the way I've got it set up at the moment, and don't want to break anything right before my trip. (updates to chromeos can break crouton apparently, and running android apps requires changing chromeos to the dev branch)</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a>, thanks for the info. Looks like it should be possible, but I like the way I've got it set up at the moment, and don't want to break anything right before my trip. (updates to chromeos can break crouton apparently, and running android apps requires changing chromeos to the dev branch)</p>
 <p>I'll mess around with it when I get back, because once I'm back the chromebook won't be my only computer, and if it's out of commision for a bit that'll be fine.</p>
 <p>If things work out well with this set up I'll do a Diary post on this chromebook. I should probably do a review either way... we'll see how much enthusiasm I have for that.</p>
 </div>
@@ -200,7 +200,7 @@ OpenJDK Zero VM (build 24.95-b01, interpreted mode)</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9027/keithonearth"></a><a href="http://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a>: try to update to Java 8. You are running version 7. The next JOSM "tested" release (in a few days) will not run with this old Java version anymore. Small performance improvements are expected, too.</p>
+<p><a href="https://help.openstreetmap.org/users/9027/keithonearth"></a><a href="https://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a>: try to update to Java 8. You are running version 7. The next JOSM "tested" release (in a few days) will not run with this old Java version anymore. Small performance improvements are expected, too.</p>
 <p>For comparison, this is an example <code>-version</code> output of Java 8 (with openJDK on a x86-64 system):</p>
 <pre><code>openjdk version &quot;1.8.0_102&quot;
 OpenJDK Runtime Environment (build 1.8.0_102-b14)
@@ -280,7 +280,7 @@ OpenJDK 64-Bit Server VM (build 25.102-b14, mixed mode)</code></pre>
 <div id="post-51342-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9027/keithonearth"></a><a href="http://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a>: fine! :-) Could you please provide the <code>java -version</code> output? (just for other people's reference). And I guess the Oracle Java download for ARM was on the official page?</p>
+<p><a href="https://help.openstreetmap.org/users/9027/keithonearth"></a><a href="https://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a>: fine! :-) Could you please provide the <code>java -version</code> output? (just for other people's reference). And I guess the Oracle Java download for ARM was on the official page?</p>
 </div>
 <div id="comment-51342-info" class="comment-info">
 <span class="comment-age">(11 Aug '16, 00:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

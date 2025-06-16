@@ -116,10 +116,10 @@ One Answer:
 <div class="answer-body">
 <p>This is indeed a very frequently asked question, for example</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data">Why is the Standard updated, but Cycle, Transport and Humanitarian still show old data?</a></li>
-<li><a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></li>
-<li><a href="https://help.openstreetmap.org/questions/65314/changes-not-showing-after-edit">Changes not showing after edit</a></li>
-<li><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></li>
+<li><a href="/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data">Why is the Standard updated, but Cycle, Transport and Humanitarian still show old data?</a></li>
+<li><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></li>
+<li><a href="/questions/65314/changes-not-showing-after-edit">Changes not showing after edit</a></li>
+<li><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></li>
 </ul>
 <p>Perhaps one of these answers will help.</p>
 </div>

@@ -235,7 +235,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Recently found: <a href="http://wiki.openstreetmap.org/wiki/Nik4">Nik4</a> ... there you can choose ppi or dpi value, I think.</p>
+<p>Recently found: <a href="https://wiki.openstreetmap.org/wiki/Nik4">Nik4</a> ... there you can choose ppi or dpi value, I think.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

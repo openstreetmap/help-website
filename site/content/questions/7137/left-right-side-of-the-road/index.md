@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, you can reverse a way in many of the OSM editors including Potlatch and JOSM. For more information how to do it, see here for Potlatch: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a> (search for "reverse the direction").</p>
+<p>Yes, you can reverse a way in many of the OSM editors including Potlatch and JOSM. For more information how to do it, see here for Potlatch: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a> (search for "reverse the direction").</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

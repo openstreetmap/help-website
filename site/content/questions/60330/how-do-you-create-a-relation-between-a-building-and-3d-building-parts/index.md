@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do you create a relation between a building and 3D building parts?"
-description = '''I assume it&#x27;s unnecessary, but just out of curiosity, the building part here has a relation linked to the building. How do you create that? Are there any pros/cons in doing it?  http://www.openstreetmap.org/edit?relation=3824021#map=22/52.51651/13.45273'''
+description = '''I assume it&#x27;s unnecessary, but just out of curiosity, the building part here has a relation linked to the building. How do you create that? Are there any pros/cons in doing it?  https://www.openstreetmap.org/edit?relation=3824021#map=22/52.51651/13.45273'''
 date = "2017-10-27T18:53:00Z"
 lastmod = "2017-10-29T14:57:00Z"
 weight = 60330
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I assume it's unnecessary, but just out of curiosity, the building part here has a relation linked to the building. How do you create that? Are there any pros/cons in doing it?</p>
-<p><a href="http://www.openstreetmap.org/edit?relation=3824021#map=22/52.51651/13.45273">http://www.openstreetmap.org/edit?relation=3824021#map=22/52.51651/13.45273</a></p>
+<p><a href="https://www.openstreetmap.org/edit?relation=3824021#map=22/52.51651/13.45273">https://www.openstreetmap.org/edit?relation=3824021#map=22/52.51651/13.45273</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span> <span class="post-tag tag-link-3d" rel="tag" title="see questions tagged &#39;3d&#39;">3d</span>

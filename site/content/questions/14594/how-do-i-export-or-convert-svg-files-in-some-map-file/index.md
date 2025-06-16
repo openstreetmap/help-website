@@ -184,7 +184,7 @@ osqa_accepted = false
 <div id="post-14637-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for the help Breki! I will study the OSM Wiki. I´ve found (by Vincent de Phily) a plugin to JOSM that allows to load icons and display them as JOSM layer (with the rotate and scale functions). I dont know if it solves my problem because I do not know still tinkering with the data from JOSM. Here is the link for the plugin: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer</a> <a href="http://josm.openstreetmap.de/wiki/Help/Plugin/PicLayer">http://josm.openstreetmap.de/wiki/Help/Plugin/PicLayer</a></p>
+<p>Thanks for the help Breki! I will study the OSM Wiki. I´ve found (by Vincent de Phily) a plugin to JOSM that allows to load icons and display them as JOSM layer (with the rotate and scale functions). I dont know if it solves my problem because I do not know still tinkering with the data from JOSM. Here is the link for the plugin: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer</a> <a href="http://josm.openstreetmap.de/wiki/Help/Plugin/PicLayer">http://josm.openstreetmap.de/wiki/Help/Plugin/PicLayer</a></p>
 <p>According your experience on OSM, do you think it is suitable for my purpose?</p>
 <p>How can I contact you directly to talk about that?</p>
 <p>Thanks again =)</p>

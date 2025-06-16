@@ -186,7 +186,7 @@ One Answer:
 <div id="post-49263-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12184/npyachtsman"></a><a href="http://help.openstreetmap.org/users/12184/npyachtsman">@npyachtsman</a>: thanks for the feedback! Happy mapping!</p>
+<p><a href="https://help.openstreetmap.org/users/12184/npyachtsman"></a><a href="https://help.openstreetmap.org/users/12184/npyachtsman">@npyachtsman</a>: thanks for the feedback! Happy mapping!</p>
 </div>
 <div id="comment-49263-info" class="comment-info">
 <span class="comment-age">(16 Apr '16, 00:01)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

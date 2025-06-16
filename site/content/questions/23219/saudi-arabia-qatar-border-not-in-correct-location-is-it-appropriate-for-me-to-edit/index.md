@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/browse/way/21107993">Way 21107993 Border="Saudi Arabia - Qatar"</a> is not aligned with the actual fence line that is located between the 2 border patrol roads located south (or west) of its current location. The roads run East-West between Bu Samra and Khor Al Udeid. The southern road is in Saudi Arabia and the northern road is in Qatar. These roads are used by military personnel patrolling the border. Consequently, the western half of <a href="http://www.openstreetmap.org/browse/way/157490050">Way 157490050</a> is also in the wrong location.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/21107993">Way 21107993 Border="Saudi Arabia - Qatar"</a> is not aligned with the actual fence line that is located between the 2 border patrol roads located south (or west) of its current location. The roads run East-West between Bu Samra and Khor Al Udeid. The southern road is in Saudi Arabia and the northern road is in Qatar. These roads are used by military personnel patrolling the border. Consequently, the western half of <a href="https://www.openstreetmap.org/browse/way/157490050">Way 157490050</a> is also in the wrong location.</p>
 <p>I am not an authority on borders and am relatively new to OSM mapping. I recognise this error from local knowledge as I am currently living in Qatar.</p>
 <p>My question is this: <strong>It is appropriate for me to edit this way or should I submit it to a team / group / expert for editing?</strong></p>
 </div>

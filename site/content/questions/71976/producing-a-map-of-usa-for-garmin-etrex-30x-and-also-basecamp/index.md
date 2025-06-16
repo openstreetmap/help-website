@@ -85,7 +85,7 @@ osqa_accepted = false
 <div id="post-71983-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For others this is the previous post: <a href="https://help.openstreetmap.org/questions/54382/how-to-organise-maps-of-the-usa">https://help.openstreetmap.org/questions/54382/how-to-organise-maps-of-the-usa</a></p>
+<p>For others this is the previous post: <a href="/questions/54382/how-to-organise-maps-of-the-usa">https://help.openstreetmap.org/questions/54382/how-to-organise-maps-of-the-usa</a></p>
 </div>
 <div id="comment-71983-info" class="comment-info">
 <span class="comment-age">(04 Dec '19, 08:10)</span> <span class="comment-user userinfo">andy mackey</span>

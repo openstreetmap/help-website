@@ -127,7 +127,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you make some changes they are identified by a changeset. You can see the list of edits (changesets) in your personal page by looking at the My Edits section. If you find the changeset you want to reverse reply here with its number and someone can see if it is possible. A recent edit is usually easy to reverse, but older ones can be harder if someone else has also changed that area.</p>
-<p>The individual process is best not discussed here, you can ask for help on the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> or on <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a></p>
+<p>The individual process is best not discussed here, you can ask for help on the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> or on <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

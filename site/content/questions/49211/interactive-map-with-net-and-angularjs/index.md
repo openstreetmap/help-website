@@ -66,7 +66,7 @@ osqa_accepted = false
 <div id="post-49215-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Which part of your question is specific OSM related ? IMHO you ve to ask this kind of question about building a programm that uses the OSM database at the developers sites. Or have, to find your way, a look at these pages, <a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a></p>
+<p>Which part of your question is specific OSM related ? IMHO you ve to ask this kind of question about building a programm that uses the OSM database at the developers sites. Or have, to find your way, a look at these pages, <a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a></p>
 </div>
 <div id="comment-49215-info" class="comment-info">
 <span class="comment-age">(14 Apr '16, 15:28)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -88,7 +88,7 @@ osqa_accepted = false
 <div id="post-49237-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12176/artemvalmus">@artemvalmus</a> As you've probably spotted, we get quite a few Windows development questions here and many fewer answers. What'd be really great would be if some of the people who've solved Windows development questions (using help elsewhere) try and resolve the unsolved questions here, or at least try and point them in the direction of possible solutions.</p>
+<p><a href="https://help.openstreetmap.org/users/12176/artemvalmus">@artemvalmus</a> As you've probably spotted, we get quite a few Windows development questions here and many fewer answers. What'd be really great would be if some of the people who've solved Windows development questions (using help elsewhere) try and resolve the unsolved questions here, or at least try and point them in the direction of possible solutions.</p>
 <p>Obviously you're not in a position to do that yet, but it'd be great to come back when you are :)</p>
 </div>
 <div id="comment-49237-info" class="comment-info">
@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-49247-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> That's good idea, why not :) I'll try to contribute to this once I find answers to my questions.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> That's good idea, why not :) I'll try to contribute to this once I find answers to my questions.</p>
 </div>
 <div id="comment-49247-info" class="comment-info">
 <span class="comment-age">(15 Apr '16, 16:55)</span> <span class="comment-user userinfo">artemvalmus</span>

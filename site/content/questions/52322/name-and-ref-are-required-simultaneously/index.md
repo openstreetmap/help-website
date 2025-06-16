@@ -221,7 +221,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>@FrederikRamm, <a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, @VincentdeP....</p>
+<p>@FrederikRamm, <a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, @VincentdeP....</p>
 <p>Thanks, but I was not specific. I wanted to refer when the <strong>tag name</strong> and the <strong>tag ref</strong> has the same description, as:</p>
 <ul>
 <li>Tag name = BR-163</li>
@@ -259,7 +259,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>...</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>...</p>
 <p>So... the sources are known and the problem is not this, but the fact of the <strong>ref tag</strong> information is repeated in the <strong>name tag</strong>. I understand that this is unnecessary, because it generates too much information. My doubt is whether, by default, should be so.</p>
 <p>For example, a highway with the ref tag=BR-450(fictitious), but no known name, as it should be added in OSM?</p>
 <p>I understand that should be implemented as follows:<br />

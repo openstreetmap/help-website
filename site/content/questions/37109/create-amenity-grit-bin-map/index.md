@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I've found the <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dgrit_bin">Grit bin amenity tag</a> and would like to know how I would go about creating a UK map with all mapped grit bins.</p>
+<p>I've found the <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dgrit_bin">Grit bin amenity tag</a> and would like to know how I would go about creating a UK map with all mapped grit bins.</p>
 <p>Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The really simple way would be to use <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass-turbo</a>, but if there are lots and lots of grit bins mapped that may be too much data. At present we have around <a href="http://taginfo.openstreetmap.org.uk/tags/amenity=grit_bin">2250</a> grit bins mapped in Great Britain, so this is not currently a problem, so I've created a <a href="http://overpass-turbo.eu/s/5ef">query</a>.</p>
-<p>There are techniques for pulling data out with <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass</a> (e.g., as GeoJSON) and showing them on a map using tools like <a href="http://wiki.openstreetmap.org/wiki/Leaflet">leaflet</a> or <a href="http://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a>.</p>
+<p>The really simple way would be to use <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass-turbo</a>, but if there are lots and lots of grit bins mapped that may be too much data. At present we have around <a href="http://taginfo.openstreetmap.org.uk/tags/amenity=grit_bin">2250</a> grit bins mapped in Great Britain, so this is not currently a problem, so I've created a <a href="http://overpass-turbo.eu/s/5ef">query</a>.</p>
+<p>There are techniques for pulling data out with <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass</a> (e.g., as GeoJSON) and showing them on a map using tools like <a href="https://wiki.openstreetmap.org/wiki/Leaflet">leaflet</a> or <a href="https://wiki.openstreetmap.org/wiki/Openlayers">OpenLayers</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

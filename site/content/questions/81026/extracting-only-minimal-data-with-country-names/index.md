@@ -51,7 +51,7 @@ osqa_accepted = false
 <p>Now, all this works more/less OK (I tried first on some smaller dataset of Netherlands), but it seems that I cannot get this to extract country names. Not sure if this is some additional display layer, or is this actually part of OSM files?</p>
 <p>I'm adding screenshot of the country names that I would like to display, but that I cannot see when I open OSM file in some of the editors. Is there <code>country_3</code> inside the OSM files? I can find only <code>place=country</code>.</p>
 <p>Is it easy to simplify shapes for <code>natural=coastline</code> and <code>boundary=administrative</code> inside OSM, so I can get smaller filesize?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_WILpdei.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_WILpdei.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-countryname" rel="tag" title="see questions tagged &#39;countryname&#39;">countryname</span> <span class="post-tag tag-link-simplify" rel="tag" title="see questions tagged &#39;simplify&#39;">simplify</span> <span class="post-tag tag-link-osmfilter" rel="tag" title="see questions tagged &#39;osmfilter&#39;">osmfilter</span>

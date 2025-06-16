@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>could you please add it on to the map :)</p>
 <p>i have added a photo with her location in red :)</p>
 <p>many thanks ben</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Untitled_JpyzQEd.png" alt="alt text" /></p>
+<p><img src="/upfiles/Untitled_JpyzQEd.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-vulcan" rel="tag" title="see questions tagged &#39;vulcan&#39;">vulcan</span>

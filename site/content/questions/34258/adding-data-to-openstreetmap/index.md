@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>last year I found myself in the same situation. I asked <a href="https://help.openstreetmap.org/questions/25091/how-to-start-mapping-without-having-a-gps">this question</a> that gave me some useful answers.</p>
+<p>last year I found myself in the same situation. I asked <a href="/questions/25091/how-to-start-mapping-without-having-a-gps">this question</a> that gave me some useful answers.</p>
 </div>
 <div id="comment-34290-info" class="comment-info">
 <span class="comment-age">(24 Jun '14, 20:42)</span> <span class="comment-user userinfo">de vries</span>
@@ -125,7 +125,7 @@ osqa_accepted = false
 <p>Here are two guides that I know of that explain this in some detail:</p>
 <ul>
 <li>LearnOSM.org <a href="http://learnosm.org/en/beginner/">Beginner's Guide</a></li>
-<li>wiki.osm.org <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a></li>
+<li>wiki.osm.org <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

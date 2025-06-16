@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>US Zip code areas are not mapped or stored in OpenStreetMap. Official postal zip code areas are copyrighted by the US Postal service. TIGER zip code information is created by the US Census Bureau and is slightly different, and is used by Nominatim find regions near the actual zip code.</p>
-<p>One possible way to add a missing zip code would be to add an address in that location and include the <a href="http://wiki.openstreetmap.org/wiki/Key:addr:postcode">addr:postcode</a> key. This would work only if Nominatim processes addr:postcode keys to build reverse zip code lookup areas.</p>
+<p>One possible way to add a missing zip code would be to add an address in that location and include the <a href="https://wiki.openstreetmap.org/wiki/Key:addr:postcode">addr:postcode</a> key. This would work only if Nominatim processes addr:postcode keys to build reverse zip code lookup areas.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

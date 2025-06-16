@@ -310,8 +310,8 @@ Tualatin, OR. 97062</p>
 <p>The "APT" may be written as # instead. When I do a search including the APT (or using #) OSM returns no results.</p>
 <p>I'm confused and not understanding how every building shows the housenumber 19355 in OSM but when you view it in JOSM they are just as I added them. Each building was changed to addr:apartments with the name tag for the building numbers. Then I added a single node to represent each of the entrances with the respected flat numbers for that entrance. The only part that should have the full address is the area.</p>
 <p>I'm including screenshots. The first one shows the tags associated with the area. The second is one building that represents how I did each building.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/19355-01_4IcO7i4.jpg" alt="image 1 area tags" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/19355-02_eeKR4iY.jpg" alt="image 2 single building tags" /></p>
+<p><img src="/upfiles/19355-01_4IcO7i4.jpg" alt="image 1 area tags" /></p>
+<p><img src="/upfiles/19355-02_eeKR4iY.jpg" alt="image 2 single building tags" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

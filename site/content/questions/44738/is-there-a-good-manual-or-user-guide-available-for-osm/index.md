@@ -117,9 +117,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, try the following:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a></p>
 <p><a href="http://learnosm.org">learnosm.org</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">Video tutorials</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">Video tutorials</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

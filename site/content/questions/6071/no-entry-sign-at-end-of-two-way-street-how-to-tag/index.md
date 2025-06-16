@@ -149,7 +149,7 @@ While the former is probably more correct, I would probably opt for the latter.<
 </div>
 <div class="comment-text">
 <p>I went for method 2 in the end, with an explanatory note for any other editors who can see from the aerial image that it doesn't look one-way. If anyone knows a better way, feel free to fix it up later.</p>
-<p><a href="http://www.openstreetmap.org/?lat=54.920014&amp;lon=-1.574458&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=54.920014&amp;lon=-1.574458&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=54.920014&amp;lon=-1.574458&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=54.920014&amp;lon=-1.574458&amp;zoom=18&amp;layers=M</a></p>
 <p>Note to self in future, make sure I download data again before editing - seems I got an edit conflict with my mum, whose interest having been piqued by my sending her to a Walking Papers link to draw on where the different "road names" apply, has now been entering/fixing stuff directly herself :)</p>
 </div>
 <div id="comment-6082-info" class="comment-info">

@@ -129,7 +129,7 @@ One Answer:
 <div class="answer-body">
 <p>(Regarding the user's edits he refers to iD.)<br />
 At the moment you cannot change the way areas are displayed in the iD editor. The <a href="https://github.com/openstreetmap/iD/issues/1299">issue is known</a> and sooner or later will be solved by its developers (your help is welcome :) ).</p>
-<p>Maybe you want to try another editing program from <a href="http://wiki.openstreetmap.org/wiki/Editors#Top_three_editors">the top three</a>. Of course I recommend JOSM but other people say it has a steep learning curve.</p>
+<p>Maybe you want to try another editing program from <a href="https://wiki.openstreetmap.org/wiki/Editors#Top_three_editors">the top three</a>. Of course I recommend JOSM but other people say it has a steep learning curve.</p>
 <p>hth<br />
 malenki</p>
 </div>
@@ -154,7 +154,7 @@ malenki</p>
 &#10;</div>
 <div class="comment-text">
 <p>Hello malenki,</p>
-<p>My browser shows the following address when the area haze becomes a problem: <a href="http://www.openstreetmap.org/edit?editor=id#map=16/52.9872/-3.0385">http://www.openstreetmap.org/edit?editor=id#map=16/52.9872/-3.0385</a></p>
+<p>My browser shows the following address when the area haze becomes a problem: <a href="https://www.openstreetmap.org/edit?editor=id#map=16/52.9872/-3.0385">https://www.openstreetmap.org/edit?editor=id#map=16/52.9872/-3.0385</a></p>
 <p>Sorry to be over-sensitive, but I would have thought I could disable this area object while editing, and believe me I have a lot of editing to do!</p>
 <p>Also, I'm not sure how accurate this "area" really is, especially since it disappears altogether at wider magnifications. I'd love to just delete it, but I've no idea who this would upset.</p>
 <p>Many thanks, Matt</p>

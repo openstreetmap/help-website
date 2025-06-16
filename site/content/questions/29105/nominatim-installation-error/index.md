@@ -84,7 +84,7 @@ Error: could not load library ~/module/nominatim.so ... undefined symbol: palloc
 <div id="post-29412-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have you followed <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software">this step in the installation instructions?</a></p>
+<p>Have you followed <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Compiling_the_Required_Software">this step in the installation instructions?</a></p>
 </div>
 <div id="comment-29412-info" class="comment-info">
 <span class="comment-age">(28 Dec '13, 19:15)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

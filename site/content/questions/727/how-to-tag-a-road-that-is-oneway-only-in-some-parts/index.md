@@ -73,7 +73,7 @@ As the road is the same with continuous numerotation, same name ... How should I
 <div id="post-736-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You say "How should I render it". Are you trying to build or configure a <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a> system, and encountering this problem in the data? ...or perhaps you just mean "How should I map it"? (how to arrange the ways and tag it within the editor)</p>
+<p>You say "How should I render it". Are you trying to build or configure a <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a> system, and encountering this problem in the data? ...or perhaps you just mean "How should I map it"? (how to arrange the ways and tag it within the editor)</p>
 </div>
 <div id="comment-736-info" class="comment-info">
 <span class="comment-age">(04 Sep '10, 12:22)</span> <span class="comment-user userinfo">Harry Wood</span>

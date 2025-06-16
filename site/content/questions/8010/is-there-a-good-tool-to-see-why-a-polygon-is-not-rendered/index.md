@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I have a few polygons (forrest) that I made a few years ago. They are rendered on some layers on mapnik. But in many layers they aren't. So it is some problems with them. Is there a good tool to see what's wrong with these polygons?</p>
 <p>The polygon is visible on level 8 and level 9 on <a href="http://osm.org">osm.org</a> (mapnik) but not on level 10-18.</p>
 <p>I discovered that it's visible on all levels with the Osmarender map. So maybe this is a Mapnik problem.</p>
-<p>In this case I talk about the forrest on an island: <a href="http://www.openstreetmap.org/?lat=60.38138&amp;lon=17.20959&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=60.38138&amp;lon=17.20959&amp;zoom=15&amp;layers=M</a></p>
+<p>In this case I talk about the forrest on an island: <a href="https://www.openstreetmap.org/?lat=60.38138&amp;lon=17.20959&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=60.38138&amp;lon=17.20959&amp;zoom=15&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-errors" rel="tag" title="see questions tagged &#39;errors&#39;">errors</span> <span class="post-tag tag-link-tools" rel="tag" title="see questions tagged &#39;tools&#39;">tools</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>

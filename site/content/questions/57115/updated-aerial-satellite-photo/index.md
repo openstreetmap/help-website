@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>HI, I am writing from the the Weizmann Institute of Science in Israel. I see that the satellite photo of the Institute has not been updated and is missing some buildings. Is it possible to send you a new aerial photo to upload? Alternatively, can you update the one you have on your own. Google maps seems to have the correct satellite photo.</p>
-<p><a href="http://www.openstreetmap.org/#map=17/31.90748/34.81073">http://www.openstreetmap.org/#map=17/31.90748/34.81073</a></p>
+<p><a href="https://www.openstreetmap.org/#map=17/31.90748/34.81073">https://www.openstreetmap.org/#map=17/31.90748/34.81073</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span>
@@ -77,7 +77,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I added <a href="http://www.openstreetmap.org/#map=17/31.90748/34.81073">http://www.openstreetmap.org/#map=17/31.90748/34.81073</a></p>
+<p>I added <a href="https://www.openstreetmap.org/#map=17/31.90748/34.81073">https://www.openstreetmap.org/#map=17/31.90748/34.81073</a></p>
 </div>
 <div id="comment-57117-info" class="comment-info">
 <span class="comment-age">(16 Jul '17, 10:16)</span> <span class="comment-user userinfo">shoshiweinberg</span>
@@ -88,7 +88,7 @@ osqa_accepted = false
 <div id="post-57120-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/3522/">https://help.openstreetmap.org/questions/3522/</a></p>
+<p><a href="/questions/3522/">https://help.openstreetmap.org/questions/3522/</a></p>
 </div>
 <div id="comment-57120-info" class="comment-info">
 <span class="comment-age">(16 Jul '17, 17:41)</span> <span class="comment-user userinfo">andy mackey</span>

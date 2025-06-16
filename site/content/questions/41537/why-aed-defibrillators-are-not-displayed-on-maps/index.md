@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>AED (<a href="Automated%20external%20defibrillator">Automated external defibrillator</a>) are getting widely diffused in Italy and in Europe lately, and I keep adding <a href="http://wiki.openstreetmap.org/wiki/Tag:emergency%3Ddefibrillator">emergency:defibrillator</a> tags where I see new stations.</p>
+<p>AED (<a href="Automated%20external%20defibrillator">Automated external defibrillator</a>) are getting widely diffused in Italy and in Europe lately, and I keep adding <a href="https://wiki.openstreetmap.org/wiki/Tag:emergency%3Ddefibrillator">emergency:defibrillator</a> tags where I see new stations.</p>
 <p>Sadly on the default view of <em>OpenStreetMap.org</em> those devices are not displayed, while less imporant amenities like ATMs are visible.</p>
-<p>I've added one <a href="http://www.openstreetmap.org/relation/46229#map=19/45.85501/9.38961">here</a> (<a href="http://www.openstreetmap.org/node/3347777149">node 3347777149</a>) , which is visible only on edit or on <a href="http://www.tappenbeck.net/osm/maps/deu/index.php?id=1029&amp;zoom=15&amp;lat=45.85492&amp;lon=9.38987&amp;layers=B00TTTF">specific maps</a>.</p>
+<p>I've added one <a href="https://www.openstreetmap.org/relation/46229#map=19/45.85501/9.38961">here</a> (<a href="https://www.openstreetmap.org/node/3347777149">node 3347777149</a>) , which is visible only on edit or on <a href="http://www.tappenbeck.net/osm/maps/deu/index.php?id=1029&amp;zoom=15&amp;lat=45.85492&amp;lon=9.38987&amp;layers=B00TTTF">specific maps</a>.</p>
 <p>Wouldn't it be useful to show such elements on the map?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -216,7 +216,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey"></a><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> start OSMand or maps.me or whatever, but defintely not try to start openstreetmap.org and fiddly try to find my current location, find an AED and then find out how I get there.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey"></a><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> start OSMand or maps.me or whatever, but defintely not try to start openstreetmap.org and fiddly try to find my current location, find an AED and then find out how I get there.</p>
 <p>In any case as stf says from a practical pov you either know where a nearby AED is or you don't, and you are defintely not going to go off hunting for one except if you are the nth (for large n) person at a incident site.</p>
 </div>
 <div id="comment-50026-info" class="comment-info">

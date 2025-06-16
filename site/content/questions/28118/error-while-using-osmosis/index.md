@@ -196,7 +196,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It could be because you have an old version of osmosis that don't <a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">support 64 bit id's</a>.</p>
+<p>It could be because you have an old version of osmosis that don't <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">support 64 bit id's</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

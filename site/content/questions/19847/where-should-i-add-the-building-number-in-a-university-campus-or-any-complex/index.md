@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>For your example I would suggest: <em><span>ref</span>=62</em> and <em><span>addr:housename</span>=John Hines</em> (or maybe instead with <em><span>name</span>=John Hines</em>).</p>
-<p>A side note: if you copy the building database of the uni somehow, it may be advisable to have a clear permission from them to contribute the data under <a href="http://www.openstreetmap.org/copyright">our license ODbL</a> here. The database <em>may</em> be protected by law.</p>
+<p>A side note: if you copy the building database of the uni somehow, it may be advisable to have a clear permission from them to contribute the data under <a href="https://www.openstreetmap.org/copyright">our license ODbL</a> here. The database <em>may</em> be protected by law.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -181,7 +181,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><span></span><span>@stephane-guillou</span>: well, there is no "the map". OpenStreetMap is just map data. Depending on which map style/renderer you use you get <span>totally different maps or services</span>. If you mean the standard mapnik style of osm then: no, probably the ref will not be shown - but that is a problem of the style, not of our data. See <a href="http://www.openstreetmap.org/browse/way/24419488">example building</a>. The standard "mapnik" style seems to preferably display the "name". See: <a href="http://www.openstreetmap.org/browse/way/26933198">other example building</a>.</p>
+<p><span></span><span>@stephane-guillou</span>: well, there is no "the map". OpenStreetMap is just map data. Depending on which map style/renderer you use you get <span>totally different maps or services</span>. If you mean the standard mapnik style of osm then: no, probably the ref will not be shown - but that is a problem of the style, not of our data. See <a href="https://www.openstreetmap.org/browse/way/24419488">example building</a>. The standard "mapnik" style seems to preferably display the "name". See: <a href="https://www.openstreetmap.org/browse/way/26933198">other example building</a>.</p>
 </div>
 <div id="comment-19896-info" class="comment-info">
 <span class="comment-age">(13 Feb '13, 04:18)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

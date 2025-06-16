@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'd like to get some comment on these faults at these coordinates: <a href="http://www.openstreetmap.org/?lat=52.08576&amp;lon=5.14889&amp;zoom=18&amp;layers=M">5.14889 &amp; 52.08576</a>. The water (stream) is colored blue, okay. But without the entrance of the drain marked at the right spot ? Why is there a discrepancy between these items ? How is it possible to exist on the map ? Is any mapper allowed to correct it ?</p>
+<p>I'd like to get some comment on these faults at these coordinates: <a href="https://www.openstreetmap.org/?lat=52.08576&amp;lon=5.14889&amp;zoom=18&amp;layers=M">5.14889 &amp; 52.08576</a>. The water (stream) is colored blue, okay. But without the entrance of the drain marked at the right spot ? Why is there a discrepancy between these items ? How is it possible to exist on the map ? Is any mapper allowed to correct it ?</p>
 <p>I'm curious...</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -68,8 +68,8 @@ osqa_accepted = true
 <div id="post-12964-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is <a href="http://www.openstreetmap.org/?lat=52.08576&amp;lon=5.14889&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.08576&amp;lon=5.14889&amp;zoom=18&amp;layers=M</a> the place you are asking about?</p>
-<p>A lot of data around that point seem to origin from 3dShapes imports. <a href="http://wiki.openstreetmap.org/wiki/3dShapes">http://wiki.openstreetmap.org/wiki/3dShapes</a></p>
+<p>Is <a href="https://www.openstreetmap.org/?lat=52.08576&amp;lon=5.14889&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.08576&amp;lon=5.14889&amp;zoom=18&amp;layers=M</a> the place you are asking about?</p>
+<p>A lot of data around that point seem to origin from 3dShapes imports. <a href="https://wiki.openstreetmap.org/wiki/3dShapes">https://wiki.openstreetmap.org/wiki/3dShapes</a></p>
 </div>
 <div id="comment-12964-info" class="comment-info">
 <span class="comment-age">(26 May '12, 00:34)</span> <span class="comment-user userinfo">gnurk</span>
@@ -123,7 +123,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From looking at the Bing imagery, <a href="http://www.openstreetmap.org/?way=71411667">way 71411667</a> does look like it's in the wrong place by 3-4m to me as well. The Bing imagery may not be correct, though - a couple of things to note about that:</p>
+<p>From looking at the Bing imagery, <a href="https://www.openstreetmap.org/?way=71411667">way 71411667</a> does look like it's in the wrong place by 3-4m to me as well. The Bing imagery may not be correct, though - a couple of things to note about that:</p>
 <ol>
 <li>It's at the south end of the end of one lot of Bing imagery (notice how it gets fuzzy just to the south of there?)</li>
 <li>There aren't really GPS tracks around to say with confidence that the imagery is correct here. Individual GPS tracks can be inaccurate, but on average, in a flat relatively low-rise area like Utrecht they shouldn't all be offset. Some nice traces on Erasmuslaan would really help.</li>
@@ -238,7 +238,7 @@ osqa_accepted = true
 <div id="post-13890-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you mess up please do not save your edit, and please use the permalnk tool to point to the area you have trouble with. see this question: <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p>If you mess up please do not save your edit, and please use the permalnk tool to point to the area you have trouble with. see this question: <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 </div>
 <div id="comment-13890-info" class="comment-info">
 <span class="comment-age">(28 Jun '12, 23:56)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -249,8 +249,8 @@ osqa_accepted = true
 <div id="post-13891-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@Hendrikklaas</span> - if a node is part of several different ways (which is common with the 3dshapes import in the Netherlands), in Potlatch2 you can click on a node and then press <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">"/" (on British keyboards) or "#" (on german keyboards)</a> to cycle through the ways that it's part of.</p>
-<p>At <a href="http://www.openstreetmap.org/?lat=52.042244&amp;lon=5.03551&amp;zoom=18&amp;layers=M">the position that you mention</a> the issue might be with the grass multipolygon <a href="http://www.openstreetmap.org/browse/relation/1121328">here</a>, although it actually seems to <a href="http://a.tile.openstreetmap.org/18/134738/86539.png">render OK</a> in standard view on OSM.org (and the tiles are <a href="http://a.tile.openstreetmap.org/18/134738/86539.png/status">up to date</a>), so maybe it's just Potlatch it doesn't render in?</p>
+<p><span>@Hendrikklaas</span> - if a node is part of several different ways (which is common with the 3dshapes import in the Netherlands), in Potlatch2 you can click on a node and then press <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">"/" (on British keyboards) or "#" (on german keyboards)</a> to cycle through the ways that it's part of.</p>
+<p>At <a href="https://www.openstreetmap.org/?lat=52.042244&amp;lon=5.03551&amp;zoom=18&amp;layers=M">the position that you mention</a> the issue might be with the grass multipolygon <a href="https://www.openstreetmap.org/browse/relation/1121328">here</a>, although it actually seems to <a href="http://a.tile.openstreetmap.org/18/134738/86539.png">render OK</a> in standard view on OSM.org (and the tiles are <a href="http://a.tile.openstreetmap.org/18/134738/86539.png/status">up to date</a>), so maybe it's just Potlatch it doesn't render in?</p>
 </div>
 <div id="comment-13891-info" class="comment-info">
 <span class="comment-age">(29 Jun '12, 01:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

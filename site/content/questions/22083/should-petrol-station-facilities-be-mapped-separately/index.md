@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Petrol (Gas) Stations often have an attached convenience store and other facilities, such as car washes. When the fuel location is mapped as a node, should additional facilities be added to that node, for instance with shop=convenience, or should they be mapped separately?</p>
 <p>Note that the petrol station and the convenience store may have separate brands (e.g., Murco and Costcutter).</p>
-<p>Please also see <a href="https://help.openstreetmap.org/questions/22082/naming-petrol-stations-banks">related question</a> on naming Petrol Stations &amp; Banks.</p>
+<p>Please also see <a href="/questions/22082/naming-petrol-stations-banks">related question</a> on naming Petrol Stations &amp; Banks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-fuel" rel="tag" title="see questions tagged &#39;fuel&#39;">fuel</span> <span class="post-tag tag-link-petrol" rel="tag" title="see questions tagged &#39;petrol&#39;">petrol</span> <span class="post-tag tag-link-station" rel="tag" title="see questions tagged &#39;station&#39;">station</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

@@ -71,7 +71,7 @@ Comments&lt;br&gt;
 This usage of this route sign is common in Hungary often hard to detect whether the intersection is equal or not, if this sign is missing. driver should looking for a give a way sign.&lt;br&gt;</code></pre>
 <p>But I can not save the page, and I got the following error:</p>
 <pre><code>Warning: This action has been automatically identified as harmful. Unconstructive edits will be quickly reverted, and egregious or repeated unconstructive editing will result in your account or IP address being blocked. If you believe this action to be constructive, you may submit it again to confirm it. A brief description of the abuse rule which your action matched is: Spam bot (main)</code></pre>
-<p>And the link of the page I wanted to edit/create is: <a href="http://wiki.openstreetmap.org/wiki/Intersection_with_equal_roads">http://wiki.openstreetmap.org/wiki/Intersection_with_equal_roads</a><br />
+<p>And the link of the page I wanted to edit/create is: <a href="https://wiki.openstreetmap.org/wiki/Intersection_with_equal_roads">https://wiki.openstreetmap.org/wiki/Intersection_with_equal_roads</a><br />
 What did I wrong? Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">

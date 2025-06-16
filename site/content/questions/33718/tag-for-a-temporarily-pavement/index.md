@@ -200,7 +200,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I understand the wiki at <a href="http://wiki.openstreetmap.org/wiki/Key:construction">http://wiki.openstreetmap.org/wiki/Key:construction</a> then the tagging ought to be highway=construction and construction=* where * is whatever the highway tag will be when construction is completed.</p>
+<p>If I understand the wiki at <a href="https://wiki.openstreetmap.org/wiki/Key:construction">https://wiki.openstreetmap.org/wiki/Key:construction</a> then the tagging ought to be highway=construction and construction=* where * is whatever the highway tag will be when construction is completed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

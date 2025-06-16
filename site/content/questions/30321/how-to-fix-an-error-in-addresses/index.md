@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to www.openstreetmap.org and zoom in on your neighbourhood. Then use the <img src="http://help.openstreetmap.org/upfiles/note_2.png" alt="note icon" /> button on the right to place a "note", where you can write a few words that describe the mistake (e.g. "this house has address X" or so).</p>
+<p>Go to www.openstreetmap.org and zoom in on your neighbourhood. Then use the <img src="/upfiles/note_2.png" alt="note icon" /> button on the right to place a "note", where you can write a few words that describe the mistake (e.g. "this house has address X" or so).</p>
 <p>This will not automatically fix the map but allow mappers to see clearly what is wrong and fix it manually.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -126,7 +126,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Notes added and resolved it seems <a href="http://www.openstreetmap.org/note/109838">http://www.openstreetmap.org/note/109838</a> and <a href="http://www.openstreetmap.org/note/109839">http://www.openstreetmap.org/note/109839</a> - <a href="http://www.openstreetmap.org/changeset/20277999">http://www.openstreetmap.org/changeset/20277999</a></p>
+<p>Notes added and resolved it seems <a href="https://www.openstreetmap.org/note/109838">https://www.openstreetmap.org/note/109838</a> and <a href="https://www.openstreetmap.org/note/109839">https://www.openstreetmap.org/note/109839</a> - <a href="https://www.openstreetmap.org/changeset/20277999">https://www.openstreetmap.org/changeset/20277999</a></p>
 </div>
 <div id="comment-30326-info" class="comment-info">
 <span class="comment-age">(30 Jan '14, 09:33)</span> <span class="comment-user userinfo">EdLoach ♦</span>

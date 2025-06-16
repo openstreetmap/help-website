@@ -70,7 +70,7 @@ osqa_accepted = true
 <div id="post-64980-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also see the previous question <a href="https://help.openstreetmap.org/questions/54737/requesting-re-render-of-a-tile">https://help.openstreetmap.org/questions/54737/requesting-re-render-of-a-tile</a></p>
+<p>Also see the previous question <a href="/questions/54737/requesting-re-render-of-a-tile">https://help.openstreetmap.org/questions/54737/requesting-re-render-of-a-tile</a></p>
 </div>
 <div id="comment-64980-info" class="comment-info">
 <span class="comment-age">(28 Jul '18, 09:44)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

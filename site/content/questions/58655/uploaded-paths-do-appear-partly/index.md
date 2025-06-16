@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>I expect that you will need to wait longer to let the renderer catch up and display your edits and all zoom levels do not update at the same time. Also refresh your browser as it may be storing an old image.<br />
 A more comprehensive reply here:<br />
-<a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

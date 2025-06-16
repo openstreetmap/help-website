@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We have a wiki page about <a href="http://wiki.openstreetmap.org/wiki/Routing">routing</a> in general and lists of known <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">online</a> and <a href="http://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">offline</a> routers.</p>
+<p>We have a wiki page about <a href="https://wiki.openstreetmap.org/wiki/Routing">routing</a> in general and lists of known <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">online</a> and <a href="https://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">offline</a> routers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

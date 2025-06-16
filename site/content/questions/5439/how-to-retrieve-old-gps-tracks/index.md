@@ -108,10 +108,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Well you can do some of those things. e.g. find traces uploaded by a particular user. Here's mine...</p>
-<p><a href="http://www.openstreetmap.org/user/Harry%20Wood/traces">http://www.openstreetmap.org/user/Harry%20Wood/traces</a></p>
-<p>At least those are the one which are available on public GPS trace list as per my <a href="http://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">visibility choices</a> You can navigate to that URL from anyone's user page and then the 'traces' link</p>
+<p><a href="https://www.openstreetmap.org/user/Harry%20Wood/traces">https://www.openstreetmap.org/user/Harry%20Wood/traces</a></p>
+<p>At least those are the one which are available on public GPS trace list as per my <a href="https://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">visibility choices</a> You can navigate to that URL from anyone's user page and then the 'traces' link</p>
 <p>"by location" you can kind of do, but not within the trace listings on the website. You can download whole cloud of GPS points at a particular location using one of the editors. That's fetching a bounding box with everyone's GPS traces all mixed up. Some of these points (again as per the Visibility Choices) are associated with the trace upload listing which they're part of.</p>
-<p>Users can set tags on their GPS traces. These are different from the tags seen within the main OpenStreetMap data. They're just single words, and probably not very useful for anything really. e.g. <a href="http://www.openstreetmap.org/traces/tag/river">here's all the traces tagged "river"</a> ...but that doesn't mean they represent the path of a river. Could be someone out on a walk which was partly along a river.</p>
+<p>Users can set tags on their GPS traces. These are different from the tags seen within the main OpenStreetMap data. They're just single words, and probably not very useful for anything really. e.g. <a href="https://www.openstreetmap.org/traces/tag/river">here's all the traces tagged "river"</a> ...but that doesn't mean they represent the path of a river. Could be someone out on a walk which was partly along a river.</p>
 <p>Think that's everything. We don't currently offer any bulk download options for GPS data.</p>
 </div>
 <div class="answer-controls post-controls">

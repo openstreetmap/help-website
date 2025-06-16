@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looks like boundary relations used to be missing in Hong Kong. A helpful mapper already has added the <a href="http://www.openstreetmap.org/relation/2558880">Eastern</a> and <a href="http://www.openstreetmap.org/relation/2558881">Southern district</a> as city boundaries, which normally fix the problem. But the areas were too large to be picked up by Nominatim automatically. Updated manually now.</p>
+<p>Looks like boundary relations used to be missing in Hong Kong. A helpful mapper already has added the <a href="https://www.openstreetmap.org/relation/2558880">Eastern</a> and <a href="https://www.openstreetmap.org/relation/2558881">Southern district</a> as city boundaries, which normally fix the problem. But the areas were too large to be picked up by Nominatim automatically. Updated manually now.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

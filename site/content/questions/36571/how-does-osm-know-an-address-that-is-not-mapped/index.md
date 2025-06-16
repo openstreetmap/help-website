@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The search function on the <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> map page uses Nominatim. In addition the OSM data, Nominatim is loaded with information from other databases. If Nominatim does not find a result in the OSM data it looks at those other databases. So it is likely that your search is turning up data from another database.</p>
+<p>The search function on the <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> map page uses Nominatim. In addition the OSM data, Nominatim is loaded with information from other databases. If Nominatim does not find a result in the OSM data it looks at those other databases. So it is likely that your search is turning up data from another database.</p>
 <p>If you add the address information to OSM it should show up first in the search function and, better yet from my point of view, will be available for "off line" searching with other software like OsmAnd.</p>
 <p>So please add your locally gathered neighborhood address information to OSM, it will improve the data. And thanks for doing that!</p>
 </div>

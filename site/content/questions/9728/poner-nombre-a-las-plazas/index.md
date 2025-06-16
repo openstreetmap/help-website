@@ -113,12 +113,12 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Es posible hacerlo: Haz un solo nodo, y anótala con "area=yes, name=Plaza de los cuatro vientos".</p>
-<p>Pero no es recomendado. La manera oficial en Openstreetmap es de poner un poligono, como describido en <a href="http://wiki.openstreetmap.org/wiki/Key:area">http://wiki.openstreetmap.org/wiki/Key:area</a> .</p>
-<p>Porque no quieres hacer un poligono? No es necesario que sea exacto: Si no tienes las dimensiones exactas, es bastante trazar la plaza (siguiendo las fotografías orbitales). Para notar que el poligono no ex exacto, puedes poner "fixme=resurvey" ( <a href="http://wiki.openstreetmap.org/wiki/Fixme">http://wiki.openstreetmap.org/wiki/Fixme</a> ).</p>
+<p>Pero no es recomendado. La manera oficial en Openstreetmap es de poner un poligono, como describido en <a href="https://wiki.openstreetmap.org/wiki/Key:area">https://wiki.openstreetmap.org/wiki/Key:area</a> .</p>
+<p>Porque no quieres hacer un poligono? No es necesario que sea exacto: Si no tienes las dimensiones exactas, es bastante trazar la plaza (siguiendo las fotografías orbitales). Para notar que el poligono no ex exacto, puedes poner "fixme=resurvey" ( <a href="https://wiki.openstreetmap.org/wiki/Fixme">https://wiki.openstreetmap.org/wiki/Fixme</a> ).</p>
 <hr />
 <p>Yes, it is possible: Make a single node, and tag it as "area=yes, name=Plaza de los cuatro vientos".</p>
-<p>However, this is not recommended. The official way to do it in Openstreetmap is to make a polygon, as described in <a href="http://wiki.openstreetmap.org/wiki/Key:area">http://wiki.openstreetmap.org/wiki/Key:area</a> .</p>
-<p>Why don't you want to make a polygon? It does not need to be precise: If you don't know the exact dimensions, just trace the square (following the satellite imagery). To note that it is not exact, you can tag it as "fixme=resurvey" ( <a href="http://wiki.openstreetmap.org/wiki/Fixme">http://wiki.openstreetmap.org/wiki/Fixme</a> ).</p>
+<p>However, this is not recommended. The official way to do it in Openstreetmap is to make a polygon, as described in <a href="https://wiki.openstreetmap.org/wiki/Key:area">https://wiki.openstreetmap.org/wiki/Key:area</a> .</p>
+<p>Why don't you want to make a polygon? It does not need to be precise: If you don't know the exact dimensions, just trace the square (following the satellite imagery). To note that it is not exact, you can tag it as "fixme=resurvey" ( <a href="https://wiki.openstreetmap.org/wiki/Fixme">https://wiki.openstreetmap.org/wiki/Fixme</a> ).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Embankments are either mapped as an additional property on an existing geometry (for example on a way with highway=xxxx) or by man_made=embankment on a way. See <a href="http://wiki.openstreetmap.org/wiki/Key:embankment">embankment on the wiki</a></p>
+<p>Embankments are either mapped as an additional property on an existing geometry (for example on a way with highway=xxxx) or by man_made=embankment on a way. See <a href="https://wiki.openstreetmap.org/wiki/Key:embankment">embankment on the wiki</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

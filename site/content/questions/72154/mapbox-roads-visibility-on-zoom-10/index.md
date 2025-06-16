@@ -126,7 +126,7 @@ One Answer:
 <div class="answer-body">
 <p>Vector tiles, as used by Mapbox, have a certain selection of features baked in at each zoom level.</p>
 <p>If Mapbox have chosen not to include minor roads at zoom level 10, there's not much you can do about that, I'm afraid. You should contact Mapbox support and ask if they are willing to provide a product that meets your needs. Unfortunately, there doesn't seem to be any public documentation as to what Mapbox include at each zoom level.</p>
-<p>Alternatively, you can consider another tile provider or even creating your own, as documented in this similar answer: <a href="https://help.openstreetmap.org/questions/45934/smaller-roads-visibility-on-zoom-13-with-mapbox">https://help.openstreetmap.org/questions/45934/smaller-roads-visibility-on-zoom-13-with-mapbox</a></p>
+<p>Alternatively, you can consider another tile provider or even creating your own, as documented in this similar answer: <a href="/questions/45934/smaller-roads-visibility-on-zoom-13-with-mapbox">https://help.openstreetmap.org/questions/45934/smaller-roads-visibility-on-zoom-13-with-mapbox</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

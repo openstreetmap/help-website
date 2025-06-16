@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is quite possible that there are small issues with the OSM database server, so your new data cannot be added to the database now. Wait some minutes, and try again.</p>
-<p>If there is a bigger problem with some OSM server infrastructure, have a look at the <a href="http://wiki.openstreetmap.org">OSM wiki</a> about <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">Platform_Status</a></p>
+<p>If there is a bigger problem with some OSM server infrastructure, have a look at the <a href="http://wiki.openstreetmap.org">OSM wiki</a> about <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">Platform_Status</a></p>
 <p>Or there are some problems with your internet browser ... close the browser and reopen, or clear browser cache.</p>
 </div>
 <div class="answer-controls post-controls">

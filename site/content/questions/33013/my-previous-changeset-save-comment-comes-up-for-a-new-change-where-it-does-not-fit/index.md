@@ -124,11 +124,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing that you're talking about <a href="http://www.openstreetmap.org/?mlat=55.84430&amp;mlon=-4.01947#map=18/55.84430/-4.01947">here</a> and <a href="http://www.openstreetmap.org/?mlat=55.84557&amp;mlon=-4.01980#map=19/55.84557/-4.01980">here</a>? I don't see "no parking here" anywhere - what I suspect has happened is that the first time you save some changes the editor asks you for a description (which you entered), and the second time you save that text defaults to what you entered previously. You can overtype that "changeset comment" text with whatever you like - it just defaults to the previous value to allow you to do several saves without typing it in again.</p>
+<p>I'm guessing that you're talking about <a href="https://www.openstreetmap.org/?mlat=55.84430&amp;mlon=-4.01947#map=18/55.84430/-4.01947">here</a> and <a href="https://www.openstreetmap.org/?mlat=55.84557&amp;mlon=-4.01980#map=19/55.84557/-4.01980">here</a>? I don't see "no parking here" anywhere - what I suspect has happened is that the first time you save some changes the editor asks you for a description (which you entered), and the second time you save that text defaults to what you entered previously. You can overtype that "changeset comment" text with whatever you like - it just defaults to the previous value to allow you to do several saves without typing it in again.</p>
 <p>The changeset comment text doesn't appear on the map anywhere - it's just information for other mappers. You can look at your previous edits by going here:</p>
-<p><a href="http://www.openstreetmap.org/user/Mscheivous/history">http://www.openstreetmap.org/user/Mscheivous/history</a></p>
+<p><a href="https://www.openstreetmap.org/user/Mscheivous/history">https://www.openstreetmap.org/user/Mscheivous/history</a></p>
 <p>and can see how the changeset comment appears to other mappers here:</p>
-<p><a href="http://www.openstreetmap.org/changeset/22221298">http://www.openstreetmap.org/changeset/22221298</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/22221298">https://www.openstreetmap.org/changeset/22221298</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ One Answer:
 <div class="comment-text">
 <p>by <em>not</em> mapping amenity=parking ? :-)</p>
 <p>or by tagging the street as parking:lane:both=no_parking</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Key:parking:lane">http://wiki.openstreetmap.org/wiki/Key:parking:lane</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Key:parking:lane">https://wiki.openstreetmap.org/wiki/Key:parking:lane</a></p>
 </div>
 <div id="comment-33044-info" class="comment-info">
 <span class="comment-age">(09 May '14, 14:08)</span> <span class="comment-user userinfo">escada</span>

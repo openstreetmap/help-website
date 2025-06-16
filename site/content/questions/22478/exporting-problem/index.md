@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the answer to <a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">this previous question</a> - that (and the links from it) should explain everything.</p>
+<p>Have a look at the answer to <a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">this previous question</a> - that (and the links from it) should explain everything.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

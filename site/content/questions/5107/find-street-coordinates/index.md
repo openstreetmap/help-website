@@ -113,7 +113,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are looking for <strong>geocoding</strong> based on OpenStreetMap.</p>
-<p>There are several different ways to do it. If you want to set up your own server, try <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. There are other solutions out there, e.g. the <a href="https://github.com/geocommons/geocoder">GeoCommons geocoder</a> aimed primarily at geocoding US addresses (not sure how far their OpenStreetMap import project has progressed) and <a href="http://www.gisgraphy.com">Gisgraphy</a> who have a working OSM import but don't do house numbers yet.</p>
+<p>There are several different ways to do it. If you want to set up your own server, try <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. There are other solutions out there, e.g. the <a href="https://github.com/geocommons/geocoder">GeoCommons geocoder</a> aimed primarily at geocoding US addresses (not sure how far their OpenStreetMap import project has progressed) and <a href="http://www.gisgraphy.com">Gisgraphy</a> who have a working OSM import but don't do house numbers yet.</p>
 <p>If you are looking for an online service (i.e. don't want to run your own server), then your best bet is <a href="http://open.mapquestapi.com/nominatim/">MapQuest's free Nominatim-based service</a>.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When i use a jpeg in a question or an answer, and take care to do a couple of carriage returns to separate the pic and the text they end up messy. Why? You can see the problem in my answer here <a href="https://help.openstreetmap.org/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp">https://help.openstreetmap.org/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp</a> edit:- I have fixed that one. But you can see the same text/pic problem in this Question <a href="https://help.openstreetmap.org/questions/62074/how-to-tag-emergency-exit-staircase">https://help.openstreetmap.org/questions/62074/how-to-tag-emergency-exit-staircase</a> Note while attempting to get this jpeg I found that with different display sizes the last word " staircase:" was only misplaced like this with the screen at some aspect ratios.. this explains our confusion. You may see something different on your screen than i do on mine:)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Jpeg_Problem.JPG" alt="alt text" /></p>
+<p>When i use a jpeg in a question or an answer, and take care to do a couple of carriage returns to separate the pic and the text they end up messy. Why? You can see the problem in my answer here <a href="/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp">https://help.openstreetmap.org/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp</a> edit:- I have fixed that one. But you can see the same text/pic problem in this Question <a href="/questions/62074/how-to-tag-emergency-exit-staircase">https://help.openstreetmap.org/questions/62074/how-to-tag-emergency-exit-staircase</a> Note while attempting to get this jpeg I found that with different display sizes the last word " staircase:" was only misplaced like this with the screen at some aspect ratios.. this explains our confusion. You may see something different on your screen than i do on mine:)</p>
+<p><img src="/upfiles/Jpeg_Problem.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-text" rel="tag" title="see questions tagged &#39;text&#39;">text</span> <span class="post-tag tag-link-meta" rel="tag" title="see questions tagged &#39;meta&#39;">meta</span> <span class="post-tag tag-link-osqa" rel="tag" title="see questions tagged &#39;osqa&#39;">osqa</span> <span class="post-tag tag-link-layout" rel="tag" title="see questions tagged &#39;layout&#39;">layout</span>
@@ -66,7 +66,7 @@ osqa_accepted = true
 <div id="post-62094-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Related Question <a href="https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
+<p>Related Question <a href="/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
 </div>
 <div id="comment-62094-info" class="comment-info">
 <span class="comment-age">(14 Feb '18, 20:54)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -110,7 +110,7 @@ osqa_accepted = true
 <div id="post-62121-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you look at this question you will see the final word "staircase:" is misplaced to the bottom of the jpeg. <a href="https://help.openstreetmap.org/questions/62074/how-to-tag-emergency-exit-staircase">https://help.openstreetmap.org/questions/62074/how-to-tag-emergency-exit-staircase</a></p>
+<p>If you look at this question you will see the final word "staircase:" is misplaced to the bottom of the jpeg. <a href="/questions/62074/how-to-tag-emergency-exit-staircase">https://help.openstreetmap.org/questions/62074/how-to-tag-emergency-exit-staircase</a></p>
 </div>
 <div id="comment-62121-info" class="comment-info">
 <span class="comment-age">(15 Feb '18, 20:35)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -133,7 +133,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>I have edited the Question and whilst trying to get the text and the staircase on screen for the requested jpeg, the final word "staircase: " moved from the bottom left of the jpeg to the end of the text ( where i wanted it) above the jpeg. All very confusing. I'll post a jpeg of the forum pic ( two side by side ) after pressing ctrl + or - a few times on my win10 pc</p>
-<p><a href="https://help.openstreetmap.org/upfiles/Staircase_at_two_zooms.JPG">https://help.openstreetmap.org/upfiles/Staircase_at_two_zooms.JPG</a></p>
+<p><span>/upfiles/Staircase_at_two_zooms.JPG</span></p>
 </div>
 <div id="comment-62127-info" class="comment-info">
 <span class="comment-age">(15 Feb '18, 21:38)</span> <span class="comment-user userinfo">andy mackey</span>

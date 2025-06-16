@@ -86,7 +86,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span></span><span>@SomeoneElse</span>, ok, the trace: <a href="http://www.openstreetmap.org/user/narowerze/traces/1317716">http://www.openstreetmap.org/user/narowerze/traces/1317716</a> and this point: <a href="http://www.openstreetmap.org/?lat=53.13433&amp;lon=18.54381&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=53.13433&amp;lon=18.54381&amp;zoom=17&amp;layers=M</a> (near "Kapliczka" at crossroads).</p>
+<p><span></span><span>@SomeoneElse</span>, ok, the trace: <a href="https://www.openstreetmap.org/user/narowerze/traces/1317716">https://www.openstreetmap.org/user/narowerze/traces/1317716</a> and this point: <a href="https://www.openstreetmap.org/?lat=53.13433&amp;lon=18.54381&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=53.13433&amp;lon=18.54381&amp;zoom=17&amp;layers=M</a> (near "Kapliczka" at crossroads).</p>
 </div>
 <div id="comment-16242-info" class="comment-info">
 <span class="comment-age">(18 Sep '12, 22:40)</span> <span class="comment-user userinfo">macias</span>
@@ -140,7 +140,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If we take your "monument" as an example (which is <a href="http://www.openstreetmap.org/?lat=53.148715&amp;lon=18.517076&amp;zoom=18&amp;layers=M">here</a>, I think), the POI is included in the trace as a waypoint called "monument".</p>
+<p>If we take your "monument" as an example (which is <a href="https://www.openstreetmap.org/?lat=53.148715&amp;lon=18.517076&amp;zoom=18&amp;layers=M">here</a>, I think), the POI is included in the trace as a waypoint called "monument".</p>
 <p>I'm assuming that you want to create a node from that waypoint. In order to do that you'll need to:</p>
 <ol>
 <li>"alt-click" on the orange dot that is the waypoint in the trace - this turns it green.</li>

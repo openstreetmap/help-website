@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Duplicate of <a href="https://help.openstreetmap.org/questions/51480/coastline-and-island-not-updated">https://help.openstreetmap.org/questions/51480/coastline-and-island-not-updated</a></p>
+<p>Duplicate of <a href="/questions/51480/coastline-and-island-not-updated">https://help.openstreetmap.org/questions/51480/coastline-and-island-not-updated</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

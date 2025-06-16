@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, the geocoder used on osm.org.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, the geocoder used on osm.org.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -211,7 +211,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A collection off all those (based on OSM data) can be found in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a>.</p>
+<p>A collection off all those (based on OSM data) can be found in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a>.</p>
 <p>Add if one is missing, or edit if Information is wrong or outdated.</p>
 </div>
 <div class="answer-controls post-controls">

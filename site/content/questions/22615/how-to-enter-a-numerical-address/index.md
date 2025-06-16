@@ -129,7 +129,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>It seems that the mentioned hotel is this one:</p>
-<p><a href="http://www.openstreetmap.org/browse/node/311877308">http://www.openstreetmap.org/browse/node/311877308</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/311877308">https://www.openstreetmap.org/browse/node/311877308</a></p>
 <p>addr-data seems to be fine in OSM raw data ... so it is more an issue of Osman's mapcreator process.</p>
 <p>Come on over to <a href="https://groups.google.com/forum/?fromgroups#!forum/osmand">https://groups.google.com/forum/?fromgroups#!forum/osmand</a></p>
 <p>where we can go deeper in detail.</p>

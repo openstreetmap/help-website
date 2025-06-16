@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-36230-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9529/nickbockelman">@NickBockelman</a>: Please just ask a new question ("for mac, …") if you cannot find a duplicate question in the old ones.</p>
+<p><a href="https://help.openstreetmap.org/users/9529/nickbockelman">@NickBockelman</a>: Please just ask a new question ("for mac, …") if you cannot find a duplicate question in the old ones.</p>
 </div>
 <div id="comment-36230-info" class="comment-info">
 <span class="comment-age">(26 Aug '14, 22:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

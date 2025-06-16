@@ -43,9 +43,9 @@ osqa_accepted = false
 <p>Here is more detail:</p>
 <p>Thanks for the responses, sorry I should have been more precise. I typically "edit with iD" with the in-browser editor. It appears that the items properly render in a green color in the OSM "standard" viewing layer, however when you go into the in browser editor they do not.</p>
 <p>Here is the standard view from the browser (not in edit mode). The ovals are specified as feature type "Tee Box" and are drawn as I would expect here.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_standard_view.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/osm_standard_view.jpg" alt="alt text" /></p>
 <p>In edit mode, there was a change at some point as seen below. The screen shot below shows a previously mapped course (the lower part), vs a new one I started working on (the upper one). All the ovals on this image are all specified as the same feature type as "Tee Box". When editing I was immediately surprised that it looked different.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_editor_view.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/osm_editor_view.jpg" alt="alt text" /></p>
 <p>While the feature specification of all the ovals if the same ("Tee Box"), it looks like the behavior of the tags that are automatically added has changed. Before it would tag as golf=tee and landuse=grass. Now it only applies golf=tee. Apparently the landuse tag has something to do with the color shown in the editor?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

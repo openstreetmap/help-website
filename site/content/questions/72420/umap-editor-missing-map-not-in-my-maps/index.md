@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>First, please check you are still using the same umap instance as before (e.g. umap.openstreetmap.fr, umap.openstreetmap.de, ...)</p>
-<p>Then please have a look at the answer to a <a href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map">previously placed question of the same topic</a>, or <a href="https://help.openstreetmap.org/questions/72020/missing-toolbar">yet another one</a>.</p>
+<p>Then please have a look at the answer to a <a href="/questions/69710/umap-openstreetmap-change-map">previously placed question of the same topic</a>, or <a href="/questions/72020/missing-toolbar">yet another one</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

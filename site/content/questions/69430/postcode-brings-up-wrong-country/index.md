@@ -164,7 +164,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you know the postcode of a house or building it is simple to map. Using iD pick "area"<img src="https://help.openstreetmap.org/upfiles/iD_postcode.JPG" alt="alt text" /> draw the building outline easy with bing harder without. Choose house or building for the polygon you have drawn. Add the postcode. Save it.</p>
+<p>If you know the postcode of a house or building it is simple to map. Using iD pick "area"<img src="/upfiles/iD_postcode.JPG" alt="alt text" /> draw the building outline easy with bing harder without. Choose house or building for the polygon you have drawn. Add the postcode. Save it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

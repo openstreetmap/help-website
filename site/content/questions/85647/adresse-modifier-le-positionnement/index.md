@@ -83,7 +83,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Bonjour,</p>
 <p>Le point créé concerne le Siam (Syndicat intercommunal d'Assainissement de Marne-la-Vallée). Le type d'objet est une station d'épuration (établissement public). Adresse du point créé est : 13 avenue de la Courtillière, 77400 Saint-Thibault-des-Vignes. Le point créé est situé au niveau du nom "Siam" en haut à gauche de l'extrait de plan ci-dessous.</p>
-<p>Actuellement quand on saisit cette adresse <img src="https://help.openstreetmap.org/upfiles/Siam.JPG" alt="elle" /> le point s'affiche au niveau de l'intersection entre l'avenue de la Courtillière et le rond-point jaune en bas à droite de l'image.</p>
+<p>Actuellement quand on saisit cette adresse <img src="/upfiles/Siam.JPG" alt="elle" /> le point s'affiche au niveau de l'intersection entre l'avenue de la Courtillière et le rond-point jaune en bas à droite de l'image.</p>
 <p>L'objectif serait qu'en tapant l'adresse "13 avenue de la Courtillière, Saint-Thibault-des-Vignes" dans la barre de recherche d'OSM, la carte soit positionnée au niveau du point créé "Siam". Merci.</p>
 </div>
 <div id="comment-85658-info" class="comment-info">

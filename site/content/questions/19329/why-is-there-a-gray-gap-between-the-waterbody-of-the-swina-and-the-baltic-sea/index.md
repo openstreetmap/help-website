@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why is there a gray gap between the waterbody of the Swina and the Baltic Sea?"
-description = '''Refering to http://www.openstreetmap.org/?lat=53.9236166&amp;amp;lon=14.2816911&amp;amp;zoom=16  On the map, there is this small gray gap between the waterbody and the Baltic Sea. The data in JOSM shows that the coastline and the waterbody share the same line segment, so there should be no such gap. Or is t...'''
+description = '''Refering to https://www.openstreetmap.org/?lat=53.9236166&amp;amp;lon=14.2816911&amp;amp;zoom=16  On the map, there is this small gray gap between the waterbody and the Baltic Sea. The data in JOSM shows that the coastline and the waterbody share the same line segment, so there should be no such gap. Or is t...'''
 date = "2013-01-25T01:29:00Z"
 lastmod = "2013-01-25T01:51:00Z"
 weight = 19329
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Refering to <a href="http://www.openstreetmap.org/?lat=53.9236166&amp;lon=14.2816911&amp;zoom=16">http://www.openstreetmap.org/?lat=53.9236166&amp;lon=14.2816911&amp;zoom=16</a></p>
+<p>Refering to <a href="https://www.openstreetmap.org/?lat=53.9236166&amp;lon=14.2816911&amp;zoom=16">https://www.openstreetmap.org/?lat=53.9236166&amp;lon=14.2816911&amp;zoom=16</a></p>
 <p>On the map, there is this small gray gap between the waterbody and the Baltic Sea. The data in JOSM shows that the coastline and the waterbody share the same line segment, so there should be no such gap. Or is there any other data involved that defines coastlines?</p>
 <p>If you look closely, this gray area also occurs at the beach besides the river mouth.</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You've pretty much answered your own question - it's probably a coastline issue. <a href="https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">This previous answer</a> explains it.</p>
+<p>You've pretty much answered your own question - it's probably a coastline issue. <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">This previous answer</a> explains it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

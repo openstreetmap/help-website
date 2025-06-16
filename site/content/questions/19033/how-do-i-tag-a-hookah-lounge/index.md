@@ -176,7 +176,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Do they also provide drinks and food/snacks? Then maybe amenity=cafe or amenity=pub or amenity=bar can make sense. add shop=tobacco on the same node, if they sell tobacco products (e.g. your own hookah or tobacco for your own hookah).</p>
 <p>The hookah-use I would specify with other tags.</p>
-<p>there is a proposal for smoking here: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Smoking">http://wiki.openstreetmap.org/wiki/Proposed_features/Smoking</a></p>
+<p>there is a proposal for smoking here: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Smoking">https://wiki.openstreetmap.org/wiki/Proposed_features/Smoking</a></p>
 <p>maybe the hookah can be included in this proposal (e.g. smoking=hookah)? Needs documentation, because the hookah is known under several names internationally (narghile in Israel, kalyan in Russia, waterpipe (Wasserpfeife) in German, ... all mean the same thing)</p>
 </div>
 <div class="answer-controls post-controls">

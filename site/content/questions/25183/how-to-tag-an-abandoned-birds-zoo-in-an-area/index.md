@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use the disused prefix (see <a href="http://wiki.openstreetmap.org/wiki/Disused)">http://wiki.openstreetmap.org/wiki/Disused)</a></p>
+<p>I would use the disused prefix (see <a href="https://wiki.openstreetmap.org/wiki/Disused)">https://wiki.openstreetmap.org/wiki/Disused)</a></p>
 <p>disused:tourism=zoo old_name=... (with an underscore, not a dash)</p>
 <p>perhaps add some access=yes/no</p>
 <p>and tag the current use with leisure=park or garden.</p>

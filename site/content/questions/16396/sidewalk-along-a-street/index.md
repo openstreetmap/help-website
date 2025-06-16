@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>It's probably worth having a read of the <a href="https://help.openstreetmap.org/questions/1236/should-i-map-sidewalks">previous</a> discussions here about this. It's also been <a href="https://www.google.co.uk/search?q=sidewalk+site%3Ahttp%3A%2F%2Flists.openstreetmap.org%2Fpipermail%2Ftagging%2F&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a">done to death</a> on the mailing lists too.</p>
+<p>It's probably worth having a read of the <a href="/questions/1236/should-i-map-sidewalks">previous</a> discussions here about this. It's also been <a href="https://www.google.co.uk/search?q=sidewalk+site%3Ahttp%3A%2F%2Flists.openstreetmap.org%2Fpipermail%2Ftagging%2F&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a">done to death</a> on the mailing lists too.</p>
 </div>
 <div id="comment-16398-info" class="comment-info">
 <span class="comment-age">(24 Sep '12, 01:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>additionally, you can tag the road with sidewalk=left/right/both/none:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:sidewalk">http://wiki.openstreetmap.org/wiki/Key:sidewalk</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:sidewalk">https://wiki.openstreetmap.org/wiki/Key:sidewalk</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

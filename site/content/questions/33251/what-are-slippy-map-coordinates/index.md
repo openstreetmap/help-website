@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What are slippy map coordinates?"
-description = '''http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43 names slippy map coordinates in contrast to lat/lon. What are they?'''
+description = '''https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43 names slippy map coordinates in contrast to lat/lon. What are they?'''
 date = "2014-05-16T20:51:00Z"
 lastmod = "2014-05-16T20:53:00Z"
 weight = 33251
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43</a></p>
 <p>names slippy map coordinates in contrast to lat/lon. What are they?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This refers to the zoom/x/y combination used to identify map tiles. See <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">Slippy Map Tilenames</a> on the wiki for more info.</p>
+<p>This refers to the zoom/x/y combination used to identify map tiles. See <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">Slippy Map Tilenames</a> on the wiki for more info.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

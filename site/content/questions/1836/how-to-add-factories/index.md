@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From the wiki, I would use <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=manufacture</a> for the factory buildings, and make sure the area was contained within a <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dindustrial">landuse=industrial</a> zone. Of course, tags such as the name of the factory are also useful.</p>
+<p>From the wiki, I would use <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=manufacture</a> for the factory buildings, and make sure the area was contained within a <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dindustrial">landuse=industrial</a> zone. Of course, tags such as the name of the factory are also useful.</p>
 <p>On the buildings page there is additional information about how to add the outlines of buildings to OpenStreetMap.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>This is probably the longest and most complicated-sounding question you've ever heard.</p>
 <p>So, in the UK, there's a route 410, run by Southdown PSV, which runs between Redhill and Hurst Green. This is the normal route.</p>
 <p>However, there are many alternate routes for this.</p>
-<p>For example, for it's regular route (non-school service), on most journeys, it will travel along the A25 at this area: <a href="http://www.openstreetmap.org/#map=17/51.25296/-0.01743">http://www.openstreetmap.org/#map=17/51.25296/-0.01743</a></p>
+<p>For example, for it's regular route (non-school service), on most journeys, it will travel along the A25 at this area: <a href="https://www.openstreetmap.org/#map=17/51.25296/-0.01743">https://www.openstreetmap.org/#map=17/51.25296/-0.01743</a></p>
 <p>However, at certain times (specifically 6:34, 7:25, 7:57, 10:13 and 14:13, from Hurst Green to Redhill; and then at 12:35, 16:15 and 18:35, from Redhill to Hurst Green), the bus instead goes through the Old Oxted area (where the Godstone Road and High Street C84 is) and then travels back on to the A25.</p>
 <p>Then there are, as mentioned, school services, of which there are many different routes</p>
 <p>These routes are: Sackville School in East Grinstead, to Hurst Green (after which it continues its normal route to Redhill) starting at 7:42</p>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-07-04_at_18.29.29.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2022-07-04_at_18.29.29.png" alt="alt text" /></p>
 <p>Here is a screen shot of how the name appears on the map we use (Mapbox). Uncertain why Timor Leste shows up as "Timor Lest". Is anyone able to assist please and thank you!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

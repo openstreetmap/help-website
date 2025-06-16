@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>When adding tags that apply to the whole object (mostly wikipedia/data, but there are others), should I create a relation and add the tag to the relation, or should I add the tag to every way that's part of the object.</p>
-<p>For example the <a href="http://www.openstreetmap.org/way/114618483">White Cliffs of Dover</a> has several ways. Some have a different set of tags than others, though. Some have different (specific) names, though they're all <a href="https://commons.wikimedia.org/wiki/File:White_Cliffs_of_Dover_map.png">part</a> of the Cliffs of Dover. Should we have a relation with name=White Cliffs of Dover, wikidata=Q754785, operator=National Trust, etc?</p>
-<p>What about streets? I see there's <a href="http://wiki.openstreetmap.org/wiki/Relation:street">relation:street</a> so I think I'll go ahead and use that.</p>
+<p>For example the <a href="https://www.openstreetmap.org/way/114618483">White Cliffs of Dover</a> has several ways. Some have a different set of tags than others, though. Some have different (specific) names, though they're all <a href="https://commons.wikimedia.org/wiki/File:White_Cliffs_of_Dover_map.png">part</a> of the Cliffs of Dover. Should we have a relation with name=White Cliffs of Dover, wikidata=Q754785, operator=National Trust, etc?</p>
+<p>What about streets? I see there's <a href="https://wiki.openstreetmap.org/wiki/Relation:street">relation:street</a> so I think I'll go ahead and use that.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-split" rel="tag" title="see questions tagged &#39;split&#39;">split</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>

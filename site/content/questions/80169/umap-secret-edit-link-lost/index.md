@@ -136,7 +136,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am not an expert but in <a href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map/69714">this answer</a> to a previous similar question, it says that it's possible to recreate a uMap by sharing the old one (that is by choosing to download it fully as a file with extension <strong>umap</strong>) and then importing that file to a new empty map.</p>
+<p>I am not an expert but in <a href="/questions/69710/umap-openstreetmap-change-map/69714">this answer</a> to a previous similar question, it says that it's possible to recreate a uMap by sharing the old one (that is by choosing to download it fully as a file with extension <strong>umap</strong>) and then importing that file to a new empty map.</p>
 <p>This may solve your problem without the burden to retrieve the secret edit link.</p>
 </div>
 <div class="answer-controls post-controls">

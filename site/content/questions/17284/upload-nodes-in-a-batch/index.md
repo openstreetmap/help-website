@@ -170,8 +170,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a> before proceeding any further, since it sounds like your points are comming from an external source and there are certain preparations to do in that case (main 3 beeing: double-check the licence, announce your import to the local community, and QA-check the actual data).</p>
-<p>Once that's done (or if your data doesn't qualify as an "import"), it really depends what format your data is in to begin with. Assuming your data is a csv and you have some basic scripting skills, the simplest way is probably to transform your csv into an <a href="http://wiki.openstreetmap.org/wiki/Osm_format">osm xml</a> file, load that file in JOSM, QA-check it, and upload. If those assumtions wetre wrong, you need to give us more details.</p>
+<p>Please read the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a> before proceeding any further, since it sounds like your points are comming from an external source and there are certain preparations to do in that case (main 3 beeing: double-check the licence, announce your import to the local community, and QA-check the actual data).</p>
+<p>Once that's done (or if your data doesn't qualify as an "import"), it really depends what format your data is in to begin with. Assuming your data is a csv and you have some basic scripting skills, the simplest way is probably to transform your csv into an <a href="https://wiki.openstreetmap.org/wiki/Osm_format">osm xml</a> file, load that file in JOSM, QA-check it, and upload. If those assumtions wetre wrong, you need to give us more details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

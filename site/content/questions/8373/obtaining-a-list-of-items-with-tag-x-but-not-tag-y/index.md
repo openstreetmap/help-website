@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Seems like you could use <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> after downloading a .osm file to <em>drop</em> elements with specific tags. I never used it though.</p>
+<p>Seems like you could use <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> after downloading a .osm file to <em>drop</em> elements with specific tags. I never used it though.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

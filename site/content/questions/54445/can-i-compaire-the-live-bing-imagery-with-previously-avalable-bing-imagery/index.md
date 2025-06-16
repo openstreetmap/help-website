@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I understand that there is fresh Bing imagery rolling out for many parts of the world. I've been doing some mapping in the <a href="http://www.openstreetmap.org/#map=12/34.1061/74.7366">Valley of Kashmir</a> intermittently for 6 months. I've recently noticed that in some areas the rivers have overflowed their banks, and flooded farmland and even residential areas. This usually makes areas harder to map, although the contrast makes buildings stand out more. Is there any way I can find out if the imagery of the floods is associated with the updated Bing Imagery, and do something to work around it?</p>
+<p>I understand that there is fresh Bing imagery rolling out for many parts of the world. I've been doing some mapping in the <a href="https://www.openstreetmap.org/#map=12/34.1061/74.7366">Valley of Kashmir</a> intermittently for 6 months. I've recently noticed that in some areas the rivers have overflowed their banks, and flooded farmland and even residential areas. This usually makes areas harder to map, although the contrast makes buildings stand out more. Is there any way I can find out if the imagery of the floods is associated with the updated Bing Imagery, and do something to work around it?</p>
 <p>I'm primarily using JOSM, and when I right-click on the tiles and select "show tile info", I'm provided with a date range that is unhelpfully broad.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

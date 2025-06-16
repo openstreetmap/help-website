@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a closer look at the overpass-api parameter "<strong>around</strong>" ... maybe at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">Overpass_API/Overpass_QL</a></p>
+<p>Have a closer look at the overpass-api parameter "<strong>around</strong>" ... maybe at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">Overpass_API/Overpass_QL</a></p>
 <p>BUT: How will you differentiate when there are other ways around your position that hou have lat lon from?</p>
 <p>And: what is the source of your lat/lon?</p>
 <p>Is it sure that each coordinate is a single node wich is an element of a certain way?</p>

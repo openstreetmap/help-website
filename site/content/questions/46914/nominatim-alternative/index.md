@@ -120,7 +120,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe you can fins some alternative services via the OSM wiki</p>
-<p>at <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a>.</p>
+<p>at <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a>.</p>
 <p>Read instructions and terms of use for each service cearfully!</p>
 </div>
 <div class="answer-controls post-controls">

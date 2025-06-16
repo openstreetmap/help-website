@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I set up a public transport <a href="http://wiki.openstreetmap.org/wiki/Relation:route_master">route_master</a> in Potlatch 2 ?</p>
+<p>How can I set up a public transport <a href="https://wiki.openstreetmap.org/wiki/Relation:route_master">route_master</a> in Potlatch 2 ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-route_master" rel="tag" title="see questions tagged &#39;route_master&#39;">route_master</span> <span class="post-tag tag-link-bus" rel="tag" title="see questions tagged &#39;bus&#39;">bus</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You'll need to do it from Potlatch 2's "advanced" mode, since Richard explains in a comment <a href="http://help.openstreetmap.org/questions/9685/how-can-i-set-the-color-tags-of-all-sections-of-a-bus-route">here</a> why it's unlikely to be added as a preset.</p>
+<p>You'll need to do it from Potlatch 2's "advanced" mode, since Richard explains in a comment <a href="/questions/9685/how-can-i-set-the-color-tags-of-all-sections-of-a-bus-route">here</a> why it's unlikely to be added as a preset.</p>
 <ul>
 <li><p>In Potlatch 2, click on the desired item.</p></li>
 <li><p>Click "Advanced" at the bottom left.</p></li>

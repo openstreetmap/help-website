@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi</p>
-<p>I edited some street and got it broken. The problem is that it is only shown on the map and not in Potlatch (a bug?) The link is <a href="http://www.openstreetmap.org/?lat=32.001059&amp;lon=34.825519&amp;zoom=18&amp;layers=M">broken street</a>. Can anyone help?</p>
+<p>I edited some street and got it broken. The problem is that it is only shown on the map and not in Potlatch (a bug?) The link is <a href="https://www.openstreetmap.org/?lat=32.001059&amp;lon=34.825519&amp;zoom=18&amp;layers=M">broken street</a>. Can anyone help?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-broken" rel="tag" title="see questions tagged &#39;broken&#39;">broken</span> <span class="post-tag tag-link-street" rel="tag" title="see questions tagged &#39;street&#39;">street</span> <span class="post-tag tag-link-help" rel="tag" title="see questions tagged &#39;help&#39;">help</span>
@@ -69,8 +69,8 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>The coordinates of node 620502188 got updated a couple of days ago, but by some reason the tile has not got updated yet.</p>
-<p><a href="http://www.openstreetmap.org/browse/node/620502188/history">http://www.openstreetmap.org/browse/node/620502188/history</a></p>
-<p><a href="http://www.openstreetmap.org/browse/way/48901236">http://www.openstreetmap.org/browse/way/48901236</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/620502188/history">https://www.openstreetmap.org/browse/node/620502188/history</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/48901236">https://www.openstreetmap.org/browse/way/48901236</a></p>
 <p>A little bit strange, since the all edits I've done the latest days have shown up on the map almost instantly.</p>
 </div>
 <div id="comment-12064-info" class="comment-info">
@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nothing is broken, it just <a href="http://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">takes some time</a> for the rendering to be updated. It is updated one tile at a time, which can cause these broken-looking streets if a street stretches along multiple tiles, but not all tiles have been updated yet.</p>
+<p>Nothing is broken, it just <a href="https://wiki.openstreetmap.org/wiki/Faq#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">takes some time</a> for the rendering to be updated. It is updated one tile at a time, which can cause these broken-looking streets if a street stretches along multiple tiles, but not all tiles have been updated yet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Do different parts of the world / edits made by different users get updated with different strategies? Or why have I been lucky the latest days getting instant updates over and over again, while this road is still broken after a couple of days.</p>
-<p>And why is the node <a href="http://www.openstreetmap.org/browse/node/620502188/history">http://www.openstreetmap.org/browse/node/620502188/history</a> shown as updated while the way <a href="http://www.openstreetmap.org/browse/way/48901236/history">http://www.openstreetmap.org/browse/way/48901236/history</a> which includes that node is not shown as edited?</p>
+<p>And why is the node <a href="https://www.openstreetmap.org/browse/node/620502188/history">https://www.openstreetmap.org/browse/node/620502188/history</a> shown as updated while the way <a href="https://www.openstreetmap.org/browse/way/48901236/history">https://www.openstreetmap.org/browse/way/48901236/history</a> which includes that node is not shown as edited?</p>
 </div>
 <div id="comment-12065-info" class="comment-info">
 <span class="comment-age">(16 Apr '12, 18:55)</span> <span class="comment-user userinfo">gnurk</span>
@@ -178,7 +178,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>The heuristics of deciding which tiles to update are complex. Sometimes they fail, and a tile will miss its "quick update" and only get the "after a long while update". If that's the case and you're impatient, see <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering">http://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering</a> for a way to manually request a tile render (I just did that for your problematic tile).</p>
+<p>The heuristics of deciding which tiles to update are complex. Sometimes they fail, and a tile will miss its "quick update" and only get the "after a long while update". If that's the case and you're impatient, see <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering">https://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering</a> for a way to manually request a tile render (I just did that for your problematic tile).</p>
 </div>
 <div id="comment-12069-info" class="comment-info">
 <span class="comment-age">(16 Apr '12, 20:27)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

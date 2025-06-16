@@ -79,7 +79,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>if no answer here, try to ask at the osmosis-dev mailinglist:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-40510-info" class="comment-info">
 <span class="comment-age">(21 Jan '15, 17:31)</span> <span class="comment-user userinfo">stephan75</span>

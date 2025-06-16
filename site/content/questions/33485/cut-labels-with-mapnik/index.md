@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cut Labels with Mapnik"
-description = '''I&#x27;m getting cut labels on my maps. Same thing is happening on the main map here: http://www.openstreetmap.org/#map=11/52.3303/-1.3774 (look between Coventry and Rugby) Anyone know how to fix them? I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile. Also made a static one with Mapni...'''
+description = '''I&#x27;m getting cut labels on my maps. Same thing is happening on the main map here: https://www.openstreetmap.org/#map=11/52.3303/-1.3774 (look between Coventry and Rugby) Anyone know how to fix them? I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile. Also made a static one with Mapni...'''
 date = "2014-05-26T18:12:00Z"
 lastmod = "2017-04-12T16:54:00Z"
 weight = 33485
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm getting cut labels on my maps. Same thing is happening on the main map here:</p>
-<p><a href="http://www.openstreetmap.org/#map=11/52.3303/-1.3774">http://www.openstreetmap.org/#map=11/52.3303/-1.3774</a></p>
+<p><a href="https://www.openstreetmap.org/#map=11/52.3303/-1.3774">https://www.openstreetmap.org/#map=11/52.3303/-1.3774</a></p>
 <p>(look between Coventry and Rugby)</p>
 <p>Anyone know how to fix them?</p>
 <p>I made a dynamic tileserver with Mapnik, renderd and Apache mod-tile. Also made a static one with Mapnik and generate_tiles.py to make the tiles. Same thing is happening in both cases.</p>
@@ -194,7 +194,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi. I applied the solution above, but I am still having road labels being a little cut off. Why is this and can I fix it ?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/s3.png" alt="alt text" /></p>
+<p><img src="/upfiles/s3.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -214,7 +214,7 @@ osqa_accepted = false
 <div id="post-55504-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The answer at <a href="https://help.openstreetmap.org/questions/54196/how-to-make-symbols-visible-on-a-lesser-zoom-level/54202">https://help.openstreetmap.org/questions/54196/how-to-make-symbols-visible-on-a-lesser-zoom-level/54202</a> suggests that you might have been using the old pre-carto style. If you are, then there are two things that you're doing differently to "most people" (the other is running this on Windows). My guess is that your problem here is related to something that you're doing differently - perhaps try a more recent map style, or the same style on differently-built version of Mapnik (for example <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> just fetches from a repository so there's less to go wrong).</p>
+<p>The answer at <a href="/questions/54196/how-to-make-symbols-visible-on-a-lesser-zoom-level/54202">https://help.openstreetmap.org/questions/54196/how-to-make-symbols-visible-on-a-lesser-zoom-level/54202</a> suggests that you might have been using the old pre-carto style. If you are, then there are two things that you're doing differently to "most people" (the other is running this on Windows). My guess is that your problem here is related to something that you're doing differently - perhaps try a more recent map style, or the same style on differently-built version of Mapnik (for example <a href="https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/">https://switch2osm.org/manually-building-a-tile-server-16-04-2-lts/</a> just fetches from a repository so there's less to go wrong).</p>
 </div>
 <div id="comment-55504-info" class="comment-info">
 <span class="comment-age">(07 Apr '17, 00:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

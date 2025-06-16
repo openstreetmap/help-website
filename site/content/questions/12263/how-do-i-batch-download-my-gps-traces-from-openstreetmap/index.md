@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I've uploaded hundreds of GPS Traces to OSM throughout 2011 and 2012. Until a few months ago, I forgot to save them locally on my computer after uploading them to OSM.</p>
 <p>I'd like to do some <a href="http://avtanski.net/projects/gps/">Visualizations</a> with them. (Ideally, I'd like to select ones by tag as well).</p>
 <p>How could I download all of them (besides manually opening every individual trace and then manually downloading them in a web browser) ?</p>
-<p>If this isn't easily feasible at the moment, is there anything else in the API (I'm just beginning to look into <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Downloading_Trace_Metadata">Downloading Trace Metadata</a>) that would help me to do this ?</p>
+<p>If this isn't easily feasible at the moment, is there anything else in the API (I'm just beginning to look into <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Downloading_Trace_Metadata">Downloading Trace Metadata</a>) that would help me to do this ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-api" rel="tag" title="see questions tagged &#39;api&#39;">api</span> <span class="post-tag tag-link-traces" rel="tag" title="see questions tagged &#39;traces&#39;">traces</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span>

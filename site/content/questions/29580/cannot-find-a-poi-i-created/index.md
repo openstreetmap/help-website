@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "cannot find a POI I created"
-description = '''I have created several POIs in this location http://www.openstreetmap.org/edit#map=18/24.40071/54.57715 but cannot find them in search. What can be the reason??'''
+description = '''I have created several POIs in this location https://www.openstreetmap.org/edit#map=18/24.40071/54.57715 but cannot find them in search. What can be the reason??'''
 date = "2014-01-04T12:26:00Z"
 lastmod = "2014-01-04T13:42:00Z"
 weight = 29580
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have created several POIs in this location <a href="http://www.openstreetmap.org/edit#map=18/24.40071/54.57715">http://www.openstreetmap.org/edit#map=18/24.40071/54.57715</a> but cannot find them in search. What can be the reason??</p>
+<p>I have created several POIs in this location <a href="https://www.openstreetmap.org/edit#map=18/24.40071/54.57715">https://www.openstreetmap.org/edit#map=18/24.40071/54.57715</a> but cannot find them in search. What can be the reason??</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-edit" rel="tag" title="see questions tagged &#39;edit&#39;">edit</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>
@@ -116,7 +116,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I can see 9 POIs there (some of which appear to be duplicates?):</p>
-<p><a href="http://www.openstreetmap.org/#map=19/24.40071/54.57715&amp;layers=D">http://www.openstreetmap.org/#map=19/24.40071/54.57715&amp;layers=D</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/24.40071/54.57715&amp;layers=D">https://www.openstreetmap.org/#map=19/24.40071/54.57715&amp;layers=D</a></p>
 <p>A <a href="http://nominatim.openstreetmap.org/search.php?q=Tandoori+Express&amp;viewbox=-153.64%2C74.03%2C153.64%2C-58.07">search for "Tandoori Express"</a> does find at least one:</p>
 <p><a href="http://nominatim.openstreetmap.org/details.php?place_id=9157576399">http://nominatim.openstreetmap.org/details.php?place_id=9157576399</a></p>
 <p>"Nominatim" is what handles the searches that you type in on osm.org. The <a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ">Nominatim FAQ</a> refers to a graph of import lag <a href="http://munin.openstreetmap.org/openstreetmap/poldi.openstreetmap/nominatim_importlag.html">here</a> - maybe you were just searching before it was indexed?</p>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi kush, please read this Q &amp; A, <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> and others why dont my edits show. But I couldnt see or follow your link.</p>
+<p>Hi kush, please read this Q &amp; A, <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> and others why dont my edits show. But I couldnt see or follow your link.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -188,7 +188,7 @@ osqa_accepted = false
 <div id="post-29582-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Kush take a look again, theres a building supermarket, with a lot of tags and some double tags besides it. Read also this answer <a href="https://help.openstreetmap.org/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities">https://help.openstreetmap.org/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities</a> before you carry on.</p>
+<p>Kush take a look again, theres a building supermarket, with a lot of tags and some double tags besides it. Read also this answer <a href="/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities">https://help.openstreetmap.org/questions/17389/what-is-the-best-way-to-address-add-pois-and-amenities</a> before you carry on.</p>
 </div>
 <div id="comment-29582-info" class="comment-info">
 <span class="comment-age">(04 Jan '14, 12:41)</span> <span class="comment-user userinfo">Hendrikklaas</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I recently added/modified a cyclepath, which shows up on maps, but which cannot be found/used by routing applications. I have previously added/modified paths, roads etc and shortly afterwards (within a few days) have been able to auto-route on various application/website. This is not the only changeset that appears to have this problem, in fact everything I have edited for the last couple of months appears to have the same problem ie I can see the path/road on the map but it is not routable.</p>
-<p>example <a href="http://www.openstreetmap.org/browse/way/116498783">http://www.openstreetmap.org/browse/way/116498783</a></p>
+<p>example <a href="https://www.openstreetmap.org/browse/way/116498783">https://www.openstreetmap.org/browse/way/116498783</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-path" rel="tag" title="see questions tagged &#39;path&#39;">path</span> <span class="post-tag tag-link-auto-routing" rel="tag" title="see questions tagged &#39;auto-routing&#39;">auto-routing</span> <span class="post-tag tag-link-cycleway" rel="tag" title="see questions tagged &#39;cycleway&#39;">cycleway</span>

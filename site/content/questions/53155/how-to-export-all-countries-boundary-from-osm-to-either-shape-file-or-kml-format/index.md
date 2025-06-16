@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download the OSM planet file and filter out the admin boundaries (see <a href="https://help.openstreetmap.org/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">this answer</a> for example), or you could download from the <a href="https://osm.wno-edv-service.de/boundaries/">boundaries map</a>.</p>
+<p>You can download the OSM planet file and filter out the admin boundaries (see <a href="/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">this answer</a> for example), or you could download from the <a href="https://osm.wno-edv-service.de/boundaries/">boundaries map</a>.</p>
 <p>However, if you only want country boundaries then my suspicion is that you do not need the full detail that OSM offers (OSM data follows every smallest zig-zag of the boundary, resulting in very large polygons), and you might also dislike the fact the OSM boundaries don't hug the coastline but include the maritime claims as well. It might be much easier for you to head over to the public domain <a href="http://naturalearthdata.com/">Natural Earth</a> dataset which comes simplified for three different scales.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -168,7 +168,7 @@ osqa_accepted = true
   -d &#39;relation[&quot;admin_level&quot;=&quot;2&quot;];(._;&gt;;); out body;&#39;  \
   http://overpass-api.de/api/interpreter  \
   -o countries-border.osm</code></pre>
-<p>And use <a href="http://wiki.openstreetmap.org/wiki/OGR">ogr2ogr</a> to convert osm to shapefile.</p>
+<p>And use <a href="https://wiki.openstreetmap.org/wiki/OGR">ogr2ogr</a> to convert osm to shapefile.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

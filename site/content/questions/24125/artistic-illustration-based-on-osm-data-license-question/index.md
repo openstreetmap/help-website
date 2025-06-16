@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a>:</p>
+<p>From the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a>:</p>
 <blockquote>
 <p>Our requested attribution is "© OpenStreetMap contributors". You must also make it clear that the data is available under the Open Database Licence.</p>
 <p>[...] if you have rendered OSM data to your own design, you may wish to use "Map data © OpenStreetMap contributors".</p>
@@ -162,7 +162,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Great that you want to use OSM's data! :-) However, please note that no legally binding advice can be given here on this help site.</p>
-<p>Please read <a href="http://www.openstreetmap.org/copyright/en">http://www.openstreetmap.org/copyright/en</a> - I think it really answers your question (for both, works on the web and works where links are not possible, e.g. printed works). "You must also make it clear that the data is available under the Open Database License […]"</p>
+<p>Please read <a href="https://www.openstreetmap.org/copyright/en">https://www.openstreetmap.org/copyright/en</a> - I think it really answers your question (for both, works on the web and works where links are not possible, e.g. printed works). "You must also make it clear that the data is available under the Open Database License […]"</p>
 <p>Also see the <span>entry 3a in our legal FAQ</span> - explicitly mentioning your use case ("if you have rendered OSM data to your own design").</p>
 <p>To be sure, you should also read the full the <a href="http://opendatacommons.org/licenses/odbl/1.0/">Open Data Commons Open Database License (ODbL)</a> text (I think section 4.3 is most interesting for you).</p>
 <p>If I were you, then I would <em>not</em> think that your suggested credit/attribution is complying with the license.</p>

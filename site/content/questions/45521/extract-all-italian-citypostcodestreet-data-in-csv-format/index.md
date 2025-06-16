@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I downloaded from <a href="http://download.gisgraphy.com/openstreetmap/pbf/">http://download.gisgraphy.com/openstreetmap/pbf/</a> the IT compressed file, and I followed different steps like below:</p>
 <p>Test 1) ./osmfilter IT.pdb --keep="addr:country= and addr:city= and addr:postcode and addr:street=" --ignore-dependencies | ./osmconvert --csv="addr:country addr:city adde:postcode addr:street” --csv-separator=","</p>
 <p>But It does not extract ALL the addresses.</p>
-<p>Test 2) As suggest here <a href="https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list">https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list</a> I tried with: "osmfilter with --keep="highway=residential =primary =secondary =tertiaty =unclassified", etc., to get all streets, then use osmconvert with --all-to-nodes and --csv="<a href="http://help.openstreetmap.org/users/1350/longestaugust">@lon</a> <a href="http://help.openstreetmap.org/users/5110/latroc">@lat</a> name etc." to get the CSV list.” But it does not works 100% because It does not extract ALL the Italian's address.</p>
+<p>Test 2) As suggest here <a href="/questions/9816/the-best-way-to-extract-street-list">https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list</a> I tried with: "osmfilter with --keep="highway=residential =primary =secondary =tertiaty =unclassified", etc., to get all streets, then use osmconvert with --all-to-nodes and --csv="<a href="https://help.openstreetmap.org/users/1350/longestaugust">@lon</a> <a href="https://help.openstreetmap.org/users/5110/latroc">@lat</a> name etc." to get the CSV list.” But it does not works 100% because It does not extract ALL the Italian's address.</p>
 <p>Test 3) I downloaded from <a href="http://download.gisgraphy.com/openstreetmap/csv/streets/">http://download.gisgraphy.com/openstreetmap/csv/streets/</a> the IT list of all the streets, but I don’t know how create a relationship with “City”, “PostCode” and related “Street”.</p>
 <p>Someone known how resolve the problem ?</p>
 <p>Thanks in advance</p>
@@ -221,7 +221,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>That's not an error, just missing address data in OSM. Although <em>Via Tancredi Marchisio</em> exists as a street name there is not even a single address for it in OSM, see <a href="http://www.openstreetmap.org/#map=19/44.38597/9.01461">http://www.openstreetmap.org/#map=19/44.38597/9.01461</a></p>
+<p>That's not an error, just missing address data in OSM. Although <em>Via Tancredi Marchisio</em> exists as a street name there is not even a single address for it in OSM, see <a href="https://www.openstreetmap.org/#map=19/44.38597/9.01461">https://www.openstreetmap.org/#map=19/44.38597/9.01461</a></p>
 </div>
 <div id="comment-45525-info" class="comment-info">
 <span class="comment-age">(23 Sep '15, 13:57)</span> <span class="comment-user userinfo">scai ♦</span>

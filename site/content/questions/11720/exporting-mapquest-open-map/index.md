@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hello,</p>
-<p>As far as I know the export feature will exclusively use the OSM's mapnik stylesheet for rendering png. If you want to get an image of an area with OpenMapQuest style, you may use <a href="http://wiki.openstreetmap.org/wiki/Bigmap">bigmap</a> or <a href="http://maposmatic.org/">maposmatic</a>.</p>
+<p>As far as I know the export feature will exclusively use the OSM's mapnik stylesheet for rendering png. If you want to get an image of an area with OpenMapQuest style, you may use <a href="https://wiki.openstreetmap.org/wiki/Bigmap">bigmap</a> or <a href="http://maposmatic.org/">maposmatic</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

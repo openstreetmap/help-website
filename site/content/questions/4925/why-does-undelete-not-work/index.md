@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there,</p>
-<p>yesterday I accidentally deleted a <a href="http://www.openstreetmap.org/browse/changeset/8023841">rail track</a>.</p>
+<p>yesterday I accidentally deleted a <a href="https://www.openstreetmap.org/browse/changeset/8023841">rail track</a>.</p>
 <p>I tried to undelete it in Potlatch how described in the help, but it did not work.</p>
 <p>Then I downloaded the OSMchange XML from the history, renamed it to *.osm and tried to open it in JOSM but got the error message "Line 4 Row 133 zero".</p>
 <p>Can anyone help me with this?</p>
@@ -114,7 +114,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I suspect you are using Potlatch 2 and the instructions you read are for Potlatch 1. To use Potlatch 1 you can still currently hover your mouse over the Edit button and select it from the list of editor choices. I don't believe there is currently any way to undelete ways in Potlatch 2.</p>
-<p>With regards downloading OSM change XMLs and loading them in JOSM, there is a <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">revert plugin</a> which makes this much easier and less prone to error.</p>
+<p>With regards downloading OSM change XMLs and loading them in JOSM, there is a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">revert plugin</a> which makes this much easier and less prone to error.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,8 +177,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are some methods to undelete single objects rather than <a href="http://wiki.openstreetmap.org/wiki/Change_rollback">reverting whole changesets</a> at <a href="http://wiki.openstreetmap.org/wiki/Undoing_Deletions">Undoing_Deletions</a></p>
-<p>Maybe with the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Undelete">JOSM plugin</a> described there it can be done easily.</p>
+<p>There are some methods to undelete single objects rather than <a href="https://wiki.openstreetmap.org/wiki/Change_rollback">reverting whole changesets</a> at <a href="https://wiki.openstreetmap.org/wiki/Undoing_Deletions">Undoing_Deletions</a></p>
+<p>Maybe with the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Undelete">JOSM plugin</a> described there it can be done easily.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

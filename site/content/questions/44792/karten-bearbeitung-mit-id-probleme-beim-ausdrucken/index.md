@@ -134,7 +134,7 @@ osqa_accepted = false
 <p>Ist auf deinem OS X -System generell Java7 lauffähig?</p>
 <p>Wenn ja, dann würde ich (und betimmt viele weiter Anwender auch) enpfehlen, mal den Editor <a href="https://josm.openstreetmap.de">JOSM</a> auszuprobieren. Nur der braucht halt Java7 als Unterbau.</p>
 <p>Aber in JOSM stellen sich viele deiner oben genannten Punkte/Ärgernisse nicht, weil man dort viel mehr einstellen kann. JOSM braucht aber ein ganz klitzekleinen Aufwand zum Einarbeiten ;-)</p>
-<p>Und zum Thema Ausdrucken: da gibt es durchaus besseer Möglichkeiten als Ausdruck aus iD oder osm.org heraus, siehe <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a></p>
+<p>Und zum Thema Ausdrucken: da gibt es durchaus besseer Möglichkeiten als Ausdruck aus iD oder osm.org heraus, siehe <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -190,7 +190,7 @@ osqa_accepted = false
 <p>1) Bei mir taucht das Fenster nur beim ersten Mal auf, danach nicht mehr. Blockierst du vielleicht cookies von openstreetmap.org (schau mal in deinen <a href="https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen" title="Browser-Einstellungen">Browser-Einstellungen</a> nach)?</p>
 <p>2-4) Nicht soweit ich weiß. ID ist dafür gedacht mit dem Satelliten-Hintergrundbild zu arbeiten. Es klingt so, als ob du aus ID Karten ausdruckst, die du dann in Papierform unterwegs bearbeitest; stimmt das? Falls ja, würde ich dir zu anderen Methoden raten.</p>
 <ul>
-<li>Wie von <a href="https://help.openstreetmap.org/users/99/stephan75" title="stephan75">stephan75</a> vorgeschlagen, schaue dir die Wiki-Seite <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> an. Aus persönlicher Erfahrung kann ich dir <a href="http://fieldpapers.org">Field Papers</a> empfehlen; dort kannst du dir Kartenausschnitte drucken lassen die sich prima dafür eignen mitgenommen zu werden und beschriftet zu werden.</li>
+<li>Wie von <a href="https://help.openstreetmap.org/users/99/stephan75" title="stephan75">stephan75</a> vorgeschlagen, schaue dir die Wiki-Seite <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> an. Aus persönlicher Erfahrung kann ich dir <a href="http://fieldpapers.org">Field Papers</a> empfehlen; dort kannst du dir Kartenausschnitte drucken lassen die sich prima dafür eignen mitgenommen zu werden und beschriftet zu werden.</li>
 <li>Oder drucke dir einfach einen Ausschnitt aus der Hauptkarte (openstreetmap.org -&gt; Teilen -&gt; Bild -&gt; Herunterladen).</li>
 </ul>
 <p>ID ist dafür wirklich nicht geeignet.</p>

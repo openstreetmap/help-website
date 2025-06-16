@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>When I use the "Query features" feature I get the above error most of the time but not always. It's been happening for some months but I'm only now getting round to asking about it.</p>
 <p>I've tried various cookie, privacy and anti-tracker settings in my browser, also disabling IPV6, but nothing I've done fixes it. I've also set up a new user with default settings. I've also tried it on my phone and on my laptop tethered to my phone to try a different IP address.</p>
 <p>I'm using Safari in MacOS and iOS, all on latest versions.</p>
-<p>There was what seems to be a similar issue back in 2016 which was fixed. <a href="https://help.openstreetmap.org/questions/52384.">https://help.openstreetmap.org/questions/52384.</a></p>
+<p>There was what seems to be a similar issue back in 2016 which was fixed. <a href="/questions/52384.">https://help.openstreetmap.org/questions/52384.</a></p>
 <p>Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -107,7 +107,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>This is an older question, but I think a clearer way of asking the same question is: "<a href="https://help.openstreetmap.org/questions/9905/how-can-i-edit-osm-with-my-iphone">how can I edit OSM with my iPhone?</a>" See that question for my more up-to-date answer</p>
+<p>This is an older question, but I think a clearer way of asking the same question is: "<a href="/questions/9905/how-can-i-edit-osm-with-my-iphone">how can I edit OSM with my iPhone?</a>" See that question for my more up-to-date answer</p>
 </div>
 <div id="comment-25042-info" class="comment-info">
 <span class="comment-age">(07 Aug '13, 16:07)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -161,7 +161,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I finally got it: iLOE, like "iOS Little Openstreetmap Editor", at <a href="http://wiki.openstreetmap.org/wiki/ILOE">http://wiki.openstreetmap.org/wiki/ILOE</a></p>
+<p>I finally got it: iLOE, like "iOS Little Openstreetmap Editor", at <a href="https://wiki.openstreetmap.org/wiki/ILOE">https://wiki.openstreetmap.org/wiki/ILOE</a></p>
 <p>From that page:</p>
 <p>"iLOE can add, update or move nodes and edit tags from ways. The application offers following functions: Localize your position. Search for any city (worldwide). Move the search target on the map. Download the nodes and ways around your or any position. Edit, delete and insert tags in a node or a way. Create or move a node. Upload the node and tags to OpenStreetMap."</p>
 <p>more discussion on slashGeo at <a href="http://slashgeo.org/2011/06/07/Whats-best-iOS-App-contributing-OpenStreetMap">http://slashgeo.org/2011/06/07/Whats-best-iOS-App-contributing-OpenStreetMap</a> (also a track recorder there for instance)</p>
@@ -218,7 +218,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/IOS">iOS</a> ... try to find apps that have map editing and gpx-recording features.</p>
+<p>Have a look in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/IOS">iOS</a> ... try to find apps that have map editing and gpx-recording features.</p>
 <p>For detailed questions about a certain app, you can also ask at the <a href="http://forum.osm.org">OSM forum</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -270,7 +270,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>As far as I know, there are no IOS tools for drawing inside OSM. The most popular iOS app for OpenStreetMap is <a href="http://mapzen.cloudmade.com/mapzen-poi-collector">Mapzen POI Collector</a>. This program can be used to record or edit individual POIs on the road.</p>
-<p>There are other apps mentioned on <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">the wiki</a>, but none of them can draw anything other than POIs (nodes).</p>
+<p>There are other apps mentioned on <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">the wiki</a>, but none of them can draw anything other than POIs (nodes).</p>
 <p>The main two most popular OSM editors which can be used to edit OSM are Potlatch and Josm.</p>
 <p>Potlatch is a Flash application which can be accessed by going to the main site <a href="http://openstreetmap.org"></a><a href="http://openstreetmap.org">openstreetmap.org</a> and clicking Edit.</p>
 <p>Josm is the second most popular editor, which is written in Java, designed for desktop use. You can get a copy of Josm at <a href="http://josm.openstreetmap.de/">josm.openstreetmap.de</a>.</p>

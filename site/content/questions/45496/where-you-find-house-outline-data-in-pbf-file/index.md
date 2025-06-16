@@ -128,8 +128,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your process is, lets say, overly complex.</p>
-<p>First read up on the OSM data model <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> and other pages (it helps to know what you are looking for before you start looking).</p>
-<p>Then get a metro extract from <a href="https://mapzen.com/data/metro-extracts">https://mapzen.com/data/metro-extracts</a> or a state level extract. In general it is easier to first pair down size/area of an extract before doing anything else. Then use for example osmfilter (<a href="http://wiki.openstreetmap.org/wiki/Osmfilter)">http://wiki.openstreetmap.org/wiki/Osmfilter)</a> to extract the nodes and ways for the building outlines (you will need to convert to standard XML format first). You are looking for ways that have a building tag.</p>
+<p>First read up on the OSM data model <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> and other pages (it helps to know what you are looking for before you start looking).</p>
+<p>Then get a metro extract from <a href="https://mapzen.com/data/metro-extracts">https://mapzen.com/data/metro-extracts</a> or a state level extract. In general it is easier to first pair down size/area of an extract before doing anything else. Then use for example osmfilter (<a href="https://wiki.openstreetmap.org/wiki/Osmfilter)">https://wiki.openstreetmap.org/wiki/Osmfilter)</a> to extract the nodes and ways for the building outlines (you will need to convert to standard XML format first). You are looking for ways that have a building tag.</p>
 <p>Note after this process you will have a file containing nodes and ways, no already built geometries.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -153,7 +153,7 @@ One Answer:
 <p>Some elements of your suggestion are exactly what I <em>don't</em> want to do. Mainly I don't want to work with XML at all, partially because it's hugely inefficient, and partially because I loath it and think it's one of the worst file formats to ever be foisted on the world of programmers.</p>
 <p>However, you do answer the core of my question, for which I'm truly grateful. So it is pretty much as I expected, now I just have to trace the migration of the building tagged ways from the original PBF file to the final state way file and determine where data was lost.</p>
 <p>I won't go into my reasons for creating this, in your words, "overly complex" approach, let's just say that I needed to do all these steps anyway, so it didn't seem overly complex to me.</p>
-<p>BTW, I did read the <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> pages, but reading and being sure that you understand what every element is truly representing are different things entirely.</p>
+<p>BTW, I did read the <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> pages, but reading and being sure that you understand what every element is truly representing are different things entirely.</p>
 <p>Thanks again for your answer.</p>
 </div>
 <div id="comment-45501-info" class="comment-info">

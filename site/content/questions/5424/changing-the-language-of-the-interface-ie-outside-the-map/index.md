@@ -182,7 +182,7 @@ Patrick</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A similar problem has been asked already <a href="http://help.openstreetmap.org/questions/1966/how-to-select-language-for-main-map-page">here</a>.</p>
+<p>A similar problem has been asked already <a href="/questions/1966/how-to-select-language-for-main-map-page">here</a>.</p>
 <p>Maybe you have to check the preffered language in the settings of your browser.</p>
 </div>
 <div class="answer-controls post-controls">

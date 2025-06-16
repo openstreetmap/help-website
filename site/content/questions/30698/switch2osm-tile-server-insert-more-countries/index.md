@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/5389/merging-2-countries-with-osm2pgsql">This previous question</a> shows how to append files, and the top answer to it describes a problem that you might get if there's shared data between the file that you originally used and the file that you're merging. As <span>@EdLoach</span> says in that answer - merge files together using <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> first and then load.</p>
+<p><a href="/questions/5389/merging-2-countries-with-osm2pgsql">This previous question</a> shows how to append files, and the top answer to it describes a problem that you might get if there's shared data between the file that you originally used and the file that you're merging. As <span>@EdLoach</span> says in that answer - merge files together using <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> first and then load.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

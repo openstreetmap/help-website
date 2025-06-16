@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Other that the very rough outline shown at e.g. <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/2155986">http://www.openstreetmap.org/user/SomeoneElse/traces/2155986</a>, no.</p>
+<p>Other that the very rough outline shown at e.g. <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/2155986">https://www.openstreetmap.org/user/SomeoneElse/traces/2155986</a>, no.</p>
 <p>OSM traces are designed for map editing - all online and PC-based OSM editors support some sort of trace display. With JOSM and iD you can load traces stored locally; with Potlatch 2 you can select the "edit" link and it'll appear in blue. However, I suspect what you actually want is one of <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">these</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -201,7 +201,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see <a href="https://help.openstreetmap.org/questions/2034/displaying-gpx-traces-on-the-map">https://help.openstreetmap.org/questions/2034/displaying-gpx-traces-on-the-map</a> or <a href="https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx">https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx</a></p>
+<p>see <a href="/questions/2034/displaying-gpx-traces-on-the-map">https://help.openstreetmap.org/questions/2034/displaying-gpx-traces-on-the-map</a> or <a href="/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx">https://help.openstreetmap.org/questions/884/application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

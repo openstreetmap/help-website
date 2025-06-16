@@ -76,7 +76,7 @@ osqa_accepted = false
    FROM planet_osm_polygon
       WHERE osm_id = -62611;</code></pre>
 <p>The result looked like</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm_missing_geometry01.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm_missing_geometry01.png" alt="alt text" /></p>
 <p>Is it possible to have a geometry column which is not empty but valid and has no WKT or WKB in the colums?</p>
 <p>Thanks Thorsten</p>
 </div>

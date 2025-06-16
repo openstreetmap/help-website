@@ -94,7 +94,7 @@ osqa_accepted = false
 <div id="post-45768-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11556/meriri2"></a><a href="http://help.openstreetmap.org/users/11556/meriri2">@meriri2</a>: okay, although there already is one answer now. Having two places where relevant answers can be for the same question is not good for the resource usage of all of us.</p>
+<p><a href="https://help.openstreetmap.org/users/11556/meriri2"></a><a href="https://help.openstreetmap.org/users/11556/meriri2">@meriri2</a>: okay, although there already is one answer now. Having two places where relevant answers can be for the same question is not good for the resource usage of all of us.</p>
 </div>
 <div id="comment-45768-info" class="comment-info">
 <span class="comment-age">(06 Oct '15, 23:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

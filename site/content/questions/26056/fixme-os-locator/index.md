@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is not a very helpful fixme tag, as it doesn't really explain what the problem is. But presumably it means the name in OSM doesn't match the name from OS Locator.</p>
-<p>Keepright says it is tagged on <a href="http://www.openstreetmap.org/browse/way/4014473">way 4014473</a>, so you can view the history for that. That road was originally tagged as <strong>name=High Street Waltham Cross</strong>, but was later changed to <strong>name=High Street</strong> and <strong>alt_name=High Street Waltham Cross</strong>.</p>
+<p>Keepright says it is tagged on <a href="https://www.openstreetmap.org/browse/way/4014473">way 4014473</a>, so you can view the history for that. That road was originally tagged as <strong>name=High Street Waltham Cross</strong>, but was later changed to <strong>name=High Street</strong> and <strong>alt_name=High Street Waltham Cross</strong>.</p>
 <p>You can view the names from OS Locator by using <a href="http://ris.dev.openstreetmap.org/oslmusicalchairs/map?osl_id=372369">Musical Chairs</a>. For that road, it says <strong>Name: HIGH STREET</strong>.</p>
 <p>I suggest you survey that street, and see what it actually says on the street signs. The name on the street signs should usually be tagged as name in OSM. Alternative (correct) names can be tagged as alt_name etc. If OS Locator has an incorrect name, then you can tag this with not:name.</p>
 <p>Once you have checked which names are actually correct, you can remove the fixme tag.</p>

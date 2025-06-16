@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have come across a couple of streets which have <a href="http://wiki.openstreetmap.org/w/index.php?title=File:UK_traffic_sign_816.svg&amp;page=1">No Exit signs</a> at their junctions with a major road. However, the road network beyond allows through traffic by motor vehicles. I presume the signage is to deter the use of the streets as <a href="http://en.wikipedia.org/wiki/Rat_running">rat-runs</a>.</p>
+<p>I have come across a couple of streets which have <a href="https://wiki.openstreetmap.org/w/index.php?title=File:UK_traffic_sign_816.svg&amp;page=1">No Exit signs</a> at their junctions with a major road. However, the road network beyond allows through traffic by motor vehicles. I presume the signage is to deter the use of the streets as <a href="http://en.wikipedia.org/wiki/Rat_running">rat-runs</a>.</p>
 <p>I would like to tag this information in such a way that it does not destroy the real routability of these roads (i.e., without using restriction relations or <code>noexit=yes</code>). Can anyone make suggestions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A noexit node where the sign is? <a href="http://wiki.openstreetmap.org/wiki/Key:traffic_sign">http://wiki.openstreetmap.org/wiki/Key:traffic_sign</a></p>
+<p>A noexit node where the sign is? <a href="https://wiki.openstreetmap.org/wiki/Key:traffic_sign">https://wiki.openstreetmap.org/wiki/Key:traffic_sign</a></p>
 <p>This would map that there is such a sign there, but wouldn't add a noexit tag to the road itself which might upset routing.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -180,7 +180,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the purpose is indeed to avoid rat-runs, tag the way with <a href="http://wiki.openstreetmap.org/wiki/Key:access">access=</a>destination.</p>
+<p>If the purpose is indeed to avoid rat-runs, tag the way with <a href="https://wiki.openstreetmap.org/wiki/Key:access">access=</a>destination.</p>
 <p>Motorists frequently bend the rules and would not obey a "residents only" sign, which is why you see those false no-exit signs to trick them. But a good routing engine will respect the access value, by not routing anybody trhough the street unless it is their destination or their starting point.</p>
 </div>
 <div class="answer-controls post-controls">

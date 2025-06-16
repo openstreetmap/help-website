@@ -143,7 +143,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Now, this is possible by selecting "Map Data" in the right panel, then "Show Measurement Panel". This will show black box on the bottom right, with the information about selected element (area, path, point) with exact coordinates of the point, area size, perimeter, centroid and more useful information.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2022-01-06_10-23-14.png" alt="measurement panel" /></p>
+<p><img src="/upfiles/Screenshot_from_2022-01-06_10-23-14.png" alt="measurement panel" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -195,7 +195,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have just discovered one of the iD features I was not aware of previously, It's not my usual editor. Select Background scroll down and tic "show location panel". I hope the JPEG will show how to get Co-ordinates Lat,Lon on screen while editing.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/iD_location_data.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/iD_location_data.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -249,7 +249,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/iD_all_traces.JPG" alt="alt text" />Welcome to the help site. I don't know of a way to display cursor co-ords with iD. (It is easy JOSM and Potlatch2 ). I am wondering how you are getting exact co-ords in, or out of forests. To get the best accuracy I upoload all my traces as public to openstreetmap. When editing I display ALL available traces. I average them to check and adjust the Bing and draw paths and roads. One trace can't be relied upon but several recorded over serveral days is about as exact as most of us can get. Maybe you have professional survaying kit which may give exact co-ords, I use ordinary consumer kit. for info i use or have used Garmins etrex, Vista HCX Oregon 450 and nuvi 1310T, a Motorola defy and Tesco hudl all do record good usable traces. Hope this is of some help.</p>
+<p><img src="/upfiles/iD_all_traces.JPG" alt="alt text" />Welcome to the help site. I don't know of a way to display cursor co-ords with iD. (It is easy JOSM and Potlatch2 ). I am wondering how you are getting exact co-ords in, or out of forests. To get the best accuracy I upoload all my traces as public to openstreetmap. When editing I display ALL available traces. I average them to check and adjust the Bing and draw paths and roads. One trace can't be relied upon but several recorded over serveral days is about as exact as most of us can get. Maybe you have professional survaying kit which may give exact co-ords, I use ordinary consumer kit. for info i use or have used Garmins etrex, Vista HCX Oregon 450 and nuvi 1310T, a Motorola defy and Tesco hudl all do record good usable traces. Hope this is of some help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -415,7 +415,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you have some waypoints (GPX) stored on your PC or in the connected GPS. Just open iD editor then drag the waypoint(s) into the iD window. It is that simple. When I created some (as a test) I renamed them to meaningful names on my Garmin Oregon 650 and I found the name appears in the iD editor window. The group of waypoints were in a folder (named the date of the day date) and they all appear on dragging and dropping the folder into the window. For best accuracy use the averaging feature which should maximise accuracy.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Drag_into_ID_window_0lVt5VB.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Drag_into_ID_window_0lVt5VB.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

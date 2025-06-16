@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi osm people!</p>
-<p>I wanted to delete a trace and followed the instructions listed in <a href="https://help.openstreetmap.org/questions/11/how-do-i-delete-a-gps-trace" title="help.openstreetmap...">this answered question</a>. This worked so far that the trace vanished from my trace list. <strong>But it is still rendered in the public trace overlay</strong> (referring to the trace layer of the iD Editor from <a href="http://www.openstreetmap.org/edit?editor=id">http://www.openstreetmap.org/edit?editor=id</a> ... ).</p>
+<p>I wanted to delete a trace and followed the instructions listed in <a href="/questions/11/how-do-i-delete-a-gps-trace" title="help.openstreetmap...">this answered question</a>. This worked so far that the trace vanished from my trace list. <strong>But it is still rendered in the public trace overlay</strong> (referring to the trace layer of the iD Editor from <a href="https://www.openstreetmap.org/edit?editor=id">https://www.openstreetmap.org/edit?editor=id</a> ... ).</p>
 <p>Since the trace has some major inaccuracies which i discovered just after uploading it, i had the wish to remove it from the public, just to avoid other people to be mixed up with this data.</p>
 <p>I waited now 3 days after the deletion and it is still rendered in the public overlay.</p>
 <p>Do I have to wait longer, or do i have to delete it somewhere else too?</p>

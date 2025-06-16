@@ -173,7 +173,7 @@ I am looking more for technical perfection than geographical accuracy which I ca
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look a <a href="http://www.openstreetmap.org/?lat=52.21759&amp;lon=-0.07184&amp;zoom=15&amp;layers=M">Cambourne Uk</a>, I've added a bit but others have really "gone to town"</p>
+<p>Have a look a <a href="https://www.openstreetmap.org/?lat=52.21759&amp;lon=-0.07184&amp;zoom=15&amp;layers=M">Cambourne Uk</a>, I've added a bit but others have really "gone to town"</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -229,7 +229,7 @@ I am looking more for technical perfection than geographical accuracy which I ca
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think that <strong>the best mapped country in the world</strong> is currently the vatican state. The map is here: <a href="http://www.openstreetmap.org/?lat=41.90351&amp;lon=12.45455&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=41.90351&amp;lon=12.45455&amp;zoom=17&amp;layers=M</a></p>
+<p>I think that <strong>the best mapped country in the world</strong> is currently the vatican state. The map is here: <a href="https://www.openstreetmap.org/?lat=41.90351&amp;lon=12.45455&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=41.90351&amp;lon=12.45455&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -304,7 +304,7 @@ I am looking more for technical perfection than geographical accuracy which I ca
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suppose this should have been inevitable, but the mapping work done of <a href="http://www.openstreetmap.org/?lat=33.81111&amp;lon=-117.92064&amp;zoom=16&amp;layers=M">Disneyland</a> is extraordinary. I wonder if it was done by interested amateurs or park employees.<br />
+<p>I suppose this should have been inevitable, but the mapping work done of <a href="https://www.openstreetmap.org/?lat=33.81111&amp;lon=-117.92064&amp;zoom=16&amp;layers=M">Disneyland</a> is extraordinary. I wonder if it was done by interested amateurs or park employees.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">
@@ -367,7 +367,7 @@ I am looking more for technical perfection than geographical accuracy which I ca
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a wiki page called '<a href="http://wiki.openstreetmap.org/wiki/Places">Places</a>' which names a few interesting examples, although they're not really interesting for being perfectly technically mapped. It's also a kind of project history, describing notable places as the map developed. We could probably add some new chapters to the story these days.</p>
+<p>There's a wiki page called '<a href="https://wiki.openstreetmap.org/wiki/Places">Places</a>' which names a few interesting examples, although they're not really interesting for being perfectly technically mapped. It's also a kind of project history, describing notable places as the map developed. We could probably add some new chapters to the story these days.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

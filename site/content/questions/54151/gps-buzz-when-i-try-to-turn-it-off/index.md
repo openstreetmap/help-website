@@ -113,7 +113,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There were problems with this Garmin suitable map site recently<br />
-<a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> but it appears ok now. You may like to try a fresh map download or try another provider <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> and see if that has any effect on the problem.</p>
+<a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> but it appears ok now. You may like to try a fresh map download or try another provider <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> and see if that has any effect on the problem.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

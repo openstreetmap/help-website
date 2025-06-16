@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to point out a place in iframe using latitude and longitude"
-description = '''I want point out a place using latitude and longitude in following frame, &amp;lt;iframe width=&quot;75%&quot;   height=&quot;550&quot;   frameborder=&quot;0&quot;   scrolling=&quot;no&quot;   marginheight=&quot;0&quot;   marginwidth=&quot;0&quot;   src=&quot;http://www.openstreetmap.org/export/embed.html?bbox=79.84942674636841%2C6.899900944350287%2C79.85650777816772...'''
+description = '''I want point out a place using latitude and longitude in following frame, &amp;lt;iframe width=&quot;75%&quot;   height=&quot;550&quot;   frameborder=&quot;0&quot;   scrolling=&quot;no&quot;   marginheight=&quot;0&quot;   marginwidth=&quot;0&quot;   src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=79.84942674636841%2C6.899900944350287%2C79.85650777816772...'''
 date = "2016-02-13T07:07:00Z"
 lastmod = "2016-02-13T08:29:00Z"
 weight = 48090
@@ -46,7 +46,7 @@ osqa_accepted = false
         scrolling=&quot;no&quot; 
         marginheight=&quot;0&quot; 
         marginwidth=&quot;0&quot; 
-        src=&quot;http://www.openstreetmap.org/export/embed.html?bbox=79.84942674636841%2C6.899900944350287%2C79.85650777816772%2C6.90436374803887&amp;amp;layers=ND&quot; 
+        src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=79.84942674636841%2C6.899900944350287%2C79.85650777816772%2C6.90436374803887&amp;amp;layers=ND&quot; 
         style=&quot;border: 1px solid black&quot;&gt;
 &lt;/iframe&gt;</code></pre>
 <p>How should I point out?</p>

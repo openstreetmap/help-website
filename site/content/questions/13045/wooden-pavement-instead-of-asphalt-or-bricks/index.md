@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-13055-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this a duplicate of <a href="http://help.openstreetmap.org/questions/13044/wooden-pavement-alongside-and-over-water">this question</a>?</p>
+<p>Is this a duplicate of <a href="/questions/13044/wooden-pavement-alongside-and-over-water">this question</a>?</p>
 </div>
 <div id="comment-13055-info" class="comment-info">
 <span class="comment-age">(29 May '12, 10:15)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -143,7 +143,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is at least a surface=wood tag described in <a href="http://wiki.openstreetmap.org/wiki/Surface">http://wiki.openstreetmap.org/wiki/Surface</a></p>
+<p>There is at least a surface=wood tag described in <a href="https://wiki.openstreetmap.org/wiki/Surface">https://wiki.openstreetmap.org/wiki/Surface</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

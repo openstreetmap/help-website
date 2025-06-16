@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I know how to filter an OverPass query for a given user, including how to use a negative condition: <a href="https://help.openstreetmap.org/questions/83153/how-to-filter-by-user-in-overpass-turbo">https://help.openstreetmap.org/questions/83153/how-to-filter-by-user-in-overpass-turbo</a></p>
+<p>I know how to filter an OverPass query for a given user, including how to use a negative condition: <a href="/questions/83153/how-to-filter-by-user-in-overpass-turbo">https://help.openstreetmap.org/questions/83153/how-to-filter-by-user-in-overpass-turbo</a></p>
 <p>But how can I filter the results based on a list of multiple users without duplicating the query statement?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

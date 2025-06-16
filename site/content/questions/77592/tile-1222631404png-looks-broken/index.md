@@ -220,7 +220,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/broken_tile.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/broken_tile.JPG" alt="alt text" /></p>
 <p>This is the tile, what is broken?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -279,7 +279,7 @@ osqa_accepted = false
 <div id="post-77632-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/tile_error2.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/tile_error2.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-77632-info" class="comment-info">
 <span class="comment-age">(20 Nov '20, 06:28)</span> <span class="comment-user userinfo">marianskrisa</span>

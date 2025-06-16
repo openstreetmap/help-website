@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OK, I've reverted that in <a href="http://www.openstreetmap.org/changeset/21194448">this changeset</a>.</p>
+<p>OK, I've reverted that in <a href="https://www.openstreetmap.org/changeset/21194448">this changeset</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

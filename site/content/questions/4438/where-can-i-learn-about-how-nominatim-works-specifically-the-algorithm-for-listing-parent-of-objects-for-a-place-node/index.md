@@ -167,7 +167,7 @@ One Answer:
 </ul>
 <p>While you're in there working, you can also combine overlapping county ways into a single way and merge any duplicate nodes. If you are working on a state or US border and know where the true boundary lies, you can combine them also.<br />
 </p>
-<p>For example: <a href="http://www.openstreetmap.org/browse/relation/1357318">http://www.openstreetmap.org/browse/relation/1357318</a></p>
+<p>For example: <a href="https://www.openstreetmap.org/browse/relation/1357318">https://www.openstreetmap.org/browse/relation/1357318</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -197,7 +197,7 @@ One Answer:
 <div id="post-21488-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Mike, I also would like to understand how the internals of Nominatim are working. Preferably without browsing through the code. Did you succeed with your quest for a detailed Nominatim documentation? I have only found this <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">high level overview page</a>. But there are no details. e.g., how is the data base schema organized...</p>
+<p>Hi Mike, I also would like to understand how the internals of Nominatim are working. Preferably without browsing through the code. Did you succeed with your quest for a detailed Nominatim documentation? I have only found this <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">high level overview page</a>. But there are no details. e.g., how is the data base schema organized...</p>
 <p>I'll appreciate any direction you can point me at!</p>
 </div>
 <div id="comment-21488-info" class="comment-info">

@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are missing the xml2 and bz2 libraries, see the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Ubuntu.2FDebian">first part of installation instructions</a>:</p>
+<p>You are missing the xml2 and bz2 libraries, see the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Ubuntu.2FDebian">first part of installation instructions</a>:</p>
 <pre><code>sudo apt-get install libxml2-dev libbz2-dev</code></pre>
 </div>
 <div class="answer-controls post-controls">

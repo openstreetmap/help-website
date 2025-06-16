@@ -69,7 +69,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Just curious... What makes you think those roads are totally wrong? Shouldn't they be there at all or are they off in position? If you could give us links to some examples of wrongly mapped roads that may give you a better answer. (You may click the "+" in the upper right corner of the <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> map, select the Data overlay, Load Data, click on the road so it gets blue and then click on Details. That will give you a link to the way.)</p>
+<p>Just curious... What makes you think those roads are totally wrong? Shouldn't they be there at all or are they off in position? If you could give us links to some examples of wrongly mapped roads that may give you a better answer. (You may click the "+" in the upper right corner of the <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> map, select the Data overlay, Load Data, click on the road so it gets blue and then click on Details. That will give you a link to the way.)</p>
 </div>
 <div id="comment-3731-info" class="comment-info">
 <span class="comment-age">(11 Mar '11, 17:55)</span> <span class="comment-user userinfo">gnurk</span>
@@ -123,9 +123,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Judging the tagging the user <a href="http://www.openstreetmap.org/user/AND">AND</a> seems to be some kind of automatic import. These two wiki pages tell us more about it:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/AND_Data">AND Data</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mumbai">Mumbai</a></p>
+<p>Judging the tagging the user <a href="https://www.openstreetmap.org/user/AND">AND</a> seems to be some kind of automatic import. These two wiki pages tell us more about it:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/AND_Data">AND Data</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mumbai">Mumbai</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -201,8 +201,8 @@ osqa_accepted = false
 <div id="post-3762-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you know something is wrong in the map, but you don't have time to do a resurvey right now, you may add a fixme tag: <a href="http://wiki.openstreetmap.org/wiki/Key:fixme">http://wiki.openstreetmap.org/wiki/Key:fixme</a></p>
-<p>Then the fixme-tagged object will show up as a warning/error in quality assurance tools like Keep Right. <a href="http://wiki.openstreetmap.org/wiki/Keep_Right">http://wiki.openstreetmap.org/wiki/Keep_Right</a></p>
+<p>If you know something is wrong in the map, but you don't have time to do a resurvey right now, you may add a fixme tag: <a href="https://wiki.openstreetmap.org/wiki/Key:fixme">https://wiki.openstreetmap.org/wiki/Key:fixme</a></p>
+<p>Then the fixme-tagged object will show up as a warning/error in quality assurance tools like Keep Right. <a href="https://wiki.openstreetmap.org/wiki/Keep_Right">https://wiki.openstreetmap.org/wiki/Keep_Right</a></p>
 </div>
 <div id="comment-3762-info" class="comment-info">
 <span class="comment-age">(13 Mar '11, 06:53)</span> <span class="comment-user userinfo">gnurk</span>
@@ -295,7 +295,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Look here: <a href="http://www.openstreetmap.org/browse/way/22856117">http://www.openstreetmap.org/browse/way/22856117</a> Much more around. Most of it from the same user..</p>
+<p>Look here: <a href="https://www.openstreetmap.org/browse/way/22856117">https://www.openstreetmap.org/browse/way/22856117</a> Much more around. Most of it from the same user..</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Like Google maps have functions like <code>getBounds ()</code>, <code>getNorthEast ()</code>, and <code>getSouthWest ()</code> for finding the corners in a viewport, do <code>OpenStreet</code> maps have anything similar?</p>
 <p>Question: <strong>How to get the bounding box for a center point in <code>OpenStreet</code> maps through <code>Javascript</code> API?</strong></p>
 <p>Is this link of some relevance here?<br />
-<a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_bounding_box">http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_bounding_box</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_bounding_box">https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_bounding_box</a></p>
 <p>From that link:</p>
 <pre><code>class BoundingBox {
     double north;
@@ -133,7 +133,7 @@ osqa_accepted = true
 <p>First, I'd have a read of the links below.<br />
 </p>
 <p>Specifically, if you read the Leaflet docs page you'll see "getBounds()" mentioned pretty near the top, which does exactly what you want. I'm sure that OpenLayers offers something similar.</p>
-<p>However, until you've read a bit of background on how the OSM slippy map works (follow the <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map">http://wiki.openstreetmap.org/wiki/Slippy_Map</a> link from the top of the page in your question) some of the references may be a bit confusing.</p>
+<p>However, until you've read a bit of background on how the OSM slippy map works (follow the <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map">https://wiki.openstreetmap.org/wiki/Slippy_Map</a> link from the top of the page in your question) some of the references may be a bit confusing.</p>
 </div>
 <div id="comment-16671-info" class="comment-info">
 <span class="comment-age">(04 Oct '12, 16:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

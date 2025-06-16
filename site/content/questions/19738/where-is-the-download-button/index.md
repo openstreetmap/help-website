@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>from this amazing answer -- <a href="https://help.openstreetmap.org/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from">https://help.openstreetmap.org/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from</a></p>
+<p>from this amazing answer -- <a href="/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from">https://help.openstreetmap.org/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from</a></p>
 <p>1) the person said to start with small sets of data like on <a href="http://download.geofabrik.de/openstreetmap/north-america/us/">http://download.geofabrik.de/openstreetmap/north-america/us/</a> but it's not labelled or anything. i dont know if these data are the outlines of each state, or if they are statistical, or if they are trees in those states. it's so confusing. it's not labelled.</p>
 <p>2) and for <a href="http://planet.openstreetmap.org/">http://planet.openstreetmap.org/</a> -- i think the person said that this page has a map to the whole planet, so where in the world is that one download link? i dont see it anywhere.</p>
 <p>you know how on many webpages, you have ONE BIG BUTTON that says to download? i dont see it here. or maybe it's a small but visible "start now" button -- <a href="http://mapbox.com/">http://mapbox.com/</a> -- or something else everyone understands -- <a href="http://cartodb.com/">http://cartodb.com/</a></p>

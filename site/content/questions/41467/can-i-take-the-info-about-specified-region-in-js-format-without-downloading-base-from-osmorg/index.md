@@ -63,7 +63,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Could you explain in a little more detail what it is that you'd actually like to do? It looks like you may think that "openstreetmap.org" is just a web site - it's not. Try reading these, and some of the links from them:</p>
-<p><a href="http://www.openstreetmap.org/about">http://www.openstreetmap.org/about</a></p>
+<p><a href="https://www.openstreetmap.org/about">https://www.openstreetmap.org/about</a></p>
 <p><a href="http://wiki.osm.org/wiki/Main_Page">http://wiki.osm.org/wiki/Main_Page</a></p>
 <p>The chances are that you can either download the data that you want, or query a web service externally from openstreetmap.org to get the data that you're interested in. However, we can't help you unless you use a few more words explaining your goal.</p>
 </div>
@@ -187,8 +187,8 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10609/one_of_coder">@One_of_coder</a> Overpass API can return JSON which your website should be able to parse.</p>
-<p><a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a> "Reading everything" is slightly exaggerated :)</p>
+<p><a href="https://help.openstreetmap.org/users/10609/one_of_coder">@One_of_coder</a> Overpass API can return JSON which your website should be able to parse.</p>
+<p><a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a> "Reading everything" is slightly exaggerated :)</p>
 </div>
 <div id="comment-41503-info" class="comment-info">
 <span class="comment-age">(05 Mar '15, 08:12)</span> <span class="comment-user userinfo">scai ♦</span>

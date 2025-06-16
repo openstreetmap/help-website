@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to map a pole erected specifically for a birdsnest"
-description = '''Hi, this question (similar) has been asked before, but without proper results. It’s common to erect a pole with a kind of platform on top of it (mostly an old wagonwheel). It’s supposed to carry a storks nest like here at this farm http://www.openstreetmap.org/?lat=52.187031&amp;amp;lon=6.197821&amp;amp;zoo...'''
+description = '''Hi, this question (similar) has been asked before, but without proper results. It’s common to erect a pole with a kind of platform on top of it (mostly an old wagonwheel). It’s supposed to carry a storks nest like here at this farm https://www.openstreetmap.org/?lat=52.187031&amp;amp;lon=6.197821&amp;amp;zoo...'''
 date = "2013-01-28T22:10:00Z"
 lastmod = "2013-03-19T21:11:00Z"
 weight = 19411
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, this question (similar) has been asked before, but without proper results. It’s common to erect a pole with a kind of platform on top of it (mostly an old wagonwheel). It’s supposed to carry a storks nest like here at this farm <a href="http://www.openstreetmap.org/?lat=52.187031&amp;lon=6.197821&amp;zoom=18&amp;layers=M.">http://www.openstreetmap.org/?lat=52.187031&amp;lon=6.197821&amp;zoom=18&amp;layers=M.</a> But theyre build in Germany and France as well, without a specific tag in the German Wiki. Has anyone a good idea or is the tag key = birds nest, value = stork a useable one ? Since they’re all over Europe, erected stork nests, fi along the upper stream of the river Rhine ?</p>
+<p>Hi, this question (similar) has been asked before, but without proper results. It’s common to erect a pole with a kind of platform on top of it (mostly an old wagonwheel). It’s supposed to carry a storks nest like here at this farm <a href="https://www.openstreetmap.org/?lat=52.187031&amp;lon=6.197821&amp;zoom=18&amp;layers=M.">https://www.openstreetmap.org/?lat=52.187031&amp;lon=6.197821&amp;zoom=18&amp;layers=M.</a> But theyre build in Germany and France as well, without a specific tag in the German Wiki. Has anyone a good idea or is the tag key = birds nest, value = stork a useable one ? Since they’re all over Europe, erected stork nests, fi along the upper stream of the river Rhine ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-platform" rel="tag" title="see questions tagged &#39;platform&#39;">platform</span> <span class="post-tag tag-link-pole" rel="tag" title="see questions tagged &#39;pole&#39;">pole</span> <span class="post-tag tag-link-wagonwheel" rel="tag" title="see questions tagged &#39;wagonwheel&#39;">wagonwheel</span> <span class="post-tag tag-link-storknest" rel="tag" title="see questions tagged &#39;storknest&#39;">storknest</span>
@@ -131,7 +131,7 @@ osqa_accepted = true
 <div id="post-20820-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, thanks, I tagged it <a href="http://www.openstreetmap.org/?lat=52.061012&amp;lon=5.171264&amp;zoom=18&amp;layers=M,">http://www.openstreetmap.org/?lat=52.061012&amp;lon=5.171264&amp;zoom=18&amp;layers=M,</a> there 2 of them. Change it into artificial_nest or Andy's nesting_site ? Greetz</p>
+<p>Hi, thanks, I tagged it <a href="https://www.openstreetmap.org/?lat=52.061012&amp;lon=5.171264&amp;zoom=18&amp;layers=M,">https://www.openstreetmap.org/?lat=52.061012&amp;lon=5.171264&amp;zoom=18&amp;layers=M,</a> there 2 of them. Change it into artificial_nest or Andy's nesting_site ? Greetz</p>
 </div>
 <div id="comment-20820-info" class="comment-info">
 <span class="comment-age">(19 Mar '13, 20:38)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -142,7 +142,7 @@ osqa_accepted = true
 <div id="post-20821-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've added a few of my scheme here <a href="http://osm.org/go/b8op9elIN--">http://osm.org/go/b8op9elIN--</a> (for storks' nests), and one here <a href="http://www.openstreetmap.org/browse/node/2210347739">http://www.openstreetmap.org/browse/node/2210347739</a> :-)</p>
+<p>I've added a few of my scheme here <a href="http://osm.org/go/b8op9elIN--">http://osm.org/go/b8op9elIN--</a> (for storks' nests), and one here <a href="https://www.openstreetmap.org/browse/node/2210347739">https://www.openstreetmap.org/browse/node/2210347739</a> :-)</p>
 </div>
 <div id="comment-20821-info" class="comment-info">
 <span class="comment-age">(19 Mar '13, 21:11)</span> <span class="comment-user userinfo">SK53 ♦</span>

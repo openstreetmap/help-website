@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello everyone.</p>
 <p>I have installed my own osm tile server. I osmcarto style and mapnik for rendering tiles.</p>
-<p>Now I want to add English names to the city, that are not in English. For example: from <a href="http://www.openstreetmap.org/#map=6/29.191/112.291" title="title">Chineese</a> to <a href="http://www.openstreetmap.org/#map=6/29.191/112.291&amp;layers=Q" title="title">English and Chineese</a>.</p>
+<p>Now I want to add English names to the city, that are not in English. For example: from <a href="https://www.openstreetmap.org/#map=6/29.191/112.291" title="title">Chineese</a> to <a href="https://www.openstreetmap.org/#map=6/29.191/112.291&amp;layers=Q" title="title">English and Chineese</a>.</p>
 <p>I know, that I need to create <strong>'name:en' column</strong> to take english names from there.</p>
 <p>For import I use osm2psql tool and there command is:</p>
 <pre><code>osm2pgsql -z &#39;name:en&#39; -c --slim -d gis -C 1600 --number-processes 2 /path/to/file.</code></pre>

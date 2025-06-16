@@ -152,7 +152,7 @@ osqa_accepted = true
 <div id="post-42663-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10909/pbhj"></a><a href="http://help.openstreetmap.org/users/10909/pbhj">@pbhj</a>: yes, saying that some dark spot on bing looks like a building on google is not copying it. But e.g. how do you know at which location to look on google's imagery? Yes, I think this is a grey area – but if we want to have <span>free</span> (as in free speech, not necessarily as in free beer) content, then we cannot possibly infringe other people's rights. This would make our content unfree. By the way, but this is not our problem: as far as I see you would break their "terms of use" (e.g. § 2 (g)).</p>
+<p><a href="https://help.openstreetmap.org/users/10909/pbhj"></a><a href="https://help.openstreetmap.org/users/10909/pbhj">@pbhj</a>: yes, saying that some dark spot on bing looks like a building on google is not copying it. But e.g. how do you know at which location to look on google's imagery? Yes, I think this is a grey area – but if we want to have <span>free</span> (as in free speech, not necessarily as in free beer) content, then we cannot possibly infringe other people's rights. This would make our content unfree. By the way, but this is not our problem: as far as I see you would break their "terms of use" (e.g. § 2 (g)).</p>
 </div>
 <div id="comment-42663-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 01:21)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -175,7 +175,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10909/pbhj"></a><a href="http://help.openstreetmap.org/users/10909/pbhj">@pbhj</a>: in general, if you want to hear people who are possibly more an expert as I am, try to contact the <a href="https://lists.openstreetmap.org/pipermail/legal-talk/">legal talk</a> mailing list (if you like mailing lists). However, I have asked a member of the <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/Licensing_Working_Group">LWG</a> to comment here. So wait for this.</p>
+<p><a href="https://help.openstreetmap.org/users/10909/pbhj"></a><a href="https://help.openstreetmap.org/users/10909/pbhj">@pbhj</a>: in general, if you want to hear people who are possibly more an expert as I am, try to contact the <a href="https://lists.openstreetmap.org/pipermail/legal-talk/">legal talk</a> mailing list (if you like mailing lists). However, I have asked a member of the <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/Licensing_Working_Group">LWG</a> to comment here. So wait for this.</p>
 <p>Please note, that I do not speak authoritatively for "OSM" (whoever this is ;-) ), sorry if something in my previous answer text version made you believe this. I am just a OSM contributor like you.</p>
 </div>
 <div id="comment-42667-info" class="comment-info">
@@ -260,7 +260,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>By mail for example (see hotosm.org ) or see the answer to <a href="https://help.openstreetmap.org/questions/42677/satellite-image-quality-too-low-for-mapping-not-loading">https://help.openstreetmap.org/questions/42677/satellite-image-quality-too-low-for-mapping-not-loading</a></p>
+<p>By mail for example (see hotosm.org ) or see the answer to <a href="/questions/42677/satellite-image-quality-too-low-for-mapping-not-loading">https://help.openstreetmap.org/questions/42677/satellite-image-quality-too-low-for-mapping-not-loading</a></p>
 </div>
 <div id="comment-42687-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 13:16)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -271,7 +271,7 @@ osqa_accepted = true
 <div id="post-42688-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10909/pbhj"></a><a href="http://help.openstreetmap.org/users/10909/pbhj">@pbhj</a>: see <a href="https://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team#Contact_and_Media_Resources">https://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team#Contact_and_Media_Resources</a></p>
+<p><a href="https://help.openstreetmap.org/users/10909/pbhj"></a><a href="https://help.openstreetmap.org/users/10909/pbhj">@pbhj</a>: see <a href="https://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team#Contact_and_Media_Resources">https://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Team#Contact_and_Media_Resources</a></p>
 </div>
 <div id="comment-42688-info" class="comment-info">
 <span class="comment-age">(29 Apr '15, 13:17)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm still pretty new to OSM. I've just been adding houses and such around my area, but would like to move up to improving the roads in my area. I did some searching to learn the proper way to do roads, and oh my goodness, it seems there are a lot of different ways out there.</p>
-<p>My main question is, what is the best source of info on how to name/tag roads in the USA. Is it this?: <a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging">http://wiki.openstreetmap.org/wiki/United_States_roads_tagging</a></p>
+<p>My main question is, what is the best source of info on how to name/tag roads in the USA. Is it this?: <a href="https://wiki.openstreetmap.org/wiki/United_States_roads_tagging">https://wiki.openstreetmap.org/wiki/United_States_roads_tagging</a></p>
 <p>And a slightly related question, all the roads around my area have several "tiger" tags, such as: tiger:cfcc, tiger:county, tiger:name_base, tiger:name_type, etc... I read that these are here because the original import of data was from the tiger maps. So my question is, if I update the roads with the proper naming/tagging, can I remove the tiger tags to clean it up some? Or do we just ignore it and leave it there.</p>
 <p>Thanks!</p>
 </div>

@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This looks very similar to <a href="https://help.openstreetmap.org/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">this question</a>. Does the answer there work for you too?</p>
+<p>This looks very similar to <a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">this question</a>. Does the answer there work for you too?</p>
 </div>
 <div id="comment-18395-info" class="comment-info">
 <span class="comment-age">(12 Dec '12, 10:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

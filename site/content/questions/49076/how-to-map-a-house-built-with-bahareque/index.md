@@ -157,7 +157,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi AngocA, building:material=timber_framing found in <a href="http://wiki.openstreetmap.org/wiki/Key:building:material">http://wiki.openstreetmap.org/wiki/Key:building:material</a> the material in between the framing is mud and reed, willows or alike. It’s practical the oldest way to build a reinforced wall that will last some time. Feel free to use building:material=bahareque Consider adding historic=building as well if the house/building is old enough. The Wiki should get your attention as well.</p>
+<p>Hi AngocA, building:material=timber_framing found in <a href="https://wiki.openstreetmap.org/wiki/Key:building:material">https://wiki.openstreetmap.org/wiki/Key:building:material</a> the material in between the framing is mud and reed, willows or alike. It’s practical the oldest way to build a reinforced wall that will last some time. Feel free to use building:material=bahareque Consider adding historic=building as well if the house/building is old enough. The Wiki should get your attention as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

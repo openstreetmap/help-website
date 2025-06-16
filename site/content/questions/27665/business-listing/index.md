@@ -117,12 +117,12 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Put either a node (point) or a closed way (building) where the business is and then add appropriate tags like shop=<em>, office=</em>, or amenity=<em>. And you can add tags for phone=</em>, website=<em>, addr:street=</em>, addr:housenumber=*, etc. If it is a building then you should also have a building=yes tag.</p>
-<p>For shops see <a href="http://wiki.openstreetmap.org/wiki/Shop">http://wiki.openstreetmap.org/wiki/Shop</a></p>
-<p>For offices see <a href="http://wiki.openstreetmap.org/wiki/Office">http://wiki.openstreetmap.org/wiki/Office</a></p>
-<p>For tourism (hotels and such) see <a href="http://wiki.openstreetmap.org/wiki/Key:tourism">http://wiki.openstreetmap.org/wiki/Key:tourism</a></p>
-<p>For amenity (restaurants and such) see <a href="http://wiki.openstreetmap.org/wiki/Amenity">http://wiki.openstreetmap.org/wiki/Amenity</a></p>
-<p>For adding address information see <a href="http://wiki.openstreetmap.org/wiki/Address">http://wiki.openstreetmap.org/wiki/Address</a></p>
-<p>For adding telephone information see <a href="http://wiki.openstreetmap.org/wiki/Phone">http://wiki.openstreetmap.org/wiki/Phone</a></p>
+<p>For shops see <a href="https://wiki.openstreetmap.org/wiki/Shop">https://wiki.openstreetmap.org/wiki/Shop</a></p>
+<p>For offices see <a href="https://wiki.openstreetmap.org/wiki/Office">https://wiki.openstreetmap.org/wiki/Office</a></p>
+<p>For tourism (hotels and such) see <a href="https://wiki.openstreetmap.org/wiki/Key:tourism">https://wiki.openstreetmap.org/wiki/Key:tourism</a></p>
+<p>For amenity (restaurants and such) see <a href="https://wiki.openstreetmap.org/wiki/Amenity">https://wiki.openstreetmap.org/wiki/Amenity</a></p>
+<p>For adding address information see <a href="https://wiki.openstreetmap.org/wiki/Address">https://wiki.openstreetmap.org/wiki/Address</a></p>
+<p>For adding telephone information see <a href="https://wiki.openstreetmap.org/wiki/Phone">https://wiki.openstreetmap.org/wiki/Phone</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -176,8 +176,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To add information (such as a shop or business) to OpenStreetMap(OSM) you need to create an account that allows you to edit the map.</p>
-<p>The OSM wiki has a guide that will step you through signing up and editing the map. <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">http://wiki.openstreetmap.org/wiki/Beginners_Guide</a></p>
-<p>If you don't want to sign up for an account, you can add a note to the map marking where the business is and describing information about it. But you will have to wait for someone who has signed up to notice the note and edit the map with that information. They may wait until they go out and confirm the business is there, or they may wait until they are doing other businesses in the shop. <a href="http://wiki.openstreetmap.org/wiki/Notes">http://wiki.openstreetmap.org/wiki/Notes</a></p>
+<p>The OSM wiki has a guide that will step you through signing up and editing the map. <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">https://wiki.openstreetmap.org/wiki/Beginners_Guide</a></p>
+<p>If you don't want to sign up for an account, you can add a note to the map marking where the business is and describing information about it. But you will have to wait for someone who has signed up to notice the note and edit the map with that information. They may wait until they go out and confirm the business is there, or they may wait until they are doing other businesses in the shop. <a href="https://wiki.openstreetmap.org/wiki/Notes">https://wiki.openstreetmap.org/wiki/Notes</a></p>
 <p>As others asked, it is good to know what kind of business it is so we can explain how to add it to the map and point you to the most relevant tutorials.</p>
 </div>
 <div class="answer-controls post-controls">

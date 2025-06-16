@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>However, the other building is not (when I go in edit mode, it is there).</p>
 <p><strong>QUESTION</strong> how to make the generic building visible on map? Or is my guess wrong, and could it be changeset was accepted partially?</p>
 <p><em>I added generic building because I could not find any more specific type -- it is graduation tower, just in case, it is big pile of wood where water vapors out and people walking by can inhale.</em><img src="http://www.digitalphoto.pl/foto_galeria/2003-0168.jpg" alt="alt text" /></p>
-<p><strong>Update:</strong> here is the permalink (?) -- <a href="http://www.openstreetmap.org/?lat=52.88698&amp;lon=18.78375&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.88698&amp;lon=18.78375&amp;zoom=17&amp;layers=M</a> and the changeset number is 12788804.</p>
+<p><strong>Update:</strong> here is the permalink (?) -- <a href="https://www.openstreetmap.org/?lat=52.88698&amp;lon=18.78375&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.88698&amp;lon=18.78375&amp;zoom=17&amp;layers=M</a> and the changeset number is 12788804.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-visibility" rel="tag" title="see questions tagged &#39;visibility&#39;">visibility</span>
@@ -138,9 +138,9 @@ osqa_accepted = true
 <div class="answer-body">
 <p>First of all, not everything is rendered. Because it's not rendered, that doesn't mean it will not be used. It's possible usable for the search field, or maybe for routers (depending on what you added). So don't worry if it isn't rendered.</p>
 <p>Next to that, buildings are only considered valuable when the outline¹ of the building is drawn, so you can see on the map. "I can't walk on that area, it's a building". I won't say a building tag on a point is wrong, but it is not of big value, so it isn't drawn on the map.</p>
-<p>Now, if it is more than a building, it might be worth drawing it (I don't know, is it a sports complex? is it a tribune?) but you can search on our <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki</a>, or in the editor for better descriptions than just "building".</p>
+<p>Now, if it is more than a building, it might be worth drawing it (I don't know, is it a sports complex? is it a tribune?) but you can search on our <a href="https://wiki.openstreetmap.org/wiki/Map_Features">wiki</a>, or in the editor for better descriptions than just "building".</p>
 <p>¹ to draw the outline of an object, you just draw a way (like you would draw a street) but connect the two ends to each other.</p>
-<p>You can also have a look at the <a href="http://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginner's guide</a></p>
+<p>You can also have a look at the <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginner's guide</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,11 +207,11 @@ osqa_accepted = true
 <div class="answer-body">
 <p>You added two nodes with just a <em>building=</em> and a <em>name=</em> tag:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1873481884">http://www.openstreetmap.org/browse/node/1873481884</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1873481781">http://www.openstreetmap.org/browse/node/1873481781</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1873481884">https://www.openstreetmap.org/browse/node/1873481884</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1873481781">https://www.openstreetmap.org/browse/node/1873481781</a></li>
 </ul>
 <p>Such combinations are currently not rendered on the default page unless there are any additional POI-related tags (like restaurant, fuel etc.) on these nodes. If you still want these objects to appear on the map, try adding the building outline as a way. This only makes sense if the buildings are large enough, though.</p>
-<p>Furthermore, according to a translator the value in the <em>name</em> tag says 'cooling towers'. This is not a name, so it doesn't belong into the name tag. There are other tags which you can use instead, like <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower</a> and tower:type=cooling (there is also <a href="http://taginfo.openstreetmap.org/tags/man_made=cooling_tower">man_made=cooling_tower</a> but not used widely and undocumented in the wiki).</p>
+<p>Furthermore, according to a translator the value in the <em>name</em> tag says 'cooling towers'. This is not a name, so it doesn't belong into the name tag. There are other tags which you can use instead, like <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower</a> and tower:type=cooling (there is also <a href="http://taginfo.openstreetmap.org/tags/man_made=cooling_tower">man_made=cooling_tower</a> but not used widely and undocumented in the wiki).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -261,7 +261,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you look at other areas in OSM, most buildings have the outline drawn as a closed way and are simply tagged <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=yes</a>. That would be sufficient to render the building in most cases. There are around 1000 cases of <a href="http://taginfo.openstreetmap.org/tags/building=tower">building=tower</a>, too.</p>
+<p>If you look at other areas in OSM, most buildings have the outline drawn as a closed way and are simply tagged <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=yes</a>. That would be sufficient to render the building in most cases. There are around 1000 cases of <a href="http://taginfo.openstreetmap.org/tags/building=tower">building=tower</a>, too.</p>
 <p>By the way, apparently the English name for this structure (Tężnie) is a <a href="http://en.wikipedia.org/wiki/Graduation_tower">graduation tower</a>. Given the description on the wiki page of the towers and their length at Ciechocinek, a way (ie - line) might also be appropriate instead of an area? Really interesting to learn about this!</p>
 </div>
 <div class="answer-controls post-controls">

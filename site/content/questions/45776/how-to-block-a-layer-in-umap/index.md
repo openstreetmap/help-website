@@ -97,7 +97,7 @@ osqa_accepted = false
 <p>I would like the layer "Sport" is blocked and that we do not disables with the "eye".</p>
 <p>Can we make disappear "the activate eye" into the "blue square" ?</p>
 <p>I would like that "Sport" is continually visible</p>
-<p><img src="http://help.openstreetmap.org/upfiles/ScreenShot141.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/ScreenShot141.jpg" alt="alt text" /></p>
 <p>Thank you a lot</p>
 </div>
 <div id="comment-45782-info" class="comment-info">
@@ -123,7 +123,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>What about asking the developer of umap:</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a></p>
 <p>It seems the maintainer is living in France (if I am not wrong), thus speaking french quite well, I hope.</p>
 </div>
 <div id="comment-45788-info" class="comment-info">
@@ -135,7 +135,7 @@ osqa_accepted = false
 <div id="post-45789-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/99/stephan75"></a><a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: <span>ybon</span> is also active here on this site. For me this place is fine.</p>
+<p><a href="https://help.openstreetmap.org/users/99/stephan75"></a><a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: <span>ybon</span> is also active here on this site. For me this place is fine.</p>
 </div>
 <div id="comment-45789-info" class="comment-info">
 <span class="comment-age">(07 Oct '15, 17:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

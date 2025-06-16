@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap data comes under ODbL 1.0 license. Links to, and details about, this can be found in our <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a>.</p>
+<p>OpenStreetMap data comes under ODbL 1.0 license. Links to, and details about, this can be found in our <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a>.</p>
 <p>The likely short answer to your question is: All of the ODbL's provisions are only triggered if you "publicly use" our data or something derived from it; so even though your use case would not be restricted by the ODbL's provisions, they don't even apply for "internal use only".</p>
 </div>
 <div class="answer-controls post-controls">

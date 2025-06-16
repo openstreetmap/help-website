@@ -120,7 +120,7 @@ One Answer:
 <div class="answer-body">
 <p>We have nominantim for that.</p>
 <p>Example: <a href="http://nominatim.openstreetmap.org/search?q=135+pilkington+avenue,+birmingham&amp;format=xml&amp;polygon=1&amp;addressdetails=1"><code>http://nominatim.openstreetmap.org/search?q=135+pilkington+avenue,+birmingham&amp;format=xml&amp;polygon=1&amp;addressdetails=1</code></a></p>
-<p>See the wiki at <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a> for more information.</p>
+<p>See the wiki at <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a> for more information.</p>
 <p>Note that you must not use this for "batch geocoding" i.e. it is ok to find the location for a single business but you are not allowed to run through a long list of addresses and geocode them all at once (see the usage policy linked at the bottom of the Nominatim page).</p>
 </div>
 <div class="answer-controls post-controls">

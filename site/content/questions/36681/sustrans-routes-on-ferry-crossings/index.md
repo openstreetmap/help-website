@@ -154,7 +154,7 @@ osqa_accepted = false
 <div id="post-40006-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9614/pompeybug">@pompeybug</a>: I have tried to clarify in his answer text what Wynndale was meaning (hopefully).</p>
+<p><a href="https://help.openstreetmap.org/users/9614/pompeybug">@pompeybug</a>: I have tried to clarify in his answer text what Wynndale was meaning (hopefully).</p>
 </div>
 <div id="comment-40006-info" class="comment-info">
 <span class="comment-age">(04 Jan '15, 02:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

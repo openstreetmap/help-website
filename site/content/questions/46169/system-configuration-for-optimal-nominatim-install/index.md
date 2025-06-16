@@ -165,7 +165,7 @@ One Answer:
 <p>From memory Redhat and derivatives have always had that "odd" approach to partitioning. Given that you won't have huge /home directories, I'd explicity remove those and allocate "the rest of the disk" to /, since you don't want to create an artifical point of failure where a partition is full. How hard the installation process will make this task for you I don't know, because I haven't installed a vanilla Redhat system for a while.</p>
 <p>One other thing to watch for - check the version of any frequently-updated package (such as Postgres) that yum offers against the latest source version to make sure you aren't installing a very out-of-date version. I don't know that it'll be a problem, but it's something to check.</p>
 <p>You've probably already seen the page in the wiki; if not:</p>
-<p><a href="http://wiki.openstreetmap.org/w/index.php?title=Nominatim/Installation_on_CentOS&amp;oldid=1180464">http://wiki.openstreetmap.org/w/index.php?title=Nominatim/Installation_on_CentOS&amp;oldid=1180464</a></p>
+<p><a href="https://wiki.openstreetmap.org/w/index.php?title=Nominatim/Installation_on_CentOS&amp;oldid=1180464">https://wiki.openstreetmap.org/w/index.php?title=Nominatim/Installation_on_CentOS&amp;oldid=1180464</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

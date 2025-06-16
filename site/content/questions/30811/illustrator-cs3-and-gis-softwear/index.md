@@ -118,7 +118,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Maperitive is for Windows only but if you can get that to work somehow, somewhere, then you <em>will</em> be able to export an SVG that you can postprocess in Illustrator on your Mac (it has a special AI compatibility mode).</p>
 <p>Other than that, things will be difficult. There's a number of commercial options where people do (or have done) the convert-to-SVG step for you, notably <a href="http://scalablemaps.com/">http://scalablemaps.com/</a> which is run by the same guy who did Maperitive. If you prefer do-it-yourself then there's also a Perl script that converts OSM to AI but it might require more hackery than you want to endure (installing Perl modules and potentially a database on your Mac).</p>
-<p>Read more about this <a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">on the Wiki.</a></p>
+<p>Read more about this <a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">on the Wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

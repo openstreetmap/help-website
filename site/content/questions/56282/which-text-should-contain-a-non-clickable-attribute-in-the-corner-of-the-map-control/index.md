@@ -132,7 +132,7 @@ One Answer:
 <p>&lt;simonpoole&gt; I would suggest something like © OpenStreetMap contributors openstreetmap.org for the on map attribution as that is simple enough for somebody to type in to a browser as is</p>
 <p>&lt;simonpoole&gt; see <a href="http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ#What_do_you_mean_by_.22Attribution.22.3F">http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ#What_do_you_mean_by_.22Attribution.22.3F</a> for more information</p>
 <p>&lt;CGI543&gt; we have more extensive mention with link on the "Help" in our documentation. So should we place somewhere additional mention of OpenStreetMap near our map control, or mention in our Help and non-clickable attribution will be enough?</p>
-<p>&lt;simonpoole&gt; you need to do at least what is reasonable, more is appreciated .... for example pointing out that the users can improve the data and perhaps provide a link to <a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a></p>
+<p>&lt;simonpoole&gt; you need to do at least what is reasonable, more is appreciated .... for example pointing out that the users can improve the data and perhaps provide a link to <a href="https://www.openstreetmap.org/fixthemap">https://www.openstreetmap.org/fixthemap</a></p>
 <p>&lt;CGI543&gt; Last question to make all clear. We should change text of the non-clickable attribution to "© OpenStreetMap contributors" or "openstreetmap.org". I'm worry that I didn't understand you right</p>
 <p>&lt;simonpoole&gt; the point was just that I would add the domain to the text so that users can still find the website if they so wish</p>
 <p>&lt;CGI543&gt; simonpoole, thank you for help! Have a nice day)</p>

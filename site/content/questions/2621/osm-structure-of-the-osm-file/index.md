@@ -115,8 +115,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The only reliable way to find all the towns and villages in a particular area is to treat the data as a <a href="http://en.wikipedia.org/wiki/Spatial_analysis">spatial dataset</a> and calculate the results using the coordinates. OSM data does not, and usually <em>should</em> not, have a hierarchy of places like you describe.</p>
-<p>You should first describe the area that you are interested in in terms of a polygon of coordinates, then use that polygon with a suitable <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Extracts">planet file extract</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to generate data within that polygon. You can then find all the towns, villages etc by filtering for the nodes, and ways containing nodes, that you have within your area.</p>
-<p>For most search / hierarchy challenges like this I would suggest starting with the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> software, which does all this processing for you.</p>
+<p>You should first describe the area that you are interested in in terms of a polygon of coordinates, then use that polygon with a suitable <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Extracts">planet file extract</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to generate data within that polygon. You can then find all the towns, villages etc by filtering for the nodes, and ways containing nodes, that you have within your area.</p>
+<p>For most search / hierarchy challenges like this I would suggest starting with the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> software, which does all this processing for you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

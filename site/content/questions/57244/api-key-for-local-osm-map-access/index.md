@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This looks like the same question as <a href="https://help.openstreetmap.org/questions/54221/implementing-api-key-based-access-control-for-mod-tiles">https://help.openstreetmap.org/questions/54221/implementing-api-key-based-access-control-for-mod-tiles</a> - how is it different?</p>
+<p>This looks like the same question as <a href="/questions/54221/implementing-api-key-based-access-control-for-mod-tiles">https://help.openstreetmap.org/questions/54221/implementing-api-key-based-access-control-for-mod-tiles</a> - how is it different?</p>
 </div>
 <div id="comment-57245-info" class="comment-info">
 <span class="comment-age">(24 Jul '17, 11:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

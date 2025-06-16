@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-16959-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This isn't really an OpenStreetMap question. "OpenLayers" is used by some people to display OSM maps, but is really nothing to do with it. Were the links to openlayers resources added to <a href="https://help.openstreetmap.org/questions/16923/openlayers-how-to-add-customized-buttons-to-a-panel">your previous question</a> of no help?</p>
+<p>This isn't really an OpenStreetMap question. "OpenLayers" is used by some people to display OSM maps, but is really nothing to do with it. Were the links to openlayers resources added to <a href="/questions/16923/openlayers-how-to-add-customized-buttons-to-a-panel">your previous question</a> of no help?</p>
 </div>
 <div id="comment-16959-info" class="comment-info">
 <span class="comment-age">(17 Oct '12, 11:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

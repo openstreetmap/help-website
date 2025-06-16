@@ -40,11 +40,11 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Wie tagge ich Biogasanlagen richtig, also Anlagen, die Biogas erzeugen und mit einem Generator Strom &amp; Wärme erzeugen?</p>
-<p>Habe ich einen deutschen oder englischen Artikel im Wiki übersehen oder gibt es einfach noch keine offiziellen Tags? Ich fand nur diesen französischen Eintrag: <a href="http://wiki.openstreetmap.org/wiki/FR:Tag:generator:source%3Dbiogas">Link</a></p>
+<p>Habe ich einen deutschen oder englischen Artikel im Wiki übersehen oder gibt es einfach noch keine offiziellen Tags? Ich fand nur diesen französischen Eintrag: <a href="https://wiki.openstreetmap.org/wiki/FR:Tag:generator:source%3Dbiogas">Link</a></p>
 <hr />
 <p>How do I tag anaerobic_digestion plants, which produce biogas and next produce eletricity &amp; heat with a generator?</p>
-<p>Did I miss an english or german entry in the Wiki or are there no offical tags yet available? I found only one french entry <a href="http://wiki.openstreetmap.org/wiki/FR:Tag:generator:source%3Dbiogas">Link</a></p>
-<p>Edit: Ok, I've found it myself, sorry to bother you. <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dgenerator">http://wiki.openstreetmap.org/wiki/Tag:power%3Dgenerator</a></p>
+<p>Did I miss an english or german entry in the Wiki or are there no offical tags yet available? I found only one french entry <a href="https://wiki.openstreetmap.org/wiki/FR:Tag:generator:source%3Dbiogas">Link</a></p>
+<p>Edit: Ok, I've found it myself, sorry to bother you. <a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dgenerator">https://wiki.openstreetmap.org/wiki/Tag:power%3Dgenerator</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-anaerobic_digestion" rel="tag" title="see questions tagged &#39;anaerobic_digestion&#39;">anaerobic_digestion</span> <span class="post-tag tag-link-plant" rel="tag" title="see questions tagged &#39;plant&#39;">plant</span> <span class="post-tag tag-link-biogas" rel="tag" title="see questions tagged &#39;biogas&#39;">biogas</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -123,13 +123,13 @@ One Answer:
 <div class="answer-body">
 <p>Maybe something like:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dgenerator">power=generator</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dgenerator">power=generator</a></li>
 <li>generator:source=biogas</li>
 <li>generator:output:electricity=yes</li>
 <li>generator:output:hot_water=yes</li>
 <li>generator:method=anaerobic_digestion</li>
 </ul>
-<p>There are both <a href="http://wiki.openstreetmap.org/wiki/Key:generator:source">English</a> and <a href="http://wiki.openstreetmap.org/wiki/DE:Key:generator:source">German</a> versions of the wiki page you linked to.</p>
+<p>There are both <a href="https://wiki.openstreetmap.org/wiki/Key:generator:source">English</a> and <a href="https://wiki.openstreetmap.org/wiki/DE:Key:generator:source">German</a> versions of the wiki page you linked to.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

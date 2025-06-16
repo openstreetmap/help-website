@@ -116,9 +116,9 @@ One Answer:
 <p>On OpenCycleMap the blue dashes can represent:- highway=cycleway or (provided they also include the tag bicycle-yes) highway=footway or highway=path.</p>
 <p>OpenCycleMap displays cycleway=lane as blue 'bordering' of the highway containing the cycle lanes.</p>
 <p>Some examples here</p>
-<p>highway=cycleway <a href="http://www.openstreetmap.org/way/211428231#map=17/-37.78792/175.30555&amp;layers=C">http://www.openstreetmap.org/way/211428231#map=17/-37.78792/175.30555&amp;layers=C</a></p>
-<p>highway=footway with bicycle=yes <a href="http://www.openstreetmap.org/way/282437711">http://www.openstreetmap.org/way/282437711</a></p>
-<p>cycleway=lane <a href="http://www.openstreetmap.org/way/117793531">http://www.openstreetmap.org/way/117793531</a></p>
+<p>highway=cycleway <a href="https://www.openstreetmap.org/way/211428231#map=17/-37.78792/175.30555&amp;layers=C">https://www.openstreetmap.org/way/211428231#map=17/-37.78792/175.30555&amp;layers=C</a></p>
+<p>highway=footway with bicycle=yes <a href="https://www.openstreetmap.org/way/282437711">https://www.openstreetmap.org/way/282437711</a></p>
+<p>cycleway=lane <a href="https://www.openstreetmap.org/way/117793531">https://www.openstreetmap.org/way/117793531</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -137,7 +137,7 @@ One Answer:
 <div id="post-45409-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for your response, but it looks like cyclepath also represents additional key:value pairs that you have not listed, such as cycleway=track (an example of which is here - <a href="http://www.openstreetmap.org/way/160390336">http://www.openstreetmap.org/way/160390336</a> ). I am interested in getting a complete list of all the tags used in OpenCycleMap.</p>
+<p>Thank you for your response, but it looks like cyclepath also represents additional key:value pairs that you have not listed, such as cycleway=track (an example of which is here - <a href="https://www.openstreetmap.org/way/160390336">https://www.openstreetmap.org/way/160390336</a> ). I am interested in getting a complete list of all the tags used in OpenCycleMap.</p>
 </div>
 <div id="comment-45409-info" class="comment-info">
 <span class="comment-age">(20 Sep '15, 01:49)</span> <span class="comment-user userinfo">One_Ironaut</span>

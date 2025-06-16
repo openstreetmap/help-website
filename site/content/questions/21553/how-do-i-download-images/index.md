@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want only a few images, you can download them from the main map page, <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> . Click the "share" icon (small window with an outward pointing arrow) on the right hand side of the map, then use the "Download" button from the lower half of the panel that opens up.</p>
-<p>If you need too many images to download them manually, you can download them as tiles. You can download from OSM's servers if you do not exceed their usage limits; otherwise you'll need to host your own tile server. See <a href="http://wiki.openstreetmap.org/wiki/Tile">the wiki page on tiles</a> for more information; and <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile usage</a> for the tile usage policy and limits.</p>
+<p>If you want only a few images, you can download them from the main map page, <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> . Click the "share" icon (small window with an outward pointing arrow) on the right hand side of the map, then use the "Download" button from the lower half of the panel that opens up.</p>
+<p>If you need too many images to download them manually, you can download them as tiles. You can download from OSM's servers if you do not exceed their usage limits; otherwise you'll need to host your own tile server. See <a href="https://wiki.openstreetmap.org/wiki/Tile">the wiki page on tiles</a> for more information; and <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile usage</a> for the tile usage policy and limits.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

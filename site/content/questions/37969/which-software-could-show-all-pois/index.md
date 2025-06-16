@@ -62,7 +62,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>This previous question re mountain pass may help.<br />
-<a href="https://help.openstreetmap.org/questions/27370/mountain-pass-not-showing-on-map.">https://help.openstreetmap.org/questions/27370/mountain-pass-not-showing-on-map.</a><br />
+<a href="/questions/27370/mountain-pass-not-showing-on-map.">https://help.openstreetmap.org/questions/27370/mountain-pass-not-showing-on-map.</a><br />
 I know of no map version that renders all data, though a map that renders everything in more data sparse areas would be useful.</p>
 </div>
 <div id="comment-37978-info" class="comment-info">

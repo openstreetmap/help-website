@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Welcome, we're happy that you are willing to make OSM better.</p>
-<p>To do so, you first need an account on osm.org Then you can start editing. There are a number of tutorials available for newbies like you on the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">wiki</a> . You can search this help site as well for the links</p>
+<p>To do so, you first need an account on osm.org Then you can start editing. There are a number of tutorials available for newbies like you on the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">wiki</a> . You can search this help site as well for the links</p>
 <p>When you start the edit button a number of satellite images will be available to trace the buildings. Note that Google is <strong>not</strong> among them. <strong>We are not allowed to trace from their (Google's) images</strong>.</p>
 <p>So hopefully the images from the other providers (e.g. Bing or MapBox) are recent enough to show the buildings (because we are allowed to use those special images).</p>
 <p>happy mapping</p>

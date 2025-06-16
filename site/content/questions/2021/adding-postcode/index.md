@@ -138,7 +138,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use either <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">postal_code</a> or <a href="http://wiki.openstreetmap.org/wiki/Key:addr:postcode">addr:postcode</a> to add postcodes.</p>
+<p>You can use either <a href="https://wiki.openstreetmap.org/wiki/Key:postal_code">postal_code</a> or <a href="https://wiki.openstreetmap.org/wiki/Key:addr:postcode">addr:postcode</a> to add postcodes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

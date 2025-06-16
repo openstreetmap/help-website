@@ -149,7 +149,7 @@ One Answer:
 <div id="post-32063-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If the author refers to QA you might be interested in various scientific analysis about OSM coverage: <a href="http://wiki.openstreetmap.org/wiki/Research">http://wiki.openstreetmap.org/wiki/Research</a></p>
+<p>If the author refers to QA you might be interested in various scientific analysis about OSM coverage: <a href="https://wiki.openstreetmap.org/wiki/Research">https://wiki.openstreetmap.org/wiki/Research</a></p>
 </div>
 <div id="comment-32063-info" class="comment-info">
 <span class="comment-age">(02 Apr '14, 09:47)</span> <span class="comment-user userinfo">iii</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Street no longer on the rendering layer after adding a bicycle path"
-description = '''Hello, I made some changes on a street here :  http://osm.org/go/0AspJ5rAw--?m= I wanted to change the street according to this :  http://wiki.openstreetmap.org/wiki/FR:Bicycle#Bandes_cyclables_sur_les_routes_.C3.A0_sens_unique (ref M1) Apparently, I made a mistake, as the street disappeared from th...'''
+description = '''Hello, I made some changes on a street here :  http://osm.org/go/0AspJ5rAw--?m= I wanted to change the street according to this :  https://wiki.openstreetmap.org/wiki/FR:Bicycle#Bandes_cyclables_sur_les_routes_.C3.A0_sens_unique (ref M1) Apparently, I made a mistake, as the street disappeared from th...'''
 date = "2014-02-24T10:52:00Z"
 lastmod = "2014-02-24T12:39:00Z"
 weight = 30972
@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hello,</p>
 <p>I made some changes on a street here :</p>
 <p><a href="http://osm.org/go/0AspJ5rAw--?m=">http://osm.org/go/0AspJ5rAw--?m=</a></p>
-<p>I wanted to change the street according to this : <a href="http://wiki.openstreetmap.org/wiki/FR:Bicycle#Bandes_cyclables_sur_les_routes_.C3.A0_sens_unique">http://wiki.openstreetmap.org/wiki/FR:Bicycle#Bandes_cyclables_sur_les_routes_.C3.A0_sens_unique</a></p>
+<p>I wanted to change the street according to this : <a href="https://wiki.openstreetmap.org/wiki/FR:Bicycle#Bandes_cyclables_sur_les_routes_.C3.A0_sens_unique">https://wiki.openstreetmap.org/wiki/FR:Bicycle#Bandes_cyclables_sur_les_routes_.C3.A0_sens_unique</a></p>
 <p>(ref M1)</p>
 <p>Apparently, I made a mistake, as the street disappeared from the rendering layer.</p>
 <p>I tried to render it again ( /dirty at the end of the tile) but the street is no longer shown.</p>

@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's the <a href="http://www.openstreetmap.org/way/311041338#map=16/52.1410/-0.0398&amp;layers=C">National Byway</a>. It's shown as purple on the cycle map. The relation through Cambridgeshire is <a href="http://www.openstreetmap.org/relation/935883">this one</a>. It's tagged as a "regional cycling network". See also their <a href="http://www.thenationalbyway.org/">website</a>.</p>
+<p>It's the <a href="https://www.openstreetmap.org/way/311041338#map=16/52.1410/-0.0398&amp;layers=C">National Byway</a>. It's shown as purple on the cycle map. The relation through Cambridgeshire is <a href="https://www.openstreetmap.org/relation/935883">this one</a>. It's tagged as a "regional cycling network". See also their <a href="http://www.thenationalbyway.org/">website</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

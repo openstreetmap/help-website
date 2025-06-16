@@ -249,7 +249,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><span class="small"><a href="http://help.openstreetmap.org/users/9825/elite_mapper"></a><a href="http://help.openstreetmap.org/users/9825/elite_mapper">@elite_mapper</a></a> provided an own answer (in revision 3 of the question text):</span></p>
+<p><span class="small"><a href="https://help.openstreetmap.org/users/9825/elite_mapper"></a><a href="https://help.openstreetmap.org/users/9825/elite_mapper">@elite_mapper</a></a> provided an own answer (in revision 3 of the question text):</span></p>
 <p>I added an <code>boundary=administrative</code> and <code>place=locality</code> tag to the postcode boundary so the addresses inside of it takes on whatever name of the postal town it it assigned to, like it is supposed to.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -134,7 +134,7 @@ One Answer:
 <div id="post-77138-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I mapped a new long distance path a few years ago here's the Q&amp;A that was generated. It may be of help to you. <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
+<p>I mapped a new long distance path a few years ago here's the Q&amp;A that was generated. It may be of help to you. <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
 </div>
 <div id="comment-77138-info" class="comment-info">
 <span class="comment-age">(17 Oct '20, 19:56)</span> <span class="comment-user userinfo">andy mackey</span>

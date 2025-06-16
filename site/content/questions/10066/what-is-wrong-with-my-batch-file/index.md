@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I have installed josm-latest.jar to C:osm\</p>
 <p>josm-latest.jar starts and runs without any problem: i.e. as expected!</p>
 <p>I have created a batch file josm.bat in C:osm to invoke the Xmx option but it does not work and I cannot figure out why.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Capture.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture.PNG" alt="alt text" /></p>
 <p>Whats wrong? For any advice I will be very grateful</p>
 </div>
 <div id="question-tags" class="tags-container tags">

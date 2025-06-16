@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-38632-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> that link doesn't work - close the search to link the map location.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a> that link doesn't work - close the search to link the map location.</p>
 </div>
 <div id="comment-38632-info" class="comment-info">
 <span class="comment-age">(17 Nov '14, 18:24)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

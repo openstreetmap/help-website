@@ -218,7 +218,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If the additions are appropriate for OpenStreetMap(OSM), then please help by improving the shared map. As in they are real objects, and people are happy with the additions being public (may not be the case if it is on private land). This would include paths, woodland areas, and maybe individual trees. There are a number of guides available such as the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">OSM Wiki</a> and the <a href="http://learnosm.org/en/">Learn OSM</a> website.</p>
+<p>If the additions are appropriate for OpenStreetMap(OSM), then please help by improving the shared map. As in they are real objects, and people are happy with the additions being public (may not be the case if it is on private land). This would include paths, woodland areas, and maybe individual trees. There are a number of guides available such as the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">OSM Wiki</a> and the <a href="http://learnosm.org/en/">Learn OSM</a> website.</p>
 <p>If there are existing OpenStreetMap volunteers in your area you could see if they are running any events you and the community could join, or if they could you run a workshop for the community.</p>
 <p>For items that are not appropriate to add to the OpenStreetMap database then I recommend <a href="http://umap.openstreetmap.fr/en/">uMap</a> by the French OSM community. You can draw points, lines, and areas on top of an OpenStreetMap layer and keep that map or share it with others, but it keeps this separate and does not save it into the OpenStreetMap database.</p>
 </div>

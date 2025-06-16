@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you'd want to use is a <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route relation</a>, specifically <code>route=ski</code>. You'd want to map the off-road sections as what they best represent (ie. are they hiking trails in the summer?), then add those sections and the relevant pieces of roads as members of a relation. You could then add the piste-specific tags to the relation and this object would represent the entire ski trail. Ways can also be members of multiple relations, so if there's a section that's used by more than one ski trail, it can be added to any relevant relations.</p>
+<p>What you'd want to use is a <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relation</a>, specifically <code>route=ski</code>. You'd want to map the off-road sections as what they best represent (ie. are they hiking trails in the summer?), then add those sections and the relevant pieces of roads as members of a relation. You could then add the piste-specific tags to the relation and this object would represent the entire ski trail. Ways can also be members of multiple relations, so if there's a section that's used by more than one ski trail, it can be added to any relevant relations.</p>
 <p>As for the specifics on how to create the relation, that will vary depending on which editor you're using. There should be plenty of information already available around here on creating route relations in the most popular editors.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi datamonger, this Q&amp;A came up by adding 'ski' to the white window above, read these lines <a href="https://help.openstreetmap.org/questions/32084/how-to-tag-something-that-is-a-ski-piste-in-winter-and-a-hiking-trail-in-summer">https://help.openstreetmap.org/questions/32084/how-to-tag-something-that-is-a-ski-piste-in-winter-and-a-hiking-trail-in-summer</a> And more if you want it the next one is useable as well, <a href="https://help.openstreetmap.org/questions/409/how-do-i-tag-a-way-where-there-is-a-cross-country-ski-track-in-winter-only">https://help.openstreetmap.org/questions/409/how-do-i-tag-a-way-where-there-is-a-cross-country-ski-track-in-winter-only</a> . Happy spur</p>
+<p>Hi datamonger, this Q&amp;A came up by adding 'ski' to the white window above, read these lines <a href="/questions/32084/how-to-tag-something-that-is-a-ski-piste-in-winter-and-a-hiking-trail-in-summer">https://help.openstreetmap.org/questions/32084/how-to-tag-something-that-is-a-ski-piste-in-winter-and-a-hiking-trail-in-summer</a> And more if you want it the next one is useable as well, <a href="/questions/409/how-do-i-tag-a-way-where-there-is-a-cross-country-ski-track-in-winter-only">https://help.openstreetmap.org/questions/409/how-do-i-tag-a-way-where-there-is-a-cross-country-ski-track-in-winter-only</a> . Happy spur</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -253,7 +253,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Simply look here for an example: <a href="http://www.opensnowmap.org/?zoom=16&amp;lat=46.6399&amp;lon=6.16946&amp;layers=&amp;marker=false">http://www.opensnowmap.org/?zoom=16&amp;lat=46.6399&amp;lon=6.16946&amp;layers=&amp;marker=false</a></p>
 <p>You can perfectly create a way with piste tags and no highway tag. What you are looking at is not a <strong>way</strong>, but a <strong>route</strong>. In OSM, routes are described with <strong>relation</strong>.</p>
-<p>For <a href="http://wiki.openstreetmap.org/wiki/Tag:route%3Dpiste">route=piste</a> (or route=ski, it's about the same) relations, you may want to use <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> editor.</p>
+<p>For <a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dpiste">route=piste</a> (or route=ski, it's about the same) relations, you may want to use <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> editor.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

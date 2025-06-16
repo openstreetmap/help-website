@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I've been having a mistake on JOSM for a few weeks now that I do not understand. The problem is only on the Ubuntu version, tested on two different machines and there is the same problem, which makes the downloading and loading of data on OSM very long. On Windows it works by doing the same things.</p>
 <p>JOSM is updated to the latest version. He says this: "IO Exception" The problem hinders me to do data updates in OSM</p>
-<p>What can I do?! <img src="https://help.openstreetmap.org/upfiles/Schermata_del_2017-12-22_09-52-38_i0YOpKZ.png" alt="alt text" /></p>
+<p>What can I do?! <img src="/upfiles/Schermata_del_2017-12-22_09-52-38_i0YOpKZ.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-download" rel="tag" title="see questions tagged &#39;download&#39;">download</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-exception" rel="tag" title="see questions tagged &#39;exception&#39;">exception</span> <span class="post-tag tag-link-io" rel="tag" title="see questions tagged &#39;io&#39;">io</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi AmarilisGardener, why not following the Wiki and pre options, take a look here <a href="http://www.openstreetmap.org/#map=19/52.02487/5.09630">http://www.openstreetmap.org/#map=19/52.02487/5.09630</a> and leave backrest=yes out of the tagging scheme. Tagged with JOSM amenity=bench, colour=red, material=masonry. It has a wooden seat over the masonry, I did not tag that item. I do have a pic but send it if necessary. The curved form is strange for the slippy map.</p>
+<p>Hi AmarilisGardener, why not following the Wiki and pre options, take a look here <a href="https://www.openstreetmap.org/#map=19/52.02487/5.09630">https://www.openstreetmap.org/#map=19/52.02487/5.09630</a> and leave backrest=yes out of the tagging scheme. Tagged with JOSM amenity=bench, colour=red, material=masonry. It has a wooden seat over the masonry, I did not tag that item. I do have a pic but send it if necessary. The curved form is strange for the slippy map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -124,7 +124,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>I think you meant to link to <a href="http://www.openstreetmap.org/way/349316462">http://www.openstreetmap.org/way/349316462</a>. What you describe sounds like it has defined seating and cleanly fits the definition of a bench. The one described by <a href="http://help.openstreetmap.org/users/10740/amaryllisgardener">@amaryllisgardener</a> sounds more informal and doesn't have wooden seating.</p>
+<p>I think you meant to link to <a href="https://www.openstreetmap.org/way/349316462">https://www.openstreetmap.org/way/349316462</a>. What you describe sounds like it has defined seating and cleanly fits the definition of a bench. The one described by <a href="https://help.openstreetmap.org/users/10740/amaryllisgardener">@amaryllisgardener</a> sounds more informal and doesn't have wooden seating.</p>
 </div>
 <div id="comment-44519-info" class="comment-info">
 <span class="comment-age">(29 Jul '15, 18:04)</span> <span class="comment-user userinfo">alester</span>

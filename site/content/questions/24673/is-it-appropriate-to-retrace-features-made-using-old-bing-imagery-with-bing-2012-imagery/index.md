@@ -129,7 +129,7 @@ One Answer:
 <div id="post-24675-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please do and take some time to read the manuals collected here <a href="http://wiki.openstreetmap.org/wiki/Newbie.">http://wiki.openstreetmap.org/wiki/Newbie.</a></p>
+<p>Please do and take some time to read the manuals collected here <a href="https://wiki.openstreetmap.org/wiki/Newbie.">https://wiki.openstreetmap.org/wiki/Newbie.</a></p>
 </div>
 <div id="comment-24675-info" class="comment-info">
 <span class="comment-age">(29 Jul '13, 10:02)</span> <span class="comment-user userinfo">Hendrikklaas</span>

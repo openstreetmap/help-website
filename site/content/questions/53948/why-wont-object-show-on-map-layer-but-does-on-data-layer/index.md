@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-53954-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just a note: an easier way to point to an ares is to just copy this bit from the map view. <a href="http://www.openstreetmap.org/search?query=50.3658353%2C%20-5.1341847#map=16/50.3808/-5.1512">http://www.openstreetmap.org/search?query=50.3658353%2C%20-5.1341847#map=16/50.3808/-5.1512</a></p>
+<p>Just a note: an easier way to point to an ares is to just copy this bit from the map view. <a href="https://www.openstreetmap.org/search?query=50.3658353%2C%20-5.1341847#map=16/50.3808/-5.1512">https://www.openstreetmap.org/search?query=50.3658353%2C%20-5.1341847#map=16/50.3808/-5.1512</a></p>
 </div>
 <div id="comment-53954-info" class="comment-info">
 <span class="comment-age">(09 Jan '17, 17:17)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Esentially, because the standard map style chooses not to render the things that you have mapped. Using the map style that I normally use I can see <a href="http://www.openstreetmap.org/node/4579545504">these</a> <a href="http://www.openstreetmap.org/node/4580945263">three</a> <a href="http://www.openstreetmap.org/node/4598030093">nodes</a>. Something more tailored to showing historical information may work for you.</p>
+<p>Esentially, because the standard map style chooses not to render the things that you have mapped. Using the map style that I normally use I can see <a href="https://www.openstreetmap.org/node/4579545504">these</a> <a href="https://www.openstreetmap.org/node/4580945263">three</a> <a href="https://www.openstreetmap.org/node/4598030093">nodes</a>. Something more tailored to showing historical information may work for you.</p>
 <p>My first thought for a public site that might show these was the <a href="http://gk.historic.place/historische_objekte/translate/en/index-en.html?zoom=17&amp;lat=50.3656&amp;lon=-5.13522&amp;pid=KmHaSaHe">historical objects map</a>, but that doesn't seem to.</p>
 <p>For info I'm seeing your 3 nodes on a map <a href="https://github.com/SomeoneElseOSM/openstreetmap-carto-AJT">forked from what the "standard style" was several years ago</a>, but there are no public tiles for that I'm afraid.</p>
 </div>

@@ -147,7 +147,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are some routing applications on smartphones that can display your GPS position on an OSM based map, and you can enable "snap-to-road" feature.</p>
-<p>See for example <a href="http://wiki.openstreetmap.org/wiki/Osmand">Osmand</a> for android devices ... it is open source and has an own mailing list.</p>
+<p>See for example <a href="https://wiki.openstreetmap.org/wiki/Osmand">Osmand</a> for android devices ... it is open source and has an own mailing list.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

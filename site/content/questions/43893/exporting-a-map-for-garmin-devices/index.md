@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Perhaps <a href="https://help.openstreetmap.org/search/?q=garmin&amp;Submit=search&amp;t=question">some of the previous questions</a> might be helpful?</p>
-<p>The definitive "step by step guide" is probably <a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">this one</a>. The most popular choice of "maps to download" is probably <a href="http://garmin.openstreetmap.nl/">this one</a>, but there are <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">lots of others</a>. Alternatively, you can <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Directions:_Creating_your_map_from_OSM_data">create your own</a>.</p>
+<p>The definitive "step by step guide" is probably <a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">this one</a>. The most popular choice of "maps to download" is probably <a href="http://garmin.openstreetmap.nl/">this one</a>, but there are <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">lots of others</a>. Alternatively, you can <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Directions:_Creating_your_map_from_OSM_data">create your own</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

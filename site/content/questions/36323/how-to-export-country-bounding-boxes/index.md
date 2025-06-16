@@ -75,7 +75,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a> Unfortunately OSQA has been updated recently and is now full of bugs ;( Converting answers to comments doesn't always work anymore.</p>
+<p><a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a> Unfortunately OSQA has been updated recently and is now full of bugs ;( Converting answers to comments doesn't always work anymore.</p>
 </div>
 <div id="comment-37211-info" class="comment-info">
 <span class="comment-age">(02 Oct '14, 07:47)</span> <span class="comment-user userinfo">scai ♦</span>

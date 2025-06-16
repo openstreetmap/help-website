@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please, modify your first question here : <a href="https://help.openstreetmap.org/questions/26135/api-of-the-openstreet-map">https://help.openstreetmap.org/questions/26135/api-of-the-openstreet-map</a></p>
+<p>Please, modify your first question here : <a href="/questions/26135/api-of-the-openstreet-map">https://help.openstreetmap.org/questions/26135/api-of-the-openstreet-map</a></p>
 <p>and don't create a new question each time you provide more details</p>
 </div>
 <div class="answer-controls post-controls">

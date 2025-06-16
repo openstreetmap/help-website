@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Take a look at <a href="http://www.openstreetmap.org/?lat=55.500358&amp;lon=13.388487&amp;zoom=18&amp;layers=M">this</a>. It's a turn zone for trucks, and not a normal exit. The tertiary road still provides direct access to E65, but if a truck is driving the wrong way, they can handle it at this junction. highway=service does not seem the best way to tag it, and for a minute I considered a _link tag, but since it's not a normal junction that seems wrong.</p>
+<p>Take a look at <a href="https://www.openstreetmap.org/?lat=55.500358&amp;lon=13.388487&amp;zoom=18&amp;layers=M">this</a>. It's a turn zone for trucks, and not a normal exit. The tertiary road still provides direct access to E65, but if a truck is driving the wrong way, they can handle it at this junction. highway=service does not seem the best way to tag it, and for a minute I considered a _link tag, but since it's not a normal junction that seems wrong.</p>
 <p>Ideas?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I've understood correctly then highway=service seems reasonable. I'd also consider adding other tags though. Is it only for trucks? If so then I'd <a href="http://wiki.openstreetmap.org/wiki/Key:access">access=no and hgv=yes</a>. Is it only for them to use as you describe, in which case do they need <a href="http://wiki.openstreetmap.org/wiki/Key:oneway">oneway</a> tags adding? And maybe <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">turn restriction</a> relations to make clear that they should only be used if going the wrong way (warning if you do - at some point validators may spot these strange turn restrictions so add a note tag too).</p>
+<p>If I've understood correctly then highway=service seems reasonable. I'd also consider adding other tags though. Is it only for trucks? If so then I'd <a href="https://wiki.openstreetmap.org/wiki/Key:access">access=no and hgv=yes</a>. Is it only for them to use as you describe, in which case do they need <a href="https://wiki.openstreetmap.org/wiki/Key:oneway">oneway</a> tags adding? And maybe <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">turn restriction</a> relations to make clear that they should only be used if going the wrong way (warning if you do - at some point validators may spot these strange turn restrictions so add a note tag too).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

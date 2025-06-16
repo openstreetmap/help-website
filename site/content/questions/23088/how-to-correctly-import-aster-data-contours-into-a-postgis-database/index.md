@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to correctly import ASTER data (contours) into a PostGIS database"
-description = '''I&#x27;ve got a tile-server up and running on an Ubuntu 12.04 VM (I followed this guide exactly to create this: http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/) I tried to add contours following the http://wiki.openstreetmap.org/wiki/Contours guide. I downloaded the area of int...'''
+description = '''I&#x27;ve got a tile-server up and running on an Ubuntu 12.04 VM (I followed this guide exactly to create this: http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/) I tried to add contours following the https://wiki.openstreetmap.org/wiki/Contours guide. I downloaded the area of int...'''
 date = "2013-06-07T02:55:00Z"
 lastmod = "2013-06-20T13:10:00Z"
 weight = 23088
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I've got a tile-server up and running on an Ubuntu 12.04 VM (I followed this guide exactly to create this: <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/</a>)</p>
-<p>I tried to add contours following the <a href="http://wiki.openstreetmap.org/wiki/Contours">http://wiki.openstreetmap.org/wiki/Contours</a> guide.</p>
+<p>I tried to add contours following the <a href="https://wiki.openstreetmap.org/wiki/Contours">https://wiki.openstreetmap.org/wiki/Contours</a> guide.</p>
 <p>I downloaded the area of interest as ASTER Global Digital Elevation Model V002 data and imported this into the database as described - no errors were encountered during this process.</p>
 <p>I then added the styles and layers listed under the "For mapnik version 2.1 the xml changed a little bit, so I added this in osm.xml" section into my osm.xml file.</p>
 <p>Now I cannot render any tiles. If I remove the added stuff from the osm.xml file then it all works again. (This is repeatable).</p>

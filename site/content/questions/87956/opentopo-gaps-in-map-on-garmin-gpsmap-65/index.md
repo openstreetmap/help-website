@@ -133,7 +133,7 @@ Thanks</p>
 <div id="post-87961-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The issue I had a few years ago. <a href="https://help.openstreetmap.org/questions/76566/opentopomap-and-gb-img-download-for-garmin-devices">https://help.openstreetmap.org/questions/76566/opentopomap-and-gb-img-download-for-garmin-devices</a></p>
+<p>The issue I had a few years ago. <a href="/questions/76566/opentopomap-and-gb-img-download-for-garmin-devices">https://help.openstreetmap.org/questions/76566/opentopomap-and-gb-img-download-for-garmin-devices</a></p>
 </div>
 <div id="comment-87961-info" class="comment-info">
 <span class="comment-age">(30 Oct '23, 07:58)</span> <span class="comment-user userinfo">andy mackey</span>

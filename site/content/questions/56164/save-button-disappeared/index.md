@@ -130,7 +130,7 @@ Feh. 2.2.0 was beautifully smooth - I'm hoping this is a very isolated issue in 
 <div class="comment-text">
 <p>There is a recent? change of a changeset having a maximum capacity (currently 10,000 edits). Could yours be bigger and iD not able to manage it?<br />
 Josm handles a bigger changeset by splitting into smaller pieces on upload.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Changeset">http://wiki.openstreetmap.org/wiki/Changeset</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Changeset">https://wiki.openstreetmap.org/wiki/Changeset</a></p>
 </div>
 <div id="comment-56204-info" class="comment-info">
 <span class="comment-age">(17 May '17, 02:59)</span> <span class="comment-user userinfo">nevw</span>

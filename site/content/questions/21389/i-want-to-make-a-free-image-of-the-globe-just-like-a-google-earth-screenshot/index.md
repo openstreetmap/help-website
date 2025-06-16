@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you really believe that OSM is out of the picture, don't use this help system (which is for OSM).</p>
-<p>However, check out <a href="http://wiki.openstreetmap.org/wiki/KDE_Marble">Marble</a> which uses OSM data and projects it onto a globe.</p>
+<p>However, check out <a href="https://wiki.openstreetmap.org/wiki/KDE_Marble">Marble</a> which uses OSM data and projects it onto a globe.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

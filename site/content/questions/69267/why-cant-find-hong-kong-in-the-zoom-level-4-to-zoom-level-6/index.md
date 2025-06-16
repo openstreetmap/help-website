@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is explained at <a href="https://help.openstreetmap.org/questions/21409/how-country-name-is-selected-and-displayed-at-low-zoom-levels-for-small-countries-for-instance-cyprus">https://help.openstreetmap.org/questions/21409/how-country-name-is-selected-and-displayed-at-low-zoom-levels-for-small-countries-for-instance-cyprus</a></p>
+<p>This is explained at <a href="/questions/21409/how-country-name-is-selected-and-displayed-at-low-zoom-levels-for-small-countries-for-instance-cyprus">https://help.openstreetmap.org/questions/21409/how-country-name-is-selected-and-displayed-at-low-zoom-levels-for-small-countries-for-instance-cyprus</a></p>
 <p>OpenStreetMap is designed and run by volunteers. If you would like to volunteer your time to fixing this issue, you can get involved with the cartography project at <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> .</p>
 </div>
 <div class="answer-controls post-controls">

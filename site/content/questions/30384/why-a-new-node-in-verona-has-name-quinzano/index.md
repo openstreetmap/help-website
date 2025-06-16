@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess the nominatim reverse-geocoding for <a href="http://www.openstreetmap.org/node/2648597457">http://www.openstreetmap.org/node/2648597457</a> is meant. This is displayed via a search for "Free wi-fi Palazzo Barbieri":</p>
+<p>I guess the nominatim reverse-geocoding for <a href="https://www.openstreetmap.org/node/2648597457">https://www.openstreetmap.org/node/2648597457</a> is meant. This is displayed via a search for "Free wi-fi Palazzo Barbieri":</p>
 <blockquote>
 <p>Free wi-fi Palazzo Barbieri, Piazza Bra, Quinzano, Verona, VR, Veneto, 37125, Italy</p>
 </blockquote>

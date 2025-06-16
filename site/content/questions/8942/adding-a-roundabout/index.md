@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You just have to draw a circle and apply the <em>junction=roundabout</em> tag as described on the <a href="http://wiki.openstreetmap.org/wiki/Roundabout">roundabout wiki page</a> and the traditional <em>highway=</em> tag as well (you should always use the highest highway classification of the roads leading to the roundabout). The number of lanes is described by the <em>lanes=</em> tag, in your case with <em>lanes=2</em>. The direction of the way you draw specifies the direction you have to drive through the roundabout (clockwise or counterclockwise). Adding exits and entries is simply done by connecting highways to the drawn circle. That's all.</p>
+<p>You just have to draw a circle and apply the <em>junction=roundabout</em> tag as described on the <a href="https://wiki.openstreetmap.org/wiki/Roundabout">roundabout wiki page</a> and the traditional <em>highway=</em> tag as well (you should always use the highest highway classification of the roads leading to the roundabout). The number of lanes is described by the <em>lanes=</em> tag, in your case with <em>lanes=2</em>. The direction of the way you draw specifies the direction you have to drive through the roundabout (clockwise or counterclockwise). Adding exits and entries is simply done by connecting highways to the drawn circle. That's all.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,7 +162,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>hi</p>
 <p>Thanks for replying . Based on scai's suggestion I have been able to draw a roundabout</p>
-<p><a href="http://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M</a></p>
 <p>Please check and let me now if it is ok.</p>
 <p>Regards</p>
 <p>Mathew</p>
@@ -188,7 +188,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>hi thanks for your reply . I could not identify which connections of entry/exit roads are missing . The roundabouts first exit road is not complete .Hopefully I will be able to complete that soon</p>
-<p><a href="http://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=25.28113&amp;lon=55.34608&amp;zoom=16&amp;layers=M</a></p>
 <p>Thanks in advance</p>
 <p>regards</p>
 <p>Mathew</p>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <div id="post-8958-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I fixed the missing connections for you (and also removed the oneway tag). There is also a question about the <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">most common mapping mistakes</a> explaining the issue with <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">unconnected ways</a> . You should take a look at it if you want to learn how to spot and correct them.</p>
+<p>I fixed the missing connections for you (and also removed the oneway tag). There is also a question about the <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">most common mapping mistakes</a> explaining the issue with <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">unconnected ways</a> . You should take a look at it if you want to learn how to spot and correct them.</p>
 </div>
 <div id="comment-8958-info" class="comment-info">
 <span class="comment-age">(13 Nov '11, 12:25)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -214,7 +214,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>hi</p>
-<p>Thanks for fixing the errors . To be frank I did not understand exactly what the mistake was . I went through the link <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023</a></p>
+<p>Thanks for fixing the errors . To be frank I did not understand exactly what the mistake was . I went through the link <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023</a></p>
 <p>and got an idea of the common mistakes that are made.</p>
 <p>Thanks in advance</p>
 <p>Regards</p>
@@ -264,7 +264,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>This might help <a href="http://help.openstreetmap.org/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">http://help.openstreetmap.org/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch</a></p>
+<p>This might help <a href="/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch">https://help.openstreetmap.org/questions/20/how-do-i-ensure-that-ways-are-connected-in-potlatch</a></p>
 </div>
 <div id="comment-8995-info" class="comment-info">
 <span class="comment-age">(14 Nov '11, 17:40)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -276,7 +276,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>these may also help <a href="http://help.openstreetmap.org/questions/7170/videos-for-new-contributors">http://help.openstreetmap.org/questions/7170/videos-for-new-contributors</a></p>
+<p>these may also help <a href="/questions/7170/videos-for-new-contributors">https://help.openstreetmap.org/questions/7170/videos-for-new-contributors</a></p>
 </div>
 <div id="comment-8996-info" class="comment-info">
 <span class="comment-age">(14 Nov '11, 17:42)</span> <span class="comment-user userinfo">andy mackey</span>

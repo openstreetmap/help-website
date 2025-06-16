@@ -118,7 +118,7 @@ osqa_accepted = false
 <div id="post-37660-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You likely should start with <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a></p>
+<p>You likely should start with <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a></p>
 </div>
 <div id="comment-37660-info" class="comment-info">
 <span class="comment-age">(16 Oct '14, 19:50)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -130,7 +130,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9829/mmimedia">@MMImedia</a>: please ask your problem in an own, new question (one question entry for each topic).</p>
+<p><a href="https://help.openstreetmap.org/users/9829/mmimedia">@MMImedia</a>: please ask your problem in an own, new question (one question entry for each topic).</p>
 </div>
 <div id="comment-37661-info" class="comment-info">
 <span class="comment-age">(16 Oct '14, 19:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -141,9 +141,9 @@ osqa_accepted = false
 <div id="post-37663-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9829/mmimedia">@MMImedia</a>: It would help if you could explain in more detail what you mean by "use OSM" - the "export" button on the main page may not be the best way of achieving it. For more options, read the text on the screen below the co-ordinates that appear when you click "export".</p>
+<p><a href="https://help.openstreetmap.org/users/9829/mmimedia">@MMImedia</a>: It would help if you could explain in more detail what you mean by "use OSM" - the "export" button on the main page may not be the best way of achieving it. For more options, read the text on the screen below the co-ordinates that appear when you click "export".</p>
 <p>For an explanation of the problem that you're seeing with "export", see this previous answer:</p>
-<p><a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
+<p><a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
 <p>Note that "export" exports raw map data - probably not what you want.</p>
 <p>See also the "share" button at the RHS.</p>
 </div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>If you are being asked to "tag" then you have indicated to OSM - likely by clicking on "Edit" - that you wish to edit OpenStreetMap, i.e. contribute your knowledge to the project. If you have no knowledge that you wish to contribute, then don't edit. Do not add "something random".</p>
 <p>I don't know any "try online" button on OpenStreetMap, can you supply details?</p>
-<p>OpenStreetMap supplies map data and not applications. If you are looking for a map application on your phone, then you will likely want to download one through the respective "store"; there are both open source and proprietary types of mobile map viewers available, supplied by third parties. On our wiki we have lists of <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> and <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">iOS</a> applications. Note however that by using these, while looking at OpenStreetMap <em>data</em>, you are not actually using an OpenStreetMap <em>application</em>, so anything that you dislike about these applications should be taken to the respective providers.</p>
+<p>OpenStreetMap supplies map data and not applications. If you are looking for a map application on your phone, then you will likely want to download one through the respective "store"; there are both open source and proprietary types of mobile map viewers available, supplied by third parties. On our wiki we have lists of <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> and <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">iOS</a> applications. Note however that by using these, while looking at OpenStreetMap <em>data</em>, you are not actually using an OpenStreetMap <em>application</em>, so anything that you dislike about these applications should be taken to the respective providers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -301,11 +301,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At its heart, OpenStreetMap is essentially <a href="http://planet.osm.org/">a very big pile of data</a>. The links that you see when you click "export" at the top of an <a href="http://www.openstreetmap.org/">openstreetmap.org</a> map page allow you to either to export a small part of it directly or download a section of it.</p>
-<p>The standard "map" that you see at <a href="http://www.openstreetmap.org/">openstreetmap.org</a> is made from this data, but it's only one possible representation of it. If you select the layer switcher at the right-hand side (the thing that looks like a stack of books) you can choose another representation - one that highlights bus routes, for example.</p>
-<p><a href="http://www.openstreetmap.org/copyright">Within the restrictions of the licence</a>, anyone can use this data to create a map, and how it looks is entirely up to them - it's not like Google Maps where the only map you can have is the one designed the way that Google designed it. Because of this freedom, there's no need for a "standard" OpenStreetMap application for a particular breed of mobile phone, hand-held GPS or car sat-nav.</p>
-<p>In your mobile phone's app store you'll probably see lots of applications using OpenStreetMap data. Which one is best will depend on what you want to use it for - have a look in the OpenStreetMap wiki lists that Frederik <a href="http://wiki.openstreetmap.org/wiki/Android">linked</a> <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">to</a>.</p>
-<p>I can't comment about iOS, but a reasonable Android online and offline recommendation that uses OpenStreetMap data would be <a href="http://wiki.openstreetmap.org/wiki/Osmand">OsmAnd</a>. If you want something on a PC, perhaps <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/QLandkarte">QLandKarte</a> or <a href="http://wiki.openstreetmap.org/wiki/Marble">Marble</a>?<br />
+<p>At its heart, OpenStreetMap is essentially <a href="http://planet.osm.org/">a very big pile of data</a>. The links that you see when you click "export" at the top of an <a href="https://www.openstreetmap.org/">openstreetmap.org</a> map page allow you to either to export a small part of it directly or download a section of it.</p>
+<p>The standard "map" that you see at <a href="https://www.openstreetmap.org/">openstreetmap.org</a> is made from this data, but it's only one possible representation of it. If you select the layer switcher at the right-hand side (the thing that looks like a stack of books) you can choose another representation - one that highlights bus routes, for example.</p>
+<p><a href="https://www.openstreetmap.org/copyright">Within the restrictions of the licence</a>, anyone can use this data to create a map, and how it looks is entirely up to them - it's not like Google Maps where the only map you can have is the one designed the way that Google designed it. Because of this freedom, there's no need for a "standard" OpenStreetMap application for a particular breed of mobile phone, hand-held GPS or car sat-nav.</p>
+<p>In your mobile phone's app store you'll probably see lots of applications using OpenStreetMap data. Which one is best will depend on what you want to use it for - have a look in the OpenStreetMap wiki lists that Frederik <a href="https://wiki.openstreetmap.org/wiki/Android">linked</a> <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">to</a>.</p>
+<p>I can't comment about iOS, but a reasonable Android online and offline recommendation that uses OpenStreetMap data would be <a href="https://wiki.openstreetmap.org/wiki/Osmand">OsmAnd</a>. If you want something on a PC, perhaps <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/QLandkarte">QLandKarte</a> or <a href="https://wiki.openstreetmap.org/wiki/Marble">Marble</a>?<br />
 </p>
 <p>You mention TTQV above - I guess that that's referring to <a href="http://www.quovadis-gps.de/quovadis-route-planner-software">this</a>. According to their website <a href="http://wiki07.quovadis-gps.com/doku.php?id=en:05_intro:c_productline">that supports online OSM maps as well</a>.</p>
 </div>
@@ -487,9 +487,9 @@ I cannot see how to even look at the maps I want. Any help there? Sorry chaps, p
 <div class="comment-text">
 <p>If you want to display OpenStreetMap maps offline on your PC, perhaps consider something like Marble?:</p>
 <p><a href="http://en.wikipedia.org/wiki/Marble_%28KDE%29">http://en.wikipedia.org/wiki/Marble_%28KDE%29</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/KDE_Marble">http://wiki.openstreetmap.org/wiki/KDE_Marble</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/KDE_Marble">https://wiki.openstreetmap.org/wiki/KDE_Marble</a></p>
 <p>See this previous help question:</p>
-<p><a href="https://help.openstreetmap.org/questions/18416/downloading-maps-in-order-to-use-marble-offline">https://help.openstreetmap.org/questions/18416/downloading-maps-in-order-to-use-marble-offline</a></p>
+<p><a href="/questions/18416/downloading-maps-in-order-to-use-marble-offline">https://help.openstreetmap.org/questions/18416/downloading-maps-in-order-to-use-marble-offline</a></p>
 <p>On the subject of Bing, you won't get that offline via OpenStreetMap. See also this:</p>
 <p><a href="https://social.msdn.microsoft.com/Forums/en-US/b211ab1e-ce61-47d0-bb3b-d566312b3313/using-bing-map-offline?forum=bingmapssilverlightwpfcontrols">https://social.msdn.microsoft.com/Forums/en-US/b211ab1e-ce61-47d0-bb3b-d566312b3313/using-bing-map-offline?forum=bingmapssilverlightwpfcontrols</a></p>
 </div>
@@ -516,7 +516,7 @@ I cannot see how to even look at the maps I want. Any help there? Sorry chaps, p
 <div id="post-37678-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9829/mmimedia">@MMImedia</a> Yes, that will always give you the "standard" map. The "transport" tiles are actually hosted externally.</p>
+<p><a href="https://help.openstreetmap.org/users/9829/mmimedia">@MMImedia</a> Yes, that will always give you the "standard" map. The "transport" tiles are actually hosted externally.</p>
 </div>
 <div id="comment-37678-info" class="comment-info">
 <span class="comment-age">(17 Oct '14, 09:42)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

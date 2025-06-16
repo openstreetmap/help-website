@@ -56,7 +56,7 @@ ISP of this IP [?]: Oregon State System of Higher Education
 Organization: Oregon State System of Higher Education 
 Host of this IP: [?]: projects.osgeo.osuosl.org [Whois] [Trace]  
 Local time in United States: 2014-03-25 11:19</code></pre>
-<p>So, I got an IP Address that is not listed in the OSM Server list (<a href="http://wiki.openstreetmap.org/wiki/Server">http://wiki.openstreetmap.org/wiki/Server</a>)</p>
+<p>So, I got an IP Address that is not listed in the OSM Server list (<a href="https://wiki.openstreetmap.org/wiki/Server">https://wiki.openstreetmap.org/wiki/Server</a>)</p>
 <p>Why did I get this IP? And, is there any other IP that I should unblock??? Is there a list somewhere that I should unblock in my firewall?</p>
 <p>Since now, thank you.</p>
 </div>
@@ -142,7 +142,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You should not be hard-coding an IP into your application. Your application should point at api.openstreetmap.org.</p>
-<p>Keep in mind the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> and that the API is for editing.</p>
+<p>Keep in mind the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API usage policy</a> and that the API is for editing.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

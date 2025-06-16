@@ -134,8 +134,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>AFAIK we don't have an ready to use lib to invoke our web APIs via C++ but call me wrong <a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a></p>
-<p>If you just want to read data, you might consider using the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a> or <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">dumps</a> instead.</p>
+<p>AFAIK we don't have an ready to use lib to invoke our web APIs via C++ but call me wrong <a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a></p>
+<p>If you just want to read data, you might consider using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a> or <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">dumps</a> instead.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One thing that you will absolutely have to do if you're calling an API at OpenStreetMap is to <a href="http://wiki.openstreetmap.org/w/index.php?title=Tile_usage_policy&amp;section=2">set a valid user agent</a>. A number of applications have found themselves blocked recently because they didn't do that.</p>
+<p>One thing that you will absolutely have to do if you're calling an API at OpenStreetMap is to <a href="https://wiki.openstreetmap.org/w/index.php?title=Tile_usage_policy&amp;section=2">set a valid user agent</a>. A number of applications have found themselves blocked recently because they didn't do that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

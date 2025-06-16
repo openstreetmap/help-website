@@ -134,7 +134,7 @@ osqa_accepted = true
 <div id="post-54923-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The openpoimap may be useful to find moped and mofa tags <a href="http://wiki.openstreetmap.org/wiki/OpenPoiMap">http://wiki.openstreetmap.org/wiki/OpenPoiMap</a> We rarely see mopeds where I live so unlikely to see much on maps near me but I expect that you would need to add tags to ways that are suitable for their use.</p>
+<p>The openpoimap may be useful to find moped and mofa tags <a href="https://wiki.openstreetmap.org/wiki/OpenPoiMap">https://wiki.openstreetmap.org/wiki/OpenPoiMap</a> We rarely see mopeds where I live so unlikely to see much on maps near me but I expect that you would need to add tags to ways that are suitable for their use.</p>
 </div>
 <div id="comment-54923-info" class="comment-info">
 <span class="comment-age">(05 Mar '17, 15:15)</span> <span class="comment-user userinfo">nevw</span>
@@ -178,10 +178,10 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I see at least four solutions to filter OSM data:</p>
 <ul>
-<li>osmfilter <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></li>
+<li>osmfilter <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></li>
 <li>osmium tools <a href="http://osmcode.org/osmium-tool/">http://osmcode.org/osmium-tool/</a></li>
-<li>overpass <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></li>
-<li>osmosis <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a></li>
+<li>overpass <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></li>
+<li>osmosis <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

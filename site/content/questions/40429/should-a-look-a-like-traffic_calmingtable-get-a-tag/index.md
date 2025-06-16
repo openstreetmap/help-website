@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "should a look-a-like traffic_calming=table get a tag?"
-description = '''Should a non existing traffic_calming_table get a tag ? The operator has made a look-a-like table with markings as such, but it’s flat and has in reality no effect.  Link http://www.openstreetmap.org/#map=19/52.44440/4.80225 This is not the first or only look-a-like traffic_calming_sign on a road !'''
+description = '''Should a non existing traffic_calming_table get a tag ? The operator has made a look-a-like table with markings as such, but it’s flat and has in reality no effect.  Link https://www.openstreetmap.org/#map=19/52.44440/4.80225 This is not the first or only look-a-like traffic_calming_sign on a road !'''
 date = "2015-01-15T23:55:00Z"
 lastmod = "2015-01-16T13:35:00Z"
 weight = 40429
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Should a non existing traffic_calming_table get a tag ? The operator has made a look-a-like table with markings as such, but it’s flat and has in reality no effect. Link <a href="http://www.openstreetmap.org/#map=19/52.44440/4.80225">http://www.openstreetmap.org/#map=19/52.44440/4.80225</a> This is not the first or only look-a-like traffic_calming_sign on a road !</p>
+<p>Should a non existing traffic_calming_table get a tag ? The operator has made a look-a-like table with markings as such, but it’s flat and has in reality no effect. Link <a href="https://www.openstreetmap.org/#map=19/52.44440/4.80225">https://www.openstreetmap.org/#map=19/52.44440/4.80225</a> This is not the first or only look-a-like traffic_calming_sign on a road !</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-table" rel="tag" title="see questions tagged &#39;table&#39;">table</span> <span class="post-tag tag-link-traffic_calming" rel="tag" title="see questions tagged &#39;traffic_calming&#39;">traffic_calming</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-look-a-like" rel="tag" title="see questions tagged &#39;look-a-like&#39;">look-a-like</span>
@@ -187,7 +187,7 @@ One Answer:
 <div id="post-40447-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="http://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>: that was just an example. Yes, I thought of something like a namespace because there also could be visual humps or whatever. Yes, maybe the "<span>iterative refinement</span>" approach (if needed) would be better and a namespace in a value is a bad idea. I like your "<code>visual</code>".</p>
+<p><a href="https://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>: that was just an example. Yes, I thought of something like a namespace because there also could be visual humps or whatever. Yes, maybe the "<span>iterative refinement</span>" approach (if needed) would be better and a namespace in a value is a bad idea. I like your "<code>visual</code>".</p>
 <p>A mini roundabout is different, because it is, legally, a roundabout. You need to drive around it, usual roundabout rules apply.</p>
 </div>
 <div id="comment-40447-info" class="comment-info">

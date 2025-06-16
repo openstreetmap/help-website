@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Precedence in place name display"
-description = '''Hi there, I&#x27;m wondering if it was possible to specify in an easy way which place name label should take precedence over others. Concretely, there are a bunch of place=city&#x27;s around where I live (http://www.openstreetmap.org/?mlat=-32.89&amp;amp;mlon=151.8&amp;amp;zoom=6&amp;amp;layers=M) but the &quot;wrong&quot; city la...'''
+description = '''Hi there, I&#x27;m wondering if it was possible to specify in an easy way which place name label should take precedence over others. Concretely, there are a bunch of place=city&#x27;s around where I live (https://www.openstreetmap.org/?mlat=-32.89&amp;amp;mlon=151.8&amp;amp;zoom=6&amp;amp;layers=M) but the &quot;wrong&quot; city la...'''
 date = "2012-06-28T06:53:00Z"
 lastmod = "2012-06-30T09:18:00Z"
 weight = 13869
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi there,</p>
 <p>I'm wondering if it was possible to specify in an easy way which place name label should take precedence over others.</p>
-<p>Concretely, there are a bunch of place=city's around where I live (<a href="http://www.openstreetmap.org/?mlat=-32.89&amp;mlon=151.8&amp;zoom=6&amp;layers=M)">http://www.openstreetmap.org/?mlat=-32.89&amp;mlon=151.8&amp;zoom=6&amp;layers=M)</a> but the "wrong" city label is rendered --- Cessnock has only 18,000 odd inhabitants, where as Newcastle has around 500,000. Yet Cessnock's label is rendered, not Newcastle's. How can I give the renderer a clue that he better ought render Newcastle's label?</p>
+<p>Concretely, there are a bunch of place=city's around where I live (<a href="https://www.openstreetmap.org/?mlat=-32.89&amp;mlon=151.8&amp;zoom=6&amp;layers=M)">https://www.openstreetmap.org/?mlat=-32.89&amp;mlon=151.8&amp;zoom=6&amp;layers=M)</a> but the "wrong" city label is rendered --- Cessnock has only 18,000 odd inhabitants, where as Newcastle has around 500,000. Yet Cessnock's label is rendered, not Newcastle's. How can I give the renderer a clue that he better ought render Newcastle's label?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-prioritization" rel="tag" title="see questions tagged &#39;prioritization&#39;">prioritization</span> <span class="post-tag tag-link-place" rel="tag" title="see questions tagged &#39;place&#39;">place</span> <span class="post-tag tag-link-order" rel="tag" title="see questions tagged &#39;order&#39;">order</span>
@@ -124,7 +124,7 @@ One Answer:
 <li><em>place=city</em> | <em>metropolis</em> | <em>town</em> | <em>large_town</em> | <em>small_town</em></li>
 <li><em>place=suburb</em> | <em>village</em> | <em>large_village</em> | <em>hamlet</em> | <em>locality</em> | <em>isolated_dwelling</em> | <em>farm</em></li>
 </ol>
-<p>Different may styles can display tags in any other order and may use other tags like <em>population=</em>. You should not tag for the renderer but rather use the documentation in the <a href="http://wiki.openstreetmap.org/wiki/Key:place">wiki</a> to decide how to tag.</p>
+<p>Different may styles can display tags in any other order and may use other tags like <em>population=</em>. You should not tag for the renderer but rather use the documentation in the <a href="https://wiki.openstreetmap.org/wiki/Key:place">wiki</a> to decide how to tag.</p>
 <p>In your case I would say that Newcastle is a city while Cessnock is only a town.</p>
 </div>
 <div class="answer-controls post-controls">

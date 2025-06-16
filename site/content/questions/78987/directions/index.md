@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Image1.PNG" alt="alt text" /> I noticed that the directions from-to are not working in OSM since last 2 weeks. I've tried in browsers Mozilla Firefox, Internet explorer. Even the red and green pointer are not displayed.</p>
+<p><img src="/upfiles/Image1.PNG" alt="alt text" /> I noticed that the directions from-to are not working in OSM since last 2 weeks. I've tried in browsers Mozilla Firefox, Internet explorer. Even the red and green pointer are not displayed.</p>
 <p>In Google Chrome works only if you right click and choose directions - from and - to, but not if you type in fields FROM: or/and TO: address. When you press "GO" button nothing happens.</p>
 <p>I've tried changing language to ENGLISH, but results are the same.</p>
 <p>I tried several computers and directions are not working. Any clew?</p>

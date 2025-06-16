@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Shows city as “San Jose” (correct): <a href="http://nominatim.openstreetmap.org/reverse?format=json&amp;lat=37.342&amp;lon=-121.886&amp;zoom=&amp;addressdetails=1">http://nominatim.openstreetmap.org/reverse?format=json&amp;lat=37.342&amp;lon=-121.886&amp;zoom=&amp;addressdetails=1</a></p>
 <p>Shows city as “Santa Clara” (incorrect): <a href="http://osm.ourcast.com/ocreverse.php?lat=37.342&amp;lng=-121.886">http://osm.ourcast.com/ocreverse.php?lat=37.342&amp;lng=-121.886</a></p>
 <p>Also here is an incorrect street’s details page: <a href="http://osm.ourcast.com/details.php?place_id=29332445">http://osm.ourcast.com/details.php?place_id=29332445</a></p>
-<p>I found this question which suggests that I can fix the city names by drawing the city as a relation. But as it is working on the official Nominatim, doesn’t that mean that the correct city boundaries are in the OSM dataset, and my installation is just displaying it incorrectly? <a href="https://help.openstreetmap.org/questions/17207/wrong-city-names">https://help.openstreetmap.org/questions/17207/wrong-city-names</a></p>
+<p>I found this question which suggests that I can fix the city names by drawing the city as a relation. But as it is working on the official Nominatim, doesn’t that mean that the correct city boundaries are in the OSM dataset, and my installation is just displaying it incorrectly? <a href="/questions/17207/wrong-city-names">https://help.openstreetmap.org/questions/17207/wrong-city-names</a></p>
 <p>My nominatim url is here: <a href="http://osm.ourcast.com/nominatim.php">http://osm.ourcast.com/nominatim.php</a></p>
 <p>Any help is greatly appreciated!</p>
 </div>
@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-27545-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You don't need to create this relation, it already <a href="http://www.openstreetmap.org/browse/relation/112143">exists</a> and also <a href="http://nominatim.openstreetmap.org/details.php?place_id=3673062065">indexed by the official Nominatim instance</a>. I guess your instance did not index this relation and thus provides a less accurate geolocation result. Maybe some problem during the import? Or did you import a dataset which didn't contain relations?</p>
+<p>You don't need to create this relation, it already <a href="https://www.openstreetmap.org/browse/relation/112143">exists</a> and also <a href="http://nominatim.openstreetmap.org/details.php?place_id=3673062065">indexed by the official Nominatim instance</a>. I guess your instance did not index this relation and thus provides a less accurate geolocation result. Maybe some problem during the import? Or did you import a dataset which didn't contain relations?</p>
 </div>
 <div id="comment-27545-info" class="comment-info">
 <span class="comment-age">(28 Oct '13, 08:31)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -102,7 +102,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada"></a><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>: thanks, this was the problem! Got JOSM to connect to the outside world now. Care to make that an answer, so I can accept it? Also: should this issue be reported/documented somewhere?</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>: thanks, this was the problem! Got JOSM to connect to the outside world now. Care to make that an answer, so I can accept it? Also: should this issue be reported/documented somewhere?</p>
 </div>
 <div id="comment-44998-info" class="comment-info">
 <span class="comment-age">(31 Aug '15, 17:04)</span> <span class="comment-user userinfo">alexandervlpl</span>

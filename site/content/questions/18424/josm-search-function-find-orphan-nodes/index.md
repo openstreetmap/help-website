@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is covered by the very last example on <a href="http://wiki.openstreetmap.org/wiki/JOSM/Search_function">JOSM/Search_function help</a>: "type:node untagged -child"</p>
+<p>This is covered by the very last example on <a href="https://wiki.openstreetmap.org/wiki/JOSM/Search_function">JOSM/Search_function help</a>: "type:node untagged -child"</p>
 <p>So the right expression is</p>
 <p>"user:example type:node untagged -child"<br />
 </p>

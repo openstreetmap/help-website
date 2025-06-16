@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Usage of Queensland State Government datasets under CCA3.0 licence"
-description = '''The wiki has a page  http://wiki.openstreetmap.org/wiki/Attribution/qld.data.gov.au_explicit_permission where Jason Ward ascertained the licence that data.qld.gov.au uses for the data that they make available: Creative Commons Attribution 3.0 Australia. He comments he had only directly requested per...'''
+description = '''The wiki has a page  https://wiki.openstreetmap.org/wiki/Attribution/qld.data.gov.au_explicit_permission where Jason Ward ascertained the licence that data.qld.gov.au uses for the data that they make available: Creative Commons Attribution 3.0 Australia. He comments he had only directly requested per...'''
 date = "2014-12-31T08:49:00Z"
 lastmod = "2014-12-31T16:33:00Z"
 weight = 39938
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The wiki has a page <a href="http://wiki.openstreetmap.org/wiki/Attribution/qld.data.gov.au_explicit_permission">http://wiki.openstreetmap.org/wiki/Attribution/qld.data.gov.au_explicit_permission</a></p>
+<p>The wiki has a page <a href="https://wiki.openstreetmap.org/wiki/Attribution/qld.data.gov.au_explicit_permission">https://wiki.openstreetmap.org/wiki/Attribution/qld.data.gov.au_explicit_permission</a></p>
 <p>where Jason Ward ascertained the licence that data.qld.gov.au uses for the data that they make available: Creative Commons Attribution 3.0 Australia.</p>
 <p>He comments he had only directly requested permission to use Department of Transport and Main Roads data, but was trying to obtain a general clearance of Qld government data through 2014. Does anyone know how that went? I have noticed a missing national park on OSM (actually Glen Rock State Forest), the boundaries of which are available under the same CCA licence, but a different department (Department of National Parks, Recreation, Sport and Racing).</p>
 <p>The Queensland Government has recently released Queensland Globe <a href="http://www.dnrm.qld.gov.au/__data/assets/file/0020/100568/qldglobe.kml">http://www.dnrm.qld.gov.au/__data/assets/file/0020/100568/qldglobe.kml</a> (<a href="http://globe.information.qld.gov.au/qldglobe/)">http://globe.information.qld.gov.au/qldglobe/)</a> which accesses many of these datasets.</p>

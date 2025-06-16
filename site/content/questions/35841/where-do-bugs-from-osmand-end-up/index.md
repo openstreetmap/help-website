@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have added a bug on the map in OsmAnd+ and received a notification that the bug was added successfully. I wonder where I can see it now. I am looking at the maps where I put it (using standard map or iD) and I do not see it.</p>
-<p>I also understand, after reading <a href="http://wiki.openstreetmap.org/wiki/Notes">about notes</a>, that they should actually be used for map bug reporting. Am I right? And does OsmAnd+ support it?</p>
+<p>I also understand, after reading <a href="https://wiki.openstreetmap.org/wiki/Notes">about notes</a>, that they should actually be used for map bug reporting. Am I right? And does OsmAnd+ support it?</p>
 <p><strong>Update:</strong> Following the answers and comments here, I've started using OsmAnd+ for notes. I have created a bunch of bugs in my area, but they do not seem to appear in OSM: <a href="http://osm.org/go/0EujfV2l-?layers=N">http://osm.org/go/0EujfV2l-?layers=N</a></p>
 <p><img src="http://s1.postimg.org/ds8b5jl0f/Screenshot_2014_08_29_22_31_04.png" alt="alt text" /> <img src="http://s28.postimg.org/kinyx64zh/Screenshot_2014_08_29_22_37_00.png" alt="alt text" /></p>
 </div>
@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-36410-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: I am using the "Open OSM bug". The yellow dots are from OsmAnd and are only visible in OsmAnd (that's the problem). The red and green ones were added (also by me) directly at openstreetmap.org before I learnt to use <code>fixme</code>. They are visible in both OsmAnd and the web-site.</p>
+<p><a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: I am using the "Open OSM bug". The yellow dots are from OsmAnd and are only visible in OsmAnd (that's the problem). The red and green ones were added (also by me) directly at openstreetmap.org before I learnt to use <code>fixme</code>. They are visible in both OsmAnd and the web-site.</p>
 </div>
 <div id="comment-36410-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 14:57)</span> <span class="comment-user userinfo">Kotya</span>
@@ -207,7 +207,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are using for example "Use location ...", "Open OSM bug" when viewing the map in OsmAnd then it prompts for a Message, Authorname, and optional password. If you enter your OSM login details there it creates an OSM note <a href="http://www.openstreetmap.org/note/219284">as per this test</a>. I am guessing that if you don't enter your OSM login details it will create an anonymous note.</p>
+<p>If you are using for example "Use location ...", "Open OSM bug" when viewing the map in OsmAnd then it prompts for a Message, Authorname, and optional password. If you enter your OSM login details there it creates an OSM note <a href="https://www.openstreetmap.org/note/219284">as per this test</a>. I am guessing that if you don't enter your OSM login details it will create an anonymous note.</p>
 <p>As aseerel4c26 has already commented you do have to switch on the notes layer to see the bugs you have added.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -240,7 +240,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>You should be able to delete your real email from the note using one of the editors if that is of concern, though I have not tried.<br />
-Edit: no, can't be edited - see 'about notes' link above and comment by <a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a></p>
+Edit: no, can't be edited - see 'about notes' link above and comment by <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a></p>
 </div>
 <div id="comment-36042-info" class="comment-info">
 <span class="comment-age">(21 Aug '14, 11:14)</span> <span class="comment-user userinfo">nevw</span>

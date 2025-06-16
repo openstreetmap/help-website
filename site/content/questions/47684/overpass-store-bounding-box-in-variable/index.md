@@ -110,7 +110,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is possible in Overpass Turbo, using the custom shortcut syntax:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Queries#Custom_Shortcuts">http://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Queries#Custom_Shortcuts</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Queries#Custom_Shortcuts">https://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Queries#Custom_Shortcuts</a></p>
 <p>But this feature is coming from Overpass Turbo and won't work on queries sent directly to Overpass API, only on queries made using the Turbo interface.</p>
 <p>Depending on what you are retrieving, it may also work to set the bounding box on the osm-script element.</p>
 <p>Something like (untested): <code>&lt;osm-script bbox="1,2,3,4" output="json"&gt;</code>, it will then apply to all queries in the script.</p>

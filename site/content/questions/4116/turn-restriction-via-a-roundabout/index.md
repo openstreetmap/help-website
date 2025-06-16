@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>All these options were rejected by the validation when I tried uploading.</p>
 <p>Any ideas?</p>
 <p>Here is the link:</p>
-<p><a href="http://www.openstreetmap.org/?lat=32.089866&amp;lon=34.882257&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=32.089866&amp;lon=34.882257&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=32.089866&amp;lon=34.882257&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=32.089866&amp;lon=34.882257&amp;zoom=18&amp;layers=M</a></p>
 <p>The area in question is the 250m street section enclosed by the roundabout and the T juncture.</p>
 <p>I'm afraid a oneway setting won't work. The street is not one way.</p>
 <p>There is a street market in this area on weekdays. If you come to either end of this section you'll see a sign saying something like "No entry except for public-service vehicles. In-force Sunday-Thursday, 7:00-18:00". Of course, on off-days and off-hours the street is two-way and open to everyone, and it's always two-way and open to psv's.</p>
@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you describe is more an "access restriction" along the street than a "turn restriction" at the intersection. Have a look on the <a href="http://wiki.openstreetmap.org/wiki/Key:access">wiki about access restrictions on time and vehicles</a>. The <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction">"turn restriction" relation</a> is only required if the concerned street (way) does not contain already a restriction like a <a href="http://wiki.openstreetmap.org/wiki/Key:oneway">oneway</a> or <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> tag.</p>
+<p>What you describe is more an "access restriction" along the street than a "turn restriction" at the intersection. Have a look on the <a href="https://wiki.openstreetmap.org/wiki/Key:access">wiki about access restrictions on time and vehicles</a>. The <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction">"turn restriction" relation</a> is only required if the concerned street (way) does not contain already a restriction like a <a href="https://wiki.openstreetmap.org/wiki/Key:oneway">oneway</a> or <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

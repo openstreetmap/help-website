@@ -61,7 +61,7 @@ osqa_accepted = true
 <div id="post-54954-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Similar question <a href="https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired">https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired</a></p>
+<p>Similar question <a href="/questions/42891/damaged-bridge-and-footpath-closed-until-repaired">https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired</a></p>
 </div>
 <div id="comment-54954-info" class="comment-info">
 <span class="comment-age">(06 Mar '17, 19:58)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -221,7 +221,7 @@ Thanks for the feedback!</p>
 1
 </div>
 <div class="comment-text">
-<p>similar problem <a href="https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired">https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired</a></p>
+<p>similar problem <a href="/questions/42891/damaged-bridge-and-footpath-closed-until-repaired">https://help.openstreetmap.org/questions/42891/damaged-bridge-and-footpath-closed-until-repaired</a></p>
 </div>
 <div id="comment-71264-info" class="comment-info">
 <span class="comment-age">(22 Oct '19, 21:49)</span> <span class="comment-user userinfo">andy mackey</span>

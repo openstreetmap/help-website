@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Bridge won&#x27;t render correctly"
-description = '''I was trying to work with the following map: http://www.openstreetmap.org/?lat=29.71234&amp;amp;lon=-95.378514&amp;amp;zoom=18&amp;amp;layers=M Looking at the background aerial photos, the South MacGregor Way bridge crosses on top of both of the South Freeway bridges. It is tagged as the following South MacGreg...'''
+description = '''I was trying to work with the following map: https://www.openstreetmap.org/?lat=29.71234&amp;amp;lon=-95.378514&amp;amp;zoom=18&amp;amp;layers=M Looking at the background aerial photos, the South MacGregor Way bridge crosses on top of both of the South Freeway bridges. It is tagged as the following South MacGreg...'''
 date = "2010-11-25T02:56:00Z"
 lastmod = "2010-11-25T09:08:00Z"
 weight = 1625
@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I was trying to work with the following map:</p>
-<p><a href="http://www.openstreetmap.org/?lat=29.71234&amp;lon=-95.378514&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=29.71234&amp;lon=-95.378514&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=29.71234&amp;lon=-95.378514&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=29.71234&amp;lon=-95.378514&amp;zoom=18&amp;layers=M</a></p>
 <p>Looking at the background aerial photos, the South MacGregor Way bridge crosses on top of both of the South Freeway bridges. It is tagged as the following</p>
 <p>South MacGregor Way bridge=yes layer=2</p>
 <p>South Freeway bridge=yes layer=1</p>

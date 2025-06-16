@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You cannot move the arrow position without writing code. But see my answer to your <a href="http://help.openstreetmap.org/questions/6076/when-i-embed-a-map-the-location-arrow-disapears">other question.</a></p>
+<p>You cannot move the arrow position without writing code. But see my answer to your <a href="/questions/6076/when-i-embed-a-map-the-location-arrow-disapears">other question.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

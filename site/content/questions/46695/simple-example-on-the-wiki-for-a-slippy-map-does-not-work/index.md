@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Simple example on the wiki for a slippy map does not work"
-description = '''Hello ! I would like to start with a simple map example and I am here: http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example There is somethings basically wrong: The OSM library mentioned, &quot;OpenLayers.js&quot; does not exists. If you go to their webseite, you&#x27;ll lost in space, because there are hu...'''
+description = '''Hello ! I would like to start with a simple map example and I am here: https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example There is somethings basically wrong: The OSM library mentioned, &quot;OpenLayers.js&quot; does not exists. If you go to their webseite, you&#x27;ll lost in space, because there are hu...'''
 date = "2015-11-19T04:51:00Z"
 lastmod = "2015-11-19T11:00:00Z"
 weight = 46695
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello !</p>
-<p>I would like to start with a simple map example and I am here: <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example</a></p>
+<p>I would like to start with a simple map example and I am here: <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example</a></p>
 <p>There is somethings basically wrong: The OSM library mentioned, "OpenLayers.js" does not exists. If you go to their webseite, you'll lost in space, because there are hundreds of scripts, but not that mentioned one.</p>
 <p>Any help would be great !</p>
 <p>Thanks anyway and best regards,</p>

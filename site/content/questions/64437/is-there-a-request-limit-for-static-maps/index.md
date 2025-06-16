@@ -154,7 +154,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Could you please let me know what would be the best OSM service provider? Do I need to use any of them or I could just use pure OSM for static and dynamic map implementation on my website?</p>
-<p>I'll make a copy of this question and post it: <a href="https://help.openstreetmap.org/questions/64445/do-i-need-to-use-any-third-party-services-to-implement-osm-on-my-website">https://help.openstreetmap.org/questions/64445/do-i-need-to-use-any-third-party-services-to-implement-osm-on-my-website</a></p>
+<p>I'll make a copy of this question and post it: <a href="/questions/64445/do-i-need-to-use-any-third-party-services-to-implement-osm-on-my-website">https://help.openstreetmap.org/questions/64445/do-i-need-to-use-any-third-party-services-to-implement-osm-on-my-website</a></p>
 </div>
 <div id="comment-64446-info" class="comment-info">
 <span class="comment-age">(29 Jun '18, 16:23)</span> <span class="comment-user userinfo">Nikita_And</span>

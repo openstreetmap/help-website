@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi use shop=motorcycle and look here <a href="http://wiki.openstreetmap.org/wiki/Key:shop">http://wiki.openstreetmap.org/wiki/Key:shop</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle_repair.">http://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle_repair.</a> Both are in the WIKI, if you search for a tag be creative naming a subject.</p>
+<p>Hi use shop=motorcycle and look here <a href="https://wiki.openstreetmap.org/wiki/Key:shop">https://wiki.openstreetmap.org/wiki/Key:shop</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle_repair.">https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle_repair.</a> Both are in the WIKI, if you search for a tag be creative naming a subject.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>I've been doing it by not sharing nodes at all and having the landuse slightly smaller, just a metre off the fence so the landuse areas and the fence way are completely sepearate.</p>
 <p>I would like to know … is this wrong? Or is it an acceptable way to do it?</p>
 <p>If it is preferred that landuse extends right up to the fence and shares the fence nodes then I'll join the ways back together.</p>
-<p><a href="http://www.openstreetmap.org/?lat=-35.26661&amp;lon=149.04193&amp;zoom=17">http://www.openstreetmap.org/?lat=-35.26661&amp;lon=149.04193&amp;zoom=17</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=-35.26661&amp;lon=149.04193&amp;zoom=17">https://www.openstreetmap.org/?lat=-35.26661&amp;lon=149.04193&amp;zoom=17</a></p>
 <p>I've tried doing the shared nodes thing but it gets messy for things like sections of shared boundary that aren't fenced. I can join nodes (and ways) later but I haven't yet determined what the unwanted consequences of doing so are.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a much discussed topic. Your approach is valid, but letting the landuse "touch" the fence is equally valid. Different mappers have different styles. See also the answers to the question <a href="https://help.openstreetmap.org/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">"Should the edges of landuse=* or boundary=* areas share points with streets that form their borders?"</a>.</p>
+<p>This is a much discussed topic. Your approach is valid, but letting the landuse "touch" the fence is equally valid. Different mappers have different styles. See also the answers to the question <a href="/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">"Should the edges of landuse=* or boundary=* areas share points with streets that form their borders?"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

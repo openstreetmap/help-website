@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Firstly, I created a relation for a bus route, starting at a certain point. The bus route itself isn't 'circular' however it loops, in the sense that it'll travel to its destination, and then turn around, either by a roundabout, or similar, or by making a loop (such as going through a series of roads eventually coming to a junction leading into a road it was previously on, and returning in the opposite direction).</p>
-<p>Here's the relation for that route... <a href="http://www.openstreetmap.org/browse/relation/3277636">Route 410</a></p>
+<p>Here's the relation for that route... <a href="https://www.openstreetmap.org/browse/relation/3277636">Route 410</a></p>
 <p>Is this supposed to be one relation, or should it be one relation up to where it starts to return to the other destination? And if so, is there a way of splitting one relation into two, at a certain point?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

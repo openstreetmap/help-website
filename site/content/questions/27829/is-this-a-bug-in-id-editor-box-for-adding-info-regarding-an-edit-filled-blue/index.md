@@ -105,7 +105,7 @@ osqa_accepted = false
 <div id="post-47665-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3104/burton-wanderer"></a><a href="http://help.openstreetmap.org/users/3104/burton-wanderer">@Burton wanderer</a> <a href="http://imgur.com/">http://imgur.com/</a> is one of the best website to post/upload images and better than <a href="http://tinypic.com/">http://tinypic.com/</a></p>
+<p><a href="https://help.openstreetmap.org/users/3104/burton-wanderer"></a><a href="https://help.openstreetmap.org/users/3104/burton-wanderer">@Burton wanderer</a> <a href="http://imgur.com/">http://imgur.com/</a> is one of the best website to post/upload images and better than <a href="http://tinypic.com/">http://tinypic.com/</a></p>
 </div>
 <div id="comment-47665-info" class="comment-info">
 <span class="comment-age">(27 Jan '16, 07:52)</span> <span class="comment-user userinfo">Zontafer</span>
@@ -116,7 +116,7 @@ osqa_accepted = false
 <div id="post-47679-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11902/zontafer"></a><a href="http://help.openstreetmap.org/users/11902/zontafer">@zontafer</a>: I have removed those (/revisions/47665/) fishy offtopic links, please do not insert again.</p>
+<p><a href="https://help.openstreetmap.org/users/11902/zontafer"></a><a href="https://help.openstreetmap.org/users/11902/zontafer">@zontafer</a>: I have removed those (/revisions/47665/) fishy offtopic links, please do not insert again.</p>
 </div>
 <div id="comment-47679-info" class="comment-info">
 <span class="comment-age">(27 Jan '16, 18:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

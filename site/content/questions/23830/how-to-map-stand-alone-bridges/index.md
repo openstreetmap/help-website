@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Sometimes there are bridges in an area that has no footpaths. It's just a bridge to allow people to cross a stream.<a href="http://www.openstreetmap.org/?lat=55.38718&amp;lon=12.821608&amp;zoom=18&amp;layers=M">example</a> I have tagged these as highway=footway, bridge=yes, layer=1, as any other bridge. However, they are not connected to the rest of the map. Is this correct or is there some other recommended tag?</p>
+<p>Sometimes there are bridges in an area that has no footpaths. It's just a bridge to allow people to cross a stream.<a href="https://www.openstreetmap.org/?lat=55.38718&amp;lon=12.821608&amp;zoom=18&amp;layers=M">example</a> I have tagged these as highway=footway, bridge=yes, layer=1, as any other bridge. However, they are not connected to the rest of the map. Is this correct or is there some other recommended tag?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bridge" rel="tag" title="see questions tagged &#39;bridge&#39;">bridge</span> <span class="post-tag tag-link-stream" rel="tag" title="see questions tagged &#39;stream&#39;">stream</span>
@@ -62,7 +62,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>hi grillo you could have search the database for similar questions, <a href="https://help.openstreetmap.org/questions/16358/should-a-bridge-in-farmland-being-tagged,">https://help.openstreetmap.org/questions/16358/should-a-bridge-in-farmland-being-tagged,</a> regarding stand alone bridges.</p>
+<p>hi grillo you could have search the database for similar questions, <a href="/questions/16358/should-a-bridge-in-farmland-being-tagged,">https://help.openstreetmap.org/questions/16358/should-a-bridge-in-farmland-being-tagged,</a> regarding stand alone bridges.</p>
 </div>
 <div id="comment-23856-info" class="comment-info">
 <span class="comment-age">(30 Jun '13, 21:12)</span> <span class="comment-user userinfo">Hendrikklaas</span>

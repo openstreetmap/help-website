@@ -225,7 +225,7 @@ osqa_accepted = true
 <div id="post-15173-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks Frederik I found a bit more of his work,you can see it in edit mode here <a href="http://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355">http://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355</a></p>
+<p>Thanks Frederik I found a bit more of his work,you can see it in edit mode here <a href="https://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355">https://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355</a></p>
 </div>
 <div id="comment-15173-info" class="comment-info">
 <span class="comment-age">(16 Aug '12, 20:56)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -259,7 +259,7 @@ osqa_accepted = true
 <div id="post-15621-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have now deleted the example at <a href="http://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355">http://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355</a></p>
+<p>I have now deleted the example at <a href="https://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355">https://www.openstreetmap.org/edit?bbox=-0.13141%2C52.42984%2C-0.123%2C52.43355</a></p>
 </div>
 <div id="comment-15621-info" class="comment-info">
 <span class="comment-age">(29 Aug '12, 07:46)</span> <span class="comment-user userinfo">andy mackey</span>

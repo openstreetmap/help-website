@@ -81,7 +81,7 @@ Reply from 128.40.45.204: Destination host unreachable.</code></pre>
 <div class="comment-text">
 <p>Even just lurking in #osm-dev for a while would tell you when people are trying to fix things :)</p>
 <p>This wiki page, and the munin links from it, here might help a bit:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Servers#UCL_-_In_Use">http://wiki.openstreetmap.org/wiki/Servers#UCL_-_In_Use</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Servers#UCL_-_In_Use">https://wiki.openstreetmap.org/wiki/Servers#UCL_-_In_Use</a></p>
 <p>Obviously it's a wiki page and won't show up-to-the-second changes as load is moved around, but it should be an introduction.</p>
 </div>
 <div id="comment-44374-info" class="comment-info">

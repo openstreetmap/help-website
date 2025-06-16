@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can tag the year of construction using <a href="http://wiki.openstreetmap.org/wiki/Key:start_date">start_date</a> and the historic period using <a href="http://wiki.openstreetmap.org/wiki/Key:historic:civilization">historic:period</a>. However note that we only map things that are still on the ground and not things that have been there in the past but are removed now.</p>
+<p>You can tag the year of construction using <a href="https://wiki.openstreetmap.org/wiki/Key:start_date">start_date</a> and the historic period using <a href="https://wiki.openstreetmap.org/wiki/Key:historic:civilization">historic:period</a>. However note that we only map things that are still on the ground and not things that have been there in the past but are removed now.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM muss währenddessen gestartet sein und <a href="https://josm.openstreetmap.de/wiki/Help/Preferences/RemoteControl">remote control</a> muss manuell aktiviert worden sein. Wie diese Funktion aktiviert werden kann ist hier auch an <a href="https://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm">anderer Stelle</a> erklärt.</p>
+<p>JOSM muss währenddessen gestartet sein und <a href="https://josm.openstreetmap.de/wiki/Help/Preferences/RemoteControl">remote control</a> muss manuell aktiviert worden sein. Wie diese Funktion aktiviert werden kann ist hier auch an <a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm">anderer Stelle</a> erklärt.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ One Answer:
 <div id="post-48684-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12044/galliano16">@Galliano16</a>: frage einfach nach, wenn du an einer Stelle hängst. Hast du denn überhaupt schon mit JOSM gearbeitet? Das gleichnamige OSM-Benutzerprofil hat noch keine Bearbeitung mit JOSM. Mache erstmal das, bevor du versuchst Remote Control zu aktivieren. :-)</p>
+<p><a href="https://help.openstreetmap.org/users/12044/galliano16">@Galliano16</a>: frage einfach nach, wenn du an einer Stelle hängst. Hast du denn überhaupt schon mit JOSM gearbeitet? Das gleichnamige OSM-Benutzerprofil hat noch keine Bearbeitung mit JOSM. Mache erstmal das, bevor du versuchst Remote Control zu aktivieren. :-)</p>
 </div>
 <div id="comment-48684-info" class="comment-info">
 <span class="comment-age">(15 Mar '16, 20:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

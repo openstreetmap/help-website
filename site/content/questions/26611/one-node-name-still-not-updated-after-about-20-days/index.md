@@ -42,9 +42,9 @@ osqa_accepted = true
 <p>Hi, I've made several edits in my neighborhood that have shown up in OSM within a reasonable amount of time (several minutes or maybe an hour). I've seen the various posts and questions about "<em>how long until changes show up</em>" and about clearing cache, shift f5 to refresh browser, etc; However, one edit hasn't changed and that was about 20 days ago.<br />
 </p>
 <p>Here is the node that hasn't been updated (I added English, but only original Japanese shows in OSM):<br />
-<a href="http://www.openstreetmap.org/browse/node/1068044009">http://www.openstreetmap.org/browse/node/1068044009</a></p>
+<a href="https://www.openstreetmap.org/browse/node/1068044009">https://www.openstreetmap.org/browse/node/1068044009</a></p>
 <p>Here is example of one where I added English and it shows as I expected:<br />
-<a href="http://www.openstreetmap.org/browse/node/1068043080">http://www.openstreetmap.org/browse/node/1068043080</a></p>
+<a href="https://www.openstreetmap.org/browse/node/1068043080">https://www.openstreetmap.org/browse/node/1068043080</a></p>
 <p>Did I do something wrong or it 20 days still too early to worry about it?</p>
 <p>Thanks! Cheers</p>
 </div>
@@ -111,8 +111,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/browse/node/1068044009">Node 1068044009</a> and <a href="http://www.openstreetmap.org/browse/node/1423923802">node 1423923802</a> are duplicates in exactly the same position. At fix glance both appear to be imported, but by different imports.</p>
-<p>Before doing anything else I would go through the second import (which was <a href="http://www.openstreetmap.org/browse/changeset/9216407">back in 2011</a>) for any other duplicates and merge those (if it's obvious to do without losing data) or add map notes for them.</p>
+<p><a href="https://www.openstreetmap.org/browse/node/1068044009">Node 1068044009</a> and <a href="https://www.openstreetmap.org/browse/node/1423923802">node 1423923802</a> are duplicates in exactly the same position. At fix glance both appear to be imported, but by different imports.</p>
+<p>Before doing anything else I would go through the second import (which was <a href="https://www.openstreetmap.org/browse/changeset/9216407">back in 2011</a>) for any other duplicates and merge those (if it's obvious to do without losing data) or add map notes for them.</p>
 <p>Once you've got only one node for this hospital, changing its name should work as expected.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -146,7 +146,7 @@ I'll have to figure out how to merge nodes some other day. Cheers</p>
 </div>
 <div class="comment-text">
 <p>I spotted the duplicate nodes by opening the node that you linked to in the editor (the default for which for me is Potlatch 2). Instead of displaying as a hospital node, P2 shows it like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/p2.png" alt="p2 dupe node" /></p>
+<p><img src="/upfiles/p2.png" alt="p2 dupe node" /></p>
 <p>making it really clear that there are a pair of duplicate nodes on the same spot.</p>
 </div>
 <div id="comment-26624-info" class="comment-info">
@@ -238,9 +238,9 @@ I'll have to figure out how to merge nodes some other day. Cheers</p>
 </div>
 <div class="comment-text">
 <p>For info, since I've just fixed a bunch of duplicate nodes in Manchester using JOSM, here's what I did:</p>
-<p>1) <a href="https://help.openstreetmap.org/questions/26429/how-do-i-download-a-changeset-in-josm">Load the OSC file into JOSM and "update data"</a></p>
-<p>2) <a href="https://help.openstreetmap.org/questions/24052/josm-and-taginfo-how-to-easily-move-through-a-list">Using the "todo" plugin, select all the nodes and add to a todo list.</a></p>
-<p>3) For the first node, zoom right in, load OSM data, highlight the node, validate, select the one error, review the tags, <a href="https://help.openstreetmap.org/questions/26439/josm-validator-can-i-use-it-to-automatically-merge-duplicate-nodes">"m" to merge</a> (making any necessary manual adjustments), click OK.</p>
+<p>1) <a href="/questions/26429/how-do-i-download-a-changeset-in-josm">Load the OSC file into JOSM and "update data"</a></p>
+<p>2) <a href="/questions/24052/josm-and-taginfo-how-to-easily-move-through-a-list">Using the "todo" plugin, select all the nodes and add to a todo list.</a></p>
+<p>3) For the first node, zoom right in, load OSM data, highlight the node, validate, select the one error, review the tags, <a href="/questions/26439/josm-validator-can-i-use-it-to-automatically-merge-duplicate-nodes">"m" to merge</a> (making any necessary manual adjustments), click OK.</p>
 <p>4) Tick that node as completed in the "todo" plugin.</p>
 <p>5) The todo plugin handles zooming to the next node when you mark the previous one as completed, so repeat until done.</p>
 </div>

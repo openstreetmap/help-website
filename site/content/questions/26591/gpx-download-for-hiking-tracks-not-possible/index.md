@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "GPX download for hiking tracks not possible"
-description = '''Hi, I am not able to download the Hiking tracks in gpx format. Example Page: http://wiki.openstreetmap.org/wiki/Vogelsberger_H%C3%B6henclub When I click on &quot;gpx&quot; for various of the listed tracks, there is the error &quot;503 Service Temporarily Unavailable&quot; More example Links: http://osmrm.openstreetmap....'''
+description = '''Hi, I am not able to download the Hiking tracks in gpx format. Example Page: https://wiki.openstreetmap.org/wiki/Vogelsberger_H%C3%B6henclub When I click on &quot;gpx&quot; for various of the listed tracks, there is the error &quot;503 Service Temporarily Unavailable&quot; More example Links: http://osmrm.openstreetmap....'''
 date = "2013-09-21T19:10:00Z"
 lastmod = "2013-09-21T20:13:00Z"
 weight = 26591
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I am not able to download the Hiking tracks in gpx format. Example Page: <a href="http://wiki.openstreetmap.org/wiki/Vogelsberger_H%C3%B6henclub">http://wiki.openstreetmap.org/wiki/Vogelsberger_H%C3%B6henclub</a> When I click on "gpx" for various of the listed tracks, there is the error "503 Service Temporarily Unavailable"</p>
+<p>Hi, I am not able to download the Hiking tracks in gpx format. Example Page: <a href="https://wiki.openstreetmap.org/wiki/Vogelsberger_H%C3%B6henclub">https://wiki.openstreetmap.org/wiki/Vogelsberger_H%C3%B6henclub</a> When I click on "gpx" for various of the listed tracks, there is the error "503 Service Temporarily Unavailable"</p>
 <p>More example Links: <a href="http://osmrm.openstreetmap.de/gpx.jsp?relation=79595">http://osmrm.openstreetmap.de/gpx.jsp?relation=79595</a></p>
 <p>When will you fix this?</p>
 </div>

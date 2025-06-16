@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>The OSM mappers in Ecuador are looking for a country-specific mailing list. How can we request a talk-ec list?</p>
-<p>We've found <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:">this instructions</a> in the wiki:</p>
+<p>We've found <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:">this instructions</a> in the wiki:</p>
 <blockquote>
 <p>If you want a new list for your country or language, send email to Michael Collinson, michael at osmfoundation dot org</p>
 </blockquote>

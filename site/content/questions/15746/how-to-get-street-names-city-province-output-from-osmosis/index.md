@@ -46,7 +46,7 @@ Beatrixpark, Ede, Gelderland<br />
 Beatrixpark, Etten-Leur, North Brabant<br />
 </p>
 <p>etc.</p>
-<p>I've tried this <a href="http://help.openstreetmap.org/questions/12121/scraping-open-street-map-for-uk-street-names,">http://help.openstreetmap.org/questions/12121/scraping-open-street-map-for-uk-street-names,</a> but it gives me the street names only and thus also duplicates, or names of hospitals :)</p>
+<p>I've tried this <a href="/questions/12121/scraping-open-street-map-for-uk-street-names,">https://help.openstreetmap.org/questions/12121/scraping-open-street-map-for-uk-street-names,</a> but it gives me the street names only and thus also duplicates, or names of hospitals :)</p>
 <p>Has anyone an idea, what I am actually looking for in the DB and how can I obtain the output I'm looking for? Any help is appreciated.</p>
 <p>Thanks,</p>
 <p>Adriana</p>

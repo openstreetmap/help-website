@@ -176,8 +176,8 @@ osqa_accepted = false
 <p>Changing something in the wiki starts by gathering consensus. Consensus can be obtained by :</p>
 <ul>
 <li>Seeing that the tagging scheme is already widely used in the database (<a href="http://taginfo.openstreetmap.org/">taginfo</a> should be the first thing you check).</li>
-<li>Discussing things in the relevant wiki page's discussion tab, in the (tagging) <a href="http://wiki.openstreetmap.org/wiki/MailingLists">mailing list</a>, or on IRC</li>
-<li>Writing a <a href="http://wiki.openstreetmap.org/wiki/Proposal">proposal</a> and getting it aproved</li>
+<li>Discussing things in the relevant wiki page's discussion tab, in the (tagging) <a href="https://wiki.openstreetmap.org/wiki/MailingLists">mailing list</a>, or on IRC</li>
+<li>Writing a <a href="https://wiki.openstreetmap.org/wiki/Proposal">proposal</a> and getting it aproved</li>
 <li>Seeing it supported by various tools, especially the renderers and editors</li>
 </ul>
 <p>Once the consensus is clear and the tagging scheme is being used in the wild, you can go ahead and edit the wiki.</p>
@@ -232,7 +232,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>On taginfo, we find <a href="http://taginfo.openstreetmap.org/tags/resource=peat#overview">478 resource=peat</a> (and one "resource=Peat")<br />
 On those, <a href="http://overpass-api.de/api/xapi_meta?*%5Bresource%3Dpeat%5D%5Blanduse%3Dquarry%5D">477 are combined with "landuse=quarry"</a></p>
-<p>The database is not consistent. But it is not a reason to have the same inconsistency on the wiki. You should initiate a discussion on the <a href="http://wiki.openstreetmap.org/wiki/Mailing_list">tagging mailing list</a>. The result should be a consensus for one of the versions present in the database and the wiki enhanced with that consensus (explaining the different existing values and combinations but we recommand only one).</p>
+<p>The database is not consistent. But it is not a reason to have the same inconsistency on the wiki. You should initiate a discussion on the <a href="https://wiki.openstreetmap.org/wiki/Mailing_list">tagging mailing list</a>. The result should be a consensus for one of the versions present in the database and the wiki enhanced with that consensus (explaining the different existing values and combinations but we recommand only one).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

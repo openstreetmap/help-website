@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you looking for XAPI. Details are there : <a href="http://wiki.openstreetmap.org/wiki/XAPI">http://wiki.openstreetmap.org/wiki/XAPI</a></p>
+<p>Are you looking for XAPI. Details are there : <a href="https://wiki.openstreetmap.org/wiki/XAPI">https://wiki.openstreetmap.org/wiki/XAPI</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

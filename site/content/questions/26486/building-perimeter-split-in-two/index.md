@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Building perimeter split in two."
-description = '''Hello, I modified a building, but then realized that only about half of the perimeter can be selected at one time. (That is unless you click inside the area) This is one of the points that &quot;connect&quot; the two parts of the parimeter: http://www.openstreetmap.org/edit#map=24/43.53088/-80.22537 Can this ...'''
+description = '''Hello, I modified a building, but then realized that only about half of the perimeter can be selected at one time. (That is unless you click inside the area) This is one of the points that &quot;connect&quot; the two parts of the parimeter: https://www.openstreetmap.org/edit#map=24/43.53088/-80.22537 Can this ...'''
 date = "2013-09-19T03:05:00Z"
 lastmod = "2013-09-19T15:21:00Z"
 weight = 26486
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I modified a building, but then realized that only about half of the perimeter can be selected at one time. (That is unless you click inside the area) This is one of the points that "connect" the two parts of the parimeter: <a href="http://www.openstreetmap.org/edit#map=24/43.53088/-80.22537">http://www.openstreetmap.org/edit#map=24/43.53088/-80.22537</a> Can this be fixed without redrawing the building? It wouldn't be too much work, I just want to understand what is going on. Thanks</p>
+<p>Hello, I modified a building, but then realized that only about half of the perimeter can be selected at one time. (That is unless you click inside the area) This is one of the points that "connect" the two parts of the parimeter: <a href="https://www.openstreetmap.org/edit#map=24/43.53088/-80.22537">https://www.openstreetmap.org/edit#map=24/43.53088/-80.22537</a> Can this be fixed without redrawing the building? It wouldn't be too much work, I just want to understand what is going on. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-perimeter" rel="tag" title="see questions tagged &#39;perimeter&#39;">perimeter</span> <span class="post-tag tag-link-split" rel="tag" title="see questions tagged &#39;split&#39;">split</span>

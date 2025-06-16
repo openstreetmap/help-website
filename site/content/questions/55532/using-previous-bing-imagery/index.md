@@ -111,7 +111,7 @@ One Answer:
 <p>Not from bing itself. They just provide one imagery layer. It's a mishmash of different ages of imagery (generally digitalglobe imagery I believe), but in any given location I'm afraid they're serving... just one age... one quality imagery ...one layer</p>
 <p>However bing is not the only imagery provider. You can swap to others within the OpenStreetMap editors quiet easily to see if you get anything different. Some imagery providers are (sort of) global coverage. Mapbox for example will be available where you are if bing is. Mapbox is often identical to bing, but sometimes a different age of digitalglobe imagery...</p>
 <p>...which seems to be the case in Dhaka. Judging by shiny new buildings visible in bing I'd guess Mapbox has slightly older imagery there. It may actually be the exact images you were originally working with via bing:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/dhaka-mapbox-imagery-Id.png" alt="Dhaka id editor showing Mapbox imagery" /></p>
+<p><img src="/upfiles/dhaka-mapbox-imagery-Id.png" alt="Dhaka id editor showing Mapbox imagery" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

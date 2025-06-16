@@ -71,7 +71,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>This is not a question.</p>
-<p>Please submit bug reports and feature requests in the locations documented here <a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_should_I_report_problems.3F">http://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_should_I_report_problems.3F</a></p>
+<p>Please submit bug reports and feature requests in the locations documented here <a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_should_I_report_problems.3F">https://wiki.openstreetmap.org/wiki/Nominatim/FAQ#How_should_I_report_problems.3F</a></p>
 </div>
 <div id="comment-28403-info" class="comment-info">
 <span class="comment-age">(22 Nov '13, 19:13)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

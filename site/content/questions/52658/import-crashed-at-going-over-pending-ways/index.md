@@ -87,7 +87,7 @@ Maximum node in persistent node cache: 4418699263</code></pre>
 <div id="post-52661-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>. Apologies for not including additional info. My specs are as follows:</p>
+<p>Thank you <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>. Apologies for not including additional info. My specs are as follows:</p>
 <p>Ubuntu 14.04 LTS 700GB disk 30GB RAM</p>
 <p>I used the following command:</p>
 <p>sudo -u offlineuser osm2pgsql --create-d gis --slim --flat-nodes ~/osm/flat_nodes.bin -C 14000 --number-processes 4 --style ~/osm/openstreetmap-carto/openstreetmap-carto.style --multi-geometry /home/offlineserver/planet-latest.osm.pbf</p>

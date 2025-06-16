@@ -123,8 +123,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Read The import guide lines<br />
-<a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
-<p>If everything is ok (license, quality, duplication of previous efforts) with this data set then you can read about <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue/KMS">the danish postal import</a>, which was about 130 000 addresses. And 18k nodes isn't that much.</p>
+<a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
+<p>If everything is ok (license, quality, duplication of previous efforts) with this data set then you can read about <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue/KMS">the danish postal import</a>, which was about 130 000 addresses. And 18k nodes isn't that much.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

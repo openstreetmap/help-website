@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Goal: direct user to potlatch where they specify a closed path. Then get the points of that closed path for later use. User will not know much about OSM. This is being driven from a phone, so I want a web solution.</p>
-<p>Interactively, I can accomplish this by creating the path; saving it; going to history; getting my changeset id and then use <a href="http://www.openstreetmap.org/browse/changeset/">http://www.openstreetmap.org/browse/changeset/</a>&lt;changesetid&gt;.</p>
+<p>Interactively, I can accomplish this by creating the path; saving it; going to history; getting my changeset id and then use <a href="https://www.openstreetmap.org/browse/changeset/">https://www.openstreetmap.org/browse/changeset/</a>&lt;changesetid&gt;.</p>
 <p>It feels like I need to setup my own potlatch server and modify it so I can pass a location and a changeset description in; then I can get changesets within a bounding box and look for my description.</p>
 <p>Question: Am I using the right tool. Is there a better way.</p>
 <p>Edit: Yes, I want to see the points. Here is a sample application: I want to have a phone scavenger hunt. The user is going to draw out the field/pitch/playspace on their phone; then I am going to scatter (electronically, not physically) prizes, clues or what not inside that field. Then they walk around and collect the prizes. I have the location of the phone and all my created items; I am looking for a way to allow a user to fence-in the application. I could do this on the phone; but I would rather do it on the web as the boundary they create could well be shared/re-used. (via OSM) Is that better?</p>

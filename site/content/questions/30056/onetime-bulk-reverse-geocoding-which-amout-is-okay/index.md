@@ -77,7 +77,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>For info I converted an extra "answer" here to a question. It is now at <a href="https://help.openstreetmap.org/questions/52210/interested-in-building-a-bulk-geocoder-app-that-could-be-used-locally-in-the-browse">https://help.openstreetmap.org/questions/52210/interested-in-building-a-bulk-geocoder-app-that-could-be-used-locally-in-the-browse</a> .</p>
+<p>For info I converted an extra "answer" here to a question. It is now at <a href="/questions/52210/interested-in-building-a-bulk-geocoder-app-that-could-be-used-locally-in-the-browse">https://help.openstreetmap.org/questions/52210/interested-in-building-a-bulk-geocoder-app-that-could-be-used-locally-in-the-browse</a> .</p>
 </div>
 <div id="comment-52212-info" class="comment-info">
 <span class="comment-age">(24 Sep '16, 10:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -131,7 +131,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim Usage Policy</a> for OSM's own Nominatim instance says</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim Usage Policy</a> for OSM's own Nominatim instance says</p>
 <blockquote>
 <p>As a general rule, bulk geocoding of larger amounts of data is not encouraged. If you have regular geocoding tasks, please, look into alternatives below. Smaller one-time bulk tasks may be permissible, if these additional rules are followed</p>
 <ul>

@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are 25 usages of shop=supplements on <a href="http://taginfo.openstreetmap.org/keys/?key=shop#values">taginfo</a>, which also is a long-ago proposed <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/supplements">tag</a></p>
+<p>There are 25 usages of shop=supplements on <a href="http://taginfo.openstreetmap.org/keys/?key=shop#values">taginfo</a>, which also is a long-ago proposed <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/supplements">tag</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -230,7 +230,7 @@ osqa_accepted = true
 <div id="post-13276-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dorganic">shop=organic</a> is deprecated in favor of <a href="http://wiki.openstreetmap.org/wiki/Key:organic">organic=*</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dorganic">shop=organic</a> is deprecated in favor of <a href="https://wiki.openstreetmap.org/wiki/Key:organic">organic=*</a></p>
 </div>
 <div id="comment-13276-info" class="comment-info">
 <span class="comment-age">(06 Jun '12, 14:27)</span> <span class="comment-user userinfo">neuhausr</span>

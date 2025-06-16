@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm in the UK and I want to be able to use OSM to plot routes (using Plotaroute.com). I've seen on another post ... <a href="https://help.openstreetmap.org/questions/35124/how-to-go-about-resolving-the-uk-trunk-tag-issue">https://help.openstreetmap.org/questions/35124/how-to-go-about-resolving-the-uk-trunk-tag-issue</a> that trunk roads in the UK have the wrong defaults. That means that trunk roads are marked as not suitable for bikes, for example</p>
+<p>I'm in the UK and I want to be able to use OSM to plot routes (using Plotaroute.com). I've seen on another post ... <a href="/questions/35124/how-to-go-about-resolving-the-uk-trunk-tag-issue">https://help.openstreetmap.org/questions/35124/how-to-go-about-resolving-the-uk-trunk-tag-issue</a> that trunk roads in the UK have the wrong defaults. That means that trunk roads are marked as not suitable for bikes, for example</p>
 <p>Is there a way to list all the trunk roads within an area, such as a UK County, with their Allowed Access tags - or simply a list of all the ones which look as if they could be wrong.</p>
 <p>If that list also acted as a front end to update those Allowed Access tags, that would be even better</p>
 </div>

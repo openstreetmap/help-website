@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You don't need to talk to anyone. OpenStreetMap has no paid employees and there's no-one sitting at the end of a phone to take your call. We don't work like that.</p>
-<p>OSM data is open to everyone, commercial or not, under the same terms. You can read more details at the <a href="http://www.openstreetmap.org/copyright">copyright page</a>. If you have further questions, you can ask here.</p>
+<p>OSM data is open to everyone, commercial or not, under the same terms. You can read more details at the <a href="https://www.openstreetmap.org/copyright">copyright page</a>. If you have further questions, you can ask here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Not sure I understand what you mean by commercial collaboration, but if you are looking for someone who can consult or help you implement services on top of OpenStreetMap data, there are a number of companies that you can contract for this kind of thing.</p>
 <p>Names of companies commonly associated with providing commercial OpenStreetMap based services are for example Geofabrik.de Gravitystrom.co.uk, MapBox or MapQuest, but there are a bunch more depending on what exactly you are looking for.</p>
-<p>A (partial) list can be found on the wiki under <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
+<p>A (partial) list can be found on the wiki under <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
 <p>OpenStreetMap, or the OpenStreetMap foundation directly typically do not provide commercial services, collaborations or custom solutions. Only the OpenStreetMap planet file is offered directly to everyone freely and openly as long as they abide by the license (ODbL).</p>
 </div>
 <div class="answer-controls post-controls">

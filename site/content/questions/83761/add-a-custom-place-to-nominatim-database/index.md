@@ -231,7 +231,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>After a few months not working on the problem I tried Ionvia's solution, but something did not work. I created an xml file from a DataFrame with pyosmium. The file looks like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2022-05-10_17-37-12.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2022-05-10_17-37-12.png" alt="alt text" /></p>
 <p>I run <code>nominatim add-data --file &lt;myfile.xml&gt;</code> and the nodes indeed appear in the <code>planet_osm_nodes</code> table. However, the command <code>nominatim index</code> runs with no errors but indexes <code>0/0</code> new objects at every rank level. And indeed the new nodes do not eventually appear in the <code>placex</code> table and therefore do not show up in the <code>search</code>.</p>
 <p>What am I missing?</p>
 </div>

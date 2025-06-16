@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Which access tags should I use on roads with the following signs ? The dogs are pulling a carriage, not a sledge, as we typically do not have enough snow.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_20180521_142024s_HyxQxKW.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/IMG_20180521_142024s_HyxQxKW.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

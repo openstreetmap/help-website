@@ -121,7 +121,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have just found this:</p>
-<p><a href="https://help.openstreetmap.org/questions/3161/what-is-the-best-way-to-report-an-osm-inspector-bug">https://help.openstreetmap.org/questions/3161/what-is-the-best-way-to-report-an-osm-inspector-bug</a></p>
+<p><a href="/questions/3161/what-is-the-best-way-to-report-an-osm-inspector-bug">https://help.openstreetmap.org/questions/3161/what-is-the-best-way-to-report-an-osm-inspector-bug</a></p>
 <p>I'll try it</p>
 </div>
 <div class="answer-controls post-controls">

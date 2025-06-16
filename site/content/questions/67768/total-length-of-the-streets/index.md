@@ -128,7 +128,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I suspect the easiest way to do what you want is to actually setup a postgres/postgis database and import an <a href="http://download.geofabrik.de/europe/ukraine.html">extract of OSM data covering Ukrania</a> with <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>.</p>
-<p>Alternatively you could try to just extract the relevant data with <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass api/overpass turbo</a> and sum it in a tool for example QGIS (maybe that is possible in overpass itself) see <a href="https://help.openstreetmap.org/questions/42859/find-total-length-of-ways-within-a-region-in-overpass-turbo">https://help.openstreetmap.org/questions/42859/find-total-length-of-ways-within-a-region-in-overpass-turbo</a></p>
+<p>Alternatively you could try to just extract the relevant data with <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass api/overpass turbo</a> and sum it in a tool for example QGIS (maybe that is possible in overpass itself) see <a href="/questions/42859/find-total-length-of-ways-within-a-region-in-overpass-turbo">https://help.openstreetmap.org/questions/42859/find-total-length-of-ways-within-a-region-in-overpass-turbo</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -172,7 +172,7 @@ osqa_accepted = false
 <li>Adding detailed road features:</li>
 <li>bus bays - I do not know. Maybe adding another lane for the part with bus bay?</li>
 <li>parking - <code>amenity=parking</code></li>
-<li>pavements - see <a href="http://wiki.openstreetmap.org/wiki/Sidewalks">http://wiki.openstreetmap.org/wiki/Sidewalks</a></li>
+<li>pavements - see <a href="https://wiki.openstreetmap.org/wiki/Sidewalks">https://wiki.openstreetmap.org/wiki/Sidewalks</a></li>
 <li>I do not know, but it should be.</li>
 </ol>
 </div>
@@ -224,9 +224,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Re pavements - the <a href="http://wiki.openstreetmap.org/wiki/Sidewalk">wiki sidewalk</a> page was created relatively recently; also footway=both/left/right was already used (in fact, there are twice as many "<a href="http://taginfo.openstreetmap.org/tags/footway=both#wiki">footway=both</a>" as "<a href="http://taginfo.openstreetmap.org/tags/sidewalk=both#wiki">sidewalk=both</a>" currently). If someone has mapped the fact that there's a pavement at the side of the road in the UK you'll tend to see e.g. footway= rather than sidewalk=; and I guess the opposite will be true across the Atlantic.</p>
-<p>There are also people who suggest mapping them <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way">as a separate parallel way</a>. This has been discussed at length on the tagging mailing list, and both sides of the argument think the other side is bonkers.</p>
-<p>Personally, I'd say that while mapping sidewalks/pavements as separate ways might make sense in some places (such as <a href="http://www.openstreetmap.org/?lat=60.21953&amp;lon=24.9079&amp;zoom=16&amp;layers=M">here</a> in Helsinki) where paths start off alongside roads but then often head off on their own, in most places in the UK footway=both/left/right/none or sidewalk=both/left/right/none is probably the better option (and it's less work to map)</p>
+<p>Re pavements - the <a href="https://wiki.openstreetmap.org/wiki/Sidewalk">wiki sidewalk</a> page was created relatively recently; also footway=both/left/right was already used (in fact, there are twice as many "<a href="http://taginfo.openstreetmap.org/tags/footway=both#wiki">footway=both</a>" as "<a href="http://taginfo.openstreetmap.org/tags/sidewalk=both#wiki">sidewalk=both</a>" currently). If someone has mapped the fact that there's a pavement at the side of the road in the UK you'll tend to see e.g. footway= rather than sidewalk=; and I guess the opposite will be true across the Atlantic.</p>
+<p>There are also people who suggest mapping them <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way">as a separate parallel way</a>. This has been discussed at length on the tagging mailing list, and both sides of the argument think the other side is bonkers.</p>
+<p>Personally, I'd say that while mapping sidewalks/pavements as separate ways might make sense in some places (such as <a href="https://www.openstreetmap.org/?lat=60.21953&amp;lon=24.9079&amp;zoom=16&amp;layers=M">here</a> in Helsinki) where paths start off alongside roads but then often head off on their own, in most places in the UK footway=both/left/right/none or sidewalk=both/left/right/none is probably the better option (and it's less work to map)</p>
 <p>As to whether you use e.g. "<a href="http://taginfo.openstreetmap.org/tags/sidewalk=both#wiki">sidewalk=both</a>" or "<a href="http://taginfo.openstreetmap.org/tags/footway=both#wiki">footway=both</a>" I don't think that it really matters - it's one of the few places in OSM where a mass change of data for consistency (just "blah=both/left/right/none") wouldn't lose any subtle meaning. However, speaking as someone who occasionally walks home in the dark it's really useful data to have collected.</p>
 </div>
 <div class="answer-controls post-controls">

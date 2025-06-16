@@ -136,7 +136,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Wasn't there a 64-bit issue with QGIS itself, as described here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a></p>
 </div>
 <div id="comment-26855-info" class="comment-info">
 <span class="comment-age">(30 Sep '13, 08:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at this <a href="http://wiki.openstreetmap.org/wiki/Bbox">page</a>. Maybe you can make some research on the OSM wiki before to post your question here.</p>
+<p>Take a look at this <a href="https://wiki.openstreetmap.org/wiki/Bbox">page</a>. Maybe you can make some research on the OSM wiki before to post your question here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

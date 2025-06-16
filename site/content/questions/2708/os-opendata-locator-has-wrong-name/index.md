@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In OpenStreetMap you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a> -- there's no such thing as an "invalid" tag. Your only responsibilities are to make sure your mapping and tags accurately reflect the real world, and are <a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiable</a> by other mappers.</p>
+<p>In OpenStreetMap you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a> -- there's no such thing as an "invalid" tag. Your only responsibilities are to make sure your mapping and tags accurately reflect the real world, and are <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiable</a> by other mappers.</p>
 <p>As such it's perfectly fine to add <code>not:name=*</code> tags to roads that OS has the wrong name for. However, it's also fine not to bother -- the ITO OSM analysis tool that produces the layer you're looking at is just that -- a tool, and not an absolute arbiter of what's right and wrong. If you're happy that you've named roads in your area accurately, you can ignore any quality tool like this. They're only meant to be a guide, not instructions.</p>
 </div>
 <div class="answer-controls post-controls">

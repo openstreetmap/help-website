@@ -111,7 +111,7 @@ One Answer:
 <div class="answer-body">
 <p>Type the numbers in the search field without the slash in between. You will then see something like</p>
 <p>Results from Internal<br />
-<a href="http://www.openstreetmap.org/#map=9/-20.45667/-54.61852">-20.45667, -54.61852</a></p>
+<a href="https://www.openstreetmap.org/#map=9/-20.45667/-54.61852">-20.45667, -54.61852</a></p>
 <p>Click on the link and you're taken to the map at the desired position.</p>
 </div>
 <div class="answer-controls post-controls">

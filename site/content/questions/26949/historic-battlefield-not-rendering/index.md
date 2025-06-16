@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Enter "map style" in the search box above and read some of the responses. Especially, read the answer to <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>. The short answer is that not everything is shown on the default map and that's normal!</p>
+<p>Enter "map style" in the search box above and read some of the responses. Especially, read the answer to <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>. The short answer is that not everything is shown on the default map and that's normal!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

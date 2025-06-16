@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Many different people make Garmin map images available from OpenStreetMap data, using different methods and tools. The most common tool is called <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> and currently it has very limited support for creating map images with address search support. Work is underway at present to improve this.</p>
+<p>Many different people make Garmin map images available from OpenStreetMap data, using different methods and tools. The most common tool is called <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> and currently it has very limited support for creating map images with address search support. Work is underway at present to improve this.</p>
 <p>You may be able to find maps made using other tools, or you might have to wait until newer versions of mkgmap support the search fully and people use this future version to create their map images.</p>
 </div>
 <div class="answer-controls post-controls">

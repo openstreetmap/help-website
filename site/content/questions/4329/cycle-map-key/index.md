@@ -166,8 +166,8 @@ osqa_accepted = false
 <p>A dashed wide dark brown line is highway=track. You can physically cycle down it (more probably on a mountain bike than a road bike) - it could be a bridleway or some form of byway; or you may not necessary have a legal right to do so (i.e. it could be private).</p>
 <p>A dashed thin browny/red (not really sure what colour this is!) line is a footway or path. You probably can't cycle on these, but sometimes a path may in fact be a cycleable 'single-track'. With the bridleway status denoted in the designation status, or a bicycle=yes tag.</p>
 <p>Various access rights may be given by either access and/or designation keys on highways:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:designation">http://wiki.openstreetmap.org/wiki/Key:designation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:designation">https://wiki.openstreetmap.org/wiki/Key:designation</a></p>
 <p>I don't think Cycle Map supports designation as it's primarily a UK thing...</p>
 <p>For some parts of the UK one attempt to show these is: <a href="http://www.free-map.org.uk/0.6/about.html">http://www.free-map.org.uk/0.6/about.html</a></p>
 </div>
@@ -230,7 +230,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I too would love to know the meaning especially of some of the path colours. The link above takes you to a wholly inadequate map key. I've been to <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> and still can't find the answers. My main query is on the cycle map I've figured out that a dashed brown line is a footpath but paths for cycles seem to appear on the map sometimes as dashed blue lines and sometimes as dashed green lines. What does the difference in colour mean?</p>
+<p>I too would love to know the meaning especially of some of the path colours. The link above takes you to a wholly inadequate map key. I've been to <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> and still can't find the answers. My main query is on the cycle map I've figured out that a dashed brown line is a footpath but paths for cycles seem to appear on the map sometimes as dashed blue lines and sometimes as dashed green lines. What does the difference in colour mean?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -345,7 +345,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This might be what you are looking for: <a href="https://www.opencyclemap.org/docs/">https://www.opencyclemap.org/docs/</a></p>
-<p>Of which the following image is a selection: <img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-07-04_at_18.39.23_P7FxL4W.png" alt="alt text" /></p>
+<p>Of which the following image is a selection: <img src="/upfiles/Screenshot_2022-07-04_at_18.39.23_P7FxL4W.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

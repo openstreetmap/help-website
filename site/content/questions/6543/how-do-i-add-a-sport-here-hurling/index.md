@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Searching for "hurling" on the <a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=hurling">wiki</a> and <a href="http://taginfo.openstreetmap.org/search?q=hurling#keys">taginfo</a> it is evedant that the correct tags for hurling is <em>sport=gaelic_games</em> and <em>gaelic_games:hurling=yes</em>. You can help documenting this on the wiki if you want.</p>
+<p>Searching for "hurling" on the <a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=hurling">wiki</a> and <a href="http://taginfo.openstreetmap.org/search?q=hurling#keys">taginfo</a> it is evedant that the correct tags for hurling is <em>sport=gaelic_games</em> and <em>gaelic_games:hurling=yes</em>. You can help documenting this on the wiki if you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

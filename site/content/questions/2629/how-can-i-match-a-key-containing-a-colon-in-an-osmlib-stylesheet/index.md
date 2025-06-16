@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was using the <a href="http://wiki.openstreetmap.org/wiki/OSMLib">OSMLib</a> osmexport function to produce KML maps of ski areas, when I discovered a problem. The <a href="http://osmlib.rubyforge.org/osmlib-export/rdoc/files/doc/rules-files.html">oxr style file</a> doesn't like tags with a semicolon in it it seems and it won't take the tag like this either: 'piste:downhill'</p>
+<p>I was using the <a href="https://wiki.openstreetmap.org/wiki/OSMLib">OSMLib</a> osmexport function to produce KML maps of ski areas, when I discovered a problem. The <a href="http://osmlib.rubyforge.org/osmlib-export/rdoc/files/doc/rules-files.html">oxr style file</a> doesn't like tags with a semicolon in it it seems and it won't take the tag like this either: 'piste:downhill'</p>
 <p>My style file is at: <a href="http://www.skimap.org/files/kml-openskimap.oxr">http://www.skimap.org/files/kml-openskimap.oxr</a> And sample data at: <a href="http://www.skimap.org/data/28/osm/xml/2011-01-31.osm">http://www.skimap.org/data/28/osm/xml/2011-01-31.osm</a></p>
 <p>Any suggestions? Thanks!</p>
 </div>
@@ -122,7 +122,7 @@ One Answer:
       ...
     end
   end</code></pre>
-<p>This is copy paste from osmlib <a href="http://osmlib.rubyforge.org/osmlib-export/rdoc/files/doc/rules-files.html">rules documentation</a> for exports, I use <a href="http://wiki.openstreetmap.org/wiki/Osmium">Osmium</a> (also from Jochen) so I can't really tell you if you are doing stuff the right way, for the record osmium isn't at all suited for what you want to do.</p>
+<p>This is copy paste from osmlib <a href="http://osmlib.rubyforge.org/osmlib-export/rdoc/files/doc/rules-files.html">rules documentation</a> for exports, I use <a href="https://wiki.openstreetmap.org/wiki/Osmium">Osmium</a> (also from Jochen) so I can't really tell you if you are doing stuff the right way, for the record osmium isn't at all suited for what you want to do.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

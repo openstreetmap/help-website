@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have been using <a href="http://keepright.at">keep right!</a> to check consistency of my local map, and a regular warning I encounter is "multiple nodes on the same spot". For example, nodes <a href="http://www.openstreetmap.org/node/3042490495">#3042490495</a>, <a href="http://www.openstreetmap.org/node/3061858823">#3061858823</a>, and <a href="http://www.openstreetmap.org/node/3042490472">#3042490472</a> are in the same place. Is it possible to merge these using the iD editor?</p>
+<p>I have been using <a href="http://keepright.at">keep right!</a> to check consistency of my local map, and a regular warning I encounter is "multiple nodes on the same spot". For example, nodes <a href="https://www.openstreetmap.org/node/3042490495">#3042490495</a>, <a href="https://www.openstreetmap.org/node/3061858823">#3061858823</a>, and <a href="https://www.openstreetmap.org/node/3042490472">#3042490472</a> are in the same place. Is it possible to merge these using the iD editor?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-keepright" rel="tag" title="see questions tagged &#39;keepright&#39;">keepright</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span>

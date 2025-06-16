@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Overpass has such a <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Something_near_something_else">functionality</a></p>
+<p>Overpass has such a <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Something_near_something_else">functionality</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

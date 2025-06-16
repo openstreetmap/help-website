@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I am going to a hotel that has many bungalows and to which belongs a big area (they also have a big meeting place and many retail stores all inside this area and all belonging to the hotel). I can't really tag the area with tourism=hotel, because the place, the retail stores, grass and other things than wouldn't show anymore. There is a building for the reception, but it is only the reception....</p>
 <p>Is there a way to mark the whole area as a hotel, so that its name shows over the whole area and so that the area is distinguishable?</p>
-<p><a href="http://www.openstreetmap.org/#map=16/39.1256/9.5256">Here</a> is the area in question. If you edit it, you will see that there is a big area called "Tanka Village", which is the area of the hotel. What I would like to achieve is that it shows the name of the hotel in the center of the area and makes the area a different color, while still showing everything that is on the area (just like it does nearby with the Golf Club).</p>
+<p><a href="https://www.openstreetmap.org/#map=16/39.1256/9.5256">Here</a> is the area in question. If you edit it, you will see that there is a big area called "Tanka Village", which is the area of the hotel. What I would like to achieve is that it shows the name of the hotel in the center of the area and makes the area a different color, while still showing everything that is on the area (just like it does nearby with the Golf Club).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-hotels" rel="tag" title="see questions tagged &#39;hotels&#39;">hotels</span> <span class="post-tag tag-link-bungalows" rel="tag" title="see questions tagged &#39;bungalows&#39;">bungalows</span> <span class="post-tag tag-link-areas" rel="tag" title="see questions tagged &#39;areas&#39;">areas</span> <span class="post-tag tag-link-hotel" rel="tag" title="see questions tagged &#39;hotel&#39;">hotel</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>
@@ -63,7 +63,7 @@ osqa_accepted = true
 <div id="post-70527-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A duplicate of <a href="https://help.openstreetmap.org/questions/9359/what-landuse-for-a-hotelmotel">https://help.openstreetmap.org/questions/9359/what-landuse-for-a-hotelmotel</a> , where landuse=commercial has been mentioned.</p>
+<p>A duplicate of <a href="/questions/9359/what-landuse-for-a-hotelmotel">https://help.openstreetmap.org/questions/9359/what-landuse-for-a-hotelmotel</a> , where landuse=commercial has been mentioned.</p>
 </div>
 <div id="comment-70527-info" class="comment-info">
 <span class="comment-age">(26 Aug '19, 15:38)</span> <span class="comment-user userinfo">Richlv</span>
@@ -118,7 +118,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The area is correctly tagged right now as tourism=hotel. There isn't really any need for amenity=hotel, because the tourism tag is the commonly-accepted hotel tag. amenity=hotel has only been used 216 times, compared to tourism=hotel's 148590.</p>
-<p>Don't worry about having the area shown in a different colour. The most important thing is to tag the object correctly. The way an object is displayed is up to each renderer and shouldn't affect how you tag something. <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Don't tag for the renderer</a>.</p>
+<p>Don't worry about having the area shown in a different colour. The most important thing is to tag the object correctly. The way an object is displayed is up to each renderer and shouldn't affect how you tag something. <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Don't tag for the renderer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -191,7 +191,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi dominic, there have been several questions about the tagging of universities with large grounds and lots of buildings. Use these rules, or tagging scheme <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a> And change school etc into hotel, reception etc to the specific buildings.</p>
+<p>Hi dominic, there have been several questions about the tagging of universities with large grounds and lots of buildings. Use these rules, or tagging scheme <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a> And change school etc into hotel, reception etc to the specific buildings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -225,7 +225,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Hi use these scheme, <a href="https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility">https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a> last answer. Tag the area tourism=holyday_resort and all the other parts specific, I know it wont show but its on the map and the database makes it findable. Dont forget to add the adesses to the main building (reception ?) as well as the postal codes. This seems to be a similar problem. <a href="https://help.openstreetmap.org/questions/32184/tagging-hotel-room-numbers-in-separate-buildings">https://help.openstreetmap.org/questions/32184/tagging-hotel-room-numbers-in-separate-buildings</a></p>
+<p>Hi use these scheme, <a href="/questions/2969/how-to-tag-a-multi-function-facility">https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a> last answer. Tag the area tourism=holyday_resort and all the other parts specific, I know it wont show but its on the map and the database makes it findable. Dont forget to add the adesses to the main building (reception ?) as well as the postal codes. This seems to be a similar problem. <a href="/questions/32184/tagging-hotel-room-numbers-in-separate-buildings">https://help.openstreetmap.org/questions/32184/tagging-hotel-room-numbers-in-separate-buildings</a></p>
 </div>
 <div id="comment-33741-info" class="comment-info">
 <span class="comment-age">(05 Jun '14, 22:37)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -267,7 +267,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:site">Site relations</a> are also a possibility.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:site">Site relations</a> are also a possibility.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

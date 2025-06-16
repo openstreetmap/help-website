@@ -70,7 +70,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>That's the same question which you have asked before, isn't it? <a href="https://help.openstreetmap.org/questions/51101/id-editor-new-tags">https://help.openstreetmap.org/questions/51101/id-editor-new-tags</a></p>
+<p>That's the same question which you have asked before, isn't it? <a href="/questions/51101/id-editor-new-tags">https://help.openstreetmap.org/questions/51101/id-editor-new-tags</a></p>
 </div>
 <div id="comment-51329-info" class="comment-info">
 <span class="comment-age">(10 Aug '16, 12:52)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

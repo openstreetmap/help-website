@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>... or see the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">Converting_map_data_between_formats</a> ...</p>
+<p>... or see the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">Converting_map_data_between_formats</a> ...</p>
 <p>There are some hints for more (opensource?) apps dealing with OSM-KML</p>
 </div>
 <div class="answer-controls post-controls">

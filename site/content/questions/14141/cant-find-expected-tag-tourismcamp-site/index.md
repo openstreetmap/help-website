@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In <a href="http://www.openstreetmap.org/edit?lat=53.92364&amp;lon=-0.17939&amp;zoom=15">this section</a> of the map, as far as I can see, there are no tourism=camp-site tags. Yet if I view that section in the android OsmAnd app, there are three listed. Similarly, on <a href="http://www.staff.uni-oldenburg.de/m.maier/osm/index.html">this overlay</a>, created using that tag, there are three sites. What am I missing? Thanks.</p>
+<p>In <a href="https://www.openstreetmap.org/edit?lat=53.92364&amp;lon=-0.17939&amp;zoom=15">this section</a> of the map, as far as I can see, there are no tourism=camp-site tags. Yet if I view that section in the android OsmAnd app, there are three listed. Similarly, on <a href="http://www.staff.uni-oldenburg.de/m.maier/osm/index.html">this overlay</a>, created using that tag, there are three sites. What am I missing? Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-caravan_site" rel="tag" title="see questions tagged &#39;caravan_site&#39;">caravan_site</span> <span class="post-tag tag-link-tag" rel="tag" title="see questions tagged &#39;tag&#39;">tag</span> <span class="post-tag tag-link-tourism" rel="tag" title="see questions tagged &#39;tourism&#39;">tourism</span>
@@ -128,7 +128,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Note those caravan sites are mapped as areas, not nodes. This means that Potlatch 2 (the online editor) does not show them with a symbol. Instead they are shown as a shaded area. This area is a fairly pale colour, so may not be very obvious, depending on what background you are using.</p>
-<p>Where possible, it is usually best to map things as an area instead of just a node. As it shows how large the caravan site is, and the area it covers. Note that features should not be mapped as a node <em>and</em> an area, as it would suggest there are two caravan sites there (see <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>).</p>
+<p>Where possible, it is usually best to map things as an area instead of just a node. As it shows how large the caravan site is, and the area it covers. Note that features should not be mapped as a node <em>and</em> an area, as it would suggest there are two caravan sites there (see <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">One feature, one OSM element</a>).</p>
 <p>And any OSM based maps can still show an icon for caravan sites, whether they are mapped as a node or an area.</p>
 </div>
 <div class="answer-controls post-controls">

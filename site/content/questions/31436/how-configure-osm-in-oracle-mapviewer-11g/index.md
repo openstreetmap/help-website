@@ -119,7 +119,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Well, a quick web search found <a href="http://docs.oracle.com/cd/E14571_01/web.1111/e10145/vis_newfeat.htm">this</a> note about using external tile layers, <a href="http://docs.oracle.com/cd/E14571_01/web.1111/e10145/vis_omaps.htm#BACDBCBI">this</a> note about how you've got to configure your data before using an external spherical mercator tile layer (read the rest of that for more MVCustomMapTileLayer info) and and <a href="http://oraclemaps.blogspot.co.uk/2009/05/using-openstreetmap-tiles-with-oracle.html">this</a> example. If you haven't already done it, I'd check that you can display data over an external Bing or Google layer before switching to OSM tiles.</p>
-<p>The usual OSM <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage caveats</a> apply of course, but using that last example you should be able to render your own and point Oracle Apps at that.</p>
+<p>The usual OSM <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage caveats</a> apply of course, but using that last example you should be able to render your own and point Oracle Apps at that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

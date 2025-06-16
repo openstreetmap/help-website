@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This is posted on behalf of <a href="http://www.openstreetmap.org/user/WGroleau">WGroleau</a>, who cannot log into the help site them self:</p>
+<p>This is posted on behalf of <a href="https://www.openstreetmap.org/user/WGroleau">WGroleau</a>, who cannot log into the help site them self:</p>
 <p>help.openstreetmap.org says the string I paste in to log in with OpenID is "not a valid OpenID".</p>
 <p>It is the same string I pasted in to create my OSM account and to log in to the main site several times.</p>
 <p>This using the same browser session, so it shouldn't be a cookie issue.</p>

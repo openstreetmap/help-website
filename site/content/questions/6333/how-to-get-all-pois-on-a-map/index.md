@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can browse many POIs at -OpenStreetBrowser <a href="http://wiki.openstreetmap.org/wiki/OpenStreetBrowser">http://wiki.openstreetmap.org/wiki/OpenStreetBrowser</a> -<a href="http://LinkedGeoData.org">LinkedGeoData.org</a> <a href="http://browser.linkedgeodata.org/">http://browser.linkedgeodata.org/</a> -Amenity Editor <a href="http://wiki.openstreetmap.org/wiki/Amenity_Editor">http://wiki.openstreetmap.org/wiki/Amenity_Editor</a></p>
-<p>Also you can find more site at <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
+<p>You can browse many POIs at -OpenStreetBrowser <a href="https://wiki.openstreetmap.org/wiki/OpenStreetBrowser">https://wiki.openstreetmap.org/wiki/OpenStreetBrowser</a> -<a href="http://LinkedGeoData.org">LinkedGeoData.org</a> <a href="http://browser.linkedgeodata.org/">http://browser.linkedgeodata.org/</a> -Amenity Editor <a href="https://wiki.openstreetmap.org/wiki/Amenity_Editor">https://wiki.openstreetmap.org/wiki/Amenity_Editor</a></p>
+<p>Also you can find more site at <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -198,7 +198,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>It seems to be showing virtually all of them on Osmarender - when it hardly showed any when I wrote the post. Mapnik, in comparison has gone from showing most of them to none.</p>
-<p><a href="http://www.openstreetmap.org/?lat=37.88979&amp;lon=-0.94025&amp;zoom=17&amp;layers=O">http://www.openstreetmap.org/?lat=37.88979&amp;lon=-0.94025&amp;zoom=17&amp;layers=O</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=37.88979&amp;lon=-0.94025&amp;zoom=17&amp;layers=O">https://www.openstreetmap.org/?lat=37.88979&amp;lon=-0.94025&amp;zoom=17&amp;layers=O</a></p>
 </div>
 <div id="comment-6345-info" class="comment-info">
 <span class="comment-age">(16 Jul '11, 10:34)</span> <span class="comment-user userinfo">RobChafer</span>
@@ -222,7 +222,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Note the Mapnik tile rendering server is down for maintenance this weekend. So its currently serving tiles from a backup server, which may be a bit out of date. Wait a few days, then most of the POI you added should appear. See <a href="http://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">http://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011</a></p>
+<p>Note the Mapnik tile rendering server is down for maintenance this weekend. So its currently serving tiles from a backup server, which may be a bit out of date. Wait a few days, then most of the POI you added should appear. See <a href="https://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011">https://wiki.openstreetmap.org/wiki/Power_Maintenance_Q3_2011</a></p>
 </div>
 <div id="comment-6367-info" class="comment-info">
 <span class="comment-age">(16 Jul '11, 20:52)</span> <span class="comment-user userinfo">Vclaw</span>

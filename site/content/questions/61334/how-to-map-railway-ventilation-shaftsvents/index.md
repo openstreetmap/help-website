@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've tended to use <code>man_made=</code> or <code>railway=ventilation_shaft</code>, because when I last looked that was the most popular most sensible tagging, at least in the UK. See for example <a href="http://www.openstreetmap.org/node/33479108">here</a> which is rendered as a short chimney <a href="http://map.atownsend.org.uk/maps/map/map.html#zoom=19&amp;lat=53.170958&amp;lon=-1.410024">here</a>.</p>
+<p>I've tended to use <code>man_made=</code> or <code>railway=ventilation_shaft</code>, because when I last looked that was the most popular most sensible tagging, at least in the UK. See for example <a href="https://www.openstreetmap.org/node/33479108">here</a> which is rendered as a short chimney <a href="http://map.atownsend.org.uk/maps/map/map.html#zoom=19&amp;lat=53.170958&amp;lon=-1.410024">here</a>.</p>
 <p>As an aside, because as you mention the tagging for these can be a bit variable, that map style has some code that brings all these together <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style/blob/90e0733593029ab5c4d4ab6d03cc4793853ea982/style.lua#L1564">here</a>. If there's any significant usage of other options I'd be grateful if you could let me know, although "building=blah" and "man_made=chimney" will be rendered as other things elsewhere. The ones identified only by "name=XYZ" could do with a main tag adding, assuming they're genuine.</p>
 <p>Taginfo for <a href="https://taginfo.openstreetmap.org/search?q=ventilation_shaft#values"><code>ventilation_shaft</code></a>.</p>
 <p>Taginfo for <a href="https://taginfo.openstreetmap.org/search?q=air_shaft#values"><code>air_shaft</code></a>.</p>

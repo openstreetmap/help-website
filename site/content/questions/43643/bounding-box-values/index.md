@@ -62,7 +62,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>The previous question from this user may be relevant for context:</p>
-<p><a href="https://help.openstreetmap.org/questions/43620/boundingbox">https://help.openstreetmap.org/questions/43620/boundingbox</a></p>
+<p><a href="/questions/43620/boundingbox">https://help.openstreetmap.org/questions/43620/boundingbox</a></p>
 </div>
 <div id="comment-43644-info" class="comment-info">
 <span class="comment-age">(19 Jun '15, 14:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When you have one (or it seems like more) addresses and you want a lat/lon value pair as result (what is ONE single position and NOT a bounding box) you need something like a <strong>geocoding solution</strong>. All OSM based solutions for that purpose are listet at <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a> in the OSM wiki.</p>
+<p>When you have one (or it seems like more) addresses and you want a lat/lon value pair as result (what is ONE single position and NOT a bounding box) you need something like a <strong>geocoding solution</strong>. All OSM based solutions for that purpose are listet at <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search Engines</a> in the OSM wiki.</p>
 <p>You should also search for "bulk geocoding" on this FAQ site ... there are some topics already.</p>
 </div>
 <div class="answer-controls post-controls">

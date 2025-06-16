@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm doing a full planet import on an Ubuntu machine with 28GB of RAM. I've changed the postgres.conf proportionally to <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#PostgreSQL_Tuning">what is recommended on the wiki</a> and kicked off the import process with the following options:</p>
+<p>I'm doing a full planet import on an Ubuntu machine with 28GB of RAM. I've changed the postgres.conf proportionally to <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#PostgreSQL_Tuning">what is recommended on the wiki</a> and kicked off the import process with the following options:</p>
 <pre><code>sudo -u postgres ./utils/setup.php --osm-file /datadrive/downloadedfilesforimport/planet-latest.osm.bz2 --all --osm2pgsql-cache 21000 2&gt;&amp;1 | sudo tee setup.log</code></pre>
-<p>Nodes import quickly enough, but Ways are moving at less than 1/1000th the speed in terms of k/s. The process is chugging along and using lot's of memory but relatively little CPU compared to when it was importing Nodes. I know that Ways are supposed to take longer than Nodes to import but what I've read in the <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">benchmarks</a> and elsewhere, this doesn't seem right. Here's the current output:</p>
+<p>Nodes import quickly enough, but Ways are moving at less than 1/1000th the speed in terms of k/s. The process is chugging along and using lot's of memory but relatively little CPU compared to when it was importing Nodes. I know that Ways are supposed to take longer than Nodes to import but what I've read in the <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/benchmarks">benchmarks</a> and elsewhere, this doesn't seem right. Here's the current output:</p>
 <pre><code>Import
 osm2pgsql SVN version 0.89.0-dev (64bit id space)
 &#10;Using projection SRS 4326 (Latlong)
@@ -95,7 +95,7 @@ Processing: Node(3046040k 107.4k/s) Way(3566k 0.08k/s) Relation(0 0.00/s)</code>
 <div id="post-45785-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> swap is not currently configured on the machine. It's a fresh VM, and I tried to use proportional RAM settings for postgres and osm2pgsql as what were outlined in the wiki. The wiki had also pointed out that swapping should be avoided, so I didn't pursue it any further. I'm assuming I could create a swap file via the instructions here <a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04</a> but I'd need some guidance on how large to make it and how to tweak the kernel. I can also bump the machine up to 56GB during the import if needed. Also worth noting that I intend to drop the resources on the machine significantly after the import is finished.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> swap is not currently configured on the machine. It's a fresh VM, and I tried to use proportional RAM settings for postgres and osm2pgsql as what were outlined in the wiki. The wiki had also pointed out that swapping should be avoided, so I didn't pursue it any further. I'm assuming I could create a swap file via the instructions here <a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04</a> but I'd need some guidance on how large to make it and how to tweak the kernel. I can also bump the machine up to 56GB during the import if needed. Also worth noting that I intend to drop the resources on the machine significantly after the import is finished.</p>
 </div>
 <div id="comment-45785-info" class="comment-info">
 <span class="comment-age">(07 Oct '15, 16:26)</span> <span class="comment-user userinfo">joelmdev</span>

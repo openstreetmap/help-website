@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tiles offered by the OpenStreetMap tile servers are in the spherical mercator projection. As described in the <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#lon.2Flat_to_tile_numbers">wiki</a> you can convert from latitude to longitude using the following formulae:</p>
+<p>The tiles offered by the OpenStreetMap tile servers are in the spherical mercator projection. As described in the <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#lon.2Flat_to_tile_numbers">wiki</a> you can convert from latitude to longitude using the following formulae:</p>
 <pre><code>n = 2 ^ zoom
 xtile = ((lon_deg + 180) / 360) * n
 ytile = (1 - (log(tan(lat_rad) + sec(lat_rad)) / pi)) / 2 * n</code></pre>

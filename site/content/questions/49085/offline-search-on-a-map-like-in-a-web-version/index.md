@@ -140,7 +140,7 @@ One Answer:
 <div id="post-49114-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> for more frameworks / alternatives.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> for more frameworks / alternatives.</p>
 </div>
 <div id="comment-49114-info" class="comment-info">
 <span class="comment-age">(08 Apr '16, 18:14)</span> <span class="comment-user userinfo">stephan75</span>

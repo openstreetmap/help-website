@@ -107,8 +107,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Our <a href="http://wiki.openstreetmap.org/wiki/Main_Page">Wiki</a> is an excellent resource for you to get to grips with OpenStreetMap. Read its <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a>. Subscribe to the <a href="http://lists.openstreetmap.org/listinfo/talk-cl">Chile mailing list</a> to get in touch with other mappers in your country. If any are nearby, it is often great to meet them and get a first-hand introduction to mapping.</p>
-<p>The Wiki also has a good <a href="http://wiki.openstreetmap.org/wiki/ES:Main_Page">Spanish entry page</a>, and the Chilean community run their own <a href="http://blog.openstreetmap.cl/">blog (also in Spanish)</a>.</p>
+<p>Our <a href="https://wiki.openstreetmap.org/wiki/Main_Page">Wiki</a> is an excellent resource for you to get to grips with OpenStreetMap. Read its <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a>. Subscribe to the <a href="http://lists.openstreetmap.org/listinfo/talk-cl">Chile mailing list</a> to get in touch with other mappers in your country. If any are nearby, it is often great to meet them and get a first-hand introduction to mapping.</p>
+<p>The Wiki also has a good <a href="https://wiki.openstreetmap.org/wiki/ES:Main_Page">Spanish entry page</a>, and the Chilean community run their own <a href="http://blog.openstreetmap.cl/">blog (also in Spanish)</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Becoming a mapper is as easy as <a href="https://www.openstreetmap.org/user/new">creating a new user</a> and <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">submitting data</a> via one of the editors.</p>
+<p>Becoming a mapper is as easy as <a href="https://www.openstreetmap.org/user/new">creating a new user</a> and <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">submitting data</a> via one of the editors.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

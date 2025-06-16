@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>My language preference in my browser is set to English, but OpenStreetMap keeps ignoring it.</p>
 <p>Looking at this map, can an average american tell where Egypt is?</p>
 <p>Of course not. Because an average human being doesn't know all alphabets of the world. So what should OSM do? It should display the map text in the language the internet user understands.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20190204_015823.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20190204_015823.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-language" rel="tag" title="see questions tagged &#39;language&#39;">language</span>

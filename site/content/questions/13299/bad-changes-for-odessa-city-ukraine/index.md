@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Seems like the <a href="http://www.openstreetmap.org/browse/node/26150437">place node</a> still contains the <em>name:en=Odesa</em> tag, nothing wrong about the data. However the <a href="http://www.openstreetmap.org/browse/node/26150437/history">history</a> shows it has been deleted and restored later, might this be the source of the problem? I don't know if your query is correct, though.</p>
+<p>Seems like the <a href="https://www.openstreetmap.org/browse/node/26150437">place node</a> still contains the <em>name:en=Odesa</em> tag, nothing wrong about the data. However the <a href="https://www.openstreetmap.org/browse/node/26150437/history">history</a> shows it has been deleted and restored later, might this be the source of the problem? I don't know if your query is correct, though.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,7 +162,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>You mean <a href="http://www.openstreetmap.org/browse/relation/1413934/history">this relation</a>? Before the deletion of the Odessa place node it has been a member of this relation with role <em>admin_centre</em>, now it isn't part of the relation any more. You might want to add it again.</p>
+<p>You mean <a href="https://www.openstreetmap.org/browse/relation/1413934/history">this relation</a>? Before the deletion of the Odessa place node it has been a member of this relation with role <em>admin_centre</em>, now it isn't part of the relation any more. You might want to add it again.</p>
 </div>
 <div id="comment-13304-info" class="comment-info">
 <span class="comment-age">(07 Jun '12, 17:02)</span> <span class="comment-user userinfo">scai ♦</span>

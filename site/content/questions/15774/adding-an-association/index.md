@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it exists in a fixed location then it would make sense to me. It's probably worth looking through <a href="http://wiki.openstreetmap.org/wiki/Taginfo">taginfo</a> to see what other people have already mapped. A quick search finds a few <a href="http://taginfo.openstreetmap.org/search?q=social_club#values">social clubs</a> but very little tagged with <a href="http://taginfo.openstreetmap.org/keys/association#values">association</a>. Depending on the organisation that you're mapping you may want to do other taginfo searches.</p>
+<p>If it exists in a fixed location then it would make sense to me. It's probably worth looking through <a href="https://wiki.openstreetmap.org/wiki/Taginfo">taginfo</a> to see what other people have already mapped. A quick search finds a few <a href="http://taginfo.openstreetmap.org/search?q=social_club#values">social clubs</a> but very little tagged with <a href="http://taginfo.openstreetmap.org/keys/association#values">association</a>. Depending on the organisation that you're mapping you may want to do other taginfo searches.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

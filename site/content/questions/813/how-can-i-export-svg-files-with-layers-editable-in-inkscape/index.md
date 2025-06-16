@@ -116,7 +116,7 @@ osqa_accepted = false
 <li>Export it to SVG using either the menu option or by the <a href="http://maperitive.net/docs/manual/Commands/ExportSvg.html"><code>export-svg</code> command</a></li>
 </ol>
 <p>The exported SVG groups map features into SVG/Inkscape layers, so you'll be able to edit or hide them separately.</p>
-<p>Here's how it looks in Adobe Illustrator (Inkscape shows it pretty much the same): <img src="http://wiki.openstreetmap.org/w/images/7/7e/MaperitiveSvgIllustrator.png" alt="alt text" /></p>
+<p>Here's how it looks in Adobe Illustrator (Inkscape shows it pretty much the same): <img src="https://wiki.openstreetmap.org/w/images/7/7e/MaperitiveSvgIllustrator.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a beginners guide in the wiki, see <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> . Now, OSM is a community project. You are part of that community, so edit away :). Feel free to improve the beginners guide, wiki pages, etc.</p>
-<p>What I found incredibly useful was the "How to map a"-Wiki page at <a href="http://wiki.openstreetmap.org/wiki/Howto_Map_A">http://wiki.openstreetmap.org/wiki/Howto_Map_A</a> .</p>
+<p>There is a beginners guide in the wiki, see <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> . Now, OSM is a community project. You are part of that community, so edit away :). Feel free to improve the beginners guide, wiki pages, etc.</p>
+<p>What I found incredibly useful was the "How to map a"-Wiki page at <a href="https://wiki.openstreetmap.org/wiki/Howto_Map_A">https://wiki.openstreetmap.org/wiki/Howto_Map_A</a> .</p>
 <p>re "corrections behind one's back": If there are obvious errors, why should I contact the original contributor and say "You misspelled 'house', I corrected it!"? It at least doubles my effort. If there are controversial edits, then contact each other, but my Wikipedia experience tells me that most corrections are noncontroversial.</p>
 <p>You don't own your contributions, and should be happy if someone improves your data. You contributed a baseline, someone improved on it. That is just how it should work!</p>
 </div>

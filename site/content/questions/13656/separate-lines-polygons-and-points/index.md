@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not an osmosis expert but checking quickly the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage">detailed usage on the wiki</a> says that you can filter ways on a tag list ("--tag-filter") with the option 'accept-ways'.</p>
+<p>I'm not an osmosis expert but checking quickly the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage">detailed usage on the wiki</a> says that you can filter ways on a tag list ("--tag-filter") with the option 'accept-ways'.</p>
 <p>Example from the wiki:</p>
 <pre><code>osmosis \
   --read-xml input.osm \
@@ -158,7 +158,7 @@ One Answer:
 <div id="post-45771-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3876/stuart576">@stuart576</a>, I'm having trouble with this. Can you update with the complete solution that worked for you?</p>
+<p><a href="https://help.openstreetmap.org/users/3876/stuart576">@stuart576</a>, I'm having trouble with this. Can you update with the complete solution that worked for you?</p>
 </div>
 <div id="comment-45771-info" class="comment-info">
 <span class="comment-age">(07 Oct '15, 02:25)</span> <span class="comment-user userinfo">mkirk</span>

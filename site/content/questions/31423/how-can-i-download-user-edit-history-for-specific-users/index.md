@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can extract this information from the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/full">Full History Planet dump</a>, but it will be a time- and resource-intensive exercise. Even then these dumps do not contain edits prior to October 2007 or redacted objects.</p>
+<p>You can extract this information from the <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/full">Full History Planet dump</a>, but it will be a time- and resource-intensive exercise. Even then these dumps do not contain edits prior to October 2007 or redacted objects.</p>
 <p>You should also be aware that some aspects of how people edit OSM can depend on the editor they're using.</p>
 <p>It may be worth investigating the various user-related tools <a href="http://neis-one.org/">Pascal Neis</a> has developed (for example) before committing time and energy to building your own.</p>
 </div>

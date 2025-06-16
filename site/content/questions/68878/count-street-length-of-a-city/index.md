@@ -113,7 +113,7 @@ osqa_accepted = false
 <p>One way of getting this done is:</p>
 <ol>
 <li>Import OSM data for a rectangle around your city into a PostGIS database with osm2pgsql. This will not only give you the roads but also the city boundary if mapped in OSM.</li>
-<li>Use PostGIS to sum up the length of geometries inside your area of interest ("clipping polygon") as discussed in <a href="https://help.openstreetmap.org/questions/49200/actual-road-length-of-exported-map">"Actual road length of exported map"</a></li>
+<li>Use PostGIS to sum up the length of geometries inside your area of interest ("clipping polygon") as discussed in <a href="/questions/49200/actual-road-length-of-exported-map">"Actual road length of exported map"</a></li>
 </ol>
 <p>QGIS will also allow you to filter out all roads and clip them at the polygon boundary but it is a more cumbersome and manual process.</p>
 </div>

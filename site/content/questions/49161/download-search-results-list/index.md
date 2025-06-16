@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>The search engine, Nominatim, has a JSON interface. Try</p>
 <p><a href="https://nominatim.openstreetmap.org/search?q=%C5%BCabka%20krak%C3%B3w&amp;format=jsonv2">https://nominatim.openstreetmap.org/search?q=%C5%BCabka%20krak%C3%B3w&amp;format=jsonv2</a></p>
-<p>to perform the same search and download results in JSON. Note that if you want to make more such queries than permitted by the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Acceptable Use Policy</a> you should set up your own Nominatim server instead of using ours; details are available <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">on the wiki.</a></p>
+<p>to perform the same search and download results in JSON. Note that if you want to make more such queries than permitted by the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Acceptable Use Policy</a> you should set up your own Nominatim server instead of using ours; details are available <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">on the wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

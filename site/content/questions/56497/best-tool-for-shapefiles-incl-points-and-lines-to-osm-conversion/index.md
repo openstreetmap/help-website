@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi folks, I have a self-tailored line shapefile from Mapzen and a self-generated point shapefile, which match perfectly after testing in QGIS. Now, I would like to convert both shapefiles into an OSM file, either .pbf or .xml</p>
-<p>I found the <a href="http://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile">link</a>, but got confused which tool is better for such a conversion.</p>
+<p>I found the <a href="https://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile">link</a>, but got confused which tool is better for such a conversion.</p>
 <p>P.S.: I tried on Merkaartor on Windows, and all versions (0.18.2 and 0.18.3) cannot load my files.</p>
 <p>Thank you very much for your time.</p>
 </div>
@@ -122,7 +122,7 @@ One Answer:
 <p>I can tell you the process for JOSM in Windows. Download and install JOSM. Open it. Go to Edit --&gt; Preference --&gt; Plugins Search for the "OpenData" plugin. Check the box beside it and press ok to download and install it. Drag and drop the shape file into JOSM and press Ctrl + S to save it as an OSM file. This OSM file itself is a XML file. Just change the .osm to .xml and you are good to go.</p>
 <p>Check the below links for more:</p>
 <p><a href="https://gis.stackexchange.com/questions/177371/how-to-convert-osm-file-into-xml">https://gis.stackexchange.com/questions/177371/how-to-convert-osm-file-into-xml</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_XML">http://wiki.openstreetmap.org/wiki/OSM_XML</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_XML">https://wiki.openstreetmap.org/wiki/OSM_XML</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

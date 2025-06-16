@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-27765-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#map=19/48.78568/1.98034">http://www.openstreetmap.org/#map=19/48.78568/1.98034</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/48.78568/1.98034">https://www.openstreetmap.org/#map=19/48.78568/1.98034</a></p>
 <p>No it appears but partially. The new road has not been drawn to the avenue on the north, and just the number 8 appears. It should have 2, 4 and 6 too.</p>
 <p>Maybe there an amount of time to actually save the data I added</p>
 </div>
@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I see "2, 2 and 6", so I guess it was just the usual "things don't show up at all zoom levels immediately" issue. There's a detailed explanation of why things show up when they do <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>, and a search through previous help questions will show previous answers for the same issue.</p>
+<p>I see "2, 2 and 6", so I guess it was just the usual "things don't show up at all zoom levels immediately" issue. There's a detailed explanation of why things show up when they do <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>, and a search through previous help questions will show previous answers for the same issue.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

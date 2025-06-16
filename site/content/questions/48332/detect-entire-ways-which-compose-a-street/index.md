@@ -150,7 +150,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Aha, good point. Note that some streets change type, so this heuristic still won't be 100%. See this - the street "Kochanova" starts from south as <code>residential</code>, continues north as <code>steps</code>, and then again as <code>residential</code>: <a href="http://www.openstreetmap.org/way/32024324">http://www.openstreetmap.org/way/32024324</a> (just an example I found by casually glancing at the map; probably a more common occurence would be <code>residential</code>-<code>tertiary</code>-<code>secondary</code>)</p>
+<p>Aha, good point. Note that some streets change type, so this heuristic still won't be 100%. See this - the street "Kochanova" starts from south as <code>residential</code>, continues north as <code>steps</code>, and then again as <code>residential</code>: <a href="https://www.openstreetmap.org/way/32024324">https://www.openstreetmap.org/way/32024324</a> (just an example I found by casually glancing at the map; probably a more common occurence would be <code>residential</code>-<code>tertiary</code>-<code>secondary</code>)</p>
 </div>
 <div id="comment-48347-info" class="comment-info">
 <span class="comment-age">(25 Feb '16, 09:46)</span> <span class="comment-user userinfo">Piskvor</span>

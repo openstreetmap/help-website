@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using GPS traces for an application"
-description = '''Hi, I&#x27;m a french student and I work with 6 other students on a project which aims at producing an application (for Android). This application would be based on OSMTracker (http://wiki.openstreetmap.org/wiki/OSMtracker) and would permit to upload GPS traces and to retrieve them later, considering the...'''
+description = '''Hi, I&#x27;m a french student and I work with 6 other students on a project which aims at producing an application (for Android). This application would be based on OSMTracker (https://wiki.openstreetmap.org/wiki/OSMtracker) and would permit to upload GPS traces and to retrieve them later, considering the...'''
 date = "2013-05-14T13:01:00Z"
 lastmod = "2015-02-18T21:02:00Z"
 weight = 22420
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I'm a french student and I work with 6 other students on a project which aims at producing an application (for Android).</p>
-<p>This application would be based on OSMTracker (<a href="http://wiki.openstreetmap.org/wiki/OSMtracker">http://wiki.openstreetmap.org/wiki/OSMtracker</a>) and would permit to upload GPS traces and to retrieve them later, considering the differents tags associated to these traces. We earlier saw that some bots are allowed to upload traces on openstreetmap.org however I didn't find how to get an authorization for such activities. Moreover, I searched on the wiki but I didn't find any information about how we can retrieve these traces once they're on OSM servers.</p>
+<p>This application would be based on OSMTracker (<a href="https://wiki.openstreetmap.org/wiki/OSMtracker">https://wiki.openstreetmap.org/wiki/OSMtracker</a>) and would permit to upload GPS traces and to retrieve them later, considering the differents tags associated to these traces. We earlier saw that some bots are allowed to upload traces on openstreetmap.org however I didn't find how to get an authorization for such activities. Moreover, I searched on the wiki but I didn't find any information about how we can retrieve these traces once they're on OSM servers.</p>
 <p>That's why I'm asking you if this kind of activities is possible or else who I should contact to get more informations about it.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>re: retrieving tracks: apparently, you need the GPS trace ID to download them through the API, see <a href="http://wiki.openstreetmap.org/wiki/Api06#GPS_traces">http://wiki.openstreetmap.org/wiki/Api06#GPS_traces</a> .</p>
+<p>re: retrieving tracks: apparently, you need the GPS trace ID to download them through the API, see <a href="https://wiki.openstreetmap.org/wiki/Api06#GPS_traces">https://wiki.openstreetmap.org/wiki/Api06#GPS_traces</a> .</p>
 <pre><code>GET /api/0.6/gpx/[id]/details
 GET /api/0.6/gpx/[id]/data</code></pre>
 <p>I am not aware of a method to search for GPS traces based on tags that is exposed through API v0.6 or XAPI.</p>
@@ -159,7 +159,7 @@ GET /api/0.6/gpx/[id]/data</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Massive import of tracks is under the same regulations as data imports, see <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">this article</a>. Be careful, because smartphone tracks usually are low quality ones, pretty often they are almost unusable.</p>
+<p>Massive import of tracks is under the same regulations as data imports, see <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">this article</a>. Be careful, because smartphone tracks usually are low quality ones, pretty often they are almost unusable.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

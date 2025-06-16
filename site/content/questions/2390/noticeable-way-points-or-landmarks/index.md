@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwindmill">Windmills</a> have their own tag, as do <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">towers</a> and <a href="http://wiki.openstreetmap.org/wiki/Building">buildings</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwindmill">Windmills</a> have their own tag, as do <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">towers</a> and <a href="https://wiki.openstreetmap.org/wiki/Building">buildings</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -125,7 +125,7 @@ osqa_accepted = true
 6
 </div>
 <div class="comment-text">
-<p>And it's possible to add a <a href="http://wiki.openstreetmap.org/wiki/Key:height">height</a> tag to all these objects.</p>
+<p>And it's possible to add a <a href="https://wiki.openstreetmap.org/wiki/Key:height">height</a> tag to all these objects.</p>
 </div>
 <div id="comment-2404-info" class="comment-info">
 <span class="comment-age">(24 Jan '11, 01:50)</span> <span class="comment-user userinfo">Tordanik</span>

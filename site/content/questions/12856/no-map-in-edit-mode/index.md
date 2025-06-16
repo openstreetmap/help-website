@@ -102,7 +102,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Looked at the related discussion, and indeed, I get a map with PL2 in OpenMapQuest. Loading speed is variable, but the area I'm looking at has lots of little streets. Maybe that's slowing down the loading.</p>
-<p><span>@EdLoach</span>: I'm looking at <a href="http://www.openstreetmap.org/?lat=51.19369&amp;lon=5.04247&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=51.19369&amp;lon=5.04247&amp;zoom=15&amp;layers=M</a></p>
+<p><span>@EdLoach</span>: I'm looking at <a href="https://www.openstreetmap.org/?lat=51.19369&amp;lon=5.04247&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=51.19369&amp;lon=5.04247&amp;zoom=15&amp;layers=M</a></p>
 <p>I'm a newbie here. When I edit things in OMQ, is it having the same effect as editing in OSM ? In other words, are we editing the same instance of the map ?</p>
 </div>
 <div id="comment-12878-info" class="comment-info">
@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Problem is still the same. See attached screenshot.<img src="http://help.openstreetmap.org/upfiles/nomap.jpg" alt="alt text" /></p>
+<p>Problem is still the same. See attached screenshot.<img src="/upfiles/nomap.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

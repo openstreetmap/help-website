@@ -215,7 +215,7 @@ This answer is marked "community wiki".
 <div id="post-83718-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/21485/vgivanovic"></a><a href="https://help.openstreetmap.org/users/21485/vgivanovic">@vgivanovic</a>: I wrote about that just a few days ago, see answer here: <a href="https://help.openstreetmap.org/questions/83654/french-cities-names-on-maps/83659">https://help.openstreetmap.org/questions/83654/french-cities-names-on-maps/83659</a></p>
+<p><a href="https://help.openstreetmap.org/users/21485/vgivanovic"></a><a href="https://help.openstreetmap.org/users/21485/vgivanovic">@vgivanovic</a>: I wrote about that just a few days ago, see answer here: <a href="/questions/83654/french-cities-names-on-maps/83659">https://help.openstreetmap.org/questions/83654/french-cities-names-on-maps/83659</a></p>
 <p>If you need latin-script world-maps, have a look at <a href="https://wiki.openstreetmap.org/wiki/osMap">https://wiki.openstreetmap.org/wiki/osMap</a> where you'll find ten different versions (Danish, Dutch, Czech, English, French, German, Italian, Polish, Portuguese and Spanish).</p>
 </div>
 <div id="comment-83718-info" class="comment-info">

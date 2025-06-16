@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a problem to find the hamlet Silver Gate (<a href="http://www.openstreetmap.org/#map=16/45.0069/-109.9896">45.006884, -109.9896288</a>) in Montana, US in the GPS Navigation &amp; Maps app. On the OSM web page it is there since 2008. I can't find the village in Montana or Wyoming. If I press on the US 212 High Way in Silver Gate I get the message the place is in Wyoming. But this is not true, the road and the village is in Montana. What do I have to change that the GPS Navigation &amp; Maps app can find the hamlet?</p>
+<p>I have a problem to find the hamlet Silver Gate (<a href="https://www.openstreetmap.org/#map=16/45.0069/-109.9896">45.006884, -109.9896288</a>) in Montana, US in the GPS Navigation &amp; Maps app. On the OSM web page it is there since 2008. I can't find the village in Montana or Wyoming. If I press on the US 212 High Way in Silver Gate I get the message the place is in Wyoming. But this is not true, the road and the village is in Montana. What do I have to change that the GPS Navigation &amp; Maps app can find the hamlet?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-maps" rel="tag" title="see questions tagged &#39;maps&#39;">maps</span> <span class="post-tag tag-link-app" rel="tag" title="see questions tagged &#39;app&#39;">app</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span> <span class="post-tag tag-link-navigation" rel="tag" title="see questions tagged &#39;navigation&#39;">navigation</span> <span class="post-tag tag-link-hamlet" rel="tag" title="see questions tagged &#39;hamlet&#39;">hamlet</span>

@@ -110,8 +110,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><strong><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dspeed_camera">highway=speed_camera</a></strong> is the tag you would use. See that link for the tag documentation on the wiki.</p>
-<p>This tag is not within the "presets" of Potlatch 2, so you have to add it manually on the advanced tab yes (<a href="https://help.openstreetmap.org/questions/21913/unknown-tags-in-potlatch-2">'unknown' tags in potlatch 2</a>)</p>
+<p><strong><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dspeed_camera">highway=speed_camera</a></strong> is the tag you would use. See that link for the tag documentation on the wiki.</p>
+<p>This tag is not within the "presets" of Potlatch 2, so you have to add it manually on the advanced tab yes (<a href="/questions/21913/unknown-tags-in-potlatch-2">'unknown' tags in potlatch 2</a>)</p>
 <p>It's also not an icon showing up within the editor, or the 'standard' map style.</p>
 <p>It may be worth adding it to the data anyway. I know some users put this data to use, at least on their custom generated garmin maps. Oh and there is an <a href="http://frink.bplaced.de/blitzer/">online map of speed cameras here</a> (thanks escada)</p>
 <p>Speed camera mapping raises some moral questions actually. Are we helping people break the speed limit by mapping such things? It may even present legal problems. In some countries you're not supposed to have maps or satnavs which know where speed cameras are. I'm not sure if that's the reason we don't include it on the standard map style, but we do refrain from showing lots of POI types as icons, just because there are <em>many</em> POI types.</p>
@@ -190,7 +190,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi ad enforcement - maxspeed that will do, by hand manually yes. And theres no fixed picture for it yet. To clarify make a node in P2 (green dot} and ad in the advanced menu these in keys and values enforcement - maxspeed name - myway maxspeed – 50 highway – speed_camera type – enforcement note – place Take also a look here <a href="http://www.openstreetmap.org/#map=18/52.35556/6.64247">http://www.openstreetmap.org/#map=18/52.35556/6.64247</a></p>
+<p>Hi ad enforcement - maxspeed that will do, by hand manually yes. And theres no fixed picture for it yet. To clarify make a node in P2 (green dot} and ad in the advanced menu these in keys and values enforcement - maxspeed name - myway maxspeed – 50 highway – speed_camera type – enforcement note – place Take also a look here <a href="https://www.openstreetmap.org/#map=18/52.35556/6.64247">https://www.openstreetmap.org/#map=18/52.35556/6.64247</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -224,7 +224,7 @@ osqa_accepted = true
 <div id="post-25284-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>To avoid misunderstandings please look here <a href="http://wiki.openstreetmap.org/wiki/Enforcement">http://wiki.openstreetmap.org/wiki/Enforcement</a> for these group of tags and values.</p>
+<p>To avoid misunderstandings please look here <a href="https://wiki.openstreetmap.org/wiki/Enforcement">https://wiki.openstreetmap.org/wiki/Enforcement</a> for these group of tags and values.</p>
 </div>
 <div id="comment-25284-info" class="comment-info">
 <span class="comment-age">(13 Aug '13, 00:11)</span> <span class="comment-user userinfo">Hendrikklaas</span>

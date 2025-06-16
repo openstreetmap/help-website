@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/_9889a97ed5c0ed9e883afcb1690e6f37.jpg" alt="screenshot" /></p>
+<p><img src="/upfiles/_9889a97ed5c0ed9e883afcb1690e6f37.jpg" alt="screenshot" /></p>
 <p>его IP: 178.134.171.70</p>
 <p>напишите пожалуйста</p>
 <p>ttt-rex@ya.ru</p>

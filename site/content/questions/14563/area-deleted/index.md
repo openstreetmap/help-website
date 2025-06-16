@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Area deleted"
-description = '''It&#x27;s the first time I use Q&amp;amp;A so I do not know if I have to make a new question.  At area http://www.openstreetmap.org/?lat=40.5976&amp;amp;lon=22.97644&amp;amp;zoom=16&amp;amp;layers=M there were a lot of roads that have been entire deleted. I tried to see history but I couldn&#x27;t figure out anything. Can so...'''
+description = '''It&#x27;s the first time I use Q&amp;amp;A so I do not know if I have to make a new question.  At area https://www.openstreetmap.org/?lat=40.5976&amp;amp;lon=22.97644&amp;amp;zoom=16&amp;amp;layers=M there were a lot of roads that have been entire deleted. I tried to see history but I couldn&#x27;t figure out anything. Can so...'''
 date = "2012-07-25T07:57:00Z"
 lastmod = "2012-07-25T08:03:00Z"
 weight = 14563
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It's the first time I use Q&amp;A so I do not know if I have to make a new question. At area <a href="http://www.openstreetmap.org/?lat=40.5976&amp;lon=22.97644&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=40.5976&amp;lon=22.97644&amp;zoom=16&amp;layers=M</a> there were a lot of roads that have been entire deleted. I tried to see history but I couldn't figure out anything. Can someone restore the data?</p>
+<p>It's the first time I use Q&amp;A so I do not know if I have to make a new question. At area <a href="https://www.openstreetmap.org/?lat=40.5976&amp;lon=22.97644&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=40.5976&amp;lon=22.97644&amp;zoom=16&amp;layers=M</a> there were a lot of roads that have been entire deleted. I tried to see history but I couldn't figure out anything. Can someone restore the data?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-redaction" rel="tag" title="see questions tagged &#39;redaction&#39;">redaction</span>

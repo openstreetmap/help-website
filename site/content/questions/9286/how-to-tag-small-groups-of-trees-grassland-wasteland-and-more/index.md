@@ -118,7 +118,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use <a href="http://wiki.openstreetmap.org/wiki/Tree">natural=tree</a> to tag individual trees. Usefull when trees are isolated (in a city for example) or stand out for some other reason (very big or old or famous).</p>
+<p>Use <a href="https://wiki.openstreetmap.org/wiki/Tree">natural=tree</a> to tag individual trees. Usefull when trees are isolated (in a city for example) or stand out for some other reason (very big or old or famous).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,10 +168,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Land uses tend to handled by "landuse"; see <a href="http://taginfo.openstreetmap.org/keys/landuse#values">taginfo</a> for details about what values people have used. Up the road from you someone's added some "<a href="http://wiki.openstreetmap.org/wiki/Tag:landuse=farm?uselang=en">landuse=farm</a>" around Denstone, for example.</p>
-<p>Wasteland's a bit more tricky; depending on what it's actually used for it might be a <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse=recreation_ground?uselang=en">recreation ground</a>, <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse=brownfield?uselang=en">brownfield</a>, or <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse=construction?uselang=en">construction</a></p>
-<p>By "crossing" do you mean a <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dlevel_crossing">railway level crossing</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dcrossing">pedestrian crossings</a>?</p>
-<p>Re outbuildings, there are a number of suggestions <a href="http://wiki.openstreetmap.org/wiki/Building">here</a>.</p>
+<p>Land uses tend to handled by "landuse"; see <a href="http://taginfo.openstreetmap.org/keys/landuse#values">taginfo</a> for details about what values people have used. Up the road from you someone's added some "<a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=farm?uselang=en">landuse=farm</a>" around Denstone, for example.</p>
+<p>Wasteland's a bit more tricky; depending on what it's actually used for it might be a <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=recreation_ground?uselang=en">recreation ground</a>, <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=brownfield?uselang=en">brownfield</a>, or <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=construction?uselang=en">construction</a></p>
+<p>By "crossing" do you mean a <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dlevel_crossing">railway level crossing</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dcrossing">pedestrian crossings</a>?</p>
+<p>Re outbuildings, there are a number of suggestions <a href="https://wiki.openstreetmap.org/wiki/Building">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -117,9 +117,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can get to an object's "browse page" fairly easily by doing the following:</p>
-<p>Zoom in on the area that you're interested in, for example <a href="http://www.openstreetmap.org/#map=19/52.08726/1.45059">http://www.openstreetmap.org/#map=19/52.08726/1.45059</a></p>
+<p>Zoom in on the area that you're interested in, for example <a href="https://www.openstreetmap.org/#map=19/52.08726/1.45059">https://www.openstreetmap.org/#map=19/52.08726/1.45059</a></p>
 <p>Select "Map Data" from the layers menu</p>
-<p>Click on the obect that you're interested in. The URL at the top will change to for example <a href="http://www.openstreetmap.org/node/2185638204">http://www.openstreetmap.org/node/2185638204</a></p>
+<p>Click on the obect that you're interested in. The URL at the top will change to for example <a href="https://www.openstreetmap.org/node/2185638204">https://www.openstreetmap.org/node/2185638204</a></p>
 <p>You can then look at other objects, or untick "Map Data" to go back to a normal map.</p>
 </div>
 <div class="answer-controls post-controls">

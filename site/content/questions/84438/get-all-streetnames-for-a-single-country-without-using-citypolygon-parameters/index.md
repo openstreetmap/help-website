@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I want to get all streetnames, the neighborhood (suburb) of that street, zipcode, and all housenumbers of the street with their individual latitude/longitude for the COUNTRY of Germany.</p>
 <p>For example, the details from this node: <a href="https://www.openstreetmap.org/node/3081665937">https://www.openstreetmap.org/node/3081665937</a></p>
-<p>I found this: <a href="https://help.openstreetmap.org/questions/23488/export-streets-names">https://help.openstreetmap.org/questions/23488/export-streets-names</a> and <a href="https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list">https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list</a></p>
+<p>I found this: <a href="/questions/23488/export-streets-names">https://help.openstreetmap.org/questions/23488/export-streets-names</a> and <a href="/questions/9816/the-best-way-to-extract-street-list">https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list</a></p>
 <p>I tried following what's here: <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">https://wiki.openstreetmap.org/wiki/Osmconvert</a> I downloaded osmconvert.exe already.</p>
 <p>But the existing answers don't seem to provide a clear cut solution for what I think is a common request. I see other people struggling too, but then they don't post what worked for them if it even did.</p>
 <p>I don't want to download per city (takes a lot of work) or use polygons (lot of work and error prone) for a specific area. I just want the above details for street nodes in a specific country.</p>

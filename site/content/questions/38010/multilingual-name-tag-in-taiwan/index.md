@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Multilingual name tag in Taiwan"
-description = '''Hi As I edit features in Taiwan, I noticed many major roadways/towns are named like this name: Chinese (English) name-zh: Chinese name-en: English Example: http://www.openstreetmap.org/way/111812460 (Let&#x27;s call this scheme 1) As a result, the mapnik render on www.openstreetmap.org shows &quot;Chinese (En...'''
+description = '''Hi As I edit features in Taiwan, I noticed many major roadways/towns are named like this name: Chinese (English) name-zh: Chinese name-en: English Example: https://www.openstreetmap.org/way/111812460 (Let&#x27;s call this scheme 1) As a result, the mapnik render on www.openstreetmap.org shows &quot;Chinese (En...'''
 date = "2014-10-27T17:11:00Z"
 lastmod = "2015-09-14T09:37:00Z"
 weight = 38010
@@ -44,9 +44,9 @@ osqa_accepted = false
 <p>name: Chinese (English)<br />
 name-zh: Chinese<br />
 name-en: English</p>
-<p>Example: <a href="http://www.openstreetmap.org/way/111812460">http://www.openstreetmap.org/way/111812460</a><br />
+<p>Example: <a href="https://www.openstreetmap.org/way/111812460">https://www.openstreetmap.org/way/111812460</a><br />
 (Let's call this scheme 1)</p>
-<p>As a result, the mapnik render on www.openstreetmap.org shows "Chinese (English)", perhaps... to maximize accessibility, and I appreciate that. But the <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names#Taiwan">wiki guideline</a> clearly states</p>
+<p>As a result, the mapnik render on www.openstreetmap.org shows "Chinese (English)", perhaps... to maximize accessibility, and I appreciate that. But the <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Taiwan">wiki guideline</a> clearly states</p>
 <p>name=Chinese<br />
 name:zh=Chinese<br />
 name:en=English<br />
@@ -136,7 +136,7 @@ name:en=English<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Taiwan/Taiwan_tagging#Naming_scheme">WikiProject Taiwan tagging page</a> recommends scheme 1.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Taiwan/Taiwan_tagging#Naming_scheme">WikiProject Taiwan tagging page</a> recommends scheme 1.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

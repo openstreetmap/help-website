@@ -143,7 +143,7 @@ osqa_accepted = false
 <div id="post-50355-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you don't have money, I've also seen people using HOT tiles, as they are a bit softer in tone. See <a href="http://www.openstreetmap.org/#map=9/50.9117/4.3011&amp;layers=H">http://www.openstreetmap.org/#map=9/50.9117/4.3011&amp;layers=H</a></p>
+<p>If you don't have money, I've also seen people using HOT tiles, as they are a bit softer in tone. See <a href="https://www.openstreetmap.org/#map=9/50.9117/4.3011&amp;layers=H">https://www.openstreetmap.org/#map=9/50.9117/4.3011&amp;layers=H</a></p>
 </div>
 <div id="comment-50355-info" class="comment-info">
 <span class="comment-age">(21 Jun '16, 13:11)</span> <span class="comment-user userinfo">joost schouppe</span>
@@ -155,7 +155,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a> : what is the usage policy for HOT tiles ? The OP represents a company, they should not use tiles that are meant for the community and NGOs. While the data is free, tile usage &amp; hosting typically is not free for commercial use.</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a> : what is the usage policy for HOT tiles ? The OP represents a company, they should not use tiles that are meant for the community and NGOs. While the data is free, tile usage &amp; hosting typically is not free for commercial use.</p>
 </div>
 <div id="comment-50363-info" class="comment-info">
 <span class="comment-age">(22 Jun '16, 07:11)</span> <span class="comment-user userinfo">escada</span>

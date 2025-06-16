@@ -129,7 +129,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>"building=entrance" is more or less deprecated. See "entrance=yes" or "entrance=main" : <a href="http://wiki.openstreetmap.org/wiki/Entrance">http://wiki.openstreetmap.org/wiki/Entrance</a><br />
+<p>"building=entrance" is more or less deprecated. See "entrance=yes" or "entrance=main" : <a href="https://wiki.openstreetmap.org/wiki/Entrance">https://wiki.openstreetmap.org/wiki/Entrance</a><br />
 If you don't know the exact position of the entrance, put the addresses on nodes on the building facade (front) and forget the "entrance" tag.</p>
 </div>
 <div id="comment-30717-info" class="comment-info">

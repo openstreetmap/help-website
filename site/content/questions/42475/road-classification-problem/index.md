@@ -196,7 +196,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7473/govanus"></a><a href="http://help.openstreetmap.org/users/7473/govanus">@Govanus</a> Routers are usually not interested in maximum speed but in average speed instead. But this issue is not relevant to the original question.</p>
+<p><a href="https://help.openstreetmap.org/users/7473/govanus"></a><a href="https://help.openstreetmap.org/users/7473/govanus">@Govanus</a> Routers are usually not interested in maximum speed but in average speed instead. But this issue is not relevant to the original question.</p>
 </div>
 <div id="comment-42521-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 15:52)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -270,9 +270,9 @@ osqa_accepted = false
 <p>asking direct can give you a good answer and a rapid change of hart if they where working from skeetchy sources.</p>
 <p>==</p>
 <p>That apart all I can point you two is the main guidance at:-</p>
-<p><a href="http://wiki.openstreetmap.org/w/index.php?title=Highway_examples&amp;oldid=776664">http://wiki.openstreetmap.org/w/index.php?title=Highway_examples&amp;oldid=776664</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:highway">http://wiki.openstreetmap.org/wiki/Key:highway</a></p>
-<p>and these country specific pages:- <a href="http://wiki.openstreetmap.org/wiki/Highway:International_equivalence">http://wiki.openstreetmap.org/wiki/Highway:International_equivalence</a> and this one that seems very comprehanive for the USA and offers a few clues maybe in the demotion reasons under secondary tag around 3/4 of the way down the page:- [<a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging%5D%7Bhttp://wiki.openstreetmap.org/wiki/United_States_roads_tagging%7D">http://wiki.openstreetmap.org/wiki/United_States_roads_tagging]{http://wiki.openstreetmap.org/wiki/United_States_roads_tagging}</a></p>
+<p><a href="https://wiki.openstreetmap.org/w/index.php?title=Highway_examples&amp;oldid=776664">https://wiki.openstreetmap.org/w/index.php?title=Highway_examples&amp;oldid=776664</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:highway">https://wiki.openstreetmap.org/wiki/Key:highway</a></p>
+<p>and these country specific pages:- <a href="https://wiki.openstreetmap.org/wiki/Highway:International_equivalence">https://wiki.openstreetmap.org/wiki/Highway:International_equivalence</a> and this one that seems very comprehanive for the USA and offers a few clues maybe in the demotion reasons under secondary tag around 3/4 of the way down the page:- [<a href="https://wiki.openstreetmap.org/wiki/United_States_roads_tagging%5D%7Bhttps://wiki.openstreetmap.org/wiki/United_States_roads_tagging%7D">https://wiki.openstreetmap.org/wiki/United_States_roads_tagging]{https://wiki.openstreetmap.org/wiki/United_States_roads_tagging}</a></p>
 <p>I thought before looking properly that it might not have gone very far but the NC109 dose seem to get around to several places and shadows an motorwy/intate road at a distance. I guess that unless it was mapped in patchs with differeng views someone might be classing it on volume of traffic as being lighter there (the exit might not be popular in someone elses ideas). try looking at the historys of the other parts of the NC109 on OSM and ask them there reasoning.</p>
 <p><a href="https://www.openstreetmap.org/way/51593053/history">https://www.openstreetmap.org/way/51593053/history</a> suggests someone may have made an uncorrected mistake 5 years ago when they things primary? try asking them here:- <a href="https://www.openstreetmap.org/changeset/4021134#map=8/35.135/-78.801">https://www.openstreetmap.org/changeset/4021134#map=8/35.135/-78.801</a></p>
 </div>

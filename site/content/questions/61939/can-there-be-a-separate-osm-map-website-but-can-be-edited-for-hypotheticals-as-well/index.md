@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your question is nearly the same like <a href="https://help.openstreetmap.org/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes">https://help.openstreetmap.org/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes</a> , isn't it?</p>
-<p>Maybe the tools like uMap which are suggested at <a href="https://help.openstreetmap.org/questions/27621/personalised-maps">https://help.openstreetmap.org/questions/27621/personalised-maps</a> are already feature-rich enough? You can add lines, markers, ... on top of a OSM base map.</p>
+<p>Your question is nearly the same like <a href="/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes">https://help.openstreetmap.org/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes</a> , isn't it?</p>
+<p>Maybe the tools like uMap which are suggested at <a href="/questions/27621/personalised-maps">https://help.openstreetmap.org/questions/27621/personalised-maps</a> are already feature-rich enough? You can add lines, markers, ... on top of a OSM base map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

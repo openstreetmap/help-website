@@ -163,7 +163,7 @@ One Answer:
 <p>As you said, the extracts from bbbike.org have the version of all map objects set to -1. They also have all timestamps set to 1969. I'm not sure why, but this definitely makes them unusable for editing in JOSM.</p>
 <p>I suppose you could modify the version manually by replacing <code>version="-1"</code> with <code>version="1"</code> in your downloaded extract before importing it. Or you could run some SQL queries on the database to change the version manually. You would need to update <code>version</code> in the tables: <code>current_nodes, current_ways and current_relations</code>. The <code>changeset_id</code> might need to be changed too but I'm not sure about that.</p>
 <p>It might be easier to look for a different extract that provides the real OSM data with real version numbers instead of a modified version of it.</p>
-<p>Other extract providers are listed on the wiki "<a href="http://wiki.openstreetmap.org/wiki/Planet">Planet</a>" page. I personally would recommend the geofabrik ones.</p>
+<p>Other extract providers are listed on the wiki "<a href="https://wiki.openstreetmap.org/wiki/Planet">Planet</a>" page. I personally would recommend the geofabrik ones.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

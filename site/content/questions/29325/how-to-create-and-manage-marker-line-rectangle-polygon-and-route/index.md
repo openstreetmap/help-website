@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/API_v0.6">The osm API</a> does not have that kind of features. Its purpose is to edit the map data, not to draw markers, polygons, etc on the map.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/API_v0.6">The osm API</a> does not have that kind of features. Its purpose is to edit the map data, not to draw markers, polygons, etc on the map.</p>
 <p>To do the later, see (amonst others) the <a href="http://leafletjs.com/">leaflet</a> or <a href="http://www.openlayers.org/">openlayers</a> libraries. Some third-party websites such as <a href="http://umap.fluv.io/">umap</a> or <a href="http://share.mapbbcode.org/">mapbbshare</a> also do somthing very similar.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -136,7 +136,7 @@ osqa_accepted = false
 <div id="post-29381-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You might want to check here for additional widgets/components <a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a></p>
+<p>You might want to check here for additional widgets/components <a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a></p>
 </div>
 <div id="comment-29381-info" class="comment-info">
 <span class="comment-age">(27 Dec '13, 16:18)</span> <span class="comment-user userinfo">iii</span>
@@ -178,8 +178,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're looking for a place to obtain data from prior to displaying it in an on-screen map, the OSM API probably isn't the best place (it's intended to be used for editing, not creating maps from). Instead, perhaps <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> might be a place to look. It'll get you exactly the same data, but in a way that doesn't overload OSM's servers. You can also of course <a href="http://planet.osm.org">just download the data</a>.</p>
-<p>With regard to routing, you're probably best just starting from <a href="http://wiki.openstreetmap.org/wiki/Routing">the wiki page</a>. There are offline routers available that you can deploy, and existing instances of them. If you want to do routing in-client you'll probably find some pointers there for that too.</p>
+<p>If you're looking for a place to obtain data from prior to displaying it in an on-screen map, the OSM API probably isn't the best place (it's intended to be used for editing, not creating maps from). Instead, perhaps <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> might be a place to look. It'll get you exactly the same data, but in a way that doesn't overload OSM's servers. You can also of course <a href="http://planet.osm.org">just download the data</a>.</p>
+<p>With regard to routing, you're probably best just starting from <a href="https://wiki.openstreetmap.org/wiki/Routing">the wiki page</a>. There are offline routers available that you can deploy, and existing instances of them. If you want to do routing in-client you'll probably find some pointers there for that too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

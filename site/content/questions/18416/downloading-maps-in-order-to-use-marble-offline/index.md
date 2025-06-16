@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Another option is to <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">download a country extract</a> in .osm format, since recent versions of marble can render that directly. It's a bit slow (only use small extracts) and not as pretty as a mapnik rendering, but it works.</p>
+<p>Another option is to <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">download a country extract</a> in .osm format, since recent versions of marble can render that directly. It's a bit slow (only use small extracts) and not as pretty as a mapnik rendering, but it works.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>You can find bz2 packaged osm files from here: <a href="http://download.geofabrik.de/openstreetmap/">http://download.geofabrik.de/openstreetmap/</a></p>
 <p>As you may need even smaller extract, then you can export it directly from Openstreetmap main server: <em>Zoom to your desired area on osm.org</em> Click on the Export tab on the top of page <em>Choose option Openstreetmap data as xml</em> Click on export button</p>
-<p>Or you may use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to apply a bounding box to a bigger extract.</p>
+<p>Or you may use <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to apply a bounding box to a bigger extract.</p>
 </div>
 <div id="comment-18676-info" class="comment-info">
 <span class="comment-age">(23 Dec '12, 12:30)</span> <span class="comment-user userinfo">RM87</span>
@@ -243,7 +243,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Well, the downloaded maps are just images under ~/.local/share/marble/maps for Linux or data/maps in the marble installation location for Windows.</p>
-<p>You can download the tiles with any tile downloader found on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Category:Tile_downloading">http://wiki.openstreetmap.org/wiki/Category:Tile_downloading</a></p>
+<p>You can download the tiles with any tile downloader found on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Category:Tile_downloading">https://wiki.openstreetmap.org/wiki/Category:Tile_downloading</a></p>
 <p>But I wonder why you don't want to do it via Marble if you are using it in Marble. The downloading stays the same.</p>
 </div>
 <div id="comment-18426-info" class="comment-info">

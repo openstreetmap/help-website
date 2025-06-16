@@ -164,12 +164,12 @@ This answer is marked "community wiki".
 <p>There is quite a lot of documentation about the proposed license change on the wiki and in the various mailinglists and forums.</p>
 <p>Some of which are:</p>
 <p><a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">a general description of why the change is needed and what it is about</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Open_Database_License/Implementation_Plan">a description of the proposed changeover plan and how far it has come along</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Open_Data_License/Backup_Plan">Some information about how data will be handled for which the owners have not given permission to relicence</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Open_Database_License_FAQ">OSM's licensing FAQ</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Open_Database_License/Implementation_Plan">a description of the proposed changeover plan and how far it has come along</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/Backup_Plan">Some information about how data will be handled for which the owners have not given permission to relicence</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Open_Database_License_FAQ">OSM's licensing FAQ</a></p>
 <p><a href="http://www.opendatacommons.org/faq/licenses/">ODbL's general FAQ (independent of OSM)</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Open_Database_License#ODbL_reviews_from_lawyers">Links to comments from other lawyers about the ODbL</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Category:Open_Data_Licence">Other pages on the wiki about the ODbL and the license change</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Open_Database_License#ODbL_reviews_from_lawyers">Links to comments from other lawyers about the ODbL</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Category:Open_Data_Licence">Other pages on the wiki about the ODbL and the license change</a></p>
 <p>(Please add other links to useful information about the license change, its reasons and its effects)</p>
 </div>
 <div class="answer-controls post-controls">

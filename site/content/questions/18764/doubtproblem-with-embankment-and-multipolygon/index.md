@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Doubt/problem with embankment and multipolygon"
-description = '''Sorry if it&#x27;s not the correct place (I did try 3 times in IRC), but I am seeing one problem (or better, have one doubt) with this way: http://www.openstreetmap.org/browse/way/178497260 Originally it had &quot;man_made = embankment&quot; but wasn&#x27;t being displayed as an embankment. After some failed attempts t...'''
+description = '''Sorry if it&#x27;s not the correct place (I did try 3 times in IRC), but I am seeing one problem (or better, have one doubt) with this way: https://www.openstreetmap.org/browse/way/178497260 Originally it had &quot;man_made = embankment&quot; but wasn&#x27;t being displayed as an embankment. After some failed attempts t...'''
 date = "2012-12-30T03:05:00Z"
 lastmod = "2012-12-30T16:33:00Z"
 weight = 18764
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Sorry if it's not the correct place (I did try 3 times in IRC), but I am seeing one problem (or better, have one doubt) with this way:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/178497260">http://www.openstreetmap.org/browse/way/178497260</a></p>
-<p>Originally it had "man_made = embankment" but wasn't being displayed as an embankment. After some failed attempts to fix it I have created another overlapping way (<a href="http://www.openstreetmap.org/browse/way/198702339">http://www.openstreetmap.org/browse/way/198702339</a>) with man_made = embankment (like it's done on the other embankment at NW), but it still isn't displayed as an embankment.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/178497260">https://www.openstreetmap.org/browse/way/178497260</a></p>
+<p>Originally it had "man_made = embankment" but wasn't being displayed as an embankment. After some failed attempts to fix it I have created another overlapping way (<a href="https://www.openstreetmap.org/browse/way/198702339">https://www.openstreetmap.org/browse/way/198702339</a>) with man_made = embankment (like it's done on the other embankment at NW), but it still isn't displayed as an embankment.</p>
 <p>Any ideas/explanation/tips on why this isn't being properly displayed, please?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

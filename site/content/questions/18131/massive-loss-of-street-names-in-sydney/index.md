@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Massive loss of street names in Sydney?"
-description = '''Hi Using http://www.openstreetmap.org/?lat=-33.76155&amp;amp;lon=151.13008&amp;amp;zoom=16&amp;amp;layers=M as an example, there are many streets without names on them. If you zoom out a little and scan around, you will see that all around that area there are usually more blank street names than streets with na...'''
+description = '''Hi Using https://www.openstreetmap.org/?lat=-33.76155&amp;amp;lon=151.13008&amp;amp;zoom=16&amp;amp;layers=M as an example, there are many streets without names on them. If you zoom out a little and scan around, you will see that all around that area there are usually more blank street names than streets with na...'''
 date = "2012-12-01T00:20:00Z"
 lastmod = "2012-12-01T08:07:00Z"
 weight = 18131
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi</p>
-<p>Using <a href="http://www.openstreetmap.org/?lat=-33.76155&amp;lon=151.13008&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=-33.76155&amp;lon=151.13008&amp;zoom=16&amp;layers=M</a> as an example, there are many streets without names on them. If you zoom out a little and scan around, you will see that all around that area there are usually more blank street names than streets with names.</p>
+<p>Using <a href="https://www.openstreetmap.org/?lat=-33.76155&amp;lon=151.13008&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=-33.76155&amp;lon=151.13008&amp;zoom=16&amp;layers=M</a> as an example, there are many streets without names on them. If you zoom out a little and scan around, you will see that all around that area there are usually more blank street names than streets with names.</p>
 <p>The strange thing is that I had used OSM before and all those street names were there!</p>
 <p>As best I can tell, I have an extract from 26/5/2012 that includes all street names. I have another extract from 26/9/2012 that has many street names missing. I thought I must have picked a bad day in September, but the street names are still mostly missing now at the end of November.</p>
 <p>Can anyone help fix this?</p>

@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-35015-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The one way error: the water should be to right hand side of the line as you draw it. see <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Disland">http://wiki.openstreetmap.org/wiki/Tag:place%3Disland</a></p>
+<p>The one way error: the water should be to right hand side of the line as you draw it. see <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Disland">https://wiki.openstreetmap.org/wiki/Tag:place%3Disland</a></p>
 </div>
 <div id="comment-35015-info" class="comment-info">
 <span class="comment-age">(20 Jul '14, 09:20)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -134,7 +134,7 @@ One Answer:
 <ol>
 <li><p>If you want to give more information about your question, please edit your question instead of extending it with comments ... :-)</p></li>
 <li><p>Some body already fixed your issue: see this <a href="https://www.openstreetmap.org/changeset/24232777">changeset</a> ... so wait some hours or so whether water returns to land.</p></li>
-<li><p>see also the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Coastline">coastline</a></p></li>
+<li><p>see also the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Coastline">coastline</a></p></li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

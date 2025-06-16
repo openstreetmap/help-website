@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-47767-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11928/said-mossa">@Said MoSSA</a>: "Blue Line"? About which webpage or editor are you talking?</p>
+<p><a href="https://help.openstreetmap.org/users/11928/said-mossa">@Said MoSSA</a>: "Blue Line"? About which webpage or editor are you talking?</p>
 </div>
 <div id="comment-47767-info" class="comment-info">
 <span class="comment-age">(31 Jan '16, 20:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

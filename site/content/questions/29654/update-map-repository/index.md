@@ -119,7 +119,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Welcome. The <span>Potlatch2</span> editor is my choice and I have used it a lot to add to the map data, you can find more information in the documentation or wiki <a href="http://wiki.openstreetmap.org/.">http://wiki.openstreetmap.org/.</a></p>
+<p>Welcome. The <span>Potlatch2</span> editor is my choice and I have used it a lot to add to the map data, you can find more information in the documentation or wiki <a href="https://wiki.openstreetmap.org/.">https://wiki.openstreetmap.org/.</a></p>
 <p>GPX traces used to be the most used method of positioning ways (roads or paths) POI (points of interest) and now possibly most used to align and check <span>aerial image</span> accuracy. Some areas may not have good aerial images or it may be out of date. In these areas GPX traces are the best way to accurately map. If you are fortunate enough to have good aerial imagery you can work without adding GPX info if you know your area well and/or if survey it to confirm things haven't changed. Happy Mapping.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -176,7 +176,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are <a href="http://wiki.openstreetmap.org/wiki/Editors">plenty of editors</a> for osm, and also non-editor tools that can be used to modify data. It would be easyer to answer your question if you explained why you are dissatisfied with the tools you tried or what you are trying to achieve.</p>
+<p>There are <a href="https://wiki.openstreetmap.org/wiki/Editors">plenty of editors</a> for osm, and also non-editor tools that can be used to modify data. It would be easyer to answer your question if you explained why you are dissatisfied with the tools you tried or what you are trying to achieve.</p>
 <p>iD, JOSM and Potlach are the most featurefull / futureproof editors right now, I suggest spending a good bit of time on one or the other before deciding that your use-case isn't well served by them and looking at other possibilities.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -200,7 +200,7 @@ This question is marked "community wiki".
 3
 </div>
 <div class="comment-text">
-<p>On Android I can recommend <a href="http://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a>, On iOS I think that <a href="http://wiki.openstreetmap.org/wiki/Go_Map!!">Go Map!!</a> is one of the most popular full-featured editor.</p>
+<p>On Android I can recommend <a href="https://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a>, On iOS I think that <a href="https://wiki.openstreetmap.org/wiki/Go_Map!!">Go Map!!</a> is one of the most popular full-featured editor.</p>
 </div>
 <div id="comment-29678-info" class="comment-info">
 <span class="comment-age">(08 Jan '14, 13:12)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

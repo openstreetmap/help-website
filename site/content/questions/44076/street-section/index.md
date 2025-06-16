@@ -69,7 +69,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Guessing a bit here, but does these previous answer help?</p>
-<p><a href="https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation</a></p>
+<p><a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation</a></p>
 </div>
 <div id="comment-44077-info" class="comment-info">
 <span class="comment-age">(09 Jul '15, 17:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

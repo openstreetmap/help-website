@@ -77,7 +77,7 @@ osqa_accepted = true
 <div id="post-34367-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>getting some help here <a href="http://wiki.openstreetmap.org/wiki/Hiking#Tagging_walking_and_hiking_Route_Networks">http://wiki.openstreetmap.org/wiki/Hiking#Tagging_walking_and_hiking_Route_Networks</a> and here <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use">http://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use</a></p>
+<p>getting some help here <a href="https://wiki.openstreetmap.org/wiki/Hiking#Tagging_walking_and_hiking_Route_Networks">https://wiki.openstreetmap.org/wiki/Hiking#Tagging_walking_and_hiking_Route_Networks</a> and here <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use">https://wiki.openstreetmap.org/wiki/Relation:route#Route_relations_in_use</a></p>
 </div>
 <div id="comment-34367-info" class="comment-info">
 <span class="comment-age">(27 Jun '14, 12:27)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -172,7 +172,7 @@ osqa_accepted = true
 </p>
 <p>If they haven't, the next question is - should it be in OSM? I'd argue that temporary and unsigned routes shouldn't be included, but permanently waymarked ones should. This may well vary by locality, though.<br />
 </p>
-<p>If it needs to go in, create a new relation by adding part of the route to a new relation (how to do that will vary by editor). The tags on the new relation should be similar to on <a href="http://www.openstreetmap.org/relation/1674794">this one</a> for a new foot/hiking relation (personally I'd use route=foot on shorter, less arduous ones and route=hiking on others; other people may have other ideas). Don't add the route name to any way names on the route since the ways themselves aren't called "route name", only the route is.</p>
+<p>If it needs to go in, create a new relation by adding part of the route to a new relation (how to do that will vary by editor). The tags on the new relation should be similar to on <a href="https://www.openstreetmap.org/relation/1674794">this one</a> for a new foot/hiking relation (personally I'd use route=foot on shorter, less arduous ones and route=hiking on others; other people may have other ideas). Don't add the route name to any way names on the route since the ways themselves aren't called "route name", only the route is.</p>
 <p>Depending on the length and status, you'll probably want to add "network=iwn", "network=nwn", "network=rwn", or "network=lwn" as appropriate. There's guidance on that (and on other tags) <a href="http://wiki.osm.org/wiki/Tag:network=rwn">here</a>.</p>
 <p>Then I'd add a row to the appropriate table <a href="http://wiki.osm.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths#.27R.27">here</a>, with internal and external links as appropriate (I can never remember how to do these so always end up copying from another row). Your new relation number goes in the 5th column in the "browse relation" thing. When you've filled in the wiki captchas at save, check that the page formatting is OK and the links work. If it makes sense to, I'd also create a wiki page like <a href="http://wiki.osm.org/wiki/Three_Centres_Trail">this one</a> (I created that because I wanted somewhere to show a picture of the sgnpost).<br />
 </p>
@@ -240,7 +240,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Create a <a href="http://wiki.openstreetmap.org/wiki/Walking_Routes">walking route relation</a> and add the ways constituting the walk as relation members. From your description, I'd say the network type should be 'lwn'. Don't forget the other relations tags at least: type=route route=hiking name=*.</p>
+<p>Create a <a href="https://wiki.openstreetmap.org/wiki/Walking_Routes">walking route relation</a> and add the ways constituting the walk as relation members. From your description, I'd say the network type should be 'lwn'. Don't forget the other relations tags at least: type=route route=hiking name=*.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

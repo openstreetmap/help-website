@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to export a bus route relation as a CSV for GTFS?"
-description = '''I&#x27;m attempting to use OpenStreetMap to maintain the canonical geography for the bus routes for our transit system, and would like to export from OSM into a CSV for creating the shapes.txt file for the GTFS feed for the system. I&#x27;ve created relations for each route:  http://www.openstreetmap.org/rela...'''
+description = '''I&#x27;m attempting to use OpenStreetMap to maintain the canonical geography for the bus routes for our transit system, and would like to export from OSM into a CSV for creating the shapes.txt file for the GTFS feed for the system. I&#x27;ve created relations for each route:  https://www.openstreetmap.org/rela...'''
 date = "2016-01-13T20:04:00Z"
 lastmod = "2016-01-14T22:00:00Z"
 weight = 47501
@@ -42,11 +42,11 @@ osqa_accepted = false
 <p>I'm attempting to use OpenStreetMap to maintain the canonical geography for the bus routes for our transit system, and would like to export from OSM into a CSV for creating <a href="https://developers.google.com/transit/gtfs/reference#shapes_fields">the shapes.txt file</a> for the GTFS feed for the system.</p>
 <p>I've created relations for each route:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/relation/5838068">http://www.openstreetmap.org/relation/5838068</a></li>
-<li><a href="http://www.openstreetmap.org/relation/3439454">http://www.openstreetmap.org/relation/3439454</a></li>
-<li><a href="http://www.openstreetmap.org/relation/3425884">http://www.openstreetmap.org/relation/3425884</a></li>
-<li><a href="http://www.openstreetmap.org/relation/5838881">http://www.openstreetmap.org/relation/5838881</a></li>
-<li><a href="http://www.openstreetmap.org/relation/5838217">http://www.openstreetmap.org/relation/5838217</a></li>
+<li><a href="https://www.openstreetmap.org/relation/5838068">https://www.openstreetmap.org/relation/5838068</a></li>
+<li><a href="https://www.openstreetmap.org/relation/3439454">https://www.openstreetmap.org/relation/3439454</a></li>
+<li><a href="https://www.openstreetmap.org/relation/3425884">https://www.openstreetmap.org/relation/3425884</a></li>
+<li><a href="https://www.openstreetmap.org/relation/5838881">https://www.openstreetmap.org/relation/5838881</a></li>
+<li><a href="https://www.openstreetmap.org/relation/5838217">https://www.openstreetmap.org/relation/5838217</a></li>
 </ul>
 <p>What I need to do next is to find a way to export the points along these routes as a simple series of lat/lon points, in the right sequence. Each way in each route is tagged with "forward" or "backward" so, in theory, all the data needed to do this is present in OSM.</p>
 <p>I've experimented with using <a href="http://blog.velocarte66.fr/?q=de/node/170">rel2gpx.pl</a> for this, converting the relation for each route into a GPX. I then extract the track points from the GPX to make the CSV.</p>

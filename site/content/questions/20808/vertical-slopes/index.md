@@ -232,7 +232,7 @@ osqa_accepted = true
 <div id="post-20829-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, Thanks for your thoughts. I found several like this strange one, <a href="http://www.openstreetmap.org/?lat=53.357783&amp;lon=-2.07084&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=53.357783&amp;lon=-2.07084&amp;zoom=18&amp;layers=M</a> My eye was caught by the details at this river below a canal, the west side is -1 and the east is normal, both are on the surface. Although OSM is original British, there still a lot to do. I didn’t find vertical slopes in neither stone nor wood on my survey. No details so far. Ps I won’t be able to ad pics. OSM doesn’t allow it AFAIK. But every harbour has a vertical slope, mostly in steel or concrete, but no sign of a tag here or overthere.</p>
+<p>Hi, Thanks for your thoughts. I found several like this strange one, <a href="https://www.openstreetmap.org/?lat=53.357783&amp;lon=-2.07084&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=53.357783&amp;lon=-2.07084&amp;zoom=18&amp;layers=M</a> My eye was caught by the details at this river below a canal, the west side is -1 and the east is normal, both are on the surface. Although OSM is original British, there still a lot to do. I didn’t find vertical slopes in neither stone nor wood on my survey. No details so far. Ps I won’t be able to ad pics. OSM doesn’t allow it AFAIK. But every harbour has a vertical slope, mostly in steel or concrete, but no sign of a tag here or overthere.</p>
 </div>
 <div id="comment-20829-info" class="comment-info">
 <span class="comment-age">(20 Mar '13, 14:40)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -244,7 +244,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Nick this may help <a href="https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
+<p>Nick this may help <a href="/questions/11589/how-do-i-put-a-screen-image-into-a-question">https://help.openstreetmap.org/questions/11589/how-do-i-put-a-screen-image-into-a-question</a></p>
 </div>
 <div id="comment-20830-info" class="comment-info">
 <span class="comment-age">(20 Mar '13, 15:16)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Getting a simple list of changesets on a web page is easy - in my case it's <a href="https://www.openstreetmap.org/user/SomeoneElse/history">https://www.openstreetmap.org/user/SomeoneElse/history</a>, and on that page you can see how many discussion comments each one has. However finding the ones with comments can involve a bit of searching.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Query:_GET_.2Fapi.2F0.6.2Fchangesets">API call for asking for several changesets</a> supports various parameters (but not as far as I can see whether there's a discussion on not). The <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Read:_GET_.2Fapi.2F0.6.2Fchangeset.2F.23id.3Finclude_discussion.3Dtrue">API call to get a single changeset</a> can optionally return the changeset discussion.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Query:_GET_.2Fapi.2F0.6.2Fchangesets">API call for asking for several changesets</a> supports various parameters (but not as far as I can see whether there's a discussion on not). The <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Read:_GET_.2Fapi.2F0.6.2Fchangeset.2F.23id.3Finclude_discussion.3Dtrue">API call to get a single changeset</a> can optionally return the changeset discussion.</p>
 <p>My question is - has anyone put together anything that allows searching of those changesets with discussion comments? In OSM it's almost a given that someone somewhere will have written something already :)</p>
 </div>
 <div id="question-tags" class="tags-container tags">

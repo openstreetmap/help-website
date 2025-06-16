@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-38982-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: I know, I just would have loved to hear the actual problem from John.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: I know, I just would have loved to hear the actual problem from John.</p>
 </div>
 <div id="comment-38982-info" class="comment-info">
 <span class="comment-age">(01 Dec '14, 17:51)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -101,7 +101,7 @@ osqa_accepted = false
 <div id="post-38983-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10084/john-west-3">@John West 3</a>: this like is split up in several parts (not really how it should be if that is all one lake with one name …). So you need to rename also the other parts.</p>
+<p><a href="https://help.openstreetmap.org/users/10084/john-west-3">@John West 3</a>: this like is split up in several parts (not really how it should be if that is all one lake with one name …). So you need to rename also the other parts.</p>
 </div>
 <div id="comment-38983-info" class="comment-info">
 <span class="comment-age">(01 Dec '14, 17:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -215,7 +215,7 @@ One Answer:
 <div id="post-38987-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>should've earlier also pointed you to the page about multipolygon relations, in case you want to understand what was behind all this: <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
+<p>should've earlier also pointed you to the page about multipolygon relations, in case you want to understand what was behind all this: <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
 </div>
 <div id="comment-38987-info" class="comment-info">
 <span class="comment-age">(01 Dec '14, 19:38)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -226,7 +226,7 @@ One Answer:
 <div id="post-38993-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> Thanks. When I get a chance I'll check other waterways in the region where I paddle and edit when I can. Thanks for the help and guidance today from all. John</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> Thanks. When I get a chance I'll check other waterways in the region where I paddle and edit when I can. Thanks for the help and guidance today from all. John</p>
 </div>
 <div id="comment-38993-info" class="comment-info">
 <span class="comment-age">(02 Dec '14, 00:13)</span> <span class="comment-user userinfo">John West 3</span>

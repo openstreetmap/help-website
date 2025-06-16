@@ -119,9 +119,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Example/Solution of 3D Rendering of Pitch Areas in F4map.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/F4map_3Drender_Pitch.png" alt="F4map 3D Render" /></p>
+<p><img src="/upfiles/F4map_3Drender_Pitch.png" alt="F4map 3D Render" /></p>
 <p>2D Tile map of Pitch Areas in F4map.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/F4map_2Drender_Pitch.png" alt="F4map 2D Render" /></p>
+<p><img src="/upfiles/F4map_2Drender_Pitch.png" alt="F4map 2D Render" /></p>
 <p>This is what the pitch areas look like when individually mapped with a simple rectangle, excluding the baseball fields. The soccer and tennis courts are just squared rectangular areas. The baseball fields were done manually as it's more logical than the other courts because every baseball field is always different. Also, <em>please</em> don’t <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tag for the renderer</a>, instead try find a related sport proposal that has tags listed and use them as a placeholder to be ready if they actually get accepted to render, most likely in zoom &gt; 19 or 18.</p>
 <p>Image location at <a href="http://demo.f4map.com/#lat=39.7388574&amp;lon=-105.0088346&amp;zoom=19">W Colfax Ave 80217 Denver, United States of America</a> using <a href="https://wiki.openstreetmap.org/wiki/F4_Map">F4map</a>.</p>
 </div>

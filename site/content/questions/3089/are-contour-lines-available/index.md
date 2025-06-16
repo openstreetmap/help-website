@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In the bikemap representation ("Radfahrerkarte") contour lines are shown in the map. Are these contour lines available in OSM? Is there any other resource of contour lines in OSM?</p>
-<p><strong>This question was closed, because it is duplicate to question <a href="http://help.openstreetmap.org/questions/3069/elevation-maps">Elevation maps</a>.</strong></p>
+<p><strong>This question was closed, because it is duplicate to question <a href="/questions/3069/elevation-maps">Elevation maps</a>.</strong></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-opencyclemap" rel="tag" title="see questions tagged &#39;opencyclemap&#39;">opencyclemap</span> <span class="post-tag tag-link-elevation" rel="tag" title="see questions tagged &#39;elevation&#39;">elevation</span> <span class="post-tag tag-link-lines" rel="tag" title="see questions tagged &#39;lines&#39;">lines</span> <span class="post-tag tag-link-srtm" rel="tag" title="see questions tagged &#39;srtm&#39;">srtm</span> <span class="post-tag tag-link-contour" rel="tag" title="see questions tagged &#39;contour&#39;">contour</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question, see http://help.openstreetmap.org/questions/3069/elevation-maps" by Baloo Uriza 07 Mar '11, 20:46
+### The question has been closed for the following reason "Duplicate Question, see https://help.openstreetmap.org/questions/3069/elevation-maps" by Baloo Uriza 07 Mar '11, 20:46
 
 </div>
 
@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You will find the answers to your questions in this thread, posted 8 hours ago: <a href="http://help.openstreetmap.org/questions/3069/elevation-maps">elevation maps</a></p>
+<p>You will find the answers to your questions in this thread, posted 8 hours ago: <a href="/questions/3069/elevation-maps">elevation maps</a></p>
 <p>(Summary: These contour lines are not available in OSM, but they may be generated from NASA's <a href="http://en.wikipedia.org/wiki/SRTM">SRTM data</a>.)</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag an overpressure / safety chimney at an raffinery ?"
-description = '''Im wish to tag an safety chimney at an industrial plant.  Whats the best way to tag it, man_made - chimney or man_made - flare, or a combination of both tags ? The chimney is part of a man_made tower look here, http://www.openstreetmap.org/?lat=53.242152&amp;amp;lon=6.686396&amp;amp;zoom=18&amp;amp;layers=M. IM...'''
+description = '''Im wish to tag an safety chimney at an industrial plant.  Whats the best way to tag it, man_made - chimney or man_made - flare, or a combination of both tags ? The chimney is part of a man_made tower look here, https://www.openstreetmap.org/?lat=53.242152&amp;amp;lon=6.686396&amp;amp;zoom=18&amp;amp;layers=M. IM...'''
 date = "2013-02-13T22:44:00Z"
 lastmod = "2013-02-16T02:18:00Z"
 weight = 19923
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Im wish to tag an safety chimney at an industrial plant. Whats the best way to tag it, man_made - chimney or man_made - flare, or a combination of both tags ? The chimney is part of a man_made tower look here, <a href="http://www.openstreetmap.org/?lat=53.242152&amp;lon=6.686396&amp;zoom=18&amp;layers=M.">http://www.openstreetmap.org/?lat=53.242152&amp;lon=6.686396&amp;zoom=18&amp;layers=M.</a> IMHO is a combination of those tags just to many times man_made. In this case the use of the chimney is to reduce pressure, not a permanent flare to burn waste gas as part of a refineryproces. Greetz</p>
+<p>Im wish to tag an safety chimney at an industrial plant. Whats the best way to tag it, man_made - chimney or man_made - flare, or a combination of both tags ? The chimney is part of a man_made tower look here, <a href="https://www.openstreetmap.org/?lat=53.242152&amp;lon=6.686396&amp;zoom=18&amp;layers=M.">https://www.openstreetmap.org/?lat=53.242152&amp;lon=6.686396&amp;zoom=18&amp;layers=M.</a> IMHO is a combination of those tags just to many times man_made. In this case the use of the chimney is to reduce pressure, not a permanent flare to burn waste gas as part of a refineryproces. Greetz</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-flare" rel="tag" title="see questions tagged &#39;flare&#39;">flare</span> <span class="post-tag tag-link-plant" rel="tag" title="see questions tagged &#39;plant&#39;">plant</span> <span class="post-tag tag-link-waste" rel="tag" title="see questions tagged &#39;waste&#39;">waste</span> <span class="post-tag tag-link-gas" rel="tag" title="see questions tagged &#39;gas&#39;">gas</span> <span class="post-tag tag-link-chimney" rel="tag" title="see questions tagged &#39;chimney&#39;">chimney</span>

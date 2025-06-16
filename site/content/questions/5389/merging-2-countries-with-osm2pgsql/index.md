@@ -117,9 +117,9 @@ CONTEXT:  COPY planet_rels, line 61: &quot;60189     1       481     {27503927,9
 <td><div class="item-right">
 <div class="answer-body">
 <p>The relation in your error message is the border of the Russian Federation:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/60189">http://www.openstreetmap.org/browse/relation/60189</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/60189">https://www.openstreetmap.org/browse/relation/60189</a></p>
 <p>which shares ways such as</p>
-<p><a href="http://www.openstreetmap.org/browse/way/50752242">http://www.openstreetmap.org/browse/way/50752242</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/50752242">https://www.openstreetmap.org/browse/way/50752242</a></p>
 <p>with the border of the USA.</p>
 <p>I am not an expert, but suspect you might need to use Osmosis to merge the two files first and then import using osm2pgsql in one go.</p>
 </div>
@@ -152,7 +152,7 @@ CONTEXT:  COPY planet_rels, line 61: &quot;60189     1       481     {27503927,9
 <div id="post-40581-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Can both of you please share ways how to do this (<a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a> how to use Osmosis for that, bestic2 how to temporarily drop the constraints)? I’ve got <a href="https://help.openstreetmap.org/questions/40580/how-much-disc-space-do-the-exports-use">similar issues</a>…</p>
+<p>Can both of you please share ways how to do this (<a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a> how to use Osmosis for that, bestic2 how to temporarily drop the constraints)? I’ve got <a href="/questions/40580/how-much-disc-space-do-the-exports-use">similar issues</a>…</p>
 </div>
 <div id="comment-40581-info" class="comment-info">
 <span class="comment-age">(24 Jan '15, 21:23)</span> <span class="comment-user userinfo">mirabilos</span>

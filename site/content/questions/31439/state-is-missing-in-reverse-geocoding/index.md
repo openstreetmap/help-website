@@ -147,7 +147,7 @@ One Answer:
 <div class="answer-body">
 <p>The Florida relation was broken in early January. It has been fixed in the meantime but you still caught the bad version with your import, so the boundary for Florida is missing. Here is a way to update your database for such broken objects without a reimport:</p>
 <ol>
-<li><p>Import the latest version of the object in question. You need to find the OSM type and id of the object, for example by searching on osm.org. Florida is <a href="http://www.openstreetmap.org/relation/162050">here</a>. For the import, the update script can be used, i.e</p>
+<li><p>Import the latest version of the object in question. You need to find the OSM type and id of the object, for example by searching on osm.org. Florida is <a href="https://www.openstreetmap.org/relation/162050">here</a>. For the import, the update script can be used, i.e</p>
 <pre><code>./utils/update.php --import-relation 162050 --index</code></pre></li>
 <li><p>Check that the import worked by searching for the object in your local instance. If it didn't work, the object might still be broken and you have to fix it in OSM first. Find out the place_id of the object by looking up details in your instance. For example, Florida on the osm.org instance is <a href="http://nominatim.openstreetmap.org/details.php?place_id=97976186">here</a>, so the place_id is 97976186. The ids are different for every instance.</p></li>
 <li><p>Update any places in your database that depend on the object, e.g. for Florida again:</p>

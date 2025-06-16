@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Using a popular proprietary search engine with the keywords "openstreetmap associatedstreet", this is the first result:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Using_relations_to_associate_house_and_street_.28optional.29">http://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Using_relations_to_associate_house_and_street_.28optional.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Using_relations_to_associate_house_and_street_.28optional.29">https://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Using_relations_to_associate_house_and_street_.28optional.29</a></p>
 <p>Opinions about whether or not "associatedStreet" relations are useful and/or a good idea differ within OpenStreetMap.</p>
 <p>If a certain editor automatically adds something, then you should not assume that this was in any way "preferred" in all of OSM; it is likely only "preferred" among those who have created that editor!</p>
 </div>

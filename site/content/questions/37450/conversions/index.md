@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>By doing what is commonly called "<a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a>". The process of taking OSM data (node, ways and relations) generating geometric objects from the raw data and then "drawing" the objects in to a bitmap.</p>
+<p>By doing what is commonly called "<a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a>". The process of taking OSM data (node, ways and relations) generating geometric objects from the raw data and then "drawing" the objects in to a bitmap.</p>
 <p>Both steps tend to be fully configurable (for example by deciding how wide a road of a certain classification should be drawn and in what color or which elements to draw at all).</p>
 <p>A good renderer for investigating what can be done is maperitive (see <a href="http://maperitive.net">maperitive.net</a> ).</p>
 </div>
@@ -132,7 +132,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>also see <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">http://wiki.openstreetmap.org/wiki/Static_map_images</a></p>
+<p>also see <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">https://wiki.openstreetmap.org/wiki/Static_map_images</a></p>
 </div>
 <div id="comment-37475-info" class="comment-info">
 <span class="comment-age">(09 Oct '14, 20:45)</span> <span class="comment-user userinfo">stephan75</span>
@@ -174,7 +174,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you only need to export small areas it's simple, click on share and set file type.<img src="http://help.openstreetmap.org/upfiles/osm_to_jpeg.JPG" alt="alt text" /></p>
+<p>If you only need to export small areas it's simple, click on share and set file type.<img src="/upfiles/osm_to_jpeg.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

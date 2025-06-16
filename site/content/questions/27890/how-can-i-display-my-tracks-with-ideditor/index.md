@@ -129,7 +129,7 @@ One Answer:
 <div id="post-27912-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes I can. But after downloading my traces to <a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/traces</a> I deleted my local copies. And I don't want to download the tracks back.</p>
+<p>Yes I can. But after downloading my traces to <a href="https://www.openstreetmap.org/traces">https://www.openstreetmap.org/traces</a> I deleted my local copies. And I don't want to download the tracks back.</p>
 </div>
 <div id="comment-27912-info" class="comment-info">
 <span class="comment-age">(08 Nov '13, 15:25)</span> <span class="comment-user userinfo">hfst</span>

@@ -85,7 +85,7 @@ Change the projection again or remove the layer.</code></pre>
 <div id="post-54608-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>, your links work nicely for me!</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>, your links work nicely for me!</p>
 </div>
 <div id="comment-54608-info" class="comment-info">
 <span class="comment-age">(11 Feb '17, 03:49)</span> <span class="comment-user userinfo">n76</span>

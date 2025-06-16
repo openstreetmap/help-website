@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Probably no help, but I get 403 when I try downloading too. It looks like both the mapquest XAPI and osm.rambler.ru Overpass instances are currently unavailable.</p>
-<p>You could download the data using other <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass</a> instances, or download an <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extract</a> and cut out the area you want using a tool such as <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>.</p>
+<p>You could download the data using other <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass</a> instances, or download an <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extract</a> and cut out the area you want using a tool such as <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

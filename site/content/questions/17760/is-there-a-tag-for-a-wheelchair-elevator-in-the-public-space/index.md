@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Elevator">"elevator" from a search in the wiki</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Elevator">"elevator" from a search in the wiki</a></p>
 <p><a href="http://taginfo.openstreetmap.org/search?q=elevator#values">"elevator" from a search in taginfo</a></p>
 </div>
 <div class="answer-controls post-controls">
@@ -125,7 +125,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>And the <a href="http://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair</a> tag.</p>
+<p>And the <a href="https://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair</a> tag.</p>
 </div>
 <div id="comment-17762-info" class="comment-info">
 <span class="comment-age">(18 Nov '12, 12:36)</span> <span class="comment-user userinfo">scai ♦</span>

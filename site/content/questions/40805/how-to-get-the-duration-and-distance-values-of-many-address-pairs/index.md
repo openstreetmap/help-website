@@ -108,7 +108,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Data is free - computing time is not. Hence, you can download the OSM data and run a routing algorithm on this on your own server (or desktop PC or notebook computer) without paying a penny, but you cannot upload a spreadsheet and have OSM compute the results for you.</p>
 <p>A popular routing server is <a href="http://www.project-osrm.org">OSRM</a> and you will find download and install instructions right there on the web site. Converting from addresses to coordinates requires a geocoding service in addition to that, but this is something that you only need to do 1000 times and you can store the coordinates.</p>
-<p>If you'd rather pay someone to do the work for you, check out <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial OSM Software and Services</a> on the Wiki.</p>
+<p>If you'd rather pay someone to do the work for you, check out <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial OSM Software and Services</a> on the Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

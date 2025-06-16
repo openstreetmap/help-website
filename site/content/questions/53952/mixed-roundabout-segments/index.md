@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>While it's hard to an absolute answer to this question (the real world is a strange place), I find it hard to imagine a roundabout with different highway tags for different sections. Generally, the roundabout's classification is the same as the largest road connected to it.</p>
-<p>In the case you linked, it's clearly a mishap where a mapper <a href="http://www.openstreetmap.org/changeset/32609176">reclassified these highways from residential to tertiary but forgot one segment</a>, so I went ahead and <a href="http://www.openstreetmap.org/changeset/45030529">fixed it</a>.</p>
+<p>In the case you linked, it's clearly a mishap where a mapper <a href="https://www.openstreetmap.org/changeset/32609176">reclassified these highways from residential to tertiary but forgot one segment</a>, so I went ahead and <a href="https://www.openstreetmap.org/changeset/45030529">fixed it</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

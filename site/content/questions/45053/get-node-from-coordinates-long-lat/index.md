@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-53744-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11433/carlilord">@carlilord</a> Did you succeed in accomplishing this?</p>
+<p><a href="https://help.openstreetmap.org/users/11433/carlilord">@carlilord</a> Did you succeed in accomplishing this?</p>
 </div>
 <div id="comment-53744-info" class="comment-info">
 <span class="comment-age">(27 Dec '16, 15:25)</span> <span class="comment-user userinfo">kamalpreet</span>

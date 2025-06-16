@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "You requested too many nodes (limit is 50000). Either request a smaller area, or use planet.osm"
-description = '''I&#x27;m using http://www.openstreetmap.org/ export utility to generate a .osm (xml map file) of an area, to later generate a .map file with osmosis, but i can&#x27;t extract the .osm because i got this error: &quot;You requested too many nodes (limit is 50000). Either request a smaller area, or use planet.osm&quot; Ho...'''
+description = '''I&#x27;m using https://www.openstreetmap.org/ export utility to generate a .osm (xml map file) of an area, to later generate a .map file with osmosis, but i can&#x27;t extract the .osm because i got this error: &quot;You requested too many nodes (limit is 50000). Either request a smaller area, or use planet.osm&quot; Ho...'''
 date = "2011-12-14T15:30:00Z"
 lastmod = "2011-12-14T16:24:00Z"
 weight = 9527
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm using <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> export utility to generate a .osm (xml map file) of an area, to later generate a .map file with osmosis, but i can't extract the .osm because i got this error:</p>
+<p>I'm using <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> export utility to generate a .osm (xml map file) of an area, to later generate a .map file with osmosis, but i can't extract the .osm because i got this error:</p>
 <p>"You requested too many nodes (limit is 50000). Either request a smaller area, or use planet.osm"</p>
 <p>How can i generate maps of more than 50.000 nodes? how to use planet.osm? i'm blocked :S</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the wiki sections on <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Extracts</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to find out how to download an extract covering the area you want (I tend to use the Geofabrik ones) and Osmosis to cut out the area you want.</p>
+<p>See the wiki sections on <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Extracts</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to find out how to download an extract covering the area you want (I tend to use the Geofabrik ones) and Osmosis to cut out the area you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

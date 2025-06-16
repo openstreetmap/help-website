@@ -117,7 +117,7 @@ https://www.openstreetmap.org/?q=D%C3%BCsseldorf</code></pre>
 <div id="post-46458-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4984/iii">@iii</a> I'm not sure quite what you mean. I don't want to install an entire OSM instance for this. I just want to point people at a map. Doesn't have to be the main OSM site - I'd use Open MapQuest but they don't support mobile.</p>
+<p><a href="https://help.openstreetmap.org/users/4984/iii">@iii</a> I'm not sure quite what you mean. I don't want to install an entire OSM instance for this. I just want to point people at a map. Doesn't have to be the main OSM site - I'd use Open MapQuest but they don't support mobile.</p>
 </div>
 <div id="comment-46458-info" class="comment-info">
 <span class="comment-age">(08 Nov '15, 11:20)</span> <span class="comment-user userinfo">Terence Eden</span>
@@ -140,7 +140,7 @@ https://www.openstreetmap.org/?q=D%C3%BCsseldorf</code></pre>
 <div id="post-46462-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@someoneelse</a> On Twitter, people can set their location - either in their Bio or in a tweet. I am generating a link on a web page to that location, for example, <a href="https://maps.google.com/maps?q=Oxford">https://maps.google.com/maps?q=Oxford</a> or <a href="https://maps.google.com/maps?q=34.63677866,135.22868514">https://maps.google.com/maps?q=34.63677866,135.22868514</a> ... That takes a user to a website (suitable for mobile &amp; desktop) which has the "best guess" prominently displayed. Not a list of suggestion - just a map.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@someoneelse</a> On Twitter, people can set their location - either in their Bio or in a tweet. I am generating a link on a web page to that location, for example, <a href="https://maps.google.com/maps?q=Oxford">https://maps.google.com/maps?q=Oxford</a> or <a href="https://maps.google.com/maps?q=34.63677866,135.22868514">https://maps.google.com/maps?q=34.63677866,135.22868514</a> ... That takes a user to a website (suitable for mobile &amp; desktop) which has the "best guess" prominently displayed. Not a list of suggestion - just a map.</p>
 </div>
 <div id="comment-46462-info" class="comment-info">
 <span class="comment-age">(08 Nov '15, 16:12)</span> <span class="comment-user userinfo">Terence Eden</span>
@@ -264,7 +264,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9471/terence-eden"></a><a href="http://help.openstreetmap.org/users/9471/terence-eden">@Terence Eden</a> there is nothing stoping you from producing such a site. Doable with some JS and one of the JS map display libraries in a jiffy.</p>
+<p><a href="https://help.openstreetmap.org/users/9471/terence-eden"></a><a href="https://help.openstreetmap.org/users/9471/terence-eden">@Terence Eden</a> there is nothing stoping you from producing such a site. Doable with some JS and one of the JS map display libraries in a jiffy.</p>
 <p>But I guess that is not the real issue, which seems to be a misunderstanding of the nature of the OpenStreetMap web site and associated service. They a mainly geared towards mapping support and support for any other usage is at best incidential (this has been a matter of debate since early on in OSM history, but it is in any case the current situation). The tl;dr version is that OSM is about collecting and distributiong a open and freely available geo-dataset, -not- about providing free services. Given that you can simply take the data and build your own, this should not be a big issue.</p>
 </div>
 <div id="comment-46466-info" class="comment-info">
@@ -276,7 +276,7 @@ One Answer:
 <div id="post-46481-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... and, Terence, you should have a closer look to the wiki page <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> just to find other nominatim based search engines, or even very own standing search engines based on raw OSM data.</p>
+<p>... and, Terence, you should have a closer look to the wiki page <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> just to find other nominatim based search engines, or even very own standing search engines based on raw OSM data.</p>
 </div>
 <div id="comment-46481-info" class="comment-info">
 <span class="comment-age">(09 Nov '15, 18:38)</span> <span class="comment-user userinfo">stephan75</span>

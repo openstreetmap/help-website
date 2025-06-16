@@ -66,7 +66,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Related question: <a href="https://help.openstreetmap.org/questions/73358/regarding-very-critical-error-in-azerbaijan-map">https://help.openstreetmap.org/questions/73358/regarding-very-critical-error-in-azerbaijan-map</a></p>
+<p>Related question: <a href="/questions/73358/regarding-very-critical-error-in-azerbaijan-map">https://help.openstreetmap.org/questions/73358/regarding-very-critical-error-in-azerbaijan-map</a></p>
 </div>
 <div id="comment-73481-info" class="comment-info">
 <span class="comment-age">(11 Mar '20, 21:27)</span> <span class="comment-user userinfo">hfs</span>

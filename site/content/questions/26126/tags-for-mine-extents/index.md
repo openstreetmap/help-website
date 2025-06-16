@@ -137,7 +137,7 @@ One Answer:
 <blockquote>
 <p>Conveyor belts for transporting coal</p>
 </blockquote>
-<p>The one I know of is tagged <code>aerialway=goods</code> <a href="http://www.openstreetmap.org/browse/way/94255954">http://www.openstreetmap.org/browse/way/94255954</a></p>
+<p>The one I know of is tagged <code>aerialway=goods</code> <a href="https://www.openstreetmap.org/browse/way/94255954">https://www.openstreetmap.org/browse/way/94255954</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

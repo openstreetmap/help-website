@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Based on the answer to <a href="https://help.openstreetmap.org/questions/58270/how-i-can-create-relation-in-id-editor">this question</a> I think you would need to</p>
+<p>Based on the answer to <a href="/questions/58270/how-i-can-create-relation-in-id-editor">this question</a> I think you would need to</p>
 <ol>
 <li>select one of the route relations you would like to edit,</li>
 <li>scroll to the bottom (after the enumeration of ways) and</li>

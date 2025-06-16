@@ -303,7 +303,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>This question is somewhat confusing because it uses several terms incorrectly. So I'll start by clarifying the terms before giving an answer.</p>
 <ul>
-<li>The <strong>Redaction Bot</strong> is a program. This program uses the user account <a href="http://www.openstreetmap.org/user/OSMF%20Redaction%20Account">"OSMF Redaction Account"</a> to delete data from OpenStreetMap that we are not allowed to publish under the new legal terms.</li>
+<li>The <strong>Redaction Bot</strong> is a program. This program uses the user account <a href="https://www.openstreetmap.org/user/OSMF%20Redaction%20Account">"OSMF Redaction Account"</a> to delete data from OpenStreetMap that we are not allowed to publish under the new legal terms.</li>
 <li><strong>OSM Inspector</strong> (<a href="http://tools.geofabrik.de/osmi/">http://tools.geofabrik.de/osmi/</a>, abbreviated <strong>OSMI</strong>) is an independent website operated by Geofabrik, a company offering services related to OpenStreetMap. OSMI visualizes information about OpenStreetMap that might not be visible from ordinary maps - for example it shows boundaries, addresses, multipolygons, and many other things. Some of these views are helpful for finding errors in OpenStreetMap data, but not everything they show is an error - a lot is just neutral information.</li>
 <li>One of the visualizations available on OSMI is called "redaction bot". This <strong>OSMI "redaction bot" view</strong> shows information about the Redaction Bot's edits. That visualization was still under development when this question was posted, and has since been integrated into the main OSMI website.</li>
 </ul>
@@ -361,10 +361,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yesterday the 23.Juli.2012 I went to the small village of Niederkastenholz. Here the Redaction Bot's image from that date: <img src="http://help.openstreetmap.org/upfiles/Niederkastenholz_Redaction.PNG" alt="alt text" /></p>
+<p>Yesterday the 23.Juli.2012 I went to the small village of Niederkastenholz. Here the Redaction Bot's image from that date: <img src="/upfiles/Niederkastenholz_Redaction.PNG" alt="alt text" /></p>
 <p>I highlighted the Bot's information. What you <strong>don't see</strong> is interesting: The road at the top (Fritzstraße) has been deleted and not marked with the Bot's red IIIII. Which means that the Bot does not show all deleted changes.</p>
 <p>See the second image to see the post edit results.</p>
-<p>I uploaded my survey data also on the 23rd at about 2100 CET. Here the results from the Bot on the 24th Juli at 05:41. <img src="http://help.openstreetmap.org/upfiles/Niederkastenholz_after_Survey_20120723.PNG" alt="alt text" /></p>
+<p>I uploaded my survey data also on the 23rd at about 2100 CET. Here the results from the Bot on the 24th Juli at 05:41. <img src="/upfiles/Niederkastenholz_after_Survey_20120723.PNG" alt="alt text" /></p>
 <p>I found all the Bot's changes and added a few bits of miscellaneous data as well.</p>
 <p><strong>Now for my QUESTION:</strong></p>
 <p>Why does the Bot still report the Bot's changes after they have been newly entered?</p>

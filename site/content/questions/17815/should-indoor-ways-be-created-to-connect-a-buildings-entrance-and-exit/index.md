@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was under the impression that a node tagged with amenity=parking_entrance would mark the end of the road as it met the building, at least in cases where indoor information isn't available. However, I've seen a user create skeleton ways connecting these parking entrances, apparently as a fix/workaround for routing issues detected by Project OSRM (e.g. <a href="http://www.openstreetmap.org/browse/way/188908352">http://www.openstreetmap.org/browse/way/188908352</a> ). Is this recommended?</p>
+<p>I was under the impression that a node tagged with amenity=parking_entrance would mark the end of the road as it met the building, at least in cases where indoor information isn't available. However, I've seen a user create skeleton ways connecting these parking entrances, apparently as a fix/workaround for routing issues detected by Project OSRM (e.g. <a href="https://www.openstreetmap.org/browse/way/188908352">https://www.openstreetmap.org/browse/way/188908352</a> ). Is this recommended?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-parking_entrance" rel="tag" title="see questions tagged &#39;parking_entrance&#39;">parking_entrance</span> <span class="post-tag tag-link-indoor" rel="tag" title="see questions tagged &#39;indoor&#39;">indoor</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>
@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's always difficult to say what is "recommended" or not in OSM. The problem with indoor mapping is the difficulty to verify the information. What is done in your example is not incorrect. The position of the parking aisle lane is probably a rough outline but it is better than nothing and accuracy can be improved in the future by the next contributors. BUT it might require an "access" tag if the parking access is restricted to some public (<a href="http://wiki.openstreetmap.org/wiki/Key:access">private</a>) or time (<a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a>) or requires some <a href="http://wiki.openstreetmap.org/wiki/Key:fee">fee</a>. An explicit tag like "access=yes" might clarify this point.</p>
+<p>It's always difficult to say what is "recommended" or not in OSM. The problem with indoor mapping is the difficulty to verify the information. What is done in your example is not incorrect. The position of the parking aisle lane is probably a rough outline but it is better than nothing and accuracy can be improved in the future by the next contributors. BUT it might require an "access" tag if the parking access is restricted to some public (<a href="https://wiki.openstreetmap.org/wiki/Key:access">private</a>) or time (<a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours</a>) or requires some <a href="https://wiki.openstreetmap.org/wiki/Key:fee">fee</a>. An explicit tag like "access=yes" might clarify this point.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

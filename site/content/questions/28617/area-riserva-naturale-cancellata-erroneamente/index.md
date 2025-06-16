@@ -68,7 +68,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Mi dispiace, non parlo italiano. Forse qualcun altro lo fa. / Sorry, I do not speak Italian. Maybe someone else does.</p>
-<p>(I have looked at it) Sorry, you are saving so much changesets, I cannot find it. Please point to the changeset in question - list: <a href="http://www.openstreetmap.org/user/rovizz/history">http://www.openstreetmap.org/user/rovizz/history</a> You can only undo it with other tools, see: <span>change rollback</span>. Better let someone else revert it. Also <span>see</span>.</p>
+<p>(I have looked at it) Sorry, you are saving so much changesets, I cannot find it. Please point to the changeset in question - list: <a href="https://www.openstreetmap.org/user/rovizz/history">https://www.openstreetmap.org/user/rovizz/history</a> You can only undo it with other tools, see: <span>change rollback</span>. Better let someone else revert it. Also <span>see</span>.</p>
 </div>
 <div id="comment-28619-info" class="comment-info">
 <span class="comment-age">(30 Nov '13, 16:08)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

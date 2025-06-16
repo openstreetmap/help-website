@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In place of simply tag with building=yes you can use building=[something] and height tag.</p>
-<p>Look at <a href="http://wiki.openstreetmap.org/wiki/Building">Building</a> on wiki and tag stat usage on <a href="http://taginfo.openstreetmap.de/keys/building">taginfo</a>.</p>
+<p>Look at <a href="https://wiki.openstreetmap.org/wiki/Building">Building</a> on wiki and tag stat usage on <a href="http://taginfo.openstreetmap.de/keys/building">taginfo</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a proposal for various additional <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes">building attributes</a>, for example <em>building:level</em> to specify the floor number of a POI (not to be mixed up with <em>building:level<strong>s</strong></em> which specifies the overall number of floors a building has). You can also create a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Level">level relation</a> that includes all POIs of the same level.</p>
+<p>There is a proposal for various additional <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes">building attributes</a>, for example <em>building:level</em> to specify the floor number of a POI (not to be mixed up with <em>building:level<strong>s</strong></em> which specifies the overall number of floors a building has). You can also create a <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Level">level relation</a> that includes all POIs of the same level.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

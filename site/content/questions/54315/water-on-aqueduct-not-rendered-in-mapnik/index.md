@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Water on aqueduct not rendered in Mapnik"
-description = '''The Pont-canal du Sart http://www.openstreetmap.org/#map=18/50.49353/4.13718 is a wide bridge for ships travelling the Belgian Canal du Centre.  The waterway object alone is rendered only very narrow (the width tag is being ignored) and it would not include the cycleways on both sides, hence I&#x27;ve ad...'''
+description = '''The Pont-canal du Sart https://www.openstreetmap.org/#map=18/50.49353/4.13718 is a wide bridge for ships travelling the Belgian Canal du Centre.  The waterway object alone is rendered only very narrow (the width tag is being ignored) and it would not include the cycleways on both sides, hence I&#x27;ve ad...'''
 date = "2017-01-26T18:39:00Z"
 lastmod = "2017-01-27T13:45:00Z"
 weight = 54315
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The Pont-canal du Sart <a href="http://www.openstreetmap.org/#map=18/50.49353/4.13718">http://www.openstreetmap.org/#map=18/50.49353/4.13718</a> is a wide bridge for ships travelling the Belgian Canal du Centre.</p>
+<p>The Pont-canal du Sart <a href="https://www.openstreetmap.org/#map=18/50.49353/4.13718">https://www.openstreetmap.org/#map=18/50.49353/4.13718</a> is a wide bridge for ships travelling the Belgian Canal du Centre.</p>
 <p>The waterway object alone is rendered only very narrow (the width tag is being ignored) and it would not include the cycleways on both sides, hence I've added an area tagged man_made=bridge and layer=1, and there's a (smaller) natural=water area covering the canal surface, also tagged with layer=1 because this is recommended for objects ans ways on the bridge.</p>
 <p>However, Mapnik would not render the water area, even not when I make its layer=2.</p>
 <p>What should I do? Change the tagging? I think it is correct as it is, and I actually do not fancy adopting tagging to compensate for flaws in rendering. So if no one has an idea how to change tags in a senseful and correct way I would like to leave it as it is.</p>

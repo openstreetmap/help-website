@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe the OSM wiki can help about <a href="http://wiki.openstreetmap.org/wiki/Zoom_levels">Zoomlevels</a></p>
+<p>Maybe the OSM wiki can help about <a href="https://wiki.openstreetmap.org/wiki/Zoom_levels">Zoomlevels</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

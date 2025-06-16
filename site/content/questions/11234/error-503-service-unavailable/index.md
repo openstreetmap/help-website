@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The 'historic' XAPI (which you've referenced in the URL above) is no longer a supported service. You should use an <a href="http://wiki.openstreetmap.org/wiki/XAPI">alternative as listed on the wiki</a>, such as JXAPI.</p>
+<p>The 'historic' XAPI (which you've referenced in the URL above) is no longer a supported service. You should use an <a href="https://wiki.openstreetmap.org/wiki/XAPI">alternative as listed on the wiki</a>, such as JXAPI.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -123,7 +123,7 @@ One Answer:
 <div id="post-11236-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, thanks for your response. Sorry to be a noob, but where do I go for up to date info? Is <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a> just untrue?</p>
+<p>Hi, thanks for your response. Sorry to be a noob, but where do I go for up to date info? Is <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a> just untrue?</p>
 </div>
 <div id="comment-11236-info" class="comment-info">
 <span class="comment-age">(16 Mar '12, 00:42)</span> <span class="comment-user userinfo">AndyB52s</span>

@@ -114,7 +114,7 @@ osqa_accepted = false
 <p>Hummm I don't think that kind of info would be suitable for OSM, even though it is tempting.</p>
 <p>My rationale is that it is a <em>quantitative</em> and <em>continuous</em> property. In other words, every place on Earth could be attributed a "dark sky rating" and we'd have to cover the whole map. This is the same problem as elevation data; we keep it out of OSM because it is not technically a good place to put that kind of data (as interesting and free as it may be).</p>
 <p>You could counter by saying that you only map the best spots, but that's still a relative value, and the best stargazing spots in UK are actually pretty bad compared to other (dryer, less populated) areas of the world.</p>
-<p>That said, if one of the spot is actually signposted / advertised on the ground, this is another story. In that case, I'd get inspiration from the <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism=viewpoint">viewpoint</a> tag.</p>
+<p>That said, if one of the spot is actually signposted / advertised on the ground, this is another story. In that case, I'd get inspiration from the <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism=viewpoint">viewpoint</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -273,7 +273,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Imho it would be more efficient to render a light pollution map based on the existence of places (villages, cities), the tag lit=yes and some wizardry (considering amongst others number of inhabitants, size of the places) to determine the distance in which the light pollution is small enough to allow a good view to the dark sky.<br />
 A simple light map exists already: <a href="http://lightmap.uni-hd.de/">http://lightmap.uni-hd.de/</a><br />
-(btw: there is also a proposal to <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Shade">tag shades</a> which looks to me the same category like the issue above )</p>
+(btw: there is also a proposal to <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Shade">tag shades</a> which looks to me the same category like the issue above )</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

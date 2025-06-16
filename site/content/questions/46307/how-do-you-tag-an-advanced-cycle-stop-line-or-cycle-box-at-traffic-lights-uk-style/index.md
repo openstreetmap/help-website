@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd suggest doing it like <a href="http://www.openstreetmap.org/node/2336116339">this</a>. Just a node, tagged cycleway=<a href="http://wiki.openstreetmap.org/wiki/Tag:cycleway=asl?uselang=en-GB">asl</a>, on the linear way.</p>
+<p>I'd suggest doing it like <a href="https://www.openstreetmap.org/node/2336116339">this</a>. Just a node, tagged cycleway=<a href="https://wiki.openstreetmap.org/wiki/Tag:cycleway=asl?uselang=en-GB">asl</a>, on the linear way.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dspring">natural=spring</a> is described as <em>a point where groundwater naturally flows out of the ground</em>. In other words a spring usually is the point where a natural water stream begins. Your photo however <del>clearly shows a <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfountain">fountain</a></del> looks more like a <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water">drinking water</a> location. But if it isn't drinkable you should better add <em>drinkable=no</em>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dspring">natural=spring</a> is described as <em>a point where groundwater naturally flows out of the ground</em>. In other words a spring usually is the point where a natural water stream begins. Your photo however <del>clearly shows a <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfountain">fountain</a></del> looks more like a <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water">drinking water</a> location. But if it isn't drinkable you should better add <em>drinkable=no</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -135,7 +135,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>It's clearly not a spring, but I'm not sure that it's a <a href="http://en.wikipedia.org/wiki/File:Chatsworth_House_Fountain.jpg">fountain</a>, either. Perhaps <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water">amenity=drinking_water</a>? There are some links on that wiki page to other possibilities depending on current use.</p>
+<p>It's clearly not a spring, but I'm not sure that it's a <a href="http://en.wikipedia.org/wiki/File:Chatsworth_House_Fountain.jpg">fountain</a>, either. Perhaps <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water">amenity=drinking_water</a>? There are some links on that wiki page to other possibilities depending on current use.</p>
 </div>
 <div id="comment-14611-info" class="comment-info">
 <span class="comment-age">(26 Jul '12, 12:19)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Why does not Mapnik render highway lanes? There is a great inconsistency about what <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrunk">highway=trunk</a> means... sometimes it is used for single lane roads (mostly in United Kingdom) and sometimes it is used for say 2nd grade motorways (multiple lanes, continental western Europe for instance). If we rendered highway lanes, this inconsistency would disappear.</p>
+<p>Why does not Mapnik render highway lanes? There is a great inconsistency about what <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrunk">highway=trunk</a> means... sometimes it is used for single lane roads (mostly in United Kingdom) and sometimes it is used for say 2nd grade motorways (multiple lanes, continental western Europe for instance). If we rendered highway lanes, this inconsistency would disappear.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-lanes" rel="tag" title="see questions tagged &#39;lanes&#39;">lanes</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span>
@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think you should talk first with the UK community and check with them why "trunk" seems inconsistent. It is possible that locally someone made a mistake about the "trunk" class.</p>
-<p>The "highway=trunk" is also used differently depending on the country. Here is a <a href="http://wiki.openstreetmap.org/wiki/Highway:International_equivalence">table showing the international equivalence</a> of the "highway" tags.</p>
+<p>The "highway=trunk" is also used differently depending on the country. Here is a <a href="https://wiki.openstreetmap.org/wiki/Highway:International_equivalence">table showing the international equivalence</a> of the "highway" tags.</p>
 <p>You can contact the UK community through <a href="https://lists.openstreetmap.org/listinfo/talk-gb">this dedicated mailing list</a> (needs subscription).<br />
 </p>
 <p>Here, in short, I can only provide some generality : the "highway" class reflects its importance in the road grid. Usually the amount of lanes is related to this importance (more traffic=more lanes). We can expect that the amount of lanes is greater in motorways than in residential streets. You might find some exceptions but then, it should be carefully verified and see if it is not simply a mapping mistake.<br />

@@ -156,7 +156,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I couldn't find renderd instructions on the wiki, but the alternative <a href="http://wiki.openstreetmap.org/wiki/Tirex">tirex</a> backend performs the same task of handling rendering jobs queues. In principle, all you need to do is start a <a href="http://wiki.openstreetmap.org/wiki/Tirex/Commands/tirex-batch">batch-rendering</a> of the tiles you want, using a low priority so that it doesn't interfere with live browser requests. See also <a href="http://wiki.openstreetmap.org/wiki/Tirex/Tile_Update_Strategies">update strategies</a>.</p>
+<p>I couldn't find renderd instructions on the wiki, but the alternative <a href="https://wiki.openstreetmap.org/wiki/Tirex">tirex</a> backend performs the same task of handling rendering jobs queues. In principle, all you need to do is start a <a href="https://wiki.openstreetmap.org/wiki/Tirex/Commands/tirex-batch">batch-rendering</a> of the tiles you want, using a low priority so that it doesn't interfere with live browser requests. See also <a href="https://wiki.openstreetmap.org/wiki/Tirex/Tile_Update_Strategies">update strategies</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

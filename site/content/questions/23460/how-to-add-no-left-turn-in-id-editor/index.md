@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Checked old questions/answers and did not find an answer.</p>
 <p>The other day I set up a route to see my doctor in downtown Washington DC. Everything went well until I reached a left turn on one of the main roads which was not possible to take due to rush hour restrictions; there were perhaps 5 no-left- turns (betw hours 3 - 7 PM) in a row. It completely disrupted the calculated route and I did not make it in time.</p>
-<p>I think this would be very useful but I don' t see any such an option in iD. No U turn would also fall into this category. I did read: <a href="http://wiki.openstreetmap.org/wiki/Turn_restriction">http://wiki.openstreetmap.org/wiki/Turn_restriction</a></p>
+<p>I think this would be very useful but I don' t see any such an option in iD. No U turn would also fall into this category. I did read: <a href="https://wiki.openstreetmap.org/wiki/Turn_restriction">https://wiki.openstreetmap.org/wiki/Turn_restriction</a></p>
 <p>but no instructions for iD. Thank you</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -145,7 +145,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>There's a <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">wiki page describing how to add turn restrictions in Potlatch 2</a>.</p>
+<p>There's a <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/restrictions">wiki page describing how to add turn restrictions in Potlatch 2</a>.</p>
 </div>
 <div id="comment-23550-info" class="comment-info">
 <span class="comment-age">(20 Jun '13, 12:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

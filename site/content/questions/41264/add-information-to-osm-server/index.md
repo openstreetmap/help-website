@@ -116,7 +116,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>While not totally impossible this is at least difficult.</p>
-<p>You need to add the data to the osm data -before- you import it into OSRM. One way to do this is to edit the data with JOSM (this assumes that we are talking about a small to very small extract of OSM). Depending on how picky OSRM is you then might need to convert the resulting <a href="http://wiki.openstreetmap.org/wiki/JOSM_file_format">JOSM format OSM data</a> with negative ids, to regular OSM format (aka renumbering and throwing away some JOSM specific attributes).</p>
+<p>You need to add the data to the osm data -before- you import it into OSRM. One way to do this is to edit the data with JOSM (this assumes that we are talking about a small to very small extract of OSM). Depending on how picky OSRM is you then might need to convert the resulting <a href="https://wiki.openstreetmap.org/wiki/JOSM_file_format">JOSM format OSM data</a> with negative ids, to regular OSM format (aka renumbering and throwing away some JOSM specific attributes).</p>
 <p>The far simpler solution would be to add your data directly to OSM if it is useful, real and available on terms that allow it to be included in OSM.</p>
 </div>
 <div class="answer-controls post-controls">

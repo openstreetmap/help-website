@@ -83,7 +83,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9861/sailor-steve"></a><a href="http://help.openstreetmap.org/users/9861/sailor-steve">@Sailor Steve</a>: I agree with your concern and would say that this is sufficiently against common UK tagging practice that it deserves discussion. But... please try and avoid hyperbole like "probably irreversible damage". Thanks!</p>
+<p><a href="https://help.openstreetmap.org/users/9861/sailor-steve"></a><a href="https://help.openstreetmap.org/users/9861/sailor-steve">@Sailor Steve</a>: I agree with your concern and would say that this is sufficiently against common UK tagging practice that it deserves discussion. But... please try and avoid hyperbole like "probably irreversible damage". Thanks!</p>
 </div>
 <div id="comment-37786-info" class="comment-info">
 <span class="comment-age">(20 Oct '14, 16:45)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -304,10 +304,10 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Wow - <a href="http://www.openstreetmap.org/way/183471443/history#map=15/51.1169/-1.1741">way 183471443</a> does have a lot of tags on it!</p>
+<p>Wow - <a href="https://www.openstreetmap.org/way/183471443/history#map=15/51.1169/-1.1741">way 183471443</a> does have a lot of tags on it!</p>
 <p>I'm not entirely sure what "<code>access:bicycle</code>", "<code>access:foot</code>" and "<code>access:horse</code>" are for, since the normal way of establishing access for those transport modes are "<code>bicycle</code>", "<code>foot</code>" and "<code>horse</code>" respectively. It also has "<code>foot=designated</code>" and "<code>horse=designated</code>"; some people used to use this prior to "<code>designation=public_bridleway</code>" etc. becoming widely used (and some still do), but it does establish that bicycle, foot and horse traffic is allowed, irrespective of what is set (or not set) in an "access" tag. Importantly it <em>has</em> got the "<code>designation=public_bridleway</code>" tag on it to establish the legal status.</p>
 <p>It's mapped as a "<code>highway=path</code>". Based on what I can see from the Bing imagery I'd have probably gone (after a survey, of course) with "<code>highway=bridleway</code>" instead, but either of these would suggest (to me in the UK**) non-motorised traffic only.</p>
-<p>I don't think that adding "<code>access=private</code>" to something that "<a href="http://wiki.openstreetmap.org/wiki/Duck_tagging">feels</a>" like a bridleway either adds or takes away any information. It's not wrong, but it doesn't add any value here. However, I can think of plenty of farm tracks and service roads near me that are clearly "<code>access=private</code>" but also have public rights of way down them; in those cases I would definitely add "<code>access=private</code>" to make it clear what the access rights are.</p>
+<p>I don't think that adding "<code>access=private</code>" to something that "<a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">feels</a>" like a bridleway either adds or takes away any information. It's not wrong, but it doesn't add any value here. However, I can think of plenty of farm tracks and service roads near me that are clearly "<code>access=private</code>" but also have public rights of way down them; in those cases I would definitely add "<code>access=private</code>" to make it clear what the access rights are.</p>
 <p>Obviously the above is my personal opinion - a glance at the state of footpath tagging in the UK will reveal that's it's not the only one!</p>
 <p>** I know that in places like Holland young kids get to ride hairdriers-with-wheels on footpaths and cycleways, but we can leave them out of the equation for the UK.</p>
 </div>
@@ -332,7 +332,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p>... and one thing that I forgot to mention. I notice that just down the road there is <a href="http://www.openstreetmap.org/way/183471439/history">this track</a> with the name "Wayfarers Walk, Three Castles Path". Unless that really is the name of that piece of track I wouldn't have added that as a name but instead added it to the relations that have those names, which has <a href="http://www.openstreetmap.org/relation/5289">already</a> <a href="http://www.openstreetmap.org/relation/399667">happened</a>. These will show on sites such as <a href="http://hiking.waymarkedtrails.org/en/?zoom=16&amp;lat=51.11937&amp;lon=-1.16848&amp;hill=0">this one</a>.</p>
+<p>... and one thing that I forgot to mention. I notice that just down the road there is <a href="https://www.openstreetmap.org/way/183471439/history">this track</a> with the name "Wayfarers Walk, Three Castles Path". Unless that really is the name of that piece of track I wouldn't have added that as a name but instead added it to the relations that have those names, which has <a href="https://www.openstreetmap.org/relation/5289">already</a> <a href="https://www.openstreetmap.org/relation/399667">happened</a>. These will show on sites such as <a href="http://hiking.waymarkedtrails.org/en/?zoom=16&amp;lat=51.11937&amp;lon=-1.16848&amp;hill=0">this one</a>.</p>
 </div>
 <div id="comment-37790-info" class="comment-info">
 <span class="comment-age">(20 Oct '14, 18:23)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

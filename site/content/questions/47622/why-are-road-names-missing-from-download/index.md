@@ -125,7 +125,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Hello Afrique, maybe you can find some "export alternatives" in the OSM wiki via <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">http://wiki.openstreetmap.org/wiki/OSM_on_Paper</a> or <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p>Hello Afrique, maybe you can find some "export alternatives" in the OSM wiki via <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">https://wiki.openstreetmap.org/wiki/OSM_on_Paper</a> or <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 </div>
 <div id="comment-47635-info" class="comment-info">
 <span class="comment-age">(23 Jan '16, 10:07)</span> <span class="comment-user userinfo">stephan75</span>

@@ -108,7 +108,7 @@ osqa_accepted = false
 <div id="post-29805-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here's a link to one of the shopping centers I've been seeing this in. <a href="http://www.openstreetmap.org/#map=17/35.10269/-80.98677">http://www.openstreetmap.org/#map=17/35.10269/-80.98677</a> You'll notice when editing that the building on the east side has a Best Buy on one end and a PetSmart on the opposite end (neither of which show up on rendered OSM). Those two stores are examples of ones that iD3 has changed the title of the tag to include both the type and the name together. Also towards the middle of the shopping center there's also a Kay Jeweler and an Omega Sports which also don't show up either, but those don't do the renaming thing.</p>
+<p>Here's a link to one of the shopping centers I've been seeing this in. <a href="https://www.openstreetmap.org/#map=17/35.10269/-80.98677">https://www.openstreetmap.org/#map=17/35.10269/-80.98677</a> You'll notice when editing that the building on the east side has a Best Buy on one end and a PetSmart on the opposite end (neither of which show up on rendered OSM). Those two stores are examples of ones that iD3 has changed the title of the tag to include both the type and the name together. Also towards the middle of the shopping center there's also a Kay Jeweler and an Omega Sports which also don't show up either, but those don't do the renaming thing.</p>
 </div>
 <div id="comment-29805-info" class="comment-info">
 <span class="comment-age">(13 Jan '14, 14:32)</span> <span class="comment-user userinfo">gopanthers</span>
@@ -145,7 +145,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>iD isn't appending the name of the business to the key - the "name" is still "Best Buy". But iD has a preset called "Best Buy - Electronic Store" which is displayed at the top-left of the screen in iD when you've selected that preset.</p>
 <p>As has been mentioned elsewhere, the name of the node that you added is just "Best Buy":</p>
-<p><a href="http://www.openstreetmap.org/node/2619349389">http://www.openstreetmap.org/node/2619349389</a></p>
+<p><a href="https://www.openstreetmap.org/node/2619349389">https://www.openstreetmap.org/node/2619349389</a></p>
 </div>
 <div id="comment-29812-info" class="comment-info">
 <span class="comment-age">(13 Jan '14, 19:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

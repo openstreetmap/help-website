@@ -107,8 +107,8 @@ osqa_accepted = false
 <p>If you have <code>amenity=shelter</code> or <code>tourism=alpine_hut</code> on a <code>building=*</code> way then the icon renders on the standard render. It won't though show the elevation as the node shelter does.</p>
 <p>You are correct that having two features for one item is discouraged, and filing a change request at <a href="https://trac.openstreetmap.org/">trac.openstreetmap.org</a> is probably the recommended route. <a href="http://lists.openstreetmap.org/pipermail/dev/2012-November/026173.html">I understand that there are currently efforts to redesign the stylesheets</a>, so once that is complete perhaps the outstanding requests can be considered. Examples:</p>
 <ul>
-<li>what you have done with <a href="http://www.openstreetmap.org/browse/node/2037238281">the node</a> inside <a href="http://www.openstreetmap.org/browse/way/117546967/history">this way</a> can be seen <a href="http://osm.org/go/0CGnqz12r--?m">here</a></li>
-<li>another shelter as a building showing the shelter icon does render can be seen <a href="http://www.openstreetmap.org/browse/way/35967327">here</a> - this one is using tourism=alpine_hut</li>
+<li>what you have done with <a href="https://www.openstreetmap.org/browse/node/2037238281">the node</a> inside <a href="https://www.openstreetmap.org/browse/way/117546967/history">this way</a> can be seen <a href="http://osm.org/go/0CGnqz12r--?m">here</a></li>
+<li>another shelter as a building showing the shelter icon does render can be seen <a href="https://www.openstreetmap.org/browse/way/35967327">here</a> - this one is using tourism=alpine_hut</li>
 <li>the <a href="https://trac.openstreetmap.org/ticket/1689">trac ticket</a> which added them originally</li>
 </ul>
 </div>

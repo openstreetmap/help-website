@@ -156,7 +156,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Here's one i have mapped</p>
-<p><img src="https://help.openstreetmap.org/upfiles/New_Path_RQJQyQl.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/New_Path_RQJQyQl.JPG" alt="alt text" /></p>
 <p>I could have also added a proposed tag, but it is an actual path now and the local authority have confirmed it. It isn't open yet. One problem is surveying something when you should not be there, or copying it from a copyrighted plan, which isn't allowed of course. Letting people know what is planned is, i think a good idea. Edit I guess new path could be at different stages, proposed, planned, under construction with a barrier fence before finally being opened as a designated path for for example foot and or/or cycles or horses.</p>
 </div>
 <div class="answer-controls post-controls">

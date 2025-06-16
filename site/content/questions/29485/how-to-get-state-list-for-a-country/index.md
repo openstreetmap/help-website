@@ -112,8 +112,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well indeed it is possible, but not that easy. The reason is that the country informations are attached at the country boundaries and the way how OSM models them are the so called <a href="http://wiki.openstreetmap.org/wiki/Relation">'relations'</a>. In short this are container objects that can hold other OSM objects (here: the OSM ways that create the outer shape of a country).</p>
-<p>For boundaries there is a <a href="http://wiki.openstreetmap.org/wiki/Boundaries">boundary relation</a> that holds all the single ways of the (shared by 2..n countries!) borders. Unfortunatly esp. on national level, the meaning of the levels can be different, so you might need to check/adapt your request per country. So you need:</p>
+<p>Well indeed it is possible, but not that easy. The reason is that the country informations are attached at the country boundaries and the way how OSM models them are the so called <a href="https://wiki.openstreetmap.org/wiki/Relation">'relations'</a>. In short this are container objects that can hold other OSM objects (here: the OSM ways that create the outer shape of a country).</p>
+<p>For boundaries there is a <a href="https://wiki.openstreetmap.org/wiki/Boundaries">boundary relation</a> that holds all the single ways of the (shared by 2..n countries!) borders. Unfortunatly esp. on national level, the meaning of the levels can be different, so you might need to check/adapt your request per country. So you need:</p>
 <ol>
 <li>Get a relation ID of the desired country (maybe with an editor or by walking trough the relation IDs)</li>
 <li>Request the relation object by Overpass-API</li>

@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-55724-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>One i mapped a few years ago <a href="http://www.openstreetmap.org/#map=18/52.53080/-0.59145">http://www.openstreetmap.org/#map=18/52.53080/-0.59145</a></p>
+<p>One i mapped a few years ago <a href="https://www.openstreetmap.org/#map=18/52.53080/-0.59145">https://www.openstreetmap.org/#map=18/52.53080/-0.59145</a></p>
 </div>
 <div id="comment-55724-info" class="comment-info">
 <span class="comment-age">(20 Apr '17, 23:40)</span> <span class="comment-user userinfo">andy mackey</span>

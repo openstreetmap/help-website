@@ -104,9 +104,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>in the wiki, the tag addr:place is shown for this purpose <a href="http://wiki.openstreetmap.org/wiki/Key:addr:place">http://wiki.openstreetmap.org/wiki/Key:addr:place</a></p>
+<p>in the wiki, the tag addr:place is shown for this purpose <a href="https://wiki.openstreetmap.org/wiki/Key:addr:place">https://wiki.openstreetmap.org/wiki/Key:addr:place</a></p>
 <p>e.g. addr:place=Somevillage, addr:housenumber=123a</p>
-<p>I used this on some addresses in Rustavi, where houses are numbered by microraions instead of streets, seems to be the most apropriate way of tagging so far... <a href="http://www.openstreetmap.org/?lat=41.57088&amp;lon=44.96872&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=41.57088&amp;lon=44.96872&amp;zoom=17&amp;layers=M</a></p>
+<p>I used this on some addresses in Rustavi, where houses are numbered by microraions instead of streets, seems to be the most apropriate way of tagging so far... <a href="https://www.openstreetmap.org/?lat=41.57088&amp;lon=44.96872&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=41.57088&amp;lon=44.96872&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd say tag it with the smallest feature that it is part of (town, village, street, whatever) using addr:*. It would be useful to have examples to improve nominatim, if you can tag something, document it in the wiki and create an example here (<a href="http://wiki.openstreetmap.org/wiki/Nominatim/TestCases)">http://wiki.openstreetmap.org/wiki/Nominatim/TestCases)</a> it should hopefully get resolved as a developer finds time.</p>
+<p>I'd say tag it with the smallest feature that it is part of (town, village, street, whatever) using addr:*. It would be useful to have examples to improve nominatim, if you can tag something, document it in the wiki and create an example here (<a href="https://wiki.openstreetmap.org/wiki/Nominatim/TestCases)">https://wiki.openstreetmap.org/wiki/Nominatim/TestCases)</a> it should hopefully get resolved as a developer finds time.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

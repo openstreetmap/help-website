@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>This <a href="http://nominatim.openstreetmap.org/details.php?place_id=499064">Nominatim page</a> shows the Spanish Pensilvania, instead of Pennsylvania.<br />
 </p>
 <p>In case my Accept-Language is relevant, I have multiple English languages ("en-US", "en", "eng", and more), then eventually "es-es" and "es" lower in the list.</p>
-<p><strong>EDIT</strong>: When I use curl with no Accept-Language headers, it displays the English name. Looking at the <a href="http://www.openstreetmap.org/browse/relation/162109">relation</a> looks like the issue is that <code>name</code> is Pennsylvania, but there is no <code>name:en</code>, probably because English is the primary local language.</p>
+<p><strong>EDIT</strong>: When I use curl with no Accept-Language headers, it displays the English name. Looking at the <a href="https://www.openstreetmap.org/browse/relation/162109">relation</a> looks like the issue is that <code>name</code> is Pennsylvania, but there is no <code>name:en</code>, probably because English is the primary local language.</p>
 <p>My request explicitly allows en (preferred, but there is no name:en) and es (allowed, and there is name:es, but less preferred). What's the best way to address this (let me know if I should ask this follow-up separately)? Should name:en be added even though the local language is English?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We have a <a href="http://wiki.openstreetmap.org/wiki/We-Travel">wiki page about We Travel</a>.</p>
+<p>We have a <a href="https://wiki.openstreetmap.org/wiki/We-Travel">wiki page about We Travel</a>.</p>
 <p>I suppose since the website, <a href="http://we-travel.co.cc/">we-travel.co.cc/</a>, is currently down, their app data servers may also be down, and this may be causing you difficulties using the app. It may be that there <em>is</em> no procedure to download and convert data from OSM. Maybe the app does that automatically (when their servers are working) I'm just guessing really. Never used it myself.</p>
 </div>
 <div class="answer-controls post-controls">

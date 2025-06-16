@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a problem with garmin.openstreetmap.nl at the moment. See <a href="https://help.openstreetmap.org/questions/52812/gmapsuppimg-missing">this other question</a> for details.</p>
+<p>There's a problem with garmin.openstreetmap.nl at the moment. See <a href="/questions/52812/gmapsuppimg-missing">this other question</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -214,7 +214,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>See <a href="https://wiki.openstreetmap.org/wiki/MacOS">MacOS</a> in the OSM wiki. It lists various software for viewing maps, editing, recording GPX tracks and so on.</p>
-<p>According to your comment you are having problems with downloading maps from garmin.openstreetmap.nl. Please see this similar question here: <a href="https://help.openstreetmap.org/questions/52812/gmapsuppimg-missing">https://help.openstreetmap.org/questions/52812/gmapsuppimg-missing</a></p>
+<p>According to your comment you are having problems with downloading maps from garmin.openstreetmap.nl. Please see this similar question here: <a href="/questions/52812/gmapsuppimg-missing">https://help.openstreetmap.org/questions/52812/gmapsuppimg-missing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

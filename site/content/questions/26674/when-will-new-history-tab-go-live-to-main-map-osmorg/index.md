@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There has been an <strong><a href="http://owl.apis.dev.openstreetmap.org/">experimental OWL history tab</a></strong> running for some time now. When will replace the current history tab at <a href="http://www.openstreetmap.org/">www.openstreetmap.org</a> which gets a lot of editing noise that is not really relevant to a particular zoomed area?</p>
+<p>There has been an <strong><a href="http://owl.apis.dev.openstreetmap.org/">experimental OWL history tab</a></strong> running for some time now. When will replace the current history tab at <a href="https://www.openstreetmap.org/">www.openstreetmap.org</a> which gets a lot of editing noise that is not really relevant to a particular zoomed area?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osm.org" rel="tag" title="see questions tagged &#39;osm.org&#39;">osm.org</span> <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-history" rel="tag" title="see questions tagged &#39;history&#39;">history</span>
@@ -156,8 +156,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some hints can be found at <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks">Top_Ten_Tasks</a> ... but there has been no progress for some months.</p>
-<p>Maybe this issue can be addressed while meetings like <a href="http://wiki.openstreetmap.org/wiki/Karlsruhe_Hack_Weekend_October_2013">Karlsruhe_Hack_Weekend_October_2013</a> or some effortd from MapBox companie or similar?</p>
+<p>Some hints can be found at <a href="https://wiki.openstreetmap.org/wiki/Top_Ten_Tasks">Top_Ten_Tasks</a> ... but there has been no progress for some months.</p>
+<p>Maybe this issue can be addressed while meetings like <a href="https://wiki.openstreetmap.org/wiki/Karlsruhe_Hack_Weekend_October_2013">Karlsruhe_Hack_Weekend_October_2013</a> or some effortd from MapBox companie or similar?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

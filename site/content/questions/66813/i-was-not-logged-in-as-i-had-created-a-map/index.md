@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>see <a href="https://help.openstreetmap.org/questions/66814/the-link-to-edit-my-map-has-lost">https://help.openstreetmap.org/questions/66814/the-link-to-edit-my-map-has-lost</a> for an answer</p>
+<p>see <a href="/questions/66814/the-link-to-edit-my-map-has-lost">https://help.openstreetmap.org/questions/66814/the-link-to-edit-my-map-has-lost</a> for an answer</p>
 </div>
 <div id="comment-66821-info" class="comment-info">
 <span class="comment-age">(17 Nov '18, 12:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

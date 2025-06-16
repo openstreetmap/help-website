@@ -66,7 +66,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Perhaps your problem the same as the one described here:</p>
-<p><a href="http://help.openstreetmap.org/questions/7968/only-small-parts-of-my-gpx-track-is-visible-in-potlatch">http://help.openstreetmap.org/questions/7968/only-small-parts-of-my-gpx-track-is-visible-in-potlatch</a></p>
+<p><a href="/questions/7968/only-small-parts-of-my-gpx-track-is-visible-in-potlatch">https://help.openstreetmap.org/questions/7968/only-small-parts-of-my-gpx-track-is-visible-in-potlatch</a></p>
 <p>In my case I've not seen this when editing traces from the GPS trace list, but have seen it when selecting "GPS Data / GPS Data" from within Potlatch2. Do you get the same effect?</p>
 </div>
 <div id="comment-8820-info" class="comment-info">

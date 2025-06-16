@@ -190,7 +190,7 @@ osqa_accepted = false
 <p>However, J2ME is still by far the most commonly available app-framework on mobile phones, both in the feature phone (where it is pretty much the only available app-framework), as well as in the smartphone market, where the two leading platforms (Symbian (Nokia) and BlackBerry with a market share of over 60% of smartphones) both offer native J2ME support. So no need to install anything extra there.</p>
 <p>GpsMid is also working on a port to Android, that although uses Java has a different dialect than J2Me, hence needing the port, but this has progressed quite nicely.</p>
 <p>Most Windows Mobile devices don't support Java natively (although some do), but the <a href="http://davy.preuveneers.be/phoneme/">PhoneME</a> project offers JVMs that can be installed on most windows platforms.</p>
-<p>So that leaves about the iPhone, with its 2.7% market share in Q2 2010, for which GpsMid doesn't work. There are however plenty of other <a href="http://wiki.openstreetmap.org/wiki/IPhone">OpenStreetMap apps written for the iPhone</a></p>
+<p>So that leaves about the iPhone, with its 2.7% market share in Q2 2010, for which GpsMid doesn't work. There are however plenty of other <a href="https://wiki.openstreetmap.org/wiki/IPhone">OpenStreetMap apps written for the iPhone</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -64,7 +64,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>While you've gotten the correct answer already, but I would like to point out that while it is <em>local</em> names that are displayed with the default rendering, English names <em>are</em> in the database, and are searchable.</p>
-<p>For example if I <a href="http://www.openstreetmap.org/search?query=Beijing#map=11/39.9061/116.3912">search for "Beijing"</a>, the first result is the what you'd expect, the capital of China. The result is displayed in English. If I <a href="http://www.openstreetmap.org/node/25248662">click on it</a>, I get all the tags on the Beijing. This includes well over 100 names in different languages. On the map it is written as "北京市", but in the sidebar all those different languages are displayed.</p>
+<p>For example if I <a href="https://www.openstreetmap.org/search?query=Beijing#map=11/39.9061/116.3912">search for "Beijing"</a>, the first result is the what you'd expect, the capital of China. The result is displayed in English. If I <a href="https://www.openstreetmap.org/node/25248662">click on it</a>, I get all the tags on the Beijing. This includes well over 100 names in different languages. On the map it is written as "北京市", but in the sidebar all those different languages are displayed.</p>
 <p>While this is a bit of an extreme example, it allows maps to be rendered in different languages.</p>
 <p>Multilingual data is viewed as important to OSM, and the prominent local names, the non-English names (often written in non-Latin alphabets) is only one manifestation of that.</p>
 </div>
@@ -204,7 +204,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>On <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> click the 4th button down at the right-hand side. It looks a bit like a stack of books, and there's a tooltip that says "layers". The Cycle Map and the Transport Map show names in English as well as the local name. When you select e.g. the Cycle map you'll see the URL change to to something like <a href="http://www.openstreetmap.org/#map=10/39.9066/115.9799&amp;layers=C">http://www.openstreetmap.org/#map=10/39.9066/115.9799&amp;layers=C</a> so that when you send that link to someone it loads the cycle map for them too.</p>
+<p>On <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> click the 4th button down at the right-hand side. It looks a bit like a stack of books, and there's a tooltip that says "layers". The Cycle Map and the Transport Map show names in English as well as the local name. When you select e.g. the Cycle map you'll see the URL change to to something like <a href="https://www.openstreetmap.org/#map=10/39.9066/115.9799&amp;layers=C">https://www.openstreetmap.org/#map=10/39.9066/115.9799&amp;layers=C</a> so that when you send that link to someone it loads the cycle map for them too.</p>
 </div>
 <div id="comment-60947-info" class="comment-info">
 <span class="comment-age">(02 Dec '17, 14:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -215,7 +215,7 @@ osqa_accepted = true
 <div id="post-60974-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes,you just need to add "&amp;layers=" with C, T or H at the end, for example with Beijing: cycle map: <a href="http://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=C">http://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=C</a> , transportation map: <a href="http://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=T">http://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=T</a> , humanitarian map: <a href="http://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=H">http://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=H</a></p>
+<p>Yes,you just need to add "&amp;layers=" with C, T or H at the end, for example with Beijing: cycle map: <a href="https://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=C">https://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=C</a> , transportation map: <a href="https://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=T">https://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=T</a> , humanitarian map: <a href="https://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=H">https://www.openstreetmap.org/#map=8/39.802/116.112&amp;layers=H</a></p>
 </div>
 <div id="comment-60974-info" class="comment-info">
 <span class="comment-age">(03 Dec '17, 04:37)</span> <span class="comment-user userinfo">kocio</span>

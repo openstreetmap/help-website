@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Impvan, please use the already available tag scheme. But you could add technical details with a description of the used Railway line. See and read this link there several possibilities <a href="http://wiki.openstreetmap.org/wiki/Railway">http://wiki.openstreetmap.org/wiki/Railway</a></p>
+<p>Hi Impvan, please use the already available tag scheme. But you could add technical details with a description of the used Railway line. See and read this link there several possibilities <a href="https://wiki.openstreetmap.org/wiki/Railway">https://wiki.openstreetmap.org/wiki/Railway</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

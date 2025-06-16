@@ -122,7 +122,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It really depends how much detail you can be bothered to map with power lines. Personally I would represent this set up as either three ways joining to form a 'Y' shape, or as two ways (a longer one and spur joining on)...</p>
-<p>...and then I would stick at <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dline">power=line</a> tag on there. End of story.</p>
+<p>...and then I would stick at <a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dline">power=line</a> tag on there. End of story.</p>
 <p>Some super-diligent people might like to also tag ways with the number of cables, so you might have a way with cables=2 and way with cables=4 and beyond the point where they've joined together, another way with cables=6</p>
 <p>Different voltages? Well then you would have to draw two ways on top of eachother sharing the same nodes (NOT duplicate nodes) to represent this.</p>
 <p>Duplicate ways are a bit messy and difficult to work with in the editors. As such, it's worth thinking about avoiding them a little bit, but they are commonly used and widely accepted as the way to represent two different things, where tagging on the same way would not work.</p>
@@ -250,7 +250,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You get the best answers if you put your question here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Power_lines">http://wiki.openstreetmap.org/wiki/Power_lines</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Power_lines">https://wiki.openstreetmap.org/wiki/Power_lines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

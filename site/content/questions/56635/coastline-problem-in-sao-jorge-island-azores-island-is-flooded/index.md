@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Coastline problem in São Jorge Island, Azores (Island is &quot;Flooded&quot;)"
-description = '''Hello everyone, There seems to be a problem with São Jorge Island&#x27;s Coastline that I just Can&#x27;t figure out. http://www.openstreetmap.org/search?query=S%C3%A3o%20jorge#map=11/38.6447/-28.0348 For some reason the island is flooded and i&#x27;ve checked that all lines in the coastline are joining correctly ...'''
+description = '''Hello everyone, There seems to be a problem with São Jorge Island&#x27;s Coastline that I just Can&#x27;t figure out. https://www.openstreetmap.org/search?query=S%C3%A3o%20jorge#map=11/38.6447/-28.0348 For some reason the island is flooded and i&#x27;ve checked that all lines in the coastline are joining correctly ...'''
 date = "2017-06-15T20:23:00Z"
 lastmod = "2017-07-02T13:22:00Z"
 weight = 56635
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello everyone,</p>
 <p>There seems to be a problem with São Jorge Island's Coastline that I just Can't figure out.</p>
-<p><a href="http://www.openstreetmap.org/search?query=S%C3%A3o%20jorge#map=11/38.6447/-28.0348">http://www.openstreetmap.org/search?query=S%C3%A3o%20jorge#map=11/38.6447/-28.0348</a></p>
+<p><a href="https://www.openstreetmap.org/search?query=S%C3%A3o%20jorge#map=11/38.6447/-28.0348">https://www.openstreetmap.org/search?query=S%C3%A3o%20jorge#map=11/38.6447/-28.0348</a></p>
 <p>For some reason the island is flooded and i've checked that all lines in the coastline are joining correctly with each other and the relations also seem ok. I've ran some error checking tools, but they found none problems at the coastline.</p>
 <p>I thank anyone that can dig into this and provide some help.</p>
 <p>silva1989</p>

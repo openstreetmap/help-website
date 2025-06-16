@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Disclaimer: I never used MapSource or this specific Garmin model.</p>
-<p>See <a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a> . My personal (and quite country-independent) suggestion is: try a map from <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> and do not use mapsource but copy the .img file directly to the mass storage device.</p>
+<p>See <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a> . My personal (and quite country-independent) suggestion is: try a map from <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> and do not use mapsource but copy the .img file directly to the mass storage device.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

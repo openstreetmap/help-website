@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I have a tile server set up, and was using osmosis to update the database. However, the process stopped working, and when I analyzed the logs, it appears that when I shut down the server (in order to move to a new timezone), the update process stopped working.</p>
 <p>Here is the relevant portion of the log file:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-07-21_at_20.04.45.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2018-07-21_at_20.04.45.png" alt="alt text" /></p>
 <p>A current osmosis.log shows this:</p>
 <pre><code>Jul 21, 2018 7:15:01 PM org.openstreetmap.osmosis.core.Osmosis run INFO: Osmosis Version 0.46 Jul 21, 2018 7:15:02 PM org.openstreetmap.osmosis.core.Osmosis run INFO: Preparing pipeline. Jul 21, 2018 7:15:02 PM org.openstreetmap.osmosis.core.Osmosis run INFO: Launching pipeline execution. Jul 21, 2018 7:15:02 PM org.openstreetmap.osmosis.core.Osmosis run INFO: Pipeline executing, waiting for completion. Jul 21, 2018 7:15:03 PM org.openstreetmap.osmosis.core.pipeline.common.ActiveTaskManager waitForCompletion SEVERE: Thread for task 1-read-replication-interval failed org.openstreetmap.osmosis.core.OsmosisRuntimeException: The replication state doesn&#39;t contain a timestamp property.
     at org.openstreetmap.osmosis.replication.common.ReplicationState.loadProperty(ReplicationState.java:65)

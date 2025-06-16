@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With regard point 1, there is a way of tagging access restrictions with effective hours, see <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a>, maybe this can be of help to you tagging maximum weights?</p>
+<p>With regard point 1, there is a way of tagging access restrictions with effective hours, see <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a>, maybe this can be of help to you tagging maximum weights?</p>
 <p>For the second point you could use maxweight=7.5 along with hgv=destination to indicate the "except access"</p>
 <p>Gary</p>
 </div>

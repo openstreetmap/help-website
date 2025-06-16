@@ -89,7 +89,7 @@ osqa_accepted = true
 <div id="post-41713-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/716/dcp">@dcp</a>: see SomeoneElse's answer there ("The second issue").</p>
+<p><a href="https://help.openstreetmap.org/users/716/dcp">@dcp</a>: see SomeoneElse's answer there ("The second issue").</p>
 </div>
 <div id="comment-41713-info" class="comment-info">
 <span class="comment-age">(14 Mar '15, 20:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -197,7 +197,7 @@ One Answer:
 5
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/716/dcp">@dcp</a> I wouldn't worry about how one particular rendering shows a particular tag. That can easily be changed (if appropriate) later. Note that a "non-car" icon was discussed over on the "standard" style's github:</p>
+<p><a href="https://help.openstreetmap.org/users/716/dcp">@dcp</a> I wouldn't worry about how one particular rendering shows a particular tag. That can easily be changed (if appropriate) later. Note that a "non-car" icon was discussed over on the "standard" style's github:</p>
 <p><a href="https://github.com/gravitystorm/openstreetmap-carto/issues/118">https://github.com/gravitystorm/openstreetmap-carto/issues/118</a></p>
 </div>
 <div id="comment-41710-info" class="comment-info">
@@ -235,7 +235,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/716/dcp">@dcp</a>: yes, that icon is wrong. Please still add the data correctly (path and ford) and ask the relevant map creator to change the icon. It is not a problem of the data but only of the map rendering.</p>
+<p><a href="https://help.openstreetmap.org/users/716/dcp">@dcp</a>: yes, that icon is wrong. Please still add the data correctly (path and ford) and ask the relevant map creator to change the icon. It is not a problem of the data but only of the map rendering.</p>
 </div>
 <div id="comment-41714-info" class="comment-info">
 <span class="comment-age">(14 Mar '15, 20:17)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

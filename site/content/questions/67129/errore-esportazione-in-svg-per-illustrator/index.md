@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><span class="small"><a href="https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports">fixed</a> - please try again.</span></p>
+<p><span class="small"><a href="/questions/65497/is-there-any-change-in-svg-exports">fixed</a> - please try again.</span></p>
 <p>per favore, riprovaci ora.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -211,7 +211,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's probably the same as in <a href="https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports/67940">https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports/67940</a> - in short, this bug is now fixed.</p>
+<p>That's probably the same as in <a href="/questions/65497/is-there-any-change-in-svg-exports/67940">https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports/67940</a> - in short, this bug is now fixed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

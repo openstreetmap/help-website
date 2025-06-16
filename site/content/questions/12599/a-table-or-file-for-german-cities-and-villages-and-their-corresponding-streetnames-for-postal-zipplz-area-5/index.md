@@ -110,7 +110,7 @@ One Answer:
 <p>In Germany almost all postal code areas are collected in the OSM data.</p>
 <p>So you have to find out all boundary relations that have postal_code=5**** ...</p>
 <p>and then find all streets that belong to each postal code area.</p>
-<p>Some basic hints might be found at <a href="http://wiki.openstreetmap.org/wiki/Stra%C3%9Fenverzeichnis">Straßenverzeichnis</a> in the wiki</p>
+<p>Some basic hints might be found at <a href="https://wiki.openstreetmap.org/wiki/Stra%C3%9Fenverzeichnis">Straßenverzeichnis</a> in the wiki</p>
 <p>Although I do not know the exact tools to do that, do not hesitate to ask also at the German section of the OSM forum or the German OSM mailinglist, there are more "experts"</p>
 </div>
 <div class="answer-controls post-controls">

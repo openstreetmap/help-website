@@ -141,7 +141,7 @@ osqa_accepted = false
 <div id="post-13784-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch shortcuts</a> page actually says "/ - cycle through overlapping ways (at selected node, or where the way was clicked) ( # - on german keyboards, * - on Scandinavian keyboards)". You might have to experiment a bit...</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch shortcuts</a> page actually says "/ - cycle through overlapping ways (at selected node, or where the way was clicked) ( # - on german keyboards, * - on Scandinavian keyboards)". You might have to experiment a bit...</p>
 </div>
 <div id="comment-13784-info" class="comment-info">
 <span class="comment-age">(26 Jun '12, 09:31)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -115,7 +115,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is easy to explain the difference: both the ele and the ele:wgs84 tag give the elevation above the wgs84 ellipsoid. The ellipsoid is a simplified model of the shape of the earth. The wiki page on the ele tag misleadingly states this as "above sea level" which is only very roughly true.</p>
-<p>The elevations given elsewhere are likely to be using the official local reference system, see <a href="http://wiki.openstreetmap.org/wiki/Key:ele">http://wiki.openstreetmap.org/wiki/Key:ele</a></p>
+<p>The elevations given elsewhere are likely to be using the official local reference system, see <a href="https://wiki.openstreetmap.org/wiki/Key:ele">https://wiki.openstreetmap.org/wiki/Key:ele</a></p>
 <p>Simon</p>
 </div>
 <div class="answer-controls post-controls">
@@ -139,7 +139,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Many thanks for your quick response, but I wonder why for most other countries there isn't such a discrepancy. Why doesn't OSM use ele:local everywhere if this is the more common elevation measure?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:ele">http://wiki.openstreetmap.org/wiki/Key:ele</a> seems to be an empty page ("There is currently no text in this page").</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:ele">https://wiki.openstreetmap.org/wiki/Key:ele</a> seems to be an empty page ("There is currently no text in this page").</p>
 </div>
 <div id="comment-15425-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 07:55)</span> <span class="comment-user userinfo">wandro</span>

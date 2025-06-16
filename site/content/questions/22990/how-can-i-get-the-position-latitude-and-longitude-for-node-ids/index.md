@@ -240,7 +240,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>That's because that node was deleted a long time ago.</p>
-<p><a href="http://www.openstreetmap.org/browse/node/2126333/history">http://www.openstreetmap.org/browse/node/2126333/history</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/2126333/history">https://www.openstreetmap.org/browse/node/2126333/history</a></p>
 </div>
 <div id="comment-23149-info" class="comment-info">
 <span class="comment-age">(09 Jun '13, 15:49)</span> <span class="comment-user userinfo">cartinus</span>
@@ -252,7 +252,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>and from where do you got that node id? <a href="http://www.openstreetmap.org/browse/node/2126333/history">deleted in 2006</a> and was in the USA ...</p>
+<p>and from where do you got that node id? <a href="https://www.openstreetmap.org/browse/node/2126333/history">deleted in 2006</a> and was in the USA ...</p>
 </div>
 <div id="comment-23150-info" class="comment-info">
 <span class="comment-age">(09 Jun '13, 15:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -348,7 +348,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Is your question that you have a name of a town and you want a coordinate? Then you can use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> to get the coordinate.</p>
+<p>Is your question that you have a name of a town and you want a coordinate? Then you can use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> to get the coordinate.</p>
 <p>HTH /al</p>
 </div>
 <div class="answer-controls post-controls">
@@ -399,7 +399,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Type a city name in the search box to centre the map on the city. then right click permalink, then copy and paste it. This is the Chinese capital. <a href="http://www.openstreetmap.org/?lat=39.907&amp;lon=116.393&amp;zoom=11&amp;layers=M">http://www.openstreetmap.org/?lat=39.907&amp;lon=116.393&amp;zoom=11&amp;layers=M</a> you can see it as the Lat and Lon in it.</p>
+<p>Type a city name in the search box to centre the map on the city. then right click permalink, then copy and paste it. This is the Chinese capital. <a href="https://www.openstreetmap.org/?lat=39.907&amp;lon=116.393&amp;zoom=11&amp;layers=M">https://www.openstreetmap.org/?lat=39.907&amp;lon=116.393&amp;zoom=11&amp;layers=M</a> you can see it as the Lat and Lon in it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -132,7 +132,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>First of all, if you are starting to need more data than a small box you will need to find another way to download data. The "export" option on osm.org has some limitations on it because it uses the API that is intended for mappers to use in editing the map, not for bulk downloads of map data. If you need more data, please take a look at this page on the wiki:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts</a><br />
 There are several providers of city and country extracts which are more suited than the export option on osm.org.</p>
 <p>As for your tile problem, it is probably because renderd is caching the tiles. When your browser requests a map tile from the web server, the request is handled by mod_tile which first checks to see if there is a cached version of the tile. If so, it serves it up from the cache. Otherwise it calls renderd/mapnik to render the tile and then puts it in the tile cache so it can be served more quickly next time.</p>
 <p>To flush the cache you can try this command:</p>

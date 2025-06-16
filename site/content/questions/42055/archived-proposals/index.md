@@ -109,7 +109,7 @@ One Answer:
 <ol>
 <li>Make sure all relevant content should is found elsewhere. Do <strong>not</strong> move the proposal page, though, as the proposal page history should stay where it is.</li>
 <li>Open the history tab of the proposal page and click on the version you want to present to an user interested in the proposal. This is usually the latest version before the archiving begins. In the URL, you will see something like "oldid=1158564". The numeric value is what we are looking for.</li>
-<li>Replace all text on the proposal page (with the exceptions named below) with the <a href="http://wiki.openstreetmap.org/wiki/Template:Archived_proposal">"Archived proposal"</a> template. Use the oldid we found in the previous step as its parameter.</li>
+<li>Replace all text on the proposal page (with the exceptions named below) with the <a href="https://wiki.openstreetmap.org/wiki/Template:Archived_proposal">"Archived proposal"</a> template. Use the oldid we found in the previous step as its parameter.</li>
 <li>The proposal page should now contain a link to the current location of the documentation, the proposal infobox, and the "archived proposal" template. Save your changes.</li>
 </ol>
 <p>I hope that makes things clearer. :)</p>

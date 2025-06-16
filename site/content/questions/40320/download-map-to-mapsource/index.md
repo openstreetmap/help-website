@@ -153,7 +153,7 @@ osqa_accepted = false
 <div id="post-40382-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10325/artlocks">@artlocks</a>: thanks for the feedback! I guess you have some strange settings in your Mozilla (so, likely not really this browser's fault). I tested it with my Mozilla Firefox and had no problems.</p>
+<p><a href="https://help.openstreetmap.org/users/10325/artlocks">@artlocks</a>: thanks for the feedback! I guess you have some strange settings in your Mozilla (so, likely not really this browser's fault). I tested it with my Mozilla Firefox and had no problems.</p>
 </div>
 <div id="comment-40382-info" class="comment-info">
 <span class="comment-age">(15 Jan '15, 02:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

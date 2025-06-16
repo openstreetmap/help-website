@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>We only use GB <a href="https://www.ordnancesurvey.co.uk/opendatadownload/products.html">OS Open Data</a>, released under the Open Government Licence. We attribute OS open Data in our copyright page as required. We cannot use regular OS data as any kind of source, nor can we use data derived from OS sources such as the recently released UK Land Registry cadastral data, even though LR would like to release it as Open Data.</p>
-<p>To attribute OSM you can see the detail <a href="http://www.openstreetmap.org/copyright">here</a></p>
+<p>To attribute OSM you can see the detail <a href="https://www.openstreetmap.org/copyright">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

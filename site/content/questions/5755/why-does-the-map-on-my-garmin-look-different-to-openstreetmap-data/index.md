@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-5760-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=63.0429&amp;lon=40.31&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=63.0429&amp;lon=40.31&amp;zoom=12&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=63.0429&amp;lon=40.31&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=63.0429&amp;lon=40.31&amp;zoom=12&amp;layers=M</a></p>
 <p>You will see a town called Emka with a red road that continues on to the northeast. On the mkgmap generated map there is a big gap in this road from Emka to Malinovka.</p>
 </div>
 <div id="comment-5760-info" class="comment-info">
@@ -95,7 +95,7 @@ osqa_accepted = false
 <div id="post-5762-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this the road that corresponds to the gap: <a href="http://www.openstreetmap.org/browse/way/4406162">http://www.openstreetmap.org/browse/way/4406162</a></p>
+<p>Is this the road that corresponds to the gap: <a href="https://www.openstreetmap.org/browse/way/4406162">https://www.openstreetmap.org/browse/way/4406162</a></p>
 </div>
 <div id="comment-5762-info" class="comment-info">
 <span class="comment-age">(14 Jun '11, 12:29)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -190,7 +190,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This question has been asked before and has several answers at <a href="http://help.openstreetmap.org/questions/4006/why-does-an-osm-map-on-my-garmin-look-different-to-the-web-site?page=1#4008">Why does an OSM map on Garmin look different to the web site</a>.</p>
+<p>This question has been asked before and has several answers at <a href="/questions/4006/why-does-an-osm-map-on-my-garmin-look-different-to-the-web-site?page=1#4008">Why does an OSM map on Garmin look different to the web site</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

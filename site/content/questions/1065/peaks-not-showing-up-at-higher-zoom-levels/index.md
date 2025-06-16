@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have adjusted the administrative boundaries of my home town to the exact location as specified in the 'Bauleitplan'. This boundary is definied by a series of peaks it travels through. I added a 'natural=peak' for these points, but at zoom level 11 the peaks don't show up (at level 12 they do). Is it necessary for zoom level 11 that the peaks are stand-alone points? is it because the administrative boundary is not shown at that level that also these points are hidden?</p>
-<p>The region in question is the following: <a href="http://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M">http://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M</a></p>
+<p>The region in question is the following: <a href="https://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M">https://www.openstreetmap.org/?lat=46.903&amp;lon=11.67&amp;zoom=11&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span>

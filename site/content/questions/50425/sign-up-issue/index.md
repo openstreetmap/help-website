@@ -62,7 +62,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>I'd mention it over on IRC - the #osm-dev channel on OFTC. See <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> for details.</p>
+<p>I'd mention it over on IRC - the #osm-dev channel on OFTC. See <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a> for details.</p>
 </div>
 <div id="comment-50426-info" class="comment-info">
 <span class="comment-age">(23 Jun '16, 21:33)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

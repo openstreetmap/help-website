@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Using Inner and Outer Relations"
-description = '''Following this recent question (http://help.openstreetmap.org/questions/14724/tagging-and-rendering-island) I looked at a lake and island I mapped a while ago. The island is not rendered. I am having problems with linking the inner and outer relations I have done the clockwise polygon for the lake a...'''
+description = '''Following this recent question (https://help.openstreetmap.org/questions/14724/tagging-and-rendering-island) I looked at a lake and island I mapped a while ago. The island is not rendered. I am having problems with linking the inner and outer relations I have done the clockwise polygon for the lake a...'''
 date = "2012-07-31T21:25:00Z"
 lastmod = "2012-08-01T13:15:00Z"
 weight = 14732
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Following this recent question (<a href="http://help.openstreetmap.org/questions/14724/tagging-and-rendering-island)">http://help.openstreetmap.org/questions/14724/tagging-and-rendering-island)</a> I looked at a lake and island I mapped a while ago. The island is not rendered. I am having problems with linking the inner and outer relations I have done the clockwise polygon for the lake and the anti clockwise polygon for the island and tagged them but cannot find the info on what to do with the relation box in advanced mode tag box in the wiki. I need a step by step of that bit please using Potlach2.</p>
+<p>Following this recent question (<a href="/questions/14724/tagging-and-rendering-island)">https://help.openstreetmap.org/questions/14724/tagging-and-rendering-island)</a> I looked at a lake and island I mapped a while ago. The island is not rendered. I am having problems with linking the inner and outer relations I have done the clockwise polygon for the lake and the anti clockwise polygon for the island and tagged them but cannot find the info on what to do with the relation box in advanced mode tag box in the wiki. I need a step by step of that bit please using Potlach2.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-island" rel="tag" title="see questions tagged &#39;island&#39;">island</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-14733-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Its here <a href="http://www.openstreetmap.org/?lat=52.337778&amp;lon=-0.125548&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.337778&amp;lon=-0.125548&amp;zoom=18&amp;layers=M</a></p>
+<p>Its here <a href="https://www.openstreetmap.org/?lat=52.337778&amp;lon=-0.125548&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.337778&amp;lon=-0.125548&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-14733-info" class="comment-info">
 <span class="comment-age">(31 Jul '12, 21:29)</span> <span class="comment-user userinfo">andy mackey</span>

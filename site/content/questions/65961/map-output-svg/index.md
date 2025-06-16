@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Probably the same issue as <a href="https://help.openstreetmap.org/questions/65497/is-thereany-change-in-svg-exports">https://help.openstreetmap.org/questions/65497/is-thereany-change-in-svg-exports</a></p>
+<p>Probably the same issue as <a href="/questions/65497/is-thereany-change-in-svg-exports">https://help.openstreetmap.org/questions/65497/is-thereany-change-in-svg-exports</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -111,7 +111,7 @@ One Answer:
 <div class="answer-body">
 <p>Unsigned bigint and smallint for the id and version. Note sure what "type" is in your case. If it's types of recycling amenities, you probably want text. If it's about way/node/relation, set looks like what you want, but it might be better to use three different tables instead.</p>
 <p>The OSM community usually uses postgres instead of mysql, so you're probably better off with PG (there are many non-osm-related reasons you should do that anyway, but let's keep this to the point). The answers for pg types are pretty much the same as for mysql.</p>
-<p>There are <a href="http://wiki.openstreetmap.org/wiki/Category:OSM_processing">a few tools</a> that import osm data into postgres which might interest you.</p>
+<p>There are <a href="https://wiki.openstreetmap.org/wiki/Category:OSM_processing">a few tools</a> that import osm data into postgres which might interest you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -109,8 +109,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's going to be an <a href="http://wiki.openstreetmap.org/wiki/Planet">awful lot of data</a> if you want to process the whole planet. Maybe start with a smaller data <a href="http://wiki.openstreetmap.org/wiki/Planet#Country_and_area_extracts">extract</a> (perhaps for a smaller country) first?</p>
-<p>One approach, as detailed <a href="http://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list/16248">here</a>, would be to use <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> - in your case you'd want to extract ways tagged "<a href="http://wiki.openstreetmap.org/wiki/Highway">highway</a>" and then exclude from that those that people <a href="http://wiki.openstreetmap.org/wiki/Key:foot">aren't allowed to walk on</a>.</p>
+<p>That's going to be an <a href="https://wiki.openstreetmap.org/wiki/Planet">awful lot of data</a> if you want to process the whole planet. Maybe start with a smaller data <a href="https://wiki.openstreetmap.org/wiki/Planet#Country_and_area_extracts">extract</a> (perhaps for a smaller country) first?</p>
+<p>One approach, as detailed <a href="/questions/9816/the-best-way-to-extract-street-list/16248">here</a>, would be to use <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a> - in your case you'd want to extract ways tagged "<a href="https://wiki.openstreetmap.org/wiki/Highway">highway</a>" and then exclude from that those that people <a href="https://wiki.openstreetmap.org/wiki/Key:foot">aren't allowed to walk on</a>.</p>
 <p>An alternative approach would be to throw all the OSM data data into a database and then work with it there. The instructions <a href="http://switch2osm.org/serving-tiles/">here</a> are designed to support a tile server (which you don't need) but do cover loading the planet or an extract into a database, from which you could process it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -131,7 +131,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">access restrictions page</a> for implicit default access values for different countries. Additionally there are various interesting hiking tags, especially <a href="http://wiki.openstreetmap.org/wiki/Key:sac_scale">sac_scale</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:trail_visibility">trail_visibility</a> and of course <a href="http://wiki.openstreetmap.org/wiki/Relation:route">hiking routes</a>. The <a href="http://wiki.openstreetmap.org/wiki/Hiking">hiking wiki page</a> has more information.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">access restrictions page</a> for implicit default access values for different countries. Additionally there are various interesting hiking tags, especially <a href="https://wiki.openstreetmap.org/wiki/Key:sac_scale">sac_scale</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:trail_visibility">trail_visibility</a> and of course <a href="https://wiki.openstreetmap.org/wiki/Relation:route">hiking routes</a>. The <a href="https://wiki.openstreetmap.org/wiki/Hiking">hiking wiki page</a> has more information.</p>
 </div>
 <div id="comment-19094-info" class="comment-info">
 <span class="comment-age">(15 Jan '13, 08:49)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -155,7 +155,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>That sort of radius should be well within the capabilities of <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> or an <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> server (perhaps one that you host along with the rest of your application)</p>
+<p>That sort of radius should be well within the capabilities of <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> or an <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> server (perhaps one that you host along with the rest of your application)</p>
 </div>
 <div id="comment-19131-info" class="comment-info">
 <span class="comment-age">(15 Jan '13, 21:59)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

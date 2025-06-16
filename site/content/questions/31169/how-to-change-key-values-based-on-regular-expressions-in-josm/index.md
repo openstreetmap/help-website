@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi</p>
-<p>I would like to fix simple mistakes in the <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours tag</a> based on regular expressions but only if it is clear what they mean … One example (<a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours#Often_made_mistakes">second example on the key page</a>) is opening_hours=0600-1800 → opening_hours=06:00-18:00.</p>
+<p>I would like to fix simple mistakes in the <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">opening_hours tag</a> based on regular expressions but only if it is clear what they mean … One example (<a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours#Often_made_mistakes">second example on the key page</a>) is opening_hours=0600-1800 → opening_hours=06:00-18:00.</p>
 <p>An example Python script looks like this:</p>
 <pre><code>#!/usr/bin/env python
 # encoding: utf-8
@@ -88,7 +88,7 @@ print &#39;%s -&gt; %s&#39; % (wrong, bot_right_val)</code></pre>
 <div id="post-31172-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@aseerel4c26</span> I already read this page. Thanks for the hint. The problem is that I did not really find a description about how to do it. I thought about writing a <a href="http://wiki.openstreetmap.org/w/index.php?title=User:Xybot">Xybot</a> rule file but I wanted to test this first in a simple way.</p>
+<p><span>@aseerel4c26</span> I already read this page. Thanks for the hint. The problem is that I did not really find a description about how to do it. I thought about writing a <a href="https://wiki.openstreetmap.org/w/index.php?title=User:Xybot">Xybot</a> rule file but I wanted to test this first in a simple way.</p>
 </div>
 <div id="comment-31172-info" class="comment-info">
 <span class="comment-age">(02 Mar '14, 15:53)</span> <span class="comment-user userinfo">ypid</span>

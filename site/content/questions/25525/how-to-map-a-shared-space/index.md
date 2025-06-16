@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p><a href="https://en.wikipedia.org/wiki/Shared_space">Wikipedia explanation</a></p>
 <p><a href="https://www.youtube.com/watch?v=zpHlj5j7nyY">Video of shared spaces in the Netherlands</a></p>
-<p>We got one this week at the ends of a big shopping mile in the capital of Austria: <a href="http://www.openstreetmap.org/#map=17/48.20092/16.35839&amp;layers=N">1</a> <a href="http://www.openstreetmap.org/#map=17/48.19676/16.34413&amp;layers=N">2</a></p>
+<p>We got one this week at the ends of a big shopping mile in the capital of Austria: <a href="https://www.openstreetmap.org/#map=17/48.20092/16.35839&amp;layers=N">1</a> <a href="https://www.openstreetmap.org/#map=17/48.19676/16.34413&amp;layers=N">2</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi consider tag and value, highway - living street, <a href="http://wiki.openstreetmap.org/wiki/Living_street">http://wiki.openstreetmap.org/wiki/Living_street</a> and the Dutch specific <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/NL">http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/NL</a> and <a href="http://wiki.openstreetmap.org/wiki/NL:The_Netherlands_roads_tagging">http://wiki.openstreetmap.org/wiki/NL:The_Netherlands_roads_tagging</a></p>
+<p>hi consider tag and value, highway - living street, <a href="https://wiki.openstreetmap.org/wiki/Living_street">https://wiki.openstreetmap.org/wiki/Living_street</a> and the Dutch specific <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/NL">https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/NL</a> and <a href="https://wiki.openstreetmap.org/wiki/NL:The_Netherlands_roads_tagging">https://wiki.openstreetmap.org/wiki/NL:The_Netherlands_roads_tagging</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "marking more than one way"
-description = '''Hi! I found some links like: http://www.openstreetmap.org/?way=273332264  which mark a part of a street. So I was wondering how to mark the whole street or maybe several streets and I found in the wiki: Get way by ID - which describes what I get from the above url, because when it is entered in the ...'''
+description = '''Hi! I found some links like: https://www.openstreetmap.org/?way=273332264  which mark a part of a street. So I was wondering how to mark the whole street or maybe several streets and I found in the wiki: Get way by ID - which describes what I get from the above url, because when it is entered in the ...'''
 date = "2014-12-19T09:45:00Z"
 lastmod = "2014-12-19T12:32:00Z"
 weight = 39714
@@ -41,15 +41,15 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi!</p>
 <p>I found some links like:</p>
-<pre><code>http://www.openstreetmap.org/?way=273332264</code></pre>
+<pre><code>https://www.openstreetmap.org/?way=273332264</code></pre>
 <p>which mark a part of a street. So I was wondering how to mark the whole street or maybe several streets and I found in the wiki:</p>
 <p>Get way by ID - which describes what I get from the above url, because when it is entered in the browser it's rewritten by the server to</p>
-<pre><code>http://www.openstreetmap.org/way/273332264</code></pre>
+<pre><code>https://www.openstreetmap.org/way/273332264</code></pre>
 <p>I looked further and found</p>
 <p>Get ways describing the url as being</p>
 <pre><code>/ways?ways=id1,id2,id3...</code></pre>
 <p>But I couldn't figure out how to apply this to "my" street which would be</p>
-<pre><code>http://www.openstreetmap.org/ways?ways=273332264,273332263,33527209,142030348,33239773,22889305,273332262,190065022,273332252,257255152,273332271,273332270,273332266,208884097,129032431,273332260,273332259,273332269,273332265,273332261,273332267,273332258,273332268</code></pre>
+<pre><code>https://www.openstreetmap.org/ways?ways=273332264,273332263,33527209,142030348,33239773,22889305,273332262,190065022,273332252,257255152,273332271,273332270,273332266,208884097,129032431,273332260,273332259,273332269,273332265,273332261,273332267,273332258,273332268</code></pre>
 <p>Unfortunately this did not work as expected. Is there another way to get this accomplished?</p>
 <p>There is alsready a kind soul in Germany who set up a server which allows this (plus more), but I'd also like to know how this would be possible directly on openstreetmaps.</p>
 </div>
@@ -100,7 +100,7 @@ osqa_accepted = false
 <blockquote>
 <p>Where did you read about /ways?ways=id1,id2,id3...</p>
 </blockquote>
-<p>Sorry! Completely forgot to give the link. <a href="http://wiki.openstreetmap.org/wiki/API_v0.4#Get_ways">http://wiki.openstreetmap.org/wiki/API_v0.4#Get_ways</a></p>
+<p>Sorry! Completely forgot to give the link. <a href="https://wiki.openstreetmap.org/wiki/API_v0.4#Get_ways">https://wiki.openstreetmap.org/wiki/API_v0.4#Get_ways</a></p>
 <blockquote>
 <p>Which server are you talking about already supports this?</p>
 </blockquote>
@@ -135,7 +135,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10202/5keeve">@5keeve</a> that's actually quite an old version of the API; try looking at <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">http://wiki.openstreetmap.org/wiki/API_v0.6</a> (or more likely, other services such as Overpass)</p>
+<p><a href="https://help.openstreetmap.org/users/10202/5keeve">@5keeve</a> that's actually quite an old version of the API; try looking at <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">https://wiki.openstreetmap.org/wiki/API_v0.6</a> (or more likely, other services such as Overpass)</p>
 </div>
 <div id="comment-39722-info" class="comment-info">
 <span class="comment-age">(19 Dec '14, 12:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -147,7 +147,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Did so:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Multi_fetch:">http://wiki.openstreetmap.org/wiki/API_v0.6#Multi_fetch:</a><em>GET</em>.2Fapi.2F0.6.2F.5Bnodes.7Cways.7Crelations.5D.3F.23parameters</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Multi_fetch:">https://wiki.openstreetmap.org/wiki/API_v0.6#Multi_fetch:</a><em>GET</em>.2Fapi.2F0.6.2F.5Bnodes.7Cways.7Crelations.5D.3F.23parameters</p>
 <p>Looks the same</p>
 <pre><code>.../ways?ways=id1,id2,...</code></pre>
 </div>
@@ -163,7 +163,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Besides having looked at the wrong API version: This is really just the API and not the website documentation. Moreover for visualizing you should not use the website directly but instead some framework such as Leaflet or OpenLayers. It is also possible that uMap will suit your needs.</p>
 <p><em>edit:</em></p>
-<p>It <em>does</em> work, but just for the <em>API</em> calls which just return raw data without visualization. See this working example: <a href="http://www.openstreetmap.org/api/0.6/ways?ways=1234,2345">http://www.openstreetmap.org/api/0.6/ways?ways=1234,2345</a></p>
+<p>It <em>does</em> work, but just for the <em>API</em> calls which just return raw data without visualization. See this working example: <a href="https://www.openstreetmap.org/api/0.6/ways?ways=1234,2345">https://www.openstreetmap.org/api/0.6/ways?ways=1234,2345</a></p>
 </div>
 <div id="comment-39724-info" class="comment-info">
 <span class="comment-age">(19 Dec '14, 12:28)</span> <span class="comment-user userinfo">scai ♦</span>

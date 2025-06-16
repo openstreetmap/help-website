@@ -113,8 +113,8 @@ One Answer:
 <p>I think the best way to tag it would be amenity=social_facility . Add social_facility=group_home to signify that it is for some special group and is residential and add social_facility:for=drug_addicted to tell the place is a drug user support group.</p>
 <p>Reference:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:social_facility">http://wiki.openstreetmap.org/wiki/Key:social_facility</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dgroup_home">http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dgroup_home</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:social_facility">https://wiki.openstreetmap.org/wiki/Key:social_facility</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dgroup_home">https://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dgroup_home</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

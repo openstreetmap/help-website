@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can tag the intersection node as <code>junction=yes</code>, plus <code>name=</code> or <code>ref=</code> as appropriate. See <a href="http://wiki.openstreetmap.org/wiki/Key:junction">key:junction</a></p>
+<p>You can tag the intersection node as <code>junction=yes</code>, plus <code>name=</code> or <code>ref=</code> as appropriate. See <a href="https://wiki.openstreetmap.org/wiki/Key:junction">key:junction</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

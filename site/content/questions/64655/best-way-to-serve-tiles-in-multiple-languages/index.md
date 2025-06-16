@@ -258,7 +258,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Using COALESCE give me some strange results : I'm requesting some Paris tiles in french, so for that I'm doing <code>COALESCE(tags-&gt;'name:fr', tags-&gt;'name:en', tags-&gt;'int_name', name)</code>. But as you can see on the picture below, it sometimes shows both english and french names (like "Paris 18e Arrondissement" is the french name, and "18th Arrondissement" the english name).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/paris_fr.png" alt="alt text" /></p>
+<p><img src="/upfiles/paris_fr.png" alt="alt text" /></p>
 <p>Why? I suppose it is because there is two differents labels for the same thing, but one with no french name... How do I prevent that? Is there a way to use directly the "name" attribute if the requested language is the language of the place we are looking at? (seems a bit tricky when writing this...)</p>
 <p>Thanks!</p>
 </div>

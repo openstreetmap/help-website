@@ -118,10 +118,10 @@ One Answer:
 </ol>
 <p>Essentially, you have two options:</p>
 <ol>
-<li>Download a map that someone else has made. There's a list <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">here</a>.</li>
+<li>Download a map that someone else has made. There's a list <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">here</a>.</li>
 <li>Create your own map based on OSM data that you've downloaded, using a program such as <a href="http://www.mkgmap.org.uk/page/main">mkgmap</a> and data from a site such as <a href="http://download.geofabrik.de/">Geofabrik</a>.</li>
 </ol>
-<p>Questions similar to this have been asked before - it might also help to read <a href="http://help.openstreetmap.org/questions/2912/how-can-i-install-osm-maps-on-my-garmin">this one</a> or just search this help site for <a href="http://help.openstreetmap.org/tags/garmin/">"Garmin"</a>.</p>
+<p>Questions similar to this have been asked before - it might also help to read <a href="/questions/2912/how-can-i-install-osm-maps-on-my-garmin">this one</a> or just search this help site for <a href="https://help.openstreetmap.org/tags/garmin/">"Garmin"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

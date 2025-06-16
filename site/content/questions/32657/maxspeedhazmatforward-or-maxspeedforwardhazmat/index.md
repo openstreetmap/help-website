@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">Conditional Restrictions</a> Wiki page <strong>hazmat</strong> should be treated as Condition, so my conclusion would be something like</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">Conditional Restrictions</a> Wiki page <strong>hazmat</strong> should be treated as Condition, so my conclusion would be something like</p>
 <pre><code>maxspeed:forward:conditional = 50 @ hazmat</code></pre>
 <p>(50km/h for hazmat vehicles in direction of the way).</p>
 </div>

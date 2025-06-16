@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi ManuelJohannes, welcome. Tracks is a tricky definition. What kind of tracks, with guidance along the track or your own walks through the world ? Guided tracks can be uploaded, but OSM should not be your own track collection. Read these lines as well <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">http://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a> ,with some guidance and ways how to handle the upload of your tracks it depends on the way youve collected them.</p>
+<p>Hi ManuelJohannes, welcome. Tracks is a tricky definition. What kind of tracks, with guidance along the track or your own walks through the world ? Guided tracks can be uploaded, but OSM should not be your own track collection. Read these lines as well <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">https://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a> ,with some guidance and ways how to handle the upload of your tracks it depends on the way youve collected them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

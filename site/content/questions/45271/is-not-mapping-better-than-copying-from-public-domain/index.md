@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In Serbia, there are still many regions with very little OSM data. In 2012, <a href="http://www.openstreetmap.org/user/Janjko/diary/15773">the Slovenian OSM community obtained USGS map data in Public Domain and put it on WMS servers for mapping purposes</a>. Some users in the Serbian OSM community disapprove of its usage though, citing that it is better not to have maps than maps that were not checked with GPS and highway classificiations that were not reviewed on the ground, as users might get into trouble following these not fully reliable roads and paths.</p>
+<p>In Serbia, there are still many regions with very little OSM data. In 2012, <a href="https://www.openstreetmap.org/user/Janjko/diary/15773">the Slovenian OSM community obtained USGS map data in Public Domain and put it on WMS servers for mapping purposes</a>. Some users in the Serbian OSM community disapprove of its usage though, citing that it is better not to have maps than maps that were not checked with GPS and highway classificiations that were not reviewed on the ground, as users might get into trouble following these not fully reliable roads and paths.</p>
 <p>Generally, IMO it is better to have a not 100% reliable map than no map at all; my solution would be to reliably mark the source of the entered ways and nodes as "USGS maps" and thus to leave them as they are until they are revised with GPS nodes from local mappers. Would you agree?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -203,7 +203,7 @@ osqa_accepted = true
 <div id="post-45277-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Your pov is clear and stands for quality, and let's leave aside the question whether this particular example is licensed adequately or not, but how can someone know when he sees a "blank map" whether there will ever be a mapper having more knowledge than him about this certain piece of land? See <a href="http://wiki.openstreetmap.org/wiki/Armchair_mapping">armchair mapping</a>: I am perfectly aware that entering imperfect maps means more work than doing it well from scratch, but how can you know whethere there 'is' anybody who can and will do it from scratch? Isn't the point of OSM "contribute now on the maximum available level with all you have"? I am absolutely not talking about mapping areas where "real" OSM editing based on on-the-ground knowledge clearly is already happening.</p>
+<p>Your pov is clear and stands for quality, and let's leave aside the question whether this particular example is licensed adequately or not, but how can someone know when he sees a "blank map" whether there will ever be a mapper having more knowledge than him about this certain piece of land? See <a href="https://wiki.openstreetmap.org/wiki/Armchair_mapping">armchair mapping</a>: I am perfectly aware that entering imperfect maps means more work than doing it well from scratch, but how can you know whethere there 'is' anybody who can and will do it from scratch? Isn't the point of OSM "contribute now on the maximum available level with all you have"? I am absolutely not talking about mapping areas where "real" OSM editing based on on-the-ground knowledge clearly is already happening.</p>
 </div>
 <div id="comment-45277-info" class="comment-info">
 <span class="comment-age">(16 Sep '15, 12:21)</span> <span class="comment-user userinfo">cirko</span>
@@ -240,7 +240,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11469/cirko">@cirko</a>: this is a Q&amp;A site not the place for long discussions from your POV.</p>
+<p><a href="https://help.openstreetmap.org/users/11469/cirko">@cirko</a>: this is a Q&amp;A site not the place for long discussions from your POV.</p>
 </div>
 <div id="comment-45283-info" class="comment-info">
 <span class="comment-age">(16 Sep '15, 15:07)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -275,7 +275,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2850/joostenmies">@joost</a> the question was far more general than just the specific example, thats why he got an answer to both.</p>
+<p><a href="https://help.openstreetmap.org/users/2850/joostenmies">@joost</a> the question was far more general than just the specific example, thats why he got an answer to both.</p>
 </div>
 <div id="comment-45290-info" class="comment-info">
 <span class="comment-age">(16 Sep '15, 15:52)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -372,7 +372,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>While it makes sense in some cases, I certainly wouldn't "copy as much as you can from maps that are out of copyright (OOC)". In the case of features that haven't changed (much) since the last century, such as Irish townlands, it does make sense. However in many cases there are problems.</p>
 <p>One is that the accuracy of old maps often isn't very good. In GB we we've had a few people drawing old railway lines and footpaths from OS "New Popular Edition" and other OOC sources. Near where I live the former path of railways is often visible, and the equivalent features on the local NPE map are sometimes only within 50m or so (different features have different offsets so I suspect some were added laterm perhaps by someone on a Friday before they finished work for the weekend).</p>
-<p>Another problem is that some things just don't exist in the same form any more. Railways are an obvious example again here, but another one is footpaths. As an example, at the time of writing, there are a few at <a href="http://www.openstreetmap.org/#map=14/53.2628/-0.8339">http://www.openstreetmap.org/#map=14/53.2628/-0.8339</a> (I was there yesterday). The footpaths that mappers have copied from NPE sometimes (but not always) correspond to a current footpath, but often not very closely.</p>
+<p>Another problem is that some things just don't exist in the same form any more. Railways are an obvious example again here, but another one is footpaths. As an example, at the time of writing, there are a few at <a href="https://www.openstreetmap.org/#map=14/53.2628/-0.8339">https://www.openstreetmap.org/#map=14/53.2628/-0.8339</a> (I was there yesterday). The footpaths that mappers have copied from NPE sometimes (but not always) correspond to a current footpath, but often not very closely.</p>
 <p>In the specific case of the footpaths that I surveyed yesterday, it was more difficult to do so with invalid OOC data present than it would have been without it. In that particular case, "not mapping" <em>would</em> have been better than copying something that's old and invalid, but as has been said already "it depends".</p>
 </div>
 <div id="comment-45480-info" class="comment-info">

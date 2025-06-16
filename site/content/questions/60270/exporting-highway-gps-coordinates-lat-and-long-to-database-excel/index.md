@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I spent soe time researching for my problem's solution, but unfortunately I couldn't find any.</p>
 <p>So here's what I want to do:</p>
 <ul>
-<li><p>I want to export all highways of German highways (done - with help of e.g. <a href="https://help.openstreetmap.org/questions/30692/export-only-roads)">https://help.openstreetmap.org/questions/30692/export-only-roads)</a></p></li>
+<li><p>I want to export all highways of German highways (done - with help of e.g. <a href="/questions/30692/export-only-roads)">https://help.openstreetmap.org/questions/30692/export-only-roads)</a></p></li>
 <li><p>From this OSM file now I want to export the coordinates (latitude and longitude) to export to a database and then to a file which can be edited with Excel or Stata. (osm2pgrs didn't work for me)</p></li>
 <li>Final goal: I have a list of certain coordinates which I want to check whether they're crossed by a highway, e.g. if some of my points are situated on a highway. Thus, eventually I want to match my list with the exported highway coordinates</li>
 </ul>

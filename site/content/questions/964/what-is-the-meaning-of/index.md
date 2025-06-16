@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Going to <a href="http://wiki.openstreetmap.org/"></a><a href="http://wiki.openstreetmap.org"></a><a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a> and typing the desired word in the search window is as close as you get to a glossary, and it works quite well, leading you to e.g. <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> ("Mapnik is the software we use to render the main Slippy Map layer for OSM...") and <a href="http://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> ("Osmarender is a rule-based rendering tool for generating SVG images of OSM data.").</p>
+<p>Going to <a href="https://wiki.openstreetmap.org/"></a><a href="http://wiki.openstreetmap.org"></a><a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a> and typing the desired word in the search window is as close as you get to a glossary, and it works quite well, leading you to e.g. <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> ("Mapnik is the software we use to render the main Slippy Map layer for OSM...") and <a href="https://wiki.openstreetmap.org/wiki/Osmarender">Osmarender</a> ("Osmarender is a rule-based rendering tool for generating SVG images of OSM data.").</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This might be a result of the recent server issues, see <a href="https://lists.openstreetmap.org/pipermail/talk/2017-July/078321.html">https://lists.openstreetmap.org/pipermail/talk/2017-July/078321.html</a> and <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/status">http://wiki.openstreetmap.org/wiki/Overpass_API/status</a></p>
+<p>This might be a result of the recent server issues, see <a href="https://lists.openstreetmap.org/pipermail/talk/2017-July/078321.html">https://lists.openstreetmap.org/pipermail/talk/2017-July/078321.html</a> and <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/status">https://wiki.openstreetmap.org/wiki/Overpass_API/status</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

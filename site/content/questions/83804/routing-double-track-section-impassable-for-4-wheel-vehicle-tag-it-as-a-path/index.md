@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-83836-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just for the record, this seems closely related to your <a href="https://help.openstreetmap.org/questions/83777/can-smoothness-be-used-for-highwaypath">previous question</a>.</p>
+<p>Just for the record, this seems closely related to your <a href="/questions/83777/can-smoothness-be-used-for-highwaypath">previous question</a>.</p>
 </div>
 <div id="comment-83836-info" class="comment-info">
 <span class="comment-age">(13 Mar '22, 16:35)</span> <span class="comment-user userinfo">H_mlet</span>

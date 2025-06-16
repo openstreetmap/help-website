@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In spite of my effort and what is described here <a href="https://help.openstreetmap.org/questions/27498/nominatim-setup-error">https://help.openstreetmap.org/questions/27498/nominatim-setup-error</a> <a href="https://help.openstreetmap.org/questions/11898/nominatim-setup-problem?">https://help.openstreetmap.org/questions/11898/nominatim-setup-problem?</a> I still get:</p>
+<p>In spite of my effort and what is described here <a href="/questions/27498/nominatim-setup-error">https://help.openstreetmap.org/questions/27498/nominatim-setup-error</a> <a href="/questions/11898/nominatim-setup-problem?">https://help.openstreetmap.org/questions/11898/nominatim-setup-problem?</a> I still get:</p>
 <pre><code>Using projection SRS 4326 (Latlong)
 NOTICE:  table &quot;place&quot; does not exist, skipping
 NOTICE:  type &quot;keyvalue&quot; does not exist, skipping

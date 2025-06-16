@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Right now we are using Bing Map Web Services API for Map/geocoding/reverse geocoing at our application. Our application is installed on premise and so we are evaluating some on premise replacement. Based on current research, OpenStreetMap should be a good candidate for this purpose, however I found out this from <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">OpenStreetMap dowloading data</a></p>
+<p>Right now we are using Bing Map Web Services API for Map/geocoding/reverse geocoing at our application. Our application is installed on premise and so we are evaluating some on premise replacement. Based on current research, OpenStreetMap should be a good candidate for this purpose, however I found out this from <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">OpenStreetMap dowloading data</a></p>
 <blockquote>
 <p>The entire planet is a huge amount of data. Common tools like Osmosis or various import tools for database imports and converters usually need several days to process it, even on fast computers.</p>
 <p>This is almost 27 GB compressed or 370 GB uncompressed XML.</p>
@@ -164,7 +164,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> ... maybe needs osmconvert first do work via a speedy data format</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> ... maybe needs osmconvert first do work via a speedy data format</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

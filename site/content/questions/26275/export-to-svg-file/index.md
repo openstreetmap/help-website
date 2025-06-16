@@ -127,8 +127,8 @@ One Answer:
 <div class="comment-text">
 <p>... indeed, not the first question about it.</p>
 <p>To make it short:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 </div>
 <div id="comment-26288-info" class="comment-info">
 <span class="comment-age">(11 Sep '13, 15:26)</span> <span class="comment-user userinfo">stephan75</span>
@@ -151,7 +151,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9529/nickbockelman">@NickBockelman</a>: There is a <span>how to run Maperitive on MacOS</span>.</p>
+<p><a href="https://help.openstreetmap.org/users/9529/nickbockelman">@NickBockelman</a>: There is a <span>how to run Maperitive on MacOS</span>.</p>
 </div>
 <div id="comment-36237-info" class="comment-info">
 <span class="comment-age">(27 Aug '14, 00:39)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

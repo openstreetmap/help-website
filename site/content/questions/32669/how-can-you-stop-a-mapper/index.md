@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Adder: <a href="http://www.openstreetmap.org/user/bitkoin">http://www.openstreetmap.org/user/bitkoin</a> Remover: <a href="http://www.openstreetmap.org/user/Stemby">http://www.openstreetmap.org/user/Stemby</a></p>
+<p>Adder: <a href="https://www.openstreetmap.org/user/bitkoin">https://www.openstreetmap.org/user/bitkoin</a> Remover: <a href="https://www.openstreetmap.org/user/Stemby">https://www.openstreetmap.org/user/Stemby</a></p>
 <p>Looking at the info that has been added (name, website, payment:bitcoin), I really can't say what has been mapped.</p>
 </div>
 <div id="comment-32670-info" class="comment-info">
@@ -185,7 +185,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>A bank has a physical presence on the ground. Your bitcoin payments either did not, or lacked the appropriate tags (such as <em><a href="http://wiki.openstreetmap.org/wiki/Key:shop">shop</a></em>, in which case the <em>name</em> tag should contain the name of the shop and not <em>Punto bitcoin</em>).</p>
+<p>A bank has a physical presence on the ground. Your bitcoin payments either did not, or lacked the appropriate tags (such as <em><a href="https://wiki.openstreetmap.org/wiki/Key:shop">shop</a></em>, in which case the <em>name</em> tag should contain the name of the shop and not <em>Punto bitcoin</em>).</p>
 </div>
 <div id="comment-32682-info" class="comment-info">
 <span class="comment-age">(26 Apr '14, 21:58)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have a Nominatim database with UK data being stored. I grabbed the data from Geofabrik and installed Nominatim alongside the data import as per the Nominatim documentation.</p>
-<p>Is there any way, from the dataset I currently have, to find the bounding box? I've read threads such as <a href="https://help.openstreetmap.org/questions/36323/how-to-export-country-bounding-boxes">https://help.openstreetmap.org/questions/36323/how-to-export-country-bounding-boxes</a> but I'm concerned that the bounding boxes generated from external websites may not reflect my database accurately, which would cause logic error further along down the line with my code</p>
+<p>Is there any way, from the dataset I currently have, to find the bounding box? I've read threads such as <a href="/questions/36323/how-to-export-country-bounding-boxes">https://help.openstreetmap.org/questions/36323/how-to-export-country-bounding-boxes</a> but I'm concerned that the bounding boxes generated from external websites may not reflect my database accurately, which would cause logic error further along down the line with my code</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-bbox" rel="tag" title="see questions tagged &#39;bbox&#39;">bbox</span>

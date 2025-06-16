@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Export a way as a GPX"
-description = '''RE: http://www.openstreetmap.org/browse/relation/55450 Is it possible to extract a GPX file from this data? Am I missing something? It seems to me it should be just a matter of pressing a button, but I&#x27;m going mad finding the button! The only alternative I have found is this: http://pifpafpuf.de/cyc...'''
+description = '''RE: https://www.openstreetmap.org/browse/relation/55450 Is it possible to extract a GPX file from this data? Am I missing something? It seems to me it should be just a matter of pressing a button, but I&#x27;m going mad finding the button! The only alternative I have found is this: http://pifpafpuf.de/cyc...'''
 date = "2012-12-08T18:55:00Z"
 lastmod = "2023-01-01T19:33:00Z"
 weight = 18295
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>RE: <a href="http://www.openstreetmap.org/browse/relation/55450">http://www.openstreetmap.org/browse/relation/55450</a></p>
+<p>RE: <a href="https://www.openstreetmap.org/browse/relation/55450">https://www.openstreetmap.org/browse/relation/55450</a></p>
 <p>Is it possible to extract a GPX file from this data? Am I missing something? It seems to me it should be just a matter of pressing a button, but I'm going mad finding the button!</p>
 <p>The only alternative I have found is this:</p>
 <p><a href="http://pifpafpuf.de/cycleroute/map">http://pifpafpuf.de/cycleroute/map</a> and tracing it manually.</p>
@@ -145,7 +145,7 @@ osqa_accepted = false
 <p><a href="http://mr-unseld.de/?q=de/node/170">http://mr-unseld.de/?q=de/node/170</a></p>
 <p>There's also the option of loading the relation (via File-&gt;Download Object) in the JOSM editor and saving as GPX, however you'll have to combine the individual ways into one before if you want a proper, one-piece GPX. The wayselector plugin may help with that.</p>
 <p>If your route were a hiking or cycling route then it could be exported as GPX on <a href="http://waymarkedtrails.org/">http://waymarkedtrails.org/</a> but that doesn't help you this time.</p>
-<p>Manual tracing on the pifpafpuf.de site is certainly a "last resort" option but you could also try one of the routing engines listed on <a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">http://wiki.openstreetmap.org/wiki/Routing/online_routers</a> - most of them offer GPX export, and with any luck it is sufficient to define a couple via points along your desired route to find the one.</p>
+<p>Manual tracing on the pifpafpuf.de site is certainly a "last resort" option but you could also try one of the routing engines listed on <a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">https://wiki.openstreetmap.org/wiki/Routing/online_routers</a> - most of them offer GPX export, and with any luck it is sufficient to define a couple via points along your desired route to find the one.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

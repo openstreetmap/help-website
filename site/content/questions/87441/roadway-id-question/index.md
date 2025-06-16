@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>We are trying to figure out road id names. We are working with a company that uses OSM as their base centerline and their shapefile they share with us has extra numbers in addition to the section ID numbers that can be found on OSM. Does anyone know if OSM uses these numbers or is it something this company adds?</p>
 <p>This is what it is formatted like: Waterstone Drive / 221933601 / 1002</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM_check_tCUKhHQ.png" alt="alt text" /></p>
+<p><img src="/upfiles/OSM_check_tCUKhHQ.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-roads_id" rel="tag" title="see questions tagged &#39;roads_id&#39;">roads_id</span>

@@ -75,7 +75,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Sorry - that was unclear. On the OpenHistoricalMap wiki <a href="http://wiki.openstreetmap.org/wiki/Open_Historical_Map">http://wiki.openstreetmap.org/wiki/Open_Historical_Map</a></p>
+<p>Sorry - that was unclear. On the OpenHistoricalMap wiki <a href="https://wiki.openstreetmap.org/wiki/Open_Historical_Map">https://wiki.openstreetmap.org/wiki/Open_Historical_Map</a></p>
 <p>It says that there's a development on the sliders. Are we allowed to help build code to make the slider work, or are only the developers allowed to program the maps?</p>
 </div>
 <div id="comment-33854-info" class="comment-info">
@@ -206,7 +206,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p><a href="http://geschichtskarten.openstreetmap.de/historische_objekte/translate/en/index-en.html">http://geschichtskarten.openstreetmap.de/historische_objekte/translate/en/index-en.html</a></p>
 <p>You can actually select Railways as Object</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Historical_Objects">http://wiki.openstreetmap.org/wiki/Historical_Objects</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Historical_Objects">https://wiki.openstreetmap.org/wiki/Historical_Objects</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

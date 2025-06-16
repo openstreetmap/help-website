@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In an answer to <a href="http://help.openstreetmap.org/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover">What is the easiest way to import polygons from the Corine Land Cover?</a> I was suggested to use an shapefile in Potlatch. So I tried with that:</p>
+<p>In an answer to <a href="/questions/8335/what-is-the-easiest-way-to-import-polygons-from-the-corine-land-cover">What is the easiest way to import polygons from the Corine Land Cover?</a> I was suggested to use an shapefile in Potlatch. So I tried with that:</p>
 <p>In Potlatch I choosed "Background" and then "Vector file..." and picked "shapefile" and write the URL to my *.shp file. But when I pressed "Load" I got an error "The file could not be loaded" like on this screenshot:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/shp.png" alt="alt text" /></p>
+<p><img src="/upfiles/shp.png" alt="alt text" /></p>
 <p>How can I use a shape file in Potlatch?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

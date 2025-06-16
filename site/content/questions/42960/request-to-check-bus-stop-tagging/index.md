@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Request to check bus stop tagging"
-description = '''I added bus stops for the first time and wondered if someone would be willing to check if I did it correctly before I proceed further: http://www.openstreetmap.org/changeset/30909527#map=15/39.0904/-94.4266&amp;amp;layers=Q Also is there a way to add bus stop times with the iD editor? '''
+description = '''I added bus stops for the first time and wondered if someone would be willing to check if I did it correctly before I proceed further: https://www.openstreetmap.org/changeset/30909527#map=15/39.0904/-94.4266&amp;amp;layers=Q Also is there a way to add bus stop times with the iD editor? '''
 date = "2015-05-08T15:53:00Z"
 lastmod = "2015-05-11T14:49:00Z"
 weight = 42960
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I added bus stops for the first time and wondered if someone would be willing to check if I did it correctly before I proceed further: <a href="http://www.openstreetmap.org/changeset/30909527#map=15/39.0904/-94.4266&amp;layers=Q">http://www.openstreetmap.org/changeset/30909527#map=15/39.0904/-94.4266&amp;layers=Q</a></p>
+<p>I added bus stops for the first time and wondered if someone would be willing to check if I did it correctly before I proceed further: <a href="https://www.openstreetmap.org/changeset/30909527#map=15/39.0904/-94.4266&amp;layers=Q">https://www.openstreetmap.org/changeset/30909527#map=15/39.0904/-94.4266&amp;layers=Q</a></p>
 <p>Also is there a way to add bus stop times with the iD editor?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi! Thanks for adding some data. Don't worry the whole history of old objects is kept, so people can always undo mistakes. Perhaps you could try to find some local mappers in your area who can help you, perhaps they might know what can be added based on local knowledge. The <a href="http://wiki.openstreetmap.org/wiki/Category:Users_in_Kansas">OSM wiki lists some</a>.</p>
+<p>Hi! Thanks for adding some data. Don't worry the whole history of old objects is kept, so people can always undo mistakes. Perhaps you could try to find some local mappers in your area who can help you, perhaps they might know what can be added based on local knowledge. The <a href="https://wiki.openstreetmap.org/wiki/Category:Users_in_Kansas">OSM wiki lists some</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Davidbolton, you could add the name of the bus stop (if possible) and above all read these pages as well <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop</a> , with suggestions to tag a bus stop. Your adding more details then your college mappers in Independence. Another hint, look around to see what other mappers did and ask them why ?</p>
+<p>Hi Davidbolton, you could add the name of the bus stop (if possible) and above all read these pages as well <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop</a> , with suggestions to tag a bus stop. Your adding more details then your college mappers in Independence. Another hint, look around to see what other mappers did and ask them why ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -241,7 +241,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>... and to name just another candidate for iOS and other devices that featrures offline maps and routing:</p>
-<p>Have a closer look at <a href="http://wiki.openstreetmap.org/wiki/Be-on-road">http://wiki.openstreetmap.org/wiki/Be-on-road</a></p>
+<p>Have a closer look at <a href="https://wiki.openstreetmap.org/wiki/Be-on-road">https://wiki.openstreetmap.org/wiki/Be-on-road</a></p>
 </div>
 <div id="comment-28192-info" class="comment-info">
 <span class="comment-age">(18 Nov '13, 16:22)</span> <span class="comment-user userinfo">stephan75</span>
@@ -283,7 +283,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are several apps for mobile devices that can work offline, either by pre-downloading tiles, or by rendering the maps on the fly from vector data. I can personally recommend <a href="http://navit.sourceforge.net/">Navit</a> (disclaimer: I'm a developer), but there are many others. See e.g. <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a> for a list.</p>
+<p>There are several apps for mobile devices that can work offline, either by pre-downloading tiles, or by rendering the maps on the fly from vector data. I can personally recommend <a href="http://navit.sourceforge.net/">Navit</a> (disclaimer: I'm a developer), but there are many others. See e.g. <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a> for a list.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

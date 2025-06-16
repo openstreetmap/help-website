@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There are lots of resources available, but I really just want a good hands on tip with code, not a link like has been given before: <a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a> <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">http://wiki.openstreetmap.org/wiki/Mapsforge</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmdroid">http://wiki.openstreetmap.org/wiki/Osmdroid</a></p>
+<p>There are lots of resources available, but I really just want a good hands on tip with code, not a link like has been given before: <a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a> <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">https://wiki.openstreetmap.org/wiki/Mapsforge</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmdroid">https://wiki.openstreetmap.org/wiki/Osmdroid</a></p>
 </div>
 <div id="comment-16909-info" class="comment-info">
 <span class="comment-age">(16 Oct '12, 07:39)</span> <span class="comment-user userinfo">emj</span>

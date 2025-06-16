@@ -135,7 +135,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Ich mal an, dass du Kartenmaterial für Garmin suchst (bitte kommentiere). Hast du schon die verfügbaren, vorbereiteten Karten in <span>DE:OSM_Map_On_Garmin/Download</span> gefunden? Der zweite weltweite Eintrag <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> ist wahrscheinlich etwas für dich.</p>
-<p>Alle dort verzeichneten Karten basieren auf dem gleichen Grundmaterial - nämlich den OpenStreetMap-Daten. Je nach Region kann die Datenqualität/Abdeckung deutlich schwanken. Am besten schaust du dir deine Zielregion vorher auf <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> an, um einen Überblick zu bekommen, wie viel eingezeichnet ist. Es wird allerdings nicht alles, was in unserer Datenbank ist, auf osm.org angezeigt. Manches, wie z.B. Radrouten oder Öffnungszeiten, nur auf Spezialkarten.</p>
+<p>Alle dort verzeichneten Karten basieren auf dem gleichen Grundmaterial - nämlich den OpenStreetMap-Daten. Je nach Region kann die Datenqualität/Abdeckung deutlich schwanken. Am besten schaust du dir deine Zielregion vorher auf <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> an, um einen Überblick zu bekommen, wie viel eingezeichnet ist. Es wird allerdings nicht alles, was in unserer Datenbank ist, auf osm.org angezeigt. Manches, wie z.B. Radrouten oder Öffnungszeiten, nur auf Spezialkarten.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

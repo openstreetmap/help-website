@@ -99,7 +99,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a> Can you please point to an area where you don't see streams on the cyclemap? They're not very prominent, but I see them from z15 when I look.</p>
+<p><a href="https://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a> Can you please point to an area where you don't see streams on the cyclemap? They're not very prominent, but I see them from z15 when I look.</p>
 </div>
 <div id="comment-41581-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 16:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -111,7 +111,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>An example is here: <a href="http://www.openstreetmap.org/#map=14/48.4468/-123.6709&amp;layers=C.">http://www.openstreetmap.org/#map=14/48.4468/-123.6709&amp;layers=C.</a> The rivers show on the Standard Layer, but not the Cycle Map Layer.</p>
+<p>An example is here: <a href="https://www.openstreetmap.org/#map=14/48.4468/-123.6709&amp;layers=C.">https://www.openstreetmap.org/#map=14/48.4468/-123.6709&amp;layers=C.</a> The rivers show on the Standard Layer, but not the Cycle Map Layer.</p>
 </div>
 <div id="comment-41582-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 16:07)</span> <span class="comment-user userinfo">Doug Hull</span>
@@ -123,7 +123,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10627/doug-hull"></a><a href="http://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a>: that is similar to my example: the "rivers" are mapped as "<code>stream</code>" (e.g. <a href="https://www.openstreetmap.org/way/149437205">that</a> one) and <em>are</em> shown by the CycleMap - but very thin. If you have a bad monitor/eyes you really may not see them at all.</p>
+<p><a href="https://help.openstreetmap.org/users/10627/doug-hull"></a><a href="https://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a>: that is similar to my example: the "rivers" are mapped as "<code>stream</code>" (e.g. <a href="https://www.openstreetmap.org/way/149437205">that</a> one) and <em>are</em> shown by the CycleMap - but very thin. If you have a bad monitor/eyes you really may not see them at all.</p>
 </div>
 <div id="comment-41588-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 19:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -198,7 +198,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>and there it is now: <a href="https://trac.openstreetmap.org/ticket/5291">https://trac.openstreetmap.org/ticket/5291</a> (<a href="http://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a>, please always mention such new locations here)</p>
+<p>and there it is now: <a href="https://trac.openstreetmap.org/ticket/5291">https://trac.openstreetmap.org/ticket/5291</a> (<a href="https://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a>, please always mention such new locations here)</p>
 </div>
 <div id="comment-41594-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 23:47)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -240,14 +240,14 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi. What area are you looking at? I can see rivers on the cycle map (e.g. <a href="http://www.openstreetmap.org/#map=14/53.1811/-6.4511&amp;layers=C">here near Dublin</a>). Remember there are many many different map styles, each tuned to show (or not show) particular features. On the openstreetmap.org website, only a select few are shown. But there are more.</p>
+<p>Hi. What area are you looking at? I can see rivers on the cycle map (e.g. <a href="https://www.openstreetmap.org/#map=14/53.1811/-6.4511&amp;layers=C">here near Dublin</a>). Remember there are many many different map styles, each tuned to show (or not show) particular features. On the openstreetmap.org website, only a select few are shown. But there are more.</p>
 <p>For example:</p>
 <ul>
 <li><a href="http://www.hikebikemap.org/">Hike &amp; Bike Map</a> which might be tuned to be a more "hike" friendly than the "cycle" map on osm.org.</li>
 <li><a href="http://www.openandromaps.org/en/">OpenAndroMaps</a> which are offline maps that might show more "hiking" stuff.</li>
 <li><a href="http://hiking.waymarkedtrails.org/en/">Waymarked Trails</a> shows hiking routes.</li>
 </ul>
-<p><a href="http://wiki.openstreetmap.org/wiki/Hiking#Mapping_Projects">The OpenStreeMap wiki lists several other hiking mapping options.</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Hiking#Mapping_Projects">The OpenStreeMap wiki lists several other hiking mapping options.</a></p>
 <p>It all uses the same, underlying OSM database.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -282,7 +282,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a>: try "Sigma Cycle" (e.g. at <a href="http://www.gpsies.com/createTrack.do">gpsies</a>)</p>
+<p><a href="https://help.openstreetmap.org/users/10627/doug-hull">@Doug Hull</a>: try "Sigma Cycle" (e.g. at <a href="http://www.gpsies.com/createTrack.do">gpsies</a>)</p>
 </div>
 <div id="comment-41591-info" class="comment-info">
 <span class="comment-age">(09 Mar '15, 19:56)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

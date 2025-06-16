@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Question asked on IRC.</p>
-<p>How can I get a national cycle trail (such as this <a href="http://www.openstreetmap.org/browse/relation/2195143">one</a> in Sweden) converted to a transparent overlay for my Garmin?</p>
+<p>How can I get a national cycle trail (such as this <a href="https://www.openstreetmap.org/browse/relation/2195143">one</a> in Sweden) converted to a transparent overlay for my Garmin?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mkgmap" rel="tag" title="see questions tagged &#39;mkgmap&#39;">mkgmap</span> <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span> <span class="post-tag tag-link-ncn" rel="tag" title="see questions tagged &#39;ncn&#39;">ncn</span> <span class="post-tag tag-link-trail" rel="tag" title="see questions tagged &#39;trail&#39;">trail</span>
@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Working on the assumption that the trail covers most of the country, you need to do the following things (a lot of this follows <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map">OSM on Garmin Cycle Map</a>):</p>
+<p>Working on the assumption that the trail covers most of the country, you need to do the following things (a lot of this follows <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map">OSM on Garmin Cycle Map</a>):</p>
 <ul>
 <li>Download an OSM XML file containing the area of interest. Usually Geofabrik's download site is the best place to start (some alternatives are listed at the end).</li>
 <li>Download the java program <a href="http://www.mkgmap.org.uk/download/mkgmap.html">Mkgmap</a> from here.</li>

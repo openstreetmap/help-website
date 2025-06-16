@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Take a look here, <a href="http://wiki.openstreetmap.org/wiki/Open_Historical_Map">http://wiki.openstreetmap.org/wiki/Open_Historical_Map</a> thers some historical knowledge.</p>
+<p>Hi Take a look here, <a href="https://wiki.openstreetmap.org/wiki/Open_Historical_Map">https://wiki.openstreetmap.org/wiki/Open_Historical_Map</a> thers some historical knowledge.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Open Historical Map isn't going to be a viable option since it has so little data in it.</p>
-<p>Presumably what you want to do is to display census data over the top of a map from that period. The <a href="http://wiki.openstreetmap.org/wiki/National_Library_of_Scotland">National Library of Scotland</a> has some resources that might be suitable. There's lots of information, including licence details, <a href="http://maps.nls.uk/projects/api/">here</a>.</p>
+<p>Presumably what you want to do is to display census data over the top of a map from that period. The <a href="https://wiki.openstreetmap.org/wiki/National_Library_of_Scotland">National Library of Scotland</a> has some resources that might be suitable. There's lots of information, including licence details, <a href="http://maps.nls.uk/projects/api/">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

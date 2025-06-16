@@ -106,9 +106,9 @@ One Answer:
 <div class="answer-body">
 <p>There are a few ways you can improve things:</p>
 <ul>
-<li>Make sure the right <a href="http://wiki.openstreetmap.org/wiki/Key:place">place=</a> tag is used on affected nodes/ways. Sometimes the definition varies a bit from country to country (for example the population threshold), so check your country's page for information too.</li>
+<li>Make sure the right <a href="https://wiki.openstreetmap.org/wiki/Key:place">place=</a> tag is used on affected nodes/ways. Sometimes the definition varies a bit from country to country (for example the population threshold), so check your country's page for information too.</li>
 <li>Turn the place nodes into place areas (closed ways, or relations). When only nodes are available, Nominatim must take a wild guess at where one place starts and the other finishes.</li>
-<li>Tag the houses with <a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr:*=</a> (see also <a href="http://wiki.openstreetmap.org/wiki/Addresses">Addresses</a> and <a href="http://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">Karlsruhe</a>). It takes more time to create and maintain, but sometimes it is necessary (for example when the street or postcode isn't the expected value considering the location).</li>
+<li>Tag the houses with <a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr:*=</a> (see also <a href="https://wiki.openstreetmap.org/wiki/Addresses">Addresses</a> and <a href="https://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">Karlsruhe</a>). It takes more time to create and maintain, but sometimes it is necessary (for example when the street or postcode isn't the expected value considering the location).</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -128,7 +128,7 @@ One Answer:
 <div id="post-14363-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>see also <a href="http://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">http://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
+<p>see also <a href="/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
 </div>
 <div id="comment-14363-info" class="comment-info">
 <span class="comment-age">(18 Jul '12, 11:57)</span> <span class="comment-user userinfo">andy mackey</span>

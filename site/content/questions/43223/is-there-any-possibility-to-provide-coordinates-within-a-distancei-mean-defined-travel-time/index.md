@@ -70,7 +70,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>This question was previously asked as an "answer" here:</p>
-<p><a href="https://help.openstreetmap.org/questions/37861/distance-matrix-api">https://help.openstreetmap.org/questions/37861/distance-matrix-api</a></p>
+<p><a href="/questions/37861/distance-matrix-api">https://help.openstreetmap.org/questions/37861/distance-matrix-api</a></p>
 </div>
 <div id="comment-43224-info" class="comment-info">
 <span class="comment-age">(26 May '15, 14:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -124,7 +124,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check out <a href="http://wiki.openstreetmap.org/wiki/Isochrone">isochrones</a> on the wiki. There's a bit of programming involved to get there.</p>
+<p>Check out <a href="https://wiki.openstreetmap.org/wiki/Isochrone">isochrones</a> on the wiki. There's a bit of programming involved to get there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

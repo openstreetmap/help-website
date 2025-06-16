@@ -132,7 +132,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I download an OSM on garmin file of the country i need, unzip it, then transfer it into a Garmin or Map ( depending on device) folder that i have created in the micro SD card and it usually works. Some older devices will only display a map called Gmapsupp but the etrex 30x can use sensible names. see <a href="https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded</a></p>
+<p>I download an OSM on garmin file of the country i need, unzip it, then transfer it into a Garmin or Map ( depending on device) folder that i have created in the micro SD card and it usually works. Some older devices will only display a map called Gmapsupp but the etrex 30x can use sensible names. see <a href="/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

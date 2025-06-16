@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is <a href="http://matt.dev.openstreetmap.org/owl_viewer/">OWL</a>, as already explained <a href="http://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area">here</a>.</p>
+<p>There is <a href="http://matt.dev.openstreetmap.org/owl_viewer/">OWL</a>, as already explained <a href="/questions/7/how-do-i-see-the-history-for-my-area">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find a list of several applications and web services <a href="http://wiki.openstreetmap.org/wiki/Change_monitoring">here</a> to find out the activity of certain mappers inn certain areas.</p>
+<p>You can find a list of several applications and web services <a href="https://wiki.openstreetmap.org/wiki/Change_monitoring">here</a> to find out the activity of certain mappers inn certain areas.</p>
 <p>For your special purpose i would recommend the service "OSM Mapper" from <a href="http://itoworld.com">itoworld.com</a></p>
 </div>
 <div class="answer-controls post-controls">
@@ -218,7 +218,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I don't think there's any way to automatically find out where users are located, or their IP addresses.</p>
 <p>If you go to your user page on <a href="http://openstreetmap.org">openstreetmap.org</a>, and have set your home location, then it will show you "other nearby users". But this is limited to the nearest 10 users, and not all users will have set their home location anyway</p>
-<p>Also, some users might have an account on the wiki, and have added their user page to the appropriate subcategory of <a href="http://wiki.openstreetmap.org/wiki/Category:Users_by_geographical_region">Category:Users by geographical region</a>. But that's probably only a small percentage of OSM editors. And the locations may not necessarily be accurate, eg people might list themselves in several different cities if they visit them regularly. And some people might have a different username on the wiki to on <a href="http://openstreetmap.org">openstreetmap.org</a>.</p>
+<p>Also, some users might have an account on the wiki, and have added their user page to the appropriate subcategory of <a href="https://wiki.openstreetmap.org/wiki/Category:Users_by_geographical_region">Category:Users by geographical region</a>. But that's probably only a small percentage of OSM editors. And the locations may not necessarily be accurate, eg people might list themselves in several different cities if they visit them regularly. And some people might have a different username on the wiki to on <a href="http://openstreetmap.org">openstreetmap.org</a>.</p>
 <p>I think the best way to find out where a particular user is located, is to send them a message and ask them. It would probably help if you explained why you are interested in knowing this, then people would be more likely to reply.</p>
 </div>
 <div class="answer-controls post-controls">

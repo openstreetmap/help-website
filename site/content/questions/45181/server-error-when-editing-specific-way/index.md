@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Server error when editing specific way"
-description = '''Opening http://www.openstreetmap.org/edit?way=134818146 returns a 500 error. However, trying to edit anything else (ex. http://www.openstreetmap.org/edit?way=134818145) works fine. What should I do about this?'''
+description = '''Opening https://www.openstreetmap.org/edit?way=134818146 returns a 500 error. However, trying to edit anything else (ex. https://www.openstreetmap.org/edit?way=134818145) works fine. What should I do about this?'''
 date = "2015-09-11T01:02:00Z"
 lastmod = "2015-09-11T07:27:00Z"
 weight = 45181
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Opening <a href="http://www.openstreetmap.org/edit?way=134818146">http://www.openstreetmap.org/edit?way=134818146</a> returns a 500 error. However, trying to edit anything else (ex. <a href="http://www.openstreetmap.org/edit?way=134818145)">http://www.openstreetmap.org/edit?way=134818145)</a> works fine. What should I do about this?</p>
+<p>Opening <a href="https://www.openstreetmap.org/edit?way=134818146">https://www.openstreetmap.org/edit?way=134818146</a> returns a 500 error. However, trying to edit anything else (ex. <a href="https://www.openstreetmap.org/edit?way=134818145)">https://www.openstreetmap.org/edit?way=134818145)</a> works fine. What should I do about this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-edit" rel="tag" title="see questions tagged &#39;edit&#39;">edit</span> <span class="post-tag tag-link-http_500_internal" rel="tag" title="see questions tagged &#39;http_500_internal&#39;">http_500_internal</span>
@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://www.openstreetmap.org/way/134818146">browse page</a> works. The way's been deleted, so I'm not surprised that <a href="http://www.openstreetmap.org/edit?way=134818146">http://www.openstreetmap.org/edit?way=134818146</a> returns an error.</p>
-<p>What you should do next depends rather on what you were trying to do in the first place. If you want to edit in the area of the deleted way, try looking at the history of a constituent node such as <a href="http://www.openstreetmap.org/node/1481593817/history">this one</a>. You'll be able to click on the <a href="http://www.openstreetmap.org/#map=18/53.58892/9.97082">former location of the node</a>.</p>
+<p>The <a href="https://www.openstreetmap.org/way/134818146">browse page</a> works. The way's been deleted, so I'm not surprised that <a href="https://www.openstreetmap.org/edit?way=134818146">https://www.openstreetmap.org/edit?way=134818146</a> returns an error.</p>
+<p>What you should do next depends rather on what you were trying to do in the first place. If you want to edit in the area of the deleted way, try looking at the history of a constituent node such as <a href="https://www.openstreetmap.org/node/1481593817/history">this one</a>. You'll be able to click on the <a href="https://www.openstreetmap.org/#map=18/53.58892/9.97082">former location of the node</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

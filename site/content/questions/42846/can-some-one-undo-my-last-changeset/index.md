@@ -69,7 +69,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Reverted: <a href="http://www.openstreetmap.org/changeset/30752161">http://www.openstreetmap.org/changeset/30752161</a></p>
+<p>Reverted: <a href="https://www.openstreetmap.org/changeset/30752161">https://www.openstreetmap.org/changeset/30752161</a></p>
 </div>
 <div id="comment-42851-info" class="comment-info">
 <span class="comment-age">(03 May '15, 17:01)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -172,7 +172,7 @@ One Answer:
 <div id="post-42855-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9888/drew_nl">@Drew_NL</a>: SK53 has reverted it already (see above)</p>
+<p><a href="https://help.openstreetmap.org/users/9888/drew_nl">@Drew_NL</a>: SK53 has reverted it already (see above)</p>
 </div>
 <div id="comment-42855-info" class="comment-info">
 <span class="comment-age">(03 May '15, 17:06)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

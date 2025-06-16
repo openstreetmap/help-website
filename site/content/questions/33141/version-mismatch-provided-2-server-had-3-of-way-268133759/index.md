@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answer to <a href="https://help.openstreetmap.org/questions/32830/error-saving-changes-what-does-version-mismatch-provided-1-server-had-2-of-way-250295839-mean">this previous question</a>. Does that help?</p>
+<p>See the answer to <a href="/questions/32830/error-saving-changes-what-does-version-mismatch-provided-1-server-had-2-of-way-250295839-mean">this previous question</a>. Does that help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>The "how" in the previous question was someone with two different browser windows open. In order to save your other data, in iD undo to before your most recent edit to <a href="http://www.openstreetmap.org/way/268133759/history">way 268133759</a> and then try and save. To try and prevent the problem happening in the future, "save early and save often". That will mean that (if it does happen again) fewer changes are lost.</p>
+<p>The "how" in the previous question was someone with two different browser windows open. In order to save your other data, in iD undo to before your most recent edit to <a href="https://www.openstreetmap.org/way/268133759/history">way 268133759</a> and then try and save. To try and prevent the problem happening in the future, "save early and save often". That will mean that (if it does happen again) fewer changes are lost.</p>
 <p>Of course, if you can find a way to reliably reproduce the problem in iD without opening multiple browser windows, I'm sure that the iD developers would be interested - the bug tracker is <a href="https://github.com/openstreetmap/iD/issues">here</a>.</p>
 </div>
 <div id="comment-33148-info" class="comment-info">

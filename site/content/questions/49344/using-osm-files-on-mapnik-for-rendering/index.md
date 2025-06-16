@@ -126,7 +126,7 @@ osqa_accepted = false
 <div id="post-49349-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for your clarification <a href="http://help.openstreetmap.org/users/5918/stf">@stf</a></p>
+<p>Thank you for your clarification <a href="https://help.openstreetmap.org/users/5918/stf">@stf</a></p>
 </div>
 <div id="comment-49349-info" class="comment-info">
 <span class="comment-age">(21 Apr '16, 20:00)</span> <span class="comment-user userinfo">IDRI Sofiane</span>

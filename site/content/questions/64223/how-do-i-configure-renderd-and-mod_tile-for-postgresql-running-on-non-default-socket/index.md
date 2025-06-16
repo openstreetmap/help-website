@@ -153,7 +153,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Never tried it, but a quick web search finds <a href="https://help.openstreetmap.org/questions/54587/how-to-use-xml-file-generated-by-openstreetmap-carto-with-mapnik-and-postgis">this</a> which has a syntax for "port" in a project.mml.</p>
+<p>Never tried it, but a quick web search finds <a href="/questions/54587/how-to-use-xml-file-generated-by-openstreetmap-carto-with-mapnik-and-postgis">this</a> which has a syntax for "port" in a project.mml.</p>
 </div>
 <div id="comment-64228-info" class="comment-info">
 <span class="comment-age">(16 Jun '18, 10:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

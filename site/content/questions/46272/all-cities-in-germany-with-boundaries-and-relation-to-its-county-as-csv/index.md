@@ -59,9 +59,9 @@ osqa_accepted = false
 </ul>
 <p>My sources I tried:</p>
 <ul>
-<li>several sites in the official wiki like: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example"><code>http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example</code></a></li>
-<li><a href="https://help.openstreetmap.org/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api"><code>https://help.openstreetmap.org/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api</code></a></li>
-<li><a href="https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api"><code>https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api</code></a></li>
+<li>several sites in the official wiki like: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example"><code>https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example</code></a></li>
+<li><a href="/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api"><code>https://help.openstreetmap.org/questions/13877/how-to-find-cities-and-states-using-osm-overpass-api</code></a></li>
+<li><a href="/questions/19063/get-city-nodes-within-a-country-using-overpass-api"><code>https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api</code></a></li>
 <li>several other sources by Google</li>
 </ul>
 <p>Obviously I have:</p>
@@ -155,7 +155,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'm afraid, what you're trying to do is not possible with Overpass API. You cannot combine several OSM objects into one CSV line.</p>
-<p>The only option I see at the moment is to split the response up into multiple lines, like in the <a href="http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Beispielsammlung#Apotheken_je_Kreis_z.C3.A4hlen">following example</a> for pharmacies per country. You probably came across this one, as you mentioned Overpass API by example in your original question.</p>
+<p>The only option I see at the moment is to split the response up into multiple lines, like in the <a href="https://wiki.openstreetmap.org/wiki/DE:Overpass_API/Beispielsammlung#Apotheken_je_Kreis_z.C3.A4hlen">following example</a> for pharmacies per country. You probably came across this one, as you mentioned Overpass API by example in your original question.</p>
 <p>In addition, try to limit the scope of your query to smaller regions and split it up into several requests. Otherwise this will take way too much time.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -207,7 +207,7 @@ osqa_accepted = false
 <div id="post-46288-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/99/stephan75"></a><a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: yes that's something I would also recommend. I believe there are still some topics open here and the forum format is much more suitable to discuss different details or find alternative approaches. We have some users with a dedicate osm2pgsql database and they may also be able to support.</p>
+<p><a href="https://help.openstreetmap.org/users/99/stephan75"></a><a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: yes that's something I would also recommend. I believe there are still some topics open here and the forum format is much more suitable to discuss different details or find alternative approaches. We have some users with a dedicate osm2pgsql database and they may also be able to support.</p>
 </div>
 <div id="comment-46288-info" class="comment-info">
 <span class="comment-age">(01 Nov '15, 16:05)</span> <span class="comment-user userinfo">mmd</span>
@@ -229,7 +229,7 @@ osqa_accepted = false
 <div id="post-46291-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11636/sediosm">@sediosm</a>: please mention a link to the follow-up thread here</p>
+<p><a href="https://help.openstreetmap.org/users/11636/sediosm">@sediosm</a>: please mention a link to the follow-up thread here</p>
 </div>
 <div id="comment-46291-info" class="comment-info">
 <span class="comment-age">(01 Nov '15, 19:44)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

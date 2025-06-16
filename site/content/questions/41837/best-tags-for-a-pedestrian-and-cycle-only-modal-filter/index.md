@@ -113,7 +113,7 @@ One Answer:
 <p>That said, the standard rendering currently only supports a very restricted rendering of access tags, and that is, on top of it, not useful, bordering on wrong. So again please do not try to acheive visual representation of bicycle/pedestrian only access by tag fiddling.</p>
 <p>Now back to the underlying question: it really depends what makes most sense, roads that have really changed status from say residential, unclassified or similar to a cycleway with pedestrian access could clearly be tagged as highway=cycleway If access has simply been restricted, for example by allowing only access to residents then that should be tagged.</p>
 <p>Further from your question it seems as if you are based in the UK, as a general rule you should not be making widespread tagging changes without at least rough consensus in the respective communities. I would strongly suggest you bringing the matter to the table on the <a href="https://lists.openstreetmap.org/listinfo/talk-gb">GB mailing list</a>.</p>
-<p>For more information see: <a href="http://wiki.openstreetmap.org/wiki/Key:access">access tag on the wiki</a></p>
+<p>For more information see: <a href="https://wiki.openstreetmap.org/wiki/Key:access">access tag on the wiki</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

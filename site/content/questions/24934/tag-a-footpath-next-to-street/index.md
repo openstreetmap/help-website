@@ -62,7 +62,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>From the comments below I suspect that this is the relevant bit of street:</p>
-<p><a href="http://www.openstreetmap.org/#map=18/49.43933/11.11932">http://www.openstreetmap.org/#map=18/49.43933/11.11932</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/49.43933/11.11932">https://www.openstreetmap.org/#map=18/49.43933/11.11932</a></p>
 </div>
 <div id="comment-25047-info" class="comment-info">
 <span class="comment-age">(07 Aug '13, 19:12)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -215,7 +215,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/way/36810112">That one's</a> not next to a street though, is it?</p>
+<p><a href="https://www.openstreetmap.org/browse/way/36810112">That one's</a> not next to a street though, is it?</p>
 </div>
 <div id="comment-27535-info" class="comment-info">
 <span class="comment-age">(27 Oct '13, 17:29)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -258,7 +258,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What about footway - sidewalk left / right or both, otherwise there has to be a specific name sign on the path. And take a look here <a href="http://wiki.openstreetmap.org/wiki/Footway">http://wiki.openstreetmap.org/wiki/Footway</a></p>
+<p>What about footway - sidewalk left / right or both, otherwise there has to be a specific name sign on the path. And take a look here <a href="https://wiki.openstreetmap.org/wiki/Footway">https://wiki.openstreetmap.org/wiki/Footway</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -288,7 +288,7 @@ osqa_accepted = false
 <div id="post-25048-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>hi SomeoneElse has added a link to the way. The bicycle ways are probatly a two way stretch, but dont need the extra name tag. Please take a look here <a href="http://wiki.openstreetmap.org/wiki/Attributierung_von_Stra%C3%9Fen_in_Deutschland#Durchgangsstra.C3.9Fen">http://wiki.openstreetmap.org/wiki/Attributierung_von_Stra%C3%9Fen_in_Deutschland#Durchgangsstra.C3.9Fen</a></p>
+<p>hi SomeoneElse has added a link to the way. The bicycle ways are probatly a two way stretch, but dont need the extra name tag. Please take a look here <a href="https://wiki.openstreetmap.org/wiki/Attributierung_von_Stra%C3%9Fen_in_Deutschland#Durchgangsstra.C3.9Fen">https://wiki.openstreetmap.org/wiki/Attributierung_von_Stra%C3%9Fen_in_Deutschland#Durchgangsstra.C3.9Fen</a></p>
 </div>
 <div id="comment-25048-info" class="comment-info">
 <span class="comment-age">(07 Aug '13, 20:35)</span> <span class="comment-user userinfo">Hendrikklaas</span>

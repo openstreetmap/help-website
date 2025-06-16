@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-15823-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Next to the question about the licence: Do you already know the wiki pages like <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a> and <a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a> ?</p>
+<p>Next to the question about the licence: Do you already know the wiki pages like <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a> and <a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a> ?</p>
 <p>... or try to search for the keywords "book" or "licence" on this FAQ site to get sime hints about your aimed use.</p>
 </div>
 <div id="comment-15823-info" class="comment-info">

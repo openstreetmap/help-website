@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Strange kind of drone ?"
-description = '''It not a specific OSM question, but I ve noticed a strange kind of drone, flying low to make views for OSM ? Could someone explain it ? Its only visible in Bing. http://www.openstreetmap.org/#map=17/26.62359/-111.81148'''
+description = '''It not a specific OSM question, but I ve noticed a strange kind of drone, flying low to make views for OSM ? Could someone explain it ? Its only visible in Bing. https://www.openstreetmap.org/#map=17/26.62359/-111.81148'''
 date = "2016-09-11T21:20:00Z"
 lastmod = "2016-09-13T03:57:00Z"
 weight = 51990
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It not a specific OSM question, but I ve noticed a strange kind of drone, flying low to make views for OSM ? Could someone explain it ? Its only visible in Bing. <a href="http://www.openstreetmap.org/#map=17/26.62359/-111.81148">http://www.openstreetmap.org/#map=17/26.62359/-111.81148</a></p>
+<p>It not a specific OSM question, but I ve noticed a strange kind of drone, flying low to make views for OSM ? Could someone explain it ? Its only visible in Bing. <a href="https://www.openstreetmap.org/#map=17/26.62359/-111.81148">https://www.openstreetmap.org/#map=17/26.62359/-111.81148</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-drone" rel="tag" title="see questions tagged &#39;drone&#39;">drone</span> <span class="post-tag tag-link-low" rel="tag" title="see questions tagged &#39;low&#39;">low</span>
@@ -174,7 +174,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Handily, there's a truck on the road just to the east for scale - it looks like a plane to me. For comparison, here's a 767:</p>
-<p><a href="http://www.openstreetmap.org/#map=19/52.82816/-1.36634">http://www.openstreetmap.org/#map=19/52.82816/-1.36634</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/52.82816/-1.36634">https://www.openstreetmap.org/#map=19/52.82816/-1.36634</a></p>
 </div>
 <div id="comment-51992-info" class="comment-info">
 <span class="comment-age">(11 Sep '16, 21:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -252,7 +252,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The link to Google Earth Blog from neuhausr explains the 'shadow' referred to by Hendrikklaas. I too thought that the plane must be flying close to the ground but now realise that the 'shadow' is actually the image of the plane taken with (probably) the blue filter. So, there is nothing to indicate the actual size or height of the aircraft. Indeed, the fact that there is no obvious ground shadow in the near vicinity implies that the aircraft is at quite a considerable height. I assume that the scale ruler in JOSM refers to distances 'on the ground' so it can't be used to estimate the size of the plane. <img src="http://help.openstreetmap.org/upfiles/Drone.jpg" alt="alt text" /></p>
+<p>The link to Google Earth Blog from neuhausr explains the 'shadow' referred to by Hendrikklaas. I too thought that the plane must be flying close to the ground but now realise that the 'shadow' is actually the image of the plane taken with (probably) the blue filter. So, there is nothing to indicate the actual size or height of the aircraft. Indeed, the fact that there is no obvious ground shadow in the near vicinity implies that the aircraft is at quite a considerable height. I assume that the scale ruler in JOSM refers to distances 'on the ground' so it can't be used to estimate the size of the plane. <img src="/upfiles/Drone.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

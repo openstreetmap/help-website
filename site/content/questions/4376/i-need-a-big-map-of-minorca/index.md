@@ -110,7 +110,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bigmap.cgi is not the most user-friendly script in the world so it is possible that you have simply made a mistake when using it. <a href="http://openstreetmap.gryph.de/bigmap.cgi?zoom=11&amp;xmin=1045&amp;xmax=1048&amp;ymin=774&amp;ymax=776&amp;baseurl=http%3A%2F%2Ftile.openstreetmap.org%2Fmapnik%2F!z%2F!x%2F!y.png&amp;tileurl=&amp;Submit=Submit+Query">This link</a> produces a perfectly fine map of Minorca with bigmap.cgi. (Among other inconveniences, bigmap.cgi requires you to use tile numbers to define the area of interest. You can find out a tile number by looking at the tile's URL, or using <a href="http://tools.geofabrik.de/map/?grid=1">this map on tools.geofabrik.de.)</a></p>
-<p>You should perhaps browse through questions tagged <a href="http://help.openstreetmap.org/tags/export/">Export</a> for more options.</p>
+<p>You should perhaps browse through questions tagged <a href="https://help.openstreetmap.org/tags/export/">Export</a> for more options.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499"></a><a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499"></a><a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499">http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499</a></p>
+<p><a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499"></a><a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499"></a><a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499">https://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers/3499</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

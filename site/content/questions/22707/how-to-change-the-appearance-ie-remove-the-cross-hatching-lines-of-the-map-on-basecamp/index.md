@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's the default (very ugly) way how Garmin renders wood and forests: <a href="http://www.openstreetmap.org/browse/relation/534604">http://www.openstreetmap.org/browse/relation/534604</a></p>
+<p>That's the default (very ugly) way how Garmin renders wood and forests: <a href="https://www.openstreetmap.org/browse/relation/534604">https://www.openstreetmap.org/browse/relation/534604</a></p>
 <p>If you have downloaded the map from garmin.openstreetmap.nl, you can choose the new layout or the basic map with "mapnik" typ file, this will render it as it should: green.</p>
 </div>
 <div class="answer-controls post-controls">

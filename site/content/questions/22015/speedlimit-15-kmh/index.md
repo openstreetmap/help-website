@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>A "woonerf" is a "<a href="http://wiki.openstreetmap.org/wiki/Living_street">highway=living_street</a>", isn't it? What is the question that you are asking? Are you talking about some editing software, or some routing software, or something else perhaps?</p>
+<p>A "woonerf" is a "<a href="https://wiki.openstreetmap.org/wiki/Living_street">highway=living_street</a>", isn't it? What is the question that you are asking? Are you talking about some editing software, or some routing software, or something else perhaps?</p>
 </div>
 <div id="comment-22016-info" class="comment-info">
 <span class="comment-age">(01 May '13, 17:15)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

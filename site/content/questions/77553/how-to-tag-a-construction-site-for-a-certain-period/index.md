@@ -214,7 +214,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I agree with InsertUser 's and SK53's answers. But a simple way to point to a location is to use the share link. <a href="https://www.openstreetmap.org/?mlat=52.33132&amp;mlon=-0.17397#map=17/52.33132/-0.17397">https://www.openstreetmap.org/?mlat=52.33132&amp;mlon=-0.17397#map=17/52.33132/-0.17397</a></p>
-<p>For a step by step of how to do this see my answer to this one. <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p>For a step by step of how to do this see my answer to this one. <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 <p>Sat Nav users can use the mlat and mlon in their sat navs. that is 52.33132 N 0.17397 W so your suppliers should be able to locate your building site. note:- negative values signify South and West</p>
 </div>
 <div class="answer-controls post-controls">

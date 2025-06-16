@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>[out:csv] alone will not work. You need to specify exactly, which fields should be included in the response. Please check out the documentation on the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">wiki page</a> as pointed out earlier today. Also, you can test your query in <a href="http://overpass-turbo.eu">http://overpass-turbo.eu</a> , which may be more convenient.</p>
+<p>[out:csv] alone will not work. You need to specify exactly, which fields should be included in the response. Please check out the documentation on the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">wiki page</a> as pointed out earlier today. Also, you can test your query in <a href="http://overpass-turbo.eu">http://overpass-turbo.eu</a> , which may be more convenient.</p>
 <p>Can you elaborate a bit more, what you're trying to do?</p>
 </div>
 <div class="answer-controls post-controls">

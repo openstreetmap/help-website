@@ -49,7 +49,7 @@ osqa_accepted = true
 <li>I know, that I am not allowed to use the tiles for commercial purposes, so what can I do:
 <ul>
 <li>donate on a regular basis? What amount would be appropriate?</li>
-<li>sponsor a tile server, as suggested here (<a href="http://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)">http://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)</a></li>
+<li>sponsor a tile server, as suggested here (<a href="https://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)">https://wiki.openstreetmap.org/wiki/Servers/Tile_CDN)</a></li>
 <li>set up my own server?</li>
 </ul></li>
 </ul>

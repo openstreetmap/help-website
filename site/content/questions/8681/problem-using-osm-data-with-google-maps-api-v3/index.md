@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm using the method which is described <a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">here</a> to add OSM data to an application which uses various mapping APIs, including Google Maps V2 and V3.</p>
+<p>I'm using the method which is described <a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">here</a> to add OSM data to an application which uses various mapping APIs, including Google Maps V2 and V3.</p>
 <p>The code supplied works perfectly with the Google Maps API V2. However, with V3 (I'm using the first V3 example, which is the second example on the page since there is one V2 example before it), although the OSM tiles load correctly, I no longer see the Google Maps scale controls ("drag to zoom").</p>
 <p>The issue seems to be caused by this call:</p>
 <p><code>map.setMapTypeId('OpenStreetMap');</code></p>

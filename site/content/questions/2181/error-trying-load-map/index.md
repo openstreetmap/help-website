@@ -227,7 +227,7 @@ osqa_accepted = false
 <p>I've got no problem with using Potlatch 2 at least, this is what you can try if you think OSM is down.</p>
 <ul>
 <li>zoom in a lot before starting to edit</li>
-<li>check <a href="http://wiki.openstreetmap.org/wiki/platform_status"></a><a href="http://wiki.openstreetmap.org/wiki/platform_status"></a><a href="http://wiki.openstreetmap.org/wiki/platform_status">http://wiki.openstreetmap.org/wiki/platform_status</a> to see if anything is down</li>
+<li>check <a href="https://wiki.openstreetmap.org/wiki/platform_status"></a><a href="https://wiki.openstreetmap.org/wiki/platform_status"></a><a href="https://wiki.openstreetmap.org/wiki/platform_status">https://wiki.openstreetmap.org/wiki/platform_status</a> to see if anything is down</li>
 <li>the export tab and download some Openstreetmap XML data</li>
 <li>(more?)</li>
 </ul>

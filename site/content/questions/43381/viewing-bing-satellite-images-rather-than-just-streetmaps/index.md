@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use <a href="http://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">OSM in Google Earth</a> to see OSM with a satellite picture background. You can play with transparency or different styles for best results.</p>
+<p>You could use <a href="https://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">OSM in Google Earth</a> to see OSM with a satellite picture background. You can play with transparency or different styles for best results.</p>
 <p>The <a href="https://www.mapbox.com/labs/request">Mapbox sat pic request page</a> also shows some OSM data over a sat pic.</p>
 <p>I don't know any dedicated mapviews that do this though. It would be a nice one for osm.org</p>
 </div>

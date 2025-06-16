@@ -152,7 +152,7 @@ One Answer:
 <div id="post-14876-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>this is "f" for follow <a href="http://help.openstreetmap.org/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch">http://help.openstreetmap.org/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch</a></p>
+<p>this is "f" for follow <a href="/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch">https://help.openstreetmap.org/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch</a></p>
 </div>
 <div id="comment-14876-info" class="comment-info">
 <span class="comment-age">(07 Aug '12, 08:14)</span> <span class="comment-user userinfo">andy mackey</span>

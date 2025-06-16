@@ -105,8 +105,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please take a look at our <a href="http://wiki.openstreetmap.org/">Wiki</a>, there are pages for the <a href="http://wiki.openstreetmap.org/wiki/Oneway">oneway</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:vehicle">vehicle</a> tag. For tagging the oneway restriction you can use <em>oneway=yes</em> in combination with <em>psv:backward=yes</em> or <em>bus:backward=yes</em> whichever is correct in your case. For similar tags check the <a href="http://wiki.openstreetmap.org/wiki/Road_Signs">road signs</a> page which is available in several languages.</p>
-<p>There are also <a href="http://wiki.openstreetmap.org/wiki/Key:toll">toll</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:maxweight">maxweight</a> tags but there is no hint on how to combine them. According to <a href="http://taginfo.openstreetmap.org/search?q=toll#keys">tagstat</a> there are use cases like <em>toll:hgv</em>.</p>
+<p>Please take a look at our <a href="https://wiki.openstreetmap.org/">Wiki</a>, there are pages for the <a href="https://wiki.openstreetmap.org/wiki/Oneway">oneway</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:vehicle">vehicle</a> tag. For tagging the oneway restriction you can use <em>oneway=yes</em> in combination with <em>psv:backward=yes</em> or <em>bus:backward=yes</em> whichever is correct in your case. For similar tags check the <a href="https://wiki.openstreetmap.org/wiki/Road_Signs">road signs</a> page which is available in several languages.</p>
+<p>There are also <a href="https://wiki.openstreetmap.org/wiki/Key:toll">toll</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:maxweight">maxweight</a> tags but there is no hint on how to combine them. According to <a href="http://taginfo.openstreetmap.org/search?q=toll#keys">tagstat</a> there are use cases like <em>toll:hgv</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -170,7 +170,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Oneway">Oneway</a> in the wiki ... there are some tags like oneway:bicycle=no</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Oneway">Oneway</a> in the wiki ... there are some tags like oneway:bicycle=no</p>
 <p>Maybe you can adapt that to public transport.</p>
 </div>
 <div class="answer-controls post-controls">

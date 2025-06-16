@@ -86,7 +86,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Taking an accurate measurement at both ends works for some alleys, but you can get an idea of the complexity of some areas by looking at this section: <a href="http://www.openstreetmap.org/?lat=21.03863&amp;lon=105.8198&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=21.03863&amp;lon=105.8198&amp;zoom=17&amp;layers=M</a> . (I didn't map these, but I've checked a few of them out for accuracy, and they seem to be largely right.)</p>
+<p>Taking an accurate measurement at both ends works for some alleys, but you can get an idea of the complexity of some areas by looking at this section: <a href="https://www.openstreetmap.org/?lat=21.03863&amp;lon=105.8198&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=21.03863&amp;lon=105.8198&amp;zoom=17&amp;layers=M</a> . (I didn't map these, but I've checked a few of them out for accuracy, and they seem to be largely right.)</p>
 </div>
 <div id="comment-11960-info" class="comment-info">
 <span class="comment-age">(13 Apr '12, 07:09)</span> <span class="comment-user userinfo">samgrahk</span>

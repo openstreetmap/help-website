@@ -119,7 +119,7 @@ How do I correct this or can someone please correct this for me so I do not mess
 <td><div class="item-right">
 <div class="answer-body">
 <p>One possibility is to add a note to the map. At the right hand side of the main page you'll see this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/note_4.png" alt="alt text" /></p>
+<p><img src="/upfiles/note_4.png" alt="alt text" /></p>
 <p>Click it, move it to the area of the problem on the map and type in the details of the problem there. Another way of doing a similar thing (designed for adding businesses) is <a href="http://onosm.org/">onosm.org</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,7 +156,7 @@ The listing for Bright Lane is actually our drive way. Our true address is 281 S
 2
 </div>
 <div class="comment-text">
-<p>Aha - it looks like it's <a href="http://www.openstreetmap.org/way/262761684">already there</a> in OpenStreetmap (actually as a result of <a href="http://www.openstreetmap.org/note/80929">this previous note</a>) but <a href="http://www.openstreetmap.org/note/196387">your new note</a> has more information on it, so I'll add that too.</p>
+<p>Aha - it looks like it's <a href="https://www.openstreetmap.org/way/262761684">already there</a> in OpenStreetmap (actually as a result of <a href="https://www.openstreetmap.org/note/80929">this previous note</a>) but <a href="https://www.openstreetmap.org/note/196387">your new note</a> has more information on it, so I'll add that too.</p>
 <p>I'm not sure what Craigslist is using; when I search for your shop on there I get a couple of "for sale" listings, with the correct address, so I've no idea where "Butts Rd" is coming from (but Craiglist seems positively user hostile, so I could just be missing it)</p>
 <p>(Edit)</p>
 <p>Found it! The name was changed from Butts Rd to Steele Rd on 21st February in OpenStreetMap. It looks like Craigslist's data provider is lagging behind:</p>
@@ -202,7 +202,7 @@ The listing for Bright Lane is actually our drive way. Our true address is 281 S
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please give us a better or more data, both streets seem to exist in Franklin KY or do it yourself, quit simple. Make sure that the road signs along your street carry Steele Road (KY) as name and check it at the local public services just to be sure. You’ll already have an account, use P2 or ID to change the name and add more details. Read the beginners site as well, it makes it easier to do, <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">http://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></p>
+<p>Please give us a better or more data, both streets seem to exist in Franklin KY or do it yourself, quit simple. Make sure that the road signs along your street carry Steele Road (KY) as name and check it at the local public services just to be sure. You’ll already have an account, use P2 or ID to change the name and add more details. Read the beginners site as well, it makes it easier to do, <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">https://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

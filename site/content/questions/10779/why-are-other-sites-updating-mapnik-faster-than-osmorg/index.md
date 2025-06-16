@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally OpenStreetMap aims to have its tiles updated as fast as possible, as one of its main purposes is for it to be useful to mappers. Sparing some caveats, the turn around time from mapping to appearing on the tiles is often only a few minutes. However, the system in place to decide which tiles and when to render things is reasonably complex being a delicate balance between keeping things as up-to-date as possible while not overloading the system. A more detailed response of how the system works can be found at <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>Generally OpenStreetMap aims to have its tiles updated as fast as possible, as one of its main purposes is for it to be useful to mappers. Sparing some caveats, the turn around time from mapping to appearing on the tiles is often only a few minutes. However, the system in place to decide which tiles and when to render things is reasonably complex being a delicate balance between keeping things as up-to-date as possible while not overloading the system. A more detailed response of how the system works can be found at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 <p>Given this balance between load and update frequency, the various tileservers out there, might choose different tradeoffs depending on their hardware characteristics and the load they are serving.</p>
 <p>With respect to the toolserver and <a href="http://osm.org">osm.org</a>, I could imagine a couple of reasons for why the toolserver may currently appear faster in some cases than <a href="http://osm.org">osm.org</a>. However, it mostly depends on what zoom levels you are referring to and how much delay you are seeing between when you have edited and when the changes show up. Normally though I would expect the toolserver to be somewhat slower in updating than the <a href="http://osm.org">osm.org</a> server. However, <a href="http://osm.org">osm.org</a> is serving more than an order of magnitude more tiles, so they need to distribute the load over multiple servers, which might cause some of the delays</p>
 </div>
@@ -204,7 +204,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There is a new question for this here: <a href="http://help.openstreetmap.org/questions/10799/why-are-opinions-removed-from-helposmorg">http://help.openstreetmap.org/questions/10799/why-are-opinions-removed-from-helposmorg</a></p>
+<p>There is a new question for this here: <a href="/questions/10799/why-are-opinions-removed-from-helposmorg">https://help.openstreetmap.org/questions/10799/why-are-opinions-removed-from-helposmorg</a></p>
 </div>
 <div id="comment-10803-info" class="comment-info">
 <span class="comment-age">(26 Feb '12, 11:41)</span> <span class="comment-user userinfo">dieterdreist</span>

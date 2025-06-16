@@ -141,7 +141,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>To really catch <em>all</em> ATMs you would need even more - you would have to ask for amenity=bank;atm and all those funny other combinations as well. You might consider trying out the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> for more complex queries. Or, you can of course download the whole planet file, place it in a database, and query it to your heart's content...</p>
+<p>To really catch <em>all</em> ATMs you would need even more - you would have to ask for amenity=bank;atm and all those funny other combinations as well. You might consider trying out the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> for more complex queries. Or, you can of course download the whole planet file, place it in a database, and query it to your heart's content...</p>
 </div>
 <div id="comment-12016-info" class="comment-info">
 <span class="comment-age">(14 Apr '12, 15:34)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

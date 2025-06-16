@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hello everyone,</p>
 <p>I have been using <a href="https://mapwith.ai/rapid">mapwith.ai/RapiD</a> tool to quickly add buildings in my area. Many addresses have been surveyed in the area already and marked using a point with the <code>addr:housenumber</code> / <code>addr:street</code> tags.</p>
 <p>As I add the buildings shapes I have been ensuring that the relevant address point is positioned inside the shape like this:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen-Shot_2019-12-02_at_4.46.05_PM_copy.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen-Shot_2019-12-02_at_4.46.05_PM_copy.png" alt="alt text" /></p>
 <p>Is this a good approach? Deleting the point and adding the address tags to the shape seems <em>cleaner</em> somehow, but would slow things down to the point of impracticality.</p>
 <p>All input appreciated!</p>
 </div>

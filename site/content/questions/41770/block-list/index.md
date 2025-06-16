@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Applications and ip ranges may be blocked due to abuse of the <a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">tile usage policy</a>. Contact one of the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">administrators</a> to get a block canceled. Most efficient way to do this is probably the <a href="http://wiki.openstreetmap.org/wiki/IRC">#osm-dev IRC channel</a>.</p>
+<p>Applications and ip ranges may be blocked due to abuse of the <a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">tile usage policy</a>. Contact one of the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">administrators</a> to get a block canceled. Most efficient way to do this is probably the <a href="https://wiki.openstreetmap.org/wiki/IRC">#osm-dev IRC channel</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

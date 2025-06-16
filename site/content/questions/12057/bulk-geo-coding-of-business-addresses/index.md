@@ -116,7 +116,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap does not offer a service that lets you geocode millions of addresses, but OpenStreetMap has the <em>data</em> that allows you to do this.</p>
-<p>You will have to run the software yourself. Check out <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Some Linux/database experience will be required to operate it. There's a free Nominatim service by <a href="http://developer.mapquest.com/web/products/open/nominatim">MapQuest</a> but I'm not sure if that can be used for bulk geocoding, check their terms.</p>
+<p>You will have to run the software yourself. Check out <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Some Linux/database experience will be required to operate it. There's a free Nominatim service by <a href="http://developer.mapquest.com/web/products/open/nominatim">MapQuest</a> but I'm not sure if that can be used for bulk geocoding, check their terms.</p>
 <p>The Nominatim result does have an indication of whether a house number was found or not (in which case some location along the street have been guessed), but there's not a precision indicator as such.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -272,7 +272,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>TomTom's Geocoder supports address geocoding. You need to specify options.apiKey nominatimmapquest: Same geocoder as openstreetmap, but queries the MapQuest servers. You need to specify options.apiKey</p>
-<p><img src="https://help.openstreetmap.org/upfiles/geocoding.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/geocoding.PNG" alt="alt text" /></p>
 <p>Read all about it here: <a href="https://developer.tomtom.com/blog/decoded/what-geocoding">https://developer.tomtom.com/blog/decoded/what-geocoding</a></p>
 </div>
 <div class="answer-controls post-controls">

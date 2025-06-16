@@ -110,9 +110,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The user <a href="http://www.openstreetmap.org/user/BabuSudhakar">BabuSudhakar</a> has so far only the changesets <a href="http://www.openstreetmap.org/browse/changeset/7444772">7444772</a> and <a href="http://www.openstreetmap.org/browse/changeset/7452141">7452141</a>.</p>
-<p>The reason for your additions not showing up on the map, for example <a href="http://www.openstreetmap.org/browse/way/102654160">102654160</a>, is that they have no <a href="http://wiki.openstreetmap.org/wiki/Tags">tags</a>. The renderer doesn't know if the thing you have entered is a house, a fence, a lake or a border etc.</p>
-<p>You have to enter at least one tag that describes your object. Read more about it in the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginners Guide</a>, specifically at section <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4">Adding Details, and Tagging</a>. If the thing you have entered is a <a href="http://wiki.openstreetmap.org/wiki/Building">building</a> the tags could look like:</p>
+<p>The user <a href="https://www.openstreetmap.org/user/BabuSudhakar">BabuSudhakar</a> has so far only the changesets <a href="https://www.openstreetmap.org/browse/changeset/7444772">7444772</a> and <a href="https://www.openstreetmap.org/browse/changeset/7452141">7452141</a>.</p>
+<p>The reason for your additions not showing up on the map, for example <a href="https://www.openstreetmap.org/browse/way/102654160">102654160</a>, is that they have no <a href="https://wiki.openstreetmap.org/wiki/Tags">tags</a>. The renderer doesn't know if the thing you have entered is a house, a fence, a lake or a border etc.</p>
+<p>You have to enter at least one tag that describes your object. Read more about it in the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginners Guide</a>, specifically at section <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4">Adding Details, and Tagging</a>. If the thing you have entered is a <a href="https://wiki.openstreetmap.org/wiki/Building">building</a> the tags could look like:</p>
 <ul>
 <li>building = yes</li>
 <li>name = The Robotics Institute</li>

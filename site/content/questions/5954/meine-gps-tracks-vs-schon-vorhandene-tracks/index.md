@@ -117,8 +117,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Leider sind GPS-Tracks nie 100% genau, genau wie alle anderen Datenquellen, die OSM benutzt (siehe z.B. <a href="http://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>). Insofern kann es sein, dass deine Tracks die Wege korrekt(er) darstellen als die vorhandenen Daten - oder eben nicht.</p>
-<p>Die beste Lösung ist vermutlich, dass du <a href="http://wiki.openstreetmap.org/wiki/Upload">deine Tracks bei OSM hochlädst</a>; dann stehen sie dir und anderen Bearbeitern als Rohdaten zur Verfügung.</p>
+<p>Leider sind GPS-Tracks nie 100% genau, genau wie alle anderen Datenquellen, die OSM benutzt (siehe z.B. <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>). Insofern kann es sein, dass deine Tracks die Wege korrekt(er) darstellen als die vorhandenen Daten - oder eben nicht.</p>
+<p>Die beste Lösung ist vermutlich, dass du <a href="https://wiki.openstreetmap.org/wiki/Upload">deine Tracks bei OSM hochlädst</a>; dann stehen sie dir und anderen Bearbeitern als Rohdaten zur Verfügung.</p>
 <p>Zum Bearbeiten der Karten-Daten:</p>
 <p>Du solltest anhand der schon vorhandenen Tracks in OSM und der Luftbilder abzuschätzen versuchen, was korrekt ist - deine Tracks oder die vorhandenen Daten. Dann kannst du entsprechend korrigieren. Fehlende Wege kannst du natürlich nach deinen Tracks ergänzen. Idealerweise nach Abgleich mit evtl. vorhandenen Tracks &amp; Luftbildern...</p>
 <p>P.S. Dieses Forum ist vorwiegend englischsprachig. Fragen auf Deutsch finden vermutlich nicht so schnell eine Antwort...</p>

@@ -141,7 +141,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>See this <a href="http://www.openstreetmap.org/user/bdiscoe/diary/21208">contest retrospective</a> for an example of how per-user statistics have the potential to lower contribution quality.</p>
+<p>See this <a href="https://www.openstreetmap.org/user/bdiscoe/diary/21208">contest retrospective</a> for an example of how per-user statistics have the potential to lower contribution quality.</p>
 <p>That said, one easy way to make your own stats is to use <a href="http://download.geofabrik.de/">country extracts</a> and <a href="https://www.gaia-gis.it/fossil/spatialite-tools/index">spatialite tools</a>, then some simple sql. Just avoid turning it into a contest.</p>
 </div>
 <div id="comment-31909-info" class="comment-info">

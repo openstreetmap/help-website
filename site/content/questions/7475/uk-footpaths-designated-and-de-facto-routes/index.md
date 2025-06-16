@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Re the access question, I encountered something like that <a href="http://www.openstreetmap.org/?lat=53.18553&amp;lon=-1.33891&amp;zoom=17&amp;layers=M">here</a>. The paths in that field are burnt into the stubble by the farmer (and are the most convenient for walkers to use given that they join the corners). That's not, however, where the footpath signs point, so I added the burnt paths as "footway" with no designation and the signed right of way (which didn't at the time coincide with any path).</p>
+<p>Re the access question, I encountered something like that <a href="https://www.openstreetmap.org/?lat=53.18553&amp;lon=-1.33891&amp;zoom=17&amp;layers=M">here</a>. The paths in that field are burnt into the stubble by the farmer (and are the most convenient for walkers to use given that they join the corners). That's not, however, where the footpath signs point, so I added the burnt paths as "footway" with no designation and the signed right of way (which didn't at the time coincide with any path).</p>
 <p>It's arguable whether the "foot=yes" really belongs on the "designation" way with "foot=permissive" on the actual path.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Combination of <a href="http://wiki.openstreetmap.org/wiki/Surface">surface</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:trail_visibility">visibility</a> and perhaps <a href="http://wiki.openstreetmap.org/wiki/Sac_scale">SAC scale</a> should cover this case.</p>
+<p>Combination of <a href="https://wiki.openstreetmap.org/wiki/Surface">surface</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:trail_visibility">visibility</a> and perhaps <a href="https://wiki.openstreetmap.org/wiki/Sac_scale">SAC scale</a> should cover this case.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't think there is an easy way to delete changeset that has been uploaded twice. You could post a link to the changesets here and someone could probably do it with a script.</p>
-<p>It looks like there is a <a href="http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">revert plugin for JOSM</a> at least:</p>
+<p>It looks like there is a <a href="/questions/731/how-can-i-revert-a-changeset">revert plugin for JOSM</a> at least:</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

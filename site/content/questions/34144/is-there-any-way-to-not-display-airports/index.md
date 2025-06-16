@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>On the right of the map on openstreetmap.org there is a column of icons. Click on the fourth one (called Layers). Here you can select some different styles of maps. The bottom two choices only have the four biggest airports around Denver as an icon and no name labels on those airports.</p>
-<p><a href="http://www.openstreetmap.org/#map=10/39.7695/-104.9867&amp;layers=H">Denver on Humanitarian layer.</a></p>
+<p><a href="https://www.openstreetmap.org/#map=10/39.7695/-104.9867&amp;layers=H">Denver on Humanitarian layer.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,8 +158,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A collection of OSM based tiles in different styles can be found in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Tiles">Tiles</a>.</p>
-<p>Also have a look at <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> and <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> for alternative map displaying.</p>
+<p>A collection of OSM based tiles in different styles can be found in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Tiles">Tiles</a>.</p>
+<p>Also have a look at <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a> and <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a> for alternative map displaying.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

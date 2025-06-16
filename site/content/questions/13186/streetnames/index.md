@@ -117,8 +117,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to fix it yourself (and you're encouraged to do so!) have a read of the answers to <a href="http://help.openstreetmap.org/questions/6/how-do-i-get-started-with-openstreetmap">this question</a>, particularly the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners' Guide</a>.</p>
-<p>Alternatively, if you just want to log a bug and have someone else fix it, have a read <a href="http://help.openstreetmap.org/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">here</a>.</p>
+<p>If you want to fix it yourself (and you're encouraged to do so!) have a read of the answers to <a href="/questions/6/how-do-i-get-started-with-openstreetmap">this question</a>, particularly the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners' Guide</a>.</p>
+<p>Alternatively, if you just want to log a bug and have someone else fix it, have a read <a href="/questions/644/where-is-the-site-with-a-list-of-openstreetmap-errors">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

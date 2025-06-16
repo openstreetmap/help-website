@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Stylesheets">Stylesheets</a> determines details of the content that should be shown on a map. Currently, the main map that you see at osm.org is displayed using the <a href="https://github.com/gravitystorm/openstreetmap-carto">CartoCSS Stylesheet</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Stylesheets">Stylesheets</a> determines details of the content that should be shown on a map. Currently, the main map that you see at osm.org is displayed using the <a href="https://github.com/gravitystorm/openstreetmap-carto">CartoCSS Stylesheet</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

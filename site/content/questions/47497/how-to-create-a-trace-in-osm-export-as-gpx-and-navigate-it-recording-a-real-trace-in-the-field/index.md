@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can find some online services for track preparation via <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track_drawing_websites</a> in the OSM wiki.</p>
+<p>Maybe you can find some online services for track preparation via <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track_drawing_websites</a> in the OSM wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

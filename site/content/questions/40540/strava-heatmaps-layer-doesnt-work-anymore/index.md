@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Strava Heatmaps layer doesn&#x27;t work anymore"
-description = '''Hi all, I tried to activate the Strava layer just now in iD without success. I tried to use the url provided in this link http://wiki.openstreetmap.org/wiki/Strava without success. No problems whatsoever in the past. Any ideas what&#x27;s wrong there? Thanks René'''
+description = '''Hi all, I tried to activate the Strava layer just now in iD without success. I tried to use the url provided in this link https://wiki.openstreetmap.org/wiki/Strava without success. No problems whatsoever in the past. Any ideas what&#x27;s wrong there? Thanks René'''
 date = "2015-01-22T21:05:00Z"
 lastmod = "2015-01-22T22:00:00Z"
 weight = 40540
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>I tried to activate the Strava layer just now in iD without success. I tried to use the url provided in this link <a href="http://wiki.openstreetmap.org/wiki/Strava">http://wiki.openstreetmap.org/wiki/Strava</a> without success. No problems whatsoever in the past. Any ideas what's wrong there?</p>
+<p>I tried to activate the Strava layer just now in iD without success. I tried to use the url provided in this link <a href="https://wiki.openstreetmap.org/wiki/Strava">https://wiki.openstreetmap.org/wiki/Strava</a> without success. No problems whatsoever in the past. Any ideas what's wrong there?</p>
 <p>Thanks René</p>
 </div>
 <div id="question-tags" class="tags-container tags">

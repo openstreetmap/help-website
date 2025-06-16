@@ -418,7 +418,7 @@ osqa_accepted = true
 <div id="post-5125-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n">http://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n</a> It's a spanish convention of how to map. If all contries have the same convention, it has non-sense.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n">https://wiki.openstreetmap.org/wiki/Normalizaci%C3%B3n</a> It's a spanish convention of how to map. If all contries have the same convention, it has non-sense.</p>
 </div>
 <div id="comment-5125-info" class="comment-info">
 <span class="comment-age">(11 May '11, 19:52)</span> <span class="comment-user userinfo">somenxavier</span>

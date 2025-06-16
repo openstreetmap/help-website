@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-18224-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>No need to wonder, just <a href="http://wiki.openstreetmap.org/wiki/About">read</a>.</p>
+<p>No need to wonder, just <a href="https://wiki.openstreetmap.org/wiki/About">read</a>.</p>
 </div>
 <div id="comment-18224-info" class="comment-info">
 <span class="comment-age">(06 Dec '12, 09:34)</span> <span class="comment-user userinfo">scai ♦</span>

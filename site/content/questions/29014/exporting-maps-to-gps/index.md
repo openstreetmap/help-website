@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Exporting maps to GPS"
-description = '''On the openstreetmap.org site there is an option to Export I presume that this is where I download maps to put on my GPS. When I select an area and the click Export my browser looks for a page http://www.openstreetmap.org/export/finish all I then get is page not found. What am I doing wrong. NevCav'''
+description = '''On the openstreetmap.org site there is an option to Export I presume that this is where I download maps to put on my GPS. When I select an area and the click Export my browser looks for a page https://www.openstreetmap.org/export/finish all I then get is page not found. What am I doing wrong. NevCav'''
 date = "2013-12-12T20:36:00Z"
 lastmod = "2013-12-14T17:54:00Z"
 weight = 29014
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>On the openstreetmap.org site there is an option to Export I presume that this is where I download maps to put on my GPS. When I select an area and the click Export my browser looks for a page <a href="http://www.openstreetmap.org/export/finish">http://www.openstreetmap.org/export/finish</a> all I then get is page not found.</p>
+<p>On the openstreetmap.org site there is an option to Export I presume that this is where I download maps to put on my GPS. When I select an area and the click Export my browser looks for a page <a href="https://www.openstreetmap.org/export/finish">https://www.openstreetmap.org/export/finish</a> all I then get is page not found.</p>
 <p>What am I doing wrong.</p>
 <p>NevCav</p>
 </div>
@@ -161,7 +161,7 @@ Other Sources
 <div id="post-29035-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you have a late model Garmin you can use this process for a small area map. <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>If you have a late model Garmin you can use this process for a small area map. <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-29035-info" class="comment-info">
 <span class="comment-age">(13 Dec '13, 10:50)</span> <span class="comment-user userinfo">andy mackey</span>

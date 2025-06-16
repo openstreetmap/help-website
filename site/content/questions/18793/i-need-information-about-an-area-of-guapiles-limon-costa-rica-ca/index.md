@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If you know there is an airport and it is still missing on the map then feel free to <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">add it yourself</a>.</p>
+<p>If you know there is an airport and it is still missing on the map then feel free to <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">add it yourself</a>.</p>
 </div>
 <div id="comment-18794-info" class="comment-info">
 <span class="comment-age">(31 Dec '12, 17:07)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Searching for Guápiles airport returns one <a href="http://www.openstreetmap.org/browse/node/1042048544">node</a> in the city of Guápiles.</p>
+<p>Searching for Guápiles airport returns one <a href="https://www.openstreetmap.org/browse/node/1042048544">node</a> in the city of Guápiles.</p>
 <p>The reason you did not see it is that the main map on openstreetmap.org can't possibly show everything on every zoom layer (no room to render every label and the map would be to cluttered).</p>
 </div>
 <div class="answer-controls post-controls">

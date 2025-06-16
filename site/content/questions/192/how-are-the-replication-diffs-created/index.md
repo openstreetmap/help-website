@@ -79,7 +79,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Where would you draw the border?</p>
-<p>Have a look at the first two questions for example: <a href="http://help.openstreetmap.org/questions/1">http://help.openstreetmap.org/questions/1</a> <a href="http://help.openstreetmap.org/questions/2">http://help.openstreetmap.org/questions/2</a></p>
+<p>Have a look at the first two questions for example: <a href="/questions/1">https://help.openstreetmap.org/questions/1</a> <a href="/questions/2">https://help.openstreetmap.org/questions/2</a></p>
 <p>An answer containing the SQL commands would already help, reading a huge bunch of Java source code is too much for me right now.</p>
 </div>
 <div id="comment-197-info" class="comment-info">
@@ -158,7 +158,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The replication diffs are created using <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>. The option used is <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.36#--replicate-apidb_.28--repa.29">'--replicate-apidb'</a>.</p>
+<p>The replication diffs are created using <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>. The option used is <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.36#--replicate-apidb_.28--repa.29">'--replicate-apidb'</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

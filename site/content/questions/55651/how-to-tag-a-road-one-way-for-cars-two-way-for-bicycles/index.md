@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Bicycle">Here</a> is a Wiki page with more elaborate possibilities</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bicycle">Here</a> is a Wiki page with more elaborate possibilities</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ osqa_accepted = true
 <li>cycleway=opposite</li>
 <li>oneway:bicycle=no</li>
 </ol>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Tag:cycleway%3Dopposite">http://wiki.openstreetmap.org/wiki/Tag:cycleway%3Dopposite</a> The latter variant is substantially more popular.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Tag:cycleway%3Dopposite">https://wiki.openstreetmap.org/wiki/Tag:cycleway%3Dopposite</a> The latter variant is substantially more popular.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

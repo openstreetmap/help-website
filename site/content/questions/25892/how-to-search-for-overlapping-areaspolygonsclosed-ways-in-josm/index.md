@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Is it possible to search for overlapping areas/polygons/closed ways in JOSM?</p>
 <p>I just found that searching for <code>way closed</code> finds all the areas/polygons that are closed ways (e.g. buildings, landuse areas, roundabouts that are made of one way, etc.). But how to find only the ones, that overlap each other?</p>
 <p>I want to use this, for searching overlapping landuse polygons.</p>
-<p>JOSM had a documentation for it’s search function: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Search_function">http://wiki.openstreetmap.org/wiki/JOSM/Search_function</a> That was only two or three weeks ago. Now it is gone. :-(</p>
+<p>JOSM had a documentation for it’s search function: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Search_function">https://wiki.openstreetmap.org/wiki/JOSM/Search_function</a> That was only two or three weeks ago. Now it is gone. :-(</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-closed_way" rel="tag" title="see questions tagged &#39;closed_way&#39;">closed_way</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span> <span class="post-tag tag-link-overlap" rel="tag" title="see questions tagged &#39;overlap&#39;">overlap</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

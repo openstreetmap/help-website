@@ -129,7 +129,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can fetch elements by id using Overpass API:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id</a></p>
 <p>The simplest script to retrieve a way would be something like this:</p>
 <pre><code>way(17500233);
 out geom;</code></pre>

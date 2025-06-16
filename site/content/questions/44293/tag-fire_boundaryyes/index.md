@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I were to add them I would add them as <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">boundary relations</a> with <code>type=boundary</code>, <code>boundary=fire</code> with no admin levels on the ways or relation, and no tags on the ways (except perhaps a <a href="http://wiki.openstreetmap.org/wiki/Key:note"><code>note=</code></a> to other users that the way is part of a relation).</p>
+<p>If I were to add them I would add them as <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">boundary relations</a> with <code>type=boundary</code>, <code>boundary=fire</code> with no admin levels on the ways or relation, and no tags on the ways (except perhaps a <a href="https://wiki.openstreetmap.org/wiki/Key:note"><code>note=</code></a> to other users that the way is part of a relation).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ One Answer:
 <div id="post-44334-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> I assume this is related to <a href="https://help.openstreetmap.org/questions/44295/project-in-greece-disaster-management">https://help.openstreetmap.org/questions/44295/project-in-greece-disaster-management</a> and also to the "capacity" question with the wrong license.</p>
+<p><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik</a> I assume this is related to <a href="/questions/44295/project-in-greece-disaster-management">https://help.openstreetmap.org/questions/44295/project-in-greece-disaster-management</a> and also to the "capacity" question with the wrong license.</p>
 </div>
 <div id="comment-44334-info" class="comment-info">
 <span class="comment-age">(22 Jul '15, 07:34)</span> <span class="comment-user userinfo">escada</span>

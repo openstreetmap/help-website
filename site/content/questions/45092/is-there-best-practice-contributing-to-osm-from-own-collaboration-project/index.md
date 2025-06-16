@@ -124,7 +124,7 @@ osqa_accepted = false
 <li>Break everything up into bite sized chunks if you can (5 min videos)</li>
 <li>Visual progress (stats, maps etc)</li>
 </ul>
-<p>Check out the <a href="http://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">Irish Townland Mapping</a> page for what we did, it may provide some inspiration</p>
+<p>Check out the <a href="https://wiki.openstreetmap.org/wiki/Ireland/Mapping_Townlands">Irish Townland Mapping</a> page for what we did, it may provide some inspiration</p>
 <p>I should also add, if you have the skills, its possible to fork the default iD editor to simplify it so that only the tags needed are available. This was done and <a href="https://www.youtube.com/watch?v=YAbUb7HzSQ4">presented at the HOT Summit</a> back in April for mapping logging roads in the Congo Basin</p>
 </div>
 <div class="answer-controls post-controls">
@@ -193,12 +193,12 @@ osqa_accepted = false
 <p>Thats honestly not that big of a deal. If you are asking people to identify, map and tag something very specific, signing up to a website should be the least of your/their worries</p>
 <p>I did a bit of digging and there seems to be support for this type of mapping going back several years. How much traction it currently has, I dont know, but what I found is</p>
 <ul>
-<li>the <a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dclimbing">sport=climbing tag</a> page. Actually, the <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:sport%3Dclimbing">German version</a> (the English version was copied from it) is much more up to date and maintained regularly by the looks of it</li>
-<li>the full <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Climbing">proposal page</a> to expand it further - note, these, by their very nature, often lead to adoption of the tagging schema even if the proposal becomes inactive simply because nothing better is ever proposed</li>
-<li>a <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Climbing">long and lengthy discussion</a> on the finer points of the proposal. It might be worthwhile connecting with the people on that page as several seem to be very interested in the topic</li>
+<li>the <a href="https://wiki.openstreetmap.org/wiki/Tag:sport%3Dclimbing">sport=climbing tag</a> page. Actually, the <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:sport%3Dclimbing">German version</a> (the English version was copied from it) is much more up to date and maintained regularly by the looks of it</li>
+<li>the full <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Climbing">proposal page</a> to expand it further - note, these, by their very nature, often lead to adoption of the tagging schema even if the proposal becomes inactive simply because nothing better is ever proposed</li>
+<li>a <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Climbing">long and lengthy discussion</a> on the finer points of the proposal. It might be worthwhile connecting with the people on that page as several seem to be very interested in the topic</li>
 </ul>
 <p>Just FYI, there are close to 8,000 climbing references already in <a href="http://taginfo.openstreetmap.org/search?q=sport%3Dclimbing">the database</a> and maps created utilising this info already <a href="http://openclimbingmap.bstegmaier.de/#14/48.3927/9.7763">here</a> and <a href="http://martinkoeller.github.io/ClimbingMap/example1.html">here</a> for example. There looks to be the makings of a JOSM plugin too in the works which will make it a breeze to map this stuff.</p>
-<p>Finally, I don't know where you are in the world, but I'd recommend reaching out to your local community to see if there are other people out there mapping these features. You never know who you might find and what help or support they may be able to give. Mailing lists for all regions are listed <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">here</a>.</p>
+<p>Finally, I don't know where you are in the world, but I'd recommend reaching out to your local community to see if there are other people out there mapping these features. You never know who you might find and what help or support they may be able to give. Mailing lists for all regions are listed <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">here</a>.</p>
 <p>I hope this has been useful to you and encourages you to think about getting your users to feed directly into OSM.</p>
 <p>Simply put, the more they add, the more useful it will be for all climbers, them included.</p>
 </div>

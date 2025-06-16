@@ -39,14 +39,14 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>At the OSM christmas party, someone had the idea to vote on "Image of the year"; what was the best <a href="http://wiki.openstreetmap.org/wiki/Featured_images">image of the week</a> since last new year.</p>
+<p>At the OSM christmas party, someone had the idea to vote on "Image of the year"; what was the best <a href="https://wiki.openstreetmap.org/wiki/Featured_images">image of the week</a> since last new year.</p>
 <p>Since this is the first such vote, we've got 5 years of images to choose from. So the topic of this poll is: what's the defining OSM image of the half-decade?</p>
 <p>How this will work:</p>
-<p>(a) choose an image you like from the <a href="http://wiki.openstreetmap.org/wiki/Category:Featured_images">category</a> or <a href="http://wiki.openstreetmap.org/wiki/Featured_images#Archive">lists</a></p>
+<p>(a) choose an image you like from the <a href="https://wiki.openstreetmap.org/wiki/Category:Featured_images">category</a> or <a href="https://wiki.openstreetmap.org/wiki/Featured_images#Archive">lists</a></p>
 <p>(b) If that image is already an answer on this page, upvote it</p>
 <p>(c) If not, add a copy of the image/caption as an answer</p>
 <p>Repeat if you have more than one choice</p>
-<p>p.s. if an image you like isn't yet featured, then add it to <a href="http://wiki.openstreetmap.org/wiki/Featured_image_proposals">this page</a> instead</p>
+<p>p.s. if an image you like isn't yet featured, then add it to <a href="https://wiki.openstreetmap.org/wiki/Featured_image_proposals">this page</a> instead</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-featured_image" rel="tag" title="see questions tagged &#39;featured_image&#39;">featured_image</span>

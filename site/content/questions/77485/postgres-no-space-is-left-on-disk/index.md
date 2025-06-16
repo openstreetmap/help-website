@@ -58,7 +58,7 @@ HINT:  Check free disk space.
 CONTEXT:  COPY planet_osm_ways, line 20803763</code></pre>
 <p>could you please help me, I am new on this part. I don not know exactly how much space is required</p>
 <p>the output df -h on my host:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/23.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/23.PNG" alt="alt text" /></p>
 <p>thanks for your answer. BR. Eman</p>
 </div>
 <div id="question-tags" class="tags-container tags">

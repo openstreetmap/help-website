@@ -108,7 +108,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The nearest ones I know in Estonia are currently double tagged as man_made=shaft + tunnel=shaft . <a href="http://www.openstreetmap.org/node/2787537242#map=18/59.37239/24.40362&amp;layers=D.">http://www.openstreetmap.org/node/2787537242#map=18/59.37239/24.40362&amp;layers=D.</a></p>
+<p>The nearest ones I know in Estonia are currently double tagged as man_made=shaft + tunnel=shaft . <a href="https://www.openstreetmap.org/node/2787537242#map=18/59.37239/24.40362&amp;layers=D.">https://www.openstreetmap.org/node/2787537242#map=18/59.37239/24.40362&amp;layers=D.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -205,7 +205,7 @@ osqa_accepted = true
 <div id="post-51846-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have tagged some trenches with covered=yes, but those were German trapezium shaped trenches with masonry walls and a cover on top. But as I said before the first British brigade miners, short build and not claustrophobic, dug shelters 4 stories or more down under and offensive tunnels to place explosives and kill Germans. Although shaft nor tunnel are a mine, use those mine tags and tag the extra info I mentioned earlier. I took a look here <a href="http://www.openstreetmap.org/#map=15/51.1358/1.3571">http://www.openstreetmap.org/#map=15/51.1358/1.3571</a> at the Fotress and shelters of Dover, but no sign or tags at all. Don’t dig to deep.</p>
+<p>I have tagged some trenches with covered=yes, but those were German trapezium shaped trenches with masonry walls and a cover on top. But as I said before the first British brigade miners, short build and not claustrophobic, dug shelters 4 stories or more down under and offensive tunnels to place explosives and kill Germans. Although shaft nor tunnel are a mine, use those mine tags and tag the extra info I mentioned earlier. I took a look here <a href="https://www.openstreetmap.org/#map=15/51.1358/1.3571">https://www.openstreetmap.org/#map=15/51.1358/1.3571</a> at the Fotress and shelters of Dover, but no sign or tags at all. Don’t dig to deep.</p>
 </div>
 <div id="comment-51846-info" class="comment-info">
 <span class="comment-age">(31 Aug '16, 17:18)</span> <span class="comment-user userinfo">Hendrikklaas</span>

@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-19599-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The most we or western field is without the NR tag, see this, <a href="http://www.openstreetmap.org/?lat=52.299758&amp;lon=5.160771&amp;zoom=18&amp;layers=M.">http://www.openstreetmap.org/?lat=52.299758&amp;lon=5.160771&amp;zoom=18&amp;layers=M.</a> The grass or weed is growing high and there several growing in the field, but no scrubs yet. In the European Union there several farmlands disused or abandoned, since the farmer gets an allowance, for not using the fields. And in no time, the old grows will take over.</p>
+<p>The most we or western field is without the NR tag, see this, <a href="https://www.openstreetmap.org/?lat=52.299758&amp;lon=5.160771&amp;zoom=18&amp;layers=M.">https://www.openstreetmap.org/?lat=52.299758&amp;lon=5.160771&amp;zoom=18&amp;layers=M.</a> The grass or weed is growing high and there several growing in the field, but no scrubs yet. In the European Union there several farmlands disused or abandoned, since the farmer gets an allowance, for not using the fields. And in no time, the old grows will take over.</p>
 </div>
 <div id="comment-19599-info" class="comment-info">
 <span class="comment-age">(05 Feb '13, 23:18)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -85,7 +85,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Nice paint job, but could you please tag things as what they are, not how you want them coloured. <a href="http://wiki.openstreetmap.org/wiki/Brownfield">http://wiki.openstreetmap.org/wiki/Brownfield</a></p>
+<p>Nice paint job, but could you please tag things as what they are, not how you want them coloured. <a href="https://wiki.openstreetmap.org/wiki/Brownfield">https://wiki.openstreetmap.org/wiki/Brownfield</a></p>
 <p>P.S. You broke the water again.</p>
 </div>
 <div id="comment-19632-info" class="comment-info">

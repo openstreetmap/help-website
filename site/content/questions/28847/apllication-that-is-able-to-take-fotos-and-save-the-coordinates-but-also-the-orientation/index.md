@@ -160,7 +160,7 @@ One Answer:
 ...an osm aspect...<br />
 I use an iphone4 to take geotagged images for editing the OSM. When editing in JOSM, I open the gpx track, download osm data along the track, then upload the iphone photos and Josm uses the geotagged info to place them on the map. When I select one of the camera icons, a view of the image opens and also puts a white patch on the camera location showing the direction the image was taken. The direction also shows in the picture view. I don't see any coordinates there but if your hold you mouse over the camera icon on the map, the lat, lon are given it the bottom left of the screen.<br />
 I don't know how to export such info unless doing a screen shot like I did is ok for you. The info is in the photo exif metadata I guess.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen.png" alt="screen" /></p>
+<p><img src="/upfiles/Screen.png" alt="screen" /></p>
 <p>Using iphone4, iMac7 osx, Josm 6388 Java version 1.6.0_65<br />
 </p>
 </div>

@@ -39,17 +39,17 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-11_at_8.31.44_PM_mgmGJiF.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-11_at_8.31.44_PM_mgmGJiF.png" alt="alt text" /></p>
 <p>When I launch JOSM I get this error warning popup message for my plugin.</p>
 <p>I'm using the latest version yet it requires a higher version, which is really confusing.</p>
 <p>I need some help to figure out how to fix it.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-11_at_8.42.20_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-11_at_8.42.20_PM.png" alt="alt text" /></p>
 <p>I'm using these two <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Kendzi3D">Plugins</a> with log4j and jogl.</p>
 <p>Edit:</p>
 <p>I got this version that it requires</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-13_at_6.40.04_AM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-13_at_6.40.04_AM.png" alt="alt text" /></p>
 <p>and I'm getting this when I load JOSM</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-13_at_6.39.30_AM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-13_at_6.39.30_AM.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-kendzi3d" rel="tag" title="see questions tagged &#39;kendzi3d&#39;">kendzi3d</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-macos" rel="tag" title="see questions tagged &#39;macos&#39;">macos</span> <span class="post-tag tag-link-java" rel="tag" title="see questions tagged &#39;java&#39;">java</span> <span class="post-tag tag-link-plugin" rel="tag" title="see questions tagged &#39;plugin&#39;">plugin</span>

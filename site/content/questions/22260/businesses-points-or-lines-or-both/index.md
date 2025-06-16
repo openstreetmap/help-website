@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Either points <strong>OR</strong> lines (ways), <strong>not both</strong>. This is known as <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one element</a>.</p>
+<p>Either points <strong>OR</strong> lines (ways), <strong>not both</strong>. This is known as <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature, one element</a>.</p>
 <p>You may wish to map the building as a way and the business itself as a point. This is a common approach for several reasons: the business was mapped first, the building afterwards; there are several businesses in the building (e.g., shop with offices above); consistency in mapping style; business POIs were collected with a mobile app; some icons show for points but not ways in the editor or mapnik renderer; etc.).</p>
 <p>It is usually quicker to map businesses as points and at a later time refine the mapping by adding buildings and transferring the tags from the point to the building. However, for large buildings occupied as a single business I would map the building from the outset. Avoid mapping several buildings as one: it's very hard work to separate them later.</p>
 <p>These are guidelines. In general it's a good idea to try and do whatever you choose to do consistently in your local mapping area. Your final choice will depend on how many businesses/buildings are involved and the quality of aerial imagery for doing building outlines.</p>

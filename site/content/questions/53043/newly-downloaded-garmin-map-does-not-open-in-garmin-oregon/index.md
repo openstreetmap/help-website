@@ -92,7 +92,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13006/surprised">@surprised</a>: please do not waste the community's resources by asking the same question again and not answering clarification questions.</p>
+<p><a href="https://help.openstreetmap.org/users/13006/surprised">@surprised</a>: please do not waste the community's resources by asking the same question again and not answering clarification questions.</p>
 </div>
 <div id="comment-53051-info" class="comment-info">
 <span class="comment-age">(20 Nov '16, 22:57)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

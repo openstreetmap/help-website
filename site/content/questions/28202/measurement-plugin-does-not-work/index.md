@@ -135,11 +135,11 @@ One Answer:
 <div class="answer-body">
 <p>Assuming your using JOSM...</p>
 <p>I just installed (via preferences) the "Measurement" plugin...</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_shot_2013-11-19_at_7.04.31_PM.png" alt="Measurement plugin" /></p>
+<p><img src="/upfiles/Screen_shot_2013-11-19_at_7.04.31_PM.png" alt="Measurement plugin" /></p>
 <p>I then restarted JOSM and the tool appears under the "Windows tab"</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Windows.png" alt="Windows tab" /></p>
+<p><img src="/upfiles/Windows.png" alt="Windows tab" /></p>
 <p>I then added a tick to the tool and the measurement box appeared on the right side ok. I then selected the pin icon (between the eye and the X) on the box to undock and resized the panel to make it easier to view and it seems to work as described for me.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/measurement">Function description here</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/measurement">Function description here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

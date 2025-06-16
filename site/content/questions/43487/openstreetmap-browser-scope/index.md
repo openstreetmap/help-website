@@ -128,7 +128,7 @@ osqa_accepted = false
 <div id="post-43536-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In case you need realtime vehicle tracking, see two mentioned solutions at <a href="https://help.openstreetmap.org/questions/30818/tracking-vehicles-realtime">https://help.openstreetmap.org/questions/30818/tracking-vehicles-realtime</a></p>
+<p>In case you need realtime vehicle tracking, see two mentioned solutions at <a href="/questions/30818/tracking-vehicles-realtime">https://help.openstreetmap.org/questions/30818/tracking-vehicles-realtime</a></p>
 </div>
 <div id="comment-43536-info" class="comment-info">
 <span class="comment-age">(11 Jun '15, 17:14)</span> <span class="comment-user userinfo">stephan75</span>

@@ -137,7 +137,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The "<a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch_2 Shortcuts</a>" wiki page has some suggestions for non-English keyboard layouts - that may help.</p>
+<p>The "<a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch_2 Shortcuts</a>" wiki page has some suggestions for non-English keyboard layouts - that may help.</p>
 </div>
 <div id="comment-21832-info" class="comment-info">
 <span class="comment-age">(25 Apr '13, 09:42)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

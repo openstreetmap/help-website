@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/search?query=Mercer%20Island#map=13/47.5660/-122.2551&amp;layers=C">http://www.openstreetmap.org/search?query=Mercer%20Island#map=13/47.5660/-122.2551&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/search?query=Mercer%20Island#map=13/47.5660/-122.2551&amp;layers=C">https://www.openstreetmap.org/search?query=Mercer%20Island#map=13/47.5660/-122.2551&amp;layers=C</a></p>
 </div>
 <div id="comment-59623-info" class="comment-info">
 <span class="comment-age">(14 Sep '17, 05:55)</span> <span class="comment-user userinfo">escada</span>

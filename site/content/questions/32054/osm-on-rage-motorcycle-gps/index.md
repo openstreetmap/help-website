@@ -134,7 +134,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Without any further information, I can just point you to a general link:<br />
-<a href="http://wiki.openstreetmap.org/wiki/PNA">http://wiki.openstreetmap.org/wiki/PNA</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/PNA">https://wiki.openstreetmap.org/wiki/PNA</a></p>
 <p>So usually you need to get backdoor access to your device and then install a different open source application that supports OSM out of the box.</p>
 </div>
 <div class="answer-controls post-controls">

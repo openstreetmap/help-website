@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Super-relation best practice"
-description = '''I need to reference the Bon Secour National Wildlife Refuge, which consists of several components:  http://www.openstreetmap.org/relation/2644324 http://www.openstreetmap.org/relation/2644325 http://www.openstreetmap.org/relation/2644326 http://www.openstreetmap.org/relation/2644327 http://www.opens...'''
+description = '''I need to reference the Bon Secour National Wildlife Refuge, which consists of several components:  https://www.openstreetmap.org/relation/2644324 https://www.openstreetmap.org/relation/2644325 https://www.openstreetmap.org/relation/2644326 https://www.openstreetmap.org/relation/2644327 http://www.opens...'''
 date = "2017-04-12T00:47:00Z"
 lastmod = "2017-04-12T21:50:00Z"
 weight = 55575
@@ -42,14 +42,14 @@ osqa_accepted = true
 <div class="question-body">
 <p>I need to reference the <a href="https://en.wikipedia.org/wiki/Bon_Secour_National_Wildlife_Refuge">Bon Secour National Wildlife Refuge</a>, which consists of several components:</p>
 <ol>
-<li><a href="http://www.openstreetmap.org/relation/2644324">http://www.openstreetmap.org/relation/2644324</a></li>
-<li><a href="http://www.openstreetmap.org/relation/2644325">http://www.openstreetmap.org/relation/2644325</a></li>
-<li><a href="http://www.openstreetmap.org/relation/2644326">http://www.openstreetmap.org/relation/2644326</a></li>
-<li><a href="http://www.openstreetmap.org/relation/2644327">http://www.openstreetmap.org/relation/2644327</a></li>
-<li><a href="http://www.openstreetmap.org/node/359003045">http://www.openstreetmap.org/node/359003045</a></li>
+<li><a href="https://www.openstreetmap.org/relation/2644324">https://www.openstreetmap.org/relation/2644324</a></li>
+<li><a href="https://www.openstreetmap.org/relation/2644325">https://www.openstreetmap.org/relation/2644325</a></li>
+<li><a href="https://www.openstreetmap.org/relation/2644326">https://www.openstreetmap.org/relation/2644326</a></li>
+<li><a href="https://www.openstreetmap.org/relation/2644327">https://www.openstreetmap.org/relation/2644327</a></li>
+<li><a href="https://www.openstreetmap.org/node/359003045">https://www.openstreetmap.org/node/359003045</a></li>
 </ol>
-<p>I planned on creating a <a href="http://wiki.openstreetmap.org/wiki/Super-Relation">super-relation</a> to reference the relations defined, above, and then removing the node reference.</p>
-<p>I therefore created super-relation: <a href="http://www.openstreetmap.org/relation/7152437">http://www.openstreetmap.org/relation/7152437</a></p>
+<p>I planned on creating a <a href="https://wiki.openstreetmap.org/wiki/Super-Relation">super-relation</a> to reference the relations defined, above, and then removing the node reference.</p>
+<p>I therefore created super-relation: <a href="https://www.openstreetmap.org/relation/7152437">https://www.openstreetmap.org/relation/7152437</a></p>
 <p>That super-relation is not, however, searchable in nominatim and the OSM web client does not highlight the underlying ways as one might expect. Consequently, I have not removed the node.</p>
 <p>I would like to confirm that the super-relation node definition is acceptable and open this issue up to folks for recommendation*.</p>
 <p>Thanks.</p>

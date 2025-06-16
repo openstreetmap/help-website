@@ -130,7 +130,7 @@ One Answer:
 <div id="post-21612-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also, perhaps the answers to <a href="https://help.openstreetmap.org/questions/1736/how-do-i-rotate-the-osm-map-before-printing">this previous question</a> may help.</p>
+<p>Also, perhaps the answers to <a href="/questions/1736/how-do-i-rotate-the-osm-map-before-printing">this previous question</a> may help.</p>
 </div>
 <div id="comment-21612-info" class="comment-info">
 <span class="comment-age">(16 Apr '13, 22:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

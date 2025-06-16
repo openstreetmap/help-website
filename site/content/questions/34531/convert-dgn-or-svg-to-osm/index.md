@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can find some hints in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">Converting map data between formats</a>.</p>
+<p>Maybe you can find some hints in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">Converting map data between formats</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I've tried DXF and it does seem to be converted correctly, but trying to import/populate the database for osm3s results in "no elements found".</p>
-<p>I've created a separately question for this: <a href="https://help.openstreetmap.org/questions/34640/osm3s-populating-database-results-in-no-element-found">https://help.openstreetmap.org/questions/34640/osm3s-populating-database-results-in-no-element-found</a></p>
+<p>I've created a separately question for this: <a href="/questions/34640/osm3s-populating-database-results-in-no-element-found">https://help.openstreetmap.org/questions/34640/osm3s-populating-database-results-in-no-element-found</a></p>
 </div>
 <div id="comment-34641-info" class="comment-info">
 <span class="comment-age">(04 Jul '14, 14:54)</span> <span class="comment-user userinfo">haasor</span>

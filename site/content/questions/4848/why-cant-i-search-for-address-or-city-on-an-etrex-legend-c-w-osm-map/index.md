@@ -147,7 +147,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In answer to "Is there another way...", you might want to have a read of the answers to <a href="http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap?sort=newest">this question</a> . It's a bit more complicated, but running mkgmap yourself to create one gmapsupp.img has a few advantages:</p>
+<p>In answer to "Is there another way...", you might want to have a read of the answers to <a href="/questions/1809/how-to-install-mkgmap?sort=newest">this question</a> . It's a bit more complicated, but running mkgmap yourself to create one gmapsupp.img has a few advantages:</p>
 <ul>
 <li><p>You can decide exactly which areas you want maps of; you're not restricted by what someone's offering for download.</p></li>
 <li><p>You can customise what appears on the map by editing mkgmap's style files</p></li>

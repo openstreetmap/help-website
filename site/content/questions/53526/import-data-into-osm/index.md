@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>ceck <a href="http://wiki.openstreetmap.org/wiki/Import">http://wiki.openstreetmap.org/wiki/Import</a> for guide</p>
+<p>ceck <a href="https://wiki.openstreetmap.org/wiki/Import">https://wiki.openstreetmap.org/wiki/Import</a> for guide</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

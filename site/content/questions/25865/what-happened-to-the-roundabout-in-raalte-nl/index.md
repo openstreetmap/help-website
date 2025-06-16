@@ -122,8 +122,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've had a look at the area in Potlatch 1 (which can show deleted ways) and there were a couple of previous roundabouts (bright red) on the site:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/p1_shot_1.png" alt="alt text" /></p>
-<p>The previously deleted ways were <a href="http://www.openstreetmap.org/browse/way/197933443/history">197933443</a> and <a href="http://www.openstreetmap.org/browse/way/185766295/history">185766295</a>. I'd try and talk to the two deleting users (both of whom still seem to be active).</p>
+<p><img src="/upfiles/p1_shot_1.png" alt="alt text" /></p>
+<p>The previously deleted ways were <a href="https://www.openstreetmap.org/browse/way/197933443/history">197933443</a> and <a href="https://www.openstreetmap.org/browse/way/185766295/history">185766295</a>. I'd try and talk to the two deleting users (both of whom still seem to be active).</p>
 <p>One more thing - I notice that you've drawn a "roundabout" as the end of the primary road from the north (the inner, dark red way in the picture). This won't be treated as a roundabout currently as it needs to be split from the primary and tagged as a roundabout. Also, as you can see in the picture, the ways don't quite join, so routers such as osmand won't know that you can get onto the roundabout from the west or the south.</p>
 </div>
 <div class="answer-controls post-controls">

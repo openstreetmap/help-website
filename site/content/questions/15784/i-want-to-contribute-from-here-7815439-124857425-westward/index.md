@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>hi, newbie here</p>
-<p>is there an available imagery from this location <a href="http://www.openstreetmap.org/?mlat=7.815439&amp;mlon=124.857425&amp;zoom=10&amp;layers=M">7.815439° 124.857425°</a> westward?</p>
+<p>is there an available imagery from this location <a href="https://www.openstreetmap.org/?mlat=7.815439&amp;mlon=124.857425&amp;zoom=10&amp;layers=M">7.815439° 124.857425°</a> westward?</p>
 <p>i want to help and contribute roads and others from that location westward so it might be included in the latest OSM map..</p>
 <p>thank you and more power</p>
 <p>William</p>
@@ -148,7 +148,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If anyone knows, it'll be the people on <a href="http://lists.openstreetmap.org/listinfo/talk-ph">this mailing list</a>.</p>
-<p>Incidentally, you can see quite clearly the edge of the Bing imagery <a href="http://www.openstreetmap.org/?lat=7.668&amp;lon=124.828&amp;zoom=11&amp;layers=M">here</a>.</p>
+<p>Incidentally, you can see quite clearly the edge of the Bing imagery <a href="https://www.openstreetmap.org/?lat=7.668&amp;lon=124.828&amp;zoom=11&amp;layers=M">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

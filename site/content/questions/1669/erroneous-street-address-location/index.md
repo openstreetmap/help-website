@@ -105,8 +105,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In order to get an accurate result from the search, we need to have the accurate data in openstreetmap. Although you don't give any information as to where you're having the problem, I'd expect it to be missing house numbers from the street that you are interested in.</p>
-<p>To fix this, you need to sign up to openstreetmap and get familiar with the editing tools. See the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners Guide</a> on the wiki.</p>
-<p>To add addressing, have a look at the <a href="http://wiki.openstreetmap.org/wiki/Key:addr">Addressing documentation</a>.</p>
+<p>To fix this, you need to sign up to openstreetmap and get familiar with the editing tools. See the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners Guide</a> on the wiki.</p>
+<p>To add addressing, have a look at the <a href="https://wiki.openstreetmap.org/wiki/Key:addr">Addressing documentation</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

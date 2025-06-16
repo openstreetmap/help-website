@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-47354-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I just edited one of my maps with via Chrome on OSX without problems. Look at <a href="http://wiki.openstreetmap.org/wiki/UMap">http://wiki.openstreetmap.org/wiki/UMap</a> for how to contact the developers, they seem to prefer github or the dedicated mailing list</p>
+<p>I just edited one of my maps with via Chrome on OSX without problems. Look at <a href="https://wiki.openstreetmap.org/wiki/UMap">https://wiki.openstreetmap.org/wiki/UMap</a> for how to contact the developers, they seem to prefer github or the dedicated mailing list</p>
 </div>
 <div id="comment-47354-info" class="comment-info">
 <span class="comment-age">(02 Jan '16, 17:00)</span> <span class="comment-user userinfo">escada</span>

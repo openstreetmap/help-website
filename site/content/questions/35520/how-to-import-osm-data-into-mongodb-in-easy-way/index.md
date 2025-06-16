@@ -241,7 +241,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This can be done using the <a href="http://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#mongosm">mongosm importer</a>.</p>
+<p>This can be done using the <a href="https://wiki.openstreetmap.org/wiki/Databases_and_data_access_APIs#mongosm">mongosm importer</a>.</p>
 <ol>
 <li>Download the osm file: <a href="http://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest.osm.bz2">http://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest.osm.bz2</a>.</li>
 <li>Extract the file. Try f.ex. 7zip, or <code>bunzip2 karlsruhe-regbez-latest.osm.bz2</code> in a shell.</li>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "help: island disappeared"
-description = '''http://www.openstreetmap.org/?lat=35.10685&amp;amp;lon=-81.02689&amp;amp;zoom=17&amp;amp;layers=M There was an island displaying in this spot until just recently. Not sure what happened to it. You can see it when in editing mode but not in Mapnik anymore. I tried adding place=island (which wasn&#x27;t there before) ...'''
+description = '''https://www.openstreetmap.org/?lat=35.10685&amp;amp;lon=-81.02689&amp;amp;zoom=17&amp;amp;layers=M There was an island displaying in this spot until just recently. Not sure what happened to it. You can see it when in editing mode but not in Mapnik anymore. I tried adding place=island (which wasn&#x27;t there before) ...'''
 date = "2012-10-22T05:24:00Z"
 lastmod = "2012-10-22T23:01:00Z"
 weight = 17082
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=35.10685&amp;lon=-81.02689&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=35.10685&amp;lon=-81.02689&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=35.10685&amp;lon=-81.02689&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=35.10685&amp;lon=-81.02689&amp;zoom=17&amp;layers=M</a></p>
 <p>There was an island displaying in this spot until just recently. Not sure what happened to it. You can see it when in editing mode but not in Mapnik anymore. I tried adding place=island (which wasn't there before) but that didn't fix it. Also noticed that there was a multipolygon tag on it but it didn't say inner or outer so I added outer (since the nearby coast around the same lake had outer too). Still doesn't show up even when rendering the tile using /dirty. Why did it disappear and how do I get it to display properly again? Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,9 +105,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The lake is a multipolygon. Looking at the <a href="http://www.openstreetmap.org/browse/relation/299167">history</a>, it's possible to see that one of the members previously was:</p>
+<p>The lake is a multipolygon. Looking at the <a href="https://www.openstreetmap.org/browse/relation/299167">history</a>, it's possible to see that one of the members previously was:</p>
 <p>Way Copperhead Island (42890481) as inner</p>
-<p>whereas now that's no longer there - this is why there's no longer a "hole" in the lake for the island. The <a href="http://www.openstreetmap.org/browse/way/42890481">way</a> for the island still exists, so add it back as a member of the lake <a href="http://www.openstreetmap.org/browse/relation/299167">relation</a> with type=inner (in addition to the other relation that it is already part of) and it should be fixed.</p>
+<p>whereas now that's no longer there - this is why there's no longer a "hole" in the lake for the island. The <a href="https://www.openstreetmap.org/browse/way/42890481">way</a> for the island still exists, so add it back as a member of the lake <a href="https://www.openstreetmap.org/browse/relation/299167">relation</a> with type=inner (in addition to the other relation that it is already part of) and it should be fixed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>That fixed it. Thanks.</p>
-<p>I don't want to hijack my own question but I had a lot of trouble following the edit history of a particular way. You pointed me towards <a href="http://www.openstreetmap.org/browse/way/42890481">http://www.openstreetmap.org/browse/way/42890481</a> which is the way that creates the border of the island, but hitting history gave me tons of unrelated edits that included, but were much larger than this tiny island. So when something gets messed up, what's the easiest way to see the edits done only to that way or node so you can figure out where it want wrong?</p>
+<p>I don't want to hijack my own question but I had a lot of trouble following the edit history of a particular way. You pointed me towards <a href="https://www.openstreetmap.org/browse/way/42890481">https://www.openstreetmap.org/browse/way/42890481</a> which is the way that creates the border of the island, but hitting history gave me tons of unrelated edits that included, but were much larger than this tiny island. So when something gets messed up, what's the easiest way to see the edits done only to that way or node so you can figure out where it want wrong?</p>
 <p>Thanks again.</p>
 </div>
 <div id="comment-17113-info" class="comment-info">
@@ -141,11 +141,11 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>If you're looking at the browse page for an object, in this case:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/42890481">http://www.openstreetmap.org/browse/way/42890481</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/42890481">https://www.openstreetmap.org/browse/way/42890481</a></p>
 <p>Down at the bottom of the screen there will be a "view history" option. That will show in this case:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/42890481/history">http://www.openstreetmap.org/browse/way/42890481/history</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/42890481/history">https://www.openstreetmap.org/browse/way/42890481/history</a></p>
 <p>Ignore the "history" tab at the top - that will show all recent edits in the area, not just to the item in question.</p>
-<p>If you're editing using Potlatch 2, you can click "advanced" at the bottom left and double-click on the way number at the top left to see a brief list of changes to the item. Clicking more info on that screen takes you to the <a href="http://www.openstreetmap.org/browse/way/42890481">browse page</a>.</p>
+<p>If you're editing using Potlatch 2, you can click "advanced" at the bottom left and double-click on the way number at the top left to see a brief list of changes to the item. Clicking more info on that screen takes you to the <a href="https://www.openstreetmap.org/browse/way/42890481">browse page</a>.</p>
 <p>The "view history" option works most of the time; the exception is when there's an awful lot of history, and you'll instead get a message "Sorry, the data for the relation with the id XYZ, took too long to retrieve".</p>
 </div>
 <div id="comment-17114-info" class="comment-info">

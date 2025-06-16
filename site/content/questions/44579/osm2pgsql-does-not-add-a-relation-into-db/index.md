@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "osm2pgsql does not add a relation into db"
-description = '''I am using nominatim. I am working on a metro extract from https://mapzen.com/data/metro-extracts  During the nominatim setup process I add the {extract}.osm file. There is a osm_id= http://www.openstreetmap.org/relation/1942609 which I cannot find in the place and placex database using sql queries....'''
+description = '''I am using nominatim. I am working on a metro extract from https://mapzen.com/data/metro-extracts  During the nominatim setup process I add the {extract}.osm file. There is a osm_id= https://www.openstreetmap.org/relation/1942609 which I cannot find in the place and placex database using sql queries....'''
 date = "2015-08-01T03:21:00Z"
 lastmod = "2015-08-04T08:12:00Z"
 weight = 44579
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am using nominatim. I am working on a metro extract from <a href="https://mapzen.com/data/metro-extracts">https://mapzen.com/data/metro-extracts</a></p>
-<p>During the nominatim setup process I add the {extract}.osm file. There is a osm_id= <a href="http://www.openstreetmap.org/relation/1942609">http://www.openstreetmap.org/relation/1942609</a> which I cannot find in the place and placex database using sql queries. How do I debug why this never got added to the database?</p>
+<p>During the nominatim setup process I add the {extract}.osm file. There is a osm_id= <a href="https://www.openstreetmap.org/relation/1942609">https://www.openstreetmap.org/relation/1942609</a> which I cannot find in the place and placex database using sql queries. How do I debug why this never got added to the database?</p>
 <p>Even openstreetmap.org has problem with this relation. When you search for the exact name of the relation on the site "North West Delhi District", it goes to some other artifact.</p>
 <p>When I hit nominatim with "osmid=1942609&amp;osmtype=R", it fails. A very similar relation and right next to it in the file "1942605" succeeds...</p>
 <p>Fails : <a href="https://nominatim.openstreetmap.org/details.php?osmtype=R&amp;osmid=1942609">https://nominatim.openstreetmap.org/details.php?osmtype=R&amp;osmid=1942609</a></p>
@@ -115,7 +115,7 @@ One Answer:
 <p>Likely the relation itself is simply broken. See:</p>
 <p><a href="http://ra.osmsurround.org/analyzeRelation?relationId=1942609&amp;_noCache=on">http://ra.osmsurround.org/analyzeRelation?relationId=1942609&amp;_noCache=on</a></p>
 <p>I would suggest editing it in JOSM and running the validator on it.</p>
-<p>PS: as you can see there is a gap here : <a href="http://www.openstreetmap.org/relation/1942609#map=18/28.70812/77.16314">http://www.openstreetmap.org/relation/1942609#map=18/28.70812/77.16314</a></p>
+<p>PS: as you can see there is a gap here : <a href="https://www.openstreetmap.org/relation/1942609#map=18/28.70812/77.16314">https://www.openstreetmap.org/relation/1942609#map=18/28.70812/77.16314</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -148,7 +148,7 @@ One Answer:
 <div id="post-44602-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11313/arahut_kyenetic"></a><a href="http://help.openstreetmap.org/users/11313/arahut_kyenetic">@arahut_kyenetic</a> IMHO you have two options:</p>
+<p><a href="https://help.openstreetmap.org/users/11313/arahut_kyenetic"></a><a href="https://help.openstreetmap.org/users/11313/arahut_kyenetic">@arahut_kyenetic</a> IMHO you have two options:</p>
 <ul>
 <li>fix the relation, wait till it it the planet / or in the extract you are importing and re-import</li>
 <li>fix the relation and comsume diffs up to at least the point in time the relation is OK again.</li>

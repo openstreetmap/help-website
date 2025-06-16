@@ -107,8 +107,8 @@ osqa_accepted = false
 <p>You can download ready-made SHP-format maps from <a href="http://download.geofabrik.de/osm/">Geofabrik</a> or <a href="http://downloads.cloudmade.com/">Cloudmade</a>.</p>
 <p>I believe most people creating shapefiles (including the download services listed above) are doing so by putting OSM data into a PostGIS database, and then using the built in psql2shp function.</p>
 <p>There are a few command-line tools to do a more direct conversion from osm to shapefiles. In fact it looks like there are two different tools called '<em>osm2shp</em>' under development (<a href="http://trac.openstreetmap.org/browser/applications/utils/export/osm2shp">one by Frederick</a> of geofabrik, <a href="http://code.google.com/p/osm2shp/">one by someone else</a>), and a ruby library called '<a href="http://osmlib.rubyforge.org/">OSMLib</a>'.</p>
-<p>All the alternatives are listed on the <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a> wiki page.</p>
-<p>...and aside from shapefiles, you can actually convert or otherwise use OSM data more directly with MapInfo. See the <a href="http://wiki.openstreetmap.org/wiki/MapInfo">MapInfo</a> wiki page (although that information could do with some tidying up by a MapInfo expert)</p>
+<p>All the alternatives are listed on the <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a> wiki page.</p>
+<p>...and aside from shapefiles, you can actually convert or otherwise use OSM data more directly with MapInfo. See the <a href="https://wiki.openstreetmap.org/wiki/MapInfo">MapInfo</a> wiki page (although that information could do with some tidying up by a MapInfo expert)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

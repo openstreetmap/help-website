@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I've just updated a speed camera information, I hope it is correct (the <a href="http://www.openstreetmap.org/node/2069339071">device</a> and the <a href="http://www.openstreetmap.org/relation/2641848">relation</a>) I want to reference others speed cameras, which displays the speed for educational purpose. I didn't find a way to tag them. Two methods exists:</p>
+<p>I've just updated a speed camera information, I hope it is correct (the <a href="https://www.openstreetmap.org/node/2069339071">device</a> and the <a href="https://www.openstreetmap.org/relation/2641848">relation</a>) I want to reference others speed cameras, which displays the speed for educational purpose. I didn't find a way to tag them. Two methods exists:</p>
 <ul>
 <li>like the "classic" speed cameras ?</li>
 <li>or with <code>traffic_calming = speed_radar</code> ?</li>
@@ -48,7 +48,7 @@ osqa_accepted = false
 <p>How can I do that?</p>
 <p>Thanks</p>
 <p><em>Edit:</em><br />
-I tagged an educational speed camera this way: <a href="http://www.openstreetmap.org/node/3115580512">device</a> and <a href="http://www.openstreetmap.org/relation/4092759">relation</a> Using the relation used for classic speed camera, and using tag <code>traffic_sign = speed_camera</code> and <code>maxspeed = 50</code></p>
+I tagged an educational speed camera this way: <a href="https://www.openstreetmap.org/node/3115580512">device</a> and <a href="https://www.openstreetmap.org/relation/4092759">relation</a> Using the relation used for classic speed camera, and using tag <code>traffic_sign = speed_camera</code> and <code>maxspeed = 50</code></p>
 <p>What do you think of it? <code>traffic_sign</code> seems better than <code>traffic_calming</code>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -145,7 +145,7 @@ I tagged an educational speed camera this way: <a href="http://www.openstreetmap
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Nico, what do you mean a traffic_enforcement radar post <span>with a smiley</span>?</p>
-<p>If so I would use a combination of traffic_calming=speed_radar with speed_radar=educational, just to specify the technique of the post. Read these lines as well <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Relation:enforcement">http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Relation:enforcement</a> there has been some lines about it. Talk to your local community and make a proposal just to get it into the OSM rules of traffic_calming specifics.</p>
+<p>If so I would use a combination of traffic_calming=speed_radar with speed_radar=educational, just to specify the technique of the post. Read these lines as well <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Relation:enforcement">https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/Relation:enforcement</a> there has been some lines about it. Talk to your local community and make a proposal just to get it into the OSM rules of traffic_calming specifics.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -206,7 +206,7 @@ I tagged an educational speed camera this way: <a href="http://www.openstreetmap
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: and I have replaced it (not respecting copyrights) by a link to a free photo.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: and I have replaced it (not respecting copyrights) by a link to a free photo.</p>
 </div>
 <div id="comment-41626-info" class="comment-info">
 <span class="comment-age">(10 Mar '15, 23:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -321,7 +321,7 @@ I tagged an educational speed camera this way: <a href="http://www.openstreetmap
 <div id="post-37388-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> (for the avoidance of doubt) driver speed sensors that display a "smiley" aren't ubiquitous. The more common ones that I've seen (in the UK and elsewhere) just display the speed - see Andy Mackey's picture.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> (for the avoidance of doubt) driver speed sensors that display a "smiley" aren't ubiquitous. The more common ones that I've seen (in the UK and elsewhere) just display the speed - see Andy Mackey's picture.</p>
 </div>
 <div id="comment-37388-info" class="comment-info">
 <span class="comment-age">(07 Oct '14, 15:33)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do you remember if you imported the Wikipedia ranking (search on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation)">http://wiki.openstreetmap.org/wiki/Nominatim/Installation)</a> because that's one component in the importance?</p>
+<p>Do you remember if you imported the Wikipedia ranking (search on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation)">https://wiki.openstreetmap.org/wiki/Nominatim/Installation)</a> because that's one component in the importance?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -125,7 +125,7 @@ One Answer:
 <div id="post-49914-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/150/mtmail">@mtmail</a>: Thanks for your answer. I didnt add wikipedia rankings data while setup planet data. Can I add that rankings now? If yes, what cmd will use after download that data and placed under data directory.</p>
+<p><a href="https://help.openstreetmap.org/users/150/mtmail">@mtmail</a>: Thanks for your answer. I didnt add wikipedia rankings data while setup planet data. Can I add that rankings now? If yes, what cmd will use after download that data and placed under data directory.</p>
 </div>
 <div id="comment-49914-info" class="comment-info">
 <span class="comment-age">(30 May '16, 17:35)</span> <span class="comment-user userinfo">Rajavelu_M</span>

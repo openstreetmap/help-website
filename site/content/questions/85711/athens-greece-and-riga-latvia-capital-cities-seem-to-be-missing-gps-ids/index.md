@@ -131,7 +131,7 @@ osqa_accepted = false
 <div id="post-85729-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-09-27_100346.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2022-09-27_100346.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-85729-info" class="comment-info">
 <span class="comment-age">(27 Sep '22, 09:05)</span> <span class="comment-user userinfo">plauwer</span>
@@ -164,7 +164,7 @@ osqa_accepted = false
 <div id="post-85734-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>From HEREDIS, the search for Athens, Greece return nothing, however, for Athena, Greece, I am getting the location of 2 villages.<img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-09-27_120141_uEq45Nw.jpg" alt="alt text" /></p>
+<p>From HEREDIS, the search for Athens, Greece return nothing, however, for Athena, Greece, I am getting the location of 2 villages.<img src="/upfiles/Screenshot_2022-09-27_120141_uEq45Nw.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-85734-info" class="comment-info">
 <span class="comment-age">(27 Sep '22, 11:11)</span> <span class="comment-user userinfo">plauwer</span>

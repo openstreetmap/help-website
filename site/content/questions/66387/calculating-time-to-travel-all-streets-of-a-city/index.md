@@ -66,7 +66,7 @@ osqa_accepted = false
 <div id="post-66392-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question's answers might be of use: <a href="https://help.openstreetmap.org/questions/55994/traveling-salesman-routing">https://help.openstreetmap.org/questions/55994/traveling-salesman-routing</a></p>
+<p>This question's answers might be of use: <a href="/questions/55994/traveling-salesman-routing">https://help.openstreetmap.org/questions/55994/traveling-salesman-routing</a></p>
 </div>
 <div id="comment-66392-info" class="comment-info">
 <span class="comment-age">(20 Oct '18, 10:36)</span> <span class="comment-user userinfo">InsertUser</span>

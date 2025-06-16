@@ -166,10 +166,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have to choose the edit mode from tha main map at <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> ... see "<a href="http://wiki.openstreetmap.org/wiki/Editing">Editing</a>"</p>
+<p>You have to choose the edit mode from tha main map at <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> ... see "<a href="https://wiki.openstreetmap.org/wiki/Editing">Editing</a>"</p>
 <p>This starts the online Editor Potlatch2. Then there is an option to display alls GPS traces from your area.</p>
 <p>You can also start one of the offline Editors like Merkaartor or JOSM ans load your GPS-Trace directly from your harddisk. Then you can load the OSM data that already exists around and start editing.</p>
-<p>Just for viewing it on a map, use a tool like <a href="http://wiki.openstreetmap.org/wiki/RouteConverter">Routeconverter</a></p>
+<p>Just for viewing it on a map, use a tool like <a href="https://wiki.openstreetmap.org/wiki/RouteConverter">Routeconverter</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Try going to "http://www.openstreetmap.org/traces", clicking "See just your traces" and then clicking "edit" next to it. Your trace should appear. You might want to zoom in a bit to actually edit the map though.</p>
+<p>Try going to "https://www.openstreetmap.org/traces", clicking "See just your traces" and then clicking "edit" next to it. Your trace should appear. You might want to zoom in a bit to actually edit the map though.</p>
 </div>
 <div id="comment-5026-info" class="comment-info">
 <span class="comment-age">(06 May '11, 22:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -220,7 +220,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Hello Maham, your words of thanking would be better a comment to the answer rather than a new answer to your original question, because this site is an FAQ system where each answer can be voted to find thebest ones. So it is not a forum with a chronoligical order. You can convert your ANSWER to a COMMENT by selekting "more" with that little black triangle. Thanks in advance.</p>
-<p>Then you can read <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2</a> and <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> to find out how to deal with your GPS traces. The wiki is helpfull!</p>
+<p>Then you can read <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2</a> and <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> to find out how to deal with your GPS traces. The wiki is helpfull!</p>
 </div>
 <div id="comment-5027-info" class="comment-info">
 <span class="comment-age">(07 May '11, 06:47)</span> <span class="comment-user userinfo">stephan75</span>
@@ -285,7 +285,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Old question but misunderstood question, I think. After GPX track upload, with Potlatch2, we get a page like this one <a href="http://www.openstreetmap.org/user/gerdami/traces/1211818">http://www.openstreetmap.org/user/gerdami/traces/1211818</a></p>
+<p>Old question but misunderstood question, I think. After GPX track upload, with Potlatch2, we get a page like this one <a href="https://www.openstreetmap.org/user/gerdami/traces/1211818">https://www.openstreetmap.org/user/gerdami/traces/1211818</a></p>
 <p>... <em>with a black line on a white background</em>.</p>
 <p>Click on the <strong>edit</strong> link to see the track in blue on a <em>real</em> map. But be careful since you are then in editing mode!<br />
 </p>

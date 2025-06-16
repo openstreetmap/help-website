@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The command you used more or less replaces the content of your DB instead of adding to it. See <a href="https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim">this question</a> for instructions on how to add another file to a Nominatim database. Note that it explicitly states that pbf is not supported. You need to convert your osm file to xml first.</p>
+<p>The command you used more or less replaces the content of your DB instead of adding to it. See <a href="/questions/15505/import-more-osm-files-in-to-nominatim">this question</a> for instructions on how to add another file to a Nominatim database. Note that it explicitly states that pbf is not supported. You need to convert your osm file to xml first.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

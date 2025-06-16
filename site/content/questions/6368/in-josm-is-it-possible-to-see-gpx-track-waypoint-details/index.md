@@ -238,7 +238,7 @@ osqa_accepted = true
 <div id="post-51057-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8807/klumbumbus">@Klumbumbus</a> - I can't find this menu within Preferences (JOSM #10526). There are no waypoint labelling options in Preferences &gt; Display settings &gt; GPS Points...</p>
+<p><a href="https://help.openstreetmap.org/users/8807/klumbumbus">@Klumbumbus</a> - I can't find this menu within Preferences (JOSM #10526). There are no waypoint labelling options in Preferences &gt; Display settings &gt; GPS Points...</p>
 </div>
 <div id="comment-51057-info" class="comment-info">
 <span class="comment-age">(22 Jul '16, 07:36)</span> <span class="comment-user userinfo">wiltomap</span>
@@ -250,7 +250,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10989/wiltomap"></a><a href="http://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a> I think you need to select the 'expert mode' box in the bottom left corner of the preferences page, then scroll down to see the 'waypoint labelling' section.</p>
+<p><a href="https://help.openstreetmap.org/users/10989/wiltomap"></a><a href="https://help.openstreetmap.org/users/10989/wiltomap">@wiltomap</a> I think you need to select the 'expert mode' box in the bottom left corner of the preferences page, then scroll down to see the 'waypoint labelling' section.</p>
 </div>
 <div id="comment-51058-info" class="comment-info">
 <span class="comment-age">(22 Jul '16, 09:13)</span> <span class="comment-user userinfo">nevw</span>
@@ -262,7 +262,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I had not noticed this checkbox, thanks <a href="http://help.openstreetmap.org/users/7380/nevw"></a><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a>! Therefore, I still have a problem with waypoints displaying correctly (cross symbol with label) if I load a local GPX file and not if I download a GPX file from OSM server (no cross symbols and no labels)... I might open a new post on this topic.</p>
+<p>I had not noticed this checkbox, thanks <a href="https://help.openstreetmap.org/users/7380/nevw"></a><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a>! Therefore, I still have a problem with waypoints displaying correctly (cross symbol with label) if I load a local GPX file and not if I download a GPX file from OSM server (no cross symbols and no labels)... I might open a new post on this topic.</p>
 </div>
 <div id="comment-51060-info" class="comment-info">
 <span class="comment-age">(22 Jul '16, 10:02)</span> <span class="comment-user userinfo">wiltomap</span>

@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I assume that you are reffering to this boundary relation:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/2911422">relation/2911422</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/2911422">relation/2911422</a></p>
 <p>In the moment when writing this answer, the geometry of the relation is broken. Click the link above to see it ... before someone other is repairing it ... you can see this if you are listed there as the last editor.</p>
 <p>Solution: There are two positions where the minor suburb boundary ways meet the bigger boundaries. The bigger boundary ways have to be splitted at these points.</p>
 <p>So all ways in the relation need to form a closed circle.</p>

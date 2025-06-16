@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Naturally yes. You should provide adequate attribution as described in <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> but that is it.</p>
+<p>Naturally yes. You should provide adequate attribution as described in <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> but that is it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

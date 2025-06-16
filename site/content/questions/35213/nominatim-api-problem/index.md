@@ -114,7 +114,7 @@ One Answer:
 <p>There are two possible causes for your issue:</p>
 <ul>
 <li>there were some technical issues roughly 2-3 days back and the system was very slow</li>
-<li>your application has been blocked for not following the nominatim usage policy <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></li>
+<li>your application has been blocked for not following the nominatim usage policy <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

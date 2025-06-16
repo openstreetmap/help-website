@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You should probably get in touch with <a href="http://wiki.openstreetmap.org/wiki/User:Lulu-Ann">http://wiki.openstreetmap.org/wiki/User:Lulu-Ann</a> , she does lots of work on OSM for the visually impaired.</p>
+<p>You should probably get in touch with <a href="https://wiki.openstreetmap.org/wiki/User:Lulu-Ann">https://wiki.openstreetmap.org/wiki/User:Lulu-Ann</a> , she does lots of work on OSM for the visually impaired.</p>
 </div>
 <div id="comment-24304-info" class="comment-info">
 <span class="comment-age">(17 Jul '13, 12:15)</span> <span class="comment-user userinfo">gormo</span>

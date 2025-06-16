@@ -137,8 +137,8 @@ SCRIPT_NAME: /cgi-bin/debug
 REMOTE_PORT: 39604
 HTTP_ACCEPT_LANGUAGE: en-US,en;q=0.5
 REQUEST_SCHEME: https</code></pre>
-<p>Here is a example with the new cache server: <img src="https://help.openstreetmap.org/upfiles/another_bad_layer.png" alt="another example bad" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/another_good_layer.png" alt="another example good" /></p>
+<p>Here is a example with the new cache server: <img src="/upfiles/another_bad_layer.png" alt="another example bad" /></p>
+<p><img src="/upfiles/another_good_layer.png" alt="another example good" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-openstreetmap-carto" rel="tag" title="see questions tagged &#39;openstreetmap-carto&#39;">openstreetmap-carto</span>

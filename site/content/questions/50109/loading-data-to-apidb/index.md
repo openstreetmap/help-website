@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/45930/osmosis-import-duplicate-key-value-violates-unique-constraint">https://help.openstreetmap.org/questions/45930/osmosis-import-duplicate-key-value-violates-unique-constraint</a></p>
+<p><a href="/questions/45930/osmosis-import-duplicate-key-value-violates-unique-constraint">https://help.openstreetmap.org/questions/45930/osmosis-import-duplicate-key-value-violates-unique-constraint</a></p>
 <p>outdated osmosis was the reason. Im using updated version right now. I'll post if this solved the problem but im pretty sure it will. Kinda sad that apt-get update doesn't work here, i had to install it manually.</p>
 <p>EDIT: confirmed, remember always to use updated tools</p>
 </div>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I've exported the map region to jpg in 1:1000000, the resolution, shown to me was 2019 x 1866; area сoordinates was so: N 56.9583; E 40.3617; S 54.3107; W 35.2828 (it is the Moscow oblast) so my question is: what should be the DPI factor (in photoshop for example) to print that image in 1:1000000 ???? because DPI factor by default is 72 and printed picture doesn't match to the scale 1:1000000. The same problem appeared in archicad, when I made import of the drawing (I tried it with JPG and Pdf format)the scale was also wrong. I'm working in metric system and I thought the problem is in that? but I tried different convertation and nothing helped??</p>
 <p>I tryed to describe my question in link below</p>
-<p><a href="http://help.openstreetmap.org/upfiles/scale_factor.jpg">http://help.openstreetmap.org/upfiles/scale_factor.jpg</a></p>
+<p><span>/upfiles/scale_factor.jpg</span></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-scale" rel="tag" title="see questions tagged &#39;scale&#39;">scale</span>
@@ -179,7 +179,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>also found good decision with Maperitive. here <a href="http://help.openstreetmap.org/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">http://help.openstreetmap.org/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender</a> (thanks to Breki)</p>
+<p>also found good decision with Maperitive. here <a href="/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender">https://help.openstreetmap.org/questions/840/problem-with-map-scale-when-generating-maps-with-osmarender</a> (thanks to Breki)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -262,7 +262,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From that <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">wiki page</a> you get these basic formulas:</p>
+<p>From that <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">wiki page</a> you get these basic formulas:</p>
 <pre><code>resolution = 156543.034 meters/pixel * cos(latitude) / (2 ^ zoomlevel)</code></pre>
 <p>The resolution means how many meters per pixel you get.</p>
 <pre><code>scale = 1 : (dpi * 39.37 in/m * resolution)</code></pre>

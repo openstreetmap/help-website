@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>"faux positif" veut dire "<a href="http://fr.wikipedia.org/wiki/Faux_positif">fausse alarme</a>". Cliquer sur ce lien va <a href="http://wiki.openstreetmap.org/wiki/FR:Osmose#La_bulle_d.27information">faire disparaitre le marqueur définitivement</a> dans Osmose. Donc à faire avec précaution uniquement lorsqu'on est certain que l'erreur signalée par Osmose n'en est pas une (typiquement, une orthographe un peu particulière).</p>
+<p>"faux positif" veut dire "<a href="http://fr.wikipedia.org/wiki/Faux_positif">fausse alarme</a>". Cliquer sur ce lien va <a href="https://wiki.openstreetmap.org/wiki/FR:Osmose#La_bulle_d.27information">faire disparaitre le marqueur définitivement</a> dans Osmose. Donc à faire avec précaution uniquement lorsqu'on est certain que l'erreur signalée par Osmose n'en est pas une (typiquement, une orthographe un peu particulière).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

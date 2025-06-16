@@ -166,7 +166,7 @@ One Answer:
 </li>
 <li>This kind of data you cannot download from osm.org (which is no place to get end-user data from anyway).<br />
 </li>
-<li><a href="https://help.openstreetmap.org/questions/12116/how-do-i-export-a-map-for-use-by-mapfactors-gps-navigator-10-software">Since there seems no according software to convert OSM data yourself</a> you have to rely solely on mapfactor for data updates.<br />
+<li><a href="/questions/12116/how-do-i-export-a-map-for-use-by-mapfactors-gps-navigator-10-software">Since there seems no according software to convert OSM data yourself</a> you have to rely solely on mapfactor for data updates.<br />
 </li>
 <li>Which time the last update was made you can check at the <a href="http://navigatorfree.mapfactor.com/en/maps/">mapfactor site</a>.<br />
 </li>

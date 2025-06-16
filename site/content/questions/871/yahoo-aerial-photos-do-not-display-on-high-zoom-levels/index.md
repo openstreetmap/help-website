@@ -209,7 +209,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Only in certain areas we can use the areal images from Yahoo where they have a good resolution for mapping purposes.</p>
-<p>You can find a list <a href="http://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery/Coverage">here</a></p>
+<p>You can find a list <a href="https://wiki.openstreetmap.org/wiki/Yahoo!_Aerial_Imagery/Coverage">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="https://help.openstreetmap.org/questions/28928/how-do-i-print-a-map">This general answer</a> is what I'm using currently to print maps. However, it has its limitations.</p>
+<p><a href="/questions/28928/how-do-i-print-a-map">This general answer</a> is what I'm using currently to print maps. However, it has its limitations.</p>
 <p>Use case: I want to print paper maps to take into the field, and scribble my survey results on them.</p>
 <p>Need: Fairly close zoom (=16 is ok), printed onto A4 paper (A3 even better, as PDF to send to a print shop).</p>
 <p>Issues: 1) The extent of my browser window isn't quite what gets printed on A4. I can use print preview, but the many iterations of trial and error approach takes time when I'd rather be outside. 2) Naturally I'm limited to A4 with the long side running either N-S or E-W, but never at an angle.</p>

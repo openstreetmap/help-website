@@ -124,8 +124,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you click on a building in Potlatch you should see three tabs at the left. In English they're labelled "B" (Basic), "D" (Details) and "A" (Address), although I'm not sure what they're called in German. On the "basic" tab you can enter a building name, and on the "address" tab details such as building name, house number, etc.</p>
-<p>On <a href="http://wiki.openstreetmap.org/wiki/Potlatch">this page</a> (<a href="http://wiki.openstreetmap.org/wiki/DE:Potlatch_2">Deutsch</a>) there's a link to a couple of videos that might be useful too. Also of course's there's the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">beginners' guide</a> (<a href="http://wiki.openstreetmap.org/wiki/DE:Beginners_Guide">Deutsch</a>).</p>
-<p>Also <a href="http://wiki.openstreetmap.org/wiki/Karlsruhe_schema">here</a> (<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/De:Hausnummern">Deutsch</a>) is a description of how building names and numbers can be entered.</p>
+<p>On <a href="https://wiki.openstreetmap.org/wiki/Potlatch">this page</a> (<a href="https://wiki.openstreetmap.org/wiki/DE:Potlatch_2">Deutsch</a>) there's a link to a couple of videos that might be useful too. Also of course's there's the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">beginners' guide</a> (<a href="https://wiki.openstreetmap.org/wiki/DE:Beginners_Guide">Deutsch</a>).</p>
+<p>Also <a href="https://wiki.openstreetmap.org/wiki/Karlsruhe_schema">here</a> (<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/De:Hausnummern">Deutsch</a>) is a description of how building names and numbers can be entered.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

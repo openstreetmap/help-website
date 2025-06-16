@@ -155,7 +155,7 @@ Du nimmst die Software QLandkarteGT, nutzt deren Suchfunktion zum Sammeln von PO
 1
 </div>
 <div class="comment-text">
-<p>Bei vielen der OSM-basierten <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online-Routern</a> kann man die Route als GPX exportieren. Damit kann man auch längere Routen recht schnell generieren und über das Setzen von Via-Punkten den eigenen Wünschen anpassen.</p>
+<p>Bei vielen der OSM-basierten <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online-Routern</a> kann man die Route als GPX exportieren. Damit kann man auch längere Routen recht schnell generieren und über das Setzen von Via-Punkten den eigenen Wünschen anpassen.</p>
 </div>
 <div id="comment-18908-info" class="comment-info">
 <span class="comment-age">(07 Jan '13, 07:35)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -166,7 +166,7 @@ Du nimmst die Software QLandkarteGT, nutzt deren Suchfunktion zum Sammeln von PO
 <div id="post-30525-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sowas kann <a href="http://wiki.openstreetmap.org/wiki/DE:GpsPrune">http://wiki.openstreetmap.org/wiki/DE:GpsPrune</a> (auch mit z.B. Wanderreitkarte oder Opencyclemap). Dann kannst du entweder als gpx/kml speichern oder direkt via gpsbabel zum Gerät rüberschicken.</p>
+<p>Sowas kann <a href="https://wiki.openstreetmap.org/wiki/DE:GpsPrune">https://wiki.openstreetmap.org/wiki/DE:GpsPrune</a> (auch mit z.B. Wanderreitkarte oder Opencyclemap). Dann kannst du entweder als gpx/kml speichern oder direkt via gpsbabel zum Gerät rüberschicken.</p>
 </div>
 <div id="comment-30525-info" class="comment-info">
 <span class="comment-age">(07 Feb '14, 10:16)</span> <span class="comment-user userinfo">SlamBamSam</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Find relation id by way id"
-description = '''When searching for a particular street, I obtained a &#x27;way&#x27; object ( http://www.openstreetmap.org/way/23497173 ) which consists out of 7 nodes. The api ( http://www.openstreetmap.org/api/0.6/way/23497173 ) gives a nice overview of the result, but without the link to the relation (the whole street). I...'''
+description = '''When searching for a particular street, I obtained a &#x27;way&#x27; object ( https://www.openstreetmap.org/way/23497173 ) which consists out of 7 nodes. The api ( https://www.openstreetmap.org/api/0.6/way/23497173 ) gives a nice overview of the result, but without the link to the relation (the whole street). I...'''
 date = "2015-08-20T20:26:00Z"
 lastmod = "2015-08-20T20:29:00Z"
 weight = 44851
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When searching for a particular street, I obtained a 'way' object ( <a href="http://www.openstreetmap.org/way/23497173">http://www.openstreetmap.org/way/23497173</a> ) which consists out of 7 nodes. The api ( <a href="http://www.openstreetmap.org/api/0.6/way/23497173">http://www.openstreetmap.org/api/0.6/way/23497173</a> ) gives a nice overview of the result, but without the link to the relation (the whole street).</p>
+<p>When searching for a particular street, I obtained a 'way' object ( <a href="https://www.openstreetmap.org/way/23497173">https://www.openstreetmap.org/way/23497173</a> ) which consists out of 7 nodes. The api ( <a href="https://www.openstreetmap.org/api/0.6/way/23497173">https://www.openstreetmap.org/api/0.6/way/23497173</a> ) gives a nice overview of the result, but without the link to the relation (the whole street).</p>
 <p>Is there a manner to find the relation id by use of the api link?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/api/0.6/way/23497173/relations">http://www.openstreetmap.org/api/0.6/way/23497173/relations</a> is what you're looking for. It is documented <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Relations_for_element:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id.2Frelations">on the Wiki.</a></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/way/23497173/relations">https://www.openstreetmap.org/api/0.6/way/23497173/relations</a> is what you're looking for. It is documented <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Relations_for_element:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id.2Frelations">on the Wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

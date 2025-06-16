@@ -116,7 +116,7 @@ osqa_accepted = false
 <p>So if you want a new class of information to appear on the map, you also need to do two things:</p>
 <ul>
 <li>Check whether there is already a documented way of mapping this on the <a href="http://wiki.openstreetmap.org">wiki</a> or elsewhere. If there isn't, invent new tags to represent the information and use them on objects in the database (preferably after discussing your tagging ideas with other mappers).</li>
-<li>Convince style designers to take this into account when rendering maps, or <a href="http://wiki.openstreetmap.org/wiki/Rendering">render</a> your own maps.</li>
+<li>Convince style designers to take this into account when rendering maps, or <a href="https://wiki.openstreetmap.org/wiki/Rendering">render</a> your own maps.</li>
 </ul>
 <p>This probably doesn't answer your question entirely, but I hope it helps you to understand what exactly it is that you want to do and to ask a more specific question that will result in better answers.</p>
 </div>
@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, the renderer and its stylesheet define what colors to use for which object (that is, <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> for the main page). If you want to change those colors, you have to <a href="http://wiki.openstreetmap.org/wiki/Rendering">render</a> your own maps.</p>
+<p>No, the renderer and its stylesheet define what colors to use for which object (that is, <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> for the main page). If you want to change those colors, you have to <a href="https://wiki.openstreetmap.org/wiki/Rendering">render</a> your own maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

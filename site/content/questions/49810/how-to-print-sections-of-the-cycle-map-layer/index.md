@@ -118,8 +118,8 @@ One Answer:
 <div class="answer-body">
 <p>see</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/25954/i-have-changed-the-layer-but-i-dont-know-how-to-export-it">https://help.openstreetmap.org/questions/25954/i-have-changed-the-layer-but-i-dont-know-how-to-export-it</a></li>
-<li><a href="https://help.openstreetmap.org/questions/13826/best-way-to-print-opencyclemap-or-any-topo-map">https://help.openstreetmap.org/questions/13826/best-way-to-print-opencyclemap-or-any-topo-map</a></li>
+<li><a href="/questions/25954/i-have-changed-the-layer-but-i-dont-know-how-to-export-it">https://help.openstreetmap.org/questions/25954/i-have-changed-the-layer-but-i-dont-know-how-to-export-it</a></li>
+<li><a href="/questions/13826/best-way-to-print-opencyclemap-or-any-topo-map">https://help.openstreetmap.org/questions/13826/best-way-to-print-opencyclemap-or-any-topo-map</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

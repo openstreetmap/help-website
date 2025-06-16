@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello. The attached web capture shows a junction in Bradford city centre. This junction has traffic lights, although they are not shown on the map.</p>
-<p>Could you also inform me how the route displayed on the map as a result of directions can be saved, e.g. as a GPX, or KML/KMZ file?<img src="https://help.openstreetmap.org/upfiles/Web_capture_18-4-2022_20757_www.openstreetmap.org.jpeg" alt="alt text" /></p>
+<p>Could you also inform me how the route displayed on the map as a result of directions can be saved, e.g. as a GPX, or KML/KMZ file?<img src="/upfiles/Web_capture_18-4-2022_20757_www.openstreetmap.org.jpeg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bradford" rel="tag" title="see questions tagged &#39;bradford&#39;">bradford</span> <span class="post-tag tag-link-lights" rel="tag" title="see questions tagged &#39;lights&#39;">lights</span> <span class="post-tag tag-link-directions" rel="tag" title="see questions tagged &#39;directions&#39;">directions</span> <span class="post-tag tag-link-traffic" rel="tag" title="see questions tagged &#39;traffic&#39;">traffic</span>

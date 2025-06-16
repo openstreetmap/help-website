@@ -190,7 +190,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Flash_and_Chrome.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Flash_and_Chrome.JPG" alt="alt text" /></p>
 <p>I use Chrome and sometimes i get "install flash " message. I go into Chrome settings and i works for a while. see pic</p>
 </div>
 <div class="answer-controls post-controls">

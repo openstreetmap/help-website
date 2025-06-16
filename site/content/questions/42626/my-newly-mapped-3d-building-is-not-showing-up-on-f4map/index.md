@@ -216,7 +216,7 @@ One Answer:
 <div id="post-42642-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10740/amaryllisgardener">@AmaryllisGardener</a>: okay, I meant to ask it here as a new question. The Wikimedia Commons guys are likely not aware of our contributor agreement / ODbL requirements.</p>
+<p><a href="https://help.openstreetmap.org/users/10740/amaryllisgardener">@AmaryllisGardener</a>: okay, I meant to ask it here as a new question. The Wikimedia Commons guys are likely not aware of our contributor agreement / ODbL requirements.</p>
 </div>
 <div id="comment-42642-info" class="comment-info">
 <span class="comment-age">(28 Apr '15, 15:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

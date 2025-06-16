@@ -197,7 +197,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see my answer <a href="http://help.openstreetmap.org/questions/56/what-languages-can-i-use-on-this-site/9243">http://help.openstreetmap.org/questions/56/what-languages-can-i-use-on-this-site/9243</a></p>
+<p>Please see my answer <a href="/questions/56/what-languages-can-i-use-on-this-site/9243">https://help.openstreetmap.org/questions/56/what-languages-can-i-use-on-this-site/9243</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>Mich nervt das :-(</p>
 <p>Wo kann da da der Fehler liegen und wie/wer kann das beheben?</p>
 <p><a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=49.93100%2C8.60328%3B49.93092%2C8.61111#map=17/49.93167/8.60707">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=49.93100%2C8.60328%3B49.93092%2C8.61111#map=17/49.93167/8.60707</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Map2.jpg" alt="OSM-Screenshot mit Route" /></p>
+<p><img src="/upfiles/Map2.jpg" alt="OSM-Screenshot mit Route" /></p>
 <p>und <a href="https://ibb.co/g3tjiU">Google-Maps-Screenshot mit Route</a></p>
 <p>Habe es vergessen zu erwähnen. Meine Motorrad Navi Routenplaner <a href="https://wiki.openstreetmap.org/wiki/Kurviger">Kurviger</a> nutzt OSM Daten und jede Route ist daher falsch. Die Navi will mich dann immer zurücklotsen....</p>
 </div>

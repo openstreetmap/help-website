@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I am fairly new to OpenStreetMap, so it may be that I am missing something, but I have hit what seems to be a major problem while trying to process the administrative boundary relation for England.</p>
 <p>My code is reporting 41 ways that are referenced as members of relation 58447, but that do not exist in the england.osm file I downloaded from Geofabrik. This same code has successfully processed the administrative boundaries for other countries.</p>
-<p>An example of these problem ways is way 10488014. On the <a href="http://www.openstreetmap.org/browse/relation/58447">relation webpage</a>, way 10488014 is listed as "Way 10488014 as outer". I click on <a href="http://www.openstreetmap.org/api/0.6/relation/58447">Download XML</a>, and there is no reference to way 10488014.</p>
+<p>An example of these problem ways is way 10488014. On the <a href="https://www.openstreetmap.org/browse/relation/58447">relation webpage</a>, way 10488014 is listed as "Way 10488014 as outer". I click on <a href="https://www.openstreetmap.org/api/0.6/relation/58447">Download XML</a>, and there is no reference to way 10488014.</p>
 <p>Am I missing something basic?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Geofabrik uses a simplifyed boundary polygon for its extracts. Because of this ways that are on the border may or may not be included in the extract.</p>
-<p>The <a href="http://www.openstreetmap.org/api/0.6/relation/58447">http://www.openstreetmap.org/api/0.6/relation/58447</a> url only includes the relation and none of the objects it refers to. There is a referance to way 10488014 there, but that way is not included. If you want all the objects the relation refers to and the ones that those refers to and so on, you might want to try <a href="http://www.openstreetmap.org/api/0.6/relation/58447/full">http://www.openstreetmap.org/api/0.6/relation/58447/full</a> (warning, may take a long time to process).</p>
+<p>The <a href="https://www.openstreetmap.org/api/0.6/relation/58447">https://www.openstreetmap.org/api/0.6/relation/58447</a> url only includes the relation and none of the objects it refers to. There is a referance to way 10488014 there, but that way is not included. If you want all the objects the relation refers to and the ones that those refers to and so on, you might want to try <a href="https://www.openstreetmap.org/api/0.6/relation/58447/full">https://www.openstreetmap.org/api/0.6/relation/58447/full</a> (warning, may take a long time to process).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

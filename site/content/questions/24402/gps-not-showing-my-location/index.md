@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can not use the map page for navigation but you can run an app like orux maps or <a href="http://wiki.openstreetmap.org/wiki/OsmAnd">http://wiki.openstreetmap.org/wiki/OsmAnd</a> both are, I think, available on google play. They both have the option of off line navigation and map storage. note they will both use OSM map data and, i think, other sources as well as a choice. You may have to run a gps fix app as well you will have to read orux or osmand instructions to check this.http://osmand.net/en/installation-menu.html <a href="http://www.oruxmaps.com/index_en.html">http://www.oruxmaps.com/index_en.html</a></p>
+<p>You can not use the map page for navigation but you can run an app like orux maps or <a href="https://wiki.openstreetmap.org/wiki/OsmAnd">https://wiki.openstreetmap.org/wiki/OsmAnd</a> both are, I think, available on google play. They both have the option of off line navigation and map storage. note they will both use OSM map data and, i think, other sources as well as a choice. You may have to run a gps fix app as well you will have to read orux or osmand instructions to check this.http://osmand.net/en/installation-menu.html <a href="http://www.oruxmaps.com/index_en.html">http://www.oruxmaps.com/index_en.html</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

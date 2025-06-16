@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-75947-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/Wrong_Correct.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Wrong_Correct.PNG" alt="alt text" /></p>
 <p>Hello, on Facebook map there is still wrong localization is there any chance i can fix this &gt;&gt; if yes how ??</p>
 </div>
 <div id="comment-75947-info" class="comment-info">

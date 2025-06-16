@@ -116,8 +116,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At least the name is shown on <a href="http://www.openstreetmap.org/?lat=51.52828&amp;lon=11.54639&amp;zoom=17&amp;layers=M">zoom 17 and 18</a>.</p>
-<p>(GoogleTranslates as: Zumindest der Name wird auf <a href="http://www.openstreetmap.org/?lat=51.52828&amp;lon=11.54639&amp;zoom=17&amp;layers=M">zoom 17 und 18</a> dargestellt.)</p>
+<p>At least the name is shown on <a href="https://www.openstreetmap.org/?lat=51.52828&amp;lon=11.54639&amp;zoom=17&amp;layers=M">zoom 17 and 18</a>.</p>
+<p>(GoogleTranslates as: Zumindest der Name wird auf <a href="https://www.openstreetmap.org/?lat=51.52828&amp;lon=11.54639&amp;zoom=17&amp;layers=M">zoom 17 und 18</a> dargestellt.)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -181,7 +181,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the wiki about the tag <a href="http://wiki.openstreetmap.org/wiki/Key:historic">historic=*</a> you find rendering symbols. It seems that monuments have no icon at the moment.</p>
+<p>On the wiki about the tag <a href="https://wiki.openstreetmap.org/wiki/Key:historic">historic=*</a> you find rendering symbols. It seems that monuments have no icon at the moment.</p>
 <p>If you want to contribute an improvement (e.g. an additional icon) to the OSM mapnik map on the main page look at <a href="https://trac.openstreetmap.org/">OSM trac</a> under the "mapnik" component.</p>
 </div>
 <div class="answer-controls post-controls">

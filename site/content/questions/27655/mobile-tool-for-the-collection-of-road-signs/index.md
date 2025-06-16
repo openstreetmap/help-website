@@ -211,8 +211,8 @@ osqa_accepted = true
 <div class="answer-body">
 <p>You don't give a lot of information how you want to use the app, making it a bit difficult to give a reasonable answer.</p>
 <p>The simplest solution is to turn on GPS tagging in your camera app and take photographs of the signs. You can then use the photographs in one of the editors that support displaying georeferenced photograps (JOSM, vespucci and probably others).</p>
-<p>There are a number of Android apps that support surveying see <a href="http://wiki.openstreetmap.org/wiki/Android#Track-making_features">http://wiki.openstreetmap.org/wiki/Android#Track-making_features</a> in some form.</p>
-<p>However most likely you would want to use OsmTracker <a href="http://wiki.openstreetmap.org/wiki/OSMtracker_%28Android%29">http://wiki.openstreetmap.org/wiki/OSMtracker_%28Android%29</a> (however does not support aerial imagery). Vespucci <a href="http://code.google.com/p/osmeditor4android/">http://code.google.com/p/osmeditor4android/</a> is a full blown editor for Android that will support such imagery, however has not direct support for collecting street signs (you can however add notes, or make the edits directly).</p>
+<p>There are a number of Android apps that support surveying see <a href="https://wiki.openstreetmap.org/wiki/Android#Track-making_features">https://wiki.openstreetmap.org/wiki/Android#Track-making_features</a> in some form.</p>
+<p>However most likely you would want to use OsmTracker <a href="https://wiki.openstreetmap.org/wiki/OSMtracker_%28Android%29">https://wiki.openstreetmap.org/wiki/OSMtracker_%28Android%29</a> (however does not support aerial imagery). Vespucci <a href="http://code.google.com/p/osmeditor4android/">http://code.google.com/p/osmeditor4android/</a> is a full blown editor for Android that will support such imagery, however has not direct support for collecting street signs (you can however add notes, or make the edits directly).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

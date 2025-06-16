@@ -78,7 +78,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Ok so I just found this</p>
-<p><a href="http://help.openstreetmap.org/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">http://help.openstreetmap.org/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity</a></p>
+<p><a href="/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity">https://help.openstreetmap.org/questions/1475/should-all-buildings-at-in-a-university-campus-be-tagged-amenityuniversity</a></p>
 <p>But I'm still a little unclear about best practice re relations of this type.</p>
 <p>I guess what I'm wondering is if/how I can add my own meta data or similar that would allow me to identify our University buildings from a data set</p>
 <p>Again - any guidance welcomed</p>
@@ -137,7 +137,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It might be appropriate to use the <a href="http://wiki.openstreetmap.org/wiki/Key:operator">operator tag</a> on the buildings. I'm not so sure about the other things you ask, but building doesn't have to just contain building=yes, so you could do something like building=hall_of_residence if that helps. building=house for example renders differently in the OSM Mapnik layer, so if you're doing your own custom render you could define appropriate rules to render halls differently from say lecture halls and offices.</p>
+<p>It might be appropriate to use the <a href="https://wiki.openstreetmap.org/wiki/Key:operator">operator tag</a> on the buildings. I'm not so sure about the other things you ask, but building doesn't have to just contain building=yes, so you could do something like building=hall_of_residence if that helps. building=house for example renders differently in the OSM Mapnik layer, so if you're doing your own custom render you could define appropriate rules to render halls differently from say lecture halls and offices.</p>
 <p>I personally would only apply the amenity=university tag to the whole area of the university and not on each building, but opinions on that seem to differ.</p>
 <p>Also, buildings can be mapped as nodes or closed ways depending on the quality of your sources. Before Bing imagery was available, nodes were more common, but more and more buildings are being mapped now.</p>
 </div>

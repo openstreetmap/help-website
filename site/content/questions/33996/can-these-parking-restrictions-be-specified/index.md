@@ -125,8 +125,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Those restrictions have to be specified with the access tag <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
-<p>Furthermore you need <a href="http://wiki.openstreetmap.org/wiki/Key:maxstay">http://wiki.openstreetmap.org/wiki/Key:maxstay</a> to specify the 20-minute drop-off</p>
+<p>Those restrictions have to be specified with the access tag <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p>Furthermore you need <a href="https://wiki.openstreetmap.org/wiki/Key:maxstay">https://wiki.openstreetmap.org/wiki/Key:maxstay</a> to specify the 20-minute drop-off</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>Also check the wiki about parkings. Editors do not provide all possibilities in the tagging presets: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a></p>
+<p>Also check the wiki about parkings. Editors do not provide all possibilities in the tagging presets: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a></p>
 <p>You always have the option to enter manually tags which are not in the presets.</p>
 </div>
 <div id="comment-34035-info" class="comment-info">
@@ -172,7 +172,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>Somewhere on the wiki page of amenity=parking there is a link to <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space">amenity=parking_space</a>. This is used to map individual parking spaces withing a parking lot. You can then apply any access restrictions you like (incl. new ones you invented) to the individual spaces.</p>
+<p>Somewhere on the wiki page of amenity=parking there is a link to <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space">amenity=parking_space</a>. This is used to map individual parking spaces withing a parking lot. You can then apply any access restrictions you like (incl. new ones you invented) to the individual spaces.</p>
 </div>
 <div id="comment-34044-info" class="comment-info">
 <span class="comment-age">(17 Jun '14, 20:09)</span> <span class="comment-user userinfo">cartinus</span>

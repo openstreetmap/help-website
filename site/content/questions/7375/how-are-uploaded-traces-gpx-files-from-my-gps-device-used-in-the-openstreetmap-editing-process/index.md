@@ -126,7 +126,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The latter is true. By uploading traces you don't automatically add ways to the map, you have to do this manually afterwards. But you can use these traces in most editors (Potlatch, JOSM) for drawing ways instead of (or additionally to) aerial imagery. See the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">Potlatch Primer</a> and the <a href="http://wiki.openstreetmap.org/wiki/GPS_traces">GPS traces</a> page in the wiki for additional help.</p>
+<p>The latter is true. By uploading traces you don't automatically add ways to the map, you have to do this manually afterwards. But you can use these traces in most editors (Potlatch, JOSM) for drawing ways instead of (or additionally to) aerial imagery. See the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">Potlatch Primer</a> and the <a href="https://wiki.openstreetmap.org/wiki/GPS_traces">GPS traces</a> page in the wiki for additional help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -213,7 +213,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi please read this <a href="http://wiki.openstreetmap.org/wiki/Map_Making_Overview">http://wiki.openstreetmap.org/wiki/Map_Making_Overview</a></p>
+<p>Hi please read this <a href="https://wiki.openstreetmap.org/wiki/Map_Making_Overview">https://wiki.openstreetmap.org/wiki/Map_Making_Overview</a></p>
 <p>Simple starter:</p>
 <ol>
 <li>zoom right in on an area that your trace is in</li>
@@ -225,7 +225,7 @@ osqa_accepted = false
 <li>click on background choose bing</li>
 <li>put mouse pointer on the trace and left click to make a node move along trace a bit and click again you now have a way (road or path) which now need labelling or tagging</li>
 </ol>
-<p>I'll stop there. Do a search for the videos I'll post a link or some one will they are a good help also. If you start to edit and mess up use "undo" in steps or exit without saving. Good Luck! try these <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">http://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
+<p>I'll stop there. Do a search for the videos I'll post a link or some one will they are a good help also. If you start to edit and mess up use "undo" in steps or exit without saving. Good Luck! try these <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">https://wiki.openstreetmap.org/wiki/Video_tutorials</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

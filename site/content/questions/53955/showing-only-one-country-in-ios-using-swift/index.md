@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-53964-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13175/pietarii"></a><a href="http://help.openstreetmap.org/users/13175/pietarii">@pietarii</a>: this is not really a suitable question for <span>here</span> (many questions mixed in one) and we have older same questions for the single topics - please try to use the search first and do not crosspost. In any case: thanks for using OSM and let's focus the answers in the forum thread! :)</p>
+<p><a href="https://help.openstreetmap.org/users/13175/pietarii"></a><a href="https://help.openstreetmap.org/users/13175/pietarii">@pietarii</a>: this is not really a suitable question for <span>here</span> (many questions mixed in one) and we have older same questions for the single topics - please try to use the search first and do not crosspost. In any case: thanks for using OSM and let's focus the answers in the forum thread! :)</p>
 </div>
 <div id="comment-53964-info" class="comment-info">
 <span class="comment-age">(09 Jan '17, 22:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

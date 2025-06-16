@@ -191,7 +191,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Along with sport=yoga, consider using <a href="http://wiki.openstreetmap.org/wiki/Gym_/_Fitness_centre">leisure=fitness_centre</a>. This is more or less the consensus tag that's developed for a smaller size gym/workout/fitness place. Most of the yoga places I've seen seem to emphasize the fitness part of it over anything but the most surface-level spirituality.</p>
+<p>Along with sport=yoga, consider using <a href="https://wiki.openstreetmap.org/wiki/Gym_/_Fitness_centre">leisure=fitness_centre</a>. This is more or less the consensus tag that's developed for a smaller size gym/workout/fitness place. Most of the yoga places I've seen seem to emphasize the fitness part of it over anything but the most surface-level spirituality.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

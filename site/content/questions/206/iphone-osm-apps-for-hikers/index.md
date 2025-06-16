@@ -104,8 +104,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki has a list of <a href="http://wiki.openstreetmap.org/wiki/Iphone">iPhone applications</a> that support OpenStreetMap data. Amongst those you are also likely to find ones that are good for hiking.</p>
-<p>For completness sake, here are also the links to <a href="http://wiki.openstreetmap.org/wiki/Android">Android applications</a> and to <a href="http://wiki.openstreetmap.org/wiki/Software/Mobilephones">other mobile platforms</a></p>
+<p>The wiki has a list of <a href="https://wiki.openstreetmap.org/wiki/Iphone">iPhone applications</a> that support OpenStreetMap data. Amongst those you are also likely to find ones that are good for hiking.</p>
+<p>For completness sake, here are also the links to <a href="https://wiki.openstreetmap.org/wiki/Android">Android applications</a> and to <a href="https://wiki.openstreetmap.org/wiki/Software/Mobilephones">other mobile platforms</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

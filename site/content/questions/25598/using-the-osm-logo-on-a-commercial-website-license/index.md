@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I tried to find the answer to my question in the help pages, but I wasn't successful. :-(</p>
 <p>I would like to place a link to openstreetmap on a commercial website. Therefore I would reference the OSM logo. If the user clicks on the logo, the openstreetmap webpage should be opened. Am I allowed to use the OSM logo without any fee? Are there any rules to obey? Or is it simply enough to place the link on my webpage?</p>
-<p>&lt;a href="http://www.openstreetmap.org/?mlat=50.0&amp;mlon=10.0&amp;zoom=15"&gt;&lt;img src="http://openstreetmap.de/img/osm_logo.png" /&gt;&lt;/a&gt;</p>
+<p>&lt;a href="https://www.openstreetmap.org/?mlat=50.0&amp;mlon=10.0&amp;zoom=15"&gt;&lt;img src="http://openstreetmap.de/img/osm_logo.png" /&gt;&lt;/a&gt;</p>
 <p>Best regards Matthias</p>
 </div>
 <div id="question-tags" class="tags-container tags">

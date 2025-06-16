@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to correct something, the steps that you need to take (signing up, understanding nodes and ways etc.) are described on the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> page. There are also some <a href="http://wiki.openstreetmap.org/wiki/Video_tutorials">video tutorials</a> that might be useful.</p>
+<p>If you want to correct something, the steps that you need to take (signing up, understanding nodes and ways etc.) are described on the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> page. There are also some <a href="https://wiki.openstreetmap.org/wiki/Video_tutorials">video tutorials</a> that might be useful.</p>
 <p>If you have a specific issue (e.g. "Lelystad Station is shown too far to the East") then you can ask that specific question here, with a link to the area concerned (using the "permalink" link in the bottom right-hand corner of the map).</p>
 </div>
 <div class="answer-controls post-controls">

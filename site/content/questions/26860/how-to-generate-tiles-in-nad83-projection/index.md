@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>For info, this grew out of a previous discussion <a href="https://help.openstreetmap.org/questions/26756/generate-tiles-in-wgs84-projection">here</a>.</p>
+<p>For info, this grew out of a previous discussion <a href="/questions/26756/generate-tiles-in-wgs84-projection">here</a>.</p>
 </div>
 <div id="comment-26863-info" class="comment-info">
 <span class="comment-age">(30 Sep '13, 12:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

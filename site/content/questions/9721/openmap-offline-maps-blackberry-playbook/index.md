@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've not looked at OpenMap, but it may be that its developers just wanted to get a "quick and dirty" location-aware version of the OSM site out there. There's actually a Blackberry tutorial for doing that sort of thing <a href="http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Using-HTML5-Geolocation-in-your-Web-or-BlackBerry-WebWorks/ta-p/630406">here</a> if you fancy having a go yourself - it's pretty straightforward.</p>
-<p>Tile-based offline support becomes problematical because users might decide to download large areas which would cause problems for other users (and be against the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>) - in order to avoid that problem application developers would need to use a different source of tiles, and deploying your own tile server infrastructure is a whole lot more complicated than the 50 lines of Javascript needed to deploy a location-aware map.</p>
+<p>Tile-based offline support becomes problematical because users might decide to download large areas which would cause problems for other users (and be against the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>) - in order to avoid that problem application developers would need to use a different source of tiles, and deploying your own tile server infrastructure is a whole lot more complicated than the 50 lines of Javascript needed to deploy a location-aware map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

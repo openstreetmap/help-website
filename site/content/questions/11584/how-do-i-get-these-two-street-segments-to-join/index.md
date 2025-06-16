@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>When I select Rivershore Rd and the small segment of this odd triangular intersection that I changed to Rivershore Rd (because I believe that is the correct name for it) with &lt;control&gt; select, the chain tool is greyed out. Why is his operation not allowed?</p>
-<p><a href="http://www.openstreetmap.org/?lat=36.2880858778954&amp;lon=-76.2046211957932&amp;zoom=18">RivershoreEdit</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=36.2880858778954&amp;lon=-76.2046211957932&amp;zoom=18">RivershoreEdit</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-joining" rel="tag" title="see questions tagged &#39;joining&#39;">joining</span>

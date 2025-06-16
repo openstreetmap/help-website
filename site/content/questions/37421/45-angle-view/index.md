@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/OSM2World">OSM2WORLD</a> or <a href="http://wiki.openstreetmap.org/wiki/OpenScienceMap">OpenScienceMap</a> to name but a few from the collection at <a href="http://wiki.openstreetmap.org/wiki/3D">3D</a> in the OSM wiki.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/OSM2World">OSM2WORLD</a> or <a href="https://wiki.openstreetmap.org/wiki/OpenScienceMap">OpenScienceMap</a> to name but a few from the collection at <a href="https://wiki.openstreetmap.org/wiki/3D">3D</a> in the OSM wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

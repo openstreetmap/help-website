@@ -130,7 +130,7 @@ One Answer:
 <div id="post-31880-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for being unhelpful. The Legal FAQ links here for questions: <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#5a._I_have_questions._Can_you_answer_them.3F">http://wiki.openstreetmap.org/wiki/Legal_FAQ#5a._I_have_questions._Can_you_answer_them.3F</a> .</p>
+<p>Thank you for being unhelpful. The Legal FAQ links here for questions: <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#5a._I_have_questions._Can_you_answer_them.3F">https://wiki.openstreetmap.org/wiki/Legal_FAQ#5a._I_have_questions._Can_you_answer_them.3F</a> .</p>
 <p>This is not a question about any individual business plan, but a legal question which also many others who care about licenses certainly have. There are plenty of open, but not openly licensed data sources online, I mentioned Yelp just as an example.</p>
 </div>
 <div id="comment-31880-info" class="comment-info">

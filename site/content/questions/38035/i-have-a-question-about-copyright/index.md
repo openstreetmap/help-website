@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-38049-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>appears to be duplicate of <a href="https://help.openstreetmap.org/questions/38030/i-have-a-question-abut-copyright">https://help.openstreetmap.org/questions/38030/i-have-a-question-abut-copyright</a> ?</p>
+<p>appears to be duplicate of <a href="/questions/38030/i-have-a-question-abut-copyright">https://help.openstreetmap.org/questions/38030/i-have-a-question-abut-copyright</a> ?</p>
 </div>
 <div id="comment-38049-info" class="comment-info">
 <span class="comment-age">(28 Oct '14, 13:39)</span> <span class="comment-user userinfo">neuhausr</span>

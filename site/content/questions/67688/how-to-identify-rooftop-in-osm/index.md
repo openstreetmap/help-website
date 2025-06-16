@@ -147,7 +147,7 @@ What do you mean by "rooftop"? Do you mean the roof shape? The roof size? <del>O
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Potlatch_in_use.JPG" /></p>
+<p><img src="/upfiles/Potlatch_in_use.JPG" /></p>
 <p>The JPEG above shows the Potlatch2 editor in use with Bing ariel selected. If the surrounding streets have been mapped and if you survey the area it is easy to recognise each building from above. Some of the buildings here have been mapped. This JPEG is zoomed out a little to give a bigger view. When zoomed in most buildings will easy to draw around, occasionally the images will have cloud but usually images are good. Now you have signed up the next step is to learn to use one of the editors to add the rooftops you are interested in. Happy Mapping</p>
 </div>
 <div class="answer-controls post-controls">

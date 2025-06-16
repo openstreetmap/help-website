@@ -152,7 +152,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>After reordering of a few ways/lines I received proper shape already, so the info from Frederik helped :)</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Poland_Border.png" alt="alt text" /></p>
+<p><img src="/upfiles/Poland_Border.png" alt="alt text" /></p>
 <p>Thanks.</p>
 </div>
 <div id="comment-51034-info" class="comment-info">

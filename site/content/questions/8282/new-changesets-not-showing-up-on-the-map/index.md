@@ -111,8 +111,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Bennet</p>
-<p>Are these your edits: <a href="http://www.openstreetmap.org/user/Bennet%20Campoverde/edits">http://www.openstreetmap.org/user/Bennet%20Campoverde/edits</a></p>
-<p>If so the ways you have added have no tags to say that they are highways, such as <a href="http://www.openstreetmap.org/browse/way/131916513">http://www.openstreetmap.org/browse/way/131916513</a> and <a href="http://www.openstreetmap.org/browse/way/131916590">http://www.openstreetmap.org/browse/way/131916590</a></p>
+<p>Are these your edits: <a href="https://www.openstreetmap.org/user/Bennet%20Campoverde/edits">https://www.openstreetmap.org/user/Bennet%20Campoverde/edits</a></p>
+<p>If so the ways you have added have no tags to say that they are highways, such as <a href="https://www.openstreetmap.org/browse/way/131916513">https://www.openstreetmap.org/browse/way/131916513</a> and <a href="https://www.openstreetmap.org/browse/way/131916590">https://www.openstreetmap.org/browse/way/131916590</a></p>
 <p>Your changesets suggest you are using JOSM, so once you have drawn the way, make sure the way is selected and then pick an appropriate highway classification for the way from the presets menu</p>
 </div>
 <div class="answer-controls post-controls">

@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi,</p>
 <p>can one explain why here <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=57.32642%2C-2.83276%3B57.32609%2C-2.83762#map=16/57.3284/-2.8349">https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=57.32642%2C-2.83276%3B57.32609%2C-2.83762#map=16/57.3284/-2.8349</a> not the short direct route on the red-dotted footpath is used? I added this path two days ago (I'm relatively new to OSM).</p>
-<p>I also read this suggested post <a href="https://help.openstreetmap.org/questions/7015/tagging-public-footpaths-for-routing">https://help.openstreetmap.org/questions/7015/tagging-public-footpaths-for-routing</a> and tried to find out which data is used by the "Foot (OSRM)" and "Foot (GraphHopper)" route planners. From what I understood the planners don't necessarily know the current state of OSM, but I did not find an easy way to determine which version of OSM data is used in these route planners. Where can I see this?</p>
+<p>I also read this suggested post <a href="/questions/7015/tagging-public-footpaths-for-routing">https://help.openstreetmap.org/questions/7015/tagging-public-footpaths-for-routing</a> and tried to find out which data is used by the "Foot (OSRM)" and "Foot (GraphHopper)" route planners. From what I understood the planners don't necessarily know the current state of OSM, but I did not find an easy way to determine which version of OSM data is used in these route planners. Where can I see this?</p>
 <p>Thank you &amp; Best regards</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -192,7 +192,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Answering <a href="https://help.openstreetmap.org/users/1725/andy">@andy</a>-mackey 's questions: It's working for me using GraphHopper now (see my answer to <a href="https://help.openstreetmap.org/users/13231/h_mlet">@H_mlet</a>). When I made the post, OSRM just did not use my path, but worked in general. I use the openstreetmap in-browser editor to edit and added foot=yes, see this picture: <img src="https://help.openstreetmap.org/upfiles/OSM.PNG" alt="alt text" /></p>
+<p>Answering <a href="https://help.openstreetmap.org/users/1725/andy">@andy</a>-mackey 's questions: It's working for me using GraphHopper now (see my answer to <a href="https://help.openstreetmap.org/users/13231/h_mlet">@H_mlet</a>). When I made the post, OSRM just did not use my path, but worked in general. I use the openstreetmap in-browser editor to edit and added foot=yes, see this picture: <img src="/upfiles/OSM.PNG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -279,7 +279,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/footpath_tagging.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/footpath_tagging.JPG" alt="alt text" /></p>
 <p>I think path needs an additional tag such as allowed or designated. The router doesn't route on private path or track. Check with local government somehow for status. Best to do a survey or walk it and read the official signage and use your GPS trace a camera, dicta phone or notes when surveying for later mapping a path or track.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -76,7 +76,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Is this question a duplicate of <a href="https://help.openstreetmap.org/questions/58169/after-installing-own-tile-server-seeing-from-switch2osmorg-but-cant-find-the-way-how-to-edit-map-config-etc">https://help.openstreetmap.org/questions/58169/after-installing-own-tile-server-seeing-from-switch2osmorg-but-cant-find-the-way-how-to-edit-map-config-etc</a> ? If not, in what way is it different?</p>
+<p>Is this question a duplicate of <a href="/questions/58169/after-installing-own-tile-server-seeing-from-switch2osmorg-but-cant-find-the-way-how-to-edit-map-config-etc">https://help.openstreetmap.org/questions/58169/after-installing-own-tile-server-seeing-from-switch2osmorg-but-cant-find-the-way-how-to-edit-map-config-etc</a> ? If not, in what way is it different?</p>
 </div>
 <div id="comment-58284-info" class="comment-info">
 <span class="comment-age">(13 Aug '17, 14:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

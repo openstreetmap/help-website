@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I understand that there was a similar questions asked before (<a href="https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers)">https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers)</a> but it was 7 years ago so I decided to ask again in case there's any changes :)</p>
+<p>Hi, I understand that there was a similar questions asked before (<a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers)">https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers)</a> but it was 7 years ago so I decided to ask again in case there's any changes :)</p>
 <p>Is there any way to put multiple marker(locations) on my open street map and put the iframe in my website?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

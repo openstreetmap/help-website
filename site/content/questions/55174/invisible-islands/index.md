@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I stumbled upon an island not rendering properly. I have made several attempts to correct this by trying something a little different with each of the three islands that don't seem to appear on the map.</p>
 <p>If anyone could take a look and let me know what is wrong it surely would be appreciated.</p>
-<p><a href="http://www.openstreetmap.org/#map=15/49.0719/-53.5678">http://www.openstreetmap.org/#map=15/49.0719/-53.5678</a></p>
+<p><a href="https://www.openstreetmap.org/#map=15/49.0719/-53.5678">https://www.openstreetmap.org/#map=15/49.0719/-53.5678</a></p>
 <p>On OpenStreetMap Greenspond Island, Pig Island and Ship Island are invisible.</p>
 <p>On my tablet using OsmAnd+ Greenspond and Pig islands are visible but Ship Island is invisible.</p>
 </div>
@@ -177,7 +177,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p><a href="https://help.openstreetmap.org/users/5390/escada"></a><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>, yes, that's a factor I forgot about. In JOSM, newly added coastlines appear right away but they take a while to propagate to the slippy map display. I'm not sure how long before they do. Coastlines don't appear on the slippy map as black lines, they are merely a place where land coloration changes to blue.</p>
-<p><a href="https://help.openstreetmap.org/users/9888/drew_nl"></a><a href="https://help.openstreetmap.org/users/9888/drew_nl">@Drew</a>, considering this it's probably best to give your edits some more time to become visible. I have used a coastline way and a boundary way together in Alaska and on the slippy map only the boundary is visible as a separate entity. Here is a part of that way: <a href="http://www.openstreetmap.org/search?query=67.63419%2C%20-164.1889#map=16/67.6336/-164.1851">http://www.openstreetmap.org/search?query=67.63419%2C%20-164.1889#map=16/67.6336/-164.1851</a></p>
+<p><a href="https://help.openstreetmap.org/users/9888/drew_nl"></a><a href="https://help.openstreetmap.org/users/9888/drew_nl">@Drew</a>, considering this it's probably best to give your edits some more time to become visible. I have used a coastline way and a boundary way together in Alaska and on the slippy map only the boundary is visible as a separate entity. Here is a part of that way: <a href="https://www.openstreetmap.org/search?query=67.63419%2C%20-164.1889#map=16/67.6336/-164.1851">https://www.openstreetmap.org/search?query=67.63419%2C%20-164.1889#map=16/67.6336/-164.1851</a></p>
 <p>Changes to this boundary show up right away but maybe that's because it marks a nature_reserve, which gets special treatment. Are administrative boundaries rendered differently?</p>
 </div>
 <div id="comment-55184-info" class="comment-info">

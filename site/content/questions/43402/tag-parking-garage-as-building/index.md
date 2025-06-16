@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I haven't found clear guidance on this yet, but would like to know if there's a best practice here.</p>
 <p>For multi-level parking, the presets are usually amenity=parking, parking=multi-storey.</p>
 <p>For multi-level concrete structure dedicated solely to car parking, should it also have building=yes? That way, it would show up on OSM Mapnik as a building, not just a yellow area, and would it would make sense to have building:levels and such. But none of the presets I've seen include a checkbox for building and some map styles may assume that amenity=parking and building=yes are mutually exclusive.</p>
-<p>Edit: There is also no guidance in the wiki page for amenity=parking: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a></p>
+<p>Edit: There is also no guidance in the wiki page for amenity=parking: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a car park near here which is partly <a href="http://www.openstreetmap.org/way/72855139">ground level open parking</a>, and <a href="http://www.openstreetmap.org/way/72855168">partly multi-storey</a> - I added <code>building=carpark</code> in this example, though it has the same effect as <code>building=yes</code> in most use cases that I am aware of.</p>
+<p>There is a car park near here which is partly <a href="https://www.openstreetmap.org/way/72855139">ground level open parking</a>, and <a href="https://www.openstreetmap.org/way/72855168">partly multi-storey</a> - I added <code>building=carpark</code> in this example, though it has the same effect as <code>building=yes</code> in most use cases that I am aware of.</p>
 <p>I probably added the building tag manually afterwards (and yes, building levels would probably also have been a good one to add)</p>
 </div>
 <div class="answer-controls post-controls">

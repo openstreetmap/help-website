@@ -64,7 +64,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Similar Question <a href="https://help.openstreetmap.org/questions/72108/stream-running-along-and-over-a-road">https://help.openstreetmap.org/questions/72108/stream-running-along-and-over-a-road</a></p>
+<p>Similar Question <a href="/questions/72108/stream-running-along-and-over-a-road">https://help.openstreetmap.org/questions/72108/stream-running-along-and-over-a-road</a></p>
 </div>
 <div id="comment-75590-info" class="comment-info">
 <span class="comment-age">(08 Jul '20, 07:17)</span> <span class="comment-user userinfo">andy mackey</span>

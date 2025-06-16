@@ -105,12 +105,12 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The best way to include roads is to create a <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route relation</a> that includes the roads where they are part of the trail system.</p>
+<p>The best way to include roads is to create a <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relation</a> that includes the roads where they are part of the trail system.</p>
 <p>There is no need to add tags to the roadway to reflect that it can be part of the trail system.</p>
 <p>For actual sidewalks, there are 2 choices:</p>
 <ol>
-<li>Add <a href="http://wiki.openstreetmap.org/wiki/Sidewalk">sidewalk</a> = both / left / right to the roadway</li>
-<li>For more accurate routing step-by-step routing details, sidewalks can be drawn as a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way">separate way</a></li>
+<li>Add <a href="https://wiki.openstreetmap.org/wiki/Sidewalk">sidewalk</a> = both / left / right to the roadway</li>
+<li>For more accurate routing step-by-step routing details, sidewalks can be drawn as a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way">separate way</a></li>
 </ol>
 </div>
 <div class="answer-controls post-controls">
@@ -130,7 +130,7 @@ One Answer:
 <div id="post-5474-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It also depends what mode the route is intended for. <a href="http://wiki.openstreetmap.org/wiki/Cycle_routes">http://wiki.openstreetmap.org/wiki/Cycle_routes</a> <a href="http://wiki.openstreetmap.org/wiki/Walking_Routes">http://wiki.openstreetmap.org/wiki/Walking_Routes</a></p>
+<p>It also depends what mode the route is intended for. <a href="https://wiki.openstreetmap.org/wiki/Cycle_routes">https://wiki.openstreetmap.org/wiki/Cycle_routes</a> <a href="https://wiki.openstreetmap.org/wiki/Walking_Routes">https://wiki.openstreetmap.org/wiki/Walking_Routes</a></p>
 </div>
 <div id="comment-5474-info" class="comment-info">
 <span class="comment-age">(01 Jun '11, 03:10)</span> <span class="comment-user userinfo">Baloo Uriza</span>

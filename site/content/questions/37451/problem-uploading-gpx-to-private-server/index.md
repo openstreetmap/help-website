@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello guys,</p>
 <p>I am trying to upload GPX tracks to my private OSM server but it seems like i am running into a server error while doing so</p>
 <p>Here is the cURL command i am using</p>
-<p><code>curl -u arsaXXXX:XXXXX -H "Expect: " -F "file=</code><a href="http://help.openstreetmap.org/users/23/cohort"><code>@C</code></a><code>:\Users\arsa3858\Desktop\1.gpx -F description=description \ -F tags=tags -F visibility=public </code><a href="http://b20003:3000/api/0.6/gpx/create"><code>http://b20003:3000/api/0.6/gpx/create</code></a></p>
+<p><code>curl -u arsaXXXX:XXXXX -H "Expect: " -F "file=</code><a href="https://help.openstreetmap.org/users/23/cohort"><code>@C</code></a><code>:\Users\arsa3858\Desktop\1.gpx -F description=description \ -F tags=tags -F visibility=public </code><a href="http://b20003:3000/api/0.6/gpx/create"><code>http://b20003:3000/api/0.6/gpx/create</code></a></p>
 <p>Below is the error report that i am seeing , i understand that its a ruby on rails server problem but i have no idea how to go about fixing this. Thanks in advance for your help</p>
 <pre><code>API threw unexpected Errno::ENOENT exception: No such file or directory - (/tmp/0.7056756430417218, /home/osm/traces/11.gpx)
 /usr/lib/ruby/1.9.1/fileutils.rb:519:in `rename&#39;

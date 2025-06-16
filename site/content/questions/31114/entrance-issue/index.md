@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-31115-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, it would help if you could indicate where you are. Go here :- <a href="http://www.openstreetmap.org/#map=2/54.5/58.4">http://www.openstreetmap.org/#map=2/54.5/58.4</a> zoom in to your location, copy and post the link.</p>
+<p>Hi, it would help if you could indicate where you are. Go here :- <a href="https://www.openstreetmap.org/#map=2/54.5/58.4">https://www.openstreetmap.org/#map=2/54.5/58.4</a> zoom in to your location, copy and post the link.</p>
 </div>
 <div id="comment-31115-info" class="comment-info">
 <span class="comment-age">(28 Feb '14, 11:16)</span> <span class="comment-user userinfo">BCNorwich</span>
@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can tag your <a href="http://wiki.openstreetmap.org/wiki/Entrance">entrance</a> and your <a href="http://wiki.openstreetmap.org/wiki/Tag:service=driveway">driveway</a>. You should also tag the <a href="http://wiki.openstreetmap.org/wiki/Addr">house's number and/or name</a> as that is what the satnav user is likely to put in when looking for your place.</p>
+<p>You can tag your <a href="https://wiki.openstreetmap.org/wiki/Entrance">entrance</a> and your <a href="https://wiki.openstreetmap.org/wiki/Tag:service=driveway">driveway</a>. You should also tag the <a href="https://wiki.openstreetmap.org/wiki/Addr">house's number and/or name</a> as that is what the satnav user is likely to put in when looking for your place.</p>
 <p>Note that not all satnavs use data from OSM. Unless you can convince all your visitors to use an OSM-based satnav, you might want to send the fix to the other map providers too. All map data providers enable you to fix problems with the map, altough none are as straightforward as OSM.</p>
 </div>
 <div class="answer-controls post-controls">

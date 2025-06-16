@@ -64,7 +64,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Do the answers to any of the previous questions like this help? Like this one:</p>
-<p><a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
+<p><a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a></p>
 </div>
 <div id="comment-40721-info" class="comment-info">
 <span class="comment-age">(30 Jan '15, 18:11)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

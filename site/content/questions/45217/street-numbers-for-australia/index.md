@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't know MapFactor, but when I look at the data in <a href="http://www.openstreetmap.org/#map=16/-35.2786/149.1324">Canberra</a> I notice that there are not a lot of housenumbers. As I don't know in which area you are looking, it is possible that the data does not exists in OSM yet.</p>
+<p>I don't know MapFactor, but when I look at the data in <a href="https://www.openstreetmap.org/#map=16/-35.2786/149.1324">Canberra</a> I notice that there are not a lot of housenumbers. As I don't know in which area you are looking, it is possible that the data does not exists in OSM yet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ One Answer:
 <div id="post-45275-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>as far as I can see on the <a href="http://www.openstreetmap.org/node/29277817#map=15/-31.9150/115.8808">main map</a>, there are no buildings and no house numbers. The preferred way is indeed to go out, collect the house numbers and improve the map when you're back. In some countries (e.g. The Netherlands &amp; Denmark) they imported all the house numbers from government data. There is a whole procedure you have to follow to do this (and the data should be available under the correct license). Get in touch with the Australian community (e.g. mailing list) to see what they are up to.</p>
+<p>as far as I can see on the <a href="https://www.openstreetmap.org/node/29277817#map=15/-31.9150/115.8808">main map</a>, there are no buildings and no house numbers. The preferred way is indeed to go out, collect the house numbers and improve the map when you're back. In some countries (e.g. The Netherlands &amp; Denmark) they imported all the house numbers from government data. There is a whole procedure you have to follow to do this (and the data should be available under the correct license). Get in touch with the Australian community (e.g. mailing list) to see what they are up to.</p>
 </div>
 <div id="comment-45275-info" class="comment-info">
 <span class="comment-age">(16 Sep '15, 12:13)</span> <span class="comment-user userinfo">escada</span>

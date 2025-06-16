@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can I pick areas in the data overlay that are hidden by other areas"
-description = '''If e.g go to http://www.openstreetmap.org/?lat=48.135583&amp;amp;lon=11.614641&amp;amp;zoom=18&amp;amp;layers=M and activate the data overlay it is not possible to pick the parking lot in the middle as it is hidden by another area. The same problem exists for a lot of other ways. How can I pick it anyway? Using...'''
+description = '''If e.g go to https://www.openstreetmap.org/?lat=48.135583&amp;amp;lon=11.614641&amp;amp;zoom=18&amp;amp;layers=M and activate the data overlay it is not possible to pick the parking lot in the middle as it is hidden by another area. The same problem exists for a lot of other ways. How can I pick it anyway? Using...'''
 date = "2010-11-01T20:52:00Z"
 lastmod = "2010-11-02T10:41:00Z"
 weight = 1406
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>If e.g go to <a href="http://www.openstreetmap.org/?lat=48.135583&amp;lon=11.614641&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=48.135583&amp;lon=11.614641&amp;zoom=18&amp;layers=M</a> and activate the data overlay it is not possible to pick the parking lot in the middle as it is hidden by another area. The same problem exists for a lot of other ways. How can I pick it anyway? Using the object list is IMO too time consuming as one needs to try all 'way' entries.</p>
+<p>If e.g go to <a href="https://www.openstreetmap.org/?lat=48.135583&amp;lon=11.614641&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=48.135583&amp;lon=11.614641&amp;zoom=18&amp;layers=M</a> and activate the data overlay it is not possible to pick the parking lot in the middle as it is hidden by another area. The same problem exists for a lot of other ways. How can I pick it anyway? Using the object list is IMO too time consuming as one needs to try all 'way' entries.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-picking" rel="tag" title="see questions tagged &#39;picking&#39;">picking</span> <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span> <span class="post-tag tag-link-overlay" rel="tag" title="see questions tagged &#39;overlay&#39;">overlay</span>

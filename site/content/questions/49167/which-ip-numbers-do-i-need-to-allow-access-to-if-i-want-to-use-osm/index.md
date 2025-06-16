@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This is a break-out of a part of a question asked by user "maboudeh" in <a href="https://help.openstreetmap.org/questions/49164/hosting-a-map-on-an-intranet:">https://help.openstreetmap.org/questions/49164/hosting-a-map-on-an-intranet:</a></p>
+<p>This is a break-out of a part of a question asked by user "maboudeh" in <a href="/questions/49164/hosting-a-map-on-an-intranet:">https://help.openstreetmap.org/questions/49164/hosting-a-map-on-an-intranet:</a></p>
 <p>"If I were able to establish a connection between my organization and the osm server, I'll need server ip's to connect to, in order to use the maps online. I found the server list on the wiki, but I am not sure how I'm supposed to approach this. Any advice would be helpful."</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers to the question <a href="https://help.openstreetmap.org/questions/24967/what-are-the-ip-addresses-of-osms-servers">What are the IP addresses of OSM's servers?</a></p>
+<p>See the answers to the question <a href="/questions/24967/what-are-the-ip-addresses-of-osms-servers">What are the IP addresses of OSM's servers?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Road is closed for cars, but can still route by car"
-description = '''I have changed a road to be only accessible by foot: http://www.openstreetmap.org/changeset/38218082 It is blocked on several positions with large boulders. A car can never use this road. However when using the routing features, I can still map my route over this road, see for instance:  http://www....'''
+description = '''I have changed a road to be only accessible by foot: https://www.openstreetmap.org/changeset/38218082 It is blocked on several positions with large boulders. A car can never use this road. However when using the routing features, I can still map my route over this road, see for instance:  http://www....'''
 date = "2016-04-01T07:15:00Z"
 lastmod = "2016-04-01T08:38:00Z"
 weight = 48984
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have changed a road to be only accessible by foot: <a href="http://www.openstreetmap.org/changeset/38218082">http://www.openstreetmap.org/changeset/38218082</a> It is blocked on several positions with large boulders. A car can never use this road. However when using the routing features, I can still map my route over this road, see for instance: <a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=12.1791%2C-68.2887%3B12.1905%2C-68.2794#map=17/12.18905/-68.27989">http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=12.1791%2C-68.2887%3B12.1905%2C-68.2794#map=17/12.18905/-68.27989</a></p>
+<p>I have changed a road to be only accessible by foot: <a href="https://www.openstreetmap.org/changeset/38218082">https://www.openstreetmap.org/changeset/38218082</a> It is blocked on several positions with large boulders. A car can never use this road. However when using the routing features, I can still map my route over this road, see for instance: <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=12.1791%2C-68.2887%3B12.1905%2C-68.2794#map=17/12.18905/-68.27989">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=12.1791%2C-68.2887%3B12.1905%2C-68.2794#map=17/12.18905/-68.27989</a></p>
 <p>It should however use a different road to guide me to the destination. Is my edit somehow wrong, or is the routing information updated less frequent?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

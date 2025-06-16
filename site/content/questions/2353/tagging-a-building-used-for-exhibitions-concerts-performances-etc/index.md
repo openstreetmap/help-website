@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'd like some advice on a <a href="http://www.openstreetmap.org/browse/node/1112039324">node</a> I created yesterday (my first ever edit). The name literally means "large hall" and it is used for several kinds of cultural events. Never mind that it's part of <a href="http://www.openstreetmap.org/browse/way/36907903">a larger cultural center</a> and not a separate building -- it has an identity of its own including a website and my question would apply even if the place was separate, it surely applies to many similar places. As I said, it is a space hosting various cultural events, so none of the categories in JOSM apply -- or rather, several different categories would apply over time. (Some functions of the place, not all corresponding to categories I've seen, are: theatre, concert venue, exhibition space, fleamarket, and more.) It is known under its name as a cultural location so it would be good if it could appear on the map with a label. Currently the node is there but not shown. (At least I assume the reason for this being that I created it as an uncategorised node.)</p>
+<p>I'd like some advice on a <a href="https://www.openstreetmap.org/browse/node/1112039324">node</a> I created yesterday (my first ever edit). The name literally means "large hall" and it is used for several kinds of cultural events. Never mind that it's part of <a href="https://www.openstreetmap.org/browse/way/36907903">a larger cultural center</a> and not a separate building -- it has an identity of its own including a website and my question would apply even if the place was separate, it surely applies to many similar places. As I said, it is a space hosting various cultural events, so none of the categories in JOSM apply -- or rather, several different categories would apply over time. (Some functions of the place, not all corresponding to categories I've seen, are: theatre, concert venue, exhibition space, fleamarket, and more.) It is known under its name as a cultural location so it would be good if it could appear on the map with a label. Currently the node is there but not shown. (At least I assume the reason for this being that I created it as an uncategorised node.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-multi-use" rel="tag" title="see questions tagged &#39;multi-use&#39;">multi-use</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This sounds like <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre">amenity=community_centre</a>.</p>
+<p>This sounds like <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre">amenity=community_centre</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

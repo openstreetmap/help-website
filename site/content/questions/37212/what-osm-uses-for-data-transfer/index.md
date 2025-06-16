@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Many different technologies depending on the subproject, take a look at the <a href="http://wiki.openstreetmap.org/wiki/Develop">wiki for developers</a></p>
+<p>Many different technologies depending on the subproject, take a look at the <a href="https://wiki.openstreetmap.org/wiki/Develop">wiki for developers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

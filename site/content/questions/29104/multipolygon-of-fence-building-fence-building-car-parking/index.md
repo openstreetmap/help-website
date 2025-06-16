@@ -51,7 +51,7 @@ osqa_accepted = true
 <li>and another building in the south side</li>
 </ul>
 <p>I can't find the best way to represent such configuration. I tried creating a multipolygon relation but it fails to "link" those members together. Any suggestion ? Should I use a "site" relation?</p>
-<p>For the curious ones, here is the case: <a href="http://www.openstreetmap.org/edit?editor=id#map=19/35.91258/-79.07332">http://www.openstreetmap.org/edit?editor=id#map=19/35.91258/-79.07332</a></p>
+<p>For the curious ones, here is the case: <a href="https://www.openstreetmap.org/edit?editor=id#map=19/35.91258/-79.07332">https://www.openstreetmap.org/edit?editor=id#map=19/35.91258/-79.07332</a></p>
 <p>Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -81,7 +81,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Thanks for your answers. It seems to me that I should do as Pieren and Hendrikklaas suggest: * Create a new "way" that covers the entire area and tag it as a "shop"</p>
-<p>To make things more complicated, it appears that there is a warehouse located 1 block north of the area that belongs to the store (and customers can go there). <a href="http://www.openstreetmap.org/edit?editor=id#map=19/35.91461/-79.07082">http://www.openstreetmap.org/edit?editor=id#map=19/35.91461/-79.07082</a></p>
+<p>To make things more complicated, it appears that there is a warehouse located 1 block north of the area that belongs to the store (and customers can go there). <a href="https://www.openstreetmap.org/edit?editor=id#map=19/35.91461/-79.07082">https://www.openstreetmap.org/edit?editor=id#map=19/35.91461/-79.07082</a></p>
 <p>So should I use "multipolygon" or "site" to "link" both areas ?</p>
 <p>bonus question: do we have a wiki page that lists all the techniques ?</p>
 </div>
@@ -196,10 +196,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you need is to draw a simple polygon (closed way) surrounding the facility and add the tags qualifying the shop onto this polygon with e.g. "shop=lumber" + "name=name_of_the_shop". When you draw this polygon, you might have to reuse existing nodes created for the fences and buildings. Hence the fence will partially overlap with the surrounding polygon but this is not a problem if this is physically the case. (see this <a href="http://wiki.openstreetmap.org/wiki/File:Amenity_school_usage_example.svg">school example</a> from the wiki)<br />
+<p>What you need is to draw a simple polygon (closed way) surrounding the facility and add the tags qualifying the shop onto this polygon with e.g. "shop=lumber" + "name=name_of_the_shop". When you draw this polygon, you might have to reuse existing nodes created for the fences and buildings. Hence the fence will partially overlap with the surrounding polygon but this is not a problem if this is physically the case. (see this <a href="https://wiki.openstreetmap.org/wiki/File:Amenity_school_usage_example.svg">school example</a> from the wiki)<br />
 Later, you can improve the map by specifying which building is doing what (warehouse, office, etc) on each building polygon.<br />
 The "multipolygon" relation is only required for complex geometries (with inners/outers) or very big polygons (a way is limited to 2000 nodes in OSM).<br />
-A <a href="http://wiki.openstreetmap.org/wiki/Relation:site">"site" relation</a> is only required when a single area is not possible. For instance, a university is often spread on multiple locations in a town/city.</p>
+A <a href="https://wiki.openstreetmap.org/wiki/Relation:site">"site" relation</a> is only required when a single area is not possible. For instance, a university is often spread on multiple locations in a town/city.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -266,9 +266,9 @@ A <a href="http://wiki.openstreetmap.org/wiki/Relation:site">"site" relation</a>
 <p>Like always in OSM, there is not one single 'best' way that fits for every scenario ;) , so I just will try to present a few that IMHO might make sense:</p>
 <ol>
 <li><strong>No Multipolygon</strong><br />
-In your case, I don't see an advantage to make use of a relation to group all things together (beside that it would be semantical correct). So what I usually do is to map the biggest area (here the fence) with the POI properties and keep all the others as they are. If you like, you can tag the buildings <a href="http://wiki.openstreetmap.org/wiki/Key:building">more detailed</a>.</li>
+In your case, I don't see an advantage to make use of a relation to group all things together (beside that it would be semantical correct). So what I usually do is to map the biggest area (here the fence) with the POI properties and keep all the others as they are. If you like, you can tag the buildings <a href="https://wiki.openstreetmap.org/wiki/Key:building">more detailed</a>.</li>
 <li><strong>Site-relation</strong><br />
-As you already wrote, a <a href="http://wiki.openstreetmap.org/wiki/Site">site relation</a> is a common way to group things together, but AFAIK it's more used for keeping distributed sites together (as a university campus that is spread over the city etc.). AFAIK there is currently no tool/service that makes use of this relation.</li>
+As you already wrote, a <a href="https://wiki.openstreetmap.org/wiki/Site">site relation</a> is a common way to group things together, but AFAIK it's more used for keeping distributed sites together (as a university campus that is spread over the city etc.). AFAIK there is currently no tool/service that makes use of this relation.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">
@@ -362,7 +362,7 @@ As you already wrote, a <a href="http://wiki.openstreetmap.org/wiki/Site">site r
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi take a look at a university or school area, <a href="https://help.openstreetmap.org/questions/5148/mapping-a-university-campus.">https://help.openstreetmap.org/questions/5148/mapping-a-university-campus.</a> Or just draw a complete way around the area and ad a name tag, without building a multipolygone like iii stated.</p>
+<p>Hi take a look at a university or school area, <a href="/questions/5148/mapping-a-university-campus.">https://help.openstreetmap.org/questions/5148/mapping-a-university-campus.</a> Or just draw a complete way around the area and ad a name tag, without building a multipolygone like iii stated.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -413,7 +413,7 @@ As you already wrote, a <a href="http://wiki.openstreetmap.org/wiki/Site">site r
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want to avoid overlapping ways, which happens in <a href="#29108">Pieren's case</a>, then you can draw single ways which you chain up as needed with a multipolygon (like you described in your question). Likely you just did something wrong (e.g. no closed multipolygon outer way). However, this does not help for pieces of fence which are no closed circles as multipolygons always need to be "closed".</p>
-<p>See the <span>usage example(s)</span>. I <a href="http://overpass-turbo.eu/s/1MO">have searched</a> for realworld examples. Look at <a href="http://www.openstreetmap.org/relation/2182994">this one</a>.</p>
+<p>See the <span>usage example(s)</span>. I <a href="http://overpass-turbo.eu/s/1MO">have searched</a> for realworld examples. Look at <a href="https://www.openstreetmap.org/relation/2182994">this one</a>.</p>
 <p>I am trying to make an example (numbers represent nodes, x-y is a way consisting of node x and y):</p>
 <pre><code>1-----2
 |     |

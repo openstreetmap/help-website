@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>All text fields are encoded in UTF-8.</p>
-<p>Please check the details in the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#General_information">Wiki about API v0.6</a>.</p>
+<p>Please check the details in the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#General_information">Wiki about API v0.6</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

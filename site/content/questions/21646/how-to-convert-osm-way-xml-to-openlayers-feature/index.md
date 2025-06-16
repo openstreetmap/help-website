@@ -49,7 +49,7 @@ osqa_accepted = false
 </ol>
 <p>this way i can limit the data usage also.</p>
 <p>Now i have an Openlayers Vector Layer using OpenLayers.Format.OSM. i can add features to it.</p>
-<p>i need to convert an xml data in <a href="http://www.openstreetmap.org/api/0.6/way/191189605">this format</a> to an OpenLayers.Feature.Vector.</p>
+<p>i need to convert an xml data in <a href="https://www.openstreetmap.org/api/0.6/way/191189605">this format</a> to an OpenLayers.Feature.Vector.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-xml" rel="tag" title="see questions tagged &#39;xml&#39;">xml</span> <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-vector" rel="tag" title="see questions tagged &#39;vector&#39;">vector</span> <span class="post-tag tag-link-openlayers" rel="tag" title="see questions tagged &#39;openlayers&#39;">openlayers</span>

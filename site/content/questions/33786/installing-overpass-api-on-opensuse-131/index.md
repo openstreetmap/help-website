@@ -50,7 +50,7 @@ osqa_accepted = false
 <p>are there things i have to get via YAST - or do i need to get all via Terminal!?</p>
 <p>Any and all help will be greatly appreciated</p>
 <p>greetings</p>
-<p>CF <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/install">http://wiki.openstreetmap.org/wiki/Overpass_API/install</a></p>
+<p>CF <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/install">https://wiki.openstreetmap.org/wiki/Overpass_API/install</a></p>
 <p>guess that i meet the system requirements on my samsung netbook - (bit low level) but i guess that this might work</p>
 </div>
 <div id="question-tags" class="tags-container tags">

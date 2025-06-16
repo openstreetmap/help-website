@@ -167,7 +167,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>You may also add the ticket for osmarender layer (it is the layer where practically everything gets rendered). You can later choose the osmarender layer by clicking on plus sign on the upper right corner of the <a href="http://www.openstreetmap.org/">main map</a>.</p>
+<p>You may also add the ticket for osmarender layer (it is the layer where practically everything gets rendered). You can later choose the osmarender layer by clicking on plus sign on the upper right corner of the <a href="https://www.openstreetmap.org/">main map</a>.</p>
 </div>
 <div id="comment-5016-info" class="comment-info">
 <span class="comment-age">(06 May '11, 12:55)</span> <span class="comment-user userinfo">RM87</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=42.08636&amp;lon=-87.716194&amp;zoom=19">Here</a> (Between Kenilworth Ave. and Richmond Rd.) the map has listed a standard junction, however, this is a roundabout (without yield signs or stops). How do you add a roundabout to a pre-existing intersection?</p>
+<p><a href="https://www.openstreetmap.org/?lat=42.08636&amp;lon=-87.716194&amp;zoom=19">Here</a> (Between Kenilworth Ave. and Richmond Rd.) the map has listed a standard junction, however, this is a roundabout (without yield signs or stops). How do you add a roundabout to a pre-existing intersection?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-newbie" rel="tag" title="see questions tagged &#39;newbie&#39;">newbie</span> <span class="post-tag tag-link-roundabout" rel="tag" title="see questions tagged &#39;roundabout&#39;">roundabout</span>
@@ -141,7 +141,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Bit more info</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Bing#OpenStreetMap_via_the_Bing_Maps_APIs">http://wiki.openstreetmap.org/wiki/Bing#OpenStreetMap_via_the_Bing_Maps_APIs</a> <a href="http://wiki.openstreetmap.org/wiki/Videos">http://wiki.openstreetmap.org/wiki/Videos</a> <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2</a> <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bing#OpenStreetMap_via_the_Bing_Maps_APIs">https://wiki.openstreetmap.org/wiki/Bing#OpenStreetMap_via_the_Bing_Maps_APIs</a> <a href="https://wiki.openstreetmap.org/wiki/Videos">https://wiki.openstreetmap.org/wiki/Videos</a> <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2</a> <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer</a></p>
 </div>
 <div id="comment-14335-info" class="comment-info">
 <span class="comment-age">(17 Jul '12, 10:13)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -256,7 +256,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could read this <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout</a> If the area as got good bing it will be easier. If not I would sketch a plan, walk around the site and get some traces. If you mess up just don't save it. You could find a blank area on the map to do a practice, Do not save this practice of course. edit... I have now had a good look at this in Potlach2 you need to plot a few nodes around the mini roundabout you see in Bing, use the circle tool in the box lower right to make the circle neat.Now make it one way anti clockwise as it's USA. next connect the four roads to it by clicking their meeting points and pressing "J" for each of the four. Then remove the central node, make sure that's the only high lighted node when using the bin/delete symbol.Update the undo and redo boxes are useful,and after practice the problem with this method is that the circle tool sometimes moves the centre a bit upsetting the alignment. so use my other answer for best results.<br />
+<p>You could read this <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout</a> If the area as got good bing it will be easier. If not I would sketch a plan, walk around the site and get some traces. If you mess up just don't save it. You could find a blank area on the map to do a practice, Do not save this practice of course. edit... I have now had a good look at this in Potlach2 you need to plot a few nodes around the mini roundabout you see in Bing, use the circle tool in the box lower right to make the circle neat.Now make it one way anti clockwise as it's USA. next connect the four roads to it by clicking their meeting points and pressing "J" for each of the four. Then remove the central node, make sure that's the only high lighted node when using the bin/delete symbol.Update the undo and redo boxes are useful,and after practice the problem with this method is that the circle tool sometimes moves the centre a bit upsetting the alignment. so use my other answer for best results.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

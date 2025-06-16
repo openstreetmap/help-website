@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This excellent post had an example of an overpass query: <a href="https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api">https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api</a></p>
+<p>This excellent post had an example of an overpass query: <a href="/questions/19063/get-city-nodes-within-a-country-using-overpass-api">https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api</a></p>
 <p>Using Python, I can query OSM for all cities in Belgium:</p>
 <p><code>import overpass api = overpass.API(timeout=900) cities = api.Get('area[name="België - Belgique - Belgien"];(node[place="city"](area););out;') print(cities)</code></p>
 <p>but I can't do similar for powerplants. Does anyone know why? Code below returns empty dictionary.</p>
@@ -182,7 +182,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I've noticed you've changed the output to <code>out skel;</code>. Unfortunately, that's also not going to cut it, as the result doesn't include any coordinates or geometry information. <code>out center;</code> is not supported by the overpass python wrapper, i.e. <a href="http://help.openstreetmap.org/users/10973/maxerickson"></a><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>'s suggestion is good in general, but does not apply in this particular case.</p>
+<p>I've noticed you've changed the output to <code>out skel;</code>. Unfortunately, that's also not going to cut it, as the result doesn't include any coordinates or geometry information. <code>out center;</code> is not supported by the overpass python wrapper, i.e. <a href="https://help.openstreetmap.org/users/10973/maxerickson"></a><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>'s suggestion is good in general, but does not apply in this particular case.</p>
 <p>That leaves us with the question, why you want to stick with overpass-api-python-wrapper. There's plenty of more mature alternatives out there, it all depends on what you're trying to achieve.</p>
 </div>
 <div id="comment-50590-info" class="comment-info">

@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Once you have set up PostGIS on Windows (which is outside the scope of OSM and you should find information about this elsewhere), <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> can be used to import data. You will not get a database that is fit for standard rendering with Mapnik, but if all you need is to <em>somehow</em> get the data into PostGIS, that might be the easiest way. Osmosis can write different data schemas and which one you choose depends on what you want to do with the data.</p>
+<p>Once you have set up PostGIS on Windows (which is outside the scope of OSM and you should find information about this elsewhere), <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> can be used to import data. You will not get a database that is fit for standard rendering with Mapnik, but if all you need is to <em>somehow</em> get the data into PostGIS, that might be the easiest way. Osmosis can write different data schemas and which one you choose depends on what you want to do with the data.</p>
 <p>You could also choose an even simpler path and download a set of shape files for your region from the <a href="http://download.geofabrik.de/osm">Geofabrik download server</a>, then use the shp2pgsql that comes with PostGIS to load the shape files into a database. Note however that in contrast to the Osmosis approach, this will not give you the complete set of OSM data - just the stuff that the Geofabrik people chose to export in their shape file.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, you have to do some tweaking to your postgis database to make it work with osm. If you understand German, look at my wiki-Page: <a href="http://wiki.openstreetmap.org/wiki/User:Ajoessen/Postgis">http://wiki.openstreetmap.org/wiki/User:Ajoessen/Postgis</a></p>
+<p>Hi, you have to do some tweaking to your postgis database to make it work with osm. If you understand German, look at my wiki-Page: <a href="https://wiki.openstreetmap.org/wiki/User:Ajoessen/Postgis">https://wiki.openstreetmap.org/wiki/User:Ajoessen/Postgis</a></p>
 <p>Greetings, ajoessen</p>
 </div>
 <div class="answer-controls post-controls">

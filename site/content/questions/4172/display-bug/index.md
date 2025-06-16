@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Display Bug?"
-description = '''I have moved a building a little (before it was at the center of the park): http://www.openstreetmap.org/edit?lat=48.573497&amp;amp;lon=39.30047&amp;amp;zoom=18 But now it looks strange at the map: http://www.openstreetmap.org/?minlon=39.2995921&amp;amp;minlat=48.5726449&amp;amp;maxlon=39.301347&amp;amp;maxlat=48.57434...'''
+description = '''I have moved a building a little (before it was at the center of the park): https://www.openstreetmap.org/edit?lat=48.573497&amp;amp;lon=39.30047&amp;amp;zoom=18 But now it looks strange at the map: https://www.openstreetmap.org/?minlon=39.2995921&amp;amp;minlat=48.5726449&amp;amp;maxlon=39.301347&amp;amp;maxlat=48.57434...'''
 date = "2011-03-29T10:00:00Z"
 lastmod = "2011-03-29T10:12:00Z"
 weight = 4172
@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have moved a building a little (before it was at the center of the park): <a href="http://www.openstreetmap.org/edit?lat=48.573497&amp;lon=39.30047&amp;zoom=18">http://www.openstreetmap.org/edit?lat=48.573497&amp;lon=39.30047&amp;zoom=18</a></p>
-<p>But now it looks strange at the map: <a href="http://www.openstreetmap.org/?minlon=39.2995921&amp;minlat=48.5726449&amp;maxlon=39.301347&amp;maxlat=48.5743492&amp;box=yes">http://www.openstreetmap.org/?minlon=39.2995921&amp;minlat=48.5726449&amp;maxlon=39.301347&amp;maxlat=48.5743492&amp;box=yes</a></p>
+<p>I have moved a building a little (before it was at the center of the park): <a href="https://www.openstreetmap.org/edit?lat=48.573497&amp;lon=39.30047&amp;zoom=18">https://www.openstreetmap.org/edit?lat=48.573497&amp;lon=39.30047&amp;zoom=18</a></p>
+<p>But now it looks strange at the map: <a href="https://www.openstreetmap.org/?minlon=39.2995921&amp;minlat=48.5726449&amp;maxlon=39.301347&amp;maxlat=48.5743492&amp;box=yes">https://www.openstreetmap.org/?minlon=39.2995921&amp;minlat=48.5726449&amp;maxlon=39.301347&amp;maxlat=48.5743492&amp;box=yes</a></p>
 <p>Why does it look correct in edit mode and wrong in display mode?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

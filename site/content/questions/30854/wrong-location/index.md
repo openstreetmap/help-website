@@ -229,7 +229,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Shelton asked this already in <a href="https://help.openstreetmap.org/questions/71439/how-i-can-move-my-location">a seperate qustion</a>. And this is not an answer to the original question.</p>
+<p>Shelton asked this already in <a href="/questions/71439/how-i-can-move-my-location">a seperate qustion</a>. And this is not an answer to the original question.</p>
 </div>
 <div id="comment-71458-info" class="comment-info">
 <span class="comment-age">(04 Nov '19, 20:06)</span> <span class="comment-user userinfo">TZorn</span>

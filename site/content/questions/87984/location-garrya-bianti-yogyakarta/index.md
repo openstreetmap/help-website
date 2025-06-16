@@ -160,7 +160,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you centre the map on the location you wish to share the lat long is in the url. If you wish to share a location 1. centre the map on it 2. click on share 3. clickon the link. 3. Cut the link and paste into your message.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/location_ans_share_jkkzidd.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/location_ans_share_jkkzidd.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -205,7 +205,7 @@ osqa_accepted = false
 <div id="post-87996-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For some reason this doesn't work. <a href="https://help.openstreetmap.org/questions/70766/illustrating-a-q-or-a">https://help.openstreetmap.org/questions/70766/illustrating-a-q-or-a</a></p>
+<p>For some reason this doesn't work. <a href="/questions/70766/illustrating-a-q-or-a">https://help.openstreetmap.org/questions/70766/illustrating-a-q-or-a</a></p>
 </div>
 <div id="comment-87996-info" class="comment-info">
 <span class="comment-age">(12 Nov '23, 13:40)</span> <span class="comment-user userinfo">andy mackey</span>

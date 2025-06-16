@@ -133,7 +133,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Start reading at <a href="http://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a> in the OSM wiki.</p>
+<p>Start reading at <a href="https://wiki.openstreetmap.org/wiki/Frameworks">Frameworks</a> in the OSM wiki.</p>
 <p>There are some Java tools or libraries listed.</p>
 </div>
 <div class="answer-controls post-controls">

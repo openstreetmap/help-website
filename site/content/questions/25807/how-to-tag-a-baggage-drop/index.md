@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a baggage drop?"
-description = '''I can&#x27;t find a suitable tag for the &quot;EuroDespatch Centre&quot; at St Pancras International. I made one up, but it doesn&#x27;t render http://www.openstreetmap.org/browse/node/2431739200 http://www.geograph.org.uk/photo/2368123'''
+description = '''I can&#x27;t find a suitable tag for the &quot;EuroDespatch Centre&quot; at St Pancras International. I made one up, but it doesn&#x27;t render https://www.openstreetmap.org/browse/node/2431739200 http://www.geograph.org.uk/photo/2368123'''
 date = "2013-08-26T14:17:00Z"
 lastmod = "2013-08-27T07:59:00Z"
 weight = 25807
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I can't find a suitable tag for the "EuroDespatch Centre" at St Pancras International. I made one up, but it doesn't render</p>
-<p><a href="http://www.openstreetmap.org/browse/node/2431739200">http://www.openstreetmap.org/browse/node/2431739200</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/2431739200">https://www.openstreetmap.org/browse/node/2431739200</a></p>
 <p><a href="http://www.geograph.org.uk/photo/2368123">http://www.geograph.org.uk/photo/2368123</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -157,7 +157,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi is it possible that the renderer doesn’t know or recognize your creation or work ? It looks to me that the tags are readable isn’t. ? Basic rule is still don’t tag for the renderer. Or look here and make a selection. <a href="http://wiki.openstreetmap.org/wiki/Canadian_Stores.">http://wiki.openstreetmap.org/wiki/Canadian_Stores.</a></p>
+<p>Hi is it possible that the renderer doesn’t know or recognize your creation or work ? It looks to me that the tags are readable isn’t. ? Basic rule is still don’t tag for the renderer. Or look here and make a selection. <a href="https://wiki.openstreetmap.org/wiki/Canadian_Stores.">https://wiki.openstreetmap.org/wiki/Canadian_Stores.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

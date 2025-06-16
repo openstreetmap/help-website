@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello:</p>
 <p>For two-way street, I want to find coordinates lat/lon of the point located in the opposite of given point, for example, if my given point is on the left way, I want to find coordinates of opposite point on the right way.</p>
 <p>Thank you.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/example.png" alt="alt text" /></p>
+<p><img src="/upfiles/example.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-opposite" rel="tag" title="see questions tagged &#39;opposite&#39;">opposite</span> <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-points" rel="tag" title="see questions tagged &#39;points&#39;">points</span> <span class="post-tag tag-link-way" rel="tag" title="see questions tagged &#39;way&#39;">way</span> <span class="post-tag tag-link-osrm" rel="tag" title="see questions tagged &#39;osrm&#39;">osrm</span>

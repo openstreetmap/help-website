@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> umap according to the question tag.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> umap according to the question tag.</p>
 </div>
 <div id="comment-50658-info" class="comment-info">
 <span class="comment-age">(06 Jul '16, 09:11)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -134,7 +134,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is not possible AFAIK. However, you might contact the umap maintainers directly and ask them whether they can transfer it for you. See <a href="http://wiki.openstreetmap.org/wiki/UMap">http://wiki.openstreetmap.org/wiki/UMap</a> for the mailing list, irc and issue trackers where it is more likely to get in contact with the developers and maintainers.</p>
+<p>This is not possible AFAIK. However, you might contact the umap maintainers directly and ask them whether they can transfer it for you. See <a href="https://wiki.openstreetmap.org/wiki/UMap">https://wiki.openstreetmap.org/wiki/UMap</a> for the mailing list, irc and issue trackers where it is more likely to get in contact with the developers and maintainers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

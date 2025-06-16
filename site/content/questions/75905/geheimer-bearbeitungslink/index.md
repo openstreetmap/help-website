@@ -144,7 +144,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Diese Frage wurde bereits mehrfach gestellt und u.a. hier beantwortet: <a href="https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map">https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map</a></p>
+<p>Diese Frage wurde bereits mehrfach gestellt und u.a. hier beantwortet: <a href="/questions/69710/umap-openstreetmap-change-map">https://help.openstreetmap.org/questions/69710/umap-openstreetmap-change-map</a></p>
 <p>Deine Möglichkeiten sind:</p>
 <ul>
 <li>Alle Daten via "Full Map Data" herunterladen und auf dieser Basis eine neue Karte erstellen, oder</li>

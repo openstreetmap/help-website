@@ -75,7 +75,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>What kind of bicycle networks? If there are visible signs for them, then it is perfectly fine to map them in OpenStreetMap.</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.0413&amp;lon=4.8997&amp;zoom=12&amp;layers=C">OpenCycleMap</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.0413&amp;lon=4.8997&amp;zoom=12&amp;layers=C">OpenCycleMap</a></p>
 <p><a href="http://cycling.waymarkedtrails.org/en/?zoom=12&amp;lat=52.01048&amp;lon=4.89363&amp;hill=0">Waymarked Trails: Cycling</a></p>
 </div>
 <div id="comment-22894-info" class="comment-info">

@@ -66,7 +66,7 @@ osqa_accepted = false
 <div id="post-19555-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also check out <a href="https://help.openstreetmap.org/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">this question</a>.</p>
+<p>Also check out <a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">this question</a>.</p>
 </div>
 <div id="comment-19555-info" class="comment-info">
 <span class="comment-age">(03 Feb '13, 18:24)</span> <span class="comment-user userinfo">ocky7</span>

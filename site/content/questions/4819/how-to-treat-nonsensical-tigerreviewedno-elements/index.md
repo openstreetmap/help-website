@@ -125,7 +125,7 @@ tiger:reviewed=no<br />
 <li>Is the satellite imagery up to date? Our reference is what actually exists on the ground, not sat imagery.</li>
 </ul>
 <p>If you have verified that the way does not exist, I see no problem with deleting it.</p>
-<p>BTW: The <a href="http://wiki.openstreetmap.org/wiki/Tiger#Status">TIGER data</a> is known to be of problematic quality sometimes, so it's not quite unconceivable for it to be wrong.</p>
+<p>BTW: The <a href="https://wiki.openstreetmap.org/wiki/Tiger#Status">TIGER data</a> is known to be of problematic quality sometimes, so it's not quite unconceivable for it to be wrong.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -145,8 +145,8 @@ tiger:reviewed=no<br />
 &#10;</div>
 <div class="comment-text">
 <p>Thank you for the reminder regarding on-the-ground. I appreciate that, and forgot to mention that I was mapping in this area because I have been mountain biking there.</p>
-<p>And thanks also for your link to: <a href="http://wiki.openstreetmap.org/wiki/Tiger#Status">http://wiki.openstreetmap.org/wiki/Tiger#Status</a> It helped me.</p>
-<p>I also found: <a href="http://wiki.openstreetmap.org/wiki/TIGER_fixup">http://wiki.openstreetmap.org/wiki/TIGER_fixup</a> and <a href="http://help.openstreetmap.org/questions/4478/tiger-review">http://help.openstreetmap.org/questions/4478/tiger-review</a> which helped me too.</p>
+<p>And thanks also for your link to: <a href="https://wiki.openstreetmap.org/wiki/Tiger#Status">https://wiki.openstreetmap.org/wiki/Tiger#Status</a> It helped me.</p>
+<p>I also found: <a href="https://wiki.openstreetmap.org/wiki/TIGER_fixup">https://wiki.openstreetmap.org/wiki/TIGER_fixup</a> and <a href="/questions/4478/tiger-review">https://help.openstreetmap.org/questions/4478/tiger-review</a> which helped me too.</p>
 <p>Thanks again.</p>
 </div>
 <div id="comment-4834-info" class="comment-info">

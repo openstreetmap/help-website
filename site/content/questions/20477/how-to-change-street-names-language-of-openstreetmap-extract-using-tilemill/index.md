@@ -160,9 +160,9 @@ One Answer:
 <div class="answer-body">
 <p><a href="http://mapbox.com/tilemill/docs/guides/osm-bright-mac-quickstart/">This page</a> refers to "yourfile.osm.pbf". That contains exactly the same data as a "yourfile.osm" file, but it's compressed.<br />
 </p>
-<p>You can convert a .pbf file to a .osm file using <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>, but since the .osm file takes much more disk space than a .pbf, you'll need to keep an eye on disk space. Presumably on a Mac you'll be string a few commands together with pipe characters to achieve what you want.</p>
+<p>You can convert a .pbf file to a .osm file using <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a>, but since the .osm file takes much more disk space than a .pbf, you'll need to keep an eye on disk space. Presumably on a Mac you'll be string a few commands together with pipe characters to achieve what you want.</p>
 <p>Once you've got your transliterated .osm, .osm.bz2 or .osm.pbf file, you should be able to feed that into TileMill.</p>
-<p>If you want a bit more information on the PBF format itself, have a look at the links from <a href="http://wiki.openstreetmap.org/wiki/Pbf">this wiki page</a>.</p>
+<p>If you want a bit more information on the PBF format itself, have a look at the links from <a href="https://wiki.openstreetmap.org/wiki/Pbf">this wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

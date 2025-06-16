@@ -112,12 +112,12 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the first question, regarding making geographically bound queries about specific attributes, you should look at <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>, which allows you to ask for specific tags within a bounding box.</p>
+<p>For the first question, regarding making geographically bound queries about specific attributes, you should look at <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>, which allows you to ask for specific tags within a bounding box.</p>
 <p>For the second part of your question:</p>
 <blockquote>
 <p>I want to know if it's possible to download this information with the whole information and to use it for my commercial project?</p>
 </blockquote>
-<p>I don't know what "this information with the whole information" means, but we have lots of documentation on the Wiki regarding how to use OSM data (attribution, and requirements for derived data). The best place to start is probably the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#Using">Legal FAQ</a>.</p>
+<p>I don't know what "this information with the whole information" means, but we have lots of documentation on the Wiki regarding how to use OSM data (attribution, and requirements for derived data). The best place to start is probably the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#Using">Legal FAQ</a>.</p>
 <p>The basic answer is that OSM data is currently available under the terms of the Creative Commons CC-BY-SA license, and that means if you're using it with some other dataset, the entire dataset/map must be distributed under the terms of the CC-BY-SA license.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -144,7 +144,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Instead of the old XAPI one should use the new <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> which is more flexible and less broken.</p>
+<p>Instead of the old XAPI one should use the new <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> which is more flexible and less broken.</p>
 </div>
 <div id="comment-7069-info" class="comment-info">
 <span class="comment-age">(13 Aug '11, 19:33)</span> <span class="comment-user userinfo">scai ♦</span>

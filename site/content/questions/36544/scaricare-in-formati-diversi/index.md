@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Trovi informazioni qui <a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a></p>
+<p>Trovi informazioni qui <a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

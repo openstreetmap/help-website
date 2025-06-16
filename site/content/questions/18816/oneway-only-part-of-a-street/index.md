@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, this is possible. You have to <em>split</em> the street and apply the oneway tag to the appropriate part. Splitting ways is perfectly normal and has to be done every time when different parts of a way have different properties.</p>
-<p>With Potlatch you first insert a new node (<em>shift-click</em>) at the position you want to split the way, then select this node and press <em>x</em> or click on the scissor symbol. Afterwards you can either mark it as oneway from the Restrictions tab or add the <a href="http://wiki.openstreetmap.org/wiki/Key:oneway">oneway=yes</a> tag.</p>
+<p>With Potlatch you first insert a new node (<em>shift-click</em>) at the position you want to split the way, then select this node and press <em>x</em> or click on the scissor symbol. Afterwards you can either mark it as oneway from the Restrictions tab or add the <a href="https://wiki.openstreetmap.org/wiki/Key:oneway">oneway=yes</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

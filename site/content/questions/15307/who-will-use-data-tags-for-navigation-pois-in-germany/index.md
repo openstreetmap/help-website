@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Not sure exactly what device you have, or exactly what you're asking, but for what it's worth Navigon has come up <a href="http://help.openstreetmap.org/questions/14134/osm-on-navigon">here</a> before. There's a wiki page for both <a href="http://wiki.openstreetmap.org/wiki/Navigon">hardware</a> and <a href="http://wiki.openstreetmap.org/wiki/Navigon_Urban">software</a>, so a little more information in the question would help. Or perhaps you're referring to <a href="http://lists.openstreetmap.org/pipermail/talk/2011-June/058704.html">this</a>?</p>
+<p>Not sure exactly what device you have, or exactly what you're asking, but for what it's worth Navigon has come up <a href="/questions/14134/osm-on-navigon">here</a> before. There's a wiki page for both <a href="https://wiki.openstreetmap.org/wiki/Navigon">hardware</a> and <a href="https://wiki.openstreetmap.org/wiki/Navigon_Urban">software</a>, so a little more information in the question would help. Or perhaps you're referring to <a href="http://lists.openstreetmap.org/pipermail/talk/2011-June/058704.html">this</a>?</p>
 </div>
 <div id="comment-15309-info" class="comment-info">
 <span class="comment-age">(20 Aug '12, 21:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

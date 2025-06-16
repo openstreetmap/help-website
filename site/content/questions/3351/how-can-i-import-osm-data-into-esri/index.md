@@ -112,7 +112,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can download OSM data in shapefile format, which you can load into ESRI. Cloudmade provide these downloads for the states of the USA, see <a href="http://downloads.cloudmade.com/usa#downloads_breadcrumbs">Cloudmade Downloads</a>.</p>
-<p>Or you can donwload data in OSM XML format, then convert it to shapefiles. There is some software to do this on the wiki page on <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a>.</p>
+<p>Or you can donwload data in OSM XML format, then convert it to shapefiles. There is some software to do this on the wiki page on <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ osqa_accepted = false
 <p>I think that you can use QGis for converting the data.</p>
 <p>So you have to:</p>
 <ul>
-<li>Import the OSM data in a postgis database (using <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>)</li>
+<li>Import the OSM data in a postgis database (using <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>)</li>
 <li>load wanted data in qgis ("add a postgis layer" feature)</li>
 <li>export the layer to your desired format</li>
 </ul>

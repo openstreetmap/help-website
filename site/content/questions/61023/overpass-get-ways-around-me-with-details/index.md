@@ -160,7 +160,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To just retrieve highways, add a rule for that. In the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">QL</a>, <code>way[highway][highway!~"path|track|cycleway|footway"];</code>. The first rule includes all highways, the second rule excludes some of them.</p>
+<p>To just retrieve highways, add a rule for that. In the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">QL</a>, <code>way[highway][highway!~"path|track|cycleway|footway"];</code>. The first rule includes all highways, the second rule excludes some of them.</p>
 <p>As far as the details, Overpass API is returning all of the tags associated with a given way. Nominatim adds a calculated address, something Overpass API can't do.</p>
 </div>
 <div class="answer-controls post-controls">

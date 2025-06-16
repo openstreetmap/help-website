@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi everyone, I'm working in a project, where will be able to have a real-time pollution map with coordenates and we want to use this information to make an "less polluted route" routing tool.</p>
 <p>Our idea is to provide alternative routes to people that have problems with pollution, giving them a Optimized route (routing) but including the pollution in the algorithm.</p>
 <p>Is there any Routing service or API that gives you the posibility of putting other information to make the routing? Or do you know some of the routers that are easy to code or have useful API's that may help me?</p>
-<p>I have been looking in the web pages of the projects in the <a href="http://wiki.openstreetmap.org/wiki/Routing" title="Routing">Routing</a> page and <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online Routers</a> but I have not found what I'm looking for.</p>
+<p>I have been looking in the web pages of the projects in the <a href="https://wiki.openstreetmap.org/wiki/Routing" title="Routing">Routing</a> page and <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">Online Routers</a> but I have not found what I'm looking for.</p>
 <p>I will really apreciate your help, and exuse me for my poor English. Thanks a lot!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -101,7 +101,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11209/atreyuberlin">@atreyuberlin</a> You should open a new question if you are having problems. Otherwise your message will get lost here.</p>
+<p><a href="https://help.openstreetmap.org/users/11209/atreyuberlin">@atreyuberlin</a> You should open a new question if you are having problems. Otherwise your message will get lost here.</p>
 </div>
 <div id="comment-44044-info" class="comment-info">
 <span class="comment-age">(08 Jul '15, 16:29)</span> <span class="comment-user userinfo">rorym</span>
@@ -155,7 +155,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Long-time OSM contributor <a href="http://www.openstreetmap.org/user/robert/">robert/ris</a> was part of a team which did <a href="http://www.openstreetmap.org/user/robert/diary/20054">exactly this</a> using the <a href="http://project-osrm.org/">OSRM</a> routing package as part of a <a href="http://2013.foss4g.org/geohack/challenges/cleaner-air/">tech challenge</a> at the FOSS4G in September 2013.</p>
+<p>Long-time OSM contributor <a href="https://www.openstreetmap.org/user/robert/">robert/ris</a> was part of a team which did <a href="https://www.openstreetmap.org/user/robert/diary/20054">exactly this</a> using the <a href="http://project-osrm.org/">OSRM</a> routing package as part of a <a href="http://2013.foss4g.org/geohack/challenges/cleaner-air/">tech challenge</a> at the FOSS4G in September 2013.</p>
 <p>I would suggest you also look at Tom Chance's blog regarding using <a href="http://tom.acrewoods.net/2013/09/12/mapping-dirty-london/">pollution data</a> in London</p>
 </div>
 <div class="answer-controls post-controls">
@@ -214,10 +214,10 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>Welcome to OSM :)</p>
 <p>No, there is AFAIK currently <strong>no online service</strong> that allows you to specify custom weights for the routing graph.</p>
-<p>IMHO the only option is to make use of an <a href="http://wiki.openstreetmap.org/wiki/Routing#Desktop_and_server_software">existing offline router</a> and alter it's codebase for calculating the weights by using your custom datasource. You migtht start playing around with having a look at <a href="http://wiki.openstreetmap.org/wiki/Osm2pgrouting">osm2pgrouting</a> and also the <a href="http://code.google.com/p/trafficmining/">trafficmining</a> framework might be a good choice for the beginning.<br />
-For production to release your results to the public, you might pick <a href="http://wiki.openstreetmap.org/wiki/Routino">Routino</a>, <a href="http://wiki.openstreetmap.org/wiki/MoNav">MoNav</a> or maybe <a href="http://wiki.openstreetmap.org/wiki/Navit">Navit</a>. I'm not sure but I guess that contraction hierarchies approach like at OSRM and Graphhopper might be a bad choice for dynamical data.</p>
-<p>Please see also <a href="http://wiki.openstreetmap.org/wiki/Research">existing research articles</a> about (eco) routing and TMC, that might give you more ideas.</p>
-<p>Last but not least, you might need to take care about <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">legal aspects</a> and of course the community would be also very happy to benefit from your results :)</p>
+<p>IMHO the only option is to make use of an <a href="https://wiki.openstreetmap.org/wiki/Routing#Desktop_and_server_software">existing offline router</a> and alter it's codebase for calculating the weights by using your custom datasource. You migtht start playing around with having a look at <a href="https://wiki.openstreetmap.org/wiki/Osm2pgrouting">osm2pgrouting</a> and also the <a href="http://code.google.com/p/trafficmining/">trafficmining</a> framework might be a good choice for the beginning.<br />
+For production to release your results to the public, you might pick <a href="https://wiki.openstreetmap.org/wiki/Routino">Routino</a>, <a href="https://wiki.openstreetmap.org/wiki/MoNav">MoNav</a> or maybe <a href="https://wiki.openstreetmap.org/wiki/Navit">Navit</a>. I'm not sure but I guess that contraction hierarchies approach like at OSRM and Graphhopper might be a bad choice for dynamical data.</p>
+<p>Please see also <a href="https://wiki.openstreetmap.org/wiki/Research">existing research articles</a> about (eco) routing and TMC, that might give you more ideas.</p>
+<p>Last but not least, you might need to take care about <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">legal aspects</a> and of course the community would be also very happy to benefit from your results :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

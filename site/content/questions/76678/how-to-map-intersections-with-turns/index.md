@@ -49,8 +49,8 @@ osqa_accepted = false
 <p>width = 15'</p>
 <p>Or should I specify which lane has which width? In general, for roads and streets with lane tags on the way, does width specify for the entire width of the way? And what else should I add/edit to make the bottom road leading up to the intersection complete?</p>
 <p>Thank you!</p>
-<p><img src="https://help.openstreetmap.org/upfiles/MappingIntersections2.JPG" alt="Aerial of an intersection without overlaying OSM data" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Mappingintersections_cEZHVHN.JPG" alt="Aerial of intersection with overlaying OSM data" /></p>
+<p><img src="/upfiles/MappingIntersections2.JPG" alt="Aerial of an intersection without overlaying OSM data" /></p>
+<p><img src="/upfiles/Mappingintersections_cEZHVHN.JPG" alt="Aerial of intersection with overlaying OSM data" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-intersections" rel="tag" title="see questions tagged &#39;intersections&#39;">intersections</span> <span class="post-tag tag-link-lanes" rel="tag" title="see questions tagged &#39;lanes&#39;">lanes</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span> <span class="post-tag tag-link-turnlanes" rel="tag" title="see questions tagged &#39;turnlanes&#39;">turnlanes</span>

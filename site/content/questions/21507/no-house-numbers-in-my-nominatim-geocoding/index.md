@@ -128,7 +128,7 @@ This answer is marked "community wiki".
 <div id="post-21529-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If i read <a href="http://wiki.openstreetmap.org/wiki/TIGER">http://wiki.openstreetmap.org/wiki/TIGER</a> correctly, TIGER data has been imported into OSM in 2005. That means it would be part of the Arizona data that I downloaded and indexed. Or am I missing something?</p>
+<p>If i read <a href="https://wiki.openstreetmap.org/wiki/TIGER">https://wiki.openstreetmap.org/wiki/TIGER</a> correctly, TIGER data has been imported into OSM in 2005. That means it would be part of the Arizona data that I downloaded and indexed. Or am I missing something?</p>
 </div>
 <div id="comment-21529-info" class="comment-info">
 <span class="comment-age">(14 Apr '13, 22:09)</span> <span class="comment-user userinfo">konstantin</span>
@@ -140,7 +140,7 @@ This answer is marked "community wiki".
 2
 </div>
 <div class="comment-text">
-<p>You need the TIGER address data (as opposed to street data which is the one that has been imported into OSM). The process to add this data to your database is described in <a href="https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance">this question</a>.</p>
+<p>You need the TIGER address data (as opposed to street data which is the one that has been imported into OSM). The process to add this data to your database is described in <a href="/questions/12150/missing-house-numbers-in-local-nominatim-instance">this question</a>.</p>
 </div>
 <div id="comment-21574-info" class="comment-info">
 <span class="comment-age">(16 Apr '13, 08:26)</span> <span class="comment-user userinfo">lonvia</span>

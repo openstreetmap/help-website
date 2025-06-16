@@ -183,7 +183,7 @@ One Answer:
 <div id="post-56004-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(re language vs country code) <a href="http://www.openstreetmap.org/node/267762522">http://www.openstreetmap.org/node/267762522</a> shows one way to do it when the same language (but different locales) have different names.</p>
+<p>(re language vs country code) <a href="https://www.openstreetmap.org/node/267762522">https://www.openstreetmap.org/node/267762522</a> shows one way to do it when the same language (but different locales) have different names.</p>
 </div>
 <div id="comment-56004-info" class="comment-info">
 <span class="comment-age">(03 May '17, 08:40)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

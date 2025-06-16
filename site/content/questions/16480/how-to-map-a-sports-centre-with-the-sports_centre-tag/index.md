@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to map a Sports Centre with the Sports_Centre tag"
-description = '''I&#x27;ve recently created a Sports_Centra area but am struggeling to add al the sporting venues inside of the building. The wiki page for Sports_Centre does not say how to map multiple sports to an area:   http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre  I would like to add the sports Swi...'''
+description = '''I&#x27;ve recently created a Sports_Centra area but am struggeling to add al the sporting venues inside of the building. The wiki page for Sports_Centre does not say how to map multiple sports to an area:   https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre  I would like to add the sports Swi...'''
 date = "2012-09-26T11:55:00Z"
 lastmod = "2012-09-26T12:20:00Z"
 weight = 16480
@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I've recently created a Sports_Centra area but am struggeling to add al the sporting venues inside of the building.</p>
 <p>The wiki page for Sports_Centre does not say how to map multiple sports to an area:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre</a></li>
 </ul>
 <p>I would like to add the sports Swimming and Fitness to the sports centre. The Sports Centre also contains a statium for big events. How should i map this? Is there a correct example available?</p>
 <p>Thank you in advance.</p>
@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For mapping individual sports inside the <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre">sports centre</a> you just have to create individual objects (nodes, areas or ways) and add the corresponding <a href="http://wiki.openstreetmap.org/wiki/Key:leisure">leisure</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:sport">sport</a> tag. For example the stadium should be tagged with <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dstadium">leisure=stadium</a> and maybe <a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dmulti">sport=multi</a>.</p>
-<p>You can see an example <a href="http://www.openstreetmap.org/?lat=50.6766&amp;lon=11.27468&amp;zoom=17&amp;layers=M">here</a>.</p>
+<p>For mapping individual sports inside the <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dsports_centre">sports centre</a> you just have to create individual objects (nodes, areas or ways) and add the corresponding <a href="https://wiki.openstreetmap.org/wiki/Key:leisure">leisure</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:sport">sport</a> tag. For example the stadium should be tagged with <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dstadium">leisure=stadium</a> and maybe <a href="https://wiki.openstreetmap.org/wiki/Tag:sport%3Dmulti">sport=multi</a>.</p>
+<p>You can see an example <a href="https://www.openstreetmap.org/?lat=50.6766&amp;lon=11.27468&amp;zoom=17&amp;layers=M">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

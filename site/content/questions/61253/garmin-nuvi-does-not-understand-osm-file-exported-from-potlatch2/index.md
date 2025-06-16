@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have the same question as <a href="https://help.openstreetmap.org/questions/30178/how-do-i-openview-the-map-which-is-in-osm-file-format-exported-area">https://help.openstreetmap.org/questions/30178/how-do-i-openview-the-map-which-is-in-osm-file-format-exported-area</a> : I've converted my exported file .osm from potlatch2 to .img format and copy it to map folder of my garmin gps, on basecamp i can see the changes but not on the gps. file was converted using mkgmap-r4000. Thanks for helping</p>
+<p>I have the same question as <a href="/questions/30178/how-do-i-openview-the-map-which-is-in-osm-file-format-exported-area">https://help.openstreetmap.org/questions/30178/how-do-i-openview-the-map-which-is-in-osm-file-format-exported-area</a> : I've converted my exported file .osm from potlatch2 to .img format and copy it to map folder of my garmin gps, on basecamp i can see the changes but not on the gps. file was converted using mkgmap-r4000. Thanks for helping</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span>

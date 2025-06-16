@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>While importing the planet files into Nominatim, I encounter the following error below. The import command used is <code>./setup.php --osm-file us-northeast.osm.pbf --all</code></p>
-<p>I have been following the Nominatim installation instructions <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>.</p>
+<p>I have been following the Nominatim installation instructions <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>.</p>
 <p><strong>Problem:</strong></p>
 <pre><code>Create DB
 Setup DB

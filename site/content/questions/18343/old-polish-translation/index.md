@@ -138,8 +138,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to add place name translations to the map, I'd start by reading the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginner's guide</a>. Not everything there will apply to you, but some will be relevant.</p>
-<p>If you're looking to help with the translation of other things (editors, software, web site, etc.) then I'd start <a href="http://wiki.openstreetmap.org/wiki/Translation">here</a>.</p>
+<p>If you want to add place name translations to the map, I'd start by reading the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginner's guide</a>. Not everything there will apply to you, but some will be relevant.</p>
+<p>If you're looking to help with the translation of other things (editors, software, web site, etc.) then I'd start <a href="https://wiki.openstreetmap.org/wiki/Translation">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Also take a look at the <a href="http://wiki.openstreetmap.org/wiki/Names#Localization">localization paragraph</a> of the <a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a> tag.</p>
+<p>Also take a look at the <a href="https://wiki.openstreetmap.org/wiki/Names#Localization">localization paragraph</a> of the <a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a> tag.</p>
 </div>
 <div id="comment-18393-info" class="comment-info">
 <span class="comment-age">(12 Dec '12, 07:44)</span> <span class="comment-user userinfo">scai ♦</span>

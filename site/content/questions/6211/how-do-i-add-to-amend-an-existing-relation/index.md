@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tags can be added to relations in the same way as they are added to nodes and ways. Suggestions as to what tags to use are found on: <a href="http://wiki.openstreetmap.org/wiki/Walking_Routes#Relations">http://wiki.openstreetmap.org/wiki/Walking_Routes#Relations</a></p>
-<p>You may also need to update an entry on the page that lists all the UK long distance paths and links to their relations. <a href="http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">http://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths</a></p>
+<p>Tags can be added to relations in the same way as they are added to nodes and ways. Suggestions as to what tags to use are found on: <a href="https://wiki.openstreetmap.org/wiki/Walking_Routes#Relations">https://wiki.openstreetmap.org/wiki/Walking_Routes#Relations</a></p>
+<p>You may also need to update an entry on the page that lists all the UK long distance paths and links to their relations. <a href="https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths">https://wiki.openstreetmap.org/wiki/WikiProject_United_Kingdom_Long_Distance_Paths</a></p>
 <p>If you tag your route with network=rwn (or lwn if local) then it will be highlighted on this map: <a href="http://hiking.lonvia.de/">http://hiking.lonvia.de/</a></p>
 </div>
 <div class="answer-controls post-controls">

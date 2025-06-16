@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
+<p>Have a look in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
 <p>Sometimes there are some problems with the servers that deliver the map data to your application that demands for the data.</p>
 <p>So try again some hours later.</p>
 <p>And we can give you much better help if you tell us first, from what program or web service are you requesting map data? (because there are many different) And what Operating system with what kind browser are you using if you request OSM data via a web service.</p>

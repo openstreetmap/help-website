@@ -266,7 +266,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Sorry, the missing brackets are a copy/paste error, the query looks like</p>
-<p><img src="https://help.openstreetmap.org/upfiles/7E74E290-4A0C-43B9-9D07-847A64F16020.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/7E74E290-4A0C-43B9-9D07-847A64F16020.jpeg" alt="alt text" /></p>
 <p>However, even with a higher timeout rate the umap link does not work correctly, but the import with geojson works. I prefer the link solution because that would permit an automatic update in a vivid restaurant scene.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -338,7 +338,7 @@ osqa_accepted = false
 <p>You can check in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor">network console</a> of your browser what the response of the server is (timeout, empty request, etc).</p>
 <p>Also, you should uncheck "Dynamic", and check "proxy" and "one day" because this kind of query is not easy on the server, and might get you blacklisted. You can change the language of umap in the url of the map, put en where you should find de.</p>
 <p>Hope this helps.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/test_overpass.png" alt="test settings" /></p>
+<p><img src="/upfiles/test_overpass.png" alt="test settings" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

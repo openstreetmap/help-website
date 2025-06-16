@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a Ubuntu 11.10 VM running the <a href="http://wiki.openstreetmap.org/wiki/Ubuntu_tile_server">Ubuntu Tile Server</a> as described on the wiki. I've imported the Geofabrik Oxfordshire extract and the usual OSM data is rendering well. I cannot, however, get any contour lines to display.</p>
-<p>I have followed the wiki'd instructions covering the <a href="http://wiki.openstreetmap.org/wiki/Contours#The_PostGIS_approach">PostGIS Approach</a>, using the import script provided to add the following files to my database:</p>
+<p>I have a Ubuntu 11.10 VM running the <a href="https://wiki.openstreetmap.org/wiki/Ubuntu_tile_server">Ubuntu Tile Server</a> as described on the wiki. I've imported the Geofabrik Oxfordshire extract and the usual OSM data is rendering well. I cannot, however, get any contour lines to display.</p>
+<p>I have followed the wiki'd instructions covering the <a href="https://wiki.openstreetmap.org/wiki/Contours#The_PostGIS_approach">PostGIS Approach</a>, using the import script provided to add the following files to my database:</p>
 <ul>
 <li><a href="http://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/N51E115.hgt.zip">http://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/N51E115.hgt.zip</a></li>
 <li><a href="http://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/N51E117.hgt.zip">http://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/N51E117.hgt.zip</a></li>

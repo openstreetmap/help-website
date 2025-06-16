@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Different rendering systems have different behaviour when it comes to repeating the label down the length of a road, and they <em>will</em> repeat the label on long ways (or at least all good rendering software will do this) Unfortunately you can also influence behaviour by splitting a road into separate ways, in a manner which is otherwise unnecessary. <strong>You should not do this</strong>. It's bad practice.</p>
-<p>We say "<a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>" is bad, but that applies equally to other mapping decisions regarding the arrangement of ways and nodes. That doesn't mean you shouldn't give consideration to renderers, routing systems, and other uses, when entering data. It just means you shouldn't contort things to try to trick a renderer into behaving properly.</p>
+<p>We say "<a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>" is bad, but that applies equally to other mapping decisions regarding the arrangement of ways and nodes. That doesn't mean you shouldn't give consideration to renderers, routing systems, and other uses, when entering data. It just means you shouldn't contort things to try to trick a renderer into behaving properly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,9 +171,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As Harry already has mentioned with other words, "Don't map for the renderers", and the number of labels may not depend on the number of segments in a road anyway. For example if you look at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> Osmarender tends to put one single or just a few names on a complicated road, while Mapnik puts more names one it, but both are using the same OSM database. (You switch map at the "+" in the upper right corner.)</p>
+<p>As Harry already has mentioned with other words, "Don't map for the renderers", and the number of labels may not depend on the number of segments in a road anyway. For example if you look at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> Osmarender tends to put one single or just a few names on a complicated road, while Mapnik puts more names one it, but both are using the same OSM database. (You switch map at the "+" in the upper right corner.)</p>
 <p>A valid reason for breaking one road into multiple segments is that there are different speed limits, lighting, surface etc etc along the road. Another reason may be that a part of the road is used as a border for something, and they share the same segment.</p>
-<p>There may also be other reasons to split a way into segments. See <a href="http://wiki.openstreetmap.org/wiki/FAQ#I_want_to_create_a_very_long_way_-_how_do_I_download_OSM_data_for_such_a_big_area.3F">I want to create a very long way - how do I download OSM data for such a big area?</a> in the FAQ.</p>
+<p>There may also be other reasons to split a way into segments. See <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_want_to_create_a_very_long_way_-_how_do_I_download_OSM_data_for_such_a_big_area.3F">I want to create a very long way - how do I download OSM data for such a big area?</a> in the FAQ.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

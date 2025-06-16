@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Maps for We-Travel?"
-description = '''I am looking for a map of ecuador, where can I find it? I found a good map of ecuador in http://www.openstreetmap.org/, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is there anyway to en...'''
+description = '''I am looking for a map of ecuador, where can I find it? I found a good map of ecuador in https://www.openstreetmap.org/, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is there anyway to en...'''
 date = "2011-01-19T23:56:00Z"
 lastmod = "2011-01-27T17:00:00Z"
 weight = 2310
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am looking for a map of ecuador, where can I find it? I found a good map of ecuador in <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a>, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is there anyway to enable zooming? Could someone please help me?</p>
+<p>I am looking for a map of ecuador, where can I find it? I found a good map of ecuador in <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a>, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is there anyway to enable zooming? Could someone please help me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span>
@@ -113,7 +113,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I know nothing more about We-Travel than I have read in the <a href="http://wiki.openstreetmap.org/wiki/We-Travel">We-Travel OpenStreetMap Wiki</a>.</p>
+<p>I know nothing more about We-Travel than I have read in the <a href="https://wiki.openstreetmap.org/wiki/We-Travel">We-Travel OpenStreetMap Wiki</a>.</p>
 <p>But I see that Ecuador is covered by the Colombia and Peru maps on the <a href="http://we-travel.net/DownloadServer_FREE/">We-Travel Download Server</a>.</p>
 <p>I tried to download the Colombia map, but "by coincidence" the free service was busy and they wanted my money to proceed.</p>
 <p>Instead I successfully downloaded Colombia from the second wiki link: <a href="http://vserver2125.vserver-on.de/mapdownload/index.php">Free We-Travel Downloadserver</a></p>

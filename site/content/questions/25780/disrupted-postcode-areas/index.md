@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I try to map a disrupted postcode area to an area that also matches landuse="residential". I thought I'd use the <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue/Postleitzahlen_Deutschland_2010">German approach with multipolygon</a> ...</p>
+<p>I try to map a disrupted postcode area to an area that also matches landuse="residential". I thought I'd use the <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue/Postleitzahlen_Deutschland_2010">German approach with multipolygon</a> ...</p>
 <p>The village lies in Luxemburg near the German border. I couldn't find any advice on how the Luxemburgish mapping community addresses postal_code, but Nomanitim doesn't return any result for Luxemburgish Postcodes so far, although the mappers applied postal_code to streets directly (never saw that before). So I think it should be solved differently.</p>
 <p>I try to describe it in a very simple way: suppose we have 2 postcodes A and B in village X.</p>
 <p>They are "stacked" like this, with A being the old center of the village</p>
@@ -47,7 +47,7 @@ osqa_accepted = false
  A
 B</code></pre>
 <p>BAB prefectly matches the landuse="residential" area.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/disrupted-postcode-areas.png" alt="disrupted postcode area" /></p>
+<p><img src="/upfiles/disrupted-postcode-areas.png" alt="disrupted postcode area" /></p>
 <p>Is it OK to have at the end 3 mutlipolygons sharing the common ways, all components specified as "outer"?</p>
 <ol>
 <li>village X</li>
@@ -147,7 +147,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I was almost sure that my approach must be OK, so I uploaded the data already yesterday. And Nomanitim shows exactly the result I was expecting (hoping) to see with "lenningen 5431". "5430" is the other postcode.</p>
-<p><a href="http://www.openstreetmap.org/?relation=3163883#map=16/49.6011/6.3658">http://www.openstreetmap.org/?relation=3163883#map=16/49.6011/6.3658</a></p>
+<p><a href="https://www.openstreetmap.org/?relation=3163883#map=16/49.6011/6.3658">https://www.openstreetmap.org/?relation=3163883#map=16/49.6011/6.3658</a></p>
 <p>But to which extend is this applicable? I had already to guide one border through connected buildings (left near the church). But there is apparently another building in the north of the village lying in a second row of postcode 5431 but belonging to 5430. Should I really draw an island area with role=inner for multipolygon 5431 and role=outer for multiploygon 5430. Isn't that overkill for one building?</p>
 <p>In Luxemburg you have 4 digits postcodes with round about 500 localities. You can imagine that often a postcode only covers a couple of streets. Sometimes you can barely call them areas. If you have just 2-5 streets covered by a postcode, a simple postcode relation tying these streets together would be much simpler.</p>
 <p>But I'm afraid of the many different algorithms client software have to provide to analyze all the concurrent strategies to organize hierarchical data.</p>

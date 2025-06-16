@@ -152,7 +152,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Starting in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Tiles">Tiles</a> ... there is a link to <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">Slippy_map_tilenames</a></p>
+<p>Starting in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Tiles">Tiles</a> ... there is a link to <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">Slippy_map_tilenames</a></p>
 <p>Tell us if you cannot a solution though.</p>
 </div>
 <div class="answer-controls post-controls">

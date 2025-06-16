@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How should education centres such as this <a href="http://www.kipmcgrath.co.nz/Tutoring/KipTutoringCentres/About-Us.aspx">http://www.kipmcgrath.co.nz/Tutoring/KipTutoringCentres/About-Us.aspx</a> be tagged? They sometimes have their own building but often comprise just a few rooms in a shopping complex or office block. They rarely, if ever, have grounds like a regular school. Using the tag 'amenity=school' http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool seems to afford the centres an identity somewhat different to what they really are. Can anyone suggest alternatives please? I see from taginfo that 'amenity=tutor' and 'shop=tutor' have been used on a few occasions.</p>
+<p>How should education centres such as this <a href="http://www.kipmcgrath.co.nz/Tutoring/KipTutoringCentres/About-Us.aspx">http://www.kipmcgrath.co.nz/Tutoring/KipTutoringCentres/About-Us.aspx</a> be tagged? They sometimes have their own building but often comprise just a few rooms in a shopping complex or office block. They rarely, if ever, have grounds like a regular school. Using the tag 'amenity=school' https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool seems to afford the centres an identity somewhat different to what they really are. Can anyone suggest alternatives please? I see from taginfo that 'amenity=tutor' and 'shop=tutor' have been used on a few occasions.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tutor" rel="tag" title="see questions tagged &#39;tutor&#39;">tutor</span> <span class="post-tag tag-link-education" rel="tag" title="see questions tagged &#39;education&#39;">education</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look on a similar question raised recently on the <a href="http://wiki.openstreetmap.org/wiki/MailingLists">tagging mailing list</a>:</p>
+<p>Have a look on a similar question raised recently on the <a href="https://wiki.openstreetmap.org/wiki/MailingLists">tagging mailing list</a>:</p>
 <p><a href="http://gis.19327.n5.nabble.com/School-and-training-td5776487.html">http://gis.19327.n5.nabble.com/School-and-training-td5776487.html</a></p>
 <p>The trend is to prefere a specialized tag than "amenity=school" . The "training=tutoring" suggested in the thread is a bit too vague and general. Perhaps something like "amenity=tutoring_centre" ?</p>
 <p>If you need more discussion, this help site is not appropriate (it's a question/answers tools, not a forum) and you should subscribe to the tagging@openstreetmap.org mailing list or the <a href="http://forum.openstreetmap.org/">forum</a>.</p>

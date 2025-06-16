@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To get an overview about routing solutions that are available, have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
+<p>To get an overview about routing solutions that are available, have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
 <p>There are some opensource programs that might fit your needs.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can check OsmSharp: <a href="http://wiki.openstreetmap.org/wiki/OsmSharp">http://wiki.openstreetmap.org/wiki/OsmSharp</a></p>
+<p>You can check OsmSharp: <a href="https://wiki.openstreetmap.org/wiki/OsmSharp">https://wiki.openstreetmap.org/wiki/OsmSharp</a></p>
 <p>This does exactly what you are trying to do.</p>
 </div>
 <div class="answer-controls post-controls">

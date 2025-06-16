@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Appears to be a duplicate of <a href="https://help.openstreetmap.org/questions/39636/">https://help.openstreetmap.org/questions/39636/</a></p>
+<p>Appears to be a duplicate of <a href="/questions/39636/">https://help.openstreetmap.org/questions/39636/</a></p>
 </div>
 <div id="comment-39637-info" class="comment-info">
 <span class="comment-age">(16 Dec '14, 17:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

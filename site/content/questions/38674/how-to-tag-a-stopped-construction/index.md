@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would use <a href="http://wiki.openstreetmap.org/wiki/Key:abandoned">abandoned</a> I think it does not really matter whether the building was actually used or not before being abandoned</p>
+<p>I would use <a href="https://wiki.openstreetmap.org/wiki/Key:abandoned">abandoned</a> I think it does not really matter whether the building was actually used or not before being abandoned</p>
 <p>abandoned:building=yes/house/apartments/...</p>
 </div>
 <div class="answer-controls post-controls">

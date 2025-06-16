@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Users&#x27; diaries"
-description = '''Why does &#x27;Users&#x27; Diaries&#x27; no longer appear as a heading alongside &#x27;View&#x27;, &#x27;Edit&#x27;, &#x27;History&#x27;, &#x27;Export&#x27; and &#x27;GPS Traces&#x27; at http://www.openstreetmap.org/index.html?'''
+description = '''Why does &#x27;Users&#x27; Diaries&#x27; no longer appear as a heading alongside &#x27;View&#x27;, &#x27;Edit&#x27;, &#x27;History&#x27;, &#x27;Export&#x27; and &#x27;GPS Traces&#x27; at https://www.openstreetmap.org/index.html?'''
 date = "2012-04-01T15:43:00Z"
 lastmod = "2012-04-01T17:02:00Z"
 weight = 11680
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Why does 'Users' Diaries' no longer appear as a heading alongside 'View', 'Edit', 'History', 'Export' and 'GPS Traces' at <a href="http://www.openstreetmap.org/index.html?">http://www.openstreetmap.org/index.html?</a></p>
+<p>Why does 'Users' Diaries' no longer appear as a heading alongside 'View', 'Edit', 'History', 'Export' and 'GPS Traces' at <a href="https://www.openstreetmap.org/index.html?">https://www.openstreetmap.org/index.html?</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-main" rel="tag" title="see questions tagged &#39;main&#39;">main</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-online" rel="tag" title="see questions tagged &#39;online&#39;">online</span>

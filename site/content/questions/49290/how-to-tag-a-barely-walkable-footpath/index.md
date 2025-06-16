@@ -82,7 +82,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3/andy-allan"></a><a href="http://help.openstreetmap.org/users/3/andy-allan">@Andy</a>-Allan, I always use bicycle=no for the cases when I want the navigation software not to use a specific path for routing. What is a better way?</p>
+<p><a href="https://help.openstreetmap.org/users/3/andy-allan"></a><a href="https://help.openstreetmap.org/users/3/andy-allan">@Andy</a>-Allan, I always use bicycle=no for the cases when I want the navigation software not to use a specific path for routing. What is a better way?</p>
 </div>
 <div id="comment-49302-info" class="comment-info">
 <span class="comment-age">(20 Apr '16, 18:05)</span> <span class="comment-user userinfo">Kotya</span>
@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-49303-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3410/andy">@Andy</a>-Allan, I just re-read <a href="https://wiki.openstreetmap.org/wiki/Bicycle#Bicycle_Restrictions">https://wiki.openstreetmap.org/wiki/Bicycle#Bicycle_Restrictions</a> and you seem to be very right. It says "ensure this is indicated". But I am still confused, as path allows bicycles by default in Spain, so the routing software will probably use it.</p>
+<p><a href="https://help.openstreetmap.org/users/3410/andy">@Andy</a>-Allan, I just re-read <a href="https://wiki.openstreetmap.org/wiki/Bicycle#Bicycle_Restrictions">https://wiki.openstreetmap.org/wiki/Bicycle#Bicycle_Restrictions</a> and you seem to be very right. It says "ensure this is indicated". But I am still confused, as path allows bicycles by default in Spain, so the routing software will probably use it.</p>
 </div>
 <div id="comment-49303-info" class="comment-info">
 <span class="comment-age">(20 Apr '16, 18:09)</span> <span class="comment-user userinfo">Kotya</span>

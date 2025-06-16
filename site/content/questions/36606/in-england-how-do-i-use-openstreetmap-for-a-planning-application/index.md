@@ -206,7 +206,7 @@ osqa_accepted = true
 <p>There is no legal requirement that the map must be Ordnance Survey. Nor is there a requirement that the map has to have exact kerb lines etc. <a href="https://ecab.planningportal.co.uk/uploads/1app/maps_plans_and_planning_apps.pdf">See this helpful guide</a>, which in turn links to a page on gov.uk with links to the legislation. If planning officers tell you only OS is acceptable, they are trying it on. Ask for them to point to the piece of legislation that says it must be. They won't find it.</p>
 <p>You'll need to make sure that all buildings are present and correct, that road centrelines are present and properly labelled, that the map is output at the required scales, and that the site is outlined in red as required. I used an OSM PDF basemap and then put the relevant paraphernalia around the edge in Illustrator, but there are doubtless many other tools you could use.</p>
 <p>Here's one of the maps I produced and used successfully.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-09-02_at_11.12.49.png" alt="successful planning application with OSM" /></p>
+<p><img src="/upfiles/Screenshot_2020-09-02_at_11.12.49.png" alt="successful planning application with OSM" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -276,7 +276,7 @@ osqa_accepted = true
 <div id="post-36630-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... or have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">http://wiki.openstreetmap.org/wiki/OSM_on_Paper</a> or <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a></p>
+<p>... or have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">https://wiki.openstreetmap.org/wiki/OSM_on_Paper</a> or <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a></p>
 <p>also do a search on this FAQ site for the keyword "print"</p>
 </div>
 <div id="comment-36630-info" class="comment-info">

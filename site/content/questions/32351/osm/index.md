@@ -68,7 +68,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Which (with a lot of help from Google) translates to English as something like:</p>
-<p>I'm going to map an area in the country, but there are some localities without detailed imagery - what can I do? GPS coordinates <a href="http://www.openstreetmap.org/#map=12/65.0540/53.9048">65.05403; 53.90484</a> (or perhaps <a href="http://www.openstreetmap.org/#map=9/53.9048/65.0540">here</a>) instead. There's a detailed imagery available on Yandex maps - I'd like to use that? I am I have no idea how to do it, and if it's possible. Waiting for help. Thank you all!</p>
+<p>I'm going to map an area in the country, but there are some localities without detailed imagery - what can I do? GPS coordinates <a href="https://www.openstreetmap.org/#map=12/65.0540/53.9048">65.05403; 53.90484</a> (or perhaps <a href="https://www.openstreetmap.org/#map=9/53.9048/65.0540">here</a>) instead. There's a detailed imagery available on Yandex maps - I'd like to use that? I am I have no idea how to do it, and if it's possible. Waiting for help. Thank you all!</p>
 </div>
 <div id="comment-32690-info" class="comment-info">
 <span class="comment-age">(27 Apr '14, 14:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -122,7 +122,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/RU:Legal_FAQ#.D0.9C.D0.BE.D0.B3.D1.83_.D0.BB.D0.B8_.D1.8F_.D0.BA.D0.BE.D0.BF.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D1.82.D1.8C_.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D0.B5_.D0.B8.D0.B7_Google_Maps.2F.D0.AF.D0.BD.D0.B4.D0.B5.D0.BA.D1.81..D0.9A.D0.B0.D1.80.D1.82.2F.D0.9A.D0.B0.D1.80.D1.82.40Mail.Ru.2F....3F">Правовые Вопросы и Ответы</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/RU:Legal_FAQ#.D0.9C.D0.BE.D0.B3.D1.83_.D0.BB.D0.B8_.D1.8F_.D0.BA.D0.BE.D0.BF.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D1.82.D1.8C_.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D0.B5_.D0.B8.D0.B7_Google_Maps.2F.D0.AF.D0.BD.D0.B4.D0.B5.D0.BA.D1.81..D0.9A.D0.B0.D1.80.D1.82.2F.D0.9A.D0.B0.D1.80.D1.82.40Mail.Ru.2F....3F">Правовые Вопросы и Ответы</a></p>
 <p>(RU:Legal FAQ)</p>
 </div>
 <div class="answer-controls post-controls">

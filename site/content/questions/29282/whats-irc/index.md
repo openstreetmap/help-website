@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/IRC">Internet Relay Chat</a> is one of the many different "<a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a>" methods that OSM has. The <a href="http://wiki.openstreetmap.org/wiki/IRC">wiki page</a> has lots more details, but briefly there are a number of different channels, including ones for different languages, and the main #osm one. If your operating system doesn't have an IRC client built in, you can use a <a href="https://addons.mozilla.org/en-US/firefox/addon/chatzilla/">browser add-in</a> or the <a href="http://irc.openstreetmap.org/">web client</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/IRC">Internet Relay Chat</a> is one of the many different "<a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a>" methods that OSM has. The <a href="https://wiki.openstreetmap.org/wiki/IRC">wiki page</a> has lots more details, but briefly there are a number of different channels, including ones for different languages, and the main #osm one. If your operating system doesn't have an IRC client built in, you can use a <a href="https://addons.mozilla.org/en-US/firefox/addon/chatzilla/">browser add-in</a> or the <a href="http://irc.openstreetmap.org/">web client</a>.</p>
 <p>If you have a question to ask, just go to one of the channels and ask away. People might be busy or away from their keyboards, so it might take a few minutes for an answer to appear, so make sure that you stay around a while to hear it.</p>
 </div>
 <div class="answer-controls post-controls">

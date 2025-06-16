@@ -92,7 +92,7 @@ osqa_accepted = false
 <div id="post-48069-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Not the answer but here is a work around <a href="http://www.openstreetmap.org/user/utack/diary/37915#comments">http://www.openstreetmap.org/user/utack/diary/37915#comments</a> read both of my comments</p>
+<p>Not the answer but here is a work around <a href="https://www.openstreetmap.org/user/utack/diary/37915#comments">https://www.openstreetmap.org/user/utack/diary/37915#comments</a> read both of my comments</p>
 </div>
 <div id="comment-48069-info" class="comment-info">
 <span class="comment-age">(12 Feb '16, 10:25)</span> <span class="comment-user userinfo">andy mackey</span>

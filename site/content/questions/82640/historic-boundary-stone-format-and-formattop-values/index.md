@@ -217,7 +217,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20211121-180534_NsQ4Oer.png" alt="yes I needed to scroll down because this is what I see" /></p>
+<p><img src="/upfiles/Screenshot_20211121-180534_NsQ4Oer.png" alt="yes I needed to scroll down because this is what I see" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

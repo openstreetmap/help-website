@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do you mean the typical european city centre? It is a matter of personal judgement I believe, in those cases (when no landuse clearly prevails) I would map no landuse at all. In various cities I saw some people tracing a landuse=retail area around pedestrian shopping streets, even if the surrounding builings may host apartments or offices above the shops, while other cities are completely covered by landuse=residential. See also this discussion: <a href="https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas">https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas</a></p>
+<p>Do you mean the typical european city centre? It is a matter of personal judgement I believe, in those cases (when no landuse clearly prevails) I would map no landuse at all. In various cities I saw some people tracing a landuse=retail area around pedestrian shopping streets, even if the surrounding builings may host apartments or offices above the shops, while other cities are completely covered by landuse=residential. See also this discussion: <a href="/questions/23994/tagging-landuse-in-downtown-areas">https://help.openstreetmap.org/questions/23994/tagging-landuse-in-downtown-areas</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

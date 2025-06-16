@@ -114,15 +114,15 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>(To others: This may not a a complete answer, feel free to edit.)</p>
-<p>"<a href="http://www.openstreetmap.org/">Our</a>" export seems to only export the standard style (regardless of which layer is selected), right. By the way: <a href="http://www.opencyclemap.org/">http://www.opencyclemap.org/</a> is the home URL of the OpenCycleMap - but I cannot find an export option.</p>
+<p>"<a href="https://www.openstreetmap.org/">Our</a>" export seems to only export the standard style (regardless of which layer is selected), right. By the way: <a href="http://www.opencyclemap.org/">http://www.opencyclemap.org/</a> is the home URL of the OpenCycleMap - but I cannot find an export option.</p>
 <p>Btw: I guess svg would be equally good for your use in AI as a pdf with vector graphics in it.</p>
-<p>Probably <a href="https://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper">https://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper</a> helps you:</p>
+<p>Probably <a href="/questions/9043/printing-osm-maps-to-paper">https://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper</a> helps you:</p>
 <ul>
 <li><a href="http://maperitive.net/">http://maperitive.net/</a> sounds suitable.</li>
 <li>MapOSMatic claims to be able to export SVG, however I saw that it does not allow to select OpenCycleMap as style.</li>
 <li><a href="http://walking-papers.org">http://walking-papers.org</a> allows you to export OpenCycleMap as pdf - but it just contains bitmap graphics.</li>
 </ul>
-<p>Also see <a href="https://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator">https://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator</a> and <a href="https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a> (good!)</p>
+<p>Also see <a href="/questions/1455/using-map-in-adobe-illustrator">https://help.openstreetmap.org/questions/1455/using-map-in-adobe-illustrator</a> and <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a> (good!)</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -178,7 +178,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/Viking_map_Cycle_and_PDF.JPG" alt="alt text" /> Download Viking, it is opensource, It can display the cycle map, and it seems that you can print to a PDF.</p>
+<p><img src="/upfiles/Viking_map_Cycle_and_PDF.JPG" alt="alt text" /> Download Viking, it is opensource, It can display the cycle map, and it seems that you can print to a PDF.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

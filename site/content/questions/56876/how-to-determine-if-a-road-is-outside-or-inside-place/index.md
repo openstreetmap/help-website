@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to determine if a road is outside or inside place?"
-description = '''I&#x27;m interesting in estimating the best speed limit for each road in my app. Most of the roads do not have a maxspeed tag, therefore the default per-country rules should be applied: http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed A lot of these rules are supposing we know if a road i...'''
+description = '''I&#x27;m interesting in estimating the best speed limit for each road in my app. Most of the roads do not have a maxspeed tag, therefore the default per-country rules should be applied: https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed A lot of these rules are supposing we know if a road i...'''
 date = "2017-07-04T10:39:00Z"
 lastmod = "2017-07-04T10:51:00Z"
 weight = 56876
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm interesting in estimating the best speed limit for each road in my app. Most of the roads do not have a <code>maxspeed</code> tag, therefore the default per-country rules should be applied: <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed</a> A lot of these rules are supposing we know if a road is inside or outside place, which sounds to me that is inside or outside a city area.</p>
+<p>I'm interesting in estimating the best speed limit for each road in my app. Most of the roads do not have a <code>maxspeed</code> tag, therefore the default per-country rules should be applied: <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed</a> A lot of these rules are supposing we know if a road is inside or outside place, which sounds to me that is inside or outside a city area.</p>
 <p>But I can't figure out how to determine this case. On which tag could I rely to know this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

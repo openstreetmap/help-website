@@ -159,7 +159,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>It rather depends on what you want to do. The easiest way, assuming that you're using a desktop PC, is to get the area that you want to print on screen at the right scale, and then select your web browser's "print" or "print preview" function.</p>
 <p>There's also an "export" tab at the top of the main map view. You can select "Map Image" there and select the area that you want via "Manually select a different area" - left click on the map and drag to select the area. You can later change the area by dragging the corners or sides.</p>
-<p>Finally, if you want to do something more complicated, there are various third-party services available. Have a look at the answers to <a href="http://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper">this question</a>.</p>
+<p>Finally, if you want to do something more complicated, there are various third-party services available. Have a look at the answers to <a href="/questions/9043/printing-osm-maps-to-paper">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

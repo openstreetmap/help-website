@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Eh, what? OpenStreetMap is basically just data - and, contrary to Google Maps, nearly everything is possible (as long as you comply to <a href="http://www.openstreetmap.org/copyright">our license</a> but you maybe need to program it on your own or <span>pay someone</span>). Could you please describe a bit more what you want? Do you want a <span>service</span>? Program code? <a href="http://switch2osm.org/">http://switch2osm.org/</a> may help you to understand. Just edit your question (you need to be logged in).</p>
+<p>Eh, what? OpenStreetMap is basically just data - and, contrary to Google Maps, nearly everything is possible (as long as you comply to <a href="https://www.openstreetmap.org/copyright">our license</a> but you maybe need to program it on your own or <span>pay someone</span>). Could you please describe a bit more what you want? Do you want a <span>service</span>? Program code? <a href="http://switch2osm.org/">http://switch2osm.org/</a> may help you to understand. Just edit your question (you need to be logged in).</p>
 </div>
 <div id="comment-23763-info" class="comment-info">
 <span class="comment-age">(28 Jun '13, 01:56)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -119,7 +119,7 @@ One Answer:
 <div class="answer-body">
 <p>Asset tracking and map creation/display may look related but are in fact quite orthogonal to each other. Asset tracking services can (and often do) use any map to display the assets (OSM, Google, Navteq...). Displaying the assets on a map is just the tip of the asset tracking iceberg.</p>
 <p>I am not aware of a Google asset tracking service; you probably saw <em>some</em> asset tracking service that just hapened to use Google maps.</p>
-<p>There are many asset tracking services around, but listing them is offtopic for this website. See also the question <a href="https://help.openstreetmap.org/questions/19100/vehicle-tracking-system-for-10000-vehicles">vehicle-tracking-system-for-10000-vehicles</a>.</p>
+<p>There are many asset tracking services around, but listing them is offtopic for this website. See also the question <a href="/questions/19100/vehicle-tracking-system-for-10000-vehicles">vehicle-tracking-system-for-10000-vehicles</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

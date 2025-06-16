@@ -75,7 +75,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Sure. <a href="http://www.openstreetmap.org/browse/way/89793614">http://www.openstreetmap.org/browse/way/89793614</a> is the largest of the non-lakes being rendered as lakes. There are about 2000 elements that have the tag "gnis:ftype = Playa" that all also have the tag "natural - water". I collected the id of all of these elements and want to remove or edit the natural tag.</p>
+<p>Sure. <a href="https://www.openstreetmap.org/browse/way/89793614">https://www.openstreetmap.org/browse/way/89793614</a> is the largest of the non-lakes being rendered as lakes. There are about 2000 elements that have the tag "gnis:ftype = Playa" that all also have the tag "natural - water". I collected the id of all of these elements and want to remove or edit the natural tag.</p>
 </div>
 <div id="comment-5281-info" class="comment-info">
 <span class="comment-age">(18 May '11, 23:24)</span> <span class="comment-user userinfo">Ondrae</span>
@@ -243,7 +243,7 @@ osqa_accepted = false
 <div id="post-7886-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I suspect (but haven't tried) that for the gathering of objects mentioned in your last paragraph, the Overpass API ( <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> ) XAPI compatibility mode would be able to retrieve the objects in a file that you could then load in JOSM, but read that whole page first and heed the warnings about the meta-data and/or redownloading objects to get that information if you don't add the [@meta] directive (if I've read it correctly). For simpler queries you can use standard XAPI/JXAPI queries.</p>
+<p>I suspect (but haven't tried) that for the gathering of objects mentioned in your last paragraph, the Overpass API ( <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> ) XAPI compatibility mode would be able to retrieve the objects in a file that you could then load in JOSM, but read that whole page first and heed the warnings about the meta-data and/or redownloading objects to get that information if you don't add the [@meta] directive (if I've read it correctly). For simpler queries you can use standard XAPI/JXAPI queries.</p>
 </div>
 <div id="comment-7886-info" class="comment-info">
 <span class="comment-age">(15 Sep '11, 09:15)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -265,7 +265,7 @@ osqa_accepted = false
 <div id="post-7898-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For completeness, here's the wiki page for XAPI: <a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a></p>
+<p>For completeness, here's the wiki page for XAPI: <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a></p>
 <p>Personnally I find both Ian Dees' JXAPI and Mapquest's implementation of the same to be very reliable and very userful.</p>
 </div>
 <div id="comment-7898-info" class="comment-info">

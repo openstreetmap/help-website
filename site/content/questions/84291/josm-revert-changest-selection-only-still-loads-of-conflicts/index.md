@@ -214,7 +214,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check <a href="https://help.openstreetmap.org/questions/74915/how-can-i-revert-an-edit">https://help.openstreetmap.org/questions/74915/how-can-i-revert-an-edit</a> and <a href="https://community.openstreetmap.org/t/josm-want-to-review-changes-before-upload/81549/2">https://community.openstreetmap.org/t/josm-want-to-review-changes-before-upload/81549/2</a></p>
+<p>Check <a href="/questions/74915/how-can-i-revert-an-edit">https://help.openstreetmap.org/questions/74915/how-can-i-revert-an-edit</a> and <a href="https://community.openstreetmap.org/t/josm-want-to-review-changes-before-upload/81549/2">https://community.openstreetmap.org/t/josm-want-to-review-changes-before-upload/81549/2</a></p>
 <blockquote>
 <p>You should be able to select the modified objects with a search (CTRL+F) for "modifed" and upload just those objects via File&gt;Upload selection (CTRL+ALT+SHIFT+U).</p>
 </blockquote>

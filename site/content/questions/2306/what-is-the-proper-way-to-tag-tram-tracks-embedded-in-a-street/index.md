@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What is the proper way to tag tram tracks embedded in a street?"
-description = '''I&#x27;m wondering: What is the proper way to tag tram tracks embedded in a street? On http://wiki.openstreetmap.org/wiki/Tram , the Wiki says   Where tram tracks are embedded, and other traffic is allowed to use the same space, mappers usually draw a new way for the tram tracks but reuse the nodes as th...'''
+description = '''I&#x27;m wondering: What is the proper way to tag tram tracks embedded in a street? On https://wiki.openstreetmap.org/wiki/Tram , the Wiki says   Where tram tracks are embedded, and other traffic is allowed to use the same space, mappers usually draw a new way for the tram tracks but reuse the nodes as th...'''
 date = "2011-01-19T23:25:00Z"
 lastmod = "2013-11-08T13:55:00Z"
 weight = 2306
@@ -40,11 +40,11 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm wondering: What is the proper way to tag tram tracks embedded in a street?</p>
-<p>On <a href="http://wiki.openstreetmap.org/wiki/Tram"></a><a href="http://wiki.openstreetmap.org/wiki/Tram"></a><a href="http://wiki.openstreetmap.org/wiki/Tram">http://wiki.openstreetmap.org/wiki/Tram</a> , the Wiki says</p>
+<p>On <a href="https://wiki.openstreetmap.org/wiki/Tram"></a><a href="https://wiki.openstreetmap.org/wiki/Tram"></a><a href="https://wiki.openstreetmap.org/wiki/Tram">https://wiki.openstreetmap.org/wiki/Tram</a> , the Wiki says</p>
 <blockquote>
 <p>Where tram tracks are embedded, and other traffic is allowed to use the same space, mappers usually draw a new way for the tram tracks but reuse the nodes as the street where they run completely parallel. (Two similar methods that are not recommended: To draw a single way with both the highway= <em>and railway=</em> set at the same time; or to draw a the railway on top of the street, but using its own nodes.)</p>
 </blockquote>
-<p>On the other hand, <a href="http://wiki.openstreetmap.org/wiki/Tag:railway=tram"></a><a href="http://wiki.openstreetmap.org/wiki/Tag:railway=tram"></a><a href="http://wiki.openstreetmap.org/wiki/Tag:railway=tram">http://wiki.openstreetmap.org/wiki/Tag:railway=tram</a> says:</p>
+<p>On the other hand, <a href="https://wiki.openstreetmap.org/wiki/Tag:railway=tram"></a><a href="https://wiki.openstreetmap.org/wiki/Tag:railway=tram"></a><a href="https://wiki.openstreetmap.org/wiki/Tag:railway=tram">https://wiki.openstreetmap.org/wiki/Tag:railway=tram</a> says:</p>
 <blockquote>
 <p>This tag can be used for tracks which are mainly or exclusively used for trams, or where tram tracks are laid within a normal road open to all traffic, often called street running (in which case it can be used in addition to highway=*).</p>
 </blockquote>
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-27899-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Any way to later know if a street has tracks embedded in it? See: <a href="https://help.openstreetmap.org/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it">https://help.openstreetmap.org/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it</a></p>
+<p>Any way to later know if a street has tracks embedded in it? See: <a href="/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it">https://help.openstreetmap.org/questions/27898/is-there-any-way-to-know-if-a-road-has-railway-tram-tracks-embedded-in-it</a></p>
 </div>
 <div id="comment-27899-info" class="comment-info">
 <span class="comment-age">(08 Nov '13, 10:38)</span> <span class="comment-user userinfo">marcoq</span>
@@ -166,7 +166,7 @@ One Answer:
 <div id="post-27906-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sometimes the conflicts of meaning between the tags may be solved by using some more specific version of the tag. For example, there is the "oneway" (general "one way") and "oneway:&lt;vehicle_type&gt;" (specific for the vehicle type, like "bicycle", etc. as described in the wiki page for <a href="http://wiki.openstreetmap.org/wiki/Oneway">Oneway</a></p>
+<p>Sometimes the conflicts of meaning between the tags may be solved by using some more specific version of the tag. For example, there is the "oneway" (general "one way") and "oneway:&lt;vehicle_type&gt;" (specific for the vehicle type, like "bicycle", etc. as described in the wiki page for <a href="https://wiki.openstreetmap.org/wiki/Oneway">Oneway</a></p>
 </div>
 <div id="comment-27906-info" class="comment-info">
 <span class="comment-age">(08 Nov '13, 13:33)</span> <span class="comment-user userinfo">MCPicoli</span>

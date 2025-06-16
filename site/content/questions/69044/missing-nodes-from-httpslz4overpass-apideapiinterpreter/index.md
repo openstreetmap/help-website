@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to download xml data giving a coordenates from my page calling to "https://overpass-api.de/api/map?bbox=-0.678492,39.657480,-0.665617,39.667391". After this I get the map.osm file.</p>
-<p>The problem begins when I call to the page mentioned above several times in a few time (maybe 10 times in 8-10 minutes). When I do this, I get (not always) a "failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests" error in my php script. This is the map I get when it works: <img src="https://help.openstreetmap.org/upfiles/osm-ok.jpg" alt="alt text" /></p>
-<p>So, as a second option I tried to call to "https://lz4.overpass-api.de/api/interpreter?data=[bbox];(node;way;relation;);out%20bb;&amp;bbox=-0.678492,39.657480,-0.665617,39.667391" in order to avoid the error on the previous URL. The problem doing this is that the downloaded map.osm file seems to miss some nodes, so they can't be found when drawing map. This is the map I get from this URL: <img src="https://help.openstreetmap.org/upfiles/osm-wrong.jpg" alt="alt text" /></p>
+<p>The problem begins when I call to the page mentioned above several times in a few time (maybe 10 times in 8-10 minutes). When I do this, I get (not always) a "failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests" error in my php script. This is the map I get when it works: <img src="/upfiles/osm-ok.jpg" alt="alt text" /></p>
+<p>So, as a second option I tried to call to "https://lz4.overpass-api.de/api/interpreter?data=[bbox];(node;way;relation;);out%20bb;&amp;bbox=-0.678492,39.657480,-0.665617,39.667391" in order to avoid the error on the previous URL. The problem doing this is that the downloaded map.osm file seems to miss some nodes, so they can't be found when drawing map. This is the map I get from this URL: <img src="/upfiles/osm-wrong.jpg" alt="alt text" /></p>
 <p><br />
 I don't know if this is my mistake, but I compared both map.osm files, and they don't have de same data.<br />
 - Could it be an OSM problem?<br />

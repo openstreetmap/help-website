@@ -65,7 +65,7 @@ This question is marked "community wiki".
 <div id="post-86888-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Same problem as here? <a href="https://help.openstreetmap.org/questions/84833/umap-problem-in-the-response-message">https://help.openstreetmap.org/questions/84833/umap-problem-in-the-response-message</a></p>
+<p>Same problem as here? <a href="/questions/84833/umap-problem-in-the-response-message">https://help.openstreetmap.org/questions/84833/umap-problem-in-the-response-message</a></p>
 </div>
 <div id="comment-86888-info" class="comment-info">
 <span class="comment-age">(07 Mar '23, 14:45)</span> <span class="comment-user userinfo">scai ♦</span>

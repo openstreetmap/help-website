@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Pitch (Boules) on Pedestrian area not showing"
-description = '''There&#x27;s a Sports Pitch (Boules) in the middle of a Pedestrian Area &quot;Weighbridge Place&quot; http://www.openstreetmap.org/?lat=49.182119&amp;amp;lon=-2.108356&amp;amp;zoom=18&amp;amp;layers=M which isn&#x27;t showing through. Also a hedge (area=yes) nearby (I had to fix others around the edge of the Ped.Area by reducing t...'''
+description = '''There&#x27;s a Sports Pitch (Boules) in the middle of a Pedestrian Area &quot;Weighbridge Place&quot; https://www.openstreetmap.org/?lat=49.182119&amp;amp;lon=-2.108356&amp;amp;zoom=18&amp;amp;layers=M which isn&#x27;t showing through. Also a hedge (area=yes) nearby (I had to fix others around the edge of the Ped.Area by reducing t...'''
 date = "2013-03-22T13:54:00Z"
 lastmod = "2013-03-22T20:32:00Z"
 weight = 20902
@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There's a Sports Pitch (Boules) in the middle of a Pedestrian Area "Weighbridge Place"<br />
-<a href="http://www.openstreetmap.org/?lat=49.182119&amp;lon=-2.108356&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=49.182119&amp;lon=-2.108356&amp;zoom=18&amp;layers=M</a><br />
+<a href="https://www.openstreetmap.org/?lat=49.182119&amp;lon=-2.108356&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=49.182119&amp;lon=-2.108356&amp;zoom=18&amp;layers=M</a><br />
 which isn't showing through. Also a hedge (area=yes) nearby <em>(I had to fix others around the edge of the Ped.Area by reducing the size of the area so those hedges stood alone, not overlapping)</em> isn't showing either.</p>
 <p>Is there any way to make these show up on the map?</p>
 <p>Thanks</p>
@@ -184,7 +184,7 @@ which isn't showing through. Also a hedge (area=yes) nearby <em>(I had to fix ot
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have tagged the pitch only <code>leisure=pitch</code>. In order for it to be rendered in mapnik (the default OSM.org map) as far as i can see you also have to add <code>sport=boules</code>, see <a href="http://www.openstreetmap.org/browse/way/45046045">http://www.openstreetmap.org/browse/way/45046045</a> for an example.</p>
+<p>You have tagged the pitch only <code>leisure=pitch</code>. In order for it to be rendered in mapnik (the default OSM.org map) as far as i can see you also have to add <code>sport=boules</code>, see <a href="https://www.openstreetmap.org/browse/way/45046045">https://www.openstreetmap.org/browse/way/45046045</a> for an example.</p>
 <p>Also, to see other OSM objects that are tagged in a certain manner, you can use <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> as a query tool, which was very helpful for me in answering this question. Load a key-value-query, add the desired combination and then choose an area where you expect to see similar objects, and then see how they are tagged. I made a key-Value-query for leisure=pitch on the ruhr area of germany, and then clicked through some of those, and found one that said "boules" as sport.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -238,7 +238,7 @@ which isn't showing through. Also a hedge (area=yes) nearby <em>(I had to fix ot
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Dear Offthechart, take your time to read every article that’s ever been written about my edits don’t show, please. Ad <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> or just click on this link. Happy mapping. Greetz Hendrik Ps when I took a look its seems to be okay, by patient thats importent in this live.</p>
+<p>Dear Offthechart, take your time to read every article that’s ever been written about my edits don’t show, please. Ad <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> or just click on this link. Happy mapping. Greetz Hendrik Ps when I took a look its seems to be okay, by patient thats importent in this live.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

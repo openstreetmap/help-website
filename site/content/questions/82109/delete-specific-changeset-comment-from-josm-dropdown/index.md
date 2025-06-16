@@ -179,7 +179,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Hi I notice in JOSM preferences&gt;advanced preferences, if you put <em>comment</em> in the search box you will be offered several 'upload.comment' choices to edit.</p>
 <p>More info at <a href="https://josm.openstreetmap.de/wiki/Help/Concepts/Changeset#AdvancedPreferences">https://josm.openstreetmap.de/wiki/Help/Concepts/Changeset#AdvancedPreferences</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/pref.png" alt="alt text" /></p>
+<p><img src="/upfiles/pref.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

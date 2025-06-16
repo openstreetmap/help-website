@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to query for all addresses of a given street an a given city. See this example query for all addresses in the street <em>Wartburgstraße</em> and city <em>Dresden</em>:</p>
+<p>You could use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to query for all addresses of a given street an a given city. See this example query for all addresses in the street <em>Wartburgstraße</em> and city <em>Dresden</em>:</p>
 <pre><code>&lt;osm-script output=&quot;json&quot;&gt;
   &lt;union&gt;
     &lt;query type=&quot;node&quot;&gt;
@@ -190,8 +190,8 @@ osqa_accepted = false
   &lt;recurse type=&quot;down&quot;/&gt;
   &lt;print mode=&quot;skeleton&quot;/&gt;
 &lt;/osm-script&gt;</code></pre>
-<p>You can view a <a href="http://overpass-turbo.eu/s/13H">visualized result</a> using <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a>.</p>
-<p>The Overpass API supports both JSON and XML as output formats. See the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Overpass API language guide</a> for more information.</p>
+<p>You can view a <a href="http://overpass-turbo.eu/s/13H">visualized result</a> using <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a>.</p>
+<p>The Overpass API supports both JSON and XML as output formats. See the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Overpass API language guide</a> for more information.</p>
 <p>As already mentioned by MCPicoli: This result reflects only the addresses contained in OSM's database and doesn't have to be complete.</p>
 </div>
 <div class="answer-controls post-controls">

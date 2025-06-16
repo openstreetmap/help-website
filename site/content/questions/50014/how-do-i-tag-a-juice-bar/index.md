@@ -150,7 +150,7 @@ osqa_accepted = true
 <p>Thanks for your answer.</p>
 <p>However, amenity=bar is related to an "establishment that sells alcoholic drinks".</p>
 <p>So probably that amenity=cafe, related to a "generally informal place with sit-down facilities selling beverages", is more adapted. Especially in Morocco where alcohol is never available in a "café".</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe</a> <a href="http://taginfo.openstreetmap.org/search?q=cafe#values">http://taginfo.openstreetmap.org/search?q=cafe#values</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe</a> <a href="http://taginfo.openstreetmap.org/search?q=cafe#values">http://taginfo.openstreetmap.org/search?q=cafe#values</a></p>
 <p>So is "amenity=cafe" + "drink:juice=served" better?</p>
 </div>
 <div id="comment-50041-info" class="comment-info">
@@ -163,7 +163,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12387/toub"></a><a href="http://help.openstreetmap.org/users/12387/toub">@Toub</a>: yes, that sounds fine to me. Maybe add also <code>drink:coffee=no</code> to make it clear that there is no coffee available (if that is the case). Do not forget a <code>description</code> tag, then everybody (also end users) know what is meant here. If I remember correctly e.g. OsmAnd shows a <code>description</code> tag in object's details.</p>
+<p><a href="https://help.openstreetmap.org/users/12387/toub"></a><a href="https://help.openstreetmap.org/users/12387/toub">@Toub</a>: yes, that sounds fine to me. Maybe add also <code>drink:coffee=no</code> to make it clear that there is no coffee available (if that is the case). Do not forget a <code>description</code> tag, then everybody (also end users) know what is meant here. If I remember correctly e.g. OsmAnd shows a <code>description</code> tag in object's details.</p>
 </div>
 <div id="comment-50043-info" class="comment-info">
 <span class="comment-age">(06 Jun '16, 19:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -175,7 +175,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> could you please update your answer, so I can mark it as accepted.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> could you please update your answer, so I can mark it as accepted.</p>
 <p>So the recommendation is:</p>
 <ul>
 <li>"amenity=cafe"</li>
@@ -183,7 +183,7 @@ osqa_accepted = true
 <li>"coffee=no"</li>
 <li>"description=juice bar"</li>
 </ul>
-<p>Also, should we update the wiki? <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe</a></p>
+<p>Also, should we update the wiki? <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcafe</a></p>
 </div>
 <div id="comment-50465-info" class="comment-info">
 <span class="comment-age">(26 Jun '16, 15:02)</span> <span class="comment-user userinfo">Toub</span>
@@ -195,7 +195,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12387/toub">@Toub</a>: Depending on the country you are in, a bar is not a place where you get alcoholic drinks (only/mainly). Since from these countries there are only little mappers in OSM, this fact isn't widely known &amp; spread here…</p>
+<p><a href="https://help.openstreetmap.org/users/12387/toub">@Toub</a>: Depending on the country you are in, a bar is not a place where you get alcoholic drinks (only/mainly). Since from these countries there are only little mappers in OSM, this fact isn't widely known &amp; spread here…</p>
 <p>For aseerel4c26's answer I'd enhance only slightly: use <em>drink:juice=only</em>, when only juice is served.</p>
 </div>
 <div id="comment-50466-info" class="comment-info">
@@ -207,7 +207,7 @@ osqa_accepted = true
 <div id="post-50469-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/583/malenki">@malenki</a>: from where did you get the "only"? Not in use currently for this prefix, is it?</p>
+<p><a href="https://help.openstreetmap.org/users/583/malenki">@malenki</a>: from where did you get the "only"? Not in use currently for this prefix, is it?</p>
 </div>
 <div id="comment-50469-info" class="comment-info">
 <span class="comment-age">(26 Jun '16, 20:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -218,7 +218,7 @@ osqa_accepted = true
 <div id="post-50471-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: from common sense. :)<br />
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: from common sense. :)<br />
 I didn't check all possible subkeys of drink:* for all possible values. <a href="https://wiki.openstreetmap.org/wiki/Key:organic">Organic</a> e.g. knows "only" as value.</p>
 </div>
 <div id="comment-50471-info" class="comment-info">
@@ -230,7 +230,7 @@ I didn't check all possible subkeys of drink:* for all possible values. <a href=
 <div id="post-50472-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/583/malenki">@malenki</a>: I am not sure if "only" makes sense here and if it is useful to have that many values, but I remember that I have seen "only" in documentation of some tag...</p>
+<p><a href="https://help.openstreetmap.org/users/583/malenki">@malenki</a>: I am not sure if "only" makes sense here and if it is useful to have that many values, but I remember that I have seen "only" in documentation of some tag...</p>
 </div>
 <div id="comment-50472-info" class="comment-info">
 <span class="comment-age">(26 Jun '16, 22:07)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

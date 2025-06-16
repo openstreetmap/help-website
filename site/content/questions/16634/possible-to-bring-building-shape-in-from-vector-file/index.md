@@ -74,8 +74,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Firstly, perhaps the answers to <a href="https://help.openstreetmap.org/questions/7174/how-to-import-kml-files-into-openstreetmap">this previous question</a> may help?</p>
-<p>Secondly, if you've already fixed this (as <a href="https://help.openstreetmap.org/questions/16642/problems-with-way-100-184003779-building-not-shaded-options-not-selectable">this question</a> suggests) it might be worth mentioning what you did.</p>
+<p>Firstly, perhaps the answers to <a href="/questions/7174/how-to-import-kml-files-into-openstreetmap">this previous question</a> may help?</p>
+<p>Secondly, if you've already fixed this (as <a href="/questions/16642/problems-with-way-100-184003779-building-not-shaded-options-not-selectable">this question</a> suggests) it might be worth mentioning what you did.</p>
 </div>
 <div id="comment-16676-info" class="comment-info">
 <span class="comment-age">(04 Oct '12, 21:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

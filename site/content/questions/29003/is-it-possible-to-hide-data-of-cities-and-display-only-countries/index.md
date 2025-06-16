@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's only possible to do that by creating a custom map style. The text is embedded into the map images, and there's no way to remove certain features afterwards.</p>
-<p>See <a href="https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a> for more.</p>
+<p>See <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a> for more.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

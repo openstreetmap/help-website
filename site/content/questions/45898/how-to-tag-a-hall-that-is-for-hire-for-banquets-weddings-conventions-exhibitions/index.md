@@ -146,7 +146,7 @@ osqa_accepted = false
 <p>Talking about India. We have plenty of stand-alone halls that are mainly used for conducting the actual wedding ceremony (marriage) or related functions, such as engagement.</p>
 <p>But they are very rarely used for other purposes, such as exhibitions.</p>
 <p>Therefore the tag should reflect its general purpose, or at minimum the "wedding" keyword, because most Indians would be searching for this keyword.</p>
-<p>[EDIT] I checked the tag you referred to, and found a link from there to <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Events_centre">Events Centre</a>. That fits my needs exactly. I wish this proposal goes through!</p>
+<p>[EDIT] I checked the tag you referred to, and found a link from there to <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Events_centre">Events Centre</a>. That fits my needs exactly. I wish this proposal goes through!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -229,7 +229,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not 100% sure what you mean, since it varies by country. What country are in you talking about?</p>
-<p>In any case, perhaps <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dexhibition_centre"><code>amenity=exhibition_centre</code></a>? You can always look for things that are currently tagged that, and see if it matches the building(s) you are thinking about.</p>
+<p>In any case, perhaps <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dexhibition_centre"><code>amenity=exhibition_centre</code></a>? You can always look for things that are currently tagged that, and see if it matches the building(s) you are thinking about.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -249,7 +249,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>depending on the size and purpose, <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Devents_venue">amenity=events_venue</a> might be a better fit</p>
+<p>depending on the size and purpose, <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Devents_venue">amenity=events_venue</a> might be a better fit</p>
 </div>
 <div id="comment-45922-info" class="comment-info">
 <span class="comment-age">(15 Oct '15, 20:32)</span> <span class="comment-user userinfo">escada</span>

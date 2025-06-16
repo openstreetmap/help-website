@@ -182,7 +182,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>hum, in my case the X button seems hidden behind the title!</p>
 <p>I'll file my feedback as a github issue</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Clipboard03_8JA10iJ.png" alt="alt text" /></p>
+<p><img src="/upfiles/Clipboard03_8JA10iJ.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -189,7 +189,7 @@ Differently said, 'quantity' doesn't mean 'quality'.</p>
 2
 </div>
 <div class="comment-text">
-<p>In interest of full disclosure, which also reinforces Pieren's point, one of those sites is on the OSM website: <a href="http://www.openstreetmap.org/stats/data_stats.html">http://www.openstreetmap.org/stats/data_stats.html</a> I think this shows "tops" by number of nodes affected. From looking at some of the users, this appears to favor importers and those making changes to big ways/relations.</p>
+<p>In interest of full disclosure, which also reinforces Pieren's point, one of those sites is on the OSM website: <a href="https://www.openstreetmap.org/stats/data_stats.html">https://www.openstreetmap.org/stats/data_stats.html</a> I think this shows "tops" by number of nodes affected. From looking at some of the users, this appears to favor importers and those making changes to big ways/relations.</p>
 </div>
 <div id="comment-38533-info" class="comment-info">
 <span class="comment-age">(13 Nov '14, 14:42)</span> <span class="comment-user userinfo">neuhausr</span>

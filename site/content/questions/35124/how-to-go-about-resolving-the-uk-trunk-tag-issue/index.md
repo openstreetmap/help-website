@@ -181,10 +181,10 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Taking the last questions first:</p>
 <pre><code>Not knowing how I would get agreement on either of these matters, how would I go about this?</code></pre>
-<p>There'd have to be a discussion and a general acceptance among GB mappers that "We're Doing It Wrong" and need to change. The best place to start that discussion would be the talk-gb <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a> - it's the most widely used forum among mappers on this island. OSM follows geography rather than politics for the GB and IE mailing lists, so if you were proposing to change Northern Irish usage you'd want to include talk-ie too.<br />
+<p>There'd have to be a discussion and a general acceptance among GB mappers that "We're Doing It Wrong" and need to change. The best place to start that discussion would be the talk-gb <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a> - it's the most widely used forum among mappers on this island. OSM follows geography rather than politics for the GB and IE mailing lists, so if you were proposing to change Northern Irish usage you'd want to include talk-ie too.<br />
 </p>
 <pre><code>Secondly, if a one off update was agreed to be the correct approach, how could I get someone competent to do this?</code></pre>
-<p>Assuming the "discussion and general acceptance" happened, I'd ask for a volunteer at that stage. What they then did would have to follow the <a href="http://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">mechanical edit policy</a> (essentially discuss it, document it, then do it).</p>
+<p>Assuming the "discussion and general acceptance" happened, I'd ask for a volunteer at that stage. What they then did would have to follow the <a href="https://wiki.openstreetmap.org/wiki/Mechanical_Edit_Policy">mechanical edit policy</a> (essentially discuss it, document it, then do it).</p>
 <p>However, taking a step back from the "how", what you seem to be saying is "some data consumer not in the UK doesn't seem to understand how data in the UK is tagged, therefore we must change all the data in the UK". This strikes me as something that might be described as a "hard sell" to the mailing list :) . I'd expect that routers would need to regularly adapt to different data in different countries; in the USA and Australia and elsewhere a "road" might be something that in the UK and most of western Europe would never be described as that.</p>
 <p>What I suspect that you'd need to do would be to explain the problem a bit more clearly. Can you give an example of a journey where "Sensible routing is impossible" and explain why the route that is suggested is not sensible? With regard to the "there are UK specific producers of Garmin maps, they have issues" part, can you explain what these issues are - using specific examples if possible?</p>
 <p>Current UK trunk tagging is nicely verifiable on the ground, so I'd expect quite a lot of resistance to a change - you'll need to provide good arguments why a change makes sense.</p>
@@ -223,7 +223,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>As Richard has already mentioned, different country-specific defaults isn't limited to trunk roads. There's a page here that describes lots of differences:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a></p>
 </div>
 <div id="comment-35253-info" class="comment-info">
 <span class="comment-age">(27 Jul '14, 23:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -266,7 +266,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is a problem with the Garmin map producers, not with the UK map.</p>
-<p>Access defaults always need to be interpreted on a national level: see <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">the wiki</a> for a fairly comprehensive list. Bicycle and footway access on trunk roads is just one of many possible regional variations. Eliminating them all is unrealistic in the short term, and would need to be agreed across the OSM community in the long term.</p>
+<p>Access defaults always need to be interpreted on a national level: see <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">the wiki</a> for a fairly comprehensive list. Bicycle and footway access on trunk roads is just one of many possible regional variations. Eliminating them all is unrealistic in the short term, and would need to be agreed across the OSM community in the long term.</p>
 <p>It's also worth noting that the UK is not the only country where bikes are permitted on trunk roads. They are also generally permitted in the US, Hungary, Spain (though Spain isn't in the above table), and so on. A mass edit would be a sticking plaster to fix the issue in the UK while leaving the (much bigger) US unresolved.</p>
 <p>Producing country-specific bike routing isn't difficult. <a href="http://cycle.travel/map">cycle.travel</a>, for example, permits bikes on trunk roads in the UK but not in (say) Germany. One easy solution along these lines would be for the Garmin map producers to use Osmosis to change tags when preprocessing the UK extract - for example, changing <code>highway=trunk</code> to the <code>highway=trunk_uk</code> you suggest.</p>
 </div>

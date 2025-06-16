@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "how to tag a very low tech cable car"
-description = '''Where I&#x27;m travelling, it&#x27;s quite common to have pedestrian crossings over a river with low tech cable cars. Take two steel cables, make a wooden cart and hang them underneath. These are usually tagged as cable cars, like here: http://www.openstreetmap.org/way/333694395 However, since this tag is usu...'''
+description = '''Where I&#x27;m travelling, it&#x27;s quite common to have pedestrian crossings over a river with low tech cable cars. Take two steel cables, make a wooden cart and hang them underneath. These are usually tagged as cable cars, like here: https://www.openstreetmap.org/way/333694395 However, since this tag is usu...'''
 date = "2015-04-11T20:16:00Z"
 lastmod = "2015-04-15T13:16:00Z"
 weight = 42272
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Where I'm travelling, it's quite common to have pedestrian crossings over a river with low tech cable cars. Take two steel cables, make a wooden cart and hang them underneath. These are usually tagged as cable cars, like here: <a href="http://www.openstreetmap.org/way/333694395">http://www.openstreetmap.org/way/333694395</a></p>
+<p>Where I'm travelling, it's quite common to have pedestrian crossings over a river with low tech cable cars. Take two steel cables, make a wooden cart and hang them underneath. These are usually tagged as cable cars, like here: <a href="https://www.openstreetmap.org/way/333694395">https://www.openstreetmap.org/way/333694395</a></p>
 <p>However, since this tag is usually used for quite a different kind of structure (see the wiki) it might give people the wrong impression, and get rendered on low zoomlevels or a dedicated skiing map.</p>
 <p>Any suggestions for a better tag?</p>
 </div>

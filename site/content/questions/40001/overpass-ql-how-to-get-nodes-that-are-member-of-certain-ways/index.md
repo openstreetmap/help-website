@@ -126,7 +126,7 @@ way[highway~&quot;^(living_street|residential)$&quot;];
 node(w)[barrier=lift_gate];
 out meta;</code></pre>
 <p><a href="http://overpass-turbo.eu/s/6P7">http://overpass-turbo.eu/s/6P7</a></p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">documentation</a> for details.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_.28n.2C_w.2C_r.2C_bn.2C_bw.2C_br.29">documentation</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ out meta;</code></pre>
 2
 </div>
 <div class="comment-text">
-<p>meta: <a href="http://help.openstreetmap.org/users/1228/kerosin"></a><a href="http://help.openstreetmap.org/users/1228/kerosin">@kerosin</a>: I am not sure, but I think this might be suitable for a new question (e.g. "how to remove nodes from a set which are connected to two differently tagged ways"). This would help others having the same question more.</p>
+<p>meta: <a href="https://help.openstreetmap.org/users/1228/kerosin"></a><a href="https://help.openstreetmap.org/users/1228/kerosin">@kerosin</a>: I am not sure, but I think this might be suitable for a new question (e.g. "how to remove nodes from a set which are connected to two differently tagged ways"). This would help others having the same question more.</p>
 </div>
 <div id="comment-40013-info" class="comment-info">
 <span class="comment-age">(04 Jan '15, 11:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -173,7 +173,7 @@ out meta;</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1228/kerosin"></a><a href="http://help.openstreetmap.org/users/1228/kerosin">@kerosin</a>: sure that's possible: Compare <a href="http://overpass-turbo.eu/s/6Pv">http://overpass-turbo.eu/s/6Pv</a> vs <a href="http://overpass-turbo.eu/s/6Pu">http://overpass-turbo.eu/s/6Pu</a> . Will you create a new question?</p>
+<p><a href="https://help.openstreetmap.org/users/1228/kerosin"></a><a href="https://help.openstreetmap.org/users/1228/kerosin">@kerosin</a>: sure that's possible: Compare <a href="http://overpass-turbo.eu/s/6Pv">http://overpass-turbo.eu/s/6Pv</a> vs <a href="http://overpass-turbo.eu/s/6Pu">http://overpass-turbo.eu/s/6Pu</a> . Will you create a new question?</p>
 </div>
 <div id="comment-40014-info" class="comment-info">
 <span class="comment-age">(04 Jan '15, 11:52)</span> <span class="comment-user userinfo">mmd</span>

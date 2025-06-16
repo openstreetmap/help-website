@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Some man_made edits don&#x27;t appear to show"
-description = '''Some of the Land Use items I have added to OSM using don&#x27;t appear to be showing on the map several days later - example here http://www.openstreetmap.org/#map=18/51.47411/-2.81320 where the man_made storage tanks are not showing. What am I not doing please? Robin'''
+description = '''Some of the Land Use items I have added to OSM using don&#x27;t appear to be showing on the map several days later - example here https://www.openstreetmap.org/#map=18/51.47411/-2.81320 where the man_made storage tanks are not showing. What am I not doing please? Robin'''
 date = "2015-04-10T10:39:00Z"
 lastmod = "2015-04-12T12:34:00Z"
 weight = 42242
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Some of the Land Use items I have added to OSM using don't appear to be showing on the map several days later - example here <a href="http://www.openstreetmap.org/#map=18/51.47411/-2.81320">http://www.openstreetmap.org/#map=18/51.47411/-2.81320</a> where the man_made storage tanks are not showing.</p>
+<p>Some of the Land Use items I have added to OSM using don't appear to be showing on the map several days later - example here <a href="https://www.openstreetmap.org/#map=18/51.47411/-2.81320">https://www.openstreetmap.org/#map=18/51.47411/-2.81320</a> where the man_made storage tanks are not showing.</p>
 <p>What am I not doing please? Robin</p>
 </div>
 <div id="question-tags" class="tags-container tags">

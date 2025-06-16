@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi all!</p>
 <p>I cannot find the place through the site search but it exist on the map if I try to find it manually. Search language - russian. The street I'm searching is showed on the map in a russian - all is good. What's the matter?</p>
-<p><a href="http://www.openstreetmap.org/#map=19/55.74771/37.68023">link to street</a><br />
+<p><a href="https://www.openstreetmap.org/#map=19/55.74771/37.68023">link to street</a><br />
 City - Moscow<br />
 Street - Gzhelskiy Pereulok (Гжельский переулок)</p>
 </div>
@@ -144,7 +144,7 @@ One Answer:
 <div class="answer-body">
 <p>You appear to expect to search for a Russian street name using a latin rather than cyrillic alphabet.</p>
 <p>In general OpenStreetMap does not work this way: data is usually in the common language(s) and writing form of the immediate region. Thus place names in Russia are in Russian. One or two local communities (notably Japan) have chosen to represent place names using non-local scripts, but this is very much a choice for the local community. In most cases names in non-local scripts are merely transliterations and do not conform to OSM's verifiability rule so are not suitable for storage within OSM. Most transliterations could be performed by adding a suitable pre- or post-processing step to convert data to or from the form expected on OSM.</p>
-<p>The street you are looking for is <a href="http://www.openstreetmap.org/browse/way/25208587">here</a>, and can be found immediately using Nominatim if you enter its Cyrillic name. You can see all the data which are available for Nominatim.</p>
+<p>The street you are looking for is <a href="https://www.openstreetmap.org/browse/way/25208587">here</a>, and can be found immediately using Nominatim if you enter its Cyrillic name. You can see all the data which are available for Nominatim.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

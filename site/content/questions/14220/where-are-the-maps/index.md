@@ -65,7 +65,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Does <a href="http://www.openstreetmap.org/?lat=51.5006&amp;lon=-0.1092&amp;zoom=13&amp;layers=M">this link</a> work? It does here, so I guess there might be some problem at your end. Also try clearing your browser cache first. There are also other services available with maps based on OSM data like <a href="http://maps.cloudmade.com/">CloudMade</a> and <a href="http://open.mapquest.de/">MapQuest</a>, you can try them if you think the main OSM map is blocked for you.</p>
+<p>Does <a href="https://www.openstreetmap.org/?lat=51.5006&amp;lon=-0.1092&amp;zoom=13&amp;layers=M">this link</a> work? It does here, so I guess there might be some problem at your end. Also try clearing your browser cache first. There are also other services available with maps based on OSM data like <a href="http://maps.cloudmade.com/">CloudMade</a> and <a href="http://open.mapquest.de/">MapQuest</a>, you can try them if you think the main OSM map is blocked for you.</p>
 </div>
 <div id="comment-14227-info" class="comment-info">
 <span class="comment-age">(12 Jul '12, 11:56)</span> <span class="comment-user userinfo">scai ♦</span>

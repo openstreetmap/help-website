@@ -132,7 +132,7 @@ Select<br />
 Settings &gt; Map &amp; Vehicle &gt; myMaps<br />
 Select a map.</p>
 <p>If you don't see the OSM you may need to download a new version...<br />
-<a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a><br />
 Note that the current server status for the Lambertus maps could be indicative of a problem, so you may need to try another provider until that is fixed.</p>
 <p>Experienced Garmin Nuvi advice can be also sought at the <a href="http://forums.gpsreview.net/categories/garmin-auto-forum-garmin-nuvi-forum">GPS Review Forum</a></p>
 </div>

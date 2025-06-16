@@ -182,7 +182,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Do you happen to have the Kansas River loaded up in your existing data? If so, could you look and see if there is any of this flooding along it? This is the relation that represents it:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/1061544">http://www.openstreetmap.org/browse/relation/1061544</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/1061544">https://www.openstreetmap.org/browse/relation/1061544</a></p>
 <p>I'm trying to see if the garmin rendering has problems with the way some rivers are mapped.</p>
 <p>Also, keep in mind that the data from garmin.openstreetmap.nl is not kept constantly up to date. It is refreshed periodically and hasn't been updated since April 1st so any fixes that people have made to the river won't show up until an update is run.</p>
 </div>

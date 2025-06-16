@@ -231,7 +231,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing (from the .NET error) that you're using the Google Code <a href="http://code.google.com/p/osm2shp/">osm2shp</a> and (from the fact that you're running Windows XP) that you haven't got much memory on your PC. The <a href="http://wiki.openstreetmap.org/wiki/Shapefiles#Making_shapefiles_from_OpenStreetMap_data">page</a> that <a href="http://help.openstreetmap.org/users/131/gnonthgol">Gnonthgol</a> referred to describes several alternatives - I'd read up about those and use one of them instead (at least one seems to support a temporary local database rather than in-memory storage which might be better for you).</p>
+<p>I'm guessing (from the .NET error) that you're using the Google Code <a href="http://code.google.com/p/osm2shp/">osm2shp</a> and (from the fact that you're running Windows XP) that you haven't got much memory on your PC. The <a href="https://wiki.openstreetmap.org/wiki/Shapefiles#Making_shapefiles_from_OpenStreetMap_data">page</a> that <a href="https://help.openstreetmap.org/users/131/gnonthgol">Gnonthgol</a> referred to describes several alternatives - I'd read up about those and use one of them instead (at least one seems to support a temporary local database rather than in-memory storage which might be better for you).</p>
 <p>You'll also probably need to think about what features you want in the resulting shapefiles, and try a small area first.</p>
 <p>One final question - have you checked that the zipped shapefiles that are available for areas from e.g. <a href="http://download.geofabrik.de/osm/">here</a> don't do what you want?</p>
 </div>

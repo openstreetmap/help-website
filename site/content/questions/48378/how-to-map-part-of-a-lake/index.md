@@ -99,7 +99,7 @@ osqa_accepted = false
 <div id="post-48641-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11739/mig21"></a><a href="http://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: please see <a href="/questions/35272/when-to-graduate-from-id">that older question</a> for your JOSM question. And <span>please</span> ask a new "question" (new entry) for your history question if you cannot find an older question about the same thing. Oh, and, welcome to OSM, thanks for helping! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/11739/mig21"></a><a href="https://help.openstreetmap.org/users/11739/mig21">@Mig21</a>: please see <a href="/questions/35272/when-to-graduate-from-id">that older question</a> for your JOSM question. And <span>please</span> ask a new "question" (new entry) for your history question if you cannot find an older question about the same thing. Oh, and, welcome to OSM, thanks for helping! :-)</p>
 </div>
 <div id="comment-48641-info" class="comment-info">
 <span class="comment-age">(13 Mar '16, 15:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

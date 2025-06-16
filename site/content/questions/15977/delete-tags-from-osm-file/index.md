@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> has some filter methods like the <code>--way-key(-value)</code> and <code>--node-key(-value)</code> flags and also the more advanced <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">--tag-filter</a> to keep or reject specific tags or values. But you may also want to have a look at <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> has some filter methods like the <code>--way-key(-value)</code> and <code>--node-key(-value)</code> flags and also the more advanced <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">--tag-filter</a> to keep or reject specific tags or values. But you may also want to have a look at <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

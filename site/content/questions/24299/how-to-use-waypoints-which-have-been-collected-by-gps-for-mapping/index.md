@@ -178,12 +178,12 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, I'm pretty sure the "upload gpx" feature on the main website only accepts gpx with tracks.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> editor allows you to load gpx files containing both tracks and waypoints. Normally on the eTrex, there will be two different files: one for the waypoints and one for the tracks.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a> editor allows you to load gpx files containing both tracks and waypoints. Normally on the eTrex, there will be two different files: one for the waypoints and one for the tracks.</p>
 <p>There are many options to view your points :</p>
 <ul>
 <li>Mapsource can definitely show a basemap, but I dont know it well enough to explain how to do it.</li>
 <li>For most desktop map and gpx viewing, I recomend <a href="http://marble.kde.org/">marble</a> which is light, simple , and versatile. It comes with some default osm maps but it is easy to add any other slippymap.</li>
-<li>Altough it may be overkill, <a href="http://wiki.openstreetmap.org/wiki/Josm">JOSM</a> can be a great way to view gpx files.</li>
+<li>Altough it may be overkill, <a href="https://wiki.openstreetmap.org/wiki/Josm">JOSM</a> can be a great way to view gpx files.</li>
 <li>Lastly, if you're ok with a little bit of coding, using a slippymap such as <a href="http://leafletjs.com/">leaflet</a> or <a href="http://www.openlayers.org/">openlayers</a> (by creating a local html file) is another versatile way to display gpx data.</li>
 </ul>
 </div>
@@ -251,7 +251,7 @@ osqa_accepted = false
 <div id="post-51026-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4975/vincent">@vincent</a>-de-phily what you're describing is indeed the case for "new" (at the time of this question, but now quite old!) Garmin devices.</p>
+<p><a href="https://help.openstreetmap.org/users/4975/vincent">@vincent</a>-de-phily what you're describing is indeed the case for "new" (at the time of this question, but now quite old!) Garmin devices.</p>
 </div>
 <div id="comment-51026-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 12:54)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -294,14 +294,14 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <pre><code>Is it correct that OSM only uses tracks?</code></pre>
-<p>No, as has already been mentioned, most OSM editors are capable of processing GPX files containing both GPS tracks and waypoints, but in order to upload a GPX file to OSM there must be at least a small GPS track in the file as well. <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1056198">This track</a> is an example that I edited manually ages ago to show that it can be done.</p>
+<p>No, as has already been mentioned, most OSM editors are capable of processing GPX files containing both GPS tracks and waypoints, but in order to upload a GPX file to OSM there must be at least a small GPS track in the file as well. <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1056198">This track</a> is an example that I edited manually ages ago to show that it can be done.</p>
 <pre><code>Also, is there any way to salvage the marks that we collected and turn them into usable data points?</code></pre>
-<p>Yes, if you fake a short section of GPS track in the file with waypoints in it. If you download <a href="http://www.openstreetmap.org/user/SomeoneElse/traces/1056198">the example that I mentioned above</a> and look at it in a text editor, you'll see what needs to be added.</p>
-<p>If you find yourself wanting to work with GPS traces a lot, you might find <a href="http://wiki.openstreetmap.org/wiki/Gpsbabel">GPSBabel</a> useful.</p>
+<p>Yes, if you fake a short section of GPS track in the file with waypoints in it. If you download <a href="https://www.openstreetmap.org/user/SomeoneElse/traces/1056198">the example that I mentioned above</a> and look at it in a text editor, you'll see what needs to be added.</p>
+<p>If you find yourself wanting to work with GPS traces a lot, you might find <a href="https://wiki.openstreetmap.org/wiki/Gpsbabel">GPSBabel</a> useful.</p>
 <pre><code>If so, how can I transfer this data to my PC and visualize the marks on a map? I tried using MapSource, but upon loading there is no map image in the background.</code></pre>
-<p>It is possible to load OSM data into Mapsource, just as you can into Garmin devices using the output from mkgmap. If you're doing it for the first time, I'd suggest looking at <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> (there's an FAQ <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">here</a>).<br />
+<p>It is possible to load OSM data into Mapsource, just as you can into Garmin devices using the output from mkgmap. If you're doing it for the first time, I'd suggest looking at <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> (there's an FAQ <a href="https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl#Frequently_Asked_Questions">here</a>).<br />
 </p>
-<p>Finally - a couple of notes about uploaded Waypoint support in OSM editors. If you're using JOSM, you might want to have a read of <a href="https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">this previous question</a> and also <a href="https://help.openstreetmap.org/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">this one</a> and <a href="https://help.openstreetmap.org/questions/17739/how-do-i-see-gpx-waypoints-in-josm">this one</a>. <a href="https://help.openstreetmap.org/questions/2355/waypoint-handling-in-potlatch-2">This one</a> asks about Potlatch 2. Potlatch 1 contains an extra useful "waypoint" feature - you can move unlocked items around, which makes placement easier, although because it lacks support for e.g. Bing imagery it can be difficult to work in just that.</p>
+<p>Finally - a couple of notes about uploaded Waypoint support in OSM editors. If you're using JOSM, you might want to have a read of <a href="/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">this previous question</a> and also <a href="/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">this one</a> and <a href="/questions/17739/how-do-i-see-gpx-waypoints-in-josm">this one</a>. <a href="/questions/2355/waypoint-handling-in-potlatch-2">This one</a> asks about Potlatch 2. Potlatch 1 contains an extra useful "waypoint" feature - you can move unlocked items around, which makes placement easier, although because it lacks support for e.g. Bing imagery it can be difficult to work in just that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

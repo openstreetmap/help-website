@@ -98,7 +98,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>For info, a couple of related questions - <a href="https://help.openstreetmap.org/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">here</a> and <a href="https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">here</a>.</p>
+<p>For info, a couple of related questions - <a href="/questions/6368/in-josm-is-it-possible-to-see-gpx-track-waypoint-details">here</a> and <a href="/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">here</a>.</p>
 </div>
 <div id="comment-19441-info" class="comment-info">
 <span class="comment-age">(30 Jan '13, 12:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -162,7 +162,7 @@ osqa_accepted = false
 <li>Now do the actual editing.</li>
 </ol>
 <p>I don't know why it worked for BlueTiger, as my waypoints look the same in the GPX and I was using the same JOSM version at the time. If this was about color settings, then the defaults must have been wrong in that version of JOSM.</p>
-<p>As for the two links provided by user SomeOneElse, the first was another Garmin-gpx-symbol post of no relevance, but <a href="https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">the other</a> was very similar to both my problems and solutions, except I cared about all the waypoints in the file, not just one.</p>
+<p>As for the two links provided by user SomeOneElse, the first was another Garmin-gpx-symbol post of no relevance, but <a href="/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">the other</a> was very similar to both my problems and solutions, except I cared about all the waypoints in the file, not just one.</p>
 <p>I don't think I was using any satellite image overlays during the editing. So I cannot accept Glassman's "answer" as having any relevance.</p>
 <p>I cannot retest right now as I don't have a working Java on the PC.</p>
 <p>Here are some snippets from one of the (large) files in question:</p>

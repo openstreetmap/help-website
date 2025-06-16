@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use the regular <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Version:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id.2F.23version">API</a> directly, e.g.: <a href="http://www.openstreetmap.org/api/0.6/node/123456/7">http://www.openstreetmap.org/api/0.6/node/123456/7</a> will retrieve version 7 of node 123456.</p>
+<p>You can use the regular <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Version:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id.2F.23version">API</a> directly, e.g.: <a href="https://www.openstreetmap.org/api/0.6/node/123456/7">https://www.openstreetmap.org/api/0.6/node/123456/7</a> will retrieve version 7 of node 123456.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

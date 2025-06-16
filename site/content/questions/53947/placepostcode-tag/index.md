@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>After search my street in Nominatim I found the street's postal code into <code>place:postcode</code> tag. I think this tag is no longer valid but I can't find the postal code in <code>addr:postcode</code> nor <code>postal_code</code>.</p>
 <p>It is my mistake and I must do the changes by myself in my OSM database or is there some way to OSM guys do the changes in the official database?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/postcode.png" alt="alt text" /></p>
+<p><img src="/upfiles/postcode.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-postcodes" rel="tag" title="see questions tagged &#39;postcodes&#39;">postcodes</span>

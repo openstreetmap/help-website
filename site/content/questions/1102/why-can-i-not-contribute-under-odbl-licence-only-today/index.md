@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The planned license change timeline is <a href="http://wiki.openstreetmap.org/wiki/Open_Database_License/Implementation_Plan">described on the Wiki</a>.</p>
+<p>The planned license change timeline is <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License/Implementation_Plan">described on the Wiki</a>.</p>
 <p>No user will ever have the choice to contribute under ODbL exclusively. Everyone who agrees to the new <a href="http://www.osmfoundation.org/wiki/License/Contributor_Terms">Contributor Terms</a> will permit OSMF to distribute the data under ODbL <em>as well as</em> CC-BY-SA 2.0. (The Contributor terms also contain a clause that will allow further relicensing under other free and open licenses, provided that certain conditions are met.)</p>
 <p>OSMF plans to eventually stop distributing the data under CC-BY-SA 2.0 but this will only happen after a significant portion of contributions have been made available for ODbL licensing. If there was an option for you to contribute ODbL-only, your data could not be included in the planet file or otherwise mixed with existing CC-BY-SA 2.0 data.</p>
 </div>

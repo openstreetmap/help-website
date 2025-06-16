@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rendering of road junctions"
-description = '''Normally, where a minor road meets a main road, the Mapnik rendering draws the main road over the minor road. However, in the map at http://www.openstreetmap.org/?lat=50.85242&amp;amp;lon=-1.169066&amp;amp;zoom=18&amp;amp;layers=M, both Deane&#x27;s Park Road, and the short loop of minor road opposite it, are render...'''
+description = '''Normally, where a minor road meets a main road, the Mapnik rendering draws the main road over the minor road. However, in the map at https://www.openstreetmap.org/?lat=50.85242&amp;amp;lon=-1.169066&amp;amp;zoom=18&amp;amp;layers=M, both Deane&#x27;s Park Road, and the short loop of minor road opposite it, are render...'''
 date = "2012-06-26T21:29:00Z"
 lastmod = "2012-06-26T23:10:00Z"
 weight = 13815
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Normally, where a minor road meets a main road, the Mapnik rendering draws the main road over the minor road. However, in the map at <a href="http://www.openstreetmap.org/?lat=50.85242&amp;lon=-1.169066&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=50.85242&amp;lon=-1.169066&amp;zoom=18&amp;layers=M</a>, both Deane's Park Road, and the short loop of minor road opposite it, are rendered over the main road. Is that because of something in the map data that could be improved, or is it purely an artefact of the rendering engine?</p>
+<p>Normally, where a minor road meets a main road, the Mapnik rendering draws the main road over the minor road. However, in the map at <a href="https://www.openstreetmap.org/?lat=50.85242&amp;lon=-1.169066&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=50.85242&amp;lon=-1.169066&amp;zoom=18&amp;layers=M</a>, both Deane's Park Road, and the short loop of minor road opposite it, are rendered over the main road. Is that because of something in the map data that could be improved, or is it purely an artefact of the rendering engine?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-junction" rel="tag" title="see questions tagged &#39;junction&#39;">junction</span>

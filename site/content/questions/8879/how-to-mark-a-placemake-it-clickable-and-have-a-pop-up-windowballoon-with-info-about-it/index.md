@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the "view" panel, the solution is in the OpenLayers documentation, and on the OSM wiki, see this <a href="http://help.openstreetmap.org/questions/8819/how-to-display-popup-when-selecting-pinpoint">recent question</a></p>
+<p>For the "view" panel, the solution is in the OpenLayers documentation, and on the OSM wiki, see this <a href="/questions/8819/how-to-display-popup-when-selecting-pinpoint">recent question</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

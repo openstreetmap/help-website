@@ -126,7 +126,7 @@ One Answer:
 <div class="answer-body">
 <p>The API is a not really documented not really public API, sorry.</p>
 <p>A manual alternative might be <a href="http://extract.bbbike.org/">http://extract.bbbike.org/</a> that has a number of different SVG output styles.</p>
-<p>More possible alternatives can be found here <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a> and maybe <a href="http://maposmatic.org/">http://maposmatic.org/</a></p>
+<p>More possible alternatives can be found here <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a> and maybe <a href="http://maposmatic.org/">http://maposmatic.org/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

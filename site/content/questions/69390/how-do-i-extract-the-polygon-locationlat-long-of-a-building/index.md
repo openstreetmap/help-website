@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I love the feature of seeing polygon in the OpenStreetMap. Firstly I like to say, I appreciate it:)</p>
 <p>My question is, is there any possibility extracting the lat-long variables of each corner of the polygon?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2019-05-31_12-31-06.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_from_2019-05-31_12-31-06.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-location" rel="tag" title="see questions tagged &#39;location&#39;">location</span> <span class="post-tag tag-link-extraction" rel="tag" title="see questions tagged &#39;extraction&#39;">extraction</span> <span class="post-tag tag-link-api" rel="tag" title="see questions tagged &#39;api&#39;">api</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span> <span class="post-tag tag-link-geolocation" rel="tag" title="see questions tagged &#39;geolocation&#39;">geolocation</span>

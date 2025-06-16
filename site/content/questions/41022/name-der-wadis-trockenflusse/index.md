@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Kannst du uns einen Link zu einem Beispiel geben bzw. die verwendeten Tags nennen? Laut <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi">wiki</a> soll <em>waterway=wadi</em> nicht mehr verwendet werden und stattdessen ein anderer waterway-Tag und <em>intermittent=yes</em> gesetzt werden.</p>
+<p>Kannst du uns einen Link zu einem Beispiel geben bzw. die verwendeten Tags nennen? Laut <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Dwadi">wiki</a> soll <em>waterway=wadi</em> nicht mehr verwendet werden und stattdessen ein anderer waterway-Tag und <em>intermittent=yes</em> gesetzt werden.</p>
 </div>
 <div id="comment-41027-info" class="comment-info">
 <span class="comment-age">(15 Feb '15, 12:41)</span> <span class="comment-user userinfo">scai ♦</span>

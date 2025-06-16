@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not a direct solution for the problem : have you considered using QAT scripts (<a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)">http://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)</a> with JOSM? QAT can show OSMI errors and errors from KeepRight and few other places.</p>
+<p>Not a direct solution for the problem : have you considered using QAT scripts (<a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)">https://wiki.openstreetmap.org/wiki/Quality_Assurance_Tools_script)</a> with JOSM? QAT can show OSMI errors and errors from KeepRight and few other places.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just look at wiki page about <a href="http://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows Mobile</a>.</p>
+<p>Just look at wiki page about <a href="https://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows Mobile</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

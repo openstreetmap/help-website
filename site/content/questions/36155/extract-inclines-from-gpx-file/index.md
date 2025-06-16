@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-36165-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Tried to clarify question.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Tried to clarify question.</p>
 </div>
 <div id="comment-36165-info" class="comment-info">
 <span class="comment-age">(26 Aug '14, 07:45)</span> <span class="comment-user userinfo">batat</span>
@@ -133,7 +133,7 @@ osqa_accepted = false
 <div id="post-36206-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> edits do actually work; they just don't redisplay immediately. Convert answer to comment of an answer works (at least sometimes), but convert answer to comment of an qustion does not.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> edits do actually work; they just don't redisplay immediately. Convert answer to comment of an answer works (at least sometimes), but convert answer to comment of an qustion does not.</p>
 </div>
 <div id="comment-36206-info" class="comment-info">
 <span class="comment-age">(26 Aug '14, 14:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -144,7 +144,7 @@ osqa_accepted = false
 <div id="post-36210-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: (meta cont.) yes, I know the lag/cache/whatever problem. But in this case the "edit" link was not even displayed. I have no response from support@opens... yet. I hope someone finds time to work on the problems.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: (meta cont.) yes, I know the lag/cache/whatever problem. But in this case the "edit" link was not even displayed. I have no response from support@opens... yet. I hope someone finds time to work on the problems.</p>
 </div>
 <div id="comment-36210-info" class="comment-info">
 <span class="comment-age">(26 Aug '14, 14:40)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -167,7 +167,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: (meta cont.) Tom H. just wrote me an mail that he is now working on these problems. :-)</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: (meta cont.) Tom H. just wrote me an mail that he is now working on these problems. :-)</p>
 </div>
 <div id="comment-36220-info" class="comment-info">
 <span class="comment-age">(26 Aug '14, 15:59)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -325,7 +325,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It sounds like something that could most usefully belong in an OSM editor rather than a post-processor such as GPSBabel, but I'm not aware of an OSM editor that can do this.</p>
-<p>In addition to "subtract elevation on start of segment from elevation from end" you'd need to manually indicate the start and end of a particular incline. I have a Garmin eTrex Vista HCx (which also has a barometric altimeter, and all "trkpt" trackpoints have an "ele" tag that contains the measured elevation, so the data's availble (have a look at <a href="http://www.openstreetmap.org/user/SomeoneElse/traces">my traces</a> to compare with yours if you want to see if the data is in the same format - you'll need to find a text editor that can understand xml better than e.g. Windows Notepad, of course).</p>
+<p>In addition to "subtract elevation on start of segment from elevation from end" you'd need to manually indicate the start and end of a particular incline. I have a Garmin eTrex Vista HCx (which also has a barometric altimeter, and all "trkpt" trackpoints have an "ele" tag that contains the measured elevation, so the data's availble (have a look at <a href="https://www.openstreetmap.org/user/SomeoneElse/traces">my traces</a> to compare with yours if you want to see if the data is in the same format - you'll need to find a text editor that can understand xml better than e.g. Windows Notepad, of course).</p>
 <p>Of the OSM editors available, JOSM is the most likely support this. It does support <a href="http://josm.openstreetmap.de/wiki/Plugins">plugins</a> and it's possible that someone may be working on something similar, or may in the future do so.</p>
 </div>
 <div class="answer-controls post-controls">

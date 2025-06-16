@@ -74,7 +74,7 @@ osqa_accepted = true
 <div id="post-28594-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I don't own a Garmin, but maybe you need to work with a '/map/gsupmap?.img' as suggested for Nüvi 2350? <a href="http://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series">http://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series</a></p>
+<p>I don't own a Garmin, but maybe you need to work with a '/map/gsupmap?.img' as suggested for Nüvi 2350? <a href="https://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series">https://wiki.openstreetmap.org/wiki/Garmin#N.C3.BCvi_series</a></p>
 </div>
 <div id="comment-28594-info" class="comment-info">
 <span class="comment-age">(29 Nov '13, 08:53)</span> <span class="comment-user userinfo">iii</span>

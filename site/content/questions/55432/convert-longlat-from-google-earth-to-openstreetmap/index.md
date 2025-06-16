@@ -137,7 +137,7 @@ osmlayer = new OpenLayers.Layer.OSM(&quot;Open Street Map&quot;);
 <div id="post-55451-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For Info i cut and paste your coords in OSMs search box and got this <a href="http://www.openstreetmap.org/search?query=53.285756%2C%20-6.141998#map=16/53.2858/-6.1420">http://www.openstreetmap.org/search?query=53.285756%2C%20-6.141998#map=16/53.2858/-6.1420</a></p>
+<p>For Info i cut and paste your coords in OSMs search box and got this <a href="https://www.openstreetmap.org/search?query=53.285756%2C%20-6.141998#map=16/53.2858/-6.1420">https://www.openstreetmap.org/search?query=53.285756%2C%20-6.141998#map=16/53.2858/-6.1420</a></p>
 </div>
 <div id="comment-55451-info" class="comment-info">
 <span class="comment-age">(02 Apr '17, 16:01)</span> <span class="comment-user userinfo">andy mackey</span>

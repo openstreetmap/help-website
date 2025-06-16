@@ -112,11 +112,11 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Die braunen Wege, die du meinst, sind vermutlich Waldwege.</p>
-<p>Sofern man darauf reiten darf, bekommen sie den Wert horse=yes; darf man nicht darauf reiten entsprechend horse=no. Um explizit ausgewiesene Reitwege zu erfassen, werden Routenrelationen mit type=horse verwendet - <a href="http://wiki.openstreetmap.org/wiki/DE:Relation:route">siehe hier</a>.</p>
+<p>Sofern man darauf reiten darf, bekommen sie den Wert horse=yes; darf man nicht darauf reiten entsprechend horse=no. Um explizit ausgewiesene Reitwege zu erfassen, werden Routenrelationen mit type=horse verwendet - <a href="https://wiki.openstreetmap.org/wiki/DE:Relation:route">siehe hier</a>.</p>
 <p>Auf der Karte, die du auf osm.org oder openstreetmap.de siehst, werden diese Daten nicht grafisch dargestellt, da die dort gezeigten Karten eine Standardreferenz sind. Freizeitkarten, die ebenfalls aus den OSM-Daten erzeugt werden, aber mit dem Schwerpunkt auf "Outdoor"aktivitäten, sind unter anderem die <a href="http://www.wanderreitkarte.de/">Wanderreitkarte</a> und die <a href="http://hikebikemap.de/">hikebikemap</a>.</p>
 <p>Hoffend, dass das für den Anfang nicht too much information war,</p>
 <p>malenki :)</p>
-<p>PS: Eine relativ vollständige Liste OSM-basierter Karten findest du <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#General">hier</a> .</p>
+<p>PS: Eine relativ vollständige Liste OSM-basierter Karten findest du <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#General">hier</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ich nehme mal an, dass du die Karte von <a href="http://openstreetmap.org">openstreetmap.org</a> oder <a href="http://openstreetmap.de">openstreetmap.de</a> meinst. Der Kartenstil ist dort vorgegeben und kann natürlich nicht beliebig von Benutzern angepasst werden. In braun werden dort alle als Feld- und Waldweg markierte Wege dargestellt. Jedoch gibt es auch jede Menge Themenkarten, wie zum Beispiel die <a href="http://www.wanderreitkarte.de/">Reit- und Wanderkarte</a>. Wie du Wege entsprechend attributieren musst, damit sie auf dieser Karten auch als Reitwege dargestellt werden, kannst du auf der zugehörigen <a href="http://wiki.openstreetmap.org/wiki/DE:OSMC_Reitkarte">Wiki-Seite</a> bzw. der allgemeinen <a href="http://wiki.openstreetmap.org/wiki/Reiten">Reit-Seite</a> nachlesen.</p>
+<p>Ich nehme mal an, dass du die Karte von <a href="http://openstreetmap.org">openstreetmap.org</a> oder <a href="http://openstreetmap.de">openstreetmap.de</a> meinst. Der Kartenstil ist dort vorgegeben und kann natürlich nicht beliebig von Benutzern angepasst werden. In braun werden dort alle als Feld- und Waldweg markierte Wege dargestellt. Jedoch gibt es auch jede Menge Themenkarten, wie zum Beispiel die <a href="http://www.wanderreitkarte.de/">Reit- und Wanderkarte</a>. Wie du Wege entsprechend attributieren musst, damit sie auf dieser Karten auch als Reitwege dargestellt werden, kannst du auf der zugehörigen <a href="https://wiki.openstreetmap.org/wiki/DE:OSMC_Reitkarte">Wiki-Seite</a> bzw. der allgemeinen <a href="https://wiki.openstreetmap.org/wiki/Reiten">Reit-Seite</a> nachlesen.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

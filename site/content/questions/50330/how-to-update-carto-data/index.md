@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Oh! Sorry I wrongly understood as carto is a separate data which was used for show borders/regions. Now i understand as carto is a tool which will parse osm data then generate a boundary data and stored in DB, while tiles generation we can use this boundary data for show regions(only in land not in sea). right?</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Oh! Sorry I wrongly understood as carto is a separate data which was used for show borders/regions. Now i understand as carto is a tool which will parse osm data then generate a boundary data and stored in DB, while tiles generation we can use this boundary data for show regions(only in land not in sea). right?</p>
 <p>Also now i tried with latest OSM data for india, but there is no seperate region/border for Telungana &amp; AndhraPradesh. How can we update state regions in OSM?</p>
 </div>
 <div id="comment-50395-info" class="comment-info">
@@ -93,7 +93,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>We've had Telangana <a href="http://www.openstreetmap.org/relation/3250963/history">in our databases since before it was officially a separate state</a></p>
+<p>We've had Telangana <a href="https://www.openstreetmap.org/relation/3250963/history">in our databases since before it was officially a separate state</a></p>
 <p>So either you're using a seperate databases for borders which is out of date, or your update failed.</p>
 </div>
 <div id="comment-50397-info" class="comment-info">
@@ -105,7 +105,7 @@ osqa_accepted = false
 <div id="post-50415-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a> : Thanks for your reply. Yes my data not updated properly. How to update this carto data? I am doing as 1.delete carto_boundary table, 2.generate carto_boundary.sql, 3.exec psql -f carto_boundary.sql -d &lt;db_name&gt;. Is it correct ?</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a> : Thanks for your reply. Yes my data not updated properly. How to update this carto data? I am doing as 1.delete carto_boundary table, 2.generate carto_boundary.sql, 3.exec psql -f carto_boundary.sql -d &lt;db_name&gt;. Is it correct ?</p>
 </div>
 <div id="comment-50415-info" class="comment-info">
 <span class="comment-age">(23 Jun '16, 16:24)</span> <span class="comment-user userinfo">Rajavelu_M</span>
@@ -167,7 +167,7 @@ One Answer:
 <div class="answer-body">
 <p>"carto is a tool which will parse osm data then generate a boundary data and stored in DB, while tiles generation we can use this boundary data" is mostly correct. Actually it's a bit more complicated than that, due to the history of what happened with OSM's "standard" style.</p>
 <p>The second part " while tiles generation we can use this boundary data for show regions(only in land not in sea)" has actually been answer elsewhere (someone else asked a similar quesion):</p>
-<p><a href="http://help.openstreetmap.org/questions/50367/can-i-exclude-the-district-borders-extending-on-ocean-in-admin_level-5/50386">http://help.openstreetmap.org/questions/50367/can-i-exclude-the-district-borders-extending-on-ocean-in-admin_level-5/50386</a></p>
+<p><a href="/questions/50367/can-i-exclude-the-district-borders-extending-on-ocean-in-admin_level-5/50386">https://help.openstreetmap.org/questions/50367/can-i-exclude-the-district-borders-extending-on-ocean-in-admin_level-5/50386</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

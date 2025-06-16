@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Es geht um dieses <a href="http://www.openstreetmap.org/?minlon=8.81186199188232&amp;minlat=51.9427261352539&amp;maxlon=8.81473255157471&amp;maxlat=51.9440040588379">Freibad-Gelände</a>. Sowohl das ganze Freibad-Areal als auch das Gebäude rechts verfügen über Tag name=Freibad XY, was dazu führt, dass bei der OSM-Suche "Freibad XY zweimal gefunden wird.</p>
+<p>Es geht um dieses <a href="https://www.openstreetmap.org/?minlon=8.81186199188232&amp;minlat=51.9427261352539&amp;maxlon=8.81473255157471&amp;maxlat=51.9440040588379">Freibad-Gelände</a>. Sowohl das ganze Freibad-Areal als auch das Gebäude rechts verfügen über Tag name=Freibad XY, was dazu führt, dass bei der OSM-Suche "Freibad XY zweimal gefunden wird.</p>
 <p>Kann und sollte ich das "eindeutig" machen? Und wie geht es dann richtig? Und wie pflege ich die Adresse richtig? Der Eingang befindet sich am unteren Ende des Gebäudes. Ich fände es hilfreich, den Eingang samt Adresse als solchen zu kennzeichnen, sodass man ihn mit Hilfe des Navis schneller findet - er ist nämlich vor Ort wirklich nicht zu sehen und liegt - über eine kleine Treppe nach unten - eine Etage tiefer als die Straße.</p>
 <p>Die Schwimmbecken sind übrigens versehen mit nature=water - richtig wäre doch leisure=swimming_pool, oder?</p>
 <p>Vielen Dank im Voraus!</p>
@@ -140,7 +140,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><span>DE:How_to_map_a#Schwimmbad</span> sollte als Tagging-Vorschlag weiterhelfen. Außerdem (wenn du Englisch lesen kannst): <span>One_feature,_one_OSM_element</span> (etwas was nur einmal in echt da ist, sollte auch nur einmal in den OSM-Daten sein) - das ist allerdings weniger auf den Namen als auf beispielsweise <code>leisure=water_park</code> (nur ein water_park in echt da - einmal dieses Tag) anzuwenden. Allerdings gibt es wohl den Name "Freibad XY" eigentlich auch nur einmal, nicht jedes Gebäude hat den Namen, sondern alles zusammen (hier <a href="http://www.openstreetmap.org/browse/way/34415794">way/34415794</a>).</p>
+<p><span>DE:How_to_map_a#Schwimmbad</span> sollte als Tagging-Vorschlag weiterhelfen. Außerdem (wenn du Englisch lesen kannst): <span>One_feature,_one_OSM_element</span> (etwas was nur einmal in echt da ist, sollte auch nur einmal in den OSM-Daten sein) - das ist allerdings weniger auf den Namen als auf beispielsweise <code>leisure=water_park</code> (nur ein water_park in echt da - einmal dieses Tag) anzuwenden. Allerdings gibt es wohl den Name "Freibad XY" eigentlich auch nur einmal, nicht jedes Gebäude hat den Namen, sondern alles zusammen (hier <a href="https://www.openstreetmap.org/browse/way/34415794">way/34415794</a>).</p>
 <p>Gut ist auch sich andere Freibäder als Tagging-Beispiel anzusehen. Es gibt auch den Vorschlag die Tags <span><code>leisure=park</code> und <code>sport=swimming</code></span> für ein unspaßiges Freibad zu verwenden. Man könnte auch statt dem ersten Tag <span>leisure=sports_centre</span> verwenden und innerhalb nur die wirklich parkartigen Liegeflächen mit <code>leisure=park</code> kennzeichnen.</p>
 <p>Ja, die einzelnen Becken können zusätzlich gemappt werden. Ja, die Situation ist nicht übersichtlich - das kommt nicht nur dir so vor. Was du eigentlich meinst, kannst du übrigens einfach in einem Tag <span><code>description=Freibad mit Liegeflächen ohne Bespaßungseinrichtungen</code></span> an dem Geländeumriss vermerken (eine Notiz an andere Mapper mit dem Key <span><code>note</code></span>). Würde man eine Auswertung von OSM-Daten auf Freibäder machen wollen, müsste man wohl zig Varianten berücksichtigen und Dopplungen auf einem Areal verwerfen.</p>
 <p>Für <em>den</em> Eingang bietet sich das Tag <span><code>entrance=main</code></span> an (an einem Knoten, der Teil des Gebäudes ist; gleiches für einen Knoten auf dem Umriss der Schwimmbad-Fläche).</p>
@@ -197,7 +197,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hallo tag the green with pools, leisure sports fi swimming without the name tag and add adr., aso, to the entrance or office building. But please look at the Wiki for tagging leisure and pools. <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool.">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool.</a> There a lot answers there !</p>
+<p>Hallo tag the green with pools, leisure sports fi swimming without the name tag and add adr., aso, to the entrance or office building. But please look at the Wiki for tagging leisure and pools. <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool.">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dswimming_pool.</a> There a lot answers there !</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

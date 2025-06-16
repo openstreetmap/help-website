@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The default is yes. However this is country specific. For example cyclists are allowed on trunk roads in USA and Germany, but not in France. For the full list see <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">the wiki</a>.</p>
+<p>The default is yes. However this is country specific. For example cyclists are allowed on trunk roads in USA and Germany, but not in France. For the full list see <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

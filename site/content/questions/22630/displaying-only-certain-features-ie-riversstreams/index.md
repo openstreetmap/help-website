@@ -206,7 +206,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>User skaringa created a <a href="http://www.kompf.de/gps/rivermap.html">map of watersheds of Central Europe</a> based only on free data and software. Perhaps you can get the one or other idea there.</p>
-<p>To illustrate certain stuff for Wikipedia you maybe also want to have a look at <a href="http://wiki.openstreetmap.org/wiki/WIWOSM">WIWOSM</a> which was made to connect OSM with Wikipedia.</p>
+<p>To illustrate certain stuff for Wikipedia you maybe also want to have a look at <a href="https://wiki.openstreetmap.org/wiki/WIWOSM">WIWOSM</a> which was made to connect OSM with Wikipedia.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

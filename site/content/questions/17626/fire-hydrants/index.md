@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The main map on openstreetmap.org can't possibly show everything that exists in the database, but there are many <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">services</a> that use osm data to represent something specific. For example <a href="http://openfiremap.org/">Fire Hydrants map</a> is made specially for fire hydrants and other emergency features.</p>
+<p>The main map on openstreetmap.org can't possibly show everything that exists in the database, but there are many <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">services</a> that use osm data to represent something specific. For example <a href="http://openfiremap.org/">Fire Hydrants map</a> is made specially for fire hydrants and other emergency features.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -132,7 +132,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Also take a look at the answers to <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this question</a>.</p>
+<p>Also take a look at the answers to <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this question</a>.</p>
 </div>
 <div id="comment-17636-info" class="comment-info">
 <span class="comment-age">(10 Nov '12, 16:16)</span> <span class="comment-user userinfo">scai ♦</span>

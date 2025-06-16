@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have reverted the changeset in question. Generally, there are several tools available for reverting edits, for example a plugin for the JOSM editor or a suite of Perl scripts. However using them is sometimes a science of their own and if you don't have the experience you can easily break more than you repair. The quickest way to get help is probably on the OSM IRC channel (see <a href="http://wiki.openstreetmap.org/wiki/IRC">wiki</a> for details).</p>
+<p>I have reverted the changeset in question. Generally, there are several tools available for reverting edits, for example a plugin for the JOSM editor or a suite of Perl scripts. However using them is sometimes a science of their own and if you don't have the experience you can easily break more than you repair. The quickest way to get help is probably on the OSM IRC channel (see <a href="https://wiki.openstreetmap.org/wiki/IRC">wiki</a> for details).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

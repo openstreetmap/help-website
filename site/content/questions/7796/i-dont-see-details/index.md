@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-7810-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes, look please: <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=55.079186&amp;lon=38.833043&amp;zoom=18.">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=55.079186&amp;lon=38.833043&amp;zoom=18.</a></p>
+<p>Yes, look please: <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=55.079186&amp;lon=38.833043&amp;zoom=18.">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=55.079186&amp;lon=38.833043&amp;zoom=18.</a></p>
 <p>A polygon in the center is a monastery. I see it's buildings on my navigator but nothing with potlatch editor. It seems to me that my Garmin OSM map was filled up by another map source.</p>
 </div>
 <div id="comment-7810-info" class="comment-info">
@@ -128,8 +128,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Data has been deleted in that area - one example is <a href="http://www.openstreetmap.org/browse/way/129417493/history">this building</a>. The reason given is "copyright violation abuse".</p>
-<p>I'm not familiar with the particular case but I guess that someone (either deliberately or by accident) added data that they didn't have the rights to. See <a href="http://wiki.openstreetmap.org/wiki/Copyright">this</a> wiki page for a bit more information.</p>
+<p>Data has been deleted in that area - one example is <a href="https://www.openstreetmap.org/browse/way/129417493/history">this building</a>. The reason given is "copyright violation abuse".</p>
+<p>I'm not familiar with the particular case but I guess that someone (either deliberately or by accident) added data that they didn't have the rights to. See <a href="https://wiki.openstreetmap.org/wiki/Copyright">this</a> wiki page for a bit more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

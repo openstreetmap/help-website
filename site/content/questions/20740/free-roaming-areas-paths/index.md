@@ -180,7 +180,7 @@ osqa_accepted = true
 <div id="post-20747-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In the Netherlands there areas where youre allowed to go anywhere, roaming or struinen (Nld) and on tracks as Klompenpaden (Wooden shoes). The last ones come with the allowance to cross farmland from A to B. Therefore I asked for 2 tags at the same time. And yes Andy I know the British right of way and the Allemans right in Scandinavia. The south bank or border of the river <a href="http://www.openstreetmap.org/?lat=51.96899&amp;lon=5.16667&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=51.96899&amp;lon=5.16667&amp;zoom=16&amp;layers=M</a> is a designated and marked as a free roaming field. And on the north bank to the west ther's a track designed as Struinpad from one farm to another.</p>
+<p>In the Netherlands there areas where youre allowed to go anywhere, roaming or struinen (Nld) and on tracks as Klompenpaden (Wooden shoes). The last ones come with the allowance to cross farmland from A to B. Therefore I asked for 2 tags at the same time. And yes Andy I know the British right of way and the Allemans right in Scandinavia. The south bank or border of the river <a href="https://www.openstreetmap.org/?lat=51.96899&amp;lon=5.16667&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=51.96899&amp;lon=5.16667&amp;zoom=16&amp;layers=M</a> is a designated and marked as a free roaming field. And on the north bank to the west ther's a track designed as Struinpad from one farm to another.</p>
 </div>
 <div id="comment-20747-info" class="comment-info">
 <span class="comment-age">(16 Mar '13, 21:00)</span> <span class="comment-user userinfo">Hendrikklaas</span>

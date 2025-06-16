@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would be tempted to use landuse=commercial as they sell you somewhere to stay or hold conferences or so on, rather than a physical product which I think is the main distinction between retail and commercial (at least looking at wikipedia's definitions of the two - the OSM wiki is sadly lacking in clarity at present).</p>
-<p>See <a href="http://en.wikipedia.org/wiki/Retail">wikipedia:Retail</a> and <a href="http://en.wikipedia.org/wiki/Commercial_district">wikipedia:Commercial_district</a> to see if you agree, and compare with <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Landuse">Map Features</a>, <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dretail">landuse=retail</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcommercial">landuse=commercial</a> pages.</p>
+<p>See <a href="http://en.wikipedia.org/wiki/Retail">wikipedia:Retail</a> and <a href="http://en.wikipedia.org/wiki/Commercial_district">wikipedia:Commercial_district</a> to see if you agree, and compare with <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Landuse">Map Features</a>, <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dretail">landuse=retail</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcommercial">landuse=commercial</a> pages.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -188,7 +188,7 @@ osqa_accepted = false
 <div id="post-9365-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The full <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dretail">quote</a> is "Note: this tag should not be used for individual shops mapped as areas - instead use the relevant shop=* tag and building=yes." which makes it clear that it shouldn't be used as a replacement for tagging the building. I should stress that I'm mapping the <em>parcel</em> that the hotel resides on with a landuse, not the building.</p>
+<p>The full <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dretail">quote</a> is "Note: this tag should not be used for individual shops mapped as areas - instead use the relevant shop=* tag and building=yes." which makes it clear that it shouldn't be used as a replacement for tagging the building. I should stress that I'm mapping the <em>parcel</em> that the hotel resides on with a landuse, not the building.</p>
 <p>I think that it's bad practice to map an area based on its surroundings, instead of what's there, e.g. retail areas that are surrounded by residential <em>should</em> have their own landuse.</p>
 </div>
 <div id="comment-9365-info" class="comment-info">

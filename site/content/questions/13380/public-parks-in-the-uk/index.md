@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For Query APIs like <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> or <a href="http://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> the bounding box will be too large. Therefore the best way seems to get a planet extract of the UK from <a href="http://download.geofabrik.de/osm/">Geofabrik</a> and run <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> on it to filter for <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark">leisure=park</a> and maybe name=*. However this will probably return a lot more objects than you are searching for.</p>
+<p>For Query APIs like <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> or <a href="https://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> the bounding box will be too large. Therefore the best way seems to get a planet extract of the UK from <a href="http://download.geofabrik.de/osm/">Geofabrik</a> and run <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> on it to filter for <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark">leisure=park</a> and maybe name=*. However this will probably return a lot more objects than you are searching for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

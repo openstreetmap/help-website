@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might want to check out the <code>scale</code> and <code>symbolScale</code> option at the start of the rule file. You also might want to change the font sizes inside the rule file. See <a href="http://wiki.openstreetmap.org/wiki/Osmarender"></a><a href="http://wiki.openstreetmap.org/wiki/Osmarender"></a><a href="http://wiki.openstreetmap.org/wiki/Osmarender">http://wiki.openstreetmap.org/wiki/Osmarender</a> for documentation on osmarender.</p>
+<p>You might want to check out the <code>scale</code> and <code>symbolScale</code> option at the start of the rule file. You also might want to change the font sizes inside the rule file. See <a href="https://wiki.openstreetmap.org/wiki/Osmarender"></a><a href="https://wiki.openstreetmap.org/wiki/Osmarender"></a><a href="https://wiki.openstreetmap.org/wiki/Osmarender">https://wiki.openstreetmap.org/wiki/Osmarender</a> for documentation on osmarender.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

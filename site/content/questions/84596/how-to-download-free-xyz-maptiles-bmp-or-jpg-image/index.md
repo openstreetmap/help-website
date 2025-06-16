@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi All,</p>
 <p>I've a project that requires me to download Map Tiles JPG or BMP images for Singapore in following format : 1) BMP OR JPG 2) Zoom level 6-17 3) Generate Center Lat Lon in degree for all tiles 4) Map &amp; Satellite Images 5) For offline uses, images must be free to use (eg. OSM ). Sample pictures here :</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Cap1ture_mLCwII6.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Cap1ture_mLCwII6.JPG" alt="alt text" /></p>
 <p>I used SAS Planet software to download Google tiles but realizes that google required license.. it's not free to use thou.. Anyone has any idea how/where do I download OSM Map tiles and Satellite images?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The API 0.6 method <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Create:_PUT_.2Fapi.2F0.6.2Fchangeset.2Fcreate">'create changeset'</a> allows you to create a changeset without doing any subsequent additions to that changeset. Reason might be anything from broken uploads (e.g. network issues), editor bugs, etc..</p>
+<p>The API 0.6 method <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Create:_PUT_.2Fapi.2F0.6.2Fchangeset.2Fcreate">'create changeset'</a> allows you to create a changeset without doing any subsequent additions to that changeset. Reason might be anything from broken uploads (e.g. network issues), editor bugs, etc..</p>
 <p>I even remember one case where a mapper created a huge number of such empty changesets to make hostile vandalism activities a bit more difficult to deal with. Yes, strange things happen some time, but all that got sorted out fairly quickly.</p>
 <p>Update: as Simon provided some editor specific insights, I thought I could add some statistics from by local DB. It's about half a year old, but you should get a rough impression, which editors created how many empty changesets (if they identify themselves by name). You could of course group the entries by editor type (ignoring different editor versions, languages) - this is left as an exercise to the reader.</p>
 <pre><code>                                  created_by                                   |   c   
@@ -175,13 +175,13 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>In the case of "Go Map!" at credentials-checking changesets are identifiable as such:</p>
-<p><a href="http://www.openstreetmap.org/changeset/16640349">http://www.openstreetmap.org/changeset/16640349</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/16640349">https://www.openstreetmap.org/changeset/16640349</a></p>
 <p>Though it can create others:</p>
-<p><a href="http://www.openstreetmap.org/changeset/21804635">http://www.openstreetmap.org/changeset/21804635</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/21804635">https://www.openstreetmap.org/changeset/21804635</a></p>
 <p>I also see quite a lot of empty changesets from other editors:</p>
-<p><a href="http://www.openstreetmap.org/changeset/26183795">http://www.openstreetmap.org/changeset/26183795</a></p>
-<p><a href="http://www.openstreetmap.org/changeset/25568455">http://www.openstreetmap.org/changeset/25568455</a></p>
-<p><a href="http://www.openstreetmap.org/changeset/24536371">http://www.openstreetmap.org/changeset/24536371</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/26183795">https://www.openstreetmap.org/changeset/26183795</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/25568455">https://www.openstreetmap.org/changeset/25568455</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/24536371">https://www.openstreetmap.org/changeset/24536371</a></p>
 <p>but not id?</p>
 <p>My apologies to the authors of all of the changesets above - you're not being singled out for any other reason than you happened to use a particular OSM editor!</p>
 </div>
@@ -195,7 +195,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Found an iD one too:</p>
-<p><a href="http://www.openstreetmap.org/changeset/26383946">http://www.openstreetmap.org/changeset/26383946</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/26383946">https://www.openstreetmap.org/changeset/26383946</a></p>
 </div>
 <div id="comment-38110-info" class="comment-info">
 <span class="comment-age">(30 Oct '14, 11:52)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

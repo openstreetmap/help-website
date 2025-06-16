@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help: I have made the coastline of Tonga unrenderable!"
-description = '''Last night I tried to get advanced by creating a series of relationships to better define a coastline and some corresponding tidal flats/mangroves and now none of it is rendering in the Mapnik. The area is here: http://www.openstreetmap.org/#map=15/-21.1465/-175.1545 I started by making a relation b...'''
+description = '''Last night I tried to get advanced by creating a series of relationships to better define a coastline and some corresponding tidal flats/mangroves and now none of it is rendering in the Mapnik. The area is here: https://www.openstreetmap.org/#map=15/-21.1465/-175.1545 I started by making a relation b...'''
 date = "2014-11-15T05:18:00Z"
 lastmod = "2014-11-24T20:51:00Z"
 weight = 38569
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Last night I tried to get advanced by creating a series of relationships to better define a coastline and some corresponding tidal flats/mangroves and now none of it is rendering in the Mapnik. The area is here: <a href="http://www.openstreetmap.org/#map=15/-21.1465/-175.1545">http://www.openstreetmap.org/#map=15/-21.1465/-175.1545</a></p>
+<p>Last night I tried to get advanced by creating a series of relationships to better define a coastline and some corresponding tidal flats/mangroves and now none of it is rendering in the Mapnik. The area is here: <a href="https://www.openstreetmap.org/#map=15/-21.1465/-175.1545">https://www.openstreetmap.org/#map=15/-21.1465/-175.1545</a></p>
 <p>I started by making a relation between the mainland and the nearby islet since they are locally regarded as one in the same, being separated only by the tidal mudflats. After this, I tried to replicate some tagging/relationships I had seen in Australia where one boundary of the mangroves is defined by the coastline way and the other by a wetland way. Somewhere along the way, this hasn't worked out properly and I'm not sure the right way to fix it and get the result I was looking for.</p>
 <p>If someone can have a look at this for me and point out where I went wrong and how I can fix it I would be very happy.</p>
 <p>Malo</p>
@@ -143,7 +143,7 @@ One Answer:
 <div id="post-38589-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: from <a href="/questions/38437/lost-image-of-bengkalis-island">there</a> I know that it took from 11 Nov, 12:29 to about 15 Nov 13:45 to show a coastline change (on tiles zoom level 13+ – smaller is not updated yet).</p>
+<p><a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: from <a href="/questions/38437/lost-image-of-bengkalis-island">there</a> I know that it took from 11 Nov, 12:29 to about 15 Nov 13:45 to show a coastline change (on tiles zoom level 13+ – smaller is not updated yet).</p>
 </div>
 <div id="comment-38589-info" class="comment-info">
 <span class="comment-age">(16 Nov '14, 00:39)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -154,7 +154,7 @@ One Answer:
 <div id="post-38590-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for the help. It might be time to upgrade to the more powerful editor in JOSM. The simplicity of iD got me into it in the first place. According the the link <a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a> it looks like coastlines haven't been rendered since Friday sometime, I'm still waiting for the island to return to the mapnik, but will advise when if it doesn't return. I must have made the changes right before render time since it disappeared pretty soon after.</p>
+<p>Thanks for the help. It might be time to upgrade to the more powerful editor in JOSM. The simplicity of iD got me into it in the first place. According the the link <a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a> it looks like coastlines haven't been rendered since Friday sometime, I'm still waiting for the island to return to the mapnik, but will advise when if it doesn't return. I must have made the changes right before render time since it disappeared pretty soon after.</p>
 <p>Thanks again.</p>
 <p>Malo.</p>
 </div>
@@ -167,7 +167,7 @@ One Answer:
 <div id="post-38738-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi <a href="http://help.openstreetmap.org/users/9580/mboeringa">@mboeringa</a></p>
+<p>Hi <a href="https://help.openstreetmap.org/users/9580/mboeringa">@mboeringa</a></p>
 <p>I see your extra work to get the tags right and the coastline rendering, thanks very much. It was rendering properly at some of the larger zoom levels, I guess it's a matter of time before the others render properly now too.</p>
 <p>Is it possible that coastlines made up of relations take significantly longer to render than those that are made up of just a closed way?</p>
 <p>Malo.</p>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to draw objects when the aerial imagery is different in different zoomlevels?"
-description = '''In zoomlevel 19 my edits perfectly fit the aerial imagery, but when I zoom out to zoomlevel 18, the edits don&#x27;t fit the imagery any more. Any suggestion what to do about this? Zoom 19: http://www.openstreetmap.org/edit#map=19/44.26391/15.29172 Zoom 18: http://www.openstreetmap.org/edit#map=18/44.264...'''
+description = '''In zoomlevel 19 my edits perfectly fit the aerial imagery, but when I zoom out to zoomlevel 18, the edits don&#x27;t fit the imagery any more. Any suggestion what to do about this? Zoom 19: https://www.openstreetmap.org/edit#map=19/44.26391/15.29172 Zoom 18: https://www.openstreetmap.org/edit#map=18/44.264...'''
 date = "2014-08-22T19:49:00Z"
 lastmod = "2014-08-22T20:13:00Z"
 weight = 36086
@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In zoomlevel 19 my edits perfectly fit the aerial imagery, but when I zoom out to zoomlevel 18, the edits don't fit the imagery any more. Any suggestion what to do about this?</p>
-<p>Zoom 19: <a href="http://www.openstreetmap.org/edit#map=19/44.26391/15.29172">http://www.openstreetmap.org/edit#map=19/44.26391/15.29172</a></p>
-<p>Zoom 18: <a href="http://www.openstreetmap.org/edit#map=18/44.26409/15.29331">http://www.openstreetmap.org/edit#map=18/44.26409/15.29331</a></p>
-<p>(Yes, I read <a href="http://wiki.openstreetmap.org/wiki/Bing#Precision">http://wiki.openstreetmap.org/wiki/Bing#Precision</a> . But what do to when this happens=)</p>
+<p>Zoom 19: <a href="https://www.openstreetmap.org/edit#map=19/44.26391/15.29172">https://www.openstreetmap.org/edit#map=19/44.26391/15.29172</a></p>
+<p>Zoom 18: <a href="https://www.openstreetmap.org/edit#map=18/44.26409/15.29331">https://www.openstreetmap.org/edit#map=18/44.26409/15.29331</a></p>
+<p>(Yes, I read <a href="https://wiki.openstreetmap.org/wiki/Bing#Precision">https://wiki.openstreetmap.org/wiki/Bing#Precision</a> . But what do to when this happens=)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span> <span class="post-tag tag-link-aerial" rel="tag" title="see questions tagged &#39;aerial&#39;">aerial</span>

@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming that you are talking about <a href="http://www.openstreetmap.org/?lat=51.97254&amp;lon=-9.78276&amp;zoom=16&amp;layers=M">Maghanlawaun</a> then it seems like a part of road haven't been mapped yet. You can simply add this part of road with Potlatch.</p>
-<p>Please note that tile rendering is not working currently(see <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">Servers statuses</a>), so you don't see Bridia Valley on all zoom levels and you can't see the restaurant you marked on the main mapnik layer. Also anything else you add to the map won't appear till the end of maintenance.</p>
+<p>Assuming that you are talking about <a href="https://www.openstreetmap.org/?lat=51.97254&amp;lon=-9.78276&amp;zoom=16&amp;layers=M">Maghanlawaun</a> then it seems like a part of road haven't been mapped yet. You can simply add this part of road with Potlatch.</p>
+<p>Please note that tile rendering is not working currently(see <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">Servers statuses</a>), so you don't see Bridia Valley on all zoom levels and you can't see the restaurant you marked on the main mapnik layer. Also anything else you add to the map won't appear till the end of maintenance.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

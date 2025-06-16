@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Basically the same question was asked and answered yesterday: <a href="http://help.openstreetmap.org/questions/15492/disappearing-data-wtf">disappearing-data-wtf</a></p>
+<p>Basically the same question was asked and answered yesterday: <a href="/questions/15492/disappearing-data-wtf">disappearing-data-wtf</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

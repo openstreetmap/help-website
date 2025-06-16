@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to let tile server rebuild all tiles of a given area?"
-description = '''If I need to dirty all tiles of a given zoomlevel and area, how do I do that? Is there a way to find out the URLs of the tiles currently displayed, to then append /dirty to them? e.g. http://www.openstreetmap.org/#map=16/44.2611/15.2978 I know that it rerenders them after some period of time after b...'''
+description = '''If I need to dirty all tiles of a given zoomlevel and area, how do I do that? Is there a way to find out the URLs of the tiles currently displayed, to then append /dirty to them? e.g. https://www.openstreetmap.org/#map=16/44.2611/15.2978 I know that it rerenders them after some period of time after b...'''
 date = "2014-08-16T16:38:00Z"
 lastmod = "2014-08-17T10:44:00Z"
 weight = 35892
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>If I need to dirty all tiles of a given zoomlevel and area, how do I do that? Is there a way to find out the URLs of the tiles currently displayed, to then append /dirty to them?</p>
-<p>e.g. <a href="http://www.openstreetmap.org/#map=16/44.2611/15.2978">http://www.openstreetmap.org/#map=16/44.2611/15.2978</a></p>
+<p>e.g. <a href="https://www.openstreetmap.org/#map=16/44.2611/15.2978">https://www.openstreetmap.org/#map=16/44.2611/15.2978</a></p>
 <p>I know that it rerenders them after some period of time after beeing last accessed. But in the map posted above it has rendered one of the tiles one half and cut of the parking sign and the restaurant.</p>
 <p>Edit: Now it has rerendere the faulty tile automatically. But the questions remains.</p>
 </div>
@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-35911-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>As a bit of background, it might be worth looking at <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this previous question</a>, which explains how the rerendering process works. One exception to the "normally updates within a few minutes" conclusion of the main answer there is after the "standard" stylesheet has changed, as all tiles are effectively out of date. IF you look at <a href="http://help.openstreetmap.org/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg/528">this other previous answer</a> it explains a bit about this - and the second link from that answer is to a munin graph showing the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/renderd_queue.html">queue of tiles to be rendered</a>.</p>
+<p>As a bit of background, it might be worth looking at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this previous question</a>, which explains how the rerendering process works. One exception to the "normally updates within a few minutes" conclusion of the main answer there is after the "standard" stylesheet has changed, as all tiles are effectively out of date. IF you look at <a href="/questions/527/how-can-i-make-sense-of-muninopenstreetmaporg/528">this other previous answer</a> it explains a bit about this - and the second link from that answer is to a munin graph showing the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/renderd_queue.html">queue of tiles to be rendered</a>.</p>
 <p>What this means is that if you spot an area that's out of date it might be because a stylesheet update has just happened (the project for that is <a href="https://github.com/gravitystorm/openstreetmap-carto">here</a>; after a release is made there it is usually taken live on osm.org by the admins shortly afterwards).</p>
 </div>
 <div id="comment-35911-info" class="comment-info">

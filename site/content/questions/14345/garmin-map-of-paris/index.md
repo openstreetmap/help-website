@@ -86,7 +86,7 @@ osqa_accepted = false
 <p>Thanks for your replies.</p>
 <p>I have no map on my Garmin 60Csx yet. At hte webservice I manualy selected the tiles surrounding Paris. After I got the email stating my map was generated, i downloaded the windows installation. I double clicked that exe file and completed the installation process.</p>
 <p>Then execute Garmin Basecamp and in the dropdown menu I selected the Paris map.</p>
-<p>Now Basecamp shows the map of Paris with a hole in the center. <img src="http://help.openstreetmap.org/upfiles/paris.jpg" alt="Paris" /></p>
+<p>Now Basecamp shows the map of Paris with a hole in the center. <img src="/upfiles/paris.jpg" alt="Paris" /></p>
 <p>When I zoom in at openstreetsmaps all thos lovely tiny streets in the center of Paris are available.</p>
 <p>So my question is how do I get a complete download?</p>
 <p>John</p>

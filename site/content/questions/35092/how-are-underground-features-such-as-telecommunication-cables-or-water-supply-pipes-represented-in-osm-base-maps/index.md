@@ -107,11 +107,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:location">location=underground</a> would seem to be the choice unless in a self supporting structure such as a <a href="http://wiki.openstreetmap.org/wiki/Key:tunnel">tunnel</a>. <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpipeline">Tag:man_made=pipeline</a> suggests using location for 'underground', 'underwater' or 'overground' pipes.<br />
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:location">location=underground</a> would seem to be the choice unless in a self supporting structure such as a <a href="https://wiki.openstreetmap.org/wiki/Key:tunnel">tunnel</a>. <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dpipeline">Tag:man_made=pipeline</a> suggests using location for 'underground', 'underwater' or 'overground' pipes.<br />
 <a href="http://taginfo.openstreetmap.org/keys/location#values">Taginfo</a> shows location=underground to be popular.<br />
-In special situations <a href="http://wiki.openstreetmap.org/wiki/Key:covered">the key covered</a> may be suitable</p>
-<p>How it looks on a map will depend on the rendering scheme used. eg the underground rail shows well on the <a href="http://www.openstreetmap.org/#map=17/-27.46558/153.02422&amp;layers=T">openstreetmap transport layer</a>. I couldn't find an example of comms cables underground.</p>
-<p>Note that the <a href="http://wiki.openstreetmap.org/wiki/Key:layer">key layer</a> -1 does not indicate undergound, but instead layer indicates relative position to other objects.</p>
+In special situations <a href="https://wiki.openstreetmap.org/wiki/Key:covered">the key covered</a> may be suitable</p>
+<p>How it looks on a map will depend on the rendering scheme used. eg the underground rail shows well on the <a href="https://www.openstreetmap.org/#map=17/-27.46558/153.02422&amp;layers=T">openstreetmap transport layer</a>. I couldn't find an example of comms cables underground.</p>
+<p>Note that the <a href="https://wiki.openstreetmap.org/wiki/Key:layer">key layer</a> -1 does not indicate undergound, but instead layer indicates relative position to other objects.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

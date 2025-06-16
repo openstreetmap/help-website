@@ -65,7 +65,7 @@ osqa_accepted = true
 <div id="post-18442-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hello Fred F, Slightly off topic. I hope you don't mind me pointing out that there is an untagged single node at <a href="http://www.openstreetmap.org/browse/node/2065698234">http://www.openstreetmap.org/browse/node/2065698234</a> Looks like it was inadvertently placed, if so it should be deleted. Regards Bernard</p>
+<p>Hello Fred F, Slightly off topic. I hope you don't mind me pointing out that there is an untagged single node at <a href="https://www.openstreetmap.org/browse/node/2065698234">https://www.openstreetmap.org/browse/node/2065698234</a> Looks like it was inadvertently placed, if so it should be deleted. Regards Bernard</p>
 </div>
 <div id="comment-18442-info" class="comment-info">
 <span class="comment-age">(14 Dec '12, 07:23)</span> <span class="comment-user userinfo">BCNorwich</span>
@@ -108,7 +108,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Fred, please see <a href="https://help.openstreetmap.org/faq/">https://help.openstreetmap.org/faq/</a> for which questions should be asked here and which preferably somewhere else.</p>
-<p>Regarding <a href="http://www.openstreetmap.org/browse/node/2065698234">http://www.openstreetmap.org/browse/node/2065698234</a> - I cannot find or select it in Potlatch2, too. That is maybe a bug in Potlatch2. Somebody else (maybe in the other editor "JOSM") will delete it.</p>
+<p>Regarding <a href="https://www.openstreetmap.org/browse/node/2065698234">https://www.openstreetmap.org/browse/node/2065698234</a> - I cannot find or select it in Potlatch2, too. That is maybe a bug in Potlatch2. Somebody else (maybe in the other editor "JOSM") will delete it.</p>
 </div>
 <div id="comment-18453-info" class="comment-info">
 <span class="comment-age">(14 Dec '12, 13:57)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -191,15 +191,15 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Fred, next time you have a question - could you please provide a link to the way in question? Or to the position ("Permalink" on bottom right of the map page). That makes it easier to quickly understand your questions.</p>
-<p>I guess (via search) you mean that way: <a href="http://www.openstreetmap.org/?mlat=50.988463&amp;mlon=2.122558&amp;zoom=18&amp;layers=M">Permalink</a></p>
+<p>I guess (via search) you mean that way: <a href="https://www.openstreetmap.org/?mlat=50.988463&amp;mlon=2.122558&amp;zoom=18&amp;layers=M">Permalink</a></p>
 <p>You created the way as it is usually done, good! Three parts:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/way/196221136">http://www.openstreetmap.org/browse/way/196221136</a></li>
-<li><a href="http://www.openstreetmap.org/browse/way/196222138">http://www.openstreetmap.org/browse/way/196222138</a></li>
-<li><a href="http://www.openstreetmap.org/browse/way/196221347">http://www.openstreetmap.org/browse/way/196221347</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/196221136">https://www.openstreetmap.org/browse/way/196221136</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/196222138">https://www.openstreetmap.org/browse/way/196222138</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/196221347">https://www.openstreetmap.org/browse/way/196221347</a></li>
 </ul>
 <p>As far as I know the name could be assigned to the street's parts also via a (one) relation - but that is more complicated and not as it is done usually.</p>
-<p>Just one (<em>off topic</em>) problem: the node <a href="http://www.openstreetmap.org/browse/node/2065700006">http://www.openstreetmap.org/browse/node/2065700006</a> should be shared by the two street parts (included in both ways) if the street has no gap there.</p>
+<p>Just one (<em>off topic</em>) problem: the node <a href="https://www.openstreetmap.org/browse/node/2065700006">https://www.openstreetmap.org/browse/node/2065700006</a> should be shared by the two street parts (included in both ways) if the street has no gap there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

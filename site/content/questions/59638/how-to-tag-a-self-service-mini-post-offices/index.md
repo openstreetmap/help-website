@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's basically a fancy stamp vending machine:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:vending%3Dstamps">http://wiki.openstreetmap.org/wiki/Tag:vending%3Dstamps</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:vending%3Dstamps">https://wiki.openstreetmap.org/wiki/Tag:vending%3Dstamps</a></p>
 <p>Maybe invent scale=yes to add to that?</p>
 </div>
 <div class="answer-controls post-controls">

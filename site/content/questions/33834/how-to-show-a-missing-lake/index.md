@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to show a missing lake"
-description = '''While driving north east on the A31 (http://www.openstreetmap.org/#map=16/51.2283/-0.7480) I saw a large body of water, to the north of the road, that is not shown on the map. I cannot map it from Bing because Bing just shows large scale work in that area, so I would like to leave a note either aski...'''
+description = '''While driving north east on the A31 (https://www.openstreetmap.org/#map=16/51.2283/-0.7480) I saw a large body of water, to the north of the road, that is not shown on the map. I cannot map it from Bing because Bing just shows large scale work in that area, so I would like to leave a note either aski...'''
 date = "2014-06-09T19:53:00Z"
 lastmod = "2014-06-16T19:46:00Z"
 weight = 33834
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>While driving north east on the A31 (<a href="http://www.openstreetmap.org/#map=16/51.2283/-0.7480)">http://www.openstreetmap.org/#map=16/51.2283/-0.7480)</a> I saw a large body of water, to the north of the road, that is not shown on the map. I cannot map it from Bing because Bing just shows large scale work in that area, so I would like to leave a note either asking anyone local to complete the map, or reminding anyone (me?) to update the map when revised imagery is available. I wondered about using a 'fixme' tag, but the problem is that nothing is mapped in the area where the lake now exists, so there is no node for a 'fixme' tag to be attached to. Can anyone advise me?</p>
+<p>While driving north east on the A31 (<a href="https://www.openstreetmap.org/#map=16/51.2283/-0.7480)">https://www.openstreetmap.org/#map=16/51.2283/-0.7480)</a> I saw a large body of water, to the north of the road, that is not shown on the map. I cannot map it from Bing because Bing just shows large scale work in that area, so I would like to leave a note either asking anyone local to complete the map, or reminding anyone (me?) to update the map when revised imagery is available. I wondered about using a 'fixme' tag, but the problem is that nothing is mapped in the area where the lake now exists, so there is no node for a 'fixme' tag to be attached to. Can anyone advise me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-feature" rel="tag" title="see questions tagged &#39;feature&#39;">feature</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>
@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'd add a note to the map. If you look to the right-hand side of the screen at the lowest of the unlabelled symbols, there's one that might just about be thought of as a speech bubble. Click that, drag the blue marker to where you want to leave the note, fill in the text at the left-hand side, and then click "add note". This mechanism is designed especially for situations like yours, where you've seen something but haven't had chance to map it in detail:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/note_3.png" alt="alt text" /></p>
+<p><img src="/upfiles/note_3.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -193,7 +193,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have mapped a small lake estimating the shore lines. If the lake can be seen from surrounding roads it is possible to sight a object that aligns with a feature on Bing and the map as it is and plot some lines. Take screen shots and print them then take this with you and estimate some lines that can be sketched on your plan you could use a compass. do this from two or three vantage points and it should be possible to do rough lake shape. In my opinion it's better a simplified lake shape on the map than none at all. Before GPS and Aerial were available maps plotted using geometric methods. There may be something in the WIKI to help. have a look at walking papers and the newer <a href="http://wiki.openstreetmap.org/wiki/Field_Papers">http://wiki.openstreetmap.org/wiki/Field_Papers</a> or could you get a local glider club to photo it for you, they must like OSM surely?<br />
+<p>I have mapped a small lake estimating the shore lines. If the lake can be seen from surrounding roads it is possible to sight a object that aligns with a feature on Bing and the map as it is and plot some lines. Take screen shots and print them then take this with you and estimate some lines that can be sketched on your plan you could use a compass. do this from two or three vantage points and it should be possible to do rough lake shape. In my opinion it's better a simplified lake shape on the map than none at all. Before GPS and Aerial were available maps plotted using geometric methods. There may be something in the WIKI to help. have a look at walking papers and the newer <a href="https://wiki.openstreetmap.org/wiki/Field_Papers">https://wiki.openstreetmap.org/wiki/Field_Papers</a> or could you get a local glider club to photo it for you, they must like OSM surely?<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

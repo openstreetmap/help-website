@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Wrong name of city displayed only in some layer"
-description = '''Sorry, I am new here, and I want to correct just one error. Please, give me advice what to do: Farby Laky Sibacol (1307537967) is displayed in &quot;bike&quot; layer in two &quot;zoom&quot; positions instead of the name of city: http://www.openstreetmap.org/#map=8/48.418/18.957&amp;amp;layers=C http://www.openstreetmap.org...'''
+description = '''Sorry, I am new here, and I want to correct just one error. Please, give me advice what to do: Farby Laky Sibacol (1307537967) is displayed in &quot;bike&quot; layer in two &quot;zoom&quot; positions instead of the name of city: https://www.openstreetmap.org/#map=8/48.418/18.957&amp;amp;layers=C http://www.openstreetmap.org...'''
 date = "2013-09-20T11:00:00Z"
 lastmod = "2013-09-20T12:20:00Z"
 weight = 26535
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Sorry, I am new here, and I want to correct just one error. Please, give me advice what to do:</p>
-<p>Farby Laky Sibacol (1307537967) is displayed in "bike" layer in two "zoom" positions instead of the name of city: <a href="http://www.openstreetmap.org/#map=8/48.418/18.957&amp;layers=C">http://www.openstreetmap.org/#map=8/48.418/18.957&amp;layers=C</a> <a href="http://www.openstreetmap.org/#map=9/48.3599/19.1025&amp;layers=C">http://www.openstreetmap.org/#map=9/48.3599/19.1025&amp;layers=C</a></p>
-<p>In standard mode the name of city si displayed correctly: Banská Štiavnica (26036174) <a href="http://www.openstreetmap.org/?edit_help=1#map=11/48.4547/18.9020">http://www.openstreetmap.org/?edit_help=1#map=11/48.4547/18.9020</a></p>
+<p>Farby Laky Sibacol (1307537967) is displayed in "bike" layer in two "zoom" positions instead of the name of city: <a href="https://www.openstreetmap.org/#map=8/48.418/18.957&amp;layers=C">https://www.openstreetmap.org/#map=8/48.418/18.957&amp;layers=C</a> <a href="https://www.openstreetmap.org/#map=9/48.3599/19.1025&amp;layers=C">https://www.openstreetmap.org/#map=9/48.3599/19.1025&amp;layers=C</a></p>
+<p>In standard mode the name of city si displayed correctly: Banská Štiavnica (26036174) <a href="https://www.openstreetmap.org/?edit_help=1#map=11/48.4547/18.9020">https://www.openstreetmap.org/?edit_help=1#map=11/48.4547/18.9020</a></p>
 <p>What's wrong?</p>
 <p>Tomas</p>
 </div>
@@ -135,7 +135,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It looks like the problem was this chemist, Farby Laky Sibacol - <a href="http://www.openstreetmap.org/browse/node/1307537967/history">node ID 1307537967</a></p>
+<p>It looks like the problem was this chemist, Farby Laky Sibacol - <a href="https://www.openstreetmap.org/browse/node/1307537967/history">node ID 1307537967</a></p>
 <p>It was previously tagged as place=city (as well as shop=chemist). Which meant it was rendered at most zoom levels on OpenCycleMap (and probably other maps), instead of the correct city name.</p>
 <p>This incorrect city tag was removed a month ago. So the data is now correct, its just OpenCycleMap hasn't updated yet. Some maps can take a while to update, especially at lower zoom levels. Just wait a while, and it will look correct.</p>
 </div>

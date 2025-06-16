@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dcrossing">wiki page</a> does say "Not rendered by any known renderer" so (assuming the wiki is correct) it looks like the fact that they don't show up is by design.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dcrossing">wiki page</a> does say "Not rendered by any known renderer" so (assuming the wiki is correct) it looks like the fact that they don't show up is by design.</p>
 <p>Basically, it isn't possible for the OSM "standard" map to show <em>everything</em> - there are bound to be some things not rendered. I'm guessing that the reasoning for not showing pedestrian crossings might be that it's a level of detail too far that would clutter the standard map.</p>
 <p>The data's still there though, so anyone that wants to create a "pedestrian crossing map" is able to do so.</p>
 </div>
@@ -173,8 +173,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This sort show ok <a href="http://www.openstreetmap.org/?lat=52.331877&amp;lon=-0.18094&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.331877&amp;lon=-0.18094&amp;zoom=18&amp;layers=M</a><br />
-but will this pedestrian crossing of the sort in your question one show? I have just added one 16-15 hours 27th May 2012 <a href="http://www.openstreetmap.org/?lat=52.32864&amp;lon=-0.184767&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.32864&amp;lon=-0.184767&amp;zoom=18&amp;layers=M</a> we'll have to wait and see. I have now added traffic lights at the intersection of the second example as it as lights and looks right when rendered ( 0725 29 May 2012)</p>
+<p>This sort show ok <a href="https://www.openstreetmap.org/?lat=52.331877&amp;lon=-0.18094&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.331877&amp;lon=-0.18094&amp;zoom=18&amp;layers=M</a><br />
+but will this pedestrian crossing of the sort in your question one show? I have just added one 16-15 hours 27th May 2012 <a href="https://www.openstreetmap.org/?lat=52.32864&amp;lon=-0.184767&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.32864&amp;lon=-0.184767&amp;zoom=18&amp;layers=M</a> we'll have to wait and see. I have now added traffic lights at the intersection of the second example as it as lights and looks right when rendered ( 0725 29 May 2012)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

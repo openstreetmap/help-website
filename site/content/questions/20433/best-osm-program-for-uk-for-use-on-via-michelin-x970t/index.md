@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The specification part is telling that the operating system is Windows CE.net 5.0</p>
-<p>So have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows_Mobile</a> to find some.</p>
+<p>So have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Windows_Mobile">Windows_Mobile</a> to find some.</p>
 <p>Have a look at each program whether it fits to your aims and if you are able to install it on your device.</p>
 </div>
 <div class="answer-controls post-controls">

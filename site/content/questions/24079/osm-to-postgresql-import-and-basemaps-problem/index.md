@@ -46,11 +46,11 @@ osqa_accepted = false
 osm_new_waterways_gen0  
 osm_new_waterways_gen1</code></pre>
 <p>But these tables are referenced in the basemap MapServer XML.</p>
-<p>The following pictures show the problem. The first is my result, the second is the expected (from OpenStreetMap website map): <img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2013-07-08_at_10.45.33.png" alt="alt text" /> <img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2013-07-08_at_10.46.36.png" alt="alt text" /></p>
+<p>The following pictures show the problem. The first is my result, the second is the expected (from OpenStreetMap website map): <img src="/upfiles/Screen_Shot_2013-07-08_at_10.45.33.png" alt="alt text" /> <img src="/upfiles/Screen_Shot_2013-07-08_at_10.46.36.png" alt="alt text" /></p>
 <p>Thanks for any help!</p>
 <p><strong>Edit:</strong></p>
 <p>Now my maps look better and the tables are generated, still, the water area is not fixed. I found another example for problematic data:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2013-07-08_at_14.30.02.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2013-07-08_at_14.30.02.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-import" rel="tag" title="see questions tagged &#39;import&#39;">import</span> <span class="post-tag tag-link-mapserver" rel="tag" title="see questions tagged &#39;mapserver&#39;">mapserver</span> <span class="post-tag tag-link-postgresql" rel="tag" title="see questions tagged &#39;postgresql&#39;">postgresql</span>

@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to get graphical output (and not raw OSM data in XML format) then have a look in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a></p>
+<p>If you want to get graphical output (and not raw OSM data in XML format) then have a look in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -196,7 +196,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>You cannot use the map you saved on your garmin, assuming you you saved a jpeg or png or similar.</p>
 <p>You should use a pre compiled map specially for the garmin.</p>
-<p>Have a look at '<a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a>' and for a step by step guide see this '<a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">dcrainmaker site</a>' who shows how to download a .img file which you can put directly into the garmin folder on your garmin. (Easiest)</p>
+<p>Have a look at '<a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download</a>' and for a step by step guide see this '<a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">dcrainmaker site</a>' who shows how to download a .img file which you can put directly into the garmin folder on your garmin. (Easiest)</p>
 <p>If you prefer instead to use the map in basecamp download version for it and when installed you will be able to use in basecamp and also basecamp can install the map on your garmin.</p>
 <p>If you decide to use the <a href="http://garmin.openstreetmap.nl/">Lambertus</a> site for download you will need to wait a few days in the queue for you map. You can use the <a href="http://extract.bbbike.org/">Bbbike</a> download site with less of a wait period - probably a few hours wait, but this site just has the .img file to load directly on the garmin.<br />
 Read the help links on each of these sites.</p>

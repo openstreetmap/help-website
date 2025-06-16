@@ -127,7 +127,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You need both software and data. A smartphone alone is not enough. You can see OSM as the data, but you need a third party for the software to use that data. As far as I know, no smartphone comes with preinstalled software that can use OSM data</p>
-<p>Take a look at <a href="http://wiki.openstreetmap.org/wiki/Software/Mobile">http://wiki.openstreetmap.org/wiki/Software/Mobile</a> , it contains a long list of programs for different types of smartphones. Some programs are free, for other you have to pay.</p>
+<p>Take a look at <a href="https://wiki.openstreetmap.org/wiki/Software/Mobile">https://wiki.openstreetmap.org/wiki/Software/Mobile</a> , it contains a long list of programs for different types of smartphones. Some programs are free, for other you have to pay.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

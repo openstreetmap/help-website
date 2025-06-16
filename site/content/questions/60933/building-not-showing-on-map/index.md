@@ -130,7 +130,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This overlapping section would have been the problem I suspect, which you have since fixed.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/schoolclip.PNG" alt="Closeup." /></p>
+<p><img src="/upfiles/schoolclip.PNG" alt="Closeup." /></p>
 <p>As mentioned above you can remove type=multipolygon from the way - this is a tag used for relations.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -117,8 +117,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>At <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> there is an icon on the right, second from the bottom, that is for sharing. If you click that a panel will open with a number of sharing options. If you click "html" you will get some code for including a scrollable map in a web page. On example of the use of this is at <a href="http://www.nordicbase.org/information">http://www.nordicbase.org/information</a></p>
-<p>WIth respect to routing, I don't think that OpenStreetMap supports a routing engine, but there are several routing engines that use OSM data and most have a demonstration site. See <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></p>
+<p>At <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> there is an icon on the right, second from the bottom, that is for sharing. If you click that a panel will open with a number of sharing options. If you click "html" you will get some code for including a scrollable map in a web page. On example of the use of this is at <a href="http://www.nordicbase.org/information">http://www.nordicbase.org/information</a></p>
+<p>WIth respect to routing, I don't think that OpenStreetMap supports a routing engine, but there are several routing engines that use OSM data and most have a demonstration site. See <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a></p>
 <p>I happen to use <a href="http://map.project-osrm.org/">http://map.project-osrm.org/</a> which has a method of constructing a URL that contains the destination and origin.</p>
 </div>
 <div class="answer-controls post-controls">

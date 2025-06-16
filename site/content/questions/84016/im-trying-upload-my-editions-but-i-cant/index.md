@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>today i tryed add a new park near from my house, but when i click to send, open a new tab in my browser and nothing happen. i'll upload a picture to show !<img src="https://help.openstreetmap.org/upfiles/OSM_ifxFx7Y.png" alt="alt text" /></p>
+<p>today i tryed add a new park near from my house, but when i click to send, open a new tab in my browser and nothing happen. i'll upload a picture to show !<img src="/upfiles/OSM_ifxFx7Y.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-doubt" rel="tag" title="see questions tagged &#39;doubt&#39;">doubt</span>

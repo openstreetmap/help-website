@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I recently visited <a href="http://www.openstreetmap.org/#map=16/49.5067/-123.7493">a local Provincial Park</a> and did some mapping there. I took a few GPS tracks on my phone. The area has very few GPS tracks at present, nothing with enough resolution to be useful for mapping. I took the tracks while on foot, and walked on roads, trails, and through open grassy areas. As such the GPS track isn't very meaningful for people other than me. I can understand what section was just wandering across open areas, and disregard that section, for others it's less clear.</p>
+<p>I recently visited <a href="https://www.openstreetmap.org/#map=16/49.5067/-123.7493">a local Provincial Park</a> and did some mapping there. I took a few GPS tracks on my phone. The area has very few GPS tracks at present, nothing with enough resolution to be useful for mapping. I took the tracks while on foot, and walked on roads, trails, and through open grassy areas. As such the GPS track isn't very meaningful for people other than me. I can understand what section was just wandering across open areas, and disregard that section, for others it's less clear.</p>
 <p>Should I upload the GPX files anyways?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You could split the difference and clip out the section that you don't think is very helpful before uploading.</p>
-<p>You can do this in JOSM by converting the GPX to data, editing the trace and converting back to GPX. Or <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx">install a plugin</a>. I guess other GPX tools will work too.</p>
+<p>You can do this in JOSM by converting the GPX to data, editing the trace and converting back to GPX. Or <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/EditGpx">install a plugin</a>. I guess other GPX tools will work too.</p>
 <p>I think even if you don't edit it down, uploading a trace with some parts that don't follow a path or road is fine.</p>
 </div>
 <div class="answer-controls post-controls">

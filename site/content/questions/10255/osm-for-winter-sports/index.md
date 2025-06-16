@@ -113,7 +113,7 @@ osqa_accepted = true
 <p>I am going to ski next week... at the Alpe d'Huez, France.</p>
 <ul>
 <li>I have Maverick pro installed on my Android smartphone</li>
-<li>I installed and used <a href="http://wiki.openstreetmap.org/wiki/MOBAC">MOBAC</a> (MObile Atlac Creator available at <a href="http://mobac.sourceforge.net/)">http://mobac.sourceforge.net/)</a> on my PC</li>
+<li>I installed and used <a href="https://wiki.openstreetmap.org/wiki/MOBAC">MOBAC</a> (MObile Atlac Creator available at <a href="http://mobac.sourceforge.net/)">http://mobac.sourceforge.net/)</a> on my PC</li>
 <li>I selected Osmarender with tiles up to zoom level 15 (level 16 would be luxury). At this level I can read the names of the slopes!</li>
 <li>I then created the atlas for the Maverick format (a folder tree structure of folders named from 0 to 15 with, about 965 tiles in 95 folders, 9MB, for the Alpe d'Huez area)</li>
 <li>I connected the smartphone to the PC and mounted it as drive G: (first letter available to me)</li>
@@ -320,7 +320,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I just discovered that <a href="http://wiki.openstreetmap.org/wiki/MOBAC">MOBAC</a> is flagged as an application resulting in heavy traffic for the OSM tile servers and is likely to be blocked. Sorry.</p>
+<p>I just discovered that <a href="https://wiki.openstreetmap.org/wiki/MOBAC">MOBAC</a> is flagged as an application resulting in heavy traffic for the OSM tile servers and is likely to be blocked. Sorry.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

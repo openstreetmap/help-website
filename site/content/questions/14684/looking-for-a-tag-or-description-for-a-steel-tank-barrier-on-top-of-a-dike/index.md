@@ -107,7 +107,7 @@ osqa_accepted = false
 <div id="post-14743-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>wiki.. uppercase is not rendered thanks scai <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1</a></p>
+<p>wiki.. uppercase is not rendered thanks scai <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1</a></p>
 </div>
 <div id="comment-14743-info" class="comment-info">
 <span class="comment-age">(01 Aug '12, 08:35)</span> <span class="comment-user userinfo">andy mackey</span>

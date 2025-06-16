@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Department store?"
-description = '''https://help.openstreetmap.org/questions/9410/what-is-the-best-labeltag-for-a-department-store suggests Walmart should be tagged department store and points to a Wiki saying a department store&#x27;s focus is clothing. (I think that doesn&#x27;t really fit Walmart.) Anyway, I live near a store that sells many...'''
+description = '''/questions/9410/what-is-the-best-labeltag-for-a-department-store suggests Walmart should be tagged department store and points to a Wiki saying a department store&#x27;s focus is clothing. (I think that doesn&#x27;t really fit Walmart.) Anyway, I live near a store that sells many...'''
 date = "2019-07-29T01:42:00Z"
 lastmod = "2019-08-03T22:45:00Z"
 weight = 70228
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="https://help.openstreetmap.org/questions/9410/what-is-the-best-labeltag-for-a-department-store">https://help.openstreetmap.org/questions/9410/what-is-the-best-labeltag-for-a-department-store</a> suggests Walmart should be tagged department store and points to a Wiki saying a department store's focus is clothing. (I think that doesn't really fit Walmart.)</p>
+<p><a href="/questions/9410/what-is-the-best-labeltag-for-a-department-store">https://help.openstreetmap.org/questions/9410/what-is-the-best-labeltag-for-a-department-store</a> suggests Walmart should be tagged department store and points to a Wiki saying a department store's focus is clothing. (I think that doesn't really fit Walmart.)</p>
 <p>Anyway, I live near a store that sells many different types of things. Much smaller than a Walmart but too big and low cost to be "convenience store." It is currently labeled "pharmacy." I think it is important that someone looking for a pharmacy be able to find this one, but pharmacy is clearly not the main thing here. So I don't know how to tag it.</p>
 <p>Imagine a Walmart superstore, remove the electronics and auto shop (but keep the auto accessories), and make it half the size.</p>
 </div>

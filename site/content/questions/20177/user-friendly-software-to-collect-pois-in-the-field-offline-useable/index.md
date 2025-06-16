@@ -139,8 +139,8 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>... or have a look about <a href="http://wiki.openstreetmap.org/wiki/OsmAnd">http://wiki.openstreetmap.org/wiki/OsmAnd</a> ... it has offline vector maps and can store POIs or OSM elements in a limited manner.</p>
-<p>All android apps dealing with OSM should be collected in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a></p>
+<p>... or have a look about <a href="https://wiki.openstreetmap.org/wiki/OsmAnd">https://wiki.openstreetmap.org/wiki/OsmAnd</a> ... it has offline vector maps and can store POIs or OSM elements in a limited manner.</p>
+<p>All android apps dealing with OSM should be collected in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a></p>
 </div>
 <div id="comment-20273-info" class="comment-info">
 <span class="comment-age">(25 Feb '13, 16:54)</span> <span class="comment-user userinfo">stephan75</span>

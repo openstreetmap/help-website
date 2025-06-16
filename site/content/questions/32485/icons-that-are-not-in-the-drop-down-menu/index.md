@@ -111,8 +111,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You don't mention which editor you're using, but in general, the presets are just there for convenience. You are not limited to those tags.</p>
-<p>To enter other tags, you can click from Simple to Advanced (at the bottom of the tagging panel) in Potlatch 2. In iD, you can open the All Tags section, then click on the + to add more tags. Look through the <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page, or just search through the OSM wiki to find tags for the features you're mapping. There may be well developed tagging schemes for what you're doing. You may also be trying to add something not many people have mapped. If so, you might also try searching in <a href="http://taginfo.openstreetmap.org/">taginfo</a> to see what other mappers have done.</p>
-<p>Not everything that is put in the OSM database is rendered on every map. For more info on this, see other questions like <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></p>
+<p>To enter other tags, you can click from Simple to Advanced (at the bottom of the tagging panel) in Potlatch 2. In iD, you can open the All Tags section, then click on the + to add more tags. Look through the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page, or just search through the OSM wiki to find tags for the features you're mapping. There may be well developed tagging schemes for what you're doing. You may also be trying to add something not many people have mapped. If so, you might also try searching in <a href="http://taginfo.openstreetmap.org/">taginfo</a> to see what other mappers have done.</p>
+<p>Not everything that is put in the OSM database is rendered on every map. For more info on this, see other questions like <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you referring to <a href="http://www.openstreetmap.org/node/2805653878">this bus stop</a>? It has just a <em>name</em> and a <em>note</em> tag, but no <em>highway=bus_stop</em> tag. Add this tag and your bus stop should appear on the map. And you should remove the <em>name=Bus Stop</em> because <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">the name should not be used for categories</a>.</p>
+<p>Are you referring to <a href="https://www.openstreetmap.org/node/2805653878">this bus stop</a>? It has just a <em>name</em> and a <em>note</em> tag, but no <em>highway=bus_stop</em> tag. Add this tag and your bus stop should appear on the map. And you should remove the <em>name=Bus Stop</em> because <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">the name should not be used for categories</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -208,9 +208,9 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Actually, there are two nodes there. There's <a href="http://www.openstreetmap.org/node/2805653878/history">this one</a> ("<code>name=Bus Stop</code>", but no "<code>highway=bus_stop</code>" tag) and there's <a href="http://www.openstreetmap.org/node/502501389/history">this one</a> (that does have a "<code>highway=bus_stop</code>" tag, but it's also been tagged with "<code>designation=non-existant</code>").</p>
+<p>Actually, there are two nodes there. There's <a href="https://www.openstreetmap.org/node/2805653878/history">this one</a> ("<code>name=Bus Stop</code>", but no "<code>highway=bus_stop</code>" tag) and there's <a href="https://www.openstreetmap.org/node/502501389/history">this one</a> (that does have a "<code>highway=bus_stop</code>" tag, but it's also been tagged with "<code>designation=non-existant</code>").</p>
 <p>If there is really a westbound bus-stop there I'm not sure why "<code>designation=non-existant</code>" has been added to the NaPTAN-imported stop, and if there isn't I'm not sure why a new "<code>name=Bus Stop</code>" has been added?</p>
-<p>When asking a specific piece of tagging like this it might be easier to discuss it in real time over <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> - that way there isn't a several-hours gap between replies. There are almost always people in the #osm and #osm-gb IRC channels that would be able to help, and you can use <a href="http://irc.openstreetmap.org/">this link</a> to use these IRC channels from your web browser.</p>
+<p>When asking a specific piece of tagging like this it might be easier to discuss it in real time over <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> - that way there isn't a several-hours gap between replies. There are almost always people in the #osm and #osm-gb IRC channels that would be able to help, and you can use <a href="http://irc.openstreetmap.org/">this link</a> to use these IRC channels from your web browser.</p>
 </div>
 <div id="comment-32528-info" class="comment-info">
 <span class="comment-age">(22 Apr '14, 18:29)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

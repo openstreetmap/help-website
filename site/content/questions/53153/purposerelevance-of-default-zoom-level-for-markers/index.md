@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-53490-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4961/ybon">@ybon</a>: Thanks for your answer.</p>
+<p><a href="https://help.openstreetmap.org/users/4961/ybon">@ybon</a>: Thanks for your answer.</p>
 <p>To clarify for others: The small magnifying glass is not the one used for searching locations (doing geocoding). But instead it is the one visible e.g. when showing the data layers. (I Hope that I got that right...)</p>
 </div>
 <div id="comment-53490-info" class="comment-info">

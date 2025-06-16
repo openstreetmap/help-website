@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have checked the data thoroughly and found that it is due to the 64 bit problem. see here <a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">http://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a> . Quantum GIS OpenStreetMap plugin has not been updated yet. You will have to use other methods.</p>
+<p>I have checked the data thoroughly and found that it is due to the 64 bit problem. see here <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">https://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a> . Quantum GIS OpenStreetMap plugin has not been updated yet. You will have to use other methods.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -166,7 +166,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>"It is said" where? I've posted a fat ugly note on this page about the problem: <a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a> If anyone knows more about a fix, add some details on there.</p>
+<p>"It is said" where? I've posted a fat ugly note on this page about the problem: <a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a> If anyone knows more about a fix, add some details on there.</p>
 </div>
 <div id="comment-21509-info" class="comment-info">
 <span class="comment-age">(13 Apr '13, 19:54)</span> <span class="comment-user userinfo">Harry Wood</span>

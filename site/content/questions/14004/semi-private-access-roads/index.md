@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>A favourite trick of our local town planners is to build a residential cul-de-sac where the main roadway stops just short of the last few houses, but the road continues, after a change of surface, width and/or level, to give access to a few more houses. The effect can be seen in the Bing imagery at the ends of both branches of Haddon Close (<a href="http://www.openstreetmap.org/?lat=50.852612&amp;lon=-1.199944&amp;zoom=18&amp;layers=M).">http://www.openstreetmap.org/?lat=50.852612&amp;lon=-1.199944&amp;zoom=18&amp;layers=M).</a> Should the semi-private road extensions be mapped as part of the normal road, mapped but shown as private, or not mapped at all?</p>
+<p>A favourite trick of our local town planners is to build a residential cul-de-sac where the main roadway stops just short of the last few houses, but the road continues, after a change of surface, width and/or level, to give access to a few more houses. The effect can be seen in the Bing imagery at the ends of both branches of Haddon Close (<a href="https://www.openstreetmap.org/?lat=50.852612&amp;lon=-1.199944&amp;zoom=18&amp;layers=M).">https://www.openstreetmap.org/?lat=50.852612&amp;lon=-1.199944&amp;zoom=18&amp;layers=M).</a> Should the semi-private road extensions be mapped as part of the normal road, mapped but shown as private, or not mapped at all?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-residential" rel="tag" title="see questions tagged &#39;residential&#39;">residential</span> <span class="post-tag tag-link-private" rel="tag" title="see questions tagged &#39;private&#39;">private</span>
@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That looks to me like a shared driveway, which the houses on that section might have to jointly pay towards maintaining (thinking of somewhere I used to live <a href="http://www.openstreetmap.org/edit?lat=52.592214&amp;lon=-2.202406&amp;zoom=18">here</a> where that was the case - it might not be clear due to the trees but the last 4 houses on Cheriton Grove share a driveway). As such I would probably map it as a driveway (highway=service/service=driveway).</p>
+<p>That looks to me like a shared driveway, which the houses on that section might have to jointly pay towards maintaining (thinking of somewhere I used to live <a href="https://www.openstreetmap.org/edit?lat=52.592214&amp;lon=-2.202406&amp;zoom=18">here</a> where that was the case - it might not be clear due to the trees but the last 4 houses on Cheriton Grove share a driveway). As such I would probably map it as a driveway (highway=service/service=driveway).</p>
 <p>Edit: While I was there, I have now mapped the end of Cheriton Grove as a driveway, plus added the paths I used to walk in the area.</p>
 </div>
 <div class="answer-controls post-controls">

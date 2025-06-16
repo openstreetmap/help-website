@@ -114,7 +114,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><strong><a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></strong> can read pbf as well as osm, osm.gz and osm.bz2. I've posted example code on the forum a while ago. It's not 100% up to date but should give you a first impression how you could use it:</p>
+<p><strong><a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></strong> can read pbf as well as osm, osm.gz and osm.bz2. I've posted example code on the forum a while ago. It's not 100% up to date but should give you a first impression how you could use it:</p>
 <p><a href="http://forum.openstreetmap.org/viewtopic.php?pid=213212#p213212">http://forum.openstreetmap.org/viewtopic.php?pid=213212#p213212</a></p>
 <p>Additional features of Osmosis include filters and other pipeline elements to e.g. trim unwanted data while you are reading it. Osmosis is most commonly used as a stand-alone command line tool, but do not let that fool you: It is a decent choice as a Java library as well. I've used it in several of my projects.</p>
 <p>However, I'm not an Android developer and do not know whether Osmosis works on Android. So take my recommendation with a grain of salt!</p>
@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Pbf">OSM wiki page</a> has links to the protobuf code.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Pbf">OSM wiki page</a> has links to the protobuf code.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -233,7 +233,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>via <a href="http://wiki.openstreetmap.org/wiki/O5m">wiki/O5m</a> I found recently <a href="https://github.com/kiselev-dv/o5m4j">o5m4j</a> ... a small java lib.</p>
+<p>via <a href="https://wiki.openstreetmap.org/wiki/O5m">wiki/O5m</a> I found recently <a href="https://github.com/kiselev-dv/o5m4j">o5m4j</a> ... a small java lib.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

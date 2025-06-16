@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Please help provide an example of how to display third-party information on top of OSM for displaying parcel boundaries. Any link with a sample for example will be helpful. I have also attached an image.<img src="https://help.openstreetmap.org/upfiles/openstreet_with_boundaries.jpg" alt="Image with parcel boundaries" /></p>
+<p>Please help provide an example of how to display third-party information on top of OSM for displaying parcel boundaries. Any link with a sample for example will be helpful. I have also attached an image.<img src="/upfiles/openstreet_with_boundaries.jpg" alt="Image with parcel boundaries" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map-with-parcel" rel="tag" title="see questions tagged &#39;map-with-parcel&#39;">map-with-parcel</span>

@@ -45,7 +45,7 @@ osqa_accepted = true
 <pre><code>amenity=pub, tourism=bed_and_breakfast
 amenity=restaurant, tourism=bed_and_breakfast</code></pre>
 <p>..but it doesn't make it clear that their primary purpose is a pub/restaurant so a renderer doesn't have enough information to know whether to draw a pub/restaurant symbol or a B&amp;B symbol.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Pub">wiki does suggest that <code>pub</code> may have an <code>accommodation</code> tag</a> but I'm not sure how commonly this is used and it doesn't solve the problem for restaurant.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Pub">wiki does suggest that <code>pub</code> may have an <code>accommodation</code> tag</a> but I'm not sure how commonly this is used and it doesn't solve the problem for restaurant.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span> <span class="post-tag tag-link-tourism" rel="tag" title="see questions tagged &#39;tourism&#39;">tourism</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -79,7 +79,7 @@ amenity=restaurant, tourism=bed_and_breakfast</code></pre>
 <div id="post-4724-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This reminds me of one of my early questions: <a href="http://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility">http://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a> Unfortunately, it was too verbose and I feel failed to make the point. Then it got edited by someone else to sound more generic, and as a result got a generic answer. At any rate, I did not get the same advice you did. After I took the advice, the end result (as far as rendering) does not look too great. Hopefully, the search works as expected. I will try retagging it your way: tourism=hotel + amenity=sports_centre, which was my initial instinct.</p>
+<p>This reminds me of one of my early questions: <a href="/questions/2969/how-to-tag-a-multi-function-facility">https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a> Unfortunately, it was too verbose and I feel failed to make the point. Then it got edited by someone else to sound more generic, and as a result got a generic answer. At any rate, I did not get the same advice you did. After I took the advice, the end result (as far as rendering) does not look too great. Hopefully, the search works as expected. I will try retagging it your way: tourism=hotel + amenity=sports_centre, which was my initial instinct.</p>
 </div>
 <div id="comment-4724-info" class="comment-info">
 <span class="comment-age">(22 Apr '11, 04:50)</span> <span class="comment-user userinfo">ponzu</span>

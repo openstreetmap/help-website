@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>First, I'm using the <a href="https://github.com/PanierAvide/BasicOSMParser">BasicOSMParser by Panier Avide</a> to obtain the info in Java.</p>
-<p>After that, I followed <a href="https://help.openstreetmap.org/questions/15442/detection-of-intersections-in-the-maps">this solution</a> to get all the nodes. I also did some additional testing for triple intersections and unnamed stuff such as roundabouts.</p>
-<p>Now, I need to obtain adjacent/precedent intersections, to sort of make a graph of how the intersections connect. Is this possible? After digging, <a href="https://help.openstreetmap.org/questions/32276/how-to-detect-two-adjacent-intersections">I found this question from 2014</a>, but it does not have answers.</p>
+<p>After that, I followed <a href="/questions/15442/detection-of-intersections-in-the-maps">this solution</a> to get all the nodes. I also did some additional testing for triple intersections and unnamed stuff such as roundabouts.</p>
+<p>Now, I need to obtain adjacent/precedent intersections, to sort of make a graph of how the intersections connect. Is this possible? After digging, <a href="/questions/32276/how-to-detect-two-adjacent-intersections">I found this question from 2014</a>, but it does not have answers.</p>
 <p>How can I make this graph (not necessarily a graph chart, but the precedence relations) or obtaining/linking intersections?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps <a href="https://help.openstreetmap.org/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">How can I convert an OSM XML file into a graph representation?</a> is helpful.</p>
+<p>Perhaps <a href="/questions/19213/how-can-i-convert-an-osm-xml-file-into-a-graph-representation">How can I convert an OSM XML file into a graph representation?</a> is helpful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I had a similar problem with old addresses - see <a href="http://help.openstreetmap.org/questions/9411/including-old-addresses-to-osm-and-how">http://help.openstreetmap.org/questions/9411/including-old-addresses-to-osm-and-how</a> - and I solved it with a second node on the same building with the other address. Anyway, it would be cool to have a better solution for it, as it violates the osm-principle of one feature - one tag.</p>
+<p>I had a similar problem with old addresses - see <a href="/questions/9411/including-old-addresses-to-osm-and-how">https://help.openstreetmap.org/questions/9411/including-old-addresses-to-osm-and-how</a> - and I solved it with a second node on the same building with the other address. Anyway, it would be cool to have a better solution for it, as it violates the osm-principle of one feature - one tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,7 +177,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I've created a proposal for addr2:* now. Please comment on it :)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/addr2">http://wiki.openstreetmap.org/wiki/Proposed_features/addr2</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/addr2">https://wiki.openstreetmap.org/wiki/Proposed_features/addr2</a></p>
 </div>
 <div id="comment-10073-info" class="comment-info">
 <span class="comment-age">(19 Jan '12, 20:08)</span> <span class="comment-user userinfo">SamuelLB</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I understand from <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dbeach">the wiki</a> that areas tagged natural:beach should only be mapped down to high water springs. For areas like the West coast of Scotland with relatively high tidal ranges ( up to 6 metres ). I think this gives an unrealistic idea of the size of the beach or sandy area.</p>
+<p>I understand from <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dbeach">the wiki</a> that areas tagged natural:beach should only be mapped down to high water springs. For areas like the West coast of Scotland with relatively high tidal ranges ( up to 6 metres ). I think this gives an unrealistic idea of the size of the beach or sandy area.</p>
 <p>(<a href="http://mc.bbbike.org/mc/?lon=-6.36&amp;lat=58.23&amp;zoom=14&amp;num=3&amp;mt0=mapnik&amp;mt1=bing-satellite&amp;mt2=bing-map">view this in a side-by-side comparison</a> and <span>on osm.org</span>) There is <span>an area to North East of Stornoway on the Isle of Lewis</span> which is where two rivers flow out into a sea loch and there is an area of a few square kilometres which is sandy at low tide and floods completely at mean high water springs. It also contains a few small islands. The current satellite image shows it at quite a low tide. Bing maps itself <span>has currently</span> a rather simplistic rendering of the area. The Ordnance Survey OpenData Streetview data gives a good rendering of the area, I was attempting to use that and Mapbox Satellite as a source.</p>
 <p>I am a bit unclear on how to map and tag this area? I understand we're not supposed to tag for the renderer but I would like it to tag it accurately and for it to be rendered realistically. Perhaps I have just been impatient with the amount of the time it take for the tiles to be rendered again.</p>
 </div>
@@ -70,7 +70,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>The coastline is mapped to mhws <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a> so it would be ideal if a way to map beaches to both high water and a low water levels (like mhw spring and mlw neap) could be agreed to. Would be reliant on obtaining hydro data from expert groups or by dedicated local mappers on the ground but worth the effort where there are wide areas of beach exposed on low tides and is quite useful information for the community making use of such areas.</p>
+<p>The coastline is mapped to mhws <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline</a> so it would be ideal if a way to map beaches to both high water and a low water levels (like mhw spring and mlw neap) could be agreed to. Would be reliant on obtaining hydro data from expert groups or by dedicated local mappers on the ground but worth the effort where there are wide areas of beach exposed on low tides and is quite useful information for the community making use of such areas.</p>
 </div>
 <div id="comment-38065-info" class="comment-info">
 <span class="comment-age">(29 Oct '14, 01:25)</span> <span class="comment-user userinfo">nevw</span>

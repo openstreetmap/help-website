@@ -115,7 +115,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should tag them with <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a> and use <a href="http://wiki.openstreetmap.org/wiki/Key:mtb:scale">mtb:scale</a> for bicycle classification. Further tags like <a href="http://wiki.openstreetmap.org/wiki/Key:sac_scale">sac_scale</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:surface">surface</a> or <a href="http://wiki.openstreetmap.org/wiki/Key:trail_visibility">trail_visibility</a> might be useful, too. Using these tags allows a better classification than the rather simple <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrail">highway=trail</a>.</p>
+<p>You should tag them with <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a> and use <a href="https://wiki.openstreetmap.org/wiki/Key:mtb:scale">mtb:scale</a> for bicycle classification. Further tags like <a href="https://wiki.openstreetmap.org/wiki/Key:sac_scale">sac_scale</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:surface">surface</a> or <a href="https://wiki.openstreetmap.org/wiki/Key:trail_visibility">trail_visibility</a> might be useful, too. Using these tags allows a better classification than the rather simple <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrail">highway=trail</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

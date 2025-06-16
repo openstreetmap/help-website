@@ -157,7 +157,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How far have the nodes apparently moved? I have noticed that the alignment of the Bing images can vary a little depending on the zoom level. Look at the cycle track in the centre of the map at <a href="http://www.openstreetmap.org/?lat=50.857992&amp;lon=-1.187635&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=50.857992&amp;lon=-1.187635&amp;zoom=18&amp;layers=M</a> using Potlatch 2, and watch how the alignment moves by two or three metres as you zoom in. Under ideal conditions, a modern hand-held GPS can be about that accurate, and the average of several tracks taken at different times can be better. By 'ideal conditions' I mean that there are no obstructions (trees or tall buildings) in the immediate vicinity, and the GPS has had a good satellite fix for a minute or so, to allow it to settle.</p>
+<p>How far have the nodes apparently moved? I have noticed that the alignment of the Bing images can vary a little depending on the zoom level. Look at the cycle track in the centre of the map at <a href="https://www.openstreetmap.org/?lat=50.857992&amp;lon=-1.187635&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=50.857992&amp;lon=-1.187635&amp;zoom=18&amp;layers=M</a> using Potlatch 2, and watch how the alignment moves by two or three metres as you zoom in. Under ideal conditions, a modern hand-held GPS can be about that accurate, and the average of several tracks taken at different times can be better. By 'ideal conditions' I mean that there are no obstructions (trees or tall buildings) in the immediate vicinity, and the GPS has had a good satellite fix for a minute or so, to allow it to settle.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In answer to the "how do you align the Bing imagery in Potlatch" part of the question, have a look at the answers to <a href="http://help.openstreetmap.org/questions/11380/bing-imagery-problem">this previous</a> question - they should help.</p>
+<p>In answer to the "how do you align the Bing imagery in Potlatch" part of the question, have a look at the answers to <a href="/questions/11380/bing-imagery-problem">this previous</a> question - they should help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

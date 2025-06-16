@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There appear to be problems with the overpass-api.de/api server at the moment. See <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a> and <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/status">http://wiki.openstreetmap.org/wiki/Overpass_API/status</a> , and <a href="https://lists.openstreetmap.org/pipermail/dev/2016-August/029435.html">this message</a> on the dev list.</p>
+<p>There appear to be problems with the overpass-api.de/api server at the moment. See <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a> and <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/status">https://wiki.openstreetmap.org/wiki/Overpass_API/status</a> , and <a href="https://lists.openstreetmap.org/pipermail/dev/2016-August/029435.html">this message</a> on the dev list.</p>
 <p>This doesn't just affect Overpass Turbo; I'm seeing similar issues from queries from the main website (press the question mark and click somewhere - that request goes to the same server).</p>
 </div>
 <div class="answer-controls post-controls">

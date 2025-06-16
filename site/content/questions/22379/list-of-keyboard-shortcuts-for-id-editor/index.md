@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "List of keyboard shortcuts for iD editor?"
-description = '''Is there a list of the keyboard shortcuts for the iD editor? (a la http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts) [note: separated out from https://help.openstreetmap.org/questions/22224/id-editor-questions]'''
+description = '''Is there a list of the keyboard shortcuts for the iD editor? (a la https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts) [note: separated out from https://help.openstreetmap.org/questions/22224/id-editor-questions]'''
 date = "2013-05-13T14:54:00Z"
 lastmod = "2013-05-14T14:51:00Z"
 weight = 22379
@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is there a list of the keyboard shortcuts for the iD editor? (a la <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a>)</p>
-<p>[note: separated out from <a href="https://help.openstreetmap.org/questions/22224/id-editor-questions">https://help.openstreetmap.org/questions/22224/id-editor-questions</a>]</p>
+<p>Is there a list of the keyboard shortcuts for the iD editor? (a la <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a>)</p>
+<p>[note: separated out from <a href="/questions/22224/id-editor-questions">https://help.openstreetmap.org/questions/22224/id-editor-questions</a>]</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-shortcuts" rel="tag" title="see questions tagged &#39;shortcuts&#39;">shortcuts</span> <span class="post-tag tag-link-keyboard" rel="tag" title="see questions tagged &#39;keyboard&#39;">keyboard</span>

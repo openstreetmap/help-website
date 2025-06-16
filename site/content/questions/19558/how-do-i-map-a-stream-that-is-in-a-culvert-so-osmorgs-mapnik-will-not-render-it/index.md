@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How do I map a stream that is in a Culvert so osm.org's mapnik will not render it?</p>
-<p><a href="http://www.openstreetmap.org/?lat=41.22165396809578&amp;lon=-73.21808338165283&amp;zoom=18">This shopping center has a stream in a culvert under the ground</a> I already added tunnel=culvert to the section of the stream that is in the culvert and layer = -1. OSM.org's mapnik theme still renders the stream. Am I doing something wrong or is this a bug in the mapnik theme osm.org uses? What are your thoughts on this?</p>
+<p><a href="https://www.openstreetmap.org/?lat=41.22165396809578&amp;lon=-73.21808338165283&amp;zoom=18">This shopping center has a stream in a culvert under the ground</a> I already added tunnel=culvert to the section of the stream that is in the culvert and layer = -1. OSM.org's mapnik theme still renders the stream. Am I doing something wrong or is this a bug in the mapnik theme osm.org uses? What are your thoughts on this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-culvert" rel="tag" title="see questions tagged &#39;culvert&#39;">culvert</span> <span class="post-tag tag-link-stream" rel="tag" title="see questions tagged &#39;stream&#39;">stream</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-bug" rel="tag" title="see questions tagged &#39;bug&#39;">bug</span>
@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes that is a bug, but you should tag something as what it is anyway, not as what you want it to look like.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">http://wiki.openstreetmap.org/wiki/Tagging for the renderer</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">https://wiki.openstreetmap.org/wiki/Tagging for the renderer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -217,7 +217,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>On the Standard map I used the link in the question and using P2 editor the stream as a node just north of the car park splitting the stream, both North and South of this node the stream bears the tag tunnel=culvert I think this should be tunnel=yes for the long under ground sections or culvert=yes for short under ground sections. the North section appears, from bing to be above ground so should not have either of these tags. Perhaps this is the problem as SK53 as said edit tunnel=yes works here <a href="http://www.openstreetmap.org/?lat=52.332177&amp;lon=-0.181714&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.332177&amp;lon=-0.181714&amp;zoom=18&amp;layers=M</a></p>
+<p>On the Standard map I used the link in the question and using P2 editor the stream as a node just north of the car park splitting the stream, both North and South of this node the stream bears the tag tunnel=culvert I think this should be tunnel=yes for the long under ground sections or culvert=yes for short under ground sections. the North section appears, from bing to be above ground so should not have either of these tags. Perhaps this is the problem as SK53 as said edit tunnel=yes works here <a href="https://www.openstreetmap.org/?lat=52.332177&amp;lon=-0.181714&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.332177&amp;lon=-0.181714&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -239,7 +239,7 @@ osqa_accepted = false
 <div id="post-22104-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have just edited a short section of your tunnel to tunnel=yes does it work for you <a href="http://www.openstreetmap.org/?mlat=41.222199&amp;mlon=-73.21890&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?mlat=41.222199&amp;mlon=-73.21890&amp;zoom=18&amp;layers=M</a></p>
+<p>I have just edited a short section of your tunnel to tunnel=yes does it work for you <a href="https://www.openstreetmap.org/?mlat=41.222199&amp;mlon=-73.21890&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?mlat=41.222199&amp;mlon=-73.21890&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-22104-info" class="comment-info">
 <span class="comment-age">(05 May '13, 10:21)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -250,7 +250,7 @@ osqa_accepted = false
 <div id="post-22105-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@andy</span>-mackey yes it does (I can see it as a dashed line) but we shouldn't change our mapping to suit the renderer, we need to fix the renderer, since tunnel=culvert is agreed and widely used. <a href="http://wiki.openstreetmap.org/wiki/Key:tunnel">http://wiki.openstreetmap.org/wiki/Key:tunnel</a></p>
+<p><span>@andy</span>-mackey yes it does (I can see it as a dashed line) but we shouldn't change our mapping to suit the renderer, we need to fix the renderer, since tunnel=culvert is agreed and widely used. <a href="https://wiki.openstreetmap.org/wiki/Key:tunnel">https://wiki.openstreetmap.org/wiki/Key:tunnel</a></p>
 </div>
 <div id="comment-22105-info" class="comment-info">
 <span class="comment-age">(05 May '13, 10:29)</span> <span class="comment-user userinfo">mcld</span>
@@ -295,7 +295,7 @@ osqa_accepted = false
 <div id="post-22109-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have an example I mapped here that works with “tunnel=yes” and displays as a feint line <a href="http://www.openstreetmap.org/?mlat=52.331150&amp;mlon=-0.178147&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?mlat=52.331150&amp;mlon=-0.178147&amp;zoom=18&amp;layers=M</a></p>
+<p>I have an example I mapped here that works with “tunnel=yes” and displays as a feint line <a href="https://www.openstreetmap.org/?mlat=52.331150&amp;mlon=-0.178147&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?mlat=52.331150&amp;mlon=-0.178147&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-22109-info" class="comment-info">
 <span class="comment-age">(05 May '13, 10:55)</span> <span class="comment-user userinfo">andy mackey</span>

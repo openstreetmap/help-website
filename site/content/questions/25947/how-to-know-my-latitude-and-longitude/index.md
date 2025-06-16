@@ -145,7 +145,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The url <a href="http://www.openstreetmap.org/#map=18/">http://www.openstreetmap.org/#map=18/</a><strong>50.59199/4.07975</strong> shows your coordinates. Go to <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>, zoom to your location and look at the url, you can read your coordinates.</p>
+<p>The url <a href="https://www.openstreetmap.org/#map=18/">https://www.openstreetmap.org/#map=18/</a><strong>50.59199/4.07975</strong> shows your coordinates. Go to <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>, zoom to your location and look at the url, you can read your coordinates.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

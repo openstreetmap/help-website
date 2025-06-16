@@ -135,7 +135,7 @@ One Answer:
 <div id="post-42388-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Someone gave a good example for tagging this kind is situation:<a href="https://help.openstreetmap.org/questions/41587/tagging-problem-street-one-way-at-certain-times-one-way-the-other-way-at-other-times">https://help.openstreetmap.org/questions/41587/tagging-problem-street-one-way-at-certain-times-one-way-the-other-way-at-other-times</a> Times here are much more simple, as said before it remains to be seen if in your situation it's possible this way.</p>
+<p>Someone gave a good example for tagging this kind is situation:<a href="/questions/41587/tagging-problem-street-one-way-at-certain-times-one-way-the-other-way-at-other-times">https://help.openstreetmap.org/questions/41587/tagging-problem-street-one-way-at-certain-times-one-way-the-other-way-at-other-times</a> Times here are much more simple, as said before it remains to be seen if in your situation it's possible this way.</p>
 <p>Conditional one way streets etc are not that uncommon. If they get mapped enough, someone is bound to make a navigation algorithm that uses the data some day.</p>
 </div>
 <div id="comment-42388-info" class="comment-info">

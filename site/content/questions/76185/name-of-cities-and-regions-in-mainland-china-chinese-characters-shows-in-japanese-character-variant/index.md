@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Name of cities and regions in Mainland China Chinese characters shows in Japanese character variant. Which affects reading and are unreadable for Chinese who are not familiar with the region's name or the Japanese variant characters. It does not affect Traditional Chinese region like Hong Kong. Similar problem was described on the forum "AskUbuntu", outlined <a href="https://askubuntu.com/questions/901486/%E9%97%A8-looks-weird-on-my-system-default-font">here</a> and <a href="https://forum.ubuntu.org.cn/viewtopic.php?t=478915">here</a>. I have tested on different devices and platforms, Linux and non-Linux, yielding the same result. Is there any workaround or fix that can make the names in Mainland China to display correctly.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm-city.png" alt="Image Example" /></p>
+<p><img src="/upfiles/osm-city.png" alt="Image Example" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-cjk" rel="tag" title="see questions tagged &#39;cjk&#39;">cjk</span> <span class="post-tag tag-link-font" rel="tag" title="see questions tagged &#39;font&#39;">font</span> <span class="post-tag tag-link-chinese" rel="tag" title="see questions tagged &#39;chinese&#39;">chinese</span>

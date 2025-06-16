@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>[Hi - I've looked through the FAQs but cannot find an answer on this. Several months ago I marked a proposed route 224 for the national cycle network on OSM. I guess I created this as a 'new relation' and marked it proposed. Now the route is ready to be signposted and I want to change it from 'proposed' - a broken line - to 'actual' - a solid line. When I go into 'edit relation' I have not option to change this. And even if I go into ‘new relation’ to create a new, actual route, there is no option for this.</p>
 <p>The attached link is the area in the centre of Fareham. At the bottom of the screen is an actual route 224 shown in Redlands Lane. North of West Street, Grove Road, etc are shown with a broken proposed line. This continues up to Wickham. All this will need to be changed to solid, actual route.</p>
-<p>Thanks in advance! Roger ]<a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=16/50.8518/-1.1905">1</a></p>
+<p>Thanks in advance! Roger ]<a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=16/50.8518/-1.1905">1</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-sustrans" rel="tag" title="see questions tagged &#39;sustrans&#39;">sustrans</span> <span class="post-tag tag-link-ncn" rel="tag" title="see questions tagged &#39;ncn&#39;">ncn</span>
@@ -152,7 +152,7 @@ osqa_accepted = false
 <p>Select "Advanced" and you will see all the tags and can delete the state=proposed</p>
 <p>Hope this helps.</p>
 <p>I don't know why they made the pop-up box slightly too small, meaning you have to scroll to get to these options - maybe to show people there is a scroll function?</p>
-<p>[Link to relation to save me looking for it again <a href="http://www.openstreetmap.org/relation/3987178">http://www.openstreetmap.org/relation/3987178</a> (sometimes the OSM search can be unsatisfactory)]</p>
+<p>[Link to relation to save me looking for it again <a href="https://www.openstreetmap.org/relation/3987178">https://www.openstreetmap.org/relation/3987178</a> (sometimes the OSM search can be unsatisfactory)]</p>
 <p>Incidentally the Sustrans website says route 224 goes 8 miles from Farnham to Medstead, while the route on the OSM map goes from Fareham to Holybourne (via Medstead)</p>
 </div>
 <div id="comment-43980-info" class="comment-info">

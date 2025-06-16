@@ -118,7 +118,7 @@ One Answer:
 <li>an OpenStreetMap tile server to load the basemap tiles for your web map from</li>
 </ul>
 <p>The first two bullet points can be done by yourself if you have sufficient GIS/programming skills, or you could hire a professional. The third bullet point can be had for free if your tile usage is small-scale (use OSM tile server) or you could use the free MapQuest tiles; but you can also buy tile serving commercially.</p>
-<p>If you are looking for professional support see <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">"Commercial OSM Software and Services"</a> on the Wiki.</p>
+<p>If you are looking for professional support see <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">"Commercial OSM Software and Services"</a> on the Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

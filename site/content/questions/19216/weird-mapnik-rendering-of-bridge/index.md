@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Weird mapnik rendering of bridge"
-description = '''Can someone explain what is going on here? http://www.openstreetmap.org/?lat=33.986674&amp;amp;lon=35.640284&amp;amp;zoom=18&amp;amp;layers=M'''
+description = '''Can someone explain what is going on here? https://www.openstreetmap.org/?lat=33.986674&amp;amp;lon=35.640284&amp;amp;zoom=18&amp;amp;layers=M'''
 date = "2013-01-19T21:30:00Z"
 lastmod = "2013-01-19T22:41:00Z"
 weight = 19216
@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Can someone explain what is going on here?</p>
-<p><a href="http://www.openstreetmap.org/?lat=33.986674&amp;lon=35.640284&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=33.986674&amp;lon=35.640284&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=33.986674&amp;lon=35.640284&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=33.986674&amp;lon=35.640284&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bridge" rel="tag" title="see questions tagged &#39;bridge&#39;">bridge</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Self-intersecting ways. Look at <a href="http://www.openstreetmap.org/browse/way/199414760">http://www.openstreetmap.org/browse/way/199414760</a> and you'll see it visits node 2077246326 twice. Other ways in the area appear to have the same problem. If you fix that it'll render properly.</p>
+<p>Self-intersecting ways. Look at <a href="https://www.openstreetmap.org/browse/way/199414760">https://www.openstreetmap.org/browse/way/199414760</a> and you'll see it visits node 2077246326 twice. Other ways in the area appear to have the same problem. If you fix that it'll render properly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

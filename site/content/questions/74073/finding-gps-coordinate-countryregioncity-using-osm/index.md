@@ -62,7 +62,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Unsure about the purpose of a shapefile but look up Overpass ql 'is_in' using co-ordinates.<br />
-<a href="https://help.openstreetmap.org/questions/74052/get-enclosing-borders">https://help.openstreetmap.org/questions/74052/get-enclosing-borders</a></p>
+<a href="/questions/74052/get-enclosing-borders">https://help.openstreetmap.org/questions/74052/get-enclosing-borders</a></p>
 </div>
 <div id="comment-74074-info" class="comment-info">
 <span class="comment-age">(09 Apr '20, 14:40)</span> <span class="comment-user userinfo">DaveF</span>

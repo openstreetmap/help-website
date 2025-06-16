@@ -102,7 +102,7 @@ out skel qt;</code></pre>
 <div id="post-48727-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/3711/shohreh"></a><a href="http://help.openstreetmap.org/users/3711/shohreh">@Shohreh</a>: crossposting wastes resources (the people who are spending their time to help) because of dulicate work and scatters the collected information/answers across several places (relevant for others in the future with the same question). Please do not do it (unless for very special reason with clear links between each post).</p>
+<p>meta <a href="https://help.openstreetmap.org/users/3711/shohreh"></a><a href="https://help.openstreetmap.org/users/3711/shohreh">@Shohreh</a>: crossposting wastes resources (the people who are spending their time to help) because of dulicate work and scatters the collected information/answers across several places (relevant for others in the future with the same question). Please do not do it (unless for very special reason with clear links between each post).</p>
 </div>
 <div id="comment-48727-info" class="comment-info">
 <span class="comment-age">(17 Mar '16, 22:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -113,7 +113,7 @@ osqa_accepted = true
 <p>I would only tag the short section of road under the bridge with the maxheight tag. Routers should be able to then avoid the bridge (if they know your vehicle height). Tagging the whole way isn't necessary, and risks any side roads that aren't affected by the height restriction becoming unroutable.</p>
 <p>Example road under a railway bridge:</p>
 <p><a href="https://wiki.openstreetmap.org/wiki/File:Bridge_height_restriction_Worcester.jpg"><img src="https://wiki.openstreetmap.org/w/images/a/a6/Bridge_height_restriction_Worcester.jpg" alt="photo" /></a></p>
-<p><a href="http://www.openstreetmap.org/way/505620845#map=18/52.15584/-2.15374">The tag goes on a short section of road</a> : <a href="http://www.openstreetmap.org/way/505620845#map=18/52.15584/-2.15374"><img src="https://help.openstreetmap.org/upfiles/maxheight_tagging_example.png" alt="way 505620845 screenshot" /></a></p>
+<p><a href="https://www.openstreetmap.org/way/505620845#map=18/52.15584/-2.15374">The tag goes on a short section of road</a> : <a href="https://www.openstreetmap.org/way/505620845#map=18/52.15584/-2.15374"><img src="/upfiles/maxheight_tagging_example.png" alt="way 505620845 screenshot" /></a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

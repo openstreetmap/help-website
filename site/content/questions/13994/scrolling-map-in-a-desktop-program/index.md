@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are numerous libraries that provide some sort of tile-based map display like OpenLayers does in a browser; you can usually find them by searching for "OpenLayers clone in &lt;programming language&gt;" or so. If you're thinking of a .NET program then <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMapViewer">OpenStreetMapViewer</a> might be suitable for you. Similar code exists for Java, Flash, and other environments.</p>
+<p>There are numerous libraries that provide some sort of tile-based map display like OpenLayers does in a browser; you can usually find them by searching for "OpenLayers clone in &lt;programming language&gt;" or so. If you're thinking of a .NET program then <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMapViewer">OpenStreetMapViewer</a> might be suitable for you. Similar code exists for Java, Flash, and other environments.</p>
 <p>You are right about the map images ("tiles"). It is ok to load them from OSM for testing and there is no "non-commercial" restriction, however if your application starts to produce noticeable traffic then you are expected to set up your own tile server or use a commercial offering. See switch2osm.org for further information.</p>
 </div>
 <div class="answer-controls post-controls">

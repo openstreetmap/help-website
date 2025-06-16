@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You have to use osmosis to generate replication diffs from your local api-db. Next these replication diffs can be applied to your rendering-db using osm2pgsl. For details see:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Replication#Server-side_Replication">http://wiki.openstreetmap.org/wiki/Osmosis/Replication#Server-side_Replication</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis/Replication#Server-side_Replication">https://wiki.openstreetmap.org/wiki/Osmosis/Replication#Server-side_Replication</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

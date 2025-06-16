@@ -174,8 +174,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Here is the portal for developers on the wiki:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a></p>
-<p>To contact the community of OSM developers, use the dedicated mailing list dev@openstreetmap.org. See all OSM malining lists at <a href="http://wiki.openstreetmap.org/wiki/Mailinglist">this page</a>.</p>
+<a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a></p>
+<p>To contact the community of OSM developers, use the dedicated mailing list dev@openstreetmap.org. See all OSM malining lists at <a href="https://wiki.openstreetmap.org/wiki/Mailinglist">this page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -225,7 +225,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about alla avilable apps for <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> systems.</p>
+<p>Have a look at the OSM wiki about alla avilable apps for <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> systems.</p>
 <p>Some of them are opensource and can display maps from offline data, so you can find out how they work.</p>
 </div>
 <div class="answer-controls post-controls">

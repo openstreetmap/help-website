@@ -198,13 +198,13 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Gpx track as not accurate as you think. If there is many tracks, use all of them to average you road.</p>
-<p>Concerning you direct request, you can get gpx with <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">API</a> at :</p>
+<p>Concerning you direct request, you can get gpx with <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">API</a> at :</p>
 <ul>
 <li><a href="http://osm.org/api/0.6/gpx/">http://osm.org/api/0.6/gpx/</a>&lt;id&gt;/details</li>
 <li><a href="http://osm.org/api/0.6/gpx/">http://osm.org/api/0.6/gpx/</a>&lt;id&gt;/data</li>
 </ul>
 <p>Never the less, I have no idea how to obtain sutch id. And even if it's possible. Look at API for details.</p>
-<p>An other way to retrieve gpx is by tag : <a href="http://www.openstreetmap.org/traces/tag/Thailand"></a><a href="http://www.openstreetmap.org/traces/tag/Thailand"></a><a href="http://www.openstreetmap.org/traces/tag/Thailand">http://www.openstreetmap.org/traces/tag/Thailand</a></p>
+<p>An other way to retrieve gpx is by tag : <a href="https://www.openstreetmap.org/traces/tag/Thailand"></a><a href="https://www.openstreetmap.org/traces/tag/Thailand"></a><a href="https://www.openstreetmap.org/traces/tag/Thailand">https://www.openstreetmap.org/traces/tag/Thailand</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

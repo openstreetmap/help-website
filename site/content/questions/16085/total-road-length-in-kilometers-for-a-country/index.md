@@ -177,7 +177,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps <a href="https://help.openstreetmap.org/questions/38203/if-i-want-to-calculate-total-way-length-is-this-query-a-good-way-to-do-it">this</a> question helps. I am currently waiting for someone to confirm that this is a good approach :)</p>
+<p>Perhaps <a href="/questions/38203/if-i-want-to-calculate-total-way-length-is-this-query-a-good-way-to-do-it">this</a> question helps. I am currently waiting for someone to confirm that this is a good approach :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -215,7 +215,7 @@ This answer is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>The export tab will give an error if the server is overloaded, but it also struggles if you are requesting an area which is too large (or full of too much complex map data).</p>
-<p>Some alternative tools/approach may help you see the <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a> wiki page</p>
+<p>Some alternative tools/approach may help you see the <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a> wiki page</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-43055-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Probably part of the same question as <a href="https://help.openstreetmap.org/questions/43045/cant-close-the-map-im-practising-on">https://help.openstreetmap.org/questions/43045/cant-close-the-map-im-practising-on</a> .</p>
+<p>Probably part of the same question as <a href="/questions/43045/cant-close-the-map-im-practising-on">https://help.openstreetmap.org/questions/43045/cant-close-the-map-im-practising-on</a> .</p>
 </div>
 <div id="comment-43055-info" class="comment-info">
 <span class="comment-age">(13 May '15, 16:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

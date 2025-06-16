@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Take for instance <a href="http://www.openstreetmap.org/?lat=50.947053&amp;lon=-1.389536&amp;zoom=18&amp;layers=M">this crematorium</a>.</p>
+<p>Take for instance <a href="https://www.openstreetmap.org/?lat=50.947053&amp;lon=-1.389536&amp;zoom=18&amp;layers=M">this crematorium</a>.</p>
 <p>Would it be considered acceptable to add <code>addr:street=Bassett Green Road</code> and <code>addr:postcode=SO16 3QB</code> based on <a href="http://www.southampton.gov.uk/living/cremburial/sotoncrem/directions.aspx">the official website</a>?</p>
 <p>I am mindful of the fact I we must not add any data to OSM based on copyrighted maps (including any that appear on the websites of POIs) - but this isn't location data - in fact thing like the "official address" can come only from the institution, whether that be from a paper letter, a sign on the site, or the website?</p>
 </div>

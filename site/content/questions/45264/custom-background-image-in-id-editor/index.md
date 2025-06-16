@@ -107,7 +107,7 @@ osqa_accepted = false
 <div id="post-45468-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Similar question: <a href="https://help.openstreetmap.org/questions/42258/using-images-as-backgrounds">https://help.openstreetmap.org/questions/42258/using-images-as-backgrounds</a></p>
+<p>Similar question: <a href="/questions/42258/using-images-as-backgrounds">https://help.openstreetmap.org/questions/42258/using-images-as-backgrounds</a></p>
 </div>
 <div id="comment-45468-info" class="comment-info">
 <span class="comment-age">(21 Sep '15, 08:41)</span> <span class="comment-user userinfo">sleske</span>

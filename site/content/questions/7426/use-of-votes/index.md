@@ -149,7 +149,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>You can see who voted for what by looking at the karma history on a users page, for example:</p>
-<p><a href="http://help.openstreetmap.org/users/140/flow/reputation/">http://help.openstreetmap.org/users/140/flow/reputation/</a></p>
+<p><a href="https://help.openstreetmap.org/users/140/flow/reputation/">https://help.openstreetmap.org/users/140/flow/reputation/</a></p>
 </div>
 <div id="comment-7452-info" class="comment-info">
 <span class="comment-age">(30 Aug '11, 15:44)</span> <span class="comment-user userinfo">gnurk</span>

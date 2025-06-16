@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello, I have a question about where this instruction is placed in which directory or file? Webserver setup The website/ directory in the build directory contains the configured website. Include the directory into your webbrowser to serve php files from there.</p>
 <p>Configure for use with Apache Make sure your Apache configuration contains the required permissions for the directory and create an alias:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/website.png" alt="alt text" /></p>
+<p><img src="/upfiles/website.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-webserver" rel="tag" title="see questions tagged &#39;webserver&#39;">webserver</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-apache2" rel="tag" title="see questions tagged &#39;apache2&#39;">apache2</span>
@@ -182,10 +182,10 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>I appreciate the answer, but these two instructions come in the nomination documentation:</p>
 <p>1.- Configure Apache web server You must create an alias for the website directory in your apache configuration. Add a separate nominatim configuration to your web server:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/settings.png" alt="alt text" /></p>
+<p><img src="/upfiles/settings.png" alt="alt text" /></p>
 <p>2.- Web server configuration The website / directory in the build directory contains the configured website. Include the directory in your web browser to serve php files from there.</p>
 <p>Configure for use with Apache Make sure your Apache configuration contains the necessary permissions for the directory and create an alias:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/webserver.png" alt="alt text" /></p>
+<p><img src="/upfiles/webserver.png" alt="alt text" /></p>
 <p>the second instruction is the one I don't know where it is placed</p>
 </div>
 <div class="answer-controls post-controls">

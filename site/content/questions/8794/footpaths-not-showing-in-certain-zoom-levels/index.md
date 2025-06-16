@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It might be that they did not get rendered yet on the higher zoom levels. Try clearing your browser's cache or display an individual tile. See <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>It might be that they did not get rendered yet on the higher zoom levels. Try clearing your browser's cache or display an individual tile. See <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 <p>It is not a bad idea to post a link to the location where your footpathes are.</p>
 </div>
 <div class="answer-controls post-controls">

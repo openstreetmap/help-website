@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Coastline flipped?"
-description = '''Here is a location with unique behavior of the coastline. -13.78468/-172.25814 Should this be fixed? If so, how?  Edit mode with iD http://www.openstreetmap.org/edit#map=17/-13.77842/-172.28174 I don&#x27;t see it with JOSM'''
+description = '''Here is a location with unique behavior of the coastline. -13.78468/-172.25814 Should this be fixed? If so, how?  Edit mode with iD https://www.openstreetmap.org/edit#map=17/-13.77842/-172.28174 I don&#x27;t see it with JOSM'''
 date = "2015-03-04T23:03:00Z"
 lastmod = "2015-03-05T07:59:00Z"
 weight = 41494
@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Here is a location with unique behavior of the coastline. -13.78468/-172.25814 Should this be fixed? If so, how?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2015-03-04_at_2.59.07_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2015-03-04_at_2.59.07_PM.png" alt="alt text" /></p>
 <p>Edit mode with iD</p>
-<p><a href="http://www.openstreetmap.org/edit#map=17/-13.77842/-172.28174">http://www.openstreetmap.org/edit#map=17/-13.77842/-172.28174</a> I don't see it with JOSM</p>
+<p><a href="https://www.openstreetmap.org/edit#map=17/-13.77842/-172.28174">https://www.openstreetmap.org/edit#map=17/-13.77842/-172.28174</a> I don't see it with JOSM</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-samoa" rel="tag" title="see questions tagged &#39;samoa&#39;">samoa</span> <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span>

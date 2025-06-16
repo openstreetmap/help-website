@@ -67,7 +67,7 @@ Caused by: java.lang.ClassNotFoundException: uk.co.randomjunk.osmosis.transform.
     at org.openstreetmap.osmosis.core.TaskRegistrar.loadPluginClass(TaskRegistrar.java:332)
     ... 13 more</code></pre>
 <p>It is also not working with the version here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/DE:Osmosis#Verwenden_von_.pbf_Dateien">http://wiki.openstreetmap.org/wiki/DE:Osmosis#Verwenden_von_.pbf_Dateien</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/DE:Osmosis#Verwenden_von_.pbf_Dateien">https://wiki.openstreetmap.org/wiki/DE:Osmosis#Verwenden_von_.pbf_Dateien</a></p>
 <p>Is it just broken or am I doing something wrong?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

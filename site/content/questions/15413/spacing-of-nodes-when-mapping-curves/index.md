@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Are there any guidelines for how far apart nodes should be spaced when mapping a smooth curve in a road? Given that our source data is accurate to about the nearest metre at best, I would have thought that a node every three or four metres would be adequate for any curve likely to be found on a road. To take just one example, Wild Ridings and Thornbury Close (<a href="http://www.openstreetmap.org/?lat=50.848497&amp;lon=-1.217579&amp;zoom=18&amp;layers=M)">http://www.openstreetmap.org/?lat=50.848497&amp;lon=-1.217579&amp;zoom=18&amp;layers=M)</a> have nodes spaced much more closely. These nodes seem to contribute little to the map, and when zoomed in just a little further than the OSM web site permits (e.g. in MapSource or on a GPSr), the rendering engines seem to be defeated, and the smooth curve breaks up into a series of sharp corners. Potlatch 2 offers a shortcut ('Y') that removes some of the nodes; if anything it can be a little too enthusiastic. I would like to remove some apparently unnecessary nodes, but I hesitate to 'improve' the style of other people's work without some backup from the OSM community.</p>
+<p>Are there any guidelines for how far apart nodes should be spaced when mapping a smooth curve in a road? Given that our source data is accurate to about the nearest metre at best, I would have thought that a node every three or four metres would be adequate for any curve likely to be found on a road. To take just one example, Wild Ridings and Thornbury Close (<a href="https://www.openstreetmap.org/?lat=50.848497&amp;lon=-1.217579&amp;zoom=18&amp;layers=M)">https://www.openstreetmap.org/?lat=50.848497&amp;lon=-1.217579&amp;zoom=18&amp;layers=M)</a> have nodes spaced much more closely. These nodes seem to contribute little to the map, and when zoomed in just a little further than the OSM web site permits (e.g. in MapSource or on a GPSr), the rendering engines seem to be defeated, and the smooth curve breaks up into a series of sharp corners. Potlatch 2 offers a shortcut ('Y') that removes some of the nodes; if anything it can be a little too enthusiastic. I would like to remove some apparently unnecessary nodes, but I hesitate to 'improve' the style of other people's work without some backup from the OSM community.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-spacing" rel="tag" title="see questions tagged &#39;spacing&#39;">spacing</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-curve" rel="tag" title="see questions tagged &#39;curve&#39;">curve</span>
@@ -249,7 +249,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>see this Q and more importantly the Answer and the links in it. <a href="http://help.openstreetmap.org/questions/2197/drawing-over-traces">http://help.openstreetmap.org/questions/2197/drawing-over-traces</a></p>
+<p>see this Q and more importantly the Answer and the links in it. <a href="/questions/2197/drawing-over-traces">https://help.openstreetmap.org/questions/2197/drawing-over-traces</a></p>
 </div>
 <div id="comment-15421-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 06:42)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -262,8 +262,8 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Although I think the spacing of general nodes is good, there are some nodes that can be deleted.</p>
-<p>First of all, the nodes on a straight line (if there is no curve, there is no need for a node): <a href="http://www.openstreetmap.org/browse/node/1697642915">http://www.openstreetmap.org/browse/node/1697642915</a></p>
-<p>And next to that, nodes very close to a crossing: <a href="http://www.openstreetmap.org/browse/node/1697630103">http://www.openstreetmap.org/browse/node/1697630103</a></p>
+<p>First of all, the nodes on a straight line (if there is no curve, there is no need for a node): <a href="https://www.openstreetmap.org/browse/node/1697642915">https://www.openstreetmap.org/browse/node/1697642915</a></p>
+<p>And next to that, nodes very close to a crossing: <a href="https://www.openstreetmap.org/browse/node/1697630103">https://www.openstreetmap.org/browse/node/1697630103</a></p>
 </div>
 <div id="comment-15435-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 09:54)</span> <span class="comment-user userinfo">Sanderd17</span>

@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd tag the building using the <a href="http://wiki.openstreetmap.org/wiki/Duck_test">Duck test</a>. If the building is primarily a residential building, tag it as such. If there are commercial businesses on the ground floor, you can then add them as separate nodes with <a href="http://wiki.openstreetmap.org/wiki/Level">level</a>=0 (or whatever <a href="http://wiki.openstreetmap.org/wiki/Level">level</a> is relevant).</p>
+<p>I'd tag the building using the <a href="https://wiki.openstreetmap.org/wiki/Duck_test">Duck test</a>. If the building is primarily a residential building, tag it as such. If there are commercial businesses on the ground floor, you can then add them as separate nodes with <a href="https://wiki.openstreetmap.org/wiki/Level">level</a>=0 (or whatever <a href="https://wiki.openstreetmap.org/wiki/Level">level</a> is relevant).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi KiloKilo, you could have tried to add youre question in the blank window above. It would lead you to this answer, <a href="https://help.openstreetmap.org/questions/11653/how-to-tag-a-building-that-different-levels-have-different-names-and-uses">https://help.openstreetmap.org/questions/11653/how-to-tag-a-building-that-different-levels-have-different-names-and-uses</a> It looks like the same as yours.</p>
+<p>Hi KiloKilo, you could have tried to add youre question in the blank window above. It would lead you to this answer, <a href="/questions/11653/how-to-tag-a-building-that-different-levels-have-different-names-and-uses">https://help.openstreetmap.org/questions/11653/how-to-tag-a-building-that-different-levels-have-different-names-and-uses</a> It looks like the same as yours.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

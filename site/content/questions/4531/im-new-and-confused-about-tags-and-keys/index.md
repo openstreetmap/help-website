@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-4532-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>im still confused but i found the site @ <a href="http://wiki.openstreetmap.org/wiki/Map_features">http://wiki.openstreetmap.org/wiki/Map_features</a></p>
+<p>im still confused but i found the site @ <a href="https://wiki.openstreetmap.org/wiki/Map_features">https://wiki.openstreetmap.org/wiki/Map_features</a></p>
 <p>i would like to know how to deselect something (i.e a road) after editing it</p>
 </div>
 <div id="comment-4532-info" class="comment-info">
@@ -122,8 +122,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you haven't seen it already, I'd read the Beginners' Guide <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">here</a>. There's a section in there (<a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">this one</a>) that should answer some of your questions. As the "Map Features" page says, OpenStreetMap does not have any content restrictions on tags that can be assigned, so you can tag whatever you like, although it makes sense to have people using the same tags for the same things, which is why pages such as "Map Features" exist.</p>
-<p>For the answer to your second question (about deselecting a road), it's probably worth having a read of <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">this</a> (the "primer" for the Potlatch 2 editor).</p>
+<p>If you haven't seen it already, I'd read the Beginners' Guide <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">here</a>. There's a section in there (<a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">this one</a>) that should answer some of your questions. As the "Map Features" page says, OpenStreetMap does not have any content restrictions on tags that can be assigned, so you can tag whatever you like, although it makes sense to have people using the same tags for the same things, which is why pages such as "Map Features" exist.</p>
+<p>For the answer to your second question (about deselecting a road), it's probably worth having a read of <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">this</a> (the "primer" for the Potlatch 2 editor).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

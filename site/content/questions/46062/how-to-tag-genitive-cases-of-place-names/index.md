@@ -141,7 +141,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a> Yes we're already adding <code>logainm:ref</code> as a 'foreign key', so that is a possibility.</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a> Yes we're already adding <code>logainm:ref</code> as a 'foreign key', so that is a possibility.</p>
 </div>
 <div id="comment-46079-info" class="comment-info">
 <span class="comment-age">(23 Oct '15, 12:45)</span> <span class="comment-user userinfo">rorym</span>
@@ -153,7 +153,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> I think Albanian has a separate case marker for "to $PLACE", which is shown on signs (vs the name of the town/city itself).</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> I think Albanian has a separate case marker for "to $PLACE", which is shown on signs (vs the name of the town/city itself).</p>
 </div>
 <div id="comment-46080-info" class="comment-info">
 <span class="comment-age">(23 Oct '15, 13:16)</span> <span class="comment-user userinfo">rorym</span>

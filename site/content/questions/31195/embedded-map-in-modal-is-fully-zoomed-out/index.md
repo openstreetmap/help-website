@@ -78,7 +78,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Here is an example of what I'm trying to embed <code>&lt;iframe frameborder="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-122.480427%2C37.745703%2C-122.472427%2C37.753703&amp;amp;layer=mapnik&amp;amp;marker=37.749703%2C-122.476427" style="border: 1px solid black"&gt;&lt;/iframe&gt;</code></p>
+<p>Here is an example of what I'm trying to embed <code>&lt;iframe frameborder="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-122.480427%2C37.745703%2C-122.472427%2C37.753703&amp;amp;layer=mapnik&amp;amp;marker=37.749703%2C-122.476427" style="border: 1px solid black"&gt;&lt;/iframe&gt;</code></p>
 </div>
 <div id="comment-31198-info" class="comment-info">
 <span class="comment-age">(03 Mar '14, 00:12)</span> <span class="comment-user userinfo">cyro</span>

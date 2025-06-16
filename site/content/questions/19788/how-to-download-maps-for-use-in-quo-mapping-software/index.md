@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Quo might look like free software, but it is just a way for mapyx to sell maps. Since you wanted to use Quo, I'm guessing you want to do the offline viewing on a desktop/laptop computer running Windows.</p>
-<p>One way to view OSM maps offline on Windows is to install <a href="http://wiki.openstreetmap.org/wiki/BaseCamp">Garmin Basecamp</a> and one of the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">many OSM based Garmin maps</a>. E. g. this <a href="http://talkytoaster.co.uk/ukmaps.htm#PC-Mac-Only">map of the British Isles</a>.</p>
+<p>One way to view OSM maps offline on Windows is to install <a href="https://wiki.openstreetmap.org/wiki/BaseCamp">Garmin Basecamp</a> and one of the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">many OSM based Garmin maps</a>. E. g. this <a href="http://talkytoaster.co.uk/ukmaps.htm#PC-Mac-Only">map of the British Isles</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

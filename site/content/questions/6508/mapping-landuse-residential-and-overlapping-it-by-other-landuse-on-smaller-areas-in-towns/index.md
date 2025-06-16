@@ -41,8 +41,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I'm trying to map our village <a href="http://www.openstreetmap.org/?lat=49.95462&amp;lon=14.02547&amp;zoom=17&amp;layers=M">Zahorany u Berouna (Czech Republic)</a> and I have question about correct use of landuse=residential with mapping towns/villages.</p>
-<p>I'm new here. I red base conventions and <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">Tag:landuse=residential</a> and something about snapping polygons to highways. I mapping this from Czech land parcel data (source=cuzk:km) so I'm mapping it on new nodes along the parcel edges (same recommendation I get on Czech Mailing-list). This is clear for me (not a subject of my question).</p>
+<p>I'm trying to map our village <a href="https://www.openstreetmap.org/?lat=49.95462&amp;lon=14.02547&amp;zoom=17&amp;layers=M">Zahorany u Berouna (Czech Republic)</a> and I have question about correct use of landuse=residential with mapping towns/villages.</p>
+<p>I'm new here. I red base conventions and <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">Tag:landuse=residential</a> and something about snapping polygons to highways. I mapping this from Czech land parcel data (source=cuzk:km) so I'm mapping it on new nodes along the parcel edges (same recommendation I get on Czech Mailing-list). This is clear for me (not a subject of my question).</p>
 <p>By this I mapped each consistent residential block separately by accurate land parcel data edges (each residental block divided by some place, street, scrub, grass, green etc. have own polygon). Between this polygon I mapped other landuse (eventually natural) polygons e. g. grass, scrub, reservoir (pond), playground, village green, greenfield, garden (for creating detailed map of village). Dividing landuse=residential to individual blocks By this way I can map areas between residential blocks without its overlapping other polygons (especially other landuse polygons) - I red some basic topological rules and it's not allowed to overlap polygons especially with same tagtype - e. g. landuse with landuse. <a href="http://osm.kraluvdvur.cz/osm-zahorany-landuse-residential.png">JOSM screenshot with filtered landuse=residential</a></p>
 <p><strong>But I don't know if this mapping of landuse=residential is correct <em>especially its dividing by separeate blocks</em> and mapping by parcel egdes</strong>. Is this way correct or incorrect and it will be better have one big polygon for all this area (on screeenshot) and in some smaller areas overlapped with other landuse (grass, reservoir, playground, school, garden, park) or some natural=scrub etc. in areas where residential blocks are interrupt by some other places or highways.</p>
 <p>Thanks for answers and I'm sorry for my bad english.</p>
@@ -183,7 +183,7 @@ osqa_accepted = true
 <div id="post-6519-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank You! I Will try some compromise probably with multipolygon (maybe with <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings">http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings</a> too) to include residential roads to adjacent residental area and concurrently to try minimize overlaps landuse residental with other landuse or other polygons (so maybe exclude areas around playground, green by the stream and by the teriary highway etc).</p>
+<p>Thank You! I Will try some compromise probably with multipolygon (maybe with <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings">https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings</a> too) to include residential roads to adjacent residental area and concurrently to try minimize overlaps landuse residental with other landuse or other polygons (so maybe exclude areas around playground, green by the stream and by the teriary highway etc).</p>
 <p>For me was misleading especially recommendation about not connecting landuse residental to roads and creating paralel edge if detailed parcel data is available. Thanks for explanation!</p>
 </div>
 <div id="comment-6519-info" class="comment-info">
@@ -278,7 +278,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most users do not recommend joining landuse and highway nodes and ways, I think even <a href="http://wiki.openstreetmap.org/wiki/Keep_Right">keep right</a> did complain about it, but I cannot see any errors in your <a href="http://keepright.ipax.at/report_map.php?lat=49.95452&amp;lon=14.02518&amp;zoom=16">mapped area</a> related to landuse although there are <a href="http://keepright.ipax.at/report_map.php?lat=49.95906&amp;lon=14.04133&amp;zoom=13">a lot of other errors</a> in the surrounding which you may want to fix.</p>
+<p>Most users do not recommend joining landuse and highway nodes and ways, I think even <a href="https://wiki.openstreetmap.org/wiki/Keep_Right">keep right</a> did complain about it, but I cannot see any errors in your <a href="http://keepright.ipax.at/report_map.php?lat=49.95452&amp;lon=14.02518&amp;zoom=16">mapped area</a> related to landuse although there are <a href="http://keepright.ipax.at/report_map.php?lat=49.95906&amp;lon=14.04133&amp;zoom=13">a lot of other errors</a> in the surrounding which you may want to fix.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi read this hint and others in the category multiple use <a href="https://help.openstreetmap.org/questions/1237/how-should-i-tag-office-building">https://help.openstreetmap.org/questions/1237/how-should-i-tag-office-building</a></p>
+<p>hi read this hint and others in the category multiple use <a href="/questions/1237/how-should-i-tag-office-building">https://help.openstreetmap.org/questions/1237/how-should-i-tag-office-building</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

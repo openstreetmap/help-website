@@ -88,7 +88,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Yes, it is now clear. Particularly helpful was</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element</a></p>
 <p>whose link was contained in</p>
 <p>Should I use POIs or areas to identify shops?</p>
 </div>
@@ -162,9 +162,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Bruce in Iloilo, I like to go here :</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a></p>
 <p>then I click the "Find in this window" in my browser to find this link :</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dbeach_resort">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dbeach_resort</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dbeach_resort">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dbeach_resort</a></p>
 <p>with this description and more links :</p>
 <p>Use leisure=beach_resort to mark the boundary of a managed beach, including the relevant section of beach, together with associated facilities such as toilets, showers, lifeguard, lockers, changing facilities and possibly kiosks, parking, bars, and restaurants. The facility may have a physical barrier delineating the boundary and may require payment of a fee. Use natural=beach for areas of sand next to the sea or to water which are not managed. How to Map</p>
 <p>Create an area around the resort and tag it with leisure=beach_resort and optionally also with name=<em>, website=</em> etc. Is a supervised section of sea is set aside for swimming then tag this area with the supervised= <em>tag rather than the entire resort and if boats, or possibly motorboats are banned the add boat=no or motorboat=no as appropriate. Useful tags to describe elements within the resort: amenity=bar barrier=</em> (for a barrier around the resort, or part of the resort) natural=beach For the area of beach, together with surface= <em>boat=</em>, motorboat= <em>etc to indicate rules around usage fee=</em> amenity=restaurant amenity=shop, with shop=* supervised=yes/interval (proposal) amenity=shower</p>

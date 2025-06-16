@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can use OSM <em>data</em> but you will need suitable styling rules for your WMS to make OSM data appear like a nice map. Check out <a href="https://github.com/mapserver/basemaps">https://github.com/mapserver/basemaps</a> if your WMS is a UMN MapServer, or search the web for suitable stylings and import rules if you use a different WMS.</p>
-<p>There are existing WMS servers with OSM data that you can use; some are free, some cost money. Some cover all of the world, some just a part. Some are updated regularly, some just twice a year. See <a href="http://wiki.openstreetmap.org/wiki/WMS">our Wiki</a> for details.</p>
+<p>There are existing WMS servers with OSM data that you can use; some are free, some cost money. Some cover all of the world, some just a part. Some are updated regularly, some just twice a year. See <a href="https://wiki.openstreetmap.org/wiki/WMS">our Wiki</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

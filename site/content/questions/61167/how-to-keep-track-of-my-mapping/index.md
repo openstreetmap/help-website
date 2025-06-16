@@ -107,7 +107,7 @@ One Answer:
 <p>If you fire up the editor and log in, that alone doesn't leave any traces in OSM. Editing alone does neither; only if you upload your work will this be recorded.</p>
 <p>Looking forward, what you could do is include a time spec in your upload comment each time you upload, e.g. "added houses on XYZ street (30min)". Then you can look at your changeset history later and sum up the numbers.</p>
 <p>Looking back, for the changesets where you didn't do that, the only thing you can realistically do is count how many objects you've edited in each changeset and apply a rough multiplier (tracing a house - 30 seconds, adding a POI - 1 minute, something like that) and see what you get.</p>
-<p>Your edit history is here: <a href="http://www.openstreetmap.org/user/Max%20Kloberdanz/history">http://www.openstreetmap.org/user/Max%20Kloberdanz/history</a></p>
+<p>Your edit history is here: <a href="https://www.openstreetmap.org/user/Max%20Kloberdanz/history">https://www.openstreetmap.org/user/Max%20Kloberdanz/history</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

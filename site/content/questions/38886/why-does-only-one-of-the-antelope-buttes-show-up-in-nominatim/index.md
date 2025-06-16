@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There are two peaks (<a href="http://www.openstreetmap.org/node/358804247">one</a>, <a href="http://www.openstreetmap.org/node/358807763">two</a>) called Antelope Buttes near each other, and added in the same changeset.</p>
-<p>Why does only one show up <a href="http://www.openstreetmap.org/search?query=Antelope%20Buttes">in Nominatim</a>? It seems like a possible bug.</p>
+<p>There are two peaks (<a href="https://www.openstreetmap.org/node/358804247">one</a>, <a href="https://www.openstreetmap.org/node/358807763">two</a>) called Antelope Buttes near each other, and added in the same changeset.</p>
+<p>Why does only one show up <a href="https://www.openstreetmap.org/search?query=Antelope%20Buttes">in Nominatim</a>? It seems like a possible bug.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mountain" rel="tag" title="see questions tagged &#39;mountain&#39;">mountain</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span>
@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-38947-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I don't know (I didn't add them).</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> I don't know (I didn't add them).</p>
 </div>
 <div id="comment-38947-info" class="comment-info">
 <span class="comment-age">(30 Nov '14, 00:36)</span> <span class="comment-user userinfo">mattflaschen</span>
@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think that this is caused by "During the indexing process an address is also calculated using the first feature found for each level. Where an is_in value is provided it is used to filter the address." This text is taken from the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">Nominatim Development page</a>.</p>
+<p>I think that this is caused by "During the indexing process an address is also calculated using the first feature found for each level. Where an is_in value is provided it is used to filter the address." This text is taken from the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">Nominatim Development page</a>.</p>
 <p>Since a peak is considered a place (see <a href="http://nominatim.openstreetmap.org/details.php?place_id=3281978),">http://nominatim.openstreetmap.org/details.php?place_id=3281978),</a> it only takes the first feature with that name.</p>
 <p>Disclaimer: I'm not a Nominatim developer, so I just made this conclusion from reading the documentation</p>
 </div>

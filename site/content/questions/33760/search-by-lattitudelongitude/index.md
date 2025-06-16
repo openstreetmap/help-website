@@ -213,7 +213,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the user refers to 'reverse geocoding' that returns the closest road/address to a geopoint. This is supported e.g. <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">by nominatim</a></p>
+<p>I think the user refers to 'reverse geocoding' that returns the closest road/address to a geopoint. This is supported e.g. <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding_.2F_Address_lookup">by nominatim</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

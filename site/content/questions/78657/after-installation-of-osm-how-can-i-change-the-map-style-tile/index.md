@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi Guys,</p>
 <p>After successfully following next guide and setup of OSM <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/</a> and loading of a map from Geofabric into Postgre, now i would like to change the Map style to be different that i have locally on the server. As example i have now the below one :</p>
-<p><img src="https://help.openstreetmap.org/upfiles/img_osm.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/img_osm.PNG" alt="alt text" /></p>
 <p>but eventually if i want to integrate let's say dark style from here <a href="https://github.com/openmaptiles/dark-matter-gl-style">https://github.com/openmaptiles/dark-matter-gl-style</a> what are the required steps to do it ? Or can you provide me a link with a guide how can i achive this.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

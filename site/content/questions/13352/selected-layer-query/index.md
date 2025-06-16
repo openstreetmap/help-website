@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap data isn't sorted into layers, but instead uses tags to distinguish one type of feature from another. You can use a package like <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to filter out just the data you're interested in based on those tags. Alternatively you can download <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">prepared extracts of OSM data</a> from several providers, but they may not have the exact type of data you're looking for.</p>
+<p>OpenStreetMap data isn't sorted into layers, but instead uses tags to distinguish one type of feature from another. You can use a package like <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to filter out just the data you're interested in based on those tags. Alternatively you can download <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">prepared extracts of OSM data</a> from several providers, but they may not have the exact type of data you're looking for.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -138,7 +138,7 @@ One Answer:
 <div id="post-13358-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You should also be able to use <a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a> to download only objects with specific tags.</p>
+<p>You should also be able to use <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a> to download only objects with specific tags.</p>
 </div>
 <div id="comment-13358-info" class="comment-info">
 <span class="comment-age">(08 Jun '12, 15:41)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

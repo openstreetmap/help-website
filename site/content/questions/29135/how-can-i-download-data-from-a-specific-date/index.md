@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>One way would be to download the 6th November full planet file from <a href="http://planet.osm.org/planet/2013/">http://planet.osm.org/planet/2013/</a> and extract the area you want using a suitable tool (Osmosis, perhaps).</p>
-<p>The raw directory index at Geofabrik shows a 1st November dataset. <a href="http://download.geofabrik.de/asia/philippines.html#">http://download.geofabrik.de/asia/philippines.html#</a> If you need it to be the 6th you could apply changesets to that, which might be a much smaller download. If the 1st is close enough for your purposes it will be the best source, probably. You might still need to extract your area of interest from the Phillipines dataset though. See <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes</a></p>
+<p>The raw directory index at Geofabrik shows a 1st November dataset. <a href="http://download.geofabrik.de/asia/philippines.html#">http://download.geofabrik.de/asia/philippines.html#</a> If you need it to be the 6th you could apply changesets to that, which might be a much smaller download. If the 1st is close enough for your purposes it will be the best source, probably. You might still need to extract your area of interest from the Phillipines dataset though. See <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

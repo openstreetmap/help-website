@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>So far I could not find how mappers are supposed to map a plaza or square.<br />
 highway=pedestrian with area=yes and name=* doesn't help since there are a lot of squares where highway=pedestrian either doesn't match or wouldn't cover the complete area of the place.</p>
-<p>Example: Around <a href="http://www.openstreetmap.org/#map=19/50.91138/13.34780">this crossroad</a> there should be a place with name=Roßplatz.</p>
-<p>Contents to find in the OSM wiki regarding this issue are <a href="http://wiki.openstreetmap.org/wiki/Square">not satisfying</a>.</p>
+<p>Example: Around <a href="https://www.openstreetmap.org/#map=19/50.91138/13.34780">this crossroad</a> there should be a place with name=Roßplatz.</p>
+<p>Contents to find in the OSM wiki regarding this issue are <a href="https://wiki.openstreetmap.org/wiki/Square">not satisfying</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-square" rel="tag" title="see questions tagged &#39;square&#39;">square</span> <span class="post-tag tag-link-platz" rel="tag" title="see questions tagged &#39;platz&#39;">platz</span> <span class="post-tag tag-link-plaza" rel="tag" title="see questions tagged &#39;plaza&#39;">plaza</span>
@@ -196,7 +196,7 @@ There is no highway=pedestrian at all.</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Malenki, is this usable ? <a href="http://www.openstreetmap.org/#map=18/52.26415/5.04622">http://www.openstreetmap.org/#map=18/52.26415/5.04622</a> , a pedestrian zone, area or multipolygoon, with ways on both sides.</p>
+<p>Hi Malenki, is this usable ? <a href="https://www.openstreetmap.org/#map=18/52.26415/5.04622">https://www.openstreetmap.org/#map=18/52.26415/5.04622</a> , a pedestrian zone, area or multipolygoon, with ways on both sides.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ There is no highway=pedestrian at all.</p>
 3
 </div>
 <div class="comment-text">
-<p>Nowadays a place=square tag is documented on the wiki so I guess we can use that long-needed tag. <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dsquare">http://wiki.openstreetmap.org/wiki/Tag:place%3Dsquare</a></p>
+<p>Nowadays a place=square tag is documented on the wiki so I guess we can use that long-needed tag. <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dsquare">https://wiki.openstreetmap.org/wiki/Tag:place%3Dsquare</a></p>
 </div>
 <div id="comment-51188-info" class="comment-info">
 <span class="comment-age">(01 Aug '16, 13:59)</span> <span class="comment-user userinfo">thbz</span>

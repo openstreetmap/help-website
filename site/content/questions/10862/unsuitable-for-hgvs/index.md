@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a tag <a href="http://wiki.openstreetmap.org/wiki/Access">hgv=no</a> which satnav applications might or might not consider (depending on the application), although that is intended for legal access rights, rather than whether it is physically possible.</p>
-<p>A better way would be to tag any <a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom#Size.2FWeight_restrictions">maxweight/maxwidth/maxlength/etc</a> type signed restrictions, and also add <a href="http://wiki.openstreetmap.org/wiki/Key:width">width</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:lanes">lanes</a> tags to the road. This would require the satnav application to know more information about the vehicle using it, but could lead to better overall results.</p>
+<p>There is a tag <a href="https://wiki.openstreetmap.org/wiki/Access">hgv=no</a> which satnav applications might or might not consider (depending on the application), although that is intended for legal access rights, rather than whether it is physically possible.</p>
+<p>A better way would be to tag any <a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom#Size.2FWeight_restrictions">maxweight/maxwidth/maxlength/etc</a> type signed restrictions, and also add <a href="https://wiki.openstreetmap.org/wiki/Key:width">width</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:lanes">lanes</a> tags to the road. This would require the satnav application to know more information about the vehicle using it, but could lead to better overall results.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

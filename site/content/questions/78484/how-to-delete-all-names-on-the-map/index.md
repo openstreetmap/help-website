@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to use a map style that doesn't display names, there used to be such layers available but they don't seem to be available any more, see <a href="https://help.openstreetmap.org/questions/1873/how-can-i-create-a-map-without-any-names-on-it">https://help.openstreetmap.org/questions/1873/how-can-i-create-a-map-without-any-names-on-it</a></p>
+<p>You need to use a map style that doesn't display names, there used to be such layers available but they don't seem to be available any more, see <a href="/questions/1873/how-can-i-create-a-map-without-any-names-on-it">https://help.openstreetmap.org/questions/1873/how-can-i-create-a-map-without-any-names-on-it</a></p>
 <p>As a result you probably will need to create you own style without names. This is fairly simple but how to achieve it best depends on what you want to end up with, for example with a raster tile or vector tile based web map, or maybe something else.</p>
 <p>To be clear do not try to delete names from the data, this will only get you in to trouble.</p>
 </div>

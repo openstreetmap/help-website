@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap doesn't usually collect data that is not verifiable <a href="http://wiki.openstreetmap.org/wiki/Verifiability">(wiki link)</a> on the ground. There are some exceptions - for example, we do have administrative boundaries, but we certainly draw the line at land parcels. It is hard for me to say where your site allocation data falls but my hunch is that it is not something we'd like to see in OSM.</p>
+<p>OpenStreetMap doesn't usually collect data that is not verifiable <a href="https://wiki.openstreetmap.org/wiki/Verifiability">(wiki link)</a> on the ground. There are some exceptions - for example, we do have administrative boundaries, but we certainly draw the line at land parcels. It is hard for me to say where your site allocation data falls but my hunch is that it is not something we'd like to see in OSM.</p>
 <p>In that case, probably the best technology would be using <a href="http://umap.openstreetmap.fr">uMap</a> where you can draw things (or have things drawn) on top of an OpenStreetMap basemap while still keeping both data sets separate - or, of course, superimpose things on top of OSM in your app.</p>
 </div>
 <div class="answer-controls post-controls">

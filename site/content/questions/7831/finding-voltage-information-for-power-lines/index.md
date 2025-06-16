@@ -118,7 +118,7 @@ How else might voltage information be obtained?</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you see the recommendations on <a href="http://wiki.openstreetmap.org/wiki/Key:power">Key:power</a>?</p>
+<p>Did you see the recommendations on <a href="https://wiki.openstreetmap.org/wiki/Key:power">Key:power</a>?</p>
 <blockquote>
 <p>National Grid call the things "towers" as they're free-standing, but common usage seems to be "pylon"</p>
 <p>In the UK, each power line appears to have a two character identifier and each tower along that line appears to be numbered. For example ZM is the West Weybridge to Chessington line, and each tower is numbered ZM 1, ZM 2, etc. I propose that these be recorded, if known, for each tower with the ref tag. For example: power=tower, ref=ZM 35.</p>

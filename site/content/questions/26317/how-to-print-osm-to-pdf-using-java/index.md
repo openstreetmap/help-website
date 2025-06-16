@@ -113,7 +113,7 @@ One Answer:
 <p><a href="http://www.mapfish.org/doc/print/protocol.html#layers-params">http://www.mapfish.org/doc/print/protocol.html#layers-params</a></p>
 <p>Your may have a version problem (older library) or a case sensitivity problem ('OSM' and not 'osm') ?</p>
 <p>Also be careful that OSM has limited resources and a tile usage policy:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>maybe a solution or a helpful link is hidden at <a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a> ?</p>
+<p>maybe a solution or a helpful link is hidden at <a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a> ?</p>
 </div>
 <div id="comment-26397-info" class="comment-info">
 <span class="comment-age">(16 Sep '13, 16:48)</span> <span class="comment-user userinfo">stephan75</span>

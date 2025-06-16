@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Probably the easiest is to load extracts of OSM using the ESRI shapefile format. You can find repositories of such extracts or how to generate your owns on this page of the wiki:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Shapefiles"></a><a href="http://wiki.openstreetmap.org/wiki/Shapefiles"></a><a href="http://wiki.openstreetmap.org/wiki/Shapefiles">http://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Shapefiles"></a><a href="https://wiki.openstreetmap.org/wiki/Shapefiles"></a><a href="https://wiki.openstreetmap.org/wiki/Shapefiles">https://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

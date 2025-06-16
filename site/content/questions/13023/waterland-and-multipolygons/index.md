@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to update <a href="http://www.openstreetmap.org/?lat=43.27213&amp;lon=6.57957&amp;zoom=16&amp;layers=M" title="Port Grimaud on OSM">Port Grimaud</a>. Currently the area is built up with a "lake" multipolygon relation, with the "islands" as the role=inner bits. See <a href="http://www.prairiesmobilehome.com/Golfe/index.html">this site</a> for a good aerial view.</p>
+<p>I'm trying to update <a href="https://www.openstreetmap.org/?lat=43.27213&amp;lon=6.57957&amp;zoom=16&amp;layers=M" title="Port Grimaud on OSM">Port Grimaud</a>. Currently the area is built up with a "lake" multipolygon relation, with the "islands" as the role=inner bits. See <a href="http://www.prairiesmobilehome.com/Golfe/index.html">this site</a> for a good aerial view.</p>
 <p>I've added landuse=residential to these inner polygons, but they're still not showing up on the OSM renderer. Any ideas how I should best fix this up?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

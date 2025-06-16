@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The first tool you should try is <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
+<p>The first tool you should try is <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
 <p>But is has no easy way to filter different regions of one raw *.osm file in a different manner.</p>
 <p>YOu can only try to cut your region into pieces, do different filtering, and finally combine your parts to a new single osm file. But there can be sources for errors when combining these files.</p>
 </div>

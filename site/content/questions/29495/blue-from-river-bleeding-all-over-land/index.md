@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am working on Lawrence KS and have problems with blue bleeding everywhere outside the river. where it happens the river is inverted. i have the same problem with the university land use for ESU at Emporia KS too. can't figure what's causing them to happen. There's two spots at Lawrence where the river does this. on the east side and north side. on the Kansas River that is. <a href="http://www.openstreetmap.org/#map=16/38.9913/-95.2401">http://www.openstreetmap.org/#map=16/38.9913/-95.2401</a></p>
+<p>I am working on Lawrence KS and have problems with blue bleeding everywhere outside the river. where it happens the river is inverted. i have the same problem with the university land use for ESU at Emporia KS too. can't figure what's causing them to happen. There's two spots at Lawrence where the river does this. on the east side and north side. on the Kansas River that is. <a href="https://www.openstreetmap.org/#map=16/38.9913/-95.2401">https://www.openstreetmap.org/#map=16/38.9913/-95.2401</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-blue" rel="tag" title="see questions tagged &#39;blue&#39;">blue</span> <span class="post-tag tag-link-bleeding" rel="tag" title="see questions tagged &#39;bleeding&#39;">bleeding</span> <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-coastline" rel="tag" title="see questions tagged &#39;coastline&#39;">coastline</span>
@@ -92,7 +92,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>As for the inner and outer, those are "roles" that determine the structure of the relation and how it will display. If you read this Wiki section on multipolygon relations it should clear things up a bit. <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
+<p>As for the inner and outer, those are "roles" that determine the structure of the relation and how it will display. If you read this Wiki section on multipolygon relations it should clear things up a bit. <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
 </div>
 <div id="comment-29528-info" class="comment-info">
 <span class="comment-age">(02 Jan '14, 08:19)</span> <span class="comment-user userinfo">AlaskaDave</span>
@@ -197,7 +197,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Usually this error occurs in different renderers, when the data contain <a href="http://wiki.openstreetmap.org/wiki/Coastline">broken coastlines</a>. This is usually fixed very quickly (as your area seems to be ok again) by the community, as we have some <a href="http://wiki.openstreetmap.org/wiki/QA">QA error detection</a> tools for that purpose.</p>
+<p>Usually this error occurs in different renderers, when the data contain <a href="https://wiki.openstreetmap.org/wiki/Coastline">broken coastlines</a>. This is usually fixed very quickly (as your area seems to be ok again) by the community, as we have some <a href="https://wiki.openstreetmap.org/wiki/QA">QA error detection</a> tools for that purpose.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -268,7 +268,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>The limit is due to the API, not the editor.<br />
-<a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Capabilities:_GET_.2Fapi.2Fcapabilities">link</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Capabilities:_GET_.2Fapi.2Fcapabilities">link</a></p>
 </div>
 <div id="comment-29516-info" class="comment-info">
 <span class="comment-age">(01 Jan '14, 21:52)</span> <span class="comment-user userinfo">malenki</span>

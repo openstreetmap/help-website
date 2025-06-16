@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That should be fine. Openstreetmap has lots of such incremental improvements. You might want to check where possible that the <a href="https://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">satellite imagery aligns with any available GPS traces</a>, but if there aren't any then at some point in the future when there is the mapping can be refined again.</p>
+<p>That should be fine. Openstreetmap has lots of such incremental improvements. You might want to check where possible that the <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">satellite imagery aligns with any available GPS traces</a>, but if there aren't any then at some point in the future when there is the mapping can be refined again.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -183,7 +183,7 @@ Route planning with OpenRoute might be enhanced, knowing the limits. Incorporati
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Maxspeed">maxspeed</a> in the OSM wiki ... there are even links a special UK maxspeed map.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Maxspeed">maxspeed</a> in the OSM wiki ... there are even links a special UK maxspeed map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

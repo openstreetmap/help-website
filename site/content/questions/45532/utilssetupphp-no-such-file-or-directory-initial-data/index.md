@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "./utils/setup.php: No such file or directory initial data"
-description = '''Hello friends ! I&#x27;m new here in the forum and am trying to install my first Nominatim server. I need it to reverse geocode . I am following the step by step installation manual as in : http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS . and I am facing the following problem on the ...'''
+description = '''Hello friends ! I&#x27;m new here in the forum and am trying to install my first Nominatim server. I need it to reverse geocode . I am following the step by step installation manual as in : https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS . and I am facing the following problem on the ...'''
 date = "2015-09-23T20:10:00Z"
 lastmod = "2015-09-24T07:46:00Z"
 weight = 45532
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello friends !</p>
 <p>I'm new here in the forum and am trying to install my first Nominatim server.</p>
-<p>I need it to reverse geocode . I am following the step by step installation manual as in : <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS">http://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS</a> . and I am facing the following problem on the orientation of import initial data.</p>
+<p>I need it to reverse geocode . I am following the step by step installation manual as in : <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS">https://wiki.openstreetmap.org/wiki/Nominatim/Installation_on_CentOS</a> . and I am facing the following problem on the orientation of import initial data.</p>
 <p>I ran the following command:</p>
 <pre><code>./utils/setup.php --osm-file brazil-latest.osm.pbf --all --osm2pgsql-cache 18000</code></pre>
 <p>But returns as follows:</p>

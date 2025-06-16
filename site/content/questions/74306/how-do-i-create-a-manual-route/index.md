@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-74308-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/13274/tim-bl"></a><a href="https://help.openstreetmap.org/users/13274/tim-bl">@Tim BL</a>: I conveted your comment to a question of its own (from <a href="https://help.openstreetmap.org/questions/5210/how-to-make-a-route">How to make a route?</a>)</p>
+<p><a href="https://help.openstreetmap.org/users/13274/tim-bl"></a><a href="https://help.openstreetmap.org/users/13274/tim-bl">@Tim BL</a>: I conveted your comment to a question of its own (from <a href="/questions/5210/how-to-make-a-route">How to make a route?</a>)</p>
 </div>
 <div id="comment-74308-info" class="comment-info">
 <span class="comment-age">(21 Apr '20, 10:32)</span> <span class="comment-user userinfo">TZorn</span>

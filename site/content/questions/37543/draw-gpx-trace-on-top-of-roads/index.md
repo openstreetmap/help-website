@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When editing with Potlatch2 you could try changing the map style<img src="http://help.openstreetmap.org/upfiles/wireframe_and_none.JPG" alt="alt text" /> to wireframe and/or setting the background to none that may help. But I don't know of any way to change the GPXes to the top layer.</p>
+<p>When editing with Potlatch2 you could try changing the map style<img src="/upfiles/wireframe_and_none.JPG" alt="alt text" /> to wireframe and/or setting the background to none that may help. But I don't know of any way to change the GPXes to the top layer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

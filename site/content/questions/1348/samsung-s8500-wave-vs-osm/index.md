@@ -155,7 +155,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>To find out some apps that work with a specific phone or mobile device to display the OpenStreetMap you have to find out what kind of operation system is available.</p>
-<p>Then go to the OSM wiki to the page that covers available <a href="http://wiki.openstreetmap.org/wiki/Software">software</a> in general. Proceed with one of the sub pages that is right for your device. There you can find tables where the features of each application is described.</p>
+<p>Then go to the OSM wiki to the page that covers available <a href="https://wiki.openstreetmap.org/wiki/Software">software</a> in general. Proceed with one of the sub pages that is right for your device. There you can find tables where the features of each application is described.</p>
 <p>In case of further question about a specific application on your device, questions are well placed e.g. on one of the OSM mailing lists or the OSM forum.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/note/771082#map=15/49.1214/-123.0719&amp;layers=N">A note</a> on a tunnel local to me, points out that routing providers are sending cyclists on a 30km detour around a freeway tunnel as it is tagged bicycle=no. The tunnel is a major connection in the area, as it is the access to an important ferry terminal.</p>
+<p><a href="https://www.openstreetmap.org/note/771082#map=15/49.1214/-123.0719&amp;layers=N">A note</a> on a tunnel local to me, points out that routing providers are sending cyclists on a 30km detour around a freeway tunnel as it is tagged bicycle=no. The tunnel is a major connection in the area, as it is the access to an important ferry terminal.</p>
 <p>Cyclists are <em>not</em> permitted to ride through the tunnel, but the free shuttle bus is a more sensible option than the 30km detour. I can not think of any way to get routing providers to recommend cyclists take the tunnel. The shuttle should really be added as a public transportation route, but this won't effect the routing.</p>
 <p>Am I overlooking anything? Is there anything I could do to improve the mapping, even if it doesn't result in the routing engines changing their behaviour at present?</p>
 </div>
@@ -189,7 +189,7 @@ osqa_accepted = false
 <div id="post-56741-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/5/richard"></a><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a>, It's taken me a while to do this but I've added the shuttle service as two separate relations (one for each direction). I hope I've done it in a way that allows your routing service to support it at some point in the future. Please feel free to let me know if I've made any mistakes, as I'm not very familiar with the public transport schema. Here's the <a href="http://www.openstreetmap.org/changeset/49778357">changeset link</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard"></a><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a>, It's taken me a while to do this but I've added the shuttle service as two separate relations (one for each direction). I hope I've done it in a way that allows your routing service to support it at some point in the future. Please feel free to let me know if I've made any mistakes, as I'm not very familiar with the public transport schema. Here's the <a href="https://www.openstreetmap.org/changeset/49778357">changeset link</a>.</p>
 </div>
 <div id="comment-56741-info" class="comment-info">
 <span class="comment-age">(23 Jun '17, 20:26)</span> <span class="comment-user userinfo">keithonearth</span>

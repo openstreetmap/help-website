@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-47174-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: i want to get hospitals/restaurants/theatres/etc for a particular region</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: i want to get hospitals/restaurants/theatres/etc for a particular region</p>
 </div>
 <div id="comment-47174-info" class="comment-info">
 <span class="comment-age">(15 Dec '15, 20:25)</span> <span class="comment-user userinfo">Rajavelu_M</span>
@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-47175-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11165/rajavelu_m">@rajavelu</a>: is there a particular reason why you want to use nominatim?</p>
+<p><a href="https://help.openstreetmap.org/users/11165/rajavelu_m">@rajavelu</a>: is there a particular reason why you want to use nominatim?</p>
 </div>
 <div id="comment-47175-info" class="comment-info">
 <span class="comment-age">(15 Dec '15, 21:45)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -96,7 +96,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: I am already using nominatim for get geocode&amp;reverse geocode. So I expect any options to get poi data with same tool.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: I am already using nominatim for get geocode&amp;reverse geocode. So I expect any options to get poi data with same tool.</p>
 </div>
 <div id="comment-47177-info" class="comment-info">
 <span class="comment-age">(15 Dec '15, 22:12)</span> <span class="comment-user userinfo">Rajavelu_M</span>
@@ -170,7 +170,7 @@ One Answer:
 <div id="post-47181-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: Thanks for your answer. I have osm_data (database &amp; tables created through nominatim) in my server. Can I use same database for overpass api?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: Thanks for your answer. I have osm_data (database &amp; tables created through nominatim) in my server. Can I use same database for overpass api?</p>
 </div>
 <div id="comment-47181-info" class="comment-info">
 <span class="comment-age">(16 Dec '15, 09:53)</span> <span class="comment-user userinfo">Rajavelu_M</span>

@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><span class="small">Bei beispielsweise <a href="https://www.openstreetmap.org/changeset/36981712">https://www.openstreetmap.org/changeset/36981712</a> hast du den Editor iD verwendet. Ich nehme also an, dass sich deine Frage auf diesen Editor bezieht:</span></p>
-<p>In <a href="https://help.openstreetmap.org/upfiles/Screenshot_20160202_215011.png">dieser Ansicht</a> siehst du in der Tat nur 9 Symbole (Vorlagen), aber es gibt oben eine Suchfunktion und über den untersten Eintrag kannst du selbst (ohne Vorlage) <a href="https://wiki.openstreetmap.org/wiki/DE:Attribut">Tags</a> setzen. Tippe einfach in der Suchfunktion "Apotheke" (oder "pharmacy") ein. Dann sollte die eine entsprechende Vorlage vorgeschlagen werden, die du verwenden kannst.</p>
+<p>In <span>dieser Ansicht</span> siehst du in der Tat nur 9 Symbole (Vorlagen), aber es gibt oben eine Suchfunktion und über den untersten Eintrag kannst du selbst (ohne Vorlage) <a href="https://wiki.openstreetmap.org/wiki/DE:Attribut">Tags</a> setzen. Tippe einfach in der Suchfunktion "Apotheke" (oder "pharmacy") ein. Dann sollte die eine entsprechende Vorlage vorgeschlagen werden, die du verwenden kannst.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

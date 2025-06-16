@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I have no clue especially about USA boundary and postalcode system, but maybe you can ask again th the US sub forum at <a href="http://forum.openstreetmap.org/viewforum.php?id=20">http://forum.openstreetmap.org/viewforum.php?id=20</a> (log in there with your OSM credentials) or consult the tals-US mailinglist ... see <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p>I have no clue especially about USA boundary and postalcode system, but maybe you can ask again th the US sub forum at <a href="http://forum.openstreetmap.org/viewforum.php?id=20">http://forum.openstreetmap.org/viewforum.php?id=20</a> (log in there with your OSM credentials) or consult the tals-US mailinglist ... see <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-48027-info" class="comment-info">
 <span class="comment-age">(09 Feb '16, 17:20)</span> <span class="comment-user userinfo">stephan75</span>

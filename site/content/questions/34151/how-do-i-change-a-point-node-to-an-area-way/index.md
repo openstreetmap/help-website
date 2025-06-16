@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>A related question to <a href="https://help.openstreetmap.org/questions/27594/can-you-change-a-closed-line-into-an-area">this one</a> ...</p>
+<p>A related question to <a href="/questions/27594/can-you-change-a-closed-line-into-an-area">this one</a> ...</p>
 <p>I created a point to represent a cafe. Now, I want to go back and create an area so that I can mark the whole building as housing that cafe.</p>
 <p>How should I do this, without losing all the details I put into the point (address, internet access, website, etc.)?</p>
 <p>I tried adding a tag "building=yes" but that didn't immediately allow me to "draw" the building's outline.</p>
@@ -274,10 +274,10 @@ select the new building outline you drew and select Edit, Paste Tags from the to
 check tags seem suitable, select your old node and delete.<br />
 Probably best to read the Help in JOSM to get familiar with this editor first.<br />
 I found the most important think I needed to know was to "click off" after doing each object draw.<br />
-<img src="http://help.openstreetmap.org/upfiles/select.png" alt="tools" /></p>
+<img src="/upfiles/select.png" alt="tools" /></p>
 <p>It is also very helpful to tick Layers and Tags/Memberships under the Windows menu and place these at the right side where you can see them. You can add tags there or from the Presets menu. You add the Bing imagery from the Imagery menu and you will see all the layers you have loaded in the box at the right.<br />
 </p>
-<p><img src="http://help.openstreetmap.org/upfiles/layers.png" alt="layers" /></p>
+<p><img src="/upfiles/layers.png" alt="layers" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

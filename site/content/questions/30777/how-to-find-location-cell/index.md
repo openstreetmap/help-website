@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-30804-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please stop spamming this support board with offtopic questions and restarting a question again and again: <a href="https://help.openstreetmap.org/questions/30550/cell-location">https://help.openstreetmap.org/questions/30550/cell-location</a><br />
+<p>Please stop spamming this support board with offtopic questions and restarting a question again and again: <a href="/questions/30550/cell-location">https://help.openstreetmap.org/questions/30550/cell-location</a><br />
 This consumes our very limited ressources and doesn't help anybody...</p>
 </div>
 <div id="comment-30804-info" class="comment-info">

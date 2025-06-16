@@ -141,7 +141,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>There are still some limitations with JOSM's waypoint handling when compared to e.g. Potlatch 2, though:</p>
-<p><a href="https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node</a></p>
+<p><a href="/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node">https://help.openstreetmap.org/questions/7675/josm-is-it-possible-to-convert-an-individual-waypoint-in-a-gpx-file-to-a-node</a></p>
 <p>I suspect that you could do something with JOSM's MapCSS support to display waypoints "nicely" - but I'm not aware of an example of that.</p>
 </div>
 <div id="comment-37106-info" class="comment-info">
@@ -270,7 +270,7 @@ I did note that Basecamp does display both the trackpoints and waypoints when op
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7380/nevw">@nevw</a> - yes, there is — see my comment above.</p>
+<p><a href="https://help.openstreetmap.org/users/7380/nevw">@nevw</a> - yes, there is — see my comment above.</p>
 </div>
 <div id="comment-37145-info" class="comment-info">
 <span class="comment-age">(30 Sep '14, 12:35)</span> <span class="comment-user userinfo">AlaskaDave</span>

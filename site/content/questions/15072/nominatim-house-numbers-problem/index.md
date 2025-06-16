@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, I've imported the osm file of USA from CloudMade. I've noticed that neither my server nor openstreetmap.org return the house number in the xml/json answer you get from a reverse geocoding interogation. I've tried with zoom=18 but with no success. Is there any way to get the house number in USA with reverse geocoding? Is there a problem with my import? I've also imported TIGER Edges as I saw in the link below but it didn't help. Thank you!</p>
-<p><a href="http://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance">http://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance</a></p>
+<p><a href="/questions/12150/missing-house-numbers-in-local-nominatim-instance">https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-house" rel="tag" title="see questions tagged &#39;house&#39;">house</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-numbers" rel="tag" title="see questions tagged &#39;numbers&#39;">numbers</span>

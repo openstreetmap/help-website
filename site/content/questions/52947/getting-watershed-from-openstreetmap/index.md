@@ -172,10 +172,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A few rivers like <a href="http://www.openstreetmap.org/relation/192359">River Ob</a> have watersheds in super-relations, but for most rivers there are not any data.</p>
+<p>A few rivers like <a href="https://www.openstreetmap.org/relation/192359">River Ob</a> have watersheds in super-relations, but for most rivers there are not any data.</p>
 <p>To find out a watershed, you need to get all ways of the relation of the primary outflow river. Then search for nodes with intersections with that river. Get the river up to the source then you will get the final data for a watershed.</p>
 <p>By the way, watersheds are usually clearly visible in the cycling map as it is just the ridge of a mountain, except for some borders like the one between <a href="">the Dnieper</a> and <a href="">the Don</a>, which are both located on the Eastern European Plain.</p>
-<p><a href="http://www.openstreetmap.org/relation/2086905">http://www.openstreetmap.org/relation/2086905</a> <a href="http://www.openstreetmap.org/relation/416351">http://www.openstreetmap.org/relation/416351</a></p>
+<p><a href="https://www.openstreetmap.org/relation/2086905">https://www.openstreetmap.org/relation/2086905</a> <a href="https://www.openstreetmap.org/relation/416351">https://www.openstreetmap.org/relation/416351</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>All,</p>
-<p>Kinda of related to: <a href="https://help.openstreetmap.org/questions/14464/what-is-the-best-way-to-shift-a-whole-region">this topic</a></p>
+<p>Kinda of related to: <a href="/questions/14464/what-is-the-best-way-to-shift-a-whole-region">this topic</a></p>
 <p>I've been updating the very sparse map details for my own town recently and have moved on from iD to using JOSM which so far has been great. I've been using my own GPS tracks, surveying and cross referencing old out of copyright 1:2500 maps from the 1800's which I've geo-rectified with Global Mapper to give me accurate outlines of natural featurse that haven't moved in hundreds of years.</p>
 <p>Bringing all that data into JOSM I can see that my town has been mostly aligned to the Bing imagery and is offset in various parts between 20-50 metres which is somewhat confirmed by the available public GPS traces.</p>
 <p>I've been able to calculate the offsets of the Bing images and get all my references lined up in JOSM and as my town currently is very sparse (which I'm hoping to fix) I thought the best first step would be to get it aligned properly.</p>

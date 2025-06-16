@@ -145,7 +145,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>(re copying the JPG across) I believe that you're looking for the "Send Your Custom Map to Your Device" section of the <a href="http://www.garmin.com/us/products/onthetrail/custommaps">page that I linked to earlier</a>, which uses Google Earth.</p>
-<p>(re mkgmap) it uses whatever colours you tell it to use. You do that with a "<a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles">style definition</a>" - the easiest way to create a new one is to recursively copy the "default" style (it's a series of files in a folder called "default") and edit that however you want. Perhaps start by removing whatever's causing the "university colour" to sit over the top of everything else from your style file?</p>
+<p>(re mkgmap) it uses whatever colours you tell it to use. You do that with a "<a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/Custom_styles">style definition</a>" - the easiest way to create a new one is to recursively copy the "default" style (it's a series of files in a folder called "default") and edit that however you want. Perhaps start by removing whatever's causing the "university colour" to sit over the top of everything else from your style file?</p>
 </div>
 <div id="comment-18623-info" class="comment-info">
 <span class="comment-age">(19 Dec '12, 15:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -188,8 +188,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Where did you get your image?</p>
-<p>There are lots of different <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM maps for Garmin devices</a> each having different priorities and displaying different objects. Either the one you used wasn't up-to-date or the map author(s) chose to not display buildings at all. This is very likely because including buildings significantly increases the map size in more detailed mapped areas.</p>
-<p>If none of the available Garmin OSM maps matches your preferences you can also create your own one with the help of <a href="http://wiki.openstreetmap.org/wiki/Mkgmap#Creating_a_map">mkgmap</a> and include all the objects you want to see on your device.</p>
+<p>There are lots of different <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM maps for Garmin devices</a> each having different priorities and displaying different objects. Either the one you used wasn't up-to-date or the map author(s) chose to not display buildings at all. This is very likely because including buildings significantly increases the map size in more detailed mapped areas.</p>
+<p>If none of the available Garmin OSM maps matches your preferences you can also create your own one with the help of <a href="https://wiki.openstreetmap.org/wiki/Mkgmap#Creating_a_map">mkgmap</a> and include all the objects you want to see on your device.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

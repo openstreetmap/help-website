@@ -191,7 +191,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are many ways of doing this, they all have their advantages and disadvantages. A lot depends on the amount of data you are dealing with (whole planet vs. small extract) and the system and skills you have. If you are familiar with SQL/PostGIS, for instance, you can use one of the PostGIS importers (like osm2pgsql or imposm) to import OSM data into a PostGIS database and then export into Shapefiles. If you like command lines, try ogr2ogr. If you need something more custom and know C++, you can write your own exporter based on <a href="https://github.com/osmcode/osm-gis-export.">https://github.com/osmcode/osm-gis-export.</a> For smaller files, you can build something with use node-osmium, see the demo here: <a href="https://github.com/osmcode/node-osmium/tree/master/demo/converter.">https://github.com/osmcode/node-osmium/tree/master/demo/converter.</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Shapefiles">http://wiki.openstreetmap.org/wiki/Shapefiles</a> has more options.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Shapefiles">https://wiki.openstreetmap.org/wiki/Shapefiles</a> has more options.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -252,7 +252,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A little bit more explanation to <a href="http://help.openstreetmap.org/users/2850/joostenmies">@joost</a>-schouppe answer. First you need to find out "Oman" or any other region's OSM relation id.</p>
+<p>A little bit more explanation to <a href="https://help.openstreetmap.org/users/2850/joostenmies">@joost</a>-schouppe answer. First you need to find out "Oman" or any other region's OSM relation id.</p>
 <p>Use this query in Overpass Turbo</p>
 <pre><code>[out:json][timeout:900];
 // get a few areas into .myArea
@@ -270,13 +270,13 @@ out geom;
 node{opacity:0;fill-opacity:0}
 }}</code></pre>
 <p>Now once you know the OSM relation id then you can extract any layer easily with overpass API. OSM relation id for "Oman" is "305138"</p>
-<p>Here is curl command to extract power line using <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Area_clauses">Area clause</a> of overpass API</p>
+<p>Here is curl command to extract power line using <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Area_clauses">Area clause</a> of overpass API</p>
 <pre><code>curl \
   -H &quot;Host: overpass-api.de&quot; -H &quot;Content-Type: text/xml&quot;  \
   -d &#39;(relation[&quot;route&quot;=&quot;power&quot;](area:3600305138););(._;&gt;;);out body;&#39;  \
   http://overpass-api.de/api/interpreter  \
   -o powerline.osm</code></pre>
-<p>Now you can use <a href="http://wiki.openstreetmap.org/wiki/OGR">ogr2ogr</a> to convert OSM to shapefile.</p>
+<p>Now you can use <a href="https://wiki.openstreetmap.org/wiki/OGR">ogr2ogr</a> to convert OSM to shapefile.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -91,7 +91,7 @@ osqa_accepted = true
 <div id="post-48203-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: Go to osm.org , go to a place you wish to share, click the "share" icon, see "Geo URI". Apparently there's a <code>?z=</code> ("zoom"?) HTTP-like parameter, which is not defined in the RFC.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: Go to osm.org , go to a place you wish to share, click the "share" icon, see "Geo URI". Apparently there's a <code>?z=</code> ("zoom"?) HTTP-like parameter, which is not defined in the RFC.</p>
 </div>
 <div id="comment-48203-info" class="comment-info">
 <span class="comment-age">(18 Feb '16, 13:21)</span> <span class="comment-user userinfo">Piskvor</span>

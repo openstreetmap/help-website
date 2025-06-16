@@ -214,7 +214,7 @@ osqa_accepted = false
 <div id="post-4716-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Let's be clear that I am talking about a role=label member of a boundary/multipolgon relation, and not the type=role relation, which is a competing proposal, allegedly honored by Osmarender, which I personally have no experience using and have no interest in. The Trac ticket you linked talks about the role relation, not role member. And when you reference label=* role, this makes me think of the label key applicable, for example, on manhole covers: <a href="http://wiki.openstreetmap.org/wiki/Key:label">http://wiki.openstreetmap.org/wiki/Key:label</a></p>
+<p>Let's be clear that I am talking about a role=label member of a boundary/multipolgon relation, and not the type=role relation, which is a competing proposal, allegedly honored by Osmarender, which I personally have no experience using and have no interest in. The Trac ticket you linked talks about the role relation, not role member. And when you reference label=* role, this makes me think of the label key applicable, for example, on manhole covers: <a href="https://wiki.openstreetmap.org/wiki/Key:label">https://wiki.openstreetmap.org/wiki/Key:label</a></p>
 </div>
 <div id="comment-4716-info" class="comment-info">
 <span class="comment-age">(21 Apr '11, 21:59)</span> <span class="comment-user userinfo">ponzu</span>
@@ -365,7 +365,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might want to consider creating a relation for the polygon with boundary=administrative (with the admin_level being appropriate for the type of place). You can make the place node a member of the relation. See the <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">http://wiki.openstreetmap.org/wiki/Relation:boundary</a> page for details.</p>
+<p>You might want to consider creating a relation for the polygon with boundary=administrative (with the admin_level being appropriate for the type of place). You can make the place node a member of the relation. See the <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">https://wiki.openstreetmap.org/wiki/Relation:boundary</a> page for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

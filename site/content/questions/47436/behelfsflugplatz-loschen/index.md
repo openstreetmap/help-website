@@ -135,7 +135,7 @@ One Answer:
 <div id="post-47518-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11853/steffets"></a><a href="http://help.openstreetmap.org/users/11853/steffets">@steffets</a> zur Info: da du nun den Flugplatz einfach gelöscht hast, und sonst leider nichts geschrieben hast, habe ich nun zur Sicherheit den Ersteller angemailt.</p>
+<p><a href="https://help.openstreetmap.org/users/11853/steffets"></a><a href="https://help.openstreetmap.org/users/11853/steffets">@steffets</a> zur Info: da du nun den Flugplatz einfach gelöscht hast, und sonst leider nichts geschrieben hast, habe ich nun zur Sicherheit den Ersteller angemailt.</p>
 </div>
 <div id="comment-47518-info" class="comment-info">
 <span class="comment-age">(14 Jan '16, 20:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

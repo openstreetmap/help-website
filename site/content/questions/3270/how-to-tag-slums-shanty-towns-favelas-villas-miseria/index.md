@@ -195,8 +195,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The short answer is: One man's slum is another man's <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a></p>
-<p>"dangerous zones" is rather subjective. I guess cities in Argentina are similar to São Paulo which I have visited a few times. The favelas mostly stick out with surprising contrast against more wealthy residential areas, so in these cases it would be quite easy to make a judgement about which area is slum and which isn't, but that's a slippery slope towards all kinds of debates which we try to avoid by only mapping things (and inventing tagging schemes) which are "verifiable". We avoid subjective judgements and fuzzy scales. See <a href="http://wiki.openstreetmap.org/wiki/Verifiability">Verifiability</a></p>
+<p>The short answer is: One man's slum is another man's <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a></p>
+<p>"dangerous zones" is rather subjective. I guess cities in Argentina are similar to São Paulo which I have visited a few times. The favelas mostly stick out with surprising contrast against more wealthy residential areas, so in these cases it would be quite easy to make a judgement about which area is slum and which isn't, but that's a slippery slope towards all kinds of debates which we try to avoid by only mapping things (and inventing tagging schemes) which are "verifiable". We avoid subjective judgements and fuzzy scales. See <a href="https://wiki.openstreetmap.org/wiki/Verifiability">Verifiability</a></p>
 <p>You could devise a separate mapping project built on top of OpenStreetMap, to gather this kind of data. For example there are a lot of initiatives set up to do "crime mapping"</p>
 </div>
 <div class="answer-controls post-controls">

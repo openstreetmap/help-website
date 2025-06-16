@@ -111,10 +111,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This sounds like a great idea, but this help forum is about support (helping people with knowledge) So I highly recommend to use other <a href="http://wiki.openstreetmap.org/wiki/Contact">Contacts</a> to get feedback (esp. local OSM community, mailinglists, forums, ...). You might also lookup this pages:</p>
+<p>This sounds like a great idea, but this help forum is about support (helping people with knowledge) So I highly recommend to use other <a href="https://wiki.openstreetmap.org/wiki/Contact">Contacts</a> to get feedback (esp. local OSM community, mailinglists, forums, ...). You might also lookup this pages:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Research">http://wiki.openstreetmap.org/wiki/Research</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Education">http://wiki.openstreetmap.org/wiki/Education</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Research">https://wiki.openstreetmap.org/wiki/Research</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Education">https://wiki.openstreetmap.org/wiki/Education</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

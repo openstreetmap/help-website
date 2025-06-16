@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am using the latest JOSM. In America, I would like to know what are the proper tags for the <a href="http://www.dmv.ca.gov/portal/home/dmv.htm">Department of Motor Vehicles</a> Here is the <a href="http://en.wikipedia.org/wiki/Department_of_Motor_Vehicles">Wiki</a>.</p>
-<p>For the name I have been using <a href="http://wiki.openstreetmap.org/wiki/Key:alt_name">alt_name=*</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:loc_name">loc_name=*</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:short_name">short_name=DMV</a>.</p>
-<p>For the building I have been using <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=offices</a>, offices with an 's'. Combined with <a href="http://wiki.openstreetmap.org/wiki/Tag:office=government">office=government</a>.</p>
-<p>Finally, in question is <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity=driving_school">amenity=driving_school</a>, I don't feel the DMV as a 'school' since you don't go there to learn to drive. It's more to be tested, drivers licenses, registering vehicles. Thanks</p>
+<p>For the name I have been using <a href="https://wiki.openstreetmap.org/wiki/Key:alt_name">alt_name=*</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:loc_name">loc_name=*</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:short_name">short_name=DMV</a>.</p>
+<p>For the building I have been using <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=offices</a>, offices with an 's'. Combined with <a href="https://wiki.openstreetmap.org/wiki/Tag:office=government">office=government</a>.</p>
+<p>Finally, in question is <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity=driving_school">amenity=driving_school</a>, I don't feel the DMV as a 'school' since you don't go there to learn to drive. It's more to be tested, drivers licenses, registering vehicles. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span> <span class="post-tag tag-link-dmv" rel="tag" title="see questions tagged &#39;dmv&#39;">dmv</span> <span class="post-tag tag-link-office" rel="tag" title="see questions tagged &#39;office&#39;">office</span>

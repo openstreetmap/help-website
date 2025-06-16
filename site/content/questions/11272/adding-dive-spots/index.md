@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Adding Dive spots"
-description = '''Hi, I have added a (being a novice) a dive spot. Tried to do my best but that category doesn&#x27;t exist. Neither the icon. I have found something with thorough descrption here http://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving. However, I don&#x27;t know how to actually use that information. Do tho...'''
+description = '''Hi, I have added a (being a novice) a dive spot. Tried to do my best but that category doesn&#x27;t exist. Neither the icon. I have found something with thorough descrption here https://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving. However, I don&#x27;t know how to actually use that information. Do tho...'''
 date = "2012-03-17T15:22:00Z"
 lastmod = "2012-03-18T10:14:00Z"
 weight = 11272
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I have added a (being a novice) a dive spot. Tried to do my best but that category doesn't exist. Neither the icon. I have found something with thorough descrption here <a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving.">http://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving.</a> However, I don't know how to actually use that information. Do those things have to be comfirmed? How can I get the scuba icon to work? Am I doing it the wrong way?</p>
+<p>I have added a (being a novice) a dive spot. Tried to do my best but that category doesn't exist. Neither the icon. I have found something with thorough descrption here <a href="https://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving.">https://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving.</a> However, I don't know how to actually use that information. Do those things have to be comfirmed? How can I get the scuba icon to work? Am I doing it the wrong way?</p>
 <p>Thx!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,8 +107,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't think you're doing it wrong, and no confirmation is needed. :)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving#Rendering_on_OpenSeaMap">According to the wiki-page</a> you provided, <a href="http://map.openseamap.org/map/?zoom=14&amp;lat=12.05133&amp;lon=92.9811&amp;layers=B0TTTFFFTFFT">OpenSeaMap</a> renders this. Mapnik (That is the "main" renderer you see at www.openstreetmap.org) doesn't render this feature (as with most sports), neither is Potlatch, you will only get a green node.</p>
-<p>If you want to, you can take <a href="http://www.openstreetmap.org/edit?lat=12.0513&amp;lon=92.9811&amp;zoom=14">look</a> at the diving spots from the above link in edit mode, if you're still uncertain.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:sport%3Dscuba_diving#Rendering_on_OpenSeaMap">According to the wiki-page</a> you provided, <a href="http://map.openseamap.org/map/?zoom=14&amp;lat=12.05133&amp;lon=92.9811&amp;layers=B0TTTFFFTFFT">OpenSeaMap</a> renders this. Mapnik (That is the "main" renderer you see at www.openstreetmap.org) doesn't render this feature (as with most sports), neither is Potlatch, you will only get a green node.</p>
+<p>If you want to, you can take <a href="https://www.openstreetmap.org/edit?lat=12.0513&amp;lon=92.9811&amp;zoom=14">look</a> at the diving spots from the above link in edit mode, if you're still uncertain.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

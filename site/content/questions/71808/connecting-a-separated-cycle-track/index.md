@@ -48,7 +48,7 @@ osqa_accepted = true
 <p>This makes sense, but I'm not 100% sure what the exact way to do this is: should we be adding extra cycle tracks to connect with features, or should we extend features to hit the cycle tracks?</p>
 <p>If I have the following situation, I have two ways of connecting the cycle track (top left) to the parking aisle (bottom right). I can either extend the parking aisle route further across the road (yellow diagonal) to connect with the track, or I can draw a tiny branch off the cycle track that meets at the junction. It seems like the former is the better option, but I'm not sure.</p>
 <p>(Note: the satellite imagery here hasn't been updated to show the cycle track, but it's where the old cycle lane used to be)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_ZsfChq1.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_ZsfChq1.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-cycle" rel="tag" title="see questions tagged &#39;cycle&#39;">cycle</span>

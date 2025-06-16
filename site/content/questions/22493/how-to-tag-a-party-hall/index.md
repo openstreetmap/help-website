@@ -197,7 +197,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -302,7 +302,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Federico since there has been this proposal <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Edinburgh_Festivals">http://wiki.openstreetmap.org/wiki/Proposed_features/Edinburgh_Festivals</a> using the term festival, you could consider the term festival as a value with the key leisure. Adding tags as name, roof, address etc following the tag list.</p>
+<p>Hi Federico since there has been this proposal <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Edinburgh_Festivals">https://wiki.openstreetmap.org/wiki/Proposed_features/Edinburgh_Festivals</a> using the term festival, you could consider the term festival as a value with the key leisure. Adding tags as name, roof, address etc following the tag list.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

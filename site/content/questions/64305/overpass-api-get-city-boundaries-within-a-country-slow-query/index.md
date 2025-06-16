@@ -203,7 +203,7 @@ out geom;</code></pre>
     &quot;de:regionalschluessel&quot;: &quot;059160000000&quot;,
     &quot;name&quot;: &quot;Herne&quot;,
     &quot;name:prefix&quot;: &quot;Stadt&quot;,
-    &quot;source&quot;: &quot;http://wiki.openstreetmap.org/wiki/Import/Catalogue/Kreisgrenzen_Deutschland_2005&quot;,
+    &quot;source&quot;: &quot;https://wiki.openstreetmap.org/wiki/Import/Catalogue/Kreisgrenzen_Deutschland_2005&quot;,
     &quot;type&quot;: &quot;boundary&quot;,
     &quot;wikidata&quot;: &quot;Q2904&quot;,
     &quot;wikipedia&quot;: &quot;de:Herne&quot;

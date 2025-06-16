@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As described on the <a href="http://www.openstreetmap.org/">main page</a> hosting is provided by the UCL VR center, Imperial College London and Bytemark Hosting. There is also a tile cache hosted at Teleservice Skåne AB is sweden. All this hosting is donated and only <a href="http://www.bytemark.co.uk/">Bytemark</a> is providing hosting comercialy.</p>
-<p>Hosting beefy servers on rackspace hosted by universities would not be possible without the help of our <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">administrators</a>. Especialy Grant who is doing most of the hardware stuff.</p>
+<p>As described on the <a href="https://www.openstreetmap.org/">main page</a> hosting is provided by the UCL VR center, Imperial College London and Bytemark Hosting. There is also a tile cache hosted at Teleservice Skåne AB is sweden. All this hosting is donated and only <a href="http://www.bytemark.co.uk/">Bytemark</a> is providing hosting comercialy.</p>
+<p>Hosting beefy servers on rackspace hosted by universities would not be possible without the help of our <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">administrators</a>. Especialy Grant who is doing most of the hardware stuff.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

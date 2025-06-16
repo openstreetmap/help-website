@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This problem may have been cataloged <a href="https://help.openstreetmap.org/questions/27411/reading-in-planet-file-aborted-core-dump">before</a> so I'm posting in case there are continuing problems with osm.pbf planet files or to get help discovering any problems on my end.</p>
+<p>This problem may have been cataloged <a href="/questions/27411/reading-in-planet-file-aborted-core-dump">before</a> so I'm posting in case there are continuing problems with osm.pbf planet files or to get help discovering any problems on my end.</p>
 <p>My setup:</p>
 <ul>
 <li><strong>Machine</strong></li>

@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you go to our log in page, and then to "forgot password" you get to: <a href="http://www.openstreetmap.org/user/forgot-password">http://www.openstreetmap.org/user/forgot-password</a> There you can enter the email address you used to register. You can then login with the email address and the new password. The login name is not required.<br />
+<p>If you go to our log in page, and then to "forgot password" you get to: <a href="https://www.openstreetmap.org/user/forgot-password">https://www.openstreetmap.org/user/forgot-password</a> There you can enter the email address you used to register. You can then login with the email address and the new password. The login name is not required.<br />
 </p>
 <p>You also can find out your user name if you look in the data history of objects you have edited before (e.g. by using <span>data layer</span>).</p>
 <p>Please tell us here if it worked.</p>

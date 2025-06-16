@@ -260,7 +260,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><span>@c2r</span>: in the specific list you've given, this would appear to leave access for several classes of vehicle undefined. The relevant hierarchy would appear to be shown on the wiki at <a href="http://wiki.openstreetmap.org/wiki/Access">http://wiki.openstreetmap.org/wiki/Access</a></p>
+<p><span>@c2r</span>: in the specific list you've given, this would appear to leave access for several classes of vehicle undefined. The relevant hierarchy would appear to be shown on the wiki at <a href="https://wiki.openstreetmap.org/wiki/Access">https://wiki.openstreetmap.org/wiki/Access</a></p>
 <p>If it's been snowing a lot, and someone decides to try out their snowmobile... you've not specified an access restriction for snowmobiles, so when they ask the routing software for routes where snowmobiles are allowed, how would it know about any restriction?</p>
 <p>I think it reduces potential routing errors by using access= to specify the default access, and tagging exceptions.</p>
 </div>

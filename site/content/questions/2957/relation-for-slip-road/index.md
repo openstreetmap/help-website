@@ -178,8 +178,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your way is an <a href="http://www.openstreetmap.org/?way=99209279">off-ramp (slip road) from the A11</a> near Old Buckenham, which is really cool because I've always wanted to have an excuse to type "Old Buckenham".</p>
-<p>That portion of A11 is included in a <a href="http://www.openstreetmap.org/browse/relation/1263432">road relation</a>, where the motorway ways have a role, "forward" and the slip roads have a role, "link".<br />
+<p>Your way is an <a href="https://www.openstreetmap.org/?way=99209279">off-ramp (slip road) from the A11</a> near Old Buckenham, which is really cool because I've always wanted to have an excuse to type "Old Buckenham".</p>
+<p>That portion of A11 is included in a <a href="https://www.openstreetmap.org/browse/relation/1263432">road relation</a>, where the motorway ways have a role, "forward" and the slip roads have a role, "link".<br />
 </p>
 <p>If you want to add your slip road to that relation with Potlatch2</p>
 <ol>

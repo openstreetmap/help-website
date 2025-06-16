@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you need is the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation">Overpass-API Negation</a> operator.</p>
+<p>What you need is the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Negation">Overpass-API Negation</a> operator.</p>
 <p>Here is <a href="http://overpass-turbo.eu/s/iaR">an example</a> for trunk roads. BEWARE it returns a lot of data, so it may be better to run through Overpass rather than Overpass-Turbo, or change the area constraint to limit the query to individual provinces.</p>
 </div>
 <div class="answer-controls post-controls">

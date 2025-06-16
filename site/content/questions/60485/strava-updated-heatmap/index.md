@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Strava updated heatmap"
-description = '''Looks like Strava updated the heatmap ( see https://labs.strava.com/heatmap ) but the links available here [1] do still show the old one. Does anyone have an idea on how to use the new heatmap? [1] http://wiki.openstreetmap.org/wiki/Strava#Data_Permission_-_Allowed_for_tracing.21 Thanks'''
+description = '''Looks like Strava updated the heatmap ( see https://labs.strava.com/heatmap ) but the links available here [1] do still show the old one. Does anyone have an idea on how to use the new heatmap? [1] https://wiki.openstreetmap.org/wiki/Strava#Data_Permission_-_Allowed_for_tracing.21 Thanks'''
 date = "2017-11-06T18:04:00Z"
 lastmod = "2017-11-13T08:51:00Z"
 weight = 60485
@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Looks like Strava updated the heatmap ( see <a href="https://labs.strava.com/heatmap">https://labs.strava.com/heatmap</a> ) but the links available here [1] do still show the old one. Does anyone have an idea on how to use the new heatmap?</p>
-<p>[1] <a href="http://wiki.openstreetmap.org/wiki/Strava#Data_Permission_-_Allowed_for_tracing.21">http://wiki.openstreetmap.org/wiki/Strava#Data_Permission_-_Allowed_for_tracing.21</a></p>
+<p>[1] <a href="https://wiki.openstreetmap.org/wiki/Strava#Data_Permission_-_Allowed_for_tracing.21">https://wiki.openstreetmap.org/wiki/Strava#Data_Permission_-_Allowed_for_tracing.21</a></p>
 <p>Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">

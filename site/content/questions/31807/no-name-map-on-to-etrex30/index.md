@@ -119,7 +119,7 @@ osqa_accepted = false
 <p>I downloaded a current osm area through Josm and using mkgmap produced one of their noname style img maps for the Garmin.</p>
 <p>/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -jar /Applications/mkgmap-r3132/mkgmap.jar --gmapsupp --style=noname --output-dir=/Users/xxx/Documents/xxx/ /Users/xxx/Documents/xxx/Josm_file.osm</p>
 <p>This has produced a very good result for tracking down unnamed ways.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2014-03-29_at_4.31.32_pm.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2014-03-29_at_4.31.32_pm.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -217,7 +217,7 @@ Nev</p>
 1
 </div>
 <div class="comment-text">
-<p>This may help <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>This may help <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-35521-info" class="comment-info">
 <span class="comment-age">(04 Aug '14, 22:29)</span> <span class="comment-user userinfo">andy mackey</span>

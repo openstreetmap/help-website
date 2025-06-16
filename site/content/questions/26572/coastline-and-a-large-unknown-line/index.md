@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Coastline and a large unknown line"
-description = '''Here is a good spot to look at what I&#x27;m talking about. http://www.openstreetmap.org/?mlat=57.0358&amp;amp;mlon=-135.2776#map=16/57.0358/-135.2776  Is there any point in keeping this line? I have been hesitant to delete it in fear that it is a rough coastline for viewing a greater distances. I have been ...'''
+description = '''Here is a good spot to look at what I&#x27;m talking about. https://www.openstreetmap.org/?mlat=57.0358&amp;amp;mlon=-135.2776#map=16/57.0358/-135.2776  Is there any point in keeping this line? I have been hesitant to delete it in fear that it is a rough coastline for viewing a greater distances. I have been ...'''
 date = "2013-09-20T19:43:00Z"
 lastmod = "2013-09-21T19:02:00Z"
 weight = 26572
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Here is a good spot to look at what I'm talking about. <a href="http://www.openstreetmap.org/?mlat=57.0358&amp;mlon=-135.2776#map=16/57.0358/-135.2776">http://www.openstreetmap.org/?mlat=57.0358&amp;mlon=-135.2776#map=16/57.0358/-135.2776</a></p>
+<p>Here is a good spot to look at what I'm talking about. <a href="https://www.openstreetmap.org/?mlat=57.0358&amp;mlon=-135.2776#map=16/57.0358/-135.2776">https://www.openstreetmap.org/?mlat=57.0358&amp;mlon=-135.2776#map=16/57.0358/-135.2776</a></p>
 <p><img src="http://i40.tinypic.com/29nw5qq.png" alt="alt text" /></p>
 <p>Is there any point in keeping this line? I have been hesitant to delete it in fear that it is a rough coastline for viewing a greater distances.</p>
 <p>I have been touching up the coastline and ignoring this line since I don't know what it is. Any insight would be great, thanks!</p>
@@ -116,7 +116,7 @@ osqa_accepted = true
 <p>You may try to edit the coastline, removing the old parts (like the one shown in your screenshot) together and keeping the parts for the areas where there is not other way defining the coastline.</p>
 <p>You may also try to reach the other users involved in the last edits to know what is happening.</p>
 <p>Keep in mind that coastlines, when edited, sometimes take several months to appear updated on the public tile server (this update is very expensive in computational terms).</p>
-<p><strong>EDIT:</strong> Looking more closely to the area, I would say that the way could be deleted safely - it matches (but with lower quality) the coastline and extends inward to where a lake already exists. Its first date is very old, maybe some old import or automated fix (see that it was uploaded by "upload.py"), by user "BugBuster" (see its <a href="http://wiki.openstreetmap.org/wiki/User:B%C3%BCrste/BugBuster">wiki</a> page). The changeset is also tagged saying something about splitting very long ways (more than 2k nodes, not allowed since a <em>long</em> time ago...)</p>
+<p><strong>EDIT:</strong> Looking more closely to the area, I would say that the way could be deleted safely - it matches (but with lower quality) the coastline and extends inward to where a lake already exists. Its first date is very old, maybe some old import or automated fix (see that it was uploaded by "upload.py"), by user "BugBuster" (see its <a href="https://wiki.openstreetmap.org/wiki/User:B%C3%BCrste/BugBuster">wiki</a> page). The changeset is also tagged saying something about splitting very long ways (more than 2k nodes, not allowed since a <em>long</em> time ago...)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

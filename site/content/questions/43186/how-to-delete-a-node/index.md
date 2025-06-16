@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to delete a node"
-description = '''Hi, I&#x27;m new to Openstreetmap. Unfortunately up to now it doesn&#x27;t seem as userfriendly as I hoped it to be. I wanted my bitcoin-accepting company to appear on Coinmap.org and I did manage. But in the process I created a duplicate entry:  http://www.openstreetmap.org/node/2724262267 is the one that sh...'''
+description = '''Hi, I&#x27;m new to Openstreetmap. Unfortunately up to now it doesn&#x27;t seem as userfriendly as I hoped it to be. I wanted my bitcoin-accepting company to appear on Coinmap.org and I did manage. But in the process I created a duplicate entry:  https://www.openstreetmap.org/node/2724262267 is the one that sh...'''
 date = "2015-05-24T16:23:00Z"
 lastmod = "2015-05-29T22:43:00Z"
 weight = 43186
@@ -42,11 +42,11 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I'm new to Openstreetmap. Unfortunately up to now it doesn't seem as userfriendly as I hoped it to be. I wanted my bitcoin-accepting company to appear on Coinmap.org and I did manage. But in the process I created a duplicate entry:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/node/2724262267">http://www.openstreetmap.org/node/2724262267</a> is the one that should stay, it works fine and it appears on coinmap.org.</li>
-<li><a href="http://www.openstreetmap.org/node/3520465480">http://www.openstreetmap.org/node/3520465480</a> is the duplicate. I have no idea how to get rid of it.</li>
+<li><a href="https://www.openstreetmap.org/node/2724262267">https://www.openstreetmap.org/node/2724262267</a> is the one that should stay, it works fine and it appears on coinmap.org.</li>
+<li><a href="https://www.openstreetmap.org/node/3520465480">https://www.openstreetmap.org/node/3520465480</a> is the duplicate. I have no idea how to get rid of it.</li>
 </ul>
 <p>When I click [edit] on the top of the page, I do get into edit-mode, but the node is not selected anymore and the info on it is gone. When I search for the number, or on 'Greenlight Consultancy', it is not found.</p>
-<p>When I go to <a href="http://www.openstreetmap.org/edit?node=3520465480">http://www.openstreetmap.org/edit?node=3520465480</a> also then I don't get to see it nor delete anything.</p>
+<p>When I go to <a href="https://www.openstreetmap.org/edit?node=3520465480">https://www.openstreetmap.org/edit?node=3520465480</a> also then I don't get to see it nor delete anything.</p>
 <p>Finally I'm used to finding my answers in the related forum, but this question is probably too simple to be answered here. In any case I couldn't find it.</p>
 <p>So I wonder how to delete this node 3520465480. Thanks in advance for your kind help.</p>
 <p>Thomas.</p>

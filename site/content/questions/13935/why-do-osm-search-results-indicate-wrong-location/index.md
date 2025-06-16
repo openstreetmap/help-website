@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Why do OSM search results for various roads in Thorpe Hesley village indicate links with other locations in South Yorkshire . Some are linked with Blackburn, a suburb in Rotherham and others with Ecclesfield, a suburb in Sheffield, with no reference to the village</p>
-<p>Look here <a href="http://www.openstreetmap.org/?lat=53.459082&amp;lon=-1.435533&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=53.459082&amp;lon=-1.435533&amp;zoom=18&amp;layers=M</a></p>
+<p>Look here <a href="https://www.openstreetmap.org/?lat=53.459082&amp;lon=-1.435533&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=53.459082&amp;lon=-1.435533&amp;zoom=18&amp;layers=M</a></p>
 <p>Examples :- Sough Hall Road, Blackburn, Rotherham. Thorpe Street, Blackburn, Rotherham.<br />
 Sough Hall Close, Ecclesfield, Rotherham. Brook Court, Ecclesfield, Rotherham.<br />
 </p>
@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Streets and places get linked to town nodes that are nearby but which may not be the correct one.Drawing polygons for each town may fix it. see my question <a href="http://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">http://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
+<p>Streets and places get linked to town nodes that are nearby but which may not be the correct one.Drawing polygons for each town may fix it. see my question <a href="/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area">https://help.openstreetmap.org/questions/5745/town-nodes-and-polygons-that-fail-to-confine-the-name-within-an-area</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -100,7 +100,7 @@ GET / HTTP/1.0</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Note1: 129.132.168.206 is <a href="http://wiki.openstreetmap.org/wiki/Servers/karosm">karosm</a> not www not tile Note2: do you press enter twice?</p>
+<p>Note1: 129.132.168.206 is <a href="https://wiki.openstreetmap.org/wiki/Servers/karosm">karosm</a> not www not tile Note2: do you press enter twice?</p>
 </div>
 <div id="comment-3299-info" class="comment-info">
 <span class="comment-age">(23 Feb '11, 09:11)</span> <span class="comment-user userinfo">emj</span>

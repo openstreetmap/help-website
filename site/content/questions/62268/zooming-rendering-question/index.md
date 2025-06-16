@@ -72,7 +72,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>See the answer on <a href="https://help.openstreetmap.org/questions/62225/changes-not-showing-up-for-11-hrs">this question</a>. There seems to be a problem with one of the OSMF rendering databases that is causing delays in rendering.</p>
+<p>See the answer on <a href="/questions/62225/changes-not-showing-up-for-11-hrs">this question</a>. There seems to be a problem with one of the OSMF rendering databases that is causing delays in rendering.</p>
 </div>
 <div id="comment-62273-info" class="comment-info">
 <span class="comment-age">(22 Feb '18, 16:52)</span> <span class="comment-user userinfo">alester</span>
@@ -84,7 +84,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>And for the issue with different appearance on different zoom levels see <a href="https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a></p>
+<p>And for the issue with different appearance on different zoom levels see <a href="/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a></p>
 </div>
 <div id="comment-62299-info" class="comment-info">
 <span class="comment-age">(23 Feb '18, 07:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

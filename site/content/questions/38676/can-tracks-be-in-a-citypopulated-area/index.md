@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack">Tag:highway=track wiki</a>:</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack">Tag:highway=track wiki</a>:</p>
 <p>This tag represents roads for mostly agricultural use, forest tracks etc.</p>
 <p>However I usually see that people map dirt roads in cities as tracks. For example for roads near rivers or service/parking roads in a parking lot or a residental area, etc. These are clearly not for agricultural use, but people tag them as tracks, probably because the rendering is different and it does look like a dirt road in the map. Another reason could be that in the hungarian editor on OSM, track is translated to a term that also means dirt road, and people tend to use that because they think that is the proper way to tag. Is this okay, or should these be retagged to highways with the proper surface tags?</p>
 </div>

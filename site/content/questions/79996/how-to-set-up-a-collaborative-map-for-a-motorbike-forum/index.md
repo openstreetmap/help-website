@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-79999-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've detached this question from the thread <a href="https://help.openstreetmap.org/questions/79257/creating-a-collaborative-community-map-another-personalised-map-question">Creating a collaborative community map (another personalised map question!)</a>.</p>
+<p>I've detached this question from the thread <a href="/questions/79257/creating-a-collaborative-community-map-another-personalised-map-question">Creating a collaborative community map (another personalised map question!)</a>.</p>
 <p><a href="https://help.openstreetmap.org/users/20165/landyvlad">@LandyVlad</a>: Your question would have been lost because you posted it as an answer to the other question.</p>
 </div>
 <div id="comment-79999-info" class="comment-info">

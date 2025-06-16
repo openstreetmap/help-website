@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Connected to <a href="https://help.openstreetmap.org/questions/36361/visualise-addresses-added-or-changes-added-in-a-given-interval">https://help.openstreetmap.org/questions/36361/visualise-addresses-added-or-changes-added-in-a-given-interval</a></p>
+<p>Connected to <a href="/questions/36361/visualise-addresses-added-or-changes-added-in-a-given-interval">https://help.openstreetmap.org/questions/36361/visualise-addresses-added-or-changes-added-in-a-given-interval</a></p>
 <p>I'm looking for a tool that could easily show me on the map what edits have been made during that interval? A before/after view would be great (to boost morale)</p>
 <p><strong>Note:</strong> I was able to use <a href="http://nrenner.github.io/achavi/?changeset=25078869">http://nrenner.github.io/achavi/?changeset=25078869</a> to nicely visualise the changes for that time interval but I can't get it to give me a "hard link" - something I could share via a browser</p>
 </div>

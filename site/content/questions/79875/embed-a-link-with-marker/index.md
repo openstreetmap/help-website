@@ -76,8 +76,8 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Similar questions within the last month:</p>
-<p>April 24th: <a href="https://help.openstreetmap.org/questions/79846/how-to-find-the-latitude-and-longitude-of-a-city">https://help.openstreetmap.org/questions/79846/how-to-find-the-latitude-and-longitude-of-a-city</a></p>
-<p>April 13th: <a href="https://help.openstreetmap.org/questions/79638/how-do-i-get-a-list-of-coordinates">https://help.openstreetmap.org/questions/79638/how-do-i-get-a-list-of-coordinates</a></p>
+<p>April 24th: <a href="/questions/79846/how-to-find-the-latitude-and-longitude-of-a-city">https://help.openstreetmap.org/questions/79846/how-to-find-the-latitude-and-longitude-of-a-city</a></p>
+<p>April 13th: <a href="/questions/79638/how-do-i-get-a-list-of-coordinates">https://help.openstreetmap.org/questions/79638/how-do-i-get-a-list-of-coordinates</a></p>
 <p>UK postcodes are particularly patchy in OSM as they are rarely signposted and there often seem to be issues with the "open" database releases.</p>
 </div>
 <div id="comment-79966-info" class="comment-info">

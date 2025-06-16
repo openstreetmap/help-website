@@ -217,10 +217,10 @@ osqa_accepted = true
 <li>A forest. This is tagged <code>landuse=forest</code>. It covers most of the park.</li>
 </ul>
 <p>So you <strong>draw a park</strong>:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/park.png" alt="Closed polygon representing a park" /></p>
+<p><img src="/upfiles/park.png" alt="Closed polygon representing a park" /></p>
 <p>This only requires a closed way that carries the park's tags, i.e. <code>leisure=park + name=Alice Park</code>.</p>
 <p>And you <strong>draw a forest</strong>:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/forest.png" alt="Polygon with a hole, representing a forest" /></p>
+<p><img src="/upfiles/forest.png" alt="Polygon with a hole, representing a forest" /></p>
 <p>Because it has a hole, we need to use a multipolygon relation. So it consists of two closed ways (the outer ring and the inner ring), plus the relation that holds them together and gives them meaning. The forest's tags (i.e. <code>landuse=forest</code>) go onto the relation, and – like all multipolygon relations – it also gets a <code>type=multipolygon</code> tag.</p>
 <p><strong>That's it.</strong></p>
 <p>There's one more thing that may be causing confusion here, though: The way we've drawn for the park, and the way we've drawn as the outer ring of the forest, have the exact same shape. This isn't necessarily always the case, as you could easily imagine a park where there's some grassy area without trees at the edge. But in our example, it is.</p>

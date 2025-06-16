@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-29093-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you already checked this pages? <a href="http://switch2osm.org">http://switch2osm.org</a>, <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
+<p>Did you already checked this pages? <a href="http://switch2osm.org">http://switch2osm.org</a>, <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
 </div>
 <div id="comment-29093-info" class="comment-info">
 <span class="comment-age">(15 Dec '13, 16:58)</span> <span class="comment-user userinfo">iii</span>

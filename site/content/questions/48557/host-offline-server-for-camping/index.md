@@ -113,7 +113,7 @@ osqa_accepted = false
 <p>b) which services you actually want to provide</p>
 <p>Lets assume the answer to a) is no.</p>
 <p>If you assume that all connecting devices will be fast enough to do on device rendering, you could serve vector tiles from the device. You migh even be able to provide rough global coverage and detailed local tiles.</p>
-<p>Search will be difficult, see <a href="http://www.openstreetmap.org/user/SimonPoole/diary/34857">http://www.openstreetmap.org/user/SimonPoole/diary/34857</a> for a potential solution (the XSCE site would be worth looking at in any case).</p>
+<p>Search will be difficult, see <a href="https://www.openstreetmap.org/user/SimonPoole/diary/34857">https://www.openstreetmap.org/user/SimonPoole/diary/34857</a> for a potential solution (the XSCE site would be worth looking at in any case).</p>
 <p>Routing you might want to have a look at <a href="https://graphhopper.com/">https://graphhopper.com/</a> or OSRM (OSRM woul require pre-processing on a larger machine).</p>
 <p>Naturally if you want to make your life easier and are not doing it for the challenge of craming everything on to a RPi, repurposing an old laptop is likely to work a lot better.</p>
 </div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to make the following routes &quot;compatible&quot; with the Public Transport Line Diagram?"
-description = '''How do you make the following routes &quot;compatible&quot; with the Public Transport Line Diagram? http://www.openstreetmap.org/browse/relation/1014360 http://www.openstreetmap.org/browse/relation/1856207 http://www.openstreetmap.org/browse/relation/337590 http://www.openstreetmap.org/browse/relation/337589 ...'''
+description = '''How do you make the following routes &quot;compatible&quot; with the Public Transport Line Diagram? https://www.openstreetmap.org/browse/relation/1014360 https://www.openstreetmap.org/browse/relation/1856207 https://www.openstreetmap.org/browse/relation/337590 https://www.openstreetmap.org/browse/relation/337589 ...'''
 date = "2011-11-22T13:43:00Z"
 lastmod = "2011-11-23T13:49:00Z"
 weight = 9177
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How do you make the following routes "compatible" with the Public Transport Line Diagram?</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/1014360">http://www.openstreetmap.org/browse/relation/1014360</a> <a href="http://www.openstreetmap.org/browse/relation/1856207">http://www.openstreetmap.org/browse/relation/1856207</a> <a href="http://www.openstreetmap.org/browse/relation/337590">http://www.openstreetmap.org/browse/relation/337590</a> <a href="http://www.openstreetmap.org/browse/relation/337589">http://www.openstreetmap.org/browse/relation/337589</a> <a href="http://www.openstreetmap.org/browse/relation/1856209">http://www.openstreetmap.org/browse/relation/1856209</a> <a href="http://www.openstreetmap.org/browse/relation/1856216">http://www.openstreetmap.org/browse/relation/1856216</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/1014360">https://www.openstreetmap.org/browse/relation/1014360</a> <a href="https://www.openstreetmap.org/browse/relation/1856207">https://www.openstreetmap.org/browse/relation/1856207</a> <a href="https://www.openstreetmap.org/browse/relation/337590">https://www.openstreetmap.org/browse/relation/337590</a> <a href="https://www.openstreetmap.org/browse/relation/337589">https://www.openstreetmap.org/browse/relation/337589</a> <a href="https://www.openstreetmap.org/browse/relation/1856209">https://www.openstreetmap.org/browse/relation/1856209</a> <a href="https://www.openstreetmap.org/browse/relation/1856216">https://www.openstreetmap.org/browse/relation/1856216</a></p>
 <p>Take note that some relations are to be completed in the near future</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -145,7 +145,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>jeepneys are minibuses? Like Dolmus in Turkey or Marshrutkas in Eastern Europe? There is a tag already: route=share_taxi <a href="http://wiki.openstreetmap.org/wiki/Tag:route%3Dshare_taxi">http://wiki.openstreetmap.org/wiki/Tag:route%3Dshare_taxi</a></p>
+<p>jeepneys are minibuses? Like Dolmus in Turkey or Marshrutkas in Eastern Europe? There is a tag already: route=share_taxi <a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dshare_taxi">https://wiki.openstreetmap.org/wiki/Tag:route%3Dshare_taxi</a></p>
 </div>
 <div id="comment-9203-info" class="comment-info">
 <span class="comment-age">(23 Nov '11, 11:29)</span> <span class="comment-user userinfo">moszkva ter</span>

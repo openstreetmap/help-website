@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there! Say I have an arbitrary OSM entity which I want to display on a third party map (Google maps for arguments sake)..</p>
-<p>Say I want to display London Heathrow airport on my map. This is how I would like it highlighted here: <a href="http://www.openstreetmap.org/way/185882029#map=13/51.4698/-0.4531">London Heathrow Airport</a></p>
+<p>Say I want to display London Heathrow airport on my map. This is how I would like it highlighted here: <a href="https://www.openstreetmap.org/way/185882029#map=13/51.4698/-0.4531">London Heathrow Airport</a></p>
 <p>Now, my server uses the awesome Overpass API, so if I want the bounds of the airport, I can get them like so: <a href="http://overpass-api.de/api/interpreter?data=%2F%2F%5Bout%3Acsv%28%3Bfalse%29%5D%3B%0A%5Bout%3Ajson%5D%3B%0Away%28185882029%29%3B%2F*added%20by%20auto%20repair*%2F%28._%3B%3E%3B%29%3B%2F*end%20of%20auto%20repair*%2Fout%3B">Raw Data from Overpass API for Heathrow Airport</a></p>
 <p>Now this is the problem, I now have the ways and nodes that consist of the airport BUT the ways/ nodes are NOT in the correct order to outline. So how can I outline the data from the second link, like it is in the first one??</p>
 <p>Or if this isnt easy/ trivial, is there any way to embed just the map section from the first link on a webpage?!</p>

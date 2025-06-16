@@ -111,7 +111,7 @@ out meta;</code></pre>
 <div class="comment-text">
 <p>Hi there,</p>
 <p>As I was told that I cannot retrieve the landuse as another field, I'm trying to create different queries per landuse and then merge them later-on in R.</p>
-<p>I have tried to model my query after different variations I found online, namely <a href="https://wiki.openstreetmap.org/wiki/User:Tagtheworld/CSV-Export">this one</a> and <a href="https://help.openstreetmap.org/questions/73145/overpass-query-for-a-name-with-different-possible-keystagsfeatures">that one</a>. The problem is that the results of the query are empty fields and I don't know what is going on. I'm very new to the OSM and Overpass Turbo syntax.</p>
+<p>I have tried to model my query after different variations I found online, namely <a href="https://wiki.openstreetmap.org/wiki/User:Tagtheworld/CSV-Export">this one</a> and <a href="/questions/73145/overpass-query-for-a-name-with-different-possible-keystagsfeatures">that one</a>. The problem is that the results of the query are empty fields and I don't know what is going on. I'm very new to the OSM and Overpass Turbo syntax.</p>
 <p>My resulting query attempts look like <a href="https://pastebin.com/v7rHzkBp">this</a> and <a href="https://pastebin.com/skRgCG8G">that</a> and both produce empty fields.</p>
 <p>What I would like to achieve is the following: I want to retrieve the location of all charging stations in Germany, Italy and France. I also need to know what kind of area they are located in. For example I would like to know how many public charging stations are within residential areas of cities, how many are at rest stops on highways, etc.</p>
 <p>Can anyone give me a hint as to how I can achieve this? Thank you all for your time.</p>

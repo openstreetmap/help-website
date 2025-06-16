@@ -110,9 +110,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have no concrete hint for you, but have a look at the <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> page in the OSM wiki.</p>
+<p>I have no concrete hint for you, but have a look at the <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> page in the OSM wiki.</p>
 <p>The do a search there for apps aor frameworks that can store and display tiles, maybe some of them are opensource.</p>
-<p>For example: <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">mapsforge</a> can display OSM based maps and I assume also POIs ... but it uses mainly vector based maps. But IIRC it can also display own pre-rendered offline tiles.</p>
+<p>For example: <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">mapsforge</a> can display OSM based maps and I assume also POIs ... but it uses mainly vector based maps. But IIRC it can also display own pre-rendered offline tiles.</p>
 <p>Please ask on the <a href="https://groups.google.com/forum/#!forum/mapsforge-dev">mailinglist</a> there.</p>
 </div>
 <div class="answer-controls post-controls">

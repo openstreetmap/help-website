@@ -156,7 +156,7 @@ org.openstreetmap.osmosis.core.OsmosisRuntimeException: Expected argument 1 to b
 <pre><code>bash: cd: osmosis-0.39: Datei oder Verzeichnis nicht gefunden</code></pre>
 <p>which means - file or directory not found!`?</p>
 <p>btw i afterwards tried to install osmfilter</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 <p>Download and build in one run: wget -O - <a href="http://m.m.i24.cc/osmfilter.c">http://m.m.i24.cc/osmfilter.c</a> |cc -x c - -O3 -o osmfilter</p>
 <p>As usual: There is no warranty, to the extent permitted by law.</p>
 <pre><code>linux-70ce:/home/martin #  wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -O3 -o osmfilter

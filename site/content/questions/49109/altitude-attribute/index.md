@@ -135,8 +135,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tunnel under the railroad should probably be marked as <a href="http://wiki.openstreetmap.org/wiki/Key:layer">layer=-1</a>. Sometimes it will be a different value for the layer, but the usual tunnel will be <code>-1</code>.</p>
-<p>Altitude is usually stored in the <a href="http://wiki.openstreetmap.org/wiki/Key:ele">ele</a> key (short for elevation). It should probably only be used on a limited set of objects where the elevation is well determined (things like mountain peaks). In general combining OSM data with separate elevation data is a better approach than adding elevations of various accuracies and sources to objects.</p>
+<p>The tunnel under the railroad should probably be marked as <a href="https://wiki.openstreetmap.org/wiki/Key:layer">layer=-1</a>. Sometimes it will be a different value for the layer, but the usual tunnel will be <code>-1</code>.</p>
+<p>Altitude is usually stored in the <a href="https://wiki.openstreetmap.org/wiki/Key:ele">ele</a> key (short for elevation). It should probably only be used on a limited set of objects where the elevation is well determined (things like mountain peaks). In general combining OSM data with separate elevation data is a better approach than adding elevations of various accuracies and sources to objects.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -151,7 +151,7 @@ One Answer:
 <p>OpenStreetMap is essentially just lots and lots of data. A "renderer" turns that data (usually stored in some sort of database) into a map, and other software (such as "Leaflet", used on osm.org) display those maps to the user, and can display other information overlaid over the top as extra layers (as happens on the OSM site when you show notes or data).</p>
 <p>Routers work with the data in a different way to calculate routes. They don't work with a graphical representation (the "map") but with an internal representation of the data that's designed so that they can make route calculations quickly. If you want those calculations to include some specific locations ("crash markers") you're going to have to include those locations in in the routing data that the router uses for its calculations.<br />
 </p>
-<p>Various routers that can work with OSM data are described <a href="http://wiki.openstreetmap.org/wiki/Routing">here</a>. Each of these typically has more information available about it; I'd start by reading that. For example, you might find the technical information on <a href="https://github.com/graphhopper/graphhopper/wiki/Developers">this GraphHopper page</a> useful.</p>
+<p>Various routers that can work with OSM data are described <a href="https://wiki.openstreetmap.org/wiki/Routing">here</a>. Each of these typically has more information available about it; I'd start by reading that. For example, you might find the technical information on <a href="https://github.com/graphhopper/graphhopper/wiki/Developers">this GraphHopper page</a> useful.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

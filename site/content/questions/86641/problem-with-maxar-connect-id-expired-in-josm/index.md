@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I cannot download Maxar Imagery in JOSM anymore:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2023-02-07_122725.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2023-02-07_122725.png" alt="alt text" /></p>
 <p>How can it be fixed? Does anybody else face this problem?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

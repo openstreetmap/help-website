@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can have a closer look at <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> as an alternative tool.</p>
+<p>Maybe you can have a closer look at <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> as an alternative tool.</p>
 <p>Read its documentation in the OSM wiki.</p>
 </div>
 <div class="answer-controls post-controls">

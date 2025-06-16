@@ -172,11 +172,11 @@ osqa_accepted = false
 <blockquote>
 <p>Now I've been asked to sell these. Can I do that under the OSM license</p>
 </blockquote>
-<p>Yes! OSM allows commerical usage of OSM. Part of the goal of this project has been to make something that can be used by anyone for practically anything (including selling). There are currently many people, and companies that make money from selling OSM data or services around it. (<a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">See a list here</a>.) You do not need to ask permission for each time or anything restrictive like that. (Though if you are in doubt, feel free to ask here/other OSM sources).</p>
+<p>Yes! OSM allows commerical usage of OSM. Part of the goal of this project has been to make something that can be used by anyone for practically anything (including selling). There are currently many people, and companies that make money from selling OSM data or services around it. (<a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">See a list here</a>.) You do not need to ask permission for each time or anything restrictive like that. (Though if you are in doubt, feel free to ask here/other OSM sources).</p>
 <blockquote>
 <p>do I have to put a copyright tag on the print</p>
 </blockquote>
-<p>As <a href="https://help.openstreetmap.org/users/5/richard">Richard</a> <a href="http://help.openstreetmap.org/questions/40698/can-i-sell-vector-line-drawing-of-maps/40700">says</a>, <a href="http://www.openstreetmap.org/copyright">the OpenStreetMap Copyright Guide</a> should tell you more.</p>
+<p>As <a href="https://help.openstreetmap.org/users/5/richard">Richard</a> <a href="/questions/40698/can-i-sell-vector-line-drawing-of-maps/40700">says</a>, <a href="https://www.openstreetmap.org/copyright">the OpenStreetMap Copyright Guide</a> should tell you more.</p>
 <p>For a map, you just need to put "© OpenStreetMap contributors" (and some other things).</p>
 <p>You are not required to give OSM any cut of your sale. You can keep all the money/profits/revenue you make. Of course, if you'd like to give "OSM" money, you can give money to the <a href="http://www.osmfoundation.org/wiki/Donate">OpenStreetMap Foundation</a>. There is also the more expensive <a href="http://www.osmfoundation.org/wiki/Corporate_Membership">OSMF Corporate Membership</a>.</p>
 </div>

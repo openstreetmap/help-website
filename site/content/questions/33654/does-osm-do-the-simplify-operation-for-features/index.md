@@ -96,7 +96,7 @@ osqa_accepted = false
 <div id="post-33657-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Not in answer, but just for info, here is the renderer wiki link <a href="http://wiki.openstreetmap.org/wiki/Renderer">http://wiki.openstreetmap.org/wiki/Renderer</a></p>
+<p>Not in answer, but just for info, here is the renderer wiki link <a href="https://wiki.openstreetmap.org/wiki/Renderer">https://wiki.openstreetmap.org/wiki/Renderer</a></p>
 </div>
 <div id="comment-33657-info" class="comment-info">
 <span class="comment-age">(04 Jun '14, 03:30)</span> <span class="comment-user userinfo">nevw</span>
@@ -199,7 +199,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>As written above in point 2: Only for the landmasses.</p>
-<p>Also see <a href="http://help.openstreetmap.org/questions/33489/is-is-possible-to-download-a-reduced-dataset-of-openstreetmap-which-doesnt-include-fine-zoom-levels">this similar question</a>.</p>
+<p>Also see <a href="/questions/33489/is-is-possible-to-download-a-reduced-dataset-of-openstreetmap-which-doesnt-include-fine-zoom-levels">this similar question</a>.</p>
 </div>
 <div id="comment-33710-info" class="comment-info">
 <span class="comment-age">(05 Jun '14, 12:37)</span> <span class="comment-user userinfo">cartinus</span>

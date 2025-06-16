@@ -109,7 +109,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>No, there is no special reason. The exact formatting of a name may not always be clear (there may be different local usages), but if in doubt, the rule usually is to spell and format the name like it is written on the official street signs. The only exception is that abbreviations should be expanded (e.g. "Main Rd" -&gt; "Main Road").</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Names#Notes">http://wiki.openstreetmap.org/wiki/Names#Notes</a> .</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Names#Notes">https://wiki.openstreetmap.org/wiki/Names#Notes</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -254,9 +254,9 @@ Thank you again for your help!</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems that you need solutions for two tasks:</p>
-<p>1) display a map based on OSM data ... that is very easy when you use pre-rendered <a href="http://wiki.openstreetmap.org/wiki/Tiles">tile</a> graphics from any server that offers them in a style you like, and if the use of your website does not cause too much traffic on the servers where those tiles are stored.</p>
-<p>For this task you should use a framework like <a href="http://wiki.openstreetmap.org/wiki/Leaflet">leaflet</a> or <a href="http://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> ... visit their websites and browse the examples / plugins of each. Tr to find examples where objects are displayed on a map where coordinates and content come from an own file or database.</p>
-<p>2) find a solution how to create, store and display the classified ads from each user. I don't know any solution out of the box, but it sounds like a similar requirement like the <a href="http://wiki.openstreetmap.org/wiki/Notes">OSM notes</a>.</p>
+<p>1) display a map based on OSM data ... that is very easy when you use pre-rendered <a href="https://wiki.openstreetmap.org/wiki/Tiles">tile</a> graphics from any server that offers them in a style you like, and if the use of your website does not cause too much traffic on the servers where those tiles are stored.</p>
+<p>For this task you should use a framework like <a href="https://wiki.openstreetmap.org/wiki/Leaflet">leaflet</a> or <a href="https://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> ... visit their websites and browse the examples / plugins of each. Tr to find examples where objects are displayed on a map where coordinates and content come from an own file or database.</p>
+<p>2) find a solution how to create, store and display the classified ads from each user. I don't know any solution out of the box, but it sounds like a similar requirement like the <a href="https://wiki.openstreetmap.org/wiki/Notes">OSM notes</a>.</p>
 <p>Tell us when you have found something that come near your aim, then we can help in detail.</p>
 </div>
 <div class="answer-controls post-controls">

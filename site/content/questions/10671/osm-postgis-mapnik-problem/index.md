@@ -184,10 +184,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd suggest that the best tutorial if you want to understand the process of creating an OSM-style slippy map like the <a href="http://www.openstreetmap.org/">main page</a> based on data in a local PostGIS database is probably <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">this one</a>. The reason why I'd recommend it is that it starts with a standard download of Ubuntu Linux, and goes through the process of installing and configuring the necessary software until you've got a working tile server.<br />
+<p>I'd suggest that the best tutorial if you want to understand the process of creating an OSM-style slippy map like the <a href="https://www.openstreetmap.org/">main page</a> based on data in a local PostGIS database is probably <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server/">this one</a>. The reason why I'd recommend it is that it starts with a standard download of Ubuntu Linux, and goes through the process of installing and configuring the necessary software until you've got a working tile server.<br />
 </p>
 <p>Most of the instructions are copy-and-pasteable from the page, but they still do require some familarity with Linux (particularly Ubuntu Linux) - how to install it into a virtual machine, how to stop it and start it, how to edit files, etc. Ubuntu's a good choice to base this tutorial around as it's probably the best documented Linux distribution out there - if you do a web search for "ubuntu edit file" you'll get half a dozen HOWTOs on the first page.</p>
-<p>So, I'd get started and then when you have a specific problem (e.g. "I'm following XYZ instructions when I type ABC it gives me an error message DEF instead of the desired result") ask back here (or perhaps on <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a>) - someone will be able to help.<br />
+<p>So, I'd get started and then when you have a specific problem (e.g. "I'm following XYZ instructions when I type ABC it gives me an error message DEF instead of the desired result") ask back here (or perhaps on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a>) - someone will be able to help.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

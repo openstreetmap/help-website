@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, Yesterday I was editing a road and while combining two roads using JOSM, I messed up the tags and the road was not getting rendered in the map. I corrected the tags but still it was not visible in the map. As it didn't show up in the map for a while, I deleted the road and re-created it. Even after about 6 hours, the road is not visible in the map.</p>
-<p>This is the road which is having the problem : <a href="http://www.openstreetmap.org/?way=191457361">http://www.openstreetmap.org/?way=191457361</a> This road connects 3 other roads. How do I fix this?</p>
+<p>This is the road which is having the problem : <a href="https://www.openstreetmap.org/?way=191457361">https://www.openstreetmap.org/?way=191457361</a> This road connects 3 other roads. How do I fix this?</p>
 <p>Thanks, BT</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -110,8 +110,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Personally, I'd:</p>
-<p>o Add a node (which already exists at the centre of the village: <a href="http://www.openstreetmap.org/node/347054261">http://www.openstreetmap.org/node/347054261</a> )</p>
-<p>o Add the residential area but not name it (already done: <a href="http://www.openstreetmap.org/way/169707505">http://www.openstreetmap.org/way/169707505</a> )</p>
+<p>o Add a node (which already exists at the centre of the village: <a href="https://www.openstreetmap.org/node/347054261">https://www.openstreetmap.org/node/347054261</a> )</p>
+<p>o Add the residential area but not name it (already done: <a href="https://www.openstreetmap.org/way/169707505">https://www.openstreetmap.org/way/169707505</a> )</p>
 <p>I wouldn't tend to add a "name" to the residential part of a village because often in rural areas the village contains far more than just the residential area. However, there are plenty of people doing this (both in addition to a place node and in place of it).</p>
 </div>
 <div class="answer-controls post-controls">

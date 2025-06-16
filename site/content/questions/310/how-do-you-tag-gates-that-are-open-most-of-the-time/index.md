@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=51.4386&amp;lon=-0.2771&amp;zoom=14">Richmond Park</a> has (or is supposed to have, I think) a gate in every entrance. When closed the gates block all traffic so implied access=no is correct, in a way, and routing engines shouldn't let you get in or out of the park. The opening times are very variable (<a href="http://www.royalparks.org.uk/docs/richmondpark/Richmond%20Park%20opening%20times.pdf">PDF</a>) but one could argue the gates are always open for all practical purposes.</p>
+<p><a href="https://www.openstreetmap.org/?lat=51.4386&amp;lon=-0.2771&amp;zoom=14">Richmond Park</a> has (or is supposed to have, I think) a gate in every entrance. When closed the gates block all traffic so implied access=no is correct, in a way, and routing engines shouldn't let you get in or out of the park. The opening times are very variable (<a href="http://www.royalparks.org.uk/docs/richmondpark/Richmond%20Park%20opening%20times.pdf">PDF</a>) but one could argue the gates are always open for all practical purposes.</p>
 <p>How should the gates be tagged to allow useful routing?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -110,7 +110,7 @@ osqa_accepted = false
 <li>access=yes</li>
 </ul>
 <p>I'd certainly be inclined to tag it access=yes or access=designated, to indicate the gate is normally open. Hopefully routing engines will understand this access tag.</p>
-<p>Then the <a href="http://wiki.openstreetmap.org/wiki/Key:access#Access_time_restrictions">access time restrictions</a> tag docs would suggest something like...</p>
+<p>Then the <a href="https://wiki.openstreetmap.org/wiki/Key:access#Access_time_restrictions">access time restrictions</a> tag docs would suggest something like...</p>
 <ul>
 <li>hour_on=22:00</li>
 <li>hour_off=07:00</li>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When you type "endura" at the search box of this site you can find already a topic called <a href="http://help.openstreetmap.org/questions/1562/using-open-street-map-with-a-lowrance-device">using-open-street-map-with-a-lowrance-device</a></p>
+<p>When you type "endura" at the search box of this site you can find already a topic called <a href="/questions/1562/using-open-street-map-with-a-lowrance-device">using-open-street-map-with-a-lowrance-device</a></p>
 <p>For more detailed questions that are above an FAQ you can come to <a href="http://forum.openstreetmap.org">forum.openstreetmap.org</a> ...</p>
 </div>
 <div class="answer-controls post-controls">

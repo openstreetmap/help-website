@@ -89,7 +89,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>&lt;quote&gt;The place=locality tag can be used to name <em>unpopulated</em> place&lt;/quote&gt;</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Locality">http://wiki.openstreetmap.org/wiki/Locality</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Locality">https://wiki.openstreetmap.org/wiki/Locality</a></p>
 <p>I haven't seen any unpopulated cities lately.</p>
 </div>
 <div id="comment-18775-info" class="comment-info">
@@ -144,9 +144,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These "hamlets" are probably from imports (<a href="http://wiki.openstreetmap.org/wiki/GNIS">GNIS</a>, I'm guessing). <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dhamlet">place=hamlet</a> probably isn't appropriate in most cases. Some are subdivisions, some are mobile home parks, others may just be plat names. If the names are not currently in use, they should probably be deleted. If they are being used, I don't know that there's a uniform approach, but there's some discussion at the <a href="http://wiki.openstreetmap.org/wiki/Neighbourhood">Neighbourhoods</a> wiki page.<br />
+<p>These "hamlets" are probably from imports (<a href="https://wiki.openstreetmap.org/wiki/GNIS">GNIS</a>, I'm guessing). <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dhamlet">place=hamlet</a> probably isn't appropriate in most cases. Some are subdivisions, some are mobile home parks, others may just be plat names. If the names are not currently in use, they should probably be deleted. If they are being used, I don't know that there's a uniform approach, but there's some discussion at the <a href="https://wiki.openstreetmap.org/wiki/Neighbourhood">Neighbourhoods</a> wiki page.<br />
 </p>
-<p>If I come across these or other housing developments, I usually create a <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> area, and name it with the development name. You could do <a href="http://wiki.openstreetmap.org/wiki/Neighbourhood">place=neighborhood</a> if that seems correct (note that's usually a node). <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dsuburb">place=suburb</a> would be for a larger part of a city than a neighbourhood, so I doubt it would apply to a subdivision. (FYI on suburb, it is not used in OSM in the US-centric sense: see that wiki page for more info)</p>
+<p>If I come across these or other housing developments, I usually create a <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">landuse=residential</a> area, and name it with the development name. You could do <a href="https://wiki.openstreetmap.org/wiki/Neighbourhood">place=neighborhood</a> if that seems correct (note that's usually a node). <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dsuburb">place=suburb</a> would be for a larger part of a city than a neighbourhood, so I doubt it would apply to a subdivision. (FYI on suburb, it is not used in OSM in the US-centric sense: see that wiki page for more info)</p>
 <p>If you haven't seen it yet, a great way to view the different "places" in an area is to use the <a href="http://tools.geofabrik.de/osmi/?view=places&amp;lon=-79.37587&amp;lat=35.11700&amp;zoom=7&amp;opacity=0.54&amp;overlays=megacities,largecities,cities,towns,villages,hamlets,islands,suburbs,farms,localities,municipalities,errors_unknown_place_type,errors_population_format,errors_place_without_name,errors_population_number_format,errors_pop_type_mismatch,population">OSM Inspector Places</a> view.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -63,7 +63,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Seems like you already have found out how to edit roads. :-)</p>
-<p><a href="http://www.openstreetmap.org/?way=4972553">http://www.openstreetmap.org/?way=4972553</a></p>
+<p><a href="https://www.openstreetmap.org/?way=4972553">https://www.openstreetmap.org/?way=4972553</a></p>
 <p>That road is built up of multiple segments, so you have to edit all of them. It may take a while before the changes get rendered and show up on the map.</p>
 </div>
 <div id="comment-5242-info" class="comment-info">
@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-5243-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You've also almost added Riverside Close successfully, but it is lacking the tags which it needs to make it appear. <a href="http://www.openstreetmap.org/browse/way/113711075">http://www.openstreetmap.org/browse/way/113711075</a> You have added the tags to one of the roads nodes, and not the whole road. If you select the road so it is highlighted in yellow and select Residential Road as a type instead of "Unknown", things might become clearer. Oh, and the end of the road needs extending to join Riverside Road.</p>
+<p>You've also almost added Riverside Close successfully, but it is lacking the tags which it needs to make it appear. <a href="https://www.openstreetmap.org/browse/way/113711075">https://www.openstreetmap.org/browse/way/113711075</a> You have added the tags to one of the roads nodes, and not the whole road. If you select the road so it is highlighted in yellow and select Residential Road as a type instead of "Unknown", things might become clearer. Oh, and the end of the road needs extending to join Riverside Road.</p>
 </div>
 <div id="comment-5243-info" class="comment-info">
 <span class="comment-age">(17 May '11, 15:40)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -177,11 +177,11 @@ One Answer:
 <p>First of all, this is a valuable question as it incorporates quite a lot of user experience. Thank you for asking it. I'll try and answer each part of the rest of the question separately.</p>
 <p><strong>Incorrectly named roads</strong> arise on OpenStreetMap for a range of reasons, but the commonest is just through typos when entering the name! Usually to correct them all that is required is to use the on-line editor Potlatch, click on the road and edit the name field shown in the editor. A road may be split into several segments, for instance if the road has two or more speed limits, in which case the name needs to be edited for each segment.</p>
 <p>If you prefer not to edit, then as you say <strong>you can report a bug</strong>. There is no guarantee that a bug reported through an app will be noticeable by OpenStreetMap editors unless the bug is transmitted back to OSM. The bugs reported by Skobbler apps are most likely to be noticed as these are presented in the on-line editor as a separate layer (<a href="http://www.mapdust.com/">MapDust</a>). Also there is <a href="http://openstreetbugs.schokokeks.org/">OpenStreetBugs</a> which has a similar interface. I don't see your bugs in these two layers.</p>
-<p>In the UK we also have a layer which highlights road names which do not match those of the Ordnance Survey (<a href="http://wiki.openstreetmap.org/wiki/OSM_and_OSL_differences_analysis">ITO OS Locator</a>).</p>
+<p>In the UK we also have a layer which highlights road names which do not match those of the Ordnance Survey (<a href="https://wiki.openstreetmap.org/wiki/OSM_and_OSL_differences_analysis">ITO OS Locator</a>).</p>
 <p>Unfortunately, whether <strong>bugs are resolved or not</strong> depends on how many contributors are active in the area. For some reason, the North-West of England has disproportionately few contributors, so there are also fewer people to check over bugs and fix them. As you have found the best way to fix them in this case is to edit them yourself. Various pieces of advice have been given about some of the detailed practicabilities in comments on your question.</p>
 <p>Details about how to go about adding roads and postcodes are probably best answered in other questions.</p>
 <p>Having brought our attention to your problem I note that MapDust has a good number of bugs of a similar nature in the area N of Manchester. I'm sure that there will now be a flurry of effort to fix them.</p>
-<p>Other places were detailed assistance can be sought include the country specific mailing lists (in this case talk-gb), the IRC channel, and the forum. See <a href="http://wiki.openstreetmap.org/wiki/Contact">Contact</a> on the OSM Wiki.</p>
+<p>Other places were detailed assistance can be sought include the country specific mailing lists (in this case talk-gb), the IRC channel, and the forum. See <a href="https://wiki.openstreetmap.org/wiki/Contact">Contact</a> on the OSM Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

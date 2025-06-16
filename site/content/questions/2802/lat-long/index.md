@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this <a href="https://help.openstreetmap.org/questions/12623/displaying-gps-coordinates">related question</a> and my <a href="http://help.openstreetmap.org/questions/12623/displaying-gps-coordinates/41319">proposed solution</a> using <a href="http://umap.openstreetmap.fr">uMap</a> and CSV import</p>
+<p>See this <a href="/questions/12623/displaying-gps-coordinates">related question</a> and my <a href="/questions/12623/displaying-gps-coordinates/41319">proposed solution</a> using <a href="http://umap.openstreetmap.fr">uMap</a> and CSV import</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

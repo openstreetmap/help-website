@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Nodes names not displayed / rendered when located on a building"
-description = '''Hello guys,  Im&#x27; stuck with this issue and I don&#x27;t know what is the best way to solve it.  If you consider the following map http://www.openstreetmap.org/?lat=49.586999&amp;amp;lon=6.12248&amp;amp;zoom=18&amp;amp;layers=M at big zoom levels (for instance 18), you&#x27;ll notice the building centered on the map has n...'''
+description = '''Hello guys,  Im&#x27; stuck with this issue and I don&#x27;t know what is the best way to solve it.  If you consider the following map https://www.openstreetmap.org/?lat=49.586999&amp;amp;lon=6.12248&amp;amp;zoom=18&amp;amp;layers=M at big zoom levels (for instance 18), you&#x27;ll notice the building centered on the map has n...'''
 date = "2013-04-15T16:22:00Z"
 lastmod = "2013-04-15T21:37:00Z"
 weight = 21550
@@ -41,11 +41,11 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hello guys,</p>
 <p>Im' stuck with this issue and I don't know what is the best way to solve it.</p>
-<p>If you consider the following map <a href="http://www.openstreetmap.org/?lat=49.586999&amp;lon=6.12248&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=49.586999&amp;lon=6.12248&amp;zoom=18&amp;layers=M</a> at big zoom levels (for instance 18), you'll notice the building centered on the map has no name displayed, at least with standard view.</p>
+<p>If you consider the following map <a href="https://www.openstreetmap.org/?lat=49.586999&amp;lon=6.12248&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=49.586999&amp;lon=6.12248&amp;zoom=18&amp;layers=M</a> at big zoom levels (for instance 18), you'll notice the building centered on the map has no name displayed, at least with standard view.</p>
 <p>Nevertheless, this building has 2 nodes in it (I won't tell the name to avoid advertising), both with names and of type shop:hifi :</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/2184846748">http://www.openstreetmap.org/browse/node/2184846748</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/2184846692">http://www.openstreetmap.org/browse/node/2184846692</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/2184846748">https://www.openstreetmap.org/browse/node/2184846748</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/2184846692">https://www.openstreetmap.org/browse/node/2184846692</a></li>
 </ul>
 <p>The funny thing is that in Edit Mode the shop icons are displayed, but in view / normal mode, they aren't!</p>
 <p>Why aren't these names / icons displayed ? It it because of the algorithm used by Mapnik to generate the tiles ?</p>

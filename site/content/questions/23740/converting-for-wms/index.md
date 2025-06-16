@@ -111,7 +111,7 @@ One Answer:
 <li>UMN Mapserver as the WMS, imposm for importing, styles from <a href="https://github.com/mapserver/basemaps">https://github.com/mapserver/basemaps</a></li>
 <li>GeoServer as the WMS, read <a href="http://osgeo-org.1560.x6.nabble.com/OSM-style-SLD-files-for-GeoServer-td5015615.html">http://osgeo-org.1560.x6.nabble.com/OSM-style-SLD-files-for-GeoServer-td5015615.html</a></li>
 <li>Mapnik OGC Server (<a href="https://github.com/mapnik/OGCServer),">https://github.com/mapnik/OGCServer),</a> then use standard OSM Mapnik styles</li>
-<li>mod_mapnik_wms (<a href="http://wiki.openstreetmap.org/wiki/Mod_mapnik_wms),">http://wiki.openstreetmap.org/wiki/Mod_mapnik_wms),</a> then use standard OSM Mapnik styles</li>
+<li>mod_mapnik_wms (<a href="https://wiki.openstreetmap.org/wiki/Mod_mapnik_wms),">https://wiki.openstreetmap.org/wiki/Mod_mapnik_wms),</a> then use standard OSM Mapnik styles</li>
 </ul>
 <p>The Mapnik-based solutions will allow you to come closest to the "standard OSM" look but the UMN Mapserver solution is the most widely used for WMS.</p>
 </div>

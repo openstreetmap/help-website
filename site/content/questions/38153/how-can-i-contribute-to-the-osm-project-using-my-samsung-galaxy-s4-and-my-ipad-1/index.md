@@ -131,7 +131,7 @@ osqa_accepted = false
 <p>On iOS, GoMap! seems to be the editor of choice, there are simpler programs like PushPin which however are not full blown editors.</p>
 <p>Naturally, particularly on the phone, you will not really be able to edit large scale features, particularly not relations with 1000s of elements, just from a pure pratical point of view.</p>
 <p>More information (to be taken with some grains of salt):</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a> <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a> <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">https://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
 <p>Specifics:</p>
 <ul>
 <li>creating an account you will have to do that with your browser on the mobile device. Connect to openstreetmap.org and simply create the account. This is needed so that your edits can be identified, even if in the end you never use the website again.</li>
@@ -191,7 +191,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9927/sprime">@Sprime</a> note that downloading map tiles for the background is what uses most mobile data. Vespucci does cache them though so you can zoom in to an area and pan around there on wifi if necessary. Or you can turn off the background completely.</p>
+<p><a href="https://help.openstreetmap.org/users/9927/sprime">@Sprime</a> note that downloading map tiles for the background is what uses most mobile data. Vespucci does cache them though so you can zoom in to an area and pan around there on wifi if necessary. Or you can turn off the background completely.</p>
 </div>
 <div id="comment-38162-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 12:50)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -203,7 +203,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> thanks a million, you've just made my mapping journey more feasible than I presumed :)</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> thanks a million, you've just made my mapping journey more feasible than I presumed :)</p>
 </div>
 <div id="comment-38164-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 13:06)</span> <span class="comment-user userinfo">Sprime</span>
@@ -279,7 +279,7 @@ osqa_accepted = false
 <div id="post-38176-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you very much <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, that was really helpful..</p>
+<p>Thank you very much <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, that was really helpful..</p>
 </div>
 <div id="comment-38176-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 14:46)</span> <span class="comment-user userinfo">Sprime</span>
@@ -321,7 +321,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Sprime, start looking around in your own street, neighborhood and region and add things that are wrong or missing to OSM. Use ID one your mobile, but first read the beginners pages. You made the first steps by making an account, welcome. The pages are here, <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">http://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></p>
+<p>Hi Sprime, start looking around in your own street, neighborhood and region and add things that are wrong or missing to OSM. Use ID one your mobile, but first read the beginners pages. You made the first steps by making an account, welcome. The pages are here, <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">https://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -366,7 +366,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9927/sprime"></a><a href="http://help.openstreetmap.org/users/9927/sprime">@Sprime</a>: in general: these steps on the beginners' guide have links inside (usually coloured blue). You are meant to click them to get further information. If you mean that those linked pages are missing some information specifically for mobile devices ("apps") – yes, that may be. Once you've made your way here, you are welcome to help to improve those steps.</p>
+<p><a href="https://help.openstreetmap.org/users/9927/sprime"></a><a href="https://help.openstreetmap.org/users/9927/sprime">@Sprime</a>: in general: these steps on the beginners' guide have links inside (usually coloured blue). You are meant to click them to get further information. If you mean that those linked pages are missing some information specifically for mobile devices ("apps") – yes, that may be. Once you've made your way here, you are welcome to help to improve those steps.</p>
 </div>
 <div id="comment-38169-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 13:36)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-69738-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sorry, I don't quite understand what you are trying to tell me. <a href="https://help.openstreetmap.org/questions/69723/edit-map-impossible">Your other question</a> sounds very similar to this one so I closed it as a duplicate. Both are on help.openstreetmap.org so no need to ask the same question twice on the same platform.</p>
+<p>Sorry, I don't quite understand what you are trying to tell me. <a href="/questions/69723/edit-map-impossible">Your other question</a> sounds very similar to this one so I closed it as a duplicate. Both are on help.openstreetmap.org so no need to ask the same question twice on the same platform.</p>
 </div>
 <div id="comment-69738-info" class="comment-info">
 <span class="comment-age">(25 Jun '19, 08:59)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -294,7 +294,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>uMap is a third-party service and not maintained by the OpenStreetMap people.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a> for a list of contact channels. If you lost the link to edit your map then try contacting user <a href="https://github.com/yohanboniface">https://github.com/yohanboniface</a> .</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a> for a list of contact channels. If you lost the link to edit your map then try contacting user <a href="https://github.com/yohanboniface">https://github.com/yohanboniface</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

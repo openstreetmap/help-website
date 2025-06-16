@@ -312,7 +312,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I suppose...Perhaps it's too bad that the navigation apps that use it don't do some filtering on their own. OsmAnd is the only one I know that makes an effort, by allowing hiding of polygons, but that tends to sink islands in the blue at certain zooms...</p>
 <p>To me it looks better and plainer if I get rid of the "woods" tag and doesn't hurt anything else I can see. But thanks for your responses. (Here's an osmand screengrab same area from OsmAnd..I forgot to turn the shading off as a fairer comparison to the area I linked above</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20220430-164624.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20220430-164624.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

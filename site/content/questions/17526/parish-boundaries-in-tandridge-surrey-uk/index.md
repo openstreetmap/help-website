@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>Boundaries like parish boundaries are set up using a relation. Each section of the boundary is a single way which is then shared between the relations either side without duplicating the way. So each parish boundary ends up being made of a multiple ways each shared with neighbouring parishes. The relation can be a boundary relation or a multipolygon relation (views are split). A boundary relation can include the node for the village name in the boundary relation with a role of admin_centre. The admin_level for a UK parish is 10. Due to the way Mapnik renders boundaries it has become normal to add admin_level=10 to both the way and the relation.</p>
 <p>The consensus is to not keep the CP at the end of the name, mostly because the real name does not have CP on the end.</p>
-<p>I added the parish boundaries in the East Riding of Yorkshire which might serve as an example. There is a <a href="http://wiki.openstreetmap.org/wiki/Using_OS_Shapefiles">wiki page</a> about using OS OpenData which includes the boundary data which we are free to use, though there may be better ways to use the data now.</p>
+<p>I added the parish boundaries in the East Riding of Yorkshire which might serve as an example. There is a <a href="https://wiki.openstreetmap.org/wiki/Using_OS_Shapefiles">wiki page</a> about using OS OpenData which includes the boundary data which we are free to use, though there may be better ways to use the data now.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

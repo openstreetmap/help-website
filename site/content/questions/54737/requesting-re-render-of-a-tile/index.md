@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Requesting re-render of a tile"
-description = '''Hi, I used to follow the procedure described below (and in my case it was working perfectly): http://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf Recently I noticed that right-click function has been changed and now a new menu appears which consists of six options: &#x27;Directions from here&#x27; &#x27;Dire...'''
+description = '''Hi, I used to follow the procedure described below (and in my case it was working perfectly): https://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf Recently I noticed that right-click function has been changed and now a new menu appears which consists of six options: &#x27;Directions from here&#x27; &#x27;Dire...'''
 date = "2017-02-19T22:57:00Z"
 lastmod = "2021-10-24T08:03:00Z"
 weight = 54737
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I used to follow the procedure described below (and in my case it was working perfectly):</p>
-<p><a href="http://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf">http://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf</a></p>
+<p><a href="https://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf">https://wiki.openstreetmap.org/w/images/2/25/Rendering.pdf</a></p>
 <p>Recently I noticed that right-click function has been changed and now a new menu appears which consists of six options: 'Directions from here' 'Directions to here' 'Add a note here' 'Show address' 'Query features' 'Centre map here'</p>
 <p>The question is how do we check a tile's name now.</p>
 <p>TIA Michal</p>
@@ -257,7 +257,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As said at <a href="https://help.openstreetmap.org/questions/60223">https://help.openstreetmap.org/questions/60223</a>, another way to get the tile URL is, with Firefox, to access the page information (which may be in the browser Tools menu or in the non-Javascript right-click menu, which you can open with Ctrl-Shift-right click).</p>
+<p>As said at <a href="/questions/60223">https://help.openstreetmap.org/questions/60223</a>, another way to get the tile URL is, with Firefox, to access the page information (which may be in the browser Tools menu or in the non-Javascript right-click menu, which you can open with Ctrl-Shift-right click).</p>
 <p>The page information contains a Media tab with the URL of all images. It's not very handy, but it's feasible.</p>
 <p>Of course it would be more sensible to have a "Request rendering" option somewhere.</p>
 <p>However the best way may be to use the latest version of JOSM, where you may see the tile status or force rendering (right-click on the map).</p>

@@ -227,7 +227,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Dear Berjawi, What do you mean by using OSM data ? There some protocols at the Wiki for commercial or any other use, but youre question needs some extra data to made clear whats behind your question. Take for instance a look here <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services.">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services.</a></p>
+<p>Dear Berjawi, What do you mean by using OSM data ? There some protocols at the Wiki for commercial or any other use, but youre question needs some extra data to made clear whats behind your question. Take for instance a look here <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services.">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

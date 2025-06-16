@@ -171,8 +171,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you get any result file from overpass-api or overpass-turbo.eu in format of raw OSM data in XML format, you can try <strong><a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a></strong> to produce a list of all POIs in CSV format.</p>
-<p>Try also <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> if needed.</p>
+<p>If you get any result file from overpass-api or overpass-turbo.eu in format of raw OSM data in XML format, you can try <strong><a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a></strong> to produce a list of all POIs in CSV format.</p>
+<p>Try also <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> if needed.</p>
 <p>Search for CSV on this FAQ to find some more hints.</p>
 </div>
 <div class="answer-controls post-controls">

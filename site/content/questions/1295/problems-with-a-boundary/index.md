@@ -141,7 +141,7 @@ osqa_accepted = true
 <div id="post-1511-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have a look at <a href="http://www.openstreetmap.org/browse/relation/62699">http://www.openstreetmap.org/browse/relation/62699</a></p>
+<p>Have a look at <a href="https://www.openstreetmap.org/browse/relation/62699">https://www.openstreetmap.org/browse/relation/62699</a></p>
 <p>This seems to be the right boundary relation to describe the city area of Solingen. Maybe this relation is incomplete.</p>
 <p>For more details and possible solutions I suggest to ask anew in the german chapter of <a href="http://forum.openstreetmap.org">forum.openstreetmap.org</a></p>
 </div>

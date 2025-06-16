@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Not 100% sure this is the right place to post this but here we go:</p>
 <p>I am using Strava and according to their help page they are using openstreetmap (and mapbox). The route I am running on a daily basis maps out like this (It's a route in San Diego, CA):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2019-11-18_12.53.34.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2019-11-18_12.53.34.png" alt="alt text" /></p>
 <p>You notice the dip between 0.5 and 1.0 kilometers. The elevation drops from 122m to 99m at this point and then immediately going up again. Let me assure you: the route is very flat. But On the point there is a bridge going over a highway that is far below (Adams Avenue going over the Jacob Dekema Freeway: <a href="https://www.openstreetmap.org/#map=19/32.76283/-117.12725).">https://www.openstreetmap.org/#map=19/32.76283/-117.12725).</a></p>
 <p>My assumption is, somewhere in the data the elevation from the highway below is assumed to be on the bridge.</p>
 <p>I haven't found any elevation data in the OSM data, so not quite sure what the next step (I opened an issue with Mapbox as well).</p>

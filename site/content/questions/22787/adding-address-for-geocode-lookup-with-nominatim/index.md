@@ -117,9 +117,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Polygons can be as simple as a way using a list of nodes. They can also be relations of ways but for your purposes a simple way joining a set of nodes is probably best. See the wiki for a definition of the <a href="http://wiki.openstreetmap.org/wiki/Osm_format">OSM file format</a>.</p>
-<p>There is currently no convention I'm aware of for importing parcel data into osm so doing this 'correctly' probably isn't possible. See: <a href="http://wiki.openstreetmap.org/wiki/Parcel">http://wiki.openstreetmap.org/wiki/Parcel</a></p>
-<p>I would suggest tagging the parcels as building=yes and then using the <a href="http://wiki.openstreetmap.org/wiki/Addr">http://wiki.openstreetmap.org/wiki/Addr</a> tags. For your purposes it will probably provide the best result for least work.</p>
+<p>Polygons can be as simple as a way using a list of nodes. They can also be relations of ways but for your purposes a simple way joining a set of nodes is probably best. See the wiki for a definition of the <a href="https://wiki.openstreetmap.org/wiki/Osm_format">OSM file format</a>.</p>
+<p>There is currently no convention I'm aware of for importing parcel data into osm so doing this 'correctly' probably isn't possible. See: <a href="https://wiki.openstreetmap.org/wiki/Parcel">https://wiki.openstreetmap.org/wiki/Parcel</a></p>
+<p>I would suggest tagging the parcels as building=yes and then using the <a href="https://wiki.openstreetmap.org/wiki/Addr">https://wiki.openstreetmap.org/wiki/Addr</a> tags. For your purposes it will probably provide the best result for least work.</p>
 <p><strong>PLEASE NOTE: This is assuming you are importing the data straight into nominatim. This would not be suitable for importing into OSM database itself.</strong> That would be a completely different topic.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -157,7 +157,7 @@ One Answer:
 <div id="post-54280-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for Your help. It seems to match on my question. But I'm not sure about menu point where I have to search for "configure map"<img src="http://help.openstreetmap.org/upfiles/osmand_m-1.6.5.png" alt="alt text" /></p>
+<p>Thanks for Your help. It seems to match on my question. But I'm not sure about menu point where I have to search for "configure map"<img src="/upfiles/osmand_m-1.6.5.png" alt="alt text" /></p>
 <p>I've attached this image because I don't have menu point "configure map". I would expect it in "Map layers", "Configure screen" or "Settings". Or maybe menu point is disabled by misconfiguration by myself.</p>
 </div>
 <div id="comment-54280-info" class="comment-info">

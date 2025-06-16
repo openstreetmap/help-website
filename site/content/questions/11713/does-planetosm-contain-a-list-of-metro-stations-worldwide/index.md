@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>planet.osm does contain the whole osm-database which means that also the metro stations are included. However, the metro stations - nor any other particular feature - are not stored in a particular table.</p>
-<p>In order to obtain such a list, you need to know how metro stations are tagged and then extract the accordingly tagged objects from the database. You may do so by downloading the planet.osm and using e.g. <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to filter out the metro stations. Another and possibly easier way might be to use the <a href="http://www.overpass-api.de/">overpass-api</a> to querry the database.</p>
+<p>In order to obtain such a list, you need to know how metro stations are tagged and then extract the accordingly tagged objects from the database. You may do so by downloading the planet.osm and using e.g. <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to filter out the metro stations. Another and possibly easier way might be to use the <a href="http://www.overpass-api.de/">overpass-api</a> to querry the database.</p>
 <p>Most metro stations are possibly tagged as railway=station or railway=subway_entrance (only the entrance) or as public_transport=stop_area or public_transport=station. For most of those taggings you will get the metro station AND other public transport stations, so you will have to evaluate the context, e.g. only those on/near railway=subway. And keep in mind that you want to query nodes, ways and relation.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can have a look at the <a href="http://wiki.openstreetmap.org/wiki/Map_Features">MapFeatures page</a> in the OpenStreetMap wiki and search through the page to find what your're looking for. If Metro is something underground for you the tags mentioned by FischersFritz are probably the ones you're looking for. There's also railway=tram_stop ...</p>
+<p>You can have a look at the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">MapFeatures page</a> in the OpenStreetMap wiki and search through the page to find what your're looking for. If Metro is something underground for you the tags mentioned by FischersFritz are probably the ones you're looking for. There's also railway=tram_stop ...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

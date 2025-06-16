@@ -138,7 +138,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... or have a look at <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a> in general</p>
+<p>... or have a look at <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a> in general</p>
 </div>
 <div id="comment-20423-info" class="comment-info">
 <span class="comment-age">(01 Mar '13, 18:58)</span> <span class="comment-user userinfo">stephan75</span>

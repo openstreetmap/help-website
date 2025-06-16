@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I added <a href="http://www.openstreetmap.org/?lat=-26.8869&amp;lon=-55.0102&amp;zoom=14&amp;layers=M">some <em>minor roads</em> in Argentina, Puerto Rico</a>. When zooming out these roads <a href="http://www.openstreetmap.org/?lat=-26.8861&amp;lon=-54.9924&amp;zoom=12&amp;layers=M">aren't visible</a>. But older, existing roads of the same type are visible at that zoom level.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/m.gif" alt="map" /></p>
+<p>I added <a href="https://www.openstreetmap.org/?lat=-26.8869&amp;lon=-55.0102&amp;zoom=14&amp;layers=M">some <em>minor roads</em> in Argentina, Puerto Rico</a>. When zooming out these roads <a href="https://www.openstreetmap.org/?lat=-26.8861&amp;lon=-54.9924&amp;zoom=12&amp;layers=M">aren't visible</a>. But older, existing roads of the same type are visible at that zoom level.</p>
+<p><img src="/upfiles/m.gif" alt="map" /></p>
 <p>How can I make the new roads visible too?</p>
 <p><strong>PS: I added one of the roads a week ago and it is still not visible. That can't take that long to render, right?</strong></p>
 <h2 id="edit">Edit</h2>
@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is caused by the time it takes to update the OSM map at various zoom levels. <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">See this question</a></p>
+<p>This is caused by the time it takes to update the OSM map at various zoom levels. <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">See this question</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

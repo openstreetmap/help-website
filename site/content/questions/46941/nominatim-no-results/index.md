@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Nominatim, no results"
-description = '''Hello, I followed the instructions here to install nominatim: http://wiki.openstreetmap.org/wiki/Nominatim/Installation But no matter the query, search.php always displays &quot;No search results found&quot;. I used a Luxembourg extract (osm file). I have some Luxembourgish rows in the &quot;place&quot; table (this tab...'''
+description = '''Hello, I followed the instructions here to install nominatim: https://wiki.openstreetmap.org/wiki/Nominatim/Installation But no matter the query, search.php always displays &quot;No search results found&quot;. I used a Luxembourg extract (osm file). I have some Luxembourgish rows in the &quot;place&quot; table (this tab...'''
 date = "2015-12-03T01:55:00Z"
 lastmod = "2015-12-03T01:55:00Z"
 weight = 46941
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I followed the instructions here to install nominatim: <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
+<p>I followed the instructions here to install nominatim: <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
 <p>But no matter the query, search.php always displays "No search results found".</p>
 <p>I used a Luxembourg extract (osm file). I have some Luxembourgish rows in the "place" table (this table has 76175 rows). The "placex" table has only 32388 rows. Its "street" and "country_code" columns only contain empty values.</p>
 <p>When I run the sql query:</p>

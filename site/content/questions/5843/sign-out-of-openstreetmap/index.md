@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you just mean sign out, the "logout" link in the top right should work. If you want your account deleted though, see <a href="http://help.openstreetmap.org/questions/878/how-can-i-delete-my-account">this question</a>.</p>
+<p>If you just mean sign out, the "logout" link in the top right should work. If you want your account deleted though, see <a href="/questions/878/how-can-i-delete-my-account">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

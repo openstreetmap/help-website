@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>A question related to <a href="http://help.openstreetmap.org/questions/6718/how-should-i-map-a-forbidden-trail">this one</a>: how does one mark historic trails, of various conditions, that once went through but are no longer signed or maintained. (Entry isn't prohibited, but the path itself now unofficial, though the locals may well know it.) Would the trail_visibility tag be useful here? Should any attempt be made to put its status in the name tag?<br />
+<p>A question related to <a href="/questions/6718/how-should-i-map-a-forbidden-trail">this one</a>: how does one mark historic trails, of various conditions, that once went through but are no longer signed or maintained. (Entry isn't prohibited, but the path itself now unofficial, though the locals may well know it.) Would the trail_visibility tag be useful here? Should any attempt be made to put its status in the name tag?<br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -214,7 +214,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Since you quote my question <a href="http://help.openstreetmap.org/questions/6718/how-should-i-map-a-forbidden-trail">http://help.openstreetmap.org/questions/6718/how-should-i-map-a-forbidden-trail</a> I'll post an 'answer' here as well, even though I'm in doubt myself. My viewpoint here has much to do with the area I'm mapping (Val Grande National Park, Piemonte, Italy). The park covers a once-populated area and is now designated a wilderness, so some old trails are deliberately not maintained or renovated. The terrain is very rugged, and I often encounter situations where</p>
+<p>Since you quote my question <a href="/questions/6718/how-should-i-map-a-forbidden-trail">https://help.openstreetmap.org/questions/6718/how-should-i-map-a-forbidden-trail</a> I'll post an 'answer' here as well, even though I'm in doubt myself. My viewpoint here has much to do with the area I'm mapping (Val Grande National Park, Piemonte, Italy). The park covers a once-populated area and is now designated a wilderness, so some old trails are deliberately not maintained or renovated. The terrain is very rugged, and I often encounter situations where</p>
 <ul>
 <li><p>the (former) trail is the only way to get from A to B</p></li>
 <li><p>you can't get from A to B anymore because the trail (or some of it's artificial structures) is gone</p></li>
@@ -224,7 +224,7 @@ osqa_accepted = false
 <p>On the other hand now that the place is made out to be 'the biggest wilderness area in the southern Alps' (or so) and people write books about it (Thelesklaf), I wouldn't want some of my up to T5 and hardly visible trails to be mistaken by someone inexperienced to be somewhere where they can skip along to have a picknick.</p>
 <p>I suppose you see my dilemma. I'd tend to map the historic trails if they're still usable and used, albeit rarely, because they are still passable, even though maybe with difficulties - to describe the difficulties, I'd use SAC numbers. I'd rather leave out the trails which aren't used and can't be used anymore because some crucial bit (bridge, stairs) is missing.</p>
 <p>In a way the tracktype tag goes in the right direction:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:tracktype">http://wiki.openstreetmap.org/wiki/Key:tracktype</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:tracktype">https://wiki.openstreetmap.org/wiki/Key:tracktype</a></p>
 <p>but I think a new tag maintained=yes/no might be a good idea. This tag could also be used for shelters. And maybe there would be room for a type of passage that is wayless, yet the only or the best or a possible way to cross a bit of difficult terrain.</p>
 </div>
 <div class="answer-controls post-controls">

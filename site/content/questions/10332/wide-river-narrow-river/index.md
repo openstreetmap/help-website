@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-10347-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>seen this <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Water_bodies">http://wiki.openstreetmap.org/wiki/Proposed_features/Water_bodies</a></p>
+<p>seen this <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Water_bodies">https://wiki.openstreetmap.org/wiki/Proposed_features/Water_bodies</a></p>
 </div>
 <div id="comment-10347-info" class="comment-info">
 <span class="comment-age">(30 Jan '12, 20:10)</span> <span class="comment-user userinfo">andy mackey</span>

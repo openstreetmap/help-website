@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers to the question <a href="https://help.openstreetmap.org/questions/4936/import-into-openstreetmap">Import into OpenStreetMap</a> for a comprehensive treatment of the matter.</p>
+<p>See the answers to the question <a href="/questions/4936/import-into-openstreetmap">Import into OpenStreetMap</a> for a comprehensive treatment of the matter.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

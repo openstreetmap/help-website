@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This is essentially a duplicate of <a href="http://help.openstreetmap.org/questions/9944/make-section-of-road-one-way">http://help.openstreetmap.org/questions/9944/make-section-of-road-one-way</a></p>
+<p>This is essentially a duplicate of <a href="/questions/9944/make-section-of-road-one-way">https://help.openstreetmap.org/questions/9944/make-section-of-road-one-way</a></p>
 </div>
 <div id="comment-11901-info" class="comment-info">
 <span class="comment-age">(11 Apr '12, 15:10)</span> <span class="comment-user userinfo">sleske</span>
@@ -236,7 +236,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Nearly - but you need to make sure that streets join to each other.</p>
-<p><a href="http://www.openstreetmap.org/browse/way/159051092">This part</a> isn't joined to Victor Hugo or the Boulevarde de la Republique, and <a href="http://www.openstreetmap.org/browse/way/159051093">this part</a> isn't joined to Victor Hugo but is joined to Woodrow Wilson.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/159051092">This part</a> isn't joined to Victor Hugo or the Boulevarde de la Republique, and <a href="https://www.openstreetmap.org/browse/way/159051093">this part</a> isn't joined to Victor Hugo but is joined to Woodrow Wilson.</p>
 <p>In both cases I'd expect both to also join the squares at each end. To move a node at the end of a way click on it, press delete, then move it over the top of the end node of the way to join it to (which will turn blue) and then click and press return to complete the move.</p>
 </div>
 <div id="comment-11908-info" class="comment-info">
@@ -271,7 +271,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Not me - I've not changed anything! I do notice that the join at the east end something's a bit odd, though:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/s01.png" alt="east end at Woodrow" /></p>
+<p><img src="/upfiles/s01.png" alt="east end at Woodrow" /></p>
 <p>It may have been like that before you started editing, of course.</p>
 </div>
 <div id="comment-11915-info" class="comment-info">
@@ -384,7 +384,7 @@ osqa_accepted = false
 <div id="post-11916-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Looking at the <a href="http://www.openstreetmap.org/browse/way/30147031/history">history</a> I think that you just moved a couple of nodes in "Esplanade du 8 mai 1945"?</p>
+<p>Looking at the <a href="https://www.openstreetmap.org/browse/way/30147031/history">history</a> I think that you just moved a couple of nodes in "Esplanade du 8 mai 1945"?</p>
 <p>I'll tidy the western end and take "before" and "after" pictures so that you can see the difference.</p>
 </div>
 <div id="comment-11916-info" class="comment-info">
@@ -397,12 +397,12 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>OK, before the west end looked like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/west_before.png" alt="alt text" /></p>
+<p><img src="/upfiles/west_before.png" alt="alt text" /></p>
 <p>I clicked on the left-hand end, deleted the end node, then clicked on the top-right of the square to join it there and then the top-left of the square to join it there as well. The end result looks like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/west_after.png" alt="alt text" /></p>
+<p><img src="/upfiles/west_after.png" alt="alt text" /></p>
 <p>In the editor now if you click on the western part of "Boulevard Jean Jaures" the nodes that join other ways show as red circles outlined in black.</p>
 <p>Do you want to have a go at the middle now? The eastern end of the western part of "Boulevard Jean Jaures" doesn't join any other road - you can see here that the red circle isn't outlined in black:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/middle_before.png" alt="alt text" /></p>
+<p><img src="/upfiles/middle_before.png" alt="alt text" /></p>
 </div>
 <div id="comment-11917-info" class="comment-info">
 <span class="comment-age">(11 Apr '12, 17:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

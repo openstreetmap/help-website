@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>i create a umap-Map and get several the message "incorrect server response".</p>
 <p>there are not many data in the area.</p>
 <p>here the openlink: <a href="http://umap.openstreetmap.fr/de/map/jan-seine-bahnkarte_490448">umap-example</a></p>
-<p>serveral data in the area of Lübeck <img src="https://help.openstreetmap.org/upfiles/2020-08-24_08h40_05.png" alt="alt text" /></p>
+<p>serveral data in the area of Lübeck <img src="/upfiles/2020-08-24_08h40_05.png" alt="alt text" /></p>
 <p>my definitons for dynamic osm-data by overpass are...</p>
 <pre><code>https://overpass-api.de/api/interpreter?data=[out:json][timeout:25];(nw[&quot;railway&quot;=&quot;water_tower&quot;]({south},{west},{north},{east});nw[&quot;man_made&quot;=&quot;water_tower&quot;]({south},{west},{north},{east});nw[&quot;disused:railway&quot;=&quot;water_tower&quot;]({south},{west},{north},{east}););out center;
 &#10;https://overpass-api.de/api/interpreter?data=[out:json][timeout:50];nw[&quot;abandoned:railway&quot;=&quot;signal_box&quot;]({south},{west},{north},{east});out center;

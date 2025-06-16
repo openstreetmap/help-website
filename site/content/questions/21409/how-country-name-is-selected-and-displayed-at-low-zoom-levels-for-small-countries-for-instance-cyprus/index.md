@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How country name is selected and displayed at low zoom levels for small countries, for instance Cyprus ?"
-description = '''Hello guys,  I would like to understand of country names are displayed at low zoom levels. Indeed, let&#x27;s consider the following zoom levels for Cyprus:   zoom level 3 : No country name displayed - http://www.openstreetmap.org/?lat=39.4&amp;amp;lon=29.2&amp;amp;zoom=3&amp;amp;layers=M   zoom level 4 : The name o...'''
+description = '''Hello guys,  I would like to understand of country names are displayed at low zoom levels. Indeed, let&#x27;s consider the following zoom levels for Cyprus:   zoom level 3 : No country name displayed - https://www.openstreetmap.org/?lat=39.4&amp;amp;lon=29.2&amp;amp;zoom=3&amp;amp;layers=M   zoom level 4 : The name o...'''
 date = "2013-04-11T17:38:00Z"
 lastmod = "2013-04-12T07:42:00Z"
 weight = 21409
@@ -42,19 +42,19 @@ osqa_accepted = true
 <p>Hello guys,</p>
 <p>I would like to understand of country names are displayed at low zoom levels. Indeed, let's consider the following zoom levels for Cyprus:</p>
 <ol>
-<li><p>zoom level 3 : No country name displayed - <a href="http://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=3&amp;layers=M">http://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=3&amp;layers=M</a></p></li>
-<li><p>zoom level 4 : The name of "Northern Cyprus" ie "Kuzey Kıbrıs" (<a href="http://www.openstreetmap.org/browse/node/1696874354)">http://www.openstreetmap.org/browse/node/1696874354)</a> is displayed - <a href="http://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=4&amp;layers=M">http://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=4&amp;layers=M</a></p></li>
-<li><p>zoom level 5 : The name of "Northern Cyprus" ie "Kuzey Kıbrıs" (<a href="http://www.openstreetmap.org/browse/node/1696874354)">http://www.openstreetmap.org/browse/node/1696874354)</a> is displayed - <a href="http://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=5&amp;layers=M">http://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=5&amp;layers=M</a></p></li>
-<li><p>zoom level 6 : The name of "Cyprus" ie "Κύπρος" (<a href="http://www.openstreetmap.org/browse/node/424313406)">http://www.openstreetmap.org/browse/node/424313406)</a> is displayed - <a href="http://www.openstreetmap.org/?lat=39.39&amp;lon=29.18&amp;zoom=6&amp;layers=M">http://www.openstreetmap.org/?lat=39.39&amp;lon=29.18&amp;zoom=6&amp;layers=M</a></p></li>
+<li><p>zoom level 3 : No country name displayed - <a href="https://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=3&amp;layers=M">https://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=3&amp;layers=M</a></p></li>
+<li><p>zoom level 4 : The name of "Northern Cyprus" ie "Kuzey Kıbrıs" (<a href="https://www.openstreetmap.org/browse/node/1696874354)">https://www.openstreetmap.org/browse/node/1696874354)</a> is displayed - <a href="https://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=4&amp;layers=M">https://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=4&amp;layers=M</a></p></li>
+<li><p>zoom level 5 : The name of "Northern Cyprus" ie "Kuzey Kıbrıs" (<a href="https://www.openstreetmap.org/browse/node/1696874354)">https://www.openstreetmap.org/browse/node/1696874354)</a> is displayed - <a href="https://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=5&amp;layers=M">https://www.openstreetmap.org/?lat=39.4&amp;lon=29.2&amp;zoom=5&amp;layers=M</a></p></li>
+<li><p>zoom level 6 : The name of "Cyprus" ie "Κύπρος" (<a href="https://www.openstreetmap.org/browse/node/424313406)">https://www.openstreetmap.org/browse/node/424313406)</a> is displayed - <a href="https://www.openstreetmap.org/?lat=39.39&amp;lon=29.18&amp;zoom=6&amp;layers=M">https://www.openstreetmap.org/?lat=39.39&amp;lon=29.18&amp;zoom=6&amp;layers=M</a></p></li>
 <li><p>zoom level 7 : The name of the country is not displayed anymore</p></li>
 </ol>
 <p>So here are my questions:</p>
 <ol>
 <li><p>Why aren't the country names for "Cyprus" / "Northern Cyprus" displayed at zoom level 3 ? Is it because the country is too small and the zoom level is too low ? In that case, why is "Malta" displayed ?</p></li>
 <li><p>Why isn't the country name "Cyprus" displayed at zoom levels 4 / 5 while the country name "Northern Cyprus" is displayed ? On the opposite, why isn't the country name "Northern Cyprus" displayed at zoom levels 6 while the country name "Cyprus" is displayed ?</p></li>
-<li><p>How would it be possible to display both country names "Cyprus" and "Northern Cyprus" at the same time for zoom levels 4, 5, 6 ? Would it be possible by modifying the coordinates of the country nodes (<a href="http://www.openstreetmap.org/browse/node/424313406">http://www.openstreetmap.org/browse/node/424313406</a> / <a href="http://www.openstreetmap.org/browse/node/1696874354">http://www.openstreetmap.org/browse/node/1696874354</a> ), by placing them more on the edges ?</p></li>
+<li><p>How would it be possible to display both country names "Cyprus" and "Northern Cyprus" at the same time for zoom levels 4, 5, 6 ? Would it be possible by modifying the coordinates of the country nodes (<a href="https://www.openstreetmap.org/browse/node/424313406">https://www.openstreetmap.org/browse/node/424313406</a> / <a href="https://www.openstreetmap.org/browse/node/1696874354">https://www.openstreetmap.org/browse/node/1696874354</a> ), by placing them more on the edges ?</p></li>
 </ol>
-<p>I searched for answers on the help section, but only found <a href="https://help.openstreetmap.org/questions/18211/kuzey-kibris?">https://help.openstreetmap.org/questions/18211/kuzey-kibris?</a> which is more a "political" question, and not relevant to my issue.</p>
+<p>I searched for answers on the help section, but only found <a href="/questions/18211/kuzey-kibris?">https://help.openstreetmap.org/questions/18211/kuzey-kibris?</a> which is more a "political" question, and not relevant to my issue.</p>
 <p>Thanks a lot,</p>
 <p>Best regards,</p>
 <p>Flex Pat</p>
@@ -139,7 +139,7 @@ One Answer:
 </ul>
 <p>At level 5 Portugal is still not named, although most adjacent Spanish regions are named.</p>
 <p>In other words this behaviour is a widespread artefact of how the map tiles are generated: ultimately it resides in the collision detection algorithms in the <span>Mapnik software</span>.</p>
-<p>The map tiles are not meant to be a perfect example of the cartographers art: they never could be when automatically generated. Changing the underlying map data to <strong>just</strong> change the appearance of the map tiles is a sin: <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">'tagging-for-the-renderer'</a>. Don't do it.</p>
+<p>The map tiles are not meant to be a perfect example of the cartographers art: they never could be when automatically generated. Changing the underlying map data to <strong>just</strong> change the appearance of the map tiles is a sin: <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">'tagging-for-the-renderer'</a>. Don't do it.</p>
 <p>Certainly there is nothing special about this behaviour for names in Cyprus or in other areas of the world where maps and boundaries may be politically contentious. If it is important for you that such names are given equal status or one set of names preferred over another then you should use the underlying data to render your own map.</p>
 </div>
 <div class="answer-controls post-controls">

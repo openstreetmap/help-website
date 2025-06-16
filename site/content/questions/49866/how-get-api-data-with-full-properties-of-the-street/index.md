@@ -70,7 +70,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Question seems to be related to <a href="https://help.openstreetmap.org/questions/49863/how-get-my-api-data">https://help.openstreetmap.org/questions/49863/how-get-my-api-data</a></p>
+<p>Question seems to be related to <a href="/questions/49863/how-get-my-api-data">https://help.openstreetmap.org/questions/49863/how-get-my-api-data</a></p>
 </div>
 <div id="comment-49869-info" class="comment-info">
 <span class="comment-age">(27 May '16, 14:58)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -124,8 +124,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No such API exists because all the data is available and OSM supports free-form tags. The <a href="http://wiki.openstreetmap.org/wiki/API">OSM API</a> is primarily concerned with editing elements or retrieving specific elements or all elements in a bounding box.</p>
-<p>Specific types of elements can be retrieved using <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>, but this, like all OSM, data does not have a specific concept of '''a street'''.</p>
+<p>No such API exists because all the data is available and OSM supports free-form tags. The <a href="https://wiki.openstreetmap.org/wiki/API">OSM API</a> is primarily concerned with editing elements or retrieving specific elements or all elements in a bounding box.</p>
+<p>Specific types of elements can be retrieved using <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>, but this, like all OSM, data does not have a specific concept of '''a street'''.</p>
 <p>It is important to read up about how OSM data is created before establishing one's expectations of what and how to retrieve such data.</p>
 </div>
 <div class="answer-controls post-controls">

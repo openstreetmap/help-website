@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">beginner's guide</a> and <a href="http://wiki.openstreetmap.org/wiki/Oneway">oneway tag</a>.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Beginners&#39;_guide">beginner's guide</a> and <a href="https://wiki.openstreetmap.org/wiki/Oneway">oneway tag</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -83,7 +83,7 @@ osqa_accepted = true
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question -- see http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website" by Jonathan Bennett 25 Oct '11, 14:54
+### The question has been closed for the following reason "Duplicate Question -- see https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website" by Jonathan Bennett 25 Oct '11, 14:54
 
 </div>
 
@@ -124,7 +124,7 @@ One Answer:
 <p>To render tiles for a particular area, you can use the <strong><a href="http://generate_tiles.py">generate_tiles.py</a></strong> script. This should be in your Mapnik directory. You have to edit section at the end of the script to specify the bounding boxes and zoom levels that you want. Then just run the script, and it will generate the tiles for those areas.</p>
 <p>For getting the coordinates for your country, an easy way is to go to <a href="http://openstreetmap.org">openstreetmap.org</a>, and click on the tab for "Export". Choose the option for <em>Manually select a different area</em>, then draw a box for the area you want. That will give you the coordinates of the bounding box.</p>
 <p>There is a useful tutorial here: <a href="http://weait.com/content/map-tiles-and-bounding-boxes">Map tiles and bounding boxes</a></p>
-<p>For your second question, I'm not sure what you mean by "binding" the tiles. What sort of server? if just a webserver, you can just upload all of your tiles into the appropriate directory. If you mean viewing your tiles as a slippy map, you can do that by using OpenLayers. See this previous question and answer: <a href="http://help.openstreetmap.org/questions/8371/how-to-serve-tiles-from-my-own-server">How to serve tiles from my own server?</a></p>
+<p>For your second question, I'm not sure what you mean by "binding" the tiles. What sort of server? if just a webserver, you can just upload all of your tiles into the appropriate directory. If you mean viewing your tiles as a slippy map, you can do that by using OpenLayers. See this previous question and answer: <a href="/questions/8371/how-to-serve-tiles-from-my-own-server">How to serve tiles from my own server?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

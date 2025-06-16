@@ -128,7 +128,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The general procedure is as follows:</p>
 <ol>
-<li>Go to the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">list of available maps</a> and choose one that suits you</li>
+<li>Go to the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">list of available maps</a> and choose one that suits you</li>
 <li>On the download site, follow whatever instructions the site owner / map maker gives to select and download your map</li>
 <li>Once downloaded, you should have a file called similar to "gmapsupp.zip" (maybe with more detail like date or kind of map in the name). Unzip that file by whatever means your operating system offers (probably a right-click and 'Extract').</li>
 <li>You should now have a rather big file called "gmapsupp.img". Transfer this to the Garmins internal storage or (better) to the SD-card and put it in a folder called "Garmin", (e.g. G:\Garmin\gmapsupp.img). Using the Garmin-supplied USB-cable will work, but removing the SD card and using a dedicated card-reader will be much faster.</li>

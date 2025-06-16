@@ -131,8 +131,8 @@ osqa_accepted = false
 <p>Is there a cross reference between OpenStreetMap's meta data and Mapbox's Nature layer anywhere?</p>
 <p>I have tried making some changes in OpenStreetMap to the attributes of an exhibit area, but I did not see any change in the Mapbox map rendering. Maybe it is not a real-time sync or I did not edit the right fields.</p>
 <p>I have contacted MapBox, but I have not heard back yet. I will report what they say. In meantime, I would greatly appreciate any further guidance you can provide. If there is a simple reference anywhere that would do it.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2018-03-11_13.09.56.jpg" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2018-03-11_13.08.32.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2018-03-11_13.09.56.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2018-03-11_13.08.32.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -273,7 +273,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Ok I've taken this an created a new question here <a href="https://help.openstreetmap.org/questions/62639/is-their-guidance-on-how-landattraction-owners-can-manage-mapping-of-their-properties">https://help.openstreetmap.org/questions/62639/is-their-guidance-on-how-landattraction-owners-can-manage-mapping-of-their-properties</a></p>
+<p>Ok I've taken this an created a new question here <a href="/questions/62639/is-their-guidance-on-how-landattraction-owners-can-manage-mapping-of-their-properties">https://help.openstreetmap.org/questions/62639/is-their-guidance-on-how-landattraction-owners-can-manage-mapping-of-their-properties</a></p>
 </div>
 <div id="comment-62640-info" class="comment-info">
 <span class="comment-age">(12 Mar '18, 11:25)</span> <span class="comment-user userinfo">SK53 ♦</span>

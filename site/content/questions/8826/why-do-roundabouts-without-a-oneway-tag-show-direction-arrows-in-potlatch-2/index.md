@@ -157,7 +157,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Roundabouts are oneway by default, see <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">the wiki</a>.</p>
+<p>Roundabouts are oneway by default, see <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

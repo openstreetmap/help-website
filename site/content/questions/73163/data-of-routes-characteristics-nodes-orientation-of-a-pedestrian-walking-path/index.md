@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-73190-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi. Some answers about the subject : <a href="https://help.openstreetmap.org/questions/48194/routing-for-pedestrians">old</a> and <a href="https://help.openstreetmap.org/questions/72955/using-osm-to-access-specific-walking-paths">recent</a>. You have a lot of reading to do. ;-) Please tell if you need more pointers.</p>
+<p>Hi. Some answers about the subject : <a href="/questions/48194/routing-for-pedestrians">old</a> and <a href="/questions/72955/using-osm-to-access-specific-walking-paths">recent</a>. You have a lot of reading to do. ;-) Please tell if you need more pointers.</p>
 </div>
 <div id="comment-73190-info" class="comment-info">
 <span class="comment-age">(22 Feb '20, 04:42)</span> <span class="comment-user userinfo">H_mlet</span>

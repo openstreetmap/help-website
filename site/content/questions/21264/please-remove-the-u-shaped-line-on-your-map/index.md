@@ -141,8 +141,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The island groups that you mention are disputed by a number of different states in the region. In cases like this, there's unlikely to be a suitable answer that's acceptable to all claimants.</p>
-<p>An overview of the way that OpenStreetMap deals with disputes is described on <a href="http://wiki.openstreetmap.org/wiki/Disputes">this wiki page</a>. The normal way of resolving is the "on the ground" rule - "whatever name, designation, etc are used by the people on the ground at that location are used in the non-localized tags". Unfortunately in sparsely- or non-populated areas that's difficult to apply.</p>
-<p>Although a number of individual edits have been made in this area (and then changed by others of different political persuations), this isn't likely to provide a solution that all parties agree on - mediation via the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a> is likely to provide a better way forward.</p>
+<p>An overview of the way that OpenStreetMap deals with disputes is described on <a href="https://wiki.openstreetmap.org/wiki/Disputes">this wiki page</a>. The normal way of resolving is the "on the ground" rule - "whatever name, designation, etc are used by the people on the ground at that location are used in the non-localized tags". Unfortunately in sparsely- or non-populated areas that's difficult to apply.</p>
+<p>Although a number of individual edits have been made in this area (and then changed by others of different political persuations), this isn't likely to provide a solution that all parties agree on - mediation via the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a> is likely to provide a better way forward.</p>
 <p>This help site really isn't the place to resolve issues of this nature.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -80,7 +80,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>They're using iD (not that a new mapper could be reasonably expected to answer that question). Here's the area that they're editing in:</p>
-<p><a href="http://www.openstreetmap.org/user/morsadr/history">http://www.openstreetmap.org/user/morsadr/history</a></p>
+<p><a href="https://www.openstreetmap.org/user/morsadr/history">https://www.openstreetmap.org/user/morsadr/history</a></p>
 </div>
 <div id="comment-38955-info" class="comment-info">
 <span class="comment-age">(30 Nov '14, 12:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -148,7 +148,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The best place to report problems with the "iD" editor is at the <a href="https://github.com/openstreetmap/iD/issues">issues list for it over at github</a>. You'll need a login at github to do this; if you don't have one, say so here and I (or another user) can log it on your behalf.</p>
 <p>What would be really useful to have would be information that would help to reproduce the problem - which browser you're using and what languages it displays by default, which computer operating system, that sort of thing.</p>
-<p>I do notice (by looking at the history <a href="http://www.openstreetmap.org/history#map=11/35.6654/51.4323">here</a>) that there are other users adding names using iD in Iran - it might be worth contacting them to ask what problems they have and how they worked around them.</p>
+<p>I do notice (by looking at the history <a href="https://www.openstreetmap.org/history#map=11/35.6654/51.4323">here</a>) that there are other users adding names using iD in Iran - it might be worth contacting them to ask what problems they have and how they worked around them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

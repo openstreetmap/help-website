@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>So someone in a <a href="https://help.openstreetmap.org/questions/78982/thousands-of-markers-pop-up-on-click">recent question</a> suggested that i should try out jxmapviewer2 for what i'm trying to do, but i have been unable to get it working (all kinds of errors and i'm not sure how to solve them). Are there any helpful sites or tutorials for jxmapviewer2 apart from their github that has examples (which i cannot run in my intelij because nearly everything gives an error). Or are there any alternatives? I'm looking to make a map for non-public use where i want to add a lot of markers and give them interactivity (click and show more information). Or are there any tutorials/examples for using java with openstreetmap?</p>
+<p>So someone in a <a href="/questions/78982/thousands-of-markers-pop-up-on-click">recent question</a> suggested that i should try out jxmapviewer2 for what i'm trying to do, but i have been unable to get it working (all kinds of errors and i'm not sure how to solve them). Are there any helpful sites or tutorials for jxmapviewer2 apart from their github that has examples (which i cannot run in my intelij because nearly everything gives an error). Or are there any alternatives? I'm looking to make a map for non-public use where i want to add a lot of markers and give them interactivity (click and show more information). Or are there any tutorials/examples for using java with openstreetmap?</p>
 <p>Any help is greatly appreciated.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

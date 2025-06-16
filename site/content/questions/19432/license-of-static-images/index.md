@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/copyright/en">http://www.openstreetmap.org/copyright/en</a> <em>"In media where links are not possible (e.g. printed works), we suggest you direct your readers to openstreetmap.org (perhaps by expanding 'OpenStreetMap' to this full address), to opendatacommons.org, and if relevant, to creativecommons.org."</em> Also please see</p>
+<p><a href="https://www.openstreetmap.org/copyright/en">https://www.openstreetmap.org/copyright/en</a> <em>"In media where links are not possible (e.g. printed works), we suggest you direct your readers to openstreetmap.org (perhaps by expanding 'OpenStreetMap' to this full address), to opendatacommons.org, and if relevant, to creativecommons.org."</em> Also please see</p>
 <ul>
 <li><span>my comment at your other question regarding legal advice and the full license text</span>.</li>
 <li><span>this entry in our legal FAQ</span> which probably answers your question.</li>

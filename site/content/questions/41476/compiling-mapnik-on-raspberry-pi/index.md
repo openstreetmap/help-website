@@ -44,7 +44,7 @@ osqa_accepted = false
 <blockquote>
 <p>g++ -o bindings/python/mapnik_geometry.os -c -ansi -Wall -pthread -ftemplate-depth-300 -O3 -fno-strict-aliasing -finline-functions -Wno-inline -Wno-parentheses -Wno-char-subscripts -fPIC -DHAVE_JPEG -DMAPNIK_USE_PROJ4 -DHAVE_PNG -DHAVE_TIFF -DBIGINT -DBOOST_REGEX_HAS_ICU -DLINUX -DMAPNIK_THREADSAFE -DNDEBUG -DHAVE_CAIRO -DHAVE_PYCAIRO -Ideps -Ideps/clipper/include -Ideps/agg/include -I. -Iinclude -I/usr/local/include -I/usr/include -I/usr/include/freetype2 -I/usr/include/libxml2 -I/usr/include/postgresql -I/usr/include/gdal -I/usr/include/python2.7 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pycairo bindings/python/mapnik_geometry.cpp g++: internal compiler error: Killed (program cc1plus)</p>
 </blockquote>
-<p>How did you install mapnik on the Pi? Once I have it up and running I can look into <a href="https://help.openstreetmap.org/questions/38209/rendering-blank-tiles-on-raspberry-pi-setup">this question</a>.</p>
+<p>How did you install mapnik on the Pi? Once I have it up and running I can look into <a href="/questions/38209/rendering-blank-tiles-on-raspberry-pi-setup">this question</a>.</p>
 <p>Regards</p>
 </div>
 <div id="question-tags" class="tags-container tags">

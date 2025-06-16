@@ -143,7 +143,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>They're for different things, really - <a href="http://forum.openstreetmap.org">forum.openstreetmap.org</a> is a general discussion forum, whereas <a href="http://help.openstreetmap.org">help.openstreetmap.org</a> is really for "how do I do X" questions. Some questions fit better into one format, some into another.</p>
-<p>Just to confuse matters, there are lots of other OSM forums as well - there are <a href="https://lists.openstreetmap.org/listinfo">mailing lists</a> which serve a similar purpose to the forums for people who prefer to read mailing lists, and the <a href="http://wiki.openstreetmap.org/wiki/Main_Page">wiki</a>, which is more "background documentation". See <a href="https://wiki.openstreetmap.org/wiki/Contact_channels">here</a> for more details.</p>
+<p>Just to confuse matters, there are lots of other OSM forums as well - there are <a href="https://lists.openstreetmap.org/listinfo">mailing lists</a> which serve a similar purpose to the forums for people who prefer to read mailing lists, and the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">wiki</a>, which is more "background documentation". See <a href="https://wiki.openstreetmap.org/wiki/Contact_channels">here</a> for more details.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -210,9 +210,9 @@ This answer is marked "community wiki".
 <div class="answer-body">
 <p>The same has been asked before. Please see</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/3635/help-forum-wiki-talk-pages-irc-and-mailing-lists-how-do-i-know-where-to-take-my-question">https://help.openstreetmap.org/questions/3635/help-forum-wiki-talk-pages-irc-and-mailing-lists-how-do-i-know-where-to-take-my-question</a></li>
-<li><a href="https://help.openstreetmap.org/questions/62277/whats-the-difference-between-helpopenstreetmaporg-and-forumopenstreetmaporg">https://help.openstreetmap.org/questions/62277/whats-the-difference-between-helpopenstreetmaporg-and-forumopenstreetmaporg</a></li>
-<li><a href="https://help.openstreetmap.org/questions/37/what-about-forumopenstreetmaporg">https://help.openstreetmap.org/questions/37/what-about-forumopenstreetmaporg</a></li>
+<li><a href="/questions/3635/help-forum-wiki-talk-pages-irc-and-mailing-lists-how-do-i-know-where-to-take-my-question">https://help.openstreetmap.org/questions/3635/help-forum-wiki-talk-pages-irc-and-mailing-lists-how-do-i-know-where-to-take-my-question</a></li>
+<li><a href="/questions/62277/whats-the-difference-between-helpopenstreetmaporg-and-forumopenstreetmaporg">https://help.openstreetmap.org/questions/62277/whats-the-difference-between-helpopenstreetmaporg-and-forumopenstreetmaporg</a></li>
+<li><a href="/questions/37/what-about-forumopenstreetmaporg">https://help.openstreetmap.org/questions/37/what-about-forumopenstreetmaporg</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

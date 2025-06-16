@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-21494-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I am not really sure that I understand your question (a bounding box based on a node?!?) - however, maybe it helps that many cities have their boundaries mapped like this: <a href="http://www.openstreetmap.org/browse/relation/62400">http://www.openstreetmap.org/browse/relation/62400</a> Note that this does not applies to every city (remarkably small ones) as OSM's data quality varies.</p>
+<p>I am not really sure that I understand your question (a bounding box based on a node?!?) - however, maybe it helps that many cities have their boundaries mapped like this: <a href="https://www.openstreetmap.org/browse/relation/62400">https://www.openstreetmap.org/browse/relation/62400</a> Note that this does not applies to every city (remarkably small ones) as OSM's data quality varies.</p>
 </div>
 <div id="comment-21494-info" class="comment-info">
 <span class="comment-age">(13 Apr '13, 01:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -136,8 +136,8 @@ One Answer:
 <p>First of all, it seems that you are not looking for exact bounding boxes of a certain city, but for its boundary relation.</p>
 <p>Main problem: the binding from a node to its boundary relation is not completley mapped in the OSM data. There are some countries where you have boundary relations with one node as a member with the role admin_centre ... thus you ca find all place nodes that are member of a boundary relation.</p>
 <p>But this binding is incomplete in the world, even in Germany this data model is not so widely spreaded.</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">Relation:boundary</a> in the OSM wiki.</p>
-<p>Maybe also helpful: <a href="https://help.openstreetmap.org/questions/19925/overpass-get-relation-and-node-in-one-query-for-city">overpass-get-relation-and-node-in-one-query-for-city</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">Relation:boundary</a> in the OSM wiki.</p>
+<p>Maybe also helpful: <a href="/questions/19925/overpass-get-relation-and-node-in-one-query-for-city">overpass-get-relation-and-node-in-one-query-for-city</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

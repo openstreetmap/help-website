@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>AFAIK there is no existing tagging scheme for this.</p>
-<p>I would use <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dvending_machine">amenity=vending_machine</a>. Then in stead of vending=..., I would use <a href="http://taginfo.openstreetmap.org/keys/rental#values">rental=...</a>, since the discs are not sold, but rented.</p>
+<p>I would use <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dvending_machine">amenity=vending_machine</a>. Then in stead of vending=..., I would use <a href="http://taginfo.openstreetmap.org/keys/rental#values">rental=...</a>, since the discs are not sold, but rented.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

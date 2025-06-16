@@ -63,7 +63,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Are these track ratings verifiable (<a href="http://wiki.openstreetmap.org/wiki/Verifiability)?">http://wiki.openstreetmap.org/wiki/Verifiability)?</a> That is are they marked on the ground using signs? If the only source for the ratings is a copyright publication, you won't be able to use them without explicit permission.</p>
+<p>Are these track ratings verifiable (<a href="https://wiki.openstreetmap.org/wiki/Verifiability)?">https://wiki.openstreetmap.org/wiki/Verifiability)?</a> That is are they marked on the ground using signs? If the only source for the ratings is a copyright publication, you won't be able to use them without explicit permission.</p>
 </div>
 <div id="comment-13345-info" class="comment-info">
 <span class="comment-age">(08 Jun '12, 10:51)</span> <span class="comment-user userinfo">Jonathan Ben...</span>
@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Tag:4wd_only%3Dyes">4wd_only</a> tag, also mentioned in the <a href="http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#4WD_only_track">australian tagging guidelines</a>, but it doesn't support your 4 classes.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Tag:4wd_only%3Dyes">4wd_only</a> tag, also mentioned in the <a href="https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines#4WD_only_track">australian tagging guidelines</a>, but it doesn't support your 4 classes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

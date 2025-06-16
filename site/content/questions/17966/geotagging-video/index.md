@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Why not create a GPX trace manually, setting the timestamp on each point to a time in the video ? Then you can use josm's <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/VideoMapping">video plugin</a> as normal.</p>
+<p>Why not create a GPX trace manually, setting the timestamp on each point to a time in the video ? Then you can use josm's <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/VideoMapping">video plugin</a> as normal.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

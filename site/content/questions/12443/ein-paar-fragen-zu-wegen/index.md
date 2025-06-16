@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hallo</p>
 <p>Hab da noch mal ein paar Fragen zu Wegen.</p>
-<p>1) Wie zeige ich am besten Wege an, die zu und um (Privat-)Garagen Komplexe laufen wie z.b. hier <a href="http://www.openstreetmap.org/edit?lat=51.538933&amp;lon=11.553291&amp;zoom=18">Garagen</a></p>
+<p>1) Wie zeige ich am besten Wege an, die zu und um (Privat-)Garagen Komplexe laufen wie z.b. hier <a href="https://www.openstreetmap.org/edit?lat=51.538933&amp;lon=11.553291&amp;zoom=18">Garagen</a></p>
 <p>Ich hab das bisher immer mit &gt; Service Road &gt; Parking aisle gemacht, ist das so richtig?</p>
-<p>2) Ein Gehweg (Footpath) wie ich Ihn hier gekennzeichnet habe <a href="http://www.openstreetmap.org/edit?lat=51.538933&amp;lon=11.553291&amp;zoom=18">Gehweg</a></p>
+<p>2) Ein Gehweg (Footpath) wie ich Ihn hier gekennzeichnet habe <a href="https://www.openstreetmap.org/edit?lat=51.538933&amp;lon=11.553291&amp;zoom=18">Gehweg</a></p>
 <p>Ein Weg, der teilweise Gepflaster aber auch teilweise unbefesttigt ist oder sollte ich da lieber generic path oder Track benutzen?</p>
 <p>3) Wo genau liegt der Unterschied von Track und generic path</p>
 <p>4) Wie kennzeichne ich am besten einen Schmalen Weg, der hinter einen Wohnblock zu Parkplätzen für die Anwohner führt? Das habe ich bisher auch immer mit Service Road &gt; Parking aisle gemacht!</p>
@@ -76,7 +76,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Der Gehweg im 2) ist nicht mit anderen Wegen verbunden. Siehe <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023</a></p>
+<p>Der Gehweg im 2) ist nicht mit anderen Wegen verbunden. Siehe <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">https://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023</a></p>
 </div>
 <div id="comment-12449-info" class="comment-info">
 <span class="comment-age">(30 Apr '12, 10:36)</span> <span class="comment-user userinfo">LM_1</span>

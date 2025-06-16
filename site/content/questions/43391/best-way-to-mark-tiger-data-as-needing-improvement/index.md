@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Most of <a href="http://www.openstreetmap.org/#map=17/33.46411/-86.73438">this area</a> is from tiger data, and is completely wrong. Many of the streets are nowhere near their correct positions, and most of them are in completely the wrong shape. Some are also connected to other roads incorrectly. Unfortunately, I currently do not have the time required to fix this. Is there some way to mark areas as needing improvement so that they can be fixed?</p>
+<p>Most of <a href="https://www.openstreetmap.org/#map=17/33.46411/-86.73438">this area</a> is from tiger data, and is completely wrong. Many of the streets are nowhere near their correct positions, and most of them are in completely the wrong shape. Some are also connected to other roads incorrectly. Unfortunately, I currently do not have the time required to fix this. Is there some way to mark areas as needing improvement so that they can be fixed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tiger" rel="tag" title="see questions tagged &#39;tiger&#39;">tiger</span>

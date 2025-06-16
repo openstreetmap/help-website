@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Is this in relation to your other question here? <a href="https://help.openstreetmap.org/questions/55223/exporting-files">https://help.openstreetmap.org/questions/55223/exporting-files</a></p>
+<p>Is this in relation to your other question here? <a href="/questions/55223/exporting-files">https://help.openstreetmap.org/questions/55223/exporting-files</a></p>
 </div>
 <div id="comment-55239-info" class="comment-info">
 <span class="comment-age">(22 Mar '17, 17:35)</span> <span class="comment-user userinfo">alester</span>

@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess this is a duplicate of: <a href="https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites">https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites</a></p>
+<p>I guess this is a duplicate of: <a href="/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites">https://help.openstreetmap.org/questions/28287/what-is-the-best-solution-for-creating-personalised-maps-for-use-on-client-websites</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

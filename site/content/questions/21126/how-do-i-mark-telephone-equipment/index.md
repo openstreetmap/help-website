@@ -64,8 +64,8 @@ osqa_accepted = true
 <div id="post-21127-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I only found "man_made=utility_pole" referenced at <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dutility_pole">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dutility_pole</a> , but it says "dont use this if you know the type of wires this pole supports", but it doesnt say what to tag, say, a telephone wire pole.</p>
-<p>Power substations do have a tagging schema (at least a german one, see <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dcable_distribution_cabinet">http://wiki.openstreetmap.org/wiki/Tag:power%3Dcable_distribution_cabinet</a> ), maybe using phone=cable_distribution_cabinet would be a good tagging for that?</p>
+<p>I only found "man_made=utility_pole" referenced at <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dutility_pole">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dutility_pole</a> , but it says "dont use this if you know the type of wires this pole supports", but it doesnt say what to tag, say, a telephone wire pole.</p>
+<p>Power substations do have a tagging schema (at least a german one, see <a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dcable_distribution_cabinet">https://wiki.openstreetmap.org/wiki/Tag:power%3Dcable_distribution_cabinet</a> ), maybe using phone=cable_distribution_cabinet would be a good tagging for that?</p>
 </div>
 <div id="comment-21127-info" class="comment-info">
 <span class="comment-age">(02 Apr '13, 11:04)</span> <span class="comment-user userinfo">gormo</span>
@@ -76,7 +76,7 @@ osqa_accepted = true
 <div id="post-21137-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I found this <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Telephone_Exchange">http://wiki.openstreetmap.org/wiki/Proposed_features/Telephone_Exchange</a> Maybe I should create a proposal? <a href="http://wiki.openstreetmap.org/wiki/Creating_a_proposal">http://wiki.openstreetmap.org/wiki/Creating_a_proposal</a></p>
+<p>I found this <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Telephone_Exchange">https://wiki.openstreetmap.org/wiki/Proposed_features/Telephone_Exchange</a> Maybe I should create a proposal? <a href="https://wiki.openstreetmap.org/wiki/Creating_a_proposal">https://wiki.openstreetmap.org/wiki/Creating_a_proposal</a></p>
 </div>
 <div id="comment-21137-info" class="comment-info">
 <span class="comment-age">(03 Apr '13, 02:06)</span> <span class="comment-user userinfo">superduck</span>
@@ -132,7 +132,7 @@ One Answer:
 <div class="answer-body">
 <p>Personally, I wouldn't go the "proposal" route - almost no-one will have the in-depth telco knowledge to be able to vote with any confidence. Instead, I'd have a look on <a href="http://taginfo.openstreetmap.org/search?q=telephone#values">taginfo</a> to see what other people have used, and ask on one of the lists (perhaps "<a href="http://lists.openstreetmap.org/listinfo/tagging">tagging</a>") for any other suggestions.</p>
 <p>One thing to bear in mind is that different telcos worldwide will have different names for the same thing. "British English" is normally used on OSM, but it might be that in some cases the legacy "British" (i.e. "BT") name is out of step with what everyone else around the world uses. From the linked Telstra page, it looks like they share some of the terminology (e.g. "joint") with BT, but not others (e.g. "PCP").</p>
-<p>If the data that you're wishing to add is all surveyed by yourself, then you're the data owner and there shouldn't be a problem on that score; but if you've obtained data from elsewhere there might be. Have a look at <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">this page</a> and some of the links from it.</p>
+<p>If the data that you're wishing to add is all surveyed by yourself, then you're the data owner and there shouldn't be a problem on that score; but if you've obtained data from elsewhere there might be. Have a look at <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">this page</a> and some of the links from it.</p>
 <p>Finally, you'll need to check that any data that you add doesn't duplicate anything already present, but in your case I suspect you won't encounter anything - there don't seem to be many people adding telco-related infrastructure (compared with, say, power or water supply).</p>
 </div>
 <div class="answer-controls post-controls">

@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Presumably related to <a href="https://help.openstreetmap.org/questions/52481/how-to-extract-the-bus-routes-based-on-the-bus-stops-coordinations">https://help.openstreetmap.org/questions/52481/how-to-extract-the-bus-routes-based-on-the-bus-stops-coordinations</a> .</p>
+<p>Presumably related to <a href="/questions/52481/how-to-extract-the-bus-routes-based-on-the-bus-stops-coordinations">https://help.openstreetmap.org/questions/52481/how-to-extract-the-bus-routes-based-on-the-bus-stops-coordinations</a> .</p>
 </div>
 <div id="comment-54605-info" class="comment-info">
 <span class="comment-age">(10 Feb '17, 20:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

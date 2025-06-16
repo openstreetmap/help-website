@@ -49,8 +49,8 @@ osqa_accepted = false
 </ol>
 <p>Thank you for your assistance with this.</p>
 <p>Kind regards, Pierre</p>
-<p><img src="http://help.openstreetmap.org/upfiles/OSM_website_showing_Zambezi_drive.PNG" alt="Note: screenshots are lost - due to a fault during software update" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/QGIS_OSM_file_rendering_not_showing_Zambezi_drive.PNG" alt="Note: screenshots are lost - due to a fault during software update" /></p>
+<p><img src="/upfiles/OSM_website_showing_Zambezi_drive.PNG" alt="Note: screenshots are lost - due to a fault during software update" /></p>
+<p><img src="/upfiles/QGIS_OSM_file_rendering_not_showing_Zambezi_drive.PNG" alt="Note: screenshots are lost - due to a fault during software update" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-qgis" rel="tag" title="see questions tagged &#39;qgis&#39;">qgis</span> <span class="post-tag tag-link-64bit_ids" rel="tag" title="see questions tagged &#39;64bit_ids&#39;">64bit_ids</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>
@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bug in the QGIS OSM plugin having to do with the 64 bit IDs--see <a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a></p>
+<p>Bug in the QGIS OSM plugin having to do with the 64 bit IDs--see <a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -197,8 +197,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Such inconsistencies are usually due to one of the sources not being quite up to date. Some ways to get garanteed up-to-date data include the export function of the main website, data downloaded from an editor, and the "map data" checkbox in the layers sidebar.</p>
-<p>But in this case, it seems that wambesi drive has been <a href="http://www.openstreetmap.org/browse/way/217747979/history">last touched on the 19th of august</a>, which make it sound unlikely that any source you used was that old. The geofabrik extracts for Africa and South-Africa-And-Lesotho are less than 24 hours old, in particular. Either you downloaded old data, or there is a bug in qgis, or there is a bug in the geofabrik extract.</p>
-<p>Do you still have the problem when downloading the area using the <a href="http://www.openstreetmap.org/export">export</a> page ?</p>
+<p>But in this case, it seems that wambesi drive has been <a href="https://www.openstreetmap.org/browse/way/217747979/history">last touched on the 19th of august</a>, which make it sound unlikely that any source you used was that old. The geofabrik extracts for Africa and South-Africa-And-Lesotho are less than 24 hours old, in particular. Either you downloaded old data, or there is a bug in qgis, or there is a bug in the geofabrik extract.</p>
+<p>Do you still have the problem when downloading the area using the <a href="https://www.openstreetmap.org/export">export</a> page ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

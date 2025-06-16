@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See also <a href="https://help.openstreetmap.org/questions/31410/how-has-the-no-of-bitcoin-merchants-increased-over-the-years-in-osm-data">"How has the No. of Bitcoin merchants increased over the years".</a></p>
+<p>See also <a href="/questions/31410/how-has-the-no-of-bitcoin-merchants-increased-over-the-years-in-osm-data">"How has the No. of Bitcoin merchants increased over the years".</a></p>
 <p>In general, OSM is not a suitable database to answer this question because we only know what is mapped in OSM, not what exists in reality.</p>
 <p>You can use the <a href="http://planet.openstreetmap.org/planet/full-history/">"full history planet"</a> to analyse when something first appeared in OSM.</p>
 </div>

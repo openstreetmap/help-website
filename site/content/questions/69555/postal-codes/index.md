@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Adding your postcode is a good opportunity for you to start mapping see my answer to this question. <a href="https://help.openstreetmap.org/questions/69430/postcode-brings-up-wrong-country">https://help.openstreetmap.org/questions/69430/postcode-brings-up-wrong-country</a></p>
+<p>Adding your postcode is a good opportunity for you to start mapping see my answer to this question. <a href="/questions/69430/postcode-brings-up-wrong-country">https://help.openstreetmap.org/questions/69430/postcode-brings-up-wrong-country</a></p>
 </div>
 <div id="comment-69564-info" class="comment-info">
 <span class="comment-age">(10 Jun '19, 19:18)</span> <span class="comment-user userinfo">andy mackey</span>

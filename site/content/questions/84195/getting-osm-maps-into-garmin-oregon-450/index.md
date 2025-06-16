@@ -184,7 +184,7 @@ For your mac you will probably need a .gmap file and then use Garmin Basecamp to
 <div id="post-84211-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded</a></p>
+<p><a href="/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded</a></p>
 </div>
 <div id="comment-84211-info" class="comment-info">
 <span class="comment-age">(19 Apr '22, 07:29)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -195,7 +195,7 @@ For your mac you will probably need a .gmap file and then use Garmin Basecamp to
 <div id="post-84212-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
+<p><a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
 </div>
 <div id="comment-84212-info" class="comment-info">
 <span class="comment-age">(19 Apr '22, 07:31)</span> <span class="comment-user userinfo">andy mackey</span>

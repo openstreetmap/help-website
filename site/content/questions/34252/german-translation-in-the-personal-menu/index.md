@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Currently the German translation in the personal Menü of OSM looks like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Bildschirmfoto_2014-06-23_um_00.52.19.png" alt="Current look of the personal menu" /></p>
+<p><img src="/upfiles/Bildschirmfoto_2014-06-23_um_00.52.19.png" alt="Current look of the personal menu" /></p>
 <p>The lines do not fit (<em>Meine Nachrichten</em> does not fit), also the wording is strange, those are word to word translations from English. Not always the best idea. I would change it to:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Bildschirmfoto_2014-06-23_um_01.33.50.png" alt="Suggested look of the personal menu" /></p>
+<p><img src="/upfiles/Bildschirmfoto_2014-06-23_um_01.33.50.png" alt="Suggested look of the personal menu" /></p>
 <p>Now it would fit.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

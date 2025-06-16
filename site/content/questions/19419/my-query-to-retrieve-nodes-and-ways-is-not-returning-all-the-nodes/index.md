@@ -154,7 +154,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>to state the above problem more clearly than in a comment I asked the following question :</p>
-<p><a href="https://help.openstreetmap.org/questions/19424/this-program-to-retrieve-the-nodes-and-ways-returns-some-extra-garbage-values">https://help.openstreetmap.org/questions/19424/this-program-to-retrieve-the-nodes-and-ways-returns-some-extra-garbage-values</a></p>
+<p><a href="/questions/19424/this-program-to-retrieve-the-nodes-and-ways-returns-some-extra-garbage-values">https://help.openstreetmap.org/questions/19424/this-program-to-retrieve-the-nodes-and-ways-returns-some-extra-garbage-values</a></p>
 </div>
 <div id="comment-19425-info" class="comment-info">
 <span class="comment-age">(30 Jan '13, 06:36)</span> <span class="comment-user userinfo">Anubha</span>

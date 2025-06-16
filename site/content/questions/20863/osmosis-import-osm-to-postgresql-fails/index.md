@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You need to create the correct schema (i.e. create the database tables) first. One of the tables (i.e. relations) created will be called "schema_info", which osmosis checks before it loads anything, and that's where the error 'relation "schema_info" does not exist' comes from.</p>
-<p>Please have a read of the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PostGIS_Tasks_.28Snapshot_Schema.29">osmosis documentation on the PostgreSQL tasks</a>. You will need to choose which of the schemas is appropriate for your task, then load the schema (e.g. <code>psql -d romania -f /path/to/schema.sql</code>) then load the data.</p>
+<p>Please have a read of the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PostGIS_Tasks_.28Snapshot_Schema.29">osmosis documentation on the PostgreSQL tasks</a>. You will need to choose which of the schemas is appropriate for your task, then load the schema (e.g. <code>psql -d romania -f /path/to/schema.sql</code>) then load the data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

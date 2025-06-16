@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rename a building"
-description = '''My first edit here (using iD) was to change the name of a building, but over 24 hours later the change hasn&#x27;t shown up in the map. I suspect the problem is that the building wasn&#x27;t defined as an area in the first place. See http://www.openstreetmap.org/#map=18/51.54297/-0.23552&amp;amp;layers=D. I chang...'''
+description = '''My first edit here (using iD) was to change the name of a building, but over 24 hours later the change hasn&#x27;t shown up in the map. I suspect the problem is that the building wasn&#x27;t defined as an area in the first place. See https://www.openstreetmap.org/#map=18/51.54297/-0.23552&amp;amp;layers=D. I chang...'''
 date = "2013-09-16T13:44:00Z"
 lastmod = "2013-09-16T17:18:00Z"
 weight = 26380
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>My first edit here (using iD) was to change the name of a building, but over 24 hours later the change hasn't shown up in the map. I suspect the problem is that the building wasn't defined as an area in the first place. See <a href="http://www.openstreetmap.org/#map=18/51.54297/-0.23552&amp;layers=D">http://www.openstreetmap.org/#map=18/51.54297/-0.23552&amp;layers=D</a>.</p>
+<p>My first edit here (using iD) was to change the name of a building, but over 24 hours later the change hasn't shown up in the map. I suspect the problem is that the building wasn't defined as an area in the first place. See <a href="https://www.openstreetmap.org/#map=18/51.54297/-0.23552&amp;layers=D">https://www.openstreetmap.org/#map=18/51.54297/-0.23552&amp;layers=D</a>.</p>
 <p>I changed the name from <em>The Roundwood Centre</em> to <em>Willesden Centre for Health &amp; Care</em>. I also added amenity=clinic and the website URL.</p>
 <p>I think I need to make this an area, but I can't see how. Or is there some other reason why my name change hasn't shown up?</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi gh2, and welcome! I think this is due to the way you've updated it, since it is the <strong>area</strong> that will render the title, and that is <a href="http://www.openstreetmap.org/browse/way/86355712">http://www.openstreetmap.org/browse/way/86355712</a> and this hasn't been updated since 2010.</p>
+<p>Hi gh2, and welcome! I think this is due to the way you've updated it, since it is the <strong>area</strong> that will render the title, and that is <a href="https://www.openstreetmap.org/browse/way/86355712">https://www.openstreetmap.org/browse/way/86355712</a> and this hasn't been updated since 2010.</p>
 <p>It looks like you've updated/added a <strong>relationship</strong> instead, so haven't applied those additional tags to the area.</p>
 <p>Return to the area (click the link for the area I give above), and click on the outer border of building (at the very bottom left of iD there should be a link to "view on streetmap.org - hover over this and check it matches that link above) - you'll notice it's got no tags, except a relationship. Add all the elements/tags you require (building, name, website, etc etc) to this, and you should notice it then updates correctly.</p>
 </div>

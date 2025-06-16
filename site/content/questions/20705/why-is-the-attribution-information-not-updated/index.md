@@ -130,7 +130,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>To answer your edit, there is an example attribution image shown at <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>To answer your edit, there is an example attribution image shown at <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 </div>
 <div id="comment-20708-info" class="comment-info">
 <span class="comment-age">(14 Mar '13, 11:44)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -187,7 +187,7 @@ One Answer:
 <div id="post-24246-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>map.addLayer(new OpenLayers.Layer.OSM("OSM",null,{attribution: "© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL)"}));</p>
+<p>map.addLayer(new OpenLayers.Layer.OSM("OSM",null,{attribution: "© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL)"}));</p>
 </div>
 <div id="comment-24246-info" class="comment-info">
 <span class="comment-age">(15 Jul '13, 08:55)</span> <span class="comment-user userinfo">amritkarma</span>

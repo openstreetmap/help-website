@@ -82,7 +82,7 @@ This question is marked "community wiki".
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: there appears to be a JavaScript issue with IE8 since the routing code was deployed.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: there appears to be a JavaScript issue with IE8 since the routing code was deployed.</p>
 </div>
 <div id="comment-41212-info" class="comment-info">
 <span class="comment-age">(21 Feb '15, 18:41)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -93,7 +93,7 @@ This question is marked "community wiki".
 <div id="post-41213-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard"></a><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a>: okay, still, this IE version was current from March 2009 to March 2011.</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard"></a><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a>: okay, still, this IE version was current from March 2009 to March 2011.</p>
 </div>
 <div id="comment-41213-info" class="comment-info">
 <span class="comment-age">(21 Feb '15, 19:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -104,7 +104,7 @@ This question is marked "community wiki".
 <div id="post-41216-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10536/sanger">@sanger</a>: could you please answer my questions to get clear what you are asking about?</p>
+<p><a href="https://help.openstreetmap.org/users/10536/sanger">@sanger</a>: could you please answer my questions to get clear what you are asking about?</p>
 </div>
 <div id="comment-41216-info" class="comment-info">
 <span class="comment-age">(21 Feb '15, 20:27)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

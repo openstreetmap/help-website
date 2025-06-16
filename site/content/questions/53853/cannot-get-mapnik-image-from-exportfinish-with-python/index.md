@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cannot get mapnik image from export/finish with Python"
-description = '''I want to get image from &quot;http://www.openstreetmap.org/export/finish&quot; or &quot;http://api06.dev.openstreetmap.org/export/finish&quot; with Python. I tried this command. import requests  url = &quot;http://www.openstreetmap.org/export/finish&quot; &amp;lt;br /&amp;gt; r = requests.post(url,{&#x27;mapnik_format&#x27;: &#x27;png&#x27;, &#x27;minlon&#x27;: 135...'''
+description = '''I want to get image from &quot;https://www.openstreetmap.org/export/finish&quot; or &quot;http://api06.dev.openstreetmap.org/export/finish&quot; with Python. I tried this command. import requests  url = &quot;https://www.openstreetmap.org/export/finish&quot; &amp;lt;br /&amp;gt; r = requests.post(url,{&#x27;mapnik_format&#x27;: &#x27;png&#x27;, &#x27;minlon&#x27;: 135...'''
 date = "2017-01-04T05:35:00Z"
 lastmod = "2017-03-29T22:38:00Z"
 weight = 53853
@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to get image from "http://www.openstreetmap.org/export/finish" or "http://api06.dev.openstreetmap.org/export/finish" with Python.</p>
+<p>I want to get image from "https://www.openstreetmap.org/export/finish" or "http://api06.dev.openstreetmap.org/export/finish" with Python.</p>
 <p>I tried this command.</p>
 <pre><code>import requests
-&#10;url = &quot;http://www.openstreetmap.org/export/finish&quot; &lt;br /&gt;
+&#10;url = &quot;https://www.openstreetmap.org/export/finish&quot; &lt;br /&gt;
 r = requests.post(url,{&#39;mapnik_format&#39;: &#39;png&#39;, &#39;minlon&#39;: 135.74, &#39;minlat&#39;: 35.011, &#39;maxlon&#39;: 135.75, &#39;maxlat&#39;: 35.014, &#39;format&#39;: &#39;mapnik&#39;, &#39;mapnik_scale&#39;: 30000})</code></pre>
 <p>but r is Response [400] and r.content is this</p>
 <pre><code>&lt;html&gt;
@@ -127,7 +127,7 @@ One Answer:
 <div class="answer-body">
 <p>The export facility on the web site is not meant to be used programmatically. (See <a href="https://operations.osmfoundation.org/policies/tiles/">https://operations.osmfoundation.org/policies/tiles/</a> which says "Calls to /cgi-bin/export may only be triggered by direct end-user action." - even though you're not calling /cgi-bin/export this is the same thing.)</p>
 <p>So even if the problem you are seeing could be fixed, you'd be using the interface in disregard of the policy.</p>
-<p>Generally the best and most reliable way to generate static map images is to run your own rendering server - that way you can make as many requests as you like and you're not killing anyone else's server with it. If you absolutely must use a hosted service, have a look at <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">http://wiki.openstreetmap.org/wiki/Static_map_images</a> but be aware that the services listed there are not suitable for massive use either.</p>
+<p>Generally the best and most reliable way to generate static map images is to run your own rendering server - that way you can make as many requests as you like and you're not killing anyone else's server with it. If you absolutely must use a hosted service, have a look at <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">https://wiki.openstreetmap.org/wiki/Static_map_images</a> but be aware that the services listed there are not suitable for massive use either.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

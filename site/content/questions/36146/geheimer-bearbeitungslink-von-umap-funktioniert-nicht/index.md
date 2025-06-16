@@ -83,7 +83,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9514/neubeginnsh"></a><a href="http://help.openstreetmap.org/users/9514/neubeginnsh">@NeubeginnSH</a>: Meinst du vielleicht eine Instanz von <span>uMap</span>? Bitte nenne uns am besten die URL/Adresse der Seite, die du meinst (natürlich nicht den geheimen Bearbeitungslink, sondern nur die Domain vorn links).</p>
+<p><a href="https://help.openstreetmap.org/users/9514/neubeginnsh"></a><a href="https://help.openstreetmap.org/users/9514/neubeginnsh">@NeubeginnSH</a>: Meinst du vielleicht eine Instanz von <span>uMap</span>? Bitte nenne uns am besten die URL/Adresse der Seite, die du meinst (natürlich nicht den geheimen Bearbeitungslink, sondern nur die Domain vorn links).</p>
 </div>
 <div id="comment-36151-info" class="comment-info">
 <span class="comment-age">(25 Aug '14, 12:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

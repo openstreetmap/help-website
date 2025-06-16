@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Churches are often mapped with <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">amenity=place_of_worship</a>.</p>
+<p>Churches are often mapped with <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">amenity=place_of_worship</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

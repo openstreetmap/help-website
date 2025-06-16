@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello everyone,</p>
-<p>I downloaded Latest Netherlands pbf data from Geofabrick yesterday. I process the data by reading the raw data into a sql data structure. There are some data tags that show up on the OSM web site but not in the data I downloaded from GeoFabrik. For example, wayid = <a href="http://www.openstreetmap.org/browse/way/7982080">7982080</a> (Un-named River), there is no tag downloaded from Geofabrik. However, If I do an extract from the OSM website for that area, I do see a tag = "natural" value = "water" for that river (wayid = 7982080). Geofabrik site says the data is updated daily. This data was there on the OSM site a few days ago when I extracted the data but still not in Netherlands download from Geofabrik. Can anyway shed some light on this for me? Is it just a matter of waiting some more time for this data and eventually shows up or is there more to it?</p>
+<p>I downloaded Latest Netherlands pbf data from Geofabrick yesterday. I process the data by reading the raw data into a sql data structure. There are some data tags that show up on the OSM web site but not in the data I downloaded from GeoFabrik. For example, wayid = <a href="https://www.openstreetmap.org/browse/way/7982080">7982080</a> (Un-named River), there is no tag downloaded from Geofabrik. However, If I do an extract from the OSM website for that area, I do see a tag = "natural" value = "water" for that river (wayid = 7982080). Geofabrik site says the data is updated daily. This data was there on the OSM site a few days ago when I extracted the data but still not in Netherlands download from Geofabrik. Can anyway shed some light on this for me? Is it just a matter of waiting some more time for this data and eventually shows up or is there more to it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-netherlands" rel="tag" title="see questions tagged &#39;netherlands&#39;">netherlands</span> <span class="post-tag tag-link-downloads" rel="tag" title="see questions tagged &#39;downloads&#39;">downloads</span> <span class="post-tag tag-link-river" rel="tag" title="see questions tagged &#39;river&#39;">river</span> <span class="post-tag tag-link-tag" rel="tag" title="see questions tagged &#39;tag&#39;">tag</span> <span class="post-tag tag-link-geofabrik" rel="tag" title="see questions tagged &#39;geofabrik&#39;">geofabrik</span>
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/browse/way/7982080">Way 7982080</a> actually has no tags on it but is part of a <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a> that <a href="http://www.openstreetmap.org/browse/relation/1462311">has tags</a>.</p>
+<p><a href="https://www.openstreetmap.org/browse/way/7982080">Way 7982080</a> actually has no tags on it but is part of a <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a> that <a href="https://www.openstreetmap.org/browse/relation/1462311">has tags</a>.</p>
 <p>Whatever you're using to process the data is presumably doing some multipolygon processing (perhaps to make it easier for rendering)?</p>
 </div>
 <div class="answer-controls post-controls">

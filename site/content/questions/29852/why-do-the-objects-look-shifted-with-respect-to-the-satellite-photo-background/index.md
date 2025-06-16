@@ -80,7 +80,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Here, for example: <a href="http://www.openstreetmap.org/edit#map=19/51.75821/-1.25753">http://www.openstreetmap.org/edit#map=19/51.75821/-1.25753</a>. The curve of the grass and the road look slightly misaligned, and this continues for several blocks (I'm showing the University of Oxford).</p>
+<p>Here, for example: <a href="https://www.openstreetmap.org/edit#map=19/51.75821/-1.25753">https://www.openstreetmap.org/edit#map=19/51.75821/-1.25753</a>. The curve of the grass and the road look slightly misaligned, and this continues for several blocks (I'm showing the University of Oxford).</p>
 </div>
 <div id="comment-29854-info" class="comment-info">
 <span class="comment-age">(15 Jan '14, 15:10)</span> <span class="comment-user userinfo">gdiazc</span>
@@ -92,7 +92,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Same area at z20 and it aligns <a href="http://www.openstreetmap.org/edit#map=20/51.75834/-1.25755">http://www.openstreetmap.org/edit#map=20/51.75834/-1.25755</a> - one or the other set of images is slightly out.</p>
+<p>Same area at z20 and it aligns <a href="https://www.openstreetmap.org/edit#map=20/51.75834/-1.25755">https://www.openstreetmap.org/edit#map=20/51.75834/-1.25755</a> - one or the other set of images is slightly out.</p>
 </div>
 <div id="comment-29855-info" class="comment-info">
 <span class="comment-age">(15 Jan '14, 15:26)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -114,7 +114,7 @@ osqa_accepted = true
 <div id="post-29911-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question is relivent: <a href="https://help.openstreetmap.org/questions/17661/aligning-roads-to-proper-location">https://help.openstreetmap.org/questions/17661/aligning-roads-to-proper-location</a></p>
+<p>This question is relivent: <a href="/questions/17661/aligning-roads-to-proper-location">https://help.openstreetmap.org/questions/17661/aligning-roads-to-proper-location</a></p>
 </div>
 <div id="comment-29911-info" class="comment-info">
 <span class="comment-age">(17 Jan '14, 16:11)</span> <span class="comment-user userinfo">he_the_great</span>
@@ -195,7 +195,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>If you zoom in, and then look to the west by St Giles, and then look at the underlying GPS traces</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=20/51.75831/-1.26020">http://www.openstreetmap.org/edit?editor=potlatch2#map=20/51.75831/-1.26020</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=20/51.75831/-1.26020">https://www.openstreetmap.org/edit?editor=potlatch2#map=20/51.75831/-1.26020</a></p>
 <p>you can see that most of the GPS traces are to the east of the roads, suggesting an imagery offset in that direction at that zoom level. It's less clear north-south since there isn't a nearby way clear of tall buildings running east-west (St Giles is at least fairly wide).</p>
 <p>If you want to contact people who've mapped Oxford I'd start on the talk-gb mailing list or the #osm-gb IRC channel (see <span>@aseerel4c26</span>'s contact link).</p>
 </div>

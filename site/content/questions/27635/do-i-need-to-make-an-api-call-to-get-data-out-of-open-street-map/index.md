@@ -157,9 +157,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Clicking the <a href="http://www.openstreetmap.org/export">export data</a> link should open the export tab, which lets you select an area to download (always up to date but small area only), or suggests various data extract services (large areas but typically up to 1 day old).</p>
+<p>Clicking the <a href="https://www.openstreetmap.org/export">export data</a> link should open the export tab, which lets you select an area to download (always up to date but small area only), or suggests various data extract services (large areas but typically up to 1 day old).</p>
 <p>I tried a couple of browsers and it works as expected. If it doesn't work for you, you may want to <a href="https://github.com/openstreetmap/openstreetmap-website/issues">file a bug report</a>.</p>
-<p>The file format is <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">described on the wiki</a>. But there are easyer ways to "just see what data openstreet map has available", for example clicking the "map data" checkbox in the layers sidebar (4th button on the right), or using the editor.</p>
+<p>The file format is <a href="https://wiki.openstreetmap.org/wiki/OSM_XML">described on the wiki</a>. But there are easyer ways to "just see what data openstreet map has available", for example clicking the "map data" checkbox in the layers sidebar (4th button on the right), or using the editor.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

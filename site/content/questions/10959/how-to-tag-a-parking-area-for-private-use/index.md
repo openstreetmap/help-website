@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a parking area for private use?"
-description = '''Hi, I added a bigger parking area in front of a skyscraper. The parking area is private and only for the people living in the skyscraper (no building on the area). According to OSM (http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking) and other discussions, parking areas should not be tagged wi...'''
+description = '''Hi, I added a bigger parking area in front of a skyscraper. The parking area is private and only for the people living in the skyscraper (no building on the area). According to OSM (https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking) and other discussions, parking areas should not be tagged wi...'''
 date = "2012-03-03T20:46:00Z"
 lastmod = "2012-10-05T03:59:00Z"
 weight = 10959
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I added a bigger parking area in front of a skyscraper. The parking area is private and only for the people living in the skyscraper (no building on the area). According to OSM (<a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a>) and other discussions, parking areas should not be tagged with amenity=parking since these areas are marked with a "P". So if you are searching for a parking place on a map, you can not see, that some of them are just private. I thought, tagging a private parkingplace with amenity=parking and access=private would avoid having the "P" but thats wrong as I figured out. Using landuse=garages or building=garages is also wrong since there is no building (garage) on that area. What do do? Thanks for help Chynte</p>
+<p>Hi, I added a bigger parking area in front of a skyscraper. The parking area is private and only for the people living in the skyscraper (no building on the area). According to OSM (<a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a>) and other discussions, parking areas should not be tagged with amenity=parking since these areas are marked with a "P". So if you are searching for a parking place on a map, you can not see, that some of them are just private. I thought, tagging a private parkingplace with amenity=parking and access=private would avoid having the "P" but thats wrong as I figured out. Using landuse=garages or building=garages is also wrong since there is no building (garage) on that area. What do do? Thanks for help Chynte</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-garages" rel="tag" title="see questions tagged &#39;garages&#39;">garages</span> <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-private" rel="tag" title="see questions tagged &#39;private&#39;">private</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span>
@@ -141,7 +141,7 @@ The map can be used by the people who are in that private group. Imagine hotel g
 <div id="post-10965-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>OK, thanks for the fast and friendly answer. Should'nt that answer be part of "http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking" ?</p>
+<p>OK, thanks for the fast and friendly answer. Should'nt that answer be part of "https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking" ?</p>
 </div>
 <div id="comment-10965-info" class="comment-info">
 <span class="comment-age">(04 Mar '12, 11:56)</span> <span class="comment-user userinfo">Chynte</span>
@@ -268,7 +268,7 @@ The map can be used by the people who are in that private group. Imagine hotel g
 <div class="comment-text">
 <p>There are at least two answer to that, I think:</p>
 <p>a) Because we can.</p>
-<p>b) It's sometimes useful to know that a particular parking area can't be used. For example, anyone planning to walk along part of the Pennine Way west of Keighley might notice a parking area <a href="http://www.openstreetmap.org/?lat=53.83811&amp;lon=-2.02224&amp;zoom=17&amp;layers=M">here</a> as they drove past and think that they might be able to park there. However, if they look at the map they'll see that (1) yes it exists but (2) it's private. If it wasn't on the map they wouldn't know whether it was private or just hadn't been mapped yet.</p>
+<p>b) It's sometimes useful to know that a particular parking area can't be used. For example, anyone planning to walk along part of the Pennine Way west of Keighley might notice a parking area <a href="https://www.openstreetmap.org/?lat=53.83811&amp;lon=-2.02224&amp;zoom=17&amp;layers=M">here</a> as they drove past and think that they might be able to park there. However, if they look at the map they'll see that (1) yes it exists but (2) it's private. If it wasn't on the map they wouldn't know whether it was private or just hadn't been mapped yet.</p>
 </div>
 <div id="comment-16667-info" class="comment-info">
 <span class="comment-age">(04 Oct '12, 16:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -333,7 +333,7 @@ The map can be used by the people who are in that private group. Imagine hotel g
 <div class="comment-text">
 <p>If only people can park there, who rented a space, then it is indeed access=private.</p>
 <p>If only a part of the parking lot is rented, you might consider splitting it into two polygons with the respective access restrictions.</p>
-<p>If the parking lot is mixed - ie some spaces rented, some spaces free, imho the whole parking lot is access=yes (or whatever), unless you feel like tagging single parking spaces: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space</a> Sounds like a hell of a work for little benefit (although might make sense for dispersed spaces for disabled people)</p>
+<p>If the parking lot is mixed - ie some spaces rented, some spaces free, imho the whole parking lot is access=yes (or whatever), unless you feel like tagging single parking spaces: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking_space</a> Sounds like a hell of a work for little benefit (although might make sense for dispersed spaces for disabled people)</p>
 </div>
 <div id="comment-10994-info" class="comment-info">
 <span class="comment-age">(06 Mar '12, 07:37)</span> <span class="comment-user userinfo">moszkva ter</span>

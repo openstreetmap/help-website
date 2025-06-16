@@ -79,7 +79,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> using <a href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a> data side</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> using <a href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a> data side</p>
 </div>
 <div id="comment-50255-info" class="comment-info">
 <span class="comment-age">(16 Jun '16, 18:44)</span> <span class="comment-user userinfo">LCKF16</span>
@@ -146,7 +146,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you don't need geometries, you can use the csv output format to select a subset of tags:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29</a></p>
 <p>Other than that, Overpass doesn't have any features for altering the results, it returns all the tags for the objects matching the query.</p>
 </div>
 <div class="answer-controls post-controls">

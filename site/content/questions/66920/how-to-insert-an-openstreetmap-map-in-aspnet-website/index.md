@@ -83,7 +83,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>see answer to possible duplicate: <a href="https://help.openstreetmap.org/questions/7061/how-can-i-embed-a-map-in-my-website">https://help.openstreetmap.org/questions/7061/how-can-i-embed-a-map-in-my-website</a></p>
+<p>see answer to possible duplicate: <a href="/questions/7061/how-can-i-embed-a-map-in-my-website">https://help.openstreetmap.org/questions/7061/how-can-i-embed-a-map-in-my-website</a></p>
 </div>
 <div id="comment-66980-info" class="comment-info">
 <span class="comment-age">(28 Nov '18, 23:18)</span> <span class="comment-user userinfo">Krubo</span>

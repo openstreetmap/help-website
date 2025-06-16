@@ -125,7 +125,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>You can also point him/her at the <a href="http://wiki.openstreetmap.org/wiki/Good_changeset_comments">good changeset comments</a> and <a href="http://wiki.openstreetmap.org/wiki/Good_practice">good practices</a> articles in the wiki, which might bear more weight than an isolated comment.</p>
+<p>You can also point him/her at the <a href="https://wiki.openstreetmap.org/wiki/Good_changeset_comments">good changeset comments</a> and <a href="https://wiki.openstreetmap.org/wiki/Good_practice">good practices</a> articles in the wiki, which might bear more weight than an isolated comment.</p>
 </div>
 <div id="comment-47409-info" class="comment-info">
 <span class="comment-age">(07 Jan '16, 10:24)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

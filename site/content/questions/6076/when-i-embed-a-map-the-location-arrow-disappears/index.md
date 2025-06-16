@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Frederik is correct, but for other solutions I think the answers to this <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">earlier question</a> may help.</p>
+<p>Frederik is correct, but for other solutions I think the answers to this <a href="/questions/25/how-do-i-add-a-marker-to-a-map">earlier question</a> may help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

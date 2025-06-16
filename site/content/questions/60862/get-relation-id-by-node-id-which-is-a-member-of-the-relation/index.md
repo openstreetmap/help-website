@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Get relation id by node id (which is a member of the relation)"
-description = '''Hi everyone, how can i get the relation id by the node id? Or in other words - how can i get from here: http://www.openstreetmap.org/api/0.6/node/240076989 to here:  http://www.openstreetmap.org/api/0.6/relation/191645 (which both is the city of dresden) Thank you for every contribution.'''
+description = '''Hi everyone, how can i get the relation id by the node id? Or in other words - how can i get from here: https://www.openstreetmap.org/api/0.6/node/240076989 to here:  https://www.openstreetmap.org/api/0.6/relation/191645 (which both is the city of dresden) Thank you for every contribution.'''
 date = "2017-11-29T12:53:00Z"
 lastmod = "2017-11-30T09:33:00Z"
 weight = 60862
@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi everyone,</p>
 <p>how can i get the relation id by the node id?</p>
-<p>Or in other words - how can i get from here: <a href="http://www.openstreetmap.org/api/0.6/node/240076989">http://www.openstreetmap.org/api/0.6/node/240076989</a> to here: <a href="http://www.openstreetmap.org/api/0.6/relation/191645">http://www.openstreetmap.org/api/0.6/relation/191645</a> (which both is the city of dresden)</p>
+<p>Or in other words - how can i get from here: <a href="https://www.openstreetmap.org/api/0.6/node/240076989">https://www.openstreetmap.org/api/0.6/node/240076989</a> to here: <a href="https://www.openstreetmap.org/api/0.6/relation/191645">https://www.openstreetmap.org/api/0.6/relation/191645</a> (which both is the city of dresden)</p>
 <p>Thank you for every contribution.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just append <code>/relations</code> to your first link: <a href="http://www.openstreetmap.org/api/0.6/node/240076989/relations">http://www.openstreetmap.org/api/0.6/node/240076989/relations</a></p>
+<p>Just append <code>/relations</code> to your first link: <a href="https://www.openstreetmap.org/api/0.6/node/240076989/relations">https://www.openstreetmap.org/api/0.6/node/240076989/relations</a></p>
 <p>This will return all relations the node is part of. This feature is described <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Relations_for_element:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id.2Frelations">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">

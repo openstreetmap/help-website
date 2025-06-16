@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Recentemente editei as curvas do rio na localidade <a href="http://www.openstreetmap.org/#map=15/-20.6552/-51.1321">15/-20.6552/-51.1321</a> e agora o rio "sumiu", pois quando entro <a href="https://www.mapbox.com/design/">https://www.mapbox.com/design/</a> e procuro na localidade, aparece como que se o rio não estivesse ali.</p>
+<p>Recentemente editei as curvas do rio na localidade <a href="https://www.openstreetmap.org/#map=15/-20.6552/-51.1321">15/-20.6552/-51.1321</a> e agora o rio "sumiu", pois quando entro <a href="https://www.mapbox.com/design/">https://www.mapbox.com/design/</a> e procuro na localidade, aparece como que se o rio não estivesse ali.</p>
 <p>Alguém pode me ajudar?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -80,7 +80,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9648/1987phd">@1987phd</a> Precisamos de mais detalhes. Tente entrar em contato com a comunidade brasileira via chat ou algo parecido: <a href="http://www.openstreetmap.com.br/comunidade/">http://www.openstreetmap.com.br/comunidade/</a></p>
+<p><a href="https://help.openstreetmap.org/users/9648/1987phd">@1987phd</a> Precisamos de mais detalhes. Tente entrar em contato com a comunidade brasileira via chat ou algo parecido: <a href="http://www.openstreetmap.com.br/comunidade/">http://www.openstreetmap.com.br/comunidade/</a></p>
 </div>
 <div id="comment-36838-info" class="comment-info">
 <span class="comment-age">(15 Sep '14, 12:37)</span> <span class="comment-user userinfo">jgpacker</span>
@@ -91,7 +91,7 @@ osqa_accepted = false
 <div id="post-36839-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9648/1987phd">@1987phd</a>, eu vou verificar a área e já te mando mensagem pelo OSM mesmo</p>
+<p><a href="https://help.openstreetmap.org/users/9648/1987phd">@1987phd</a>, eu vou verificar a área e já te mando mensagem pelo OSM mesmo</p>
 </div>
 <div id="comment-36839-info" class="comment-info">
 <span class="comment-age">(15 Sep '14, 12:40)</span> <span class="comment-user userinfo">naoliv</span>

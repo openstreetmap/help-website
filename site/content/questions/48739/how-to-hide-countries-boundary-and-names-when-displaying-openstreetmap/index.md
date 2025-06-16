@@ -125,7 +125,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>No. The maps consist of images that have been created and cached; allowing you to switch individual layers on and off would mean we'd have to store many more cached versions, or compute them whenever someone requests them, which would need more resources than we have.</p>
 <p>But all is not lost, you can set up your own tile server that creates maps without these features, or indeed with any style changes you like! Seach for "render my own map" in this help system or consult switch2osm.org for details.</p>
-<p>With luck you find someone who has already made a map like the one you are looking for, and is allowing you to use it - for example <a href="https://help.openstreetmap.org/questions/40664/how-to-hide-all-labels-of-osm">How to hide all labels of OSM</a> which discusses a label-less map.</p>
+<p>With luck you find someone who has already made a map like the one you are looking for, and is allowing you to use it - for example <a href="/questions/40664/how-to-hide-all-labels-of-osm">How to hide all labels of OSM</a> which discusses a label-less map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -187,8 +187,8 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is possible to filter out the names on the fly, but only on the way into the rendering database. Obviously this is only an option if you're rendering maps on your own server.</p>
-<p>A basic guide to setting up your own server is <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">here</a>. When you load the data you have an option of using a script to do things with tags on the way into the database (osm2pgsql, used for database loading, ships with <a href="https://github.com/openstreetmap/osm2pgsql/blob/70b27884eabbdf43ccaf71d4a92d1daa5e30556f/style.lua">an example</a>). This is something I do when I create tiles for my own use, the procedure is described on <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver_load">this page</a>. The tag transform script that I use is <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style">this one</a> (but you'd want to create something much simpler) and the section that removes admin boundaries is <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style/blob/master/style.lua#L238">here</a>.</p>
-<p>Obviously <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> is only one way of many that users see OpenStreetMap data, and there are equivalent mechanisms for some of the others too. For example, for <a href="http://osmand.net/">OsmAnd</a> you can <a href="http://wiki.openstreetmap.org/wiki/OsmAndMapCreator">create</a> your own data files and have some control over what gets displayed.</p>
+<p>A basic guide to setting up your own server is <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">here</a>. When you load the data you have an option of using a script to do things with tags on the way into the database (osm2pgsql, used for database loading, ships with <a href="https://github.com/openstreetmap/osm2pgsql/blob/70b27884eabbdf43ccaf71d4a92d1daa5e30556f/style.lua">an example</a>). This is something I do when I create tiles for my own use, the procedure is described on <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Ubuntu_1404_tileserver_load">this page</a>. The tag transform script that I use is <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style">this one</a> (but you'd want to create something much simpler) and the section that removes admin boundaries is <a href="https://github.com/SomeoneElseOSM/SomeoneElse-style/blob/master/style.lua#L238">here</a>.</p>
+<p>Obviously <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> is only one way of many that users see OpenStreetMap data, and there are equivalent mechanisms for some of the others too. For example, for <a href="http://osmand.net/">OsmAnd</a> you can <a href="https://wiki.openstreetmap.org/wiki/OsmAndMapCreator">create</a> your own data files and have some control over what gets displayed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -239,7 +239,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Instead of rendering bitmaps that are static, you can alternatively use vector data and vector graphics.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Vector_tiles">Vector_tiles</a> in the OSM wiki for a collection and overview, or the mentioned <a href="http://osm2vectortiles.org">osm2vectortiles.org</a>.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Vector_tiles">Vector_tiles</a> in the OSM wiki for a collection and overview, or the mentioned <a href="http://osm2vectortiles.org">osm2vectortiles.org</a>.</p>
 <p>With those solutions you should be able to change the map styling on-the-fly, so let any names or boundary lines disappear.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -130,7 +130,7 @@ One Answer:
 <div id="post-32812-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... or see <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for more OSM professionals.</p>
+<p>... or see <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> for more OSM professionals.</p>
 </div>
 <div id="comment-32812-info" class="comment-info">
 <span class="comment-age">(02 May '14, 13:01)</span> <span class="comment-user userinfo">stephan75</span>

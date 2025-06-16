@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have some code that works out which UK county a place node falls in. This is failing for some coastal towns / villages, because the latitude and longitude defined for the place node is actually in the sea or on the beach, and therefore falls outside of the county boundary.</p>
-<p>An example is <a href="http://www.openstreetmap.org/browse/node/380755986">Hugh Town</a> in the Scilly Isles. <a href="http://maps.google.co.uk/maps?q=49.9155917,+-6.3142438&amp;hl=en&amp;ll=49.915585,-6.314242&amp;spn=0.012242,0.033023&amp;sll=49.914592,-6.314244&amp;sspn=0.012242,0.033023&amp;t=m&amp;z=16">Here</a>'s how it looks on Google Maps, which doesn't show the beach.</p>
+<p>An example is <a href="https://www.openstreetmap.org/browse/node/380755986">Hugh Town</a> in the Scilly Isles. <a href="http://maps.google.co.uk/maps?q=49.9155917,+-6.3142438&amp;hl=en&amp;ll=49.915585,-6.314242&amp;spn=0.012242,0.033023&amp;sll=49.914592,-6.314244&amp;sspn=0.012242,0.033023&amp;t=m&amp;z=16">Here</a>'s how it looks on Google Maps, which doesn't show the beach.</p>
 <p>Is this intentional, or could the node positions for such places be adjusted so that they were on land? I could easily come up with a list of them.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -252,7 +252,7 @@ osqa_accepted = false
 <div id="post-14902-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Andy. It is my understanding/interpretation that it is normally best to use nodes for places (<a href="https://wiki.openstreetmap.org/wiki/Key:place)">https://wiki.openstreetmap.org/wiki/Key:place)</a> (towns, villages, etc) and areas for administrative boundaries (<a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative).">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative).</a> See also this discussion: (<a href="http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative).">http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative).</a></p>
+<p>Hi Andy. It is my understanding/interpretation that it is normally best to use nodes for places (<a href="https://wiki.openstreetmap.org/wiki/Key:place)">https://wiki.openstreetmap.org/wiki/Key:place)</a> (towns, villages, etc) and areas for administrative boundaries (<a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative).">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative).</a> See also this discussion: (<a href="/questions/4658/tagging-areas-as-place-vs-boundaryadministrative).">https://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative).</a></p>
 </div>
 <div id="comment-14902-info" class="comment-info">
 <span class="comment-age">(08 Aug '12, 00:04)</span> <span class="comment-user userinfo">pbb</span>
@@ -298,7 +298,7 @@ osqa_accepted = false
 <div id="post-14927-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Andy, I see I made a mistake with my links. Here are they as they should have been: <a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a> - <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a> - <a href="http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative">http://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative</a></p>
+<p>Hi Andy, I see I made a mistake with my links. Here are they as they should have been: <a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a> - <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative</a> - <a href="/questions/4658/tagging-areas-as-place-vs-boundaryadministrative">https://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative</a></p>
 </div>
 <div id="comment-14927-info" class="comment-info">
 <span class="comment-age">(09 Aug '12, 17:02)</span> <span class="comment-user userinfo">pbb</span>

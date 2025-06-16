@@ -107,7 +107,7 @@ One Answer:
 <p>The short answer is no - you get the current state of all the current data when you export from OSM.</p>
 <p>In order to be of more help, we'd need to know what you've downloaded and from where. It's perfectly possible for someone to make available a cut-down subset of OSM data for a particular purpose.</p>
 <p>Do be aware that data extracts on some external sites my be quite old - the download sites suggested from the "export" function when you try an export a large area are a good starting point:</p>
-<p><a href="http://www.openstreetmap.org/export#map=0/5/105">http://www.openstreetmap.org/export#map=0/5/105</a></p>
+<p><a href="https://www.openstreetmap.org/export#map=0/5/105">https://www.openstreetmap.org/export#map=0/5/105</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ One Answer:
 <div id="post-28761-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I didn't get current state of data downloaded even from export option at osm.org. I wanted to download the data of the extent <a href="http://www.openstreetmap.org/export#map=15/17.4024/78.5370">http://www.openstreetmap.org/export#map=15/17.4024/78.5370</a> however what I see in the map is not what I got in the downloaded file.</p>
+<p>I didn't get current state of data downloaded even from export option at osm.org. I wanted to download the data of the extent <a href="https://www.openstreetmap.org/export#map=15/17.4024/78.5370">https://www.openstreetmap.org/export#map=15/17.4024/78.5370</a> however what I see in the map is not what I got in the downloaded file.</p>
 </div>
 <div id="comment-28761-info" class="comment-info">
 <span class="comment-age">(04 Dec '13, 12:28)</span> <span class="comment-user userinfo">GoldenCompass</span>
@@ -172,7 +172,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I am getting even less than 1MB of the data for that region (may be a bit different due to screen size). You may see the screenshots: <a href="http://help.openstreetmap.org/upfiles/osm_data.JPG">First one</a> is the data directly exported from the osm.org while <a href="http://help.openstreetmap.org/upfiles/osm_data2.JPG">secondly one</a> shows the data downloaded from the mirror sites recommended by OSM (geofabrik/cloudmade). If direct export we can figure out the outline of the all roads (with the help of points) while many of them are even missing from mirror site data.</p>
+<p>I am getting even less than 1MB of the data for that region (may be a bit different due to screen size). You may see the screenshots: <span>First one</span> is the data directly exported from the osm.org while <span>secondly one</span> shows the data downloaded from the mirror sites recommended by OSM (geofabrik/cloudmade). If direct export we can figure out the outline of the all roads (with the help of points) while many of them are even missing from mirror site data.</p>
 </div>
 <div id="comment-28805-info" class="comment-info">
 <span class="comment-age">(05 Dec '13, 11:18)</span> <span class="comment-user userinfo">GoldenCompass</span>

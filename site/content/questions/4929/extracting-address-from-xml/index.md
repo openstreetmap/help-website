@@ -71,7 +71,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Please edit your original question and tell us whether you have entered the data of your home with the help of the addr-tags ( <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a> ) or not.</p>
+<p>Please edit your original question and tell us whether you have entered the data of your home with the help of the addr-tags ( <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a> ) or not.</p>
 <p>Or give us a permalink to your home building area if you want, then we can investigate further.</p>
 </div>
 <div id="comment-4934-info" class="comment-info">
@@ -138,7 +138,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The answer probably has something do with Nominatim:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

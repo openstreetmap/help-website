@@ -71,7 +71,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>OSM doesn't really have "official" tags. See:</p>
-<p><a href="https://help.openstreetmap.org/questions/116/which-tags-do-i-use">https://help.openstreetmap.org/questions/116/which-tags-do-i-use</a></p>
+<p><a href="/questions/116/which-tags-do-i-use">https://help.openstreetmap.org/questions/116/which-tags-do-i-use</a></p>
 </div>
 <div id="comment-34099-info" class="comment-info">
 <span class="comment-age">(18 Jun '14, 14:15)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -190,7 +190,7 @@ One Answer:
 <div id="post-34113-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I actually meant healthcare:speciality=orthodontics. See <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare#Specialities_of_medical_practitioners_or_other_medical_facilities">http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare#Specialities_of_medical_practitioners_or_other_medical_facilities</a> if you dare, it's a bit intense :) About the question, you could wait to see if others chime in with a different response or votes. You can also accept an answer and change to a different answer later if a better one comes along.</p>
+<p>I actually meant healthcare:speciality=orthodontics. See <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare#Specialities_of_medical_practitioners_or_other_medical_facilities">https://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare#Specialities_of_medical_practitioners_or_other_medical_facilities</a> if you dare, it's a bit intense :) About the question, you could wait to see if others chime in with a different response or votes. You can also accept an answer and change to a different answer later if a better one comes along.</p>
 </div>
 <div id="comment-34113-info" class="comment-info">
 <span class="comment-age">(18 Jun '14, 17:47)</span> <span class="comment-user userinfo">neuhausr</span>

@@ -71,8 +71,8 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>It means that someone edited the same way you tried to edit and saved the changes before you.</p>
-<p>Way 250295839: <a href="http://www.openstreetmap.org/way/250295839">http://www.openstreetmap.org/way/250295839</a> It seems like this 'someone else' is also you. Probably you had two browser windows open with editor and you did editing in both.</p>
-<p>Your changesets: <a href="http://www.openstreetmap.org/user/Bruce%20in%20Iloilo/history">http://www.openstreetmap.org/user/Bruce%20in%20Iloilo/history</a><br />
+<p>Way 250295839: <a href="https://www.openstreetmap.org/way/250295839">https://www.openstreetmap.org/way/250295839</a> It seems like this 'someone else' is also you. Probably you had two browser windows open with editor and you did editing in both.</p>
+<p>Your changesets: <a href="https://www.openstreetmap.org/user/Bruce%20in%20Iloilo/history">https://www.openstreetmap.org/user/Bruce%20in%20Iloilo/history</a><br />
 </p>
 <p>As I'm not familiar with iD, I do not know whether something can be salvaged from your unsaved work.</p>
 </div>
@@ -154,7 +154,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>As <span>@RM87</span> says, it's an editing conflict. Somebody already uploaded a newer version of an object(s) that you wanted to alter, also.</p>
-<p>See <a href="https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit</a></p>
+<p>See <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

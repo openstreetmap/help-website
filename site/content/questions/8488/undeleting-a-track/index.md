@@ -108,8 +108,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at <a href="http://www.openstreetmap.org/browse/way/35354274/history">the history for the existing track way</a> it looks like v1 did indeed join, but v2 from a second later is no longer joined. Both by melb_guy. Your edit (v3) was a couple of weeks later, but seems to have added a node to the middle.</p>
-<p>Viewing the area in Potlatch 1 and pressing U to show deleted ways only shows deleted ways to the west of the area, which seemed to be duplicates. <a href="http://www.openstreetmap.org/browse/way/32122203/history">One example</a> was Police Road mapped as residential (later unclassified) including to Churchill Park Drive originally. It looks like this was split at v4, to give the unclassified section and the section tagged as track, which then was disconnected from Churchill Park at the same time. <a href="http://www.openstreetmap.org/browse/way/35980251/history">This deleted way</a> is another duplicate Police Way section.</p>
+<p>Looking at <a href="https://www.openstreetmap.org/browse/way/35354274/history">the history for the existing track way</a> it looks like v1 did indeed join, but v2 from a second later is no longer joined. Both by melb_guy. Your edit (v3) was a couple of weeks later, but seems to have added a node to the middle.</p>
+<p>Viewing the area in Potlatch 1 and pressing U to show deleted ways only shows deleted ways to the west of the area, which seemed to be duplicates. <a href="https://www.openstreetmap.org/browse/way/32122203/history">One example</a> was Police Road mapped as residential (later unclassified) including to Churchill Park Drive originally. It looks like this was split at v4, to give the unclassified section and the section tagged as track, which then was disconnected from Churchill Park at the same time. <a href="https://www.openstreetmap.org/browse/way/35980251/history">This deleted way</a> is another duplicate Police Way section.</p>
 <p>So to answer your questions: 1) it was amended, not deleted 2) it was amended by melb_guy 3) it was amended on 2nd June 2009, apparently less than 2 weeks before your edits. 4) you would need to extend the existing way</p>
 <p>3) is what confuses me slightly as you say in the question that it extended at the time that you edited. Is it possible you were viewing old tiles in map view, and hadn't noticed it had already been edited when you made your edits?</p>
 </div>
@@ -149,7 +149,7 @@ One Answer:
 <div id="post-8503-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I can't be sure, but the history of <a href="http://www.openstreetmap.org/browse/way/31779918/history">http://www.openstreetmap.org/browse/way/31779918/history</a> suggests (with v4) that you joined it to this admin boundary rather than a track.</p>
+<p>I can't be sure, but the history of <a href="https://www.openstreetmap.org/browse/way/31779918/history">https://www.openstreetmap.org/browse/way/31779918/history</a> suggests (with v4) that you joined it to this admin boundary rather than a track.</p>
 </div>
 <div id="comment-8503-info" class="comment-info">
 <span class="comment-age">(19 Oct '11, 09:28)</span> <span class="comment-user userinfo">EdLoach ♦</span>

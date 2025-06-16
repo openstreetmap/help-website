@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>Here is the <a href="https://osmand.net/features/find-something-on-map#Find_by_address_A">doc</a>.</p>
 <p>The sum it up, start by the biggest.</p>
-<p>Also many addresses are not in OSM, see this <a href="https://help.openstreetmap.org/questions/55019/new-to-osmand-cannot-locate-addresses">question</a>.</p>
+<p>Also many addresses are not in OSM, see this <a href="/questions/55019/new-to-osmand-cannot-locate-addresses">question</a>.</p>
 <p>(it's the two first results for "osmand search address" in the well known search engine).</p>
 </div>
 <div class="answer-controls post-controls">

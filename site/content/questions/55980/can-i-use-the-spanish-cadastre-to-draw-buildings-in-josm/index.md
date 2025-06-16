@@ -108,7 +108,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>No problem! You can use the Spanish Cadastre. The information is free and compatible with OSM license. The Spanish Community usually use the Spanish Cadastre WMS server to map buildings and addresses. It is the best source!</p>
-<p>More details: <a href="http://wiki.openstreetmap.org/w/index.php?title=ES:Fuentes_de_datos_potenciales_de_Espa%C3%B1a&amp;oldid=1438043#CATASTRO">http://wiki.openstreetmap.org/w/index.php?title=ES:Fuentes_de_datos_potenciales_de_Espa%C3%B1a&amp;oldid=1438043#CATASTRO</a> (OSM Wiki in Spanish)</p>
+<p>More details: <a href="https://wiki.openstreetmap.org/w/index.php?title=ES:Fuentes_de_datos_potenciales_de_Espa%C3%B1a&amp;oldid=1438043#CATASTRO">https://wiki.openstreetmap.org/w/index.php?title=ES:Fuentes_de_datos_potenciales_de_Espa%C3%B1a&amp;oldid=1438043#CATASTRO</a> (OSM Wiki in Spanish)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

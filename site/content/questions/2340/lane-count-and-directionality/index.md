@@ -106,7 +106,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you draw for each direction a seperate way you count only the lanes in that direction. If you draw one way for both directions you count the lanes for both directions.</p>
-<p>See: <a href="http://wiki.openstreetmap.org/wiki/Lanes">OSM wiki:</a> <a href="http://wiki.openstreetmap.org/wiki/Lanes"></a><a href="http://wiki.openstreetmap.org/wiki/Lanes">http://wiki.openstreetmap.org/wiki/Lanes</a></p>
+<p>See: <a href="https://wiki.openstreetmap.org/wiki/Lanes">OSM wiki:</a> <a href="https://wiki.openstreetmap.org/wiki/Lanes"></a><a href="https://wiki.openstreetmap.org/wiki/Lanes">https://wiki.openstreetmap.org/wiki/Lanes</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -125,7 +125,7 @@ osqa_accepted = true
 <div id="post-2376-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Do restricted lanes count? <a href="http://help.openstreetmap.org/questions/2339/restricted-lanes-with-lanes-tag">http://help.openstreetmap.org/questions/2339/restricted-lanes-with-lanes-tag</a></p>
+<p>Do restricted lanes count? <a href="/questions/2339/restricted-lanes-with-lanes-tag">https://help.openstreetmap.org/questions/2339/restricted-lanes-with-lanes-tag</a></p>
 </div>
 <div id="comment-2376-info" class="comment-info">
 <span class="comment-age">(23 Jan '11, 02:30)</span> <span class="comment-user userinfo">Baloo Uriza</span>
@@ -160,7 +160,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>a new solution for such cases is lanes_ex, it can handle <em>any</em> case.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex">http://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex">https://wiki.openstreetmap.org/wiki/Proposed_features/Lanes_ex</a></p>
 </div>
 <div id="comment-8813-info" class="comment-info">
 <span class="comment-age">(04 Nov '11, 12:39)</span> <span class="comment-user userinfo">Bürste</span>

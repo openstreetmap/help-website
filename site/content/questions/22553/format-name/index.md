@@ -82,7 +82,7 @@ This question is marked "community wiki".
 <div id="post-22558-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm guessing perhaps that it might refer to the text format used to describe features on the "OSM standard" map, such as the road name <a href="http://www.openstreetmap.org/?lat=53.87959&amp;lon=-2.02393&amp;zoom=16&amp;layers=M">here</a>?</p>
+<p>I'm guessing perhaps that it might refer to the text format used to describe features on the "OSM standard" map, such as the road name <a href="https://www.openstreetmap.org/?lat=53.87959&amp;lon=-2.02393&amp;zoom=16&amp;layers=M">here</a>?</p>
 </div>
 <div id="comment-22558-info" class="comment-info">
 <span class="comment-age">(20 May '13, 08:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

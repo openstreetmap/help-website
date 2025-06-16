@@ -129,8 +129,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Ile_de_la_R%C3%A9union">wiki project</a> about the island (in French). Look at French <a href="http://wiki.openstreetmap.org/wiki/FR:Beginners_Guide">Beginners Guide</a>. Conserning google eath I see no link with OpenStreetMap project. There is way to get help in your language: <a href="http://wiki.openstreetmap.org/wiki/Contact">Contact</a></p>
-<p>Il y a un <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Ile_de_la_R%C3%A9union">wiki projet</a> pour l'Île de de Réunion en français. Tu peux aussi regarder le <a href="http://wiki.openstreetmap.org/wiki/FR:Beginners_Guide">guide du débutant</a> en français. Il y a possibilité d'avoir de l'aide dans la langue : <a href="http://wiki.openstreetmap.org/wiki/Contact">Contact</a>.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Ile_de_la_R%C3%A9union">wiki project</a> about the island (in French). Look at French <a href="https://wiki.openstreetmap.org/wiki/FR:Beginners_Guide">Beginners Guide</a>. Conserning google eath I see no link with OpenStreetMap project. There is way to get help in your language: <a href="https://wiki.openstreetmap.org/wiki/Contact">Contact</a></p>
+<p>Il y a un <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Ile_de_la_R%C3%A9union">wiki projet</a> pour l'Île de de Réunion en français. Tu peux aussi regarder le <a href="https://wiki.openstreetmap.org/wiki/FR:Beginners_Guide">guide du débutant</a> en français. Il y a possibilité d'avoir de l'aide dans la langue : <a href="https://wiki.openstreetmap.org/wiki/Contact">Contact</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -180,7 +180,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Je ne sais pas français. Consultez le wiki pour <a href="http://wiki.openstreetmap.org/wiki/FR:Beginners_Guide">Guide du débutant</a>.</p>
+<p>Je ne sais pas français. Consultez le wiki pour <a href="https://wiki.openstreetmap.org/wiki/FR:Beginners_Guide">Guide du débutant</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

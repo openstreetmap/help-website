@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I presume you mean ones like <a href="http://mapillary.com/map/im/lmbNpACyPVlundajiqusPA">these</a>.</p>
-<p>The normal way for any street lighting is <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dstreet_lamp"><code>highway=street_lamp</code></a>, and this is where I would start. There are a number of other useful ideas about tagging street lights in general <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Tag:man_made%3Dlamp">here</a>.</p>
+<p>The normal way for any street lighting is <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dstreet_lamp"><code>highway=street_lamp</code></a>, and this is where I would start. There are a number of other useful ideas about tagging street lights in general <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Tag:man_made%3Dlamp">here</a>.</p>
 <p>You can certainly also add a tag indicating the height of the post (height or est_height) and perhaps a note to help once people get fanatical about the different kinds of street lighting.</p>
 </div>
 <div class="answer-controls post-controls">

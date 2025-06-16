@@ -190,7 +190,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The first <a href="https://duckduckgo.com/?q=parse+%22pbf%22+file&amp;norw=1&amp;t=hv&amp;ia=software">web search result</a> after the adverts is <a href="https://help.openstreetmap.org/questions/10468/pbf-file-parsing">this</a>. Does that help?</p>
+<p>The first <a href="https://duckduckgo.com/?q=parse+%22pbf%22+file&amp;norw=1&amp;t=hv&amp;ia=software">web search result</a> after the adverts is <a href="/questions/10468/pbf-file-parsing">this</a>. Does that help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

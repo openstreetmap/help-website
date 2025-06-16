@@ -127,7 +127,7 @@ One Answer:
 <div class="answer-body">
 <p>You can open KML and OSM files using <a href="http://www.qgis.org/">QGIS</a>.</p>
 <p>Here is a <a href="http://maps.cga.harvard.edu/qgis/wkshop/import_kml.php">basic tutorial</a> on importing KML files into QGIS.</p>
-<p>Here is a <a href="http://wiki.openstreetmap.org/wiki/QGIS">wiki page</a> and <a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">another wiki page</a> on using OSM data in QGIS.</p>
+<p>Here is a <a href="https://wiki.openstreetmap.org/wiki/QGIS">wiki page</a> and <a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">another wiki page</a> on using OSM data in QGIS.</p>
 <p>You will probably then be able to save the various files into formats that can be manipulated by other software if needed. Alternatively, you may be able to meet your needs using QGIS.</p>
 </div>
 <div class="answer-controls post-controls">

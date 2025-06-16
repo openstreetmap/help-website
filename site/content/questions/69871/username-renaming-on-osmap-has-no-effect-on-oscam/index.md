@@ -44,8 +44,8 @@ osqa_accepted = false
 <p>I revoked all tokens, closed all sessions, cleaned all cookies but the problem remains.</p>
 <p>How can I fix that?</p>
 <p>Thanks for your help.</p>
-<p>OSMap (ok) &gt; <img src="https://help.openstreetmap.org/upfiles/OSMapSide.PNG" alt="alt text" /></p>
-<p>OSCam (wrong) &gt; <img src="https://help.openstreetmap.org/upfiles/OSCamSide.PNG" alt="alt text" /></p>
+<p>OSMap (ok) &gt; <img src="/upfiles/OSMapSide.PNG" alt="alt text" /></p>
+<p>OSCam (wrong) &gt; <img src="/upfiles/OSCamSide.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-username" rel="tag" title="see questions tagged &#39;username&#39;">username</span> <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-account" rel="tag" title="see questions tagged &#39;account&#39;">account</span> <span class="post-tag tag-link-rename" rel="tag" title="see questions tagged &#39;rename&#39;">rename</span> <span class="post-tag tag-link-openstreetcam" rel="tag" title="see questions tagged &#39;openstreetcam&#39;">openstreetcam</span>

@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I was checking <a href="http://www.altroconsumo.it/hi-tech/macchine-fotografiche">consumer tests of cameras</a> and I see that <a href="http://www.nikon.it/it_IT/product/digital-cameras/coolpix/super-zoom-share/coolpix-s9700">a compact camera</a> ("superzoom" type) offers embedded GPS.</p>
 <p>GPS may be useful for surveying and for <a href="http://www.wikilovesmonuments.org">WikiLovesMonuments</a> photos, but the camera costs some 50 € more than equivalent ones. Are the coordinates found by such embedded systems precise enough to be used directly?</p>
-<p>I saw the <a href="https://help.openstreetmap.org/questions/38126/looking-for-a-pov-camera-with-gps">POV camera question</a> but I'm not interested in video etc.</p>
+<p>I saw the <a href="/questions/38126/looking-for-a-pov-camera-with-gps">POV camera question</a> but I'm not interested in video etc.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span> <span class="post-tag tag-link-camera" rel="tag" title="see questions tagged &#39;camera&#39;">camera</span> <span class="post-tag tag-link-tools" rel="tag" title="see questions tagged &#39;tools&#39;">tools</span> <span class="post-tag tag-link-coordinates" rel="tag" title="see questions tagged &#39;coordinates&#39;">coordinates</span> <span class="post-tag tag-link-surveying" rel="tag" title="see questions tagged &#39;surveying&#39;">surveying</span>
@@ -312,7 +312,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you have a gps or a smart phone just set the cameras clock to match gps time and your gpx trace can be used to fix the position your jpegs exactly. JOSM and Garmin Basecamp can do this along with several other programs. See <a href="http://wiki.openstreetmap.org/wiki/Photo_mapping">http://wiki.openstreetmap.org/wiki/Photo_mapping</a></p>
+<p>If you have a gps or a smart phone just set the cameras clock to match gps time and your gpx trace can be used to fix the position your jpegs exactly. JOSM and Garmin Basecamp can do this along with several other programs. See <a href="https://wiki.openstreetmap.org/wiki/Photo_mapping">https://wiki.openstreetmap.org/wiki/Photo_mapping</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

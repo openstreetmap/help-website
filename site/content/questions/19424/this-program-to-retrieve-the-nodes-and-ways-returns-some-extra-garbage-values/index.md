@@ -181,7 +181,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ah, that's my example code from <a href="https://help.openstreetmap.org/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program">this question</a> with a little Winsock adjustments.</p>
+<p>Ah, that's my example code from <a href="/questions/18684/i-want-to-use-mainoverpass-api-for-retrieving-data-in-c-program">this question</a> with a little Winsock adjustments.</p>
 <p>The number you see is not junk but the response is sent with <a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">chunked transfer encoding</a> which you have to process first. This is just one of several possible transfer encodings which you SHOULD support in your program. As already explained in my answer to the other question you should better use a third-party library for HTTP traffic if you want a simple solution.</p>
 </div>
 <div class="answer-controls post-controls">

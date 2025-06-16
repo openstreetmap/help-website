@@ -132,8 +132,8 @@ One Answer:
 <p>I wonder are we using the same instance of umap? <a href="https://umap.openstreetmap.fr/en/map/">https://umap.openstreetmap.fr/en/map/</a><strong>*</strong></p>
 <p>I could share the link to the map in a private message if it helps?</p>
 <p>If its very hard to fix then we can just switch layers - however the Outdoors (OSM) works a lot better with the additional layers.</p>
-<p><a href="https://help.openstreetmap.org/upfiles/OSM-landscape(Thunderforest).png">https://help.openstreetmap.org/upfiles/OSM-landscape(Thunderforest).png</a></p>
-<p><a href="https://help.openstreetmap.org/upfiles/Outdoors(OSM).png">https://help.openstreetmap.org/upfiles/Outdoors(OSM).png</a></p>
+<p><span>/upfiles/OSM-landscape(Thunderforest).png</span></p>
+<p><span>/upfiles/Outdoors(OSM).png</span></p>
 </div>
 <div id="comment-63830-info" class="comment-info">
 <span class="comment-age">(29 May '18, 08:09)</span> <span class="comment-user userinfo">Back2Front</span>

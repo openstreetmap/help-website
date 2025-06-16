@@ -66,7 +66,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There is <a href="http://www.openstreetmap.org/relation/362203156">no relation 362203156</a>. But there is <a href="http://www.openstreetmap.org/way/362203156">way 362203156</a>. It has <del>just</del> a <em>name</em> tag although it should be removed since it doesn't match the <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">criteria for a name</a>. <del>I can't find anything with a <em>Name</em> tag in the surrounding area.</del></p>
+<p>There is <a href="https://www.openstreetmap.org/relation/362203156">no relation 362203156</a>. But there is <a href="https://www.openstreetmap.org/way/362203156">way 362203156</a>. It has <del>just</del> a <em>name</em> tag although it should be removed since it doesn't match the <a href="https://wiki.openstreetmap.org/wiki/Names#Name_is_the_name_only">criteria for a name</a>. <del>I can't find anything with a <em>Name</em> tag in the surrounding area.</del></p>
 </div>
 <div id="comment-46423-info" class="comment-info">
 <span class="comment-age">(06 Nov '15, 09:47)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -121,7 +121,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Jon.</p>
-<p>It is really quite simple. You <a href="http://www.openstreetmap.org/way/362203156">go to the object in question</a>, and hit the "Edit" button. Of course, you <a href="https://www.openstreetmap.org/user/new">need an account</a> for that. Then you click on the object in question and click on "All tags". There you could see that <a href="http://help.openstreetmap.org/users/158/scai">@scai</a> identified the object correctly as a way, not a relation. But he missed something, and there was in fact a "Name" tag. As you can see in <a href="http://www.openstreetmap.org/way/362203156/history">the history of the object,</a> I fixed the several errors there were in the tagging of this object. Hope your import runs now. Please keep posting (or better yet fixing yourself) mistakes that you spot :)</p>
+<p>It is really quite simple. You <a href="https://www.openstreetmap.org/way/362203156">go to the object in question</a>, and hit the "Edit" button. Of course, you <a href="https://www.openstreetmap.org/user/new">need an account</a> for that. Then you click on the object in question and click on "All tags". There you could see that <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> identified the object correctly as a way, not a relation. But he missed something, and there was in fact a "Name" tag. As you can see in <a href="https://www.openstreetmap.org/way/362203156/history">the history of the object,</a> I fixed the several errors there were in the tagging of this object. Hope your import runs now. Please keep posting (or better yet fixing yourself) mistakes that you spot :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ One Answer:
 <div id="post-46426-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks joost and <a href="http://help.openstreetmap.org/users/158/scai">@scai</a>,</p>
+<p>Thanks joost and <a href="https://help.openstreetmap.org/users/158/scai">@scai</a>,</p>
 <p>Yes it is a way, but I also notice my ESRI import that there is an polygon present with Leisure=Forest which is incorrect and does appear on the OSM portal.</p>
 <p>Are you guys able to see this?</p>
 <p>I will try to fix the mistakes and post the complex issues</p>

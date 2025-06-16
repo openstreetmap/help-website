@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm sure that <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">someone already has</a> created a map that you could put on an SD card - perhaps you could try using <a href="http://garmin.openstreetmap.nl/">this site</a>, for example.</p>
+<p>I'm sure that <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">someone already has</a> created a map that you could put on an SD card - perhaps you could try using <a href="http://garmin.openstreetmap.nl/">this site</a>, for example.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

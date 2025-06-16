@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Someone else recently asked this question, it was answered here :- <a href="https://help.openstreetmap.org/questions/47044/save-button-not-active">https://help.openstreetmap.org/questions/47044/save-button-not-active</a> Apparently you have to make a comment before being able to save. Does that help?</p>
+<p>Someone else recently asked this question, it was answered here :- <a href="/questions/47044/save-button-not-active">https://help.openstreetmap.org/questions/47044/save-button-not-active</a> Apparently you have to make a comment before being able to save. Does that help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

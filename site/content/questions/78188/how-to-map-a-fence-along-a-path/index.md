@@ -160,7 +160,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have been using potlatch2 for several years, which has a parallel line tool which makes this easy. There is now potlatch 3 download to install this editor which also has this same tool. I'm sure JOSM has a similar tool also. <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">https://wiki.openstreetmap.org/wiki/Comparison_of_editors</a> Picture shows the Potlatch3 toolbox and the parallel tool.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Potlatch_3_parallel_tool.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Potlatch_3_parallel_tool.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

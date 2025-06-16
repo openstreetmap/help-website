@@ -125,7 +125,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answer to this previously asked question: <a href="https://help.openstreetmap.org/questions/15438/url-for-osm-wms-link">https://help.openstreetmap.org/questions/15438/url-for-osm-wms-link</a></p>
+<p>See the answer to this previously asked question: <a href="/questions/15438/url-for-osm-wms-link">https://help.openstreetmap.org/questions/15438/url-for-osm-wms-link</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

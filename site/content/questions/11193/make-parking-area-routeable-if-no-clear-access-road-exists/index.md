@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When mapping parking areas, the <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">wiki page</a> cautions to "create a routeable network". I assume this normally means linking the parking area to some access road (usually <code>highway=service</code>), which is in turn linked to the regular road network.</p>
+<p>When mapping parking areas, the <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">wiki page</a> cautions to "create a routeable network". I assume this normally means linking the parking area to some access road (usually <code>highway=service</code>), which is in turn linked to the regular road network.</p>
 <p>Now I just mapped two small parking areas which have no clear access road. They are right next to the regular road, and can be entered along the whole lenght of the road which they touch:</p>
-<p>See <a href="http://www.openstreetmap.org/?lat=50.942285&amp;lon=7.075751&amp;zoom=18&amp;layers=M">the area in OSM</a> and also <a href="http://maps.google.de/maps?q=br%C3%BCcker+sportpark&amp;hl=de&amp;ie=UTF8&amp;ll=50.942303,7.075335&amp;spn=0.001697,0.00339&amp;fb=1&amp;gl=de&amp;hq=br%C3%BCcker+sportpark&amp;hnear=br%C3%BCcker+sportpark&amp;cid=0,0,2981598483906891945&amp;t=h&amp;z=18">Google sat images</a></p>
+<p>See <a href="https://www.openstreetmap.org/?lat=50.942285&amp;lon=7.075751&amp;zoom=18&amp;layers=M">the area in OSM</a> and also <a href="http://maps.google.de/maps?q=br%C3%BCcker+sportpark&amp;hl=de&amp;ie=UTF8&amp;ll=50.942303,7.075335&amp;spn=0.001697,0.00339&amp;fb=1&amp;gl=de&amp;hq=br%C3%BCcker+sportpark&amp;hnear=br%C3%BCcker+sportpark&amp;cid=0,0,2981598483906891945&amp;t=h&amp;z=18">Google sat images</a></p>
 <p>How should I map those to make sure they are routeable? I simply reused the nodes of the touching road when defining the parking area - is this the right way?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

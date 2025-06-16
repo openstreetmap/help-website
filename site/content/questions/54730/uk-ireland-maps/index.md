@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Lat_Lon.JPG" alt="alt text" /> I'm guessing but if you have downloaded an OSM on Garmin and it won't accept an address try using lat lon. First set the the Garmin to DDD.ddd ( decimal degrees) note:- West and south are minus (-) values on the OSM site, the Garmin will use NSE or W. You will have get the co-ords on the PC,or some where else. The values you need are circled. see pic</p>
+<p><img src="/upfiles/Lat_Lon.JPG" alt="alt text" /> I'm guessing but if you have downloaded an OSM on Garmin and it won't accept an address try using lat lon. First set the the Garmin to DDD.ddd ( decimal degrees) note:- West and south are minus (-) values on the OSM site, the Garmin will use NSE or W. You will have get the co-ords on the PC,or some where else. The values you need are circled. see pic</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

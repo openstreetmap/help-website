@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello!</p>
 <p>I'm new to OpenStreetMap so please forgive me if my question has a simple answer, I've not been able to find any information on what I'm trying to do in the help section or forums..</p>
-<p>I'm walking some of the E4 footpath in Cyprus and have found the following very useful map which includes a track of some parts of it: <a href="http://www.openstreetmap.org/relation/157354#map=9/34.9197/33.2309">http://www.openstreetmap.org/relation/157354#map=9/34.9197/33.2309</a></p>
+<p>I'm walking some of the E4 footpath in Cyprus and have found the following very useful map which includes a track of some parts of it: <a href="https://www.openstreetmap.org/relation/157354#map=9/34.9197/33.2309">https://www.openstreetmap.org/relation/157354#map=9/34.9197/33.2309</a></p>
 <p>What I'd like to do is download the track of the E4 from the above link in .gpx or .kml format. I can then import it into the myTracks application on my Mac so I can sync it to the app on my iPhone allowing me to follow this track in the field, but I can't figure out how to download this track information in .gpx, .kml or indeed any format. Is this something that is possible, and if so how would one go about doing this?</p>
 <p>I thank you in advance for your time and look forward to hearing any information offered on this.</p>
 <p>Many thanks and all the best.</p>
@@ -67,7 +67,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>An answer by cartinus explains one way suitable for you: <a href="https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml</a></p>
+<p>An answer by cartinus explains one way suitable for you: <a href="/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml">https://help.openstreetmap.org/questions/23679/how-to-export-a-route-relation-as-gpx-or-kml</a></p>
 </div>
 <div id="comment-42268-info" class="comment-info">
 <span class="comment-age">(11 Apr '15, 18:37)</span> <span class="comment-user userinfo">RM87</span>

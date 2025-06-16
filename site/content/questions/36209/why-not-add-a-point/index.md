@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's normal that things take a short while to appear - you just have to wait. See <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this previous answer</a> for more details.</p>
+<p>It's normal that things take a short while to appear - you just have to wait. See <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this previous answer</a> for more details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

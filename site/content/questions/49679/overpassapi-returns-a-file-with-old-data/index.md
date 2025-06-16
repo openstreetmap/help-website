@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OverpassAPI returns a file with old data"
-description = '''Hi all. 1) I updated this relation: http://www.openstreetmap.org/relation/4661740 2) Then I send a query: http://overpass-api.de/api/interpreter?data=node(337580513);is_in;out;  In the file within area 3604661740 I don&#x27;t see any updated info. Is there any delays between OSM and overpass? How long?'''
+description = '''Hi all. 1) I updated this relation: https://www.openstreetmap.org/relation/4661740 2) Then I send a query: http://overpass-api.de/api/interpreter?data=node(337580513);is_in;out;  In the file within area 3604661740 I don&#x27;t see any updated info. Is there any delays between OSM and overpass? How long?'''
 date = "2016-05-11T16:47:00Z"
 lastmod = "2016-05-19T20:35:00Z"
 weight = 49679
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all.</p>
-<pre><code>1) I updated this relation: http://www.openstreetmap.org/relation/4661740
+<pre><code>1) I updated this relation: https://www.openstreetmap.org/relation/4661740
 2) Then I send a query: http://overpass-api.de/api/interpreter?data=node(337580513);is_in;out;</code></pre>
 <p>In the file within area <strong>3604661740</strong> I don't see any updated info. Is there any delays between OSM and overpass? How long?</p>
 </div>

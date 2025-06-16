@@ -112,12 +112,12 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the best approach is to follow the mapping instructions for a <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">school</a>:</p>
+<p>I think the best approach is to follow the mapping instructions for a <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">school</a>:</p>
 <ul>
-<li>tag the whole area as <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">amenity=place_of_worship</a> and add <a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:addr">address</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:religion">religion</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:denomination">denomination</a> if known</li>
-<li>tag the actual church building as <a href="http://wiki.openstreetmap.org/wiki/Tag:building%3Dchurch">building=church</a> and add <a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrances</a> if known</li>
-<li>add a <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">parking area</a> if present</li>
-<li>some churches also have a local <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dgrave_yard">grave_yard</a></li>
+<li>tag the whole area as <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">amenity=place_of_worship</a> and add <a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:addr">address</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:religion">religion</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:denomination">denomination</a> if known</li>
+<li>tag the actual church building as <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dchurch">building=church</a> and add <a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrances</a> if known</li>
+<li>add a <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">parking area</a> if present</li>
+<li>some churches also have a local <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dgrave_yard">grave_yard</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

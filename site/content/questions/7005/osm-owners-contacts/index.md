@@ -72,7 +72,7 @@ This question is marked "community wiki".
 <div id="post-7011-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is essentially a duplicate of <a href="http://help.openstreetmap.org/questions/6905/is-it-possible-to-create-my-individual-layer">another question</a> already answered on this site.</p>
+<p>This is essentially a duplicate of <a href="/questions/6905/is-it-possible-to-create-my-individual-layer">another question</a> already answered on this site.</p>
 </div>
 <div id="comment-7011-info" class="comment-info">
 <span class="comment-age">(10 Aug '11, 17:07)</span> <span class="comment-user userinfo">Jonathan Ben...</span>
@@ -132,8 +132,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While what you want to do is technically and legally possible (please check the <a href="http://wiki.openstreetmap.org/">wiki</a> and this web site, this is a very frequent question), I doubt that the administrators would be happy to run your commercial service directly from the community servers. Running a full OSM server is quite ressource-intensive, but many people do so, on their own servers for their own purposes (again, a quick wiki search will give you the information).</p>
-<p>Note that "OSM owner" is a misleading term at best. There are <a href="http://wiki.openstreetmap.org/wiki/Admins">administrators</a> and a <a href="http://wiki.openstreetmap.org/wiki/Foundation">foundation</a>, but OSM is a community project.</p>
+<p>While what you want to do is technically and legally possible (please check the <a href="https://wiki.openstreetmap.org/">wiki</a> and this web site, this is a very frequent question), I doubt that the administrators would be happy to run your commercial service directly from the community servers. Running a full OSM server is quite ressource-intensive, but many people do so, on their own servers for their own purposes (again, a quick wiki search will give you the information).</p>
+<p>Note that "OSM owner" is a misleading term at best. There are <a href="https://wiki.openstreetmap.org/wiki/Admins">administrators</a> and a <a href="https://wiki.openstreetmap.org/wiki/Foundation">foundation</a>, but OSM is a community project.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

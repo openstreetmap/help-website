@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Newbie question: ruin"
-description = '''I&#x27;m new to editing on OSM. I do like it though. On the map near our house there&#x27;s another house that burnt down 10 years ago a ruin now. My question is how do I assign &quot;ruin&quot; to an existing building on the map? I found this: http://wiki.openstreetmap.org/wiki/Key:ruins but I don&#x27;t understand how to ...'''
+description = '''I&#x27;m new to editing on OSM. I do like it though. On the map near our house there&#x27;s another house that burnt down 10 years ago a ruin now. My question is how do I assign &quot;ruin&quot; to an existing building on the map? I found this: https://wiki.openstreetmap.org/wiki/Key:ruins but I don&#x27;t understand how to ...'''
 date = "2014-01-30T22:24:00Z"
 lastmod = "2014-02-01T11:04:00Z"
 weight = 30343
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm new to editing on OSM. I do like it though. On the map near our house there's another house that burnt down 10 years ago a ruin now. My question is how do I assign "ruin" to an existing building on the map? I found this: <a href="http://wiki.openstreetmap.org/wiki/Key:ruins">http://wiki.openstreetmap.org/wiki/Key:ruins</a> but I don't understand how to add this using the online editor..?</p>
+<p>I'm new to editing on OSM. I do like it though. On the map near our house there's another house that burnt down 10 years ago a ruin now. My question is how do I assign "ruin" to an existing building on the map? I found this: <a href="https://wiki.openstreetmap.org/wiki/Key:ruins">https://wiki.openstreetmap.org/wiki/Key:ruins</a> but I don't understand how to add this using the online editor..?</p>
 <p>Thanks, Timo</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -68,7 +68,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Ok, thanks for your replies. It was not unclear to me what I should assign, but how. I used the online editor and I did not see Ruins in the tags drop-down. (And I did not want to just try and mess up) I discovered now that it's dynamically populated as it does appear when I start typing.</p>
 <p>I set building=house ruins=yes now</p>
-<p>See: <a href="http://www.openstreetmap.org/way/163387675">http://www.openstreetmap.org/way/163387675</a></p>
+<p>See: <a href="https://www.openstreetmap.org/way/163387675">https://www.openstreetmap.org/way/163387675</a></p>
 <p>Thanks for your help</p>
 </div>
 <div id="comment-30373-info" class="comment-info">
@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Timo, welcome. What’s unclear with the tags, building=yes for the state of the former building and ruins=yes for the actual state of it ? The text lines can be added in any editor, ID, P1 or P2, JOSM or Merkatoor in the advanced menu. Just click advanced and you’re in it. Look here as well for a not yet completely broken down and ruined building, its an old wooden shed crumbling down slowly. <a href="http://www.openstreetmap.org/#map=19/52.29750/6.66198">http://www.openstreetmap.org/#map=19/52.29750/6.66198</a></p>
+<p>Hi Timo, welcome. What’s unclear with the tags, building=yes for the state of the former building and ruins=yes for the actual state of it ? The text lines can be added in any editor, ID, P1 or P2, JOSM or Merkatoor in the advanced menu. Just click advanced and you’re in it. Look here as well for a not yet completely broken down and ruined building, its an old wooden shed crumbling down slowly. <a href="https://www.openstreetmap.org/#map=19/52.29750/6.66198">https://www.openstreetmap.org/#map=19/52.29750/6.66198</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>There's a broader review of the different "life cycle" tagging schemes, and their pros/cons, here: <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts">http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts</a></p>
+<p>There's a broader review of the different "life cycle" tagging schemes, and their pros/cons, here: <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts">https://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts</a></p>
 </div>
 <div id="comment-30356-info" class="comment-info">
 <span class="comment-age">(31 Jan '14, 14:39)</span> <span class="comment-user userinfo">neuhausr</span>

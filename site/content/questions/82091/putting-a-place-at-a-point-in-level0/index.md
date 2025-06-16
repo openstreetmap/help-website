@@ -44,7 +44,7 @@ osqa_accepted = true
 <p>"2. Navigate to the location of the POI in the side map, placing the marker at its place."</p>
 <p>Can I please just be allowed to jump to 24.1798149, 120.8687728 somehow?</p>
 <p>Can I avoid all that mousework getting there? And when I get near there it is all forest, so there is no way to tell where 24.1798149, 120.8687728 exactly is.</p>
-<p>I'm trying to do this to accomplish <a href="https://help.openstreetmap.org/questions/81849/putting-a-place-at-a-point-in-id">https://help.openstreetmap.org/questions/81849/putting-a-place-at-a-point-in-id</a> .</p>
+<p>I'm trying to do this to accomplish <a href="/questions/81849/putting-a-place-at-a-point-in-id">https://help.openstreetmap.org/questions/81849/putting-a-place-at-a-point-in-id</a> .</p>
 <p>Yes, there is a box above the map with [30,0] in it. But I recall it won't help me get to 24.1798149, 120.8687728 . Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

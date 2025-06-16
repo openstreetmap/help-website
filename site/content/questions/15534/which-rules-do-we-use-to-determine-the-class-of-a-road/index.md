@@ -112,8 +112,8 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is "slightly" different from country to country. A major road in the Amazon forest will look different than the M25 around London.</p>
-<p>Since you are dutch: <a href="http://wiki.openstreetmap.org/wiki/NL:The_Netherlands_roads_tagging">The Netherlands roads tagging</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Category:Tagging_guidelines_by_country">Tagging guidelines for other countries.</a></p>
+<p>Since you are dutch: <a href="https://wiki.openstreetmap.org/wiki/NL:The_Netherlands_roads_tagging">The Netherlands roads tagging</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Category:Tagging_guidelines_by_country">Tagging guidelines for other countries.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -148,7 +148,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I guess you mean something like this: <a href="http://wiki.openstreetmap.org/wiki/Highway:International_equivalence">http://wiki.openstreetmap.org/wiki/Highway:International_equivalence</a></p>
+<p>I guess you mean something like this: <a href="https://wiki.openstreetmap.org/wiki/Highway:International_equivalence">https://wiki.openstreetmap.org/wiki/Highway:International_equivalence</a></p>
 </div>
 <div id="comment-15565-info" class="comment-info">
 <span class="comment-age">(27 Aug '12, 19:34)</span> <span class="comment-user userinfo">malenki</span>
@@ -161,10 +161,10 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>No, I mean:<br />
-<a href="http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging">http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/FR:France_roads_tagging">http://wiki.openstreetmap.org/wiki/FR:France_roads_tagging</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines">http://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines">http://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging">https://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/FR:France_roads_tagging">https://wiki.openstreetmap.org/wiki/FR:France_roads_tagging</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines">https://wiki.openstreetmap.org/wiki/Australian_Tagging_Guidelines</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines">https://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines</a></p>
 </div>
 <div id="comment-15566-info" class="comment-info">
 <span class="comment-age">(27 Aug '12, 20:41)</span> <span class="comment-user userinfo">Pieren</span>
@@ -231,7 +231,7 @@ osqa_accepted = true
 <div id="post-16404-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can describe these road more clearly by adding a <a href="http://wiki.openstreetmap.org/wiki/Key:surface">surface</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:smoothness">smoothness</a> tag. Additionally there is also a rather old <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/usability">usability</a> proposal.</p>
+<p>You can describe these road more clearly by adding a <a href="https://wiki.openstreetmap.org/wiki/Key:surface">surface</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:smoothness">smoothness</a> tag. Additionally there is also a rather old <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/usability">usability</a> proposal.</p>
 </div>
 <div id="comment-16404-info" class="comment-info">
 <span class="comment-age">(24 Sep '12, 09:21)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -294,7 +294,7 @@ osqa_accepted = true
 <div id="post-16439-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Then the classification in your area is incorrect and should be fixed. There are lots of different <a href="http://wiki.openstreetmap.org/wiki/Key:highway">road classes</a>, not just secondary and residential.</p>
+<p>Then the classification in your area is incorrect and should be fixed. There are lots of different <a href="https://wiki.openstreetmap.org/wiki/Key:highway">road classes</a>, not just secondary and residential.</p>
 </div>
 <div id="comment-16439-info" class="comment-info">
 <span class="comment-age">(25 Sep '12, 08:03)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -346,9 +346,9 @@ osqa_accepted = true
 <div id="post-16452-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you're in the US, I'd read <a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging">this wiki page</a> and perhaps discuss on <a href="http://lists.openstreetmap.org/listinfo/talk-us">this mailing list</a>.<br />
+<p>If you're in the US, I'd read <a href="https://wiki.openstreetmap.org/wiki/United_States_roads_tagging">this wiki page</a> and perhaps discuss on <a href="http://lists.openstreetmap.org/listinfo/talk-us">this mailing list</a>.<br />
 </p>
-<p>Road tagging has to be country-specific to an extent. Something that in the UK would be tagged as "<a href="http://wiki.openstreetmap.org/wiki/Highway%3Dtrack">highway=track</a>" might be tagged as an actual road (perhaps "highway=unclassified, surface=something descriptive" elsewhere).</p>
+<p>Road tagging has to be country-specific to an extent. Something that in the UK would be tagged as "<a href="https://wiki.openstreetmap.org/wiki/Highway%3Dtrack">highway=track</a>" might be tagged as an actual road (perhaps "highway=unclassified, surface=something descriptive" elsewhere).</p>
 </div>
 <div id="comment-16452-info" class="comment-info">
 <span class="comment-age">(25 Sep '12, 12:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

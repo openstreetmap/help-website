@@ -111,11 +111,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You're probably talking about <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a>, which is the editor that you get by default on the "edit" tab in the site.</p>
+<p>You're probably talking about <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a>, which is the editor that you get by default on the "edit" tab in the site.</p>
 <p>The reason why the number of markers in the "simple" view in there is limited is only partially because "no-one has added them yet" - having too many options may be confusing to new users, and the limitations of screen size would make the finding of one marker among many more cumbersome.</p>
-<p>Just in case you're not aware, in Potlatch there is an "advanced" view (just click "advanced" at the bottom left when you have something selected) that allows you to <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">add any tags you like</a>.</p>
+<p>Just in case you're not aware, in Potlatch there is an "advanced" view (just click "advanced" at the bottom left when you have something selected) that allows you to <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">add any tags you like</a>.</p>
 <p>It may be, of course, that waste water treatment plants and pipelines are important enough to feature in the simple view. If so, the place to make that case is <a href="http://trac.openstreetmap.org/">trac</a> (the bug-tracking system for most of OSM), against the component "potlatch2". In fact, one was added for "pipeline" a couple of months ago - <a href="https://trac.openstreetmap.org/ticket/4365">Ticket #4365</a>. There's also a <a href="http://lists.openstreetmap.org/listinfo/potlatch-dev">mailing list</a> - all "potlatch2" trac entries and comments pop up there.</p>
-<p>Finally, you may want to have a look at the "Get Involved" section at the bottom of the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2 wiki page</a> which describes how it's developed, and how you can get involved.</p>
+<p>Finally, you may want to have a look at the "Get Involved" section at the bottom of the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2 wiki page</a> which describes how it's developed, and how you can get involved.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

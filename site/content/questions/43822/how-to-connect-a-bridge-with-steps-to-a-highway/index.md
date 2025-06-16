@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to connect a bridge with steps to a highway?"
-description = '''I am looking at this bridge: http://www.openstreetmap.org/way/313208178#map=19/19.66746/-99.17590&amp;amp;layers=D You can&#x27;t route walking over this bridge because it is not connected to the streets. What is the right approach to connect it to the streets? I think just dragging the end nodes to the stre...'''
+description = '''I am looking at this bridge: https://www.openstreetmap.org/way/313208178#map=19/19.66746/-99.17590&amp;amp;layers=D You can&#x27;t route walking over this bridge because it is not connected to the streets. What is the right approach to connect it to the streets? I think just dragging the end nodes to the stre...'''
 date = "2015-06-27T10:43:00Z"
 lastmod = "2015-06-29T14:46:00Z"
 weight = 43822
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am looking at this bridge: <a href="http://www.openstreetmap.org/way/313208178#map=19/19.66746/-99.17590&amp;layers=D">http://www.openstreetmap.org/way/313208178#map=19/19.66746/-99.17590&amp;layers=D</a></p>
+<p>I am looking at this bridge: <a href="https://www.openstreetmap.org/way/313208178#map=19/19.66746/-99.17590&amp;layers=D">https://www.openstreetmap.org/way/313208178#map=19/19.66746/-99.17590&amp;layers=D</a></p>
 <p>You can't route walking over this bridge because it is not connected to the streets. What is the right approach to connect it to the streets?</p>
 <p>I think just dragging the end nodes to the street is wrong, isn't it?</p>
 </div>
@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>Since the bridge is a footbridge I would connect the end of the bridge to the nearest highway with a footway showing the shortest route somebody on foot would be able to walk.</p>
 <p>Obviously if you cannot get on foot to the highway because of safety barriers or other obstructions you shouldn't join the footway to the highway there, likewise if there is no sidewalk or any restrictions on pedestrians walking on/along the highway you shouldn't join them.</p>
-<p>eg like here <a href="http://www.openstreetmap.org/#map=19/53.96654/-1.09225">http://www.openstreetmap.org/#map=19/53.96654/-1.09225</a></p>
+<p>eg like here <a href="https://www.openstreetmap.org/#map=19/53.96654/-1.09225">https://www.openstreetmap.org/#map=19/53.96654/-1.09225</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

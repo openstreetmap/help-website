@@ -109,7 +109,7 @@ One Answer:
 <li>Start with the most generic aspect: It's a <a href="http://taginfo.openstreetmap.org/search?q=tower#values">tower</a> so man_made=tower or building=tower</li>
 <li>Next tag what <a href="http://taginfo.openstreetmap.org/keys/tower%3Atype#values">kind of tower</a> it is: tower:type=stupa. That term seems to have a wider use worldwide than chedi. (But neither is used yet in OSM.)</li>
 </ul>
-<p>Add it to the table on the <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">Tag:man_made=tower</a> page, after you've mapped more than a handfull.</p>
+<p>Add it to the table on the <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">Tag:man_made=tower</a> page, after you've mapped more than a handfull.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

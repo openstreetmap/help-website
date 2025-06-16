@@ -175,7 +175,7 @@ One Answer:
 <div id="post-71580-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it">https://help.openstreetmap.org/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it</a></p>
+<p><a href="/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it">https://help.openstreetmap.org/questions/26536/what-does-dont-forget-to-cast-a-vote-on-this-help-site-mean-and-how-do-i-do-it</a></p>
 </div>
 <div id="comment-71580-info" class="comment-info">
 <span class="comment-age">(10 Nov '19, 20:02)</span> <span class="comment-user userinfo">andy mackey</span>

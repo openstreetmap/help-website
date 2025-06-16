@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, I think using a node tagged 'amenity=charging_station' is the preferred way. See this page in the wiki <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station</a> On the Map Features wiki <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Transportation">http://wiki.openstreetmap.org/wiki/Map_Features#Transportation</a> the tag 'amenity=ev_charging' has a comment about "don't use" Graham</p>
+<p>Hi, I think using a node tagged 'amenity=charging_station' is the preferred way. See this page in the wiki <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcharging_station</a> On the Map Features wiki <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Transportation">https://wiki.openstreetmap.org/wiki/Map_Features#Transportation</a> the tag 'amenity=ev_charging' has a comment about "don't use" Graham</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,7 +130,7 @@ One Answer:
 <div id="post-25766-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for your reply; that is the tag that I have used. However, I am a little confused because one answer to a previous question (<a href="https://help.openstreetmap.org/questions/1118/electric-vehicle-charge-points">https://help.openstreetmap.org/questions/1118/electric-vehicle-charge-points</a>) offered the link <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station">http://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station</a>, which apparently links to the same site, and was voted down three times, unfortunately without explanation.</p>
+<p>Thank you for your reply; that is the tag that I have used. However, I am a little confused because one answer to a previous question (<a href="/questions/1118/electric-vehicle-charge-points">https://help.openstreetmap.org/questions/1118/electric-vehicle-charge-points</a>) offered the link <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station">https://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station</a>, which apparently links to the same site, and was voted down three times, unfortunately without explanation.</p>
 </div>
 <div id="comment-25766-info" class="comment-info">
 <span class="comment-age">(25 Aug '13, 11:33)</span> <span class="comment-user userinfo">Madryn</span>

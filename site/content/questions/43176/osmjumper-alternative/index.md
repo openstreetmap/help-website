@@ -110,7 +110,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Try <a href="http://tools.geofabrik.de"></a><a href="http://tools.geofabrik.de">http://tools.geofabrik.de</a> -&gt; MapCompare</p>
-<p>or the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Tiles">Tiles</a> ... scroll down that page to see more compare servives.</p>
+<p>or the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Tiles">Tiles</a> ... scroll down that page to see more compare servives.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Does <a href="http://wiki.openstreetmap.org/wiki/MapJumper">MapJumper</a> help ?</p>
+<p>Does <a href="https://wiki.openstreetmap.org/wiki/MapJumper">MapJumper</a> help ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

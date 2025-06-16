@@ -110,7 +110,7 @@ One Answer:
 <p><a href="http://api.openstreetmap.org/api/0.6/relations/search?type=network&amp;value=US:US">http://api.openstreetmap.org/api/0.6/relations/search?type=network&amp;value=US:US</a></p>
 <p>This is little known and little used because unlike XAPI, it does not support bounding box queries so you will always find all objects, world-wide, that match your request. (The same request works for ways or nodes if you replace "relations" accordingly in the query.)</p>
 <p>This query will return the matching objects, but not referenced objects (i.e. no nodes in ways or members in relations).</p>
-<p>The request is documented on the <a href="http://wiki.openstreetmap.org/wiki/API_v0.5#Searching_for_Objects_by_Tag">Wiki</a> but for some reason it has not made it onto the API 0.6 page.</p>
+<p>The request is documented on the <a href="https://wiki.openstreetmap.org/wiki/API_v0.5#Searching_for_Objects_by_Tag">Wiki</a> but for some reason it has not made it onto the API 0.6 page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

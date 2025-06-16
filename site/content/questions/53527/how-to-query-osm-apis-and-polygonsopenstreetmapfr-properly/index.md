@@ -95,7 +95,7 @@ osqa_accepted = true
 <div id="post-53549-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/150/mtmail">@mtmail</a></p>
+<p><a href="https://help.openstreetmap.org/users/150/mtmail">@mtmail</a></p>
 <p>I'm starting with osm_id and lonlat</p>
 <p>Getting city name -&gt; from osm_id and lonlat: <a href="http://nominatim.openstreetmap.org/reverse?format=json&amp;lat=51.7728321&amp;lon=19.4528033&amp;osm_id=246291409&amp;accept-language=en">http://nominatim.openstreetmap.org/reverse?format=json&amp;lat=51.7728321&amp;lon=19.4528033&amp;osm_id=246291409&amp;accept-language=en</a></p>
 <p>Getting relation -&gt; from city name: <a href="https://nominatim.openstreetmap.org/search.php?city=Łódź&amp;format=json">https://nominatim.openstreetmap.org/search.php?city=Łódź&amp;format=json</a></p>
@@ -166,7 +166,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <code>osm_id</code> of your initial search seems to be a street <a href="http://www.openstreetmap.org/way/246291409">http://www.openstreetmap.org/way/246291409</a></p>
+<p>The <code>osm_id</code> of your initial search seems to be a street <a href="https://www.openstreetmap.org/way/246291409">https://www.openstreetmap.org/way/246291409</a></p>
 <p>To look up the hierarchy starting from the street to the country try <a href="http://nominatim.openstreetmap.org/hierarchy.php?osmid=246291409&amp;osmtype=W">http://nominatim.openstreetmap.org/hierarchy.php?osmid=246291409&amp;osmtype=W</a> and you need to parse the links in the first line. Then for each type and id you have to do more lookups.</p>
 <p>Doing a forward search for "Łódź" is too risky as you might get the wrong place back. Searching by ids (and type N,W,R) is better.</p>
 <p>OSM data doesn't contain continents.</p>

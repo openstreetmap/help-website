@@ -120,7 +120,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You may simply have to convert from 0.5 to 0.6 with osmosis 0.35 first: <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.35#--migrate">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.35#--migrate</a></p>
+<p>You may simply have to convert from 0.5 to 0.6 with osmosis 0.35 first: <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.35#--migrate">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.35#--migrate</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

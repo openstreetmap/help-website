@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>I am using <a href="http://wiki.openstreetmap.org/wiki/Osmarender/Howto#XML_starlet">this</a> in order to render to .svg file. I would like to do two different things:</p>
+<p>I am using <a href="https://wiki.openstreetmap.org/wiki/Osmarender/Howto#XML_starlet">this</a> in order to render to .svg file. I would like to do two different things:</p>
 <ol>
 <li>to render a map to .svg without street names (and no other info at all)</li>
 <li>to render a map using the available name:en (if there is so)</li>

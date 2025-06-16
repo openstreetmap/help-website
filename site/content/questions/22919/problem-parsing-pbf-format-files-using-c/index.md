@@ -124,7 +124,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you have found an answer you should post it; this isn't a direct answer, but may contain information which would help others who are trying to read PBF.</p>
-<p>I translated the <a href="http://wiki.openstreetmap.org/wiki/PBF">PBF Format</a> into <a href="https://gist.github.com/JesseKPhillips/6051600">D code</a>. I then wrote up a <a href="http://he-the-great.livejournal.com/46498.html">blog series</a> to detail what I went through. I believe that D is clean enough that those familiar with C syntax can easily understand how PBF is laid out (if not, let me know so I can correct that belief). Hope this helps someone.</p>
+<p>I translated the <a href="https://wiki.openstreetmap.org/wiki/PBF">PBF Format</a> into <a href="https://gist.github.com/JesseKPhillips/6051600">D code</a>. I then wrote up a <a href="http://he-the-great.livejournal.com/46498.html">blog series</a> to detail what I went through. I believe that D is clean enough that those familiar with C syntax can easily understand how PBF is laid out (if not, let me know so I can correct that belief). Hope this helps someone.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

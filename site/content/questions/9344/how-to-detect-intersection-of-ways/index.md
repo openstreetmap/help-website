@@ -139,7 +139,7 @@ One Answer:
 <div id="post-9348-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@raveNOSM</span>: "Excerpt" refers to an OSM data extract that you can download directly (rather than fetch via the API). Downloading an extract causes much less load on the servers than using the API; the API is not suitable for mass data retrieval. See <a href="http://wiki.openstreetmap.org/wiki/Downloading_data">http://wiki.openstreetmap.org/wiki/Downloading_data</a> for details.</p>
+<p><span>@raveNOSM</span>: "Excerpt" refers to an OSM data extract that you can download directly (rather than fetch via the API). Downloading an extract causes much less load on the servers than using the API; the API is not suitable for mass data retrieval. See <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">https://wiki.openstreetmap.org/wiki/Downloading_data</a> for details.</p>
 </div>
 <div id="comment-9348-info" class="comment-info">
 <span class="comment-age">(06 Dec '11, 11:04)</span> <span class="comment-user userinfo">sleske</span>

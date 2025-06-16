@@ -191,7 +191,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Close by there is this supermarket and if you open the iD editor you will find that it at the moment is just a node without any address or other useful information</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Supermarket.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Supermarket.jpg" alt="alt text" /></p>
 <p>I would suggest that you add your company and add the address information. You could also add any other properties that you have location and address information for.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -243,7 +243,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/1_ZYty26S.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/1_ZYty26S.jpg" alt="alt text" /></p>
 <p>We use joomla and we have given up being able to search for these addresses, there is no way, mapbox works without problems anyway I would like to know how to map to collaborate in free time</p>
 </div>
 <div class="answer-controls post-controls">

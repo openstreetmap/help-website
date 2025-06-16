@@ -69,7 +69,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>You're going to have to give us a few clues first, I'm afraid. I'm assuming that "PND" means "Portable Navigation Device" or "Personal Navigation Device" (neither is in common use in the UK, but we know what you mean).</p>
-<p>Secondly, you'll need to tell us what sort of device you want map data for - make and model number. You can also try searching the wiki and reading this summary page: <a href="http://wiki.openstreetmap.org/wiki/Software/PNA">http://wiki.openstreetmap.org/wiki/Software/PNA</a></p>
+<p>Secondly, you'll need to tell us what sort of device you want map data for - make and model number. You can also try searching the wiki and reading this summary page: <a href="https://wiki.openstreetmap.org/wiki/Software/PNA">https://wiki.openstreetmap.org/wiki/Software/PNA</a></p>
 </div>
 <div id="comment-6336-info" class="comment-info">
 <span class="comment-age">(16 Jul '11, 03:36)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

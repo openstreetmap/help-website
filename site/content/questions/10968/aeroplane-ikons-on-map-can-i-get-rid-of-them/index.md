@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You cannot remove these icons from the ready-made map tiles on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a>; these are bitmaps and the airfield icons cannot be removed from them. But you can make your own tiles without airfield symbols, or maybe you find a set of tiles made by someone else that doesn't have them.</p>
-<p>Enter "map style" in the search box above and browse some of the answers, most importantly <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my website"</a>.</p>
+<p>Enter "map style" in the search box above and browse some of the answers, most importantly <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my website"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

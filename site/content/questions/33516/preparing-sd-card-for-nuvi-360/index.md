@@ -241,7 +241,7 @@ osqa_accepted = true
 <div id="post-33588-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you follow the step by step answer to this question? <a href="https://help.openstreetmap.org/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
+<p>Did you follow the step by step answer to this question? <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
 </div>
 <div id="comment-33588-info" class="comment-info">
 <span class="comment-age">(31 May '14, 19:55)</span> <span class="comment-user userinfo">andy mackey</span>

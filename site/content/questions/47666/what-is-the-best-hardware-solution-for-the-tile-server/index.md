@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I have used <a href="https://wiki.openstreetmap.org/wiki/User:Species/PostGIS_Tuning">PostGIS Tuning</a>, <a href="https://github.com/gregs1104/pgtune">PG Tune</a>, <a href="http://pgtune.leopard.in.ua/">PG Tune Online</a>, I have tried to use dozen of PostgreSQL configurations, but tile generation is not fast enough.</p>
 <p>My hardware configuration is:</p>
 <ul>
-<li>Intel(R) Xeon(R) CPU E5-2630 v2 <a href="http://help.openstreetmap.org/users/2422/25or6to4">@2</a>.60GHz</li>
+<li>Intel(R) Xeon(R) CPU E5-2630 v2 <a href="https://help.openstreetmap.org/users/2422/25or6to4">@2</a>.60GHz</li>
 <li>32GB RAM</li>
 <li>SSD RAID-5</li>
 </ul>
@@ -272,7 +272,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Yeah, I guess so.</p>
 <p>The only way is to pre-render tiles.</p>
-<p>Where I can find how many GBs I must have to render the whole world on 11 zoom level? This table <a href="http://wiki.openstreetmap.org/wiki/Tile_disk_usage">http://wiki.openstreetmap.org/wiki/Tile_disk_usage</a> is not valid for meta-files. Thank you</p>
+<p>Where I can find how many GBs I must have to render the whole world on 11 zoom level? This table <a href="https://wiki.openstreetmap.org/wiki/Tile_disk_usage">https://wiki.openstreetmap.org/wiki/Tile_disk_usage</a> is not valid for meta-files. Thank you</p>
 </div>
 <div id="comment-47689-info" class="comment-info">
 <span class="comment-age">(28 Jan '16, 07:51)</span> <span class="comment-user userinfo">Bobinho</span>

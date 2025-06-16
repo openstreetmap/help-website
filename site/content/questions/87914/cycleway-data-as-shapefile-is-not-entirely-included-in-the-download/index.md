@@ -177,7 +177,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Thanks for your answer!</p>
-<p>Honestly I don't know how to look how objects are tagged in OSM. I provided a screenshot of a part of a missing road. What you see there is just the Basemap with the "cycleway" extract from the "road.shp" that I downloaded from OSM. Obviously there are major sections where data is just missing and also this straight line from east to west is just odd.<img src="https://help.openstreetmap.org/upfiles/1_9jA8OIZ.PNG" alt="alt text" /></p>
+<p>Honestly I don't know how to look how objects are tagged in OSM. I provided a screenshot of a part of a missing road. What you see there is just the Basemap with the "cycleway" extract from the "road.shp" that I downloaded from OSM. Obviously there are major sections where data is just missing and also this straight line from east to west is just odd.<img src="/upfiles/1_9jA8OIZ.PNG" alt="alt text" /></p>
 <p><a href="https://imgur.com/a/cpXtJAu">https://imgur.com/a/cpXtJAu</a></p>
 </div>
 <div class="answer-controls post-controls">

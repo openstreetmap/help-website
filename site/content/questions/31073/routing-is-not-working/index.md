@@ -41,8 +41,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Greetings, currently i am building an android indoor navigation app for my university. I am using <a href="https://code.google.com/p/osmdroid/">osmdroid</a> and <a href="https://code.google.com/p/osmbonuspack/">osmbonuspack</a> for routing. The problem is when i want to see the route path, it gives me straight line. I does not follow the road/path.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screenshot_2014-02-27-15-25-32.png" alt="alt text" /></p>
-<p>I follow exactly on how to draw indoor map from <a href="http://wiki.openstreetmap.org/wiki/IndoorOSM">osm wiki for Indoor Mappping</a> Do I need to upload a routing layer from JOSM? Is there any possibility having error from the tiles that i downloaded from Mapnik? Do i need to have KML file? Do i need to include GPX ?</p>
+<p><img src="/upfiles/Screenshot_2014-02-27-15-25-32.png" alt="alt text" /></p>
+<p>I follow exactly on how to draw indoor map from <a href="https://wiki.openstreetmap.org/wiki/IndoorOSM">osm wiki for Indoor Mappping</a> Do I need to upload a routing layer from JOSM? Is there any possibility having error from the tiles that i downloaded from Mapnik? Do i need to have KML file? Do i need to include GPX ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-android" rel="tag" title="see questions tagged &#39;android&#39;">android</span> <span class="post-tag tag-link-indoor" rel="tag" title="see questions tagged &#39;indoor&#39;">indoor</span> <span class="post-tag tag-link-osmdroid" rel="tag" title="see questions tagged &#39;osmdroid&#39;">osmdroid</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>

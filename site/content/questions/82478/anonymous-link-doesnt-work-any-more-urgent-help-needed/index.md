@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-82480-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is a rather frequent question. Did you already take a look at the answers to similar questions? See for example <a href="https://help.openstreetmap.org/questions/79757/secret-edit-link-for-umap-is-not-working">https://help.openstreetmap.org/questions/79757/secret-edit-link-for-umap-is-not-working</a> and (since it looks like you are German) <a href="https://help.openstreetmap.org/questions/82206/umap-karte-nicht-mehr-editierbar">https://help.openstreetmap.org/questions/82206/umap-karte-nicht-mehr-editierbar</a></p>
+<p>This is a rather frequent question. Did you already take a look at the answers to similar questions? See for example <a href="/questions/79757/secret-edit-link-for-umap-is-not-working">https://help.openstreetmap.org/questions/79757/secret-edit-link-for-umap-is-not-working</a> and (since it looks like you are German) <a href="/questions/82206/umap-karte-nicht-mehr-editierbar">https://help.openstreetmap.org/questions/82206/umap-karte-nicht-mehr-editierbar</a></p>
 </div>
 <div id="comment-82480-info" class="comment-info">
 <span class="comment-age">(05 Nov '21, 12:17)</span> <span class="comment-user userinfo">scai ♦</span>

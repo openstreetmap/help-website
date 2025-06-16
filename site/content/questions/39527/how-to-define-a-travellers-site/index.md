@@ -157,7 +157,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Oddly enough the same discussion happened here in French, with the same recommendation as <a href="http://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de</a> Philly gave above: <a href="https://help.openstreetmap.org/questions/28219/tagging-aire-dacceuil-des-gens-du-voyage-travellers-people">https://help.openstreetmap.org/questions/28219/tagging-aire-dacceuil-des-gens-du-voyage-travellers-people</a></p>
+<p>Oddly enough the same discussion happened here in French, with the same recommendation as <a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de</a> Philly gave above: <a href="/questions/28219/tagging-aire-dacceuil-des-gens-du-voyage-travellers-people">https://help.openstreetmap.org/questions/28219/tagging-aire-dacceuil-des-gens-du-voyage-travellers-people</a></p>
 </div>
 <div id="comment-39639-info" class="comment-info">
 <span class="comment-age">(16 Dec '14, 18:48)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -170,7 +170,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Thanks, I vaguely remembered answering the same question before, but was too lazy to search.</p>
-<p>The discussion also came following <a href="http://www.openstreetmap.org/note/192392">this note</a> (on the note itself and in IRC), which makes me feel that residential=halting_site is slowly reaching consensus.</p>
+<p>The discussion also came following <a href="https://www.openstreetmap.org/note/192392">this note</a> (on the note itself and in IRC), which makes me feel that residential=halting_site is slowly reaching consensus.</p>
 </div>
 <div id="comment-39661-info" class="comment-info">
 <span class="comment-age">(17 Dec '14, 10:21)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

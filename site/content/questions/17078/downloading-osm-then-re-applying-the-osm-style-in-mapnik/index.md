@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want to try another renderer that might be a bit beginner friendly:</p>
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a></p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a></p>
 <p>If I remember correctly, it has a style that is quite near to the original Mapnik style.</p>
 </div>
 <div class="answer-controls post-controls">

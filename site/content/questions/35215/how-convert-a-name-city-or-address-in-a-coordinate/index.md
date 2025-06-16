@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Converting names into coordinates is called <em>geocoding</em>. The most popular geocoder for OSM is <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> but there are <a href="http://wiki.openstreetmap.org/wiki/Geocoding">other geocoders</a>, too.</p>
-<p>In case you choose Nominatim then please read the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> of OSM's Nominatim instance first. If you can't comply with them then you can either use <a href="http://developer.mapquest.com/web/products/open/nominatim">MapQuest's Nominatim instance</a> which has a little less restrictive usage terms, or just <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">install your own Nominatim instance</a> for unlimited access.</p>
+<p>Converting names into coordinates is called <em>geocoding</em>. The most popular geocoder for OSM is <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> but there are <a href="https://wiki.openstreetmap.org/wiki/Geocoding">other geocoders</a>, too.</p>
+<p>In case you choose Nominatim then please read the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> of OSM's Nominatim instance first. If you can't comply with them then you can either use <a href="http://developer.mapquest.com/web/products/open/nominatim">MapQuest's Nominatim instance</a> which has a little less restrictive usage terms, or just <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">install your own Nominatim instance</a> for unlimited access.</p>
 <p>Other public geocoding services will have similar terms of use.</p>
 </div>
 <div class="answer-controls post-controls">

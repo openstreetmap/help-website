@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the USA the openstreetmap instance has tiger data loaded in addition to the OSM data. You can find information on how to do this in the response to <a href="https://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance">this question</a>. You should be able to just load data for Maryland rather than the whole data set.</p>
+<p>In the USA the openstreetmap instance has tiger data loaded in addition to the OSM data. You can find information on how to do this in the response to <a href="/questions/12150/missing-house-numbers-in-local-nominatim-instance">this question</a>. You should be able to just load data for Maryland rather than the whole data set.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

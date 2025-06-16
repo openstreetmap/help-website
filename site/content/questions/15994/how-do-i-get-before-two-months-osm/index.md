@@ -121,7 +121,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can read the answer of <a href="https://help.openstreetmap.org/questions/13277/historical-osm-data">this question</a>.</p>
+<p>You can read the answer of <a href="/questions/13277/historical-osm-data">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

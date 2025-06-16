@@ -180,7 +180,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take the data as raw <em>.osm file or</em> .pbf file and try <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a>.</p>
+<p>Take the data as raw <em>.osm file or</em> .pbf file and try <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a>.</p>
 <p>There is recentry introduced option to export all elements with tag colums that you can define how you need it as CSV file (comma separated value.</p>
 <p>try osmconvert --help on a command line and read more instructions in detail.</p>
 <p>At least you should add columns for the tags "highway" and "name".</p>

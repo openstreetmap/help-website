@@ -196,7 +196,7 @@ osqa_accepted = false
 <div id="post-62323-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: <a href="https://help.openstreetmap.org/upfiles/VOTE.JPG">This</a> is the email i got via OSM (from you) and illustrates the "Don't forget to come over and cast your vote" which i believe is a relic of licence change.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: <span>This</span> is the email i got via OSM (from you) and illustrates the "Don't forget to come over and cast your vote" which i believe is a relic of licence change.</p>
 </div>
 <div id="comment-62323-info" class="comment-info">
 <span class="comment-age">(23 Feb '18, 20:32)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -325,7 +325,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Basecamp ( and some Garmin devices) have a setting for you to vary the amount for detail shown. Have a look at my answers to this question, The answer with the picture illustrates the setting in Basecamp. <a href="https://help.openstreetmap.org/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp">https://help.openstreetmap.org/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp</a></p>
+<p>Basecamp ( and some Garmin devices) have a setting for you to vary the amount for detail shown. Have a look at my answers to this question, The answer with the picture illustrates the setting in Basecamp. <a href="/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp">https://help.openstreetmap.org/questions/62086/why-dont-roads-show-up-on-osm-map-in-base-camp</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

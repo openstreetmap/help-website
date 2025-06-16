@@ -109,7 +109,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You're going to have to create this export yourself, though I suspect the data isn't there. Population doesn't seem like data which would be added to OSM (whether political or practical).</p>
 <p>If the data does exist, then you'll likely be using the <a href="http://www.overpass-api.de/index.html">Overpass API</a>. This is a query language for accessing/filtering the OSM data.</p>
-<p>Other options may include going all the way down and using <a href="http://wiki.openstreetmap.org/wiki/Osmium">Osmium</a>.</p>
+<p>Other options may include going all the way down and using <a href="https://wiki.openstreetmap.org/wiki/Osmium">Osmium</a>.</p>
 <p>I'm not well versed in the types of data requests which can be made, the choices seem slim and Overpass seems to be the most comprehensive and user friendly.</p>
 </div>
 <div class="answer-controls post-controls">

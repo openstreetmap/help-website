@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>A "Mapping Party" is when a group of people comes together to map something. It usually involves going out to collect data, adding it to the database afterwards and of course just having fun together. Those events are often organized by experienced mappers to help people who are interested in OpenStreetMap to get to know the process of mapping and the project in general, or to simply map a region that is yet very uncomplete.</p>
-<p>There is also a <a href="http://wiki.openstreetmap.org/wiki/Mapping_parties" title="Mapping parties">wiki page with more information</a>.</p>
+<p>There is also a <a href="https://wiki.openstreetmap.org/wiki/Mapping_parties" title="Mapping parties">wiki page with more information</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

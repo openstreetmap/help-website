@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Damaged Bridge and Footpath Closed Until Repaired"
-description = '''It is on the Ouse Valley Way LDFP (long distance footpath). The council as closed it until work is completed or 17 OCT 2015. I have attempted to tag this, any better ideas. http://www.openstreetmap.org/#map=19/52.19071/-0.31027'''
+description = '''It is on the Ouse Valley Way LDFP (long distance footpath). The council as closed it until work is completed or 17 OCT 2015. I have attempted to tag this, any better ideas. https://www.openstreetmap.org/#map=19/52.19071/-0.31027'''
 date = "2015-05-05T11:59:00Z"
 lastmod = "2016-07-14T21:33:00Z"
 weight = 42891
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It is on the Ouse Valley Way LDFP (long distance footpath). The council as closed it until work is completed or 17 OCT 2015. I have attempted to tag this, any better ideas. <a href="http://www.openstreetmap.org/#map=19/52.19071/-0.31027">http://www.openstreetmap.org/#map=19/52.19071/-0.31027</a></p>
+<p>It is on the Ouse Valley Way LDFP (long distance footpath). The council as closed it until work is completed or 17 OCT 2015. I have attempted to tag this, any better ideas. <a href="https://www.openstreetmap.org/#map=19/52.19071/-0.31027">https://www.openstreetmap.org/#map=19/52.19071/-0.31027</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-repair" rel="tag" title="see questions tagged &#39;repair&#39;">repair</span> <span class="post-tag tag-link-damaged" rel="tag" title="see questions tagged &#39;damaged&#39;">damaged</span> <span class="post-tag tag-link-closed" rel="tag" title="see questions tagged &#39;closed&#39;">closed</span>
@@ -65,7 +65,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Please don't abuse the <a href="https://wiki.openstreetmap.org/wiki/Key:designation">designation tag</a> for describing the purpose of <a href="http://www.openstreetmap.org/way/342534358">your fence</a>. Use the <a href="https://wiki.openstreetmap.org/wiki/Key:note">note tag</a> instead.</p>
+<p>Please don't abuse the <a href="https://wiki.openstreetmap.org/wiki/Key:designation">designation tag</a> for describing the purpose of <a href="https://www.openstreetmap.org/way/342534358">your fence</a>. Use the <a href="https://wiki.openstreetmap.org/wiki/Key:note">note tag</a> instead.</p>
 </div>
 <div id="comment-42893-info" class="comment-info">
 <span class="comment-age">(05 May '15, 13:36)</span> <span class="comment-user userinfo">scai ♦</span>

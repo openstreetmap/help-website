@@ -208,8 +208,8 @@ osqa_accepted = false
 <div id="post-17584-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There is a proposal here for tagging defaults: <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Defaults">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Defaults</a></p>
-<p>Also see this list of default speed limits for each country: <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed</a></p>
+<p>There is a proposal here for tagging defaults: <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Defaults">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Defaults</a></p>
+<p>Also see this list of default speed limits for each country: <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed</a></p>
 </div>
 <div id="comment-17584-info" class="comment-info">
 <span class="comment-age">(08 Nov '12, 12:56)</span> <span class="comment-user userinfo">Vclaw</span>

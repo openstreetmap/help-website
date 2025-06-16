@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OS Open Data slippy maps?"
-description = '''Hi Has anyone put together on-line slippy maps for any of the OS Open Data sets? Specifically OS Open Map - Local?  The wiki page I thought should contain any relevant info appears a bit out of date: http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata'''
+description = '''Hi Has anyone put together on-line slippy maps for any of the OS Open Data sets? Specifically OS Open Map - Local?  The wiki page I thought should contain any relevant info appears a bit out of date: https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata'''
 date = "2017-07-15T22:47:00Z"
 lastmod = "2017-07-17T18:17:00Z"
 weight = 57112
@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi</p>
 <p>Has anyone put together on-line slippy maps for any of the OS Open Data sets? Specifically OS Open Map - Local?</p>
-<p>The wiki page I thought should contain any relevant info appears a bit out of date: <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata</a></p>
+<p>The wiki page I thought should contain any relevant info appears a bit out of date: <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata">https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-opendata" rel="tag" title="see questions tagged &#39;opendata&#39;">opendata</span> <span class="post-tag tag-link-os" rel="tag" title="see questions tagged &#39;os&#39;">os</span> <span class="post-tag tag-link-slippymap" rel="tag" title="see questions tagged &#39;slippymap&#39;">slippymap</span>

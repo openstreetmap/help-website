@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Spam user account"
-description = '''There appear to be quite a few user accounts that exist solely for the purpose of BEING spam themselves. I found http://www.openstreetmap.org/user/feovoigt25 while searching for something else; account was created over 2 years ago, has no edits; the only thing to the account is the spammy user profi...'''
+description = '''There appear to be quite a few user accounts that exist solely for the purpose of BEING spam themselves. I found https://www.openstreetmap.org/user/feovoigt25 while searching for something else; account was created over 2 years ago, has no edits; the only thing to the account is the spammy user profi...'''
 date = "2015-01-26T23:18:00Z"
 lastmod = "2015-02-08T01:37:00Z"
 weight = 40638
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There appear to be quite a few user accounts that exist solely for the purpose of BEING spam themselves. I found <a href="http://www.openstreetmap.org/user/feovoigt25">http://www.openstreetmap.org/user/feovoigt25</a> while searching for something else; account was created over 2 years ago, has no edits; the only thing to the account is the spammy user profile description. Does anyone know how to have accounts like that removed?</p>
+<p>There appear to be quite a few user accounts that exist solely for the purpose of BEING spam themselves. I found <a href="https://www.openstreetmap.org/user/feovoigt25">https://www.openstreetmap.org/user/feovoigt25</a> while searching for something else; account was created over 2 years ago, has no edits; the only thing to the account is the spammy user profile description. Does anyone know how to have accounts like that removed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-account" rel="tag" title="see questions tagged &#39;account&#39;">account</span> <span class="post-tag tag-link-inactive" rel="tag" title="see questions tagged &#39;inactive&#39;">inactive</span> <span class="post-tag tag-link-user" rel="tag" title="see questions tagged &#39;user&#39;">user</span> <span class="post-tag tag-link-spam" rel="tag" title="see questions tagged &#39;spam&#39;">spam</span>
@@ -123,7 +123,7 @@ osqa_accepted = true
 <div id="post-40640-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>No, it's just sitting there being spam. Another one is <a href="http://www.openstreetmap.org/user/skate4feast">http://www.openstreetmap.org/user/skate4feast</a></p>
+<p>No, it's just sitting there being spam. Another one is <a href="https://www.openstreetmap.org/user/skate4feast">https://www.openstreetmap.org/user/skate4feast</a></p>
 <p>I'll report it there when I get my IRC client reinstalled. Thanks for the pointer.</p>
 </div>
 <div id="comment-40640-info" class="comment-info">
@@ -209,7 +209,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: they do not? Yes, that could really be the case currently. Then please let's <a href="https://trac.openstreetmap.org/ticket/5276">ask them to</a>. That would be a more efficient channel than IRC, wouldn't it? (async, batch, targeted to the right people). Update: Tom has taken care of the whole list now.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: they do not? Yes, that could really be the case currently. Then please let's <a href="https://trac.openstreetmap.org/ticket/5276">ask them to</a>. That would be a more efficient channel than IRC, wouldn't it? (async, batch, targeted to the right people). Update: Tom has taken care of the whole list now.</p>
 </div>
 <div id="comment-40848-info" class="comment-info">
 <span class="comment-age">(08 Feb '15, 01:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

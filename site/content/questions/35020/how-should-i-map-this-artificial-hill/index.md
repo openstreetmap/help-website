@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, how should I map this artificial hill? Its main purpose is to cover the noise from the railway.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/IMG_20140720_135510.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/IMG_20140720_135510.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-noise" rel="tag" title="see questions tagged &#39;noise&#39;">noise</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-noise_barrier" rel="tag" title="see questions tagged &#39;noise_barrier&#39;">noise_barrier</span>
@@ -107,7 +107,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would draw a way around the ridge and tag as an embankment. Be sure to draw the line in an anticlockwise direction as the low side is to the right of the direction of travel with this tag.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dembankment">Tag:man_made=embankment</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dembankment">Tag:man_made=embankment</a></p>
 <p>I would also probably tag a tree row or treed area along the top.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -161,7 +161,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, as newv stated, but don’t close the area. <a href="http://www.openstreetmap.org/#map=19/52.29452/5.08523">http://www.openstreetmap.org/#map=19/52.29452/5.08523</a> and leave a tiny space in between the ends. Try it before you decide.</p>
+<p>Hi, as newv stated, but don’t close the area. <a href="https://www.openstreetmap.org/#map=19/52.29452/5.08523">https://www.openstreetmap.org/#map=19/52.29452/5.08523</a> and leave a tiny space in between the ends. Try it before you decide.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

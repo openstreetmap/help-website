@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>While doing some routing related edits (marking only straight turns), I have noticed that some roads do not seem to be well placed in regards with other elements (other roads, buildings). Currently an example is at <a href="http://www.openstreetmap.org/#map=19/46.00564/8.95549">Lugano</a> where one road (Viale Carlo Cattaneo) seems to be moved north, by several meters, and now intersections are not correct and it goes through buildings.</p>
+<p>While doing some routing related edits (marking only straight turns), I have noticed that some roads do not seem to be well placed in regards with other elements (other roads, buildings). Currently an example is at <a href="https://www.openstreetmap.org/#map=19/46.00564/8.95549">Lugano</a> where one road (Viale Carlo Cattaneo) seems to be moved north, by several meters, and now intersections are not correct and it goes through buildings.</p>
 <p>I can open a note/bug and let someone deal with it, but I would be curious how you would deal with such a case.</p>
 <p>I know that satellite imagery has an offset (so it can't always be used). I also know that a GPS will have some error (so even if I would "go and check" I can't guarantee it is perfect). What I have tried is to download the GPX traces in JOSM. By looking at that road, there is only one trace following more or less the current road, while there are many others south of the current position (where I think it is correct). I have checked also the history and there is no useful comment for the changeset that moved the nodes.</p>
 <p>Is there anything more that I can do? In the future (and for this) would you recommend that I fix it or that I open a note?</p>
@@ -127,7 +127,7 @@ osqa_accepted = true
 <div id="post-29371-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Adjustments in potlatch2 <a href="https://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2">https://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2</a></p>
+<p>Adjustments in potlatch2 <a href="/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2">https://help.openstreetmap.org/questions/1686/adjusting-aerial-backgrounds-in-potlatch-2</a></p>
 </div>
 <div id="comment-29371-info" class="comment-info">
 <span class="comment-age">(27 Dec '13, 11:23)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -138,7 +138,7 @@ osqa_accepted = true
 <div id="post-29372-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>another related q <a href="https://help.openstreetmap.org/questions/17661/aligning-roads-to-proper-location">https://help.openstreetmap.org/questions/17661/aligning-roads-to-proper-location</a></p>
+<p>another related q <a href="/questions/17661/aligning-roads-to-proper-location">https://help.openstreetmap.org/questions/17661/aligning-roads-to-proper-location</a></p>
 </div>
 <div id="comment-29372-info" class="comment-info">
 <span class="comment-age">(27 Dec '13, 11:25)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -180,7 +180,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In addition to fixing the problem (as Andy suggests) I'd also contact the user who moved the road** to a location that doesn't match either the underlying GPS traces or the Bing imagery. The immediately previous location of the traffic signals can be seen <a href="http://www.openstreetmap.org/?mlat=46.00559&amp;mlon=8.95553&amp;zoom=18#map=18/46.00559/8.95553">here</a>, and looks to be more correct. The user in question has made relatively few edits, although the first was a long time ago. It's far more likely to be a simple mistake than any kind of "vandalism"; they may have only looked at their own traces (or none at all). I'd explain the problem and say that you've moved the road down to a location that best fits the available evidence.<br />
+<p>In addition to fixing the problem (as Andy suggests) I'd also contact the user who moved the road** to a location that doesn't match either the underlying GPS traces or the Bing imagery. The immediately previous location of the traffic signals can be seen <a href="https://www.openstreetmap.org/?mlat=46.00559&amp;mlon=8.95553&amp;zoom=18#map=18/46.00559/8.95553">here</a>, and looks to be more correct. The user in question has made relatively few edits, although the first was a long time ago. It's far more likely to be a simple mistake than any kind of "vandalism"; they may have only looked at their own traces (or none at all). I'd explain the problem and say that you've moved the road down to a location that best fits the available evidence.<br />
 </p>
 <p>We were all inexperienced users once, and it's practice and help from the rest of the community that turns inexperienced mappers into experienced ones.</p>
 <p>** The node history is probably the easiest way to see this.</p>

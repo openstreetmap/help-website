@@ -138,7 +138,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Please read these lines as well, <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>Please read these lines as well, <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div id="comment-33725-info" class="comment-info">
 <span class="comment-age">(05 Jun '14, 15:30)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming that your name here matches your name in OSM, your last changeset was <a href="http://www.openstreetmap.org/changeset/22756917">this one</a>. Clicking on the top way in that give <a href="http://www.openstreetmap.org/way/286432180">this screen</a>. It isn't currently rendering, but it's tagged OK, so will render soon at that zoom level (in fact it probably will by the time that you read this). If I zoom in, I can see that all your other changes are already rendered at the <a href="http://www.openstreetmap.org/#map=18/23.54947/87.28622">next higher zoom level</a>. Now all you need to do is to survey to get all the names :) .</p>
+<p>Assuming that your name here matches your name in OSM, your last changeset was <a href="https://www.openstreetmap.org/changeset/22756917">this one</a>. Clicking on the top way in that give <a href="https://www.openstreetmap.org/way/286432180">this screen</a>. It isn't currently rendering, but it's tagged OK, so will render soon at that zoom level (in fact it probably will by the time that you read this). If I zoom in, I can see that all your other changes are already rendered at the <a href="https://www.openstreetmap.org/#map=18/23.54947/87.28622">next higher zoom level</a>. Now all you need to do is to survey to get all the names :) .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

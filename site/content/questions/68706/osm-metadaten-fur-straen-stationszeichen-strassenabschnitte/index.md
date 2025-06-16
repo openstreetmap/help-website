@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hallo, ich bin recht unerfahren, bzgl. folgender Thematik: Kann man in OSM für Landstraßen/Bundesstrassen zusätzliche Metadaten hinterlegen? Mit Metadaten mein ich Informationen zu Stationszeichen aber auch Straßenabschnitte? Ziel wäre es, dass diese Infos bei Routenfindungen (quasi analog zur Addressfindung) berücksichtigt werden.</p>
 <p>Idee/Hintergrund ist ein bessere Lokationsfindung bei technische Hilfeleistung für Einsatzkräfte. Die Daten scheinen auf jeden Fall vorhanden zu sein (für das Land Brandenburg). Wie sich das rechtlich verhält würde ich erst klären wollen, wenn es über OSM technisch realisierbar ist.</p>
-<p>Anbei ein Auszug einer GML-Daten, die ein <strong>Straßenabschnitt</strong> einer deutschen Bundesstrasse beschreibt: <img src="https://help.openstreetmap.org/upfiles/Bildschirmfoto_2019-04-08_14-21-25.png" alt="alt text" /> © Landesbetrieb Straßenwesen Brandenburg</p>
+<p>Anbei ein Auszug einer GML-Daten, die ein <strong>Straßenabschnitt</strong> einer deutschen Bundesstrasse beschreibt: <img src="/upfiles/Bildschirmfoto_2019-04-08_14-21-25.png" alt="alt text" /> © Landesbetrieb Straßenwesen Brandenburg</p>
 <p>Für <strong>Stationszeichen</strong> verhält sich das vermutlich ähnlich, hier sind es aber Geopunkte mit anderen Metadaten <a href="https://de.wikipedia.org/wiki/Stationszeichen">siehe Eintrag Wikipedia</a>.</p>
 <p>Beispiel Unfall Auto: Smartphone/Auto kennt seinen Standort, es wird der nächstliegende Straßenabschnitt/Stationszeichen ermittelt (bzw. Stationszeichen wird per Notfall direkt durch gegeben: -&gt; exakte Positionsbestimmung möglich</p>
 <p>Gruß, Rico Zienke</p>

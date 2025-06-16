@@ -156,7 +156,7 @@ One Answer:
 <div id="post-29503-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You generate a <a href="http://wiki.openstreetmap.org/wiki/Way#Street_as_a_vector">list of node IDs</a> per way segment and add them to a collection per Road. After that you compare the ID collections and select that nodes that are in both road collections.</p>
+<p>You generate a <a href="https://wiki.openstreetmap.org/wiki/Way#Street_as_a_vector">list of node IDs</a> per way segment and add them to a collection per Road. After that you compare the ID collections and select that nodes that are in both road collections.</p>
 </div>
 <div id="comment-29503-info" class="comment-info">
 <span class="comment-age">(01 Jan '14, 13:01)</span> <span class="comment-user userinfo">iii</span>

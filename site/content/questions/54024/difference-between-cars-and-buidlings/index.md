@@ -61,9 +61,9 @@ osqa_accepted = false
 <div id="post-54042-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13193/map4theworld">@map4theworld</a> would it be possible to follow Andy's suggestion below and actually post a link to an area that contains an object that might be one thing or another?</p>
+<p><a href="https://help.openstreetmap.org/users/13193/map4theworld">@map4theworld</a> would it be possible to follow Andy's suggestion below and actually post a link to an area that contains an object that might be one thing or another?</p>
 <p>After you've done that, people will be able to say "I think that's a house because XYZ" or "I think that that's not a house because ABC". Without examples, everyone's just guessing, and can't offer you any useful advice.</p>
-<p>If problems like this crop up in future, try asking people about that specific example too. On the <a href="http://wiki.openstreetmap.org/wiki/Contact_channels">http://wiki.openstreetmap.org/wiki/Contact_channels</a> page there's a link to some real-time contact mechanisms such as <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> . You could ask people there about specific examples and might get an immediate answer.</p>
+<p>If problems like this crop up in future, try asking people about that specific example too. On the <a href="https://wiki.openstreetmap.org/wiki/Contact_channels">https://wiki.openstreetmap.org/wiki/Contact_channels</a> page there's a link to some real-time contact mechanisms such as <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a> . You could ask people there about specific examples and might get an immediate answer.</p>
 </div>
 <div id="comment-54042-info" class="comment-info">
 <span class="comment-age">(14 Jan '17, 19:43)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

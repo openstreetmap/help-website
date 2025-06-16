@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The name does not appear on zoom level 17 because it is too long for the street: <a href="http://www.openstreetmap.org/#map=17/55.76518/37.60179">http://www.openstreetmap.org/#map=17/55.76518/37.60179</a></p>
+<p>The name does not appear on zoom level 17 because it is too long for the street: <a href="https://www.openstreetmap.org/#map=17/55.76518/37.60179">https://www.openstreetmap.org/#map=17/55.76518/37.60179</a></p>
 <p>But zoom in further and the (Russian) name is shown on the map.</p>
 <p>Also, you have added "addr:*" tags to the street itself. Don't do that, these are reserved for buildings.</p>
 </div>

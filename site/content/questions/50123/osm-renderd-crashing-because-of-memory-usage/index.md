@@ -249,7 +249,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I reported similar problem here: <a href="https://github.com/openstreetmap/mod_tile/issues/181">https://github.com/openstreetmap/mod_tile/issues/181</a> and here <a href="https://help.openstreetmap.org/questions/70490/renderd-out-of-memory.">https://help.openstreetmap.org/questions/70490/renderd-out-of-memory.</a> Unfortunately without any feedback...</p>
+<p>I reported similar problem here: <a href="https://github.com/openstreetmap/mod_tile/issues/181">https://github.com/openstreetmap/mod_tile/issues/181</a> and here <a href="/questions/70490/renderd-out-of-memory.">https://help.openstreetmap.org/questions/70490/renderd-out-of-memory.</a> Unfortunately without any feedback...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

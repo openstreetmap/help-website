@@ -167,7 +167,7 @@ way2, some_name_ node3, 0, ..</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/45212/how-to-get-ways-and-associated-nodes-in-csv-with-overpass-ql">This earlier question may be relevant.</a></p>
+<p><a href="/questions/45212/how-to-get-ways-and-associated-nodes-in-csv-with-overpass-ql">This earlier question may be relevant.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

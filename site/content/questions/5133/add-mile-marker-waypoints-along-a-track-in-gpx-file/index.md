@@ -147,7 +147,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Once you've got your track-converted-to-waypoints-and-simplified (and your original track) you could just conbine the two in a text editor to get a GPX with both in. If you're unsure of the format, have a look at this one:</p>
-<p><a href="http://www.openstreetmap.org/trace/1008448/data">http://www.openstreetmap.org/trace/1008448/data</a></p>
+<p><a href="https://www.openstreetmap.org/trace/1008448/data">https://www.openstreetmap.org/trace/1008448/data</a></p>
 <p>(that just happened to be the most recent public GPX trace with both waypoints and trackpoints in it at the time of writing this)</p>
 </div>
 <div id="comment-5163-info" class="comment-info">

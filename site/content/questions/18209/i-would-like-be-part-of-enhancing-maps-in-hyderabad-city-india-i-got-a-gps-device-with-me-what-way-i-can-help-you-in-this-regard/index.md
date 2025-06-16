@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A quick look at the map <a href="http://www.openstreetmap.org/?lat=25.4027&amp;lon=68.3672&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=25.4027&amp;lon=68.3672&amp;zoom=13&amp;layers=M</a> tells me that while a couple of streets have been traced from aerial imagery, Hyderabad lacks a lot of detail, especially street names. So even without a GPS, if you simply printed out a map for a city quarter and walked around and wrote down the street names, for later addition to the OSM database, that would be a huge improvement to the map!</p>
+<p>A quick look at the map <a href="https://www.openstreetmap.org/?lat=25.4027&amp;lon=68.3672&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=25.4027&amp;lon=68.3672&amp;zoom=13&amp;layers=M</a> tells me that while a couple of streets have been traced from aerial imagery, Hyderabad lacks a lot of detail, especially street names. So even without a GPS, if you simply printed out a map for a city quarter and walked around and wrote down the street names, for later addition to the OSM database, that would be a huge improvement to the map!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>... and if you need some more information on how to get involved in map editing at all, see the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p>... and if you need some more information on how to get involved in map editing at all, see the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
 </div>
 <div id="comment-18214-info" class="comment-info">
 <span class="comment-age">(05 Dec '12, 17:36)</span> <span class="comment-user userinfo">stephan75</span>

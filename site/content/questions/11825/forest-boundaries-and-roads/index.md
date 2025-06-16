@@ -116,7 +116,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This has been discussed in the <a href="http://help.openstreetmap.org/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">"Should the edges of landuse= <em>or boundary=</em> areas share points with streets that form their borders?"</a> question before.</p>
+<p>This has been discussed in the <a href="/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">"Should the edges of landuse= <em>or boundary=</em> areas share points with streets that form their borders?"</a> question before.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

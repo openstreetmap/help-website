@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have a raster layer that I would like to use as a basemap and overlay vector OSM data (cities and the such). I would also like to have the capabilities to view it offline on a Windows desktop computer, such as that the marginalia stays on the current screen when I zoom and pan, coordinates are accessible, etc. Perhaps what I'm looking for is an offline version of Google Maps, but stripped down since I am not concerned with editability. Is there a free/widely available way to do this?</p>
 <p>I am currently playing around with ArcGIS-exported PDFs, which preserve geographic coordinates, but do not retain marginalia within the Adobe Reader viewing frame when I zoom in.</p>
-<p>I started looking at the <a href="http://wiki.openstreetmap.org/wiki/Software">Software</a> link, but have had no luck thus far.</p>
+<p>I started looking at the <a href="https://wiki.openstreetmap.org/wiki/Software">Software</a> link, but have had no luck thus far.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-offline" rel="tag" title="see questions tagged &#39;offline&#39;">offline</span> <span class="post-tag tag-link-offlinemaps" rel="tag" title="see questions tagged &#39;offlinemaps&#39;">offlinemaps</span>

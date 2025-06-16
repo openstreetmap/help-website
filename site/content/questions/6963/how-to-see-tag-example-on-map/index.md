@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/OpenStreetBrowser">OpenStreetBrowser</a> to search for specific tags in a given area. There is also a wiki page with <a href="http://wiki.openstreetmap.org/wiki/Sample_areas">sample areas</a> for some of the most common tags. You can also use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to retrieve a OSM file containing all tag occurrences or the ones within a specified bounding box which can then be opened using JOSM for example. <a href="http://wiki.openstreetmap.org/wiki/Tagstat">Tagstat</a> once provided a <a href="http://tagstat.telascience.org/popup.php?tag=place&amp;value=locality">rendered map</a> for a given tag, but doesn't seem to work any more because of the broken XAPI.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/OpenStreetBrowser">OpenStreetBrowser</a> to search for specific tags in a given area. There is also a wiki page with <a href="https://wiki.openstreetmap.org/wiki/Sample_areas">sample areas</a> for some of the most common tags. You can also use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to retrieve a OSM file containing all tag occurrences or the ones within a specified bounding box which can then be opened using JOSM for example. <a href="https://wiki.openstreetmap.org/wiki/Tagstat">Tagstat</a> once provided a <a href="http://tagstat.telascience.org/popup.php?tag=place&amp;value=locality">rendered map</a> for a given tag, but doesn't seem to work any more because of the broken XAPI.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -159,8 +159,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The map you see on openstreetmap.org is only one of <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">many different maps</a> based on the OSM database. While this one doesn't render the "ele" tag for most objects, there may be another map out there that does.</p>
-<p>Very importantly, please do not <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tag for the renderer</a>. The OSM data is used for many different purposes, not just for rendering images on a map. By adding the elevation to the name tag of an object, you make the name tag less useful for other data consumers. Please add the information in the intended tags and leave it up to each map renderer to decide what to show. Don't mix additional information into the name tag or use an inappropriate place=* tag just so an object will show up the way you want on one particular map rendering.</p>
+<p>The map you see on openstreetmap.org is only one of <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">many different maps</a> based on the OSM database. While this one doesn't render the "ele" tag for most objects, there may be another map out there that does.</p>
+<p>Very importantly, please do not <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tag for the renderer</a>. The OSM data is used for many different purposes, not just for rendering images on a map. By adding the elevation to the name tag of an object, you make the name tag less useful for other data consumers. Please add the information in the intended tags and leave it up to each map renderer to decide what to show. Don't mix additional information into the name tag or use an inappropriate place=* tag just so an object will show up the way you want on one particular map rendering.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

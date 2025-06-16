@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>(I assume you mean Potlatch 2?) As far as I know only: Not selected, but centred <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;node=1500779134">example with a node</a> (that link format is used by the links on the <a href="http://www.openstreetmap.org/browse/node/1500779134">object detail pages on osm.org</a>). For markers on the non-editing map see <a href="/questions/25/">how-do-i-add-a-marker-to-a-map</a>.</p>
+<p>(I assume you mean Potlatch 2?) As far as I know only: Not selected, but centred <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;node=1500779134">example with a node</a> (that link format is used by the links on the <a href="https://www.openstreetmap.org/browse/node/1500779134">object detail pages on osm.org</a>). For markers on the non-editing map see <a href="/questions/25/">how-do-i-add-a-marker-to-a-map</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -133,7 +133,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Thanks.</p>
-<p>Yes, that works well for the example you gave, where the node is in the middle of a field. But not so easy in the middle of London. For instance <a href="http://www.openstreetmap.org/edit?node=1640219094">http://www.openstreetmap.org/edit?node=1640219094</a> -- I can guess my node is one of that cluster in the centre but it would be hard to guess which one.</p>
+<p>Yes, that works well for the example you gave, where the node is in the middle of a field. But not so easy in the middle of London. For instance <a href="https://www.openstreetmap.org/edit?node=1640219094">https://www.openstreetmap.org/edit?node=1640219094</a> -- I can guess my node is one of that cluster in the centre but it would be hard to guess which one.</p>
 <p>Best I've found so far is that the map will remain centred on the specified node when zooming, so if I zoom in fully its then possible to pick the correct node.</p>
 <p>Better would be if I could choose to open the node with full zoom, also to turn off the help popup. Are those possible ?</p>
 </div>

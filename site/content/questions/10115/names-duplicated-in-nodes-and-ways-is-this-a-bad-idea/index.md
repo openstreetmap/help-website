@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I'm doing some work to produce some piste maps of ski resorts and I have a situation which probably doesn't arise much when mapping roads and so on. Its to do with ski lifts (aerialways).</p>
 <p>Lets take the simplest lift possible as an example - a single way connecting two nodes. The way contains the name of the lift as a standard property tag <code>name="Signal"</code> . So far so good.</p>
 <p>When looking at a piste map it is very helpful to know where the entrance to a lift is, i.e. which end you are allowed to get on. I've created maps in the past from my own data (not OSM data), and found it very useful to have the name of the lift next to the base station as well as along the lift itself, like below:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Snap.jpg" alt="Map snapshot - This is NOT OSM data!!" /></p>
+<p><img src="/upfiles/Snap.jpg" alt="Map snapshot - This is NOT OSM data!!" /></p>
 <p>Now I want to achieve this using OSM data. But, if the name is a property of the way, I can't see any possibility to associate it with one of the nodes other than by duplicating the name property in the node as well.</p>
 <p>My question is therefore, is this a BAD thing to do? My gut feeling from a couple of decades working in IT is that when it is necessary to duplicate data it usually means something isn't designed correctly.</p>
 <p>I've considered relations, but it seems that the name would need to be duplicated in the relation as well so that doesn't really help.</p>
@@ -274,7 +274,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use the entrance tag on a node at the entrance to the lift. See <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/entrance">http://wiki.openstreetmap.org/wiki/Proposed_features/entrance</a></p>
+<p>You could use the entrance tag on a node at the entrance to the lift. See <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/entrance">https://wiki.openstreetmap.org/wiki/Proposed_features/entrance</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

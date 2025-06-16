@@ -177,7 +177,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use GPSBabel to do some auto pruning or you could view and prune with GPSprune. <a href="http://activityworkshop.net/software/gpsprune/">http://activityworkshop.net/software/gpsprune/</a> <a href="http://wiki.openstreetmap.org/wiki/GPSBabel">http://wiki.openstreetmap.org/wiki/GPSBabel</a></p>
+<p>You could use GPSBabel to do some auto pruning or you could view and prune with GPSprune. <a href="http://activityworkshop.net/software/gpsprune/">http://activityworkshop.net/software/gpsprune/</a> <a href="https://wiki.openstreetmap.org/wiki/GPSBabel">https://wiki.openstreetmap.org/wiki/GPSBabel</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

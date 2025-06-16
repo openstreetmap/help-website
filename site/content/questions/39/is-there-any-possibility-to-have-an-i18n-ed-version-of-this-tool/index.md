@@ -185,7 +185,7 @@ osqa_accepted = false
 <div id="post-1117-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Translation is not duplication. Otherwise there wouldn't be <a href="http://wiki.openstreetmap.org/wiki/DE:Main_Page">http://wiki.openstreetmap.org/wiki/DE:Main_Page</a>, <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a>, and so on.</p>
+<p>Translation is not duplication. Otherwise there wouldn't be <a href="https://wiki.openstreetmap.org/wiki/DE:Main_Page">https://wiki.openstreetmap.org/wiki/DE:Main_Page</a>, <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a>, and so on.</p>
 </div>
 <div id="comment-1117-info" class="comment-info">
 <span class="comment-age">(11 Oct '10, 08:59)</span> <span class="comment-user userinfo">Art Penteur</span>

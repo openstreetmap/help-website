@@ -244,7 +244,7 @@ osqa_accepted = false
 <p>The simple answer: no.</p>
 <p>The more complicated one: to acheive what you want you will need to download an extract for the area you are interested in and filter out what you don't want.</p>
 <p>Extracts for example <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a></p>
-<p>Filter for example: <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p>Filter for example: <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 <p>But there are many ways to skin a cat.</p>
 </div>
 <div class="answer-controls post-controls">

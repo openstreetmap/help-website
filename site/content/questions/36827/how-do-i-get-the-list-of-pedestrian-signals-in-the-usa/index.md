@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am planning to use open Street Map API to get the list of pedestrian signals in USA.I find a way to tag the pedestrian signals But they are not displayed in the map, <a href="https://help.openstreetmap.org/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing">link text</a></p>
+<p>I am planning to use open Street Map API to get the list of pedestrian signals in USA.I find a way to tag the pedestrian signals But they are not displayed in the map, <a href="/questions/1489/how-to-tag-traffic-lights-on-pedestrian-crossing">link text</a></p>
 <p>Is it possible to get the data using the API? And how accurate the data would be?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If there are no plans to update the data, or if there is a large area to query, the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> would be the best way to query the data: either via the public Overpass API servers or your own Overpass server.</p>
+<p>If there are no plans to update the data, or if there is a large area to query, the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> would be the best way to query the data: either via the public Overpass API servers or your own Overpass server.</p>
 <p>Accuracy would be dependent on whether the mappers for a given area have collected crossing information. In general, the tagging would not include crossing information - but may be more complete for a given region.</p>
 <p>If you have an outside source of information about pedestrian signals, please review it on the <a href="https://lists.openstreetmap.org/listinfo/imports">Imports mailing list</a> before any large updates to pedestrian signals.</p>
 </div>

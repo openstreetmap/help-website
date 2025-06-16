@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Unable to accept own answer"
-description = '''I am unable to accept my own answer from http://help.openstreetmap.org/questions/4255/josm-copy-relations-from-one-way-to-another?page=1#7415 . The accept button is missing. Is this normal? I&#x27;d like to raise my accept rate :)'''
+description = '''I am unable to accept my own answer from https://help.openstreetmap.org/questions/4255/josm-copy-relations-from-one-way-to-another?page=1#7415 . The accept button is missing. Is this normal? I&#x27;d like to raise my accept rate :)'''
 date = "2011-08-29T10:50:00Z"
 lastmod = "2016-07-23T14:12:00Z"
 weight = 7416
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am unable to accept my own answer from <a href="http://help.openstreetmap.org/questions/4255/josm-copy-relations-from-one-way-to-another?page=1#7415">http://help.openstreetmap.org/questions/4255/josm-copy-relations-from-one-way-to-another?page=1#7415</a> . The accept button is missing. Is this normal? I'd like to raise my accept rate :)</p>
+<p>I am unable to accept my own answer from <a href="/questions/4255/josm-copy-relations-from-one-way-to-another?page=1#7415">https://help.openstreetmap.org/questions/4255/josm-copy-relations-from-one-way-to-another?page=1#7415</a> . The accept button is missing. Is this normal? I'd like to raise my accept rate :)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-meta" rel="tag" title="see questions tagged &#39;meta&#39;">meta</span>
@@ -142,7 +142,7 @@ osqa_accepted = false
 <div id="post-51067-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>An example of last comment, where i already had an answer, which i hoped may be of useful to others. SomeoneElse "accepted" it for me. <a href="https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
+<p>An example of last comment, where i already had an answer, which i hoped may be of useful to others. SomeoneElse "accepted" it for me. <a href="/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
 </div>
 <div id="comment-51067-info" class="comment-info">
 <span class="comment-age">(23 Jul '16, 14:12)</span> <span class="comment-user userinfo">andy mackey</span>

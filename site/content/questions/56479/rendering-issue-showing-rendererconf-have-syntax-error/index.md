@@ -148,7 +148,7 @@ One Answer:
 <li>Fix the font directory in the config to where the fonts actually live (and install whatever fonts are needed)</li>
 <li>Fix the path to the mapnik.xml file in the config to point to wherever you created it.</li>
 </ol>
-<p>You'll want to fix the database access issue that you logged <a href="https://help.openstreetmap.org/questions/56477/osm2pgsql-connection-to-database-failed-fatal-ident-authentication-failed-for-user-postgres">here</a> first though.</p>
+<p>You'll want to fix the database access issue that you logged <a href="/questions/56477/osm2pgsql-connection-to-database-failed-fatal-ident-authentication-failed-for-user-postgres">here</a> first though.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

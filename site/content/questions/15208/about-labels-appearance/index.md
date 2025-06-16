@@ -104,9 +104,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM really all about <a href="http://wiki.openstreetmap.org/wiki/Data">data</a>, rather than just one map. The "standard" map that you see on the osm.org website is one of four there, with different <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a> rules that show different data.</p>
-<p>There's an excellent discussion of that <a href="http://help.openstreetmap.org/questions/14921/why-are-there-buttons-and-fields-in-the-web-editor-for-a-lot-of-information-that-is-never-used-on-the-map?page=1&amp;focusedAnswerId=14922#14922">here</a>.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">Plenty of other services</a> use OSM data. For example, shops such as your fishmonger will appear in the data that <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">gets loaded</a> into my <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">Garmin</a> Satnav without me having to do anything.</p>
+<p>OSM really all about <a href="https://wiki.openstreetmap.org/wiki/Data">data</a>, rather than just one map. The "standard" map that you see on the osm.org website is one of four there, with different <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a> rules that show different data.</p>
+<p>There's an excellent discussion of that <a href="/questions/14921/why-are-there-buttons-and-fields-in-the-web-editor-for-a-lot-of-information-that-is-never-used-on-the-map?page=1&amp;focusedAnswerId=14922#14922">here</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">Plenty of other services</a> use OSM data. For example, shops such as your fishmonger will appear in the data that <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">gets loaded</a> into my <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">Garmin</a> Satnav without me having to do anything.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -143,7 +143,7 @@ This answer is marked "community wiki".
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/14921/why-are-there-buttons-and-fields-in-the-web-editor-for-a-lot-of-information-that-is-never-used-on-the-map">http://help.openstreetmap.org/questions/14921/why-are-there-buttons-and-fields-in-the-web-editor-for-a-lot-of-information-that-is-never-used-on-the-map</a> perhaps?</p>
+<p><a href="/questions/14921/why-are-there-buttons-and-fields-in-the-web-editor-for-a-lot-of-information-that-is-never-used-on-the-map">https://help.openstreetmap.org/questions/14921/why-are-there-buttons-and-fields-in-the-web-editor-for-a-lot-of-information-that-is-never-used-on-the-map</a> perhaps?</p>
 </div>
 <div id="comment-15214-info" class="comment-info">
 <span class="comment-age">(17 Aug '12, 14:52)</span> <span class="comment-user userinfo">Andy Allan</span>

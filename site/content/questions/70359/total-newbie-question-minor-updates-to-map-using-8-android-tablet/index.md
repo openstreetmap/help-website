@@ -112,7 +112,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think the most popular editor for Android is <a href="https://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a>.</p>
-<p>A few of the navigation apps have limited support for editing (normally restricted to POIs) <a href="https://wiki.openstreetmap.org/wiki/Android#Editing_the_map">this page</a> has some further information. Unfortunately I think <a href="https://help.openstreetmap.org/questions/43567/id-editor-on-mobile">this question's</a> answers are still relevant when it come to the default in-browser editor.</p>
+<p>A few of the navigation apps have limited support for editing (normally restricted to POIs) <a href="https://wiki.openstreetmap.org/wiki/Android#Editing_the_map">this page</a> has some further information. Unfortunately I think <a href="/questions/43567/id-editor-on-mobile">this question's</a> answers are still relevant when it come to the default in-browser editor.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -189,7 +189,7 @@ osqa_accepted = false
 <div id="post-70363-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please don't ask a new question as an "answer" to an old one - this Q&amp;A site doesn't really support that. That question is already asked at <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> .</p>
+<p>Please don't ask a new question as an "answer" to an old one - this Q&amp;A site doesn't really support that. That question is already asked at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> .</p>
 </div>
 <div id="comment-70363-info" class="comment-info">
 <span class="comment-age">(12 Aug '19, 09:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

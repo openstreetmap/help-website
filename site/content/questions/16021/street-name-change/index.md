@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-16035-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Closed as duplicate of <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></p>
+<p>Closed as duplicate of <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated</a></p>
 </div>
 <div id="comment-16035-info" class="comment-info">
 <span class="comment-age">(13 Sep '12, 12:58)</span> <span class="comment-user userinfo">sleske</span>
@@ -140,7 +140,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You should wait at least a couple of hours for the database to refresh itself and update it's contents.</p>
-<p>See <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this</a> previous question and detailed answer.</p>
+<p>See <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this</a> previous question and detailed answer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -178,7 +178,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>On investigation the street in question appears to be <a href="http://www.openstreetmap.org/browse/way/161032153/history">this one</a>, it doesn't have multiple segments and just hadn't been rendered yet. I dirtied one of the tiles and that tile now displays OK.</p>
+<p>On investigation the street in question appears to be <a href="https://www.openstreetmap.org/browse/way/161032153/history">this one</a>, it doesn't have multiple segments and just hadn't been rendered yet. I dirtied one of the tiles and that tile now displays OK.</p>
 </div>
 <div id="comment-16025-info" class="comment-info">
 <span class="comment-age">(13 Sep '12, 00:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

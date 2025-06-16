@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "API for creating walking routes"
-description = '''As far as I know OSM doesn&#x27;t support for route drawing. I need an API advice for adding some markers on the map and showing the walking route between them. I work on this area http://www.openstreetmap.org/#map=17/39.86739/32.74832'''
+description = '''As far as I know OSM doesn&#x27;t support for route drawing. I need an API advice for adding some markers on the map and showing the walking route between them. I work on this area https://www.openstreetmap.org/#map=17/39.86739/32.74832'''
 date = "2014-10-16T18:19:00Z"
 lastmod = "2014-10-17T16:28:00Z"
 weight = 37657
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>As far as I know OSM doesn't support for route drawing.</p>
 <p>I need an API advice for adding some markers on the map and showing the walking route between them.</p>
-<p>I work on this area <a href="http://www.openstreetmap.org/#map=17/39.86739/32.74832">http://www.openstreetmap.org/#map=17/39.86739/32.74832</a></p>
+<p>I work on this area <a href="https://www.openstreetmap.org/#map=17/39.86739/32.74832">https://www.openstreetmap.org/#map=17/39.86739/32.74832</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-footpath" rel="tag" title="see questions tagged &#39;footpath&#39;">footpath</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-walking" rel="tag" title="see questions tagged &#39;walking&#39;">walking</span> <span class="post-tag tag-link-footway" rel="tag" title="see questions tagged &#39;footway&#39;">footway</span> <span class="post-tag tag-link-drawing" rel="tag" title="see questions tagged &#39;drawing&#39;">drawing</span>
@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-37700-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If Ed's answer is not what you want may be this similar one is. <a href="https://help.openstreetmap.org/questions/25135/how-to-manually-create-a-gps-track-for-biking">https://help.openstreetmap.org/questions/25135/how-to-manually-create-a-gps-track-for-biking</a></p>
+<p>If Ed's answer is not what you want may be this similar one is. <a href="/questions/25135/how-to-manually-create-a-gps-track-for-biking">https://help.openstreetmap.org/questions/25135/how-to-manually-create-a-gps-track-for-biking</a></p>
 </div>
 <div id="comment-37700-info" class="comment-info">
 <span class="comment-age">(17 Oct '14, 15:35)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -168,7 +168,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If the "markers on a map" part of the question really means "how do I use a javascript library to display information over the top of some existing tiles" then you might find the links from <a href="http://switch2osm.org/using-tiles/">here</a> useful.</p>
-<p>It's possible that <a href="https://umap.openstreetmap.fr/en/">uMap</a> might also work for you - have a look at the various links from <a href="https://bitbucket.org/yohanboniface/umap">here</a> and <a href="https://help.openstreetmap.org/questions/21987/how-to-retrieve-my-data-on-my-own-umap-instance-with-api">this previous question</a>.</p>
+<p>It's possible that <a href="https://umap.openstreetmap.fr/en/">uMap</a> might also work for you - have a look at the various links from <a href="https://bitbucket.org/yohanboniface/umap">here</a> and <a href="/questions/21987/how-to-retrieve-my-data-on-my-own-umap-instance-with-api">this previous question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

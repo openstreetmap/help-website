@@ -225,7 +225,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To display your GeoTIFF as a background layer, you need a way to convert it to a coordinate reference system (CRS) suitable for the editor you are using. <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">For JOSM, the ImportImage Plugin</a> will take care of transforming your images to the CRS used by JOSM.</p>
+<p>To display your GeoTIFF as a background layer, you need a way to convert it to a coordinate reference system (CRS) suitable for the editor you are using. <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">For JOSM, the ImportImage Plugin</a> will take care of transforming your images to the CRS used by JOSM.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

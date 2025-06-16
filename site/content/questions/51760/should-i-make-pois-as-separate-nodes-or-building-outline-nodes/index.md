@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi bunder, the POIs in the ground floor of the building should get a tag (node) and entrance. Read these pages as well <a href="https://wiki.openstreetmap.org/wiki/Points_of_interest">https://wiki.openstreetmap.org/wiki/Points_of_interest</a> . <a href="http://www.openstreetmap.org/#map=17/51.27729/6.76524">http://www.openstreetmap.org/#map=17/51.27729/6.76524</a> have a look here a large multi function building with shops inside. Try or tag the Poi’s to the official street number but at least at the same node.</p>
+<p>Hi bunder, the POIs in the ground floor of the building should get a tag (node) and entrance. Read these pages as well <a href="https://wiki.openstreetmap.org/wiki/Points_of_interest">https://wiki.openstreetmap.org/wiki/Points_of_interest</a> . <a href="https://www.openstreetmap.org/#map=17/51.27729/6.76524">https://www.openstreetmap.org/#map=17/51.27729/6.76524</a> have a look here a large multi function building with shops inside. Try or tag the Poi’s to the official street number but at least at the same node.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -123,7 +123,7 @@ osqa_accepted = false
 <div id="post-51768-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, you have not answered the primary question: should the POI on the ground floor be mapped as a separate nodes or as a nodes, which are part of a building outline? I do not see clean info on the wiki.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, you have not answered the primary question: should the POI on the ground floor be mapped as a separate nodes or as a nodes, which are part of a building outline? I do not see clean info on the wiki.</p>
 </div>
 <div id="comment-51768-info" class="comment-info">
 <span class="comment-age">(28 Aug '16, 12:10)</span> <span class="comment-user userinfo">bunder</span>

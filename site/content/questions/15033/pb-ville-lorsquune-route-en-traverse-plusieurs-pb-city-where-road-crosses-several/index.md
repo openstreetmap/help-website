@@ -82,7 +82,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>and give us a <a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a> to one of the place where we can see the way, and describe how we can identify it.</p>
+<p>and give us a <a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a> to one of the place where we can see the way, and describe how we can identify it.</p>
 </div>
 <div id="comment-15040-info" class="comment-info">
 <span class="comment-age">(13 Aug '12, 18:56)</span> <span class="comment-user userinfo">stephan75</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Bizarre que ce bug n'agit que sur cette route. Lorsque je pointe sur les autoroutes qui traverse aussi plusieurs villes, les villes se mettent à jour et concordent avec les points GPS....</p>
-<p>Autre chose j'ai modifié une dénomination d'une nationale en départementale, lors d'un <em><a href="http://nominatim.openstreetmap.org/reverse">http://nominatim.openstreetmap.org/reverse</a></em>, ça affiche toujours en nationale mais via l'API <em><a href="http://www.openstreetmap.org/api/0.6/way/%5Bn°">http://www.openstreetmap.org/api/0.6/way/[n°</a> d'ordre]</em> le changement apparait bien</p>
+<p>Autre chose j'ai modifié une dénomination d'une nationale en départementale, lors d'un <em><a href="http://nominatim.openstreetmap.org/reverse">http://nominatim.openstreetmap.org/reverse</a></em>, ça affiche toujours en nationale mais via l'API <em><a href="https://www.openstreetmap.org/api/0.6/way/%5Bn°">https://www.openstreetmap.org/api/0.6/way/[n°</a> d'ordre]</em> le changement apparait bien</p>
 </div>
 <div id="comment-15061-info" class="comment-info">
 <span class="comment-age">(14 Aug '12, 10:55)</span> <span class="comment-user userinfo">Welive GPS</span>
@@ -294,9 +294,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>L'algorithme de recherche de Nominatim n'est pas très clair (<a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Search_Algorithm">pas documenté</a>). Mais à priori, il doit d'abord utiliser les limites administratives puis les noeuds taggués "place". Sur Amblainville, la relation de type "boundary=administrative" définissant les limites de la commune <a href="http://nominatim.openstreetmap.org/details.php?place_id=128893904">a l'air correcte</a>. Mais il y a deux noeuds "place=village" (<a href="http://www.openstreetmap.org/browse/node/610978153">ici</a> et <a href="http://www.openstreetmap.org/browse/node/610978642">là</a>) ce qui a peut-être provoqué un bug dans Nominatim. Il faudrait en supprimer un des deux (le moins complet) et aussi éventuellement mettre l'autre dans la relation boundary avec le rôle "admin_centre" (pas pour Nominatim mais on cherche à le faire pour toutes les communes en France).</p>
-<p>Pour Hérouville, je n'ai rien trouvé d'anormal dans les données OSM. J'ai aussi examiné la <a href="http://www.openstreetmap.org/browse/relation/554089">relation d'Arronvill</a>e mais là encore, rien d'anormal. Je penche pour un problème dans la base de données exploité par Nominatim. De toute façon, celui-ci nécessitera une reconstruction complète suite au changement de licence vers Odbl.</p>
-<p>On voit que le Redaction Bot a modifié le tracé de la D927 puis que tu as toi-même <a href="http://www.openstreetmap.org/browse/way/13439956/history">remanié la voie d'une manière assez importante</a>. Normalement, ça n'est pas de là que vient le problème (même si on peut imaginer que sectionner la départementale par commune est valable mais pas indispensable).</p>
+<p>L'algorithme de recherche de Nominatim n'est pas très clair (<a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Search_Algorithm">pas documenté</a>). Mais à priori, il doit d'abord utiliser les limites administratives puis les noeuds taggués "place". Sur Amblainville, la relation de type "boundary=administrative" définissant les limites de la commune <a href="http://nominatim.openstreetmap.org/details.php?place_id=128893904">a l'air correcte</a>. Mais il y a deux noeuds "place=village" (<a href="https://www.openstreetmap.org/browse/node/610978153">ici</a> et <a href="https://www.openstreetmap.org/browse/node/610978642">là</a>) ce qui a peut-être provoqué un bug dans Nominatim. Il faudrait en supprimer un des deux (le moins complet) et aussi éventuellement mettre l'autre dans la relation boundary avec le rôle "admin_centre" (pas pour Nominatim mais on cherche à le faire pour toutes les communes en France).</p>
+<p>Pour Hérouville, je n'ai rien trouvé d'anormal dans les données OSM. J'ai aussi examiné la <a href="https://www.openstreetmap.org/browse/relation/554089">relation d'Arronvill</a>e mais là encore, rien d'anormal. Je penche pour un problème dans la base de données exploité par Nominatim. De toute façon, celui-ci nécessitera une reconstruction complète suite au changement de licence vers Odbl.</p>
+<p>On voit que le Redaction Bot a modifié le tracé de la D927 puis que tu as toi-même <a href="https://www.openstreetmap.org/browse/way/13439956/history">remanié la voie d'une manière assez importante</a>. Normalement, ça n'est pas de là que vient le problème (même si on peut imaginer que sectionner la départementale par commune est valable mais pas indispensable).</p>
 <p>Il faut aussi savoir que la base exploitée par Nominatim n'est pas synchronisée en temps réel (au moment où j'écris ce message, il a un mois de retard : 14 Aout pour OSM -&gt; 10 juillet pour Nominatim (voir <a href="http://nominatim.openstreetmap.org/search.php">Data ici</a>)).</p>
 </div>
 <div class="answer-controls post-controls">

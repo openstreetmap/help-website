@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem with relation roles"
-description = '''I recently added a reservoir to OSM. It is at : http://www.openstreetmap.org/#map=14/18.8371/99.6444&amp;amp;layers=C I went overboard when I traced it from Bing and used about 4,000 nodes, too big to upload as I later learned.(JOSM tells me 2,000 nodes is max per relation). Not wanting to waste any of ...'''
+description = '''I recently added a reservoir to OSM. It is at : https://www.openstreetmap.org/#map=14/18.8371/99.6444&amp;amp;layers=C I went overboard when I traced it from Bing and used about 4,000 nodes, too big to upload as I later learned.(JOSM tells me 2,000 nodes is max per relation). Not wanting to waste any of ...'''
 date = "2013-10-11T02:58:00Z"
 lastmod = "2013-10-11T12:26:00Z"
 weight = 27086
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I recently added a reservoir to OSM. It is at : <a href="http://www.openstreetmap.org/#map=14/18.8371/99.6444&amp;layers=C">http://www.openstreetmap.org/#map=14/18.8371/99.6444&amp;layers=C</a></p>
-<p>I went overboard when I traced it from Bing and used about 4,000 nodes, too big to upload as I later learned.(JOSM tells me 2,000 nodes is max per relation). Not wanting to waste any of my work, I split it into two separate pieces. Both pieces are inner members of a much larger wood multi-polygon. I know I did not do this right because islands in the reservoir (such as <a href="http://www.openstreetmap.org/browse/way/240923279">this one</a>) are also inner members of the same wood polygon and they do not show up in the OSM slippy map.</p>
+<p>I recently added a reservoir to OSM. It is at : <a href="https://www.openstreetmap.org/#map=14/18.8371/99.6444&amp;layers=C">https://www.openstreetmap.org/#map=14/18.8371/99.6444&amp;layers=C</a></p>
+<p>I went overboard when I traced it from Bing and used about 4,000 nodes, too big to upload as I later learned.(JOSM tells me 2,000 nodes is max per relation). Not wanting to waste any of my work, I split it into two separate pieces. Both pieces are inner members of a much larger wood multi-polygon. I know I did not do this right because islands in the reservoir (such as <a href="https://www.openstreetmap.org/browse/way/240923279">this one</a>) are also inner members of the same wood polygon and they do not show up in the OSM slippy map.</p>
 <p>Relations are tricky and I admit to being a novice with them. Aside from making a commitment to never trace in such detail in the future, how can I fix this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,11 +112,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I note at this page <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">see 'Island within a hole'</a> that the islands probably need to be role="outer" You may need to add a landuse= tag to the islands to get them to appear.</p>
+<p>I note at this page <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">see 'Island within a hole'</a> that the islands probably need to be role="outer" You may need to add a landuse= tag to the islands to get them to appear.</p>
 <p>In regard to the 2000 node limit: My understanding is that instead of one way with 4000 nodes, you just split up the way into smaller segments &lt; 2000 each and then combine the separate ways in a relation to make one really big polygon. After creating all your polygons, then you would select all your polygons and click create multi-polygon and give them roles. I am still reluctantly learning about these complexities so someone else may need to correct this if necessary.<br />
 </p>
 <p>I am interested in how you managed to do such a big and detailed trace - 4000 clicks is certainly an effort worthy of a special tag in this forum especially if done one click at a time.</p>
-<p>Did you use <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Lakewalker">Lakewalker</a> which seems not active from this note on the page "Lakewalker is no longer actively developed and is considered 'dead' Use Scanaerial instead." or did you use <a href="http://wiki.openstreetmap.org/wiki/Scanaerial">Scanaerial</a></p>
+<p>Did you use <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Lakewalker">Lakewalker</a> which seems not active from this note on the page "Lakewalker is no longer actively developed and is considered 'dead' Use Scanaerial instead." or did you use <a href="https://wiki.openstreetmap.org/wiki/Scanaerial">Scanaerial</a></p>
 <p>I am not familiar with either but I am thinking of giving them a run with a creek in my area if the images available define the water body well enough.</p>
 </div>
 <div class="answer-controls post-controls">

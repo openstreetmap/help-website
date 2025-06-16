@@ -216,7 +216,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi what do you mean by ‘There are many types of images that I want to tag, but just only one icon can show on the map’? The number of icons on a map depends on the number or zoom levels, not in the least the renderer. Please read this as well. <a href="https://help.openstreetmap.org/questions/4907/can-i-insert-new-icon">https://help.openstreetmap.org/questions/4907/can-i-insert-new-icon</a></p>
+<p>Hi what do you mean by ‘There are many types of images that I want to tag, but just only one icon can show on the map’? The number of icons on a map depends on the number or zoom levels, not in the least the renderer. Please read this as well. <a href="/questions/4907/can-i-insert-new-icon">https://help.openstreetmap.org/questions/4907/can-i-insert-new-icon</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

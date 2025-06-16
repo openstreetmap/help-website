@@ -44,9 +44,9 @@ osqa_accepted = false
 <p>EDIT:</p>
 <h2 id="what-we-see">What we see</h2>
 <p>Even with the standard Garmin maps, the Nuvi 2415 does not seem to have the function to display the POI symbols all together on the map. What is possible is to filter by a POI type and then those POIs are shown as dots:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/29543.png" alt="alt text" /></p>
+<p><img src="/upfiles/29543.png" alt="alt text" /></p>
 <h2 id="what-we-want">What we want</h2>
-<p><img src="http://help.openstreetmap.org/upfiles/gps_map_santiago.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/gps_map_santiago.jpg" alt="alt text" /></p>
 <p>But we would like <strong>to show different (all) kinds of POIs at once</strong>. This is for example possible on the Nuvi 205 series. You click on the map and see all POIs (in high zoom levels)</p>
 <p>Map Detail is already set to "more" (that's the max level).</p>
 <p><em>Without that function the device is pretty useless for mapping. To problem is that we have lots of those devices as no others are available in the country and exchanging them is currently not possible.</em></p>

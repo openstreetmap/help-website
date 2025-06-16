@@ -115,7 +115,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p><code>update.php</code> is for incremental data updates in <a href="https://wiki.openstreetmap.org/wiki/OsmChange">https://wiki.openstreetmap.org/wiki/OsmChange</a> format only. See <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/diffs">https://wiki.openstreetmap.org/wiki/Planet.osm/diffs</a> for an explanation. It's useful for keeping Kenya up-to-date, but you can't use it to add a new country/region.</p>
 <p>For importing two countries you need to first merge the files kenya+nigeria, then import. In your case that means first deleting the database and starting again.</p>
-<p>See <a href="https://help.openstreetmap.org/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim">https://help.openstreetmap.org/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim</a> and <a href="http://nominatim.org/release-docs/latest/admin/Faq/#can-i-import-multiple-countries-and-keep-them-up-to-date">http://nominatim.org/release-docs/latest/admin/Faq/#can-i-import-multiple-countries-and-keep-them-up-to-date</a></p>
+<p>See <a href="/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim">https://help.openstreetmap.org/questions/48843/merging-two-or-more-geographical-areas-to-import-two-or-more-osm-files-in-nominatim</a> and <a href="http://nominatim.org/release-docs/latest/admin/Faq/#can-i-import-multiple-countries-and-keep-them-up-to-date">http://nominatim.org/release-docs/latest/admin/Faq/#can-i-import-multiple-countries-and-keep-them-up-to-date</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

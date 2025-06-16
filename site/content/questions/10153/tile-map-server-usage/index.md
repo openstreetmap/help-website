@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You seem to be familiar with the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> already. The policy doesn't spell out what "heavy" use is, mostly because we wanted to avoid people assuming that if N tiles are too much then N-1 must be "allowed".</p>
+<p>You seem to be familiar with the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> already. The policy doesn't spell out what "heavy" use is, mostly because we wanted to avoid people assuming that if N tiles are too much then N-1 must be "allowed".</p>
 <p>That's why you will not find an "official" limit anywhere. But OpenStreetMap tile servers hand out about 4 million tiles every hour. Measured against that, no sane person would call 10,000 tiles per year "heavy use"!</p>
 </div>
 <div class="answer-controls post-controls">

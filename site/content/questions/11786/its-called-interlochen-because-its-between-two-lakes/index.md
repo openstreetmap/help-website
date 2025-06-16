@@ -76,7 +76,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I have plotted the lakes using bing, I'll leave the name tags for somebody with local knowledge. <a href="http://www.openstreetmap.org/?lat=44.62726&amp;lon=-85.75994&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=44.62726&amp;lon=-85.75994&amp;zoom=15&amp;layers=M</a></p>
+<p>I have plotted the lakes using bing, I'll leave the name tags for somebody with local knowledge. <a href="https://www.openstreetmap.org/?lat=44.62726&amp;lon=-85.75994&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=44.62726&amp;lon=-85.75994&amp;zoom=15&amp;layers=M</a></p>
 </div>
 <div id="comment-12103-info" class="comment-info">
 <span class="comment-age">(17 Apr '12, 23:49)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -136,7 +136,7 @@ osqa_accepted = false
 <li>Contributed work of many people who, like you, found that something was missing and decided to fix it.</li>
 </ol>
 <p>I got started updating several years ago because I found errors and omissions in the map. Instead of having to send an e-mail to a commercial source, wait for them to get around to evaluating my data, update their data, and then <strong>sell</strong> me back the corrections; I could just fix the error, and it would be freely available to everyone. What's not to like?</p>
-<p>You might want to consider doing that for the area around Interlochen, Mi. The "<a href="http://help.openstreetmap.org/questions/6/how-do-i-get-started-with-openstreetmap">How Do I Get Started With OpenStreetMap</a>" page is a good place to start.</p>
+<p>You might want to consider doing that for the area around Interlochen, Mi. The "<a href="/questions/6/how-do-i-get-started-with-openstreetmap">How Do I Get Started With OpenStreetMap</a>" page is a good place to start.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

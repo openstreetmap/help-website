@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes. See the answers to <a href="http://help.openstreetmap.org/search/?q=dakota&amp;Submit=search&amp;t=question">these previous questions</a>.</p>
+<p>Yes. See the answers to <a href="https://help.openstreetmap.org/search/?q=dakota&amp;Submit=search&amp;t=question">these previous questions</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

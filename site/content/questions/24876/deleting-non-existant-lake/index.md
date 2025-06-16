@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Where? Please provide a <a href="http://wiki.openstreetmap.org/wiki/Permalink">permalink</a>.</p>
+<p>Where? Please provide a <a href="https://wiki.openstreetmap.org/wiki/Permalink">permalink</a>.</p>
 </div>
 <div id="comment-24877-info" class="comment-info">
 <span class="comment-age">(04 Aug '13, 09:05)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi There, If this is the lake you refer to :- <a href="http://www.openstreetmap.org/?lat=35.066138&amp;lon=-80.934555&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=35.066138&amp;lon=-80.934555&amp;zoom=18&amp;layers=M</a> then the Bing image of 2010/2011 says to me the lakes are no longer in existance. If you have first hand knowledge/observation to support this then delete them. Map the supermarket buildings in their place.</p>
+<p>Hi There, If this is the lake you refer to :- <a href="https://www.openstreetmap.org/?lat=35.066138&amp;lon=-80.934555&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=35.066138&amp;lon=-80.934555&amp;zoom=18&amp;layers=M</a> then the Bing image of 2010/2011 says to me the lakes are no longer in existance. If you have first hand knowledge/observation to support this then delete them. Map the supermarket buildings in their place.</p>
 <p>If you don't feel confident I could do it for you.</p>
 <p>Regards Bernard</p>
 </div>

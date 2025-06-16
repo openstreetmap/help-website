@@ -114,10 +114,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe this question can already help you:</p>
-<p><a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers</a></p>
+<p><a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers</a></p>
 <p>You have to get familiar with the basics of OSM and how you can process the data to get a map.</p>
 <p>More hints are at the OSM wiki and this FAQ site when you search for keywords like print, map, rendering, maperitive, tilemill, SVG, PDF and so on.</p>
-<p>There are also some companies who offer commercial services with OSM data, see <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></p>
+<p>There are also some companies who offer commercial services with OSM data, see <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></p>
 <p>Keep on asking if you get stuck somewhere ... add <em>comments</em> here.</p>
 </div>
 <div class="answer-controls post-controls">

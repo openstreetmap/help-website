@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:colour">colour</a> tag allows CSS color names or RGB color codes (#RRGGBB), according to the wiki page.</p>
-<p>But the wiki page for the <a href="http://wiki.openstreetmap.org/wiki/Key:osmc:symbol">osmc:symbol</a> tag only mentions use of color names. Does this tag not allow use of RGB color codes?</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:colour">colour</a> tag allows CSS color names or RGB color codes (#RRGGBB), according to the wiki page.</p>
+<p>But the wiki page for the <a href="https://wiki.openstreetmap.org/wiki/Key:osmc:symbol">osmc:symbol</a> tag only mentions use of color names. Does this tag not allow use of RGB color codes?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-colour" rel="tag" title="see questions tagged &#39;colour&#39;">colour</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

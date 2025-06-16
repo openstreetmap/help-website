@@ -361,7 +361,7 @@ out center;</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Possibly the simplest way to convert OSM data to CSV is using osmconvert: <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">http://wiki.openstreetmap.org/wiki/Osmconvert</a></p>
+<p>Possibly the simplest way to convert OSM data to CSV is using osmconvert: <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">https://wiki.openstreetmap.org/wiki/Osmconvert</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

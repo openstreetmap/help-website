@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Click on the import tag I added to your question and you will see (at the moment) 47 questions about importing data in OSM. E.g. this one: <a href="https://help.openstreetmap.org/questions/16493/how-to-import-big-data">how-to-import-big-data</a> and this one: <a href="https://help.openstreetmap.org/questions/18825/how-to-import-a-statewide-road-centerline-file">how-to-import-a-statewide-road-centerline-file</a></p>
+<p>Click on the import tag I added to your question and you will see (at the moment) 47 questions about importing data in OSM. E.g. this one: <a href="/questions/16493/how-to-import-big-data">how-to-import-big-data</a> and this one: <a href="/questions/18825/how-to-import-a-statewide-road-centerline-file">how-to-import-a-statewide-road-centerline-file</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

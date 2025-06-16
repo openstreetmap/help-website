@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rendering problems with public_transport=station or mistake ?"
-description = '''Hi all, I wanted to add more details to a train_station, I followed the new public_transport principles (http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport) but I think I did a mistake : platforms, and highway=foot with area=yes do not appear :  http://www.openstreetmap.org/?lat=4...'''
+description = '''Hi all, I wanted to add more details to a train_station, I followed the new public_transport principles (https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport) but I think I did a mistake : platforms, and highway=foot with area=yes do not appear :  https://www.openstreetmap.org/?lat=4...'''
 date = "2013-07-02T21:23:00Z"
 lastmod = "2013-07-02T21:54:00Z"
 weight = 23915
@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>I wanted to add more details to a train_station, I followed the new public_transport principles (<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport">http://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport</a>) but I think I did a mistake : platforms, and highway=foot with area=yes do not appear :</p>
-<p><a href="http://www.openstreetmap.org/?lat=44.889148&amp;lon=6.633586&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=44.889148&amp;lon=6.633586&amp;zoom=18&amp;layers=M</a> and on the tiles view : <a href="http://tile.openstreetmap.fr/?zoom=18&amp;lat=44.88899&amp;lon=6.63228&amp;layers=B00000FFF">http://tile.openstreetmap.fr/?zoom=18&amp;lat=44.88899&amp;lon=6.63228&amp;layers=B00000FFF</a></p>
+<p>I wanted to add more details to a train_station, I followed the new public_transport principles (<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport">https://wiki.openstreetmap.org/wiki/Proposed_features/Public_Transport</a>) but I think I did a mistake : platforms, and highway=foot with area=yes do not appear :</p>
+<p><a href="https://www.openstreetmap.org/?lat=44.889148&amp;lon=6.633586&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=44.889148&amp;lon=6.633586&amp;zoom=18&amp;layers=M</a> and on the tiles view : <a href="http://tile.openstreetmap.fr/?zoom=18&amp;lat=44.88899&amp;lon=6.63228&amp;layers=B00000FFF">http://tile.openstreetmap.fr/?zoom=18&amp;lat=44.88899&amp;lon=6.63228&amp;layers=B00000FFF</a></p>
 <p>Here is how I did : - The station area tagged with public_transport=station - The platform tagged with public_transport=platform - The approximative stop position tagged as stop_position - All of them in a relation (type=public_transport, public_transport=stop_area with the good roles (I think).</p>
-<p>The platforms does not appear on the map. I saw it's not already supported on Mapnik due to migration to CartoCSS <a href="https://help.openstreetmap.org/questions/19349/rendering-of-public_transportplatform-on-mapnik">https://help.openstreetmap.org/questions/19349/rendering-of-public_transportplatform-on-mapnik</a> (didn't find anywhere if this is finsihed).</p>
+<p>The platforms does not appear on the map. I saw it's not already supported on Mapnik due to migration to CartoCSS <a href="/questions/19349/rendering-of-public_transportplatform-on-mapnik">https://help.openstreetmap.org/questions/19349/rendering-of-public_transportplatform-on-mapnik</a> (didn't find anywhere if this is finsihed).</p>
 <p>I tried to add highway=footway on platforms but it's not better.</p>
 <p>Could you tell me if I made something wrong or if something is missing ?</p>
 <p>Thanks,</p>

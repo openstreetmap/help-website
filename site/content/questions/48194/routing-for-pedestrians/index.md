@@ -201,16 +201,16 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>look at:-</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk">http://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way">http://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Area/The_Future_of_Areas">http://wiki.openstreetmap.org/wiki/Area/The_Future_of_Areas</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Street_area">http://wiki.openstreetmap.org/wiki/Proposed_features/Street_area</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">http://wiki.openstreetmap.org/wiki/Proposed_features/area:highway</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/area_highway/mapping_guidelines">http://wiki.openstreetmap.org/wiki/Proposed_features/area_highway/mapping_guidelines</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk">https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way">https://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk_as_separate_way</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Area/The_Future_of_Areas">https://wiki.openstreetmap.org/wiki/Area/The_Future_of_Areas</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Street_area">https://wiki.openstreetmap.org/wiki/Proposed_features/Street_area</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/area_highway/mapping_guidelines">https://wiki.openstreetmap.org/wiki/Proposed_features/area_highway/mapping_guidelines</a></p>
 <p>these should help you get started with pedestrian level maps and routing if you follow all the links on those pages you can learn a lot on the subject. Some of it still feels new to older contributers and input so far is patchy but expanding steadily.</p>
 <p>when it comes to going into buildings there are moves to use a combination of highway and special indoor tagging to discrbe things like malls, station, shops, lots of public buildings etc. They also handle multi-floored buildings with level or elevation sperated tagging though some older contributers have big problems with stacked nodes they aren't technicaly not allowed are needed in cirtain places with these new schemes such as entrance doors to flats in highrise blocks for instance...</p>
 <p>some infomation can be found on wiki searches on indoor mapping such as:-</p>
-<p><a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;search=indoor&amp;fulltext=Search">http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;search=indoor&amp;fulltext=Search</a> <a href="http://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">http://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging</a> <a href="http://wiki.openstreetmap.org/wiki/Indoor_Mapping">http://wiki.openstreetmap.org/wiki/Indoor_Mapping</a></p>
+<p><a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;search=indoor&amp;fulltext=Search">https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;search=indoor&amp;fulltext=Search</a> <a href="https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging</a> <a href="https://wiki.openstreetmap.org/wiki/Indoor_Mapping">https://wiki.openstreetmap.org/wiki/Indoor_Mapping</a></p>
 <p>by resurching through the above you can a lean a lot about how others have been doing what you are trying to map.</p>
 <p>incedentaly its a area I also try to focus on in my contributions.</p>
 </div>

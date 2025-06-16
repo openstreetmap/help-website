@@ -121,7 +121,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>To be honest, I'm also experiencing some problems these days. In the area you linked above, at any zoom level I can't see this cafe: <a href="https://www.openstreetmap.org/node/3210476876">https://www.openstreetmap.org/node/3210476876</a> you draw nine days ago, and various trees both sides the townhall entrance. Another example from my area, here: <a href="http://a.tile.openstreetmap.org/16/34366/23408.png">http://a.tile.openstreetmap.org/16/34366/23408.png</a> I can't see this building, which is nine days old too: <a href="http://www.openstreetmap.org/way/315020954">http://www.openstreetmap.org/way/315020954</a></p>
+<p>To be honest, I'm also experiencing some problems these days. In the area you linked above, at any zoom level I can't see this cafe: <a href="https://www.openstreetmap.org/node/3210476876">https://www.openstreetmap.org/node/3210476876</a> you draw nine days ago, and various trees both sides the townhall entrance. Another example from my area, here: <a href="http://a.tile.openstreetmap.org/16/34366/23408.png">http://a.tile.openstreetmap.org/16/34366/23408.png</a> I can't see this building, which is nine days old too: <a href="https://www.openstreetmap.org/way/315020954">https://www.openstreetmap.org/way/315020954</a></p>
 </div>
 <div id="comment-39145-info" class="comment-info">
 <span class="comment-age">(08 Dec '14, 18:48)</span> <span class="comment-user userinfo">Alecs01</span>
@@ -133,7 +133,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>At least I know it's not something with my computer.</p>
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> The tiles with old data are generated from a.tile.openstreetmap.org, b.tile.openstreetmap.org and c.tile.openstreetmap.org.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> The tiles with old data are generated from a.tile.openstreetmap.org, b.tile.openstreetmap.org and c.tile.openstreetmap.org.</p>
 <p>And I still have the problem.</p>
 <p>I managed to narrow it down a little. If I see the new data and I hit the shift + Refresh button in browser, it delivers the old images. However, in the other browser, opening the map showed the old data first, doing the refresh brought the new data!</p>
 </div>

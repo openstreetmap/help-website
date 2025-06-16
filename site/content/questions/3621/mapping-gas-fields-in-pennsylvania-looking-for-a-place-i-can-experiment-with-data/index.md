@@ -117,12 +117,12 @@ One Answer:
 <blockquote>
 <p>Is there a place I can experiment with the data I obtain for downloading. I would also like to play with aerial maps and TIGER data that maybe more current than what is now on OSM.</p>
 </blockquote>
-<p>Yes, there is a <a href="http://wiki.openstreetmap.org/wiki/Using_the_dev_server">development server</a> for people working on OSM. You will need to obtain an account to use it, but as far as I can tell your project should be acceptable.</p>
-<p>Or you could just set up your own test server, on your own desktop or on another system you have. See <a href="http://wiki.openstreetmap.org/wiki/Setting_up_a_test_server/0.3">setting up a test server</a> on the Wiki.</p>
+<p>Yes, there is a <a href="https://wiki.openstreetmap.org/wiki/Using_the_dev_server">development server</a> for people working on OSM. You will need to obtain an account to use it, but as far as I can tell your project should be acceptable.</p>
+<p>Or you could just set up your own test server, on your own desktop or on another system you have. See <a href="https://wiki.openstreetmap.org/wiki/Setting_up_a_test_server/0.3">setting up a test server</a> on the Wiki.</p>
 <blockquote>
 <p>One other question. When a road project is not aligned with the aerial map projection--which of them is most accurate?</p>
 </blockquote>
-<p>See the question <a href="http://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>.</p>
+<p>See the question <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">Which is more reliable..? GPS traces or aerial imagery?</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

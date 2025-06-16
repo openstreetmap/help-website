@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I've managed to setup both locally tile_server and API on rails-port. Their dbs are populated with local copy of maps. Im able to preview tiles and download rawdata from API using JOSM. When im uploading changes back to API server i cannot see the changes on tiles, which is ok because they have seperate databases.</p>
 <p>I assume replication is needed.</p>
-<p>I've gone through <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Replication">http://wiki.openstreetmap.org/wiki/Osmosis/Replication</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43</a></p>
+<p>I've gone through <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Replication">https://wiki.openstreetmap.org/wiki/Osmosis/Replication</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.43</a></p>
 <p>Right now im a bit stuck because, when i tried to use</p>
 <p>osmosis --replicate-apidb</p>
 <p>I ended up with new folder called replicate which has state.txt replicate.lock files and 000 folder and inside this folder i have 001.state.txt and 001.osc.gz</p>

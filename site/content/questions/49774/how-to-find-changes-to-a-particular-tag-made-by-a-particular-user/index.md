@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can get part of the way to what you want using Overpass API, which has support for restricting queries by user. <a href="http://overpass-turbo.eu/s/gmy">Here's an example.</a> So that at least gets you to tracks in your area of interest that were last touched by the user in question. I guess you could then retrieve the previous version of each way from the main api and examine it together with the current version to check for the questionable edits.</p>
-<p>There is also some support in Overpass for examining changes, but <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Delta_between_two_dates_.28.22diff.22.29">it is based on dates</a> not users or versions.</p>
+<p>There is also some support in Overpass for examining changes, but <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Delta_between_two_dates_.28.22diff.22.29">it is based on dates</a> not users or versions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

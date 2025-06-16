@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I too experienced this issue when running a university-based workshop. Afterwards I was told there was an Internet Explorer(IE) issue that it was likely to be.</p>
-<p>The lack of support for IE is briefly mentioned on the <a href="http://wiki.openstreetmap.org/wiki/ID#Use_it">iD page</a> of the OpenStreetMap wiki. As Firefox also has limited support, it seems the best suggestion would be for the user to install the <a href="http://www.google.com/chrome/">Chrome web browser</a> if they want to use the iD Editor (and thus follow the same instructions from you) rather than other editors.</p>
+<p>The lack of support for IE is briefly mentioned on the <a href="https://wiki.openstreetmap.org/wiki/ID#Use_it">iD page</a> of the OpenStreetMap wiki. As Firefox also has limited support, it seems the best suggestion would be for the user to install the <a href="http://www.google.com/chrome/">Chrome web browser</a> if they want to use the iD Editor (and thus follow the same instructions from you) rather than other editors.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

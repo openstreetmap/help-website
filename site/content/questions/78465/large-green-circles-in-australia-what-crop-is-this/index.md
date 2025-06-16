@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>A British Broadcasting radio prog on farming made me look at this area -33.7117911, 148.584271 I found large green circle, I suspect they may have some sort of huge rotating irrigation system. How should they be mapped?<img src="https://help.openstreetmap.org/upfiles/Green_circles_in_Australia.JPG" alt="alt text" /></p>
+<p>A British Broadcasting radio prog on farming made me look at this area -33.7117911, 148.584271 I found large green circle, I suspect they may have some sort of huge rotating irrigation system. How should they be mapped?<img src="/upfiles/Green_circles_in_Australia.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-greencircle" rel="tag" title="see questions tagged &#39;greencircle&#39;">greencircle</span>

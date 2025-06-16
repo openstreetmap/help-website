@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look at the all knowing OSM wiki,</p>
-<p>especially at <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a></p>
+<p>especially at <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners Guide</a></p>
 <p>You can trace own recorded GPS traces, or use BING aerial pictures that we are allowed to use and if they are available for your region.</p>
 <p>Do not use sources we are not allowed like GoogleMaps or similar!</p>
 </div>

@@ -311,7 +311,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some questions, Please provide more info for instance an address of the shop ? Which menu are you referring to ? OSM.org ? If so please read the instructions how to participate, <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> and the beginners site <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">http://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a> and its 2 minutes work to add the intended shop address PPs use Potlach 2 or ID to contribute.</p>
+<p>Some questions, Please provide more info for instance an address of the shop ? Which menu are you referring to ? OSM.org ? If so please read the instructions how to participate, <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> and the beginners site <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">https://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a> and its 2 minutes work to add the intended shop address PPs use Potlach 2 or ID to contribute.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -332,7 +332,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>When I clicked the Edit button, it said that the Map couldn't load and also said this:</p>
 <p>There was a problem loading the map data. Please check your internet connection, or try zooming in.</p>
-<p><a href="http://www.openstreetmap.org/api/0.6/map?bbox=%2D126%2E03223242187512%2C19%2E64702570818156%2C%2D65%2E65576757812488%2C51%2E091226687246646">http://www.openstreetmap.org/api/0.6/map?bbox=%2D126%2E03223242187512%2C19%2E64702570818156%2C%2D65%2E65576757812488%2C51%2E091226687246646</a></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/map?bbox=%2D126%2E03223242187512%2C19%2E64702570818156%2C%2D65%2E65576757812488%2C51%2E091226687246646">https://www.openstreetmap.org/api/0.6/map?bbox=%2D126%2E03223242187512%2C19%2E64702570818156%2C%2D65%2E65576757812488%2C51%2E091226687246646</a></p>
 </div>
 <div id="comment-35584-info" class="comment-info">
 <span class="comment-age">(06 Aug '14, 20:48)</span> <span class="comment-user userinfo">Collectors C...</span>

@@ -113,7 +113,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OpenStreetMap isn't just the website that you see at openstreetmap.org - lots of people take openstreetmap data and create websites with entirely different functionality from it. Some also use map tiles from openstreetmap.org (or another provider) and display those within a different website. One example that does something a bit like what you seem to be asking for is <a href="http://openpoimap.org/">http://openpoimap.org/</a>, but I'm sure that there are lots of others. See also the list <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">here</a> for other examples.</p>
+<p>OpenStreetMap isn't just the website that you see at openstreetmap.org - lots of people take openstreetmap data and create websites with entirely different functionality from it. Some also use map tiles from openstreetmap.org (or another provider) and display those within a different website. One example that does something a bit like what you seem to be asking for is <a href="http://openpoimap.org/">http://openpoimap.org/</a>, but I'm sure that there are lots of others. See also the list <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">here</a> for other examples.</p>
 <p>(<a href="https://translate.google.com/translate?sl=en&amp;tl=ro&amp;js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=https%3A%2F%2Fhelp.openstreetmap.org%2Fquestions%2F44036%2Fpoint-issue%3Fpage%3D1%26focusedAnswerId%3D44037%2344037&amp;edit-text=&amp;act=url">automatic translation</a>)</p>
 </div>
 <div class="answer-controls post-controls">

@@ -130,7 +130,7 @@ osqa_accepted = false
 <div id="post-49978-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12376/das_ubersoldat">@das_ubersoldat</a>: In general, please do not post your questions to several places (at least not without mentioning it and linking all places). That wastes help resources.</p>
+<p><a href="https://help.openstreetmap.org/users/12376/das_ubersoldat">@das_ubersoldat</a>: In general, please do not post your questions to several places (at least not without mentioning it and linking all places). That wastes help resources.</p>
 </div>
 <div id="comment-49978-info" class="comment-info">
 <span class="comment-age">(02 Jun '16, 19:41)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

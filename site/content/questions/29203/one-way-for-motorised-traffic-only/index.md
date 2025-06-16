@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi look at the <a href="http://wiki.openstreetmap.org/wiki/Oneway">oneway tag's wiki page</a>, happy mapping.</p>
+<p>Hi look at the <a href="https://wiki.openstreetmap.org/wiki/Oneway">oneway tag's wiki page</a>, happy mapping.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

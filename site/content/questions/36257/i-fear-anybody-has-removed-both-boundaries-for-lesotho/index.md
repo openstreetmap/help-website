@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "I fear anybody has removed both boundaries for lesotho"
-description = '''Hi all, I&#x27;m a Windows developer (Delphi) and are working on an application which shows boundaries of countries for faster finding the country&#x27;s place in the world. Now I&#x27;ve seen there&#x27;s no boundary of lesotho. When I click the link &quot;Staatsgrenze Königreich Lesotho&quot; = http://www.openstreetmap.org/rel...'''
+description = '''Hi all, I&#x27;m a Windows developer (Delphi) and are working on an application which shows boundaries of countries for faster finding the country&#x27;s place in the world. Now I&#x27;ve seen there&#x27;s no boundary of lesotho. When I click the link &quot;Staatsgrenze Königreich Lesotho&quot; = https://www.openstreetmap.org/rel...'''
 date = "2014-08-27T10:45:00Z"
 lastmod = "2014-08-27T12:28:00Z"
 weight = 36257
@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>I'm a Windows developer (Delphi) and are working on an application which shows boundaries of countries for faster finding the country's place in the world. Now I've seen there's no boundary of lesotho. When I click the link "Staatsgrenze Königreich Lesotho" = <a href="http://www.openstreetmap.org/relation/88206">http://www.openstreetmap.org/relation/88206</a> a hint appears and tells me: "boundary lesotho - removed, because there we two identical boundary relations". I fear anybody has removed both boundaries for lesotho ...</p>
+<p>I'm a Windows developer (Delphi) and are working on an application which shows boundaries of countries for faster finding the country's place in the world. Now I've seen there's no boundary of lesotho. When I click the link "Staatsgrenze Königreich Lesotho" = <a href="https://www.openstreetmap.org/relation/88206">https://www.openstreetmap.org/relation/88206</a> a hint appears and tells me: "boundary lesotho - removed, because there we two identical boundary relations". I fear anybody has removed both boundaries for lesotho ...</p>
 <p>greetings von Karlsruhe, Germany</p>
 <p><span class="small">in German:<br />
-Hi, ich bin Windows-Entwickler, arbeite mit Delphi und arbeite derzeit an einem Programm, das Umrisse der Staatsgrenzen anzeigt, um auf diese Weise schneller erkennen zu können, wo auf der Welt ein Staat liegt. Nun habe ich festgestelt, daß für Lesotho kein Boundary existiert. Es wurde offenbar entfernt, weil, wie in der Meldung zu sehen ist, zwei Boundaries existieren. Womöglich hat man hier aber beide Boundaries entfernt: <a href="http://www.openstreetmap.org/relation/88206">http://www.openstreetmap.org/relation/88206</a><br />
+Hi, ich bin Windows-Entwickler, arbeite mit Delphi und arbeite derzeit an einem Programm, das Umrisse der Staatsgrenzen anzeigt, um auf diese Weise schneller erkennen zu können, wo auf der Welt ein Staat liegt. Nun habe ich festgestelt, daß für Lesotho kein Boundary existiert. Es wurde offenbar entfernt, weil, wie in der Meldung zu sehen ist, zwei Boundaries existieren. Womöglich hat man hier aber beide Boundaries entfernt: <a href="https://www.openstreetmap.org/relation/88206">https://www.openstreetmap.org/relation/88206</a><br />
 Grüße aus Karlsruhe, Germany</span></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -115,8 +115,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Is <a href="http://www.openstreetmap.org/relation/2093234">http://www.openstreetmap.org/relation/2093234</a> what you want?</p>
-<p>I found that by <a href="http://www.openstreetmap.org/relation/88206/history">showing the history of the deleted relation</a>, clicking on a <a href="http://www.openstreetmap.org/way/107378816#map=12/-29.9530/29.0928&amp;layers=N">way</a>, and looking at what relations it was part of.</p>
+<p>Is <a href="https://www.openstreetmap.org/relation/2093234">https://www.openstreetmap.org/relation/2093234</a> what you want?</p>
+<p>I found that by <a href="https://www.openstreetmap.org/relation/88206/history">showing the history of the deleted relation</a>, clicking on a <a href="https://www.openstreetmap.org/way/107378816#map=12/-29.9530/29.0928&amp;layers=N">way</a>, and looking at what relations it was part of.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -149,7 +149,7 @@ One Answer:
 <div id="post-36270-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9531/pcheiler">@PCHeiler</a>: Please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark this answer as accepted</a> if it solves your problem.</p>
+<p><a href="https://help.openstreetmap.org/users/9531/pcheiler">@PCHeiler</a>: Please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark this answer as accepted</a> if it solves your problem.</p>
 </div>
 <div id="comment-36270-info" class="comment-info">
 <span class="comment-age">(27 Aug '14, 12:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

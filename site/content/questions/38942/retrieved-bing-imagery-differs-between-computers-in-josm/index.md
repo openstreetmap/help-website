@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-39201-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>did you want to add this is as a comment to your old question? Please go to it <a href="https://help.openstreetmap.org/questions/38898/retrieved-bing-imagery-differs-between-computers-in-josm">https://help.openstreetmap.org/questions/38898/retrieved-bing-imagery-differs-between-computers-in-josm</a> , login here, and use the "edit" below your question text.</p>
+<p>did you want to add this is as a comment to your old question? Please go to it <a href="/questions/38898/retrieved-bing-imagery-differs-between-computers-in-josm">https://help.openstreetmap.org/questions/38898/retrieved-bing-imagery-differs-between-computers-in-josm</a> , login here, and use the "edit" below your question text.</p>
 </div>
 <div id="comment-39201-info" class="comment-info">
 <span class="comment-age">(11 Dec '14, 00:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

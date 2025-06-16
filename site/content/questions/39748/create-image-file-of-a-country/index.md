@@ -145,10 +145,10 @@ osqa_accepted = false
 <p>To render 4GB with maperitive on you desktop will take some time. My last map sources were 44 MB and took eight seconds to render.</p>
 <p>The possibilities you have imho:</p>
 <ul>
-<li>Strip the file down to relevant data (big highways, boundaries, cities, woods etc) using <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">OSMfilter</a> and try to render the result with maperitive.</li>
+<li>Strip the file down to relevant data (big highways, boundaries, cities, woods etc) using <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">OSMfilter</a> and try to render the result with maperitive.</li>
 <li>Go to <a href="http://maposmatic.org"></a><a href="http://maposmatic.org">http://maposmatic.org</a>, create a map of Belgium, download the SVG and edit it to your liking</li>
 <li>Use <a href="http://overpass-turbo.eu/">http://overpass-turbo.eu/</a> with a self defined css, make the browser window a little bigger and export the image as png. My result you can see/download <a href="http://malenki.ch/OSM/Bilder/export_belgien_ok.png">here</a> (32MB).</li>
-<li>Nearly the same as above: <a href="http://wiki.openstreetmap.org/wiki/Bigmap">Bigmap</a></li>
+<li>Nearly the same as above: <a href="https://wiki.openstreetmap.org/wiki/Bigmap">Bigmap</a></li>
 <li>Use the share-button at osm.org and select the format you want. Problem: I tried it for Belgium and got the two times I tried it a gateway timeout.</li>
 </ul>
 <p>hth<br />
@@ -194,7 +194,7 @@ Thomas</p>
 1
 </div>
 <div class="comment-text">
-<p>also have a general look at <a href="http://wiki.openstreetmap.org/wiki/Rendering">http://wiki.openstreetmap.org/wiki/Rendering</a></p>
+<p>also have a general look at <a href="https://wiki.openstreetmap.org/wiki/Rendering">https://wiki.openstreetmap.org/wiki/Rendering</a></p>
 <p>and maybe in detail to bigmap2 and Nik4 tools</p>
 </div>
 <div id="comment-39802-info" class="comment-info">
@@ -271,7 +271,7 @@ Thomas</p>
 1
 </div>
 <div class="comment-text">
-<p>You should also mention where one can <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">get osmfilter</a>.</p>
+<p>You should also mention where one can <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">get osmfilter</a>.</p>
 </div>
 <div id="comment-40420-info" class="comment-info">
 <span class="comment-age">(15 Jan '15, 20:56)</span> <span class="comment-user userinfo">malenki</span>

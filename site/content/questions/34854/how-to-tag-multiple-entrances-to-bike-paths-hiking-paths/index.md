@@ -130,7 +130,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would suggest tagging a node at the start of the path with its name (e.g. <code>name=East Randolph Entrance</code>) and with the <code>entrance=yes</code> tag to show that it's an entrance.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Entrance">http://wiki.openstreetmap.org/wiki/Entrance</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Entrance">https://wiki.openstreetmap.org/wiki/Entrance</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

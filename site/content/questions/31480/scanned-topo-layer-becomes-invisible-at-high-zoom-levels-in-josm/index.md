@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I asked a similar question, the answers i got may help <a href="https://help.openstreetmap.org/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2">https://help.openstreetmap.org/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2</a></p>
+<p>I asked a similar question, the answers i got may help <a href="/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2">https://help.openstreetmap.org/questions/12256/why-does-background-imagery-such-as-bing-only-display-up-to-a-certain-zoom-level-in-potlatch2</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

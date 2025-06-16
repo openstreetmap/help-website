@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Does anyone know whether it is possible to add an editable grid layer on OpenStreetMaps? Those squares should be clickable which means that they change their color. Background is I want to use OSM for groups to mark areas with specific aspects.</p>
 <p>If so it would be great to know how it works.</p>
-<p>Example:<img src="https://help.openstreetmap.org/upfiles/Screenshot_from_2023-08-24_13-58-17.png" alt="alt text" /></p>
+<p>Example:<img src="/upfiles/Screenshot_from_2023-08-24_13-58-17.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-layer" rel="tag" title="see questions tagged &#39;layer&#39;">layer</span> <span class="post-tag tag-link-grid" rel="tag" title="see questions tagged &#39;grid&#39;">grid</span>

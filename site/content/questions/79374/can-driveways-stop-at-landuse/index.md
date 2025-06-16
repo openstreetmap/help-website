@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I like to micromap driveways for <a href="https://help.openstreetmap.org/questions/79144/should-these-driveways-even-be-mapped/79147">several reasons</a>.</p>
+<p>I like to micromap driveways for <a href="/questions/79144/should-these-driveways-even-be-mapped/79147">several reasons</a>.</p>
 <p>A user has questioned whether it is correct to 'glue' the driveway to the edge of the landuse as I have done <a href="https://www.openstreetmap.org/search?query=dibbs%20st%20adamstown#map=19/-32.93867/151.71568">here</a>. They have suggested I should instead end the driveway at the intersecting footpath (sidewalk). My view is that:</p>
 <ol>
 <li>Their approach doesn't work where there is no footpath</li>

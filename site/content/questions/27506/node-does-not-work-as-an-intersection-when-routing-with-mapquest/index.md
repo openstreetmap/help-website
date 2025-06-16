@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello</p>
-<p>The <a href="http://www.openstreetmap.org/browse/node/1558695405">node 1558695405</a> is not recognized as an intersection in routing tool mapquest. Also not <a href="http://www.openstreetmap.org/browse/node/370582313">node 370582313</a>. Both have black rectangle and no turning restrictions. Is it an error in OSM or Mapquest routing?</p>
+<p>The <a href="https://www.openstreetmap.org/browse/node/1558695405">node 1558695405</a> is not recognized as an intersection in routing tool mapquest. Also not <a href="https://www.openstreetmap.org/browse/node/370582313">node 370582313</a>. Both have black rectangle and no turning restrictions. Is it an error in OSM or Mapquest routing?</p>
 <p>Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">

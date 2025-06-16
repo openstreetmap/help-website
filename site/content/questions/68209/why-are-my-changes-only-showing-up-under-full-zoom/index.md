@@ -68,7 +68,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Can have several reasons. Likely it is the same as <a href="/questions/8794/footpaths-not-showing-in-certain-zoom-levels">that question</a>.</p>
-<p>Please could you mention the location or object? Just copy the URL of <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> when you zoom to the location. Thanks.</p>
+<p>Please could you mention the location or object? Just copy the URL of <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> when you zoom to the location. Thanks.</p>
 </div>
 <div id="comment-68213-info" class="comment-info">
 <span class="comment-age">(01 Mar '19, 22:48)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

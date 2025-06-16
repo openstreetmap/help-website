@@ -103,7 +103,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>note: one tag is "umap". <a href="http://help.openstreetmap.org/users/12231/bzc2010"></a><a href="http://help.openstreetmap.org/users/12231/bzc2010">@Bzc2010</a>: please mention the address/URL of the page where you are editing</p>
+<p>note: one tag is "umap". <a href="https://help.openstreetmap.org/users/12231/bzc2010"></a><a href="https://help.openstreetmap.org/users/12231/bzc2010">@Bzc2010</a>: please mention the address/URL of the page where you are editing</p>
 </div>
 <div id="comment-49423-info" class="comment-info">
 <span class="comment-age">(25 Apr '16, 23:21)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

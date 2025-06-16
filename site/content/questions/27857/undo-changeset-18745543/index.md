@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "undo changeset #18745543"
-description = '''I inserted a new roundabout and a few other changes in my hometown. Now I see, there&#x27;s a bigger mistake and all surrounding streets converted to a big roundabout with 1 km of diameter... http://www.openstreetmap.org/browse/changeset/18745543  I&#x27;m not aware, i did that. But I&#x27;m also unable to revert ...'''
+description = '''I inserted a new roundabout and a few other changes in my hometown. Now I see, there&#x27;s a bigger mistake and all surrounding streets converted to a big roundabout with 1 km of diameter... https://www.openstreetmap.org/browse/changeset/18745543  I&#x27;m not aware, i did that. But I&#x27;m also unable to revert ...'''
 date = "2013-11-06T15:31:00Z"
 lastmod = "2013-11-06T19:31:00Z"
 weight = 27857
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I inserted a new roundabout and a few other changes in my hometown. Now I see, there's a bigger mistake and all surrounding streets converted to a big roundabout with 1 km of diameter... <a href="http://www.openstreetmap.org/browse/changeset/18745543">http://www.openstreetmap.org/browse/changeset/18745543</a></p>
+<p>I inserted a new roundabout and a few other changes in my hometown. Now I see, there's a bigger mistake and all surrounding streets converted to a big roundabout with 1 km of diameter... <a href="https://www.openstreetmap.org/browse/changeset/18745543">https://www.openstreetmap.org/browse/changeset/18745543</a></p>
 <p>I'm not aware, i did that. But I'm also unable to revert this. Can someone please help me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-27860-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Or this (one click on the icon instead of "O"): moving the mouse pointer a bit to the side (off the street you were just editing), clicking (thereby selecting <a href="http://www.openstreetmap.org/browse/way/30133361">the residential area</a>), moving the pointer a bit downwards (on the circle icon), clicking, <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=18745543#lon=11.72157232;lat=46.55863722;zoom=15;layer=Mpnk">done</a>. And if you have zoomed in much during editing and the viewport centre near the circle's centre you do not even see the circle you've just created.</p>
+<p>Or this (one click on the icon instead of "O"): moving the mouse pointer a bit to the side (off the street you were just editing), clicking (thereby selecting <a href="https://www.openstreetmap.org/browse/way/30133361">the residential area</a>), moving the pointer a bit downwards (on the circle icon), clicking, <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=18745543#lon=11.72157232;lat=46.55863722;zoom=15;layer=Mpnk">done</a>. And if you have zoomed in much during editing and the viewport centre near the circle's centre you do not even see the circle you've just created.</p>
 </div>
 <div id="comment-27860-info" class="comment-info">
 <span class="comment-age">(06 Nov '13, 16:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -169,7 +169,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I've reverted that changeset as requested (in <a href="http://www.openstreetmap.org/browse/changeset/18749348">18749348</a>).</p>
+<p>I've reverted that changeset as requested (in <a href="https://www.openstreetmap.org/browse/changeset/18749348">18749348</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -133,7 +133,7 @@ One Answer:
 <div class="answer-body">
 <p>I guess you are using the default editor iD. You have to search for "aparcamiento" (third result) or "estacionamiento" (first result).</p>
 <p>Traducción automática: Supongo que está utilizando el editor por defecto de iD. Tienes que buscar "aparcamiento" (tercer resultado) o "estacionamiento" (primer resultado).</p>
-<p><img src="https://help.openstreetmap.org/upfiles/foo_nxienSJ.png" alt="iD search result" /></p>
+<p><img src="/upfiles/foo_nxienSJ.png" alt="iD search result" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

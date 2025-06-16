@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I wonder where navigation tools use this difference. I think they use the road geometry to determine slight/normal/sharp. Of course in some cases the road geometry does not correspond with the reality. In those cases one should add something like <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/placement">placement=transitional</a>. For those cases the difference between slight/normal/sharp could be added in the turn restriction or turn:lanes tag.</p>
+<p>I wonder where navigation tools use this difference. I think they use the road geometry to determine slight/normal/sharp. Of course in some cases the road geometry does not correspond with the reality. In those cases one should add something like <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/placement">placement=transitional</a>. For those cases the difference between slight/normal/sharp could be added in the turn restriction or turn:lanes tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

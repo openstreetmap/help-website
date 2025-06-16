@@ -116,7 +116,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>Nominatim understands the <em>near</em> keyword to search for certain POI types around a coordinate. For example, you can ask for schools around a geo point like this:</p>
 <p><a href="http://nominatim.openstreetmap.org/search?q=school%20near%20%5B41.760584,-88.320071%5D"></a><a href="http://nominatim.openstreetmap.org/search?q=school">http://nominatim.openstreetmap.org/search?q=school</a> near [41.760584,-88.320071]</p>
-<p>The types of POIs that Nominatim currently understands are listed on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">this page of special phrases</a>.</p>
+<p>The types of POIs that Nominatim currently understands are listed on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN">this page of special phrases</a>.</p>
 <p>Note however, this query will not necessarily get you all the schools in the area but only a selection. Nominatim is a search tool after all, not a tool for downloading data. If you need complete lists, the Overpass or XAPI are indeed better suited.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -189,7 +189,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> or the <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> or the <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

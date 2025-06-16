@@ -147,7 +147,7 @@ osqa_accepted = false
 <p>I haven't tried merging or stitching multiple .img files but these links may help...</p>
 <p><a href="http://www.gmaptool.eu/en/content/gmaptool">GMapTool</a><br />
 <a href="http://activityworkshop.net/gps/maps/combining.html">Mkgmap advice</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

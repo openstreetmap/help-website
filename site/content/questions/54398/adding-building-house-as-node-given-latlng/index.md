@@ -112,7 +112,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Area features are better for buildings, even for small buildings. Checking the background imagery, it looks clear enough there to derive a reasonable footprint for the building.</p>
-<p>Also take a look at <a href="http://wiki.openstreetmap.org/wiki/Tag:building%3Ddetached">building=detached</a> which is similar in meaning to building=house but more specific.</p>
+<p>Also take a look at <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Ddetached">building=detached</a> which is similar in meaning to building=house but more specific.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13277/raphaelschaad">@raphaelschaad</a>: Keep in mind that there's no such thing as "too many mapped POIs". The ideal end result of the OSM project would be the mapping of EVERY POI (or at least the ones that are suitable for OSM). Don't worry about clutter. Data consumers can decide which POIs they want to use and can ignore less-interesting ones if they want. Not mapping a POI means nobody can use it.</p>
+<p><a href="https://help.openstreetmap.org/users/13277/raphaelschaad">@raphaelschaad</a>: Keep in mind that there's no such thing as "too many mapped POIs". The ideal end result of the OSM project would be the mapping of EVERY POI (or at least the ones that are suitable for OSM). Don't worry about clutter. Data consumers can decide which POIs they want to use and can ignore less-interesting ones if they want. Not mapping a POI means nobody can use it.</p>
 </div>
 <div id="comment-54408-info" class="comment-info">
 <span class="comment-age">(01 Feb '17, 16:54)</span> <span class="comment-user userinfo">alester</span>
@@ -168,8 +168,8 @@ osqa_accepted = false
 <div id="post-54410-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>: Got it – the example is a small home in a rural community. The data is useful for humanitarian purposes. There are no addresses.</p>
-<p><a href="http://help.openstreetmap.org/users/8189/alester">@alester</a>: That's great – I take away that my approach is valid.</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>: Got it – the example is a small home in a rural community. The data is useful for humanitarian purposes. There are no addresses.</p>
+<p><a href="https://help.openstreetmap.org/users/8189/alester">@alester</a>: That's great – I take away that my approach is valid.</p>
 </div>
 <div id="comment-54410-info" class="comment-info">
 <span class="comment-age">(01 Feb '17, 17:01)</span> <span class="comment-user userinfo">raphaelschaad</span>
@@ -180,7 +180,7 @@ osqa_accepted = false
 <div id="post-55795-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The wiki page for <a href="http://wiki.openstreetmap.org/wiki/Key:building">Key:building</a> indicates a building can be a node or an area, but all the common tags recommend showing the building as an area rather than a node. The tag <a href="http://wiki.openstreetmap.org/wiki/Tag%3Abuilding%3Dhouse">building=house</a> is also recommended to be drawn as an area but has been shown as a node about 1% of the time.</p>
+<p>The wiki page for <a href="https://wiki.openstreetmap.org/wiki/Key:building">Key:building</a> indicates a building can be a node or an area, but all the common tags recommend showing the building as an area rather than a node. The tag <a href="https://wiki.openstreetmap.org/wiki/Tag%3Abuilding%3Dhouse">building=house</a> is also recommended to be drawn as an area but has been shown as a node about 1% of the time.</p>
 <p>The big advantage with drawing a building as an area is that the building renders as a shaded polygon in OSM, but there is no icon for a building drawn as a node. Many other maps often show buildings as squares, even though they cannot be drawn to scale.</p>
 </div>
 <div id="comment-55795-info" class="comment-info">
@@ -315,7 +315,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Nothing is imported — I use Bing imagery to place those nodes. Below is a link to an area near Caribou Lake in Alaska that contains a bunch of remote homes. My intention is to merely show that the area is populated. IMO, there is no overwhelming need to trace every building. Other mappers may disagree but I have a lot of mapping to do in Alaska. I simply don't have the time to draw these tiny structures while so many of our rivers, lakes and glaciers have yet to be added to OSM.</p>
 <p>Note the light-grey residential area north of the lake where homes are arranged more like a normal town. Of course, OSM does not render the nodes as homes. In fact, it doesn't render them at all. You will have to download the area with an OSM editor to see them. This settlement is a few miles distant via ATV through treacherous swampland from the nearest county road.</p>
-<p><a href="http://www.openstreetmap.org/#map=14/59.9022/-151.0575">http://www.openstreetmap.org/#map=14/59.9022/-151.0575</a></p>
+<p><a href="https://www.openstreetmap.org/#map=14/59.9022/-151.0575">https://www.openstreetmap.org/#map=14/59.9022/-151.0575</a></p>
 <p>Cheers,</p>
 <p>Dave</p>
 </div>

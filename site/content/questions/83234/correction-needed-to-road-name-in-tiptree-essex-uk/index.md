@@ -123,7 +123,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have updated the map. adding Rowan Chase some trees on the green and some some building outlines. This is an in editor picture that shows a background that confirms the name and the position of Rowan Chase.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Roan_Chase_Tiptree.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Roan_Chase_Tiptree.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

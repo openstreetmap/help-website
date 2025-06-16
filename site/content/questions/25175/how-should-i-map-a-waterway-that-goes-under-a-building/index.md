@@ -132,7 +132,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi make a stretch waterway = drain with tunnel = yes + layer -1. But if the river is wide and the wiki says <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3D">http://wiki.openstreetmap.org/wiki/Tag:waterway%3D</a> canal instead of drain. IMHO I would ad covered = yes since the building is over the waterway and add layer = 1 to the building.</p>
+<p>hi make a stretch waterway = drain with tunnel = yes + layer -1. But if the river is wide and the wiki says <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3D">https://wiki.openstreetmap.org/wiki/Tag:waterway%3D</a> canal instead of drain. IMHO I would ad covered = yes since the building is over the waterway and add layer = 1 to the building.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

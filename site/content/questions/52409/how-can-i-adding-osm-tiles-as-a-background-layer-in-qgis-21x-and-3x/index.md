@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How can I bring in OpenStreetMap raster maps into QGIS?</p>
-<p>Meta: this is effectively asking an <a href="https://help.openstreetmap.org/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis">earlier question</a> again, but restricted to QGIS versions from 2016 and later.</p>
+<p>Meta: this is effectively asking an <a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis">earlier question</a> again, but restricted to QGIS versions from 2016 and later.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-qgis" rel="tag" title="see questions tagged &#39;qgis&#39;">qgis</span> <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span>

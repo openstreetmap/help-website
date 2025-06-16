@@ -125,7 +125,7 @@ One Answer:
            line-width : 1
         draw : line</code></pre>
 <hr />
-<p>If you choose to install the renderer <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> - which requires some other programs to be installed as well, is more difficult, but can process larger amounts of data -, then you'll find a very simple style example on the web site for an OSM book I've co-authored, <a href="http://openstreetmap.info/examples/index.html">here.</a> (The "Mapnik waterways example")</p>
+<p>If you choose to install the renderer <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> - which requires some other programs to be installed as well, is more difficult, but can process larger amounts of data -, then you'll find a very simple style example on the web site for an OSM book I've co-authored, <a href="http://openstreetmap.info/examples/index.html">here.</a> (The "Mapnik waterways example")</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

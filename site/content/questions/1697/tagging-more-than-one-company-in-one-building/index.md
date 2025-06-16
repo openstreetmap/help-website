@@ -201,7 +201,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A shopping mall is probably the most acute example of this. See <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dmall#Shops_within_a_mall">Tag:shop=mall#Shops within a mall</a>. Some aspects of this are still <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:shop%3Dmall">under discussion</a></p>
+<p>A shopping mall is probably the most acute example of this. See <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmall#Shops_within_a_mall">Tag:shop=mall#Shops within a mall</a>. Some aspects of this are still <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:shop%3Dmall">under discussion</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

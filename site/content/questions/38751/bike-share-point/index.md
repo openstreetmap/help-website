@@ -79,7 +79,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Please see the <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_rental">wiki documentation for amenity=bicycle_rental</a>. These <em>are</em> bike shares and the documentation explicitly suggests to use a different tag for shops that rent bikes.</p>
+<p>Please see the <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbicycle_rental">wiki documentation for amenity=bicycle_rental</a>. These <em>are</em> bike shares and the documentation explicitly suggests to use a different tag for shops that rent bikes.</p>
 </div>
 <div id="comment-38773-info" class="comment-info">
 <span class="comment-age">(25 Nov '14, 09:45)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -133,7 +133,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/node/859408757">Is it like this one (London)?</a></p>
+<p><a href="https://www.openstreetmap.org/node/859408757">Is it like this one (London)?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These are often already mapped in OpenStreetMap. For example, see the yellow 'C's on the OpenCycleMap layer <a href="http://www.openstreetmap.org/#map=18/51.51677/-0.17598&amp;layers=C">here</a>.</p>
+<p>These are often already mapped in OpenStreetMap. For example, see the yellow 'C's on the OpenCycleMap layer <a href="https://www.openstreetmap.org/#map=18/51.51677/-0.17598&amp;layers=C">here</a>.</p>
 <p>So when you say "can we add", what do you want these adding to?</p>
 </div>
 <div class="answer-controls post-controls">

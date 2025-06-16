@@ -108,7 +108,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Getting a Mapnik image from the export tab means that the image has to be prepared from raw data especially for you; this is relatively expensive in terms of computing time and it is therefore not allowed to use that in any automated fashion.</p>
-<p>Check out the Wiki page <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static map images</a> for possible solutions to your problem. Many of the services listed there use pre-rendered tiles to create the map image and thus cause less load on the servers.</p>
+<p>Check out the Wiki page <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static map images</a> for possible solutions to your problem. Many of the services listed there use pre-rendered tiles to create the map image and thus cause less load on the servers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>For example the <a href="http://openstreetmap.gryph.de/bigmap.cgi">bigmap script</a> allows you to get images of any size which are assembled from the standard tiles thereby not requiring extra rendering.</p>
-<p>Otherwise you would have to install your own rendering chain to render these maps on demand (with the advantage that you can apply any changes to the style hence controlling what and how is displayed). There are tools which create maps of custom size like <a href="http://wiki.openstreetmap.org/wiki/Mapnik_Example">nik2img.py</a> for mapnik. Alternatives could be <a href="http://wiki.openstreetmap.org/wiki/Osmarender/Howto">osmarender</a>, <a href="http://wiki.openstreetmap.org/wiki/Maperitive">maperitive</a> or the recently released <a href="http://wiki.openstreetmap.org/wiki/Mapweaver">mapweaver</a>.</p>
+<p>Otherwise you would have to install your own rendering chain to render these maps on demand (with the advantage that you can apply any changes to the style hence controlling what and how is displayed). There are tools which create maps of custom size like <a href="https://wiki.openstreetmap.org/wiki/Mapnik_Example">nik2img.py</a> for mapnik. Alternatives could be <a href="https://wiki.openstreetmap.org/wiki/Osmarender/Howto">osmarender</a>, <a href="https://wiki.openstreetmap.org/wiki/Maperitive">maperitive</a> or the recently released <a href="https://wiki.openstreetmap.org/wiki/Mapweaver">mapweaver</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

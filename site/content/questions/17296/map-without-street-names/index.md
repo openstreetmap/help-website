@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="https://help.openstreetmap.org/questions/1873/how-can-i-create-a-map-without-any-names-on-it">how-can-i-create-a-map-without-any-names-on-it</a></p>
+<p>Have a look at <a href="/questions/1873/how-can-i-create-a-map-without-any-names-on-it">how-can-i-create-a-map-without-any-names-on-it</a></p>
 <p>I found this by entering "without streetnames" in the serach field of this FAQ site.</p>
 </div>
 <div class="answer-controls post-controls">

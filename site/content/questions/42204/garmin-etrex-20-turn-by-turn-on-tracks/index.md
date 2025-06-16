@@ -98,7 +98,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> I've downloaded from <a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> using Generic Routable (new style) option</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> I've downloaded from <a href="http://garmin.openstreetmap.nl">http://garmin.openstreetmap.nl</a> using Generic Routable (new style) option</p>
 </div>
 <div id="comment-42208-info" class="comment-info">
 <span class="comment-age">(08 Apr '15, 14:43)</span> <span class="comment-user userinfo">marcelorodrigo</span>

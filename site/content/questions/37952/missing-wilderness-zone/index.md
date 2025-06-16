@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have noticed that in Newfoundland, Canada the Bay du Nord Wilderness Reserve seems to have gone missing or perhaps it was never there. I have looked around for any remaining broken lines that may need to be joined back up but see nothing so far.</p>
 <p>Before I go ahead and just add it back in is there anyone around who has the knowledge to look in the history of the map and find out if it was deleted and restore it?</p>
-<p>The map area is here <a href="http://www.openstreetmap.org/#map=9/48.1643/-54.4153">http://www.openstreetmap.org/#map=9/48.1643/-54.4153</a></p>
+<p>The map area is here <a href="https://www.openstreetmap.org/#map=9/48.1643/-54.4153">https://www.openstreetmap.org/#map=9/48.1643/-54.4153</a></p>
 <p>It is visible on other online maps for people not familiar with it or at the Newfoundland Government website <a href="http://www.env.gov.nl.ca/env/parks/wer/r_bdnw/">http://www.env.gov.nl.ca/env/parks/wer/r_bdnw/</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">

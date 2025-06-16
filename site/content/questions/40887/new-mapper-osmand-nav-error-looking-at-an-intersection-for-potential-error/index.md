@@ -334,7 +334,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>… linkified: <span>43.08095, -77.49453</span>.</p>
-<p><a href="http://help.openstreetmap.org/users/10449/rjl"></a><a href="http://help.openstreetmap.org/users/10449/rjl">@rjl</a>: Well, OSM is <em>you</em>. Please <span>help us</span> if you have a bit time and willingness. OSM is made only by volunteers. If you do not yet want to edit yourself (although it is not hard to start), please add a <span>note</span> with such info from you as a local person (add something like this "There is a huge Post Office that has been there a while. I know this place in reality.").</p>
+<p><a href="https://help.openstreetmap.org/users/10449/rjl"></a><a href="https://help.openstreetmap.org/users/10449/rjl">@rjl</a>: Well, OSM is <em>you</em>. Please <span>help us</span> if you have a bit time and willingness. OSM is made only by volunteers. If you do not yet want to edit yourself (although it is not hard to start), please add a <span>note</span> with such info from you as a local person (add something like this "There is a huge Post Office that has been there a while. I know this place in reality.").</p>
 </div>
 <div id="comment-40966-info" class="comment-info">
 <span class="comment-age">(11 Feb '15, 22:39)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -346,7 +346,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10449/rjl">@rjl</a> re. post offices, there are at least 6000 post offices which no longer exist imported from GNIS, just like the (historical) school just above the posted location. We are very short of folk who fix these obvious issues with POIs in the US</p>
+<p><a href="https://help.openstreetmap.org/users/10449/rjl">@rjl</a> re. post offices, there are at least 6000 post offices which no longer exist imported from GNIS, just like the (historical) school just above the posted location. We are very short of folk who fix these obvious issues with POIs in the US</p>
 </div>
 <div id="comment-40967-info" class="comment-info">
 <span class="comment-age">(11 Feb '15, 23:02)</span> <span class="comment-user userinfo">SK53 ♦</span>

@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you are seeing is the result of a botched import, like so many- As SomeoneElse points out the imported data is from the canvec dataset. You should ask the importer <a href="http://www.openstreetmap.org/user/AmateurCartographer">AmateurCartographer</a> to fix the issues, and particularly if the data does not match up with what is on the ground to fix that too.</p>
+<p>What you are seeing is the result of a botched import, like so many- As SomeoneElse points out the imported data is from the canvec dataset. You should ask the importer <a href="https://www.openstreetmap.org/user/AmateurCartographer">AmateurCartographer</a> to fix the issues, and particularly if the data does not match up with what is on the ground to fix that too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

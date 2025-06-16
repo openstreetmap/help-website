@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I try to install osm2pgsql on Mac OS X Snow Leopard (10.6.8) using the binaries I found on <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql#Mac_OS_X">Osm2pgsql - OpenStreetMap Wiki</a> -&gt; <a href="https://github.com/openstreetmap/osm2pgsql/issues/15">Providing OSX binaries/packages #15 - GitHub</a> -&gt; <a href="http://cl.ly/0j0E0N1J3z0z">osm2pgsql-0.84.0</a>.</p>
+<p>I try to install osm2pgsql on Mac OS X Snow Leopard (10.6.8) using the binaries I found on <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql#Mac_OS_X">Osm2pgsql - OpenStreetMap Wiki</a> -&gt; <a href="https://github.com/openstreetmap/osm2pgsql/issues/15">Providing OSX binaries/packages #15 - GitHub</a> -&gt; <a href="http://cl.ly/0j0E0N1J3z0z">osm2pgsql-0.84.0</a>.</p>
 <p>When trying to run it, I have this error message:</p>
 <pre><code>dyld: Library not loaded: /usr/lib/libc++.1.dylib
   Referenced from: /usr/local/bin/osm2pgsql

@@ -79,7 +79,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question. See http://help.openstreetmap.org/questions/13642/how-to-tag-a-self-serve-bike-repair-stand" by Vclaw 20 Jun '12, 02:04
+### The question has been closed for the following reason "Duplicate Question. See https://help.openstreetmap.org/questions/13642/how-to-tag-a-self-serve-bike-repair-stand" by Vclaw 20 Jun '12, 02:04
 
 </div>
 

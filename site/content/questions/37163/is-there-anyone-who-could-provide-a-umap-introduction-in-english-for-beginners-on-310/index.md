@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-37185-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>sorry (didn't know where to ask). Thanks for the links and pointing the question on the talk list (<a href="http://help.openstreetmap.org/users/2053/simonpoole">@simonPoole</a>: which list do you mean?)</p>
+<p>sorry (didn't know where to ask). Thanks for the links and pointing the question on the talk list (<a href="https://help.openstreetmap.org/users/2053/simonpoole">@simonPoole</a>: which list do you mean?)</p>
 </div>
 <div id="comment-37185-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 14:21)</span> <span class="comment-user userinfo">Adrien</span>
@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-37186-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9741/adrien">@Adrien</a> <a href="https://lists.openstreetmap.org/pipermail/talk/2014-October/thread.html">https://lists.openstreetmap.org/pipermail/talk/2014-October/thread.html</a> thats our general purposes English language mailing list.</p>
+<p><a href="https://help.openstreetmap.org/users/9741/adrien">@Adrien</a> <a href="https://lists.openstreetmap.org/pipermail/talk/2014-October/thread.html">https://lists.openstreetmap.org/pipermail/talk/2014-October/thread.html</a> thats our general purposes English language mailing list.</p>
 <p>You can subscribe here: <a href="https://lists.openstreetmap.org/listinfo/talk">https://lists.openstreetmap.org/listinfo/talk</a></p>
 <p>I'm sure we can so "something" it is just a bit of a rush.</p>
 </div>
@@ -171,7 +171,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@simonpoole</a>: thanks! I posted my request to the list. I know it's a rush unfortunately. Let see if that happens.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@simonpoole</a>: thanks! I posted my request to the list. I know it's a rush unfortunately. Let see if that happens.</p>
 </div>
 <div id="comment-37187-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 14:37)</span> <span class="comment-user userinfo">Adrien</span>

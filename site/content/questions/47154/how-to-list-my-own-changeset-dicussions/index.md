@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to list my own changeset dicussions?"
-description = '''I know I am automagically subscribed to all changeset discussions as soon as I add a comment to one. But is there a link similar to http://www.openstreetmap.org/user/&amp;lt;my_account_name&amp;gt; -&amp;gt; &quot;My notes&quot; so that I can see a list of all changesets that I chose to comment on?  My reason to ask for ...'''
+description = '''I know I am automagically subscribed to all changeset discussions as soon as I add a comment to one. But is there a link similar to https://www.openstreetmap.org/user/&amp;lt;my_account_name&amp;gt; -&amp;gt; &quot;My notes&quot; so that I can see a list of all changesets that I chose to comment on?  My reason to ask for ...'''
 date = "2015-12-14T17:06:00Z"
 lastmod = "2020-09-28T19:58:00Z"
 weight = 47154
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I know I am automagically subscribed to all changeset discussions as soon as I add a comment to one.</p>
-<p>But is there a link similar to <a href="http://www.openstreetmap.org/user/">http://www.openstreetmap.org/user/</a>&lt;my_account_name&gt; -&gt; "My notes" so that I can see a list of all changesets that I chose to comment on?</p>
+<p>But is there a link similar to <a href="https://www.openstreetmap.org/user/">https://www.openstreetmap.org/user/</a>&lt;my_account_name&gt; -&gt; "My notes" so that I can see a list of all changesets that I chose to comment on?</p>
 <p>My reason to ask for that: I am pretty sure I asked other users via a changeset comment about problematic tags etc. but as long as the original "owner" of that changeset (or somenone else who stumbles over the same changeset) doesn't add a comment him/herself I'll never get a message containing the changeset ID. And I didn't track my changeset comments...</p>
 </div>
 <div id="question-tags" class="tags-container tags">

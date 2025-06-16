@@ -132,7 +132,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/RU:OSM_on_Paper">http://wiki.openstreetmap.org/wiki/RU:OSM_on_Paper</a> ?</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/RU:OSM_on_Paper">https://wiki.openstreetmap.org/wiki/RU:OSM_on_Paper</a> ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

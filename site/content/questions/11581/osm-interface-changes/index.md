@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can discuss changes on the <a href="http://wiki.openstreetmap.org/wiki/MailingLists">dev mailing-list</a> and on <a href="http://irc.osm.org">IRC</a> (#osm-dev), or add a ticket in <a href="https://trac.openstreetmap.org/">trac</a> (component=website).</p>
+<p>You can discuss changes on the <a href="https://wiki.openstreetmap.org/wiki/MailingLists">dev mailing-list</a> and on <a href="http://irc.osm.org">IRC</a> (#osm-dev), or add a ticket in <a href="https://trac.openstreetmap.org/">trac</a> (component=website).</p>
 <p>That said, for me (webkit) the dropdown doesn't fold up until I move the map away from it. I find it much better than the old '+' :)</p>
 </div>
 <div class="answer-controls post-controls">

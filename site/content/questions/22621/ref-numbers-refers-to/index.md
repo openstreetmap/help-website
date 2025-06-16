@@ -77,7 +77,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>(not a direct answer to the question but) if you're interested in making OSM XML files smaller you might want to consider <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">PBF format</a>. It stores exactly the same data, but the files take up less space. There are links at the bottom of that page to various language implementations.</p>
+<p>(not a direct answer to the question but) if you're interested in making OSM XML files smaller you might want to consider <a href="https://wiki.openstreetmap.org/wiki/PBF_Format">PBF format</a>. It stores exactly the same data, but the files take up less space. There are links at the bottom of that page to various language implementations.</p>
 </div>
 <div id="comment-22624-info" class="comment-info">
 <span class="comment-age">(22 May '13, 09:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -153,7 +153,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at <a href="http://www.openstreetmap.org/browse/way/90669109">your way here</a>. A <a href="http://wiki.openstreetmap.org/wiki/Way">way</a> in OSM consists of several <a href="http://wiki.openstreetmap.org/wiki/Node">nodes</a>. The number <a href="http://www.openstreetmap.org/browse/node/1052251551">1052251551</a> is just the ID of one of the nodes belonging to your way, that's all. Your XML file probably only includes information about your way. In order to get information about each node of your way you have to download a similar XML file for each of the referenced nodes. This can be done for example by calling our <a href="http://wiki.openstreetmap.org/wiki/API">API</a> or by using an <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extract</a> of the DB. The latter will be faster if you need more than a few calls and it will put less stress on the OSM servers.</p>
+<p>Take a look at <a href="https://www.openstreetmap.org/browse/way/90669109">your way here</a>. A <a href="https://wiki.openstreetmap.org/wiki/Way">way</a> in OSM consists of several <a href="https://wiki.openstreetmap.org/wiki/Node">nodes</a>. The number <a href="https://www.openstreetmap.org/browse/node/1052251551">1052251551</a> is just the ID of one of the nodes belonging to your way, that's all. Your XML file probably only includes information about your way. In order to get information about each node of your way you have to download a similar XML file for each of the referenced nodes. This can be done for example by calling our <a href="https://wiki.openstreetmap.org/wiki/API">API</a> or by using an <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Country_and_area_extracts">extract</a> of the DB. The latter will be faster if you need more than a few calls and it will put less stress on the OSM servers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -200,7 +200,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>If there is only the example way and the XML was obtained from a <a href="http://www.openstreetmap.org/api/0.6/way/90669109">http://www.openstreetmap.org/api/0.6/way/90669109</a> call then adding /full for <a href="http://www.openstreetmap.org/api/0.6/way/90669109/full">http://www.openstreetmap.org/api/0.6/way/90669109/full</a> will include the nodes for the way. But as above, if there are many ways/nodes, starting with an extract of the appropriate area would be better. (And no, I don't understand why the way is older than all the member nodes)</p>
+<p>If there is only the example way and the XML was obtained from a <a href="https://www.openstreetmap.org/api/0.6/way/90669109">https://www.openstreetmap.org/api/0.6/way/90669109</a> call then adding /full for <a href="https://www.openstreetmap.org/api/0.6/way/90669109/full">https://www.openstreetmap.org/api/0.6/way/90669109/full</a> will include the nodes for the way. But as above, if there are many ways/nodes, starting with an extract of the appropriate area would be better. (And no, I don't understand why the way is older than all the member nodes)</p>
 </div>
 <div id="comment-22629-info" class="comment-info">
 <span class="comment-age">(22 May '13, 10:44)</span> <span class="comment-user userinfo">EdLoach ♦</span>

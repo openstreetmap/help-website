@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'd like to understand about "OSM derived part of the database" deeply. I'm going to mapping some Robot Positions to the OSM concretely. Since each Robot will remove in short period, the database for managing Robots is consisted of the following columns: longitude, latitude, address, model type, capacity of battery, installed_at (datetime) and removed_at (datetime). In this case, I think this database is Collective Database. Which of these columns are the OSM derived part of this databese?</p>
-<p>&lt;previous question=""&gt; <a href="https://help.openstreetmap.org/questions/62133/aboutinclude-licensing-requirements-for-odbl">https://help.openstreetmap.org/questions/62133/aboutinclude-licensing-requirements-for-odbl</a></p>
+<p>&lt;previous question=""&gt; <a href="/questions/62133/aboutinclude-licensing-requirements-for-odbl">https://help.openstreetmap.org/questions/62133/aboutinclude-licensing-requirements-for-odbl</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-license" rel="tag" title="see questions tagged &#39;license&#39;">license</span>

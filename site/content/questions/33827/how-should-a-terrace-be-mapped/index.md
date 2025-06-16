@@ -44,7 +44,7 @@ osqa_accepted = false
 <li><p>Outline each home in the terrace separately and tag each home <code>building=house</code>. Two nodes from one house could be coincident with two nodes from the next to signify a parting wall. This has the advantage that each house can have its address etc. linked directly to the map area element.</p></li>
 <li><p>Outline the whole terrace as one area, tagged as <code>building=terrace</code>, and then add a POI (node) for each home, tagged as <code>building=house</code> with the address etc. This has the (slight) advantage of reducing the quantity of map data but I think is less clear because you can't distinguish the boundaries between the house.</p></li>
 </ol>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki page on tags</a> doesn't help much.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Map_Features">wiki page on tags</a> doesn't help much.</p>
 <p>Please advise which is the best strategy.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM has a Terracer plugin that may provide useful guidance. <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer</a> I haven't used it or mapped terraces but i would favour your first option.</p>
+<p>JOSM has a Terracer plugin that may provide useful guidance. <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer</a> I haven't used it or mapped terraces but i would favour your first option.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -191,7 +191,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>I assume "not allowed" means it is local convention not to. Do you add them to the entrance node? <a href="http://wiki.openstreetmap.org/wiki/Key:entrance">http://wiki.openstreetmap.org/wiki/Key:entrance</a> I map mainly in England and use the JOSM terracer plugin and your first method (often even for semi-detached houses as a terrace of 2 houses).</p>
+<p>I assume "not allowed" means it is local convention not to. Do you add them to the entrance node? <a href="https://wiki.openstreetmap.org/wiki/Key:entrance">https://wiki.openstreetmap.org/wiki/Key:entrance</a> I map mainly in England and use the JOSM terracer plugin and your first method (often even for semi-detached houses as a terrace of 2 houses).</p>
 </div>
 <div id="comment-33831-info" class="comment-info">
 <span class="comment-age">(09 Jun '14, 17:02)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <div id="post-33832-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm not mapping in Denmark, but once read <a href="http://wiki.openstreetmap.org/wiki/Addresses#Denmark">http://wiki.openstreetmap.org/wiki/Addresses#Denmark</a> And you're right, it is a local convention</p>
+<p>I'm not mapping in Denmark, but once read <a href="https://wiki.openstreetmap.org/wiki/Addresses#Denmark">https://wiki.openstreetmap.org/wiki/Addresses#Denmark</a> And you're right, it is a local convention</p>
 <p>"If a building exists on the BBR unit the address node should be placed at in the middle of the longest side of the building 3 meters from the wall closest to the main (named) access road."</p>
 </div>
 <div id="comment-33832-info" class="comment-info">

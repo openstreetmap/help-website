@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Everything about using OSM data or maps in Wordpress should be collected in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Wordpress">Wordpress</a></p>
+<p>Everything about using OSM data or maps in Wordpress should be collected in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Wordpress">Wordpress</a></p>
 <p>But you can never be sure that all features there are complete ...</p>
 </div>
 <div class="answer-controls post-controls">

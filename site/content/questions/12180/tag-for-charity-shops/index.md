@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dcharity">shop=charity</a> tag in use, and a <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dsecond_hand">shop=second_hand</a> tag as well. It depends on the renderer how these tags are presented on a map, if presented at all.</p>
-<p>And that's general for Openstreetmap. There are a lot of things put in the Openstreetmap database but everything isn't rendered on all maps, and not on all zoom levels either. It's the person who renders the map who decides which icons to use and what to put on the map. The map at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> is just an example, a kinda proof of concept. The wiki <a href="http://wiki.openstreetmap.org/wiki/Maps">maps</a> page shows a lot of more maps, and in the same way someone has made <a href="http://openfiremap.org/">http://openfiremap.org/</a> to show fire stations a skilled enough person could make a map with charity shops emphasized.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dcharity">shop=charity</a> tag in use, and a <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsecond_hand">shop=second_hand</a> tag as well. It depends on the renderer how these tags are presented on a map, if presented at all.</p>
+<p>And that's general for Openstreetmap. There are a lot of things put in the Openstreetmap database but everything isn't rendered on all maps, and not on all zoom levels either. It's the person who renders the map who decides which icons to use and what to put on the map. The map at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> is just an example, a kinda proof of concept. The wiki <a href="https://wiki.openstreetmap.org/wiki/Maps">maps</a> page shows a lot of more maps, and in the same way someone has made <a href="http://openfiremap.org/">http://openfiremap.org/</a> to show fire stations a skilled enough person could make a map with charity shops emphasized.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Tagging wise, I'd also add name='name of shop/charity' and then operator='name of charity' tag too.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Shops">http://wiki.openstreetmap.org/wiki/Shops</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Shops">https://wiki.openstreetmap.org/wiki/Shops</a></p>
 <p>Covers usage of UK charity shops</p>
 </div>
 <div id="comment-12188-info" class="comment-info">

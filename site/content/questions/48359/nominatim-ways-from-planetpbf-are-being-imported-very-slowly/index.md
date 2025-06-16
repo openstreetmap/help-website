@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have installed Nominatim to a server dedicated just for OSM data, with the following configurations: CentOS 7 operating system, 2x Intel XEON CPU L5420 @ 2.50GHz (Total 8 CPU cores), 16 GB of ram, and 2x2TB SATA hard drive.</p>
-<p>I've configured the postgresql based on the recomendations on the Nominatim install wiki (<a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#PostgreSQL_Tuning),">http://wiki.openstreetmap.org/wiki/Nominatim/Installation#PostgreSQL_Tuning),</a> taking into account, that my machine has only got 16 GB instead of the 32 GB recommended for those configs. I've used the following things:<br />
+<p>I've configured the postgresql based on the recomendations on the Nominatim install wiki (<a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#PostgreSQL_Tuning),">https://wiki.openstreetmap.org/wiki/Nominatim/Installation#PostgreSQL_Tuning),</a> taking into account, that my machine has only got 16 GB instead of the 32 GB recommended for those configs. I've used the following things:<br />
 </p>
 <p><code>shared_buffers = 1GB # recommended for a 32GB machine was 2 GB maintenance_work_mem = 4GB # recommended for a 32GB macinhe was 8 GB work_mem = 20MB # recommended for a 32GB machine was 50 MB effective_cache_size = 10GB # recommended for a 32GB machine was 24 GB synchronous_commit = off checkpoint_segments = 100 checkpoint_timeout = 10min checkpoint_completion_target = 0.9 fsync = off full_page_writes = off</code></p>
 <p>First, I've tried importing a small country extract(Luxembourg), setting a cache size of 6000, using the setup.php file from utils, it was imported succesfully under 1 hour.</p>

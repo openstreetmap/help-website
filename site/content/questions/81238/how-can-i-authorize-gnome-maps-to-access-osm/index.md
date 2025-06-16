@@ -80,7 +80,7 @@ Arcenis</p>
 <div id="post-81249-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>see also <a href="https://help.openstreetmap.org/questions/81173/cant-sign-in-with-gnome-maps">https://help.openstreetmap.org/questions/81173/cant-sign-in-with-gnome-maps</a> (unanswered, unfortunately)</p>
+<p>see also <a href="/questions/81173/cant-sign-in-with-gnome-maps">https://help.openstreetmap.org/questions/81173/cant-sign-in-with-gnome-maps</a> (unanswered, unfortunately)</p>
 </div>
 <div id="comment-81249-info" class="comment-info">
 <span class="comment-age">(10 Aug '21, 03:10)</span> <span class="comment-user userinfo">jmapb</span>

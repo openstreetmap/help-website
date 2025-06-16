@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How to point My office in different countries on this map like the below image.<img src="https://help.openstreetmap.org/upfiles/map_8PAeDpB.png" alt="alt text" /></p>
+<p>How to point My office in different countries on this map like the below image.<img src="/upfiles/map_8PAeDpB.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-county" rel="tag" title="see questions tagged &#39;county&#39;">county</span> <span class="post-tag tag-link-multiple" rel="tag" title="see questions tagged &#39;multiple&#39;">multiple</span>

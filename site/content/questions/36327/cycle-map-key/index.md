@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>what does "AV" mean against a cycle route (instead of the number) - eg rout 21 sudedenly becomes "AV" <a href="http://www.openstreetmap.org/#map=12/50.8624/0.2554&amp;layers=C">just north of Hailsham</a> near the south coast</p>
+<p>what does "AV" mean against a cycle route (instead of the number) - eg rout 21 sudedenly becomes "AV" <a href="https://www.openstreetmap.org/#map=12/50.8624/0.2554&amp;layers=C">just north of Hailsham</a> near the south coast</p>
 <p>is there anywhere that gives a full list of these (for instance in the standard open map key a lot is not listed which appears on the map eg pylons/powerlines (at least i think they are))</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you look at one of the member ways, such as <a href="http://www.openstreetmap.org/way/123449065">this one</a>, you will see that that section is part of both <a href="http://www.openstreetmap.org/relation/21909">NCN 21</a> and <a href="http://www.openstreetmap.org/relation/2820043">Avenue Verte (London-Paris)</a>. I guess which label displays on any particular section in more than one route is down to how data gets read and label collision works.</p>
+<p>If you look at one of the member ways, such as <a href="https://www.openstreetmap.org/way/123449065">this one</a>, you will see that that section is part of both <a href="https://www.openstreetmap.org/relation/21909">NCN 21</a> and <a href="https://www.openstreetmap.org/relation/2820043">Avenue Verte (London-Paris)</a>. I guess which label displays on any particular section in more than one route is down to how data gets read and label collision works.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

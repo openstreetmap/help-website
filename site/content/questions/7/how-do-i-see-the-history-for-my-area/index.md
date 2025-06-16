@@ -69,7 +69,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: closing a question does not help in any way to make its answers more current - to the contrary. Reopened. Yes, old questions and answers for still current topics are a problem, but we don't solve it by closing. Let's discuss <span>over there</span>.</p>
+<p>meta <a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: closing a question does not help in any way to make its answers more current - to the contrary. Reopened. Yes, old questions and answers for still current topics are a problem, but we don't solve it by closing. Let's discuss <span>over there</span>.</p>
 </div>
 <div id="comment-49051-info" class="comment-info">
 <span class="comment-age">(05 Apr '16, 20:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -123,7 +123,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find a list of services to see what has been changed or added to the data for a certain area at <a href="http://wiki.openstreetmap.org/wiki/Change_monitoring"></a><a href="http://wiki.openstreetmap.org/wiki/Change_monitoring"></a><a href="http://wiki.openstreetmap.org/wiki/Change_monitoring">http://wiki.openstreetmap.org/wiki/Change_monitoring</a></p>
+<p>You can find a list of services to see what has been changed or added to the data for a certain area at <a href="https://wiki.openstreetmap.org/wiki/Change_monitoring"></a><a href="https://wiki.openstreetmap.org/wiki/Change_monitoring"></a><a href="https://wiki.openstreetmap.org/wiki/Change_monitoring">https://wiki.openstreetmap.org/wiki/Change_monitoring</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -252,7 +252,7 @@ osqa_accepted = true
 <div id="post-10876-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>"Hide the '(big)' changesets suggestion" comes up a lot GrahamS. This question specifically talks about it: <a href="http://help.openstreetmap.org/questions/3983/how-do-you-display-only-local-edits-in-the-changelog/3985">http://help.openstreetmap.org/questions/3983/how-do-you-display-only-local-edits-in-the-changelog/3985</a> My answer is kind of duplicate of this one here though...<br />
+<p>"Hide the '(big)' changesets suggestion" comes up a lot GrahamS. This question specifically talks about it: <a href="/questions/3983/how-do-you-display-only-local-edits-in-the-changelog/3985">https://help.openstreetmap.org/questions/3983/how-do-you-display-only-local-edits-in-the-changelog/3985</a> My answer is kind of duplicate of this one here though...<br />
 </p>
 <p>But incidentally Andy could add a new option to his answer here: "ITO Map" is from the same company as "OSM Mapper" but different: <a href="http://www.itoworld.com/product/data/ito_map/">http://www.itoworld.com/product/data/ito_map/</a> It has the option to show 'recent edits in the past 7 days' or 90 days on a normal worldwide slippy map, to get a simple overview of recent activity.</p>
 </div>

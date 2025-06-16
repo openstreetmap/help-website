@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>waterway=stream/river</p>
 <p>intermittent=yes</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Intermittent_river">http://wiki.openstreetmap.org/wiki/Proposed_features/Intermittent_river</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Intermittent_river">https://wiki.openstreetmap.org/wiki/Proposed_features/Intermittent_river</a></p>
 <p><a href="http://taginfo.openstreetmap.de/keys/intermittent#values">http://taginfo.openstreetmap.de/keys/intermittent#values</a></p>
 </div>
 <div class="answer-controls post-controls">

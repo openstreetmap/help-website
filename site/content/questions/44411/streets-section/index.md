@@ -81,7 +81,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>See also</p>
-<p><a href="https://help.openstreetmap.org/questions/44076/street-section">https://help.openstreetmap.org/questions/44076/street-section</a></p>
+<p><a href="/questions/44076/street-section">https://help.openstreetmap.org/questions/44076/street-section</a></p>
 </div>
 <div id="comment-44413-info" class="comment-info">
 <span class="comment-age">(24 Jul '15, 15:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

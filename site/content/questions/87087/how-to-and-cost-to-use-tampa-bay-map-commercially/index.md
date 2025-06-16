@@ -65,7 +65,7 @@ Thank you, Your help in this matter is greatly appreciated. MJ Smook (813)966-16
 <p>I can't give you legal advice, but I do know of a few resources:</p>
 <p>Information about the copyright on the data itself is here: <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> (which also links to the actual license text) third parties who offer additional map styles may have their own restricitons on the use of those styles.</p>
 <p>There is also an FAQ here: <a href="https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ">https://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ</a></p>
-<p>See also <a href="https://help.openstreetmap.org/questions/82158/permission-request-of-map-use-in-an-academic-publication">this question</a>.</p>
+<p>See also <a href="/questions/82158/permission-request-of-map-use-in-an-academic-publication">this question</a>.</p>
 </div>
 <div id="comment-87088-info" class="comment-info">
 <span class="comment-age">(09 Apr '23, 08:31)</span> <span class="comment-user userinfo">InsertUser</span>

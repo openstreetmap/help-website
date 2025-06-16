@@ -119,8 +119,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM does not have good address coverage in all areas. If addresses are missing in the OSM database then they will not show up in OsmAnd offline files. Here in the U.S. there is some address data available from the Census Bureau which is automatically incorporated into the <a href="http://nominatim.openstreetmap.org">Nominatim</a> data set. So if you tap the "Internet" button on the OsmAnd address search page and do a Nominatim query, it will use that. But if you are not in the U.S. or if you are wanting to use it offline then this won't help you.</p>
-<p>But by all means, please do add address data to OSM! One pretty quick way of doing this is to use <a href="http://wiki.openstreetmap.org/wiki/KeypadMapper">KeypadMapper</a> on your Android phone. You can just walk along a street recording address numbers as you go. I collected most of the addresses in this area on a single walk:<br />
-<a href="http://www.openstreetmap.org/?lat=39.21141&amp;lon=-96.62054&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=39.21141&amp;lon=-96.62054&amp;zoom=17&amp;layers=M</a></p>
+<p>But by all means, please do add address data to OSM! One pretty quick way of doing this is to use <a href="https://wiki.openstreetmap.org/wiki/KeypadMapper">KeypadMapper</a> on your Android phone. You can just walk along a street recording address numbers as you go. I collected most of the addresses in this area on a single walk:<br />
+<a href="https://www.openstreetmap.org/?lat=39.21141&amp;lon=-96.62054&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=39.21141&amp;lon=-96.62054&amp;zoom=17&amp;layers=M</a></p>
 <p>Sometimes addresses can be imported from other (government) sources but this is an advanced operation that you should not attempt until you are a well practiced mapper and have consulted the rest of the community.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -155,7 +155,7 @@ One Answer:
 <blockquote>
 <p>The problem is that the place where I live the buildings cover several numbers.</p>
 </blockquote>
-<p>Is the problem that you don't know how to tag that? Then look <a href="http://wiki.openstreetmap.org/wiki/Addresses#Buildings_with_multiple_house_numbers">here</a>. Is the problem that it is tagged OK, but Osmand still can't find it? Then <a href="http://code.google.com/p/osmand/issues/list">file a bug</a>.</p>
+<p>Is the problem that you don't know how to tag that? Then look <a href="https://wiki.openstreetmap.org/wiki/Addresses#Buildings_with_multiple_house_numbers">here</a>. Is the problem that it is tagged OK, but Osmand still can't find it? Then <a href="http://code.google.com/p/osmand/issues/list">file a bug</a>.</p>
 </div>
 <div id="comment-17004-info" class="comment-info">
 <span class="comment-age">(18 Oct '12, 21:35)</span> <span class="comment-user userinfo">cartinus</span>
@@ -168,7 +168,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>You can map multiple address nodes as part of a single building. For example in my apartment complex, there are two stairwells, each with their own address, per building. I put the address information on nodes that are a part of the building outline way with an entrance=stairwell tag. Example node:</p>
-<p><a href="http://www.openstreetmap.org/browse/node/802691705">http://www.openstreetmap.org/browse/node/802691705</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/802691705">https://www.openstreetmap.org/browse/node/802691705</a></p>
 </div>
 <div id="comment-17139-info" class="comment-info">
 <span class="comment-age">(23 Oct '12, 17:37)</span> <span class="comment-user userinfo">ToeBee</span>

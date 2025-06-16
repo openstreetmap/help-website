@@ -121,9 +121,9 @@ One Answer:
 <div class="answer-body">
 <p>That depends of course of which Garmin model you have, but many of them are supported more or less.</p>
 <p>A couple of links to start with:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Garmin">Garmin (Wiki)</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin (Wiki)</a></p>
-<p><a href="http://help.openstreetmap.org/tags/garmin/">Questions on this site tagged "Garmin"</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Garmin">Garmin (Wiki)</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin (Wiki)</a></p>
+<p><a href="https://help.openstreetmap.org/tags/garmin/">Questions on this site tagged "Garmin"</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

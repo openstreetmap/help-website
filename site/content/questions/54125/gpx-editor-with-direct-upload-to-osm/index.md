@@ -109,11 +109,11 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Josm allows you to edit a gpx. You load the gpx trace, right-click it in the layers window, convert to data layer, edit trace, right-click it in the layers window, convert to gpx layer (maybe export to gpx to over-write the original file).</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2017-01-18_at_3.38.36_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-01-18_at_3.38.36_PM.png" alt="alt text" /></p>
 <p>Prepare for editing osm: Right-click to customise the track colour and change the thickness in customise track drawing, and download from osm along the track, move the track above the osm data. You can now edit the map.</p>
 <p>If you download the 'DirectUpload Plugin' you can upload the gpx to osm (make the layer active first).<br />
-<img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2017-01-18_at_4.03.17_PM.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2017-01-18_at_3.41.41_PM.png" alt="alt text" /></p>
+<img src="/upfiles/Screen_Shot_2017-01-18_at_4.03.17_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-01-18_at_3.41.41_PM.png" alt="alt text" /></p>
 <p>(OS X user)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -169,7 +169,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>GPX Prune is a little JAVA app that will display the trace overlayed onto various OSM maps you can then delete points. its free it's here <a href="https://activityworkshop.net/software/gpsprune/">https://activityworkshop.net/software/gpsprune/</a> It cannot be used to directly upload a trace to OSM but is quicker and less cluttered than Basecamp and you can instantly see how your new trace compares to the current OSM data and if your new trace is a worthwhile upload. EDIT following DaveF's comment:-To remove one or several points, click on the point nearest to beginning that you wish to delete, hit "del" the cross hairs will advance to next point, "del"? and so on. For a larger number of points, such as a birds nest, click "track" menu Click "mark points in rectangle" draw rectangle then "del" removes them, made an error "undo" will give the restore option. There is a PDF manual available for 3 EUROs. at <a href="https://activityworkshop.net/software/gpsprune/how-tos.html">https://activityworkshop.net/software/gpsprune/how-tos.html</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/Prune_point_EvkjyBa.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Prune_point_EvkjyBa.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -181,7 +181,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Perhaps the changeset <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">API</a> might be the place to start? Have a look at the section starting "Query: GET /api/0.6/changesets". You can search for changesets within a bounding box. You'll then need to process objects within each matching changeset to see if any were actually modified within your bounding box.<br />
+<p>Perhaps the changeset <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">API</a> might be the place to start? Have a look at the section starting "Query: GET /api/0.6/changesets". You can search for changesets within a bounding box. You'll then need to process objects within each matching changeset to see if any were actually modified within your bounding box.<br />
 </p>
 <p>Nodes are straightforward - they have latitude and longitude. Ways are composed of nodes - you'll have to decide if e.g. a closed way that surrounds your bounding box counts as being "within" it. Relations are composed of Ways (mostly) and also possibily nodes. Again, you'll need to decide what you want to do about those.</p>
 </div>

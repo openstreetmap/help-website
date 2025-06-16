@@ -137,7 +137,7 @@ osqa_accepted = false
 </ul>
 <p>Des tutoriaux sont disponibles ici :</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/FR:UMap/Guide">http://wiki.openstreetmap.org/wiki/FR:UMap/Guide</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/FR:UMap/Guide">https://wiki.openstreetmap.org/wiki/FR:UMap/Guide</a></li>
 <li><a href="http://wiki.cartocite.fr/doku.php?id=umap:tutoriel_umap">http://wiki.cartocite.fr/doku.php?id=umap:tutoriel_umap</a></li>
 </ul>
 <p>Bon courage</p>

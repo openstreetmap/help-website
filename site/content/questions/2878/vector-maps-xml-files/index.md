@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap data is not divided into different features by default. However, there are a number of ways of filtering the data based on the tags used.</p>
-<p>For example, you can use <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> to request data for the area that you are interested in containing only the tags that you want. You might find the <a href="http://openstreetmap.us/uixapi/xapi.html">front-end for the new service</a> useful.</p>
+<p>For example, you can use <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> to request data for the area that you are interested in containing only the tags that you want. You might find the <a href="http://openstreetmap.us/uixapi/xapi.html">front-end for the new service</a> useful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,8 +158,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With an OSM file you can filter out selected data based on tags using <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#Data_Manipulation_Tasks">tag filters</a> to create several OSM files corresponding to 'layers' in traditional GIS.</p>
-<p>Another approach, which may or may not be suitable with Global Mapper is to load data into a PostGIS database using <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>. Some OpenSource GIS tools, such as <a href="http://www.qgis.org/">Quantum GIS</a>, allow this data to be queried so that specific subsets can be brought into the GIS for further manipulation and/or stored as shapefiles. Not all tags are retained using osm2pgsql, but the majority of widely used ones are immediately available. An example of this approach is discussed (my me) <a href="http://sk53-osm.blogspot.com/2011/01/simulating-urban-atlas-using-osm.html">here</a>.</p>
+<p>With an OSM file you can filter out selected data based on tags using <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#Data_Manipulation_Tasks">tag filters</a> to create several OSM files corresponding to 'layers' in traditional GIS.</p>
+<p>Another approach, which may or may not be suitable with Global Mapper is to load data into a PostGIS database using <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>. Some OpenSource GIS tools, such as <a href="http://www.qgis.org/">Quantum GIS</a>, allow this data to be queried so that specific subsets can be brought into the GIS for further manipulation and/or stored as shapefiles. Not all tags are retained using osm2pgsql, but the majority of widely used ones are immediately available. An example of this approach is discussed (my me) <a href="http://sk53-osm.blogspot.com/2011/01/simulating-urban-atlas-using-osm.html">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

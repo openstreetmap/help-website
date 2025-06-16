@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In <a href="http://www.openstreetmap.org/edit#map=17/28.41040/-81.46210">SeaWorld Orlando</a>, I see that a huge multipolygon was made out of "highway=pedestrian" lines. When asking in the normal map to go from one place to another within the park <a href="http://www.openstreetmap.org/directions?engine=mapquest_foot&amp;route=28.41052%2C-81.45967%3B28.40882%2C-81.46119#map=17/28.40866/-81.46165">like this</a>, it plots a route along the contour of the path or of buildings, etc. If the places aren't connected by the same line, or close enough, it tells me that a path couldn't be found between these points.</p>
+<p>In <a href="https://www.openstreetmap.org/edit#map=17/28.41040/-81.46210">SeaWorld Orlando</a>, I see that a huge multipolygon was made out of "highway=pedestrian" lines. When asking in the normal map to go from one place to another within the park <a href="https://www.openstreetmap.org/directions?engine=mapquest_foot&amp;route=28.41052%2C-81.45967%3B28.40882%2C-81.46119#map=17/28.40866/-81.46165">like this</a>, it plots a route along the contour of the path or of buildings, etc. If the places aren't connected by the same line, or close enough, it tells me that a path couldn't be found between these points.</p>
 <p>Is it OK to change all these contour lines to just a normal line, and then make linear pathways along the surface where people walk? That would help in routing.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For clarification, the user has made a multipolygon relation with those highway=pedestrian ways: <a href="https://www.openstreetmap.org/relation/4667908">https://www.openstreetmap.org/relation/4667908</a></p>
-<p>I think the goal was to make the walkways pedestrian areas, as mentioned on the <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">highway=pedestrian</a> wiki page. This is a valid method to do detailed mapping rather than linear footways.</p>
+<p>I think the goal was to make the walkways pedestrian areas, as mentioned on the <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">highway=pedestrian</a> wiki page. This is a valid method to do detailed mapping rather than linear footways.</p>
 <p>However, I'm not sure this was done in quite the right way--I'd think it'd be better to leave tagging off the actual ways, and tag highway=pedestrian, area=yes on the multipolygon relation. Have you contacted the user about this?</p>
 <p>All that said, I've heard that most routers don't deal with routing through areas very well, so I'm not sure if changing the tagging as I mention above will improve routing.</p>
 </div>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The data should be improved, but this is mainly an issue with the router software. See also the answers to <a href="https://help.openstreetmap.org/questions/42460/what-to-do-in-these-situations-pedestrian-areas">this question</a>.</p>
+<p>The data should be improved, but this is mainly an issue with the router software. See also the answers to <a href="/questions/42460/what-to-do-in-these-situations-pedestrian-areas">this question</a>.</p>
 <p>Routing over areas is seemingly not a trivial feature. Some routers implement the workaround that the route along the edge of areas. There are a lot of discussions on the development mailing lists of various routers, so hopefully this'll soon be a solved problem.</p>
 <p>Some mappers have taken the pragmatic step of helping the routers by adding linear footpaths in addition to the area. But in a case like SeaWorld, it could become ugly quite quickly.</p>
 </div>

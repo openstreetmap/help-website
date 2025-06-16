@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After a frustrating few days I came to the conclusion that the <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_tile_numbers_5">Slippy Map Wiki</a> only works for raster tiles, not for <a href="http://OSM2VectorTiles.org">OSM2VectorTiles</a> data. I can work with the data once I find the correct tile_data BLOB, but actually locating the correct tile via a user lat/long is problematic. The equations given in the wiki above identify raster tiles correctly, but I'm trying to get this working for an offline version of OpenStreetMap rendering/navigation (meaning I can't just use mapbox's JS API to convert it, also I can't find where the conversion happens in the github repo).</p>
+<p>After a frustrating few days I came to the conclusion that the <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_tile_numbers_5">Slippy Map Wiki</a> only works for raster tiles, not for <a href="http://OSM2VectorTiles.org">OSM2VectorTiles</a> data. I can work with the data once I find the correct tile_data BLOB, but actually locating the correct tile via a user lat/long is problematic. The equations given in the wiki above identify raster tiles correctly, but I'm trying to get this working for an offline version of OpenStreetMap rendering/navigation (meaning I can't just use mapbox's JS API to convert it, also I can't find where the conversion happens in the github repo).</p>
 <p>Can anyone offer any advice as to how I can convert a lat/long to the correct tile in an OSM2VT SQLite database?</p>
 <p>The query, that works for raster tiles, may be of some use:</p>
 <pre><code>    public void UserQuery()

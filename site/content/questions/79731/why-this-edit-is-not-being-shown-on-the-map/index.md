@@ -159,7 +159,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Dear <a href="https://help.openstreetmap.org/users/13231/h_mlet">@H_mlet</a></p>
-<p>I had already replaced the name:fa with name:en before posting this message in here. I did not get your point in this regard. <img src="https://help.openstreetmap.org/upfiles/Screenshot_23.jpg" alt="alt text" /></p>
+<p>I had already replaced the name:fa with name:en before posting this message in here. I did not get your point in this regard. <img src="/upfiles/Screenshot_23.jpg" alt="alt text" /></p>
 <p>In the avenue , there is another similar language school with the exactly same data but we can see it as a dot with it name on the map!</p>
 <p>So I think the only reason left is there are a lot of items in that area</p>
 <p>is that right?</p>

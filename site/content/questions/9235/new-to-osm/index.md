@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this answer</a>.</p>
+<p>See <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this answer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

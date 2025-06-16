@@ -194,7 +194,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Discuss here: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station">http://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station</a></p>
+<p>Discuss here: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station">https://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

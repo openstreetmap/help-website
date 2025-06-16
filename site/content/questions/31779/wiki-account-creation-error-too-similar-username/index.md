@@ -73,7 +73,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I understand your wish of a unified nickname and sadly OSM has no SSO (yet). I reported your problem to the wiki admin: <a href="http://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Too_similar_username">http://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Too_similar_username</a></p>
+<p>I understand your wish of a unified nickname and sadly OSM has no SSO (yet). I reported your problem to the wiki admin: <a href="https://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Too_similar_username">https://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Too_similar_username</a></p>
 </div>
 <div id="comment-31798-info" class="comment-info">
 <span class="comment-age">(23 Mar '14, 18:34)</span> <span class="comment-user userinfo">iii</span>
@@ -95,7 +95,7 @@ osqa_accepted = false
 <div id="post-31825-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Was my fault, I pinged the wrong admin. Now here: <a href="http://wiki.openstreetmap.org/wiki/User_talk:Firefishy#Too_similar_username">http://wiki.openstreetmap.org/wiki/User_talk:Firefishy#Too_similar_username</a></p>
+<p>Was my fault, I pinged the wrong admin. Now here: <a href="https://wiki.openstreetmap.org/wiki/User_talk:Firefishy#Too_similar_username">https://wiki.openstreetmap.org/wiki/User_talk:Firefishy#Too_similar_username</a></p>
 </div>
 <div id="comment-31825-info" class="comment-info">
 <span class="comment-age">(24 Mar '14, 10:19)</span> <span class="comment-user userinfo">iii</span>

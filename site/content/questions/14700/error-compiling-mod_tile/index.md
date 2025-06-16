@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm attempting to compile mod_tile on Ubuntu 12:04, per the <a href="http://wiki.openstreetmap.org/wiki/Mod_tile#Install_mod_tile_From_Source">instructions</a>. Autogen fails with the error below. Anyone have any thoughts on fixing this?</p>
+<p>I'm attempting to compile mod_tile on Ubuntu 12:04, per the <a href="https://wiki.openstreetmap.org/wiki/Mod_tile#Install_mod_tile_From_Source">instructions</a>. Autogen fails with the error below. Anyone have any thoughts on fixing this?</p>
 <pre><code>configure.ac:35: error: possibly undefined macro: AC_CHECK_FT2
      If this token and others are legitimate, please use m4_pattern_allow.
      See the Autoconf documentation.

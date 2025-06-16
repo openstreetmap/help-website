@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In the US, it is common for areas outside of any municipality ("unincorporated areas") to have an address that is based on the town where the nearest post office is. For instance, addresses on <a href="http://www.openstreetmap.org/browse/way/20415635">Abilene Road</a> near where I live would be listed as "xxx Abilene Rd, Farmville, VA".</p>
+<p>In the US, it is common for areas outside of any municipality ("unincorporated areas") to have an address that is based on the town where the nearest post office is. For instance, addresses on <a href="https://www.openstreetmap.org/browse/way/20415635">Abilene Road</a> near where I live would be listed as "xxx Abilene Rd, Farmville, VA".</p>
 <p>As it stands, if you type in that address on osm.org, you get nothing at all. If you happen to know the ins and outs of nominatim, and you happen to know the name of the county that the municipality is in, you could type "Abilene Road, Prince Edward" (but not "Prince Edward County"!) and it would find it. But that's not exactly very user-friendly (to say the least), and it's certainly not what arbitrary users are likely to type into the search field.</p>
 <p>So I assume that what's needed here is a separate set of boundaries, that Nominatim knows about, that correspond to post office service areas but include the name of the town that the post office serves (and there's a lot of complexity there in terms of overlap with other named entities, like towns, cities, and counties). Does such a thing already exist? Should it? Does it fit within the existing framework (i.e. "add a new key-value pair") or would this require additional architecting for some reason I can't think of right now?</p>
 </div>
@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-29129-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I just ran across another question on essentially the same problem, which I'll crosslink here for future reference: <a href="https://help.openstreetmap.org/questions/24133/incorrect-city-name">https://help.openstreetmap.org/questions/24133/incorrect-city-name</a></p>
+<p>I just ran across another question on essentially the same problem, which I'll crosslink here for future reference: <a href="/questions/24133/incorrect-city-name">https://help.openstreetmap.org/questions/24133/incorrect-city-name</a></p>
 </div>
 <div id="comment-29129-info" class="comment-info">
 <span class="comment-age">(16 Dec '13, 19:20)</span> <span class="comment-user userinfo">blahedo</span>
@@ -129,7 +129,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are able to define postal town boundaries they can be drawn as polygons I would suggest tagging them in a similar way to how some postal_codes have been imported (<a href="http://wiki.openstreetmap.org/wiki/Key:boundary">see here</a>). i.e. tag the relation type=boundary, boundary=postal_town</p>
+<p>If you are able to define postal town boundaries they can be drawn as polygons I would suggest tagging them in a similar way to how some postal_codes have been imported (<a href="https://wiki.openstreetmap.org/wiki/Key:boundary">see here</a>). i.e. tag the relation type=boundary, boundary=postal_town</p>
 <p>If you decide to go down this route you should:</p>
 <p>1) discuss it with the USA mapping community to get consensus</p>
 <p>2) document the boundary=postal_town tagging on the wiki</p>
@@ -227,7 +227,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There is some conflicting advice being given on a related question ( <a href="https://help.openstreetmap.org/questions/28625/automatically-add-addrcity-tag-to-roads?">https://help.openstreetmap.org/questions/28625/automatically-add-addrcity-tag-to-roads?</a> ).</p>
+<p>There is some conflicting advice being given on a related question ( <a href="/questions/28625/automatically-add-addrcity-tag-to-roads?">https://help.openstreetmap.org/questions/28625/automatically-add-addrcity-tag-to-roads?</a> ).</p>
 </div>
 <div id="comment-28671-info" class="comment-info">
 <span class="comment-age">(01 Dec '13, 20:45)</span> <span class="comment-user userinfo">blahedo</span>
@@ -328,7 +328,7 @@ osqa_accepted = false
 <div id="post-35500-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dpostal_code">http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dpostal_code</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dpostal_code">https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dpostal_code</a></p>
 <p>Seems like the best solution in my opinion, with a name if it matches the postal code area. If not then create something similar like <em>boundary=postal_town</em> as pointed out in the other comment.</p>
 </div>
 <div id="comment-35500-info" class="comment-info">

@@ -72,7 +72,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/questions/7410/downloading-osm-map-tiles-for-use-with-mapsource">http://help.openstreetmap.org/questions/7410/downloading-osm-map-tiles-for-use-with-mapsource</a></p>
+<p><a href="/questions/7410/downloading-osm-map-tiles-for-use-with-mapsource">https://help.openstreetmap.org/questions/7410/downloading-osm-map-tiles-for-use-with-mapsource</a></p>
 </div>
 <div id="comment-10616-info" class="comment-info">
 <span class="comment-age">(17 Feb '12, 01:28)</span> <span class="comment-user userinfo">andy mackey</span>

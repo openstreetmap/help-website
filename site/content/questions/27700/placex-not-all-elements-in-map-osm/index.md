@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>The "placex" has less elements with a "place", it's like random elements loaded.</p>
 <p>Is it possible to allow placex load all elements, is possible change config of nominatim?</p>
 <p>thank you very much for your attention</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screenshot_2.png" alt="alt text" /></p>
+<p><img src="/upfiles/screenshot_2.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-index" rel="tag" title="see questions tagged &#39;index&#39;">index</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-placex" rel="tag" title="see questions tagged &#39;placex&#39;">placex</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The Nominatim database schema is optimised for Nominatim use. The contents of place/placex are an internal implementation detail. If you want a generic database import that you can use for other purposes than running Nomiatim on it, try a manual <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> import (or try <a href="http://wiki.openstreetmap.org/wiki/Imposm">imposm).</a></p>
+<p>The Nominatim database schema is optimised for Nominatim use. The contents of place/placex are an internal implementation detail. If you want a generic database import that you can use for other purposes than running Nomiatim on it, try a manual <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a> import (or try <a href="https://wiki.openstreetmap.org/wiki/Imposm">imposm).</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, solution a problem indexed in: <a href="https://help.openstreetmap.org/questions/13870/different-result-of-nominatim-on-my-server-while-comparing-with-original?page=1&amp;focusedAnswerId=28137#28137">https://help.openstreetmap.org/questions/13870/different-result-of-nominatim-on-my-server-while-comparing-with-original?page=1&amp;focusedAnswerId=28137#28137</a></p>
+<p>Hi, solution a problem indexed in: <a href="/questions/13870/different-result-of-nominatim-on-my-server-while-comparing-with-original?page=1&amp;focusedAnswerId=28137#28137">https://help.openstreetmap.org/questions/13870/different-result-of-nominatim-on-my-server-while-comparing-with-original?page=1&amp;focusedAnswerId=28137#28137</a></p>
 <p>Gracias</p>
 </div>
 <div class="answer-controls post-controls">

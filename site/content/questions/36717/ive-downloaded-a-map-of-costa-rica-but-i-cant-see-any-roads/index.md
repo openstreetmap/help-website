@@ -69,7 +69,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>This was previously asked as an answer on this question:</p>
-<p><a href="https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded</a></p>
+<p><a href="/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded</a></p>
 </div>
 <div id="comment-36718-info" class="comment-info">
 <span class="comment-age">(09 Sep '14, 20:54)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

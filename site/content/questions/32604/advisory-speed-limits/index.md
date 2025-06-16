@@ -108,10 +108,10 @@ One Answer:
 <div class="answer-body">
 <p>There are already tags for this in use:</p>
 <ul>
-<li><a href="http://taginfo.openstreetmap.org/keys/maxspeed%3Apractical">maxspeed:practical</a> (currenlty used 12 741 times, has a <a href="http://wiki.openstreetmap.org/wiki/Key%3Amaxspeed%3Apractical">proposal</a>)</li>
+<li><a href="http://taginfo.openstreetmap.org/keys/maxspeed%3Apractical">maxspeed:practical</a> (currenlty used 12 741 times, has a <a href="https://wiki.openstreetmap.org/wiki/Key%3Amaxspeed%3Apractical">proposal</a>)</li>
 <li><a href="http://taginfo.openstreetmap.org/keys/maxspeed%3Aadvised">maxspeed:advised</a> (currently used 3 096 times)</li>
 <li><a href="http://taginfo.openstreetmap.org/keys/maxspeed%3Aadvisory">maxspeed:advisory</a> (currently used 533 times)</li>
-<li><a href="http://taginfo.openstreetmap.org/keys/recommended_speed">recommended_speed</a> (currently used 354 times, has a <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/recommended_speed">proposal</a>)</li>
+<li><a href="http://taginfo.openstreetmap.org/keys/recommended_speed">recommended_speed</a> (currently used 354 times, has a <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/recommended_speed">proposal</a>)</li>
 <li><a href="http://taginfo.openstreetmap.org/keys/maxspeed%3Arecommended">maxspeed:recommended</a> (currently used 101 times)</li>
 </ul>
 </div>
@@ -171,7 +171,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>The top one is suggested in a couple of talk pages on the wiki. <a href="http://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=maxspeed%3Aadvisory&amp;fulltext=Search&amp;profile=all&amp;redirs=1">http://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=maxspeed%3Aadvisory&amp;fulltext=Search&amp;profile=all&amp;redirs=1</a> and the second is mentioned on <a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom</a> maxspeed:recommended is mentioned in the recommended_speed proposal linked above but only quoting the then usage figures. maxspeed:advised has been used by 8 users and maxspeed:advisory by 33 it seems.</p>
+<p>The top one is suggested in a couple of talk pages on the wiki. <a href="https://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=maxspeed%3Aadvisory&amp;fulltext=Search&amp;profile=all&amp;redirs=1">https://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=maxspeed%3Aadvisory&amp;fulltext=Search&amp;profile=all&amp;redirs=1</a> and the second is mentioned on <a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom</a> maxspeed:recommended is mentioned in the recommended_speed proposal linked above but only quoting the then usage figures. maxspeed:advised has been used by 8 users and maxspeed:advisory by 33 it seems.</p>
 </div>
 <div id="comment-32627-info" class="comment-info">
 <span class="comment-age">(25 Apr '14, 09:13)</span> <span class="comment-user userinfo">EdLoach ♦</span>

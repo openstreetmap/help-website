@@ -53,8 +53,8 @@ osqa_accepted = true
 </ul>
 <p>I read about similar cases, but those are missing a special ingredient <strong>hate</strong></p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/11120/bilingual-country-names">Bilingual Country Names</a></li>
-<li><a href="https://help.openstreetmap.org/questions/6192/georgia-localized-names">Georgia - localized names</a></li>
+<li><a href="/questions/11120/bilingual-country-names">Bilingual Country Names</a></li>
+<li><a href="/questions/6192/georgia-localized-names">Georgia - localized names</a></li>
 </ul>
 <p>Is it possible to disable <code>key:name</code> for some regions?</p>
 </div>
@@ -82,7 +82,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Offtopic: you should use wikipedia:en=Jijel instead of wikipedia_1=en:jijel for additional wikipedia values. Even then, it's <a href="http://wiki.openstreetmap.org/wiki/Key:wikipedia#Secondary_languages">probably not necessary</a>.</p>
+<p>Offtopic: you should use wikipedia:en=Jijel instead of wikipedia_1=en:jijel for additional wikipedia values. Even then, it's <a href="https://wiki.openstreetmap.org/wiki/Key:wikipedia#Secondary_languages">probably not necessary</a>.</p>
 </div>
 <div id="comment-43258-info" class="comment-info">
 <span class="comment-age">(27 May '15, 15:14)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -147,7 +147,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, it is not possible to disable key:name for some regions. I think you should get in contact with the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">DWG</a> and hope they can help you to settle the conflict with the other mapper. I think mapping the names in both (or all four languages) is the correct way. The other mapper should not change the name.</p>
+<p>No, it is not possible to disable key:name for some regions. I think you should get in contact with the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">DWG</a> and hope they can help you to settle the conflict with the other mapper. I think mapping the names in both (or all four languages) is the correct way. The other mapper should not change the name.</p>
 <p>In Belgium (Brussels area), we use 'french name - dutch name' as name and add name:fr and name:nl as well. In some cases you might see the reversed order in the name. It just depends on the mother tongue of the mapper that added the name. This works fine for us and I am not aware of any serious incidents, although their are (political) groups enough to make a lot of fuss about it. Not so in OSM so far.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why do some shops not appear on the default (mapnik?) map?"
-description = '''I was looking for a state alcohol shop in Lund Sweden (http://www.openstreetmap.org/?lat=55.705917&amp;amp;lon=13.188067&amp;amp;zoom=18&amp;amp;layers=M)--my wife was sure that it was there but I didn&#x27;t see it on the default (mapnik?) map. I found it in person then went to add it to the map to find it was ther...'''
+description = '''I was looking for a state alcohol shop in Lund Sweden (https://www.openstreetmap.org/?lat=55.705917&amp;amp;lon=13.188067&amp;amp;zoom=18&amp;amp;layers=M)--my wife was sure that it was there but I didn&#x27;t see it on the default (mapnik?) map. I found it in person then went to add it to the map to find it was ther...'''
 date = "2012-11-11T09:45:00Z"
 lastmod = "2012-11-11T10:16:00Z"
 weight = 17642
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was looking for a state alcohol shop in Lund Sweden (<a href="http://www.openstreetmap.org/?lat=55.705917&amp;lon=13.188067&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=55.705917&amp;lon=13.188067&amp;zoom=18&amp;layers=M</a>)--my wife was sure that it was there but I didn't see it on the default (mapnik?) map. I found it in person then went to add it to the map to find it was there, with all details entered correctly (tag shop=alcohol). Why do some shops show up on the map and not others?</p>
+<p>I was looking for a state alcohol shop in Lund Sweden (<a href="https://www.openstreetmap.org/?lat=55.705917&amp;lon=13.188067&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=55.705917&amp;lon=13.188067&amp;zoom=18&amp;layers=M</a>)--my wife was sure that it was there but I didn't see it on the default (mapnik?) map. I found it in person then went to add it to the map to find it was there, with all details entered correctly (tag shop=alcohol). Why do some shops show up on the map and not others?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shop" rel="tag" title="see questions tagged &#39;shop&#39;">shop</span> <span class="post-tag tag-link-alcohol" rel="tag" title="see questions tagged &#39;alcohol&#39;">alcohol</span>

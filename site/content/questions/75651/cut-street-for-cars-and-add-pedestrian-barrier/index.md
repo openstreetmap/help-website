@@ -121,7 +121,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><del>As you can see from <a href="https://www.openstreetmap.org/directions?engine=graphhopper_car&amp;route=47.33609%2C7.37617%3B47.33678%2C7.37639#map=18/47.33652/7.37649">this routing example</a> cars are already forbidden to take that path. However, you could add the tag <code>motor_vehicle=no</code> or <code>motorcar=no</code> to the path to be sure every routing engine won't make cars pass on that path.</del></p>
-<p>You can add a node with the tag <code>barrier=fence</code>. I'm not sure if you can add <code>foot=yes bicycle=yes</code> tags so that only pedestrians and bikes can pass through. However, according to the StreetView image you provided, I can see on the left of the fence that there's a little gate like that in my beautiful painting below. If there's a gate, you could add a node with <code>barrier=fence foot=yes bicycle=yes</code> tags.<img src="https://help.openstreetmap.org/upfiles/Immagine_6y5ps6T.png" alt="alt text" /></p>
+<p>You can add a node with the tag <code>barrier=fence</code>. I'm not sure if you can add <code>foot=yes bicycle=yes</code> tags so that only pedestrians and bikes can pass through. However, according to the StreetView image you provided, I can see on the left of the fence that there's a little gate like that in my beautiful painting below. If there's a gate, you could add a node with <code>barrier=fence foot=yes bicycle=yes</code> tags.<img src="/upfiles/Immagine_6y5ps6T.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

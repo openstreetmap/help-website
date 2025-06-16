@@ -43,12 +43,12 @@ osqa_accepted = false
 <p>I had some issues that have been solved, everything is working perfectly in my previous configured VM : I can render my tiles in a distant computer in QGIS, it's very fast and no bugged.</p>
 <p>I was thinking that it was going to be the same during the configuration on a "real" server, but I have some new problems...</p>
 <p>In fact, <a href="http://myserveradress/osm_tiles/0/0/0.png">http://myserveradress/osm_tiles/0/0/0.png</a> is working. I can also get an access to my server from QGIS using QuickMapService like in my VM :</p>
-<p><a href="http://help.openstreetmap.org/upfiles/before-zoom.PNG"><img src="http://help.openstreetmap.org/upfiles/before-zoom.PNG" alt="before zoom" /></a> <em>Coasts lines are present before a zoom</em></p>
+<p><span><img src="/upfiles/before-zoom.PNG" alt="before zoom" /></span> <em>Coasts lines are present before a zoom</em></p>
 <p><strong>BUT</strong> beyond a certain zoom level in a country (when it's supposed to render some streets/places/etc) I get this :</p>
 <p><a href="http://i.stack.imgur.com/WF8AA.png"><img src="http://i.stack.imgur.com/WF8AA.png" alt="some errors" /></a> <a href="http://i.stack.imgur.com/vZrq9.png"><img src="http://i.stack.imgur.com/vZrq9.png" alt="some errors" /></a></p>
 <p>And the screen is white...</p>
 <p>Also, a strange fact from France rendering (country that I had tried to get into my database to finally stop the process) :</p>
-<p><a href="http://help.openstreetmap.org/upfiles/francewut_NxKErNB.PNG"><img src="http://help.openstreetmap.org/upfiles/francewut_NxKErNB.PNG" alt="france" /></a> <em>Africa (that is uploaded in my DB) is supposed to be rendered...not France</em></p>
+<p><span><img src="/upfiles/francewut_NxKErNB.PNG" alt="france" /></span> <em>Africa (that is uploaded in my DB) is supposed to be rendered...not France</em></p>
 <p>I was wondering if it was coming from the server performances so I used the command</p>
 <blockquote>
 <p>render_list --all --socket=/var/run/renderd/renderd.sock -z 0 -Z 10</p>

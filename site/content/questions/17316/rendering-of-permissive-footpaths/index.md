@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have recently stumbled upon a <a href="http://www.openstreetmap.org/browse/way/3343696">permissive footpath</a> marked as:</p>
+<p>I have recently stumbled upon a <a href="https://www.openstreetmap.org/browse/way/3343696">permissive footpath</a> marked as:</p>
 <ul>
 <li>designation = permissive_footpath</li>
 <li>foot = permissive</li>
@@ -111,9 +111,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Usually we don't <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tag for the renderer</a>.</p>
-<p>It is true that the currently used stylesheet for <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> (the renderer for our main slippy map) only recognizes <em>access=</em> and ignores the more specific access tags (with a few exceptions). You could create a <a href="https://trac.openstreetmap.org/report">feature request</a> but keep in mind that the main map cannot display every possible <a href="http://wiki.openstreetmap.org/wiki/Map_Features">map feature</a>. <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a> for example allows <em>foot</em>, <em>bicycle</em> and <em>horse</em> according to the <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access restrictions</a>. Consequently you cannot render <em>foot=permissive</em> the same way as <em>access=permissive</em> because they don't have the same meaning and the access permissions for foot and horse would get ignored.</p>
-<p>There are also several other map features like <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">barriers</a> which can prevent you from using a specific way, not all of them are rendered. If you want to know whether you are allowed to use a way or a route then consult an up-to-date <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">routing engine</a> instead. The rendered map just gives you an overview but hides lots of detailed information.</p>
+<p>Usually we don't <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tag for the renderer</a>.</p>
+<p>It is true that the currently used stylesheet for <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> (the renderer for our main slippy map) only recognizes <em>access=</em> and ignores the more specific access tags (with a few exceptions). You could create a <a href="https://trac.openstreetmap.org/report">feature request</a> but keep in mind that the main map cannot display every possible <a href="https://wiki.openstreetmap.org/wiki/Map_Features">map feature</a>. <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">highway=path</a> for example allows <em>foot</em>, <em>bicycle</em> and <em>horse</em> according to the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access restrictions</a>. Consequently you cannot render <em>foot=permissive</em> the same way as <em>access=permissive</em> because they don't have the same meaning and the access permissions for foot and horse would get ignored.</p>
+<p>There are also several other map features like <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">barriers</a> which can prevent you from using a specific way, not all of them are rendered. If you want to know whether you are allowed to use a way or a route then consult an up-to-date <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">routing engine</a> instead. The rendered map just gives you an overview but hides lots of detailed information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -200,7 +200,7 @@ osqa_accepted = true
 <div id="post-17321-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Apparently this is a matter of style: <a href="http://wiki.openstreetmap.org/wiki/UK_public_rights_of_way#Classic_vs_Alternative_tagging_schemes">http://wiki.openstreetmap.org/wiki/UK_public_rights_of_way#Classic_vs_Alternative_tagging_schemes</a></p>
+<p>Apparently this is a matter of style: <a href="https://wiki.openstreetmap.org/wiki/UK_public_rights_of_way#Classic_vs_Alternative_tagging_schemes">https://wiki.openstreetmap.org/wiki/UK_public_rights_of_way#Classic_vs_Alternative_tagging_schemes</a></p>
 </div>
 <div id="comment-17321-info" class="comment-info">
 <span class="comment-age">(31 Oct '12, 13:03)</span> <span class="comment-user userinfo">priteau</span>
@@ -211,7 +211,7 @@ osqa_accepted = true
 <div id="post-17328-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>highway=footway is equivalent to highway=path with horse=no and bicycle=no according to the <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access restrictions</a>.</p>
+<p>highway=footway is equivalent to highway=path with horse=no and bicycle=no according to the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access restrictions</a>.</p>
 </div>
 <div id="comment-17328-info" class="comment-info">
 <span class="comment-age">(31 Oct '12, 15:47)</span> <span class="comment-user userinfo">scai ♦</span>

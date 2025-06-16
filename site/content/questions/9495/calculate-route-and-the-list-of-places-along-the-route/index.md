@@ -174,7 +174,7 @@ One Answer:
 <div class="answer-body">
 <p>If you want details for each step, then this question should be broken into multiple questions. At a high level, here's the approach I would take.</p>
 <ol>
-<li>Route from Point A to Point B: See <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></li>
+<li>Route from Point A to Point B: See <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a></li>
 <li>Convert the route into something that the database will understand. This is probably a Linestring in either WKT or WKB format.</li>
 <li>Use the database's spatial functions to find cities/villages along the route. (Perhaps use the Buffer function to expand the LineString into a Polygon, then the Intersects function to find cities/villages -- note that I haven't checked if those are supported in MySQL).</li>
 <li>Sort Cities / Villages so that they are in route-wise order. A simple approximate answer would be to sort them by distance from the starting point, under the assumption that most routes don't backtrack. A more robust approach might be to find the closest city/village to the starting point, then find the point on the route that is closest to that city/village, then repeat using that point as the new starting point and excluding cities that have already been visited.</li>

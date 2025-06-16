@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to move labels?"
-description = '''Hi, I am a bit of an OSM newbie having just made my first edit. I added the way http://www.openstreetmap.org/browse/way/231720132 Bradlaugh Fields using the ID in-browser editor. This is a public park in northern Northampton, England. However the label for the way appears to the right of the area it...'''
+description = '''Hi, I am a bit of an OSM newbie having just made my first edit. I added the way https://www.openstreetmap.org/browse/way/231720132 Bradlaugh Fields using the ID in-browser editor. This is a public park in northern Northampton, England. However the label for the way appears to the right of the area it...'''
 date = "2013-07-29T17:22:00Z"
 lastmod = "2013-08-05T03:33:00Z"
 weight = 24687
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I am a bit of an OSM newbie having just made my first edit. I added the way <a href="http://www.openstreetmap.org/browse/way/231720132">http://www.openstreetmap.org/browse/way/231720132</a> Bradlaugh Fields using the ID in-browser editor.</p>
+<p>I am a bit of an OSM newbie having just made my first edit. I added the way <a href="https://www.openstreetmap.org/browse/way/231720132">https://www.openstreetmap.org/browse/way/231720132</a> Bradlaugh Fields using the ID in-browser editor.</p>
 <p>This is a public park in northern Northampton, England. However the label for the way appears to the right of the area itself, and the label is in fact over Aintree Road, which is not part of the way. How can I move the label so that it is over the actual park rather than in the rather odd place it is now?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -93,7 +93,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I am a bit confused: the <a href="http://www.openstreetmap.org/?lat=52.26657&amp;lon=-0.8753&amp;zoom=15&amp;layers=Q">MapQuest Open style</a> shows the label off. But <a href="http://www.openstreetmap.org/?lat=52.26657&amp;lon=-0.8753&amp;zoom=15&amp;layers=M">osm.org's Mapnik style</a> shows the label right on the park - contrary to what I understand you see. Oh, hold on... That <em>may</em> be due to the fact that you are accessing from the Brit. Isles and I from Germany. Users from the <a href="http://lists.openstreetmap.org/pipermail/talk/2013-July/067707.html">Brit. Isles were switched to the new CartoCSS style</a> on 24 July 2013. So you may see a different map than I do. The current openstreetmap-carto style may currently have a disadvantage here compared to the classic Mapnik style.</p>
+<p>I am a bit confused: the <a href="https://www.openstreetmap.org/?lat=52.26657&amp;lon=-0.8753&amp;zoom=15&amp;layers=Q">MapQuest Open style</a> shows the label off. But <a href="https://www.openstreetmap.org/?lat=52.26657&amp;lon=-0.8753&amp;zoom=15&amp;layers=M">osm.org's Mapnik style</a> shows the label right on the park - contrary to what I understand you see. Oh, hold on... That <em>may</em> be due to the fact that you are accessing from the Brit. Isles and I from Germany. Users from the <a href="http://lists.openstreetmap.org/pipermail/talk/2013-July/067707.html">Brit. Isles were switched to the new CartoCSS style</a> on 24 July 2013. So you may see a different map than I do. The current openstreetmap-carto style may currently have a disadvantage here compared to the classic Mapnik style.</p>
 </div>
 <div id="comment-24757-info" class="comment-info">
 <span class="comment-age">(30 Jul '13, 22:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -128,7 +128,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Update: now I see (from Germany) no label in my mapnik link from above but I see a label in <a href="http://www.openstreetmap.org/?lat=52.2675&amp;lon=-0.87&amp;zoom=14&amp;layers=M">a lower zoom level</a> which is ("wrongly") on the residential area. There <a href="/questions/24900/railwaylevel_crossing-no-longer-rendered-by-mapnik#24901">seem</a> to be some server changes/actions currently.</p>
+<p>Update: now I see (from Germany) no label in my mapnik link from above but I see a label in <a href="https://www.openstreetmap.org/?lat=52.2675&amp;lon=-0.87&amp;zoom=14&amp;layers=M">a lower zoom level</a> which is ("wrongly") on the residential area. There <a href="/questions/24900/railwaylevel_crossing-no-longer-rendered-by-mapnik#24901">seem</a> to be some server changes/actions currently.</p>
 </div>
 <div id="comment-24902-info" class="comment-info">
 <span class="comment-age">(05 Aug '13, 03:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -272,7 +272,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>In fact, label placement on a graph/map is shown to be a NP-complete problem, which means there are no perfect solutions in polynomial time. See <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.54.8844">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.54.8844</a> .</p>
 <p>All label placement algorithms must fail, if you want them to ever finish computing (this is somewhat simplified).</p>
-<p>So: you should not do anything. If the area is tagged correctly then leave it as it is. Don't nudge the data to display the way you want (we call this "tagging for the renderer", and it is a sacrilege in the OSM community. See <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer</a> ).</p>
+<p>So: you should not do anything. If the area is tagged correctly then leave it as it is. Don't nudge the data to display the way you want (we call this "tagging for the renderer", and it is a sacrilege in the OSM community. See <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer</a> ).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -315,7 +315,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>Generally speaking, there should be <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature for each OSM element</a>, not one-for-many or many-for-one.</p>
+<p>Generally speaking, there should be <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature for each OSM element</a>, not one-for-many or many-for-one.</p>
 </div>
 <div id="comment-24747-info" class="comment-info">
 <span class="comment-age">(30 Jul '13, 17:36)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

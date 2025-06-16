@@ -171,7 +171,7 @@ osqa_accepted = true
 <div id="post-82007-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/277/voschix">@voschix</a>: Good! Then, you could mark this question as answered, by "accepting" the answer (<a href="https://help.openstreetmap.org/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered/34319)">https://help.openstreetmap.org/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered/34319)</a> in order to avoid other people to check whether it still needs to be answered.</p>
+<p><a href="https://help.openstreetmap.org/users/277/voschix">@voschix</a>: Good! Then, you could mark this question as answered, by "accepting" the answer (<a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered/34319)">https://help.openstreetmap.org/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered/34319)</a> in order to avoid other people to check whether it still needs to be answered.</p>
 </div>
 <div id="comment-82007-info" class="comment-info">
 <span class="comment-age">(30 Sep '21, 12:51)</span> <span class="comment-user userinfo">Gåseborg</span>

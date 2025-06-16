@@ -115,7 +115,7 @@ Caused by: java.lang.ClassNotFoundException: {\rtf1\ansi\ansicpg1252\cocoartf134
 2
 </div>
 <div class="comment-text">
-<p>I followed the quick install guide on <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_%28Windows%29,">http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_%28Windows%29,</a> but I should mention that I had to tinker a bit before making it work: at first it didnt see the jre path, then I had to modify the classworlds pointer in the osmosis file, because it was wrong. I have both java 8 and 7 on my Windows PC.</p>
+<p>I followed the quick install guide on <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_%28Windows%29,">https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_%28Windows%29,</a> but I should mention that I had to tinker a bit before making it work: at first it didnt see the jre path, then I had to modify the classworlds pointer in the osmosis file, because it was wrong. I have both java 8 and 7 on my Windows PC.</p>
 <p>For mac, a first I downloaded the zipfile and tried running it from there (I used the guide on the wiki). Then I tried downloading osmosis with homebrew. On mac I only have java 8 (for work). Should I try to download java 7 and see if that works?</p>
 <p>terminal output on mac: java version "1.8.0_45" Java(TM) SE Runtime Environment (build 1.8.0_45-b14) Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)</p>
 <p>It's especially odd to me that I get the same error on both machines.</p>

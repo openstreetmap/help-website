@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why can&#x27;t I find that street?"
-description = '''I named a street, but when I search it by its name (&quot;Maybachstrasse, Wimsheim&quot;), it will not show up in the results. Did I miss something? It is called &quot;Maybachstrasse&quot;: http://www.openstreetmap.org/?lat=48.84511&amp;amp;lon=8.82273&amp;amp;zoom=17&amp;amp;layers=M'''
+description = '''I named a street, but when I search it by its name (&quot;Maybachstrasse, Wimsheim&quot;), it will not show up in the results. Did I miss something? It is called &quot;Maybachstrasse&quot;: https://www.openstreetmap.org/?lat=48.84511&amp;amp;lon=8.82273&amp;amp;zoom=17&amp;amp;layers=M'''
 date = "2010-12-27T21:56:00Z"
 lastmod = "2010-12-27T22:07:00Z"
 weight = 1934
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I named a street, but when I search it by its name ("Maybachstrasse, Wimsheim"), it will not show up in the results. Did I miss something?</p>
-<p>It is called "Maybachstrasse": <a href="http://www.openstreetmap.org/?lat=48.84511&amp;lon=8.82273&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=48.84511&amp;lon=8.82273&amp;zoom=17&amp;layers=M</a></p>
+<p>It is called "Maybachstrasse": <a href="https://www.openstreetmap.org/?lat=48.84511&amp;lon=8.82273&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=48.84511&amp;lon=8.82273&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span>
@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, currently OSM's primary search engine, will take some time to update its database. As the street name was added yesterday, you should wait some time until searching for it. Also, as you can see in the <a href="http://www.openstreetmap.org/browse/way/35317659/history">street's history</a>, <a href="http://wiki.openstreetmap.org/wiki/User:Xybot">xybot</a> corrected the street name to "Maybachstraße".</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, currently OSM's primary search engine, will take some time to update its database. As the street name was added yesterday, you should wait some time until searching for it. Also, as you can see in the <a href="https://www.openstreetmap.org/browse/way/35317659/history">street's history</a>, <a href="https://wiki.openstreetmap.org/wiki/User:Xybot">xybot</a> corrected the street name to "Maybachstraße".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

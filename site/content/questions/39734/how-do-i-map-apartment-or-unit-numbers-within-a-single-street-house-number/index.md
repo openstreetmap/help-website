@@ -150,7 +150,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I think addr:flats is used to list a range of apartments/units in a building, while addr:unit gives a particular apartment/unit. If you area listing individual addresses in a building, those are typically done with nodes within the building footprint. See <a href="http://wiki.openstreetmap.org/wiki/Key:addr#Detailed_subkeys">http://wiki.openstreetmap.org/wiki/Key:addr#Detailed_subkeys</a></p>
+<p>I think addr:flats is used to list a range of apartments/units in a building, while addr:unit gives a particular apartment/unit. If you area listing individual addresses in a building, those are typically done with nodes within the building footprint. See <a href="https://wiki.openstreetmap.org/wiki/Key:addr#Detailed_subkeys">https://wiki.openstreetmap.org/wiki/Key:addr#Detailed_subkeys</a></p>
 </div>
 <div id="comment-39797-info" class="comment-info">
 <span class="comment-age">(22 Dec '14, 16:26)</span> <span class="comment-user userinfo">neuhausr</span>

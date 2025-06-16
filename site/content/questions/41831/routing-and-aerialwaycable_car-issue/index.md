@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Since the routing opting has been added to the main openstreetmap website, I've been using it to find mapping errors, minor gaps in ways that should connect mostly. <a href="http://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=34.00846%2C77.20785%3B34.00890%2C77.20662#map=17/34.00757/77.21029">Here</a> I've found that neither of the routing providers accept the cable car as part of a hiking route. Is there something I can do about this? Tagging, or bring submit a bug report (feature request?) with graphhopper?</p>
+<p>Since the routing opting has been added to the main openstreetmap website, I've been using it to find mapping errors, minor gaps in ways that should connect mostly. <a href="https://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=34.00846%2C77.20785%3B34.00890%2C77.20662#map=17/34.00757/77.21029">Here</a> I've found that neither of the routing providers accept the cable car as part of a hiking route. Is there something I can do about this? Tagging, or bring submit a bug report (feature request?) with graphhopper?</p>
 <p>There are many of these simple cable cars used in the Himalaya as inexpensive river crossings, to service the needs of locals and trekkers. They are not just recreational, they are important infrastructure for locals.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

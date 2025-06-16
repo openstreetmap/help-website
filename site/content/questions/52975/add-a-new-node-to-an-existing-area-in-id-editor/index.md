@@ -178,7 +178,7 @@ One Answer:
 <div id="post-53012-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: done - I am assuming this is sufficient for simonc8</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: done - I am assuming this is sufficient for simonc8</p>
 </div>
 <div id="comment-53012-info" class="comment-info">
 <span class="comment-age">(17 Nov '16, 21:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

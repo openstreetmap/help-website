@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>First I recommend to remove your email address here because of spam bots collectim them.</p>
 <p>Second: dont wait for someone emailing you, please take time and effort to read here again if any volunteer OSM contributor is answering you.</p>
-<p>Third: have a look at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> ... maybe some company can help you. I remember that when there were elections in the USA past month, <a href="http://mapbox.com">mapbox.com</a> did some nice graphics about regional values and patterns</p>
+<p>Third: have a look at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a> ... maybe some company can help you. I remember that when there were elections in the USA past month, <a href="http://mapbox.com">mapbox.com</a> did some nice graphics about regional values and patterns</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>... or have a look at <a href="http://wiki.openstreetmap.org/wiki/Tilemill">Tilemill</a></p>
+<p>... or have a look at <a href="https://wiki.openstreetmap.org/wiki/Tilemill">Tilemill</a></p>
 <p>it is programmed and used by mapbox.com ... and they say: "we make beautiful maps" ;-)</p>
 </div>
 <div class="answer-controls post-controls">

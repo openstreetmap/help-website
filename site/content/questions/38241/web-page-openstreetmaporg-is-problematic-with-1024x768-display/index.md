@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Overlapping link after log in. I can't click on links I want. I have to expand the window to another desktop.</p>
 <p>(sorry to post here - I didn't find a proper place)</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm-1024x768.png" alt="can&#39;t click" /></p>
+<p><img src="/upfiles/osm-1024x768.png" alt="can&#39;t click" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bug_reporting" rel="tag" title="see questions tagged &#39;bug_reporting&#39;">bug_reporting</span> <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-osm.org" rel="tag" title="see questions tagged &#39;osm.org&#39;">osm.org</span>

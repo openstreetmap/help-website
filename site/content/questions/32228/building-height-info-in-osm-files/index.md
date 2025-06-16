@@ -177,7 +177,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Here is an image of where I see the height as an attribute.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Height_Attribute_in_OSM.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Height_Attribute_in_OSM.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-32236-info" class="comment-info">
 <span class="comment-age">(09 Apr '14, 18:59)</span> <span class="comment-user userinfo">Biabou</span>

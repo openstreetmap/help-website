@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi all,</p>
 <p>I am encountering an annoying error while trying to populate the website (at <a href="http://localhost/nominatim).">http://localhost/nominatim).</a></p>
-<p>I followed all the instructions listed at <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">link text</a> but, at the moment I call</p>
+<p>I followed all the instructions listed at <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">link text</a> but, at the moment I call</p>
 <pre><code>./utils/setup.php --create-website &lt;Apache document root&gt;/nominatim</code></pre>
 <p>I got the following error</p>
 <pre><code>WARNING: resetting threads to 1

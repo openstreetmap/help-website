@@ -115,7 +115,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use the user profile to send personal messages e.g. <a href="http://www.openstreetmap.org/user/!i!/">http://www.openstreetmap.org/user/!i!/</a> Also some users have wiki accounts. Be aware that this channel isn't usefull to send broadcasts. You might check out <a href="https://wiki.openstreetmap.org/wiki/Contact">https://wiki.openstreetmap.org/wiki/Contact</a></p>
+<p>You can use the user profile to send personal messages e.g. <a href="https://www.openstreetmap.org/user/!i!/">https://www.openstreetmap.org/user/!i!/</a> Also some users have wiki accounts. Be aware that this channel isn't usefull to send broadcasts. You might check out <a href="https://wiki.openstreetmap.org/wiki/Contact">https://wiki.openstreetmap.org/wiki/Contact</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,7 +177,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are email lists for many areas around the world. Check <a href="http://wiki.openstreetmap.org/wiki/Mailing_Lists">http://wiki.openstreetmap.org/wiki/Mailing_Lists</a> to see if there is a list that covers your area. For the United States I find that the talk-us mail list is far more active and interactive than these forums.</p>
+<p>There are email lists for many areas around the world. Check <a href="https://wiki.openstreetmap.org/wiki/Mailing_Lists">https://wiki.openstreetmap.org/wiki/Mailing_Lists</a> to see if there is a list that covers your area. For the United States I find that the talk-us mail list is far more active and interactive than these forums.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

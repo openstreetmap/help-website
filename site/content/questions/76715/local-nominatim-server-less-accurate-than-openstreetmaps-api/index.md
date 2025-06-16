@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-76743-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Next day you posted <a href="https://help.openstreetmap.org/questions/76736/nominatim-server-on-gcp-vm-stalls-when-doing-batch-geocoding-through-multiprocessing">https://help.openstreetmap.org/questions/76736/nominatim-server-on-gcp-vm-stalls-when-doing-batch-geocoding-through-multiprocessing</a> so I assume this is solved?</p>
+<p>Next day you posted <a href="/questions/76736/nominatim-server-on-gcp-vm-stalls-when-doing-batch-geocoding-through-multiprocessing">https://help.openstreetmap.org/questions/76736/nominatim-server-on-gcp-vm-stalls-when-doing-batch-geocoding-through-multiprocessing</a> so I assume this is solved?</p>
 </div>
 <div id="comment-76743-info" class="comment-info">
 <span class="comment-age">(21 Sep '20, 11:56)</span> <span class="comment-user userinfo">mtmail</span>

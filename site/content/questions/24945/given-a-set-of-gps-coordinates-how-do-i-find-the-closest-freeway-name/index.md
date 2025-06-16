@@ -50,7 +50,7 @@ HENDERSON-LAKE MEAD         0       35.961925   -115.18177
 SEACHLIGHT-NEEDLES          1       35.967418   -114.894599</code></pre>
 <p>Sample Query: <a href="http://nominatim.openstreetmap.org/reverse?format=xml&amp;lat=35.612419%20&amp;lon=-115.389038&amp;zoom=18&amp;addressdetails=1">http://nominatim.openstreetmap.org/reverse?format=xml&amp;lat=35.612419%20&amp;lon=-115.389038&amp;zoom=18&amp;addressdetails=1</a></p>
 <pre><code>XML Output:
-&#10;&lt;reversegeocode timestamp=&quot;Mon, 05 Aug 13 22:08:40 +0000&quot; attribution=&quot;Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright&quot; querystring=&quot;format=xml&amp;lat=35.612419%20&amp;lon=-115.389038&amp;zoom=18&amp;addressdetails=1&quot;&gt;
+&#10;&lt;reversegeocode timestamp=&quot;Mon, 05 Aug 13 22:08:40 +0000&quot; attribution=&quot;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&quot; querystring=&quot;format=xml&amp;lat=35.612419%20&amp;lon=-115.389038&amp;zoom=18&amp;addressdetails=1&quot;&gt;
     &lt;result place_id=&quot;5999235837&quot; osm_type=&quot;way&quot; osm_id=&quot;148728272&quot; ref=&quot;East Primm Boulevard&quot; lat=&quot;35.6125513&quot; lon=&quot;-115.3843467&quot;&gt;
     East Primm Boulevard, Primm, Clark, Nevada, United States of America
     &lt;/result&gt;

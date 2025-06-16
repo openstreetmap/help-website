@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "osmosis update.php --import-osmosis-all --no-npi fail"
-description = '''Hi All I&#x27;m new here and I hope I&#x27;m writing on the right session. I have installed Nominatim 2.3.1 following the wiki guide at the page http://wiki.openstreetmap.org/wiki/Nominatim/Installation on centOS 6.6 minimal. I have java 1.7 version, I imported the montecarlo map and everything goes fine. I c...'''
+description = '''Hi All I&#x27;m new here and I hope I&#x27;m writing on the right session. I have installed Nominatim 2.3.1 following the wiki guide at the page https://wiki.openstreetmap.org/wiki/Nominatim/Installation on centOS 6.6 minimal. I have java 1.7 version, I imported the montecarlo map and everything goes fine. I c...'''
 date = "2015-05-20T13:55:00Z"
 lastmod = "2017-03-21T18:39:00Z"
 weight = 43132
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi All I'm new here and I hope I'm writing on the right session. I have installed Nominatim 2.3.1 following the wiki guide at the page <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> on centOS 6.6 minimal. I have java 1.7 version, I imported the montecarlo map and everything goes fine. I configure it with apache and I reach the openstreetmap home pag at localhost and I obtain the xml address from a latitude and longitude parameters.</p>
+<p>Hi All I'm new here and I hope I'm writing on the right session. I have installed Nominatim 2.3.1 following the wiki guide at the page <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> on centOS 6.6 minimal. I have java 1.7 version, I imported the montecarlo map and everything goes fine. I configure it with apache and I reach the openstreetmap home pag at localhost and I obtain the xml address from a latitude and longitude parameters.</p>
 <p>Now i would like to keep my map updated and I download (and unpack) osmosis latest version. I edited my local.php as follows:</p>
 <pre><code>&lt;?php
    // Paths

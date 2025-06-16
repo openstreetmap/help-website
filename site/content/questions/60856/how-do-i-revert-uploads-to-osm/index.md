@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a ‘reverter’ plugin for Josm <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter</a> You just enter the number of the latest changeset first and work back through the changesets until you get back to the state you want. You upload the changes. It can be difficult if someone else has done some editing of those things since you and the conflicts then need to be sorted out. The documentation mentions that if this seems complex and you are not confident then you can ask the Data Working Group to assist.</p>
+<p>There is a ‘reverter’ plugin for Josm <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter</a> You just enter the number of the latest changeset first and work back through the changesets until you get back to the state you want. You upload the changes. It can be difficult if someone else has done some editing of those things since you and the conflicts then need to be sorted out. The documentation mentions that if this seems complex and you are not confident then you can ask the Data Working Group to assist.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

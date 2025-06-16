@@ -111,8 +111,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>How best to represent this depends on how the street is actually blocked.</p>
-<p><a href="http://www.openstreetmap.org/?lat=53.121851&amp;lon=-1.265678&amp;zoom=18&amp;layers=M">Here</a> is one example where the footpath/sidewalk along the main road is raised, but there's a join to the old road (closed off to prevent it being used as a rat-run). Here the implicit access tags on the "highway=footway" prevent vehicular access (in your case you'd want to pick an appropriate highway tag and add "bicycle=yes" if bicycle access isn't implicit.</p>
-<p>There's a slightly different example <a href="http://www.openstreetmap.org/?lat=53.137986&amp;lon=-1.56041&amp;zoom=18&amp;layers=M">here</a>. In this example there road's still there, but there's something large preventing vehicular access (actually a large planter rather than a bollard). There are also explicit access signs on a short stretch of road, which <a href="http://www.openstreetmap.org/browse/way/115930687">have been mapped</a>.</p>
+<p><a href="https://www.openstreetmap.org/?lat=53.121851&amp;lon=-1.265678&amp;zoom=18&amp;layers=M">Here</a> is one example where the footpath/sidewalk along the main road is raised, but there's a join to the old road (closed off to prevent it being used as a rat-run). Here the implicit access tags on the "highway=footway" prevent vehicular access (in your case you'd want to pick an appropriate highway tag and add "bicycle=yes" if bicycle access isn't implicit.</p>
+<p>There's a slightly different example <a href="https://www.openstreetmap.org/?lat=53.137986&amp;lon=-1.56041&amp;zoom=18&amp;layers=M">here</a>. In this example there road's still there, but there's something large preventing vehicular access (actually a large planter rather than a bollard). There are also explicit access signs on a short stretch of road, which <a href="https://www.openstreetmap.org/browse/way/115930687">have been mapped</a>.</p>
 <p>So to sum up:</p>
 <ol>
 <li>Split the road as required.</li>
@@ -192,7 +192,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Access">http://wiki.openstreetmap.org/wiki/Access</a> may also be relevant.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Access">https://wiki.openstreetmap.org/wiki/Access</a> may also be relevant.</p>
 </div>
 <div id="comment-23882-info" class="comment-info">
 <span class="comment-age">(01 Jul '13, 21:44)</span> <span class="comment-user userinfo">gnurk</span>

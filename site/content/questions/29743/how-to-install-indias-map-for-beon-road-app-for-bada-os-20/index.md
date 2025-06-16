@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is the support board of the OpenStreetMap project, so we try to help users on contributing and processing our data and of course also if people use the data on popular <a href="http://wiki.openstreetmap.org/wiki/Software">open navigation apps</a> that everybody uses here.</p>
+<p>This is the support board of the OpenStreetMap project, so we try to help users on contributing and processing our data and of course also if people use the data on popular <a href="https://wiki.openstreetmap.org/wiki/Software">open navigation apps</a> that everybody uses here.</p>
 <p>But please understand that we <strong>don't</strong> have the resources nor experiences to <strong>give support to dedicated commercial solutions</strong>, as it's a bit out of scope for most of us. So please use the official communication channels of this vendor to find a solution to your problem: <a href="http://www.beonroad.com/en/support/faq">http://www.beonroad.com/en/support/faq</a></p>
 </div>
 <div class="answer-controls post-controls">

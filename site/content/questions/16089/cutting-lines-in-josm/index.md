@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide">JOSM guide</a>, "Basic editing" documentation.<br />
+<p>Have a look at the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide">JOSM guide</a>, "Basic editing" documentation.<br />
 Of course, you can delete whatever you like for your needs locally on your machine but you shouldn't upload your changes back into the database.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -161,7 +161,7 @@ Of course, you can delete whatever you like for your needs locally on your machi
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">Osmosis</a> seems to be the most efficient way to do this. There seems to be a <a href="http://josm.openstreetmap.de/wiki/Plugins">plugin</a> that will allow you to define and save <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">polygon filters</a> from JOSM.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">Osmosis</a> seems to be the most efficient way to do this. There seems to be a <a href="http://josm.openstreetmap.de/wiki/Plugins">plugin</a> that will allow you to define and save <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">polygon filters</a> from JOSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

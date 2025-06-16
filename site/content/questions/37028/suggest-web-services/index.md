@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
+<p>Have a look in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a></p>
 <p>You would have got also many results if you type "routing" or something similar in the text search box of this FAQ site, or not?</p>
 </div>
 <div class="answer-controls post-controls">

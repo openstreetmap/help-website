@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How about <a href="http://wiki.openstreetmap.org/wiki/Key:name"><code>name</code></a><code>=Lightning Creek Road</code> and <a href="http://wiki.openstreetmap.org/wiki/Key:ref"><code>ref</code></a><code>=419</code>?</p>
+<p>How about <a href="https://wiki.openstreetmap.org/wiki/Key:name"><code>name</code></a><code>=Lightning Creek Road</code> and <a href="https://wiki.openstreetmap.org/wiki/Key:ref"><code>ref</code></a><code>=419</code>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

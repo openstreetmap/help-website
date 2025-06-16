@@ -63,7 +63,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>And how to do it efficiently for a lot of points? <a href="https://help.openstreetmap.org/questions/74372/how-to-check-efficiently-if-thousands-of-points-are-located-inside-a-building-polygon-using-overpass">https://help.openstreetmap.org/questions/74372/how-to-check-efficiently-if-thousands-of-points-are-located-inside-a-building-polygon-using-overpass</a></p>
+<p>And how to do it efficiently for a lot of points? <a href="/questions/74372/how-to-check-efficiently-if-thousands-of-points-are-located-inside-a-building-polygon-using-overpass">https://help.openstreetmap.org/questions/74372/how-to-check-efficiently-if-thousands-of-points-are-located-inside-a-building-polygon-using-overpass</a></p>
 </div>
 <div id="comment-74373-info" class="comment-info">
 <span class="comment-age">(26 Apr '20, 13:07)</span> <span class="comment-user userinfo">Vucod</span>

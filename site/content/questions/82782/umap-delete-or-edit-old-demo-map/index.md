@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the top answer to this question: <a href="https://help.openstreetmap.org/questions/82206/umap-karte-nicht-mehr-editierbar">https://help.openstreetmap.org/questions/82206/umap-karte-nicht-mehr-editierbar</a></p>
+<p>See the top answer to this question: <a href="/questions/82206/umap-karte-nicht-mehr-editierbar">https://help.openstreetmap.org/questions/82206/umap-karte-nicht-mehr-editierbar</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

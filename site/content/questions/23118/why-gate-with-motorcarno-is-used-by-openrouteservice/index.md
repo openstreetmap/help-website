@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why gate with motorcar=no is used by OpenRouteService"
-description = '''Hi, I&#x27;m a new user of OSP and I don&#x27;t understand why the gate with key motorcar &#x27;no&#x27; is used by OpenRouteService as open one: http://www.openstreetmap.org/?lat=52.158454&amp;amp;lon=20.705275&amp;amp;zoom=18&amp;amp;layers=M (node #1774628405 ) ? This is the example of such a route: http://openrouteservice.org/...'''
+description = '''Hi, I&#x27;m a new user of OSP and I don&#x27;t understand why the gate with key motorcar &#x27;no&#x27; is used by OpenRouteService as open one: https://www.openstreetmap.org/?lat=52.158454&amp;amp;lon=20.705275&amp;amp;zoom=18&amp;amp;layers=M (node #1774628405 ) ? This is the example of such a route: http://openrouteservice.org/...'''
 date = "2013-06-08T22:02:00Z"
 lastmod = "2013-06-08T22:49:00Z"
 weight = 23118
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I'm a new user of OSP and I don't understand why the gate with key motorcar 'no' is used by OpenRouteService as open one: <a href="http://www.openstreetmap.org/?lat=52.158454&amp;lon=20.705275&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.158454&amp;lon=20.705275&amp;zoom=18&amp;layers=M</a> (node #1774628405 ) ?</p>
+<p>Hi, I'm a new user of OSP and I don't understand why the gate with key motorcar 'no' is used by OpenRouteService as open one: <a href="https://www.openstreetmap.org/?lat=52.158454&amp;lon=20.705275&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.158454&amp;lon=20.705275&amp;zoom=18&amp;layers=M</a> (node #1774628405 ) ?</p>
 <p>This is the example of such a route: <a href="http://openrouteservice.org/index.php?start=20.7022286,52.1579624&amp;end=20.7095028,52.1559878&amp;pref=Fastest&amp;lang=en&amp;noMotorways=false&amp;noTollways=false">http://openrouteservice.org/index.php?start=20.7022286,52.1579624&amp;end=20.7095028,52.1559878&amp;pref=Fastest&amp;lang=en&amp;noMotorways=false&amp;noTollways=false</a></p>
 <p>Can anyone explain me what is wrong? Wrong definition of the road? Of the node? Of something else?</p>
 </div>
@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-23121-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You'd probably be better off asking the <a href="http://openrouteservice.org/contact.php">people behind OpenRouteService</a>. Although the data used by it is quite old, (it says "OSM-Data for Routing: 29.10.12" at the top right), <a href="http://www.openstreetmap.org/browse/node/1774628405">that gate</a> is actually older than that.</p>
+<p>You'd probably be better off asking the <a href="http://openrouteservice.org/contact.php">people behind OpenRouteService</a>. Although the data used by it is quite old, (it says "OSM-Data for Routing: 29.10.12" at the top right), <a href="https://www.openstreetmap.org/browse/node/1774628405">that gate</a> is actually older than that.</p>
 </div>
 <div id="comment-23121-info" class="comment-info">
 <span class="comment-age">(08 Jun '13, 22:46)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -126,7 +126,7 @@ One Answer:
 <p>Before looking deeper into the matter just peek at the top right corner where you can read:<br />
 <em>OSM-Data for Routing: 29.10.12</em><br />
 ORS is/was a project of University Heidelberg. After the students who created it finished their studies ORS is no longer maintained.</p>
-<p>Instead you can try <a href="http://map.project-osrm.org/">project-osrm</a> or other services listed <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Routing">here on the wiki</a>.<br />
+<p>Instead you can try <a href="http://map.project-osrm.org/">project-osrm</a> or other services listed <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Routing">here on the wiki</a>.<br />
 </p>
 <p>Regards malenki</p>
 </div>

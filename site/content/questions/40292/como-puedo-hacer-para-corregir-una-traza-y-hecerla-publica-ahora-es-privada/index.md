@@ -114,7 +114,7 @@ One Answer:
 <div class="answer-body">
 <p>Hi, If you do mean gps traces, then:</p>
 <ul>
-<li>Open the page of your gps traces:<a href="http://www.openstreetmap.org/user/La%20Geogu%C3%ADa/traces">http://www.openstreetmap.org/user/La%20Geogu%C3%ADa/traces</a>.</li>
+<li>Open the page of your gps traces:<a href="https://www.openstreetmap.org/user/La%20Geogu%C3%ADa/traces">https://www.openstreetmap.org/user/La%20Geogu%C3%ADa/traces</a>.</li>
 <li>Choose the relevant trace by clicking on the filename of that race.</li>
 <li>Two options: Left button (Change the track) to modify the visibility of trace or the right button to delete it.</li>
 </ul>

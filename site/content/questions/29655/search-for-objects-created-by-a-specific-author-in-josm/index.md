@@ -185,7 +185,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is probably best to send him a nice diplomatic message. see this question <a href="https://help.openstreetmap.org/questions/1850/how-do-a-i-contact-a-moderator-about-a-mailing-list-message">https://help.openstreetmap.org/questions/1850/how-do-a-i-contact-a-moderator-about-a-mailing-list-message</a></p>
+<p>It is probably best to send him a nice diplomatic message. see this question <a href="/questions/1850/how-do-a-i-contact-a-moderator-about-a-mailing-list-message">https://help.openstreetmap.org/questions/1850/how-do-a-i-contact-a-moderator-about-a-mailing-list-message</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

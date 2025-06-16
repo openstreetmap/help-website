@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you're looking for a hassle-free "simply click here to download" solution, then you will have to buy an update from TomTom. OpenStreetMap based solutions are hacky at best, and unless you're a technical person you risk putting your TomTom into a state from which there is no return (at least, not for you).</p>
-<p>If you're willing to experiment, check our <a href="http://wiki.openstreetmap.org/wiki/TomTom">Wiki Page on TomTom</a>. You will most likely want to look into installing Navit.</p>
+<p>If you're willing to experiment, check our <a href="https://wiki.openstreetmap.org/wiki/TomTom">Wiki Page on TomTom</a>. You will most likely want to look into installing Navit.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

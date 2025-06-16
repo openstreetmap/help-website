@@ -108,12 +108,12 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Every way in the OSM database ha a direction. This direction is marked in the editors with a little arrow</p>
-<p><img src="https://help.openstreetmap.org/upfiles/image_36.png" alt="exapmle" /></p>
+<p><img src="/upfiles/image_36.png" alt="exapmle" /></p>
 <p>so if I put a stop sign at the end of this way, the "direction:forward" follows the direction of the way (in this case, from right to left), while the "direction:backward" goes against the way's direction (in this case, from right to left)</p>
 <p>direction=forward<br />
-<img src="https://help.openstreetmap.org/upfiles/image_37.png" alt="direction=forward" /></p>
+<img src="/upfiles/image_37.png" alt="direction=forward" /></p>
 <p>direction=backward<br />
-<img src="https://help.openstreetmap.org/upfiles/image_38_Nhg5liY.png" alt="direction=backward" /></p>
+<img src="/upfiles/image_38_Nhg5liY.png" alt="direction=backward" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

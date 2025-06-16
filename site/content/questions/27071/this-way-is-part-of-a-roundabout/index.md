@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It might be because <a href="http://www.openstreetmap.org/browse/way/212503387">http://www.openstreetmap.org/browse/way/212503387</a> which it joins to isn't tagged as part of a roundabout. Otherwise I'd expect every constituent way to show as an error, rather than just one end.</p>
+<p>It might be because <a href="https://www.openstreetmap.org/browse/way/212503387">https://www.openstreetmap.org/browse/way/212503387</a> which it joins to isn't tagged as part of a roundabout. Otherwise I'd expect every constituent way to show as an error, rather than just one end.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

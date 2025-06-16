@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This has been earlier on the agenda. OSM doesn’t take a stand in this kind of issues. Where states have different views on what’s what and who’s ruling it. Please read this question an answer. <a href="https://help.openstreetmap.org/questions/21167/hoang-sa-paracel-islands-and-truong-sa-spratly-islands-vietnam">https://help.openstreetmap.org/questions/21167/hoang-sa-paracel-islands-and-truong-sa-spratly-islands-vietnam</a></p>
+<p>This has been earlier on the agenda. OSM doesn’t take a stand in this kind of issues. Where states have different views on what’s what and who’s ruling it. Please read this question an answer. <a href="/questions/21167/hoang-sa-paracel-islands-and-truong-sa-spratly-islands-vietnam">https://help.openstreetmap.org/questions/21167/hoang-sa-paracel-islands-and-truong-sa-spratly-islands-vietnam</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

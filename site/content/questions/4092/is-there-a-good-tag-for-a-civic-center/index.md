@@ -107,9 +107,9 @@ One Answer:
 <div class="answer-body">
 <p>My, fairly pragmatic, approach would be to use the following pretty widely used tags:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcommercial">landuse=commercial</a> for the area of the block, adding name=Civic Center.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcommercial">landuse=commercial</a> for the area of the block, adding name=Civic Center.</li>
 <li>map the building outlines building=yes or building=office (or indeed anything else which suits).</li>
-<li>add nodes for the principal POIs such as <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtownhall">amenity=town_hall</a>. If these are in specific building they can be attached to the areas.</li>
+<li>add nodes for the principal POIs such as <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtownhall">amenity=town_hall</a>. If these are in specific building they can be attached to the areas.</li>
 <li>add appropriate operator=* tags.</li>
 </ul>
 <p>Combined together these different tags should be adequate both for plain rendered maps and apps which might want to consume the tags directly.</p>

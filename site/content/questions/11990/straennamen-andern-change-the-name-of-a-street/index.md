@@ -113,11 +113,11 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>Short answer:</strong></p>
-<p>There are many ways to edit the map data. See the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginner's Guide</a> for an introduction, particularly chapter 1.3 (Editing maps).</p>
+<p>There are many ways to edit the map data. See the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginner's Guide</a> for an introduction, particularly chapter 1.3 (Editing maps).</p>
 <p><strong>Longer answer:</strong></p>
 <p>The easiest way to get started is to use the online editor (Potlatch):</p>
 <ul>
-<li>Go to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a></li>
+<li>Go to <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></li>
 <li>click "Edit"</li>
 <li>create an account and log in</li>
 <li>navigate to the street whose name you want to change, and click it (it should become highlighted)</li>
@@ -127,7 +127,7 @@ One Answer:
 <p>Things to note:</p>
 <ul>
 <li>Longer streets may consist of several segments (called "ways" in OSM). Each way has a separate name; if all ways are part of one street, all these names must be identical. In that case, you will have to click and edit all the ways/segments individually, or you must use Ctrl-click to select all the ways to edit them in one go (see comment below for details).</li>
-<li>If, on the other hand, a part of one way has a different street name than the rest, you will have to split this way. See the question <a href="http://help.openstreetmap.org/questions/9785/changing-the-status-of-a-separate-section-of-a-road">Changing the status of a separate section of a road</a>.</li>
+<li>If, on the other hand, a part of one way has a different street name than the rest, you will have to split this way. See the question <a href="/questions/9785/changing-the-status-of-a-separate-section-of-a-road">Changing the status of a separate section of a road</a>.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Bug on Website: Cant access own settings"
-description = '''Hello, I hope I don&#x27;t ask on the wrong place. (And sry for my bad English.) I have a Problem: Since I registered 6 month ago, I can&#x27;t access my website-Settings-Page. The Problem is the special-char (sharp, #) in my username &quot;#Reaper&quot;. The URL of the link is: http://www.openstreetmap.org/user/%23Rea...'''
+description = '''Hello, I hope I don&#x27;t ask on the wrong place. (And sry for my bad English.) I have a Problem: Since I registered 6 month ago, I can&#x27;t access my website-Settings-Page. The Problem is the special-char (sharp, #) in my username &quot;#Reaper&quot;. The URL of the link is: https://www.openstreetmap.org/user/%23Rea...'''
 date = "2012-07-19T18:15:00Z"
 lastmod = "2020-12-31T14:06:00Z"
 weight = 14403
@@ -40,14 +40,14 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I hope I don't ask on the wrong place. (And sry for my bad English.) I have a Problem: Since I registered 6 month ago, I can't access my website-Settings-Page. The Problem is the special-char (sharp, #) in my username "#Reaper". The URL of the link is: <a href="http://www.openstreetmap.org/user/%23Reaper/account">http://www.openstreetmap.org/user/%23Reaper/account</a> But I got the following error-message:</p>
+<p>I hope I don't ask on the wrong place. (And sry for my bad English.) I have a Problem: Since I registered 6 month ago, I can't access my website-Settings-Page. The Problem is the special-char (sharp, #) in my username "#Reaper". The URL of the link is: <a href="https://www.openstreetmap.org/user/%23Reaper/account">https://www.openstreetmap.org/user/%23Reaper/account</a> But I got the following error-message:</p>
 <blockquote>
 <p>File not found</p>
 <p>Couldn't find a file/directory/API operation by that name on the OpenStreetMap server (HTTP 404)</p>
 <p>Feel free to contact the OpenStreetMap community if you have found a broken link / bug. Make a note of the exact URL of your request.</p>
 </blockquote>
-<p>(And I got redirected to <a href="http://www.openstreetmap.org/user/">http://www.openstreetmap.org/user/</a> )</p>
-<p>Other sites like the OAuth-settings ( <a href="http://www.openstreetmap.org/user/%23Reaper/oauth_clients">http://www.openstreetmap.org/user/%23Reaper/oauth_clients</a> ) - which also includes my nickname in the URL - are working correctly. I hope you could fix this (maybe without changing my nickname.. that would be nice.. ^^)</p>
+<p>(And I got redirected to <a href="https://www.openstreetmap.org/user/">https://www.openstreetmap.org/user/</a> )</p>
+<p>Other sites like the OAuth-settings ( <a href="https://www.openstreetmap.org/user/%23Reaper/oauth_clients">https://www.openstreetmap.org/user/%23Reaper/oauth_clients</a> ) - which also includes my nickname in the URL - are working correctly. I hope you could fix this (maybe without changing my nickname.. that would be nice.. ^^)</p>
 <p>Thank you very much! :)</p>
 <p>br,</p>
 <h1 id="reaper">Reaper</h1>
@@ -100,7 +100,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Please file bug reports in OSM's bug tracker, as described in http://help.openstreetmap.org/questions/1307/where-should-i-report-a-bug" by Jonathan Bennett 19 Jul '12, 18:56
+### The question has been closed for the following reason "Please file bug reports in OSM's bug tracker, as described in https://help.openstreetmap.org/questions/1307/where-should-i-report-a-bug" by Jonathan Bennett 19 Jul '12, 18:56
 
 </div>
 

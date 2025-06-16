@@ -139,11 +139,11 @@ osqa_accepted = true
 <p>The benefits of working with JOSM include:</p>
 <ul>
 <li><strong>Efficiency</strong>: edit faster with a powerful search function, filters to hide data you don't want to edit, and the largest available selection of editing tools of all editors</li>
-<li><strong>Offline editing</strong>: save your partially completed work locally, work with your private GPS tracks or <a href="http://wiki.openstreetmap.org/wiki/Photo_Mapping">photographs</a> without having to upload them</li>
-<li><strong>Customization</strong>: customize keyboard shortcuts, pick from high-quality <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins">plugins</a> for specialized tasks, enable UI dialogs for experimental features, change how the editor's <a href="http://wiki.openstreetmap.org/wiki/File:ExampleColouredStreets.png">map rendering</a> looks</li>
-<li><strong>Cutting-edge mapping</strong>: get tool support for emerging mapping topics like <a href="http://wiki.openstreetmap.org/wiki/Josm/styles/lane_features">lane mapping</a>, <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Kendzi3D">3D mapping</a> or indoor mapping</li>
+<li><strong>Offline editing</strong>: save your partially completed work locally, work with your private GPS tracks or <a href="https://wiki.openstreetmap.org/wiki/Photo_Mapping">photographs</a> without having to upload them</li>
+<li><strong>Customization</strong>: customize keyboard shortcuts, pick from high-quality <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins">plugins</a> for specialized tasks, enable UI dialogs for experimental features, change how the editor's <a href="https://wiki.openstreetmap.org/wiki/File:ExampleColouredStreets.png">map rendering</a> looks</li>
+<li><strong>Cutting-edge mapping</strong>: get tool support for emerging mapping topics like <a href="https://wiki.openstreetmap.org/wiki/Josm/styles/lane_features">lane mapping</a>, <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Kendzi3D">3D mapping</a> or indoor mapping</li>
 </ul>
-<p>For an useful overview, check the wiki's <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">comparison of editors</a>.</p>
+<p>For an useful overview, check the wiki's <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">comparison of editors</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">http://wiki.openstreetmap.org/wiki/Comparison_of_editors</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">https://wiki.openstreetmap.org/wiki/Comparison_of_editors</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -342,7 +342,7 @@ osqa_accepted = true
 <li>develop more powerful plugins in Java (e.g. revert changesets)</li>
 <li>you can write scripts that deal with the data (python, Javascript)</li>
 <li>you can work offline</li>
-<li>there are filters to hide data you do not want to work on, or you can only download specific data (<a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Edit_filtered_data">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Edit_filtered_data</a> )</li>
+<li>there are filters to hide data you do not want to work on, or you can only download specific data (<a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Edit_filtered_data">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Edit_filtered_data</a> )</li>
 <li>you can import data from different types of sources (kml, csv, etc.) -- (be aware that this often has to follow the OSM import guidelines). But it's ok when you could generate such files from data you gathered through surveys.</li>
 <li>import procedures sometimes only work with JOSM (e.g. Dutch BAG import)</li>
 </ul>
@@ -399,7 +399,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please do not let anyone make you think that using iD is a waste. At HOT Mapathons we start all our new mappers on iD to get them started and understanding what they are doing. There is nothing wrong with iD as a beginner editor and as you progress and begin to better understand the tagging of nodes, lines and areas. While JOSM is a far more sophisticated editor with a lot more functions and tools you will only need some of those once you get into some serious mapping. Not wanting to scare you but have a look at the tagging available at <a href="http://wiki.openstreetmap.org/wiki/Map_Features.">http://wiki.openstreetmap.org/wiki/Map_Features.</a></p>
+<p>Please do not let anyone make you think that using iD is a waste. At HOT Mapathons we start all our new mappers on iD to get them started and understanding what they are doing. There is nothing wrong with iD as a beginner editor and as you progress and begin to better understand the tagging of nodes, lines and areas. While JOSM is a far more sophisticated editor with a lot more functions and tools you will only need some of those once you get into some serious mapping. Not wanting to scare you but have a look at the tagging available at <a href="https://wiki.openstreetmap.org/wiki/Map_Features.">https://wiki.openstreetmap.org/wiki/Map_Features.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -520,7 +520,7 @@ osqa_accepted = true
 <div id="post-38413-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/475/scruss"></a><a href="http://help.openstreetmap.org/users/475/scruss">@scruss</a>: thanks. A warning? And what does the warning tell you? I am no mentalist. And what do you mean by "secure" here?<br />
+<p><a href="https://help.openstreetmap.org/users/475/scruss"></a><a href="https://help.openstreetmap.org/users/475/scruss">@scruss</a>: thanks. A warning? And what does the warning tell you? I am no mentalist. And what do you mean by "secure" here?<br />
 Ah, you were referring to the startup time (and not e.g. editing or map panning). It may be good to clarify this. However, one minute is strange to me. There is something wrong with your setup. JOSM needs barely 5 seconds for me (by the way: nicely multithreading to all 4 cores - 2 physical with OpenJDK+Linux, also 64 bit and less RAM, although this does not really matter). iD seems to be a bit faster for me, too (but not if I add the browser startup time to that ;-) ).</p>
 </div>
 <div id="comment-38413-info" class="comment-info">
@@ -533,7 +533,7 @@ Ah, you were referring to the startup time (and not e.g. editing or map panning)
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a>, very true. Exaggerated, imprecise claims about our editors do not help other (new) users. But others may be unfortunately scared away from JOSM, if they would like to use/try JOSM provided that they know neutral and more precise facts about JOSM. Indeed, Scruss should apparently better use another editor, and that's fine.</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a>, very true. Exaggerated, imprecise claims about our editors do not help other (new) users. But others may be unfortunately scared away from JOSM, if they would like to use/try JOSM provided that they know neutral and more precise facts about JOSM. Indeed, Scruss should apparently better use another editor, and that's fine.</p>
 </div>
 <div id="comment-38414-info" class="comment-info">
 <span class="comment-age">(09 Nov '14, 20:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -545,7 +545,7 @@ Ah, you were referring to the startup time (and not e.g. editing or map panning)
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/475/scruss"></a><a href="http://help.openstreetmap.org/users/475/scruss">@scruss</a> That's just a general hint about an update. Not all updates are security related and not all security bugs will affect JOSM. Likewise, browsers have security bugs, too, which could affect in-browser editors in theory. So that's really not an advantage or disadvantage of a specific editor and doesn't really belong here.</p>
+<p><a href="https://help.openstreetmap.org/users/475/scruss"></a><a href="https://help.openstreetmap.org/users/475/scruss">@scruss</a> That's just a general hint about an update. Not all updates are security related and not all security bugs will affect JOSM. Likewise, browsers have security bugs, too, which could affect in-browser editors in theory. So that's really not an advantage or disadvantage of a specific editor and doesn't really belong here.</p>
 </div>
 <div id="comment-38415-info" class="comment-info">
 <span class="comment-age">(09 Nov '14, 20:13)</span> <span class="comment-user userinfo">scai ♦</span>

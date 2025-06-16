@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>I'm new to OSM and still on a learning curve so please bear with me.</p>
-<p>I've been editing the Salcombe Estuary area (South Devon, UK). The tidal area north of Snapes Point has already been edited by another local user to denote it as mudflats. <a href="http://www.openstreetmap.org/#map=15/50.2331/-3.7489">This area</a></p>
+<p>I've been editing the Salcombe Estuary area (South Devon, UK). The tidal area north of Snapes Point has already been edited by another local user to denote it as mudflats. <a href="https://www.openstreetmap.org/#map=15/50.2331/-3.7489">This area</a></p>
 <p>I've added in areas around Southpool Creek and Batson Creek to reflect the tidal mudflats there too. I used natural=mud and surface=mud, plus tidal=yes for the area, and it shows up in the OSM viewer as dark blue dashes over light blue water, which is what I was expecting. (It looks different than the previous areas north of Snapes Point because the other chap put his riverbank at the low tide mark, and I left mine at the high tide mark, but that's not too important right now.)</p>
 <p>So far so good. So then I tried to add in the sandy tidal area south of Ditch End (east bank) and Fort Charles (west bank). I created areas up as far as the existing beaches and set natural=beach and surface=sand, plus tidal=yes. I generally used the Administrative Boundary as a decent approximation of the low tide line, and the riverbank as an approximation of the high tide line.</p>
 <p>However, these areas still render just as water. Not only that, but the existing beaches (North Sands, Mill Bay, Smalls Cove etc), which WERE rendering as yellow sand, are now rendering as water. I can't understand this as I haven't changed the riverbank at all.</p>
@@ -114,8 +114,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>David, it helps when you give a particular polygon as below, you can click these if you switch on the data layer on the main website. It seems you refer to ways like this: <a href="http://www.openstreetmap.org/way/156118757">http://www.openstreetmap.org/way/374132785</a> which is tagged natural=beach, surface=sand, and a bit of the beach rendering is lurking at the eastern side. It is also tagged type=multipolygon which only belongs on relations, not on ways.</p>
-<p>This beach area is mostly overlapped with this way <a href="http://www.openstreetmap.org/way/146605238">http://www.openstreetmap.org/way/146605238</a> tagged as riverbank.</p>
+<p>David, it helps when you give a particular polygon as below, you can click these if you switch on the data layer on the main website. It seems you refer to ways like this: <a href="https://www.openstreetmap.org/way/156118757">https://www.openstreetmap.org/way/374132785</a> which is tagged natural=beach, surface=sand, and a bit of the beach rendering is lurking at the eastern side. It is also tagged type=multipolygon which only belongs on relations, not on ways.</p>
+<p>This beach area is mostly overlapped with this way <a href="https://www.openstreetmap.org/way/146605238">https://www.openstreetmap.org/way/146605238</a> tagged as riverbank.</p>
 <p>The renderer paints the map in layers, so apparently the natural tag first, the waterway later, thus most of your beach gets covered by the water. Symbols and names follow on top.</p>
 <p>Another of your beaches has a name, so you see 'North sands' named on the map, but only a tiny stripe lurking north-east.</p>
 <p>The solution for you should probably be to separate (i.e. not overlap) the polygons and tag them individually.</p>

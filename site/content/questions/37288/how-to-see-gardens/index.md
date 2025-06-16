@@ -74,7 +74,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Here I attached the link to the area I am mapping. <a href="http://www.openstreetmap.org/#map=19/60.24712/24.97126&amp;layers=H">http://www.openstreetmap.org/#map=19/60.24712/24.97126&amp;layers=H</a></p>
+<p>Here I attached the link to the area I am mapping. <a href="https://www.openstreetmap.org/#map=19/60.24712/24.97126&amp;layers=H">https://www.openstreetmap.org/#map=19/60.24712/24.97126&amp;layers=H</a></p>
 <p>I change the tags of some gardens, from allotment to farmland, after that, I can see the rectangels of the farmland tags. But I still don´t see the allotment rectangels, just the numbers of them.</p>
 <p>thank you for your help!</p>
 </div>
@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-37291-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have you tried some of the other map renderings? click on the pile of papers symbol on map page. also check tagging in wiki <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden</a></p>
+<p>Have you tried some of the other map renderings? click on the pile of papers symbol on map page. also check tagging in wiki <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgarden</a></p>
 </div>
 <div id="comment-37291-info" class="comment-info">
 <span class="comment-age">(04 Oct '14, 07:03)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -122,7 +122,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>if they are allotments please do not tag them as gardens just to see them on some map. This is <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> is and considered a bad practice</p>
+<p>if they are allotments please do not tag them as gardens just to see them on some map. This is <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> is and considered a bad practice</p>
 </div>
 <div id="comment-37299-info" class="comment-info">
 <span class="comment-age">(04 Oct '14, 11:08)</span> <span class="comment-user userinfo">escada</span>
@@ -315,7 +315,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think you should have leisure=garden or landuse=farmland not both. so delete landuse tag. The problem will remain that as the gardens don't have any line such as barrier=hedge or barrier=fence or path between them they blend into one area. This area shows that you can separate the plots, but he has not used a garden tag. <a href="http://www.openstreetmap.org/#map=18/52.22261/-0.06523&amp;layers=H">http://www.openstreetmap.org/#map=18/52.22261/-0.06523&amp;layers=H</a></p>
+<p>I think you should have leisure=garden or landuse=farmland not both. so delete landuse tag. The problem will remain that as the gardens don't have any line such as barrier=hedge or barrier=fence or path between them they blend into one area. This area shows that you can separate the plots, but he has not used a garden tag. <a href="https://www.openstreetmap.org/#map=18/52.22261/-0.06523&amp;layers=H">https://www.openstreetmap.org/#map=18/52.22261/-0.06523&amp;layers=H</a></p>
 <p>update. I see you have removed landuse=farmland which is good I think. There is some advice in the wiki see "allotments" and the section about separating the individual plots, I have not tried that but you could if you wish.</p>
 </div>
 <div class="answer-controls post-controls">

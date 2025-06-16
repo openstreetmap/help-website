@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, on <a href="http://wiki.openstreetmap.org/wiki/WikiProject_France/Limites_administratives">this page</a> when I try to download the "Nouvelle-Aquitaine" GPX file, I have an 504 Gateway Time-out... Can you help me please ?</p>
+<p>Hello, on <a href="https://wiki.openstreetmap.org/wiki/WikiProject_France/Limites_administratives">this page</a> when I try to download the "Nouvelle-Aquitaine" GPX file, I have an 504 Gateway Time-out... Can you help me please ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-gpx" rel="tag" title="see questions tagged &#39;gpx&#39;">gpx</span>

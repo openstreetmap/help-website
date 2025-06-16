@@ -111,7 +111,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is some advice about this on these pages, with example pictures: <a href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Accuracy">Editing Standards and conventions</a> and <a href="http://wiki.openstreetmap.org/wiki/Good_practice">Good practice</a></p>
+<p>There is some advice about this on these pages, with example pictures: <a href="https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Accuracy">Editing Standards and conventions</a> and <a href="https://wiki.openstreetmap.org/wiki/Good_practice">Good practice</a></p>
 <p>Basically, you should try to add enough nodes to make the curves look reasonably smooth. This means if you have a tight curve, the nodes will have to be closer together than they would on a wider curve. So you should avoid having close to right angles between nodes (unless there actually is a right angle on the road/path).</p>
 <p>There is no fixed rules about how many nodes to use, you have to use some judgement for this. I think you should just try to make it fairly close to what is on the ground. I don't think you have to worry about the memory used unless you are adding hundreds of nodes for a short road.</p>
 <p>Also remember GPS traces may be inaccurate, so make sure you are not drawing curves that are not actually there. Its helpful to average out several traces, as well as using aerial imagery where available.</p>

@@ -78,7 +78,7 @@ The Humanitarian Layer looks better<br />
 <div id="post-61869-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Behold: <a href="http://www.openstreetmap.org/#map=19/52.53622/-0.30157">http://www.openstreetmap.org/#map=19/52.53622/-0.30157</a></p>
+<p>Behold: <a href="https://www.openstreetmap.org/#map=19/52.53622/-0.30157">https://www.openstreetmap.org/#map=19/52.53622/-0.30157</a></p>
 <p>The new minor road is a dedicated slip road off the main slip road, so left-turning traffic can avoid having to stop at the roundabout.</p>
 </div>
 <div id="comment-61869-info" class="comment-info">

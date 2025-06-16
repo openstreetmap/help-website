@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Some relations can have thousands of revisions and the “View History” link times out. There is a <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/full">full history dump</a> but it is vastly greater than the history of a single element and takes too much time and space for a home computer or mobile device.</p>
+<p>Some relations can have thousands of revisions and the “View History” link times out. There is a <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/full">full history dump</a> but it is vastly greater than the history of a single element and takes too much time and space for a home computer or mobile device.</p>
 <p>Is there a more efficient way to do this, maybe starting with the most recent revisions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -170,8 +170,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One option is to use <a href="http://wiki.openstreetmap.org/wiki/Josm">josm</a> to view the history. Download the location or just the object (file -&gt; download from osm or file -&gt; download object), select the object, and view its history (Ctrl-H or view -&gt; history).</p>
-<p>In my experience it's much faster than <a href="http://osm.mapki.com/history/">mapki</a> or even <a href="http://wiki.openstreetmap.org/wiki/OSM_History_Viewer">osmhv</a>, taking 20s to show <a href="http://www.openstreetmap.org/relation/338539">this test relation</a>'s history when the other two timed out on me.</p>
+<p>One option is to use <a href="https://wiki.openstreetmap.org/wiki/Josm">josm</a> to view the history. Download the location or just the object (file -&gt; download from osm or file -&gt; download object), select the object, and view its history (Ctrl-H or view -&gt; history).</p>
+<p>In my experience it's much faster than <a href="http://osm.mapki.com/history/">mapki</a> or even <a href="https://wiki.openstreetmap.org/wiki/OSM_History_Viewer">osmhv</a>, taking 20s to show <a href="https://www.openstreetmap.org/relation/338539">this test relation</a>'s history when the other two timed out on me.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

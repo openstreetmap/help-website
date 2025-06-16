@@ -138,7 +138,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>please give us a <a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a> to the area with your newly created road, and tell us start and end point where your routing should go ...</p>
+<p>please give us a <a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a> to the area with your newly created road, and tell us start and end point where your routing should go ...</p>
 </div>
 <div id="comment-20349-info" class="comment-info">
 <span class="comment-age">(27 Feb '13, 19:00)</span> <span class="comment-user userinfo">stephan75</span>

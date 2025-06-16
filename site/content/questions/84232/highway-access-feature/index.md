@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Does OpenStreetMap have a description or definition for the highway access feature in the attached image? The local authority has installed many access control barriers during the past thirty years or so. <img src="https://help.openstreetmap.org/upfiles/Untitled_4Aym4Ft.png" alt="Highway access feature" /></p>
+<p>Does OpenStreetMap have a description or definition for the highway access feature in the attached image? The local authority has installed many access control barriers during the past thirty years or so. <img src="/upfiles/Untitled_4Aym4Ft.png" alt="Highway access feature" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-traffic_calming" rel="tag" title="see questions tagged &#39;traffic_calming&#39;">traffic_calming</span> <span class="post-tag tag-link-local_authority" rel="tag" title="see questions tagged &#39;local_authority&#39;">local_authority</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span>

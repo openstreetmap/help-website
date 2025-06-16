@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>OpenStreetMap itself cannot help you to solve this problem, because OSM is only the dataset that contains all the geo data.</p>
-<p>But have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> ... read all links there, maybe there is some solution for you?</p>
+<p>But have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> ... read all links there, maybe there is some solution for you?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It depends on your definition of most economical route.</p>
-<p>If you want the shortest/fastest route between several points, then you have the <a href="http://en.wikipedia.org/wiki/Traveling_salesman_problem">traveling salesman problem (TSP)</a>. According to <a href="http://help.openstreetmap.org/questions/2955/traveling-salesman">this question</a>, there is a <a href="http://wiki.openstreetmap.org/wiki/Traveling_salesman">wiki page</a> about a TSP program and also a <a href="http://open.mapquestapi.com/directions/">MapQuest</a> service offering an <a href="http://open.mapquestapi.com/directions/#optimized">Optimized Route</a> request which might be the thing you are looking for. Though I don't know if it allows to include 40 locations which would require a lot of computational effort.</p>
+<p>If you want the shortest/fastest route between several points, then you have the <a href="http://en.wikipedia.org/wiki/Traveling_salesman_problem">traveling salesman problem (TSP)</a>. According to <a href="/questions/2955/traveling-salesman">this question</a>, there is a <a href="https://wiki.openstreetmap.org/wiki/Traveling_salesman">wiki page</a> about a TSP program and also a <a href="http://open.mapquestapi.com/directions/">MapQuest</a> service offering an <a href="http://open.mapquestapi.com/directions/#optimized">Optimized Route</a> request which might be the thing you are looking for. Though I don't know if it allows to include 40 locations which would require a lot of computational effort.</p>
 <p>The most economical route, however, also depends on things like elevation, city density, intersections, daytime and other factors which most of today's routing services won't take into account.</p>
 </div>
 <div class="answer-controls post-controls">

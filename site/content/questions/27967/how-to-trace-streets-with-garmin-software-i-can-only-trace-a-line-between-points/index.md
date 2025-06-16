@@ -211,7 +211,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>MapSource and BaseCamp are not meant to be used to edit the map. They are used to manage the maps installed on a garmin device, manage aerial imagery (using paid subscription), manage personal GPX waypoints and tracks, update the device firmware, etc.</p>
 <p>You seem to have confused the ability to trace a GPX way (which can be overlaid on the map) with the ability to trace / edit streets (which are part of the actual map). GPX tracks and waypoints are usefull for example to plan or review a hike, but are not tied to map data.</p>
-<p>If you want to edit the map, use an osm editor such as <a href="http://www.openstreetmap.org/edit">the one on osm.org (iD)</a> or <a href="https://wiki.openstreetmap.org/wiki/JOSM">josm</a>. The changes you made will be available at <a href="http://garmin.openstreetmap.nl">garmin.openstreetmap.nl</a> after the next update.</p>
+<p>If you want to edit the map, use an osm editor such as <a href="https://www.openstreetmap.org/edit">the one on osm.org (iD)</a> or <a href="https://wiki.openstreetmap.org/wiki/JOSM">josm</a>. The changes you made will be available at <a href="http://garmin.openstreetmap.nl">garmin.openstreetmap.nl</a> after the next update.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -142,7 +142,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are probably meaning this <a href="http://www.openstreetmap.org/?lat=56.899349&amp;lon=24.084626&amp;zoom=18&amp;layers=M">location</a>. At the moment all housenumbers are drawn correctly (including the 14 k-2). So probably the reason was that some tiles were up to date and some were not. The reason you saw "14 k" instead of "14 k-2" is that at least on zoom 17 the border between two tiles is exaxtly in the middle of housenumber(<a href="http://b.tile.openstreetmap.org/17/74304/40222.png">left tile</a> and <a href="http://c.tile.openstreetmap.org/17/74305/40222.png">right tile</a>).</p>
+<p>You are probably meaning this <a href="https://www.openstreetmap.org/?lat=56.899349&amp;lon=24.084626&amp;zoom=18&amp;layers=M">location</a>. At the moment all housenumbers are drawn correctly (including the 14 k-2). So probably the reason was that some tiles were up to date and some were not. The reason you saw "14 k" instead of "14 k-2" is that at least on zoom 17 the border between two tiles is exaxtly in the middle of housenumber(<a href="http://b.tile.openstreetmap.org/17/74304/40222.png">left tile</a> and <a href="http://c.tile.openstreetmap.org/17/74305/40222.png">right tile</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-67442-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span class="small">(originally this was a comment at <a href="https://help.openstreetmap.org/questions/47550/droits-de-suppression-carte-umap">https://help.openstreetmap.org/questions/47550/droits-de-suppression-carte-umap</a> )</span></p>
+<p><span class="small">(originally this was a comment at <a href="/questions/47550/droits-de-suppression-carte-umap">https://help.openstreetmap.org/questions/47550/droits-de-suppression-carte-umap</a> )</span></p>
 </div>
 <div id="comment-67442-info" class="comment-info">
 <span class="comment-age">(03 Jan '19, 20:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

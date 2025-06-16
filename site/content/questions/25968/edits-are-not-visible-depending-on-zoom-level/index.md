@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Edits are not visible depending on zoom level"
-description = '''In the map  http://www.openstreetmap.org/#map=17/50.59202/4.08085 I edited the streets to the current situation. The last edits are saved a few days ago, but I do not see the map being updated. Has anyone any idea why? Addition: The URL: http://www.openstreetmap.org/#map=18/50.59238/4.07833 shows th...'''
+description = '''In the map  https://www.openstreetmap.org/#map=17/50.59202/4.08085 I edited the streets to the current situation. The last edits are saved a few days ago, but I do not see the map being updated. Has anyone any idea why? Addition: The URL: https://www.openstreetmap.org/#map=18/50.59238/4.07833 shows th...'''
 date = "2013-08-30T16:30:00Z"
 lastmod = "2013-08-30T23:19:00Z"
 weight = 25968
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In the map <a href="http://www.openstreetmap.org/#map=17/50.59202/4.08085">http://www.openstreetmap.org/#map=17/50.59202/4.08085</a> I edited the streets to the current situation. The last edits are saved a few days ago, but I do not see the map being updated. Has anyone any idea why? Addition: The URL: <a href="http://www.openstreetmap.org/#map=18/50.59238/4.07833">http://www.openstreetmap.org/#map=18/50.59238/4.07833</a> shows the updated date, the URL: <a href="http://www.openstreetmap.org/#map=17/50.59066/4.08031">http://www.openstreetmap.org/#map=17/50.59066/4.08031</a> show the old date, the <a href="http://www.openstreetmap.org/#map=16/50.5890/4.0800">http://www.openstreetmap.org/#map=16/50.5890/4.0800</a> is also correct.</p>
+<p>In the map <a href="https://www.openstreetmap.org/#map=17/50.59202/4.08085">https://www.openstreetmap.org/#map=17/50.59202/4.08085</a> I edited the streets to the current situation. The last edits are saved a few days ago, but I do not see the map being updated. Has anyone any idea why? Addition: The URL: <a href="https://www.openstreetmap.org/#map=18/50.59238/4.07833">https://www.openstreetmap.org/#map=18/50.59238/4.07833</a> shows the updated date, the URL: <a href="https://www.openstreetmap.org/#map=17/50.59066/4.08031">https://www.openstreetmap.org/#map=17/50.59066/4.08031</a> show the old date, the <a href="https://www.openstreetmap.org/#map=16/50.5890/4.0800">https://www.openstreetmap.org/#map=16/50.5890/4.0800</a> is also correct.</p>
 <p>Conclusion zoom-level 17 shows the wrong data.</p>
 <p>It is not related to the browser cache, for I tried it in different browsers.</p>
 <p>Version at level 17:</p>
@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's an excellent answer to "How often does the main (mapnik) map get updated" <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>. That also expains what to do in rare cases (like this one) where updates "seem to be missed".</p>
+<p>There's an excellent answer to "How often does the main (mapnik) map get updated" <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>. That also expains what to do in rare cases (like this one) where updates "seem to be missed".</p>
 <p>Whilst writing this answer the zoom 17 tiles have updated, so I suspect someone has seen this question and forced them to render.</p>
 </div>
 <div class="answer-controls post-controls">

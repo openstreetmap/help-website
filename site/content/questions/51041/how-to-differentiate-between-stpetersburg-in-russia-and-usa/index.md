@@ -119,7 +119,7 @@ One Answer:
 <p>Also, if you're expecting results to come <em>primarily</em> from a specific area, you set the <code>viewbox</code> request field; or even set <code>bounded=1</code> if you <em>only</em> want your results to come from the viewbox area.</p>
 <p>As for detecting "which of the Petersburgs is where": you can check the coordinates, which is not very precise.</p>
 <p>Alternatively, you can pass the request field <code>addressdetails=1</code>, which will give you a hierarchy - checking the <code>address.country_code</code> might be sufficient here.</p>
-<p>See the documentation at <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a> for more options.</p>
+<p>See the documentation at <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a> for more options.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

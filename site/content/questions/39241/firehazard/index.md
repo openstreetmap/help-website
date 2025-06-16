@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-39246-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/39243/prevencion-incendios-pe-en-asturias">https://help.openstreetmap.org/questions/39243/prevencion-incendios-pe-en-asturias</a></p>
+<p>See also <a href="/questions/39243/prevencion-incendios-pe-en-asturias">https://help.openstreetmap.org/questions/39243/prevencion-incendios-pe-en-asturias</a></p>
 </div>
 <div id="comment-39246-info" class="comment-info">
 <span class="comment-age">(12 Dec '14, 17:49)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

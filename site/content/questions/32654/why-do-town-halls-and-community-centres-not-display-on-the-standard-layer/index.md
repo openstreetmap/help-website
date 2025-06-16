@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have added the Town Hall and a Community centre to the map in Cullompton, Devon. Although they have been there a long time (months) they are not displaying on the "standard" layer, only on the "humanitarian" layer. I assume that this is a deliberate feature, but who decided this? It seems to me that the location of the town hall and the community centres are quite important. I could remove the "amenity=town" (or community_centre in the other case) but it seems wrong to remove potentially useful data. The location of the Town Hall is here: <a href="http://www.openstreetmap.org/#map=19/50.85742/-3.39285">http://www.openstreetmap.org/#map=19/50.85742/-3.39285</a></p>
+<p>I have added the Town Hall and a Community centre to the map in Cullompton, Devon. Although they have been there a long time (months) they are not displaying on the "standard" layer, only on the "humanitarian" layer. I assume that this is a deliberate feature, but who decided this? It seems to me that the location of the town hall and the community centres are quite important. I could remove the "amenity=town" (or community_centre in the other case) but it seems wrong to remove potentially useful data. The location of the Town Hall is here: <a href="https://www.openstreetmap.org/#map=19/50.85742/-3.39285">https://www.openstreetmap.org/#map=19/50.85742/-3.39285</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-layers" rel="tag" title="see questions tagged &#39;layers&#39;">layers</span> <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span>

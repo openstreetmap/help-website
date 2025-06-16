@@ -104,7 +104,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> allows to query for data which has been touched the <em>last</em> time by a particular user. You can visualize this result using <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a>. See this <a href="http://overpass-turbo.eu/s/ZF">example for your user</a>.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> allows to query for data which has been touched the <em>last</em> time by a particular user. You can visualize this result using <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">overpass turbo</a>. See this <a href="http://overpass-turbo.eu/s/ZF">example for your user</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -268,9 +268,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi,</p>
-<p><a href="http://www.openstreetmap.org/user/almegdadi">http://www.openstreetmap.org/user/almegdadi</a></p>
+<p><a href="https://www.openstreetmap.org/user/almegdadi">https://www.openstreetmap.org/user/almegdadi</a></p>
 <pre><code>  Shows links to your edits and more.</code></pre>
-<p><a href="http://www.openstreetmap.org/user/almegdadi/edits">http://www.openstreetmap.org/user/almegdadi/edits</a></p>
+<p><a href="https://www.openstreetmap.org/user/almegdadi/edits">https://www.openstreetmap.org/user/almegdadi/edits</a></p>
 <p>Shows only your edits.</p>
 <p>Regards Bernard</p>
 </div>

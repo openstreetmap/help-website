@@ -143,7 +143,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... to give you a start, have a look at <a href="http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap</a></p>
+<p>... to give you a start, have a look at <a href="https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap</a></p>
 </div>
 <div id="comment-5225-info" class="comment-info">
 <span class="comment-age">(16 May '11, 17:14)</span> <span class="comment-user userinfo">stephan75</span>

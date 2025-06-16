@@ -338,7 +338,7 @@ Republic of China
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A collection for this point (next to the "Names" article) is created in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names">Multilingual_names</a>, and there we even have an example for China.</p>
+<p>A collection for this point (next to the "Names" article) is created in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names">Multilingual_names</a>, and there we even have an example for China.</p>
 <p>Without having dived into details myself, maybe you can find hints there:</p>
 <p>Is the OSM data correct, or really needs an update?</p>
 <p>Or is the documentation in the OSM wiki out-of-date, and the wiki needs a detailes update there?</p>

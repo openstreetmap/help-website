@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/48466/how-to-configure-offline-imagery-for-josm">A similar question with some answers</a> and <a href="https://help.openstreetmap.org/questions/48585/significant-offset-between-josm-and-marble-for-mapwarper-imagery">don't miss the extra info in the followup.</a></p>
-<p>For Mapwarper specifically, I think for many images that downloading the rectified image from the Export tab and opening it using the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">JOSM ImportImagePlugin</a> might be an easier solution (Obviously this will work with any service where the whole image is available).</p>
+<p><a href="/questions/48466/how-to-configure-offline-imagery-for-josm">A similar question with some answers</a> and <a href="/questions/48585/significant-offset-between-josm-and-marble-for-mapwarper-imagery">don't miss the extra info in the followup.</a></p>
+<p>For Mapwarper specifically, I think for many images that downloading the rectified image from the Export tab and opening it using the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">JOSM ImportImagePlugin</a> might be an easier solution (Obviously this will work with any service where the whole image is available).</p>
 <p>I'm not sure how well JOSM will perform with larger images, but I'd be tempted to try using GDAL to extract the area of interest rather than mucking about with Marble to download tiles.</p>
 </div>
 <div class="answer-controls post-controls">

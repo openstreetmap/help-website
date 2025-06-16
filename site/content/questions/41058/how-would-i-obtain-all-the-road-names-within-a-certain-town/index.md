@@ -241,7 +241,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Something like MapOSMatic might suit your needs</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/MapOSMatic">http://wiki.openstreetmap.org/wiki/MapOSMatic</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/MapOSMatic">https://wiki.openstreetmap.org/wiki/MapOSMatic</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

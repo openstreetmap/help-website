@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I wanted to ask a question, registered, then asked the question, validated my email, and now I get this popup telling me my email is validated, and my question is pending until I validate my email...</p>
 <p>That seems not right. Maybe not a big problem, and I probably won't see this ever again, just reporting it for the admins.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/osm_EsxOFh2.png" alt="screenshot" /></p>
+<p><img src="/upfiles/osm_EsxOFh2.png" alt="screenshot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-registration" rel="tag" title="see questions tagged &#39;registration&#39;">registration</span>

@@ -121,7 +121,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The map and the 'pin' data are separate datasets and can have a different licenses even if you put it on the same display. The CC-BY-SA license require you to release any data derived from the map. This means that you can't use OSM map to generate the 'pin' dataset without releasing it.</p>
-<p>So as long as you attribute with “Map © <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>” you are legal.</p>
+<p>So as long as you attribute with “Map © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>” you are legal.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

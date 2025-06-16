@@ -52,7 +52,7 @@ osqa_accepted = false
 <li><p><a href="http://www.tripadvisor.co.uk/">http://www.tripadvisor.co.uk/</a> - an obvious example of crowdsourced locations and reviews</p></li>
 <li><p><a href="http://www.cyclestreets.net/photomap/">http://www.cyclestreets.net/photomap/</a> - a grassroots crowdsourced map of cycle infrastructure</p></li>
 <li><p><a href="http://www.macmillan.org.uk/Cancerinformation/Cancertypes/Prostate/Livingwithprostatecancer/Sideeffects.aspx#DynamicJumpMenuManager_6_Anchor_3">http://www.macmillan.org.uk/Cancerinformation/Cancertypes/Prostate/Livingwithprostatecancer/Sideeffects.aspx#DynamicJumpMenuManager_6_Anchor_3</a> - Just Can't Wait card</p></li>
-<li><p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtoilets">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtoilets</a> - reference page for toilet nodes</p></li>
+<li><p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtoilets">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtoilets</a> - reference page for toilet nodes</p></li>
 </ul>
 <p>Any pointers would be gratefully received.</p>
 <p>Cheers, James</p>

@@ -129,9 +129,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are probably looking for a geocoding service. The main OSM geocoding service is documented here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
 <p>If you are bulk geocoding (which it sounds like you are) please note the usage policy:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></p>
 <p>Unfortunately there isn't a bulk geocoding interface for this service, you will need to code something to send requests to the API one at a time with a second (or more) of delay between requests.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -156,9 +156,9 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Another possibility is to install a local copy of Nominatim (and import the data into that). There are instructions here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
 <p>And there's also a virtual machine image available that contains a version of Nominatim and a tile server:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">http://wiki.openstreetmap.org/wiki/Virtual_machine_image</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Virtual_machine_image">https://wiki.openstreetmap.org/wiki/Virtual_machine_image</a></p>
 <p>(you'd need to import data into that too).</p>
 </div>
 <div id="comment-18614-info" class="comment-info">
@@ -182,7 +182,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>You can store the query results. The license is the same as any other OSM data:</p>
-<p>Data © OpenStreetMap contributors, ODbL 1.0. <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p>Data © OpenStreetMap contributors, ODbL 1.0. <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 <p>So see the various questions/answers on here about what you can do with OSM data - it is the same answer.</p>
 </div>
 <div id="comment-18633-info" class="comment-info">
@@ -206,7 +206,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>twain already mentioned the Nominatim wiki page, the <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Example">example</a> on that page clearly answers your question.</p>
+<p>twain already mentioned the Nominatim wiki page, the <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Example">example</a> on that page clearly answers your question.</p>
 </div>
 <div id="comment-18653-info" class="comment-info">
 <span class="comment-age">(20 Dec '12, 13:30)</span> <span class="comment-user userinfo">scai ♦</span>

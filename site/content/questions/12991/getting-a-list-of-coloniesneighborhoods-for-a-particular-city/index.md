@@ -129,13 +129,13 @@ One Answer:
 <li>Viewed the map for that location</li>
 <li>Selected "browse map data" on the edit menu</li>
 <li>Clicked on the green dot associated with "Lajpat Nagar"</li>
-<li>Then clicked on details, which displays <a href="http://wiki.openstreetmap.org/wiki/Xapi">this</a></li>
+<li>Then clicked on details, which displays <a href="https://wiki.openstreetmap.org/wiki/Xapi">this</a></li>
 </ol>
-<p>There we can see that it's a "place=suburb" (and we can see its coordinates). If you want to extract multiple suburbs from an area you can use one of the options on the <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> page.</p>
+<p>There we can see that it's a "place=suburb" (and we can see its coordinates). If you want to extract multiple suburbs from an area you can use one of the options on the <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> page.</p>
 <p>An XAPI query using Mapquest's instance would be something like this:</p>
 <pre><code>wget http://open.mapquestapi.com/xapi/api/0.6/*[place=suburb][bbox=77.1883,28.5743,77.2476,28.627]</code></pre>
 <p>That fetches back a .OSM XML file - if you open that in a text editor you can figure out what's what.</p>
-<p>Similarly, we can see that the <a href="http://www.openstreetmap.org/browse/way/80513396">Asiad Games Sports Complex</a> is a "leisure=sports_centre". This one's a little more complex because it's a closed way (an area) - you can click on each node to get a series of coordinates of the outside of it, and if you do an XAPI query you'll get the way and constituent nodes.</p>
+<p>Similarly, we can see that the <a href="https://www.openstreetmap.org/browse/way/80513396">Asiad Games Sports Complex</a> is a "leisure=sports_centre". This one's a little more complex because it's a closed way (an area) - you can click on each node to get a series of coordinates of the outside of it, and if you do an XAPI query you'll get the way and constituent nodes.</p>
 <p>A quick way to figure out the coordinates you need for the XAPI is to click the "Export" tab on the OSM map and size the window to cover the area you want - then just copy the values from the export pane.</p>
 </div>
 <div class="answer-controls post-controls">

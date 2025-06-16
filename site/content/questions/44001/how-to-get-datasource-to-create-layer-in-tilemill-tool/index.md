@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Typically you would download the OSM data file (.osm.pbf format) either for all of India or for your region of interest, using one of the sources listed on the <a href="http://www.openstreetmap.org/export#map=5/21.923/82.749">Export tab</a> of the web site. Then you would use the osm2pgsql program to import this data into a PostGIS database they you have set up locally. Then you can use TileMill to access that database.</p>
+<p>Typically you would download the OSM data file (.osm.pbf format) either for all of India or for your region of interest, using one of the sources listed on the <a href="https://www.openstreetmap.org/export#map=5/21.923/82.749">Export tab</a> of the web site. Then you would use the osm2pgsql program to import this data into a PostGIS database they you have set up locally. Then you can use TileMill to access that database.</p>
 <p>Working with <a href="http://download.geofabrik.de/asia/india.html">Shape Files</a> is an alternative to a database install but depending on what you mean by "route layer", not all information you are interested in may be present in the shape file.</p>
 </div>
 <div class="answer-controls post-controls">

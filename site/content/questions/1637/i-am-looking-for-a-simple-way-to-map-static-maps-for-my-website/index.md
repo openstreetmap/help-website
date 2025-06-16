@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's an overview over a number of free services that help you create static maps on the <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static map images</a> wiki page.</p>
+<p>There's an overview over a number of free services that help you create static maps on the <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static map images</a> wiki page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,7 +110,7 @@ One Answer:
 <p>Navigate to Irving Park on the map, then zoom right in, so that you can see the relevant bit of subway and not much else. Then hit 'Edit'.</p>
 <p>The online editor, Potlatch, will load. When the splash screen appears, hit 'Edit with save'.</p>
 <p>You'll see a wireframe-ish view of the map. You'll probably find that the subway is a black line. At Irving Park, you should find a black node (point). The black indicates that the node is 'tagged' - in other words, that it has some attributes to say what it is.</p>
-<p>Click the node, and the tags will appear in the panel at the bottom. You want to change it from the tags for 'platform' to the tags for 'station'. In this case you can probably just replace the word 'platform' with 'station', but if you want to know exactly what tags are commonly used for this and a million other things, see the <a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page on OSM's wiki.</p>
+<p>Click the node, and the tags will appear in the panel at the bottom. You want to change it from the tags for 'platform' to the tags for 'station'. In this case you can probably just replace the word 'platform' with 'station', but if you want to know exactly what tags are commonly used for this and a million other things, see the <a href="https://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a> page on OSM's wiki.</p>
 <p>Finally, deselect the point (by clicking elsewhere on the map), then click 'Save' at the bottom right. Enter a brief comment explaining what you've done.</p>
 <p>Your change will be saved, and should be visible on the map in an hour or so (subject to caching).</p>
 <p>Enjoy!</p>

@@ -189,7 +189,7 @@ One Answer:
 <div id="post-40248-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave"></a><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: That's true. <span>Added for you</span> (copy &amp; paste + search &amp; replace in a texteditor helps). Please replace the filename (placeholder.jpg currently) with your photo file name. Adding a description would be good too.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave"></a><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: That's true. <span>Added for you</span> (copy &amp; paste + search &amp; replace in a texteditor helps). Please replace the filename (placeholder.jpg currently) with your photo file name. Adding a description would be good too.</p>
 </div>
 <div id="comment-40248-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 13:57)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -200,7 +200,7 @@ One Answer:
 <div id="post-40249-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave"></a><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: Regarding "remove": Your edit to <span>that documentation page</span> <em>could</em> be undone simply by removing the addition again (again in edit mode). Instead of this you could go to <span>the page's history</span> (linked on top of each page) and use the "undo" link.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave"></a><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: Regarding "remove": Your edit to <span>that documentation page</span> <em>could</em> be undone simply by removing the addition again (again in edit mode). Instead of this you could go to <span>the page's history</span> (linked on top of each page) and use the "undo" link.</p>
 </div>
 <div id="comment-40249-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 14:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -222,7 +222,7 @@ One Answer:
 <div id="post-40253-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: finally, this looks fine!</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a>: finally, this looks fine!</p>
 </div>
 <div id="comment-40253-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 14:56)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

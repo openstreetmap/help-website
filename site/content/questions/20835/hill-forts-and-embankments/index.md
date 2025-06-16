@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-20867-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Good answers, thanks. Maybe I need to separate the parallel ways more to get it to show better, though now that each way is split that is much more time consuming. I think the UK OS way of hatching without a line is a more elegant way of showing banks and ditches though. <a href="http://www.openstreetmap.org/?lat=55.86121&amp;lon=-3.23305&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=55.86121&amp;lon=-3.23305&amp;zoom=17&amp;layers=M</a></p>
+<p>Good answers, thanks. Maybe I need to separate the parallel ways more to get it to show better, though now that each way is split that is much more time consuming. I think the UK OS way of hatching without a line is a more elegant way of showing banks and ditches though. <a href="https://www.openstreetmap.org/?lat=55.86121&amp;lon=-3.23305&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=55.86121&amp;lon=-3.23305&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div id="comment-20867-info" class="comment-info">
 <span class="comment-age">(21 Mar '13, 10:15)</span> <span class="comment-user userinfo">digby</span>
@@ -118,9 +118,9 @@ osqa_accepted = false
 <p>You are probably referring to the default slippy map on openstreetmap.org.</p>
 <p>OpenStreetMap is not just this map, in fact, it produces this map only as a by-product. OpenStreetMap is about collecting the geodata, and distributing it for free, so that anyone can make their own maps.</p>
 <p>That said: if you have tagged these things the way they are described in the wiki, you have done your part. Mapnik (that's the name of the software that renders the map tiles on openstreetmap.org) does not render all data that is in the OSM database.</p>
-<p>Maybe some of the OSM applications listed under <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#History.2C_Archaeology.2C_Monument">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#History.2C_Archaeology.2C_Monument</a> render your fort?</p>
+<p>Maybe some of the OSM applications listed under <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#History.2C_Archaeology.2C_Monument">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#History.2C_Archaeology.2C_Monument</a> render your fort?</p>
 <p>And, lastly: could you provide us with a permalink to the region where you have drawn these forts?</p>
-<p>The one fort i kow of is this one <a href="http://www.openstreetmap.org/browse/way/88802742">http://www.openstreetmap.org/browse/way/88802742</a> , which is quite visible in mapnik, because it is surrounded by forest.</p>
+<p>The one fort i kow of is this one <a href="https://www.openstreetmap.org/browse/way/88802742">https://www.openstreetmap.org/browse/way/88802742</a> , which is quite visible in mapnik, because it is surrounded by forest.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Embankment does not display for an area, but it does display for a linear feature. So just split your area in two linear features. Example: <a href="http://www.openstreetmap.org/?lat=51.937995&amp;lon=5.155249&amp;zoom=18&amp;layers=M">Kazemat aan de Diefdijk</a></p>
+<p>Embankment does not display for an area, but it does display for a linear feature. So just split your area in two linear features. Example: <a href="https://www.openstreetmap.org/?lat=51.937995&amp;lon=5.155249&amp;zoom=18&amp;layers=M">Kazemat aan de Diefdijk</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -234,7 +234,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Gormo, Where using at this moment man_made embankment instead of man_made dike. Look at these fortresses, <a href="http://www.openstreetmap.org/?lat=51.94949&amp;lon=5.60906&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=51.94949&amp;lon=5.60906&amp;zoom=15&amp;layers=M</a> and this one <a href="http://www.openstreetmap.org/?lat=52.08579&amp;lon=5.55622&amp;zoom=17&amp;layers=M.">http://www.openstreetmap.org/?lat=52.08579&amp;lon=5.55622&amp;zoom=17&amp;layers=M.</a> It’s more appropriate to turn the embankment inside out with the steep side out, it depends on the way you’re using it. Both elements are part of a series of fortresses, reaching from the river to the Sea in the north. A fortress is historical an area shielded (1) by an embankment with room to set up guns and space for a camp ending (2) up with concrete shelters. Greetz Hendrik As As you're able to see the embankment at fort Datselaar (2) has been drawn around it ! With a white outer line forming the border of the perimeter of the defensive position.</p>
+<p>Hi Gormo, Where using at this moment man_made embankment instead of man_made dike. Look at these fortresses, <a href="https://www.openstreetmap.org/?lat=51.94949&amp;lon=5.60906&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=51.94949&amp;lon=5.60906&amp;zoom=15&amp;layers=M</a> and this one <a href="https://www.openstreetmap.org/?lat=52.08579&amp;lon=5.55622&amp;zoom=17&amp;layers=M.">https://www.openstreetmap.org/?lat=52.08579&amp;lon=5.55622&amp;zoom=17&amp;layers=M.</a> It’s more appropriate to turn the embankment inside out with the steep side out, it depends on the way you’re using it. Both elements are part of a series of fortresses, reaching from the river to the Sea in the north. A fortress is historical an area shielded (1) by an embankment with room to set up guns and space for a camp ending (2) up with concrete shelters. Greetz Hendrik As As you're able to see the embankment at fort Datselaar (2) has been drawn around it ! With a white outer line forming the border of the perimeter of the defensive position.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

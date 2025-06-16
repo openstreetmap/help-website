@@ -114,7 +114,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If what you want is to center the map in a certain location and save it, so every time anyone opens the map, it opens it in that location and zoom level, you have to use the following tool in the right hand tools menu:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/umapCenter.png" alt="umap center" /></p>
+<p><img src="/upfiles/umapCenter.png" alt="umap center" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

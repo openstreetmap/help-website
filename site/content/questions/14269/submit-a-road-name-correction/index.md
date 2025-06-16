@@ -147,7 +147,7 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>I'd definitely encourage the second option, editing the map. If you just log a bug, then someone has to get around to fixing it. If you just fix it, it's already done. The Beginners Guide ( <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> ) is a good place to start.</p>
+<p>I'd definitely encourage the second option, editing the map. If you just log a bug, then someone has to get around to fixing it. If you just fix it, it's already done. The Beginners Guide ( <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> ) is a good place to start.</p>
 </div>
 <div id="comment-14310-info" class="comment-info">
 <span class="comment-age">(16 Jul '12, 14:31)</span> <span class="comment-user userinfo">jwernerny</span>

@@ -133,7 +133,7 @@ osqa_accepted = true
 <div id="post-32320-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Personally, I'd use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to extract data from within a large downloaded .osm or osm.pbf file</p>
+<p>Personally, I'd use <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a> to extract data from within a large downloaded .osm or osm.pbf file</p>
 </div>
 <div id="comment-32320-info" class="comment-info">
 <span class="comment-age">(12 Apr '14, 14:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -354,7 +354,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>btw - i also installed osmfilter: see here</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 <pre><code>Download and build in one run:   wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -O3 -o osmfilter
 &#10;As usual: There is no warranty, to the extent permitted by law.
 &#10;linux-70ce:/home/martin #  wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -O3 -o osmfilter

@@ -179,7 +179,7 @@ out meta;</code></pre>
 <div id="post-51481-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>: <code>(relation(2099432);&gt;&gt;;);out body;</code> would be the usual approach, as you already have a relation id.</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>: <code>(relation(2099432);&gt;&gt;;);out body;</code> would be the usual approach, as you already have a relation id.</p>
 </div>
 <div id="comment-51481-info" class="comment-info">
 <span class="comment-age">(17 Aug '16, 11:53)</span> <span class="comment-user userinfo">mmd</span>

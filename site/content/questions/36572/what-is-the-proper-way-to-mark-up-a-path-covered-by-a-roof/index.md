@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you have done looks ok to me on the map. The building=roof shows up in grey with the covered path showing as a series of red dashes enclosed by parallel black lines. An uncovered path is just a series of red dashes. I mapped a similar situation here <a href="http://www.openstreetmap.org/#map=19/-37.76017/175.23022">http://www.openstreetmap.org/#map=19/-37.76017/175.23022</a> At the time I didn't think about adding the roof/canopy (building=roof or building=canopy) to the map and just tagged the path with covered=yes. That seemed sufficient to have it render on the map.</p>
+<p>What you have done looks ok to me on the map. The building=roof shows up in grey with the covered path showing as a series of red dashes enclosed by parallel black lines. An uncovered path is just a series of red dashes. I mapped a similar situation here <a href="https://www.openstreetmap.org/#map=19/-37.76017/175.23022">https://www.openstreetmap.org/#map=19/-37.76017/175.23022</a> At the time I didn't think about adding the roof/canopy (building=roof or building=canopy) to the map and just tagged the path with covered=yes. That seemed sufficient to have it render on the map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -149,7 +149,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are web apps available that will do what you want, which you can find in the "<a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">Routing/online routers</a> article in the Wiki. Such services are also available on Android - search here or on Google etc. Good luck!</p>
+<p>There are web apps available that will do what you want, which you can find in the "<a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">Routing/online routers</a> article in the Wiki. Such services are also available on Android - search here or on Google etc. Good luck!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read <a href="http://wiki.openstreetmap.org/wiki/Proposal">creating a tagging proposal</a> page on the wiki.</p>
+<p>Please read <a href="https://wiki.openstreetmap.org/wiki/Proposal">creating a tagging proposal</a> page on the wiki.</p>
 <p>After that you should do a search on <a href="http://lists.openstreetmap.org/pipermail/tagging/">Tagging mailing list archieves</a> (probably there have been many discussions about different fortifications). (<a href="http://lists.openstreetmap.org/listinfo/tagging">Tagging mailing list</a> is also the place where you can discuss things like this first)</p>
 <p>And it wouldn't hurt if you try to find your fortification type on <a href="http://taginfo.openstreetmap.org/">taginfo</a>. It might already exist under slightly different name. <a href="http://en.wikipedia.org/wiki/List_of_established_military_terms#Engineering">Wiki</a> might give some ideas what to look for.</p>
 <p>Also bear in mind that generic key values should be in english. So german Schans is not a good idea.</p>

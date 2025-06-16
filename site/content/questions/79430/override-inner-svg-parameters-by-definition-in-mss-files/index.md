@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hi, In general I try to override colour of motorway shield, but there are many of <code>SVG</code>'s files with already defined background colour.<br />
 What I want to achieve is not to edit all <code>SVG</code>'s but instead of that I would like to define that values directly in <code>.mss</code> files. I got familiar with <a href="https://cartocss.readthedocs.io/en/latest/mapnik_api.html#markers">mapnik documentation</a> but I couldn't find anything related to my problem.<br />
 In general the <code>SVG</code> of road shield looks like that:<br />
-<img src="https://help.openstreetmap.org/upfiles/SVG.png" alt="alt text" /><br />
+<img src="/upfiles/SVG.png" alt="alt text" /><br />
 (I'm sorry byt I've got problems with pasting that structure as a code..)<br />
 And as you can see the colour of shield (fill) and stroke around (stroke) is already defined in file.<br />
 Is there a way to override that values directly from style files?</p>

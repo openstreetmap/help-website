@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This major class of agricultural land has no specific tagging scheme associated with it. The French Corine Landuse import merely assigned it to <code>landuse=farm</code> (see <a href="http://etc-lusi.eionet.europa.eu/CLC2000/classes/Pictures?CLCcategory=2&amp;CLCtitle=Agricultural%20areas">CLC Tagging scheme</a>).</p>
-<p>There are over <a href="http://tagwatch.stoecker.eu/Europe/En/tags.html">1200 uses of crop=rice</a> in Europe on <a href="http://wiki.openstreetmap.org/wiki/Tagwatch">tagwatch</a>, so your suggestion is at least consistent with the usage of others. Corine has a category for flooded crops, so it may be sensible to add a <code>farm=flooded_crops</code> tag as well.</p>
+<p>There are over <a href="http://tagwatch.stoecker.eu/Europe/En/tags.html">1200 uses of crop=rice</a> in Europe on <a href="https://wiki.openstreetmap.org/wiki/Tagwatch">tagwatch</a>, so your suggestion is at least consistent with the usage of others. Corine has a category for flooded crops, so it may be sensible to add a <code>farm=flooded_crops</code> tag as well.</p>
 <p>Another option would be to use the <code>natural=wetland</code> tag with <code>wetland=flooded_crops</code>, but I'm not in favour of this suggestion even though it would render. It is too close to 'tagging for the renderer'</p>
 <p>Typical national topo maps in areas of rice cultivation usually have specific cartographic symbols for rice paddies, as did the world mapping of the Soviet Union. As more areas outside Europe receive detailed mapping attention I expect that OSM map renders will follow suit.</p>
 </div>

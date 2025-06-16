@@ -125,7 +125,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You're probably looking for the settings <code>ModTileRequestTimeout</code> and <code>ModTileMissingRequestTimeout</code>. See <a href="http://wiki.openstreetmap.org/wiki/HowTo_mod_tile">http://wiki.openstreetmap.org/wiki/HowTo_mod_tile</a> for details.</p>
+<p>You're probably looking for the settings <code>ModTileRequestTimeout</code> and <code>ModTileMissingRequestTimeout</code>. See <a href="https://wiki.openstreetmap.org/wiki/HowTo_mod_tile">https://wiki.openstreetmap.org/wiki/HowTo_mod_tile</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

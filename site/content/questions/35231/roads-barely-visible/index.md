@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would also like a little more contrast. It's a bigger problem on mobile screens on a sunny day. There we be somewhere an area to request that I'm sure. Do the alternative renderings help, click layers, see pic<img src="http://help.openstreetmap.org/upfiles/osm_layers.JPG" alt="alt text" /></p>
+<p>I would also like a little more contrast. It's a bigger problem on mobile screens on a sunny day. There we be somewhere an area to request that I'm sure. Do the alternative renderings help, click layers, see pic<img src="/upfiles/osm_layers.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Without knowing the exact answer, I recommend to start reading at the documentation about Nominatim at the OSM wiki, see <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>.</p>
+<p>Without knowing the exact answer, I recommend to start reading at the documentation about Nominatim at the OSM wiki, see <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>.</p>
 <p>Als o read all relevant sub pages there and follow the links to other wiki pages.</p>
 <p>Tell us if you get stuck somewhere via a concrete example.</p>
 </div>

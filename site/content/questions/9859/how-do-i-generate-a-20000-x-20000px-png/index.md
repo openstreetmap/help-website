@@ -112,7 +112,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>It is possible but none of our free services will do that for you. You have to understand that producing such large images does require a lot of resources - and while we give away OSM data for free, the amount of computing power that we can give away is limited.</p>
 <p>There are several ways for you to acquire such an image. For example, you could download an SVG or PDF image from the export tab and then use a program like <code>rsvg</code> to produce a bitmap from the SVG. Or, you could render an image yourself using either your own Mapnik installation (powerful but a lot of work to set up - use that if you are on Linux and expect to render images like that more often) or a standalone renderer like Maperitive (runs on Linux and Windows). Details on both techniques can be found on <a href="http://wiki.openstreetmap.org">our wiki</a>.</p>
-<p>There's also the option of using a third-party service. The free <a href="http://www.maposmatic.org">Maposmatic</a> generates large PNGs (albeit not the 400 Megapixel you're after) and PDFs. Some of the businesses listed on the <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial OSM Software and Services</a> page will also be able to produce such images as a paid service.</p>
+<p>There's also the option of using a third-party service. The free <a href="http://www.maposmatic.org">Maposmatic</a> generates large PNGs (albeit not the 400 Megapixel you're after) and PDFs. Some of the businesses listed on the <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial OSM Software and Services</a> page will also be able to produce such images as a paid service.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,8 +163,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>some more hints:</p>
-<p><a href="http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">how-do-i-export-map-images-of-larger-areas</a></p>
-<p><a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers</a></p>
+<p><a href="/questions/22/how-do-i-export-map-images-of-larger-areas">how-do-i-export-map-images-of-larger-areas</a></p>
+<p><a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

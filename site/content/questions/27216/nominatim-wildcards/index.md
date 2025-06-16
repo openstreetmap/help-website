@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi, using the search box at the left side of the main <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> site to check that I could find a building I named yesterday I found that I was unable to find it unless I entered the complete title.</p>
 <p>I named it 'Sesame Lane Childcare Centre' and thought that searching for 'sesame'or 'sesame lane' would have found it. I would prefer to use the full title I chose instead of 'Sesame Lane'.</p>
-<p>It does not seem to accept wildcards either. The '<a href="http://wiki.openstreetmap.org/wiki/Search">more examples</a>' link does not provide info on how to make such a search effective.</p>
+<p>It does not seem to accept wildcards either. The '<a href="https://wiki.openstreetmap.org/wiki/Search">more examples</a>' link does not provide info on how to make such a search effective.</p>
 <p>Is this search box very limited in it's capacity in this regard or is there something I've missed?</p>
 <p>edit: Sesame Lane is the name of the childcare group. It is not a type of way.</p>
 </div>

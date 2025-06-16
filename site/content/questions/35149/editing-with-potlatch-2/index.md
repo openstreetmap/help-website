@@ -179,7 +179,7 @@ One Answer:
 <div id="post-35192-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There's <a href="http://wiki.openstreetmap.org/wiki/Platform_status">http://wiki.openstreetmap.org/wiki/Platform_status</a> , but that's only updated manually (and hasn't been for the recent rendering style deployment, probably because nothing actually stopped working)</p>
+<p>There's <a href="https://wiki.openstreetmap.org/wiki/Platform_status">https://wiki.openstreetmap.org/wiki/Platform_status</a> , but that's only updated manually (and hasn't been for the recent rendering style deployment, probably because nothing actually stopped working)</p>
 </div>
 <div id="comment-35192-info" class="comment-info">
 <span class="comment-age">(25 Jul '14, 17:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -116,7 +116,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bearing in mind the comment by Hendrikklaas, but assuming you are referring to trucks, <strong>the standard tagging is <code>hgv=no</code></strong> (hgv is British legal english for Heavy Goods Vehicle).</p>
-<p>If other types of vehicles are also included in this restriction add each of these in the same way. The most widely used examples are documented <a href="http://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation">here</a> on the wiki. <a href="http://taginfo.openstreetmap.org/keys/?key=access">taginfo</a> for the key <code>access</code> may also provide inspiration, as many values are also used as keys with values of <code>no|yes|permissive</code>.</p>
+<p>If other types of vehicles are also included in this restriction add each of these in the same way. The most widely used examples are documented <a href="https://wiki.openstreetmap.org/wiki/Key:access#Land-based_transportation">here</a> on the wiki. <a href="http://taginfo.openstreetmap.org/keys/?key=access">taginfo</a> for the key <code>access</code> may also provide inspiration, as many values are also used as keys with values of <code>no|yes|permissive</code>.</p>
 <p>I would expect <code>hgv=no</code> to generate the right behaviour by most routers.</p>
 </div>
 <div class="answer-controls post-controls">

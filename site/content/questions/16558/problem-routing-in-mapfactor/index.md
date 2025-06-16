@@ -82,7 +82,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>In order to make it clear that the road on the bridge doesn't join the road underneath, add the <a href="http://wiki.openstreetmap.org/wiki/Layer">layer</a> tag. Items with a larger layer number are above items with a lower layer number. In this case adding layer=1 to the bridge will make it clear that it goes over the road (items without a layer tag are assumed to be layer=0).</p>
+<p>In order to make it clear that the road on the bridge doesn't join the road underneath, add the <a href="https://wiki.openstreetmap.org/wiki/Layer">layer</a> tag. Items with a larger layer number are above items with a lower layer number. In this case adding layer=1 to the bridge will make it clear that it goes over the road (items without a layer tag are assumed to be layer=0).</p>
 </div>
 <div id="comment-16572-info" class="comment-info">
 <span class="comment-age">(01 Oct '12, 12:00)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -94,7 +94,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Please create a separate question next time. The <a href="http://www.openstreetmap.org/browse/way/182428667">highway</a> has a <em>bridge</em> tag, but misses the <em><a href="http://wiki.openstreetmap.org/wiki/Key:layer">layer</a></em> tag. You should add this tag (<em>layer=1</em> in this specific case) whenever two highways intersect - additionally to the <em>bridge</em> or <em>tunnel</em> tag.</p>
+<p>Please create a separate question next time. The <a href="https://www.openstreetmap.org/browse/way/182428667">highway</a> has a <em>bridge</em> tag, but misses the <em><a href="https://wiki.openstreetmap.org/wiki/Key:layer">layer</a></em> tag. You should add this tag (<em>layer=1</em> in this specific case) whenever two highways intersect - additionally to the <em>bridge</em> or <em>tunnel</em> tag.</p>
 </div>
 <div id="comment-16573-info" class="comment-info">
 <span class="comment-age">(01 Oct '12, 12:04)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -204,7 +204,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p><span>@JCsM</span> Of course you can. Just move to your area and click on one of the bolt symbols, a popup should open explaining the error. There you can also directly open the corresponding area in Potlatch or JOSM to fix it. Afterwards you should mark the error as corrected in the popup so that other users don't try to fix it again.</p>
-<p>There is also a <a href="http://www.youtube.com/watch?v=8MF4oJIHuQw">video</a> available and a <a href="http://wiki.openstreetmap.org/wiki/Fehlerbereinigung_mit_Hilfe_von_keepright.at">detailed tutorial</a>, the latter unfortunately only in German.</p>
+<p>There is also a <a href="http://www.youtube.com/watch?v=8MF4oJIHuQw">video</a> available and a <a href="https://wiki.openstreetmap.org/wiki/Fehlerbereinigung_mit_Hilfe_von_keepright.at">detailed tutorial</a>, the latter unfortunately only in German.</p>
 </div>
 <div id="comment-16567-info" class="comment-info">
 <span class="comment-age">(01 Oct '12, 09:14)</span> <span class="comment-user userinfo">scai ♦</span>

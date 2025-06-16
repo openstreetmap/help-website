@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can't add multiple markers on the OpenStreetMap.org homepage. For point &amp; click solutions you might like <a href="http://wiki.openstreetmap.org/wiki/UMap">uMap</a>,<a href="http://geocommons.com/">geocommmons</a>, <a href="http://wiki.openstreetmap.org/wiki/StaticMap">StaticMap</a>, and others, but for more power and flexibility it's worth learning a few javascript tricks:</p>
+<p>You can't add multiple markers on the OpenStreetMap.org homepage. For point &amp; click solutions you might like <a href="https://wiki.openstreetmap.org/wiki/UMap">uMap</a>,<a href="http://geocommons.com/">geocommmons</a>, <a href="https://wiki.openstreetmap.org/wiki/StaticMap">StaticMap</a>, and others, but for more power and flexibility it's worth learning a few javascript tricks:</p>
 <p>Check out: <a href="http://harrywood.co.uk/maps/examples/openlayers/marker-popups.view.html">this multiple markers example</a></p>
 <ul>
 <li>It uses the open source JavaScript library called OpenLayers (<a href="http://harrywood.co.uk/maps/examples/leaflet/marker-array.view.html">There's an equivalent example for leafletJS</a>)</li>

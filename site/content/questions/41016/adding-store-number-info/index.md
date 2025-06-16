@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not adding the shop number to the name was certainly the right decision.</p>
-<p>Many people use the generic <code>ref</code> tag for different kinds of numbering. If you want to go over the top you can invent a <code>ref:home_depot</code> tag (just in case someone later wants to add, say, a <code>ref: fire_department</code> or a <code>ref:irs</code> to the thing as well...). Details <a href="http://wiki.openstreetmap.org/wiki/Key:ref">on the wiki.</a></p>
+<p>Many people use the generic <code>ref</code> tag for different kinds of numbering. If you want to go over the top you can invent a <code>ref:home_depot</code> tag (just in case someone later wants to add, say, a <code>ref: fire_department</code> or a <code>ref:irs</code> to the thing as well...). Details <a href="https://wiki.openstreetmap.org/wiki/Key:ref">on the wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That's a very good question and one that I've been curious about myself. I found this website on the wiki to explain it: <a href="http://wiki.openstreetmap.org/wiki/Key:ref:shop:num">ref:shop:num</a>.</p>
+<p>That's a very good question and one that I've been curious about myself. I found this website on the wiki to explain it: <a href="https://wiki.openstreetmap.org/wiki/Key:ref:shop:num">ref:shop:num</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

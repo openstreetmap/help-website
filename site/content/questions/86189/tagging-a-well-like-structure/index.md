@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I sometimes come across concrete structures like these in the landscape: <img src="https://help.openstreetmap.org/upfiles/photo_well-like_strucures.jpg" alt="well-like structures next to a path" /></p>
+<p>I sometimes come across concrete structures like these in the landscape: <img src="/upfiles/photo_well-like_strucures.jpg" alt="well-like structures next to a path" /></p>
 <p>The closest tag I've found so far is to tag it as "man_made=water_well", but I don't really know if the concrete things are actually used for retrieval of water. Maybe they are used for pumping, or for other purposes. Is there a less specific way to tag such structures?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

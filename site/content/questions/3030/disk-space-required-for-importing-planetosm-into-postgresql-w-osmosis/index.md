@@ -127,7 +127,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think there is something wrong.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Servers/yevaud">yevaud</a>, the mapnik-rendering-Server, has this configuration:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Servers/yevaud">yevaud</a>, the mapnik-rendering-Server, has this configuration:</p>
 <p><code>/database - sdb - 4x 300GB 10kRPM (RAID10)</code></p>
 <p>the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/df.html">usage</a> is at 60%</p>
 </div>

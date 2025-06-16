@@ -112,9 +112,9 @@ osqa_accepted = false
 <div class="answer-body">
 <p><span>@Ibralebbe</span> Ab...</p>
 <p>It depends on what kind of image file you want...</p>
-<p>If you want a png or jpeg, etc you can download it from the <a href="http://www.openstreetmap.org">openstreetmap.org site</a> and use the share link at the right side. See also the this <a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">link to a previous question</a> for other relevent points.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2014-06-23_at_2.43.26_pm_1.png" alt="image" /></p>
-<p>Instead, if you want .img type map file to load on to a Garmin gps you don't download directly from the link above but from one of the sites that convert the osm data into a Garmin suitable map. See these <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">Garmin osm map download sites</a></p>
+<p>If you want a png or jpeg, etc you can download it from the <a href="http://www.openstreetmap.org">openstreetmap.org site</a> and use the share link at the right side. See also the this <a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">link to a previous question</a> for other relevent points.</p>
+<p><img src="/upfiles/Screen_Shot_2014-06-23_at_2.43.26_pm_1.png" alt="image" /></p>
+<p>Instead, if you want .img type map file to load on to a Garmin gps you don't download directly from the link above but from one of the sites that convert the osm data into a Garmin suitable map. See these <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">Garmin osm map download sites</a></p>
 <p>I suggest that the first time you do this that you do a small local area such as the local suburb to acquaint yourself with the process. The <a href="http://download.bbbike.org/osm/">BBBike</a> "Select your own region" is good for this.</p>
 <p>As a beginner using a Garmin, I found this <a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">DC RAINMAKER</a> site to be helpful. The process is similar for most models.</p>
 </div>

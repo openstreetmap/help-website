@@ -195,7 +195,7 @@ out skel qt;</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: even more off topic: do you know if there are some specs available of this Swiss Overpass API instance? Would be great to add them to <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">this wiki page</a>.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: even more off topic: do you know if there are some specs available of this Swiss Overpass API instance? Would be great to add them to <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">this wiki page</a>.</p>
 </div>
 <div id="comment-46367-info" class="comment-info">
 <span class="comment-age">(03 Nov '15, 14:03)</span> <span class="comment-user userinfo">mmd</span>
@@ -237,8 +237,8 @@ out skel qt;</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Even if downloading a ~4gb file isn't what you want, imho it would be better to just download it. It is avaiable at <a href="http://download.geofabrik.de/europe/germany.html">geofabrik.de</a>. Afterwards you can use <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to reduce the data to what is really needed. For experimenting with osmfilter i would also download a small destrict, maybe Hessen, to get results of your osmfilter command within minutes instead of possibly hours. Those are the times i experienced doing something comparable without an SSD. So using an SSD might be a good idea, if possible.</p>
-<p>The advantage over the overpass api is, that you won't have to experiment with timeout values, which you probably would probably have to. Also you would have the result as an .osm file, which can be used for further osm related works, like populating a sql database with <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a>.</p>
+<p>Even if downloading a ~4gb file isn't what you want, imho it would be better to just download it. It is avaiable at <a href="http://download.geofabrik.de/europe/germany.html">geofabrik.de</a>. Afterwards you can use <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> to reduce the data to what is really needed. For experimenting with osmfilter i would also download a small destrict, maybe Hessen, to get results of your osmfilter command within minutes instead of possibly hours. Those are the times i experienced doing something comparable without an SSD. So using an SSD might be a good idea, if possible.</p>
+<p>The advantage over the overpass api is, that you won't have to experiment with timeout values, which you probably would probably have to. Also you would have the result as an .osm file, which can be used for further osm related works, like populating a sql database with <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

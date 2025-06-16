@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "National park not rendered in standard layer"
-description = '''Yesterday I found out that somebody traced the boundary of Parco Nazionale del Vesuvio, near Naples: http://www.openstreetmap.org/way/199207733#map=14/40.7895/14.4613. But it was not rendered on the standard OSM layer, and I realized that the way lacked of some tags that can be found in similar park...'''
+description = '''Yesterday I found out that somebody traced the boundary of Parco Nazionale del Vesuvio, near Naples: https://www.openstreetmap.org/way/199207733#map=14/40.7895/14.4613. But it was not rendered on the standard OSM layer, and I realized that the way lacked of some tags that can be found in similar park...'''
 date = "2014-12-11T12:20:00Z"
 lastmod = "2014-12-11T19:47:00Z"
 weight = 39214
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Yesterday I found out that somebody traced the boundary of Parco Nazionale del Vesuvio, near Naples: <a href="http://www.openstreetmap.org/way/199207733#map=14/40.7895/14.4613">http://www.openstreetmap.org/way/199207733#map=14/40.7895/14.4613</a>. But it was not rendered on the standard OSM layer, and I realized that the way lacked of some tags that can be found in similar parks, so I fixed it - or I think so, at least. After almost one day, it is not rendered yet, whereas more recent edits not far from it are. How come?</p>
+<p>Yesterday I found out that somebody traced the boundary of Parco Nazionale del Vesuvio, near Naples: <a href="https://www.openstreetmap.org/way/199207733#map=14/40.7895/14.4613">https://www.openstreetmap.org/way/199207733#map=14/40.7895/14.4613</a>. But it was not rendered on the standard OSM layer, and I realized that the way lacked of some tags that can be found in similar parks, so I fixed it - or I think so, at least. After almost one day, it is not rendered yet, whereas more recent edits not far from it are. How come?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-national_park" rel="tag" title="see questions tagged &#39;national_park&#39;">national_park</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

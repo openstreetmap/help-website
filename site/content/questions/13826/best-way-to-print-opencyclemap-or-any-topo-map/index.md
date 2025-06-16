@@ -70,7 +70,7 @@ This question is marked "community wiki".
 <div id="post-13840-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Duplicate of <a href="http://help.openstreetmap.org/questions/9043/printing-osm-maps-to-paper">Printing OSM maps to paper</a></p>
+<p>Duplicate of <a href="/questions/9043/printing-osm-maps-to-paper">Printing OSM maps to paper</a></p>
 </div>
 <div id="comment-13840-info" class="comment-info">
 <span class="comment-age">(27 Jun '12, 12:59)</span> <span class="comment-user userinfo">sleske</span>
@@ -81,7 +81,7 @@ This question is marked "community wiki".
 <div id="post-13841-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Or <a href="http://help.openstreetmap.org/questions/5194/printing-problems">Printing problems</a></p>
+<p>Or <a href="/questions/5194/printing-problems">Printing problems</a></p>
 </div>
 <div id="comment-13841-info" class="comment-info">
 <span class="comment-age">(27 Jun '12, 13:02)</span> <span class="comment-user userinfo">sleske</span>

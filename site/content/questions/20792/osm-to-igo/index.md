@@ -148,7 +148,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Stephan is referring to <a href="https://help.openstreetmap.org/questions/3597/osm-on-igo">this question</a>.</p>
+<p>Stephan is referring to <a href="/questions/3597/osm-on-igo">this question</a>.</p>
 </div>
 <div id="comment-20802-info" class="comment-info">
 <span class="comment-age">(19 Mar '13, 06:57)</span> <span class="comment-user userinfo">scai ♦</span>

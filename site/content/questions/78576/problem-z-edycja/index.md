@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you accidently picked "None" in the Background menu? <img src="https://help.openstreetmap.org/upfiles/Screenshot_2021-01-29_at_07.12.11.png" alt="alt text" /> Choose one of the other options of aerial images available for your region</p>
+<p>Did you accidently picked "None" in the Background menu? <img src="/upfiles/Screenshot_2021-01-29_at_07.12.11.png" alt="alt text" /> Choose one of the other options of aerial images available for your region</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

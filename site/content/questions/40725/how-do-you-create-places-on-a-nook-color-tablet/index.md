@@ -166,7 +166,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you can install <em>Android apps</em> (needs a special firmware version / root if I read the Wikipedia article correctly), an alternative to the editors on the website are <span>Android editing apps</span> (Vespucci is most <span>popular</span>). Also see <a href="http://learnosm.org/en/mobile-mapping/">http://learnosm.org/en/mobile-mapping/</a></p>
-<p>Be aware that those apps may not be very <a href="https://help.openstreetmap.org/questions/6/how-do-i-get-started-with-openstreetmap">new</a><a href="http://learnosm.org/">bie</a> friendly – take care if you upload/save your changes to the server.</p>
+<p>Be aware that those apps may not be very <a href="/questions/6/how-do-i-get-started-with-openstreetmap">new</a><a href="http://learnosm.org/">bie</a> friendly – take care if you upload/save your changes to the server.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

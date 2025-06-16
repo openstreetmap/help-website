@@ -222,7 +222,7 @@ osqa_accepted = false
 <div id="post-47945-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11945/rick-raubenheimer"></a><a href="http://help.openstreetmap.org/users/11945/rick-raubenheimer">@Rick Raubenheimer</a>: regarding your follow-up question: you can/should make many changes (this is what I tried to mention in my second "1." above). E.g. you correct some streetnames in a full quarter and then save them in one go ("changeset") with a comment like "corrected streetnames in quarter xyz after looking at the streetsigns".</p>
+<p><a href="https://help.openstreetmap.org/users/11945/rick-raubenheimer"></a><a href="https://help.openstreetmap.org/users/11945/rick-raubenheimer">@Rick Raubenheimer</a>: regarding your follow-up question: you can/should make many changes (this is what I tried to mention in my second "1." above). E.g. you correct some streetnames in a full quarter and then save them in one go ("changeset") with a comment like "corrected streetnames in quarter xyz after looking at the streetsigns".</p>
 <p>Since Big_Borz' suggestion solved your problem, please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark this answer as accepted</a>.</p>
 </div>
 <div id="comment-47945-info" class="comment-info">

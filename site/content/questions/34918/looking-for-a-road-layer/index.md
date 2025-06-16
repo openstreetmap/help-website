@@ -150,7 +150,7 @@ One Answer:
 <div id="post-34946-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also have a look in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> , and for filtering I really recommend <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
+<p>Also have a look in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> , and for filtering I really recommend <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a></p>
 <p>Do a search here for osmfilter or "extract data" to get more hints.</p>
 </div>
 <div id="comment-34946-info" class="comment-info">

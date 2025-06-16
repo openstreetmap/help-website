@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have found out that a shooting range should be tagged with <a href="http://wiki.openstreetmap.org/wiki/Tag:sport=shooting">sport=shooting</a>. So far, so good.</p>
-<p>But the wiki page about <a href="http://wiki.openstreetmap.org/wiki/Key:sport">Key:sport</a> states that "Since this is a non-physical tag it should be combined with one of these (physical) tags…" - and I do agree. But which physical tags should I typically use?</p>
-<p>I've thought about <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch">leisure=pitch</a>, but I don't feel convinced that the English word "pitch" is used for shooting ranges.</p>
+<p>I have found out that a shooting range should be tagged with <a href="https://wiki.openstreetmap.org/wiki/Tag:sport=shooting">sport=shooting</a>. So far, so good.</p>
+<p>But the wiki page about <a href="https://wiki.openstreetmap.org/wiki/Key:sport">Key:sport</a> states that "Since this is a non-physical tag it should be combined with one of these (physical) tags…" - and I do agree. But which physical tags should I typically use?</p>
+<p>I've thought about <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpitch">leisure=pitch</a>, but I don't feel convinced that the English word "pitch" is used for shooting ranges.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shooting" rel="tag" title="see questions tagged &#39;shooting&#39;">shooting</span> <span class="post-tag tag-link-sport" rel="tag" title="see questions tagged &#39;sport&#39;">sport</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -127,7 +127,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Also, military=danger_area sounds like an interesting tag for an open-air shooting range.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:military%3Ddanger_area">http://wiki.openstreetmap.org/wiki/Tag:military%3Ddanger_area</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:military%3Ddanger_area">https://wiki.openstreetmap.org/wiki/Tag:military%3Ddanger_area</a></p>
 </div>
 <div id="comment-11923-info" class="comment-info">
 <span class="comment-age">(12 Apr '12, 07:48)</span> <span class="comment-user userinfo">moszkva ter</span>

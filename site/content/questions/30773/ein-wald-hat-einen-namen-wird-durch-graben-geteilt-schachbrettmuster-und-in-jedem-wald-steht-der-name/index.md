@@ -73,7 +73,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>A similar problem here: <a href="https://help.openstreetmap.org/questions/29570/naming-a-wood-with-different-types-of-trees">https://help.openstreetmap.org/questions/29570/naming-a-wood-with-different-types-of-trees</a></p>
+<p>A similar problem here: <a href="/questions/29570/naming-a-wood-with-different-types-of-trees">https://help.openstreetmap.org/questions/29570/naming-a-wood-with-different-types-of-trees</a></p>
 </div>
 <div id="comment-30801-info" class="comment-info">
 <span class="comment-age">(17 Feb '14, 18:55)</span> <span class="comment-user userinfo">SK53 ♦</span>

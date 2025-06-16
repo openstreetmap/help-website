@@ -68,7 +68,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Your question has too little detail to get a meaningful answer. Please describe what you want to accomplish, what you did, and what did not work. If you are trying to use OSM maps on a Garmin device using MapSource, have a look at <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource">http://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource</a></p>
+<p>Your question has too little detail to get a meaningful answer. Please describe what you want to accomplish, what you did, and what did not work. If you are trying to use OSM maps on a Garmin device using MapSource, have a look at <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource">https://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource</a></p>
 </div>
 <div id="comment-4477-info" class="comment-info">
 <span class="comment-age">(14 Apr '11, 11:22)</span> <span class="comment-user userinfo">sleske</span>

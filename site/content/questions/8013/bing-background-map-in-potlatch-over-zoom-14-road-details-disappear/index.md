@@ -122,7 +122,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This might help <a href="http://wiki.openstreetmap.org/wiki/Bing/Coverage">http://wiki.openstreetmap.org/wiki/Bing/Coverage</a></p>
+<p>This might help <a href="https://wiki.openstreetmap.org/wiki/Bing/Coverage">https://wiki.openstreetmap.org/wiki/Bing/Coverage</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

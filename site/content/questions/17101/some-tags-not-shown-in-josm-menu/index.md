@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM only suggests tags that are either included in JOSM's presets or have been used previously in the same geographic area. It is impossible for an editor to know all possible tags because you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">Any tags you like</a> in OSM.</p>
+<p>JOSM only suggests tags that are either included in JOSM's presets or have been used previously in the same geographic area. It is impossible for an editor to know all possible tags because you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">Any tags you like</a> in OSM.</p>
 <p>Whether or not a tag is shown on the "default" osm.org map style is unrelated. There is no direct connection between tags known to JOSM, tags documented in the OSM Wiki, and tags used for rendering any particular map. Also note that tags not visualized in the "default" map style can still be used by other maps and applications.</p>
 </div>
 <div class="answer-controls post-controls">

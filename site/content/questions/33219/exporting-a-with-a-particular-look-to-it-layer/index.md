@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I need to export a map as a pdf, but, I need the map to look like the layer I choose, Example: 1 Standard, 2 Cycle Map, 3 Transport Map, 4 MapQuest Open, 5 Humanitarian. Everytime I try to download a map, I keep getting “Standard” layer or view of map. Thanks in advance.<img src="http://help.openstreetmap.org/upfiles/Layer_views.png" alt="alt text" /></p>
+<p>I need to export a map as a pdf, but, I need the map to look like the layer I choose, Example: 1 Standard, 2 Cycle Map, 3 Transport Map, 4 MapQuest Open, 5 Humanitarian. Everytime I try to download a map, I keep getting “Standard” layer or view of map. Thanks in advance.<img src="/upfiles/Layer_views.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-exporting" rel="tag" title="see questions tagged &#39;exporting&#39;">exporting</span>
@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is not possible from the OSM web site; you can only export those styles which are rendered by OSM itself and that's just the OSM style, all the others come in from third-party servers.</p>
-<p>Enter "export" or "render own map" in the search box above to find some information about map export and styling, and also see the answers to <a href="https://help.openstreetmap.org/questions/11720/exporting-mapquest-open-map">"Exporting MapQuest Open Map".</a></p>
+<p>Enter "export" or "render own map" in the search box above to find some information about map export and styling, and also see the answers to <a href="/questions/11720/exporting-mapquest-open-map">"Exporting MapQuest Open Map".</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a>, there we have tools like BigMap and <strong>BigMap2</strong> where you can choose from a bunch of OSM based layers. Then download and print your tiles.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on Paper</a>, there we have tools like BigMap and <strong>BigMap2</strong> where you can choose from a bunch of OSM based layers. Then download and print your tiles.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -172,8 +172,8 @@ Running causes the error "Unable to create streaming resultset"</p>
 <div class="comment-text">
 <p>See (as a starting point):</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--replicate-apidb_.28--repa.29">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--replicate-apidb_.28--repa.29</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Minutely_Mapnik">http://wiki.openstreetmap.org/wiki/Minutely_Mapnik</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--replicate-apidb_.28--repa.29">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--replicate-apidb_.28--repa.29</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Minutely_Mapnik">https://wiki.openstreetmap.org/wiki/Minutely_Mapnik</a></li>
 </ul>
 </div>
 <div id="comment-20126-info" class="comment-info">

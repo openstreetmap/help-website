@@ -145,7 +145,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Assuming you're using the overpass turbo wizard, you will not get any kind of bounding box information in your Overpass API result.</p>
-<p>Although this is not really documented, a feature called <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Global_bounding_box_.28bbox.29">global bounding box</a> might come in handy in your case: it will add that bounding box detail to your response you didn't get so far. Simply add <code>[bbox:{{bbox}}]</code> to your query like demonstrated in the following query: <a href="http://overpass-turbo.eu/s/bC5">http://overpass-turbo.eu/s/bC5</a></p>
+<p>Although this is not really documented, a feature called <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Global_bounding_box_.28bbox.29">global bounding box</a> might come in handy in your case: it will add that bounding box detail to your response you didn't get so far. Simply add <code>[bbox:{{bbox}}]</code> to your query like demonstrated in the following query: <a href="http://overpass-turbo.eu/s/bC5">http://overpass-turbo.eu/s/bC5</a></p>
 <p>Bounding box details are now automatically added to the Overpass response:</p>
 <pre><code>  &quot;bounds&quot;: {
     &quot;minlat&quot;: 41.8926,
@@ -188,7 +188,7 @@ One Answer:
 <div id="post-45642-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11503/brettbarkley">@brettbarkley</a>: Please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark this answer as accepted</a> if it solves your problem.</p>
+<p><a href="https://help.openstreetmap.org/users/11503/brettbarkley">@brettbarkley</a>: Please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark this answer as accepted</a> if it solves your problem.</p>
 </div>
 <div id="comment-45642-info" class="comment-info">
 <span class="comment-age">(28 Sep '15, 19:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

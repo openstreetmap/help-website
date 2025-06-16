@@ -297,7 +297,7 @@ uncher.java:409)
 <div id="post-37932-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> does this allow you to update the database?</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> does this allow you to update the database?</p>
 </div>
 <div id="comment-37932-info" class="comment-info">
 <span class="comment-age">(24 Oct '14, 17:09)</span> <span class="comment-user userinfo">ajc2014</span>

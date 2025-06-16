@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I want to implement OSM API on my website like Square Yard.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Lokhandwala-Infrastructure-Victoria-in-Worli-Mumbai-15-00-Cr-Floor-Plans-Location-Map-Reviews.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Lokhandwala-Infrastructure-Victoria-in-Worli-Mumbai-15-00-Cr-Floor-Plans-Location-Map-Reviews.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-api" rel="tag" title="see questions tagged &#39;api&#39;">api</span> <span class="post-tag tag-link-osmfilter" rel="tag" title="see questions tagged &#39;osmfilter&#39;">osmfilter</span>

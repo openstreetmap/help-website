@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-63744-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Try searching questions with *osm on garmin" here is one result <a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
+<p>Try searching questions with *osm on garmin" here is one result <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a></p>
 </div>
 <div id="comment-63744-info" class="comment-info">
 <span class="comment-age">(25 May '18, 21:42)</span> <span class="comment-user userinfo">andy mackey</span>

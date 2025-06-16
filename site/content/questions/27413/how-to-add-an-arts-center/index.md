@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I think this is it: <a href="http://www.openstreetmap.org/#map=19/40.83825/-73.84453">http://www.openstreetmap.org/#map=19/40.83825/-73.84453</a></p>
+<p>I think this is it: <a href="https://www.openstreetmap.org/#map=19/40.83825/-73.84453">https://www.openstreetmap.org/#map=19/40.83825/-73.84453</a></p>
 </div>
 <div id="comment-27420-info" class="comment-info">
 <span class="comment-age">(22 Oct '13, 20:29)</span> <span class="comment-user userinfo">neuhausr</span>

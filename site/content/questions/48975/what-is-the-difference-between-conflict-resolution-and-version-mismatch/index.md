@@ -183,7 +183,7 @@ One Answer:
 <div id="post-48981-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12132/basu007">@basu007</a>: as said, I don't really understand that, too.</p>
+<p><a href="https://help.openstreetmap.org/users/12132/basu007">@basu007</a>: as said, I don't really understand that, too.</p>
 </div>
 <div id="comment-48981-info" class="comment-info">
 <span class="comment-age">(31 Mar '16, 20:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

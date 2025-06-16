@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've just red the <a href="http://www.openstreetmap.org/copyright">license info page</a> in <em>catalan</em> <code>(ca_ES)</code>, and it is <strong>horrible</strong>!! It looks like if it was automatically translated, is full of nonsene sentences and bad constructed expressions. I definitely could do it better.</p>
+<p>I've just red the <a href="https://www.openstreetmap.org/copyright">license info page</a> in <em>catalan</em> <code>(ca_ES)</code>, and it is <strong>horrible</strong>!! It looks like if it was automatically translated, is full of nonsene sentences and bad constructed expressions. I definitely could do it better.</p>
 <p>Anyway, this page is not editable (or I couldn't figure out). How can I contribute to make it a good page? Who to contact?</p>
 <p>Thanks.</p>
 </div>

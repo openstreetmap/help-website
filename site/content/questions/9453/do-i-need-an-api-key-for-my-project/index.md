@@ -116,8 +116,8 @@ Do I need an API key to do this?<br />
 <td><div class="item-right">
 <div class="answer-body">
 <p>There are a few APIs to consider:</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">editing api</a> lets you retrieve and edit raw data (including history). It require no "API key" but it requires a registered OSM user for any editing, and it probably looks at your http user agent.</p>
-<p>The other apis are the generated-tiles viewing apis similar to googlemapview. A few exist, two popular ones being <a href="http://wiki.openstreetmap.org/wiki/Openlayers">openlayers</a> and <a href="http://leaflet.cloudmade.com/">leaflet</a>. There are also special-purpose apis like <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>. All of these usually require no more than a properly-setup http user agent (and reasonable usage of resources, but that should be no problem for a dissertation project).</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">editing api</a> lets you retrieve and edit raw data (including history). It require no "API key" but it requires a registered OSM user for any editing, and it probably looks at your http user agent.</p>
+<p>The other apis are the generated-tiles viewing apis similar to googlemapview. A few exist, two popular ones being <a href="https://wiki.openstreetmap.org/wiki/Openlayers">openlayers</a> and <a href="http://leaflet.cloudmade.com/">leaflet</a>. There are also special-purpose apis like <a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>. All of these usually require no more than a properly-setup http user agent (and reasonable usage of resources, but that should be no problem for a dissertation project).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ Do I need an API key to do this?<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the answers to <a href="http://help.openstreetmap.org/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android">this question</a>.</p>
+<p>See the answers to <a href="/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

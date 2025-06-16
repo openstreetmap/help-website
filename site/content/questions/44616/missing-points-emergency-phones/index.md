@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I wanted to ask for your help. Yesterday I added some emergency phones around a lake in Austria. The data seems to be there (see screenshots) but something went wrong because on the standard layer I am not able to see any of the phones on the map.</p>
 <p>In edit mode they are displayed correctly (even the name is beside the image).</p>
-<p>Is it necessary to draw an area first and then place a point on it? What could be wrong here?<img src="http://help.openstreetmap.org/upfiles/dataExists2.PNG" alt="alt text" /><img src="http://help.openstreetmap.org/upfiles/dataExists_2BvAuA1.PNG" alt="alt text" /><img src="http://help.openstreetmap.org/upfiles/missingData.PNG" alt="alt text" /></p>
+<p>Is it necessary to draw an area first and then place a point on it? What could be wrong here?<img src="/upfiles/dataExists2.PNG" alt="alt text" /><img src="/upfiles/dataExists_2BvAuA1.PNG" alt="alt text" /><img src="/upfiles/missingData.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-points" rel="tag" title="see questions tagged &#39;points&#39;">points</span> <span class="post-tag tag-link-emergency" rel="tag" title="see questions tagged &#39;emergency&#39;">emergency</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>
@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>(in answer to the second part of the question) the best current map legend for the "standard" layer is probably <a href="http://wiki.openstreetmap.org/wiki/Standard_tile_layer">here</a>. Other tile layers are available at OpenStreetMap.org and many more elsewhere. I'm sure that many of them will display "emergency" keys.</p>
+<p>(in answer to the second part of the question) the best current map legend for the "standard" layer is probably <a href="https://wiki.openstreetmap.org/wiki/Standard_tile_layer">here</a>. Other tile layers are available at OpenStreetMap.org and many more elsewhere. I'm sure that many of them will display "emergency" keys.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

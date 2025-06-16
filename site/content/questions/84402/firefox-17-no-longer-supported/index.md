@@ -49,7 +49,7 @@ osqa_accepted = false
 </ul>
 <p>Is it because of some upgrades in javascript code, and it will not work anymore?</p>
 <p>Thanks for answer.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM+FF17_@220507-1700UTC.png" alt="alt text" /></p>
+<p><img src="/upfiles/OSM+FF17_@220507-1700UTC.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-browsers" rel="tag" title="see questions tagged &#39;browsers&#39;">browsers</span>

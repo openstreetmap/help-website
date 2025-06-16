@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Tagging a wide viaduct"
-description = '''I&#x27;ve been adding features in an area with a wide viaduct carrying a railway line, track, car park and several buildings (around http://www.openstreetmap.org/?lat=53.3869175612926&amp;amp;lon=-1.45693302154541&amp;amp;zoom=18). Several roads, a river, canal and a footbridge run underneath, and there are some...'''
+description = '''I&#x27;ve been adding features in an area with a wide viaduct carrying a railway line, track, car park and several buildings (around https://www.openstreetmap.org/?lat=53.3869175612926&amp;amp;lon=-1.45693302154541&amp;amp;zoom=18). Several roads, a river, canal and a footbridge run underneath, and there are some...'''
 date = "2011-01-31T13:10:00Z"
 lastmod = "2011-01-31T14:57:00Z"
 weight = 2593
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've been adding features in an area with a wide viaduct carrying a railway line, track, car park and several buildings (around <a href="http://www.openstreetmap.org/?lat=53.3869175612926&amp;lon=-1.45693302154541&amp;zoom=18">http://www.openstreetmap.org/?lat=53.3869175612926&amp;lon=-1.45693302154541&amp;zoom=18</a>). Several roads, a river, canal and a footbridge run underneath, and there are some industrial units and yards underneath, too. I've tried tagging some of the ground level features as tunnel=yes, and marking on layer=[number] for some of the features, but the whole thing remains very unclear. I'm reluctant to mark the features on the viaduct as bridge=yes, as that seems to imply that they are on separate bridges. I was wondering whether marking the edges of the viaduct as barrier=wall would make things more or less clear.</p>
+<p>I've been adding features in an area with a wide viaduct carrying a railway line, track, car park and several buildings (around <a href="https://www.openstreetmap.org/?lat=53.3869175612926&amp;lon=-1.45693302154541&amp;zoom=18">https://www.openstreetmap.org/?lat=53.3869175612926&amp;lon=-1.45693302154541&amp;zoom=18</a>). Several roads, a river, canal and a footbridge run underneath, and there are some industrial units and yards underneath, too. I've tried tagging some of the ground level features as tunnel=yes, and marking on layer=[number] for some of the features, but the whole thing remains very unclear. I'm reluctant to mark the features on the viaduct as bridge=yes, as that seems to imply that they are on separate bridges. I was wondering whether marking the edges of the viaduct as barrier=wall would make things more or less clear.</p>
 <p>Are there any standard solutions to clarifying multi-level areas like this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>From what you describe, it sounds like the railway line and track etc are on a bridge, so should each be tagged as bridge=yes. Though its true that this will probably be rendered as several separate bridges, this is a common problem with dual carriageways or cycleways beside roads etc.</p>
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">proposed relation for bridges and tunnels</a>. This would allow you to group the different ways together, to show the are all on the same bridge. Plus you can draw an area for the outline of the bridge and include it in the relation, this will show the area the bridge covers. Though I don't think this bridge relation is currently used by any renderers.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Bridges_and_Tunnels">proposed relation for bridges and tunnels</a>. This would allow you to group the different ways together, to show the are all on the same bridge. Plus you can draw an area for the outline of the bridge and include it in the relation, this will show the area the bridge covers. Though I don't think this bridge relation is currently used by any renderers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

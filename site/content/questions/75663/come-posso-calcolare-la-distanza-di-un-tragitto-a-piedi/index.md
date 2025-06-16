@@ -114,11 +114,11 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>La "barretta" in basso a sinistra indica la scala della mappa. Per calcolare la distanza, puoi impostare un percorso cliccando sul simbolo con due frecce vicino alla barra di ricerca:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Immagine_Ldugdhz.png" alt="alt text" /></p>
+<p><img src="/upfiles/Immagine_Ldugdhz.png" alt="alt text" /></p>
 <p>Poi dall'interfaccia che ti si presenta, puoi trascinare i due pin verde e rosso per impostare partenza e arrivo e far calcolare al sistema tempo e distanza.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_(26).png" style="width:100.0%" /></p>
+<p><img src="/upfiles/Screenshot_(26).png" style="width:100.0%" /></p>
 <p>Ricordati di impostare "A piedi" nel menu a tendina (GraphHopper o OSRM è abbastanza indifferente)</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_(26)_ie3s0rp.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_(26)_ie3s0rp.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

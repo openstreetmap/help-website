@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-51848-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>When using the value garden:type the drop down box has preset values for either pub or beer. Which would be more appropriate? At the moment I am doing it like this <img src="http://help.openstreetmap.org/upfiles/pub_garden.png" alt="alt text" /></p>
+<p>When using the value garden:type the drop down box has preset values for either pub or beer. Which would be more appropriate? At the moment I am doing it like this <img src="/upfiles/pub_garden.png" alt="alt text" /></p>
 <p>Should I use garden:type=pub instead?</p>
 </div>
 <div id="comment-51848-info" class="comment-info">

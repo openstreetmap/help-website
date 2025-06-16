@@ -118,10 +118,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>All ways should exist in the database. You can check this by going to <a href="http://www.openstreetmap.org/browse/way/123456">http://www.openstreetmap.org/browse/way/123456</a> (or whatever the way id is). If nothing is returned this is a database error, but this is exceptionally unlikely.</p>
+<p>All ways should exist in the database. You can check this by going to <a href="https://www.openstreetmap.org/browse/way/123456">https://www.openstreetmap.org/browse/way/123456</a> (or whatever the way id is). If nothing is returned this is a database error, but this is exceptionally unlikely.</p>
 <p>The easiest way to get linestrings (i.e. linear lists of co-ordinates) from relations is indeed to get the relation; then get the member ways; then get the member nodes from each way. However, note that relations are not necessarily ordered: the ways may be in random order. If you want to create an ordered linestring, you will need to look for start/end points of the ways that coincide.</p>
 <p>Please remember that the 'API' you are using is an editing API only. It exists solely for programs that are principally designed to allow users to edit the map. If your app is not an editor, you should download the data and host it on your own servers. You can download the data from <a href="http://planet.osm.org/">planet.openstreetmap.org</a> (note the links to extracts on the right-hand side of the page, which you will find much more malleable than the full dump). You may want to consider the programs 'Osmosis' and 'osm2pgsql' for details on how to work with this data, or you may be confident in working directly with the XML yourself.</p>
-<p>Finally, I would really strongly recommend you read <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> to get an understanding of the basic OSM data structure. This help site can offer advice, but contributors' patience is not infinite and we can't really explain the basics of OSM to everyone who comes here.</p>
+<p>Finally, I would really strongly recommend you read <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> to get an understanding of the basic OSM data structure. This help site can offer advice, but contributors' patience is not infinite and we can't really explain the basics of OSM to everyone who comes here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -239,7 +239,7 @@ osqa_accepted = false
 <p>« Zone trop grande Cette zone est trop vaste pour être exportée comme données XML OpenStreetMap. Veuillez zoomer ou sélectionner une zone plus petite. »</p>
 <p>Would it be possible to derive an OWM dataset, or Open World Map from the OSM data, by simplifying the geometry of features. The purpose would be thematic world maps. Right now, an alternate source of data DCW or vMap0 is quite old, and not up-to-date.</p>
 <p>Of course, the process – including map generalization – would not be easy to design and maintain.</p>
-<p>Are there other sources, like : - WikiMiniAtlas <a href="http://wiki.openstreetmap.org/wiki/WikiMiniAtlas">http://wiki.openstreetmap.org/wiki/WikiMiniAtlas</a> - Worldmapper (as referred in <a href="http://wiki.openstreetmap.org/wiki/Pufferfish_Display">http://wiki.openstreetmap.org/wiki/Pufferfish_Display</a> ) - World Maps Offline (as referred in <a href="http://wiki.openstreetmap.org/wiki/World_Maps_Offline">http://wiki.openstreetmap.org/wiki/World_Maps_Offline</a> )</p>
+<p>Are there other sources, like : - WikiMiniAtlas <a href="https://wiki.openstreetmap.org/wiki/WikiMiniAtlas">https://wiki.openstreetmap.org/wiki/WikiMiniAtlas</a> - Worldmapper (as referred in <a href="https://wiki.openstreetmap.org/wiki/Pufferfish_Display">https://wiki.openstreetmap.org/wiki/Pufferfish_Display</a> ) - World Maps Offline (as referred in <a href="https://wiki.openstreetmap.org/wiki/World_Maps_Offline">https://wiki.openstreetmap.org/wiki/World_Maps_Offline</a> )</p>
 <p>Keywords : world map ; worldmap</p>
 </div>
 <div class="answer-controls post-controls">

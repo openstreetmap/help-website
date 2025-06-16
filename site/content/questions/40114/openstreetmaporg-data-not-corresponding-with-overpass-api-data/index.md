@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OpenStreetMap.org data not corresponding with Overpass API data"
-description = '''Hi, I am trying to query parking using JSON via the Overpass API but what is returned by the JSON feed doesn&#x27;t seem to correspond with what can be found on the map at http://www.openstreetmap.org/. An example below is a small town I know, on inspection of the map here  http://www.openstreetmap.org/n...'''
+description = '''Hi, I am trying to query parking using JSON via the Overpass API but what is returned by the JSON feed doesn&#x27;t seem to correspond with what can be found on the map at https://www.openstreetmap.org/. An example below is a small town I know, on inspection of the map here  https://www.openstreetmap.org/n...'''
 date = "2015-01-07T22:52:00Z"
 lastmod = "2015-01-08T12:53:00Z"
 weight = 40114
@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I am trying to query parking using JSON via the Overpass API but what is returned by the JSON feed doesn't seem to correspond with what can be found on the map at <a href="http://www.openstreetmap.org/.">http://www.openstreetmap.org/.</a></p>
+<p>I am trying to query parking using JSON via the Overpass API but what is returned by the JSON feed doesn't seem to correspond with what can be found on the map at <a href="https://www.openstreetmap.org/.">https://www.openstreetmap.org/.</a></p>
 <p>An example below is a small town I know, on inspection of the map here</p>
-<p><a href="http://www.openstreetmap.org/node/52263804#map=15/52.9902/-6.9821">http://www.openstreetmap.org/node/52263804#map=15/52.9902/-6.9821</a> you can see there are a number of car parks showing up,</p>
+<p><a href="https://www.openstreetmap.org/node/52263804#map=15/52.9902/-6.9821">https://www.openstreetmap.org/node/52263804#map=15/52.9902/-6.9821</a> you can see there are a number of car parks showing up,</p>
 <p>more than 2 at least. When I query the same location, an actual larger location using this link</p>
 <p><a href="http://overpass-api.de/api/interpreter?data=%5Bout:json%5D;node(52.9780,-7.0110,53.0066,-6.9581)%5Bamenity=parking%5D;out;">http://overpass-api.de/api/interpreter?data=[out:json];node(52.9780,-7.0110,53.0066,-6.9581)[amenity=parking];out;</a></p>
 <p>only 2 results appear. Does anybody know why this is?</p>
@@ -128,7 +128,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>just using amenity=parking in the wizard creates a query that searches for nodes, ways and relations. The query would be similar to the one in <a href="https://help.openstreetmap.org/questions/39872/can-i-create-my-own-layer">https://help.openstreetmap.org/questions/39872/can-i-create-my-own-layer</a> Note that that query was asking for schools in a particular area and needed some additional formatting</p>
+<p>just using amenity=parking in the wizard creates a query that searches for nodes, ways and relations. The query would be similar to the one in <a href="/questions/39872/can-i-create-my-own-layer">https://help.openstreetmap.org/questions/39872/can-i-create-my-own-layer</a> Note that that query was asking for schools in a particular area and needed some additional formatting</p>
 <pre><code>[out:json][timeout:25];
 // gather results
 (

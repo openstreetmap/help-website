@@ -68,7 +68,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>you even have a third way ... a cycleway!</p>
 <p>Maybe that the mapquest API is rounding the coordinates so a bigger bbox is the result?</p>
-<p>Have you tried do that query at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> ?</p>
+<p>Have you tried do that query at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> ?</p>
 </div>
 <div id="comment-22120-info" class="comment-info">
 <span class="comment-age">(05 May '13, 18:32)</span> <span class="comment-user userinfo">stephan75</span>

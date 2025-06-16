@@ -158,7 +158,7 @@ Hope this is what you required.</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>hide (by clicking on the eye) or remove it (trashbin) from the layers (lagen in Dutch) panel. In my case that would be the "AGIV" layer</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2016-07-06_at_12.19.09.png" alt="screenshot of layers panel" /></p>
+<p><img src="/upfiles/Screen_Shot_2016-07-06_at_12.19.09.png" alt="screenshot of layers panel" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

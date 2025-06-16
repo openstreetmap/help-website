@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are a few tools to load osm data into a postgis db, the most commons being <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>, and <a href="http://wiki.openstreetmap.org/wiki/Imposm">imposm</a>. There are many different use cases; what tool and which options you use really depends on <em>what you are trying to achieve</em>.</p>
+<p>There are a few tools to load osm data into a postgis db, the most commons being <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>, and <a href="https://wiki.openstreetmap.org/wiki/Imposm">imposm</a>. There are many different use cases; what tool and which options you use really depends on <em>what you are trying to achieve</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

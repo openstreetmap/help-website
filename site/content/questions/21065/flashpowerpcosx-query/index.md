@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Having a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Editors">Editors</a> ... I would recommend to try the one called <a href="http://wiki.openstreetmap.org/wiki/ID">iD</a></p>
+<p>Having a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Editors">Editors</a> ... I would recommend to try the one called <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a></p>
 <p>But be aware: it is in early beta or alpha testing ... but it works!</p>
 </div>
 <div class="answer-controls post-controls">

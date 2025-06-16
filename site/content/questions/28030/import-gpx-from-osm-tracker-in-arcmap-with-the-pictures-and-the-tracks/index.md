@@ -116,7 +116,7 @@ osqa_accepted = false
 <div id="post-28106-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This issue has been discussed and explained before: <a href="https://help.openstreetmap.org/questions/1630/attaching-photos-to-nodes">https://help.openstreetmap.org/questions/1630/attaching-photos-to-nodes</a></p>
+<p>This issue has been discussed and explained before: <a href="/questions/1630/attaching-photos-to-nodes">https://help.openstreetmap.org/questions/1630/attaching-photos-to-nodes</a></p>
 </div>
 <div id="comment-28106-info" class="comment-info">
 <span class="comment-age">(14 Nov '13, 14:09)</span> <span class="comment-user userinfo">logrady</span>

@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, if the road exists on the ground, then it is worth mapping on OpenStreetMap.</p>
-<p>Though you should use appropriate <a href="http://wiki.openstreetmap.org/wiki/Key:access">access tags</a> to specify who is allowed to use the road. eg in your example, you could tag it as <code>access=no</code> (or <code>motor_vehicle=no</code>), plus <code>bus=yes</code>. Plus any other access tags as appropriate.</p>
+<p>Though you should use appropriate <a href="https://wiki.openstreetmap.org/wiki/Key:access">access tags</a> to specify who is allowed to use the road. eg in your example, you could tag it as <code>access=no</code> (or <code>motor_vehicle=no</code>), plus <code>bus=yes</code>. Plus any other access tags as appropriate.</p>
 <p>OSM data may be used for a variety of different purposes, so it is useful to include these roads. eg someone might want to use it for planning routes for buses, so would want these bus-only roads. Or even for people who are not allowed along it, it is useful for navigation. eg if someone gives directions that say "take the 3rd road on the left", they may be counting private roads.</p>
 </div>
 <div class="answer-controls post-controls">

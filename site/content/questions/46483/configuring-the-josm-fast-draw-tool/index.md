@@ -110,7 +110,7 @@ One Answer:
 <p>It doesn't seem to be present by default, but it should be possible to make the JOSM simplify less aggressive:</p>
 <p><a href="http://josm.openstreetmap.de/wiki/Help/Action/SimplifyWay">http://josm.openstreetmap.de/wiki/Help/Action/SimplifyWay</a></p>
 <p>I haven't used the tool; Does the step using the up/down keys not change the number of points? That's how I read this bit of documentation:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw#Simplification_detailed_description">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw#Simplification_detailed_description</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw#Simplification_detailed_description">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw#Simplification_detailed_description</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There seem to be at least two applications, <a href="http://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a> and <a href="http://www.navit-project.org/">Navit</a>. Also, take a look at this <a href="http://wiki.openstreetmap.org/wiki/Windows_Mobile#Using_OSM_data">list</a> in the wiki.</p>
+<p>There seem to be at least two applications, <a href="https://wiki.openstreetmap.org/wiki/Gosmore">Gosmore</a> and <a href="http://www.navit-project.org/">Navit</a>. Also, take a look at this <a href="https://wiki.openstreetmap.org/wiki/Windows_Mobile#Using_OSM_data">list</a> in the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a newly released solution to use OSM data based on professional routing software that you can download for free and use on Windows and WindowsMobile. It is named <a href="http://wiki.openstreetmap.org/wiki/MapFactor_Navigator_Free">mapFactor Navigator Free</a>.</p>
+<p>There is a newly released solution to use OSM data based on professional routing software that you can download for free and use on Windows and WindowsMobile. It is named <a href="https://wiki.openstreetmap.org/wiki/MapFactor_Navigator_Free">mapFactor Navigator Free</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,8 +212,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Although it is a Java midlet, have a look at <a href="http://wiki.openstreetmap.org/wiki/Gpsmid">GPSmid</a>. You can run this midlet on many Windows Mobile devices with the help of "phoneME"</p>
-<p>Have a look at <a href="http://help.openstreetmap.org/questions/600/how-can-i-make-gpsmid-work-on-every-mobile-regardless-preinstallation-of-java-j2me-application">this topic here</a> or <a href="http://wiki.openstreetmap.org/wiki/Windows_Mobile">here</a> at JavaME ...</p>
+<p>Although it is a Java midlet, have a look at <a href="https://wiki.openstreetmap.org/wiki/Gpsmid">GPSmid</a>. You can run this midlet on many Windows Mobile devices with the help of "phoneME"</p>
+<p>Have a look at <a href="/questions/600/how-can-i-make-gpsmid-work-on-every-mobile-regardless-preinstallation-of-java-j2me-application">this topic here</a> or <a href="https://wiki.openstreetmap.org/wiki/Windows_Mobile">here</a> at JavaME ...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

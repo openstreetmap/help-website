@@ -215,7 +215,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Hi Carlos, you’re asking allot besides OSM, a basic data scheme which enables you to build a map. If you want to go out and add accidents to a map based on OSM, please go ahead. Try to search in the hughe pile of maps based on OSM data collections, follow this link <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a> . Iii and mmd already pointed out some nice directions as well. To count the imported accidents you need some statistics and to import the insurance data onto your map a methode to translate it into a readable database. Did you consider to weight the accident rate by category as pedestrians and bicyclist ? And what about drunken drivers (colliding with obstacles, 1 motor vehicle only accidents) ?</p>
+<p>Hi Carlos, you’re asking allot besides OSM, a basic data scheme which enables you to build a map. If you want to go out and add accidents to a map based on OSM, please go ahead. Try to search in the hughe pile of maps based on OSM data collections, follow this link <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services</a> . Iii and mmd already pointed out some nice directions as well. To count the imported accidents you need some statistics and to import the insurance data onto your map a methode to translate it into a readable database. Did you consider to weight the accident rate by category as pedestrians and bicyclist ? And what about drunken drivers (colliding with obstacles, 1 motor vehicle only accidents) ?</p>
 </div>
 <div id="comment-35290-info" class="comment-info">
 <span class="comment-age">(29 Jul '14, 13:36)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -324,7 +324,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Maybe you can try to visualize your basic data about accidents via <a href="http://cartodb.com">cartoDB</a>.</p>
 <p>What I have seen so far, that webservice has really a lot of display features for all kinds of data on a map ... but no routing feature.</p>
-<p>Did you ever had a look at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">professional OSM service companies</a>? Maybe some of them can develop a solution.</p>
+<p>Did you ever had a look at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">professional OSM service companies</a>? Maybe some of them can develop a solution.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

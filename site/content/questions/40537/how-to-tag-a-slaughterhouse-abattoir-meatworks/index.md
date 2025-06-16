@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I asked the same question on IRC not too long ago, and the same answer came back (<em>man_made=works product=meat</em>). See <a href="http://www.openstreetmap.org/way/319790182">this example</a>.</p>
+<p>I asked the same question on IRC not too long ago, and the same answer came back (<em>man_made=works product=meat</em>). See <a href="https://www.openstreetmap.org/way/319790182">this example</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not aware of anyone running a proper tile server (with on-demand rendering) on the Windows platform. The basic rendering engine (Mapnik) is available on Windows however (see <a href="http://wiki.openstreetmap.org/wiki/Mapnik/Installation#For_Microsoft_Windows_.28Windows_2000_and_above.29">Instructions</a> on our Wiki), so you should be able to render tiles using the <a href="http://generate_tiles.py">generate_tiles.py</a> Python script.</p>
-<p>Be aware that in addition to installing Mapnik as per the above instructions, you will also need to install a PostGIS database and load data into it, as well as install the map style, icons, and a number of shape files, as per the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">general Mapnik instructions</a> on the Wiki.</p>
+<p>I'm not aware of anyone running a proper tile server (with on-demand rendering) on the Windows platform. The basic rendering engine (Mapnik) is available on Windows however (see <a href="https://wiki.openstreetmap.org/wiki/Mapnik/Installation#For_Microsoft_Windows_.28Windows_2000_and_above.29">Instructions</a> on our Wiki), so you should be able to render tiles using the <a href="http://generate_tiles.py">generate_tiles.py</a> Python script.</p>
+<p>Be aware that in addition to installing Mapnik as per the above instructions, you will also need to install a PostGIS database and load data into it, as well as install the map style, icons, and a number of shape files, as per the <a href="https://wiki.openstreetmap.org/wiki/Mapnik">general Mapnik instructions</a> on the Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -93,7 +93,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by scai 14 Jul '12, 15:15
+### The question has been closed for the following reason "Duplicate Question https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by scai 14 Jul '12, 15:15
 
 </div>
 

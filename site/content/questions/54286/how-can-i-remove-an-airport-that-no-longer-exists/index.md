@@ -159,7 +159,7 @@ One Answer:
 <div id="post-54294-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#map=15/38.9281/-77.5615">http://www.openstreetmap.org/#map=15/38.9281/-77.5615</a></p>
+<p><a href="https://www.openstreetmap.org/#map=15/38.9281/-77.5615">https://www.openstreetmap.org/#map=15/38.9281/-77.5615</a></p>
 </div>
 <div id="comment-54294-info" class="comment-info">
 <span class="comment-age">(26 Jan '17, 00:18)</span> <span class="comment-user userinfo">Scoochydc</span>

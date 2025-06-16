@@ -210,7 +210,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12617/manuela_butuc">@manuela_butuc</a> I've accepted this as an answer on your behalf (since you can't accept your own answers). Hope this is OK...</p>
+<p><a href="https://help.openstreetmap.org/users/12617/manuela_butuc">@manuela_butuc</a> I've accepted this as an answer on your behalf (since you can't accept your own answers). Hope this is OK...</p>
 </div>
 <div id="comment-51503-info" class="comment-info">
 <span class="comment-age">(17 Aug '16, 19:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -222,8 +222,8 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a> ♦ I read what that function does but I don't think it can help me with the roundabouts. Anyways, good to know it exists!</p>
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> Thanks for the code snippet, it actually helped a lot!</p>
+<p><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a> ♦ I read what that function does but I don't think it can help me with the roundabouts. Anyways, good to know it exists!</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> Thanks for the code snippet, it actually helped a lot!</p>
 </div>
 <div id="comment-51513-info" class="comment-info">
 <span class="comment-age">(18 Aug '16, 08:59)</span> <span class="comment-user userinfo">manuela_butuc</span>

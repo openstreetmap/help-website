@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's a <a href="http://wiki.openstreetmap.org/wiki/Key:ford">ford</a>.</p>
+<p>It's a <a href="https://wiki.openstreetmap.org/wiki/Key:ford">ford</a>.</p>
 <p>I like to make a short segment between the riverbanks and mark that as a ford, with that segment being connected to the river. I do this even for a smaller river/stream where the riverbank hasn't been traced, basing the ends of the segment on the imagery.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -131,7 +131,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>AngocA, a lot of these kind of questions can be found at the Wiki pages, just like the ford, <a href="http://wiki.openstreetmap.org/wiki/Ford">http://wiki.openstreetmap.org/wiki/Ford</a></p>
+<p>AngocA, a lot of these kind of questions can be found at the Wiki pages, just like the ford, <a href="https://wiki.openstreetmap.org/wiki/Ford">https://wiki.openstreetmap.org/wiki/Ford</a></p>
 </div>
 <div id="comment-49282-info" class="comment-info">
 <span class="comment-age">(18 Apr '16, 09:36)</span> <span class="comment-user userinfo">Hendrikklaas</span>

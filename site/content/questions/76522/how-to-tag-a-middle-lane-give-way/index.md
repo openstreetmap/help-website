@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>In a situation like this how can I tag that middle lane "Give way"? I've already tagged the way with <code>lanes:backward=2</code> e <code>turn:lanes:backward=left|</code>.</p>
 <center>
-<img src="https://help.openstreetmap.org/upfiles/Senzanome_xXiaIaH.png" style="width:75.0%" />
+<img src="/upfiles/Senzanome_xXiaIaH.png" style="width:75.0%" />
 </center>
 </div>
 <div id="question-tags" class="tags-container tags">

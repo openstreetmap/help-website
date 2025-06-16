@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/">Nuestro</a> exportación parece que sólo exportar el estilo/formato estándar, sí. --&gt; Ver: <a href="http://open.mapquest.com/">http://open.mapquest.com/</a> - pero no puedo encontrar una opción de exportación.</p>
+<p><a href="https://www.openstreetmap.org/">Nuestro</a> exportación parece que sólo exportar el estilo/formato estándar, sí. --&gt; Ver: <a href="http://open.mapquest.com/">http://open.mapquest.com/</a> - pero no puedo encontrar una opción de exportación.</p>
 <ul>
 <li>Tratar de hacer una captura de pantalla (open.mapquest.com)</li>
 <li>utilizar el funciton de impresión (open.mapquest.com).</li>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Usa <a href="http://wiki.openstreetmap.org/wiki/Bigmap">BigMap</a> con este enlace para recibir una imagen del estilo mapquest: <a href="http://openstreetmap.gryph.de/bigmap.cgi?xmin=26&amp;xmax=37&amp;ymin=16&amp;ymax=33&amp;zoom=6&amp;scale=64&amp;baseurl=http://otile2.mqcdn.com/tiles/1.0.0/sat/!z/!x/!y.png">satélites</a> o <a href="http://openstreetmap.gryph.de/bigmap.cgi?xmin=26&amp;xmax=37&amp;ymin=16&amp;ymax=33&amp;zoom=6&amp;scale=64&amp;baseurl=http://otile2.mqcdn.com/tiles/1.0.0/map/!z/!x/!y.png">mapa</a></p>
+<p>Usa <a href="https://wiki.openstreetmap.org/wiki/Bigmap">BigMap</a> con este enlace para recibir una imagen del estilo mapquest: <a href="http://openstreetmap.gryph.de/bigmap.cgi?xmin=26&amp;xmax=37&amp;ymin=16&amp;ymax=33&amp;zoom=6&amp;scale=64&amp;baseurl=http://otile2.mqcdn.com/tiles/1.0.0/sat/!z/!x/!y.png">satélites</a> o <a href="http://openstreetmap.gryph.de/bigmap.cgi?xmin=26&amp;xmax=37&amp;ymin=16&amp;ymax=33&amp;zoom=6&amp;scale=64&amp;baseurl=http://otile2.mqcdn.com/tiles/1.0.0/map/!z/!x/!y.png">mapa</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

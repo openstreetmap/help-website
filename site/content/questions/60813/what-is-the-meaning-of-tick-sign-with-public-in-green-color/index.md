@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/ssdfdf.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/ssdfdf.JPG" alt="alt text" /></p>
 <p>What is the meaning of tick sign with public in green color?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

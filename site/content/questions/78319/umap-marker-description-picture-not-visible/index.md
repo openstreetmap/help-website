@@ -48,8 +48,8 @@ osqa_accepted = false
 <p>As type for the marker popup description I tried both "pop up (big)" and "sitebar". In the example I refer to a wikipedia picture just to ensure open access.</p>
 <p>Can somebody help?</p>
 <p>Error and code snippet (sorry for partial german):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/MissingPic.PNG" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/MissingPicCode.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/MissingPic.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/MissingPicCode.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-marker" rel="tag" title="see questions tagged &#39;marker&#39;">marker</span> <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span> <span class="post-tag tag-link-images" rel="tag" title="see questions tagged &#39;images&#39;">images</span> <span class="post-tag tag-link-description" rel="tag" title="see questions tagged &#39;description&#39;">description</span>

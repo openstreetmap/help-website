@@ -170,9 +170,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It looks like it's inside the crosby code (the pbf reader) at the point where it falls over. Perhaps it's incorrect data in planet-latest.osm.pbf (i.e. a download error)? You couldn't double-check the MD5, could you? There's an MD5 of a few-days-old planet <a href="http://planet.openstreetmap.org/">here</a>, but of course that may not be the one that you're downloading.</p>
-<p>Another possibility, perhaps, may be Java running out of temporary storage, like in <a href="http://help.openstreetmap.org/questions/14085/osmosis-planetosm-to-postgresql-disk-space-caching">this question</a>.<br />
+<p>Another possibility, perhaps, may be Java running out of temporary storage, like in <a href="/questions/14085/osmosis-planetosm-to-postgresql-disk-space-caching">this question</a>.<br />
 </p>
-<p>Finally, it's not trying to write any files locally (to "Program Files (x86)") is it? Because if so, and you're on Windows Vista or 7, UAC may try and stop you. I seem to remember that osmosis ships with a batch file on Windows these days - you may want to have a look at that to see if you want any of the settings from it. Also see the "Win 7 64 bit" note at the bottom of <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Windows_notes">this page</a>.</p>
+<p>Finally, it's not trying to write any files locally (to "Program Files (x86)") is it? Because if so, and you're on Windows Vista or 7, UAC may try and stop you. I seem to remember that osmosis ships with a batch file on Windows these days - you may want to have a look at that to see if you want any of the settings from it. Also see the "Win 7 64 bit" note at the bottom of <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Windows_notes">this page</a>.</p>
 <p>(all of this is, unfortunately, guesswork; I haven't run osmosis for ages and on Windows for even longer).</p>
 </div>
 <div class="answer-controls post-controls">

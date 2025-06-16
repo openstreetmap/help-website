@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to bulk shift my work?"
-description = '''I first started tracing this South Korean Island using Yahoo. http://www.openstreetmap.org/?lat=37.7935&amp;amp;lon=126.2644&amp;amp;zoom=13&amp;amp;layers=M I&#x27;ve since realised that Bing imagery is available for this island, and would like to use that, but it&#x27;s offset to Yahoo. I suspect the Bing imagery is ac...'''
+description = '''I first started tracing this South Korean Island using Yahoo. https://www.openstreetmap.org/?lat=37.7935&amp;amp;lon=126.2644&amp;amp;zoom=13&amp;amp;layers=M I&#x27;ve since realised that Bing imagery is available for this island, and would like to use that, but it&#x27;s offset to Yahoo. I suspect the Bing imagery is ac...'''
 date = "2011-02-04T02:47:00Z"
 lastmod = "2011-02-04T11:35:00Z"
 weight = 2715
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I first started tracing this South Korean Island using Yahoo.</p>
-<p><a href="http://www.openstreetmap.org/?lat=37.7935&amp;lon=126.2644&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=37.7935&amp;lon=126.2644&amp;zoom=13&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=37.7935&amp;lon=126.2644&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=37.7935&amp;lon=126.2644&amp;zoom=13&amp;layers=M</a></p>
 <p>I've since realised that Bing imagery is available for this island, and would like to use that, but it's offset to Yahoo. I suspect the Bing imagery is actually the correct one, but I can't be sure.</p>
 <p>In any case, without any external point of truth, I would like to shift my existing work to match the Bing imagery, and keep tracing from there, because the Bing imagery is so much better to trace from.</p>
 </div>

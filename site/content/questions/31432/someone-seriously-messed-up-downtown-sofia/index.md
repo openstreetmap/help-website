@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/changeset/21037479">Fixed</a>. I've also reverted the related edits - they're a series of doodles rather than necessarily just <a href="https://github.com/openstreetmap/iD/issues/542">iD bug 542</a> this time.</p>
+<p><a href="https://www.openstreetmap.org/changeset/21037479">Fixed</a>. I've also reverted the related edits - they're a series of doodles rather than necessarily just <a href="https://github.com/openstreetmap/iD/issues/542">iD bug 542</a> this time.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

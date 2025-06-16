@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>umap is sister project using OSM but is not managed by OSM devs. For all umap questions, see here the list of contacts : <a href="http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">http://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a></p>
+<p>umap is sister project using OSM but is not managed by OSM devs. For all umap questions, see here the list of contacts : <a href="https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help">https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

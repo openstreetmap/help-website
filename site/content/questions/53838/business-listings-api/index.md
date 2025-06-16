@@ -147,10 +147,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are creating data that is badly formatted and not following the OSM Import guidelines.</p>
-<p>For example, at <a href="http://www.openstreetmap.org/node/3960297291/history,">http://www.openstreetmap.org/node/3960297291/history,</a> you have imported data with field names like 'Address Line 1' and 'Main Phone'. These are not used in OSM and no program will recognise them. OSM has its own field names (tag keys), you can't just choose your own and expect them to work.</p>
+<p>For example, at <a href="https://www.openstreetmap.org/node/3960297291/history,">https://www.openstreetmap.org/node/3960297291/history,</a> you have imported data with field names like 'Address Line 1' and 'Main Phone'. These are not used in OSM and no program will recognise them. OSM has its own field names (tag keys), you can't just choose your own and expect them to work.</p>
 <p>The import guidelines are at <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> .</p>
 <p>I'm afraid you'll need to learn a lot more about OSM if you want to add data like this, or alternatively employ someone who does understand it already.</p>
-<p>(For reference: block at <a href="http://www.openstreetmap.org/user_blocks/879,">http://www.openstreetmap.org/user_blocks/879,</a> edits at <a href="http://www.openstreetmap.org/user/DAC%20LLM/history#map=3/47.52/-100.28">http://www.openstreetmap.org/user/DAC%20LLM/history#map=3/47.52/-100.28</a> .)</p>
+<p>(For reference: block at <a href="https://www.openstreetmap.org/user_blocks/879,">https://www.openstreetmap.org/user_blocks/879,</a> edits at <a href="https://www.openstreetmap.org/user/DAC%20LLM/history#map=3/47.52/-100.28">https://www.openstreetmap.org/user/DAC%20LLM/history#map=3/47.52/-100.28</a> .)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,7 +110,7 @@ One Answer:
 <p>You can use <a href="http://sites.google.com/site/cypherman1/">MapSetToolKit</a> to fix this. Just download it, unzip it, then run it.</p>
 <p>In the middle on the right hand side, it has a section for "Mapset installed", which should list all of the maps you have in MapSource. Underneath that, there is a button for "check registry". If you click that, it should tell you if there are problems with any of the mapsets.</p>
 <p>If there are problems with a mapset (eg the Openstreetmap Iceland maps), you can select that one, then use the "Uninstall" option to remove it. Then you should be able to open MapSource with your City Navigator maps as usual.</p>
-<p>If you still want to use the OpenStreetMap maps in MapSource, you could try downloading and installing them again. I'm not sure where you downloaded the Iceland maps from, but you could try some different OpenStreetMap based Garmin maps, as they might work better in MapSource. Try something from this list: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin</a></p>
+<p>If you still want to use the OpenStreetMap maps in MapSource, you could try downloading and installing them again. I'm not sure where you downloaded the Iceland maps from, but you could try some different OpenStreetMap based Garmin maps, as they might work better in MapSource. Try something from this list: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

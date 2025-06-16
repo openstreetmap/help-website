@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes. You would need gpsd to translate between the gps and the application.</p>
-<p>To get live gps data in JOSM you have to install <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/LiveGPS">LiveGPS</a> plugin.</p>
+<p>To get live gps data in JOSM you have to install <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/LiveGPS">LiveGPS</a> plugin.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

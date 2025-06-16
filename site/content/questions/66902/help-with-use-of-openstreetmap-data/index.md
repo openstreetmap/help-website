@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, you can! Great that you want to use OSM data! See <a href="https://help.openstreetmap.org/questions/66855/open-street-map-how-to-get-city-based-on-street">https://help.openstreetmap.org/questions/66855/open-street-map-how-to-get-city-based-on-street</a></p>
+<p>Yes, you can! Great that you want to use OSM data! See <a href="/questions/66855/open-street-map-how-to-get-city-based-on-street">https://help.openstreetmap.org/questions/66855/open-street-map-how-to-get-city-based-on-street</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

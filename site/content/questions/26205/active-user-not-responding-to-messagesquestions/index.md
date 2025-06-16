@@ -147,7 +147,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You already <em>do</em> receive an email whenever someone sends you a private message. The user seems to ignore you deliberately, or the mail gets blocked by his spam filter.</p>
-<p>If you try to contact a user doing vandalism but he doesn't respond, then you should talk to your local community and eventually contact the <a href="http://wiki.openstreetmap.org/wiki/DWG">Data Working Group</a>.</p>
+<p>If you try to contact a user doing vandalism but he doesn't respond, then you should talk to your local community and eventually contact the <a href="https://wiki.openstreetmap.org/wiki/DWG">Data Working Group</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

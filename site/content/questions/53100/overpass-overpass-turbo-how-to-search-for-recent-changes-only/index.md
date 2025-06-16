@@ -172,7 +172,7 @@ One Answer:
 <div id="post-53127-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2850/joostenmies">@joost</a>: Hmm, as far as I know, the operations of the two operations are actually quite different: <code>changed</code> is basically just a beefed-up version of the <code>newer</code> statement (but which is still a bit slower than that in many use cases). Whereas <code>[diff:…]</code> (and <code>[adiff:…]</code>) actually performs the following query twice and outputs only the difference between the two results (and also uses a different output format).</p>
+<p><a href="https://help.openstreetmap.org/users/2850/joostenmies">@joost</a>: Hmm, as far as I know, the operations of the two operations are actually quite different: <code>changed</code> is basically just a beefed-up version of the <code>newer</code> statement (but which is still a bit slower than that in many use cases). Whereas <code>[diff:…]</code> (and <code>[adiff:…]</code>) actually performs the following query twice and outputs only the difference between the two results (and also uses a different output format).</p>
 </div>
 <div id="comment-53127-info" class="comment-info">
 <span class="comment-age">(26 Nov '16, 14:21)</span> <span class="comment-user userinfo">tyr_asd</span>

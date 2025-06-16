@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It's just amenity=bank. The wiki has some suggestions for other details to add:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbank">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbank</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbank">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbank</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

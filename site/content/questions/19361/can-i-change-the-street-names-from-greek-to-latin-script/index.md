@@ -113,12 +113,12 @@ One Answer:
 <p>I did not find/know of a map which just replaces the script (transliterations; here specifically romanization of Greek). Following some info about the closely related multilingual or maps with a specific language. It may still help.</p>
 <p>Note: I left this answer open for editing, in case someone likes to continue instead of posting a new answer.</p>
 <ul>
-<li>our standard style (which uses the main language and script from the country/place shown on the map): <a href="http://www.openstreetmap.org/?lat=37.98167&amp;lon=23.73001&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=37.98167&amp;lon=23.73001&amp;zoom=15&amp;layers=M</a></li>
+<li>our standard style (which uses the main language and script from the country/place shown on the map): <a href="https://www.openstreetmap.org/?lat=37.98167&amp;lon=23.73001&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=37.98167&amp;lon=23.73001&amp;zoom=15&amp;layers=M</a></li>
 <li>a map in English (but apparently only where our volunteers have also entered an English name): <a href="https://toolserver.org/~osm/locale/en.html?lat=37.98167&amp;lon=23.73001&amp;zoom=15&amp;layers=BT">https://toolserver.org/~osm/locale/en.html?lat=37.98167&amp;lon=23.73001&amp;zoom=15&amp;layers=BT</a></li>
 </ul>
 <p>More info: <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a> (e.g. also bilingual maps are already realized).</p>
-<p>Also you can render your own map style - see <a href="https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a></p>
-<p>You want to make a guidebook - maybe a vector graphics map better suits your need (if you want to print in high resolution). See <a href="https://help.openstreetmap.org/questions/13605/how-can-i-download-a-map-in-vectors">https://help.openstreetmap.org/questions/13605/how-can-i-download-a-map-in-vectors</a> and <a href="https://help.openstreetmap.org/questions/8238/tool-for-creating-vector-tiles">https://help.openstreetmap.org/questions/8238/tool-for-creating-vector-tiles</a></p>
+<p>Also you can render your own map style - see <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a></p>
+<p>You want to make a guidebook - maybe a vector graphics map better suits your need (if you want to print in high resolution). See <a href="/questions/13605/how-can-i-download-a-map-in-vectors">https://help.openstreetmap.org/questions/13605/how-can-i-download-a-map-in-vectors</a> and <a href="/questions/8238/tool-for-creating-vector-tiles">https://help.openstreetmap.org/questions/8238/tool-for-creating-vector-tiles</a></p>
 <p>Please always obey the licensing and tile usage restrictions.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -158,7 +158,7 @@ This answer is marked "community wiki".
 </div>
 <div class="comment-text">
 <p>Just to make this clear: you should add a "int_name:[language code]" tag to the streets rather than replace the existing "name" tags with ones that use a latin script.</p>
-<p>See also <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names#Greece">http://wiki.openstreetmap.org/wiki/Multilingual_names#Greece</a></p>
+<p>See also <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece">https://wiki.openstreetmap.org/wiki/Multilingual_names#Greece</a></p>
 </div>
 <div id="comment-19389-info" class="comment-info">
 <span class="comment-age">(28 Jan '13, 09:34)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

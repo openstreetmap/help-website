@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Updating N America data to planet data"
-description = '''I read the installation guide on http://wiki.openstreetmap.org/wiki/Nominatim/Installation but I&#x27;m still a bit hazy in my understanding of updates. I currently have North America data (from http://download.geofabrik.de/) successfully installed and running on my machine. I&#x27;m trying to update my data ...'''
+description = '''I read the installation guide on https://wiki.openstreetmap.org/wiki/Nominatim/Installation but I&#x27;m still a bit hazy in my understanding of updates. I currently have North America data (from http://download.geofabrik.de/) successfully installed and running on my machine. I&#x27;m trying to update my data ...'''
 date = "2014-02-06T01:46:00Z"
 lastmod = "2014-02-06T08:47:00Z"
 weight = 30492
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I read the installation guide on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> but I'm still a bit hazy in my understanding of updates. I currently have North America data (from <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a>) successfully installed and running on my machine. I'm trying to update my data to the full planet data - I just downloaded the most recent .osm.pbf planet data from <a href="http://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/">http://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/</a></p>
+<p>I read the installation guide on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> but I'm still a bit hazy in my understanding of updates. I currently have North America data (from <a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a>) successfully installed and running on my machine. I'm trying to update my data to the full planet data - I just downloaded the most recent .osm.pbf planet data from <a href="http://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/">http://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/</a></p>
 <p>Currently, the only thing I know how to do is wiping the entire DB clean and importing again from scratch, but figured that would be unnecessary if I could simply update on top of what I already have.</p>
 <p>What do I have to do to update my current map data? Would my service be unavailable during the update? Thanks!</p>
 </div>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>(See also <a href="https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim">Import more OSM files into Nominatim.)</a></p>
+<p>(See also <a href="/questions/15505/import-more-osm-files-in-to-nominatim">Import more OSM files into Nominatim.)</a></p>
 <p>You could theoretically produce a data file that contains the whole world without N America and load that, or load continent after continent. However this is likely to be <em>much</em> slower than simply starting from scratch with a full planet file.</p>
 <p>If you choose to start from scratch then your service will be unavailable while you import, but if you choose to add data piecemeal then your service will likely be very slow during the update period.</p>
 <p>If you have the luxury of a second server with enough fast disk capacity to do a full OSM import, and that server has the same software versions as your production machine, then you could run a full import on that server and then, with a very short interruption in availability, simply copy over the PostgreSQL database directory to your production machine.</p>

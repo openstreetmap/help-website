@@ -79,7 +79,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>It sounded from the original question like you're trying to install data from within NavFree itself, which is probably going nowhere near OSM's servers. Perhaps you could clarify what exactly you are doing?</p>
-<p>If you just want a country extract of OSM data there there are details on the <a href="http://wiki.openstreetmap.org/wiki/Planet#Country_and_area_extracts">planet</a> wiki page - personally I use the PBF-format "great_britain" one from <a href="http://download.geofabrik.de/openstreetmap/europe/">Geofabrik</a>, but depending on what you want and where you are another format may be more appropriate. What this won't do however is get the data to your phone in a format that Navfree can understand** - if you need help with that you'll need to ask elsewhere.</p>
+<p>If you just want a country extract of OSM data there there are details on the <a href="https://wiki.openstreetmap.org/wiki/Planet#Country_and_area_extracts">planet</a> wiki page - personally I use the PBF-format "great_britain" one from <a href="http://download.geofabrik.de/openstreetmap/europe/">Geofabrik</a>, but depending on what you want and where you are another format may be more appropriate. What this won't do however is get the data to your phone in a format that Navfree can understand** - if you need help with that you'll need to ask elsewhere.</p>
 <p>** Having never used Navfree I don't know whether it is even possible to update the data that Navfree uses.</p>
 </div>
 <div id="comment-17088-info" class="comment-info">
@@ -146,7 +146,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Navfree">Navfree</a> is not part of the OpenStreetMap project (although it does use OpenStreetMap data). It's created by a company called <a href="http://www.navmii.com/">Navmii</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Navfree">Navfree</a> is not part of the OpenStreetMap project (although it does use OpenStreetMap data). It's created by a company called <a href="http://www.navmii.com/">Navmii</a>.</p>
 <p>If you having problems with a commercial product you'll need to contact (in the UK in the first instance) the shop that you bought it from, or (in countries without equivalent consumer protection legislation) the company concerned.</p>
 <p>You may also be able to obtain assistance from other Navmii users in their <a href="https://getsatisfaction.com/navmii/questions/popular">forum</a>.</p>
 </div>

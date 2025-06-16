@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Getting Error While Installing Nominatim &quot;configure.ac:20: required file `config.h.in&#x27; not found&quot;"
-description = '''Hi, I followed the instruction on the URL &quot;http://wiki.openstreetmap.org/wiki/Nominatim/Installation&quot; but while running ./autogen.sh I am getting the below mentioned error : autoreconf2.50: running: /usr/bin/autoconf --force autoreconf2.50: running: /usr/bin/autoheader --force autoreconf2.50: runnin...'''
+description = '''Hi, I followed the instruction on the URL &quot;https://wiki.openstreetmap.org/wiki/Nominatim/Installation&quot; but while running ./autogen.sh I am getting the below mentioned error : autoreconf2.50: running: /usr/bin/autoconf --force autoreconf2.50: running: /usr/bin/autoheader --force autoreconf2.50: runnin...'''
 date = "2012-09-18T16:36:00Z"
 lastmod = "2012-09-24T09:38:00Z"
 weight = 16223
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I followed the instruction on the URL "http://wiki.openstreetmap.org/wiki/Nominatim/Installation" but while running ./autogen.sh I am getting the below mentioned error :</p>
+<p>I followed the instruction on the URL "https://wiki.openstreetmap.org/wiki/Nominatim/Installation" but while running ./autogen.sh I am getting the below mentioned error :</p>
 <pre><code>autoreconf2.50: running: /usr/bin/autoconf --force
 autoreconf2.50: running: /usr/bin/autoheader --force
 autoreconf2.50: running: automake --add-missing --copy --force-missing

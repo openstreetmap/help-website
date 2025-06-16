@@ -107,7 +107,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>These free programs work for me <a href="http://sourceforge.net/projects/viking/">http://sourceforge.net/projects/viking/</a><br />
 <a href="http://activityworkshop.net/software/gpsprune/">http://activityworkshop.net/software/gpsprune/</a><br />
-Prune can export a png image that you can print. Viking as a print function but the zoom as fairly large steps, so getting the right size of print is not easy. edit :- another FREE option is Garmin Basecamp software but to get map display you will either need to plug a garmin device with a map into the USB or use a memory stick into which you have loaded one or even several garmin img files.http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download try for one of those. it also as a print function.</p>
+Prune can export a png image that you can print. Viking as a print function but the zoom as fairly large steps, so getting the right size of print is not easy. edit :- another FREE option is Garmin Basecamp software but to get map display you will either need to plug a garmin device with a map into the USB or use a memory stick into which you have loaded one or even several garmin img files.https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download try for one of those. it also as a print function.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ Prune can export a png image that you can print. Viking as a print function but 
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can find some more services listed in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a> ...</p>
+<p>Maybe you can find some more services listed in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a> ...</p>
 <p>Tell us when a service there is out of order for a longer time, or when a service is missing there.</p>
 </div>
 <div class="answer-controls post-controls">

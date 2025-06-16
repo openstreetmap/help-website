@@ -115,7 +115,7 @@ Richmond, 3121, Victoria (Australia)</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM postcode data is very incomplete across the world. If post codes are integral to your application you will likely have to buy them elsewhere. Other administrative data is also not guaranteed to be complete but is at least more likely to be there than postcode data. Do a few spot checks with the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">online Nominatim service</a> to see if the data quality looks good enough for you in the regions you are interested in. If yes, download and install Nominatim, and then use suitable SQL queries against the Nominatim database to extract the areas you are interested in.</p>
+<p>OSM postcode data is very incomplete across the world. If post codes are integral to your application you will likely have to buy them elsewhere. Other administrative data is also not guaranteed to be complete but is at least more likely to be there than postcode data. Do a few spot checks with the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">online Nominatim service</a> to see if the data quality looks good enough for you in the regions you are interested in. If yes, download and install Nominatim, and then use suitable SQL queries against the Nominatim database to extract the areas you are interested in.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

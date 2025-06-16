@@ -127,7 +127,7 @@ out body;
 &gt;;
 out skel;</code></pre>
 <p>This query <a href="http://overpass-turbo.eu/s/cx">returns</a> all bank and restaurant within a distance of 150 meter around any node with the name <em>Leipzig</em>.</p>
-<p>Or <a href="http://overpass-turbo.eu/s/cw">another query</a> using a <a href="http://wiki.openstreetmap.org/wiki/Bounding_Box">bounding box</a> instead of an object:</p>
+<p>Or <a href="http://overpass-turbo.eu/s/cw">another query</a> using a <a href="https://wiki.openstreetmap.org/wiki/Bounding_Box">bounding box</a> instead of an object:</p>
 <pre><code>[out:json]
 ;
 (

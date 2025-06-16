@@ -206,7 +206,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I'm sorry, my intention wasn't to blame anybody. I just thought that <a href="http://help.openstreetmap.org/users/9965/leonid">@leonid</a> didn't had an idea on what he is looking in detail (as he didn't provided further infos about his usecase).</p>
+<p>I'm sorry, my intention wasn't to blame anybody. I just thought that <a href="https://help.openstreetmap.org/users/9965/leonid">@leonid</a> didn't had an idea on what he is looking in detail (as he didn't provided further infos about his usecase).</p>
 </div>
 <div id="comment-38460-info" class="comment-info">
 <span class="comment-age">(11 Nov '14, 18:22)</span> <span class="comment-user userinfo">iii</span>

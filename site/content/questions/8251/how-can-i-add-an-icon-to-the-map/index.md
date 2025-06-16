@@ -112,8 +112,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You cannot add new icons to the map that we display at <a href="http://www.openstreetmap.org/;">http://www.openstreetmap.org/;</a> the best you can do is suggest, via our bug tracker at <a href="http://trac.openstreetmap.org">trac.openstreetmap.org</a>, an icon that you believe should be added for a certain category of objects. It is then the cartographers' decision whether or not they follow your suggestion.</p>
-<p>But you can make your own maps with any icons you like! See the question <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my web site</a> to find out how.</p>
+<p>You cannot add new icons to the map that we display at <a href="https://www.openstreetmap.org/;">https://www.openstreetmap.org/;</a> the best you can do is suggest, via our bug tracker at <a href="http://trac.openstreetmap.org">trac.openstreetmap.org</a>, an icon that you believe should be added for a certain category of objects. It is then the cartographers' decision whether or not they follow your suggestion.</p>
+<p>But you can make your own maps with any icons you like! See the question <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my web site</a> to find out how.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

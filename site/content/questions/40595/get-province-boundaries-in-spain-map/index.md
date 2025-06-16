@@ -145,7 +145,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You can look through the <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">list of OSM-based services</a>. Maybe you can find a map that fits your needs.</p>
+<p>You can look through the <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services">list of OSM-based services</a>. Maybe you can find a map that fits your needs.</p>
 </div>
 <div id="comment-40649-info" class="comment-info">
 <span class="comment-age">(27 Jan '15, 16:15)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -55,7 +55,7 @@ osqa_accepted = false
 <p>relevant documentation:</p>
 <ol>
 <li><a href="https://wiki.openstreetmap.org/wiki/Named_spots_instead_of_street_names">https://wiki.openstreetmap.org/wiki/Named_spots_instead_of_street_names</a></li>
-<li><a href="https://help.openstreetmap.org/questions/50982/how-to-name-intersections">https://help.openstreetmap.org/questions/50982/how-to-name-intersections</a></li>
+<li><a href="/questions/50982/how-to-name-intersections">https://help.openstreetmap.org/questions/50982/how-to-name-intersections</a></li>
 <li><a href="https://wiki.openstreetmap.org/wiki/Junctions">https://wiki.openstreetmap.org/wiki/Junctions</a></li>
 </ol>
 </div>

@@ -78,7 +78,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Have a look at relation=1369789 for an example. My guess that in this case up to 50% of the nodes are not required i.e. redundant.</p>
 <p>If a way is straight and has three nodes then the middle node is redundant/excessive. It contributes nothing to the DB but does cost time to download each time it is viewed,etc.</p>
-<p>I have no idea how many nodes could be eliminated but in the light of what is happening, see: <a href="http://www.openstreetmap.org/user/!i!/diary/15046">http://www.openstreetmap.org/user/!i!/diary/15046</a> the reduction of redundant nodes should be considered with some priority.</p>
+<p>I have no idea how many nodes could be eliminated but in the light of what is happening, see: <a href="https://www.openstreetmap.org/user/!i!/diary/15046">https://www.openstreetmap.org/user/!i!/diary/15046</a> the reduction of redundant nodes should be considered with some priority.</p>
 </div>
 <div id="comment-8350-info" class="comment-info">
 <span class="comment-age">(08 Oct '11, 15:51)</span> <span class="comment-user userinfo">dcp</span>

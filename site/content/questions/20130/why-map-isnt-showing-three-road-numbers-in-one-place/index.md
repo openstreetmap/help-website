@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi! I wonder why OpenStreetMap doesn't show road numbers in one specific place, despite "ref" tag?? The problem is that near Poznań is a motorway stretch with three numbers (the motorway and two express roads) - A2, S5 and S11. The motorway stretch with this combination has ref tag set to "A2;S5;S11" but OSM isn't showing it. What's going on?</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.3617&amp;lon=16.9189&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=52.3617&amp;lon=16.9189&amp;zoom=12&amp;layers=M</a> (zoom in and compare with stretches with ref set to A2;S5 and A2;S11 .</p>
+<p><a href="https://www.openstreetmap.org/?lat=52.3617&amp;lon=16.9189&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=52.3617&amp;lon=16.9189&amp;zoom=12&amp;layers=M</a> (zoom in and compare with stretches with ref set to A2;S5 and A2;S11 .</p>
 <p>Please help me to find out what's the reason and help fix it!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>Please specify the OSM id of the specific object you mean.</p>
 <p>Basically, if the road is tagged correctly all is well. If some renderer is not rendering some specific tag thats a problem of the renderer. OSM contributors should not attempt to tag for the renderer, but tag so that the tags reflect the real world.</p>
-<p>To see what a different renderer looks like in your area have a look at the MapQuest Open tiles: <a href="http://www.openstreetmap.org/?lat=52.3405&amp;lon=16.9565&amp;zoom=13&amp;layers=Q">http://www.openstreetmap.org/?lat=52.3405&amp;lon=16.9565&amp;zoom=13&amp;layers=Q</a> . Maybe they look nicer to you.</p>
+<p>To see what a different renderer looks like in your area have a look at the MapQuest Open tiles: <a href="https://www.openstreetmap.org/?lat=52.3405&amp;lon=16.9565&amp;zoom=13&amp;layers=Q">https://www.openstreetmap.org/?lat=52.3405&amp;lon=16.9565&amp;zoom=13&amp;layers=Q</a> . Maybe they look nicer to you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

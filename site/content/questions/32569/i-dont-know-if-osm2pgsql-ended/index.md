@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I don't know if osm2pgsql ended, because it stopped at this point with no error and RAM memory size decreased a lot but I'm not sure if the process finished:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm2pgsql_ended.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm2pgsql_ended.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-windows" rel="tag" title="see questions tagged &#39;windows&#39;">windows</span> <span class="post-tag tag-link-osm2pgsql" rel="tag" title="see questions tagged &#39;osm2pgsql&#39;">osm2pgsql</span>

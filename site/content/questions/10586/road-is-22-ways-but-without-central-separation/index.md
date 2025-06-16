@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Possibility 2 is the right one: The best way is to draw only one highway if there isn't a central separation. And you're right, the tag lane is the good one for indicating the number of lanes. See also the doc about <a href="http://wiki.openstreetmap.org/wiki/Tag:highway=trunk">trunk</a>.</p>
+<p>Possibility 2 is the right one: The best way is to draw only one highway if there isn't a central separation. And you're right, the tag lane is the good one for indicating the number of lanes. See also the doc about <a href="https://wiki.openstreetmap.org/wiki/Tag:highway=trunk">trunk</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>It is also depending on country specifications, e.g. here:</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging">http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging">https://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging</a></p>
 <p>In Germany, outside of built-up-areas, a continuous double line counts as "physical separation", which has effects on the allowed maxspeed.</p>
 <p>In most cases, possibility 2, as Nicolas wrote, is the way to go. But don't forget to add turn restrictions at intersections (four times no left at every four-way intersection, where the line is not broken)</p>
 </div>

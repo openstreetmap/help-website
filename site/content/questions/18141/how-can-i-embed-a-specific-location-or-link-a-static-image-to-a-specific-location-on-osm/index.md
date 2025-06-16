@@ -107,7 +107,7 @@ osqa_accepted = false
 <p>Browse to the park on the openstreetmap website. Then click on the export tab at the top.</p>
 <p>Select either "Embeddable HTML" for an embedded map or select "Map Image (shows standard layer)" for a static image.</p>
 <p>You can make a static image clickable by putting code like the following in your webpage.</p>
-<pre><code>&lt;a href=&quot;http://www.openstreetmap.org/?lat=52.08825&amp;lon=5.14009&amp;zoom=17&amp;layers=M&quot;&gt;
+<pre><code>&lt;a href=&quot;https://www.openstreetmap.org/?lat=52.08825&amp;lon=5.14009&amp;zoom=17&amp;layers=M&quot;&gt;
   &lt;img src=&quot;Wilhelminapark.png&quot; /&gt;
 &lt;/a&gt;</code></pre>
 <p>You can get the value for "href" by clicking on the "permalink" at the bottom right of the map when looking at the park on the openstreetmap website.</p>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a> to find some solutions.</p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">Static_map_images</a> to find some solutions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

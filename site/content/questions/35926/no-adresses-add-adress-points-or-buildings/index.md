@@ -210,7 +210,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi read this lookalike question as well. <a href="https://help.openstreetmap.org/questions/35854/should-i-tag-a-place-as-both-an-area-and-a-point?page=1&amp;focusedAnswerId=35857#35857">https://help.openstreetmap.org/questions/35854/should-i-tag-a-place-as-both-an-area-and-a-point?page=1&amp;focusedAnswerId=35857#35857</a> Read the answer and make your choice.</p>
+<p>Hi read this lookalike question as well. <a href="/questions/35854/should-i-tag-a-place-as-both-an-area-and-a-point?page=1&amp;focusedAnswerId=35857#35857">https://help.openstreetmap.org/questions/35854/should-i-tag-a-place-as-both-an-area-and-a-point?page=1&amp;focusedAnswerId=35857#35857</a> Read the answer and make your choice.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

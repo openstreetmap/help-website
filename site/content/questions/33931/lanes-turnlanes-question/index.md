@@ -108,7 +108,7 @@ One Answer:
 <div class="answer-body">
 <p>Interesting looking intersection. In the Bing imagery it looks like there might have been some lane markings in the middle that might help but are now obscured. Am I correct that the traffic signals are set so that only one direction of N14 is allowed to proceed at one time? Otherwise it looks like there would be an issue with two different directions of traffic using the middle lane.</p>
 <p>I think I'd tag that middle sections having 6 lanes instead of five. That, I think, reflects the logical traffic flow if not the actual number of lane markers on the ground.</p>
-<p>You might also want to look at <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Tag_all_incoming_ways">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Tag_all_incoming_ways</a> for better showing the logic of the traffic signals. It does not seem that traffic on N14 actually goes through two lights with the possibility of waiting in that middle section.</p>
+<p>You might also want to look at <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Tag_all_incoming_ways">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtraffic_signals#Tag_all_incoming_ways</a> for better showing the logic of the traffic signals. It does not seem that traffic on N14 actually goes through two lights with the possibility of waiting in that middle section.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

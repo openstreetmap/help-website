@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I am trying to add small islands to lakes in <a href="http://www.openstreetmap.org/?lat=51.53472&amp;lon=-0.04186&amp;zoom=16&amp;layers=M">Victoria Park, E2 London</a>, they are not showing up, I am styling in iD Editor and have used, 'Wood', 'Park' and 'Island' but they just don't appear on the map, what should I be using, I am very new to OSM</p>
+<p>Hi, I am trying to add small islands to lakes in <a href="https://www.openstreetmap.org/?lat=51.53472&amp;lon=-0.04186&amp;zoom=16&amp;layers=M">Victoria Park, E2 London</a>, they are not showing up, I am styling in iD Editor and have used, 'Wood', 'Park' and 'Island' but they just don't appear on the map, what should I be using, I am very new to OSM</p>
 <p>Thanks nicolasmonk@me.com</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -69,7 +69,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>nicolas I have asked another question. neat monument by the way. <a href="https://help.openstreetmap.org/questions/22542/how-do-i-do-an-island-in-a-lake-using-id-and-the-multipolygon-tag">https://help.openstreetmap.org/questions/22542/how-do-i-do-an-island-in-a-lake-using-id-and-the-multipolygon-tag</a></p>
+<p>nicolas I have asked another question. neat monument by the way. <a href="/questions/22542/how-do-i-do-an-island-in-a-lake-using-id-and-the-multipolygon-tag">https://help.openstreetmap.org/questions/22542/how-do-i-do-an-island-in-a-lake-using-id-and-the-multipolygon-tag</a></p>
 </div>
 <div id="comment-22543-info" class="comment-info">
 <span class="comment-age">(19 May '13, 08:51)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The problem was it needed a multi-polygon relation tag. Unfortunately this tool is not yet available in iD but is planned. I have fixed the island issue with potlatch2. to find out how, see these answers. ps The monument you mapped near by is very neat. <a href="https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland</a> and <a href="https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a> and <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">http://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
+<p>The problem was it needed a multi-polygon relation tag. Unfortunately this tool is not yet available in iD but is planned. I have fixed the island issue with potlatch2. to find out how, see these answers. ps The monument you mapped near by is very neat. <a href="/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland">https://help.openstreetmap.org/questions/8129/how-to-make-a-hole-in-an-area-eg-woodland</a> and <a href="/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a> and <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">https://wiki.openstreetmap.org/wiki/Relation:multipolygon</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

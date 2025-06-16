@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I can download streets as lines, but is there a way to (bulk)download street blocks (polygons) for a specific area as in the picture below ?</p>
 <p>Thanks.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM_tessellation_7x8qBAm.png" alt="alt text" /></p>
+<p><img src="/upfiles/OSM_tessellation_7x8qBAm.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-download" rel="tag" title="see questions tagged &#39;download&#39;">download</span> <span class="post-tag tag-link-blocks" rel="tag" title="see questions tagged &#39;blocks&#39;">blocks</span> <span class="post-tag tag-link-tessallation" rel="tag" title="see questions tagged &#39;tessallation&#39;">tessallation</span> <span class="post-tag tag-link-street" rel="tag" title="see questions tagged &#39;street&#39;">street</span>

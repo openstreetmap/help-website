@@ -226,7 +226,7 @@ osqa_accepted = true
 <div id="post-46249-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/14/tordanik">@Tordanik</a>, to me it seems a valid option to use a tile proxy which replaces some tiles only, yes. Possibly one could modify a <a href="/questions/46147/can-i-cache-tiles-map">caching proxy</a> for this.</p>
+<p><a href="https://help.openstreetmap.org/users/14/tordanik">@Tordanik</a>, to me it seems a valid option to use a tile proxy which replaces some tiles only, yes. Possibly one could modify a <a href="/questions/46147/can-i-cache-tiles-map">caching proxy</a> for this.</p>
 </div>
 <div id="comment-46249-info" class="comment-info">
 <span class="comment-age">(30 Oct '15, 19:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

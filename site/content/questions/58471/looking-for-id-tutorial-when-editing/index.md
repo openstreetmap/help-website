@@ -128,7 +128,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is the icon you are looking for:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/icon-help.png" alt="Help" /></p>
+<p><img src="/upfiles/icon-help.png" alt="Help" /></p>
 <p>You can also use the keyboard shortcut 'h' to trigger the UI to appear. You can then click on "Walkthrough" to start the interactive tutorial (as <a href="https://help.openstreetmap.org/users/14102/traceyplauriault">@traceyplauriault</a> indicated). :)</p>
 <p><em>Note: I'm in the process of updating <a href="https://wiki.openstreetmap.org/wiki/ID">https://wiki.openstreetmap.org/wiki/ID</a> since it was out of date. :)</em></p>
 </div>
@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thanks a million! hmmm! I am looking for the actual tutorial, it is the one that shows up the first time you edit. I am preparing a class assignment and I need to walk through it and also ensure that I have a link to it! Any ideas? If you see this screen capture, I also cannot see the iD's help button either, when I go to the regular help it does not include this tutoria! <img src="https://help.openstreetmap.org/upfiles/Screenshot_2017-08-22_12.47.24.png" alt="alt text" /></p>
+<p>Thanks a million! hmmm! I am looking for the actual tutorial, it is the one that shows up the first time you edit. I am preparing a class assignment and I need to walk through it and also ensure that I have a link to it! Any ideas? If you see this screen capture, I also cannot see the iD's help button either, when I go to the regular help it does not include this tutoria! <img src="/upfiles/Screenshot_2017-08-22_12.47.24.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

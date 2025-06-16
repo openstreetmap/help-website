@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want a professional solution by a company who seems to be quite up to date in visualizing data and map graphics, have a look at <a href="http://www.mapbox.com">Mapbox</a>.</p>
-<p>They are only one among others according to <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></p>
+<p>They are only one among others according to <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></p>
 <p>Or try frameworks like <a href="http://cartodb.com">CartoDB</a> or <a href="http://kartograph.org">kartograph.org</a></p>
 <p>In general, you can display maps as tile graphics via <a href="http://leafletjs.com">leaflet</a> or <a href="http://openlayers.org">openlayers</a> ... I assume (not sure) they have some example code to display markers loaded from a CSV file. But maybe you would have to process too many markers?</p>
 <p>Tell us about success or failure.</p>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is an OpenData plugin for JOSM, the Java based editor. This plugin allows you to import csv files with longitude and latitude and in different projections. (see <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)</a></p>
+<p>There is an OpenData plugin for JOSM, the Java based editor. This plugin allows you to import csv files with longitude and latitude and in different projections. (see <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData)</a></p>
 <p>I assume the data does not have the right license to be uploaded to the central OSM database. but from JOSM, you can write a GeoJSON file which can be displayed with Leaflet or OpenLayers (links see stephan75's answer)</p>
 </div>
 <div class="answer-controls post-controls">

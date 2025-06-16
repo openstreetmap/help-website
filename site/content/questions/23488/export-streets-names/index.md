@@ -106,11 +106,11 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your question seems to be double:</p>
-<p><a href="https://help.openstreetmap.org/questions/9816/the-best-way-to-extract-street-list">the-best-way-to-extract-street-list</a></p>
-<p><a href="https://help.openstreetmap.org/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">how-do-i-list-all-the-streets-in-a-city-with-nominatim</a></p>
-<p><a href="https://help.openstreetmap.org/questions/12121/scraping-open-street-map-for-uk-street-names">scraping-open-street-map-for-uk-street-names</a></p>
-<p><a href="https://help.openstreetmap.org/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">how-can-i-get-a-list-of-all-objects-with-a-certain-tag</a></p>
-<p>or to say it in a word: try <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a></p>
+<p><a href="/questions/9816/the-best-way-to-extract-street-list">the-best-way-to-extract-street-list</a></p>
+<p><a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">how-do-i-list-all-the-streets-in-a-city-with-nominatim</a></p>
+<p><a href="/questions/12121/scraping-open-street-map-for-uk-street-names">scraping-open-street-map-for-uk-street-names</a></p>
+<p><a href="/questions/240/how-can-i-get-a-list-of-all-objects-with-a-certain-tag">how-can-i-get-a-list-of-all-objects-with-a-certain-tag</a></p>
+<p>or to say it in a word: try <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -153,7 +153,7 @@ One Answer:
 <div id="post-23561-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Then try <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">http://wiki.openstreetmap.org/wiki/Osmconvert</a> ... it has a CSV export feature. Converting this output in a for you need should be a general challenge about spreadsheet using.</p>
+<p>Then try <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">https://wiki.openstreetmap.org/wiki/Osmconvert</a> ... it has a CSV export feature. Converting this output in a for you need should be a general challenge about spreadsheet using.</p>
 <p>Or use a database where you can export the desired data according to your needs.</p>
 </div>
 <div id="comment-23561-info" class="comment-info">

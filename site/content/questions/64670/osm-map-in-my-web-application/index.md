@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a> may help you. I do not know which library has the option to let the user set markers whose coordinates will be transferred to the server afterwards. I guess your goal is similar to the routing interface on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> or <a href="https://graphhopper.com/maps/">https://graphhopper.com/maps/</a> , so have a look at their code for inspiration.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a> may help you. I do not know which library has the option to let the user set markers whose coordinates will be transferred to the server afterwards. I guess your goal is similar to the routing interface on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> or <a href="https://graphhopper.com/maps/">https://graphhopper.com/maps/</a> , so have a look at their code for inspiration.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

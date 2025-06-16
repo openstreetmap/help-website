@@ -44,9 +44,9 @@ osqa_accepted = false
 <p>Using maperitive.net, i have downloaded Map tiles of India for 2-12 Zoom level. i have given the name to the root folder is Mapnik and Mapnik.zip for its zip file. i have copied the file at /sdcard/osmdroid folder.</p>
 <p>Below is code of my android app :</p>
 <p>Manifest file :</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_YJbcf7V.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_YJbcf7V.PNG" alt="alt text" /></p>
 <p>Layout file</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_VwnjxEM.PNG" alt="alt text" /> Java file :</p>
+<p><img src="/upfiles/Capture_VwnjxEM.PNG" alt="alt text" /> Java file :</p>
 <pre><code>public class MainActivity extends Activity {
 &#10;    private MapView         map;
 &#10;

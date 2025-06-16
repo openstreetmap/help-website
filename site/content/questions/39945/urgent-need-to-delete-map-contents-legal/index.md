@@ -89,7 +89,7 @@ osqa_accepted = false
 <div id="post-39961-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/268/rm87">@RM87</a> probably because someone in the company noticed and didnt like it; it probably affects whether someone keeps their job or not, and I for one am in favour of helping folk in that circumstance.</p>
+<p><a href="https://help.openstreetmap.org/users/268/rm87">@RM87</a> probably because someone in the company noticed and didnt like it; it probably affects whether someone keeps their job or not, and I for one am in favour of helping folk in that circumstance.</p>
 </div>
 <div id="comment-39961-info" class="comment-info">
 <span class="comment-age">(01 Jan '15, 19:40)</span> <span class="comment-user userinfo">SK53 ♦</span>

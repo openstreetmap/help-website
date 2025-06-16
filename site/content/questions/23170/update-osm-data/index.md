@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The most important source for information should be <a href="http://wiki.openstreetmap.org/wiki/Import">wiki/Import</a></p>
+<p>The most important source for information should be <a href="https://wiki.openstreetmap.org/wiki/Import">wiki/Import</a></p>
 <p>Read all pages related there.</p>
 <p>Then: tell us in detail about the licence used that is used when you buy the data. This is important.</p>
 <p>How old is the data set, and for what region?</p>

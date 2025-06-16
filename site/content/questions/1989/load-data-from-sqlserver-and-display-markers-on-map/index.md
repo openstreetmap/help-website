@@ -130,7 +130,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure what "SQLServer" is or how it ended up in the question, but in principle this is possible. You can query the <a href="http://wiki.openstreetmap.org/wiki/Osmxapi">XAPI</a> for all objects tagged with the key <code>iata</code> and display them on to of Openstreetmap based tiles using <a href="http://openlayers.org/">openlayers</a> i.e. a <a href="http://dev.openlayers.org/docs/files/OpenLayers/Layer/Markers-js.html">marker layer</a>.</p>
+<p>I'm not sure what "SQLServer" is or how it ended up in the question, but in principle this is possible. You can query the <a href="https://wiki.openstreetmap.org/wiki/Osmxapi">XAPI</a> for all objects tagged with the key <code>iata</code> and display them on to of Openstreetmap based tiles using <a href="http://openlayers.org/">openlayers</a> i.e. a <a href="http://dev.openlayers.org/docs/files/OpenLayers/Layer/Markers-js.html">marker layer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

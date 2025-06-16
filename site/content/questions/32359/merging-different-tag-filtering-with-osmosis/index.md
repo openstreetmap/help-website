@@ -118,7 +118,7 @@ osqa_accepted = true
  --read-pbf file=switzerland.osm.pbf --tf accept-nodes amenity=* --tf accept-ways amenity=* --tf reject-relations \
  --read-pbf file=switzerland.osm.pbf --tf accept-nodes leisure=* --tf accept-ways leisure=* --tf reject-relations  \
  --merge --merge --write-pgsql host=128.178.1.1 database=myDB user=myUsn password=myPwd</code></pre>
-<p>You might want to give <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> a try, it is less complicated for use cases like this.</p>
+<p>You might want to give <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> a try, it is less complicated for use cases like this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

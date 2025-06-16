@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You haven't mentioned where your village is, but could this be related to the <a href="http://wiki.openstreetmap.org/wiki/Cadastre">Cadastre import</a>?</p>
+<p>You haven't mentioned where your village is, but could this be related to the <a href="https://wiki.openstreetmap.org/wiki/Cadastre">Cadastre import</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -137,7 +137,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>If you click the + top right on the main map view, you can then select the data layer and select individual items to see the details. Buildings in that area do seem to be from cadastre, such as <a href="http://www.openstreetmap.org/browse/way/131200264">http://www.openstreetmap.org/browse/way/131200264</a></p>
+<p>If you click the + top right on the main map view, you can then select the data layer and select individual items to see the details. Buildings in that area do seem to be from cadastre, such as <a href="https://www.openstreetmap.org/browse/way/131200264">https://www.openstreetmap.org/browse/way/131200264</a></p>
 </div>
 <div id="comment-8184-info" class="comment-info">
 <span class="comment-age">(27 Sep '11, 21:29)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -160,8 +160,8 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Read also <a href="http://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents">http://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents</a></p>
-<p>and don't hesitate to contact the french community directly by e.g. subscribing the mailing list talk-fr@<a href="http://openstreetmap.org">openstreetmap.org</a> (see also <a href="http://wiki.openstreetmap.org/wiki/FR:Contact).">http://wiki.openstreetmap.org/wiki/FR:Contact).</a> We are a lot of "contributeurs" who will happily answer your questions in mother tongue)</p>
+<p>Read also <a href="https://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents">https://wiki.openstreetmap.org/wiki/WikiProject_France/Cadastre/Import_semi-automatique_des_b%C3%A2timents</a></p>
+<p>and don't hesitate to contact the french community directly by e.g. subscribing the mailing list talk-fr@<a href="http://openstreetmap.org">openstreetmap.org</a> (see also <a href="https://wiki.openstreetmap.org/wiki/FR:Contact).">https://wiki.openstreetmap.org/wiki/FR:Contact).</a> We are a lot of "contributeurs" who will happily answer your questions in mother tongue)</p>
 </div>
 <div id="comment-8186-info" class="comment-info">
 <span class="comment-age">(27 Sep '11, 23:49)</span> <span class="comment-user userinfo">Pieren</span>

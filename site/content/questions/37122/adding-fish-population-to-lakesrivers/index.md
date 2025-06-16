@@ -132,7 +132,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>To add on to SomeoneElse's answer, yes you <strong>can</strong> do it. The bigger question is <strong>should</strong> you do it? Even if the information is verifiable, another consideration is keeping the information up to date. For example, a lake's name and shape are much less likely to change than the fish population or fishing laws. If you do add this data, how will you or others be able to keep it current?</p>
 <p>Another thing you might consider is if this data is already available from another source, such that someone could combine OSM data with the fishing data to create a product. In that case, it might not make as much sense to add it to OSM.</p>
-<p>For specific kinds of organisms, <a href="http://wiki.openstreetmap.org/wiki/Key:taxon">taxon</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:species">species</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:genus">genus</a> are in use.</p>
+<p>For specific kinds of organisms, <a href="https://wiki.openstreetmap.org/wiki/Key:taxon">taxon</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:species">species</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:genus">genus</a> are in use.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>National Environment ministries or agencies will collect population estimates for fish, usually through electrofishing sample reaches. AFAIK such data is not openly available. Like <a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> I would expect figures to vary significantly year-on-year. For places like the UK there may be scope to add the types of fish for a given river. I recall a printed atlas with such a map was made in the 1960s for Britain &amp; Ireland.</p>
+<p>National Environment ministries or agencies will collect population estimates for fish, usually through electrofishing sample reaches. AFAIK such data is not openly available. Like <a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> I would expect figures to vary significantly year-on-year. For places like the UK there may be scope to add the types of fish for a given river. I recall a printed atlas with such a map was made in the 1960s for Britain &amp; Ireland.</p>
 </div>
 <div id="comment-37162-info" class="comment-info">
 <span class="comment-age">(30 Sep '14, 20:14)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -197,8 +197,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Every now and again someone asks "can I map X?" and the answer generally is that you can map anything that you like, provided that other mappers can also map it too - i.e. that it is <a href="http://wiki.openstreetmap.org/wiki/Verifiable">verifiable</a> by them. Not being a fishing person I'm not sure how you'd go about finding out that information (presumably by actually sitting there trying to catch something or reading information off a sign?).</p>
-<p>In addition to the tags suggested by escada above presumably you'd also want to record access? Currently <a href="http://wiki.openstreetmap.org/wiki/Key:fishing">fishing=yes/no/private</a> seems to be most used for this.</p>
+<p>Every now and again someone asks "can I map X?" and the answer generally is that you can map anything that you like, provided that other mappers can also map it too - i.e. that it is <a href="https://wiki.openstreetmap.org/wiki/Verifiable">verifiable</a> by them. Not being a fishing person I'm not sure how you'd go about finding out that information (presumably by actually sitting there trying to catch something or reading information off a sign?).</p>
+<p>In addition to the tags suggested by escada above presumably you'd also want to record access? Currently <a href="https://wiki.openstreetmap.org/wiki/Key:fishing">fishing=yes/no/private</a> seems to be most used for this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -247,7 +247,7 @@ osqa_accepted = true
 <div id="post-37199-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>fwiw, access=permit has more uses right now than permit_holder or its variations. there's also access=license which, although it started with the idea of applying it to parking lots, could also probably be used in this case <a href="http://wiki.openstreetmap.org/wiki/Tag%3Aaccess%3Dlicense">http://wiki.openstreetmap.org/wiki/Tag%3Aaccess%3Dlicense</a></p>
+<p>fwiw, access=permit has more uses right now than permit_holder or its variations. there's also access=license which, although it started with the idea of applying it to parking lots, could also probably be used in this case <a href="https://wiki.openstreetmap.org/wiki/Tag%3Aaccess%3Dlicense">https://wiki.openstreetmap.org/wiki/Tag%3Aaccess%3Dlicense</a></p>
 </div>
 <div id="comment-37199-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 17:17)</span> <span class="comment-user userinfo">neuhausr</span>

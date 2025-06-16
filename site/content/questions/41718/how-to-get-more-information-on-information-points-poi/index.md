@@ -156,7 +156,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/6756/nzgraham">@NZGraham</a>: the "?" feature is existing since November 2014. Before that date (and still) you can use the "data layer" function of the openstreetmap.org page. See <a href="https://wiki.openstreetmap.org/wiki/Browsing">https://wiki.openstreetmap.org/wiki/Browsing</a></p>
+<p><a href="https://help.openstreetmap.org/users/6756/nzgraham">@NZGraham</a>: the "?" feature is existing since November 2014. Before that date (and still) you can use the "data layer" function of the openstreetmap.org page. See <a href="https://wiki.openstreetmap.org/wiki/Browsing">https://wiki.openstreetmap.org/wiki/Browsing</a></p>
 </div>
 <div id="comment-41725-info" class="comment-info">
 <span class="comment-age">(16 Mar '15, 00:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -149,7 +149,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>...and that appears to have reverted cleanly.</p>
-<p>The wiki page for the JOSM reverter plugin is here, by the way: <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter</a></p>
+<p>The wiki page for the JOSM reverter plugin is here, by the way: <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter</a></p>
 </div>
 <div id="comment-9840-info" class="comment-info">
 <span class="comment-age">(07 Jan '12, 21:40)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

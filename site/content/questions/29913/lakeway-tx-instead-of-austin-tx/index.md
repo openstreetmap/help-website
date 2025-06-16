@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>At certain zoom levels "Lakeway" (Texas, USA - population 12,000) appears on the map but Austin (pop 840,000, capital of Texas) does not. Is this an algorithmic issue, or an editorial one? Surely Austin should be the visible text label at distant zooms.</p>
-<p><a href="http://www.openstreetmap.org/#map=7/30.074/-98.350">Here's a link to that map</a></p>
+<p><a href="https://www.openstreetmap.org/#map=7/30.074/-98.350">Here's a link to that map</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lakeway" rel="tag" title="see questions tagged &#39;lakeway&#39;">lakeway</span> <span class="post-tag tag-link-austin" rel="tag" title="see questions tagged &#39;austin&#39;">austin</span>

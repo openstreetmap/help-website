@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">Platform Status</a> there is no problem with the API. Downloading data with JOSM succeeds here. Does it work for you meanwhile? If not it might be a problem of your local network.</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">Platform Status</a> there is no problem with the API. Downloading data with JOSM succeeds here. Does it work for you meanwhile? If not it might be a problem of your local network.</p>
 <p><a href="http://api.openstreetmap.org/api/capabilities...">http://api.openstreetmap.org/api/capabilities...</a> redirecting to a HTML page is completely normal, the dots aren't part of the URL. <a href="http://api.openstreetmap.org/api/capabilities">http://api.openstreetmap.org/api/capabilities</a> instead should return with a XML file which is then parsed by JOSM in order to get information about the current API version, various restrictions and so on.</p>
 <p>And the MapQuest icon seems to have changed it's location. This shouldn't be a problem for you and should get fixed with the next JOSM update.</p>
 </div>
@@ -147,7 +147,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>There is nothing hidden behind the "...", for downloading actual data JOSM will call <a href="http://api.openstreetmap.org/api/0.6/map?bbox=...">http://api.openstreetmap.org/api/0.6/map?bbox=...</a> per default.</p>
-<p>If you get a timeout try downloading a smaller area or try it again later. I had some timeouts in the last few days myself, I think this is a known problem. Otherwise try contacting someone on <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a>, this help site is not really suited for such problems.</p>
+<p>If you get a timeout try downloading a smaller area or try it again later. I had some timeouts in the last few days myself, I think this is a known problem. Otherwise try contacting someone on <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a>, this help site is not really suited for such problems.</p>
 </div>
 <div id="comment-17518-info" class="comment-info">
 <span class="comment-age">(06 Nov '12, 08:46)</span> <span class="comment-user userinfo">scai ♦</span>

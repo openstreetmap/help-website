@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/Capture.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture.JPG" alt="alt text" /></p>
 <p>The north-south road is tagged <em>highway=trunk</em>. The road approaching from the west is tagged <em>highway=unclassified</em>. The road approaching from the east is tagged <em>highway=primary</em>.</p>
-<p>Do I split the <em>primary</em> way as it approaches the roundabout? It is clearly seen that the division between the two lanes stops after a few meters. I ask this question because I am confused about the term "carriageways" used <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout#How_to_map">here</a> in the wiki document about roundabouts.</p>
+<p>Do I split the <em>primary</em> way as it approaches the roundabout? It is clearly seen that the division between the two lanes stops after a few meters. I ask this question because I am confused about the term "carriageways" used <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout#How_to_map">here</a> in the wiki document about roundabouts.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-junction" rel="tag" title="see questions tagged &#39;junction&#39;">junction</span> <span class="post-tag tag-link-roundabout" rel="tag" title="see questions tagged &#39;roundabout&#39;">roundabout</span> <span class="post-tag tag-link-split" rel="tag" title="see questions tagged &#39;split&#39;">split</span>

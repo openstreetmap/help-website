@@ -194,7 +194,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4917/hendrik001">@Hendrik</a> - Not an automated editor but a single preset with some choices available, sort of the way you can create a drop-down list inside a preset. JOSM already has this sort of automatic tagging but you must work through three different menus (Presets&gt;Water&gt;Tunnel) to get to the one for tunnel, for example.</p>
+<p><a href="https://help.openstreetmap.org/users/4917/hendrik001">@Hendrik</a> - Not an automated editor but a single preset with some choices available, sort of the way you can create a drop-down list inside a preset. JOSM already has this sort of automatic tagging but you must work through three different menus (Presets&gt;Water&gt;Tunnel) to get to the one for tunnel, for example.</p>
 <p>I know I can copy tags from an existing object (if one happens to be nearby) but I want to automate the process to suit my needs better.</p>
 </div>
 <div id="comment-37950-info" class="comment-info">

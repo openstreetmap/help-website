@@ -171,7 +171,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I'm no expert but I think it's probably to do with the way the map is built for use on Garmin and the parameters used. There may be maps available that are created with searching in mind.</p>
-<p>There don't appear to be many specific UK maps linked from <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>There don't appear to be many specific UK maps linked from <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div id="comment-16378-info" class="comment-info">
 <span class="comment-age">(23 Sep '12, 16:17)</span> <span class="comment-user userinfo">fruit-uk</span>

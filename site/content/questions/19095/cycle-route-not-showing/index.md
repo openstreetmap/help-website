@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cycle Route not showing"
-description = '''Hi at http://www.openstreetmap.org/edit?lat=53.331357&amp;amp;lon=-6.256861&amp;amp;zoom=18 there&#x27;s a cycle route along the Grand Canal in Dublin. Editing the feature shows that it&#x27;s a Regional Cycle Route - the Canal Way Cycle Route, although the name field is blank. How do I search OSM for the route by na...'''
+description = '''Hi at https://www.openstreetmap.org/edit?lat=53.331357&amp;amp;lon=-6.256861&amp;amp;zoom=18 there&#x27;s a cycle route along the Grand Canal in Dublin. Editing the feature shows that it&#x27;s a Regional Cycle Route - the Canal Way Cycle Route, although the name field is blank. How do I search OSM for the route by na...'''
 date = "2013-01-15T09:43:00Z"
 lastmod = "2013-01-15T14:51:00Z"
 weight = 19095
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi</p>
 <p>at<br />
-<a href="http://www.openstreetmap.org/edit?lat=53.331357&amp;lon=-6.256861&amp;zoom=18">http://www.openstreetmap.org/edit?lat=53.331357&amp;lon=-6.256861&amp;zoom=18</a><br />
+<a href="https://www.openstreetmap.org/edit?lat=53.331357&amp;lon=-6.256861&amp;zoom=18">https://www.openstreetmap.org/edit?lat=53.331357&amp;lon=-6.256861&amp;zoom=18</a><br />
 there's a cycle route along the Grand Canal in Dublin.</p>
 <p>Editing the feature shows that it's a Regional Cycle Route - the Canal Way Cycle Route, although the name field is blank.</p>
 <p>How do I search OSM for the route by name, and how do I search OSM for Cycle Routes in Dublin?</p>
@@ -113,9 +113,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Routes are stored in relations. The name of the route is stored there:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/2069096">http://www.openstreetmap.org/browse/relation/2069096</a><br />
+<p><a href="https://www.openstreetmap.org/browse/relation/2069096">https://www.openstreetmap.org/browse/relation/2069096</a><br />
 (there you can click the "View history" link to see who created/altered the object)<br />
-(this route was created by user <a href="http://www.openstreetmap.org/user/gintyc">gintyc</a>)</p>
+(this route was created by user <a href="https://www.openstreetmap.org/user/gintyc">gintyc</a>)</p>
 <p>For exploring cycle routes, I would suggest using for instance:</p>
 <p><a href="http://cycling.waymarkedtrails.org/?zoom=12&amp;lat=53.345&amp;lon=-6.258">http://cycling.waymarkedtrails.org/?zoom=12&amp;lat=53.345&amp;lon=-6.258</a></p>
 <p>There you can click the [Routes] button to get a list of all routes shown in the current view.</p>

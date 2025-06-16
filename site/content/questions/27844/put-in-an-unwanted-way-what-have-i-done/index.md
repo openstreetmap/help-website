@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>Some details so you can follow my steps:</p>
 <ul>
 <li>Search for "Holzbau Schlude" (they're a carpentry firm) on osm.org. You'll get a result from Nominatim, click on it and it'll take you to the village of Heinstetten with a nice red pointer right where the house is. So far so good, except that it says "Holzbau Schlude" in small writing right in the middle of the village and nowhere near the pointer (is that intentional?).</li>
-<li>If you click on history, you'll find three edits by me on November 5 and 6 (<a href="http://www.openstreetmap.org/browse/changeset/18729514">1</a> <a href="http://www.openstreetmap.org/browse/changeset/18744008">2</a> <a href="http://www.openstreetmap.org/browse/changeset/18744040">3</a>). The first contains a striked-through node, the correct node (I think), and the way, labelled like the node. And the other two contain my efforts to fix this, but I don't really understand all of it.</li>
+<li>If you click on history, you'll find three edits by me on November 5 and 6 (<a href="https://www.openstreetmap.org/browse/changeset/18729514">1</a> <a href="https://www.openstreetmap.org/browse/changeset/18744008">2</a> <a href="https://www.openstreetmap.org/browse/changeset/18744040">3</a>). The first contains a striked-through node, the correct node (I think), and the way, labelled like the node. And the other two contain my efforts to fix this, but I don't really understand all of it.</li>
 </ul>
 <p>So please: I'd like to understand what I've done, and more importantly I'd like to understand how to properly add a node that points to a house or place and says what this is. And then shows up in the embedded iframe.</p>
 <p>Your time and help is much appreciated! And if I simply haven't found the right wiki article yet, point me to it and I'll read it presto. Also a little thought: Maybe a sandbox OSM would be a good idea, so noobs like me don't mess up the proper map. What do you think?</p>
@@ -78,7 +78,7 @@ Anna~</p>
 <div id="post-30053-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have checked those edits and <a href="http://www.openstreetmap.org/changeset/20133431">reve</a><a href="http://www.openstreetmap.org/changeset/20141269">rted</a> the city limit move and added the suggested tags to <a href="http://www.openstreetmap.org/node/2521004193">the shop</a> (all other stuff was apparently independent from this discussion here reverted). Thanks for analysing, Frederik.</p>
+<p>I have checked those edits and <a href="https://www.openstreetmap.org/changeset/20133431">reve</a><a href="https://www.openstreetmap.org/changeset/20141269">rted</a> the city limit move and added the suggested tags to <a href="https://www.openstreetmap.org/node/2521004193">the shop</a> (all other stuff was apparently independent from this discussion here reverted). Thanks for analysing, Frederik.</p>
 </div>
 <div id="comment-30053-info" class="comment-info">
 <span class="comment-age">(22 Jan '14, 01:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -311,7 +311,7 @@ Anna~</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, please read these pages first, <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> und wähle bitte die Deutsche Sprache, da gibst viele Fragen und Losungen. Ps vielleicht ist es möglich auch einem link zuzufügen, die ist ja beim Anfang vom Kartbild einfach zu kopieren.</p>
+<p>Hi, please read these pages first, <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> und wähle bitte die Deutsche Sprache, da gibst viele Fragen und Losungen. Ps vielleicht ist es möglich auch einem link zuzufügen, die ist ja beim Anfang vom Kartbild einfach zu kopieren.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

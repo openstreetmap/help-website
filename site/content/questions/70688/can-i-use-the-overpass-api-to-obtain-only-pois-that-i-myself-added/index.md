@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/66276/overpassapi-fetch-all-nodes-created-by-a-specified-user">https://help.openstreetmap.org/questions/66276/overpassapi-fetch-all-nodes-created-by-a-specified-user</a> for a potential method.</p>
+<p>See <a href="/questions/66276/overpassapi-fetch-all-nodes-created-by-a-specified-user">https://help.openstreetmap.org/questions/66276/overpassapi-fetch-all-nodes-created-by-a-specified-user</a> for a potential method.</p>
 <p>Note on the side shop=agraian is horribly misnamed, maybe it would make sense to start a discussion on the tagging mailing list about a meaningful value before changing all your edits.</p>
 </div>
 <div class="answer-controls post-controls">

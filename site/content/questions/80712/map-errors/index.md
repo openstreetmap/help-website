@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This would be the same question as:</p>
-<p><a href="https://help.openstreetmap.org/questions/15397/elevation-of-irish-mountains-why-the-discrepancy-osmwikipedia">https://help.openstreetmap.org/questions/15397/elevation-of-irish-mountains-why-the-discrepancy-osmwikipedia</a></p>
+<p><a href="/questions/15397/elevation-of-irish-mountains-why-the-discrepancy-osmwikipedia">https://help.openstreetmap.org/questions/15397/elevation-of-irish-mountains-why-the-discrepancy-osmwikipedia</a></p>
 <p>The heights for mid hill are:</p>
 <p><a href="https://www.openstreetmap.org/node/332373222">https://www.openstreetmap.org/node/332373222</a></p>
 <p>ele 492.6 ele:local 440 ele:tm75 440 ele:wgs84 492.6 ele_local 440</p>

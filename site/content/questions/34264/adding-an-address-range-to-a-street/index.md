@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is the so called Karlsruhe Schema for tagging addresses. Have a look <a href="http://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">at the wiki</a>.</p>
+<p>There is the so called Karlsruhe Schema for tagging addresses. Have a look <a href="https://wiki.openstreetmap.org/wiki/Karlsruhe_Schema">at the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

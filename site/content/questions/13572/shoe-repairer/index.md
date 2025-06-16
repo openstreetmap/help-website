@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki mentions <a href="http://wiki.openstreetmap.org/wiki/Tag:craft%3Dshoemaker">craft=shoemaker</a> (used <a href="http://taginfo.openstreetmap.org/search?q=shoemaker#values">409</a> times) and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Shoe_Repair">shop=shoe_repair</a> (used <a href="http://taginfo.openstreetmap.org/search?q=shoe_repair#values">227</a> times).</p>
+<p>The wiki mentions <a href="https://wiki.openstreetmap.org/wiki/Tag:craft%3Dshoemaker">craft=shoemaker</a> (used <a href="http://taginfo.openstreetmap.org/search?q=shoemaker#values">409</a> times) and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Shoe_Repair">shop=shoe_repair</a> (used <a href="http://taginfo.openstreetmap.org/search?q=shoe_repair#values">227</a> times).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>However there won't appear an icon on the main map for a shoe repairer. If someone wants to find it, he has to use the search function instead. But it seems that <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> doesn't <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">support</a> it at the moment.</p>
+<p>However there won't appear an icon on the main map for a shoe repairer. If someone wants to find it, he has to use the search function instead. But it seems that <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> doesn't <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">support</a> it at the moment.</p>
 </div>
 <div id="comment-13574-info" class="comment-info">
 <span class="comment-age">(17 Jun '12, 12:14)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -273,7 +273,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want to work on an image for printing the map with such a grid, maybe you may try to use a GIS tool like <a href="http://www.qgis.org/">QGIS</a> or <a href="http://edu.kde.org/marble/">marble</a> (easier).</p>
-<p>Otherwise, you will need to print this grid in the map tiles/image. For that, you can use mapnik and modify the style or try <a href="http://wiki.openstreetmap.org/wiki/Maperitive">maperitive</a>.</p>
+<p>Otherwise, you will need to print this grid in the map tiles/image. For that, you can use mapnik and modify the style or try <a href="https://wiki.openstreetmap.org/wiki/Maperitive">maperitive</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

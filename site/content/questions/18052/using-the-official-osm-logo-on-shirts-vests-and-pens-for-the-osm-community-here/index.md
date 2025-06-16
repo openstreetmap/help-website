@@ -71,7 +71,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Related question: <a href="http://help.openstreetmap.org/questions/4274/what-is-the-licensing-situation-for-the-osm-icon">What is the licensing situation for the OSM icon</a></p>
+<p>Related question: <a href="/questions/4274/what-is-the-licensing-situation-for-the-osm-icon">What is the licensing situation for the OSM icon</a></p>
 </div>
 <div id="comment-18110-info" class="comment-info">
 <span class="comment-age">(30 Nov '12, 09:45)</span> <span class="comment-user userinfo">sleske</span>

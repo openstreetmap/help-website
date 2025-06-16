@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the easiest way is to use <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a>. There are pre-exported at <a href="http://downloads.cloudmade.com/">cloudemade</a> and <a href="http://download.geofabrik.de/osm/">geofabrik</a> for example. And you find a lot more Shapefiles on the web. Also you can later export your own shapefiles from osm, as described in the linked wiki article. Have fun with tilemill :)</p>
+<p>I think the easiest way is to use <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a>. There are pre-exported at <a href="http://downloads.cloudmade.com/">cloudemade</a> and <a href="http://download.geofabrik.de/osm/">geofabrik</a> for example. And you find a lot more Shapefiles on the web. Also you can later export your own shapefiles from osm, as described in the linked wiki article. Have fun with tilemill :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

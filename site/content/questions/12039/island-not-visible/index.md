@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Island not visible"
-description = '''Hi, does anybody know, why this Keppel island in Singapore (http://www.openstreetmap.org/?lat=1.263896&amp;amp;lon=103.812131&amp;amp;zoom=18) doesn&#x27;t get rendered? Thanks René'''
+description = '''Hi, does anybody know, why this Keppel island in Singapore (https://www.openstreetmap.org/?lat=1.263896&amp;amp;lon=103.812131&amp;amp;zoom=18) doesn&#x27;t get rendered? Thanks René'''
 date = "2012-04-15T16:58:00Z"
 lastmod = "2012-04-15T17:23:00Z"
 weight = 12039
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>does anybody know, why this Keppel island in Singapore (<a href="http://www.openstreetmap.org/?lat=1.263896&amp;lon=103.812131&amp;zoom=18)">http://www.openstreetmap.org/?lat=1.263896&amp;lon=103.812131&amp;zoom=18)</a> doesn't get rendered?</p>
+<p>does anybody know, why this Keppel island in Singapore (<a href="https://www.openstreetmap.org/?lat=1.263896&amp;lon=103.812131&amp;zoom=18)">https://www.openstreetmap.org/?lat=1.263896&amp;lon=103.812131&amp;zoom=18)</a> doesn't get rendered?</p>
 <p>Thanks René</p>
 </div>
 <div id="question-tags" class="tags-container tags">

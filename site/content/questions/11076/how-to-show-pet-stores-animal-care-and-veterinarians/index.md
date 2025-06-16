@@ -105,9 +105,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I guess you refer to the Potlatch2 (aka 'P2') editor icons. Those are predefined tags easy to handle but OSM is much more. Also the online map you see on the main page is only rendering a part of the data.<br />
-About your question, go to the main page <a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">www.openstreetmap.org</a>, click on 'documentation', then 'Map Features' on the left pane, then you arrive <a href="http://wiki.openstreetmap.org/wiki/Map_Features">here</a>. On this wiki page, we collect the most popular and used tags (although you are free to use your own values). You will find the veterinary in the '<a href="http://wiki.openstreetmap.org/wiki/Map_Features#Healthcare">amenity/healthcare</a>' section. You will also find many '<a href="http://wiki.openstreetmap.org/wiki/Map_Features#Shop">shop</a>' values.<br />
+About your question, go to the main page <a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org">www.openstreetmap.org</a>, click on 'documentation', then 'Map Features' on the left pane, then you arrive <a href="https://wiki.openstreetmap.org/wiki/Map_Features">here</a>. On this wiki page, we collect the most popular and used tags (although you are free to use your own values). You will find the veterinary in the '<a href="https://wiki.openstreetmap.org/wiki/Map_Features#Healthcare">amenity/healthcare</a>' section. You will also find many '<a href="https://wiki.openstreetmap.org/wiki/Map_Features#Shop">shop</a>' values.<br />
 Once you know which tag to use, go back to the map editor. In P2, use the 'Advanced' mode (the tab at the left pane when you create the node), then type in the key/value you found in the Map Features. For all features, you can add tons of information like the shop/vet name, phone, web site, etc, and anything you want to see later on that POI.<br />
-If you have some doubts about a tag, come back on this help site or <a href="http://wiki.openstreetmap.org/wiki/Contact">contact the community</a>.</p>
+If you have some doubts about a tag, come back on this help site or <a href="https://wiki.openstreetmap.org/wiki/Contact">contact the community</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -157,7 +157,7 @@ If you have some doubts about a tag, come back on this help site or <a href="htt
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> should be in your bookmarks.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> should be in your bookmarks.</p>
 <p>Not all tags are rendered but the tag will be there.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Consult the <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">documentation of osmconvert</a> in the OSM wiki.</p>
+<p>Consult the <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">documentation of osmconvert</a> in the OSM wiki.</p>
 <p>It has a feature to export a CSV file e.g. with x and y coordinates of each OSM data element from an OSM xml source file.</p>
 <p>And: osmconvert is (next to osmfilter) a very fast tool, compared to osmosis ...</p>
 </div>

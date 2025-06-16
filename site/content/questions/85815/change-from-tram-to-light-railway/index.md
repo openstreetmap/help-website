@@ -192,7 +192,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I'm new here. Became a member tuesday and I try to fix this error for work.</p>
 <p>We have a house for sale and this site shows Ekskogen as tram (Spårvagn in Swedish) and that's incorrect since we don't have that here.</p>
-<p>I don't see any difference between the stations that belongs to Roslagsbanan so I don't understand how Ekskogen gets called tram.<img src="https://help.openstreetmap.org/upfiles/Ekskogen.JPG" alt="alt text" /></p>
+<p>I don't see any difference between the stations that belongs to Roslagsbanan so I don't understand how Ekskogen gets called tram.<img src="/upfiles/Ekskogen.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-85826-info" class="comment-info">
 <span class="comment-age">(07 Oct '22, 06:19)</span> <span class="comment-user userinfo">Cindy Andersson</span>

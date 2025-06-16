@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Someone has removed roads and objects at Technion Technological Institute of Israel"
-description = '''A week ago or so someone has deleted many roads and some objects at Technion. Can it be somehow recovered? Here&#x27;s the link of the area: http://www.openstreetmap.org/#map=16/32.7754/35.0191 I&#x27;ve found that it was deleted by user barskir. How can I restore his changes 1, 2, 3? Thanks!'''
+description = '''A week ago or so someone has deleted many roads and some objects at Technion. Can it be somehow recovered? Here&#x27;s the link of the area: https://www.openstreetmap.org/#map=16/32.7754/35.0191 I&#x27;ve found that it was deleted by user barskir. How can I restore his changes 1, 2, 3? Thanks!'''
 date = "2014-08-29T05:54:00Z"
 lastmod = "2014-08-29T19:04:00Z"
 weight = 36356
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>A week ago or so someone has deleted many roads and some objects at Technion. Can it be somehow recovered? Here's the link of the area: <a href="http://www.openstreetmap.org/#map=16/32.7754/35.0191">http://www.openstreetmap.org/#map=16/32.7754/35.0191</a></p>
-<p>I've found that it was deleted by user <a href="http://www.openstreetmap.org/user/barskir">barskir</a>. How can I restore his changes <a href="http://www.openstreetmap.org/changeset/24978689">1</a>, <a href="http://www.openstreetmap.org/changeset/24978569">2</a>, <a href="http://www.openstreetmap.org/changeset/24978375">3</a>? Thanks!</p>
+<p>A week ago or so someone has deleted many roads and some objects at Technion. Can it be somehow recovered? Here's the link of the area: <a href="https://www.openstreetmap.org/#map=16/32.7754/35.0191">https://www.openstreetmap.org/#map=16/32.7754/35.0191</a></p>
+<p>I've found that it was deleted by user <a href="https://www.openstreetmap.org/user/barskir">barskir</a>. How can I restore his changes <a href="https://www.openstreetmap.org/changeset/24978689">1</a>, <a href="https://www.openstreetmap.org/changeset/24978569">2</a>, <a href="https://www.openstreetmap.org/changeset/24978375">3</a>? Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-deleted" rel="tag" title="see questions tagged &#39;deleted&#39;">deleted</span> <span class="post-tag tag-link-removed" rel="tag" title="see questions tagged &#39;removed&#39;">removed</span> <span class="post-tag tag-link-technion" rel="tag" title="see questions tagged &#39;technion&#39;">technion</span> <span class="post-tag tag-link-recover" rel="tag" title="see questions tagged &#39;recover&#39;">recover</span>

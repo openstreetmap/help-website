@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why do my coastline edits show up like this?"
-description = '''http://www.openstreetmap.org/?lat=52.57871&amp;amp;lon=1.73975&amp;amp;zoom=15&amp;amp;layers=M I&#x27;ve corrected the coastline from aerial imagery and although the breakwaters show correctly the land hasn&#x27;t moved even though I altered the coastline tag. Any suggestions would be gratefully received. '''
+description = '''https://www.openstreetmap.org/?lat=52.57871&amp;amp;lon=1.73975&amp;amp;zoom=15&amp;amp;layers=M I&#x27;ve corrected the coastline from aerial imagery and although the breakwaters show correctly the land hasn&#x27;t moved even though I altered the coastline tag. Any suggestions would be gratefully received. '''
 date = "2013-03-17T15:35:00Z"
 lastmod = "2013-03-17T16:05:00Z"
 weight = 20771
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=52.57871&amp;lon=1.73975&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=52.57871&amp;lon=1.73975&amp;zoom=15&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.57871&amp;lon=1.73975&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=52.57871&amp;lon=1.73975&amp;zoom=15&amp;layers=M</a></p>
 <p>I've corrected the coastline from aerial imagery and although the breakwaters show correctly the land hasn't moved even though I altered the coastline tag.</p>
 <p>Any suggestions would be gratefully received.</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Norfolkadam, There a good possible explanation at the following address <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> Ps your tagged the breakwater as breakwater is not the tag reinforced slopes more appropriate ? Greetz Hendrik</p>
+<p>Hi Norfolkadam, There a good possible explanation at the following address <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a> Ps your tagged the breakwater as breakwater is not the tag reinforced slopes more appropriate ? Greetz Hendrik</p>
 <p>PPss it looks good from here !</p>
 </div>
 <div class="answer-controls post-controls">

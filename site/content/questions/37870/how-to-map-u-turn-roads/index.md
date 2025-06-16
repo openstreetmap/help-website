@@ -82,7 +82,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/9874/raito"></a><a href="http://help.openstreetmap.org/users/9874/raito">@raito</a>: if there is an accepted answer, then please do not close a question. That is really not needed then (it is <a href="/questions/unanswered/">clear</a> by the "accept" that this question has already a good answer) and would prevent someone else from adding another answer (just in case).</p>
+<p>meta <a href="https://help.openstreetmap.org/users/9874/raito"></a><a href="https://help.openstreetmap.org/users/9874/raito">@raito</a>: if there is an accepted answer, then please do not close a question. That is really not needed then (it is <a href="/questions/unanswered/">clear</a> by the "accept" that this question has already a good answer) and would prevent someone else from adding another answer (just in case).</p>
 </div>
 <div id="comment-38723-info" class="comment-info">
 <span class="comment-age">(22 Nov '14, 12:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -104,7 +104,7 @@ osqa_accepted = true
 <div id="post-38725-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9874/raito">@raito</a>: yes, I know. Still, it is not useful. :-)</p>
+<p><a href="https://help.openstreetmap.org/users/9874/raito">@raito</a>: yes, I know. Still, it is not useful. :-)</p>
 </div>
 <div id="comment-38725-info" class="comment-info">
 <span class="comment-age">(22 Nov '14, 17:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -178,7 +178,7 @@ One Answer:
 5
 </div>
 <div class="comment-text">
-<p>One example (including lane detail and destination sign relations) is near the Cherokee Casino Ramona. <a href="http://www.openstreetmap.org/#map=16/36.5611/-95.9298">http://www.openstreetmap.org/#map=16/36.5611/-95.9298</a></p>
+<p>One example (including lane detail and destination sign relations) is near the Cherokee Casino Ramona. <a href="https://www.openstreetmap.org/#map=16/36.5611/-95.9298">https://www.openstreetmap.org/#map=16/36.5611/-95.9298</a></p>
 </div>
 <div id="comment-37882-info" class="comment-info">
 <span class="comment-age">(22 Oct '14, 20:12)</span> <span class="comment-user userinfo">Baloo Uriza</span>

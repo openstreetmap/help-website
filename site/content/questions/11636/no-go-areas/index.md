@@ -105,11 +105,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check the access tags on this wiki page : <a href="http://wiki.openstreetmap.org/wiki/Access">http://wiki.openstreetmap.org/wiki/Access</a></p>
-<p>For instance, if the road is forbidden for cars only, add <a href="http://wiki.openstreetmap.org/wiki/Access">motorcar=no</a>.<br />
-If it is a no-go for all motorized vehicles, use <a href="http://wiki.openstreetmap.org/wiki/Access">motor_vehicle=no</a>.<br />
-If the street is one way, add the tag <a href="http://wiki.openstreetmap.org/wiki/Oneway">oneway=yes</a> (following carefully the direction of the OSM way)<br />
-There is no clear consensus about roads where parking is not allowed but you can <a href="http://wiki.openstreetmap.org/wiki/Key:parking:lane:both#Vehicle_orientation_or_no_parking">adopt this proposal</a>.</p>
+<p>Check the access tags on this wiki page : <a href="https://wiki.openstreetmap.org/wiki/Access">https://wiki.openstreetmap.org/wiki/Access</a></p>
+<p>For instance, if the road is forbidden for cars only, add <a href="https://wiki.openstreetmap.org/wiki/Access">motorcar=no</a>.<br />
+If it is a no-go for all motorized vehicles, use <a href="https://wiki.openstreetmap.org/wiki/Access">motor_vehicle=no</a>.<br />
+If the street is one way, add the tag <a href="https://wiki.openstreetmap.org/wiki/Oneway">oneway=yes</a> (following carefully the direction of the OSM way)<br />
+There is no clear consensus about roads where parking is not allowed but you can <a href="https://wiki.openstreetmap.org/wiki/Key:parking:lane:both#Vehicle_orientation_or_no_parking">adopt this proposal</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

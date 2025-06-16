@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you know that you are looking for a postcode + city, it is better to use structured requests (see <a href="http://wiki.openstreetmap.org/wiki/Nominatim">search parameters in the Nominatim docs</a> for details). So your example should be:</p>
+<p>If you know that you are looking for a postcode + city, it is better to use structured requests (see <a href="https://wiki.openstreetmap.org/wiki/Nominatim">search parameters in the Nominatim docs</a> for details). So your example should be:</p>
 <p><a href="http://nominatim.openstreetmap.org/search?postalcode=81660&amp;city=M%C3%BCnchen&amp;country=de&amp;format=xml&amp;addressdetails=1">http://nominatim.openstreetmap.org/search?postalcode=81660&amp;city=M%C3%BCnchen&amp;country=de&amp;format=xml&amp;addressdetails=1</a></p>
 <p>Although this specific postcode seems to be missing in OSM, so the query does not give any results at all. A word of warning at this point: support for postcodes in Nominatim is very rudimentary still, so results should always be taken with a grain of salt.</p>
 </div>

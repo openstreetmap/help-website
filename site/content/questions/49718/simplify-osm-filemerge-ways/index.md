@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>A road in openstreetmap will denote by two or three ways(as number indicated 1,2,3 in the attached image).</p>
 <p>When i parse the file i will get many ways that denote the same way, but i just want to get one way.</p>
 <p>Could you please tell me how to merge those way into one?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/1_l8eEaN4.png" alt="OSM" /></p>
+<p><img src="/upfiles/1_l8eEaN4.png" alt="OSM" /></p>
 <p>thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -98,7 +98,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>There are already several similar questions, see</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/43654/finding-and-merging-parallel-ways-that-are-part-of-the-same-street-in-osm-file">https://help.openstreetmap.org/questions/43654/finding-and-merging-parallel-ways-that-are-part-of-the-same-street-in-osm-file</a></li>
+<li><a href="/questions/43654/finding-and-merging-parallel-ways-that-are-part-of-the-same-street-in-osm-file">https://help.openstreetmap.org/questions/43654/finding-and-merging-parallel-ways-that-are-part-of-the-same-street-in-osm-file</a></li>
 <li><a href="https://gis.stackexchange.com/questions/50668/how-can-i-merge-collapse-nearby-and-parallel-road-lines-eg-a-dual-carriageway">https://gis.stackexchange.com/questions/50668/how-can-i-merge-collapse-nearby-and-parallel-road-lines-eg-a-dual-carriageway</a></li>
 <li><a href="https://gis.stackexchange.com/questions/98165/how-to-simplify-streets-such-that-seperate-driving-tracks-are-reduced">https://gis.stackexchange.com/questions/98165/how-to-simplify-streets-such-that-seperate-driving-tracks-are-reduced</a></li>
 </ul>

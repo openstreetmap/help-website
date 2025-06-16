@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I am no expert, but as a first step your organisation can publish that data as a kind of Open Data.</p>
-<p>In the OSM wiki there is a <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue">collection of datasets</a> that have been imported already in the OSM database, with additional information there about free licences used.</p>
+<p>In the OSM wiki there is a <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue">collection of datasets</a> that have been imported already in the OSM database, with additional information there about free licences used.</p>
 <p>For detailed information etc. I recommend to get in contact directly the <a href="http://wiki.osmfoundation.org/">OSM foundation</a>.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -115,7 +115,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>For tagging which floor something is on, the most popular tag is <code>level</code>. eg <code>level=3</code>.</p>
-<p>For what door, that is probably best with some sort of <a href="http://wiki.openstreetmap.org/wiki/Key:addr">addr tag</a>. Though I'm not sure if there is a specific tag for that. There has some discussion of proposed tags for this on the <a href="http://lists.openstreetmap.org/pipermail/tagging/">Tagging mailing list</a> today.</p>
+<p>For what door, that is probably best with some sort of <a href="https://wiki.openstreetmap.org/wiki/Key:addr">addr tag</a>. Though I'm not sure if there is a specific tag for that. There has some discussion of proposed tags for this on the <a href="http://lists.openstreetmap.org/pipermail/tagging/">Tagging mailing list</a> today.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As with mapping a <a href="http://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility">Multi-function facility</a> there is no hard and fast rule that will work for every combination of objects. Mapper discretion is required. For a <a href="http://wiki.openstreetmap.org/wiki/Project_of_the_week/2010/Oct_20">shopping mall</a> it is possible to add the building with the common elements of the objects; name of the mall, opening hours if consolidated. Then add nodes for each business as required.<br />
+<p>As with mapping a <a href="/questions/2969/how-to-tag-a-multi-function-facility">Multi-function facility</a> there is no hard and fast rule that will work for every combination of objects. Mapper discretion is required. For a <a href="https://wiki.openstreetmap.org/wiki/Project_of_the_week/2010/Oct_20">shopping mall</a> it is possible to add the building with the common elements of the objects; name of the mall, opening hours if consolidated. Then add nodes for each business as required.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

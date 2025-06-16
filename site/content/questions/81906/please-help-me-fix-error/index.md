@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-81907-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/20807/elnur09">@elnur09</a> - this seems to be related to <a href="https://help.openstreetmap.org/questions/81871/card-on-apache-does-not-open-apache-on-web-brower">https://help.openstreetmap.org/questions/81871/card-on-apache-does-not-open-apache-on-web-brower</a> , but as Richard has said without any context (such as what you were trying to do, and what commands you ran to try and achieve that) no-one will be able to help.</p>
+<p><a href="https://help.openstreetmap.org/users/20807/elnur09">@elnur09</a> - this seems to be related to <a href="/questions/81871/card-on-apache-does-not-open-apache-on-web-brower">https://help.openstreetmap.org/questions/81871/card-on-apache-does-not-open-apache-on-web-brower</a> , but as Richard has said without any context (such as what you were trying to do, and what commands you ran to try and achieve that) no-one will be able to help.</p>
 </div>
 <div id="comment-81907-info" class="comment-info">
 <span class="comment-age">(23 Sep '21, 17:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

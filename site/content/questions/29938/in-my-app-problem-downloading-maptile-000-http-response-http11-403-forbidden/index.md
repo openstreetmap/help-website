@@ -287,7 +287,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/68401/osmtracker-cant-download-tiles-because-its-blocked-by-openstreetmaporg">this question</a> for why this has become a particular issue now. The answer remains the same though.</p>
+<p>See <a href="/questions/68401/osmtracker-cant-download-tiles-because-its-blocked-by-openstreetmaporg">this question</a> for why this has become a particular issue now. The answer remains the same though.</p>
 </div>
 <div id="comment-68444-info" class="comment-info">
 <span class="comment-age">(20 Mar '19, 12:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

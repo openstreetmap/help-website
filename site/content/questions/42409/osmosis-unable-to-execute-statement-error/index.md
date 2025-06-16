@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>hello, I'm trying to use osmosis to import data to PostgreSQL, got an error: <img src="http://help.openstreetmap.org/upfiles/11.PNG" alt="alt text" /></p>
+<p>hello, I'm trying to use osmosis to import data to PostgreSQL, got an error: <img src="/upfiles/11.PNG" alt="alt text" /></p>
 <pre><code> I don&#39;t know what caused, what do you think?</code></pre>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -70,7 +70,7 @@ This question is marked "community wiki".
 <div id="post-42410-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>and, I executed the following command successfully: <img src="http://help.openstreetmap.org/upfiles/10_Je6opAP.PNG" alt="alt text" /></p>
+<p>and, I executed the following command successfully: <img src="/upfiles/10_Je6opAP.PNG" alt="alt text" /></p>
 <p>thanks for any help!</p>
 </div>
 <div id="comment-42410-info" class="comment-info">

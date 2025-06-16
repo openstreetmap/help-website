@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I try to map an historic (3500 BC) embankment in our village. <a href="http://www.bloggen.be/huldenberg/archief.php?ID=74">http://www.bloggen.be/huldenberg/archief.php?ID=74</a> (photo is from distance, text is dutch) It is an earth wall of 140m by 30m and 4 up to 6m height. A kind of dyke, but there is no water as 70m below the hill. I made up an area with embankment, but rendering in Osmarender is a road in a square with slopes at inner and outer sides. <a href="http://www.openstreetmap.org/browse/way/83210315">http://www.openstreetmap.org/browse/way/83210315</a> What I want is an area with only slopes at the outside. How do I do that? Should I use one road and do something with width?</p>
+<p>I try to map an historic (3500 BC) embankment in our village. <a href="http://www.bloggen.be/huldenberg/archief.php?ID=74">http://www.bloggen.be/huldenberg/archief.php?ID=74</a> (photo is from distance, text is dutch) It is an earth wall of 140m by 30m and 4 up to 6m height. A kind of dyke, but there is no water as 70m below the hill. I made up an area with embankment, but rendering in Osmarender is a road in a square with slopes at inner and outer sides. <a href="https://www.openstreetmap.org/browse/way/83210315">https://www.openstreetmap.org/browse/way/83210315</a> What I want is an area with only slopes at the outside. How do I do that? Should I use one road and do something with width?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-embankment" rel="tag" title="see questions tagged &#39;embankment&#39;">embankment</span>
@@ -177,8 +177,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM try to map real existing world today. Your embankment is realy an embankment today ? You can use historic:man_made=embankment.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:ele">ele</a> tag is for height above sea level, use <a href="http://wiki.openstreetmap.org/wiki/Key:height">height</a>.</p>
-<p>Your place is an archaeological site as is already tagged. On the wiki <a href="http://wiki.openstreetmap.org/wiki/Key:embankment">page</a> you can show this tag is for way, not area.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:ele">ele</a> tag is for height above sea level, use <a href="https://wiki.openstreetmap.org/wiki/Key:height">height</a>.</p>
+<p>Your place is an archaeological site as is already tagged. On the wiki <a href="https://wiki.openstreetmap.org/wiki/Key:embankment">page</a> you can show this tag is for way, not area.</p>
 <p>An other important thing, tag object to describ like there are, not like they are rendererd on some map.</p>
 </div>
 <div class="answer-controls post-controls">

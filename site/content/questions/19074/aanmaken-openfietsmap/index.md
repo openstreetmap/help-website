@@ -161,7 +161,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing that you're perhaps following the link from <a href="http://www.openfietsmap.nl/">http://www.openfietsmap.nl/</a> to <a href="http://garmin.openstreetmap.nl">garmin.openstreetmap.nl</a>? If so, I'd suggest that you go through the help <a href="http://wiki.openstreetmap.org/wiki/Garmin.openstreetmap.nl#About">here</a>.</p>
+<p>I'm guessing that you're perhaps following the link from <a href="http://www.openfietsmap.nl/">http://www.openfietsmap.nl/</a> to <a href="http://garmin.openstreetmap.nl">garmin.openstreetmap.nl</a>? If so, I'd suggest that you go through the help <a href="https://wiki.openstreetmap.org/wiki/Garmin.openstreetmap.nl#About">here</a>.</p>
 <p>If not, perhaps you could explain in a little bit more detail what you're doing? There are lots of different maps made with OpenStreetMap data - almost none of which are maintained directly by the people who look after www.openstreetmap.org.</p>
 </div>
 <div class="answer-controls post-controls">

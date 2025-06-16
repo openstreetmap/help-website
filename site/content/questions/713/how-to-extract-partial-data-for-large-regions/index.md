@@ -178,7 +178,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download data with specific tags using the <a href="http://wiki.openstreetmap.org/wiki/XAPI">Extended API (XAPI)</a>, which allows downloads covering a much larger area than the main API. XAPI only supports one set of filters per download, so you will need several XAPI queries to get all the data you're interested in. If you need all the data in a single file, you can merge the files using <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>.</p>
+<p>You can download data with specific tags using the <a href="https://wiki.openstreetmap.org/wiki/XAPI">Extended API (XAPI)</a>, which allows downloads covering a much larger area than the main API. XAPI only supports one set of filters per download, so you will need several XAPI queries to get all the data you're interested in. If you need all the data in a single file, you can merge the files using <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

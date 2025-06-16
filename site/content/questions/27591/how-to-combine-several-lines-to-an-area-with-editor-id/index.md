@@ -196,7 +196,7 @@ One Answer:
 <div id="post-32993-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>more on this. <a href="https://help.openstreetmap.org/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id">https://help.openstreetmap.org/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id</a></p>
+<p>more on this. <a href="/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id">https://help.openstreetmap.org/questions/32968/is-it-possible-to-change-lines-into-an-area-using-id</a></p>
 </div>
 <div id="comment-32993-info" class="comment-info">
 <span class="comment-age">(08 May '14, 14:27)</span> <span class="comment-user userinfo">andy mackey</span>

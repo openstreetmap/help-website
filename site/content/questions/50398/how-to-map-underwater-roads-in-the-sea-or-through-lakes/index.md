@@ -63,7 +63,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>That looks exactly like a ford. <a href="http://wiki.openstreetmap.org/wiki/Key:ford">http://wiki.openstreetmap.org/wiki/Key:ford</a></p>
+<p>That looks exactly like a ford. <a href="https://wiki.openstreetmap.org/wiki/Key:ford">https://wiki.openstreetmap.org/wiki/Key:ford</a></p>
 </div>
 <div id="comment-50399-info" class="comment-info">
 <span class="comment-age">(23 Jun '16, 10:21)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -97,7 +97,7 @@ osqa_accepted = false
 <div id="post-50427-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is a route that is only open at low tides it links Lindisfarne with Northumberland in Northern England. <a href="http://www.openstreetmap.org/#map=18/55.67827/-1.87180">http://www.openstreetmap.org/#map=18/55.67827/-1.87180</a></p>
+<p>This is a route that is only open at low tides it links Lindisfarne with Northumberland in Northern England. <a href="https://www.openstreetmap.org/#map=18/55.67827/-1.87180">https://www.openstreetmap.org/#map=18/55.67827/-1.87180</a></p>
 </div>
 <div id="comment-50427-info" class="comment-info">
 <span class="comment-age">(23 Jun '16, 22:11)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Re the Lindisfarne Causeway, there's a bit of "tagging for the renderer going on". It's actually called "Lindisfarne Causeway" not "Lindisfarne Causeway (Tidal Check times)":</p>
-<p><a href="http://www.openstreetmap.org/way/177021004">http://www.openstreetmap.org/way/177021004</a></p>
+<p><a href="https://www.openstreetmap.org/way/177021004">https://www.openstreetmap.org/way/177021004</a></p>
 <p>There's probably a way of tagging it with conditional tags (but not all routers will understand those).</p>
 </div>
 <div id="comment-50429-info" class="comment-info">
@@ -165,7 +165,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is quite correctly tagged as a <a href="http://wiki.openstreetmap.org/wiki/Ford">ford</a>.</p>
+<p>It is quite correctly tagged as a <a href="https://wiki.openstreetmap.org/wiki/Ford">ford</a>.</p>
 <p>"A ford is a small part of a highway where a waterway runs over it." Yes, a few hundred meters is still a small part, IMHO.</p>
 <p>"How to Map: use the way-method for larger streams with mapped riverbanks" Yes. There's depth, there's surface, there's tracktype. Looking good :)</p>
 </div>

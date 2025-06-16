@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There <em>is</em> an approved tagging scheme for those situations where traffic rules depend on factors such as the time, the weather, or who you are. It's called <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">"conditional restrictions"</a>.</p>
+<p>There <em>is</em> an approved tagging scheme for those situations where traffic rules depend on factors such as the time, the weather, or who you are. It's called <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">"conditional restrictions"</a>.</p>
 <p>This is how we would do this. First, let's set the default for regular traffic:</p>
 <pre><code>oneway = yes</code></pre>
 <p>Then set the exception, and for whom this exception applies:</p>

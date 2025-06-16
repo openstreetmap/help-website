@@ -82,7 +82,7 @@ osqa_accepted = false
 <div id="post-38492-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I simply followed this : <a href="http://wiki.openstreetmap.org/wiki/PostGIS">http://wiki.openstreetmap.org/wiki/PostGIS</a></p>
+<p>I simply followed this : <a href="https://wiki.openstreetmap.org/wiki/PostGIS">https://wiki.openstreetmap.org/wiki/PostGIS</a></p>
 </div>
 <div id="comment-38492-info" class="comment-info">
 <span class="comment-age">(12 Nov '14, 08:26)</span> <span class="comment-user userinfo">QuentP</span>

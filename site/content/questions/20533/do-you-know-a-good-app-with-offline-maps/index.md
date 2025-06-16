@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't, but we have a list of software at <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS#Map_display_features">http://wiki.openstreetmap.org/wiki/Apple_iOS#Map_display_features</a> .</p>
+<p>I don't, but we have a list of software at <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS#Map_display_features">https://wiki.openstreetmap.org/wiki/Apple_iOS#Map_display_features</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -124,7 +124,7 @@ osqa_accepted = false
 <div id="post-20539-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Apple? :( Better take a look at <a href="http://wiki.openstreetmap.org/wiki/Software#Mobile_Devices">OSM software for mobile devices</a>.</p>
+<p>Apple? :( Better take a look at <a href="https://wiki.openstreetmap.org/wiki/Software#Mobile_Devices">OSM software for mobile devices</a>.</p>
 </div>
 <div id="comment-20539-info" class="comment-info">
 <span class="comment-age">(06 Mar '13, 18:34)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -191,7 +191,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Looking for an iOS app that provides offline maps based on OSM and also has routing features?</p>
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Be-on-road">be-on-road</a>.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Be-on-road">be-on-road</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is this correct?"
-description = '''Good day Mappers, I just want to know if I made correct business map http://www.openstreetmap.org/way/540136490 Thank you'''
+description = '''Good day Mappers, I just want to know if I made correct business map https://www.openstreetmap.org/way/540136490 Thank you'''
 date = "2017-11-13T07:49:00Z"
 lastmod = "2017-11-13T09:26:00Z"
 weight = 60586
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Good day Mappers,</p>
 <p>I just want to know if I made correct business map</p>
-<p><a href="http://www.openstreetmap.org/way/540136490">http://www.openstreetmap.org/way/540136490</a></p>
+<p><a href="https://www.openstreetmap.org/way/540136490">https://www.openstreetmap.org/way/540136490</a></p>
 <p>Thank you</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -152,7 +152,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>"The name of the company should be a property of a POI-like object not the building." Hm, as far as I know both versions are used and accepted. See for example <a href="https://help.openstreetmap.org/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">Should amenities (e.g. supermarkets) be ways or nodes</a>, where some answers advocate tagging the building if it is completely occupied by one use.</p>
+<p>"The name of the company should be a property of a POI-like object not the building." Hm, as far as I know both versions are used and accepted. See for example <a href="/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">Should amenities (e.g. supermarkets) be ways or nodes</a>, where some answers advocate tagging the building if it is completely occupied by one use.</p>
 </div>
 <div id="comment-60592-info" class="comment-info">
 <span class="comment-age">(13 Nov '17, 09:11)</span> <span class="comment-user userinfo">sleske</span>

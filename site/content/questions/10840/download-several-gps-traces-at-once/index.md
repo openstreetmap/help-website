@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your question is unclear but if you are editing with potlach2 and you wish to see all traces in the edit window click the top item under gps if you only wish to see one of your traces click the middle option,to clear traces click the bottom choice, for some reason at the moment they are all labelled "object object" I do not know why.http://<a href="http://wiki.openstreetmap.org/wiki/Potlach2#Places_to_use_Potlatch_2">wiki.openstreetmap.org/wiki/Potlach2#Places_to_use_Potlatch_2</a></p>
+<p>Your question is unclear but if you are editing with potlach2 and you wish to see all traces in the edit window click the top item under gps if you only wish to see one of your traces click the middle option,to clear traces click the bottom choice, for some reason at the moment they are all labelled "object object" I do not know why.http://<a href="https://wiki.openstreetmap.org/wiki/Potlach2#Places_to_use_Potlatch_2">wiki.openstreetmap.org/wiki/Potlach2#Places_to_use_Potlatch_2</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

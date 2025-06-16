@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You clearly could produce something yourself with for example <a href="http://wiki.openstreetmap.org/wiki/OSM_History_Renderer">http://wiki.openstreetmap.org/wiki/OSM_History_Renderer</a></p>
+<p>You clearly could produce something yourself with for example <a href="https://wiki.openstreetmap.org/wiki/OSM_History_Renderer">https://wiki.openstreetmap.org/wiki/OSM_History_Renderer</a></p>
 <p>You should however note that the data for 2000 is the degenerate case and will not take a lot of work to convert.</p>
 </div>
 <div class="answer-controls post-controls">

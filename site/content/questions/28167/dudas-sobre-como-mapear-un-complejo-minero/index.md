@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Tengo una duda sobre como marcar ciertas partes del complejo minero Barrick Veladero en San Juan Argentina. Les dejo el link de la ubicación del complejo. <a href="http://www.openstreetmap.org/#map=17/-29.37248/-69.95058">Este link es de la mina propiamente dicha</a> y <a href="http://www.openstreetmap.org/#map=18/-29.40942/-69.89597">éste el del complejo de habitaciones y procesamiento de minerales</a>Desde ya muchas gracias.</p>
+<p>Tengo una duda sobre como marcar ciertas partes del complejo minero Barrick Veladero en San Juan Argentina. Les dejo el link de la ubicación del complejo. <a href="https://www.openstreetmap.org/#map=17/-29.37248/-69.95058">Este link es de la mina propiamente dicha</a> y <a href="https://www.openstreetmap.org/#map=18/-29.40942/-69.89597">éste el del complejo de habitaciones y procesamiento de minerales</a>Desde ya muchas gracias.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-minero" rel="tag" title="see questions tagged &#39;minero&#39;">minero</span> <span class="post-tag tag-link-mapear" rel="tag" title="see questions tagged &#39;mapear&#39;">mapear</span> <span class="post-tag tag-link-lang-es" rel="tag" title="see questions tagged &#39;lang-es&#39;">lang-es</span>

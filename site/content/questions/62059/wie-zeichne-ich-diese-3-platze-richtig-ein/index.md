@@ -48,7 +48,7 @@ osqa_accepted = false
 <p><a href="https://www.basemap.at/application/index.html#%7B">https://www.basemap.at/application/index.html#{"center":[1625835.7978968467,5971289.60929995],"zoom":20,"rotation":0,"layers":"00010000"}</a></p>
 <p><a href="https://www.basemap.at/application/index.html#%7B">https://www.basemap.at/application/index.html#{"center":[1625093.869139705,5972101.687943197],"zoom":18,"rotation":0,"layers":"00010000"}</a></p>
 <p><a href="https://www.basemap.at/application/index.html#%7B">https://www.basemap.at/application/index.html#{"center":[1625590.5605324886,5972183.798032176],"zoom":18,"rotation":0,"layers":"00010000"}</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Holzplatz_jAzfyRz.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Holzplatz_jAzfyRz.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-industrial" rel="tag" title="see questions tagged &#39;industrial&#39;">industrial</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-mapping" rel="tag" title="see questions tagged &#39;mapping&#39;">mapping</span> <span class="post-tag tag-link-platz" rel="tag" title="see questions tagged &#39;platz&#39;">platz</span> <span class="post-tag tag-link-lang-de" rel="tag" title="see questions tagged &#39;lang-de&#39;">lang-de</span>

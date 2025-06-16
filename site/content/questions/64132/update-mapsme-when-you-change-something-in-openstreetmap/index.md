@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/57144/why-edit-on-osm-is-not-visible-in-mapsme">https://help.openstreetmap.org/questions/57144/why-edit-on-osm-is-not-visible-in-mapsme</a></p>
+<p>See <a href="/questions/57144/why-edit-on-osm-is-not-visible-in-mapsme">https://help.openstreetmap.org/questions/57144/why-edit-on-osm-is-not-visible-in-mapsme</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

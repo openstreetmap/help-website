@@ -50,7 +50,7 @@ osqa_accepted = false
 &#10;   Generic XML parse error
    XML parser at line 1 column 5
 &#10; More information about GPX import failures and how to avoid them can be found at:
-&#10;   http://wiki.openstreetmap.org/index.php/GPX_Import_Failures</code></pre>
+&#10;   https://wiki.openstreetmap.org/index.php/GPX_Import_Failures</code></pre>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mail" rel="tag" title="see questions tagged &#39;mail&#39;">mail</span> <span class="post-tag tag-link-gpx" rel="tag" title="see questions tagged &#39;gpx&#39;">gpx</span> <span class="post-tag tag-link-lang-de" rel="tag" title="see questions tagged &#39;lang-de&#39;">lang-de</span>

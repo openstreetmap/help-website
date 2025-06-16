@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi there <a href="https://help.openstreetmap.org/users/16165/allain117">@all</a></p>
 <p>I tried to setup an experimental tile server hosting only Germany using the following instructions: <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/</a></p>
 <p>Everything works fine in general, but when I try to access a tile with zoomlevel &gt; 9 (10/0/0 e.g.), the rendering time increases from around 0.5s up to &gt; 100s.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/RenderD_Logs_fFu6KYx.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/RenderD_Logs_fFu6KYx.PNG" alt="alt text" /></p>
 <p>My server specs are</p>
 <ol>
 <li>6 vCore Processor</li>

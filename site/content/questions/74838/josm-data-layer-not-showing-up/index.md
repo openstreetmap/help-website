@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2020-05-15_at_15.39.16.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2020-05-15_at_15.39.16.png" alt="alt text" /></p>
 <p>I have been doing some editing, but the Data Layer has somehow disappeared from the layers sidebar. I had previously opened an old session with an outdated Data Layer, deleted the layer, and downloaded new data.</p>
 <p>It won't let me upload or save. What is going on?</p>
 <p>EDIT:</p>

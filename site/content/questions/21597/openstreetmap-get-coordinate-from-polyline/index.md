@@ -167,7 +167,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Info regarding question 2. For the differences between <a href="http://en.wikipedia.org/Keyhole_Markup_Language">KML</a> and the data OSM uses, have a look at the <a href="http://wiki.openstreetmap.org/wiki/Xml_schema">XML schema</a> article in the OSM Wiki.</p>
+<p>Info regarding question 2. For the differences between <a href="http://en.wikipedia.org/Keyhole_Markup_Language">KML</a> and the data OSM uses, have a look at the <a href="https://wiki.openstreetmap.org/wiki/Xml_schema">XML schema</a> article in the OSM Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

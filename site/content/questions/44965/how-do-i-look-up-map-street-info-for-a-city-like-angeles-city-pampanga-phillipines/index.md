@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can try to enter street names with a city name in any service listed in the</p>
-<p>OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a> ... Success?</p>
+<p>OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a> ... Success?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

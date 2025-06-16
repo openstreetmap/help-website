@@ -77,7 +77,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>Hello PostBrenger,</p>
 <p>do you refer to a concrete place where such a house numbering is present in the OSM data?</p>
-<p>Then give us a <a href="http://wiki.openstreetmap.org/wiki/Permalink">http://wiki.openstreetmap.org/wiki/Permalink</a> to that place.</p>
+<p>Then give us a <a href="https://wiki.openstreetmap.org/wiki/Permalink">https://wiki.openstreetmap.org/wiki/Permalink</a> to that place.</p>
 <p>Because with an example we can understand better what is the situation and what is your aim.</p>
 </div>
 <div id="comment-26872-info" class="comment-info">
@@ -91,7 +91,7 @@ osqa_accepted = true
 <div class="comment-text">
 <p>There are 3 flats here, if I'd edit all the numbers with 1,2,3,4,5 etc there would be a long list, but it would find the number if I'd type</p>
 <p>In this example Munt 3 if I'd type Munt 3 in the search box with 1-5 then the flat 1-5 would not show up in search result, I've now edited these with 1-70 etc:</p>
-<p><a href="http://www.openstreetmap.org/#map=19/52.95515/5.91969">http://www.openstreetmap.org/#map=19/52.95515/5.91969</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/52.95515/5.91969">https://www.openstreetmap.org/#map=19/52.95515/5.91969</a></p>
 </div>
 <div id="comment-26887-info" class="comment-info">
 <span class="comment-age">(01 Oct '13, 12:01)</span> <span class="comment-user userinfo">PostBrenger</span>
@@ -145,7 +145,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure exactly what you mean but.... I just used the JOSM plugin addrinterpolation to number each of the range of numbers in front of each building as in your example where they share a street not located immediately next to them. And after saving and searching for an individual number on the street and suburb using the search at <a href="http://www.openstreetmap.org">osm.org</a> it found the location and placed a red marker in front of the correct building about where it should be in the range displayed on the short way drawn along the buildings length immediately in front of the block. Seems to be the ideal use for this method. Hope this helps. <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">address interpolation</a></p>
+<p>I'm not sure exactly what you mean but.... I just used the JOSM plugin addrinterpolation to number each of the range of numbers in front of each building as in your example where they share a street not located immediately next to them. And after saving and searching for an individual number on the street and suburb using the search at <a href="http://www.openstreetmap.org">osm.org</a> it found the location and placed a red marker in front of the correct building about where it should be in the range displayed on the short way drawn along the buildings length immediately in front of the block. Seems to be the ideal use for this method. Hope this helps. <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">address interpolation</a></p>
 <p>I searched for an individual number not 1-20 or similar in the search box.</p>
 </div>
 <div class="answer-controls post-controls">

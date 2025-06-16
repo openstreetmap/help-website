@@ -316,7 +316,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>See <a href="http://help.openstreetmap.org/questions/1889/how-can-i-use-bing-in-potlatch-1"></a><a href="http://help.openstreetmap.org/questions/1889/how-can-i-use-bing-in-potlatch-1"></a><a href="http://help.openstreetmap.org/questions/1889/how-can-i-use-bing-in-potlatch-1">http://help.openstreetmap.org/questions/1889/how-can-i-use-bing-in-potlatch-1</a></p>
+<p>See <a href="/questions/1889/how-can-i-use-bing-in-potlatch-1"></a><a href="/questions/1889/how-can-i-use-bing-in-potlatch-1"></a><a href="/questions/1889/how-can-i-use-bing-in-potlatch-1">https://help.openstreetmap.org/questions/1889/how-can-i-use-bing-in-potlatch-1</a></p>
 </div>
 <div id="comment-1893-info" class="comment-info">
 <span class="comment-age">(22 Dec '10, 15:03)</span> <span class="comment-user userinfo">Andy Allan</span>

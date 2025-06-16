@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello devs,</p>
 <p>I am planning to develop an android application that is going to use data such as lat,long,name,etc of the places. I had extracted the mentioned data from osm.pbf for one country , now i would like to know is there any kind of restriction over the use of this data, like if i be able to complete offline geoname search functionality in my android app is it ok to publish the app on playstore.</p>
-<p>Or is there any kind of licence process has to be done in order to use this data ? I had read <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a> regarding licencing but still confused with all the legal terms of usage of data in my app, so can you please guide me what will be the osm procedure or conditions,requirement for publishing the app.</p>
+<p>Or is there any kind of licence process has to be done in order to use this data ? I had read <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a> regarding licencing but still confused with all the legal terms of usage of data in my app, so can you please guide me what will be the osm procedure or conditions,requirement for publishing the app.</p>
 <p>Do i need to publish the processed data or code that i used in my app to others ?</p>
 <p>Please let me know the detail so that i can decide whether to go for it or not.</p>
 <p>Thank you</p>

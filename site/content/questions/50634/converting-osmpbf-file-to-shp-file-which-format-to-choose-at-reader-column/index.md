@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Converting .osm.pbf file to .shp file - which format to choose at reader column?"
-description = '''Hi, I am trying to convert a .osm.pbf file into .shp file so that it could opened in ArcGIS 10.1 for network analysis. I am following the steps as stated in openstreetmap wiki: http://wiki.openstreetmap.org/wiki/User:Bgirardot/How_To_Convert_osm_.pbf_files_to_Esri_Shapefiles I am at the second dot: ...'''
+description = '''Hi, I am trying to convert a .osm.pbf file into .shp file so that it could opened in ArcGIS 10.1 for network analysis. I am following the steps as stated in openstreetmap wiki: https://wiki.openstreetmap.org/wiki/User:Bgirardot/How_To_Convert_osm_.pbf_files_to_Esri_Shapefiles I am at the second dot: ...'''
 date = "2016-07-05T13:09:00Z"
 lastmod = "2019-04-04T10:25:00Z"
 weight = 50634
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I am trying to convert a .osm.pbf file into .shp file so that it could opened in ArcGIS 10.1 for network analysis.</p>
-<p>I am following the steps as stated in openstreetmap wiki: <a href="http://wiki.openstreetmap.org/wiki/User:Bgirardot/How_To_Convert_osm_.pbf_files_to_Esri_Shapefiles">http://wiki.openstreetmap.org/wiki/User:Bgirardot/How_To_Convert_osm_.pbf_files_to_Esri_Shapefiles</a></p>
+<p>I am following the steps as stated in openstreetmap wiki: <a href="https://wiki.openstreetmap.org/wiki/User:Bgirardot/How_To_Convert_osm_.pbf_files_to_Esri_Shapefiles">https://wiki.openstreetmap.org/wiki/User:Bgirardot/How_To_Convert_osm_.pbf_files_to_Esri_Shapefiles</a></p>
 <p>I am at the second dot: GDAL. I tried to put my file into the reader column of FME_Quick Translator (I was directed to here after downloaded GDAL 1.10), however there is no .osm.pbf format that I can choose. Do you have any idea which I should I put instead? Or some of my actions have gone wrong?</p>
 <p>If I were to leave it blank ( letting the translator to read it automatically), then putting Esri Shapefile in the writer column and run it, error occurred: Value not specified for kDLG_ProjParmA1. Anyone has any idea what might be the reason?</p>
 <p>Your help will be truly appreciated, thanks in advance!</p>

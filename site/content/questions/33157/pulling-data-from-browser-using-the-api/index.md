@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "pulling data from browser using the API"
-description = '''I am trying to pull data for a single city bounded by two lat-long pairs with:  http://www.openstreetmap.org/api/0.6/map?bbox=-76.7237091,39.19714109,-76.5273285,39.385794515  I am currently logged in to OSM (my browser has a cookie).  It doesn&#x27;t work. When I try the diagnostic:  http://www.openstre...'''
+description = '''I am trying to pull data for a single city bounded by two lat-long pairs with:  https://www.openstreetmap.org/api/0.6/map?bbox=-76.7237091,39.19714109,-76.5273285,39.385794515  I am currently logged in to OSM (my browser has a cookie).  It doesn&#x27;t work. When I try the diagnostic:  http://www.openstre...'''
 date = "2014-05-13T23:30:00Z"
 lastmod = "2014-05-14T08:13:00Z"
 weight = 33157
@@ -41,12 +41,12 @@ osqa_accepted = true
 <div class="question-body">
 <p>I am trying to pull data for a single city bounded by two lat-long pairs with:</p>
 <blockquote>
-<p><a href="http://www.openstreetmap.org/api/0.6/map?bbox=-76.7237091,39.19714109,-76.5273285,39.385794515">http://www.openstreetmap.org/api/0.6/map?bbox=-76.7237091,39.19714109,-76.5273285,39.385794515</a></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/map?bbox=-76.7237091,39.19714109,-76.5273285,39.385794515">https://www.openstreetmap.org/api/0.6/map?bbox=-76.7237091,39.19714109,-76.5273285,39.385794515</a></p>
 </blockquote>
 <p>I am currently logged in to OSM (my browser has a cookie).</p>
 <p>It doesn't work. When I try the diagnostic:</p>
 <blockquote>
-<p><a href="http://www.openstreetmap.org/api/0.6/permissions">http://www.openstreetmap.org/api/0.6/permissions</a></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/permissions">https://www.openstreetmap.org/api/0.6/permissions</a></p>
 </blockquote>
 <p>I get a response of an empty set of permissions.</p>
 <p>What do I need to do?</p>
@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The api is designed for editing the openstreetmap data. It has a limit how big an area you are allowed to download at once. The whole of Baltimore is certainly too much.</p>
-<p>Clicking on the <a href="http://www.openstreetmap.org/export#map=12/39.2915/-76.6255">export button</a> at the top of the the openstreetmap main page list some alternatives if the export from the api fails, because the area is too big. E.g.: <a href="http://overpass-api.de/api/map?bbox=-76.7237,39.1971,-76.5273,39.3858">http://overpass-api.de/api/map?bbox=-76.7237,39.1971,-76.5273,39.3858</a> and <a href="http://metro.teczno.com/#dc-baltimore">http://metro.teczno.com/#dc-baltimore</a></p>
+<p>Clicking on the <a href="https://www.openstreetmap.org/export#map=12/39.2915/-76.6255">export button</a> at the top of the the openstreetmap main page list some alternatives if the export from the api fails, because the area is too big. E.g.: <a href="http://overpass-api.de/api/map?bbox=-76.7237,39.1971,-76.5273,39.3858">http://overpass-api.de/api/map?bbox=-76.7237,39.1971,-76.5273,39.3858</a> and <a href="http://metro.teczno.com/#dc-baltimore">http://metro.teczno.com/#dc-baltimore</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

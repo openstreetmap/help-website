@@ -138,7 +138,7 @@ One Answer:
 <div id="post-39187-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3922/febs">@Febs</a>: Don't confuse relations with ways. In OSM a <a href="https://wiki.openstreetmap.org/wiki/Relations">relation</a> is a separate <a href="https://wiki.openstreetmap.org/wiki/Elements">element</a>, next to nodes and ways.</p>
+<p><a href="https://help.openstreetmap.org/users/3922/febs">@Febs</a>: Don't confuse relations with ways. In OSM a <a href="https://wiki.openstreetmap.org/wiki/Relations">relation</a> is a separate <a href="https://wiki.openstreetmap.org/wiki/Elements">element</a>, next to nodes and ways.</p>
 </div>
 <div id="comment-39187-info" class="comment-info">
 <span class="comment-age">(10 Dec '14, 14:36)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -161,7 +161,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5587/yvecai">@yvecai</a>: Logical is in the eye of the beholder. Fortunately, we have several editors, so you can choose the one that seems most logical to you.</p>
+<p><a href="https://help.openstreetmap.org/users/5587/yvecai">@yvecai</a>: Logical is in the eye of the beholder. Fortunately, we have several editors, so you can choose the one that seems most logical to you.</p>
 </div>
 <div id="comment-39198-info" class="comment-info">
 <span class="comment-age">(10 Dec '14, 18:50)</span> <span class="comment-user userinfo">Richard ♦</span>

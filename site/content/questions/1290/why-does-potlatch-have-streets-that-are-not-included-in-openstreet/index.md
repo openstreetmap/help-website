@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>By OpenStreet i presume you mean the map rendering on the main page. That map is a representation of the data in the database. For more info on how the data is represented in the database see <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">the beginners guide</a>.</p>
+<p>By OpenStreet i presume you mean the map rendering on the main page. That map is a representation of the data in the database. For more info on how the data is represented in the database see <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">the beginners guide</a>.</p>
 <p>It is hard to understand exactly what is the problem when you do not have an example. It could be that there are some ways in the database without tags that the map renderer renders on like a highway=* tag. Or the ways might have been added recently and the map has not rendered the new changes yet. Or you might accidentally have switched on deleted ways in potlatch (hotkey 'd') that displays ways that have been deleted from the database.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -219,7 +219,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Following is the link to the page I am referring to. On the southeast side of the main highway (AZ303) there is a development in Potlatch that is not portrayed in OpenStreet.</p>
-<p><a href="http://www.openstreetmap.org/?lat=33.7009&amp;lon=-112.32723&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=33.7009&amp;lon=-112.32723&amp;zoom=15&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=33.7009&amp;lon=-112.32723&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=33.7009&amp;lon=-112.32723&amp;zoom=15&amp;layers=M</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

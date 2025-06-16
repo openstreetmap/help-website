@@ -107,7 +107,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Don't put the both. Generally, I prefer put only the node, because draw a polygon that defines precisely the area is difficult.</p>
-<p>Indeed, I think you can take a look at <a href="http://help.openstreetmap.org/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">this answer</a></p>
+<p>Indeed, I think you can take a look at <a href="/questions/3824/should-amenities-eg-supermarkets-be-ways-or-nodes">this answer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

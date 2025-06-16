@@ -248,7 +248,7 @@ opening_date=2021-11-30</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For only four moths i wound just add some map notes, they are instant and can be removed just as quickly. <img src="https://help.openstreetmap.org/upfiles/map_note_Great_Ouse_way_NqL0kTG.jpg" alt="alt text" /></p>
+<p>For only four moths i wound just add some map notes, they are instant and can be removed just as quickly. <img src="/upfiles/map_note_Great_Ouse_way_NqL0kTG.jpg" alt="alt text" /></p>
 <p>I would not recommend changing the map data for such a short time. The change would be ok for the main OSM map but many derived maps use that data, and they will time lag so long that by the time they have reacted to the closed bridge it will be repaired and then there will be another time lag for them to show the restored route. I am looking at this from the point of view for a OSM on Garmin user. I don't know what commercial map providers like TomTom and Garmins do. They, i think, only do once a year updates and I guess they ignore short time closures and use dab or phone traffic alerts to cover this.</p>
 </div>
 <div class="answer-controls post-controls">

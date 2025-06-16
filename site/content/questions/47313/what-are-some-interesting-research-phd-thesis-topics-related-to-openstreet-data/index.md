@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the <a href="http://wiki.openstreetmap.org/wiki/Research">Research page on the Wiki</a> to get some ideas. There are many aspects of OSM that could lend themselves to writing a PhD thesis; are you looking for a particular angle (computer science, social science, ...)?</p>
+<p>Have a look at the <a href="https://wiki.openstreetmap.org/wiki/Research">Research page on the Wiki</a> to get some ideas. There are many aspects of OSM that could lend themselves to writing a PhD thesis; are you looking for a particular angle (computer science, social science, ...)?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

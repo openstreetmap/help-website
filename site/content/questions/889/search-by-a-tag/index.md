@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Query-to-map"></a><a href="http://wiki.openstreetmap.org/wiki/Query-to-map"></a><a href="http://wiki.openstreetmap.org/wiki/Query-to-map">http://wiki.openstreetmap.org/wiki/Query-to-map</a></p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Query-to-map"></a><a href="https://wiki.openstreetmap.org/wiki/Query-to-map"></a><a href="https://wiki.openstreetmap.org/wiki/Query-to-map">https://wiki.openstreetmap.org/wiki/Query-to-map</a></p>
 <p>There you can get the desired data on a map. The OSM data is mirrored on a Wikimedia toolserver.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -218,8 +218,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You want to use the <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> for this, for <a href="http://wiki.openstreetmap.org/wiki/Xapi#Usage">example</a> <a href="http://*http://www.informationfreeway.org">*http://www.informationfreeway.org</a>/api/0.6/node[amenity=hospital]*.</p>
-<p>The data might be slightly older (a few minutes) than the OSM database, but the XAPI is modified to provide fast and enhanced search and querying capabilities. It supports only searching for one tag at the same time and you can limit the area by specifying a bounding box. Also, there are several <a href="http://wiki.openstreetmap.org/wiki/Xapi#Servers">mirrors</a> available.</p>
+<p>You want to use the <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> for this, for <a href="https://wiki.openstreetmap.org/wiki/Xapi#Usage">example</a> <a href="http://*http://www.informationfreeway.org">*http://www.informationfreeway.org</a>/api/0.6/node[amenity=hospital]*.</p>
+<p>The data might be slightly older (a few minutes) than the OSM database, but the XAPI is modified to provide fast and enhanced search and querying capabilities. It supports only searching for one tag at the same time and you can limit the area by specifying a bounding box. Also, there are several <a href="https://wiki.openstreetmap.org/wiki/Xapi#Servers">mirrors</a> available.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

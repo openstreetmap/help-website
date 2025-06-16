@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>, an API, can give you data in <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">CSV format</a>, which should be loadable into Excel.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>, an API, can give you data in <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">CSV format</a>, which should be loadable into Excel.</p>
 <p><a href="http://overpass-turbo.eu/s/6Zq">Here's a sample Overpass query</a> that gives a CSV file of restaurants, plus some data about them, just move the map to NY, and press Run again.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -135,7 +135,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10310/joshant">@joshant</a>: and in case you do not yet know how specific types of "establishments" are <span>described</span> in the OpenStreetMap data, have a look at <span>Map Features</span> (takes a while to load) or <a href="/questions/116/">which-tags-do-i-use</a>. In your restaurant case the usual tag is <code>amenity=restaurant</code> which you will recognize in in rorym's sample query code (<code>"amenity"="restaurant"</code>).</p>
+<p><a href="https://help.openstreetmap.org/users/10310/joshant">@joshant</a>: and in case you do not yet know how specific types of "establishments" are <span>described</span> in the OpenStreetMap data, have a look at <span>Map Features</span> (takes a while to load) or <a href="/questions/116/">which-tags-do-i-use</a>. In your restaurant case the usual tag is <code>amenity=restaurant</code> which you will recognize in in rorym's sample query code (<code>"amenity"="restaurant"</code>).</p>
 </div>
 <div id="comment-40251-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 14:20)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -162,7 +162,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Another variant on the query, missing <a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a>'s suggestion with uses the around operator to point at NYC directly <a href="http://overpass-turbo.eu/s/6ZD">http://overpass-turbo.eu/s/6ZD</a></p>
+<p>Another variant on the query, missing <a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a>'s suggestion with uses the around operator to point at NYC directly <a href="http://overpass-turbo.eu/s/6ZD">http://overpass-turbo.eu/s/6ZD</a></p>
 </div>
 <div id="comment-40260-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 18:58)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -173,7 +173,7 @@ One Answer:
 <div id="post-40261-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: while you are at "variants … is there a way to use the <span>boundary relation of New York</span> – in case one strictly wants to only get restaurants from New York (like in the example above)? – Okay, <a href="/questions/31376/finding-areas-within-areas-with-overpass-ql">apparently</a> not (at least not for all object types).</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>: while you are at "variants … is there a way to use the <span>boundary relation of New York</span> – in case one strictly wants to only get restaurants from New York (like in the example above)? – Okay, <a href="/questions/31376/finding-areas-within-areas-with-overpass-ql">apparently</a> not (at least not for all object types).</p>
 </div>
 <div id="comment-40261-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 19:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -185,7 +185,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: yes, you could refer to that boundary relation as well: <a href="http://overpass-turbo.eu/s/6ZI">http://overpass-turbo.eu/s/6ZI</a></p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: yes, you could refer to that boundary relation as well: <a href="http://overpass-turbo.eu/s/6ZI">http://overpass-turbo.eu/s/6ZI</a></p>
 </div>
 <div id="comment-40264-info" class="comment-info">
 <span class="comment-age">(12 Jan '15, 19:35)</span> <span class="comment-user userinfo">mmd</span>

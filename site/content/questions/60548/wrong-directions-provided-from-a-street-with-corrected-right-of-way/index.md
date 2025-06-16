@@ -63,7 +63,7 @@ osqa_accepted = true
 <div id="post-60549-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>From here <a href="http://www.openstreetmap.org/#map=18/41.09348/-73.55546">http://www.openstreetmap.org/#map=18/41.09348/-73.55546</a></p>
+<p>From here <a href="https://www.openstreetmap.org/#map=18/41.09348/-73.55546">https://www.openstreetmap.org/#map=18/41.09348/-73.55546</a></p>
 </div>
 <div id="comment-60549-info" class="comment-info">
 <span class="comment-age">(11 Nov '17, 15:37)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -74,7 +74,7 @@ osqa_accepted = true
 <div id="post-60551-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>to here??? <a href="http://www.openstreetmap.org/directions#map=15/41.0690/-73.5493">http://www.openstreetmap.org/directions#map=15/41.0690/-73.5493</a></p>
+<p>to here??? <a href="https://www.openstreetmap.org/directions#map=15/41.0690/-73.5493">https://www.openstreetmap.org/directions#map=15/41.0690/-73.5493</a></p>
 </div>
 <div id="comment-60551-info" class="comment-info">
 <span class="comment-age">(11 Nov '17, 15:50)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -85,7 +85,7 @@ osqa_accepted = true
 <div id="post-60552-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Can you give a better link, with both start and end? Something like <a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09403%2C-73.55385%3B41.09355%2C-73.55223#map=19/41.09374/-73.55290">http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09403%2C-73.55385%3B41.09355%2C-73.55223#map=19/41.09374/-73.55290</a> (select start, select end, copy url)</p>
+<p>Can you give a better link, with both start and end? Something like <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09403%2C-73.55385%3B41.09355%2C-73.55223#map=19/41.09374/-73.55290">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09403%2C-73.55385%3B41.09355%2C-73.55223#map=19/41.09374/-73.55290</a> (select start, select end, copy url)</p>
 </div>
 <div id="comment-60552-info" class="comment-info">
 <span class="comment-age">(11 Nov '17, 16:06)</span> <span class="comment-user userinfo">Mateusz Koni...</span>
@@ -97,7 +97,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Link: <a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09374%2C-73.55707%3B41.05169%2C-73.54276#map=14/41.0722/-73.5511">http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09374%2C-73.55707%3B41.05169%2C-73.54276#map=14/41.0722/-73.5511</a></p>
+<p>Link: <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09374%2C-73.55707%3B41.05169%2C-73.54276#map=14/41.0722/-73.5511">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=41.09374%2C-73.55707%3B41.05169%2C-73.54276#map=14/41.0722/-73.5511</a></p>
 </div>
 <div id="comment-60555-info" class="comment-info">
 <span class="comment-age">(11 Nov '17, 16:11)</span> <span class="comment-user userinfo">bilinday</span>
@@ -163,7 +163,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have had a quick look and i can't see an error. Often routers take several days to fully react to recent edits. I have waited a few days for things to work. You could try some of the other routers, which might react more quickly or just wait. I assume the routers only renew their data, from OSM, every day or so, not instantly. Looking at a question i asked it looks like i waited 4 days <a href="https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
+<p>I have had a quick look and i can't see an error. Often routers take several days to fully react to recent edits. I have waited a few days for things to work. You could try some of the other routers, which might react more quickly or just wait. I assume the routers only renew their data, from OSM, every day or so, not instantly. Looking at a question i asked it looks like i waited 4 days <a href="/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

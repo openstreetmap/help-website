@@ -114,8 +114,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First things first, you're going to need to find out about what OSM data contains. <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">This page</a> from the beginners' guide is a simple introduction. Next, you're going to need to download some data. The XML data for the entire planet is huge, but there are links to some area-based extracts on <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">this page</a>. To start with, you might just want to extract a very small amount of data locally to you - perhaps using <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>.</p>
-<p>Routing is a big topic in its own right and there are lots of issues to consider, but many of them are introduced <a href="http://wiki.openstreetmap.org/wiki/Routing">here</a>.</p>
+<p>First things first, you're going to need to find out about what OSM data contains. <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">This page</a> from the beginners' guide is a simple introduction. Next, you're going to need to download some data. The XML data for the entire planet is huge, but there are links to some area-based extracts on <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">this page</a>. To start with, you might just want to extract a very small amount of data locally to you - perhaps using <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>.</p>
+<p>Routing is a big topic in its own right and there are lots of issues to consider, but many of them are introduced <a href="https://wiki.openstreetmap.org/wiki/Routing">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

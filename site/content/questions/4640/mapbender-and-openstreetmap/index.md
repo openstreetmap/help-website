@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are some <a href="http://wiki.openstreetmap.org/wiki/WMS">WMS servers</a> serving OSM data which you could use. Also, Mapbender seems to support some kind of wrapped OpenLayers map (see <a href="http://www.osgeo.org/node/1052">this OSgeo posting</a> - sadly not very informative); such an OpenLayers wrapping would allow you to use the normal OSM tiles.</p>
+<p>There are some <a href="https://wiki.openstreetmap.org/wiki/WMS">WMS servers</a> serving OSM data which you could use. Also, Mapbender seems to support some kind of wrapped OpenLayers map (see <a href="http://www.osgeo.org/node/1052">this OSgeo posting</a> - sadly not very informative); such an OpenLayers wrapping would allow you to use the normal OSM tiles.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

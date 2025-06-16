@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>I've checked FF's developer's local storage &amp; the routines are all there.</p>
 <p>The way it displays centrally stored routines (osm.org) has also changed, displaying a scrollable window within a window.</p>
 <p>Edit: Update images. I'm now also getting the message on the right</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OT_routine_window_Fr9wFhR.JPG" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/OT_Browser_not_supported.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/OT_routine_window_Fr9wFhR.JPG" alt="alt text" /> <img src="/upfiles/OT_Browser_not_supported.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass-turbo" rel="tag" title="see questions tagged &#39;overpass-turbo&#39;">overpass-turbo</span> <span class="post-tag tag-link-saved" rel="tag" title="see questions tagged &#39;saved&#39;">saved</span> <span class="post-tag tag-link-queries" rel="tag" title="see questions tagged &#39;queries&#39;">queries</span>

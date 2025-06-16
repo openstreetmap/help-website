@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>In some cases railway lines are converted into cycle paths and these are easy as bikerouter.de takes care of that.</p>
 <p>Any suggestions on how to mark up something on OSM that's not a railway track, road, pathway etc.? Is there a way through Google Maps for example?</p>
 <p>Thanks</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2022-12-14_at_22.06.44.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2022-12-14_at_22.06.44.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-railroad" rel="tag" title="see questions tagged &#39;railroad&#39;">railroad</span> <span class="post-tag tag-link-railway" rel="tag" title="see questions tagged &#39;railway&#39;">railway</span> <span class="post-tag tag-link-rail" rel="tag" title="see questions tagged &#39;rail&#39;">rail</span> <span class="post-tag tag-link-lifted" rel="tag" title="see questions tagged &#39;lifted&#39;">lifted</span> <span class="post-tag tag-link-closed" rel="tag" title="see questions tagged &#39;closed&#39;">closed</span>

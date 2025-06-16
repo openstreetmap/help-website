@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Bookstore only showing street number in View instead of name and icon."
-description = '''I&#x27;m having a problem with a bookshop only showing the street number (4650) on the map in View mode instead of the business name and icon: http://www.openstreetmap.org/?lat=32.953863&amp;amp;lon=-80.161958&amp;amp;zoom=18 The other businesses in the building that I&#x27;ve entered so far show correctly in View mo...'''
+description = '''I&#x27;m having a problem with a bookshop only showing the street number (4650) on the map in View mode instead of the business name and icon: https://www.openstreetmap.org/?lat=32.953863&amp;amp;lon=-80.161958&amp;amp;zoom=18 The other businesses in the building that I&#x27;ve entered so far show correctly in View mo...'''
 date = "2013-03-21T21:47:00Z"
 lastmod = "2013-03-22T00:00:00Z"
 weight = 20887
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm having a problem with a bookshop only showing the street number (4650) on the map in View mode instead of the business name and icon: <a href="http://www.openstreetmap.org/?lat=32.953863&amp;lon=-80.161958&amp;zoom=18">http://www.openstreetmap.org/?lat=32.953863&amp;lon=-80.161958&amp;zoom=18</a></p>
+<p>I'm having a problem with a bookshop only showing the street number (4650) on the map in View mode instead of the business name and icon: <a href="https://www.openstreetmap.org/?lat=32.953863&amp;lon=-80.161958&amp;zoom=18">https://www.openstreetmap.org/?lat=32.953863&amp;lon=-80.161958&amp;zoom=18</a></p>
 <p>The other businesses in the building that I've entered so far show correctly in View mode. The post office I entered in a nearby building is only showing an icon, no name.</p>
 <p>In Edit mode, the icon appears for the bookshop and the barbershop next door, but no name. The restaurant (Philly's) in the same building displays icon and name in both View and Edit modes.</p>
 <p>What determines when the icon and name or just street number show?</p>
@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The map style which you are viewing determines which information is shown. There are many map styles. - please see e.g. <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p>The map style which you are viewing determines which information is shown. There are many map styles. - please see e.g. <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

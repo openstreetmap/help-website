@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, there isn't a procedure, mostly because it's unnecessary. Although the OSM wiki uses MediaWiki, it's just side documentation for the project and doesn't have the same significance to the project as Wikipedia. This means fewer administrators are needed, and <a href="http://wiki.openstreetmap.org/w/index.php?title=Special:ListUsers&amp;group=sysop">the current team of admins</a> is generally able to cope with the workload.</p>
+<p>No, there isn't a procedure, mostly because it's unnecessary. Although the OSM wiki uses MediaWiki, it's just side documentation for the project and doesn't have the same significance to the project as Wikipedia. This means fewer administrators are needed, and <a href="https://wiki.openstreetmap.org/w/index.php?title=Special:ListUsers&amp;group=sysop">the current team of admins</a> is generally able to cope with the workload.</p>
 <p>Most of the problems with the wiki are related to the quality of the documentation, which don't require administrator privileges to fix.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -174,7 +174,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Even if the wiki suggests otherwise you can use <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dshelter">amenity=shelter</a> on ways, too. According to <a href="http://taginfo.openstreetmap.org/tags/amenity=shelter">taginfo</a> this has already been done 5 726 times which is 15 % for all amenity=shelter objects.</p>
+<p>Even if the wiki suggests otherwise you can use <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dshelter">amenity=shelter</a> on ways, too. According to <a href="http://taginfo.openstreetmap.org/tags/amenity=shelter">taginfo</a> this has already been done 5 726 times which is 15 % for all amenity=shelter objects.</p>
 <p>Another way is to use <a href="http://taginfo.openstreetmap.org/tags/building=shelter">building=shelter</a> which already has been used 855 times. The building tag is completely fine for the structure shown in your picture in my opinion.</p>
 </div>
 <div class="answer-controls post-controls">

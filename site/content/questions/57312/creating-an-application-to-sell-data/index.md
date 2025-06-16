@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am looking to create a commercial application that will sell data collected back to the consumer and business. I am curious on how I can set this up properly because I know there are some licenses that states the data has to be shared. After doing some research not he forums I have found this :<a href="https://help.openstreetmap.org/questions/17855/use-of-osm-in-closed-commercial-software">https://help.openstreetmap.org/questions/17855/use-of-osm-in-closed-commercial-software</a></p>
+<p>I am looking to create a commercial application that will sell data collected back to the consumer and business. I am curious on how I can set this up properly because I know there are some licenses that states the data has to be shared. After doing some research not he forums I have found this :<a href="/questions/17855/use-of-osm-in-closed-commercial-software">https://help.openstreetmap.org/questions/17855/use-of-osm-in-closed-commercial-software</a></p>
 <p>but being a complete noob I am having trouble understanding everything in its entirety.</p>
 <p>From what I can gather you can create a separate database with closed data that you can sell as long as it is distinctly labeled and separated from the open source data that would need to be shared.</p>
 <p>I would need to get some type of legal documents to protect my closed data.</p>

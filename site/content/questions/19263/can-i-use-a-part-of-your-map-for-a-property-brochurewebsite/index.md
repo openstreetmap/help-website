@@ -108,10 +108,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can check the <a href="http://wiki.openstreetmap.org/wiki/Open_Database_License">Wiki for more information</a> They also have a <a href="http://wiki.openstreetmap.org/wiki/Open_Data_License_FAQ">FAQ</a>. Also the proper way to give atribution to OpenStreetMap under the new License is:</p>
+<p>You can check the <a href="https://wiki.openstreetmap.org/wiki/Open_Database_License">Wiki for more information</a> They also have a <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License_FAQ">FAQ</a>. Also the proper way to give atribution to OpenStreetMap under the new License is:</p>
 <p>Contains information from OpenStreetMap, which is made available here under the Open Database Licence (ODbL)</p>
 <p>Also check the license of the tiles used.</p>
-<p>For further readings you can <a href="http://www.openstreetmap.org/copyright">read the copyright page</a> you also can rea the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a></p>
+<p>For further readings you can <a href="https://www.openstreetmap.org/copyright">read the copyright page</a> you also can rea the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

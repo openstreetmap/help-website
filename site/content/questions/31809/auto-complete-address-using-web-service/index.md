@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-48894-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Related to <a href="https://help.openstreetmap.org/questions/5473/export-country-state-city-street-zip-code-worldwide-for-use-with-address-auto-completion">https://help.openstreetmap.org/questions/5473/export-country-state-city-street-zip-code-worldwide-for-use-with-address-auto-completion</a></p>
+<p>Related to <a href="/questions/5473/export-country-state-city-street-zip-code-worldwide-for-use-with-address-auto-completion">https://help.openstreetmap.org/questions/5473/export-country-state-city-street-zip-code-worldwide-for-use-with-address-auto-completion</a></p>
 </div>
 <div id="comment-48894-info" class="comment-info">
 <span class="comment-age">(29 Mar '16, 11:48)</span> <span class="comment-user userinfo">cweiske</span>
@@ -146,7 +146,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>... also see <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> for more solutions ... try Pelias online demo by mapzen.</p>
+<p>... also see <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> for more solutions ... try Pelias online demo by mapzen.</p>
 </div>
 <div id="comment-48910-info" class="comment-info">
 <span class="comment-age">(29 Mar '16, 17:11)</span> <span class="comment-user userinfo">stephan75</span>

@@ -126,7 +126,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route</a> and <a href="http://wiki.openstreetmap.org/wiki/Public_transport">public_transport</a>.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route</a> and <a href="https://wiki.openstreetmap.org/wiki/Public_transport">public_transport</a>.</p>
 </div>
 <div id="comment-31947-info" class="comment-info">
 <span class="comment-age">(27 Mar '14, 16:02)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

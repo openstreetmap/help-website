@@ -43,9 +43,9 @@ osqa_accepted = true
 <p>There are two parks that are being read by Overpass Turbo correctly so we matched everything to theirs, but it isn't working.</p>
 <p>Parks in a neighboring town that work are shown correctly in OT as <strong>Way 202514201</strong> and <strong>Way 202514198</strong> (see</p>
 <p>Our park tags and input looks the same in OSM, but I can't find a WAY number there or in Overpass Turbo.</p>
-<p>This is our park: <a href="https://help.openstreetmap.org/upfiles/Overpass_Turbo_correct_FIkMbXa.jpg">https://www.openstreetmap.org/#map=17/44.39356/-122.72630</a></p>
+<p>This is our park: <span>https://www.openstreetmap.org/#map=17/44.39356/-122.72630</span></p>
 <p>TWO IMAGES ATTACHED: One screen shot of two parks that show correctly in Overpass turbo and our park NOT showing correctly.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Overpass_Turbo_correct_FIkMbXa.jpg" alt="alt text" /><img src="https://help.openstreetmap.org/upfiles/No_WAY_for_our_park_7MgaF4W.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Overpass_Turbo_correct_FIkMbXa.jpg" alt="alt text" /><img src="/upfiles/No_WAY_for_our_park_7MgaF4W.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-tagging_ways" rel="tag" title="see questions tagged &#39;tagging_ways&#39;">tagging_ways</span> <span class="post-tag tag-link-overpass-turbo" rel="tag" title="see questions tagged &#39;overpass-turbo&#39;">overpass-turbo</span>

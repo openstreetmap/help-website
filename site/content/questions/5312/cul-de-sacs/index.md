@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A cul-de-sac or dead-end was taged with <a href="http://wiki.openstreetmap.org/wiki/Key:noexit">noexit=yes</a> but this has gone out of use as it is trivial to see if it is a dead-end on a map. You just create a way and tag it with a highway=residential or other tag and routing software will be aware of there being no exit from that street. Other relevant tags might be access=destination or highway=turning_circle</p>
+<p>A cul-de-sac or dead-end was taged with <a href="https://wiki.openstreetmap.org/wiki/Key:noexit">noexit=yes</a> but this has gone out of use as it is trivial to see if it is a dead-end on a map. You just create a way and tag it with a highway=residential or other tag and routing software will be aware of there being no exit from that street. Other relevant tags might be access=destination or highway=turning_circle</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

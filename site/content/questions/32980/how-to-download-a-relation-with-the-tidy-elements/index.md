@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to download a relation with the tidy elements?"
-description = '''I am trying to download a bus route. I want to obtain the elements that compose this relation of a tidy way, as they appear originally in the relation.  http://www.openstreetmap.org/api/0.6/relation/3723432  But when I download the route in the osm resulting file the ways are not ordered. This compl...'''
+description = '''I am trying to download a bus route. I want to obtain the elements that compose this relation of a tidy way, as they appear originally in the relation.  https://www.openstreetmap.org/api/0.6/relation/3723432  But when I download the route in the osm resulting file the ways are not ordered. This compl...'''
 date = "2014-05-08T12:29:00Z"
 lastmod = "2014-05-11T12:26:00Z"
 weight = 32980
@@ -40,10 +40,10 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I am trying to download a bus route. I want to obtain the elements that compose this relation of a tidy way, as they appear originally in the relation.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Seleccion_023.png" alt="alt text" /></p>
-<p><a href="http://www.openstreetmap.org/api/0.6/relation/3723432">http://www.openstreetmap.org/api/0.6/relation/3723432</a></p>
+<p><img src="/upfiles/Seleccion_023.png" alt="alt text" /></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/relation/3723432">https://www.openstreetmap.org/api/0.6/relation/3723432</a></p>
 <p>But when I download the route in the osm resulting file the ways are not ordered. This complicates the analysis that I want to realize in a Geographic Information System (I need to extract the nodes that the route form of a correlative way, from beginning to end).</p>
-<p><a href="http://www.openstreetmap.org/api/0.6/relation/3723432/full">http://www.openstreetmap.org/api/0.6/relation/3723432/full</a></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/relation/3723432/full">https://www.openstreetmap.org/api/0.6/relation/3723432/full</a></p>
 <p><strong>Is there any mode to get the real order of the ways of a route?</strong> Also it serves me in the worst case some way to identify the position of each arc.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -114,7 +114,7 @@ One Answer:
 <pre><code>&lt;member type=&quot;way&quot; ref=&quot;123&quot; /&gt;
 &lt;member type=&quot;way&quot; ref=&quot;555&quot; /&gt;</code></pre>
 <p>and so on. You will then have to extract the way elements from the file in this order, and the ways will in turn reference the nodes which again, you have to extract in the order given in the way.</p>
-<p>This is something that will require just a few lines of code in a programming language of your choice. OSM itself doesn't provide a service that does this job for you. But you might want to check out the answers to <a href="https://help.openstreetmap.org/questions/18295/export-a-way-as-a-gpx">"Export a way as GPX"</a>.</p>
+<p>This is something that will require just a few lines of code in a programming language of your choice. OSM itself doesn't provide a service that does this job for you. But you might want to check out the answers to <a href="/questions/18295/export-a-way-as-a-gpx">"Export a way as GPX"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

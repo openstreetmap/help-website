@@ -157,7 +157,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>See <a href="https://wiki.openstreetmap.org/wiki/File:Maxbe-stubaier-beschriftung_en.png">https://wiki.openstreetmap.org/wiki/File:Maxbe-stubaier-beschriftung_en.png</a> for a suggested tagging (<code>place=region</code> + <code>region:type=mountain_area</code>) for <span>multipolygons</span> and possible use in a map rendering. We currently have <a href="http://taginfo.openstreetmap.org/tags/region%3Atype=mountain_area">215</a> of <code>region:type=mountain_area</code> in the data, according to taginfo.</p>
-<p>Possibly you might be interested in <a href="https://help.openstreetmap.org/questions/50096/tag-naturalupland-as-way-or-enabling-way-for-place-tags">https://help.openstreetmap.org/questions/50096/tag-naturalupland-as-way-or-enabling-way-for-place-tags</a> too)</p>
+<p>Possibly you might be interested in <a href="/questions/50096/tag-naturalupland-as-way-or-enabling-way-for-place-tags">https://help.openstreetmap.org/questions/50096/tag-naturalupland-as-way-or-enabling-way-for-place-tags</a> too)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

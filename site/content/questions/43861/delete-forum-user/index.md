@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi RocketMan, read these lines, <a href="http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F,">http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F,</a> but why ? You’ve got a respectable account, just let it go to sleep by not using it anymore, you don’t disappear neither from this world isn’t it ?</p>
+<p>Hi RocketMan, read these lines, <a href="https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F,">https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F,</a> but why ? You’ve got a respectable account, just let it go to sleep by not using it anymore, you don’t disappear neither from this world isn’t it ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

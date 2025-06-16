@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The best way would probably be to engage in modifying the area yourself. You can do that by clicking the "Edit"-tab at openstreetmap.org.</p>
-<p>You can read up on the <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">Beginner's Guide</a> and if you're particular intrerested in landuse, I would recommend you to read the <a href="http://wiki.openstreetmap.org/wiki/Landuse">wiki on the subject</a>.</p>
+<p>You can read up on the <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">Beginner's Guide</a> and if you're particular intrerested in landuse, I would recommend you to read the <a href="https://wiki.openstreetmap.org/wiki/Landuse">wiki on the subject</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

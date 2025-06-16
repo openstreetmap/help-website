@@ -69,7 +69,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>There are lots of links from <a href="http://wiki.openstreetmap.org/wiki/UMap">http://wiki.openstreetmap.org/wiki/UMap</a> - do they help? There's also "help" information on <a href="http://umap.openstreetmap.fr/en/">http://umap.openstreetmap.fr/en/</a> of course.</p>
+<p>There are lots of links from <a href="https://wiki.openstreetmap.org/wiki/UMap">https://wiki.openstreetmap.org/wiki/UMap</a> - do they help? There's also "help" information on <a href="http://umap.openstreetmap.fr/en/">http://umap.openstreetmap.fr/en/</a> of course.</p>
 </div>
 <div id="comment-48304-info" class="comment-info">
 <span class="comment-age">(23 Feb '16, 12:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please note that <a href="http://wiki.openstreetmap.org/wiki/UMap">UMap</a> is a service <em>on top of</em> OpenStreetMap, which allows individuals to create their own maps (based on the OpenStreetMap map) and share them online. The Bahrain map was created by a UMap user called <a href="http://umap.openstreetmap.co/en/user/ADHRB/">ADHRB</a>; if you're interested in the sources they used to create the map you'll have to contact them - unfortunately, I can't see any way of contacting a UMap user.</p>
+<p>Please note that <a href="https://wiki.openstreetmap.org/wiki/UMap">UMap</a> is a service <em>on top of</em> OpenStreetMap, which allows individuals to create their own maps (based on the OpenStreetMap map) and share them online. The Bahrain map was created by a UMap user called <a href="http://umap.openstreetmap.co/en/user/ADHRB/">ADHRB</a>; if you're interested in the sources they used to create the map you'll have to contact them - unfortunately, I can't see any way of contacting a UMap user.</p>
 <p>If you're looking to create your own map in UMap (based on your own data), then the links provided by <a href="https://help.openstreetmap.org/users/387/someoneelse">SomeoneElse</a> should get you started.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -155,7 +155,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12018/zarar"></a><a href="http://help.openstreetmap.org/users/12018/zarar">@ZaraR</a> maybe you are lucky in trying to contact the equally-named OSM.org user <span>ADHRB</span> (note that there is no user account connection/synchronisation between umap and osm.org, it is just a name similarity). Register on osm.org, then you can send messages to this user.</p>
+<p><a href="https://help.openstreetmap.org/users/12018/zarar"></a><a href="https://help.openstreetmap.org/users/12018/zarar">@ZaraR</a> maybe you are lucky in trying to contact the equally-named OSM.org user <span>ADHRB</span> (note that there is no user account connection/synchronisation between umap and osm.org, it is just a name similarity). Register on osm.org, then you can send messages to this user.</p>
 </div>
 <div id="comment-48364-info" class="comment-info">
 <span class="comment-age">(25 Feb '16, 19:52)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

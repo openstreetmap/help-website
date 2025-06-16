@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The default view on www.openstreetmap.org can't show everything that is added on every zoom level. Don’t try to work for the renderer, it’s his choice to renderer some of the countless items available. The default view is just that though powered by Mapnik. Or produce your own maps, with or without anything you like. See for example: Maperitive Switch2osm Or others and read this as well <a href="http://wiki.openstreetmap.org/wiki/Category:Renderers">http://wiki.openstreetmap.org/wiki/Category:Renderers</a></p>
+<p>The default view on www.openstreetmap.org can't show everything that is added on every zoom level. Don’t try to work for the renderer, it’s his choice to renderer some of the countless items available. The default view is just that though powered by Mapnik. Or produce your own maps, with or without anything you like. See for example: Maperitive Switch2osm Or others and read this as well <a href="https://wiki.openstreetmap.org/wiki/Category:Renderers">https://wiki.openstreetmap.org/wiki/Category:Renderers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -193,7 +193,7 @@ osqa_accepted = false
 <div id="post-44975-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A service which could suit your needs (at least party) is uMap. It also allows to place marker(s), draw lines on the map, add names and description to the markers, Remeber that making your own map is just one step, youll need to have a server too, locally. Build on OSM material thats oke. <a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a> and according to the general agreements on the use of OSM material.</p>
+<p>A service which could suit your needs (at least party) is uMap. It also allows to place marker(s), draw lines on the map, add names and description to the markers, Remeber that making your own map is just one step, youll need to have a server too, locally. Build on OSM material thats oke. <a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a> and according to the general agreements on the use of OSM material.</p>
 </div>
 <div id="comment-44975-info" class="comment-info">
 <span class="comment-age">(30 Aug '15, 23:54)</span> <span class="comment-user userinfo">Hendrikklaas</span>

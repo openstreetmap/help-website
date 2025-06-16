@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have an application with leaflet and overpass.api written in javascript. I use overpass-layer plugin to query to OSM data. My problem , when i query 2 times to overpass.api i get an Too Many request error.</p>
 <p><a href="http://overpass-api.de/api/status">http://overpass-api.de/api/status</a> status shows me that there is a limitation. There is 1 available slot, and after i send a request my IP is blocked for a time period (30sec-3min). Why is my IP banned already after 1 query? And why for so long?.</p>
-<p>in <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">wiki</a> there stands <a href="http://overpass-api.de/api/">http://overpass-api.de/api/</a> :</p>
+<p>in <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">wiki</a> there stands <a href="http://overpass-api.de/api/">http://overpass-api.de/api/</a> :</p>
 <blockquote>
 <p>"Both servers have a total capacity of about 1.000.000 requests per day. You can safely assume that you don't disturb other users when you do less than 10.000 queries per day or download less than 5 GB data per day."</p>
 </blockquote>
@@ -114,7 +114,7 @@ out skel qt;</code></pre>
 <div id="post-52335-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: the query is in the link's URL</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>: the query is in the link's URL</p>
 </div>
 <div id="comment-52335-info" class="comment-info">
 <span class="comment-age">(03 Oct '16, 10:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -137,7 +137,7 @@ out skel qt;</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>This related question contains possibly usefull feedback: <a href="https://help.openstreetmap.org/questions/52384">https://help.openstreetmap.org/questions/52384</a></p>
+<p>This related question contains possibly usefull feedback: <a href="/questions/52384">https://help.openstreetmap.org/questions/52384</a></p>
 </div>
 <div id="comment-52400-info" class="comment-info">
 <span class="comment-age">(07 Oct '16, 19:46)</span> <span class="comment-user userinfo">alexvanderli...</span>

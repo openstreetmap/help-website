@@ -143,8 +143,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Simplest way would be to use general map on <a href="http://openstreetmap.org">openstreetmap.org</a> then click permalink in lower right corner. You will get link in your address bar. Now change lat to mlat and lon to mlon and that's it. Or you could have both sets of lat and lon and mlat and mlon if You wish to have marker not in center of map. There probably is more handy way to use this than editing permalink by hand, but for all my needs it's enough.</p>
-<p><a href="http://www.openstreetmap.org/?mlat=51.107686&amp;mlon=17.062196&amp;zoom=18&amp;layers=M">Example1 - A1 building of Wroclaw University of technology</a></p>
-<p><a href="http://www.openstreetmap.org/?mlat=51.107686&amp;mlon=17.062196&amp;zoom=18&amp;layers=M&amp;lat=51.107686&amp;lon=17.06">Example2 same building but centered over C13</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=51.107686&amp;mlon=17.062196&amp;zoom=18&amp;layers=M">Example1 - A1 building of Wroclaw University of technology</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=51.107686&amp;mlon=17.062196&amp;zoom=18&amp;layers=M&amp;lat=51.107686&amp;lon=17.06">Example2 same building but centered over C13</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -239,7 +239,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A similar question has previously been asked and answered here: <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map"><strong>How do I add a marker to a map?</strong></a></p>
+<p>A similar question has previously been asked and answered here: <a href="/questions/25/how-do-i-add-a-marker-to-a-map"><strong>How do I add a marker to a map?</strong></a></p>
 <p>Most of the solutions for that question will generate a link that can be shared with others.</p>
 </div>
 <div class="answer-controls post-controls">

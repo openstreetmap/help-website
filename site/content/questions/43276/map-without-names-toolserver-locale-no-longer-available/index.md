@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see <a href="https://help.openstreetmap.org/questions/40664/how-to-hide-all-labels-of-osm">this question</a>. It has an answer pointing to a tile server offered by wmflabs.org (Wikimedia) which provides tiles without any labels. Also be sure to read the comments, especially about the tile usage policy that you should check when using these tiles on a larger scale.</p>
+<p>Please see <a href="/questions/40664/how-to-hide-all-labels-of-osm">this question</a>. It has an answer pointing to a tile server offered by wmflabs.org (Wikimedia) which provides tiles without any labels. Also be sure to read the comments, especially about the tile usage policy that you should check when using these tiles on a larger scale.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -91,7 +91,7 @@ osqa_accepted = true
 <div id="post-36441-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a>: now the link works. There was just the "." included in it.</p>
+<p><a href="https://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a>: now the link works. There was just the "." included in it.</p>
 </div>
 <div id="comment-36441-info" class="comment-info">
 <span class="comment-age">(31 Aug '14, 09:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

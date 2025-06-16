@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-49654-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I. Have. No. Idea :-D Okay, a basic draft one: <a href="http://www.yournavigation.org/">http://www.yournavigation.org/</a> uses <a href="http://wiki.openstreetmap.org/wiki/YOURS">http://wiki.openstreetmap.org/wiki/YOURS</a> and as Routing-Engine <a href="http://wiki.openstreetmap.org/wiki/Gosmore.">http://wiki.openstreetmap.org/wiki/Gosmore.</a> We thought to try this first and then compare the results with the results from +20 engines (on- and offline, ie. Google, Bing, Apple, Maptitude, etc., etc.) we have on file (we used to "callibrate" our results) I thought if someone has experience with the hardware-requirements, there would be likely ideas what to use in such a scenario...? ツ</p>
+<p>I. Have. No. Idea :-D Okay, a basic draft one: <a href="http://www.yournavigation.org/">http://www.yournavigation.org/</a> uses <a href="https://wiki.openstreetmap.org/wiki/YOURS">https://wiki.openstreetmap.org/wiki/YOURS</a> and as Routing-Engine <a href="https://wiki.openstreetmap.org/wiki/Gosmore.">https://wiki.openstreetmap.org/wiki/Gosmore.</a> We thought to try this first and then compare the results with the results from +20 engines (on- and offline, ie. Google, Bing, Apple, Maptitude, etc., etc.) we have on file (we used to "callibrate" our results) I thought if someone has experience with the hardware-requirements, there would be likely ideas what to use in such a scenario...? ツ</p>
 </div>
 <div id="comment-49654-info" class="comment-info">
 <span class="comment-age">(10 May '16, 20:13)</span> <span class="comment-user userinfo">Osm_ccom</span>
@@ -192,7 +192,7 @@ osqa_accepted = false
 <div id="post-54303-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> your comment makes more sense agains the next answer</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> your comment makes more sense agains the next answer</p>
 </div>
 <div id="comment-54303-info" class="comment-info">
 <span class="comment-age">(26 Jan '17, 14:00)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -226,7 +226,7 @@ osqa_accepted = false
 <div id="post-54308-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> (as you've discovered now) you need to do that the other way around for it to work :)</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> (as you've discovered now) you need to do that the other way around for it to work :)</p>
 </div>
 <div id="comment-54308-info" class="comment-info">
 <span class="comment-age">(26 Jan '17, 14:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

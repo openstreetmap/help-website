@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>The section is wrongly indicated as ONEWAY in the Northerly direction. The section should correctly be a two-way road.</p>
 <p>Kindly advise. Thanks,</p>
 <p>Pat</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Problem_section_apOMa19.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Problem_section_apOMa19.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-directions" rel="tag" title="see questions tagged &#39;directions&#39;">directions</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span>

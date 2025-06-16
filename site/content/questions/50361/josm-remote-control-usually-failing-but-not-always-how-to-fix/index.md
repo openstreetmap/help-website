@@ -64,7 +64,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>You can try this answer:</p>
-<p><a href="http://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm/33833">http://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm/33833</a></p>
+<p><a href="/questions/2208/how-do-i-enable-the-remote-control-in-josm/33833">https://help.openstreetmap.org/questions/2208/how-do-i-enable-the-remote-control-in-josm/33833</a></p>
 <p>(If the problem is the missing certificate in Firefox, the times it is working you are probably visiting <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> rather than <a href="https://www.openstreetmap.org">https://www.openstreetmap.org</a>)</p>
 </div>
 <div id="comment-50362-info" class="comment-info">
@@ -77,7 +77,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>, thanks for the suggestion, it seems to be the right answer! So far while visiting the site via http I am able to use the remote control.</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a>, thanks for the suggestion, it seems to be the right answer! So far while visiting the site via http I am able to use the remote control.</p>
 </div>
 <div id="comment-50396-info" class="comment-info">
 <span class="comment-age">(23 Jun '16, 07:36)</span> <span class="comment-user userinfo">keithonearth</span>

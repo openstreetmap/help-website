@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>After staying with a lovely family in Ubud, Bali, Indonesia, I added their guest accomodations to OSM. A few months later, <a href="http://www.openstreetmap.org/browse/node/2186773781/history">the node</a> has been removed.</p>
-<p>The deletion has been done by the user "thewhitevillas", who seems to be competing in the tourist accomodation branch. The only <a href="http://www.openstreetmap.org/browse/changeset/16965149">changeset</a> created by this user deletes a lot of their competition (accomodations, etc.), and nodes that represent interesting or useful things around their competition (bars, supermarkets, coffeeshops, etc). They added restaurants, stores etc. around their own "villas" to make them look more appealing.</p>
-<p>I've sent the user a message a day ago, but I do not expect a response, as this is clearly vandalism. Please revert <a href="http://www.openstreetmap.org/browse/changeset/16965149">changeset 16965149</a> and ban this user.</p>
+<p>After staying with a lovely family in Ubud, Bali, Indonesia, I added their guest accomodations to OSM. A few months later, <a href="https://www.openstreetmap.org/browse/node/2186773781/history">the node</a> has been removed.</p>
+<p>The deletion has been done by the user "thewhitevillas", who seems to be competing in the tourist accomodation branch. The only <a href="https://www.openstreetmap.org/browse/changeset/16965149">changeset</a> created by this user deletes a lot of their competition (accomodations, etc.), and nodes that represent interesting or useful things around their competition (bars, supermarkets, coffeeshops, etc). They added restaurants, stores etc. around their own "villas" to make them look more appealing.</p>
+<p>I've sent the user a message a day ago, but I do not expect a response, as this is clearly vandalism. Please revert <a href="https://www.openstreetmap.org/browse/changeset/16965149">changeset 16965149</a> and ban this user.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tourism" rel="tag" title="see questions tagged &#39;tourism&#39;">tourism</span> <span class="post-tag tag-link-bali" rel="tag" title="see questions tagged &#39;bali&#39;">bali</span> <span class="post-tag tag-link-vandalism" rel="tag" title="see questions tagged &#39;vandalism&#39;">vandalism</span>
@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I wouldn't automatically assume vandalism - it may be an honest mistake; quite often users edit the map not realising it affects the data that everyone sees, just wanting to modify the map for their personal use (so just leaving what they want to show in the area they are interested in). After all, they've added lots of restaurants and the odd bank as well as themselves, so it would be a pity to lose this additional information by reverting the whole changeset and not keep the good bits.</p>
-<p>Perhaps reverting the changeset and adding back the v1 nodes would work, although reverting will be complicated slightly by one of the ways being edited again since: <a href="http://www.openstreetmap.org/browse/way/27727711">http://www.openstreetmap.org/browse/way/27727711</a></p>
+<p>Perhaps reverting the changeset and adding back the v1 nodes would work, although reverting will be complicated slightly by one of the ways being edited again since: <a href="https://www.openstreetmap.org/browse/way/27727711">https://www.openstreetmap.org/browse/way/27727711</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

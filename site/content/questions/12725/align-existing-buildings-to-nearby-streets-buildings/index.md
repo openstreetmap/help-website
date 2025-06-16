@@ -150,7 +150,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9931/zellfaze">@zellfaze</a>: No, I just tried it myself and the two nodes you select don't get moved, just the selected way.</p>
+<p><a href="https://help.openstreetmap.org/users/9931/zellfaze">@zellfaze</a>: No, I just tried it myself and the two nodes you select don't get moved, just the selected way.</p>
 </div>
 <div id="comment-51094-info" class="comment-info">
 <span class="comment-age">(25 Jul '16, 23:00)</span> <span class="comment-user userinfo">alester</span>

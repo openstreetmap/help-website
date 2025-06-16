@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Be aware that Bing did not take that satellite photos self, they have to buy the pictures by the real providers. Unfortunately there might be some areas in the world where Bing does not have acquired the picture material. So there can be no pictures at high resolution.</p>
-<p>Look at <a href="http://wiki.openstreetmap.org/wiki/Bing/Coverage">Bing coverage</a> for details.</p>
+<p>Look at <a href="https://wiki.openstreetmap.org/wiki/Bing/Coverage">Bing coverage</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

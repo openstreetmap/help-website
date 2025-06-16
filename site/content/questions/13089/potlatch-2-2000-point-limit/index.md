@@ -69,7 +69,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I've added a note to the place=island wikipage:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Disland">http://wiki.openstreetmap.org/wiki/Tag:place%3Disland</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Disland">https://wiki.openstreetmap.org/wiki/Tag:place%3Disland</a></p>
 </div>
 <div id="comment-37355-info" class="comment-info">
 <span class="comment-age">(06 Oct '14, 21:17)</span> <span class="comment-user userinfo">Hawkeye</span>
@@ -124,7 +124,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Simple answer you can't do what you want to do, since the 2000 node/point limit is a limit of the OSM system, not a limitation of any specific editor.</p>
-<p>The correct way to map such an object is to create a (in this case simple) multipolygon, see <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Multiple_ways_forming_a_ring">http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Multiple_ways_forming_a_ring</a></p>
+<p>The correct way to map such an object is to create a (in this case simple) multipolygon, see <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Multiple_ways_forming_a_ring">https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Multiple_ways_forming_a_ring</a></p>
 <p>This can be done in P2 by:</p>
 <ul>
 <li><p>selecting the way you want to add to the multipolygon</p></li>
@@ -179,7 +179,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>For an example you could have a look at <a href="http://www.openstreetmap.org/?lat=22.756&amp;lon=32.336&amp;zoom=9&amp;layers=M">Lake Nasser</a>.</p>
+<p>For an example you could have a look at <a href="https://www.openstreetmap.org/?lat=22.756&amp;lon=32.336&amp;zoom=9&amp;layers=M">Lake Nasser</a>.</p>
 </div>
 <div id="comment-21925-info" class="comment-info">
 <span class="comment-age">(27 Apr '13, 16:14)</span> <span class="comment-user userinfo">malenki</span>

@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Android">http://wiki.openstreetmap.org/wiki/Android</a> lists all known Android apps. osmtracker is likely the most popular pure tracking app.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Android">https://wiki.openstreetmap.org/wiki/Android</a> lists all known Android apps. osmtracker is likely the most popular pure tracking app.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

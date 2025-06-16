@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Inventing names for essentially unnamed private airstrips?"
-description = '''I recently took part in a small editwar over an unnamed (no official or locally reckognized name) private airstrip: http://www.openstreetmap.org/way/573934869/history  I removed an obviously invented english name (the airstrip is in Denmark and an official name would most likely have been different ...'''
+description = '''I recently took part in a small editwar over an unnamed (no official or locally reckognized name) private airstrip: https://www.openstreetmap.org/way/573934869/history  I removed an obviously invented english name (the airstrip is in Denmark and an official name would most likely have been different ...'''
 date = "2018-04-01T19:39:00Z"
 lastmod = "2018-04-01T23:00:00Z"
 weight = 62884
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I recently took part in a small editwar over an unnamed (no official or locally reckognized name) private airstrip: <a href="http://www.openstreetmap.org/way/573934869/history">http://www.openstreetmap.org/way/573934869/history</a></p>
+<p>I recently took part in a small editwar over an unnamed (no official or locally reckognized name) private airstrip: <a href="https://www.openstreetmap.org/way/573934869/history">https://www.openstreetmap.org/way/573934869/history</a></p>
 <p>I removed an obviously invented english name (the airstrip is in Denmark and an official name would most likely have been different from this) and after researching a bit tagged the strip noname=yes because I felt that would be the most factually correct.</p>
 <p>After this the noname tag was removed and a descriptive name put back.</p>
 <p>The airstrip in question is most likely the one mentioned in <a href="https://www.fyens.dk/modules/mobile/article?articleid=1749135">https://www.fyens.dk/modules/mobile/article?articleid=1749135</a></p>

@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Create different route relations for each alternate route, and include them in the <a href="http://wiki.openstreetmap.org/wiki/Relation:route_master">Route Master</a> relation.<br />
+<p>Create different route relations for each alternate route, and include them in the <a href="https://wiki.openstreetmap.org/wiki/Relation:route_master">Route Master</a> relation.<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

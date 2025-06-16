@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do we acknowledge multilingual resistence?"
-description = '''I had been editing some street names in the medina of Essaouira, putting the arabic name of the streets in the &#x27;name&#x27; tag, according to what I read in http://wiki.openstreetmap.org/wiki/Multilingual_names#Morocco unfortunately, quite a few mappers after me have put the arabic name in the &#x27;name:ar&#x27; t...'''
+description = '''I had been editing some street names in the medina of Essaouira, putting the arabic name of the streets in the &#x27;name&#x27; tag, according to what I read in https://wiki.openstreetmap.org/wiki/Multilingual_names#Morocco unfortunately, quite a few mappers after me have put the arabic name in the &#x27;name:ar&#x27; t...'''
 date = "2013-08-29T09:11:00Z"
 lastmod = "2013-08-29T14:05:00Z"
 weight = 25913
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I had been editing some street names in the medina of Essaouira, putting the arabic name of the streets in the 'name' tag, according to what I read in <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names#Morocco">http://wiki.openstreetmap.org/wiki/Multilingual_names#Morocco</a></p>
+<p>I had been editing some street names in the medina of Essaouira, putting the arabic name of the streets in the 'name' tag, according to what I read in <a href="https://wiki.openstreetmap.org/wiki/Multilingual_names#Morocco">https://wiki.openstreetmap.org/wiki/Multilingual_names#Morocco</a></p>
 <p>unfortunately, quite a few mappers after me have put the arabic name in the 'name:ar' tag, or even simply overwritten it using the french name.</p>
 <p>I understand that this is a "mistake", but since there's so many people making it, I suppose there's some logic or need behind the "mistake" that is not acknowledged by the current rule.</p>
 <p>writing in arabic is not easy with portable mapping hardware, reading arabic on maps is also not immediate for western users. any hints?</p>

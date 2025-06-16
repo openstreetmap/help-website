@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OK, for completeness this is <a href="http://www.openstreetmap.org/way/97882735">here</a> which appears to be mapped as the <a href="https://wiki.openstreetmap.org/wiki/Tag:aeroway=terminal">wiki</a> suggests.</p>
+<p>OK, for completeness this is <a href="https://www.openstreetmap.org/way/97882735">here</a> which appears to be mapped as the <a href="https://wiki.openstreetmap.org/wiki/Tag:aeroway=terminal">wiki</a> suggests.</p>
 <p>The lack of an icon isn't what's stopping a search at OpenStreetMap.org from returning the terminal in the list, though. The thing that handles the search is <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. As <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Bugs_.2F_Error_reporting">mentioned</a>, you can log bugs etc. at the <a href="https://github.com/openstreetmap/Nominatim/issues">issue tracker for it</a> (but search first to see if the problem hasn't already been raised).</p>
 </div>
 <div class="answer-controls post-controls">

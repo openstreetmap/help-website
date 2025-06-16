@@ -211,7 +211,7 @@ Thanks in advance and have a good day guys !!!</p>
 <div id="post-67312-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>previous question about the same: <a href="https://help.openstreetmap.org/questions/58913/mapnik-svg-output-not-working">https://help.openstreetmap.org/questions/58913/mapnik-svg-output-not-working</a></p>
+<p>previous question about the same: <a href="/questions/58913/mapnik-svg-output-not-working">https://help.openstreetmap.org/questions/58913/mapnik-svg-output-not-working</a></p>
 </div>
 <div id="comment-67312-info" class="comment-info">
 <span class="comment-age">(21 Dec '18, 22:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

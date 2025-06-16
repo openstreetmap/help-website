@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your starting point for more hints can be the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM-on-paper</a></p>
+<p>Your starting point for more hints can be the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM-on-paper</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

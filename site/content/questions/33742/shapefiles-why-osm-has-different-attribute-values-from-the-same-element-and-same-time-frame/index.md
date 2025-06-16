@@ -44,10 +44,10 @@ osqa_accepted = true
 <p>Here is my question: Does anyone know why OSM has different attribute values from the same element and same frame time?</p>
 <p>The example explains itself, when I try the Shapefile from different mirrors like Planet.osm.org , bbbike.org and geofabrik.de; I find that they have a mistake with the Direction of Travel on its attribute value.</p>
 <p><img src="http://i.stack.imgur.com/3dEUJ.png" alt="example" /></p>
-<p>When I check in the website: here the <a href="http://www.openstreetmap.org/way/91521461#map=18/38.00867/-1.15468">link</a> , I see on its attribute value that there is no mistake at all and has its right value.</p>
+<p>When I check in the website: here the <a href="https://www.openstreetmap.org/way/91521461#map=18/38.00867/-1.15468">link</a> , I see on its attribute value that there is no mistake at all and has its right value.</p>
 <p>----- E D I T ------</p>
 <p>I've tried the GIS software QGIS (Version 2.2) with OSM Plugin. I've just tested with an small .map file and surprisingly, I have exported a Shapefile with all its original attributes. Here's what I have when I open in an ArcGIS session:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/06-06-2014_21-57-38.jpg" alt="Select by" /></p>
+<p><img src="/upfiles/06-06-2014_21-57-38.jpg" alt="Select by" /></p>
 <p>So, at least, I'll have YES/NO/ /-1, and I could manage it in a better way.</p>
 <p>Thanks for your support!!</p>
 </div>

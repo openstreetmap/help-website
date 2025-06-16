@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>first of all I want to thank you in advance for even reading my post and any effort you will put into helping me. I highly appreciate your expertise and time you spend to help me.</p>
 <p>Now to the problem:</p>
 <p>I discovered OSM on Friday to solve a problem that I have. For a certain area, I want to extract all the street names. Originally, I would just go to Google Maps and click on every street to get the street name, but I think that is very inefficient and I want to make it way easier. When it comes to coding etc, I am a total noob and I don't really know what I am doing.</p>
-<p>So I stumbled upon this Question <a href="https://help.openstreetmap.org/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">here</a> to help my problem.</p>
+<p>So I stumbled upon this Question <a href="/questions/2980/how-do-i-list-all-the-streets-in-a-city-with-nominatim">here</a> to help my problem.</p>
 <p>It is very useful, so far I installed Osmosis and got it running. The country that I want data from is Portugal. I managed to get the street names from a rectangle, however, the areas that I want are more complex like a mulitpolygon.</p>
 <p>For that, I downloaded JOSM and its here where the first problem starts. I have no clue if I do it the right way, but I basically downloaded the GPS data from Lisbon. Actually I just needed the satellite map, but I had no idea how to get that on JOSM. Then I drew some nodes of my area and made it into a Multipolygon and saved it as an osm.file. I provide a link so you get the picutre:</p>
 <p><img src="https://imgur.com/fdggYc6.jpg" title="Multipolygon" alt="alt text" /></p>

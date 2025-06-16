@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If a Potlatch 2 upload fails, it's possible to save the OSC file, and remove the failing item from it with a text editor, and then upload it with <a href="http://wiki.openstreetmap.org/wiki/Upload.py">upload.py</a>. If you don't already have it, you'll need to <a href="http://www.python.org/download/releases/">install Python</a> first.</p>
+<p>If a Potlatch 2 upload fails, it's possible to save the OSC file, and remove the failing item from it with a text editor, and then upload it with <a href="https://wiki.openstreetmap.org/wiki/Upload.py">upload.py</a>. If you don't already have it, you'll need to <a href="http://www.python.org/download/releases/">install Python</a> first.</p>
 <p>If this sounds complicated, you might consider mentioning the problem on the #osm IRC channel - someone will be able to help.</p>
 <p>The best way to avoid the problem in P2 the first place is to "save early, save often" so that if you do get a clash with another editor, you'll lose less work.<br />
 </p>
@@ -195,8 +195,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>you can view an objects info by opening that page: <a href="http://www.openstreetmap.org/browse/relation/NUMBERHERE">http://www.openstreetmap.org/browse/relation/NUMBERHERE</a> - there you also can see the object history and version numbers</p>
-<p>So, in <em>your example</em> it is: <a href="http://www.openstreetmap.org/browse/relation/2382578">http://www.openstreetmap.org/browse/relation/2382578</a> It seems that someone else edited that relation while you also did (it is currently version 40 and was 38 until <em>before</em> 25. June 2013, 00:18 UTC). I <em>guess</em> that means (since there does not seem to be a <a href="/questions/17006/what-to-do-when-changesets-overlap">conflict resolution</a> built in Potlatch2) that you either have to trash your edit (you seem not be able to save it) or use the undo function to go back to a step in your edit session where you did not touch that relation. You might be able to save the raw edit in an text editor if Potlatch2 displays it (in osm xml format) which you (or someone else) may be able to (maybe with hand editing) <span>upload manually</span>/with <span>JOSM</span>(?) later.</p>
+<p>you can view an objects info by opening that page: <a href="https://www.openstreetmap.org/browse/relation/NUMBERHERE">https://www.openstreetmap.org/browse/relation/NUMBERHERE</a> - there you also can see the object history and version numbers</p>
+<p>So, in <em>your example</em> it is: <a href="https://www.openstreetmap.org/browse/relation/2382578">https://www.openstreetmap.org/browse/relation/2382578</a> It seems that someone else edited that relation while you also did (it is currently version 40 and was 38 until <em>before</em> 25. June 2013, 00:18 UTC). I <em>guess</em> that means (since there does not seem to be a <a href="/questions/17006/what-to-do-when-changesets-overlap">conflict resolution</a> built in Potlatch2) that you either have to trash your edit (you seem not be able to save it) or use the undo function to go back to a step in your edit session where you did not touch that relation. You might be able to save the raw edit in an text editor if Potlatch2 displays it (in osm xml format) which you (or someone else) may be able to (maybe with hand editing) <span>upload manually</span>/with <span>JOSM</span>(?) later.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

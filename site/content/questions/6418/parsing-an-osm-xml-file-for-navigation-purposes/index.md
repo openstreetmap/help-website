@@ -105,9 +105,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For more help you can ask in one of the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">OSM mailing lists</a> about <strong>Routing</strong> ... maybe there are some more experts.</p>
-<p>Elsewise you can investigate all opensource navigation software that can deal with OSM data, see <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
-<p>And maybe you can find some more general information how to deal with OSM data at <a href="http://wiki.openstreetmap.org/wiki/Develop">Develop</a> -&gt; Frameworks</p>
+<p>For more help you can ask in one of the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">OSM mailing lists</a> about <strong>Routing</strong> ... maybe there are some more experts.</p>
+<p>Elsewise you can investigate all opensource navigation software that can deal with OSM data, see <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
+<p>And maybe you can find some more general information how to deal with OSM data at <a href="https://wiki.openstreetmap.org/wiki/Develop">Develop</a> -&gt; Frameworks</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

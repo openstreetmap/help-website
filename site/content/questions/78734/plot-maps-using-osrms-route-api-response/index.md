@@ -44,8 +44,8 @@ osqa_accepted = false
 <p>The "geometry" fields in the response look like this: "kjpfG~{dtL?BDUwAKcLfy@cC|PuAbKy@vHa@rEIhAEz@KpBCz@ErA".</p>
 <p>I am calling API like this - {{host}}/route/v1/driving/-71.628324,43.178769;-71.979512,43.390553?steps=true</p>
 <p>I am attacheding OSRM's map and Google Maps Images. It looks OSRM is not plotting it correctly. Can somebody tell me if there is any issue in OSRM server itself or I am not plotting correctly.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSRM_Map_5vVW4AH.png" alt="alt text" /> <img src="https://help.openstreetmap.org/upfiles/Google_Map_Hnot35P.png" alt="alt text" /></p>
-<p>Edit - After Frederik Ramm's comment, I plotted the lat-long using OSRM's route API. I see the issue, it's plotting on the wrong side of the road after some time. Need help in understanding what is the exact issue here. Here is the screenshot. <img src="https://help.openstreetmap.org/upfiles/OSRM.png" alt="alt text" /></p>
+<p><img src="/upfiles/OSRM_Map_5vVW4AH.png" alt="alt text" /> <img src="/upfiles/Google_Map_Hnot35P.png" alt="alt text" /></p>
+<p>Edit - After Frederik Ramm's comment, I plotted the lat-long using OSRM's route API. I see the issue, it's plotting on the wrong side of the road after some time. Need help in understanding what is the exact issue here. Here is the screenshot. <img src="/upfiles/OSRM.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osrm" rel="tag" title="see questions tagged &#39;osrm&#39;">osrm</span>

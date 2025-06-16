@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As for the route data, it is indeed added as a relation. You can find the schema at <a href="http://wiki.openstreetmap.org/wiki/Buses#Services">http://wiki.openstreetmap.org/wiki/Buses#Services</a> and check out how others have done it both in a similar area and over in the UK or Germany where the how tends to be spot on. As for the routes appended to the name try talking to them first and find out their reasoning. It's better to avoid an edit war after all.</p>
+<p>As for the route data, it is indeed added as a relation. You can find the schema at <a href="https://wiki.openstreetmap.org/wiki/Buses#Services">https://wiki.openstreetmap.org/wiki/Buses#Services</a> and check out how others have done it both in a similar area and over in the UK or Germany where the how tends to be spot on. As for the routes appended to the name try talking to them first and find out their reasoning. It's better to avoid an edit war after all.</p>
 <p>Happy Mapping!</p>
 </div>
 <div class="answer-controls post-controls">
@@ -126,7 +126,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Also see the bus stop wiki page (<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop)">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop)</a> which explains bus_stop vs. stop_position. A specific bus route relation you might look at as it appears complete is <a href="http://www.openstreetmap.org/relation/4000000">http://www.openstreetmap.org/relation/4000000</a> NB: route_ref used to be used to indicate routes served at a bus stop, but I guess it's purely done via relations now.</p>
+<p>Also see the bus stop wiki page (<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop)">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop)</a> which explains bus_stop vs. stop_position. A specific bus route relation you might look at as it appears complete is <a href="https://www.openstreetmap.org/relation/4000000">https://www.openstreetmap.org/relation/4000000</a> NB: route_ref used to be used to indicate routes served at a bus stop, but I guess it's purely done via relations now.</p>
 </div>
 <div id="comment-42944-info" class="comment-info">
 <span class="comment-age">(07 May '15, 14:36)</span> <span class="comment-user userinfo">neuhausr</span>

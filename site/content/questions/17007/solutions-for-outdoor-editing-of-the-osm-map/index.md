@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>I would like to edit the OSM map when I am outdoors. The article on <a href="http://wiki.openstreetmap.org/wiki/Editing">Editing</a> gives some ideas, but I would like to know if anybody is actually having a working solution in use. This could range from a mobile phone with e.g. GpsMid to maybe a small tablet PC with JOSM and livegps JOSM plugin.</p>
+<p>I would like to edit the OSM map when I am outdoors. The article on <a href="https://wiki.openstreetmap.org/wiki/Editing">Editing</a> gives some ideas, but I would like to know if anybody is actually having a working solution in use. This could range from a mobile phone with e.g. GpsMid to maybe a small tablet PC with JOSM and livegps JOSM plugin.</p>
 <p>Thanks!</p>
 <p>UPDATE: Ok, here are some of my requirements:</p>
 <p>1) GpsMip-like view:</p>
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Vespucci <a href="http://wiki.openstreetmap.org/wiki/Vespucci">http://wiki.openstreetmap.org/wiki/Vespucci</a> would seem to cover most of your requirements.</p>
+<p>Vespucci <a href="https://wiki.openstreetmap.org/wiki/Vespucci">https://wiki.openstreetmap.org/wiki/Vespucci</a> would seem to cover most of your requirements.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -332,7 +332,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi,</p>
 <p><del>It seems that OSM2Go with a Nokia N800 or N900 is not an option anymore. The project is discontinued and I have indications that it would not interact with the OSM API anymore.</del></p>
-<p>UPDATE: <a href="http://wiki.openstreetmap.org/wiki/Osm2go">OSM Wiki</a> provides a fix ("problems with IPv6 record for api.openstreetmap.org"). I got an N900 and installed OSM2go. And it works! It seems that this is exactly what I wanted to have. I will give it a try.</p>
+<p>UPDATE: <a href="https://wiki.openstreetmap.org/wiki/Osm2go">OSM Wiki</a> provides a fix ("problems with IPv6 record for api.openstreetmap.org"). I got an N900 and installed OSM2go. And it works! It seems that this is exactly what I wanted to have. I will give it a try.</p>
 <p>Cheers!</p>
 </div>
 <div class="answer-controls post-controls">

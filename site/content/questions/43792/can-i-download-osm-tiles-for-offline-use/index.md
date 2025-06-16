@@ -200,7 +200,7 @@ You need also to respect the legal aspects if you ship it with your application 
 &#10;</div>
 <div class="comment-text">
 <p>But i came across in a wiki stating : "These tiles are generally not available (cached) on the server in advance, and have to be rendered specifically for those requests, putting an unjustified burden on the available resources." Are you still sure of downloading tiles to server for offline use ?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">http://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">https://wiki.openstreetmap.org/wiki/Tile_usage_policy</a></p>
 </div>
 <div id="comment-43794-info" class="comment-info">
 <span class="comment-age">(26 Jun '15, 06:33)</span> <span class="comment-user userinfo">rramprakash1</span>
@@ -433,7 +433,7 @@ You need also to respect the legal aspects if you ship it with your application 
 <div id="post-53187-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1667/geonick">@geonick</a> Thanks for adding input.</p>
+<p><a href="https://help.openstreetmap.org/users/1667/geonick">@geonick</a> Thanks for adding input.</p>
 </div>
 <div id="comment-53187-info" class="comment-info">
 <span class="comment-age">(01 Dec '16, 03:35)</span> <span class="comment-user userinfo">Gagan</span>

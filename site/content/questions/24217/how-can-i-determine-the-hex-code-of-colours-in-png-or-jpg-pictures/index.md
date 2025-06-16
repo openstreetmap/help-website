@@ -44,7 +44,7 @@ osqa_accepted = true
 <p>There is an Android app (<a href="https://play.google.com/store/apps/details?id=com.jenspetervester.coloranalyzer)">https://play.google.com/store/apps/details?id=com.jenspetervester.coloranalyzer)</a> that seems to to the job. I would like one for windows.</p>
 <p>Text added</p>
 <p>I can understand Frederik Ramms arguments but I tend to agree with scai. If we are to add building colours then we want to do it properly and need an tool to aid us.</p>
-<p>Surely the hex is more likely to yield a more acceptable result than the present OSM standard colours: <a href="http://wiki.openstreetmap.org/wiki/Key:colour">http://wiki.openstreetmap.org/wiki/Key:colour</a></p>
+<p>Surely the hex is more likely to yield a more acceptable result than the present OSM standard colours: <a href="https://wiki.openstreetmap.org/wiki/Key:colour">https://wiki.openstreetmap.org/wiki/Key:colour</a></p>
 <p>With my question I do not want to start a debate on whether or not colours are a good idea or not, but I am looking for a tool to aid me (and others) in colour analysis and if an Android app can do the job then it should be possible to the same colour analysis under windows!</p>
 <p>Let me explain this further.</p>
 <p>I know the dimensions and coordinates of a building.</p>

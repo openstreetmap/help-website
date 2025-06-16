@@ -80,7 +80,7 @@ This question is marked "community wiki".
 <div id="post-57253-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/211286742#map=18/38.38880/27.06068&amp;layers=D">http://www.openstreetmap.org/way/211286742#map=18/38.38880/27.06068&amp;layers=D</a> is one of them. I am also shocked on that street being a living street, because there is considerable car traffic on and one of the busiest bus routes of the city goes through that street.</p>
+<p><a href="https://www.openstreetmap.org/way/211286742#map=18/38.38880/27.06068&amp;layers=D">https://www.openstreetmap.org/way/211286742#map=18/38.38880/27.06068&amp;layers=D</a> is one of them. I am also shocked on that street being a living street, because there is considerable car traffic on and one of the busiest bus routes of the city goes through that street.</p>
 </div>
 <div id="comment-57253-info" class="comment-info">
 <span class="comment-age">(24 Jul '17, 18:30)</span> <span class="comment-user userinfo">erkinalp</span>
@@ -91,7 +91,7 @@ This question is marked "community wiki".
 <div id="post-57259-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/way/211286742">http://www.openstreetmap.org/way/211286742</a> is actually tagged as "highway=secondary" and has been so for 9 months. <a href="http://overpass-turbo.eu/s/qA1">http://overpass-turbo.eu/s/qA1</a> is an overpass turbo query that looks for highway=living_street in the area - perhaps you were thinking about one of those?</p>
+<p><a href="https://www.openstreetmap.org/way/211286742">https://www.openstreetmap.org/way/211286742</a> is actually tagged as "highway=secondary" and has been so for 9 months. <a href="http://overpass-turbo.eu/s/qA1">http://overpass-turbo.eu/s/qA1</a> is an overpass turbo query that looks for highway=living_street in the area - perhaps you were thinking about one of those?</p>
 </div>
 <div id="comment-57259-info" class="comment-info">
 <span class="comment-age">(24 Jul '17, 20:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -249,7 +249,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>{living streets}(<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street)">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street)</a> are a special legal construct/street classification in some countries, by definition they will never be a main road (for which we don't have tagging per se in any case).</p>
+<p>{living streets}(<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street)">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street)</a> are a special legal construct/street classification in some countries, by definition they will never be a main road (for which we don't have tagging per se in any case).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -216,7 +216,7 @@ osqa_accepted = true
 <div id="post-50829-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I was used a lot before bing was available and is still one of the available editing back grounds, we can still use now. NPE is 50+ year old Ordnance Survey Great Britain. I think user blackadder collected and scanned them. They are in my opinion a great map series. <a href="http://www.openstreetmap.org/user/blackadder">http://www.openstreetmap.org/user/blackadder</a></p>
+<p>I was used a lot before bing was available and is still one of the available editing back grounds, we can still use now. NPE is 50+ year old Ordnance Survey Great Britain. I think user blackadder collected and scanned them. They are in my opinion a great map series. <a href="https://www.openstreetmap.org/user/blackadder">https://www.openstreetmap.org/user/blackadder</a></p>
 </div>
 <div id="comment-50829-info" class="comment-info">
 <span class="comment-age">(11 Jul '16, 17:46)</span> <span class="comment-user userinfo">andy mackey</span>

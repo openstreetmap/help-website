@@ -174,9 +174,9 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>When you are looking for an entry in that self mapping topic, have a look at the OSM wiki. There you can find basic hints for using a GPS device or use Bing aerial images for tracing.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_Making_Overview">http://wiki.openstreetmap.org/wiki/Map_Making_Overview</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Bing">http://wiki.openstreetmap.org/wiki/Bing</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_Making_Overview">https://wiki.openstreetmap.org/wiki/Map_Making_Overview</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Bing">https://wiki.openstreetmap.org/wiki/Bing</a></p>
 </div>
 <div id="comment-5609-info" class="comment-info">
 <span class="comment-age">(07 Jun '11, 17:06)</span> <span class="comment-user userinfo">stephan75</span>
@@ -218,7 +218,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could have a look at MapDust. <a href="http://wiki.openstreetmap.org/wiki/Mapdust">Here explained on the OSM wiki.</a></p>
+<p>You could have a look at MapDust. <a href="https://wiki.openstreetmap.org/wiki/Mapdust">Here explained on the OSM wiki.</a></p>
 <p><a href="http://www.mapdust.com/?zoom=6&amp;lat=362027.8503&amp;lon=11446379.09148&amp;layers=B0">Here directly to</a> <a href="http://mapdust.com">mapdust.com</a>.</p>
 <p>Be as specific as possible, thanks!</p>
 </div>

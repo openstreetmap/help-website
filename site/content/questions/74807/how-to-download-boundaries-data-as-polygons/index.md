@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not sure if it will fit your need, but there is this : <a href="http://www.imagico.de/map/boundaries_download_en.php">Simplified OpenStreetMap boundaries download</a> (outdated 2014).</p>
-<p>But otherwise, I'm afraid you'll have to do it yourself from a planet file (see this <a href="https://help.openstreetmap.org/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">question</a> for example).</p>
+<p>But otherwise, I'm afraid you'll have to do it yourself from a planet file (see this <a href="/questions/47931/filters-in-osmosis-filtering-administrative-boundaries">question</a> for example).</p>
 <p>Wambachers' service seems out for good, the code nowhere to be found, so it might takes some time before an alternative comes up !</p>
 </div>
 <div class="answer-controls post-controls">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm using Overpass query to identify the nodes with a specific tag that are located only within a certain distance range from node with another specific tag. This sounds similar to <a href="https://help.openstreetmap.org/questions/33089/proximity-search-node-with-tag1-near-node-with-tag2">this</a> question related to proxmity search and <a href="https://help.openstreetmap.org/questions/32190/calculate-distance-from-one-node-to-several-other-nodes-in-area">this other</a> distance calculation between nodes question.</p>
+<p>I'm using Overpass query to identify the nodes with a specific tag that are located only within a certain distance range from node with another specific tag. This sounds similar to <a href="/questions/33089/proximity-search-node-with-tag1-near-node-with-tag2">this</a> question related to proxmity search and <a href="/questions/32190/calculate-distance-from-one-node-to-several-other-nodes-in-area">this other</a> distance calculation between nodes question.</p>
 <p>But to tell the difference, I can try to explain with an example.</p>
 <p>Find a cafe within a distance range of 450 m and 550 m from a library or</p>
 <p>Find a gas station with a distance range of 9 km and 11 km from IKEA or</p>

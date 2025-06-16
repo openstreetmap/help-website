@@ -77,7 +77,7 @@ osqa_accepted = false
 <div id="post-47373-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="http://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>: Indeed - took me a while to understand why it's only using a little bit of memory. Assigning more of the available RAM helps a lot.</p>
+<p><a href="https://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>: Indeed - took me a while to understand why it's only using a little bit of memory. Assigning more of the available RAM helps a lot.</p>
 </div>
 <div id="comment-47373-info" class="comment-info">
 <span class="comment-age">(05 Jan '16, 06:30)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -204,7 +204,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It would be a annoying to set the screen to a lower resolution for JOSM but if it works it might be less annoying than slow updates. My WIN10 view.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/right_click_on_background.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/right_click_on_background.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

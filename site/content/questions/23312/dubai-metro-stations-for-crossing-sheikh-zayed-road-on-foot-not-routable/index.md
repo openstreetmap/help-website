@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at <a href="http://www.openstreetmap.org/?lat=25.080821&amp;lon=55.147923&amp;zoom=18&amp;layers=T">this area</a>, it's because the bridges are not connected to other highways. You need to link the bottom of the steps with a <code>highway=footway</code> to the adjacent street which is usable by pedestrians. <a href="http://osm.org/go/eu8ZkPEbQ--">This example</a> shows a pedestrian railway bridge mapped as I suggest.</p>
+<p>Looking at <a href="https://www.openstreetmap.org/?lat=25.080821&amp;lon=55.147923&amp;zoom=18&amp;layers=T">this area</a>, it's because the bridges are not connected to other highways. You need to link the bottom of the steps with a <code>highway=footway</code> to the adjacent street which is usable by pedestrians. <a href="http://osm.org/go/eu8ZkPEbQ--">This example</a> shows a pedestrian railway bridge mapped as I suggest.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -46,7 +46,7 @@ osqa_accepted = false
 <p>But I want to keep the place somehow, as it is of historic significance, and also interesting to do some research about the war. place = locality would come to my mind.</p>
 <p>What can you suggest me, or what is your opinion to this issue?</p>
 <p>BTW: Here is one example of a destroyed village. Click on "Edit" and see the aerial photograph. You can also scroll north a little and you can see some fortifications and trenches. Really, a scary image ;(</p>
-<p><a href="http://www.openstreetmap.org/?lat=42.14706&amp;lon=43.79476&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=42.14706&amp;lon=43.79476&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=42.14706&amp;lon=43.79476&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=42.14706&amp;lon=43.79476&amp;zoom=16&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-destroyed" rel="tag" title="see questions tagged &#39;destroyed&#39;">destroyed</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-village" rel="tag" title="see questions tagged &#39;village&#39;">village</span>

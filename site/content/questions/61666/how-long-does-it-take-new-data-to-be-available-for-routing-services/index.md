@@ -178,7 +178,7 @@ osqa_accepted = false
 <p>JOSM has a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Routing">routing plugin</a> option:<br />
 I have not used but it seems that you can use this on the data you have loaded in to JOSM.<br />
 I noticed this query that related to the plugin:<br />
-<a href="https://help.openstreetmap.org/questions/30832/how-do-i-use-the-josm-routing-plugin">https://help.openstreetmap.org/questions/30832/how-do-i-use-the-josm-routing-plugin</a></p>
+<a href="/questions/30832/how-do-i-use-the-josm-routing-plugin">https://help.openstreetmap.org/questions/30832/how-do-i-use-the-josm-routing-plugin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

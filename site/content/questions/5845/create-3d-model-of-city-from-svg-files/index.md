@@ -123,7 +123,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is possible to create 3D city models from OpenStreetMap data. However, it doesn't make sense to convert OSM data to SVG first, because by doing so you will lose almost all of the information that you will need for your city model: for example, SVG files usually don't contain any height, incline, or elevation information.</p>
-<p>Instead, software that creates 3D models from OSM will directly work with files or databases containing OpenStreetMap data. See <a href="http://wiki.openstreetmap.org/wiki/3D_Development">3D Development</a> and the <a href="http://wiki.openstreetmap.org/wiki/Renderers#3D_Rendering">3D Rendering</a> section in the OSM wiki for some attempts to create 3D models in various formats based on OSM data.</p>
+<p>Instead, software that creates 3D models from OSM will directly work with files or databases containing OpenStreetMap data. See <a href="https://wiki.openstreetmap.org/wiki/3D_Development">3D Development</a> and the <a href="https://wiki.openstreetmap.org/wiki/Renderers#3D_Rendering">3D Rendering</a> section in the OSM wiki for some attempts to create 3D models in various formats based on OSM data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -225,7 +225,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>One hint about creating 3D models out of <strong>OSM</strong> data:</p>
-<p>Have a look at the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/3D_Development">3D_Development</a></p>
+<p>Have a look at the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/3D_Development">3D_Development</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

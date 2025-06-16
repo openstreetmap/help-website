@@ -145,7 +145,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Also have a look in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Maxspeed">http://wiki.openstreetmap.org/wiki/Maxspeed</a> ... there are some hints for displaying them.</p>
+<p>Also have a look in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Maxspeed">https://wiki.openstreetmap.org/wiki/Maxspeed</a> ... there are some hints for displaying them.</p>
 </div>
 <div id="comment-7935-info" class="comment-info">
 <span class="comment-age">(16 Sep '11, 12:25)</span> <span class="comment-user userinfo">stephan75</span>

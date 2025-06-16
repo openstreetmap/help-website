@@ -64,7 +64,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>OpenStreetMap is, at its core, just a <a href="http://planet.osm.org/">large lump of data</a>. <a href="http://wiki.openstreetmap.org/wiki/Maps">Many different options</a> are available for getting this data in front of a user. So the answer is "yes, if you want there to be".</p>
+<p>OpenStreetMap is, at its core, just a <a href="http://planet.osm.org/">large lump of data</a>. <a href="https://wiki.openstreetmap.org/wiki/Maps">Many different options</a> are available for getting this data in front of a user. So the answer is "yes, if you want there to be".</p>
 <p>Or perhaps you could explain a little bit more about what you're trying to do?<br />
 </p>
 <p>I'm guessing that it involves <a href="http://switch2osm.org/serving-tiles/">a web-based map of some sort, possibly made up of map tiles</a>, but could you be more specific?</p>
@@ -91,7 +91,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You could I guess use Google Maps to display OpenStreetMap tiles as per this example: <a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">http://wiki.openstreetmap.org/wiki/Google_Maps_Example</a></p>
+<p>You could I guess use Google Maps to display OpenStreetMap tiles as per this example: <a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">https://wiki.openstreetmap.org/wiki/Google_Maps_Example</a></p>
 </div>
 <div id="comment-18750-info" class="comment-info">
 <span class="comment-age">(29 Dec '12, 11:34)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -154,7 +154,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10228/popovichn">@popovichN</a>: it IS possible. See the comments above.</p>
+<p><a href="https://help.openstreetmap.org/users/10228/popovichn">@popovichN</a>: it IS possible. See the comments above.</p>
 </div>
 <div id="comment-39862-info" class="comment-info">
 <span class="comment-age">(28 Dec '14, 02:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

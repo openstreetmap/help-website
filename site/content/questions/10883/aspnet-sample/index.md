@@ -63,7 +63,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Can you be more specific about how you would like to use OpenStreetMap on your website. Do you mean deploying your own slippy map? ( <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a> ) &lt;-- See example there. Many will work using plain HTML and javascript which might be used outside of any ASP logic, so what do you want ASP logic to do? Loading marker locations from a database? Be more specific</p>
+<p>Can you be more specific about how you would like to use OpenStreetMap on your website. Do you mean deploying your own slippy map? ( <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map</a> ) &lt;-- See example there. Many will work using plain HTML and javascript which might be used outside of any ASP logic, so what do you want ASP logic to do? Loading marker locations from a database? Be more specific</p>
 </div>
 <div id="comment-10885-info" class="comment-info">
 <span class="comment-age">(29 Feb '12, 14:52)</span> <span class="comment-user userinfo">Harry Wood</span>

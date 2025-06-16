@@ -138,7 +138,7 @@ One Answer:
 <div id="post-45097-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3/andy-allan">@Andy Allan</a> thanks Andy, this has clearly explained the facts and eliminated my confusion.</p>
+<p><a href="https://help.openstreetmap.org/users/3/andy-allan">@Andy Allan</a> thanks Andy, this has clearly explained the facts and eliminated my confusion.</p>
 </div>
 <div id="comment-45097-info" class="comment-info">
 <span class="comment-age">(07 Sep '15, 10:43)</span> <span class="comment-user userinfo">dalishi</span>

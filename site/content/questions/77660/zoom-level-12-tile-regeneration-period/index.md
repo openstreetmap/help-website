@@ -160,7 +160,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>I just saw <a href="https://help.openstreetmap.org/questions/55425/bug-zooms-12-and-below-not-marked-dirty-so-never-re-rendered">this question</a> pop up as a relative to another render question. It seems more relevant here.</p>
+<p>I just saw <a href="/questions/55425/bug-zooms-12-and-below-not-marked-dirty-so-never-re-rendered">this question</a> pop up as a relative to another render question. It seems more relevant here.</p>
 </div>
 <div id="comment-77710-info" class="comment-info">
 <span class="comment-age">(25 Nov '20, 20:40)</span> <span class="comment-user userinfo">InsertUser</span>

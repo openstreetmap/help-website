@@ -132,7 +132,7 @@ This question is marked "community wiki".
 <p>Alternative non-OSM data sources: Major city municipalities (<a href="https://www.capetown.gov.za/en/stats/Pages/default.aspx">Cape Town</a>, eThekwini, etc) generally have fairly good quality "authoritative" data available (on request) which could be used to compare against OpenStreetMap. On a national level, you would likely need to turn to a commercial providers like <a href="http://www.afrigis.co.za/">AfriGIS</a>.</p>
 <p>Cape Town and Durban (eThekwini) municipalities kindly provided snapshots of their road network to the project. Therefore the coverage is quite good in these cities. Cape Town also benefits from having many OSM mappers.</p>
 <p>The rate and quality of mapping in rural South Africa has improved since the <a href="http://aerial.openstreetmap.org.za/">NGI aerial imagery</a> became available.</p>
-<p>See: <a href="http://help.openstreetmap.org/questions/6570/how-complete-is-openstreetmap-for-us">How complete is OpenStreetMap for US?</a></p>
+<p>See: <a href="/questions/6570/how-complete-is-openstreetmap-for-us">How complete is OpenStreetMap for US?</a></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

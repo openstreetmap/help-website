@@ -120,7 +120,7 @@ osqa_accepted = false
 <li>Click "Add Note"</li>
 </ul>
 <p>Now other mappers will be able to see the information you've entered and can correct the errors if you've provided enough information to do so.</p>
-<p>It's also possible to fix any errors yourself. Start by reading the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' Guide</a> on the wiki</p>
+<p>It's also possible to fix any errors yourself. Start by reading the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' Guide</a> on the wiki</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your area has good quality Bing background images available, when you start to edit which makes work much easier. You could spend ages reading advice on which editor to choose or just try this one <a href="http://wiki.openstreetmap.org/wiki/Potlach2#How_to_use_Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlach2#How_to_use_Potlatch_2</a> if I can use it, it must be easy! I have tried the others. I am sure you will soon get an going ok. Good luck just ask if you need help.</p>
+<p>Your area has good quality Bing background images available, when you start to edit which makes work much easier. You could spend ages reading advice on which editor to choose or just try this one <a href="https://wiki.openstreetmap.org/wiki/Potlach2#How_to_use_Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlach2#How_to_use_Potlatch_2</a> if I can use it, it must be easy! I have tried the others. I am sure you will soon get an going ok. Good luck just ask if you need help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

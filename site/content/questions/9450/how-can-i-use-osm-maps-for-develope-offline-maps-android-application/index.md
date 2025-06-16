@@ -81,7 +81,7 @@ osqa_accepted = false
 <div id="post-9454-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Welcome there is a lot of stuff in the wiki have you looked at it <a href="http://wiki.openstreetmap.org/wiki/Android#Android_software_supporting_OpenStreetMap">http://wiki.openstreetmap.org/wiki/Android#Android_software_supporting_OpenStreetMap</a></p>
+<p>Welcome there is a lot of stuff in the wiki have you looked at it <a href="https://wiki.openstreetmap.org/wiki/Android#Android_software_supporting_OpenStreetMap">https://wiki.openstreetmap.org/wiki/Android#Android_software_supporting_OpenStreetMap</a></p>
 </div>
 <div id="comment-9454-info" class="comment-info">
 <span class="comment-age">(12 Dec '11, 11:35)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -103,7 +103,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate of http://help.openstreetmap.org/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android" by Richard 12 Dec '11, 13:16
+### The question has been closed for the following reason "Duplicate of https://help.openstreetmap.org/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android" by Richard 12 Dec '11, 13:16
 
 </div>
 

@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have added barrier=gate to <a href="http://www.openstreetmap.org/node/3373243320">http://www.openstreetmap.org/node/3373243320</a> and merged the node into the way. I can't remember how long it takes for the different routing options to update, but try the default one in about a day to see if that has helped.</p>
+<p>I have added barrier=gate to <a href="https://www.openstreetmap.org/node/3373243320">https://www.openstreetmap.org/node/3373243320</a> and merged the node into the way. I can't remember how long it takes for the different routing options to update, but try the default one in about a day to see if that has helped.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

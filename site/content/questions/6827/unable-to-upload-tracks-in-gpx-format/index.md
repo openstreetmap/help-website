@@ -105,8 +105,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think there are some misconceptions here. The track upload you are referring to is to the general osm gpx trace database and not in potlatch.</p>
-<p>The modes ("public"/"trackable"/etc.) are privacy settings you choose for every individual track you upload. There is an explanation <a href="http://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">here</a>. The recommended settings are either "identifiable" or "trackable".</p>
-<p>You can check in <a href="http://www.openstreetmap.org/traces/mine">See your Traces</a> if the tracks have been uploaded and what is the result of the parsing.</p>
+<p>The modes ("public"/"trackable"/etc.) are privacy settings you choose for every individual track you upload. There is an explanation <a href="https://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">here</a>. The recommended settings are either "identifiable" or "trackable".</p>
+<p>You can check in <a href="https://www.openstreetmap.org/traces/mine">See your Traces</a> if the tracks have been uploaded and what is the result of the parsing.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would open P2 and see if your trace is there. I find that they are usable while in the queue, if that doesn't work upload it again.You could also open your GPX trace with a text editor and inspect it. it should have a series of lat logs and times. (these are the time stamps that are talked about,which go some way to proving they were recorded on a walk or ride. and not traced of some copyrighted nap) there is an illustration on a valid trace on the wiki.if I can find it I'll link it to this answer. here <a href="http://wiki.openstreetmap.org/wiki/Gpx">http://wiki.openstreetmap.org/wiki/Gpx</a></p>
+<p>I would open P2 and see if your trace is there. I find that they are usable while in the queue, if that doesn't work upload it again.You could also open your GPX trace with a text editor and inspect it. it should have a series of lat logs and times. (these are the time stamps that are talked about,which go some way to proving they were recorded on a walk or ride. and not traced of some copyrighted nap) there is an illustration on a valid trace on the wiki.if I can find it I'll link it to this answer. here <a href="https://wiki.openstreetmap.org/wiki/Gpx">https://wiki.openstreetmap.org/wiki/Gpx</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -406,7 +406,7 @@ osqa_accepted = false
 <div id="post-6851-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>if the trace you tried to make was drew over a map that is copyrighted you were copying it so you should not do that.But if you can trace the route you took over the bing sat image(which we are allowed to use) that you can choose in P2 you can draw in the paths and streets you surveyed. all this is in the wiki docs ....<a href="http://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors">http://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors</a></p>
+<p>if the trace you tried to make was drew over a map that is copyrighted you were copying it so you should not do that.But if you can trace the route you took over the bing sat image(which we are allowed to use) that you can choose in P2 you can draw in the paths and streets you surveyed. all this is in the wiki docs ....<a href="https://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors">https://wiki.openstreetmap.org/wiki/Bing#How_to_use_in_the_editors</a></p>
 </div>
 <div id="comment-6851-info" class="comment-info">
 <span class="comment-age">(03 Aug '11, 17:42)</span> <span class="comment-user userinfo">andy mackey</span>

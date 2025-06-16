@@ -139,7 +139,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> while it wasn't explicitly spelled out, there were posts on the talk mailing list <a href="https://lists.openstreetmap.org/pipermail/talk/2016-August/076647.html,">https://lists.openstreetmap.org/pipermail/talk/2016-August/076647.html,</a> the German forum and it was mentioned in weekly OSM.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> while it wasn't explicitly spelled out, there were posts on the talk mailing list <a href="https://lists.openstreetmap.org/pipermail/talk/2016-August/076647.html,">https://lists.openstreetmap.org/pipermail/talk/2016-August/076647.html,</a> the German forum and it was mentioned in weekly OSM.</p>
 </div>
 <div id="comment-51967-info" class="comment-info">
 <span class="comment-age">(09 Sep '16, 14:31)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -151,7 +151,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> Thanks! I'm usually reading weekly OSM but maybe I skipped one issue or overlooked this discussion.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> Thanks! I'm usually reading weekly OSM but maybe I skipped one issue or overlooked this discussion.</p>
 </div>
 <div id="comment-51970-info" class="comment-info">
 <span class="comment-age">(09 Sep '16, 15:12)</span> <span class="comment-user userinfo">scai ♦</span>

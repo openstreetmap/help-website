@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a> using <a href="https://overpass-turbo.eu/s/SN5">https://overpass-turbo.eu/s/SN5</a> when data is exported as OSM nothing is stored in the file and QGIS shows now row in the attribute table. however get lines and nodes data in other file formats like kml gpx etc. in addition, with query in figure, there are multiple lines however in exported data I get only single lines even at yards. <img src="https://help.openstreetmap.org/upfiles/Untitled_96PZhJu.png" alt="alt text" /></p>
+<p><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a> using <a href="https://overpass-turbo.eu/s/SN5">https://overpass-turbo.eu/s/SN5</a> when data is exported as OSM nothing is stored in the file and QGIS shows now row in the attribute table. however get lines and nodes data in other file formats like kml gpx etc. in addition, with query in figure, there are multiple lines however in exported data I get only single lines even at yards. <img src="/upfiles/Untitled_96PZhJu.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass-turbo" rel="tag" title="see questions tagged &#39;overpass-turbo&#39;">overpass-turbo</span>

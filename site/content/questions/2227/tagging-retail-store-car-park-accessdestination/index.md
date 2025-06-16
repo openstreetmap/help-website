@@ -174,7 +174,7 @@ osqa_accepted = false
 <p>parking:condition:area=customers</p>
 <p>and even include a</p>
 <p>parking:condition:area:customers=shopname</p>
-<p>if feasible, explanation is in the <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/parking:lane#Extension_of_parking:condition_to_amenity.3Dparking.3F">proposal</a>. The parking map will pick up the parking conditions and render the according lots in a brown color (for "customers only"). Example parking map is <a href="http://parking.openstreetmap.de/?zoom=14&amp;lat=49.81194&amp;lon=9.97752&amp;layers=B000FT">here</a>.</p>
+<p>if feasible, explanation is in the <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/parking:lane#Extension_of_parking:condition_to_amenity.3Dparking.3F">proposal</a>. The parking map will pick up the parking conditions and render the according lots in a brown color (for "customers only"). Example parking map is <a href="http://parking.openstreetmap.de/?zoom=14&amp;lat=49.81194&amp;lon=9.97752&amp;layers=B000FT">here</a>.</p>
 <p>This map also considers "access=customers".</p>
 </div>
 <div class="answer-controls post-controls">
@@ -309,9 +309,9 @@ osqa_accepted = false
 <div id="post-2238-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The German wiki <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dparking">http://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dparking</a> suggests permissive for supermarkets!</p>
-<p>And also <a href="http://wiki.openstreetmap.org/wiki/DE:Key:access">http://wiki.openstreetmap.org/wiki/DE:Key:access</a> reads in my opinion a little bit differently.</p>
-<p>BTW the english wiki <a href="http://wiki.openstreetmap.org/wiki/Parking">http://wiki.openstreetmap.org/wiki/Parking</a> suggests access=customers.</p>
+<p>The German wiki <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dparking">https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dparking</a> suggests permissive for supermarkets!</p>
+<p>And also <a href="https://wiki.openstreetmap.org/wiki/DE:Key:access">https://wiki.openstreetmap.org/wiki/DE:Key:access</a> reads in my opinion a little bit differently.</p>
+<p>BTW the english wiki <a href="https://wiki.openstreetmap.org/wiki/Parking">https://wiki.openstreetmap.org/wiki/Parking</a> suggests access=customers.</p>
 </div>
 <div id="comment-2238-info" class="comment-info">
 <span class="comment-age">(17 Jan '11, 08:17)</span> <span class="comment-user userinfo">ALE</span>

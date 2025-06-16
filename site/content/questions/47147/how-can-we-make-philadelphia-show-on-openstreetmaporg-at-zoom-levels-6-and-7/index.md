@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Does anyone have thoughts on why a Philadelphia label does not show on openstreetmap.org at zoom level 6 and 7 (<a href="http://www.openstreetmap.org/#map=7/40.296/-74.751">example</a>)? I would expect it to, given the population and land area, so I would like to fix this. Other less-populated cities do show at zoom level 7.</p>
-<p>Interestingly, <a href="http://www.openstreetmap.org/#map=5/40.246/-74.707">it does show</a> at zoom level 5.</p>
-<p>(P.S. I realize this has been asked before. It was first asked in an confrontational way and closed as such, then <a href="https://help.openstreetmap.org/questions/11533/philadelphia-nyc-does-not-show-up-at-high-zooms">closed as a duplicate</a> of that. Before closing, please consider that I am trying to address this constructively, and AFAICT it has not been answered yet.)</p>
+<p>Does anyone have thoughts on why a Philadelphia label does not show on openstreetmap.org at zoom level 6 and 7 (<a href="https://www.openstreetmap.org/#map=7/40.296/-74.751">example</a>)? I would expect it to, given the population and land area, so I would like to fix this. Other less-populated cities do show at zoom level 7.</p>
+<p>Interestingly, <a href="https://www.openstreetmap.org/#map=5/40.246/-74.707">it does show</a> at zoom level 5.</p>
+<p>(P.S. I realize this has been asked before. It was first asked in an confrontational way and closed as such, then <a href="/questions/11533/philadelphia-nyc-does-not-show-up-at-high-zooms">closed as a duplicate</a> of that. Before closing, please consider that I am trying to address this constructively, and AFAICT it has not been answered yet.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-not_shown" rel="tag" title="see questions tagged &#39;not_shown&#39;">not_shown</span> <span class="post-tag tag-link-zoomlevel" rel="tag" title="see questions tagged &#39;zoomlevel&#39;">zoomlevel</span> <span class="post-tag tag-link-labels" rel="tag" title="see questions tagged &#39;labels&#39;">labels</span> <span class="post-tag tag-link-philadelphia" rel="tag" title="see questions tagged &#39;philadelphia&#39;">philadelphia</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>
@@ -112,7 +112,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This question has been asked <a href="https://help.openstreetmap.org/questions/30378/philadelphia-does-not-show-up-but-camden-does">before</a>, albeit not as considerately as this time.</p>
+<p>This question has been asked <a href="/questions/30378/philadelphia-does-not-show-up-but-camden-does">before</a>, albeit not as considerately as this time.</p>
 <p>The basic answer remains the same: this is an artefact of the label collision algorithm of Mapnik. Philadelphia/Camden is just one of many examples.</p>
 <p>There are OSM-based maps which do much more pre-processing to support label placement: one example is mapsurfer.net (see <a href="http://korona.geog.uni-heidelberg.de/?zoom=9&amp;lat=39.9524&amp;lon=-75.16359&amp;layers=B00000FFFFT">Philadelphia</a> here, and note that Camden does not appear until well zoomed in). The standard OSM map is built for speedy update and therefore tends to eschew pre-processing of the data.</p>
 </div>
@@ -222,7 +222,7 @@ osqa_accepted = true
 <div id="post-47167-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: Perhaps because there are also other labels crowding it out ("New Jersey" at both zoom levels)?</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: Perhaps because there are also other labels crowding it out ("New Jersey" at both zoom levels)?</p>
 </div>
 <div id="comment-47167-info" class="comment-info">
 <span class="comment-age">(15 Dec '15, 15:18)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -257,7 +257,7 @@ osqa_accepted = true
 <div id="post-47193-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: thanks! The city centre could be made up by looking at the <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary#Relation_Members">admin_centre</a> member of the city relation (e.g. <a href="https://www.openstreetmap.org/relation/62400">https://www.openstreetmap.org/relation/62400</a> ). For this the node itself does not need the place tag again (in this example it currently has, yes). As said, I rather don't think that this is the cause for the label problem in this discusion.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: thanks! The city centre could be made up by looking at the <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary#Relation_Members">admin_centre</a> member of the city relation (e.g. <a href="https://www.openstreetmap.org/relation/62400">https://www.openstreetmap.org/relation/62400</a> ). For this the node itself does not need the place tag again (in this example it currently has, yes). As said, I rather don't think that this is the cause for the label problem in this discusion.</p>
 </div>
 <div id="comment-47193-info" class="comment-info">
 <span class="comment-age">(17 Dec '15, 05:58)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

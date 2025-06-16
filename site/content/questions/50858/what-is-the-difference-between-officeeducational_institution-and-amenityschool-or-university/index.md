@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tag:office%3Deducational_institution">wiki page</a> for <code>office=educational_institution</code> states that it should be used on an "organization offering formal education; for example, a school, college or university." This definition seems to me to be at odds with existing tags used for such places, namely <code>amenity=school</code>, <code>amenity=university</code>, and <code>amenity=college</code>. As I wrote on the <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:office%3Deducational_institution">Talk</a> page, the transaltion used by iD for the tag rather unfortunately coincides with the name given to public schools in some Spanish-speaking countries (i.e. <em>Institución Educativa</em> + some name), resulting in schools there not being tagged with amenity=school at all and only with office=educational_institution.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tag:office%3Deducational_institution">wiki page</a> for <code>office=educational_institution</code> states that it should be used on an "organization offering formal education; for example, a school, college or university." This definition seems to me to be at odds with existing tags used for such places, namely <code>amenity=school</code>, <code>amenity=university</code>, and <code>amenity=college</code>. As I wrote on the <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:office%3Deducational_institution">Talk</a> page, the transaltion used by iD for the tag rather unfortunately coincides with the name given to public schools in some Spanish-speaking countries (i.e. <em>Institución Educativa</em> + some name), resulting in schools there not being tagged with amenity=school at all and only with office=educational_institution.</p>
 <p>So, how does <code>office=educational_institution</code> differ from the existing <code>amenity=*</code> alternatives for such places?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -142,7 +142,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>For iD translation, see the answer to this question:</p>
-<p><a href="https://help.openstreetmap.org/questions/23930/is-it-possible-to-use-id-in-another-language">https://help.openstreetmap.org/questions/23930/is-it-possible-to-use-id-in-another-language</a></p>
+<p><a href="/questions/23930/is-it-possible-to-use-id-in-another-language">https://help.openstreetmap.org/questions/23930/is-it-possible-to-use-id-in-another-language</a></p>
 <p>iD also uses keywords (such as shop brand names) to suggest tags. The github repository is <a href="https://github.com/openstreetmap/iD">https://github.com/openstreetmap/iD</a> - probably more info there.</p>
 </div>
 <div id="comment-50868-info" class="comment-info">

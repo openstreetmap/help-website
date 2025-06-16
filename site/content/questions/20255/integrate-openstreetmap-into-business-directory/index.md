@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Robert, great that you want to use OSM-based maps! Please see the masses of similar questions which already have good answers <span>tagged "commercial"</span> and <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> + <span>osm.org's tile usage policy</span>.</p>
+<p>Hi Robert, great that you want to use OSM-based maps! Please see the masses of similar questions which already have good answers <span>tagged "commercial"</span> and <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> + <span>osm.org's tile usage policy</span>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

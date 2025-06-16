@@ -165,7 +165,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The JPEG image in the question is from Google Earth, so it is subject to Google's copyright and we cannot use it directly to improve OpenStreetMap. However, if you are telling us, from your own knowledge, that it is not permissible to turn left from Michalakopoulou on to Agiou Thoma, we can certainly include that on the map as a turn restriction. Could you please confirm: 1 - the location in question is shown at <a href="http://www.openstreetmap.org/#map=19/37.98433/23.76354;">http://www.openstreetmap.org/#map=19/37.98433/23.76354;</a> 2 - the left turn from Michalakopoulou (heading south) on to Agiou Thoma is not allowed.</p>
+<p>The JPEG image in the question is from Google Earth, so it is subject to Google's copyright and we cannot use it directly to improve OpenStreetMap. However, if you are telling us, from your own knowledge, that it is not permissible to turn left from Michalakopoulou on to Agiou Thoma, we can certainly include that on the map as a turn restriction. Could you please confirm: 1 - the location in question is shown at <a href="https://www.openstreetmap.org/#map=19/37.98433/23.76354;">https://www.openstreetmap.org/#map=19/37.98433/23.76354;</a> 2 - the left turn from Michalakopoulou (heading south) on to Agiou Thoma is not allowed.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -244,7 +244,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>It looks like the street directly opposite (Τετραπόλεως) has been drawn so as to connect with both carriageways of Μιχαλακοπούλου, whereas (from what you say) it should only connect with the northbound carriageway. Is that right?</p>
-<p>I've added a <a href="http://www.openstreetmap.org/note/838561">note</a> to the map to question this, so maybe some local mapper will pick this up and change it.</p>
+<p>I've added a <a href="https://www.openstreetmap.org/note/838561">note</a> to the map to question this, so maybe some local mapper will pick this up and change it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

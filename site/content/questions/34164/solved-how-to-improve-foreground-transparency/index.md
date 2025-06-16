@@ -123,8 +123,8 @@ osqa_accepted = false
 <p>I tried taking a screen shot of the Bing sat pic, adjusted it in the Mac Preview app, reintroduced it to Josm using the PicLayer plugin, aligned it (with difficulty) and for all the effort was only a slight improvement.</p>
 <p>I used <a href="http://ant.dev.openstreetmap.org/bingimageanalyzer/">bingimageanalyzer</a> and searched for Erdenet, Mongolia and adjusted the opacity for the screen shot but it could be taken from the Josm display.</p>
 <p>Hope someone finds an easier way :)</p>
-<p><img src="http://help.openstreetmap.org/upfiles/orig.png" alt="original" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/alt.png" alt="altered" /></p>
+<p><img src="/upfiles/orig.png" alt="original" /></p>
+<p><img src="/upfiles/alt.png" alt="altered" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -203,7 +203,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As far as I know this is not possible with the iD-editor on openstreetmap.org.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Josm">offline editor JOSM</a> allows you to select different map styles for the foreground layer. It also allows you to toggle the foreground on and off while editing, so you can get a good look at the background before you try to trace over it.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Josm">offline editor JOSM</a> allows you to select different map styles for the foreground layer. It also allows you to toggle the foreground on and off while editing, so you can get a good look at the background before you try to trace over it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

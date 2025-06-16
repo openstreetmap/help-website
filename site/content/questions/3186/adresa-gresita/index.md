@@ -127,8 +127,8 @@ One Answer:
 <div class="answer-body">
 <p>I can see that you have done a lot of edits the latest days in Constanta.</p>
 <p>When I search for "Baragan, Constanta" or "Tismana, Constanta" the search is successful, but if I search for i.e. "Govora, Constanta" or "Prislop, Constanta" I get no hit.</p>
-<p>Let's look at the <a href="http://www.openstreetmap.org/browse/way/100323677/history">Way History: Prislop (100323677)</a>. It says you added the name tag yesterday evening.</p>
-<p>The service indexing the name and address data of OpenStreetMap is called <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Nominatim has recently had problems with the update, so it may take a while before the data is updated. For further information see "<a href="http://wiki.openstreetmap.org/wiki/Talk:Nominatim#nominatim_not_up_to_date_.28january_2011.29">nominatim not up to date (january 2011)</a> ". By the way, it always takes a while for Nominatim to update the data, even when it's fully functional.</p>
+<p>Let's look at the <a href="https://www.openstreetmap.org/browse/way/100323677/history">Way History: Prislop (100323677)</a>. It says you added the name tag yesterday evening.</p>
+<p>The service indexing the name and address data of OpenStreetMap is called <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>. Nominatim has recently had problems with the update, so it may take a while before the data is updated. For further information see "<a href="https://wiki.openstreetmap.org/wiki/Talk:Nominatim#nominatim_not_up_to_date_.28january_2011.29">nominatim not up to date (january 2011)</a> ". By the way, it always takes a while for Nominatim to update the data, even when it's fully functional.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

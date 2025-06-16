@@ -42,7 +42,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Can you advice how can I filter city part nodes displayed on tiles (standard layer) with parent relation from OSM database?</p>
 <p>I need to export hierarchy: city(city, town, village, hamlet in OSM) &gt; cityPart(suburb, cityDistrict, administrative in OSM)</p>
-<p><a href="https://nominatim.openstreetmap.org/details.php?place_id=198526448">https://nominatim.openstreetmap.org/details.php?place_id=198526448</a> <img src="https://help.openstreetmap.org/upfiles/Zilina_8usFYsI.JPG" alt="Zilina example" /></p>
+<p><a href="https://nominatim.openstreetmap.org/details.php?place_id=198526448">https://nominatim.openstreetmap.org/details.php?place_id=198526448</a> <img src="/upfiles/Zilina_8usFYsI.JPG" alt="Zilina example" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-database" rel="tag" title="see questions tagged &#39;database&#39;">database</span>

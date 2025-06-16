@@ -236,7 +236,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As said in your other <a href="https://help.openstreetmap.org/questions/81649/how-to-view-the-bearing-of-a-destination?page=1&amp;focusedAnswerId=81667#81667">question</a>, OsmAnd can display bearings, true and magnetic, so it knows about the declination.</p>
+<p>As said in your other <a href="/questions/81649/how-to-view-the-bearing-of-a-destination?page=1&amp;focusedAnswerId=81667#81667">question</a>, OsmAnd can display bearings, true and magnetic, so it knows about the declination.</p>
 <p>Maybe you can ask for a dedicated declination widget, in their repository there's already a related <a href="https://github.com/osmandapp/OsmAnd/issues/12596">issue</a>.</p>
 <p>Regards.</p>
 </div>

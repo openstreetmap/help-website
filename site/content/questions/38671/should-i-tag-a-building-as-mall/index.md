@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dmall">Tag:shop=mall wiki page</a> says the following:</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmall">Tag:shop=mall wiki page</a> says the following:</p>
 <p>Because of their size, we'll mostly be mapping these as an Area area around outline of the building (perhaps also with a <code>building=yes</code> tag).</p>
 <p>Does this means that the default/encouraged mapping is to map the mall building then create an area around it and tag it as <code>shop=mall</code>?</p>
 <p>It seems a bit illogical for me. Actually I would map the building and tag it as <code>building=commercial</code> or <code>retail</code> with the <code>shop=mall</code> tag, then map the area around everything that is used for shopping/mall purposes (like parking lots) and tag it as <code>landuse=retail</code>. Why should I map an area with <code>shop=mall</code> when we think about malls as bulidings?</p>

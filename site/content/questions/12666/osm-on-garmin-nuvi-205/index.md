@@ -162,7 +162,7 @@ One Answer:
 <div class="comment-text">
 <p>Hi Scai,</p>
 <p>yup, created Garmin folder on my sd card. but also the problem is then, i need different sd cards with the same file and keep switching everytime i want a new country/region.</p>
-<p>also, i found the info below on wiki <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>also, i found the info below on wiki <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 <p><strong><em>To use these maps simply copy the "gmapsupp.img" file to your Garmin device. Notes: * Older Garmin Devices o The Garmin device loads a single map file called "gmapsupp.img". This file must be in a directory called "Garmin" on the SD-card (so the full path is "Garmin/gmapsupp.img"). If the "Garmin" directory does not exist on the SD-card, you will have to create it. o There can only be one "gmapsupp.img" file, so if the map is distributed as several .img files you will need to merge them together - this can be done with the mkgmap command "mkgmap --gmapsupp mapA.img mapB.img mapC.img [...]".</em></strong></p>
 <p>looks like i have to download the entire world map if i want to use only one gmapsupp.img file?</p>
 <p>cheers and tq for your reply</p>

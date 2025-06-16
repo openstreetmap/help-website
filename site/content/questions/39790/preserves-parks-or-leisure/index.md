@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Most of the preserves are city-maintained, but there are few located in rare unincorporated areas of the county.</p>
 <p>My question is, are these preserves handled as "nature preserves" or "parks"? So far, I've mapped these as nature preserves (except for one). I'd just like to get a precise definition of the tags in this context.</p>
 <p><em>Thanks, AB</em></p>
-<p><img src="http://help.openstreetmap.org/upfiles/P1.PNG" alt="County preserve" /><img src="http://help.openstreetmap.org/upfiles/P2.PNG" alt="A county preserve, but maintained by a private org." /></p>
+<p><img src="/upfiles/P1.PNG" alt="County preserve" /><img src="/upfiles/P2.PNG" alt="A county preserve, but maintained by a private org." /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-preserves" rel="tag" title="see questions tagged &#39;preserves&#39;">preserves</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-parks" rel="tag" title="see questions tagged &#39;parks&#39;">parks</span> <span class="post-tag tag-link-nature" rel="tag" title="see questions tagged &#39;nature&#39;">nature</span>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sounds like <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve">leisure=nature_reserve</a> to me</p>
+<p>Sounds like <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve">leisure=nature_reserve</a> to me</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

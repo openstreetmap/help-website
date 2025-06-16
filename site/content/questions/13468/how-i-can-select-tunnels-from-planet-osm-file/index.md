@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/SVG">Osmfilter</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a> ...there you have different features to filter data from local extracts or a mirror of the main OSM database.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/SVG">Osmfilter</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a> ...there you have different features to filter data from local extracts or a mirror of the main OSM database.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

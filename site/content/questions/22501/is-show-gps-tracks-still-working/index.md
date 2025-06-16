@@ -74,8 +74,8 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>There does indeed seem to be a problem. I suspect that it's gone unnoticed so far because relatively few people are still using Potlatch 1 (I tend to use it alongside Potlatch 2 to view the waypoints in my own traces).</p>
-<p>If invoked with a GPS trace (e.g. <a href="http://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch">http://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch</a> ) it displays that OK - it's the fetching of the others that's the problem.</p>
-<p>And for the avoidance of doubt Potlatch 2's display of all of the GPS traces in the area (see e.g. <a href="http://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch2">http://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch2</a> ) still works as it always did.</p>
+<p>If invoked with a GPS trace (e.g. <a href="https://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch">https://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch</a> ) it displays that OK - it's the fetching of the others that's the problem.</p>
+<p>And for the avoidance of doubt Potlatch 2's display of all of the GPS traces in the area (see e.g. <a href="https://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch2">https://www.openstreetmap.org/edit?gpx=1369542&amp;editor=potlatch2</a> ) still works as it always did.</p>
 <p>"Potlatch (flash editor)" is still listed in the component dropdown of the <a href="https://trac.openstreetmap.org/">trac</a> "add new ticket" dialog, but I doubt that anyone is actively maintaining it.</p>
 </div>
 <div id="comment-22505-info" class="comment-info">

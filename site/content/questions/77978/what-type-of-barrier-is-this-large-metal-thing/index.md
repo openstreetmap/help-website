@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>It is completely blocking the road here and likely put there on purpose. Trying to figure out what tag to use for this. Visible in bing satellite view for those curious <a href="https://www.openstreetmap.org/note/2465658#map=17/20.86592/-156.45465">https://www.openstreetmap.org/note/2465658#map=17/20.86592/-156.45465</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_20201217_164351.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/IMG_20201217_164351.jpg" alt="alt text" /></p>
 <p><a href="https://wiki.openstreetmap.org/wiki/Key:barrier">https://wiki.openstreetmap.org/wiki/Key:barrier</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">

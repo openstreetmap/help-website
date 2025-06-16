@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "why some maps like MapBox, Foursqure, and Cloudmademaps, don&#x27;t reflect the changes I&#x27;ve made to OSM maps?"
-description = '''Hello, I&#x27;m trying to figure out why some maps like MapBox, Foursqure, and Cloudmademaps for example, don&#x27;t reflect the changes I&#x27;ve made to OSM maps. This is the area I&#x27;m concerned about http://www.openstreetmap.org/#map=15/57.0311/-135.3337 Mapbox has everything but the coastline updated but they c...'''
+description = '''Hello, I&#x27;m trying to figure out why some maps like MapBox, Foursqure, and Cloudmademaps for example, don&#x27;t reflect the changes I&#x27;ve made to OSM maps. This is the area I&#x27;m concerned about https://www.openstreetmap.org/#map=15/57.0311/-135.3337 Mapbox has everything but the coastline updated but they c...'''
 date = "2013-12-06T02:15:00Z"
 lastmod = "2013-12-06T23:04:00Z"
 weight = 28839
@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I'm trying to figure out why some maps like MapBox, Foursqure, and Cloudmademaps for example, don't reflect the changes I've made to OSM maps. This is the area I'm concerned about <a href="http://www.openstreetmap.org/#map=15/57.0311/-135.3337">http://www.openstreetmap.org/#map=15/57.0311/-135.3337</a></p>
-<p>Mapbox has everything but the coastline updated but they claim they update from OSM roughly every 5 minutes. OSM has reflected the changes I made to the coastline back in September. <img src="http://help.openstreetmap.org/upfiles/mapbox-vs-osm.jpg" alt="alt text" /> I was concerned there was something I was doing wrong. Not tagging something properly or not citing that my source was from the Bing aerial or something like that. Since it's been a few months I thought I should ask here.</p>
+<p>Hello, I'm trying to figure out why some maps like MapBox, Foursqure, and Cloudmademaps for example, don't reflect the changes I've made to OSM maps. This is the area I'm concerned about <a href="https://www.openstreetmap.org/#map=15/57.0311/-135.3337">https://www.openstreetmap.org/#map=15/57.0311/-135.3337</a></p>
+<p>Mapbox has everything but the coastline updated but they claim they update from OSM roughly every 5 minutes. OSM has reflected the changes I made to the coastline back in September. <img src="/upfiles/mapbox-vs-osm.jpg" alt="alt text" /> I was concerned there was something I was doing wrong. Not tagging something properly or not citing that my source was from the Bing aerial or something like that. Since it's been a few months I thought I should ask here.</p>
 <p>Thank you for your time reading this.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -174,7 +174,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Coastlines work slightly differently (and need updating in a different way). Search for coastline on this site, and see for example this question: <a href="https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map</a></p>
+<p>Coastlines work slightly differently (and need updating in a different way). Search for coastline on this site, and see for example this question: <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -262,7 +262,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Hello There,</p>
 <p>Just some observations from looking at other similar island groups.</p>
-<p>You might need the place=island tag, <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Disland">see here.</a></p>
+<p>You might need the place=island tag, <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Disland">see here.</a></p>
 <p>Also the island names could go on the outline way as well.</p>
 <p>Regards Bernard</p>
 </div>

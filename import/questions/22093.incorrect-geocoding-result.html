@@ -7,7 +7,7 @@
         <meta name="description" content="Hello. I&#39;m new to here. I&#39;ve set up my own Nominatim server on a Ubuntu server and imported the full planet OSM file into the database. Map rendering is fine, however, the reverse geocoding result was very strange, in some cases the result returned from my local server is different to the Nominatim ..." />
         <meta name="keywords" content="incorrect,geocoding,result" />
         
-        <link rel="canonical" href="https://help.openstreetmap.org/questions/22093/incorrect-geocoding-result" />
+        <link rel="canonical" href="/questions/22093/incorrect-geocoding-result" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22093/incorrect-geocoding-result?type=rss">
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -251,7 +251,7 @@
 <i><u><a href="http://MY_SERVER/nominatim/reverse?format=xml&amp;lat=22.300348&amp;lon=114.167846&amp;zoom=18&amp;addressdetails=1&amp;accept-language=en">http://MY_SERVER/nominatim/reverse?format=xml&amp;lat=22.300348&amp;lon=114.167846&amp;zoom=18&amp;addressdetails=1&amp;accept-language=en</a></u></i></p>
 <p><br>
 <strong>My server returns:</strong>
-&lt;reversegeocode timestamp="Sat, 04 May 13 14:42:00 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;http://www.openstreetmap.org/copyright" querystring="format=xml&amp;lat=22.300348&amp;lon=114.167846&amp;zoom=18&amp;addressdetails=1&amp;accept-language=en"&gt;
+&lt;reversegeocode timestamp="Sat, 04 May 13 14:42:00 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;https://www.openstreetmap.org/copyright" querystring="format=xml&amp;lat=22.300348&amp;lon=114.167846&amp;zoom=18&amp;addressdetails=1&amp;accept-language=en"&gt;
 &lt;result place_id="12826225" osm_type="node" osm_id="1187352818" ref="China Hong Kong City" lat="22.3009605" lon="114.1676224"&gt;
 China Hong Kong City, Canton Road, Tsim Sha Tsui, Yau Tsim Mong District, <strong>New Territories</strong>, Hong Kong
 &lt;/result&gt;
@@ -267,7 +267,7 @@ China Hong Kong City, Canton Road, Tsim Sha Tsui, Yau Tsim Mong District, <stron
 &lt;/addressparts&gt;
 &lt;/reversegeocode&gt;</p>
 <p><strong>The Nominatim server returns:</strong>
-&lt;reversegeocode timestamp="Sat, 04 May 13 14:42:08 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;http://www.openstreetmap.org/copyright" querystring="format=xml&amp;lat=22.300348&amp;lon=114.167846&amp;zoom=18&amp;addressdetails=1&amp;accept-language=en"&gt;
+&lt;reversegeocode timestamp="Sat, 04 May 13 14:42:08 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;https://www.openstreetmap.org/copyright" querystring="format=xml&amp;lat=22.300348&amp;lon=114.167846&amp;zoom=18&amp;addressdetails=1&amp;accept-language=en"&gt;
 &lt;result place_id="12824996" osm_type="node" osm_id="1187352818" ref="China Hong Kong City" lat="22.3009605" lon="114.1676224"&gt;
 China Hong Kong City, Canton Road, Tsim Sha Tsui, Yau Tsim Mong District, <strong>Kowloon</strong>, Hong Kong
 &lt;/result&gt;
@@ -285,7 +285,7 @@ China Hong Kong City, Canton Road, Tsim Sha Tsui, Yau Tsim Mong District, <stron
 <br>
 The COUNTY value is different and "Kowloon" is the correct one.</p>
 <p>I tried to import it from OSM/PBF file, the results are same.</p>
-<p>I strictly went through the installation procedure (<a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation)">http://wiki.openstreetmap.org/wiki/Nominatim/Installation)</a> and tried to install it with Nominatim 2.0.1 and the GIT version, results are still same...</p>
+<p>I strictly went through the installation procedure (<a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation)">https://wiki.openstreetmap.org/wiki/Nominatim/Installation)</a> and tried to install it with Nominatim 2.0.1 and the GIT version, results are still same...</p>
 <p>Is there anyone have any idea about this?  If anyone is able to help me troubleshoot, I can give you root access to my server.</p>
 <p>Thank you!</p>
                             </div>
@@ -427,8 +427,8 @@ Nominatim: <a href="http://nominatim.openstreetmap.org/details.php?place_id=9818
                                         <div class="answer-body">
                                             <p>This is a data problem: I suspect that your version of the planet is newer than that used by Nominatim (at least for Kowloon).</p>
 <p>It is always worth using the detail view of Nominatim to see what it thinks the boundaries of polygons actually are. The current boundaries for Kowloon and <a href="http://nominatim.openstreetmap.org/search.php?q=New+Territories">New Territories</a> are <a href="http://nominatim.openstreetmap.org/details.php?place_id=98217453">here</a> and <a href="http://nominatim.openstreetmap.org/details.php?place_id=98186275">here</a> (as these use internal Nominatim Ids, these links may fail in which case chose the links on the name and select the details link in Nominatim). You should check that the boundaries for these places are the same on your server.</p>
-<p>In fact the boundary of Kowloon was has been changed in several changesets recently - see the history of the relation <a href="http://www.openstreetmap.org/browse/relation/2279652/history">here</a> - and it is no longer a closed polygon as shown by inspecting the relation <a href="http://analyser.openstreetmap.fr/cgi-bin/index.py">here</a>.</p>
-<p>In addition the relation covering the <a href="http://www.openstreetmap.org/browse/relation/2279783">New Territories</a> has similarly lost its hole containing Hong Kong Island and Kowloon. </p>
+<p>In fact the boundary of Kowloon was has been changed in several changesets recently - see the history of the relation <a href="https://www.openstreetmap.org/browse/relation/2279652/history">here</a> - and it is no longer a closed polygon as shown by inspecting the relation <a href="http://analyser.openstreetmap.fr/cgi-bin/index.py">here</a>.</p>
+<p>In addition the relation covering the <a href="https://www.openstreetmap.org/browse/relation/2279783">New Territories</a> has similarly lost its hole containing Hong Kong Island and Kowloon. </p>
 <p>Once these problems have been fixed and your Nominatim instance updated I would expect that you will get the geocoding results you expect!</p>
                                         </div>
                                         <div class="answer-controls post-controls">
@@ -572,7 +572,7 @@ Nominatim: <a href="http://nominatim.openstreetmap.org/details.php?place_id=9818
 
 <div id="sidebar-upper" class="boxC">
     <div class="body">
-        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+        <p>This was the support site for <a href="https://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
      </div>
 </div>
 

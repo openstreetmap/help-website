@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I was asking myself if there is a good routing software/library that returns multiple routes (a route and some alternative routes).</p>
 <p>I looked up for OSRM and I just read that sometimes there is alternative route given if the length/time is pretty much the same and the routes differ enough.</p>
 <p>Here is an example what I mean with "alternative routes". The screens are from Google Maps/Navigation and Scout GPS Nav (formerly Skobbler) on Android:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/scout_VEY9BOH.jpg" alt="Scout Android App" /> <img src="http://help.openstreetmap.org/upfiles/gmaps_5VgCTmA.jpg" alt="Google Maps on Android" /> They both offer 3 possible routes.</p>
+<p><img src="/upfiles/scout_VEY9BOH.jpg" alt="Scout Android App" /> <img src="/upfiles/gmaps_5VgCTmA.jpg" alt="Google Maps on Android" /> They both offer 3 possible routes.</p>
 <p>Any suggestions for a router that offers multiple alternative routes, like let's say 3 or 4 routes on default?</p>
 <p>Thanks in advance!</p>
 </div>
@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Open_Source_Routing_Machine">Open_Source_Routing_Machine</a> ... when doing a routing on the web demo in many cases it has an option to choose route A ... or route B.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Open_Source_Routing_Machine">Open_Source_Routing_Machine</a> ... when doing a routing on the web demo in many cases it has an option to choose route A ... or route B.</p>
 <p>It is an opensource solution.</p>
 </div>
 <div class="answer-controls post-controls">

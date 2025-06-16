@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>It's likely that the tiles at higher zoom levels just haven't been updated yet - there's a detailed description of what's happening <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.<br />
+<p>It's likely that the tiles at higher zoom levels just haven't been updated yet - there's a detailed description of what's happening <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.<br />
 </p>
 </div>
 <div id="comment-16127-info" class="comment-info">
@@ -176,7 +176,7 @@ osqa_accepted = false
 <div id="post-16133-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>These things seem ok, just something went wrong with rendering. Until everything is ok on data layer, don't worry about rendering. It will get rendered eventually. You may want to read <a href="http://wiki.openstreetmap.org/wiki/Key:highway">http://wiki.openstreetmap.org/wiki/Key:highway</a> to get an idea about road classifications in osm. Roads you have drawn seem to be something else than _link roads.</p>
+<p>These things seem ok, just something went wrong with rendering. Until everything is ok on data layer, don't worry about rendering. It will get rendered eventually. You may want to read <a href="https://wiki.openstreetmap.org/wiki/Key:highway">https://wiki.openstreetmap.org/wiki/Key:highway</a> to get an idea about road classifications in osm. Roads you have drawn seem to be something else than _link roads.</p>
 </div>
 <div id="comment-16133-info" class="comment-info">
 <span class="comment-age">(15 Sep '12, 22:40)</span> <span class="comment-user userinfo">RM87</span>
@@ -187,7 +187,7 @@ osqa_accepted = false
 <div id="post-16134-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sure. here is the link <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14</a></p>
+<p>Sure. here is the link <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14</a></p>
 </div>
 <div id="comment-16134-info" class="comment-info">
 <span class="comment-age">(15 Sep '12, 22:56)</span> <span class="comment-user userinfo">Moe2</span>
@@ -198,7 +198,7 @@ osqa_accepted = false
 <div id="post-16140-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, I need to add a small town to the map. I used potlatch2 to do that. I start few links, when I zoom out my new links disappear even I wait hours for it to render, anyone can help me please. Here is the area in question: <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14</a> Thanks.</p>
+<p>Hi, I need to add a small town to the map. I used potlatch2 to do that. I start few links, when I zoom out my new links disappear even I wait hours for it to render, anyone can help me please. Here is the area in question: <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=52.0523&amp;lon=-107.5303&amp;zoom=14</a> Thanks.</p>
 </div>
 <div id="comment-16140-info" class="comment-info">
 <span class="comment-age">(16 Sep '12, 13:19)</span> <span class="comment-user userinfo">Moe2</span>
@@ -241,9 +241,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure why you're asking the same question repeatedly - gnurk's answer (wait a bit and it'll get rendered) is correct, as is my comment on the question (it's been asked before). If you follow the <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">link</a> in that comment it tells you exactly what's happening, and what to do if you don't want to wait a bit.</p>
-<p>I just followed the advice in that link and marked the tiles at your link at a selection of zoom levels as dirty, and sure enough as expected they <a href="http://www.openstreetmap.org/?lat=52.039&amp;lon=-107.537&amp;zoom=10&amp;layers=M">display just fine now</a>.</p>
-<p>One thought - if you'd like more help perhaps try asking on the #OSM <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a> channel? That way you'd be able to ask people questions in real time, and we might be able to better understand what the issue is. If you've not used IRC before don't worry - on the wiki page there's a <a href="http://irc.openstreetmap.org/">link</a> just after it says "You can chat on the web" - just click that, choose a nickname and login.</p>
+<p>I'm not sure why you're asking the same question repeatedly - gnurk's answer (wait a bit and it'll get rendered) is correct, as is my comment on the question (it's been asked before). If you follow the <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">link</a> in that comment it tells you exactly what's happening, and what to do if you don't want to wait a bit.</p>
+<p>I just followed the advice in that link and marked the tiles at your link at a selection of zoom levels as dirty, and sure enough as expected they <a href="https://www.openstreetmap.org/?lat=52.039&amp;lon=-107.537&amp;zoom=10&amp;layers=M">display just fine now</a>.</p>
+<p>One thought - if you'd like more help perhaps try asking on the #OSM <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a> channel? That way you'd be able to ask people questions in real time, and we might be able to better understand what the issue is. If you've not used IRC before don't worry - on the wiki page there's a <a href="http://irc.openstreetmap.org/">link</a> just after it says "You can chat on the web" - just click that, choose a nickname and login.</p>
 <p>Also - there seem to be a number of "duplicate ways" there without tags on them that look a bit wrong.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -297,7 +297,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Related question, but my path disapear when zooming in, when using the Standard rendering in openstreetmaop.org. Just wait? <a href="http://www.openstreetmap.org/browse/way/191501635">http://www.openstreetmap.org/browse/way/191501635</a></p>
+<p>Related question, but my path disapear when zooming in, when using the Standard rendering in openstreetmaop.org. Just wait? <a href="https://www.openstreetmap.org/browse/way/191501635">https://www.openstreetmap.org/browse/way/191501635</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The reply is in the title. If you consider the pedestrian way as "The Street" , then I would suggest "<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">highway=pedestrian</a>" + "name=name_of_the_street" (adding "<a href="http://wiki.openstreetmap.org/wiki/Access">bicycle=yes|no</a>" can clarify the public access for bikers crossing the area). The road access in rear side is tagged with "<a href="http://wiki.openstreetmap.org/wiki/Service">highway=service</a>" + "service=<a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Ddriveway">driveway</a>|<a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">alley</a>".<br />
-Keep "<a href="http://wiki.openstreetmap.org/wiki/Footway">highway=footway</a>" or "higway=path" for minor paths.</p>
+<p>The reply is in the title. If you consider the pedestrian way as "The Street" , then I would suggest "<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian">highway=pedestrian</a>" + "name=name_of_the_street" (adding "<a href="https://wiki.openstreetmap.org/wiki/Access">bicycle=yes|no</a>" can clarify the public access for bikers crossing the area). The road access in rear side is tagged with "<a href="https://wiki.openstreetmap.org/wiki/Service">highway=service</a>" + "service=<a href="https://wiki.openstreetmap.org/wiki/Tag:service%3Ddriveway">driveway</a>|<a href="https://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">alley</a>".<br />
+Keep "<a href="https://wiki.openstreetmap.org/wiki/Footway">highway=footway</a>" or "higway=path" for minor paths.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

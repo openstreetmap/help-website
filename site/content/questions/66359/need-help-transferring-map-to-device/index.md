@@ -96,7 +96,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/15801/smills98823">@smills98823</a>: please mention the URL of "the openstreetmap site". Very likely you do not mean <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> . Which file (name?) did you download?</p>
+<p><a href="https://help.openstreetmap.org/users/15801/smills98823">@smills98823</a>: please mention the URL of "the openstreetmap site". Very likely you do not mean <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> . Which file (name?) did you download?</p>
 </div>
 <div id="comment-66362-info" class="comment-info">
 <span class="comment-age">(16 Oct '18, 22:17)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

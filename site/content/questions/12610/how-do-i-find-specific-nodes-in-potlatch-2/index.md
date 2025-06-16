@@ -126,7 +126,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In a different browser session I'd go to <a href="http://www.openstreetmap.org/browse/node/83564195">http://www.openstreetmap.org/browse/node/83564195</a> , click edit, take (manual) note of any node tags, delete the node, save and close your original Potlatch session, then re-edit the area, adding back in a joining to replace the one that you deleted earlier.</p>
+<p>In a different browser session I'd go to <a href="https://www.openstreetmap.org/browse/node/83564195">https://www.openstreetmap.org/browse/node/83564195</a> , click edit, take (manual) note of any node tags, delete the node, save and close your original Potlatch session, then re-edit the area, adding back in a joining to replace the one that you deleted earlier.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

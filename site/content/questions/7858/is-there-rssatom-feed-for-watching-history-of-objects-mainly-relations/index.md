@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I see various types of graphical history watching services by area (like <a href="http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL</a>), but what about simple RSS/Atom feeds for history of objects - nodes, ways, but mainly large objects like relations. Seems like I am unable to watch large administrative border or a long river now without other map objects being included within my watch...</p>
+<p>I see various types of graphical history watching services by area (like <a href="https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL</a>), but what about simple RSS/Atom feeds for history of objects - nodes, ways, but mainly large objects like relations. Seems like I am unable to watch large administrative border or a long river now without other map objects being included within my watch...</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changes" rel="tag" title="see questions tagged &#39;changes&#39;">changes</span> <span class="post-tag tag-link-atom" rel="tag" title="see questions tagged &#39;atom&#39;">atom</span> <span class="post-tag tag-link-history" rel="tag" title="see questions tagged &#39;history&#39;">history</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span> <span class="post-tag tag-link-rss" rel="tag" title="see questions tagged &#39;rss&#39;">rss</span>

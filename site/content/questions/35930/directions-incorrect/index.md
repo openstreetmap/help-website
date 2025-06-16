@@ -68,7 +68,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I'm guessing that you mean on this street:</p>
-<p><a href="http://www.openstreetmap.org/way/24824439">http://www.openstreetmap.org/way/24824439</a></p>
+<p><a href="https://www.openstreetmap.org/way/24824439">https://www.openstreetmap.org/way/24824439</a></p>
 <p>Is that correct? Also, what is "the site" that you are using for directions?</p>
 </div>
 <div id="comment-35932-info" class="comment-info">
@@ -118,7 +118,7 @@ osqa_accepted = false
 <div id="post-35968-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>is this the building <a href="http://www.openstreetmap.org/#map=19/45.64034/13.76890">http://www.openstreetmap.org/#map=19/45.64034/13.76890</a> if so add the hotel to the map, and make sure any one way streets are correct</p>
+<p>is this the building <a href="https://www.openstreetmap.org/#map=19/45.64034/13.76890">https://www.openstreetmap.org/#map=19/45.64034/13.76890</a> if so add the hotel to the map, and make sure any one way streets are correct</p>
 </div>
 <div id="comment-35968-info" class="comment-info">
 <span class="comment-age">(18 Aug '14, 22:10)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I work with uMap and I used to provide the anonymous editing link to some other people destined to work on the map, and also for me, when the desktop or the server has deleted my automatic login after some months of inactivity. However, now I did not find anymore the place where umap provided the link! Has something changed by uMap? Here a screenshot where I expected to find the anonymous link (sorry, in German: Bearbeiter= editor, jeder= everybody; Eigentümer=owner). <img src="https://help.openstreetmap.org/upfiles/uMap1.png" alt="alt text" /></p>
+<p>Hi, I work with uMap and I used to provide the anonymous editing link to some other people destined to work on the map, and also for me, when the desktop or the server has deleted my automatic login after some months of inactivity. However, now I did not find anymore the place where umap provided the link! Has something changed by uMap? Here a screenshot where I expected to find the anonymous link (sorry, in German: Bearbeiter= editor, jeder= everybody; Eigentümer=owner). <img src="/upfiles/uMap1.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span> <span class="post-tag tag-link-anonymous-edit-link" rel="tag" title="see questions tagged &#39;anonymous-edit-link&#39;">anonymous-edit-link</span>

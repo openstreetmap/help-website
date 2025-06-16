@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm a bit new to OSM, but one thing I have failed to understand is why people create separate nodes to label areas instead of putting the label directly in the name tag of the relevant area. It seems to me that it would be better to just put the label in the area's tags because this gives renderers more freedom over where to render the name, and associates the name with the entire area to which it applies, which I thought would be ideal. Are there reasons to use one method over the other? Is one necessarily <em>wrong</em>?</p>
-<p>Here is an example of what I'm talking about: <img src="https://help.openstreetmap.org/upfiles/2017-06-21-220308_905x561_scrot.png" /> The parking symbol on the left is from the area itself, and the one on the right is a separate node which only provides the name of the parking lot.</p>
+<p>Here is an example of what I'm talking about: <img src="/upfiles/2017-06-21-220308_905x561_scrot.png" /> The parking symbol on the left is from the area itself, and the one on the right is a separate node which only provides the name of the parking lot.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-labels" rel="tag" title="see questions tagged &#39;labels&#39;">labels</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

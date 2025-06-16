@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I found a neighbourhood where all roads are tagged as 'West 1 Rd.', 'West 2 Rd.' etc, and I want to rename these to 'West 1 Road' etc.</p>
 <p>How do I do this? I downloaded the subjects only using Overpass api, but in JOSM you only seem to be able to bulk edit many names to one name, not replace only part of the name. I also tried to replace all 'Rd.' by 'Road' using Notepad++, but JOSM won't upload it because I didn't add new timestamps to the objects when doing that.</p>
-<p>It's about this area <a href="http://www.openstreetmap.org/#map=16/22.9508/113.2692">http://www.openstreetmap.org/#map=16/22.9508/113.2692</a></p>
+<p>It's about this area <a href="https://www.openstreetmap.org/#map=16/22.9508/113.2692">https://www.openstreetmap.org/#map=16/22.9508/113.2692</a></p>
 <p>(I am aware of the dangers of mechanical edits, but in this case, the number is limited enough to check each result, but too bothersome to do one-by-one)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>For your limited case, this method should work. I tried it a few months ago and it worked for me. Thanks to user escada for the method.</p>
 <p>Basically, you use <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass turbo</a> (<a href="http://overpass-turbo.eu/)">http://overpass-turbo.eu/)</a> to find the objects to edit, then the editor <a href="https://wiki.openstreetmap.org/wiki/Level0">Level0</a> (<a href="http://level0.osmz.ru/)">http://level0.osmz.ru/)</a> to change them.</p>
-<p>escada describes the details in <a href="http://www.openstreetmap.org/user/escada/diary/28268">this post on the OpenStreetMap blog</a>.</p>
+<p>escada describes the details in <a href="https://www.openstreetmap.org/user/escada/diary/28268">this post on the OpenStreetMap blog</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

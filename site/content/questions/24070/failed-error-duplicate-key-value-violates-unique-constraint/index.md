@@ -139,7 +139,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>The osm2pgsql package of Debian 6.0 ("Squeeze") doesn't support 64bit IDs. This is because Squeeze is rather old (from early 2011). The current stable version of Debian (7.0 aka "Wheezy") supports 64bit IDs. But if you cannot upgrade to Wheezy you can still get a recent version from <a href="https://github.com/openstreetmap/osm2pgsql">GitHub</a>, see the <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql wiki page</a> for more information.</p>
+<p>The osm2pgsql package of Debian 6.0 ("Squeeze") doesn't support 64bit IDs. This is because Squeeze is rather old (from early 2011). The current stable version of Debian (7.0 aka "Wheezy") supports 64bit IDs. But if you cannot upgrade to Wheezy you can still get a recent version from <a href="https://github.com/openstreetmap/osm2pgsql">GitHub</a>, see the <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql wiki page</a> for more information.</p>
 </div>
 <div id="comment-24081-info" class="comment-info">
 <span class="comment-age">(08 Jul '13, 12:21)</span> <span class="comment-user userinfo">scai ♦</span>

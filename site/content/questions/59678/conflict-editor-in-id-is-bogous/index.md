@@ -130,7 +130,7 @@ osqa_accepted = false
 -1
 </div>
 <div class="comment-text">
-<p>This real bug has been reported elsewhere and accepted, for example <a href="https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit</a></p>
+<p>This real bug has been reported elsewhere and accepted, for example <a href="/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit">https://help.openstreetmap.org/questions/31318/how-do-i-find-a-way-by-id-in-id-to-fix-version-mismatch-and-then-save-my-edit</a></p>
 </div>
 <div id="comment-59686-info" class="comment-info">
 <span class="comment-age">(18 Sep '17, 21:42)</span> <span class="comment-user userinfo">Verdy_p</span>

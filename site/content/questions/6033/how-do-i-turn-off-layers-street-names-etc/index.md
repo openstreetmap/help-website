@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please see the excellent answers to <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my website"</a>.</p>
+<p>Please see the excellent answers to <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">"How do I render my own maps for my website"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

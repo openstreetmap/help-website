@@ -70,7 +70,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I'm not quite sure what you mean. Perhaps it is a question better asked on IRC?:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Irc">http://wiki.openstreetmap.org/wiki/Irc</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Irc">https://wiki.openstreetmap.org/wiki/Irc</a></p>
 <p>That way you'll be able to discuss what you mean by e.g. "a cloaking region on a map".</p>
 </div>
 <div id="comment-38446-info" class="comment-info">
@@ -118,7 +118,7 @@ osqa_accepted = false
 <div id="post-38488-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9984/chensh46">@chensh46</a>: okay, hmm, it is a bit hard to help you in that case. Yes OSM can supply you with the road network. You also could get a map. Nearly everything is possible with OSM because you have access to the raw data. But I do not know what specifically you want to do, so I cannot help you any further. Maybe it would be helpful for you if you would read a bit <span>about OSM</span> first.</p>
+<p><a href="https://help.openstreetmap.org/users/9984/chensh46">@chensh46</a>: okay, hmm, it is a bit hard to help you in that case. Yes OSM can supply you with the road network. You also could get a map. Nearly everything is possible with OSM because you have access to the raw data. But I do not know what specifically you want to do, so I cannot help you any further. Maybe it would be helpful for you if you would read a bit <span>about OSM</span> first.</p>
 <p>Do you want to display a map on a webpage? Do you want to get a text description of a position - a coarse address (Street, City, Country)?</p>
 </div>
 <div id="comment-38488-info" class="comment-info">
@@ -130,7 +130,7 @@ osqa_accepted = false
 <div id="post-38489-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5918/stf">@stf</a>: that exact info (if you use wireless networks positioning) is known to google or apple (yes, and some more wiretappers), but not to everybody else. If your protection goal is to hide your exact location from everybody except google/apple, then the location blurring might help. Imagine you want to post your current location into a box on your homepage.</p>
+<p><a href="https://help.openstreetmap.org/users/5918/stf">@stf</a>: that exact info (if you use wireless networks positioning) is known to google or apple (yes, and some more wiretappers), but not to everybody else. If your protection goal is to hide your exact location from everybody except google/apple, then the location blurring might help. Imagine you want to post your current location into a box on your homepage.</p>
 </div>
 <div id="comment-38489-info" class="comment-info">
 <span class="comment-age">(12 Nov '14, 03:09)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

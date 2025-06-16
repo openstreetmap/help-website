@@ -138,11 +138,11 @@ osqa_accepted = true
 <p>You should avoid tagging them in a way that makes them indistinguishable from footways that are independent from roads. As long as you make sure that they are identifiable as sidewalks, it's the renderer's choice whether or not to display them. So if you are interested in mapping sidewalks, start mapping them.</p>
 <p>As for <em>how</em> to map sidewalks, there is no clearly preferred solution. The two primary alternatives are:</p>
 <ul>
-<li>as a <strong>tag on the road</strong>, using <a href="http://wiki.openstreetmap.org/wiki/Key:sidewalk">sidewalk</a>=left/right/both/(none/no)</li>
-<li>as a separate <strong>way next to the road</strong>. highway=footway + <a href="http://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk">footway=sidewalk</a> is an accepted tagging proposal for this style. It's not clear which tags or memberships, if any, should be copied from the road way to the sidewalk ways.</li>
+<li>as a <strong>tag on the road</strong>, using <a href="https://wiki.openstreetmap.org/wiki/Key:sidewalk">sidewalk</a>=left/right/both/(none/no)</li>
+<li>as a separate <strong>way next to the road</strong>. highway=footway + <a href="https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk">footway=sidewalk</a> is an accepted tagging proposal for this style. It's not clear which tags or memberships, if any, should be copied from the road way to the sidewalk ways.</li>
 </ul>
 <p>Valid arguments exist for both alternatives: Adding tags to a sidewalk is much easier with separate ways, and detailed information about crossings and junction layouts can barely or not at all be mapped with tags. Some feel, however, that separate geometry is redundant and makes some common operations (e.g. moving the road) more laborious. Separate geometry can also make certain rendering styles much harder to produce without overlaps or other, often zoom-dependent visual problems.</p>
-<p>There are several proposals for more complex tagging, too, usually based on relations. While far less frequently used, these will often allow you to model not only sidewalks, but the entire structure of the road - including lanes for motorized traffic and dividers - with a very high level of detail. The <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Area">area relation proposal</a> is an example for this.</p>
+<p>There are several proposals for more complex tagging, too, usually based on relations. While far less frequently used, these will often allow you to model not only sidewalks, but the entire structure of the road - including lanes for motorized traffic and dividers - with a very high level of detail. The <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Area">area relation proposal</a> is an example for this.</p>
 <p>This issue will likely not be resolved soon, at least unless support for one of the solutions becomes more widespread in applications.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -178,7 +178,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>"left" and "right" are defined relative to the direction of the way. In the Potlatch editor, the way direction is shown by an arrow in the toolbox (below the mouse cursor in the picture below):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/example_3.png" alt="picture showing Potlatch2 with a non-oneway street running west to east" /></p>
+<p><img src="/upfiles/example_3.png" alt="picture showing Potlatch2 with a non-oneway street running west to east" /></p>
 </div>
 <div id="comment-16433-info" class="comment-info">
 <span class="comment-age">(25 Sep '12, 03:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -244,12 +244,12 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I know this is an old discussion, but still wanted to add the fact that there is now an approved tag for mapping sidewalks:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk">http://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk">https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk</a></p>
 <p>With the new Bing maps backgrounds, tracing sidewalks has become a whole lot easier. I definitely think that this is not something that should be discouraged, since it could potentially make OSM the prime source of routing for wheelchair users and blind persons. Sure, in the near future it will be limited to urban areas, but that is also where potential use would be the greatest.</p>
 <p>And, as mentioned earlier in the thread, if mapping separate sidewalks is undesired for whatever reason, using tags on the nearby street is also possible and does not have to be seen as mutually exclusive to mapping separate ways for sidewalks. Note that, at the time of writing, the tag to use for this is still only a proposal:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk">http://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk">https://wiki.openstreetmap.org/wiki/Proposed_features/Sidewalk</a></p>
 <p>Finally, here's a sidewalk "landing page" from the wiki, explaining the current status:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Sidewalk">http://wiki.openstreetmap.org/wiki/Sidewalk</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Sidewalk">https://wiki.openstreetmap.org/wiki/Sidewalk</a></p>
 <p>As for the argument that the map will get cluttered, imho that is something that should be solved by adjusting the rendering.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -432,7 +432,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>As a compromise, I would only tag sidewalks where their existence or absence is unusual.</p>
-<p>There is already a proposal to derive access rights from the road type (<a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> ). I would use something similar for sidewalks.</p>
+<p>There is already a proposal to derive access rights from the road type (<a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> ). I would use something similar for sidewalks.</p>
 <p>For example: Residential streets almost always have sidewalks, so there I'd only tag if they are missing. On the other hand, trunk roads usually do not have sidewalks, to I'd tag them if they are there.</p>
 <p>Of course, for this we'd really need a detailed proposal like the one for access restrictions, but until that is present, I'd generally only tag missing sidewalks for residential roads.</p>
 </div>
@@ -700,7 +700,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/File:TerpNavPedestrianMappingSystem.png">image</a> of the week about this: lot of footway.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/File:TerpNavPedestrianMappingSystem.png">image</a> of the week about this: lot of footway.</p>
 <p>In my mind sidewalks are just an other lane on the street. Street not just limited on asphalted part. So I think sidewalks may be tag like cycleway are. But this is not yet explored. This is my point of view today, need to be tested.</p>
 </div>
 <div class="answer-controls post-controls">

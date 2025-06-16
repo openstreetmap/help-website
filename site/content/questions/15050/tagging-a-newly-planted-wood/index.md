@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a> for "managed forest or woodland plantation", in contrast to <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">natural=wood</a> which is used for "natural primeval woodland". Additionally you might want to add the <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve">leisure=nature_reserve</a> tag, either just for the wood or a larger area surrounding it, whichever fits best.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">landuse=forest</a> for "managed forest or woodland plantation", in contrast to <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">natural=wood</a> which is used for "natural primeval woodland". Additionally you might want to add the <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve">leisure=nature_reserve</a> tag, either just for the wood or a larger area surrounding it, whichever fits best.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

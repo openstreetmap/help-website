@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>Zoom in to the area where the street is, click the edit tab. When the editor appears, and you have got past the start up messages, click on the street you want to edit to select it and type the name in the box on the left side of the screen. Click save and then view. It could take a few minutes for your change to render and you may have to refresh the cache (the local copy to speed things up) on your browser to see it.</p>
 <p>The name you use should be the name as it is displayed on a name board, but with any abbreviations expanded, so if the name board says Main St, enter Main Street.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> in the documentation should help too.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a> in the documentation should help too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

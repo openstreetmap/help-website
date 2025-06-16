@@ -44,7 +44,7 @@ osqa_accepted = true
 </blockquote>
 <p>This is a question on talk page of <a href="https://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">Visibility of GPS traces</a>.</p>
 <p>This is a question for me too. Is it a mistake or it has a meaning I'm not aware of that?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Untitled_5ZOiQVq.png" alt="visibility option for uploading GPS trace" /></p>
+<p><img src="/upfiles/Untitled_5ZOiQVq.png" alt="visibility option for uploading GPS trace" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-traces" rel="tag" title="see questions tagged &#39;traces&#39;">traces</span> <span class="post-tag tag-link-visibility" rel="tag" title="see questions tagged &#39;visibility&#39;">visibility</span>

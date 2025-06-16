@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The fastest and most reliable way really is downloading the <a href="http://download.geofabrik.de/osm/europe/germany.osm.pbf">Germany PBF extract</a> which has just below 1 GB, and run that through Osmosis' tag filter option.</p>
-<p>There are some services that try to filter information for you, most notably <a href="http://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> in its variants and <a href="http://wiki.openstreetmap.org/wiki/OSM3S">Server Side Script</a> but they are likely to struggle handing out such an amount of data. Keep in mind that these are privately operated services where someone has to go through some effort to maintain a current and properly indexed database of OSM objects in order to satisfy a query such as yours.</p>
+<p>There are some services that try to filter information for you, most notably <a href="https://wiki.openstreetmap.org/wiki/XAPI">XAPI</a> in its variants and <a href="https://wiki.openstreetmap.org/wiki/OSM3S">Server Side Script</a> but they are likely to struggle handing out such an amount of data. Keep in mind that these are privately operated services where someone has to go through some effort to maintain a current and properly indexed database of OSM objects in order to satisfy a query such as yours.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>When you have downloaded the whole OSM data for your country as a quite compact <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">PBF</a> file you can also <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">convert</a> it into the recently introduced <a href="http://wiki.openstreetmap.org/wiki/O5m">o5m format</a> and use <a href="http://wiki.openstreetmap.org/wiki/O5mfilter">o5mfilter</a>, which can be easier for simple filter actions.</p>
+<p>When you have downloaded the whole OSM data for your country as a quite compact <a href="https://wiki.openstreetmap.org/wiki/PBF_Format">PBF</a> file you can also <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">convert</a> it into the recently introduced <a href="https://wiki.openstreetmap.org/wiki/O5m">o5m format</a> and use <a href="https://wiki.openstreetmap.org/wiki/O5mfilter">o5mfilter</a>, which can be easier for simple filter actions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

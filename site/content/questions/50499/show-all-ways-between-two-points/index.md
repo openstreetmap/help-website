@@ -137,7 +137,7 @@ One Answer:
 <div id="post-50544-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hello Moolerian, I assume that you have already seen the OSM wiki page <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a> ... also with its sub pages about online and offline routing ... What solution comes near your aim? IIRC graphhopper has now a feature implemented about alternative routes.</p>
+<p>Hello Moolerian, I assume that you have already seen the OSM wiki page <a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a> ... also with its sub pages about online and offline routing ... What solution comes near your aim? IIRC graphhopper has now a feature implemented about alternative routes.</p>
 </div>
 <div id="comment-50544-info" class="comment-info">
 <span class="comment-age">(01 Jul '16, 15:16)</span> <span class="comment-user userinfo">stephan75</span>

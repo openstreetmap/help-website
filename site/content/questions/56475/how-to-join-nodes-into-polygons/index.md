@@ -172,7 +172,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi</p>
 <p>Are you selecting all the nodes with Ctrl + A? If you do, then adding tags will apply to all the nodes. What you require is to select each way and provide tags for them. To do that, you can select all by pressing Ctrl + A and then press Shift + E to select only the ways and then add tags.</p>
-<p>However there are restrictions regarding imports. Before you do any, kindly read the guidelines: <a href="http://wiki.openstreetmap.org/wiki/Import">http://wiki.openstreetmap.org/wiki/Import</a></p>
+<p>However there are restrictions regarding imports. Before you do any, kindly read the guidelines: <a href="https://wiki.openstreetmap.org/wiki/Import">https://wiki.openstreetmap.org/wiki/Import</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

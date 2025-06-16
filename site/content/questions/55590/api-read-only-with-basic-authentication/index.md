@@ -127,7 +127,7 @@ Payload written like this:
 </div>
 <div class="comment-text">
 <p>Before you do -anything- more: DO NOT TEST AGAINST THE PRODUCTION API</p>
-<p>Use one of the dev API and create objects there with the iD instance that runs on them. Further if you a planning to do a mechanical edit you need to think about following the corresponding guideline: <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a></p>
+<p>Use one of the dev API and create objects there with the iD instance that runs on them. Further if you a planning to do a mechanical edit you need to think about following the corresponding guideline: <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct</a></p>
 </div>
 <div id="comment-55602-info" class="comment-info">
 <span class="comment-age">(13 Apr '17, 23:46)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use snowplowing=no. "Snowplowing" is widely used so far (more than 15000 times!). However, snowplowing=no is only used about 2000 times. See also the wiki: <a href="http://wiki.openstreetmap.org/wiki/Key:snowplowing">Key:snowplowing</a></p>
+<p>You could use snowplowing=no. "Snowplowing" is widely used so far (more than 15000 times!). However, snowplowing=no is only used about 2000 times. See also the wiki: <a href="https://wiki.openstreetmap.org/wiki/Key:snowplowing">Key:snowplowing</a></p>
 <p>Another possibility is to use winter_service=no for this purpose. According to Taginfo this is used 178 times so far.</p>
 </div>
 <div class="answer-controls post-controls">

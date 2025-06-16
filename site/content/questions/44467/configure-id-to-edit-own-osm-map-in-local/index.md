@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Your first starting point for reading in the OSM wiki can be <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> ... tell us if you get stuck somewhere and ask in detail as a COMMENT here.</p>
+<p>Your first starting point for reading in the OSM wiki can be <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a> ... tell us if you get stuck somewhere and ask in detail as a COMMENT here.</p>
 </div>
 <div id="comment-44484-info" class="comment-info">
 <span class="comment-age">(28 Jul '15, 17:27)</span> <span class="comment-user userinfo">stephan75</span>

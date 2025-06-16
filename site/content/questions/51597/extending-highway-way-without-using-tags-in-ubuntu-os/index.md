@@ -148,7 +148,7 @@ One Answer:
 <div id="post-51604-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12686/mtc"></a><a href="http://help.openstreetmap.org/users/12686/mtc">@mtc</a>: thanks for your feedback! very helpful for others!</p>
+<p><a href="https://help.openstreetmap.org/users/12686/mtc"></a><a href="https://help.openstreetmap.org/users/12686/mtc">@mtc</a>: thanks for your feedback! very helpful for others!</p>
 </div>
 <div id="comment-51604-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 18:38)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

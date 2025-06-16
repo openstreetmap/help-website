@@ -45,11 +45,11 @@ osqa_accepted = false
 <pre><code>Refused to load the image &#39;&lt;URL&gt;&#39; because it violates the following Content Security Policy directive: &quot;img-src &#39;self&#39; data: &lt;URL&gt; *.wp.com *.tile.openstreetmap.org *.tile.thunderforest.com *.openstreetmap.fr piwik.openstreetmap.org developer.mapquest.com”.</code></pre>
 <p>Initially I thought this issue was related to my server (I’m no expert on CSP!) so I added mod_headers and added very permissive policy directives. Chrome continued to refuse to load the Humanitarian Layer, but it does load the other three layers. I’ve since concluded the CPS notifications were coming from OpenStreetMap instead.</p>
 <p>I also threw together some html/css/javascript and used Leaflet to display a page. I did this with MapBox and it worked, so I’m confident my test code is acceptable. But, when I try to point towards my own server (same platform at this point), all I can get is a blank screen showing the map canvas without any graphics:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/PastedGraphic-1.png" alt="alt text" /></p>
+<p><img src="/upfiles/PastedGraphic-1.png" alt="alt text" /></p>
 <p>This occurs in both Chrome and Safari; neither browser reports any errors, all statuses are 200.</p>
-<p>Syslog during an Apache start: May 24 07:59:58 ubuntu systemd<a href="https://help.openstreetmap.org/upfiles/PastedGraphic-1.png">1</a>: Starting The Apache HTTP Server... May 24 07:59:58 ubuntu apachectl[95797]: [Thu May 24 07:59:58.490304 2018] [tile:notice] [pid 95800:tid 140608967183296] Loading tile config ajt at /hot/ for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png May 24 07:59:58 ubuntu systemd<a href="https://help.openstreetmap.org/upfiles/PastedGraphic-1.png">1</a>: Started The Apache HTTP Server.</p>
+<p>Syslog during an Apache start: May 24 07:59:58 ubuntu systemd<span>1</span>: Starting The Apache HTTP Server... May 24 07:59:58 ubuntu apachectl[95797]: [Thu May 24 07:59:58.490304 2018] [tile:notice] [pid 95800:tid 140608967183296] Loading tile config ajt at /hot/ for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png May 24 07:59:58 ubuntu systemd<span>1</span>: Started The Apache HTTP Server.</p>
 <p>Contents of /var/lib/mod_tile/ajt:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/PastedGraphic-2.png" alt="alt text" /></p>
+<p><img src="/upfiles/PastedGraphic-2.png" alt="alt text" /></p>
 <p>I’m not sure how many of these directories should be here? I do want to say that when I try to use this link in Chrome w/ the extension, and I get the CSP notifications, if I click on one of the PNGs shown in the notification, I will get a tile to load and display. And, an additional folder gets created under /var/lib/mod_tile/ajt. I assume from this that my actual renderer works?</p>
 <p>Does this mean my problem is in how my Apache server is handing off the work to the tile server? Is my mod_tile broken?</p>
 <p>Here is my output from <a href="http://ipaddress/mod_tile">http://ipaddress/mod_tile</a> after loading two png files using the method I described two paragraphs above.</p>
@@ -136,7 +136,7 @@ NoRes404Layer/hot/: 0</code></pre>
 <p>Any help would be greatly appreciated! I hope to hear back from you soon. In the meantime, I’ll start trying to look closer at mod_tile, and running renderd with more logging.</p>
 <p>UPDATE:</p>
 <p>I installed and configure munin to provide stats. I'm getting nothing from renderd:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/renderd_output.png" alt="alt text" /></p>
+<p><img src="/upfiles/renderd_output.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-humanitarian" rel="tag" title="see questions tagged &#39;humanitarian&#39;">humanitarian</span> <span class="post-tag tag-link-mod_tile" rel="tag" title="see questions tagged &#39;mod_tile&#39;">mod_tile</span> <span class="post-tag tag-link-tile_server" rel="tag" title="see questions tagged &#39;tile_server&#39;">tile_server</span>
@@ -162,7 +162,7 @@ NoRes404Layer/hot/: 0</code></pre>
 <div id="post-63706-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've added an answer at <a href="https://help.openstreetmap.org/questions/63690/tiles-not-creating">https://help.openstreetmap.org/questions/63690/tiles-not-creating</a> - based largely on what you have found out!</p>
+<p>I've added an answer at <a href="/questions/63690/tiles-not-creating">https://help.openstreetmap.org/questions/63690/tiles-not-creating</a> - based largely on what you have found out!</p>
 <p>In your case the fact that tiles are getting generated (as the "ls -al" shows) means that the link to mod_tile is working, but as you've since found the CSP (I think) is stopping Chromium from serving tiles.</p>
 </div>
 <div id="comment-63706-info" class="comment-info">
@@ -341,7 +341,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>The Leaflet file is the raw one used by the tutorial <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/manually-building-a-tile-server-18-04-lts/</a></p>
-<p>I just posted my question in another topic to don't make a mess <a href="https://help.openstreetmap.org/questions/71682/private-tile-server-not-rendering">https://help.openstreetmap.org/questions/71682/private-tile-server-not-rendering</a></p>
+<p>I just posted my question in another topic to don't make a mess <a href="/questions/71682/private-tile-server-not-rendering">https://help.openstreetmap.org/questions/71682/private-tile-server-not-rendering</a></p>
 </div>
 <div id="comment-71683-info" class="comment-info">
 <span class="comment-age">(17 Nov '19, 02:04)</span> <span class="comment-user userinfo">carlosguedes</span>

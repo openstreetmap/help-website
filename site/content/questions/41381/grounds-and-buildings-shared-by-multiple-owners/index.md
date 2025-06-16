@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi! I'm dealing with a grounds and building shared by a school and a hospital (i.e., some buildings on the grounds are exclusively occupied by the hospital; for shared buildings, school offices are on one floor while hospital occupies the other floors). Currently, outlines that exist are tagged as buildings in general; but separate points are present for each. How do I improve this? Thank you! :)</p>
-<p>Here is the area: <a href="http://www.openstreetmap.org/#map=19/10.30772/123.89677">http://www.openstreetmap.org/#map=19/10.30772/123.89677</a></p>
+<p>Here is the area: <a href="https://www.openstreetmap.org/#map=19/10.30772/123.89677">https://www.openstreetmap.org/#map=19/10.30772/123.89677</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-shared" rel="tag" title="see questions tagged &#39;shared&#39;">shared</span> <span class="post-tag tag-link-grounds" rel="tag" title="see questions tagged &#39;grounds&#39;">grounds</span>
@@ -136,8 +136,8 @@ One Answer:
 <div class="answer-body">
 <p>There are two solutions that come into my mind:</p>
 <ul>
-<li>Areas: Instead of adding the school and hospital tags to the corresponding buildings you draw two areas. The areas should represent the outline of the school and the hospital, respectively. Parts of the areas will overlap which is fine in your case. Now just add the relevant tags to the areas (amenity, address etc.). The <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">school wiki page</a> has a nice example explaining how to create such an area.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Relation:site">Site relation</a>: Instead of adding the school and hospital tags to the corresponding buildings you create two relations, one for the school and one for the hospital. Both relations will be tagged with <em>type=site</em>. Additionally they contain the school and hospital tags, respectively. Then add all the buildings belonging to the school (and possibly shared with the hospital) to the school site relation, and all the buildings belonging to the hospital (and possibly shared with the school) to the hospital site relation.</li>
+<li>Areas: Instead of adding the school and hospital tags to the corresponding buildings you draw two areas. The areas should represent the outline of the school and the hospital, respectively. Parts of the areas will overlap which is fine in your case. Now just add the relevant tags to the areas (amenity, address etc.). The <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">school wiki page</a> has a nice example explaining how to create such an area.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Relation:site">Site relation</a>: Instead of adding the school and hospital tags to the corresponding buildings you create two relations, one for the school and one for the hospital. Both relations will be tagged with <em>type=site</em>. Additionally they contain the school and hospital tags, respectively. Then add all the buildings belonging to the school (and possibly shared with the hospital) to the school site relation, and all the buildings belonging to the hospital (and possibly shared with the school) to the hospital site relation.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

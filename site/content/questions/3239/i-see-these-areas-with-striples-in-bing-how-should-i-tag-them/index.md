@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These are fields planted with crops. Their stripy pattern is really just an indication of the time when the aerial photography was taken: late enough for the crop to show, but early enough that the wheel tracks of the tractor are still highly visible. Usually these can be tagged <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland">landuse=farmland</a> (better than the ambiguous <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarm">landuse=farm</a>), but it is important to check that the area has not changed use since the images. I have recently noticed Bing images where it is obvious that farmland has changed to a retail park in the last 10 years.</p>
+<p>These are fields planted with crops. Their stripy pattern is really just an indication of the time when the aerial photography was taken: late enough for the crop to show, but early enough that the wheel tracks of the tractor are still highly visible. Usually these can be tagged <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmland">landuse=farmland</a> (better than the ambiguous <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarm">landuse=farm</a>), but it is important to check that the area has not changed use since the images. I have recently noticed Bing images where it is obvious that farmland has changed to a retail park in the last 10 years.</p>
 <p>If you have reason to believe - typically, through familiarity with the area - that these fields are always used for crops (i.e., they are arable), you can indicate this by adding a tag farmland=crops, <strong>but</strong> this is very rarely used, and <strong>cannot be</strong> considered a <strong>consensus use</strong>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -127,7 +127,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>And please also use the recommended "source=Bing" tag so other mappers can judge the relevance of your mapping. See: <a href="http://wiki.openstreetmap.org/wiki/Bing#Source_tag">http://wiki.openstreetmap.org/wiki/Bing#Source_tag</a></p>
+<p>And please also use the recommended "source=Bing" tag so other mappers can judge the relevance of your mapping. See: <a href="https://wiki.openstreetmap.org/wiki/Bing#Source_tag">https://wiki.openstreetmap.org/wiki/Bing#Source_tag</a></p>
 </div>
 <div id="comment-3242-info" class="comment-info">
 <span class="comment-age">(21 Feb '11, 19:30)</span> <span class="comment-user userinfo">gnurk</span>

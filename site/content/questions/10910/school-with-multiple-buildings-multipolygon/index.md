@@ -109,7 +109,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Check this widely used relation type "site":<br />
-<a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site</a></p>
 <p>instead of nesting multipolygons relations.</p>
 </div>
 <div class="answer-controls post-controls">

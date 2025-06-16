@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try all programs or web services listen on <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a>.</p>
+<p>You can try all programs or web services listen on <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a>.</p>
 <p>Or try to use the export tab on <a href="http://osm.org">osm.org</a> and choose PDF as export format.</p>
 </div>
 <div class="answer-controls post-controls">

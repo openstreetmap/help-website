@@ -65,7 +65,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>It's perhaps worth mentioning that the Cycle Map renders the cycle path "on top of" the road:</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.03597&amp;lon=-0.72035&amp;zoom=17&amp;layers=C">http://www.openstreetmap.org/?lat=52.03597&amp;lon=-0.72035&amp;zoom=17&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.03597&amp;lon=-0.72035&amp;zoom=17&amp;layers=C">https://www.openstreetmap.org/?lat=52.03597&amp;lon=-0.72035&amp;zoom=17&amp;layers=C</a></p>
 </div>
 <div id="comment-14187-info" class="comment-info">
 <span class="comment-age">(11 Jul '12, 15:50)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Don't move a path just so it looks better on the map: that's just a variation of <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>. If the map isn't as clear as it ought to be at the chosen zoom level, a better way of fixing that is to <a href="https://trac.openstreetmap.org/">file a bug</a> on the map style, or perhaps even the renderer code.</p>
+<p>Don't move a path just so it looks better on the map: that's just a variation of <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>. If the map isn't as clear as it ought to be at the chosen zoom level, a better way of fixing that is to <a href="https://trac.openstreetmap.org/">file a bug</a> on the map style, or perhaps even the renderer code.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

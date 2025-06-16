@@ -119,7 +119,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I believe the answer is that there is currently no such library.</p>
-<p>If you do create indoor maps you should be using the <a href="http://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">Simple Indoor Tagging (SIT)</a> scheme. IndoorOSM is long defunct and had substantial architectural issues.</p>
+<p>If you do create indoor maps you should be using the <a href="https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging">Simple Indoor Tagging (SIT)</a> scheme. IndoorOSM is long defunct and had substantial architectural issues.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

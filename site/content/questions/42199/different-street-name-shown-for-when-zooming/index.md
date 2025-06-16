@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a> and <a href="https://help.openstreetmap.org/tags/update/?sort=mostvoted">https://help.openstreetmap.org/tags/update/?sort=mostvoted</a></p>
+<p>See <a href="/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a> and <a href="https://help.openstreetmap.org/tags/update/?sort=mostvoted">https://help.openstreetmap.org/tags/update/?sort=mostvoted</a></p>
 <p>It is showing the updated name in all zoom levels in the meantime.</p>
 </div>
 <div class="answer-controls post-controls">

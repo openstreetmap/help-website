@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help! I&#x27;ve lost a road"
-description = '''I have updated an unclassified road to add the name of a trail which follows the road. In the process the road no longer shows up on OSM. I don&#x27;t know why - what have I done wrong? Road = http://www.openstreetmap.org/changeset/29805078'''
+description = '''I have updated an unclassified road to add the name of a trail which follows the road. In the process the road no longer shows up on OSM. I don&#x27;t know why - what have I done wrong? Road = https://www.openstreetmap.org/changeset/29805078'''
 date = "2015-03-28T13:29:00Z"
 lastmod = "2015-03-28T15:36:00Z"
 weight = 41960
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have updated an unclassified road to add the name of a trail which follows the road. In the process the road no longer shows up on OSM. I don't know why - what have I done wrong? Road = <a href="http://www.openstreetmap.org/changeset/29805078">http://www.openstreetmap.org/changeset/29805078</a></p>
+<p>I have updated an unclassified road to add the name of a trail which follows the road. In the process the road no longer shows up on OSM. I don't know why - what have I done wrong? Road = <a href="https://www.openstreetmap.org/changeset/29805078">https://www.openstreetmap.org/changeset/29805078</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>
@@ -104,11 +104,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's there on at least some zoom levels now - <a href="http://www.openstreetmap.org/way/30698459/history">http://www.openstreetmap.org/way/30698459/history</a></p>
-<p>What happened was that it got inadvertantly set to "unclassified;service" in <a href="http://www.openstreetmap.org/changeset/29738345">this changeset</a> - probably by merging a <a href="http://www.openstreetmap.org/way/153227862/history">road previously tagged as "service"</a> with a road previously tagged as "unclassified".</p>
-<p>Actually, I wouldn't add the name "Mendip Trail" to the road unless the name of the road really is "Mendip Trail". If that's a waymarked route that runs along several footpaths and roads, I'd add it as a <a href="http://wiki.openstreetmap.org/wiki/Relation:route">route relation</a> and add the relevant footpaths and roads to that relation. That way it'll show up on sites such as <a href="http://waymarkedtrails.org/en/?zoom=13&amp;lat=51.31671&amp;lon=-2.7357&amp;hill=0#">this one</a> like the West Mendip Way does.</p>
-<p>I'd also check for other ways in recent changesets that have got inadvertently merged too - <a href="http://www.openstreetmap.org/way/35647833/history">this one</a> seems to have been created from a separate bridleway and footway and all the tags from either piece are now applied to the whole. What you'll need to do (or ask someone else to do) is to figure out where the previously merged sections started and ended, split the way again, and apply the correct tags to the correct piece.</p>
-<p>If you want to ask real-time questions about fixing something like this, normally the place that I'd suggest would be #osm-gb on <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> (or an appropriate other country channel or #osm) for elsewhere in the world, but on Saturday afternoon in the UK I it might not be very busy.</p>
+<p>It's there on at least some zoom levels now - <a href="https://www.openstreetmap.org/way/30698459/history">https://www.openstreetmap.org/way/30698459/history</a></p>
+<p>What happened was that it got inadvertantly set to "unclassified;service" in <a href="https://www.openstreetmap.org/changeset/29738345">this changeset</a> - probably by merging a <a href="https://www.openstreetmap.org/way/153227862/history">road previously tagged as "service"</a> with a road previously tagged as "unclassified".</p>
+<p>Actually, I wouldn't add the name "Mendip Trail" to the road unless the name of the road really is "Mendip Trail". If that's a waymarked route that runs along several footpaths and roads, I'd add it as a <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relation</a> and add the relevant footpaths and roads to that relation. That way it'll show up on sites such as <a href="http://waymarkedtrails.org/en/?zoom=13&amp;lat=51.31671&amp;lon=-2.7357&amp;hill=0#">this one</a> like the West Mendip Way does.</p>
+<p>I'd also check for other ways in recent changesets that have got inadvertently merged too - <a href="https://www.openstreetmap.org/way/35647833/history">this one</a> seems to have been created from a separate bridleway and footway and all the tags from either piece are now applied to the whole. What you'll need to do (or ask someone else to do) is to figure out where the previously merged sections started and ended, split the way again, and apply the correct tags to the correct piece.</p>
+<p>If you want to ask real-time questions about fixing something like this, normally the place that I'd suggest would be #osm-gb on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> (or an appropriate other country channel or #osm) for elsewhere in the world, but on Saturday afternoon in the UK I it might not be very busy.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -133,7 +133,7 @@ One Answer:
 <div id="post-41963-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The answers I got here may help. <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
+<p>The answers I got here may help. <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a></p>
 </div>
 <div id="comment-41963-info" class="comment-info">
 <span class="comment-age">(28 Mar '15, 14:33)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM data download"
-description = '''Hi! I&#x27;m trying to download data from this particular site: http://www.openstreetmap.org/export#map=17/11.24875/125.0047 I get the osm file and them import it with QGIS 2.0.1. The program says the import has been succesfully done but when I open it with QGIS 2.0.1. only points appear to be there. No ...'''
+description = '''Hi! I&#x27;m trying to download data from this particular site: https://www.openstreetmap.org/export#map=17/11.24875/125.0047 I get the osm file and them import it with QGIS 2.0.1. The program says the import has been succesfully done but when I open it with QGIS 2.0.1. only points appear to be there. No ...'''
 date = "2013-12-20T08:46:00Z"
 lastmod = "2013-12-20T20:12:00Z"
 weight = 29208
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi! I'm trying to download data from this particular site: <a href="http://www.openstreetmap.org/export#map=17/11.24875/125.0047">http://www.openstreetmap.org/export#map=17/11.24875/125.0047</a> I get the osm file and them import it with QGIS 2.0.1. The program says the import has been succesfully done but when I open it with QGIS 2.0.1. only points appear to be there. No polyons, no lines. I'm sure there's something I'm not doing correctly, could anyone help?</p>
+<p>Hi! I'm trying to download data from this particular site: <a href="https://www.openstreetmap.org/export#map=17/11.24875/125.0047">https://www.openstreetmap.org/export#map=17/11.24875/125.0047</a> I get the osm file and them import it with QGIS 2.0.1. The program says the import has been succesfully done but when I open it with QGIS 2.0.1. only points appear to be there. No polyons, no lines. I'm sure there's something I'm not doing correctly, could anyone help?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-download" rel="tag" title="see questions tagged &#39;download&#39;">download</span> <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span>
@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A while ago QGIS suffered from a <a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">serious bug</a>. In theory, it shouldn't affect your version, but maybe you are using unintentionally the outdated plugin instead of the trunk feature?</p>
+<p>A while ago QGIS suffered from a <a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">serious bug</a>. In theory, it shouldn't affect your version, but maybe you are using unintentionally the outdated plugin instead of the trunk feature?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

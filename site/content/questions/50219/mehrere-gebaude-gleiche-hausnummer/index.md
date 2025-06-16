@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hallo, ich habe eine Frage zum taggen von Hausnummern, zu der ich bisher im Wiki nichts finden konnte:</p>
-<p>Wie ist die richtige Vorgehensweise, wenn sich mehrere Häuser eine Hausnummer teilen (ohne "a" o.ä. als Nummerzusatz)? <a href="http://www.openstreetmap.org/way/227569793">Beispiel 1</a>: Die drei miteinander verbundenen Gebäude haben die gleiche Anschrift, sind aber doch unterschiedliche Gebäude.</p>
-<p><a href="http://www.openstreetmap.org/way/105623553">Beispiel 2</a>: Ähnliche Situation in Industriegebieten: Eine Firma ist verteilt über mehrere Gebäude auf einem größeren Grundstück. Werden die Gebäude hier verbunden und/oder erhalten hier auch alle Gebäude die gleiche Anschrift? Mein erster Ansatz war ein Multipolygon, aber das scheint nicht korrekt zu sein...</p>
+<p>Wie ist die richtige Vorgehensweise, wenn sich mehrere Häuser eine Hausnummer teilen (ohne "a" o.ä. als Nummerzusatz)? <a href="https://www.openstreetmap.org/way/227569793">Beispiel 1</a>: Die drei miteinander verbundenen Gebäude haben die gleiche Anschrift, sind aber doch unterschiedliche Gebäude.</p>
+<p><a href="https://www.openstreetmap.org/way/105623553">Beispiel 2</a>: Ähnliche Situation in Industriegebieten: Eine Firma ist verteilt über mehrere Gebäude auf einem größeren Grundstück. Werden die Gebäude hier verbunden und/oder erhalten hier auch alle Gebäude die gleiche Anschrift? Mein erster Ansatz war ein Multipolygon, aber das scheint nicht korrekt zu sein...</p>
 <p>Danke, Gruß Kululu</p>
 </div>
 <div id="question-tags" class="tags-container tags">

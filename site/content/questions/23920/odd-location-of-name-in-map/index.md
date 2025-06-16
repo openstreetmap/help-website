@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I recently removed the node marking the University of Illinois and named the boundary way instead, so it now looks like <a href="http://www.openstreetmap.org/?lat=37.4266&amp;lon=-122.1702&amp;zoom=14&amp;layers=M">this</a>.</p>
+<p>I recently removed the node marking the University of Illinois and named the boundary way instead, so it now looks like <a href="https://www.openstreetmap.org/?lat=37.4266&amp;lon=-122.1702&amp;zoom=14&amp;layers=M">this</a>.</p>
 <p>The problem is that while the placement of the name label ("University of Illinois at Urbana-Champaign") is in the geographical center of campus, Kirby/Florida Avenue (street under label) is the south border of the "main" part of campus, most of what's south of that is farmland.</p>
 <p>Is there a way to move the label in the rendering? Should I maybe restore the node in this case?</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First: the link you gave shows Stanford.* You want this link: <a href="http://www.openstreetmap.org/?lat=40.0972&amp;lon=-88.2315&amp;zoom=14&amp;layers=M">UIUC campus</a>.</p>
+<p>First: the link you gave shows Stanford.* You want this link: <a href="https://www.openstreetmap.org/?lat=40.0972&amp;lon=-88.2315&amp;zoom=14&amp;layers=M">UIUC campus</a>.</p>
 <p>Second: the general rule is, don't tag for the renderer; your tags should reflect reality and let the renderer sort out the details.</p>
 <p>That said, in some circumstances there are some tricks you can pull (e.g. tagging separate areas and then linking them with a relation); but in the given circumstance I think it's fine. U of I, like a lot of other colleges, has a big campus with some areas denser than others. The map reflects that. (It may even be better with the label where it is, because then it's not blocking a view of the more densely-built part of campus!)</p>
 <p>*OSM makes it easy to do this by accident---it doesn't update the URL in the location bar as you move around. To get a URL that points to what you're looking at "right now", make sure to first click the "Permalink" link in the lower right of the window.</p>

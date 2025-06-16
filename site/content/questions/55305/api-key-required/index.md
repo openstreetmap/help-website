@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-55306-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/54589/api-key-required">https://help.openstreetmap.org/questions/54589/api-key-required</a></p>
+<p>See <a href="/questions/54589/api-key-required">https://help.openstreetmap.org/questions/54589/api-key-required</a></p>
 </div>
 <div id="comment-55306-info" class="comment-info">
 <span class="comment-age">(28 Mar '17, 19:36)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

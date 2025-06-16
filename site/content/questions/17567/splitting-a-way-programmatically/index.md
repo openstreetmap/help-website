@@ -108,7 +108,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I am assuming that you want to detect actual intersection nodes, i.e. nodes that are shared between more than one way and are not the start or end node for the ways that share the node.</p>
 <p>Without pre-processing, there is no way to detect those, because the way objects do not possess geometry, only the nodes do. So you would at least keep all the node IDs in memory or in a temporary file and then check for each way member node whether that node is also used by another way.</p>
-<p>If you import your OSM file into an Osmosis <a href="http://wiki.openstreetmap.org/wiki/Database_schema#Database_Schemas">schema</a> PostGIS database, you will find the way_nodes table useful for checking intersections.</p>
+<p>If you import your OSM file into an Osmosis <a href="https://wiki.openstreetmap.org/wiki/Database_schema#Database_Schemas">schema</a> PostGIS database, you will find the way_nodes table useful for checking intersections.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

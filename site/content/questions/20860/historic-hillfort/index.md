@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I recieved from GB a solution for this one, it can be found here a similar one younger still, <a href="http://www.openstreetmap.org/?lat=52.78915&amp;lon=6.22579&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.78915&amp;lon=6.22579&amp;zoom=17&amp;layers=M</a> By adding 2 separate man_made embankments drawn in the opposite direction its getting a bit more of a body.</p>
+<p>I recieved from GB a solution for this one, it can be found here a similar one younger still, <a href="https://www.openstreetmap.org/?lat=52.78915&amp;lon=6.22579&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.78915&amp;lon=6.22579&amp;zoom=17&amp;layers=M</a> By adding 2 separate man_made embankments drawn in the opposite direction its getting a bit more of a body.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

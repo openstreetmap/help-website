@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take your pick of the lift type <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Aerialway">here</a>, switch to expert mode in Potlatch and add the tag(s) by hand.</p>
+<p>Take your pick of the lift type <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Aerialway">here</a>, switch to expert mode in Potlatch and add the tag(s) by hand.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/000_ski_lift.JPG" alt="alt text" />Besides reading the Wiki for advice you could type "ski lift" in the search box of the map page and see others have mapped and tagged them. Like this one.</p>
+<p><img src="/upfiles/000_ski_lift.JPG" alt="alt text" />Besides reading the Wiki for advice you could type "ski lift" in the search box of the map page and see others have mapped and tagged them. Like this one.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I'm looking at an area where a few prominent trails are missing from the OSM data set. I think they must have been there in the past.</p>
 <p>I know how to look at given changesets and history of any current way.... but this is different. How can I see and track objects in an area that are now gone?</p>
-<p>The answers at <a href="https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area">https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area</a> are focused on a different type of deletion. Some answers refer to a potlatch feature that's no longer current.</p>
+<p>The answers at <a href="/questions/7/how-do-i-see-the-history-for-my-area">https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area</a> are focused on a different type of deletion. Some answers refer to a potlatch feature that's no longer current.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span> <span class="post-tag tag-link-history" rel="tag" title="see questions tagged &#39;history&#39;">history</span>
@@ -119,8 +119,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The standard tools for this sort of thing are <a href="http://wiki.openstreetmap.org/wiki/Achavi">Achavi</a> and <a href="http://wiki.openstreetmap.org/wiki/OSM_History_Viewer">Open Histoy Viewer</a>. People who use them regularly get good results with them.</p>
-<p>A slightly simpler approach is to use <a href="http://wiki.openstreetmap.org/wiki/Attic_Data">Attic data</a> queries with <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Attic_data_.28.22date.22.29">Overpass</a>, possibly combined with a binary chop over time. In practice if I'm looking for a removed element I can usually remember a time when it was present so dont need to run multiple queries. Once you have the object id it is easy to find when it was deleted.</p>
+<p>The standard tools for this sort of thing are <a href="https://wiki.openstreetmap.org/wiki/Achavi">Achavi</a> and <a href="https://wiki.openstreetmap.org/wiki/OSM_History_Viewer">Open Histoy Viewer</a>. People who use them regularly get good results with them.</p>
+<p>A slightly simpler approach is to use <a href="https://wiki.openstreetmap.org/wiki/Attic_Data">Attic data</a> queries with <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Attic_data_.28.22date.22.29">Overpass</a>, possibly combined with a binary chop over time. In practice if I'm looking for a removed element I can usually remember a time when it was present so dont need to run multiple queries. Once you have the object id it is easy to find when it was deleted.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

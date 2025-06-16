@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is indeed a nice bug. If you open the data layer <a href="http://www.openstreetmap.org/?lat=66.64055&amp;lon=179.99975&amp;zoom=17&amp;layers=M">west</a> from the 180° wrapping you only see way <a href="http://www.openstreetmap.org/browse/way/146443291">146443291</a> and if you open the data layer <a href="http://www.openstreetmap.org/?lat=66.64052&amp;lon=-179.99719&amp;zoom=17&amp;layers=M">east</a> you only see way <a href="http://www.openstreetmap.org/browse/way/146798914">146798914</a>. As Potlatch 1 and Potlatch 2 show a similar behavior the bug seems to be in the API.</p>
+<p>This is indeed a nice bug. If you open the data layer <a href="https://www.openstreetmap.org/?lat=66.64055&amp;lon=179.99975&amp;zoom=17&amp;layers=M">west</a> from the 180° wrapping you only see way <a href="https://www.openstreetmap.org/browse/way/146443291">146443291</a> and if you open the data layer <a href="https://www.openstreetmap.org/?lat=66.64052&amp;lon=-179.99719&amp;zoom=17&amp;layers=M">east</a> you only see way <a href="https://www.openstreetmap.org/browse/way/146798914">146798914</a>. As Potlatch 1 and Potlatch 2 show a similar behavior the bug seems to be in the API.</p>
 <p>I created a <a href="https://trac.openstreetmap.org/ticket/4720">ticket</a> for this issue.</p>
 <p><em>edit</em>: seems to be a <a href="https://trac.openstreetmap.org/ticket/1612">known bug</a> for several years.</p>
 </div>

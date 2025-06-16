@@ -107,7 +107,7 @@ One Answer:
 <p>I think this should do it:</p>
 <p><a href="http://overpass-turbo.eu/s/sy3">http://overpass-turbo.eu/s/sy3</a></p>
 <p>For queries like <code>in South Oxfordshire</code>, Overpass Turbo looks up the name using the service at <a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a>. It takes the first result, which for "South Oxfordshire District" is not the area you want to search in: <a href="http://nominatim.openstreetmap.org/search.php?q=South+Oxfordshire+District&amp;polygon_geojson=1&amp;viewbox=">http://nominatim.openstreetmap.org/search.php?q=South+Oxfordshire+District&amp;polygon_geojson=1&amp;viewbox=</a></p>
-<p>Here removing "district" does the trick. Overpass API also has some ways of retrieving an area created from a specific OpenStreetMap feature: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
+<p>Here removing "district" does the trick. Overpass API also has some ways of retrieving an area created from a specific OpenStreetMap feature: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
 <p>So <code>area(3600299097)-&gt;.searchArea;</code> or <code>area[admin_level=8][name="South Oxfordshire"]-&gt;.searchArea;</code> should also work to retrieve the area. These methods can be useful if Nominatim doesn't match a search or to move the query out of Overpass Turbo.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -190,7 +190,7 @@ One Answer:
 <div id="post-74397-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>OK, please check the QS here: <a href="https://help.openstreetmap.org/questions/74396/overpass-draw-multiple-cities-with-district-boundaries-to-calculate-population-in-driving-range">https://help.openstreetmap.org/questions/74396/overpass-draw-multiple-cities-with-district-boundaries-to-calculate-population-in-driving-range</a></p>
+<p>OK, please check the QS here: <a href="/questions/74396/overpass-draw-multiple-cities-with-district-boundaries-to-calculate-population-in-driving-range">https://help.openstreetmap.org/questions/74396/overpass-draw-multiple-cities-with-district-boundaries-to-calculate-population-in-driving-range</a></p>
 </div>
 <div id="comment-74397-info" class="comment-info">
 <span class="comment-age">(27 Apr '20, 07:05)</span> <span class="comment-user userinfo">CliffHU</span>

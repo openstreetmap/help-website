@@ -132,7 +132,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> a very simple tool for such task:</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a> a very simple tool for such task:</p>
 <pre><code>osmfilter my-data.osm --keep=building=* -o=my-data-buildings.osm</code></pre>
 </div>
 <div class="answer-controls post-controls">
@@ -174,7 +174,7 @@ osqa_accepted = true
 <div id="post-53636-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13098/squadgazzz">@squadgazz</a> I have not worked on OSM 3D building, so can not suggest on this.</p>
+<p><a href="https://help.openstreetmap.org/users/13098/squadgazzz">@squadgazz</a> I have not worked on OSM 3D building, so can not suggest on this.</p>
 </div>
 <div id="comment-53636-info" class="comment-info">
 <span class="comment-age">(21 Dec '16, 16:41)</span> <span class="comment-user userinfo">Gagan</span>

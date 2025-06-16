@@ -218,7 +218,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can take a look at this <a href="http://help.openstreetmap.org/questions/15152/openlayers-marker-for-start-of-gpx-track-and-centering-the-map-on-the-trace">other question</a>.</p>
+<p>You can take a look at this <a href="/questions/15152/openlayers-marker-for-start-of-gpx-track-and-centering-the-map-on-the-trace">other question</a>.</p>
 <p>For zooming on your markers (the zoom will automatically be computed), you have to invoke zoomToExtent as said Frederik: map.zoomToExtent(markersLayer.getDataExtent());</p>
 </div>
 <div class="answer-controls post-controls">

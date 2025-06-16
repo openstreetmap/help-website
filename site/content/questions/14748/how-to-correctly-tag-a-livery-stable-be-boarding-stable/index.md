@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>currently the german "Wandereitkarte" project is one of the most used maps for horsesportfeatures. The wiki <a href="http://wiki.openstreetmap.org/wiki/DE:OSMC_Reitkarte">http://wiki.openstreetmap.org/wiki/DE:OSMC_Reitkarte</a> give an answer to your problem, but in german. Tags suggestet:<br />
+<p>currently the german "Wandereitkarte" project is one of the most used maps for horsesportfeatures. The wiki <a href="https://wiki.openstreetmap.org/wiki/DE:OSMC_Reitkarte">https://wiki.openstreetmap.org/wiki/DE:OSMC_Reitkarte</a> give an answer to your problem, but in german. Tags suggestet:<br />
 </p>
 <p>tourism=trail_riding_station for stabels where you can hire a horse.</p>
 <p>amenity=stables for any kind of horsestable</p>

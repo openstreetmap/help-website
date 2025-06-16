@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Go to the <a href="http://openstreetmap.org">openstreetmap.org</a> website on your phone's browser and press this button:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/sml.png" alt="Small picture showing the show my location button" /></p>
+<p><img src="/upfiles/sml.png" alt="Small picture showing the show my location button" /></p>
 <p>Your phone's browser will ask you whether you want it to use your phone's GPS. Say "yes", and within a few seconds you'll see your current location on the map.</p>
 </div>
 <div class="answer-controls post-controls">

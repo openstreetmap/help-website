@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The best description I've found so far is by SK53 here: <a href="https://help.openstreetmap.org/questions/22525/how-can-i-put-a-national-cycletrail-from-osm-as-a-transparent-layer-on-my-garmin">https://help.openstreetmap.org/questions/22525/how-can-i-put-a-national-cycletrail-from-osm-as-a-transparent-layer-on-my-garmin</a></p>
+<p>The best description I've found so far is by SK53 here: <a href="/questions/22525/how-can-i-put-a-national-cycletrail-from-osm-as-a-transparent-layer-on-my-garmin">https://help.openstreetmap.org/questions/22525/how-can-i-put-a-national-cycletrail-from-osm-as-a-transparent-layer-on-my-garmin</a></p>
 <p>So my guess at this point is I need something equivalent to this cycle map set of scripts but for hiking trails, located here: <a href="http://svn.openstreetmap.org/applications/utils/export/garmincyclemap/network/">http://svn.openstreetmap.org/applications/utils/export/garmincyclemap/network/</a></p>
 <p>Now that I've contributed to OSM by inputting 30 miles of the Florida Trail from my GPS traces I want to move on to create useful items for people to use. Thanks in advance.</p>
 </div>

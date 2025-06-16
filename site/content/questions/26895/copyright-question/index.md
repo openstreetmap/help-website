@@ -113,7 +113,7 @@ osqa_accepted = true
 <p>All modern maps have a copyright notice somewhere, just throw the line (c) copyright OpenStreetMap Contributors in the lower right. This should be on every unit for distribution. IE only if you plan on distributing it, internally you don't have to worry about this. Now you can furthermore copyright your own renderings of the data and include a secondary copyright notice. For a quick overview read the following links. The second link will answer the specifics of your case.<br />
 </p>
 <p><a href="http://opendatacommons.org/licenses/odbl/summary/">OSM data license sumary</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">Your Specific Question as Answered on the Wiki</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">Your Specific Question as Answered on the Wiki</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

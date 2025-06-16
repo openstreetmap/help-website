@@ -115,8 +115,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can search for GPX traces with a particular tag by putting that tag in the URL. eg to see traces tagged as "bicycle", use: <a href="http://www.openstreetmap.org/traces/tag/bicycle">http://www.openstreetmap.org/traces/tag/bicycle</a>. You can select a trace from the list, and download it if you want.</p>
-<p>Note this will only list traces set as "Public" or "Identifiable" (see <a href="http://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">Visibility of GPS traces</a>). Also, there are no rules for tagging traces, so many traces won't have any tags, or tags may be inconsistent. eg some may tagged as "bicycle", others as "cycling" or "bike" etc. And tags are case sensitive.</p>
+<p>You can search for GPX traces with a particular tag by putting that tag in the URL. eg to see traces tagged as "bicycle", use: <a href="https://www.openstreetmap.org/traces/tag/bicycle">https://www.openstreetmap.org/traces/tag/bicycle</a>. You can select a trace from the list, and download it if you want.</p>
+<p>Note this will only list traces set as "Public" or "Identifiable" (see <a href="https://wiki.openstreetmap.org/wiki/Visibility_of_GPS_traces">Visibility of GPS traces</a>). Also, there are no rules for tagging traces, so many traces won't have any tags, or tags may be inconsistent. eg some may tagged as "bicycle", others as "cycling" or "bike" etc. And tags are case sensitive.</p>
 <p>Another option is to use JOSM to download all of the traces in a particular area. You can then right click on this in the list of layers, and save as GPX. This will include all of the points from GPS traces in that area. But depending on what the trace visibility is set as, you may not be able to see the trace name and user that uploaded it. Also in JOSM, you can right click on the GPX layer, and choose "Info". This will list all of the public and identifiable traces, with a link to download the GPX file.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -160,7 +160,7 @@ One Answer:
 <div id="post-14954-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Multiple tags - just a matter of principle! Shouldn't be that hard to implement - like, allow TAG+TAG notation for AND, TAG|TAG for OR, add braces and off you go, you can be specific. And searching from <a href="http://www.openstreetmap.org/traces,">http://www.openstreetmap.org/traces,</a> even with only one tag, would make the page quite useful - as it is, I don't think you can do so much with the data.</p>
+<p>Multiple tags - just a matter of principle! Shouldn't be that hard to implement - like, allow TAG+TAG notation for AND, TAG|TAG for OR, add braces and off you go, you can be specific. And searching from <a href="https://www.openstreetmap.org/traces,">https://www.openstreetmap.org/traces,</a> even with only one tag, would make the page quite useful - as it is, I don't think you can do so much with the data.</p>
 </div>
 <div id="comment-14954-info" class="comment-info">
 <span class="comment-age">(10 Aug '12, 17:57)</span> <span class="comment-user userinfo">kfj</span>

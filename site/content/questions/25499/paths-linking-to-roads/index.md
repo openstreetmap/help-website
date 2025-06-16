@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>It sometimes happens that an urban footpath runs alongside a road for a short distance, providing a link between the path and the road that is not at any single point.</p>
-<p>I have mapped these links by creating a short linking footpath at one or more points, so that a routing engine will know that it is possible to walk from the path to the road. <a href="http://www.openstreetmap.org/#map=19/50.80627/-1.16764">An example of that type of path</a>.</p>
+<p>I have mapped these links by creating a short linking footpath at one or more points, so that a routing engine will know that it is possible to walk from the path to the road. <a href="https://www.openstreetmap.org/#map=19/50.80627/-1.16764">An example of that type of path</a>.</p>
 <p>Is there a better way of showing such links?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For places where the urban footpath is immediately alongside the road you might want to use sidewalk=left/right/both on the road itself as described <a href="http://wiki.openstreetmap.org/wiki/Key:sidewalk">here</a>.</p>
+<p>For places where the urban footpath is immediately alongside the road you might want to use sidewalk=left/right/both on the road itself as described <a href="https://wiki.openstreetmap.org/wiki/Key:sidewalk">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

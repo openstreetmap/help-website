@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-25936-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>not sure the exact issue. might be related to the fact that it's a multipolygon relation: <a href="http://www.openstreetmap.org/browse/relation/2582516">http://www.openstreetmap.org/browse/relation/2582516</a></p>
+<p>not sure the exact issue. might be related to the fact that it's a multipolygon relation: <a href="https://www.openstreetmap.org/browse/relation/2582516">https://www.openstreetmap.org/browse/relation/2582516</a></p>
 </div>
 <div id="comment-25936-info" class="comment-info">
 <span class="comment-age">(29 Aug '13, 15:27)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One possibility: the upper way of the multipolygon is a recent edit, so it has the higher (64-bit) IDs. Some tools/software haven't been rewritten to handle these yet (right now, QGIS is the major one), so it could be related to that? More info on this issue at the <a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">64-bit</a> wiki page.</p>
+<p>One possibility: the upper way of the multipolygon is a recent edit, so it has the higher (64-bit) IDs. Some tools/software haven't been rewritten to handle these yet (right now, QGIS is the major one), so it could be related to that? More info on this issue at the <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">64-bit</a> wiki page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -203,7 +203,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>FYI, you can also download the data in OSM format in other ways, like via osm.org (Map Layers &gt; Map Data &gt; Retrieve this area from the API), or via XAPI/Overpass (ie - see <a href="http://harrywood.co.uk/maps/uixapi/xapi.html).">http://harrywood.co.uk/maps/uixapi/xapi.html).</a> There are ways to convert OSM to SHP, for example with ogr2ogr <a href="http://www.gdal.org/ogr2ogr.html">http://www.gdal.org/ogr2ogr.html</a> I recently used a command like this: ogr2ogr -where "OGR_GEOMETRY='LineString' -lco SHPT=ARC outfile.shp infile.osm. More options here: <a href="http://wiki.openstreetmap.org/wiki/Shapefile">http://wiki.openstreetmap.org/wiki/Shapefile</a></p>
+<p>FYI, you can also download the data in OSM format in other ways, like via osm.org (Map Layers &gt; Map Data &gt; Retrieve this area from the API), or via XAPI/Overpass (ie - see <a href="http://harrywood.co.uk/maps/uixapi/xapi.html).">http://harrywood.co.uk/maps/uixapi/xapi.html).</a> There are ways to convert OSM to SHP, for example with ogr2ogr <a href="http://www.gdal.org/ogr2ogr.html">http://www.gdal.org/ogr2ogr.html</a> I recently used a command like this: ogr2ogr -where "OGR_GEOMETRY='LineString' -lco SHPT=ARC outfile.shp infile.osm. More options here: <a href="https://wiki.openstreetmap.org/wiki/Shapefile">https://wiki.openstreetmap.org/wiki/Shapefile</a></p>
 </div>
 <div id="comment-25946-info" class="comment-info">
 <span class="comment-age">(29 Aug '13, 16:45)</span> <span class="comment-user userinfo">neuhausr</span>

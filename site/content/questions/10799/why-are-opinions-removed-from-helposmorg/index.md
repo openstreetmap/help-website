@@ -79,7 +79,7 @@ osqa_accepted = true
 <div id="post-10830-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think that it was originally user Kozuch who complained in <a href="http://help.openstreetmap.org/questions/10779/why-are-other-sites-updating-mapnik-faster-than-osmorg">http://help.openstreetmap.org/questions/10779/why-are-other-sites-updating-mapnik-faster-than-osmorg</a> that one of his comments was removed. (One of mine was removed as well.) Gnonthgol then felt this was an issue that should be brought up for wider discussion.</p>
+<p>I think that it was originally user Kozuch who complained in <a href="/questions/10779/why-are-other-sites-updating-mapnik-faster-than-osmorg">https://help.openstreetmap.org/questions/10779/why-are-other-sites-updating-mapnik-faster-than-osmorg</a> that one of his comments was removed. (One of mine was removed as well.) Gnonthgol then felt this was an issue that should be brought up for wider discussion.</p>
 </div>
 <div id="comment-10830-info" class="comment-info">
 <span class="comment-age">(27 Feb '12, 09:52)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

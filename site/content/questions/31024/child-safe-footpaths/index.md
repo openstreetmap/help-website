@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are already tags for <a href="http://wiki.openstreetmap.org/wiki/Key:footway">footways</a>, <a href="https://wiki.openstreetmap.org/wiki/Sidewalks">sidewalks</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:lit">street lighting</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">crossings</a>, <a href="http://wiki.openstreetmap.org/wiki/Key%3amaxspeed">maxspeeds</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:highway">highway classes</a> and <a href="http://wiki.openstreetmap.org/wiki/Map_Features">many more</a>. Don't they suffice for determining if a street can be considered child-safe or do you miss something?</p>
+<p>There are already tags for <a href="https://wiki.openstreetmap.org/wiki/Key:footway">footways</a>, <a href="https://wiki.openstreetmap.org/wiki/Sidewalks">sidewalks</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:lit">street lighting</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">crossings</a>, <a href="https://wiki.openstreetmap.org/wiki/Key%3amaxspeed">maxspeeds</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:highway">highway classes</a> and <a href="https://wiki.openstreetmap.org/wiki/Map_Features">many more</a>. Don't they suffice for determining if a street can be considered child-safe or do you miss something?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

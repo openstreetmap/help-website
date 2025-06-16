@@ -154,7 +154,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I assume you mean arrows indicating the direction of one-way streets ? The tag you need to add is <a href="http://wiki.openstreetmap.org/wiki/Oneway">http://wiki.openstreetmap.org/wiki/Oneway</a> . Note also that way objects in OSM have an inherant direction, and that you may want to revert that direction in the editor (using the 'v' key in potlach2, 'r' key in JOSM) before tagging "oneway=yes".</p>
+<p>I assume you mean arrows indicating the direction of one-way streets ? The tag you need to add is <a href="https://wiki.openstreetmap.org/wiki/Oneway">https://wiki.openstreetmap.org/wiki/Oneway</a> . Note also that way objects in OSM have an inherant direction, and that you may want to revert that direction in the editor (using the 'v' key in potlach2, 'r' key in JOSM) before tagging "oneway=yes".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -227,7 +227,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Set the direction of the street in OSM to match the traffic direction, then add the tag oneway=yes <a href="http://wiki.openstreetmap.org/wiki/Oneway">Wiki - oneway</a> . If you are using Potlatch and need to reverse the direction of the OSM way, click on the "Reverse Direction" button in the lower right corner.</p>
+<p>Set the direction of the street in OSM to match the traffic direction, then add the tag oneway=yes <a href="https://wiki.openstreetmap.org/wiki/Oneway">Wiki - oneway</a> . If you are using Potlatch and need to reverse the direction of the OSM way, click on the "Reverse Direction" button in the lower right corner.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

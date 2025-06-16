@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the <strong><a href="http://wiki.openstreetmap.org/wiki/MapCraft">wiki page 'MapCraft'</a></strong></p>
+<p>See the <strong><a href="https://wiki.openstreetmap.org/wiki/MapCraft">wiki page 'MapCraft'</a></strong></p>
 <p>...which I just created. Note that I haven't actually tried creating a cake yet myself! Let me know how it goes (and feel free to edit the wiki page)</p>
 </div>
 <div class="answer-controls post-controls">

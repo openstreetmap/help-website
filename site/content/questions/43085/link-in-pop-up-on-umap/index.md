@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, I want the link to Commons below the image in the Pop-Up shown not as the URL but as an A HREF for the Wiki05. No idea how to do this, I tried markup, but this didn't work. Any ideas?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Skulpturen_im_Grugapark_uMap.png" alt="alt text" /></p>
+<p><img src="/upfiles/Skulpturen_im_Grugapark_uMap.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span>

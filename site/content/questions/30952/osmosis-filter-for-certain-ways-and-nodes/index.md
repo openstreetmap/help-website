@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Read the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">Osmosis wiki page for the --tag-filter option</a> which explains the deadlock problem. You are not using --tag-filter but the issue is the same.</p>
+<p>Read the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">Osmosis wiki page for the --tag-filter option</a> which explains the deadlock problem. You are not using --tag-filter but the issue is the same.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

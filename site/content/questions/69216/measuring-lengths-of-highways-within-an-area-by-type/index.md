@@ -120,9 +120,9 @@ One Answer:
 <div class="answer-body">
 <p>Check the following questions and answers:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/45378/road-length-africa-data-by-country-by-city-in-osm">Road Length Africa Data by Country &amp; by City in OSM?</a></li>
-<li><a href="https://help.openstreetmap.org/questions/49200/actual-road-length-of-exported-map">Actual road length of exported map</a></li>
-<li><a href="https://help.openstreetmap.org/questions/68878/count-street-length-of-a-city">Count street length of a city</a></li>
+<li><a href="/questions/45378/road-length-africa-data-by-country-by-city-in-osm">Road Length Africa Data by Country &amp; by City in OSM?</a></li>
+<li><a href="/questions/49200/actual-road-length-of-exported-map">Actual road length of exported map</a></li>
+<li><a href="/questions/68878/count-street-length-of-a-city">Count street length of a city</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

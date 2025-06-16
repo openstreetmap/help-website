@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-61447-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You may find this useful <a href="https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
+<p>You may find this useful <a href="/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
 </div>
 <div id="comment-61447-info" class="comment-info">
 <span class="comment-age">(01 Jan '18, 19:32)</span> <span class="comment-user userinfo">andy mackey</span>

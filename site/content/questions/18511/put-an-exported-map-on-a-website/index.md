@@ -118,7 +118,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Of course you can put pictures from OSM maps on your website when you <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">credit</a> them.</p>
+<p>Of course you can put pictures from OSM maps on your website when you <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">credit</a> them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

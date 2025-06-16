@@ -161,7 +161,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look on a similar question:</p>
-<p><a href="http://help.openstreetmap.org/questions/700/publishing-an-openstreetmap">http://help.openstreetmap.org/questions/700/publishing-an-openstreetmap</a></p>
+<p><a href="/questions/700/publishing-an-openstreetmap">https://help.openstreetmap.org/questions/700/publishing-an-openstreetmap</a></p>
 <p>This is something you can quickly find if you use the "search" tool on this help tool (see on top of your screen) with "publish book" for instance.</p>
 </div>
 <div class="answer-controls post-controls">

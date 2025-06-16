@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>someone suggested a renderer but didnt say which one, or any reasons why it was --</p>
-<p>see <a href="https://help.openstreetmap.org/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from">https://help.openstreetmap.org/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from</a></p>
+<p>see <a href="/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from">https://help.openstreetmap.org/questions/19707/im-looking-for-a-map-that-shows-the-edges-of-usa-states-and-maybe-even-rivers-and-trees-where-do-you-dl-this-from</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span>
@@ -131,9 +131,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a bit of a description of the process <a href="http://wiki.openstreetmap.org/wiki/Renderer">here</a>.</p>
+<p>There's a bit of a description of the process <a href="https://wiki.openstreetmap.org/wiki/Renderer">here</a>.</p>
 <p>If you've got some OSM data and you want it to appear on a website as a "slippy map" that you can move with the mouse (like the maps on the osm.org site), have a read of the information on the <a href="http://switch2osm.org/serving-tiles/">switch2osm</a> site - that takes you through setting up a server step by step. Unfortunately, changing the map style currently isn't particularly straightforward, though.</p>
-<p>If you're on Windows or can run Windows programs you might want to consider <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>. It's much easier to customise how the resulting maps look, and may be much better for your needs. There are lots of links from that page containing examples etc.</p>
+<p>If you're on Windows or can run Windows programs you might want to consider <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>. It's much easier to customise how the resulting maps look, and may be much better for your needs. There are lots of links from that page containing examples etc.</p>
 <p>Finally, (from the other question) it sounds like you're planning to use ArcGIS or QGIS. They may well come with something that does what you want. There are lots of ArcGIS / QGIS resources on the web (they're not specific to OSM data).</p>
 </div>
 <div class="answer-controls post-controls">

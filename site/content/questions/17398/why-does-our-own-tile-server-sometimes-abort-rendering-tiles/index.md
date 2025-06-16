@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am set up a tile server to render tiles for a Slippy Map which is used in one of our web applications. I used the tutorial <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">Manually building a tile server (12 04)</a> to build up the server. For testing, I installed the server on a vm (VMware) on my own PC first. Everything works fine by using "hamburg.osm.bz2". After testing it locally, I set it up on a server vm (Citrix Xenserver, Ubuntu 12.04.1 LTS, Postgres 9.1, 4 CPUs, 4GB RAM) and I used the file "germany.osm.bz2" for the map data.</p>
-<p>If I move over the map or zoom in and out I have more often a map like this: <img src="http://help.openstreetmap.org/upfiles/osm_map.PNG" alt="alt text" /></p>
+<p>If I move over the map or zoom in and out I have more often a map like this: <img src="/upfiles/osm_map.PNG" alt="alt text" /></p>
 <p>Firebug show's for this tiles a "404 Not Found", but if I type the URL in the address line I can see the Image. If I scroll into the map and out of the map I also the see tile.</p>
 <p>I don't have any idea how can I fix it.</p>
 </div>
@@ -138,7 +138,7 @@ One Answer:
 <div id="post-17409-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is the server yevaud, aka tile.openstreetmap.org <a href="http://wiki.openstreetmap.org/wiki/Servers/yevaud">http://wiki.openstreetmap.org/wiki/Servers/yevaud</a> - I think having the database on the SSD was found to help a lot, but even then complex tiles might still exhibit the behaviour you have seen. If you look elsewhere in these forums you'll see questions about why people can't see their changes - in this case they will often be served a cached (old data) tile if the new tile doesn't render quickly enough (I believe). If there is no tile then they'd get the 404 tile</p>
+<p>This is the server yevaud, aka tile.openstreetmap.org <a href="https://wiki.openstreetmap.org/wiki/Servers/yevaud">https://wiki.openstreetmap.org/wiki/Servers/yevaud</a> - I think having the database on the SSD was found to help a lot, but even then complex tiles might still exhibit the behaviour you have seen. If you look elsewhere in these forums you'll see questions about why people can't see their changes - in this case they will often be served a cached (old data) tile if the new tile doesn't render quickly enough (I believe). If there is no tile then they'd get the 404 tile</p>
 </div>
 <div id="comment-17409-info" class="comment-info">
 <span class="comment-age">(02 Nov '12, 13:10)</span> <span class="comment-user userinfo">EdLoach ♦</span>

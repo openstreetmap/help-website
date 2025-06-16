@@ -138,7 +138,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Just to add to that - this page of the beginners' guide explains a bit about the data in OSM (and in the file that you downloaded):</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3">https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3</a></p>
 <p>The distance been points isn't in the file, but their place on the surface of the earth is. In addition, bear in mind that you don't need to use an API call to obtain OSM data - just download one of the extracts linked from this page:</p>
 <p><a href="http://planet.openstreetmap.org/">http://planet.openstreetmap.org/</a></p>
 </div>

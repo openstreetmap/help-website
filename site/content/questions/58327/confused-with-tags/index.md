@@ -43,10 +43,10 @@ osqa_accepted = true
 <p>I am new in here. I was trying to clean the data in my neighbourhood. However I'm in a fix with some tags.</p>
 <p>Can someone please explain them?</p>
 <ol>
-<li>'AND_a _c': '10001023' in <a href="http://www.openstreetmap.org/way/165014015#map=11/23.0706/88.5333">Chakdaha</a>.</li>
-<li>'AND_a _nosr _r': '15064585' in <a href="http://www.openstreetmap.org/node/3785672730">Janglpara</a>.</li>
-<li>'AND_ a_ w': '10000549' in <a href="http://www.openstreetmap.org/way/28573377">Hugli</a></li>
-<li>'GNS:id': '-2090988' in <a href="http://www.openstreetmap.org/way/454630781">Beliaghata Canal</a>.</li>
+<li>'AND_a _c': '10001023' in <a href="https://www.openstreetmap.org/way/165014015#map=11/23.0706/88.5333">Chakdaha</a>.</li>
+<li>'AND_a _nosr _r': '15064585' in <a href="https://www.openstreetmap.org/node/3785672730">Janglpara</a>.</li>
+<li>'AND_ a_ w': '10000549' in <a href="https://www.openstreetmap.org/way/28573377">Hugli</a></li>
+<li>'GNS:id': '-2090988' in <a href="https://www.openstreetmap.org/way/454630781">Beliaghata Canal</a>.</li>
 </ol>
 <p>Any help is appreciated. Thanks in advance.</p>
 </div>
@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The AND data is mentioned here and is likely referencing the source of the data in each changeset <a href="http://wiki.openstreetmap.org/wiki/India/Data_sources">http://wiki.openstreetmap.org/wiki/India/Data_sources</a> <a href="http://wiki.openstreetmap.org/wiki/AND_Data">http://wiki.openstreetmap.org/wiki/AND_Data</a></p>
+<p>The AND data is mentioned here and is likely referencing the source of the data in each changeset <a href="https://wiki.openstreetmap.org/wiki/India/Data_sources">https://wiki.openstreetmap.org/wiki/India/Data_sources</a> <a href="https://wiki.openstreetmap.org/wiki/AND_Data">https://wiki.openstreetmap.org/wiki/AND_Data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -144,7 +144,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Could be this I suppose as a source for the name in the changeset <a href="http://wiki.openstreetmap.org/wiki/GEOnet_Names_Server">http://wiki.openstreetmap.org/wiki/GEOnet_Names_Server</a> - thanks Google</p>
+<p>Could be this I suppose as a source for the name in the changeset <a href="https://wiki.openstreetmap.org/wiki/GEOnet_Names_Server">https://wiki.openstreetmap.org/wiki/GEOnet_Names_Server</a> - thanks Google</p>
 </div>
 <div id="comment-58334-info" class="comment-info">
 <span class="comment-age">(16 Aug '17, 15:26)</span> <span class="comment-user userinfo">nevw</span>

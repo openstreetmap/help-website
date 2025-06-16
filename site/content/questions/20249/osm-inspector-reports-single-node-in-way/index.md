@@ -111,8 +111,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You can look specifically at individual ways on the main OSM site as follows:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/way/71401599">http://www.openstreetmap.org/browse/way/71401599</a></li>
-<li><a href="http://www.openstreetmap.org/browse/way/200735915">http://www.openstreetmap.org/browse/way/200735915</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/71401599">https://www.openstreetmap.org/browse/way/71401599</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/200735915">https://www.openstreetmap.org/browse/way/200735915</a></li>
 </ul>
 <p>Only the former appears to have a single node. This occurs from time to time (but rather rarely in my experience).</p>
 <p>The solution is to use JOSM. There are options available in the search panel of JOSM which enable selection of individual ways by number, or ways with a specific number of nodes. Once the relevant ways have been found they can be deleted and removed from OSM.</p>
@@ -268,7 +268,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Sorry, got confused again. A different error in a different way. <a href="http://www.openstreetmap.org/edit?lat=18.799248&amp;lon=98.989957&amp;zoom=18">http://www.openstreetmap.org/edit?lat=18.799248&amp;lon=98.989957&amp;zoom=18</a></p>
+<p>Sorry, got confused again. A different error in a different way. <a href="https://www.openstreetmap.org/edit?lat=18.799248&amp;lon=98.989957&amp;zoom=18">https://www.openstreetmap.org/edit?lat=18.799248&amp;lon=98.989957&amp;zoom=18</a></p>
 <p>I guess I'll struggle with it for a bit longer. I'll come back for more help if I need it.</p>
 <p>Thanks</p>
 </div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to create a maxspeed zone?"
-description = '''I&#x27;ve read here -- http://wiki.openstreetmap.org/wiki/Key:zone:maxspeed -- that the max speed zones should be marked with a special tag rather than with the generic maxspeed. It makes perfect sense. However I wonder: isn&#x27;t there a way to actually create such zone as an area (polygon)? Or is there a r...'''
+description = '''I&#x27;ve read here -- https://wiki.openstreetmap.org/wiki/Key:zone:maxspeed -- that the max speed zones should be marked with a special tag rather than with the generic maxspeed. It makes perfect sense. However I wonder: isn&#x27;t there a way to actually create such zone as an area (polygon)? Or is there a r...'''
 date = "2014-08-14T10:52:00Z"
 lastmod = "2014-09-05T05:39:00Z"
 weight = 35817
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've read here -- <a href="http://wiki.openstreetmap.org/wiki/Key:zone:maxspeed">http://wiki.openstreetmap.org/wiki/Key:zone:maxspeed</a> -- that the max speed zones should be marked with a special tag rather than with the generic <code>maxspeed</code>. It makes perfect sense. However I wonder: isn't there a way to actually create such zone as an area (polygon)? Or is there a reason not to do it that way?</p>
+<p>I've read here -- <a href="https://wiki.openstreetmap.org/wiki/Key:zone:maxspeed">https://wiki.openstreetmap.org/wiki/Key:zone:maxspeed</a> -- that the max speed zones should be marked with a special tag rather than with the generic <code>maxspeed</code>. It makes perfect sense. However I wonder: isn't there a way to actually create such zone as an area (polygon)? Or is there a reason not to do it that way?</p>
 <p>And also: should I then apply two tags to each street, <code>maxspeed=*</code> and <code>zone:maxspeed=*</code>? As explained in the wiki, “in Germany maxspeed-zones apply to all vehicles while maxspeed-signs only apply to motorized-vehicles”. I think it is true at least also for the Netherlands. So the zone is “stronger” than the speed limit. Why set both tags then?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -120,7 +120,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>IMHO you set it on the ways, because that is easier for the consumers to find. Otherwise they have to find the area to which the street belongs. Also zones can be rather small. I know a 30-zone in Belgium with only 1 street in it. It would be an overkill to create a zone for that.</p>
-<p>I also thought the current way of tagging is more towards maxspeed=70, source:maxspeed=BE:zone70 (or BE:zone or BE:zone:70), see <a href="http://wiki.openstreetmap.org/wiki/Key:source:maxspeed">http://wiki.openstreetmap.org/wiki/Key:source:maxspeed</a></p>
+<p>I also thought the current way of tagging is more towards maxspeed=70, source:maxspeed=BE:zone70 (or BE:zone or BE:zone:70), see <a href="https://wiki.openstreetmap.org/wiki/Key:source:maxspeed">https://wiki.openstreetmap.org/wiki/Key:source:maxspeed</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

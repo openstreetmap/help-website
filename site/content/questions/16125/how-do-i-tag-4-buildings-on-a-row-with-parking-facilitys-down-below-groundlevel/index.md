@@ -104,8 +104,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd only tag private inside parking as an <a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a>. Indeed there is a not entirely insignificant number of entrance=garage tags.</p>
-<p>If you mean the parking is outside, I'd simply put an <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> tage on it (likely access=private). Connected buildings can be either retraced as separate linked buildings, or as a single building=terrace, if you like that better.</p>
+<p>I'd only tag private inside parking as an <a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a>. Indeed there is a not entirely insignificant number of entrance=garage tags.</p>
+<p>If you mean the parking is outside, I'd simply put an <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> tage on it (likely access=private). Connected buildings can be either retraced as separate linked buildings, or as a single building=terrace, if you like that better.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

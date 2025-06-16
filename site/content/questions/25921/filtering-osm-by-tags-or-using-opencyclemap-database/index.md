@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please have a look at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>.</p>
+<p>Please have a look at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

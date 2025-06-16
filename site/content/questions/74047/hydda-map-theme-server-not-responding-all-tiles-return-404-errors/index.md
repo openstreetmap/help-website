@@ -69,7 +69,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Apparently openstreetmap.se had a disk crash and it will take them a few weeks to go back online as stated in this answer: <a href="https://help.openstreetmap.org/questions/68610/hydda-map-tiles-not-working/74085">https://help.openstreetmap.org/questions/68610/hydda-map-tiles-not-working/74085</a></p>
+<p>Apparently openstreetmap.se had a disk crash and it will take them a few weeks to go back online as stated in this answer: <a href="/questions/68610/hydda-map-tiles-not-working/74085">https://help.openstreetmap.org/questions/68610/hydda-map-tiles-not-working/74085</a></p>
 </div>
 <div id="comment-74165-info" class="comment-info">
 <span class="comment-age">(14 Apr '20, 10:40)</span> <span class="comment-user userinfo">lorenzschmid</span>

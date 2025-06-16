@@ -193,7 +193,7 @@ osm2pgsql -H localhost -s -U geobox -d geotuga -c rome.osm</code></pre>
 <div id="post-46379-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: just to clarify your statement: I guess you mean "pull GeoJSON from overpass turbo"? The difference is quite important, as Overpass API doesn't provide GeoJSON out of the box. It provides some custom JSON format only, which doesn't really qualify as GeoJSON.</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>: just to clarify your statement: I guess you mean "pull GeoJSON from overpass turbo"? The difference is quite important, as Overpass API doesn't provide GeoJSON out of the box. It provides some custom JSON format only, which doesn't really qualify as GeoJSON.</p>
 </div>
 <div id="comment-46379-info" class="comment-info">
 <span class="comment-age">(04 Nov '15, 12:03)</span> <span class="comment-user userinfo">mmd</span>

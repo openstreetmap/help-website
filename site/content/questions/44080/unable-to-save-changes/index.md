@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This seems to be a bug in iD. Does the workaround mentioned <a href="https://help.openstreetmap.org/questions/43844/saving-changes-doesnt-work">here</a> help?</p>
+<p>This seems to be a bug in iD. Does the workaround mentioned <a href="/questions/43844/saving-changes-doesnt-work">here</a> help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -128,7 +128,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This type of barrier has unique characteristics in construction and style so I think that to be really accurate a new tag value should be used - 'barrier=tuunwal'. The bank &amp; ditch form a single feature that just doesn't fit with any of the existing 'barrier' tags.</p>
-<p>I wouldn't use 'barrier=retaining_wall'. To me that implies that rock or soil is being held back by the wall <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall</a></p>
+<p>I wouldn't use 'barrier=retaining_wall'. To me that implies that rock or soil is being held back by the wall <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dretaining_wall</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -131,8 +131,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>While the answers from rorym and SomeoneElse are correct, there is already a reasonable body of attributes/tags available for <a href="http://wiki.openstreetmap.org/wiki/Key:healthcare#Specialities_of_medical_practitioners_or_other_medical_facilities">healthcare specialities</a> that could, if necessary be expanded to cater for your specific subject.</p>
-<p>Note that you should probably use the above together with <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dclinic">amenity=clinic</a> for best results.</p>
+<p>While the answers from rorym and SomeoneElse are correct, there is already a reasonable body of attributes/tags available for <a href="https://wiki.openstreetmap.org/wiki/Key:healthcare#Specialities_of_medical_practitioners_or_other_medical_facilities">healthcare specialities</a> that could, if necessary be expanded to cater for your specific subject.</p>
+<p>Note that you should probably use the above together with <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dclinic">amenity=clinic</a> for best results.</p>
 <p>I've had a look at the two examples you mentioned:</p>
 <ul>
 <li>Spinal Injury Rehabilitation Centre, Nepal seems to be mapped as a bus stop (which naturally may actually exist), in any case there doesn't seem to be a node or building outline with corresponding tagging.</li>
@@ -213,7 +213,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi, thanks for your interest. OSM doesn't have "official tags". There are many tags which are used a lot and are documented a lot, but you are completely free to use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>. It's a good idea for people who add things to OSM and people who use OSM, to come to an agreement about what tags mean what, so people will know what you mean. So you should do this.</p>
 <p>I don't know a lot about medical things in OSM, but there's a suggested <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0">healthcare tagging scheme</a> which might be useful for you. Perhaps have a look at that, and see if what you want to map would fall under that.</p>
-<p>Tagging presets are done on a per-editor basis. For iD (the default web editor), I think you have to <a href="https://github.com/openstreetmap/iD/issues/new">open an issue on their issue tracker</a>. For JOSM, the desktop advanced editor, you can <a href="http://wiki.openstreetmap.org/wiki/Customising_JOSM_Presets">customise the presets used</a>.</p>
+<p>Tagging presets are done on a per-editor basis. For iD (the default web editor), I think you have to <a href="https://github.com/openstreetmap/iD/issues/new">open an issue on their issue tracker</a>. For JOSM, the desktop advanced editor, you can <a href="https://wiki.openstreetmap.org/wiki/Customising_JOSM_Presets">customise the presets used</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

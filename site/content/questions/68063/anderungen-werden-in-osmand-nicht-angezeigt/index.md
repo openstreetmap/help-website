@@ -239,7 +239,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Damit wir wirklich über das gleiche reden, so sieht es bei mir in OsmAnd aus:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/photo_2019-02-21_12-40-45.jpg" alt="OsmAnd Screenshot" /></p>
+<p><img src="/upfiles/photo_2019-02-21_12-40-45.jpg" alt="OsmAnd Screenshot" /></p>
 <p>Da sind deine Änderungen bezüglich der Einbahnstraßen zu sehen. Oder fehlt deiner Meinung nach auch hier etwas?</p>
 </div>
 <div id="comment-68088-info" class="comment-info">

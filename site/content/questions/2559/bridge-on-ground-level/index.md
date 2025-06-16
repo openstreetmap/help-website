@@ -258,7 +258,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally speaking, it's not necessary to add a layer tag unless many objects pass over/under one another. See <a href="http://wiki.openstreetmap.org/wiki/Layer">Layer</a> in the OSM Wiki.</p>
+<p>Generally speaking, it's not necessary to add a layer tag unless many objects pass over/under one another. See <a href="https://wiki.openstreetmap.org/wiki/Layer">Layer</a> in the OSM Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

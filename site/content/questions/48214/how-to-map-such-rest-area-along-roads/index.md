@@ -41,9 +41,9 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hello, there.</p>
 <p>I was wondering: there are numerous examples of rest areas like the following, but how exactly to map them?</p>
-<p>The first example: <img src="http://help.openstreetmap.org/upfiles/1_9EeNLNP.png" alt="first example" /></p>
+<p>The first example: <img src="/upfiles/1_9EeNLNP.png" alt="first example" /></p>
 <p>These are often only a stop area, sometimes with some trash cans, even less often with picnic tables; this one, apart from mapping cans and tables if present, I have no idea how to map it.</p>
-<p>Second example: <img src="http://help.openstreetmap.org/upfiles/2.png" alt="second example" /></p>
+<p>Second example: <img src="/upfiles/2.png" alt="second example" /></p>
 <p>These are bigger, and the ones without tables and trash cans are not the predominant type. There, I would say to map the highway, maybe as <code>highway=service</code>, and the tables and cans, but there may be a better modelling; if so, how?</p>
 <p>I must add that I expect a mean to explicitly map them as rest areas, as it's their use, and consumers like road GPS receivers often use these areas to help their users by saying "Hey, you didn't take a rest during the past 3 hours, you could rest here, 5 minutes ahead.". I don't know if such a modelling exists, though.</p>
 <p>Awaiting your answers,</p>
@@ -171,7 +171,7 @@ osqa_accepted = true
 <div id="post-48238-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> then our wiki pages need to be fixed. The English version even lists lay-bys as examples for highway=rest_area. The German page suggests to use it also for places to make driver changes etc.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> then our wiki pages need to be fixed. The English version even lists lay-bys as examples for highway=rest_area. The German page suggests to use it also for places to make driver changes etc.</p>
 </div>
 <div id="comment-48238-info" class="comment-info">
 <span class="comment-age">(20 Feb '16, 12:46)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -224,7 +224,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is one here <a href="http://www.openstreetmap.org/#map=18/52.31442/-0.14199">http://www.openstreetmap.org/#map=18/52.31442/-0.14199</a> It is just a parking node, and is used mainly by HGVs ( heavy goods vehicles ) so the drivers can comply with law that they have rest stops. Cars can use them but adding the number of spaces wouldn't make sense. I my opinion a parking node is the best way to map them, if there are other facilities add them. It is useful that these parking spots are mapped. They are called laybys in GB.</p>
+<p>There is one here <a href="https://www.openstreetmap.org/#map=18/52.31442/-0.14199">https://www.openstreetmap.org/#map=18/52.31442/-0.14199</a> It is just a parking node, and is used mainly by HGVs ( heavy goods vehicles ) so the drivers can comply with law that they have rest stops. Cars can use them but adding the number of spaces wouldn't make sense. I my opinion a parking node is the best way to map them, if there are other facilities add them. It is useful that these parking spots are mapped. They are called laybys in GB.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

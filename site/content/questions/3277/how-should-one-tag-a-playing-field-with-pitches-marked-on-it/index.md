@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>In general I only use the tag leisure=pitch for sports areas which have a permanent dedicated usage such as bowling greens, tennis courts, pitches in sports stadia, all-weather pitches with permanent markings, and baseball diamonds.</p>
-<p>For multi-purpose amenity grassland used for sports pitches, such as most school playing fields, I prefer <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Drecreation_ground">landuse=recreation_ground</a>.</p>
+<p>For multi-purpose amenity grassland used for sports pitches, such as most school playing fields, I prefer <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Drecreation_ground">landuse=recreation_ground</a>.</p>
 <p>There are several reasons for doing this : (1) pitches often change location to reduce wear and tear on the grass; (2) summer and winter sports share the same area (football/hockey with cricket, for instance); (3) sports pitch usage can change from year to year (one group of pitches I know was rugby union, and is now used for football). Another possibility is landuse=grass, but I try and avoid using this for amenity grassland with a known purpose.</p>
 <p>It may be possible to tag dedicated areas of the field, such as the cricket square, but I'm not aware of anyone having done so, and I'm not sure whether leisure=pitch is appropriate.</p>
 </div>

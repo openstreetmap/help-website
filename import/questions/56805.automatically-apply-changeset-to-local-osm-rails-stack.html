@@ -7,7 +7,7 @@
         <meta name="description" content="I have setup a local OSM stack by following the instructions on INSTALL.md and CONFIGURE.md . I was able to do this without facing any major issues and loaded the database with a small portion of the map just to play around with it. Whenever I make an edit on the map, the changes are not applied to ..." />
         <meta name="keywords" content="changeset,editing,rails,localhost,database" />
         
-        <link rel="canonical" href="https://help.openstreetmap.org/questions/56805/automatically-apply-changeset-to-local-osm-rails-stack" />
+        <link rel="canonical" href="/questions/56805/automatically-apply-changeset-to-local-osm-rails-stack" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56805/automatically-apply-changeset-to-local-osm-rails-stack?type=rss">
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -247,7 +247,7 @@
                             <div class="question-body">
                                 <p>I have setup a local OSM stack by following the instructions on <a href="https://github.com/openstreetmap/openstreetmap-website/blob/master/INSTALL.md">INSTALL.md</a> and <a href="https://github.com/openstreetmap/openstreetmap-website/blob/master/CONFIGURE.md">CONFIGURE.md</a> . I was able to do this without facing any major issues and loaded the database with a small portion of the map just to play around with it.</p>
 <p>Whenever I make an edit on the map, the changes are not applied to the local database - I found this by querying via the website and also by exporting the data in the database to an .osm file using <em>osmosis</em> and searching for my edits in that. I wasn't able to find them</p>
-<p>However, the changeset is created because when I go to my profile, I am able to see the changeset there. The only work around I was able to find for this is to download the changeset and manually apply the changeset to the database using <em>osmosis</em> . I came across this <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">answer</a> which suggests that whenever we save the changeset, it is immediately applied to the main database, and rendering could potentially take some time. I understand this, and I am not worried about the rendering part. I only want the changesets to get persisted to the database auotomatically.</p>
+<p>However, the changeset is created because when I go to my profile, I am able to see the changeset there. The only work around I was able to find for this is to download the changeset and manually apply the changeset to the database using <em>osmosis</em> . I came across this <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">answer</a> which suggests that whenever we save the changeset, it is immediately applied to the main database, and rendering could potentially take some time. I understand this, and I am not worried about the rendering part. I only want the changesets to get persisted to the database auotomatically.</p>
 <p>Is there something different that I should be doing, or is this the expected behaviour?</p>
 <p><strong>Edit:</strong> - To add more details I also tried to hit <a href="http://localhost:3000/api/0.6/node/1">http://localhost:3000/api/0.6/node/1</a> and <a href="http://localhost:3000/api/0.6/way/1/full">http://localhost:3000/api/0.6/way/1/full</a> -- which contains all the data that I edited. </p>
 <p>The command that I am using to read data from DB and convert it to .osm is:</p>
@@ -583,7 +583,7 @@
                                     <div class="item-right">
                                         <div class="answer-body">
                                             <p>Found the solution myself with some help from Frederik who directed me to think about how I was using <em>osmosis</em></p>
-<p>The data was getting saved into the DB which means my question is sort of void at this point. The problem was with the way I was using osmosis to export it. the "<a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45#--read-apidb_.28--rd.29">--read-apidb</a>" command reads from a different set of tables. I should be using "<a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45#--read-apidb-current_.28--rdcur.29">--read-apidb-current</a>" which reads from the tables that contain the changes. I found this out by looking at the server logs when I query for my changes on the localhost and I found out that the API queries for data from the "current_nodes" table instead of "nodes". </p>
+<p>The data was getting saved into the DB which means my question is sort of void at this point. The problem was with the way I was using osmosis to export it. the "<a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45#--read-apidb_.28--rd.29">--read-apidb</a>" command reads from a different set of tables. I should be using "<a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.45#--read-apidb-current_.28--rdcur.29">--read-apidb-current</a>" which reads from the tables that contain the changes. I found this out by looking at the server logs when I query for my changes on the localhost and I found out that the API queries for data from the "current_nodes" table instead of "nodes". </p>
 <p>For example when I hit <em><a href="http://localhost:3000/api/0.6/node/1">http://localhost:3000/api/0.6/node/1</a></em> this is the log that I got:</p>
 <p><code>Started GET "/api/0.6/node/1" for ::1 at 2017-07-06 14:43:36 -0700
 Processing by NodeController#read as HTML
@@ -719,7 +719,7 @@ Completed 200 OK in 72ms (Views: 7.5ms | ActiveRecord: 15.6ms)</code></p>
 
 <div id="sidebar-upper" class="boxC">
     <div class="body">
-        <p>This was the support site for <a href="http://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
+        <p>This was the support site for <a href="https://www.openstreetmap.org/">OpenStreetMap</a>. It has now been replaced by <a href="https://community.openstreetmap.org/">community.osm.org</a>.</p>
      </div>
 </div>
 

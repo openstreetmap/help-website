@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The current <a href="http://wiki.openstreetmap.org/w/index.php?title=DE:Iotw&amp;oldid=798922">picture of the week in the OpenStreetMap wiki</a> shows that Apple is possibly using OpenStreetMap data in iOS maps.</p>
+<p>The current <a href="https://wiki.openstreetmap.org/w/index.php?title=DE:Iotw&amp;oldid=798922">picture of the week in the OpenStreetMap wiki</a> shows that Apple is possibly using OpenStreetMap data in iOS maps.</p>
 <ol>
 <li><p>Is this true?</p></li>
 <li><p>Do they have to display a attribution according to the new license?</p></li>

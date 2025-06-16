@@ -67,7 +67,7 @@ osqa_accepted = false
 <p>So you want to use your assembled tiles as a kind of (transparent?) overlay to an OSM based map?</p>
 <p>Do you neet a static solution or a dynamic map like on osm.org? online or offline solution?</p>
 <p>Pleade EDIT your question and give us more details.</p>
-<p>(now discovered double posting <a href="https://help.openstreetmap.org/questions/34757/how-to-add-multiple-layers-to-osm">https://help.openstreetmap.org/questions/34757/how-to-add-multiple-layers-to-osm</a> )</p>
+<p>(now discovered double posting <a href="/questions/34757/how-to-add-multiple-layers-to-osm">https://help.openstreetmap.org/questions/34757/how-to-add-multiple-layers-to-osm</a> )</p>
 </div>
 <div id="comment-34779-info" class="comment-info">
 <span class="comment-age">(09 Jul '14, 20:09)</span> <span class="comment-user userinfo">stephan75</span>

@@ -42,10 +42,10 @@ osqa_accepted = false
 <p>In historical centres in Europe, near churches, palaces etc. etc. one can very often find historical statues. How to map them? Very often they are not ment as memorial to a historical person, rather they are symbolic, mythological etc. There may be an angel, or a saint, who may have never existed as a person, or even if it existed the statue is not really a memorial to this saint as a person, rather it has deeper religious or symbolic meaning (so the theme is for example "freedom", "justice" or anything else to what the saint is traditionally connected).</p>
 <p>There are two basic options:</p>
 <ol>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dartwork">tourism=artwork</a> - according to wiki this is very good tag for any artist oeuvre. However it does not cover any historical meaning of these sculptures.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial">historic=memorial</a> - this is much more suitable for historical objects, however wiki mentions, that it should be used for "memorials, usually remembering special persons, peoples lost their lives in the world wars"</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dartwork">tourism=artwork</a> - according to wiki this is very good tag for any artist oeuvre. However it does not cover any historical meaning of these sculptures.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial">historic=memorial</a> - this is much more suitable for historical objects, however wiki mentions, that it should be used for "memorials, usually remembering special persons, peoples lost their lives in the world wars"</li>
 </ol>
-<p>I prefer solution no. 1, but I have seen many usages of no. 2 - for example statues on <a href="http://www.openstreetmap.org/?lat=50.086415&amp;lon=14.411458&amp;zoom=18&amp;layers=M">Charles bridge</a> in Prague, which is BTW very good example of what I have in mind, there are statues like "Pieta" or "cross with Calvary", which are NOT just memorials to one person.</p>
+<p>I prefer solution no. 1, but I have seen many usages of no. 2 - for example statues on <a href="https://www.openstreetmap.org/?lat=50.086415&amp;lon=14.411458&amp;zoom=18&amp;layers=M">Charles bridge</a> in Prague, which is BTW very good example of what I have in mind, there are statues like "Pieta" or "cross with Calvary", which are NOT just memorials to one person.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span> <span class="post-tag tag-link-historical" rel="tag" title="see questions tagged &#39;historical&#39;">historical</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-history" rel="tag" title="see questions tagged &#39;history&#39;">history</span>
@@ -185,7 +185,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/wayside_shrine">Wayside shrine</a> sounds to me like what you want, as long as those statues retain some religious meaning.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/wayside_shrine">Wayside shrine</a> sounds to me like what you want, as long as those statues retain some religious meaning.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

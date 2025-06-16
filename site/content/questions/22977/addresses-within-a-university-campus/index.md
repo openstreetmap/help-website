@@ -71,8 +71,8 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Have you looked at other universities in the UK?</p>
 <p>I found Heidelberg University in germany, which is a hotspot of OSM-related research, to use the actual street names on the OSM buildings, and to not have a all-encompassing campus relation.</p>
-<p>University: <a href="http://www.openstreetmap.org/?lat=49.41581&amp;lon=8.67376&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=49.41581&amp;lon=8.67376&amp;zoom=16&amp;layers=M</a></p>
-<p>One building: <a href="http://www.openstreetmap.org/browse/way/69693726">http://www.openstreetmap.org/browse/way/69693726</a></p>
+<p>University: <a href="https://www.openstreetmap.org/?lat=49.41581&amp;lon=8.67376&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=49.41581&amp;lon=8.67376&amp;zoom=16&amp;layers=M</a></p>
+<p>One building: <a href="https://www.openstreetmap.org/browse/way/69693726">https://www.openstreetmap.org/browse/way/69693726</a></p>
 </div>
 <div id="comment-22978-info" class="comment-info">
 <span class="comment-age">(03 Jun '13, 12:17)</span> <span class="comment-user userinfo">gormo</span>
@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-22983-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I wonder whether this is just a case of <em><a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dneighbourhood">place=neighbourhood</a></em> (as an area) and <em>name=University Park</em>.</p>
+<p>I wonder whether this is just a case of <em><a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dneighbourhood">place=neighbourhood</a></em> (as an area) and <em>name=University Park</em>.</p>
 </div>
 <div id="comment-22983-info" class="comment-info">
 <span class="comment-age">(03 Jun '13, 14:20)</span> <span class="comment-user userinfo">scai ♦</span>

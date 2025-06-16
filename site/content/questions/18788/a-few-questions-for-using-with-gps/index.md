@@ -110,8 +110,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First: generally have a look at the <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> collection in the OSM wiki ... look for offline map data storage ... try Osmand or mapFactorNavigator free.</p>
-<p>Second: also hint to to <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">Software</a> collection.</p>
+<p>First: generally have a look at the <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> collection in the OSM wiki ... look for offline map data storage ... try Osmand or mapFactorNavigator free.</p>
+<p>Second: also hint to to <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">Software</a> collection.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Breaks on rivers?"
-description = '''Is this break on the river &quot;Rio Madeira&quot; correct? Look at the permalink:  http://www.openstreetmap.org/?lat=-9.18826&amp;amp;lon=-64.45222&amp;amp;zoom=15&amp;amp;layers=M If it is en error, am I allowed to correct this even if I am from an other end of the World? Note that similar breaks are causing breaks on ...'''
+description = '''Is this break on the river &quot;Rio Madeira&quot; correct? Look at the permalink:  https://www.openstreetmap.org/?lat=-9.18826&amp;amp;lon=-64.45222&amp;amp;zoom=15&amp;amp;layers=M If it is en error, am I allowed to correct this even if I am from an other end of the World? Note that similar breaks are causing breaks on ...'''
 date = "2013-06-28T13:41:00Z"
 lastmod = "2013-06-28T15:08:00Z"
 weight = 23775
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Is this break on the river "Rio Madeira" correct? Look at the permalink:<br />
-<a href="http://www.openstreetmap.org/?lat=-9.18826&amp;lon=-64.45222&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=-9.18826&amp;lon=-64.45222&amp;zoom=15&amp;layers=M</a><br />
+<a href="https://www.openstreetmap.org/?lat=-9.18826&amp;lon=-64.45222&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=-9.18826&amp;lon=-64.45222&amp;zoom=15&amp;layers=M</a><br />
 If it is en error, am I allowed to correct this even if I am from an other end of the World? Note that similar breaks are causing breaks on the OSM river systems. Thanks.river</p>
 </div>
 <div id="question-tags" class="tags-container tags">

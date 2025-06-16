@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/browse/way/176615463">Pike rd</a> misses a <a href="http://wiki.openstreetmap.org/wiki/Key:highway">highway</a> tag, without it it won't get rendered. Also note that you shouldn't use <a href="http://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">abbreviations</a> in the name tag (or anywhere else).</p>
+<p><a href="https://www.openstreetmap.org/browse/way/176615463">Pike rd</a> misses a <a href="https://wiki.openstreetmap.org/wiki/Key:highway">highway</a> tag, without it it won't get rendered. Also note that you shouldn't use <a href="https://wiki.openstreetmap.org/wiki/Names#Abbreviation_.28don.27t_do_it.29">abbreviations</a> in the name tag (or anywhere else).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

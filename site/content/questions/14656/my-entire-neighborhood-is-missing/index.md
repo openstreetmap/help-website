@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I can see you are adding it yourself already. <a href="http://www.openstreetmap.org/edit?lat=41.34563&amp;lon=-87.37647&amp;zoom=16">Another road appeared</a> as I was looking. Your local knowledge means you are the best person to add your local area, as other maps may contain mistakes.</p>
+<p>I can see you are adding it yourself already. <a href="https://www.openstreetmap.org/edit?lat=41.34563&amp;lon=-87.37647&amp;zoom=16">Another road appeared</a> as I was looking. Your local knowledge means you are the best person to add your local area, as other maps may contain mistakes.</p>
 <p>Welcome to OpenStreetMap.</p>
 <p>Edit: I should probably add that we aren't allowed to just copy road names from other online maps due to copyright and license related issues, so again your local knowledge helps there.</p>
 </div>

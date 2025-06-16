@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>My problem just posted (<a href="https://help.openstreetmap.org/questions/65269/osm-installation-to-basecamp-fails)">https://help.openstreetmap.org/questions/65269/osm-installation-to-basecamp-fails)</a> seems to be similar to yours. But no one answered you - were you able to find a solution? You could reply off line to john.rose1@free.fr , thanks and best wishes, John</p>
+<p>My problem just posted (<a href="/questions/65269/osm-installation-to-basecamp-fails)">https://help.openstreetmap.org/questions/65269/osm-installation-to-basecamp-fails)</a> seems to be similar to yours. But no one answered you - were you able to find a solution? You could reply off line to john.rose1@free.fr , thanks and best wishes, John</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

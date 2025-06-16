@@ -214,7 +214,7 @@ osqa_accepted = true
 <div id="post-34545-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If so, you even might be able to get the right size of the cone. But keep in mind the cone covers the tall pillar completedly. Consider a building with a underground parking lot. Do you map the outside of the building or even the underground walls and use 3D ? Please read these lines as well <a href="http://wiki.openstreetmap.org/wiki/Building">http://wiki.openstreetmap.org/wiki/Building</a></p>
+<p>If so, you even might be able to get the right size of the cone. But keep in mind the cone covers the tall pillar completedly. Consider a building with a underground parking lot. Do you map the outside of the building or even the underground walls and use 3D ? Please read these lines as well <a href="https://wiki.openstreetmap.org/wiki/Building">https://wiki.openstreetmap.org/wiki/Building</a></p>
 </div>
 <div id="comment-34545-info" class="comment-info">
 <span class="comment-age">(02 Jul '14, 11:46)</span> <span class="comment-user userinfo">Hendrikklaas</span>

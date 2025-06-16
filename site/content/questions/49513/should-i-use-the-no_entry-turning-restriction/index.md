@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Should I use the no_entry turning restriction?"
-description = '''Hi all, I recently added some turn restrictions. All seem fine apart from http://www.openstreetmap.org/relation/6168859 a restriction=no_entry relation. Although documented in the wiki (which I was following), none of the common routers seem to understand it. Have I made a mistake somewhere or is it...'''
+description = '''Hi all, I recently added some turn restrictions. All seem fine apart from https://www.openstreetmap.org/relation/6168859 a restriction=no_entry relation. Although documented in the wiki (which I was following), none of the common routers seem to understand it. Have I made a mistake somewhere or is it...'''
 date = "2016-04-30T14:40:00Z"
 lastmod = "2016-04-30T16:44:00Z"
 weight = 49513
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all, I recently added some turn restrictions. All seem fine apart from <a href="http://www.openstreetmap.org/relation/6168859">http://www.openstreetmap.org/relation/6168859</a> a restriction=no_entry relation. Although documented in the wiki (which I was following), none of the common routers seem to understand it. Have I made a mistake somewhere or is it just not recognised by routing software? Am I better off replacing it with no left/right turn relations? Thanks for your help.</p>
+<p>Hi all, I recently added some turn restrictions. All seem fine apart from <a href="https://www.openstreetmap.org/relation/6168859">https://www.openstreetmap.org/relation/6168859</a> a restriction=no_entry relation. Although documented in the wiki (which I was following), none of the common routers seem to understand it. Have I made a mistake somewhere or is it just not recognised by routing software? Am I better off replacing it with no left/right turn relations? Thanks for your help.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-turn_restrictions" rel="tag" title="see questions tagged &#39;turn_restrictions&#39;">turn_restrictions</span> <span class="post-tag tag-link-no_entry" rel="tag" title="see questions tagged &#39;no_entry&#39;">no_entry</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span>

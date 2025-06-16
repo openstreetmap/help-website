@@ -143,7 +143,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Note that there is also a <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dislet">place=islet</a> tag for very small islands.</p>
+<p>Note that there is also a <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dislet">place=islet</a> tag for very small islands.</p>
 </div>
 <div id="comment-26584-info" class="comment-info">
 <span class="comment-age">(21 Sep '13, 13:15)</span> <span class="comment-user userinfo">scai ♦</span>

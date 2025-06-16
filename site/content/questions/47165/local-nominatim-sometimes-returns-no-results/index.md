@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Local Nominatim sometimes returns no results"
-description = '''Hello, I followed these instructions to install Nominatim on a local server: http://wiki.openstreetmap.org/wiki/Nominatim/Installation  I used the stable version 2.4.0 I added the optional data from Wikipedia and Postcodes added the special phrases after the import was done  The planet import was do...'''
+description = '''Hello, I followed these instructions to install Nominatim on a local server: https://wiki.openstreetmap.org/wiki/Nominatim/Installation  I used the stable version 2.4.0 I added the optional data from Wikipedia and Postcodes added the special phrases after the import was done  The planet import was do...'''
 date = "2015-12-15T13:51:00Z"
 lastmod = "2015-12-15T13:51:00Z"
 weight = 47165
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I followed these instructions to install Nominatim on a local server: <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
+<p>I followed these instructions to install Nominatim on a local server: <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a></p>
 <ul>
 <li>I used the stable version 2.4.0</li>
 <li>I added the optional data from Wikipedia and Postcodes</li>

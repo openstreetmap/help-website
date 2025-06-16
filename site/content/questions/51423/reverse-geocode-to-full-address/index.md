@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Using Nominatim, I'm able to retrieve a full address from a reverse search. I click in the map, generating a lat/lon value for my click and it will bring back a full address, as such:</p>
 <p><a href="http://nominatim.openstreetmap.org/reverse.php?format=html&amp;lat=53.1072166918934&amp;lon=-2.3291015625&amp;zoom="><code>http://nominatim.openstreetmap.org/reverse.php?format=html&amp;lat=53.1072166918934&amp;lon=-2.3291015625&amp;zoom=</code></a></p>
-<p>If I query either raw OSM data (<a href="http://www.openstreetmap.org/api/0.6/way/25958840">HERE</a>) I'm only able to see the street name. Where is OSM getting the rest of the data from? Am I able to achieve a similar level of depth?</p>
+<p>If I query either raw OSM data (<a href="https://www.openstreetmap.org/api/0.6/way/25958840">HERE</a>) I'm only able to see the street name. Where is OSM getting the rest of the data from? Am I able to achieve a similar level of depth?</p>
 <p>I'm currently running a web server hosting <code>OSRM</code> and a C# application feeding in queries, but I'm only ever able to get a <code>street name</code> back instead of a full address...</p>
 </div>
 <div id="question-tags" class="tags-container tags">

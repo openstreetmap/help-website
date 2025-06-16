@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There is a problem with misusing name tag to map node types instead of <a href="http://en.wikipedia.org/wiki/Proper_noun">proper nouns</a>. Can I somehow setup a notification for new nodes with name=some_type ?</p>
-<p>Related: <a href="https://help.openstreetmap.org/questions/20647/how-to-find-a-bot-maintainer-to-suggest-additional-replace-conditions">How to find a bot maintainer to suggest additional replace conditions?</a></p>
+<p>Related: <a href="/questions/20647/how-to-find-a-bot-maintainer-to-suggest-additional-replace-conditions">How to find a bot maintainer to suggest additional replace conditions?</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-notification" rel="tag" title="see questions tagged &#39;notification&#39;">notification</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span>

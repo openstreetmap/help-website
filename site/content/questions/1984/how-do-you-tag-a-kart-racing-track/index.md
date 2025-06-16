@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would take a look at <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Draceway">highway=raceway</a> to start, since we're talking about motorsports.</p>
+<p>I would take a look at <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Draceway">highway=raceway</a> to start, since we're talking about motorsports.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -201,7 +201,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_Features">here</a> u have details of all the map features</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_Features">here</a> u have details of all the map features</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

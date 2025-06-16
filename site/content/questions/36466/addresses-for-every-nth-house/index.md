@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Addresses for every nth house"
-description = '''According to the wiki (http://wiki.openstreetmap.org/wiki/Key:addr:interpolation) you should be able to add a addr:interpolation tag to a line and make the value equal to a number. My understanding is that this number should then be used to increment the house values along that line based on the add...'''
+description = '''According to the wiki (https://wiki.openstreetmap.org/wiki/Key:addr:interpolation) you should be able to add a addr:interpolation tag to a line and make the value equal to a number. My understanding is that this number should then be used to increment the house values along that line based on the add...'''
 date = "2014-09-01T00:17:00Z"
 lastmod = "2014-09-01T23:49:00Z"
 weight = 36466
@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>According to the wiki (<a href="http://wiki.openstreetmap.org/wiki/Key:addr:interpolation">http://wiki.openstreetmap.org/wiki/Key:addr:interpolation</a>) you should be able to add a addr:interpolation tag to a line and make the value equal to a number. My understanding is that this number should then be used to increment the house values along that line based on the addr:housenumber values of the start and end nodes of the line. For example <a href="https://www.openstreetmap.org/way/301092844">this line</a> has a start point of 1047 and an end point of 1143. With the line set to have addr:interpolation = 4 I would expect to be able to find addresses 1051, 1055, 1059, 1063...1143, when searching for addresses. Edit-- I also would expect numbers like 1053, 1057, 1061, etc to not be found when searching for addresses.</p>
+<p>According to the wiki (<a href="https://wiki.openstreetmap.org/wiki/Key:addr:interpolation">https://wiki.openstreetmap.org/wiki/Key:addr:interpolation</a>) you should be able to add a addr:interpolation tag to a line and make the value equal to a number. My understanding is that this number should then be used to increment the house values along that line based on the addr:housenumber values of the start and end nodes of the line. For example <a href="https://www.openstreetmap.org/way/301092844">this line</a> has a start point of 1047 and an end point of 1143. With the line set to have addr:interpolation = 4 I would expect to be able to find addresses 1051, 1055, 1059, 1063...1143, when searching for addresses. Edit-- I also would expect numbers like 1053, 1057, 1061, etc to not be found when searching for addresses.</p>
 <p>Any ideas of why this isn't working? There seems to be some question of adding this type of feature back in 2009, but I can't seem to find any follow up as to if it was added or not. Am I miss reading the wiki or is it incorrect?</p>
-<p>Edit: I found additional information at <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">this wiki page</a> but it seems to confirm my understanding of how addr:interpolation=4 should work, but I'm still not seeing the skipped number results I expect.</p>
+<p>Edit: I found additional information at <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">this wiki page</a> but it seems to confirm my understanding of how addr:interpolation=4 should work, but I'm still not seeing the skipped number results I expect.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-address" rel="tag" title="see questions tagged &#39;address&#39;">address</span> <span class="post-tag tag-link-interpolation" rel="tag" title="see questions tagged &#39;interpolation&#39;">interpolation</span>

@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It could be worth checking the source of the bus stop. Have a look to see if there is any <code>source</code> tag, and check the history to see who added it originally. It may have come from some sort of import, eg in the UK, a lot of bus stops were added by the <a href="http://wiki.openstreetmap.org/wiki/NaPTAN/Import">NaPTAN import</a>.</p>
-<p>If it is from the NaPTAN import it should have several naptan tags, and you can follow the guidelines at <a href="http://wiki.openstreetmap.org/wiki/NaPTAN/Surveying_and_Merging_NaPTAN_and_OSM_data">Surveying and merging NaPTAN and OSM data</a>.</p>
+<p>It could be worth checking the source of the bus stop. Have a look to see if there is any <code>source</code> tag, and check the history to see who added it originally. It may have come from some sort of import, eg in the UK, a lot of bus stops were added by the <a href="https://wiki.openstreetmap.org/wiki/NaPTAN/Import">NaPTAN import</a>.</p>
+<p>If it is from the NaPTAN import it should have several naptan tags, and you can follow the guidelines at <a href="https://wiki.openstreetmap.org/wiki/NaPTAN/Surveying_and_Merging_NaPTAN_and_OSM_data">Surveying and merging NaPTAN and OSM data</a>.</p>
 <p>Note the NaPTAN data includes a number of bus stops which are not actually physically present on the ground. For these, it is worth checking whether they are actually used as bus stops, ie is there a bus service that stops at that location. If it is used as a bus stop, then you can add the <code>physically_present=no</code> tag, and leave all of the other tags. If it is not used as a bus stop, then you can remove the <code>highway=bus_stop</code> tag.</p>
 <p>If the bus stop is not from some sort of import, then you could contact the user who originally added it, and ask about it. And if you are sure that there is no bus stop at that location, its probably best just to delete the bus stop node.</p>
 </div>
@@ -132,7 +132,7 @@ osqa_accepted = false
 <div id="post-23476-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I suspect it is this bus stop and the one opposite - <a href="http://www.openstreetmap.org/browse/node/1509812105/history">http://www.openstreetmap.org/browse/node/1509812105/history</a> - so not in one particular release of the NaPTAN data, but possible unmarked "customary" stops, which are the hardest to map and/or verify (physically_present=no as Vclaw mentions above).</p>
+<p>I suspect it is this bus stop and the one opposite - <a href="https://www.openstreetmap.org/browse/node/1509812105/history">https://www.openstreetmap.org/browse/node/1509812105/history</a> - so not in one particular release of the NaPTAN data, but possible unmarked "customary" stops, which are the hardest to map and/or verify (physically_present=no as Vclaw mentions above).</p>
 <p>Edit: If it is those, then the 15/06/2013 NaPTAN data I just downloaded suggests those should be marked bus stops both opposite and adjacent (and known as) War Memorial. <a href="http://www.dft.gov.uk/NaPTAN/snapshot/NaPTANcsv.zip">http://www.dft.gov.uk/NaPTAN/snapshot/NaPTANcsv.zip</a></p>
 </div>
 <div id="comment-23476-info" class="comment-info">

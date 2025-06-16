@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I think there is a oversight when rendering tunnels in OSM. Tunnels should have color of top layer, so it should look as we could just see trough eg. forest, and not like now when it seems like tunnel is cutting over some layer. To see what I mean look at this rendering of tunnel where it laps over this historical layer and cuts one peas. If it would have same pink color, it would be much better.</p>
-<p><a href="http://www.openstreetmap.org/index.html?mlat=43.852&amp;mlon=19.829&amp;zoom=18&amp;layers=B000FTF">http://www.openstreetmap.org/index.html?mlat=43.852&amp;mlon=19.829&amp;zoom=18&amp;layers=B000FTF</a></p>
+<p><a href="https://www.openstreetmap.org/index.html?mlat=43.852&amp;mlon=19.829&amp;zoom=18&amp;layers=B000FTF">https://www.openstreetmap.org/index.html?mlat=43.852&amp;mlon=19.829&amp;zoom=18&amp;layers=B000FTF</a></p>
 <p>My question is, how to report/propose this, and who is in charge for layers?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,8 +109,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can report problems and suggestions <a href="https://trac.openstreetmap.org/">here</a>. Just log in with your regular OSM account, create a <a href="https://trac.openstreetmap.org/newticket">new ticket</a> and select <a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> as <em>component</em>. Then explain your problem the same way you have don here.</p>
-<p>When reporting problems or suggestions you can speed up the process by also providing a solution - in your specific case for example a patch to the renderer <a href="http://wiki.openstreetmap.org/wiki/Mapnik#Stylesheet">stylesheet</a> (the one used for the main page can be found <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm.xml">here</a>).</p>
+<p>You can report problems and suggestions <a href="https://trac.openstreetmap.org/">here</a>. Just log in with your regular OSM account, create a <a href="https://trac.openstreetmap.org/newticket">new ticket</a> and select <a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a> as <em>component</em>. Then explain your problem the same way you have don here.</p>
+<p>When reporting problems or suggestions you can speed up the process by also providing a solution - in your specific case for example a patch to the renderer <a href="https://wiki.openstreetmap.org/wiki/Mapnik#Stylesheet">stylesheet</a> (the one used for the main page can be found <a href="http://svn.openstreetmap.org/applications/rendering/mapnik/osm.xml">here</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

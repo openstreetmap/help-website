@@ -130,7 +130,7 @@ One Answer:
 <div id="post-16618-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>here is a bit about waypoints in JOSM <a href="http://wiki.openstreetmap.org/wiki/Korea_Mapping_Guide#Waypoints">http://wiki.openstreetmap.org/wiki/Korea_Mapping_Guide#Waypoints</a></p>
+<p>here is a bit about waypoints in JOSM <a href="https://wiki.openstreetmap.org/wiki/Korea_Mapping_Guide#Waypoints">https://wiki.openstreetmap.org/wiki/Korea_Mapping_Guide#Waypoints</a></p>
 </div>
 <div id="comment-16618-info" class="comment-info">
 <span class="comment-age">(02 Oct '12, 21:58)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -141,7 +141,7 @@ One Answer:
 <div id="post-16619-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>the beginners guide <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">http://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></p>
+<p>the beginners guide <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">https://wiki.openstreetmap.org/wiki/Beginners%27_Guide</a></p>
 </div>
 <div id="comment-16619-info" class="comment-info">
 <span class="comment-age">(02 Oct '12, 22:00)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -152,7 +152,7 @@ One Answer:
 <div id="post-16620-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Potlatch2 editor <a href="http://wiki.openstreetmap.org/wiki/Potlatch2">http://wiki.openstreetmap.org/wiki/Potlatch2</a></p>
+<p>Potlatch2 editor <a href="https://wiki.openstreetmap.org/wiki/Potlatch2">https://wiki.openstreetmap.org/wiki/Potlatch2</a></p>
 </div>
 <div id="comment-16620-info" class="comment-info">
 <span class="comment-age">(02 Oct '12, 22:04)</span> <span class="comment-user userinfo">andy mackey</span>

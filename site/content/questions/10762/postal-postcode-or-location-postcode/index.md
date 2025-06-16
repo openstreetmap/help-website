@@ -155,7 +155,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not quite sure what a "postcode for satnav" would be. The only so-called "postcode" I know is intended for mail delivery. As the official postcode assignment can be quite wacky and counter-intuitive sometimes, my guess is that the "location postcode" you are talking about is a mistake by whoever made the satnav map.</p>
-<p>While "postcode" should follow the official local authority decision, <a href="http://wiki.openstreetmap.org/wiki/Key:is_in">is_in</a> can state the "more reasonable opinion" of where a house belongs. Unless you're dealing with some serious WTF postcode assignments however, it's probably better to use an <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">administrative boundary</a> instead, which has a few advantages.</p>
+<p>While "postcode" should follow the official local authority decision, <a href="https://wiki.openstreetmap.org/wiki/Key:is_in">is_in</a> can state the "more reasonable opinion" of where a house belongs. Unless you're dealing with some serious WTF postcode assignments however, it's probably better to use an <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">administrative boundary</a> instead, which has a few advantages.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

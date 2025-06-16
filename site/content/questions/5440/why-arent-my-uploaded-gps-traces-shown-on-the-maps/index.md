@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some other user may use your trace to edit the map it which case you will then see them. But if you read this <a href="http://wiki.openstreetmap.org/wiki/Potlatch2">http://wiki.openstreetmap.org/wiki/Potlatch2</a> you can then have a go yourself. You will need a good knowledge of the ground and signs so you can tag (name) roads or paths, or notes of what you encountered.There is advice of ways to do this in the beginners guide <a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a> it isn't too difficult good luck. If you want to see your trace on an OSM map try this small Java program <a href="http://activityworkshop.net/software/gpsprune/">http://activityworkshop.net/software/gpsprune/</a></p>
+<p>Some other user may use your trace to edit the map it which case you will then see them. But if you read this <a href="https://wiki.openstreetmap.org/wiki/Potlatch2">https://wiki.openstreetmap.org/wiki/Potlatch2</a> you can then have a go yourself. You will need a good knowledge of the ground and signs so you can tag (name) roads or paths, or notes of what you encountered.There is advice of ways to do this in the beginners guide <a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a> it isn't too difficult good luck. If you want to see your trace on an OSM map try this small Java program <a href="http://activityworkshop.net/software/gpsprune/">http://activityworkshop.net/software/gpsprune/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>What does lanes=2+1 mean?</p>
-<p>Is this correct? or should we fix them whenever we see them? No information on this is available on the <a href="http://wiki.openstreetmap.org/wiki/Key:lanes">wiki page of Key:lanes</a>.</p>
-<p>The example is: <a href="http://www.openstreetmap.org/way/165617399#map=16/57.3361/13.5513">This line</a></p>
+<p>Is this correct? or should we fix them whenever we see them? No information on this is available on the <a href="https://wiki.openstreetmap.org/wiki/Key:lanes">wiki page of Key:lanes</a>.</p>
+<p>The example is: <a href="https://www.openstreetmap.org/way/165617399#map=16/57.3361/13.5513">This line</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-lanes" rel="tag" title="see questions tagged &#39;lanes&#39;">lanes</span>
@@ -132,7 +132,7 @@ One Answer:
 <div id="post-37068-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks. Any thoughts on this one where lanes=0 ? <a href="http://www.openstreetmap.org/way/231734622#map=19/58.75083/13.95682">http://www.openstreetmap.org/way/231734622#map=19/58.75083/13.95682</a></p>
+<p>Thanks. Any thoughts on this one where lanes=0 ? <a href="https://www.openstreetmap.org/way/231734622#map=19/58.75083/13.95682">https://www.openstreetmap.org/way/231734622#map=19/58.75083/13.95682</a></p>
 </div>
 <div id="comment-37068-info" class="comment-info">
 <span class="comment-age">(26 Sep '14, 12:00)</span> <span class="comment-user userinfo">Aram Azhari</span>
@@ -156,7 +156,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8845/aram-azhari"></a><a href="http://help.openstreetmap.org/users/8845/aram-azhari">@Aram Azhari</a> ; look it is an error (based on mapbox imagery). If the amount of lanes is unknown, then better not use the tag at all.</p>
+<p><a href="https://help.openstreetmap.org/users/8845/aram-azhari"></a><a href="https://help.openstreetmap.org/users/8845/aram-azhari">@Aram Azhari</a> ; look it is an error (based on mapbox imagery). If the amount of lanes is unknown, then better not use the tag at all.</p>
 </div>
 <div id="comment-37071-info" class="comment-info">
 <span class="comment-age">(26 Sep '14, 12:20)</span> <span class="comment-user userinfo">Pieren</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hopefully this image is self-explanatory. A one way road with a pavement on both sides, the left pavement also has a two-way segregated cycle lane.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/ERcyclelanes3.png" alt="alt text" /></p>
+<p><img src="/upfiles/ERcyclelanes3.png" alt="alt text" /></p>
 <p>So how do I tag this and should I draw a separate way for the cycle lane?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

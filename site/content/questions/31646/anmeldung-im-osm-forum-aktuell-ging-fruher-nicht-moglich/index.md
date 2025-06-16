@@ -157,7 +157,7 @@ Please direct any inquiries to the forum administrator at osm@na1400.info.</code
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bekomme ich gerade auch, da ist wohl etwas durchgedreht :/<br />
-Ich habe es mal dem Admin gemeldet: <a href="http://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Wrong_ban_of_users">http://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Wrong_ban_of_users</a></p>
+Ich habe es mal dem Admin gemeldet: <a href="https://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Wrong_ban_of_users">https://wiki.openstreetmap.org/wiki/User_talk:Lambertus#Wrong_ban_of_users</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

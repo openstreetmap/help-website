@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Errors in osmium installation"
-description = '''I am trying to get osmium examples running as per instructions (http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start), but compilation of the examples fails with errors: g++ -g -Wall -Wextra -Wredundant-decls -Wdisabled-optimization -pedantic -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virt...'''
+description = '''I am trying to get osmium examples running as per instructions (https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start), but compilation of the examples fails with errors: g++ -g -Wall -Wextra -Wredundant-decls -Wdisabled-optimization -pedantic -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virt...'''
 date = "2012-04-12T15:37:00Z"
 lastmod = "2012-04-16T13:16:00Z"
 weight = 11943
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to get osmium examples running as per instructions (<a href="http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start),">http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start),</a> but compilation of the examples fails with errors:</p>
+<p>I am trying to get osmium examples running as per instructions (<a href="https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start),">https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start),</a> but compilation of the examples fails with errors:</p>
 <pre><code>g++ -g -Wall -Wextra -Wredundant-decls -Wdisabled-optimization -pedantic -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wsign-promo -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I../include -DOSMIUM_WITH_OUTPUT_OSM_XML -I/usr/include/libxml2 -o osmium_convert osmium_convert.cpp -L/usr/local/lib -lexpat -lpthread -lz -lprotobuf-lite -losmpbf -lxml2
 g++ -g -Wall -Wextra -Wredundant-decls -Wdisabled-optimization -pedantic -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wsign-promo -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I../include -o osmium_debug osmium_debug.cpp -L/usr/local/lib -lexpat -lpthread -lz -lprotobuf-lite -losmpbf
 g++ -g -Wall -Wextra -Wredundant-decls -Wdisabled-optimization -pedantic -Wctor-dtor-privacy -Wnon-virtual-dtor -Woverloaded-virtual -Wsign-promo -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I../include -o osmium_store_and_debug osmium_store_and_debug.cpp -L/usr/local/lib -lexpat -lpthread -lz -lprotobuf-lite -losmpbf

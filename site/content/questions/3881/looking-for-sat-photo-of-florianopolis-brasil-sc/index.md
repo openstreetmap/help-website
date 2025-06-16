@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-3884-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Is this the place you are asking about: <a href="http://www.openstreetmap.org/?lat=-27.5958&amp;lon=-48.54291&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=-27.5958&amp;lon=-48.54291&amp;zoom=15&amp;layers=M</a></p>
+<p>Is this the place you are asking about: <a href="https://www.openstreetmap.org/?lat=-27.5958&amp;lon=-48.54291&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=-27.5958&amp;lon=-48.54291&amp;zoom=15&amp;layers=M</a></p>
 <p>Looks good enough with Bing sat images according to me.</p>
 <p>What program do you use for map editing since you don't see the Bing images automatically?</p>
 </div>
@@ -120,7 +120,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use Potlatch2 or JOSM with Bing Imagery which seems to cover the area (editor link <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-27.6016&amp;lon=-48.5222&amp;zoom=14">here</a>). Potlatch 2 is available by hovering over the edit tab. It is likely to become the default on-line editor soon.</p>
+<p>Use Potlatch2 or JOSM with Bing Imagery which seems to cover the area (editor link <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-27.6016&amp;lon=-48.5222&amp;zoom=14">here</a>). Potlatch 2 is available by hovering over the edit tab. It is likely to become the default on-line editor soon.</p>
 <p>Even without a GPS and only landsat satellite imagery available it is possible to map detail. It will not be as accurate as with GPS and aerial imagery, but it can help make a start and often details of the topology will force corrections of the more obvious errors.</p>
 <p>Some major roads, railways, water features, residential areas, woodland etc. can usually be identified from satellite imagery, so enter these as carefully as possible and use this framework as a reference for further additions. Distances between roads can be calculated by counting steps, or are the roads are fixed distances apart in residential areas. An old fashioned compass is useful to check directions.</p>
 <p>Also you might be able to borrow a GPS device or GPS enabled phone for a short period to again have a framework of roads aligned to that data.</p>
@@ -206,7 +206,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>"Bing maps have declared that we are allowed to feed their imagery into OpenStreetMap editors and create our vector maps by tracing them." <a href="http://wiki.openstreetmap.org/wiki/Bing">http://wiki.openstreetmap.org/wiki/Bing</a></p>
+<p>"Bing maps have declared that we are allowed to feed their imagery into OpenStreetMap editors and create our vector maps by tracing them." <a href="https://wiki.openstreetmap.org/wiki/Bing">https://wiki.openstreetmap.org/wiki/Bing</a></p>
 </div>
 <div id="comment-3889-info" class="comment-info">
 <span class="comment-age">(17 Mar '11, 21:22)</span> <span class="comment-user userinfo">gnurk</span>

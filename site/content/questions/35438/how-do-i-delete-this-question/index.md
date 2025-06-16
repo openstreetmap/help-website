@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the OSM Wiki about <a href="http://wiki.openstreetmap.org/wiki/Wordpress">Wordpress</a> ... it should provide a feature to show markers.</p>
+<p>See the OSM Wiki about <a href="https://wiki.openstreetmap.org/wiki/Wordpress">Wordpress</a> ... it should provide a feature to show markers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

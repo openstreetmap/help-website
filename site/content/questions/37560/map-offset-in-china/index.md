@@ -180,7 +180,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Google can fake the GPS position to be in accordance to its <a href="http://mc.bbbike.org/mc/?lon=102.71079&amp;lat=25.07972&amp;zoom=16&amp;num=4&amp;mt0=mapnik&amp;mt1=google-map&amp;mt2=google-satellite&amp;mt3=bing-satellite">offset-plagued chinese map</a> when you use Google's Android map app, but not when you upload context-free GPS positions to Google Fusion. The raw GPS points you collected are likely correct, and overlaying them on Google Map will reveal the legaly-imposed forgery.</p>
-<p>If you use an OSM basemap instead of a Google one, it'll look ok. Mapbox has <a href="https://www.mapbox.com/mapbox-studio/source-quickstart/">a tool that can cover many Google Fusion usecases</a>, so does <a href="http://geojson.io/">geojson.io</a> and maybe <a href="http://wiki.openstreetmap.org/wiki/GIS_software">others</a> depending on your usecase.</p>
+<p>If you use an OSM basemap instead of a Google one, it'll look ok. Mapbox has <a href="https://www.mapbox.com/mapbox-studio/source-quickstart/">a tool that can cover many Google Fusion usecases</a>, so does <a href="http://geojson.io/">geojson.io</a> and maybe <a href="https://wiki.openstreetmap.org/wiki/GIS_software">others</a> depending on your usecase.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

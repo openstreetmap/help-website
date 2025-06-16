@@ -130,7 +130,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Duck_tagging">duck tagging philosophy</a> the first point sounds fine. If it looks like a hedge, tag it as a hedge.</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Duck_tagging">duck tagging philosophy</a> the first point sounds fine. If it looks like a hedge, tag it as a hedge.</p>
 </div>
 <div id="comment-32433-info" class="comment-info">
 <span class="comment-age">(18 Apr '14, 16:10)</span> <span class="comment-user userinfo">scai ♦</span>

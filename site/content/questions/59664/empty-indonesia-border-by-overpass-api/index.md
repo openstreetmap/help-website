@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/relation/304751#map=4/-2.46/117.86">http://www.openstreetmap.org/relation/304751#map=4/-2.46/117.86</a> currently doesn't have an ISO3166-1 tag (either add it or reference the border in another way to fix your issue).</p>
+<p><a href="https://www.openstreetmap.org/relation/304751#map=4/-2.46/117.86">https://www.openstreetmap.org/relation/304751#map=4/-2.46/117.86</a> currently doesn't have an ISO3166-1 tag (either add it or reference the border in another way to fix your issue).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

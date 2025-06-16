@@ -99,7 +99,7 @@ osqa_accepted = false
 <div id="post-6531-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/?lat=38.89699&amp;lon=-77.09309&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=38.89699&amp;lon=-77.09309&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=38.89699&amp;lon=-77.09309&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=38.89699&amp;lon=-77.09309&amp;zoom=16&amp;layers=M</a></p>
 <p>I am attempting to go east from roughly Irving Street and the Custis Trail (middle of map, far left) into Washington DC. My Dakota has me go west 400 ft, exit the trail and proceed east on Lee Highway, then ride streets all the way to the mall. <a href="http://Bikeroutetoaster.com">Bikeroutetoaster.com</a> (using OSM) on the other hand keeps me on the Custis the entire way. Thoughts?</p>
 </div>
 <div id="comment-6531-info" class="comment-info">

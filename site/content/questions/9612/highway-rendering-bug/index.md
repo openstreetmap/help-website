@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Highway rendering bug?"
-description = '''http://www.openstreetmap.org/?lat=55.460212&amp;amp;lon=13.013697&amp;amp;zoom=18&amp;amp;layers=M It looks like the old secondary road is rendered under the motorway_link bridge. The entire &quot;link&quot; part is tagged as a link, but it won&#x27;t re-render even though it&#x27;s taken forever now. Also, the &quot;double rendering&quot; ...'''
+description = '''https://www.openstreetmap.org/?lat=55.460212&amp;amp;lon=13.013697&amp;amp;zoom=18&amp;amp;layers=M It looks like the old secondary road is rendered under the motorway_link bridge. The entire &quot;link&quot; part is tagged as a link, but it won&#x27;t re-render even though it&#x27;s taken forever now. Also, the &quot;double rendering&quot; ...'''
 date = "2011-12-25T23:07:00Z"
 lastmod = "2011-12-25T23:07:00Z"
 weight = 9612
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=55.460212&amp;lon=13.013697&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=55.460212&amp;lon=13.013697&amp;zoom=18&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=55.460212&amp;lon=13.013697&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=55.460212&amp;lon=13.013697&amp;zoom=18&amp;layers=M</a></p>
 <p>It looks like the old secondary road is rendered under the motorway_link bridge. The entire "link" part is tagged as a link, but it won't re-render even though it's taken forever now. Also, the "double rendering" confuses me. I recently removed the road class from the relation so maybe that's related?</p>
 <p>Edit: it rendered when I edited the large landuse industrial park to the east. For some reason it didn't notice I changed the relation until I made that edit...</p>
 </div>

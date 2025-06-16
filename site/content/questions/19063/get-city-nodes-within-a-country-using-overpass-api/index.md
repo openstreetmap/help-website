@@ -42,7 +42,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Is it possible to get all city nodes within a country using the overpass api? Preferably using relations rather than a bounding box.</p>
 <p>If I have to do this using a bounding box, is it possible to get a country bounding box through the overpass api too?</p>
-<p><a href="https://help.openstreetmap.org/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">https://help.openstreetmap.org/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api</a> shows how to do this within a bounding box. I would rather do this using relations to get a more accurate list of cities (especially since overpass doesn't appear to return a bounding box for the country node to start with)</p>
+<p><a href="/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api">https://help.openstreetmap.org/questions/13872/how-to-find-list-of-cities-in-a-state-with-overpass-osm-api</a> shows how to do this within a bounding box. I would rather do this using relations to get a more accurate list of cities (especially since overpass doesn't appear to return a bounding box for the country node to start with)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span>
@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>The following overpass query returns the list of all cities in Belgium:</p>
 <p>area[name="België - Belgique - Belgien"];(node[place="city"](area););out;</p>
-<p>You can replace the name with any country (or other administrative level) you want. Areas are explained here: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Areas">http://wiki.openstreetmap.org/wiki/Overpass_API/Areas</a></p>
+<p>You can replace the name with any country (or other administrative level) you want. Areas are explained here: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Areas">https://wiki.openstreetmap.org/wiki/Overpass_API/Areas</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

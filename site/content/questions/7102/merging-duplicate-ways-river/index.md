@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>River <a href="http://en.wikipedia.org/wiki/S%C3%A1zava_(river)">Sázava</a> (cz) is mapped twice (<a href="http://www.openstreetmap.org/?lat=49.6288&amp;lon=15.49187&amp;zoom=17">see example</a>). According to the source tag one is an import from some database of waters, the second one has been created manually.<br />
+<p>River <a href="http://en.wikipedia.org/wiki/S%C3%A1zava_(river)">Sázava</a> (cz) is mapped twice (<a href="https://www.openstreetmap.org/?lat=49.6288&amp;lon=15.49187&amp;zoom=17">see example</a>). According to the source tag one is an import from some database of waters, the second one has been created manually.<br />
 What is the best approach to merge these two rivers into one - preserving tags from both?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -142,9 +142,9 @@ Not what to do, but how to do it.</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First, you should check creation dates of the duplicated elements and blame the author who created the duplication without clean-up. If the duplicated data is coming from the external data import, then you should consider the import itself and possibly revert it when it is not done in the state of the art (see our wiki about <a href="http://wiki.openstreetmap.org/wiki/Import">imports</a>) (perhaps the import was decided in this way and conflicts are solved manually by local contributors, check this point with your local community first).</p>
+<p>First, you should check creation dates of the duplicated elements and blame the author who created the duplication without clean-up. If the duplicated data is coming from the external data import, then you should consider the import itself and possibly revert it when it is not done in the state of the art (see our wiki about <a href="https://wiki.openstreetmap.org/wiki/Import">imports</a>) (perhaps the import was decided in this way and conflicts are solved manually by local contributors, check this point with your local community first).</p>
 <p>If you consider that the amount of duplicates is manageable and the imported data is valuable, then you have to decide case by case which of the duplicated way you want to keep and which one will be deleted:</p>
-<p>In the <a href="http://www.openstreetmap.org/?lat=49.6288&amp;lon=15.49187&amp;zoom=17">example you are pointing</a> for instance, the imported waterway is qualified as a 'stream' and 'name' is missing where the manually surveyed version says it is a 'river', 'width' is '20' meters and the 'name' is present. Based on this example, I would say that the imported data quality is very poor (name missing), badly managed (they did not check for duplicates) and use wrong tags (20 meters wide waterway is a 'river', not a 'stream'). .</p>
+<p>In the <a href="https://www.openstreetmap.org/?lat=49.6288&amp;lon=15.49187&amp;zoom=17">example you are pointing</a> for instance, the imported waterway is qualified as a 'stream' and 'name' is missing where the manually surveyed version says it is a 'river', 'width' is '20' meters and the 'name' is present. Based on this example, I would say that the imported data quality is very poor (name missing), badly managed (they did not check for duplicates) and use wrong tags (20 meters wide waterway is a 'river', not a 'stream'). .</p>
 <p>In your position, I would check other examples of this imported data and revert it globally if there is no real added value but this should be done only after some discussion and consensus inside your local OSM community.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -198,7 +198,7 @@ Not what to do, but how to do it.</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One of the rivers is most likely a result of a local Czech <a href="http://wiki.openstreetmap.org/wiki/CS:Import_DIBAVOD">DIBAVOD</a> water import. DIBAVOD was donated by Czech government and I think the reason it was imported is because it contained a lot of water data that was still not present in OSM (like smaller streams etc.). While I do not know the import history by detail I think the "value" of new data was considered to be greater than the work planned to be spent on resolving conflicts.</p>
+<p>One of the rivers is most likely a result of a local Czech <a href="https://wiki.openstreetmap.org/wiki/CS:Import_DIBAVOD">DIBAVOD</a> water import. DIBAVOD was donated by Czech government and I think the reason it was imported is because it contained a lot of water data that was still not present in OSM (like smaller streams etc.). While I do not know the import history by detail I think the "value" of new data was considered to be greater than the work planned to be spent on resolving conflicts.</p>
 <p>Since this is a bigger river you definitely should check it against UHUL ortophoto (in JOSM for instance) layer to see what the reality is and correct the map data. There still is lot of dupliates from DIBAVOD in general so if you can help to sort these out that would be great.</p>
 </div>
 <div class="answer-controls post-controls">

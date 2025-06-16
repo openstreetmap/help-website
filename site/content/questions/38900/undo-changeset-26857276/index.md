@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Undo changeset 26857276"
-description = '''Hi all, could somebody undo changeset 26857276. The guy has accidentially overwritten the island tags with a hotel information. I don&#x27;t know how to undo. Thanks René http://www.openstreetmap.org/changeset/26857276'''
+description = '''Hi all, could somebody undo changeset 26857276. The guy has accidentially overwritten the island tags with a hotel information. I don&#x27;t know how to undo. Thanks René https://www.openstreetmap.org/changeset/26857276'''
 date = "2014-11-28T19:56:00Z"
 lastmod = "2014-11-28T20:52:00Z"
 weight = 38900
@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hi all,</p>
 <p>could somebody undo changeset 26857276. The guy has accidentially overwritten the island tags with a hotel information. I don't know how to undo.</p>
 <p>Thanks René</p>
-<p><a href="http://www.openstreetmap.org/changeset/26857276">http://www.openstreetmap.org/changeset/26857276</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/26857276">https://www.openstreetmap.org/changeset/26857276</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span> <span class="post-tag tag-link-undo" rel="tag" title="see questions tagged &#39;undo&#39;">undo</span>

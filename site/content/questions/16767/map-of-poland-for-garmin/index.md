@@ -65,7 +65,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>When I try to upload map of Poland from here: <a href="http://garmin.osmapa.pl/">http://garmin.osmapa.pl/</a> to my Garmin I have this error:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Garmin.png" alt="alt text" /></p>
+<p><img src="/upfiles/Garmin.png" alt="alt text" /></p>
 <p>The error means: It is impossible to copy gmapsupp: the operation was completed.</p>
 <p>Any idea why I have this problem ?</p>
 <p>Regards,</p>
@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries">OSM_Map_On_Garmin/Download#Single_European_Countries</a> to download maps and another generic page <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a>. Since I don't own a Garmin, I never tried so I can't help more than this.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download#Single_European_Countries">OSM_Map_On_Garmin/Download#Single_European_Countries</a> to download maps and another generic page <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a>. Since I don't own a Garmin, I never tried so I can't help more than this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

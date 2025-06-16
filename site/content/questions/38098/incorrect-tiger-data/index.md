@@ -153,7 +153,7 @@ One Answer:
 <div id="post-38134-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>, Thanks for the quick response. After reading your response and looking at the link you gave, I decided to risk removal of the Del Cielo Mobile Estates "hamlet" marker entirely, as I agree with your assessment that it is not a hamlet, by definition. This took care of the problem and now all of the streets that were previously only searchable by using "Santa Barbara" or "Del Cielo" as mentioned in my OP are now searchable by using Santa Maria, as they should be! Thanks Again!</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>, Thanks for the quick response. After reading your response and looking at the link you gave, I decided to risk removal of the Del Cielo Mobile Estates "hamlet" marker entirely, as I agree with your assessment that it is not a hamlet, by definition. This took care of the problem and now all of the streets that were previously only searchable by using "Santa Barbara" or "Del Cielo" as mentioned in my OP are now searchable by using Santa Maria, as they should be! Thanks Again!</p>
 </div>
 <div id="comment-38134-info" class="comment-info">
 <span class="comment-age">(30 Oct '14, 20:31)</span> <span class="comment-user userinfo">duphii</span>

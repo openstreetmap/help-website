@@ -229,7 +229,7 @@ osqa_accepted = true
 <div id="post-57214-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>if you do not know the correct word and it does not appear in any of the popups, you can have a look at e.g. <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a></p>
+<p>if you do not know the correct word and it does not appear in any of the popups, you can have a look at e.g. <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a></p>
 </div>
 <div id="comment-57214-info" class="comment-info">
 <span class="comment-age">(20 Jul '17, 21:56)</span> <span class="comment-user userinfo">escada</span>

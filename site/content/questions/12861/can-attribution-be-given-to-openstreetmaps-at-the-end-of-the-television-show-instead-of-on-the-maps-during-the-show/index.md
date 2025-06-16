@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to our <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a>:</p>
+<p>According to our <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a>:</p>
 <blockquote>
 <p>This credit needs to appear in a place "reasonable to the medium or means you are utilising". In other words, you should expect to credit OpenStreetMap in the same way and with the same prominence as would be expected if you were using any other map supplier.</p>
 </blockquote>
@@ -146,7 +146,7 @@ One Answer:
 <div id="post-72327-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>quoting <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> from <a href="https://help.openstreetmap.org/questions/63372/no-attribution-required-for-sites-like-mapifulcom/63381">https://help.openstreetmap.org/questions/63372/no-attribution-required-for-sites-like-mapifulcom/63381</a> "should" sounds like a preference and not a requirement.</p>
+<p>quoting <a href="https://help.openstreetmap.org/users/158/scai">@scai</a> from <a href="/questions/63372/no-attribution-required-for-sites-like-mapifulcom/63381">https://help.openstreetmap.org/questions/63372/no-attribution-required-for-sites-like-mapifulcom/63381</a> "should" sounds like a preference and not a requirement.</p>
 </div>
 <div id="comment-72327-info" class="comment-info">
 <span class="comment-age">(02 Jan '20, 09:19)</span> <span class="comment-user userinfo">badman</span>

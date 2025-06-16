@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-54520-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> I'm only labeling roads that intersect with the bounding box and are of a certain distance, which rules out roundabouts..etc</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> I'm only labeling roads that intersect with the bounding box and are of a certain distance, which rules out roundabouts..etc</p>
 </div>
 <div id="comment-54520-info" class="comment-info">
 <span class="comment-age">(06 Feb '17, 17:15)</span> <span class="comment-user userinfo">Brian Vogelg...</span>

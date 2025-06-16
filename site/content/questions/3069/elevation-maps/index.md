@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You cannot export what isn't there. OSM does not generally carry elevation data. The maps with elevation contours and OSM data that you see in some places on the web (e.g. <a href="http://www.toposm.com">www.toposm.com</a>, <a href="http://www.opencyclemap.org">www.opencyclemap.org</a>, <a href="http://www.wanderreitkarte.de">www.wanderreitkarte.de</a>) all source their elevation data from elsewhere (often NASA's <a href="http://en.wikipedia.org/wiki/SRTM">SRTM data</a>).</p>
-<p>Having said that, OSM does contain a very limited amount of altitude information through the <a href="http://wiki.openstreetmap.org/wiki/Key:ele">"ele" tag</a> and you could theoretically export that using a <a href="http://wiki.openstreetmap.org/wiki/XAPI">XAPI query</a> or by filtering it from a <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">Planet file</a>. However, that data is often inaccurate (having been recorded by non-barometric GPS altimeters) and too patchy to make something like a relief contour from it.</p>
+<p>Having said that, OSM does contain a very limited amount of altitude information through the <a href="https://wiki.openstreetmap.org/wiki/Key:ele">"ele" tag</a> and you could theoretically export that using a <a href="https://wiki.openstreetmap.org/wiki/XAPI">XAPI query</a> or by filtering it from a <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet file</a>. However, that data is often inaccurate (having been recorded by non-barometric GPS altimeters) and too patchy to make something like a relief contour from it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

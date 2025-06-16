@@ -57,7 +57,7 @@ osqa_accepted = false
 <p>/dev/sda1 228M 51M 166M 24% /boot</p>
 <p>/dev/mapper/data-data 2.0T 40G 1.9T 3% /data</p>
 <p>Problem 1.</p>
-<p>I followed the installation instructions for ubuntu provided, in link <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> think went fine until, I ran the command to import ./utils/setup.php --osm-file &lt;your planet="" file=""&gt; --all [--osm2pgsql-cache 18000] as it says. For me it did not pick up the arguments [--osm2pgsql-cache 18000] so had to run it without it. It ran for few minutes and then</p>
+<p>I followed the installation instructions for ubuntu provided, in link <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> think went fine until, I ran the command to import ./utils/setup.php --osm-file &lt;your planet="" file=""&gt; --all [--osm2pgsql-cache 18000] as it says. For me it did not pick up the arguments [--osm2pgsql-cache 18000] so had to run it without it. It ran for few minutes and then</p>
 <p>Problem 2.</p>
 <p>I ran just this ./utils/setup.php --osm-file &lt;your planet="" file=""&gt; --all but while import it failed with the following exception.</p>
 <p>Reading in file: /data/Nominatim-2.1/planet-131204.osm.pbf Processing: Node(2113460k 494.6k/s) Way(0k 0.00k/s) Relation(0 0.00/s)COPY_END for COPY planet_osm_nodes FROM STDIN; failed: ERROR: could not extend file "base/16386/18838.1": wrote only 4096 of 8192 bytes at block 246872 HINT: Check free disk space. CONTEXT: COPY planet_osm_nodes, line 45671321: "76661940 473543350 -1009701829 \N"</p>
@@ -146,7 +146,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have already asked about questions 2 &amp; 3 a week ago on this site in response to <a href="https://help.openstreetmap.org/questions/26900/import-error-could-not-extend-file">this question.</a></p>
+<p>You have already asked about questions 2 &amp; 3 a week ago on this site in response to <a href="/questions/26900/import-error-could-not-extend-file">this question.</a></p>
 <p>This site is meant for short <strong>SINGLE</strong> questions of wide-spread interest: it is not meant for detailed support for a specific user.</p>
 <p>Questions about allocating space for the default data storage of Postgres anyway belong on something like StackOverflow rather than here. In general it is much better to ask about this kind of detail via the OSM forum, on mailing lists or on an IRC channel: but before you do, please ensure you have sorted out how you allocate data for Postgres.</p>
 <p>Your first question may be more useful: but it will require rephrasing and shortening. It also dont know why you want to pass in a cache allocation limit which is more than your available memory.</p>

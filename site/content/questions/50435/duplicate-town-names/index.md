@@ -218,7 +218,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's a stylesheet problem. I've loaded the data I've got here into OSMBright and I'm seeing extra Warringtons too. I'm guessing one might be the <a href="http://www.openstreetmap.org/way/38387597">NaPTAN pay scale area</a>. There are 5 names in that area - <a href="http://overpass-turbo.eu/s/gXV">this query</a> shows them.</p>
+<p>It's a stylesheet problem. I've loaded the data I've got here into OSMBright and I'm seeing extra Warringtons too. I'm guessing one might be the <a href="https://www.openstreetmap.org/way/38387597">NaPTAN pay scale area</a>. There are 5 names in that area - <a href="http://overpass-turbo.eu/s/gXV">this query</a> shows them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

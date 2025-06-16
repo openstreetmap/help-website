@@ -151,7 +151,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your foreground renderd isn't getting any requests because you are not following instructions in the order that they are written. See <a href="https://help.openstreetmap.org/questions/81915/its-ok-when-executing-a-command-render">https://help.openstreetmap.org/questions/81915/its-ok-when-executing-a-command-render</a> .</p>
+<p>Your foreground renderd isn't getting any requests because you are not following instructions in the order that they are written. See <a href="/questions/81915/its-ok-when-executing-a-command-render">https://help.openstreetmap.org/questions/81915/its-ok-when-executing-a-command-render</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

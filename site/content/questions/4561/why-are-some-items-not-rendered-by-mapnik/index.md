@@ -140,7 +140,7 @@ osqa_accepted = false
 <div id="post-4712-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for telling me about those problems. I hadn't read there was limitations, but I find it now: <a href="http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly#Limitations">http://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly#Limitations</a> I've tried to separate my elements into different layers, but it seems it's not much better, only one element is shown according to the order it is called. If you're curious or willing to help, here is the archive of my tests so far: <a href="http://dl.free.fr/hAVI7ezre">http://dl.free.fr/hAVI7ezre</a></p>
+<p>Thank you for telling me about those problems. I hadn't read there was limitations, but I find it now: <a href="https://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly#Limitations">https://wiki.openstreetmap.org/wiki/Mapnik:_Rendering_OSM_XML_data_directly#Limitations</a> I've tried to separate my elements into different layers, but it seems it's not much better, only one element is shown according to the order it is called. If you're curious or willing to help, here is the archive of my tests so far: <a href="http://dl.free.fr/hAVI7ezre">http://dl.free.fr/hAVI7ezre</a></p>
 </div>
 <div id="comment-4712-info" class="comment-info">
 <span class="comment-age">(21 Apr '11, 19:51)</span> <span class="comment-user userinfo">otto</span>

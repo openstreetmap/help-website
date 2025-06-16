@@ -42,10 +42,10 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I'm a newcomer here but I hope someone can help me!</p>
-<p>My question relates to Kingston Street, Cambridge and "Hooper Street link", Cambridge. Way: Kingston Street (<a href="http://www.openstreetmap.org/way/3987054">3987054</a>) Way: Hooper Street link (<a href="http://www.openstreetmap.org/way/111875311/history">111875311</a>)</p>
+<p>My question relates to Kingston Street, Cambridge and "Hooper Street link", Cambridge. Way: Kingston Street (<a href="https://www.openstreetmap.org/way/3987054">3987054</a>) Way: Hooper Street link (<a href="https://www.openstreetmap.org/way/111875311/history">111875311</a>)</p>
 <p>I use OpenStreetMap on my bike GPS and when I navigate in this area there are navigation errors. However, I'm not familiar enough with OpenStreetMaps to know if this is a map error or not.</p>
 <p>Kingston Street is not a one-way street. It has 'no entry' signs at the Mill Road end, but these signs only apply to motor vehicles, not bikes. So it is ALMOST like a one-way street for cars, but it is definitely two-way for bikes. Please could someone confirm that the street is coded correctly on the map?</p>
-<p>On the "Hooper Street link", which is an access path for bikes between two streets (no access for cars), there is a gate marked on the map. Is this correct? There IS a kind of <a href="http://www.openstreetmap.org/node/1273788519">gate</a> on the path, but not one you have to open to cycle through, just one that the emergency services would open if necessary. Is this correctly coded on the map, or could this gate be misleading my bike GPS navigation?</p>
+<p>On the "Hooper Street link", which is an access path for bikes between two streets (no access for cars), there is a gate marked on the map. Is this correct? There IS a kind of <a href="https://www.openstreetmap.org/node/1273788519">gate</a> on the path, but not one you have to open to cycle through, just one that the emergency services would open if necessary. Is this correctly coded on the map, or could this gate be misleading my bike GPS navigation?</p>
 <p>Thanks a lot! Laurence</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -76,8 +76,8 @@ osqa_accepted = false
 <div class="comment-text">
 <p>What bike GPS are you using? Where did the data on that come from?</p>
 <p>For info - the bicycle routers available from OSM itself seem to get it right:</p>
-<p><a href="http://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13993">http://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13993</a></p>
-<p><a href="http://www.openstreetmap.org/directions?engine=mapquest_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13982">http://www.openstreetmap.org/directions?engine=mapquest_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13982</a></p>
+<p><a href="https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13993">https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13993</a></p>
+<p><a href="https://www.openstreetmap.org/directions?engine=mapquest_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13982">https://www.openstreetmap.org/directions?engine=mapquest_bicycle&amp;route=52.19869%2C0.13911%3B52.20120%2C0.14079#map=17/52.19996/0.13982</a></p>
 </div>
 <div id="comment-42350-info" class="comment-info">
 <span class="comment-age">(15 Apr '15, 15:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -155,7 +155,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://www.openstreetmap.org/node/1273788519">gate</a> doesn't have any <a href="https://wiki.openstreetmap.org/wiki/Key:access">access permissions</a> set, thus some routers might decide that you can't pass it. You should add <em>foot=yes</em> and <em>bicycle=yes</em> to it.</p>
+<p>The <a href="https://www.openstreetmap.org/node/1273788519">gate</a> doesn't have any <a href="https://wiki.openstreetmap.org/wiki/Key:access">access permissions</a> set, thus some routers might decide that you can't pass it. You should add <em>foot=yes</em> and <em>bicycle=yes</em> to it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

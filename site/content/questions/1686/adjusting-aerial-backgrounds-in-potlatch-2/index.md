@@ -113,7 +113,7 @@ One Answer:
 <div class="answer-body">
 <p>Clicking on the <strong>Help</strong> button in Potlatch 2 opens a window where you find some <strong>Shortcuts</strong> where it reads:</p>
 <p><strong>Space</strong> Hold to realign background image</p>
-<p>See also: <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch_2/Shortcuts</a> in the wiki.</p>
+<p>See also: <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">Potlatch_2/Shortcuts</a> in the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Besides, <a href="http://help.openstreetmap.org/questions/15442/detection-of-intersections-in-the-maps">how to detect intersections</a> has already been answered in a different question.</p>
+<p>Besides, <a href="/questions/15442/detection-of-intersections-in-the-maps">how to detect intersections</a> has already been answered in a different question.</p>
 </div>
 <div id="comment-24636-info" class="comment-info">
 <span class="comment-age">(27 Jul '13, 21:00)</span> <span class="comment-user userinfo">scai ♦</span>

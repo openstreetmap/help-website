@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Can you post a link please, to do that centre map on the area and copy the bit like this. <a href="http://www.openstreetmap.org/#map=18/46.35746/9.33997">http://www.openstreetmap.org/#map=18/46.35746/9.33997</a> i could not find the place from your description. Failing that the lat long should help</p>
+<p>Can you post a link please, to do that centre map on the area and copy the bit like this. <a href="https://www.openstreetmap.org/#map=18/46.35746/9.33997">https://www.openstreetmap.org/#map=18/46.35746/9.33997</a> i could not find the place from your description. Failing that the lat long should help</p>
 </div>
 <div id="comment-45694-info" class="comment-info">
 <span class="comment-age">(03 Oct '15, 20:14)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-45695-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Sorry: <a href="http://www.openstreetmap.org/#map=15/50.9113/14.2241">http://www.openstreetmap.org/#map=15/50.9113/14.2241</a></p>
+<p>Sorry: <a href="https://www.openstreetmap.org/#map=15/50.9113/14.2241">https://www.openstreetmap.org/#map=15/50.9113/14.2241</a></p>
 </div>
 <div id="comment-45695-info" class="comment-info">
 <span class="comment-age">(03 Oct '15, 21:42)</span> <span class="comment-user userinfo">Saggse</span>
@@ -229,7 +229,7 @@ One Answer:
 <div id="post-45724-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11542/saggse">@Saggse</a>: it is important to tag the objects right – not how it looks on that <em>one</em> map (there are many other maps based on OSM's data). See <span>tagging for the renderer</span>. <em>If</em> they are no "peaks" in the tag's sense, then they should not be tagged as peaks.</p>
+<p><a href="https://help.openstreetmap.org/users/11542/saggse">@Saggse</a>: it is important to tag the objects right – not how it looks on that <em>one</em> map (there are many other maps based on OSM's data). See <span>tagging for the renderer</span>. <em>If</em> they are no "peaks" in the tag's sense, then they should not be tagged as peaks.</p>
 <p>If or not should, preferably, be discussed somewhere else (mail, changeset comments, forum, mailing list). This help site is technically not really suited for this.</p>
 </div>
 <div id="comment-45724-info" class="comment-info">
@@ -254,7 +254,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>User Chrisss Gü wrote by mail (cited with permission): "Ich kann mich irgendwie nicht bei OSM help einloggen, deshalb schreibe ich erstmal hier.</p>
-<p>Ich sehe ein, dass ich vielleicht vorher jemand hätte fragen sollen, deshalb könnte ich das wieder zurücktaggen um sich dann in einer anschließenden Diskussion sich für natural=rock oder natural=peak zu einigen. Das von einigen eingebrachte Arument, dass man natural=peak nehmen solle, weil es dann auf Mapnik gerendert wird, sehe ich nicht ein, da das Tagging für den Renderer ist. Dafür solle man Spezailkarten wie <a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dclimbing#Renderer">http://wiki.openstreetmap.org/wiki/Tag:sport%3Dclimbing#Renderer</a> nehmen.</p>
+<p>Ich sehe ein, dass ich vielleicht vorher jemand hätte fragen sollen, deshalb könnte ich das wieder zurücktaggen um sich dann in einer anschließenden Diskussion sich für natural=rock oder natural=peak zu einigen. Das von einigen eingebrachte Arument, dass man natural=peak nehmen solle, weil es dann auf Mapnik gerendert wird, sehe ich nicht ein, da das Tagging für den Renderer ist. Dafür solle man Spezailkarten wie <a href="https://wiki.openstreetmap.org/wiki/Tag:sport%3Dclimbing#Renderer">https://wiki.openstreetmap.org/wiki/Tag:sport%3Dclimbing#Renderer</a> nehmen.</p>
 <p>Für mich gibt es einen Unterschied zwischen einem Berggipfel (Fichtelerg/Gr. Winterberg) und einem Felsen/Klettergipfel/Kletterfelsen (Barbarine/Bloßstock/Onkel) in der Sächsischen Schweiz, weshalb ich dafür plädiere, diese unterschiedlich zu taggen, dafür finde ich auch natural=rock passend. Dies hat zum Beispiel zum Vorteil, dass Wanderkarten, die die einzelnen Kletterfelsen nicht darstellen möchten, Berg(gipfel) jedoch schon, differenzieren können.</p>
 <p>Ich habe jetzt erstmal meine Änderungen revertiert, um dann in der Diskussion eine Lösung zu finden."</p>
 </div>

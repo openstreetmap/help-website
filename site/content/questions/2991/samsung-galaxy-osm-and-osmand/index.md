@@ -168,7 +168,7 @@ osqa_accepted = false
 <div id="post-3251-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>+1 for OruxMaps. I'm using it for several days and it seems superior to other Android apps. I have also asked a question about apps here: <a href="http://help.openstreetmap.org/questions/3056/power-user-android-app">http://help.openstreetmap.org/questions/3056/power-user-android-app</a></p>
+<p>+1 for OruxMaps. I'm using it for several days and it seems superior to other Android apps. I have also asked a question about apps here: <a href="/questions/3056/power-user-android-app">https://help.openstreetmap.org/questions/3056/power-user-android-app</a></p>
 </div>
 <div id="comment-3251-info" class="comment-info">
 <span class="comment-age">(22 Feb '11, 06:37)</span> <span class="comment-user userinfo">ivanatora</span>

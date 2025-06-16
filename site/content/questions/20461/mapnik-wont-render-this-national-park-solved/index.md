@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] mapnik won&#x27;t render this national park [solved]"
-description = '''Can anyone explain why this NP still isn&#x27;t rendered after one month? http://www.openstreetmap.org/browse/relation/2750441 Other Np&#x27;s with the same tags are rendered fine but this one doesn&#x27;t.'''
+description = '''Can anyone explain why this NP still isn&#x27;t rendered after one month? https://www.openstreetmap.org/browse/relation/2750441 Other Np&#x27;s with the same tags are rendered fine but this one doesn&#x27;t.'''
 date = "2013-03-03T13:38:00Z"
 lastmod = "2013-03-06T08:23:00Z"
 weight = 20461
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can anyone explain why this NP still isn't rendered after one month? <a href="http://www.openstreetmap.org/browse/relation/2750441">http://www.openstreetmap.org/browse/relation/2750441</a></p>
+<p>Can anyone explain why this NP still isn't rendered after one month? <a href="https://www.openstreetmap.org/browse/relation/2750441">https://www.openstreetmap.org/browse/relation/2750441</a></p>
 <p>Other Np's with the same tags are rendered fine but this one doesn't.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If (as sugested by a comment to scai's answer) this was a database problem, it could have been related to the rendering problem that occured after the node numbers reached the signed/unsigned 32 bit boundary. The nodes in the ways making up the boundary were created just after this occured (10 Feb 2013) so their tiles may have been affected in the same way that some of mine were. ( see <a href="http://www.openstreetmap.org/user/pieleric/diary/18588#comments">http://www.openstreetmap.org/user/pieleric/diary/18588#comments</a> )</p>
+<p>If (as sugested by a comment to scai's answer) this was a database problem, it could have been related to the rendering problem that occured after the node numbers reached the signed/unsigned 32 bit boundary. The nodes in the ways making up the boundary were created just after this occured (10 Feb 2013) so their tiles may have been affected in the same way that some of mine were. ( see <a href="https://www.openstreetmap.org/user/pieleric/diary/18588#comments">https://www.openstreetmap.org/user/pieleric/diary/18588#comments</a> )</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -198,7 +198,7 @@ osqa_accepted = false
 <div id="post-20469-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This one is even smaller, and even the tiny polygon gets a name <a href="http://www.openstreetmap.org/?lat=52.378&amp;lon=6.344&amp;zoom=11&amp;layers=M&amp;relation=2745874">http://www.openstreetmap.org/?lat=52.378&amp;lon=6.344&amp;zoom=11&amp;layers=M&amp;relation=2745874</a></p>
+<p>This one is even smaller, and even the tiny polygon gets a name <a href="https://www.openstreetmap.org/?lat=52.378&amp;lon=6.344&amp;zoom=11&amp;layers=M&amp;relation=2745874">https://www.openstreetmap.org/?lat=52.378&amp;lon=6.344&amp;zoom=11&amp;layers=M&amp;relation=2745874</a></p>
 </div>
 <div id="comment-20469-info" class="comment-info">
 <span class="comment-age">(03 Mar '13, 18:24)</span> <span class="comment-user userinfo">ligfietser</span>

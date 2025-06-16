@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I was reviewing the wiki for road closures and it has me totally confused right now. There is a roadway in my area that will remain closed for many months due to construction in the area. I am not sure how to have the tagging reflect this correctly using the iD in browser editor.</p>
 <p>The segment I am referring to is located in the screenshot. I have added in the construction area that is underway.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_2018-10-20_at_12.54.25_AM_-_Edited_(2).png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_2018-10-20_at_12.54.25_AM_-_Edited_(2).png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-construction" rel="tag" title="see questions tagged &#39;construction&#39;">construction</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-closed" rel="tag" title="see questions tagged &#39;closed&#39;">closed</span>

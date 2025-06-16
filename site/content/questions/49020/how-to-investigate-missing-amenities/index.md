@@ -42,7 +42,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hello,</p>
 <p>Several months (maybe an year?) ago I had thoroughly mapped an area. Now as I check it, all the amenities are missing. It was a square with pharmacies, shops, banks, marketplace, parkings - various stuff.</p>
-<p><code>highway</code> ways are intact, but maybe about 20 tagged nodes and polygons are gone. I tried looking at the <a href="http://www.openstreetmap.org/history#map=19/42.15083/24.74497">history</a>, but it is full of bogus edits that have nothing to do with my area. It shows worldwide changesets that happen to contain my area as well and it is not usable at all.</p>
+<p><code>highway</code> ways are intact, but maybe about 20 tagged nodes and polygons are gone. I tried looking at the <a href="https://www.openstreetmap.org/history#map=19/42.15083/24.74497">history</a>, but it is full of bogus edits that have nothing to do with my area. It shows worldwide changesets that happen to contain my area as well and it is not usable at all.</p>
 <p>How can I proceed to find out what happened to all the stuff there?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Overpass API has some features for restricting queries based on date and time:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Attic_data_.28.22date.22.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Attic_data_.28.22date.22.29</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Attic_data_.28.22date.22.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Attic_data_.28.22date.22.29</a></p>
 <p>Here's an example showing amenities that existed on a given date:</p>
 <p><a href="http://overpass-turbo.eu/s/fsj">http://overpass-turbo.eu/s/fsj</a></p>
 <p>And another showing items that were edited during a period of time:</p>
@@ -151,7 +151,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Sounds like a bug at your end - <a href="http://overpass-turbo.eu/s/fsj">http://overpass-turbo.eu/s/fsj</a> works for me in Firefox, Chrome and Seamonkey (all Windows 7).</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Sounds like a bug at your end - <a href="http://overpass-turbo.eu/s/fsj">http://overpass-turbo.eu/s/fsj</a> works for me in Firefox, Chrome and Seamonkey (all Windows 7).</p>
 </div>
 <div id="comment-49029-info" class="comment-info">
 <span class="comment-age">(04 Apr '16, 21:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -163,7 +163,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Ah, thanks! I digged a bit deeper: The request was made to <a href="http://overpass-api.de">http://overpass-api.de</a> and was rewritten to <a href="https://overpass-api.de">https://overpass-api.de</a> by a browser plugin. Either some plugin is not working correctly with another one, or... whatever. Opening overpass-turbo via https fixes the issue. :) If you think this is not useful for others, please delete my comments.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Ah, thanks! I digged a bit deeper: The request was made to <a href="http://overpass-api.de">http://overpass-api.de</a> and was rewritten to <a href="https://overpass-api.de">https://overpass-api.de</a> by a browser plugin. Either some plugin is not working correctly with another one, or... whatever. Opening overpass-turbo via https fixes the issue. :) If you think this is not useful for others, please delete my comments.</p>
 </div>
 <div id="comment-49030-info" class="comment-info">
 <span class="comment-age">(04 Apr '16, 21:22)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -219,7 +219,7 @@ osqa_accepted = true
 <div id="post-49047-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> I've got a lot of highlights from that query, not just 3 things. And I really see those were returned in the Data tab. Adding hour and time to the query seems to filter the query to those 3 items you see. It is curious why did the same query returned different data for you and for me.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> I've got a lot of highlights from that query, not just 3 things. And I really see those were returned in the Data tab. Adding hour and time to the query seems to filter the query to those 3 items you see. It is curious why did the same query returned different data for you and for me.</p>
 </div>
 <div id="comment-49047-info" class="comment-info">
 <span class="comment-age">(05 Apr '16, 16:35)</span> <span class="comment-user userinfo">ivanatora</span>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes you can show an OSM based map within the video without big problems: <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
+<p>Yes you can show an OSM based map within the video without big problems: <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
 <p>You might need/want to give attribution (e.g. at the outro) but if it's just a very short sequence with OSM content, you might be ok if you add the notice at the map (or use the logo etc.). For example ITO makes videos from OSM content <a href="http://vimeo.com/2598878">http://vimeo.com/2598878</a></p>
 </div>
 <div class="answer-controls post-controls">

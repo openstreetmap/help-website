@@ -43,8 +43,8 @@ osqa_accepted = true
 <p>The only thing I can think of is that at first I was using commit messages (like "Added restaurant XXX"), but after a few edits I realized the changes were already listed by iD so I stopped providing a commit message. Could that impact the time taken for a change to be validated?</p>
 <p>For instance:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/changeset/30078683">an edit (new restaurant) with a commit message.</a></li>
-<li><a href="http://www.openstreetmap.org/changeset/30085598">an edit (new restaurant as well) without a commit message</a></li>
+<li><a href="https://www.openstreetmap.org/changeset/30078683">an edit (new restaurant) with a commit message.</a></li>
+<li><a href="https://www.openstreetmap.org/changeset/30085598">an edit (new restaurant as well) without a commit message</a></li>
 </ul>
 <p>Thanks in advance for your feedback!</p>
 </div>
@@ -150,7 +150,7 @@ One Answer:
 <div id="post-42293-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>We also have a wiki page with tips on <a href="http://wiki.openstreetmap.org/wiki/Good_changeset_comments">Good changeset comments</a>.</p>
+<p>We also have a wiki page with tips on <a href="https://wiki.openstreetmap.org/wiki/Good_changeset_comments">Good changeset comments</a>.</p>
 </div>
 <div id="comment-42293-info" class="comment-info">
 <span class="comment-age">(12 Apr '15, 15:59)</span> <span class="comment-user userinfo">Tordanik</span>

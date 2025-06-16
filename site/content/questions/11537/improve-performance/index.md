@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're talking about the time for loading the <a href="http://wiki.openstreetmap.org/wiki/Tile">tiles</a>, the solution is to use a faster tiles provider, or to <a href="http://switch2osm.org/serving-tiles/">provide your own tiles</a>.</p>
+<p>If you're talking about the time for loading the <a href="https://wiki.openstreetmap.org/wiki/Tile">tiles</a>, the solution is to use a faster tiles provider, or to <a href="http://switch2osm.org/serving-tiles/">provide your own tiles</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

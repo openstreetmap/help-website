@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'd like to run a local instance of OSM with a local db and enable it for updating (adding location point information specific to my industry), but I also want to be able to update my local db with current information from OSM periodically. How do I do that without overwriting my local updates?</p>
-<p>I found this question, which seems related: <a href="https://help.openstreetmap.org/questions/54827/editing-osm-files-locally">https://help.openstreetmap.org/questions/54827/editing-osm-files-locally</a></p>
+<p>I found this question, which seems related: <a href="/questions/54827/editing-osm-files-locally">https://help.openstreetmap.org/questions/54827/editing-osm-files-locally</a></p>
 <p>It would seem I can saved my edits, and then use Osmosis, osmconvert, or osmium to create an .osc file. Can I then download a new JOSM file and apply the .osc file? Would it be feasible to then repeat this process, say, once a month?</p>
 <p>If I'm wrong, is there another way to do this?</p>
 <p>Not really asking right now for the instruction list on how to do all of this, just hoping someone can confirm this scenario is possible.</p>

@@ -161,7 +161,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I found <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ContourMerge">JOSM plugin contour merge</a> it seems to do it, does it work?</p>
+<p>I found <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ContourMerge">JOSM plugin contour merge</a> it seems to do it, does it work?</p>
 <p><img src="/upfiles/160px-Lake-and-forest.2.png" />from this <img src="/upfiles/160px-Lake-and-forest.5.png" />to this</p>
 </div>
 <div class="answer-controls post-controls">
@@ -219,7 +219,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In Potlach2 start by making some nodes and when you get to an existing line you wish to follow do a couple of nodes along it then press f (for follow) (see my question <a href="http://help.openstreetmap.org/questions/2986/potlach2-using-natural-boundaries-for-tagged-areas">Potlach2 using natural boundaries for tagged areas</a>)</p>
+<p>In Potlach2 start by making some nodes and when you get to an existing line you wish to follow do a couple of nodes along it then press f (for follow) (see my question <a href="/questions/2986/potlach2-using-natural-boundaries-for-tagged-areas">Potlach2 using natural boundaries for tagged areas</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -351,7 +351,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You shouldn't be making overlapping ways, use a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygons</a> instead. Draw each boundary line once then add it as an outer way in a landuse multipolygon.</p>
+<p>You shouldn't be making overlapping ways, use a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygons</a> instead. Draw each boundary line once then add it as an outer way in a landuse multipolygon.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -370,7 +370,7 @@ This answer is marked "community wiki".
 <div id="post-2601-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>emj, <a href="http://www.openstreetmap.org/browse/relation/392840">http://www.openstreetmap.org/browse/relation/392840</a> and <a href="http://www.openstreetmap.org/browse/relation/392841">http://www.openstreetmap.org/browse/relation/392841</a> may give you some hints. Also specifically read <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging">http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging</a> from the link Alchemy already gave you. For example: "It is suggested to apply all tags which describe the area to the relation, and not to the ways. In many cases this may result in completely untagged ways." (BTW: The parking area nearby isn't pretty done, but the examples above still should give you the idea how to reuse already existing ways.)</p>
+<p>emj, <a href="https://www.openstreetmap.org/browse/relation/392840">https://www.openstreetmap.org/browse/relation/392840</a> and <a href="https://www.openstreetmap.org/browse/relation/392841">https://www.openstreetmap.org/browse/relation/392841</a> may give you some hints. Also specifically read <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging">https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Tagging</a> from the link Alchemy already gave you. For example: "It is suggested to apply all tags which describe the area to the relation, and not to the ways. In many cases this may result in completely untagged ways." (BTW: The parking area nearby isn't pretty done, but the examples above still should give you the idea how to reuse already existing ways.)</p>
 </div>
 <div id="comment-2601-info" class="comment-info">
 <span class="comment-age">(31 Jan '11, 14:19)</span> <span class="comment-user userinfo">gnurk</span>

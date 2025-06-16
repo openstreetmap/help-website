@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello</p>
 <p>I would like to export a map in SVG but i would like the map to look like when i preview it in humanitarian layer. I open the map in the layer humanitarian, i set custom dimensions but when i import the map in maperitive i get always the same result. The map looks like in the standard layer.</p>
-<p>I want this: <a href="http://www.openstreetmap.org/export#map=17/45.54164/13.72894&amp;layers=HN">http://www.openstreetmap.org/export#map=17/45.54164/13.72894&amp;layers=HN</a></p>
-<p>but i alwys get this: <a href="http://www.openstreetmap.org/export#map=17/45.54164/13.73082&amp;layers=N">http://www.openstreetmap.org/export#map=17/45.54164/13.73082&amp;layers=N</a></p>
+<p>I want this: <a href="https://www.openstreetmap.org/export#map=17/45.54164/13.72894&amp;layers=HN">https://www.openstreetmap.org/export#map=17/45.54164/13.72894&amp;layers=HN</a></p>
+<p>but i alwys get this: <a href="https://www.openstreetmap.org/export#map=17/45.54164/13.73082&amp;layers=N">https://www.openstreetmap.org/export#map=17/45.54164/13.73082&amp;layers=N</a></p>
 <p>reagrds Sanel Bilas</p>
 </div>
 <div id="question-tags" class="tags-container tags">

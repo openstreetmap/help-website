@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing a bit here, but you should be able to do this with the <a href="http://josm.openstreetmap.de/wiki/Help/Preferences/RemoteControl#load_data">load data</a> command. Build the new relation object in <a href="http://wiki.openstreetmap.org/wiki/JOSM_file_format">josm xml format</a>, url-encode it, and send it using remote control.</p>
+<p>I'm guessing a bit here, but you should be able to do this with the <a href="http://josm.openstreetmap.de/wiki/Help/Preferences/RemoteControl#load_data">load data</a> command. Build the new relation object in <a href="https://wiki.openstreetmap.org/wiki/JOSM_file_format">josm xml format</a>, url-encode it, and send it using remote control.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

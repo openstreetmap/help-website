@@ -123,7 +123,7 @@ out body;</code></pre>
 <div class="answer-body">
 <p>Do you really need to retrieve this information via the overpass-api?</p>
 <p>As the data should be fairly static a one time (or seldom updated) extract from a planet dump or asking somebody to give you the results of querying their database would seem to be good enough.</p>
-<p>See for example <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a> for the planet dumps. Naturally there are many ways to skin a cat and this is just one of them.</p>
+<p>See for example <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> for the planet dumps. Naturally there are many ways to skin a cat and this is just one of them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

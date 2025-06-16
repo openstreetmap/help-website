@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>In the map segment shown by following the link below I am having trouble getting directions that use the path illustrated in the attached image. It seems it is the link between the road "G.F. Henriksens vei" and the path that is the issue, but I don't see what the problem with the link between the road and the path is.</p>
 <p>Do anyone have an idea about how this can be solved or have som ideas about where I might find further guidance?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-08-13_at_22.34.33.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2018-08-13_at_22.34.33.png" alt="alt text" /></p>
 <p><a href="https://osm.org/go/0TsvpvdU0-">https://osm.org/go/0TsvpvdU0-</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -131,7 +131,7 @@ One Answer:
 <div id="post-65345-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It seems i waited four days for the turn restrictions to work as expected on this one. <a href="https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
+<p>It seems i waited four days for the turn restrictions to work as expected on this one. <a href="/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a></p>
 </div>
 <div id="comment-65345-info" class="comment-info">
 <span class="comment-age">(14 Aug '18, 18:19)</span> <span class="comment-user userinfo">andy mackey</span>

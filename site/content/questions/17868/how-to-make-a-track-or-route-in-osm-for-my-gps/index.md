@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Jack, you may want to look here: <a href="https://help.openstreetmap.org/questions/857/can-osm-be-used-to-create-tracks-for-a-gps-unit">https://help.openstreetmap.org/questions/857/can-osm-be-used-to-create-tracks-for-a-gps-unit</a></p>
+<p>Hi Jack, you may want to look here: <a href="/questions/857/can-osm-be-used-to-create-tracks-for-a-gps-unit">https://help.openstreetmap.org/questions/857/can-osm-be-used-to-create-tracks-for-a-gps-unit</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

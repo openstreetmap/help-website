@@ -347,7 +347,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://help.openstreetmap.org/users/9662/wvbrad">@WVBRAD</a> give <a href="http://h2096617.stratoserver.net/brouter-web/">BRouter web</a> a try. It will follow your trail ok. You can also create your own routing profile preferences. You can download a gpx track to use in your Garmin.<br />
+<p><a href="https://help.openstreetmap.org/users/9662/wvbrad">@WVBRAD</a> give <a href="http://h2096617.stratoserver.net/brouter-web/">BRouter web</a> a try. It will follow your trail ok. You can also create your own routing profile preferences. You can download a gpx track to use in your Garmin.<br />
 Note that you need to press 'esc' or 'q' to disable drawing, 'd' to enable drawing</p>
 </div>
 <div class="answer-controls post-controls">

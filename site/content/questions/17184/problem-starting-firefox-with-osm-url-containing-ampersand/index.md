@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Problem Starting Firefox With OSM URL Containing Ampersand"
-description = '''I&#x27;m working on some software that does its calcs. and then starts up a new Firefox browser window passing the OSM URL and the relevant Lat. and Lon. parameters, e.g. http://www.openstreetmap.org/?lat=52.1917&amp;amp;lon=-1.7073&amp;amp;zoom=12 However nothing from the first ampersand onwards appears in the ...'''
+description = '''I&#x27;m working on some software that does its calcs. and then starts up a new Firefox browser window passing the OSM URL and the relevant Lat. and Lon. parameters, e.g. https://www.openstreetmap.org/?lat=52.1917&amp;amp;lon=-1.7073&amp;amp;zoom=12 However nothing from the first ampersand onwards appears in the ...'''
 date = "2012-10-25T16:38:00Z"
 lastmod = "2012-10-25T16:56:00Z"
 weight = 17184
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm working on some software that does its calcs. and then starts up a new Firefox browser window passing the OSM URL and the relevant Lat. and Lon. parameters, e.g. <a href="http://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12">http://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12</a></p>
-<p>However nothing from the first ampersand onwards appears in the Firefox address bar, and Firefox just displays the last OSM map view viewed in Firefox, regardless of the actual Lat. in the address bar. Have tried executing the full command (i.e. that issued by my software) from the command prompt in the "DOS window", e.g... "C:\Program Files\Mozilla Firefox\firefox.exe" -new-tab <a href="http://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12">http://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12</a> and the error messages I get are 'lon' is not recognized as an internal or external command, operable program or batch file. 'zoom' is not recognized as an internal or external command, operable program or batch file.</p>
+<p>I'm working on some software that does its calcs. and then starts up a new Firefox browser window passing the OSM URL and the relevant Lat. and Lon. parameters, e.g. <a href="https://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12">https://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12</a></p>
+<p>However nothing from the first ampersand onwards appears in the Firefox address bar, and Firefox just displays the last OSM map view viewed in Firefox, regardless of the actual Lat. in the address bar. Have tried executing the full command (i.e. that issued by my software) from the command prompt in the "DOS window", e.g... "C:\Program Files\Mozilla Firefox\firefox.exe" -new-tab <a href="https://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12">https://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12</a> and the error messages I get are 'lon' is not recognized as an internal or external command, operable program or batch file. 'zoom' is not recognized as an internal or external command, operable program or batch file.</p>
 <p>So it seems to me that WinXP is doing some parsing of the parameter string being passed to Firefox and only actually passing the "lat" parameter to Firefox.</p>
 <p>I tried escaping the ampersands with %26 and the whole parameter string then gets through to Firefox but the OSM server (or Firefox?) seems not to recognise the escaped ampersands, thereby displaying the last map shown. I've tried with a semicolon as an alternative delimiter (which, I believe, is supposed to be a valid delimiter) and also the comma, but they just display the last map shown as described above.</p>
 <p>Regular URLs without the ampersand, e.g. a tile URL (<a href="http://tile.openstreetmap.org/12/2028/1349.png">http://tile.openstreetmap.org/12/2028/1349.png</a>), work fine.</p>
@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not that it's anything to do with OSM, but you need to put quotes around the address like you did around the program:</p>
-<pre><code>&quot;C:\Program Files\Mozilla Firefox\firefox.exe&quot; -new-tab &quot;http://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12&quot;</code></pre>
+<pre><code>&quot;C:\Program Files\Mozilla Firefox\firefox.exe&quot; -new-tab &quot;https://www.openstreetmap.org/?lat=52.1917&amp;lon=-1.7073&amp;zoom=12&quot;</code></pre>
 <p>If you don't do that Windows will try and parse the command line rather than just passing it to Firefox.</p>
 </div>
 <div class="answer-controls post-controls">

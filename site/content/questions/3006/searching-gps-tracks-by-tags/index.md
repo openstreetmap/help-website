@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Searching GPS tracks by tags"
-description = '''How can I search GPS track(s) using more than one tag, possibly with logical operators? Right now it seems I can only put one tag at the end of the followinf address: http://www.openstreetmap.org/traces/tag/'''
+description = '''How can I search GPS track(s) using more than one tag, possibly with logical operators? Right now it seems I can only put one tag at the end of the followinf address: https://www.openstreetmap.org/traces/tag/'''
 date = "2011-02-13T14:05:00Z"
 lastmod = "2015-02-18T20:54:00Z"
 weight = 3006
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I search GPS track(s) using more than one tag, possibly with logical operators? Right now it seems I can only put one tag at the end of the followinf address: <a href="http://www.openstreetmap.org/traces/tag/">http://www.openstreetmap.org/traces/tag/</a></p>
+<p>How can I search GPS track(s) using more than one tag, possibly with logical operators? Right now it seems I can only put one tag at the end of the followinf address: <a href="https://www.openstreetmap.org/traces/tag/">https://www.openstreetmap.org/traces/tag/</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-tracks" rel="tag" title="see questions tagged &#39;tracks&#39;">tracks</span> <span class="post-tag tag-link-gps" rel="tag" title="see questions tagged &#39;gps&#39;">gps</span>

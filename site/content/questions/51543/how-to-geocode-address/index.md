@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure what answer you're looking for. You already know <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a> because this morning, an hour before asking this question, you commented on a Nominatim github issue.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Untitled6.png" alt="alt text" /></p>
+<p>I'm not sure what answer you're looking for. You already know <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a> because this morning, an hour before asking this question, you commented on a Nominatim github issue.</p>
+<p><img src="/upfiles/Untitled6.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe more geocoding services based on OSM are listed in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a>.</p>
+<p>Maybe more geocoding services based on OSM are listed in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search_engines</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -271,7 +271,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I think you can import the OSM data into QGIS, geocode it there then upload it back to OSM.</p>
 <p>Here's the link for the QGIS OSM plugin:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">http://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin">https://wiki.openstreetmap.org/wiki/QGIS_OSM_Plugin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

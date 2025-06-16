@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>OpenStreetMap is already available in many languages, but more is always better and so any translation efforts are very welcome!</p>
 <p>For the main website and the two major editors, Potlatch and JOSM, it's easy to contribute translations. Many of the other tools in OpenStreetMap are also translatable.</p>
-<p>However, each tool uses their own translation mechanism and, as with most things in OpenStreetMap, there is no one central place to do this. You can find information about how to translate the various parts of the OpenStreetMap tool chain on the <a href="http://wiki.openstreetmap.org/wiki/Translation">translation page in the wiki</a>.</p>
+<p>However, each tool uses their own translation mechanism and, as with most things in OpenStreetMap, there is no one central place to do this. You can find information about how to translate the various parts of the OpenStreetMap tool chain on the <a href="https://wiki.openstreetmap.org/wiki/Translation">translation page in the wiki</a>.</p>
 <p>A summary:</p>
 <p>The main website and Potlatch use <a href="http://translatewiki.net/wiki/Translating:OpenStreetMap">translatewiki.net</a> for translations.</p>
 <p>JOSM uses <a href="https://translations.launchpad.net/josm/trunk/+pots/josm">launchpad.net</a></p>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For changing the front page discuss here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Front_Page_Design">http://wiki.openstreetmap.org/wiki/Talk:Front_Page_Design</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Front_Page_Design">https://wiki.openstreetmap.org/wiki/Talk:Front_Page_Design</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

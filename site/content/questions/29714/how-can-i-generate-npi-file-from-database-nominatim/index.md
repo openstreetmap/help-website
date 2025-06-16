@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, did you followed III's suggestions ? 'There is currently no DB schema description of Nominatim available: <a href="http://wiki.openstreetmap.org/wiki/Category:Nominatim">http://wiki.openstreetmap.org/wiki/Category:Nominatim</a> So you might ask at the OSM-TALK or OSM-DEV mailinglist or in wiki at the Nominatim disc. A documentation at the wiki would be nice for the community :) Maybe it's easier to export your dump to preprocessed nomiatim NPI files and filter this files before reimporting to get a light DB?' And the result ? Since your asking it here again ?</p>
+<p>Hi, did you followed III's suggestions ? 'There is currently no DB schema description of Nominatim available: <a href="https://wiki.openstreetmap.org/wiki/Category:Nominatim">https://wiki.openstreetmap.org/wiki/Category:Nominatim</a> So you might ask at the OSM-TALK or OSM-DEV mailinglist or in wiki at the Nominatim disc. A documentation at the wiki would be nice for the community :) Maybe it's easier to export your dump to preprocessed nomiatim NPI files and filter this files before reimporting to get a light DB?' And the result ? Since your asking it here again ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>We usually use Osmosis to process .PBF or .OSM files, so it's the most reliable tool. You might also <a href="http://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data">try others</a>.<br />
+<p>We usually use Osmosis to process .PBF or .OSM files, so it's the most reliable tool. You might also <a href="https://wiki.openstreetmap.org/wiki/OSM_file_formats#Map-data">try others</a>.<br />
 AFAIK you can use osmosis without needing to extract the full planet (saves disk space and increases speed).<br />
 Yes, sounds like a plan :) But I suggest to start playing with filtering with smaller extracts, so you save time and get a better feeling about the results and see possible problems fast enough. Your home area is always a good idea.</p>
 </div>
@@ -228,7 +228,7 @@ Yes, sounds like a plan :) But I suggest to start playing with filtering with sm
 &#10;</div>
 <div class="comment-text">
 <p>I already tuned all software (I read official documentation on each program). The database is on an SSD. The hardware is good.</p>
-<p>I think I finish this task successfully if I significantly reduce the size of database "nominatim" (in this case I also save some SSD). For example, I want to delete all data, which level is less than 17. <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Indexing_.2F_Address_Calculation">http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Indexing_.2F_Address_Calculation</a></p>
+<p>I think I finish this task successfully if I significantly reduce the size of database "nominatim" (in this case I also save some SSD). For example, I want to delete all data, which level is less than 17. <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Indexing_.2F_Address_Calculation">https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Indexing_.2F_Address_Calculation</a></p>
 <p>Does such command in osmosis exist?</p>
 </div>
 <div id="comment-29794-info" class="comment-info">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Roundabout turning restriction"
-description = '''Is there anyway to add a turning restriction to a roundabout (or something to that effect)? http://www.openstreetmap.org/edit#map=19/54.11314/-3.23324 As you can see, to the northwest there is a special road for left turns, approaching the roundabout (from the northwestern entrance) in the left lane...'''
+description = '''Is there anyway to add a turning restriction to a roundabout (or something to that effect)? https://www.openstreetmap.org/edit#map=19/54.11314/-3.23324 As you can see, to the northwest there is a special road for left turns, approaching the roundabout (from the northwestern entrance) in the left lane...'''
 date = "2015-04-17T22:27:00Z"
 lastmod = "2015-04-18T11:44:00Z"
 weight = 42417
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is there anyway to add a turning restriction to a roundabout (or something to that effect)?</p>
-<p><a href="http://www.openstreetmap.org/edit#map=19/54.11314/-3.23324">http://www.openstreetmap.org/edit#map=19/54.11314/-3.23324</a></p>
+<p><a href="https://www.openstreetmap.org/edit#map=19/54.11314/-3.23324">https://www.openstreetmap.org/edit#map=19/54.11314/-3.23324</a></p>
 <p>As you can see, to the northwest there is a special road for left turns, approaching the roundabout (from the northwestern entrance) in the left lane is for going straight ahead only.</p>
 <p>I'm new to this so thank you for your patience.</p>
 </div>

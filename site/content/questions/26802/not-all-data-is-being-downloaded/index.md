@@ -177,7 +177,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data">http://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data</a> for services generating shapefiles. Maybe one of those suits your needs.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data">https://wiki.openstreetmap.org/wiki/Shapefile#Obtaining_shapefiles_from_OSM_data</a> for services generating shapefiles. Maybe one of those suits your needs.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

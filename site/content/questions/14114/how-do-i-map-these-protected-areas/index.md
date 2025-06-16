@@ -118,7 +118,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>OK: <a href="http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-22.05756&amp;lon=-47.86126&amp;zoom=16">http://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-22.05756&amp;lon=-47.86126&amp;zoom=16</a></p>
+<p>OK: <a href="https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-22.05756&amp;lon=-47.86126&amp;zoom=16">https://www.openstreetmap.org/edit?editor=potlatch2&amp;lat=-22.05756&amp;lon=-47.86126&amp;zoom=16</a></p>
 </div>
 <div id="comment-14331-info" class="comment-info">
 <span class="comment-age">(16 Jul '12, 23:42)</span> <span class="comment-user userinfo">Blue</span>
@@ -184,7 +184,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area"><em>boundary=protected_area</em></a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dprotected_area"><em>boundary=protected_area</em></a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

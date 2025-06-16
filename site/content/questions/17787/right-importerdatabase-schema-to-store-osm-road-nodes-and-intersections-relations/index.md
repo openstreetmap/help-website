@@ -183,8 +183,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Interesting project :-). However, I don't think there's existing software which does exactly that, so you'll need to roll your own. You can, however, use some infrastructure for parsing &amp; processing the data. <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> e.g. may help.</p>
-<p>You will probably need to <a href="http://wiki.openstreetmap.org/wiki/Download">download the OSM data</a>, and then simplify it. You apparently only need roads, so you can filter out all the rest (boundaries, POIs etc.). Then you could do something like:</p>
+<p>Interesting project :-). However, I don't think there's existing software which does exactly that, so you'll need to roll your own. You can, however, use some infrastructure for parsing &amp; processing the data. <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> e.g. may help.</p>
+<p>You will probably need to <a href="https://wiki.openstreetmap.org/wiki/Download">download the OSM data</a>, and then simplify it. You apparently only need roads, so you can filter out all the rest (boundaries, POIs etc.). Then you could do something like:</p>
 <ul>
 <li>input: GPS coordinates</li>
 <li>find the nearest road (that's probably where you are)</li>

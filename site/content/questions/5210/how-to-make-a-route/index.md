@@ -128,7 +128,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The main OpenStreetMap website does not offer route planing, but there are several other websites that offer this service based on OpenStreetMap data. For a list of possibilities check <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">the wiki</a>.</p>
+<p>The main OpenStreetMap website does not offer route planing, but there are several other websites that offer this service based on OpenStreetMap data. For a list of possibilities check <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

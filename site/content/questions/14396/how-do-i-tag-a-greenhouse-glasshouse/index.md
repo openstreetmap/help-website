@@ -115,7 +115,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=">Searching</a> in our <a href="http://wiki.openstreetmap.org/wiki/Main_Page">wiki</a> for <a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=greenhouse">greenhouse</a> leads to <em><a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgreenhouse_horticulture">landuse=greenhouse_horticulture</a></em>. This tag applies for the whole area, not for individual buildings. You can also search on <a href="http://taginfo.openstreetmap.org/">taginfo</a> for <a href="http://taginfo.openstreetmap.org/search?q=greenhouse#values">greenhouse</a> to find <em>building=greenhouse</em> which you can use to tag individual buildings.</p>
+<p><a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=">Searching</a> in our <a href="https://wiki.openstreetmap.org/wiki/Main_Page">wiki</a> for <a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;search=greenhouse">greenhouse</a> leads to <em><a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgreenhouse_horticulture">landuse=greenhouse_horticulture</a></em>. This tag applies for the whole area, not for individual buildings. You can also search on <a href="http://taginfo.openstreetmap.org/">taginfo</a> for <a href="http://taginfo.openstreetmap.org/search?q=greenhouse#values">greenhouse</a> to find <em>building=greenhouse</em> which you can use to tag individual buildings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -135,7 +135,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>building=greenhouse is also documented on various wiki pages, such as <a href="http://wiki.openstreetmap.org/wiki/Key:building">Key:building</a> and Map Features.</p>
+<p>building=greenhouse is also documented on various wiki pages, such as <a href="https://wiki.openstreetmap.org/wiki/Key:building">Key:building</a> and Map Features.</p>
 </div>
 <div id="comment-14404-info" class="comment-info">
 <span class="comment-age">(19 Jul '12, 19:36)</span> <span class="comment-user userinfo">Tordanik</span>

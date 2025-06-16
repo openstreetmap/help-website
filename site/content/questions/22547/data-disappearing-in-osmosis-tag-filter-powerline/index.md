@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello everybody,</p>
 <p>I like to make a map of the electricity grid like this one: <a href="http://www.itoworld.com/map/4">http://www.itoworld.com/map/4</a> Therefore I use data provided by geofabrik</p>
 <p>For the data processing in use osmosis with the command: osmosis --rb C:...\germany-latest.osm.pbf --tf accept-ways power=line --tf accept-relations --used-node --wx C:...\line_GER.osm</p>
-<p>In general it is worling fine, but sometimes lines are missing. For example this line <a href="http://www.openstreetmap.org/browse/way/207246060">http://www.openstreetmap.org/browse/way/207246060</a> Is dissapering after using osmosis. Meanwhile this line can be seen in the ITO map I also downloaded the region, without using any filter, but the result was the same...</p>
+<p>In general it is worling fine, but sometimes lines are missing. For example this line <a href="https://www.openstreetmap.org/browse/way/207246060">https://www.openstreetmap.org/browse/way/207246060</a> Is dissapering after using osmosis. Meanwhile this line can be seen in the ITO map I also downloaded the region, without using any filter, but the result was the same...</p>
 <p>My question is if I´m using wrong data or if osmosis is responsible for the problem?</p>
 <p>I hope my problem is stated clearly. Than kyou in advance</p>
 </div>
@@ -140,7 +140,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have no clue why osmosis fails in this task,</p>
-<p>but have you tried <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> already?</p>
+<p>but have you tried <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> already?</p>
 <p>Maybe you can avoid the missing of data by using that tool.</p>
 </div>
 <div class="answer-controls post-controls">

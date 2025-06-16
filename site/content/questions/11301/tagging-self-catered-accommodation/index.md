@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism=guest_house">wiki doesn't mention anything</a> and <a href="http://taginfo.openstreetmap.org/tags/tourism=guest_house#combinations">TagInfo</a> doesn't show anyone adding much.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism=guest_house">wiki doesn't mention anything</a> and <a href="http://taginfo.openstreetmap.org/tags/tourism=guest_house#combinations">TagInfo</a> doesn't show anyone adding much.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Greg, use the Scandinavian definition for self serviced hytter. They tag them like this tourism=alpine_hut with service=self. Take a look here <a href="http://www.openstreetmap.org/#map=17/60.15583/6.84245">http://www.openstreetmap.org/#map=17/60.15583/6.84245</a></p>
+<p>Hi Greg, use the Scandinavian definition for self serviced hytter. They tag them like this tourism=alpine_hut with service=self. Take a look here <a href="https://www.openstreetmap.org/#map=17/60.15583/6.84245">https://www.openstreetmap.org/#map=17/60.15583/6.84245</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

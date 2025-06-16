@@ -204,7 +204,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Kijk hier (Engels): <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource"></a><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource"></a><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource">http://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource</a> of hier (Deutsch): <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource"></a><a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource"></a><a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource">http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource</a></p>
+<p>Kijk hier (Engels): <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource"></a><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource"></a><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource">https://wiki.openstreetmap.org/wiki/OSM_Map_On_MapSource</a> of hier (Deutsch): <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource"></a><a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource"></a><a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource">https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_MapSource</a></p>
 <p>Also it might be worth reading the mkgmap list - some answers there explain a bit about how maps are installed into MapSource:</p>
 <p><a href="http://www.google.co.uk/search?q=mapsource+site%3Awww.mkgmap.org.uk%2Fpipermail%2Fmkgmap-dev%2F&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-GB:official&amp;client=firefox-a">(search of the mkgmap list for "mapsource")</a></p>
 </div>

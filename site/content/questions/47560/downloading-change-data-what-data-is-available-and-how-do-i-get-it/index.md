@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download changesets - either directly <a href="http://wiki.openstreetmap.org/wiki/Planet.osm/diffs">for the whole planet</a>, or processed from this for various regions (e.g. <a href="http://download.geofabrik.de/europe-updates/">geofabrik's changesets for Europe</a>). The format is identical - these are all the changesets that have been uploaded in a given timeframe (minute,hour,day). The data includes the coordinates of changed objects, change timestamp, and user ID.</p>
+<p>You can download changesets - either directly <a href="https://wiki.openstreetmap.org/wiki/Planet.osm/diffs">for the whole planet</a>, or processed from this for various regions (e.g. <a href="http://download.geofabrik.de/europe-updates/">geofabrik's changesets for Europe</a>). The format is identical - these are all the changesets that have been uploaded in a given timeframe (minute,hour,day). The data includes the coordinates of changed objects, change timestamp, and user ID.</p>
 <p>You would need to query the API to get full changeset metadata (e.g. editor used, changeset message, discussion, tagging, etc.)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -170,7 +170,7 @@ One Answer:
 <div id="post-47568-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You're welcome. I'm not sure how far the historical data goes ( <a href="http://wiki.openstreetmap.org/wiki/Changeset#Technical">http://wiki.openstreetmap.org/wiki/Changeset#Technical</a> would imply April 2009 ).</p>
+<p>You're welcome. I'm not sure how far the historical data goes ( <a href="https://wiki.openstreetmap.org/wiki/Changeset#Technical">https://wiki.openstreetmap.org/wiki/Changeset#Technical</a> would imply April 2009 ).</p>
 </div>
 <div id="comment-47568-info" class="comment-info">
 <span class="comment-age">(18 Jan '16, 16:25)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -193,7 +193,7 @@ One Answer:
 <div id="post-47570-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Sure, that's going to correlate with the user's usual physical location (modulo Humanitarian Openstreetmap Team, MapRoulette etc.).</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: Sure, that's going to correlate with the user's usual physical location (modulo Humanitarian Openstreetmap Team, MapRoulette etc.).</p>
 </div>
 <div id="comment-47570-info" class="comment-info">
 <span class="comment-age">(18 Jan '16, 16:48)</span> <span class="comment-user userinfo">Piskvor</span>

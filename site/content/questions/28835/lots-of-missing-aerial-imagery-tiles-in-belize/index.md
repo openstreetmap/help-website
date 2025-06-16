@@ -164,10 +164,10 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Depending on how you can configure the way the imagery is served (WMS and/or TMS), what editor you're using, and the imagery's license, you can use custom imagery in all the editors.</p>
 <ul>
-<li>General info: <a href="http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></li>
-<li>List of current imagery layers: <a href="http://wiki.openstreetmap.org/wiki/Aerial_imagery">http://wiki.openstreetmap.org/wiki/Aerial_imagery</a></li>
-<li>WMS info: <a href="http://wiki.openstreetmap.org/wiki/WMS">http://wiki.openstreetmap.org/wiki/WMS</a></li>
-<li>TMS info: <a href="http://wiki.openstreetmap.org/wiki/TMS">http://wiki.openstreetmap.org/wiki/TMS</a></li>
+<li>General info: <a href="https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></li>
+<li>List of current imagery layers: <a href="https://wiki.openstreetmap.org/wiki/Aerial_imagery">https://wiki.openstreetmap.org/wiki/Aerial_imagery</a></li>
+<li>WMS info: <a href="https://wiki.openstreetmap.org/wiki/WMS">https://wiki.openstreetmap.org/wiki/WMS</a></li>
+<li>TMS info: <a href="https://wiki.openstreetmap.org/wiki/TMS">https://wiki.openstreetmap.org/wiki/TMS</a></li>
 </ul>
 <p>Also, it sounds like you know where the gaps are in the Bing imagery, but you can also use these tools to analyze the resolution and date: <a href="http://mvexel.dev.openstreetmap.org/bingimageanalyzer/">Old version Bing Image Analyzer</a> and <a href="http://ant.dev.openstreetmap.org/bingimageanalyzer/">New version Bing Image Analyzer</a></p>
 </div>
@@ -200,7 +200,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/WMS_sources">WMS sources page</a> says sources must be "in the public domain, compatibly licensed, or we have permission to use." So it would depend on who took the imagery, and under what terms it was received. If unsure, it'd probably be good to run it by the <a href="http://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a></p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/WMS_sources">WMS sources page</a> says sources must be "in the public domain, compatibly licensed, or we have permission to use." So it would depend on who took the imagery, and under what terms it was received. If unsure, it'd probably be good to run it by the <a href="https://wiki.openstreetmap.org/wiki/Data_working_group">Data Working Group</a></p>
 </div>
 <div id="comment-28856-info" class="comment-info">
 <span class="comment-age">(06 Dec '13, 15:46)</span> <span class="comment-user userinfo">neuhausr</span>

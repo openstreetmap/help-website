@@ -169,7 +169,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think that you should not use opening hours for trails. We have the community-approved <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">"conditional restrictions"</a> for that.</p>
+<p>I think that you should not use opening hours for trails. We have the community-approved <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">"conditional restrictions"</a> for that.</p>
 <p>It's almost the same as opening hours. But instead of</p>
 <pre><code>opening_hours = [your opening hours]</code></pre>
 <p>you would write</p>

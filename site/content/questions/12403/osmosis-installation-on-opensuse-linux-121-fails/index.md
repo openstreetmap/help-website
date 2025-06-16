@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "osmosis installation on OpenSuse-Linux - 12.1 fails"
-description = '''hello dear buddies on OpenStreetMap - good evening,  welll i am pretty new to GIS-Computing: at the moment i am tryin to install OsMosis on my openSuse 12.1 linux-system. if i follow this steps here - the steps i found here on the page called - installing osmosis  http://wiki.openstreetmap.org/wiki/...'''
+description = '''hello dear buddies on OpenStreetMap - good evening,  welll i am pretty new to GIS-Computing: at the moment i am tryin to install OsMosis on my openSuse 12.1 linux-system. if i follow this steps here - the steps i found here on the page called - installing osmosis  https://wiki.openstreetmap.org/wiki/...'''
 date = "2012-04-27T22:27:00Z"
 lastmod = "2014-04-13T21:36:00Z"
 weight = 12403
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>hello dear buddies on OpenStreetMap - good evening,</p>
 <p>welll i am pretty new to GIS-Computing: at the moment i am tryin to install OsMosis on my openSuse 12.1 linux-system.</p>
 <p>if i follow this steps here - the steps i found here on the page called - installing osmosis</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Osmosis/Installation">http://wiki.openstreetmap.org/wiki/Osmosis/Installation</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Osmosis/Installation">https://wiki.openstreetmap.org/wiki/Osmosis/Installation</a></p>
 <pre><code>LANG=en_US.UTF-8  wget http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz
 tar xvfz osmosis-latest.tgz
 cd osmosis-0.39
@@ -277,7 +277,7 @@ linux-70ce:/home/martin/osmosis #</code></pre>
 <div id="post-32352-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think that the above comment is actually part of the conversation on <a href="https://help.openstreetmap.org/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful">this other question</a> (though as it's to do with osmosis installation, I suppose it makes some sense to leave it here as a link).</p>
+<p>I think that the above comment is actually part of the conversation on <a href="/questions/32331/installing-osmosis-on-opensuse-131-via-comandline-successful">this other question</a> (though as it's to do with osmosis installation, I suppose it makes some sense to leave it here as a link).</p>
 </div>
 <div id="comment-32352-info" class="comment-info">
 <span class="comment-age">(13 Apr '14, 21:36)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

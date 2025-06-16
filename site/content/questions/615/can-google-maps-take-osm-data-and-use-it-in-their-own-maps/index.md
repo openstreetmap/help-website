@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Can Google Maps take OSM data and use it in their own maps ?"
-description = '''A friend that works at Google recently reminded me I should not use Google&#x27;s data when contributing to OSM. This is clearly explained at http://wiki.openstreetmap.org/wiki/Copyright and specifically advised against at: http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2F...'''
+description = '''A friend that works at Google recently reminded me I should not use Google&#x27;s data when contributing to OSM. This is clearly explained at https://wiki.openstreetmap.org/wiki/Copyright and specifically advised against at: https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2F...'''
 date = "2010-08-10T13:25:00Z"
 lastmod = "2020-07-23T05:49:00Z"
 weight = 615
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>A friend that works at Google recently reminded me I should not use Google's data when contributing to OSM. This is clearly explained at <a href="http://wiki.openstreetmap.org/wiki/Copyright"></a><a href="http://wiki.openstreetmap.org/wiki/Copyright"></a><a href="http://wiki.openstreetmap.org/wiki/Copyright">http://wiki.openstreetmap.org/wiki/Copyright</a> and specifically advised against at: <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F"></a><a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F"></a><a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F">http://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F</a></p>
+<p>A friend that works at Google recently reminded me I should not use Google's data when contributing to OSM. This is clearly explained at <a href="https://wiki.openstreetmap.org/wiki/Copyright"></a><a href="https://wiki.openstreetmap.org/wiki/Copyright"></a><a href="https://wiki.openstreetmap.org/wiki/Copyright">https://wiki.openstreetmap.org/wiki/Copyright</a> and specifically advised against at: <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F"></a><a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F"></a><a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F">https://wiki.openstreetmap.org/wiki/Legal_FAQ#Can_I_trace_data_from_Google_Maps.2FVirtual_Earth.2FOrdnance_Survey.2F....3F</a></p>
 <p>In fact that was the very first thing I learned about when I found out about OSM through several other friend in the free/open source software community here in Montreal.</p>
 <p>I was wondering if Google can do the exact opposite, ie. take OSM's data and use it for their maps ? I believe they should (and can), if such is the case, would they have to relicense portions of theirs maps as a result ? I am just curious, as I hadn't thought of this before.</p>
 <p>I was also informed I could contribute error reports to Google Maps. Contributing errors to Google Maps is not really comparable to making my own maps which then become almost immediately usable by anyone else for Free.</p>
@@ -114,7 +114,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, Google, and other companies are welcome to use OpenStreetMap Data as long as they meet their obligations in the <a href="http://wiki.openstreetmap.org/wiki/License">OpenStreetMap License</a>.</p>
+<p>Yes, Google, and other companies are welcome to use OpenStreetMap Data as long as they meet their obligations in the <a href="https://wiki.openstreetmap.org/wiki/License">OpenStreetMap License</a>.</p>
 <p>Google have been supporters of OpenStreetMap for a while. Google have had speakers present at OpenStreetMap conferences. In early 2009 the Open Source Projects Office at Google made a generous contribution to the <a href="http://old.opengeodata.org/2009/02/index.html">OSM DB Server Fund Raising Drive</a> and OpenStreetMap-related projects have been in the <a href="http://code.google.com/p/google-summer-of-code-2009-osm/">Google Summer of Code</a>. I haven't yet seen OpenStreetMap data in use at Google, but when they do, it will likely be similar to the <a href="http://open.mapquest.co.uk/">Mapquest OpenStreetMap Demonstration</a> with a separate site or application using OpenStreetMap data.<br />
 </p>
 <p>Google, and other online maps, buy proprietary map data from proprietary map data vendors for use on their web sites. Those companies want to keep the proprietary map data separate from the OpenStreetMap data so that there is no confusion about what data is under which license.<br />

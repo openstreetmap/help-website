@@ -179,8 +179,8 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>More information and links to different map outputs can be found at <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">http://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
-<p>The way the tagging of names works, is documented at <a href="http://wiki.openstreetmap.org/wiki/Names#Localization">http://wiki.openstreetmap.org/wiki/Names#Localization</a></p>
+<p>More information and links to different map outputs can be found at <a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">https://wiki.openstreetmap.org/wiki/Map_internationalization</a></p>
+<p>The way the tagging of names works, is documented at <a href="https://wiki.openstreetmap.org/wiki/Names#Localization">https://wiki.openstreetmap.org/wiki/Names#Localization</a></p>
 </div>
 <div id="comment-19188-info" class="comment-info">
 <span class="comment-age">(18 Jan '13, 15:35)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -224,8 +224,8 @@ osqa_accepted = false
 <div class="answer-body">
 <ol>
 <li>As far as I know there is no web service that is displaying exclusively the name:en objects with a direct feature to process a PDF export.</li>
-<li>If you need this map as PDF very urgent and someone should do that for you, have a look at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></li>
-<li>You can also try it on your own. Have a look at e.g. <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> ... There you can render your own maps and modify the style files that are quite similar to the main OSM site. You should modify the rendering rules to display name:en</li>
+<li>If you need this map as PDF very urgent and someone should do that for you, have a look at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">Commercial_OSM_Software_and_Services</a></li>
+<li>You can also try it on your own. Have a look at e.g. <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> ... There you can render your own maps and modify the style files that are quite similar to the main OSM site. You should modify the rendering rules to display name:en</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

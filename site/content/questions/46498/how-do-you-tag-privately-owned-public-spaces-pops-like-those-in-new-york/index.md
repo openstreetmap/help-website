@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi consider using <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a>=permissive.</p>
+<p>Hi consider using <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a>=permissive.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

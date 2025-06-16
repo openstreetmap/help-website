@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We do have the tag <code>population</code>, it may or may not be set on place nodes. See the wiki at <a href="http://wiki.openstreetmap.org/wiki/Key:population">http://wiki.openstreetmap.org/wiki/Key:population</a> .</p>
+<p>We do have the tag <code>population</code>, it may or may not be set on place nodes. See the wiki at <a href="https://wiki.openstreetmap.org/wiki/Key:population">https://wiki.openstreetmap.org/wiki/Key:population</a> .</p>
 <p>I'd guess that you'll be much better off sourcing population data from other sources specific to where your area of interest is.</p>
 </div>
 <div class="answer-controls post-controls">

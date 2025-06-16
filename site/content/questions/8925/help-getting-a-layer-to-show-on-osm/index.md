@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help getting a layer to show on OSM"
-description = '''I&#x27;m having trouble getting a layer to show on top of another - a car park to show on top of a sports arena - see http://www.openstreetmap.org/?lat=51.423296&amp;amp;lon=-2.835831&amp;amp;zoom=18&amp;amp;layers=M There should be 2 car parks showing on the stadium (left hand) but I can only get the small one to r...'''
+description = '''I&#x27;m having trouble getting a layer to show on top of another - a car park to show on top of a sports arena - see https://www.openstreetmap.org/?lat=51.423296&amp;amp;lon=-2.835831&amp;amp;zoom=18&amp;amp;layers=M There should be 2 car parks showing on the stadium (left hand) but I can only get the small one to r...'''
 date = "2011-11-11T09:13:00Z"
 lastmod = "2011-11-11T10:45:00Z"
 weight = 8925
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm having trouble getting a layer to show on top of another - a car park to show on top of a sports arena - see <a href="http://www.openstreetmap.org/?lat=51.423296&amp;lon=-2.835831&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=51.423296&amp;lon=-2.835831&amp;zoom=18&amp;layers=M</a></p>
+<p>I'm having trouble getting a layer to show on top of another - a car park to show on top of a sports arena - see <a href="https://www.openstreetmap.org/?lat=51.423296&amp;lon=-2.835831&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=51.423296&amp;lon=-2.835831&amp;zoom=18&amp;layers=M</a></p>
 <p>There should be 2 car parks showing on the stadium (left hand) but I can only get the small one to render. I've tried making it a higher layer which didn't seem to work so used an inner/outer multi-polygon. This worked for one of the two but not the other. I don't understand!</p>
 <p>Any advice please?</p>
 </div>
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think there are a number of issues here, such as how the OSM data gets translated into the database that Mapnik uses for rendering, so the layers tags don't always work in the way you expect. I note though that you've tried using multipolygons to make the car parks holes in the stadium, which has worked for the smaller one but not the larger. I suspect this will be because the larger car park, while given the role of inner, isn't entirely within the outer - see for example <a href="http://www.openstreetmap.org/browse/node/1495166974">this node</a>.</p>
+<p>I think there are a number of issues here, such as how the OSM data gets translated into the database that Mapnik uses for rendering, so the layers tags don't always work in the way you expect. I note though that you've tried using multipolygons to make the car parks holes in the stadium, which has worked for the smaller one but not the larger. I suspect this will be because the larger car park, while given the role of inner, isn't entirely within the outer - see for example <a href="https://www.openstreetmap.org/browse/node/1495166974">this node</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -142,7 +142,7 @@ One Answer:
 <div id="post-8930-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Refreshing now and the large car park appears, but the small one is now green. I wonder if it is because you have it twice in the multipolygon rather than once? <a href="http://www.openstreetmap.org/browse/way/136294027">http://www.openstreetmap.org/browse/way/136294027</a></p>
+<p>Refreshing now and the large car park appears, but the small one is now green. I wonder if it is because you have it twice in the multipolygon rather than once? <a href="https://www.openstreetmap.org/browse/way/136294027">https://www.openstreetmap.org/browse/way/136294027</a></p>
 </div>
 <div id="comment-8930-info" class="comment-info">
 <span class="comment-age">(11 Nov '11, 10:45)</span> <span class="comment-user userinfo">EdLoach ♦</span>

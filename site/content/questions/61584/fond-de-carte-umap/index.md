@@ -183,7 +183,7 @@ osqa_accepted = false
 <p>Si tu n'a pas un utilisateur, tu dois créer un.</p>
 <p>Puis tu cliques dans la languette <strong><em>Upload map</em></strong>. Donne seulement un <em>titre</em>, une <em>description</em> et puis <strong>upload l'image</strong> (les autres champs sont optionnelles).</p>
 <p>Tu cliques dans la languette <strong>Rectify</strong>, et tu dois ajouter <strong>au moins 3 points</strong> dans les deux cartes, comme je montre dans cette image.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/addPointMapWarper2.png" alt="alt text" /></p>
+<p><img src="/upfiles/addPointMapWarper2.png" alt="alt text" /></p>
 <p>Chaque fois que tu as ajouté un point dans les deux cartes tu cliques dans le button <strong>Add Control Point</strong>.</p>
 <p>Quand tu as ajouté les points (normalment, j'ajouterais 4 ou 5 points bien éloignées les uns des autres), tu cliques dans <strong>WARP IMAGE!</strong>.</p>
 <p>Puis tu vas au <strong>uMap</strong> -&gt; <strong>Éditer les paramètres</strong> -&gt; <strong>Fond de carte personnalisé</strong></p>

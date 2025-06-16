@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Our administrators install OSRM v5. I try build the shortest route. uri: /route/v1/driving/50.792940,61.659061;50.798636,61.665437;50.811901,61.669517;50.768080,61.730977 server return faster route (about 11,5 km) and i can`t find how build shortest route (aboute 10 km).</p>
 <p>Can i do this by options in request string or need change config on server. Or it is not possible.</p>
-<p>thank you in advance<img src="https://help.openstreetmap.org/upfiles/1_8XGezPK.png" alt="alt text" /></p>
+<p>thank you in advance<img src="/upfiles/1_8XGezPK.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osrm" rel="tag" title="see questions tagged &#39;osrm&#39;">osrm</span> <span class="post-tag tag-link-shortest" rel="tag" title="see questions tagged &#39;shortest&#39;">shortest</span>
@@ -128,7 +128,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>To get the shortest route, you will need to create a custom profile (a .lua file) where all roads are weighted at the same speed. The routing algorithm will then choose a 5-mile unclassified road (at 60mph) in preference to a 6-mile trunk road (at 60mph), whereas the standard car.lua will choose a 6-mile trunk road at 60mph in preference to a 5-mile unclassified road at 40mph.</p>
 <p>You will need to specify the path to your profile in the command line when calling osrm-extract. I would recommend starting with car.lua and modifying it rather than creating a new profile from scratch.</p>
-<p>As Andy has mentioned, I gave a brief overview of OSRM's profiles at <a href="https://help.openstreetmap.org/questions/30272/how-the-routing-osrm-algorithm-works">https://help.openstreetmap.org/questions/30272/how-the-routing-osrm-algorithm-works</a> .</p>
+<p>As Andy has mentioned, I gave a brief overview of OSRM's profiles at <a href="/questions/30272/how-the-routing-osrm-algorithm-works">https://help.openstreetmap.org/questions/30272/how-the-routing-osrm-algorithm-works</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -264,7 +264,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Richard's answer here may help you <a href="https://help.openstreetmap.org/questions/30272/how-the-routing-osrm-algorithm-works">https://help.openstreetmap.org/questions/30272/how-the-routing-osrm-algorithm-works</a></p>
+<p>Richard's answer here may help you <a href="/questions/30272/how-the-routing-osrm-algorithm-works">https://help.openstreetmap.org/questions/30272/how-the-routing-osrm-algorithm-works</a></p>
 </div>
 <div id="comment-55907-info" class="comment-info">
 <span class="comment-age">(27 Apr '17, 08:49)</span> <span class="comment-user userinfo">andy mackey</span>

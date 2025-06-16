@@ -133,8 +133,8 @@ osqa_accepted = true
 <div id="post-42756-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: Indeed, I do not need all those steps from dcp. I just have tried it and opened a georeferenced (EXIF) JPEG photo via <a href="https://josm.openstreetmap.de/wiki/Help/Action/Open">File &gt; Open</a> in a freshly started JOSM. I've taken the liberty to convert your comment into an answer.</p>
-<p>Does this work for you too, <a href="http://help.openstreetmap.org/users/716/dcp"></a><a href="http://help.openstreetmap.org/users/716/dcp">@dcp</a>? Then please accept this answer instead.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: Indeed, I do not need all those steps from dcp. I just have tried it and opened a georeferenced (EXIF) JPEG photo via <a href="https://josm.openstreetmap.de/wiki/Help/Action/Open">File &gt; Open</a> in a freshly started JOSM. I've taken the liberty to convert your comment into an answer.</p>
+<p>Does this work for you too, <a href="https://help.openstreetmap.org/users/716/dcp"></a><a href="https://help.openstreetmap.org/users/716/dcp">@dcp</a>? Then please accept this answer instead.</p>
 </div>
 <div id="comment-42756-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 17:23)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -216,7 +216,7 @@ osqa_accepted = true
 <div id="post-42752-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/716/dcp">@dcp</a> Hope you don't mind - I set your answer to "accepted".</p>
+<p><a href="https://help.openstreetmap.org/users/716/dcp">@dcp</a> Hope you don't mind - I set your answer to "accepted".</p>
 </div>
 <div id="comment-42752-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 17:06)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

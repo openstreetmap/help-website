@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It can be done.<br />
-See also: <a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">Virtual machine image</a></p>
+See also: <a href="https://wiki.openstreetmap.org/wiki/Virtual_machine_image">Virtual machine image</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

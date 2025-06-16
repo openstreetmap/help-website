@@ -164,7 +164,7 @@ It only shows at scale 500 m ; it disappears when zooming or dezooming. I drew i
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See e.g. <a href="https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a> . In short: Just press ctrl+F5 (or just F5 - depends on your browser) to reload without caching.</p>
+<p>See e.g. <a href="/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a> . In short: Just press ctrl+F5 (or just F5 - depends on your browser) to reload without caching.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

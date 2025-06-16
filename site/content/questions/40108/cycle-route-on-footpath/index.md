@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-40109-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(re the first comment) doesn't the cycle map render footways on which cycling is allowed differently? Looking at <a href="http://www.openstreetmap.org/way/118119693/history">http://www.openstreetmap.org/way/118119693/history</a> suggests that it might do.</p>
+<p>(re the first comment) doesn't the cycle map render footways on which cycling is allowed differently? Looking at <a href="https://www.openstreetmap.org/way/118119693/history">https://www.openstreetmap.org/way/118119693/history</a> suggests that it might do.</p>
 </div>
 <div id="comment-40109-info" class="comment-info">
 <span class="comment-age">(07 Jan '15, 22:11)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

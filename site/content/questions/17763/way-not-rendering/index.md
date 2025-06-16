@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>"Way" 2008834918 is not a way, but a node: <a href="http://www.openstreetmap.org/browse/node/2008834918">https://www.openstreetmap.org/browse/node/2008834918</a></p>
+<p>"Way" 2008834918 is not a way, but a node: <a href="https://www.openstreetmap.org/browse/node/2008834918">https://www.openstreetmap.org/browse/node/2008834918</a></p>
 <p>You have entered "Natural = Bay", but renderers might be case sensitive and all tags should be lowercase.</p>
 </div>
 <div class="answer-controls post-controls">

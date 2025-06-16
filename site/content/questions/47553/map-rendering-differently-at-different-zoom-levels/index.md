@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-47572-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> No, its not a particular feature. I am sorry, I cannot add images because i am new here, need more than 30 points for that. If you see the region and zoom in, there are changes like 1) forest area appears irregularly, 2) roads are not visible, 3) farms/school/residential area are not visible.</p>
+<p><a href="https://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a> No, its not a particular feature. I am sorry, I cannot add images because i am new here, need more than 30 points for that. If you see the region and zoom in, there are changes like 1) forest area appears irregularly, 2) roads are not visible, 3) farms/school/residential area are not visible.</p>
 </div>
 <div id="comment-47572-info" class="comment-info">
 <span class="comment-age">(18 Jan '16, 17:44)</span> <span class="comment-user userinfo">livelifelively</span>
@@ -129,7 +129,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, please read these lines <a href="https://help.openstreetmap.org/questions/6933/big-creek-lake-mobile-al-differing-render-times-in-different-zoom-levels,">https://help.openstreetmap.org/questions/6933/big-creek-lake-mobile-al-differing-render-times-in-different-zoom-levels,</a> be patient, the levels will catch up in due time.</p>
+<p>Hi, please read these lines <a href="/questions/6933/big-creek-lake-mobile-al-differing-render-times-in-different-zoom-levels,">https://help.openstreetmap.org/questions/6933/big-creek-lake-mobile-al-differing-render-times-in-different-zoom-levels,</a> be patient, the levels will catch up in due time.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

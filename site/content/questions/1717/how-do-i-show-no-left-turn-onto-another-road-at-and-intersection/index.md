@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can add a turn restriction relation to indicate a no left turn. See more at <a href="http://wiki.openstreetmap.org/wiki/Turn_restriction">the wiki</a>. Note however that these restructions are not displayed on the standard OSM maps, only on specialist maps as linked from the bottom of that page.</p>
+<p>You can add a turn restriction relation to indicate a no left turn. See more at <a href="https://wiki.openstreetmap.org/wiki/Turn_restriction">the wiki</a>. Note however that these restructions are not displayed on the standard OSM maps, only on specialist maps as linked from the bottom of that page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM has a <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/turnrestrictions">turn restriction plugin</a> that simplifies the task of creating plugins, and has built-in error checking. Although many standard maps do not display turn restrictions, they are very useful for navigation apps such as the Skobbler SmartPhone app.</p>
+<p>JOSM has a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/turnrestrictions">turn restriction plugin</a> that simplifies the task of creating plugins, and has built-in error checking. Although many standard maps do not display turn restrictions, they are very useful for navigation apps such as the Skobbler SmartPhone app.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

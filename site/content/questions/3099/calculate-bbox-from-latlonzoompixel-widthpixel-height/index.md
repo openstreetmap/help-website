@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Convert the longitude and latitude of the map center to tile coordinates using the alogrithm described in <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">the Slippy Map Tilenames article on the wiki</a>, keeping the fractional part. Add / substract half of the width from tileX and half of the height from tileY to generate the coordinates of the four corners of the bbox. Convert them back to longitude and latitude using the description from the same wiki page. All you are now left to do is to create the string describing the bbox from the coordinates of the four corners. For mapnik this should be minlong,minlat,maxlong,maxlat.</p>
+<p>Convert the longitude and latitude of the map center to tile coordinates using the alogrithm described in <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">the Slippy Map Tilenames article on the wiki</a>, keeping the fractional part. Add / substract half of the width from tileX and half of the height from tileY to generate the coordinates of the four corners of the bbox. Convert them back to longitude and latitude using the description from the same wiki page. All you are now left to do is to create the string describing the bbox from the coordinates of the four corners. For mapnik this should be minlong,minlat,maxlong,maxlat.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -172,7 +172,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You probably need to take in account pixel size of each tile... I've needed this myself so this is what I've come up with and documented at <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_bbox">OSM Wiki</a>:</p>
+<p>You probably need to take in account pixel size of each tile... I've needed this myself so this is what I've come up with and documented at <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_bbox">OSM Wiki</a>:</p>
 <pre><code>use Math::Trig;
 &#10;sub getLonLat {
     my ($xtile, $ytile, $zoom) = @_;
@@ -182,9 +182,9 @@ osqa_accepted = true
     return ($lon_deg, $lat_deg);
 }
 &#10;# convert from permalink OSM format like:
-# http://www.openstreetmap.org/?lat=43.731049999999996&amp;lon=15.79375&amp;zoom=13&amp;layers=M
+# https://www.openstreetmap.org/?lat=43.731049999999996&amp;lon=15.79375&amp;zoom=13&amp;layers=M
 # to OSM &quot;Export&quot; iframe embedded bbox format like:
-# http://www.openstreetmap.org/export/embed.html?bbox=15.7444,43.708,15.8431,43.7541&amp;layer=mapnik
+# https://www.openstreetmap.org/export/embed.html?bbox=15.7444,43.708,15.8431,43.7541&amp;layer=mapnik
 &#10;sub LonLat_to_bbox {
     my ($lat, $lon, $zoom) = @_;
 &#10;    my $width = 425; my $height = 350;  # note: must modify this to match your embed map width/height in pixels

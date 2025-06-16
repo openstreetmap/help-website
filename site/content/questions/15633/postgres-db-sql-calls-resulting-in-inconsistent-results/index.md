@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello OSM,</p>
-<p>As mentioned <a href="http://help.openstreetmap.org/questions/15496/sql-statement-to-get-all-of-the-xy-pairs-from-a-way">here</a>, I have an extract of a recent planet file created with Osmosis (with the command line arguement that keeps ways even if they extend outside the cut polygon). I dumped the extract into a Postgres database using the snapshot schema. I then have a Java program that calls the following two SQL statements in two nested loops to draw the data.</p>
+<p>As mentioned <a href="/questions/15496/sql-statement-to-get-all-of-the-xy-pairs-from-a-way">here</a>, I have an extract of a recent planet file created with Osmosis (with the command line arguement that keeps ways even if they extend outside the cut polygon). I dumped the extract into a Postgres database using the snapshot schema. I then have a Java program that calls the following two SQL statements in two nested loops to draw the data.</p>
 <pre><code>OUTER LOOP BEGIN
      &quot;SELECT nodes, id from public.ways LIMIT 1 OFFSET&quot; + val
      INNER LOOP BEGIN
@@ -49,7 +49,7 @@ osqa_accepted = false
      val++
 OUTER LOOP END</code></pre>
 <p>When I run this, if a node belonging to a given way is not found, my program fires off a message to the log and keeps chugging. I have noticed that these logs are showing up in a VERY inconsistent fashion. To demonstrate this, I took the outer loop of my program and clamped it to only loop 1000 times (IE draw 1000 ways) and ran the program twice, which should yield the same results. This is what I got...</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osmwtf.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/osmwtf.jpg" alt="alt text" /></p>
 <p>Now please understand that I already know that:</p>
 <p>A. Planet files dumps take hours so SOME nodes will be missing unless you grab a daily build and use Osmosis to update your planet file...</p>
 <p>B. My extract included ways that crossed my cut polygon, for my needs I require the entire road system to be intact.</p>

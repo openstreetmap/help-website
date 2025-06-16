@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to determine how the "TILE" field in the current_nodes table is calculated based off of the latitude and longitude.</p>
-<p>I've seen the <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">slippy map tile names</a> and understand the concept of xtile vs. ytile. But I am failing to see the correlation between xtile, ytile, and the TILE value as seen in the current_nodes table. I've seen a write up on Bing about how <a href="http://msdn.microsoft.com/en-us/library/bb259689.aspx">Bing makes the conversion</a>, and it seems similar, but not exact to what OSM is doing. Any ideas?</p>
+<p>I've seen the <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">slippy map tile names</a> and understand the concept of xtile vs. ytile. But I am failing to see the correlation between xtile, ytile, and the TILE value as seen in the current_nodes table. I've seen a write up on Bing about how <a href="http://msdn.microsoft.com/en-us/library/bb259689.aspx">Bing makes the conversion</a>, and it seems similar, but not exact to what OSM is doing. Any ideas?</p>
 <p>As an example, using the following latitude and longitude, you should get the following:<br />
 Lat: 52.5164839<br />
 Lng: 13.3817427<br />

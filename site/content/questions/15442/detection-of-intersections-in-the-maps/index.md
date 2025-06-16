@@ -142,7 +142,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Yes, it should be. If not, someone hasn't joined the roads properly, as described <a href="http://help.openstreetmap.org/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">here</a>.</p>
+<p>Yes, it should be. If not, someone hasn't joined the roads properly, as described <a href="/questions/1022/what-are-the-most-common-mapping-mistakes-that-other-users-make/1023">here</a>.</p>
 </div>
 <div id="comment-15447-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 14:05)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -176,7 +176,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Yes - <a href="http://www.openstreetmap.org/browse/way/8123741">here</a>'s a stretch of oneway road (it has the tag "oneway=yes" and runs from south to north). The <a href="http://www.openstreetmap.org/browse/node/326365">first node</a> is at the south end and the <a href="http://www.openstreetmap.org/browse/node/252410326">end node</a> is at the north end. As you can see, the references of the nodes may vary (later nodes have higher reference numbers) but the order of nodes in the way will be in the order that they appear on the ground.</p>
+<p>Yes - <a href="https://www.openstreetmap.org/browse/way/8123741">here</a>'s a stretch of oneway road (it has the tag "oneway=yes" and runs from south to north). The <a href="https://www.openstreetmap.org/browse/node/326365">first node</a> is at the south end and the <a href="https://www.openstreetmap.org/browse/node/252410326">end node</a> is at the north end. As you can see, the references of the nodes may vary (later nodes have higher reference numbers) but the order of nodes in the way will be in the order that they appear on the ground.</p>
 </div>
 <div id="comment-15453-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 15:09)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -200,7 +200,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>As an addidtion to the oneway issue, there are also other tags (although not much used). oneway=-1 means the nodes are ordered in opposite direction (when the way goes from S to N, the nodes are oredered from N to S)</p>
-<p>And some discouraged alternatives like "true" and "reversed" instead of "yes" and "-1": <a href="http://wiki.openstreetmap.org/wiki/Oneway">http://wiki.openstreetmap.org/wiki/Oneway</a></p>
+<p>And some discouraged alternatives like "true" and "reversed" instead of "yes" and "-1": <a href="https://wiki.openstreetmap.org/wiki/Oneway">https://wiki.openstreetmap.org/wiki/Oneway</a></p>
 </div>
 <div id="comment-15458-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 16:29)</span> <span class="comment-user userinfo">Sanderd17</span>

@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-14899-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have a look at <a href="http://help.openstreetmap.org/questions/6742/available-address-in-osm-fails-in-lookup">this previous question</a>.</p>
+<p>Have a look at <a href="/questions/6742/available-address-in-osm-fails-in-lookup">this previous question</a>.</p>
 </div>
 <div id="comment-14899-info" class="comment-info">
 <span class="comment-age">(07 Aug '12, 17:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">Platform Status</a> Nominatim (our search engine) is still not updating due to the <a href="http://blog.osmfoundation.org/2012/07/26/automated-redactions-complete/">redaction process</a> (which has been already completed). <a href="http://nominatim.openstreetmap.org/">Nominatim</a> itself reports it data to be from <em>2012/07/10</em>.</p>
+<p>According to the <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">Platform Status</a> Nominatim (our search engine) is still not updating due to the <a href="http://blog.osmfoundation.org/2012/07/26/automated-redactions-complete/">redaction process</a> (which has been already completed). <a href="http://nominatim.openstreetmap.org/">Nominatim</a> itself reports it data to be from <em>2012/07/10</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

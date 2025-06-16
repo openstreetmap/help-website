@@ -107,7 +107,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Ways and Relations are more difficult than nodes because they've undergone changes in their data model, respectively been invented, sometime along the road. Nodes are the oldest data type that survives (largely) unchanged but even there the ancient history can be murky.</p>
-<p>In theory it would be as easy as looking at the objects with the lowest numerical IDs. However, not only have many mappers playfully repurposed those prestigious IDs during the life of the project (just study the <a href="http://www.openstreetmap.org/node/1/history">history of node #1</a>), but also (due to the aforementioned murkiness) the smallest ID doesn't necessarily mean the oldest age. The license change also additionally complicates such research as some old edits may be beyond reach today.</p>
+<p>In theory it would be as easy as looking at the objects with the lowest numerical IDs. However, not only have many mappers playfully repurposed those prestigious IDs during the life of the project (just study the <a href="https://www.openstreetmap.org/node/1/history">history of node #1</a>), but also (due to the aforementioned murkiness) the smallest ID doesn't necessarily mean the oldest age. The license change also additionally complicates such research as some old edits may be beyond reach today.</p>
 <p>The oldest currently-recorded edit is <a href="https://www.openstreetmap.org/node/5/history">version 1 of node #5</a> created in April 2005 by Steve Coast, the founder of OpenStreetMap. The oldest edit where tags were used on a node was <a href="https://www.openstreetmap.org/node/262695/history">Marley Common</a> in November 2005 by Nick Whitelegg, and this oldest tagged node has indeed survived - minus small changes to the tagging scheme - until today.</p>
 <p>If you want to do further research, grab a "full history" PBF and run it through the osmium command line tool like so:</p>
 <pre><code>osmium cat history-latest.osh.pbf -f opl -o history.opl</code></pre>
@@ -175,7 +175,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well Steve Coast started the project see <a href="http://wiki.openstreetmap.org/wiki/User:Steve">http://wiki.openstreetmap.org/wiki/User:Steve</a> I haven't been able to find his edits. The editing and recording system must have evolved a lot since (2004?). But the link above does have a contact for him so you could ask him, but he is probably quite a busy guy. If you do contact him and get the answer please let us know.</p>
+<p>Well Steve Coast started the project see <a href="https://wiki.openstreetmap.org/wiki/User:Steve">https://wiki.openstreetmap.org/wiki/User:Steve</a> I haven't been able to find his edits. The editing and recording system must have evolved a lot since (2004?). But the link above does have a contact for him so you could ask him, but he is probably quite a busy guy. If you do contact him and get the answer please let us know.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -73,7 +73,7 @@ This question is marked "community wiki".
 <div class="comment-text">
 <p>What Java version did you try to download and install? Tell us exactly!</p>
 <p>Maybe for WinXP you need an older Java version, like 1.7 or 1.6</p>
-<p>And you followed <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)">http://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)</a> ??</p>
+<p>And you followed <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)">https://wiki.openstreetmap.org/wiki/Osmosis/Quick_Install_(Windows)</a> ??</p>
 </div>
 <div id="comment-46599-info" class="comment-info">
 <span class="comment-age">(15 Nov '15, 17:12)</span> <span class="comment-user userinfo">stephan75</span>
@@ -85,7 +85,7 @@ This question is marked "community wiki".
 -1
 </div>
 <div class="comment-text">
-<p>I would suggest to get an up-to-date operating system – e.g. most Linux systems are free and for free! :-) <a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>'s cheated downvote: come on ... really?</p>
+<p>I would suggest to get an up-to-date operating system – e.g. most Linux systems are free and for free! :-) <a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>'s cheated downvote: come on ... really?</p>
 </div>
 <div id="comment-46603-info" class="comment-info">
 <span class="comment-age">(15 Nov '15, 21:51)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

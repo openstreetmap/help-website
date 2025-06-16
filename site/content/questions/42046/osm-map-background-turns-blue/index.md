@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's the same issue as <a href="https://help.openstreetmap.org/questions/41996/land-area-rendered-blue">this</a> I think.</p>
+<p>It's the same issue as <a href="/questions/41996/land-area-rendered-blue">this</a> I think.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

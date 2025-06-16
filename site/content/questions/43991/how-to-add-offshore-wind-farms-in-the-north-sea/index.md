@@ -118,7 +118,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's nothing in OSM that stops you editing things in the sea. Even the <a href="http://www.openstreetmap.org/node/306314272#map=4/44.72/-55.59">wreck of the Titanic</a> is mapped in OpenStreetMap. Perhaps you have to zoom in far enough to be able to edit it.</p>
+<p>There's nothing in OSM that stops you editing things in the sea. Even the <a href="https://www.openstreetmap.org/node/306314272#map=4/44.72/-55.59">wreck of the Titanic</a> is mapped in OpenStreetMap. Perhaps you have to zoom in far enough to be able to edit it.</p>
 <p>Please ensure you have the correct permission and copyright with the coordinates from the windfarm operators (or that you can see it on the map).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi kertendienst, Are you allowed to use the date and coordinates of the area and the powermills, according to the import rules and Open Street Maps rules, <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> and if so agreed use these lines and tags to complete the tagging of the powerplant. <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dplant">http://wiki.openstreetmap.org/wiki/Tag:power%3Dplant</a> <a href="http://wiki.openstreetmap.org/wiki/Tag:power">http://wiki.openstreetmap.org/wiki/Tag:power</a> , and take a look here, <a href="http://wiki.openstreetmap.org/wiki/Power">http://wiki.openstreetmap.org/wiki/Power</a> happy mapping. Ps and take a look at the map in the power pages with areas such as powerplants.</p>
+<p>Hi kertendienst, Are you allowed to use the date and coordinates of the area and the powermills, according to the import rules and Open Street Maps rules, <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> and if so agreed use these lines and tags to complete the tagging of the powerplant. <a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dplant">https://wiki.openstreetmap.org/wiki/Tag:power%3Dplant</a> <a href="https://wiki.openstreetmap.org/wiki/Tag:power">https://wiki.openstreetmap.org/wiki/Tag:power</a> , and take a look here, <a href="https://wiki.openstreetmap.org/wiki/Power">https://wiki.openstreetmap.org/wiki/Power</a> happy mapping. Ps and take a look at the map in the power pages with areas such as powerplants.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

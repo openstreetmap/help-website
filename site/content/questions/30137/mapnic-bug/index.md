@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi. I want to report about an error of a render in these coordinates. <a href="http://www.openstreetmap.org/#map=14/64.2950/38.0496">link text</a> There is about a week/</p>
+<p>Hi. I want to report about an error of a render in these coordinates. <a href="https://www.openstreetmap.org/#map=14/64.2950/38.0496">link text</a> There is about a week/</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>
@@ -93,9 +93,9 @@ osqa_accepted = false
 <div class="comment-text">
 <p><span></span><span>@Ильин Роман</span>: please describe a bit more what you did there. Since when is that "error"?</p>
 <p>What I see is that if you go through zoom level 18 till 12 you see greatly different states of landcover (forest/meadow) rendering. It may just be <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">delayed updates</a> since the <a href="http://zverik.osm.rambler.ru/whodidit/?zoom=13&amp;lat=64.295&amp;lon=38.04943&amp;layers=BTT">edits there</a> are quite fresh. This especially applies to the lower zoom levels. Actually I even got changes between viewing and viewing after a Ctrl+F5 refresh.</p>
-<p>The only thing that confuses me is the fingertips <a href="http://www.openstreetmap.org/?mlat=64.2808&amp;mlon=38.0729#map=15/64.2808/38.0729">there</a> being rendered light green although they are belonging to a <a href="http://www.openstreetmap.org/relation/3443273">forest</a> (as it is correctly rendered west of my marker). What I see is that if you go through zoom level 18 till 12 you see greatly different states of landcover (forest/meadow) rendering. It may just be <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">delayed updates</a> since the <a href="http://zverik.osm.rambler.ru/whodidit/?zoom=13&amp;lat=64.295&amp;lon=38.04943&amp;layers=BTT">edits there</a> are quite fresh. This especially applies to the lower zoom levels. Actually I even got changes between viewing and viewing after a Ctrl+F5 refresh.</p>
-<p>The only thing that confuses me is the fingertips <a href="http://www.openstreetmap.org/?mlat=64.2808&amp;mlon=38.0729#map=15/64.2808/38.0729">there</a> being rendered light green although they are belonging to a <a href="http://www.openstreetmap.org/relation/3443273">forest</a> (as it is correctly rendered west of my marker).</p>
-<p>Okay, one more issue found: e.g. <a href="http://www.openstreetmap.org/relation/3442487">relation/3442487</a> is not rendered (but is on e.g. humanitarian layer). I still think it may just be a (missed) update issue.</p>
+<p>The only thing that confuses me is the fingertips <a href="https://www.openstreetmap.org/?mlat=64.2808&amp;mlon=38.0729#map=15/64.2808/38.0729">there</a> being rendered light green although they are belonging to a <a href="https://www.openstreetmap.org/relation/3443273">forest</a> (as it is correctly rendered west of my marker). What I see is that if you go through zoom level 18 till 12 you see greatly different states of landcover (forest/meadow) rendering. It may just be <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">delayed updates</a> since the <a href="http://zverik.osm.rambler.ru/whodidit/?zoom=13&amp;lat=64.295&amp;lon=38.04943&amp;layers=BTT">edits there</a> are quite fresh. This especially applies to the lower zoom levels. Actually I even got changes between viewing and viewing after a Ctrl+F5 refresh.</p>
+<p>The only thing that confuses me is the fingertips <a href="https://www.openstreetmap.org/?mlat=64.2808&amp;mlon=38.0729#map=15/64.2808/38.0729">there</a> being rendered light green although they are belonging to a <a href="https://www.openstreetmap.org/relation/3443273">forest</a> (as it is correctly rendered west of my marker).</p>
+<p>Okay, one more issue found: e.g. <a href="https://www.openstreetmap.org/relation/3442487">relation/3442487</a> is not rendered (but is on e.g. humanitarian layer). I still think it may just be a (missed) update issue.</p>
 </div>
 <div id="comment-30142-info" class="comment-info">
 <span class="comment-age">(23 Jan '14, 08:45)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -119,7 +119,7 @@ osqa_accepted = false
 <div id="post-30145-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Ok, there are some problems in this <a href="http://www.openstreetmap.org/#map=18/64.28096/38.07882">coordinates</a>. There are some relation, thats not rendered only in MAPNIC. Other renderer is OK. This is a <a href="http://help.openstreetmap.org/upfiles/map.jpg">picture</a> show relations, that's have not a visibility (pardon for my french) 8) This changes were made 7 days ago and never have been rendered. It was a <a href="https://twitter.com/firefishy1/status/423787588659326976">system crash</a> that day. But this <a href="http://www.openstreetmap.org/#map=16/64.0766/38.0646">changes</a> were made yesterday have no problem.</p>
+<p>Ok, there are some problems in this <a href="https://www.openstreetmap.org/#map=18/64.28096/38.07882">coordinates</a>. There are some relation, thats not rendered only in MAPNIC. Other renderer is OK. This is a <span>picture</span> show relations, that's have not a visibility (pardon for my french) 8) This changes were made 7 days ago and never have been rendered. It was a <a href="https://twitter.com/firefishy1/status/423787588659326976">system crash</a> that day. But this <a href="https://www.openstreetmap.org/#map=16/64.0766/38.0646">changes</a> were made yesterday have no problem.</p>
 <p>PS: in that region I try to delete and draw one more time? but result was the same</p>
 </div>
 <div id="comment-30145-info" class="comment-info">

@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not listed? Search for "library": <a href="http://wiki.openstreetmap.org/wiki/Map_Features#Amenity"></a><a href="http://wiki.openstreetmap.org/wiki/Map_Features#Amenity"></a><a href="http://wiki.openstreetmap.org/wiki/Map_Features#Amenity">http://wiki.openstreetmap.org/wiki/Map_Features#Amenity</a></p>
+<p>Not listed? Search for "library": <a href="https://wiki.openstreetmap.org/wiki/Map_Features#Amenity"></a><a href="https://wiki.openstreetmap.org/wiki/Map_Features#Amenity"></a><a href="https://wiki.openstreetmap.org/wiki/Map_Features#Amenity">https://wiki.openstreetmap.org/wiki/Map_Features#Amenity</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's not at all clear what features you're asking about, but for at least some of them I believe that the answer is "No". What Nominatim can do is described on the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">wiki page here</a>. As <span>@aseerel4c26</span> said, if you could provide an example of a problem that you're trying to solve it would really help.</p>
+<p>It's not at all clear what features you're asking about, but for at least some of them I believe that the answer is "No". What Nominatim can do is described on the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">wiki page here</a>. As <span>@aseerel4c26</span> said, if you could provide an example of a problem that you're trying to solve it would really help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

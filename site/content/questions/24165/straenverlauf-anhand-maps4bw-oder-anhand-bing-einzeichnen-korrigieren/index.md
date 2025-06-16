@@ -111,7 +111,7 @@ One Answer:
 <p>Beachte: <span>Maps4BW#Wichtiger_Hinweis</span> im Wiki (<em>"Die Hausumringe werden direkt aus dem Liegenschaftskataster erzeugt und sind daher äußerst lagegenau, wenn auch nicht immer aktuell. Nach ihnen kann man das um bis zu 4 Meter abweichende Bing-Luftbild ausrichten. Die Hausumringe sind etwas kleiner als die Dächer auf den Luftbildern, da sie den Wänden entsprechen."</em>).</p>
 <p>Siehe auch die <a href="http://forum.openstreetmap.org/viewtopic.php?id=19766">Diskussion und Hinweise zur Benutzung im Forum</a> (möglicherweise noch weiteres in <a href="http://forum.openstreetmap.org/search.php?action=search&amp;keywords=maps4bw&amp;author=&amp;forums=&amp;search_in=0&amp;sort_by=0&amp;sort_dir=DESC&amp;show_as=topics">allen Diskussionen im Forum über Maps4BW</a>).</p>
 <p>Man sollte bei der Verwendung wissen, welche Datengrundlage ein Hintergrundbild hat, welche Probleme es hat, ... um zu wissen für was es geeignet ist. Oft ist es auch sinnvoll mehrere Quellen zu kombinieren (gute GPS-Aufzeichnungen und die Besichtigung vor Ort sind nicht vergessen), um die jeweiligen Stärken einer Quelle zu nutzen und die Fehler zu umgehen (eine Art der <span>Sensordatenfusion</span>, würde ich meinen).</p>
-<p>Bezüglich Straßenverlauf: Es könnte auch sein, dass die Straßen in Wirklichkeit schnurgerade sind, aber dass die Luftbilder durch die Nachbearbeitung eine Verzerrung erhalten haben. <a href="http://www.openstreetmap.org/?lat=49.70921&amp;lon=8.412557&amp;zoom=18">Beispiel einer Verzerrung im bing-Bild</a> (denn ich nehme an, dass die Gebäude gerade Wände haben), durch große Gebäudehöhe, die sich wahrscheinlich in denen zur Nachbearbeitung verwendeten Geländehöhen niederschlug.</p>
+<p>Bezüglich Straßenverlauf: Es könnte auch sein, dass die Straßen in Wirklichkeit schnurgerade sind, aber dass die Luftbilder durch die Nachbearbeitung eine Verzerrung erhalten haben. <a href="https://www.openstreetmap.org/?lat=49.70921&amp;lon=8.412557&amp;zoom=18">Beispiel einer Verzerrung im bing-Bild</a> (denn ich nehme an, dass die Gebäude gerade Wände haben), durch große Gebäudehöhe, die sich wahrscheinlich in denen zur Nachbearbeitung verwendeten Geländehöhen niederschlug.</p>
 <p>Kurz: mir scheint, die Straßen solltest du nicht aus Maps4BW abzeichnen.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -135,7 +135,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Ergänzung zu <a href="http://wiki.openstreetmap.org/wiki/Maps4BW#Stra.C3.9Fen">Straßen</a> aus Wiki: "Die breiten Straßen werden generalisiert [...]". Ist mir auch schon aufgefallen, dass der Straßenverlauf bei Maps4BW vereinfacht ist und nicht ganz passt, daher besser nicht abzeichnen.</p>
+<p>Ergänzung zu <a href="https://wiki.openstreetmap.org/wiki/Maps4BW#Stra.C3.9Fen">Straßen</a> aus Wiki: "Die breiten Straßen werden generalisiert [...]". Ist mir auch schon aufgefallen, dass der Straßenverlauf bei Maps4BW vereinfacht ist und nicht ganz passt, daher besser nicht abzeichnen.</p>
 <p>Der Such-Link ins Forum funktioniert bei mir nicht.</p>
 </div>
 <div id="comment-24172-info" class="comment-info">

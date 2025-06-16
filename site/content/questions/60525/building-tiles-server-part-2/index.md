@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi everyone,</p>
-<p>sice a while i've been working on my own osm tiles server. I've made a huge progress since this -&gt; <a href="https://help.openstreetmap.org/questions/58781/building-tiles-server">https://help.openstreetmap.org/questions/58781/building-tiles-server</a> Here are some pics showing the progress :) <img src="https://help.openstreetmap.org/upfiles/gw_map2.JPG" alt="alt text" /><img src="https://help.openstreetmap.org/upfiles/plock_map.JPG" alt="alt text" /></p>
-<p>Currenty i'm faceing another problem, this time with rendering multipolygons, to be more precise I have a problem with getting nodes (points cordinates to be connected on the drawing) in the right order. Here is the pic showing the problem: <img src="https://help.openstreetmap.org/upfiles/riverbank_error.png" alt="alt text" /></p>
+<p>sice a while i've been working on my own osm tiles server. I've made a huge progress since this -&gt; <a href="/questions/58781/building-tiles-server">https://help.openstreetmap.org/questions/58781/building-tiles-server</a> Here are some pics showing the progress :) <img src="/upfiles/gw_map2.JPG" alt="alt text" /><img src="/upfiles/plock_map.JPG" alt="alt text" /></p>
+<p>Currenty i'm faceing another problem, this time with rendering multipolygons, to be more precise I have a problem with getting nodes (points cordinates to be connected on the drawing) in the right order. Here is the pic showing the problem: <img src="/upfiles/riverbank_error.png" alt="alt text" /></p>
 <p>Thats the riverbank build of ways. It seems i have all the nodes needed but they are (propobly) in the wrong order. Currently i'm grouping all the nodes by they orderId in the "way tag" and after that by the relationId of the "relation" so at the end I'm getting a list off all nodes in the relation (multipolygon) with x,y coordinates that are going to be connected on the drawing.</p>
 <p>Aslo, I've noteced that if I draw each riverbanks way separatly the riverbanks shape looks correct, but it's not a polygon (programicaly), just a bunch of a separated lines, so I can't fill it with a color.</p>
 <p>What am I missing? Already spend 4 days trying to figure it out, thank you for any comments :)</p>
@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Multipolygon relations are not guaranteed to be ordered. You have to write an algorithm that figures out which parts need to be connected in which sequence (and which are outer or inner rings). Writing such an algorithm is hard. There is <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm">a general description on the Wiki</a> and <a href="https://github.com/osmcode/libosmium/tree/4a49a23cab9c56a720cc5133b096863e3d4d6135/include/osmium/area">a good implementation in C++ in the Osmium library</a>. Another approach is the "Polygonizer" class in the C/C++ library GEOS (bindings exist for many languages), which takes a bunch of lines and constructs a proper polygon from them.</p>
+<p>Multipolygon relations are not guaranteed to be ordered. You have to write an algorithm that figures out which parts need to be connected in which sequence (and which are outer or inner rings). Writing such an algorithm is hard. There is <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm">a general description on the Wiki</a> and <a href="https://github.com/osmcode/libosmium/tree/4a49a23cab9c56a720cc5133b096863e3d4d6135/include/osmium/area">a good implementation in C++ in the Osmium library</a>. Another approach is the "Polygonizer" class in the C/C++ library GEOS (bindings exist for many languages), which takes a bunch of lines and constructs a proper polygon from them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -134,7 +134,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>The above answer is correct, relation ways were not sorted in the right order. After implementing <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm">this algorithm</a> and some custom changes, everything seems to work correctly. Thank you for your help. And that is the current result<img src="https://help.openstreetmap.org/upfiles/riverbank.JPG" alt="alt text" /></p>
+<p>The above answer is correct, relation ways were not sorted in the right order. After implementing <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm">this algorithm</a> and some custom changes, everything seems to work correctly. Thank you for your help. And that is the current result<img src="/upfiles/riverbank.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-60597-info" class="comment-info">
 <span class="comment-age">(13 Nov '17, 13:54)</span> <span class="comment-user userinfo">michal_poz</span>

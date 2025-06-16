@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A way can be used for both, the follow function is useful for this see <a href="http://help.openstreetmap.org/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch">http://help.openstreetmap.org/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch</a> it's useful where a river borders a park or a Forrest lines a road among other uses. If you really want to keep them separate try magnifing to max and choose blank background.</p>
+<p>A way can be used for both, the follow function is useful for this see <a href="/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch">https://help.openstreetmap.org/questions/7936/how-can-i-make-a-line-that-follows-another-line-with-potlatch</a> it's useful where a river borders a park or a Forrest lines a road among other uses. If you really want to keep them separate try magnifing to max and choose blank background.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

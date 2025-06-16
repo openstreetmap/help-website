@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help me to edit / delete incorrect OSM data"
-description = '''hi, I want to edit/delete existing incorrect osm data, how to do? For eg: osm node id 5319598344 is incorrect, wants to edit the same. PS: I want to contribute(add/edit/delete) more, which tool is so easy to do.(currently using http://www.openstreetmap.org/ )'''
+description = '''hi, I want to edit/delete existing incorrect osm data, how to do? For eg: osm node id 5319598344 is incorrect, wants to edit the same. PS: I want to contribute(add/edit/delete) more, which tool is so easy to do.(currently using https://www.openstreetmap.org/ )'''
 date = "2018-01-04T07:18:00Z"
 lastmod = "2018-01-12T12:29:00Z"
 weight = 61474
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>hi,</p>
 <p>I want to edit/delete existing incorrect osm data, how to do?</p>
 <p>For eg: osm node id 5319598344 is incorrect, wants to edit the same.</p>
-<p>PS: I want to contribute(add/edit/delete) more, which tool is so easy to do.(currently using <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> )</p>
+<p>PS: I want to contribute(add/edit/delete) more, which tool is so easy to do.(currently using <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> )</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-incorrect" rel="tag" title="see questions tagged &#39;incorrect&#39;">incorrect</span> <span class="post-tag tag-link-newbie" rel="tag" title="see questions tagged &#39;newbie&#39;">newbie</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-data" rel="tag" title="see questions tagged &#39;data&#39;">data</span> <span class="post-tag tag-link-id" rel="tag" title="see questions tagged &#39;id&#39;">id</span>

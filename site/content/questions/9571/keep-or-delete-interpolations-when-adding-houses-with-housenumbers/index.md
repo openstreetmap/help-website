@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've surveyed the housenumbers of some houses in <a href="http://www.openstreetmap.org/?lat=59.23629&amp;lon=18.20872&amp;zoom=17&amp;layers=M">Trollbäcken, Sweden</a>, and now I'm tracing the houses from Bing and adding numbers to them.</p>
+<p>I've surveyed the housenumbers of some houses in <a href="https://www.openstreetmap.org/?lat=59.23629&amp;lon=18.20872&amp;zoom=17&amp;layers=M">Trollbäcken, Sweden</a>, and now I'm tracing the houses from Bing and adding numbers to them.</p>
 <p>Now some of the roads have interpolations already. Should I delete them, or is there are reason to have both an interpolation and houses/entrances with addr:housenumber?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

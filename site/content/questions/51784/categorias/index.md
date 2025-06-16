@@ -71,7 +71,7 @@ osqa_accepted = false
 <p>Goole translation: "In the list of categories of sites not listed the following: - parking - Truck - Motorcycle parking - parking caravans</p>
 <p>And should appear"</p>
 <p>What program/application/website are you referring to? Is it the ID editor?</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a> You could also use the access tag to specify the type of vehicle the parking is designed for.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking</a> You could also use the access tag to specify the type of vehicle the parking is designed for.</p>
 </div>
 <div id="comment-51785-info" class="comment-info">
 <span class="comment-age">(29 Aug '16, 14:07)</span> <span class="comment-user userinfo">nevw</span>

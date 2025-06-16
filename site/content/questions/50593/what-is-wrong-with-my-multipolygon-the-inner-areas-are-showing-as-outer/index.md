@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can someone explain to me what's going on with <a href="http://www.openstreetmap.org/relation/6378356">this wetland multipolygon</a>? It's showing the wetland pattern on the lakes, but not on the areas it should show it as, even though the lakes have role=inner. I have checked and it seems to me that the boundary is closed. Is this a mapnik error or did I mess something up?</p>
+<p>Can someone explain to me what's going on with <a href="https://www.openstreetmap.org/relation/6378356">this wetland multipolygon</a>? It's showing the wetland pattern on the lakes, but not on the areas it should show it as, even though the lakes have role=inner. I have checked and it seems to me that the boundary is closed. Is this a mapnik error or did I mess something up?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -167,9 +167,9 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Using <a href="http://analyser.openstreetmap.fr/cgi-bin/index.py">relation analyzer</a> and entering your relation 6378356 in the top left box shows there is a problem where @Hendrikklass states.<br />
-<img src="http://help.openstreetmap.org/upfiles/RA.png" alt="alt text" /></p>
+<img src="/upfiles/RA.png" alt="alt text" /></p>
 <p>Without knowing the boundary in detail myself, it seems likely, using JOSM, that the way highlighted red needs to split where indicated by the purple arrow and that small vertical portion should be left out of the boundary.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/screen.png" alt="alt text" /></p>
+<p><img src="/upfiles/screen.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

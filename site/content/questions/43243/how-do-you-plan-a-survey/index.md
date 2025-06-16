@@ -155,7 +155,7 @@ osqa_accepted = false
 <div id="post-43268-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Baldmapper consider this too <a href="http://wiki.openstreetmap.org/wiki/Photo_mapping">http://wiki.openstreetmap.org/wiki/Photo_mapping</a> ,not just as a method but just to remember the situation later.</p>
+<p>Baldmapper consider this too <a href="https://wiki.openstreetmap.org/wiki/Photo_mapping">https://wiki.openstreetmap.org/wiki/Photo_mapping</a> ,not just as a method but just to remember the situation later.</p>
 </div>
 <div id="comment-43268-info" class="comment-info">
 <span class="comment-age">(27 May '15, 21:09)</span> <span class="comment-user userinfo">Hendrikklaas</span>

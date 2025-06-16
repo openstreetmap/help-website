@@ -107,7 +107,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Paula you would need to give some indication of where this is actually taking place so that you can really get answers. Best a link from the openstreetmap.org website/map.</p>
-<p>In general however the way to get street names in to OSM is to add them, or add a note with the name and hope somebody will add them for you, see <a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a></p>
+<p>In general however the way to get street names in to OSM is to add them, or add a note with the name and hope somebody will add them for you, see <a href="https://www.openstreetmap.org/fixthemap">https://www.openstreetmap.org/fixthemap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

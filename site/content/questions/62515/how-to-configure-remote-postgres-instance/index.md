@@ -126,7 +126,7 @@ One Answer:
 <div id="post-62518-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>One more follow up, this solves the connection issue: <a href="https://help.openstreetmap.org/questions/32367/rendering-open-street-map-stoped">https://help.openstreetmap.org/questions/32367/rendering-open-street-map-stoped</a></p>
+<p>One more follow up, this solves the connection issue: <a href="/questions/32367/rendering-open-street-map-stoped">https://help.openstreetmap.org/questions/32367/rendering-open-street-map-stoped</a></p>
 <p>For some reason the server went extremely fast rendering the tiles after leaving it for an hour. Perhaps it was creating indexes, etc? Anyway, hope all of this helps someone down the road!</p>
 </div>
 <div id="comment-62518-info" class="comment-info">

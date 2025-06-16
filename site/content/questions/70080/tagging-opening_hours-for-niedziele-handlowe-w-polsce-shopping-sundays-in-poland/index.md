@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I recently learnt that there exist shopping sundays in Poland since 2018 (scattered unevenly over the whole year).</p>
-<p>I searched for existing tags and found something like 'opening_hours=Mo-Th 07:00-22:00; Fr,Sa 07:00-23:00; Su[-1] 08:00-21:00' e.g. at <a href="http://www.openstreetmap.org/way/325468584">way 325468584</a></p>
+<p>I searched for existing tags and found something like 'opening_hours=Mo-Th 07:00-22:00; Fr,Sa 07:00-23:00; Su[-1] 08:00-21:00' e.g. at <a href="https://www.openstreetmap.org/way/325468584">way 325468584</a></p>
 <p>But this is not correct at all if you look at <a href="https://www.kalbi.pl/niedziele-handlowe">kalbi.pl</a> (green sundays in the calendar).</p>
 <p>So what can one do? is it a "task" with similar difficulty like German school holidays? (except that "niedziele handlowe" are the same all over Poland)</p>
 </div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It turns out that I had not put the resource files (icons and *.xml files) in the right subdirectories. I thought I followed the directions at: <a href="http://"></a><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2</a> but when I looked at the zgroks site in the Google Chrome JavaScript console, I saw many error messages. Moved the files to the indicated directories and it works: <a href="http://"></a><a href="http://www.zgroks.com/potlatch/potlatch2.html">http://www.zgroks.com/potlatch/potlatch2.html</a>. Kewl!</p>
+<p>It turns out that I had not put the resource files (icons and *.xml files) in the right subdirectories. I thought I followed the directions at: <a href="http://"></a><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">https://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2</a> but when I looked at the zgroks site in the Google Chrome JavaScript console, I saw many error messages. Moved the files to the indicated directories and it works: <a href="http://"></a><a href="http://www.zgroks.com/potlatch/potlatch2.html">http://www.zgroks.com/potlatch/potlatch2.html</a>. Kewl!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

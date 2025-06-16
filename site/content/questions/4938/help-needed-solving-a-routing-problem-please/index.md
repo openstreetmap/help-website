@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to track down a routing problem which I believe is caused by "dodgy" data and will be pleased if you could offer some advice.</p>
-<p>I'm trying to route from Squamish in B.C., Canada, to somewhere in North Vancouver using OSM data via maps from <a href="http://garmin.na1400.info/routable.php.">http://garmin.na1400.info/routable.php.</a> (The coordinates are from Squamish at N49.70157 W123.15088 to Vancouver at N49.32185 W123.10776.) Both Garmin Map Source (GMS) and my Garmin 62CSX GPS fail to route in this direction. GMS gives me a cross country route and the GPS locks up at 100% calculating. However routing in the inverse direction works fine. By a series of routing origin binary chops in GMS I believe I've narrowed the problem down to this area in OSM (<a href="http://www.openstreetmap.org/?lat=49.401703&amp;lon=-123.243516&amp;zoom=18&amp;layers=M).">http://www.openstreetmap.org/?lat=49.401703&amp;lon=-123.243516&amp;zoom=18&amp;layers=M).</a> I've gone in to Potlatch2 and inspected the ways and relations of Highway 99 around that point but can't see anything that's obvious to me.</p>
+<p>I'm trying to route from Squamish in B.C., Canada, to somewhere in North Vancouver using OSM data via maps from <a href="http://garmin.na1400.info/routable.php.">http://garmin.na1400.info/routable.php.</a> (The coordinates are from Squamish at N49.70157 W123.15088 to Vancouver at N49.32185 W123.10776.) Both Garmin Map Source (GMS) and my Garmin 62CSX GPS fail to route in this direction. GMS gives me a cross country route and the GPS locks up at 100% calculating. However routing in the inverse direction works fine. By a series of routing origin binary chops in GMS I believe I've narrowed the problem down to this area in OSM (<a href="https://www.openstreetmap.org/?lat=49.401703&amp;lon=-123.243516&amp;zoom=18&amp;layers=M).">https://www.openstreetmap.org/?lat=49.401703&amp;lon=-123.243516&amp;zoom=18&amp;layers=M).</a> I've gone in to Potlatch2 and inspected the ways and relations of Highway 99 around that point but can't see anything that's obvious to me.</p>
 <p>Any ideas or suggestions? Many thanks...</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -177,7 +177,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you have a routing problem on a specific hardware or software platform it can be useful to test the desired routing in other services or apps.</p>
-<p>So have a look at <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> and try all other available websites (online) and apps (offline) that you can use and retry your route.</p>
+<p>So have a look at <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> and try all other available websites (online) and apps (offline) that you can use and retry your route.</p>
 <p>But also pay attention to the age of te mapping data belonging to each service, some may be outdated. ANd not all services or apps can deal with turn restrictions.</p>
 <p>Problem still there?</p>
 </div>

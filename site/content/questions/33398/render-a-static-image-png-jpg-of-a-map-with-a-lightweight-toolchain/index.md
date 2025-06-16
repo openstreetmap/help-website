@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am looking for a really simple thing: Getting a image of a map. I already found some solutions like using openlayers and capturing a screenshot of a openlayers site with phantom js (requires qt) or a solution like the one posted here: <a href="https://help.openstreetmap.org/questions/23034/maps-to-static-image-to-be-stored-on-a-mobile-application">https://help.openstreetmap.org/questions/23034/maps-to-static-image-to-be-stored-on-a-mobile-application</a> But this uses Mapnik, which has a bunch of dependencies. Since I want to generate the mapimages on a slim <strong>ARM</strong> linux, I need a much more lightweight solution, with less dependencies.</p>
+<p>I am looking for a really simple thing: Getting a image of a map. I already found some solutions like using openlayers and capturing a screenshot of a openlayers site with phantom js (requires qt) or a solution like the one posted here: <a href="/questions/23034/maps-to-static-image-to-be-stored-on-a-mobile-application">https://help.openstreetmap.org/questions/23034/maps-to-static-image-to-be-stored-on-a-mobile-application</a> But this uses Mapnik, which has a bunch of dependencies. Since I want to generate the mapimages on a slim <strong>ARM</strong> linux, I need a much more lightweight solution, with less dependencies.</p>
 <p>Any ideas? :)</p>
 <p>Edit: So what do I want to achieve?</p>
 <ul>
@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Our <a href="http://wiki.openstreetmap.org/wiki/Rendering">wiki page about Rendering</a> lists a few options. MapWeaver, for example, is a somewhat niche rendering engine that might fit your needs. Be aware that the least "lightweight" thing about all this will likely be to grab the data - it sounds like you would not want to have a 25 GB planet file lying around, much less keep the world's geodata available in a database. If you don't have the data locally then you will need to download it from a server whenever you want to generate a map, and that would then limit your options because you'd be placing load on the server.</p>
+<p>Our <a href="https://wiki.openstreetmap.org/wiki/Rendering">wiki page about Rendering</a> lists a few options. MapWeaver, for example, is a somewhat niche rendering engine that might fit your needs. Be aware that the least "lightweight" thing about all this will likely be to grab the data - it sounds like you would not want to have a 25 GB planet file lying around, much less keep the world's geodata available in a database. If you don't have the data locally then you will need to download it from a server whenever you want to generate a map, and that would then limit your options because you'd be placing load on the server.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

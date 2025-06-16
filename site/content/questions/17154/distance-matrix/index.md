@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Currently there is no official routing API for OSM yet but there are lots of third-party <a href="http://wiki.openstreetmap.org/wiki/Routing">routing solutions</a>, either <a href="http://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">offline routers</a> (and consequently without any limitation) or <a href="http://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">online routers</a> where each service has different limitations (or none at all).</p>
+<p>Currently there is no official routing API for OSM yet but there are lots of third-party <a href="https://wiki.openstreetmap.org/wiki/Routing">routing solutions</a>, either <a href="https://wiki.openstreetmap.org/wiki/Routing/OfflineRouters">offline routers</a> (and consequently without any limitation) or <a href="https://wiki.openstreetmap.org/wiki/Routing/OnlineRouters">online routers</a> where each service has different limitations (or none at all).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is now a newer question &amp; answers: <a href="https://help.openstreetmap.org/questions/37861/distance-matrix-api">https://help.openstreetmap.org/questions/37861/distance-matrix-api</a></p>
+<p>There is now a newer question &amp; answers: <a href="/questions/37861/distance-matrix-api">https://help.openstreetmap.org/questions/37861/distance-matrix-api</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi, some houses in my neighborhood are mapped as multipolygons while it's only simple shapes that could be represented as only one surface...</p>
 <p>Do you have any idea of what to do? Thanks in advance for your help! :)</p>
 <p>Here is an example:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Capture_du_2017-02-04_10-36-29.png" alt="house mapped as multipolygon" /></p>
+<p><img src="/upfiles/Capture_du_2017-02-04_10-36-29.png" alt="house mapped as multipolygon" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-house" rel="tag" title="see questions tagged &#39;house&#39;">house</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span> <span class="post-tag tag-link-houses" rel="tag" title="see questions tagged &#39;houses&#39;">houses</span>

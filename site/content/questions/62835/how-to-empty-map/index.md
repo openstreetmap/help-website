@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/40664/how-to-hide-all-labels-of-osm">How to hide all labels of OSM.</a></p>
+<p>See <a href="/questions/40664/how-to-hide-all-labels-of-osm">How to hide all labels of OSM.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

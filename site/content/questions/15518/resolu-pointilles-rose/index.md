@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bonjour Eric,</p>
-<p>Il s'agit de ce chemin ? <a href="http://www.openstreetmap.org/browse/way/171379041">http://www.openstreetmap.org/browse/way/171379041</a> Il est indiqué comme "privé", donc le pointillé rose est normal.</p>
+<p>Il s'agit de ce chemin ? <a href="https://www.openstreetmap.org/browse/way/171379041">https://www.openstreetmap.org/browse/way/171379041</a> Il est indiqué comme "privé", donc le pointillé rose est normal.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -153,7 +153,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>google translation :- Hello Eric,</p>
-<p>It is this path? <a href="http://www.openstreetmap.org/browse/way/171379041">http://www.openstreetmap.org/browse/way/171379041</a> It is listed as "private", so the dotted pink is normal.</p>
+<p>It is this path? <a href="https://www.openstreetmap.org/browse/way/171379041">https://www.openstreetmap.org/browse/way/171379041</a> It is listed as "private", so the dotted pink is normal.</p>
 </div>
 <div id="comment-15551-info" class="comment-info">
 <span class="comment-age">(27 Aug '12, 13:16)</span> <span class="comment-user userinfo">andy mackey</span>

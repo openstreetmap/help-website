@@ -117,7 +117,7 @@ One Answer:
 <p>Dann musst Du nur die Angaben bzgl. der JS Dateien von http in https ändern im HTML Beispiel.</p>
 <p>D.h.:</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://openlayers.org/api/OpenLayers.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.openstreetmap.org/openlayers/OpenStreetMap.js&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.openstreetmap.org/openlayers/OpenStreetMap.js&quot;&gt;
 &lt;/script&gt;</code></pre>
 <p>muss geändert werden in:</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://openlayers.org/api/OpenLayers.js&quot;&gt;&lt;/script&gt;

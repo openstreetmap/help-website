@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're using the "Potlatch 2" editor (and assuming you're <a href="http://www.openstreetmap.org/user/snowflower">this user</a> on the OSM site, you are), you'll see "park" listed under "natural". In fact, if you edit <a href="http://www.openstreetmap.org/way/234642389">this item</a> again and click on it, all should become clear.</p>
+<p>If you're using the "Potlatch 2" editor (and assuming you're <a href="https://www.openstreetmap.org/user/snowflower">this user</a> on the OSM site, you are), you'll see "park" listed under "natural". In fact, if you edit <a href="https://www.openstreetmap.org/way/234642389">this item</a> again and click on it, all should become clear.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

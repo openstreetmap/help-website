@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you mean <em>where</em> instead of <em>how</em> have a look <a href="http://wiki.openstreetmap.org/wiki/OSM%20Map%20On%20Garmin/Download#North%20America">here</a>.</p>
+<p>If you mean <em>where</em> instead of <em>how</em> have a look <a href="https://wiki.openstreetmap.org/wiki/OSM%20Map%20On%20Garmin/Download#North%20America">here</a>.</p>
 <p>hth malenki</p>
 </div>
 <div class="answer-controls post-controls">

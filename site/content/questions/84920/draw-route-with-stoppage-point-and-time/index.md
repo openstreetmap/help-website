@@ -43,10 +43,10 @@ osqa_accepted = false
 <pre><code> var polyline = L.polyline(latlngs, { color: &#39;red&#39; }).addTo(lrmap);
  lrmap.fitBounds(polyline.getBounds());</code></pre>
 <p>after zooming map , plotted route line change there position , second i want to place marker on stoppage route with my data field (speed).if speed is 0 than plot markers on that points.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/p-1.png" alt="alt text" /></p>
+<p><img src="/upfiles/p-1.png" alt="alt text" /></p>
 <p>after Zooming</p>
-<p><img src="https://help.openstreetmap.org/upfiles/P-2.png" alt="alt text" /></p>
-<p>required result <img src="https://help.openstreetmap.org/upfiles/P-3.png" alt="alt text" /></p>
+<p><img src="/upfiles/P-2.png" alt="alt text" /></p>
+<p>required result <img src="/upfiles/P-3.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm interesting in generating URL's to get a single map PNG for a given latitude/longitude range. Experimenting with the "Export" tab at <a href="http://openstreetmap.org">openstreetmap.org</a>, I've found that you must pass the latitude/longitude range, as well as a scale value. I haven't been able to figure out exactly how to calculate the scale that gives me the number of pixels I want.</p>
-<p>I working from the information here: <a href="http://wiki.openstreetmap.org/wiki/FAQ#What_is_the_map_scale_for_a_particular_zoom_level_of_the_map.3F">http://wiki.openstreetmap.org/wiki/FAQ#What_is_the_map_scale_for_a_particular_zoom_level_of_the_map.3F</a></p>
+<p>I working from the information here: <a href="https://wiki.openstreetmap.org/wiki/FAQ#What_is_the_map_scale_for_a_particular_zoom_level_of_the_map.3F">https://wiki.openstreetmap.org/wiki/FAQ#What_is_the_map_scale_for_a_particular_zoom_level_of_the_map.3F</a></p>
 <p>It appears that scale means the ratio of the map size shown on the screen, assuming a DPI of 72, to the actual size of the geographic area included. The page indicates that that is only true at the equator, however, and the scale number is interpreted differently at other latitudes, but let's skip that for now and look at the equator.</p>
 <p>A single degree of longitude at the equator is 111320.0 meters across. As a silly example to keep the math simple, if I use the export web page interface to set the rectangle to a 1 degree square centered on the equator, and the scale to 1:1, it reports an image size of 397569610 pixels wide (don't worry I didn't try to download this image!). Assuming 72dpi, and with 39.37 inches in a meter, that works out to 397569610 / (72*39.37) = 140,254 meters, rather than the expected 111,320. (It's not just an artifact of using that absurd scale, it works out the same at other scales with another multiplication step).</p>
 <p>Any idea of what's wrong with my assumptions/math?</p>
@@ -252,7 +252,7 @@ osqa_accepted = false
 <p>So if you have a screen with 96 dpi, you get that one pixel is 1.1943 meters. And you get a scale of 1 : 4 231 which means that 1 cm on your screen is 42.3 m in reality.</p>
 <p>If you have a printer which prints 300 dpi … (now do the calculations yourself).</p>
 <hr />
-<p>There is a <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">wiki page about scaling</a>.</p>
+<p>There is a <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale">wiki page about scaling</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

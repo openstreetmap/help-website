@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There are a couple of gates at the end of roads near me marked on OSM as shown in the following screenshot, i.e. two gates with a cycleway connecting them:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_20201128_000903.jpg" alt="gate marked on osm.org, as described above" /></p>
+<p><img src="/upfiles/IMG_20201128_000903.jpg" alt="gate marked on osm.org, as described above" /></p>
 <p>Here is how one of the gates appears in real life:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/IMG_20201128_001605.jpg" alt="gate in real life" /></p>
+<p><img src="/upfiles/IMG_20201128_001605.jpg" alt="gate in real life" /></p>
 <p>As can be seen, it's a single gate which may only be opened to pass by emergency vehicles. It has space either side for bikes and motorbikes to pass (the car on the left probably shouldn't be parked there).</p>
 <p>My question is whether this a correct representation of this type of gate. It seems correct in that it shows that civilian vehicles can't pass while bikes can (assuming that everything is tagged correctly), but fails to represent what's actually there, plus the cycleway doesn't permit emergency vehicles.</p>
 <p>Suggestions for what to replace this with or how to improve it would be appreciated, or an explanation as to why this is in fact correct. I feel it's more complex than a simple gate given the access allowed to bikes etc. Thanks in advance for any help!</p>
@@ -248,7 +248,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Gate_and_by-pass.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Gate_and_by-pass.JPG" alt="alt text" /></p>
 <p>Some thing like this could be a solution.</p>
 </div>
 <div class="answer-controls post-controls">

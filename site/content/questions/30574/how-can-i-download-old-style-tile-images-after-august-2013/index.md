@@ -130,7 +130,7 @@ One Answer:
 <div class="answer-body">
 <p>I'm not sure I understand the question, so what follows might be way off what you're asking for, but here goes anyway...</p>
 <p>If you mean tile co-ordinates in the sense of latitude and longitude, then if you look at somewhere using the OSM website and move the map slightly, you'll get a URL such as:</p>
-<p><a href="http://www.openstreetmap.org/#map=15/60.1898/24.9555">http://www.openstreetmap.org/#map=15/60.1898/24.9555</a></p>
+<p><a href="https://www.openstreetmap.org/#map=15/60.1898/24.9555">https://www.openstreetmap.org/#map=15/60.1898/24.9555</a></p>
 <p>Change the zoom (15), longitude (24.9555) and latitude (60.1898) to your desired values and you'll</p>
 <p>If you have the tile URLs from before and want to obtain tile URLs for a gap, then just move the map to your desired location, ensure that no overlays are shown by closing any search boxes etc., right-click the map and "view image". You'll get a URL such as:</p>
 <p><a href="http://c.tile.openstreetmap.org/15/18655/9481.png">http://c.tile.openstreetmap.org/15/18655/9481.png</a></p>

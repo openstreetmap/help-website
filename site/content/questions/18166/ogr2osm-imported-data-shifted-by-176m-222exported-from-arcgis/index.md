@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>We were given city administrative boundary data as .shp files with the permission to import those to OSM / use on <a href="http://www.addismap.com">AddisMap.com</a>.</p>
-<p>I have used the <a href="http://wiki.openstreetmap.org/wiki/Ogr2osm">Ogr2Osm</a> scripts to convert this data to the OSM format. I tried all three versions (old SVN, UVM rewrite, pnorman's updated version) which are linked in the Wiki.</p>
+<p>I have used the <a href="https://wiki.openstreetmap.org/wiki/Ogr2osm">Ogr2Osm</a> scripts to convert this data to the OSM format. I tried all three versions (old SVN, UVM rewrite, pnorman's updated version) which are linked in the Wiki.</p>
 <p>All of them produce the same results, but when I load the data in JOSM and compare them with the existing city data (Addis Ababa, Ethiopia), the imported data seems to be shifted by 176m, 222° (I measured this by drawing a way from the point where it should be to the imported point in JOSM)</p>
 <p>When using Ogr2Osm it produces the following output:</p>
 <pre><code>Detected projection metadata:

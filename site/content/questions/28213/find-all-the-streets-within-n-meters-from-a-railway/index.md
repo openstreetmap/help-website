@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the OSM wiki there is a documentation of the parameter "<a href="http://wiki.openstreetmap.org/wiki/Overpass_API#Around">around</a>" ...</p>
+<p>In the OSM wiki there is a documentation of the parameter "<a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Around">around</a>" ...</p>
 <p>have you tried this? Please tell us success or failure, including your query string.</p>
 </div>
 <div class="answer-controls post-controls">

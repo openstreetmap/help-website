@@ -70,7 +70,7 @@ osqa_accepted = false
   --used-node ^
   --write-pbf omitmetadata=true file=&quot;D:/GIS Data/Tijdelijk/provinciestestosmosis.osm.pbf&quot;</code></pre>
 <p>However this yields an enormous result (700 MB PBF file), including far more data then is neccessary for the selected relations. Can someone please elaborate on how to exactly read the Osmosis queries and show an example of what is the correct query (relations:admin_level=4 including depending sub-relations, ways and nods)?</p>
-<p>BTW: This question is related to my question about <a href="https://help.openstreetmap.org/questions/47932/filters-in-osmfilter-a-lot-of-unwanted-data">Osmfilter</a>.</p>
+<p>BTW: This question is related to my question about <a href="/questions/47932/filters-in-osmfilter-a-lot-of-unwanted-data">Osmfilter</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-extract" rel="tag" title="see questions tagged &#39;extract&#39;">extract</span> <span class="post-tag tag-link-osmosis" rel="tag" title="see questions tagged &#39;osmosis&#39;">osmosis</span>

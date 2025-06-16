@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You may find some hints at this question:</p>
-<p><a href="https://help.openstreetmap.org/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">can-i-influence-what-gets-rendered-in-the-main-mapnik-layer</a></p>
+<p><a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">can-i-influence-what-gets-rendered-in-the-main-mapnik-layer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

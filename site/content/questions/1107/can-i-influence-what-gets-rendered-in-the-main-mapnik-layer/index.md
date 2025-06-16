@@ -41,7 +41,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I notice some POIs (schools, kindergardens...) are not rendered at all. Is it possible to customise rendering? The CloudMade renderer (<a href="http://maps.cloudmade.com">maps.cloudmade.com</a>) has a better set up for POIs IMHO.</p>
-<p>Related question: <a href="http://help.openstreetmap.org/questions/7560/is-there-a-mapnik-layer-rendering-setting-for-osmorg">Is there a Mapnik layer rendering setting for</a> <a href="http://osm.org">osm.org</a>?</p>
+<p>Related question: <a href="/questions/7560/is-there-a-mapnik-layer-rendering-setting-for-osmorg">Is there a Mapnik layer rendering setting for</a> <a href="http://osm.org">osm.org</a>?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>
@@ -66,7 +66,7 @@ osqa_accepted = true
 <div id="post-9599-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See also: <strong><a href="http://help.openstreetmap.org/questions/7560/is-there-a-mapnik-layer-rendering-setting-for-osmorg">Mapnik rendering setting</a></strong></p>
+<p>See also: <strong><a href="/questions/7560/is-there-a-mapnik-layer-rendering-setting-for-osmorg">Mapnik rendering setting</a></strong></p>
 </div>
 <div id="comment-9599-info" class="comment-info">
 <span class="comment-age">(22 Dec '11, 14:56)</span> <span class="comment-user userinfo">Kozuch</span>
@@ -283,7 +283,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>As Frederik said, you can make your own tiles. But you can also add an overlay on a existing map with the POI you want to shown. There is two ways for achieving that:</p>
 <ul>
-<li>vectorial layer with openlayers as describe <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">here</a></li>
+<li>vectorial layer with openlayers as describe <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">here</a></li>
 <li>build your own tiles with transparent background with only your wanted POIs</li>
 </ul>
 </div>

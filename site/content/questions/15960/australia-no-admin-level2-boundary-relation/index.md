@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to use the OSM data for Australia, and expected to find an admin-level=2 boundary relation for the country, but there does not appear to be one. On <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">this wiki page</a>, the boundary level specification for Australia is listed as "proposed".</p>
+<p>I am trying to use the OSM data for Australia, and expected to find an admin-level=2 boundary relation for the country, but there does not appear to be one. On <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dadministrative">this wiki page</a>, the boundary level specification for Australia is listed as "proposed".</p>
 <p>I'm slightly surprised by this - I've examined 46 countries and Australia is the first one that hasn't had an admin-level=2 relation.</p>
 <p>I've had a look at a few Australia-specific forums and other resources, but nobody seems to be discussing this... does anyone know what's happening with it?</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think <a href="http://www.openstreetmap.org/browse/relation/80500">this</a> might be what is left of the boundary relation, but most of the boundary, and a couple of the relevant relation tags seem to have been redacted.</p>
+<p>I think <a href="https://www.openstreetmap.org/browse/relation/80500">this</a> might be what is left of the boundary relation, but most of the boundary, and a couple of the relevant relation tags seem to have been redacted.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

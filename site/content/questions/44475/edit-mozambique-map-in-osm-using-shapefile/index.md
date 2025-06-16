@@ -71,7 +71,7 @@ osqa_accepted = false
 <p>Hi Abdul,</p>
 <p>This is where OSM is different, all the data is available for commercial use under the ODbL licence. Any data added to OSM must be compatible with that licence or risk deletion.</p>
 <p>Please understand, I am not trying to put up a roadblock. Quite the contrary, I will happily assist you once the licence issue is resolved.</p>
-<p>Please see <a href="http://wiki.openstreetmap.org/wiki/Potential_Datasources">here</a> for further information</p>
+<p>Please see <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">here</a> for further information</p>
 </div>
 <div id="comment-44483-info" class="comment-info">
 <span class="comment-age">(28 Jul '15, 16:48)</span> <span class="comment-user userinfo">DaCor</span>

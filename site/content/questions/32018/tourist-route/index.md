@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>add a Relation:Route for the route. See <a href="http://wiki.openstreetmap.org/wiki/Relation">http://wiki.openstreetmap.org/wiki/Relation</a> and <a href="http://wiki.openstreetmap.org/wiki/Relation:route">http://wiki.openstreetmap.org/wiki/Relation:route</a></p>
+<p>add a Relation:Route for the route. See <a href="https://wiki.openstreetmap.org/wiki/Relation">https://wiki.openstreetmap.org/wiki/Relation</a> and <a href="https://wiki.openstreetmap.org/wiki/Relation:route">https://wiki.openstreetmap.org/wiki/Relation:route</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

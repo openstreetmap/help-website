@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Please see <a href="https://help.openstreetmap.org/questions/25073/how-can-i-download-maps-to-use-on-my-android-navfree-gps">https://help.openstreetmap.org/questions/25073/how-can-i-download-maps-to-use-on-my-android-navfree-gps</a></p>
+<p>Please see <a href="/questions/25073/how-can-i-download-maps-to-use-on-my-android-navfree-gps">https://help.openstreetmap.org/questions/25073/how-can-i-download-maps-to-use-on-my-android-navfree-gps</a></p>
 </div>
 <div id="comment-27016-info" class="comment-info">
 <span class="comment-age">(08 Oct '13, 15:05)</span> <span class="comment-user userinfo">gormo</span>

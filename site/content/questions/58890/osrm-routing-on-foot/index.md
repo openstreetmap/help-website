@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-58891-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are a few comments and links on a previous question <a href="https://help.openstreetmap.org/questions/30272/how-the-routing-osrm-algorithm-works">here</a> - do they help?</p>
+<p>There are a few comments and links on a previous question <a href="/questions/30272/how-the-routing-osrm-algorithm-works">here</a> - do they help?</p>
 </div>
 <div id="comment-58891-info" class="comment-info">
 <span class="comment-age">(31 Aug '17, 11:04)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

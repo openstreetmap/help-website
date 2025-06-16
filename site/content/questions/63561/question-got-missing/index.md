@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Where is <a href="https://help.openstreetmap.org/questions/63204/two-osm-maps-imported-in-two-different-dbs">https://help.openstreetmap.org/questions/63204/two-osm-maps-imported-in-two-different-dbs</a> gone? I've bookmarked the question and now it's gone!</p>
+<p>Where is <a href="/questions/63204/two-osm-maps-imported-in-two-different-dbs">https://help.openstreetmap.org/questions/63204/two-osm-maps-imported-in-two-different-dbs</a> gone? I've bookmarked the question and now it's gone!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-question" rel="tag" title="see questions tagged &#39;question&#39;">question</span>

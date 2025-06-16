@@ -41,8 +41,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>(If this is the wrong way to address this, sorry and please direct me elsewhere.)</p>
-<p>US-9, called "New Road" or "South New Road", crosses <a href="http://www.openstreetmap.org/#map=15/39.3771/-74.5467&amp;layers=N">this section of Northfield NJ</a> from SW to NE. On the map, the Way has been broken up by someone careless or malicious. The map shows the road stopping at Tilton Rd going NE, and starting up again at the Northfield/Pleasantville city boundary. I can assure you the road is continuous through this area (and heavily traveled).</p>
-<p>I suspect that <a href="http://www.openstreetmap.org/changeset/36020124">changeset #36020124</a> caused this. It looks like a law firm wanted to mark themselves on the map, and perhaps in the process they damaged the Way. But maybe it was someone else. I'm new at this and can't really tell from history. Also I do not have the skills to repair this. I placed a Map Note there a few days ago, hoping someone with more skills could take a look and perhaps fix it, but I don't know if any mappers are active in this area.</p>
+<p>US-9, called "New Road" or "South New Road", crosses <a href="https://www.openstreetmap.org/#map=15/39.3771/-74.5467&amp;layers=N">this section of Northfield NJ</a> from SW to NE. On the map, the Way has been broken up by someone careless or malicious. The map shows the road stopping at Tilton Rd going NE, and starting up again at the Northfield/Pleasantville city boundary. I can assure you the road is continuous through this area (and heavily traveled).</p>
+<p>I suspect that <a href="https://www.openstreetmap.org/changeset/36020124">changeset #36020124</a> caused this. It looks like a law firm wanted to mark themselves on the map, and perhaps in the process they damaged the Way. But maybe it was someone else. I'm new at this and can't really tell from history. Also I do not have the skills to repair this. I placed a Map Note there a few days ago, hoping someone with more skills could take a look and perhaps fix it, but I don't know if any mappers are active in this area.</p>
 <p>It would be great if someone could take a look, and perhaps even revert the changeset if that was indeed the cause.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -76,7 +76,7 @@ osqa_accepted = true
 <div id="post-47267-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> If you're seeing a consistent series of advertising edits, I'd definitely mention it on a local, national or international mailing list or forum, so that other people are aware too.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> If you're seeing a consistent series of advertising edits, I'd definitely mention it on a local, national or international mailing list or forum, so that other people are aware too.</p>
 <p>There certainly are people doing "advertising edits" and adding "advertising notes" consistently - have a look at <a href="http://api.openstreetmap.org/api/0.6/notes/search?q=clients&amp;closed=0">http://api.openstreetmap.org/api/0.6/notes/search?q=clients&amp;closed=0</a> and you'll see the sort of things that get added as notes. Where I am (GB) notes tend to get left if they've got useful information in them (e.g. an address) but removed if they're obviously misplaced. I've added notes near suspicious edits in the past asking for the local community to validate (which do get a response in the following months).</p>
 <p>I've seen "changing a street (or town) name to a business name" 3 or 4 times; in a couple of those it was fairly obviously just an editing error rather than attempt at vandalism. <a href="http://onosm.org/">http://onosm.org/</a> might be helpful here - it's a way to guide business owners through getting the details we're interested in (verifiable geographical info) and leaving out the rest (advertising copy).</p>
 </div>
@@ -89,7 +89,7 @@ osqa_accepted = true
 <div id="post-47269-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, they are almost always one-off edits (username is same as business name), so I'm not sure what there is to do about them. They may be mistakenly changing data like streetname, but it's kind of annoying. I have sometimes left changeset comments, but don't bother as much since it's difficult to search back through them.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, they are almost always one-off edits (username is same as business name), so I'm not sure what there is to do about them. They may be mistakenly changing data like streetname, but it's kind of annoying. I have sometimes left changeset comments, but don't bother as much since it's difficult to search back through them.</p>
 </div>
 <div id="comment-47269-info" class="comment-info">
 <span class="comment-age">(22 Dec '15, 16:11)</span> <span class="comment-user userinfo">neuhausr</span>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>What is the license of the GPS data which is collected in and offered for download by OSM? At the according <a href="http://wiki.openstreetmap.org/wiki/Planet.gpx">wiki page</a> and (after using search engines) nowhere else seems a license for the GPS data to be mentioned.</p>
+<p>What is the license of the GPS data which is collected in and offered for download by OSM? At the according <a href="https://wiki.openstreetmap.org/wiki/Planet.gpx">wiki page</a> and (after using search engines) nowhere else seems a license for the GPS data to be mentioned.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-gps-data" rel="tag" title="see questions tagged &#39;gps-data&#39;">gps-data</span> <span class="post-tag tag-link-license" rel="tag" title="see questions tagged &#39;license&#39;">license</span>

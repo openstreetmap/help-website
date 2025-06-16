@@ -244,7 +244,7 @@ This answer is marked "community wiki".
 <div id="post-54278-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11060/huttite">@Huttite</a> &amp; <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Thanks for the replies but divide in two is specifically what I want to avoid. As you point out it's laborious.</p>
+<p><a href="https://help.openstreetmap.org/users/11060/huttite">@Huttite</a> &amp; <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> Thanks for the replies but divide in two is specifically what I want to avoid. As you point out it's laborious.</p>
 <p>As it's already written &amp; in use on the main Wiki site, you'd think it couldn't be that much hassle to install in on OSM's one.</p>
 </div>
 <div id="comment-54278-info" class="comment-info">
@@ -256,7 +256,7 @@ This answer is marked "community wiki".
 <div id="post-54281-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a>: yes, I fully agree, most such server-side tools are likely available as source code (and are free software) and are easily adjustable. If there is a "blame" tool which would run on the client-side it would possibly just need a replacement of one string in its JavaScript code.</p>
+<p><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a>: yes, I fully agree, most such server-side tools are likely available as source code (and are free software) and are easily adjustable. If there is a "blame" tool which would run on the client-side it would possibly just need a replacement of one string in its JavaScript code.</p>
 </div>
 <div id="comment-54281-info" class="comment-info">
 <span class="comment-age">(25 Jan '17, 07:42)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -278,7 +278,7 @@ This answer is marked "community wiki".
 <div id="post-54291-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/1532/davef">@DaveF</a>: you are asking for something to be "'built in'" - what do you mean? Do you mean a tool should available as link from the wiki history page? That is easy and would just need a wiki admin to add a bit to the history page's header. We could add Flominator's tool there (I just would first ask him due to a bit more resource consumption by our users). Meta: I took the liberty to add the link to your comment.</p>
+<p><a href="https://help.openstreetmap.org/users/1532/davef">@DaveF</a>: you are asking for something to be "'built in'" - what do you mean? Do you mean a tool should available as link from the wiki history page? That is easy and would just need a wiki admin to add a bit to the history page's header. We could add Flominator's tool there (I just would first ask him due to a bit more resource consumption by our users). Meta: I took the liberty to add the link to your comment.</p>
 </div>
 <div id="comment-54291-info" class="comment-info">
 <span class="comment-age">(25 Jan '17, 20:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -146,7 +146,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>... see also:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_Icons">http://wiki.openstreetmap.org/wiki/Map_Icons</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_Icons">https://wiki.openstreetmap.org/wiki/Map_Icons</a></p>
 </div>
 <div id="comment-34566-info" class="comment-info">
 <span class="comment-age">(02 Jul '14, 18:13)</span> <span class="comment-user userinfo">stephan75</span>

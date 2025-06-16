@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use these two tags: <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dclothes">shop=clothes</a>, and <a href="http://wiki.openstreetmap.org/wiki/Key:clothes">clothes</a>=accessories</p>
+<p>You could use these two tags: <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dclothes">shop=clothes</a>, and <a href="https://wiki.openstreetmap.org/wiki/Key:clothes">clothes</a>=accessories</p>
 <p>I think of Accessorize as a type of clothes shop ... but I'm not a big follower of fashion! Likewise for shops that sell fashion handbags. And then I've used shop=bags for shops selling travel bags, suitcases, etc.</p>
 <p>If you like looking at XML, you can find all the things tagged name=Accessorize (and see their other tags) using this XAPI query: <a href="http://open.mapquestapi.com/xapi/api/0.6/*%5Bname=Accessorize%5D">http://open.mapquestapi.com/xapi/api/0.6/*[name=Accessorize]</a></p>
 </div>
@@ -129,7 +129,7 @@ osqa_accepted = false
 <div id="post-9784-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've also <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:clothes#Suggest_adding_clothes.3Daccessories">suggested add clothes=accessories to the list</a></p>
+<p>I've also <a href="https://wiki.openstreetmap.org/wiki/Talk:Key:clothes#Suggest_adding_clothes.3Daccessories">suggested add clothes=accessories to the list</a></p>
 </div>
 <div id="comment-9784-info" class="comment-info">
 <span class="comment-age">(03 Jan '12, 21:23)</span> <span class="comment-user userinfo">Harry Wood</span>

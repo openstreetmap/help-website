@@ -155,7 +155,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have no idea about Locus Free, but this <a href="http://twitter.com/gravitystorm/status/66425227088904192">recent tweet</a> by the author of OpenCycleMap and its associated link <a href="http://www.gravitystorm.co.uk/shine/third-party-use-of-tiles/">link text</a> on his website, might be the root of the problem. This is <strong>NOT</strong> an OpenStreetMap issue, but rather one belonging to the author of Locus Free. I suggest you take it up with the appropriate people there.</p>
-<p>Like Andy Allan, the OSM foundation has a <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> for its tiles which is, unfortunately, frequently abused by creators of apps for smartphones.</p>
+<p>Like Andy Allan, the OSM foundation has a <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> for its tiles which is, unfortunately, frequently abused by creators of apps for smartphones.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

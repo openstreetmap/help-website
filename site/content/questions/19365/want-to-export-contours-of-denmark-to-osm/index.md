@@ -199,7 +199,7 @@ osqa_accepted = false
 <p>The process of adding a whole bunch of data from somewhere else to OSM is called <em>im</em>port. There are many things to think about even before you come to the technical aspect. You can read about it at <span>our documentation wiki about "Imports"</span>. Also see other <span>questions tagged with "import"</span>.</p>
 <p>The most important things:</p>
 <ul>
-<li>license - are you really allowed to import the data to our database (<a href="http://www.openstreetmap.org/copyright">copyright info</a>) or is it just "free" (free of cost)? E.g. commercial use must be allowed.</li>
+<li>license - are you really allowed to import the data to our database (<a href="https://www.openstreetmap.org/copyright">copyright info</a>) or is it just "free" (free of cost)? E.g. commercial use must be allowed.</li>
 <li>does the community want the import. Does it help us? How and what to import of it - since there is existing data. Do you want to throw the existing data away? Probably it is more useful to just use the data in some cases and manually(!) adjust / replace parts of the existing data, if the governmental data is <em>really</em> better.</li>
 </ul>
 <p>Most of these details of your idea should be discussed somewhere else (mailing list, forum, wiki ...) but probably not here.</p>

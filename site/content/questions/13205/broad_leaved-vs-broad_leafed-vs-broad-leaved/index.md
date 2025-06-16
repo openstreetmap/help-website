@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <ul>
-<li>The wiki page of <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree">natural=tree</a> says that it may be used in combination with type=broad_leaved.</li>
+<li>The wiki page of <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dtree">natural=tree</a> says that it may be used in combination with type=broad_leaved.</li>
 <li>The example section, of the same page, uses type=broad_leafed instead.</li>
-<li>There is also a wiki page of <a href="http://wiki.openstreetmap.org/wiki/Tag:wood%3Dbroad-leaved">wood=broad-leaved</a>.</li>
+<li>There is also a wiki page of <a href="https://wiki.openstreetmap.org/wiki/Tag:wood%3Dbroad-leaved">wood=broad-leaved</a>.</li>
 <li>KeepRight reports 'This node is tagged 'type=broad_leaved' where "broad_leaved" looks like "broad_leafed"'</li>
 </ul>
 <p>What is the preferred way to tag a <a href="http://en.wikipedia.org/wiki/Broad-leaved_tree">broad-leaved tree</a>?</p>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In case of confusion in the documentation look at the usage in the database at <a href="http://taginfo.openstreetmap.org/search?q=broad#values">taginfo</a>. It currently reports most uses of <em>type=broad_leafed</em>. However I see a discussion on <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dtree#Typo_.22broad_leafed.22.3F">the wiki</a> about a previous typo that concludes that it should be <em>type=broad_leaved</em>. I assume that that is the correct way to tag it.</p>
+<p>In case of confusion in the documentation look at the usage in the database at <a href="http://taginfo.openstreetmap.org/search?q=broad#values">taginfo</a>. It currently reports most uses of <em>type=broad_leafed</em>. However I see a discussion on <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:natural%3Dtree#Typo_.22broad_leafed.22.3F">the wiki</a> about a previous typo that concludes that it should be <em>type=broad_leaved</em>. I assume that that is the correct way to tag it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

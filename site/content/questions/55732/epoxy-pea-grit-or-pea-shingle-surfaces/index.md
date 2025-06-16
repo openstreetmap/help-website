@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>For large/wide footpaths and other pedestrian areas, the unpleasant "pea grit" (aka "pea shingles" aka "bound gravel, etc.) surface is now quite popular in the UK (and possibly elsewhere). It's a load of small (pea-sized) yellowish pebbles, laid out, compacted a bit and bonded with an epoxy sealant. There are examples all over London - the pedestrianised areas at Fitzroy Square and Bedford Square (W1?), and quite a lot of the East Village (E20) (formerly Athlete's Village for London 2012).</p>
-<p>How best to tag this? <a href="http://wiki.openstreetmap.org/wiki/Key:surface">http://wiki.openstreetmap.org/wiki/Key:surface</a> implies that it could be "compacted" + "paved", but those two are mutually exclusive as presented.</p>
+<p>How best to tag this? <a href="https://wiki.openstreetmap.org/wiki/Key:surface">https://wiki.openstreetmap.org/wiki/Key:surface</a> implies that it could be "compacted" + "paved", but those two are mutually exclusive as presented.</p>
 <p>I've recently tagged Fitzroy Square as surface=pea_grit. But what is the best/most consistent way?</p>
 <p>Some images are here, with even more names for the same thing: <a href="http://www.mckinnonmaterials.com/river-rock">http://www.mckinnonmaterials.com/river-rock</a> <a href="http://www.pavingexpert.com/resin.htm">http://www.pavingexpert.com/resin.htm</a></p>
 </div>

@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?mlat=30.2478&amp;mlon=-97.8899#map=15/30.2478/-97.8899&amp;layers=N">This highway</a>? Next time please try to provide a link to the area. <a href="https://www.openstreetmap.org/way/150236863">It</a> is tagged with ref=TX 71 and gets rendered with a highway shield on OSM. What is missing?</p>
+<p><a href="https://www.openstreetmap.org/?mlat=30.2478&amp;mlon=-97.8899#map=15/30.2478/-97.8899&amp;layers=N">This highway</a>? Next time please try to provide a link to the area. <a href="https://www.openstreetmap.org/way/150236863">It</a> is tagged with ref=TX 71 and gets rendered with a highway shield on OSM. What is missing?</p>
 <p>How things are rendered, where and how highway shields and names appear depends on the renderer and its stylesheet. So you should try to keep the data in OSM's database correct but <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">never tag for the renderer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -154,7 +154,7 @@ One Answer:
 <div id="post-50274-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>scai, Yes, "This highway" is the one that is not identified on the maps on Craigslist: <a href="http://www.openstreetmap.org/?mlat=30.2478&amp;mlon=-97.8899#map=15/30.2478/-97.8899&amp;layers=N">http://www.openstreetmap.org/?mlat=30.2478&amp;mlon=-97.8899#map=15/30.2478/-97.8899&amp;layers=N</a></p>
+<p>scai, Yes, "This highway" is the one that is not identified on the maps on Craigslist: <a href="https://www.openstreetmap.org/?mlat=30.2478&amp;mlon=-97.8899#map=15/30.2478/-97.8899&amp;layers=N">https://www.openstreetmap.org/?mlat=30.2478&amp;mlon=-97.8899#map=15/30.2478/-97.8899&amp;layers=N</a></p>
 <p>Otherwise, none of your comments make any sense. Are you willing to fix the problem?</p>
 </div>
 <div id="comment-50274-info" class="comment-info">
@@ -214,7 +214,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12430/lloydewing">@LloydEwing</a>: OpenStreetMap just provides the map data that says "there is a road from this point to that point, called Highway 71". It is up to Craigslist how they choose to draw that map, and not something we can change. If we've given them the correct data, and it looks like we have, the rest is up to them.</p>
+<p><a href="https://help.openstreetmap.org/users/12430/lloydewing">@LloydEwing</a>: OpenStreetMap just provides the map data that says "there is a road from this point to that point, called Highway 71". It is up to Craigslist how they choose to draw that map, and not something we can change. If we've given them the correct data, and it looks like we have, the rest is up to them.</p>
 </div>
 <div id="comment-50287-info" class="comment-info">
 <span class="comment-age">(17 Jun '16, 16:41)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -252,7 +252,7 @@ One Answer:
 5
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12430/lloydewing">@LloydEwing</a>: I've just looked at the OSM data and it's absolutely as it should be - marked as a major road with the reference TX 71. (<a href="http://www.openstreetmap.org/way/150236863">http://www.openstreetmap.org/way/150236863</a> is the raw data if you're interested!)</p>
+<p><a href="https://help.openstreetmap.org/users/12430/lloydewing">@LloydEwing</a>: I've just looked at the OSM data and it's absolutely as it should be - marked as a major road with the reference TX 71. (<a href="https://www.openstreetmap.org/way/150236863">https://www.openstreetmap.org/way/150236863</a> is the raw data if you're interested!)</p>
 <p>Looking at the Craigslist map, they appear to have made a decision to show this type of road as white with a grey border ("casing"). That seems a weird decision to me, but their choice I guess. I suspect the reason Southwest Parkway is looking wider is because it's a dual carriageway (divided highway), so Craigslist is drawing the two carriageways so close together that they merge and appear wider.</p>
 <p>If I were Craigslist's cartographer I would give roads like TX 17 ('highway=primary' in the OSM data) a lightish yellow tinge so they stood out better. But sadly I'm not!</p>
 </div>
@@ -266,7 +266,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Thanks very much to both <a href="http://help.openstreetmap.org/users/5/richard">@Richard</a> and <a href="http://help.openstreetmap.org/users/10221/longhorn256">@Longhorn256</a>. Although there is no an easy solution, your answers relieve my concern that there is anything we can do about the problem.</p>
+<p>Thanks very much to both <a href="https://help.openstreetmap.org/users/5/richard">@Richard</a> and <a href="https://help.openstreetmap.org/users/10221/longhorn256">@Longhorn256</a>. Although there is no an easy solution, your answers relieve my concern that there is anything we can do about the problem.</p>
 <p>Many Thanks!</p>
 </div>
 <div id="comment-50306-info" class="comment-info">

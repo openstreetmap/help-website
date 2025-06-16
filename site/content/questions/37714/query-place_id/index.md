@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>place_id is a nominatim internal identifier. I'd recommend to use the actual OSM objects (nodes/ways/relations) returned by the query instead.</p>
-<p>Please see this post: <a href="https://help.openstreetmap.org/questions/21542/nominatim-place-id">https://help.openstreetmap.org/questions/21542/nominatim-place-id</a></p>
+<p>Please see this post: <a href="/questions/21542/nominatim-place-id">https://help.openstreetmap.org/questions/21542/nominatim-place-id</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -127,7 +127,7 @@ One Answer:
 <div id="post-37730-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>In other words: Use the <em>osm_id</em> and <em>osm_type</em> contained in Nominatim's response in order to query the corresponding OSM element. In your case the element would be <a href="http://www.openstreetmap.org/way/90394420">way 90394420</a>.</p>
+<p>In other words: Use the <em>osm_id</em> and <em>osm_type</em> contained in Nominatim's response in order to query the corresponding OSM element. In your case the element would be <a href="https://www.openstreetmap.org/way/90394420">way 90394420</a>.</p>
 </div>
 <div id="comment-37730-info" class="comment-info">
 <span class="comment-age">(18 Oct '14, 09:23)</span> <span class="comment-user userinfo">scai ♦</span>

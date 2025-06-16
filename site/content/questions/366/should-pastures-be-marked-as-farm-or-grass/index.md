@@ -118,7 +118,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use <strong>landuse=farm</strong>, or <strong>landuse=farmland</strong> if you want to be a little less ambiguous. They mean the same thing and fit your purpose exactly: pasture. See <a href="http://wiki.openstreetmap.org/wiki/Farm">"Farm" on the wiki</a> for a description of the current state of play.</p>
+<p>Use <strong>landuse=farm</strong>, or <strong>landuse=farmland</strong> if you want to be a little less ambiguous. They mean the same thing and fit your purpose exactly: pasture. See <a href="https://wiki.openstreetmap.org/wiki/Farm">"Farm" on the wiki</a> for a description of the current state of play.</p>
 <p>If the grass or other crop is being grown in order to be mowed for hay, or it's public-ish grassland that doesn't seem to belong to a farm that livestock graze in anyway, <strong>landuse=meadow</strong> is a good alternative.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -187,7 +187,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If they are part of a farm, then they should be tagged as <code>landuse</code>=<code>farm</code>. I'm not entirely sure what <code>landuse</code>=<code>grass</code> is actually for, as the <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">wiki page</a> seems a little short on detail.</p>
+<p>If they are part of a farm, then they should be tagged as <code>landuse</code>=<code>farm</code>. I'm not entirely sure what <code>landuse</code>=<code>grass</code> is actually for, as the <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass">wiki page</a> seems a little short on detail.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

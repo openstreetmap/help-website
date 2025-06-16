@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Recently it's been in the news that a major glacier has retreated dramatically due to climate change, and due to the topography it has stopped draining into the river it usually does, and started draining into a different river. This has effectively caused the first river to cease to exist.</p>
-<p><a href="http://www.openstreetmap.org/note/967758">Here is a note</a> on the subject, with some links to news articles. I'm not sure what to do about this, as we do not have more than a general description of the fact that this river has dried up.</p>
+<p><a href="https://www.openstreetmap.org/note/967758">Here is a note</a> on the subject, with some links to news articles. I'm not sure what to do about this, as we do not have more than a general description of the fact that this river has dried up.</p>
 <p>Additionally the area is pretty poorly mapped to start with, due to poorly done imports that are common in the remote parts of Canada.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-55801-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The note you refer to seems to be suggesting that we should be <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>, rather than tagging to represent the reality that the water flow has reduced or dried up. Retagging as an intermittent stream may be better than nothing, but you probably still want to reflect where the old river banks are, since under flood conditions the stream would naturally flow between the river banks. With the river dry, you might also want to represent the landforms that now appear in the river bed, such as shingle banks and rock pools.</p>
+<p>The note you refer to seems to be suggesting that we should be <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a>, rather than tagging to represent the reality that the water flow has reduced or dried up. Retagging as an intermittent stream may be better than nothing, but you probably still want to reflect where the old river banks are, since under flood conditions the stream would naturally flow between the river banks. With the river dry, you might also want to represent the landforms that now appear in the river bed, such as shingle banks and rock pools.</p>
 </div>
 <div id="comment-55801-info" class="comment-info">
 <span class="comment-age">(24 Apr '17, 07:44)</span> <span class="comment-user userinfo">Huttite</span>

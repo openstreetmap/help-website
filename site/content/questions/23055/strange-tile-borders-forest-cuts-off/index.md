@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Strange tile borders - forest cuts off"
-description = '''Around the city of Eskilstuna in Sweden there seems like some map tiles are rebdered with forest and others don&#x27;t. The effect is a sharp square with green in it around the city. you can see it here: http://www.openstreetmap.org/?lat=59.385&amp;amp;lon=16.426&amp;amp;zoom=9&amp;amp;layers=M It shows up on zoom l...'''
+description = '''Around the city of Eskilstuna in Sweden there seems like some map tiles are rebdered with forest and others don&#x27;t. The effect is a sharp square with green in it around the city. you can see it here: https://www.openstreetmap.org/?lat=59.385&amp;amp;lon=16.426&amp;amp;zoom=9&amp;amp;layers=M It shows up on zoom l...'''
 date = "2013-06-06T11:24:00Z"
 lastmod = "2013-06-06T15:56:00Z"
 weight = 23055
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Around the city of Eskilstuna in Sweden there seems like some map tiles are rebdered with forest and others don't.</p>
-<p>The effect is a sharp square with green in it around the city. you can see it here: <a href="http://www.openstreetmap.org/?lat=59.385&amp;lon=16.426&amp;zoom=9&amp;layers=M">http://www.openstreetmap.org/?lat=59.385&amp;lon=16.426&amp;zoom=9&amp;layers=M</a></p>
+<p>The effect is a sharp square with green in it around the city. you can see it here: <a href="https://www.openstreetmap.org/?lat=59.385&amp;lon=16.426&amp;zoom=9&amp;layers=M">https://www.openstreetmap.org/?lat=59.385&amp;lon=16.426&amp;zoom=9&amp;layers=M</a></p>
 <p>It shows up on zoom level 8 and above.</p>
 <p>Similar edges are visible elsewhere, e.g. the Sweden/Norway border, but the square around Eskilstuna is especially noticable.</p>
 <p>Is this a known problem? Will it be fixed? Is it common? :P</p>
@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you look at for example <a href="http://www.openstreetmap.org/browse/way/194522135">way 194522135</a> you'll see that this is a <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Sweden/Sweden_Corine_2006_Import">Corine import</a> done by <a href="http://www.openstreetmap.org/user/Sten%20%C3%85kerblom">Sten Åkerblom</a>, which explains why the forests are limited by a square (and also may have some characteristically computer generated, nagged borders). That not a "problem", and will be "fixed" by someone taking the time and effort to <a href="http://wiki.openstreetmap.org/wiki/Import">import</a> nearby data.</p>
+<p>If you look at for example <a href="https://www.openstreetmap.org/browse/way/194522135">way 194522135</a> you'll see that this is a <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Sweden/Sweden_Corine_2006_Import">Corine import</a> done by <a href="https://www.openstreetmap.org/user/Sten%20%C3%85kerblom">Sten Åkerblom</a>, which explains why the forests are limited by a square (and also may have some characteristically computer generated, nagged borders). That not a "problem", and will be "fixed" by someone taking the time and effort to <a href="https://wiki.openstreetmap.org/wiki/Import">import</a> nearby data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

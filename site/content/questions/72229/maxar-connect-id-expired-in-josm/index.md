@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I cannot download Maxar Imagery in JOSM anymore:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Selection_248.png" alt="alt text" /></p>
+<p><img src="/upfiles/Selection_248.png" alt="alt text" /></p>
 <p>I have already re-added the source in the preferences and the following URLs are used:</p>
 <ul>
 <li><p>tms[1,22]:<a href="https://earthwatch.digitalglobe.com/earthservice/tmsaccess/tms/1.0.0/DigitalGlobe:ImageryTileService@EPSG:3857@jpg/%7Bzoom%7D/%7Bx%7D/%7B-y%7D.jpg?connectId=9955a13e-a2d9-424c-a82f-82f88fd7d080">https://earthwatch.digitalglobe.com/earthservice/tmsaccess/tms/1.0.0/DigitalGlobe:ImageryTileService@EPSG:3857@jpg/{zoom}/{x}/{-y}.jpg?connectId=9955a13e-a2d9-424c-a82f-82f88fd7d080</a></p></li>

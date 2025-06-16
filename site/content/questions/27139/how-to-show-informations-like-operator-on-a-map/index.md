@@ -108,9 +108,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>one basic possibility is the use of <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass_turbo</a></p>
-<p>it is a kind of user interface for <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass_API</a></p>
-<p>Example apps are listed here: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Applications">Overpass_API/Applications</a></p>
+<p>one basic possibility is the use of <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass_turbo</a></p>
+<p>it is a kind of user interface for <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass_API</a></p>
+<p>Example apps are listed here: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Applications">Overpass_API/Applications</a></p>
 <p>I hope this can help you a bit?</p>
 </div>
 <div class="answer-controls post-controls">

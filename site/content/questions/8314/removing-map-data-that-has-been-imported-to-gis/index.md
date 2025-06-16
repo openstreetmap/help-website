@@ -134,8 +134,8 @@ One Answer:
 <p>I mention you are working with an PostGis DB and using a script to import OSM to the DB, somthing like Osm2pgsql or Osmosis.</p>
 <p>You can filter the OSM-Data before importing by using Osmosis. eg:</p>
 <pre><code>osmosis --read-xml city.osm --way-key-value keyValueList=&quot;railway.tram, railway.tram_stop&quot; -used-node idTrackerType=BitSet --write-xml city_tram.osm</code></pre>
-<p>here are some examples: <a href="http://wiki.openstreetmap.org/wiki/Osmosis#Example_Usage">http://wiki.openstreetmap.org/wiki/Osmosis#Example_Usage</a></p>
-<p>and the Usage: <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage">http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage</a></p>
+<p>here are some examples: <a href="https://wiki.openstreetmap.org/wiki/Osmosis#Example_Usage">https://wiki.openstreetmap.org/wiki/Osmosis#Example_Usage</a></p>
+<p>and the Usage: <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage">https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

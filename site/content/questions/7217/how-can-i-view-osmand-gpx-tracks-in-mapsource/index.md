@@ -178,8 +178,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can take the gpx files and <a href="http://wiki.openstreetmap.org/wiki/Upload">upload them to OpenStreetMap</a>. There you can use them for reference when editing.</p>
-<p>As for Mapsource, this forum is about OpenStreetMap specific issues, so your best bet is to go to a Garmin forum. There's lots of documentation on the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Garmin">using Garmin devices and software with OpenStreetMap</a>.</p>
+<p>You can take the gpx files and <a href="https://wiki.openstreetmap.org/wiki/Upload">upload them to OpenStreetMap</a>. There you can use them for reference when editing.</p>
+<p>As for Mapsource, this forum is about OpenStreetMap specific issues, so your best bet is to go to a Garmin forum. There's lots of documentation on the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Garmin">using Garmin devices and software with OpenStreetMap</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -198,7 +198,7 @@ osqa_accepted = false
 <div id="post-15736-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I had a trace that needed repair see this <a href="http://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace">http://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
+<p>I had a trace that needed repair see this <a href="/questions/5993/repairing-a-gpx-trace">https://help.openstreetmap.org/questions/5993/repairing-a-gpx-trace</a></p>
 </div>
 <div id="comment-15736-info" class="comment-info">
 <span class="comment-age">(31 Aug '12, 22:49)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -293,7 +293,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/gps_track_editor_screen.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/gps_track_editor_screen.JPG" alt="alt text" /></p>
 <p>I sometime use Garmin Basecamp, but i think this program is simpler to use and OSM map background displays as well so try GPX Track Editor, see <a href="http://www.gpstrackeditor.com/">http://www.gpstrackeditor.com/</a> it's also on google play i think, so android as well as Windows, and it's free on windows.</p>
 </div>
 <div class="answer-controls post-controls">

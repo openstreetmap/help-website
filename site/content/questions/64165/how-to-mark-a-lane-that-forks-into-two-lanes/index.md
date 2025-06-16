@@ -110,7 +110,7 @@ One Answer:
 <div class="answer-body">
 <p>It is sufficient to just map the <a href="https://wiki.openstreetmap.org/wiki/Lanes"><code>lanes</code></a> of the road. Mapped lanes implicitly contain forks.</p>
 <p>Example using your picture (I've reversed the car's driving direction with my incredible paint skills ;)):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/merging-video-teaser_PtUPgPZ.jpg" alt="example image" /></p>
+<p><img src="/upfiles/merging-video-teaser_PtUPgPZ.jpg" alt="example image" /></p>
 <p>Also consider mapping <code>turn:lanes</code>. The wiki page about <a href="https://wiki.openstreetmap.org/wiki/Lanes"><code>lanes</code></a> is really helpful and has nice examples.</p>
 </div>
 <div class="answer-controls post-controls">

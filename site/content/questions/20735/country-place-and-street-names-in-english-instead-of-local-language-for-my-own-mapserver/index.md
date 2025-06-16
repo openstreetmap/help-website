@@ -162,8 +162,8 @@ One Answer:
 <div class="comment-text">
 <p>These similar questions have example solutions:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/21784/render-place-name-in-two-languages-with-mapnik">https://help.openstreetmap.org/questions/21784/render-place-name-in-two-languages-with-mapnik</a></li>
-<li><a href="https://help.openstreetmap.org/questions/7920/mapnik-street-name-generation">https://help.openstreetmap.org/questions/7920/mapnik-street-name-generation</a></li>
+<li><a href="/questions/21784/render-place-name-in-two-languages-with-mapnik">https://help.openstreetmap.org/questions/21784/render-place-name-in-two-languages-with-mapnik</a></li>
+<li><a href="/questions/7920/mapnik-street-name-generation">https://help.openstreetmap.org/questions/7920/mapnik-street-name-generation</a></li>
 </ul>
 </div>
 <div id="comment-43121-info" class="comment-info">

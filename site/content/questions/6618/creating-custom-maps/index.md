@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Apologies if this appears to be a stupid question, but OSM is rather daunting when trying to find a place to start.</p>
 <p>I have a college project where I am looking to create a visualization of an area from the 1980's.</p>
 <p>-I was hoping to use OSM's xml data as my base</p>
-<p>-Read this data into an editor (not sure if it will be <a href="http://esriosmeditor.codeplex.com/">http://esriosmeditor.codeplex.com/</a> or <a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide)">http://wiki.openstreetmap.org/wiki/JOSM/Guide)</a></p>
+<p>-Read this data into an editor (not sure if it will be <a href="http://esriosmeditor.codeplex.com/">http://esriosmeditor.codeplex.com/</a> or <a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide)">https://wiki.openstreetmap.org/wiki/JOSM/Guide)</a></p>
 <p>-Overlay Aerial ordinance survey images and adjust the map</p>
 <p>-Export the xml data</p>
 <p>-Import into CITY Engine and Generate the visualization.</p>

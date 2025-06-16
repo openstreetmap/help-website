@@ -142,9 +142,9 @@ One Answer:
 <p><a href="http://taginfo.openstreetmap.org/search?q=speed">http://taginfo.openstreetmap.org/search?q=speed</a></p>
 <p><a href="http://taginfo.openstreetmap.org/keys/maxspeed%3Apractical">http://taginfo.openstreetmap.org/keys/maxspeed%3Apractical</a></p>
 <p>Another approach might be to look at GPS data that people have contributed:</p>
-<p><a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/traces</a></p>
+<p><a href="https://www.openstreetmap.org/traces">https://www.openstreetmap.org/traces</a></p>
 <p>but you'll need to figure out which roads correspond to which traces. Note that planet.gpx is just a series of points and therefore not a lot of use to you:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Planet.gpx">http://wiki.openstreetmap.org/wiki/Planet.gpx</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Planet.gpx">https://wiki.openstreetmap.org/wiki/Planet.gpx</a></p>
 </div>
 <div id="comment-43785-info" class="comment-info">
 <span class="comment-age">(25 Jun '15, 18:31)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

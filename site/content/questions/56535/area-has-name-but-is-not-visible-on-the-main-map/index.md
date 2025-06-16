@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to name an area but the name only shows in my "edit" mode. It been a week now and other names I added is showed in the map. It is the area named Poppeludden, <a href="http://www.openstreetmap.org/way/497816343">way #497816343</a>, which I added on 2017-06-03.</p>
+<p>I am trying to name an area but the name only shows in my "edit" mode. It been a week now and other names I added is showed in the map. It is the area named Poppeludden, <a href="https://www.openstreetmap.org/way/497816343">way #497816343</a>, which I added on 2017-06-03.</p>
 <p>I must have done something wrong but no idea what it is and how I can fix it. Is there any videoguide that shows it, how to do it step my by step?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

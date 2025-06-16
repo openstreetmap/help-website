@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I install single countries after initial install of nominatim?"
-description = '''Yesterday I succeed to install Nominatim as our API for using reverse Geolocation but I only imported one country initially. I followed the instructions in http://wiki.openstreetmap.org/wiki/Nominatim/Installation and used ./utils/setup.php --osm-file --all [--osm2pgsql-cache 18000] 2&amp;gt;&amp;amp;1 | te...'''
+description = '''Yesterday I succeed to install Nominatim as our API for using reverse Geolocation but I only imported one country initially. I followed the instructions in https://wiki.openstreetmap.org/wiki/Nominatim/Installation and used ./utils/setup.php --osm-file --all [--osm2pgsql-cache 18000] 2&amp;gt;&amp;amp;1 | te...'''
 date = "2016-05-13T08:09:00Z"
 lastmod = "2016-05-13T08:09:00Z"
 weight = 49689
@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Yesterday I succeed to install Nominatim as our API for using reverse Geolocation but I only imported one country initially. I followed the instructions in <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> and used ./utils/setup.php --osm-file --all [--osm2pgsql-cache 18000] 2&gt;&amp;1 | tee setup.log</p>
+<p>Yesterday I succeed to install Nominatim as our API for using reverse Geolocation but I only imported one country initially. I followed the instructions in <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> and used ./utils/setup.php --osm-file --all [--osm2pgsql-cache 18000] 2&gt;&amp;1 | tee setup.log</p>
 <p>Today I´m about to add more countries and I use the same commands but I get database already exist.</p>
 <p>How can I add single countries now after install?</p>
-<p>I found a suggestion at <a href="https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim">https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim</a> and used ./utils/update.php --import-file --osm2pgsql-cache 12000 and I got no errors. After that I made ./update.php --index also with no errors and it was very fast 30 seconds, not like my initial install that took me 10 hours so I suppose something doesn't add up here. Also when trying to search for addresses from my last import thru the local web interface I can't find any.</p>
+<p>I found a suggestion at <a href="/questions/15505/import-more-osm-files-in-to-nominatim">https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim</a> and used ./utils/update.php --import-file --osm2pgsql-cache 12000 and I got no errors. After that I made ./update.php --index also with no errors and it was very fast 30 seconds, not like my initial install that took me 10 hours so I suppose something doesn't add up here. Also when trying to search for addresses from my last import thru the local web interface I can't find any.</p>
 <p>Any ideas?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

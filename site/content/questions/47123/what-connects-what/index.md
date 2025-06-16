@@ -87,7 +87,7 @@ Secondary link, to link the tertiary road with country road (roundabout).
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>... I'm sorry for the delay. Link below: <a href="http://www.openstreetmap.org/way/168022268#map=18/-21.76034/-55.54379">http://www.openstreetmap.org/way/168022268#map=18/-21.76034/-55.54379</a></p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>... I'm sorry for the delay. Link below: <a href="https://www.openstreetmap.org/way/168022268#map=18/-21.76034/-55.54379">https://www.openstreetmap.org/way/168022268#map=18/-21.76034/-55.54379</a></p>
 </div>
 <div id="comment-47204-info" class="comment-info">
 <span class="comment-age">(18 Dec '15, 01:14)</span> <span class="comment-user userinfo">seth</span>
@@ -161,7 +161,7 @@ Secondary link, to link the tertiary road with country road (roundabout).
 <div id="post-47125-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>...</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>...</p>
 <p>How do you do then? Put a traffic_calming = island? See the connection is not so short... and there are 2 paths there. I understand that would not fit the traffic_calming = island. But my doubt is not this, but of the links (as they are) are correct. So focus at this point.</p>
 </div>
 <div id="comment-47125-info" class="comment-info">
@@ -174,7 +174,7 @@ Secondary link, to link the tertiary road with country road (roundabout).
 1
 </div>
 <div class="comment-text">
-<p>According to the Wiki page <a href="http://wiki.openstreetmap.org/wiki/Highway_link">Highway link</a> _link tags are intended for more than just grade-separated junctions.</p>
+<p>According to the Wiki page <a href="https://wiki.openstreetmap.org/wiki/Highway_link">Highway link</a> _link tags are intended for more than just grade-separated junctions.</p>
 </div>
 <div id="comment-47128-info" class="comment-info">
 <span class="comment-age">(13 Dec '15, 11:35)</span> <span class="comment-user userinfo">MarkusHD</span>
@@ -227,7 +227,7 @@ Secondary link, to link the tertiary road with country road (roundabout).
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Interpreting the <a href="http://wiki.openstreetmap.org/wiki/Highway_link">Highway link</a> Wiki page, either both link roads or none at all should be tagged as secondary_link. But I can't read out which of these two is the correct approach.</p>
+<p>Interpreting the <a href="https://wiki.openstreetmap.org/wiki/Highway_link">Highway link</a> Wiki page, either both link roads or none at all should be tagged as secondary_link. But I can't read out which of these two is the correct approach.</p>
 <p>I guess this is one part of OSM which is not handled consistently across mappers.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -247,7 +247,7 @@ Secondary link, to link the tertiary road with country road (roundabout).
 <div id="post-47137-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8991/markushd"></a><a href="http://help.openstreetmap.org/users/8991/markushd">@MarkusHD</a>...</p>
+<p><a href="https://help.openstreetmap.org/users/8991/markushd"></a><a href="https://help.openstreetmap.org/users/8991/markushd">@MarkusHD</a>...</p>
 <p>Based on responses of you, I see that there is no define standard OSM yet. In addition, the wiki page there is nothing that set the standard. What is complicated because each one do as you think best.</p>
 <p>Personally, I will continue doing as it is in the image example (for lack of reference / standard and also that I understand that it is more logical way and coenrente.).</p>
 </div>
@@ -260,7 +260,7 @@ Secondary link, to link the tertiary road with country road (roundabout).
 <div id="post-47212-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The roundabout wiki page doesn't say anything about using link tags when connecting to a roundabout, I think the clear implication is to continue the roads (split if necessary into two one-way segments) and connect them to the roundabout. <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout</a></p>
+<p>The roundabout wiki page doesn't say anything about using link tags when connecting to a roundabout, I think the clear implication is to continue the roads (split if necessary into two one-way segments) and connect them to the roundabout. <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout</a></p>
 </div>
 <div id="comment-47212-info" class="comment-info">
 <span class="comment-age">(18 Dec '15, 14:28)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -304,7 +304,7 @@ Or in her place, a secondary link?
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10008/seth">@seth</a> I believe that I did understand the question - I was just trying to agree with <a href="http://help.openstreetmap.org/users/8991/markushd">@MarkusHD</a> that mapping of them is "not handled consistently across mappers", and showing an example where support for tertiary_link is missing. SK53 above suggests that "highway=tertiary" is actually correct for your case rather than tertiary_link or secondary_link, but other comments say that they think some sort of link would be appropriate.</p>
+<p><a href="https://help.openstreetmap.org/users/10008/seth">@seth</a> I believe that I did understand the question - I was just trying to agree with <a href="https://help.openstreetmap.org/users/8991/markushd">@MarkusHD</a> that mapping of them is "not handled consistently across mappers", and showing an example where support for tertiary_link is missing. SK53 above suggests that "highway=tertiary" is actually correct for your case rather than tertiary_link or secondary_link, but other comments say that they think some sort of link would be appropriate.</p>
 <p>The example that I gave was of where a mapper in your situation had used "tertiary_link" in a situation similar to yours. I suspect I would have just used "tertiary" there, but it really doesn't matter <em>that</em> much.</p>
 <p>See also discussion on <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1280#issuecomment-72629181">https://github.com/gravitystorm/openstreetmap-carto/issues/1280#issuecomment-72629181</a> .</p>
 </div>
@@ -317,7 +317,7 @@ Or in her place, a secondary link?
 <div id="post-47241-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a></p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a></p>
 <p>Ok. I understand better your comment when you say is correct, but it is necessary to change the connection by highway. I recognize that I mistook link=* with highways to the example I showed. Including'll correct.</p>
 <p>Please, I ask you to put your comment in response, so I accepted and finalizae doubt in the forum.</p>
 </div>

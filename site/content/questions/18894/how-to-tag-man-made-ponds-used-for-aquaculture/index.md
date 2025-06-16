@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can tag these as natural=water water=pond. Take a look at <a href="http://wiki.openstreetmap.org/wiki/Key:water">natural=water</a> page on wiki for other similar water features.</p>
+<p>You can tag these as natural=water water=pond. Take a look at <a href="https://wiki.openstreetmap.org/wiki/Key:water">natural=water</a> page on wiki for other similar water features.</p>
 <p>To add additional tags (like water=pond) to objects, click on advanced button on the lower left corner in Potlatch2.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -259,7 +259,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>ummm, there's 3400 uses of landuse=aquaculture: <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture</a></p>
+<p>ummm, there's 3400 uses of landuse=aquaculture: <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Daquaculture</a></p>
 </div>
 <div id="comment-18921-info" class="comment-info">
 <span class="comment-age">(07 Jan '13, 16:42)</span> <span class="comment-user userinfo">neuhausr</span>

@@ -177,7 +177,7 @@ osqa_accepted = false
 <div id="post-31710-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I found this in the wiki <a href="http://wiki.openstreetmap.org/wiki/OpenFixMap">http://wiki.openstreetmap.org/wiki/OpenFixMap</a></p>
+<p>I found this in the wiki <a href="https://wiki.openstreetmap.org/wiki/OpenFixMap">https://wiki.openstreetmap.org/wiki/OpenFixMap</a></p>
 </div>
 <div id="comment-31710-info" class="comment-info">
 <span class="comment-age">(19 Mar '14, 19:49)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>So viel ich weiß heißt es eigentlich <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:natural%3Dwater"><strong>natural=water</strong></a>. Probier's mit <strong>natural=water</strong> aus.</p>
+<p>So viel ich weiß heißt es eigentlich <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:natural%3Dwater"><strong>natural=water</strong></a>. Probier's mit <strong>natural=water</strong> aus.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

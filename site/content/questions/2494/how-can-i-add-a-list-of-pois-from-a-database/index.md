@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a> and <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct">Code of Conduct</a>. Automated imports have many, many difficulties and are not universally welcomed in OSM.</p>
+<p>Please read the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a> and <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct">Code of Conduct</a>. Automated imports have many, many difficulties and are not universally welcomed in OSM.</p>
 <p>At the very least you should discuss your proposed import on the national mailing lists of every country that will be affected, and if it's of worldwide scope, on the international talk@ list as well.</p>
 </div>
 <div class="answer-controls post-controls">

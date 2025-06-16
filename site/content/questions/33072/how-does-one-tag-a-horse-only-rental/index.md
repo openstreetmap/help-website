@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Under <a href="http://wiki.openstreetmap.org/wiki/Riding">Riding</a> it has a lot of useful tags involving riding horses. I don't see a tag that is for a horse only rental. These places are generally fairly large with open spaces. The closest I can find is the Horse boarding, animal_boarding. This means bringing your own animal to their facilities which isn't always the case when one goes to rent a horse to ride. I want to know the best practice for tagging a horse only rental business. Thanks</p>
+<p>Under <a href="https://wiki.openstreetmap.org/wiki/Riding">Riding</a> it has a lot of useful tags involving riding horses. I don't see a tag that is for a horse only rental. These places are generally fairly large with open spaces. The closest I can find is the Horse boarding, animal_boarding. This means bringing your own animal to their facilities which isn't always the case when one goes to rent a horse to ride. I want to know the best practice for tagging a horse only rental business. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-amenity" rel="tag" title="see questions tagged &#39;amenity&#39;">amenity</span> <span class="post-tag tag-link-rental" rel="tag" title="see questions tagged &#39;rental&#39;">rental</span> <span class="post-tag tag-link-horse" rel="tag" title="see questions tagged &#39;horse&#39;">horse</span>
@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-33074-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Correspoding to the <a href="http://wiki.openstreetmap.org/wiki/Key:access">access key</a> I guess: access=no , horse=yes ?</p>
+<p>Correspoding to the <a href="https://wiki.openstreetmap.org/wiki/Key:access">access key</a> I guess: access=no , horse=yes ?</p>
 </div>
 <div id="comment-33074-info" class="comment-info">
 <span class="comment-age">(11 May '14, 08:49)</span> <span class="comment-user userinfo">iii</span>
@@ -216,7 +216,7 @@ osqa_accepted = false
 <p>If you <a href="http://taginfo.openstreetmap.org//search?q=rental#values">plug "rental" into taginfo</a>, then you can see that for most rental businesses the form <em>amenity=something_rental</em> is used. There are however currently only 5 <em>amenity=horse_rental</em> tagged in the world.</p>
 <p>If for some reason the amenity tag is already used on the object you want to tag or if they rent out multiple kind of things, then the common form to tag rentals is <em>something_rental=yes</em>. In your case <em>horse_rental=yes</em>.</p>
 <hr />
-<p>Edit: In <a href="https://help.openstreetmap.org/questions/14748/how-to-correctly-tag-a-livery-stable-be-boarding-stable">this previous question</a> <em>tourism=trail_riding_station</em> is mentioned. It's <a href="http://taginfo.openstreetmap.org//search?q=trail_riding_station#values">used 287 times</a>.</p>
+<p>Edit: In <a href="/questions/14748/how-to-correctly-tag-a-livery-stable-be-boarding-stable">this previous question</a> <em>tourism=trail_riding_station</em> is mentioned. It's <a href="http://taginfo.openstreetmap.org//search?q=trail_riding_station#values">used 287 times</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -68,7 +68,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Does <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this previous question</a> explain what you're seeing?</p>
+<p>Does <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this previous question</a> explain what you're seeing?</p>
 </div>
 <div id="comment-17892-info" class="comment-info">
 <span class="comment-age">(22 Nov '12, 11:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-17898-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If these are your changes - <a href="http://www.openstreetmap.org/browse/changeset/13948543">http://www.openstreetmap.org/browse/changeset/13948543</a> - then I can already see the changes to the forest area.</p>
+<p>If these are your changes - <a href="https://www.openstreetmap.org/browse/changeset/13948543">https://www.openstreetmap.org/browse/changeset/13948543</a> - then I can already see the changes to the forest area.</p>
 </div>
 <div id="comment-17898-info" class="comment-info">
 <span class="comment-age">(22 Nov '12, 13:07)</span> <span class="comment-user userinfo">EdLoach ♦</span>

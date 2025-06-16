@@ -115,7 +115,7 @@ osqa_accepted = false
 <li><a href="/questions/20556/embedded-html-map-with-route">How to create an embdedded map showing a route</a></li>
 <li>In our wiki there is a <span>list of track drawing / uploading websites</span> (you could make a screenshot; some allow/offer embedding - please check the usage policy, especially if your site is not just a small personal homepage)</li>
 <li><span>Look at those previous questions for "private"/custom maps</span></li>
-<li>And, last but not least, OpenStreetMap is basically just data - and, contrary to Google Maps, nearly everything is possible (as long as you comply to <a href="http://www.openstreetmap.org/copyright">our license</a> but you maybe need to program it on your own or <span>pay someone</span>). There is a <span>list of already existing OSM-based services</span>.</li>
+<li>And, last but not least, OpenStreetMap is basically just data - and, contrary to Google Maps, nearly everything is possible (as long as you comply to <a href="https://www.openstreetmap.org/copyright">our license</a> but you maybe need to program it on your own or <span>pay someone</span>). There is a <span>list of already existing OSM-based services</span>.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">Openlayers_Track_example</a></p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">Openlayers_Track_example</a></p>
 <p>Maybe that example is a bit outdated, because development of OpenLayers has been a lot.</p>
 <p>Generally have a look at <a href="http://openlayers.org">openlayers.org</a> ... or at <a href="http://leafletjs.org">leafletjs.org</a></p>
 <p>On both webpages there are examples how to display any kinds of items on a map.</p>

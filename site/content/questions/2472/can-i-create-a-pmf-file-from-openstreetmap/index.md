@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems that ArcReader is part of <a href="http://en.wikipedia.org/wiki/ArcGIS">ArcGIS</a></p>
-<p>So have a look at the OSM <a href="http://wiki.openstreetmap.org/wiki/ArcGIS">wiki</a> to find out how to deal with OSM data in ArcGIS.</p>
+<p>So have a look at the OSM <a href="https://wiki.openstreetmap.org/wiki/ArcGIS">wiki</a> to find out how to deal with OSM data in ArcGIS.</p>
 <p>(Post a commemt here if you have success, or not ...)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes - ArcReader is part of ArcGIS, but pmf can be only created created by ArcGIS/ArcMAP extension named ArcPublisher (additional license). In ArcMAP you can add OSM as OGC compliant WMS service (<a href="http://wiki.openstreetmap.org/wiki/WMS">http://wiki.openstreetmap.org/wiki/WMS</a>) , and publish it with ArcPublisher.</p>
+<p>Yes - ArcReader is part of ArcGIS, but pmf can be only created created by ArcGIS/ArcMAP extension named ArcPublisher (additional license). In ArcMAP you can add OSM as OGC compliant WMS service (<a href="https://wiki.openstreetmap.org/wiki/WMS">https://wiki.openstreetmap.org/wiki/WMS</a>) , and publish it with ArcPublisher.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

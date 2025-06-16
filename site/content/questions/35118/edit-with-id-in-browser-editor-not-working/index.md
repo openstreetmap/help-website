@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Edit with iD (in-browser editor) not working?"
-description = '''Seems like the first editor is not working the past week. In Chrome you get the &quot;Aw Snap!&quot; page while IE goes straight to the second in browser editor. Also the Island of Newfoundland looks like it is going underwater.  http://www.openstreetmap.org/#map=14/47.6273/-52.7190  Are these service issues ...'''
+description = '''Seems like the first editor is not working the past week. In Chrome you get the &quot;Aw Snap!&quot; page while IE goes straight to the second in browser editor. Also the Island of Newfoundland looks like it is going underwater.  https://www.openstreetmap.org/#map=14/47.6273/-52.7190  Are these service issues ...'''
 date = "2014-07-24T00:02:00Z"
 lastmod = "2014-08-06T11:07:00Z"
 weight = 35118
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Seems like the first editor is not working the past week. In Chrome you get the "Aw Snap!" page while IE goes straight to the second in browser editor. Also the Island of Newfoundland looks like it is going underwater. <a href="http://www.openstreetmap.org/#map=14/47.6273/-52.7190">http://www.openstreetmap.org/#map=14/47.6273/-52.7190</a></p>
+<p>Seems like the first editor is not working the past week. In Chrome you get the "Aw Snap!" page while IE goes straight to the second in browser editor. Also the Island of Newfoundland looks like it is going underwater. <a href="https://www.openstreetmap.org/#map=14/47.6273/-52.7190">https://www.openstreetmap.org/#map=14/47.6273/-52.7190</a></p>
 <p>Are these service issues that are ongoing that one might hope will end soon or is this something that is more likely to be on my end??</p>
 </div>
 <div id="question-tags" class="tags-container tags">

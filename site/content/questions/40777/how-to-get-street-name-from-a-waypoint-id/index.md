@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I am new to OSM. I have a result of a map-matching algorithm on some trajectory data (GPX) and the returned results are defined as (waypoint id, start node, end node)</p>
 <p>I want to retrieve the name of the street from the waypoint id? How to do so?</p>
 <p>For example in Nominatim service the response is in the XML form. But I cannot find a suitable service for getting real names from ids in OSM. I found this:</p>
-<p><a href="http://www.openstreetmap.org/way/256328760">http://www.openstreetmap.org/way/256328760</a></p>
+<p><a href="https://www.openstreetmap.org/way/256328760">https://www.openstreetmap.org/way/256328760</a></p>
 <p>This page returns the map of way point. But I want the <strong>ref</strong> name <strong>St 2572</strong></p>
 <p>And as another question How to get All this data (the data for a city) for educational and research purposes?</p>
 </div>
@@ -158,7 +158,7 @@ One Answer:
 <div id="post-40798-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/87/pieren">@Pieren</a>: while getting a data extract could still be the best/most fast solution it is okay to query Overpass API with those requests, if I understand <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">its</a> service description correctly. Maybe Alamdari even means Overpass API, because I have coined my link "an OSM API" which also lists Overpass.</p>
+<p><a href="https://help.openstreetmap.org/users/87/pieren">@Pieren</a>: while getting a data extract could still be the best/most fast solution it is okay to query Overpass API with those requests, if I understand <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Introduction">its</a> service description correctly. Maybe Alamdari even means Overpass API, because I have coined my link "an OSM API" which also lists Overpass.</p>
 </div>
 <div id="comment-40798-info" class="comment-info">
 <span class="comment-age">(05 Feb '15, 12:13)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

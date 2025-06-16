@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>How can I change my username at the Forum <a href="https://forum.openstreetmap.org/?">https://forum.openstreetmap.org/?</a></p>
 <p>Alternatively, how can I delete my account at the Forum <a href="https://forum.openstreetmap.org/?">https://forum.openstreetmap.org/?</a></p>
 <p>In the settings there I see no way to do either of those.</p>
-<p>First part of my question is duplicate of <a href="https://help.openstreetmap.org/questions/51725/,">https://help.openstreetmap.org/questions/51725/,</a> but the deletion is not answered yet.</p>
+<p>First part of my question is duplicate of <a href="/questions/51725/,">https://help.openstreetmap.org/questions/51725/,</a> but the deletion is not answered yet.</p>
 <p>Regars!</p>
 </div>
 <div id="question-tags" class="tags-container tags">

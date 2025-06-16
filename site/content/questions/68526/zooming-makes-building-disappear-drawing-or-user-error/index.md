@@ -107,7 +107,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Not all zoom levels are updated at the same time. Please have patience while all layers are updated. And when they are updated you might have to refresh your browser cache.</p>
 <p>This is the most often asked question,</p>
-<p>see e.g buildings - <a href="https://help.openstreetmap.org/questions/29949/buildings-disappear-when-zoom">https://help.openstreetmap.org/questions/29949/buildings-disappear-when-zoom</a> landuse - <a href="https://help.openstreetmap.org/questions/64545/residential-zones-disappear-when-i-zoom-in">https://help.openstreetmap.org/questions/64545/residential-zones-disappear-when-i-zoom-in</a> roads - <a href="https://help.openstreetmap.org/questions/16121/road-link-disappear-when-zoomed-out">https://help.openstreetmap.org/questions/16121/road-link-disappear-when-zoomed-out</a></p>
+<p>see e.g buildings - <a href="/questions/29949/buildings-disappear-when-zoom">https://help.openstreetmap.org/questions/29949/buildings-disappear-when-zoom</a> landuse - <a href="/questions/64545/residential-zones-disappear-when-i-zoom-in">https://help.openstreetmap.org/questions/64545/residential-zones-disappear-when-i-zoom-in</a> roads - <a href="/questions/16121/road-link-disappear-when-zoomed-out">https://help.openstreetmap.org/questions/16121/road-link-disappear-when-zoomed-out</a></p>
 <p>and probably many others.</p>
 <p>Please use the search functionality of this website before asking a question, who knows it might it be asked before.</p>
 </div>

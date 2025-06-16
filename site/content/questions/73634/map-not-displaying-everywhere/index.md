@@ -170,7 +170,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Сервер рабочий, проблема совсем в другом - в России тайл-сервер не определяется в DNS. Вот мое сообщение об этом <a href="https://help.openstreetmap.org/questions/73650/dns-resolve-problem-started-today">https://help.openstreetmap.org/questions/73650/dns-resolve-problem-started-today</a> Также я отписался на Билайне (мой провайдер). Пока никто ничего не сказал. Если это опять РКН балуется, то капец.</p>
+<p>Сервер рабочий, проблема совсем в другом - в России тайл-сервер не определяется в DNS. Вот мое сообщение об этом <a href="/questions/73650/dns-resolve-problem-started-today">https://help.openstreetmap.org/questions/73650/dns-resolve-problem-started-today</a> Также я отписался на Билайне (мой провайдер). Пока никто ничего не сказал. Если это опять РКН балуется, то капец.</p>
 </div>
 <div id="comment-73658-info" class="comment-info">
 <span class="comment-age">(21 Mar '20, 06:21)</span> <span class="comment-user userinfo">Legista</span>

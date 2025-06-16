@@ -154,7 +154,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the wiki <a href="http://wiki.openstreetmap.org/wiki/Tah"></a><a href="http://wiki.openstreetmap.org/wiki/Tah"></a><a href="http://wiki.openstreetmap.org/wiki/Tah">http://wiki.openstreetmap.org/wiki/Tah</a></p>
+<p>Have a look at the wiki <a href="https://wiki.openstreetmap.org/wiki/Tah"></a><a href="https://wiki.openstreetmap.org/wiki/Tah"></a><a href="https://wiki.openstreetmap.org/wiki/Tah">https://wiki.openstreetmap.org/wiki/Tah</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

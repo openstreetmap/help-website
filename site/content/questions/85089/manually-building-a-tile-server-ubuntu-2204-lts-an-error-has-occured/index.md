@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>sudo -u _renderd scripts/get-external-data.py <img src="https://help.openstreetmap.org/upfiles/1657960656765.jpg" alt="alt text" /> I build it via <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/</a> how to fix?</p>
-<p>thanks a lot. <img src="https://help.openstreetmap.org/upfiles/1657960798051.jpg" alt="alt text" /></p>
+<p>sudo -u _renderd scripts/get-external-data.py <img src="/upfiles/1657960656765.jpg" alt="alt text" /> I build it via <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/">https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/</a> how to fix?</p>
+<p>thanks a lot. <img src="/upfiles/1657960798051.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-manually" rel="tag" title="see questions tagged &#39;manually&#39;">manually</span>

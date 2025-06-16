@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Set up Nominatim"
-description = '''I tried following the steps on http://wiki.openstreetmap.org/wiki/Nominatim/Installation after installing all prerequisits: git clone git://github.com/twain47/Nominatim.git  Compile the postgresql module:  cd module make  Compile the Nominatim tool:  cd nominatim ./autogen.sh ./configure make  It se...'''
+description = '''I tried following the steps on https://wiki.openstreetmap.org/wiki/Nominatim/Installation after installing all prerequisits: git clone git://github.com/twain47/Nominatim.git  Compile the postgresql module:  cd module make  Compile the Nominatim tool:  cd nominatim ./autogen.sh ./configure make  It se...'''
 date = "2012-05-25T22:06:00Z"
 lastmod = "2012-05-31T19:28:00Z"
 weight = 12958
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I tried following the steps on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> after installing all prerequisits:</p>
+<p>I tried following the steps on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> after installing all prerequisits:</p>
 <pre><code>git clone git://github.com/twain47/Nominatim.git</code></pre>
 <p>Compile the postgresql module:</p>
 <pre><code>cd module

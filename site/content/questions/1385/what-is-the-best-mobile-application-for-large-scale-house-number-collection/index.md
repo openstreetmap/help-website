@@ -130,13 +130,13 @@ osqa_accepted = false
 <ol>
 <li><p>Make sure the time on it is accurate. NTPc is a free app for this.</p></li>
 <li><p>Start recording GPX traces (possibly on a separate device).</p></li>
-<li><p>Install and use the KeypadMapper app to enter the house numbers (<a href="http://wiki.openstreetmap.org/wiki/File:KeypadMapper2.png">screenshot</a>). If a house is on your left, try to hit L when you are traveling perpendicular to the direction of the house. Similarly hit R if the house is on your right. If the house is straight ahead, hit F just before turning.</p></li>
+<li><p>Install and use the KeypadMapper app to enter the house numbers (<a href="https://wiki.openstreetmap.org/wiki/File:KeypadMapper2.png">screenshot</a>). If a house is on your left, try to hit L when you are traveling perpendicular to the direction of the house. Similarly hit R if the house is on your right. If the house is straight ahead, hit F just before turning.</p></li>
 <li><p>You can start and stop KeypadMapper as many times as you like. You can also stop and start GPX logging while KeypadMapper is closed.</p></li>
 <li><p>When done, mount the device(s) on your computer and run</p>
 <p>python KeypadMapper.py /media/.../*.gpx &lt;/media/.../keypadmapper &gt;km.osm</p></li>
 <li><p>Open km.osm with josm to review and upload the data</p></li>
 </ol>
-<p>During the first large test <a href="http://www.openstreetmap.org/browse/changeset/7020292">214 housenumbers</a> were collected in 42 minutes (One 3 digit number every 12 seconds). A subsequent <a href="http://wiki.openstreetmap.org/wiki/File:KeypadMapper.png">review</a> showed that 89% was correct. The remaing 11% had to be edited as to not confuse the geocoder / reverse geocoder. (Arranging the nodes in neat rows is beyond the scope of this exercise).</p>
+<p>During the first large test <a href="https://www.openstreetmap.org/browse/changeset/7020292">214 housenumbers</a> were collected in 42 minutes (One 3 digit number every 12 seconds). A subsequent <a href="https://wiki.openstreetmap.org/wiki/File:KeypadMapper.png">review</a> showed that 89% was correct. The remaing 11% had to be edited as to not confuse the geocoder / reverse geocoder. (Arranging the nodes in neat rows is beyond the scope of this exercise).</p>
 <p>I subsequently improved my productivity further by using addr:interpolation.</p>
 <p><a href="https://github.com/nroets/KeypadMapper">Source</a></p>
 <p><a href="http://dev.openstreetmap.de/gosmore/KeypadMapper.apk">APK file</a></p>
@@ -276,7 +276,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you have an iPhone: For this purpose I put the buttons "copy all tags" and "paste all tags" into <a href="http://wiki.openstreetmap.org/wiki/ILOE">iLOE</a>. So it is only half automatic, but fast enough when on a walk outside. Insert the tags for one house in the street, then copy all the tags. Put all the tags for the next house and just change the housenumber. Then upload. Happy mapping, Johannes</p>
+<p>If you have an iPhone: For this purpose I put the buttons "copy all tags" and "paste all tags" into <a href="https://wiki.openstreetmap.org/wiki/ILOE">iLOE</a>. So it is only half automatic, but fast enough when on a walk outside. Insert the tags for one house in the street, then copy all the tags. Put all the tags for the next house and just change the housenumber. Then upload. Happy mapping, Johannes</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

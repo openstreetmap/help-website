@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Tilemill">Tilemill</a> or other solutions from Mapbox.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Tilemill">Tilemill</a> or other solutions from Mapbox.</p>
 <p>There are more hints and howto at their website.</p>
 <p>Maybe you can use Tilemill by keeping OSM data (after filtering) in a database and do a realtime rendering?</p>
 <p>Or look for their application "Tilestream"</p>

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is it possible with the Overpass API to get every way in a relation where their role is forward.</p>
-<p>For example <a href="http://www.openstreetmap.org/relation/2418275">relation 2418275</a> returns multiple ways. I wanted to retrieve only the node coordinates for the tram line (and not the platforms)<br />
+<p>For example <a href="https://www.openstreetmap.org/relation/2418275">relation 2418275</a> returns multiple ways. I wanted to retrieve only the node coordinates for the tram line (and not the platforms)<br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">

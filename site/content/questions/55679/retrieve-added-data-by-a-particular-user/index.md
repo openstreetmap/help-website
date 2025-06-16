@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Retrieve added data by a particular user"
-description = '''Hi, I want to get all data added(contributed) by a particular user to OSM. How to do? http://www.openstreetmap.org/user/Rajavelu_M/history shows data added by me with map. But I want data (without map) in JSON/XML or any other format. Thanks in advance.'''
+description = '''Hi, I want to get all data added(contributed) by a particular user to OSM. How to do? https://www.openstreetmap.org/user/Rajavelu_M/history shows data added by me with map. But I want data (without map) in JSON/XML or any other format. Thanks in advance.'''
 date = "2017-04-18T16:41:00Z"
 lastmod = "2017-04-19T08:44:00Z"
 weight = 55679
@@ -42,7 +42,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi,</p>
 <p>I want to get all data added(contributed) by a particular user to OSM. How to do?</p>
-<p><a href="http://www.openstreetmap.org/user/Rajavelu_M/history">http://www.openstreetmap.org/user/Rajavelu_M/history</a> shows data added by me with map. But I want data (without map) in JSON/XML or any other format.</p>
+<p><a href="https://www.openstreetmap.org/user/Rajavelu_M/history">https://www.openstreetmap.org/user/Rajavelu_M/history</a> shows data added by me with map. But I want data (without map) in JSON/XML or any other format.</p>
 <p>Thanks in advance.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

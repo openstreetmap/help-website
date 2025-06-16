@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "23.225098,72.6487656,695 at this Geo Point shows old data, New data is missing"
-description = '''23.225098,72.6487656,695 at this Geo Point shows old data, New data is missing, Kindly Please update it, More Detail please check below link http://www.openstreetmap.org/node/3448271095#map=17/23.22812/72.65340 Thank you'''
+description = '''23.225098,72.6487656,695 at this Geo Point shows old data, New data is missing, Kindly Please update it, More Detail please check below link https://www.openstreetmap.org/node/3448271095#map=17/23.22812/72.65340 Thank you'''
 date = "2016-12-05T07:51:00Z"
 lastmod = "2016-12-05T18:29:00Z"
 weight = 53241
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>23.225098,72.6487656,695 at this Geo Point shows old data, New data is missing, Kindly Please update it, More Detail please check below link <a href="http://www.openstreetmap.org/node/3448271095#map=17/23.22812/72.65340">http://www.openstreetmap.org/node/3448271095#map=17/23.22812/72.65340</a></p>
+<p>23.225098,72.6487656,695 at this Geo Point shows old data, New data is missing, Kindly Please update it, More Detail please check below link <a href="https://www.openstreetmap.org/node/3448271095#map=17/23.22812/72.65340">https://www.openstreetmap.org/node/3448271095#map=17/23.22812/72.65340</a></p>
 <p>Thank you</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://en.wikipedia.org/wiki/Nyatapola">This</a> wikipedia article refers to <a href="http://www.openstreetmap.org/browse/way/85470341">this</a> osm feature.</p>
-<p>and <a href="http://www.openstreetmap.org/browse/way/236588413">this</a> feature refers to <a href="http://en.wikipedia.org/wiki/Bronze_and_Brass_Museum">this</a> article<br />
+<p><a href="http://en.wikipedia.org/wiki/Nyatapola">This</a> wikipedia article refers to <a href="https://www.openstreetmap.org/browse/way/85470341">this</a> osm feature.</p>
+<p>and <a href="https://www.openstreetmap.org/browse/way/236588413">this</a> feature refers to <a href="http://en.wikipedia.org/wiki/Bronze_and_Brass_Museum">this</a> article<br />
 </p>
 <p>I am under the impression that the wikipedia page will show up a map showing the feature but it has shown up for 1st but not the second.</p>
 </div>

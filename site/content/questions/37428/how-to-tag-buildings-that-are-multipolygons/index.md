@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon wiki page</a> talks about using ways and tagging the relation instead of the members. As I read it, this would mean that a building with internal spaces would be composed of multiples ways (inner and outer) and then the whole relation would be tagged as a building.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon wiki page</a> talks about using ways and tagging the relation instead of the members. As I read it, this would mean that a building with internal spaces would be composed of multiples ways (inner and outer) and then the whole relation would be tagged as a building.</p>
 <ol>
 <li>Is that right?</li>
 <li>If so, I don't understand how to tag the relation a building.</li>

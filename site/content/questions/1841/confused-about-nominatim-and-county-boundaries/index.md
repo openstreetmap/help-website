@@ -119,7 +119,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The counties are marked as nodes so Nominatim guesses the boarders with the help of is_in tags. Ideally the borders should be a multipolygon with boundary=administrative and admin_level=6</p>
-<p>As I understand it you can use <a href="http://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata#Boundary_Line">Ordinance Survey Opendata</a> to make these multipolygons.</p>
+<p>As I understand it you can use <a href="https://wiki.openstreetmap.org/wiki/Ordnance_Survey_Opendata#Boundary_Line">Ordinance Survey Opendata</a> to make these multipolygons.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>have a look at <a href="http://help.openstreetmap.org/questions/3919/finding-and-modifying-a-boundary">http://help.openstreetmap.org/questions/3919/finding-and-modifying-a-boundary</a> what worked for me</p>
+<p>have a look at <a href="/questions/3919/finding-and-modifying-a-boundary">https://help.openstreetmap.org/questions/3919/finding-and-modifying-a-boundary</a> what worked for me</p>
 </div>
 <div id="comment-3958-info" class="comment-info">
 <span class="comment-age">(21 Mar '11, 23:55)</span> <span class="comment-user userinfo">andy mackey</span>

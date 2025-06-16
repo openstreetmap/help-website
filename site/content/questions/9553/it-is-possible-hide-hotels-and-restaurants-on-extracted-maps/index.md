@@ -114,7 +114,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, sure, you can simply remove that data from your local copy. There's a companion tool to osmconvert called osmfilter that can do these things. See <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">the wiki page</a> for details.</p>
+<p>Yes, sure, you can simply remove that data from your local copy. There's a companion tool to osmconvert called osmfilter that can do these things. See <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">the wiki page</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

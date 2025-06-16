@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The osmjs utility bundled with Osmium should be able to do what you want. See <a href="http://wiki.openstreetmap.org/wiki/Osmium">http://wiki.openstreetmap.org/wiki/Osmium</a> for some infos. Unfortunately the documentation is a bit sketchy at the moment and you will have to compile the software yourself.</p>
+<p>The osmjs utility bundled with Osmium should be able to do what you want. See <a href="https://wiki.openstreetmap.org/wiki/Osmium">https://wiki.openstreetmap.org/wiki/Osmium</a> for some infos. Unfortunately the documentation is a bit sketchy at the moment and you will have to compile the software yourself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

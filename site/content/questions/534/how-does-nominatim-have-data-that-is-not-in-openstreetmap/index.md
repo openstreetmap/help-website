@@ -203,7 +203,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The file with all the OSM data in a raw form, is <a href="http://downloads.cloudmade.com/asia/israel/israel.osm.bz2">israel.osm.bz2</a> (15.9M) Check that it is this file you are downloading.</p>
-<p>I tried your example search : "שנקין 15" and that seemed to match with this suburb place node: <a href="http://www.openstreetmap.org/browse/node/458713945">Node id 458713945</a></p>
+<p>I tried your example search : "שנקין 15" and that seemed to match with this suburb place node: <a href="https://www.openstreetmap.org/browse/node/458713945">Node id 458713945</a></p>
 <p>...and this node object is indeed present within CloudMade's Israel extract .osm file.</p>
 <p>Some handy commands:</p>
 <pre><code>bunzip2 /home/harry/Desktop/israel.osm.bz2

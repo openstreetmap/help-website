@@ -66,7 +66,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Hi, then tell us first how a computer or a database should know what street is a major street, and which is not. The general classification on street types are defined at <a href="http://wiki.openstreetmap.org/wiki/Key:highway">http://wiki.openstreetmap.org/wiki/Key:highway</a> ... but does this help?</p>
+<p>Hi, then tell us first how a computer or a database should know what street is a major street, and which is not. The general classification on street types are defined at <a href="https://wiki.openstreetmap.org/wiki/Key:highway">https://wiki.openstreetmap.org/wiki/Key:highway</a> ... but does this help?</p>
 <p>Or do you have a manual selection of streets that are in your focus?</p>
 </div>
 <div id="comment-26270-info" class="comment-info">
@@ -78,7 +78,7 @@ osqa_accepted = true
 <div id="post-26278-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>We want to search on primary streets <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dprimary">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dprimary</a> for example Oxford Street and bring back all shops on that street.</p>
+<p>We want to search on primary streets <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dprimary">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dprimary</a> for example Oxford Street and bring back all shops on that street.</p>
 </div>
 <div id="comment-26278-info" class="comment-info">
 <span class="comment-age">(11 Sep '13, 11:02)</span> <span class="comment-user userinfo">mezbaur</span>

@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to use OSM date without any guarantee of completeness you could download <a href="http://download.geofabrik.de/osm/europe/germany.osm.bz2">germany.osm.bz2</a> and filter for the stuff you want (place=*, addr*, highway=* and maybe boundaries) using <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
+<p>If you want to use OSM date without any guarantee of completeness you could download <a href="http://download.geofabrik.de/osm/europe/germany.osm.bz2">germany.osm.bz2</a> and filter for the stuff you want (place=*, addr*, highway=* and maybe boundaries) using <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
 <p>If you really need a <em>complete</em> as possible dataset of german adresses and stuff you'd best have to ask the german government like <a href="http://google-latlong.blogspot.de/2011/12/updating-maps-of-united-kingdom-germany.html">google did</a>. Though I'd doubt a little the recentness from that source. :)</p>
 </div>
 <div class="answer-controls post-controls">

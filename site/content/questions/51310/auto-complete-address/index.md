@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Please see <a href="https://help.openstreetmap.org/questions/31809/auto-complete-address-using-web-service">https://help.openstreetmap.org/questions/31809/auto-complete-address-using-web-service</a></p>
+<p>Please see <a href="/questions/31809/auto-complete-address-using-web-service">https://help.openstreetmap.org/questions/31809/auto-complete-address-using-web-service</a></p>
 </div>
 <div id="comment-51311-info" class="comment-info">
 <span class="comment-age">(09 Aug '16, 08:24)</span> <span class="comment-user userinfo">scai ♦</span>

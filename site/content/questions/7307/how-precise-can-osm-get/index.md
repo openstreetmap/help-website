@@ -108,7 +108,7 @@ For gps recordings with accuracy in meters this will hardly be a problem, but as
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Data_Primitives">Data Primitives</a> says the longitude has 7 decimal positions for &gt;−180 and &lt;180.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Data_Primitives">Data Primitives</a> says the longitude has 7 decimal positions for &gt;−180 and &lt;180.</p>
 <p><strong>4*10^7/2/180/10^7 = 0.01 meter = 1 centimeter</strong> (at the equator)</p>
 <p>The same document says latitude has 7 decimal positions for &gt;−90.0 and &lt;90.0.</p>
 <p><strong>4*10^7/4/90/10^7 = 0.01 meter = 1 centimeter</strong></p>
@@ -167,7 +167,7 @@ For gps recordings with accuracy in meters this will hardly be a problem, but as
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are some hints in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Node">Nodes</a>.</p>
+<p>There are some hints in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Node">Nodes</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

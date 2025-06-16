@@ -115,7 +115,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Collect the street geometry by <span>gps</span> traces and the street names by pen and notepad (or by waypoints with the gps devices). Note that today's smart phones have a (low quality) gps receiver built in which can be used (you just need a gpx track recording <span>app</span>). In the <span>early days</span> of OSM there was no (or maybe "blurred" landsat imagery) aerial imagery available to be used and all the streets which were added were added by using gps traces. Please also see <a href="https://help.openstreetmap.org/questions/802/">can-we-get-more-updated-aerial-imagery-from-bing-or-mapquest-or-anything-but-yahoo?</a></p>
+<p>Collect the street geometry by <span>gps</span> traces and the street names by pen and notepad (or by waypoints with the gps devices). Note that today's smart phones have a (low quality) gps receiver built in which can be used (you just need a gpx track recording <span>app</span>). In the <span>early days</span> of OSM there was no (or maybe "blurred" landsat imagery) aerial imagery available to be used and all the streets which were added were added by using gps traces. Please also see <a href="/questions/802/">can-we-get-more-updated-aerial-imagery-from-bing-or-mapquest-or-anything-but-yahoo?</a></p>
 <p>Have a look in the background/aerial imagery menu of the editor you are using if there are other aerial imagery provides (except bing):</p>
 <p>Please ensure not to copy google maps or other maps or data sources - unless it is clear, very clear that they are public domain or a special agreement exists.</p>
 </div>

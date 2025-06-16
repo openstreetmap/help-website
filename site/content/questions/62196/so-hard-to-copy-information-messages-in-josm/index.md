@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>It's so frustrating in JOSM, I want to copy <img src="https://help.openstreetmap.org/upfiles/2.jpg" alt="alt text" /></p>
+<p>It's so frustrating in JOSM, I want to copy <img src="/upfiles/2.jpg" alt="alt text" /></p>
 <p>with the mouse.</p>
 <p>I can only copy the right column, I cannot copy the left column. And whenever I write a bug report about it the team does not think they should make the "interface" copyible. It's not their job. What is worse, each row of the right column must be copied separately.</p>
 <p>Perhaps the easiest way would just run an Optical Character Recognition program on the whole image!</p>

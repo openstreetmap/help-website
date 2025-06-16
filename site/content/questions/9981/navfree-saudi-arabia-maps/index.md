@@ -207,7 +207,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>See also the answer to <a href="http://help.openstreetmap.org/questions/10679/malaysia-map-on-navfree/17148">this</a> related question.</p>
+<p>See also the answer to <a href="/questions/10679/malaysia-map-on-navfree/17148">this</a> related question.</p>
 </div>
 <div id="comment-17909-info" class="comment-info">
 <span class="comment-age">(23 Nov '12, 06:33)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

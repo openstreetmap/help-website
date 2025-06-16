@@ -112,13 +112,13 @@ One Answer:
 <div class="answer-body">
 <p>So you want to have an own private instance of a whole server with data upöoad, data storing, tile rendering and GPX overlay, so to say a clone of the whole main OSM infrastructure?</p>
 <p>searching in this FAQ site for "own private server" or "private OSM server instance" gives some results:</p>
-<p><a href="https://help.openstreetmap.org/questions/4422/rails-port-and-osm-server">https://help.openstreetmap.org/questions/4422/rails-port-and-osm-server</a></p>
-<p><a href="https://help.openstreetmap.org/questions/5170/setting-up-own-osm-server-mirror-server">https://help.openstreetmap.org/questions/5170/setting-up-own-osm-server-mirror-server</a></p>
-<p><a href="https://help.openstreetmap.org/questions/8526/how-to-edit-my-private-osm-server-map">https://help.openstreetmap.org/questions/8526/how-to-edit-my-private-osm-server-map</a></p>
-<p><a href="https://help.openstreetmap.org/questions/8462/can-i-make-a-private-osm-with-user-access-validation-and-custome-notations">https://help.openstreetmap.org/questions/8462/can-i-make-a-private-osm-with-user-access-validation-and-custome-notations</a></p>
-<p><a href="https://help.openstreetmap.org/questions/19878/private-maps-do-i-need-to-install-my-own-osm-server">https://help.openstreetmap.org/questions/19878/private-maps-do-i-need-to-install-my-own-osm-server</a></p>
-<p><a href="https://help.openstreetmap.org/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes">https://help.openstreetmap.org/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes</a></p>
-<p><a href="https://help.openstreetmap.org/questions/20021/saving-map-edits-to-local-server">https://help.openstreetmap.org/questions/20021/saving-map-edits-to-local-server</a></p>
+<p><a href="/questions/4422/rails-port-and-osm-server">https://help.openstreetmap.org/questions/4422/rails-port-and-osm-server</a></p>
+<p><a href="/questions/5170/setting-up-own-osm-server-mirror-server">https://help.openstreetmap.org/questions/5170/setting-up-own-osm-server-mirror-server</a></p>
+<p><a href="/questions/8526/how-to-edit-my-private-osm-server-map">https://help.openstreetmap.org/questions/8526/how-to-edit-my-private-osm-server-map</a></p>
+<p><a href="/questions/8462/can-i-make-a-private-osm-with-user-access-validation-and-custome-notations">https://help.openstreetmap.org/questions/8462/can-i-make-a-private-osm-with-user-access-validation-and-custome-notations</a></p>
+<p><a href="/questions/19878/private-maps-do-i-need-to-install-my-own-osm-server">https://help.openstreetmap.org/questions/19878/private-maps-do-i-need-to-install-my-own-osm-server</a></p>
+<p><a href="/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes">https://help.openstreetmap.org/questions/3643/howto-setup-a-private-osm-for-public-planning-eg-at-charrettes</a></p>
+<p><a href="/questions/20021/saving-map-edits-to-local-server">https://help.openstreetmap.org/questions/20021/saving-map-edits-to-local-server</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

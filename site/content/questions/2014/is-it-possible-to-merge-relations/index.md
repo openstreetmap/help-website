@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was working on the Eastern end of the <a href="http://www.openstreetmap.org/browse/relation/337267">Stour Valley Path</a> yesterday, and when I'd followed the footpath to just East of Bures, I found that there is <a href="http://www.openstreetmap.org/browse/relation/357955">another relation</a> that has been created for the same long distance path. Is there an easy way to merge the two?</p>
+<p>I was working on the Eastern end of the <a href="https://www.openstreetmap.org/browse/relation/337267">Stour Valley Path</a> yesterday, and when I'd followed the footpath to just East of Bures, I found that there is <a href="https://www.openstreetmap.org/browse/relation/357955">another relation</a> that has been created for the same long distance path. Is there an easy way to merge the two?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>
@@ -86,7 +86,7 @@ osqa_accepted = true
 <div id="post-86060-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I asked that question. iD cannot do this: <a href="https://help.openstreetmap.org/questions/86041/how-can-i-removemerge-duplicate-relations">https://help.openstreetmap.org/questions/86041/how-can-i-removemerge-duplicate-relations</a></p>
+<p>I asked that question. iD cannot do this: <a href="/questions/86041/how-can-i-removemerge-duplicate-relations">https://help.openstreetmap.org/questions/86041/how-can-i-removemerge-duplicate-relations</a></p>
 </div>
 <div id="comment-86060-info" class="comment-info">
 <span class="comment-age">(02 Nov '22, 09:14)</span> <span class="comment-user userinfo">Tomáš Hnyk</span>

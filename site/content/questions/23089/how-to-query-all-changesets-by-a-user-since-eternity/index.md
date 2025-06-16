@@ -129,7 +129,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>But see the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">http://wiki.openstreetmap.org/wiki/API_usage_policy</a> and don't do this for many users.</p>
+<p>But see the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">https://wiki.openstreetmap.org/wiki/API_usage_policy</a> and don't do this for many users.</p>
 </div>
 <div id="comment-23093-info" class="comment-info">
 <span class="comment-age">(07 Jun '13, 10:02)</span> <span class="comment-user userinfo">gormo</span>

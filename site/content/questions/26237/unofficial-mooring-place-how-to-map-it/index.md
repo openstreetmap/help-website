@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>Such places are usually unofficial, often have no pier, no camp site, no infrastructure at all. The most important is that they <strong>offer access to land</strong> (or to water if you are land dweller). It means the shore is clear of reed, there are no submerged obstacles, the land is free of swamp or dense vegetation. Other features like camp site, beach, access to road, etc. are only optional and would be mapped separately.</p>
 <p>An example of a boat moored in such place is presented on the image.</p>
 <p>How to map them? My first idea is to mark a point or a segment of the shore line with <em>mooring=yes</em>. Any other ideas?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/mooring.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/mooring.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-lake" rel="tag" title="see questions tagged &#39;lake&#39;">lake</span> <span class="post-tag tag-link-sailing" rel="tag" title="see questions tagged &#39;sailing&#39;">sailing</span> <span class="post-tag tag-link-mooring" rel="tag" title="see questions tagged &#39;mooring&#39;">mooring</span>

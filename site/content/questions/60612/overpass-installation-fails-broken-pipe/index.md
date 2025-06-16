@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I would like to setup a small private OSM Server in the cloud for testing an application. To achieve this, I've launched an AWS EC2 t2.micro instance and followed the installation steps from the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation">Official OSM Install Guide</a>.</p>
+<p>I would like to setup a small private OSM Server in the cloud for testing an application. To achieve this, I've launched an AWS EC2 t2.micro instance and followed the installation steps from the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Installation">Official OSM Install Guide</a>.</p>
 <p>In general the installation worked fine, at least for very small countries. I've successfully installed Andorra (<a href="http://download.geofabrik.de/europe/andorra-latest.osm.bz2">Geofabrik-Link</a>) and Faroe Islands (<a href="http://download.geofabrik.de/europe/faroe-islands-latest.osm.bz2">Geofabrik-Link</a>) and was able to run queries on the instance.</p>
 <p>When trying to do same with a little bit larger country, in this case Austria (<a href="http://download.geofabrik.de/europe/austria-latest.osm.bz2">Geofabrik-Link</a>), i receive a "<strong>broken pipe</strong>" error:</p>
 <blockquote>

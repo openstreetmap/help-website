@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Imagine a simple intersection of two streets. Both streets have sidewalks on each side. But, there is no marked way for pedestrians to cross the street walking from one sidewalk to the oposite one.</p>
 <p>Should I map a way with "crossing=unmarked", "footway=crossing" and/or "highway=footway"? There is no such an explicit way in the real world, but people usually cross the street there. I'm afraid that routing on foot wouldn't let you cross the street. There is no marked crossing in a long distance, not even something like this:</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/1/10/Crossing_with_sloped_curbs.jpg/800px-Crossing_with_sloped_curbs.jpg" alt="Slightly (un)marked crossing" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/1/10/Crossing_with_sloped_curbs.jpg/800px-Crossing_with_sloped_curbs.jpg" alt="Slightly (un)marked crossing" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-crossing" rel="tag" title="see questions tagged &#39;crossing&#39;">crossing</span> <span class="post-tag tag-link-pedestrian" rel="tag" title="see questions tagged &#39;pedestrian&#39;">pedestrian</span> <span class="post-tag tag-link-sidewalk" rel="tag" title="see questions tagged &#39;sidewalk&#39;">sidewalk</span>
@@ -152,7 +152,7 @@ One Answer:
 <div id="post-36710-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm not sure about the legality of crossing the street where it is not marked. If it is not, I understand you're proposing not to connect the sidewalk at this uncertain point, only when it's explicit, such as these cases: <a href="http://wiki.openstreetmap.org/wiki/Crossing#Examples.">http://wiki.openstreetmap.org/wiki/Crossing#Examples.</a> What do you think about "crossing=no", though?</p>
+<p>I'm not sure about the legality of crossing the street where it is not marked. If it is not, I understand you're proposing not to connect the sidewalk at this uncertain point, only when it's explicit, such as these cases: <a href="https://wiki.openstreetmap.org/wiki/Crossing#Examples.">https://wiki.openstreetmap.org/wiki/Crossing#Examples.</a> What do you think about "crossing=no", though?</p>
 </div>
 <div id="comment-36710-info" class="comment-info">
 <span class="comment-age">(09 Sep '14, 15:50)</span> <span class="comment-user userinfo">xoko</span>
@@ -164,7 +164,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Legality varies by jurisiction - for example in England and Wales you can cross a street anywhere you like (provided that you don't break any other laws in the process), although there are explicit exceptions, like here:</p>
-<p><a href="http://www.openstreetmap.org/changeset/25330411">http://www.openstreetmap.org/changeset/25330411</a></p>
+<p><a href="https://www.openstreetmap.org/changeset/25330411">https://www.openstreetmap.org/changeset/25330411</a></p>
 </div>
 <div id="comment-36712-info" class="comment-info">
 <span class="comment-age">(09 Sep '14, 16:12)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

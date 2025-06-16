@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>lanes=1 and/or an explicit width, see <a href="http://wiki.openstreetmap.org/wiki/Key:lanes#Narrow_roads">http://wiki.openstreetmap.org/wiki/Key:lanes#Narrow_roads</a></p>
+<p>lanes=1 and/or an explicit width, see <a href="https://wiki.openstreetmap.org/wiki/Key:lanes#Narrow_roads">https://wiki.openstreetmap.org/wiki/Key:lanes#Narrow_roads</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,7 +130,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>There is also the <a href="http://wiki.openstreetmap.org/wiki/Key:narrow">narrow</a> key.</p>
+<p>There is also the <a href="https://wiki.openstreetmap.org/wiki/Key:narrow">narrow</a> key.</p>
 </div>
 <div id="comment-42017-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 12:43)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -153,7 +153,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>background / half off-topic: <a href="http://help.openstreetmap.org/users/10748/tallarnie"></a><a href="http://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>: could you please mention a link to such a route which feels wrong for you? Maybe we could find another data problem there. Anyhow, it is important to get our data right – not to influence the current (known to you) routing algorithms/profiles. The profiles and algorithms change and due to OSM's open nature, there is a indefinite number of routing based on OSM data.</p>
+<p>background / half off-topic: <a href="https://help.openstreetmap.org/users/10748/tallarnie"></a><a href="https://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>: could you please mention a link to such a route which feels wrong for you? Maybe we could find another data problem there. Anyhow, it is important to get our data right – not to influence the current (known to you) routing algorithms/profiles. The profiles and algorithms change and due to OSM's open nature, there is a indefinite number of routing based on OSM data.</p>
 </div>
 <div id="comment-42019-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 13:40)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -165,7 +165,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: I used <a href="http://map.project-osrm.org/">http://map.project-osrm.org/</a> and <a href="http://openrouteservice.org/,">http://openrouteservice.org/,</a> and wanted to go from Rosslyn Chapel to Edinburgh Airport (= Jubilee Road). Two issues here:</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26"></a><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: I used <a href="http://map.project-osrm.org/">http://map.project-osrm.org/</a> and <a href="http://openrouteservice.org/,">http://openrouteservice.org/,</a> and wanted to go from Rosslyn Chapel to Edinburgh Airport (= Jubilee Road). Two issues here:</p>
 <ol>
 <li>OSRM Takes you automatically to the wrong side of the airport (unless you're a plane spotter ;-)</li>
 <li>The most logical route for anyone would be to follow the city bypass (A720) and then the A8. Instead, a few miles before the airport it sends you along some really narrow country roads (it actually avoids the 3 narrow bridges I was talking about). Could this be because of the speed restrictions along the bypass / A8?</li>
@@ -181,7 +181,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Part of the problem is that there are multiple Edinburgh Airport objects. The one you would actually want to use is the terminal <a href="http://www.openstreetmap.org/way/7358514">http://www.openstreetmap.org/way/7358514</a> This is a certain "weakness" of OSM in that we have a lot more data than you would normally have in a vehicle routing dataset and that the search function of at least OSRM is based on the full data, not just that which would be relevant for the intended purpose.</p>
+<p>Part of the problem is that there are multiple Edinburgh Airport objects. The one you would actually want to use is the terminal <a href="https://www.openstreetmap.org/way/7358514">https://www.openstreetmap.org/way/7358514</a> This is a certain "weakness" of OSM in that we have a lot more data than you would normally have in a vehicle routing dataset and that the search function of at least OSRM is based on the full data, not just that which would be relevant for the intended purpose.</p>
 </div>
 <div id="comment-42024-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 14:57)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -192,7 +192,7 @@ osqa_accepted = true
 <div id="post-42025-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10748/tallarnie"></a><a href="http://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>: do you mean this <span>OSRM routing</span> (update: new link, to the terminal)?</p>
+<p><a href="https://help.openstreetmap.org/users/10748/tallarnie"></a><a href="https://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>: do you mean this <span>OSRM routing</span> (update: new link, to the terminal)?</p>
 </div>
 <div id="comment-42025-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 14:59)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -203,7 +203,7 @@ osqa_accepted = true
 <div id="post-42026-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4792/simon">@Simon</a>: Maybe Edinburgh Airport wasn't the best option, due to its ambiguity. Try Jubilee Road instead.</p>
+<p><a href="https://help.openstreetmap.org/users/4792/simon">@Simon</a>: Maybe Edinburgh Airport wasn't the best option, due to its ambiguity. Try Jubilee Road instead.</p>
 </div>
 <div id="comment-42026-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 15:01)</span> <span class="comment-user userinfo">TallArnie</span>
@@ -228,7 +228,7 @@ And here's the third one on the same road, also controlled by traffic lights: <a
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>, please use OSM links (not nasty Google ;-) ), possibly with a <span>marker</span>.</p>
+<p><a href="https://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>, please use OSM links (not nasty Google ;-) ), possibly with a <span>marker</span>.</p>
 </div>
 <div id="comment-42028-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 15:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -240,7 +240,7 @@ And here's the third one on the same road, also controlled by traffic lights: <a
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Here's a better version of the route, as it turns out Edinburgh Airport is too ambiguous: <a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=55.8554%2C-3.1600%3B55.9467%2C-3.3652#map=12/55.9007/-3.2626">http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=55.8554%2C-3.1600%3B55.9467%2C-3.3652#map=12/55.9007/-3.2626</a><br />
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Here's a better version of the route, as it turns out Edinburgh Airport is too ambiguous: <a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=55.8554%2C-3.1600%3B55.9467%2C-3.3652#map=12/55.9007/-3.2626">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=55.8554%2C-3.1600%3B55.9467%2C-3.3652#map=12/55.9007/-3.2626</a><br />
 <br />
 Re. those Google links: they're shortcuts to Street View images to illustrate the original posting about narrow bridges.</p>
 </div>
@@ -265,7 +265,7 @@ Re. those Google links: they're shortcuts to Street View images to illustrate th
 <div id="post-42038-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>, we are not allowed to use StreetView for your data contributions, so that is not really helpful.</p>
+<p><a href="https://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a>, we are not allowed to use StreetView for your data contributions, so that is not really helpful.</p>
 </div>
 <div id="comment-42038-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 20:48)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -276,7 +276,7 @@ Re. those Google links: they're shortcuts to Street View images to illustrate th
 <div id="post-42041-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: thanks for looking at the reason! Yes, use of "narrow" as a kind of slow section ... or the routing profiles/engines need to be more adjusted to assume that a maxspeed of e.g. 50 on a residential road means an average speed (for route calculation) of 50*0.5 but 50*0.9 for trunks ... or an inclusion (if that is not done already) of lanes=1 / narrow into the calculation.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: thanks for looking at the reason! Yes, use of "narrow" as a kind of slow section ... or the routing profiles/engines need to be more adjusted to assume that a maxspeed of e.g. 50 on a residential road means an average speed (for route calculation) of 50*0.5 but 50*0.9 for trunks ... or an inclusion (if that is not done already) of lanes=1 / narrow into the calculation.</p>
 <p>By the way: the <span>mapquest routing</span> is as it should(?!) be. <a href="https://graphhopper.com/maps/?point=55.8554%2C-3.16&amp;point=55.9458%2C-3.361&amp;layer=OpenStreetMap">graphhopper</a> is "wrong" (by the way, if you set an "intermediate"/"via" on the big street, then you see that the route this way is just one (rounded) minute longer, so the decision for the small streets is a very close one.</p>
 </div>
 <div id="comment-42041-info" class="comment-info">
@@ -299,7 +299,7 @@ Re. those Google links: they're shortcuts to Street View images to illustrate th
 <div id="post-42071-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10748/tallarnie"></a><a href="http://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a> There are <a href="https://help.openstreetmap.org/questions/32604/advisory-speed-limits">tags for setting practical/advised speed limits</a> but I'm not aware of any router using these tags at the moment.</p>
+<p><a href="https://help.openstreetmap.org/users/10748/tallarnie"></a><a href="https://help.openstreetmap.org/users/10748/tallarnie">@TallArnie</a> There are <a href="/questions/32604/advisory-speed-limits">tags for setting practical/advised speed limits</a> but I'm not aware of any router using these tags at the moment.</p>
 </div>
 <div id="comment-42071-info" class="comment-info">
 <span class="comment-age">(31 Mar '15, 14:19)</span> <span class="comment-user userinfo">scai ♦</span>

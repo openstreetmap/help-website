@@ -86,7 +86,7 @@ osqa_accepted = false
 <div id="post-44759-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Doesn't sound like this tag name is suited for a world-wide project.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> Doesn't sound like this tag name is suited for a world-wide project.</p>
 </div>
 <div id="comment-44759-info" class="comment-info">
 <span class="comment-age">(13 Aug '15, 09:55)</span> <span class="comment-user userinfo">scai ♦</span>

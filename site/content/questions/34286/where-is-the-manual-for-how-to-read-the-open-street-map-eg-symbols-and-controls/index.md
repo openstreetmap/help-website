@@ -135,7 +135,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The only information available is under the "i" aka "Map Key" on the right side. This question has been asked in the past <a href="https://help.openstreetmap.org/questions/1004/simple-legendkey,">https://help.openstreetmap.org/questions/1004/simple-legendkey,</a> without real answer</p>
+<p>The only information available is under the "i" aka "Map Key" on the right side. This question has been asked in the past <a href="/questions/1004/simple-legendkey,">https://help.openstreetmap.org/questions/1004/simple-legendkey,</a> without real answer</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

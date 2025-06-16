@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Look at our <a href="http://wiki.openstreetmap.org/wiki/Blackberry">Blackberry software overview page</a> on the Wiki. There's also <a href="http://www.nogago.com/">nogago</a> which seems not to be listed on that page.</p>
+<p>Look at our <a href="https://wiki.openstreetmap.org/wiki/Blackberry">Blackberry software overview page</a> on the Wiki. There's also <a href="http://www.nogago.com/">nogago</a> which seems not to be listed on that page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -115,7 +115,7 @@ osqa_accepted = false
 <li>save the result as poly file again.</li>
 </ol>
 <p>That's how my result looks like:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/france_germany.png" alt="alt text" /></p>
+<p><img src="/upfiles/france_germany.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

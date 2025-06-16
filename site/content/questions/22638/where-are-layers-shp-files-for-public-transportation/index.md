@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, you'll have to extract them yourself, using e.g. <a href="http://www.osm974.re/osm2gis/">http://www.osm974.re/osm2gis/</a> or one of the other methods described in the wiki at <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">http://wiki.openstreetmap.org/wiki/Shapefiles</a> .</p>
+<p>Yes, you'll have to extract them yourself, using e.g. <a href="http://www.osm974.re/osm2gis/">http://www.osm974.re/osm2gis/</a> or one of the other methods described in the wiki at <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">https://wiki.openstreetmap.org/wiki/Shapefiles</a> .</p>
 <p>The Key-Value-Combination you need is <code>route=ferry</code></p>
 <p>edit: osm2gis does seem to be quite bad for obtaining large-scale sparse data extracts. So you'll be best off by downloading a denmark OSM extract, then filtering for <code>route=ferry</code> using osmfilter and then creating a shapefile from that.</p>
 </div>

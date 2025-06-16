@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>i am vinod bathini, doing my master thesis for this i need your help, if in a small village 2 roads linked and these two roads connecting with a streets and another roads, which tags are used for such a roads. the plus symbol is intersecting of two roads and remaining with red color points those are for example connecting streets and for such things which tags are using, thanks in advance. <img src="http://help.openstreetmap.org/upfiles/village_road.png" alt="alt text" /></p>
+<p>i am vinod bathini, doing my master thesis for this i need your help, if in a small village 2 roads linked and these two roads connecting with a streets and another roads, which tags are used for such a roads. the plus symbol is intersecting of two roads and remaining with red color points those are for example connecting streets and for such things which tags are using, thanks in advance. <img src="/upfiles/village_road.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-roads" rel="tag" title="see questions tagged &#39;roads&#39;">roads</span> <span class="post-tag tag-link-of" rel="tag" title="see questions tagged &#39;of&#39;">of</span> <span class="post-tag tag-link-streets" rel="tag" title="see questions tagged &#39;streets&#39;">streets</span> <span class="post-tag tag-link-linking" rel="tag" title="see questions tagged &#39;linking&#39;">linking</span> <span class="post-tag tag-link-village" rel="tag" title="see questions tagged &#39;village&#39;">village</span>
@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Unfortunately, there is not an easy answer as tagging guidelines vary from country to country, especially for roads. I would start at the <a href="http://wiki.openstreetmap.org/wiki/Tagging">Tagging</a> wiki page, and see if your country has a link under Recommended Tagging Scheme By Country. You could also look at the <a href="http://wiki.openstreetmap.org/wiki/Highway:International_equivalence">Highway:International_equivalence</a> wiki page--even if your country is not listed, you might get an idea of how to tag from how a similar country does it. You also could look at how other mappers in your area have tagged roads, and even send them a message via OSM to ask advice. You can see who has mapped an object by looking at the history of an object. Find mappers in your area generally via the <a href="http://resultmaps.neis-one.org/oooc">Who's Around Me</a>? map.</p>
+<p>Unfortunately, there is not an easy answer as tagging guidelines vary from country to country, especially for roads. I would start at the <a href="https://wiki.openstreetmap.org/wiki/Tagging">Tagging</a> wiki page, and see if your country has a link under Recommended Tagging Scheme By Country. You could also look at the <a href="https://wiki.openstreetmap.org/wiki/Highway:International_equivalence">Highway:International_equivalence</a> wiki page--even if your country is not listed, you might get an idea of how to tag from how a similar country does it. You also could look at how other mappers in your area have tagged roads, and even send them a message via OSM to ask advice. You can see who has mapped an object by looking at the history of an object. Find mappers in your area generally via the <a href="http://resultmaps.neis-one.org/oooc">Who's Around Me</a>? map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

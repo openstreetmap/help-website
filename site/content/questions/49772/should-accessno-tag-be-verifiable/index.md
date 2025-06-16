@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There is a hiking path that is marked as "access=no"; however, this path is actually very popular, and I often find large groups of people traveling along it. I find no warning signs there. So, by the principle of <a href="http://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a>, should I remove the "access=no" tag?</p>
+<p>There is a hiking path that is marked as "access=no"; however, this path is actually very popular, and I often find large groups of people traveling along it. I find no warning signs there. So, by the principle of <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verifiability</a>, should I remove the "access=no" tag?</p>
 <p>I felt unsure about it, so I did an investigation, with these observations:</p>
 <ul>
 <li>An adjacent path has an "access=no" tag added in 2013, with no relevant comment by the user that did it.</li>

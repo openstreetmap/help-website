@@ -120,7 +120,7 @@ One Answer:
 <p>If you are still seeing it then you are viewing cached tiles. Or z12 which I think is regenerated periodically</p>
 <p><a href="https://www.openstreetmap.org/#map=12/-5.4178/123.8096">https://www.openstreetmap.org/#map=12/-5.4178/123.8096</a></p>
 <p>Ah yes, see</p>
-<p><a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 <p>which says "Low and medium zoom tiles (z0-z12) are usually re-rendered only when a new osm-carto version is being deployed and on the first Sunday of each month"</p>
 </div>
 <div class="answer-controls post-controls">

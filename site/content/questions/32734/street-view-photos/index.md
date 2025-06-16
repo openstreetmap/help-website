@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Unsure what you mean by "this map program". See <a href="http://wiki.openstreetmap.org/wiki/Photo_Mapping">this Wiki page</a> for details on how others use photos to support their mapping. There's also <a href="http://www.mapillary.com/">Mapillary</a>, an unrelated commercial street view project that allows their photos to be used for mapping in OSM.</p>
+<p>Unsure what you mean by "this map program". See <a href="https://wiki.openstreetmap.org/wiki/Photo_Mapping">this Wiki page</a> for details on how others use photos to support their mapping. There's also <a href="http://www.mapillary.com/">Mapillary</a>, an unrelated commercial street view project that allows their photos to be used for mapping in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

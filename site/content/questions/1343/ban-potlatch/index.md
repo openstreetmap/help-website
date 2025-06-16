@@ -140,7 +140,7 @@ osqa_accepted = true
 <div id="post-50519-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5607/stephane-guillou">@stephane-guillou</a>: Thanks for sharing that nice pick! :)<br />
+<p><a href="https://help.openstreetmap.org/users/5607/stephane-guillou">@stephane-guillou</a>: Thanks for sharing that nice pick! :)<br />
 I forwarded it to the OSM weekly.</p>
 </div>
 <div id="comment-50519-info" class="comment-info">

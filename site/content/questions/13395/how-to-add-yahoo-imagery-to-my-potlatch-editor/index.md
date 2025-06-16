@@ -75,7 +75,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I see, Thanks. But from reading the Wiki page quoted by others: <a href="http://wiki.openstreetmap.org/wiki/Yahoo">http://wiki.openstreetmap.org/wiki/Yahoo</a> It sounds as if yahoo doesnt prohibit the use of their satellite imagery in order to trace roads etc...</p>
+<p>I see, Thanks. But from reading the Wiki page quoted by others: <a href="https://wiki.openstreetmap.org/wiki/Yahoo">https://wiki.openstreetmap.org/wiki/Yahoo</a> It sounds as if yahoo doesnt prohibit the use of their satellite imagery in order to trace roads etc...</p>
 <p>I see no mention of it being out of their terms of use. In fact the wiki appears to be saying the opposite that its OK to do it but Yahoo hasnt given specific permission but its within their user agreement. Maybe Im reading it wrong.</p>
 <p>But it seems the question may be answered as well about how to add other sources into the menu bar for backgrounds. So sounds like its not even possible with yahoo. Im working in the area of Montebello Quebec Canada. the raod I live on Cote Azelie is not even yet traced on open street map and I would like to do it as my first prohect. But I see that there is no areal immagery available (including Bing) with a high enough resolution to do a basic trace. Yahoo seems to have by far the best resolution out of them all for this particular region.</p>
 <p>Any Ideas how I can acheive a decent trace without using a GPS?</p>
@@ -91,7 +91,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The "how can I contribute without GPS or imagery" is a good separate question, so I've asked that <a href="http://help.openstreetmap.org/questions/13449/if-i-live-somewhere-with-no-background-imagery-and-have-no-gps-device-whats-the-best-way-that-i-can-contribute">here</a>.</p>
+<p>The "how can I contribute without GPS or imagery" is a good separate question, so I've asked that <a href="/questions/13449/if-i-live-somewhere-with-no-background-imagery-and-have-no-gps-device-whats-the-best-way-that-i-can-contribute">here</a>.</p>
 </div>
 <div id="comment-13450-info" class="comment-info">
 <span class="comment-age">(12 Jun '12, 09:14)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -159,7 +159,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the answers to <a href="http://help.openstreetmap.org/questions/10128/why-has-yahoo-aerial-photography-disapeared">this</a> question that explain why Yahoo imagery is no longer available.</p>
+<p>Have a look at the answers to <a href="/questions/10128/why-has-yahoo-aerial-photography-disapeared">this</a> question that explain why Yahoo imagery is no longer available.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

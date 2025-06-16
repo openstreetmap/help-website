@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>In the area that I am working on mapping, there is a conference center (<a href="http://glcc.org/index.html">Green Lake Conference Center</a>) that includes hotels, shops, restaurants, a golf course, houses, cabins, a campsite, and more. Is there a way that this can all be tagged together with one area?</p>
-<p>The area is here: <a href="http://www.openstreetmap.org/#map=16/43.8168/-89.0174&amp;layers=H">http://www.openstreetmap.org/#map=16/43.8168/-89.0174&amp;layers=H</a></p>
+<p>The area is here: <a href="https://www.openstreetmap.org/#map=16/43.8168/-89.0174&amp;layers=H">https://www.openstreetmap.org/#map=16/43.8168/-89.0174&amp;layers=H</a></p>
 <p>A map of the conference grounds is here: <a href="http://glcc.org/Files/Maps/GLCC%20grounds%20map%2011-24-12.pdf">http://glcc.org/Files/Maps/GLCC%20grounds%20map%2011-24-12.pdf</a> I have found no reason to doubt the accuracy of this map, as I have yet to find glaring errors.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

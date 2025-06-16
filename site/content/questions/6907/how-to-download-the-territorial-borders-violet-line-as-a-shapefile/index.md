@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can download the normaly offered raw OSM data by <a href="http://geofabrik.de">geofabrik.de</a> or <a href="http://cloudmade.com">cloudmade.com</a> and do some filtering with osmosis or <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>. You can define that you keep only elements like <em>boundary=administrative</em> or whatever you need.</p>
-<p>After that, you can convert your filtered data into shapefiles with the tools listed at <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">shapefile</a>.</p>
+<p>You can download the normaly offered raw OSM data by <a href="http://geofabrik.de">geofabrik.de</a> or <a href="http://cloudmade.com">cloudmade.com</a> and do some filtering with osmosis or <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>. You can define that you keep only elements like <em>boundary=administrative</em> or whatever you need.</p>
+<p>After that, you can convert your filtered data into shapefiles with the tools listed at <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">shapefile</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -179,7 +179,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Firstly, a bit of info about how the data at Geofabrik is split is contained <a href="http://download.geofabrik.de/clipbounds/">here</a>. It's worth reading that to understand what will and won't be in individual Geofabik extracts.</p>
-<p>If for whatever reason what you want isn't available from Geofabrik (presumably you want ways such as <a href="http://www.openstreetmap.org/browse/way/28421653">this</a> and the relations that they are part of) then perhaps an <a href="http://wiki.openstreetmap.org/wiki/Xapi">Xapi</a> query would help? The Overpass and Jxapi servers (either OSM's or Mapquest's) would be the ones to start with, although you need to experiment a bit to check that you're getting the data that you want.</p>
+<p>If for whatever reason what you want isn't available from Geofabrik (presumably you want ways such as <a href="https://www.openstreetmap.org/browse/way/28421653">this</a> and the relations that they are part of) then perhaps an <a href="https://wiki.openstreetmap.org/wiki/Xapi">Xapi</a> query would help? The Overpass and Jxapi servers (either OSM's or Mapquest's) would be the ones to start with, although you need to experiment a bit to check that you're getting the data that you want.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

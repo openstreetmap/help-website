@@ -221,7 +221,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess you have seen this recent question and you also want do it in an app. The wiki as quite a lot of info reguarding bounding boxes,tiles and zoom levels. have you looked carefully at that? <a href="https://help.openstreetmap.org/questions/19227/find-coordinates-of-bounding-box">https://help.openstreetmap.org/questions/19227/find-coordinates-of-bounding-box</a></p>
+<p>I guess you have seen this recent question and you also want do it in an app. The wiki as quite a lot of info reguarding bounding boxes,tiles and zoom levels. have you looked carefully at that? <a href="/questions/19227/find-coordinates-of-bounding-box">https://help.openstreetmap.org/questions/19227/find-coordinates-of-bounding-box</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

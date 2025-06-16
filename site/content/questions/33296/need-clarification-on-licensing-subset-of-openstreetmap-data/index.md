@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>In general the help site is not the place to seek legal advice (why should be obvious).</p>
-<p>Please see <a href="http://openstreetmap.org/copyright">http://openstreetmap.org/copyright</a> and <a href="http://wiki.openstreetmap.org/wiki/Open_Data_License/Community_Guidelines">http://wiki.openstreetmap.org/wiki/Open_Data_License/Community_Guidelines</a> for details on our licence and how to attribute us. A substantial extract of OSM data will be considered a derivative database and will be subject to ODbL terms, but within those terms you are free to build mobile apps and other applications that use OSM data.</p>
+<p>Please see <a href="http://openstreetmap.org/copyright">http://openstreetmap.org/copyright</a> and <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/Community_Guidelines">https://wiki.openstreetmap.org/wiki/Open_Data_License/Community_Guidelines</a> for details on our licence and how to attribute us. A substantial extract of OSM data will be considered a derivative database and will be subject to ODbL terms, but within those terms you are free to build mobile apps and other applications that use OSM data.</p>
 <p>We would naturally prefer you not to use google maps as a background, but that is not a legal restriction. Please note that it is your responsibility to assure that you adhere to googles ToS and do not enter in to an agreement with google that would give google rights to OSM data that you are not at liberty to give.</p>
 </div>
 <div class="answer-controls post-controls">

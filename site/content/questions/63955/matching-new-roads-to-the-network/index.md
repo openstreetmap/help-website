@@ -271,7 +271,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Short answer; You don't add new roads from GPS data. You're actually supposed to "correct by hand" (see also <a href="https://help.openstreetmap.org/questions/7461/using-a-gps-track-to-create-a-road-or-path).">https://help.openstreetmap.org/questions/7461/using-a-gps-track-to-create-a-road-or-path).</a> I've corrected tons of roads by hand myself and can tell you that with the right tools it's not as bad as you may think.</p>
+<p>Short answer; You don't add new roads from GPS data. You're actually supposed to "correct by hand" (see also <a href="/questions/7461/using-a-gps-track-to-create-a-road-or-path).">https://help.openstreetmap.org/questions/7461/using-a-gps-track-to-create-a-road-or-path).</a> I've corrected tons of roads by hand myself and can tell you that with the right tools it's not as bad as you may think.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

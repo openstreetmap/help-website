@@ -120,7 +120,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Done - see <a href="http://www.openstreetmap.org/changeset/44243311">http://www.openstreetmap.org/changeset/44243311</a> . Can you check the geometry of <a href="http://www.openstreetmap.org/way/226137041">http://www.openstreetmap.org/way/226137041</a> and <a href="http://www.openstreetmap.org/way/226137084">http://www.openstreetmap.org/way/226137084</a> (two buildings affected by that change)?</p>
+<p>Done - see <a href="https://www.openstreetmap.org/changeset/44243311">https://www.openstreetmap.org/changeset/44243311</a> . Can you check the geometry of <a href="https://www.openstreetmap.org/way/226137041">https://www.openstreetmap.org/way/226137041</a> and <a href="https://www.openstreetmap.org/way/226137084">https://www.openstreetmap.org/way/226137084</a> (two buildings affected by that change)?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -151,7 +151,7 @@ One Answer:
 <div id="post-53319-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/9373/lukobe">@lukobe</a>: Please could you <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark an answer as accepted</a> if it solves your problem.</p>
+<p>meta <a href="https://help.openstreetmap.org/users/9373/lukobe">@lukobe</a>: Please could you <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark an answer as accepted</a> if it solves your problem.</p>
 </div>
 <div id="comment-53319-info" class="comment-info">
 <span class="comment-age">(07 Dec '16, 22:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

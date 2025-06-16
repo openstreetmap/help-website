@@ -124,7 +124,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>look here: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot"></a><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot"></a><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot">http://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot</a></p>
+<p>look here: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot"></a><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot"></a><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot">https://wiki.openstreetmap.org/wiki/Proposed_features/WiFi_Zone/Hotspot</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -200,7 +200,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is how to do it:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OpenLayers">http://wiki.openstreetmap.org/wiki/OpenLayers</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OpenLayers">https://wiki.openstreetmap.org/wiki/OpenLayers</a></p>
 <p>This is a forum for everybody, including developers.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -337,7 +337,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>internet_access=wlan</strong></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:internet_access%3Dwlan">http://wiki.openstreetmap.org/wiki/Tag:internet_access%3Dwlan</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:internet_access%3Dwlan">https://wiki.openstreetmap.org/wiki/Tag:internet_access%3Dwlan</a></p>
 <p><em>(Just putting this here, because it's a top search result for these keywords)</em></p>
 </div>
 <div class="answer-controls post-controls">
@@ -400,7 +400,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Make sure to read and follow</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/License">http://wiki.openstreetmap.org/wiki/License</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/License">https://wiki.openstreetmap.org/wiki/License</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

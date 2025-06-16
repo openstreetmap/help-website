@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi amanda did you read this page, <a href="http://wiki.openstreetmap.org/wiki/JOSM">http://wiki.openstreetmap.org/wiki/JOSM</a> theres all the info youll need. ps welcome</p>
+<p>hi amanda did you read this page, <a href="https://wiki.openstreetmap.org/wiki/JOSM">https://wiki.openstreetmap.org/wiki/JOSM</a> theres all the info youll need. ps welcome</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

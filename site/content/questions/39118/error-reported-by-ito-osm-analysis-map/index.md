@@ -118,7 +118,7 @@ osqa_accepted = false
 <p><a href="https://www.ordnancesurvey.co.uk/opendatadownload/products.html">https://www.ordnancesurvey.co.uk/opendatadownload/products.html</a></p>
 <p>Since the data format is a bespoke text description you need bespoke tools to use it (or just inspect it manually since it is plain text).</p>
 <p>The Wiki contains further detail about how one may use this data.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OS_Locator">http://wiki.openstreetmap.org/wiki/OS_Locator</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OS_Locator">https://wiki.openstreetmap.org/wiki/OS_Locator</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sounds like <a href="http://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a> perhaps? Quite well-used in <a href="http://taginfo.openstreetmap.org/tags/?key=information&amp;value=guidepost#wiki">taginfo</a>. And like Gnonthgol said, use "ref" for the actual number.</p>
+<p>Sounds like <a href="https://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a> perhaps? Quite well-used in <a href="http://taginfo.openstreetmap.org/tags/?key=information&amp;value=guidepost#wiki">taginfo</a>. And like Gnonthgol said, use "ref" for the actual number.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -211,7 +211,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:information=board">http://wiki.openstreetmap.org/wiki/Tag:information=board</a> offers many variations depending on what information is displayed (in your case: information=board, board_type=history). Sometimes it's a bit hard to decide what is the dominant feature of the sign, but that's a classic OSM dilema.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:information=board">https://wiki.openstreetmap.org/wiki/Tag:information=board</a> offers many variations depending on what information is displayed (in your case: information=board, board_type=history). Sometimes it's a bit hard to decide what is the dominant feature of the sign, but that's a classic OSM dilema.</p>
 <p>If you want to note the number, I'd suggest putting it in the name tag. Not great, but that's the best I could think of when numbering the station crosses in christian pilgrim paths (not the same thing as your boards, but I think the same convention should apply).</p>
 </div>
 <div class="answer-controls post-controls">

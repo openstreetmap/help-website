@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I live in Paris and i got problem with the visualization of a couple of underground metro stations like this <a href="https://www.openstreetmap.org/way/678701646">one</a>. As a map "consumer" i found "ugly" this "rectangle" under the street... I know that data is more important than the representation but still do you know a way to make it more user friendly? Thanks a lot. Djiril</p>
-<p><img src="https://help.openstreetmap.org/upfiles/madeleine.png" alt="alt text" /></p>
+<p><img src="/upfiles/madeleine.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-subway" rel="tag" title="see questions tagged &#39;subway&#39;">subway</span>

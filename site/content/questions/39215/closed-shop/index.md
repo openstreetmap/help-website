@@ -162,7 +162,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: But exactly then such econ. indicators get wrong. A "vacant" shop will be counted as "shop" <em>unless</em> the statistic creator cares for an exception for this special value. Similarly if you suppose a GPS user likes to navigate to the nearest shop (e.g. because he wants to find a telephone/toilet/water because of an emergency): shop=vancant will not help, so the POI search needs to take care of this exception. That is a similar thing as the old building=entrance (instead of entrance=*).</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>: But exactly then such econ. indicators get wrong. A "vacant" shop will be counted as "shop" <em>unless</em> the statistic creator cares for an exception for this special value. Similarly if you suppose a GPS user likes to navigate to the nearest shop (e.g. because he wants to find a telephone/toilet/water because of an emergency): shop=vancant will not help, so the POI search needs to take care of this exception. That is a similar thing as the old building=entrance (instead of entrance=*).</p>
 <p>Also this tag does not provide the info which shop it was recently.</p>
 <p>This should be taken into account.</p>
 </div>

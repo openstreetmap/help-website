@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi I'm using the HTTPS version of OP Turbo to 'export' data to JOSM. I'm receiving this error message in OP</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_YgKcPbY.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_YgKcPbY.JPG" alt="alt text" /></p>
 <p>It works as expected using HTTP.</p>
 <p>I've tried uninstalling/reinstalling the certificate in JOSM Preferences&gt;Remote, but still fails.</p>
 <p>Any ideas?</p>

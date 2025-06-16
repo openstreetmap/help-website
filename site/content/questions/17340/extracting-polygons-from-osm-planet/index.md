@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi!</p>
 <p>I'm brand new to OSM data, so please be patient with me :)</p>
-<p>I want to extract administrative (or for that sake all named) polygons from OSM data. I have read <a href="https://help.openstreetmap.org/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary,">https://help.openstreetmap.org/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary,</a> but it does not work for me. Here's what happens on my machine:</p>
+<p>I want to extract administrative (or for that sake all named) polygons from OSM data. I have read <a href="/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary,">https://help.openstreetmap.org/questions/8273/how-do-i-extract-the-polygon-of-an-administrative-boundary,</a> but it does not work for me. Here's what happens on my machine:</p>
 <pre><code>$ bzcat great_britain.osm.bz2 | perl rel2poly.pl 
 Killed</code></pre>
 <p>I assume that is due to the process running out of memory (It's a VM without swap space...). However, I am not entirely sure that script does what I want. I read somewhere that it translates full relations to polygons. And AFAI understand, there are no full relations in the OSM extracts? I also don't speak pearl to check. If I was to write a python (right choice?) script to derive named polygons from OSM extracts how would I process the data? Here's my understanding of the data. Pleas correct me where I'm wrong:</p>

@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-25893-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just a thought - maybe it might help if you could ask some of your questions "in real time" in one of OSM's <a href="http://wiki.openstreetmap.org/wiki/Irc">IRC</a> channels? There are several - including in languages other than English.</p>
+<p>Just a thought - maybe it might help if you could ask some of your questions "in real time" in one of OSM's <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> channels? There are several - including in languages other than English.</p>
 </div>
 <div id="comment-25893-info" class="comment-info">
 <span class="comment-age">(28 Aug '13, 12:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -130,10 +130,10 @@ One Answer:
 <div class="answer-body">
 <p>Okay. Seems you start from scratch in OSM ;-)</p>
 <p>Please read this docs about OSM fundamental elements (nodes, ways, relations):</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a></p>
-<p>The simple version of a "route" is one or several ways attached together. The route identification comes from attached tags like "<a href="http://wiki.openstreetmap.org/wiki/Key:highway">highway</a>", "<a href="http://wiki.openstreetmap.org/wiki/Name">name</a>" and/or "<a href="http://wiki.openstreetmap.org/wiki/Ref">ref</a>". It's a "continuous" route when the last node of a way is also the first node of the next way. But be carefull, sometimes, a route is interrupted by a junction roundabout which might not carry one of the "name" or "ref" tags.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a></p>
+<p>The simple version of a "route" is one or several ways attached together. The route identification comes from attached tags like "<a href="https://wiki.openstreetmap.org/wiki/Key:highway">highway</a>", "<a href="https://wiki.openstreetmap.org/wiki/Name">name</a>" and/or "<a href="https://wiki.openstreetmap.org/wiki/Ref">ref</a>". It's a "continuous" route when the last node of a way is also the first node of the next way. But be carefull, sometimes, a route is interrupted by a junction roundabout which might not carry one of the "name" or "ref" tags.</p>
 <p>Also "routes" can be assembled by a relation (but it's not mandatory) where all ways are listed and common attributs grouped, like hiking routes, bus routes, road routes. See more on this page:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Relation:route">http://wiki.openstreetmap.org/wiki/Relation:route</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Relation:route">https://wiki.openstreetmap.org/wiki/Relation:route</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

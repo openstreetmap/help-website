@@ -230,7 +230,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Î had answered that <a href="https://help.openstreetmap.org/questions/71724/missing-admin_centre-in-relation?page=1&amp;focusedAnswerId=71748#71748">here</a> for a similar tricky case.</p>
+<p>Î had answered that <a href="/questions/71724/missing-admin_centre-in-relation?page=1&amp;focusedAnswerId=71748#71748">here</a> for a similar tricky case.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

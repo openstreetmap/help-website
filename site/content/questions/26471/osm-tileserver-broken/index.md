@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM TileServer broken?"
-description = '''Hi, Seems that the OSM tileservers are broken for me. Can&#x27;t see anything untoward here: http://wiki.openstreetmap.org/wiki/Servers but am not sure which server(s) are relevant. Several of my pages, and others, using OSM tiles are not displaying anything but were OK yesterday. e.g. http://tinyurl.com...'''
+description = '''Hi, Seems that the OSM tileservers are broken for me. Can&#x27;t see anything untoward here: https://wiki.openstreetmap.org/wiki/Servers but am not sure which server(s) are relevant. Several of my pages, and others, using OSM tiles are not displaying anything but were OK yesterday. e.g. http://tinyurl.com...'''
 date = "2013-09-18T18:42:00Z"
 lastmod = "2013-09-19T08:29:00Z"
 weight = 26471
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, Seems that the OSM tileservers are broken for me. Can't see anything untoward here:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Servers">http://wiki.openstreetmap.org/wiki/Servers</a> but am not sure which server(s) are relevant.</p>
+<a href="https://wiki.openstreetmap.org/wiki/Servers">https://wiki.openstreetmap.org/wiki/Servers</a> but am not sure which server(s) are relevant.</p>
 <p>Several of my pages, and others, using OSM tiles are not displaying anything but were OK yesterday. e.g.<br />
 <a href="http://tinyurl.com/oj5d3rt">http://tinyurl.com/oj5d3rt</a><br />
 <a href="http://openlayers.org/dev/examples/osm.html">http://openlayers.org/dev/examples/osm.html</a><br />
@@ -165,7 +165,7 @@ Peter<br />
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You want to look <a href="http://wiki.openstreetmap.org/wiki/Status">here</a> where it sais everything is OK.<br />
+<p>You want to look <a href="https://wiki.openstreetmap.org/wiki/Status">here</a> where it sais everything is OK.<br />
 Since osm.org (and some other maps based on the OSM tiles I checked) seems fine for the most people the problem is probably at your end?</p>
 </div>
 <div class="answer-controls post-controls">

@@ -113,13 +113,13 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><code>out;</code> will only return the current inputset, in this case the result of the last <code>rel(r);</code>. If you want the result of both <code>rel(r);</code> you need to put both statements inside a <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union">union block</a>:</p>
+<p><code>out;</code> will only return the current inputset, in this case the result of the last <code>rel(r);</code>. If you want the result of both <code>rel(r);</code> you need to put both statements inside a <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Union">union block</a>:</p>
 <pre><code>relation
   [&quot;name&quot;=&quot;Twente&quot;]
   [&quot;network&quot;=&quot;public_transport&quot;];
 ( rel(r); rel(r); );
 out;</code></pre>
-<p>Maybe you should also take a look at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_down_relations_.28.3E.3E.29">recurse down relations</a> (or for short: <code>&gt;&gt;;</code> ). This avoids manual resolution of nested relations, like you did in your example. Please refer to the wiki for details.</p>
+<p>Maybe you should also take a look at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Recurse_down_relations_.28.3E.3E.29">recurse down relations</a> (or for short: <code>&gt;&gt;;</code> ). This avoids manual resolution of nested relations, like you did in your example. Please refer to the wiki for details.</p>
 <p>Another option would the <a href="https://github.com/mmd-osm/Overpass-API/wiki/Overpass-API-test754#new-statement-complete"><code>complete</code> statement</a>, which is <strong>currently only available on the test instance</strong>: it can be leveraged to automatically resolve the nested relation only (ignoring and ways/nodes contained in the relation). Here's a link to the preview version: <a href="http://overpass-turbo.eu/s/cmw">http://overpass-turbo.eu/s/cmw</a> (returns 102 relations, which are only visible in overpass turbo's data tab).</p>
 </div>
 <div class="answer-controls post-controls">

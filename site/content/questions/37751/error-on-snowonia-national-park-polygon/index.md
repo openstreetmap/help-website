@@ -119,7 +119,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Obviously you're getting these error messages from <a href="http://polygons.openstreetmap.fr/?id=287245">http://polygons.openstreetmap.fr/?id=287245</a> :</p>
-<p><img src="http://help.openstreetmap.org/upfiles/fr.png" alt="alt text" /></p>
+<p><img src="/upfiles/fr.png" alt="alt text" /></p>
 <p>Strange enough that the analysis tool on this page fails to provide a useful error message: <a href="http://analyser.openstreetmap.fr/cgi-bin/index.py?relation=287245">http://analyser.openstreetmap.fr/cgi-bin/index.py?relation=287245</a></p>
 <p>As this is a server maintained by the French OSM community, I'd recommend to create a ticket on the issue tracker <a href="https://trac.openstreetmap.fr/">https://trac.openstreetmap.fr/</a> - However, I'm not quite sure which area is the right one. Maybe you want to check on a French list/forum?</p>
 <p>In any case, if you're using this page to download some GeoJSON/etc. format, you might as well consider Overpass Turbo: <a href="http://overpass-turbo.eu/s/5wP">http://overpass-turbo.eu/s/5wP</a> - Just hit the "Run" + "Export" buttons for various output formats.</p>

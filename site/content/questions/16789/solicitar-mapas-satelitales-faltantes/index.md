@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>¿Alguien me puede decir cómo solicitar las imágenes satelitales que hacen falta para editar las calles de mi pueblo? Una gran parte de mi pueblo aparecen las imágenes satelitales, pero no todas (aparece un ícono de un cámara encerrada en un círculo tachado; supongo que son imágenes que no fueron donadas por Bing).</p>
-<p>Por cierto, estoy tratando de editar zonas entre las ciudades de <a href="http://www.openstreetmap.org/?lat=20.36516&amp;lon=-103.82219&amp;zoom=15&amp;layers=M">Cocula</a> y <a href="http://www.openstreetmap.org/?lat=20.54831&amp;lon=-104.0475&amp;zoom=15&amp;layers=M">Ameca</a> (en <a href="http://www.openstreetmap.org/?lat=20.4502&amp;lon=-103.9268&amp;zoom=12&amp;layers=M">Jalisco</a>, México).</p>
+<p>Por cierto, estoy tratando de editar zonas entre las ciudades de <a href="https://www.openstreetmap.org/?lat=20.36516&amp;lon=-103.82219&amp;zoom=15&amp;layers=M">Cocula</a> y <a href="https://www.openstreetmap.org/?lat=20.54831&amp;lon=-104.0475&amp;zoom=15&amp;layers=M">Ameca</a> (en <a href="https://www.openstreetmap.org/?lat=20.4502&amp;lon=-103.9268&amp;zoom=12&amp;layers=M">Jalisco</a>, México).</p>
 <p>Gracias</p>
 </div>
 <div id="question-tags" class="tags-container tags">

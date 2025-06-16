@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Map road name displayed"
-description = '''http://www.openstreetmap.org/?lat=19.91247&amp;amp;lon=-75.14287&amp;amp;zoom=15&amp;amp;layers=M I had changed the name of the road yesterday from Chappel Hill road to Sherman Avenue. I saw several mails today and last one said closed. However when I go to http://www.openstreetmap.org/ and zoom in (I believe t...'''
+description = '''https://www.openstreetmap.org/?lat=19.91247&amp;amp;lon=-75.14287&amp;amp;zoom=15&amp;amp;layers=M I had changed the name of the road yesterday from Chappel Hill road to Sherman Avenue. I saw several mails today and last one said closed. However when I go to https://www.openstreetmap.org/ and zoom in (I believe t...'''
 date = "2012-09-13T14:38:00Z"
 lastmod = "2012-09-13T15:19:00Z"
 weight = 16038
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=19.91247&amp;lon=-75.14287&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=19.91247&amp;lon=-75.14287&amp;zoom=15&amp;layers=M</a> I had changed the name of the road yesterday from Chappel Hill road to Sherman Avenue. I saw several mails today and last one said closed. However when I go to <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> and zoom in (I believe the above is the permlink shortlink taht was requested erlier) I still see the lower part of the road callled Chapel hill road and the upper as Sherman Ave. However if I click on the Edit and choose Potlatch2 it shows the entire road as Sherman Ave as it did yesterday also. How can I change so entire road will display as Sherman Ave?</p>
+<p><a href="https://www.openstreetmap.org/?lat=19.91247&amp;lon=-75.14287&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=19.91247&amp;lon=-75.14287&amp;zoom=15&amp;layers=M</a> I had changed the name of the road yesterday from Chappel Hill road to Sherman Avenue. I saw several mails today and last one said closed. However when I go to <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> and zoom in (I believe the above is the permlink shortlink taht was requested erlier) I still see the lower part of the road callled Chapel hill road and the upper as Sherman Ave. However if I click on the Edit and choose Potlatch2 it shows the entire road as Sherman Ave as it did yesterday also. How can I change so entire road will display as Sherman Ave?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-openstreetmap" rel="tag" title="see questions tagged &#39;openstreetmap&#39;">openstreetmap</span> <span class="post-tag tag-link-road" rel="tag" title="see questions tagged &#39;road&#39;">road</span> <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-change" rel="tag" title="see questions tagged &#39;change&#39;">change</span>
@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-16040-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>One more thought - you're probably wondering "why did my previous question get closed, when I didn't understand the answer"? The reason is that there's an attempt on help.osm.org to try and avoid duplicate questions with duplicate answers, but instead to have one "best" version of a particular question with the best answer on it (so that you can immediately find an answer, and not need to ask the question at all!). The answer that Andy Allan gave <a href="https://help.openstreetmap.org/questions/377/where-does-meta-discussion-on-helpopenstreetmaporg-occur">here</a> explains it in a bit more detail.<br />
+<p>One more thought - you're probably wondering "why did my previous question get closed, when I didn't understand the answer"? The reason is that there's an attempt on help.osm.org to try and avoid duplicate questions with duplicate answers, but instead to have one "best" version of a particular question with the best answer on it (so that you can immediately find an answer, and not need to ask the question at all!). The answer that Andy Allan gave <a href="/questions/377/where-does-meta-discussion-on-helpopenstreetmaporg-occur">here</a> explains it in a bit more detail.<br />
 </p>
 </div>
 <div id="comment-16040-info" class="comment-info">
@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The answer to the <a href="https://help.openstreetmap.org/questions/16021/street-name-change">previous question</a> included a link to <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question and answer</a>, which explains it, specifically where the answer says:</p>
+<p>The answer to the <a href="/questions/16021/street-name-change">previous question</a> included a link to <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question and answer</a>, which explains it, specifically where the answer says:</p>
 <pre><code>If you suspect that the tile was not correctly expired, there is a way to manually overwrite this expiry mechanism by appending a /dirty to the url which will append the tile to the back of the rendering queue. However, in nearly all cases this should not be necessary.</code></pre>
 <p>So if you follow your link, right click on the tile that you want to dirty, you'll get a URL like</p>
 <p><a href="http://a.tile.openstreetmap.org/15/9543/14534.png">http://a.tile.openstreetmap.org/15/9543/14534.png</a></p>

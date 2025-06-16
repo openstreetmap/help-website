@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-3627-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Your question reminded me of my own earlier question, which I still consider open: <a href="http://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility">http://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a> Fortunately, your specific case is probably a little more straightforward.</p>
+<p>Your question reminded me of my own earlier question, which I still consider open: <a href="/questions/2969/how-to-tag-a-multi-function-facility">https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility</a> Fortunately, your specific case is probably a little more straightforward.</p>
 </div>
 <div id="comment-3627-info" class="comment-info">
 <span class="comment-age">(07 Mar '11, 21:23)</span> <span class="comment-user userinfo">ponzu</span>
@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Map both features of the station independently. Here's an example of a <a href="http://www.openstreetmap.org/?lat=36.07486&amp;lon=-95.890667&amp;zoom=18&amp;layers=M">QuikTrip that has a convenience store and fuel</a>. This also has the advantage of providing rich detail and more accurate door-to-door navigation.</p>
+<p>Map both features of the station independently. Here's an example of a <a href="https://www.openstreetmap.org/?lat=36.07486&amp;lon=-95.890667&amp;zoom=18&amp;layers=M">QuikTrip that has a convenience store and fuel</a>. This also has the advantage of providing rich detail and more accurate door-to-door navigation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

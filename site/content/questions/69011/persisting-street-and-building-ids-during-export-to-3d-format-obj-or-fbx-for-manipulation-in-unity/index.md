@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>When I import OSM exported data to Blender, the layers get grouped into single models, so the individual components of the city are indistinguishable. For example, when importing the OSM file to Blender, then exporting to FBX for Unity, and finally, importing into Unity, the roads are all grouped into one GameObject called "Road." How can I incorporate the ID of the street/building into name of the GameObject?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2019-04-29_at_1.43.27_PM.png" alt="Image of Unity project inspector demonstrating that layers are grouped into single gameobjects" /></p>
+<p><img src="/upfiles/Screen_Shot_2019-04-29_at_1.43.27_PM.png" alt="Image of Unity project inspector demonstrating that layers are grouped into single gameobjects" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-fbx" rel="tag" title="see questions tagged &#39;fbx&#39;">fbx</span> <span class="post-tag tag-link-unity" rel="tag" title="see questions tagged &#39;unity&#39;">unity</span> <span class="post-tag tag-link-identifiers" rel="tag" title="see questions tagged &#39;identifiers&#39;">identifiers</span> <span class="post-tag tag-link-obj" rel="tag" title="see questions tagged &#39;obj&#39;">obj</span> <span class="post-tag tag-link-3d" rel="tag" title="see questions tagged &#39;3d&#39;">3d</span>

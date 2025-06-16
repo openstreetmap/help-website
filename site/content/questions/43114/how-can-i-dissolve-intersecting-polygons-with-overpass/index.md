@@ -127,7 +127,7 @@ out geom;</code></pre>
 (rel(area.a)[&quot;admin_level&quot;=6];&gt;;);out meta;</code></pre>
 <p>To merge intersecting polygons in QGIS, first select all polygons, then choose "Vector-&gt;Geoprocessing Tools-&gt;Dissolve" and dissolve by field "osm_type". Save the result in a new shape file and the result to your map. A new layer with a new multilinestring should appear like in the screenshot below.</p>
 <p>Please see <a href="http://gis.stackexchange.com/questions/65256/qgis-merge-intersecting-polygons-into-one-which-are-part-of-the-same-feature">the following link for details</a>. Here's how the result could look like with a bit of shapeburst styling:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/res2.png" alt="alt text" /></p>
+<p><img src="/upfiles/res2.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

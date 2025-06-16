@@ -175,7 +175,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you want to search for things in a given area, you can almost do that with Potlatch 2 - you can control-drag to select everything within an area and then control-click to remove items from the selection. What's left will be the items that you couldn't immediately see.</p>
-<p>However, if you definitely want to work through a list, then the "todo" plugin for JOSM sounds like the answer - see <a href="https://help.openstreetmap.org/questions/24052/josm-and-taginfo-how-to-easily-move-through-a-list">this previous question</a> about it.</p>
+<p>However, if you definitely want to work through a list, then the "todo" plugin for JOSM sounds like the answer - see <a href="/questions/24052/josm-and-taginfo-how-to-easily-move-through-a-list">this previous question</a> about it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

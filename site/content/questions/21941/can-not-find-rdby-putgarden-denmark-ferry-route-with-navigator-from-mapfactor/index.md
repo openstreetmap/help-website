@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello When I want a route from Nysted to Hamburg the navigator direct me to take Gedser Rostock or over Jutland (I live at Lolland). It will not accept the <a href="http://www.openstreetmap.org/?mlat=54.59&amp;mlon=11.286&amp;zoom=11&amp;layers=M">ferry route Rødby Putgarden</a> (<a href="http://www.openstreetmap.org/browse/way/47681503">way in osm's data</a>) what ever I do. It seems like this ferry route is unknow. But when I look at the maps I can not see anything wrong. I use the <span>free navigator from MapFactor</span>. Please can anybody give me an answer. Thank you.</p>
+<p>Hello When I want a route from Nysted to Hamburg the navigator direct me to take Gedser Rostock or over Jutland (I live at Lolland). It will not accept the <a href="https://www.openstreetmap.org/?mlat=54.59&amp;mlon=11.286&amp;zoom=11&amp;layers=M">ferry route Rødby Putgarden</a> (<a href="https://www.openstreetmap.org/browse/way/47681503">way in osm's data</a>) what ever I do. It seems like this ferry route is unknow. But when I look at the maps I can not see anything wrong. I use the <span>free navigator from MapFactor</span>. Please can anybody give me an answer. Thank you.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ferry" rel="tag" title="see questions tagged &#39;ferry&#39;">ferry</span> <span class="post-tag tag-link-mapfactor" rel="tag" title="see questions tagged &#39;mapfactor&#39;">mapfactor</span> <span class="post-tag tag-link-navigator" rel="tag" title="see questions tagged &#39;navigator&#39;">navigator</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span>
@@ -113,7 +113,7 @@ osqa_accepted = false
 <p>Have just been having a play with the route in osrm.</p>
 <p>The ferry works, the problem is a lifting gate at Puttgarden which prevents you actually leaving the port. I found several of these problems on UK ferries. The solution is to simply tag the gate access=yes, then routing will work.</p>
 <p><a href="http://osrm.at/34i">http://osrm.at/34i</a></p>
-<p>The offending gate is here <a href="http://osrm.at/34j">http://osrm.at/34j</a> <a href="http://www.openstreetmap.org/browse/node/2277264075">http://www.openstreetmap.org/browse/node/2277264075</a></p>
+<p>The offending gate is here <a href="http://osrm.at/34j">http://osrm.at/34j</a> <a href="https://www.openstreetmap.org/browse/node/2277264075">https://www.openstreetmap.org/browse/node/2277264075</a></p>
 <p>I have added an access tag, so it should work (in OSRM) on Tuesday.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,7 +174,7 @@ osqa_accepted = false
 <p>At 3.: However, this help page is not intended to solve specific data problems. Rather it is to ask how to solve problems. ;-) You could report the problem with this ferry connection at <span>OpenStreetBugs</span> or (since some days) <span>directly on the osm.org website</span> (notes).<br />
 </p>
 <p>Or discuss and solve it collaboratively in <a href="https://wiki.openstreetmap.org/wiki/Contact">IRC, forum or mailing list</a>. That may be the best option since you don't know if the problem is really a problem of the OSM data (you could try other <span>routing programs/websites</span> - e.g. <a href="http://osrm.at/34a">http://osrm.at/34a</a> (wrong route) or <a href="http://mapq.st/151ka1O">http://mapq.st/151ka1O</a> (right route!) - to find out better).</p>
-<p>Hmmm, okay, a specific comment: On 13:01 (today 28th April) <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=15895469">you have added</a> (among another change) the tag <span>highway=motorway_link</span> to the ferry connection. That seems not to be right (there is no motorway link). By the way: <a href="http://www.openstreetmap.org/browse/way/128631318">Rostock - Gedser</a> also does not have this tag! <span>route=ferry</span> seems to be used for ferry connections.</p>
+<p>Hmmm, okay, a specific comment: On 13:01 (today 28th April) <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=15895469">you have added</a> (among another change) the tag <span>highway=motorway_link</span> to the ferry connection. That seems not to be right (there is no motorway link). By the way: <a href="https://www.openstreetmap.org/browse/way/128631318">Rostock - Gedser</a> also does not have this tag! <span>route=ferry</span> seems to be used for ferry connections.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

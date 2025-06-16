@@ -153,7 +153,7 @@ One Answer:
 <div id="post-46957-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11738/magali-giaume">@magali giaume</a>: thanks for the confirmation! Please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark this answer as accepted</a> if it solves your problem.</p>
+<p><a href="https://help.openstreetmap.org/users/11738/magali-giaume">@magali giaume</a>: thanks for the confirmation! Please <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">mark this answer as accepted</a> if it solves your problem.</p>
 </div>
 <div id="comment-46957-info" class="comment-info">
 <span class="comment-age">(03 Dec '15, 18:18)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

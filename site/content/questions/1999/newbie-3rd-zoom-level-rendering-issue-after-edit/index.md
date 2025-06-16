@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>Hi, newbie here, I read all the stuff before making edits. In the 3rd most zoomed in level only, a select few of the ways I edited are displaying back broken in the view tab. Looks like I'm getting some pre-edit tiles mixed in with post edit tiles. This only appears in the 3rd zoom level all higher and lower resolution zooms render correctly. Also on the edit tab, potlatch 1 and 2 both render correctly in <strong>all</strong> zoom levels including the 3rd. I do not notice this phenom anywhere else outside of the bounding box of my edits.</p>
 <p>The fact that it displays correctly in higher resolution would seem to rule out data problems. Is this an artifact of batch update in progress? Or did a batch update fail?</p>
 <p>My edits have time stamps in the history tab whereas they remained "still editing" for a while. Still the same observation. Just thought I'd provide that tidbit if it helps explain any timing issues.</p>
-<p>In case it helps my changesets are: <a href="http://www.openstreetmap.org/browse/changeset/6856207">http://www.openstreetmap.org/browse/changeset/6856207</a> and <a href="http://www.openstreetmap.org/browse/changeset/6856085">http://www.openstreetmap.org/browse/changeset/6856085</a></p>
-<p>Also these updates ran in a superset of my bounding box: <a href="http://www.openstreetmap.org/browse/changeset/6853644">http://www.openstreetmap.org/browse/changeset/6853644</a> and <a href="http://www.openstreetmap.org/browse/changeset/6856059">http://www.openstreetmap.org/browse/changeset/6856059</a> while I was in the process of editing. How does OSM handle locking and concurrent edits? Normally, one would get a "data updated by another user" error in a typical database transaction. If this is the issue will the tiles get re-rendered automatically? Or does it require a manual fix?</p>
+<p>In case it helps my changesets are: <a href="https://www.openstreetmap.org/browse/changeset/6856207">https://www.openstreetmap.org/browse/changeset/6856207</a> and <a href="https://www.openstreetmap.org/browse/changeset/6856085">https://www.openstreetmap.org/browse/changeset/6856085</a></p>
+<p>Also these updates ran in a superset of my bounding box: <a href="https://www.openstreetmap.org/browse/changeset/6853644">https://www.openstreetmap.org/browse/changeset/6853644</a> and <a href="https://www.openstreetmap.org/browse/changeset/6856059">https://www.openstreetmap.org/browse/changeset/6856059</a> while I was in the process of editing. How does OSM handle locking and concurrent edits? Normally, one would get a "data updated by another user" error in a typical database transaction. If this is the issue will the tiles get re-rendered automatically? Or does it require a manual fix?</p>
 <p>The edits were made in potlatch 1.</p>
 <p>In potlatch 2 when I select osmarender for the background the whole background shows all pre-edit tiles not the mixture as sene in the view tab.</p>
 <p>That's about all the data I have to offer. Can anyone explain this observation?</p>
@@ -113,7 +113,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Different zoom levels may render at different times. It is possible that your updates have appeared at one zoom level, but they have not been rendered for other zoom levels yet. (Alternatively it could be simply that your PC is caching the old tiles - clicking the permalink link, and then clicking refresh in your browser may fix this.)</p>
-<p>Mapnik and Osmarender do rendering slightly differently. See <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map#Tile_rendering">this page in the Wiki</a> for more information.</p>
+<p>Mapnik and Osmarender do rendering slightly differently. See <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map#Tile_rendering">this page in the Wiki</a> for more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

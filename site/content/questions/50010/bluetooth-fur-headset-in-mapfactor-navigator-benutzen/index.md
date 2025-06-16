@@ -93,7 +93,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12385/suebia">@Suebia</a>: Ja, bitte kontaktiere MapFactor unter <a href="https://www.mapfactor.com/de/">https://www.mapfactor.com/de/</a> . Wenn du eine Lösung gefunden hast, kannst du sie hier als "Antwort" eintragen (für Leute mit der gleichen Frage). Vielleicht hat auch zufälligerweise jemand der hier Mitlesenden eine Ahnung und kann dir in der Zwischenzeit helfen.</p>
+<p><a href="https://help.openstreetmap.org/users/12385/suebia">@Suebia</a>: Ja, bitte kontaktiere MapFactor unter <a href="https://www.mapfactor.com/de/">https://www.mapfactor.com/de/</a> . Wenn du eine Lösung gefunden hast, kannst du sie hier als "Antwort" eintragen (für Leute mit der gleichen Frage). Vielleicht hat auch zufälligerweise jemand der hier Mitlesenden eine Ahnung und kann dir in der Zwischenzeit helfen.</p>
 </div>
 <div id="comment-50028-info" class="comment-info">
 <span class="comment-age">(05 Jun '16, 12:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -105,7 +105,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12385/suebia"></a><a href="http://help.openstreetmap.org/users/12385/suebia">@Suebia</a>: Übrigens, es gibt sehr viele auf <span>OSM-basierende Apps für Android</span>. Vielleicht hilft dir eine andere App besser. Ich persönlich kann dir <span>Scout von Telenav</span> empfehlen, weiß aber nicht, ob es deine gewünschte Bluetoothfunktion unerstützt.</p>
+<p><a href="https://help.openstreetmap.org/users/12385/suebia"></a><a href="https://help.openstreetmap.org/users/12385/suebia">@Suebia</a>: Übrigens, es gibt sehr viele auf <span>OSM-basierende Apps für Android</span>. Vielleicht hilft dir eine andere App besser. Ich persönlich kann dir <span>Scout von Telenav</span> empfehlen, weiß aber nicht, ob es deine gewünschte Bluetoothfunktion unerstützt.</p>
 </div>
 <div id="comment-50029-info" class="comment-info">
 <span class="comment-age">(05 Jun '16, 12:30)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

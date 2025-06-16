@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-41180-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> true, but that's a secondary problem since it could be handled by tag-transform. Still a good point, thanks.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> true, but that's a secondary problem since it could be handled by tag-transform. Still a good point, thanks.</p>
 </div>
 <div id="comment-41180-info" class="comment-info">
 <span class="comment-age">(20 Feb '15, 15:09)</span> <span class="comment-user userinfo">grin</span>
@@ -98,7 +98,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> I don't think that anyone's suggesting doing it within OSM; it's after extracting the data and before throwing it at MapsForge that's the question.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a> I don't think that anyone's suggesting doing it within OSM; it's after extracting the data and before throwing it at MapsForge that's the question.</p>
 </div>
 <div id="comment-41182-info" class="comment-info">
 <span class="comment-age">(20 Feb '15, 15:19)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -109,7 +109,7 @@ osqa_accepted = false
 <div id="post-41184-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@someoneelse</a> misunderstood, my bad!</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@someoneelse</a> misunderstood, my bad!</p>
 </div>
 <div id="comment-41184-info" class="comment-info">
 <span class="comment-age">(20 Feb '15, 15:35)</span> <span class="comment-user userinfo">neuhausr</span>

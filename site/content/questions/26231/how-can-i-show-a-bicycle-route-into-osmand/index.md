@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How can I show a bicycle route into osmand?"
-description = '''How can I show a bicycle route (e.g. http://www.openstreetmap.org/browse/relation/2198215) on my android device with the help of osmand?'''
+description = '''How can I show a bicycle route (e.g. https://www.openstreetmap.org/browse/relation/2198215) on my android device with the help of osmand?'''
 date = "2013-09-09T17:50:00Z"
 lastmod = "2013-09-13T10:21:00Z"
 weight = 26231
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I show a bicycle route (e.g. <a href="http://www.openstreetmap.org/browse/relation/2198215)">http://www.openstreetmap.org/browse/relation/2198215)</a> on my android device with the help of osmand?</p>
+<p>How can I show a bicycle route (e.g. <a href="https://www.openstreetmap.org/browse/relation/2198215)">https://www.openstreetmap.org/browse/relation/2198215)</a> on my android device with the help of osmand?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-xml" rel="tag" title="see questions tagged &#39;xml&#39;">xml</span> <span class="post-tag tag-link-bicycle" rel="tag" title="see questions tagged &#39;bicycle&#39;">bicycle</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-osmand" rel="tag" title="see questions tagged &#39;osmand&#39;">osmand</span>

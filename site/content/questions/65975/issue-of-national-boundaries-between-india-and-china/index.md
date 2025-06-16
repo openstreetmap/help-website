@@ -166,7 +166,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>This statement is unreasonable and not justifiable to a certain extent as I didn't saw such statement under the almost exact same 'question' raised by Indians which you have also replied(<a href="https://help.openstreetmap.org/questions/12810/kashmir-india).">https://help.openstreetmap.org/questions/12810/kashmir-india).</a> Just to be clear, I'm not going to assume that there are any national prejudice here but at least impolite and inappropriate as a moderator. And I would like to ask for, at least, a place that I can raise this issue. That would constitute a question, won't it? Could you please, as a moderator, kindly provide an answer for this?</p>
+<p>This statement is unreasonable and not justifiable to a certain extent as I didn't saw such statement under the almost exact same 'question' raised by Indians which you have also replied(<a href="/questions/12810/kashmir-india).">https://help.openstreetmap.org/questions/12810/kashmir-india).</a> Just to be clear, I'm not going to assume that there are any national prejudice here but at least impolite and inappropriate as a moderator. And I would like to ask for, at least, a place that I can raise this issue. That would constitute a question, won't it? Could you please, as a moderator, kindly provide an answer for this?</p>
 <p>Best regards,<br />
 Sidi</p>
 </div>

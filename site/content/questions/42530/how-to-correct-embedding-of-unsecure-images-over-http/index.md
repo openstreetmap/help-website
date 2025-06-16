@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to correct embedding of unsecure images (over HTTP)?"
-description = '''https://help.openstreetmap.org/questions/34832/bicycle-parkings-display attempts to load some images over HTTP, which are blocked by most modern browsers for mixed content security. How can the comments be changed to load those images over HTTPS instead, so that they are actually loaded?'''
+description = '''/questions/34832/bicycle-parkings-display attempts to load some images over HTTP, which are blocked by most modern browsers for mixed content security. How can the comments be changed to load those images over HTTPS instead, so that they are actually loaded?'''
 date = "2015-04-21T18:57:00Z"
 lastmod = "2015-04-21T22:43:00Z"
 weight = 42530
@@ -40,7 +40,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="https://help.openstreetmap.org/questions/34832/bicycle-parkings-display">https://help.openstreetmap.org/questions/34832/bicycle-parkings-display</a> attempts to load some images over HTTP, which are blocked by most modern browsers for mixed content security. How can the comments be changed to load those images over HTTPS instead, so that they are actually loaded?</p>
+<p><a href="/questions/34832/bicycle-parkings-display">https://help.openstreetmap.org/questions/34832/bicycle-parkings-display</a> attempts to load some images over HTTP, which are blocked by most modern browsers for mixed content security. How can the comments be changed to load those images over HTTPS instead, so that they are actually loaded?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-security" rel="tag" title="see questions tagged &#39;security&#39;">security</span> <span class="post-tag tag-link-meta" rel="tag" title="see questions tagged &#39;meta&#39;">meta</span> <span class="post-tag tag-link-osqa" rel="tag" title="see questions tagged &#39;osqa&#39;">osqa</span>
@@ -79,7 +79,7 @@ osqa_accepted = true
 <div id="post-42534-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: well, yes, but it directly effects us, so why not shortly answer this here (with "meta" tag)?</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: well, yes, but it directly effects us, so why not shortly answer this here (with "meta" tag)?</p>
 </div>
 <div id="comment-42534-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 22:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -90,7 +90,7 @@ osqa_accepted = true
 <div id="post-42535-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, this is a downstream issue.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, this is a downstream issue.</p>
 </div>
 <div id="comment-42535-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 22:15)</span> <span class="comment-user userinfo">Nemo_bis</span>
@@ -145,7 +145,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>instead of e.g.</p>
-<pre><code>   http://help.openstreetmap.org/upfiles/Screen_Shot_2014-07-12_at_10.39.23_pm.png</code></pre>
+<pre><code>   /upfiles/Screen_Shot_2014-07-12_at_10.39.23_pm.png</code></pre>
 <p>the image URL should be (an URL relative to this site)</p>
 <pre><code>   /upfiles/Screen_Shot_2014-07-12_at_10.39.23_pm.png</code></pre>
 <p>(Note: this specific image got lost during the last software update, it is not available on the server - I am just using it as example)</p>
@@ -182,7 +182,7 @@ One Answer:
 <div id="post-42540-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7421/nemo_bis"></a><a href="http://help.openstreetmap.org/users/7421/nemo_bis">@Nemo_bis</a>: I do not know - somehow by a side channel (e.g. wiki or user mail). However, much work for ... hmm.. not that much gain. Rather someone should take the time to fix the software code of the image embedding/upload feature! It is no hard task (relatively), I guess.</p>
+<p><a href="https://help.openstreetmap.org/users/7421/nemo_bis"></a><a href="https://help.openstreetmap.org/users/7421/nemo_bis">@Nemo_bis</a>: I do not know - somehow by a side channel (e.g. wiki or user mail). However, much work for ... hmm.. not that much gain. Rather someone should take the time to fix the software code of the image embedding/upload feature! It is no hard task (relatively), I guess.</p>
 <p>I occasionally edit such comments/answers/questions, but only when I am doing any other thing (also to not needlessly push this question up on the main page again).</p>
 </div>
 <div id="comment-42540-info" class="comment-info">
@@ -195,7 +195,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7421/nemo_bis">@Nemo_bis</a> what you need to do I think is:</p>
+<p><a href="https://help.openstreetmap.org/users/7421/nemo_bis">@Nemo_bis</a> what you need to do I think is:</p>
 <p>o provide lots of helpful advice on this site</p>
 <p>o get lots of reputation</p>
 <p>o get the ability to edit answers and comments</p>
@@ -222,7 +222,7 @@ One Answer:
 <div id="post-42547-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, sorry, I don't understand your point. My habit is that errors and bugs get reported and tracked for eventual fix. Maybe it's a wiki thing, but there's no "entitlement" in that. I don't expect anything from you.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>, sorry, I don't understand your point. My habit is that errors and bugs get reported and tracked for eventual fix. Maybe it's a wiki thing, but there's no "entitlement" in that. I don't expect anything from you.</p>
 </div>
 <div id="comment-42547-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 22:43)</span> <span class="comment-user userinfo">Nemo_bis</span>

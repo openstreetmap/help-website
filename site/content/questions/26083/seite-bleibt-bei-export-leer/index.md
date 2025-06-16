@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-26084-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Meinst du den <a href="http://www.openstreetmap.org/export">Daten-Export</a>? Oder meinst du den Bildexport? Welchen Browser verwendest du (Internet Explorer? Firefox?)? Welchen Bereich hast du eingestellt?</p>
+<p>Meinst du den <a href="https://www.openstreetmap.org/export">Daten-Export</a>? Oder meinst du den Bildexport? Welchen Browser verwendest du (Internet Explorer? Firefox?)? Welchen Bereich hast du eingestellt?</p>
 </div>
 <div id="comment-26084-info" class="comment-info">
 <span class="comment-age">(02 Sep '13, 23:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-26151-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Ich bekomme beim Daten-Export nachdem ich einen Kartenbereich manuell ausgewählt habe, die Meldung "File not found" wenn zur URL <a href="http://www.openstreetmap.org/export/finish">http://www.openstreetmap.org/export/finish</a> gewechselt wird.</p>
+<p>Ich bekomme beim Daten-Export nachdem ich einen Kartenbereich manuell ausgewählt habe, die Meldung "File not found" wenn zur URL <a href="https://www.openstreetmap.org/export/finish">https://www.openstreetmap.org/export/finish</a> gewechselt wird.</p>
 </div>
 <div id="comment-26151-info" class="comment-info">
 <span class="comment-age">(05 Sep '13, 19:25)</span> <span class="comment-user userinfo">Eddiesoft</span>

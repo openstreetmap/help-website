@@ -205,7 +205,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Hi "escada" and thanks for your responce.</p>
 <p>Sice i'm programing, I use the XML responce facility and reverse geocoding function by lat and lon cords.</p>
-<p>Y can get info about this facility at link: <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">http://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding</a></p>
+<p>Y can get info about this facility at link: <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding">https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding</a></p>
 <p>If You try this link, You will get a XML responce to your browser that demonstrate my issue:</p>
 <p><a href="http://nominatim.openstreetmap.org/reverse?format=xml&amp;lat=59.3023449&amp;lon=18.1243585&amp;zoom=18&amp;addressdetails=1">http://nominatim.openstreetmap.org/reverse?format=xml&amp;lat=59.3023449&amp;lon=18.1243585&amp;zoom=18&amp;addressdetails=1</a></p>
 <p>The request respond: ... &lt;building&gt;Sickla Fritidsgård&lt;/building&gt; &lt;road&gt;Sickla Strand&lt;/road&gt; ...</p>

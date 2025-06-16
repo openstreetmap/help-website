@@ -127,7 +127,7 @@ osqa_accepted = true
 <div id="post-14466-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here's an example <a href="http://www.openstreetmap.org/?lat=52.337839&amp;lon=-0.194083&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.337839&amp;lon=-0.194083&amp;zoom=18&amp;layers=M</a></p>
+<p>Here's an example <a href="https://www.openstreetmap.org/?lat=52.337839&amp;lon=-0.194083&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.337839&amp;lon=-0.194083&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-14466-info" class="comment-info">
 <span class="comment-age">(21 Jul '12, 19:06)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -284,7 +284,7 @@ osqa_accepted = true
 3
 </div>
 <div class="comment-text">
-<p>For once, the description on the wiki about how to map schools is pretty good: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a></p>
+<p>For once, the description on the wiki about how to map schools is pretty good: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool</a></p>
 <p>It even includes a diagram showing where the different tags should go.</p>
 </div>
 <div id="comment-14645-info" class="comment-info">

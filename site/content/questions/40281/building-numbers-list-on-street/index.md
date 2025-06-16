@@ -97,7 +97,7 @@ osqa_accepted = true
 <div id="post-40356-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I thought <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/install">http://wiki.openstreetmap.org/wiki/Overpass_API/install</a> allow install Overpass API locally. Did I err? I have understood how make my task using Overpass API. Nominatim can help me really? Can you write Nominatim query?</p>
+<p>I thought <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/install">https://wiki.openstreetmap.org/wiki/Overpass_API/install</a> allow install Overpass API locally. Did I err? I have understood how make my task using Overpass API. Nominatim can help me really? Can you write Nominatim query?</p>
 </div>
 <div id="comment-40356-info" class="comment-info">
 <span class="comment-age">(14 Jan '15, 15:57)</span> <span class="comment-user userinfo">yaahor</span>
@@ -151,9 +151,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Normally, you don't need a special software with spacial queries. If the street numbers are correctly tagged, the link between the number and its street is already in OSM. To simplify, currently they are two methods to link the street number of a building to its street (also <a href="http://wiki.openstreetmap.org/wiki/Key:addr">documented in the wiki</a>) (which method is used is a contributor decision):<br />
+<p>Normally, you don't need a special software with spacial queries. If the street numbers are correctly tagged, the link between the number and its street is already in OSM. To simplify, currently they are two methods to link the street number of a building to its street (also <a href="https://wiki.openstreetmap.org/wiki/Key:addr">documented in the wiki</a>) (which method is used is a contributor decision):<br />
 - two tags "addr:housenumber=&lt; a number&gt;" + "addr:street=&lt; the street name&gt;" set on the same OSM element, a node or a closed way (a polygon) or a relation (most probably a relation for a multipolygon)<br />
-- one tag "addr:housenumber=&lt; a number&gt;" set on the OSM element, node or way like above, and attached to a relation of type "<a href="http://wiki.openstreetmap.org/wiki/Relation:associatedStreet">associatedStreet</a>" with the role "house" and where the street name is the relation tag "name". The polyline(s) of the street itself is(are) also member of this relation with the role "street" (see the wiki). So, once you find an OSM node or way with a tag "addr:housenumber", you can check if it is part of a relation "associatedStreet" and get the related street.</p>
+- one tag "addr:housenumber=&lt; a number&gt;" set on the OSM element, node or way like above, and attached to a relation of type "<a href="https://wiki.openstreetmap.org/wiki/Relation:associatedStreet">associatedStreet</a>" with the role "house" and where the street name is the relation tag "name". The polyline(s) of the street itself is(are) also member of this relation with the role "street" (see the wiki). So, once you find an OSM node or way with a tag "addr:housenumber", you can check if it is part of a relation "associatedStreet" and get the related street.</p>
 <p>Statistically, the second method with a relation is much less popular than the first (less intuitive and newcomers are relunctant to edit/create relations) and is present only on some areas (like in France), this depends on how the method is popularized locally. So basically, if you find a housenumber without one of the two methods listed above, we generally consider this as incomplete in OSM. But sSome people still consider that the street can be linked by the distance between the OSM element and the nearest street (way tagged "highway") but there is a large consensus to consider this as too vague/imprecise and leading to errors especially near intersections- Geofabrik is providing a slippy map, OSM Inspector, showing if the address can be linked to a street and by which method here : <a href="http://tools.geofabrik.de/osmi/">http://tools.geofabrik.de/osmi/</a></p>
 <p>What you should do first is download the OSM data (or some sample) into JOSM and look up how addresses are tagged in your area of interest.</p>
 </div>
@@ -208,7 +208,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are many ways to do what you want. One way to load an <a href="http://download.geofabrik.de/">OSM file</a> into PostGIS with <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, and do some geo SQL queries on the results.</p>
+<p>There are many ways to do what you want. One way to load an <a href="http://download.geofabrik.de/">OSM file</a> into PostGIS with <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">osm2pgsql</a>, and do some geo SQL queries on the results.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

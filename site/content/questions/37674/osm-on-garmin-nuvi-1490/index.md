@@ -117,7 +117,7 @@ osqa_accepted = false
 <div id="post-37687-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9833/manij"></a><a href="http://help.openstreetmap.org/users/9833/manij">@manij</a>: are you sure that you entered the coordinates correctly (same format as you have the GPS device set to)? Or try to get a GPS position (that may take much longer than usual because you have moved that far away from your last position – also see your device's manual).</p>
+<p><a href="https://help.openstreetmap.org/users/9833/manij"></a><a href="https://help.openstreetmap.org/users/9833/manij">@manij</a>: are you sure that you entered the coordinates correctly (same format as you have the GPS device set to)? Or try to get a GPS position (that may take much longer than usual because you have moved that far away from your last position – also see your device's manual).</p>
 </div>
 <div id="comment-37687-info" class="comment-info">
 <span class="comment-age">(17 Oct '14, 11:01)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

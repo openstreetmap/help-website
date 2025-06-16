@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><strong>How to make two flood buildings ? or make small single room or cabin on buildings ?</strong> Look at photo you will see what i mean ? <img src="https://help.openstreetmap.org/upfiles/er.png" alt="alt text" /></p>
+<p><strong>How to make two flood buildings ? or make small single room or cabin on buildings ?</strong> Look at photo you will see what i mean ? <img src="/upfiles/er.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-floorplans" rel="tag" title="see questions tagged &#39;floorplans&#39;">floorplans</span> <span class="post-tag tag-link-floorplan" rel="tag" title="see questions tagged &#39;floorplan&#39;">floorplan</span> <span class="post-tag tag-link-floor" rel="tag" title="see questions tagged &#39;floor&#39;">floor</span>

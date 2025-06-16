@@ -125,7 +125,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing that you might be seeing the fallout from <a href="https://help.openstreetmap.org/questions/18846/my-last-3-edits-disapeared">this problem</a>.</p>
+<p>I'm guessing that you might be seeing the fallout from <a href="/questions/18846/my-last-3-edits-disapeared">this problem</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

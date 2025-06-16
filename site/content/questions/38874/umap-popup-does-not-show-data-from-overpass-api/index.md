@@ -152,7 +152,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The gif from <a href="http://help.openstreetmap.org/users/4961/ybon"></a><a href="http://help.openstreetmap.org/users/4961/ybon">@ybon</a> may be a bit hard to follow or go offline somewhen. Here are the steps to do it:</p>
+<p>The gif from <a href="https://help.openstreetmap.org/users/4961/ybon"></a><a href="https://help.openstreetmap.org/users/4961/ybon">@ybon</a> may be a bit hard to follow or go offline somewhen. Here are the steps to do it:</p>
 <ul>
 <li>Option A: Change the settings of one specifig layer.</li>
 <li>Option B: Change the default settings for all layers.</li>

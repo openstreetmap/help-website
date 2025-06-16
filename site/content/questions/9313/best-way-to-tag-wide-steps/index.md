@@ -140,8 +140,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There is no established solution for this yet, so it is too early to answer the question.</p>
 <p>You should definitely create a highway=steps way. Today's applications will usually not understand anything else.</p>
-<p>It is likely that future solutions to the problem will still involve a highway=steps way indicating the up/down direction, which also serves as a fallback for more primitive applications. The area covered by the steps can be mapped <em>in addition</em> to this, similar to the banks of large rivers. A tag that has been proposed for this purpose is <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">area:highway</a>=steps.</p>
-<p>Other approaches under discussion include <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Area#Area-steps.2C_steps_which_are_wide_and.2For_irregular">Area Relations</a>, as well as a draft for <a href="http://wiki.openstreetmap.org/wiki/DE:Stairs_modelling">Stairs Modelling</a> (German text with images) that would provide all the information necessary even for 3D visualization, but is still unfinished and cannot be used as a tagging guideline at this point.</p>
+<p>It is likely that future solutions to the problem will still involve a highway=steps way indicating the up/down direction, which also serves as a fallback for more primitive applications. The area covered by the steps can be mapped <em>in addition</em> to this, similar to the banks of large rivers. A tag that has been proposed for this purpose is <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">area:highway</a>=steps.</p>
+<p>Other approaches under discussion include <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Area#Area-steps.2C_steps_which_are_wide_and.2For_irregular">Area Relations</a>, as well as a draft for <a href="https://wiki.openstreetmap.org/wiki/DE:Stairs_modelling">Stairs Modelling</a> (German text with images) that would provide all the information necessary even for 3D visualization, but is still unfinished and cannot be used as a tagging guideline at this point.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -193,7 +193,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I've thought of this as analogous to river/riverbank, where a way (waterway=river, or highway=steps) can show the flow direction and an area (waterway=riverbank, or highway=steps; area=yes) the exact boundaries.</p>
 <p><a href="http://www.mail-archive.com/talk@openstreetmap.org/msg30153.html">More discussion</a> on OSM-Talk last year. Some combination of highway=steps; area=yes with a way to denote up/down seemed popular.</p>
-<p>Another proposed option is here: <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Area#area-steps">Proposed Area Relations</a></p>
+<p>Another proposed option is here: <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Area#area-steps">Proposed Area Relations</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

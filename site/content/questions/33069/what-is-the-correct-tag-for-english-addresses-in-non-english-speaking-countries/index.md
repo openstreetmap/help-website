@@ -70,7 +70,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I'm not that experienced with multilang approaches and <a href="http://wiki.openstreetmap.org/wiki/Internationalization">data internationalization</a>, but IMHO due to the heavy redundance (city name in every address within the city) and so a bad to maintain dataset, it's wise just to translate the name of the city at it's place node / boundary relation. Then it's up to the tools to be clever enough to understand this alternative name, too and we avoid heavy inconsistence because there is one in 10.000 Address nodes that has a wrong EN name :)</p>
+<p>I'm not that experienced with multilang approaches and <a href="https://wiki.openstreetmap.org/wiki/Internationalization">data internationalization</a>, but IMHO due to the heavy redundance (city name in every address within the city) and so a bad to maintain dataset, it's wise just to translate the name of the city at it's place node / boundary relation. Then it's up to the tools to be clever enough to understand this alternative name, too and we avoid heavy inconsistence because there is one in 10.000 Address nodes that has a wrong EN name :)</p>
 </div>
 <div id="comment-33071-info" class="comment-info">
 <span class="comment-age">(11 May '14, 08:37)</span> <span class="comment-user userinfo">iii</span>
@@ -149,7 +149,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Localized names should always be put on the road, place or boundary, they refer to. The search engine can take it from there. What happens in Nominatim is that the <code>addr:*</code> tag is used only as a link to find the appropriate road or place object that make up the address. Once all objects are found, it builds the final display address from the name tags of these objects, localized as necessary.</p>
-<p>So, in the case of "Залуучуудын өргөн чөлөө", it would be enough to add <code>name:en=Youth Avenue</code> to <a href="http://www.openstreetmap.org/way/81528745">this street</a>. A word of warning about translations though: Localized name tags like <code>name:en</code> should be added only, if such a translation is in common use, e.g. by local people or by foreign visitors. That is rarely the case for street names unless the country has more than one official language. If "Youth Avenue" is just a word-by-word translation of the Mongolian name that nobody ever uses, it shouldn't be included in OSM.</p>
+<p>So, in the case of "Залуучуудын өргөн чөлөө", it would be enough to add <code>name:en=Youth Avenue</code> to <a href="https://www.openstreetmap.org/way/81528745">this street</a>. A word of warning about translations though: Localized name tags like <code>name:en</code> should be added only, if such a translation is in common use, e.g. by local people or by foreign visitors. That is rarely the case for street names unless the country has more than one official language. If "Youth Avenue" is just a word-by-word translation of the Mongolian name that nobody ever uses, it shouldn't be included in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

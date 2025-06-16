@@ -75,7 +75,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Here's what it previously looked like, for info:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/p2a.png" alt="P2 editing on &quot;owl&quot; dev area, showing sidebar" /></p>
+<p><img src="/upfiles/p2a.png" alt="P2 editing on &quot;owl&quot; dev area, showing sidebar" /></p>
 </div>
 <div id="comment-29932-info" class="comment-info">
 <span class="comment-age">(18 Jan '14, 10:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -141,7 +141,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Previously the search box was available on the sidebar, but now the sidebar doesn't exist in the same form, P2 fills the width of the window. However there is (and always has been, I think) the ability to search for locations within P2 itself. Just click the search icon below the zoom controls:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/p2_1.png" alt="P2 search icon" /></p>
+<p><img src="/upfiles/p2_1.png" alt="P2 search icon" /></p>
 <p>One thing to bear in mind though - you'll probably want to close one changeset (by saving and pressing "c") before moving to another location, so that your changesets don't show up as huge in the history list.</p>
 </div>
 <div class="answer-controls post-controls">

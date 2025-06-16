@@ -116,7 +116,7 @@ One Answer:
 <p>Overpass API and overpass turbo really are not the right tools for this job, as you cannot query yet for any non-closed areas in the first place (it's not implemented yet). This makes the whole endeavour very challenging.</p>
 <p>What you see in overpass turbo originates from the internal OSM -&gt; GeoJSON conversion, but it's not possible to take that logic into account for any kind of query.</p>
 <p>I suggest to take a look at keep right! instead. It has a "non-closed area" detection. Osmose QA probably has something similar.</p>
-<p>Example: <a href="http://keepright.at/report_map.php?zoom=17&amp;lat=48.15152&amp;lon=16.29759&amp;layers=B0T&amp;ch=0%2C30&amp;show_ign=1&amp;show_tmpign=1">Keep right! example</a> -&gt; will mark the following <a href="http://www.openstreetmap.org/way/349493111">way</a> as erroneous.</p>
+<p>Example: <a href="http://keepright.at/report_map.php?zoom=17&amp;lat=48.15152&amp;lon=16.29759&amp;layers=B0T&amp;ch=0%2C30&amp;show_ign=1&amp;show_tmpign=1">Keep right! example</a> -&gt; will mark the following <a href="https://www.openstreetmap.org/way/349493111">way</a> as erroneous.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

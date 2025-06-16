@@ -177,7 +177,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Here is a list of the map features available from an osm where mapped. Individual devices/apps may be able to display some/none/all of this info.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_Features">osm features</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_Features">osm features</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

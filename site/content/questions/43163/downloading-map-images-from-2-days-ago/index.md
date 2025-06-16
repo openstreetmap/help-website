@@ -116,7 +116,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Unless the before &amp; after time period is crucial you could try this site which shows the map as it was in Sept 2012 <a href="http://map.fosm.org/#map=2/53.0000/67.0000">http://map.fosm.org/#map=2/53.0000/67.0000</a></p>
 <p>I also needed before &amp; after images of my local area and, after zooming in to the relevant section of the map on map.org.fosm, I saved screen prints which were fine for my purposes.</p>
-<p>Here is a link to my original question in case some of the other suggestions are of more use to you. <a href="https://help.openstreetmap.org/questions/30748/how-can-i-view-osm-as-it-was-a-year-ago">https://help.openstreetmap.org/questions/30748/how-can-i-view-osm-as-it-was-a-year-ago</a></p>
+<p>Here is a link to my original question in case some of the other suggestions are of more use to you. <a href="/questions/30748/how-can-i-view-osm-as-it-was-a-year-ago">https://help.openstreetmap.org/questions/30748/how-can-i-view-osm-as-it-was-a-year-ago</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

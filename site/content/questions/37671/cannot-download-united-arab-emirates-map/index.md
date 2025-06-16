@@ -88,7 +88,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>So many questions......too few answers.<br />
 This previous answer to a similar question may help.<br />
-<a href="https://help.openstreetmap.org/questions/37576/problem-with-downloading-map">https://help.openstreetmap.org/questions/37576/problem-with-downloading-map</a></p>
+<a href="/questions/37576/problem-with-downloading-map">https://help.openstreetmap.org/questions/37576/problem-with-downloading-map</a></p>
 </div>
 <div id="comment-37693-info" class="comment-info">
 <span class="comment-age">(17 Oct '14, 11:53)</span> <span class="comment-user userinfo">nevw</span>

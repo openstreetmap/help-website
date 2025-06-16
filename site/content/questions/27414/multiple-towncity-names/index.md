@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>All,</p>
 <p>I'm trying to fix the cycle map of the Colorado Springs are (Colorado, USA). At the moment something strange happens with the City of Fountain (a small city to the south of Colorado Springs) having 6 labels scattered quite liberally, and 2 Colorado Springs labels.</p>
 <p>Is there a way to consolidate the names to just one each? See link below.</p>
-<p><a href="http://www.openstreetmap.org/#map=11/38.7501/-104.7903&amp;layers=C">http://www.openstreetmap.org/#map=11/38.7501/-104.7903&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/#map=11/38.7501/-104.7903&amp;layers=C">https://www.openstreetmap.org/#map=11/38.7501/-104.7903&amp;layers=C</a></p>
 <p>Thanks!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -72,7 +72,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Actually, most of Colorado seems to have this problem. See Commerce City in Denver:</p>
-<p><a href="http://www.openstreetmap.org/#map=11/39.7402/-104.7879&amp;layers=C">http://www.openstreetmap.org/#map=11/39.7402/-104.7879&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/#map=11/39.7402/-104.7879&amp;layers=C">https://www.openstreetmap.org/#map=11/39.7402/-104.7879&amp;layers=C</a></p>
 <p>However, bizarrely Denver is not labelled at all.</p>
 </div>
 <div id="comment-27416-info" class="comment-info">
@@ -127,7 +127,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is an issue with the rendering used by the <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap">Cycle Map</a> and <a href="http://wiki.openstreetmap.org/wiki/Transport_Map">Transport Map</a> styles which are maintained by <a href="http://wiki.openstreetmap.org/wiki/User:Gravitystorm">Andy Allan</a>. If you look at the other "standard" map layers on OSM.org, they do not have this issue. If you want it fixed, apparently the best way to go is to <a href="https://trac.openstreetmap.org/query?component=opencyclemap">https://trac.openstreetmap.org/query?component=opencyclemap</a>. I think <a href="https://help.openstreetmap.org/users/3/andy-allan">Andy</a> is also a participant on this forum.</p>
+<p>This is an issue with the rendering used by the <a href="https://wiki.openstreetmap.org/wiki/OpenCycleMap">Cycle Map</a> and <a href="https://wiki.openstreetmap.org/wiki/Transport_Map">Transport Map</a> styles which are maintained by <a href="https://wiki.openstreetmap.org/wiki/User:Gravitystorm">Andy Allan</a>. If you look at the other "standard" map layers on OSM.org, they do not have this issue. If you want it fixed, apparently the best way to go is to <a href="https://trac.openstreetmap.org/query?component=opencyclemap">https://trac.openstreetmap.org/query?component=opencyclemap</a>. I think <a href="https://help.openstreetmap.org/users/3/andy-allan">Andy</a> is also a participant on this forum.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>It is undoubtedly related to the fact that Fountain has both exclaves and enclaves: <a href="http://www.openstreetmap.org/?relation=113002#map=12/38.6972/-104.7335&amp;layers=C">http://www.openstreetmap.org/?relation=113002#map=12/38.6972/-104.7335&amp;layers=C</a></p>
+<p>It is undoubtedly related to the fact that Fountain has both exclaves and enclaves: <a href="https://www.openstreetmap.org/?relation=113002#map=12/38.6972/-104.7335&amp;layers=C">https://www.openstreetmap.org/?relation=113002#map=12/38.6972/-104.7335&amp;layers=C</a></p>
 </div>
 <div id="comment-27424-info" class="comment-info">
 <span class="comment-age">(22 Oct '13, 21:51)</span> <span class="comment-user userinfo">SK53 ♦</span>

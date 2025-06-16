@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have only roads data from US, Canada and Mexico in my DB imported using osm2pgsql. As it is mentioned in the osmupdate wiki page <a href="http://wiki.openstreetmap.org/wiki/Osmupdate">here</a></p>
+<p>I have only roads data from US, Canada and Mexico in my DB imported using osm2pgsql. As it is mentioned in the osmupdate wiki page <a href="https://wiki.openstreetmap.org/wiki/Osmupdate">here</a></p>
 <p><code>You need to update the OSM file of a small geographical region every other week. Do not use osmupdate. Redownload the file from one of the OSM file services, e.g. geofabrik.de.</code></p>
 <p>Since I want to keep my db size as small as possible. will it be a good idea to do the following on a weekly basis</p>
 <p>1 - Download the osm.pbf file</p>

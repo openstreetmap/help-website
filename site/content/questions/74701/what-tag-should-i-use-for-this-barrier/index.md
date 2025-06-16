@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Barrier_dead_hedge_1_XVF7Q7r.jpg" alt="alt text" />Barrier dead hedge missing. Is the english name in order? I have 2 fotos.</p>
+<p><img src="/upfiles/Barrier_dead_hedge_1_XVF7Q7r.jpg" alt="alt text" />Barrier dead hedge missing. Is the english name in order? I have 2 fotos.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-hedge" rel="tag" title="see questions tagged &#39;hedge&#39;">hedge</span> <span class="post-tag tag-link-branches" rel="tag" title="see questions tagged &#39;branches&#39;">branches</span> <span class="post-tag tag-link-barrier" rel="tag" title="see questions tagged &#39;barrier&#39;">barrier</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Can not see the GPS track"
-description = '''I want to use OSM to show some GPS tracks from kayak tours. But if I click on the GPS track, I can not see it on the map. Is it not supposed to OSM must be used this way? (Track http://www.openstreetmap.org/user/nanDK/traces/810416)'''
+description = '''I want to use OSM to show some GPS tracks from kayak tours. But if I click on the GPS track, I can not see it on the map. Is it not supposed to OSM must be used this way? (Track https://www.openstreetmap.org/user/nanDK/traces/810416)'''
 date = "2010-09-27T19:24:00Z"
 lastmod = "2014-10-08T11:36:00Z"
 weight = 938
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to use OSM to show some GPS tracks from kayak tours. But if I click on the GPS track, I can not see it on the map. Is it not supposed to OSM must be used this way? (Track <a href="http://www.openstreetmap.org/user/nanDK/traces/810416">http://www.openstreetmap.org/user/nanDK/traces/810416</a>)</p>
+<p>I want to use OSM to show some GPS tracks from kayak tours. But if I click on the GPS track, I can not see it on the map. Is it not supposed to OSM must be used this way? (Track <a href="https://www.openstreetmap.org/user/nanDK/traces/810416">https://www.openstreetmap.org/user/nanDK/traces/810416</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-track" rel="tag" title="see questions tagged &#39;track&#39;">track</span> <span class="post-tag tag-link-visualize" rel="tag" title="see questions tagged &#39;visualize&#39;">visualize</span> <span class="post-tag tag-link-gpx" rel="tag" title="see questions tagged &#39;gpx&#39;">gpx</span> <span class="post-tag tag-link-trace" rel="tag" title="see questions tagged &#39;trace&#39;">trace</span>
@@ -165,7 +165,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>GPS Traces are useful while editing the maps and they are only visible while in the edit mode.</p>
-<p>Additional information is available on the <a href="http://wiki.openstreetmap.org/wiki/Upload">OSM Wiki</a>. You can, however, display your GPX file using <a href="http://openrouteservice.org/">OpenRouteService</a>.</p>
+<p>Additional information is available on the <a href="https://wiki.openstreetmap.org/wiki/Upload">OSM Wiki</a>. You can, however, display your GPX file using <a href="http://openrouteservice.org/">OpenRouteService</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You may also display your track using the <a href="http://ojw.dev.openstreetmap.org/gpx/list.php">GPX slippy map</a>. Just mark your track as public, enter your trace ID and <a href="http://ojw.dev.openstreetmap.org/gpx/?gpx=810416">your track</a> should show up on the map. However, it seems to be buggy in some situations/browsers(?).</p>
-<p>It is also very easy to visualize your trace using <a href="http://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> as shown in <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">this example</a>. It works even locally, you just need your track and a browser supporting java script.</p>
+<p>It is also very easy to visualize your trace using <a href="https://wiki.openstreetmap.org/wiki/OpenLayers">OpenLayers</a> as shown in <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">this example</a>. It works even locally, you just need your track and a browser supporting java script.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

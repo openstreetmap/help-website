@@ -96,7 +96,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9981/iwan-novirion"></a><a href="http://help.openstreetmap.org/users/9981/iwan-novirion">@Iwan Novirion</a>: okay, I will fix/undelete/revert it in the next minutes. I will report here when done.</p>
+<p><a href="https://help.openstreetmap.org/users/9981/iwan-novirion"></a><a href="https://help.openstreetmap.org/users/9981/iwan-novirion">@Iwan Novirion</a>: okay, I will fix/undelete/revert it in the next minutes. I will report here when done.</p>
 </div>
 <div id="comment-38450-info" class="comment-info">
 <span class="comment-age">(11 Nov '14, 12:04)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -107,7 +107,7 @@ osqa_accepted = false
 <div id="post-38452-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9981/iwan-novirion">@Iwan Novirion</a>: I only was confused because your name here is different from your name used at the editing ("me_iwan").</p>
+<p><a href="https://help.openstreetmap.org/users/9981/iwan-novirion">@Iwan Novirion</a>: I only was confused because your name here is different from your name used at the editing ("me_iwan").</p>
 </div>
 <div id="comment-38452-info" class="comment-info">
 <span class="comment-age">(11 Nov '14, 12:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -118,7 +118,7 @@ osqa_accepted = false
 <div id="post-38485-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Oh, it's my real name coz when got in here, I must sign-in back again and choose a username. Can I rename my username?</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Oh, it's my real name coz when got in here, I must sign-in back again and choose a username. Can I rename my username?</p>
 </div>
 <div id="comment-38485-info" class="comment-info">
 <span class="comment-age">(12 Nov '14, 01:51)</span> <span class="comment-user userinfo">Iwan Novirion</span>
@@ -130,7 +130,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9981/iwan-novirion"></a><a href="http://help.openstreetmap.org/users/9981/iwan-novirion">@Iwan Novirion</a>: you can log in here with the same usernamme/password as on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> . You do not need to create a new account here.<br />
+<p><a href="https://help.openstreetmap.org/users/9981/iwan-novirion"></a><a href="https://help.openstreetmap.org/users/9981/iwan-novirion">@Iwan Novirion</a>: you can log in here with the same usernamme/password as on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> . You do not need to create a new account here.<br />
 I think you cannot rename the account which you use here currently (I cannot find it in my options - click your username on top while you are logged in here).</p>
 </div>
 <div id="comment-38486-info" class="comment-info">
@@ -222,7 +222,7 @@ One Answer:
 <div id="post-38455-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: oh, really? That news did not make it to me. If they are daily, then it is a bit strange that Iwan noticed that deletion that late (deleted: 16th October, now: 11th November). Okay, found it. Will add it to my answer. Thanks.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: oh, really? That news did not make it to me. If they are daily, then it is a bit strange that Iwan noticed that deletion that late (deleted: 16th October, now: 11th November). Okay, found it. Will add it to my answer. Thanks.</p>
 </div>
 <div id="comment-38455-info" class="comment-info">
 <span class="comment-age">(11 Nov '14, 12:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

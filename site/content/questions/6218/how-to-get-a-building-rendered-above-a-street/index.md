@@ -44,7 +44,7 @@ osqa_accepted = true
 <p>Street: layer=0</p>
 <p>Building (Multipolygon): layer=1</p>
 <p>I refuse bridge=yes, as from my understanding this is no real bridge. Also I don't think tunnel=yes is what I want as this is obviously no tunnel.</p>
-<p>See it here: <a href="http://maps.google.de/?ll=51.258081,7.144289&amp;spn=0.00558,0.011362&amp;z=17&amp;layer=c&amp;cbll=51.258081,7.144289&amp;panoid=j5CE8HLds5NCzW-_1_yulQ&amp;cbp=12,176.91,,0,-34.59">Street View</a> <a href="http://www.openstreetmap.org/?lat=51.2580536305904&amp;lon=7.1443185210228&amp;zoom=18">OSM</a></p>
+<p>See it here: <a href="http://maps.google.de/?ll=51.258081,7.144289&amp;spn=0.00558,0.011362&amp;z=17&amp;layer=c&amp;cbll=51.258081,7.144289&amp;panoid=j5CE8HLds5NCzW-_1_yulQ&amp;cbp=12,176.91,,0,-34.59">Street View</a> <a href="https://www.openstreetmap.org/?lat=51.2580536305904&amp;lon=7.1443185210228&amp;zoom=18">OSM</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-bridge" rel="tag" title="see questions tagged &#39;bridge&#39;">bridge</span>
@@ -191,7 +191,7 @@ osqa_accepted = true
 <div id="post-6227-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It's not a bridge to don't do that. If you really want to tag the precise form of the building have a look at <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes">http://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes</a></p>
+<p>It's not a bridge to don't do that. If you really want to tag the precise form of the building have a look at <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes">https://wiki.openstreetmap.org/wiki/Proposed_features/Building_attributes</a></p>
 </div>
 <div id="comment-6227-info" class="comment-info">
 <span class="comment-age">(08 Jul '11, 13:47)</span> <span class="comment-user userinfo">petschge</span>

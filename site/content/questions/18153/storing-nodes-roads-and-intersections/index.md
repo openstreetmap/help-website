@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is the third question you're asking here, and all are quite similar, and are essentially about the basics of spatial data processing. You might want to consider reading a book or introductory web site (this <a href="http://workshops.opengeo.org/postgis-intro/">OpenGeo workshop</a> is said to be excellent), or else pay someone to solve your problem.</p>
-<p>I have already explained to you how you can find nearby roads in my <a href="https://help.openstreetmap.org/questions/17977/what-schematool-to-store-osm-gps-node-coordinates-in-database">previous answer;</a> now if you want to find intersections there's a number of different things you could do. The simplest is first extracting the roads in the vicinity of your location and then asking PostGIS for intersections which goes something like this:</p>
+<p>I have already explained to you how you can find nearby roads in my <a href="/questions/17977/what-schematool-to-store-osm-gps-node-coordinates-in-database">previous answer;</a> now if you want to find intersections there's a number of different things you could do. The simplest is first extracting the roads in the vicinity of your location and then asking PostGIS for intersections which goes something like this:</p>
 <pre><code>SELECT 
     st_intersection(a.geom, b.geom)
 FROM 

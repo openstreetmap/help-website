@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-20505-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you read about the tile usage policy mentioned in your previous question?: <a href="https://help.openstreetmap.org/questions/20424/i-want-to-use-openstreetmap-data-for-commercial-application">https://help.openstreetmap.org/questions/20424/i-want-to-use-openstreetmap-data-for-commercial-application</a> .</p>
+<p>Did you read about the tile usage policy mentioned in your previous question?: <a href="/questions/20424/i-want-to-use-openstreetmap-data-for-commercial-application">https://help.openstreetmap.org/questions/20424/i-want-to-use-openstreetmap-data-for-commercial-application</a> .</p>
 </div>
 <div id="comment-20505-info" class="comment-info">
 <span class="comment-age">(05 Mar '13, 09:53)</span> <span class="comment-user userinfo">gormo</span>

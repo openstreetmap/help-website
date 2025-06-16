@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-51340-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Have you already set up your "own database" (as per <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> ) and are just asking how to configure iD, or are you asking how to set up your own copy of OSM?</p>
+<p>Have you already set up your "own database" (as per <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a> ) and are just asking how to configure iD, or are you asking how to set up your own copy of OSM?</p>
 <p>If the latter, it might be worth explaining why you're trying to do that, because there might be easier ways to achieve whatever it is that you want to.</p>
 <p>Intellectual curiosity is, of course, a great reason to do anything - just wondered if you had a more specific goal in mind.</p>
 </div>
@@ -82,7 +82,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Hi Francis, you already asked <a href="https://help.openstreetmap.org/questions/51166/save-id-editor-tags-to-a-new-database">https://help.openstreetmap.org/questions/51166/save-id-editor-tags-to-a-new-database</a> (without a good answer yet). Are you asking here for something different? It does not seem so.</p>
+<p>Hi Francis, you already asked <a href="/questions/51166/save-id-editor-tags-to-a-new-database">https://help.openstreetmap.org/questions/51166/save-id-editor-tags-to-a-new-database</a> (without a good answer yet). Are you asking here for something different? It does not seem so.</p>
 </div>
 <div id="comment-51341-info" class="comment-info">
 <span class="comment-age">(11 Aug '16, 00:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

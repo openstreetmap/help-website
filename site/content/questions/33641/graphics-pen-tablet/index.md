@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/FastDraw</a></p>
 <p>Does what you want. Please, before upload, simplify your added ways to an appropriate level.</p>
 </div>
 <div class="answer-controls post-controls">

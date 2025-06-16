@@ -232,7 +232,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Depends of software, but all you need is links from wiki on <a href="http://wiki.openstreetmap.org/wiki/Bugs">Bugs</a> page.</p>
+<p>Depends of software, but all you need is links from wiki on <a href="https://wiki.openstreetmap.org/wiki/Bugs">Bugs</a> page.</p>
 <p>Standards bug place is at OSM <a href="http://trac.openstreetmap.org/">trac</a>.</p>
 </div>
 <div class="answer-controls post-controls">

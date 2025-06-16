@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would say that property lines should not be mapped, but I will point you to this wiki page which has a thorough discussion of the pros and cons: <a href="http://wiki.openstreetmap.org/wiki/Parcel">http://wiki.openstreetmap.org/wiki/Parcel</a> As that page mentions, since there is no consensus about it even being allowed, there is no set tag scheme. I'd say landuse=residential would definitely be wrong, though.</p>
+<p>I would say that property lines should not be mapped, but I will point you to this wiki page which has a thorough discussion of the pros and cons: <a href="https://wiki.openstreetmap.org/wiki/Parcel">https://wiki.openstreetmap.org/wiki/Parcel</a> As that page mentions, since there is no consensus about it even being allowed, there is no set tag scheme. I'd say landuse=residential would definitely be wrong, though.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

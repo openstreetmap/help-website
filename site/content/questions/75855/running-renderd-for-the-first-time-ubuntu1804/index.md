@@ -151,7 +151,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The question regarding shapefile download is here: <a href="https://help.openstreetmap.org/questions/75856/when-building-tile-server-can-not-download-shapefile">https://help.openstreetmap.org/questions/75856/when-building-tile-server-can-not-download-shapefile</a></p>
+<p>The question regarding shapefile download is here: <a href="/questions/75856/when-building-tile-server-can-not-download-shapefile">https://help.openstreetmap.org/questions/75856/when-building-tile-server-can-not-download-shapefile</a></p>
 </div>
 <div id="comment-75873-info" class="comment-info">
 <span class="comment-age">(24 Jul '20, 06:48)</span> <span class="comment-user userinfo">scai ♦</span>

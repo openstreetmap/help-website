@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the <a href="https://github.com/openstreetmap/iD/blob/master/CONTRIBUTING.md#translating">CONTRIBUTING.md</a> file from the <a href="https://github.com/openstreetmap/iD/">iD project at github</a> it uses <a href="https://www.transifex.com/projects/p/id-editor/">Transifex</a> to manage translations. Also see <a href="https://help.openstreetmap.org/questions/23930/is-it-possible-to-use-id-in-another-language">this related question</a>.</p>
+<p>According to the <a href="https://github.com/openstreetmap/iD/blob/master/CONTRIBUTING.md#translating">CONTRIBUTING.md</a> file from the <a href="https://github.com/openstreetmap/iD/">iD project at github</a> it uses <a href="https://www.transifex.com/projects/p/id-editor/">Transifex</a> to manage translations. Also see <a href="/questions/23930/is-it-possible-to-use-id-in-another-language">this related question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

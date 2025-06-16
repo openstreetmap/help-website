@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Compiling osmium on Ubuntu"
-description = '''Following http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start on Ubuntu 10.04 LTS with libprotobuf-dev installed gives lots of &quot;/usr/bin/ld: cannot find -lprotobuf-lite&quot; errors. OSM-binary can be compiled using the non-Debian/Ubuntu instructions (e.g. make instead of debuild), but make osmium/exam...'''
+description = '''Following https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start on Ubuntu 10.04 LTS with libprotobuf-dev installed gives lots of &quot;/usr/bin/ld: cannot find -lprotobuf-lite&quot; errors. OSM-binary can be compiled using the non-Debian/Ubuntu instructions (e.g. make instead of debuild), but make osmium/exam...'''
 date = "2011-09-11T13:33:00Z"
 lastmod = "2011-09-11T15:41:00Z"
 weight = 7782
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Following <a href="http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a> on Ubuntu 10.04 LTS with libprotobuf-dev installed gives lots of "/usr/bin/ld: cannot find -lprotobuf-lite" errors.</p>
+<p>Following <a href="https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a> on Ubuntu 10.04 LTS with libprotobuf-dev installed gives lots of "/usr/bin/ld: cannot find -lprotobuf-lite" errors.</p>
 <p>OSM-binary can be compiled using the non-Debian/Ubuntu instructions (e.g. make instead of debuild), but make osmium/examples still fails looking for -lprotobuf-lite</p>
 <p>Changing LDFLAGS on line 26 of Makefile to /usr/lib doesn't seem to help</p>
 <pre><code>user@ireem:~$ ls  /usr/lib/libprotobuf*

@@ -42,8 +42,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>I would like to import some forest and farmland polygons from the Corine Land Cover. I have downloaded the Corine Land Cover shapefiles. I have also viewed them in QGIS and extracted the areas I want to work with to a smaller set.</p>
 <p>What is an easy way to import these polygons to OSM? Both for a smaller set and also if I import a larger set of polygons? Is it possible to do so that the polygons get the correct tags, so I don't need to use another tool to edit them after upload to OSM?</p>
-<p>I have read <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Corine_Land_Cover/Corine_Data_Import">WikiProject Corine Land Cover/Corine Data Import</a> but that process seem to be complicated since it require a local PostGIS database, many tools and also download of OSM data.</p>
-<p><strong>UPDATE</strong> I have now tried with what Frederik Ramm suggested, by importing shapefiles in Potlatch. But I can't get it working. See <a href="http://help.openstreetmap.org/questions/8428/how-to-use-a-shapefile-in-potlatch">How to use a Shapefile in Potlatch?</a></p>
+<p>I have read <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Corine_Land_Cover/Corine_Data_Import">WikiProject Corine Land Cover/Corine Data Import</a> but that process seem to be complicated since it require a local PostGIS database, many tools and also download of OSM data.</p>
+<p><strong>UPDATE</strong> I have now tried with what Frederik Ramm suggested, by importing shapefiles in Potlatch. But I can't get it working. See <a href="/questions/8428/how-to-use-a-shapefile-in-potlatch">How to use a Shapefile in Potlatch?</a></p>
 <p>I have also tried to open the shapefile with polygons in QGIS, then transform the polygons to linestrings and export the linestrings to a GPX file. But when I import the GPX file to OpenStreetMap, it fails because the GPX files doesn't have a any timestamps.</p>
 <p>Is there any other way I can import a few polygons from Corine Land Cover shapefiles to OpenStreetMaps?</p>
 </div>
@@ -135,7 +135,7 @@ One Answer:
 <div id="post-8429-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I have now tried to use a shapefile in Potlatch, but I got an error: <a href="http://help.openstreetmap.org/questions/8428/how-to-use-a-shapefile-in-potlatch">http://help.openstreetmap.org/questions/8428/how-to-use-a-shapefile-in-potlatch</a></p>
+<p>I have now tried to use a shapefile in Potlatch, but I got an error: <a href="/questions/8428/how-to-use-a-shapefile-in-potlatch">https://help.openstreetmap.org/questions/8428/how-to-use-a-shapefile-in-potlatch</a></p>
 </div>
 <div id="comment-8429-info" class="comment-info">
 <span class="comment-age">(13 Oct '11, 09:52)</span> <span class="comment-user userinfo">Jonas_</span>

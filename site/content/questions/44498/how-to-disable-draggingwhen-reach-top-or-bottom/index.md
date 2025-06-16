@@ -41,9 +41,9 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi to all,</p>
 <p>I am using Openstreetmap with leaflet.</p>
-<p>1.In zoom level 1, There is some empty space in bottom &amp; top, but horizontally map tiles are repeated. But my markers shown in a single map.(refer <img src="http://help.openstreetmap.org/upfiles/image1_V2IGi1l.png" alt="alt text" />image1.png).</p>
+<p>1.In zoom level 1, There is some empty space in bottom &amp; top, but horizontally map tiles are repeated. But my markers shown in a single map.(refer <img src="/upfiles/image1_V2IGi1l.png" alt="alt text" />image1.png).</p>
 <p>Is there any option to show markers in all maps shown, or How to load or show a single map?</p>
-<p>2.In other zoom levels, i want to disable drag when reach bottom or top of the map. Because after reach bottom or top, it will show empty spaces only(refer <img src="http://help.openstreetmap.org/upfiles/image2_T8tGJ7w.png" alt="alt text" />image2.png)</p>
+<p>2.In other zoom levels, i want to disable drag when reach bottom or top of the map. Because after reach bottom or top, it will show empty spaces only(refer <img src="/upfiles/image2_T8tGJ7w.png" alt="alt text" />image2.png)</p>
 <p>Note: In google maps it is working fine(cant drag when reach top/bottom).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -189,7 +189,7 @@ One Answer:
 <div id="post-44893-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11189/protect-osm">@Protect OSM</a>: I think you are mis-understand my question, Actually i need to disable drag when my drag reach bottom/top of the map. Currently i can drag when reach top/bottom of map, but it shows empty page.</p>
+<p><a href="https://help.openstreetmap.org/users/11189/protect-osm">@Protect OSM</a>: I think you are mis-understand my question, Actually i need to disable drag when my drag reach bottom/top of the map. Currently i can drag when reach top/bottom of map, but it shows empty page.</p>
 </div>
 <div id="comment-44893-info" class="comment-info">
 <span class="comment-age">(24 Aug '15, 11:50)</span> <span class="comment-user userinfo">Rajavelu_M</span>

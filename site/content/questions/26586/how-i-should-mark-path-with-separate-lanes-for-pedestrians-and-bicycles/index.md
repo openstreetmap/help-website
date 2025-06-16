@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How I should mark path with separate lanes for pedestrians and bicycles?"
-description = '''I expected http://wiki.openstreetmap.org/wiki/Cycle to be useful but it contains only designs that are not directly applicable here. example of place that I am trying to map: https://maps.google.pl/maps?hl=pl&amp;amp;ll=50.076535,19.889014&amp;amp;spn=0.001759,0.005284&amp;amp;t=m&amp;amp;z=18&amp;amp;layer=c&amp;amp;cbll=...'''
+description = '''I expected https://wiki.openstreetmap.org/wiki/Cycle to be useful but it contains only designs that are not directly applicable here. example of place that I am trying to map: https://maps.google.pl/maps?hl=pl&amp;amp;ll=50.076535,19.889014&amp;amp;spn=0.001759,0.005284&amp;amp;t=m&amp;amp;z=18&amp;amp;layer=c&amp;amp;cbll=...'''
 date = "2013-09-21T17:42:00Z"
 lastmod = "2013-09-22T09:59:00Z"
 weight = 26586
@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I expected <a href="http://wiki.openstreetmap.org/wiki/Cycle">http://wiki.openstreetmap.org/wiki/Cycle</a> to be useful but it contains only designs that are not directly applicable here.</p>
+<p>I expected <a href="https://wiki.openstreetmap.org/wiki/Cycle">https://wiki.openstreetmap.org/wiki/Cycle</a> to be useful but it contains only designs that are not directly applicable here.</p>
 <p>example of place that I am trying to map: <a href="https://maps.google.pl/maps?hl=pl&amp;ll=50.076535,19.889014&amp;spn=0.001759,0.005284&amp;t=m&amp;z=18&amp;layer=c&amp;cbll=50.076725,19.88906&amp;panoid=M2LmYxztdWP-M6Kkcaswig&amp;cbp=12,156.17,,0,7.13">https://maps.google.pl/maps?hl=pl&amp;ll=50.076535,19.889014&amp;spn=0.001759,0.005284&amp;t=m&amp;z=18&amp;layer=c&amp;cbll=50.076725,19.88906&amp;panoid=M2LmYxztdWP-M6Kkcaswig&amp;cbp=12,156.17,,0,7.13</a> (motorway is not important here, but it is the photo that I found)</p>
 <p>I am more and more confused whatever I should use path, foot path or maybe bicycle path. And whatever I should use yes or designated.</p>
-<p>For now, based mainly on <a href="http://wiki.openstreetmap.org/wiki/Tag:bicycle%3Ddesignated">http://wiki.openstreetmap.org/wiki/Tag:bicycle%3Ddesignated</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a> it seems that I should use path with bicycle=designated, foot=designated and segregated=yes.</p>
+<p>For now, based mainly on <a href="https://wiki.openstreetmap.org/wiki/Tag:bicycle%3Ddesignated">https://wiki.openstreetmap.org/wiki/Tag:bicycle%3Ddesignated</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> it seems that I should use path with bicycle=designated, foot=designated and segregated=yes.</p>
 <p>Unfortunately, it seems impossible to set segregated = yes in iD editor and on default map display it is rendered as footway, what result in display that makes no sense - footway with small bits of cycleway where it temporarily diverges.</p>
 <p>In attached map cycleway is continuous, but it is lost by rendering software and I am not sure what I should do to avoid it. Creating separate paths in this case seems like an awful hack.</p>
 <p><img src="http://i.imgur.com/8qurjlZ.png" alt="alt text" /></p>

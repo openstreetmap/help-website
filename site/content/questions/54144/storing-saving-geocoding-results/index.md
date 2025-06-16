@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think this is the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> you are referring to:</p>
+<p>I think this is the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a> you are referring to:</p>
 <blockquote>
 <p><strong>Scraping of details</strong> The details page is there for debugging only and may not be downloaded automatically.</p>
 </blockquote>

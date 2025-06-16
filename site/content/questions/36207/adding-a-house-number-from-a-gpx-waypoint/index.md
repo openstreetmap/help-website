@@ -112,8 +112,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have numerous options, but ths easiest is likely simply to use an editor that allows you to set the coordinates of a node (JOSM, vespucci, <a href="http://wiki.openstreetmap.org/wiki/Level0,">http://wiki.openstreetmap.org/wiki/Level0,</a> others?). The hackish solution is to simply center the map on the coordinates and add the node there, as in</p>
-<p><a href="http://www.openstreetmap.org/#map=19/59.6582207/9.6543459">http://www.openstreetmap.org/#map=19/59.6582207/9.6543459</a></p>
+<p>You have numerous options, but ths easiest is likely simply to use an editor that allows you to set the coordinates of a node (JOSM, vespucci, <a href="https://wiki.openstreetmap.org/wiki/Level0,">https://wiki.openstreetmap.org/wiki/Level0,</a> others?). The hackish solution is to simply center the map on the coordinates and add the node there, as in</p>
+<p><a href="https://www.openstreetmap.org/#map=19/59.6582207/9.6543459">https://www.openstreetmap.org/#map=19/59.6582207/9.6543459</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

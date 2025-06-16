@@ -110,7 +110,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <ol>
-<li>For questions regarding potential server problems (i.e. questions that are likely irrelevant as soon as the problem is fixed), it is better to use <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a>. See the "What kinds of questions should be avoided?" section in the FAQ (link in upper right corner of this page).</li>
+<li>For questions regarding potential server problems (i.e. questions that are likely irrelevant as soon as the problem is fixed), it is better to use <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a>. See the "What kinds of questions should be avoided?" section in the FAQ (link in upper right corner of this page).</li>
 <li>If you frequently require exports, maybe the web page isn't the right tool to begin with; download an extract that covers the area you're interested in (e.g. from <a href="http://download.geofabrik.de">download.geofabrik.de</a> or <a href="https://mapzen.com/metro-extracts/">https://mapzen.com/metro-extracts/</a>) and then use Osmosis or osmconvert to cut out your area of interest. Or use extract.bbbike.org for a custom area selection.</li>
 </ol>
 </div>
@@ -151,7 +151,7 @@ osqa_accepted = false
 <div id="post-44904-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@alaskadave</a> I've updated the IRC link.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@alaskadave</a> I've updated the IRC link.</p>
 </div>
 <div id="comment-44904-info" class="comment-info">
 <span class="comment-age">(25 Aug '15, 10:01)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

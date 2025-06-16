@@ -111,8 +111,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This should answer the question <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
-<p>Also please pay attention that the OSM community is always skeptical about commercial contributors, as even with best intentions they might run into troubles due to the mix of interests. So maybe this <a href="http://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do">small list of hints</a> might help you.</p>
+<p>This should answer the question <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a></p>
+<p>Also please pay attention that the OSM community is always skeptical about commercial contributors, as even with best intentions they might run into troubles due to the mix of interests. So maybe this <a href="https://wiki.openstreetmap.org/wiki/User:!i!/What_a_company_should_never_do">small list of hints</a> might help you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p><span>@Joe1981</span>: Maybe you are not alone: ... :-)</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a></p>
 </div>
 <div id="comment-33152-info" class="comment-info">
 <span class="comment-age">(13 May '14, 18:21)</span> <span class="comment-user userinfo">stephan75</span>

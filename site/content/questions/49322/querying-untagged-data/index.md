@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Keeping Frederik's cautioning words in mind, you can use an <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass</a> query to find <a href="http://overpass-turbo.eu/s/fNN">osm ways tagged with <em>highway</em> but not tagged with <em>any variant of bicycle</em></a>. Remember that the absence of a tag on an osm object doesn't mean that that tag is missing : it might just not be necessary. Also, highways are not the only objects that may have <em>bicycle</em> tags.</p>
+<p>Keeping Frederik's cautioning words in mind, you can use an <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">overpass</a> query to find <a href="http://overpass-turbo.eu/s/fNN">osm ways tagged with <em>highway</em> but not tagged with <em>any variant of bicycle</em></a>. Remember that the absence of a tag on an osm object doesn't mean that that tag is missing : it might just not be necessary. Also, highways are not the only objects that may have <em>bicycle</em> tags.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

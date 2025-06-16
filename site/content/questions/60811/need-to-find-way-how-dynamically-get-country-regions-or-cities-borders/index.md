@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For lots of queries using the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass-API</a> is a good solution. You can try out queries with the Overpass-Turbo UI on <a href="http://overpass-turbo.eu//">http://overpass-turbo.eu//</a></p>
+<p>For lots of queries using the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass-API</a> is a good solution. You can try out queries with the Overpass-Turbo UI on <a href="http://overpass-turbo.eu//">http://overpass-turbo.eu//</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

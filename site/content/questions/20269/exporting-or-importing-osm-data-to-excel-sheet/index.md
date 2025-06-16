@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From OSM to Excel, I'd use <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files">osmconvert</a>. Going the other way (once you've addressed all the usual "<a href="http://wiki.openstreetmap.org/wiki/Import">import</a>" issues), try looking at the answers to <a href="https://help.openstreetmap.org/questions/15467/how-do-i-format-excel-spread-sheet-to-import-into-josm">this previous question</a>.</p>
+<p>From OSM to Excel, I'd use <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files">osmconvert</a>. Going the other way (once you've addressed all the usual "<a href="https://wiki.openstreetmap.org/wiki/Import">import</a>" issues), try looking at the answers to <a href="/questions/15467/how-do-i-format-excel-spread-sheet-to-import-into-josm">this previous question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

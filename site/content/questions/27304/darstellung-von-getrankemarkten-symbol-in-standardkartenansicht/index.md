@@ -136,7 +136,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Die Hauptkarte auf www.openstreetmap.org zeigt nicht für jedes Merkmal ein Symbol an. Getränkeläden gehören beispielsweise momentan nicht dazu, das ist vollkommen normal und sollte dich nicht beunruhigen. Trotzdem solltest du Getränkeläden auch als Getränkeläden kennzeichnen und nicht als Supermarkt, nur damit sie auf der Karte angezeigt werden (siehe dazu auch <a href="https://wiki.openstreetmap.org/wiki/DE:Tagging_for_the_renderer">"Tagging for the renderer"</a>).</p>
 <p>Es ist nicht geplant, alle Merkmale auf der Karte darzustellen, denn dadurch würde die Karte in manchen Gebieten stark überfüllt wirken. Aber es gibt nicht nur diese eine Kartendarstellung auf Basis von OSM-Daten, sondern viele verschiedene. Du kannst beispielsweise auf der Hauptseite rechts in der Seitenleiste unter <em>Ebenen</em> die erst vor kurzem hinzugefügte Kartenebene <em>Humanitarian</em> auswählen, welche eine alternative Auswahl an Merkmalen anzeigt, unter anderem auch Getränkeläden.</p>
-<p>Daneben gibt es auch sehr viele weitere <a href="http://www.openstreetmap.org/#map=17/51.05202/13.77998&amp;layers=NH">auf OSM basierende Dienste</a>, die alle jeweils etwas andere Präferenzen haben und unterschiedliche Dinge darstellen. Denn auch wenn deine Bearbeitungen nicht auf der Hauptkarte dargestellt werden, so sind sie dennoch in der Datenbank für jeden verfügbar.</p>
+<p>Daneben gibt es auch sehr viele weitere <a href="https://www.openstreetmap.org/#map=17/51.05202/13.77998&amp;layers=NH">auf OSM basierende Dienste</a>, die alle jeweils etwas andere Präferenzen haben und unterschiedliche Dinge darstellen. Denn auch wenn deine Bearbeitungen nicht auf der Hauptkarte dargestellt werden, so sind sie dennoch in der Datenbank für jeden verfügbar.</p>
 <p>Die doppelte Hausnummer resultiert daraus, dass du sie (wenn ich deine Beschreibung richtig verstanden habe) sowohl an dem Punkt als auch an der Fläche (wahrscheinlich dem Gebäudeumriss) angebracht hast. Das ist jetzt nicht grundlegend falsch, aber eigentlich unnötig, denn die meisten Programme sollten auch damit umgehen können, dass sich die Adresse nur an dem Gebäude befindet. Alle Punkte darin gehören dann automatisch zu dieser Adresse, soweit ihnen keine andere zugewiesen wurde.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -222,7 +222,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Such mal hier nach "Getränkemarkt": <a href="http://wiki.openstreetmap.org/wiki/DE:How_to_map_a">http://wiki.openstreetmap.org/wiki/DE:How_to_map_a</a></p>
+<p>Such mal hier nach "Getränkemarkt": <a href="https://wiki.openstreetmap.org/wiki/DE:How_to_map_a">https://wiki.openstreetmap.org/wiki/DE:How_to_map_a</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

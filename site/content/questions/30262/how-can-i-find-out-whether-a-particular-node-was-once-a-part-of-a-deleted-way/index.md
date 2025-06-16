@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How can I find out if a particular node (that is a part of an existing way) that still exists in the current OSM database was once a part of a different way that no longer exists in the OSM database?</p>
-<p>Does this information display in <a href="http://www.openstreetmap.org/node/105632864/history">a node's history</a> on osm.org?</p>
+<p>Does this information display in <a href="https://www.openstreetmap.org/node/105632864/history">a node's history</a> on osm.org?</p>
 <p>I figure that this could be done by downloading an old planet file, extracting a small region containing the node, etc, but I would prefer a much simpler workflow if possible.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -166,7 +166,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>No, that's not a restriction of P1 undelete. The way is:</p>
-<p><a href="http://www.openstreetmap.org/way/11800881/history">http://www.openstreetmap.org/way/11800881/history</a></p>
+<p><a href="https://www.openstreetmap.org/way/11800881/history">https://www.openstreetmap.org/way/11800881/history</a></p>
 <p>(and yes, that node was in it)</p>
 </div>
 <div id="comment-30268-info" class="comment-info">

@@ -155,7 +155,7 @@ osqa_accepted = false
 <div id="post-51729-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7436/logrady">@logrady</a>: I am not really happy with my ideas about it. I would tend to say that the whole series is a "<code>historic=memorial</code> + <code>memorial=plaque</code>" since they closely belong together. Each single one is not really meaningful and not meant to be viewed without all the others. However, how to map this? A node on each position and insert them into a relation with <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site"><code>type=site</code></a> and <code>historic=memorial</code> + <code>memorial=plaque</code>. The next best solution would be to tag each one (node) as <code>historic=memorial</code> + <code>memorial=plaque</code>.</p>
+<p><a href="https://help.openstreetmap.org/users/7436/logrady">@logrady</a>: I am not really happy with my ideas about it. I would tend to say that the whole series is a "<code>historic=memorial</code> + <code>memorial=plaque</code>" since they closely belong together. Each single one is not really meaningful and not meant to be viewed without all the others. However, how to map this? A node on each position and insert them into a relation with <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site"><code>type=site</code></a> and <code>historic=memorial</code> + <code>memorial=plaque</code>. The next best solution would be to tag each one (node) as <code>historic=memorial</code> + <code>memorial=plaque</code>.</p>
 </div>
 <div id="comment-51729-info" class="comment-info">
 <span class="comment-age">(25 Aug '16, 20:28)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -183,7 +183,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7436/logrady">@logrady</a>: yes, tagging the individual ones as information board is okay too. But do not use type=site on a node. That's a tag only for relations and makes only sense there. In addition to tag each node as information board you could add them into a relation which you tag as I described above (an <a href="https://www.openstreetmap.org/relation/4154777">example of a relation memorial</a>). Likely it will be understood by no software, tough. ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/7436/logrady">@logrady</a>: yes, tagging the individual ones as information board is okay too. But do not use type=site on a node. That's a tag only for relations and makes only sense there. In addition to tag each node as information board you could add them into a relation which you tag as I described above (an <a href="https://www.openstreetmap.org/relation/4154777">example of a relation memorial</a>). Likely it will be understood by no software, tough. ;-)</p>
 </div>
 <div id="comment-51731-info" class="comment-info">
 <span class="comment-age">(25 Aug '16, 21:33)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -195,7 +195,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Not sure why I added the type=site. Agreed it should not be used.</p>
-<p>I found this example: <a href="http://www.openstreetmap.org/node/3609670514">http://www.openstreetmap.org/node/3609670514</a> near where I'm making these entries, which uses four of the remaining five tags I mentioned above.</p>
+<p>I found this example: <a href="https://www.openstreetmap.org/node/3609670514">https://www.openstreetmap.org/node/3609670514</a> near where I'm making these entries, which uses four of the remaining five tags I mentioned above.</p>
 <p>So to conclude I will use: name="Country Name", tourism=information, information=board, board_type=history and colour=black.</p>
 <p>Thanks for your help.</p>
 </div>
@@ -208,7 +208,7 @@ osqa_accepted = false
 <div id="post-51733-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7436/logrady">@logrady</a>: yes, that is fine.</p>
+<p><a href="https://help.openstreetmap.org/users/7436/logrady">@logrady</a>: yes, that is fine.</p>
 <p><code>description=a commemorative plaque of one country which took part in the 2015 Pan Am games. Part of a series.</code></p>
 <p>would be possible too for each object.</p>
 </div>
@@ -313,7 +313,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I think historic=memorial is used for "Small memorials, usually remembering special persons, people who lost their lives in the wars" (<a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial">historic=memorial</a>).</p>
+<p>I think historic=memorial is used for "Small memorials, usually remembering special persons, people who lost their lives in the wars" (<a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial">historic=memorial</a>).</p>
 </div>
 <div id="comment-51608-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 18:51)</span> <span class="comment-user userinfo">logrady</span>
@@ -325,7 +325,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7436/logrady"></a><a href="http://help.openstreetmap.org/users/7436/logrady">@logrady</a> See the wiki page you mentioned and also <a href="https://wiki.openstreetmap.org/wiki/Key:memorial">Key:memorial</a>. The memorial key is always used in combination with the historic key.</p>
+<p><a href="https://help.openstreetmap.org/users/7436/logrady"></a><a href="https://help.openstreetmap.org/users/7436/logrady">@logrady</a> See the wiki page you mentioned and also <a href="https://wiki.openstreetmap.org/wiki/Key:memorial">Key:memorial</a>. The memorial key is always used in combination with the historic key.</p>
 </div>
 <div id="comment-51609-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 19:07)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -348,7 +348,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/7436/logrady"></a><a href="http://help.openstreetmap.org/users/7436/logrady">@logrady</a>: both together:</p>
+<p><a href="https://help.openstreetmap.org/users/7436/logrady"></a><a href="https://help.openstreetmap.org/users/7436/logrady">@logrady</a>: both together:</p>
 <ul>
 <li><code>historic=memorial</code></li>
 <li><code>memorial=plaque</code></li>
@@ -375,7 +375,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12686/mtc">@mtc</a>: in an additional tag with the key <code>inscription</code>. See <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial">https://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial</a> .</p>
+<p><a href="https://help.openstreetmap.org/users/12686/mtc">@mtc</a>: in an additional tag with the key <code>inscription</code>. See <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial">https://wiki.openstreetmap.org/wiki/Tag:historic%3Dmemorial</a> .</p>
 </div>
 <div id="comment-51622-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 22:22)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

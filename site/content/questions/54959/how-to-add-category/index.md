@@ -172,7 +172,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>Would shop=haberdashery be suitable as they sell sewing stuff and material.<br />
-<a href="http://wiki.openstreetmap.org/wiki/Pl:Tag:shop%3Dhaberdashery">http://wiki.openstreetmap.org/wiki/Pl:Tag:shop%3Dhaberdashery</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Pl:Tag:shop%3Dhaberdashery">https://wiki.openstreetmap.org/wiki/Pl:Tag:shop%3Dhaberdashery</a><br />
 <a href="https://en.wikipedia.org/wiki/Haberdasher">https://en.wikipedia.org/wiki/Haberdasher</a></p>
 </div>
 <div id="comment-54970-info" class="comment-info">

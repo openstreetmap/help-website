@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Static_map_images">the wiki on static map images</a> , <a href="http://bigmap.osmz.ru/">this project</a> (needs a script if the number of tiles is too big) or <a href="http://www.openstreetmap.org/user/mkarau/diary/20256">this diary entry</a> on joining tiles with a script.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Static_map_images">the wiki on static map images</a> , <a href="http://bigmap.osmz.ru/">this project</a> (needs a script if the number of tiles is too big) or <a href="https://www.openstreetmap.org/user/mkarau/diary/20256">this diary entry</a> on joining tiles with a script.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -137,7 +137,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Then again (like each new week) the hinti to</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">http://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">https://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></p>
 </div>
 <div id="comment-44909-info" class="comment-info">
 <span class="comment-age">(25 Aug '15, 17:43)</span> <span class="comment-user userinfo">stephan75</span>

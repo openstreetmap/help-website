@@ -111,8 +111,8 @@ One Answer:
 <p>In short: Don't use postcodes when searching.</p>
 <p>See:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ#My_postcode_is_missing.2Fwrong_but_I.27ve_fixed_it_in_the_OSM_data._What_is_wrong.3F">Nominatim FAQ</a></li>
-<li><a href="https://help.openstreetmap.org/questions/22731/nominatim-returns-no-results-when-searching-with-a-postcode">This older question</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ#My_postcode_is_missing.2Fwrong_but_I.27ve_fixed_it_in_the_OSM_data._What_is_wrong.3F">Nominatim FAQ</a></li>
+<li><a href="/questions/22731/nominatim-returns-no-results-when-searching-with-a-postcode">This older question</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

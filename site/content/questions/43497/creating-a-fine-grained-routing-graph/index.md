@@ -115,11 +115,11 @@ osqa_accepted = false
 <p>In those locations where OSM has lane data (which is far from everywhere), generating a graph according to your specifications is possible.</p>
 <p>Relevant documentation can be found here:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Lanes">On representing lanes in OSM</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">On the maxspeed attribute</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:turn">On turn lanes</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Lanes">On representing lanes in OSM</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">On the maxspeed attribute</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:turn">On turn lanes</a></li>
 </ul>
-<p>I don't know any library that does this for you, however. So if the suggestions by <a href="http://help.openstreetmap.org/users/4984/iii">@iii</a> don't do what you want, you would have to do it yourself.</p>
+<p>I don't know any library that does this for you, however. So if the suggestions by <a href="https://help.openstreetmap.org/users/4984/iii">@iii</a> don't do what you want, you would have to do it yourself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

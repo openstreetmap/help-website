@@ -127,7 +127,7 @@ One Answer:
 <li><a href="/questions/20004/">wie-darstellung-von-man-made-nodes-auf-der-mapnik-standardkarte-auf-osmorg-andern</a></li>
 </ul>
 <p>Zu 2.: Sofern es <em>ein</em> Laden ist, solltest du es am besten, nur einmal eintragen und als das kennzeichnen, was es hauptsächlich ist, wenn nicht beides möglich ist. Hier ist aber beides möglich. Füge zusätzlich (zu deinem <span><code>amenity=pub</code></span>) einfach das Tag <span><code>sport=10pin</code></span> für "Bowling" hinzu. Übrigens ist vielleicht <span><code>bar</code></span> hier statt "<code>pub</code>" passender.</p>
-<p>Generell: Weil du schreibst, dass du neu bist und du von Symbolen redest: Ich rede von <span>Tags</span>; das ist das, was du mit deinem Editor letztendlich in unsere Datenbank schreibst (das kannst du auch beispielsweise in den Details <a href="http://www.openstreetmap.org/user/Beguine/edits">deiner Bearbeitungen</a> sehen). Schließlich: willkommen bei OSM, schön dass du mithilfst! :-)</p>
+<p>Generell: Weil du schreibst, dass du neu bist und du von Symbolen redest: Ich rede von <span>Tags</span>; das ist das, was du mit deinem Editor letztendlich in unsere Datenbank schreibst (das kannst du auch beispielsweise in den Details <a href="https://www.openstreetmap.org/user/Beguine/edits">deiner Bearbeitungen</a> sehen). Schließlich: willkommen bei OSM, schön dass du mithilfst! :-)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

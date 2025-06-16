@@ -79,7 +79,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by scai 04 Oct '11, 19:39
+### The question has been closed for the following reason "Duplicate Question https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by scai 04 Oct '11, 19:39
 
 </div>
 
@@ -118,7 +118,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi Kormin,</p>
-<p>If <a href="http://www.openstreetmap.org/user/Kormin/edits">these</a> are your edits then they all show for me, I think, which suggests you may have old tiles cached locally. It is probably worth also looking at <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a>.</p>
+<p>If <a href="https://www.openstreetmap.org/user/Kormin/edits">these</a> are your edits then they all show for me, I think, which suggests you may have old tiles cached locally. It is probably worth also looking at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

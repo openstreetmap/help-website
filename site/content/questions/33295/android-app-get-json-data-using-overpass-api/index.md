@@ -108,8 +108,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can try <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass_turbo</a> ... it has an export feature also to geoJSON.</p>
-<p>But you can also export from overpass-api direclty to JSON, see its <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Choose_file_format">documentation</a></p>
+<p>Maybe you can try <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass_turbo</a> ... it has an export feature also to geoJSON.</p>
+<p>But you can also export from overpass-api direclty to JSON, see its <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Choose_file_format">documentation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

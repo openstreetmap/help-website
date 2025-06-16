@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The Charles River Esplanade in Boston is showing water where there should be land. If you zoom in near the Hatch Shell there should be a lagoon. The outline is shown but the image is water and it should be land. I am not sure how to fix this but was wondering if someone else can?<img src="http://www.openstreetmap.org/export#map=17/42.35690/-71.07649" alt="alt text" /></p>
+<p>The Charles River Esplanade in Boston is showing water where there should be land. If you zoom in near the Hatch Shell there should be a lagoon. The outline is shown but the image is water and it should be land. I am not sure how to fix this but was wondering if someone else can?<img src="https://www.openstreetmap.org/export#map=17/42.35690/-71.07649" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-missing_land" rel="tag" title="see questions tagged &#39;missing_land&#39;">missing_land</span> <span class="post-tag tag-link-boston" rel="tag" title="see questions tagged &#39;boston&#39;">boston</span> <span class="post-tag tag-link-flooded" rel="tag" title="see questions tagged &#39;flooded&#39;">flooded</span> <span class="post-tag tag-link-esplanade" rel="tag" title="see questions tagged &#39;esplanade&#39;">esplanade</span>
@@ -125,8 +125,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi,</p>
-<p>I just had a look at this: The problem seems to be <a href="http://www.openstreetmap.org/way/303073437">this way</a> which overlaps with <a href="http://www.openstreetmap.org/way/198529787">this way</a>, which is correctly mapped as <a href="http://www.openstreetmap.org/relation/1337270">multipolygon</a>.</p>
-<p>The solution is probably to delete <a href="http://www.openstreetmap.org/way/303073437">way 303073437</a>, after making sure that all parts are covered by other water areas. You can also delete the water tags from <a href="http://www.openstreetmap.org/way/198529787">way 198529787</a> as they are not needed for the multipolygon.</p>
+<p>I just had a look at this: The problem seems to be <a href="https://www.openstreetmap.org/way/303073437">this way</a> which overlaps with <a href="https://www.openstreetmap.org/way/198529787">this way</a>, which is correctly mapped as <a href="https://www.openstreetmap.org/relation/1337270">multipolygon</a>.</p>
+<p>The solution is probably to delete <a href="https://www.openstreetmap.org/way/303073437">way 303073437</a>, after making sure that all parts are covered by other water areas. You can also delete the water tags from <a href="https://www.openstreetmap.org/way/198529787">way 198529787</a> as they are not needed for the multipolygon.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

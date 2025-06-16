@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When you look at a map of the U.S., <a href="http://www.openstreetmap.org/#map=8/40.089/-73.762">New Jersey</a> and <a href="http://www.openstreetmap.org/#map=8/32.706/-84.139">Georgia</a> stand out has having a lot more public land rendered green. It doesn't seem possible that those two states have so much more public land than all the rest... does it?</p>
+<p>When you look at a map of the U.S., <a href="https://www.openstreetmap.org/#map=8/40.089/-73.762">New Jersey</a> and <a href="https://www.openstreetmap.org/#map=8/32.706/-84.139">Georgia</a> stand out has having a lot more public land rendered green. It doesn't seem possible that those two states have so much more public land than all the rest... does it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span>
@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>New Jersey and Georgia just have more landuse mapped at the moment.</p>
-<p>This data seems to come from a Land Use and Land Cover (LULC) import, for example the data for New Jersey has <em>source=NJ2002LULC</em> (see <a href="http://www.openstreetmap.org/way/250286927">way 250286927</a>) and seems to be made available by the New Jersey Department of Environmental Protection (NJDEP). Likewise, some of the data for Georgia has <em>source=USGS-LULC</em> (see<a href="http://www.openstreetmap.org/way/31388469">way 31388469</a>) and seems to originate from the USGS Land Cover Institute (LCI).</p>
+<p>This data seems to come from a Land Use and Land Cover (LULC) import, for example the data for New Jersey has <em>source=NJ2002LULC</em> (see <a href="https://www.openstreetmap.org/way/250286927">way 250286927</a>) and seems to be made available by the New Jersey Department of Environmental Protection (NJDEP). Likewise, some of the data for Georgia has <em>source=USGS-LULC</em> (see<a href="https://www.openstreetmap.org/way/31388469">way 31388469</a>) and seems to originate from the USGS Land Cover Institute (LCI).</p>
 <p>If you want to improve the current situation then just <a href="http://learnosm.org/en/beginner/start-osm/#beginning-osm-create-an-openstreetmap-account">start mapping</a> :)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -184,7 +184,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>The use of both local survey and Bing together is not exactly unheard of. Here's an area near me that has changed somewhat since the imagery was taken - the natural heathland is being allowed to reclaim more of the area:</p>
-<p><a href="http://www.openstreetmap.org/way/322977120#map=17/53.13686/-1.13203">http://www.openstreetmap.org/way/322977120#map=17/53.13686/-1.13203</a></p>
+<p><a href="https://www.openstreetmap.org/way/322977120#map=17/53.13686/-1.13203">https://www.openstreetmap.org/way/322977120#map=17/53.13686/-1.13203</a></p>
 <p>However, it's absolutely correct that more detailed mapping (imports, tracing from imagery or from any other source) makes further mapping more difficult, but there are ways of trying to make the lives of future mappers easier - I've tried to "de-multipolygonise" the linked area above, for example.</p>
 </div>
 <div id="comment-42196-info" class="comment-info">

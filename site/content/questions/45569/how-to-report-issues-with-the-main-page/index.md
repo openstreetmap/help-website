@@ -80,7 +80,7 @@ osqa_accepted = true
 <div id="post-45587-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel</a>, thank you, that was helpful as well!</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel</a>, thank you, that was helpful as well!</p>
 </div>
 <div id="comment-45587-info" class="comment-info">
 <span class="comment-age">(25 Sep '15, 07:45)</span> <span class="comment-user userinfo">glglgl</span>

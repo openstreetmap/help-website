@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ok answer are in the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#All_kind_of_objects">ways</a> :)</p>
+<p>Ok answer are in the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#All_kind_of_objects">ways</a> :)</p>
 <pre><code>node[&quot;name&quot;=&quot;Bures-sur-Yvette&quot;];
 (
 way

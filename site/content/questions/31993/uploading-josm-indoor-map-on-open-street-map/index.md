@@ -42,9 +42,9 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi, I am creating indoor map with josm. I will do offline and online map with android</p>
 <p>When I create it on JOSM seem like that <a href="https://www.dropbox.com/s/wiawbaqpo5zoyos/map%20%284%29.osm">You can download here josm data</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/s2.jpg" alt="alt text" /></p>
-<p>But When I upload this data it seem like that. You can look at osm page <a href="http://www.openstreetmap.org/#map=18/41.02455/28.95938">school map on osm</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/s1.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/s2.jpg" alt="alt text" /></p>
+<p>But When I upload this data it seem like that. You can look at osm page <a href="https://www.openstreetmap.org/#map=18/41.02455/28.95938">school map on osm</a></p>
+<p><img src="/upfiles/s1.JPG" alt="alt text" /></p>
 <p>My Question is. Why I can not see room on open street map ? What should I do for showing them ? Have I any mistake about creating indoor map ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

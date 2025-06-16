@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey"></a><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: The wiki is unrelated to the "about" page on the website. See SimonPoole's answr below.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey"></a><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: The wiki is unrelated to the "about" page on the website. See SimonPoole's answr below.</p>
 </div>
 <div id="comment-37748-info" class="comment-info">
 <span class="comment-age">(19 Oct '14, 10:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

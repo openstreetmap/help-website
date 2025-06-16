@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The short answer is that they will have to use ODbl as CC-BY-NC requires permission from the copyright owner. Since OSM data is "owned" by its contributors, who number in their thousands, that would be impossible. For more information see <a href="http://www.openstreetmap.org/copyright">this page</a>.</p>
+<p>The short answer is that they will have to use ODbl as CC-BY-NC requires permission from the copyright owner. Since OSM data is "owned" by its contributors, who number in their thousands, that would be impossible. For more information see <a href="https://www.openstreetmap.org/copyright">this page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

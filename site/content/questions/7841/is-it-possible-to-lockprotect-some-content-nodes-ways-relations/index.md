@@ -301,7 +301,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The only way is by monitoring nodes and areas and reverting changes made by other users. This has been done by Openstreetmap DWG, last time in <a href="http://wiki.openstreetmap.org/wiki/Data_working_group/Disputes">Jerusalem because of Hebrew/Arabic</a> problems.</p>
+<p>The only way is by monitoring nodes and areas and reverting changes made by other users. This has been done by Openstreetmap DWG, last time in <a href="https://wiki.openstreetmap.org/wiki/Data_working_group/Disputes">Jerusalem because of Hebrew/Arabic</a> problems.</p>
 <p>But the <strong>answer is still no</strong>, you can't lock the data, and if you try to make reverts into an edit war you will probably be banned.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -398,7 +398,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>If you're REALLY concerned, you can track edits. For example, you could periodically check on the OSM feature you created and see if it has changed (ie - <a href="http://www.openstreetmap.org/node/57049911,">http://www.openstreetmap.org/node/57049911,</a> and check history). Or, keep track of all edits in a specific area via the WhoDidIt feed: <a href="http://tyrasd.github.io/osm-qa-feeds/">http://tyrasd.github.io/osm-qa-feeds/</a></p>
+<p>If you're REALLY concerned, you can track edits. For example, you could periodically check on the OSM feature you created and see if it has changed (ie - <a href="https://www.openstreetmap.org/node/57049911,">https://www.openstreetmap.org/node/57049911,</a> and check history). Or, keep track of all edits in a specific area via the WhoDidIt feed: <a href="http://tyrasd.github.io/osm-qa-feeds/">http://tyrasd.github.io/osm-qa-feeds/</a></p>
 </div>
 <div id="comment-43421-info" class="comment-info">
 <span class="comment-age">(05 Jun '15, 14:55)</span> <span class="comment-user userinfo">neuhausr</span>

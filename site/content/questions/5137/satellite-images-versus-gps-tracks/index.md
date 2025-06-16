@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As already answered in <a href="http://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">http://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery</a> this is a hard question. Both aerial imagery and GPS tracks can be great or next to useless.</p>
+<p>As already answered in <a href="/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery">https://help.openstreetmap.org/questions/1200/which-is-more-reliable-gps-traces-or-aerial-imagery</a> this is a hard question. Both aerial imagery and GPS tracks can be great or next to useless.</p>
 <p>There are however a few things you can try:</p>
 <p>See if your GPS tracks match the tracks by other mappers. If several GPS tracks taken over a few days are consistent with each outher then they are most likely correct and the aerial imagery is warped / shifted.</p>
 <p>If there are not other tracks yet you can revisit the street the next day and take a second track. Again if it matches the first track it is most likely more accurate then the aerial imagery.</p>

@@ -120,7 +120,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>That looks like a temporary dump of earth for a construction, and if so you might not bother to map it since it will be gone soon-ish ?</p>
-<p>Otherwise, that looks like a barrier=block or barrier=debris to me. Check <a href="http://taginfo.openstreetmap.org/keys/barrier#values">taginfo</a> for inspiration if the <a href="http://wiki.openstreetmap.org/wiki/Barrier">wiki</a> doesn't have a fitting tag.</p>
+<p>Otherwise, that looks like a barrier=block or barrier=debris to me. Check <a href="http://taginfo.openstreetmap.org/keys/barrier#values">taginfo</a> for inspiration if the <a href="https://wiki.openstreetmap.org/wiki/Barrier">wiki</a> doesn't have a fitting tag.</p>
 <p>Tags and values in OSM follow some conventions but are otherwise free-form. You do not need to "create a tag" before using it. The online editor (potlach) shows some handy presets, but if you click on the "advanced" tab you will be able to set any tag and value you want (think hard before deciding that the usual keys/values are not adapted, though).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -153,7 +153,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Yes, you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>.</p>
+<p>Yes, you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">any tags you like</a>.</p>
 </div>
 <div id="comment-10380-info" class="comment-info">
 <span class="comment-age">(02 Feb '12, 00:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

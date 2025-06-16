@@ -108,7 +108,7 @@ One Answer:
 <p>Hi,</p>
 <p>First of all, <strong>DO NOT DELETE</strong> the roads from Ethiopia. There might be a lot more data to the OpenStreetMap road data that you will be removing if you remove them all. It might remove all the local names, references, specific road surface etc. Also, it will remove names of all the mappers who have contributed towards drawing all those roads. The best way to update is to use "Replace Geometry" function of JOSM which keeps the history of all the mappers who have previously worked on a feature.</p>
 <p>Secondly, if the data if from Geofabrik.de, I think that data is coming from OpenStreetMap itself. Check out this <a href="https://www.geofabrik.de/data/download.html">link</a>.</p>
-<p>Thirdly, there are restrictions into importing Shapefiles and uploading directly to OpenStreetMap. Check out this <a href="http://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile">link</a>.</p>
+<p>Thirdly, there are restrictions into importing Shapefiles and uploading directly to OpenStreetMap. Check out this <a href="https://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile">link</a>.</p>
 <p>So, I think you will have to go through a rigorous process of validating and updating all the data that you have (if it is indeed different data) rather than just simply removing and updating.</p>
 </div>
 <div class="answer-controls post-controls">

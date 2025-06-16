@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am installing Nominatim on my Ubuntu server 14.04 through this <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">link</a> and trying to load OSM data into my postgreSQL database. For loading into my database I am using this command as given in the link:</p>
+<p>I am installing Nominatim on my Ubuntu server 14.04 through this <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">link</a> and trying to load OSM data into my postgreSQL database. For loading into my database I am using this command as given in the link:</p>
 <pre><code>~/Nominatim/utils/setup.php   --osm-file data/latest.osm.pbf   --all --osm2pgsql-cache 1024 2&gt;&amp;1   | tee setup.log</code></pre>
 <p>But it is throwing an error</p>
 <pre><code>Using projection SRS 4326 (Latlong)

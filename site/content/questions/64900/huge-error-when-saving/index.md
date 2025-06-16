@@ -136,7 +136,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I am getting an error too on trying to upload edits to the OSM using JOSM.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-07-25_at_12.42.41_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2018-07-25_at_12.42.41_PM.png" alt="alt text" /></p>
 <p>From the OSM Talk newsgroup, here are some comments edited by me...<br />
 OSM primary hardware is moving to a new data centre next week, Wed July 25th or Thurs July 26 and will take some time to get up and running. Some core servers moving to an Equinix data centre in Amsterdam, NL.<br />
 It is a major move for the server operations group.</p>

@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can also use the tags for <a href="http://wiki.openstreetmap.org/wiki/Key:mtb:scale">mtb:scale</a> to specify the difficulty of mountain bike trails. That should make it clear that its not just a paved urban cycleway, and it may have a poor surface or obstacles etc.</p>
+<p>You can also use the tags for <a href="https://wiki.openstreetmap.org/wiki/Key:mtb:scale">mtb:scale</a> to specify the difficulty of mountain bike trails. That should make it clear that its not just a paved urban cycleway, and it may have a poor surface or obstacles etc.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

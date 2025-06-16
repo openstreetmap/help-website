@@ -105,7 +105,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess you're not familiar with the OSM file format, so please read a bit about <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">tagging</a> first.</p>
+<p>I guess you're not familiar with the OSM file format, so please read a bit about <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.4.1">tagging</a> first.</p>
 <p>I'll try to explain it on programmers level without a background in OSM, if this is wrong, please tell me what level you expect.</p>
 <p>Basically, OSM data has 3 primitives: Nodes, Ways and Relations. Nodes just have single geographical coordinates, Ways are an ordered list of nodes, and Relations are a collection of other features (thus Nodes, Ways and other Relations).</p>
 <p>Every primitive can have a number of tags to denote what type of feature it is.</p>
@@ -115,9 +115,9 @@ route=bicycle
 network=rcn
 note=xx-yy</code></pre>
 <p>You can't trust on the correctness of the "note" tags, so you have to calculate the end nodes by getting all the ways in the relation, combining it to a single line and checking the end nodes of that line.</p>
-<p>PS: Note that you don't have to download all data, there are services available where you can just download parts of the data (with the tags you want), see <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> or <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a></p>
+<p>PS: Note that you don't have to download all data, there are services available where you can just download parts of the data (with the tags you want), see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> or <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a></p>
 <p>PS2: the tags with rcn are also used in other countries, where they are normal (long) cycle routes, so no node-networks. So you do have to implement extra checks and provide bounding boxes to be sure you're working with node networks.</p>
-<p>PS3: User <a href="http://www.openstreetmap.org/user/Polyglot">Polyglot</a> also made relations per cycle node network in Belgium, see this: <a href="http://www.openstreetmap.org/browse/relation/1726882">relation 1726882</a>, if you want information regarding cycle nodes you can also contact him.</p>
+<p>PS3: User <a href="https://www.openstreetmap.org/user/Polyglot">Polyglot</a> also made relations per cycle node network in Belgium, see this: <a href="https://www.openstreetmap.org/browse/relation/1726882">relation 1726882</a>, if you want information regarding cycle nodes you can also contact him.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ note=xx-yy</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In <a href="http://forum.openstreetmap.org/viewtopic.php?id=18951">this thread</a> on the Dutch language part of the OpenStreetMap forum. People talk about how they constructed <a href="http://mijndev.openstreetmap.nl/~ligfietser/fiets/?map=route&amp;zoom=13&amp;lat=52.03553&amp;lon=5.1682&amp;layers=0B0000FFTFFFFFFFF">this map</a>. Including examples of the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> queries they used to get the bicycle network. You can find all the queries in the javascript files of the website.</p>
+<p>In <a href="http://forum.openstreetmap.org/viewtopic.php?id=18951">this thread</a> on the Dutch language part of the OpenStreetMap forum. People talk about how they constructed <a href="http://mijndev.openstreetmap.nl/~ligfietser/fiets/?map=route&amp;zoom=13&amp;lat=52.03553&amp;lon=5.1682&amp;layers=0B0000FFTFFFFFFFF">this map</a>. Including examples of the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> queries they used to get the bicycle network. You can find all the queries in the javascript files of the website.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

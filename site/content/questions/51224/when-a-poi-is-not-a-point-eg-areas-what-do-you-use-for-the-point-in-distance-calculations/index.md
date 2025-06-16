@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi, I'm aware of the move to areas to identify building as opposed to single POIs - but with that change, there is no longer "a point" for distance calculation, or for display on simpler overlays.</p>
 <p>How are you supposed to work with such data for tasks like that?</p>
 <p>I would have thought that if a building outline is to be defined in detail, then one of the details should be a single point that defines the entrance location for routing &amp; detail calculations, distinctive from normal outline nodes? (or the main entrance / each entrance on a building with more than one).</p>
-<p>Ref. <a href="https://help.openstreetmap.org/questions/22962/should-i-use-pois-or-areas-to-identify-shops">https://help.openstreetmap.org/questions/22962/should-i-use-pois-or-areas-to-identify-shops</a></p>
+<p>Ref. <a href="/questions/22962/should-i-use-pois-or-areas-to-identify-shops">https://help.openstreetmap.org/questions/22962/should-i-use-pois-or-areas-to-identify-shops</a></p>
 <p>Thanks, TBF.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -157,7 +157,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12608/tbf"></a><a href="http://help.openstreetmap.org/users/12608/tbf">@tbf</a>: to find examples of mapped entrances, go to <a href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a> , open the "wizard", enter "entrance=*" (without quotation marks) and it will show you all which are on the current map area. A <a href="https://www.openstreetmap.org/node/1779348961">simple example mall</a>, a <a href="https://www.openstreetmap.org/relation/3901145">complex one</a> (which is mapped as "<a href="https://wiki.openstreetmap.org/wiki/Relation:building">Simple 3D Building</a>" too, and shows you its entrances with the role "entrance", too).</p>
+<p><a href="https://help.openstreetmap.org/users/12608/tbf"></a><a href="https://help.openstreetmap.org/users/12608/tbf">@tbf</a>: to find examples of mapped entrances, go to <a href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a> , open the "wizard", enter "entrance=*" (without quotation marks) and it will show you all which are on the current map area. A <a href="https://www.openstreetmap.org/node/1779348961">simple example mall</a>, a <a href="https://www.openstreetmap.org/relation/3901145">complex one</a> (which is mapped as "<a href="https://wiki.openstreetmap.org/wiki/Relation:building">Simple 3D Building</a>" too, and shows you its entrances with the role "entrance", too).</p>
 </div>
 <div id="comment-51230-info" class="comment-info">
 <span class="comment-age">(03 Aug '16, 08:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

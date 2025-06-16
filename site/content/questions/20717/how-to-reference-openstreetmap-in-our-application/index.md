@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to reference OpenStreetMap in our application"
-description = '''Hello, I am new to openstreetmap. I have followed the below url to create a first sample application that displays the map. url: http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example I have few queries like we can create openstreetmap using google api,openlayer.js and other libraries. (Please...'''
+description = '''Hello, I am new to openstreetmap. I have followed the below url to create a first sample application that displays the map. url: https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example I have few queries like we can create openstreetmap using google api,openlayer.js and other libraries. (Please...'''
 date = "2013-03-15T03:44:00Z"
 lastmod = "2013-03-20T17:52:00Z"
 weight = 20717
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I am new to openstreetmap. I have followed the below url to create a first sample application that displays the map.</p>
-<p>url: <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example</a></p>
+<p>url: <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example</a></p>
 <p>I have few queries like</p>
 <p>we can create openstreetmap using google api,openlayer.js and other libraries. (Please correct me if I am incorrect). So if this is correct, which is the best option to work with.</p>
 <p>To display a map and plot data on the map based on lat long abd create shapes on it (like polygons , polylines) and other shapes how we can achieve that and whether that is possible using OpenstreetMap.</p>

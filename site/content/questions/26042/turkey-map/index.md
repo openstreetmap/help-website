@@ -162,7 +162,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The short answer is add the data yourself.</p>
-<p>Start off by reading the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> in the <a href="http://wiki.openstreetmap.org/wiki/Main_Page">wiki</a>. There is a lot of useful information on contributing data. Once you are ready to start adding to the map, start with the information that is most important to you first and build on it from there, one town at a time.</p>
+<p>Start off by reading the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> in the <a href="https://wiki.openstreetmap.org/wiki/Main_Page">wiki</a>. There is a lot of useful information on contributing data. Once you are ready to start adding to the map, start with the information that is most important to you first and build on it from there, one town at a time.</p>
 <p>Also, look out for other contributers in Turkey and share ideas on improving the map.</p>
 </div>
 <div class="answer-controls post-controls">

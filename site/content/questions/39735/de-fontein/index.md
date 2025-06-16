@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Dear Hans you can easily change this yourself see</p>
-<p><a href="http://www.openstreetmap.org/fixthemap">http://www.openstreetmap.org/fixthemap</a></p>
+<p><a href="https://www.openstreetmap.org/fixthemap">https://www.openstreetmap.org/fixthemap</a></p>
 <p>or/and ask somebody from the local community to help you:</p>
 <p><a href="https://lists.openstreetmap.org/listinfo/talk-nl">https://lists.openstreetmap.org/listinfo/talk-nl</a></p>
 <p>or</p>

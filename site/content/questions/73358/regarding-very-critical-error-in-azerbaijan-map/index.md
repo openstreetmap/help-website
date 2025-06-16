@@ -224,7 +224,7 @@ osqa_accepted = false
 <p>At the latest status, the map looks more uptodate while compared to the old version, thanks for that</p>
 <p>But here are some fixes needed I think, which will make it complete:</p>
 <p>1- The borderline which is painted yellow should be removed and put the names of Azerbaycan cities and regions in that area, for example Nagorni-Karabakh must be there.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_snffgzS.PNG" alt="alt text" /> Thanks Doguhan</p>
+<p><img src="/upfiles/Capture_snffgzS.PNG" alt="alt text" /> Thanks Doguhan</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

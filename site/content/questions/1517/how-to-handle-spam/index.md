@@ -113,9 +113,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Edits are always grouped in changesets. You can view the changesets by this user here:</p>
-<p><a href="http://www.openstreetmap.org/user/Emree/edits">http://www.openstreetmap.org/user/Emree/edits</a></p>
+<p><a href="https://www.openstreetmap.org/user/Emree/edits">https://www.openstreetmap.org/user/Emree/edits</a></p>
 <p>It is relatively easy to revert a whole changeset if you are sure that everything in it is wrong. However, you should definitely first talk to the user in question, because very often it turns out that people didn't know they were editing "for real" and that their edits would go straight to the map. Often they are truly embarrassed when they hear this.</p>
-<p>Also read the answer to the question <a href="http://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism">"What should I do about Vandalism".</a></p>
+<p>Also read the answer to the question <a href="/questions/216/what-should-i-do-about-vandalism">"What should I do about Vandalism".</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

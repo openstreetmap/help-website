@@ -131,7 +131,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The best that you will get without doing some work yourself is indeed the export tab. Note that you can export to SVG and PDF, and set any scale you like, so that gives you some control over the level of detail shown, but no separate layers.</p>
 <p>If you want more, you will have to install some rendering software and provide it with style sheets that describe your style (e.g. use Mapnik, or Osmarender, both capable of producing vector output).</p>
-<p>If you are happy with doing <em>all</em> of the cartography work in AI, then <a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">see this wiki article.</a></p>
+<p>If you are happy with doing <em>all</em> of the cartography work in AI, then <a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">see this wiki article.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

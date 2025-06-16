@@ -277,7 +277,7 @@ osqa_accepted = false
 <p>or wood=decideous but there is real problems at the moment with lots of different ways to use these. Also species= or taxon= or perhaps other ways to record species will also help define woodlands better. operator=forestry_commission etc would also help understand the context of the type of woodland.</p>
 <p>Well, I you can't see the woods for trees on this - I don't blame you...</p>
 <p>I'm organising a woodland mapping party in March - so hopefully I'll have a better answer by then:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mapping_Party/New_Lanark">http://wiki.openstreetmap.org/wiki/Mapping_Party/New_Lanark</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mapping_Party/New_Lanark">https://wiki.openstreetmap.org/wiki/Mapping_Party/New_Lanark</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -564,22 +564,22 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I don't quite understand the whole problem. To me, it seems rather clear and logical that <code>natural=*</code> should describe what natural elements are on the area and <code>landuse=*</code> what the land is being used for by people. I don't see why these should be mutually exclusive.</p>
-<p>I would expect <code>landuse=forest</code> to almost always have wood-type natural elements, so it would usually indicate also <code>natural=wood</code>. Likewise, people almost always "use" an area with wood-type elements as a forest (e.g. for recreation), so <code>natural=wood</code> usually also indicates <code>landuse=forest</code>. That's why I consider <code>landuse=forest</code> to be one of the most useless <code>landuse</code> values - except in cases like <strong>Hawkeye</strong> refers to in his <a href="http://help.openstreetmap.org/answer_link/9807/">answer</a>:</p>
+<p>I would expect <code>landuse=forest</code> to almost always have wood-type natural elements, so it would usually indicate also <code>natural=wood</code>. Likewise, people almost always "use" an area with wood-type elements as a forest (e.g. for recreation), so <code>natural=wood</code> usually also indicates <code>landuse=forest</code>. That's why I consider <code>landuse=forest</code> to be one of the most useless <code>landuse</code> values - except in cases like <strong>Hawkeye</strong> refers to in his <a href="https://help.openstreetmap.org/answer_link/9807/">answer</a>:</p>
 <blockquote>
 <p>tagging the area of highly managed forest with landuse=forest and the individual packets of woodlands as natural=wood.</p>
 </blockquote>
-<p>However, this seems to <em>not</em> be the way a lot of the community uses these tags, for whatever reasons. The <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">wiki for <code>natural=wood</code></a> describes it as</p>
+<p>However, this seems to <em>not</em> be the way a lot of the community uses these tags, for whatever reasons. The <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwood">wiki for <code>natural=wood</code></a> describes it as</p>
 <blockquote>
-<p>Natural primeval woodland. For forests that are managed by someone, use <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest"><code>landuse=forest</code></a> instead.</p>
+<p>Natural primeval woodland. For forests that are managed by someone, use <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest"><code>landuse=forest</code></a> instead.</p>
 </blockquote>
-<p>And the <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">wiki for <code>landuse=forest</code></a> also states it is for</p>
+<p>And the <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dforest">wiki for <code>landuse=forest</code></a> also states it is for</p>
 <blockquote>
 <p>Managed forest or woodland plantation</p>
 </blockquote>
 <p>However as some argue, trying to differentate between a "managed" forest and a "natural" forest might be rather silly in most of the western world (maybe most of whole world as well), where pretty much all forest is actually being managed, even though it is kept in a "natural" state. Whether this distiction is also in any way relevant to map is a good question.</p>
-<p>As with many other conflicting tag sematics, a good solution might be to switch to using some completely other tagging scheme for the purpose. The <a href="http://wiki.openstreetmap.org/wiki/Landcover">wiki for Landcover says</a>:</p>
+<p>As with many other conflicting tag sematics, a good solution might be to switch to using some completely other tagging scheme for the purpose. The <a href="https://wiki.openstreetmap.org/wiki/Landcover">wiki for Landcover says</a>:</p>
 <blockquote>
-<p>There is not currently a good tag to describe a landcover of trees as opposed to a landuse of timber production for which <code>landuse=forest</code> is appropriate or <code>natural=wood</code> for primary unmanaged woodland. The tag <a href="http://wiki.openstreetmap.org/wiki/Key:landcover">landcover=trees</a> has been proposed for this purpose.</p>
+<p>There is not currently a good tag to describe a landcover of trees as opposed to a landuse of timber production for which <code>landuse=forest</code> is appropriate or <code>natural=wood</code> for primary unmanaged woodland. The tag <a href="https://wiki.openstreetmap.org/wiki/Key:landcover">landcover=trees</a> has been proposed for this purpose.</p>
 </blockquote>
 <p>I will, however, personally keep using <code>natural=wood</code> for any things that I can look at and say "hey, that's a wood", and not add any landuse tags. The <code>natural=*</code> tag is already used similarly in for example <code>natural=water</code><br />
 </p>
@@ -636,7 +636,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I've ask for an ITO maps displaying different uses of these tags. Hopefully this will be useful:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/ITO_Map_ideas#Woods">http://wiki.openstreetmap.org/wiki/ITO_Map_ideas#Woods</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/ITO_Map_ideas#Woods">https://wiki.openstreetmap.org/wiki/ITO_Map_ideas#Woods</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -141,8 +141,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Can't give specific advice but these pages from OSM may help:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Hardware_Guide">http://wiki.openstreetmap.org/wiki/Hardware_Guide</a></p>
-<p><a href="http://wiki.openstreetmap.org/wiki/GPS_Reviews">http://wiki.openstreetmap.org/wiki/GPS_Reviews</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Hardware_Guide">https://wiki.openstreetmap.org/wiki/Hardware_Guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/GPS_Reviews">https://wiki.openstreetmap.org/wiki/GPS_Reviews</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -236,7 +236,7 @@ osqa_accepted = false
 <div id="post-7710-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can find information about local OSM communities in the Wiki. I'd start my research on this page: <a href="http://wiki.openstreetmap.org/wiki/Mapping_projects">http://wiki.openstreetmap.org/wiki/Mapping_projects</a> Alternatively you could subscribe to your national/local Mailing List and ask there. Mailing lists are listed here: <a href="http://lists.openstreetmap.org/listinfo/">http://lists.openstreetmap.org/listinfo/</a></p>
+<p>You can find information about local OSM communities in the Wiki. I'd start my research on this page: <a href="https://wiki.openstreetmap.org/wiki/Mapping_projects">https://wiki.openstreetmap.org/wiki/Mapping_projects</a> Alternatively you could subscribe to your national/local Mailing List and ask there. Mailing lists are listed here: <a href="http://lists.openstreetmap.org/listinfo/">http://lists.openstreetmap.org/listinfo/</a></p>
 </div>
 <div id="comment-7710-info" class="comment-info">
 <span class="comment-age">(07 Sep '11, 11:50)</span> <span class="comment-user userinfo">dieterdreist</span>

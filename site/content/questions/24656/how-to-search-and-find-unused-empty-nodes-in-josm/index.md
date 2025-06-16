@@ -168,7 +168,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Your answer is covered in the JOSM wiki help page as an example (<a href="http://wiki.openstreetmap.org/wiki/JOSM/Search_function).">http://wiki.openstreetmap.org/wiki/JOSM/Search_function).</a> But this page does not mention the <code>parent</code> token at all. And it does not cover the tokens relating to expressions written after them as seen in the JOSM program itself in the search dialog. Very strange. Is there a better reference/documentation besides the source code?</p>
+<p>Your answer is covered in the JOSM wiki help page as an example (<a href="https://wiki.openstreetmap.org/wiki/JOSM/Search_function).">https://wiki.openstreetmap.org/wiki/JOSM/Search_function).</a> But this page does not mention the <code>parent</code> token at all. And it does not cover the tokens relating to expressions written after them as seen in the JOSM program itself in the search dialog. Very strange. Is there a better reference/documentation besides the source code?</p>
 </div>
 <div id="comment-24684-info" class="comment-info">
 <span class="comment-age">(29 Jul '13, 16:10)</span> <span class="comment-user userinfo">erik</span>

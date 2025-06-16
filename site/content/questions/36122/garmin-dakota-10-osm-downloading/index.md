@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Does <a href="https://help.openstreetmap.org/questions/10481/how-to-use-multiple-different-maps-on-garmin-dakota-20">this previous question</a> help?</p>
+<p>Does <a href="/questions/10481/how-to-use-multiple-different-maps-on-garmin-dakota-20">this previous question</a> help?</p>
 </div>
 <div id="comment-36124-info" class="comment-info">
 <span class="comment-age">(23 Aug '14, 12:08)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -125,10 +125,10 @@ One Answer:
 <p>Do a complete backup of the files on your device, including the hidden files first and don't overwrite any of the Garmin supplied files unless you are sure you know what will happen. The Garmin Dakota 10 does not accept a data card such as a sd card. <a href="http://www.ja-gps.com.au/Garmin/handheld-dakota-10-gps/">specs here JohnnyAppleseed Aus listing</a> . I am more familiar with the eTrex model.</p>
 <p>I suspect you don't really need to do a file for the Garmin/CustomMaps/ directory. That is where you would put a .kmz file. But you may, and here is a way to produce them <a href="http://www.garmin.com/us/products/onthetrail/custommaps#fragment-2">Garmin Custom Maps</a></p>
 <p>I expect you instead want to download and use a Garmin suitable version of the OSM which is an .img file that is put into the Garmin/ directory. You would not normally download an .osm map to put on your Garmin device but instead download a 'ready made Garmin suitable .img map' to load directly onto your device.<br />
-<a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download on osm wiki</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map On Garmin/Download on osm wiki</a><br />
 There are a lot to choose from but I suggest you try the Lambertus one because the method is well described here for another Garmin model by <a href="http://www.dcrainmaker.com/2013/05/download-garmin-705800810.html">DC RAINMAKER</a> , though all the others on the page will work just as well. You would load your .img file onto the device instead of onto an sd card (don't accidentally overwrite any Garmin supplied maps already on there)</p>
 <p>Instead of downloading an .img file to put directly on your device, you can download version to a pc or mac (.gmap) and send part or all of the map to your device using a free Garmin program like Basecamp. But this is more involved and I prefer to use the previous method.</p>
-<p>If you really do want to do something special and download a .osm file from the osm site and convert it into a .img file yourself, you would generally use <a href="http://www.mkgmap.org.uk/">mkgmap</a> Here is some info on the <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">Mkgmap/help/How to create a map on the osm wiki</a></p>
+<p>If you really do want to do something special and download a .osm file from the osm site and convert it into a .img file yourself, you would generally use <a href="http://www.mkgmap.org.uk/">mkgmap</a> Here is some info on the <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/How_to_create_a_map">Mkgmap/help/How to create a map on the osm wiki</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -150,7 +150,7 @@ There are a lot to choose from but I suggest you try the Lambertus one because t
 <div id="post-36136-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p><a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-36136-info" class="comment-info">
 <span class="comment-age">(23 Aug '14, 16:50)</span> <span class="comment-user userinfo">andy mackey</span>

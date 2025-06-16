@@ -207,7 +207,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you need a way around a specific coordinate, you should probably take a look at the Overpass API 'around' filter rather than a bbox query. Bbox is ok'ish, but honestly it doesn't fit your use case all that well.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29">link</a> for more details.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29">link</a> for more details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

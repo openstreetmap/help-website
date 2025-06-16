@@ -145,7 +145,7 @@ osqa_accepted = false
 <div id="post-13004-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> is a good guide.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions</a> is a good guide.</p>
 </div>
 <div id="comment-13004-info" class="comment-info">
 <span class="comment-age">(28 May '12, 10:23)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -262,7 +262,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If a <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">path</a> is not further qualified (as bicycle, foot, or whatever) then it is basically a way that excludes motor vehicles. Many ways tagged as path <a href="http://taginfo.openstreetmap.org/tags/?key=highway&amp;value=path#combinations">are also</a> tagged for foot or bicycle, and access restrictions etc.</p>
+<p>If a <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">path</a> is not further qualified (as bicycle, foot, or whatever) then it is basically a way that excludes motor vehicles. Many ways tagged as path <a href="http://taginfo.openstreetmap.org/tags/?key=highway&amp;value=path#combinations">are also</a> tagged for foot or bicycle, and access restrictions etc.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

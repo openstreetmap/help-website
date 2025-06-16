@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to add a university with potlatch2"
-description = '''How can you add a university? There seems to be no option for adding a university. Under amenities you can see school and kindergarten but there is no option. University should be an option under amenities according to the wiki: http://wiki.openstreetmap.org/wiki/Map_features#Education'''
+description = '''How can you add a university? There seems to be no option for adding a university. Under amenities you can see school and kindergarten but there is no option. University should be an option under amenities according to the wiki: https://wiki.openstreetmap.org/wiki/Map_features#Education'''
 date = "2012-08-27T16:14:00Z"
 lastmod = "2012-08-28T06:23:00Z"
 weight = 15554
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>How can you add a university?</p>
 <p>There seems to be no option for adding a university. Under amenities you can see school and kindergarten but there is no option. University should be an option under amenities according to the wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Map_features#Education">http://wiki.openstreetmap.org/wiki/Map_features#Education</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Map_features#Education">https://wiki.openstreetmap.org/wiki/Map_features#Education</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-university" rel="tag" title="see questions tagged &#39;university&#39;">university</span> <span class="post-tag tag-link-add" rel="tag" title="see questions tagged &#39;add&#39;">add</span>
@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can create or edit your own tag so pick amenity=school and by clicking on advantced tab in Potlatch2 you can edit it to amenity=university, when doing this use lower case and use underscore instead of a space if you need to, like this amenity=two_words. Here's one you can look at in Cambridge. <a href="http://www.openstreetmap.org/?lat=52.204141&amp;lon=0.116259&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.204141&amp;lon=0.116259&amp;zoom=18&amp;layers=M</a> <img src="http://help.openstreetmap.org/upfiles/uni_tag_jpeg.JPG" alt="alt text" /></p>
+<p>You can create or edit your own tag so pick amenity=school and by clicking on advantced tab in Potlatch2 you can edit it to amenity=university, when doing this use lower case and use underscore instead of a space if you need to, like this amenity=two_words. Here's one you can look at in Cambridge. <a href="https://www.openstreetmap.org/?lat=52.204141&amp;lon=0.116259&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.204141&amp;lon=0.116259&amp;zoom=18&amp;layers=M</a> <img src="/upfiles/uni_tag_jpeg.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the question <a href="http://help.openstreetmap.org/questions/10233/more-symbols-in-potlatch">more-symbols-in-potlatch</a></p>
+<p>Have a look at the question <a href="/questions/10233/more-symbols-in-potlatch">more-symbols-in-potlatch</a></p>
 <p>The icons available in Potlatch2 are just a subset of all possibilities for objects in the OSM database.</p>
 <p>You can enter objects that are not present in the Potlatch presets when you enter the advanced mode there, and type in the key and value for each object.</p>
 <p>The MapFeature page in the OSM wiki is a good source for that.</p>

@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>After simply googling for "convert osm to s-57" there are some hints in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/User:Skippern/INT-1">wiki/User:Skippern/INT-1</a></p>
+<p>After simply googling for "convert osm to s-57" there are some hints in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/User:Skippern/INT-1">wiki/User:Skippern/INT-1</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

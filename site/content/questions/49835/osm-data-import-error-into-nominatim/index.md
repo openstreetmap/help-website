@@ -222,7 +222,7 @@ One Answer:
 <div class="answer-body">
 <p>Nominatim doesn't index everything with a name (or ref) tag. It looks for places, streets and similar tag combinations. For some tags it uses a positive list of desired values, for others a negative list. That happens in the file output_gazetteer.cpp.</p>
 <p><a href="https://github.com/openstreetmap/osm2pgsql/blob/d0af11f267a202c7c1961c2061d121c726d8db3a/output-gazetteer.cpp">https://github.com/openstreetmap/osm2pgsql/blob/d0af11f267a202c7c1961c2061d121c726d8db3a/output-gazetteer.cpp</a></p>
-<p>You can either change the logic in the process_tags method to treat all electrical lines like places. Or add a tag place=locality to all your data before importing. <a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a></p>
+<p>You can either change the logic in the process_tags method to treat all electrical lines like places. Or add a tag place=locality to all your data before importing. <a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -275,7 +275,7 @@ One Answer:
 <p>Did you import the city and country as well? The is_in key is a hint but the place still needs to exist in the Nominatim database to create a hierarchy.</p>
 <p>The query format looks good</p>
 <p><a href="http://nominatim.openstreetmap.org/search.php?q=the+nederlands+%5Bhospitals%5D">http://nominatim.openstreetmap.org/search.php?q=the+nederlands+%5Bhospitals%5D</a></p>
-<p>Here's a list of all 'special phrases' that can be added to those square brackets. <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">http://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases</a> after you ran the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Add_special_phrases">http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Add_special_phrases</a> step of the installation.</p>
+<p>Here's a list of all 'special phrases' that can be added to those square brackets. <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases">https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases</a> after you ran the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Add_special_phrases">https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Add_special_phrases</a> step of the installation.</p>
 </div>
 <div id="comment-49920-info" class="comment-info">
 <span class="comment-age">(31 May '16, 02:21)</span> <span class="comment-user userinfo">mtmail</span>

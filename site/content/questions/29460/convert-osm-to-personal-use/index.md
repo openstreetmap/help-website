@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi,</p>
-<p>Did you try the "Share" option in the OpenStreetMap site? Instead of creating a map out of OSM file, it would be much easier export the map from the OpenStreetMap site itself. Once you click "Share", you can select the area to be exported, output formats (png, jpg, svg &amp; pdf) and scale. Please don't forget to credit OpenStreetMap in the printed map. Please see <a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a> for details.</p>
+<p>Did you try the "Share" option in the OpenStreetMap site? Instead of creating a map out of OSM file, it would be much easier export the map from the OpenStreetMap site itself. Once you click "Share", you can select the area to be exported, output formats (png, jpg, svg &amp; pdf) and scale. Please don't forget to credit OpenStreetMap in the printed map. Please see <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> for details.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -182,7 +182,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Beside embedding an online map on any webpage:</p>
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> if you want to produce some printed work ... there are several possibilities</p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> if you want to produce some printed work ... there are several possibilities</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

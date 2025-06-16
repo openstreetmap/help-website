@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am not so familiar with the filtering options of osmosis, but I recommend to try <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a></p>
+<p>I am not so familiar with the filtering options of osmosis, but I recommend to try <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a></p>
 <p>Sometimes it can be easier to use, IMHO.</p>
 </div>
 <div class="answer-controls post-controls">

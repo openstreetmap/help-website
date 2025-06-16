@@ -160,7 +160,7 @@ osqa_accepted = false
 <p>If you own an android device (or you can use the iso from <a href="http://www.android-x86.org">http://www.android-x86.org</a> in <a href="http://Virtualbox.org">Virtualbox.org</a> or VMware) then you can benefit from the app called OsmAnd that has the second best offline search function for OSM based data.</p>
 <p>It is only topped by MapFactor Navigator free version 11 where you can also use offline maps on any PC with Windows, Linux via Wine, or WindowsMobile.</p>
 <p>See <a href="http://wiki.osm.org">wiki.osm.org</a> for more details.</p>
-<p>Unfortunately I cannot give you a solution about Nominatim, but have a look at <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> and all its sub pages for more information.</p>
+<p>Unfortunately I cannot give you a solution about Nominatim, but have a look at <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> and all its sub pages for more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

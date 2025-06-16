@@ -111,8 +111,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>JOSM and Merkaartor have built-in <a href="http://wiki.openstreetmap.org/wiki/Photo_Mapping">photomapping</a>, and can match your photos to their locations automatically, and allow for any offset in the timestamps. As such you can just load your trace and photos without any modification and start mapping.</p>
-<p>The situation for Potlatch 1 is less simple. You can load photos via OpenStreetPhoto, but the workflow is non-trivial. You can also <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Photo-mapping">load your own photos from a custom KML file</a>, but this will need you to make the correlation between timestamps and positions yourself, probably.</p>
+<p>JOSM and Merkaartor have built-in <a href="https://wiki.openstreetmap.org/wiki/Photo_Mapping">photomapping</a>, and can match your photos to their locations automatically, and allow for any offset in the timestamps. As such you can just load your trace and photos without any modification and start mapping.</p>
+<p>The situation for Potlatch 1 is less simple. You can load photos via OpenStreetPhoto, but the workflow is non-trivial. You can also <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Photo-mapping">load your own photos from a custom KML file</a>, but this will need you to make the correlation between timestamps and positions yourself, probably.</p>
 <p>Potlatch 2 doesn't yet support photo mapping, but probably will at some point in the future.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -235,7 +235,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can use JOSM to synchronise camera and waypoint timestamps, and display the images and their assigned locations directly within JOSM.</p>
-<p>There are many <a href="http://wiki.openstreetmap.org/wiki/Geotagging_Source_Photos">other tools</a> available to synchronise photos to GPS traces: an overview is available on the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Photo_mapping">Photo Mapping</a></p>
+<p>There are many <a href="https://wiki.openstreetmap.org/wiki/Geotagging_Source_Photos">other tools</a> available to synchronise photos to GPS traces: an overview is available on the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Photo_mapping">Photo Mapping</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

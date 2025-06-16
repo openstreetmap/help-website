@@ -76,7 +76,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Have a look at your editing history at <a href="http://www.openstreetmap.org/user/carlosz22/edits">http://www.openstreetmap.org/user/carlosz22/edits</a></p>
+<p>Have a look at your editing history at <a href="https://www.openstreetmap.org/user/carlosz22/edits">https://www.openstreetmap.org/user/carlosz22/edits</a></p>
 <p>Can you describe more in detail the objectss, noder or boundayr you mean?</p>
 </div>
 <div id="comment-14036-info" class="comment-info">
@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't see any problem with the boundary of San Ferndando, and you have not changed it today: <a href="http://www.openstreetmap.org/browse/relation/347592">http://www.openstreetmap.org/browse/relation/347592</a></p>
+<p>I don't see any problem with the boundary of San Ferndando, and you have not changed it today: <a href="https://www.openstreetmap.org/browse/relation/347592">https://www.openstreetmap.org/browse/relation/347592</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

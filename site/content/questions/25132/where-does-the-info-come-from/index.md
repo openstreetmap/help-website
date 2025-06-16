@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "where does the info come from?"
-description = '''Hi,  first, thanks for a fine research tool. It&#x27;s been very useful. Second, where does the info that makes the maps come from? I&#x27;m doing some research into my local park and wondered where the information about the boundaries came from?  http://www.openstreetmap.org/#map=17/55.80147/-4.37698'''
+description = '''Hi,  first, thanks for a fine research tool. It&#x27;s been very useful. Second, where does the info that makes the maps come from? I&#x27;m doing some research into my local park and wondered where the information about the boundaries came from?  https://www.openstreetmap.org/#map=17/55.80147/-4.37698'''
 date = "2013-08-09T20:45:00Z"
 lastmod = "2013-08-09T21:27:00Z"
 weight = 25132
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, first, thanks for a fine research tool. It's been very useful. Second, where does the info that makes the maps come from? I'm doing some research into my local park and wondered where the information about the boundaries came from? <a href="http://www.openstreetmap.org/#map=17/55.80147/-4.37698">http://www.openstreetmap.org/#map=17/55.80147/-4.37698</a></p>
+<p>Hi, first, thanks for a fine research tool. It's been very useful. Second, where does the info that makes the maps come from? I'm doing some research into my local park and wondered where the information about the boundaries came from? <a href="https://www.openstreetmap.org/#map=17/55.80147/-4.37698">https://www.openstreetmap.org/#map=17/55.80147/-4.37698</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-cowan" rel="tag" title="see questions tagged &#39;cowan&#39;">cowan</span> <span class="post-tag tag-link-park" rel="tag" title="see questions tagged &#39;park&#39;">park</span>
@@ -138,7 +138,7 @@ Edited by Filling in the blanks at 2008-04-07T08:17:01Z</code></pre>
 </div>
 <div class="comment-text">
 <p>"On the left side of the map"? The "other" left?</p>
-<p>Also, if you have the History shown above you can click "Details" to see the details of what nodes and what tags made up each version of the way. From there you can click on the relevant changeset id to see the check in comment, e.g. <a href="http://www.openstreetmap.org/browse/changeset/14295056">http://www.openstreetmap.org/browse/changeset/14295056</a></p>
+<p>Also, if you have the History shown above you can click "Details" to see the details of what nodes and what tags made up each version of the way. From there you can click on the relevant changeset id to see the check in comment, e.g. <a href="https://www.openstreetmap.org/browse/changeset/14295056">https://www.openstreetmap.org/browse/changeset/14295056</a></p>
 </div>
 <div id="comment-25134-info" class="comment-info">
 <span class="comment-age">(09 Aug '13, 21:27)</span> <span class="comment-user userinfo">EdLoach ♦</span>

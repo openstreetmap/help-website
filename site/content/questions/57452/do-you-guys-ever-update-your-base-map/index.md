@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, we actually do update our "basemap" (or more accurately our database) around the clock, all year. Please note though that OSM is a non-profit organisation wholly dependent on volunteers and if there's no volunteers looking at your particular area... well, bad luck!</p>
-<p>You can make a difference though. Just click "Edit" on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a></p>
+<p>You can make a difference though. Just click "Edit" on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally there are no bulk updates, individual volunteers will review roads (and so on) and update them to match ground surveys and other (suitably licensed) data sources over time. The rural US tends not to have so many people working on it. Local knowledge is prized, you are welcome to click "Edit" on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> and improve the map.</p>
+<p>Generally there are no bulk updates, individual volunteers will review roads (and so on) and update them to match ground surveys and other (suitably licensed) data sources over time. The rural US tends not to have so many people working on it. Local knowledge is prized, you are welcome to click "Edit" on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> and improve the map.</p>
 <p>This site is intended for specific questions/answers. You may get a fuller discussion using one of the following:</p>
 <p><a href="https://forum.openstreetmap.org/viewforum.php?id=20">https://forum.openstreetmap.org/viewforum.php?id=20</a></p>
 <p><a href="https://lists.openstreetmap.org/listinfo/talk-us">https://lists.openstreetmap.org/listinfo/talk-us</a></p>

@@ -97,7 +97,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Maybe you are looking for something like the often mentioned uMap framework?</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/UMap">http://wiki.openstreetmap.org/wiki/UMap</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/UMap">https://wiki.openstreetmap.org/wiki/UMap</a></p>
 </div>
 <div id="comment-49440-info" class="comment-info">
 <span class="comment-age">(26 Apr '16, 16:53)</span> <span class="comment-user userinfo">stephan75</span>

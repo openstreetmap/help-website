@@ -109,10 +109,10 @@ I used osmosis &amp; maperative to create the detailed maps, but i think that ma
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First of all you will have to try which renderer can handle such a big data amount like the whole Netherlands, look at <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>.</p>
-<p>Then you have to serach for a possibility to generate such a big bitmap, or vector graphic, hints can be found here: <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a></p>
-<p>Or consult one of the <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">commercial services</a>.</p>
-<p>Additionaly you can try to shrink the osm-files with <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> or something else before processing in a renderer.</p>
+<p>First of all you will have to try which renderer can handle such a big data amount like the whole Netherlands, look at <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>.</p>
+<p>Then you have to serach for a possibility to generate such a big bitmap, or vector graphic, hints can be found here: <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a></p>
+<p>Or consult one of the <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">commercial services</a>.</p>
+<p>Additionaly you can try to shrink the osm-files with <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">Osmfilter</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> or something else before processing in a renderer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -165,7 +165,7 @@ I used osmosis &amp; maperative to create the detailed maps, but i think that ma
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As is said in in the question: <a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers#3498">Create a wall map of an area</a> you can use <a href="http://wiki.openstreetmap.org/wiki/Bigmap">BigMap</a>. It's ok to use especially if you can use the perl command line tool.</p>
+<p>As is said in in the question: <a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers#3498">Create a wall map of an area</a> you can use <a href="https://wiki.openstreetmap.org/wiki/Bigmap">BigMap</a>. It's ok to use especially if you can use the perl command line tool.</p>
 <p>Basically you just</p>
 <ol>
 <li>choose the area</li>

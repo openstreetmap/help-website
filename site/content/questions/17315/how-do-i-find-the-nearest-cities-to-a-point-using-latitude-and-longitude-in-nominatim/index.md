@@ -106,10 +106,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nominatim is an address search engine and not really suited for your purpose. You are looking for another kind of search and <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> seems to fit a lot better.</p>
+<p>Nominatim is an address search engine and not really suited for your purpose. You are looking for another kind of search and <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> seems to fit a lot better.</p>
 <p>Take a look at this example query for all place nodes in the area you mentioned:</p>
 <pre><code>http://overpass-api.de/api/interpreter?data=[out:json];node[&quot;place&quot;](4.14,-73.73,4.21,-73.67);out;</code></pre>
-<p>Note that this query only searches for nodes, you want to search for ways, too, to find every city. If the query doesn't return anything for a specific area, try increasing the given bounding box. You can also choose a different output format, just take a look at the documentation and the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">examples</a>.</p>
+<p>Note that this query only searches for nodes, you want to search for ways, too, to find every city. If the query doesn't return anything for a specific area, try increasing the given bounding box. You can also choose a different output format, just take a look at the documentation and the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">examples</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

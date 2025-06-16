@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Point rails port to different tile server"
-description = '''I have setup the RailsPort according to http://wiki.openstreetmap.org/wiki/Rails_port and now can access it through http://localhost:3000/. The tiles are being accessed from tile.openstreetmap.org. However I want it to point to tile.localhost where I&#x27;ve already setup apache with mod_tile. Where do I...'''
+description = '''I have setup the RailsPort according to https://wiki.openstreetmap.org/wiki/Rails_port and now can access it through http://localhost:3000/. The tiles are being accessed from tile.openstreetmap.org. However I want it to point to tile.localhost where I&#x27;ve already setup apache with mod_tile. Where do I...'''
 date = "2012-11-04T09:01:00Z"
 lastmod = "2014-11-14T02:31:00Z"
 weight = 17450
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have setup the RailsPort according to <a href="http://wiki.openstreetmap.org/wiki/Rails_port">http://wiki.openstreetmap.org/wiki/Rails_port</a> and now can access it through <a href="http://localhost:3000/.">http://localhost:3000/.</a> The tiles are being accessed from tile.openstreetmap.org. However I want it to point to tile.localhost where I've already setup apache with mod_tile.</p>
+<p>I have setup the RailsPort according to <a href="https://wiki.openstreetmap.org/wiki/Rails_port">https://wiki.openstreetmap.org/wiki/Rails_port</a> and now can access it through <a href="http://localhost:3000/.">http://localhost:3000/.</a> The tiles are being accessed from tile.openstreetmap.org. However I want it to point to tile.localhost where I've already setup apache with mod_tile.</p>
 <p>Where do I change the configuration in the RailsPort for this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

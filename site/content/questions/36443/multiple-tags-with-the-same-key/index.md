@@ -138,7 +138,7 @@ osqa_accepted = false
 <div id="post-36449-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: I think, the mixed case solution is rather a workaround. I am looking for a solution.</p>
+<p><a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a>: I think, the mixed case solution is rather a workaround. I am looking for a solution.</p>
 </div>
 <div id="comment-36449-info" class="comment-info">
 <span class="comment-age">(31 Aug '14, 12:54)</span> <span class="comment-user userinfo">Kotya</span>
@@ -191,7 +191,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Kotya, you named the tap 'Water tap', is there actually a name sign with it on the tap ? If not don’t ad a name to a subject. <a href="http://wiki.openstreetmap.org/wiki/Names">http://wiki.openstreetmap.org/wiki/Names</a> You doubt about the position, how do you know it’s there ? Did you read <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water</a> and the man made <a href="http://wiki.openstreetmap.org/wiki/Man_made">http://wiki.openstreetmap.org/wiki/Man_made</a> about water ? Ans yes there's no tag for yet.</p>
+<p>Hi Kotya, you named the tap 'Water tap', is there actually a name sign with it on the tap ? If not don’t ad a name to a subject. <a href="https://wiki.openstreetmap.org/wiki/Names">https://wiki.openstreetmap.org/wiki/Names</a> You doubt about the position, how do you know it’s there ? Did you read <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water</a> and the man made <a href="https://wiki.openstreetmap.org/wiki/Man_made">https://wiki.openstreetmap.org/wiki/Man_made</a> about water ? Ans yes there's no tag for yet.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -210,7 +210,7 @@ osqa_accepted = false
 <div id="post-36448-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, you are right about the name, however I didn't find a way to tag it properly. Where else could I have written what it was then? This way people at least find it, since the name appears on the map. As for the position, I know that the tap is there (I've used it many times), but I do not know the exact location.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, you are right about the name, however I didn't find a way to tag it properly. Where else could I have written what it was then? This way people at least find it, since the name appears on the map. As for the position, I know that the tap is there (I've used it many times), but I do not know the exact location.</p>
 </div>
 <div id="comment-36448-info" class="comment-info">
 <span class="comment-age">(31 Aug '14, 12:51)</span> <span class="comment-user userinfo">Kotya</span>

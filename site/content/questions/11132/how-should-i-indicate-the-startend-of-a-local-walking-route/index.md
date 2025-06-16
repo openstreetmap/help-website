@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If there is something physical on the ground such as a guidepost, map board, building, monument etc you could add the node to the relation for the walk. I have done a similar thing with the <a href="http://www.openstreetmap.org/browse/node/588016154">monument stone</a> comerating the Battle of Worcester 1651, at the start of the <a href="http://www.openstreetmap.org/browse/relation/20611">Monarch's Way</a>.</p>
+<p>If there is something physical on the ground such as a guidepost, map board, building, monument etc you could add the node to the relation for the walk. I have done a similar thing with the <a href="https://www.openstreetmap.org/browse/node/588016154">monument stone</a> comerating the Battle of Worcester 1651, at the start of the <a href="https://www.openstreetmap.org/browse/relation/20611">Monarch's Way</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

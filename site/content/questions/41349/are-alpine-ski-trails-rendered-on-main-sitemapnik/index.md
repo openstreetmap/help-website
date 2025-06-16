@@ -148,7 +148,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>OpenSnowMap does indeed look nicer.</p>
-<p><a href="http://help.openstreetmap.org/users/8394/logicalviolinist"></a><a href="http://help.openstreetmap.org/users/8394/logicalviolinist">@LogicalViolinist</a>: There are rather high requirements for tile servers to become part of the layer selection. That's why we have so few of them at the moment. I remember these requirements to be listed somewhere in the wiki but I couldn't find them.</p>
+<p><a href="https://help.openstreetmap.org/users/8394/logicalviolinist"></a><a href="https://help.openstreetmap.org/users/8394/logicalviolinist">@LogicalViolinist</a>: There are rather high requirements for tile servers to become part of the layer selection. That's why we have so few of them at the moment. I remember these requirements to be listed somewhere in the wiki but I couldn't find them.</p>
 </div>
 <div id="comment-41355-info" class="comment-info">
 <span class="comment-age">(25 Feb '15, 13:27)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -160,7 +160,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8394/logicalviolinist">@LogicalViolinist</a>: If it helps, it is possible to make "non-standard" tiles appear on osm.org, although it's far from straightforward. See <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Your_tiles_from_osm.org">http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Your_tiles_from_osm.org</a> .</p>
+<p><a href="https://help.openstreetmap.org/users/8394/logicalviolinist">@LogicalViolinist</a>: If it helps, it is possible to make "non-standard" tiles appear on osm.org, although it's far from straightforward. See <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Your_tiles_from_osm.org">https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Your_tiles_from_osm.org</a> .</p>
 </div>
 <div id="comment-41356-info" class="comment-info">
 <span class="comment-age">(25 Feb '15, 14:22)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

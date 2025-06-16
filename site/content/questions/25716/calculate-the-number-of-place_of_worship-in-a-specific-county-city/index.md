@@ -140,7 +140,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>... see <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> for documentation.</p>
+<p>... see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> for documentation.</p>
 </div>
 <div id="comment-25778-info" class="comment-info">
 <span class="comment-age">(25 Aug '13, 18:21)</span> <span class="comment-user userinfo">stephan75</span>

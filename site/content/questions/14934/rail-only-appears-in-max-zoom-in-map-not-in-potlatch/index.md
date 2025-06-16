@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rail only appears in max zoom in Map, not in Potlatch"
-description = '''I had created, and then deleted a railway segment due to a mistake. However when I go maximum zoom on the map this element is still showing up.  It does not show up on any other zoom level or on Potlatch. Is there any way of removing this? http://www.openstreetmap.org/?lat=35.729423&amp;amp;lon=139.7138...'''
+description = '''I had created, and then deleted a railway segment due to a mistake. However when I go maximum zoom on the map this element is still showing up.  It does not show up on any other zoom level or on Potlatch. Is there any way of removing this? https://www.openstreetmap.org/?lat=35.729423&amp;amp;lon=139.7138...'''
 date = "2012-08-10T00:04:00Z"
 lastmod = "2012-08-10T00:36:00Z"
 weight = 14934
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I had created, and then deleted a railway segment due to a mistake. However when I go maximum zoom on the map this element is still showing up. It does not show up on any other zoom level or on Potlatch. Is there any way of removing this?</p>
-<p><a href="http://www.openstreetmap.org/?lat=35.729423&amp;lon=139.713891&amp;zoom=19">http://www.openstreetmap.org/?lat=35.729423&amp;lon=139.713891&amp;zoom=19</a> (The segment in question runs below the road labeled Sunshine 60 Street)</p>
+<p><a href="https://www.openstreetmap.org/?lat=35.729423&amp;lon=139.713891&amp;zoom=19">https://www.openstreetmap.org/?lat=35.729423&amp;lon=139.713891&amp;zoom=19</a> (The segment in question runs below the road labeled Sunshine 60 Street)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-railway" rel="tag" title="see questions tagged &#39;railway&#39;">railway</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-zoom" rel="tag" title="see questions tagged &#39;zoom&#39;">zoom</span> <span class="post-tag tag-link-delete" rel="tag" title="see questions tagged &#39;delete&#39;">delete</span>

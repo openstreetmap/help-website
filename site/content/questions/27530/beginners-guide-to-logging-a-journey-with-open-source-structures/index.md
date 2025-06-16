@@ -192,14 +192,14 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I highly recommend to <strong>use a manual solution</strong> ("drawing by hand") to do journey planing<br />
-<a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Maps">https://wiki.openstreetmap.org/wiki/Maps</a><br />
 This is still not a usecase that is currently well supported, but cause a lot of manual processing and a lot of tools:<br />
 </p>
 <ol>
 <li>Create .GPX files using a custom script or what ever fits best</li>
 <li>You need a tool/service that supports input a GPX track and does a routing that creates a route along the track for the right vehicle. Otherwise you might manually create via points<br />
-<a href="http://wiki.openstreetmap.org/wiki/Software/Desktop#Navigating_features">http://wiki.openstreetmap.org/wiki/Software/Desktop#Navigating_features</a> ("follow predefined track")<br />
-<a href="http://wiki.openstreetmap.org/wiki/Routing/online_routers">http://wiki.openstreetmap.org/wiki/Routing/online_routers</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Software/Desktop#Navigating_features">https://wiki.openstreetmap.org/wiki/Software/Desktop#Navigating_features</a> ("follow predefined track")<br />
+<a href="https://wiki.openstreetmap.org/wiki/Routing/online_routers">https://wiki.openstreetmap.org/wiki/Routing/online_routers</a><br />
 </li>
 <li>Get from the directions the OSM ids from the routing graph.</li>
 <li>Download OSM data in the area, match IDs and create a map style with highlighting this features</li>

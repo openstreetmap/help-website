@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>That would be <a href="http://wiki.openstreetmap.org/wiki/Static_Maps_API">this API</a>, so be aware that your application is likely to get blocked if it places undue load on the servers as per the warning. From the links on that page it also looks like it is no longer maintained, and the images it produces seem to have an out of date attribution.</p>
+<p>That would be <a href="https://wiki.openstreetmap.org/wiki/Static_Maps_API">this API</a>, so be aware that your application is likely to get blocked if it places undue load on the servers as per the warning. From the links on that page it also looks like it is no longer maintained, and the images it produces seem to have an out of date attribution.</p>
 <p>It might be worth following the recommendation on the Static Maps API page and trying <a href="http://staticmap.openstreetmap.de/">staticMapLite</a> instead?</p>
 </div>
 <div class="answer-controls post-controls">

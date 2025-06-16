@@ -205,7 +205,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>On the general "not signed" thing, "unsigned=" is one way of doing it, but on ways such as <a href="http://www.openstreetmap.org/way/360126028">http://www.openstreetmap.org/way/360126028</a> doesn't actually tell you that it's the name that's not signed. Perhaps "name:signed=no" (which if not widely adopted, is at least descriptive).</p>
+<p>On the general "not signed" thing, "unsigned=" is one way of doing it, but on ways such as <a href="https://www.openstreetmap.org/way/360126028">https://www.openstreetmap.org/way/360126028</a> doesn't actually tell you that it's the name that's not signed. Perhaps "name:signed=no" (which if not widely adopted, is at least descriptive).</p>
 <p>For hiking routes it'd be a pretty unusual completely-unsigned hiking route that "deserved" to be in OSM, though there are well-known trails that aren't well signposted all the way (bits of the Bibbulmun Track in WA, for example).</p>
 </div>
 <div id="comment-45471-info" class="comment-info">
@@ -248,7 +248,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With the guide book you could walk it, record it with a GPS then upload it as the "name " trail as a public trace ( I am not a legal expert but copyright holders of the name may not allow you to use THE name but you could use something descriptive such as A to B). Then You or another mapper could create a route relation for it. If you look at waymarkedtrails you can see whats been mapped already. The routes can be looked at and a GPX can be downloaded. I helped with this one. <a href="https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a> edit after your comment:- You could contact the copyright holder and ask them if they would allow use of the name. You could suggest that the tagging could mention the book and they may get book buyers from walkers finding the route on trail map sites who like to read a guide book. A charity walk in the UK is the Macmillan Way a lot of people walk it, A lot them sponsored hikers that collect donations for that cancer care charity by walking it. So Macmillan Nurses have just got a free plug for their excellent work .. because it's on a map.</p>
+<p>With the guide book you could walk it, record it with a GPS then upload it as the "name " trail as a public trace ( I am not a legal expert but copyright holders of the name may not allow you to use THE name but you could use something descriptive such as A to B). Then You or another mapper could create a route relation for it. If you look at waymarkedtrails you can see whats been mapped already. The routes can be looked at and a GPX can be downloaded. I helped with this one. <a href="/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map">https://help.openstreetmap.org/questions/34347/i-want-to-add-a-new-long-distance-hiking-route-to-the-map</a> edit after your comment:- You could contact the copyright holder and ask them if they would allow use of the name. You could suggest that the tagging could mention the book and they may get book buyers from walkers finding the route on trail map sites who like to read a guide book. A charity walk in the UK is the Macmillan Way a lot of people walk it, A lot them sponsored hikers that collect donations for that cancer care charity by walking it. So Macmillan Nurses have just got a free plug for their excellent work .. because it's on a map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -565,7 +565,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11565/chris-b"></a><a href="http://help.openstreetmap.org/users/11565/chris-b">@Chris B</a> Please do not misuse the help site for discussions and similar. I would suggest contacting a lawyer for more information on copyright law, particulary with respect to EU database protection. You are confusing technically creating something that has the same functionality, with the direct or indirect copying of a creative work, which you can't work around with a clean room approach.</p>
+<p><a href="https://help.openstreetmap.org/users/11565/chris-b"></a><a href="https://help.openstreetmap.org/users/11565/chris-b">@Chris B</a> Please do not misuse the help site for discussions and similar. I would suggest contacting a lawyer for more information on copyright law, particulary with respect to EU database protection. You are confusing technically creating something that has the same functionality, with the direct or indirect copying of a creative work, which you can't work around with a clean room approach.</p>
 </div>
 <div id="comment-45847-info" class="comment-info">
 <span class="comment-age">(12 Oct '15, 10:03)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -576,7 +576,7 @@ osqa_accepted = true
 <div id="post-45850-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> I do not intend this to be a discussion - I am merely responding to your comments. The legal guidance I had was <em>"If you read a book, then take a half hour walk, and can still remember something, then that's knowledge and can't be copyrighted"</em>. You may disagree with that, and that's fine. If you can provide a single citation to English law showing that simple factual knowledge of a route is copyrightable, then do so. Otherwise, please respect that other people have different opinions, and until there is settled case law on this specific topic, even IP lawyers will give different opinions.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> I do not intend this to be a discussion - I am merely responding to your comments. The legal guidance I had was <em>"If you read a book, then take a half hour walk, and can still remember something, then that's knowledge and can't be copyrighted"</em>. You may disagree with that, and that's fine. If you can provide a single citation to English law showing that simple factual knowledge of a route is copyrightable, then do so. Otherwise, please respect that other people have different opinions, and until there is settled case law on this specific topic, even IP lawyers will give different opinions.</p>
 </div>
 <div id="comment-45850-info" class="comment-info">
 <span class="comment-age">(12 Oct '15, 13:10)</span> <span class="comment-user userinfo">Chris B</span>

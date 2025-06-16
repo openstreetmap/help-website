@@ -92,8 +92,8 @@ osqa_accepted = false
 <div id="post-47903-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/268/rm87">@RM87</a>: I want to get all streets from a region/radius. If i get from node only, i got very few data only. So I want to retrieve ways too from that region (from ways also i can get some living streets).</p>
-<p><a href="http://help.openstreetmap.org/users/191/ivanatora">@ivanatora</a>: Yes. If i give around 500 meter, then its working little bit better. But I need to get all streets in a small town or around 5kms.</p>
+<p><a href="https://help.openstreetmap.org/users/268/rm87">@RM87</a>: I want to get all streets from a region/radius. If i get from node only, i got very few data only. So I want to retrieve ways too from that region (from ways also i can get some living streets).</p>
+<p><a href="https://help.openstreetmap.org/users/191/ivanatora">@ivanatora</a>: Yes. If i give around 500 meter, then its working little bit better. But I need to get all streets in a small town or around 5kms.</p>
 </div>
 <div id="comment-47903-info" class="comment-info">
 <span class="comment-age">(04 Feb '16, 11:13)</span> <span class="comment-user userinfo">Rajavelu_M</span>

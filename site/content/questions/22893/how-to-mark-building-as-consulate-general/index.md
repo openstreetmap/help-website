@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hey guys,</p>
-<p>I'd like to mark a building which already has a name (it's called "<a href="http://www.openstreetmap.org/browse/way/210679106">City Place</a>" -- Address: 676 North Michigan Avenue - Suite 3200 Chicago, IL 60611-2804) has the location of the German Consulate-General in Chicago.</p>
+<p>I'd like to mark a building which already has a name (it's called "<a href="https://www.openstreetmap.org/browse/way/210679106">City Place</a>" -- Address: 676 North Michigan Avenue - Suite 3200 Chicago, IL 60611-2804) has the location of the German Consulate-General in Chicago.</p>
 <p>What is the best way to do this? On the other side of the street, one of the buildings is named "Royal-Thai Consulate-General", however, the building I want to mark already has its own name.</p>
 <p>Thanks for your answer; I appreciate it.</p>
 <p>Christian</p>

@@ -118,9 +118,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are interested in lakes and rivers etc you can download an OSM data extract for your area from geofabrik.de or cloudmade.com ... see <a href="http://wiki.openstreetmap.org/wiki/Planet">planet</a> on the OSM wiki for details.</p>
-<p>Then do a filtering maybe with <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
-<p>Or if you are interested in coastlines or oceans, see <a href="http://wiki.openstreetmap.org/wiki/OSMCoastline">OSMcoastline</a>.</p>
+<p>If you are interested in lakes and rivers etc you can download an OSM data extract for your area from geofabrik.de or cloudmade.com ... see <a href="https://wiki.openstreetmap.org/wiki/Planet">planet</a> on the OSM wiki for details.</p>
+<p>Then do a filtering maybe with <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
+<p>Or if you are interested in coastlines or oceans, see <a href="https://wiki.openstreetmap.org/wiki/OSMCoastline">OSMcoastline</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

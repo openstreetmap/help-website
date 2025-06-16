@@ -133,7 +133,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You don't say what you mean by "integrate OpenStreetMap".</p>
-<p><a href="http://openscales.org/">OpenScales</a> is perhaps the most comprehensive webmap library in AS3, offering both raster (tiles) and limited vector rendering. Halcyon is the AS3 rendering component of <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a> and offers OSM-specific vector rendering but may be too complex for your needs.</p>
+<p><a href="http://openscales.org/">OpenScales</a> is perhaps the most comprehensive webmap library in AS3, offering both raster (tiles) and limited vector rendering. Halcyon is the AS3 rendering component of <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch 2</a> and offers OSM-specific vector rendering but may be too complex for your needs.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

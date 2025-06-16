@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do I export map of large area in .osm format?"
-description = '''I want to download a map of large area (like a city) for some researches, in the .osm format. Methods in http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas seems useless for my problem because it can capture the small area in .osm format only. How can I do that?'''
+description = '''I want to download a map of large area (like a city) for some researches, in the .osm format. Methods in https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas seems useless for my problem because it can capture the small area in .osm format only. How can I do that?'''
 date = "2011-04-25T14:04:00Z"
 lastmod = "2020-02-25T15:43:00Z"
 weight = 4791
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to download a map of large area (like a city) for some researches, in the .osm format. Methods in <a href="http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a> seems useless for my problem because it can capture the small area in .osm format only. How can I do that?</p>
+<p>I want to download a map of large area (like a city) for some researches, in the .osm format. Methods in <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a> seems useless for my problem because it can capture the small area in .osm format only. How can I do that?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-large" rel="tag" title="see questions tagged &#39;large&#39;">large</span> <span class="post-tag tag-link-.osm" rel="tag" title="see questions tagged &#39;.osm&#39;">.osm</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>
@@ -104,11 +104,11 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The Export tab on the main OSM site is not the appropriate way to export large areas: it uses too many resources from the <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">API</a>. I also think it is limited by constraints in the API interface itself: there is a maximum area and maximum amount of data which can be downloaded through the API <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap">map</a> call.</p>
+<p>The Export tab on the main OSM site is not the appropriate way to export large areas: it uses too many resources from the <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">API</a>. I also think it is limited by constraints in the API interface itself: there is a maximum area and maximum amount of data which can be downloaded through the API <a href="https://wiki.openstreetmap.org/wiki/API_v0.6#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap">map</a> call.</p>
 <p>Therefore you will need to use the available alternatives:</p>
 <ul>
-<li><strong>One of the <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> instances</strong>. These are designed for providing read-only access to very recent snapshots of OSM data. Unfortunately, they are often overwhelmed by requests. The <a href="http://open.mapquestapi.com/xapi/">JAXPI</a> instance run by MapQuest is probably the best one to use: it should certainly cope with downloading a city.</li>
-<li><strong>Using an already available download</strong>, such as those of <a href="http://www.geofabrik.de/data/download.html">Geofabrik</a> and <a href="http://downloads.cloudmade.com/">Cloudmade</a>. These cover many (but not all) countries and most regions of the world. For places which are very actively mapped there may be extracts of smaller areas. In most cases you will still want to reduce the amount of data you use. To do this you should use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to read the extract file and extract a bounding box from it (<code>osmosis --rx file="bla.osm" --bbox left=##.## right=##.## top=##.## bottom=##.## --wx file="extracted_city.osm"</code>, where the numeric values are the lat and lon of a bounding box)</li>
+<li><strong>One of the <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> instances</strong>. These are designed for providing read-only access to very recent snapshots of OSM data. Unfortunately, they are often overwhelmed by requests. The <a href="http://open.mapquestapi.com/xapi/">JAXPI</a> instance run by MapQuest is probably the best one to use: it should certainly cope with downloading a city.</li>
+<li><strong>Using an already available download</strong>, such as those of <a href="http://www.geofabrik.de/data/download.html">Geofabrik</a> and <a href="http://downloads.cloudmade.com/">Cloudmade</a>. These cover many (but not all) countries and most regions of the world. For places which are very actively mapped there may be extracts of smaller areas. In most cases you will still want to reduce the amount of data you use. To do this you should use <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> to read the extract file and extract a bounding box from it (<code>osmosis --rx file="bla.osm" --bbox left=##.## right=##.## top=##.## bottom=##.## --wx file="extracted_city.osm"</code>, where the numeric values are the lat and lon of a bounding box)</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

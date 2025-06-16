@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am lost with a GPX file. It was recorded with Quick Position App, then the names were stripped and the way points replaced with track points following the <a href="http://wiki.openstreetmap.org/wiki/Gpx">requirement of OSM</a>. I was first getting (trying to upload to osm.org) the most informative <code>Found no good GPX points in the input data</code> (the reason being that the original file contained way points only), and now it's <code>Expected state TRACKPOINT, got state UNKNOWN XML parser at line 3 column 2</code>. I am stuck and would appreciate help.</p>
+<p>I am lost with a GPX file. It was recorded with Quick Position App, then the names were stripped and the way points replaced with track points following the <a href="https://wiki.openstreetmap.org/wiki/Gpx">requirement of OSM</a>. I was first getting (trying to upload to osm.org) the most informative <code>Found no good GPX points in the input data</code> (the reason being that the original file contained way points only), and now it's <code>Expected state TRACKPOINT, got state UNKNOWN XML parser at line 3 column 2</code>. I am stuck and would appreciate help.</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot; ?&gt;
 &lt;gpx xmlns=&quot;http://www.topografix.com/GPX/1/1&quot; creator=&quot;matt&quot; version=&quot;1.1&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd&quot;&gt;
         &lt;ele&gt;200.9063513539106&lt;/ele&gt;

@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There often are places people use for swimming, that are not beaches. Usually it's just some grassy area by a lake or river, most often - unofficial. This is being requested more and more often, and in many cases those are mapped as beaches - but that seems to be incorrect.</p>
-<p><a href="https://help.openstreetmap.org/questions/6337/icon-for-beaches-or-access-to-the-water">https://help.openstreetmap.org/questions/6337/icon-for-beaches-or-access-to-the-water</a> asked for an icon for this, but not about tagging.</p>
-<p>Another related request was about mapping unofficial mooring places: <a href="https://help.openstreetmap.org/questions/26237/unofficial-mooring-place-how-to-map-it">https://help.openstreetmap.org/questions/26237/unofficial-mooring-place-how-to-map-it</a> .</p>
+<p><a href="/questions/6337/icon-for-beaches-or-access-to-the-water">https://help.openstreetmap.org/questions/6337/icon-for-beaches-or-access-to-the-water</a> asked for an icon for this, but not about tagging.</p>
+<p>Another related request was about mapping unofficial mooring places: <a href="/questions/26237/unofficial-mooring-place-how-to-map-it">https://help.openstreetmap.org/questions/26237/unofficial-mooring-place-how-to-map-it</a> .</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-unofficial" rel="tag" title="see questions tagged &#39;unofficial&#39;">unofficial</span> <span class="post-tag tag-link-swimming" rel="tag" title="see questions tagged &#39;swimming&#39;">swimming</span>

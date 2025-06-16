@@ -92,7 +92,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Do you mean this road, its already marked tertiary ?! <a href="http://www.openstreetmap.org/#map=19/24.19290/120.60601">http://www.openstreetmap.org/#map=19/24.19290/120.60601</a> The link you have added is a Wikipedia one and not an OSM one. Or is there another road with the same Taiwanese characters ?</p>
+<p>Do you mean this road, its already marked tertiary ?! <a href="https://www.openstreetmap.org/#map=19/24.19290/120.60601">https://www.openstreetmap.org/#map=19/24.19290/120.60601</a> The link you have added is a Wikipedia one and not an OSM one. Or is there another road with the same Taiwanese characters ?</p>
 </div>
 <div id="comment-50065-info" class="comment-info">
 <span class="comment-age">(07 Jun '16, 10:36)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -208,7 +208,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I did a quick search on this help site and found <a href="https://help.openstreetmap.org/questions/37836/is-there-a-way-to-edit-multiple-street-segment-names-simultaneously">https://help.openstreetmap.org/questions/37836/is-there-a-way-to-edit-multiple-street-segment-names-simultaneously</a> . It's from 2014, but I think it still not possible in iD, but you could always use JOSM for such a task.</p>
+<p>I did a quick search on this help site and found <a href="/questions/37836/is-there-a-way-to-edit-multiple-street-segment-names-simultaneously">https://help.openstreetmap.org/questions/37836/is-there-a-way-to-edit-multiple-street-segment-names-simultaneously</a> . It's from 2014, but I think it still not possible in iD, but you could always use JOSM for such a task.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

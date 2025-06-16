@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would consider this a physical separation of the two roads. And permanent physically separated roads should be mapped using two separate ways.</p>
-<p>For the divider you can use <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall"><em>barrier=wall</em></a> with <em>wall=jersey_barrier</em>. You can optionally add additional tags like <em>material=concrete</em>, <em>height</em> etc.</p>
+<p>For the divider you can use <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall"><em>barrier=wall</em></a> with <em>wall=jersey_barrier</em>. You can optionally add additional tags like <em>material=concrete</em>, <em>height</em> etc.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,7 +130,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Note that for dividers that are just painted lines we don't split the way in two oneway ways. It stays a single way, but you can add the <a href="http://wiki.openstreetmap.org/wiki/Key:lanes">lanes</a> tag.</p>
+<p>Note that for dividers that are just painted lines we don't split the way in two oneway ways. It stays a single way, but you can add the <a href="https://wiki.openstreetmap.org/wiki/Key:lanes">lanes</a> tag.</p>
 </div>
 <div id="comment-34004-info" class="comment-info">
 <span class="comment-age">(16 Jun '14, 15:04)</span> <span class="comment-user userinfo">cartinus</span>
@@ -183,7 +183,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi thevikas, consider usng this one. <a href="http://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland">http://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland</a> it looks like youre searching for this type of traffic calming obstacle. By the way, welcome.</p>
+<p>Hi thevikas, consider usng this one. <a href="https://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland">https://wiki.openstreetmap.org/wiki/Tag:traffic_calming%3Disland</a> it looks like youre searching for this type of traffic calming obstacle. By the way, welcome.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -215,8 +215,8 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>They are few proposals on the wiki. The most advanced one is here : <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Divided_road">http://wiki.openstreetmap.org/wiki/Proposed_features/Divided_road</a></p>
-<p>But, as said by scai, you pic example requires two separate ways in OSM. You can read more about this here : <a href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways</a></p>
+<p>They are few proposals on the wiki. The most advanced one is here : <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Divided_road">https://wiki.openstreetmap.org/wiki/Proposed_features/Divided_road</a></p>
+<p>But, as said by scai, you pic example requires two separate ways in OSM. You can read more about this here : <a href="https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways">https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Divided_highways</a></p>
 </div>
 <div id="comment-34034-info" class="comment-info">
 <span class="comment-age">(17 Jun '14, 16:17)</span> <span class="comment-user userinfo">Pieren</span>

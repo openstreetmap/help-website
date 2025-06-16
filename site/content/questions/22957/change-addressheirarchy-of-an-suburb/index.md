@@ -107,11 +107,11 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim does not use explicitly coded "parent" relationships; instead it checks the administrative regions. In your case, the point in question lies clearly outside the Hyderabad relation</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/2022211">http://www.openstreetmap.org/browse/relation/2022211</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/2022211">https://www.openstreetmap.org/browse/relation/2022211</a></p>
 <p>and inside the Rangareddy relation</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/2022214">http://www.openstreetmap.org/browse/relation/2022214</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/2022214">https://www.openstreetmap.org/browse/relation/2022214</a></p>
 <p>so you would have to change these relations, more specifically change this way</p>
-<p><a href="http://www.openstreetmap.org/browse/way/45674000">http://www.openstreetmap.org/browse/way/45674000</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/45674000">https://www.openstreetmap.org/browse/way/45674000</a></p>
 <p>which is used by both relations.</p>
 <p>Please make sure that you only change the boundary if it really is wrong; do not change the boundary just to achive a desired effect in reverse geocoding. When you do change the boundary, be sure to place a proper changeset comment that explains why you made the change and what your sources for the change are.</p>
 </div>

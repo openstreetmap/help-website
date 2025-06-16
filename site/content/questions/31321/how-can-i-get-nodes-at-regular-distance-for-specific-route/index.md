@@ -125,7 +125,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> or <a href="http://wiki.openstreetmap.org/wiki/OSRM">OSRM</a>. They are examples of reverse geocoders : tools that will return osm objects when you give it lat/lon coordinates. From there you'll know on which osm way the bus currently is, and how long it still has to go on its scheduled route.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a> or <a href="https://wiki.openstreetmap.org/wiki/OSRM">OSRM</a>. They are examples of reverse geocoders : tools that will return osm objects when you give it lat/lon coordinates. From there you'll know on which osm way the bus currently is, and how long it still has to go on its scheduled route.</p>
 <p>I don't think there is anything to win by segmenting the osm ways into smaller chunks. You need to know which ways the bus will take and in which order anyway, so that gives you your distance estimate. If the bus is currently in the middle of an osm way with no nearby node, you can invent a node position on the spot using simple trigonometry.</p>
 </div>
 <div class="answer-controls post-controls">

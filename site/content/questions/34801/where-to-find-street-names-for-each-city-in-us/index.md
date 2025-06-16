@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Several consultancies will extract street data from OSM for you. <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> I'm working for opencagedata.com and that's a common request.</p>
+<p>Several consultancies will extract street data from OSM for you. <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> I'm working for opencagedata.com and that's a common request.</p>
 <p><a href="http://openaddresses.io/">http://openaddresses.io/</a> is a good source for the US, but expect to download 500GB of raw data to be cleaned up and processed. Personally I never managed to get a full TIGER data set downloaded, their server keeps timing out.</p>
 </div>
 <div class="answer-controls post-controls">

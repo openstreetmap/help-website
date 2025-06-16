@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes you definitely need to go for 3rd party libraries, however quite a few are Open Source. Depending on the technology you are using to develop your application, man different approaches exist - see <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS#Libraries_for_developers">our iOS wiki page</a>. You will very likely also need to set up a server component that delivers OSM data or OSM-based services to the mobile device, again this depends on the technology and library chosen. While OpenStreetMap <em>data</em> is free, OpenStreetMap <em>server capacity</em> isn't (at least not at scale), hence the requirement to run your own server powering your app.</p>
+<p>Yes you definitely need to go for 3rd party libraries, however quite a few are Open Source. Depending on the technology you are using to develop your application, man different approaches exist - see <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS#Libraries_for_developers">our iOS wiki page</a>. You will very likely also need to set up a server component that delivers OSM data or OSM-based services to the mobile device, again this depends on the technology and library chosen. While OpenStreetMap <em>data</em> is free, OpenStreetMap <em>server capacity</em> isn't (at least not at scale), hence the requirement to run your own server powering your app.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -47,7 +47,7 @@ osqa_accepted = false
 <p>My specs are :</p>
 <ul>
 <li>OS Vista SP1</li>
-<li>Osmosis 0.40.1 (installed by running a frist osmosis as indicated here <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Installation">http://wiki.openstreetmap.org/wiki/Osmosis/Installation</a> )</li>
+<li>Osmosis 0.40.1 (installed by running a frist osmosis as indicated here <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Installation">https://wiki.openstreetmap.org/wiki/Osmosis/Installation</a> )</li>
 </ul>
 <p>I get this error message :</p>
 <pre><code>D:\OSM\osmosis-0.40.1\bin&gt;osmosis --read-xml

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, i wanted to know if there is a way/ guide to connecting to two servers on josm, and for it to be interchangeable, right now id have to go to edit -&gt; preference -&gt; connection settings ; and retype all the details for when i need to change to which ever server.<img src="https://help.openstreetmap.org/upfiles/Capture_tNSTpWh.PNG" alt="alt text" /></p>
+<p>Hi, i wanted to know if there is a way/ guide to connecting to two servers on josm, and for it to be interchangeable, right now id have to go to edit -&gt; preference -&gt; connection settings ; and retype all the details for when i need to change to which ever server.<img src="/upfiles/Capture_tNSTpWh.PNG" alt="alt text" /></p>
 <p>is there a way to put the other server with its details in the [OSM server URL drop down menu] or something similar so it is interchangeable. hard to describe what I'm trying to do.. any help will be appreciated.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

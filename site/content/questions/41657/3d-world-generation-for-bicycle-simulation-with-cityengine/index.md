@@ -117,7 +117,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I can give you at least two starting points:</p>
-<p>the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/3D">3D</a> ... and the special <a href="http://forum.openstreetmap.org/viewforum.php?id=42">OSM 3D Forum</a></p>
+<p>the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/3D">3D</a> ... and the special <a href="http://forum.openstreetmap.org/viewforum.php?id=42">OSM 3D Forum</a></p>
 <p>Because your many questions seem not to be FAQ ...</p>
 <p>If you start a thread <strong>in the forum</strong>, tell us there what OSM based software or datamodels you have tried so far, and tell us <em>there</em> what file format is needed for that ESRI software.</p>
 </div>

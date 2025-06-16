@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am new to OSM data. I downloaded city of Olathe (kansas/USA) OSM file olathe.osm. In it, looking at a relationID = <a href="http://www.openstreetmap.org/browse/relation/94008">94008</a>, it lists 313 ways as references. Many of these ways are not in this file as ways. For example, none of these wayID's are in this OSM file. (<a href="http://www.openstreetmap.org/browse/way/13033282">13033282</a>,<a href="http://www.openstreetmap.org/browse/way/13033261">13033261</a>,<a href="http://www.openstreetmap.org/browse/way/110134331">110134331</a>). Aren't all reference ways for a given relation suppose to be in this OSM raw data file as ways? Am I missing something?</p>
+<p>I am new to OSM data. I downloaded city of Olathe (kansas/USA) OSM file olathe.osm. In it, looking at a relationID = <a href="https://www.openstreetmap.org/browse/relation/94008">94008</a>, it lists 313 ways as references. Many of these ways are not in this file as ways. For example, none of these wayID's are in this OSM file. (<a href="https://www.openstreetmap.org/browse/way/13033282">13033282</a>,<a href="https://www.openstreetmap.org/browse/way/13033261">13033261</a>,<a href="https://www.openstreetmap.org/browse/way/110134331">110134331</a>). Aren't all reference ways for a given relation suppose to be in this OSM raw data file as ways? Am I missing something?</p>
 <p>Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,7 +105,7 @@ osqa_accepted = true
 <div id="post-17355-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here is another example. I downloaded berlin.osm from geofabrik and it shows a relation with ID = <a href="http://www.openstreetmap.org/browse/relation/9030">9030</a> as a bicycle route with 514 nodes and ways. many of those ways are not downloaded in the same berlin.osm file. For example, wayid = <a href="http://www.openstreetmap.org/browse/way/26135363">26135363</a> and <a href="http://www.openstreetmap.org/browse/way/26135342">26135342</a> are not in this download. I can get each way individually but wanted to know how I can get a download that would have all bicycle routes for germany or a city in germany and all the ways that comprise the routes and all the nodes that comprise each way.</p>
+<p>Here is another example. I downloaded berlin.osm from geofabrik and it shows a relation with ID = <a href="https://www.openstreetmap.org/browse/relation/9030">9030</a> as a bicycle route with 514 nodes and ways. many of those ways are not downloaded in the same berlin.osm file. For example, wayid = <a href="https://www.openstreetmap.org/browse/way/26135363">26135363</a> and <a href="https://www.openstreetmap.org/browse/way/26135342">26135342</a> are not in this download. I can get each way individually but wanted to know how I can get a download that would have all bicycle routes for germany or a city in germany and all the ways that comprise the routes and all the nodes that comprise each way.</p>
 <p>Thanks</p>
 </div>
 <div id="comment-17355-info" class="comment-info">
@@ -153,7 +153,7 @@ osqa_accepted = true
 <div id="post-17364-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>According to <a href="http://www.openstreetmap.org/browse/way/188044903/history">its history page</a>, way 188044903 was created on Sun, 28 Oct 2012 10:31:27. Perhaps your "germany.osm" extract predates that?</p>
+<p>According to <a href="https://www.openstreetmap.org/browse/way/188044903/history">its history page</a>, way 188044903 was created on Sun, 28 Oct 2012 10:31:27. Perhaps your "germany.osm" extract predates that?</p>
 <p>To reiterate the answer, all bicycle routes that are wholly contained within Berlin will be within "berlin.osm". Bicycle routes that occur "in and around" Berlin won't necessarily be, but they will be within a recent "germany.osm".</p>
 </div>
 <div id="comment-17364-info" class="comment-info">
@@ -210,7 +210,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Relations can be large. By default all the ways and nodes that make up a relation are not downloaded. If you want all of the members you can use the full extension, in your case:</p>
-<p><a href="http://www.openstreetmap.org/api/0.6/relation/94008/full">http://www.openstreetmap.org/api/0.6/relation/94008/full</a></p>
+<p><a href="https://www.openstreetmap.org/api/0.6/relation/94008/full">https://www.openstreetmap.org/api/0.6/relation/94008/full</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -260,7 +260,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can get the whole of Germany as an extract from <a href="http://download.geofabrik.de/openstreetmap/europe/">geofabrik</a>, or partial ones if that is easier. These are typically only a day old, so very useful. You might be able to extract the data you want from <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>. The OSM API is primarily intended to support map editing. Overpass is a way to extract data without impacting the API and allows for much more flexible queries.</p>
+<p>You can get the whole of Germany as an extract from <a href="http://download.geofabrik.de/openstreetmap/europe/">geofabrik</a>, or partial ones if that is easier. These are typically only a day old, so very useful. You might be able to extract the data you want from <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a>. The OSM API is primarily intended to support map editing. Overpass is a way to extract data without impacting the API and allows for much more flexible queries.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

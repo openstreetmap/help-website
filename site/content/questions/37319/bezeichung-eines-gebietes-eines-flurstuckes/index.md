@@ -157,7 +157,7 @@ osqa_accepted = false
 <div id="post-37326-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9770/kfrah"></a><a href="http://help.openstreetmap.org/users/9770/kfrah">@kfrah</a>: Was meinst du mit "besetzt" (du solltest neue Punkte/Knoten verwenden)? Welchen Editor benutzt du?</p>
+<p><a href="https://help.openstreetmap.org/users/9770/kfrah"></a><a href="https://help.openstreetmap.org/users/9770/kfrah">@kfrah</a>: Was meinst du mit "besetzt" (du solltest neue Punkte/Knoten verwenden)? Welchen Editor benutzt du?</p>
 </div>
 <div id="comment-37326-info" class="comment-info">
 <span class="comment-age">(06 Oct '14, 01:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -199,7 +199,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Kfrah, Sie können die grosse Fläche immer im Kleine Walder / Flachen anderen. Sie brauchen nun die grosse Linien zu zuschneiden mit dem Schere Symbol und im Kleine Stucken wieder Eintragen. Zusammen mit die Neue Namen. Bitte Lese diese Seiten auch <a href="http://wiki.openstreetmap.org/wiki/DE:Potlatch_2/Primer">http://wiki.openstreetmap.org/wiki/DE:Potlatch_2/Primer</a> Mit dem Schere gibst mehr Muhe aber es sieht besser aus, mach Dein eigenem Wahl oder versuchts mahl.</p>
+<p>Kfrah, Sie können die grosse Fläche immer im Kleine Walder / Flachen anderen. Sie brauchen nun die grosse Linien zu zuschneiden mit dem Schere Symbol und im Kleine Stucken wieder Eintragen. Zusammen mit die Neue Namen. Bitte Lese diese Seiten auch <a href="https://wiki.openstreetmap.org/wiki/DE:Potlatch_2/Primer">https://wiki.openstreetmap.org/wiki/DE:Potlatch_2/Primer</a> Mit dem Schere gibst mehr Muhe aber es sieht besser aus, mach Dein eigenem Wahl oder versuchts mahl.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -109,8 +109,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You began this conversation with your question about <a href="http://help.openstreetmap.org/questions/5215/building-functions">building-functions on this help tool</a>.<br />
-But it is not really the best place to discuss about new tags. Use the wiki page pointed by Harry on your previous question or use the dedicated mailing-list about [Tagging] (find the list of OSM mailing lists <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">on the wiki</a>).<br />
+<p>You began this conversation with your question about <a href="/questions/5215/building-functions">building-functions on this help tool</a>.<br />
+But it is not really the best place to discuss about new tags. Use the wiki page pointed by Harry on your previous question or use the dedicated mailing-list about [Tagging] (find the list of OSM mailing lists <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">on the wiki</a>).<br />
 Just some general statements about new tags: you are free to use any tags you want. It's better if you check first that a tag does not already exist for what you want. If not, try to find a consensus with the community (through the multiple OSM channels of communication excepted this one ;-). Put some minimal documentation on the wiki if the new tag is not self explanatory.<br />
 For tags syntax, we have some preferences about the key like avoiding acronyms, abbreviations, capitals, spaces and exotic characters, prefer UK english.</p>
 </div>

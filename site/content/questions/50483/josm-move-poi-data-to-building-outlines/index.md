@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Is there an easy way to move POI's into the building outlines with JOSM?</p>
 <p>The reason: in my area are a lot of POI's and Address Nodes that are placed in the middle of the building. I would like to change that (with reasonable low effort...) according to the policy and to make editing more clear. (Not so many points)</p>
 <p>Discussed here for POtlach:</p>
-<p><a href="https://help.openstreetmap.org/questions/4260/how-can-i-copy-all-metadata-from-a-poi-into-an-area-in-potlatch-2">https://help.openstreetmap.org/questions/4260/how-can-i-copy-all-metadata-from-a-poi-into-an-area-in-potlatch-2</a></p>
+<p><a href="/questions/4260/how-can-i-copy-all-metadata-from-a-poi-into-an-area-in-potlatch-2">https://help.openstreetmap.org/questions/4260/how-can-i-copy-all-metadata-from-a-poi-into-an-area-in-potlatch-2</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-poi" rel="tag" title="see questions tagged &#39;poi&#39;">poi</span>
@@ -91,8 +91,8 @@ A link to the region you refer to would also be helpful.</p>
 &#10;</div>
 <div class="comment-text">
 <p>I live country sideish, so it's pretty easy to have a ''general knowledge'' of the area.</p>
-<p>Well, that's how I interpret the One feature, one element ''rule'' http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element</p>
-<p>A city, where most addresses and POI's are in Nodes instead of the corresponding buildings is Furtwangen: <a href="http://www.openstreetmap.org/node/240071322#map=16/48.0489/8.2035">http://www.openstreetmap.org/node/240071322#map=16/48.0489/8.2035</a></p>
+<p>Well, that's how I interpret the One feature, one element ''rule'' https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element</p>
+<p>A city, where most addresses and POI's are in Nodes instead of the corresponding buildings is Furtwangen: <a href="https://www.openstreetmap.org/node/240071322#map=16/48.0489/8.2035">https://www.openstreetmap.org/node/240071322#map=16/48.0489/8.2035</a></p>
 </div>
 <div id="comment-50486-info" class="comment-info">
 <span class="comment-age">(27 Jun '16, 14:56)</span> <span class="comment-user userinfo">freakyuser</span>

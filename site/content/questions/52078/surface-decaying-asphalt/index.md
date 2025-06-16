@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/decaying-asphalt.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/decaying-asphalt.jpg" alt="alt text" /></p>
 <p>Fifty years ago, this was paved with two (thin) layers of asphalt. Since then, there has been no maintenance. The current surface is now a mix of large potholed patches of asphalt interspersed with large patches of dirt. How would I tag the surface type?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

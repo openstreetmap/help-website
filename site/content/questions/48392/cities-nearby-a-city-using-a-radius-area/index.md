@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cities nearby a city using a radius area"
-description = '''I would like know how I can get in a json output format the cities around a city. For example: Cities around &quot;London&quot; in 10 km. I read about &quot;around&quot; http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29 And querying about interest poins nearby (like caf...'''
+description = '''I would like know how I can get in a json output format the cities around a city. For example: Cities around &quot;London&quot; in 10 km. I read about &quot;around&quot; https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29 And querying about interest poins nearby (like caf...'''
 date = "2016-02-28T00:09:00Z"
 lastmod = "2016-02-29T13:09:00Z"
 weight = 48392
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I would like know how I can get in a json output format the cities around a city.</p>
 <p>For example:</p>
 <p>Cities around "London" in 10 km.</p>
-<p>I read about "around" http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29</p>
+<p>I read about "around" https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29</p>
 <p>And querying about interest poins nearby (like cafe or bar)</p>
 <p><a href="http://stackoverflow.com/questions/16442663/how-to-get-point-of-interest-near-my-point-using-overpass-api">http://stackoverflow.com/questions/16442663/how-to-get-point-of-interest-near-my-point-using-overpass-api</a></p>
 <p>But I don't know how I can fetch this.</p>

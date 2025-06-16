@@ -131,7 +131,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Taking a bit of a step back, it's worth checking that tiles are being generated. Here's a location in Ireland (using osm.org to display it):</p>
-<p><a href="http://www.openstreetmap.org/#map=18/54.50222/-8.18998">http://www.openstreetmap.org/#map=18/54.50222/-8.18998</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/54.50222/-8.18998">https://www.openstreetmap.org/#map=18/54.50222/-8.18998</a></p>
 <p>and if I right-click in the browser and "View image" the browser URL changes to:</p>
 <p><a href="http://b.tile.openstreetmap.org/18/125108/83543.png">http://b.tile.openstreetmap.org/18/125108/83543.png</a></p>
 <p>The first part of this - "b.tile.openstreetmap.org" describes the server that's serving the tiles out. The second part "/18/125108/83543.png" is the path to one particular tile.</p>

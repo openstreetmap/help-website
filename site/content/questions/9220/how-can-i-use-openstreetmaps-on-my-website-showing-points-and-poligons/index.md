@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Various options for <a href="http://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">deploying your own slippy map</a>. OpenLayers is a popular one.</p>
+<p>Various options for <a href="https://wiki.openstreetmap.org/wiki/Deploying_your_own_Slippy_Map">deploying your own slippy map</a>. OpenLayers is a popular one.</p>
 <p>Then you want to look at how to add marker and vector overlays</p>
 <p>...or perhaps it'll be easier for you to get a KML file (e.g from google earth) and then look at how to add that as a layer. (<a href="http://harrywood.co.uk/maps/examples/openlayers/kml.html">example</a>)</p>
 </div>
@@ -217,7 +217,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can have a look in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">Google_Maps_Example</a>.</p>
+<p>You can have a look in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">Google_Maps_Example</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

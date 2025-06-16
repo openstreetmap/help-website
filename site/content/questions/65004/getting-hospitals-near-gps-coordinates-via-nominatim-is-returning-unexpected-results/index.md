@@ -204,7 +204,7 @@ osqa_accepted = false
 <div id="post-66700-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Don't add questions to answers. Instead <a href="https://help.openstreetmap.org/questions/ask/">create a new question</a>.</p>
+<p>Don't add questions to answers. Instead <a href="/questions/ask/">create a new question</a>.</p>
 </div>
 <div id="comment-66700-info" class="comment-info">
 <span class="comment-age">(06 Nov '18, 14:31)</span> <span class="comment-user userinfo">scai ♦</span>

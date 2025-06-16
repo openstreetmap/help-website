@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, I have a big problem with OSM with nominatim. I'm getting the error shown in the image. However, when I make the same request from a different PC everything is OK. Maybe I got blocked?</p>
-<p>this is the error: <img src="https://help.openstreetmap.org/upfiles/error_wqECN50.png" alt="Error" /></p>
+<p>this is the error: <img src="/upfiles/error_wqECN50.png" alt="Error" /></p>
 <p>What could I do to fix it? Thanks so much</p>
 </div>
 <div id="question-tags" class="tags-container tags">

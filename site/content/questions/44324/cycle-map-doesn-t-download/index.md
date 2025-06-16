@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This has previously been answered <a href="https://help.openstreetmap.org/questions/13495/how-do-i-get-an-image-of-cycle-map">here</a>.</p>
+<p>This has previously been answered <a href="/questions/13495/how-do-i-get-an-image-of-cycle-map">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

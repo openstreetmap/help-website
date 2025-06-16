@@ -135,7 +135,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As explained on the <a href="http://wiki.openstreetmap.org/wiki/Coastline">OSM Wiki</a>, the coastlines used by the main Mapnik map come from shapefiles which are generated every few weeks. This means you will have to wait a while for your changes to become visible.</p>
+<p>As explained on the <a href="https://wiki.openstreetmap.org/wiki/Coastline">OSM Wiki</a>, the coastlines used by the main Mapnik map come from shapefiles which are generated every few weeks. This means you will have to wait a while for your changes to become visible.</p>
 <p>The reason for this is that building the landmass polygons from coastlines is a relatively complex operation, and tile rendering performance would degrade massively if one would attempt to do this "on the fly" when tiles are rendered.</p>
 <p>If you want to find out when the coastline was last processed, check the time stamp on the file <a href="http://tile.openstreetmap.org/shoreline_300.tar.bz2">http://tile.openstreetmap.org/shoreline_300.tar.bz2</a> file, for example by typing, on a Linux system,</p>
 <pre><code>wget --server-response --spider http://tile.openstreetmap.org/shoreline_300.tar.bz2</code></pre>
@@ -172,7 +172,7 @@ Content-Type: application/x-bzip2
 &#10;</div>
 <div class="comment-text">
 <p>Well Frederik, when I asked this question four months ago,</p>
-<p><a href="https://help.openstreetmap.org/questions/20936/how-long-will-it-take-for-my-coastline-edits-to-show-up">https://help.openstreetmap.org/questions/20936/how-long-will-it-take-for-my-coastline-edits-to-show-up</a></p>
+<p><a href="/questions/20936/how-long-will-it-take-for-my-coastline-edits-to-show-up">https://help.openstreetmap.org/questions/20936/how-long-will-it-take-for-my-coastline-edits-to-show-up</a></p>
 <p>you directed me to this answer. Problem is, my coastline edits have still not shown up at any zoom level.<br />
 </p>
 <p>At what point should we begin to suspect a problem causing tiles to take an inordinately long time to re-render?</p>
@@ -253,7 +253,7 @@ Content-Type: application/x-bzip2
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Note also that on the highest zoom levels the new coastline may show up only months later. You can see an example of this (at least as of writing this) at <a href="http://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=18&amp;layers=M</a> vs. <a href="http://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=17&amp;layers=M</a> -- The zoom level 18 still doesn't show my editing of the coastline even though it's been nearly half a year from editing and I've viewed the location (with zoom 18) a number of times after (which to my understanding is sometimes needed for new tiles to be created).</p>
+<p>Note also that on the highest zoom levels the new coastline may show up only months later. You can see an example of this (at least as of writing this) at <a href="https://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=18&amp;layers=M</a> vs. <a href="https://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=18.108985&amp;lon=-73.943095&amp;zoom=17&amp;layers=M</a> -- The zoom level 18 still doesn't show my editing of the coastline even though it's been nearly half a year from editing and I've viewed the location (with zoom 18) a number of times after (which to my understanding is sometimes needed for new tiles to be created).</p>
 <p>Maybe someone can clarify this but it really can take months for the higher level modifications to render.</p>
 <p>Patience.</p>
 </div>

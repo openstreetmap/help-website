@@ -104,8 +104,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to the OSM <a href="http://wiki.openstreetmap.org/wiki/Garmin/N%C3%BCvi_series">wiki</a> it is generally possible to use OSM based maps on the Garmin Nüvi 1490T.</p>
-<p>So with this entry point <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a> you should be able to download a map for your area, copy it to your garmin device and enjoy.</p>
+<p>According to the OSM <a href="https://wiki.openstreetmap.org/wiki/Garmin/N%C3%BCvi_series">wiki</a> it is generally possible to use OSM based maps on the Garmin Nüvi 1490T.</p>
+<p>So with this entry point <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a> you should be able to download a map for your area, copy it to your garmin device and enjoy.</p>
 <p>When there are problems or errors in detail, you can also aks at the <a href="http://forum.openstreetmap.org">OSM forum</a> at the Garmin subforum.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -210,7 +210,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>if there is enough spare space on the internal memory of the nuvi it should be possible. when you have unzipped the gmapsupp.img you will know if its bigger than the available space on the nuvi. if the existing map on the nuvi is called gmapsupp rename it or you may over write it and lose it. follow advice in these links,I'm assuming that when you plug in the usb you can see the files in the nuvi.let us know the results</p>
-<p><a href="http://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">http://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a> <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p><a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps</a> <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

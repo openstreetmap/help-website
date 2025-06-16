@@ -118,8 +118,8 @@ One Answer:
 <div class="answer-body">
 <p>No, it is not possible to export a larger map as this would consume too much CPU on our servers.</p>
 <p>You can either download the data you are interested in and then render it yourself (there are numerous answers on this system about rendering your own maps). That way you are only bound by the restrictions posed by your own hardware.</p>
-<p>Or you can use an existing service that generates the map for you; the free <a href="http://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a> is an obvious choice but there alternatives both commercial and non-commercial.</p>
-<p>Also see answers in this question: <a href="http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">http://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a></p>
+<p>Or you can use an existing service that generates the map for you; the free <a href="https://wiki.openstreetmap.org/wiki/MapOSMatic">MapOSMatic</a> is an obvious choice but there alternatives both commercial and non-commercial.</p>
+<p>Also see answers in this question: <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

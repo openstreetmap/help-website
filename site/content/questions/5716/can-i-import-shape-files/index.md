@@ -110,9 +110,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Before you read anything else, read <a href="http://help.openstreetmap.org/questions/4936/import-into-openstreetmap">this question</a>, from this very forum, on import:</p>
+<p>Before you read anything else, read <a href="/questions/4936/import-into-openstreetmap">this question</a>, from this very forum, on import:</p>
 <p>Next, read the links pointed to in that question, including and especially;</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">The import guide</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">The import guide</a></p>
 <p>And then join the import list and discus your dataset and desire to import it, and get community feedback on the suitability of the data from a legal, quality and technical perspective.</p>
 <p>Generally, though, imports are frowned upon in the OSM community, and taking on an import is a process that should only be done if you have a very complete understanding of OSM and are willing and able to oversee the process, which may mean weeks or months of revision, assuming the data is suitable at all.</p>
 </div>

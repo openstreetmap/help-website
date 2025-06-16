@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thank you for being watchful. <a href="http://www.openstreetmap.org/browse/changeset/16729894">Done</a>.</p>
+<p>Thank you for being watchful. <a href="https://www.openstreetmap.org/browse/changeset/16729894">Done</a>.</p>
 <p>Note: <span>Asking via a different contact channel</span> (forum, chat, mailinglist) would be preferred (by most users) as this site is intended to be kind of living FAQ.</p>
 <p>However, welcome to OpenStreetMap and have fun mapping! :-)</p>
 <p>By the way: In case you wanted to delete (with Potlatch2) the "highway = footway" tag which seems to not belong to this area: Select the area with a mouse click on it, switch to "Advanced" mode (bottom left), click the (x) directly beneath the "footway" text, save.</p>

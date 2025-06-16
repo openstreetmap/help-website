@@ -92,8 +92,8 @@ osqa_accepted = true
 <div id="post-14579-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Nominatim can find <a href="http://www.openstreetmap.org/browse/node/1013810433">the one place that I know in Fremont</a> without problems. Searches of the form "streetname, fremont" also work, but as stephan75 has said, without extra addressing data there's no way to do better than that.</p>
-<p>To add more info, have a look <a href="http://wiki.openstreetmap.org/wiki/Address">here</a>, <a href="http://wiki.openstreetmap.org/wiki/Addresses">here</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Tags">here</a> - but don't underestimate the work involved.</p>
+<p>Nominatim can find <a href="https://www.openstreetmap.org/browse/node/1013810433">the one place that I know in Fremont</a> without problems. Searches of the form "streetname, fremont" also work, but as stephan75 has said, without extra addressing data there's no way to do better than that.</p>
+<p>To add more info, have a look <a href="https://wiki.openstreetmap.org/wiki/Address">here</a>, <a href="https://wiki.openstreetmap.org/wiki/Addresses">here</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Tags">here</a> - but don't underestimate the work involved.</p>
 </div>
 <div id="comment-14579-info" class="comment-info">
 <span class="comment-age">(25 Jul '12, 17:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -147,7 +147,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nominatim, the OSM search engine, uses the TIGER data in the US to augment the OSM address data (see also <a href="http://help.openstreetmap.org/questions/12150/missing-house-numbers-in-local-nominatim-instance">this question</a>). If similar datasets exist in the public domain for other countries, there might be a way to use them for search as well.</p>
+<p>Nominatim, the OSM search engine, uses the TIGER data in the US to augment the OSM address data (see also <a href="/questions/12150/missing-house-numbers-in-local-nominatim-instance">this question</a>). If similar datasets exist in the public domain for other countries, there might be a way to use them for search as well.</p>
 <p>But ultimately, the address search is best improved by mapping addresses in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -167,7 +167,7 @@ One Answer:
 <div id="post-14543-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... with the help of <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a> on each object.</p>
+<p>... with the help of <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a> on each object.</p>
 </div>
 <div id="comment-14543-info" class="comment-info">
 <span class="comment-age">(24 Jul '12, 16:23)</span> <span class="comment-user userinfo">stephan75</span>

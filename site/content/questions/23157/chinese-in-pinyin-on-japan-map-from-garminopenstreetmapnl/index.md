@@ -79,7 +79,7 @@ osqa_accepted = true
 <div id="post-23167-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Oh, and the positions would also be useful. Is this one of the places you mention? <a href="http://www.openstreetmap.org/browse/way/145119444">http://www.openstreetmap.org/browse/way/145119444</a></p>
+<p>Oh, and the positions would also be useful. Is this one of the places you mention? <a href="https://www.openstreetmap.org/browse/way/145119444">https://www.openstreetmap.org/browse/way/145119444</a></p>
 </div>
 <div id="comment-23167-info" class="comment-info">
 <span class="comment-age">(10 Jun '13, 00:50)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -169,10 +169,10 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The "<a href="http://www.openstreetmap.org/browse/way/145119444">赤坂御苑(Akasaka Gyoen)</a>" has a different name in the map you downloaded (from the discussion in the comments above)? Well, then it seems the Garmin map you downloaded converts chinese characters to <span>pinyin</span> ("Chibanyuyuan"). The pinyin does not seem to be in the OSM data.</p>
+<p>The "<a href="https://www.openstreetmap.org/browse/way/145119444">赤坂御苑(Akasaka Gyoen)</a>" has a different name in the map you downloaded (from the discussion in the comments above)? Well, then it seems the Garmin map you downloaded converts chinese characters to <span>pinyin</span> ("Chibanyuyuan"). The pinyin does not seem to be in the OSM data.</p>
 <p>So, please try another Garmin map (there are many Garmin maps built using OSM data). See for more info: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">wiki: OSM_Map_On_Garmin/Download</a>. Please mention here if you had success and with which map/URL.</p>
 <p>(reacting on <span><span>@Mike Kizhe</span></span>'s comment below) Well, it ''may'' be that many/all Garmin maps transcribe the kanjis because Garmin devices may not be able to display anything except latin letters (<span>look here</span>). You could look in the OSM data with the <span>data browser</span> (similar to my link to "Akasaka Gyoen" above) to see how (in which script) the names are entered in our database.</p>
-<p>The way different scripts are entered (in parentheses) into our data in the example "赤坂御苑(Akasaka Gyoen)" is the way the mappers have done it. I think that is not really correct because the name is duplicated. Here is another example which has two name tags <a href="http://www.openstreetmap.org/browse/way/46626498">name = 東電総合グランド and name:ja_rm = Tōden Sōgō Ground</a> - one for kanji and on for latin, which is in my opinion more correct (because it allows the map maker to choose which script he likes to display), but that may be one which has only chinese transcribtion on your Garmin map. That is because the people who make the Garmin maps <em>may</em> only use the "name" tag. I would suggest to try a Garmin map which is available only for Japan (not for the whole world), it may have special processing rules. And, in fact, <span>OSM_Map_On_Garmin/Download#Asia</span> lists three maps only available for Japan with special notes on Kanji in the right column - try them.</p>
+<p>The way different scripts are entered (in parentheses) into our data in the example "赤坂御苑(Akasaka Gyoen)" is the way the mappers have done it. I think that is not really correct because the name is duplicated. Here is another example which has two name tags <a href="https://www.openstreetmap.org/browse/way/46626498">name = 東電総合グランド and name:ja_rm = Tōden Sōgō Ground</a> - one for kanji and on for latin, which is in my opinion more correct (because it allows the map maker to choose which script he likes to display), but that may be one which has only chinese transcribtion on your Garmin map. That is because the people who make the Garmin maps <em>may</em> only use the "name" tag. I would suggest to try a Garmin map which is available only for Japan (not for the whole world), it may have special processing rules. And, in fact, <span>OSM_Map_On_Garmin/Download#Asia</span> lists three maps only available for Japan with special notes on Kanji in the right column - try them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

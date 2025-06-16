@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Not directly for a JPEG format, but a few options to consider here which may do the job <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">OSM on Paper</a></p>
+<p>Not directly for a JPEG format, but a few options to consider here which may do the job <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">OSM on Paper</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

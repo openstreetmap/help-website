@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "aerial imagery  has offset"
-description = '''Hi! I was about to do my first edits (add a few sidewalks), but when switched to edit I noticed that my whole neighborhood has offset comparing to aerial imagery. Here you can clearly see that road didn&#x27;t match itself, offset is about 5 meters – http://www.openstreetmap.org/edit#map=18/59.68428/30.4...'''
+description = '''Hi! I was about to do my first edits (add a few sidewalks), but when switched to edit I noticed that my whole neighborhood has offset comparing to aerial imagery. Here you can clearly see that road didn&#x27;t match itself, offset is about 5 meters – https://www.openstreetmap.org/edit#map=18/59.68428/30.4...'''
 date = "2015-10-29T22:54:00Z"
 lastmod = "2015-10-30T12:13:00Z"
 weight = 46235
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi! I was about to do my first edits (add a few sidewalks), but when switched to edit I noticed that my whole neighborhood has offset comparing to aerial imagery. Here you can clearly see that road didn't match itself, offset is about 5 meters – <a href="http://www.openstreetmap.org/edit#map=18/59.68428/30.43226">http://www.openstreetmap.org/edit#map=18/59.68428/30.43226</a></p>
+<p>Hi! I was about to do my first edits (add a few sidewalks), but when switched to edit I noticed that my whole neighborhood has offset comparing to aerial imagery. Here you can clearly see that road didn't match itself, offset is about 5 meters – <a href="https://www.openstreetmap.org/edit#map=18/59.68428/30.43226">https://www.openstreetmap.org/edit#map=18/59.68428/30.43226</a></p>
 <p>What should i do? Draw my sidewalks ignoring mismatch?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -206,7 +206,7 @@ Before trusting aerial use the traces to check alignment before changing or addi
 1
 </div>
 <div class="comment-text">
-<p>From looking at edits in the linked area <a href="http://www.openstreetmap.org/history#map=19/59.68370/30.43174">http://www.openstreetmap.org/history#map=19/59.68370/30.43174</a> I think that the person asking the question's using iD, so the screenshot above should help.</p>
+<p>From looking at edits in the linked area <a href="https://www.openstreetmap.org/history#map=19/59.68370/30.43174">https://www.openstreetmap.org/history#map=19/59.68370/30.43174</a> I think that the person asking the question's using iD, so the screenshot above should help.</p>
 </div>
 <div id="comment-46243-info" class="comment-info">
 <span class="comment-age">(30 Oct '15, 12:13)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

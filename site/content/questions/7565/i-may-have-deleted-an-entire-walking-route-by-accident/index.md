@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Changeset <a href="http://www.openstreetmap.org/browse/changeset/9177084">9177084</a> seems to be the one. First things first, it should be possible to restore it. I'll check to make sure that no-one else is already on the case and then try reverting that changeset. At a quick glance it looks as if this might be possible because I don't see that anyone else has been there since.</p>
+<p>Changeset <a href="https://www.openstreetmap.org/browse/changeset/9177084">9177084</a> seems to be the one. First things first, it should be possible to restore it. I'll check to make sure that no-one else is already on the case and then try reverting that changeset. At a quick glance it looks as if this might be possible because I don't see that anyone else has been there since.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -134,7 +134,7 @@ One Answer:
 <div id="post-7571-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It's definitely deleted - see <a href="http://www.openstreetmap.org/browse/relation/63872">http://www.openstreetmap.org/browse/relation/63872</a></p>
+<p>It's definitely deleted - see <a href="https://www.openstreetmap.org/browse/relation/63872">https://www.openstreetmap.org/browse/relation/63872</a></p>
 </div>
 <div id="comment-7571-info" class="comment-info">
 <span class="comment-age">(02 Sep '11, 22:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

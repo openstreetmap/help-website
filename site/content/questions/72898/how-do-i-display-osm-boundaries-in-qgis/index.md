@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>OK I'm a bit stuck - the OSM boundaries seem fine to me, but how on earth do i get them to display in QGIS?</p>
-<p><em>converted to new question from answer in <a href="https://help.openstreetmap.org/questions/72872/using-os-and-osm-data-on-the-same-map-copyright-question">Using OS and OSM data on the same map - copyright question</a>.</em></p>
+<p><em>converted to new question from answer in <a href="/questions/72872/using-os-and-osm-data-on-the-same-map-copyright-question">Using OS and OSM data on the same map - copyright question</a>.</em></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-boundaries" rel="tag" title="see questions tagged &#39;boundaries&#39;">boundaries</span> <span class="post-tag tag-link-qgis" rel="tag" title="see questions tagged &#39;qgis&#39;">qgis</span>

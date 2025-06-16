@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>While editing the map in Potlatch 2, I have come across several nodes with no tags (when viewed in Advanced).<br />
 An example of five of these can be found at ~<br />
-link: <a href="http://www.openstreetmap.org/?lat=16.509456&amp;lon=100.2918&amp;zoom=18&amp;layers=M">Nan river, Thailand</a></p>
+link: <a href="https://www.openstreetmap.org/?lat=16.509456&amp;lon=100.2918&amp;zoom=18&amp;layers=M">Nan river, Thailand</a></p>
 <p>Are they safe to delete ? And did they ever serve any purpose, as they don't render.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>How do we draw building outlines for water towers? Often they have a small base and a larger top, and only in few cases both are visible in the aerial imagery.</p>
-<p>In <a href="http://binged.it/15tLztv">this case</a> (<a href="http://www.openstreetmap.org/?lat=55.47323&amp;lon=13.025225&amp;zoom=18&amp;layers=M">OSM</a>) both are visible. Should I only draw the base instead of as of now, the top? The drawn top moved to the "real" location, that is of the base, would also cover the footpath beside it, as I guess is done in many situations. Right now, the top is drawn at where the top is located on the imagery, which is of course in the wrong location...</p>
+<p>In <a href="http://binged.it/15tLztv">this case</a> (<a href="https://www.openstreetmap.org/?lat=55.47323&amp;lon=13.025225&amp;zoom=18&amp;layers=M">OSM</a>) both are visible. Should I only draw the base instead of as of now, the top? The drawn top moved to the "real" location, that is of the base, would also cover the footpath beside it, as I guess is done in many situations. Right now, the top is drawn at where the top is located on the imagery, which is of course in the wrong location...</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-aerial" rel="tag" title="see questions tagged &#39;aerial&#39;">aerial</span> <span class="post-tag tag-link-watertower" rel="tag" title="see questions tagged &#39;watertower&#39;">watertower</span>
@@ -151,7 +151,7 @@ osqa_accepted = true
 <div id="post-22265-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@SK53</span>: I can see reasons for both, and as is often the case with OSM, it's unlikely that one mapping style is strictly followed everywhere. What I described was the convention that the 3D community preferred when we discussed this problem in the context of <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">Simple 3D Buildings</a>. The advantages of mapping the crow's view are pretty clear e.g. for buildings on stilts imo.</p>
+<p><span>@SK53</span>: I can see reasons for both, and as is often the case with OSM, it's unlikely that one mapping style is strictly followed everywhere. What I described was the convention that the 3D community preferred when we discussed this problem in the context of <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">Simple 3D Buildings</a>. The advantages of mapping the crow's view are pretty clear e.g. for buildings on stilts imo.</p>
 <p>It should be noted that, by using building:part areas, you could describe the situation more precisely. They aren't used by Mapnik or the validator, though.</p>
 </div>
 <div id="comment-22265-info" class="comment-info">
@@ -194,7 +194,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would draw around the top and drag it over the base. As I am sure you know we have to estimate the position when drawing building viewed off vertical. I would also put the path as close as possible to the tower not through it. see <a href="http://wiki.openstreetmap.org/wiki/Roof_modelling">http://wiki.openstreetmap.org/wiki/Roof_modelling</a></p>
+<p>I would draw around the top and drag it over the base. As I am sure you know we have to estimate the position when drawing building viewed off vertical. I would also put the path as close as possible to the tower not through it. see <a href="https://wiki.openstreetmap.org/wiki/Roof_modelling">https://wiki.openstreetmap.org/wiki/Roof_modelling</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -184,7 +184,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a>: I'd tend to map the main usage of this way, and that clearly is a footway rather than a service road. Many broader footpaths can be used by vehicles, but I think we should be mapping the primary role. If width is specifically designed to allow emergency access then I think you can tag this explicitly whilst still retaining the footway tag.</p>
+<p><a href="https://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a>: I'd tend to map the main usage of this way, and that clearly is a footway rather than a service road. Many broader footpaths can be used by vehicles, but I think we should be mapping the primary role. If width is specifically designed to allow emergency access then I think you can tag this explicitly whilst still retaining the footway tag.</p>
 </div>
 <div id="comment-45867-info" class="comment-info">
 <span class="comment-age">(13 Oct '15, 12:19)</span> <span class="comment-user userinfo">SK53 ♦</span>

@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Anyone know how to add a parapet to a building with <code>roof:shape=flat</code> for 3D modeling? Or do you have to create ways and relations and that had of stuff.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-12-15_at_6.54.13_AM.png" alt="alt text" /> <img src="http://buildingscience.com.678elmp02.blackmesh.com/sites/default/files/migrate/jpg/BSI050_Figure_12b_web.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-12-15_at_6.54.13_AM.png" alt="alt text" /> <img src="http://buildingscience.com.678elmp02.blackmesh.com/sites/default/files/migrate/jpg/BSI050_Figure_12b_web.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-opensteetmap" rel="tag" title="see questions tagged &#39;opensteetmap&#39;">opensteetmap</span> <span class="post-tag tag-link-3d" rel="tag" title="see questions tagged &#39;3d&#39;">3d</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-roof" rel="tag" title="see questions tagged &#39;roof&#39;">roof</span> <span class="post-tag tag-link-missing" rel="tag" title="see questions tagged &#39;missing&#39;">missing</span>

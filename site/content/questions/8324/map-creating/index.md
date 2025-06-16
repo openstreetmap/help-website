@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find information on how to get started on the <a href="http://wiki.openstreetmap.org/wiki/RU:Beginners_Guide">wiki</a>.</p>
+<p>You can find information on how to get started on the <a href="https://wiki.openstreetmap.org/wiki/RU:Beginners_Guide">wiki</a>.</p>
 <p>There are many cyrillic writing mappers so you can assume that questions in russian will be understood by someone. I am not sure there are that many armenian mappers. You may get more answers if you write in english, but bad english may not get any answers. The best bet is to ask in several languages or ask if someone might want to translate for you.</p>
 <p>If someone want to translate my answer to russian or armenian feel free to do so.</p>
 </div>

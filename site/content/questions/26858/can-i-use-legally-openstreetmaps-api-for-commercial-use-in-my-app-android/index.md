@@ -116,7 +116,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please read these answers as well, <a href="https://help.openstreetmap.org/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android">https://help.openstreetmap.org/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android</a></p>
+<p>Please read these answers as well, <a href="/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android">https://help.openstreetmap.org/questions/9367/can-i-use-openstreetmaps-openstreetmaps-api-for-commercial-apps-on-android</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

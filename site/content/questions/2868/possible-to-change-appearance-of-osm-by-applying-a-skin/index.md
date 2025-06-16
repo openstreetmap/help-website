@@ -111,7 +111,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You cannot do this easily through the OSM web site. A couple of ways to approach this would be:</p>
 <p>1) Find a third party site that renders maps that lets you modify map colours. Something like <a href="http://www.cloudmade.com/">Cloudmade</a>'s map site lets you do this, although you should check their T&amp;Cs about whether you can then use their maps for your site. <a href="http://open.mapquest.com/">MapQuest Open</a> also offers a rendering style that may be more familiar for North American users.</p>
-<p>2) Create your own Mapnik rendering instance and your own slippy map server. This is not a simple process. Maybe start at <a href="http://wiki.openstreetmap.org/wiki/Slippy-map"></a><a href="http://wiki.openstreetmap.org/wiki/Slippy-map"></a><a href="http://wiki.openstreetmap.org/wiki/Slippy-map">http://wiki.openstreetmap.org/wiki/Slippy-map</a> if you want to go down that route.</p>
+<p>2) Create your own Mapnik rendering instance and your own slippy map server. This is not a simple process. Maybe start at <a href="https://wiki.openstreetmap.org/wiki/Slippy-map"></a><a href="https://wiki.openstreetmap.org/wiki/Slippy-map"></a><a href="https://wiki.openstreetmap.org/wiki/Slippy-map">https://wiki.openstreetmap.org/wiki/Slippy-map</a> if you want to go down that route.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

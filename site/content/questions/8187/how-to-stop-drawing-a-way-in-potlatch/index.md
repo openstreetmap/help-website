@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I started Potlatch to add two streets. I started to draw the first one. But how do I stop drawing it so I can start with my other street?</p>
-<p>I have read the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">shortcuts</a> and tried with <em>Enter</em>, <em>Esc</em>, <em>C</em>, <em>Space</em> and I also tried to click on the last point. But none of them stop the drawing. (I still have a dashed line from the last point to my mouse pointer)</p>
+<p>I have read the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">shortcuts</a> and tried with <em>Enter</em>, <em>Esc</em>, <em>C</em>, <em>Space</em> and I also tried to click on the last point. But none of them stop the drawing. (I still have a dashed line from the last point to my mouse pointer)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-potlatch" rel="tag" title="see questions tagged &#39;potlatch&#39;">potlatch</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span>

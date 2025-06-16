@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Yes I'd like to see some docs for the DB schema, or just an overview explanation of some of the main database structures of nominatim (AKA the osm2pgsql "gazetteer mode" output?). I thought it would be fairly easy to do geo queries on the nominatim db directly, but the structure is surprisingly "difficult" as you say. I figured out some queries I can do. See my adventures so far here: <a href="http://wiki.openstreetmap.org/wiki/Talk:Nominatim/Development_overview">http://wiki.openstreetmap.org/wiki/Talk:Nominatim/Development_overview</a></p>
+<p>Yes I'd like to see some docs for the DB schema, or just an overview explanation of some of the main database structures of nominatim (AKA the osm2pgsql "gazetteer mode" output?). I thought it would be fairly easy to do geo queries on the nominatim db directly, but the structure is surprisingly "difficult" as you say. I figured out some queries I can do. See my adventures so far here: <a href="https://wiki.openstreetmap.org/wiki/Talk:Nominatim/Development_overview">https://wiki.openstreetmap.org/wiki/Talk:Nominatim/Development_overview</a></p>
 </div>
 <div id="comment-49578-info" class="comment-info">
 <span class="comment-age">(05 May '16, 12:40)</span> <span class="comment-user userinfo">Harry Wood</span>
@@ -118,9 +118,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is currently no DB schema description of Nominatim available: <a href="http://wiki.openstreetmap.org/wiki/Category:Nominatim">http://wiki.openstreetmap.org/wiki/Category:Nominatim</a></p>
-<p>So you might ask at the OSM-TALK or OSM-DEV <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailinglist</a> or in wiki at the <a href="http://wiki.openstreetmap.org/wiki/Talk:Nominatim">Nominatim disc</a>. A documentation at the wiki would be nice for the community :)</p>
-<p>Maybe it's easier to <strong>export your dump</strong> to preprocessed <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Structured">nomiatim NPI files</a> and filter this files before reimporting to get a light DB?</p>
+<p>There is currently no DB schema description of Nominatim available: <a href="https://wiki.openstreetmap.org/wiki/Category:Nominatim">https://wiki.openstreetmap.org/wiki/Category:Nominatim</a></p>
+<p>So you might ask at the OSM-TALK or OSM-DEV <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailinglist</a> or in wiki at the <a href="https://wiki.openstreetmap.org/wiki/Talk:Nominatim">Nominatim disc</a>. A documentation at the wiki would be nice for the community :)</p>
+<p>Maybe it's easier to <strong>export your dump</strong> to preprocessed <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Structured">nomiatim NPI files</a> and filter this files before reimporting to get a light DB?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

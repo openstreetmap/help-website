@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Display routes via KML at osm.org"
-description = '''Gentlemen, I can do  http://maps.google.com/maps?q=http://jidanni.org/location/rbk.kmz and http://www.bing.com/maps/?mapurl=http://jidanni.org/location/rbk.kmz  So what is the right  http://www.openstreetmap.org/ .... http://jidanni.org/location/rbk.kmz  link to get the same effect? What? not implem...'''
+description = '''Gentlemen, I can do  http://maps.google.com/maps?q=http://jidanni.org/location/rbk.kmz and http://www.bing.com/maps/?mapurl=http://jidanni.org/location/rbk.kmz  So what is the right  https://www.openstreetmap.org/ .... http://jidanni.org/location/rbk.kmz  link to get the same effect? What? not implem...'''
 date = "2013-12-24T05:51:00Z"
 lastmod = "2013-12-29T23:58:00Z"
 weight = 29318
@@ -46,7 +46,7 @@ osqa_accepted = false
 </ul>
 <p>So what is the right</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> .... <a href="http://jidanni.org/location/rbk.kmz">http://jidanni.org/location/rbk.kmz</a></li>
+<li><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> .... <a href="http://jidanni.org/location/rbk.kmz">http://jidanni.org/location/rbk.kmz</a></li>
 </ul>
 <p>link to get the same effect? What? not implemented yet?!</p>
 </div>
@@ -123,9 +123,9 @@ osqa_accepted = false
 <p>But the advantage of OSM is that there is a big commmunity that <strong>creates mashups</strong> and a lot of tools to work with the data and the rendered maps, that aren't visible at the main website:<br />
 </p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a><br />
+<li><a href="https://wiki.openstreetmap.org/wiki/Maps">https://wiki.openstreetmap.org/wiki/Maps</a><br />
 </li>
-<li><a href="http://"></a><a href="http://wiki.openstreetmap.org/wiki/Frameworks">http://wiki.openstreetmap.org/wiki/Frameworks</a></li>
+<li><a href="http://"></a><a href="https://wiki.openstreetmap.org/wiki/Frameworks">https://wiki.openstreetmap.org/wiki/Frameworks</a></li>
 </ul>
 <p>For your specific request, you might use this route editor: <a href="http://www.pifpafpuf.de/cycleroute/map">http://www.pifpafpuf.de/cycleroute/map</a></p>
 </div>
@@ -215,9 +215,9 @@ osqa_accepted = false
 <ul>
 <li><a href="http://harrywood.co.uk/maps/examples/web-maps-lite/kml-displayer.php">'Web Maps Lite' KML displayer</a> (my own crappy old experiment)</li>
 <li><a href="http://maps.burningsilicon.net">Example Openlayers KML display</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/UMap">UMap</a> lets you create a map and then 'import' a KML file (up arrow icon on the right)</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/UMap">UMap</a> lets you create a map and then 'import' a KML file (up arrow icon on the right)</li>
 </ul>
-<p>There's probably others. These are also listed at <a href="http://wiki.openstreetmap.org/wiki/KML#Simple_KML_viewing">KML#Simple KML viewing on the wiki</a>. ...mind you I haven't tested these with a KMZ file.</p>
+<p>There's probably others. These are also listed at <a href="https://wiki.openstreetmap.org/wiki/KML#Simple_KML_viewing">KML#Simple KML viewing on the wiki</a>. ...mind you I haven't tested these with a KMZ file.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -236,7 +236,7 @@ osqa_accepted = false
 <div id="post-29422-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Well that is very nice but one notes that some don't even deal with KMZ and or even seem to work at all. Nonetheless an official <a href="http://www.openstreetmap.org/...http...kmz">http://www.openstreetmap.org/...http...kmz</a> still needs to be implemented.</p>
+<p>Well that is very nice but one notes that some don't even deal with KMZ and or even seem to work at all. Nonetheless an official <a href="https://www.openstreetmap.org/...http...kmz">https://www.openstreetmap.org/...http...kmz</a> still needs to be implemented.</p>
 </div>
 <div id="comment-29422-info" class="comment-info">
 <span class="comment-age">(29 Dec '13, 02:30)</span> <span class="comment-user userinfo">jidanni</span>

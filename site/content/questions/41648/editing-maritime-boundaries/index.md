@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Editing maritime boundaries"
-description = '''Hi, Could someone point me at the guidelines for how maritime boundaries are defined and edited? I wanted to edit this area: http://www.openstreetmap.org/#map=15/1.3102/104.3823 As the lighthouse (Pedra Branca) belongs to Singapore, so presumably there should be some Singaporean water in this area, ...'''
+description = '''Hi, Could someone point me at the guidelines for how maritime boundaries are defined and edited? I wanted to edit this area: https://www.openstreetmap.org/#map=15/1.3102/104.3823 As the lighthouse (Pedra Branca) belongs to Singapore, so presumably there should be some Singaporean water in this area, ...'''
 date = "2015-03-12T00:46:00Z"
 lastmod = "2015-03-13T04:45:00Z"
 weight = 41648
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>Could someone point me at the guidelines for how maritime boundaries are defined and edited?</p>
-<p>I wanted to edit this area: <a href="http://www.openstreetmap.org/#map=15/1.3102/104.3823">http://www.openstreetmap.org/#map=15/1.3102/104.3823</a></p>
+<p>I wanted to edit this area: <a href="https://www.openstreetmap.org/#map=15/1.3102/104.3823">https://www.openstreetmap.org/#map=15/1.3102/104.3823</a></p>
 <p>As the lighthouse (Pedra Branca) belongs to Singapore, so presumably there should be some Singaporean water in this area, but I've no idea what the protocol / legalities are... any guidance? Or did someone else want to do it for me? Or should I just leave well alone?</p>
 <p>Thanks!</p>
 </div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime">Tag:boundary=maritime</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:boundary%3Dmaritime">Tag:boundary=maritime</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

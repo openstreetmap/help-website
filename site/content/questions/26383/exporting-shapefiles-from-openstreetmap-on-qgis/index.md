@@ -68,9 +68,9 @@ osqa_accepted = false
 <div class="comment-text">
 <p>two hint for you:</p>
 <p>Be sure that the OSM-import-plugin of QGIS can work with all you data: There is currently a problem with object id numbers szored in 64-bit data:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">http://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">https://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a></p>
 <p>and:</p>
-<p>all about OSM2Shapefile should be collected at <a href="http://wiki.openstreetmap.org/wiki/Shapefile">http://wiki.openstreetmap.org/wiki/Shapefile</a></p>
+<p>all about OSM2Shapefile should be collected at <a href="https://wiki.openstreetmap.org/wiki/Shapefile">https://wiki.openstreetmap.org/wiki/Shapefile</a></p>
 </div>
 <div id="comment-26400-info" class="comment-info">
 <span class="comment-age">(16 Sep '13, 17:08)</span> <span class="comment-user userinfo">stephan75</span>
@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-26418-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hello everyone, thanks for the quick answers! My data is still pretty small, a little square located here: <a href="http://www.openstreetmap.org/#map=16/45.5012/9.2365">http://www.openstreetmap.org/#map=16/45.5012/9.2365</a> . I'm now triyng the ogr2ogr's way but I'm encountering new problems: it seems the driver doesn't like the geometry type "Geometry Collection" saying that shapefiles don't support that kind of geometry(Error6). I've tried to bypass (with skipfailures) it but it gives Error 1 "Non increasing node id. Use OSM_USE_CUSTOM_INDEXING=ON. I'm feeling a bit lost, probably because I can't find proper documentation anywhere!Can you point me to it?</p>
+<p>Hello everyone, thanks for the quick answers! My data is still pretty small, a little square located here: <a href="https://www.openstreetmap.org/#map=16/45.5012/9.2365">https://www.openstreetmap.org/#map=16/45.5012/9.2365</a> . I'm now triyng the ogr2ogr's way but I'm encountering new problems: it seems the driver doesn't like the geometry type "Geometry Collection" saying that shapefiles don't support that kind of geometry(Error6). I've tried to bypass (with skipfailures) it but it gives Error 1 "Non increasing node id. Use OSM_USE_CUSTOM_INDEXING=ON. I'm feeling a bit lost, probably because I can't find proper documentation anywhere!Can you point me to it?</p>
 </div>
 <div id="comment-26418-info" class="comment-info">
 <span class="comment-age">(17 Sep '13, 08:53)</span> <span class="comment-user userinfo">MassimoUNIMIB</span>
@@ -225,7 +225,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You could take your OSM file, use OSMConvert to convert it to a CSV and then import that into qgis.</p>
 <p>Also, you could use osmfilter to only keep relevant data.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files">http://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files</a> .</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files">https://wiki.openstreetmap.org/wiki/Osmconvert#Writing_CSV_Files</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

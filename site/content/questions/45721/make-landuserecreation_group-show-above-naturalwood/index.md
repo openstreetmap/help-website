@@ -128,7 +128,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>Firstly</strong>, I know it is used in North America, but use of <code>landuse=recreation_ground</code> for a ski area is stretching the use of this tag too far.</p>
-<p>It may be unfortunate, but the usual british english term "recreation ground" does not refer to any area used for recreation, but for areas which are predominantly sports field. For me the two absolutely implict properties of a recreation ground are a) that it is covered by grass and b) that it is flat. A quick check on the wiki suggests that this is a widespread view. The problem is that by extending the meaning of recreation_ground it makes it impossible to make any implicit assumptions and hundreds of thousands of already mapped objects will need additional tags. I would suggest that you use <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dwinter_sports"><code>landuse=winter_sports</code></a>, or the alternative <a href="http://wiki.openstreetmap.org/wiki/Tag:site%3Dpiste"><code>site=piste</code></a> relation.</p>
+<p>It may be unfortunate, but the usual british english term "recreation ground" does not refer to any area used for recreation, but for areas which are predominantly sports field. For me the two absolutely implict properties of a recreation ground are a) that it is covered by grass and b) that it is flat. A quick check on the wiki suggests that this is a widespread view. The problem is that by extending the meaning of recreation_ground it makes it impossible to make any implicit assumptions and hundreds of thousands of already mapped objects will need additional tags. I would suggest that you use <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dwinter_sports"><code>landuse=winter_sports</code></a>, or the alternative <a href="https://wiki.openstreetmap.org/wiki/Tag:site%3Dpiste"><code>site=piste</code></a> relation.</p>
 <p><strong>Secondly</strong>, have no fear about breaking up imported polygons. OSM is not a repository for other people's data.</p>
 <p><strong>Thirdly</strong>, unless there are stringent prohibitions about skiing through the trees I wouldn't worry about precisely delineating the ski area in such a manner excluding all areas between the pistes. The existing piste:type=downhill can be used on areas too and thus provides additional information about the width of a specific piste, and when taken in toto for a resort shows the area of on-piste skiing.</p>
 </div>
@@ -161,7 +161,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11549/ajensen">@AJensen</a> all pistes are shown on opensnowmap, although not absolutely sure how speedily it updates. Perhaps there is scope for a more general leisure=recreation_area tag, which would do what North American mappers expect leisure=recreation_ground to mean.</p>
+<p><a href="https://help.openstreetmap.org/users/11549/ajensen">@AJensen</a> all pistes are shown on opensnowmap, although not absolutely sure how speedily it updates. Perhaps there is scope for a more general leisure=recreation_area tag, which would do what North American mappers expect leisure=recreation_ground to mean.</p>
 </div>
 <div id="comment-46199-info" class="comment-info">
 <span class="comment-age">(28 Oct '15, 22:36)</span> <span class="comment-user userinfo">SK53 ♦</span>

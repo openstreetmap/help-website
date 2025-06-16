@@ -122,8 +122,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Whether to map temporary road closures has been asked a few times before, see these questions and answers (or other questions tagged with '<a href="https://help.openstreetmap.org/tags/temporary/">temporary</a>'):</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/259/temporary-road-works-and-traffic-situations">Temporary road works and traffic situations</a></li>
-<li><a href="https://help.openstreetmap.org/questions/6747/tag-a-temporary-one-way-during-extended-4-month-construction">Tag a Temporary One Way During Extended (4+ month) Construction?</a></li>
+<li><a href="/questions/259/temporary-road-works-and-traffic-situations">Temporary road works and traffic situations</a></li>
+<li><a href="/questions/6747/tag-a-temporary-one-way-during-extended-4-month-construction">Tag a Temporary One Way During Extended (4+ month) Construction?</a></li>
 </ul>
 <p>OSM data is used for a variety of different things and services, and some of these may not update very often. eg some routing services only update once a month. So a temporary change may stick around for longer than you might expect, long after the construction has finished.</p>
 <p>Its generally agreed not to change a road if it is closed for a day or two. But if it closed for several months, then it is probably worth changing. If you do change it, it is a good idea to add a note to inform other mappers, and to remind yourself to change it back.</p>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>In Fuerteventura and also on other Canary Islands, some areas are flooded with brown color at zoom levels above 14 - like described <a href="https://help.openstreetmap.org/questions/42629/europe-seems-to-get-flooded-with-a-brown-fill-this-night-2015-04-27-to-2015-04-28-announcement">here</a>.</p>
+<p>In Fuerteventura and also on other Canary Islands, some areas are flooded with brown color at zoom levels above 14 - like described <a href="/questions/42629/europe-seems-to-get-flooded-with-a-brown-fill-this-night-2015-04-27-to-2015-04-28-announcement">here</a>.</p>
 <p>If you go around Puerto del Rosario (Fuerteventura), Arrecife (Lanzarote) you will see it there.</p>
 <p>I assume it comes from this <a href="https://www.openstreetmap.org/relation/11084762">relation</a> which was created by me with JOSM. Unfortunately, when clicking on it, it doesn't show where it is positioned and thus I can't remove it. JOSM even warned me before uploading with an error, and when clicking on "zoom into the problem", nothing happened. So, I thought "nothing shows up, so it won't be this bad ..." :-(. What's to do?</p>
 </div>

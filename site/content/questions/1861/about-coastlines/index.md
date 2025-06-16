@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>1.) I'd say that including the wetland in the island is ok. Tag it as natural=wetland and either wetland=saltmarsh or wetland=tidalflat. See <a href="http://wiki.openstreetmap.org/wiki/Wetland">http://wiki.openstreetmap.org/wiki/Wetland</a> about wetland tagging.</p>
+<p>1.) I'd say that including the wetland in the island is ok. Tag it as natural=wetland and either wetland=saltmarsh or wetland=tidalflat. See <a href="https://wiki.openstreetmap.org/wiki/Wetland">https://wiki.openstreetmap.org/wiki/Wetland</a> about wetland tagging.</p>
 <p>2.) The coastline should ideally be at the average high tide line. If the aerial imagery is really good you might be able to spot the high tide line. If not map your best estimate. Openstreetmap is wikistyle and data can be improved gradually.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -146,7 +146,7 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>Before doing any imports, one should also carefully read the import guidelines on the wiki ( <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> )</p>
+<p>Before doing any imports, one should also carefully read the import guidelines on the wiki ( <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> )</p>
 <p>Imports can be a valuable source for improving the data in openstreetmap, but as with any mass edits, it also has a big potential to cause problems. This is why you will see many caution statements when discussing imports. Possibly the most important aspect is to make sure to discuss the import and technical details of the import beforehand. This allows people to give you "best practice" tips of how to do the import well.</p>
 </div>
 <div id="comment-4959-info" class="comment-info">
@@ -245,7 +245,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We're talking about <a href="http://www.openstreetmap.org/?lat=-15.85229&amp;lon=-47.94951&amp;zoom=16&amp;layers=M">here</a>, right? Currently the OSM map has the town/suburb label, but no streets (or anything else). Whilst it's useful to know where individual points of interest are on the map, it's useful to know that in the context of where everything else is, in particular streets - I'm not convinced that a scatter of "Cultural Places" on an otherwise completely empty map would be of much use to anyone.</p>
+<p>We're talking about <a href="https://www.openstreetmap.org/?lat=-15.85229&amp;lon=-47.94951&amp;zoom=16&amp;layers=M">here</a>, right? Currently the OSM map has the town/suburb label, but no streets (or anything else). Whilst it's useful to know where individual points of interest are on the map, it's useful to know that in the context of where everything else is, in particular streets - I'm not convinced that a scatter of "Cultural Places" on an otherwise completely empty map would be of much use to anyone.</p>
 <p>If however you have any GPS traces collected when going around Candangolândia, then it'd be really useful to upload those to OSM. Even if you're not going to do anything with them yourself, having on-the-ground GPS traces helps people adding features from aerial photos (e.g. the Bing layer) to work around any offset that there might be between aerial photos and what's actually on the ground. The suburb to the northwest (Guara) looks like it's been traced from aerial photos (there are no street names), so perhaps whoever did that might want to have a go at Candangolândia too? Try sending a mail to the talk-br list or mailing them via the OSM website.</p>
 <p>In addition to GPS traces you might have other useful information (such as street names or other "non-cultural place" points of interest) for Candangolândia - it would be useful to make that available who's interested in mapping Candangolândia (preferably on the ground, but also remotely).</p>
 </div>

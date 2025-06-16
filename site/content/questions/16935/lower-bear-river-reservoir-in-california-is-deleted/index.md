@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Lower Bear River Reservoir in California is deleted?"
-description = '''There is Lower Bear River Reservoir in California at this location: http://www.openstreetmap.org/?lat=38.5165&amp;amp;lon=-120.2701&amp;amp;zoom=13 But it was deleted some time not long ago. zoom=12 data still has it. How to figure out who and why deleted it?'''
+description = '''There is Lower Bear River Reservoir in California at this location: https://www.openstreetmap.org/?lat=38.5165&amp;amp;lon=-120.2701&amp;amp;zoom=13 But it was deleted some time not long ago. zoom=12 data still has it. How to figure out who and why deleted it?'''
 date = "2012-10-16T17:44:00Z"
 lastmod = "2012-10-19T09:17:00Z"
 weight = 16935
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There is Lower Bear River Reservoir in California at this location: <a href="http://www.openstreetmap.org/?lat=38.5165&amp;lon=-120.2701&amp;zoom=13">http://www.openstreetmap.org/?lat=38.5165&amp;lon=-120.2701&amp;zoom=13</a></p>
+<p>There is Lower Bear River Reservoir in California at this location: <a href="https://www.openstreetmap.org/?lat=38.5165&amp;lon=-120.2701&amp;zoom=13">https://www.openstreetmap.org/?lat=38.5165&amp;lon=-120.2701&amp;zoom=13</a></p>
 <p>But it was deleted some time not long ago. zoom=12 data still has it.</p>
 <p>How to figure out who and why deleted it?</p>
 </div>
@@ -77,7 +77,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Unfortunately undoing changes isn't as easy as clicking on a button, but the wiki describes various ways for a <a href="http://wiki.openstreetmap.org/wiki/Change_rollback">rollback</a>. This should be done by a more experienced user.</p>
+<p>Unfortunately undoing changes isn't as easy as clicking on a button, but the wiki describes various ways for a <a href="https://wiki.openstreetmap.org/wiki/Change_rollback">rollback</a>. This should be done by a more experienced user.</p>
 </div>
 <div id="comment-16941-info" class="comment-info">
 <span class="comment-age">(16 Oct '12, 19:15)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -175,7 +175,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Because it is not an official service (yet), but something similar to this is listed in the <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks#Improved_activity.2Fhistory_tab">top ten tasks</a>.</p>
+<p>Because it is not an official service (yet), but something similar to this is listed in the <a href="https://wiki.openstreetmap.org/wiki/Top_Ten_Tasks#Improved_activity.2Fhistory_tab">top ten tasks</a>.</p>
 </div>
 <div id="comment-17019-info" class="comment-info">
 <span class="comment-age">(19 Oct '12, 09:17)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -217,8 +217,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is still a <a href="http://www.openstreetmap.org/browse/node/358801661">node</a> but the <a href="http://www.openstreetmap.org/api/0.6/way/125606877">reservoir outline</a> (<a href="http://www.openstreetmap.org/api/0.6/way/127841434/4">previous version</a> without timeouts :)) has been deleted by <a href="http://www.openstreetmap.org/user/jfire">jfire</a> in <a href="http://www.openstreetmap.org/browse/changeset/13197781">this changeset</a>. Ask him why he deleted the way, could be by mistake.</p>
-<p>Also it is better to add all tags from the node to the way and then delete the node as described in the <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">wiki</a>.</p>
+<p>There is still a <a href="https://www.openstreetmap.org/browse/node/358801661">node</a> but the <a href="https://www.openstreetmap.org/api/0.6/way/125606877">reservoir outline</a> (<a href="https://www.openstreetmap.org/api/0.6/way/127841434/4">previous version</a> without timeouts :)) has been deleted by <a href="https://www.openstreetmap.org/user/jfire">jfire</a> in <a href="https://www.openstreetmap.org/browse/changeset/13197781">this changeset</a>. Ask him why he deleted the way, could be by mistake.</p>
+<p>Also it is better to add all tags from the node to the way and then delete the node as described in the <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

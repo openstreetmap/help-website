@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>hi, i have created map in Umap and today a started to have a problem with my desription and i cant solve this problem. Problem is: description in some track is normal, if i use * <em>word</em> * in code, after save it is written with bold letter: <img src="https://help.openstreetmap.org/upfiles/umap2.png" alt="alt text" /></p>
-<p>but now if i save this code, description shows me this code like this : <img src="https://help.openstreetmap.org/upfiles/umap.png" alt="alt text" /></p>
+<p>hi, i have created map in Umap and today a started to have a problem with my desription and i cant solve this problem. Problem is: description in some track is normal, if i use * <em>word</em> * in code, after save it is written with bold letter: <img src="/upfiles/umap2.png" alt="alt text" /></p>
+<p>but now if i save this code, description shows me this code like this : <img src="/upfiles/umap.png" alt="alt text" /></p>
 <p>can u please help me? i dont know how can a fix this problem.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

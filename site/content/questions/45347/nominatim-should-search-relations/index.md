@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I created a <a href="http://www.openstreetmap.org/relation/5510386">relation</a> for several paths / ways. It contains a name, description and several other attributes.</p>
+<p>I created a <a href="https://www.openstreetmap.org/relation/5510386">relation</a> for several paths / ways. It contains a name, description and several other attributes.</p>
 <p>At the time of writing, that relation is not searchable in nominatim. Should it be searchable? If so, can someone comment as to what should be altered?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -74,7 +74,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>So clicking "http://www.openstreetmap.org/relation/5510386" shows the relation.</p>
+<p>So clicking "https://www.openstreetmap.org/relation/5510386" shows the relation.</p>
 <p>From that webpage, typing the name of the relation, "Tarka Trail - Croyde to Saunton", into the search box does not display any results.</p>
 <p>If relations can be searched via nominatim then I would expect to see this relation in the returned resultset.</p>
 </div>
@@ -177,7 +177,7 @@ osqa_accepted = false
 <div id="post-45388-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: yes, I did not mean the opposite. Thanks for clarifying.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: yes, I did not mean the opposite. Thanks for clarifying.</p>
 </div>
 <div id="comment-45388-info" class="comment-info">
 <span class="comment-age">(18 Sep '15, 19:59)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

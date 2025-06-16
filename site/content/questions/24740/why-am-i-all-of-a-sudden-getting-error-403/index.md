@@ -92,7 +92,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Which would be subject to the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a>.</p>
+<p>Which would be subject to the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">Nominatim usage policy</a>.</p>
 </div>
 <div id="comment-24748-info" class="comment-info">
 <span class="comment-age">(30 Jul '13, 18:02)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>
@@ -147,7 +147,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>A 403 error means that you have been manually blocked because you have violated the usage policy or your queries have shown other suspicious behaviour. First of all check that your use of the API conforms to the usage policy, in particular, check that you are sending either a valid referrer (for web services) or a customized user agent that identifies your application.</p>
-<p>If you cannot see any obvious violations of the usage policy, you will need to contact the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">Nominatim sysadmin</a> directly to find out more details and have the block lifted.</p>
+<p>If you cannot see any obvious violations of the usage policy, you will need to contact the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">Nominatim sysadmin</a> directly to find out more details and have the block lifted.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I had the same problem..couple of minutes ago:) I wrote a script to lookup some exif gps coords to rename the image accordingly via php:</p>
 <ul>
-<li>1st take a look at the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a></li>
+<li>1st take a look at the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">usage policy</a></li>
 <li>Provide in the NOMINATIM-lookup-url your email <strong>&amp;email=yourATreal.email&amp;lon=..&amp;lat=..</strong></li>
 <li>limit your requests that other users can also profit from this great service</li>
 </ul>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to correct misplaced names?"
-description = '''Hi. We meet often wrong positioned names. For example, look at all those &quot;island&quot;-s rendered right over water/blue area objects in this link: http://www.openstreetmap.org/#map=13/38.0146/-121.5068 How to correct them?'''
+description = '''Hi. We meet often wrong positioned names. For example, look at all those &quot;island&quot;-s rendered right over water/blue area objects in this link: https://www.openstreetmap.org/#map=13/38.0146/-121.5068 How to correct them?'''
 date = "2014-01-03T20:32:00Z"
 lastmod = "2014-01-09T15:28:00Z"
 weight = 29573
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi. We meet often wrong positioned names. For example, look at all those "island"-s rendered right over water/blue area objects in this link:<br />
-<a href="http://www.openstreetmap.org/#map=13/38.0146/-121.5068">http://www.openstreetmap.org/#map=13/38.0146/-121.5068</a><br />
+<a href="https://www.openstreetmap.org/#map=13/38.0146/-121.5068">https://www.openstreetmap.org/#map=13/38.0146/-121.5068</a><br />
 How to correct them?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,9 +106,9 @@ How to correct them?</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well OSM has a <a href="http://wiki.openstreetmap.org/wiki/Good_practice">basic rule</a> that is called 'don't tag for renderers', so you need to pay attention, that you don't try to tweak just to make it look good at the osm.org default rendering. This might break the semantic of the internal geodata or break other renderings or processing.</p>
+<p>Well OSM has a <a href="https://wiki.openstreetmap.org/wiki/Good_practice">basic rule</a> that is called 'don't tag for renderers', so you need to pay attention, that you don't try to tweak just to make it look good at the osm.org default rendering. This might break the semantic of the internal geodata or break other renderings or processing.</p>
 <p>So if ther label position is <strong>determind by finding the mean coordinates</strong> of the shape (here: island outer ways), there you can't do anything, as it's calculated by the Mapnik2 renderer. I know that there was a ticket at the old TRAC, but if you like, you can search and maybe open a new <a href="https://github.com/gravitystorm/openstreetmap-carto/issues">issue for the style</a>, that might be pushed upstream to the Mapnik devs.<br />
-If the label appears using a <a href="http://wiki.openstreetmap.org/wiki/Key:place">place=* node</a>, you can just move them till it fit's the reality.</p>
+If the label appears using a <a href="https://wiki.openstreetmap.org/wiki/Key:place">place=* node</a>, you can just move them till it fit's the reality.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ If the label appears using a <a href="http://wiki.openstreetmap.org/wiki/Key:pla
 </div>
 <div class="comment-text">
 <p>I'm not here to argue, I can just point you to the reasons that I know.</p>
-<p>to 1.) There is no 'reference' map as OSM are just data per project definition. An incomplete overview is <a href="http://wiki.openstreetmap.org/wiki/Maps">http://wiki.openstreetmap.org/wiki/Maps</a><br />
+<p>to 1.) There is no 'reference' map as OSM are just data per project definition. An incomplete overview is <a href="https://wiki.openstreetmap.org/wiki/Maps">https://wiki.openstreetmap.org/wiki/Maps</a><br />
 to 2.) ? This is Open Source and the bug is/can be reported and be fixed. Currently nobody seems to have the time to do so or an idea for a serious solution without breaking other behaviour/performance.</p>
 </div>
 <div id="comment-29604-info" class="comment-info">
@@ -154,8 +154,8 @@ to 2.) ? This is Open Source and the bug is/can be reported and be fixed. Curren
 </div>
 <div class="comment-text">
 <p>to 3.) It's not an excuse, it's a basic principle to avoid that the community permantly alters the data just because the semantic fit's for ones processing usecase better thant for the others.<br />
-to 4.) We don't have inspectors or a professional QA. The <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">very basic QA</a> that the (local) community does is basically to monitor the data and guide new users in useful tagging etc.</p>
-<p>P.S: I don't like this style of allegations in a public support board. You are welcome to <a href="http://wiki.openstreetmap.org/wiki/Contact">help on working</a> on that topic.</p>
+to 4.) We don't have inspectors or a professional QA. The <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">very basic QA</a> that the (local) community does is basically to monitor the data and guide new users in useful tagging etc.</p>
+<p>P.S: I don't like this style of allegations in a public support board. You are welcome to <a href="https://wiki.openstreetmap.org/wiki/Contact">help on working</a> on that topic.</p>
 </div>
 <div id="comment-29605-info" class="comment-info">
 <span class="comment-age">(06 Jan '14, 09:09)</span> <span class="comment-user userinfo">iii</span>

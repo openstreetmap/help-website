@@ -191,7 +191,7 @@ osqa_accepted = false
 <div id="post-69525-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Maybe using the share function and adding a marker will do the job. see the newer answers to this <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
+<p>Maybe using the share function and adding a marker will do the job. see the newer answers to this <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a></p>
 </div>
 <div id="comment-69525-info" class="comment-info">
 <span class="comment-age">(07 Jun '19, 12:23)</span> <span class="comment-user userinfo">andy mackey</span>

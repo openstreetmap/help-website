@@ -64,7 +64,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Now that's what I call Openstreetmap in action! Here's what it's useful for: <a href="http://www.openstreetmap.org/user/joost%20schouppe/diary/38103">http://www.openstreetmap.org/user/joost%20schouppe/diary/38103</a> :)</p>
+<p>Now that's what I call Openstreetmap in action! Here's what it's useful for: <a href="https://www.openstreetmap.org/user/joost%20schouppe/diary/38103">https://www.openstreetmap.org/user/joost%20schouppe/diary/38103</a> :)</p>
 </div>
 <div id="comment-48587-info" class="comment-info">
 <span class="comment-age">(09 Mar '16, 09:05)</span> <span class="comment-user userinfo">Piskvor</span>

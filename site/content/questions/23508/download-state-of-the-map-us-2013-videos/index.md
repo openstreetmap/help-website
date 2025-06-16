@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Download State of the Map US 2013 Videos"
-description = '''How do I download the videos from the 2013 State of the Map US? I would like to view them offline. I can&#x27;t seem to even find the normal Vimeo page for the videos linked to from http://wiki.openstreetmap.org/wiki/State_Of_The_Map_U.S._2013'''
+description = '''How do I download the videos from the 2013 State of the Map US? I would like to view them offline. I can&#x27;t seem to even find the normal Vimeo page for the videos linked to from https://wiki.openstreetmap.org/wiki/State_Of_The_Map_U.S._2013'''
 date = "2013-06-19T05:05:00Z"
 lastmod = "2013-06-24T18:08:00Z"
 weight = 23508
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How do I download the videos from the 2013 State of the Map US? I would like to view them offline.</p>
-<p>I can't seem to even find the normal Vimeo page for the videos linked to from <a href="http://wiki.openstreetmap.org/wiki/State_Of_The_Map_U.S._2013">http://wiki.openstreetmap.org/wiki/State_Of_The_Map_U.S._2013</a></p>
+<p>I can't seem to even find the normal Vimeo page for the videos linked to from <a href="https://wiki.openstreetmap.org/wiki/State_Of_The_Map_U.S._2013">https://wiki.openstreetmap.org/wiki/State_Of_The_Map_U.S._2013</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-video" rel="tag" title="see questions tagged &#39;video&#39;">video</span>

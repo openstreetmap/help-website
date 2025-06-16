@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Overpass Turbo can filter the results to a bbox, or to the result of a nominatim query. <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Queries">Read more here</a>.</p>
+<p>Overpass Turbo can filter the results to a bbox, or to the result of a nominatim query. <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Extended_Overpass_Queries">Read more here</a>.</p>
 <p>For your example I think if you use this Overpass Turbo query it will find all schools in Boliva. Adjust for the country you want:</p>
 <pre><code>[out:json];{{geocodeArea:Bolivia}}-&gt;.searchArea;(node[amenity=school](area.searchArea);&gt;;way[amenity=school](area.searchArea);&gt;;relation[amenity=school](area.searchArea);&gt;;);out;</code></pre>
 </div>

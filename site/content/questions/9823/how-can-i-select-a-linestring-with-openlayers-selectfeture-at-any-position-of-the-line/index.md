@@ -45,7 +45,7 @@ osqa_accepted = false
 &lt;head&gt;
 &lt;title&gt;OpenLayers Example&lt;/title&gt;
 &lt;script src=&quot;http://www.openlayers.org/api/OpenLayers.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;src=&quot;http://www.openstreetmap.org/openlayers/OpenStreetMap.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;src=&quot;https://www.openstreetmap.org/openlayers/OpenStreetMap.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &#10;&lt;body&gt;
 &lt;div style=&quot;width:100%; height:100%&quot; id=&quot;map&quot;&gt;&lt;/div&gt;

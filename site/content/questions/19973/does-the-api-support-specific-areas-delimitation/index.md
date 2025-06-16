@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>This is related to my last question:</p>
-<p><a href="https://help.openstreetmap.org/questions/19938/how-to-detect-when-a-nominatim-request-is-not-precise">https://help.openstreetmap.org/questions/19938/how-to-detect-when-a-nominatim-request-is-not-precise</a></p>
+<p><a href="/questions/19938/how-to-detect-when-a-nominatim-request-is-not-precise">https://help.openstreetmap.org/questions/19938/how-to-detect-when-a-nominatim-request-is-not-precise</a></p>
 <p>Since there is no way to see if Nominatim is being precise in the request, I thought about delimiting specific areas using OSM API. Then I save the delimited areas into a database and check to see if the point is inside those areas. If it is, then use Nominatim. Else, he redirects to another reverse geocoder.</p>
 <p>Also, the user can have the possibility to map that area, so it uses Nominatim next time. So, is the API capable of doing what I want? Thanks.</p>
 </div>
@@ -110,12 +110,12 @@ One Answer:
 <p>The main api of OpenStreetMap is meant for editors. While it could do what you want, you shouldn't use it for that.</p>
 <p>Luckily there is an alternative that you can use: The Overpass API. Look at the following two links for a solution for rectangular areas:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Overpass_API#The_map_query">http://wiki.openstreetmap.org/wiki/Overpass API#The map query</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer#Map_call">http://wiki.openstreetmap.org/wiki/Overpass API/XAPI Compatibility Layer#Map call</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Overpass_API#The_map_query">https://wiki.openstreetmap.org/wiki/Overpass API#The map query</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer#Map_call">https://wiki.openstreetmap.org/wiki/Overpass API/XAPI Compatibility Layer#Map call</a></li>
 </ul>
 <p>And the next one for areas with other shapes:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_Region_by_Polygon">http://wiki.openstreetmap.org/wiki/Overpass API/Language Guide#Select Region by Polygon</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_Region_by_Polygon">https://wiki.openstreetmap.org/wiki/Overpass API/Language Guide#Select Region by Polygon</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

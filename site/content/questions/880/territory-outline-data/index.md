@@ -179,7 +179,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Administrative boundaries are directly available as download at Cloudmade <a href="http://downloads.cloudmade.com/"></a><a href="http://downloads.cloudmade.com/"></a><a href="http://downloads.cloudmade.com/">http://downloads.cloudmade.com/</a></p>
-<p>After this you may need extract needed <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">admin_level</a> (e.g. with <a href="http://wiki.openstreetmap.org/wiki/Josm">josm</a> find tool or with <a href="http://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>)</p>
+<p>After this you may need extract needed <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">admin_level</a> (e.g. with <a href="https://wiki.openstreetmap.org/wiki/Josm">josm</a> find tool or with <a href="https://wiki.openstreetmap.org/wiki/Osmosis">osmosis</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -229,7 +229,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Administrative boundaries (if that is what you want) are marked in OSM with <a href="http://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">boundary=administrative</a>, with admin___level set to the type of boundary (2 = national border etc., see the linked article). Therefore, it is relatively easy to retrieve all national borders from OpenStreetMap, you can try e.g. <a href="http://www.informationfreeway.org/api/0.6/*%5Badmin_level=2%5D">XAPI query for all admin_level=2</a> (warning: 200MB download!).</p>
+<p>Administrative boundaries (if that is what you want) are marked in OSM with <a href="https://wiki.openstreetmap.org/wiki/Tag:boundary=administrative">boundary=administrative</a>, with admin___level set to the type of boundary (2 = national border etc., see the linked article). Therefore, it is relatively easy to retrieve all national borders from OpenStreetMap, you can try e.g. <a href="http://www.informationfreeway.org/api/0.6/*%5Badmin_level=2%5D">XAPI query for all admin_level=2</a> (warning: 200MB download!).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

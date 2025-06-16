@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Either you can set up a renderer on your own (like <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> and alter the rendering rules) or you can use the existing <a href="http://oobrien.com/oom/">OpenOrienteeringMap</a></p>
+<p>Either you can set up a renderer on your own (like <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> and alter the rendering rules) or you can use the existing <a href="http://oobrien.com/oom/">OpenOrienteeringMap</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

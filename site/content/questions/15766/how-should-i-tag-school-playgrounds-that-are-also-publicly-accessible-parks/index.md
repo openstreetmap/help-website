@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is there a reasonably good way to tag schoolgrounds that also are public parks? While school grounds sre (as I understand it) not commonly publicly accessible in Europe, in North America it is a relatively common occurrence for a school playground to be a publicly accessible park at the same time (In Quebec, there is an official term for it: <em>parc-école</em>, i.e. "park-school"/"school-park"), I fact I grew up near <a href="http://www.openstreetmap.org/browse/way/29092981">one</a>, but I am very much not happy with the tagging.... It would be a weird mix of amenity and leisure tags...</p>
+<p>Is there a reasonably good way to tag schoolgrounds that also are public parks? While school grounds sre (as I understand it) not commonly publicly accessible in Europe, in North America it is a relatively common occurrence for a school playground to be a publicly accessible park at the same time (In Quebec, there is an official term for it: <em>parc-école</em>, i.e. "park-school"/"school-park"), I fact I grew up near <a href="https://www.openstreetmap.org/browse/way/29092981">one</a>, but I am very much not happy with the tagging.... It would be a weird mix of amenity and leisure tags...</p>
 <p>Any suggestions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

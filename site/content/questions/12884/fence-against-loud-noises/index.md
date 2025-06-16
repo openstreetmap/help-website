@@ -180,7 +180,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think just barrier=wall would work (and is used). You could add tags for other attributes if you wanted like <a href="http://wiki.openstreetmap.org/wiki/Key:height">height</a>. It looks like some people have added <a href="http://wiki.openstreetmap.org/wiki/Key:wall">wall</a>=foo, in some cases describing the material the wall is made of (eg stone) or its purpose (eg noise barrier). (see <a href="http://taginfo.openstreetmap.org/keys/wall#values">taginfo</a>) It could be argued that what a wall is made of should be tagged with something like material= <em>instead of wall=</em></p>
+<p>I think just barrier=wall would work (and is used). You could add tags for other attributes if you wanted like <a href="https://wiki.openstreetmap.org/wiki/Key:height">height</a>. It looks like some people have added <a href="https://wiki.openstreetmap.org/wiki/Key:wall">wall</a>=foo, in some cases describing the material the wall is made of (eg stone) or its purpose (eg noise barrier). (see <a href="http://taginfo.openstreetmap.org/keys/wall#values">taginfo</a>) It could be argued that what a wall is made of should be tagged with something like material= <em>instead of wall=</em></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

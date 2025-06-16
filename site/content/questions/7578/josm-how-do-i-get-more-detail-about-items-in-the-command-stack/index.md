@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "JOSM - How do I get more detail about items in the &quot;command stack&quot;"
-description = '''Imagine that there&#x27;s one item displaying in JOSM&#x27;s command stack area and it says &quot;Delete node 1421432428&quot;. How do I find out more information about that item (who created it and when, full history, etc.) without typing http://www.openstreetmap.org/browse/node/1421432428/history into a browser windo...'''
+description = '''Imagine that there&#x27;s one item displaying in JOSM&#x27;s command stack area and it says &quot;Delete node 1421432428&quot;. How do I find out more information about that item (who created it and when, full history, etc.) without typing https://www.openstreetmap.org/browse/node/1421432428/history into a browser windo...'''
 date = "2011-09-03T02:18:00Z"
 lastmod = "2011-09-04T02:29:00Z"
 weight = 7578
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Imagine that there's one item displaying in JOSM's command stack area and it says "Delete node 1421432428".</p>
-<p>How do I find out more information about that item (who created it and when, full history, etc.) without typing <a href="http://www.openstreetmap.org/browse/node/1421432428/history">http://www.openstreetmap.org/browse/node/1421432428/history</a> into a browser window?</p>
+<p>How do I find out more information about that item (who created it and when, full history, etc.) without typing <a href="https://www.openstreetmap.org/browse/node/1421432428/history">https://www.openstreetmap.org/browse/node/1421432428/history</a> into a browser window?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span>

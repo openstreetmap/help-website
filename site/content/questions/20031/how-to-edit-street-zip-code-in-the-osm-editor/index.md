@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>similar question <a href="https://help.openstreetmap.org/questions/6896/zip-codes-and-associated-areas">https://help.openstreetmap.org/questions/6896/zip-codes-and-associated-areas</a> if you search these questions you will find more info .. try zip code or post code</p>
+<p>similar question <a href="/questions/6896/zip-codes-and-associated-areas">https://help.openstreetmap.org/questions/6896/zip-codes-and-associated-areas</a> if you search these questions you will find more info .. try zip code or post code</p>
 </div>
 <div id="comment-20034-info" class="comment-info">
 <span class="comment-age">(18 Feb '13, 21:19)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -169,7 +169,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Tags">http://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Tags</a> for the tags that are in use (at least in germany, but applicable worldwide)</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Tags">https://wiki.openstreetmap.org/wiki/Proposed_features/House_numbers/Karlsruhe_Schema#Tags</a> for the tags that are in use (at least in germany, but applicable worldwide)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -222,7 +222,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">postal_code=*</a> to associate a street with a zip code. But <a href="http://wiki.openstreetmap.org/wiki/Key:addr">individual addresses</a> are preferred, as gormo already pointed out.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Key:postal_code">postal_code=*</a> to associate a street with a zip code. But <a href="https://wiki.openstreetmap.org/wiki/Key:addr">individual addresses</a> are preferred, as gormo already pointed out.</p>
 <p>/al</p>
 </div>
 <div class="answer-controls post-controls">

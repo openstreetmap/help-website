@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-23449-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>technical yes, legally probably not. Can you find a license for the one UNOCHA provides? GADM has no license it seems <a href="http://wiki.openstreetmap.org/wiki/GADM">http://wiki.openstreetmap.org/wiki/GADM</a></p>
+<p>technical yes, legally probably not. Can you find a license for the one UNOCHA provides? GADM has no license it seems <a href="https://wiki.openstreetmap.org/wiki/GADM">https://wiki.openstreetmap.org/wiki/GADM</a></p>
 </div>
 <div id="comment-23449-info" class="comment-info">
 <span class="comment-age">(17 Jun '13, 09:52)</span> <span class="comment-user userinfo">emj</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-23452-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>RGC can be used according to <a href="http://wiki.openstreetmap.org/wiki/Democratic_Republic_of_the_Congo#RGC">this wiki-page</a>. I think I should try to ask someone who has done that before.</p>
+<p>RGC can be used according to <a href="https://wiki.openstreetmap.org/wiki/Democratic_Republic_of_the_Congo#RGC">this wiki-page</a>. I think I should try to ask someone who has done that before.</p>
 </div>
 <div id="comment-23452-info" class="comment-info">
 <span class="comment-age">(17 Jun '13, 10:36)</span> <span class="comment-user userinfo">Chricho</span>
@@ -102,7 +102,7 @@ osqa_accepted = false
 <div id="post-23464-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>@ gormo: there is a <a href="http://wiki.openstreetmap.org/wiki/Contributors">wiki page "Contributors"</a></p>
+<p>@ gormo: there is a <a href="https://wiki.openstreetmap.org/wiki/Contributors">wiki page "Contributors"</a></p>
 </div>
 <div id="comment-23464-info" class="comment-info">
 <span class="comment-age">(17 Jun '13, 16:22)</span> <span class="comment-user userinfo">malenki</span>
@@ -157,7 +157,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>GADM is not available under an open license, it can only be used for non-commercial works.</p>
-<p>OSM does <strong>not</strong> guarantee attribution in the database. Any information in the database can legally be removed, this includes source tags. The only attribution OSM offers is via <a href="http://wiki.openstreetmap.org/wiki/Contributors">http://wiki.openstreetmap.org/wiki/Contributors</a></p>
+<p>OSM does <strong>not</strong> guarantee attribution in the database. Any information in the database can legally be removed, this includes source tags. The only attribution OSM offers is via <a href="https://wiki.openstreetmap.org/wiki/Contributors">https://wiki.openstreetmap.org/wiki/Contributors</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

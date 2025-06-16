@@ -105,8 +105,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In this example you could tag the whole area of the fuel station with <code>amenity=fuel</code> and tag the buildings as <code>building=yes/shop/whatever</code></p>
-<p>A similar method works for <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">schools</a>.</p>
-<p>In the more general case I have seen buildings tagged as <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings">multiple outers in a multipolygon relation</a> with no inners.</p>
+<p>A similar method works for <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">schools</a>.</p>
+<p>In the more general case I have seen buildings tagged as <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon#Two_disjunct_outer_rings">multiple outers in a multipolygon relation</a> with no inners.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -188,7 +188,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>ps read this as well <a href="https://help.openstreetmap.org/questions/22083/should-petrol-station-facilities-be-mapped-separately">https://help.openstreetmap.org/questions/22083/should-petrol-station-facilities-be-mapped-separately</a></p>
+<p>ps read this as well <a href="/questions/22083/should-petrol-station-facilities-be-mapped-separately">https://help.openstreetmap.org/questions/22083/should-petrol-station-facilities-be-mapped-separately</a></p>
 </div>
 <div id="comment-29616-info" class="comment-info">
 <span class="comment-age">(06 Jan '14, 14:14)</span> <span class="comment-user userinfo">Hendrikklaas</span>

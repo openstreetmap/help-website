@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're specifically looking to <em>render</em> a map with just the streets, then you will need to set up the rendering software by yourself. Take a look at some of the other <a href="https://help.openstreetmap.org/tags/rendering/">questions about rendering</a> (for instance, "<a href="https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>"), or look at the <a href="http://wiki.openstreetmap.org/wiki/Rendering">rendering</a> page on the Wiki.</p>
+<p>If you're specifically looking to <em>render</em> a map with just the streets, then you will need to set up the rendering software by yourself. Take a look at some of the other <a href="https://help.openstreetmap.org/tags/rendering/">questions about rendering</a> (for instance, "<a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">How do I render my own maps for my website?</a>"), or look at the <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering</a> page on the Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use a query to extract highway information from <a href="http://overpass-turbo.eu/s/e4Q">Overpass Turbo</a>, there are <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo/Examples">more general examples</a> on the wiki.</p>
+<p>You could use a query to extract highway information from <a href="http://overpass-turbo.eu/s/e4Q">Overpass Turbo</a>, there are <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo/Examples">more general examples</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

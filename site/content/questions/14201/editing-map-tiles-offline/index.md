@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>What you (and google) call an "api" is probably nothing more then a javascript library (probably OpenLayers or Leaflet). You can download these libraries and host them yourself if you want.</p>
-<p>However the tile layers you use is tiled images that are hosted by other services. Theese might not be available for offline use. It is possible to install a service to render the tiles on the local machine, or you could use the <a href="http://wiki.openstreetmap.org/wiki/Kothic_JS">Kothic JS</a> plugin for Leaflet to render the tiles in the browser.</p>
+<p>However the tile layers you use is tiled images that are hosted by other services. Theese might not be available for offline use. It is possible to install a service to render the tiles on the local machine, or you could use the <a href="https://wiki.openstreetmap.org/wiki/Kothic_JS">Kothic JS</a> plugin for Leaflet to render the tiles in the browser.</p>
 <p>In both cases you need to download the vector data before you can use it offline and that will require some space and bandwidth and for your users to select areas to be available for offline use.</p>
 </div>
 <div class="answer-controls post-controls">

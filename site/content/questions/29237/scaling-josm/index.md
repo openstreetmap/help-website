@@ -205,7 +205,7 @@ osqa_accepted = true
 <div id="post-29299-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi Vincent but I need inches or cm to make a reliable image, house or bridge, <a href="http://www.openstreetmap.org/#map=17/52.45506/4.57061">http://www.openstreetmap.org/#map=17/52.45506/4.57061</a> &amp; <a href="http://www.openstreetmap.org/#map=19/51.87801/5.11851.">http://www.openstreetmap.org/#map=19/51.87801/5.11851.</a></p>
+<p>Hi Vincent but I need inches or cm to make a reliable image, house or bridge, <a href="https://www.openstreetmap.org/#map=17/52.45506/4.57061">https://www.openstreetmap.org/#map=17/52.45506/4.57061</a> &amp; <a href="https://www.openstreetmap.org/#map=19/51.87801/5.11851.">https://www.openstreetmap.org/#map=19/51.87801/5.11851.</a></p>
 </div>
 <div id="comment-29299-info" class="comment-info">
 <span class="comment-age">(23 Dec '13, 10:23)</span> <span class="comment-user userinfo">Hendrikklaas</span>

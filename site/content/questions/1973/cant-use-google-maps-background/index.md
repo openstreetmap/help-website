@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-3153-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>duplicate of <a href="http://help.openstreetmap.org/questions/706/can-i-drawtrace-osm-data-from-a-google-map-or-yahoo">http://help.openstreetmap.org/questions/706/can-i-drawtrace-osm-data-from-a-google-map-or-yahoo</a></p>
+<p>duplicate of <a href="/questions/706/can-i-drawtrace-osm-data-from-a-google-map-or-yahoo">https://help.openstreetmap.org/questions/706/can-i-drawtrace-osm-data-from-a-google-map-or-yahoo</a></p>
 </div>
 <div id="comment-3153-info" class="comment-info">
 <span class="comment-age">(18 Feb '11, 06:47)</span> <span class="comment-user userinfo">axk</span>
@@ -127,7 +127,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can not use Google satellite images, nor Google maps, because that would violate their licence. You can only use Yahoo and <a href="http://wiki.openstreetmap.org/wiki/Bing">Bing</a> satellite images (but not maps!) as those have given OSM explicit right to trace from their images. Remember to add the <code>source=*</code> tag when tracing.</p>
+<p>You can not use Google satellite images, nor Google maps, because that would violate their licence. You can only use Yahoo and <a href="https://wiki.openstreetmap.org/wiki/Bing">Bing</a> satellite images (but not maps!) as those have given OSM explicit right to trace from their images. Remember to add the <code>source=*</code> tag when tracing.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -278,7 +278,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p><span></span><span>@andresmfiallos</span>: Please do not <del>hijack</del>use different questions for your different questions - especially not by asking a new question in an "answer". And, by the way, your question was already (at least for our old license) answered: <a href="https://help.openstreetmap.org/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">https://help.openstreetmap.org/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps</a> (greatly suggested by the "Ask a question" page after entering your second sentence as question topic).</p>
+<p><span></span><span>@andresmfiallos</span>: Please do not <del>hijack</del>use different questions for your different questions - especially not by asking a new question in an "answer". And, by the way, your question was already (at least for our old license) answered: <a href="/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps">https://help.openstreetmap.org/questions/615/can-google-maps-take-osm-data-and-use-it-in-their-own-maps</a> (greatly suggested by the "Ask a question" page after entering your second sentence as question topic).</p>
 </div>
 <div id="comment-19319-info" class="comment-info">
 <span class="comment-age">(24 Jan '13, 16:12)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -85,7 +85,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11750/parkside415"></a><a href="http://help.openstreetmap.org/users/11750/parkside415">@parkside415</a>: as Harry said, it takes time until Strava refreshes its maps. If you have questions regarding this you need to ask strava. We are OpenStreetMap here and just do the base data - not the strava maps. And maybe you need to clear your strava app's map cache to see the update already.</p>
+<p><a href="https://help.openstreetmap.org/users/11750/parkside415"></a><a href="https://help.openstreetmap.org/users/11750/parkside415">@parkside415</a>: as Harry said, it takes time until Strava refreshes its maps. If you have questions regarding this you need to ask strava. We are OpenStreetMap here and just do the base data - not the strava maps. And maybe you need to clear your strava app's map cache to see the update already.</p>
 <p>And if strava shows the owner instead of the shop's name, then you also need to ask strava. Look into our data: <a href="https://www.openstreetmap.org/node/3882670884">https://www.openstreetmap.org/node/3882670884</a> - the name is clearly "Eric Bike". Sorry, we cannot do more from our side. Just a minor hint: could it be that you are just seeing "Eric Haensel" because this is his current position and he shared his position for all strava users?</p>
 </div>
 <div id="comment-47982-info" class="comment-info">
@@ -140,7 +140,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Floripa! Cool. A new bike shop. We like those. I found it and fixed it for you: <a href="http://www.openstreetmap.org/node/3882670884">http://www.openstreetmap.org/node/3882670884</a></p>
+<p>Floripa! Cool. A new bike shop. We like those. I found it and fixed it for you: <a href="https://www.openstreetmap.org/node/3882670884">https://www.openstreetmap.org/node/3882670884</a></p>
 <p>The thing you were missing was... you'd set the name, but need to say <em>what</em> the thing is. A bicycle shop, by clicking the top type selector bit in the editor.</p>
 <p><img src="https://farm6.staticflickr.com/5648/23526784581_8d602b8af6.jpg" alt="bike shop in iD" /></p>
 <p>Now that the correct tag is on there, you should find it will appear (after a delay) on the strava maps. It also appears in all sorts of other places, such as OpenCycleMap.org for example, as lots of different people make use of this OpenStreetMap contribution.</p>

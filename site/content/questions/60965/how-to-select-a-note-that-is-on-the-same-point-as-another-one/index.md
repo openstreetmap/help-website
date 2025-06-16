@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to select a note that is on the same point as another one?"
-description = '''There are often some duplicate notes at the same exact coordinates, and I can&#x27;t select any one besides the one placed on top. For example, here is a closed note with some other one just beneath it: http://www.openstreetmap.org/note/1032745'''
+description = '''There are often some duplicate notes at the same exact coordinates, and I can&#x27;t select any one besides the one placed on top. For example, here is a closed note with some other one just beneath it: https://www.openstreetmap.org/note/1032745'''
 date = "2017-12-02T19:22:00Z"
 lastmod = "2017-12-03T04:37:00Z"
 weight = 60965
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There are often some duplicate notes at the same exact coordinates, and I can't select any one besides the one placed on top. For example, here is a closed note with some other one just beneath it: <a href="http://www.openstreetmap.org/note/1032745">http://www.openstreetmap.org/note/1032745</a></p>
+<p>There are often some duplicate notes at the same exact coordinates, and I can't select any one besides the one placed on top. For example, here is a closed note with some other one just beneath it: <a href="https://www.openstreetmap.org/note/1032745">https://www.openstreetmap.org/note/1032745</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-website" rel="tag" title="see questions tagged &#39;website&#39;">website</span> <span class="post-tag tag-link-notes" rel="tag" title="see questions tagged &#39;notes&#39;">notes</span>

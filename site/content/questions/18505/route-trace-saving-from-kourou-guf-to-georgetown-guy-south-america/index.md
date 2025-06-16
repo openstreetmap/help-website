@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I own a Garmin Nuovi 680 NA &amp; I expect to drive from french Guiana to Guyana in a couple of days. I want to learn how to register my route, memorize &amp; export in mapsource from Garmin. Is this process compatible with your Openstreet soft? My goal is to save the route for my next trips and update the public knowledge of this area on the map matching with this link: <a href="http://www.openstreetmap.org/?lat=4.9&amp;lon=-58.9&amp;zoom=5&amp;layers=M#">http://www.openstreetmap.org/?lat=4.9&amp;lon=-58.9&amp;zoom=5&amp;layers=M#</a> Thanks for your contribution. Regards.</p>
+<p>Hi, I own a Garmin Nuovi 680 NA &amp; I expect to drive from french Guiana to Guyana in a couple of days. I want to learn how to register my route, memorize &amp; export in mapsource from Garmin. Is this process compatible with your Openstreet soft? My goal is to save the route for my next trips and update the public knowledge of this area on the map matching with this link: <a href="https://www.openstreetmap.org/?lat=4.9&amp;lon=-58.9&amp;zoom=5&amp;layers=M#">https://www.openstreetmap.org/?lat=4.9&amp;lon=-58.9&amp;zoom=5&amp;layers=M#</a> Thanks for your contribution. Regards.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mapsource" rel="tag" title="see questions tagged &#39;mapsource&#39;">mapsource</span> <span class="post-tag tag-link-garmin" rel="tag" title="see questions tagged &#39;garmin&#39;">garmin</span> <span class="post-tag tag-link-frenchguiana" rel="tag" title="see questions tagged &#39;frenchguiana&#39;">frenchguiana</span> <span class="post-tag tag-link-suriname" rel="tag" title="see questions tagged &#39;suriname&#39;">suriname</span> <span class="post-tag tag-link-guyana" rel="tag" title="see questions tagged &#39;guyana&#39;">guyana</span>
@@ -107,9 +107,9 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to log the travelled route with the nüvi you could try if <a href="http://wiki.openstreetmap.org/wiki/Garmin/Nüvi_series#N.C3.BCvi_1490T_Track_Log_Hack">this</a> or <a href="http://wiki.openstreetmap.org/wiki/Nuvi_255">this</a> "hack" to get a verbose logging works with your device.<br />
+<p>If you want to log the travelled route with the nüvi you could try if <a href="https://wiki.openstreetmap.org/wiki/Garmin/Nüvi_series#N.C3.BCvi_1490T_Track_Log_Hack">this</a> or <a href="https://wiki.openstreetmap.org/wiki/Nuvi_255">this</a> "hack" to get a verbose logging works with your device.<br />
 Have you tried to look at the nüvi's memory when connected as mass storage device? Don't forget to un-hide hidden files and folders. Maybe you will find interesting stuff...<br />
-Assumed you have a log and will make some photographs of the road/region <a href="http://wiki.openstreetmap.org/wiki/Geotagging_Source_Photos">this wiki page</a> helps you with wedding gpx log and photos.</p>
+Assumed you have a log and will make some photographs of the road/region <a href="https://wiki.openstreetmap.org/wiki/Geotagging_Source_Photos">this wiki page</a> helps you with wedding gpx log and photos.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -236,7 +236,7 @@ Assumed you have a log and will make some photographs of the road/region <a href
 &#10;</div>
 <div class="comment-text">
 <p>note: "welding" is probably the wrong word. I guess you mean something different.</p>
-<p>Yes, you need to get to know your device. If you can save a trace of locations and export it somehow into a gpx file you can use it for your OpenStreetMap contributions. Example of an uploaded gpx trace: <a href="http://www.openstreetmap.org/user/solitone/traces/1370444">http://www.openstreetmap.org/user/solitone/traces/1370444</a></p>
+<p>Yes, you need to get to know your device. If you can save a trace of locations and export it somehow into a gpx file you can use it for your OpenStreetMap contributions. Example of an uploaded gpx trace: <a href="https://www.openstreetmap.org/user/solitone/traces/1370444">https://www.openstreetmap.org/user/solitone/traces/1370444</a></p>
 <p>Maybe you can only save single locations - then you can use this to contribute special locations (points) like gas stations or city centres to the map by manually reading the coordinates. A handwritten notes on a sheet of paper may be useful, too.</p>
 </div>
 <div id="comment-18530-info" class="comment-info">

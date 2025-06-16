@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Tag-wise, most commonly used is <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmilestone">highway=milestone</a>, but other tags that have been used are also discussed on that page.</p>
+<p>Tag-wise, most commonly used is <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmilestone">highway=milestone</a>, but other tags that have been used are also discussed on that page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

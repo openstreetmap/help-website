@@ -144,7 +144,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Strava">http://wiki.openstreetmap.org/wiki/Strava</a> It is listed under the imagery options in JOSM to use as a background layer. It is also available in ID <a href="http://labs.strava.com/slide/">http://labs.strava.com/slide/</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Strava">https://wiki.openstreetmap.org/wiki/Strava</a> It is listed under the imagery options in JOSM to use as a background layer. It is also available in ID <a href="http://labs.strava.com/slide/">http://labs.strava.com/slide/</a></p>
 </div>
 <div id="comment-50953-info" class="comment-info">
 <span class="comment-age">(17 Jul '16, 10:30)</span> <span class="comment-user userinfo">nevw</span>

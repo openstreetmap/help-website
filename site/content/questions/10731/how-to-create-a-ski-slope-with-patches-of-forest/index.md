@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>There is a small ski slope in my area, with one name, two lifts, and four different slopes branching out at the top of the slope, with patches of forest between them. How should this be mapped and tagged properly? The ski lifts and the the patches of forest have already been mapped, but there's nothing in the map to say what this area as a whole is called or what it is used for.</p>
-<p>Here's the area: <a href="http://www.openstreetmap.org/?lat=59.2794&amp;lon=17.83325&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=59.2794&amp;lon=17.83325&amp;zoom=17&amp;layers=M</a> (The highest altitude is to the south)</p>
+<p>Here's the area: <a href="https://www.openstreetmap.org/?lat=59.2794&amp;lon=17.83325&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=59.2794&amp;lon=17.83325&amp;zoom=17&amp;layers=M</a> (The highest altitude is to the south)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-slope" rel="tag" title="see questions tagged &#39;slope&#39;">slope</span> <span class="post-tag tag-link-ski" rel="tag" title="see questions tagged &#39;ski&#39;">ski</span> <span class="post-tag tag-link-forest" rel="tag" title="see questions tagged &#39;forest&#39;">forest</span>
@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You basically need a line from the top station to the lower station tagged piste:type=downhill (+ difficulty, name, reference...)</p>
-<p>See this <a href="http://wiki.openstreetmap.org/wiki/Winter_sports">http://wiki.openstreetmap.org/wiki/Winter_sports</a> and if you like more practical examples, see this <a href="http://www.openstreetmap.org/?lat=46.84877&amp;lon=11.30573&amp;zoom=15&amp;layers=O">http://www.openstreetmap.org/?lat=46.84877&amp;lon=11.30573&amp;zoom=15&amp;layers=O</a></p>
+<p>See this <a href="https://wiki.openstreetmap.org/wiki/Winter_sports">https://wiki.openstreetmap.org/wiki/Winter_sports</a> and if you like more practical examples, see this <a href="https://www.openstreetmap.org/?lat=46.84877&amp;lon=11.30573&amp;zoom=15&amp;layers=O">https://www.openstreetmap.org/?lat=46.84877&amp;lon=11.30573&amp;zoom=15&amp;layers=O</a></p>
 <p>PS: There is a lot of blue colour around the location you posted in Osmarender, maybe some error in water mapping.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -138,7 +138,7 @@ One Answer:
 <div id="post-10734-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>About the water: Wow, that looks ugly. I live on an island in a big lake. It looks fine in Mapnik, although some of smaller islands nearby aren't rendered at all, except for their names (like this one: <a href="http://www.openstreetmap.org/?lat=59.27806&amp;lon=17.86249&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=59.27806&amp;lon=17.86249&amp;zoom=17&amp;layers=M</a> ). I don't know a thing about water mapping, so I wouldn't know how to fix it.</p>
+<p>About the water: Wow, that looks ugly. I live on an island in a big lake. It looks fine in Mapnik, although some of smaller islands nearby aren't rendered at all, except for their names (like this one: <a href="https://www.openstreetmap.org/?lat=59.27806&amp;lon=17.86249&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=59.27806&amp;lon=17.86249&amp;zoom=17&amp;layers=M</a> ). I don't know a thing about water mapping, so I wouldn't know how to fix it.</p>
 </div>
 <div id="comment-10734-info" class="comment-info">
 <span class="comment-age">(22 Feb '12, 15:19)</span> <span class="comment-user userinfo">fredrikr</span>
@@ -152,7 +152,7 @@ One Answer:
 <div class="comment-text">
 <p>You can certainly map that area around the forests as whatever it is during summer (meadow?). You would do that as a multipolygon with those forest patches outlines as inner boundary.</p>
 <p>I have seen the slopes mapped as areas (multipolygons in this case). It does not look very good rendered, but is more accurate than a mere line.<br />
-For the whole area landuse=winter_sports is proposed (see <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps">http://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps</a> )</p>
+For the whole area landuse=winter_sports is proposed (see <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps">https://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps</a> )</p>
 </div>
 <div id="comment-10739-info" class="comment-info">
 <span class="comment-age">(22 Feb '12, 20:07)</span> <span class="comment-user userinfo">LM_1</span>

@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-60908-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are plenty of junctions like that... One of them: <a href="http://www.openstreetmap.org/edit#map=20/-32.03865/115.89331">http://www.openstreetmap.org/edit#map=20/-32.03865/115.89331</a></p>
+<p>There are plenty of junctions like that... One of them: <a href="https://www.openstreetmap.org/edit#map=20/-32.03865/115.89331">https://www.openstreetmap.org/edit#map=20/-32.03865/115.89331</a></p>
 </div>
 <div id="comment-60908-info" class="comment-info">
 <span class="comment-age">(30 Nov '17, 16:40)</span> <span class="comment-user userinfo">BračkoNe</span>

@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>related question: <a href="https://help.openstreetmap.org/questions/79529/creating-a-project-similar-to-opengeofiction?">Creating a project similar to OpenGeofiction</a></p>
+<p>related question: <a href="/questions/79529/creating-a-project-similar-to-opengeofiction?">Creating a project similar to OpenGeofiction</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Svg of transport &quot; layer&quot; ?"
-description = '''Hi, I got a little problem here, i want to get the svg file of this render :  http://www.openstreetmap.org/export#map=16/47.2380/-1.5657&amp;amp;layers=TD When I use Share option then export to SVG it only export the &quot;Standard&quot; layer, not the one i want (I want the public transport one simple with red l...'''
+description = '''Hi, I got a little problem here, i want to get the svg file of this render :  https://www.openstreetmap.org/export#map=16/47.2380/-1.5657&amp;amp;layers=TD When I use Share option then export to SVG it only export the &quot;Standard&quot; layer, not the one i want (I want the public transport one simple with red l...'''
 date = "2015-11-30T10:38:00Z"
 lastmod = "2015-12-04T08:10:00Z"
 weight = 46900
@@ -39,9 +39,9 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I got a little problem here, i want to get the svg file of this render : <a href="http://www.openstreetmap.org/export#map=16/47.2380/-1.5657&amp;layers=TD">http://www.openstreetmap.org/export#map=16/47.2380/-1.5657&amp;layers=TD</a></p>
+<p>Hi, I got a little problem here, i want to get the svg file of this render : <a href="https://www.openstreetmap.org/export#map=16/47.2380/-1.5657&amp;layers=TD">https://www.openstreetmap.org/export#map=16/47.2380/-1.5657&amp;layers=TD</a></p>
 <p>When I use Share option then export to SVG it only export the "Standard" layer, not the one i want (I want the public transport one simple with red lines). Is there any way to get this map and lines in svg or even just the background without lines ?</p>
-<p>I have already checked this one : <a href="https://help.openstreetmap.org/questions/42113/how-to-share-download-an-image-of-one-layer-and-not-only-the-standard-layer">https://help.openstreetmap.org/questions/42113/how-to-share-download-an-image-of-one-layer-and-not-only-the-standard-layer</a> .</p>
+<p>I have already checked this one : <a href="/questions/42113/how-to-share-download-an-image-of-one-layer-and-not-only-the-standard-layer">https://help.openstreetmap.org/questions/42113/how-to-share-download-an-image-of-one-layer-and-not-only-the-standard-layer</a> .</p>
 <p>But it's not realy a solution to me since i don't want a simple screen. Thanks a lot for your time.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -76,7 +76,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>: No, osm.org <em>does</em> provide SVG export ("Share / Image format: SVG"). However, apparently it always exports the standard layer - hence the question.</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost schouppe</a>: No, osm.org <em>does</em> provide SVG export ("Share / Image format: SVG"). However, apparently it always exports the standard layer - hence the question.</p>
 </div>
 <div id="comment-46903-info" class="comment-info">
 <span class="comment-age">(30 Nov '15, 12:14)</span> <span class="comment-user userinfo">sleske</span>
@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-46904-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I had no idea that was possible. Thanks for the correction <a href="http://help.openstreetmap.org/users/666/sleske">@sleske</a> and excuse the misinformation</p>
+<p>I had no idea that was possible. Thanks for the correction <a href="https://help.openstreetmap.org/users/666/sleske">@sleske</a> and excuse the misinformation</p>
 </div>
 <div id="comment-46904-info" class="comment-info">
 <span class="comment-age">(30 Nov '15, 12:18)</span> <span class="comment-user userinfo">joost schouppe</span>
@@ -109,7 +109,7 @@ osqa_accepted = false
 <div id="post-46935-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Either it is something the OSM website should do, or it is something you could do if you have a different way to access the public transport layer. For the first, you could post an issue here <a href="https://github.com/openstreetmap/openstreetmap-website/issues">https://github.com/openstreetmap/openstreetmap-website/issues</a> ; for the second see if this leads you somewhere <a href="http://wiki.openstreetmap.org/wiki/Transport_Map">http://wiki.openstreetmap.org/wiki/Transport_Map</a></p>
+<p>Either it is something the OSM website should do, or it is something you could do if you have a different way to access the public transport layer. For the first, you could post an issue here <a href="https://github.com/openstreetmap/openstreetmap-website/issues">https://github.com/openstreetmap/openstreetmap-website/issues</a> ; for the second see if this leads you somewhere <a href="https://wiki.openstreetmap.org/wiki/Transport_Map">https://wiki.openstreetmap.org/wiki/Transport_Map</a></p>
 </div>
 <div id="comment-46935-info" class="comment-info">
 <span class="comment-age">(02 Dec '15, 11:59)</span> <span class="comment-user userinfo">joost schouppe</span>

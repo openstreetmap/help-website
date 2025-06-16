@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need lots of traces of the area (or is it well traced already) to get a good average as sometimes a trace will have an offset. You could give us a link to the area for second and third opinions as well. Look at these questions as well <a href="http://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery">http://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery</a> and <a href="http://help.openstreetmap.org/questions/11380/bing-imagery-problem">http://help.openstreetmap.org/questions/11380/bing-imagery-problem</a></p>
+<p>You need lots of traces of the area (or is it well traced already) to get a good average as sometimes a trace will have an offset. You could give us a link to the area for second and third opinions as well. Look at these questions as well <a href="/questions/6385/alignment-of-track-vs-background-imagery">https://help.openstreetmap.org/questions/6385/alignment-of-track-vs-background-imagery</a> and <a href="/questions/11380/bing-imagery-problem">https://help.openstreetmap.org/questions/11380/bing-imagery-problem</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

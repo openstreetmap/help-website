@@ -106,7 +106,7 @@ osqa_accepted = false
 <div id="post-7983-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yankee, sorry for being away... Besides the ones already mentioned for routing you have <a href="http://www.gpsdrive.de/download.shtml">http://www.gpsdrive.de/download.shtml</a> (linux), <a href="http://navigatorfree.mapfactor.com/en/download/">http://navigatorfree.mapfactor.com/en/download/</a> nav gps turn-by-turn (windows) <a href="http://sourceforge.net/projects/travelingsales/">http://sourceforge.net/projects/travelingsales/</a> (java) <a href="http://wiki.openstreetmap.org/wiki/Navit">http://wiki.openstreetmap.org/wiki/Navit</a> (java?) <a href="http://we-travel.biz/wetravel/">http://we-travel.biz/wetravel/</a> <a href="http://wiki.openstreetmap.org/wiki/KDE_Marble">http://wiki.openstreetmap.org/wiki/KDE_Marble</a></p>
+<p>Yankee, sorry for being away... Besides the ones already mentioned for routing you have <a href="http://www.gpsdrive.de/download.shtml">http://www.gpsdrive.de/download.shtml</a> (linux), <a href="http://navigatorfree.mapfactor.com/en/download/">http://navigatorfree.mapfactor.com/en/download/</a> nav gps turn-by-turn (windows) <a href="http://sourceforge.net/projects/travelingsales/">http://sourceforge.net/projects/travelingsales/</a> (java) <a href="https://wiki.openstreetmap.org/wiki/Navit">https://wiki.openstreetmap.org/wiki/Navit</a> (java?) <a href="http://we-travel.biz/wetravel/">http://we-travel.biz/wetravel/</a> <a href="https://wiki.openstreetmap.org/wiki/KDE_Marble">https://wiki.openstreetmap.org/wiki/KDE_Marble</a></p>
 </div>
 <div id="comment-7983-info" class="comment-info">
 <span class="comment-age">(18 Sep '11, 19:45)</span> <span class="comment-user userinfo">Herve5</span>

@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Currently, in the map of Houston, TX, the light rail is mapped as a light rail line. It does not reflect Main St, which is a divided city street, with the rail line in the middle.</p>
 <p>Should both sides of Main St. be drawn as separate roads on each side of the rail line? Or is this something that can be solved by creative tagging?</p>
-<p><a href="http://www.openstreetmap.org/?lat=29.7416116297245&amp;lon=-95.3770619630814&amp;zoom=18">http://www.openstreetmap.org/?lat=29.7416116297245&amp;lon=-95.3770619630814&amp;zoom=18</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=29.7416116297245&amp;lon=-95.3770619630814&amp;zoom=18">https://www.openstreetmap.org/?lat=29.7416116297245&amp;lon=-95.3770619630814&amp;zoom=18</a></p>
 <p>Bonus points for figuring out how to handle sections of the light rail where automobile traffic is allowed in the rail lane.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Also see the <a href="http://wiki.openstreetmap.org/wiki/Trams">Trams</a> article on the Wiki.</p>
+<p>Also see the <a href="https://wiki.openstreetmap.org/wiki/Trams">Trams</a> article on the Wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

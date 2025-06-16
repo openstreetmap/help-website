@@ -81,7 +81,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Also, even the map on osm.org doesn't get updated immediately: <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>Also, even the map on osm.org doesn't get updated immediately: <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div id="comment-48348-info" class="comment-info">
 <span class="comment-age">(25 Feb '16, 09:54)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -93,7 +93,7 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>In addition to the 5 renderings <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> mentions, there are lots of other specialized renderings, including the Historical Objects map which may be useful for your purposes: <a href="http://gk.historic.place/historische_objekte/translate/en/index-en.html">http://gk.historic.place/historische_objekte/translate/en/index-en.html</a></p>
+<p>In addition to the 5 renderings <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> mentions, there are lots of other specialized renderings, including the Historical Objects map which may be useful for your purposes: <a href="http://gk.historic.place/historische_objekte/translate/en/index-en.html">http://gk.historic.place/historische_objekte/translate/en/index-en.html</a></p>
 </div>
 <div id="comment-48358-info" class="comment-info">
 <span class="comment-age">(25 Feb '16, 15:45)</span> <span class="comment-user userinfo">neuhausr</span>

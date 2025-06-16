@@ -154,7 +154,7 @@ osqa_accepted = false
 <div id="post-31240-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/#map=19/52.44106/-0.19030">http://www.openstreetmap.org/#map=19/52.44106/-0.19030</a></p>
+<p><a href="https://www.openstreetmap.org/#map=19/52.44106/-0.19030">https://www.openstreetmap.org/#map=19/52.44106/-0.19030</a></p>
 </div>
 <div id="comment-31240-info" class="comment-info">
 <span class="comment-age">(03 Mar '14, 22:29)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -317,7 +317,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Consider man_made=pier with material=wood, surface=resin if it has been treated for slippery conditions ans since its over ground or water, layer=1. See also these links. <a href="http://www.openstreetmap.org/#map=19/52.03927/5.07058">http://www.openstreetmap.org/#map=19/52.03927/5.07058</a> <a href="https://help.openstreetmap.org/questions/13044/wooden-pavement-alongside-and-over-water">https://help.openstreetmap.org/questions/13044/wooden-pavement-alongside-and-over-water</a></p>
+<p>Consider man_made=pier with material=wood, surface=resin if it has been treated for slippery conditions ans since its over ground or water, layer=1. See also these links. <a href="https://www.openstreetmap.org/#map=19/52.03927/5.07058">https://www.openstreetmap.org/#map=19/52.03927/5.07058</a> <a href="/questions/13044/wooden-pavement-alongside-and-over-water">https://help.openstreetmap.org/questions/13044/wooden-pavement-alongside-and-over-water</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

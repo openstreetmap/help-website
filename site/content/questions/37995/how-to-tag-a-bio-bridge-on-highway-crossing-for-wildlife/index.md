@@ -120,7 +120,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Kozuch, consider man_made=wildlife_crossing follow these links <a href="http://www.openstreetmap.org/#map=18/52.25162/5.16770">http://www.openstreetmap.org/#map=18/52.25162/5.16770</a> or <a href="http://www.openstreetmap.org/#map=17/51.96280/5.11494">http://www.openstreetmap.org/#map=17/51.96280/5.11494</a> and add the vegatation on top.</p>
+<p>Hi Kozuch, consider man_made=wildlife_crossing follow these links <a href="https://www.openstreetmap.org/#map=18/52.25162/5.16770">https://www.openstreetmap.org/#map=18/52.25162/5.16770</a> or <a href="https://www.openstreetmap.org/#map=17/51.96280/5.11494">https://www.openstreetmap.org/#map=17/51.96280/5.11494</a> and add the vegatation on top.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -140,7 +140,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>The wiki contains some further explanations and examples for <a href="http://wiki.openstreetmap.org/wiki/Tag%3Aman_made%3Dwildlife_crossing">man_made=wildlife_crossing</a>.</p>
+<p>The wiki contains some further explanations and examples for <a href="https://wiki.openstreetmap.org/wiki/Tag%3Aman_made%3Dwildlife_crossing">man_made=wildlife_crossing</a>.</p>
 </div>
 <div id="comment-37997-info" class="comment-info">
 <span class="comment-age">(27 Oct '14, 12:09)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -162,7 +162,7 @@ osqa_accepted = true
 <div id="post-38000-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Very impressive quality and quantity I haven't seen anything anywhere near as good in the UK, Duct suggest tunnels or pipes to me which are probably ideal for frogs, newts and rodents. I found this <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwildlife_crossing">http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwildlife_crossing</a></p>
+<p>Very impressive quality and quantity I haven't seen anything anywhere near as good in the UK, Duct suggest tunnels or pipes to me which are probably ideal for frogs, newts and rodents. I found this <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwildlife_crossing">https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwildlife_crossing</a></p>
 </div>
 <div id="comment-38000-info" class="comment-info">
 <span class="comment-age">(27 Oct '14, 13:34)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -301,7 +301,7 @@ layer=1</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>Highways have <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access values</a> which wouldn't be appropriate for one of these wildlife crossings. For example, the global default for paths is that foot, bicycle, and horse are allowed, which they certainly aren't in reality for a wildlife crossing. You'd probably want to add access=no if you're going to tag it with one of the highway tags.</p>
+<p>Highways have <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">default access values</a> which wouldn't be appropriate for one of these wildlife crossings. For example, the global default for paths is that foot, bicycle, and horse are allowed, which they certainly aren't in reality for a wildlife crossing. You'd probably want to add access=no if you're going to tag it with one of the highway tags.</p>
 </div>
 <div id="comment-38074-info" class="comment-info">
 <span class="comment-age">(29 Oct '14, 17:14)</span> <span class="comment-user userinfo">alester</span>
@@ -324,7 +324,7 @@ layer=1</code></pre>
 <div id="post-38097-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Scai take a look here, the largest European Ecoduct, <a href="http://www.openstreetmap.org/#map=17/52.25178/5.16687">http://www.openstreetmap.org/#map=17/52.25178/5.16687</a> Witch as I like it to see, a path or track to cross over the highway being a barrier for every wanderer or biker, multifunctional. So it’s a bridge with a highway=track isn’t it ?</p>
+<p>Scai take a look here, the largest European Ecoduct, <a href="https://www.openstreetmap.org/#map=17/52.25178/5.16687">https://www.openstreetmap.org/#map=17/52.25178/5.16687</a> Witch as I like it to see, a path or track to cross over the highway being a barrier for every wanderer or biker, multifunctional. So it’s a bridge with a highway=track isn’t it ?</p>
 </div>
 <div id="comment-38097-info" class="comment-info">
 <span class="comment-age">(29 Oct '14, 22:49)</span> <span class="comment-user userinfo">Hendrikklaas</span>

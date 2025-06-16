@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-26666-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Can you name examples? You seem to have deleted lots of your own roads in your <a href="http://www.openstreetmap.org/browse/changeset/17837942">second changeset</a>. Others created by you are visible, like <a href="http://www.openstreetmap.org/browse/way/237990630">this</a> and <a href="http://www.openstreetmap.org/browse/way/237991421">this</a> one.</p>
+<p>Can you name examples? You seem to have deleted lots of your own roads in your <a href="https://www.openstreetmap.org/browse/changeset/17837942">second changeset</a>. Others created by you are visible, like <a href="https://www.openstreetmap.org/browse/way/237990630">this</a> and <a href="https://www.openstreetmap.org/browse/way/237991421">this</a> one.</p>
 </div>
 <div id="comment-26666-info" class="comment-info">
 <span class="comment-age">(24 Sep '13, 06:12)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -90,7 +90,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Then you should read at least the answers to <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this</a> and <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this</a> question.</p>
+<p>Then you should read at least the answers to <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">this</a> and <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this</a> question.</p>
 </div>
 <div id="comment-26668-info" class="comment-info">
 <span class="comment-age">(24 Sep '13, 07:23)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -124,7 +124,7 @@ osqa_accepted = false
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question, see http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map and http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated" by scai 24 Sep '13, 07:23
+### The question has been closed for the following reason "Duplicate Question, see https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map and https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated" by scai 24 Sep '13, 07:23
 
 </div>
 

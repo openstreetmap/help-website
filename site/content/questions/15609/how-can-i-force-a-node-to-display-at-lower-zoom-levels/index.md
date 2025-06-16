@@ -233,8 +233,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In <a href="http://map.openseamap.org/map/?zoom=11&amp;lat=37.35481&amp;lon=-122.88121&amp;layers=BFTFFFTFFFF0FF">your particular example</a> it might be worth raising it with the OpenSeaMap devs** - perhaps you may be able to persuade them that a single buoy in the open ocean is worth rendering at a higher zoom level.</p>
-<p>If that's not an option, then as ToeBee suggests rendering your own maps is probably the way to go. Various questions have been asked on this before here - try reading the answers to a search like <a href="http://help.openstreetmap.org/search/?q=rendering&amp;Submit=search&amp;t=question">this</a> or <a href="http://help.openstreetmap.org/search/?q=maperitive&amp;Submit=search&amp;t=question">this</a>.</p>
-<p>** There are some mailing lists mentioned on <a href="http://wiki.openstreetmap.org/wiki/OpenSeaMap">this wiki page</a>.</p>
+<p>If that's not an option, then as ToeBee suggests rendering your own maps is probably the way to go. Various questions have been asked on this before here - try reading the answers to a search like <a href="https://help.openstreetmap.org/search/?q=rendering&amp;Submit=search&amp;t=question">this</a> or <a href="https://help.openstreetmap.org/search/?q=maperitive&amp;Submit=search&amp;t=question">this</a>.</p>
+<p>** There are some mailing lists mentioned on <a href="https://wiki.openstreetmap.org/wiki/OpenSeaMap">this wiki page</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -306,7 +306,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Probably not satisfactory, but you can, for example, do <a href="http://www.openstreetmap.org/?lat=37.357&amp;lon=-122.881&amp;zoom=10&amp;layers=M&amp;node=664318897">this</a>.</p>
+<p>Probably not satisfactory, but you can, for example, do <a href="https://www.openstreetmap.org/?lat=37.357&amp;lon=-122.881&amp;zoom=10&amp;layers=M&amp;node=664318897">this</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

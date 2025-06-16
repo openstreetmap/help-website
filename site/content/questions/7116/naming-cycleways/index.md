@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>Should I remove those tags? In my opinion, these tags are unnecessary and would better be converted to a relation, if it should be mapped at all, binding cycleway and road together.</p>
 <hr />
 <p>Edit: This is one of the cycleways in question:</p>
-<p><a href="http://www.openstreetmap.org/?lat=48.117865&amp;amp;lon=11.5285225&amp;amp;zoom=17&amp;amp;layers=M&amp;amp;mlat=48.11684&amp;amp;mlon=11.52827">http://www.openstreetmap.org/?lat=48.117865&amp;lon=11.5285225&amp;zoom=17&amp;layers=M&amp;mlat=48.11684&amp;mlon=11.52827</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=48.117865&amp;amp;lon=11.5285225&amp;amp;zoom=17&amp;amp;layers=M&amp;amp;mlat=48.11684&amp;amp;mlon=11.52827">https://www.openstreetmap.org/?lat=48.117865&amp;lon=11.5285225&amp;zoom=17&amp;layers=M&amp;mlat=48.11684&amp;mlon=11.52827</a></p>
 <ul>
 <li>It is not separated from the street by any means</li>
 <li>It has no name of its own</li>

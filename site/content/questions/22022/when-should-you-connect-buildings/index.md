@@ -109,7 +109,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Most mappers will make building edges share nodes if they share a wall in reality, no matter whether these are structurally two independent walls touching each other, or a single wall. (Most mappers are not civil engineers.)</p>
-<p>There's a <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">plugin for the JOSM editor called "Terracer"</a> that lets you draw the outline of a regular block of houses and then subdivide that into individual buildings.</p>
+<p>There's a <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Terracer">plugin for the JOSM editor called "Terracer"</a> that lets you draw the outline of a regular block of houses and then subdivide that into individual buildings.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

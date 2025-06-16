@@ -106,7 +106,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Since there is now a <a href="https://help.openstreetmap.org/questions/49551/why-cant-i-save-some-edits">similar question</a> I've created an <a href="https://github.com/openstreetmap/iD/issues/3096">issue on GitHub</a> for this bug.</p>
+<p>Since there is now a <a href="/questions/49551/why-cant-i-save-some-edits">similar question</a> I've created an <a href="https://github.com/openstreetmap/iD/issues/3096">issue on GitHub</a> for this bug.</p>
 </div>
 <div id="comment-49554-info" class="comment-info">
 <span class="comment-age">(03 May '16, 07:51)</span> <span class="comment-user userinfo">scai ♦</span>

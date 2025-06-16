@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you browse the map or do an address search the Lat Long are the co-ords of the screen center. Lat lon is highlighted.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Lat_long.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Lat_long.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

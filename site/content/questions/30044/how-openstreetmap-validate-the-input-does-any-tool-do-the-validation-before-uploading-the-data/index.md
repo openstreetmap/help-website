@@ -112,11 +112,11 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There are a fe ways to answer this questions :</p>
 <ul>
-<li>The editors do a fair bit of validation before upload. <a href="http://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM's validator</a> in particular is quite powerfull.</li>
-<li>The editors also try hard to prevent bad edits in the first place (like <a href="http://wiki.openstreetmap.org/wiki/ID">iD</a>'s polygon tool avoids creating an unclosed building way).</li>
-<li>The <a href="http://wiki.openstreetmap.org/wiki/API_v0.6">api</a> doesn't do any validation beyond making sure the request is well-formed, and stores the result directly (old versions of the data are kept).</li>
-<li>There are many <a href="http://wiki.openstreetmap.org/wiki/QA">Quality Assurance tools</a> to check the data once it is uploaded.</li>
-<li>Many mappers <a href="https://help.openstreetmap.org/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed?page=1&amp;focusedAnswerId=20809#20809">keep an eye on their favorite areas</a> to fix problems as they occur.</li>
+<li>The editors do a fair bit of validation before upload. <a href="https://wiki.openstreetmap.org/wiki/JOSM/Validator">JOSM's validator</a> in particular is quite powerfull.</li>
+<li>The editors also try hard to prevent bad edits in the first place (like <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a>'s polygon tool avoids creating an unclosed building way).</li>
+<li>The <a href="https://wiki.openstreetmap.org/wiki/API_v0.6">api</a> doesn't do any validation beyond making sure the request is well-formed, and stores the result directly (old versions of the data are kept).</li>
+<li>There are many <a href="https://wiki.openstreetmap.org/wiki/QA">Quality Assurance tools</a> to check the data once it is uploaded.</li>
+<li>Many mappers <a href="/questions/20805/how-can-i-set-up-automatic-notification-whenever-data-that-ive-added-to-osm-is-changed?page=1&amp;focusedAnswerId=20809#20809">keep an eye on their favorite areas</a> to fix problems as they occur.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

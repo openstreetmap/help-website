@@ -106,16 +106,16 @@ One Answer:
 <div class="answer-body">
 <p>There are different options for you to preview 3D renderings:</p>
 <hr />
-<p>The <strong><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Kendzi3D">Kendzi 3D</a></strong> plugin for JOSM is probably the best choice for your purpose. It allows you to instantly view your editor contents in 3D and can easily be installed from within JOSM.</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/5/57/Kendzi3d_real_world_example.png/300px-Kendzi3d_real_world_example.png" alt="Kendzi3D Screenshot 1" /> <img src="http://wiki.openstreetmap.org/w/images/thumb/5/59/Kendzi3d_custom_models.png/300px-Kendzi3d_custom_models.png" alt="Kendzi3D Screenshot 2" /></p>
+<p>The <strong><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Kendzi3D">Kendzi 3D</a></strong> plugin for JOSM is probably the best choice for your purpose. It allows you to instantly view your editor contents in 3D and can easily be installed from within JOSM.</p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/5/57/Kendzi3d_real_world_example.png/300px-Kendzi3d_real_world_example.png" alt="Kendzi3D Screenshot 1" /> <img src="https://wiki.openstreetmap.org/w/images/thumb/5/59/Kendzi3d_custom_models.png/300px-Kendzi3d_custom_models.png" alt="Kendzi3D Screenshot 2" /></p>
 <hr />
-<p>Alternatively, <strong><a href="http://osm2world.org/">OSM2World</a></strong> (<a href="http://wiki.openstreetmap.org/wiki/OSM2World">Wiki</a>) can also be used offline. It's a stand-alone program and a little bit harder to set up:</p>
+<p>Alternatively, <strong><a href="http://osm2world.org/">OSM2World</a></strong> (<a href="https://wiki.openstreetmap.org/wiki/OSM2World">Wiki</a>) can also be used offline. It's a stand-alone program and a little bit harder to set up:</p>
 <ul>
 <li>Download and unzip "latest build" and "example texture selection" from the <a href="http://osm2world.org/download/">download page</a></li>
 <li>Call the appropriate script for your operating system (.bat or .sh) in the OSM2World directory from the command line, and add the parameters <code>--config texture_config.properties --gui</code>, with "texture_config.properties" pointing to the file of that name from the "example texture selection" archive you have downloaded previously</li>
 <li>From the program window, you can now open the .osm file you want to view (it also accepts saved files from JOSM) and reload it after edits</li>
 </ul>
-<p><img src="http://wiki.openstreetmap.org/w/images/thumb/7/75/OSM2World_building-levels-building-color.png/300px-OSM2World_building-levels-building-color.png" alt="OSM2World Screenshot 1" /> <img src="http://wiki.openstreetmap.org/w/images/thumb/0/08/OSM2World_amenity-waste_basket.png/300px-OSM2World_amenity-waste_basket.png" alt="OSM2World Screenshot 2" /></p>
+<p><img src="https://wiki.openstreetmap.org/w/images/thumb/7/75/OSM2World_building-levels-building-color.png/300px-OSM2World_building-levels-building-color.png" alt="OSM2World Screenshot 1" /> <img src="https://wiki.openstreetmap.org/w/images/thumb/0/08/OSM2World_amenity-waste_basket.png/300px-OSM2World_amenity-waste_basket.png" alt="OSM2World Screenshot 2" /></p>
 <hr />
 <p>It should be noted that both programs support some features not (yet?) present in F4 map - after all, they have been around for a few years already -, and interpret some things differently. For you, that means that there is no guarantee that F4 will render buildings in exactly the same way, but I still think it is very helpful to have the instant verification of your 3D mapping efforts.</p>
 </div>

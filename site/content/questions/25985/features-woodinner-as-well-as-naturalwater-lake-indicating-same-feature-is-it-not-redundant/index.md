@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Many lakes in my current mapping area are in thick forest. A Dataset uploaded recently (last year or so: NRCan-CanVec-10.0)has added the missing forest to the dataset/area among other features.</p>
-<p>The lakes in question show both a body of water as a single feature tagged as natural=water, water=lake etc... but also have a separate feature associated with it that is usually offset a little from the body of water showing the end of the forest as white areas, and the only data referring to it is a tag saying wood=inner. Heres an example of what Im talking about: <a href="http://www.openstreetmap.org/#map=17/45.70116/-74.93533">http://www.openstreetmap.org/#map=17/45.70116/-74.93533</a></p>
+<p>The lakes in question show both a body of water as a single feature tagged as natural=water, water=lake etc... but also have a separate feature associated with it that is usually offset a little from the body of water showing the end of the forest as white areas, and the only data referring to it is a tag saying wood=inner. Heres an example of what Im talking about: <a href="https://www.openstreetmap.org/#map=17/45.70116/-74.93533">https://www.openstreetmap.org/#map=17/45.70116/-74.93533</a></p>
 <p>Perhaps this is a necessary mapping protocol as it indicates the end of a forested area, and the beginning of the lake? But to me it seems redundant as the lake already indicates that theres a lake and its in the forest no?</p>
 <p>What I have done once already but it is very time consuming is trace the line/area tagged as wood=inner and connected it to every node of the lake so that they are in essence one and the same,</p>
 <p>Is this a waste of time? cant i just delete the feature indicating wood=inner and simply have the lake?</p>
@@ -113,7 +113,7 @@ osqa_accepted = false
 <p>The first mapper mapped the forest and left holes in the forest (in this case the outline of the lake) but he neglected to tag it as a lake so if the lake from the dataset (in blue) was not uploaded, it would only show as a white hole.</p>
 <p>Then, as you indicated the dataset was uploaded which has the outlines of the lake, but slightly different in shape, so it covers a part of the white hole but not entirely, so this narrow white area is the result of mapping the same lake twice, each of a different shape.</p>
 <p>First you need to decide, which lake is correct, I guess the one from the dataset (in blue). Then you need to delete the other outline that created the white hole. Then the white narrow strip will disappear. To make everything correctly, you should then create a multipolygon relationship between the new lake and the forest.</p>
-<p>Also, when you have a lake within the forest, you don't trace and connect every node around the lake to create a lake, as you suggested. Here are some examples how you do it. <a href="http://wiki.openstreetmap.org/wiki/Multipolygon_Examples">http://wiki.openstreetmap.org/wiki/Multipolygon_Examples</a></p>
+<p>Also, when you have a lake within the forest, you don't trace and connect every node around the lake to create a lake, as you suggested. Here are some examples how you do it. <a href="https://wiki.openstreetmap.org/wiki/Multipolygon_Examples">https://wiki.openstreetmap.org/wiki/Multipolygon_Examples</a></p>
 <p>If you need help with this particular lake, I can show it to you step by step.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -166,7 +166,7 @@ osqa_accepted = false
 <div id="post-25996-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>iD info <a href="https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag</a></p>
+<p>iD info <a href="/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag">https://help.openstreetmap.org/questions/22542/how-do-i-map-an-island-in-a-lake-using-id-editor-and-the-multipolygon-tag</a></p>
 </div>
 <div id="comment-25996-info" class="comment-info">
 <span class="comment-age">(31 Aug '13, 07:45)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -178,7 +178,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>using relations <a href="https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
+<p>using relations <a href="/questions/14732/using-inner-and-outer-relations">https://help.openstreetmap.org/questions/14732/using-inner-and-outer-relations</a></p>
 </div>
 <div id="comment-25998-info" class="comment-info">
 <span class="comment-age">(31 Aug '13, 07:47)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -191,7 +191,7 @@ osqa_accepted = false
 <div class="comment-text">
 <ol>
 <li>I prefer iD myself and I see the tags at the bottom but I don't see how you add relationships.</li>
-<li>EdLoach...re...inner member for each building. Whenever I have an area within area I always do it via polygons. In terms of having many buildings, it is not that time consuming. Here is one of the areas I did recently: <a href="http://www.openstreetmap.org/#map=18/38.79449/-77.52220">http://www.openstreetmap.org/#map=18/38.79449/-77.52220</a></li>
+<li>EdLoach...re...inner member for each building. Whenever I have an area within area I always do it via polygons. In terms of having many buildings, it is not that time consuming. Here is one of the areas I did recently: <a href="https://www.openstreetmap.org/#map=18/38.79449/-77.52220">https://www.openstreetmap.org/#map=18/38.79449/-77.52220</a></li>
 </ol>
 <p>When you tag each building parking etc when you create them then tags are are automatically added once you create relationships via Potlatch (the double square icon in the tool box), no need to do each building separately.</p>
 </div>

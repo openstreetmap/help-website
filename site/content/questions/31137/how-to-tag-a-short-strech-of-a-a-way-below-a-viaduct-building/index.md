@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a short strech of a a way below a viaduct (building)"
-description = '''How to tag a short strech of a way just below a civil viaduct, a crossing of 2 ways, over each other, http://www.openstreetmap.org/#map=17/51.92086/5.11080 The minor / unclassified way is lowered, so IMHO it’s a cutting. The primary way on top gets +1. What about the short stretch below the building...'''
+description = '''How to tag a short strech of a way just below a civil viaduct, a crossing of 2 ways, over each other, https://www.openstreetmap.org/#map=17/51.92086/5.11080 The minor / unclassified way is lowered, so IMHO it’s a cutting. The primary way on top gets +1. What about the short stretch below the building...'''
 date = "2014-03-01T23:12:00Z"
 lastmod = "2014-03-02T20:52:00Z"
 weight = 31137
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How to tag a short strech of a way just below a civil viaduct, a crossing of 2 ways, over each other, <a href="http://www.openstreetmap.org/#map=17/51.92086/5.11080">http://www.openstreetmap.org/#map=17/51.92086/5.11080</a> The minor / unclassified way is lowered, so IMHO it’s a cutting. The primary way on top gets +1. What about the short stretch below the building, covered or should I use, since its legit the tunnel=building_passage tag, for the passage below a way ?</p>
+<p>How to tag a short strech of a way just below a civil viaduct, a crossing of 2 ways, over each other, <a href="https://www.openstreetmap.org/#map=17/51.92086/5.11080">https://www.openstreetmap.org/#map=17/51.92086/5.11080</a> The minor / unclassified way is lowered, so IMHO it’s a cutting. The primary way on top gets +1. What about the short stretch below the building, covered or should I use, since its legit the tunnel=building_passage tag, for the passage below a way ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tunnel" rel="tag" title="see questions tagged &#39;tunnel&#39;">tunnel</span> <span class="post-tag tag-link-covered" rel="tag" title="see questions tagged &#39;covered&#39;">covered</span> <span class="post-tag tag-link-cutting" rel="tag" title="see questions tagged &#39;cutting&#39;">cutting</span> <span class="post-tag tag-link-building_passage" rel="tag" title="see questions tagged &#39;building_passage&#39;">building_passage</span>

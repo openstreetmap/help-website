@@ -46,7 +46,7 @@ osqa_accepted = false
 <p>My example query for NYC:</p>
 <pre><code>[timeout:3600];(node(40.64975,-74.09327,40.811447,-73.87989);rel(bn)-&gt;.x;way(bn);rel(bw););(._;way(r););(._;node(r)-&gt;.x;node(w););(._;rel(br);rel(br);rel(br);rel(br););out;</code></pre>
 <p>Example map - as you can clearly see, a huge part of water is not rendered at all:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/NYC.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/NYC.jpg" alt="alt text" /></p>
 <p>P.S. Someone has already advised me to download data from geofabrik, and extract a piece of it with osmconvert, using the 'keep ways and areas complete, even if they cross the border' option. It works just fine, but is 10x slower than downloading data from Overpass. I am pretty sure that it is possible to write a Overpass query which will fit my needs, but the query language is difficult. Help me please!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -140,7 +140,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't know enough about coastline rendering to be positive, but if you have a look at <a href="http://www.openstreetmap.org/way/179057060">one of the ways where your water stops</a> you'll see that it's only part of one multipolygon. Hence your map is rendering the data correctly: there is actually nothing in the data that would imply this is water. That has something to do with this being the sea: in OpenStreetMap, coastlines are treated a bit special. A dataset defining the main bodies of water is kept a little separate from the general database, to define main landmasses and oceans. This is to avoid the constant flooding of continents you would see everytime someone makes a tiny mistake when editing coastlines.</p>
+<p>I don't know enough about coastline rendering to be positive, but if you have a look at <a href="https://www.openstreetmap.org/way/179057060">one of the ways where your water stops</a> you'll see that it's only part of one multipolygon. Hence your map is rendering the data correctly: there is actually nothing in the data that would imply this is water. That has something to do with this being the sea: in OpenStreetMap, coastlines are treated a bit special. A dataset defining the main bodies of water is kept a little separate from the general database, to define main landmasses and oceans. This is to avoid the constant flooding of continents you would see everytime someone makes a tiny mistake when editing coastlines.</p>
 <p>I guess you might solve it for your usecase by closing your landmasses along the border of your area, and defining everything not enclosed as sea.</p>
 <p>I'm sure others can give a more exact answer as to the rendering of coastlines.</p>
 </div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Is this question about the button on the website? The location is provided by your browser via the W3C Geolocation API, usually based on your IP address. This is explained <a href="https://help.openstreetmap.org/questions/10536/is-it-possible-to-find-my-location-automatically-like-in-google-maps">here</a>. If this location is incorrect then OSM can't do anything for you. You should experience the same problem on other maps, e.g. Google.</p>
+<p>Is this question about the button on the website? The location is provided by your browser via the W3C Geolocation API, usually based on your IP address. This is explained <a href="/questions/10536/is-it-possible-to-find-my-location-automatically-like-in-google-maps">here</a>. If this location is incorrect then OSM can't do anything for you. You should experience the same problem on other maps, e.g. Google.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

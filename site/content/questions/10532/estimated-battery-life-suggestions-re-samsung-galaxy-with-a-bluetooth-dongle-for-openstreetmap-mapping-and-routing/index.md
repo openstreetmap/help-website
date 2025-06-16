@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm currently using a GPS bluetooth dongle, which has a Sirf III chip, connecting to a Nokia 9300i with <a href="http://wiki.openstreetmap.org/wiki/WhereAmI">WhereAmI</a> running on it for generating GPX tracks etc. I have been considering swapping over to a cheap Android phone, specifically a Samsung Galaxy Y, running OsmAnd or equivalent.</p>
+<p>I'm currently using a GPS bluetooth dongle, which has a Sirf III chip, connecting to a Nokia 9300i with <a href="https://wiki.openstreetmap.org/wiki/WhereAmI">WhereAmI</a> running on it for generating GPX tracks etc. I have been considering swapping over to a cheap Android phone, specifically a Samsung Galaxy Y, running OsmAnd or equivalent.</p>
 <p>To not put too much strain on the battery life of the Samsung (and presumably better accuracy) I'm planning on using the dongle with the new phone.</p>
 <p>Is this possible, and how much more battery life can I typically expect to save by utilising this approach? And am I correct in presuming that the chipset/accuracy of the phone's internal GPS would not be as good?</p>
 </div>

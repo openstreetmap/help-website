@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-38553-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>you may have read my question <a href="https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a> osrm does take a while to update. mmds comment shows how to see date of osrm data</p>
+<p>you may have read my question <a href="/questions/32420/turn-restrictions-and-routing-engines">https://help.openstreetmap.org/questions/32420/turn-restrictions-and-routing-engines</a> osrm does take a while to update. mmds comment shows how to see date of osrm data</p>
 </div>
 <div id="comment-38553-info" class="comment-info">
 <span class="comment-age">(14 Nov '14, 10:28)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -109,7 +109,7 @@ osqa_accepted = false
 <div id="post-38557-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>My guess is neither the editor or osrm can handle multiple way vias, as mentioned in note 3 on the relation page <a href="http://wiki.openstreetmap.org/wiki/Relation:restriction#cite_note-3">http://wiki.openstreetmap.org/wiki/Relation:restriction#cite_note-3</a> (I was unaware that any ways were allowed in the via role - when I last looked it was just from way, to way, via node). So I think your u-turn relations such as <a href="https://www.openstreetmap.org/relation/4166014#map=19/4.90854/114.90943">https://www.openstreetmap.org/relation/4166014#map=19/4.90854/114.90943</a> are correct as per the wiki. Ah - known issue <a href="https://github.com/Project-OSRM/osrm-backend/issues/483">https://github.com/Project-OSRM/osrm-backend/issues/483</a></p>
+<p>My guess is neither the editor or osrm can handle multiple way vias, as mentioned in note 3 on the relation page <a href="https://wiki.openstreetmap.org/wiki/Relation:restriction#cite_note-3">https://wiki.openstreetmap.org/wiki/Relation:restriction#cite_note-3</a> (I was unaware that any ways were allowed in the via role - when I last looked it was just from way, to way, via node). So I think your u-turn relations such as <a href="https://www.openstreetmap.org/relation/4166014#map=19/4.90854/114.90943">https://www.openstreetmap.org/relation/4166014#map=19/4.90854/114.90943</a> are correct as per the wiki. Ah - known issue <a href="https://github.com/Project-OSRM/osrm-backend/issues/483">https://github.com/Project-OSRM/osrm-backend/issues/483</a></p>
 </div>
 <div id="comment-38557-info" class="comment-info">
 <span class="comment-age">(14 Nov '14, 11:09)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -245,7 +245,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hey guys, I think I've just found the answer to my own question/problem! The problem was that most (if not all) routing software can't handle ways as via. And the solution is simply making the junction as only one node..</p>
 <blockquote>
-<p><a href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Junctions">"All road junctions should be drawn as a node which connects the ways (both or several ways share the same(!) node)."</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions#Junctions">"All road junctions should be drawn as a node which connects the ways (both or several ways share the same(!) node)."</a></p>
 </blockquote>
 <p>Here is my first one-node junction → <a href="https://www.openstreetmap.org/changeset/26891534">changeset 26891534</a>.</p>
 <p>I will wait for this update to show on the routing softwares mentioned in this discussion, and test this junction before closing this question. Though they will probably now understand my restrictions, but I'm also interested how they will describe the turn directions ("go straight", "turn right", etc) as now the road that used to go through the junction straight is now not so straight.</p>

@@ -115,7 +115,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is called the "traveling salesman" problem. ;-) Have a look at the wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Traveling_salesman"></a><a href="http://wiki.openstreetmap.org/wiki/Traveling_salesman"></a><a href="http://wiki.openstreetmap.org/wiki/Traveling_salesman">http://wiki.openstreetmap.org/wiki/Traveling_salesman</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Traveling_salesman"></a><a href="https://wiki.openstreetmap.org/wiki/Traveling_salesman"></a><a href="https://wiki.openstreetmap.org/wiki/Traveling_salesman">https://wiki.openstreetmap.org/wiki/Traveling_salesman</a></p>
 <p>and the service built on OSM data at MapQuest</p>
 <p><a href="http://open.mapquestapi.com/directions/"></a><a href="http://open.mapquestapi.com/directions/"></a><a href="http://open.mapquestapi.com/directions/">http://open.mapquestapi.com/directions/</a></p>
 </div>

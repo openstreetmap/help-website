@@ -107,7 +107,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I just split the <a href="http://osm.org/go/0EH5TuVRr">building in two</a>, though I know address mappings vary. I know others add entrance nodes to the building outlines and add the address to these. I don't feel adding separate nodes within the outline is right based on the <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature one osm element</a> guideline</p>
+<p>I just split the <a href="http://osm.org/go/0EH5TuVRr">building in two</a>, though I know address mappings vary. I know others add entrance nodes to the building outlines and add the address to these. I don't feel adding separate nodes within the outline is right based on the <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one feature one osm element</a> guideline</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

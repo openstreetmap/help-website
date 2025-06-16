@@ -111,9 +111,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, there are people within OpenStreetMap already mapping the locations of charging points for electric vehicles, although this appears to be (unsurprisingly) quite dependent on which city you are interested in.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel"></a><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel"></a><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel"></a><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel"></a><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel</a></p>
 <p>I would strongly recommend that if you are building a database of charging locations, you use OpenStreetMap (and the tens of thousands of volunteers we already have) to collect and update the geographic data. You can then concentrate on visualising and processing that data for reuse as part of your Open Charge Map project.</p>
-<p>When it comes to getting the data out of OpenStreetMap for use elsewhere, there are many different ways to get hold of the data. Probably the best one to start with is XAPI, and there are <a href="http://wiki.openstreetmap.org/wiki/Xapi#Predicates">instructions for downloading specific features</a> on the wiki.</p>
+<p>When it comes to getting the data out of OpenStreetMap for use elsewhere, there are many different ways to get hold of the data. Probably the best one to start with is XAPI, and there are <a href="https://wiki.openstreetmap.org/wiki/Xapi#Predicates">instructions for downloading specific features</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>See</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station">http://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station">https://wiki.openstreetmap.org/wiki/Proposed_features/Charging_station</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

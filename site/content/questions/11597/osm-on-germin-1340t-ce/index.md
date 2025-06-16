@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, I attended to FOSSGIS conference 2 weeks ago, where I got the Idea to use the OSM map on an Garmin Nüvi device. I bought a Nüvi 1340T CE and an SD card. Now I can’t figure out how to put the map on the device. I have a gmasupp.img file which works fine through MapSource with my Garmin Vista HC.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Mass_Storage_Mode</a></p>
 <p>Following this page I created a folder /map/ on the SD card including the gmasupp.img file. How do I tell the navi not to use the standard map? Thanks for any hint eactor</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,7 +109,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The folder has not to be called "garmin" ? (perhaps 'map' is also okay). On my 60CSx, it is automatically selected but I've read you might select it through "tools / settings / map / map info". Please check the wiki <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
+<p>The folder has not to be called "garmin" ? (perhaps 'map' is also okay). On my 60CSx, it is automatically selected but I've read you might select it through "tools / settings / map / map info". Please check the wiki <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -196,7 +196,7 @@ osqa_accepted = true
 <div id="post-11614-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A bit more info <a href="http://help.openstreetmap.org/questions/9246/garmin-auto-gps-for-saving-track-logs">http://help.openstreetmap.org/questions/9246/garmin-auto-gps-for-saving-track-logs</a></p>
+<p>A bit more info <a href="/questions/9246/garmin-auto-gps-for-saving-track-logs">https://help.openstreetmap.org/questions/9246/garmin-auto-gps-for-saving-track-logs</a></p>
 </div>
 <div id="comment-11614-info" class="comment-info">
 <span class="comment-age">(29 Mar '12, 23:17)</span> <span class="comment-user userinfo">andy mackey</span>

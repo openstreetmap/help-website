@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Fluclo, plaese read these pages and the country specific lines, <a href="http://wiki.openstreetmap.org/wiki/Cycle_routes#Rendered_Cycle_Maps">http://wiki.openstreetmap.org/wiki/Cycle_routes#Rendered_Cycle_Maps</a></p>
+<p>Hi Fluclo, plaese read these pages and the country specific lines, <a href="https://wiki.openstreetmap.org/wiki/Cycle_routes#Rendered_Cycle_Maps">https://wiki.openstreetmap.org/wiki/Cycle_routes#Rendered_Cycle_Maps</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

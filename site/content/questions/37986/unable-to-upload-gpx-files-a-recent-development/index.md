@@ -79,7 +79,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/6582/plotch"></a><a href="http://help.openstreetmap.org/users/6582/plotch">@plotch</a>: could you try with another browser or at another computer? See <span>this list of traces</span> ... other people continuously upload traces. Did you successfull upload traces before (ever)?</p>
+<p><a href="https://help.openstreetmap.org/users/6582/plotch"></a><a href="https://help.openstreetmap.org/users/6582/plotch">@plotch</a>: could you try with another browser or at another computer? See <span>this list of traces</span> ... other people continuously upload traces. Did you successfull upload traces before (ever)?</p>
 </div>
 <div id="comment-38017-info" class="comment-info">
 <span class="comment-age">(28 Oct '14, 01:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -102,7 +102,7 @@ osqa_accepted = false
 <div id="post-38027-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If it works with the iD editor, You will know the trace is OK. see my answer here <a href="https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id">https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id</a></p>
+<p>If it works with the iD editor, You will know the trace is OK. see my answer here <a href="/questions/35439/can-i-convert-a-gps-track-to-road-in-id">https://help.openstreetmap.org/questions/35439/can-i-convert-a-gps-track-to-road-in-id</a></p>
 </div>
 <div id="comment-38027-info" class="comment-info">
 <span class="comment-age">(28 Oct '14, 07:24)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I experienced a similar problem, I checked the trace was OK by uploading directly into the iD editor, which worked. Later i found there was a period when traces were not getting through which appears to have been 8 hours, see pic, are you still having problems?<img src="http://help.openstreetmap.org/upfiles/traces_upload_problem.JPG" alt="alt text" /></p>
+<p>I experienced a similar problem, I checked the trace was OK by uploading directly into the iD editor, which worked. Later i found there was a period when traces were not getting through which appears to have been 8 hours, see pic, are you still having problems?<img src="/upfiles/traces_upload_problem.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

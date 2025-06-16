@@ -180,9 +180,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is no need to move the pin manually if you already have the exact coordinates. Just use the following URL by replacing <em>LAT</em> and <em>LON</em>:</p>
-<pre><code>http://www.openstreetmap.org/?mlat=LAT&amp;mlon=LON</code></pre>
+<pre><code>https://www.openstreetmap.org/?mlat=LAT&amp;mlon=LON</code></pre>
 <p>E.g. for the coordinates you mentioned:</p>
-<pre><code>http://www.openstreetmap.org/?mlat=51.9623976&amp;mlon=-0.495209547</code></pre>
+<pre><code>https://www.openstreetmap.org/?mlat=51.9623976&amp;mlon=-0.495209547</code></pre>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -237,9 +237,9 @@ osqa_accepted = false
 <div class="answer-body">
 <p>What I suspect you're seeing is at the limits of imagery alignment / OSM accuracy.</p>
 <p>Here's what I see with your 51.9623976 -0.495209547 co-ordinates in Google Earth:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/ge_pin.png" alt="alt text" /></p>
+<p><img src="/upfiles/ge_pin.png" alt="alt text" /></p>
 <p>and here's what I see in OSM:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm_pin.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm_pin.png" alt="alt text" /></p>
 <p>If we assume the railway line in OSM is in the middle of both tracks and correct (and the GPS traces for it in OSM, and the Bing imagery would suggest that it pretty much is), then the discrepancy's &lt; 5m.</p>
 <p>Are you seeing something different?</p>
 </div>
@@ -280,10 +280,10 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Maybe there is something wrong with my Google Earth, I'm lost as your answer makes sense.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/GooleEarht_1.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/GooleEarht_1.jpg" alt="alt text" /></p>
 <p>That is where I want the decimal degree coordinates. I've saved this pin in Earth as an KML file, opened it in Excel and the coordinates it gives me in Excel are: -0.495209547 51.9623976</p>
 <p>But if you put these decimal degree coordinates into OSM, you get this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/OSM1.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/OSM1.jpg" alt="alt text" /></p>
 <p>Note that the pin is OSM is now about 25 metres to the right of my original pin in Earth, it should be just under the 'n' of 'Toddington Road'.</p>
 <p>Cheers</p>
 <p>Matt</p>
@@ -353,13 +353,13 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To your point about decimal degrees getting rounded, it looks like the data itself goes to 7 decimal places. For example, see <a href="http://www.openstreetmap.org/node/2009506481">http://www.openstreetmap.org/node/2009506481</a></p>
+<p>To your point about decimal degrees getting rounded, it looks like the data itself goes to 7 decimal places. For example, see <a href="https://www.openstreetmap.org/node/2009506481">https://www.openstreetmap.org/node/2009506481</a></p>
 <p>I don't know about the other editors, but while editing in Potlatch 2, you can view the mouse lat/long by checking the box in Options. That only shows to 5 decimal places, but would allow you to get very close.</p>
 <p>I know you want to be precise, but given that .00001 decimal degrees is around a meter, that's probably no more than the error which likely exists in the imagery.</p>
 <p>Edit: didn't answer the last part of your question, about getting your points entered in a non-manual way. Two points:</p>
 <ol>
-<li>if you created your points using Google Earth, it may not be appropriate for you to enter them into OSM. See <a href="http://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">FAQ about Google data</a>.</li>
-<li>you'll be more likely able to import your data if you turn your spreadsheet into a <a href="http://wiki.openstreetmap.org/wiki/Gpx">.gpx</a>, <a href="http://wiki.openstreetmap.org/wiki/KML">.kml</a>, or <a href="http://wiki.openstreetmap.org/wiki/Shp">.shp</a> file. In Potlatch 2, you can import these files by going to Background &gt; Vector file. I know you can do so in JOSM too. I think in iD you can import .gpx.</li>
+<li>if you created your points using Google Earth, it may not be appropriate for you to enter them into OSM. See <a href="https://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">FAQ about Google data</a>.</li>
+<li>you'll be more likely able to import your data if you turn your spreadsheet into a <a href="https://wiki.openstreetmap.org/wiki/Gpx">.gpx</a>, <a href="https://wiki.openstreetmap.org/wiki/KML">.kml</a>, or <a href="https://wiki.openstreetmap.org/wiki/Shp">.shp</a> file. In Potlatch 2, you can import these files by going to Background &gt; Vector file. I know you can do so in JOSM too. I think in iD you can import .gpx.</li>
 </ol>
 </div>
 <div class="answer-controls post-controls">

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>What would it need to serve live rendered tiles (such as in mod_tile / Tirex) with UTFgrid .json files? <a href="https://help.openstreetmap.org/questions/17856/utfgrid-support-in-mod_tile">mod_tile does not seem to support UTFgrid</a>. Does Tirex?</p>
+<p>What would it need to serve live rendered tiles (such as in mod_tile / Tirex) with UTFgrid .json files? <a href="/questions/17856/utfgrid-support-in-mod_tile">mod_tile does not seem to support UTFgrid</a>. Does Tirex?</p>
 <p>TileStream only can serve pre-rendered MBtiles.</p>
 <p>Is there any working alternative?</p>
 </div>

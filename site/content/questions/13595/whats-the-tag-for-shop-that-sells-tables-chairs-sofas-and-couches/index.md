@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What about <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dfurniture">shop=furniture</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:furniture">furniture=*</a>?</p>
+<p>What about <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dfurniture">shop=furniture</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:furniture">furniture=*</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

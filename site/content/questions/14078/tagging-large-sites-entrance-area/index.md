@@ -55,8 +55,8 @@ osqa_accepted = true
 </ol>
 <p>Some examples</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M">Skanzen Strážnice</a> - the basic information - from where to come as a turist is not presented. THere are two gates and only by human heuristic you may guess that the eastern one is the main entrance. Funny think is that recently someone added to the entry way name "vstupní cesta" (entry road in Czech) to help tourists to find it. This is obviously not very systematic - the way does not have this name - it is just a track going to main info centre. However it helps to remporarily solve the problem.</li>
-<li><a href="http://www.openstreetmap.org/?lat=50.11555&amp;lon=14.41097&amp;zoom=16&amp;layers=M">Prague ZOO</a> - in this case is difficult to guess correct entrance even for local people as it has changed recently. It is very well mapped, but as there is no way to mark the entrance it is again left on the imagination of turists where they will stop their car. It is a pity, as this is exactly the usecase where OSM could excel and surpass other maps.</li>
+<li><a href="https://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M">Skanzen Strážnice</a> - the basic information - from where to come as a turist is not presented. THere are two gates and only by human heuristic you may guess that the eastern one is the main entrance. Funny think is that recently someone added to the entry way name "vstupní cesta" (entry road in Czech) to help tourists to find it. This is obviously not very systematic - the way does not have this name - it is just a track going to main info centre. However it helps to remporarily solve the problem.</li>
+<li><a href="https://www.openstreetmap.org/?lat=50.11555&amp;lon=14.41097&amp;zoom=16&amp;layers=M">Prague ZOO</a> - in this case is difficult to guess correct entrance even for local people as it has changed recently. It is very well mapped, but as there is no way to mark the entrance it is again left on the imagination of turists where they will stop their car. It is a pity, as this is exactly the usecase where OSM could excel and surpass other maps.</li>
 </ul>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -125,7 +125,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I would add as many tags to area as possible. In addition to that I would simply add all <a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrances</a>.</p>
+<p>I would add as many tags to area as possible. In addition to that I would simply add all <a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrances</a>.</p>
 <p>In case it is not possible to add all information to area (different fees at different entrances) I would add some information to individual entrances.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -145,7 +145,7 @@ osqa_accepted = true
 <div id="post-14273-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I did, but it has two disadvantages (see the first part of the question). If you look at the given example: <a href="http://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M</a> than you see that there is no visual clue where the entry point / main information box is. You can only tell by experience, that it probably will be the big building on the nort east of the site.</p>
+<p>I did, but it has two disadvantages (see the first part of the question). If you look at the given example: <a href="https://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M</a> than you see that there is no visual clue where the entry point / main information box is. You can only tell by experience, that it probably will be the big building on the nort east of the site.</p>
 </div>
 <div id="comment-14273-info" class="comment-info">
 <span class="comment-age">(15 Jul '12, 19:32)</span> <span class="comment-user userinfo">gorn</span>
@@ -229,7 +229,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>There are two disadvantages of doing so: 1. Icons denoting site are put in the center whereas on "normal" maps they are often placed at the main entry/reception/box office which helps navigation to the site greatly. 2. Automatic navigation can be confused and the visitor can find himeslf coming from very wrong direction.</p>
-<p>Please have a look at the given example <a href="http://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M</a> - the icon of museum does not give any clue where I can enter the site.</p>
+<p>Please have a look at the given example <a href="https://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=48.90183&amp;lon=17.30796&amp;zoom=17&amp;layers=M</a> - the icon of museum does not give any clue where I can enter the site.</p>
 </div>
 <div id="comment-14272-info" class="comment-info">
 <span class="comment-age">(15 Jul '12, 19:28)</span> <span class="comment-user userinfo">gorn</span>

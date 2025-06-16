@@ -154,8 +154,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You will probably find it easier to use some pre-built maps so have a look at this in the Wiki <a href="http://wiki.openstreetmap.org/wiki/Garmin#Pre-made_maps">http://wiki.openstreetmap.org/wiki/Garmin#Pre-made_maps</a><br />
-and <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> you will have to see if your device can take a memory card or as enough built-in memory space. Those looking for a GB map I can recommend these <a href="http://talkytoaster.info/ukmaps.htm">http://talkytoaster.info/ukmaps.htm</a></p>
+<p>You will probably find it easier to use some pre-built maps so have a look at this in the Wiki <a href="https://wiki.openstreetmap.org/wiki/Garmin#Pre-made_maps">https://wiki.openstreetmap.org/wiki/Garmin#Pre-made_maps</a><br />
+and <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin</a> you will have to see if your device can take a memory card or as enough built-in memory space. Those looking for a GB map I can recommend these <a href="http://talkytoaster.info/ukmaps.htm">http://talkytoaster.info/ukmaps.htm</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -174,7 +174,7 @@ and <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">http://wiki.o
 <div id="post-17146-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>and this <a href="https://help.openstreetmap.org/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
+<p>and this <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
 </div>
 <div id="comment-17146-info" class="comment-info">
 <span class="comment-age">(23 Oct '12, 22:04)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -134,7 +134,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>there are already some definitions about this topic:</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Key:wheelchair">Key:wheelchair</a> and <a href="http://wiki.openstreetmap.org/wiki/Wheelmap">wheelmap.org</a> and <a href="http://wiki.openstreetmap.org/wiki/Category:Disabilities">Category:Disabilities</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Key:wheelchair">Key:wheelchair</a> and <a href="https://wiki.openstreetmap.org/wiki/Wheelmap">wheelmap.org</a> and <a href="https://wiki.openstreetmap.org/wiki/Category:Disabilities">Category:Disabilities</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -154,7 +154,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>See also <a href="http://wiki.openstreetmap.org/wiki/Barrier">barrier</a>.</p>
+<p>See also <a href="https://wiki.openstreetmap.org/wiki/Barrier">barrier</a>.</p>
 </div>
 <div id="comment-28183-info" class="comment-info">
 <span class="comment-age">(18 Nov '13, 13:40)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

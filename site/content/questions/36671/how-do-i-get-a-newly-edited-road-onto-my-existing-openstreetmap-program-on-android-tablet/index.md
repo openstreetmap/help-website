@@ -321,7 +321,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>MapFactor's Last Updates are listed on <a href="http://navigatorfree.mapfactor.com/en/maps/">this page</a>. See <a href="https://help.openstreetmap.org/questions/30911/how-to-download-map-data-with-my-new-edits-for-mapfactor-phone-navigation">this previous question</a> for more information.</p>
+<p>MapFactor's Last Updates are listed on <a href="http://navigatorfree.mapfactor.com/en/maps/">this page</a>. See <a href="/questions/30911/how-to-download-map-data-with-my-new-edits-for-mapfactor-phone-navigation">this previous question</a> for more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I used to think that the cyan colour GPX trace wasn't too clear and it is a very fine line, but with better glasses it hasn't troubled me, I did change monitors maybe that also helped me. I wonder if adjusting your monitor's colour balance would help or even a tinted lens like that used by some 3D TV systems would help, like the old red green specs used in the cinema a few times. Trace colour as been the subject of some suggestions. sorry I don't know a way of fine tuning trace visibility. see</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#GPS_Trails">http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#GPS_Trails</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#GPS_Trails">https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements#GPS_Trails</a></p>
 <p>Another option is to click floating window option ( Background tab ) then turn off background, you will then get a split screen one without a background and the bing with a cursor only, like this. see screen shot.<img src="/upfiles/show_floating_window.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
@@ -198,7 +198,7 @@ osqa_accepted = false
 <div id="post-37981-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: thanks. I may be wrong.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: thanks. I may be wrong.</p>
 </div>
 <div id="comment-37981-info" class="comment-info">
 <span class="comment-age">(26 Oct '14, 23:47)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -126,7 +126,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>Percentage of actual viewed tiles on <a href="http://tile.osm.org">tile.osm.org</a>: <a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a></p>
+<p>Percentage of actual viewed tiles on <a href="http://tile.osm.org">tile.osm.org</a>: <a href="https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a></p>
 </div>
 <div id="comment-6163-info" class="comment-info">
 <span class="comment-age">(03 Jul '11, 13:33)</span> <span class="comment-user userinfo">Firefishy ♦♦</span>

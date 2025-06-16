@@ -178,7 +178,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can try to use the editor <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> ... there is a user-friendly plugin to create turn-restrictions</p>
+<p>You can try to use the editor <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a> ... there is a user-friendly plugin to create turn-restrictions</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

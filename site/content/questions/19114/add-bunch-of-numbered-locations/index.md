@@ -183,8 +183,8 @@ osqa_accepted = true
 <div class="answer-body">
 <p>OsmAnd is a good option as emj mentioned.</p>
 <p>If you really want a printed map, you'll need some coding experience.</p>
-<p>With <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, you can ask for an address (or POI name), and get the position back. So if you put this in a script, you can create a list with positions and names.</p>
-<p>Afterwards, you can create a simple <a href="http://wiki.openstreetmap.org/wiki/Leaflet">leaflet</a> webpage which displays these locations on a map. This map can be printed (or at least via a screenshot) on paper.</p>
+<p>With <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, you can ask for an address (or POI name), and get the position back. So if you put this in a script, you can create a list with positions and names.</p>
+<p>Afterwards, you can create a simple <a href="https://wiki.openstreetmap.org/wiki/Leaflet">leaflet</a> webpage which displays these locations on a map. This map can be printed (or at least via a screenshot) on paper.</p>
 <p>Of course, the quality of the reply from Nominatim depends on the data. If there are no housenumbers present in the data, it won't give you the exact position.</p>
 </div>
 <div class="answer-controls post-controls">

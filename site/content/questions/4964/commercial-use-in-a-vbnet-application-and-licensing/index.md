@@ -107,8 +107,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes</p>
-<p>You just want to show the map tiles, and cache the map tiles, and layer some data over the top? Go for it! If you're using OpenLayers, leave the default attribution in place and you'll be compliant with the <a href="http://www.openstreetmap.org/copyright">attribution requirements</a>.</p>
-<p>Caching tiles for offline use is fully permitted, but be aware that you shouldn't bulk download tiles from our server. That can degrade the service for everyone else (See <a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">Tile Usage Policy</a>)</p>
+<p>You just want to show the map tiles, and cache the map tiles, and layer some data over the top? Go for it! If you're using OpenLayers, leave the default attribution in place and you'll be compliant with the <a href="https://www.openstreetmap.org/copyright">attribution requirements</a>.</p>
+<p>Caching tiles for offline use is fully permitted, but be aware that you shouldn't bulk download tiles from our server. That can degrade the service for everyone else (See <a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">Tile Usage Policy</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

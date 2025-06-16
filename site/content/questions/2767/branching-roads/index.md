@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I potlach2 pressing "r" will repeat the last tag saving a bit of typing. also other short cuts are available <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
+<p>I potlach2 pressing "r" will repeat the last tag saving a bit of typing. also other short cuts are available <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

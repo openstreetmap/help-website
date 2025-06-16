@@ -133,7 +133,7 @@ One Answer:
 <div class="answer-body">
 <ol>
 <li>The prefered way is to place a node at the entrence so that the routing software will navigate you to the front door. This is espessialy importent for the blind.</li>
-<li>From the <a href="http://wiki.openstreetmap.org/wiki/Key:addr:housenumber">wiki</a>: If a single entry has multiple house numbers, separate them by ",". e.g. "12b,12c". Alternativly mark the entrences with the address or use intrepolation ways.</li>
+<li>From the <a href="https://wiki.openstreetmap.org/wiki/Key:addr:housenumber">wiki</a>: If a single entry has multiple house numbers, separate them by ",". e.g. "12b,12c". Alternativly mark the entrences with the address or use intrepolation ways.</li>
 <li>This is generaly not taged on each address. But it could be tagged on poligons around the city/country/postcode area.</li>
 </ol>
 </div>
@@ -176,7 +176,7 @@ One Answer:
 <div id="post-48747-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8991/markushd">@MarkusHD</a> commenting on a 6 year old answer and not even indicating what you would do different is not particularly helpful. This is "help.openstreetmap.org", not "moan.openstreetmap.org".</p>
+<p><a href="https://help.openstreetmap.org/users/8991/markushd">@MarkusHD</a> commenting on a 6 year old answer and not even indicating what you would do different is not particularly helpful. This is "help.openstreetmap.org", not "moan.openstreetmap.org".</p>
 </div>
 <div id="comment-48747-info" class="comment-info">
 <span class="comment-age">(19 Mar '16, 08:40)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

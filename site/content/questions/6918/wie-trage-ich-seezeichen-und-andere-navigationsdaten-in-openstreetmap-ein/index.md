@@ -112,8 +112,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a project called <a href="http://wiki.openstreetmap.org/wiki/OpenSeaMap">OpenSeaMap</a>, where you may find a lot of information about mapping nautical symbols.</p>
-<p>Die <a href="http://wiki.openstreetmap.org/wiki/DE:OpenSeaMap">deutsche Seite</a> von OpenSeaMap ist ebenfalls excellent gepflegt.</p>
+<p>There is a project called <a href="https://wiki.openstreetmap.org/wiki/OpenSeaMap">OpenSeaMap</a>, where you may find a lot of information about mapping nautical symbols.</p>
+<p>Die <a href="https://wiki.openstreetmap.org/wiki/DE:OpenSeaMap">deutsche Seite</a> von OpenSeaMap ist ebenfalls excellent gepflegt.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -163,7 +163,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Also have a look at <a href="http://wiki.openstreetmap.org/wiki/DE:FreieTonne">FreieTonne</a></p>
+<p>Also have a look at <a href="https://wiki.openstreetmap.org/wiki/DE:FreieTonne">FreieTonne</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

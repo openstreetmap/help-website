@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Regarding the Netherlands: Nominatim is giving the location based on <a href="http://www.openstreetmap.org/browse/relation/47796">relation 47796</a>. This includes the 'mainland' part (in Europe), as well as several islands in the Caribbean. These are all part of the country of the Netherlands, so it appears the OSM data is actually correct. But it seems Nominatim is calculating the centre point of all of this, which is somewhere in the Atlantic.</p>
+<p>Regarding the Netherlands: Nominatim is giving the location based on <a href="https://www.openstreetmap.org/browse/relation/47796">relation 47796</a>. This includes the 'mainland' part (in Europe), as well as several islands in the Caribbean. These are all part of the country of the Netherlands, so it appears the OSM data is actually correct. But it seems Nominatim is calculating the centre point of all of this, which is somewhere in the Atlantic.</p>
 <p>I don't know whether this should be mapped or tagged differently. Maybe Nominatim could somehow calculate the centre of just the mainland part. Or use the location of the node with role admin_centre. This should probably be discussed on the appropriate mailing lists.</p>
 </div>
 <div class="answer-controls post-controls">

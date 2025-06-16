@@ -172,7 +172,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Searching and rendering are two different things, that's why the rendering intervals don't apply for searching addresses. For searching we currently use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> which had several update problems in the past, also due to our recent license change. But now it should update more regularly I guess so that your data should appear soon. The date of the last update can be viewed at <a href="http://nominatim.openstreetmap.org/">nominatim.openstreetmap.org</a> at the top of the page.</p>
+<p>Searching and rendering are two different things, that's why the rendering intervals don't apply for searching addresses. For searching we currently use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> which had several update problems in the past, also due to our recent license change. But now it should update more regularly I guess so that your data should appear soon. The date of the last update can be viewed at <a href="http://nominatim.openstreetmap.org/">nominatim.openstreetmap.org</a> at the top of the page.</p>
 <p>If you think your data should already be searchable, but isn't, please be more specific and give use some information about your changes, ideally the ID of an object or of a changeset.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -206,8 +206,8 @@ osqa_accepted = true
 <div id="post-15714-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>The <a href="http://www.openstreetmap.org/browse/way/178719020/history">building</a> I assume you are talking about has been added on 2012/08/30 which is also the date of Nominatim's last update, so I suggest to wait for the next update first.</p>
-<p>But you are probably right about the <a href="http://wiki.openstreetmap.org/wiki/Key:postal_code">postal code</a>, I can't find it anywhere <a href="http://nominatim.openstreetmap.org/details.php?place_id=148850659">here</a>. Seems like postal codes are missing a lot in this area.</p>
+<p>The <a href="https://www.openstreetmap.org/browse/way/178719020/history">building</a> I assume you are talking about has been added on 2012/08/30 which is also the date of Nominatim's last update, so I suggest to wait for the next update first.</p>
+<p>But you are probably right about the <a href="https://wiki.openstreetmap.org/wiki/Key:postal_code">postal code</a>, I can't find it anywhere <a href="http://nominatim.openstreetmap.org/details.php?place_id=148850659">here</a>. Seems like postal codes are missing a lot in this area.</p>
 </div>
 <div id="comment-15714-info" class="comment-info">
 <span class="comment-age">(31 Aug '12, 07:39)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bicycle parking is the present <a href="http://wiki.openstreetmap.org/wiki/Project_of_the_week/2010/Dec_15">Project of the Week</a>. Tags suggested to use there:</p>
+<p>Bicycle parking is the present <a href="https://wiki.openstreetmap.org/wiki/Project_of_the_week/2010/Dec_15">Project of the Week</a>. Tags suggested to use there:</p>
 <ul>
 <li>amenity=bicycle_parking</li>
 <li>capacity=# # numeric value only for capacity</li>
@@ -184,7 +184,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Use <a href="http://wiki.openstreetmap.org/wiki/Bicycle_parking">amenity=bicycle_parking</a>.</p>
+<p>Use <a href="https://wiki.openstreetmap.org/wiki/Bicycle_parking">amenity=bicycle_parking</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

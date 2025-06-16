@@ -111,11 +111,11 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I strongly recommend these wiki pages:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Coastline">http://wiki.openstreetmap.org/wiki/Coastline</a><br />
-<a href="http://wiki.openstreetmap.org/wiki/Coastline_error_checker">http://wiki.openstreetmap.org/wiki/Coastline_error_checker</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Coastline">https://wiki.openstreetmap.org/wiki/Coastline</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Coastline_error_checker">https://wiki.openstreetmap.org/wiki/Coastline_error_checker</a></p>
 <p>It's explaining how coastline rendering works, why we need special tools to monitor them in OSM and the different type of errors we can find.<br />
-But two simple rules to remind : coastlines are not assembled with 'relations' and ways tagged with "<a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">natural=coastline</a>" have the "water on the right". You may find many coastlines being part of relations but this is mostly for administrative boundaries, never for the coastline itself.<br />
-Saying that, the solution for you will depend on which zoom level(s) your simple renderer works. You might also have a look on how the application <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> (converting OSM data to Garmin GPS) is <a href="http://wiki.openstreetmap.org/wiki/Mkgmap/help/usage#Sea_generation_options">generating sea polygons</a>.</p>
+But two simple rules to remind : coastlines are not assembled with 'relations' and ways tagged with "<a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">natural=coastline</a>" have the "water on the right". You may find many coastlines being part of relations but this is mostly for administrative boundaries, never for the coastline itself.<br />
+Saying that, the solution for you will depend on which zoom level(s) your simple renderer works. You might also have a look on how the application <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> (converting OSM data to Garmin GPS) is <a href="https://wiki.openstreetmap.org/wiki/Mkgmap/help/usage#Sea_generation_options">generating sea polygons</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -169,7 +169,7 @@ Saying that, the solution for you will depend on which zoom level(s) your simple
 <td><div class="item-right">
 <div class="answer-body">
 <p>One starting point can be here in the OSM wiki:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Coastline">Coastline</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

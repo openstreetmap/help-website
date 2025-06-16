@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-79507-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Why is this the <a href="https://help.openstreetmap.org/questions/79140/how-to-add-map-for-my-website">same question</a> for the same website again as a few weeks ago? Are you just trying to place links?</p>
+<p>Why is this the <a href="/questions/79140/how-to-add-map-for-my-website">same question</a> for the same website again as a few weeks ago? Are you just trying to place links?</p>
 </div>
 <div id="comment-79507-info" class="comment-info">
 <span class="comment-age">(02 Apr '21, 19:05)</span> <span class="comment-user userinfo">TZorn</span>
@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you just want to display a marker on a map, embedded in your web site, have a look at <a href="https://help.openstreetmap.org/questions/39063/where-to-find-a-simple-html-map-with-a-marker-in-the-share-menu">this question</a> and the <a href="https://wiki.openstreetmap.org/wiki/Export#Embeddable_HTML">wiki</a>.</p>
+<p>If you just want to display a marker on a map, embedded in your web site, have a look at <a href="/questions/39063/where-to-find-a-simple-html-map-with-a-marker-in-the-share-menu">this question</a> and the <a href="https://wiki.openstreetmap.org/wiki/Export#Embeddable_HTML">wiki</a>.</p>
 <p>If you don't know how to include an iframe in your website, you'll have to see with your CMS provider.</p>
 <p>Regards</p>
 </div>

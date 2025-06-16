@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>I am adding buildings to OSM in Klosters/Switzertzerland. And I am not sure if I tagged the buildings like I should. For buildings with a house number I take "building=house" and for ones without a house number, I chose "building=yes". I saw that someone where I live took always "building=yes". so is he not precise, or am I wrong? unfortunately I could not find a satisfying answer in the wiki or here in the help.</p>
 <p>I hope I do not have to change all I have done so far ;) (but would if I am wrong)</p>
 <p>Please tell me how I should tag. Thanks!</p>
-<p>here is the place how I did my last adding: <a href="http://www.openstreetmap.org/relation/1653103#map=18/46.88206/9.87947">http://www.openstreetmap.org/relation/1653103#map=18/46.88206/9.87947</a></p>
+<p>here is the place how I did my last adding: <a href="https://www.openstreetmap.org/relation/1653103#map=18/46.88206/9.87947">https://www.openstreetmap.org/relation/1653103#map=18/46.88206/9.87947</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-house" rel="tag" title="see questions tagged &#39;house&#39;">house</span>
@@ -120,8 +120,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The value of the "building" tag does not depend on its address. It's just telling what kind of building it is (<a href="http://wiki.openstreetmap.org/wiki/Key:building">a church, an hospital, a house, etc</a>). If you don't know this information or you are not motivated to provide it, you can simply tag "building=yes" as a default value. It's less accurate but perfectly valid. Somebody else might change the "yes" to something better in the future. This is how OSM works, by multiple iterations and improvements. It's not dramatic if you are not perfect in your contributions. It will be improved later (more contributors working on the same area means quality and accuracy increasing faster).</p>
-<p>About the address, you can add the "addr:*" tags in different ways. You can <a href="http://wiki.openstreetmap.org/wiki/Addresses">put this on the building polygon or on one node</a> (being inside the building or attached to the building way itself e.g. where the entrance or mailbox is). This is not influencing the "building" tag. It's two different things which may or may not be combined on the same OSM elements.</p>
+<p>The value of the "building" tag does not depend on its address. It's just telling what kind of building it is (<a href="https://wiki.openstreetmap.org/wiki/Key:building">a church, an hospital, a house, etc</a>). If you don't know this information or you are not motivated to provide it, you can simply tag "building=yes" as a default value. It's less accurate but perfectly valid. Somebody else might change the "yes" to something better in the future. This is how OSM works, by multiple iterations and improvements. It's not dramatic if you are not perfect in your contributions. It will be improved later (more contributors working on the same area means quality and accuracy increasing faster).</p>
+<p>About the address, you can add the "addr:*" tags in different ways. You can <a href="https://wiki.openstreetmap.org/wiki/Addresses">put this on the building polygon or on one node</a> (being inside the building or attached to the building way itself e.g. where the entrance or mailbox is). This is not influencing the "building" tag. It's two different things which may or may not be combined on the same OSM elements.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -183,7 +183,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi no you did not. It’s the best practice to use the right tags. So if a building is used residential it’s a house and not a garage. An office is tagged office or commercial take a look here <a href="http://wiki.openstreetmap.org/wiki/Building">http://wiki.openstreetmap.org/wiki/Building</a> and reed all the available tags for a building.</p>
+<p>Hi no you did not. It’s the best practice to use the right tags. So if a building is used residential it’s a house and not a garage. An office is tagged office or commercial take a look here <a href="https://wiki.openstreetmap.org/wiki/Building">https://wiki.openstreetmap.org/wiki/Building</a> and reed all the available tags for a building.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -204,7 +204,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>This answer may have been accepted, but it is incomplete: Whether the "house" value is the right choice for a building has absolutely nothing to do with whether it has a house number.</p>
-<p>In an answer for a relatively new mapper it should also be mentioned that the building values are not very important for applications. For example, it's much more important that a church is tagged with <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">amenity=place_of_worship</a> than whether its building is tagged as a church-like building (building=church).</p>
+<p>In an answer for a relatively new mapper it should also be mentioned that the building values are not very important for applications. For example, it's much more important that a church is tagged with <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">amenity=place_of_worship</a> than whether its building is tagged as a church-like building (building=church).</p>
 </div>
 <div id="comment-30529-info" class="comment-info">
 <span class="comment-age">(07 Feb '14, 10:57)</span> <span class="comment-user userinfo">Tordanik</span>

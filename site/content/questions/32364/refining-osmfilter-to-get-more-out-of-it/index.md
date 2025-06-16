@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "refining osmfilter to get more out of it"
-description = '''hello dear openstreetmap experts  new to the gis-technique: i am workin with the following tools:  this  http://wiki.openstreetmap.org/wiki/DE:Osmconvert  and that http://wiki.openstreetmap.org/wiki/DE:Osmfilter  i get the following example:   wget download.geofabrik.de/openstreetmap/europe/germany....'''
+description = '''hello dear openstreetmap experts  new to the gis-technique: i am workin with the following tools:  this  https://wiki.openstreetmap.org/wiki/DE:Osmconvert  and that https://wiki.openstreetmap.org/wiki/DE:Osmfilter  i get the following example:   wget download.geofabrik.de/openstreetmap/europe/germany....'''
 date = "2014-04-14T15:35:00Z"
 lastmod = "2014-04-16T21:39:00Z"
 weight = 32364
@@ -42,9 +42,9 @@ osqa_accepted = false
 <p>hello dear openstreetmap experts</p>
 <p>new to the gis-technique: i am workin with the following tools:</p>
 <p>this</p>
-<pre><code>http://wiki.openstreetmap.org/wiki/DE:Osmconvert</code></pre>
+<pre><code>https://wiki.openstreetmap.org/wiki/DE:Osmconvert</code></pre>
 <p>and that</p>
-<pre><code>http://wiki.openstreetmap.org/wiki/DE:Osmfilter</code></pre>
+<pre><code>https://wiki.openstreetmap.org/wiki/DE:Osmfilter</code></pre>
 <p>i get the following example: wget download.geofabrik.de/openstreetmap/europe/germany.osm.pbf osmconvert germany.osm.pbf --all-to-nodes -o=germany.o5m osmfilter germany.o5m --keep="amenity=shop or shop=*" -o=shops.o5m osmconvert shops.o5m --csv="<span>@id</span> <span>@lon</span> <span>@lat</span> shop name" --csv-headline -o=shops.csv</p>
 <p>that runs fine - now i want to refine:</p>
 <p>to get such a result- [made out of xslt]</p>

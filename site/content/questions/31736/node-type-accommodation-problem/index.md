@@ -176,8 +176,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dguest_house">Guest House</a> in iD create your point or area that represents the guest house and start typing "Guest" in the search box.</p>
-<p>I'm not quite sure about the difference between the two types of accommodation you list, as most guest houses as I know them usually have owners accommodation in them somewhere. Does <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dchalet"><code>tourism=chalet</code></a> cover any of the types you are after?</p>
+<p>For <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dguest_house">Guest House</a> in iD create your point or area that represents the guest house and start typing "Guest" in the search box.</p>
+<p>I'm not quite sure about the difference between the two types of accommodation you list, as most guest houses as I know them usually have owners accommodation in them somewhere. Does <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dchalet"><code>tourism=chalet</code></a> cover any of the types you are after?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

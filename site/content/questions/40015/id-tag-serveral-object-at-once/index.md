@@ -148,7 +148,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This question was previously asked at <a href="https://help.openstreetmap.org/questions/35819/how-to-assign-a-tag-to-multiple-objects-at-once">https://help.openstreetmap.org/questions/35819/how-to-assign-a-tag-to-multiple-objects-at-once</a> . The conclusion was that it's not currently possible in iD but you can use Potlatch 2 to do it.</p>
+<p>This question was previously asked at <a href="/questions/35819/how-to-assign-a-tag-to-multiple-objects-at-once">https://help.openstreetmap.org/questions/35819/how-to-assign-a-tag-to-multiple-objects-at-once</a> . The conclusion was that it's not currently possible in iD but you can use Potlatch 2 to do it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

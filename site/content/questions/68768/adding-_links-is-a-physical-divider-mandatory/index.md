@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>I've been editing roads in Europe and noticed that there a lot of *_link cases mapped as separate ways even though there is no physical separation between the lanes - only painted lanes on the ground.</p>
 <p>I understand that this can be mapped as a singleway with turn:lane information but there are a lot of link cases where that are only paint divided, and I don't want to modify them without making sure that physical separation is mandatory for links (can't seem to find that information on OSM wiki)</p>
 <p>Example this intersection in Romania:</p>
-<p>OSM geometry: <img src="https://help.openstreetmap.org/upfiles/Capture_vX77v0X.PNG" alt="alt text" /> Street level imagery from Mapilary: <img src="https://help.openstreetmap.org/upfiles/Capture2_Uj5BqXi.PNG" alt="alt text" /></p>
+<p>OSM geometry: <img src="/upfiles/Capture_vX77v0X.PNG" alt="alt text" /> Street level imagery from Mapilary: <img src="/upfiles/Capture2_Uj5BqXi.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-roads" rel="tag" title="see questions tagged &#39;roads&#39;">roads</span> <span class="post-tag tag-link-divider" rel="tag" title="see questions tagged &#39;divider&#39;">divider</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span> <span class="post-tag tag-link-links" rel="tag" title="see questions tagged &#39;links&#39;">links</span> <span class="post-tag tag-link-bestpractice" rel="tag" title="see questions tagged &#39;bestpractice&#39;">bestpractice</span>

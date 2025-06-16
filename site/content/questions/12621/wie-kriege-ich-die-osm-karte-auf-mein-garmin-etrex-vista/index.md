@@ -122,8 +122,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ein guter Anfang wäre es, diese <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin/Download">Wiki-Seite</a> zu lesen</p>
-<p>Englischer Originaltext: A good start would be to read the <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin/Download">wiki</a></p>
+<p>Ein guter Anfang wäre es, diese <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin/Download">Wiki-Seite</a> zu lesen</p>
+<p>Englischer Originaltext: A good start would be to read the <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin/Download">wiki</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -179,7 +179,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'd have a look at the answers to <a href="http://help.openstreetmap.org/search/?q=garmin&amp;Submit=search&amp;t=question">one of these previous questions</a>. There are some step-by-step instructions for someone <a href="http://help.openstreetmap.org/questions/3785/osm-on-garmin">here</a>. If you haven't already downloaded a map perhaps start from <a href="http://garmin.openstreetmap.nl/">here</a>?</p>
+<p>I'd have a look at the answers to <a href="https://help.openstreetmap.org/search/?q=garmin&amp;Submit=search&amp;t=question">one of these previous questions</a>. There are some step-by-step instructions for someone <a href="/questions/3785/osm-on-garmin">here</a>. If you haven't already downloaded a map perhaps start from <a href="http://garmin.openstreetmap.nl/">here</a>?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

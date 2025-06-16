@@ -117,9 +117,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The problem in this case is that at one point in the past, "Point Lisas Industrial Estate" was tagged as a "region" which it clearly isn't. This has been fixed (<a href="http://www.openstreetmap.org/browse/node/1327431650/history)">http://www.openstreetmap.org/browse/node/1327431650/history)</a> but the geocoder hasn't caught up with that yet.</p>
+<p>The problem in this case is that at one point in the past, "Point Lisas Industrial Estate" was tagged as a "region" which it clearly isn't. This has been fixed (<a href="https://www.openstreetmap.org/browse/node/1327431650/history)">https://www.openstreetmap.org/browse/node/1327431650/history)</a> but the geocoder hasn't caught up with that yet.</p>
 <p>The general method to investigate such problems is to go to nominatim.openstreetmap.org, enter the address, and then in the results click on "detail"; this lists all components that were used in making up the result.</p>
-<p>To answer your second question, about importing correct polygons: If you have to ask, then importing data is not for you. It is difficult for many different reasons and you can create a lot of harm with imports. There's an article about <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a> on the wiki.</p>
+<p>To answer your second question, about importing correct polygons: If you have to ask, then importing data is not for you. It is difficult for many different reasons and you can create a lot of harm with imports. There's an article about <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Guidelines</a> on the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -139,7 +139,7 @@ One Answer:
 <div class="comment-text">
 <p>Sorry, I was talking about Mapnik. I thought that was obvious.</p>
 <p>The areas in question is here:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/28333462">http://www.openstreetmap.org/browse/way/28333462</a> <a href="http://www.openstreetmap.org/browse/way/111556079">http://www.openstreetmap.org/browse/way/111556079</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/28333462">https://www.openstreetmap.org/browse/way/28333462</a> <a href="https://www.openstreetmap.org/browse/way/111556079">https://www.openstreetmap.org/browse/way/111556079</a></p>
 <p>Osmarender doesn't have this problem, but it has so many other problems...</p>
 </div>
 <div id="comment-5339-info" class="comment-info">

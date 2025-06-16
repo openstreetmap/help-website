@@ -65,7 +65,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Please note that the Belgian community is working on a tool to simplify this process. We still have to start the approval process on the import-mailing list. <a href="http://www.openstreetmap.org/user/escada">Contact me</a> for more info.</p>
+<p>Please note that the Belgian community is working on a tool to simplify this process. We still have to start the approval process on the import-mailing list. <a href="https://www.openstreetmap.org/user/escada">Contact me</a> for more info.</p>
 </div>
 <div id="comment-60144-info" class="comment-info">
 <span class="comment-age">(16 Oct '17, 04:51)</span> <span class="comment-user userinfo">escada</span>

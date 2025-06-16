@@ -183,7 +183,7 @@ osqa_accepted = false
 </p>
 <p>The way the map looks on a Garmin is determined by a couple of things - the style folder within mkgmap (which you can tinker around with a bit - that maps OSM items to Garmin items with predefined Garmin bitmaps etc.) and the TYP file (that allows you to tinker some more and not just use built-in Garmin items for OSM items).</p>
 <p>I've never seen a Dakota but from looking at the pictures on Garmin's web site it does look like its a bit more capable colour-wise than the eTrex that I have. You may be able to make the map look a bit more like the main ("Mapnik") OSM map by creating tinkering around, and if you're doing this the main mkgmap mailing list and archives might be helpful: <a href="http://www.mkgmap.org.uk/pipermail/mkgmap-dev/"></a><a href="http://www.mkgmap.org.uk/pipermail/mkgmap-dev/"></a><a href="http://www.mkgmap.org.uk/pipermail/mkgmap-dev/">http://www.mkgmap.org.uk/pipermail/mkgmap-dev/</a></p>
-<p>If you haven't already seen it, there are a bunch of links here: <a href="http://wiki.openstreetmap.org/wiki/Mkgmap"></a><a href="http://wiki.openstreetmap.org/wiki/Mkgmap"></a><a href="http://wiki.openstreetmap.org/wiki/Mkgmap">http://wiki.openstreetmap.org/wiki/Mkgmap</a></p>
+<p>If you haven't already seen it, there are a bunch of links here: <a href="https://wiki.openstreetmap.org/wiki/Mkgmap"></a><a href="https://wiki.openstreetmap.org/wiki/Mkgmap"></a><a href="https://wiki.openstreetmap.org/wiki/Mkgmap">https://wiki.openstreetmap.org/wiki/Mkgmap</a></p>
 <p>Also, a quick web search for "TYP file" will point to people other than OSM folks who are doing much the same thing.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Overpass:  Is it possible to use it as an alternative to the API relation /full call?"
-description = '''(prompted by this question and this question) Imagine that I&#x27;d like a .osm file containing every sub-relation, way and node that&#x27;s part of relation 50288. I could do an API call to: http://www.openstreetmap.org/api/0.6/relation/RELATION/full But I don&#x27;t really want the API taking the time to sort ou...'''
+description = '''(prompted by this question and this question) Imagine that I&#x27;d like a .osm file containing every sub-relation, way and node that&#x27;s part of relation 50288. I could do an API call to: https://www.openstreetmap.org/api/0.6/relation/RELATION/full But I don&#x27;t really want the API taking the time to sort ou...'''
 date = "2012-11-01T17:28:00Z"
 lastmod = "2012-11-01T21:44:00Z"
 weight = 17365
@@ -39,11 +39,11 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>(prompted by <a href="https://help.openstreetmap.org/questions/17311/missing-way-in-a-relation">this question</a> and <a href="https://help.openstreetmap.org/questions/17336/overpass-api-query-question">this question</a>)</p>
-<p>Imagine that I'd like a .osm file containing every sub-relation, way and node that's part of relation <a href="http://www.openstreetmap.org/browse/relation/50288">50288</a>. I could do an API call to:</p>
-<p><a href="http://www.openstreetmap.org/api/0.6/relation/RELATION/full">http://www.openstreetmap.org/api/0.6/relation/RELATION/full</a></p>
+<p>(prompted by <a href="/questions/17311/missing-way-in-a-relation">this question</a> and <a href="/questions/17336/overpass-api-query-question">this question</a>)</p>
+<p>Imagine that I'd like a .osm file containing every sub-relation, way and node that's part of relation <a href="https://www.openstreetmap.org/browse/relation/50288">50288</a>. I could do an API call to:</p>
+<p><a href="https://www.openstreetmap.org/api/0.6/relation/RELATION/full">https://www.openstreetmap.org/api/0.6/relation/RELATION/full</a></p>
 <p>But I don't really want the API taking the time to sort out that rather large result for me rather than processing time-critical requests for mappers.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> looks like it can do things like this, but there doesn't seem to be an example of it on the wiki. Can anyone suggest an Overpass query that would return the same data as an API relation /full call? If not Overpass, is there anything else out there that can?</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> looks like it can do things like this, but there doesn't seem to be an example of it on the wiki. Can anyone suggest an Overpass query that would return the same data as an API relation /full call? If not Overpass, is there anything else out there that can?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-api" rel="tag" title="see questions tagged &#39;api&#39;">api</span> <span class="post-tag tag-link-xapi" rel="tag" title="see questions tagged &#39;xapi&#39;">xapi</span> <span class="post-tag tag-link-full" rel="tag" title="see questions tagged &#39;full&#39;">full</span> <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span>
@@ -176,7 +176,7 @@ osqa_accepted = true
 <p>I wrote an API 0.6 to Overpass API converter that you can query here :</p>
 <p><a href="http://api.openstreetmap.fr/api/0.6/relation/RELATION">http://api.openstreetmap.fr/api/0.6/relation/RELATION</a> ID/full</p>
 <p>-&gt; <a href="http://api.openstreetmap.fr/api/0.6/relation/50288/full">http://api.openstreetmap.fr/api/0.6/relation/50288/full</a></p>
-<p>wiki doc : <a href="http://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr">http://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr</a></p>
+<p>wiki doc : <a href="https://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr">https://wiki.openstreetmap.org/wiki/Servers/api.openstreetmap.fr</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

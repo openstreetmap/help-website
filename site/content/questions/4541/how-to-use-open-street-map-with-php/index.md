@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not an expert, but is the example detailed in the wiki <a href="http://wiki.openstreetmap.org/wiki/Odopoi">here</a> similar to what you had in mind?</p>
+<p>I'm not an expert, but is the example detailed in the wiki <a href="https://wiki.openstreetmap.org/wiki/Odopoi">here</a> similar to what you had in mind?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

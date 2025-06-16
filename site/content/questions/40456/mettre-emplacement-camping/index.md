@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Regarder ici, <a href="http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site">http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site</a> s'il vous plaît.</p>
+<p>Regarder ici, <a href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site">https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site</a> s'il vous plaît.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

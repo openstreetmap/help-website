@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just hit r. Also see <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">the wiki</a> for a comprehensive list.</p>
+<p>Just hit r. Also see <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Shortcuts">the wiki</a> for a comprehensive list.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

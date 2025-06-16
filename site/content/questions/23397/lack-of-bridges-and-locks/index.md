@@ -136,7 +136,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p><span></span><span>@Hendrikklaas</span>: Do you know that the wiki has a search feature?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Lock">Key:lock in the wiki</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Lock">Key:lock in the wiki</a></p>
 <p>On top of that, I already explained to you (by private message on august 5 2012) how to tag a lock.</p>
 </div>
 <div id="comment-23430-info" class="comment-info">
@@ -160,7 +160,7 @@ osqa_accepted = true
 <div id="post-23456-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This flight of locks is a bit of landmark (not watermark??) so there are some mapped.They are just nodes of course. <a href="http://www.openstreetmap.org/?lat=52.4997&amp;lon=-0.98183&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.4997&amp;lon=-0.98183&amp;zoom=17&amp;layers=M</a></p>
+<p>This flight of locks is a bit of landmark (not watermark??) so there are some mapped.They are just nodes of course. <a href="https://www.openstreetmap.org/?lat=52.4997&amp;lon=-0.98183&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.4997&amp;lon=-0.98183&amp;zoom=17&amp;layers=M</a></p>
 </div>
 <div id="comment-23456-info" class="comment-info">
 <span class="comment-age">(17 Jun '13, 11:42)</span> <span class="comment-user userinfo">andy mackey</span>

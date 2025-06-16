@@ -74,7 +74,7 @@ osqa_accepted = false
 <div id="post-45811-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4641/shahriarnk">@ShahriarNK</a>, I also need to create a heatmap based on OSM. I would like to build this on C# VS2013. If you know some APIs that may help do this, please let me know. I would really appreciate.</p>
+<p><a href="https://help.openstreetmap.org/users/4641/shahriarnk">@ShahriarNK</a>, I also need to create a heatmap based on OSM. I would like to build this on C# VS2013. If you know some APIs that may help do this, please let me know. I would really appreciate.</p>
 </div>
 <div id="comment-45811-info" class="comment-info">
 <span class="comment-age">(08 Oct '15, 15:16)</span> <span class="comment-user userinfo">usact</span>

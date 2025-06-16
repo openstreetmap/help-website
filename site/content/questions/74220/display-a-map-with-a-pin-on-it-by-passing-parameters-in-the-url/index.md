@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You'll find a lot of relevant information in this recent <a href="https://help.openstreetmap.org/questions/72106/simple-url-query-to-display-address">question</a>.</p>
+<p>You'll find a lot of relevant information in this recent <a href="/questions/72106/simple-url-query-to-display-address">question</a>.</p>
 <p>Simple answer is <a href="https://www.openstreetmap.org/search?query=">https://www.openstreetmap.org/search?query=</a> , but it has limitations.</p>
 <p>Regards</p>
 </div>

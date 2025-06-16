@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From the wiki page for piste maps at <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps">http://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps</a> I believe that you should tag the snowshoe trails as piste:type=hike, piste:grooming=backcountry</p>
+<p>From the wiki page for piste maps at <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps">https://wiki.openstreetmap.org/wiki/Proposed_features/Piste_Maps</a> I believe that you should tag the snowshoe trails as piste:type=hike, piste:grooming=backcountry</p>
 <p>For cross country skiing it would be piste:type=nordic. That wiki page does not cover snowmobiles, and I never mapped for them (banned in areas I cross country ski) so I can't help there.</p>
 <p>The wiki is silent on multiple use trails but I think the usual semi-colon separator could be used to indicate the different uses, e.g. piste:type=hike;nordic</p>
 </div>
@@ -129,7 +129,7 @@ osqa_accepted = false
 <div id="post-30862-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That's actually not a bad idea (I should probably work on tagging other such trails in this area similarly) but I was thinking more in line with the access tags ( <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a> ), where for consistency I was guessing "snowshoe=yes" would be appropriate. (The trail I'm thinking of, I would probably tag "snowshoe=designated", "foot=permissive", and "ski=permissive". There's another set of trails nearby for nordic skiing where a portion is also designated for snowshoe (ski=designated, snowshoe=designated). Perhaps I should use both access tags AND "piste:".</p>
+<p>That's actually not a bad idea (I should probably work on tagging other such trails in this area similarly) but I was thinking more in line with the access tags ( <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> ), where for consistency I was guessing "snowshoe=yes" would be appropriate. (The trail I'm thinking of, I would probably tag "snowshoe=designated", "foot=permissive", and "ski=permissive". There's another set of trails nearby for nordic skiing where a portion is also designated for snowshoe (ski=designated, snowshoe=designated). Perhaps I should use both access tags AND "piste:".</p>
 </div>
 <div id="comment-30862-info" class="comment-info">
 <span class="comment-age">(20 Feb '14, 18:12)</span> <span class="comment-user userinfo">Epicanis</span>
@@ -141,7 +141,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>stf: There was a recent discussion on tagging@ about shared use: <a href="http://lists.openstreetmap.org/pipermail/tagging/2014-January/016188.html">http://lists.openstreetmap.org/pipermail/tagging/2014-January/016188.html</a></p>
-<p>The most sensible way to tag this in my opinion is to use separate route=piste relations (<a href="http://wiki.openstreetmap.org/wiki/Tag:route%3Dpiste).">http://wiki.openstreetmap.org/wiki/Tag:route%3Dpiste).</a></p>
+<p>The most sensible way to tag this in my opinion is to use separate route=piste relations (<a href="https://wiki.openstreetmap.org/wiki/Tag:route%3Dpiste).">https://wiki.openstreetmap.org/wiki/Tag:route%3Dpiste).</a></p>
 <p>Remember that semicolon separated values are not likely to be used by any program.</p>
 </div>
 <div id="comment-30923-info" class="comment-info">

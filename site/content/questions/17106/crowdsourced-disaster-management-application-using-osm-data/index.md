@@ -125,7 +125,7 @@ One Answer:
 <div id="post-37381-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you for the answer. For any project that requires adding data back to OSM i would suggest taking a look at OSM API <a href="http://wiki.openstreetmap.org/wiki/API">http://wiki.openstreetmap.org/wiki/API</a> .</p>
+<p>Thank you for the answer. For any project that requires adding data back to OSM i would suggest taking a look at OSM API <a href="https://wiki.openstreetmap.org/wiki/API">https://wiki.openstreetmap.org/wiki/API</a> .</p>
 </div>
 <div id="comment-37381-info" class="comment-info">
 <span class="comment-age">(07 Oct '14, 11:59)</span> <span class="comment-user userinfo">Nirab Pudasaini</span>

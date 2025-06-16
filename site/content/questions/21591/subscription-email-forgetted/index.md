@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you have only forgotten your email address, but not your password, you can still log in – it is possible to use the user name instead of the email. Once you are logged in, you can see and change your email in your settings.</p>
-<p>If you have forgotten your email address <em>and</em> your password, see <a href="https://help.openstreetmap.org/questions/9679/how-to-recover-osm-password-without-knowing-email">this question</a> for two helpful answers.</p>
+<p>If you have forgotten your email address <em>and</em> your password, see <a href="/questions/9679/how-to-recover-osm-password-without-knowing-email">this question</a> for two helpful answers.</p>
 <p>(Should you need someone sending you a message, post a comment here. Of course that only makes sense if you likely still receive mails from that address.)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -160,7 +160,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi, Have a look here :- <a href="http://www.openstreetmap.org/user/Cywil">http://www.openstreetmap.org/user/Cywil</a> then goto "My Settings" Regards Bernard</p>
+<p>Hi, Have a look here :- <a href="https://www.openstreetmap.org/user/Cywil">https://www.openstreetmap.org/user/Cywil</a> then goto "My Settings" Regards Bernard</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

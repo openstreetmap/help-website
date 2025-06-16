@@ -153,7 +153,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>And use the right tags... leisure=sport? What is that? Not documented at all. guided_tour? Not a sport. horse_back=&gt;equestrian <a href="http://wiki.openstreetmap.org/wiki/Key:sport">http://wiki.openstreetmap.org/wiki/Key:sport</a></p>
+<p>And use the right tags... leisure=sport? What is that? Not documented at all. guided_tour? Not a sport. horse_back=&gt;equestrian <a href="https://wiki.openstreetmap.org/wiki/Key:sport">https://wiki.openstreetmap.org/wiki/Key:sport</a></p>
 </div>
 <div id="comment-35294-info" class="comment-info">
 <span class="comment-age">(29 Jul '14, 15:30)</span> <span class="comment-user userinfo">AndiG88</span>

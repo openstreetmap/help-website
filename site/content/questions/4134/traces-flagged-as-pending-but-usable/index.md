@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have also wondered about this and don't know if the maintainers are aware of it. I mentioned it on IRC a few hours ago and no one responded to it.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Platform_Status">Platform status</a> on the wiki reports most things are ok, including what I think represents the traces on that page, 'GPX uploads'.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Platform_Status">Platform status</a> on the wiki reports most things are ok, including what I think represents the traces on that page, 'GPX uploads'.</p>
 <p>I'm holding off on modifying the platform status because I'm not sure of the proper procedure to edit it.</p>
 </div>
 <div class="answer-controls post-controls">

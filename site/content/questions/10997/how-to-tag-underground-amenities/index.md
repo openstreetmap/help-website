@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could perhaps use the <a href="http://wiki.openstreetmap.org/wiki/Key:level">level tag</a>.</p>
+<p>You could perhaps use the <a href="https://wiki.openstreetmap.org/wiki/Key:level">level tag</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -277,7 +277,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This sub-level street <a href="http://www.openstreetmap.org/browse/way/31287202">http://www.openstreetmap.org/browse/way/31287202</a> ( Image: <a href="http://www.flitzsport.de/image/passarelle.jpg">http://www.flitzsport.de/image/passarelle.jpg</a> ) is tagged simply <code>layer=-1</code>.</p>
+<p>This sub-level street <a href="https://www.openstreetmap.org/browse/way/31287202">https://www.openstreetmap.org/browse/way/31287202</a> ( Image: <a href="http://www.flitzsport.de/image/passarelle.jpg">http://www.flitzsport.de/image/passarelle.jpg</a> ) is tagged simply <code>layer=-1</code>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

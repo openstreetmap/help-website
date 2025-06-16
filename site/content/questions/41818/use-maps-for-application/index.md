@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello!</p>
 <p>We plan to develop a mobile app for the website of the Ministry of Tourism Portal. The purpose of the application: determine the user's location on a map and to display for him places and events on the map with that he can visit. Marks of places and activities are taken from the current site (they are added manually to the map).</p>
-<p>Please specify: 1. Can we use Your tiles for this task (<a href="http://www.openstreetmap.org"></a><a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a>)? Do they fit?</p>
+<p>Please specify: 1. Can we use Your tiles for this task (<a href="http://www.openstreetmap.org"></a><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a>)? Do they fit?</p>
 <p>Let me explain what we have difficulty: Maps Yandex and Google do not give to place the coordinates of the places if user has no Internet and map is not saved in cache. If user has internet, then it is possible to upload any coordinates on map.</p>
 <p>Our task, that application worked without the Internet, and there were maps.</p>
 <ol>
@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I understand you correctly you want to download map tiles and store them locally on the phone. While this is possible technically, larger scale use and deployment of this would violate the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">OSM tile usage policy</a> if you did this using tiles from the OSM site.</p>
+<p>If I understand you correctly you want to download map tiles and store them locally on the phone. While this is possible technically, larger scale use and deployment of this would violate the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">OSM tile usage policy</a> if you did this using tiles from the OSM site.</p>
 <p>In any case it is doubtful if this is a resonable solution to having offline maps in the first place. I would recommend looking at <a href="https://github.com/mapsforge/mapsforge/">Mapsforge</a> and other similar systems.</p>
 </div>
 <div class="answer-controls post-controls">

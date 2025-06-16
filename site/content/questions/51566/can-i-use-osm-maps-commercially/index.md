@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM data is free to use for any purpose, including commercial use, use is governed by our distribution licence, the ODbL, see</p>
-<pre><code>http://www.openstreetmap.org/copyright
+<pre><code>https://www.openstreetmap.org/copyright
 http://wiki.osmfoundation.org/wiki/License
 http://wiki.osmfoundation.org/wiki/License/Community_Guidelines</code></pre>
 <p>for more information.</p>
@@ -141,7 +141,7 @@ http://wiki.osmfoundation.org/wiki/License/Community_Guidelines</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> not really <a href="http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ">http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ</a> is the official version</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> not really <a href="http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ">http://wiki.osmfoundation.org/wiki/Licence/Licence_and_Legal_FAQ</a> is the official version</p>
 </div>
 <div id="comment-51589-info" class="comment-info">
 <span class="comment-age">(21 Aug '16, 10:09)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

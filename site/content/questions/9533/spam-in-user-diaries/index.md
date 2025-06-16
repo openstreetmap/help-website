@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Spam in user diaries"
-description = '''It seems that the spammers have discovered the user diaries and are drowning out legitimate user comments. Does openstreetmap have a plan of action to tackle this? For an example see http://www.openstreetmap.org/diary '''
+description = '''It seems that the spammers have discovered the user diaries and are drowning out legitimate user comments. Does openstreetmap have a plan of action to tackle this? For an example see https://www.openstreetmap.org/diary '''
 date = "2011-12-14T21:09:00Z"
 lastmod = "2014-07-12T15:30:00Z"
 weight = 9533
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>It seems that the spammers have discovered the user diaries and are drowning out legitimate user comments.<br />
 Does openstreetmap have a plan of action to tackle this?<br />
-For an example see <a href="http://www.openstreetmap.org/diary">http://www.openstreetmap.org/diary</a><br />
+For an example see <a href="https://www.openstreetmap.org/diary">https://www.openstreetmap.org/diary</a><br />
 </p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -119,8 +119,8 @@ For an example see <a href="http://www.openstreetmap.org/diary">http://www.opens
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to <a href="http://www.openstreetmap.org/user/ceyockey/diary/15711#comments">a comment by</a> one of the sysadmins, there is a system to deal with spam semi-automatically. Occasionally some are missed. Only the <a href="http://wiki.openstreetmap.org/wiki/System_Administrators">system administrators</a> have access to that, and currently they seem to be happy to despam the diaries themselves through some combination of tweaking this system, and zapping spam users and spam comments manually.</p>
-<p>For the rest of us it's a bit frustrating that we see spam sitting there and can't do anything about it. The only thing it might be useful is to <strong>list links to spam users and comments on <a href="http://wiki.openstreetmap.org/wiki/Spam">the 'Spam' wiki page</a></strong></p>
+<p>According to <a href="https://www.openstreetmap.org/user/ceyockey/diary/15711#comments">a comment by</a> one of the sysadmins, there is a system to deal with spam semi-automatically. Occasionally some are missed. Only the <a href="https://wiki.openstreetmap.org/wiki/System_Administrators">system administrators</a> have access to that, and currently they seem to be happy to despam the diaries themselves through some combination of tweaking this system, and zapping spam users and spam comments manually.</p>
+<p>For the rest of us it's a bit frustrating that we see spam sitting there and can't do anything about it. The only thing it might be useful is to <strong>list links to spam users and comments on <a href="https://wiki.openstreetmap.org/wiki/Spam">the 'Spam' wiki page</a></strong></p>
 <p>But then I think most spam gets dealt with without the sysadmins seeing that, so then the list needs re-checking and clean-up. That's an ongoing somewhat inefficient bit of maintenance work, but at least it's something <em>everyone</em> can help with. I think the list <em>could</em> prove useful for identifying spam which appears to have slipped through the net (which seems to have happened a little bit) ...but I'm not sure what the sysadmins think.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -141,7 +141,7 @@ For an example see <a href="http://www.openstreetmap.org/diary">http://www.opens
 2
 </div>
 <div class="comment-text">
-<p>I've looked at the first 27 entries of <a href="http://wiki.openstreetmap.org/wiki/Spam#OSM_diary.2Fcomment_pages_with_spam_content">this part of reported spam</a> – a total of two users were deleted, the others stuff still sits there. Some of them are from February 2014. To me that doesn't look like "A lot are zapped and only some get through".</p>
+<p>I've looked at the first 27 entries of <a href="https://wiki.openstreetmap.org/wiki/Spam#OSM_diary.2Fcomment_pages_with_spam_content">this part of reported spam</a> – a total of two users were deleted, the others stuff still sits there. Some of them are from February 2014. To me that doesn't look like "A lot are zapped and only some get through".</p>
 </div>
 <div id="comment-34831-info" class="comment-info">
 <span class="comment-age">(11 Jul '14, 21:33)</span> <span class="comment-user userinfo">malenki</span>

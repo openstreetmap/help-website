@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Naming On- and Off-Ramps"
-description = '''Would it be too much information on the map to put the name of what the exit ramp connects? For an example, as I look at the map in Sydney, Australia, specifically http://www.openstreetmap.org/node/13766899#map=18/-33.84196/151.21117, I noticed the on-ramps named. Could I label them as such on this ...'''
+description = '''Would it be too much information on the map to put the name of what the exit ramp connects? For an example, as I look at the map in Sydney, Australia, specifically https://www.openstreetmap.org/node/13766899#map=18/-33.84196/151.21117, I noticed the on-ramps named. Could I label them as such on this ...'''
 date = "2015-03-16T23:08:00Z"
 lastmod = "2015-03-18T19:47:00Z"
 weight = 41752
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Would it be too much information on the map to put the name of what the exit ramp connects? For an example, as I look at the map in Sydney, Australia, specifically <a href="http://www.openstreetmap.org/node/13766899#map=18/-33.84196/151.21117,">http://www.openstreetmap.org/node/13766899#map=18/-33.84196/151.21117,</a> I noticed the on-ramps named. Could I label them as such on this map: <a href="http://www.openstreetmap.org/#map=16/41.6867/-83.6932">http://www.openstreetmap.org/#map=16/41.6867/-83.6932</a> Thanks for any help you can provide.</p>
+<p>Would it be too much information on the map to put the name of what the exit ramp connects? For an example, as I look at the map in Sydney, Australia, specifically <a href="https://www.openstreetmap.org/node/13766899#map=18/-33.84196/151.21117,">https://www.openstreetmap.org/node/13766899#map=18/-33.84196/151.21117,</a> I noticed the on-ramps named. Could I label them as such on this map: <a href="https://www.openstreetmap.org/#map=16/41.6867/-83.6932">https://www.openstreetmap.org/#map=16/41.6867/-83.6932</a> Thanks for any help you can provide.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-off-ramp" rel="tag" title="see questions tagged &#39;off-ramp&#39;">off-ramp</span> <span class="post-tag tag-link-naming" rel="tag" title="see questions tagged &#39;naming&#39;">naming</span>
@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This should be done with the destination tag, see the wiki page on <a href="http://wiki.openstreetmap.org/wiki/Key:destination">destination tag</a>. So no, it is not too much information. Note that you won't see the result on the map, but some navigation software is already using this tag.</p>
+<p>This should be done with the destination tag, see the wiki page on <a href="https://wiki.openstreetmap.org/wiki/Key:destination">destination tag</a>. So no, it is not too much information. Note that you won't see the result on the map, but some navigation software is already using this tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,8 +159,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>These are two different issues.</p>
-<p>The label you see on the map comes from the <em><a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a></em> and the <em><a href="http://wiki.openstreetmap.org/wiki/Key:ref">ref</a></em> tags on the <em>node</em>, like <a href="http://www.openstreetmap.org/node/824109969">here</a>. Note that the number should be tagged using the <em>ref</em> tag and not the <em>name</em> tag.</p>
-<p>For providing hints for navigation systems you should use the <a href="http://wiki.openstreetmap.org/wiki/Key:destination">destination</a> tag on link <em>ways</em> instead, like <a href="http://www.openstreetmap.org/way/62364415">here</a>.</p>
+<p>The label you see on the map comes from the <em><a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a></em> and the <em><a href="https://wiki.openstreetmap.org/wiki/Key:ref">ref</a></em> tags on the <em>node</em>, like <a href="https://www.openstreetmap.org/node/824109969">here</a>. Note that the number should be tagged using the <em>ref</em> tag and not the <em>name</em> tag.</p>
+<p>For providing hints for navigation systems you should use the <a href="https://wiki.openstreetmap.org/wiki/Key:destination">destination</a> tag on link <em>ways</em> instead, like <a href="https://www.openstreetmap.org/way/62364415">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Spreadnik/Tutorial"
-description = '''Hello! I clicked on http://wiki.openstreetmap.org/wiki/Spreadnik/Tutorial to learn something about XML-Stylesheets. I found a link to an example called generate_image.py (http://weait.com/content/make-your-first-map). This link doesn&#x27;t work. Does anyone know, where I can find this example. Is there ...'''
+description = '''Hello! I clicked on https://wiki.openstreetmap.org/wiki/Spreadnik/Tutorial to learn something about XML-Stylesheets. I found a link to an example called generate_image.py (http://weait.com/content/make-your-first-map). This link doesn&#x27;t work. Does anyone know, where I can find this example. Is there ...'''
 date = "2012-03-21T12:13:00Z"
 lastmod = "2012-03-21T13:26:00Z"
 weight = 11381
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello!</p>
-<p>I clicked on <a href="http://wiki.openstreetmap.org/wiki/Spreadnik/Tutorial">http://wiki.openstreetmap.org/wiki/Spreadnik/Tutorial</a> to learn something about XML-Stylesheets.</p>
+<p>I clicked on <a href="https://wiki.openstreetmap.org/wiki/Spreadnik/Tutorial">https://wiki.openstreetmap.org/wiki/Spreadnik/Tutorial</a> to learn something about XML-Stylesheets.</p>
 <p>I found a link to an example called generate_image.py (<a href="http://weait.com/content/make-your-first-map).">http://weait.com/content/make-your-first-map).</a></p>
 <p>This link doesn't work.</p>
 <p>Does anyone know, where I can find this example.</p>

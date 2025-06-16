@@ -174,7 +174,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi OSM keeps strick to legal rules. Since the data is Google's, the basic rule is dont use it, just to avoid legal questions you should ask Google and if you need to ask somenone dont think about it. Collect your own data in the field or on the road and add it to OSM. Read these lines as wel ; <a href="http://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">http://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F</a></p>
+<p>Hi OSM keeps strick to legal rules. Since the data is Google's, the basic rule is dont use it, just to avoid legal questions you should ask Google and if you need to ask somenone dont think about it. Collect your own data in the field or on the road and add it to OSM. Read these lines as wel ; <a href="https://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F">https://wiki.openstreetmap.org/wiki/FAQ#Why_don.27t_you_just_use_Google_Maps.2Fwhoever_for_your_data.3F</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

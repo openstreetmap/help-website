@@ -130,7 +130,7 @@ One Answer:
 <p>Thanks BCNorwich!</p>
 <p>I did make the Hemlock Hollow Rd and Riding Meadow Changes but there are numerous others affecting individual addresses that I will need help with due to both volume and expertise map editing.</p>
 <p>I attached an image of the address by address updates. The street number changes are due to updates to comply with NENA (National Emergency Number Association) standards to help emergency response. All of the white spaces are due to redactions in ownership information I made to protect people's individual privacy. All of the information can also be verified on the county's GIS website: <a href="https://www.alleghenycounty.us/gis/index.aspx.">https://www.alleghenycounty.us/gis/index.aspx.</a> The roads are presently dual named but individual addresses reflect the new name only.</p>
-<p>I appreciate any assistance you are able to provide!<img src="https://help.openstreetmap.org/upfiles/FC_Address_Updates-min.JPG" alt="alt text" /></p>
+<p>I appreciate any assistance you are able to provide!<img src="/upfiles/FC_Address_Updates-min.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-80278-info" class="comment-info">
 <span class="comment-age">(25 May '21, 02:25)</span> <span class="comment-user userinfo">padams89</span>

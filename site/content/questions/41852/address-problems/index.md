@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Address Problems"
-description = '''Hi everyone, I created a listing for my physical business in Cambodia. Here is the link: http://www.openstreetmap.org/node/3414022994 The only problem is that when I search for my business name: &quot;CamUK&quot; it gives the wrong information and not what I entered: CamUK Real Estate, #10D, National Highway ...'''
+description = '''Hi everyone, I created a listing for my physical business in Cambodia. Here is the link: https://www.openstreetmap.org/node/3414022994 The only problem is that when I search for my business name: &quot;CamUK&quot; it gives the wrong information and not what I entered: CamUK Real Estate, #10D, National Highway ...'''
 date = "2015-03-23T10:29:00Z"
 lastmod = "2015-03-27T07:26:00Z"
 weight = 41852
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi everyone,</p>
 <p>I created a listing for my physical business in Cambodia.</p>
-<p>Here is the link: <a href="http://www.openstreetmap.org/node/3414022994">http://www.openstreetmap.org/node/3414022994</a></p>
+<p>Here is the link: <a href="https://www.openstreetmap.org/node/3414022994">https://www.openstreetmap.org/node/3414022994</a></p>
 <p>The only problem is that when I search for my business name: "CamUK" it gives the wrong information and not what I entered:</p>
 <p>CamUK Real Estate, #10D, National Highway 6, Spean Tnot, Siem Reap, Cambodia</p>
 <p>I entered #10D, Street 6A (addr:street), but it doesn't appear the same. The above is the wrong address.</p>
@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-41855-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:addr">http://wiki.openstreetmap.org/wiki/Key:addr</a> offers some more suggestions including addr:full which might suit you and more options for the places it is in. Generally the best way to map the districts, suburbs, etc is by mapping the boundaries of these areas but a point marking the centre of the area can be used too if the boundary is a bit uncertain or not able to be used. If these are mapped you don't need to add it to your site address.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:addr">https://wiki.openstreetmap.org/wiki/Key:addr</a> offers some more suggestions including addr:full which might suit you and more options for the places it is in. Generally the best way to map the districts, suburbs, etc is by mapping the boundaries of these areas but a point marking the centre of the area can be used too if the boundary is a bit uncertain or not able to be used. If these are mapped you don't need to add it to your site address.</p>
 </div>
 <div id="comment-41855-info" class="comment-info">
 <span class="comment-age">(23 Mar '15, 13:19)</span> <span class="comment-user userinfo">nevw</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi I have a little problem here. I have latitude, longitude and zoom of center of my map window (openstreet map). I have dimension map window. I also have pixel positions of specific events on the map in the window. Can Anyone help me how to convert these pixel positions into latitude and longitude coordinates or any other coordinate system that I will be able to visualize on different map later ? Here is an illustration of my problem. <img src="https://help.openstreetmap.org/upfiles/Capture_8U84fS2.PNG" alt="alt text" /></p>
+<p>Hi I have a little problem here. I have latitude, longitude and zoom of center of my map window (openstreet map). I have dimension map window. I also have pixel positions of specific events on the map in the window. Can Anyone help me how to convert these pixel positions into latitude and longitude coordinates or any other coordinate system that I will be able to visualize on different map later ? Here is an illustration of my problem. <img src="/upfiles/Capture_8U84fS2.PNG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-python" rel="tag" title="see questions tagged &#39;python&#39;">python</span> <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-transformation" rel="tag" title="see questions tagged &#39;transformation&#39;">transformation</span>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Thank I have found the solution using this formula (<a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">https://en.wikipedia.org/wiki/Web_Mercator_projection</a> ) <img src="https://help.openstreetmap.org/upfiles/Capture2_0tNpXAS.PNG" alt="alt text" /></p>
+<p>Thank I have found the solution using this formula (<a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">https://en.wikipedia.org/wiki/Web_Mercator_projection</a> ) <img src="/upfiles/Capture2_0tNpXAS.PNG" alt="alt text" /></p>
 <ol>
 <li>calculate the x,y position of my center point</li>
 <li>transform coordinate system of window to global</li>

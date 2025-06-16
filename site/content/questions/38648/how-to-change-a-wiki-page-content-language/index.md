@@ -167,7 +167,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>There is the <strong>"move article"</strong>-function at the top that allows you to alter the name. I guess in your case you would like to move it to "Tr:Istanbul". Please take care, that you pick an international (here:english) base name for the article.</p>
-<p>If you add the text {{languages}} at the source of the article, the page gets an nice translation menu. Further tricks can be found here: <a href="http://wiki.openstreetmap.org/wiki/Wiki_Translations">http://wiki.openstreetmap.org/wiki/Wiki_Translations</a></p>
+<p>If you add the text {{languages}} at the source of the article, the page gets an nice translation menu. Further tricks can be found here: <a href="https://wiki.openstreetmap.org/wiki/Wiki_Translations">https://wiki.openstreetmap.org/wiki/Wiki_Translations</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -197,7 +197,7 @@ This question is marked "community wiki".
 <div id="post-38655-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I don't remember the exact reason, but no it has to be camel case. e.g. <a href="http://wiki.openstreetmap.org/wiki/Tr:Main_Page">http://wiki.openstreetmap.org/wiki/Tr:Main_Page</a></p>
+<p>I don't remember the exact reason, but no it has to be camel case. e.g. <a href="https://wiki.openstreetmap.org/wiki/Tr:Main_Page">https://wiki.openstreetmap.org/wiki/Tr:Main_Page</a></p>
 </div>
 <div id="comment-38655-info" class="comment-info">
 <span class="comment-age">(18 Nov '14, 19:20)</span> <span class="comment-user userinfo">iii</span>
@@ -209,7 +209,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4489/wasus"></a><a href="http://help.openstreetmap.org/users/4489/wasus">@Wasus</a>: even at German, which has its own wiki namespace, <span>example</span> the page content language (as reported by MediaWiki is "Englisch (en)". I guess that can only be set per wiki and not per page or namespace (or at least it is not currently). Anyway, why do you worry? Do you want <span>Turkish UI elements</span> of the wiki? Set to Turkish in your user settings.</p>
+<p><a href="https://help.openstreetmap.org/users/4489/wasus"></a><a href="https://help.openstreetmap.org/users/4489/wasus">@Wasus</a>: even at German, which has its own wiki namespace, <span>example</span> the page content language (as reported by MediaWiki is "Englisch (en)". I guess that can only be set per wiki and not per page or namespace (or at least it is not currently). Anyway, why do you worry? Do you want <span>Turkish UI elements</span> of the wiki? Set to Turkish in your user settings.</p>
 </div>
 <div id="comment-38657-info" class="comment-info">
 <span class="comment-age">(18 Nov '14, 21:39)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -221,7 +221,7 @@ This question is marked "community wiki".
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Okay, if that's the way it is supposed to be than it is good. Just wanted to make sure everything is set right.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: Okay, if that's the way it is supposed to be than it is good. Just wanted to make sure everything is set right.</p>
 </div>
 <div id="comment-38685-info" class="comment-info">
 <span class="comment-age">(20 Nov '14, 15:37)</span> <span class="comment-user userinfo">Wasus</span>

@@ -94,7 +94,7 @@ osqa_accepted = false
 <div id="post-28510-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>@ OSM Help: Thanks for your reply! This is the January post i referred to: <a href="https://help.openstreetmap.org/questions/19312/some-roads-rendered-with-green-colors-which-is-not-readable-on-the-gree-background">https://help.openstreetmap.org/questions/19312/some-roads-rendered-with-green-colors-which-is-not-readable-on-the-gree-background</a></p>
+<p>@ OSM Help: Thanks for your reply! This is the January post i referred to: <a href="/questions/19312/some-roads-rendered-with-green-colors-which-is-not-readable-on-the-gree-background">https://help.openstreetmap.org/questions/19312/some-roads-rendered-with-green-colors-which-is-not-readable-on-the-gree-background</a></p>
 <p>@ SomeoneElse: Great tip, thnx! Better colors indeed, though still with same flaws (no distinction between 4 / 2 lane trunkroads).</p>
 <p>I see my question has been closed, although earlier questions about the same issue has been answered before. Thanks again anyway!</p>
 </div>

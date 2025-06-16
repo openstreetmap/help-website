@@ -62,7 +62,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Something to start with: <a href="http://wiki.openstreetmap.org/wiki/Roundabout">http://wiki.openstreetmap.org/wiki/Roundabout</a></p>
+<p>Something to start with: <a href="https://wiki.openstreetmap.org/wiki/Roundabout">https://wiki.openstreetmap.org/wiki/Roundabout</a></p>
 </div>
 <div id="comment-3503-info" class="comment-info">
 <span class="comment-age">(03 Mar '11, 18:21)</span> <span class="comment-user userinfo">gnurk</span>
@@ -118,10 +118,10 @@ One Answer:
 <div class="answer-body">
 <p>This depends on your editor. In JOSM you select the node(s) where you want to cut and the way you want to cut and hit "p" (or select split way from the menu). Multiple selections you do holding "shift" or "ctrl". In Potlatch there is a button to do it (the one with the scissors) or you hit "x". Most of the functionality and some tutorials of these editors are described in the wiki:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Potlatch">http://wiki.openstreetmap.org/wiki/Potlatch</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide">http://wiki.openstreetmap.org/wiki/JOSM/Guide</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Potlatch">https://wiki.openstreetmap.org/wiki/Potlatch</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide">https://wiki.openstreetmap.org/wiki/JOSM/Guide</a></li>
 </ul>
-<p>A general introduction on available editors and links to pages with help on editing can be found here: <a href="http://wiki.openstreetmap.org/wiki/Editing">http://wiki.openstreetmap.org/wiki/Editing</a></p>
+<p>A general introduction on available editors and links to pages with help on editing can be found here: <a href="https://wiki.openstreetmap.org/wiki/Editing">https://wiki.openstreetmap.org/wiki/Editing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

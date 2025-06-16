@@ -78,7 +78,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I don't believe you'll find similar packages for Redhat. Someone who tried building from source a couple of years ago hit a problem:</p>
-<p><a href="http://help.openstreetmap.org/questions/16972/configure-linux-for-osm-tile-server/16994">http://help.openstreetmap.org/questions/16972/configure-linux-for-osm-tile-server/16994</a></p>
+<p><a href="/questions/16972/configure-linux-for-osm-tile-server/16994">https://help.openstreetmap.org/questions/16972/configure-linux-for-osm-tile-server/16994</a></p>
 <p>I suspect that's a work-aroundable problem, and it'd be great if when you do work around it you stick an answer to the previous help question :)</p>
 </div>
 <div id="comment-46304-info" class="comment-info">
@@ -231,7 +231,7 @@ osqa_accepted = false
 <div id="post-48047-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a>, It would be very helpful if you provide any series of steps to achive tile server installation in rhel.</p>
+<p><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@Frederik Ramm</a>, It would be very helpful if you provide any series of steps to achive tile server installation in rhel.</p>
 </div>
 <div id="comment-48047-info" class="comment-info">
 <span class="comment-age">(11 Feb '16, 06:57)</span> <span class="comment-user userinfo">Naren970</span>

@@ -168,7 +168,7 @@ routing car/bike/foot) and</p></li>
 &#10;</div>
 <div class="comment-text">
 <p>Thank you for these responses With your items in my whitelist I have the itineraries calculated by OSMR and by GraphHopper. However I have not the itineraries using Vahalla, and moreover in the right hand menu I can use only the standard map and not the 5 other ones (CyclOSM, Carte cyclable, Carte de transport, ÖPNVKarte). I have not find any request for these maps in the source code given by Firefox, so I am looking for more info</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSM_maps_with_whitelist.png" alt="Maps list screenshot" /></p>
+<p><img src="/upfiles/OSM_maps_with_whitelist.png" alt="Maps list screenshot" /></p>
 </div>
 <div id="comment-87820-info" class="comment-info">
 <span class="comment-age">(07 Sep '23, 18:43)</span> <span class="comment-user userinfo">Superdocious</span>

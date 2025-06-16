@@ -172,7 +172,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I can see your bar on the standard layer:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/foo_DAMsEIb.png" alt="alt text" /></p>
+<p><img src="/upfiles/foo_DAMsEIb.png" alt="alt text" /></p>
 <p>Try re-clearing your browser cache or try a different browser.</p>
 </div>
 <div class="answer-controls post-controls">

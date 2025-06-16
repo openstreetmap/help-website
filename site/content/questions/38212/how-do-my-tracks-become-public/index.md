@@ -121,7 +121,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your uploaded tracks don't automatically get rendered on the map. Instead you have to edit the map and add the roads yourself. Your track will help you doing this among other data sources like aerial imagery. See these <a href="https://help.openstreetmap.org/questions/5440/why-arent-my-gps-traces-shown-on-the-maps">other</a> <a href="https://help.openstreetmap.org/questions/938/can-not-see-the-gps-track">questions</a> as well as the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginner's guide</a>.</p>
+<p>Your uploaded tracks don't automatically get rendered on the map. Instead you have to edit the map and add the roads yourself. Your track will help you doing this among other data sources like aerial imagery. See these <a href="/questions/5440/why-arent-my-gps-traces-shown-on-the-maps">other</a> <a href="/questions/938/can-not-see-the-gps-track">questions</a> as well as the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginner's guide</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This question and answer may help you. <a href="https://help.openstreetmap.org/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process">https://help.openstreetmap.org/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process</a></p>
+<p>This question and answer may help you. <a href="/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process">https://help.openstreetmap.org/questions/7375/how-are-uploaded-traces-gpx-files-from-my-gps-device-used-in-the-openstreetmap-editing-process</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

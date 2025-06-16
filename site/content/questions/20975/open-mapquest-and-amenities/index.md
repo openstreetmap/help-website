@@ -87,7 +87,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Area is shown at <a href="http://www.openstreetmap.org/?lat=37.374419420957565&amp;lon=-122.0347112417221&amp;zoom=17">http://www.openstreetmap.org/?lat=37.374419420957565&amp;lon=-122.0347112417221&amp;zoom=17</a> and <a href="http://mapq.st/14qPhTr">http://mapq.st/14qPhTr</a></p>
+<p>Area is shown at <a href="https://www.openstreetmap.org/?lat=37.374419420957565&amp;lon=-122.0347112417221&amp;zoom=17">https://www.openstreetmap.org/?lat=37.374419420957565&amp;lon=-122.0347112417221&amp;zoom=17</a> and <a href="http://mapq.st/14qPhTr">http://mapq.st/14qPhTr</a></p>
 </div>
 <div id="comment-20977-info" class="comment-info">
 <span class="comment-age">(25 Mar '13, 23:47)</span> <span class="comment-user userinfo">n76</span>
@@ -99,7 +99,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Your specific mapquest questions can probably only be answered by mapquest support.</p>
-<p>I cannot see why <a href="http://www.openstreetmap.org/browse/way/210312326">http://www.openstreetmap.org/browse/way/210312326</a> should behave differently than <a href="http://www.openstreetmap.org/browse/way/47286731">http://www.openstreetmap.org/browse/way/47286731</a> , one is found with your search, the other not. Only difference is the name.</p>
+<p>I cannot see why <a href="https://www.openstreetmap.org/browse/way/210312326">https://www.openstreetmap.org/browse/way/210312326</a> should behave differently than <a href="https://www.openstreetmap.org/browse/way/47286731">https://www.openstreetmap.org/browse/way/47286731</a> , one is found with your search, the other not. Only difference is the name.</p>
 <p>I also found that some ATMs have <code>amenity=atm</code> and some <code>amenity=ATM</code> (differing in case), but as far as i saw that isn't the cause of the problems.</p>
 </div>
 <div id="comment-20999-info" class="comment-info">

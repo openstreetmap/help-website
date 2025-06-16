@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have drawn construction lines and left them in the data for a few days either to show other mappers or until i was happy with results. Here is a example where i used them:-<a href="https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
+<p>I have drawn construction lines and left them in the data for a few days either to show other mappers or until i was happy with results. Here is a example where i used them:-<a href="/questions/50366/mapping-without-access-or-new-enough-bing">https://help.openstreetmap.org/questions/50366/mapping-without-access-or-new-enough-bing</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

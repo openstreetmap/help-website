@@ -170,7 +170,7 @@ For the Data Working Group</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>The short explanation is:</p>
-<p>If some information (name, boundary etc.) is in dispute, then OSM uses the <a href="http://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule">"On the Ground Rule"</a>. This means that OSM does not record the legal or historical situation, but the situation as it presents itself in the mapped area ("on the ground").</p>
+<p>If some information (name, boundary etc.) is in dispute, then OSM uses the <a href="https://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule">"On the Ground Rule"</a>. This means that OSM does not record the legal or historical situation, but the situation as it presents itself in the mapped area ("on the ground").</p>
 <p>Since currently the Russian Federation controls the Crimea, it is mapped as part of the RF. It's that simple.</p>
 <hr />
 <p>This is also described in the document <a href="http://www.osmfoundation.org/wiki/Policies_and_other_Documents">Information for officials and diplomats of countries with disputed territories</a> mentioned by scai:</p>
@@ -212,7 +212,7 @@ For the Data Working Group</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11278/johndoe">@johndoe</a> the "on-the-ground" rule clearly depends on the willingness of people to actually go there. Neither ISIS nor the people in control of Donetsk etc are formally recognised states, the situation is highly fluid and these are war zones. The situation in the Crimea (and elsewhere) is rather different as I'm sure you are aware.</p>
+<p><a href="https://help.openstreetmap.org/users/11278/johndoe">@johndoe</a> the "on-the-ground" rule clearly depends on the willingness of people to actually go there. Neither ISIS nor the people in control of Donetsk etc are formally recognised states, the situation is highly fluid and these are war zones. The situation in the Crimea (and elsewhere) is rather different as I'm sure you are aware.</p>
 </div>
 <div id="comment-44408-info" class="comment-info">
 <span class="comment-age">(24 Jul '15, 12:23)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -224,7 +224,7 @@ For the Data Working Group</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53"></a><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a> You see, I'm living in the city of Luhans'k, and I've visited Crimea less then a month ago. I couldn't see any difference there. Both regions are parts of Ukraine. Both regions are occupied and controlled by Russian troops and Russian paramilitary units. And AFAIR the "on-the-ground" rule is related just to local names, designations, and so on. But this rule is definitely not related to the borders between states, or territorial identities of regions, is it? OK, even if it is, "the government with effective and sustained control of the area" mentioned by Wiki is the same for both of these regions. It's Russian government located at Kremlin, Moscow. So I still can't get any reason for different judgments in these two cases.</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53"></a><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a> You see, I'm living in the city of Luhans'k, and I've visited Crimea less then a month ago. I couldn't see any difference there. Both regions are parts of Ukraine. Both regions are occupied and controlled by Russian troops and Russian paramilitary units. And AFAIR the "on-the-ground" rule is related just to local names, designations, and so on. But this rule is definitely not related to the borders between states, or territorial identities of regions, is it? OK, even if it is, "the government with effective and sustained control of the area" mentioned by Wiki is the same for both of these regions. It's Russian government located at Kremlin, Moscow. So I still can't get any reason for different judgments in these two cases.</p>
 </div>
 <div id="comment-44417-info" class="comment-info">
 <span class="comment-age">(24 Jul '15, 23:20)</span> <span class="comment-user userinfo">johndoe</span>
@@ -236,7 +236,7 @@ For the Data Working Group</p>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11278/johndoe">@johndoe</a> I detect a NPOV (in the wiki sense here). At least from the perspective of news reports in Britain, the Russian Federation denies active administration of these area.</p>
+<p><a href="https://help.openstreetmap.org/users/11278/johndoe">@johndoe</a> I detect a NPOV (in the wiki sense here). At least from the perspective of news reports in Britain, the Russian Federation denies active administration of these area.</p>
 </div>
 <div id="comment-44427-info" class="comment-info">
 <span class="comment-age">(25 Jul '15, 12:25)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -292,7 +292,7 @@ For the Data Working Group</p>
 <div class="answer-body">
 <p>The OpenStreetMap community operates under the “on the ground” principle. If a name appears on the ground, for example a street sign, then that is the preferred name to use. This is recorded as a “name” in our database and is the one generally used on our main example map.</p>
 <p>On larger scale it means that as Russia unfortunately succeeded in invading Crimea it is mapped as a part of the Russia.</p>
-<p>see <a href="http://www.osmfoundation.org/wiki/Policies_and_other_Documents">http://www.osmfoundation.org/wiki/Policies_and_other_Documents</a> and <a href="http://wiki.openstreetmap.org/wiki/Good_practice#Map_what.27s_on_the_ground">http://wiki.openstreetmap.org/wiki/Good_practice#Map_what.27s_on_the_ground</a></p>
+<p>see <a href="http://www.osmfoundation.org/wiki/Policies_and_other_Documents">http://www.osmfoundation.org/wiki/Policies_and_other_Documents</a> and <a href="https://wiki.openstreetmap.org/wiki/Good_practice#Map_what.27s_on_the_ground">https://wiki.openstreetmap.org/wiki/Good_practice#Map_what.27s_on_the_ground</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -456,8 +456,8 @@ For the Data Working Group</p>
 <div id="post-37202-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> I wonder where they got that idea from...</p>
-<p><a href="http://www.openstreetmap.org/user/Zverik/diary/21463">http://www.openstreetmap.org/user/Zverik/diary/21463</a></p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> I wonder where they got that idea from...</p>
+<p><a href="https://www.openstreetmap.org/user/Zverik/diary/21463">https://www.openstreetmap.org/user/Zverik/diary/21463</a></p>
 </div>
 <div id="comment-37202-info" class="comment-info">
 <span class="comment-age">(01 Oct '14, 17:29)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

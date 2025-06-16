@@ -116,7 +116,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Potlatch2_way_direction.JPG" alt="alt text" /> The "way" direction indicator arrow in the potlatch2 toolbox. Note: clicking on the arrow will reverse the way direction.</p>
+<p><img src="/upfiles/Potlatch2_way_direction.JPG" alt="alt text" /> The "way" direction indicator arrow in the potlatch2 toolbox. Note: clicking on the arrow will reverse the way direction.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

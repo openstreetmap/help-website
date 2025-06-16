@@ -130,7 +130,7 @@ One Answer:
 <div id="post-4812-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>have you read <a href="http://help.openstreetmap.org/questions/4775/gamin-nuvi-660-cannot-navigate-on-osm-data">http://help.openstreetmap.org/questions/4775/gamin-nuvi-660-cannot-navigate-on-osm-data</a></p>
+<p>have you read <a href="/questions/4775/gamin-nuvi-660-cannot-navigate-on-osm-data">https://help.openstreetmap.org/questions/4775/gamin-nuvi-660-cannot-navigate-on-osm-data</a></p>
 </div>
 <div id="comment-4812-info" class="comment-info">
 <span class="comment-age">(25 Apr '11, 20:42)</span> <span class="comment-user userinfo">andy mackey</span>

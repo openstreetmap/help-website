@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Are they official OSM Partners?</p>
 <p>The reason I ask is that in my area of Girona, Spain (and possibly elsewhere), Navigation is quite difficult because the map is peppered with obsolete place names. I say obsolete because they belong in antiquity. They are merely place names of fields or farmhouses which once meant something to someone but not anymore. They even take precedence over place names of real towns and real villages, ridiculous.</p>
-<p>When looking at the map in NE Spain ( i.e. <a href="http://www.openstreetmap.org/?lat=42.14992&amp;lon=2.8101&amp;zoom=16&amp;layers=M">N42.15, E2.81</a> for example) at zoom level 15, they overwhelm the map and obscure everything else. I get so frustrated that I am tempted to delete the lot but they are accompanied by a comment : NOTE - If you change this node, please, report to nomenclatorign at gmail dot com. Thank you.</p>
+<p>When looking at the map in NE Spain ( i.e. <a href="https://www.openstreetmap.org/?lat=42.14992&amp;lon=2.8101&amp;zoom=16&amp;layers=M">N42.15, E2.81</a> for example) at zoom level 15, they overwhelm the map and obscure everything else. I get so frustrated that I am tempted to delete the lot but they are accompanied by a comment : NOTE - If you change this node, please, report to nomenclatorign at gmail dot com. Thank you.</p>
 <p>Somebody has obviously spent a lot of time entering all of this detail, but I feel that they are hijacking OSM for their own purpose at the expense of other users.</p>
 <p>Ideas greatly welcomed.</p>
 <p>Regards.</p>
@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-20813-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/node/1241590331/history">Here's</a> an example node, and <a href="http://wiki.openstreetmap.org/wiki/ES:EGRN">here</a> is the wiki page for the import.</p>
+<p><a href="https://www.openstreetmap.org/browse/node/1241590331/history">Here's</a> an example node, and <a href="https://wiki.openstreetmap.org/wiki/ES:EGRN">here</a> is the wiki page for the import.</p>
 </div>
 <div id="comment-20813-info" class="comment-info">
 <span class="comment-age">(19 Mar '13, 17:28)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -128,7 +128,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is a data set of the the Spanish Instituo Geografico Nacional (<a href="http://www.ign.es/ign/main/index.do">IGN</a>). Several (not necessarily very useful) imports have been made from this source, including, to my knowledge, triangulation points: the latter have strict instructions on each node telling you not to move them.</p>
-<p>The import is described on the <a href="http://wiki.openstreetmap.org/wiki/ES:EGRN">wiki</a> , and on the talk-es <a href="http://lists.openstreetmap.org/pipermail/talk-es/2011-March/007329.html">mailing list</a>.</p>
+<p>The import is described on the <a href="https://wiki.openstreetmap.org/wiki/ES:EGRN">wiki</a> , and on the talk-es <a href="http://lists.openstreetmap.org/pipermail/talk-es/2011-March/007329.html">mailing list</a>.</p>
 <p>I'm not in a position to assess their accuracy or whether these names are in current usage for areas where I have mapped, but they do appear to be related 1:1 to names in oblique type on the IGN 25k maps viewable on the <a href="http://signa.ign.es/signa/">Signa</a> portal, and thus probably do get used. The tagging as <code>place=locality</code> also seems to be appropriate.</p>
 <p>Nor do I know why changes to nodes should be fed back to the IGN: although in part it may be seeking to crowd-source changes to data which was probably (as you infer) collected a long time ago.</p>
 <p>As with many other imports many tags are unnecessary and even redundant (co-ordinates in different projections).</p>

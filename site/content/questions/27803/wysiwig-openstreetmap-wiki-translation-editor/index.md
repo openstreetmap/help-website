@@ -112,9 +112,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The newest <a href="http://www.mediawiki.org/wiki/RTL">mediawiki</a> (software used by the osm wiki) version seems to support a WYSIWYG editor with RTL support. Updating the osm wiki software is probably a big task, but you can try getting in touch with the <a href="http://wiki.openstreetmap.org/wiki/Admins">admins</a>.</p>
+<p>The newest <a href="http://www.mediawiki.org/wiki/RTL">mediawiki</a> (software used by the osm wiki) version seems to support a WYSIWYG editor with RTL support. Updating the osm wiki software is probably a big task, but you can try getting in touch with the <a href="https://wiki.openstreetmap.org/wiki/Admins">admins</a>.</p>
 <p>As a workaround, you can use any text editor with RTL support (too many available to bother linking here), and copy-paste the text between your RTL editor and the wiki input box.</p>
-<p>As a side note, I assume you know about <a href="http://wiki.openstreetmap.org/wiki/Template:Rtl">the RTL template</a> ?</p>
+<p>As a side note, I assume you know about <a href="https://wiki.openstreetmap.org/wiki/Template:Rtl">the RTL template</a> ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

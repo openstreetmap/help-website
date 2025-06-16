@@ -239,7 +239,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This questions as some answers on converting degree decimals to degrees, minutes and seconds <a href="http://help.openstreetmap.org/questions/10019/how-can-i-convert-this">http://help.openstreetmap.org/questions/10019/how-can-i-convert-this</a></p>
+<p>This questions as some answers on converting degree decimals to degrees, minutes and seconds <a href="/questions/10019/how-can-i-convert-this">https://help.openstreetmap.org/questions/10019/how-can-i-convert-this</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

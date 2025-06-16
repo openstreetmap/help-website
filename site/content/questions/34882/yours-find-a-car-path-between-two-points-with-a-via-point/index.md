@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "YOURS: Find a car path between two points with a via point"
-description = '''I&#x27;m trying to find a car path that passes via another point. I use YOUR API to find the car path but I don&#x27;t know how specify that this path must passed in another point. http://wiki.openstreetmap.org/wiki/YOURS Anyone can help me?'''
+description = '''I&#x27;m trying to find a car path that passes via another point. I use YOUR API to find the car path but I don&#x27;t know how specify that this path must passed in another point. https://wiki.openstreetmap.org/wiki/YOURS Anyone can help me?'''
 date = "2014-07-14T11:59:00Z"
 lastmod = "2014-07-14T17:59:00Z"
 weight = 34882
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to find a car path that passes via another point. I use YOUR API to find the car path but I don't know how specify that this path must passed in another point.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/YOURS">http://wiki.openstreetmap.org/wiki/YOURS</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/YOURS">https://wiki.openstreetmap.org/wiki/YOURS</a></p>
 <p>Anyone can help me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

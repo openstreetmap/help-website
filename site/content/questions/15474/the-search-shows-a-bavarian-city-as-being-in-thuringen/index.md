@@ -70,7 +70,7 @@ osqa_accepted = true
 <div id="post-15475-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>"in Bavaria" is not precise enough. It's here on the map : <a href="http://www.openstreetmap.org/?lat=50.249&amp;lon=10.9911&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=50.249&amp;lon=10.9911&amp;zoom=13&amp;layers=M</a></p>
+<p>"in Bavaria" is not precise enough. It's here on the map : <a href="https://www.openstreetmap.org/?lat=50.249&amp;lon=10.9911&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=50.249&amp;lon=10.9911&amp;zoom=13&amp;layers=M</a></p>
 </div>
 <div id="comment-15475-info" class="comment-info">
 <span class="comment-age">(24 Aug '12, 14:16)</span> <span class="comment-user userinfo">NicolasDumoulin</span>
@@ -136,7 +136,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can ask <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> (our current search engine) directly <a href="http://nominatim.openstreetmap.org/details.php?place_id=148820829">why it thinks Coburg is in Thuringia</a> by using its <a href="http://nominatim.openstreetmap.org/search.php?q=Coburg">web-based search function</a> and clicking on a search result's <em>details</em>. In your case it is because of <a href="http://www.openstreetmap.org/browse/node/473883922">this node</a>.</p>
+<p>You can ask <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> (our current search engine) directly <a href="http://nominatim.openstreetmap.org/details.php?place_id=148820829">why it thinks Coburg is in Thuringia</a> by using its <a href="http://nominatim.openstreetmap.org/search.php?q=Coburg">web-based search function</a> and clicking on a search result's <em>details</em>. In your case it is because of <a href="https://www.openstreetmap.org/browse/node/473883922">this node</a>.</p>
 <p>Nominatim uses both nodes and borders (ways) for its address search. But nodes aren't really suitable for larger objects as you can see in this case very clearly because they don't define a boundary, just some kind of center.</p>
 <p>I wonder whether this node provides any useful information at all or if we should just remove it.</p>
 </div>

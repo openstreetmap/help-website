@@ -163,7 +163,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>What gnurk said. You should take a look at the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Basic_editing">JOSM basic editing guide</a> to learn how to create nodes. You don't have to type any coordinates by hand.</p>
+<p>What gnurk said. You should take a look at the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Basic_editing">JOSM basic editing guide</a> to learn how to create nodes. You don't have to type any coordinates by hand.</p>
 </div>
 <div id="comment-14170-info" class="comment-info">
 <span class="comment-age">(11 Jul '12, 12:00)</span> <span class="comment-user userinfo">scai ♦</span>

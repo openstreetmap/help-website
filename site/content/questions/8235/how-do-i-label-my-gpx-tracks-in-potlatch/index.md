@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>When I use my uploaded GPX-tracks in Potlatch, I don't see a name on them. Where am I supposed to add a name to them? I have uploaded them to <a href="http://openstreetmap.org">openstreetmap.org</a> and I can see them in "My tracks" with the date as the name, but I couldn't see another way to add a name to them.</p>
-<p>It would be helpful if they were named with at least the date in Potlatch too. Today I can only see the GPX-tracks like this: <img src="http://help.openstreetmap.org/upfiles/Potlatch.png" alt="alt text" /></p>
+<p>It would be helpful if they were named with at least the date in Potlatch too. Today I can only see the GPX-tracks like this: <img src="/upfiles/Potlatch.png" alt="alt text" /></p>
 <p>And it's hard to use when I have multiple GPX-tracks. How to get a name on them in Potlatch?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

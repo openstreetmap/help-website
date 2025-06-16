@@ -161,7 +161,7 @@ One Answer:
 <div id="post-42037-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta <a href="http://help.openstreetmap.org/users/99/stephan75"></a><a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: ja, ich bekomme dieselbe Fehlermeldung. Das ist <span>seit</span> dem letzten Update(?) so. Bei manchen Fragen geht es, ein ander mal wieder nicht. Besonders blöd ist das, wenn man eine "Antwort", die "Kommentare" besitzt, in einen Kommentar (zur "Frage") umwandeln will – dann werden die angehängten "Kommentare" trotzdem verschoben.</p>
+<p>meta <a href="https://help.openstreetmap.org/users/99/stephan75"></a><a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a>: ja, ich bekomme dieselbe Fehlermeldung. Das ist <span>seit</span> dem letzten Update(?) so. Bei manchen Fragen geht es, ein ander mal wieder nicht. Besonders blöd ist das, wenn man eine "Antwort", die "Kommentare" besitzt, in einen Kommentar (zur "Frage") umwandeln will – dann werden die angehängten "Kommentare" trotzdem verschoben.</p>
 </div>
 <div id="comment-42037-info" class="comment-info">
 <span class="comment-age">(30 Mar '15, 20:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -121,7 +121,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Just to be clear - if the MD5 for the file that you've downloaded doesn't match the value that it is supposed to be, then you have a corrupt download and you need to download it again. A corrupt download will cause the error that you are seeing (see <a href="https://help.openstreetmap.org/questions/14206/incorrect-data-check">https://help.openstreetmap.org/questions/14206/incorrect-data-check</a> ).</p>
+<p>Just to be clear - if the MD5 for the file that you've downloaded doesn't match the value that it is supposed to be, then you have a corrupt download and you need to download it again. A corrupt download will cause the error that you are seeing (see <a href="/questions/14206/incorrect-data-check">https://help.openstreetmap.org/questions/14206/incorrect-data-check</a> ).</p>
 </div>
 <div id="comment-36130-info" class="comment-info">
 <span class="comment-age">(23 Aug '14, 13:11)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

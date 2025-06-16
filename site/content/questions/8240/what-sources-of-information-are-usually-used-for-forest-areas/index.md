@@ -131,7 +131,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>One example of compatibly-licenced data source is <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Corine_Land_Cover">http://wiki.openstreetmap.org/wiki/WikiProject_Corine_Land_Cover</a> , which has been imported into OSM for many European countries. That import is currently a once-off operation, and the data is kept up to date with the usual OSM tools (mainly Bing and local survey).</p>
+<p>One example of compatibly-licenced data source is <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Corine_Land_Cover">https://wiki.openstreetmap.org/wiki/WikiProject_Corine_Land_Cover</a> , which has been imported into OSM for many European countries. That import is currently a once-off operation, and the data is kept up to date with the usual OSM tools (mainly Bing and local survey).</p>
 </div>
 <div id="comment-8262-info" class="comment-info">
 <span class="comment-age">(03 Oct '11, 16:39)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

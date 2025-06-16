@@ -199,7 +199,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look for "batch geocoding" or "batch reverse geocoder" or similar on this FAQ site.</p>
-<p>Or have a closer look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">Search engines</a> ... maybe there is a solution for your aim.</p>
+<p>Or have a closer look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">Search engines</a> ... maybe there is a solution for your aim.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

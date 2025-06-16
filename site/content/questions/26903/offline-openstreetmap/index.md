@@ -122,9 +122,9 @@ One Answer:
 <div class="answer-body">
 <p>This works even without a local webserver. Just use an URL like</p>
 <pre><code>file:///home/jonh/openstreetmap/{z}/{x}/{y}.png</code></pre>
-<p>given that your files are located under <em>/home/jonh/openstreetmap/</em>. You can also download a specific area using <a href="http://wiki.openstreetmap.org/wiki/KDE_Marble">Marble</a> and directly access its offline cache, e.g. with the URL</p>
+<p>given that your files are located under <em>/home/jonh/openstreetmap/</em>. You can also download a specific area using <a href="https://wiki.openstreetmap.org/wiki/KDE_Marble">Marble</a> and directly access its offline cache, e.g. with the URL</p>
 <pre><code>file:///home/jonh/.local/share/marble/maps/earth/openstreetmap/{z}/{x}/{y}.png</code></pre>
-<p>But keep the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> in mind when downloading tiles for an area.</p>
+<p>But keep the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> in mind when downloading tiles for an area.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> allows to specify complex filters. It is also faster and more suited than the main API which is actually for editing and not for running bulk queries. Another option is to download the data in advance to store it locally. This way you are completely independent from the API and don't have to comply with the usage policy.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> allows to specify complex filters. It is also faster and more suited than the main API which is actually for editing and not for running bulk queries. Another option is to download the data in advance to store it locally. This way you are completely independent from the API and don't have to comply with the usage policy.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -160,7 +160,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>you should not use API 0.6 for that, see it's <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">usage policy</a> - it is intended for editing only, and for such queries. There are alternative ways mentioned on the page, from setting up your own server syncing data with master openstreetmap servers, to using third party services.</p>
+<p>you should not use API 0.6 for that, see it's <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">usage policy</a> - it is intended for editing only, and for such queries. There are alternative ways mentioned on the page, from setting up your own server syncing data with master openstreetmap servers, to using third party services.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

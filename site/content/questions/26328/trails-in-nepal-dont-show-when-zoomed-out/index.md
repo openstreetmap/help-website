@@ -106,7 +106,7 @@ One Answer:
 <div class="answer-body">
 <p>You don't mention where you refer to GPS devices and where to which online maps.<br />
 Secondly, for planning to walk the Mt. Everest I strongly recommend not to use a GPS device but topographic maps.<br />
-If you still want to use maps based on OSM data you shouldn't just stick to the one default generic slippy map you find on osm.org but choose a more matching for this task like the <a href="http://hikebikemap.de/?zoom=12&amp;lat=27.97473&amp;lon=86.81759&amp;layers=B0000FFFFF">hikebikemap</a>. More maps you can find <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Biking.2C_Geocaching.2C_Hiking.2C_Sport">here at the wiki</a>.</p>
+If you still want to use maps based on OSM data you shouldn't just stick to the one default generic slippy map you find on osm.org but choose a more matching for this task like the <a href="http://hikebikemap.de/?zoom=12&amp;lat=27.97473&amp;lon=86.81759&amp;layers=B0000FFFFF">hikebikemap</a>. More maps you can find <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services#Biking.2C_Geocaching.2C_Hiking.2C_Sport">here at the wiki</a>.</p>
 <p>Maybe you find the hint helpful that I prepared my last hiking trip (but only to 2100 amsl) with aerial imagery from BING, an old topographic raster map and OSM data and maps. The tools I used were JOSM and QLandkarteGT.<br />
 You should be aware of the fact that the imagery of Bing is likely to be distorted in high elevations.</p>
 <p>For different rendering depending on the density of data: OSM welcomes all coders who want to share their knowledge, time and energy to enhance OSM.<br />

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><em>Detached from question <a href="https://help.openstreetmap.org/questions/12608/extract-pois-for-a-region">extract POIs for a region</a> referring to <a href="https://help.openstreetmap.org/questions/12608/extract-pois-for-a-region/12609">Roland's answer</a>.</em></p>
+<p><em>Detached from question <a href="/questions/12608/extract-pois-for-a-region">extract POIs for a region</a> referring to <a href="/questions/12608/extract-pois-for-a-region/12609">Roland's answer</a>.</em></p>
 <p>Roland, This answer helped me a lot! But, as I'm very very new OSM, I have a deal question: Where can I find all attributes of: " &lt;has-kv k="tourism" v="hotel"/&gt;" I suppose it's some where in the deep dungeons of the documentation, but I can't find it. A bit of help would be much appreciated. Thanks in advance. Jan</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -68,7 +68,7 @@ osqa_accepted = false
 <div id="post-75129-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/18478/page-maker">@Page-Maker</a>: I converted your answer to <em><a href="https://help.openstreetmap.org/questions/12608/extract-pois-for-a-region">extract POIs for a region</a></em> into a new question. Please always create a new question if you need to know additional details.</p>
+<p><a href="https://help.openstreetmap.org/users/18478/page-maker">@Page-Maker</a>: I converted your answer to <em><a href="/questions/12608/extract-pois-for-a-region">extract POIs for a region</a></em> into a new question. Please always create a new question if you need to know additional details.</p>
 </div>
 <div id="comment-75129-info" class="comment-info">
 <span class="comment-age">(03 Jun '20, 21:40)</span> <span class="comment-user userinfo">TZorn</span>

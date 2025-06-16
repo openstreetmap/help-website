@@ -64,7 +64,7 @@ osqa_accepted = true
 <div id="post-56199-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There has been a similar problem here: <a href="https://help.openstreetmap.org/questions/13825/permission-issue-of-so-file-in-nominatim-osm-postgres-db">https://help.openstreetmap.org/questions/13825/permission-issue-of-so-file-in-nominatim-osm-postgres-db</a> Please re-check that the file and <em>each</em> directory in the path has read and execute permissions for the user or group your pgsql process is running with. If in doubt login as root, switch to the psql user and then try to access the file yourself.</p>
+<p>There has been a similar problem here: <a href="/questions/13825/permission-issue-of-so-file-in-nominatim-osm-postgres-db">https://help.openstreetmap.org/questions/13825/permission-issue-of-so-file-in-nominatim-osm-postgres-db</a> Please re-check that the file and <em>each</em> directory in the path has read and execute permissions for the user or group your pgsql process is running with. If in doubt login as root, switch to the psql user and then try to access the file yourself.</p>
 </div>
 <div id="comment-56199-info" class="comment-info">
 <span class="comment-age">(16 May '17, 12:33)</span> <span class="comment-user userinfo">scai ♦</span>

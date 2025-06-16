@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>This the look of my map, it looks incomplete and really glitchy.<img src="https://help.openstreetmap.org/upfiles/WhatsApp_Image_2018-12-16_at_5.10.38_PM.jpeg" alt="alt text" /></p>
+<p>This the look of my map, it looks incomplete and really glitchy.<img src="/upfiles/WhatsApp_Image_2018-12-16_at_5.10.38_PM.jpeg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span>

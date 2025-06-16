@@ -113,7 +113,7 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>By "Maine" the question probably means, er, <a href="http://www.openstreetmap.org/#map=7/45.252/-69.005&amp;layers=N">Maine</a>. Not every question is misspelt :)</p>
+<p>By "Maine" the question probably means, er, <a href="https://www.openstreetmap.org/#map=7/45.252/-69.005&amp;layers=N">Maine</a>. Not every question is misspelt :)</p>
 </div>
 <div id="comment-25806-info" class="comment-info">
 <span class="comment-age">(26 Aug '13, 13:57)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -167,7 +167,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Easiest way I've found is through <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> but you can peruse other options on the OSM wiki pages <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a> and <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM_Map_On_Garmin/Download</a></p>
+<p>Easiest way I've found is through <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> but you can peruse other options on the OSM wiki pages <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a> and <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

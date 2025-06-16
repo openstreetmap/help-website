@@ -189,7 +189,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>You could also create a map note (<a href="http://wiki.openstreetmap.org/wiki/Notes">http://wiki.openstreetmap.org/wiki/Notes</a> ) at those locations.</p>
+<p>You could also create a map note (<a href="https://wiki.openstreetmap.org/wiki/Notes">https://wiki.openstreetmap.org/wiki/Notes</a> ) at those locations.</p>
 </div>
 <div id="comment-44802-info" class="comment-info">
 <span class="comment-age">(18 Aug '15, 14:08)</span> <span class="comment-user userinfo">Lightsider</span>

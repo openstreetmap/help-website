@@ -116,7 +116,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It sounds like you are are referring to the data layer, on openstreetmap.org. This is not actually part of Potlatch 2, it is just part of the website.</p>
-<p>It has been removed from the layer switcher (probably temporarily). It is now available by clicking on the little down arrow, next to the "Edit" button. Then choose the option for "Browse Map Data". For more details and an example image, see the wiki page: <a href="http://wiki.openstreetmap.org/wiki/Data_layer">Data layer</a></p>
+<p>It has been removed from the layer switcher (probably temporarily). It is now available by clicking on the little down arrow, next to the "Edit" button. Then choose the option for "Browse Map Data". For more details and an example image, see the wiki page: <a href="https://wiki.openstreetmap.org/wiki/Data_layer">Data layer</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

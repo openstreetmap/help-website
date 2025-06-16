@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I am a professor in the Department of Earth Sciences at California University of Pennsylvania (<a href="http://www.openstreetmap.org/?lat=40.06175&amp;lon=-79.8831&amp;zoom=16">35 miles southeast of Pittsburgh</a>). I recently attended an OSM workshop at the Crisis Mapping Conference. It was great and I would like to hold a mapping party on my campus for my students to create the campus map on OSM in early 2013. However the edit I made to my campus at the workshop still has not shown up yet. Can someone tell me what I did wrong? Thanks</p>
+<p>Hello, I am a professor in the Department of Earth Sciences at California University of Pennsylvania (<a href="https://www.openstreetmap.org/?lat=40.06175&amp;lon=-79.8831&amp;zoom=16">35 miles southeast of Pittsburgh</a>). I recently attended an OSM workshop at the Crisis Mapping Conference. It was great and I would like to hold a mapping party on my campus for my students to create the campus map on OSM in early 2013. However the edit I made to my campus at the workshop still has not shown up yet. Can someone tell me what I did wrong? Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-problem" rel="tag" title="see questions tagged &#39;problem&#39;">problem</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span> <span class="post-tag tag-link-with" rel="tag" title="see questions tagged &#39;with&#39;">with</span> <span class="post-tag tag-link-campus" rel="tag" title="see questions tagged &#39;campus&#39;">campus</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looks like you created a <a href="http://www.openstreetmap.org/browse/way/185305848">way with no tags</a>. You have put some tags on <a href="http://www.openstreetmap.org/browse/node/1958704120">one node of that way</a>, but the tags should be on the way itself.</p>
+<p>Looks like you created a <a href="https://www.openstreetmap.org/browse/way/185305848">way with no tags</a>. You have put some tags on <a href="https://www.openstreetmap.org/browse/node/1958704120">one node of that way</a>, but the tags should be on the way itself.</p>
 <p>-- Steve</p>
 </div>
 <div class="answer-controls post-controls">
@@ -193,7 +193,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hurray for organising mapping parties!</p>
-<p>As a general answer to this kind of question see: <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">Question: I have made edits but they don't show up on the map</a></p>
+<p>As a general answer to this kind of question see: <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">Question: I have made edits but they don't show up on the map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

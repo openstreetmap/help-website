@@ -182,7 +182,7 @@ rel(secondid);
 );
 (._;&gt;;);
 out meta;</code></pre>
-<p>(look at <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">the Overpass QL documentation</a> for more information, especially the sections on "Union" and "By Element Id")</p>
+<p>(look at <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">the Overpass QL documentation</a> for more information, especially the sections on "Union" and "By Element Id")</p>
 <p>I'm not sure that it would be acceptable to query so many relations, if they are large, the query would have a large result.</p>
 <p>Another approach that doesn't need a database is to use whatever programming tools you are familiar with to read through the large file 3 times. The first time, when you encounter a desired relation, extract it and also make a list of the ways that are members of the relation. The second time, extract the list of ways and make a list of the nodes that are members. The third time, extract the list of nodes.</p>
 </div>

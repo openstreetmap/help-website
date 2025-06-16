@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You need add a tag "name".</p>
-<p>Best way is look at <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginners' guide</a> on wiki and especially <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">chapter on Potlatch</a>.</p>
+<p>Best way is look at <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide">Beginners' guide</a> on wiki and especially <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">chapter on Potlatch</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

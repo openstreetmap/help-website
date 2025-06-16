@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Renderer#Rendering_Software">http://wiki.openstreetmap.org/wiki/Renderer#Rendering_Software</a> for a list of renderers.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Renderer#Rendering_Software">https://wiki.openstreetmap.org/wiki/Renderer#Rendering_Software</a> for a list of renderers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -123,7 +123,7 @@ One Answer:
 <div id="post-20134-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>specifically <a href="http://wiki.openstreetmap.org/wiki/Renderers_feature_list">http://wiki.openstreetmap.org/wiki/Renderers_feature_list</a></p>
+<p>specifically <a href="https://wiki.openstreetmap.org/wiki/Renderers_feature_list">https://wiki.openstreetmap.org/wiki/Renderers_feature_list</a></p>
 </div>
 <div id="comment-20134-info" class="comment-info">
 <span class="comment-age">(21 Feb '13, 20:25)</span> <span class="comment-user userinfo">gormo</span>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you're looking for some sort of "my places" feature then the answers to <a href="https://help.openstreetmap.org/questions/11069/does-openstreetmap-have-a-my-places-feature-like-google-maps">this previous question</a> may help.</p>
+<p>If you're looking for some sort of "my places" feature then the answers to <a href="/questions/11069/does-openstreetmap-have-a-my-places-feature-like-google-maps">this previous question</a> may help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -124,7 +124,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Otherwise you should check the answers to <a href="https://help.openstreetmap.org/questions/1778/how-can-i-display-a-map-with-multiple-markers">this</a> and <a href="https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">this</a> question.</p>
+<p>Otherwise you should check the answers to <a href="/questions/1778/how-can-i-display-a-map-with-multiple-markers">this</a> and <a href="/questions/25/how-do-i-add-a-marker-to-a-map">this</a> question.</p>
 </div>
 <div id="comment-18150-info" class="comment-info">
 <span class="comment-age">(02 Dec '12, 16:28)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -198,7 +198,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div id="comment-18180-info" class="comment-info">
 <span class="comment-age">(03 Dec '12, 23:38)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -209,7 +209,7 @@ osqa_accepted = false
 <div id="post-18181-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Names should show up eventually (provided something else isn't in the way). If <a href="http://www.openstreetmap.org/?lat=52.82952&amp;lon=-6.91752&amp;zoom=17&amp;layers=M">this</a> is the one that you were talking about, it does show up now.</p>
+<p>Names should show up eventually (provided something else isn't in the way). If <a href="https://www.openstreetmap.org/?lat=52.82952&amp;lon=-6.91752&amp;zoom=17&amp;layers=M">this</a> is the one that you were talking about, it does show up now.</p>
 </div>
 <div id="comment-18181-info" class="comment-info">
 <span class="comment-age">(04 Dec '12, 00:16)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

@@ -165,7 +165,7 @@ osqa_accepted = false
 <ul>
 <li>Just forget about it. It's probably not a big deal, and anyone who does end up browsing the changeset comments will probably see that the changes don't match up with the description and correctly deduce how it happened.</li>
 <li>Refine geometry or add/revise tags on the objects in question, save changes again, and clarify the mistake in the new comment. This really isn't necessary unless you think there's important information to convey about the changeset to future mappers.</li>
-<li>Revert the changeset and redo your work. Generally this would be overkill, but since you implied that you may have pulled information from Google Maps, this might actually be the best choice. Google's terms of service explicitly forbid this, so it can get the OSM project into legal trouble. Unfortunately reverting a changset, even your own, is not an easy process. See <a href="https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">this question</a> for some discussion.</li>
+<li>Revert the changeset and redo your work. Generally this would be overkill, but since you implied that you may have pulled information from Google Maps, this might actually be the best choice. Google's terms of service explicitly forbid this, so it can get the OSM project into legal trouble. Unfortunately reverting a changset, even your own, is not an easy process. See <a href="/questions/731/how-can-i-revert-a-changeset">this question</a> for some discussion.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

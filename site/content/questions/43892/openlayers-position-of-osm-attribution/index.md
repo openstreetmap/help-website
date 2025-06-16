@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="http://help.openstreetmap.org/upfiles/3.png" alt="alt text" /></p>
+<p><img src="/upfiles/3.png" alt="alt text" /></p>
 <p>Could any body tell me how to move the tag OpenStreetMap contributors to the bottom, because that's so weird to see the tag at almost middle of the map. Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -81,7 +81,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>It's on website the code is very simple like <a href="http://help.openstreetmap.org/upfiles/1.png">this</a>.</p>
+<p>It's on website the code is very simple like <span>this</span>.</p>
 <p>Could someone help me out?</p>
 </div>
 <div id="comment-43900-info" class="comment-info">

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a misunderstanding, but perhaps one that should mean a change in Potlatch 2. When you see the message "Not recognised" you're being told that the preset file Potlatch 2 is working from doesn't have the feature you're editing included. This doesn't mean it uses invalid tags (since you can use <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">Any Tags You Like</a> in OSM), just that there's no simple preset for it.</p>
+<p>This is a misunderstanding, but perhaps one that should mean a change in Potlatch 2. When you see the message "Not recognised" you're being told that the preset file Potlatch 2 is working from doesn't have the feature you're editing included. This doesn't mean it uses invalid tags (since you can use <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">Any Tags You Like</a> in OSM), just that there's no simple preset for it.</p>
 <p>You aren't doing anything wrong by adding features using these tags (providing you're using them in a manner consistent with the documentation), and you shouldn't take Potlatch 2's message to mean there's a problem with your tagging.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -78,7 +78,7 @@ osqa_accepted = false
 <div id="post-74292-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Question refers to this old question: <a href="https://help.openstreetmap.org/questions/46689/how-to-extract-the-bus-routes">https://help.openstreetmap.org/questions/46689/how-to-extract-the-bus-routes</a></p>
+<p>Question refers to this old question: <a href="/questions/46689/how-to-extract-the-bus-routes">https://help.openstreetmap.org/questions/46689/how-to-extract-the-bus-routes</a></p>
 </div>
 <div id="comment-74292-info" class="comment-info">
 <span class="comment-age">(20 Apr '20, 09:59)</span> <span class="comment-user userinfo">TZorn</span>

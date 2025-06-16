@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-53489-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I asked about the purpose of the setting here: <a href="https://help.openstreetmap.org/questions/53153/purposerelevance-of-default-zoom-level-for-markers">https://help.openstreetmap.org/questions/53153/purposerelevance-of-default-zoom-level-for-markers</a></p>
+<p>I asked about the purpose of the setting here: <a href="/questions/53153/purposerelevance-of-default-zoom-level-for-markers">https://help.openstreetmap.org/questions/53153/purposerelevance-of-default-zoom-level-for-markers</a></p>
 </div>
 <div id="comment-53489-info" class="comment-info">
 <span class="comment-age">(11 Dec '16, 21:29)</span> <span class="comment-user userinfo">skorbut</span>

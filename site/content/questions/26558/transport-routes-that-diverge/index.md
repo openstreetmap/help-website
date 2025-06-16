@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>No, the correct way is to create a new, complete route for the variant used in weekends, and group all of the variants under a "route_master" relation.</p>
 <p>Bus Route relations should ideally never be "branched" or "broken" - no guesses should be made by (already very complex) routing software regarding the "branch" that should be taken on a route.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Tag:type%3Droute_master">route_master</a> documentation in the OSM wiki for more information.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Tag:type%3Droute_master">route_master</a> documentation in the OSM wiki for more information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

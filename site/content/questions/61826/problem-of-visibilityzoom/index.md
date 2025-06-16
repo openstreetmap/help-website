@@ -148,7 +148,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The answer lies somewhere in reply to this similar query<br />
-<a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -250,14 +250,14 @@ osqa_accepted = false
 <div class="answer-body">
 <p>see</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a>
+<li><a href="/questions/8794/footpaths-not-showing-in-certain-zoom-levels">https://help.openstreetmap.org/questions/8794/footpaths-not-showing-in-certain-zoom-levels</a>
 <ul>
 <li>your new path over there <a href="https://www.openstreetmap.org/#map=19/48.37100/-4.35815">https://www.openstreetmap.org/#map=19/48.37100/-4.35815</a> already shows up completely in all zoom levels for me (needed to hit Ctrl+F5 once).</li>
 </ul></li>
 </ul>
 <p>and</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a></li>
+<li><a href="/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap">https://help.openstreetmap.org/questions/3950/when-does-a-change-get-updated-on-the-opencyclemap</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

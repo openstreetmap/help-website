@@ -130,7 +130,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>... so your starting point to find some tools can be the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Develop">http://wiki.openstreetmap.org/wiki/Develop</a></p>
+<p>... so your starting point to find some tools can be the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Develop">https://wiki.openstreetmap.org/wiki/Develop</a></p>
 </div>
 <div id="comment-18790-info" class="comment-info">
 <span class="comment-age">(31 Dec '12, 07:49)</span> <span class="comment-user userinfo">stephan75</span>

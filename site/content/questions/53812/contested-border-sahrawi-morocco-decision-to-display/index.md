@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Contested border (Sahrawi Morocco) - decision to display"
-description = '''A few of our users from Morocco have reported that a new border delimiting the Sahrawi area has appeared on openstreetmap.org. http://www.openstreetmap.org/#map=6/29.353/-8.943 My understanding is that this is not an internationally recognized country and this is very sensitive for most of the Moroc...'''
+description = '''A few of our users from Morocco have reported that a new border delimiting the Sahrawi area has appeared on openstreetmap.org. https://www.openstreetmap.org/#map=6/29.353/-8.943 My understanding is that this is not an internationally recognized country and this is very sensitive for most of the Moroc...'''
 date = "2017-01-03T08:53:00Z"
 lastmod = "2018-06-10T14:38:00Z"
 weight = 53812
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>A few of our users from Morocco have reported that a new border delimiting the Sahrawi area has appeared on openstreetmap.org.</p>
-<p><a href="http://www.openstreetmap.org/#map=6/29.353/-8.943">http://www.openstreetmap.org/#map=6/29.353/-8.943</a></p>
+<p><a href="https://www.openstreetmap.org/#map=6/29.353/-8.943">https://www.openstreetmap.org/#map=6/29.353/-8.943</a></p>
 <p>My understanding is that this is not an internationally recognized country and this is very sensitive for most of the Moroccan people.</p>
 <p>I would like to know why it was decided to show this border and what lead to this decision ? Is there a way to hide this border (at least for our Moroccan users) ?</p>
 </div>
@@ -182,8 +182,8 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I was talking with members from OSM Morocco. And they sent me these links :</p>
 <p><a href="https://forum.openstreetmap.org/viewtopic.php?pid=606038#p606038">https://forum.openstreetmap.org/viewtopic.php?pid=606038#p606038</a></p>
-<p><a href="http://www.openstreetmap.org/user_blocks/1105">http://www.openstreetmap.org/user_blocks/1105</a></p>
-<p><a href="http://www.openstreetmap.org/relation/3630439">http://www.openstreetmap.org/relation/3630439</a></p>
+<p><a href="https://www.openstreetmap.org/user_blocks/1105">https://www.openstreetmap.org/user_blocks/1105</a></p>
+<p><a href="https://www.openstreetmap.org/relation/3630439">https://www.openstreetmap.org/relation/3630439</a></p>
 <p>So it seems that it is a community decision based on a survey. It makes sense to have the data of these borders in the OSM database (for people who needs this) but I still think that they should not be displayed as the standard ones on osm.org.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -317,7 +317,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13142/offygis">@offygis</a> I often point out to people with such complaints as yours, that if you were driving in the area in question, you would clearly prefer to have a map that accurately delineates the boundaries of control, regardless of if your government approves of them or not.</p>
+<p><a href="https://help.openstreetmap.org/users/13142/offygis">@offygis</a> I often point out to people with such complaints as yours, that if you were driving in the area in question, you would clearly prefer to have a map that accurately delineates the boundaries of control, regardless of if your government approves of them or not.</p>
 <p>Further, as already has been pointed out, OSM tends to contain borders of defacto control (with some hysteresis wrt changes) and I don't see any serious argument against our current data in that respect.</p>
 <p>Outside of the official OSM doctrine, it is fairly clear that the SADR does past the duck test for countries, see for example <a href="https://en.wikipedia.org/wiki/List_of_states_with_limited_recognition">https://en.wikipedia.org/wiki/List_of_states_with_limited_recognition</a></p>
 </div>
@@ -406,7 +406,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>OSM can't possibly hope to provide all the nuances associated with all borders. As noted in my answer above "international recognized" isn't a binary value for a border, and the "how much the international community thinks something should be a border" and "how much it is actually like a border on the ground" are very much orthoganal.</p>
-<p>Also for the avoidance of doubt, do please note that "Western Sahara" (i.e. the whole territory) is in OSM: <a href="http://www.openstreetmap.org/relation/2559126">http://www.openstreetmap.org/relation/2559126</a> - if you want to render that on a map you are entirely free to do so.</p>
+<p>Also for the avoidance of doubt, do please note that "Western Sahara" (i.e. the whole territory) is in OSM: <a href="https://www.openstreetmap.org/relation/2559126">https://www.openstreetmap.org/relation/2559126</a> - if you want to render that on a map you are entirely free to do so.</p>
 </div>
 <div id="comment-55046-info" class="comment-info">
 <span class="comment-age">(13 Mar '17, 23:32)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

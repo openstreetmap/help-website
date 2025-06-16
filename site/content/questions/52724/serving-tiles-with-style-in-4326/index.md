@@ -198,7 +198,7 @@ One Answer:
 <div id="post-52770-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/104/frederik-ramm">@frederik</a>, thanks for a very insightful comment. I am getting my tiles from osm in .pbf format and using osm2pgsql to import them. If I pass in the "-l" option, would that take care of my tile generation problem (Assuming, of course, that I fix the style's mercation)?</p>
+<p><a href="https://help.openstreetmap.org/users/104/frederik-ramm">@frederik</a>, thanks for a very insightful comment. I am getting my tiles from osm in .pbf format and using osm2pgsql to import them. If I pass in the "-l" option, would that take care of my tile generation problem (Assuming, of course, that I fix the style's mercation)?</p>
 </div>
 <div id="comment-52770-info" class="comment-info">
 <span class="comment-age">(31 Oct '16, 23:41)</span> <span class="comment-user userinfo">ismail44</span>

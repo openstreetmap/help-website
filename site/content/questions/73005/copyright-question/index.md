@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi OSM, I am a bit confused about copyright. My customer want to use an image from open streetmap. Here is what we want to do. Is this correct, can we do that? The link goes to the copyright page of osm. The Logo was placed by me via Photoshop.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Bildschirmfoto_2020-02-11_um_11.56.57.png" alt="alt text" /></p>
+<p><img src="/upfiles/Bildschirmfoto_2020-02-11_um_11.56.57.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-copyrightverweis" rel="tag" title="see questions tagged &#39;copyrightverweis&#39;">copyrightverweis</span>

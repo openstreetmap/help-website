@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Everywhere you see a traffic sign access restriction, you should add it into OSM, even if it is a lot of work. Have a look in the <a href="http://wiki.openstreetmap.org/wiki/Access">access tags on the wiki</a>. You will see that trucks are tagged with the key "hgv". So, put the "hgv=destination" in all road sections you find this traffic sign.</p>
+<p>Everywhere you see a traffic sign access restriction, you should add it into OSM, even if it is a lot of work. Have a look in the <a href="https://wiki.openstreetmap.org/wiki/Access">access tags on the wiki</a>. You will see that trucks are tagged with the key "hgv". So, put the "hgv=destination" in all road sections you find this traffic sign.</p>
 <p>If at the end, some links to the city remi for a truck, this is because the traffic sign is missing, it's not your fault. The data shall reflect the reality.</p>
 </div>
 <div class="answer-controls post-controls">

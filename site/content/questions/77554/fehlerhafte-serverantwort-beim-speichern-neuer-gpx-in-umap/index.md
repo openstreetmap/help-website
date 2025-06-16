@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>[abgetrennt von alter Frage <a href="https://help.openstreetmap.org/questions/58912/umap-fehlerhafte-serverantwort?page=1&amp;focusedAnswerId=58957#58957">UMAP: fehlerhafte Serverantwort</a>]<br />
-[detached from old question <a href="https://help.openstreetmap.org/questions/58912/umap-fehlerhafte-serverantwort?page=1&amp;focusedAnswerId=58957#58957">UMAP: fehlerhafte Serverantwort</a>]</p>
+<p>[abgetrennt von alter Frage <a href="/questions/58912/umap-fehlerhafte-serverantwort?page=1&amp;focusedAnswerId=58957#58957">UMAP: fehlerhafte Serverantwort</a>]<br />
+[detached from old question <a href="/questions/58912/umap-fehlerhafte-serverantwort?page=1&amp;focusedAnswerId=58957#58957">UMAP: fehlerhafte Serverantwort</a>]</p>
 <p>Hallo zusammen,</p>
 <p>ich habe den gleichen Fehler. Also die fehlerhafte Serverantwort beim speichern neuer GPX. Das hat in den letzten Monaten immer ohne Probleme geklappt. Jetzt nach einem Tag, der gleiche fehler :/</p>
 <p>Hilft der Link hier bei der Sichtung des Problems: <a href="http://umap.openstreetmap.fr/de/map/esso5000_289613#12/50.9084/6.9828">http://umap.openstreetmap.fr/de/map/esso5000_289613#12/50.9084/6.9828</a></p>

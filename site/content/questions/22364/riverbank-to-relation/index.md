@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>A river usually consists of a way with the <em>waterway</em> key (or multiple ways for longer rivers) and optionally an area with the <em>waterway=riverbank</em> tag (or multiple areas for longer rivers). The way usually runs through the center or, if known, along the deepest points of the river and is always required. The riverbanks are only optional.</p>
-<p>For longer rivers the ways are often grouped in a relation (example: <a href="http://www.openstreetmap.org/browse/relation/123822">http://www.openstreetmap.org/browse/relation/123822</a>). Likewise the riverbanks can be grouped in a relation, too, but this is usually not the case.</p>
+<p>For longer rivers the ways are often grouped in a relation (example: <a href="https://www.openstreetmap.org/browse/relation/123822">https://www.openstreetmap.org/browse/relation/123822</a>). Likewise the riverbanks can be grouped in a relation, too, but this is usually not the case.</p>
 <p>tl;dr: Yes, add the center way and create a relation consisting of all your center river ways if you feel familiar enough with relations.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -137,7 +137,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>A couple more examples - <a href="http://www.openstreetmap.org/browse/relation/89652">here</a> is the relation for the Danube, and <a href="http://www.openstreetmap.org/browse/relation/2566210">here</a> is one for the Douro / Duero (though that, for some reason, has two relations for it). None of these example relations have riverbank polygons as part of the "river" relation.</p>
+<p>A couple more examples - <a href="https://www.openstreetmap.org/browse/relation/89652">here</a> is the relation for the Danube, and <a href="https://www.openstreetmap.org/browse/relation/2566210">here</a> is one for the Douro / Duero (though that, for some reason, has two relations for it). None of these example relations have riverbank polygons as part of the "river" relation.</p>
 </div>
 <div id="comment-22374-info" class="comment-info">
 <span class="comment-age">(13 May '13, 13:43)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -149,7 +149,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>I found a <a href="http://www.openstreetmap.org/browse/relation/6692">relation of riverbanks</a> but this seems to be rather uncommon.</p>
+<p>I found a <a href="https://www.openstreetmap.org/browse/relation/6692">relation of riverbanks</a> but this seems to be rather uncommon.</p>
 </div>
 <div id="comment-22376-info" class="comment-info">
 <span class="comment-age">(13 May '13, 13:54)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -197,7 +197,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><span>@Russkel</span> What exactly? The wiki already has pages about <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">rivers</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbanks</a>. And of course everybody is welcome to improve them, including you :).</p>
+<p><span>@Russkel</span> What exactly? The wiki already has pages about <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">rivers</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbanks</a>. And of course everybody is welcome to improve them, including you :).</p>
 </div>
 <div id="comment-22414-info" class="comment-info">
 <span class="comment-age">(14 May '13, 09:51)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -257,7 +257,7 @@ osqa_accepted = true
 <p>As the (now) top voted answer sais: rivers are often mapped with relations.</p>
 <p>IMO this has "historic" reasons since in earlier times this was the only way to handle bigger rivers in one go.</p>
 <p>But now the times and the tools have changed.<br />
-There is the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to query for anything you can describe, there is WIWOSM, there is a <a href="http://www.kompf.de/gps/rivermap.html?lat=50.53150&amp;lon=12.38978&amp;zoom=6">watershed map</a> which just uses connections and directions of waterways so IMO there is no need to use relations on complete rivers anymore - I don't use them. Of course you still need multipolygon relations for riverbanks encircling islands.</p>
+There is the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to query for anything you can describe, there is WIWOSM, there is a <a href="http://www.kompf.de/gps/rivermap.html?lat=50.53150&amp;lon=12.38978&amp;zoom=6">watershed map</a> which just uses connections and directions of waterways so IMO there is no need to use relations on complete rivers anymore - I don't use them. Of course you still need multipolygon relations for riverbanks encircling islands.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -369,7 +369,7 @@ Recently I mapped a river which Wikipedia told is 233km long. I traced it to abo
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi RobChafer did you read this page of the wiki ? <a href="http://wiki.openstreetmap.org/wiki/River">http://wiki.openstreetmap.org/wiki/River</a> If you’re working in Potlach (2), there’s a limit of 2000 nodes, so dont make ways bigger than that. Or your work cannot be saved.</p>
+<p>Hi RobChafer did you read this page of the wiki ? <a href="https://wiki.openstreetmap.org/wiki/River">https://wiki.openstreetmap.org/wiki/River</a> If you’re working in Potlach (2), there’s a limit of 2000 nodes, so dont make ways bigger than that. Or your work cannot be saved.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

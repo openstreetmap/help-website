@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Error during Nominatim configure - no library found"
-description = '''I have a machine running CentOS and I followed the instructions on http://wiki.openstreetmap.org/wiki/Nominatim/Installation and have installed all the software listed there. But when I try to run ./configure on Nominatim, I am getting the following output: checking for proj headers in /usr/include....'''
+description = '''I have a machine running CentOS and I followed the instructions on https://wiki.openstreetmap.org/wiki/Nominatim/Installation and have installed all the software listed there. But when I try to run ./configure on Nominatim, I am getting the following output: checking for proj headers in /usr/include....'''
 date = "2013-09-26T23:04:00Z"
 lastmod = "2013-09-30T19:31:00Z"
 weight = 26798
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a machine running CentOS and I followed the instructions on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> and have installed all the software listed there.</p>
+<p>I have a machine running CentOS and I followed the instructions on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> and have installed all the software listed there.</p>
 <p>But when I try to run ./configure on Nominatim, I am getting the following output:</p>
 <pre><code>checking for proj headers in /usr/include... not found
 checking for proj projection library... no

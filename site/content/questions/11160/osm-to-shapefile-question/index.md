@@ -118,9 +118,9 @@ One Answer:
 <div class="answer-body">
 <p>The shapefile format has a lot of limitations, so it is not possible to create a shapefile with all the information from OSM, so when you convert you have to decide what to include.</p>
 <p>You don't describe what data you actually need, so it is hard to say for sure what is the best solution for you. If you need more than just simple shapes, you might be better off importing the planet file (or one of the extracts from <a href="http://download.geofabrik.de/">Geofabrik</a> or <a href="http://downloads.cloudmade.com/">Cloudmade</a>) into a PostGIS database.</p>
-<p>Again depending on your needs, there are several ways to do that. Some of the options are: <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a>, <a href="http://wiki.openstreetmap.org/wiki/Imposm">Imposm</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></p>
+<p>Again depending on your needs, there are several ways to do that. Some of the options are: <a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a>, <a href="https://wiki.openstreetmap.org/wiki/Imposm">Imposm</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a></p>
 <p>With Osmosis, PostgreSQL and PostGIS you can do something like this:</p>
-<p>Create a PostGIS and hstore enabled database and setup the <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PostGIS_Tasks_.28Snapshot_Schema.29">pgsnapshot schema</a>, use Osmosis to import the data:</p>
+<p>Create a PostGIS and hstore enabled database and setup the <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#PostGIS_Tasks_.28Snapshot_Schema.29">pgsnapshot schema</a>, use Osmosis to import the data:</p>
 <pre><code>osmosis --read-pbf file=denmark.osm.pbf outPipe.0=1 --write-pgsql database=osm user=XXX password=XXX inPipe.0=1</code></pre>
 <p>Then create and index new qid columns to make QGIS happy:</p>
 <pre><code>CREATE SEQUENCE nodes_qid_seq;
@@ -161,7 +161,7 @@ UNION ALL
 <p>You can also use osm2pgsql and change the import style to create a schema that matches your needs.</p>
 <p>There are no fixed rules for how anything should be tagged in OSM, so your biggest task is probably identifying what tag/value combinations you should use to make your classifications.</p>
 <p>You can start by looking at some of these keys and especially their link to <a href="http://taginfo.openstreetmap.org">taginfo</a> on the right side of the page - the "values" tab can give you an idea about values you should consider:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:highway">highway</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:foot">foot</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:bicycle">bicycle</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:tracktype">tracktype</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:surface">surface</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:mtb:scale">mtb:scale</a> and <a href="http://wiki.openstreetmap.org/wiki/Key:sac_scale">sac_scale</a>.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:highway">highway</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:foot">foot</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:bicycle">bicycle</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:tracktype">tracktype</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:surface">surface</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:mtb:scale">mtb:scale</a> and <a href="https://wiki.openstreetmap.org/wiki/Key:sac_scale">sac_scale</a>.</p>
 <p>/Jais</p>
 </div>
 <div class="answer-controls post-controls">
@@ -206,7 +206,7 @@ UNION ALL
 <div id="post-11168-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Are you aware that QGIS can load OSM files directly (through its OSM plugin) ? This may cause problems if your data use <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygons</a> but would be enough for simple OSM elements (ways, nodes).</p>
+<p>Are you aware that QGIS can load OSM files directly (through its OSM plugin) ? This may cause problems if your data use <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygons</a> but would be enough for simple OSM elements (ways, nodes).</p>
 </div>
 <div id="comment-11168-info" class="comment-info">
 <span class="comment-age">(13 Mar '12, 14:55)</span> <span class="comment-user userinfo">Pieren</span>

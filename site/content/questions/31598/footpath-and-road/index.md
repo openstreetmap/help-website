@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Footpath and road"
-description = '''Hi all. I would like to report a footpath in Parma Province (Italy). The footpath coincides in part with a road already marked in OSM (from http://www.openstreetmap.org/node/2280873356 to http://www.openstreetmap.org/node/991075373) How should I trace the path? I have to retrace the road? Thanks'''
+description = '''Hi all. I would like to report a footpath in Parma Province (Italy). The footpath coincides in part with a road already marked in OSM (from https://www.openstreetmap.org/node/2280873356 to https://www.openstreetmap.org/node/991075373) How should I trace the path? I have to retrace the road? Thanks'''
 date = "2014-03-16T14:55:00Z"
 lastmod = "2014-03-16T17:48:00Z"
 weight = 31598
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi all. I would like to report a footpath in Parma Province (Italy). The footpath coincides in part with a road already marked in OSM (from <a href="http://www.openstreetmap.org/node/2280873356">http://www.openstreetmap.org/node/2280873356</a> to <a href="http://www.openstreetmap.org/node/991075373">http://www.openstreetmap.org/node/991075373</a>) How should I trace the path? I have to retrace the road? Thanks</p>
+<p>Hi all. I would like to report a footpath in Parma Province (Italy). The footpath coincides in part with a road already marked in OSM (from <a href="https://www.openstreetmap.org/node/2280873356">https://www.openstreetmap.org/node/2280873356</a> to <a href="https://www.openstreetmap.org/node/991075373">https://www.openstreetmap.org/node/991075373</a>) How should I trace the path? I have to retrace the road? Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-footpath" rel="tag" title="see questions tagged &#39;footpath&#39;">footpath</span>
@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please tag all the parts (ways) between the Sentiero del Groppo di Gorro, CAI Parma 830 and the gravel track all together with the Chiesa di Gorro and mark them as a route in the advanced menu, if its a loop. It’s called a relation. By doing that there is no need to retrace all the roads after all, just add the relation to the way in the relation menu. Everything will stay in the database. And yes the Sentiero del Groppo should get the relation as well. Look here <a href="http://wiki.openstreetmap.org/wiki/Relations/Routes#Walking_routes_.28also_hiking_and_pilgrimage.29">http://wiki.openstreetmap.org/wiki/Relations/Routes#Walking_routes_.28also_hiking_and_pilgrimage.29</a></p>
+<p>Please tag all the parts (ways) between the Sentiero del Groppo di Gorro, CAI Parma 830 and the gravel track all together with the Chiesa di Gorro and mark them as a route in the advanced menu, if its a loop. It’s called a relation. By doing that there is no need to retrace all the roads after all, just add the relation to the way in the relation menu. Everything will stay in the database. And yes the Sentiero del Groppo should get the relation as well. Look here <a href="https://wiki.openstreetmap.org/wiki/Relations/Routes#Walking_routes_.28also_hiking_and_pilgrimage.29">https://wiki.openstreetmap.org/wiki/Relations/Routes#Walking_routes_.28also_hiking_and_pilgrimage.29</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

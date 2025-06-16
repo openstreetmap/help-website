@@ -109,7 +109,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As far as I know, there is not a larger developer community outside of the core employees of the manufacturer. Or put differently it is unlikely that somebody that helps on this site has built maps.me from source.</p>
-<p>I would suggest asking on the OSM dev irc channel #osm-dev see <a href="http://wiki.openstreetmap.org/wiki/IRC">http://wiki.openstreetmap.org/wiki/IRC</a> I suspect your chances of getting an answer will be better there.</p>
+<p>I would suggest asking on the OSM dev irc channel #osm-dev see <a href="https://wiki.openstreetmap.org/wiki/IRC">https://wiki.openstreetmap.org/wiki/IRC</a> I suspect your chances of getting an answer will be better there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

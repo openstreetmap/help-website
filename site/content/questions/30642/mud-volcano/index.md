@@ -114,7 +114,7 @@ One Answer:
 <li><code>tourism=attraction</code></li>
 <li>and even add temperature of the volcano some are hot and others cold or colorful.</li>
 </ul>
-<p>Look here as well <a href="http://www.openstreetmap.org/#map=15/44.5531/-110.8093">http://www.openstreetmap.org/#map=15/44.5531/-110.8093</a> its Yellowstone National Park, take a look around, there several green dots, each stands for a volcano or geyser and this area has mud volcano’s as well <a href="http://www.openstreetmap.org/#map=14/44.6228/-110.4410.">http://www.openstreetmap.org/#map=14/44.6228/-110.4410.</a></p>
+<p>Look here as well <a href="https://www.openstreetmap.org/#map=15/44.5531/-110.8093">https://www.openstreetmap.org/#map=15/44.5531/-110.8093</a> its Yellowstone National Park, take a look around, there several green dots, each stands for a volcano or geyser and this area has mud volcano’s as well <a href="https://www.openstreetmap.org/#map=14/44.6228/-110.4410.">https://www.openstreetmap.org/#map=14/44.6228/-110.4410.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

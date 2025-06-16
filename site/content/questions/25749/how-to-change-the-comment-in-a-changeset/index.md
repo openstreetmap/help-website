@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-25754-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@danieldaniel</span>: (extending SomeoneElse:) To enable others to help you in this specific case (revert), please mention the number of the changeset (if you can specify one object that needs to be reverted). Describe what needs to be reverted (and maybe why). See <a href="http://www.openstreetmap.org/user/danieldaniel/edits">list of your changesets</a>.</p>
+<p><span>@danieldaniel</span>: (extending SomeoneElse:) To enable others to help you in this specific case (revert), please mention the number of the changeset (if you can specify one object that needs to be reverted). Describe what needs to be reverted (and maybe why). See <a href="https://www.openstreetmap.org/user/danieldaniel/edits">list of your changesets</a>.</p>
 </div>
 <div id="comment-25754-info" class="comment-info">
 <span class="comment-age">(25 Aug '13, 01:49)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

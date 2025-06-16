@@ -107,7 +107,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>After reading quickly the OSM wiki, there is no such feature mentioned about <a href="http://wiki.openstreetmap.org/wiki/YOURS">YOURS</a>.</p>
+<p>After reading quickly the OSM wiki, there is no such feature mentioned about <a href="https://wiki.openstreetmap.org/wiki/YOURS">YOURS</a>.</p>
 <p>And some tests show that I am not sure whether viapoints are encoded correctly in the permalink URL.</p>
 <p>So in doubt, ask OSM user Lambertus like written in the wiki above.</p>
 </div>

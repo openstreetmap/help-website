@@ -105,8 +105,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The easiest place to start is probably Lambertus' site <a href="http://garmin.openstreetmap.nl/">here</a>. It's got step-by-step instructions on it.</p>
-<p>There are lots of other options too - have a look <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">here</a>.</p>
-<p>If you do have any further questions - it's a fair bet that someone will already have asked them, so I'd do a search of this help site like <a href="http://help.openstreetmap.org/search/?q=garmin&amp;Submit=search&amp;t=question">this</a> and you'll get lots of answers.</p>
+<p>There are lots of other options too - have a look <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">here</a>.</p>
+<p>If you do have any further questions - it's a fair bet that someone will already have asked them, so I'd do a search of this help site like <a href="https://help.openstreetmap.org/search/?q=garmin&amp;Submit=search&amp;t=question">this</a> and you'll get lots of answers.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

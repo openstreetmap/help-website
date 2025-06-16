@@ -54,7 +54,7 @@ autovacuum = on
 effective_cache_size = 4GB
 maintenance_work_mem = 2GB
 max_worker_process = 12</code></pre>
-<p>On average it took 1 hour to process 6 hours worth of new OSM updates. (Screenshot is the log printed by the script openstreetmap-tiles-update-expire. Inside the script, it calls osm2pgsql --append -slim) <img src="https://help.openstreetmap.org/upfiles/MicrosoftTeams-image_(2).png" alt="alt text" /></p>
+<p>On average it took 1 hour to process 6 hours worth of new OSM updates. (Screenshot is the log printed by the script openstreetmap-tiles-update-expire. Inside the script, it calls osm2pgsql --append -slim) <img src="/upfiles/MicrosoftTeams-image_(2).png" alt="alt text" /></p>
 <p>I remember when bulk loading OSM Planet to the database, a lot of articles suggest modifying postgresql.conf</p>
 <p>Such as:</p>
 <p>fsync = off (import only!)</p>

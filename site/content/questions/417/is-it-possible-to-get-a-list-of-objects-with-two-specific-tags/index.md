@@ -104,9 +104,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Meanwhile there is the new <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> allowing to search for objects with two or more specific tags, like:</p>
+<p>Meanwhile there is the new <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> allowing to search for objects with two or more specific tags, like:</p>
 <p><a href="http://www.overpass-api.de/api/xapi?way%5Bhighway=cycleway%5D%5Brailway=abandoned%5D%5B@meta%5D">http://www.overpass-api.de/api/xapi?way[highway=cycleway][railway=abandoned][@meta]</a></p>
-<p>(this example uses the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API#XAPI_Compatibility_Layer">XAPI compatibility layer</a>)</p>
+<p>(this example uses the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#XAPI_Compatibility_Layer">XAPI compatibility layer</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -206,7 +206,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>@Kozuch: <a href="http://www.informationfreeway.org/api/0.6/*%5Bname=Metuje%5D">http://www.informationfreeway.org/api/0.6/*[name=Metuje]</a> (see <a href="http://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a>)</p>
+<p>@Kozuch: <a href="http://www.informationfreeway.org/api/0.6/*%5Bname=Metuje%5D">http://www.informationfreeway.org/api/0.6/*[name=Metuje]</a> (see <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a>)</p>
 </div>
 <div id="comment-920-info" class="comment-info">
 <span class="comment-age">(24 Sep '10, 23:47)</span> <span class="comment-user userinfo">Mormegil</span>

@@ -156,7 +156,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Lisbon_nl_map.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Lisbon_nl_map.JPG" alt="alt text" /></p>
 <p>I am guessing you may not have selected all the tiles, maybe. Just try again. EDIT I have just downloaded nl Portugal myself (see above ) and opened it with Basecamp, I choose the Garmin .img file which i installed in file called Garmin and on a memory stick. It looks ok to me, can you post a screenshot from Basecamp showing the problem</p>
 </div>
 <div class="answer-controls post-controls">
@@ -191,7 +191,7 @@ One Answer:
 <div id="post-61108-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Does the main map show the missing data? if so try downloading again, maybe after nl do an update. <a href="http://www.openstreetmap.org/#map=10/38.6480/-9.1969">http://www.openstreetmap.org/#map=10/38.6480/-9.1969</a></p>
+<p>Does the main map show the missing data? if so try downloading again, maybe after nl do an update. <a href="https://www.openstreetmap.org/#map=10/38.6480/-9.1969">https://www.openstreetmap.org/#map=10/38.6480/-9.1969</a></p>
 </div>
 <div id="comment-61108-info" class="comment-info">
 <span class="comment-age">(09 Dec '17, 08:02)</span> <span class="comment-user userinfo">andy mackey</span>

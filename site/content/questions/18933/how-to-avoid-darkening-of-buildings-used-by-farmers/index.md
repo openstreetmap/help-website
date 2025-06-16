@@ -127,7 +127,7 @@ osqa_accepted = true
 5
 </div>
 <div class="comment-text">
-<p>And of course, <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer</a></p>
+<p>And of course, <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer</a></p>
 </div>
 <div id="comment-18936-info" class="comment-info">
 <span class="comment-age">(09 Jan '13, 09:28)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

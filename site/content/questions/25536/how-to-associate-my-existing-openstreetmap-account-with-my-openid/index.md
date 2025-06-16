@@ -193,7 +193,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe in the OSM wiki there is a hint?</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/OpenID">OpenID</a></p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/OpenID">OpenID</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

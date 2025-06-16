@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-38666-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Please be a little bit more specific what do you want to remove. Link to your changesets: <a href="http://www.openstreetmap.org/user/senya500/history#map=14/42.9980/40.9724">http://www.openstreetmap.org/user/senya500/history#map=14/42.9980/40.9724</a></p>
+<p>Please be a little bit more specific what do you want to remove. Link to your changesets: <a href="https://www.openstreetmap.org/user/senya500/history#map=14/42.9980/40.9724">https://www.openstreetmap.org/user/senya500/history#map=14/42.9980/40.9724</a></p>
 </div>
 <div id="comment-38666-info" class="comment-info">
 <span class="comment-age">(19 Nov '14, 15:58)</span> <span class="comment-user userinfo">RM87</span>

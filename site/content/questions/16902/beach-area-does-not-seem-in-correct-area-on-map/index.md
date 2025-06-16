@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>On the Standard Mapnik map on openstreetmap.org, the coastline can take a while to update. Most edits show up within a few minutes or hours, but changes to the coastline can take weeks or months to appear.</p>
-<p>See this previous question: <a href="https://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Why do the changes I have made to coastline not appear on the map?</a></p>
+<p>See this previous question: <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Why do the changes I have made to coastline not appear on the map?</a></p>
 <p>Your edits to the coastline and beach appear to be correct, you just have to wait a while for them to appear on the map.</p>
 </div>
 <div class="answer-controls post-controls">

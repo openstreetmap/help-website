@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>These are not really buildings, so the building tag would be incorrect. There is however a <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dwaste_disposal">amenity=waste_disposal</a> tag you can use. A single node should be sufficient.</p>
+<p>These are not really buildings, so the building tag would be incorrect. There is however a <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dwaste_disposal">amenity=waste_disposal</a> tag you can use. A single node should be sufficient.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -129,7 +129,7 @@ One Answer:
 <div id="post-15256-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you, I did so. However, the nodes don't seem to appear on the main map. You can see that here, for instance: <a href="http://www.openstreetmap.org/?lat=59.869098&amp;lon=30.414825&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=59.869098&amp;lon=30.414825&amp;zoom=18&amp;layers=M</a> Is there something I miss?</p>
+<p>Thank you, I did so. However, the nodes don't seem to appear on the main map. You can see that here, for instance: <a href="https://www.openstreetmap.org/?lat=59.869098&amp;lon=30.414825&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=59.869098&amp;lon=30.414825&amp;zoom=18&amp;layers=M</a> Is there something I miss?</p>
 </div>
 <div id="comment-15256-info" class="comment-info">
 <span class="comment-age">(18 Aug '12, 22:46)</span> <span class="comment-user userinfo">Pastafarianist</span>
@@ -140,7 +140,7 @@ One Answer:
 <div id="post-15260-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This area gets rendered <a href="http://www.openstreetmap.org/?lat=52.389993&amp;lon=-0.252888&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.389993&amp;lon=-0.252888&amp;zoom=18&amp;layers=M</a></p>
+<p>This area gets rendered <a href="https://www.openstreetmap.org/?lat=52.389993&amp;lon=-0.252888&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.389993&amp;lon=-0.252888&amp;zoom=18&amp;layers=M</a></p>
 </div>
 <div id="comment-15260-info" class="comment-info">
 <span class="comment-age">(19 Aug '12, 09:11)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -151,7 +151,7 @@ One Answer:
 <div id="post-15261-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>and this node amenity=recycling shows here <a href="http://www.openstreetmap.org/?lat=52.331144&amp;lon=-0.180256&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=52.331144&amp;lon=-0.180256&amp;zoom=18&amp;layers=M</a> probably just wait for your edits to get rendered</p>
+<p>and this node amenity=recycling shows here <a href="https://www.openstreetmap.org/?lat=52.331144&amp;lon=-0.180256&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=52.331144&amp;lon=-0.180256&amp;zoom=18&amp;layers=M</a> probably just wait for your edits to get rendered</p>
 </div>
 <div id="comment-15261-info" class="comment-info">
 <span class="comment-age">(19 Aug '12, 10:10)</span> <span class="comment-user userinfo">andy mackey</span>

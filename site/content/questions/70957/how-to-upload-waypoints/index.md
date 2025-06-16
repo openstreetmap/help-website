@@ -140,7 +140,7 @@ One Answer:
 <div id="post-70966-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>inaddition see <a href="https://help.openstreetmap.org/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping">https://help.openstreetmap.org/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping</a></p>
+<p>inaddition see <a href="/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping">https://help.openstreetmap.org/questions/24299/how-to-use-waypoints-which-have-been-collected-by-gps-for-mapping</a></p>
 </div>
 <div id="comment-70966-info" class="comment-info">
 <span class="comment-age">(30 Sep '19, 07:47)</span> <span class="comment-user userinfo">andy mackey</span>

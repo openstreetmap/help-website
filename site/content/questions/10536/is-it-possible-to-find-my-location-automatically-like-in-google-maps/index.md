@@ -130,7 +130,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As of 19th July 2013 that is possible now on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> : you can now use browser geo-location to locate the map where you are (click on the symbol <img src="http://blog.openstreetmap.org/wp-content/uploads/2013/07/geolocate-icon.png" alt="solid black arrow icon pointing to top-right" /> in the side bar). See: <a href="http://blog.openstreetmap.org/2013/07/19/new-map-control/">blog post explaining the new map controls</a>.</p>
+<p>As of 19th July 2013 that is possible now on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> : you can now use browser geo-location to locate the map where you are (click on the symbol <img src="http://blog.openstreetmap.org/wp-content/uploads/2013/07/geolocate-icon.png" alt="solid black arrow icon pointing to top-right" /> in the side bar). See: <a href="http://blog.openstreetmap.org/2013/07/19/new-map-control/">blog post explaining the new map controls</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

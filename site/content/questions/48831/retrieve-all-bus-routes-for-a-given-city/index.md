@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Retrieve all bus routes for a given city"
-description = '''Hello, I would like to extract a list of all the relations representing bus routes in a given city (i would then access their information via RelationFullRecur(relID) API). Let&#x27;s say I would like all the bus routes in London, how would i do that? I could look at http://wiki.openstreetmap.org/wiki/Bu...'''
+description = '''Hello, I would like to extract a list of all the relations representing bus routes in a given city (i would then access their information via RelationFullRecur(relID) API). Let&#x27;s say I would like all the bus routes in London, how would i do that? I could look at https://wiki.openstreetmap.org/wiki/Bu...'''
 date = "2016-03-24T21:38:00Z"
 lastmod = "2016-03-24T22:27:00Z"
 weight = 48831
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I would like to extract a list of all the relations representing bus routes in a given city (i would then access their information via RelationFullRecur(relID) API). Let's say I would like all the bus routes in London, how would i do that? I could look at <a href="http://wiki.openstreetmap.org/wiki/Bus_routes_in_London">http://wiki.openstreetmap.org/wiki/Bus_routes_in_London</a> but I'm looking for like something more automatic and programmable</p>
+<p>Hello, I would like to extract a list of all the relations representing bus routes in a given city (i would then access their information via RelationFullRecur(relID) API). Let's say I would like all the bus routes in London, how would i do that? I could look at <a href="https://wiki.openstreetmap.org/wiki/Bus_routes_in_London">https://wiki.openstreetmap.org/wiki/Bus_routes_in_London</a> but I'm looking for like something more automatic and programmable</p>
 <p>Let's then extend it to include also tram routers, shuttles, and even boat routes (ie, all terrestrial public transportation services, nothing underground).</p>
 <p>Thanks!</p>
 </div>
@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It appears you want to process data with the "osmapi" Python package. This package is a Python wrapper around OSM API functions. The RelationFullRecur(relID) method downloads a relation and all its members from the API using the <code>relation/&lt;id&gt;/full</code> API call. This should <strong>not</strong> be used for large scale data retrieval; if you're planning to download the complete surface transport network for one or more cities, or (even worse) if you plan do build that into some application that will be used by more people than just you, think again!</p>
-<p>A suitable way to get all relations of a particular kind in a particular area is using the Overpass API; see for example the last answer on <a href="https://help.openstreetmap.org/questions/37461/how-to-get-tram-stops-and-lines-routes">How to get tram stops and lines (routes).</a></p>
+<p>A suitable way to get all relations of a particular kind in a particular area is using the Overpass API; see for example the last answer on <a href="/questions/37461/how-to-get-tram-stops-and-lines-routes">How to get tram stops and lines (routes).</a></p>
 <p>Another option is simply downloading the full OSM data file for the region you're interested in and then pull the data from that; if you want to do that with Python, check out the <a href="https://github.com/osmcode/pyosmium">Python bindings for the Osmium library.</a></p>
 </div>
 <div class="answer-controls post-controls">

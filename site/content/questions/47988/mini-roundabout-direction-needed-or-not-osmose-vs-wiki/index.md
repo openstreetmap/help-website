@@ -46,7 +46,7 @@ highway = mini_roundabout</code></pre>
 <p>with:</p>
 <pre><code>Reverse roundabout
 Mini roundabout direction in this country is &quot;clockwise&quot; by default, useless direction tag</code></pre>
-<p>However, the wiki states that direction should be indicated on mini-roundabouts, as the default is anti-clockwise: <a href="http://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">Tag:junction=roundabout</a> (see the examples)</p>
+<p>However, the wiki states that direction should be indicated on mini-roundabouts, as the default is anti-clockwise: <a href="https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout">Tag:junction=roundabout</a> (see the examples)</p>
 <p>Which is correct?</p>
 <ul>
 <li>If the direction is needed, osmose needs fixing, where can I file a bug report?</li>
@@ -133,12 +133,12 @@ Mini roundabout direction in this country is &quot;clockwise&quot; by default, u
 <blockquote>
 <p>Note that the default value for mini-roundabouts is anti-clockwise.</p>
 </blockquote>
-<p><em><a href="http://wiki.openstreetmap.org/wiki/Key:direction#Clockwise_and_anticlockwise">Key:direction on the wiki</a></em></p>
+<p><em><a href="https://wiki.openstreetmap.org/wiki/Key:direction#Clockwise_and_anticlockwise">Key:direction on the wiki</a></em></p>
 <p>and specifically on a page about the United Kingdom:</p>
 <blockquote>
 <p>Add highway=mini_roundabout to the intersection node where the mini roundabout is located. Also add direction=clockwise.</p>
 </blockquote>
-<p><em><a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">Road signs in the United_Kingdom</a></em></p>
+<p><em><a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_Kingdom">Road signs in the United_Kingdom</a></em></p>
 <p>Osmose, however, seems to use a different rule (from reading <a href="https://raw.githubusercontent.com/osm-fr/osmose-backend/1cb12fc9f796110422ca515bbdbfda2ef1667e63/plugins/TagFix_MultipleTag.py">its source code</a>):</p>
 <p><em>Default value: "anti-clockwise" for countries that drive on the right, and "clockwise" for countries that drive on the left.</em></p>
 <p><a href="https://github.com/osm-fr/osmose-backend/blob/9149580422d677ce9d4623bd9baf6d1cbc91084f/osmose_config.py">osmose_config.py</a> contains a list of countries with the side they drive on.</p>
@@ -206,7 +206,7 @@ Mini roundabout direction in this country is &quot;clockwise&quot; by default, u
 <div class="answer-body">
 <p>My personal opinion is that it really doesn't matter whether a UK mini-roundabout is tagged as direction=clockwise or not. I wouldn't add direction=clockwise if the tag was missing or remove it if it was present.</p>
 <p>An anti-clockwise mini-roundabout is far more likely to be a tagging error than a genuinely anti-clockwise mini-roundabout. There are currently 2 allegedly anti-clockwise mini-roundabouts in the UK - see <a href="http://overpass-turbo.eu/s/ekM">http://overpass-turbo.eu/s/ekM</a> .</p>
-<p>If there were a significant number of genuine exceptions then it might be worth tagging it, but we don't tag "driving_side" throughout the UK just because Savoy Court <a href="http://www.openstreetmap.org/way/4253954">http://www.openstreetmap.org/way/4253954</a> is (famously) an exception to the side of the road we drive on.</p>
+<p>If there were a significant number of genuine exceptions then it might be worth tagging it, but we don't tag "driving_side" throughout the UK just because Savoy Court <a href="https://www.openstreetmap.org/way/4253954">https://www.openstreetmap.org/way/4253954</a> is (famously) an exception to the side of the road we drive on.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

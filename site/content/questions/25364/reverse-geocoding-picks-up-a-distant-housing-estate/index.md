@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to <a href="http://nominatim.openstreetmap.org/">nominatim.openstreetmap.org</a>, enter your search query and click on "<em>(details)</em>" on the result your are interested in. For <a href="http://nominatim.openstreetmap.org/search.php?q=Bushey+Hill+Road+SE5+UK">Bushey Hill Road SE5 UK</a> this will be <a href="http://nominatim.openstreetmap.org/details.php?place_id=20806299">this page</a>. Here Nominatim presents you its internal view on the specific place including a hierarchic representation of the address. Inside this hierarchy you will find the <a href="http://www.openstreetmap.org/browse/node/70740565">node Champion Hill Estate</a>. Because <em>Champion Hill Estate</em> is only a node, Nominatim has to <em>estimate</em> how large this area is. Obviously this estimation won't be correct most of the time.</p>
+<p>Go to <a href="http://nominatim.openstreetmap.org/">nominatim.openstreetmap.org</a>, enter your search query and click on "<em>(details)</em>" on the result your are interested in. For <a href="http://nominatim.openstreetmap.org/search.php?q=Bushey+Hill+Road+SE5+UK">Bushey Hill Road SE5 UK</a> this will be <a href="http://nominatim.openstreetmap.org/details.php?place_id=20806299">this page</a>. Here Nominatim presents you its internal view on the specific place including a hierarchic representation of the address. Inside this hierarchy you will find the <a href="https://www.openstreetmap.org/browse/node/70740565">node Champion Hill Estate</a>. Because <em>Champion Hill Estate</em> is only a node, Nominatim has to <em>estimate</em> how large this area is. Obviously this estimation won't be correct most of the time.</p>
 <p>If you want to fix this you can replace the Champion Hill Estate <em>node</em> with an <em>area</em> having the same tags. This area doesn't necessarily have to be 100% correct but with the help of some local knowledge you will be able to make a better estimation than Nominatim can.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -140,7 +140,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Just <a href="http://www.openstreetmap.org/edit?editor=id&amp;node=70740565">open the node in iD</a>, click on it and choose the trash icon.</p>
+<p>Just <a href="https://www.openstreetmap.org/edit?editor=id&amp;node=70740565">open the node in iD</a>, click on it and choose the trash icon.</p>
 </div>
 <div id="comment-25370-info" class="comment-info">
 <span class="comment-age">(14 Aug '13, 14:18)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -166,7 +166,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Great! But the node <a href="http://www.openstreetmap.org/browse/node/70740565">still exists</a>. Deleting all tags doesn't delete the object. Also the tag of the <a href="http://www.openstreetmap.org/browse/way/233513215">new area</a> is slightly wrong, instead of "place=housing_estate" you used "place=Housing Estate" (capitalization and whitespace instead of underscore). This won't work correctly.</p>
+<p>Great! But the node <a href="https://www.openstreetmap.org/browse/node/70740565">still exists</a>. Deleting all tags doesn't delete the object. Also the tag of the <a href="https://www.openstreetmap.org/browse/way/233513215">new area</a> is slightly wrong, instead of "place=housing_estate" you used "place=Housing Estate" (capitalization and whitespace instead of underscore). This won't work correctly.</p>
 </div>
 <div id="comment-25372-info" class="comment-info">
 <span class="comment-age">(14 Aug '13, 15:09)</span> <span class="comment-user userinfo">scai ♦</span>

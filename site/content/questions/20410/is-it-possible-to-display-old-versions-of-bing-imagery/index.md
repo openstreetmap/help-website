@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is it technically possible and/or allowed under <a href="http://wiki.openstreetmap.org/wiki/File:Bing_license.pdf">Microsoft's licence</a> for older versions of Bing imagery to be used as background layers? This would be useful for tracing when e.g. features in the most recent images are obscured by clouds. If it is possible, is there somewhere to request such a feature?</p>
+<p>Is it technically possible and/or allowed under <a href="https://wiki.openstreetmap.org/wiki/File:Bing_license.pdf">Microsoft's licence</a> for older versions of Bing imagery to be used as background layers? This would be useful for tracing when e.g. features in the most recent images are obscured by clouds. If it is possible, is there somewhere to request such a feature?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span>

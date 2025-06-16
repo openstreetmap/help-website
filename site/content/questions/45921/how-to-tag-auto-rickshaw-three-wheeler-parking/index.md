@@ -115,7 +115,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>This looks to be basically a type of taxi service.</p>
-<p>I would tag it <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtaxi">as such</a> and add a sub-tag so that people can distinguish this from a standard taxi service. There is already a suggested usage of <code>motorcar=no</code> and <code>motorcycle=yes</code> for motorcycle taxis, so I'd apply a similar set of tags of <code>motorcar=no</code> and <code>rickshaw=yes</code> (the latter appears to largely used as a highway access tag). The taxi tag is used for access, so an alternative would be <code>taxi_type</code> or <code>taxi:type</code> with values of <code>motorcycle</code>, <code>rickshaw</code> etc.</p>
+<p>I would tag it <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtaxi">as such</a> and add a sub-tag so that people can distinguish this from a standard taxi service. There is already a suggested usage of <code>motorcar=no</code> and <code>motorcycle=yes</code> for motorcycle taxis, so I'd apply a similar set of tags of <code>motorcar=no</code> and <code>rickshaw=yes</code> (the latter appears to largely used as a highway access tag). The taxi tag is used for access, so an alternative would be <code>taxi_type</code> or <code>taxi:type</code> with values of <code>motorcycle</code>, <code>rickshaw</code> etc.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a> Good point, the details are best worked out by people who encounter them in daily life.</p>
+<p><a href="https://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a> Good point, the details are best worked out by people who encounter them in daily life.</p>
 </div>
 <div id="comment-45965-info" class="comment-info">
 <span class="comment-age">(17 Oct '15, 09:16)</span> <span class="comment-user userinfo">SK53 ♦</span>

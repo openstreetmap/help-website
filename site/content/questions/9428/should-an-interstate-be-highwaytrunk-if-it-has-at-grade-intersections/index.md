@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Should an interstate be highway=trunk if it has at-grade intersections?"
-description = '''Interstates are supposed to be the same as motorways, but there are a few places here and there where they aren&#x27;t quite up to standards, the most famous being the West end of the Holland Tunnel in New Jersey: http://www.openstreetmap.org/?lat=40.73097&amp;amp;lon=-74.04094&amp;amp;zoom=16&amp;amp;layers=M Since...'''
+description = '''Interstates are supposed to be the same as motorways, but there are a few places here and there where they aren&#x27;t quite up to standards, the most famous being the West end of the Holland Tunnel in New Jersey: https://www.openstreetmap.org/?lat=40.73097&amp;amp;lon=-74.04094&amp;amp;zoom=16&amp;amp;layers=M Since...'''
 date = "2011-12-11T00:44:00Z"
 lastmod = "2011-12-29T15:51:00Z"
 weight = 9428
@@ -40,8 +40,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Interstates are supposed to be the same as motorways, but there are a few places here and there where they aren't quite up to standards, the most famous being the West end of the Holland Tunnel in New Jersey: <a href="http://www.openstreetmap.org/?lat=40.73097&amp;lon=-74.04094&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=40.73097&amp;lon=-74.04094&amp;zoom=16&amp;layers=M</a></p>
-<p>Since it has at-grade intersections, it is marked as highway=trunk. A similar example is Interstate 40 between Amarillo and the New Mexico border: <a href="http://www.openstreetmap.org/?lat=35.2054&amp;lon=-102.924&amp;zoom=13&amp;layers=M">http://www.openstreetmap.org/?lat=35.2054&amp;lon=-102.924&amp;zoom=13&amp;layers=M</a></p>
+<p>Interstates are supposed to be the same as motorways, but there are a few places here and there where they aren't quite up to standards, the most famous being the West end of the Holland Tunnel in New Jersey: <a href="https://www.openstreetmap.org/?lat=40.73097&amp;lon=-74.04094&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=40.73097&amp;lon=-74.04094&amp;zoom=16&amp;layers=M</a></p>
+<p>Since it has at-grade intersections, it is marked as highway=trunk. A similar example is Interstate 40 between Amarillo and the New Mexico border: <a href="https://www.openstreetmap.org/?lat=35.2054&amp;lon=-102.924&amp;zoom=13&amp;layers=M">https://www.openstreetmap.org/?lat=35.2054&amp;lon=-102.924&amp;zoom=13&amp;layers=M</a></p>
 <p>It's marked as highway=motorway, although it has ~8 at-grade intersections. Should it be marked as highway=trunk between the first and last intersections?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

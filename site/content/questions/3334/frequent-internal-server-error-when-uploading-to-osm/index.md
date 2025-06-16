@@ -106,8 +106,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This can certainly be "fixed", but not with the amount of information you have provided. Please also link to the appropriate entry on the <a href="http://wiki.openstreetmap.org/wiki/Import/Catalogue">Import Catalogue</a> for this import.</p>
-<p>It is likely that you are uploading too many things at once and the server is taking too long to process it and timing out. The situation will be "fixed" by you <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct#Execute_your_plans_with_caution">changing the way you upload</a>, but again it's hard to answer with so little information.</p>
+<p>This can certainly be "fixed", but not with the amount of information you have provided. Please also link to the appropriate entry on the <a href="https://wiki.openstreetmap.org/wiki/Import/Catalogue">Import Catalogue</a> for this import.</p>
+<p>It is likely that you are uploading too many things at once and the server is taking too long to process it and timing out. The situation will be "fixed" by you <a href="https://wiki.openstreetmap.org/wiki/Automated_Edits/Code_of_Conduct#Execute_your_plans_with_caution">changing the way you upload</a>, but again it's hard to answer with so little information.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

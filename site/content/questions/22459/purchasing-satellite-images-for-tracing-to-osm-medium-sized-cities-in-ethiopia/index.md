@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A couple years ago, a group of people from HOT/OSM set out to buy commercial imagery for the Gaza strip. Their efforts, and various imagery providers with their pricing at the time, are documented here: <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Gaza#Commercial_aerial_photography">http://wiki.openstreetmap.org/wiki/WikiProject_Gaza#Commercial_aerial_photography</a> - maybe there's something there that gives you an idea. But remember the document is several years old.</p>
+<p>A couple years ago, a group of people from HOT/OSM set out to buy commercial imagery for the Gaza strip. Their efforts, and various imagery providers with their pricing at the time, are documented here: <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Gaza#Commercial_aerial_photography">https://wiki.openstreetmap.org/wiki/WikiProject_Gaza#Commercial_aerial_photography</a> - maybe there's something there that gives you an idea. But remember the document is several years old.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

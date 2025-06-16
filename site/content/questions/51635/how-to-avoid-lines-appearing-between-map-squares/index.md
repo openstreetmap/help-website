@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'd suggest that you browse to the area you want, take a screenshot of that (with a fullscreen browser), and edit that so that it shows the area you want (and the OSM attribution!) and include that larger picture in the powerpoint.</p>
-<p>Depending on the projector resolution that might be plenty good enough; if not see some of the options <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">here</a>.</p>
+<p>Depending on the projector resolution that might be plenty good enough; if not see some of the options <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

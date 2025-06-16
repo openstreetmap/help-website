@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>It seems to me that traffic lights are valuable orientation points and having them visible on the map would be desired.</p>
 <p>Wiki recommendation for traffic lights on pedestrian crossing (without road crossing):<br />
-<a href="http://wiki.openstreetmap.org/wiki/Traffic_lights#Traffic_signals_at_crossings_for_pedestrians">Traffic signals at crossings for pedestrians</a> redirects to: <a href="http://wiki.openstreetmap.org/wiki/Key:crossing">Key:crossing</a> which tells to use <strong>highway=crossing</strong> &amp; <strong>crossing=traffic_signals</strong></p>
+<a href="https://wiki.openstreetmap.org/wiki/Traffic_lights#Traffic_signals_at_crossings_for_pedestrians">Traffic signals at crossings for pedestrians</a> redirects to: <a href="https://wiki.openstreetmap.org/wiki/Key:crossing">Key:crossing</a> which tells to use <strong>highway=crossing</strong> &amp; <strong>crossing=traffic_signals</strong></p>
 <p>I've tried that but this was not rendered as any visible symbol (?)</p>
 <p>I've look how it's done in other places and traffic lights on pedestrian crossings are tagged as <strong>highway=traffic_signals</strong> Which defies Wiki, but yields a nice icon on the map...</p>
 <p>What is the right tag to follow?</p>
@@ -144,7 +144,7 @@ osqa_accepted = false
 <div id="post-1494-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I personally agree with you, but ... well, I'm not a style sheet dev. This seems like another instance of <a href="http://help.openstreetmap.org/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">"Can I influence what gets rendered in the main Mapnik layer"</a> (assuming that the Mapnik layer on <a href="http://osm.org">osm.org</a> is the map that you are referring to).</p>
+<p>I personally agree with you, but ... well, I'm not a style sheet dev. This seems like another instance of <a href="/questions/1107/can-i-influence-what-gets-rendered-in-the-main-mapnik-layer">"Can I influence what gets rendered in the main Mapnik layer"</a> (assuming that the Mapnik layer on <a href="http://osm.org">osm.org</a> is the map that you are referring to).</p>
 </div>
 <div id="comment-1494-info" class="comment-info">
 <span class="comment-age">(08 Nov '10, 18:21)</span> <span class="comment-user userinfo">Tordanik</span>
@@ -291,7 +291,7 @@ osqa_accepted = false
 <div id="post-26367-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You are not alone: <a href="http://help.openstreetmap.org/questions/5410/what-is-best-practice-for-mapping-signal-controlled-pedestrian-crossings-at-road-junctions.">http://help.openstreetmap.org/questions/5410/what-is-best-practice-for-mapping-signal-controlled-pedestrian-crossings-at-road-junctions.</a> I find Tordanik's comment above is the best answer, but I still find it unsatisfactory for things like former roundabouts which are traffic-light controlled. The existing tagging is fine for pedestrians, but imposes costs for other applications, such as routers which must apply cost penalties for traffic lights (&amp; different ones your cases 2) &amp; 3).</p>
+<p>You are not alone: <a href="/questions/5410/what-is-best-practice-for-mapping-signal-controlled-pedestrian-crossings-at-road-junctions.">https://help.openstreetmap.org/questions/5410/what-is-best-practice-for-mapping-signal-controlled-pedestrian-crossings-at-road-junctions.</a> I find Tordanik's comment above is the best answer, but I still find it unsatisfactory for things like former roundabouts which are traffic-light controlled. The existing tagging is fine for pedestrians, but imposes costs for other applications, such as routers which must apply cost penalties for traffic lights (&amp; different ones your cases 2) &amp; 3).</p>
 </div>
 <div id="comment-26367-info" class="comment-info">
 <span class="comment-age">(15 Sep '13, 17:48)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -334,7 +334,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>This is the complete instruction to tag pedestrian crossings:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:crossing">http://wiki.openstreetmap.org/wiki/Key:crossing</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:crossing">https://wiki.openstreetmap.org/wiki/Key:crossing</a></p>
 <p>Blindmap renders pedestrian crossings with sound.</p>
 </div>
 <div class="answer-controls post-controls">

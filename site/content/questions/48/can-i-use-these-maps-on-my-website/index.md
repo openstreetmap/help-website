@@ -114,9 +114,9 @@ osqa_accepted = true
 <p>Yes, you're allowed to use the Maps from OpenStreetMap on your Homepage and it will not cost you anything, but there are some things to remember:</p>
 <ul>
 <li>you need a proper attribution text in/around your map. The usual term is "Data CC-By-SA by <a href="http://openstreetmap.org/">OpenStreetMap</a>". You can do this using the OpenLayers <a href="http://dev.openlayers.org/docs/files/OpenLayers/Control/Attribution-js.html">OpenLayers.Control.Attribution Control</a> like it's done <a href="http://toolserver.org/~osm/styles/">in this map</a>.</li>
-<li>if you expect heavy traffic on your page, you'll need to avoid flooding the osm tile-servers with requests. See <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile usage policy</a> on the wiki. You could come around this by setting up your own tile-server (you can adapt the tile rendering rules then) or using an <a href="http://en.wikipedia.org/wiki/Reverse_proxy">reverse http proxy</a> like <a href="http://www.squid-cache.org/">squid</a>.</li>
+<li>if you expect heavy traffic on your page, you'll need to avoid flooding the osm tile-servers with requests. See <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile usage policy</a> on the wiki. You could come around this by setting up your own tile-server (you can adapt the tile rendering rules then) or using an <a href="http://en.wikipedia.org/wiki/Reverse_proxy">reverse http proxy</a> like <a href="http://www.squid-cache.org/">squid</a>.</li>
 </ul>
-<p>To embed a map into your homepage you can visit the "Export" Tab on the <a href="http://www.openstreetmap.org/">main OSM site</a>. You'll get copy-and-paste ready HTML-Code there.</p>
+<p>To embed a map into your homepage you can visit the "Export" Tab on the <a href="https://www.openstreetmap.org/">main OSM site</a>. You'll get copy-and-paste ready HTML-Code there.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -146,7 +146,7 @@ osqa_accepted = true
 <div id="post-49443-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/12234/spillerc"></a><a href="http://help.openstreetmap.org/users/12234/spillerc">@SpillerC</a>: here is a <a href="http://wayback.archive.org/web/20100803152546/http://toolserver.org/~osm/styles/?">archived version</a>. However, it is not right for the current OSM license anyway (see <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> ).</p>
+<p><a href="https://help.openstreetmap.org/users/12234/spillerc"></a><a href="https://help.openstreetmap.org/users/12234/spillerc">@SpillerC</a>: here is a <a href="http://wayback.archive.org/web/20100803152546/http://toolserver.org/~osm/styles/?">archived version</a>. However, it is not right for the current OSM license anyway (see <a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a> ).</p>
 </div>
 <div id="comment-49443-info" class="comment-info">
 <span class="comment-age">(26 Apr '16, 21:37)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -251,8 +251,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The OpenStreetMap data is currently licenced under <a href="http://creativecommons.org/licenses/by-sa/2.0/" title="Creative Commons — Attribution-ShareAlike 2.0 Generic">CC-BY-SA</a>, which means you can use it for free and also distribute it freely if you say that it came from OpenStreetMap and mention the licence (see the <a href="http://wiki.openstreetmap.org/wiki/Licence" title="OpenStreetMap Licence">Wiki</a> for more details). The same goes for maps that are made out of this data.</p>
-<p>However, if you are using a Tileserver (which delivers rendered map images, e.g. for your website) you have to be aware of it's usage policy, which does not affect what you are allowed to do with the map itself, but how you are allowed to use the service to access these maps. The usage policy of the default "Mapnik" tiles (rendered and served by <a href="http://%22tile.openstreetmap.org">"tile.openstreetmap.org</a>", can be found on the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy" title="Tile usage policy">Wiki</a>. This will normally only be relevant for operations that produce heavy load, e.g. bulk downloading of map tiles.</p>
+<p>The OpenStreetMap data is currently licenced under <a href="http://creativecommons.org/licenses/by-sa/2.0/" title="Creative Commons — Attribution-ShareAlike 2.0 Generic">CC-BY-SA</a>, which means you can use it for free and also distribute it freely if you say that it came from OpenStreetMap and mention the licence (see the <a href="https://wiki.openstreetmap.org/wiki/Licence" title="OpenStreetMap Licence">Wiki</a> for more details). The same goes for maps that are made out of this data.</p>
+<p>However, if you are using a Tileserver (which delivers rendered map images, e.g. for your website) you have to be aware of it's usage policy, which does not affect what you are allowed to do with the map itself, but how you are allowed to use the service to access these maps. The usage policy of the default "Mapnik" tiles (rendered and served by <a href="http://%22tile.openstreetmap.org">"tile.openstreetmap.org</a>", can be found on the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy" title="Tile usage policy">Wiki</a>. This will normally only be relevant for operations that produce heavy load, e.g. bulk downloading of map tiles.</p>
 <p>You should also be aware that some websites may have maps that consist of seperate layers, for example by means of the <a href="http://openlayers.org" title="OpenLayers">OpenLayers API</a>. Some of these layers may not be under the same free licence as the underlying OpenStreetMap maps, which means making a screenshot (and thus combining these layers) might be illegal. Please always look for copyright and licence notices.</p>
 </div>
 <div class="answer-controls post-controls">

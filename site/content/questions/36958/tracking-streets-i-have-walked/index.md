@@ -234,7 +234,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi in addition to stf 's remarks, take a look here to get some hints, <a href="http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">http://wiki.openstreetmap.org/wiki/Using_OpenStreetMap</a> I would go for JOSM since it allows you to select (double click) a gpx file with points or a trace (current at Garmin) and gives a suggestion about the area for a download. And yes you’ll have to install JOSM or use Potlach2 or ID (quit friendly for a mobile) instead without a download. Enjoy. PS try to select those roads that are n't on the OSM map or incorrect.</p>
+<p>Hi in addition to stf 's remarks, take a look here to get some hints, <a href="https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap">https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap</a> I would go for JOSM since it allows you to select (double click) a gpx file with points or a trace (current at Garmin) and gives a suggestion about the area for a download. And yes you’ll have to install JOSM or use Potlach2 or ID (quit friendly for a mobile) instead without a download. Enjoy. PS try to select those roads that are n't on the OSM map or incorrect.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

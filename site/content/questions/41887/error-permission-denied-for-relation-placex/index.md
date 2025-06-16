@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Did you follow the instructions on <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation,">http://wiki.openstreetmap.org/wiki/Nominatim/Installation,</a> namely where it says:</p>
+<p>Did you follow the instructions on <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation,">https://wiki.openstreetmap.org/wiki/Nominatim/Installation,</a> namely where it says:</p>
 <pre><code>createuser -SDR www-data</code></pre>
 <p>?</p>
 </div>

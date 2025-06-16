@@ -126,7 +126,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>see previous related answer that affects you too <a href="https://help.openstreetmap.org/questions/52812/gmapsuppimg-missing">https://help.openstreetmap.org/questions/52812/gmapsuppimg-missing</a></p>
+<p>see previous related answer that affects you too <a href="/questions/52812/gmapsuppimg-missing">https://help.openstreetmap.org/questions/52812/gmapsuppimg-missing</a></p>
 <p>You might also like to check the recent posts at this site to see if any of those posts help <a href="https://forum.openstreetmap.org/viewtopic.php?pid=615292#p615292">https://forum.openstreetmap.org/viewtopic.php?pid=615292#p615292</a></p>
 </div>
 <div class="answer-controls post-controls">

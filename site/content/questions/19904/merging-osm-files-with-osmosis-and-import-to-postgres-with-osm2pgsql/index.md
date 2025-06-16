@@ -96,7 +96,7 @@ osqa_accepted = false
 <div id="post-19909-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are lots of extract sites available - see <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">this page</a>. I tend to use <a href="http://download.geofabrik.de/openstreetmap/">Geofabrik</a> myself, but there are lots of others.</p>
+<p>There are lots of extract sites available - see <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">this page</a>. I tend to use <a href="http://download.geofabrik.de/openstreetmap/">Geofabrik</a> myself, but there are lots of others.</p>
 </div>
 <div id="comment-19909-info" class="comment-info">
 <span class="comment-age">(13 Feb '13, 11:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -161,7 +161,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm guessing that you're missing the "append" on the second import? If you have a look <a href="https://help.openstreetmap.org/questions/5389/merging-2-countries-with-osm2pgsql">here</a> you'll see how that can be used, and also a description of a further problem that you might get if there's any data overlap between the two (which in your case there probably won't be).</p>
+<p>I'm guessing that you're missing the "append" on the second import? If you have a look <a href="/questions/5389/merging-2-countries-with-osm2pgsql">here</a> you'll see how that can be used, and also a description of a further problem that you might get if there's any data overlap between the two (which in your case there probably won't be).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

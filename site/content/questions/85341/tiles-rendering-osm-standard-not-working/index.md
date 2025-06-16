@@ -126,7 +126,7 @@ One Answer:
 <p>Relations currently get ignored completely in this process.</p>
 </blockquote>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated - OSM Help</a></li>
+<li><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated - OSM Help</a></li>
 <li>linked in <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes?">FAQ: I have just made some changes to the map. How do I get to see my changes? - OpenStreetMap Wiki</a></li>
 </ul>
 <p>That answer is quite old, but if I found the right corresponding source code, it does still handle only nodes and ways: <code>expire-tiles-single</code> <a href="https://github.com/openstreetmap/chef/blob/3bf2779805eeb2fff9fdda563e9188814c0859cf/cookbooks/tile/files/default/bin/expire-tiles-single#L42-L55">permalink</a> (<a href="https://github.com/openstreetmap/chef/blob/master/cookbooks/tile/files/default/bin/expire-tiles-single#L42-L55">current</a>).</p>

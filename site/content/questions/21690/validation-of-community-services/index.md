@@ -161,7 +161,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Answers to your example stories: you cannot be "sure". But... see e.g. the question about our <span>data-verification-process</span>. And_1: you could help yourself to update "[your] number". And_2: you could watch the hospital's data history <a href="http://www.openstreetmap.org/browse/way/30631242/history">http://www.openstreetmap.org/browse/way/30631242/history</a> .</p>
+<p>Answers to your example stories: you cannot be "sure". But... see e.g. the question about our <span>data-verification-process</span>. And_1: you could help yourself to update "[your] number". And_2: you could watch the hospital's data history <a href="https://www.openstreetmap.org/browse/way/30631242/history">https://www.openstreetmap.org/browse/way/30631242/history</a> .</p>
 <p>However, why are your example users so much frightened of loss of control? ;-) Is it better if that info is either not in OSM or if it is entered based on surveys of OSM users? Yes, indeed it could be better if such data is not "imported", because then the users may care more about the correctness / up-to-date state.</p>
 </div>
 <div class="answer-controls post-controls">

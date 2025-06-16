@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure exactly, but it's important to notice this part of the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/FAQ#My_postcode_is_missing.2Fwrong_but_I.27ve_fixed_it_in_the_OSM_data._What_is_wrong.3F">Nominatim FAQ about postcodes</a>:</p>
+<p>I'm not sure exactly, but it's important to notice this part of the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/FAQ#My_postcode_is_missing.2Fwrong_but_I.27ve_fixed_it_in_the_OSM_data._What_is_wrong.3F">Nominatim FAQ about postcodes</a>:</p>
 <blockquote>
 <p>My postcode is missing/wrong but I've fixed it in the OSM data. What is wrong?</p>
 <p>Support for post codes in Nominatim currently is very primitive. The post codes you see have been computed from OSM data in October 2012 and they are not updated. Postcodes from addr:postcode and similar tags are largely ignored. Please don't report bugs about postcodes. Better support for them is planned and will arrive at some time in the future.</p>

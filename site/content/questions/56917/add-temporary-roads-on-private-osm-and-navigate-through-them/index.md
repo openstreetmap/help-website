@@ -259,7 +259,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Not being able to use Linux throws a big stick in to the mechanics, I don't believe there is a working version of the rails-port for any windows version. For 200 acres running it in a VM on Windows shouldn't be a problem.</p>
-<p>You haven't indicated how you want to run the routing. If this supposed to be a web app, you will need to install one of the routing engines plus web UI: see <a href="http://wiki.openstreetmap.org/wiki/Routing#End_users:_Routing_software">http://wiki.openstreetmap.org/wiki/Routing#End_users:_Routing_software</a> (note: the heading is grossly misnamed), OSRM, GraphHopper and Valhalla are likely the best known ones and you can test all three via the openstreetmap.org.</p>
+<p>You haven't indicated how you want to run the routing. If this supposed to be a web app, you will need to install one of the routing engines plus web UI: see <a href="https://wiki.openstreetmap.org/wiki/Routing#End_users:_Routing_software">https://wiki.openstreetmap.org/wiki/Routing#End_users:_Routing_software</a> (note: the heading is grossly misnamed), OSRM, GraphHopper and Valhalla are likely the best known ones and you can test all three via the openstreetmap.org.</p>
 <p>Tileserver: if you want to actually have an online map of your data (you haven't said so), yes you will need to run a separate database and software for that (database #3).</p>
 <p>Having a look at <a href="https://switch2osm.org/">https://switch2osm.org/</a> would give you a bit more context.</p>
 </div>

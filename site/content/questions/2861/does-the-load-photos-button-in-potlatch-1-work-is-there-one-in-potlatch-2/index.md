@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to use the photo mapping feature describe in the <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Photo-mapping">Potlatch/Photo-mapping</a> article. When I click Load photos button, nothing happens. How is it supposed to work?</p>
+<p>I am trying to use the photo mapping feature describe in the <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Photo-mapping">Potlatch/Photo-mapping</a> article. When I click Load photos button, nothing happens. How is it supposed to work?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-photos" rel="tag" title="see questions tagged &#39;photos&#39;">photos</span> <span class="post-tag tag-link-photomapping" rel="tag" title="see questions tagged &#39;photomapping&#39;">photomapping</span> <span class="post-tag tag-link-kml" rel="tag" title="see questions tagged &#39;kml&#39;">kml</span> <span class="post-tag tag-link-potlatch" rel="tag" title="see questions tagged &#39;potlatch&#39;">potlatch</span>

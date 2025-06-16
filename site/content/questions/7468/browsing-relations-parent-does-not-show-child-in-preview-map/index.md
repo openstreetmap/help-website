@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>What are the current rules for showing a preview map on relations "browse" pages? Preview map for <a href="http://www.openstreetmap.org/browse/relation/1717720">this relation</a> does not show at all. How do I make it appear and make it show the contents of child relations with a blue line as usual for relations containing ways only?</p>
+<p>What are the current rules for showing a preview map on relations "browse" pages? Preview map for <a href="https://www.openstreetmap.org/browse/relation/1717720">this relation</a> does not show at all. How do I make it appear and make it show the contents of child relations with a blue line as usual for relations containing ways only?</p>
 <p>PS. I know relations are deprecated by power-users here, but since there is no reasonable service for plotting tag searches into a map, I think relatins still have their meaning at least untill such service is created. Also, relations save resources since no tag search needs to be done for showing content.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -110,7 +110,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The browse page simply uses the API call /api/0.6/relation/(id)/full.</p>
-<p>As you'll see from the <a href="http://wiki.openstreetmap.org/wiki/API_0.6#Full:_GET_.2Fapi.2F0.6.2F.5Bway.7Crelation.5D.2F.23id.2Ffull">API documentation</a>, this does not recurse down all levels of nested relations. It merely returns the 'top level' of relation members, and that's it.</p>
+<p>As you'll see from the <a href="https://wiki.openstreetmap.org/wiki/API_0.6#Full:_GET_.2Fapi.2F0.6.2F.5Bway.7Crelation.5D.2F.23id.2Ffull">API documentation</a>, this does not recurse down all levels of nested relations. It merely returns the 'top level' of relation members, and that's it.</p>
 <p>This is clearly necessary to prevent overuse of the call boggling our servers. It's already been the case that people overusing the /full call has almost brought the API to its knees at times (notably when people started creating massive relations to contain the bounding boxes for Bing imagery in each country).</p>
 </div>
 <div class="answer-controls post-controls">

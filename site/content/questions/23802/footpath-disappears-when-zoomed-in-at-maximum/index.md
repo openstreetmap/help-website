@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, I did my first editing in OSM (Changeset: <a href="http://www.openstreetmap.org/browse/changeset/16744378">16744378</a>). I have added a footpath in the area that I live in.</p>
+<p>Hi, I did my first editing in OSM (Changeset: <a href="https://www.openstreetmap.org/browse/changeset/16744378">16744378</a>). I have added a footpath in the area that I live in.</p>
 <p>When I view it in the OpenStreetMap I can see it's there in the levels -1 -2 -3. However when I zoom in at the highest level my footpath disappears from the map. I assume that when zoomed in at the highest level you should see it though.</p>
 <p>Any suggestion?</p>
 <p><img src="/upfiles/footpath_1.JPG" alt="alt text" /><img src="/upfiles/footpath_2.JPG" alt="alt text" /></p>
@@ -177,7 +177,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have deleted all tags of <a href="http://www.openstreetmap.org/browse/way/227577828/history">way 227577828</a> in <a href="http://www.openstreetmap.org/browse/changeset/16744378">changeset 16744378</a>. The tags were still there in <a href="http://www.openstreetmap.org/browse/changeset/16719234">changeset 16719234</a>.</p>
+<p>You have deleted all tags of <a href="https://www.openstreetmap.org/browse/way/227577828/history">way 227577828</a> in <a href="https://www.openstreetmap.org/browse/changeset/16744378">changeset 16744378</a>. The tags were still there in <a href="https://www.openstreetmap.org/browse/changeset/16719234">changeset 16719234</a>.</p>
 <p>If you flush your browser cache you will probably find that the footpath is completely gone on the map (but still exists as a way without tags in the database).</p>
 </div>
 <div class="answer-controls post-controls">
@@ -199,7 +199,7 @@ This answer is marked "community wiki".
 </div>
 <div class="comment-text">
 <p>Yes, I removed the tags, but for another reason. After I added the footpath, I made a test via <a href="http://www.yournavigation.org/">http://www.yournavigation.org/</a> to see if navigation over the footpath was possible. But everytime I tried to force navigation (foot or bike)over the path it didn't work (always took another route which was not the shortest). I thought this maybe had something to do with the tags I added. So as a test I removed them from the path. But this doesn't seem to be the solution, as now the path seems to have disappeared completely.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/footpath_3.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/footpath_3.JPG" alt="alt text" /></p>
 <p>You can see I am a complete newbee in this matter so I probably do al lot of stuff wrong. But I want to learn and contribute to the project. Any help would be very appreciated.</p>
 </div>
 <div id="comment-23809-info" class="comment-info">

@@ -178,7 +178,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can have a look at the general platform status <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">here</a> and on the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#renderd">server statistics for the mapnik server here</a>. Currently there is indeed a problem indicated for the tile-server ("many tiles not loading").</p>
+<p>You can have a look at the general platform status <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">here</a> and on the <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html#renderd">server statistics for the mapnik server here</a>. Currently there is indeed a problem indicated for the tile-server ("many tiles not loading").</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -239,7 +239,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can also ease the pain by using standalone software (such as <a href="http://wiki.openstreetmap.org/wiki/KDE_Marble">marble</a>, but there are <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">many</a>) instead of the website. The proper cacheing alone makes things much faster (and lighter on the server), but there are other worthwile niceties.</p>
+<p>You can also ease the pain by using standalone software (such as <a href="https://wiki.openstreetmap.org/wiki/KDE_Marble">marble</a>, but there are <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">many</a>) instead of the website. The proper cacheing alone makes things much faster (and lighter on the server), but there are other worthwile niceties.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

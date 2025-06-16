@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>So I have been going on a mapping spree lately mapping the outer banks of North Carolina, but What I have begun to notice is the national park boundaries are covering up all the detail out there. Many parts of islands are simply specifically their coastlines, are covered with these giant green blobs called National Parks. Here is an example at <a href="http://www.openstreetmap.org/#map=13/35.0409/-76.0822">Portsmouth Island</a></p>
-<p>What is even more frustrating, is this rendering issue has already been solved, when looking at lakes around borders of national parks, we see the green get covered by the water, with only a green shaded line remaining above the water to represent the border of the national park. Here is an example at <a href="http://www.openstreetmap.org/#map=14/35.4555/-83.7635">Fontana Lake</a>. Is there anyway we can fix this, It seems like a simple fix, just get national parks over oceans to render the same way as national parks over lakes.</p>
+<p>So I have been going on a mapping spree lately mapping the outer banks of North Carolina, but What I have begun to notice is the national park boundaries are covering up all the detail out there. Many parts of islands are simply specifically their coastlines, are covered with these giant green blobs called National Parks. Here is an example at <a href="https://www.openstreetmap.org/#map=13/35.0409/-76.0822">Portsmouth Island</a></p>
+<p>What is even more frustrating, is this rendering issue has already been solved, when looking at lakes around borders of national parks, we see the green get covered by the water, with only a green shaded line remaining above the water to represent the border of the national park. Here is an example at <a href="https://www.openstreetmap.org/#map=14/35.4555/-83.7635">Fontana Lake</a>. Is there anyway we can fix this, It seems like a simple fix, just get national parks over oceans to render the same way as national parks over lakes.</p>
 <p>Is there any reason this cant be done?</p>
 <p>I have thought of a couple work arounds, like making the border of the national parks the islands, or putting an area of water over the area affected by the green blob issue, so it would be rendered correctly, but I realized that this would be mapping for the render which is a no no.</p>
 <p>So how do we get this fixed?</p>
@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is due to the way the OSM main map is rendered, and appears to be similar to a known, open issue: <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/426">https://github.com/gravitystorm/openstreetmap-carto/issues/426</a>. If you have ideas on how to fix, feel free to add them there. However, <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">don't change the data just so it looks "right"</a> according to you.</p>
+<p>This is due to the way the OSM main map is rendered, and appears to be similar to a known, open issue: <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/426">https://github.com/gravitystorm/openstreetmap-carto/issues/426</a>. If you have ideas on how to fix, feel free to add them there. However, <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">don't change the data just so it looks "right"</a> according to you.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

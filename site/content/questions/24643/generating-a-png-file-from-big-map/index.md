@@ -156,7 +156,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You need to <a href="http://www.perl.org/get.html">download</a> a perl <em>interpreter</em> for running perl scripts.</p>
-<p>Unfortunately the <a href="http://wiki.openstreetmap.org/wiki/Bigmap">english Bigmap wiki page</a> isn't very detailed, the <a href="http://wiki.openstreetmap.org/wiki/DE:Bigmap">german Bigmap wiki page</a> has more detailed instructions. I never used Bigmap mysel but it seems like after downloading the script you have to open the <em>command prompt</em> (cmd.exe), then switch to the directory where your <em>mkmap.pl</em> file is located and type <em>perl mkmap.pl &gt; mymap.png</em> and press enter. Afterwards there should be a file called <em>mymap.png</em> in the same directory.</p>
+<p>Unfortunately the <a href="https://wiki.openstreetmap.org/wiki/Bigmap">english Bigmap wiki page</a> isn't very detailed, the <a href="https://wiki.openstreetmap.org/wiki/DE:Bigmap">german Bigmap wiki page</a> has more detailed instructions. I never used Bigmap mysel but it seems like after downloading the script you have to open the <em>command prompt</em> (cmd.exe), then switch to the directory where your <em>mkmap.pl</em> file is located and type <em>perl mkmap.pl &gt; mymap.png</em> and press enter. Afterwards there should be a file called <em>mymap.png</em> in the same directory.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

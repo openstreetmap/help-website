@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>No, there is no bulk upload facility. Please search for "import" on this site to see some of the considerations - for example <a href="https://help.openstreetmap.org/questions/4936/how-can-i-import-pois-from-a-postgis-database-into-openstreetmap">https://help.openstreetmap.org/questions/4936/how-can-i-import-pois-from-a-postgis-database-into-openstreetmap</a> .</p>
+<p>No, there is no bulk upload facility. Please search for "import" on this site to see some of the considerations - for example <a href="/questions/4936/how-can-i-import-pois-from-a-postgis-database-into-openstreetmap">https://help.openstreetmap.org/questions/4936/how-can-i-import-pois-from-a-postgis-database-into-openstreetmap</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

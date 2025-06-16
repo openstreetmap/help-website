@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to tag a building completely ?"
-description = '''I want to add specific details to a building or structure, http://www.openstreetmap.org/?lat=51.228902&amp;amp;lon=4.405316&amp;amp;zoom=18&amp;amp;layers=M, besides the name, the material or the operator. Such as the architect / designer or the builder of the object. I did not find a use full tag in the OSM WI...'''
+description = '''I want to add specific details to a building or structure, https://www.openstreetmap.org/?lat=51.228902&amp;amp;lon=4.405316&amp;amp;zoom=18&amp;amp;layers=M, besides the name, the material or the operator. Such as the architect / designer or the builder of the object. I did not find a use full tag in the OSM WI...'''
 date = "2013-04-03T22:33:00Z"
 lastmod = "2013-04-03T23:20:00Z"
 weight = 21153
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I want to add specific details to a building or structure, <a href="http://www.openstreetmap.org/?lat=51.228902&amp;lon=4.405316&amp;zoom=18&amp;layers=M,">http://www.openstreetmap.org/?lat=51.228902&amp;lon=4.405316&amp;zoom=18&amp;layers=M,</a> besides the name, the material or the operator. Such as the architect / designer or the builder of the object. I did not find a use full tag in the OSM WIKI, any suggestions ? For instance everyone knows the Chrysler Building, but who was the designer ? (Wikipedia) Greetz</p>
+<p>I want to add specific details to a building or structure, <a href="https://www.openstreetmap.org/?lat=51.228902&amp;lon=4.405316&amp;zoom=18&amp;layers=M,">https://www.openstreetmap.org/?lat=51.228902&amp;lon=4.405316&amp;zoom=18&amp;layers=M,</a> besides the name, the material or the operator. Such as the architect / designer or the builder of the object. I did not find a use full tag in the OSM WIKI, any suggestions ? For instance everyone knows the Chrysler Building, but who was the designer ? (Wikipedia) Greetz</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-builder" rel="tag" title="see questions tagged &#39;builder&#39;">builder</span> <span class="post-tag tag-link-designer" rel="tag" title="see questions tagged &#39;designer&#39;">designer</span> <span class="post-tag tag-link-architect" rel="tag" title="see questions tagged &#39;architect&#39;">architect</span>

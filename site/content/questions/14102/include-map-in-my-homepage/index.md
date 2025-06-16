@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Include Map in my Homepage"
-description = '''I try the Example to include a Map in my own Homepage. http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden Last week the example works. This week the example don&#x27;t work any more... Have anyone a idea? Regards Toni'''
+description = '''I try the Example to include a Map in my own Homepage. https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden Last week the example works. This week the example don&#x27;t work any more... Have anyone a idea? Regards Toni'''
 date = "2012-07-09T08:26:00Z"
 lastmod = "2012-07-11T01:05:00Z"
 weight = 14102
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I try the Example to include a Map in my own Homepage. <a href="http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden">http://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden</a> Last week the example works. This week the example don't work any more...</p>
+<p>I try the Example to include a Map in my own Homepage. <a href="https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden">https://wiki.openstreetmap.org/wiki/DE:Karte_in_Webseite_einbinden</a> Last week the example works. This week the example don't work any more...</p>
 <p>Have anyone a idea?</p>
 <p>Regards Toni</p>
 </div>
@@ -149,7 +149,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The example on the wiki was broken. <a href="http://wiki.openstreetmap.org/w/index.php?title=Die_HTML_Dateien&amp;action=historysubmit&amp;diff=786161&amp;oldid=764871">I have just fixed it</a>.</p>
+<p>The example on the wiki was broken. <a href="https://wiki.openstreetmap.org/w/index.php?title=Die_HTML_Dateien&amp;action=historysubmit&amp;diff=786161&amp;oldid=764871">I have just fixed it</a>.</p>
 <p>The reason it became broken suddenly was due to a significant update to OpenLayers which occurred last week. Our example shows you how to include the OpenLayers script directly from openlayers.org, so you automatically use the newest version available (As scai points out) If you wish to avoid any kind of problems caused by updates, you can always download a particular version of the OpenLayers javascript and point to it locally. However linking directly to openlayers.org normally doesn't cause too much fragility. In this case our wiki example <em>was</em> using the class <a href="http://dev.openlayers.org/releases/OpenLayers-2.11/doc/apidocs/files/OpenLayers/Control/MouseDefaults-js.html">OpenLayers.Control.MouseDefaults which has been dropped</a>. I've fixed the original example, so you can copy that HTML again.</p>
 <p>Also <a href="http://harrywood.co.uk/maps/examples/openlayers/testanwendung/">see it running here</a></p>
 </div>

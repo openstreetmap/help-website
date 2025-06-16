@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Overpass_API/Language_Guide - proposal for clarification"
-description = '''Hi all, I&#x27;m struggling a bit to make sense of the Language_Guide, http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide I assume the Language Guide is the first place people would look to learn? If that&#x27;s correct, I&#x27;d like to edit the page a bit. Would somebody with experience be happy to v...'''
+description = '''Hi all, I&#x27;m struggling a bit to make sense of the Language_Guide, https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide I assume the Language Guide is the first place people would look to learn? If that&#x27;s correct, I&#x27;d like to edit the page a bit. Would somebody with experience be happy to v...'''
 date = "2016-07-02T14:44:00Z"
 lastmod = "2016-07-08T10:28:00Z"
 weight = 50560
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all,</p>
-<p>I'm struggling a bit to make sense of the Language_Guide, <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></p>
+<p>I'm struggling a bit to make sense of the Language_Guide, <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></p>
 <p>I assume the Language Guide is the first place people would look to learn? If that's correct, I'd like to edit the page a bit. Would somebody with experience be happy to validate, and answer questions if needed?</p>
 <p>Bjoern</p>
 </div>
@@ -77,7 +77,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Unfortunately, the Language Guide is somewhat dated and hasn't seen any substantial updates for a few Overpass versions now. For a full up-to-date coverage I highly recommend to consult the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">Overpass QL</a> guide.</p>
+<p>Unfortunately, the Language Guide is somewhat dated and hasn't seen any substantial updates for a few Overpass versions now. For a full up-to-date coverage I highly recommend to consult the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">Overpass QL</a> guide.</p>
 <p>If you're unsure, check the Overpass QL page or use the discussion page. We'll keep an eye on your changes... :)</p>
 </div>
 <div id="comment-50562-info" class="comment-info">
@@ -100,7 +100,7 @@ osqa_accepted = false
 <div id="post-50616-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I've done some work on <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.</a> However, there are some sections marked as 'stubs', where some input from others would be useful. These include how sets work. Also, is "out;" the same as "out body;" ?</p>
+<p>I've done some work on <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.</a> However, there are some sections marked as 'stubs', where some input from others would be useful. These include how sets work. Also, is "out;" the same as "out body;" ?</p>
 </div>
 <div id="comment-50616-info" class="comment-info">
 <span class="comment-age">(04 Jul '16, 18:31)</span> <span class="comment-user userinfo">bjohas</span>
@@ -121,7 +121,7 @@ osqa_accepted = false
 </blockquote>
 <p>I believe ome of those stubs have been introduced by a user, who is now blocked on the wiki. If they don't make sense to you, just remove them.</p>
 <blockquote>
-<p>I've done some work on <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.</a></p>
+<p>I've done some work on <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.</a></p>
 </blockquote>
 <p>OK, great, thanks! It will probably take some time to review all changes... :)</p>
 </div>

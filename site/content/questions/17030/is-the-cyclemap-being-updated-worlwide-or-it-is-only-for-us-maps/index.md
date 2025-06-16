@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is the cyclemap being updated worlwide, or it is only for US maps ?"
-description = '''is the hourly update of cyclemap worlwide ? or it is only for US maps ?  ( I updated some tracks on taiwan map 1 month ago, but itś not on cyclemap layer check here : http://www.openstreetmap.org/?lat=25.10173&amp;amp;lon=121.60023&amp;amp;zoom=15&amp;amp;layers=M and switch from standard layer to cyclemap. '''
+description = '''is the hourly update of cyclemap worlwide ? or it is only for US maps ?  ( I updated some tracks on taiwan map 1 month ago, but itś not on cyclemap layer check here : https://www.openstreetmap.org/?lat=25.10173&amp;amp;lon=121.60023&amp;amp;zoom=15&amp;amp;layers=M and switch from standard layer to cyclemap. '''
 date = "2012-10-19T16:40:00Z"
 lastmod = "2012-10-20T11:57:00Z"
 weight = 17030
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>is the hourly update of cyclemap worlwide ? or it is only for US maps ? ( I updated some tracks on taiwan map 1 month ago, but itś not on cyclemap layer</p>
-<p>check here : <a href="http://www.openstreetmap.org/?lat=25.10173&amp;lon=121.60023&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=25.10173&amp;lon=121.60023&amp;zoom=15&amp;layers=M</a> and switch from standard layer to cyclemap.</p>
+<p>check here : <a href="https://www.openstreetmap.org/?lat=25.10173&amp;lon=121.60023&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=25.10173&amp;lon=121.60023&amp;zoom=15&amp;layers=M</a> and switch from standard layer to cyclemap.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-worldwide" rel="tag" title="see questions tagged &#39;worldwide&#39;">worldwide</span> <span class="post-tag tag-link-opencyclemap" rel="tag" title="see questions tagged &#39;opencyclemap&#39;">opencyclemap</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span>
@@ -111,8 +111,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I believe that I read that updates are currently (19th October 2012) suspended due to a technical issue. As noted in <a href="http://help.openstreetmap.org/questions/213/why-does-the-cycle-map-take-so-long-to-update/215">the top answer to this question</a>, the OpenCycleMap tiles are created by a resource-intensive process that's maintained on a spare-time basis - that combination unfortunately leads to the occasional unavoidable delay. The "hourly update" that you mention was from a different answer to that question and may not have been referring to the same cycle map.</p>
-<p>If you look <a href="http://wiki.openstreetmap.org/wiki/Cycle_map#Rendered_Cycle_Maps">here</a> you'll see that is at least one web alternative that may show your newly added data along with cycle route information. There are plenty of different sorts of OSM-based cycle maps around, such as <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map">this one</a>.</p>
+<p>I believe that I read that updates are currently (19th October 2012) suspended due to a technical issue. As noted in <a href="/questions/213/why-does-the-cycle-map-take-so-long-to-update/215">the top answer to this question</a>, the OpenCycleMap tiles are created by a resource-intensive process that's maintained on a spare-time basis - that combination unfortunately leads to the occasional unavoidable delay. The "hourly update" that you mention was from a different answer to that question and may not have been referring to the same cycle map.</p>
+<p>If you look <a href="https://wiki.openstreetmap.org/wiki/Cycle_map#Rendered_Cycle_Maps">here</a> you'll see that is at least one web alternative that may show your newly added data along with cycle route information. There are plenty of different sorts of OSM-based cycle maps around, such as <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Cycle_map">this one</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

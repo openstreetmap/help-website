@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure whether parking congestion should be mapped, but you could tag the road with the number of <a href="http://wiki.openstreetmap.org/wiki/Key:lanes">lanes</a> (2, for 1 each way), and add <a href="http://wiki.openstreetmap.org/wiki/Key:parking:lane">parking:lane:both=paralle</a>l tags. I doubt routing software would use it until such detail is more widespread, though, and I don't think there is a way of tagging the average amount full such parking lanes might be at different times of the day.</p>
+<p>I'm not sure whether parking congestion should be mapped, but you could tag the road with the number of <a href="https://wiki.openstreetmap.org/wiki/Key:lanes">lanes</a> (2, for 1 each way), and add <a href="https://wiki.openstreetmap.org/wiki/Key:parking:lane">parking:lane:both=paralle</a>l tags. I doubt routing software would use it until such detail is more widespread, though, and I don't think there is a way of tagging the average amount full such parking lanes might be at different times of the day.</p>
 <p><a href="http://parking.crite.net/#18/49.78847/9.94821">Here's an example</a> of where the tagging is used, and displayed, in Germany.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -133,7 +133,7 @@ One Answer:
 <div id="post-40562-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for your reply <a href="http://help.openstreetmap.org/users/339/edloach">@EdLoach</a>. The parking:lane:both=parallel tag sounds good and the example is great but I'll hold off using it for now until I get a better grasp of tags/namespaces. I don't want to map anything that I don't understand, but I'll definitely put it on my todo list (possibly with parking:condition:both=free, if I've got this right). Cheers.</p>
+<p>Thanks for your reply <a href="https://help.openstreetmap.org/users/339/edloach">@EdLoach</a>. The parking:lane:both=parallel tag sounds good and the example is great but I'll hold off using it for now until I get a better grasp of tags/namespaces. I don't want to map anything that I don't understand, but I'll definitely put it on my todo list (possibly with parking:condition:both=free, if I've got this right). Cheers.</p>
 </div>
 <div id="comment-40562-info" class="comment-info">
 <span class="comment-age">(23 Jan '15, 12:50)</span> <span class="comment-user userinfo">Garry Patchett</span>

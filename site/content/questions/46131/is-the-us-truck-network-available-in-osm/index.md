@@ -130,7 +130,7 @@ Bypass route - network=US:SC:Alternate, ref=# , modifier=Alternate</code></pre>
 <div id="post-46185-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you mean <a href="http://www.openstreetmap.org/relation/1319490">High Priority Corridors</a>?</p>
+<p>Did you mean <a href="https://www.openstreetmap.org/relation/1319490">High Priority Corridors</a>?</p>
 </div>
 <div id="comment-46185-info" class="comment-info">
 <span class="comment-age">(28 Oct '15, 16:10)</span> <span class="comment-user userinfo">Baloo Uriza</span>

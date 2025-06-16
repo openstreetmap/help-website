@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Filled in open space areas vs. outlined"
-description = '''Hi, As a result of some recent change to the standard map rendering, some of our open space areas are no longer filled in. They just have a green outline. Others are still filled. See this area for example: http://www.openstreetmap.org/#map=15/42.7137/-71.0938 Any ideas about what&#x27;s wrong with the t...'''
+description = '''Hi, As a result of some recent change to the standard map rendering, some of our open space areas are no longer filled in. They just have a green outline. Others are still filled. See this area for example: https://www.openstreetmap.org/#map=15/42.7137/-71.0938 Any ideas about what&#x27;s wrong with the t...'''
 date = "2015-12-30T22:30:00Z"
 lastmod = "2015-12-30T23:28:00Z"
 weight = 47338
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>As a result of some recent change to the standard map rendering, some of our open space areas are no longer filled in. They just have a green outline. Others are still filled. See this area for example:</p>
-<p><a href="http://www.openstreetmap.org/#map=15/42.7137/-71.0938">http://www.openstreetmap.org/#map=15/42.7137/-71.0938</a></p>
+<p><a href="https://www.openstreetmap.org/#map=15/42.7137/-71.0938">https://www.openstreetmap.org/#map=15/42.7137/-71.0938</a></p>
 <p>Any ideas about what's wrong with the tagging? We'd like everything to show as filled green.</p>
 <p>Thanks! Glen</p>
 </div>
@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I looked at the tagging and (apart from the unnecessary area=yes) the landuse=conservation tag was one I didn't recognise, and I tracked down <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1826">this discussion</a> which resulted in it no longer being rendered. I suspect you can find a more specific choice for each of the areas either linked from the <a href="http://wiki.openstreetmap.org/wiki/Landcover">landcover</a> or <a href="http://wiki.openstreetmap.org/wiki/Landuse">landuse</a> wiki pages.</p>
+<p>I looked at the tagging and (apart from the unnecessary area=yes) the landuse=conservation tag was one I didn't recognise, and I tracked down <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/1826">this discussion</a> which resulted in it no longer being rendered. I suspect you can find a more specific choice for each of the areas either linked from the <a href="https://wiki.openstreetmap.org/wiki/Landcover">landcover</a> or <a href="https://wiki.openstreetmap.org/wiki/Landuse">landuse</a> wiki pages.</p>
 <p>Apart from that, if you are happy that the tagging is correct don't worry too much about how it is rendered in one particular rendering of the data.</p>
 </div>
 <div class="answer-controls post-controls">

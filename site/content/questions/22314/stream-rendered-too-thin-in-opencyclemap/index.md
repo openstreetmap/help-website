@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From your recent edits I see <a href="http://www.openstreetmap.org/browse/way/67676338">Riera de Cabrils</a> is an example of your problem. In this case, it looks like changing it from <strong>waterway=stream</strong> to <strong>waterway=river</strong> was reasonable. OpenCycleMap will render it much wider with <strong>waterway=river</strong>; you just need to wait a few days for OpenCycleMap to be updated.</p>
+<p>From your recent edits I see <a href="https://www.openstreetmap.org/browse/way/67676338">Riera de Cabrils</a> is an example of your problem. In this case, it looks like changing it from <strong>waterway=stream</strong> to <strong>waterway=river</strong> was reasonable. OpenCycleMap will render it much wider with <strong>waterway=river</strong>; you just need to wait a few days for OpenCycleMap to be updated.</p>
 <p>For narrower streams, which need <strong>waterway=stream</strong>, that's just how the OpenCycleMap developer decided to render them. You can try <a href="https://trac.openstreetmap.org/wiki">filing a request</a> to see whether he feels like changing it.</p>
 </div>
 <div class="answer-controls post-controls">

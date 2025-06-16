@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You should look into conditional access tags. There is note about how to implement them for <a href="http://wiki.openstreetmap.org/wiki/Talk:Key:oneway#One-way_street_that_change_direction_by_time_of_day.3F">one way roads on the wiki.</a></p>
+<p>You should look into conditional access tags. There is note about how to implement them for <a href="https://wiki.openstreetmap.org/wiki/Talk:Key:oneway#One-way_street_that_change_direction_by_time_of_day.3F">one way roads on the wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

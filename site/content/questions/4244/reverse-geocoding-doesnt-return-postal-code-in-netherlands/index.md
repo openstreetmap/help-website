@@ -44,10 +44,10 @@ osqa_accepted = false
 <p>do you know why this is? If i can remember correctly a while ago, it was using a different URL for the request, but it returned the postal code as a part of the response?</p>
 <p>Sorry if it wasn't complete. here are two examples, both from center of different cities:</p>
 <p><strong>Germany - Bochum:</strong></p>
-<p><em>request</em> - <a href="http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764"></a><a href="http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764"></a><a href="http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764">http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764</a></p>
+<p><em>request</em> - <a href="https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764"></a><a href="https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764"></a><a href="https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764">https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=51.486514&amp;lon=7.20764</a></p>
 <p><em>response</em> - Präsidentstraße, Hamme, Bochum, Regierungsbezirk Arnsberg, North Rhine-Westphalia, 44789, Germany</p>
 <p><strong>Netherlands - Utrecht:</strong></p>
-<p><em>request</em> - <a href="http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649"></a><a href="http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649"></a><a href="http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649">http://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649</a></p>
+<p><em>request</em> - <a href="https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649"></a><a href="https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649"></a><a href="https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649">https://www.openstreetmap.org/geocoder/description_osm_nominatim?lat=52.09914&amp;lon=5.123649</a></p>
 <p><em>response</em> - Jan van der Heijdenstraat, Utrecht, Bestuur Regio Utrecht, Utrecht, The Netherlands</p>
 <p>The response from Netherlands, does not contain the postal code information.</p>
 <p>The same results are obtained if you use the following URL:</p>

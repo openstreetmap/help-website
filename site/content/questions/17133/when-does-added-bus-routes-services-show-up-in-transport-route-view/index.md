@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "When does added Bus routes (services) show up in Transport Route View ?"
-description = '''When does added Bus routes (services) show up in Transport Route View ?  http://wiki.openstreetmap.org/wiki/Bus_routes I have added two (out of ~30 or so) bus routes in Raleigh NC&#x27;s CAT route system (http://www.raleighnc.gov/transit) Routes 1 and 2, how long does it take for them to show up in the T...'''
+description = '''When does added Bus routes (services) show up in Transport Route View ?  https://wiki.openstreetmap.org/wiki/Bus_routes I have added two (out of ~30 or so) bus routes in Raleigh NC&#x27;s CAT route system (http://www.raleighnc.gov/transit) Routes 1 and 2, how long does it take for them to show up in the T...'''
 date = "2012-10-23T16:20:00Z"
 lastmod = "2012-10-24T10:36:00Z"
 weight = 17133
@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When does added Bus routes (services) show up in Transport Route View ? <a href="http://wiki.openstreetmap.org/wiki/Bus_routes">http://wiki.openstreetmap.org/wiki/Bus_routes</a></p>
+<p>When does added Bus routes (services) show up in Transport Route View ? <a href="https://wiki.openstreetmap.org/wiki/Bus_routes">https://wiki.openstreetmap.org/wiki/Bus_routes</a></p>
 <p>I have added two (out of ~30 or so) bus routes in Raleigh NC's CAT route system (<a href="http://www.raleighnc.gov/transit)">http://www.raleighnc.gov/transit)</a> Routes 1 and 2, how long does it take for them to show up in the Transport Route View ?</p>
 <p>Also how do we determine the correct relation role: forward, reverse, or none (two-way) when the editor does not indicate the direction in relation to the node / way (open polylines) under them, when the direction of the Bus routes (services) is not shown in the editor ?</p>
 <p><a href="http://www.opencyclemap.org/?zoom=15&amp;lat=35.78272&amp;lon=-78.6352&amp;layers=0B0">http://www.opencyclemap.org/?zoom=15&amp;lat=35.78272&amp;lon=-78.6352&amp;layers=0B0</a></p>
@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>According to <a href="http://wiki.openstreetmap.org/wiki/TransportMap">the wiki</a> the TransportMap rendering database gets updated daily, and then your route should render on the <a href="http://osm.org/go/ZYRXmEDU--?layers=T">transport map layer</a>, although if you have tiles cached locally it may take a little longer to see it.</p>
+<p>According to <a href="https://wiki.openstreetmap.org/wiki/TransportMap">the wiki</a> the TransportMap rendering database gets updated daily, and then your route should render on the <a href="http://osm.org/go/ZYRXmEDU--?layers=T">transport map layer</a>, although if you have tiles cached locally it may take a little longer to see it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

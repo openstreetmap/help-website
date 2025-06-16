@@ -120,7 +120,7 @@ One Answer:
 <p>There was a big discussion of it a while ago:</p>
 <p><a href="https://lists.openstreetmap.org/pipermail/talk-us/2015-March/thread.html#14404">https://lists.openstreetmap.org/pipermail/talk-us/2015-March/thread.html#14404</a></p>
 <p>The linked diary post provides quite a bit of context:</p>
-<p><a href="http://www.openstreetmap.org/user/samely/diary/34541">http://www.openstreetmap.org/user/samely/diary/34541</a></p>
+<p><a href="https://www.openstreetmap.org/user/samely/diary/34541">https://www.openstreetmap.org/user/samely/diary/34541</a></p>
 <p>Unmapped places highlights some of them:</p>
 <p><a href="http://resultmaps.neis-one.org/unmapped">http://resultmaps.neis-one.org/unmapped</a></p>
 <p>I think neighborhood and suburb are good changes for many of them. I'm not sure anyone has really come up with a solution for the odder ones (Except maybe deletion by someone who knows that a place isn't called that).</p>

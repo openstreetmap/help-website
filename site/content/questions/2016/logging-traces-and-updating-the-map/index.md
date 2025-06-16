@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Upload">Uploading traces</a> and <a href="http://wiki.openstreetmap.org/wiki/Editing">Editing the map</a> are two different things as far as OSM is concerned. So uploading a trace won't affect the map directly (you need to edit the map to add new roads), and also it's possible to add roads to the map using alternative sources of data such as aerial imagery.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Upload">Uploading traces</a> and <a href="https://wiki.openstreetmap.org/wiki/Editing">Editing the map</a> are two different things as far as OSM is concerned. So uploading a trace won't affect the map directly (you need to edit the map to add new roads), and also it's possible to add roads to the map using alternative sources of data such as aerial imagery.</p>
 <p>It's probably best to read the two pages I've linked to in order to get a better understanding of the differences.</p>
 </div>
 <div class="answer-controls post-controls">

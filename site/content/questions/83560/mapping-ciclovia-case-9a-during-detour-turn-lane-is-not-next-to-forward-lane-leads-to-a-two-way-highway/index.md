@@ -46,7 +46,7 @@ osqa_accepted = false
 <p><img src="https://wiki.openstreetmap.org/w/images/thumb/6/6f/Case9-normal.png/862px-Case9-normal.png" alt="alt text" /></p>
 <p>The mapping is simple, one highway goes up, the other goes down, and there is a turning lane, which is mapped in the a segment of the highway, with an extra lane as turning-lane. The horizontal highway is two-way.</p>
 <p>This is how it looks during ciclovía (I drew the ciclovía as cycleway just for the image):</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Case9a-ciclovia.png" alt="alt text" /></p>
+<p><img src="/upfiles/Case9a-ciclovia.png" alt="alt text" /></p>
 <p>As you can see, the right highway is both-ways; however, the turning lane is not next to the lane that goes up.</p>
 <p>This image describe the best the situation: <a href="https://www.mapillary.com/app/?pKey=439627097551960">https://www.mapillary.com/app/?pKey=439627097551960</a></p>
 <p>How can we map this condition? Should I map the turning lane independently from the highway as a separated highway?</p>

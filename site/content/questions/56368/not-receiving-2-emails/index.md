@@ -96,7 +96,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>While you waiting....<br />
-try another provider <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a><br />
+try another provider <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a><br />
 The bbbike ones work for me... <a href="http://download.bbbike.org/osm/">http://download.bbbike.org/osm/</a></p>
 </div>
 <div id="comment-56371-info" class="comment-info">

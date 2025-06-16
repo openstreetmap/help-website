@@ -144,7 +144,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Pt-br:Key:oneway">http://wiki.openstreetmap.org/wiki/Pt-br:Key:oneway</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Pt-br:Key:oneway">https://wiki.openstreetmap.org/wiki/Pt-br:Key:oneway</a></p>
 </div>
 <div id="comment-26219-info" class="comment-info">
 <span class="comment-age">(09 Sep '13, 09:14)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

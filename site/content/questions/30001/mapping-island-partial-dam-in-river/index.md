@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Mapping island &amp; partial dam in river"
-description = '''Hello guys having a problem mapping an island and a partial dam in a river...  can I have an expert eye looking into to my ways?  island http://www.openstreetmap.org/way/232582604 Dam http://www.openstreetmap.org/way/256026300'''
+description = '''Hello guys having a problem mapping an island and a partial dam in a river...  can I have an expert eye looking into to my ways?  island https://www.openstreetmap.org/way/232582604 Dam https://www.openstreetmap.org/way/256026300'''
 date = "2014-01-20T08:55:00Z"
 lastmod = "2014-01-21T23:46:00Z"
 weight = 30001
@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello guys having a problem mapping an island and a partial dam in a river... can I have an expert eye looking into to my ways?</p>
-<p>island <a href="http://www.openstreetmap.org/way/232582604">http://www.openstreetmap.org/way/232582604</a></p>
-<p>Dam <a href="http://www.openstreetmap.org/way/256026300">http://www.openstreetmap.org/way/256026300</a></p>
+<p>island <a href="https://www.openstreetmap.org/way/232582604">https://www.openstreetmap.org/way/232582604</a></p>
+<p>Dam <a href="https://www.openstreetmap.org/way/256026300">https://www.openstreetmap.org/way/256026300</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-waterway" rel="tag" title="see questions tagged &#39;waterway&#39;">waterway</span> <span class="post-tag tag-link-riverbank" rel="tag" title="see questions tagged &#39;riverbank&#39;">riverbank</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi tag the island as an island and multipolygone like ths <a href="http://www.openstreetmap.org/#map=17/36.28848/-5.28855">http://www.openstreetmap.org/#map=17/36.28848/-5.28855</a> theres a page of tagging river banks as well <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a> The dam could be a waterway=weir a low crossing or an man-made-groyne but it depends on the local situation.</p>
+<p>Hi tag the island as an island and multipolygone like ths <a href="https://www.openstreetmap.org/#map=17/36.28848/-5.28855">https://www.openstreetmap.org/#map=17/36.28848/-5.28855</a> theres a page of tagging river banks as well <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank</a> The dam could be a waterway=weir a low crossing or an man-made-groyne but it depends on the local situation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

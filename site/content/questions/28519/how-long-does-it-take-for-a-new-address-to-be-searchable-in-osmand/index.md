@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>From this <a href="https://help.openstreetmap.org/questions/14755/frequency-of-releases-for-map-downloads-to-the-navigation-device">answer</a> OSMand updates their data around once a month.</p>
+<p>From this <a href="/questions/14755/frequency-of-releases-for-map-downloads-to-the-navigation-device">answer</a> OSMand updates their data around once a month.</p>
 <p>The search powering the main <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> website should update within 5 minutes of you adding the data so you can check if you have entered it correctly by doing a search there. For a debug view of the search data you can use <a href="http://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a> and click the details link to see how the address was generated.</p>
 </div>
 <div class="answer-controls post-controls">

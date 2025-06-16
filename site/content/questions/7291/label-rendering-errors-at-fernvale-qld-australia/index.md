@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "label rendering errors at Fernvale, Qld, Australia"
-description = '''Hi, At this link on the map: http://www.openstreetmap.org/?lat=-27.4395&amp;amp;lon=152.726&amp;amp;zoom=14&amp;amp;layers=M near Fernvale, there are two label oddities:  Bottom left - town label Fernvale appears, but the town is also labelled correctly up to the North East already (where the town is) Top Right...'''
+description = '''Hi, At this link on the map: https://www.openstreetmap.org/?lat=-27.4395&amp;amp;lon=152.726&amp;amp;zoom=14&amp;amp;layers=M near Fernvale, there are two label oddities:  Bottom left - town label Fernvale appears, but the town is also labelled correctly up to the North East already (where the town is) Top Right...'''
 date = "2011-08-25T00:02:00Z"
 lastmod = "2011-08-25T01:04:00Z"
 weight = 7291
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi, At this link on the map: <a href="http://www.openstreetmap.org/?lat=-27.4395&amp;lon=152.726&amp;zoom=14&amp;layers=M">http://www.openstreetmap.org/?lat=-27.4395&amp;lon=152.726&amp;zoom=14&amp;layers=M</a> near Fernvale, there are two label oddities:</p>
+<p>Hi, At this link on the map: <a href="https://www.openstreetmap.org/?lat=-27.4395&amp;lon=152.726&amp;zoom=14&amp;layers=M">https://www.openstreetmap.org/?lat=-27.4395&amp;lon=152.726&amp;zoom=14&amp;layers=M</a> near Fernvale, there are two label oddities:</p>
 <ol>
 <li>Bottom left - town label Fernvale appears, but the town is also labelled correctly up to the North East already (where the town is)</li>
 <li>Top Right - Lake Manchester label appears, but the actual lake (and it's label) already appear to the South.</li>
@@ -110,7 +110,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Those labels are from admin boundary relations.</p>
-<p>Specifically <a href="http://www.openstreetmap.org/browse/relation/96375">relation 96375</a> for Fernvale and <a href="http://www.openstreetmap.org/browse/relation/91460">relation 91460</a> for Lake Manchester. Mapnik shows the label with the name in the centre of the boundary polygon. Both are admin level 10, and appear to be imported from Australian Bureau of Statistics data. I'm don't whether whether these are accurate and tagged correctly etc?</p>
+<p>Specifically <a href="https://www.openstreetmap.org/browse/relation/96375">relation 96375</a> for Fernvale and <a href="https://www.openstreetmap.org/browse/relation/91460">relation 91460</a> for Lake Manchester. Mapnik shows the label with the name in the centre of the boundary polygon. Both are admin level 10, and appear to be imported from Australian Bureau of Statistics data. I'm don't whether whether these are accurate and tagged correctly etc?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -180,7 +180,7 @@ osqa_accepted = true
 <div id="post-7295-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>e.g. Lake Manchester admin boundary <a href="http://www.openstreetmap.org/?relation=91460">http://www.openstreetmap.org/?relation=91460</a> and Fernvale admin boundary <a href="http://www.openstreetmap.org/?relation=96375">http://www.openstreetmap.org/?relation=96375</a></p>
+<p>e.g. Lake Manchester admin boundary <a href="https://www.openstreetmap.org/?relation=91460">https://www.openstreetmap.org/?relation=91460</a> and Fernvale admin boundary <a href="https://www.openstreetmap.org/?relation=96375">https://www.openstreetmap.org/?relation=96375</a></p>
 </div>
 <div id="comment-7295-info" class="comment-info">
 <span class="comment-age">(25 Aug '11, 01:04)</span> <span class="comment-user userinfo">Ebenezer</span>

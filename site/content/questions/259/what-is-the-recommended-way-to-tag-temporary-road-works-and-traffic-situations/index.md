@@ -170,7 +170,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are attemps to integrate TMC data into the OSM data.<a href="http://wiki.openstreetmap.org/wiki/TMC"></a><a href="http://wiki.openstreetmap.org/wiki/TMC"></a><a href="http://wiki.openstreetmap.org/wiki/TMC">http://wiki.openstreetmap.org/wiki/TMC</a></p>
+<p>There are attemps to integrate TMC data into the OSM data.<a href="https://wiki.openstreetmap.org/wiki/TMC"></a><a href="https://wiki.openstreetmap.org/wiki/TMC"></a><a href="https://wiki.openstreetmap.org/wiki/TMC">https://wiki.openstreetmap.org/wiki/TMC</a></p>
 <p>Can this be an appropriate way to give information where roads are temporary closed or under construction?</p>
 <p>Maybe the guy who knows best about integration of TMC is Marcus Wolschon ...</p>
 </div>

@@ -85,7 +85,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Then the only option is to <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">install a local Nominatim instance</a> and do the geocoding yourself. OSM doesn't have such a list but it can be generated using OSM data.</p>
+<p>Then the only option is to <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">install a local Nominatim instance</a> and do the geocoding yourself. OSM doesn't have such a list but it can be generated using OSM data.</p>
 <p>Maybe you can tell us your ultimate goal and we can try to find a better solution?</p>
 </div>
 <div id="comment-33941-info" class="comment-info">

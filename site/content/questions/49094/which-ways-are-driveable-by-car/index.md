@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Which ways are driveable by car"
-description = '''I see a few highway types here: http://wiki.openstreetmap.org/wiki/Key:highway  Is there a table with the types that can be driven by car (or by foot, by bike, etc.), as well as the recommended speed for them ?'''
+description = '''I see a few highway types here: https://wiki.openstreetmap.org/wiki/Key:highway  Is there a table with the types that can be driven by car (or by foot, by bike, etc.), as well as the recommended speed for them ?'''
 date = "2016-04-07T22:20:00Z"
 lastmod = "2016-04-12T14:49:00Z"
 weight = 49094
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I see a few highway types here: <a href="http://wiki.openstreetmap.org/wiki/Key:highway">http://wiki.openstreetmap.org/wiki/Key:highway</a></p>
+<p>I see a few highway types here: <a href="https://wiki.openstreetmap.org/wiki/Key:highway">https://wiki.openstreetmap.org/wiki/Key:highway</a></p>
 <p>Is there a table with the types that can be driven by car (or by foot, by bike, etc.), as well as the recommended speed for them ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -109,7 +109,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>The page you link makes a distinction between roads and paths. Roads are for vehicles, paths are not. Roads are largely open to pedestrians (but this varies by country and some classes of roads are usually closed to pedestrians). Special circumstances may be indicated by access tags:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 <p>So there could be a path that is open to motor vehicles (maybe someone is allowed to use part of a bike trail as a driveway or whatever), and some roads may be closed to some classes of vehicles, or restricted as to who is allowed to use them. But these are exceptions that should be explicitly noted with the access tags, it is reasonable to make some assumptions that apply when specific access tags are not present.</p>
 <p>One strategy for making sense of it is to look at the choices that others have made. Here are the various default profiles for OSRM (a routing engine):</p>
 <p><a href="https://github.com/Project-OSRM/osrm-backend/tree/develop/profiles">https://github.com/Project-OSRM/osrm-backend/tree/develop/profiles</a></p>
@@ -169,7 +169,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Additionally to the <a href="http://wiki.openstreetmap.org/wiki/Key:access">access key</a> already mentioned by maxerickson you will get a good idea by looking at the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">implicit default access values</a>. Remember that this is just a suggestion by OSM and some routers might decide to use slightly different default values.</p>
+<p>Additionally to the <a href="https://wiki.openstreetmap.org/wiki/Key:access">access key</a> already mentioned by maxerickson you will get a good idea by looking at the <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">implicit default access values</a>. Remember that this is just a suggestion by OSM and some routers might decide to use slightly different default values.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -219,7 +219,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What is your goals with getting the "roads which can be driven by a car"? Because you might also want to look at the <a href="http://wiki.openstreetmap.org/wiki/Key:surface"><code>surface</code> tag</a> which tells you the road surface. Sure, someone might be legally able to drive on a certain road, but if you're making a satnav device for tourists you might not want to send someone down an unpaved, gravel road.</p>
+<p>What is your goals with getting the "roads which can be driven by a car"? Because you might also want to look at the <a href="https://wiki.openstreetmap.org/wiki/Key:surface"><code>surface</code> tag</a> which tells you the road surface. Sure, someone might be legally able to drive on a certain road, but if you're making a satnav device for tourists you might not want to send someone down an unpaved, gravel road.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

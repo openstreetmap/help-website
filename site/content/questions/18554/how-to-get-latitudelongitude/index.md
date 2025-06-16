@@ -155,7 +155,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> for geocoding and you can also <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">install</a> a local instance (which you should do anyway due to your huge amount of queries and Nominatim's <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Usage_Policy">usage policy</a>) and use it offline.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> for geocoding and you can also <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">install</a> a local instance (which you should do anyway due to your huge amount of queries and Nominatim's <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Usage_Policy">usage policy</a>) and use it offline.</p>
 <p>However as already stated by others OpenStreetMap does <em>not</em> contain every single address because most data is contributed by volunteers.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -225,7 +225,7 @@ osqa_accepted = true
 <div id="post-18562-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>similar question <a href="https://help.openstreetmap.org/questions/17722/convert-a-place-name-to-latitude-and-longitude">https://help.openstreetmap.org/questions/17722/convert-a-place-name-to-latitude-and-longitude</a></p>
+<p>similar question <a href="/questions/17722/convert-a-place-name-to-latitude-and-longitude">https://help.openstreetmap.org/questions/17722/convert-a-place-name-to-latitude-and-longitude</a></p>
 </div>
 <div id="comment-18562-info" class="comment-info">
 <span class="comment-age">(18 Dec '12, 12:17)</span> <span class="comment-user userinfo">andy mackey</span>

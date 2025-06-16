@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Why do some road names contain <a href="http://www.openstreetmap.org/?lat=51.104317&amp;lon=3.999096&amp;zoom=18&amp;layers=B000FTFTT">semicolons</a> ?</p>
+<p>Why do some road names contain <a href="https://www.openstreetmap.org/?lat=51.104317&amp;lon=3.999096&amp;zoom=18&amp;layers=B000FTFTT">semicolons</a> ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

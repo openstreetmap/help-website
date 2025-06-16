@@ -156,7 +156,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p><span>@ivolino</span> - You've already posted a link, so people can click on that to have a look. It looks joined and merged to me:</p>
-<p><a href="http://www.openstreetmap.org/#map=18/15.28664/76.52334&amp;layers=D">http://www.openstreetmap.org/#map=18/15.28664/76.52334&amp;layers=D</a></p>
+<p><a href="https://www.openstreetmap.org/#map=18/15.28664/76.52334&amp;layers=D">https://www.openstreetmap.org/#map=18/15.28664/76.52334&amp;layers=D</a></p>
 </div>
 <div id="comment-25731-info" class="comment-info">
 <span class="comment-age">(24 Aug '13, 15:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -281,7 +281,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>I zoomed as much in as possible but still I don't get the +. Do I just have to drag the one point on the other to connect the point or do I have to do more? Is there any sign that I can see if they are connected? Wow is this difficult.</p>
-<p><a href="http://www.openstreetmap.org/edit?editor=id#map=24/15.28661/76.52399">http://www.openstreetmap.org/edit?editor=id#map=24/15.28661/76.52399</a></p>
+<p><a href="https://www.openstreetmap.org/edit?editor=id#map=24/15.28661/76.52399">https://www.openstreetmap.org/edit?editor=id#map=24/15.28661/76.52399</a></p>
 </div>
 <div id="comment-25712-info" class="comment-info">
 <span class="comment-age">(24 Aug '13, 03:30)</span> <span class="comment-user userinfo">ivolino</span>

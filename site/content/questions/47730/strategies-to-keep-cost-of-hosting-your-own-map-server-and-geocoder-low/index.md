@@ -132,7 +132,7 @@ One Answer:
 <p>A Nominatim for Germany can be 50-100GB as well. I don't have a recent installation to check. On a 16core, 48GB RAM, SSD drives it took half a day to create the initial index. I wouldn't attempt the index build with less than 8GB RAM, it might still take several days. During query time Nominatim (or rather PostgreSQL) works best with more RAM, I'd say 4GB and more for Germany.</p>
 <p>For tiles you have to remember that only a tiny fraction is seen by users.</p>
 <p>It sounds like such a POI website would need more frequent updates as users/mappers want feedback "has this been added now?" when they come back the next day (or next hour, or check the next 10 minutes).</p>
-<p>Personally I would concentrate on a static website (hosting cost $0 with github pages or every cheap regardless) and pay of tiles and geocoding. Let others worry about hardware costs, installation and keeping the data (worldwide, minutely) uptodate with OSM. I'm biased, I run a hosted geocoder, and will only point to website listing several geocoder options <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a></p>
+<p>Personally I would concentrate on a static website (hosting cost $0 with github pages or every cheap regardless) and pay of tiles and geocoding. Let others worry about hardware costs, installation and keeping the data (worldwide, minutely) uptodate with OSM. I'm biased, I run a hosted geocoder, and will only point to website listing several geocoder options <a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

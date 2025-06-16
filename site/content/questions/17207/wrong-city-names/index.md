@@ -176,7 +176,7 @@ osqa_accepted = false
 <div id="post-28786-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@SimonPoole</span> I opened another question with two examples, one where the city is wrong (both my nominatim and OSM), and two where city is wrong and inconsistent with OSM (my nominatim wrong, but OSM right). <a href="https://help.openstreetmap.org/questions/28784/nominatim-returning-wrong-city-names">https://help.openstreetmap.org/questions/28784/nominatim-returning-wrong-city-names</a></p>
+<p><span>@SimonPoole</span> I opened another question with two examples, one where the city is wrong (both my nominatim and OSM), and two where city is wrong and inconsistent with OSM (my nominatim wrong, but OSM right). <a href="/questions/28784/nominatim-returning-wrong-city-names">https://help.openstreetmap.org/questions/28784/nominatim-returning-wrong-city-names</a></p>
 </div>
 <div id="comment-28786-info" class="comment-info">
 <span class="comment-age">(04 Dec '13, 19:56)</span> <span class="comment-user userinfo">baekacaek</span>
@@ -231,7 +231,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you search for <a href="http://nominatim.openstreetmap.org/search.php?q=South+Market+Street%2C+Santa+Clara+County&amp;viewbox=-122.02%2C37.42%2C-121.86%2C37.35">South Market Street, Santa Clara County</a> you will see two results, the first belongs to Santa Clara and the second one to San José. Opening the <a href="http://nominatim.openstreetmap.org/details.php?place_id=74614186">details for the first result</a> reveals that <a href="http://www.openstreetmap.org/browse/node/150938195">Santa Clara</a> is only a <em>node</em>, likewise the <a href="http://nominatim.openstreetmap.org/details.php?place_id=38536497">details of the second result</a> show that <a href="http://www.openstreetmap.org/browse/node/1690212988">San José</a> is also just a <em>node</em>. Now, how should Nominatim know which map feature in this region belongs to Santa Clara and which belongs to San José? It can't without having a border for those two cities and consequently it tries to estimate the borders. The solution is to add both cities as an <em>area</em> instead of a <em>node</em>.</p>
+<p>If you search for <a href="http://nominatim.openstreetmap.org/search.php?q=South+Market+Street%2C+Santa+Clara+County&amp;viewbox=-122.02%2C37.42%2C-121.86%2C37.35">South Market Street, Santa Clara County</a> you will see two results, the first belongs to Santa Clara and the second one to San José. Opening the <a href="http://nominatim.openstreetmap.org/details.php?place_id=74614186">details for the first result</a> reveals that <a href="https://www.openstreetmap.org/browse/node/150938195">Santa Clara</a> is only a <em>node</em>, likewise the <a href="http://nominatim.openstreetmap.org/details.php?place_id=38536497">details of the second result</a> show that <a href="https://www.openstreetmap.org/browse/node/1690212988">San José</a> is also just a <em>node</em>. Now, how should Nominatim know which map feature in this region belongs to Santa Clara and which belongs to San José? It can't without having a border for those two cities and consequently it tries to estimate the borders. The solution is to add both cities as an <em>area</em> instead of a <em>node</em>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -301,7 +301,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Yes -- Relation is the way to do it. I revoked my original changes and started to make a relation. However, it seems that one already exists for the city: <a href="http://www.openstreetmap.org/browse/relation/112143">http://www.openstreetmap.org/browse/relation/112143</a></p>
+<p>Yes -- Relation is the way to do it. I revoked my original changes and started to make a relation. However, it seems that one already exists for the city: <a href="https://www.openstreetmap.org/browse/relation/112143">https://www.openstreetmap.org/browse/relation/112143</a></p>
 <p>What I don't understand is why this is not being using to return the proper city name in the nominatim reverse query?</p>
 </div>
 <div id="comment-17267-info" class="comment-info">
@@ -344,9 +344,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are probably best off creating the boundary using a relation which is documented here: <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary">http://wiki.openstreetmap.org/wiki/Relation:boundary</a></p>
+<p>You are probably best off creating the boundary using a relation which is documented here: <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary">https://wiki.openstreetmap.org/wiki/Relation:boundary</a></p>
 <p>If you want you can link the previous node as a 'label' relation member - which is an advantage of using a relation since it allow you to define the exact centre as well as the outline.</p>
-<p>You may find this help topic useful although it relates to editing an existing boundary rather than adding a new one: <a href="https://help.openstreetmap.org/questions/13858/how-do-i-correct-an-administrative-boundary-in-the-nominatim">https://help.openstreetmap.org/questions/13858/how-do-i-correct-an-administrative-boundary-in-the-nominatim</a></p>
+<p>You may find this help topic useful although it relates to editing an existing boundary rather than adding a new one: <a href="/questions/13858/how-do-i-correct-an-administrative-boundary-in-the-nominatim">https://help.openstreetmap.org/questions/13858/how-do-i-correct-an-administrative-boundary-in-the-nominatim</a></p>
 <p>I generally find this sort of editing easier to do in JOSM rather than potlatch but I belive it is possible in either.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -368,7 +368,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>So it turns out there is a relation that defines the city:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/112143">http://www.openstreetmap.org/browse/relation/112143</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/112143">https://www.openstreetmap.org/browse/relation/112143</a></p>
 <p>It looks closed to me, so I'm wondering why this relation is not used to define the city in the nominatim query. Perhaps it's missing required tags?</p>
 <p>Thanks for all the help -- this forum is great.</p>
 </div>
@@ -384,7 +384,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>I've investigated relation 112143. From the nominatim database:</p>
 <p>nominatim=# select st_isvalid(geometry) from place where osm_type = 'R' and osm_id = 112143; NOTICE: Self-intersection at or near point -121.80706582236448 37.369616207441474</p>
-<p>i.e.: <a href="http://www.openstreetmap.org/?lat=37.369616207441474&amp;lon=-121.80706582236448&amp;zoom=18&amp;layers=M&amp;relation=112143">http://www.openstreetmap.org/?lat=37.369616207441474&amp;lon=-121.80706582236448&amp;zoom=18&amp;layers=M&amp;relation=112143</a></p>
+<p>i.e.: <a href="https://www.openstreetmap.org/?lat=37.369616207441474&amp;lon=-121.80706582236448&amp;zoom=18&amp;layers=M&amp;relation=112143">https://www.openstreetmap.org/?lat=37.369616207441474&amp;lon=-121.80706582236448&amp;zoom=18&amp;layers=M&amp;relation=112143</a></p>
 <p>The error is so small you can't really see it at zoom 18. Try JOSM.</p>
 <p>Unfortunately none of the standard relation tools seem to pick this up as an error! I'll see if I can get something added to nominatim to allow these to be found.</p>
 </div>
@@ -477,7 +477,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Has anyone considered that the most simple way to "fix" this problem shoudl be to give <a href="http://www.openstreetmap.org/browse/way/37918472">the Marriott</a> address data of some sort? It doesn't even have a street number!</p>
+<p>Has anyone considered that the most simple way to "fix" this problem shoudl be to give <a href="https://www.openstreetmap.org/browse/way/37918472">the Marriott</a> address data of some sort? It doesn't even have a street number!</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

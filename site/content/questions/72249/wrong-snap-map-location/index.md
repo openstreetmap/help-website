@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_20191227-231406_Snapchat.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_20191227-231406_Snapchat.jpg" alt="alt text" /></p>
 <p>So u see here this is way off wrong. I'm in Los Angeles and it says I'm here in Uganda like what the hell. I was on Twitter asking for help and they said restart the device which I did and that didn't do much. Said to trim in WiFi which is on and same thing.. I logged into another device to be sure and it also said there my location was in Uganda which is so strange. I changed my password and all I DO NOT KNOW WHAT TO DO... PLEASE SOMEONE HELP ME OUT</p>
 </div>
 <div id="question-tags" class="tags-container tags">

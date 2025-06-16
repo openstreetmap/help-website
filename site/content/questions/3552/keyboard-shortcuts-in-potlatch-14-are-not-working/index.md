@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Keyboard_shortcuts">Potlatch/Keyboard shortcuts</a> wiki page says:</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Keyboard_shortcuts">Potlatch/Keyboard shortcuts</a> wiki page says:</p>
 <blockquote>
 <p>At present, shortcuts may vary or be non-functional for non-UK/US keyboards.</p>
 </blockquote>

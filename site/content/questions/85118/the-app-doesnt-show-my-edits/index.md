@@ -103,7 +103,7 @@ osqa_accepted = false
 <div id="post-85133-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I think it's better to show. The first picture is a PC, the second is an App. Made in one picture.<img src="https://help.openstreetmap.org/upfiles/My_adds_PC+App.jpg" alt="alt text" /></p>
+<p>I think it's better to show. The first picture is a PC, the second is an App. Made in one picture.<img src="/upfiles/My_adds_PC+App.jpg" alt="alt text" /></p>
 </div>
 <div id="comment-85133-info" class="comment-info">
 <span class="comment-age">(17 Jul '22, 18:29)</span> <span class="comment-user userinfo">Chronic</span>

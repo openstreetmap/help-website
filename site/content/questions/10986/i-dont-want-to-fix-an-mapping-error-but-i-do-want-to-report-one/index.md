@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>"hey, this looks like a duff edit. can somebody check it out please?"</p>
 <p>it is of course possible what I'm seeing is some kind of s/w bug, but I was interested to see it repeated on the openstreetmap consuming iPhone app, and in the web view, which makes me think somebody has uploaded some corrupted waypoints or mis-edited the data</p>
 <p>(which is precisely why I dont want to try and edit it: I think it might be better done by a cartographer or somebody who understands what they are doing)</p>
-<p>My instance is at: <a href="http://www.openstreetmap.org/?lat=28.0952&amp;lon=77.3471&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=28.0952&amp;lon=77.3471&amp;zoom=12&amp;layers=M</a></p>
+<p>My instance is at: <a href="https://www.openstreetmap.org/?lat=28.0952&amp;lon=77.3471&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=28.0952&amp;lon=77.3471&amp;zoom=12&amp;layers=M</a></p>
 <p>PS yes, I searched the FAQ/Wiki before posting. amazingly, nothing I saw in the top ten matched sensibly against</p>
 <ul>
 <li>report bad data</li>
@@ -196,7 +196,7 @@ One Answer:
 <div id="post-28071-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Rather than read the wiki page, just look on the left of the map at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> There are a number of buttons. The bottom button will add a bug "note" to the database for that area.</p>
+<p>Rather than read the wiki page, just look on the left of the map at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> There are a number of buttons. The bottom button will add a bug "note" to the database for that area.</p>
 </div>
 <div id="comment-28071-info" class="comment-info">
 <span class="comment-age">(13 Nov '13, 22:46)</span> <span class="comment-user userinfo">n76</span>

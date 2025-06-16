@@ -111,13 +111,13 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p><strong>--This answer is of historic interest only and does not reflect current licensing terms--</strong></p>
-<p>Have a look at the "<a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">How should I credit you?</a>" entry in our legal FAQ. The gist from that entry is:</p>
+<p>Have a look at the "<a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">How should I credit you?</a>" entry in our legal FAQ. The gist from that entry is:</p>
 <p>You need to credit OpenStreetMap and make it clear that the maps are available under our licence terms.</p>
 <ul>
 <li>If you are using OpenStreetMap <strong>tiles</strong> (e.g. Mapnik or Osmarender/tiles@home), we request that your credit reads at least "(c) OpenStreetMap and contributors, CC-BY-SA".</li>
 <li>If you are using OpenStreetMap <strong>data only</strong>, we request that your credit reads at least "Map data (c) OpenStreetMap and contributors, CC-BY-SA".</li>
 </ul>
-<p>Where possible, '<em>OpenStreetMap</em>' should be hyperlinked to <a href="http://www.openstreetmap.org/,">http://www.openstreetmap.org/,</a> and CC-BY-SA to <a href="http://creativecommons.org/licenses/by-sa/2.0/">http://creativecommons.org/licenses/by-sa/2.0/</a> . If you are using a medium where links are not possible (e.g. a printed work), we suggest you direct your readers to www.openstreetmap.org (perhaps by expanding 'OpenStreetMap' to this full address) and to www.creativecommons.org.</p>
+<p>Where possible, '<em>OpenStreetMap</em>' should be hyperlinked to <a href="https://www.openstreetmap.org/,">https://www.openstreetmap.org/,</a> and CC-BY-SA to <a href="http://creativecommons.org/licenses/by-sa/2.0/">http://creativecommons.org/licenses/by-sa/2.0/</a> . If you are using a medium where links are not possible (e.g. a printed work), we suggest you direct your readers to www.openstreetmap.org (perhaps by expanding 'OpenStreetMap' to this full address) and to www.creativecommons.org.</p>
 <p>Also note that the license attribution might change once the data has been relicensed...</p>
 </div>
 <div class="answer-controls post-controls">

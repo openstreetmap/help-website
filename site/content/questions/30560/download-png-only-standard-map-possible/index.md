@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-30561-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you read this question? <a href="https://help.openstreetmap.org/questions/30549/how-can-i-create-map-images-to-use-as-a-graphic-no-codejust-custom-map-images">https://help.openstreetmap.org/questions/30549/how-can-i-create-map-images-to-use-as-a-graphic-no-codejust-custom-map-images</a></p>
+<p>Did you read this question? <a href="/questions/30549/how-can-i-create-map-images-to-use-as-a-graphic-no-codejust-custom-map-images">https://help.openstreetmap.org/questions/30549/how-can-i-create-map-images-to-use-as-a-graphic-no-codejust-custom-map-images</a></p>
 </div>
 <div id="comment-30561-info" class="comment-info">
 <span class="comment-age">(08 Feb '14, 20:03)</span> <span class="comment-user userinfo">iii</span>

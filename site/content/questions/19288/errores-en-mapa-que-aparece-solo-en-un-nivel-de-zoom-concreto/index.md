@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>El mapa necesita un poco de tiempo para ser actualizada. Ver How often does the main (mapnik) map get updated <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>El mapa necesita un poco de tiempo para ser actualizada. Ver How often does the main (mapnik) map get updated <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div id="comment-19289-info" class="comment-info">
 <span class="comment-age">(23 Jan '13, 20:18)</span> <span class="comment-user userinfo">sleske</span>

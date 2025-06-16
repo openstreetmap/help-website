@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have an opportunity to go up in a hot air balloon to 300 ft over the area that I would like to map and to which I don't have access on the ground: <a href="http://www.openstreetmap.org/?lat=33.67241&amp;lon=-117.74297&amp;zoom=16&amp;layers=M">this one</a>. Is there a way I can use the photos I take during the ride in JOSM to map out the visible features? Are there any tips for producing best usable photos (as far as angling the camera, wide angle vs. telephoto, etc.)</p>
+<p>I have an opportunity to go up in a hot air balloon to 300 ft over the area that I would like to map and to which I don't have access on the ground: <a href="https://www.openstreetmap.org/?lat=33.67241&amp;lon=-117.74297&amp;zoom=16&amp;layers=M">this one</a>. Is there a way I can use the photos I take during the ride in JOSM to map out the visible features? Are there any tips for producing best usable photos (as far as angling the camera, wide angle vs. telephoto, etc.)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-photos" rel="tag" title="see questions tagged &#39;photos&#39;">photos</span> <span class="post-tag tag-link-photomapping" rel="tag" title="see questions tagged &#39;photomapping&#39;">photomapping</span> <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-aerial" rel="tag" title="see questions tagged &#39;aerial&#39;">aerial</span> <span class="post-tag tag-link-balloon" rel="tag" title="see questions tagged &#39;balloon&#39;">balloon</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>there is a mapper in the wiki (he's in central europe if I remember correctly,but the post was in english) that I've read about that's been using kites or model planes to hoist his camera.he will have some experience, if I can find it again I'll post a link, found it <a href="http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">http://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></p>
+<p>there is a mapper in the wiki (he's in central europe if I remember correctly,but the post was in english) that I've read about that's been using kites or model planes to hoist his camera.he will have some experience, if I can find it again I'll post a link, found it <a href="https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs">https://wiki.openstreetmap.org/wiki/Vertical_Aerial_Photographs</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -170,7 +170,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>We did a similar project in <a href="http://wiki.openstreetmap.org/wiki/Stratford-upon-Avon/Imagery">Stratford-upon-Avon in 2009</a>, using a light aircraft. From that project my tips would be:</p>
+<p>We did a similar project in <a href="https://wiki.openstreetmap.org/wiki/Stratford-upon-Avon/Imagery">Stratford-upon-Avon in 2009</a>, using a light aircraft. From that project my tips would be:</p>
 <ol>
 <li>Don't worry about getting precise vertical photos, but anything less than 70° to the horizontal isn't useful enough</li>
 <li>The longer the focal length of the lens the better (i.e. use telephotos). From the height you are flying you won't get much ground cover on each photo though.</li>

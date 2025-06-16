@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Is there a method to set width of steets?"
-description = '''Hi! I have a &quot;problem&quot;: is some little town in the Alps there are a many buildings in a very little space, so that steets are very narrow (Esino Lario, in Italy, is an example: http://www.openstreetmap.org/#map=17/45.99736/9.33392). The result on the final map is that, at a certain zoom level, we ha...'''
+description = '''Hi! I have a &quot;problem&quot;: is some little town in the Alps there are a many buildings in a very little space, so that steets are very narrow (Esino Lario, in Italy, is an example: https://www.openstreetmap.org/#map=17/45.99736/9.33392). The result on the final map is that, at a certain zoom level, we ha...'''
 date = "2014-07-19T14:08:00Z"
 lastmod = "2014-07-21T10:18:00Z"
 weight = 34996
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi! I have a "problem": is some little town in the Alps there are a many buildings in a very little space, so that steets are very narrow (Esino Lario, in Italy, is an example: <a href="http://www.openstreetmap.org/#map=17/45.99736/9.33392).">http://www.openstreetmap.org/#map=17/45.99736/9.33392).</a> The result on the final map is that, at a certain zoom level, we have huge street that cover buildings. So, is there a method to set the width of the street in the final rappresentation of the map? Thanks for the help</p>
+<p>Hi! I have a "problem": is some little town in the Alps there are a many buildings in a very little space, so that steets are very narrow (Esino Lario, in Italy, is an example: <a href="https://www.openstreetmap.org/#map=17/45.99736/9.33392).">https://www.openstreetmap.org/#map=17/45.99736/9.33392).</a> The result on the final map is that, at a certain zoom level, we have huge street that cover buildings. So, is there a method to set the width of the street in the final rappresentation of the map? Thanks for the help</p>
 <p>Yiyi</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -63,7 +63,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Just for info (and in no way related to the question!) - there seem to be a bunch of not-quite-joining or overlapping ways in that area - might be worth having a go at tidying those up:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/overlapping_nodes.png" alt="alt text" /></p>
+<p><img src="/upfiles/overlapping_nodes.png" alt="alt text" /></p>
 </div>
 <div id="comment-35002-info" class="comment-info">
 <span class="comment-age">(19 Jul '14, 14:58)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -128,10 +128,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The width=* key is defined as specifying things like the width of a way. See <a href="http://wiki.openstreetmap.org/wiki/Key:width">http://wiki.openstreetmap.org/wiki/Key:width</a></p>
+<p>The width=* key is defined as specifying things like the width of a way. See <a href="https://wiki.openstreetmap.org/wiki/Key:width">https://wiki.openstreetmap.org/wiki/Key:width</a></p>
 <p>However I haven't seen a map renderer that honors that key or the lanes=* key. And you are correct, at some zoom levels it can result in streets that overlapping other features.</p>
 <p>I would suggest that you assure the tagging is there to properly specify the width so when the renderer(s) are updated to honor the tagging it will show correctly.</p>
-<p>The style for the default map at <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> is maintained at <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> and I believe there is a page there for reporting and tracking issues like this.</p>
+<p>The style for the default map at <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> is maintained at <a href="https://github.com/gravitystorm/openstreetmap-carto">https://github.com/gravitystorm/openstreetmap-carto</a> and I believe there is a page there for reporting and tracking issues like this.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

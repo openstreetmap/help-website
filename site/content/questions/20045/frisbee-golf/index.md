@@ -172,7 +172,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>According to <a href="http://taginfo.openstreetmap.org/">taginfo</a>, "<a href="http://taginfo.openstreetmap.org/tags/sport=frisbee_golf">sport=frisbee_golf</a>" has been used 3 times so far.</p>
-<p>People have given a bit of thought to how <a href="http://wiki.openstreetmap.org/wiki/Golf">golf courses</a> can be mapped, and as I understand it, some of the same features (or at least same sorts of features) apply to frisbee golf, so you may be able to borrow from that page too.</p>
+<p>People have given a bit of thought to how <a href="https://wiki.openstreetmap.org/wiki/Golf">golf courses</a> can be mapped, and as I understand it, some of the same features (or at least same sorts of features) apply to frisbee golf, so you may be able to borrow from that page too.</p>
 <p>EDIT:</p>
 <p>No, as <a href="https://help.openstreetmap.org/users/3443/hendrikklaas">hendrikklaas</a> spotted, <a href="http://taginfo.openstreetmap.org/keys/disc_golf#overview">disc_golf</a> is much more widely used, so use that instead of "frisbee_golf".</p>
 </div>

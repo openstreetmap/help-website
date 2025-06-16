@@ -116,7 +116,7 @@ osqa_accepted = false
 <p>This is not permitted by the <a href="http://creativecommons.org/licenses/by-sa/2.0/">OSM licence</a> (in jurisdictions where the current licence is valid).</p>
 <p>Wikimapia is encouraging people to trace from OSM tiles. Such tracings, and therefore the Wikimapia database, are derivative works from OSM. As such, they must be licensed under the same (or compatible) licence terms as OSM, under the "share-alike" provision.</p>
 <p>Wikimapia <a href="http://wikimapia.org/terms_reference.html">do not offer their data under a compatible open licence</a>. (Indeed, I suspect they <em>cannot</em>, because their data also includes very significant amounts traced from Google imagery, and Google claims rights in this imagery.) For example, Wikimapia expressly forbids commercial use, a restriction which is not compatible with OSM's licence.</p>
-<p>I believe that Wikimapia has now been blocked from accessing OSM tiles for this reason: it directly contravenes <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">OSM's Tile Usage Policy</a> ("Do not actively or passively encourage copyright infringement").</p>
+<p>I believe that Wikimapia has now been blocked from accessing OSM tiles for this reason: it directly contravenes <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">OSM's Tile Usage Policy</a> ("Do not actively or passively encourage copyright infringement").</p>
 <p>If Wikimapia would like to provide OSM tiles for tracing into their database, they must therefore offer their database under an open licence compatible with OSM's.</p>
 </div>
 <div class="answer-controls post-controls">

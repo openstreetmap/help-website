@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>Basicaly Society of St. Pius X is an "Unofficial Catholic priestly society, whose members are not in full communion with the Church. Canonically Valid but illicit" (quote wikipedia)</p>
 <p>I don't want to argue with people who are in it but basicaly it is a "catholic" demonination but on a map point of view not completely. (people looking for a catholic place will not necessarily want to go there and people looking for Society of St. Pius X cannot find them specifically.)</p>
 <p>We have a few in France and some of them are under the denomination catholic, other have "Communauté Sacerdotale Saint-Pie X", 'SSPX' ...</p>
-<p>It is not in <a href="http://wiki.openstreetmap.org/wiki/Key:denomination.">http://wiki.openstreetmap.org/wiki/Key:denomination.</a></p>
+<p>It is not in <a href="https://wiki.openstreetmap.org/wiki/Key:denomination.">https://wiki.openstreetmap.org/wiki/Key:denomination.</a></p>
 <p>Should they be marked as catholic, should a standard denomination be created ?</p>
 <p>Thanks !</p>
 </div>
@@ -271,7 +271,7 @@ osqa_accepted = false
 <p>In the UK : <a href="https://www.openstreetmap.org/relation/5510670">https://www.openstreetmap.org/relation/5510670</a> <a href="https://www.openstreetmap.org/way/58711809">https://www.openstreetmap.org/way/58711809</a></p>
 <p>Some editor have put operator SSPX but most elements I found had catholic or roman catholic</p>
 <p>As for the relation with the Catholic church, it is a very specific one which cannot be answered by a simple answer. (they are sort of in but sort of out) I think a denomination tag should be created.</p>
-<p>SSPX is an acronym widely used by members and people refering to them. I think sspx_catholic should be quite understandable for everyone (and <a href="http://wiki.openstreetmap.org/wiki/Key:denomination">http://wiki.openstreetmap.org/wiki/Key:denomination</a> has only short acronyms)</p>
+<p>SSPX is an acronym widely used by members and people refering to them. I think sspx_catholic should be quite understandable for everyone (and <a href="https://wiki.openstreetmap.org/wiki/Key:denomination">https://wiki.openstreetmap.org/wiki/Key:denomination</a> has only short acronyms)</p>
 <p>Should I just go forward ? (Wiki / elements ...)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -323,7 +323,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think that a specific tag works best. I would prefer "sspx" but "sspx_catholic" would be OK as well. They are not really part of the Catholic Church in the sense that it is not OK for a Catholic to attend one of their masses. They are not in formal schism, but neither are they fully "in". It is likely that someone might to OpenStreetMap or any service that uses our info looking to attend mass somewhere and we should indicate that it is not a regular Catholic Church.</p>
-<p>The OSM wiki ( <a href="http://wiki.openstreetmap.org/wiki/Key:denomination">http://wiki.openstreetmap.org/wiki/Key:denomination</a> ) says:</p>
+<p>The OSM wiki ( <a href="https://wiki.openstreetmap.org/wiki/Key:denomination">https://wiki.openstreetmap.org/wiki/Key:denomination</a> ) says:</p>
 <p>denomination=catholic: (use denomination=roman_catholic, denomination=greek_catholic, or other rite as appropriate, if known) Catholic Church (Wikipedia:Roman_Catholic_Church)</p>
 <p>So there is one denomination (Catholic) but OSM says to use the denomination tag to differentiate between the different rites within the Catholic Church (Roman Catholic, Ethopian Catholic, etc.). We could treat SSPX in the same way, like a separate rite leaving aside for the moment whether it really is within the Catholic Church</p>
 </div>
@@ -359,7 +359,7 @@ osqa_accepted = false
 <div id="post-46041-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> not a particularly useful suggestion, the long form is long, very long and the description is not very ambiguous (unlike highway=asl or amenity=atm for instance). There are plenty of precedents for using well-known abbreviations in tags, it is values where we want the full form.</p>
+<p><a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> not a particularly useful suggestion, the long form is long, very long and the description is not very ambiguous (unlike highway=asl or amenity=atm for instance). There are plenty of precedents for using well-known abbreviations in tags, it is values where we want the full form.</p>
 </div>
 <div id="comment-46041-info" class="comment-info">
 <span class="comment-age">(21 Oct '15, 10:12)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -383,7 +383,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>+1 <a href="http://help.openstreetmap.org/users/5390/escada">@escada</a>. Also note that there are a number of other denominations widely known by their abbreviation (COGIC, LDS, UCC) that have a longer value for their denomination tag.</p>
+<p>+1 <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a>. Also note that there are a number of other denominations widely known by their abbreviation (COGIC, LDS, UCC) that have a longer value for their denomination tag.</p>
 </div>
 <div id="comment-46043-info" class="comment-info">
 <span class="comment-age">(21 Oct '15, 14:32)</span> <span class="comment-user userinfo">neuhausr</span>

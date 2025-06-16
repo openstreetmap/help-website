@@ -124,7 +124,7 @@ One Answer:
 <li>Now re-enable gatekeeper back in the settings window. Put it back to the default "Mac App Store and identified developers"</li>
 </ul>
 <p>You won't need to do this every time you run the app. It should open fine from now on (or until you need to update)</p>
-<p>Thanks to <a href="http://www.openstreetmap.org/user/drnoble/diary/17636#comments">user drnoble for his diary entry on this</a></p>
+<p>Thanks to <a href="https://www.openstreetmap.org/user/drnoble/diary/17636#comments">user drnoble for his diary entry on this</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

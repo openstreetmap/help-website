@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I want to tag the destinations on a sign like <a href="http://xian.smugmug.com/OSM/OSM-2014/20140810-Herentals/i-ZQhq2MT/A">http://xian.smugmug.com/OSM/OSM-2014/20140810-Herentals/i-ZQhq2MT/A</a> It is located <a href="http://osm.org/go/0Ep4vj5pV-?m=&amp;relation=3894019" title="Here">here</a>. You see it on your right before a crossing with traffic_signals, while driving on a primary road.</p>
-<p>I know the wiki pages on <a href="http://wiki.openstreetmap.org/wiki/Key:destination">destination</a>, the <a href="http://wiki.openstreetmap.org/wiki/Relation:destination_sign">destination sign relation</a> and some proposed <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Destination_details">extensions</a>.</p>
+<p>I know the wiki pages on <a href="https://wiki.openstreetmap.org/wiki/Key:destination">destination</a>, the <a href="https://wiki.openstreetmap.org/wiki/Relation:destination_sign">destination sign relation</a> and some proposed <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Destination_details">extensions</a>.</p>
 <p>However, I'm not sure about the best way to map the example sign. I see the following possibilities</p>
 <ol>
 <li>as destination-tag on the way after the crossing</li>

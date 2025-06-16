@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi all. Could (or should) some local OSM people/editors do something with these lakes: Winnipeg, Superior, Erie, Ontario, Lakes/Coastline slightly South-West from Montreal, Ladoga and Onega. Namely, these huge lakes are repeated and fully, or partly overlap the corresponding holes (water/sea areas) in the Planet-land. Consequently, there are many, many errors in the related maps. Besides, this situation generates a huge redundancy in vector mappings. To illustrate the issue look at the permalink:<br />
-<a href="http://www.openstreetmap.org/?lat=50.3416&amp;lon=-96.8215&amp;zoom=12&amp;layers=M">http://www.openstreetmap.org/?lat=50.3416&amp;lon=-96.8215&amp;zoom=12&amp;layers=M</a><br />
+<a href="https://www.openstreetmap.org/?lat=50.3416&amp;lon=-96.8215&amp;zoom=12&amp;layers=M">https://www.openstreetmap.org/?lat=50.3416&amp;lon=-96.8215&amp;zoom=12&amp;layers=M</a><br />
 from today's Slippymap. If you now separately display the latest OSM lakes (natural=water/water=lake) dataset and the coastline dataset you will find hundreds of details disappearing from lakes and/or from coastline dataset. Finally, note that a simple retagging/moving these data from lakes to coastline (or the contrary) never helps.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

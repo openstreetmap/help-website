@@ -120,12 +120,12 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The basic tag appears to be <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall">barrier=wall</a>, <a href="http://wiki.openstreetmap.org/wiki/Tag:wall%3Ddry_stone">wall=dry_stone</a> (and adding <a href="http://wiki.openstreetmap.org/wiki/Key:height">height=*</a> can't hurt).</p>
+<p>The basic tag appears to be <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dwall">barrier=wall</a>, <a href="https://wiki.openstreetmap.org/wiki/Tag:wall%3Ddry_stone">wall=dry_stone</a> (and adding <a href="https://wiki.openstreetmap.org/wiki/Key:height">height=*</a> can't hurt).</p>
 <p>Concerning the level of (dis)repair, things are going to be more subjective.</p>
 <ul>
 <li>I wouldn't change the tagging as long as one or two layers of stone are still properly on top of each other, even if the rest is on the ground : we've got those everywhere in Ireland, and even when half the wall has fallen it still socially counts as a <em>barrier=wall</em>.</li>
-<li>If you want to map beyond that state of disrepair (say a heap of stones that has reached its <a href="https://en.wikipedia.org/wiki/Angle_of_repose">angle of repose</a> or an ancient wall that is now mostly burried), replace <em>barrier=wall</em> with <a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Druins">historic=ruins</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:ruins">ruins=wall</a>.</li>
-<li>For anything less visible, start looking at <a href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Darchaeological_site">historic=archaeological_site</a> and its subtags.</li>
+<li>If you want to map beyond that state of disrepair (say a heap of stones that has reached its <a href="https://en.wikipedia.org/wiki/Angle_of_repose">angle of repose</a> or an ancient wall that is now mostly burried), replace <em>barrier=wall</em> with <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Druins">historic=ruins</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:ruins">ruins=wall</a>.</li>
+<li>For anything less visible, start looking at <a href="https://wiki.openstreetmap.org/wiki/Tag:historic%3Darchaeological_site">historic=archaeological_site</a> and its subtags.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

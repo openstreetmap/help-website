@@ -160,7 +160,7 @@ osqa_accepted = true
 <ul>
 <li>Download raw OSM data for the country or region you are interested in (via <a href="http://geofabrik.de">geofabrik.de</a> or <a href="http://cloudmade.com">cloudmade.com</a>)</li>
 <li>Do a filtering process for example via osmfilter and keep anything with boundary=administrative</li>
-<li>choose a way to display the filtered data, for example via <a href="http://wiki.openstreetmap.org/wiki/MapCSS/Examples">MapCSS</a> in JOSM</li>
+<li>choose a way to display the filtered data, for example via <a href="https://wiki.openstreetmap.org/wiki/MapCSS/Examples">MapCSS</a> in JOSM</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -222,7 +222,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The data on administrative boundaries is quite up to date and originates from an concerted import effort of the Swiss osm community, which is documented as follows: - <a href="http://wiki.openstreetmap.org/wiki/EN:Switzerland/swissBOUNDARIES3D">http://wiki.openstreetmap.org/wiki/EN:Switzerland/swissBOUNDARIES3D</a> - <a href="http://wiki.openstreetmap.org/wiki/DE:Grenzen_der_Schweiz">http://wiki.openstreetmap.org/wiki/DE:Grenzen_der_Schweiz</a></p>
+<p>The data on administrative boundaries is quite up to date and originates from an concerted import effort of the Swiss osm community, which is documented as follows: - <a href="https://wiki.openstreetmap.org/wiki/EN:Switzerland/swissBOUNDARIES3D">https://wiki.openstreetmap.org/wiki/EN:Switzerland/swissBOUNDARIES3D</a> - <a href="https://wiki.openstreetmap.org/wiki/DE:Grenzen_der_Schweiz">https://wiki.openstreetmap.org/wiki/DE:Grenzen_der_Schweiz</a></p>
 <p>To my knowledge the boundaries for cantons and communities should be quite complete, a couple of cantons also have the districts (Bezirke) but for other I wouldn't know. A word about completeness: The boundary-import from Swisstopo was done in a systematic way and the complete data was available. However and as always in osm - check the data, live with its errors and/or fix them yourself.</p>
 <p>I briefly checked via overpass-api the boundary=administrative relations and there are 3329 in Switzerland, so it shouldn't look too bad.</p>
 </div>

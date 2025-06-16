@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>There's this funny little system in Greece (more common in some places than in others), where some minor streets will be named after the main street from which they branch out: "X Street" will have branches "1st X Side-Street", "2nd X Side-Street", and so on. In Greek, that will be written with Greek numerals, like this: "Οδός Χ" and its subsidiary "Α΄ Πάροδος Χ", "Β΄ Πάροδος Χ" etc. Until recently, the keraia character (΄) appeared correctly next to its respective letter, as in the preceding examples. Now it appears above them, as in the following image (see "Α΄ Πάροδος Προύσης", "Α΄ Πάροδος Ζαλόγγου" and "Γ΄ Πάροδος Ζαλόγγου").</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Map_screenshot.png" alt="alt text" /></p>
+<p><img src="/upfiles/Map_screenshot.png" alt="alt text" /></p>
 <p>What's changed? And how can it be fixed?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

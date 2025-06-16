@@ -69,7 +69,7 @@ osqa_accepted = false
 <div id="post-16799-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim">https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim</a></p>
+<p><a href="/questions/15505/import-more-osm-files-in-to-nominatim">https://help.openstreetmap.org/questions/15505/import-more-osm-files-in-to-nominatim</a></p>
 </div>
 <div id="comment-16799-info" class="comment-info">
 <span class="comment-age">(10 Oct '12, 10:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

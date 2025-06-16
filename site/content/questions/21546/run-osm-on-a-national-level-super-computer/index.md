@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Exactly what hardware do you intend to run "osm" on, and what osm functions do you wan to run on it ? OSM can require some big servers (see <a href="http://wiki.openstreetmap.org/wiki/Servers">http://wiki.openstreetmap.org/wiki/Servers</a> ), but none of these would qualify as a "supercomputer".</p>
+<p>Exactly what hardware do you intend to run "osm" on, and what osm functions do you wan to run on it ? OSM can require some big servers (see <a href="https://wiki.openstreetmap.org/wiki/Servers">https://wiki.openstreetmap.org/wiki/Servers</a> ), but none of these would qualify as a "supercomputer".</p>
 </div>
 <div id="comment-21547-info" class="comment-info">
 <span class="comment-age">(15 Apr '13, 16:06)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

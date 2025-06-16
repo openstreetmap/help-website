@@ -168,7 +168,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13147/ansarob">@ansarob</a>: yes</p>
+<p><a href="https://help.openstreetmap.org/users/13147/ansarob">@ansarob</a>: yes</p>
 </div>
 <div id="comment-53864-info" class="comment-info">
 <span class="comment-age">(04 Jan '17, 19:30)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

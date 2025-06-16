@@ -188,7 +188,7 @@ osqa_accepted = false
 <div id="post-73273-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Helpfully, <a href="https://help.openstreetmap.org/questions/73252/how-to-download-the-newest-osmpbf-file-of-seattle-wa-directly">another question</a> has more detail about "how to obtain a smaller area from within a larger download".</p>
+<p>Helpfully, <a href="/questions/73252/how-to-download-the-newest-osmpbf-file-of-seattle-wa-directly">another question</a> has more detail about "how to obtain a smaller area from within a larger download".</p>
 </div>
 <div id="comment-73273-info" class="comment-info">
 <span class="comment-age">(27 Feb '20, 10:40)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

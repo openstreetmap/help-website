@@ -154,7 +154,7 @@ osqa_accepted = false
 <div id="post-53827-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="http://help.openstreetmap.org/users/10142/joost-schouppe">@joost</a>, I've settled on keeping the amenity=fuel tag and adding a special description tag to distinguish these places from full-service stations. I also have special icon that shows up on my custom maps.</p>
+<p><a href="https://help.openstreetmap.org/users/10142/joost-schouppe"></a><a href="https://help.openstreetmap.org/users/10142/joost-schouppe">@joost</a>, I've settled on keeping the amenity=fuel tag and adding a special description tag to distinguish these places from full-service stations. I also have special icon that shows up on my custom maps.</p>
 <p>I identify those shops with the description "A small shop or shed selling motor fuel pumped from a barrel or in one-liter bottles", and then in my style file I test for the presence of "shed" in the description. It's a bit weird but it works. I was going to add the shop=fuel tag to the shops page in the Wiki but didn't want to spend the time. Every time I try to add or edit that blasted wiki I get frustrated and give up.</p>
 <p>Thanks for your reply. I think your solution is the best one and it is the one we came up with on the tagging forum. I just never added it to the shops page.</p>
 <p>Happy New Year</p>
@@ -179,7 +179,7 @@ osqa_accepted = false
 <div id="post-53850-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2850/joostenmies">@Joost</a> - I will send an email containing the Tagging discussion and other details, including a photo of a fuel shop, to your gmail address. Many thanks for your interest.</p>
+<p><a href="https://help.openstreetmap.org/users/2850/joostenmies">@Joost</a> - I will send an email containing the Tagging discussion and other details, including a photo of a fuel shop, to your gmail address. Many thanks for your interest.</p>
 </div>
 <div id="comment-53850-info" class="comment-info">
 <span class="comment-age">(03 Jan '17, 23:13)</span> <span class="comment-user userinfo">AlaskaDave</span>

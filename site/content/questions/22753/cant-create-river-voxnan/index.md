@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Can&#x27;t create river Voxnan"
-description = '''Can someone take a look at the river Voxnan on http://www.openstreetmap.org/edit?lat=61.6769&amp;amp;lon=15.0534&amp;amp;zoom=14  I try to get water in the Voxnan but the system gives this error: A server error occurred. Do you want to retry? (The server said: You tried to add 2778 nodes to way 43248073, ho...'''
+description = '''Can someone take a look at the river Voxnan on https://www.openstreetmap.org/edit?lat=61.6769&amp;amp;lon=15.0534&amp;amp;zoom=14  I try to get water in the Voxnan but the system gives this error: A server error occurred. Do you want to retry? (The server said: You tried to add 2778 nodes to way 43248073, ho...'''
 date = "2013-05-25T10:03:00Z"
 lastmod = "2013-05-26T20:39:00Z"
 weight = 22753
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can someone take a look at the river Voxnan on <a href="http://www.openstreetmap.org/edit?lat=61.6769&amp;lon=15.0534&amp;zoom=14">http://www.openstreetmap.org/edit?lat=61.6769&amp;lon=15.0534&amp;zoom=14</a></p>
+<p>Can someone take a look at the river Voxnan on <a href="https://www.openstreetmap.org/edit?lat=61.6769&amp;lon=15.0534&amp;zoom=14">https://www.openstreetmap.org/edit?lat=61.6769&amp;lon=15.0534&amp;zoom=14</a></p>
 <p>I try to get water in the Voxnan but the system gives this error:</p>
 <p>A server error occurred. Do you want to retry? (The server said: You tried to add 2778 nodes to way 43248073, however only 2000 are allowed)</p>
 <p>I am a OpenStreetMap beginner so perhaps I am doing this wrong.</p>
@@ -139,7 +139,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Like with the islands in a lake you had earlier, you can use a multipolygon to make one object from multiple ways. In this case both ways would get the role outer.</p>
 <p>Another option is to have the two ways go across the river at an arbitrary point to make two closed loops.</p>
-<p>For a longer explanation with pictures see the <a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">wiki page for riverbank</a></p>
+<p>For a longer explanation with pictures see the <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">wiki page for riverbank</a></p>
 </div>
 <div id="comment-22758-info" class="comment-info">
 <span class="comment-age">(25 May '13, 16:08)</span> <span class="comment-user userinfo">cartinus</span>
@@ -205,7 +205,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/?lat=61.79617&amp;lon=14.81045&amp;zoom=15&amp;layers=M">Here</a> I mapped a part of the river Voxnan as example for how I think it should be done.<br />
+<p><a href="https://www.openstreetmap.org/?lat=61.79617&amp;lon=14.81045&amp;zoom=15&amp;layers=M">Here</a> I mapped a part of the river Voxnan as example for how I think it should be done.<br />
 </p>
 <p>For "the system" you "tried to fill with water": this has been mapped as the Voxnan Nature Reserve and I don't think the Nature Reserve is restricted to the banks of the river.<br />
 </p>

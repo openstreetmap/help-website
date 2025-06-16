@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-12787-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I also had issues with the existing J/XAPI providers, that's why I run my private Overpass API (it is quite easy to install and fast to run). You can check my question her: <a href="http://help.openstreetmap.org/questions/12252/how-to-install-private-xapi-server">http://help.openstreetmap.org/questions/12252/how-to-install-private-xapi-server</a></p>
+<p>I also had issues with the existing J/XAPI providers, that's why I run my private Overpass API (it is quite easy to install and fast to run). You can check my question her: <a href="/questions/12252/how-to-install-private-xapi-server">https://help.openstreetmap.org/questions/12252/how-to-install-private-xapi-server</a></p>
 </div>
 <div id="comment-12787-info" class="comment-info">
 <span class="comment-age">(18 May '12, 10:59)</span> <span class="comment-user userinfo">ivanatora</span>
@@ -180,7 +180,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think this was because the service is unavailable. <a href="http://wiki.openstreetmap.org/wiki/Xapi#Implementations">Here</a> are some alternatives. But I recon the mapquestapi will be back, otherwise you can <a href="http://developer.mapquest.com/web/info/contact">contact the people at mapquest</a>.</p>
+<p>I think this was because the service is unavailable. <a href="https://wiki.openstreetmap.org/wiki/Xapi#Implementations">Here</a> are some alternatives. But I recon the mapquestapi will be back, otherwise you can <a href="http://developer.mapquest.com/web/info/contact">contact the people at mapquest</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -276,7 +276,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I test it in my own application. Yes , I agree with you there any limitation to use the api service in <a href="http://overpass.osm.rambler.ru/cgi/xapi?.">http://overpass.osm.rambler.ru/cgi/xapi?.</a></p>
-<p>I can't get the image view / get map in overpass.osm.rambler.ru so I test get map in open.streetmap and it's still working well. I check <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a> and than you can see just 'XAPI server being down'. My conclution is we can still get another service in open.streetmap but not for xapi now..</p>
+<p>I can't get the image view / get map in overpass.osm.rambler.ru so I test get map in open.streetmap and it's still working well. I check <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a> and than you can see just 'XAPI server being down'. My conclution is we can still get another service in open.streetmap but not for xapi now..</p>
 </div>
 <div id="comment-12839-info" class="comment-info">
 <span class="comment-age">(21 May '12, 12:25)</span> <span class="comment-user userinfo">FarizRamadhan</span>

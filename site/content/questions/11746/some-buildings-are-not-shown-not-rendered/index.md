@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Some buildings are not shown / not rendered"
-description = '''I drawed a lot of buildings in the centre of Zurzach. Most of them are shown, but not all. I checked sveral times if the way is closed and the tags are correct. I could not find any mistake. Can someone have a look? Thank you very much.  http://www.openstreetmap.org/browse/way/157177609 an important...'''
+description = '''I drawed a lot of buildings in the centre of Zurzach. Most of them are shown, but not all. I checked sveral times if the way is closed and the tags are correct. I could not find any mistake. Can someone have a look? Thank you very much.  https://www.openstreetmap.org/browse/way/157177609 an important...'''
 date = "2012-04-05T15:35:00Z"
 lastmod = "2012-04-05T17:19:00Z"
 weight = 11746
@@ -41,11 +41,11 @@ osqa_accepted = false
 <div class="question-body">
 <p>I drawed a lot of buildings in the centre of Zurzach. Most of them are shown, but not all. I checked sveral times if the way is closed and the tags are correct. I could not find any mistake. Can someone have a look? Thank you very much.</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/way/157177609">http://www.openstreetmap.org/browse/way/157177609</a> an important church</li>
-<li><a href="http://www.openstreetmap.org/browse/way/157177595">http://www.openstreetmap.org/browse/way/157177595</a></li>
-<li><a href="http://www.openstreetmap.org/browse/way/157177606">http://www.openstreetmap.org/browse/way/157177606</a></li>
-<li><a href="http://www.openstreetmap.org/browse/way/157175183">http://www.openstreetmap.org/browse/way/157175183</a> a real crazy building</li>
-<li><a href="http://www.openstreetmap.org/browse/way/157177558">http://www.openstreetmap.org/browse/way/157177558</a> another crazy building</li>
+<li><a href="https://www.openstreetmap.org/browse/way/157177609">https://www.openstreetmap.org/browse/way/157177609</a> an important church</li>
+<li><a href="https://www.openstreetmap.org/browse/way/157177595">https://www.openstreetmap.org/browse/way/157177595</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/157177606">https://www.openstreetmap.org/browse/way/157177606</a></li>
+<li><a href="https://www.openstreetmap.org/browse/way/157175183">https://www.openstreetmap.org/browse/way/157175183</a> a real crazy building</li>
+<li><a href="https://www.openstreetmap.org/browse/way/157177558">https://www.openstreetmap.org/browse/way/157177558</a> another crazy building</li>
 </ul>
 <p>The other ca. 70 buldings are well rendered. Oh, I added them to OSM ten days ago.</p>
 </div>
@@ -113,32 +113,32 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I have checked the five buildings and the problem with all of them is indeed that they are not closed areas. There are also problems with self-crossing ways etc. I've listed some interesting nodes below which you may inspect further.</p>
-<p><a href="http://www.openstreetmap.org/browse/way/157177609">http://www.openstreetmap.org/browse/way/157177609</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/157177609">https://www.openstreetmap.org/browse/way/157177609</a></p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1693925090">http://www.openstreetmap.org/browse/node/1693925090</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1693925094">http://www.openstreetmap.org/browse/node/1693925094</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1693925109">http://www.openstreetmap.org/browse/node/1693925109</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1693925109">http://www.openstreetmap.org/browse/node/1693925110</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693925090">https://www.openstreetmap.org/browse/node/1693925090</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693925094">https://www.openstreetmap.org/browse/node/1693925094</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693925109">https://www.openstreetmap.org/browse/node/1693925109</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693925109">https://www.openstreetmap.org/browse/node/1693925110</a></li>
 </ul>
-<p><a href="http://www.openstreetmap.org/browse/way/157177595">http://www.openstreetmap.org/browse/way/157177595</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/157177595">https://www.openstreetmap.org/browse/way/157177595</a></p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1693924893">http://www.openstreetmap.org/browse/node/1693924893</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1693924894">http://www.openstreetmap.org/browse/node/1693924894</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693924893">https://www.openstreetmap.org/browse/node/1693924893</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693924894">https://www.openstreetmap.org/browse/node/1693924894</a></li>
 </ul>
-<p><a href="http://www.openstreetmap.org/browse/way/157177606">http://www.openstreetmap.org/browse/way/157177606</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/157177606">https://www.openstreetmap.org/browse/way/157177606</a></p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1693924872">http://www.openstreetmap.org/browse/node/1693924872</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1693924873">http://www.openstreetmap.org/browse/node/1693924873</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693924872">https://www.openstreetmap.org/browse/node/1693924872</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693924873">https://www.openstreetmap.org/browse/node/1693924873</a></li>
 </ul>
-<p><a href="http://www.openstreetmap.org/browse/way/157175183">http://www.openstreetmap.org/browse/way/157175183</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/157175183">https://www.openstreetmap.org/browse/way/157175183</a></p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1693911334">http://www.openstreetmap.org/browse/node/1693911334</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1693911335">http://www.openstreetmap.org/browse/node/1693911335</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693911334">https://www.openstreetmap.org/browse/node/1693911334</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693911335">https://www.openstreetmap.org/browse/node/1693911335</a></li>
 </ul>
-<p><a href="http://www.openstreetmap.org/browse/way/157177558">http://www.openstreetmap.org/browse/way/157177558</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/157177558">https://www.openstreetmap.org/browse/way/157177558</a></p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/node/1693924828">http://www.openstreetmap.org/browse/node/1693924828</a></li>
-<li><a href="http://www.openstreetmap.org/browse/node/1693924829">http://www.openstreetmap.org/browse/node/1693924829</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693924828">https://www.openstreetmap.org/browse/node/1693924828</a></li>
+<li><a href="https://www.openstreetmap.org/browse/node/1693924829">https://www.openstreetmap.org/browse/node/1693924829</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

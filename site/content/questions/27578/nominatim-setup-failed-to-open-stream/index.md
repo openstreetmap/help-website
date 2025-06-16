@@ -101,7 +101,7 @@ org.openstreetmap.osmosis.core.OsmosisRuntimeException: One or more tasks failed
         at org.codehaus.classworlds.Launcher.main(Launcher.java:31)
 &#10;sed: can&#39;t read /home/spbryfczynski/Documents/geocode/Nominatim/settings/configuration.txt: No such file or directory
 sed: can&#39;t read /home/spbryfczynski/Documents/geocode/Nominatim/settings/configuration.txt: No such file or directory
-PHP Warning:  file_get_contents(http://www.openstreetmap.org/api/0.6/node/2506472169/1): failed to open stream: Connection timed out in /home/spbryfczynski/Documents/geocode/Nominatim/utils/setup.php on line 540
+PHP Warning:  file_get_contents(https://www.openstreetmap.org/api/0.6/node/2506472169/1): failed to open stream: Connection timed out in /home/spbryfczynski/Documents/geocode/Nominatim/utils/setup.php on line 540
 PHP Notice:  Undefined offset: 1 in /home/spbryfczynski/Documents/geocode/Nominatim/utils/setup.php on line 542
 PHP Warning:  file_get_contents(http://planet.openstreetmap.org/replication/minute/?C=M;O=D): failed to open stream: Connection timed out in /home/spbryfczynski/Documents/geocode/Nominatim/utils/setup.php on line 546
 PHP Notice:  Undefined variable: aRepMatch in /home/spbryfczynski/Documents/geocode/Nominatim/utils/setup.php on line 558</code></pre>
@@ -202,7 +202,7 @@ PHP Notice:  Undefined variable: aRepMatch in /home/spbryfczynski/Documents/geoc
 &#10;</div>
 <div class="comment-text">
 <p>I was able to clear up the lock error but still am getting the following errors related to opening stream. I spun up a test VM and was able to get everything working. So maybe its something I need my IT group to clear up on the server. Any suggestions?</p>
-<p>... Nov 04, 2013 2:53:33 PM org.openstreetmap.osmosis.core.Osmosis run INFO: Total execution time: 322 milliseconds. PHP Warning: file_get_contents(<a href="http://www.openstreetmap.org/api/0.6/node/2506472169/1):">http://www.openstreetmap.org/api/0.6/node/2506472169/1):</a> failed to open stream: Connection timed out in /home/spbryfczynski/Documents/Nominatim/utils/setup.php on line 540 ...more errors</p>
+<p>... Nov 04, 2013 2:53:33 PM org.openstreetmap.osmosis.core.Osmosis run INFO: Total execution time: 322 milliseconds. PHP Warning: file_get_contents(<a href="https://www.openstreetmap.org/api/0.6/node/2506472169/1):">https://www.openstreetmap.org/api/0.6/node/2506472169/1):</a> failed to open stream: Connection timed out in /home/spbryfczynski/Documents/Nominatim/utils/setup.php on line 540 ...more errors</p>
 </div>
 <div id="comment-27790-info" class="comment-info">
 <span class="comment-age">(04 Nov '13, 20:07)</span> <span class="comment-user userinfo">sbryfcz</span>

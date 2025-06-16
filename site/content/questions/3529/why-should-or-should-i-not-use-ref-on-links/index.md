@@ -137,9 +137,9 @@ ref=from El Toro Road</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The refs used there on those ramps appear to be valid values for exit_to= tags (save where they're "from" someplace, those would need to be updated, and it would need to be on the junction node at the start of the link, not the link itself. See <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_junction">tag:motorway_junction</a> for details.</p>
-<p>Also, I see most of the names are obviously wrong; <a href="http://wiki.openstreetmap.org/wiki/Name#Name_is_the_name_only">name is the name only</a>. Many of the names shown should be <a href="http://wiki.openstreetmap.org/wiki/Description">description=*</a> instead.</p>
-<p>I don't see a problem with fixing the tags, though it does appear there is useful information available; I would try to preserve the existing, incorrectly tagged data by moving it to more widely accepted tags. If that doesn't satisfy whatever renderer they're using at that point, well, <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">that's the renderer's problem</a>.</p>
+<p>The refs used there on those ramps appear to be valid values for exit_to= tags (save where they're "from" someplace, those would need to be updated, and it would need to be on the junction node at the start of the link, not the link itself. See <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_junction">tag:motorway_junction</a> for details.</p>
+<p>Also, I see most of the names are obviously wrong; <a href="https://wiki.openstreetmap.org/wiki/Name#Name_is_the_name_only">name is the name only</a>. Many of the names shown should be <a href="https://wiki.openstreetmap.org/wiki/Description">description=*</a> instead.</p>
+<p>I don't see a problem with fixing the tags, though it does appear there is useful information available; I would try to preserve the existing, incorrectly tagged data by moving it to more widely accepted tags. If that doesn't satisfy whatever renderer they're using at that point, well, <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">that's the renderer's problem</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

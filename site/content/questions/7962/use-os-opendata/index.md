@@ -168,7 +168,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The OS OpenData is definitely not 'perfect'. It has loads of errors in it. eg OS Locator and OS StreetView have misspelled or just plain wrong streetnames, or streets that have been demolished years ago, or names that are not signed or used by anyone. And OS StreetView is fairly low resolution, so not really very accurate for positions of things like street lines. Its often possible to map streets more accurately with multiple GPS traces, plus aerial imagery.</p>
-<p>The OS Locator data can be used with comparison tools (eg <a href="http://wiki.openstreetmap.org/wiki/OS_Locator_Musical_Chairs">Musical Chairs</a>), which can highlight possibly unmapped areas in OSM, or where there might be incorrect street names. Then these places can be surveyed and rechecked to correct this. But if all of the OS OpenData was imported, there would be no separate source to compare with to spot mistakes.</p>
+<p>The OS Locator data can be used with comparison tools (eg <a href="https://wiki.openstreetmap.org/wiki/OS_Locator_Musical_Chairs">Musical Chairs</a>), which can highlight possibly unmapped areas in OSM, or where there might be incorrect street names. Then these places can be surveyed and rechecked to correct this. But if all of the OS OpenData was imported, there would be no separate source to compare with to spot mistakes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

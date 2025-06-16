@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Dear OSM experts,</p>
 <p>I just did a survey outside in Bali, Indonesia to record new GPS traces with the Android application OSMAnd. Once I get back I uploaded the gps traces and everything was going well.</p>
 <p>The problem that I have and would appreciate to have your suggestions is when I was doing my survey I created an audio or picture note with OSMAnd before recording a new street so I could remember the street's name and the kind of surface and edit it properly in OSM.</p>
-<p>I just realized when I try to edit my uploaded traces via the traces list on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> , the audio/picture notes are not included. I have my audio/picture notes on my OSMAnd and with the timestamps I can try to connect the dots I mean I try to see which gps trace goes with the good audio based on the timestamps.</p>
+<p>I just realized when I try to edit my uploaded traces via the traces list on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> , the audio/picture notes are not included. I have my audio/picture notes on my OSMAnd and with the timestamps I can try to connect the dots I mean I try to see which gps trace goes with the good audio based on the timestamps.</p>
 <p>For me it's very tedious and difficult to do, furthermore I'm afraid to do mistakes. Is someone has a pattern or know how to workaround to fix that problem ?</p>
 <p>Thank you very much</p>
 <p>Xavier</p>

@@ -192,7 +192,7 @@ You would be best to ask this question at the <a href="http://forum.openstreetma
 <div class="answer-body">
 <p>When I click on the link you have listed above it takes me to a page like this where I am able to choose the particular files I need. Does this happen for you? If not, I don't know what the problem is but the link given appears to work fine. I was then able to download and unzip the one I choose (osm_generic_gmapsupp.zip)</p>
 <p>Could there be Computer Administrator restrictions on which sites you can visit?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2014-06-21_at_10.43.02_pm.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2014-06-21_at_10.43.02_pm.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

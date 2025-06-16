@@ -81,7 +81,7 @@ This question is marked "community wiki".
 
 <div class="question-status" style="margin-bottom:15px">
 
-### The question has been closed for the following reason "Duplicate Question - See http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by Jonathan Bennett 05 Jul '12, 08:55
+### The question has been closed for the following reason "Duplicate Question - See https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map" by Jonathan Bennett 05 Jul '12, 08:55
 
 </div>
 

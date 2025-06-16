@@ -73,7 +73,7 @@ osqa_accepted = false
 <p>IMHO there is no such program out-of-the-box.</p>
 <p>Maybe we can help you if you take one key feature you want (maybe map display) and then tell us in detail any program or map display you already tried, and why it is no good for you.</p>
 <p>Same is about routing solutions:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Routing">https://wiki.openstreetmap.org/wiki/Routing</a></p>
 <p>Is there any solution that comes near your aim?</p>
 </div>
 <div id="comment-26396-info" class="comment-info">

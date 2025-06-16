@@ -43,7 +43,7 @@ osqa_accepted = false
 <p>I was wondering if anybody can help me with the following issue.</p>
 <p>I was editing administrative boundaries within Bosnia and Herzegovina (adding entities, cantons, municipalities). I deleted the old boundaries (country and entities) so I could create completely new administrative network of B&amp;H. Now, when I search Nominatim for Bosnia and Herzegovina, I get old, deleted relation of Bosnia and Herzegovina border, and not the one which I created (which is B6H admin lvl 2). Also, I saw in example of other countries that, after you search for a country, you get child relations (regions and municipalities).</p>
 <p>Here is the changeset I have made (admin levels 2, 4, 5 and 6 - country, entities, cantons, municipalities):</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/13633166">http://www.openstreetmap.org/browse/changeset/13633166</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/13633166">https://www.openstreetmap.org/browse/changeset/13633166</a></p>
 <p>My question is, how to organize this new data (which is a lot richer) so it could show up in nominatim, first country, and then all child relations on the same page?</p>
 <p>Best regards,</p>
 <p>Alen</p>
@@ -162,8 +162,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Currently the result for Bosnia and Herzegovina is relation <a href="http://www.openstreetmap.org/browse/relation/2528142">2528142</a>, which is the new one.</p>
-<p>You can read <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">boundary relations page</a> and decide whether you use or not the way that can be used for defining subareas.</p>
+<p>Currently the result for Bosnia and Herzegovina is relation <a href="https://www.openstreetmap.org/browse/relation/2528142">2528142</a>, which is the new one.</p>
+<p>You can read <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">boundary relations page</a> and decide whether you use or not the way that can be used for defining subareas.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

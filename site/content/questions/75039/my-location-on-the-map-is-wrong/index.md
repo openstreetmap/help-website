@@ -215,9 +215,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Chrome <img src="https://help.openstreetmap.org/upfiles/chrome_AMAhyhm.PNG" alt="alt text" /></p>
-<p>Firefox <img src="https://help.openstreetmap.org/upfiles/firefox_evXDVYn.PNG" alt="alt text" /></p>
-<p>Edge <img src="https://help.openstreetmap.org/upfiles/edge_ErVJZMT.PNG" alt="alt text" /></p>
+<p>Chrome <img src="/upfiles/chrome_AMAhyhm.PNG" alt="alt text" /></p>
+<p>Firefox <img src="/upfiles/firefox_evXDVYn.PNG" alt="alt text" /></p>
+<p>Edge <img src="/upfiles/edge_ErVJZMT.PNG" alt="alt text" /></p>
 <p>The same place on 3 browsers. Chrome sometimes makes mistakes more than other browsers.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -269,7 +269,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could use a map note to position and explain a bit more. If your home is not mapped in the correct place. see this <img src="https://help.openstreetmap.org/upfiles/map_note.JPG" alt="alt text" /></p>
+<p>You could use a map note to position and explain a bit more. If your home is not mapped in the correct place. see this <img src="/upfiles/map_note.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

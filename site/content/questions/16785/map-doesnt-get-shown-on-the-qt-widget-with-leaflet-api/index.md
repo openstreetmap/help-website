@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>See the snapshot below. I am able to click markers on this map and I can also display the lat longs on it.</p>
 <p>But I just can't <strong><em>see</em></strong> the map!</p>
-<p><img src="http://help.openstreetmap.org/upfiles/os_4.png" alt="alt text" /></p>
+<p><img src="/upfiles/os_4.png" alt="alt text" /></p>
 <hr />
 <p><strong>The code is here. This function gets called</strong> first<strong>.</strong></p>
 <pre><code>function displayMapAndClick ()

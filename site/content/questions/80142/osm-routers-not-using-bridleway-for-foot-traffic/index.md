@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Why are OSRM and graphopper both routing foot traffic a long way "round the houses" when there's a much shorter bridleway directly the specified points?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/2021-05-12_23_01_30_OpenStreetMap.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/2021-05-12_23_01_30_OpenStreetMap.jpg" alt="alt text" /></p>
 <p>See <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01339&amp;layers=N">https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01339&amp;layers=N</a> and <a href="https://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01338&amp;layers=N">https://www.openstreetmap.org/directions?engine=graphhopper_foot&amp;route=51.59491%2C0.01149%3B51.59436%2C0.01163#map=17/51.59244/0.01338&amp;layers=N</a></p>
 <p>There have been no mapping changes to the bridleway since 2016.</p>
 <p>If the reason is that the bridleway is not tagged foot=yes, then something needs fixing because according to <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbridleway">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbridleway</a> the bridleway tag already implies foot=yes.</p>
@@ -254,7 +254,7 @@ This answer is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>I think they will route successfully if tagged foot=yes. I have added foot=yes and bicycle=yes to the bridleway. It should route soon, maybe a day. I often use an online app ( which i don't want name, it also displays copyrighted maps that have usage limits) to create gpxes and it seems to work if the above tags are present. Other will disagree. UPDATE I am fairly sure this Bridleway can be used by walkers. If I lived close by I should survey it and note local signage before tagging it. The routeing with OSRM now does as expected. see pic</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Routing_Works_Now.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Routing_Works_Now.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

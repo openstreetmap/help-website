@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Frederik Ramm mentioned this in <a href="http://wiki.openstreetmap.org/wiki/SotM_2010_session:Tuning_the_Mapnik_Rendering_Chain">his SOTM10 presentation</a> and he has had a chance to try Postgres 9.0 (with Postgis 1.5) and that apparently no longer suffers from this slowdown - in fact it is apparently faster than Postgres 8.3 in his benchmarks.</p>
+<p>Frederik Ramm mentioned this in <a href="https://wiki.openstreetmap.org/wiki/SotM_2010_session:Tuning_the_Mapnik_Rendering_Chain">his SOTM10 presentation</a> and he has had a chance to try Postgres 9.0 (with Postgis 1.5) and that apparently no longer suffers from this slowdown - in fact it is apparently faster than Postgres 8.3 in his benchmarks.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi a question like this has been solved here at <a href="https://help.openstreetmap.org/questions/4437/how-do-you-tag-a-dry-creek.">https://help.openstreetmap.org/questions/4437/how-do-you-tag-a-dry-creek.</a> But you could consider using waterway=wadi for a stream that’s carrying water every now and then. Look at the waterways tags and you’ll see an extra tag concerning the width together with your intermittent=yes ! of the dry bed, very good. Or just waterway=old river branch with intermittent as well.</p>
+<p>Hi a question like this has been solved here at <a href="/questions/4437/how-do-you-tag-a-dry-creek.">https://help.openstreetmap.org/questions/4437/how-do-you-tag-a-dry-creek.</a> But you could consider using waterway=wadi for a stream that’s carrying water every now and then. Look at the waterways tags and you’ll see an extra tag concerning the width together with your intermittent=yes ! of the dry bed, very good. Or just waterway=old river branch with intermittent as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

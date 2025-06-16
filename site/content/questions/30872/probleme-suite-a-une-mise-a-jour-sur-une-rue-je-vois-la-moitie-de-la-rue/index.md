@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Bonjour,</p>
 <p>Désoler je suis pas anglophone.</p>
 <p>Je rencontre un problème suite à une mise à jour sur une rue. Quand je suis en modification elle apparait mais quand je suis en visualisation je vois la moitié de la rue, et son nom n'apparait pas non plus. Quand je dézoome elle disparait complètement.</p>
-<p>Voici le lien : <a href="http://www.openstreetmap.org/way/150920365#map=18/45.43819/4.43554">Lien ICI</a></p>
+<p>Voici le lien : <a href="https://www.openstreetmap.org/way/150920365#map=18/45.43819/4.43554">Lien ICI</a></p>
 <p>Merci</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -125,7 +125,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's hard to understand your exact question, but if it is "I made changes to the data, but am not seeing all of them on the map", then please see the answer to this question: <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></p>
+<p>It's hard to understand your exact question, but if it is "I made changes to the data, but am not seeing all of them on the map", then please see the answer to this question: <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

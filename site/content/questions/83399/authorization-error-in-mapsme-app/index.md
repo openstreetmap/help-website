@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Good day! I can't log in to the app. You requested a password change because you forgot your old password. received the e-mail address karpova1977@mail.ru, entered the authorization password on the www.openstreetmap.org website and entered the personal account on the website. I enter the username and password, the application writes that the username and password are incorrect. I try to login with email and password, it says the same thing. I tried to re-register on the site. writes that the login and email already exist. Please help. I have many bookmarks needed saved in the app. I am attaching screenshots. Thanks in advance.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/CC1F2A12-4B5B-46A8-9A51-53BC4A45F1B6.jpeg" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/69805A32-E194-4793-8F6C-627602DB07B1.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/CC1F2A12-4B5B-46A8-9A51-53BC4A45F1B6.jpeg" alt="alt text" /></p>
+<p><img src="/upfiles/69805A32-E194-4793-8F6C-627602DB07B1.jpeg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-incorrect" rel="tag" title="see questions tagged &#39;incorrect&#39;">incorrect</span> <span class="post-tag tag-link-mapswithme" rel="tag" title="see questions tagged &#39;mapswithme&#39;">mapswithme</span> <span class="post-tag tag-link-login" rel="tag" title="see questions tagged &#39;login&#39;">login</span> <span class="post-tag tag-link-password" rel="tag" title="see questions tagged &#39;password&#39;">password</span> <span class="post-tag tag-link-error" rel="tag" title="see questions tagged &#39;error&#39;">error</span>

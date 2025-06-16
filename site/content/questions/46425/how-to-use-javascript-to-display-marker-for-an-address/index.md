@@ -90,7 +90,7 @@ but something is wrong, it seems to crash the template and it falls back to just
 <div id="post-46586-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... this one <a href="https://en.wikipedia.org/wiki/Confluence_%28software%29">https://en.wikipedia.org/wiki/Confluence_%28software%29</a> ? <a href="http://help.openstreetmap.org/users/11659/headcase">@HeaDCase</a></p>
+<p>... this one <a href="https://en.wikipedia.org/wiki/Confluence_%28software%29">https://en.wikipedia.org/wiki/Confluence_%28software%29</a> ? <a href="https://help.openstreetmap.org/users/11659/headcase">@HeaDCase</a></p>
 </div>
 <div id="comment-46586-info" class="comment-info">
 <span class="comment-age">(14 Nov '15, 16:32)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

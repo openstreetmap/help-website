@@ -112,7 +112,7 @@ osqa_accepted = false
 <li>Retrieve the data from OSM,</li>
 <li>export them to the required format.</li>
 </ol>
-<p>For #1, it depends on what you mean by “administrative boundaries”. You can use <a href="http://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> (e.g. <a href="http://www.informationfreeway.org/api/0.6/*%5Bboundary=administrative%5D">every boundary=administrative element</a>), or retrieve the OSM data in any other way.</p>
+<p>For #1, it depends on what you mean by “administrative boundaries”. You can use <a href="https://wiki.openstreetmap.org/wiki/Xapi">XAPI</a> (e.g. <a href="http://www.informationfreeway.org/api/0.6/*%5Bboundary=administrative%5D">every boundary=administrative element</a>), or retrieve the OSM data in any other way.</p>
 <p>Then, to convert OSM data to IGC, you can use <a href="http://www.gpsbabel.org/">GPSBabel</a>.</p>
 </div>
 <div class="answer-controls post-controls">

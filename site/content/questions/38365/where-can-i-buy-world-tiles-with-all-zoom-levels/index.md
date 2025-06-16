@@ -122,7 +122,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can't buy tiles from OpenStreetMap (we don't provide paid-for services) and the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a> expressly prohibits you downloading them all.</p>
+<p>You can't buy tiles from OpenStreetMap (we don't provide paid-for services) and the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">Tile Usage Policy</a> expressly prohibits you downloading them all.</p>
 <p>You may be able to find a commercial provider who will do this for you. The list at <a href="http://switch2osm.org/providers/">switch2osm.org/providers</a> is a good start. Bear in mind that "all the tiles" - every zoom level for the whole world - would require an unimaginably vast amount of storage.</p>
 <p>Alternatively, you can download the data from OSM and create the tiles yourself. Again, <a href="http://switch2osm.org/">switch2osm.org</a> is the best resource for getting started.</p>
 </div>

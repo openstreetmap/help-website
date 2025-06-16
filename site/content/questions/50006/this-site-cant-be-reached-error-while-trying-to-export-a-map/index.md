@@ -119,7 +119,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You will not get a map there, just raw OSM data in XML format. This API is intended to be called by editor programs only. Therefore it supports only comparatively small areas to be exported.</p>
-<p>And why an error? Likely the server was too busy to process your request <em>or</em> your requested area is too large. Also see <a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a> .</p>
+<p>And why an error? Likely the server was too busy to process your request <em>or</em> your requested area is too large. Also see <a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -43,13 +43,13 @@ osqa_accepted = true
 <p><a href="http://stackoverflow.com/questions/10242129/how-can-i-get-the-zone-administrive-of-a-city-from-postgis-nominatim-import">http://stackoverflow.com/questions/10242129/how-can-i-get-the-zone-administrive-of-a-city-from-postgis-nominatim-import</a><br />
 </p>
 <p>I retreived europe.osm database with osm2pgsql. And now I try to exploit it. Is there a way to get the state, country, region, from a way like a town hamlet locality or city?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a><br />
+<p><a href="https://wiki.openstreetmap.org/wiki/Nominatim">https://wiki.openstreetmap.org/wiki/Nominatim</a><br />
 <a href="https://github.com/twain47/Nominatim">https://github.com/twain47/Nominatim</a><br />
 </p>
 <p>databases osm format :<br />
 <a href="http://download.geofabrik.de/osm/europe/">http://download.geofabrik.de/osm/europe/</a><br />
 here is the database schema :<br />
-<a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">http://wiki.openstreetmap.org/wiki/Osm2pgsql/schema</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema">https://wiki.openstreetmap.org/wiki/Osm2pgsql/schema</a></p>
 <p><strong>if someone can provide me the SQL Query to retreive the information.</strong></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I presume you have a full Nominatim installation as described on the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">installation page</a> not just an osm2pgsql import.</p>
+<p>I presume you have a full Nominatim installation as described on the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">installation page</a> not just an osm2pgsql import.</p>
 <p>Doing SQL queries on the database directly is a bit involved. You can get administrative information much easier by sending reverse requests directly to your local installation. If you have the OSM id of your way, send something like: <a href="http://your.local.nominatim.server/reverse?osm_type=W&amp;osm_id=%3Cosm"><code>http://your.local.nominatim.server/reverse?osm_type=W&amp;osm_id=&lt;osm</code></a><code> id&gt;</code> and process the XML returned.</p>
 <p>If you still want to go down the SQL road, have a look at the <code>placex</code> and <code>place_addressline</code> tables. The former contains all OSM objects and the latter the relationship between them.</p>
 </div>

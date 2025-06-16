@@ -79,7 +79,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Hmmm ... your question seems to be quite special ...</p>
 <p>try asking at the developer or general OSM mailing list:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-31450-info" class="comment-info">
 <span class="comment-age">(11 Mar '14, 17:03)</span> <span class="comment-user userinfo">stephan75</span>
@@ -123,7 +123,7 @@ osqa_accepted = false
 <div id="post-42916-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Duplicate of <a href="https://help.openstreetmap.org/questions/26889/conversion-of-existing-tiles-in-png-format-to-meta-format">https://help.openstreetmap.org/questions/26889/conversion-of-existing-tiles-in-png-format-to-meta-format</a></p>
+<p>Duplicate of <a href="/questions/26889/conversion-of-existing-tiles-in-png-format-to-meta-format">https://help.openstreetmap.org/questions/26889/conversion-of-existing-tiles-in-png-format-to-meta-format</a></p>
 </div>
 <div id="comment-42916-info" class="comment-info">
 <span class="comment-age">(06 May '15, 10:38)</span> <span class="comment-user userinfo">jnachtigall</span>

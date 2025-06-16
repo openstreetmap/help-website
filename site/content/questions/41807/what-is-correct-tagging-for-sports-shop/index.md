@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>When using the tag shop=sports it is recommended that the supplementary tag sport=(v) be added to indicate which sport(s) the shop caters for.<br />
 However if the tag sport=(v) is used the validation check (and I think, KeepRight) gives a warning "sport without physical feature" – expecting to also find the node/area tagged with leisure=pitch/track etc.</p>
 <p>Would it be acceptable to tag the shop with sports=(v) (sports plural) to avoid these warnings or is that too much like 'tagging for the renderer' ? Or should I just tag with sport=(v) and ignore the warnings?</p>
-<p>Example here <a href="http://www.openstreetmap.org/node/3408156724">http://www.openstreetmap.org/node/3408156724</a></p>
+<p>Example here <a href="https://www.openstreetmap.org/node/3408156724">https://www.openstreetmap.org/node/3408156724</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shop" rel="tag" title="see questions tagged &#39;shop&#39;">shop</span> <span class="post-tag tag-link-sport" rel="tag" title="see questions tagged &#39;sport&#39;">sport</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

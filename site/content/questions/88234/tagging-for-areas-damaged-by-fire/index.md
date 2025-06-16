@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-88235-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This question was split from: <a href="https://help.openstreetmap.org/questions/76552/what-do-we-mark-after-a-fire-emergency-on-openstreetmap?">https://help.openstreetmap.org/questions/76552/what-do-we-mark-after-a-fire-emergency-on-openstreetmap?</a></p>
+<p>This question was split from: <a href="/questions/76552/what-do-we-mark-after-a-fire-emergency-on-openstreetmap?">https://help.openstreetmap.org/questions/76552/what-do-we-mark-after-a-fire-emergency-on-openstreetmap?</a></p>
 </div>
 <div id="comment-88235-info" class="comment-info">
 <span class="comment-age">(11 Feb '24, 11:08)</span> <span class="comment-user userinfo">InsertUser</span>

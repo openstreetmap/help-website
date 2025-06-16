@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>For testing purposes (before putting it on a Linux server), I would like to install the Overpass API on Mac OS X (El Capitan). According to the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/versions#Other_changes_3">changelog</a> it should also build on a Mac. However, the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Installation">installation guide</a> is only given for Ubuntu. I would follow these instructions, however homebrew cannot find the packages libexpat1-dev and zlib1g-dev. What can I do?</p>
+<p>For testing purposes (before putting it on a Linux server), I would like to install the Overpass API on Mac OS X (El Capitan). According to the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/versions#Other_changes_3">changelog</a> it should also build on a Mac. However, the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Installation">installation guide</a> is only given for Ubuntu. I would follow these instructions, however homebrew cannot find the packages libexpat1-dev and zlib1g-dev. What can I do?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-macosx" rel="tag" title="see questions tagged &#39;macosx&#39;">macosx</span>
@@ -156,7 +156,7 @@ osqa_accepted = true
 <div id="post-47233-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Did you also run autoscan, aclocal, autoheader, libtoolize, automake --add-missing, autoconf (see <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Installation">Installation option 2</a>) before running configure and make again?</p>
+<p>Did you also run autoscan, aclocal, autoheader, libtoolize, automake --add-missing, autoconf (see <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Installation#Installation">Installation option 2</a>) before running configure and make again?</p>
 </div>
 <div id="comment-47233-info" class="comment-info">
 <span class="comment-age">(19 Dec '15, 10:54)</span> <span class="comment-user userinfo">mmd</span>
@@ -178,7 +178,7 @@ osqa_accepted = true
 <div id="post-47240-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>no_frills.html is targetting more the official releases. I recommend to check this <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Installation">Wiki page</a> as well.</p>
+<p>no_frills.html is targetting more the official releases. I recommend to check this <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Installation">Wiki page</a> as well.</p>
 <p>Thanks to Travis CI I now have a working build on Mac OS X without any manual tweaks: <a href="https://travis-ci.org/mmd-osm/Overpass-API/builds/97856095">https://travis-ci.org/mmd-osm/Overpass-API/builds/97856095</a></p>
 <p>Please retest with the changes described <a href="https://github.com/mmd-osm/Overpass-API/commit/bd091c081f3777dc42e4ad892e513afec03a8b09">here</a> - except for the .travis.yml maybe, which is only in <a href="https://github.com/mmd-osm/Overpass-API/tree/test754_osx">my branch</a>.</p>
 </div>

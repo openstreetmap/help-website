@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to create a custom style for a wheelchair attribute"
-description = '''Hello, I work as part of a school project on a accessibility map for people that use a wheelchair in Unna (small German town) http://www.openstreetmap.org/?lat=51.53525&amp;amp;lon=7.68865&amp;amp;zoom=16&amp;amp;layers=M . I need to extend the capabilties of osmarender. The goal is to render streets/ways etc. ...'''
+description = '''Hello, I work as part of a school project on a accessibility map for people that use a wheelchair in Unna (small German town) https://www.openstreetmap.org/?lat=51.53525&amp;amp;lon=7.68865&amp;amp;zoom=16&amp;amp;layers=M . I need to extend the capabilties of osmarender. The goal is to render streets/ways etc. ...'''
 date = "2011-01-26T13:39:00Z"
 lastmod = "2011-02-09T12:59:00Z"
 weight = 2460
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I work as part of a school project on a accessibility map for people that use a wheelchair in Unna (small German town) <a href="http://www.openstreetmap.org/?lat=51.53525&amp;lon=7.68865&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=51.53525&amp;lon=7.68865&amp;zoom=16&amp;layers=M</a> . I need to extend the capabilties of osmarender. The goal is to render streets/ways etc. with the tag wheelchair in red/yellow/green in dependence to its value (no/limited/yes).</p>
+<p>I work as part of a school project on a accessibility map for people that use a wheelchair in Unna (small German town) <a href="https://www.openstreetmap.org/?lat=51.53525&amp;lon=7.68865&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=51.53525&amp;lon=7.68865&amp;zoom=16&amp;layers=M</a> . I need to extend the capabilties of osmarender. The goal is to render streets/ways etc. with the tag wheelchair in red/yellow/green in dependence to its value (no/limited/yes).</p>
 <p>I found the way to do so is to customize the rules and styles: My First try was something like:</p>
 <pre><code>rule e=&quot;way&quot; k=&quot;highway&quot; v=&quot;*&quot;&gt;
         rule e=&quot;way&quot; k=&quot;wheelchair&quot; v=&quot;no&quot;&gt;

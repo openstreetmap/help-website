@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Is it possible to render marks with current distance from a road start to map tiles in Mapnik ? We are looking for some way how to configure, or add rendering of a distance from road start point near to roads in some sensible frequency and only for higher zoom levels in kilometers. Here is an example of what we would like to prerender on our tiles (of course, it would be enough to show just a number of kilometers in some uniquely looking mark):</p>
-<p><img src="http://help.openstreetmap.org/upfiles/RoadDistance.png" alt="alt text" /></p>
+<p><img src="/upfiles/RoadDistance.png" alt="alt text" /></p>
 <p>These values are "statical", so it would be great to have them prerendered on our tiles. We're using Mapnik renderer as part of the Switch2osm server.</p>
 <p>Is that even possible ? If so, did we miss an existing settings or do we need to write some plugin for this feature ?</p>
 <p>Thanks</p>
@@ -253,7 +253,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>Hi and welcome to the world of OSM :)</p>
 <p>As I understand your question, you want to do a distance (here: by traveltime) anaylsis and visualize it on top of the default mapnik map style?</p>
-<p>This is something that <a href="http://neis-one.org/2010/09/osm-fur-die-feuerwehr-2-0/">Pascal neis realized</a> some time ago to do analysis for the coverage of firefighters. Unfortunatly the OpenLS service is still down, so you might migrate the idea <a href="http://wiki.openstreetmap.org/wiki/OpenRouteService#What_can_you_do_on_ORS.3F">to OpenRouteServe AAS</a>.</p>
+<p>This is something that <a href="http://neis-one.org/2010/09/osm-fur-die-feuerwehr-2-0/">Pascal neis realized</a> some time ago to do analysis for the coverage of firefighters. Unfortunatly the OpenLS service is still down, so you might migrate the idea <a href="https://wiki.openstreetmap.org/wiki/OpenRouteService#What_can_you_do_on_ORS.3F">to OpenRouteServe AAS</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

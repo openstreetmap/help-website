@@ -111,8 +111,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Beliebige Rasterbilder (png, jpg) können mit Hilfe des Dienstes <a href="http://wiki.openstreetmap.org/wiki/MapWarper">http://wiki.openstreetmap.org/wiki/MapWarper</a> georeferenziert und dann z.B. als WMS-Hintergrund in einem Editor als Hintergrund angezeigt werden.</p>
-<p>Der JOSM-Editor bietet mit dem <a href="http://wiki.openstreetmap.org/wiki/DE:Piclayer/Anleitung">"PicLayer"-Plugin</a> auch die Möglichkeit, ein Bild direkt einzubinden.</p>
+<p>Beliebige Rasterbilder (png, jpg) können mit Hilfe des Dienstes <a href="https://wiki.openstreetmap.org/wiki/MapWarper">https://wiki.openstreetmap.org/wiki/MapWarper</a> georeferenziert und dann z.B. als WMS-Hintergrund in einem Editor als Hintergrund angezeigt werden.</p>
+<p>Der JOSM-Editor bietet mit dem <a href="https://wiki.openstreetmap.org/wiki/DE:Piclayer/Anleitung">"PicLayer"-Plugin</a> auch die Möglichkeit, ein Bild direkt einzubinden.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For JOSM, the Java editor for OSM, there is a plugin that allows you to use your own files as background layer. It's called <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">PicLayer</a>.</p>
+<p>For JOSM, the Java editor for OSM, there is a plugin that allows you to use your own files as background layer. It's called <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer">PicLayer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Uwe the use of other material then your own collection GPS in or for OSM is restricted to certain rules. Other sources have to aknowledge the ODBl rules before your allowed to use other maps then your own to contribute to OSM. Read these pages <a href="http://wiki.openstreetmap.org/wiki/DE:About">http://wiki.openstreetmap.org/wiki/DE:About</a> im Deutsch, viel spass. Am besten Fragen Sie es am Deutsches Forum, <a href="http://forum.openstreetmap.org/viewforum.php?id=14">http://forum.openstreetmap.org/viewforum.php?id=14</a></p>
+<p>Uwe the use of other material then your own collection GPS in or for OSM is restricted to certain rules. Other sources have to aknowledge the ODBl rules before your allowed to use other maps then your own to contribute to OSM. Read these pages <a href="https://wiki.openstreetmap.org/wiki/DE:About">https://wiki.openstreetmap.org/wiki/DE:About</a> im Deutsch, viel spass. Am besten Fragen Sie es am Deutsches Forum, <a href="http://forum.openstreetmap.org/viewforum.php?id=14">http://forum.openstreetmap.org/viewforum.php?id=14</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -243,7 +243,7 @@ osqa_accepted = false
 <div id="post-37293-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>maybe an entry point can be <a href="http://wiki.openstreetmap.org/wiki/Exporting_calibrated_maps">http://wiki.openstreetmap.org/wiki/Exporting_calibrated_maps</a></p>
+<p>maybe an entry point can be <a href="https://wiki.openstreetmap.org/wiki/Exporting_calibrated_maps">https://wiki.openstreetmap.org/wiki/Exporting_calibrated_maps</a></p>
 <p>and: try the mentioned piclayer plugin in JOSM editor.</p>
 </div>
 <div id="comment-37293-info" class="comment-info">

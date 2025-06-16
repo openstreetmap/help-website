@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">UtilsPlugin2</a> has an experimental feature "select all inside" that could be used to select everything that is inside some selected area or multipolygon. Then, with this selection made, you can filter using the regular search function (control+F), plus the "selected" modifier.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">UtilsPlugin2</a> has an experimental feature "select all inside" that could be used to select everything that is inside some selected area or multipolygon. Then, with this selection made, you can filter using the regular search function (control+F), plus the "selected" modifier.</p>
 <p>I tried it and found that when working with boundaries, it wouldn't work unless I used a trick before (<strong>very</strong> dangerous to the data integrity, will not describe here), but works OK with areas and multipolygons.</p>
 <p>You can install the UtilsPlugin2 through the JOSM preferences page (F12), Plugins tab.</p>
 </div>

@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM is not about supplying or supporting specific map replacements. OSM is about data collection. Also see my answer at <a href="http://help.openstreetmap.org/questions/18694/garmin-etrex-vista-gps/18698">http://help.openstreetmap.org/questions/18694/garmin-etrex-vista-gps/18698</a> about the many different OSM-based maps available for Garmin devices. Please contact the map creator / compiler if you have a specific usability question, choose another pre-made map which may better suit your needs or create one yourself. However, if there is anything unclear or if you have a comment, please leave a comment here.</p>
+<p>OSM is not about supplying or supporting specific map replacements. OSM is about data collection. Also see my answer at <a href="/questions/18694/garmin-etrex-vista-gps/18698">https://help.openstreetmap.org/questions/18694/garmin-etrex-vista-gps/18698</a> about the many different OSM-based maps available for Garmin devices. Please contact the map creator / compiler if you have a specific usability question, choose another pre-made map which may better suit your needs or create one yourself. However, if there is anything unclear or if you have a comment, please leave a comment here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

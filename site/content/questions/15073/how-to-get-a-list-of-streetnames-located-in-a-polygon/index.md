@@ -105,10 +105,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you are able to split the polygon into bounding boxes you can use multiple <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a> queries.</p>
+<p>If you are able to split the polygon into bounding boxes you can use multiple <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">OverpassAPI</a> queries.</p>
 <p>This example query will list all ways with a highway and a way tag:</p>
 <pre><code>http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json];way[highway][name]%2850.66%2C10.91%2C50.7%2C10.95%29%3Bout%3B</code></pre>
-<p><del>(Note: the regular expression <em>name~'.'</em> is only required due to a recently introduced <a href="http://help.openstreetmap.org/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">bug</a> and can be simplified by just specifying <em>name</em> in the future).</del></p>
+<p><del>(Note: the regular expression <em>name~'.'</em> is only required due to a recently introduced <a href="/questions/15101/overpassapi-query-with-two-specific-keys-and-any-value">bug</a> and can be simplified by just specifying <em>name</em> in the future).</del></p>
 <p>You just have to parse this output and extract all <em>name</em> fields.</p>
 </div>
 <div class="answer-controls post-controls">

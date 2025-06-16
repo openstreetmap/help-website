@@ -114,7 +114,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Nominatim (that is what powers the search box on the osm.org website) uses a combination of boundaries and place nodes to determine in which place a street lies. This is necessary because OSM does not have complete boundaries for every place in the world (yet ;)</p>
-<p>If you search for "Forest Road, San Diego County, California", then it finds <a href="http://www.openstreetmap.org/?minlon=-117.33472442627&amp;minlat=33.2367172241211&amp;maxlon=-117.331588745117&amp;maxlat=33.2369842529297">Forest Road, Rancho San Luis Rey Trailer Park, San Diego County, California, 92054, United States of America</a>. Is that the one you are looking for?</p>
+<p>If you search for "Forest Road, San Diego County, California", then it finds <a href="https://www.openstreetmap.org/?minlon=-117.33472442627&amp;minlat=33.2367172241211&amp;maxlon=-117.331588745117&amp;maxlat=33.2369842529297">Forest Road, Rancho San Luis Rey Trailer Park, San Diego County, California, 92054, United States of America</a>. Is that the one you are looking for?</p>
 <p>For more technical details look at some other questions tagged with "nominatim".</p>
 </div>
 <div class="answer-controls post-controls">

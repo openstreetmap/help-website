@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See these <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole#Examples">examples of power poles</a>. One of the examples is of a 132kV power pole. The wiki article for the tag <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dtower">power=tower</a> indicates that the <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole">power=pole tag</a> should be used for electricity or telephone cables carried on single wooden poles.</p>
+<p>See these <a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dpole#Examples">examples of power poles</a>. One of the examples is of a 132kV power pole. The wiki article for the tag <a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dtower">power=tower</a> indicates that the <a href="https://wiki.openstreetmap.org/wiki/Tag:power%3Dpole">power=pole tag</a> should be used for electricity or telephone cables carried on single wooden poles.</p>
 <p>The voltage of the line dictates the conductor separation. Whether the conductors are best supported on metal pylons (or transmission towers) or wooden poles is an engineering consideration based primarily on cost and the strength of materials used. Poles are generally less expensive to install but may not be able to support higher voltages due to strength and conductor separation requirements.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -136,7 +136,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>The wiki article about <a href="http://wiki.openstreetmap.org/wiki/Map_Features">map features</a> advises mappers to map the physical features seen on the ground. So if it looks like a pole then tag it as a pole.</p>
+<p>The wiki article about <a href="https://wiki.openstreetmap.org/wiki/Map_Features">map features</a> advises mappers to map the physical features seen on the ground. So if it looks like a pole then tag it as a pole.</p>
 <p>However, multi-polar structures are not poles, rather they are a form of tower. Perhaps if the tagging system used power=pylon, rather than power=tower, things might be less confusing.</p>
 <p>Also, the voltage is a property of the electrical conductors, or lines, rather than the supporting pole or tower structures that keeps the transmission line separated from the ground and maintains spacing between adjacent conductors. Whether a pole or tower is used will depend on cost and other engineering considerations, rather than the line voltage alone. I fail to see why power=tower needs to be used above a specific voltage.</p>
 </div>

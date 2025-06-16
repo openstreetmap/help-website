@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I keep seeing references to SRTM, such as in the <a href="http://help.openstreetmap.org/questions/3069/elevation-maps">Elevation Maps question</a>. What is a good summary of what is SRTM, what are the alternatives and how do I start with using it?</p>
+<p>I keep seeing references to SRTM, such as in the <a href="/questions/3069/elevation-maps">Elevation Maps question</a>. What is a good summary of what is SRTM, what are the alternatives and how do I start with using it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-elevation" rel="tag" title="see questions tagged &#39;elevation&#39;">elevation</span> <span class="post-tag tag-link-srtm" rel="tag" title="see questions tagged &#39;srtm&#39;">srtm</span>

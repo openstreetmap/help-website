@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Greeting guys. I am doing a project for my university. i have uploaded floorplans(rooms/venue) by using josm. Now? how do i show route inside the indoor bulding that i working on when someone input of current location and destination? I tried using graphhopper. its not working. It shows route of other place, here is the <a href="http://graphhopper.com/maps/?point=3.254316%2C101.729997&amp;point=3.253508%2C101.729493&amp;vehicle=foot&amp;locale=en-US">link</a></p>
-<p>my faculty in openstreetmap <a href="http://www.openstreetmap.org/#map=19/3.25397/101.72969">link</a></p>
+<p>my faculty in openstreetmap <a href="https://www.openstreetmap.org/#map=19/3.25397/101.72969">link</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-indoor" rel="tag" title="see questions tagged &#39;indoor&#39;">indoor</span> <span class="post-tag tag-link-path" rel="tag" title="see questions tagged &#39;path&#39;">path</span>

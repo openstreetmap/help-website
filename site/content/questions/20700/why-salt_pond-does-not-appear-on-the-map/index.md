@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why salt_pond does not appear on the map?"
-description = '''Hello, I just changed water bodies that are not really because they are saline and water is present only in the larger basins. For smaller ponds water is rarely visible because the salt is to be harvested. Mapnik on the saline does not appear: http://www.openstreetmap.org/?lat=43.04071&amp;amp;lon=2.992...'''
+description = '''Hello, I just changed water bodies that are not really because they are saline and water is present only in the larger basins. For smaller ponds water is rarely visible because the salt is to be harvested. Mapnik on the saline does not appear: https://www.openstreetmap.org/?lat=43.04071&amp;amp;lon=2.992...'''
 date = "2013-03-13T21:06:00Z"
 lastmod = "2013-03-14T08:12:00Z"
 weight = 20700
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello,</p>
 <p>I just changed water bodies that are not really because they are saline and water is present only in the larger basins. For smaller ponds water is rarely visible because the salt is to be harvested.</p>
-<p>Mapnik on the saline does not appear: <a href="http://www.openstreetmap.org/?lat=43.04071&amp;lon=2.99232&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=43.04071&amp;lon=2.99232&amp;zoom=15&amp;layers=M</a></p>
+<p>Mapnik on the saline does not appear: <a href="https://www.openstreetmap.org/?lat=43.04071&amp;lon=2.99232&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=43.04071&amp;lon=2.99232&amp;zoom=15&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-salt_pond" rel="tag" title="see questions tagged &#39;salt_pond&#39;">salt_pond</span>
@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a good summary of the general "why does X not show up on the map" question <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">here</a>.</p>
+<p>There's a good summary of the general "why does X not show up on the map" question <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

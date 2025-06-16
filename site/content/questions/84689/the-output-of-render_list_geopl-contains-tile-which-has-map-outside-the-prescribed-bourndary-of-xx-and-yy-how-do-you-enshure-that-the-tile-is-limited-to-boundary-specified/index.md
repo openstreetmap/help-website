@@ -87,7 +87,7 @@ osqa_accepted = false
 <div id="post-84692-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/ig.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/ig.JPG" alt="alt text" /></p>
 <p>This is what got rendered, different from what I expected</p>
 </div>
 <div id="comment-84692-info" class="comment-info">

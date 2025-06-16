@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How do you tag a disused quarry?"
-description = '''http://www.openstreetmap.org/?lat=55.86554&amp;amp;lon=-2.73746&amp;amp;zoom=17&amp;amp;layers=M Under &#x27;Blinkbonny Wood&#x27; by the track is a small disused quarry of a type that is everywhere round here (there is another a short way further south west along the track, just before Gala Law). The Wiki suggests disus...'''
+description = '''https://www.openstreetmap.org/?lat=55.86554&amp;amp;lon=-2.73746&amp;amp;zoom=17&amp;amp;layers=M Under &#x27;Blinkbonny Wood&#x27; by the track is a small disused quarry of a type that is everywhere round here (there is another a short way further south west along the track, just before Gala Law). The Wiki suggests disus...'''
 date = "2013-03-21T11:46:00Z"
 lastmod = "2013-03-21T15:42:00Z"
 weight = 20870
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/?lat=55.86554&amp;lon=-2.73746&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=55.86554&amp;lon=-2.73746&amp;zoom=17&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=55.86554&amp;lon=-2.73746&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=55.86554&amp;lon=-2.73746&amp;zoom=17&amp;layers=M</a></p>
 <p>Under 'Blinkbonny Wood' by the track is a small disused quarry of a type that is everywhere round here (there is another a short way further south west along the track, just before Gala Law). The Wiki suggests disused:landuse=quarry. Using JOSM how do you enter that in the 'Add Value?' dialog box? I have put disused:landuse in the 'please select a key' and 'quarry' in the 'please select a value'. Is this the right way to do it? The Wiki is not very helpful in this respect. Nothing is displaying in OSM.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -179,7 +179,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>i'd tag it <code>landuse=quarry</code> and <del><code>disused=yes</code></del> <code>disused:landuse=quarry</code>, like this one <a href="http://www.openstreetmap.org/browse/way/37434127">http://www.openstreetmap.org/browse/way/37434127</a> .</p>
+<p>i'd tag it <code>landuse=quarry</code> and <del><code>disused=yes</code></del> <code>disused:landuse=quarry</code>, like this one <a href="https://www.openstreetmap.org/browse/way/37434127">https://www.openstreetmap.org/browse/way/37434127</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>note that according to <a href="http://wiki.openstreetmap.org/wiki/Key:disused,">http://wiki.openstreetmap.org/wiki/Key:disused,</a> disused=yes is no longer recommended. disused:landuse=quarry would be the recommended way to tag</p>
+<p>note that according to <a href="https://wiki.openstreetmap.org/wiki/Key:disused,">https://wiki.openstreetmap.org/wiki/Key:disused,</a> disused=yes is no longer recommended. disused:landuse=quarry would be the recommended way to tag</p>
 </div>
 <div id="comment-20877-info" class="comment-info">
 <span class="comment-age">(21 Mar '13, 13:55)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -236,7 +236,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>To clarify, what's being suggested here currently is this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/josm_example.png" alt="screenshot of suggested tags as they appear in JOSM" /></p>
+<p><img src="/upfiles/josm_example.png" alt="screenshot of suggested tags as they appear in JOSM" /></p>
 </div>
 <div id="comment-20880-info" class="comment-info">
 <span class="comment-age">(21 Mar '13, 15:36)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

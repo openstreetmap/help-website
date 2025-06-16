@@ -66,8 +66,8 @@ osqa_accepted = false
 <p>Swap: 0 0 0</p>
 <p>Does anyone know what my bottleneck is?</p>
 <p>Last and I hope it is not too relevant. I am running Docker containers in VirtualBox (gave it 50GB RAM).</p>
-<p>p.s. I read <a href="https://help.openstreetmap.org/questions/65115/solved-slow-pre-rendering-with-generate_tiles_multiprocesspy">https://help.openstreetmap.org/questions/65115/solved-slow-pre-rendering-with-generate_tiles_multiprocesspy</a> but I already imported without the -l option.</p>
-<p>p.p.s. Here someone also prerenders europe: <a href="https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a> and he claims to generate half a million tiles over a night. That is 100 times faster than what I am seeing. This leaves me to believe that with better tuning I can gain a lot.</p>
+<p>p.s. I read <a href="/questions/65115/solved-slow-pre-rendering-with-generate_tiles_multiprocesspy">https://help.openstreetmap.org/questions/65115/solved-slow-pre-rendering-with-generate_tiles_multiprocesspy</a> but I already imported without the -l option.</p>
+<p>p.p.s. Here someone also prerenders europe: <a href="/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a> and he claims to generate half a million tiles over a night. That is 100 times faster than what I am seeing. This leaves me to believe that with better tuning I can gain a lot.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-generate_tiles" rel="tag" title="see questions tagged &#39;generate_tiles&#39;">generate_tiles</span> <span class="post-tag tag-link-postgresql" rel="tag" title="see questions tagged &#39;postgresql&#39;">postgresql</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span>
@@ -167,7 +167,7 @@ One Answer:
 <div id="post-70787-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Here someone also prerenders europe: <a href="https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a> and he claims to generate half a million tiles over a night. That is 100 times faster than what I am seeing. This leaves me to believe that with better tuning I can gain a lot.</p>
+<p>Here someone also prerenders europe: <a href="/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a> and he claims to generate half a million tiles over a night. That is 100 times faster than what I am seeing. This leaves me to believe that with better tuning I can gain a lot.</p>
 </div>
 <div id="comment-70787-info" class="comment-info">
 <span class="comment-age">(15 Sep '19, 10:09)</span> <span class="comment-user userinfo">mg218</span>

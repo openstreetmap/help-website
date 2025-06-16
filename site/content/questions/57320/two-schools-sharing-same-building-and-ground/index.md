@@ -157,7 +157,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Dschool">amenity=school</a> should include the grounds, per the wiki. <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/landuse%3Dschool">landuse=school</a> was a proposal that never was voted on, or even had much discussion, so I'd tend not to use it.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:amenity%3Dschool">amenity=school</a> should include the grounds, per the wiki. <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/landuse%3Dschool">landuse=school</a> was a proposal that never was voted on, or even had much discussion, so I'd tend not to use it.</p>
 <p>For the names:</p>
 <ul>
 <li>You could tag both names on the amenity=school way bounding the grounds, separated by a semicolon</li>

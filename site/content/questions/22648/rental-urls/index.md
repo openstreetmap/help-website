@@ -119,10 +119,10 @@ One Answer:
 <div class="answer-body">
 <p>As Roland said, a link to the area in question would enable us to check wether the tags are apropriate. But I'll try a few guidelines here :</p>
 <ul>
-<li>If there is a website talking about a house, wether it is about renting, history/culture or similar, it is appropriate to add a <a href="http://wiki.openstreetmap.org/wiki/Key:website">website</a> tag on the building.</li>
+<li>If there is a website talking about a house, wether it is about renting, history/culture or similar, it is appropriate to add a <a href="https://wiki.openstreetmap.org/wiki/Key:website">website</a> tag on the building.</li>
 <li>IMHO the website would need to be a permanent one : a link to a Craigslist or estateagent page seem inapropriate to me for example.</li>
 <li>Any kind of subjective rating is not osm-apropriate : an official Michelin star rating might be ok, but a Tripadvisor or Yelp rating isn't.</li>
-<li>There are other things you could tag: <a href="http://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair access</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:internet_access">internet</a>, <a href="http://taginfo.openstreetmap.org/keys/pets#values">pets</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:smoking">smoking</a> might all be relevant to a potential renter, and good for osm (just remember to edit osm again when those policies no longer apply).</li>
+<li>There are other things you could tag: <a href="https://wiki.openstreetmap.org/wiki/Key:wheelchair">wheelchair access</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:internet_access">internet</a>, <a href="http://taginfo.openstreetmap.org/keys/pets#values">pets</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:smoking">smoking</a> might all be relevant to a potential renter, and good for osm (just remember to edit osm again when those policies no longer apply).</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

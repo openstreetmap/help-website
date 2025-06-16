@@ -43,8 +43,8 @@ osqa_accepted = false
 <p>There is therefore a topology.</p>
 <p>Two examples:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/relation/5537968">Spetchley Park Gardens</a></li>
-<li><a href="http://www.openstreetmap.org/relation/5527857">Goodwood</a></li>
+<li><a href="https://www.openstreetmap.org/relation/5537968">Spetchley Park Gardens</a></li>
+<li><a href="https://www.openstreetmap.org/relation/5527857">Goodwood</a></li>
 </ul>
 <p>To date I have marked such civil boundaries as "boundary -&gt; administrative" within a relation because:</p>
 <ol>
@@ -54,7 +54,7 @@ osqa_accepted = false
 </ol>
 <p>Furthermore, the nominatim search rankings are good (<a href="https://nominatim.openstreetmap.org/search.php?q=Spetchley+Park+Gardens">Spetchley Park Gardens</a> / <a href="https://nominatim.openstreetmap.org/search.php?q=Goodwood+UK">Goodwood</a>) - where bus stops etc. are secondary to the place.</p>
 <p>I am keen to learn if there is a more appropriate way to represent such relations and if there is a perceived abuse of tags. Perhaps a "place" value is more appropriate?</p>
-<p>This problem seems clearer with national parks / protected areas such as <a href="http://www.openstreetmap.org/relation/2678988">New Forest</a>.</p>
+<p>This problem seems clearer with national parks / protected areas such as <a href="https://www.openstreetmap.org/relation/2678988">New Forest</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-place" rel="tag" title="see questions tagged &#39;place&#39;">place</span> <span class="post-tag tag-link-boundary" rel="tag" title="see questions tagged &#39;boundary&#39;">boundary</span> <span class="post-tag tag-link-admin_boundary" rel="tag" title="see questions tagged &#39;admin_boundary&#39;">admin_boundary</span> <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>

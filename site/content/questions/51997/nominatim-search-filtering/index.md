@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Nominatim search filtering"
-description = '''I have task - finding coordinate for address, and i always know city for address. How i can filter search for one city? Documentation indicated request parameters city and country ( http://wiki.openstreetmap.org/wiki/Nominatim#Parameters ), but when i use it, result of search does not depend on it. ...'''
+description = '''I have task - finding coordinate for address, and i always know city for address. How i can filter search for one city? Documentation indicated request parameters city and country ( https://wiki.openstreetmap.org/wiki/Nominatim#Parameters ), but when i use it, result of search does not depend on it. ...'''
 date = "2016-09-12T08:29:00Z"
 lastmod = "2016-09-14T00:38:00Z"
 weight = 51997
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I have task - finding coordinate for address, and i always know city for address.</p>
-<p>How i can filter search for one city? Documentation indicated request parameters city and country ( <a href="http://wiki.openstreetmap.org/wiki/Nominatim#Parameters">http://wiki.openstreetmap.org/wiki/Nominatim#Parameters</a> ), but when i use it, result of search does not depend on it.</p>
+<p>How i can filter search for one city? Documentation indicated request parameters city and country ( <a href="https://wiki.openstreetmap.org/wiki/Nominatim#Parameters">https://wiki.openstreetmap.org/wiki/Nominatim#Parameters</a> ), but when i use it, result of search does not depend on it.</p>
 <p>For example: <a href="http://nominatim.openstreetmap.org/search?q=tower&amp;city=London&amp;format=json">http://nominatim.openstreetmap.org/search?q=tower&amp;city=London&amp;format=json</a></p>
 <p>Where am I wrong?</p>
 </div>

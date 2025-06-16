@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://www.openstreetmap.org/export">osm.org export tab</a> allows you to specify the required scale when exporting to Map Image format.</p>
+<p>The <a href="https://www.openstreetmap.org/export">osm.org export tab</a> allows you to specify the required scale when exporting to Map Image format.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -243,7 +243,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some possibilites to get a well printed map are collected at <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a></p>
+<p>Some possibilites to get a well printed map are collected at <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a></p>
 <p>Also do a search on this FAQ site for the keywords like "print", "map", "scale" or similar.</p>
 </div>
 <div class="answer-controls post-controls">

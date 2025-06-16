@@ -43,7 +43,7 @@ osqa_accepted = true
 <blockquote>
 <p><em>(All <a href="http://openstreetmap.org">openstreetmap.org</a> wiki contents (including images) are released with the same license as the rest of our data; OpenStreetMap License (cc-by-sa-2), except on a few pages where we have stated otherwise)</em></p>
 </blockquote>
-<p>Would I (or anyone else) be able (legally) to add and modify portions of content from here (<a href="http://help.openstreetmap.org">help.openstreetmap.org</a>) to <a href="http://wiki.openstreetmap.org/">http://wiki.openstreetmap.org/</a> ?</p>
+<p>Would I (or anyone else) be able (legally) to add and modify portions of content from here (<a href="http://help.openstreetmap.org">help.openstreetmap.org</a>) to <a href="https://wiki.openstreetmap.org/">https://wiki.openstreetmap.org/</a> ?</p>
 <p>(I am aware that the pending ODbL does not affect the content of <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">wiki</a> or this website).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In the footer on every page on <a href="http://help.openstreetmap.org">help.openstreetmap.org</a> and <a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a> you see <img src="http://help.openstreetmap.org/m/default/media/images/by-sa-88x31.png" alt="CC-BY-SA" />. That means that you are free to copy any content betwean theese sites as long as you attribute the source. Just add it to the editing comment or as a comment.</p>
+<p>In the footer on every page on <a href="http://help.openstreetmap.org">help.openstreetmap.org</a> and <a href="http://wiki.openstreetmap.org">wiki.openstreetmap.org</a> you see <img src="https://help.openstreetmap.org/m/default/media/images/by-sa-88x31.png" alt="CC-BY-SA" />. That means that you are free to copy any content betwean theese sites as long as you attribute the source. Just add it to the editing comment or as a comment.</p>
 <p>ODbL is not considered for anything but the main database and the FAQ needs to be changed during the licence change.</p>
 </div>
 <div class="answer-controls post-controls">

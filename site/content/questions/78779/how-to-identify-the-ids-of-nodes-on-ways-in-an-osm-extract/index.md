@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I downloaded an OSM extract via Geofabrik and was expecting to find the nodes that form the ways (defining the shape or "path of the way) in the Points layer using QGIS. However, the points in this layer only define point features.</p>
-<p>I'm aware that I can look up individual nodes via <a href="http://www.openstreetmap.org/node/305293190">http://www.openstreetmap.org/node/305293190</a> for example. But I was wondering whether there is an another way to identify the id's of nodes on ways in the OSM extract, preferably using QGIS.</p>
+<p>I'm aware that I can look up individual nodes via <a href="https://www.openstreetmap.org/node/305293190">https://www.openstreetmap.org/node/305293190</a> for example. But I was wondering whether there is an another way to identify the id's of nodes on ways in the OSM extract, preferably using QGIS.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-qgis" rel="tag" title="see questions tagged &#39;qgis&#39;">qgis</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span>

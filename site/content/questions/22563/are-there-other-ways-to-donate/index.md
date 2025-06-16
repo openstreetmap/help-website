@@ -229,7 +229,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can also donate indirectly. <a href="http://wiki.openstreetmap.org/wiki/Merchandise">Here</a> you can see the possibilities.</p>
+<p>You can also donate indirectly. <a href="https://wiki.openstreetmap.org/wiki/Merchandise">Here</a> you can see the possibilities.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

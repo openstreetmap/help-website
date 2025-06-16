@@ -112,7 +112,7 @@ One Answer:
 <div class="answer-body">
 <p>There are some solutions to have OSM based maps displayed offline on different devices ...</p>
 <p>Do a search for "offline" in this FAQ site or in the OSM wiki to find some examples.</p>
-<p>Maybe a program that uses vector maps from <a href="http://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> are suitable. Go to the Github pages of mapsforge and see the list of apps using mapsforge maps.</p>
+<p>Maybe a program that uses vector maps from <a href="https://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> are suitable. Go to the Github pages of mapsforge and see the list of apps using mapsforge maps.</p>
 <p>Then displaying own objects via any coordinates should not be difficult.</p>
 </div>
 <div class="answer-controls post-controls">

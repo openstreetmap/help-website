@@ -112,18 +112,18 @@ osqa_accepted = true
 <div class="answer-body">
 <p>The various map layers are updated at different frequencies.</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Standard_tile_layer">The "standard" map</a> is updated <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map#OpenStreetMap_.22Standard.22_tile_server">very frequently</a>; the exact time depends on how often the area is viewed by users</li>
-<li>The cycle map ("Radfahrerkarte" in German) is updated <a href="http://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">every few days</a></li>
-<li>The transport map ("Verkehr" in German) is updated <a href="http://wiki.openstreetmap.org/wiki/Transport_Map">every day or two</a></li>
-<li>The MapQuest Open map is updated <del><a href="http://wiki.openstreetmap.org/wiki/MapQuest#How_often_is_the_data_updated.3F">every 15 minutes</a> for high zoom levels, but less frequently for low zoom levels</del> occasionally, although at the moment it's unclear how often this occurs (<em>thanks for the updates!</em>)</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Standard_tile_layer">The "standard" map</a> is updated <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map#OpenStreetMap_.22Standard.22_tile_server">very frequently</a>; the exact time depends on how often the area is viewed by users</li>
+<li>The cycle map ("Radfahrerkarte" in German) is updated <a href="https://wiki.openstreetmap.org/wiki/OpenCycleMap#Update_cycle">every few days</a></li>
+<li>The transport map ("Verkehr" in German) is updated <a href="https://wiki.openstreetmap.org/wiki/Transport_Map">every day or two</a></li>
+<li>The MapQuest Open map is updated <del><a href="https://wiki.openstreetmap.org/wiki/MapQuest#How_often_is_the_data_updated.3F">every 15 minutes</a> for high zoom levels, but less frequently for low zoom levels</del> occasionally, although at the moment it's unclear how often this occurs (<em>thanks for the updates!</em>)</li>
 <li>I couldn't find any information on how frequently the "Humanitarian" map is updated</li>
 </ul>
 <p>So just wait a day or two, and your changes will appear on all the map layers!</p>
 <p>Some more information:</p>
 <ul>
 <li><a href="https://wiki.openstreetmap.org/wiki/Featured_tiles">Featured map tiles</a></li>
-<li><a href="https://help.openstreetmap.org/questions/43612/modification-not-visible-in-the-cycle-map-modification-non-visible-dans-la-carte-cyclable">Modifications not visible in cycle map</a></li>
-<li><a href="https://help.openstreetmap.org/questions/14079/edits-show-only-on-standard-map-not-cycle-map-etc">Edits only show up on standard map, not cycle map</a></li>
+<li><a href="/questions/43612/modification-not-visible-in-the-cycle-map-modification-non-visible-dans-la-carte-cyclable">Modifications not visible in cycle map</a></li>
+<li><a href="/questions/14079/edits-show-only-on-standard-map-not-cycle-map-etc">Edits only show up on standard map, not cycle map</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -224,7 +224,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>On my Win 7 PC I have to press the keys ctrl+F5 which forces my PC to reload new information. I can see the streets you added in your edits dated 19 Sep. on some of the map renderings as you say. I guess some layers are updated less often. but sure they will render soon.</p>
-<p>Here? <a href="http://www.openstreetmap.org/#map=17/52.27032/9.37900">http://www.openstreetmap.org/#map=17/52.27032/9.37900</a></p>
+<p>Here? <a href="https://www.openstreetmap.org/#map=17/52.27032/9.37900">https://www.openstreetmap.org/#map=17/52.27032/9.37900</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

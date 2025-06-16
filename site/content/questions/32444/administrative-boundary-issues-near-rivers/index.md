@@ -41,13 +41,13 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi everyone.</p>
 <p>I've done some reverse geolocation tests on osm boundary data. But at a closer look up I realized that there are some problems near boundaries that follow rivers. Because of lack of way details some city parts are choped off, so when you try to geolocate coordinates on that parts of the city you end up in another county or country.</p>
-<p>Here is an example: <img src="http://help.openstreetmap.org/upfiles/Capture_1.PNG" alt="alt text" /></p>
-<p>I also encountered some strange boundary lines that doesn't seem logical to me: <img src="http://help.openstreetmap.org/upfiles/Capture2.PNG" alt="alt text" /></p>
+<p>Here is an example: <img src="/upfiles/Capture_1.PNG" alt="alt text" /></p>
+<p>I also encountered some strange boundary lines that doesn't seem logical to me: <img src="/upfiles/Capture2.PNG" alt="alt text" /></p>
 <p>So I decided to rectify this ways best as I can. I would be gratefull if you could check the chanegeset sometimes and verify the correctness of the data.Any feedback is welcome.</p>
-<p>Here is the link of the changeset: <a href="http://www.openstreetmap.org/changeset/21775982">link text</a></p>
+<p>Here is the link of the changeset: <a href="https://www.openstreetmap.org/changeset/21775982">link text</a></p>
 <p>Edit:</p>
-<p>I'd like to clarify what i'm doing. For example i found this scanned historical maps of Chilton County ,Alabama.As you can see the boundary clearly follows the river. <img src="http://help.openstreetmap.org/upfiles/Capture_2.PNG" alt="alt text" /></p>
-<p>In OSM it doesn't(gray line).The purple one is the modified version i've already uploaded. <img src="http://help.openstreetmap.org/upfiles/Capture2_1.PNG" alt="alt text" /></p>
+<p>I'd like to clarify what i'm doing. For example i found this scanned historical maps of Chilton County ,Alabama.As you can see the boundary clearly follows the river. <img src="/upfiles/Capture_2.PNG" alt="alt text" /></p>
+<p>In OSM it doesn't(gray line).The purple one is the modified version i've already uploaded. <img src="/upfiles/Capture2_1.PNG" alt="alt text" /></p>
 <p>Now my question is that its ok to do this kind of changes? Thanks.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -118,7 +118,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please don't change boundaries because they just don't "seem logical" to you. Boundaries aren't always logical. In OSM they should match the real boundaries.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Contact">Contact</a> the local community and try to get a <a href="http://wiki.openstreetmap.org/wiki/Potential_Datasources">source</a> for these boundaries that is compatible with OSM's license.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Contact">Contact</a> the local community and try to get a <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">source</a> for these boundaries that is compatible with OSM's license.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

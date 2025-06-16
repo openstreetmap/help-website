@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-67103-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This other question about hiring someone for OSM work has a link to a list of companies that can do OSM consulting <a href="https://help.openstreetmap.org/questions/3595/hiring-help-for-osm-integration">https://help.openstreetmap.org/questions/3595/hiring-help-for-osm-integration</a></p>
+<p>This other question about hiring someone for OSM work has a link to a list of companies that can do OSM consulting <a href="/questions/3595/hiring-help-for-osm-integration">https://help.openstreetmap.org/questions/3595/hiring-help-for-osm-integration</a></p>
 </div>
 <div id="comment-67103-info" class="comment-info">
 <span class="comment-age">(07 Dec '18, 22:18)</span> <span class="comment-user userinfo">alester</span>

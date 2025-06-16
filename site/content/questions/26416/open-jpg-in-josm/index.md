@@ -168,7 +168,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Check the JOSM plugins list:</p>
 <p><a href="http://josm.openstreetmap.de/wiki/Plugins">http://josm.openstreetmap.de/wiki/Plugins</a></p>
-<p>especially the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">ImportImagePlugin</a>.</p>
+<p>especially the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin">ImportImagePlugin</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>hey guys, im use Open Street map i have implemented in my app where all the markers are showing with cluster and some are individuals. here i is the image of it.<br />
-<img src="https://help.openstreetmap.org/upfiles/osm_BX4ZWzv.jpg" alt="alt text" /><br />
+<img src="/upfiles/osm_BX4ZWzv.jpg" alt="alt text" /><br />
 i have issue for get collection of markers which are visible in screen except cluster (Just want to find individual markers) so how can we get marker collection for android</p>
 </div>
 <div id="question-tags" class="tags-container tags">

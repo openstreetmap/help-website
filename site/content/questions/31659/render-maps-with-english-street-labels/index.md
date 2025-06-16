@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As a quick and dirty solution to the "languages" part of the problem, I'd do the same as I suggested in <a href="https://help.openstreetmap.org/questions/31351/translating-all-place-names-beginner?page=1&amp;focusedAnswerId=31354#31354">a previous answer to a different question</a> - use a lua script to combine the names any way that you want, and use the standard <a href="https://github.com/gravitystorm/openstreetmap-carto">openstreetmap-carto</a> stylesheet (modified with TileMill if you prefer) to render tiles. You can, of course use a different stylesheet, or create your own.</p>
+<p>As a quick and dirty solution to the "languages" part of the problem, I'd do the same as I suggested in <a href="/questions/31351/translating-all-place-names-beginner?page=1&amp;focusedAnswerId=31354#31354">a previous answer to a different question</a> - use a lua script to combine the names any way that you want, and use the standard <a href="https://github.com/gravitystorm/openstreetmap-carto">openstreetmap-carto</a> stylesheet (modified with TileMill if you prefer) to render tiles. You can, of course use a different stylesheet, or create your own.</p>
 <p>Another thought might be not to restrict yourself to tiles. I'm aware of at least one iOS renderer project (<a href="https://github.com/beelsebob/OpenStreetPad">OpenStreetPad</a>), although it's not been updated for a while.</p>
 </div>
 <div class="answer-controls post-controls">

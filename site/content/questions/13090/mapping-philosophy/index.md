@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Related question: <a href="http://help.openstreetmap.org/questions/4817/how-to-tag-a-fire-department-controlled-gate">How to tag a fire department-controlled gate?</a></p>
+<p>Related question: <a href="/questions/4817/how-to-tag-a-fire-department-controlled-gate">How to tag a fire department-controlled gate?</a></p>
 <p>You probably want to use access=no , emergency=yes .</p>
 </div>
 <div id="comment-13115-info" class="comment-info">
@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If it is something that I would normally map as a track, then I would map it as a track, add the barriers and add <a href="http://wiki.openstreetmap.org/wiki/Access">access</a> tags - maybe something like "access=no,foot=yes".</p>
+<p>If it is something that I would normally map as a track, then I would map it as a track, add the barriers and add <a href="https://wiki.openstreetmap.org/wiki/Access">access</a> tags - maybe something like "access=no,foot=yes".</p>
 <p>If your vehicle navigator still directs you into roads with access=no or access=private then your navigator is broken, but that should not be fixed by trying to map things as something else.</p>
 <p>This sound like a variant of the golden rule "Don't map for the renderer".</p>
 <p>One may also think about the case that someone could actually write a navigator for fire vehicles. If you have tagged your tracks as footways in order to fit your own needs in your broken navigator, then the navigator in the fire vehicle may get into problems navigating the fire roads.</p>
@@ -202,7 +202,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>You have a lot of barriers to chose from at <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">http://wiki.openstreetmap.org/wiki/Key:barrier</a> and most of them implies access=no. But if you look at for example <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dlift_gate">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dlift_gate</a> you will see that the combination with the access tag is considered useful. So you could tag your locked barrier with something like "barrier=gate,access=private,foot=yes,bicycle=no" and the blocks maybe are something like "barrier=block,foot=yes,bicycle=yes".</p>
+<p>You have a lot of barriers to chose from at <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">https://wiki.openstreetmap.org/wiki/Key:barrier</a> and most of them implies access=no. But if you look at for example <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dlift_gate">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dlift_gate</a> you will see that the combination with the access tag is considered useful. So you could tag your locked barrier with something like "barrier=gate,access=private,foot=yes,bicycle=no" and the blocks maybe are something like "barrier=block,foot=yes,bicycle=yes".</p>
 </div>
 <div id="comment-13108-info" class="comment-info">
 <span class="comment-age">(30 May '12, 00:48)</span> <span class="comment-user userinfo">gnurk</span>

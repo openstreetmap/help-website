@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This can be an annoying problem. Towns, Cities or States need a polygon to contain them and if it is not there or broken the named node will cover an undefined area. I have fixed some in my area but because of problems with the nominatim it took a couple of months for the nominatim search to work as I had hoped. So fix the boundaries and have a lot of patience. Older question <a href="http://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary">http://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary</a></p>
+<p>This can be an annoying problem. Towns, Cities or States need a polygon to contain them and if it is not there or broken the named node will cover an undefined area. I have fixed some in my area but because of problems with the nominatim it took a couple of months for the nominatim search to work as I had hoped. So fix the boundaries and have a lot of patience. Older question <a href="/questions/3919/how-can-i-find-and-modify-a-boundary">https://help.openstreetmap.org/questions/3919/how-can-i-find-and-modify-a-boundary</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

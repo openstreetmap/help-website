@@ -62,7 +62,7 @@ osqa_accepted = false
 <div id="post-43225-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Someone asked a new question as an answer; that has been moved to <a href="https://help.openstreetmap.org/questions/43223/is-there-any-possibility-to-provide-coordinates-within-a-distancei-mean-defined-travel-time">https://help.openstreetmap.org/questions/43223/is-there-any-possibility-to-provide-coordinates-within-a-distancei-mean-defined-travel-time</a></p>
+<p>Someone asked a new question as an answer; that has been moved to <a href="/questions/43223/is-there-any-possibility-to-provide-coordinates-within-a-distancei-mean-defined-travel-time">https://help.openstreetmap.org/questions/43223/is-there-any-possibility-to-provide-coordinates-within-a-distancei-mean-defined-travel-time</a></p>
 </div>
 <div id="comment-43225-info" class="comment-info">
 <span class="comment-age">(26 May '15, 14:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

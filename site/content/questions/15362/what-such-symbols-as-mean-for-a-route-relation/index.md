@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What such symbols as &quot;&lt;&lt;&quot; mean for a route relation?"
-description = '''I am total newbie, I looked at the wiki page but all information I found: http://wiki.openstreetmap.org/wiki/Cycle_routes is not applicable to what I see on a screen when editing the map. Here is the problem -- I edited the map, I found the appropriate road, I changed the type to &quot;Bicycles allowed&quot; ...'''
+description = '''I am total newbie, I looked at the wiki page but all information I found: https://wiki.openstreetmap.org/wiki/Cycle_routes is not applicable to what I see on a screen when editing the map. Here is the problem -- I edited the map, I found the appropriate road, I changed the type to &quot;Bicycles allowed&quot; ...'''
 date = "2012-08-22T11:38:00Z"
 lastmod = "2012-08-24T18:33:00Z"
 weight = 15362
@@ -39,14 +39,14 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><em>I am total newbie, I looked at the wiki page but all information I found: <a href="http://wiki.openstreetmap.org/wiki/Cycle_routes">http://wiki.openstreetmap.org/wiki/Cycle_routes</a> is not applicable to what I see on a screen when editing the map.</em></p>
+<p><em>I am total newbie, I looked at the wiki page but all information I found: <a href="https://wiki.openstreetmap.org/wiki/Cycle_routes">https://wiki.openstreetmap.org/wiki/Cycle_routes</a> is not applicable to what I see on a screen when editing the map.</em></p>
 <p>Here is the problem -- I edited the map, I found the appropriate road, I changed the type to "Bicycles allowed" and I added relation to bicycle local route (and created is as well, because there was none). However, when establishing relation there are three symbols without any hints or explanation:</p>
 <pre><code>&lt;&gt;
 &gt;&gt;
 &lt;&lt;</code></pre>
 <p>Could someone please explain the meaning of those symbols?</p>
 <p><em>Update, now I guess it might be a direction of the route in relation to the road.</em></p>
-<p><img src="http://help.openstreetmap.org/upfiles/centrum11.png" alt="alt text" /></p>
+<p><img src="/upfiles/centrum11.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-symbol" rel="tag" title="see questions tagged &#39;symbol&#39;">symbol</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>

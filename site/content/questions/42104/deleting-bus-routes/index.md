@@ -123,8 +123,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For deleting a bus route you have to delete the corresponding <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relations</a>. The iD editor doesn't directly allow to delete <a href="https://wiki.openstreetmap.org/wiki/Relation">relations</a>. Instead you have to <a href="https://help.openstreetmap.org/questions/39272/delete-relation-in-id">remove all members in order to delete the relation itself</a>.</p>
-<p>Your <a href="http://www.openstreetmap.org/node/3430789163">bus</a> <a href="http://www.openstreetmap.org/node/3430789164">stops</a> are definitely there. Just wait a little until the map tiles get rendered again. Especially if you are looking at a layer different to the standard layer, such as the transport layer.</p>
+<p>For deleting a bus route you have to delete the corresponding <a href="https://wiki.openstreetmap.org/wiki/Relation:route">route relations</a>. The iD editor doesn't directly allow to delete <a href="https://wiki.openstreetmap.org/wiki/Relation">relations</a>. Instead you have to <a href="/questions/39272/delete-relation-in-id">remove all members in order to delete the relation itself</a>.</p>
+<p>Your <a href="https://www.openstreetmap.org/node/3430789163">bus</a> <a href="https://www.openstreetmap.org/node/3430789164">stops</a> are definitely there. Just wait a little until the map tiles get rendered again. Especially if you are looking at a layer different to the standard layer, such as the transport layer.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

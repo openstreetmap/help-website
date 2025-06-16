@@ -216,7 +216,7 @@ One Answer:
 <div id="post-38332-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: (en) Ist "shed" noch einigermaßen passend für ein solch Gebäude mit industriellen Ausmaßen? … meint es also einen generellen Gebäudetyp und nicht nur kleinere Schuppen/Lagerhäuser/…?<br />
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: (en) Ist "shed" noch einigermaßen passend für ein solch Gebäude mit industriellen Ausmaßen? … meint es also einen generellen Gebäudetyp und nicht nur kleinere Schuppen/Lagerhäuser/…?<br />
 (de) Is "turkeyshed" still somewhat fitting for an industrial-sized (many many many animals inside) building? … is that meaning a general type of building and not only smaller "sheds"?</p>
 </div>
 <div id="comment-38332-info" class="comment-info">
@@ -229,7 +229,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> yes, you can get very big chicken sheds that are still described as "sheds".</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> yes, you can get very big chicken sheds that are still described as "sheds".</p>
 </div>
 <div id="comment-38335-info" class="comment-info">
 <span class="comment-age">(05 Nov '14, 17:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -241,7 +241,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: danke! (Übersetzung nach de: "ja, auch sehr große Hühnerställe werden als "sheds" bezeichnet")</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: danke! (Übersetzung nach de: "ja, auch sehr große Hühnerställe werden als "sheds" bezeichnet")</p>
 </div>
 <div id="comment-38338-info" class="comment-info">
 <span class="comment-age">(05 Nov '14, 18:26)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

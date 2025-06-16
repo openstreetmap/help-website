@@ -175,7 +175,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Maybe something is wrong with the coordinates or the timestamps in your GPX file. To examine this, you could load the file in any suitable application where you can have a better look at the entries.</p>
-<p>A collection can be found at <a href="http://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks"></a><a href="http://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks"></a><a href="http://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks">http://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks</a></p>
+<p>A collection can be found at <a href="https://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks"></a><a href="https://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks"></a><a href="https://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks">https://wiki.openstreetmap.org/wiki/Editing_GPX_Tracks</a></p>
 <p>One possibility to fix errors in the XML format is to load the file in <a href="http://www.routeconverter.de">www.routeconverter.de</a> and save it back in any GPX format.</p>
 </div>
 <div class="answer-controls post-controls">

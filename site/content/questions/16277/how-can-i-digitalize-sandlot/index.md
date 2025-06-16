@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most probably you want to use leisure=pitch or maybe leisure=playground in combination with surface=$(matching value). (leisure in the <a href="http://wiki.openstreetmap.org/wiki/Key:leisure">wiki</a>.)</p>
+<p>Most probably you want to use leisure=pitch or maybe leisure=playground in combination with surface=$(matching value). (leisure in the <a href="https://wiki.openstreetmap.org/wiki/Key:leisure">wiki</a>.)</p>
 <p>If you now the seize and shape of the area do map it as polygon, else a node is fine too.</p>
 <p>malenki</p>
 </div>

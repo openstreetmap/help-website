@@ -99,7 +99,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>If I search for "Bieslook 3, Didam" the address is found. Perhaps Nominatim has issues with Dutch postal codes, which it seems to store without a space (so <a href="http://www.openstreetmap.org/node/2816584798">6942SG in this case</a>), although <a href="https://en.wikipedia.org/wiki/Postal_codes_in_the_Netherlands">officially</a> they seem to be written with a space?</p>
+<p>If I search for "Bieslook 3, Didam" the address is found. Perhaps Nominatim has issues with Dutch postal codes, which it seems to store without a space (so <a href="https://www.openstreetmap.org/node/2816584798">6942SG in this case</a>), although <a href="https://en.wikipedia.org/wiki/Postal_codes_in_the_Netherlands">officially</a> they seem to be written with a space?</p>
 </div>
 <div id="comment-46407-info" class="comment-info">
 <span class="comment-age">(05 Nov '15, 11:21)</span> <span class="comment-user userinfo">Lightsider</span>
@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Searching for "<a href="http://www.openstreetmap.org/search?query=didam%2C%20bislook%203#map=20/51.93171/6.11842&amp;layers=H">didam, bislook 3</a>" seems to give the wanted result.</p>
+<p>Searching for "<a href="https://www.openstreetmap.org/search?query=didam%2C%20bislook%203#map=20/51.93171/6.11842&amp;layers=H">didam, bislook 3</a>" seems to give the wanted result.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -216,7 +216,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Robert, <a href="https://www.openstreetmap.org/way/6857517#map=18/51.93137/6.11780">https://www.openstreetmap.org/way/6857517#map=18/51.93137/6.11780</a> Its present in OSM. Search string Bieslook 3, Didam, dead on. <a href="http://www.openstreetmap.org/#map=19/51.93171/6.11808">http://www.openstreetmap.org/#map=19/51.93171/6.11808</a> Remains the question what did you do whith what ?</p>
+<p>Hi Robert, <a href="https://www.openstreetmap.org/way/6857517#map=18/51.93137/6.11780">https://www.openstreetmap.org/way/6857517#map=18/51.93137/6.11780</a> Its present in OSM. Search string Bieslook 3, Didam, dead on. <a href="https://www.openstreetmap.org/#map=19/51.93171/6.11808">https://www.openstreetmap.org/#map=19/51.93171/6.11808</a> Remains the question what did you do whith what ?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

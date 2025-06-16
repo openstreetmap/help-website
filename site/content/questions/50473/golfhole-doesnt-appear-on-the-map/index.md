@@ -78,7 +78,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="http://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>, note that golf=hole is for the way from tee to green. golf=pin is for the location of the hole. see <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course#Details_within_a_golf_course">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course#Details_within_a_golf_course</a></p>
+<p><a href="https://help.openstreetmap.org/users/867/vincent-de-phily"></a><a href="https://help.openstreetmap.org/users/867/vincent-de-phily">@Vincent de Phily</a>, note that golf=hole is for the way from tee to green. golf=pin is for the location of the hole. see <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course#Details_within_a_golf_course">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dgolf_course#Details_within_a_golf_course</a></p>
 </div>
 <div id="comment-50537-info" class="comment-info">
 <span class="comment-age">(30 Jun '16, 15:29)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -244,7 +244,7 @@ This would be most useful on a smart phone for golfers I suppose.</p>
 <div class="comment-text">
 <p>There are currently 4 layers on the OpenStreetMap website. The "standard style" is discussed <a href="https://github.com/gravitystorm/openstreetmap-carto">here</a>, and the humanitarian layer <a href="https://github.com/hotosm/HDM-CartoCSS">here</a>. The other two layers are from Andy Allan; follow the links when they are displayed for contact details.</p>
 <p>What any particular tile layer displays is down to the maintainers of that tile layer. It simply isn't possible to render <em>everything</em> and still have a readable map - you can't have "<a href="http://www.thehighwaystar.com/news/2014/05/28/everything-louder-than-everything-else/">everything louder than everything else</a>". It'd be nice if the osm.org website supported multiple user-selectable layers, and that's not a grand conspiracy against golfers, just that none of the volunteers who maintain the site have sat down and written something that does that. There is a "spare slot" on osm.org <a href="https://lists.openstreetmap.org/pipermail/talk/2016-June/076109.html">replacing the former MQ Open tiles</a>, so it's possible that a golf-aware layer may be added.</p>
-<p>If you want to replace one of the layers on the osm.org website with some other tiles it is possible to <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Your_tiles_from_osm.org">use browser plugins to achieve that</a>. That's what I do to see an England-and-Wales specific style that I use.</p>
+<p>If you want to replace one of the layers on the osm.org website with some other tiles it is possible to <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Your_tiles_from_osm.org">use browser plugins to achieve that</a>. That's what I do to see an England-and-Wales specific style that I use.</p>
 </div>
 <div id="comment-50498-info" class="comment-info">
 <span class="comment-age">(27 Jun '16, 23:42)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

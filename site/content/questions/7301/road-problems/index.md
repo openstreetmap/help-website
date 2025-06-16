@@ -111,9 +111,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>For something as small as a patch of grass at the side of a road I don't think that "village_green" is a good answer, because, well, it's not a village green is it?</p>
-<p>A few months back "<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/landcover">landcover</a>" was suggested (as an alternative to landuse, so that you could have landuse=foo, landcover=bar. It's a nice idea, but <a href="http://taginfo.openstreetmap.org/tags/landcover=grass#wiki">almost no-one uses landcover=grass</a>.</p>
+<p>A few months back "<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/landcover">landcover</a>" was suggested (as an alternative to landuse, so that you could have landuse=foo, landcover=bar. It's a nice idea, but <a href="http://taginfo.openstreetmap.org/tags/landcover=grass#wiki">almost no-one uses landcover=grass</a>.</p>
 <p>However, <a href="http://taginfo.openstreetmap.org/tags/surface=grass#wiki">surface=grass</a> probably also works in your case and is much more popular.</p>
-<p>For larger grassy items, you might consider <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvillage_green">landuse=village_green</a>, <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark">leisure=park</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Drecreation_ground">landuse=recreation_ground</a> - choose the thing that's most appropriate (or if none of them are, use something else).</p>
+<p>For larger grassy items, you might consider <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvillage_green">landuse=village_green</a>, <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark">leisure=park</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Drecreation_ground">landuse=recreation_ground</a> - choose the thing that's most appropriate (or if none of them are, use something else).</p>
 <p>One thing that I wouldn't worry about at this stage is how e.g. a grass verge renders in the main Mapnik map - rightly, I don't think that it is concerned with features that small, even at maximum current zoom.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -164,9 +164,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For small pieces of city vegetation (too small to be a park, eg. your grass verges) I use <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvillage_green">village green</a> even if it is probably not what it is meant for, but it is the closest one. Grass alone suggests that it is grass, not a place covered also with trees and bushes.<br />
+<p>For small pieces of city vegetation (too small to be a park, eg. your grass verges) I use <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dvillage_green">village green</a> even if it is probably not what it is meant for, but it is the closest one. Grass alone suggests that it is grass, not a place covered also with trees and bushes.<br />
 </p>
-<p>For barriers at side of the road use some of <a href="http://wiki.openstreetmap.org/wiki/Key:barrier">these</a> depending on what kind of barrier there is.</p>
+<p>For barriers at side of the road use some of <a href="https://wiki.openstreetmap.org/wiki/Key:barrier">these</a> depending on what kind of barrier there is.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -113,7 +113,7 @@ One Answer:
 <p>Hi</p>
 <p>First of all, if you go to openstreetmap.com, it will and should redirect you to openstreetmap.org</p>
 <p>I just searched "Schutzhütte" in openstreetmap.org and it returned a lot of results. Here is my search link:</p>
-<p><a href="http://www.openstreetmap.org/search?query=Schutzh%C3%BCtte#map=19/50.23466/6.86365">http://www.openstreetmap.org/search?query=Schutzh%C3%BCtte#map=19/50.23466/6.86365</a></p>
+<p><a href="https://www.openstreetmap.org/search?query=Schutzh%C3%BCtte#map=19/50.23466/6.86365">https://www.openstreetmap.org/search?query=Schutzh%C3%BCtte#map=19/50.23466/6.86365</a></p>
 <p>Are you sure you are on the right page? Can you give a screenshot of the page and where you are searching ?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -145,7 +145,7 @@ One Answer:
 <div id="post-56470-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It seems like Nominatim is only returning results where the name is <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">mis-tagged for the renderer</a> as "Schutzhütte". I can't see any where it could be using the special phrase.</p>
+<p>It seems like Nominatim is only returning results where the name is <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">mis-tagged for the renderer</a> as "Schutzhütte". I can't see any where it could be using the special phrase.</p>
 </div>
 <div id="comment-56470-info" class="comment-info">
 <span class="comment-age">(06 Jun '17, 16:46)</span> <span class="comment-user userinfo">alester</span>

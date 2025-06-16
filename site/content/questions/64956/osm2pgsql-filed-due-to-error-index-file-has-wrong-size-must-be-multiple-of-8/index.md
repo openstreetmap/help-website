@@ -45,7 +45,7 @@ osqa_accepted = false
 <p>My machine parameters is 6 core, 32 GB of ram, 1TB of disc. Postgis version is 2.2 Postgresql version is 9.5</p>
 <p>Postgresql.conf tunned with this parameters</p>
 <p>shared_buffers (2GB) maintenance_work_mem (10GB) work_mem (50MB) effective_cache_size (24GB) synchronous_commit = off checkpoint_timeout = 10min checkpoint_completion_target = 0.9</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Untitled-5_KZJ5vLt.png" alt="alt text" /></p>
+<p><img src="/upfiles/Untitled-5_KZJ5vLt.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-osm2pgsql" rel="tag" title="see questions tagged &#39;osm2pgsql&#39;">osm2pgsql</span>

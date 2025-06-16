@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The <code>colour</code> tag can be used to specify the colour of public transport line in a schematic (<a href="http://taginfo.openstreetmap.org/keys/colour#overview)">http://taginfo.openstreetmap.org/keys/colour#overview)</a> although that would be on the relation, not on a node.</p>
-<p>I don't know of a map that uses this though, see also <a href="https://help.openstreetmap.org/questions/34447/you-can-add-a-color-to-the-transport-map">"You can add a color to the transport map?"</a>.</p>
+<p>I don't know of a map that uses this though, see also <a href="/questions/34447/you-can-add-a-color-to-the-transport-map">"You can add a color to the transport map?"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

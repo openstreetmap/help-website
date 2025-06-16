@@ -63,7 +63,7 @@ osqa_accepted = false
 <div id="post-43068-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I just looked at some sections of the N17, e.g <a href="http://www.openstreetmap.org/way/132146686#map=13/-26.4242/29.1443&amp;layers=D">this one</a>, but I do not find any section on which a maxspeed is tagged. Maybe I'm looking in the wrong place. It might also be interesting to know which service or API you are using and where on the N17 you are looking for speed limits</p>
+<p>I just looked at some sections of the N17, e.g <a href="https://www.openstreetmap.org/way/132146686#map=13/-26.4242/29.1443&amp;layers=D">this one</a>, but I do not find any section on which a maxspeed is tagged. Maybe I'm looking in the wrong place. It might also be interesting to know which service or API you are using and where on the N17 you are looking for speed limits</p>
 </div>
 <div id="comment-43068-info" class="comment-info">
 <span class="comment-age">(13 May '15, 17:26)</span> <span class="comment-user userinfo">escada</span>
@@ -164,7 +164,7 @@ One Answer:
 <div class="comment-text">
 <p>Hello Virgil,</p>
 <p>so you want to know how maxspeed data is contained in the raw OSM database?</p>
-<p>See the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">http://wiki.openstreetmap.org/wiki/Key:maxspeed</a></p>
+<p>See the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">https://wiki.openstreetmap.org/wiki/Key:maxspeed</a></p>
 </div>
 <div id="comment-43063-info" class="comment-info">
 <span class="comment-age">(13 May '15, 16:47)</span> <span class="comment-user userinfo">stephan75</span>

@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Portugal's name il large scales is changed by "travessa santa margarida de chavez". Newbie, I don't know how to help to change that. <img src="http://help.openstreetmap.org/upfiles/Carte.png" alt="here a snapshot" /></p>
+<p>Portugal's name il large scales is changed by "travessa santa margarida de chavez". Newbie, I don't know how to help to change that. <img src="/upfiles/Carte.png" alt="here a snapshot" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-portugal" rel="tag" title="see questions tagged &#39;portugal&#39;">portugal</span>

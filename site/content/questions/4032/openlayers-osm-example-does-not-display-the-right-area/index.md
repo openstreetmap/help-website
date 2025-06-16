@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OpenLayers OSM example does not display the right area?"
-description = '''http://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example i got a problem about the example in the web pag of that link.  var layer = new OpenLayers.Layer.Vector(&quot;Polygon&quot;, {  strategies: [new OpenLayers.Strategy.Fixed()],  protocol: new OpenLayers.Protocol.HTTP({  url: &quot;myosmfile.osm&quot;, //&amp;lt;-...'''
+description = '''https://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example i got a problem about the example in the web pag of that link.  var layer = new OpenLayers.Layer.Vector(&quot;Polygon&quot;, {  strategies: [new OpenLayers.Strategy.Fixed()],  protocol: new OpenLayers.Protocol.HTTP({  url: &quot;myosmfile.osm&quot;, //&amp;lt;-...'''
 date = "2011-03-24T06:33:00Z"
 lastmod = "2011-03-24T07:57:00Z"
 weight = 4032
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example">http://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example">https://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example</a></p>
 <p>i got a problem about the example in the web pag of that link.</p>
 <pre><code>  var layer = new OpenLayers.Layer.Vector(&quot;Polygon&quot;, {
                 strategies: [new OpenLayers.Strategy.Fixed()],

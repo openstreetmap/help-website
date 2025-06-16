@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>A few months ago, Mapnik <a href="https://lists.openstreetmap.org/pipermail/talk/2015-January/071892.html">quit rendering</a> closed ways with the tag military=barracks; as a result, many of the barracks I have mapped with only that tag are now "hidden".</p>
 <p>I am tempted to add landuse=military and thus making them visible on the default map again, but I would like not to map for the renderer;</p>
-<p><a href="http://www.openstreetmap.org/way/140758784">This</a> is an example: it's a military area with restricted access, and, as far as I know, mainly used as a training and dormitory facility for troops.</p>
+<p><a href="https://www.openstreetmap.org/way/140758784">This</a> is an example: it's a military area with restricted access, and, as far as I know, mainly used as a training and dormitory facility for troops.</p>
 <p>So my question is: how are military barracks correctly tagged?</p>
 <p>Thanks in advance!</p>
 </div>
@@ -80,7 +80,7 @@ osqa_accepted = true
 <div id="post-43238-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/6765/marcor">@MarcoR</a> - One thing that might help is if you can link to an example. I can imagine how people might tag such things slightly differently, so an example would help.</p>
+<p><a href="https://help.openstreetmap.org/users/6765/marcor">@MarcoR</a> - One thing that might help is if you can link to an example. I can imagine how people might tag such things slightly differently, so an example would help.</p>
 </div>
 <div id="comment-43238-info" class="comment-info">
 <span class="comment-age">(26 May '15, 21:35)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>My understanding was always that <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse=military">landuse=military</a> is the high-level tag and that <a href="http://wiki.openstreetmap.org/wiki/Key:military">military=*</a> is a refinement to the base tag. This fits the classic "mainkey=value, value=refinement" scheme, the wiki, and <a href="https://github.com/gravitystorm/openstreetmap-carto/pull/1053#issuecomment-59533722">this comment</a> in the mapnik bugtracker.</p>
+<p>My understanding was always that <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse=military">landuse=military</a> is the high-level tag and that <a href="https://wiki.openstreetmap.org/wiki/Key:military">military=*</a> is a refinement to the base tag. This fits the classic "mainkey=value, value=refinement" scheme, the wiki, and <a href="https://github.com/gravitystorm/openstreetmap-carto/pull/1053#issuecomment-59533722">this comment</a> in the mapnik bugtracker.</p>
 <p>So tag the area with landuse=millitary first, military=barracks second. If there's more than one purpose for the area (barracks and firing range for example), the military=* tag can be applied to smaller polygons inside the big landuse polygon. You might also want to tag individual building=bararcks inside the area.</p>
 </div>
 <div class="answer-controls post-controls">

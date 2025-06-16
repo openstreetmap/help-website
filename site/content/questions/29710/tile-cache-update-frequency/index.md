@@ -72,7 +72,7 @@ osqa_accepted = false
 <div id="post-29711-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>(just in case it isn't clear) <a href="https://help.openstreetmap.org/questions/28799/import-shapefile-as-osm">from previous questions</a> I believe that the questioner has their own copy of the rails port deployed.</p>
+<p>(just in case it isn't clear) <a href="/questions/28799/import-shapefile-as-osm">from previous questions</a> I believe that the questioner has their own copy of the rails port deployed.</p>
 </div>
 <div id="comment-29711-info" class="comment-info">
 <span class="comment-age">(09 Jan '14, 11:39)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -144,8 +144,8 @@ So your TMS get's the client tile requests and renders/splits the desired area o
 <li><strong>Preprocessing all tiles</strong><br />
 All tiles are rendered and then only the affected areas (by your edits) get updated and rerendered. This takes a lot of space (if you need to provide it as global service), but it scales better if you have a larger amount of clients.</li>
 </ol>
-<p>Both ways can be combined with <a href="http://wiki.openstreetmap.org/wiki/MapProxy">mapcaches</a>, but of course this limits the tile update frequency as the way to the client get's longer and the caches need time to propagate changes and to get flushed.</p>
-<p>In every case you need to create a PostGIS DB that suits the rendering stack requirements (AFAIK this is <a href="http://wiki.openstreetmap.org/wiki/Database_schema#Database_Schemas">a different one</a> from the central rails port). Then you setup the <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> renderer (or a different one) and decide if you call them after edits or if you get a client request. A good tutorial is www.switch2osm.org also you might read <a href="http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles</a></p>
+<p>Both ways can be combined with <a href="https://wiki.openstreetmap.org/wiki/MapProxy">mapcaches</a>, but of course this limits the tile update frequency as the way to the client get's longer and the caches need time to propagate changes and to get flushed.</p>
+<p>In every case you need to create a PostGIS DB that suits the rendering stack requirements (AFAIK this is <a href="https://wiki.openstreetmap.org/wiki/Database_schema#Database_Schemas">a different one</a> from the central rails port). Then you setup the <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> renderer (or a different one) and decide if you call them after edits or if you get a client request. A good tutorial is www.switch2osm.org also you might read <a href="https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles">https://wiki.openstreetmap.org/wiki/Creating_your_own_tiles</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

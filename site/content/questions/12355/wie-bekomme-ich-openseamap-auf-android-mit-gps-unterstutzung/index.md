@@ -115,8 +115,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Eine passende Informationsquelle für dein Anliegen ist das OSM-Wiki.</p>
-<p>Laut der dir sicherlich bekannten <span>Wikiseite zu OpenSeaMap</span> existiert wohl bisher nur ein Programm für <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a>.</p>
-<p>Auf der entsprechenden Seite zu den <a href="http://wiki.openstreetmap.org/wiki/Android">Android-Apps</a> findet sich keine spezielle entsprechende Software.</p>
+<p>Laut der dir sicherlich bekannten <span>Wikiseite zu OpenSeaMap</span> existiert wohl bisher nur ein Programm für <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">Apple iOS</a>.</p>
+<p>Auf der entsprechenden Seite zu den <a href="https://wiki.openstreetmap.org/wiki/Android">Android-Apps</a> findet sich keine spezielle entsprechende Software.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

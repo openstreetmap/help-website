@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-12275-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Yes - have a look at the various options <a href="http://wiki.openstreetmap.org/wiki/Contact">here</a> (<a href="http://wiki.openstreetmap.org/wiki/FR:Contact">ou en Francais</a>)</p>
+<p>Yes - have a look at the various options <a href="https://wiki.openstreetmap.org/wiki/Contact">here</a> (<a href="https://wiki.openstreetmap.org/wiki/FR:Contact">ou en Francais</a>)</p>
 </div>
 <div id="comment-12275-info" class="comment-info">
 <span class="comment-age">(23 Apr '12, 13:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -172,7 +172,7 @@ osqa_accepted = false
 <ul>
 <li>is a great data source, but specific to France</li>
 <li>has its quirks, and requires some manual checks and fixes before uploading</li>
-<li>Is documented at <a href="http://wiki.openstreetmap.org/wiki/Cadastre">http://wiki.openstreetmap.org/wiki/Cadastre</a></li>
+<li>Is documented at <a href="https://wiki.openstreetmap.org/wiki/Cadastre">https://wiki.openstreetmap.org/wiki/Cadastre</a></li>
 </ul>
 </div>
 <div id="comment-12270-info" class="comment-info">
@@ -300,7 +300,7 @@ osqa_accepted = false
 <div id="post-12282-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="http://help.openstreetmap.org/upfiles/josm_pic_1.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/josm_pic_1.JPG" alt="alt text" /></p>
 </div>
 <div id="comment-12282-info" class="comment-info">
 <span class="comment-age">(23 Apr '12, 14:57)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -126,7 +126,7 @@ FROM hist_line,pointsub WHERE ST_DWITHIN(pointsub.geom, hist_line.geom,0.000001)
 &#10;SELECT results2.point_id,results2.point_version,results2.line_id,
 results2.line_version,results2.point_geom,results2.closest_vertex_in_line 
 FROM results2 WHERE rn = 1</code></pre>
-<p><img src="http://help.openstreetmap.org/upfiles/Issues-with-St_intersects_tCg8JYe.png" alt="alt text" /></p>
+<p><img src="/upfiles/Issues-with-St_intersects_tCg8JYe.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

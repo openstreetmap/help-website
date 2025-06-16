@@ -132,7 +132,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Your question is far to complex to anyone to answer without doing most of the work. ;)</p>
 <p>Also it, in my view, isn't really related to OSM.</p>
-<p>You <em>could</em> use JOSM to do the map, save it as an OSM-file, use any of these <a href="http://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">tools</a> to convert it to a file of your choice, find a library to display it on android etc.</p>
+<p>You <em>could</em> use JOSM to do the map, save it as an OSM-file, use any of these <a href="https://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">tools</a> to convert it to a file of your choice, find a library to display it on android etc.</p>
 <p>But I fail to see the point, you can simply paint the map in Inkscape (or equal), save it as PNG (or SVG if it's huge) and display that, calibrated to the GPS.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -205,7 +205,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look for example at the <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a> wiki page and try all apps that can come near your aim.</p>
+<p>Have a look for example at the <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a> wiki page and try all apps that can come near your aim.</p>
 <p>when that app is opensource, you can develop to your own purposes.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -159,7 +159,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Difficult</p>
 <p>commemorates the expression is already in the tag combination memorial</p>
-<p>The time of use, the period <a href="http://wiki.openstreetmap.org/wiki/Key:historic:civilization">http://wiki.openstreetmap.org/wiki/Key:historic:civilization</a></p>
+<p>The time of use, the period <a href="https://wiki.openstreetmap.org/wiki/Key:historic:civilization">https://wiki.openstreetmap.org/wiki/Key:historic:civilization</a></p>
 <p>era=bicycle (cycling) sport=cycling event:sport=tdf tour_de_france sport=bmx mostly, a person is remembered for his whole carreer, some multiple sports. so not the event is mentioned. but for a olympic monument this is used</p>
 <p>but then the era=Olympic Games event:sport=London 2012</p>
 <p>For all kinds of era, sports</p>
@@ -174,7 +174,7 @@ osqa_accepted = false
 <div id="post-53083-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11443/allroads"></a><a href="http://help.openstreetmap.org/users/11443/allroads">@Allroads</a>: Sorry, I do not understand - what do you mean by "commemorates the expression is already in the tag combination memorial"? Could you rephrase this?</p>
+<p><a href="https://help.openstreetmap.org/users/11443/allroads"></a><a href="https://help.openstreetmap.org/users/11443/allroads">@Allroads</a>: Sorry, I do not understand - what do you mean by "commemorates the expression is already in the tag combination memorial"? Could you rephrase this?</p>
 </div>
 <div id="comment-53083-info" class="comment-info">
 <span class="comment-age">(22 Nov '16, 19:19)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -196,7 +196,7 @@ osqa_accepted = false
 <div id="post-53091-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11443/allroads"></a><a href="http://help.openstreetmap.org/users/11443/allroads">@Allroads</a>: Using <code>memorial:category</code> as key has two downsides:<br />
+<p><a href="https://help.openstreetmap.org/users/11443/allroads"></a><a href="https://help.openstreetmap.org/users/11443/allroads">@Allroads</a>: Using <code>memorial:category</code> as key has two downsides:<br />
 first, the key would be different for memorials and monuments (and possibly other similar commemorative objects) and,<br />
 second, it is less clear what the "category" is about. Is it a commemorated object, style, size or era category?</p>
 </div>
@@ -240,7 +240,7 @@ second, it is less clear what the "category" is about. Is it a commemorated obje
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Taking <a href="http://www.openstreetmap.org/node/1334315594">the only one I know of</a> as an example, I'd expect that you might be able to get somewhere via wikidata. Unfortunately the <a href="https://www.wikidata.org/wiki/Q16250734">wikidata entry</a> associated with the <a href="https://en.wikipedia.org/wiki/Death_of_Tom_Simpson">wikipedia page</a> associated with that OSM node doesn't actually mention the <a href="https://en.wikipedia.org/wiki/1967_Tour_de_France">Tour de France</a> (<a href="https://www.wikidata.org/wiki/Q368629">wikidata</a>) at all, so you'd have a bit of joining up to do, but I'd suggest that doing the joining there probably makes more sense than trying to do it in OSM.</p>
+<p>Taking <a href="https://www.openstreetmap.org/node/1334315594">the only one I know of</a> as an example, I'd expect that you might be able to get somewhere via wikidata. Unfortunately the <a href="https://www.wikidata.org/wiki/Q16250734">wikidata entry</a> associated with the <a href="https://en.wikipedia.org/wiki/Death_of_Tom_Simpson">wikipedia page</a> associated with that OSM node doesn't actually mention the <a href="https://en.wikipedia.org/wiki/1967_Tour_de_France">Tour de France</a> (<a href="https://www.wikidata.org/wiki/Q368629">wikidata</a>) at all, so you'd have a bit of joining up to do, but I'd suggest that doing the joining there probably makes more sense than trying to do it in OSM.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -276,7 +276,7 @@ second, it is less clear what the "category" is about. Is it a commemorated obje
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11443/allroads"></a><a href="http://help.openstreetmap.org/users/11443/allroads">@Allroads</a> <span>sport=bicycle</span>? hmm, means that you can do bicycle sports on/in the monument. I don't like that.</p>
+<p><a href="https://help.openstreetmap.org/users/11443/allroads"></a><a href="https://help.openstreetmap.org/users/11443/allroads">@Allroads</a> <span>sport=bicycle</span>? hmm, means that you can do bicycle sports on/in the monument. I don't like that.</p>
 </div>
 <div id="comment-53049-info" class="comment-info">
 <span class="comment-age">(20 Nov '16, 17:31)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

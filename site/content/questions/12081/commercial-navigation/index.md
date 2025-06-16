@@ -123,7 +123,7 @@ I've seen paid apps using OSM in navigation, but it doesn't mean that is for fre
 <td><div class="item-right">
 <div class="answer-body">
 <p>This FAQ site has a search function at the top of the starting page.</p>
-<p>Try to search for the word "<a href="http://help.openstreetmap.org/search/?q=commercial&amp;Submit=search&amp;t=question">commercial</a>"</p>
+<p>Try to search for the word "<a href="https://help.openstreetmap.org/search/?q=commercial&amp;Submit=search&amp;t=question">commercial</a>"</p>
 <p>Or go to any software source like Apple AppStore or GooglePlay and search for OSM or Openstreetmap. Thus you can see some examples for commercial apps that are using OSM data, also with routing features.</p>
 <p>Also, go to the <a href="http://wiki.openstreetmap.org">OSM wiki</a> and take about two hours time, and read especially the pages about Tile usage policy, Legal FAQ, Planet.osm, software, Routing etc.</p>
 </div>

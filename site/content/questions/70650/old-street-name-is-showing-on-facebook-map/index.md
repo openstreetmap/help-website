@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to contact Facebook about this. Have a look at <a href="https://help.openstreetmap.org/users/17106/rvr004">@RVR004</a>'s answer in a <a href="https://help.openstreetmap.org/questions/70532/the-wrong-map-on-face-book/70536">similar question</a> on how to contact them.</p>
+<p>You need to contact Facebook about this. Have a look at <a href="https://help.openstreetmap.org/users/17106/rvr004">@RVR004</a>'s answer in a <a href="/questions/70532/the-wrong-map-on-face-book/70536">similar question</a> on how to contact them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

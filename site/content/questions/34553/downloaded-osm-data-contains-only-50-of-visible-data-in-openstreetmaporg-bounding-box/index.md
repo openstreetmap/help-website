@@ -86,7 +86,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I wonder if it could be related to the 64 bit ID issue? <a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">http://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a> Sounds a lot like what would happen in QGIS before it got fixed.</p>
+<p>I wonder if it could be related to the 64 bit ID issue? <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">https://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a> Sounds a lot like what would happen in QGIS before it got fixed.</p>
 </div>
 <div id="comment-34560-info" class="comment-info">
 <span class="comment-age">(02 Jul '14, 17:04)</span> <span class="comment-user userinfo">neuhausr</span>
@@ -110,7 +110,7 @@ osqa_accepted = false
 <div id="post-34569-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Browse">browse</a> in the OSM wiki. First, go to the area in question and zoom very close to the missing object. Then open the layer menu (4), activate <em>[x] Map Data</em> and wait a little until the data has been loaded. Afterwards select a building which you think is missing, this will open a sidebar on the left where you can see additional information about the object. Your browser should now show the URL to the object you just opened.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Browse">browse</a> in the OSM wiki. First, go to the area in question and zoom very close to the missing object. Then open the layer menu (4), activate <em>[x] Map Data</em> and wait a little until the data has been loaded. Afterwards select a building which you think is missing, this will open a sidebar on the left where you can see additional information about the object. Your browser should now show the URL to the object you just opened.</p>
 <p>Additionally it will help if you can show us your Overpass API query.</p>
 </div>
 <div id="comment-34569-info" class="comment-info">
@@ -123,7 +123,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Thanks! The url of a missing building is: <a href="http://www.openstreetmap.org/node/45252324#map=19/52.09316/5.11792&amp;layers=D">http://www.openstreetmap.org/node/45252324#map=19/52.09316/5.11792&amp;layers=D</a></p>
+<p>Thanks! The url of a missing building is: <a href="https://www.openstreetmap.org/node/45252324#map=19/52.09316/5.11792&amp;layers=D">https://www.openstreetmap.org/node/45252324#map=19/52.09316/5.11792&amp;layers=D</a></p>
 <p>My Overpass API query: overpass-api.de/api/map?bbox=4.9785,52.0464,5.1910,52.1560</p>
 <p>The OSM data vs the imported data w/ missing objects: <a href="http://imageshack.com/a/img834/2930/dpkj9.jpg">http://imageshack.com/a/img834/2930/dpkj9.jpg</a></p>
 </div>
@@ -537,7 +537,7 @@ or get your country from <a href="http://download.geofabrik.de/europe/netherland
 <div class="comment-text">
 <p>The only question the author asks ("Can it be that I need for example to turn on additional layers or activate additional objects?") can be answered with a simple "no". Better INYO?</p>
 <p>My answer should help the author to get a complete data set instead one with only 50%.<br />
-Furthermore it is <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">discouraged to pull big data sets from the OSM API</a>.</p>
+Furthermore it is <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">discouraged to pull big data sets from the OSM API</a>.</p>
 </div>
 <div id="comment-34665-info" class="comment-info">
 <span class="comment-age">(05 Jul '14, 16:12)</span> <span class="comment-user userinfo">malenki</span>

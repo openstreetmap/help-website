@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, I would like to have lat, lon and adress for every adress in germany. The problem with my codesnippet is, that it seems that I get every street as a result, but with large gaps between housenumbers. When I visit osm in my browser, I can see housenumbers on the map which are surprisingly not contained in my csv. But I want all adresses with coordinates, and when I can see adresses in the browser, I know its possible to extract the whole set into a csv. file.</p>
-<p>This is my code snippet: osmfilter deutschland.osm --keep="addr:country= and addr:city= and addr:postcode= and addr:street= addr:housenumber=" --ignore-dependencies | osmconvert - --csv="@oname <a href="http://help.openstreetmap.org/users/260/idoneus">@id</a> <a href="http://help.openstreetmap.org/users/1350/longestaugust">@lon</a> <a href="http://help.openstreetmap.org/users/5110/latroc">@lat</a> addr:country addr:city addr:postcode addr:street addr:housenumber" -o=deutschland.csv</p>
+<p>This is my code snippet: osmfilter deutschland.osm --keep="addr:country= and addr:city= and addr:postcode= and addr:street= addr:housenumber=" --ignore-dependencies | osmconvert - --csv="@oname <a href="https://help.openstreetmap.org/users/260/idoneus">@id</a> <a href="https://help.openstreetmap.org/users/1350/longestaugust">@lon</a> <a href="https://help.openstreetmap.org/users/5110/latroc">@lat</a> addr:country addr:city addr:postcode addr:street addr:housenumber" -o=deutschland.csv</p>
 <p>I want complete adresses, or to be more precise: lat, lon, city, street, housenumber. For every housenumber in germany.</p>
 <p>Thank you for your professional help.</p>
 <p>Greetz</p>
@@ -209,7 +209,7 @@ osqa_accepted = false
 <p>You should also pay attention that there are at least two other options to tag a complete address, at least in Germany:</p>
 <p>addr:housenumber=* AND addr:place=xxxx ... for villages and hamlets which are so small that there are no extra street names,</p>
 <p>and</p>
-<p>OSM relations of type=associatedStreet ... see <a href="http://wiki.openstreetmap.org/wiki/Relation:associatedStreet">Relation:associatedStreet</a> in the OSM wiki.</p>
+<p>OSM relations of type=associatedStreet ... see <a href="https://wiki.openstreetmap.org/wiki/Relation:associatedStreet">Relation:associatedStreet</a> in the OSM wiki.</p>
 <p>If you are able to read in German, also have a look at this <a href="http://blog.openstreetmap.de/blog/2016/02/wochenaufgabe-strassennamen-neuauflage/">article</a>.</p>
 </div>
 <div class="answer-controls post-controls">

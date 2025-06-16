@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am tagging <a href="http://www.openstreetmap.org/node/3986524369">a shop</a> that <a href="http://outillageplus.ca/">rents, sells and repair</a> mid-to-small sized electric and motorized equipment (Anything up to snow blowers), and I'm completely at a loss as to a proper or even just useful tag.</p>
+<p>I am tagging <a href="https://www.openstreetmap.org/node/3986524369">a shop</a> that <a href="http://outillageplus.ca/">rents, sells and repair</a> mid-to-small sized electric and motorized equipment (Anything up to snow blowers), and I'm completely at a loss as to a proper or even just useful tag.</p>
 <p>Anyone can help me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -73,7 +73,7 @@ osqa_accepted = true
 <div id="post-47880-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@someoneelse</a> Pretty sure it's mostly general public.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@someoneelse</a> Pretty sure it's mostly general public.</p>
 </div>
 <div id="comment-47880-info" class="comment-info">
 <span class="comment-age">(03 Feb '16, 19:08)</span> <span class="comment-user userinfo">Circeus</span>

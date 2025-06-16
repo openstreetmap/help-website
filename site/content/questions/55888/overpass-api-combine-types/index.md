@@ -199,7 +199,7 @@ wget -c http://api.openstreetmap.fr/xapi?&quot;node[historic=wreck][bbox=-27,29,
 <p><a href="http://overpass-turbo.eu/s/oDz">http://overpass-turbo.eu/s/oDz</a></p>
 <p>(Click "Run" to see the output)</p>
 <p>Under "Export" there is a link "raw data directly from Overpass API" that is suitable for use with wget.</p>
-<p>The query language is documented here: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
+<p>The query language is documented here: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

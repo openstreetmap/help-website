@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Although there are, of course, many places in Beijing without streetnames, I can see street names <a href="http://www.openstreetmap.org/#map=17/39.89399/116.38454">here</a>, so if the data's in OSM but FME loses it on the way, then I'd <a href="http://fmepedia.safe.com/KnowledgeDocumentation">ask the FME people</a> about it.</p>
+<p>Although there are, of course, many places in Beijing without streetnames, I can see street names <a href="https://www.openstreetmap.org/#map=17/39.89399/116.38454">here</a>, so if the data's in OSM but FME loses it on the way, then I'd <a href="http://fmepedia.safe.com/KnowledgeDocumentation">ask the FME people</a> about it.</p>
 <p>Presumably you really, really want an AutoCAD format for a reason?</p>
 </div>
 <div class="answer-controls post-controls">

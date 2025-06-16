@@ -73,7 +73,7 @@ osqa_accepted = false
 <div id="post-50341-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: See this: <a href="http://www.openstreetmap.org/way/294623880">http://www.openstreetmap.org/way/294623880</a> - one <em>way</em> for a two-lane, two-way street. The westernmost node is connected to two <em>ways</em>, 1 lane each, 1 direction each - yet there is no significant change in actual, on-the-ground street properties. <a href="http://www.openstreetmap.org/way/25920361">http://www.openstreetmap.org/way/25920361</a> <a href="http://www.openstreetmap.org/way/4064054">http://www.openstreetmap.org/way/4064054</a></p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: See this: <a href="https://www.openstreetmap.org/way/294623880">https://www.openstreetmap.org/way/294623880</a> - one <em>way</em> for a two-lane, two-way street. The westernmost node is connected to two <em>ways</em>, 1 lane each, 1 direction each - yet there is no significant change in actual, on-the-ground street properties. <a href="https://www.openstreetmap.org/way/25920361">https://www.openstreetmap.org/way/25920361</a> <a href="https://www.openstreetmap.org/way/4064054">https://www.openstreetmap.org/way/4064054</a></p>
 </div>
 <div id="comment-50341-info" class="comment-info">
 <span class="comment-age">(20 Jun '16, 16:13)</span> <span class="comment-user userinfo">Piskvor</span>
@@ -84,7 +84,7 @@ osqa_accepted = false
 <div id="post-50342-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That way's a good example of why I was asking - there are two parallel segments to the west, and at the east end <a href="http://www.openstreetmap.org/node/2982164520">http://www.openstreetmap.org/node/2982164520</a> splits 2 sections of Bucharova with different tags (in this case a different number of lanes).</p>
+<p>That way's a good example of why I was asking - there are two parallel segments to the west, and at the east end <a href="https://www.openstreetmap.org/node/2982164520">https://www.openstreetmap.org/node/2982164520</a> splits 2 sections of Bucharova with different tags (in this case a different number of lanes).</p>
 </div>
 <div id="comment-50342-info" class="comment-info">
 <span class="comment-age">(20 Jun '16, 16:22)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

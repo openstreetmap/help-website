@@ -67,7 +67,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>You'll need to ask MapBox directly, I think. They are <a href="https://www.mapbox.com/">a company</a> that other companies use to provide maps for their websites and applications. Other companies offer similar services, and people can of course just use OSM data directly themselves, subject to the <a href="http://www.openstreetmap.org/copyright">relevant terms</a>.</p>
+<p>You'll need to ask MapBox directly, I think. They are <a href="https://www.mapbox.com/">a company</a> that other companies use to provide maps for their websites and applications. Other companies offer similar services, and people can of course just use OSM data directly themselves, subject to the <a href="https://www.openstreetmap.org/copyright">relevant terms</a>.</p>
 </div>
 <div id="comment-59827-info" class="comment-info">
 <span class="comment-age">(25 Sep '17, 14:41)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -153,7 +153,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>I'm seriously surprised to see a response like that from Mapbox. Take this fuel station that I updated 4 weeks ago: <a href="http://www.openstreetmap.org/node/293703077.">http://www.openstreetmap.org/node/293703077.</a> It's still not visible on Mapbox maps. This will just lead to Mapbox falling behind seriously. Curiosly I haven't seen Mapbox team members make edits in my country for quite some time now. What's going on?</p>
+<p>I'm seriously surprised to see a response like that from Mapbox. Take this fuel station that I updated 4 weeks ago: <a href="https://www.openstreetmap.org/node/293703077.">https://www.openstreetmap.org/node/293703077.</a> It's still not visible on Mapbox maps. This will just lead to Mapbox falling behind seriously. Curiosly I haven't seen Mapbox team members make edits in my country for quite some time now. What's going on?</p>
 </div>
 <div id="comment-59875-info" class="comment-info">
 <span class="comment-age">(29 Sep '17, 11:59)</span> <span class="comment-user userinfo">Hjart</span>

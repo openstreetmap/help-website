@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rendering of lakes"
-description = '''I have downloaded the maps of the British Isles (routable, with contours) from Talkytoaster&#x27;s very useful web site (http://talkytoaster.info/ukmaps.htm). The MapSource version shows Bronwich Pond (http://www.openstreetmap.org/?lat=50.83241&amp;amp;lon=-1.26315&amp;amp;zoom=15&amp;amp;layers=M) as a lake, but th...'''
+description = '''I have downloaded the maps of the British Isles (routable, with contours) from Talkytoaster&#x27;s very useful web site (http://talkytoaster.info/ukmaps.htm). The MapSource version shows Bronwich Pond (https://www.openstreetmap.org/?lat=50.83241&amp;amp;lon=-1.26315&amp;amp;zoom=15&amp;amp;layers=M) as a lake, but th...'''
 date = "2012-04-18T22:35:00Z"
 lastmod = "2012-04-27T23:34:00Z"
 weight = 12148
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have downloaded the maps of the British Isles (routable, with contours) from Talkytoaster's very useful web site (<a href="http://talkytoaster.info/ukmaps.htm">http://talkytoaster.info/ukmaps.htm</a>). The MapSource version shows Bronwich Pond (<a href="http://www.openstreetmap.org/?lat=50.83241&amp;lon=-1.26315&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=50.83241&amp;lon=-1.26315&amp;zoom=15&amp;layers=M</a>) as a lake, but the Garmin GPS version renders the pond as woodland. The GPS knows that the pond is there, as the land description changes from Woods to Lake when the cursor is moved over the pond. Another small lake (<a href="http://www.openstreetmap.org/?lat=50.842&amp;lon=-1.255&amp;zoom=22">at long -1.255, lat 50.842</a>) shows the same problem, but other small lakes in the same area render correctly on both versions of the map. I had intended to correct the problem, but looking at the OSM data in Potlatch 2, I can see no difference between the mapping of the ponds that render correctly and the ones that do not. Can anyone help?</p>
+<p>I have downloaded the maps of the British Isles (routable, with contours) from Talkytoaster's very useful web site (<a href="http://talkytoaster.info/ukmaps.htm">http://talkytoaster.info/ukmaps.htm</a>). The MapSource version shows Bronwich Pond (<a href="https://www.openstreetmap.org/?lat=50.83241&amp;lon=-1.26315&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=50.83241&amp;lon=-1.26315&amp;zoom=15&amp;layers=M</a>) as a lake, but the Garmin GPS version renders the pond as woodland. The GPS knows that the pond is there, as the land description changes from Woods to Lake when the cursor is moved over the pond. Another small lake (<a href="https://www.openstreetmap.org/?lat=50.842&amp;lon=-1.255&amp;zoom=22">at long -1.255, lat 50.842</a>) shows the same problem, but other small lakes in the same area render correctly on both versions of the map. I had intended to correct the problem, but looking at the OSM data in Potlatch 2, I can see no difference between the mapping of the ponds that render correctly and the ones that do not. Can anyone help?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-pond" rel="tag" title="see questions tagged &#39;pond&#39;">pond</span> <span class="post-tag tag-link-landuse" rel="tag" title="see questions tagged &#39;landuse&#39;">landuse</span> <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-forest" rel="tag" title="see questions tagged &#39;forest&#39;">forest</span> <span class="post-tag tag-link-lake" rel="tag" title="see questions tagged &#39;lake&#39;">lake</span>
@@ -119,7 +119,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>As noted by gnurk, these areas overlap each other - so different renderings will draw things in different orders and only one may come out on top of such conflicting area types of water and forest.</p>
-<p>Luckily with my new found Potlatch 2 shortcut and usage++, I think I've been able to fix it with this edit to set it to multi-polygon relations (and other ponds/lakes nearby): <a href="http://www.openstreetmap.org/browse/changeset/11349850">http://www.openstreetmap.org/browse/changeset/11349850</a></p>
+<p>Luckily with my new found Potlatch 2 shortcut and usage++, I think I've been able to fix it with this edit to set it to multi-polygon relations (and other ponds/lakes nearby): <a href="https://www.openstreetmap.org/browse/changeset/11349850">https://www.openstreetmap.org/browse/changeset/11349850</a></p>
 <p>Obviously you'll have to wait for Talkytoaster's rerendering (normally every week or so) for the update.</p>
 <p>+In Potlatch 2, first select the outer (i.e. surrounding) area - then select with a control-click the inner area so two areas are selected. Then press 'h' and voila the multi-polygon relation is created. Unfortunately Potlatch 2 doesn't colour in the inner area blue. Hopefully normal mapnik renders (and Talkytoaster's) will.</p>
 <p>Edit: In fact the order of selection shouldn't matter as Potlatch2 is clever enough to work out which is the larger outer and small inner areas.</p>
@@ -157,7 +157,7 @@ osqa_accepted = true
 <div id="post-12229-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks for your answer. Could I ask you to look at Abshot Pond (<a href="http://www.openstreetmap.org/?lat=50.8494&amp;lon=-1.266458&amp;zoom=18&amp;layers=M),which">http://www.openstreetmap.org/?lat=50.8494&amp;lon=-1.266458&amp;zoom=18&amp;layers=M),which</a> renders correctly on Mapsource and on the GPS, but which does not seem to be part of a multipolygon relation with the surrounding woods. Is that just luck?</p>
+<p>Thanks for your answer. Could I ask you to look at Abshot Pond (<a href="https://www.openstreetmap.org/?lat=50.8494&amp;lon=-1.266458&amp;zoom=18&amp;layers=M),which">https://www.openstreetmap.org/?lat=50.8494&amp;lon=-1.266458&amp;zoom=18&amp;layers=M),which</a> renders correctly on Mapsource and on the GPS, but which does not seem to be part of a multipolygon relation with the surrounding woods. Is that just luck?</p>
 </div>
 <div id="comment-12229-info" class="comment-info">
 <span class="comment-age">(21 Apr '12, 10:02)</span> <span class="comment-user userinfo">Madryn</span>
@@ -210,7 +210,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://www.openstreetmap.org/browse/way/23131215">The Bronwich Pond</a> is completely covered by the surrounding <a href="http://www.openstreetmap.org/browse/way/126083427">landuse=forest-area</a> so that's probably the reason why it's rendered as forestration in some maps. The problem had most likely not occurred if someone had put the pond in a hole in the forest (using a relation in OSM).</p>
+<p><a href="https://www.openstreetmap.org/browse/way/23131215">The Bronwich Pond</a> is completely covered by the surrounding <a href="https://www.openstreetmap.org/browse/way/126083427">landuse=forest-area</a> so that's probably the reason why it's rendered as forestration in some maps. The problem had most likely not occurred if someone had put the pond in a hole in the forest (using a relation in OSM).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

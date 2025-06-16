@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm using Mapbox Studio to create a Mapbox style.</p>
-<p>However, I don't know how to show the labels of aeroways like <a href="http://www.openstreetmap.org/#map=16/16.0520/108.2044">Openstreetmap</a>.</p>
+<p>However, I don't know how to show the labels of aeroways like <a href="https://www.openstreetmap.org/#map=16/16.0520/108.2044">Openstreetmap</a>.</p>
 <p>You can see the labels are showing on the right side.</p>
 <p><img src="http://i.stack.imgur.com/eTJc4.jpg" alt="The labels are showing on the right side" /></p>
 </div>
@@ -77,8 +77,8 @@ osqa_accepted = false
 <div id="post-44311-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5/richard">@Richard</a>: When I try to edit maps on OSM website, I see "source" is "Bing". What can I do now?</p>
-<p><img src="http://help.openstreetmap.org/upfiles/source.PNG" alt="alt text" /></p>
+<p><a href="https://help.openstreetmap.org/users/5/richard">@Richard</a>: When I try to edit maps on OSM website, I see "source" is "Bing". What can I do now?</p>
+<p><img src="/upfiles/source.PNG" alt="alt text" /></p>
 </div>
 <div id="comment-44311-info" class="comment-info">
 <span class="comment-age">(21 Jul '15, 10:17)</span> <span class="comment-user userinfo">trinhnguyens...</span>
@@ -101,7 +101,7 @@ osqa_accepted = false
 <div id="post-44316-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>OK. I will. Thank you, <a href="http://help.openstreetmap.org/users/5/richard">@Richard</a>. I will update the result after I get their response.</p>
+<p>OK. I will. Thank you, <a href="https://help.openstreetmap.org/users/5/richard">@Richard</a>. I will update the result after I get their response.</p>
 </div>
 <div id="comment-44316-info" class="comment-info">
 <span class="comment-age">(21 Jul '15, 11:07)</span> <span class="comment-user userinfo">trinhnguyens...</span>

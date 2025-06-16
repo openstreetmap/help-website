@@ -109,10 +109,10 @@ osqa_accepted = true
 <p>Current solutions you can try are:</p>
 <ul>
 <li><a href="http://www.itoworld.com/product/data/ito_map/">ITO Map</a> now lets you pick a layer highlighting recent edits in the last 7 or 90 days. You can also get a permalink to it.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OSM_Mapper">ITO's OSM Mapper</a>. 'Subscribe' to create an account there. Create an 'area'. Put it in 'users' display mode, then sort the users in the right hand table by 'total' edits, for a colourful view of who's edited what (and who's edited most) in your area. You can do a similar coloured view of edits over time.</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL OpenStreetMap WatchList</a>, which shows changes in tiled data areas or an arbitrary bounding box, and does <em>not</em> include changes which span either side of the area, unless they touch objects in the area of interest.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OSM_Mapper">ITO's OSM Mapper</a>. 'Subscribe' to create an account there. Create an 'area'. Put it in 'users' display mode, then sort the users in the right hand table by 'total' edits, for a colourful view of who's edited what (and who's edited most) in your area. You can do a similar coloured view of edits over time.</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OWL_%28OpenStreetMap_Watch_List%29">OWL OpenStreetMap WatchList</a>, which shows changes in tiled data areas or an arbitrary bounding box, and does <em>not</em> include changes which span either side of the area, unless they touch objects in the area of interest.</li>
 </ul>
-<p>It's now one of the <a href="http://wiki.openstreetmap.org/wiki/Top_Ten_Tasks">Top Ten Tasks</a> to try to tackle this, but as a matter of fact, when I added the 'big' label on the history display, it was my intention to prompt people in the direction of <em>disallowing</em> big edits, but for some reason everyone just talks about how to not display them.</p>
+<p>It's now one of the <a href="https://wiki.openstreetmap.org/wiki/Top_Ten_Tasks">Top Ten Tasks</a> to try to tackle this, but as a matter of fact, when I added the 'big' label on the history display, it was my intention to prompt people in the direction of <em>disallowing</em> big edits, but for some reason everyone just talks about how to not display them.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -191,7 +191,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Answers to <a href="http://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area">how-do-i-see-the-history-for-my-area</a> cover most of the ground. However, the basic answer is OWL. Used with the Atom feed this really simplifies keeping an eye on a given area.</p>
+<p>Answers to <a href="/questions/7/how-do-i-see-the-history-for-my-area">how-do-i-see-the-history-for-my-area</a> cover most of the ground. However, the basic answer is OWL. Used with the Atom feed this really simplifies keeping an eye on a given area.</p>
 <p>Some people have also created twitter feeds for specific areas such as <a href="http://twitter.com/osmeastriding">East Yorkshire</a> and the <a href="http://twitter.com/osmjp_ouu">area of Japan</a> affected by the recent earthquake and tsunami. I don't know if they used OWL or not.</p>
 </div>
 <div class="answer-controls post-controls">

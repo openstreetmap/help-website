@@ -204,7 +204,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="http://help.openstreetmap.org/upfiles/license_box_2.bmp" alt="alt text" />Sorry about delay, couldn't put in comment.</p>
+<p><img src="/upfiles/license_box_2.bmp" alt="alt text" />Sorry about delay, couldn't put in comment.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -258,7 +258,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have found a way to get around this problem by going here to see, or to upload a trace <a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/traces</a></p>
+<p>I have found a way to get around this problem by going here to see, or to upload a trace <a href="https://www.openstreetmap.org/traces">https://www.openstreetmap.org/traces</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

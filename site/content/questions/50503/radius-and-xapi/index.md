@@ -107,8 +107,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'm afraid, XAPI doesn't support radius. XAPI is quite a dated query langugage and only covers a very small subset of what is otherwise possible with Overpass QL or XML.</p>
-<p>For an example using <code>around</code> in Overpass QL ("Find all cinemas in Bonn which are at most 100m away from bus stops"), please take a look at the documentation on the OSM wiki: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29</a></p>
-<p>BTW: To migrate your old XAPI queries to current Overpass QL, you can leverage the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer#Migrating_from_XAPI_Compatibility_Layer_to_Overpass_XML_.2F_QL">migration guide</a>.</p>
+<p>For an example using <code>around</code> in Overpass QL ("Find all cinemas in Bonn which are at most 100m away from bus stops"), please take a look at the documentation on the OSM wiki: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Relative_to_other_elements_.28around.29</a></p>
+<p>BTW: To migrate your old XAPI queries to current Overpass QL, you can leverage the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer#Migrating_from_XAPI_Compatibility_Layer_to_Overpass_XML_.2F_QL">migration guide</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

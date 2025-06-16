@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower</a> is used on points, and <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=</a>* is used on areas.</p>
+<p>Generally <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower</a> is used on points, and <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=</a>* is used on areas.</p>
 <p>I wouldn't worry about the key part in the key=value tagging structure too much, as the tagging structure has evolved over time. In my opinion it is what the combination represents that is most important rather than the actual values that are used.</p>
 <p>There is nothing to stop you using both man_made=tower and building=tower on whatever node or area you create when mapping towers, or you could draw a building area for a building at the base and add a node to represent the position of the tower on that building, or various other combinations. Be aware that not all different renderings of the database will show both (or even either) of the items (which can be true of anything in the database).</p>
 </div>

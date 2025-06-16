@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The easiest way of merging the poly files is to convert them to .osm format using poly2osm.pl from <a href="http://svn.openstreetmap.org/applications/utils/osm-extract/polygons,">http://svn.openstreetmap.org/applications/utils/osm-extract/polygons,</a> then combine them in JOSM, and convert them back with osm2poly.pl. However, if you are not too picky about the US-Mexico boundary, you could also use JOSM to quickly draw a polygon around the US and Canada by hand, save that, and convert to .poly.</p>
-<p>Regarding your Osmosis question, yes it is possible, and examples for that are <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Examples">on the Wiki</a>.</p>
+<p>Regarding your Osmosis question, yes it is possible, and examples for that are <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Examples">on the Wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

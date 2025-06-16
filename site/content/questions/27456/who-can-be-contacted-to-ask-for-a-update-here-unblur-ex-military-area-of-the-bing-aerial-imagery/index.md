@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/#map=17/52.26790/6.89541">These specific areas</a> are former military airfields and where blurred accordingly. They were sold to the public and the blurry should be removed. How long does it take to change the Bing aerial photographs and who is responsible ?</p>
+<p><a href="https://www.openstreetmap.org/#map=17/52.26790/6.89541">These specific areas</a> are former military airfields and where blurred accordingly. They were sold to the public and the blurry should be removed. How long does it take to change the Bing aerial photographs and who is responsible ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bing" rel="tag" title="see questions tagged &#39;bing&#39;">bing</span> <span class="post-tag tag-link-aerials" rel="tag" title="see questions tagged &#39;aerials&#39;">aerials</span> <span class="post-tag tag-link-blurry" rel="tag" title="see questions tagged &#39;blurry&#39;">blurry</span>

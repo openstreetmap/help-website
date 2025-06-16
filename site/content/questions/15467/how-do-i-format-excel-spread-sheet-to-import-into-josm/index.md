@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First of all, do you have read (and understand) the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>?</p>
+<p>First of all, do you have read (and understand) the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a>?</p>
 <p>If you intend to import data with josm, you have to be sure of what you're doing. Maybe the best solution is to give your data to someone with experience.</p>
 <p>Where can we see your file to understand the error?</p>
 </div>

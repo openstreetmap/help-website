@@ -115,8 +115,8 @@ add give-way sign/stop sign</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>for HeavyGoodsVehicle have a look at <a href="http://wiki.openstreetmap.org/wiki/Key:access">wiki/Key:access</a> and search there for HGV.</p>
-<p>furthermore <a href="http://wiki.openstreetmap.org/wiki/Key:lit">wiki/Key:lit</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dstop">wiki/Tag:highway%3Dstop</a></p>
+<p>for HeavyGoodsVehicle have a look at <a href="https://wiki.openstreetmap.org/wiki/Key:access">wiki/Key:access</a> and search there for HGV.</p>
+<p>furthermore <a href="https://wiki.openstreetmap.org/wiki/Key:lit">wiki/Key:lit</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dstop">wiki/Tag:highway%3Dstop</a></p>
 <p>you can see ... many features are described in the OSM wiki, so you can try its search function.</p>
 <p>and: I would NOT tag the single garden of a house because it is to much in detail.</p>
 </div>
@@ -138,7 +138,7 @@ add give-way sign/stop sign</p>
 2
 </div>
 <div class="comment-text">
-<p>You might not tag individual gardens, but some people do: <a href="http://mappa-mercia.org/?zoom=16&amp;lat=52.56047&amp;lon=-1.82078&amp;layers=B%20">http://mappa-mercia.org/?zoom=16&amp;lat=52.56047&amp;lon=-1.82078&amp;layers=B%20</a> This is one example way <a href="http://www.openstreetmap.org/browse/way/95680742">http://www.openstreetmap.org/browse/way/95680742</a> and I have seen some discussion as to whether leisure=garden/access=private or landuse=residential/residential=garden should be used. There is a trac ticket relating to the former: <a href="http://trac.openstreetmap.org/ticket/3302">http://trac.openstreetmap.org/ticket/3302</a></p>
+<p>You might not tag individual gardens, but some people do: <a href="http://mappa-mercia.org/?zoom=16&amp;lat=52.56047&amp;lon=-1.82078&amp;layers=B%20">http://mappa-mercia.org/?zoom=16&amp;lat=52.56047&amp;lon=-1.82078&amp;layers=B%20</a> This is one example way <a href="https://www.openstreetmap.org/browse/way/95680742">https://www.openstreetmap.org/browse/way/95680742</a> and I have seen some discussion as to whether leisure=garden/access=private or landuse=residential/residential=garden should be used. There is a trac ticket relating to the former: <a href="http://trac.openstreetmap.org/ticket/3302">http://trac.openstreetmap.org/ticket/3302</a></p>
 </div>
 <div id="comment-7125-info" class="comment-info">
 <span class="comment-age">(16 Aug '11, 16:34)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -150,7 +150,7 @@ add give-way sign/stop sign</p>
 1
 </div>
 <div class="comment-text">
-<p>Sorry to comment on my own comment, but I just spotted this which also relates: <a href="http://wiki.openstreetmap.org/wiki/Talk:Tag:leisure%3Dgarden#Deprecate_this_for_private.2C_residential_gardens.3F">http://wiki.openstreetmap.org/wiki/Talk:Tag:leisure%3Dgarden#Deprecate_this_for_private.2C_residential_gardens.3F</a></p>
+<p>Sorry to comment on my own comment, but I just spotted this which also relates: <a href="https://wiki.openstreetmap.org/wiki/Talk:Tag:leisure%3Dgarden#Deprecate_this_for_private.2C_residential_gardens.3F">https://wiki.openstreetmap.org/wiki/Talk:Tag:leisure%3Dgarden#Deprecate_this_for_private.2C_residential_gardens.3F</a></p>
 </div>
 <div id="comment-7126-info" class="comment-info">
 <span class="comment-age">(16 Aug '11, 16:35)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -193,17 +193,17 @@ add give-way sign/stop sign</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>First, you should post one question at a time only. This help tool is intended to build up a FAQ list and is designed to provide a list of replies for a single question.</p>
-<p>Second, about your tagging questions, I will provide a more generic solution : use our OSM wiki. On the <a href="http://www.openstreetmap.org/">main web site</a>, it is the link called "Documentation" on the left panel and it goes here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Main_Page">http://wiki.openstreetmap.org/wiki/Main_Page</a></p>
+<p>Second, about your tagging questions, I will provide a more generic solution : use our OSM wiki. On the <a href="https://www.openstreetmap.org/">main web site</a>, it is the link called "Documentation" on the left panel and it goes here:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Main_Page">https://wiki.openstreetmap.org/wiki/Main_Page</a></p>
 <p>This "wiki style" documentation is updated by all of us. If you search a tag, you can use the "Search" facility visible on the top right corner of the page.</p>
 <p>For instance, if you enter "hgv", you fall down into this wiki page:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a><br />
+<a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a><br />
 and you will discover the tag "hgv=no"</p>
 <p>If you search "lighting", you find this page:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Key:lit">http://wiki.openstreetmap.org/wiki/Key:lit</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Key:lit">https://wiki.openstreetmap.org/wiki/Key:lit</a></p>
 <p>If you type "give-way", the wiki provides a list of pages mentionning give-way and the first proposed page "Tag:highway=give way" is what you need:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dgive_way">http://wiki.openstreetmap.org/wiki/Tag:highway%3Dgive_way</a></p>
-<p>If you don't find an answer in the wiki, then <a href="http://wiki.openstreetmap.org/wiki/Contact">contact</a> the community through the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> or the <a href="http://forum.openstreetmap.org/">forums</a>. You can also check if your question has not been already posted on this help tool ;-)</p>
+<a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dgive_way">https://wiki.openstreetmap.org/wiki/Tag:highway%3Dgive_way</a></p>
+<p>If you don't find an answer in the wiki, then <a href="https://wiki.openstreetmap.org/wiki/Contact">contact</a> the community through the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing lists</a> or the <a href="http://forum.openstreetmap.org/">forums</a>. You can also check if your question has not been already posted on this help tool ;-)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

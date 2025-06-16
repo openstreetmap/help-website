@@ -190,7 +190,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a bookmarklet <a href="http://wiki.openstreetmap.org/wiki/OS_Locator_Musical_Chairs">here</a> that does it so I'm sure that you could get some info out of that :)</p>
+<p>There's a bookmarklet <a href="https://wiki.openstreetmap.org/wiki/OS_Locator_Musical_Chairs">here</a> that does it so I'm sure that you could get some info out of that :)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

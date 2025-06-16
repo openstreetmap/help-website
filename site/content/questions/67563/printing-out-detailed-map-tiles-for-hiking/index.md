@@ -242,7 +242,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/inkatlas_with_a_walked_gpx_trace.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/inkatlas_with_a_walked_gpx_trace.JPG" alt="alt text" /></p>
 <p>When i uploaded a walked gpx trace to inkatlas it looked like this. This was uploaded as answer so i could post the JPEG. I don't know how to put a pic in a comment. if you plot a route with a limited number of points you won't get curvy lines with most mapping software, but Garmin's Basecamp will route along paths as you plot points along your intended route. Please respond to our help</p>
 </div>
 <div class="answer-controls post-controls">

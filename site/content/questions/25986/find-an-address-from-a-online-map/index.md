@@ -138,7 +138,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the US there is a dataset called <a href="http://wiki.openstreetmap.org/wiki/TIGER">TIGER</a> ... maybe this can help you in a first step.</p>
+<p>For the US there is a dataset called <a href="https://wiki.openstreetmap.org/wiki/TIGER">TIGER</a> ... maybe this can help you in a first step.</p>
 <p>And there are already some information about TIGER Release 2013 at the Mapbox-blog <a href="http://www.mapbox.com/blog/new-in-tiger-2013/">new-in-tiger-2013</a></p>
 </div>
 <div class="answer-controls post-controls">

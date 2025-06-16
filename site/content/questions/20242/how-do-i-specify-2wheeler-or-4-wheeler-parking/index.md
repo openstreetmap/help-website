@@ -162,7 +162,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Devdatta, It depends on local laws. In some country's theres a law stating no parking allowed for 2 wheel motor vehicles (mc) in any parking space. So your allowed to park your vehicle anywhere else as long as it gives no trouble. In modern times they make special places in lost corners to prevent wild parking situations. I would use to tag, a place with no 2 wheelers parking, just that parking space with mc - no and is if it is allowed mc - yes and ad the other tags. Just accordingly to the tag scheme. Greetz ps this link could help a bit <a href="http://wiki.openstreetmap.org/wiki/Key:access">http://wiki.openstreetmap.org/wiki/Key:access</a></p>
+<p>Hi Devdatta, It depends on local laws. In some country's theres a law stating no parking allowed for 2 wheel motor vehicles (mc) in any parking space. So your allowed to park your vehicle anywhere else as long as it gives no trouble. In modern times they make special places in lost corners to prevent wild parking situations. I would use to tag, a place with no 2 wheelers parking, just that parking space with mc - no and is if it is allowed mc - yes and ad the other tags. Just accordingly to the tag scheme. Greetz ps this link could help a bit <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I reject my (still open) <a href="http://www.openstreetmap.org/browse/changeset/17889112">change set</a>? Unfortunately something went terribly wrong. In particular JOSM moved a street away. Now I moved it (approximated) back by hand.</p>
+<p>How can I reject my (still open) <a href="https://www.openstreetmap.org/browse/changeset/17889112">change set</a>? Unfortunately something went terribly wrong. In particular JOSM moved a street away. Now I moved it (approximated) back by hand.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span>
@@ -113,7 +113,7 @@ The solution for your problem I would suggest:</p>
 <li>(in a new data layer: download the region anew and check if everything is fine)</li>
 </ul>
 <p>PS: Don't get too upset about your error. Only who does nothing does nothing wrong. Maybe it soothes your mind if you have a look at <a href="http://forum.openstreetmap.org/viewtopic.php?id=22014&amp;p=3">errors other people made</a>. :)</p>
-<p>¹ <a href="http://www.openstreetmap.org/browse/changeset/17889112">here</a></p>
+<p>¹ <a href="https://www.openstreetmap.org/browse/changeset/17889112">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -190,7 +190,7 @@ The solution for your problem I would suggest:</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>It seems that you have closed this changeset already, or that it closed automatically after a delay. Annoyingly there is no way to "cancel" a changeset that has already been partially uploaded. OSM changeset do not map to database transactions.</p>
-<p>What you can do is "revert" a changeset, which actually involves creating another changeset that does the reverse of the original. The <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">josm revert plugin</a> helps with that. You can even do a partial revert, but it can become tricky quickly. If you do not trust yourself with this operation, feel free to ask for a revert here or on <a href="http://wiki.openstreetmap.org/wiki/Contact#IRC">irc</a>.</p>
+<p>What you can do is "revert" a changeset, which actually involves creating another changeset that does the reverse of the original. The <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">josm revert plugin</a> helps with that. You can even do a partial revert, but it can become tricky quickly. If you do not trust yourself with this operation, feel free to ask for a revert here or on <a href="https://wiki.openstreetmap.org/wiki/Contact#IRC">irc</a>.</p>
 <p>In case you hadn't spoted it, josm has a changeset manager in the windows menu. Not quite what you are looking for, but still useful. And of course, one of josm's advantage is that you can take your time (even save your work localy and come back to it days later) to check a changeset before you upload it.</p>
 </div>
 <div class="answer-controls post-controls">

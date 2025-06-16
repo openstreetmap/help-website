@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-88162-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>See <a href="https://help.openstreetmap.org/questions/88159/lost-secret-edit-link">https://help.openstreetmap.org/questions/88159/lost-secret-edit-link</a></p>
+<p>See <a href="/questions/88159/lost-secret-edit-link">https://help.openstreetmap.org/questions/88159/lost-secret-edit-link</a></p>
 </div>
 <div id="comment-88162-info" class="comment-info">
 <span class="comment-age">(16 Jan '24, 22:25)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

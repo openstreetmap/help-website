@@ -71,7 +71,7 @@ osqa_accepted = false
 <div id="post-45882-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I am not aware about any further source than the OSM wiki content at <a href="http://wiki.openstreetmap.org/wiki/Comparison_of_editors">http://wiki.openstreetmap.org/wiki/Comparison_of_editors</a> , like you said.</p>
+<p>I am not aware about any further source than the OSM wiki content at <a href="https://wiki.openstreetmap.org/wiki/Comparison_of_editors">https://wiki.openstreetmap.org/wiki/Comparison_of_editors</a> , like you said.</p>
 </div>
 <div id="comment-45882-info" class="comment-info">
 <span class="comment-age">(14 Oct '15, 16:29)</span> <span class="comment-user userinfo">stephan75</span>
@@ -126,7 +126,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>By "different type of Editors" do you mean "the humans doing the editing" or "the program that they use to do the editing"? There have been examples of studies of both, both "academic" and "non-academic". A quick web search for "volunteered geographic information study" throws a net over a few thousand of them.</p>
-<p>Whichever or whatever you're interested in, I'd look at more examples than you find just in the wiki (or just published academically for that matter). Often, formal or informal studies get written up on mailing lists and blogs (such as <a href="https://lists.openstreetmap.org/pipermail/talk/2013-August/067936.html">this one</a> that I did ages ago). You might find the "<a href="http://blogs.openstreetmap.org/">blogs</a>" and <a href="http://www.openstreetmap.org/diary">user diaries</a> links on osm.org useful, and blogs are often linked to from <a href="http://www.weeklyosm.eu/">http://www.weeklyosm.eu/</a> (which is available in several languages).</p>
+<p>Whichever or whatever you're interested in, I'd look at more examples than you find just in the wiki (or just published academically for that matter). Often, formal or informal studies get written up on mailing lists and blogs (such as <a href="https://lists.openstreetmap.org/pipermail/talk/2013-August/067936.html">this one</a> that I did ages ago). You might find the "<a href="http://blogs.openstreetmap.org/">blogs</a>" and <a href="https://www.openstreetmap.org/diary">user diaries</a> links on osm.org useful, and blogs are often linked to from <a href="http://www.weeklyosm.eu/">http://www.weeklyosm.eu/</a> (which is available in several languages).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -108,7 +108,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>One tool for visualising changesets is <a href="http://osmhv.openstreetmap.de/">OSM History Viewer</a> (<a href="http://wiki.openstreetmap.org/wiki/OSM_History_Viewer">wiki page</a>). It will generate a map, showing which objects were added, changed or removed in a changeset.</p>
+<p>One tool for visualising changesets is <a href="http://osmhv.openstreetmap.de/">OSM History Viewer</a> (<a href="https://wiki.openstreetmap.org/wiki/OSM_History_Viewer">wiki page</a>). It will generate a map, showing which objects were added, changed or removed in a changeset.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -176,7 +176,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are not correct, a changeset lists all changes. However it does not have enough information to plot it on a map because if e.g. a way tag is changed, the changeset does not necessarily contain all the way's nodes and thus it lacks information about the node geometry. Visualizing a changeset requires a local database with all OSM data.</p>
-<p>There is a tool in SVN that plots the difference between two osm data sets, called <a href="http://wiki.openstreetmap.org/wiki/Osmdiff">osmdiff</a> but I don't know of anything that actually plots a raw changeset.</p>
+<p>There is a tool in SVN that plots the difference between two osm data sets, called <a href="https://wiki.openstreetmap.org/wiki/Osmdiff">osmdiff</a> but I don't know of anything that actually plots a raw changeset.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -301,7 +301,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>Your answer might be more appropriate here though: <a href="https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area">https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area</a></p>
+<p>Your answer might be more appropriate here though: <a href="/questions/7/how-do-i-see-the-history-for-my-area">https://help.openstreetmap.org/questions/7/how-do-i-see-the-history-for-my-area</a></p>
 </div>
 <div id="comment-25817-info" class="comment-info">
 <span class="comment-age">(26 Aug '13, 15:03)</span> <span class="comment-user userinfo">Kozuch</span>

@@ -116,8 +116,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A previous question about aviation can be found here: <a href="http://help.openstreetmap.org/questions/3684/">Mapping for aviation</a></p>
-<p>Also see the <a href="http://wiki.openstreetmap.org/wiki/Aviation">Aviation article on our wiki.</a></p>
+<p>A previous question about aviation can be found here: <a href="/questions/3684/">Mapping for aviation</a></p>
+<p>Also see the <a href="https://wiki.openstreetmap.org/wiki/Aviation">Aviation article on our wiki.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

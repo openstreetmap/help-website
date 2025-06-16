@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I am still on the subject of u turns :)</p>
 <p>A two-way undivided Street A crosses a two-way divided Street B. This creates two intersection nodes. Street A has a no u turn sign at the intersection. I am thinking I should add a no_u_turn restriction on the farther of the two intersection points, where Street A would make a left turn onto Street B. It does not seem plausible that a routing algorithm, if it was looking for a U turn, would plot a U turn at the first intersection, where it would momentarily take the driver against the traffic. Yet, during the moments when I am feeling particularly distrustful of routing algorithms, I tend to add a this second no_u_turn restriction "just in case". But I don't feel good doing it.</p>
 <p>Is it safe to only add one turn restriction as described earlier? Has this configuration been tested on CloudMade? I can't come up with a way to click on their map to test such routing scenario (unlike the case of two divided roads intersecting, which is tested easily.)</p>
-<p><a href="http://www.openstreetmap.org/?lat=33.58591&amp;lon=-117.725175&amp;zoom=18&amp;layers=M">Here</a> is a sample intersection. Columbia at Aliso Viejo Pkwy</p>
+<p><a href="https://www.openstreetmap.org/?lat=33.58591&amp;lon=-117.725175&amp;zoom=18&amp;layers=M">Here</a> is a sample intersection. Columbia at Aliso Viejo Pkwy</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-turn_restrictions" rel="tag" title="see questions tagged &#39;turn_restrictions&#39;">turn_restrictions</span> <span class="post-tag tag-link-no_u_turn" rel="tag" title="see questions tagged &#39;no_u_turn&#39;">no_u_turn</span> <span class="post-tag tag-link-routing" rel="tag" title="see questions tagged &#39;routing&#39;">routing</span> <span class="post-tag tag-link-cloudmade" rel="tag" title="see questions tagged &#39;cloudmade&#39;">cloudmade</span>
@@ -183,7 +183,7 @@ One Answer:
 <div id="post-3634-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You could try <a href="http://yournavigation.org/"></a><a href="http://yournavigation.org"></a><a href="http://yournavigation.org">yournavigation.org</a>. It appears before cloudmade in most searches for "routing" and uses the same open source routing engine (Gosmore) as the <a href="http://wiki.openstreetmap.org/wiki/Osm.org_Routing_Demo"></a><a href="http://Osm.org"></a><a href="http://Osm.org">Osm.org</a> Routing Demo. They are both a couple of months out of date (Obtaining sponsorship for them has not been easy).</p>
+<p>You could try <a href="http://yournavigation.org/"></a><a href="http://yournavigation.org"></a><a href="http://yournavigation.org">yournavigation.org</a>. It appears before cloudmade in most searches for "routing" and uses the same open source routing engine (Gosmore) as the <a href="https://wiki.openstreetmap.org/wiki/Osm.org_Routing_Demo"></a><a href="http://Osm.org"></a><a href="http://Osm.org">Osm.org</a> Routing Demo. They are both a couple of months out of date (Obtaining sponsorship for them has not been easy).</p>
 <p>In 2008, no one, not even Cloudmade generated uturns back onto the same road. Surely we can't just abandon such a long standing convention. Furthermore, think of the vast number of additional turn restriction required.</p>
 </div>
 <div id="comment-3634-info" class="comment-info">

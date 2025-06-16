@@ -109,7 +109,7 @@ One Answer:
 <div class="answer-body">
 <p>Not sure if I've quite got what you want.</p>
 <p>The obvious apps serving tiles with some kind of 'walkers' layer are <a href="http://hikebikemap.de/">Hike and Bike Map</a>, and <a href="http://beta.letuffe.org/">http://beta.letuffe.org/</a>. Both have a render style meant for walkers and hill shading, but not contours. It might be possible to supplement this with transparent overlays from <a href="http://osm.lonvia.de/hiking.html">Lonvia</a> and/or Nick Whitelegg's <a href="http://www.free-map.org.uk/freemap/index.php">Freemap</a>. The latter now has contours, but not hill shading. Separate hill shading overlays are used by several of these sites, so it may be that Freemap is the best starting point.</p>
-<p>I dont think any of these have fast server resources, so I'd be chary about anything which might hit them hard. <a href="http://wiki.openstreetmap.org/wiki/OSMC_Reitkarte">OSMC</a> does not cover the UK, but would be worth considering in Central Europe.</p>
+<p>I dont think any of these have fast server resources, so I'd be chary about anything which might hit them hard. <a href="https://wiki.openstreetmap.org/wiki/OSMC_Reitkarte">OSMC</a> does not cover the UK, but would be worth considering in Central Europe.</p>
 <p>The cycle element of the cartography of OpenCycleMap is too strong to contemplate using it as a background with an overlay.</p>
 </div>
 <div class="answer-controls post-controls">

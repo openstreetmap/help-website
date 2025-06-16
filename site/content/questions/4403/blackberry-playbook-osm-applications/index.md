@@ -115,7 +115,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>By looking at some articles about the Playbook, it sounds like it will support both Android and JavaME apps in the future.</p>
-<p>If this should be true, there is a reasonably large selection of Apps for using OSM maps. You can find a (uncomplete) list of Apps for JavaME/Blackberry and Android on the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/J2ME">Software/J2ME</a> and <a href="http://wiki.openstreetmap.org/wiki/Android">Software/Android</a>. Some of these support offline vectorial maps (e.g. <a href="http://wiki.openstreetmap.org/wiki/GpsMid">GpsMid</a>)</p>
+<p>If this should be true, there is a reasonably large selection of Apps for using OSM maps. You can find a (uncomplete) list of Apps for JavaME/Blackberry and Android on the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/J2ME">Software/J2ME</a> and <a href="https://wiki.openstreetmap.org/wiki/Android">Software/Android</a>. Some of these support offline vectorial maps (e.g. <a href="https://wiki.openstreetmap.org/wiki/GpsMid">GpsMid</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

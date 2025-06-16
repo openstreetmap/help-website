@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need to split the way where the surface changes and then apply the surface separately to the resulting shorter ways. How you do this depends on the software you're using. There are instructions or the "default" iD editor in the answer to <a href="https://help.openstreetmap.org/questions/64918/how-do-i-split-a-roadway-where-the-name-changes-using-the-id-editor">this question</a>.</p>
+<p>You need to split the way where the surface changes and then apply the surface separately to the resulting shorter ways. How you do this depends on the software you're using. There are instructions or the "default" iD editor in the answer to <a href="/questions/64918/how-do-i-split-a-roadway-where-the-name-changes-using-the-id-editor">this question</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

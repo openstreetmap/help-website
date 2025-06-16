@@ -127,8 +127,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bonjour, jetez un œuil à cette <a href="http://help.openstreetmap.org/questions/7012/how-to-map-counter-flood-measures">précédente question</a> qui vous donnera quelques premiers éléments. Voir aussi les étiquettes <a href="http://wiki.openstreetmap.org/wiki/Key:flood_prone">flood_prone</a> et <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/floodplain">floodplain</a>.</p>
-<p>Hi, take a look at this <a href="http://help.openstreetmap.org/questions/7012/how-to-map-counter-flood-measures">previous question</a>, that will give you some first hints. See also the tags <a href="http://wiki.openstreetmap.org/wiki/Key:flood_prone">flood_prone</a> and <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/floodplain">floodplain</a>.</p>
+<p>Bonjour, jetez un œuil à cette <a href="/questions/7012/how-to-map-counter-flood-measures">précédente question</a> qui vous donnera quelques premiers éléments. Voir aussi les étiquettes <a href="https://wiki.openstreetmap.org/wiki/Key:flood_prone">flood_prone</a> et <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/floodplain">floodplain</a>.</p>
+<p>Hi, take a look at this <a href="/questions/7012/how-to-map-counter-flood-measures">previous question</a>, that will give you some first hints. See also the tags <a href="https://wiki.openstreetmap.org/wiki/Key:flood_prone">flood_prone</a> and <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/floodplain">floodplain</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -181,9 +181,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Je commencerais par la lecture de <a href="http://wiki.openstreetmap.org/wiki/FR:Beginners%27_guide">cette page</a> sur le wiki OSM.</p>
+<p>Je commencerais par la lecture de <a href="https://wiki.openstreetmap.org/wiki/FR:Beginners%27_guide">cette page</a> sur le wiki OSM.</p>
 <p>Je me renseignerais aussi sur l "équipe humanitaire OpenStreetMap" <a href="http://hot.openstreetmap.org/">ici</a>.</p>
-<p>(I'd start by reading <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">this page</a> in the OSM wiki.</p>
+<p>(I'd start by reading <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">this page</a> in the OSM wiki.</p>
 <p>I'd also have a read about the "Humanitarian OpenStreetMap Team" <a href="http://hot.openstreetmap.org/">here</a>)</p>
 </div>
 <div class="answer-controls post-controls">

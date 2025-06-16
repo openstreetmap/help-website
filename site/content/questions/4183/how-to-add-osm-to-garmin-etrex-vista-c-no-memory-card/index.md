@@ -117,7 +117,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Most people who generate maps for Garmin's will create two forms: a <code>gmapsupp.img</code> for loading directly onto an external memory card, and a MapSource compatible version. You will need a MapSource compatible version (and ideally MapSource). Many will of these will come with a windows installer, but if that is not available a tool called MapSetToolkit can be used to add the information to the registry. An alternative to MapSource is <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/QLandkarte">QLandKarte</a>. I cannot add anything on loading maps from a Mac or a Linux platform.</p>
+<p>Most people who generate maps for Garmin's will create two forms: a <code>gmapsupp.img</code> for loading directly onto an external memory card, and a MapSource compatible version. You will need a MapSource compatible version (and ideally MapSource). Many will of these will come with a windows installer, but if that is not available a tool called MapSetToolkit can be used to add the information to the registry. An alternative to MapSource is <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/QLandkarte">QLandKarte</a>. I cannot add anything on loading maps from a Mac or a Linux platform.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,8 +167,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Garmin">Garmin</a> in the OSM wiki --&gt; subpage etrex ... there you can find more info.</p>
-<p>And in general: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a></p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Garmin">Garmin</a> in the OSM wiki --&gt; subpage etrex ... there you can find more info.</p>
+<p>And in general: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM_Map_On_Garmin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

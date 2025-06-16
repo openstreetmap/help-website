@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Take this hypothetical intersection for example:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/20150727.png" alt="Map of a hypothetical intersection" /></p>
+<p><img src="/upfiles/20150727.png" alt="Map of a hypothetical intersection" /></p>
 <p>To turn left, one has to use the link road, and as such turning at the node where the streets cross isn't permitted. However, this in no way means that turning left isn't allowed at the intersection, and no prohibiting signs exist. (The same goes for U-turns.)</p>
 <p>Should turn restrictions be added as in the picture? This would more closely reflect the functional reality, but I wonder if it might confuse human users who aren't expecting to see such symbols on the map. Is there a tag to note that a restriction is purely functional and shouldn't have a sign rendered?</p>
 </div>
@@ -118,7 +118,7 @@ osqa_accepted = true
 <p>To turn left, one has to use the link road, and as such turning at the node where the streets cross isn't permitted. However, this in no way means that turning left isn't allowed at the intersection, and no prohibiting signs exist. (The same goes for U-turns.)</p>
 </blockquote>
 <p>The import question is: "Is it legal to make a left turn here?" If "no", then you should add a turn restriction. If "yes", then you should not.</p>
-<p>Whether it's legal depends on many things: (i) Is there a sign? (ii) Is there lane road markings that essentially means "This lane is only for straight on" (you can add <a href="http://wiki.openstreetmap.org/wiki/Key:turn:lanes">turning lane tags too</a>) (iii) Some other local law that makes a left turn here illegal.</p>
+<p>Whether it's legal depends on many things: (i) Is there a sign? (ii) Is there lane road markings that essentially means "This lane is only for straight on" (you can add <a href="https://wiki.openstreetmap.org/wiki/Key:turn:lanes">turning lane tags too</a>) (iii) Some other local law that makes a left turn here illegal.</p>
 <blockquote>
 <p>I wonder if it might confuse human users who aren't expecting to see such symbols on the map.</p>
 </blockquote>

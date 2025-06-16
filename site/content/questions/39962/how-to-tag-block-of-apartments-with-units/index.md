@@ -44,8 +44,8 @@ osqa_accepted = true
 <p>This is the apartment complex in question:</p>
 <ul>
 <li>Address: Hermann Broch-Gasse 1, Wien / Vienna, Austria</li>
-<li>Way link: <a href="http://www.openstreetmap.org/way/90032986">http://www.openstreetmap.org/way/90032986</a></li>
-<li>Geo coordinates link: <a href="http://www.openstreetmap.org/#map=19/48.16516/16.30273">http://www.openstreetmap.org/#map=19/48.16516/16.30273</a></li>
+<li>Way link: <a href="https://www.openstreetmap.org/way/90032986">https://www.openstreetmap.org/way/90032986</a></li>
+<li>Geo coordinates link: <a href="https://www.openstreetmap.org/#map=19/48.16516/16.30273">https://www.openstreetmap.org/#map=19/48.16516/16.30273</a></li>
 </ul>
 <p>What I have done so far:</p>
 <ol>
@@ -95,7 +95,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>This is an interesting example; it might be worth adding to the wiki page <a href="http://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments">http://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments</a></p>
+<p>This is an interesting example; it might be worth adding to the wiki page <a href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments">https://wiki.openstreetmap.org/wiki/Tag:building%3Dapartments</a></p>
 </div>
 <div id="comment-39964-info" class="comment-info">
 <span class="comment-age">(02 Jan '15, 11:34)</span> <span class="comment-user userinfo">SK53 ♦</span>

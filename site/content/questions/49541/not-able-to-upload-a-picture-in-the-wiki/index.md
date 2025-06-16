@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "not able to upload a picture in the wiki"
-description = '''Hello together, I am not able to upload a picture to the data base for linking it in the wiki page, the description is following: https://www.mediawiki.org/wiki/Help:Managing_files#Upload_a_file But I can&#x27;t find the &quot;tool&quot; &quot;Upload File&quot; in the sidebar on this pagehttp://wiki.openstreetmap.org/wiki/D...'''
+description = '''Hello together, I am not able to upload a picture to the data base for linking it in the wiki page, the description is following: https://www.mediawiki.org/wiki/Help:Managing_files#Upload_a_file But I can&#x27;t find the &quot;tool&quot; &quot;Upload File&quot; in the sidebar on this pagehttps://wiki.openstreetmap.org/wiki/D...'''
 date = "2016-05-01T17:35:00Z"
 lastmod = "2016-05-01T21:12:00Z"
 weight = 49541
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello together,</p>
 <p>I am not able to upload a picture to the data base for linking it in the wiki page, the description is following:</p>
 <p><a href="https://www.mediawiki.org/wiki/Help:Managing_files#Upload_a_file">https://www.mediawiki.org/wiki/Help:Managing_files#Upload_a_file</a></p>
-<p>But I can't find the "tool" "Upload File" in the sidebar on this page<a href="http://page"></a><a href="http://wiki.openstreetmap.org/wiki/DE:Android">http://wiki.openstreetmap.org/wiki/DE:Android</a> , so how can I upload file to the wiki data base?</p>
+<p>But I can't find the "tool" "Upload File" in the sidebar on this page<a href="http://page"></a><a href="https://wiki.openstreetmap.org/wiki/DE:Android">https://wiki.openstreetmap.org/wiki/DE:Android</a> , so how can I upload file to the wiki data base?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-wiki" rel="tag" title="see questions tagged &#39;wiki&#39;">wiki</span> <span class="post-tag tag-link-upload" rel="tag" title="see questions tagged &#39;upload&#39;">upload</span>

@@ -43,8 +43,8 @@ osqa_accepted = false
 <p>However, I would like to find them all with an overpass query.</p>
 <p>I'm comfortable using the overpass Wizard but need help with a specialized query like this. Can anyone help?</p>
 <p>Here's an example of two closed ways that are identical in shape and location. These happen two have "inner" roles in a multipoloygon and were found by OSMOSE.</p>
-<p><a href="http://www.openstreetmap.org/way/232838623">http://www.openstreetmap.org/way/232838623</a></p>
-<p><a href="http://www.openstreetmap.org/way/232838622">http://www.openstreetmap.org/way/232838622</a></p>
+<p><a href="https://www.openstreetmap.org/way/232838623">https://www.openstreetmap.org/way/232838623</a></p>
+<p><a href="https://www.openstreetmap.org/way/232838622">https://www.openstreetmap.org/way/232838622</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-overpass" rel="tag" title="see questions tagged &#39;overpass&#39;">overpass</span> <span class="post-tag tag-link-osmose" rel="tag" title="see questions tagged &#39;osmose&#39;">osmose</span> <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span> <span class="post-tag tag-link-script" rel="tag" title="see questions tagged &#39;script&#39;">script</span>

@@ -111,8 +111,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The running costs of the server infrastructure is thankfully nowhere near $100,000. Server hosting costs are negligible thanks to <a href="http://wiki.openstreetmap.org/wiki/Partners">generous hosting supporters</a>.</p>
-<p>Bit out of date, but exact costs of the <a href="http://wiki.openstreetmap.org/wiki/Servers/Upgrades">hardware upgrade costs</a>.</p>
+<p>The running costs of the server infrastructure is thankfully nowhere near $100,000. Server hosting costs are negligible thanks to <a href="https://wiki.openstreetmap.org/wiki/Partners">generous hosting supporters</a>.</p>
+<p>Bit out of date, but exact costs of the <a href="https://wiki.openstreetmap.org/wiki/Servers/Upgrades">hardware upgrade costs</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">
@@ -137,7 +137,7 @@ This answer is marked "community wiki".
 <div id="post-9891-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>there was also a recent call for individual donations to upgrade servers: <a href="http://wiki.openstreetmap.org/wiki/New_server_and_fund_raising_drive_2011">http://wiki.openstreetmap.org/wiki/New_server_and_fund_raising_drive_2011</a> and <a href="http://donate.openstreetmap.org/server2011/">http://donate.openstreetmap.org/server2011/</a> , to which everyone here could donate (but the funding target has been more than matched by now)</p>
+<p>there was also a recent call for individual donations to upgrade servers: <a href="https://wiki.openstreetmap.org/wiki/New_server_and_fund_raising_drive_2011">https://wiki.openstreetmap.org/wiki/New_server_and_fund_raising_drive_2011</a> and <a href="http://donate.openstreetmap.org/server2011/">http://donate.openstreetmap.org/server2011/</a> , to which everyone here could donate (but the funding target has been more than matched by now)</p>
 </div>
 <div id="comment-9891-info" class="comment-info">
 <span class="comment-age">(10 Jan '12, 18:51)</span> <span class="comment-user userinfo">Herve5</span>

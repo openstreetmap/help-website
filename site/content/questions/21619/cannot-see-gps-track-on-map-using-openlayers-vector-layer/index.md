@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cannot see GPS track on map using OpenLayers vector layer"
-description = '''Sorry for the bad formatting as I am new to this. I am using the code from here: http://wiki.openstreetmap.org/wiki/Openlayers_Track_example and I have used the GPX data from here: http://forum.openstreetmap.org/viewtopic.php?id=17278 and stored it in a static file on disk c:&#92;tracks.gpx And this is ...'''
+description = '''Sorry for the bad formatting as I am new to this. I am using the code from here: https://wiki.openstreetmap.org/wiki/Openlayers_Track_example and I have used the GPX data from here: http://forum.openstreetmap.org/viewtopic.php?id=17278 and stored it in a static file on disk c:&#92;tracks.gpx And this is ...'''
 date = "2013-04-17T09:10:00Z"
 lastmod = "2013-04-19T02:59:00Z"
 weight = 21619
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Sorry for the bad formatting as I am new to this.</p>
-<p>I am using the code from here: <a href="http://wiki.openstreetmap.org/wiki/Openlayers_Track_example">http://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a></p>
+<p>I am using the code from here: <a href="https://wiki.openstreetmap.org/wiki/Openlayers_Track_example">https://wiki.openstreetmap.org/wiki/Openlayers_Track_example</a></p>
 <p>and I have used the GPX data from here: <a href="http://forum.openstreetmap.org/viewtopic.php?id=17278">http://forum.openstreetmap.org/viewtopic.php?id=17278</a> and stored it in a static file on disk c:\tracks.gpx</p>
 <p>And this is how I create the layer:</p>
 <pre><code>var lgpx = new OpenLayers.Layer.Vector(&quot;Lakeside cycle ride&quot;, &quot;c:/tracks.gpx&quot;,{

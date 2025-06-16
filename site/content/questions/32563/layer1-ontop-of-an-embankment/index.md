@@ -118,7 +118,7 @@ osqa_accepted = false
 <div id="post-32593-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi, take a look here, the tiles dont look right <a href="http://www.openstreetmap.org/#map=16/52.3296/6.6838">http://www.openstreetmap.org/#map=16/52.3296/6.6838</a></p>
+<p>Hi, take a look here, the tiles dont look right <a href="https://www.openstreetmap.org/#map=16/52.3296/6.6838">https://www.openstreetmap.org/#map=16/52.3296/6.6838</a></p>
 </div>
 <div id="comment-32593-info" class="comment-info">
 <span class="comment-age">(24 Apr '14, 00:02)</span> <span class="comment-user userinfo">Hendrikklaas</span>

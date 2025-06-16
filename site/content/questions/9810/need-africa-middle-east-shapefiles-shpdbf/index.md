@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are shapefiles made from OpenStreetMap data available for free from a couple of companies, Geofabrik and Cloudmade. See the <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles documentation</a> on the wiki for more details. This will also tell you how to make your own shapefiles if none of the prepared ones fit your needs.</p>
+<p>There are shapefiles made from OpenStreetMap data available for free from a couple of companies, Geofabrik and Cloudmade. See the <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles documentation</a> on the wiki for more details. This will also tell you how to make your own shapefiles if none of the prepared ones fit your needs.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

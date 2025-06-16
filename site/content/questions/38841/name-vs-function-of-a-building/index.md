@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I think there is an ambiguity in tagging historical buildings: several of them preserve their historical name, but their usage is now different. Similarly, it is not uncommon that seats of local administrations/companies/associations are buildings which have their own name. For instance, <a href="http://www.openstreetmap.org/relation/3342119">http://www.openstreetmap.org/relation/3342119</a> may be named Rocca dei Rettori as that's the name of the building, or Provincia di Benevento as that's the institution based there. What is the solution in these cases?</p>
+<p>I think there is an ambiguity in tagging historical buildings: several of them preserve their historical name, but their usage is now different. Similarly, it is not uncommon that seats of local administrations/companies/associations are buildings which have their own name. For instance, <a href="https://www.openstreetmap.org/relation/3342119">https://www.openstreetmap.org/relation/3342119</a> may be named Rocca dei Rettori as that's the name of the building, or Provincia di Benevento as that's the institution based there. What is the solution in these cases?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The title may or may not be misleading, could not come up with a better word. <a href="http://www.openstreetmap.org/browse/way/232471692">This area</a> is obviously not a parking area, but an area for trucks to gather while waiting for the ferry, see <a href="http://binged.it/19E4DkR">Bing aerial</a>. The best tag I could find was <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dferry_terminal">ferry terminal</a>, but the nodes on the coastline that connects to the ferries themselves are tagged as that already. Would <a href="https://wiki.openstreetmap.org/wiki/Tag:mooring%3Dferry">mooring=ferry</a> be better for these nodes? Or is some other tag preferred?</p>
+<p>The title may or may not be misleading, could not come up with a better word. <a href="https://www.openstreetmap.org/browse/way/232471692">This area</a> is obviously not a parking area, but an area for trucks to gather while waiting for the ferry, see <a href="http://binged.it/19E4DkR">Bing aerial</a>. The best tag I could find was <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dferry_terminal">ferry terminal</a>, but the nodes on the coastline that connects to the ferries themselves are tagged as that already. Would <a href="https://wiki.openstreetmap.org/wiki/Tag:mooring%3Dferry">mooring=ferry</a> be better for these nodes? Or is some other tag preferred?</p>
 <p>Tagging guidelines would be appreciated!</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi look here <a href="http://www.openstreetmap.org/#map=16/56.1611/10.2199">http://www.openstreetmap.org/#map=16/56.1611/10.2199</a> the entire terminal is tagged as ferry terminal. Mooring=ferry, should IMHO get seamark:mooring:category=ferry with operator=the ferry company.</p>
+<p>Hi look here <a href="https://www.openstreetmap.org/#map=16/56.1611/10.2199">https://www.openstreetmap.org/#map=16/56.1611/10.2199</a> the entire terminal is tagged as ferry terminal. Mooring=ferry, should IMHO get seamark:mooring:category=ferry with operator=the ferry company.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

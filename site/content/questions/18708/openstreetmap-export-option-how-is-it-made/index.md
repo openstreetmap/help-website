@@ -40,7 +40,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm running my own mapserver with OpenStreetMap and i'd like to add an export function like on <a href="http://www.openstreetmap.org/export/">OpenStreetMap</a></p>
+<p>I'm running my own mapserver with OpenStreetMap and i'd like to add an export function like on <a href="https://www.openstreetmap.org/export/">OpenStreetMap</a></p>
 <p>Where can i find an example (html / javascript / ...)</p>
 <p>I can't find any information about the export functionality other then links to the OpenStreetMap home page.</p>
 </div>

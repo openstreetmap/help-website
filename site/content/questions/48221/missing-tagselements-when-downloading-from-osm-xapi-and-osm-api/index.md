@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>What sources in detail have you already tried from <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">http://wiki.openstreetmap.org/wiki/Planet.osm</a> ?</p>
+<p>What sources in detail have you already tried from <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">https://wiki.openstreetmap.org/wiki/Planet.osm</a> ?</p>
 <p>And if you found one source fitting to your aims, why did that not work? Or succes?</p>
 </div>
 <div id="comment-48240-info" class="comment-info">
@@ -218,7 +218,7 @@ osqa_accepted = false
   &lt;bbox-query s=&quot;-26.1841&quot; n=&quot;-26.0028&quot; w=&quot;27.9314&quot; e=&quot;28.1538&quot;/&gt;
 &lt;/query&gt;
 &lt;print mode=&quot;meta&quot;/&gt;</code></pre>
-<p>BTW: You can get to this translated query on your own, if you're following the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer#Migrating_from_XAPI_Compatibility_Layer_to_Overpass_XML_.2F_QL">XAPI Compatibility Layer to Overpass XML / QL migration procedure, as outlined in the wiki</a>.</p>
+<p>BTW: You can get to this translated query on your own, if you're following the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/XAPI_Compatibility_Layer#Migrating_from_XAPI_Compatibility_Layer_to_Overpass_XML_.2F_QL">XAPI Compatibility Layer to Overpass XML / QL migration procedure, as outlined in the wiki</a>.</p>
 <p>That's already a good starting point to feed into overpass turbo: <a href="http://overpass-turbo.eu/s/eAf">http://overpass-turbo.eu/s/eAf</a></p>
 <p>Now, how do we get the <code>bounds</code> element into the query result?</p>
 <p>You need to know that this requires something called global bounding box, which can be added by providing an &lt;osm-script&gt; element along with a bbox attribute. Your resulting query looks like this: it's basically the same overpass turbo query as before, but this time also returning a <code>bounds</code> element.</p>

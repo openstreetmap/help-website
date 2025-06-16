@@ -121,7 +121,7 @@ make: *** [osmium_convert] Error 1
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have to install all the prerequisites mentioned in the README. In this case you are missing the GEOS library (or have a version that's too old). This wiki page may also help you: <a href="http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">http://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a></p>
+<p>You have to install all the prerequisites mentioned in the README. In this case you are missing the GEOS library (or have a version that's too old). This wiki page may also help you: <a href="https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start">https://wiki.openstreetmap.org/wiki/Osmium/Quick_Start</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

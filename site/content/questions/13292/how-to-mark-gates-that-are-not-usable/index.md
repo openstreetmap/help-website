@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Are the gates tagged with <a href="http://wiki.openstreetmap.org/wiki/Access">http://wiki.openstreetmap.org/wiki/Access</a> ?</p>
+<p>Are the gates tagged with <a href="https://wiki.openstreetmap.org/wiki/Access">https://wiki.openstreetmap.org/wiki/Access</a> ?</p>
 </div>
 <div id="comment-13294-info" class="comment-info">
 <span class="comment-age">(07 Jun '12, 05:14)</span> <span class="comment-user userinfo">gnurk</span>
@@ -138,7 +138,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You have to add a proper <a href="http://wiki.openstreetmap.org/wiki/Access">access tag</a> to the gates as already mentioned by gnurk. The main map currently does not show different gate symbols depending on the access conditions. However, also adding a proper access tag to the way behind the gate leading to your community should be clearly visible on the map.</p>
+<p>You have to add a proper <a href="https://wiki.openstreetmap.org/wiki/Access">access tag</a> to the gates as already mentioned by gnurk. The main map currently does not show different gate symbols depending on the access conditions. However, also adding a proper access tag to the way behind the gate leading to your community should be clearly visible on the map.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -170,7 +170,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You can add the access tag by using <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">Potlatch</a>, <a href="http://wiki.openstreetmap.org/wiki/JOSM/Guide">JOSM</a> or some other tool.</p>
+<p>You can add the access tag by using <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Primer">Potlatch</a>, <a href="https://wiki.openstreetmap.org/wiki/JOSM/Guide">JOSM</a> or some other tool.</p>
 </div>
 <div id="comment-13335-info" class="comment-info">
 <span class="comment-age">(08 Jun '12, 07:13)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -181,7 +181,7 @@ osqa_accepted = false
 <div id="post-15092-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate#On_a_way">http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate#On_a_way</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate#On_a_way">https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dgate#On_a_way</a></p>
 </div>
 <div id="comment-15092-info" class="comment-info">
 <span class="comment-age">(14 Aug '12, 20:11)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -273,7 +273,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is a jpeg of a gate and it's tags in the potlactch2 editor.<img src="http://help.openstreetmap.org/upfiles/gate_tags.JPG" alt="alt text" /></p>
+<p>This is a jpeg of a gate and it's tags in the potlactch2 editor.<img src="/upfiles/gate_tags.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -327,7 +327,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You could send visitors an email using a marker on the map like this <a href="http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map">http://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> pointing to the entrance gate.</p>
+<p>You could send visitors an email using a marker on the map like this <a href="/questions/25/how-do-i-add-a-marker-to-a-map">https://help.openstreetmap.org/questions/25/how-do-i-add-a-marker-to-a-map</a> pointing to the entrance gate.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

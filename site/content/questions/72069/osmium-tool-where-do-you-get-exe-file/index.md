@@ -69,7 +69,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>(for anyone coming to this anew, see also <a href="https://help.openstreetmap.org/questions/71934/osmconvert-errors-while-merging-maps-in-windows-10-unknown-file-format-could-not-open-input-file-osmpbf">https://help.openstreetmap.org/questions/71934/osmconvert-errors-while-merging-maps-in-windows-10-unknown-file-format-could-not-open-input-file-osmpbf</a> , but this question as written makes sense to stay around in its own right)</p>
+<p>(for anyone coming to this anew, see also <a href="/questions/71934/osmconvert-errors-while-merging-maps-in-windows-10-unknown-file-format-could-not-open-input-file-osmpbf">https://help.openstreetmap.org/questions/71934/osmconvert-errors-while-merging-maps-in-windows-10-unknown-file-format-could-not-open-input-file-osmpbf</a> , but this question as written makes sense to stay around in its own right)</p>
 </div>
 <div id="comment-72102-info" class="comment-info">
 <span class="comment-age">(13 Dec '19, 19:48)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

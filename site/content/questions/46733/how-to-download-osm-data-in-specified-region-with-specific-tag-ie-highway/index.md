@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are some web sites where you can download ready-made shape files (e.g. extract.bbbike.org, download.geofabrik.de) but you cannot choose which tags you want. If you want to create your own shape file, download the OSM data in .osm.pbf format and then use e.g. osm2pgsql to import to PostGIS, then pgsql2shp to create shape file, or use a modern version of ogr2ogr to convert from pbf to shp directly. More: <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">http://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
+<p>There are some web sites where you can download ready-made shape files (e.g. extract.bbbike.org, download.geofabrik.de) but you cannot choose which tags you want. If you want to create your own shape file, download the OSM data in .osm.pbf format and then use e.g. osm2pgsql to import to PostGIS, then pgsql2shp to create shape file, or use a modern version of ogr2ogr to convert from pbf to shp directly. More: <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">https://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

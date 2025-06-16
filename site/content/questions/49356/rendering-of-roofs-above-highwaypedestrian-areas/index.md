@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Rendering of roofs above highway=pedestrian areas"
-description = '''I&#x27;ve recently added an area that&#x27;s reserved for pedestrians as a multi-polygon here: http://www.openstreetmap.org/#map=19/47.39726/8.59632 However the area for the pedestrians gets drawn over the roofs within it. I&#x27;ve added the roofs as &quot;inner&quot; for now, however that does not feel right, since the ro...'''
+description = '''I&#x27;ve recently added an area that&#x27;s reserved for pedestrians as a multi-polygon here: https://www.openstreetmap.org/#map=19/47.39726/8.59632 However the area for the pedestrians gets drawn over the roofs within it. I&#x27;ve added the roofs as &quot;inner&quot; for now, however that does not feel right, since the ro...'''
 date = "2016-04-22T09:40:00Z"
 lastmod = "2016-04-22T12:29:00Z"
 weight = 49356
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've recently added an area that's reserved for pedestrians as a multi-polygon here: <a href="http://www.openstreetmap.org/#map=19/47.39726/8.59632">http://www.openstreetmap.org/#map=19/47.39726/8.59632</a></p>
+<p>I've recently added an area that's reserved for pedestrians as a multi-polygon here: <a href="https://www.openstreetmap.org/#map=19/47.39726/8.59632">https://www.openstreetmap.org/#map=19/47.39726/8.59632</a></p>
 <p>However the area for the pedestrians gets drawn over the roofs within it. I've added the roofs as "inner" for now, however that does not feel right, since the roofs just cover the pedestrian area below them. I can't add one of the roofs as inner anyways, so there has to be another solution.</p>
 <p>The area is a multi-polygon because of the other cut-out bits and the building in the middle.</p>
 </div>

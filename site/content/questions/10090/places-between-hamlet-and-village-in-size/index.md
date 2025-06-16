@@ -131,7 +131,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I would say generally, use your judgement. Does it feel very small, like a hamlet? If not tag it as a village.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:place">This wiki page</a> gives a slightly different definition from the one you quote:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:place">This wiki page</a> gives a slightly different definition from the one you quote:</p>
 <p>Hamlet: unincorporated settlement with less than 100 inhabitants.</p>
 <p>Village: Major rural settlement as defined by national/state/provincial government. May be an incorporated municipality. Generally smaller than a town, below 10,000 people</p>
 <p>So as you can see, the definitions are a little vague, and some judgment is required. The sizes are also qualified on some wiki pages with "May vary by country."</p>

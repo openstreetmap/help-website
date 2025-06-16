@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why don&#x27;t water parks show up on the map?"
-description = '''A few weeks ago, I created a node for a water park in Belize. You can see the node in the editing interface here: https://www.openstreetmap.org/edit#map=19/17.16850/-89.11361 I created it according to the instructions on the wiki here: http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dwater_park But ...'''
+description = '''A few weeks ago, I created a node for a water park in Belize. You can see the node in the editing interface here: https://www.openstreetmap.org/edit#map=19/17.16850/-89.11361 I created it according to the instructions on the wiki here: https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dwater_park But ...'''
 date = "2014-05-18T03:03:00Z"
 lastmod = "2014-05-19T21:57:00Z"
 weight = 33279
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>A few weeks ago, I created a node for a water park in Belize. You can see the node in the editing interface here: <a href="https://www.openstreetmap.org/edit#map=19/17.16850/-89.11361">https://www.openstreetmap.org/edit#map=19/17.16850/-89.11361</a></p>
-<p>I created it according to the instructions on the wiki here: <a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dwater_park">http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dwater_park</a></p>
+<p>I created it according to the instructions on the wiki here: <a href="https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dwater_park">https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dwater_park</a></p>
 <p>But it still hasn't shown up on the map: <a href="https://www.openstreetmap.org/#map=19/17.16850/-89.11361">https://www.openstreetmap.org/#map=19/17.16850/-89.11361</a></p>
 <p>What did I do wrong?</p>
 </div>
@@ -146,8 +146,8 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>well, not exactly lobbying for it to be dislayed, but there is a proposal process for osm<br />
-<a href="http://wiki.openstreetmap.org/wiki/Proposal_process">http://wiki.openstreetmap.org/wiki/Proposal_process</a></p>
-<p>Also have a read about the rendering process for the main maps <a href="http://wiki.openstreetmap.org/wiki/Mapnik">http://wiki.openstreetmap.org/wiki/Mapnik</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/Proposal_process">https://wiki.openstreetmap.org/wiki/Proposal_process</a></p>
+<p>Also have a read about the rendering process for the main maps <a href="https://wiki.openstreetmap.org/wiki/Mapnik">https://wiki.openstreetmap.org/wiki/Mapnik</a></p>
 </div>
 <div id="comment-33282-info" class="comment-info">
 <span class="comment-age">(18 May '14, 07:51)</span> <span class="comment-user userinfo">nevw</span>

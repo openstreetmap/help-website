@@ -119,7 +119,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't think the mapnik team is currently occupying themselves with icon creation, but you can always create your own icons and ask the team to use them. The entire process on how to do it (the standards and who to contact) is described in the <a href="http://wiki.openstreetmap.org/wiki/Map_Icons">wiki</a>.</p>
+<p>I don't think the mapnik team is currently occupying themselves with icon creation, but you can always create your own icons and ask the team to use them. The entire process on how to do it (the standards and who to contact) is described in the <a href="https://wiki.openstreetmap.org/wiki/Map_Icons">wiki</a>.</p>
 <p>As with so many open-source stuff. If you don't do it yourself, you can't count on others to do it, you can only be happy if they do it.</p>
 </div>
 <div class="answer-controls post-controls">

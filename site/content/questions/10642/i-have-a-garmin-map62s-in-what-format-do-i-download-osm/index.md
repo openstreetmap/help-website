@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have an intensive look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Garmin">Garmin</a>.</p>
+<p>Have an intensive look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Garmin">Garmin</a>.</p>
 <p>Read all points about your device and all sub pages about using OSM data on it.</p>
 <p>In case of failure, tell us where you get stuck.</p>
 </div>
@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is the question and I think "someoneesle's answer is best <a href="http://help.openstreetmap.org/questions/3785/osm-on-garmin">http://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
+<p>This is the question and I think "someoneesle's answer is best <a href="/questions/3785/osm-on-garmin">https://help.openstreetmap.org/questions/3785/osm-on-garmin</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

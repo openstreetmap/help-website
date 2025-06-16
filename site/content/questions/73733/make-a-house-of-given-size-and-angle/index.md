@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you can do one wall can you estimate the rest of it? If you can plot a gpx line from buildings location with some form of gpx creating tool at the right bearing that should give you correct angle. Import that gpx as a vector file as a background.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Building_scale_and_angle.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Building_scale_and_angle.JPG" alt="alt text" /></p>
 <p>I created the magenta Angle.gpx with a mapping app and dragged that file over the iD screen, i had previously drawn a rough rectangle which i then pulled into the angle and used the scale to size it. I am pleased you get the idea, it works but isn't that great.</p>
 </div>
 <div class="answer-controls post-controls">

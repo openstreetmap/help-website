@@ -95,7 +95,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>okay, do you mean the orange text below the crosshair in the screenshot? Quite difficult as we would need to know how that text is generated. If you go to <a href="http://www.openstreetmap.org/#map=16/45.2578/19.8215">http://www.openstreetmap.org/#map=16/45.2578/19.8215</a> and hit the "where am I" link in the search box then only "Novi Sad" is shown as location.</p>
+<p>okay, do you mean the orange text below the crosshair in the screenshot? Quite difficult as we would need to know how that text is generated. If you go to <a href="https://www.openstreetmap.org/#map=16/45.2578/19.8215">https://www.openstreetmap.org/#map=16/45.2578/19.8215</a> and hit the "where am I" link in the search box then only "Novi Sad" is shown as location.</p>
 <p>Still, the problem may be in our data OR it may be in the algorithm which creates this text. Sadly, by a quick look at the data there I cannot see a problem.</p>
 </div>
 <div id="comment-29823-info" class="comment-info">

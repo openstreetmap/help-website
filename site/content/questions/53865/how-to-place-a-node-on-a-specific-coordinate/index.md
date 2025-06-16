@@ -182,7 +182,7 @@ osqa_accepted = true
 <div id="post-53919-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/13151/klusch">@Klusch</a>: if you just clicked on "edit" then you were using the default in-browser editor "iD".</p>
+<p><a href="https://help.openstreetmap.org/users/13151/klusch">@Klusch</a>: if you just clicked on "edit" then you were using the default in-browser editor "iD".</p>
 </div>
 <div id="comment-53919-info" class="comment-info">
 <span class="comment-age">(08 Jan '17, 14:41)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

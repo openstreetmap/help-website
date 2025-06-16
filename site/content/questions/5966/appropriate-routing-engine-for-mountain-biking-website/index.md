@@ -119,10 +119,10 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Althoug I cannot give you a detailed recommendation you should have a look at the <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> page especially about online routers in the OSM wiki.</p>
+<p>Althoug I cannot give you a detailed recommendation you should have a look at the <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> page especially about online routers in the OSM wiki.</p>
 <p>Test all possibilities there and find out what is near to your aims.</p>
 <p>(quite impressive in these days is the online demo of OSRM with dragging start and end point in real time)</p>
-<p>And there is also a Routing <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a> ...</p>
+<p>And there is also a Routing <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">mailing list</a> ...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

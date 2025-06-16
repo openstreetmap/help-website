@@ -106,7 +106,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>The database is currently being copyed to a new database server for better performence and to have a database to run the tests for the license change on. During this copying the database can not be altered in any way and is therefore in read-only state.</p>
 <p>The map call is creating temperary tables in the database while retreaving the data and have to be turned off during the copy. This is not a big problem because you can not upload any data, so there is little reason to download any data from that call. It is better to let mappers that don't visit the front page discover that something is wrong before working on the data and try to upload it.</p>
-<p>If you want data you can download <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">extracts</a> or try a <a href="http://wiki.openstreetmap.org/wiki/Xapi">xapi</a> instance.</p>
+<p>If you want data you can download <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">extracts</a> or try a <a href="https://wiki.openstreetmap.org/wiki/Xapi">xapi</a> instance.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

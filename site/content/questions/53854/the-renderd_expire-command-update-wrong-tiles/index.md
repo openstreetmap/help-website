@@ -69,9 +69,9 @@ osqa_accepted = false
     &lt;/way&gt;
   &lt;/create&gt;
 &lt;/osmChange&gt;</code></pre>
-<p><img src="http://help.openstreetmap.org/upfiles/1_6mt7z3j.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/2_1kYH4It.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/3_GyHf7qe.png" alt="alt text" /></p>
+<p><img src="/upfiles/1_6mt7z3j.png" alt="alt text" /></p>
+<p><img src="/upfiles/2_1kYH4It.png" alt="alt text" /></p>
+<p><img src="/upfiles/3_GyHf7qe.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span> <span class="post-tag tag-link-renderd" rel="tag" title="see questions tagged &#39;renderd&#39;">renderd</span> <span class="post-tag tag-link-editor" rel="tag" title="see questions tagged &#39;editor&#39;">editor</span> <span class="post-tag tag-link-tileserver" rel="tag" title="see questions tagged &#39;tileserver&#39;">tileserver</span>

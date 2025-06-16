@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>in Munich, we have a problem with the Oktoberfest! ;-)</p>
 <p>The situation is as follows: The Oktoberfest is taking place on a open area. During the actual Oktoberfest, you have large temporary (but solid) buildings (tents) and other infrastructure (toilets, ATMs, etc.). During the rest of the year (10/11 months), the area is empty or used for other activities and events (with temporary structures too).</p>
 <p>Because zillions of people visit the Oktoberfest, the tents and some infrastructure were mapped, but of course, during the rest of the year, it does not makes sense, as there is nothing there or even another event (with different infrastructure).</p>
-<p>There are different opinions about this, discussed here: <a href="http://www.openstreetmap.org/note/474329#map=18/48.13135/11.55031">http://www.openstreetmap.org/note/474329#map=18/48.13135/11.55031</a></p>
+<p>There are different opinions about this, discussed here: <a href="https://www.openstreetmap.org/note/474329#map=18/48.13135/11.55031">https://www.openstreetmap.org/note/474329#map=18/48.13135/11.55031</a></p>
 <p>IMHO, I would delete it altogether as most of the time during the year, there is nothing, and temporary structures (of a few weeks) do not belong to OSM, even if they are visited by zillions of people</p>
 <p>Other suggestions were using additional tags:</p>
 <ul>
@@ -55,7 +55,7 @@ osqa_accepted = false
 <li>opening hours - does not fit really</li>
 <li>use temporary:building or similarly: does not fit as (now) there is nothing or (worse) there is something else.</li>
 </ul>
-<p>Please help quickly before we restart drinking again... Btw, I am not into Oktoberfest although living in Munich.... <img src="http://help.openstreetmap.org/upfiles/Zwischenablage01.jpg" alt="alt text" /></p>
+<p>Please help quickly before we restart drinking again... Btw, I am not into Oktoberfest although living in Munich.... <img src="/upfiles/Zwischenablage01.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-seasonal" rel="tag" title="see questions tagged &#39;seasonal&#39;">seasonal</span> <span class="post-tag tag-link-building" rel="tag" title="see questions tagged &#39;building&#39;">building</span> <span class="post-tag tag-link-infrastructure" rel="tag" title="see questions tagged &#39;infrastructure&#39;">infrastructure</span> <span class="post-tag tag-link-temporary" rel="tag" title="see questions tagged &#39;temporary&#39;">temporary</span> <span class="post-tag tag-link-oktoberfest" rel="tag" title="see questions tagged &#39;oktoberfest&#39;">oktoberfest</span>
@@ -124,7 +124,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi sakudo did you asked it at the DE Forum ? Read these lines for a link, <a href="https://help.openstreetmap.org/questions/2771/how-do-i-login-to-the-forum">https://help.openstreetmap.org/questions/2771/how-do-i-login-to-the-forum</a> Even a construction creating a D tour is not drawn / added for a short period of several weeks, with the argument that the original mapper who tagged it does not follow the progress of the work its the same for a temporarely fest. The owner could end the fest earlier as planned :-(</p>
+<p>Hi sakudo did you asked it at the DE Forum ? Read these lines for a link, <a href="/questions/2771/how-do-i-login-to-the-forum">https://help.openstreetmap.org/questions/2771/how-do-i-login-to-the-forum</a> Even a construction creating a D tour is not drawn / added for a short period of several weeks, with the argument that the original mapper who tagged it does not follow the progress of the work its the same for a temporarely fest. The owner could end the fest earlier as planned :-(</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-47040-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11216/sakudo">@sakudo</a>: The specifics of this one are described at <span>FAQ</span>.</p>
+<p><a href="https://help.openstreetmap.org/users/11216/sakudo">@sakudo</a>: The specifics of this one are described at <span>FAQ</span>.</p>
 </div>
 <div id="comment-47040-info" class="comment-info">
 <span class="comment-age">(07 Dec '15, 19:34)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I am not aware of any existing solution for an OSM based routing in connection to <a href="http://unity3d.com">Unity3D</a> ... is that the correct "UNITY" that you have in mind?</p>
-<p>So you can have a closer look at all the opensource routing software at the OSM wiki page about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> to find a start.</p>
+<p>So you can have a closer look at all the opensource routing software at the OSM wiki page about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> to find a start.</p>
 <p>EDIT:</p>
 <p>or see <a href="http://forum.openstreetmap.org/viewtopic.php?id=28110">this OSM forum thread</a> about graphic.</p>
 </div>

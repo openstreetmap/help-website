@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Penegal, the river Aare flows into the Thunsersee and the stream is drawn completely from entrance to exit; <a href="http://www.openstreetmap.org/#map=15/46.7438/7.6343">http://www.openstreetmap.org/#map=15/46.7438/7.6343</a> Use that method. Since you don’t know where the spring actually is situated on the bottom of the lake, start the stream in the middle of the lake and into the river stream. All water parts are connected by the river stream read these lines; <a href="http://wiki.openstreetmap.org/wiki/Waterways">http://wiki.openstreetmap.org/wiki/Waterways</a></p>
+<p>Hi Penegal, the river Aare flows into the Thunsersee and the stream is drawn completely from entrance to exit; <a href="https://www.openstreetmap.org/#map=15/46.7438/7.6343">https://www.openstreetmap.org/#map=15/46.7438/7.6343</a> Use that method. Since you don’t know where the spring actually is situated on the bottom of the lake, start the stream in the middle of the lake and into the river stream. All water parts are connected by the river stream read these lines; <a href="https://wiki.openstreetmap.org/wiki/Waterways">https://wiki.openstreetmap.org/wiki/Waterways</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,8 +159,8 @@ One Answer:
 <div id="post-45173-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr"></a><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: well, technically, a spring in a lake still let the water flow to the surface of the earth, as the surface of the earth is under the surface of the water, at the bottom of the lake, so it could also be mapped as <code>natural=spring</code>.</p>
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: so it's only when I put the origin of the stream <em>in</em> the lake that I should map a spring, even with an inaccurate location; if I put the origin of the stream on the lake border, no spring required, which is logical as, this way, the lake is the origin. The choice between the possibilities is mine, depending of the current knowledge of the lake.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr"></a><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: well, technically, a spring in a lake still let the water flow to the surface of the earth, as the surface of the earth is under the surface of the water, at the bottom of the lake, so it could also be mapped as <code>natural=spring</code>.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: so it's only when I put the origin of the stream <em>in</em> the lake that I should map a spring, even with an inaccurate location; if I put the origin of the stream on the lake border, no spring required, which is logical as, this way, the lake is the origin. The choice between the possibilities is mine, depending of the current knowledge of the lake.</p>
 <p>Bonus question: should I include the spring in the waterway relation or only the waterways?</p>
 </div>
 <div id="comment-45173-info" class="comment-info">
@@ -183,7 +183,7 @@ One Answer:
 <div id="post-45178-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Penegal, I would not do so I only map a spring like this a builded mouth of the river Schelde / L'escaut <a href="http://www.openstreetmap.org/#map=19/49.98667/3.26611">http://www.openstreetmap.org/#map=19/49.98667/3.26611</a> or the sources of the Meuse, both are marked with a stone, <a href="http://www.openstreetmap.org/#map=14/47.9830/5.6390">http://www.openstreetmap.org/#map=14/47.9830/5.6390</a> Both sources of the Meuse are on the Plateau of Langres and several French rivers are born here, such as the Seine, Saone, Marne and La Moselle.</p>
+<p>Penegal, I would not do so I only map a spring like this a builded mouth of the river Schelde / L'escaut <a href="https://www.openstreetmap.org/#map=19/49.98667/3.26611">https://www.openstreetmap.org/#map=19/49.98667/3.26611</a> or the sources of the Meuse, both are marked with a stone, <a href="https://www.openstreetmap.org/#map=14/47.9830/5.6390">https://www.openstreetmap.org/#map=14/47.9830/5.6390</a> Both sources of the Meuse are on the Plateau of Langres and several French rivers are born here, such as the Seine, Saone, Marne and La Moselle.</p>
 </div>
 <div id="comment-45178-info" class="comment-info">
 <span class="comment-age">(10 Sep '15, 21:44)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -194,8 +194,8 @@ One Answer:
 <div id="post-45190-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/595/neuhausr"></a><a href="http://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: I agree with you, people won't expect that, but, as it's a possibility that a spring is in a lake, I prefer keeping this in mind, not for all underwater springs, but for the cases it's somehow significant.</p>
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: OK, then I won't link the spring with the waterway if the first feeds a lake first, should I have to map a spring in a lake.</p>
+<p><a href="https://help.openstreetmap.org/users/595/neuhausr"></a><a href="https://help.openstreetmap.org/users/595/neuhausr">@neuhausr</a>: I agree with you, people won't expect that, but, as it's a possibility that a spring is in a lake, I prefer keeping this in mind, not for all underwater springs, but for the cases it's somehow significant.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas"></a><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: OK, then I won't link the spring with the waterway if the first feeds a lake first, should I have to map a spring in a lake.</p>
 <p>And concerning the matter of including the spring in the waterway relation, I had my answer by the wiki: it's optional. Thanks for your help!</p>
 </div>
 <div id="comment-45190-info" class="comment-info">

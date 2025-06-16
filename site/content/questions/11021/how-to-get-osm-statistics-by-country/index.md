@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to get OSM statistics by country ?"
-description = '''So this page provides overall statistics for Open Street maps for entire world , total no of nodes, ways , relations and top contributors. http://www.openstreetmap.org/stats/data_stats.html Is there a way to access this data by country or using some other application. I want to know the statistics f...'''
+description = '''So this page provides overall statistics for Open Street maps for entire world , total no of nodes, ways , relations and top contributors. https://www.openstreetmap.org/stats/data_stats.html Is there a way to access this data by country or using some other application. I want to know the statistics f...'''
 date = "2012-03-07T03:02:00Z"
 lastmod = "2021-08-19T08:27:00Z"
 weight = 11021
@@ -41,7 +41,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>So this page provides overall statistics for Open Street maps for entire world , total no of nodes, ways , relations and top contributors.</p>
-<p><a href="http://www.openstreetmap.org/stats/data_stats.html">http://www.openstreetmap.org/stats/data_stats.html</a></p>
+<p><a href="https://www.openstreetmap.org/stats/data_stats.html">https://www.openstreetmap.org/stats/data_stats.html</a></p>
 <p>Is there a way to access this data by country or using some other application.</p>
 <p>I want to know the statistics for USA.</p>
 </div>
@@ -213,7 +213,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have deleted the previous answers which pointed to dead sites. <a href="https://help.openstreetmap.org/questions/60494/openstreetmap-statistics">This answer</a> has current information. It is for India but the same resources are available for the US.</p>
+<p>I have deleted the previous answers which pointed to dead sites. <a href="/questions/60494/openstreetmap-statistics">This answer</a> has current information. It is for India but the same resources are available for the US.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

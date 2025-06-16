@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, you can make your own Garmin maps from OSM data and a .typ file. Take a look at <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data">the wiki</a> for instructions.</p>
+<p>Yes, you can make your own Garmin maps from OSM data and a .typ file. Take a look at <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin#Creating_your_own_maps_from_OSM_data">the wiki</a> for instructions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -68,7 +68,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>You'll probably get more response on the <a href="http://lists.openstreetmap.org/listinfo/dev">osm-dev list</a> or #osm-dev in <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC</a>. A quick search such as</p>
+<p>You'll probably get more response on the <a href="http://lists.openstreetmap.org/listinfo/dev">osm-dev list</a> or #osm-dev in <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC</a>. A quick search such as</p>
 <p><a href="https://www.google.co.uk/search?q=%22zoom+21%22+site%3Alists.openstreetmap.org%2Fpipermail%2Fdev%2F&amp;btnG=Search&amp;oe=utf-8&amp;rls=org.mozilla%3Aen-GB%3Aofficial&amp;client=firefox-a">"zoom 21" site:lists.openstreetmap.org/pipermail/dev/</a></p>
 <p>finds a few old list messages (obviously try other numbers &gt; 18 as well as 21).</p>
 </div>
@@ -303,7 +303,7 @@ OSMLayer = new OpenLayers.Layer.OSM(null, null, OSMLayerOptions);</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For zoom levels up to 20, I added a user <a href="http://wiki.openstreetmap.org/wiki/User:SomeoneElse/Tileserver_zoom_levels">wiki page</a> describing the changes that I needed to make to render, update and display maps.</p>
+<p>For zoom levels up to 20, I added a user <a href="https://wiki.openstreetmap.org/wiki/User:SomeoneElse/Tileserver_zoom_levels">wiki page</a> describing the changes that I needed to make to render, update and display maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -353,7 +353,7 @@ OSMLayer = new OpenLayers.Layer.OSM(null, null, OSMLayerOptions);</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>As I understand it, the zoom levels are each rendered and stored separably so although there are ways to magnify the screen image,with Ctrl + in windows for example,you are probably limited by the system to level 18. see <a href="http://wiki.openstreetmap.org/wiki/Zoom_levels">http://wiki.openstreetmap.org/wiki/Zoom_levels</a></p>
+<p>As I understand it, the zoom levels are each rendered and stored separably so although there are ways to magnify the screen image,with Ctrl + in windows for example,you are probably limited by the system to level 18. see <a href="https://wiki.openstreetmap.org/wiki/Zoom_levels">https://wiki.openstreetmap.org/wiki/Zoom_levels</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

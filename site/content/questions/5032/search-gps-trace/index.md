@@ -187,7 +187,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can search using tags, like <a href="http://www.openstreetmap.org/traces/tag/London">this</a>. It's not exactly what you're looking for, but it might help.</p>
+<p>You can search using tags, like <a href="https://www.openstreetmap.org/traces/tag/London">this</a>. It's not exactly what you're looking for, but it might help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

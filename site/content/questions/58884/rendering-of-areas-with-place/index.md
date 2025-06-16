@@ -209,7 +209,7 @@ osqa_accepted = false
 <div id="post-58944-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Looking at this random area in the Netherlands <a href="http://www.openstreetmap.org/#map=16/51.9738/4.9415,">http://www.openstreetmap.org/#map=16/51.9738/4.9415,</a> the landuse=residential encompasses many areas and it would look as though it actually represents the town. Given that every house is drawn (showing defacto residential landuse), landuse appears to be used as the proposed place area would be used to highlight the town at lower zooms the limits. There is also an administrative boundary with the name and the residential area is unnamed</p>
+<p>Looking at this random area in the Netherlands <a href="https://www.openstreetmap.org/#map=16/51.9738/4.9415,">https://www.openstreetmap.org/#map=16/51.9738/4.9415,</a> the landuse=residential encompasses many areas and it would look as though it actually represents the town. Given that every house is drawn (showing defacto residential landuse), landuse appears to be used as the proposed place area would be used to highlight the town at lower zooms the limits. There is also an administrative boundary with the name and the residential area is unnamed</p>
 <p>The wiki is a standard that has been set so that there are common guidelines - not everyone may agree with it, and thats why there are places where changes can be discussed and agreed.</p>
 </div>
 <div id="comment-58944-info" class="comment-info">
@@ -221,7 +221,7 @@ osqa_accepted = false
 <div id="post-58945-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>"Looking at this random area in the Netherlands <a href="http://www.openstreetmap.org/#map=16/51.9738/4.9415,">http://www.openstreetmap.org/#map=16/51.9738/4.9415,</a> the landuse=residential encompasses many areas and it would look as though it actually represents the town."</p>
+<p>"Looking at this random area in the Netherlands <a href="https://www.openstreetmap.org/#map=16/51.9738/4.9415,">https://www.openstreetmap.org/#map=16/51.9738/4.9415,</a> the landuse=residential encompasses many areas and it would look as though it actually represents the town."</p>
 <p>Yes, exactly, this is how generally the landuse=residential is used in the Netherlands (but I think also in many other European countries).</p>
 </div>
 <div id="comment-58945-info" class="comment-info">

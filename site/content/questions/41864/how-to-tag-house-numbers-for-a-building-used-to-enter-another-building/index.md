@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>Out of curiosity question, I’m not sure there’s a practical use to this, but I’m getting fascinated by the tagging system of OSM and the way everything in the world is described by keys and values. But can this be tagged?</p>
 <p>This is where I live:<br />
-<img src="http://help.openstreetmap.org/upfiles/24-26.png" alt="24-26" /></p>
+<img src="/upfiles/24-26.png" alt="24-26" /></p>
 <p>My home address is number 26 and I’m located in number 26 building. However, the entrance door to number 26, and the mailboxes for number 26, are located at number 24. That’s two different buildings with a corridor dug in-between at some point. Now the street level at number 26 does not have a door, the space is the entrance to a nightclub (located underground). The door at number 24 has a sign saying ‘24–26’.</p>
 <p>Is there any way to tag this (‘24 is the entrance to 26’)?</p>
 </div>

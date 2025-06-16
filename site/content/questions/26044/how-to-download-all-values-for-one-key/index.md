@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can increase the timeout of the Overpass API, see the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API#Osm-Script">Osm-Script</a> section and the <em>timeout</em> attribute.</p>
+<p>You can increase the timeout of the Overpass API, see the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Osm-Script">Osm-Script</a> section and the <em>timeout</em> attribute.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

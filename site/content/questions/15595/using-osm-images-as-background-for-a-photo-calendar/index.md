@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I intend to create a calendar with photos of extraordinary buildings in Germany and neighboring countries. I intend to sell some 30 copies of the calendar for a cost-covering price. I want to use OSM tiles as unobtrusive background. Here is an ugly <a href="http://s9.postimage.org/ljaig9dfj/concept.jpg">concept image of one calendar page</a>.</p>
-<p>I have read the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> and the <a href="http://wiki.openstreetmap.org/wiki/Common_licence_interpretations">Common License Interpretations</a>. I think it would be "collective work". Am I correct?</p>
+<p>I have read the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> and the <a href="https://wiki.openstreetmap.org/wiki/Common_licence_interpretations">Common License Interpretations</a>. I think it would be "collective work". Am I correct?</p>
 <p>Would it suffice to add "(c) OpenStreetMap contributors, CC-BY-SA" on each page? Perhaps as a watermark of the background. Is there something else I should worry about?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

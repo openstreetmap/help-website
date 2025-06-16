@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Does <a href="https://help.openstreetmap.org/questions/878/how-can-i-delete-my-account">this previous question</a> help?</p>
+<p>Does <a href="/questions/878/how-can-i-delete-my-account">this previous question</a> help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

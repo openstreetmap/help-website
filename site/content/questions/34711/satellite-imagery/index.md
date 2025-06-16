@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See these answer to similar questions: <a href="https://help.openstreetmap.org/questions/27875/satellite-imagery">satellite imagery</a> and <a href="https://help.openstreetmap.org/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map">how can I see the aerial imagery without editing the map?</a></p>
+<p>See these answer to similar questions: <a href="/questions/27875/satellite-imagery">satellite imagery</a> and <a href="/questions/6849/how-can-i-see-the-aerial-imagery-without-editing-the-map">how can I see the aerial imagery without editing the map?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

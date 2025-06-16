@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's still totally OK to tag is as <code>building=church</code>. According to the wiki, <a href="http://wiki.openstreetmap.org/wiki/Building">the <code>building</code> tag describes the "building typology"</a>, i.e. how the building is constructed. It does <em>not</em> say anything about its current use (if any); <a href="http://wiki.openstreetmap.org/wiki/Key:building">that is addressed by <code>amenity=place_of_worship</code></a>.</p>
+<p>It's still totally OK to tag is as <code>building=church</code>. According to the wiki, <a href="https://wiki.openstreetmap.org/wiki/Building">the <code>building</code> tag describes the "building typology"</a>, i.e. how the building is constructed. It does <em>not</em> say anything about its current use (if any); <a href="https://wiki.openstreetmap.org/wiki/Key:building">that is addressed by <code>amenity=place_of_worship</code></a>.</p>
 <p>Note that while the external appearance/structure of a building and its use often go hand in hand, that is not necessarily the case. For example, there are many places of worship that look like regular houses, or convention halls (e.g. small prayer houses, or big modern churches), and conversely there are buildings that look like a church, but are used differently (as in the case you describe). Thus the separation between <code>building=</code> and <code>amenity=</code>.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I want to remove the Layer and Marker, when I button click.</p>
 <p>source download url:</p>
 <p><a href="http://ggumtle.zz.mu/gb/bbs/download.php?bo_table=file&amp;wr_id=19&amp;no=0&amp;sca=&amp;sfl=&amp;stx=&amp;sst=&amp;sod=&amp;spt=0&amp;page=0&#39;,">http://ggumtle.zz.mu/gb/bbs/download.php?bo_table=file&amp;wr_id=19&amp;no=0&amp;sca=&amp;sfl=&amp;stx=&amp;sst=&amp;sod=&amp;spt=0&amp;page=0',</a> 'exam.zip'</p>
-<p><img src="http://help.openstreetmap.org/upfiles/13.JPG" alt="alt text" /> <img src="http://help.openstreetmap.org/upfiles/14.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/13.JPG" alt="alt text" /> <img src="/upfiles/14.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-layer" rel="tag" title="see questions tagged &#39;layer&#39;">layer</span> <span class="post-tag tag-link-remove" rel="tag" title="see questions tagged &#39;remove&#39;">remove</span>

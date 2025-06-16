@@ -116,7 +116,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Openstreetmap itself does not store photos of any kind. You can however upload your photos to <a href="http://wiki.openstreetmap.org/wiki/OpenStreetView">OpenStreetView</a>. Before doing so you should check if it is legal for you to do so under local law. Some countries might not allowed to publish pictures if the owner of the property objects to it.</p>
+<p>Openstreetmap itself does not store photos of any kind. You can however upload your photos to <a href="https://wiki.openstreetmap.org/wiki/OpenStreetView">OpenStreetView</a>. Before doing so you should check if it is legal for you to do so under local law. Some countries might not allowed to publish pictures if the owner of the property objects to it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Some time ago I wrote <a href="http://wiki.openstreetmap.org/wiki/User:Escada/JOSM_and_Housenumbers">http://wiki.openstreetmap.org/wiki/User:Escada/JOSM_and_Housenumbers</a>, maybe this helps you in finding a more efficient workflow</p>
+<p>Some time ago I wrote <a href="https://wiki.openstreetmap.org/wiki/User:Escada/JOSM_and_Housenumbers">https://wiki.openstreetmap.org/wiki/User:Escada/JOSM_and_Housenumbers</a>, maybe this helps you in finding a more efficient workflow</p>
 </div>
 <div id="comment-22056-info" class="comment-info">
 <span class="comment-age">(02 May '13, 20:50)</span> <span class="comment-user userinfo">escada</span>
@@ -117,7 +117,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>with the normal online editors like Potlatch2 or iD there is no very easy way to ad a big bunch of addresses.</p>
-<p>But if you get to know how to use the offline editor called <a href="http://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>, there are some <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins">plugins</a> that can make your life easier, like Terracer or <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/HouseNumberTaggingTool">HouseNumberTaggingTool</a></p>
+<p>But if you get to know how to use the offline editor called <a href="https://wiki.openstreetmap.org/wiki/JOSM">JOSM</a>, there are some <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins">plugins</a> that can make your life easier, like Terracer or <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/HouseNumberTaggingTool">HouseNumberTaggingTool</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

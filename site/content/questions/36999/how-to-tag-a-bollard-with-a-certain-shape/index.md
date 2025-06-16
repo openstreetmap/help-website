@@ -104,11 +104,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The tag "barrier=bollard" has already a sub-key called "bollard=*" <a href="http://wiki.openstreetmap.org/wiki/Key:bollard">documented on the wiki</a>.<br />
+<p>The tag "barrier=bollard" has already a sub-key called "bollard=*" <a href="https://wiki.openstreetmap.org/wiki/Key:bollard">documented on the wiki</a>.<br />
 At the moment, only two values have been specified "rising" and "removable". You can also use the tool "taginfo" to check the <a href="http://taginfo.openstreetmap.org/keys/?key=bollard#values">current list of values set by the contributors</a>. As you can see, some values are inconsistent with the current documentation like "wood" which does not say if it is "removable" or "rising" or not.</p>
 <p>I guess the best would be to split the current sub-tag in 3 sub-tags : one saying if the bollard is removable or not, one describing the shape (pole, pyramid, etc) and one describing the material (wood, stone, etc).</p>
-<p>I would suggest to keep the current "bollard=<em>" for "removable" (for the ~3000 tags already in use) and reuse the existing "<a href="http://wiki.openstreetmap.org/wiki/Key:material">material</a>=</em>" tag for wood, stone, etc.</p>
-<p>Then propose something new for the shape e.g. "bollard:shape=pole | ball | pyramid | etc". But you should submit a formal proposal on the wiki first then call for comments on the <a href="https://lists.openstreetmap.org/listinfo/tagging">tagging mailing list (subscription required)</a> (<a href="https://lists.openstreetmap.org/pipermail/tagging/">archives</a>). The <a href="http://wiki.openstreetmap.org/wiki/Proposal_process">full process of approving a new tag</a> is not really required here since you just go at a very low level of details.</p>
+<p>I would suggest to keep the current "bollard=<em>" for "removable" (for the ~3000 tags already in use) and reuse the existing "<a href="https://wiki.openstreetmap.org/wiki/Key:material">material</a>=</em>" tag for wood, stone, etc.</p>
+<p>Then propose something new for the shape e.g. "bollard:shape=pole | ball | pyramid | etc". But you should submit a formal proposal on the wiki first then call for comments on the <a href="https://lists.openstreetmap.org/listinfo/tagging">tagging mailing list (subscription required)</a> (<a href="https://lists.openstreetmap.org/pipermail/tagging/">archives</a>). The <a href="https://wiki.openstreetmap.org/wiki/Proposal_process">full process of approving a new tag</a> is not really required here since you just go at a very low level of details.</p>
 <p>You could also use the new tag directly with your favorite editor. But formalising your tag proposal on the wiki increases its chance to be reused by others.</p>
 </div>
 <div class="answer-controls post-controls">

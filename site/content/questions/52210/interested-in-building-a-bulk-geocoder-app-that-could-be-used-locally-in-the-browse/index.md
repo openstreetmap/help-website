@@ -72,7 +72,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>For info - I've converted this to a new question since you'd added it as an "answer" to <a href="https://help.openstreetmap.org/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay">https://help.openstreetmap.org/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay</a> .</p>
+<p>For info - I've converted this to a new question since you'd added it as an "answer" to <a href="/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay">https://help.openstreetmap.org/questions/30056/onetime-bulk-reverse-geocoding-which-amout-is-okay</a> .</p>
 <p>Have you considered installing your own instance of nominatim? That way you wouldn't even have to ask the question - you could just use it.</p>
 </div>
 <div id="comment-52211-info" class="comment-info">
@@ -142,7 +142,7 @@ One Answer:
 <p>There are multiple solutions to running your own geocoder that have been pointed out in the comments, in particular simply running a photon instance is low impact (and you can actually squeeze it on to a Pi2, I wouldn't recommend that for production use though).</p>
 <p>The other part of the story is that while there is an implicit understanding that the services provided by the OSMF can be used for tinkering, experimentation and low use in commercial projects, they are not intended as a replacement for commercial services.</p>
 <p>In any case please observe our licence conditions and provide attribution if you are using any data derived from OpenStreetMap, including such data extracted by geocoding. See</p>
-<p><a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 <p><a href="http://wiki.osmfoundation.org/wiki/License">http://wiki.osmfoundation.org/wiki/License</a></p>
 <p><a href="http://wiki.osmfoundation.org/wiki/License/Community_Guidelines">http://wiki.osmfoundation.org/wiki/License/Community_Guidelines</a></p>
 <p>for more information</p>

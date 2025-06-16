@@ -123,7 +123,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You might find "<a href="http://garmin.na1400.info/routable.php">Free routable maps for Garmin brand GPS devices</a>" interesting. There's also a comprehensive list of ways to get OSM on your Garmin <a href="http://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin/Download">in the wiki</a>.</p>
+<p>You might find "<a href="http://garmin.na1400.info/routable.php">Free routable maps for Garmin brand GPS devices</a>" interesting. There's also a comprehensive list of ways to get OSM on your Garmin <a href="https://wiki.openstreetmap.org/wiki/DE:OSM_Map_On_Garmin/Download">in the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,11 +177,11 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>ich antworte mal auf deutsch, da ausdrücklich darum gebeten wurde. Willkommen bei OSM. Der einfachste Weg, eine Karte auf ein Garmin zu bekommen, ist das Kopieren einer fertigen gmapsupp.img auf die Speicherkarte in den Ordner "GARMIN". Dazu das Gerät als externes Laufwerk mit dem Rechner verbinden (USB).</p>
-<p>Die Karten bekommt man z.B. hier: <a href="http://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map">http://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map</a> (Server zum Download sind dort verlinkt). Auch der user Computerteddy hat viel Erfahrung im Erstellen von Karten: <a href="http://wiki.openstreetmap.org/wiki/User:Computerteddy">http://wiki.openstreetmap.org/wiki/User:Computerteddy</a></p>
+<p>Die Karten bekommt man z.B. hier: <a href="https://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map">https://wiki.openstreetmap.org/wiki/DE:All_in_one_Garmin_Map</a> (Server zum Download sind dort verlinkt). Auch der user Computerteddy hat viel Erfahrung im Erstellen von Karten: <a href="https://wiki.openstreetmap.org/wiki/User:Computerteddy">https://wiki.openstreetmap.org/wiki/User:Computerteddy</a></p>
 <p>Eine Garminkarte muss immer aus den OSM-Daten abgeleitet werden, d.h. vereinfacht: aus allen Daten die bei OSM vorliegen wird eine thematische Auswahl herausgenommen und in das Garminformat übersetzt. Daher ist keine Karte wie die andere, manche bieten Routing, andere sind für Fahrradfahrer optimiert, und es empfiehlt sich, ein paar Karten auszuprobieren.</p>
 <p>Manche Karten haben verschiedene Ebenen, die man je nach Gerät meist einzeln ausschalten kann. Auch kann man mit den Einstellungen zur angezeigten Detailtiefe rumspielen (z.B., wenn einem die Karte zu sehr mit Icons vollgestopft ist, oder wenn man mehr Details in der Übersicht sehen will).</p>
 <p>Persönlich finde ich die All-in-one (s.o.) eine sehr gute Karte, die dem gewohnten Kartenbild von Mapnik sehr nahe kommt und routing bietet. Leider gab es dort in letzter Zeit ein paar Schwierigkeiten, so dass nicht mehr ganz so häufig wie in der Vergangenheit aktualisiert wird. Die Daten sind aber trotzdem ziemlich aktuell.</p>
-<p>Eine gute Einführung, was OSM ist, und wie man selbst mitmachen kann, findet man hier: <a href="http://wiki.openstreetmap.org/wiki/DE:Beginners_Guide">http://wiki.openstreetmap.org/wiki/DE:Beginners_Guide</a></p>
+<p>Eine gute Einführung, was OSM ist, und wie man selbst mitmachen kann, findet man hier: <a href="https://wiki.openstreetmap.org/wiki/DE:Beginners_Guide">https://wiki.openstreetmap.org/wiki/DE:Beginners_Guide</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

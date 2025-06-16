@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How is the English name for it usually spelt? I can see "Nachal Mishor" (with an "a") <a href="http://www.openstreetmap.org/way/289208796">here</a></p>
+<p>How is the English name for it usually spelt? I can see "Nachal Mishor" (with an "a") <a href="https://www.openstreetmap.org/way/289208796">here</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

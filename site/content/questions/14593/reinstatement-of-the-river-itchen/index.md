@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Reinstatement of the River Itchen"
-description = '''Way 4278754, visible at http://www.openstreetmap.org/?lat=50.965081&amp;amp;lon=-1.336903&amp;amp;zoom=18&amp;amp;layers=M in Potlatch 2 and heading north, is tagged as &#x27;name = River Itchen (mainstream)&#x27;, but not as &#x27;waterway = river&#x27;, so rendering engines do not show it. This results in rendered maps showing t...'''
+description = '''Way 4278754, visible at https://www.openstreetmap.org/?lat=50.965081&amp;amp;lon=-1.336903&amp;amp;zoom=18&amp;amp;layers=M in Potlatch 2 and heading north, is tagged as &#x27;name = River Itchen (mainstream)&#x27;, but not as &#x27;waterway = river&#x27;, so rendering engines do not show it. This results in rendered maps showing t...'''
 date = "2012-07-25T20:33:00Z"
 lastmod = "2012-07-26T23:35:00Z"
 weight = 14593
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Way 4278754, visible at <a href="http://www.openstreetmap.org/?lat=50.965081&amp;lon=-1.336903&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=50.965081&amp;lon=-1.336903&amp;zoom=18&amp;layers=M</a> in Potlatch 2 and heading north, is tagged as 'name = River Itchen (mainstream)', but not as 'waterway = river', so rendering engines do not show it. This results in rendered maps showing the River Itchen starting and stopping abruptly. I suspect that the culprit is the redaction bot, but the change history suggests that the 'waterway' tag may have been removed some time ago. Am I entitled to reinstate the 'waterway = river' tag, based on any or all of the following?</p>
+<p>Way 4278754, visible at <a href="https://www.openstreetmap.org/?lat=50.965081&amp;lon=-1.336903&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=50.965081&amp;lon=-1.336903&amp;zoom=18&amp;layers=M</a> in Potlatch 2 and heading north, is tagged as 'name = River Itchen (mainstream)', but not as 'waterway = river', so rendering engines do not show it. This results in rendered maps showing the River Itchen starting and stopping abruptly. I suspect that the culprit is the redaction bot, but the change history suggests that the 'waterway' tag may have been removed some time ago. Am I entitled to reinstate the 'waterway = river' tag, based on any or all of the following?</p>
 <p>1: The way is still tagged as 'name = River Itchen' and I know that the Itchen is a river.</p>
 <p>2: Rivers just don't start and stop in the alluvial plains of southern Hampshire, so way 4278754 must be a continuation of the river shown to the south.</p>
 <p>3: Bing imagery shows a line of trees continuing north from where the existing mapping of the river stops. In this part of England, that often indicates that a river is present beneath the trees.</p>

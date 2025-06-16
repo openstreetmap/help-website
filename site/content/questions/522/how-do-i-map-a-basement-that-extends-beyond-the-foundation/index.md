@@ -128,7 +128,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your problem can be considered a special case of providing outlines for a building's levels. As of now, there is no established approach for this.</p>
-<p>While some proposal drafts for mapping building levels exist on the wiki (such as <a href="http://wiki.openstreetmap.org/wiki/User:Tordanik/Floor_plan_mapping">1</a> and <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Level">2</a>), not all of these account for levels' outline polygons. Moreover, these drafts are incomplete, haven't been tested in practice, are not supported by any tools and will likely change a lot in the future.</p>
+<p>While some proposal drafts for mapping building levels exist on the wiki (such as <a href="https://wiki.openstreetmap.org/wiki/User:Tordanik/Floor_plan_mapping">1</a> and <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Level">2</a>), not all of these account for levels' outline polygons. Moreover, these drafts are incomplete, haven't been tested in practice, are not supported by any tools and will likely change a lot in the future.</p>
 <p>You can either invent your own tagging, carry the discussion over to the <a href="http://lists.openstreetmap.org/listinfo/tagging">"Tagging" mailing list</a> or wait until someone else defines a solution.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -42,9 +42,9 @@ osqa_accepted = true
 <p>I am mapping several bus routes in São Paulo, Brazil, and while adding one specific route, I found that the bus passes <strong>twice in the same direction</strong> through a way, when going from one end point to the other.</p>
 <p>So, the question is: Is it correct to add this way twice to the same relation as I did?</p>
 <p>Is there some alternative form of doing this without adding the way twice to the relation in the same direction? JOSM allows it, but warns me and shows the way in a red background (and that usually means something wrong...)</p>
-<p>The way in question is # 237169404 (<a href="http://www.openstreetmap.org/browse/way/237169404">OSM</a>), and the relation is # 3191062 (<a href="http://www.openstreetmap.org/browse/relation/3191062">OSM</a>)</p>
+<p>The way in question is # 237169404 (<a href="https://www.openstreetmap.org/browse/way/237169404">OSM</a>), and the relation is # 3191062 (<a href="https://www.openstreetmap.org/browse/relation/3191062">OSM</a>)</p>
 <p>Thanks.</p>
-<p>Edit: Added the return route # 3193918 (<a href="http://www.openstreetmap.org/browse/relation/3193918">OSM</a>) and the route_master relation # 3193919 (<a href="http://www.openstreetmap.org/browse/relation/3193919">OSM</a>)</p>
+<p>Edit: Added the return route # 3193918 (<a href="https://www.openstreetmap.org/browse/relation/3193918">OSM</a>) and the route_master relation # 3193919 (<a href="https://www.openstreetmap.org/browse/relation/3193919">OSM</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bus" rel="tag" title="see questions tagged &#39;bus&#39;">bus</span> <span class="post-tag tag-link-route" rel="tag" title="see questions tagged &#39;route&#39;">route</span> <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span>
@@ -182,7 +182,7 @@ osqa_accepted = true
 <div id="post-26233-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>How would you tag the route_master relation regarding the loop and the main "course" of the bus route? I already added the route_master for this bus line (# 3193919 <a href="http://www.openstreetmap.org/browse/relation/3193919">OSM</a>). Thankfully no loops on the return route...</p>
+<p>How would you tag the route_master relation regarding the loop and the main "course" of the bus route? I already added the route_master for this bus line (# 3193919 <a href="https://www.openstreetmap.org/browse/relation/3193919">OSM</a>). Thankfully no loops on the return route...</p>
 </div>
 <div id="comment-26233-info" class="comment-info">
 <span class="comment-age">(09 Sep '13, 17:57)</span> <span class="comment-user userinfo">MCPicoli</span>

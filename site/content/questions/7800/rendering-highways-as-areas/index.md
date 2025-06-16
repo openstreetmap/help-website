@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "rendering highways as areas"
-description = '''I was recently coding highways as areas, here the rose revolution square in tbilisi, which consists of open spaces of various kinds of roads: http://www.openstreetmap.org/?lat=41.7037&amp;amp;lon=44.792045&amp;amp;zoom=18&amp;amp;layers=M Question: The pedestrian area and the residential-highway-area render ok,...'''
+description = '''I was recently coding highways as areas, here the rose revolution square in tbilisi, which consists of open spaces of various kinds of roads: https://www.openstreetmap.org/?lat=41.7037&amp;amp;lon=44.792045&amp;amp;zoom=18&amp;amp;layers=M Question: The pedestrian area and the residential-highway-area render ok,...'''
 date = "2011-09-12T15:58:00Z"
 lastmod = "2011-09-13T14:47:00Z"
 weight = 7800
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I was recently coding highways as areas, here the rose revolution square in tbilisi, which consists of open spaces of various kinds of roads: <a href="http://www.openstreetmap.org/?lat=41.7037&amp;lon=44.792045&amp;zoom=18&amp;layers=M">http://www.openstreetmap.org/?lat=41.7037&amp;lon=44.792045&amp;zoom=18&amp;layers=M</a></p>
+<p>I was recently coding highways as areas, here the rose revolution square in tbilisi, which consists of open spaces of various kinds of roads: <a href="https://www.openstreetmap.org/?lat=41.7037&amp;lon=44.792045&amp;zoom=18&amp;layers=M">https://www.openstreetmap.org/?lat=41.7037&amp;lon=44.792045&amp;zoom=18&amp;layers=M</a></p>
 <p>Question: The pedestrian area and the residential-highway-area render ok, but the part with the secondary highway only renders the outlines. But I added "area=yes". Did I make a mistake or is it only the renderer's problem?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -105,8 +105,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's a rendering issue. The combination "highway=secondary" and "<a href="http://wiki.openstreetmap.org/wiki/Key:area">area=yes</a>" is not supported currently in Mapnik but we could discuss the opportunity of having a plazza or a square with a seconday highway importance since there is no given direction. Such areas are usually better controlled in roundabouts (to avoid collisions ;-).</p>
-<p>If the square or plazza is crossed with a given direction (e.g. with street lines within it), you might consider the proposed tag "<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">area:highway</a>".</p>
+<p>It's a rendering issue. The combination "highway=secondary" and "<a href="https://wiki.openstreetmap.org/wiki/Key:area">area=yes</a>" is not supported currently in Mapnik but we could discuss the opportunity of having a plazza or a square with a seconday highway importance since there is no given direction. Such areas are usually better controlled in roundabouts (to avoid collisions ;-).</p>
+<p>If the square or plazza is crossed with a given direction (e.g. with street lines within it), you might consider the proposed tag "<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">area:highway</a>".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looking at the <a href="http://www.openstreetmap.org/browse/way/129497616">details</a> of the way reveals that the start node is not the same as the end node. There is <a href="http://www.openstreetmap.org/browse/node/1428668235">one node</a> connected at the start of the way. You curently have a way looking like A-&gt;B-&gt;...-&gt;Z-&gt;B, but an area are on the form A-&gt;B-&gt;...-&gt;Z-&gt;A.</p>
+<p>Looking at the <a href="https://www.openstreetmap.org/browse/way/129497616">details</a> of the way reveals that the start node is not the same as the end node. There is <a href="https://www.openstreetmap.org/browse/node/1428668235">one node</a> connected at the start of the way. You curently have a way looking like A-&gt;B-&gt;...-&gt;Z-&gt;B, but an area are on the form A-&gt;B-&gt;...-&gt;Z-&gt;A.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

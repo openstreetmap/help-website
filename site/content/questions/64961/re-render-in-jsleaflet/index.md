@@ -133,8 +133,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess you mean the default map on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> ...</p>
-<p><a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> uses <a href="https://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a> since November 2012. Leaflet also uses tiles. However, you cannot (<a href="https://lists.openstreetmap.org/pipermail/dev/2017-February/029720.html">since</a> <a href="https://github.com/openstreetmap/openstreetmap-website/pull/1302#event-806574617">Sept 2016</a>) simply do a right click on a tile to get its address. Please see the <a href="https://help.openstreetmap.org/questions/54737/">older question "requesting-re-render-of-a-tile"</a> for workarounds.</p>
+<p>I guess you mean the default map on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> ...</p>
+<p><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> uses <a href="https://wiki.openstreetmap.org/wiki/Leaflet">Leaflet</a> since November 2012. Leaflet also uses tiles. However, you cannot (<a href="https://lists.openstreetmap.org/pipermail/dev/2017-February/029720.html">since</a> <a href="https://github.com/openstreetmap/openstreetmap-website/pull/1302#event-806574617">Sept 2016</a>) simply do a right click on a tile to get its address. Please see the <a href="/questions/54737/">older question "requesting-re-render-of-a-tile"</a> for workarounds.</p>
 <p>Note that due to a current <a href="https://blog.openstreetmap.org/2018/07/25/server-moves-imperial-equinix/">server move</a> updates may be slower than usual.</p>
 </div>
 <div class="answer-controls post-controls">

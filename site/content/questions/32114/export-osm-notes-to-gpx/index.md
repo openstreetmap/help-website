@@ -189,7 +189,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>shameful advertising, but i ended up creating this note downloader in perl :)</p>
-<p><a href="http://www.openstreetmap.org/user/richlv/diary/35938">http://www.openstreetmap.org/user/richlv/diary/35938</a></p>
+<p><a href="https://www.openstreetmap.org/user/richlv/diary/35938">https://www.openstreetmap.org/user/richlv/diary/35938</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

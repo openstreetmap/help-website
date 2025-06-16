@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is there a way to get an address range for a given relation or way? for example, <a href="http://www.openstreetmap.org/browse/way/102065354">way 102065354</a> has 10 nodes. I like to know what address range this street segment covers. This is a street segment called "East Santa Fe Street" in Olathe, ks, US. Using Nominatim's reverse geocoding api like this</p>
+<p>Is there a way to get an address range for a given relation or way? for example, <a href="https://www.openstreetmap.org/browse/way/102065354">way 102065354</a> has 10 nodes. I like to know what address range this street segment covers. This is a street segment called "East Santa Fe Street" in Olathe, ks, US. Using Nominatim's reverse geocoding api like this</p>
 <p><a href="http://nominatim.openstreetmap.org/reverse?format=xml&amp;osm_type=W&amp;osm_id=102065354&amp;zoom=18&amp;addressdetails=1">http://nominatim.openstreetmap.org/reverse?format=xml&amp;osm_type=W&amp;osm_id=102065354&amp;zoom=18&amp;addressdetails=1</a></p>
 <p>returns me the street name, city, state, etc.. but not exactly what I am looking for. I need to know what range of addresses fall in that street segment.</p>
 </div>
@@ -136,7 +136,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It may be not obvious for all but to retrieve address ranges from OSM, someone has to add them first into the OSM database. See the wiki documentation about <a href="http://wiki.openstreetmap.org/wiki/Addresses">addresses</a> and especially the section about <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">address interpolation</a>.</p>
+<p>It may be not obvious for all but to retrieve address ranges from OSM, someone has to add them first into the OSM database. See the wiki documentation about <a href="https://wiki.openstreetmap.org/wiki/Addresses">addresses</a> and especially the section about <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">address interpolation</a>.</p>
 <p>If addresses ranges are missing in your area of interest, either add them into OSM or import them into OSM (only if the source is compatible with the OSM licence) or don't use OSM and look for another source.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -188,8 +188,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>As far as I know there is no straightforward way for this.</p>
-<p>In OSM addresses aren't assigned to way <em>IDs</em> or ways in particular, instead there are separate address <em>nodes</em> and <em>ways</em> (the latter usually corresponding to building outlines or other areas). One exception are the three address relation approaches mentioned <a href="http://wiki.openstreetmap.org/wiki/Addresses#See_also">here</a> but they are rarely used.</p>
-<p>One possible solution is to use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">OverpassAPI</a> to retrieve all addresses for a specific street name in a given city, or bounding box, or near some specific element.</p>
+<p>In OSM addresses aren't assigned to way <em>IDs</em> or ways in particular, instead there are separate address <em>nodes</em> and <em>ways</em> (the latter usually corresponding to building outlines or other areas). One exception are the three address relation approaches mentioned <a href="https://wiki.openstreetmap.org/wiki/Addresses#See_also">here</a> but they are rarely used.</p>
+<p>One possible solution is to use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">OverpassAPI</a> to retrieve all addresses for a specific street name in a given city, or bounding box, or near some specific element.</p>
 <p>An example: the following query will return all address <em>nodes</em> for the street <em>Neuhaus</em> in the given bounding box (copy it by hand, the markup parser breaks it):</p>
 <pre><code>http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json];node[&quot;addr:street&quot;=&quot;Neuhaus&quot;](50.67,10.91,50.70,10.94);out;</code></pre>
 <p>You should then repeat the query, but this time with <em>way</em> instead of <em>node</em> to get all available addresses. Afterwards just parse the outputs and search for the lowest and highest <em>addr:housenumber</em> to get your range. Of course this is only the address range in OSM's database.</p>

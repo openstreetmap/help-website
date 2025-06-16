@@ -157,7 +157,7 @@ One Answer:
 <div class="comment-text">
 <p>Thanks. Got there in the end with your last example.</p>
 <p>Apologies for my first post's copy/paste but this forum won't format it properly. Trying to post <a href="http://overpass-api.de/api/interpreter?data=%5Bout:xml%5D%5Btimeout:25%5D;area(3600065606);(node%5B&#39;fhrs:id&#39;%5D(area);way%5B&#39;fhrs:id&#39;%5D(area);relation%5B&#39;fhrs:id&#39;%5D(area);">this api call</a>;out center;) (&lt;Markdown won't create link or code element! it gets confused by the brackets)</p>
-<p>Which I'd extrapolated from <a href="https://help.openstreetmap.org/questions/19063/get-city-nodes-within-a-country-using-overpass-api">This OSM Help Question</a></p>
+<p>Which I'd extrapolated from <a href="/questions/19063/get-city-nodes-within-a-country-using-overpass-api">This OSM Help Question</a></p>
 <p>As I said I only get the first item (nodes) returned. Is it possible to get it to work, or is your solution the only way?</p>
 </div>
 <div id="comment-54593-info" class="comment-info">
@@ -171,7 +171,7 @@ One Answer:
 <div class="comment-text">
 <p>Yes, it is necessary to either use the named area or to repeat the area statement for each query. The node(area) query overwrites the input set, so the way(area) query looks for areas in the result of the node query, and of course there are none.</p>
 <p>It's possible to explicitly include the area in each query rather than doing it before the query: node(area:3600065606),way(area(3600065606) etc. I find the method using a named set clearer.</p>
-<p>The docs have more about it: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
+<p>The docs have more about it: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
 </div>
 <div id="comment-54595-info" class="comment-info">
 <span class="comment-age">(10 Feb '17, 14:44)</span> <span class="comment-user userinfo">maxerickson</span>

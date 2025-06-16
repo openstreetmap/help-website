@@ -116,8 +116,8 @@ One Answer:
 &lt;/query&gt;
 &lt;print/&gt;</code></pre>
 <p>you can test on <a href="http://www.overpass-api.de/query_form.html">http://www.overpass-api.de/query_form.html</a></p>
-<p>There is more info on Overpass on <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
-<p>You can also try XAPI: <a href="https://wiki.openstreetmap.org/wiki/Xapi">http://wiki.openstreetmap.org/wiki/Xapi</a></p>
+<p>There is more info on Overpass on <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>You can also try XAPI: <a href="https://wiki.openstreetmap.org/wiki/Xapi">https://wiki.openstreetmap.org/wiki/Xapi</a></p>
 <p>The Overpass server also supports XAPI and is usually very fast.</p>
 </div>
 <div class="answer-controls post-controls">

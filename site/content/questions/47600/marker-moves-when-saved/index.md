@@ -40,9 +40,9 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm trying to add a marker for a local restaurant, La Trocha del Boyero, at 9°58'56.42"N 84°22'23.50"W (Google Earth Pro). Several times I have placed it here:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Snap179.png" alt="alt text" /></p>
+<p><img src="/upfiles/Snap179.png" alt="alt text" /></p>
 <p>But, when I save and go look at it, the marker shows up a block away as seen here:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Snap180.png" alt="alt text" /></p>
+<p><img src="/upfiles/Snap180.png" alt="alt text" /></p>
 <p>What am I doing wrong?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -117,7 +117,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The map that you see may consist of old tiles, perhaps because they're cached in your browser or perhaps because they just haven't been updated yet.</p>
-<p>If you want to see the current location you can use the search box at the top left of the osm.org website. That will take you to <a href="http://www.openstreetmap.org/node/3955403166">http://www.openstreetmap.org/node/3955403166</a> and the current position will be highlighted. It does look like the underlying tiles have updated, as the "restaurant" marker (on the tile) matches the orange circle (from the latitude and longitude that you updated).</p>
+<p>If you want to see the current location you can use the search box at the top left of the osm.org website. That will take you to <a href="https://www.openstreetmap.org/node/3955403166">https://www.openstreetmap.org/node/3955403166</a> and the current position will be highlighted. It does look like the underlying tiles have updated, as the "restaurant" marker (on the tile) matches the orange circle (from the latitude and longitude that you updated).</p>
 <p>As an aside, there are a couple of reasons why you mustn't use Google Earth to obtain location information to add to OSM. One is that Google's data is closed - your terms of service with Google prevents you from adding the data to services like OSM. Another reason is that the locations of things in Google mostly haven't been added by humans and in some cases are laughably incorrect (in England they seem often to be based on partial postcode lookups, which is not much use in a large postcode area). However the fact that your editing the restaurant in the first place presumably means that you have eaten there and no exactly where it is, and can move the location in OSM to it without using Google Earth?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -192,7 +192,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Yes, that's normal. There's a long and very detailed explanation here:</p>
-<p><a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183</a></p>
+<p><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183</a></p>
 </div>
 <div id="comment-47604-info" class="comment-info">
 <span class="comment-age">(19 Jan '16, 18:55)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -204,7 +204,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>meta: grr.. OSQA problem here, not convertable to a comment. <a href="http://help.openstreetmap.org/users/11887/rengewwj"></a><a href="http://help.openstreetmap.org/users/11887/rengewwj">@rengewwj</a>: please could you login and then use the "add new comment" below someoneElse's answer and just copy and paste your text? Thanks.</p>
+<p>meta: grr.. OSQA problem here, not convertable to a comment. <a href="https://help.openstreetmap.org/users/11887/rengewwj"></a><a href="https://help.openstreetmap.org/users/11887/rengewwj">@rengewwj</a>: please could you login and then use the "add new comment" below someoneElse's answer and just copy and paste your text? Thanks.</p>
 </div>
 <div id="comment-47607-info" class="comment-info">
 <span class="comment-age">(19 Jan '16, 22:05)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

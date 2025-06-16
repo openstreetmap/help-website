@@ -101,7 +101,7 @@ If someone wants to write a nice answer stating this and possibly elaborating on
 <div id="post-43207-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I suggest you create the <a href="http://wiki.openstreetmap.org/wiki/Route">route relation</a> corresponding to the trails when applicable, an then look up the trail details on <a href="http://hiking.waymarkedtrails.org/">waymarked trails</a>.</p>
+<p>I suggest you create the <a href="https://wiki.openstreetmap.org/wiki/Route">route relation</a> corresponding to the trails when applicable, an then look up the trail details on <a href="http://hiking.waymarkedtrails.org/">waymarked trails</a>.</p>
 </div>
 <div id="comment-43207-info" class="comment-info">
 <span class="comment-age">(25 May '15, 16:31)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

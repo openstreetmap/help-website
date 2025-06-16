@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "changesets with huge objects modified"
-description = '''Is there a way to detect/know changesets with more than 500 to 1000 objects modified in and around a region? Like for example, changesets like these http://www.openstreetmap.org/changeset/34317657 where more than 3k objects are modified. '''
+description = '''Is there a way to detect/know changesets with more than 500 to 1000 objects modified in and around a region? Like for example, changesets like these https://www.openstreetmap.org/changeset/34317657 where more than 3k objects are modified. '''
 date = "2015-10-28T05:38:00Z"
 lastmod = "2015-10-30T22:39:00Z"
 weight = 46157
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is there a way to detect/know changesets with more than 500 to 1000 objects modified in and around a region? Like for example, changesets like these <a href="http://www.openstreetmap.org/changeset/34317657">http://www.openstreetmap.org/changeset/34317657</a> where more than 3k objects are modified.</p>
+<p>Is there a way to detect/know changesets with more than 500 to 1000 objects modified in and around a region? Like for example, changesets like these <a href="https://www.openstreetmap.org/changeset/34317657">https://www.openstreetmap.org/changeset/34317657</a> where more than 3k objects are modified.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changesets" rel="tag" title="see questions tagged &#39;changesets&#39;">changesets</span>
@@ -85,7 +85,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a>, I'm only concerned when the large changesets are done by mistake and adding to <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>'s comment, it'd be nice to detect these kind of changesets.</p>
+<p><a href="https://help.openstreetmap.org/users/5070/lightsider">@Lightsider</a>, I'm only concerned when the large changesets are done by mistake and adding to <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>'s comment, it'd be nice to detect these kind of changesets.</p>
 </div>
 <div id="comment-46253-info" class="comment-info">
 <span class="comment-age">(30 Oct '15, 22:39)</span> <span class="comment-user userinfo">yogi_ks</span>
@@ -141,7 +141,7 @@ One Answer:
 <div class="answer-body">
 <p>There is not a super simple way to do it currently.</p>
 <p>You might want to look at <a href="https://github.com/MichaelVL/osm-analytic-tracker">https://github.com/MichaelVL/osm-analytic-tracker</a> <a href="http://osm.expandable.dk/osm/index.html">http://osm.expandable.dk/osm/index.html</a> for a recent effort. You would need to add special highlighting or a filter for larger changesets (note 500-1000 objects is resonably common and as such not directly a cause for alarm).</p>
-<p>You can find more tools here <a href="http://wiki.openstreetmap.org/wiki/Quality_assurance#Monitoring_Tools">http://wiki.openstreetmap.org/wiki/Quality_assurance#Monitoring_Tools</a></p>
+<p>You can find more tools here <a href="https://wiki.openstreetmap.org/wiki/Quality_assurance#Monitoring_Tools">https://wiki.openstreetmap.org/wiki/Quality_assurance#Monitoring_Tools</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -164,7 +164,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>See also some tools/libs at <a href="http://wiki.openstreetmap.org/wiki/Detect_Vandalism">http://wiki.openstreetmap.org/wiki/Detect_Vandalism</a></p>
+<p>See also some tools/libs at <a href="https://wiki.openstreetmap.org/wiki/Detect_Vandalism">https://wiki.openstreetmap.org/wiki/Detect_Vandalism</a></p>
 </div>
 <div id="comment-46251-info" class="comment-info">
 <span class="comment-age">(30 Oct '15, 21:50)</span> <span class="comment-user userinfo">ikonor</span>

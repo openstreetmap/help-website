@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I asked this first on Reddit, you can see the discussion <a href="http://www.reddit.com/r/openstreetmap/comments/kr66i/how_do_i_go_about_labeling_a_street_that_has/">here</a></p>
-<p><a href="http://www.openstreetmap.org/?lat=30.361139&amp;lon=-97.74451&amp;zoom=18&amp;layers=M">An example</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=30.361139&amp;lon=-97.74451&amp;zoom=18&amp;layers=M">An example</a></p>
 <p><a href="http://imgur.com/a/fjA6k">Possible ways to tag it</a></p>
 <p>On the west side of Loop 1, it is Spicewood Springs Road, and on the east side, it is West Anderson Lane. It is currently tagged as it appears in the second image (red = Spicewood, green = Anderson). Someone suggested to tag it another way, as shown in the first image. None of these seem quite correct to me - is there a standard way to do this?</p>
 </div>
@@ -108,8 +108,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If the name of the road changes in the middle of a bridge, split the bridge into two halves and name each half correctly. If the name of the road changes somewhere else other than in the middle of the bridge, then split the road whereever the name changes and name the ways correctly.</p>
-<p>On Reddit I see you are trying to "fix" the output of navigation software so that it gives altered guidance - i.e. it knows which road is mainly to the right and which is mainly to the left. Don't deliberately enter incorrect information just to improve the output of one piece of software. The software can, and should, be improved to give better results, rather than entering incorrect information, especially application-specific incorrect information, into OSM. See <a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the Renderer</a> for more details.</p>
-<p>You can also explore other ways of adding useful information to OSM, for example using <a href="http://wiki.openstreetmap.org/wiki/Relation:destination_sign">destination signs</a>.</p>
+<p>On Reddit I see you are trying to "fix" the output of navigation software so that it gives altered guidance - i.e. it knows which road is mainly to the right and which is mainly to the left. Don't deliberately enter incorrect information just to improve the output of one piece of software. The software can, and should, be improved to give better results, rather than entering incorrect information, especially application-specific incorrect information, into OSM. See <a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the Renderer</a> for more details.</p>
+<p>You can also explore other ways of adding useful information to OSM, for example using <a href="https://wiki.openstreetmap.org/wiki/Relation:destination_sign">destination signs</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

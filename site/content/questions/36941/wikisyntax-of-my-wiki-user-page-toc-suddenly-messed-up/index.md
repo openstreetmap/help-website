@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "wikisyntax of my wiki user page - TOC suddenly messed up"
-description = '''hello dear openstreetmapper  probably off topic here - but i am wondering what happenede with my wiki-syntax in the TOC of my page: &amp;lt; hope you can help me here.... i think i messed up this abit see http://wiki.openstreetmap.org/wiki/User:Tagtheworld __TOC__  {| class=&quot;wikitable&quot; width=&quot;30%&quot; |- ! ...'''
+description = '''hello dear openstreetmapper  probably off topic here - but i am wondering what happenede with my wiki-syntax in the TOC of my page: &amp;lt; hope you can help me here.... i think i messed up this abit see https://wiki.openstreetmap.org/wiki/User:Tagtheworld __TOC__  {| class=&quot;wikitable&quot; width=&quot;30%&quot; |- ! ...'''
 date = "2014-09-20T10:47:00Z"
 lastmod = "2014-09-22T01:47:00Z"
 weight = 36941
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>hello dear openstreetmapper</p>
 <p>probably off topic here - but i am wondering what happenede with my wiki-syntax in the TOC of my page: &lt; hope you can help me here.... i think i messed up this abit</p>
 <p>see<br />
-<a href="http://wiki.openstreetmap.org/wiki/User:Tagtheworld">http://wiki.openstreetmap.org/wiki/User:Tagtheworld</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/User:Tagtheworld">https://wiki.openstreetmap.org/wiki/User:Tagtheworld</a></p>
 <pre><code>__TOC__
 &#10;{| class=&quot;wikitable&quot; width=&quot;30%&quot;
 |-

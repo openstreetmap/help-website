@@ -71,7 +71,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I think you may be referring to the area "Aksai Chin" in which I placed the marker here:</p>
-<p><a href="http://www.openstreetmap.org/?mlat=34.96&amp;mlon=78.923&amp;zoom=9&amp;layers=M">http://www.openstreetmap.org/?mlat=34.96&amp;mlon=78.923&amp;zoom=9&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?mlat=34.96&amp;mlon=78.923&amp;zoom=9&amp;layers=M">https://www.openstreetmap.org/?mlat=34.96&amp;mlon=78.923&amp;zoom=9&amp;layers=M</a></p>
 <p>Is that the area you are talking of?</p>
 <p>According to Wikipedia (see also <a href="http://upload.wikimedia.org/wikipedia/commons/6/68/Kashmir_region_2004.jpg),">http://upload.wikimedia.org/wikipedia/commons/6/68/Kashmir_region_2004.jpg),</a> the area in question lies within the "Traditional boundary claimed" by Jammur and Kashmir, but is actually controlled by China through an agreement signed by China and India in 1993 and 1996.</p>
 <p>Are you saying that the area is nonetheless usually shown as belonging to India?</p>

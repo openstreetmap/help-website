@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I had recently become concerned that my city, Kansas City, no longer showed up in the search feature of Osmand. This city is in Missouri, in the United States. It had come to my attention that this feature requires a node tagged "place=city" and an administrative boundary with the same name as the city. So I tried to find the node for this city to see if it was missing information. I was unable to find the node. So, I added one. But I don't know if this was correct. Maybe there was already a node there and I missed it. Maybe the city requires more than just a new node. Could someone tell me more about this?</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/12651143">http://www.openstreetmap.org/browse/changeset/12651143</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/12651143">https://www.openstreetmap.org/browse/changeset/12651143</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-boundaries" rel="tag" title="see questions tagged &#39;boundaries&#39;">boundaries</span> <span class="post-tag tag-link-city" rel="tag" title="see questions tagged &#39;city&#39;">city</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-cities" rel="tag" title="see questions tagged &#39;cities&#39;">cities</span> <span class="post-tag tag-link-osmand" rel="tag" title="see questions tagged &#39;osmand&#39;">osmand</span>
@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are right, there was no Kansas City place node any more. The old one has been <a href="http://www.openstreetmap.org/browse/node/60928883/history">deleted</a> by the <a href="http://blog.osmfoundation.org/2012/07/26/automated-redactions-complete/">redaction bot</a> due to our <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license change</a>. Adding a new node was absolutely correct.</p>
+<p>You are right, there was no Kansas City place node any more. The old one has been <a href="https://www.openstreetmap.org/browse/node/60928883/history">deleted</a> by the <a href="http://blog.osmfoundation.org/2012/07/26/automated-redactions-complete/">redaction bot</a> due to our <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license change</a>. Adding a new node was absolutely correct.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

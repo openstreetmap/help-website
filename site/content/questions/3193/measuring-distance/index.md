@@ -117,8 +117,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are a number of websites that let you draw a track on top of OpenStreetMap based maps (as well as other maps), then tell you the distance. Some of these are listed here: <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
-<p>Its also possible to do this with software on your own PC, using OSM based maps. One option for this would be using <a href="http://wiki.openstreetmap.org/wiki/QLandKarte">QLandKarte GT</a>. Or there's a variety of a other software that could work, depending on your operating system and exactly what you want to do.</p>
+<p>There are a number of websites that let you draw a track on top of OpenStreetMap based maps (as well as other maps), then tell you the distance. Some of these are listed here: <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a></p>
+<p>Its also possible to do this with software on your own PC, using OSM based maps. One option for this would be using <a href="https://wiki.openstreetmap.org/wiki/QLandKarte">QLandKarte GT</a>. Or there's a variety of a other software that could work, depending on your operating system and exactly what you want to do.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

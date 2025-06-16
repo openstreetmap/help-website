@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A pizzeria can be tagged with the cuisine-key: <a href="http://wiki.openstreetmap.org/wiki/Cuisine">http://wiki.openstreetmap.org/wiki/Cuisine</a></p>
+<p>A pizzeria can be tagged with the cuisine-key: <a href="https://wiki.openstreetmap.org/wiki/Cuisine">https://wiki.openstreetmap.org/wiki/Cuisine</a></p>
 <p>amenity=restaurant or amenity=fast_food</p>
 <p>cuisine=pizza</p>
 <p>The wiki-site also suggest to use oven=wood_fired if it applies (don't know, if this is much used, though).</p>

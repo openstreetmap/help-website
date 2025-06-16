@@ -114,7 +114,7 @@ One Answer:
 <p>When you copy nodes and/or relations, they are new objects (and therefore have temporary id 0 until they get assigned their definitive id after uploading). I don't think there's a way around that, but you could use other techniques:</p>
 <ul>
 <li>Delete stuff you don't want from the current layer instead of copying stuff you want to a different layer. You might find the search function (Ctrl-F) helpfull for that.</li>
-<li>Edit the *.osm file mannually (in a text editor, with tools like grep, or even with <a href="http://wiki.openstreetmap.org/wiki/Category:OSM_processing">osm parsing libs</a>) to remove the bits you don't want, instead of using josm.</li>
+<li>Edit the *.osm file mannually (in a text editor, with tools like grep, or even with <a href="https://wiki.openstreetmap.org/wiki/Category:OSM_processing">osm parsing libs</a>) to remove the bits you don't want, instead of using josm.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -135,7 +135,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Thanks, I had tried the deleting method but turns out JOSM doesn't like actually deleting the nodes and ways from the source file either. I understand why, but it means deleting the nodes does effectively nothing for me as the program I'm using still tries to parse the nodes with tag action=delete. After a bit of research I think I'll just use <a href="http://wiki.openstreetmap.org/wiki/XMLStarlet">XMLStarlet</a> to remove the deleted nodes from the file to reduce the import time.</p>
+<p>Thanks, I had tried the deleting method but turns out JOSM doesn't like actually deleting the nodes and ways from the source file either. I understand why, but it means deleting the nodes does effectively nothing for me as the program I'm using still tries to parse the nodes with tag action=delete. After a bit of research I think I'll just use <a href="https://wiki.openstreetmap.org/wiki/XMLStarlet">XMLStarlet</a> to remove the deleted nodes from the file to reduce the import time.</p>
 </div>
 <div id="comment-37854-info" class="comment-info">
 <span class="comment-age">(21 Oct '14, 21:58)</span> <span class="comment-user userinfo">chillNZ</span>

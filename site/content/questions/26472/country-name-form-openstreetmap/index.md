@@ -125,7 +125,7 @@ Meanwhile I point you to a nice implemented GUI for the Overpass API: <a href="h
 1
 </div>
 <div class="comment-text">
-<p>... indeed ... overpass-turbo is a kind of user interface for queries via <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>... indeed ... overpass-turbo is a kind of user interface for queries via <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
 <p>Read all documentation there if you can reach your aim of if you get stuck somewhere.</p>
 <p>Also there are already similar questions like yours on this FAQ site. Search for keywords like filter, export, elements or similar.</p>
 </div>

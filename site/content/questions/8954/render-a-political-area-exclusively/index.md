@@ -71,7 +71,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Many thanks for your answers!</p>
-<p><a href="http://weait.com/content/combine-openstreetmap-extracts">osmosis</a> and <a href="http://wiki.openstreetmap.org/wiki/Osmconvert#Applying_Geographical_Borders">osmconvert</a> are the only necessary tools!</p>
+<p><a href="http://weait.com/content/combine-openstreetmap-extracts">osmosis</a> and <a href="https://wiki.openstreetmap.org/wiki/Osmconvert#Applying_Geographical_Borders">osmconvert</a> are the only necessary tools!</p>
 <p>It eventually worked out wonderfully: I've created an extract with a poly-file and then rerun Mapnik.</p>
 <ol>
 <li>Download country extract from somewhere</li>
@@ -133,9 +133,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Well, Are you looking to map that you would like to have a copy of on your computer as a PNG or SVG or to later print out <strong>or</strong> a map that can be viewed online (called a slippy map) with multiple zoom levels, similar to google maps ?</p>
-<p>If you're looking for something to print out on paper or as an image on your computer, <a href="http://help.openstreetmap.org/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">this question</a> can help you answer your question. Note that in this situation, you'll have to download an extract of OSM data (extracts are offered by country, state/province, and metropolitan area.<br />
+<p>If you're looking for something to print out on paper or as an image on your computer, <a href="/questions/3494/create-a-wall-map-of-an-area-50-kilometers-by-120-kilometers">this question</a> can help you answer your question. Note that in this situation, you'll have to download an extract of OSM data (extracts are offered by country, state/province, and metropolitan area.<br />
 </p>
-<p>If you're looking to make a map to embed on your own website, there's been several other users who have done this and <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">this question</a> lays out the options of which renderer to use. There may be an existing service that already creates this type of map.</p>
+<p>If you're looking to make a map to embed on your own website, there's been several other users who have done this and <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">this question</a> lays out the options of which renderer to use. There may be an existing service that already creates this type of map.</p>
 <p>If you have a specific question or are confused about something after reading that over, feel free to ask here, <a href="http://forum.osm.org">forum.osm.org</a>, or on the OSM IRC channel. <a href="http://irc.oftc.net">irc.oftc.net</a> - #osm</p>
 </div>
 <div class="answer-controls post-controls">
@@ -161,7 +161,7 @@ osqa_accepted = false
 <p>I would like to have a tile server which serves global tiles, but only has features for the Canton of Zurich.</p>
 <p>I found a <a href="http://downloads.cloudmade.com/europe/western_europe/switzerland/zurich#downloads_breadcrumbs">Zurich extract on cloudmade</a>. However, it's pretty outdated (from August).</p>
 <p>It's why I downloaded the Switzerland extract from geofabrik. And I thought there is a possibility to render only the features within the political region through a query in Mapniks osm.xml.</p>
-<p>Is it possible to adapt the query to something related to this relation <a href="http://www.openstreetmap.org/browse/relation/27970?">http://www.openstreetmap.org/browse/relation/27970?</a></p>
+<p>Is it possible to adapt the query to something related to this relation <a href="https://www.openstreetmap.org/browse/relation/27970?">https://www.openstreetmap.org/browse/relation/27970?</a></p>
 <p>Many thanks again for your fast response! It's very much appreciated!</p>
 <p>Best,</p>
 <p>Matthias</p>
@@ -218,8 +218,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use <a href="http://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a> to extract the data from within a bounding polygon.</p>
-<p>The bounding polygon needs to be specified in <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">Polygon Filter File Format</a>. That page has links to tools from converting from .osm format to poly format. So you can download the Zurich boundary relation, then convert it to a polygon file.</p>
+<p>You can use <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">Osmconvert</a> to extract the data from within a bounding polygon.</p>
+<p>The bounding polygon needs to be specified in <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">Polygon Filter File Format</a>. That page has links to tools from converting from .osm format to poly format. So you can download the Zurich boundary relation, then convert it to a polygon file.</p>
 <p>Then you could download the Switzerland extract, and use Osmosis or Osmconvert to extract just Zurich from that. Then load that extract into your database, and render it as usual with Mapnik.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -270,7 +270,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You rather want to use the current boundary-relation of the Canton Zürich to cut your file: <a href="http://www.openstreetmap.org/browse/relation/1690941">http://www.openstreetmap.org/browse/relation/1690941</a></p>
+<p>You rather want to use the current boundary-relation of the Canton Zürich to cut your file: <a href="https://www.openstreetmap.org/browse/relation/1690941">https://www.openstreetmap.org/browse/relation/1690941</a></p>
 <p>The one you mentioned does not contain any borders.</p>
 <p>If the whole cutting procedure by means of Osmosis is too complicated you may just download the data via JOSM and cut it manually, although not being overly elegant.</p>
 </div>
@@ -324,8 +324,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Mathias,</p>
 <p>I've also trying to create a political area as well although I have been unsuccessful so far.</p>
-<p>I outlined how to do it in a diary entry - <a href="http://www.openstreetmap.org/user/skorasaurus/diary/15250">http://www.openstreetmap.org/user/skorasaurus/diary/15250</a> although I wouldn't expect it to work for you because it didn't for me, but it may be worth a shot to try.</p>
-<p>As FischersFritz mentioned, you'll want to use the boundary-relation that consists of the boundaries of Zurich. <a href="http://www.openstreetmap.org/browse/relation/1690941">http://www.openstreetmap.org/browse/relation/1690941</a></p>
+<p>I outlined how to do it in a diary entry - <a href="https://www.openstreetmap.org/user/skorasaurus/diary/15250">https://www.openstreetmap.org/user/skorasaurus/diary/15250</a> although I wouldn't expect it to work for you because it didn't for me, but it may be worth a shot to try.</p>
+<p>As FischersFritz mentioned, you'll want to use the boundary-relation that consists of the boundaries of Zurich. <a href="https://www.openstreetmap.org/browse/relation/1690941">https://www.openstreetmap.org/browse/relation/1690941</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

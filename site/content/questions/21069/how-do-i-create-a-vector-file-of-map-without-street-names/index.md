@@ -107,7 +107,7 @@ One Answer:
 <p>In general: All your aims are possible with OSM data, because OSM data is raw data.</p>
 <p>You can determine how that data is displayed, or how we say: rendered.</p>
 <p>You can say what elements should be displayed and which not, and you can output OSM derived maps as bitmap graphic, or vector files like PDF, SVG or Adobe Illustrator or ...</p>
-<p>Have a look at this FAQ from this site first: <a href="https://help.openstreetmap.org/questions/6938/map-without-labels-and-businesses">map-without-labels-and-businesses</a></p>
+<p>Have a look at this FAQ from this site first: <a href="/questions/6938/map-without-labels-and-businesses">map-without-labels-and-businesses</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

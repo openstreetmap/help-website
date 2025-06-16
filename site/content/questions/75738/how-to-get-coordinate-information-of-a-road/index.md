@@ -105,7 +105,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Graphopper and OSRM have the ability to create and export a GPX see box at the bottom left.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSRM_router.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/OSRM_router.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -142,7 +142,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Does this <a href="https://help.openstreetmap.org/questions/17694/create-a-changeset-using-api">previous question</a> help?</p>
+<p>Does this <a href="/questions/17694/create-a-changeset-using-api">previous question</a> help?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

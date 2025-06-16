@@ -57,7 +57,7 @@ osqa_accepted = false
 <li><p>Is there a better mapping practice for these MP (that does not trigger JOSM warning)?</p></li>
 </ul>
 <p>Thanks for the support,</p>
-<p>EDIT: <a href="https://help.openstreetmap.org/questions/52242/needleleaved-inner-forest-polygon-not-rendered-rendering-or-modelling-problem">https://help.openstreetmap.org/questions/52242/needleleaved-inner-forest-polygon-not-rendered-rendering-or-modelling-problem</a> is a related question</p>
+<p>EDIT: <a href="/questions/52242/needleleaved-inner-forest-polygon-not-rendered-rendering-or-modelling-problem">https://help.openstreetmap.org/questions/52242/needleleaved-inner-forest-polygon-not-rendered-rendering-or-modelling-problem</a> is a related question</p>
 <p>juminet</p>
 <p>* Actually if I manually delete the inners of type "inner1" from the relation, it works, but I'd like to find a automatic and better solution!</p>
 </div>

@@ -134,7 +134,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>I'm guessing that you probably don't want just a GPX file - that'd be OK for a single road or route with a few waypoints on it, but would be impractical for a whole country.</p>
-<p>Instead, I'd have a look at one of <a href="https://help.openstreetmap.org/search/?q=garmin&amp;Submit=Search&amp;t=question">these previous questions</a>. <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">This wiki page</a> explains some of the options - there are lots of different maps available which highlight different features.</p>
+<p>Instead, I'd have a look at one of <a href="https://help.openstreetmap.org/search/?q=garmin&amp;Submit=Search&amp;t=question">these previous questions</a>. <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">This wiki page</a> explains some of the options - there are lots of different maps available which highlight different features.</p>
 <p>If you want a simple one-stop-shop that you can use to download a basic map I'd start <a href="http://garmin.openstreetmap.nl/">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">

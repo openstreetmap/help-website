@@ -245,7 +245,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/northern_bay_mada_QK3XWbZ.JPG" alt="alt text" /><img src="http://" alt="alt text" />Both DG and Bing are working in JOSM and P2 for me here Cambridgeshire and Bedfordshire UK EDIT I have added a jpeg of DG in Madagascar, so it works there as well, ( Win PC Chrome )</p>
+<p><img src="/upfiles/northern_bay_mada_QK3XWbZ.JPG" alt="alt text" /><img src="http://" alt="alt text" />Both DG and Bing are working in JOSM and P2 for me here Cambridgeshire and Bedfordshire UK EDIT I have added a jpeg of DG in Madagascar, so it works there as well, ( Win PC Chrome )</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

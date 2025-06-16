@@ -180,7 +180,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Have a look at the former question:</p>
-<p><a href="https://help.openstreetmap.org/questions/469/where-can-i-see-the-length-of-a-certain-way-element-in-the-osm-data">where-can-i-see-the-length-of-a-certain-way-element-in-the-osm-data</a></p>
+<p><a href="/questions/469/where-can-i-see-the-length-of-a-certain-way-element-in-the-osm-data">where-can-i-see-the-length-of-a-certain-way-element-in-the-osm-data</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

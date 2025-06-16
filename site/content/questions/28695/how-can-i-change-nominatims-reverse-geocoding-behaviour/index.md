@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>I'm conducting some tests against nominatim.openstreetmap.org, looking at reverse geocoding. Based upon my observations I have two questions:</p>
 <p>1) Given that I'm looking at data generated from a vehicle, this request and response are unexpected:</p>
 <p><a href="http://nominatim.openstreetmap.org/reverse?lat=52.50676&amp;lon=-1.99523&amp;addressdetails=1&amp;format=json&amp;zoom=18">http://nominatim.openstreetmap.org/reverse?lat=52.50676&amp;lon=-1.99523&amp;addressdetails=1&amp;format=json&amp;zoom=18</a></p>
-<pre><code>{&quot;place_id&quot;:&quot;9146383198&quot;,&quot;licence&quot;:&quot;Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright&quot;,&quot;osm_type&quot;:&quot;way&quot;,&quot;osm_id&quot;:&quot;60694393&quot;,&quot;lat&quot;:&quot;52.506753&quot;,&quot;lon&quot;:&quot;-1.9943365&quot;,&quot;display_name&quot;:&quot;CLOSED for 60 weeks from Sep 2013, Londonderry, Warley, Sandwell, West Midlands, England, B70 6AS, United Kingdom&quot;,&quot;address&quot;:{&quot;footway&quot;:&quot;CLOSED for 60 weeks from Sep 2013&quot;,&quot;neighbourhood&quot;:&quot;Londonderry&quot;,&quot;suburb&quot;:&quot;Warley&quot;,&quot;city&quot;:&quot;Sandwell&quot;,&quot;county&quot;:&quot;West Midlands&quot;,&quot;state_district&quot;:&quot;West Midlands&quot;,&quot;state&quot;:&quot;England&quot;,&quot;postcode&quot;:&quot;B70 6AS&quot;,&quot;country&quot;:&quot;United Kingdom&quot;,&quot;country_code&quot;:&quot;gb&quot;}}</code></pre>
+<pre><code>{&quot;place_id&quot;:&quot;9146383198&quot;,&quot;licence&quot;:&quot;Data \u00a9 OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&quot;,&quot;osm_type&quot;:&quot;way&quot;,&quot;osm_id&quot;:&quot;60694393&quot;,&quot;lat&quot;:&quot;52.506753&quot;,&quot;lon&quot;:&quot;-1.9943365&quot;,&quot;display_name&quot;:&quot;CLOSED for 60 weeks from Sep 2013, Londonderry, Warley, Sandwell, West Midlands, England, B70 6AS, United Kingdom&quot;,&quot;address&quot;:{&quot;footway&quot;:&quot;CLOSED for 60 weeks from Sep 2013&quot;,&quot;neighbourhood&quot;:&quot;Londonderry&quot;,&quot;suburb&quot;:&quot;Warley&quot;,&quot;city&quot;:&quot;Sandwell&quot;,&quot;county&quot;:&quot;West Midlands&quot;,&quot;state_district&quot;:&quot;West Midlands&quot;,&quot;state&quot;:&quot;England&quot;,&quot;postcode&quot;:&quot;B70 6AS&quot;,&quot;country&quot;:&quot;United Kingdom&quot;,&quot;country_code&quot;:&quot;gb&quot;}}</code></pre>
 <p>It seems that I need Nominatim to ignore ways with highway=footway - can I achieve this?</p>
 <p>2) Can I ask for a reverse geocoded response to include other tag values? I have been able to find the maxspeed tag value by requesting an api lookup following the reverse geocode request, for example:</p>
 <p><a href="http://api.openstreetmap.org/api/0.6/way/144176050">http://api.openstreetmap.org/api/0.6/way/144176050</a></p>
@@ -117,7 +117,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Neither of these two problems can be solved with the current API. However, solutions are fairly easy to implement and would be a welcome addition to the API. If you know a bit of PHP and like to get your hands dirty, they are a good place to start contributing to Nominatim. For a more in-depth discussion on how to best proceed, join the <a href="https://lists.openstreetmap.org/listinfo/geocoding">geocoding mailinglist</a> or <a href="http://wiki.openstreetmap.org/wiki/Irc">#osm-nominatim on IRC</a>.</p>
+<p>Neither of these two problems can be solved with the current API. However, solutions are fairly easy to implement and would be a welcome addition to the API. If you know a bit of PHP and like to get your hands dirty, they are a good place to start contributing to Nominatim. For a more in-depth discussion on how to best proceed, join the <a href="https://lists.openstreetmap.org/listinfo/geocoding">geocoding mailinglist</a> or <a href="https://wiki.openstreetmap.org/wiki/Irc">#osm-nominatim on IRC</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>if that way was named correctly (or not named at all). You would have gotten a better hit from a nearby source. I <a href="http://www.openstreetmap.org/changeset/19672738">fixed</a> that bad tagging for you in OSM in 5min. It will disappear eventually from nominatim too.</p>
+<p>if that way was named correctly (or not named at all). You would have gotten a better hit from a nearby source. I <a href="https://www.openstreetmap.org/changeset/19672738">fixed</a> that bad tagging for you in OSM in 5min. It will disappear eventually from nominatim too.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

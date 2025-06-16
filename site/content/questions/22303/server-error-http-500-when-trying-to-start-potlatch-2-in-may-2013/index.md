@@ -108,7 +108,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p><span>@alantw</span>: Okay, thanks. So I assume Potlatch does not even load and no green P2 loading screen appears?</p>
-<p>At <a href="http://www.openstreetmap.org/?lat=49.969238&amp;lon=8.84018&amp;zoom=18&amp;layers=M">this pos.</a> clicking edit and editing with Potlatch2 (<a href="http://www.openstreetmap.org/edit?lat=49.969238&amp;lon=8.84018&amp;zoom=18">URL then</a>) works for me - with Adobe Flash 11.7.700.169, Firefox 20.0.1 (German), Win7 64 bit (German).</p>
+<p>At <a href="https://www.openstreetmap.org/?lat=49.969238&amp;lon=8.84018&amp;zoom=18&amp;layers=M">this pos.</a> clicking edit and editing with Potlatch2 (<a href="https://www.openstreetmap.org/edit?lat=49.969238&amp;lon=8.84018&amp;zoom=18">URL then</a>) works for me - with Adobe Flash 11.7.700.169, Firefox 20.0.1 (German), Win7 64 bit (German).</p>
 <p>As a workaround you could try the new editor "iD" (click the triangle beneath "edit"). Does this work - it should?</p>
 </div>
 <div id="comment-22344-info" class="comment-info">

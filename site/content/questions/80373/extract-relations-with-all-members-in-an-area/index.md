@@ -217,7 +217,7 @@ out geom;</code></pre>
 <div id="post-80423-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This now retrieves the correct results, but it doesn't check for multiple cities (e.g. Milano or Roma). The code provided in the question (and in answer of maxerickson) deals with it using this: <a href="https://help.openstreetmap.org/questions/64305/overpass-api-get-city-boundaries-within-a-country-slow-query/70342">https://help.openstreetmap.org/questions/64305/overpass-api-get-city-boundaries-within-a-country-slow-query/70342</a></p>
+<p>This now retrieves the correct results, but it doesn't check for multiple cities (e.g. Milano or Roma). The code provided in the question (and in answer of maxerickson) deals with it using this: <a href="/questions/64305/overpass-api-get-city-boundaries-within-a-country-slow-query/70342">https://help.openstreetmap.org/questions/64305/overpass-api-get-city-boundaries-within-a-country-slow-query/70342</a></p>
 <p>Obviously this decreases performances, but it's the best I came up with so far. Thanks for your effort anyway, your solution is the way to go when dealing with cities with no homonyms.</p>
 </div>
 <div id="comment-80423-info" class="comment-info">

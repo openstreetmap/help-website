@@ -188,7 +188,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at <a href="http://wiki.openstreetmap.org/wiki/Xapi">XApi</a>. It is an eXtended API that allows you to filter the downloads. You can open the url in josm by selecting File-&gt;Open Location...</p>
+<p>Take a look at <a href="https://wiki.openstreetmap.org/wiki/Xapi">XApi</a>. It is an eXtended API that allows you to filter the downloads. You can open the url in josm by selecting File-&gt;Open Location...</p>
 <p>You can for example use <a href="http://www.informationfreeway.org/api/0.6/way%5Bbbox=11.54,48.14,11.543,48.145%5D%5Bpower=line%5D">http://www.informationfreeway.org/api/0.6/way[bbox=11.54,48.14,11.543,48.145][power=line]</a>.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Wald wird auf Karte nicht mehr gerendert, ist im Editor aber zu sehen"
-description = '''Hallo, http://www.openstreetmap.org/#map=15/51.3069/8.0947 seit mittag wird ein waldstück nicht mehr als wald in der Karte angezeigt, wohl aber im Editor. An den Aktualsierungen kann es nicht liegen, habe eine Weide eingezeichnet und diese wird nach kurzer Zeit auch dargestellt. Wer kann helfen. mfG...'''
+description = '''Hallo, https://www.openstreetmap.org/#map=15/51.3069/8.0947 seit mittag wird ein waldstück nicht mehr als wald in der Karte angezeigt, wohl aber im Editor. An den Aktualsierungen kann es nicht liegen, habe eine Weide eingezeichnet und diese wird nach kurzer Zeit auch dargestellt. Wer kann helfen. mfG...'''
 date = "2013-10-11T15:42:00Z"
 lastmod = "2013-10-15T14:56:00Z"
 weight = 27091
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hallo,</p>
-<p><a href="http://www.openstreetmap.org/#map=15/51.3069/8.0947">http://www.openstreetmap.org/#map=15/51.3069/8.0947</a></p>
+<p><a href="https://www.openstreetmap.org/#map=15/51.3069/8.0947">https://www.openstreetmap.org/#map=15/51.3069/8.0947</a></p>
 <p>seit mittag wird ein waldstück nicht mehr als wald in der Karte angezeigt, wohl aber im Editor. An den Aktualsierungen kann es nicht liegen, habe eine Weide eingezeichnet und diese wird nach kurzer Zeit auch dargestellt. Wer kann helfen.</p>
 <p>mfG</p>
 <p>Andreas</p>
@@ -114,8 +114,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Dort ist ein großes, <a href="http://www.openstreetmap.org/browse/relation/445229">ungeschlossenes Multipolygon</a> ohne extra Tags oder Innenringe. Bitte füge alle Außen- und Innenringe hinzu. Es ist auch keine schlechte Idee, das Multipolygon für bessere Bearbeitbarkeit zu verkleinern.</p>
-<p>Englischer Originaltext: There’s a large <a href="http://www.openstreetmap.org/browse/relation/445229">unclosed multipolygon</a> without extra tags or inner parts. Please add all outer and inner parts. It is also not a bad idea to make the multipolygon smaller because of editability.</p>
+<p>Dort ist ein großes, <a href="https://www.openstreetmap.org/browse/relation/445229">ungeschlossenes Multipolygon</a> ohne extra Tags oder Innenringe. Bitte füge alle Außen- und Innenringe hinzu. Es ist auch keine schlechte Idee, das Multipolygon für bessere Bearbeitbarkeit zu verkleinern.</p>
+<p>Englischer Originaltext: There’s a large <a href="https://www.openstreetmap.org/browse/relation/445229">unclosed multipolygon</a> without extra tags or inner parts. Please add all outer and inner parts. It is also not a bad idea to make the multipolygon smaller because of editability.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

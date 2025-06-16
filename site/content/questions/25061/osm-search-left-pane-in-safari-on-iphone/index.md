@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "OSM search left pane in Safari on iPhone ?"
-description = '''The OSM search pane on the left does not appear on the screen of an iPhone (using Safari browser). An alternate solution would be to install one of the dedicated apps... http://wiki.openstreetmap.org/wiki/Apple_iOS French version : Le panneau gauche de recherche dans OSM ne s&#x27;affiche pas sur l&#x27;écran...'''
+description = '''The OSM search pane on the left does not appear on the screen of an iPhone (using Safari browser). An alternate solution would be to install one of the dedicated apps... https://wiki.openstreetmap.org/wiki/Apple_iOS French version : Le panneau gauche de recherche dans OSM ne s&#x27;affiche pas sur l&#x27;écran...'''
 date = "2013-08-08T08:47:00Z"
 lastmod = "2013-10-15T12:49:00Z"
 weight = 25061
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>The OSM search pane on the left does not appear on the screen of an iPhone (using Safari browser).</p>
-<p>An alternate solution would be to install one of the dedicated apps... <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
-<p>French version : Le panneau gauche de recherche dans OSM ne s'affiche pas sur l'écran d'un iPhone utilisant le navigateur Safari. Une solution de contournement serait d'installer une des applications dédiées. <a href="http://wiki.openstreetmap.org/wiki/Apple_iOS">http://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
+<p>An alternate solution would be to install one of the dedicated apps... <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">https://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
+<p>French version : Le panneau gauche de recherche dans OSM ne s'affiche pas sur l'écran d'un iPhone utilisant le navigateur Safari. Une solution de contournement serait d'installer une des applications dédiées. <a href="https://wiki.openstreetmap.org/wiki/Apple_iOS">https://wiki.openstreetmap.org/wiki/Apple_iOS</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-iphone" rel="tag" title="see questions tagged &#39;iphone&#39;">iphone</span> <span class="post-tag tag-link-safari" rel="tag" title="see questions tagged &#39;safari&#39;">safari</span>

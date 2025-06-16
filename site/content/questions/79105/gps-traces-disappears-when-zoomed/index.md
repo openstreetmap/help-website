@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There is an area where the traces can only be seen if you zoom out beyond the zoom level where you can edit the map. Is there a way to fix this? I’ve added the north-south going path on the second image, but it’s difficult to edit it correctly without the traces. <a href="https://www.openstreetmap.org/edit#map=15/55.6347/12.4155">https://www.openstreetmap.org/edit#map=15/55.6347/12.4155</a> <img src="https://help.openstreetmap.org/upfiles/F557D813-E646-426C-8E5A-3C578C052013.jpeg" alt="far zoom" /> <img src="https://help.openstreetmap.org/upfiles/3AB8ACA9-1C12-47EA-9003-7DA2EAC789DB.jpeg" alt="near zoom" /></p>
+<p>There is an area where the traces can only be seen if you zoom out beyond the zoom level where you can edit the map. Is there a way to fix this? I’ve added the north-south going path on the second image, but it’s difficult to edit it correctly without the traces. <a href="https://www.openstreetmap.org/edit#map=15/55.6347/12.4155">https://www.openstreetmap.org/edit#map=15/55.6347/12.4155</a> <img src="/upfiles/F557D813-E646-426C-8E5A-3C578C052013.jpeg" alt="far zoom" /> <img src="/upfiles/3AB8ACA9-1C12-47EA-9003-7DA2EAC789DB.jpeg" alt="near zoom" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-gps-traces" rel="tag" title="see questions tagged &#39;gps-traces&#39;">gps-traces</span> <span class="post-tag tag-link-gpx" rel="tag" title="see questions tagged &#39;gpx&#39;">gpx</span>

@@ -67,7 +67,7 @@ This question is marked "community wiki".
 &#10;</div>
 <div class="comment-text">
 <p>I'm not entirely sure what the question is, but it's likely answered here:</p>
-<p><a href="http://www.openstreetmap.org/copyright">http://www.openstreetmap.org/copyright</a></p>
+<p><a href="https://www.openstreetmap.org/copyright">https://www.openstreetmap.org/copyright</a></p>
 </div>
 <div id="comment-38032-info" class="comment-info">
 <span class="comment-age">(28 Oct '14, 08:48)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -276,7 +276,7 @@ This question is marked "community wiki".
 <div class="answer-body">
 <p>שלום ארז גיאת,</p>
 <p>‏‏על פי‏</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">3d. If I use your data together with someone else's data, do I have to apply your license to their data too?</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3d._If_I_use_your_data_together_with_someone_else.27s_data.2C_do_I_have_to_apply_your_license_to_their_data_too.3F">3d. If I use your data together with someone else's data, do I have to apply your license to their data too?</a></p>
 <p>אם אני משתמש במידע שלכם עם מידע של מישהו אחר, האם עלי להחיל את הרשיון שלכם גם על המידע שלהם?</p>
 <p>If the two datasets are independent, no, you don't; this is a Collective Database.</p>
 <p>אם שני מסדי הנתונים בלתי תלויים, אז לא, אינך חייב. זהו מסד נתונים מאוחד</p>
@@ -285,7 +285,7 @@ This question is marked "community wiki".
 OSM<br />
 וכבישים ממסד נתונים אחר ומחבר אותם לצרכי חישוב מסלולים), אז זהו מסד נתונים נגזר ואתה חייב (על פי סעיף<br />
 3b).<br />
-אבל, אם ההתאמה בין מסדי הנתונים היא טריוויאלית על ידי, למשל, התאמה אוטומטית תוך שימומש בקריטריונים "טריוויאלים" כמו שם או מקום, אז זהו אינו שינוי "משמעותי" והמסד הנשאר "מאוחד". קיים גם <a href="http://wiki.openstreetmap.org/wiki/Open_Data_License/Trivial_Transformations_-_Guideline">מדריך קהילתי</a> המסביר מהו שינוי טריוויאלי</p>
+אבל, אם ההתאמה בין מסדי הנתונים היא טריוויאלית על ידי, למשל, התאמה אוטומטית תוך שימומש בקריטריונים "טריוויאלים" כמו שם או מקום, אז זהו אינו שינוי "משמעותי" והמסד הנשאר "מאוחד". קיים גם <a href="https://wiki.openstreetmap.org/wiki/Open_Data_License/Trivial_Transformations_-_Guideline">מדריך קהילתי</a> המסביר מהו שינוי טריוויאלי</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you have a gpx with waypoints and just want a straight line joining the points, you could use a text editor and replace the 'wpt' tags with 'trk' tags and then the points will be joined by a line when viewed in gpsvisualizer. I haven't tried this but it should be easy enough if you open an example of a gpx track to use as an example. I suspect you instead require a road route between the points, and if so, you can upload the gpx file of the waypoints to a site like www.gpsies.com and draw a route to each point.<br />
-Example of correct tags here <a href="http://wiki.openstreetmap.org/wiki/GPX">http://wiki.openstreetmap.org/wiki/GPX</a></p>
+Example of correct tags here <a href="https://wiki.openstreetmap.org/wiki/GPX">https://wiki.openstreetmap.org/wiki/GPX</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

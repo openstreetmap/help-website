@@ -167,7 +167,7 @@ One Answer:
 <div id="post-49979-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta: <a href="http://help.openstreetmap.org/users/12371/jagddennis"></a><a href="http://help.openstreetmap.org/users/12371/jagddennis">@JagdDennis</a>: Bitte denke daran, diese Antwort <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">als "akzeptiert" zu kennzeichnen</a> wenn sie dein Problem löst.</p>
+<p>meta: <a href="https://help.openstreetmap.org/users/12371/jagddennis"></a><a href="https://help.openstreetmap.org/users/12371/jagddennis">@JagdDennis</a>: Bitte denke daran, diese Antwort <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">als "akzeptiert" zu kennzeichnen</a> wenn sie dein Problem löst.</p>
 </div>
 <div id="comment-49979-info" class="comment-info">
 <span class="comment-age">(02 Jun '16, 19:46)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

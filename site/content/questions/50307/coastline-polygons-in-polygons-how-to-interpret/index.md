@@ -171,7 +171,7 @@ IMHO an easy-to-memorize-criterion.</p>
 1
 </div>
 <div class="comment-text">
-<p>Further to (1) someone's imported a bunch of OS Vector Map District and made it all coastline, when part of it (<a href="http://www.openstreetmap.org/way/255902449">http://www.openstreetmap.org/way/255902449</a> ) should be a small lake, not coastline at all.</p>
+<p>Further to (1) someone's imported a bunch of OS Vector Map District and made it all coastline, when part of it (<a href="https://www.openstreetmap.org/way/255902449">https://www.openstreetmap.org/way/255902449</a> ) should be a small lake, not coastline at all.</p>
 <p>Like any import, it just needs properly checking afterwards.</p>
 </div>
 <div id="comment-50322-info" class="comment-info">
@@ -205,7 +205,7 @@ IMHO an easy-to-memorize-criterion.</p>
 <div id="post-50336-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3194/sanser">@sanser</a>: I didn't feel provoked by you but seemingly still fail to get your point.<br />
+<p><a href="https://help.openstreetmap.org/users/3194/sanser">@sanser</a>: I didn't feel provoked by you but seemingly still fail to get your point.<br />
 By looking at the existing data, comparing it to aerial imagery and – if needed – looking at the mapping suggestions there is not much left to create confusion. IMHO</p>
 </div>
 <div id="comment-50336-info" class="comment-info">

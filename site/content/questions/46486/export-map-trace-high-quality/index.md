@@ -164,7 +164,7 @@ One Answer:
 <div class="comment-text">
 <p>... or have a look at QGIS:</p>
 <p>Although have not tried that on my own, you should be able to import a high quality OSM based map as background, and import any GPX trace as a separate layer. Then I rember the QGIS built-in print composer with some nice features.</p>
-<p>Aks in the QGIS channels for more details, and also remember <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">http://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></p>
+<p>Aks in the QGIS channels for more details, and also remember <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">https://wiki.openstreetmap.org/wiki/OSM_on_Paper</a></p>
 </div>
 <div id="comment-46503-info" class="comment-info">
 <span class="comment-age">(10 Nov '15, 17:34)</span> <span class="comment-user userinfo">stephan75</span>

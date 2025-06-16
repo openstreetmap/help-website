@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Places without population should be tagged with <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Dlocality">place=locality</a>. The name of an object should always be tagged with name=*.</p>
-<p>If you know the border of the place you could make a <a href="http://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a> of them and add the place=* tag on that.</p>
+<p>Places without population should be tagged with <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Dlocality">place=locality</a>. The name of an object should always be tagged with name=*.</p>
+<p>If you know the border of the place you could make a <a href="https://wiki.openstreetmap.org/wiki/Multipolygon">multipolygon</a> of them and add the place=* tag on that.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Small inhabited places (smaller then hamlets) can be tagged place=isolated_dwelling. <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Disolated_dwelling">http://wiki.openstreetmap.org/wiki/Tag:place%3Disolated_dwelling</a></p>
+<p>Small inhabited places (smaller then hamlets) can be tagged place=isolated_dwelling. <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Disolated_dwelling">https://wiki.openstreetmap.org/wiki/Tag:place%3Disolated_dwelling</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -111,9 +111,9 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes, it is possible.</p>
-<p>More Info can be found in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">Exporting_to_Adobe_Illustrator</a></p>
+<p>More Info can be found in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Exporting_to_Adobe_Illustrator">Exporting_to_Adobe_Illustrator</a></p>
 <p>e.g. try the online service of flosm.de</p>
-<p>Info about other formats can be found <a href="http://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">here</a>.</p>
+<p>Info about other formats can be found <a href="https://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

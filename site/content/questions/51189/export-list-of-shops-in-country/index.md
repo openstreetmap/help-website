@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In general the easiest way is to use <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> or <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass-Turbo</a>. This <a href="http://overpass-turbo.eu/s/hCZ">example</a> shows a suitable query using Overpass-Turbo. Both approaches allow a variety of output methods (such as Geojson or CSV).</p>
-<p>The alternative is to start with a complete extract of a given country and use similar filters to obtain the same information. The most useful tools for this are osmconvert and <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
+<p>In general the easiest way is to use <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass</a> or <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass-Turbo</a>. This <a href="http://overpass-turbo.eu/s/hCZ">example</a> shows a suitable query using Overpass-Turbo. Both approaches allow a variety of output methods (such as Geojson or CSV).</p>
+<p>The alternative is to start with a complete extract of a given country and use similar filters to obtain the same information. The most useful tools for this are osmconvert and <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">osmfilter</a>.</p>
 <p>You may need to consider a couple of things about such data:</p>
 <ul>
 <li>Convenience stores associated with petrol stations will often be mapped separately (they have different opening hours, food hygiene inspections etc), and this may lead to double counting for your purposes.</li>

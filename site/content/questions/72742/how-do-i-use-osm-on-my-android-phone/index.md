@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I'm not a developer at all. I just see the importance of what OSM is doing. Is there any way I can start using it in my casual going around? Say, I plan some route on my bike, right now my (Android) phone will show me a route using Google's map; I assume there's no casual way to switch over...?</p>
-<p><em>converted to question from answer in <a href="https://help.openstreetmap.org/questions/13680/how-to-use-osm-in-android-application">How to use OSM in Android application?</a></em></p>
+<p><em>converted to question from answer in <a href="/questions/13680/how-to-use-osm-in-android-application">How to use OSM in Android application?</a></em></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-android" rel="tag" title="see questions tagged &#39;android&#39;">android</span>

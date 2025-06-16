@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why does the XML Export Fail?"
-description = '''When I try to Export using the OpenStreetMap XML Data format I get the WebPage http://www.openstreetmap.org/export/finish cannot be found. Can anyone tell me if there is a way round this Thanks Frank'''
+description = '''When I try to Export using the OpenStreetMap XML Data format I get the WebPage https://www.openstreetmap.org/export/finish cannot be found. Can anyone tell me if there is a way round this Thanks Frank'''
 date = "2013-01-25T17:45:00Z"
 lastmod = "2013-12-02T16:50:00Z"
 weight = 19342
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>When I try to Export using the OpenStreetMap XML Data format I get the WebPage <a href="http://www.openstreetmap.org/export/finish">http://www.openstreetmap.org/export/finish</a> cannot be found.</p>
+<p>When I try to Export using the OpenStreetMap XML Data format I get the WebPage <a href="https://www.openstreetmap.org/export/finish">https://www.openstreetmap.org/export/finish</a> cannot be found.</p>
 <p>Can anyone tell me if there is a way round this</p>
 <p>Thanks</p>
 <p>Frank</p>
@@ -138,7 +138,7 @@ One Answer:
 <div class="answer-body">
 <p>That's a bit big to request from the live server. The error that I get when I try that area is:</p>
 <pre><code>You requested too many nodes (limit is 50000). Either request a smaller area, or use planet.osm</code></pre>
-<p>I'd suggest that using a ready-made extract might be the better approach. There's one of Oxfordshire <a href="http://download.geofabrik.de/openstreetmap/europe/great_britain/england/">here</a>. You can choose either protobuf (pbf) or compressed (bz2) format. If whatever application you're going to use the data with understands PBF, pick that; otherwise pick the .BZ2 one and uncompress it. The data's up to date as of last night. <a href="http://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">Other extracts</a> are also available.</p>
+<p>I'd suggest that using a ready-made extract might be the better approach. There's one of Oxfordshire <a href="http://download.geofabrik.de/openstreetmap/europe/great_britain/england/">here</a>. You can choose either protobuf (pbf) or compressed (bz2) format. If whatever application you're going to use the data with understands PBF, pick that; otherwise pick the .BZ2 one and uncompress it. The data's up to date as of last night. <a href="https://wiki.openstreetmap.org/wiki/Planet.osm#Downloading">Other extracts</a> are also available.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -159,7 +159,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>... and now, that's exactly what the server suggests when you try and export too large an area:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/export.png" alt="alt text" /></p>
+<p><img src="/upfiles/export.png" alt="alt text" /></p>
 </div>
 <div id="comment-28697-info" class="comment-info">
 <span class="comment-age">(02 Dec '13, 16:50)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

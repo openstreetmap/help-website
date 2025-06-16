@@ -46,7 +46,7 @@ Command I ran: <code>renderd -f -c /usr/local/etc/renderd.conf</code></p>
 <p>That's that my debug says:<br />
 <code>renderd[2107]: DEBUG: Got incoming connection, fd 23, number 9 renderd[2107]: DEBUG: Got incoming request with protocol version 2 renderd[2107]: DEBUG: Got command RenderPrio fd(23) xml(default), z(0), x(0), y(0), mime(image/png), options() renderd[2107]: Dispatching request to slave thread on fd 7 renderd[2107]: DEBUG: Sending render cmd(1 default 0/0/0) with protocol version 3 to fd 7 renderd[2107]: DEBUG: Got incoming request with protocol version 3 renderd[2107]: DEBUG: Got command Render fd(8) xml(default), z(0), x(0), y(0), mime(image/png), options() renderd[2107]: DEBUG: Failed to read cmd on fd 23 renderd[2107]: DEBUG: Connection 8, fd 23 closed, now 8 left</code></p>
 <p>Has anyone got an idea what could be the reason why it won't work?<br />
-Also, <a href="https://help.openstreetmap.org/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">this answer</a> didn't help me :/</p>
+Also, <a href="/questions/35317/local-tile-server-from-packages-404-when-displaying-tiles">this answer</a> didn't help me :/</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-apache" rel="tag" title="see questions tagged &#39;apache&#39;">apache</span> <span class="post-tag tag-link-renderd" rel="tag" title="see questions tagged &#39;renderd&#39;">renderd</span> <span class="post-tag tag-link-mapnik" rel="tag" title="see questions tagged &#39;mapnik&#39;">mapnik</span> <span class="post-tag tag-link-tileserver" rel="tag" title="see questions tagged &#39;tileserver&#39;">tileserver</span>

@@ -235,11 +235,11 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It sounds from the comment like you're describing a <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made=water_works"><code>man_made=water_works</code></a>. If you're mapping somewhere where water is cleaned between a e.g. river and a place that it is used, then that would be the tag to use. According to taginfo, it's <a href="http://taginfo.openstreetmap.org/tags/man_made=water_works#overview">quite widely used already</a>.<br />
+<p>It sounds from the comment like you're describing a <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made=water_works"><code>man_made=water_works</code></a>. If you're mapping somewhere where water is cleaned between a e.g. river and a place that it is used, then that would be the tag to use. According to taginfo, it's <a href="http://taginfo.openstreetmap.org/tags/man_made=water_works#overview">quite widely used already</a>.<br />
 </p>
-<p>Somewhere that handles waste water and treats it before e.g. putting it back in a river would be a <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant"><code>man_made=wastewater_plant</code></a>.</p>
-<p>As <a href="https://help.openstreetmap.org/users/158/scai">scai</a> has already said though, that doesn't mean that it'll appear on the "standard" map (although names will render - <a href="http://www.openstreetmap.org/?lat=53.984&amp;lon=-1.12449&amp;zoom=17&amp;layers=M">here</a>'s an example). That's simply because there are more features than can possibly be displayed on any one map.</p>
-<p>You might also find <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/water_network">this page</a> and its corresponding discussion page helpful - you can search <a href="http://taginfo.openstreetmap.org/">taginfo</a> to see how widely used the items on there are.</p>
+<p>Somewhere that handles waste water and treats it before e.g. putting it back in a river would be a <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dwastewater_plant"><code>man_made=wastewater_plant</code></a>.</p>
+<p>As <a href="https://help.openstreetmap.org/users/158/scai">scai</a> has already said though, that doesn't mean that it'll appear on the "standard" map (although names will render - <a href="https://www.openstreetmap.org/?lat=53.984&amp;lon=-1.12449&amp;zoom=17&amp;layers=M">here</a>'s an example). That's simply because there are more features than can possibly be displayed on any one map.</p>
+<p>You might also find <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/water_network">this page</a> and its corresponding discussion page helpful - you can search <a href="http://taginfo.openstreetmap.org/">taginfo</a> to see how widely used the items on there are.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -289,8 +289,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The main map doesn't show any possible feature, not even all <a href="http://wiki.openstreetmap.org/wiki/Map_Features">map features</a>. Yet it is still worth to add them because other tools can make use of them as for example search engines (like <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>), <a href="http://wiki.openstreetmap.org/wiki/Routing">routing engines</a> and so on. Besides you can also <a href="https://trac.openstreetmap.org/report">request</a> new features to be rendered or check if the <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> contains one or more browsable maps showing the feature you are looking for.</p>
-<p>Another option is to <a href="http://wiki.openstreetmap.org/wiki/Rendering">render</a> your own maps and decide for yourself which features to show, for example by using <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>.</p>
+<p>The main map doesn't show any possible feature, not even all <a href="https://wiki.openstreetmap.org/wiki/Map_Features">map features</a>. Yet it is still worth to add them because other tools can make use of them as for example search engines (like <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>), <a href="https://wiki.openstreetmap.org/wiki/Routing">routing engines</a> and so on. Besides you can also <a href="https://trac.openstreetmap.org/report">request</a> new features to be rendered or check if the <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> contains one or more browsable maps showing the feature you are looking for.</p>
+<p>Another option is to <a href="https://wiki.openstreetmap.org/wiki/Rendering">render</a> your own maps and decide for yourself which features to show, for example by using <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

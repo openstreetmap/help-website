@@ -263,7 +263,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I did a search for bike repair and got several. These work so maybe thats the way to map one. <a href="http://www.openstreetmap.org/way/344904107">http://www.openstreetmap.org/way/344904107</a> <a href="https://www.openstreetmap.org/node/3465734855">https://www.openstreetmap.org/node/3465734855</a></p>
+<p>I did a search for bike repair and got several. These work so maybe thats the way to map one. <a href="https://www.openstreetmap.org/way/344904107">https://www.openstreetmap.org/way/344904107</a> <a href="https://www.openstreetmap.org/node/3465734855">https://www.openstreetmap.org/node/3465734855</a></p>
 <p>Sorry it seems you are not looking for businesses (shops) more of a self repair amenity see links below.</p>
 </div>
 <div class="answer-controls post-controls">

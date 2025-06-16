@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>In general, you should avoid creating new tags as long as there are accepted tags for a given map feature.</p>
-<p>In your case, a path in a forest used only for wood transport is probably <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack"><code>highway=track</code></a>. To prevent regular traffic from using it, you could add appropriate restrictions, e.g. <a href="http://wiki.openstreetmap.org/wiki/Key:access"><code>access=forestry</code></a>.</p>
+<p>In your case, a path in a forest used only for wood transport is probably <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack"><code>highway=track</code></a>. To prevent regular traffic from using it, you could add appropriate restrictions, e.g. <a href="https://wiki.openstreetmap.org/wiki/Key:access"><code>access=forestry</code></a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Keep in mind that <em>access</em> applies to <em>all</em> <a href="http://wiki.openstreetmap.org/wiki/Access#Transport_mode_restrictions">kinds of transport</a>, even foot and bicycle. But most tracks only have restrictions for <em>vehicle</em> or <em>motor_vehicle</em>.</p>
+<p>Keep in mind that <em>access</em> applies to <em>all</em> <a href="https://wiki.openstreetmap.org/wiki/Access#Transport_mode_restrictions">kinds of transport</a>, even foot and bicycle. But most tracks only have restrictions for <em>vehicle</em> or <em>motor_vehicle</em>.</p>
 </div>
 <div id="comment-17982-info" class="comment-info">
 <span class="comment-age">(26 Nov '12, 12:35)</span> <span class="comment-user userinfo">scai ♦</span>

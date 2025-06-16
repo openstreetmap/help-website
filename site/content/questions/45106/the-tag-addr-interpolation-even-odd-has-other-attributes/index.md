@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>The usage is tranquil, simply add a line parallel to the street, with addr: interpolation = even or odd, and the numbers of the stretch at line ends.</p>
 <p>I've done some tests with nominatin and the result was not as accurate ... only located after about 2 or 3 attempts.</p>
 <p>My question is whether it is necessary to add the addr: street = [street name] on line or at points where the numbers are.</p>
-<p>It is an example in this link: <a href="http://www.openstreetmap.org/edit#map=19/-20.46229/-54.61504">http://www.openstreetmap.org/edit#map=19/-20.46229/-54.61504</a></p>
+<p>It is an example in this link: <a href="https://www.openstreetmap.org/edit#map=19/-20.46229/-54.61504">https://www.openstreetmap.org/edit#map=19/-20.46229/-54.61504</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-address" rel="tag" title="see questions tagged &#39;address&#39;">address</span> <span class="post-tag tag-link-interpolation" rel="tag" title="see questions tagged &#39;interpolation&#39;">interpolation</span>

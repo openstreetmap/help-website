@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi, is mapping former military danger areas ok in OSM? My question arises because of this <a href="https://www.openstreetmap.org/note/597866#map=15/18.3334/-65.3211&amp;layers=N">map note</a> which refers to this <a href="https://www.openstreetmap.org/way/341363396">former naval bombardment area</a> element that another contributor mapped.</p>
-<p>The note says that if the <a href="http://wiki.openstreetmap.org/wiki/Tag:military%3Ddanger_area">military=danger area</a> tag is applied to an element, it must also have the <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dmilitary">landuse=military</a> tag applied to it. In this case the element has the military=danger_area tag but doesn't have the landuse=military tag. From personal knowledge I know this area is not used by the military anymore but live bombs still remain on the ground.</p>
+<p>The note says that if the <a href="https://wiki.openstreetmap.org/wiki/Tag:military%3Ddanger_area">military=danger area</a> tag is applied to an element, it must also have the <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dmilitary">landuse=military</a> tag applied to it. In this case the element has the military=danger_area tag but doesn't have the landuse=military tag. From personal knowledge I know this area is not used by the military anymore but live bombs still remain on the ground.</p>
 <p>How can this map note be resolved?</p>
 <p>Thanks.</p>
 </div>
@@ -172,7 +172,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>[url=<a href="http://www.openstreetmap.org/#map=11/48.7014/39.2864%5D">http://www.openstreetmap.org/#map=11/48.7014/39.2864]</a> This zone[/url] in the ATO(Anti-Terrorist Operation) in Ukraine may be said that it is former danger zone, but now it is quiet for more than 1.5 years. There was war in 2014-early 2015, but now the only thing that you can meet there are the grenades, TNT or other harmful explosives. Few soldiers are there, as Siverskiy Donets' is quite a wide river in the place</p>
+<p>[url=<a href="https://www.openstreetmap.org/#map=11/48.7014/39.2864%5D">https://www.openstreetmap.org/#map=11/48.7014/39.2864]</a> This zone[/url] in the ATO(Anti-Terrorist Operation) in Ukraine may be said that it is former danger zone, but now it is quiet for more than 1.5 years. There was war in 2014-early 2015, but now the only thing that you can meet there are the grenades, TNT or other harmful explosives. Few soldiers are there, as Siverskiy Donets' is quite a wide river in the place</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

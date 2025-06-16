@@ -171,7 +171,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>I am not sure whether that "error" also occurs in other OSM based tools.</p>
-<p>So have a look at <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> or <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a> in the OSM wiki and tell us about success or failure.</p>
+<p>So have a look at <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> or <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a> in the OSM wiki and tell us about success or failure.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

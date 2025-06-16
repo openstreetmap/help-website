@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>(or a scooter one 🛴, see <a href="https://help.openstreetmap.org/questions/77223/how-to-tag-a-scooter-trottinette-not-motorscooter-parking">https://help.openstreetmap.org/questions/77223/how-to-tag-a-scooter-trottinette-not-motorscooter-parking</a> )</p>
+<p>(or a scooter one 🛴, see <a href="/questions/77223/how-to-tag-a-scooter-trottinette-not-motorscooter-parking">https://help.openstreetmap.org/questions/77223/how-to-tag-a-scooter-trottinette-not-motorscooter-parking</a> )</p>
 <p>For example, in front of elementary schools, with small stands where only bicycles or kick-scooters for children can park.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

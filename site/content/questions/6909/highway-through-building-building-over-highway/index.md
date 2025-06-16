@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See also <a href="http://help.openstreetmap.org/questions/6218/how-to-get-a-building-rendered-above-a-street">a similar question</a>.</p>
+<p>See also <a href="/questions/6218/how-to-get-a-building-rendered-above-a-street">a similar question</a>.</p>
 <p>The renderers choose which order to display things in, and this might not match what's on the ground. You should tag accurately what's on the ground, and accept that it will show differently on different map layers, and might not show the way that you want it to.</p>
 </div>
 <div class="answer-controls post-controls">

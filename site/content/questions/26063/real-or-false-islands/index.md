@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Real or false islands"
-description = '''Are these/many islands (Sandymush Creek river, N. Carolina) real/correct? The same with the river thickness? (Perma)link: http://www.openstreetmap.org/#map=16/35.7192/-82.7309 Please don&#x27;t be too quick in down-voting/closing the question. The answer could explain a cause of a systematic error-class ...'''
+description = '''Are these/many islands (Sandymush Creek river, N. Carolina) real/correct? The same with the river thickness? (Perma)link: https://www.openstreetmap.org/#map=16/35.7192/-82.7309 Please don&#x27;t be too quick in down-voting/closing the question. The answer could explain a cause of a systematic error-class ...'''
 date = "2013-09-02T09:11:00Z"
 lastmod = "2013-09-02T11:23:00Z"
 weight = 26063
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Are these/many islands (Sandymush Creek river, N. Carolina) real/correct? The same with the river thickness? (Perma)link: <a href="http://www.openstreetmap.org/#map=16/35.7192/-82.7309">http://www.openstreetmap.org/#map=16/35.7192/-82.7309</a><br />
+<p>Are these/many islands (Sandymush Creek river, N. Carolina) real/correct? The same with the river thickness? (Perma)link: <a href="https://www.openstreetmap.org/#map=16/35.7192/-82.7309">https://www.openstreetmap.org/#map=16/35.7192/-82.7309</a><br />
 Please don't be too quick in down-voting/closing the question. The answer could explain a cause of a systematic error-class (huge number of cases). Thanks!<br />
 </p>
 </div>
@@ -138,7 +138,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>From wiki waterway=river</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">http://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver">https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driver</a></p>
 <p>"For wide rivers use Tag:waterway=riverbank to create separate ways for the two river banks. Note that a central way is still needed." - so really the centreline and the riverbanks should coincide, with the centreline being in the middle of the riverbank polygons. So it might be the centreline needs adjusting rather than deleting.</p>
 </div>
 <div id="comment-26066-info" class="comment-info">

@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Check this wiki page:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/OAuth">http://wiki.openstreetmap.org/wiki/OAuth</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/OAuth">https://wiki.openstreetmap.org/wiki/OAuth</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

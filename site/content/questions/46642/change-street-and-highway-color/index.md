@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Short: No it's not possible to change the colors on osm.org itself. You might want to checkout <a href="https://wiki.openstreetmap.org/wiki/Maps">other maps</a> which rely on OSM data.</p>
-<p>Long: OSM.org uses a rendered 'raster map' to display information, which can't be altered that way. Instead you have to tweak the map style, which is part of the <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering stack</a>. As <a href="http://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a> mentioned, this is pretty complex, and if you really like to do your own map style, you should rely on simple desktop renderer solutions as maperitive, tilemill, ... . IMHO creating an own style just for colouring the ways makes no sense ;)</p>
+<p>Long: OSM.org uses a rendered 'raster map' to display information, which can't be altered that way. Instead you have to tweak the map style, which is part of the <a href="https://wiki.openstreetmap.org/wiki/Rendering">rendering stack</a>. As <a href="https://help.openstreetmap.org/users/9027/keithonearth">@keithonearth</a> mentioned, this is pretty complex, and if you really like to do your own map style, you should rely on simple desktop renderer solutions as maperitive, tilemill, ... . IMHO creating an own style just for colouring the ways makes no sense ;)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

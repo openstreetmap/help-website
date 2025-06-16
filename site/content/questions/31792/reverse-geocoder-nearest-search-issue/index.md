@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Reverse geocoder nearest search issue"
-description = '''I&#x27;m currently importing Europe maps because I need a reverse geocoder. While playing with the OSM website I encountered 2 issues:  1. When centering the map to:  http://www.openstreetmap.org/search?query=42.70988%2C23.29388 it displays the wrong address. It prefers the 173 Видин (173 Vidin) instead ...'''
+description = '''I&#x27;m currently importing Europe maps because I need a reverse geocoder. While playing with the OSM website I encountered 2 issues:  1. When centering the map to:  https://www.openstreetmap.org/search?query=42.70988%2C23.29388 it displays the wrong address. It prefers the 173 Видин (173 Vidin) instead ...'''
 date = "2014-03-23T14:01:00Z"
 lastmod = "2014-06-04T16:19:00Z"
 weight = 31792
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm currently importing Europe maps because I need a reverse geocoder. While playing with the OSM website I encountered 2 issues: 1. When centering the map to: <a href="http://www.openstreetmap.org/search?query=42.70988%2C23.29388">http://www.openstreetmap.org/search?query=42.70988%2C23.29388</a> it displays the wrong address. It prefers the 173 Видин (173 Vidin) instead бул.Сливница (boulevard Slivnica). Looking the source code it filters the nearest one while 173 Vidin is not (I tested with a lat, lon exactly on the Slivnica main street). 2. When centering the map to: <a href="http://www.openstreetmap.org/search?query=42.39311%2C23.63431">http://www.openstreetmap.org/search?query=42.39311%2C23.63431</a> it shows not the village Ново Село (Novo selo) but Ихтиман (Ihtiman) which is far away from that point. I understand that the reverse geocoder goes the hierarchy up while looking up the parents of the road found, but still this is not optimal. Google reverser somehow shows the nearest city/town/village. <a href="https://www.google.com/maps/place/42%C2%B023%2737.5%22N+23%C2%B038%2703.3%22E/@42.393736,23.634251,14z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0">https://www.google.com/maps/place/42%C2%B023%2737.5%22N+23%C2%B038%2703.3%22E/@42.393736,23.634251,14z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0</a></p>
+<p>I'm currently importing Europe maps because I need a reverse geocoder. While playing with the OSM website I encountered 2 issues: 1. When centering the map to: <a href="https://www.openstreetmap.org/search?query=42.70988%2C23.29388">https://www.openstreetmap.org/search?query=42.70988%2C23.29388</a> it displays the wrong address. It prefers the 173 Видин (173 Vidin) instead бул.Сливница (boulevard Slivnica). Looking the source code it filters the nearest one while 173 Vidin is not (I tested with a lat, lon exactly on the Slivnica main street). 2. When centering the map to: <a href="https://www.openstreetmap.org/search?query=42.39311%2C23.63431">https://www.openstreetmap.org/search?query=42.39311%2C23.63431</a> it shows not the village Ново Село (Novo selo) but Ихтиман (Ihtiman) which is far away from that point. I understand that the reverse geocoder goes the hierarchy up while looking up the parents of the road found, but still this is not optimal. Google reverser somehow shows the nearest city/town/village. <a href="https://www.google.com/maps/place/42%C2%B023%2737.5%22N+23%C2%B038%2703.3%22E/@42.393736,23.634251,14z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0">https://www.google.com/maps/place/42%C2%B023%2737.5%22N+23%C2%B038%2703.3%22E/@42.393736,23.634251,14z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0</a></p>
 <p>Similar issues to be found when asking for reverse on a highway between two cities and when in the middle of the highway there is another town near or on the road.</p>
 <p>Is there a way to fix this? I believe this would be a nice feature to have.</p>
 <p>Or somehow as a mapper I may split the road into sub part and attach that part to the city of interest?</p>
@@ -268,7 +268,7 @@ One Answer:
 &#10;</div>
 <div class="comment-text">
 <p>I'm trying to use your code, but obtain the next one:</p>
-<p>&lt;reversegeocode timestamp="Wed, 04 Jun 14 14:50:24 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;http://www.openstreetmap.org/copyright" querystring="format=xml&amp;lat=50.90921&amp;lon=4.46187"&gt; &lt;error&gt;Unable to geocode&lt;/error&gt; &lt;/reversegeocode&gt;</p>
+<p>&lt;reversegeocode timestamp="Wed, 04 Jun 14 14:50:24 +0000" attribution="Data © OpenStreetMap contributors, ODbL 1.0. &amp;lt;a href=" http:="" www.openstreetmap.org="" copyright""=""&gt;https://www.openstreetmap.org/copyright" querystring="format=xml&amp;lat=50.90921&amp;lon=4.46187"&gt; &lt;error&gt;Unable to geocode&lt;/error&gt; &lt;/reversegeocode&gt;</p>
 <p>Did you change anything in PlaceLookup.php? Did you make change only in ReverseGeocode.php and reverse.php?</p>
 <p>I imagine that I need to make a change in /lib/template/address.php , could you tell me what I'm doing wrong?</p>
 <p>Thanks in advance!</p>

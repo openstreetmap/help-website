@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Duplicate of <a href="https://help.openstreetmap.org/questions/53574/change-the-boundry-from-local-tile-server">https://help.openstreetmap.org/questions/53574/change-the-boundry-from-local-tile-server</a></p>
+<p>Duplicate of <a href="/questions/53574/change-the-boundry-from-local-tile-server">https://help.openstreetmap.org/questions/53574/change-the-boundry-from-local-tile-server</a></p>
 </div>
 <div id="comment-53738-info" class="comment-info">
 <span class="comment-age">(27 Dec '16, 11:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

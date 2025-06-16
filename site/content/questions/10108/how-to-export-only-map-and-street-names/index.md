@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can use various tools (Mapnik, TileMill, etc) to render the map yourself and/or filter the unwanted data in the database or in the rendering styles. You may also use a third party provider with customized OSM map styles (<a href="http://wiki.openstreetmap.org/wiki/Geofabrik">Geofabrik</a>, <a href="http://wiki.openstreetmap.org/wiki/CloudMade">CloudMade</a>). Contact the french <a href="http://wiki.openstreetmap.org/wiki/Mailing_List">mailing list</a> or <a href="http://wiki.openstreetmap.org/wiki/FR:Contact#Forums_en_fran.C3.A7ais">one of the forums</a> to get more information directly from the french community. You could also check previous answers about similar questions on this help site (e.g. <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">here</a>).</p>
+<p>You can use various tools (Mapnik, TileMill, etc) to render the map yourself and/or filter the unwanted data in the database or in the rendering styles. You may also use a third party provider with customized OSM map styles (<a href="https://wiki.openstreetmap.org/wiki/Geofabrik">Geofabrik</a>, <a href="https://wiki.openstreetmap.org/wiki/CloudMade">CloudMade</a>). Contact the french <a href="https://wiki.openstreetmap.org/wiki/Mailing_List">mailing list</a> or <a href="https://wiki.openstreetmap.org/wiki/FR:Contact#Forums_en_fran.C3.A7ais">one of the forums</a> to get more information directly from the french community. You could also check previous answers about similar questions on this help site (e.g. <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">here</a>).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

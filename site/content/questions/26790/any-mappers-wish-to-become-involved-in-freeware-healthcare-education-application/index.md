@@ -89,7 +89,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Hello you both,</p>
 <p>first, this is mora an FAQ site rather than a platform to find volunteers. A better place would have been the OSM mailing lists or the OSM forum.</p>
-<p>see <a href="http://wiki.openstreetmap.org/wiki/Contact">http://wiki.openstreetmap.org/wiki/Contact</a> for other channels.</p>
+<p>see <a href="https://wiki.openstreetmap.org/wiki/Contact">https://wiki.openstreetmap.org/wiki/Contact</a> for other channels.</p>
 <p>secondly I edited your email address ... it can be crawled by spam bots!</p>
 <p>thirdly: Please edit your question (or write in forum or similar) and tell us how you think to use OSM in your project.</p>
 </div>

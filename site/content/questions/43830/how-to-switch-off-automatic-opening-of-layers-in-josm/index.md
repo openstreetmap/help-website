@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You probably turned on the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Routes">Routes plugin</a>. At least the webpage mentions that you will see those two layers.</p>
+<p>You probably turned on the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Routes">Routes plugin</a>. At least the webpage mentions that you will see those two layers.</p>
 <p>Go to preferences -&gt; Plugins and disable the plugin if you do not use it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -138,7 +138,7 @@ One Answer:
 <div id="post-44491-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a> - which plugin are you referring? I only see one Routes plugin. The other one is Routing and it has two flags, but it does very different things (guessing from plugin description).</p>
+<p><a href="https://help.openstreetmap.org/users/2925/bcnorwich">@BCNorwich</a> - which plugin are you referring? I only see one Routes plugin. The other one is Routing and it has two flags, but it does very different things (guessing from plugin description).</p>
 </div>
 <div id="comment-44491-info" class="comment-info">
 <span class="comment-age">(29 Jul '15, 01:27)</span> <span class="comment-user userinfo">gorn</span>

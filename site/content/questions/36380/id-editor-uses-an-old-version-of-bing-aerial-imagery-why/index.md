@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>When I use regular osm map editor (edit with iD (in browser)), the bing aerial imagery in the background is really old. But when I use the potlatch editor, bing aerial imagery is new. Why regular editor uses old version? please see the links below for the same area, notice the difference.</p>
 <ul>
 <li>regular (iD): <a href="https://www.openstreetmap.org/edit?editor=id#map=18/44.73295/-63.66788">https://www.openstreetmap.org/edit?editor=id#map=18/44.73295/-63.66788</a></li>
-<li>Potlatch: <a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73312/-63.66802">http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73312/-63.66802</a></li>
+<li>Potlatch: <a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73312/-63.66802">https://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73312/-63.66802</a></li>
 </ul>
 <p>thanks</p>
 </div>
@@ -96,8 +96,8 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I can see the same car parked in the same place in the carpark at the left in both pictures:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/bg1.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/bg2.png" alt="alt text" /></p>
+<p><img src="/upfiles/bg1.png" alt="alt text" /></p>
+<p><img src="/upfiles/bg2.png" alt="alt text" /></p>
 </div>
 <div id="comment-36383-info" class="comment-info">
 <span class="comment-age">(29 Aug '14, 23:20)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -133,7 +133,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/upfiles/potlatch.png">http://help.openstreetmap.org/upfiles/potlatch.png</a> <a href="http://help.openstreetmap.org/upfiles/regular.png">http://help.openstreetmap.org/upfiles/regular.png</a> I see these images in three different computers. It's not slightly different, it's completely different.</p>
+<p><span>/upfiles/potlatch.png</span> <span>/upfiles/regular.png</span> I see these images in three different computers. It's not slightly different, it's completely different.</p>
 </div>
 <div id="comment-36386-info" class="comment-info">
 <span class="comment-age">(29 Aug '14, 23:48)</span> <span class="comment-user userinfo">kavur</span>
@@ -145,7 +145,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: thanks for those screenshots! Is it possible for you to find out the URLs of those images? Or even the IPs of the serving servers? Might be a bit technical … ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/9555/kavur">@kavur</a>: thanks for those screenshots! Is it possible for you to find out the URLs of those images? Or even the IPs of the serving servers? Might be a bit technical … ;-)</p>
 </div>
 <div id="comment-36402-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 12:40)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -157,7 +157,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: when i click the links in the question, i see these images. as for server ips i can do that if you tell me how to do it :)</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: when i click the links in the question, i see these images. as for server ips i can do that if you tell me how to do it :)</p>
 </div>
 <div id="comment-36404-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 13:02)</span> <span class="comment-user userinfo">kavur</span>
@@ -170,7 +170,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Remote Address:23.209.107.4:443 Request URL:<a href="https://ecn.t3.tiles.virtualearth.net/tiles/a030322101213302321.jpeg?g=587&amp;mkt=en-gb&amp;n=z">https://ecn.t3.tiles.virtualearth.net/tiles/a030322101213302321.jpeg?g=587&amp;mkt=en-gb&amp;n=z</a> Request Method:GET Status Code:200 OK (from cache)</p>
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: would this help?</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: would this help?</p>
 </div>
 <div id="comment-36405-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 13:07)</span> <span class="comment-user userinfo">kavur</span>
@@ -182,7 +182,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9555/kavur"></a><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: I am just guessing/trying, maybe we find something odd or interesting. Yes, exactly. Best use a location where there are clear differences. Now compare or post URLs and IPs for the request from both editors. Maybe they are served by different servers. Maybe on is via http and one via https which magically makes a difference, I do not know. Whatever we find out, maybe, in the end, we cannot change it because the aerial imagery is served directly by microsoft. But let's see …</p>
+<p><a href="https://help.openstreetmap.org/users/9555/kavur"></a><a href="https://help.openstreetmap.org/users/9555/kavur">@kavur</a>: I am just guessing/trying, maybe we find something odd or interesting. Yes, exactly. Best use a location where there are clear differences. Now compare or post URLs and IPs for the request from both editors. Maybe they are served by different servers. Maybe on is via http and one via https which magically makes a difference, I do not know. Whatever we find out, maybe, in the end, we cannot change it because the aerial imagery is served directly by microsoft. But let's see …</p>
 </div>
 <div id="comment-36408-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 14:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -193,7 +193,7 @@ osqa_accepted = false
 <div id="post-36409-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: these are header info for id and potlatch editors for the (almost) same area: for potlatch: Remote Address:193.63.75.103:80 Request URL:<a href="http://www.openstreetmap.org/edit?editor=potlatch2">http://www.openstreetmap.org/edit?editor=potlatch2</a> Request Method:GET Status Code:200 OK and for id: Remote Address:193.63.75.100:443 Request URL:<a href="https://www.openstreetmap.org/edit?editor=id">https://www.openstreetmap.org/edit?editor=id</a> Request Method:GET Status Code:200 OK hope it helps.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: these are header info for id and potlatch editors for the (almost) same area: for potlatch: Remote Address:193.63.75.103:80 Request URL:<a href="https://www.openstreetmap.org/edit?editor=potlatch2">https://www.openstreetmap.org/edit?editor=potlatch2</a> Request Method:GET Status Code:200 OK and for id: Remote Address:193.63.75.100:443 Request URL:<a href="https://www.openstreetmap.org/edit?editor=id">https://www.openstreetmap.org/edit?editor=id</a> Request Method:GET Status Code:200 OK hope it helps.</p>
 </div>
 <div id="comment-36409-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 14:55)</span> <span class="comment-user userinfo">kavur</span>
@@ -204,8 +204,8 @@ osqa_accepted = false
 <div id="post-36411-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: Hmm, no, this last info is not really helpful. I meant that you look for those tiles.virtualearth.net URLs. Those may be interesting.</p>
-<p>Oh, and, could you please try to access iD also (as you do so too for potlatch2) without https? → <a href="http://www.openstreetmap.org/edit?editor=id">http://www.openstreetmap.org/edit?editor=id</a> see what happens then.</p>
+<p><a href="https://help.openstreetmap.org/users/9555/kavur">@kavur</a>: Hmm, no, this last info is not really helpful. I meant that you look for those tiles.virtualearth.net URLs. Those may be interesting.</p>
+<p>Oh, and, could you please try to access iD also (as you do so too for potlatch2) without https? → <a href="https://www.openstreetmap.org/edit?editor=id">https://www.openstreetmap.org/edit?editor=id</a> see what happens then.</p>
 </div>
 <div id="comment-36411-info" class="comment-info">
 <span class="comment-age">(30 Aug '14, 15:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -216,7 +216,7 @@ osqa_accepted = false
 <div id="post-36412-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: i tried http instead of https, it didn't change.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: i tried http instead of https, it didn't change.</p>
 <p>in potlatch editor, under developer tools i can't see images. so i'm not sure what to do.</p>
 </div>
 <div id="comment-36412-info" class="comment-info">
@@ -228,7 +228,7 @@ osqa_accepted = false
 <div id="post-36429-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: could you please look up the URLs and IPs for the tiles.virtualearth.net requests by both editors? That is my only idea.</p>
+<p><a href="https://help.openstreetmap.org/users/9555/kavur">@kavur</a>: could you please look up the URLs and IPs for the tiles.virtualearth.net requests by both editors? That is my only idea.</p>
 </div>
 <div id="comment-36429-info" class="comment-info">
 <span class="comment-age">(31 Aug '14, 00:11)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -239,7 +239,7 @@ osqa_accepted = false
 <div id="post-36430-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: can you tell me how do i do that?</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: can you tell me how do i do that?</p>
 </div>
 <div id="comment-36430-info" class="comment-info">
 <span class="comment-age">(31 Aug '14, 00:20)</span> <span class="comment-user userinfo">kavur</span>
@@ -251,7 +251,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: i think i figured:</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: i think i figured:</p>
 <p>this is for id:</p>
 <p>Remote Address:23.209.107.4:443 Request URL:<a href="https://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023123.jpeg?g=587&amp;mkt=en-gb&amp;n=z">https://ecn.t0.tiles.virtualearth.net/tiles/a0303221012133023123.jpeg?g=587&amp;mkt=en-gb&amp;n=z</a></p>
 <p>and this is for potlatch:</p>
@@ -350,7 +350,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: thank you. it's good now :)</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: thank you. it's good now :)</p>
 </div>
 <div id="comment-36591-info" class="comment-info">
 <span class="comment-age">(04 Sep '14, 12:21)</span> <span class="comment-user userinfo">kavur</span>
@@ -361,7 +361,7 @@ osqa_accepted = false
 <div id="post-36622-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9555/kavur"></a><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: do you mean that the problem (as described in your question) does not exist anymore? By doing nothing? Or did you change anything?</p>
+<p><a href="https://help.openstreetmap.org/users/9555/kavur"></a><a href="https://help.openstreetmap.org/users/9555/kavur">@kavur</a>: do you mean that the problem (as described in your question) does not exist anymore? By doing nothing? Or did you change anything?</p>
 </div>
 <div id="comment-36622-info" class="comment-info">
 <span class="comment-age">(04 Sep '14, 23:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -373,7 +373,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: yes, the problem has been solved. I can see same pictures in poth editors. I didn't do anything. I thought you fixed it.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>: yes, the problem has been solved. I can see same pictures in poth editors. I didn't do anything. I thought you fixed it.</p>
 </div>
 <div id="comment-36623-info" class="comment-info">
 <span class="comment-age">(05 Sep '14, 00:20)</span> <span class="comment-user userinfo">kavur</span>
@@ -385,7 +385,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9555/kavur">@kavur</a>: No, I did not do anything except investigating and writing this answer. Thanks for your comments!</p>
+<p><a href="https://help.openstreetmap.org/users/9555/kavur">@kavur</a>: No, I did not do anything except investigating and writing this answer. Thanks for your comments!</p>
 </div>
 <div id="comment-36624-info" class="comment-info">
 <span class="comment-age">(05 Sep '14, 00:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -427,7 +427,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think they are the same the dates are the same, The car is it the same position and the shadows look the same to. in this slightly moved views. <a href="https://www.openstreetmap.org/edit?editor=id#map=20/44.73284/-63.66907">https://www.openstreetmap.org/edit?editor=id#map=20/44.73284/-63.66907</a> <a href="http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73280/-63.66900">http://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73280/-63.66900</a> if you move south a little the brown patches in the vegetation are the same and the car in the car park to the SW is the same. Near by on the freeway two vehicles are passing each other in both editors <a href="http://www.openstreetmap.org/edit?editor=id#map=19/44.73296/-63.67221">http://www.openstreetmap.org/edit?editor=id#map=19/44.73296/-63.67221</a> <a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=18/44.73295/-63.67233">https://www.openstreetmap.org/edit?editor=potlatch2#map=18/44.73295/-63.67233</a> which I think proves the images are at the same time.</p>
+<p>I think they are the same the dates are the same, The car is it the same position and the shadows look the same to. in this slightly moved views. <a href="https://www.openstreetmap.org/edit?editor=id#map=20/44.73284/-63.66907">https://www.openstreetmap.org/edit?editor=id#map=20/44.73284/-63.66907</a> <a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73280/-63.66900">https://www.openstreetmap.org/edit?editor=potlatch2#map=19/44.73280/-63.66900</a> if you move south a little the brown patches in the vegetation are the same and the car in the car park to the SW is the same. Near by on the freeway two vehicles are passing each other in both editors <a href="https://www.openstreetmap.org/edit?editor=id#map=19/44.73296/-63.67221">https://www.openstreetmap.org/edit?editor=id#map=19/44.73296/-63.67221</a> <a href="https://www.openstreetmap.org/edit?editor=potlatch2#map=18/44.73295/-63.67233">https://www.openstreetmap.org/edit?editor=potlatch2#map=18/44.73295/-63.67233</a> which I think proves the images are at the same time.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -451,7 +451,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey"></a><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy</a>-mackey: obviously we see completely different stuff. when i click the first link (id), i see most of the houses aren't even there. they weren't built yet. the image is from 2007 most optimistically.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey"></a><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy</a>-mackey: obviously we see completely different stuff. when i click the first link (id), i see most of the houses aren't even there. they weren't built yet. the image is from 2007 most optimistically.</p>
 <p>did you see the screenshots i posted in one of those comments?</p>
 </div>
 <div id="comment-36428-info" class="comment-info">

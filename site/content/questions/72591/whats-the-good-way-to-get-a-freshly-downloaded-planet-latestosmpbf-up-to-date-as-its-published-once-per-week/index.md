@@ -150,8 +150,8 @@ One Answer:
 <p>but I guess I could use <code>osmosis --read-replication-interval workingDirectory=. --simplify-change --write-xml-change merge.osc.gz</code> to avoid steps 1 to 4 by getting in one shot desired <code>merge.osc.gz</code>.</p>
 <p>I tried last settings (<code>maxInterval=345600</code> - one week in seconds - with the Planet OSM daily replication tree) but I got errors like "Pipeline entities are not sorted", like here</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/47785/osmosis-issue-pipeline-entities-are-not-sorted">Osmosis issue : Pipeline entities are not sorted</a></li>
-<li><a href="https://help.openstreetmap.org/questions/12469/osmosis-merge-issue-pipeline-entities-are-not-sorted-or-contain-multiple-versions">Osmosis - merge issue (Pipeline entities are not sorted or contain multiple versions)</a></li>
+<li><a href="/questions/47785/osmosis-issue-pipeline-entities-are-not-sorted">Osmosis issue : Pipeline entities are not sorted</a></li>
+<li><a href="/questions/12469/osmosis-merge-issue-pipeline-entities-are-not-sorted-or-contain-multiple-versions">Osmosis - merge issue (Pipeline entities are not sorted or contain multiple versions)</a></li>
 </ul>
 <p>Hope you can help :) thanks,</p>
 <p>Augustin</p>

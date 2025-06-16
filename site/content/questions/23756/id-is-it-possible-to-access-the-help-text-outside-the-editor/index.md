@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "iD - is it possible to access the help text outside the editor?"
-description = '''Within iD, the second symbol down at the left-hand side (I&#x27;ve no idea what it&#x27;s supposed to be) gets to a series of help screens. Although the links within the help text (such as to &quot;http://www.openstreetmap.org/&quot;) can be followed e.g. by &quot;open in new tab&quot;, this doesn&#x27;t work with any of the help pag...'''
+description = '''Within iD, the second symbol down at the left-hand side (I&#x27;ve no idea what it&#x27;s supposed to be) gets to a series of help screens. Although the links within the help text (such as to &quot;https://www.openstreetmap.org/&quot;) can be followed e.g. by &quot;open in new tab&quot;, this doesn&#x27;t work with any of the help pag...'''
 date = "2013-06-27T20:47:00Z"
 lastmod = "2013-12-11T14:24:00Z"
 weight = 23756
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Within iD, the second symbol down at the left-hand side (I've no idea what it's supposed to be) gets to a series of help screens. Although the links within the help text (such as to "http://www.openstreetmap.org/") can be followed e.g. by "open in new tab", this doesn't work with any of the help page links.</p>
+<p>Within iD, the second symbol down at the left-hand side (I've no idea what it's supposed to be) gets to a series of help screens. Although the links within the help text (such as to "https://www.openstreetmap.org/") can be followed e.g. by "open in new tab", this doesn't work with any of the help page links.</p>
 <p>This makes it very clumsy to navigate through the text - you have to keep scrolling up and down each little help page and you can't read it all at a glance. If the background button has previously been pressed you can't see any help text at all.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

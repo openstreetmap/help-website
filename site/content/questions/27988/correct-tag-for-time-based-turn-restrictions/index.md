@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki suggests day_on and day_off; though these lack some granularity you might be able to use them. Of more interest may be the section on the discussion page about <a href="http://wiki.openstreetmap.org/wiki/Talk:Relation:restriction#Conditional_restrictions">conditional restrictions</a>, although I suspect nothing will use such tagging.</p>
+<p>The wiki suggests day_on and day_off; though these lack some granularity you might be able to use them. Of more interest may be the section on the discussion page about <a href="https://wiki.openstreetmap.org/wiki/Talk:Relation:restriction#Conditional_restrictions">conditional restrictions</a>, although I suspect nothing will use such tagging.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -124,7 +124,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Additionally to <em>day_on</em> and <em>day_off</em> there is also <em>hour_on</em> and <em>hour_off</em> if you need more granularity. Or just <em>opening_hours</em> as suggested somewhere else at the discussion page. But <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restrictions</a> allow to specify much complexer conditions.</p>
+<p>Additionally to <em>day_on</em> and <em>day_off</em> there is also <em>hour_on</em> and <em>hour_off</em> if you need more granularity. Or just <em>opening_hours</em> as suggested somewhere else at the discussion page. But <a href="https://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restrictions</a> allow to specify much complexer conditions.</p>
 </div>
 <div id="comment-27991-info" class="comment-info">
 <span class="comment-age">(12 Nov '13, 07:15)</span> <span class="comment-user userinfo">scai ♦</span>

@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you embed openstreetmap in your site, with <code>script src="http://www.openstreetmap.org/..."</code> tags, then the user's IP will be made known to openstreetmap. Even that alone may be considered personal data in some circumstances / jurisdictions. Only an attorney who practices in your jurisdiction can give an unqualified answer to your question.</p>
+<p>If you embed openstreetmap in your site, with <code>script src="https://www.openstreetmap.org/..."</code> tags, then the user's IP will be made known to openstreetmap. Even that alone may be considered personal data in some circumstances / jurisdictions. Only an attorney who practices in your jurisdiction can give an unqualified answer to your question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -200,7 +200,7 @@ osqa_accepted = false
 <div id="post-56786-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks a lot for your anwser. You mean because the connection to "http://www.openstreetmap.org/.." the users ip is logged in the serverlog of the <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> webserver?</p>
+<p>Thanks a lot for your anwser. You mean because the connection to "https://www.openstreetmap.org/.." the users ip is logged in the serverlog of the <a href="http://www.openstreetmap.org">http://www.openstreetmap.org</a> webserver?</p>
 </div>
 <div id="comment-56786-info" class="comment-info">
 <span class="comment-age">(28 Jun '17, 10:25)</span> <span class="comment-user userinfo">Useful2213</span>

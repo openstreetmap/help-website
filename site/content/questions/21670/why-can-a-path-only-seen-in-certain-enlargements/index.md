@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why can a path only seen in certain enlargements?"
-description = '''I added some footpathes in an area checked with a GPS-trace. In potlace I see them all perfectly in every enlargement. In the main-map those ways are only seen in certain enlargements (500ft and smaller, and (partially, not all ways) at 1000ft) http://www.openstreetmap.org/?lat=43.90479&amp;amp;lon=15.2...'''
+description = '''I added some footpathes in an area checked with a GPS-trace. In potlace I see them all perfectly in every enlargement. In the main-map those ways are only seen in certain enlargements (500ft and smaller, and (partially, not all ways) at 1000ft) https://www.openstreetmap.org/?lat=43.90479&amp;amp;lon=15.2...'''
 date = "2013-04-20T10:39:00Z"
 lastmod = "2013-04-20T18:04:00Z"
 weight = 21670
@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>I added some footpathes in an area checked with a GPS-trace.</p>
 <p>In potlace I see them all perfectly in every enlargement.</p>
 <p>In the main-map those ways are only seen in certain enlargements (500ft and smaller, and (partially, not all ways) at 1000ft)</p>
-<p><a href="http://www.openstreetmap.org/?lat=43.90479&amp;lon=15.20557&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=43.90479&amp;lon=15.20557&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=43.90479&amp;lon=15.20557&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=43.90479&amp;lon=15.20557&amp;zoom=16&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-invisible" rel="tag" title="see questions tagged &#39;invisible&#39;">invisible</span> <span class="post-tag tag-link-footpath" rel="tag" title="see questions tagged &#39;footpath&#39;">footpath</span> <span class="post-tag tag-link-openlayers" rel="tag" title="see questions tagged &#39;openlayers&#39;">openlayers</span> <span class="post-tag tag-link-size" rel="tag" title="see questions tagged &#39;size&#39;">size</span>
@@ -120,8 +120,8 @@ One Answer:
 <div class="answer-body">
 <p>Because each zoom level is rendered individually. Some are rendered more often, some less often. Some are pre-rendered and some get rendered on-demand. And of course your local browser cache also matters, you should try to clear it. For a more detailed answer see the two following questions:</p>
 <ul>
-<li><a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated?</a></li>
-<li><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></li>
+<li><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main (mapnik) map get updated?</a></li>
+<li><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">I have made edits but they don't show up on the map</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

@@ -239,7 +239,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For islands / rocks in rivers or lakes, these need to be mapped using a <a href="http://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relation</a>. See the instructions on this page for <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater#Creating_islands_in_lakes">Creating islands in lakes</a>. Its the same for rivers, but add the waterway=riverbank ways as the outer instead.</p>
+<p>For islands / rocks in rivers or lakes, these need to be mapped using a <a href="https://wiki.openstreetmap.org/wiki/Relation:multipolygon">multipolygon relation</a>. See the instructions on this page for <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater#Creating_islands_in_lakes">Creating islands in lakes</a>. Its the same for rivers, but add the waterway=riverbank ways as the outer instead.</p>
 <p>Then the islands will be shown correctly on most renderers.</p>
 </div>
 <div class="answer-controls post-controls">

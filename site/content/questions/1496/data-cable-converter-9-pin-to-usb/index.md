@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Both the 72 and ETrex uses a 4 pin connector that connects to a serial com port. The serial com ports are 9 pin and are never used for display. That probably is your 15 pin VGA port (those two are often mistaken for each other).</p>
-<p>Even if you connect the gps through a usb-serial converter you would need a program to comunicate with the GPS. You can use <a href="http://wiki.openstreetmap.org/wiki/Mapsource">Garmin MapSource</a> or <a href="http://wiki.openstreetmap.org/wiki/Gpsbabel">GpsBabel</a>.</p>
+<p>Even if you connect the gps through a usb-serial converter you would need a program to comunicate with the GPS. You can use <a href="https://wiki.openstreetmap.org/wiki/Mapsource">Garmin MapSource</a> or <a href="https://wiki.openstreetmap.org/wiki/Gpsbabel">GpsBabel</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

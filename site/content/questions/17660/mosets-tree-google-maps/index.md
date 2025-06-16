@@ -134,7 +134,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>GMap, <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">OpenLayers</a>, and <a href="http://leafletjs.com/">Leaflet</a> are all used in pretty much the same way. You create a map object, initialize it with an html object to draw into and a latitude/longitude/zoom, and the rest (for your usecase) are optional niceties.</p>
+<p>GMap, <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">OpenLayers</a>, and <a href="http://leafletjs.com/">Leaflet</a> are all used in pretty much the same way. You create a map object, initialize it with an html object to draw into and a latitude/longitude/zoom, and the rest (for your usecase) are optional niceties.</p>
 <p>See the two previous links for examples, and adapt them to your php code.</p>
 <p>Note that you don't need an API key to use OSM tiles. Alsom the map_controls are probably named differently between libraries, so you should either :</p>
 <ul>

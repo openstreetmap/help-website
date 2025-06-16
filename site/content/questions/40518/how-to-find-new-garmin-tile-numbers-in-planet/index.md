@@ -209,7 +209,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Your question is very confusing to say the least. I currently suspect that if what you did ever worked it was pure coincidence.</p>
 <p>As Andy has already pointed out the tile numbers depend on how somebody preparing a Garmin map splits the world up which is typically done automatically depending on data density. It would be surprising if such a tiling would be stable over longer periods and even more surprising if the result could be caculated via an unrelated website.</p>
-<p>If you want a Garmin map for a specific region you may be better served by using <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> or one of the regional maps listed here: <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
+<p>If you want a Garmin map for a specific region you may be better served by using <a href="http://garmin.openstreetmap.nl/">http://garmin.openstreetmap.nl/</a> or one of the regional maps listed here: <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

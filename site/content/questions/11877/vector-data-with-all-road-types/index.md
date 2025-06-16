@@ -134,7 +134,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>You should also browse the wiki to understand how osm data is organised if you want to extract usefull info from it. Try <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a> and <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> first. As for parsing the data, see <a href="http://wiki.openstreetmap.org/wiki/Osmosis">http://wiki.openstreetmap.org/wiki/Osmosis</a> or <a href="http://wiki.openstreetmap.org/wiki/Osmium">http://wiki.openstreetmap.org/wiki/Osmium</a> amongst many options.</p>
+<p>You should also browse the wiki to understand how osm data is organised if you want to extract usefull info from it. Try <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a> and <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> first. As for parsing the data, see <a href="https://wiki.openstreetmap.org/wiki/Osmosis">https://wiki.openstreetmap.org/wiki/Osmosis</a> or <a href="https://wiki.openstreetmap.org/wiki/Osmium">https://wiki.openstreetmap.org/wiki/Osmium</a> amongst many options.</p>
 </div>
 <div id="comment-11882-info" class="comment-info">
 <span class="comment-age">(10 Apr '12, 20:58)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

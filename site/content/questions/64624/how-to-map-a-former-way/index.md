@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello! I came up with an interesting situation, when the named way disappeared in reality, but it is still being used in building addresses and it also exists on proprietary maps (Google, Bing). The place I'm talking about:</p>
 <p><img src="https://image.prntscr.com/image/9JnG_ugISYu7wm7An1_FeQ.png" alt="alt text" /></p>
 <p>Here's how the place looked before these apartments were built:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_at_Jul_10_09-42-54.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_at_Jul_10_09-42-54.png" alt="alt text" /></p>
 <p>There are no signs of Sillavan Way on the ground actually. Also it is missing in OSM. I've updated apartment buildings which had lack of details but how to deal with this ghost way? Any suggestions?</p>
 <p>Thanks.</p>
 </div>

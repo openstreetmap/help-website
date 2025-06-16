@@ -111,9 +111,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Make sure the "Selection list window" (Alt-Shift-T) is visible in the right column. Then select the way you are interested in and look at the icon in front of it.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/OpenClosedIcons.png" alt="Different icons for area and way in Josm" /></p>
+<p><img src="/upfiles/OpenClosedIcons.png" alt="Different icons for area and way in Josm" /></p>
 <p>If the ways are part of a multipolygon, then you can also use the relation editor. It uses the same icons for individual ways and a similar set for loops formed by multiple ways.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/RelEditIcons.png" alt="Different icons for area and way in Josm relation editor" /></p>
+<p><img src="/upfiles/RelEditIcons.png" alt="Different icons for area and way in Josm relation editor" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

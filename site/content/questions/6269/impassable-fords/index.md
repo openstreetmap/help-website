@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If "usually" depends on the amount of water and therefor on the season, you could try access:date_on=YYYYMMDD and access:date_off=YYYYMMDD. If it is only impsssable by cars (for example, walkers-only steping stones), maybe access:vehicle=no ? In any case it sounds like you should consider some extended usage of the <a href="http://wiki.openstreetmap.org/wiki/Key:access">access</a> tag.</p>
+<p>If "usually" depends on the amount of water and therefor on the season, you could try access:date_on=YYYYMMDD and access:date_off=YYYYMMDD. If it is only impsssable by cars (for example, walkers-only steping stones), maybe access:vehicle=no ? In any case it sounds like you should consider some extended usage of the <a href="https://wiki.openstreetmap.org/wiki/Key:access">access</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

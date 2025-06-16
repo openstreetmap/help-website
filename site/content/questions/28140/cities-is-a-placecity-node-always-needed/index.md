@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Cities - is a place=city node always needed?"
-description = '''This is a question about Sheffield. For some time now it&#x27;s happily existed in OSM as a relation: http://www.openstreetmap.org/browse/relation/106956/history with the &quot;Sheffield City Centre&quot; node (which has been tagged as a suburb) as an admin centre: http://www.openstreetmap.org/browse/node/26615514...'''
+description = '''This is a question about Sheffield. For some time now it&#x27;s happily existed in OSM as a relation: https://www.openstreetmap.org/browse/relation/106956/history with the &quot;Sheffield City Centre&quot; node (which has been tagged as a suburb) as an admin centre: https://www.openstreetmap.org/browse/node/26615514...'''
 date = "2013-11-15T19:55:00Z"
 lastmod = "2013-11-25T15:16:00Z"
 weight = 28140
@@ -40,11 +40,11 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>This is a question about Sheffield. For some time now it's happily existed in OSM as a relation:</p>
-<p><a href="http://www.openstreetmap.org/browse/relation/106956/history">http://www.openstreetmap.org/browse/relation/106956/history</a></p>
+<p><a href="https://www.openstreetmap.org/browse/relation/106956/history">https://www.openstreetmap.org/browse/relation/106956/history</a></p>
 <p>with the "Sheffield City Centre" node (which has been tagged as a <a href="https://wiki.openstreetmap.org/wiki/Suburb">suburb</a>) as an admin centre:</p>
-<p><a href="http://www.openstreetmap.org/browse/node/266155142">http://www.openstreetmap.org/browse/node/266155142</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/266155142">https://www.openstreetmap.org/browse/node/266155142</a></p>
 <p>Recently a new "Sheffield" node has been created:</p>
-<p><a href="http://www.openstreetmap.org/browse/node/2494466157">http://www.openstreetmap.org/browse/node/2494466157</a></p>
+<p><a href="https://www.openstreetmap.org/browse/node/2494466157">https://www.openstreetmap.org/browse/node/2494466157</a></p>
 <p>and at the same time "<a href="https://wiki.openstreetmap.org/wiki/City">place=city</a>" was removed from the relation.</p>
 <p>Other than the name, there's nothing to connect the new "Sheffield" node with the wider Sheffield area which is encompassed by the relation. Would I be correct to delete the new "Sheffield" node and re-add place=city to the relation, i.e. put the situation back how it was before the most recent edit? What's the "usual practice" elsewhere?</p>
 </div>
@@ -69,7 +69,7 @@ osqa_accepted = true
 &#10;</div>
 <div class="comment-text">
 <p>Thanks to all who replied. Now changed in:</p>
-<p><a href="http://www.openstreetmap.org/browse/changeset/19082723">http://www.openstreetmap.org/browse/changeset/19082723</a></p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/19082723">https://www.openstreetmap.org/browse/changeset/19082723</a></p>
 </div>
 <div id="comment-28420-info" class="comment-info">
 <span class="comment-age">(23 Nov '13, 22:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -156,7 +156,7 @@ osqa_accepted = true
 5
 </div>
 <div class="comment-text">
-<p>The wiki is (as ever) wrong. City halls can often be in fairly arbitrary locations: for example, in <a href="http://www.openstreetmap.org/#map=18/52.80768/-1.64443">Burton-on-Trent</a>, the town hall was built out-of-town in the 19th century, in a failed attempt to establish a new town centre.</p>
+<p>The wiki is (as ever) wrong. City halls can often be in fairly arbitrary locations: for example, in <a href="https://www.openstreetmap.org/#map=18/52.80768/-1.64443">Burton-on-Trent</a>, the town hall was built out-of-town in the 19th century, in a failed attempt to establish a new town centre.</p>
 <p>Generally the decision should be taken by local mappers, who will know better than others where the city's centre is.</p>
 </div>
 <div id="comment-28428-info" class="comment-info">
@@ -233,7 +233,7 @@ osqa_accepted = true
 <div id="post-28156-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... also Osmand app makes use of single nodes for each city and place, so please keep unique nodes according to <a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a></p>
+<p>... also Osmand app makes use of single nodes for each city and place, so please keep unique nodes according to <a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a></p>
 <p>And these city nodes are also importand if any application is used to create an overview map of a country, a continent or even the whole planet.</p>
 </div>
 <div id="comment-28156-info" class="comment-info">
@@ -288,7 +288,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I don't know in UK. But in France, I would certainly keep one node tagged as "place=city" as member of the admin boundary relation with a role "admin_centre". I see the "place=suburb" as a subset of the whole city. The <a href="http://wiki.openstreetmap.org/wiki/Tag:place=suburb?uselang=en">wiki page about "suburb"</a> is also saying "Use place=suburb to identify a major area in a place=town or place=city with a distinct and recognised local name and identity.". So the suburb node is not replacing the city or town place element. Note that the "place" tag is not necessarily a node. It could be a huge polygon representing the urbanized area (but this is not something usual, I agree).</p>
+<p>I don't know in UK. But in France, I would certainly keep one node tagged as "place=city" as member of the admin boundary relation with a role "admin_centre". I see the "place=suburb" as a subset of the whole city. The <a href="https://wiki.openstreetmap.org/wiki/Tag:place=suburb?uselang=en">wiki page about "suburb"</a> is also saying "Use place=suburb to identify a major area in a place=town or place=city with a distinct and recognised local name and identity.". So the suburb node is not replacing the city or town place element. Note that the "place" tag is not necessarily a node. It could be a huge polygon representing the urbanized area (but this is not something usual, I agree).</p>
 <p>Identifying the city centre or the urbanized area is obviously a valuable information. The admin boundary is just showing the municipality borders. But it's not telling where the city/town "centre" (downtown) itself is. This can be the centroid of the admin polygon or somewhere else.</p>
 </div>
 <div class="answer-controls post-controls">

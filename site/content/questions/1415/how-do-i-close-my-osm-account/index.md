@@ -69,7 +69,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F</a></p>
 </div>
 <div id="comment-55263-info" class="comment-info">
 <span class="comment-age">(25 Mar '17, 08:14)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

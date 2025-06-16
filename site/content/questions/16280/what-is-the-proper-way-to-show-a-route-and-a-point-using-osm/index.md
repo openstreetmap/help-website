@@ -108,10 +108,10 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It sounds like you want some sort of service to display a map background behind a route that you plot, and possibly calculate the route as well.</p>
-<p>If so, it's worth taking a step back. OSM is essentially <a href="http://help.openstreetmap.org/questions/8869/how-to-display-an-osm-map-in-a-piece-of-software/8887">just lots and lots of data</a>. It's possible to do all sorts of things with that data (e.g. <a href="http://project-osrm.org/">calculate and display routes</a>) but it's not something that you'll find hosted on the OSM website, although you will find a list of <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">OSM-based services</a> (some free to use, some not) in the wiki.<br />
+<p>If so, it's worth taking a step back. OSM is essentially <a href="/questions/8869/how-to-display-an-osm-map-in-a-piece-of-software/8887">just lots and lots of data</a>. It's possible to do all sorts of things with that data (e.g. <a href="http://project-osrm.org/">calculate and display routes</a>) but it's not something that you'll find hosted on the OSM website, although you will find a list of <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">OSM-based services</a> (some free to use, some not) in the wiki.<br />
 </p>
-<p>OSM's servers that render the tiles that you see on maps on the OSM site have a <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">usage policy</a> designed to prevent abuse, as does the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API</a> that can be used to extra map data on the file.</p>
-<p>You can, of course, download the data (or an <a href="http://wiki.openstreetmap.org/wiki/Extract">extract</a> of it) and do what you want with it subject to the <a href="http://www.openstreetmap.org/copyright">licence</a>, such as <a href="http://switch2osm.org/serving-tiles/">serve your own map tiles</a>.</p>
+<p>OSM's servers that render the tiles that you see on maps on the OSM site have a <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">usage policy</a> designed to prevent abuse, as does the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API</a> that can be used to extra map data on the file.</p>
+<p>You can, of course, download the data (or an <a href="https://wiki.openstreetmap.org/wiki/Extract">extract</a> of it) and do what you want with it subject to the <a href="https://www.openstreetmap.org/copyright">licence</a>, such as <a href="http://switch2osm.org/serving-tiles/">serve your own map tiles</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

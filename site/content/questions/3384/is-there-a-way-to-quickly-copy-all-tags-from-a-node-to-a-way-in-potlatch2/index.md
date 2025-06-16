@@ -155,7 +155,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I guess <a href="http://help.openstreetmap.org/questions/4260/how-can-i-copy-all-metadata-from-a-poi-into-an-area-in-potlatch-2">my question</a> is really a duplicate of this one. (Is it possible to merge questions?)</p>
+<p>I guess <a href="/questions/4260/how-can-i-copy-all-metadata-from-a-poi-into-an-area-in-potlatch-2">my question</a> is really a duplicate of this one. (Is it possible to merge questions?)</p>
 <p>In any case, from the answer to my question, it appears to be a feature in the works, at least for converting from a POI to rectangle.</p>
 </div>
 <div class="answer-controls post-controls">

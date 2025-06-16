@@ -235,7 +235,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You get this message if you are downloading to many tiles. See the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> for more information. Try downloading a smaller area and with a lower resolution.</p>
+<p>You get this message if you are downloading to many tiles. See the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> for more information. Try downloading a smaller area and with a lower resolution.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

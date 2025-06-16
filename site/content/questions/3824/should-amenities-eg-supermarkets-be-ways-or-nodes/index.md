@@ -322,7 +322,7 @@ osqa_accepted = true
 <div class="answer-body">
 <p>I was experimenting about this and I think I just succeeded about tagging a building and a node separately to show two entities occupying the same location. My problem was that the embassy of Brazil in Santiago, Chile, occupies a mansion that is officially a national monument (Errázuriz palace) thus belonging to the Chilean State (government) –an attraction by its own right. I wanted to add the building and the embassy as two separate things. I drew the building and tagged it as Palacio Errázuriz and then I created a node that I tagged as amenity=embassy, name=Embajada de Brasil, country=BR in the advanced options and moved it to the desired position (about where the main door to the embassy would be). It seems that I got what I wanted by what I see in the rendering. Would this be an acceptable procedure? Is the result acceptable by OSM standards?</p>
 <p>Thanks.</p>
-<p>I forgot to include the Changeset to facilitate the location of my work: <a href="http://www.openstreetmap.org/browse/changeset/8097846">8097846</a>. Sorry.</p>
+<p>I forgot to include the Changeset to facilitate the location of my work: <a href="https://www.openstreetmap.org/browse/changeset/8097846">8097846</a>. Sorry.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -409,7 +409,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>This is only valid for buildings which contain multiple stores. <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">Never add a single feature twice</a>.</p>
+<p>This is only valid for buildings which contain multiple stores. <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">Never add a single feature twice</a>.</p>
 </div>
 <div id="comment-32472-info" class="comment-info">
 <span class="comment-age">(20 Apr '14, 18:32)</span> <span class="comment-user userinfo">scai ♦</span>

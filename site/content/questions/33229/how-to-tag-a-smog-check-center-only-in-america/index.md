@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Other than using <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar_repair">car_repair</a>, in America what is the best practice for tagging a business that only deals with Smog Center's? I was thinking about using smog_center. Thanks</p>
+<p>Other than using <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dcar_repair">car_repair</a>, in America what is the best practice for tagging a business that only deals with Smog Center's? I was thinking about using smog_center. Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-smog" rel="tag" title="see questions tagged &#39;smog&#39;">smog</span> <span class="post-tag tag-link-car_repair" rel="tag" title="see questions tagged &#39;car_repair&#39;">car_repair</span> <span class="post-tag tag-link-smog_center" rel="tag" title="see questions tagged &#39;smog_center&#39;">smog_center</span>

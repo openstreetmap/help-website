@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Rather than downloading a map from that site, you can create a map yourself. As an example, <a href="http://help.openstreetmap.org/questions/1809/how-to-install-mkgmap/2440">this</a> is what I do when creating a Garmin map for the UK.</p>
+<p>Rather than downloading a map from that site, you can create a map yourself. As an example, <a href="/questions/1809/how-to-install-mkgmap/2440">this</a> is what I do when creating a Garmin map for the UK.</p>
 <p>You'll need a data extract from OSM to start with, and although I can't see one for Ghana, the one for the whole of Africa on <a href="http://download.geofabrik.de/osm/">this page</a> is probably small enough to fit.</p>
 </div>
 <div class="answer-controls post-controls">

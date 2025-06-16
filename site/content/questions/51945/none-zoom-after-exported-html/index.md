@@ -69,7 +69,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>isn't this the same as your other question <a href="https://help.openstreetmap.org/questions/51946/map-is-appeared-only-on-mobile-phone">https://help.openstreetmap.org/questions/51946/map-is-appeared-only-on-mobile-phone</a> ?</p>
+<p>isn't this the same as your other question <a href="/questions/51946/map-is-appeared-only-on-mobile-phone">https://help.openstreetmap.org/questions/51946/map-is-appeared-only-on-mobile-phone</a> ?</p>
 </div>
 <div id="comment-51973-info" class="comment-info">
 <span class="comment-age">(09 Sep '16, 21:43)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

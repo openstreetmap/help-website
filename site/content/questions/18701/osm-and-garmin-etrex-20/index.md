@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at this <a href="https://help.openstreetmap.org/questions/4592/basic-guide-to-download-osm-to-garmin-gps">"basic guide to download OSM to Garmin GPS"</a>-question. If it doesn't help, then it's definitely worth searching through previous "how do a load an XYZ map on a Garmin eTrex device" questions - there have been lots of them. <a href="https://help.openstreetmap.org/tags/etrex/">Here</a> are the ones tagged "etrex", and <a href="https://help.openstreetmap.org/tags/etrex20/">here</a> are those tagged "etrex20" (I don't have one, but people have said that the capabilities are slightly different to older devices). In particular there's an answer <a href="https://help.openstreetmap.org/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">here</a> that describes the process with a Mac.</p>
+<p>Have a look at this <a href="/questions/4592/basic-guide-to-download-osm-to-garmin-gps">"basic guide to download OSM to Garmin GPS"</a>-question. If it doesn't help, then it's definitely worth searching through previous "how do a load an XYZ map on a Garmin eTrex device" questions - there have been lots of them. <a href="https://help.openstreetmap.org/tags/etrex/">Here</a> are the ones tagged "etrex", and <a href="https://help.openstreetmap.org/tags/etrex20/">here</a> are those tagged "etrex20" (I don't have one, but people have said that the capabilities are slightly different to older devices). In particular there's an answer <a href="/questions/4810/what-should-i-do-with-a-gmapsuppimg-that-i-downloaded">here</a> that describes the process with a Mac.</p>
 <p>hth<br />
 malenki</p>
 </div>

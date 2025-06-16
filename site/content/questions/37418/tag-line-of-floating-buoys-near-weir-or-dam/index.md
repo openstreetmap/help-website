@@ -165,7 +165,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi nevw, Ive used waterway=dept_line, <a href="http://www.openstreetmap.org/#map=18/52.04886/5.12516">http://www.openstreetmap.org/#map=18/52.04886/5.12516</a> following it try to look for waterway=barrier_line Or search with Overpass Turbo for barrier_line. And add downstreams a stretch of water access=no / destination on both side af the weir.</p>
+<p>Hi nevw, Ive used waterway=dept_line, <a href="https://www.openstreetmap.org/#map=18/52.04886/5.12516">https://www.openstreetmap.org/#map=18/52.04886/5.12516</a> following it try to look for waterway=barrier_line Or search with Overpass Turbo for barrier_line. And add downstreams a stretch of water access=no / destination on both side af the weir.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -208,7 +208,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: "dept_line" makes no sense, nor does using the waterway key for a barrier. Where did you come up with this key-value combination?</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: "dept_line" makes no sense, nor does using the waterway key for a barrier. Where did you come up with this key-value combination?</p>
 </div>
 <div id="comment-37448-info" class="comment-info">
 <span class="comment-age">(09 Oct '14, 00:45)</span> <span class="comment-user userinfo">alester</span>

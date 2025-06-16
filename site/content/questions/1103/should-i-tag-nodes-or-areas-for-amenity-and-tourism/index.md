@@ -124,7 +124,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>This is good general advice, but there are also some arguments against using tagged area, especially with large sites. Please see <a href="http://help.openstreetmap.org/questions/14078/tagging-large-touristic-sites?">http://help.openstreetmap.org/questions/14078/tagging-large-touristic-sites?</a></p>
+<p>This is good general advice, but there are also some arguments against using tagged area, especially with large sites. Please see <a href="/questions/14078/tagging-large-touristic-sites?">https://help.openstreetmap.org/questions/14078/tagging-large-touristic-sites?</a></p>
 </div>
 <div id="comment-14277-info" class="comment-info">
 <span class="comment-age">(15 Jul '12, 20:42)</span> <span class="comment-user userinfo">gorn</span>

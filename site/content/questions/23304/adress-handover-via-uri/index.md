@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM uses nominatim for geocoding - use for example <a href="http://nominatim.openstreetmap.org/search.php?q=Haarenfeld%2010%2C+Oldenburg&amp;viewbox=8.17%2C53.16%2C8.18%2C53.15&amp;polygon=1">http://nominatim.openstreetmap.org/search.php?q=Haarenfeld%2010%2C+Oldenburg&amp;viewbox=8.17%2C53.16%2C8.18%2C53.15&amp;polygon=1</a> , where you pass the same q parameter as for google maps. You'll need to experiment with the viewbox and polygon parameters.</p>
-<p>See and comply with the <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></p>
+<p>See and comply with the <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

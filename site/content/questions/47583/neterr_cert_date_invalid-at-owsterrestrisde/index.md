@@ -93,7 +93,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Lots of people use OpenStreetMap data to create maps from - the main project isn't responsible for these websites, just as it isn't responsible if an OSM-based map on a wall outside my local supermarket falls on the floor.</p>
-<p>There is a huge number of OSM based maps - there's a long list of some of the companies at <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> . Most if not all will support https. Which one is right for you rather depends on what you want and how much you are willing to pay for it.</p>
+<p>There is a huge number of OSM based maps - there's a long list of some of the companies at <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> . Most if not all will support https. Which one is right for you rather depends on what you want and how much you are willing to pay for it.</p>
 </div>
 <div id="comment-47587-info" class="comment-info">
 <span class="comment-age">(19 Jan '16, 12:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

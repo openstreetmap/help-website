@@ -113,7 +113,7 @@ One Answer:
 <pre><code>Bulk downloading is strongly discouraged. Do not download tiles unnecessarily.</code></pre>
 <p>Can you explain what you are planning to do, and also perhaps why you are planning to use OSM's tile servers rather than <a href="https://switch2osm.org/serving-tiles/">creating your own</a>?</p>
 <p>(edit)</p>
-<p>After reading <a href="https://help.openstreetmap.org/questions/75718/what-is-ot-how-to-decide-valid-http-user-agent-application-name-to-avoid-osm-blockage">another question of yours</a> it would appear that "distributing an app that uses tiles from openstreetmap.org" is <em>exactly</em> what you are planning to do. Don't do that - you'll get blocked. Create your own tiles and use those instead.</p>
+<p>After reading <a href="/questions/75718/what-is-ot-how-to-decide-valid-http-user-agent-application-name-to-avoid-osm-blockage">another question of yours</a> it would appear that "distributing an app that uses tiles from openstreetmap.org" is <em>exactly</em> what you are planning to do. Don't do that - you'll get blocked. Create your own tiles and use those instead.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

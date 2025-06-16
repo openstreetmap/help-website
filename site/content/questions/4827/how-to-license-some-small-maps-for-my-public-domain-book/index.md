@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You will need to license them CC-BY-SA. See also our <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ.</a></p>
+<p>You will need to license them CC-BY-SA. See also our <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

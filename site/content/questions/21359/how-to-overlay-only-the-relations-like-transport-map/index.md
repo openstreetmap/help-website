@@ -129,8 +129,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In OpenStreetMap, a relation is a collection of nodes and ways. A relation does not have a longitude or latitude, but the nodes and ways in, do have them. There are different types of relations, see <a href="http://wiki.openstreetmap.org/wiki/Relations.">http://wiki.openstreetmap.org/wiki/Relations.</a></p>
-<p>When you created your .osm file with a Overpass Query, you can "extend" the relation so you retrieve the nodes and ways in it. <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.</a> But it is also possible that your .osm file already has the nodes and ways in the relation.</p>
+<p>In OpenStreetMap, a relation is a collection of nodes and ways. A relation does not have a longitude or latitude, but the nodes and ways in, do have them. There are different types of relations, see <a href="https://wiki.openstreetmap.org/wiki/Relations.">https://wiki.openstreetmap.org/wiki/Relations.</a></p>
+<p>When you created your .osm file with a Overpass Query, you can "extend" the relation so you retrieve the nodes and ways in it. <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.">https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide.</a> But it is also possible that your .osm file already has the nodes and ways in the relation.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

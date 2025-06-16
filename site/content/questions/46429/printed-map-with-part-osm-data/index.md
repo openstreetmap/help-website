@@ -166,7 +166,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>the link to the license of the data is the most important bit in joost's answer - <a href="http://help.openstreetmap.org/users/11657/timgoods">@timgoods</a>: you should read the full license text for the OSM data and all your other data sources and understand the texts. <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a> may help a bit.</p>
+<p>the link to the license of the data is the most important bit in joost's answer - <a href="https://help.openstreetmap.org/users/11657/timgoods">@timgoods</a>: you should read the full license text for the OSM data and all your other data sources and understand the texts. <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a> may help a bit.</p>
 <p>No one here can provide you with a legally binding answer. You may want to consult a lawyer specialized in copyright law.</p>
 </div>
 <div class="answer-controls post-controls">

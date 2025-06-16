@@ -111,7 +111,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>You might find your answer in this previous question :</p>
-<p><a href="http://help.openstreetmap.org/questions/2130/gpx-file-no-time-tag">http://help.openstreetmap.org/questions/2130/gpx-file-no-time-tag</a></p>
+<p><a href="/questions/2130/gpx-file-no-time-tag">https://help.openstreetmap.org/questions/2130/gpx-file-no-time-tag</a></p>
 <p>especially the answer with <code>xmlstarlet</code></p>
 <p>Note that OSM doesn't require a correct date value in GPX files. Any date is accepted (in fact, it could work without timestamp but that's another story).</p>
 </div>

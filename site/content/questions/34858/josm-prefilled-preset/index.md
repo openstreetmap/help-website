@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Yes it's possible to add presets to your toolbar, but I'm not sure if they are expended by all previous values etc:<br />
-<a href="http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Tagging_Presets">http://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Tagging_Presets</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Tagging_Presets">https://wiki.openstreetmap.org/wiki/JOSM/Advanced_editing#Tagging_Presets</a></p>
 <p>You might also use F3 key, as the list is ordered by your editing history, so most recent preset comes first.<br />
 Also sometimes it's useful to add an object with all tags and then just using D key to dublicate the object. So you need just to adapt very few tags.</p>
 </div>

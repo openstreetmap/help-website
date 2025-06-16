@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I got 2 questions regarding a railway track. Whats the level of a railwayplatform thats alongside 2 bridges marked level 1, both are lying over a road and water. I would like to ad some but its not possible, shouldnt that be ? And the stairway to reach the platform, no extra level needed ? Look at <a href="http://www.openstreetmap.org/browse/way/166152585">http://www.openstreetmap.org/browse/way/166152585</a> Greetz Hendrik</p>
+<p>I got 2 questions regarding a railway track. Whats the level of a railwayplatform thats alongside 2 bridges marked level 1, both are lying over a road and water. I would like to ad some but its not possible, shouldnt that be ? And the stairway to reach the platform, no extra level needed ? Look at <a href="https://www.openstreetmap.org/browse/way/166152585">https://www.openstreetmap.org/browse/way/166152585</a> Greetz Hendrik</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-stairway" rel="tag" title="see questions tagged &#39;stairway&#39;">stairway</span> <span class="post-tag tag-link-track" rel="tag" title="see questions tagged &#39;track&#39;">track</span> <span class="post-tag tag-link-railway" rel="tag" title="see questions tagged &#39;railway&#39;">railway</span> <span class="post-tag tag-link-tag" rel="tag" title="see questions tagged &#39;tag&#39;">tag</span> <span class="post-tag tag-link-railwayplatform" rel="tag" title="see questions tagged &#39;railwayplatform&#39;">railwayplatform</span>

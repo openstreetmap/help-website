@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>(converted to a question from <a href="https://help.openstreetmap.org/questions/54589/api-key-required">API key required</a>)</p>
+<p>(converted to a question from <a href="/questions/54589/api-key-required">API key required</a>)</p>
 <p>After obtaining an API key from Thunderforest how can I use it with QGIS or OCM?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

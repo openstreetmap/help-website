@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Hole after creating a multipolygon for a pedestrian highway with a fountain"
-description = '''http://www.openstreetmap.org/relation/7184233 The fountain was not visible as it was covered by the highway=pedestrian. I created a multipolygon relation so that the fountain would be outside of the pedestrian area. But then it&#x27;s shown as a hole, showing the road below it. Is it a bug of the mapping...'''
+description = '''https://www.openstreetmap.org/relation/7184233 The fountain was not visible as it was covered by the highway=pedestrian. I created a multipolygon relation so that the fountain would be outside of the pedestrian area. But then it&#x27;s shown as a hole, showing the road below it. Is it a bug of the mapping...'''
 date = "2017-04-24T13:48:00Z"
 lastmod = "2017-04-24T19:51:00Z"
 weight = 55812
@@ -39,10 +39,10 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/relation/7184233">http://www.openstreetmap.org/relation/7184233</a></p>
+<p><a href="https://www.openstreetmap.org/relation/7184233">https://www.openstreetmap.org/relation/7184233</a></p>
 <p>The fountain was not visible as it was covered by the highway=pedestrian. I created a multipolygon relation so that the fountain would be outside of the pedestrian area. But then it's shown as a hole, showing the road below it.</p>
 <p>Is it a bug of the mapping engine or is it the wrong way to map it?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Presse-papiers-1.png" alt="alt text" /></p>
+<p><img src="/upfiles/Presse-papiers-1.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-pedestrian" rel="tag" title="see questions tagged &#39;pedestrian&#39;">pedestrian</span> <span class="post-tag tag-link-hole" rel="tag" title="see questions tagged &#39;hole&#39;">hole</span> <span class="post-tag tag-link-fountain" rel="tag" title="see questions tagged &#39;fountain&#39;">fountain</span> <span class="post-tag tag-link-multipolygon" rel="tag" title="see questions tagged &#39;multipolygon&#39;">multipolygon</span>
@@ -168,7 +168,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>These areas have just a line on the edge, like (<a href="http://www.openstreetmap.org/#map=19/50.64490/5.57321).">http://www.openstreetmap.org/#map=19/50.64490/5.57321).</a> After the edit of mmahmud, I'm thinking that the highway=pedestrian shouldn't be opaque, which would explain why the fountain looked like a hole.</p>
+<p>These areas have just a line on the edge, like (<a href="https://www.openstreetmap.org/#map=19/50.64490/5.57321).">https://www.openstreetmap.org/#map=19/50.64490/5.57321).</a> After the edit of mmahmud, I'm thinking that the highway=pedestrian shouldn't be opaque, which would explain why the fountain looked like a hole.</p>
 </div>
 <div id="comment-55831-info" class="comment-info">
 <span class="comment-age">(24 Apr '17, 19:35)</span> <span class="comment-user userinfo">The RedBurn</span>
@@ -211,7 +211,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It appears like this to me ... seems ok with fountain seen, although with the highway number and one-way arrows... not perfect, but passable for me.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2017-04-24_at_10.56.19_PM.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2017-04-24_at_10.56.19_PM.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -310,7 +310,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hi, I think this is rendering correctly as it is showing the tunnel below with dotted lines and fountain in the middle with the pedestrian road around it. I used Layer = 1 on both the pedestrian road and fountain. But another thing, there is already a residential road drawn, is it necessary to draw the pedestrian one additionally or is it a separate road?</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_9TqRKHm.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_9TqRKHm.PNG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

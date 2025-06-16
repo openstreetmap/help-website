@@ -115,7 +115,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There are kind of two parts to the answer to your question.</p>
 <p>For one, the data you add to the database is used in many different applications. For example for rendering map tiles, for using on your phone, for routing, in your Garmin devices, for your satnav, for searching, to make art work, in flight simulators and many more applications. Each of these applications have their own separate update schedule. For some applications it might only take minutes for the update to trickle through, other applications might only update every month or so. However, due to this huge diversity of uses of the data, your data will be immediately useful for some.</p>
-<p>The other part of your question is how often does the "mapnik" map view on <a href="http://openstreetmap.org">openstreetmap.org</a> update. It should be updated within a few minutes, but currently the rendering server is fairly overloaded, so it might take longer and you might have to view that area of the map multiple times for it to trigger the updating process. For a more detailed explanation of the process and how it works, have a look at <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this answer</a>.</p>
+<p>The other part of your question is how often does the "mapnik" map view on <a href="http://openstreetmap.org">openstreetmap.org</a> update. It should be updated within a few minutes, but currently the rendering server is fairly overloaded, so it might take longer and you might have to view that area of the map multiple times for it to trigger the updating process. For a more detailed explanation of the process and how it works, have a look at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this answer</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -215,7 +215,7 @@ osqa_accepted = false
 6
 </div>
 <div class="comment-text">
-<p>You don't need an admin for that. Just read <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated?page=1#183">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated?page=1#183</a></p>
+<p>You don't need an admin for that. Just read <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated?page=1#183">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated?page=1#183</a></p>
 </div>
 <div id="comment-4841-info" class="comment-info">
 <span class="comment-age">(27 Apr '11, 06:40)</span> <span class="comment-user userinfo">petschge</span>
@@ -260,9 +260,9 @@ osqa_accepted = false
 <p>apmon's answer already explains fairly well how the rendering works.</p>
 <p>As an addition:</p>
 <ul>
-<li>The Wiki gives further details on the rendering process: <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map">http://wiki.openstreetmap.org/wiki/Slippy_Map</a></li>
+<li>The Wiki gives further details on the rendering process: <a href="https://wiki.openstreetmap.org/wiki/Slippy_Map">https://wiki.openstreetmap.org/wiki/Slippy_Map</a></li>
 <li>You can force a re-render of a tile by loading just the tile image (e.g. in Firefox: Context menu / View image), then appending <code>/dirty</code> to the URL (e.g. <code>http://tile.openstreetmap.org/7/63/42.png -&gt; http://tile.openstreetmap.org/7/63/42.png/dirty</code>).</li>
-<li>The rendering only refers to the image display. The search box is powered by <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, which updates on its own schedule. Just in case you are wondering why e.g. newly created/named streets are not found by the search.</li>
+<li>The rendering only refers to the image display. The search box is powered by <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>, which updates on its own schedule. Just in case you are wondering why e.g. newly created/named streets are not found by the search.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

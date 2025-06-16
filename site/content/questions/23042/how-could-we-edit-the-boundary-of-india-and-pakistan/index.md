@@ -116,11 +116,11 @@ One Answer:
 <div class="answer-body">
 <p>Before you consider altering the border of India and Pakistan I would suggest that you read <strong>ALL</strong> of the following:</p>
 <ul>
-<li>Concerning Kashmir (disputed between India and Pakistan, some areas now in China): <a href="https://help.openstreetmap.org/questions/12810/kashmir-india">Kashmir &amp; India</a></li>
-<li>Concerning Spratly Islands (disputed status among several nations of South East Asia: <a href="https://help.openstreetmap.org/questions/21167/hoang-sa-paracel-islands-and-truong-sa-spratly-islands-vietnam">Hoang Sa (Paracel) Islands and Truong Sa (Spratly) Islands - Vietnam</a>, <a href="https://help.openstreetmap.org/questions/21264/please-remove-the-u-shaped-line-on-your-map">Please remove the U-shaped line on your map!</a></li>
-<li>Concerning Cyprus (split along a line dividing the (mainly) unrecognised territory of Turkish Cyprus, and the EU member Cyprus. <a href="https://help.openstreetmap.org/questions/18211/kuzey-kibris">kuzey kibris</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule">Disputes</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Data_working_group/Disputes">Data Working Group Disputes</a></li>
+<li>Concerning Kashmir (disputed between India and Pakistan, some areas now in China): <a href="/questions/12810/kashmir-india">Kashmir &amp; India</a></li>
+<li>Concerning Spratly Islands (disputed status among several nations of South East Asia: <a href="/questions/21167/hoang-sa-paracel-islands-and-truong-sa-spratly-islands-vietnam">Hoang Sa (Paracel) Islands and Truong Sa (Spratly) Islands - Vietnam</a>, <a href="/questions/21264/please-remove-the-u-shaped-line-on-your-map">Please remove the U-shaped line on your map!</a></li>
+<li>Concerning Cyprus (split along a line dividing the (mainly) unrecognised territory of Turkish Cyprus, and the EU member Cyprus. <a href="/questions/18211/kuzey-kibris">kuzey kibris</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule">Disputes</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Data_working_group/Disputes">Data Working Group Disputes</a></li>
 </ul>
 <p>Such issues over disputed territories are inevitable in a worldwide set of map data. OpenStreetMap has always had a policy of mapping what is on the ground, and this policy has served us well in areas where territory is disputed.</p>
 <p>In the case of India/Pakistan this means trying to accurately map the Line of Control: which reflects the reality of which country administers any part of the territory. Only edits which improve the accuracy of the LoC belong in OpenStreetMap. Territorial claims not matched by on-the-ground validation criteria are not something we map. Attempts to change borders to reflect such claims will be treated as vandalism.</p>

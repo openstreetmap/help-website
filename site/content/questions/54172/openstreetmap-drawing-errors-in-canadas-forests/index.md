@@ -82,7 +82,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>It's through the province, but the following link is a good example:</p>
-<p><a href="http://www.openstreetmap.org/#map=10/52.9507/-114.2097">http://www.openstreetmap.org/#map=10/52.9507/-114.2097</a></p>
+<p><a href="https://www.openstreetmap.org/#map=10/52.9507/-114.2097">https://www.openstreetmap.org/#map=10/52.9507/-114.2097</a></p>
 </div>
 <div id="comment-54174-info" class="comment-info">
 <span class="comment-age">(19 Jan '17, 22:07)</span> <span class="comment-user userinfo">meredith60</span>

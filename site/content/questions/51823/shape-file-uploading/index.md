@@ -69,7 +69,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>What information do you actually want to import (i.e., what data is in the file)? From a community point of view, you'll need to go through the instructions here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a></p>
 <p>even before you get onto the technicalities of "how do I import a certain sort of file".</p>
 </div>
 <div id="comment-51824-info" class="comment-info">
@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-51857-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile">http://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile">https://wiki.openstreetmap.org/wiki/Software_comparison/Import_a_shapefile</a></p>
 </div>
 <div id="comment-51857-info" class="comment-info">
 <span class="comment-age">(01 Sep '16, 19:36)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -147,7 +147,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This might be of some help to you :) <a href="https://help.openstreetmap.org/questions/28829/upload-shapefile-to-osm">https://help.openstreetmap.org/questions/28829/upload-shapefile-to-osm</a></p>
+<p>This might be of some help to you :) <a href="/questions/28829/upload-shapefile-to-osm">https://help.openstreetmap.org/questions/28829/upload-shapefile-to-osm</a></p>
 <p>Best, Poornima Badrinath</p>
 </div>
 <div class="answer-controls post-controls">

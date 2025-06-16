@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I tried adding sections to the <a href="http://wiki.openstreetmap.org/wiki/Talk:OSM_Inspector">discussion</a> on their <a href="http://wiki.openstreetmap.org/wiki/OSM_Inspector">wiki page</a>, and also a bullet to the <a href="http://wiki.openstreetmap.org/wiki/OSM_Inspector#Wishlist">wishlist</a> section. I did not see a section/page/tool that's specifically designated for bugs.</p>
+<p>I tried adding sections to the <a href="https://wiki.openstreetmap.org/wiki/Talk:OSM_Inspector">discussion</a> on their <a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector">wiki page</a>, and also a bullet to the <a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector#Wishlist">wishlist</a> section. I did not see a section/page/tool that's specifically designated for bugs.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osminspector" rel="tag" title="see questions tagged &#39;osminspector&#39;">osminspector</span>
@@ -106,7 +106,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>It looks as though your addition to the wishlist section on the wiki was only made a few hours ago. You might only have to wait a few days to see if you get a response.<br />
 </p>
-<p>In addition, the <a href="http://wiki.openstreetmap.org/wiki/OSM_Inspector">OSM Inspector page on the wiki</a> suggests that you post questions and comments about OSM Inspector to <a href="http://lists.openstreetmap.org/listinfo/talk">talk@</a>, if you don't wish to join the <a href="http://lists.geofabrik.de/listinfo/osm-inspector">OSM Inspector mailing list</a></p>
+<p>In addition, the <a href="https://wiki.openstreetmap.org/wiki/OSM_Inspector">OSM Inspector page on the wiki</a> suggests that you post questions and comments about OSM Inspector to <a href="http://lists.openstreetmap.org/listinfo/talk">talk@</a>, if you don't wish to join the <a href="http://lists.geofabrik.de/listinfo/osm-inspector">OSM Inspector mailing list</a></p>
 <p>But really, "just give it a few days" is probably enough to get an answer if you have made a detailed bug report.</p>
 </div>
 <div class="answer-controls post-controls">

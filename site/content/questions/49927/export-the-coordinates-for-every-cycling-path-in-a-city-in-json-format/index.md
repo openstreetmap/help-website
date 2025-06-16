@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Export the coordinates for every cycling path in a city in JSON format"
-description = '''Hi there, I&#x27;m trying to export only the cycle map for the city of São Paulo (top lat: -23.3984, bottom lat: -23.7552, left lng: -46.9027, right lng: -46.2888) using the openStreetMap API in http://www.openstreetmap.org/export in JSON format but as I click the export button the API downloads only an ...'''
+description = '''Hi there, I&#x27;m trying to export only the cycle map for the city of São Paulo (top lat: -23.3984, bottom lat: -23.7552, left lng: -46.9027, right lng: -46.2888) using the openStreetMap API in https://www.openstreetmap.org/export in JSON format but as I click the export button the API downloads only an ...'''
 date = "2016-05-31T18:52:00Z"
 lastmod = "2016-05-31T21:15:00Z"
 weight = 49927
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi there, I'm trying to export only the cycle map for the city of São Paulo (top lat: -23.3984, bottom lat: -23.7552, left lng: -46.9027, right lng: -46.2888) using the openStreetMap API in <a href="http://www.openstreetmap.org/export">http://www.openstreetmap.org/export</a> in JSON format but as I click the export button the API downloads only an empty html file (0 bytes) called "map.osm.html". I already tried waiting and in many different days. It's been more than 2 weeks that I'm trying everyday and the only output is this 0 bytes file. I also tryied using the Overpass API, and it works, but the output is a HUGE XML file which I can't use because of the size. Tried also reading the overpass api docs to change the output to JSON with no success.</p>
+<p>Hi there, I'm trying to export only the cycle map for the city of São Paulo (top lat: -23.3984, bottom lat: -23.7552, left lng: -46.9027, right lng: -46.2888) using the openStreetMap API in <a href="https://www.openstreetmap.org/export">https://www.openstreetmap.org/export</a> in JSON format but as I click the export button the API downloads only an empty html file (0 bytes) called "map.osm.html". I already tried waiting and in many different days. It's been more than 2 weeks that I'm trying everyday and the only output is this 0 bytes file. I also tryied using the Overpass API, and it works, but the output is a HUGE XML file which I can't use because of the size. Tried also reading the overpass api docs to change the output to JSON with no success.</p>
 <p>Can someone help me with this?</p>
 <p>Thanks in advance, Giovanni.</p>
 </div>

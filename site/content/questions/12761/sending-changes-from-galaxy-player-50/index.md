@@ -110,9 +110,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Navfree has a reporting tool in the iPhone version (though if it makes it available to <a href="http://wiki.openstreetmap.org/wiki/Navfree">OSM is uncertain</a>). The Android version states reporting will be implemented in the next version.</p>
+<p>Navfree has a reporting tool in the iPhone version (though if it makes it available to <a href="https://wiki.openstreetmap.org/wiki/Navfree">OSM is uncertain</a>). The Android version states reporting will be implemented in the next version.</p>
 <p>I would recommend Osmand to report bugs on Android, but it would require you to either download the areas beforehand, or have a internet connection.</p>
-<p>If you want to report bugs afterwards you can use any of <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance#Bug_Reporting_Tools">these tools</a>.</p>
+<p>If you want to report bugs afterwards you can use any of <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance#Bug_Reporting_Tools">these tools</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

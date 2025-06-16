@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The navigation tool on OpenStreetMap is provided by third parties. As with all navigation software they use a database that takes awhile to update. So don't be surpriced it takes a couple of days before the new route is taken into account. Right now it looks like <img src="https://help.openstreetmap.org/upfiles/Screen_Shot_2018-11-13_at_05.05.49.png" alt="rout via Graphhopper" /> this for me</p>
+<p>The navigation tool on OpenStreetMap is provided by third parties. As with all navigation software they use a database that takes awhile to update. So don't be surpriced it takes a couple of days before the new route is taken into account. Right now it looks like <img src="/upfiles/Screen_Shot_2018-11-13_at_05.05.49.png" alt="rout via Graphhopper" /> this for me</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

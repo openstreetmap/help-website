@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>The license allows selling a product derived from OSM data but you have to place that product under the CC-BY-SA license, meaning that any of your customers can make copies of it and distribute them.</p>
-<p>See the <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> and, more specifically, the answer to the question <a href="http://wiki.openstreetmap.org/wiki/Common_licence_interpretations#I_created_a_layer_on_top_of_an_OSM_map._What_do_I_have_to_put_under_your_license.3F">I created a layer on top of an OSM map, what do I have to put under your license?</a>.</p>
+<p>See the <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> and, more specifically, the answer to the question <a href="https://wiki.openstreetmap.org/wiki/Common_licence_interpretations#I_created_a_layer_on_top_of_an_OSM_map._What_do_I_have_to_put_under_your_license.3F">I created a layer on top of an OSM map, what do I have to put under your license?</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -169,10 +169,10 @@ osqa_accepted = false
 <div class="answer-body">
 <p>I suggest you also have a look at some recent proposals for archaeological tagging:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:historic:civilization">http://wiki.openstreetmap.org/wiki/Key:historic:civilization</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/obelisk">http://wiki.openstreetmap.org/wiki/Proposed_features/obelisk</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/aqueduct">http://wiki.openstreetmap.org/wiki/Proposed_features/aqueduct</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/tombs">http://wiki.openstreetmap.org/wiki/Proposed_features/tombs</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Key:historic:civilization">https://wiki.openstreetmap.org/wiki/Key:historic:civilization</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/obelisk">https://wiki.openstreetmap.org/wiki/Proposed_features/obelisk</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/aqueduct">https://wiki.openstreetmap.org/wiki/Proposed_features/aqueduct</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/tombs">https://wiki.openstreetmap.org/wiki/Proposed_features/tombs</a></li>
 </ul>
 <p>and others. The current set of proposed and established tags for historical / archaeological mapping still is quite incomplete and more suggestions are very welcome how to amend the map features with useful additions.</p>
 </div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Riverbank Rendering problem"
-description = '''I&#x27;m sorry for asking help for another river rendering problem. I think I&#x27;ve done everything correctly but still the riverbank on this area http://www.openstreetmap.org/#map=17/36.28262/-5.27946 is not rendering... :(  Any useful tips so I can try to fix it ?  thank you '''
+description = '''I&#x27;m sorry for asking help for another river rendering problem. I think I&#x27;ve done everything correctly but still the riverbank on this area https://www.openstreetmap.org/#map=17/36.28262/-5.27946 is not rendering... :(  Any useful tips so I can try to fix it ?  thank you '''
 date = "2013-08-07T09:19:00Z"
 lastmod = "2013-10-03T14:45:00Z"
 weight = 25028
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm sorry for asking help for another river rendering problem. I think I've done everything correctly but still the riverbank on this area <a href="http://www.openstreetmap.org/#map=17/36.28262/-5.27946">http://www.openstreetmap.org/#map=17/36.28262/-5.27946</a> is not rendering... :(</p>
+<p>I'm sorry for asking help for another river rendering problem. I think I've done everything correctly but still the riverbank on this area <a href="https://www.openstreetmap.org/#map=17/36.28262/-5.27946">https://www.openstreetmap.org/#map=17/36.28262/-5.27946</a> is not rendering... :(</p>
 <p>Any useful tips so I can try to fix it ?</p>
 <p>thank you</p>
 </div>
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbank</a> has to be a <em>closed</em> area. <a href="http://www.openstreetmap.org/browse/way/232584270">Your riverbank</a> is not closed but consists of multiple ways, some are even overlapping each other (e.g. <a href="http://www.openstreetmap.org/browse/way/232583521">way 232583521</a> and <a href="http://www.openstreetmap.org/browse/way/232584270">way 232584270</a>). Try to re-edit the area and combine those ways to a single closed loop.</p>
+<p>A <a href="https://wiki.openstreetmap.org/wiki/Tag:waterway%3Driverbank">riverbank</a> has to be a <em>closed</em> area. <a href="https://www.openstreetmap.org/browse/way/232584270">Your riverbank</a> is not closed but consists of multiple ways, some are even overlapping each other (e.g. <a href="https://www.openstreetmap.org/browse/way/232583521">way 232583521</a> and <a href="https://www.openstreetmap.org/browse/way/232584270">way 232584270</a>). Try to re-edit the area and combine those ways to a single closed loop.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -151,7 +151,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The way was again not correctly closed (between node <a href="http://www.openstreetmap.org/browse/node/2465534058">2465534058</a> and node <a href="http://www.openstreetmap.org/browse/node/2480945078">2480945078</a>), I fixed it for you. JOSM's validator is able to identify such issues quickly. If you are not familiar with JOSM you can use <a href="http://keepright.ipax.at/report_map.php?zoom=14&amp;lat=36.3105&amp;lon=-5.2961">keepright</a> instead but it needs some time to update. By the way keepright also shows several other issues in your area, maybe you want to fix them.</p>
+<p>The way was again not correctly closed (between node <a href="https://www.openstreetmap.org/browse/node/2465534058">2465534058</a> and node <a href="https://www.openstreetmap.org/browse/node/2480945078">2480945078</a>), I fixed it for you. JOSM's validator is able to identify such issues quickly. If you are not familiar with JOSM you can use <a href="http://keepright.ipax.at/report_map.php?zoom=14&amp;lat=36.3105&amp;lon=-5.2961">keepright</a> instead but it needs some time to update. By the way keepright also shows several other issues in your area, maybe you want to fix them.</p>
 </div>
 <div id="comment-26924-info" class="comment-info">
 <span class="comment-age">(03 Oct '13, 14:27)</span> <span class="comment-user userinfo">scai ♦</span>

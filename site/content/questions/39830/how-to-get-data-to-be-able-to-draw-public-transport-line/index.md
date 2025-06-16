@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "how to get data to be able to draw public transport line"
-description = '''I need to extract information (latitude / longitude) from all public transport (bus stop and way) from a region. I want to draw public transport line like this :http://xn--pnvkarte-m4a.de/?zoom=14&amp;amp;lat=46.51856&amp;amp;lon=6.62505&amp;amp;layers=TBTTT I try with http://www.openstreetmap.org/export#map=18...'''
+description = '''I need to extract information (latitude / longitude) from all public transport (bus stop and way) from a region. I want to draw public transport line like this :http://xn--pnvkarte-m4a.de/?zoom=14&amp;amp;lat=46.51856&amp;amp;lon=6.62505&amp;amp;layers=TBTTT I try with https://www.openstreetmap.org/export#map=18...'''
 date = "2014-12-25T20:56:00Z"
 lastmod = "2014-12-26T09:27:00Z"
 weight = 39830
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I need to extract information (latitude / longitude) from all public transport (bus stop and way) from a region. I want to draw public transport line like this :<a href="http://xn--pnvkarte-m4a.de/?zoom=14&amp;lat=46.51856&amp;lon=6.62505&amp;layers=TBTTT">http://xn--pnvkarte-m4a.de/?zoom=14&amp;lat=46.51856&amp;lon=6.62505&amp;layers=TBTTT</a></p>
-<p>I try with <a href="http://www.openstreetmap.org/export#map=18/46.52906/6.59971&amp;layers=T">http://www.openstreetmap.org/export#map=18/46.52906/6.59971&amp;layers=T</a> but didn't have all the relation (way), neither with <a href="http://overpass-turbo.eu/s/6Fp">http://overpass-turbo.eu/s/6Fp</a> What is the best practice to do that ?</p>
+<p>I try with <a href="https://www.openstreetmap.org/export#map=18/46.52906/6.59971&amp;layers=T">https://www.openstreetmap.org/export#map=18/46.52906/6.59971&amp;layers=T</a> but didn't have all the relation (way), neither with <a href="http://overpass-turbo.eu/s/6Fp">http://overpass-turbo.eu/s/6Fp</a> What is the best practice to do that ?</p>
 <p>I just need to have stop node and way with coordonate of the point and the name of the bus/tram/train line</p>
 <p>thanks</p>
 </div>

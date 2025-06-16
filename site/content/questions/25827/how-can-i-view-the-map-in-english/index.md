@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The MapQuest Open layer is in English where English names are present in the map data: <a href="http://www.openstreetmap.org/#map=14/32.8092/34.9969&amp;layers=Q">http://www.openstreetmap.org/#map=14/32.8092/34.9969&amp;layers=Q</a></p>
+<p>The MapQuest Open layer is in English where English names are present in the map data: <a href="https://www.openstreetmap.org/#map=14/32.8092/34.9969&amp;layers=Q">https://www.openstreetmap.org/#map=14/32.8092/34.9969&amp;layers=Q</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -141,7 +141,7 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>See also <a href="https://help.openstreetmap.org/questions/25604/how-to-view-a-basic-map-of-china-that-says-china-on-it-rather-than-chengdu">https://help.openstreetmap.org/questions/25604/how-to-view-a-basic-map-of-china-that-says-china-on-it-rather-than-chengdu</a></p>
+<p>See also <a href="/questions/25604/how-to-view-a-basic-map-of-china-that-says-china-on-it-rather-than-chengdu">https://help.openstreetmap.org/questions/25604/how-to-view-a-basic-map-of-china-that-says-china-on-it-rather-than-chengdu</a></p>
 </div>
 <div id="comment-25841-info" class="comment-info">
 <span class="comment-age">(27 Aug '13, 09:24)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -153,7 +153,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Also see <a href="https://help.openstreetmap.org/questions/10327/how-change-the-streets-names-language">https://help.openstreetmap.org/questions/10327/how-change-the-streets-names-language</a></p>
+<p>Also see <a href="/questions/10327/how-change-the-streets-names-language">https://help.openstreetmap.org/questions/10327/how-change-the-streets-names-language</a></p>
 </div>
 <div id="comment-25876-info" class="comment-info">
 <span class="comment-age">(27 Aug '13, 22:03)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

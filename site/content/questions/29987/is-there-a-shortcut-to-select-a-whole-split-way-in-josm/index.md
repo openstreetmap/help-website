@@ -191,7 +191,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In addition to aseerel4c26's answer, you can try the <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/WaySelectorPlugin">way selector</a> plugin or the "selection -&gt; select highway" menu entry provided by the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utilsplugin2</a> plugin.</p>
+<p>In addition to aseerel4c26's answer, you can try the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/WaySelectorPlugin">way selector</a> plugin or the "selection -&gt; select highway" menu entry provided by the <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/utilsplugin2">utilsplugin2</a> plugin.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -308,7 +308,7 @@ This question is marked "community wiki".
 <div id="post-29997-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I <em>guess</em> that it may be meant this way: if there is such a relation (<a href="http://www.openstreetmap.org/relation/253248">example</a>) select it and then use JOSM's function to select all relation members (in this exmaple one would need to use the search function to narrow down the selection afterwards since here also buildings are relation members).</p>
+<p>I <em>guess</em> that it may be meant this way: if there is such a relation (<a href="https://www.openstreetmap.org/relation/253248">example</a>) select it and then use JOSM's function to select all relation members (in this exmaple one would need to use the search function to narrow down the selection afterwards since here also buildings are relation members).</p>
 </div>
 <div id="comment-29997-info" class="comment-info">
 <span class="comment-age">(19 Jan '14, 23:53)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

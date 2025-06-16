@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>I have a elongated building. The name of the building does not appear until it is zoomed in. I believe the algorithm is to check if the bounding box of the building bigger than the font before the font is displayed. However, if the building is elongated, the text can be displayed correctly at lower zoom factor is it is slightly rotated or placed elsewhere. Anything could be done?</p>
 <p>Sorry that I could not upload the image as my karma is low :)</p>
-<p>You can see it in <a href="http://www.openstreetmap.org/#map=17/1.33276/103.77563">http://www.openstreetmap.org/#map=17/1.33276/103.77563</a></p>
+<p>You can see it in <a href="https://www.openstreetmap.org/#map=17/1.33276/103.77563">https://www.openstreetmap.org/#map=17/1.33276/103.77563</a></p>
 <p>Look for "Blk 56".</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -73,7 +73,7 @@ osqa_accepted = false
 <p>I find it interesting that the Blk 56 label is at the lhs.<br />
 You could try using a different rendered version of the osm such as this french one<br />
 <a href="http://layers.openstreetmap.fr/?zoom=17&amp;lat=1.33276&amp;lon=103.77563&amp;layers=B0000">http://layers.openstreetmap.fr/?zoom=17&amp;lat=1.33276&amp;lon=103.77563&amp;layers=B0000</a><br />
-The MapQuest layers does a good job of the building # but other items are not rendered. <a href="http://www.openstreetmap.org/#map=18/1.33301/103.77519&amp;layers=Q">http://www.openstreetmap.org/#map=18/1.33301/103.77519&amp;layers=Q</a></p>
+The MapQuest layers does a good job of the building # but other items are not rendered. <a href="https://www.openstreetmap.org/#map=18/1.33301/103.77519&amp;layers=Q">https://www.openstreetmap.org/#map=18/1.33301/103.77519&amp;layers=Q</a></p>
 </div>
 <div id="comment-34205-info" class="comment-info">
 <span class="comment-age">(21 Jun '14, 05:36)</span> <span class="comment-user userinfo">nevw</span>

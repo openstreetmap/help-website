@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look in the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/SRTM">SRTM</a> and <a href="http://wiki.openstreetmap.org/wiki/3D_Development">3D_Development</a></p>
+<p>Have a look in the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/SRTM">SRTM</a> and <a href="https://wiki.openstreetmap.org/wiki/3D_Development">3D_Development</a></p>
 <p>When you offer a job about this, you should also do a (serious) post with some more details at the OSM forum and maybe some mailinglists.</p>
 </div>
 <div class="answer-controls post-controls">

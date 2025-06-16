@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Coastal lines and land are do not match (Messed things up?)"
-description = '''Please, take a look at http://www.openstreetmap.org/?lat=43.32859&amp;amp;lon=-3.01682&amp;amp;zoom=17&amp;amp;layers=M I edited the coastal-line in order to extend some areas and correct some positions. Hoever, as you can see, the coastal-line is sometime drawn inside land, some times on the water... but what ...'''
+description = '''Please, take a look at https://www.openstreetmap.org/?lat=43.32859&amp;amp;lon=-3.01682&amp;amp;zoom=17&amp;amp;layers=M I edited the coastal-line in order to extend some areas and correct some positions. Hoever, as you can see, the coastal-line is sometime drawn inside land, some times on the water... but what ...'''
 date = "2010-11-12T00:39:00Z"
 lastmod = "2010-11-12T01:39:00Z"
 weight = 1531
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Please, take a look at <a href="http://www.openstreetmap.org/?lat=43.32859&amp;lon=-3.01682&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=43.32859&amp;lon=-3.01682&amp;zoom=17&amp;layers=M</a></p>
+<p>Please, take a look at <a href="https://www.openstreetmap.org/?lat=43.32859&amp;lon=-3.01682&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=43.32859&amp;lon=-3.01682&amp;zoom=17&amp;layers=M</a></p>
 <p>I edited the coastal-line in order to extend some areas and correct some positions. Hoever, as you can see, the coastal-line is sometime drawn inside land, some times on the water... but what intended to be a correction has produced some ugly output.</p>
 <ol>
 <li>What did I do wrong in order to avoid making this errors again?</li>
@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this previous question: <a href="http://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Why do the changes I have made to coastline not appear on the map?</a> And also this page on the wiki <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a></p>
+<p>See this previous question: <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">Why do the changes I have made to coastline not appear on the map?</a> And also this page on the wiki <a href="https://wiki.openstreetmap.org/wiki/Coastline">Coastline</a></p>
 <p>Basically, coastlines on Mapnik (the default map on <a href="http://openstreetmap.org">openstreetmap.org</a>) are not updated as often as most other changes. The coastlines on Mapnik are usually only updates every few weeks. But most other changes appear on Mapnik within a few minutes or hours, so that's why the coast doesn't currently match up with the border (purple dashed line), or the beach etc.</p>
 <p>So I don't think you have made any errors, just wait a while till Mapnik updates the coastline, and it will look correct. You can also try viewing another map, eg Osmarender, it usually shows updates to the coastline within a few hours. To view it, click on the blue "+" symbol in the top right of the map, and pick Osmarender.</p>
 </div>

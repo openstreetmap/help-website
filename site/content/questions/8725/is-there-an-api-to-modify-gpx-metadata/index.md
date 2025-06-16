@@ -111,7 +111,7 @@ One Answer:
 <p>Some additional resources to help you are</p>
 <ul>
 <li><a href="http://git.openstreetmap.org/rails.git/blob/HEAD:/config/routes.rb#l62">The api routes available</a>, which I often use to find out this kind of thing</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/OAuth_ruby_examples">Examples of ruby scripts using OAuth</a>, which may be useful when you try writing to the API</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/OAuth_ruby_examples">Examples of ruby scripts using OAuth</a>, which may be useful when you try writing to the API</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

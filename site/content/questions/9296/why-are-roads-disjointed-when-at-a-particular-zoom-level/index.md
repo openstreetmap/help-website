@@ -117,7 +117,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Believe what the editor (or the "data view") tells you. Everything else - the map view - is a potentially time-delayed representation, and what you see on the map may not longer be the case.</p>
 <p>I assume that in your case, someone else has repaired the problem, but the map has not updated yet.</p>
-<p>See <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">"How often does the main mapnik map get updated?"</a> for a detailed explanation of the map update process.</p>
+<p>See <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">"How often does the main mapnik map get updated?"</a> for a detailed explanation of the map update process.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

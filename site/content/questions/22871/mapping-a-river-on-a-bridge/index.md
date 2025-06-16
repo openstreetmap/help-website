@@ -124,7 +124,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Here is an example of a canal on a aqueduct, it is an HIGH one see wikipedia for its history and details. <a href="http://www.openstreetmap.org/?lat=52.96912&amp;lon=-3.08732&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=52.96912&amp;lon=-3.08732&amp;zoom=16&amp;layers=M</a> <a href="http://wiki.openstreetmap.org/wiki/Aqueduct">http://wiki.openstreetmap.org/wiki/Aqueduct</a> <a href="http://en.wikipedia.org/wiki/Pontcysyllte_Aqueduct">http://en.wikipedia.org/wiki/Pontcysyllte_Aqueduct</a> The tow path is tagged bridge=yes The canal as bridge=aqueduct<br />
+<p>Here is an example of a canal on a aqueduct, it is an HIGH one see wikipedia for its history and details. <a href="https://www.openstreetmap.org/?lat=52.96912&amp;lon=-3.08732&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=52.96912&amp;lon=-3.08732&amp;zoom=16&amp;layers=M</a> <a href="https://wiki.openstreetmap.org/wiki/Aqueduct">https://wiki.openstreetmap.org/wiki/Aqueduct</a> <a href="http://en.wikipedia.org/wiki/Pontcysyllte_Aqueduct">http://en.wikipedia.org/wiki/Pontcysyllte_Aqueduct</a> The tow path is tagged bridge=yes The canal as bridge=aqueduct<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

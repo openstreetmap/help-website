@@ -142,7 +142,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It does show fine here: <img src="https://help.openstreetmap.org/upfiles/Carlsbad6100building.png" alt="alt text" /></p>
+<p>It does show fine here: <img src="/upfiles/Carlsbad6100building.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I noticed that the OSM data for my local area is missing or incorrect, so I've spend the last couple of hours updating it from my local knowledge :D There are still some foot paths and bridleways missing, but I'm not sure of the exact locations so I'll go for a walk one day with a GPS logger.</p>
-<p>One of the biggest issues I found was how to classify roads. Previously pretty much all of them were marked as unknown, I've read the <a href="http://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines">UK guidelines</a>, but I'm still unsure of how roads should be properly classified. Of the roads around here, other than A and B roads there are:</p>
+<p>One of the biggest issues I found was how to classify roads. Previously pretty much all of them were marked as unknown, I've read the <a href="https://wiki.openstreetmap.org/wiki/United_Kingdom_Tagging_Guidelines">UK guidelines</a>, but I'm still unsure of how roads should be properly classified. Of the roads around here, other than A and B roads there are:</p>
 <ol>
 <li>'Main' country roads with two lanes and road markings, obviously classed as 'tertiary'</li>
 <li>Country roads without markings which are the main routes between villages</li>

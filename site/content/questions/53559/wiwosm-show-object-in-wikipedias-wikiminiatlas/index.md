@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to show <a href="http://www.openstreetmap.org/relation/6769863">this relation</a> in the MiniWikiAtlas <a href="https://en.wikipedia.org/wiki/Holmestrandsporten">on its wikipedia article</a>. But <a href="https://tools.wmflabs.org/wiwosm/osmjson/getGeoJSON.php?lang=en&amp;article=Holmestrandsporten&amp;action=check">this check</a> shows that my object does not exist. So, what did i do wrong? According to the help pages, all I need to do is to tag a relation with the wikipedia=* tag.</p>
+<p>I'm trying to show <a href="https://www.openstreetmap.org/relation/6769863">this relation</a> in the MiniWikiAtlas <a href="https://en.wikipedia.org/wiki/Holmestrandsporten">on its wikipedia article</a>. But <a href="https://tools.wmflabs.org/wiwosm/osmjson/getGeoJSON.php?lang=en&amp;article=Holmestrandsporten&amp;action=check">this check</a> shows that my object does not exist. So, what did i do wrong? According to the help pages, all I need to do is to tag a relation with the wikipedia=* tag.</p>
 <p>-PeterFisk</p>
 </div>
 <div id="question-tags" class="tags-container tags">

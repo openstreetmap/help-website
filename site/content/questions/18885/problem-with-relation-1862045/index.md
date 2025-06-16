@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem with Relation 1862045"
-description = '''Dear All, There is a problem in my area that I want to correct. It only shows in mapsforge but I still want to amend it. Unfortunately it seams to involve something too complex for a newbie like me. Relation 1862045 does not show forest west of http://www.openstreetmap.org/?lat=50.25837&amp;amp;lon=8.56...'''
+description = '''Dear All, There is a problem in my area that I want to correct. It only shows in mapsforge but I still want to amend it. Unfortunately it seams to involve something too complex for a newbie like me. Relation 1862045 does not show forest west of https://www.openstreetmap.org/?lat=50.25837&amp;amp;lon=8.56...'''
 date = "2013-01-05T20:29:00Z"
 lastmod = "2013-01-13T21:54:00Z"
 weight = 18885
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Dear All, There is a problem in my area that I want to correct. It only shows in mapsforge but I still want to amend it. Unfortunately it seams to involve something too complex for a newbie like me. Relation 1862045 does not show forest west of <a href="http://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M</a> Can someone help? Thanks for all your work Gotthard</p>
+<p>Dear All, There is a problem in my area that I want to correct. It only shows in mapsforge but I still want to amend it. Unfortunately it seams to involve something too complex for a newbie like me. Relation 1862045 does not show forest west of <a href="https://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M</a> Can someone help? Thanks for all your work Gotthard</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-problem" rel="tag" title="see questions tagged &#39;problem&#39;">problem</span> <span class="post-tag tag-link-relation" rel="tag" title="see questions tagged &#39;relation&#39;">relation</span> <span class="post-tag tag-link-forest" rel="tag" title="see questions tagged &#39;forest&#39;">forest</span>
@@ -62,7 +62,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>You can browser the relation here <a href="http://www.openstreetmap.org/browse/relation/1862045">http://www.openstreetmap.org/browse/relation/1862045</a> , you can also have a look at it on the map by following this link <a href="http://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M&amp;relation=1862045">http://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M&amp;relation=1862045</a> . I can't see any problems involving the relation itself, could you add more information detailing the problem?</p>
+<p>You can browser the relation here <a href="https://www.openstreetmap.org/browse/relation/1862045">https://www.openstreetmap.org/browse/relation/1862045</a> , you can also have a look at it on the map by following this link <a href="https://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M&amp;relation=1862045">https://www.openstreetmap.org/?lat=50.25837&amp;lon=8.56586&amp;zoom=16&amp;layers=M&amp;relation=1862045</a> . I can't see any problems involving the relation itself, could you add more information detailing the problem?</p>
 </div>
 <div id="comment-19028-info" class="comment-info">
 <span class="comment-age">(13 Jan '13, 19:52)</span> <span class="comment-user userinfo">ChrisB</span>

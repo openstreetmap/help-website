@@ -207,7 +207,7 @@ The command to use would be <em>gmt -w[option]</em>. Which options exist you can
 <td><div class="item-right">
 <div class="answer-body">
 <p>If you can find a download site that sets a non-default title (it's just a mkgmap parameter I believe) then that might be an answer for you. However, if you do decide to download some data and use mkgmap it's really not that hard!</p>
-<p>Also, if you haven't already seen it, have a look at <a href="https://help.openstreetmap.org/questions/9940/using-microsd-on-etrex-20">this previous question</a> which may be relevant (despite the title) - it has lots of useful links, including to <a href="http://www.mkgmap.org.uk/pipermail/mkgmap-dev/2011q4/012427.html">here</a>.</p>
+<p>Also, if you haven't already seen it, have a look at <a href="/questions/9940/using-microsd-on-etrex-20">this previous question</a> which may be relevant (despite the title) - it has lots of useful links, including to <a href="http://www.mkgmap.org.uk/pipermail/mkgmap-dev/2011q4/012427.html">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -70,7 +70,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Does this specific answer to your previous question not help?</p>
-<p><a href="https://help.openstreetmap.org/questions/46474/will-european-map-import-end-one-day">https://help.openstreetmap.org/questions/46474/will-european-map-import-end-one-day</a></p>
+<p><a href="/questions/46474/will-european-map-import-end-one-day">https://help.openstreetmap.org/questions/46474/will-european-map-import-end-one-day</a></p>
 </div>
 <div id="comment-47742-info" class="comment-info">
 <span class="comment-age">(29 Jan '16, 17:00)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

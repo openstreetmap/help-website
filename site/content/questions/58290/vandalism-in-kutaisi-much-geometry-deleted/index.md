@@ -78,7 +78,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Generally, the whole city is affected, but as an example check out the area north of the stadium: <a href="http://www.openstreetmap.org/#map=17/42.25815/42.68413">http://www.openstreetmap.org/#map=17/42.25815/42.68413</a></p>
+<p>Generally, the whole city is affected, but as an example check out the area north of the stadium: <a href="https://www.openstreetmap.org/#map=17/42.25815/42.68413">https://www.openstreetmap.org/#map=17/42.25815/42.68413</a></p>
 <p>All the small roads in the residential areas are missing!</p>
 </div>
 <div id="comment-58292-info" class="comment-info">
@@ -91,7 +91,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Also, Gabashvilis Gora is a "nice" example: <a href="http://www.openstreetmap.org/#map=17/42.26961/42.68521">http://www.openstreetmap.org/#map=17/42.26961/42.68521</a></p>
+<p>Also, Gabashvilis Gora is a "nice" example: <a href="https://www.openstreetmap.org/#map=17/42.26961/42.68521">https://www.openstreetmap.org/#map=17/42.26961/42.68521</a></p>
 <p>Some buildings are still here but all residential roads are gone :(</p>
 </div>
 <div id="comment-58293-info" class="comment-info">
@@ -146,7 +146,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Someone's already commented on the changeset discussion and said that they're going to revert the changes: <a href="http://www.openstreetmap.org/changeset/50792805">http://www.openstreetmap.org/changeset/50792805</a> .</p>
+<p>Someone's already commented on the changeset discussion and said that they're going to revert the changes: <a href="https://www.openstreetmap.org/changeset/50792805">https://www.openstreetmap.org/changeset/50792805</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

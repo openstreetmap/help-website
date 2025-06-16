@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Primero sube los archivos en la página openstreetmap.org utilizando la página <a href="http://www.openstreetmap.org/trace/create">Upload GPS traces</a> (si es posible escoge la opción visibilidad-&gt;identificable) para contribuir a la comunidad y cualquiera pueda mapear a partir de estas y no necesariamente vos.</p>
+<p>Primero sube los archivos en la página openstreetmap.org utilizando la página <a href="https://www.openstreetmap.org/trace/create">Upload GPS traces</a> (si es posible escoge la opción visibilidad-&gt;identificable) para contribuir a la comunidad y cualquiera pueda mapear a partir de estas y no necesariamente vos.</p>
 <p>Parece que no estás familiarizado con JOSM. Existe un vídeo tutorial creado por José Luis Dominguez que inicia desde lo más básico hasta lo avanzado como lo que preguntas. Lo vídeos están en <a href="http://www.youtube.com/channel/UC2sUTTz0MjKOlRdN431jryQ/videos?sort=da&amp;view=0&amp;flow=grid">este enlace</a> el vídeo que se ocupa de rutas GPX es el quinto.</p>
 <p>Resumiendo debes hacer:</p>
 <ol>
@@ -169,7 +169,7 @@ One Answer:
 <div id="post-27797-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Esa pregunta esta aquí: <a href="https://help.openstreetmap.org/questions/27779/trazas-dibujadas-manualmente-aparecen-capa-estandar-y-no-en-capa-mapa-cicilsta-porque?page=1&amp;focusedAnswerId=27795#27795">Trazas dibujadas manualmente aparecen capa estandar y no en capa mapa cicilsta. Porque?</a></p>
+<p>Esa pregunta esta aquí: <a href="/questions/27779/trazas-dibujadas-manualmente-aparecen-capa-estandar-y-no-en-capa-mapa-cicilsta-porque?page=1&amp;focusedAnswerId=27795#27795">Trazas dibujadas manualmente aparecen capa estandar y no en capa mapa cicilsta. Porque?</a></p>
 </div>
 <div id="comment-27797-info" class="comment-info">
 <span class="comment-age">(05 Nov '13, 04:40)</span> <span class="comment-user userinfo">erik</span>

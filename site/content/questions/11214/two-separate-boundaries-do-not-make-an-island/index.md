@@ -102,7 +102,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>I would like to, but I have no idea on how to do that.</p>
-<p>maybe this helps: <a href="http://www.openstreetmap.org/export?lat=58.8524&amp;lon=17.6531&amp;zoom=13">http://www.openstreetmap.org/export?lat=58.8524&amp;lon=17.6531&amp;zoom=13</a></p>
+<p>maybe this helps: <a href="https://www.openstreetmap.org/export?lat=58.8524&amp;lon=17.6531&amp;zoom=13">https://www.openstreetmap.org/export?lat=58.8524&amp;lon=17.6531&amp;zoom=13</a></p>
 </div>
 <div id="comment-11225-info" class="comment-info">
 <span class="comment-age">(15 Mar '12, 14:29)</span> <span class="comment-user userinfo">HansMeijer</span>
@@ -156,9 +156,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First, you have to know that OSM ways have a direction. This direction is usually not important excepted for oneway roads, roundabouts and... coastlines (and few other cases). As documented on the <a href="http://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">wiki</a>, the land has to be on the left side and water on the right side. This does not seem to be the case for the island you pointed out (<a href="http://www.openstreetmap.org/browse/way/155144134).">http://www.openstreetmap.org/browse/way/155144134).</a> All OSM editors are normally able to reverse the direction of the way.</p>
-<p>Second, even if your coastlines are correctly tagged and directed, it does not mean it will be rendered immediately on the standard slippy map. This can be delayed as explained on <a href="http://help.openstreetmap.org/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">this related question</a>.</p>
-<p>Last, you should notice that you added a dummy/empty way on the coastline <a href="http://www.openstreetmap.org/browse/way/155144132">here</a>.</p>
+<p>First, you have to know that OSM ways have a direction. This direction is usually not important excepted for oneway roads, roundabouts and... coastlines (and few other cases). As documented on the <a href="https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline">wiki</a>, the land has to be on the left side and water on the right side. This does not seem to be the case for the island you pointed out (<a href="https://www.openstreetmap.org/browse/way/155144134).">https://www.openstreetmap.org/browse/way/155144134).</a> All OSM editors are normally able to reverse the direction of the way.</p>
+<p>Second, even if your coastlines are correctly tagged and directed, it does not mean it will be rendered immediately on the standard slippy map. This can be delayed as explained on <a href="/questions/276/why-do-the-changes-i-have-made-to-coastline-not-appear-on-the-map">this related question</a>.</p>
+<p>Last, you should notice that you added a dummy/empty way on the coastline <a href="https://www.openstreetmap.org/browse/way/155144132">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

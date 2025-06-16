@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The wiki has a list of <a href="http://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">OSM WMS servers</a>. Don't forget to look at the usage policy if you plan to use one of them for something larger.</p>
+<p>The wiki has a list of <a href="https://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">OSM WMS servers</a>. Don't forget to look at the usage policy if you plan to use one of them for something larger.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

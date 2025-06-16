@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I just tagged the WestLB building in Düsseldorf, Germany, which is the headquarters of a large commercial bank (<a href="http://www.openstreetmap.org/?lat=51.214765&amp;lon=6.777944&amp;zoom=18&amp;layers=M">map link</a>).</p>
+<p>I just tagged the WestLB building in Düsseldorf, Germany, which is the headquarters of a large commercial bank (<a href="https://www.openstreetmap.org/?lat=51.214765&amp;lon=6.777944&amp;zoom=18&amp;layers=M">map link</a>).</p>
 <p>I tagged it as <code>amenity=bank</code>, <code>name=WestLB</code>. However, I'm not sure this is correct:</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Key:amenity">Wiki</a> page for the key "amenity" says:</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Key:amenity">Wiki</a> page for the key "amenity" says:</p>
 <blockquote>
 <p>the primary tag for useful and important facilities for visitors and residents: toilets, telephones, banks [...]</p>
 </blockquote>
@@ -227,8 +227,8 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If I were tagging it, I would still do "amenity=bank" and add "access=private". If the proposed "<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/access_restrictions_1.5">access restrictions 1.5</a>" get accepted, a better option might even be "access=member".</p>
-<p>BTW, This is similar to my <a href="http://help.openstreetmap.org/questions/6115/tagging-members-only-fuel-station">tagging question about a members-only fuel station</a>.</p>
+<p>If I were tagging it, I would still do "amenity=bank" and add "access=private". If the proposed "<a href="https://wiki.openstreetmap.org/wiki/Proposed_features/access_restrictions_1.5">access restrictions 1.5</a>" get accepted, a better option might even be "access=member".</p>
+<p>BTW, This is similar to my <a href="/questions/6115/tagging-members-only-fuel-station">tagging question about a members-only fuel station</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

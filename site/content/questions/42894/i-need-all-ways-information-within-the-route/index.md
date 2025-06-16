@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><span class="small">+++ converted "answer" to "question" from <a href="https://help.openstreetmap.org/questions/32644/determining-speed-limits-for-given-route">https://help.openstreetmap.org/questions/32644/determining-speed-limits-for-given-route</a> +++</span></p>
+<p><span class="small">+++ converted "answer" to "question" from <a href="/questions/32644/determining-speed-limits-for-given-route">https://help.openstreetmap.org/questions/32644/determining-speed-limits-for-given-route</a> +++</span></p>
 <p>Hi, I need all ways information within the route not just speed. It can be some Can you please help me how to achieve this. Thanks in advance.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

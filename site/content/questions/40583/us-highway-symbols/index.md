@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Using open street map is so refreshing after having used google maps for so long, considering the breadth and detail and the kinds of information that can be found in open street map as compared to google maps.</p>
 <p>One thing that bothers me (and it is so special for being so singular and small) is that open street maps does not use the state and federal symbols for highways. Why is this not done? The symbol along with the highway number conveys information about the type, intent, condition, etc. of the highway, thus if cartography is to be useful, the symbol is also cartographic.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_States">http://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_States</a> discusses issues related to the use of US highway symbols in open street map, but does not give conclusive reasons.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_States">https://wiki.openstreetmap.org/wiki/Road_signs_in_the_United_States</a> discusses issues related to the use of US highway symbols in open street map, but does not give conclusive reasons.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-usa" rel="tag" title="see questions tagged &#39;usa&#39;">usa</span> <span class="post-tag tag-link-highway" rel="tag" title="see questions tagged &#39;highway&#39;">highway</span> <span class="post-tag tag-link-signs" rel="tag" title="see questions tagged &#39;signs&#39;">signs</span>
@@ -126,7 +126,7 @@ osqa_accepted = false
 <p>I get confused about what is considered current best practice for the US. I think the hope is that rendering of route shields would be from the route relations rather than the refs on the ways.</p>
 <p>And I think a demonstration of that is at <a href="http://bl.ocks.org/ToeBee/raw/6119134/#12/37.0448/-121.0056">http://bl.ocks.org/ToeBee/raw/6119134/#12/37.0448/-121.0056</a></p>
 <p>I think that MapQuest Open uses the refs on the ways: <a href="http://mapq.st/1yGvVb5">http://mapq.st/1yGvVb5</a></p>
-<p>At any rate, in my opinion you are correct that the default map at <a href="http://www.openstreetmap.org/#map=12/37.0448/-121.0056">http://www.openstreetmap.org/#map=12/37.0448/-121.0056</a> does not show shields at it should.</p>
+<p>At any rate, in my opinion you are correct that the default map at <a href="https://www.openstreetmap.org/#map=12/37.0448/-121.0056">https://www.openstreetmap.org/#map=12/37.0448/-121.0056</a> does not show shields at it should.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -313,7 +313,7 @@ osqa_accepted = false
 <div id="post-40694-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That was done by <a href="http://help.openstreetmap.org/users/66/richard-weait">@Richard Weait</a>. I think the more current offshoot are the tiles on the OSM-US server, which are shown in the ToeBee demo linked above (<a href="http://bl.ocks.org/ToeBee/6119134).">http://bl.ocks.org/ToeBee/6119134).</a></p>
+<p>That was done by <a href="https://help.openstreetmap.org/users/66/richard-weait">@Richard Weait</a>. I think the more current offshoot are the tiles on the OSM-US server, which are shown in the ToeBee demo linked above (<a href="http://bl.ocks.org/ToeBee/6119134).">http://bl.ocks.org/ToeBee/6119134).</a></p>
 </div>
 <div id="comment-40694-info" class="comment-info">
 <span class="comment-age">(29 Jan '15, 14:43)</span> <span class="comment-user userinfo">neuhausr</span>

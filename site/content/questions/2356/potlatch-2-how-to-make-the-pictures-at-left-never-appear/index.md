@@ -105,9 +105,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><strong>EDIT</strong>: my answer is "You can't do that, but you can suggest it as a wishlist item on <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements">P2 wiki page</a>" Log in with your osm username and password</p>
+<p><strong>EDIT</strong>: my answer is "You can't do that, but you can suggest it as a wishlist item on <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements">P2 wiki page</a>" Log in with your osm username and password</p>
 <p>That pane is used to tag stuff so you wont get more space by removing the icons. I can understand that you don't want those pictures to load though, and having an option to skip that icon pane, or simple mode going directly to advanced pane would be nice...</p>
-<p>To get a bit more room you can always press <strong>M</strong> (as in <a href="http://help.openstreetmap.org/questions/1692/fullscreen-in-potlatch2">Fullscreen potlatch</a>)</p>
+<p>To get a bit more room you can always press <strong>M</strong> (as in <a href="/questions/1692/fullscreen-in-potlatch2">Fullscreen potlatch</a>)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -194,7 +194,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>Could be very problematic. What do you do about loading map data - do you always load enough for the area underneath the panel (imposing a 20%ish penalty on those who are happy with it)? What happens when you select a way on the left hand of the screen? (You can't do anything with the way because the tag panel has popped up over it!) And so on.</p>
-<p>I wouldn't say "no way" and maybe someone will do it one day, but I can't see it bubbling to the top of my own priority list any time soon. For long-term enhancements like this the <a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements">wiki page</a> is probably more appropriate than trac.</p>
+<p>I wouldn't say "no way" and maybe someone will do it one day, but I can't see it bubbling to the top of my own priority list any time soon. For long-term enhancements like this the <a href="https://wiki.openstreetmap.org/wiki/Potlatch_2/Suggested_enhancements">wiki page</a> is probably more appropriate than trac.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

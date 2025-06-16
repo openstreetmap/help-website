@@ -126,7 +126,7 @@ Pemanent link is the target for "Größere Karte anzeigen".<br />
     style=&quot;border-right: black 1px solid; border-top: black 1px solid; border-left: black 1px solid; border-bottom: black 1px solid&quot; 
     marginwidth=&quot;0&quot; 
     marginheight=&quot;0&quot; 
-    src=&quot;http://www.openstreetmap.org/export/embed.html?bbox=16.080776,47.718179,16.087101,47.721455&amp;amp;layer=mapnik&amp;amp;marker=47.71984,16.08368&quot; 
+    src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=16.080776,47.718179,16.087101,47.721455&amp;amp;layer=mapnik&amp;amp;marker=47.71984,16.08368&quot; 
     frameborder=&quot;0&quot; width=&quot;350&quot; scrolling=&quot;no&quot; height=&quot;247&quot;&gt;
 &lt;/iframe&gt;</code></pre>
 </div>

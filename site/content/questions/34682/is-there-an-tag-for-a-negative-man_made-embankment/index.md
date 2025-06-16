@@ -172,7 +172,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:cutting">Cutting=yes</a> seems to be in <a href="http://taginfo.openstreetmap.org/keys/?key=cutting">much wider use</a> than man_made=cutting--would this work for your needs?</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:cutting">Cutting=yes</a> seems to be in <a href="http://taginfo.openstreetmap.org/keys/?key=cutting">much wider use</a> than man_made=cutting--would this work for your needs?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

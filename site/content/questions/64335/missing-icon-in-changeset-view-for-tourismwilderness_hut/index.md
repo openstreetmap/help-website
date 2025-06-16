@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>In the changeset view some icons are rendered while others aren't. In the example below from changeset <a href="https://www.openstreetmap.org/changeset/60107869">#60107869</a> the first node (tourism=wilderness_hut) has no icon while the second does (tourism=alpine_hut). Both render fine in the map view - it is only the changeset list that doesn't render them.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/changeset_icons.png" alt="changeset icons" /></p>
+<p><img src="/upfiles/changeset_icons.png" alt="changeset icons" /></p>
 <p>The tooltips for both hut types display the tourism tag, so it seems as though something is recognizing the important tag already, it's just the icon that isn't displayed. For reference, issue <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/540">#540</a> added the wilderness_hut rendering.</p>
 <p>Assuming this is a bug (or feature request), where would I log it?</p>
 </div>

@@ -64,7 +64,7 @@ osqa_accepted = false
 <div id="post-45510-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There is <a href="http://wiki.openstreetmap.org/wiki/Games#Games_using_OpenStreetMap_data">a section about this</a> in the article "Games" on the OpenStreetMap wiki.</p>
+<p>There is <a href="https://wiki.openstreetmap.org/wiki/Games#Games_using_OpenStreetMap_data">a section about this</a> in the article "Games" on the OpenStreetMap wiki.</p>
 </div>
 <div id="comment-45510-info" class="comment-info">
 <span class="comment-age">(22 Sep '15, 17:14)</span> <span class="comment-user userinfo">Kristofer87</span>
@@ -75,7 +75,7 @@ osqa_accepted = false
 <div id="post-45513-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11502/kristofer87">@Kristofer87</a>: which is already mentioned by stephan75's answer ;-) Thanks anyway!</p>
+<p><a href="https://help.openstreetmap.org/users/11502/kristofer87">@Kristofer87</a>: which is already mentioned by stephan75's answer ;-) Thanks anyway!</p>
 </div>
 <div id="comment-45513-info" class="comment-info">
 <span class="comment-age">(22 Sep '15, 19:44)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -131,11 +131,11 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Random ideas, probably nowhere near complete:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/WMS_Racer">WMS Racer</a> Plugin for JOSM</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/WMS_Racer">WMS Racer</a> Plugin for JOSM</li>
 <li>Skobbler's (announced) <a href="http://oegeo.wordpress.com/2011/06/06/openstreetmap-usability-converting-more-sign-ups-to-active-contributors/">Address Hunter</a></li>
-<li>HP Mediascape (talk by Ben Clayton at <a href="http://wiki.openstreetmap.org/wiki/State_Of_The_Map_2008">SOTM 2008</a>)</li>
+<li>HP Mediascape (talk by Ben Clayton at <a href="https://wiki.openstreetmap.org/wiki/State_Of_The_Map_2008">SOTM 2008</a>)</li>
 <li>text-adventure-like game on OSM (slightly outdated, <a href="http://www.mail-archive.com/newbies@openstreetmap.org/msg00419.html">article on mailing list from 2007</a>)</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Monopoly_City_Streets">Monopoly City Streets</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Monopoly_City_Streets">Monopoly City Streets</a></li>
 <li><a href="http://blog.oobrien.com/2010/04/nike-grid/">Nike Grid</a></li>
 <li>lots of flight simulators using OSM</li>
 </ul>
@@ -191,7 +191,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can find some hints about games and simulators using OSM data in the OSM wiki about "<a href="http://wiki.openstreetmap.org/wiki/Neat_Stuff">Neat Stuff</a>" and "<a href="http://wiki.openstreetmap.org/wiki/Games">Games</a>"</p>
+<p>You can find some hints about games and simulators using OSM data in the OSM wiki about "<a href="https://wiki.openstreetmap.org/wiki/Neat_Stuff">Neat Stuff</a>" and "<a href="https://wiki.openstreetmap.org/wiki/Games">Games</a>"</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

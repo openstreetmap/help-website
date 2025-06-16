@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I posted a message at talk-transit@openstreetmap.org. yesterday following answers to my previous post here: <a href="https://help.openstreetmap.org/questions/45933/the-addition-of-bus-stops-and-their-attributes.">https://help.openstreetmap.org/questions/45933/the-addition-of-bus-stops-and-their-attributes.</a> Only later did I realise archives stop at July 2015. I reproduce the post here in the hope that someone in this forum can help:</p>
+<p>I posted a message at talk-transit@openstreetmap.org. yesterday following answers to my previous post here: <a href="/questions/45933/the-addition-of-bus-stops-and-their-attributes.">https://help.openstreetmap.org/questions/45933/the-addition-of-bus-stops-and-their-attributes.</a> Only later did I realise archives stop at July 2015. I reproduce the post here in the hope that someone in this forum can help:</p>
 <p>"I posted a new topic on OSM Help forum this morning regarding bus stops and NaPTAN. I wish to add new bus stop information, myself, following constructive answers provided by Andy Allan and SK53. I thought I should check first to determine what information NaPTAN, itself, holds on the bus stops in question. I visited the NaPTAN website and noted the availability of .xml and .csv file downloads. 1) I do not know how to use these files for an area as small as I wish to consult and 2) I wonder if there is an interactive map available that would allow me to view such a small area to obtain the information I need."</p>
 </div>
 <div id="question-tags" class="tags-container tags">

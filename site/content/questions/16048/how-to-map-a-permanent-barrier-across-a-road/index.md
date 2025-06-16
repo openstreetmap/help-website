@@ -40,8 +40,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>There is a <a href="http://www.openstreetmap.org/?lat=51.841243&amp;lon=-2.118398&amp;zoom=18&amp;layers=M">road near me</a>, which is permanently blocked off by a fence (see picture).</p>
-<p><img src="http://help.openstreetmap.org/upfiles/dog-lane-to-a417-small.jpg" alt="Picture of a road with a fence across it." /></p>
+<p>There is a <a href="https://www.openstreetmap.org/?lat=51.841243&amp;lon=-2.118398&amp;zoom=18&amp;layers=M">road near me</a>, which is permanently blocked off by a fence (see picture).</p>
+<p><img src="/upfiles/dog-lane-to-a417-small.jpg" alt="Picture of a road with a fence across it." /></p>
 <p>I'm wondering if this should be mapped as a single way with a barrier as that is physically what is present on the ground, or with two ways as there is no join for any type of traffic.</p>
 <p>I'd prefer the first option because it physically is a single road but I can't find an appropriate barrier type. I don't want to use a gate barrier (which you can tag a node to be) because that would imply the possibility of opening it.</p>
 <p>Currently, I have gone for the second option of splitting the way into two that don't quite meet and putting a fence barrier between them.</p>

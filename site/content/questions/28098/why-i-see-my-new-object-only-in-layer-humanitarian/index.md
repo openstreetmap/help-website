@@ -147,7 +147,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>If you're <a href="http://www.openstreetmap.org/user/luca_sere">http://www.openstreetmap.org/user/luca_sere</a> and the object that you deleted was <a href="http://www.openstreetmap.org/browse/way/146375208/history">http://www.openstreetmap.org/browse/way/146375208/history</a> , and replaced with <a href="http://www.openstreetmap.org/browse/way/246118632/history">http://www.openstreetmap.org/browse/way/246118632/history</a> , then don't worry - it'll show up shortly.</p>
+<p>If you're <a href="https://www.openstreetmap.org/user/luca_sere">https://www.openstreetmap.org/user/luca_sere</a> and the object that you deleted was <a href="https://www.openstreetmap.org/browse/way/146375208/history">https://www.openstreetmap.org/browse/way/146375208/history</a> , and replaced with <a href="https://www.openstreetmap.org/browse/way/246118632/history">https://www.openstreetmap.org/browse/way/246118632/history</a> , then don't worry - it'll show up shortly.</p>
 </div>
 <div id="comment-28101-info" class="comment-info">
 <span class="comment-age">(14 Nov '13, 13:44)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -205,7 +205,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p><span>@luca_sere</span> please read <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a> and discuss with the Italian OSM community. Thank you</p>
+<p><span>@luca_sere</span> please read <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a> and discuss with the Italian OSM community. Thank you</p>
 </div>
 <div id="comment-28108-info" class="comment-info">
 <span class="comment-age">(14 Nov '13, 14:20)</span> <span class="comment-user userinfo">SimonPoole ♦</span>

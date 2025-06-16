@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm currently updating some relations that are railways in northern italy. For some of these lines, there are already relations, which I'm only touching up and correcting where needed. For some there are two relations with the same contents (south tyrolean line number for public services, e.g. 200, 100, 250...) and italian numbers from the operator RFI (Line 40, 42, 45...). Now I want to contact the initial creators of these relations, but I'm not able to find them, since I cannot get the history for the relation (<a href="http://www.openstreetmap.org/browse/relation/1191142/history">http://www.openstreetmap.org/browse/relation/1191142/history</a> always times out).</p>
+<p>I'm currently updating some relations that are railways in northern italy. For some of these lines, there are already relations, which I'm only touching up and correcting where needed. For some there are two relations with the same contents (south tyrolean line number for public services, e.g. 200, 100, 250...) and italian numbers from the operator RFI (Line 40, 42, 45...). Now I want to contact the initial creators of these relations, but I'm not able to find them, since I cannot get the history for the relation (<a href="https://www.openstreetmap.org/browse/relation/1191142/history">https://www.openstreetmap.org/browse/relation/1191142/history</a> always times out).</p>
 <p>Is there another way to get the information?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

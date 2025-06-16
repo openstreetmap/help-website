@@ -201,7 +201,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Apparently the magic word was "query"</p>
-<p><a href="http://www.openstreetmap.org/?query=%s">http://www.openstreetmap.org/?query=%s</a></p>
+<p><a href="https://www.openstreetmap.org/?query=%s">https://www.openstreetmap.org/?query=%s</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

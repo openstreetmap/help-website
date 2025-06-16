@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi everybody</p>
-<p><a href="http://www.openstreetmap.org/?lat=49.49921&amp;lon=5.94721&amp;zoom=17&amp;layers=M">Here</a> you can see the Rockhall concert hall . But I don't find any tag or building description who seems to be appropriate for it . So ? Is it possible to suggest new tag creation ?</p>
+<p><a href="https://www.openstreetmap.org/?lat=49.49921&amp;lon=5.94721&amp;zoom=17&amp;layers=M">Here</a> you can see the Rockhall concert hall . But I don't find any tag or building description who seems to be appropriate for it . So ? Is it possible to suggest new tag creation ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-concert" rel="tag" title="see questions tagged &#39;concert&#39;">concert</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span> <span class="post-tag tag-link-tags" rel="tag" title="see questions tagged &#39;tags&#39;">tags</span>
@@ -123,9 +123,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>besides the first comment, you can also use amenity=theatre (which is often used for operas et al), if it is concentrating on "classical music" - Info here: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtheatre">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtheatre</a></p>
-<p>Smaller concert halls (which host e.g. aves, rock concerts) can also be tagged with amenity=nightclub: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dnightclub">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dnightclub</a></p>
-<p>If it is a multi-purpose hall (where not only/mainly concerts are held), you can also use amenity=community_centre - info here: <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre">http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre</a></p>
+<p>besides the first comment, you can also use amenity=theatre (which is often used for operas et al), if it is concentrating on "classical music" - Info here: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtheatre">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtheatre</a></p>
+<p>Smaller concert halls (which host e.g. aves, rock concerts) can also be tagged with amenity=nightclub: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dnightclub">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dnightclub</a></p>
+<p>If it is a multi-purpose hall (where not only/mainly concerts are held), you can also use amenity=community_centre - info here: <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre">https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre</a></p>
 <p>The borders between pub/restaurant/cafe/disco/nightclub and also theatre/opera/multi-purpose-event-hall is also irl very blurry, so use your common sense ;)</p>
 </div>
 <div class="answer-controls post-controls">
@@ -186,7 +186,7 @@ osqa_accepted = false
 <li>Symphony Hall, Birmingham: building=concert_hall</li>
 </ul>
 <p>Clearly the only appropriate tag is <code>amenity=concert_hall</code>. These are not theatres.</p>
-<p>I suspect that <code>amenity=theatre</code> is widely used because these are relatively important destinations in large cities and theatres are rendered. This is therefore a case of "<a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the Renderer</a>". If contributors feel that losing the rendering is too much of a deficiency I would suggest adding theatre=concert_hall as an interim measure.</p>
+<p>I suspect that <code>amenity=theatre</code> is widely used because these are relatively important destinations in large cities and theatres are rendered. This is therefore a case of "<a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">Tagging for the Renderer</a>". If contributors feel that losing the rendering is too much of a deficiency I would suggest adding theatre=concert_hall as an interim measure.</p>
 <p>I am submitting an issue for the CartoCSS style to render <code>amenity=concert_hall</code> to discourage this widespread practice.</p>
 <p>Equally, abusing amenity=nightclub, neither helps locate music venues or helps those searching for the social life associated with nightclubs. Places such as <a href="http://rockcity.co.uk">Rock City</a> in Nottingham are primarily music venues, but at present I do not find a good tag for these.</p>
 </div>

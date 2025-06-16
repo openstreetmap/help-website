@@ -167,7 +167,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Hopefully this JPEG helps. First create or select a point, Click on the mapdata icon (6 down) , tick box to show the measurement panel. The co-ordinate can then be seen. It works for me on a Win 10 PC desktop</p>
-<p><img src="https://help.openstreetmap.org/upfiles/iD_Help.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/iD_Help.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

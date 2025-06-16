@@ -119,7 +119,7 @@ One Answer:
 <div class="answer-body">
 <p>...if there are no buildings yet in the area (see <span>@SomeoneElse</span> 's comment), maybe there will be some nice people willing to trace those airport buildings for you.</p>
 <p>OpenStreetMap is a volunteer project. If nobody has yet drawn the buildings for your area of interest, they are simply not in the database.</p>
-<p>For a quick introduction on how to add stuff to the OSM database see <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and especially <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Primer">http://wiki.openstreetmap.org/wiki/Potlatch/Primer</a> .</p>
+<p>For a quick introduction on how to add stuff to the OSM database see <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and especially <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Primer">https://wiki.openstreetmap.org/wiki/Potlatch/Primer</a> .</p>
 <p>And be bold, it's not as hard as you may think!</p>
 </div>
 <div class="answer-controls post-controls">

@@ -106,7 +106,7 @@ osqa_accepted = false
 <div id="post-55108-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Or are you talking about this changeset: <a href="http://www.openstreetmap.org/changeset/46854141">http://www.openstreetmap.org/changeset/46854141</a> which you created by clicking "edit" and then "save" on osm.org ?</p>
+<p>Or are you talking about this changeset: <a href="https://www.openstreetmap.org/changeset/46854141">https://www.openstreetmap.org/changeset/46854141</a> which you created by clicking "edit" and then "save" on osm.org ?</p>
 </div>
 <div id="comment-55108-info" class="comment-info">
 <span class="comment-age">(15 Mar '17, 11:09)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

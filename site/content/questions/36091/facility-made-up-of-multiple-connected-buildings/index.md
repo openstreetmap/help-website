@@ -181,7 +181,7 @@ One Answer:
 <div id="post-36112-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Pointing at any multipolygon with JOSM or P2 gives me just one single way and beside multies no tags in the menu. Osmose <a href="http://osmose.openstreetmap.fr/nl/map/">http://osmose.openstreetmap.fr/nl/map/</a> nor Keep Right <a href="http://keepright.at/report_map.php?zoom=14&amp;lat=48.20808&amp;lon=16.37221">http://keepright.at/report_map.php?zoom=14&amp;lat=48.20808&amp;lon=16.37221</a> show failures. A building like this <a href="http://www.openstreetmap.org/#map=18/39.30407/-76.56730">http://www.openstreetmap.org/#map=18/39.30407/-76.56730</a> shows tags and a complete outline ?</p>
+<p>Pointing at any multipolygon with JOSM or P2 gives me just one single way and beside multies no tags in the menu. Osmose <a href="http://osmose.openstreetmap.fr/nl/map/">http://osmose.openstreetmap.fr/nl/map/</a> nor Keep Right <a href="http://keepright.at/report_map.php?zoom=14&amp;lat=48.20808&amp;lon=16.37221">http://keepright.at/report_map.php?zoom=14&amp;lat=48.20808&amp;lon=16.37221</a> show failures. A building like this <a href="https://www.openstreetmap.org/#map=18/39.30407/-76.56730">https://www.openstreetmap.org/#map=18/39.30407/-76.56730</a> shows tags and a complete outline ?</p>
 </div>
 <div id="comment-36112-info" class="comment-info">
 <span class="comment-age">(23 Aug '14, 08:09)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -193,7 +193,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> all of the multipolygons <em>have</em> tags, you must be doing something wrong.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a> all of the multipolygons <em>have</em> tags, you must be doing something wrong.</p>
 </div>
 <div id="comment-36113-info" class="comment-info">
 <span class="comment-age">(23 Aug '14, 08:31)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -204,7 +204,7 @@ One Answer:
 <div id="post-36568-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, rather than have a bunch of overlapping/duplicate nodes and ways, I do indeed have a bunch of multi-polys. Basically I tagged the walls of the buildings. "This set of walls forms the outer wall of the entire facility. This set of walls forms Building 1. This set of walls forms Building 2." etc. Not sure why you're not seeing tags. The ways themselves may not be tagged, but the multi-polys definitely are.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>, rather than have a bunch of overlapping/duplicate nodes and ways, I do indeed have a bunch of multi-polys. Basically I tagged the walls of the buildings. "This set of walls forms the outer wall of the entire facility. This set of walls forms Building 1. This set of walls forms Building 2." etc. Not sure why you're not seeing tags. The ways themselves may not be tagged, but the multi-polys definitely are.</p>
 </div>
 <div id="comment-36568-info" class="comment-info">
 <span class="comment-age">(03 Sep '14, 21:58)</span> <span class="comment-user userinfo">TylerSchwend</span>

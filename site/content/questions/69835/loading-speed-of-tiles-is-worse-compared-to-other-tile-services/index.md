@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><img src="https://help.openstreetmap.org/upfiles/osm_vs_arcgis_u5MThjs.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm_vs_arcgis_u5MThjs.png" alt="alt text" /></p>
 <p>Why is it taking 1 second of loading when for example ArcGIS tiles only need 50 miliseconds? A strange behaviour is also that the image got shown 3/4 but for the rest it takes up to 1 second to show the missing 1/4. Are there some bottlenecks with redirecting in the background of the server?</p>
 <p><a href="https://a.tile.openstreetmap.org/9/255/169.png">OSM tile</a></p>
 <p><a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/255/169">ArcGIS tile</a></p>

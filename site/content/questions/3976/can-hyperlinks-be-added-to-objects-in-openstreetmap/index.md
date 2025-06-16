@@ -123,7 +123,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is possible to store hyperlinks in the OSM database along with the object, and it is possible to write applications that then show a map where you can click on objects. However the map on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> does not do that, for a number of reasons, one of them being that we don't want to heighten the attractiveness of our map for spammers.</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/OpenLinkMap">OpenLinkMap</a> for a map that does have clickable links, and for instructions on how to add the links to OSM to have them appear on OpenLinkMap.</p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/OpenLinkMap">OpenLinkMap</a> for a map that does have clickable links, and for instructions on how to add the links to OSM to have them appear on OpenLinkMap.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are things like <a href="http://wiki.openstreetmap.org/wiki/Url">Key:url</a>, but OpenStreetMap is basically just a database. Then it's up to the actual map implementation to use it for something useful.</p>
+<p>There are things like <a href="https://wiki.openstreetmap.org/wiki/Url">Key:url</a>, but OpenStreetMap is basically just a database. Then it's up to the actual map implementation to use it for something useful.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -259,8 +259,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>You said "hyperlink <strong>to</strong> the building", which I interpret to mean you want link from a website to the OpenStreetMap website, so that the building is highlighted.</p>
 <p>So the answer is "Yes"! Like this:</p>
-<p><a href="http://www.openstreetmap.org/browse/way/45994639"></a><a href="http://www.openstreetmap.org/browse/way/45994639"></a><a href="http://www.openstreetmap.org/browse/way/45994639">http://www.openstreetmap.org/browse/way/45994639</a></p>
-<p><a href="http://www.openstreetmap.org/?way=45994639"></a><a href="http://www.openstreetmap.org/?way=45994639"></a><a href="http://www.openstreetmap.org/?way=45994639">http://www.openstreetmap.org/?way=45994639</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/45994639"></a><a href="https://www.openstreetmap.org/browse/way/45994639"></a><a href="https://www.openstreetmap.org/browse/way/45994639">https://www.openstreetmap.org/browse/way/45994639</a></p>
+<p><a href="https://www.openstreetmap.org/?way=45994639"></a><a href="https://www.openstreetmap.org/?way=45994639"></a><a href="https://www.openstreetmap.org/?way=45994639">https://www.openstreetmap.org/?way=45994639</a></p>
 <p>...I would give more details, but before I do that, could you edit your question to confirm that "link from a website to the OpenStreetMap website" is what you want?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -314,7 +314,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If your question is which tags people are mostly using to add links to objects in OSM, then the answer is <a href="http://wiki.openstreetmap.org/wiki/Key:website">website</a> for the official website and <a href="http://wiki.openstreetmap.org/wiki/Url">url</a> for additional urls. To link to wikipedia articles there is a special tag: <a href="http://wiki.openstreetmap.org/wiki/Key:wikipedia">wikipedia</a>=<em>language-abbr.</em>:<em>article name</em></p>
+<p>If your question is which tags people are mostly using to add links to objects in OSM, then the answer is <a href="https://wiki.openstreetmap.org/wiki/Key:website">website</a> for the official website and <a href="https://wiki.openstreetmap.org/wiki/Url">url</a> for additional urls. To link to wikipedia articles there is a special tag: <a href="https://wiki.openstreetmap.org/wiki/Key:wikipedia">wikipedia</a>=<em>language-abbr.</em>:<em>article name</em></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

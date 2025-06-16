@@ -67,7 +67,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Well, there's <a href="http://wiki.openstreetmap.org/wiki/Tile_disk_usage">http://wiki.openstreetmap.org/wiki/Tile_disk_usage</a> , which also includes tile counts - note that at zoom 15, only about a quarter of those tiles has ever been requested (what with most of planet surface being an ocean etc.). Three weeks on a toaster sounds reasonable.</p>
+<p>Well, there's <a href="https://wiki.openstreetmap.org/wiki/Tile_disk_usage">https://wiki.openstreetmap.org/wiki/Tile_disk_usage</a> , which also includes tile counts - note that at zoom 15, only about a quarter of those tiles has ever been requested (what with most of planet surface being an ocean etc.). Three weeks on a toaster sounds reasonable.</p>
 </div>
 <div id="comment-48417-info" class="comment-info">
 <span class="comment-age">(29 Feb '16, 16:06)</span> <span class="comment-user userinfo">Piskvor</span>

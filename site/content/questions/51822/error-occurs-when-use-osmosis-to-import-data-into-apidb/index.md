@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>When i run <strong>osmosis --read-pbf planet/tianjin_china.osm.pbf --write-apidb host="localhost" database="openstreetmap" user="osm" password="buaanlp" validateSchemaVersion="no"</strong> command, some errors appeared. It said <strong><em>duplicate key value violates unique constraint "nodes_pkey"</em></strong></p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm2.png" alt="alt text" /></p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm1.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm2.png" alt="alt text" /></p>
+<p><img src="/upfiles/osm1.png" alt="alt text" /></p>
 <p>I have used this command to import beijing_china.osm.pbf into the apidb, and the same errors occurred. I drop the database and create it again, then the error disappeared. But when i run the command secondly, the error still occurs, how to solve this problem? I don't want to drop the database again.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

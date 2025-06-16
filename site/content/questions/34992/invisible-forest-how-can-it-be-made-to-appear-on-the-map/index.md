@@ -49,7 +49,7 @@ osqa_accepted = true
 <p>I deleted the relation (created with Potlatch) and created a new one in iD 10 hours ago.</p>
 <p>This morning, the forest is still not there.</p>
 <p>Can someone who knows OSM editing well (which I obviously don't) check what's wrong here?</p>
-<p>My "Aenderungssatz" (changeset) is <a href="http://www.openstreetmap.org/changeset/24231492">#24231492</a>, and the northern end of the forest should be around the coordinates 52°03'47.2" (N), -09°32'12.2" (W).</p>
+<p>My "Aenderungssatz" (changeset) is <a href="https://www.openstreetmap.org/changeset/24231492">#24231492</a>, and the northern end of the forest should be around the coordinates 52°03'47.2" (N), -09°32'12.2" (W).</p>
 <p><a href="https://www.openstreetmap.org/edit?editor=id#map=16/52.0628/-9.5376">https://www.openstreetmap.org/edit?editor=id#map=16/52.0628/-9.5376</a></p>
 <p>EDIT: I just cleared my browser's cache again and went through all zoom levels; the whole forest is visible at zoom level 14; I don't think it was before, so something may indeed be happening, just VERY slowly???</p>
 </div>
@@ -77,7 +77,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>There's a long and detailed explanation of how and when edits show up <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map/104">here</a>.</p>
+<p>There's a long and detailed explanation of how and when edits show up <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map/104">here</a>.</p>
 </div>
 <div id="comment-34993-info" class="comment-info">
 <span class="comment-age">(19 Jul '14, 11:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -132,8 +132,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>First thing: Check how often the vector maps you use are updated and that you use one created some time <em>after</em> creating/changing a feature in OSM. Even when the vector map is created one or two days after your edit that doesn't mean that this map contains your edit due to possible delays in the tool chain of the map creator.</p>
-<p>Second thing: I removed the forest in the south from the MP since there was no need to have it as "outer" in the MP. (<a href="http://www.openstreetmap.org/relation/3360464/history">changeset</a>)</p>
-<p>Hint: The <a href="http://www.openstreetmap.org/way/249993611">wood I removed from the MP</a> overlaps lavishly with the landuse=residential North East of it. That's no good mapping style.</p>
+<p>Second thing: I removed the forest in the south from the MP since there was no need to have it as "outer" in the MP. (<a href="https://www.openstreetmap.org/relation/3360464/history">changeset</a>)</p>
+<p>Hint: The <a href="https://www.openstreetmap.org/way/249993611">wood I removed from the MP</a> overlaps lavishly with the landuse=residential North East of it. That's no good mapping style.</p>
 <p>Else I didn't see anything which should make the forest disappear from maps.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -192,7 +192,7 @@ One Answer:
 <div id="post-35347-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Just to notice that in <a href="http://www.openstreetmap.org/#map=15/52.0584/-9.5237&amp;layers=Q">MapQuest Open</a> and <a href="http://www.openstreetmap.org/#map=15/52.0584/-9.5237&amp;layers=H">Humanitarian</a> layers the forest is well visible.</p>
+<p>Just to notice that in <a href="https://www.openstreetmap.org/#map=15/52.0584/-9.5237&amp;layers=Q">MapQuest Open</a> and <a href="https://www.openstreetmap.org/#map=15/52.0584/-9.5237&amp;layers=H">Humanitarian</a> layers the forest is well visible.</p>
 </div>
 <div id="comment-35347-info" class="comment-info">
 <span class="comment-age">(31 Jul '14, 10:40)</span> <span class="comment-user userinfo">NonnEmilia</span>

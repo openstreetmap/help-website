@@ -113,7 +113,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Ciao, la legenda base dello stile predefinito di OSM la trovi nel menu a destra della home <a href="http://www.openstreetmap.org/,">http://www.openstreetmap.org/,</a> cliccando sulla "i". Se cerchi uno stile di mappa dedicato ai percorsi a piedi / in bici, dai un'occhiata qui: <a href="http://wiki.openstreetmap.org/wiki/Hiking_Map">http://wiki.openstreetmap.org/wiki/Hiking_Map</a> ad esempio queste due: <a href="http://www.opencyclemap.org/">http://www.opencyclemap.org/</a> <a href="http://www.4umaps.eu/online-outdoor-hike-bicycle-map.htm">http://www.4umaps.eu/online-outdoor-hike-bicycle-map.htm</a></p>
+<p>Ciao, la legenda base dello stile predefinito di OSM la trovi nel menu a destra della home <a href="https://www.openstreetmap.org/,">https://www.openstreetmap.org/,</a> cliccando sulla "i". Se cerchi uno stile di mappa dedicato ai percorsi a piedi / in bici, dai un'occhiata qui: <a href="https://wiki.openstreetmap.org/wiki/Hiking_Map">https://wiki.openstreetmap.org/wiki/Hiking_Map</a> ad esempio queste due: <a href="http://www.opencyclemap.org/">http://www.opencyclemap.org/</a> <a href="http://www.4umaps.eu/online-outdoor-hike-bicycle-map.htm">http://www.4umaps.eu/online-outdoor-hike-bicycle-map.htm</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi take the figuration at the bottom of the chimney, like it happens to all buildings. For instance a balcony is only present if its over a way with a tag covered. Take a look at these Wiki site <a href="http://wiki.openstreetmap.org/wiki/Buildings">http://wiki.openstreetmap.org/wiki/Buildings</a> .</p>
+<p>Hi take the figuration at the bottom of the chimney, like it happens to all buildings. For instance a balcony is only present if its over a way with a tag covered. Take a look at these Wiki site <a href="https://wiki.openstreetmap.org/wiki/Buildings">https://wiki.openstreetmap.org/wiki/Buildings</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

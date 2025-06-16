@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">See the FAQ.</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/FAQ#How_can_I_close_my_account.3F">See the FAQ.</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I added several local stores and restaurants to the map of my town. All show up fine except for the liquor store, Clockworks Wine &amp; Liquor. Instead of the store name, it just shows the street number (154). Why would this happen? The full address is <a href="http://www.openstreetmap.org/?lat=42.560817&amp;lon=-77.69542&amp;zoom=18&amp;layers=M">154 Main St., Dansville, NY 14437</a>.</p>
+<p>I added several local stores and restaurants to the map of my town. All show up fine except for the liquor store, Clockworks Wine &amp; Liquor. Instead of the store name, it just shows the street number (154). Why would this happen? The full address is <a href="https://www.openstreetmap.org/?lat=42.560817&amp;lon=-77.69542&amp;zoom=18&amp;layers=M">154 Main St., Dansville, NY 14437</a>.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-name" rel="tag" title="see questions tagged &#39;name&#39;">name</span> <span class="post-tag tag-link-alcohol" rel="tag" title="see questions tagged &#39;alcohol&#39;">alcohol</span>
@@ -121,8 +121,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="https://help.openstreetmap.org/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map">Why do some shops not appear on the default (mapnik?) map?</a></p>
-<p><a href="https://help.openstreetmap.org/questions/11331/about-alcohol-tag-doesnt-work-on-the-map">About Alcohol tag doesn't work on the map</a> -&gt; <a href="https://help.openstreetmap.org/questions/6241/adding-a-feature-to-the-default-osm-map">Adding a feature to the default OSM Map</a></p>
+<p><a href="/questions/17642/why-do-some-shops-not-appear-on-the-default-mapnik-map">Why do some shops not appear on the default (mapnik?) map?</a></p>
+<p><a href="/questions/11331/about-alcohol-tag-doesnt-work-on-the-map">About Alcohol tag doesn't work on the map</a> -&gt; <a href="/questions/6241/adding-a-feature-to-the-default-osm-map">Adding a feature to the default OSM Map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -204,7 +204,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Remember that even if objets don't appear on the map they are still in the database. This means that every tool, like a search engine or a router, is able to find and use them. Likewise a map with a different stylesheet is able to render them. The wiki has a <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> which can be useful to find other interesting OSM based maps.</p>
+<p>Remember that even if objets don't appear on the map they are still in the database. This means that every tool, like a search engine or a router, is able to find and use them. Likewise a map with a different stylesheet is able to render them. The wiki has a <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">list of OSM based services</a> which can be useful to find other interesting OSM based maps.</p>
 </div>
 <div id="comment-24054-info" class="comment-info">
 <span class="comment-age">(07 Jul '13, 16:07)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -295,7 +295,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Is there a link somewhere that would confirm what you are saying? Is there a list of shops that will not have their names displayed?</p>
 <p>If this is the case, we would not have shop names like Costco, Best Buy, BBB, well known US stores, at all on the map? There are hundreds of different restaurant names so a small village restaurant would have its name displayed but a superstore Best Buy would not, because it is a shop?</p>
-<p>If you check: <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> search for shop ... alcohol is the first one listed.</p>
+<p>If you check: <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> search for shop ... alcohol is the first one listed.</p>
 </div>
 <div id="comment-24045-info" class="comment-info">
 <span class="comment-age">(07 Jul '13, 02:13)</span> <span class="comment-user userinfo">slover98</span>

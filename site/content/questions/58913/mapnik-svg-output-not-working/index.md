@@ -209,7 +209,7 @@ surface.finish()</code></pre>
 <p><a href="https://github.com/mapnik/mapnik/pull/4029#issue-251451960">https://github.com/mapnik/mapnik/pull/4029#issue-251451960</a></p>
 <p>or just use python-cairo with a code like:</p>
 <p><code>surface.restrict_to_version(cairo.SVG_VERSION_1_2)</code></p>
-<p>See also <a href="https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports/67940">https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports/67940</a></p>
+<p>See also <a href="/questions/65497/is-there-any-change-in-svg-exports/67940">https://help.openstreetmap.org/questions/65497/is-there-any-change-in-svg-exports/67940</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

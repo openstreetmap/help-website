@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I would like to add my first relation in iD editor.</p>
-<p>Let it be <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Give_way">Give Way relation</a> How I can do it?</p>
+<p>Let it be <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Give_way">Give Way relation</a> How I can do it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-tutorial" rel="tag" title="see questions tagged &#39;tutorial&#39;">tutorial</span>

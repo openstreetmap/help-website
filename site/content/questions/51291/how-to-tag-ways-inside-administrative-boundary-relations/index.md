@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have started to update the province and county boundaries of our country. I don't know what is the standard approach for tagging the way segments which are used in different relations. I have read in <a href="https://help.openstreetmap.org/questions/4658/tagging-areas-as-place-vs-boundaryadministrative">this page</a> we have to tag the ways with only boundary=administrative and admin_level=* tags without any name tags.</p>
+<p>I have started to update the province and county boundaries of our country. I don't know what is the standard approach for tagging the way segments which are used in different relations. I have read in <a href="/questions/4658/tagging-areas-as-place-vs-boundaryadministrative">this page</a> we have to tag the ways with only boundary=administrative and admin_level=* tags without any name tags.</p>
 <p>If a way is part of different boundary relations with different admin_level tag in each one, which level should be chosen for the way itself?</p>
 <p>In my case I have a way segment which is used in admin_level=2 (for country border relation) , used in another relation with admin_level=4 (for province relation) and also used in a county relation which is admin_level=6. now how should I tag the way?</p>
 </div>
@@ -141,7 +141,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Highest level boundary admin_level is still in the wiki as recommended practice, then is followed by a paragraph saying they are optional. Tagging the ways is a historical leftover to get them to render but is no longer required, if I remember correctly. <a href="http://wiki.openstreetmap.org/wiki/Relation:boundary#Way_tags">http://wiki.openstreetmap.org/wiki/Relation:boundary#Way_tags</a></p>
+<p>Highest level boundary admin_level is still in the wiki as recommended practice, then is followed by a paragraph saying they are optional. Tagging the ways is a historical leftover to get them to render but is no longer required, if I remember correctly. <a href="https://wiki.openstreetmap.org/wiki/Relation:boundary#Way_tags">https://wiki.openstreetmap.org/wiki/Relation:boundary#Way_tags</a></p>
 </div>
 <div id="comment-51302-info" class="comment-info">
 <span class="comment-age">(08 Aug '16, 09:46)</span> <span class="comment-user userinfo">EdLoach ♦</span>

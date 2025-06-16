@@ -133,7 +133,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>"generic routable" is very likely a map from <a href="http://garmin.openstreetmap.nl/">garmin.openstreetmap.nl</a> which also matches the described option of selecting a TYP file. Next to this option there is a large <img src="http://garmin.openstreetmap.nl/img/help.png" alt="question mark" /> leading to a <a href="http://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl:Manual#Include_a_TYP_file_.28Optional.29">page describing the TYP file</a>:</p>
+<p>"generic routable" is very likely a map from <a href="http://garmin.openstreetmap.nl/">garmin.openstreetmap.nl</a> which also matches the described option of selecting a TYP file. Next to this option there is a large <img src="http://garmin.openstreetmap.nl/img/help.png" alt="question mark" /> leading to a <a href="https://wiki.openstreetmap.org/wiki/Garmin.OpenStreetMap.nl:Manual#Include_a_TYP_file_.28Optional.29">page describing the TYP file</a>:</p>
 <pre><code>Maps can be rendered more appealing when a TYP file is used. Only the generic map allows an optional TYP file to be include. The OpenFietsMap lite map comes with it&#39;s own mandatory TYP file.
 &#10;Although a TYP file makes the map more appealing it also increases the loading times on the GPS, so if you have an slower or older GPS type then you probably don&#39;t want a TYP file included.
 &#10;To select a TYP file just click on the drop-down box and select the TYP file you want to include.

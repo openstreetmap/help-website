@@ -171,7 +171,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a long and detailed answer about how the main map gets updated <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>. It takes a bit longer when there have been recent stylesheet updates (which has happened recently). If your changes still don't show up, perhaps link to the area where you've made changes to see if anyone can see why?</p>
+<p>There's a long and detailed answer about how the main map gets updated <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>. It takes a bit longer when there have been recent stylesheet updates (which has happened recently). If your changes still don't show up, perhaps link to the area where you've made changes to see if anyone can see why?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

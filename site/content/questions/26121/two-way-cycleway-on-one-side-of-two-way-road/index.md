@@ -107,8 +107,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Go to the <a href="http://wiki.openstreetmap.org/wiki/Bicycle">Bicycle</a> wiki page and check the tags in the table row "L1b":</p>
-<p><img src="http://wiki.openstreetmap.org/w/images/5/54/Cycle_lanes_both_right.png" alt="L1b" /></p>
+<p>Go to the <a href="https://wiki.openstreetmap.org/wiki/Bicycle">Bicycle</a> wiki page and check the tags in the table row "L1b":</p>
+<p><img src="https://wiki.openstreetmap.org/w/images/5/54/Cycle_lanes_both_right.png" alt="L1b" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -147,10 +147,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I think the only way of loading maps onto the StreetPilot III is using <a href="http://wiki.openstreetmap.org/wiki/MapSource">Garmin MapSource</a>. The Streetpilot has very limited internal memory, so you will need a Garmin memory card if you want to add extra maps. Note these are proprietary cards, different to Compact Flash or SD etc. The Streetpilot III will support up to a 128MB card.</p>
+<p>I think the only way of loading maps onto the StreetPilot III is using <a href="https://wiki.openstreetmap.org/wiki/MapSource">Garmin MapSource</a>. The Streetpilot has very limited internal memory, so you will need a Garmin memory card if you want to add extra maps. Note these are proprietary cards, different to Compact Flash or SD etc. The Streetpilot III will support up to a 128MB card.</p>
 <p>You can either use a serial cable to connect the Streetpilot to the PC, or use a Garmin USB card reader. A serial connection will be very slow for loading large maps.</p>
-<p>So you need to get some OSM maps installed in MapSource. There are a number of ready made OSM maps with MapSource installers, the easiest way is probably to use <a href="http://garmin.openstreetmap.nl/">garmin.openstreetmap.nl</a>. Or other options listed here <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map on Garmin/Download</a>.</p>
-<p>Though with these you won't fit a very large area of maps on a 128MB card. To get maps that cover more of the route you want, you could use maps with smaller tiles, and with less details. Most OSM Garmin maps contain things like buildings, rivers, forests etc, which use quite a lot of space. If you just need roads, they would need less memory. I'm not sure if there is any ready made OSM maps with less detail, otherwise you can create some yourself. To do this, you could use <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap</a> with a custom style to only include roads.</p>
+<p>So you need to get some OSM maps installed in MapSource. There are a number of ready made OSM maps with MapSource installers, the easiest way is probably to use <a href="http://garmin.openstreetmap.nl/">garmin.openstreetmap.nl</a>. Or other options listed here <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">OSM Map on Garmin/Download</a>.</p>
+<p>Though with these you won't fit a very large area of maps on a 128MB card. To get maps that cover more of the route you want, you could use maps with smaller tiles, and with less details. Most OSM Garmin maps contain things like buildings, rivers, forests etc, which use quite a lot of space. If you just need roads, they would need less memory. I'm not sure if there is any ready made OSM maps with less detail, otherwise you can create some yourself. To do this, you could use <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">Mkgmap</a> with a custom style to only include roads.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -200,10 +200,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Garmin/Streetpilot_series">http://wiki.openstreetmap.org/wiki/Garmin/Streetpilot_series</a> says:</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Garmin/Streetpilot_series">https://wiki.openstreetmap.org/wiki/Garmin/Streetpilot_series</a> says:</p>
 <p>Load map onto card as /garmin/gmapsupp.img</p>
 <p>Have you tried that?</p>
-<p>More general information can be found in the <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin</a> wiki page.</p>
+<p>More general information can be found in the <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">OSM Map On Garmin</a> wiki page.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

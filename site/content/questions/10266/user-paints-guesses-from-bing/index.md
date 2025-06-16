@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "user paints guesses from bing"
-description = '''Hi, here we have an area with a daylight mine. http://www.openstreetmap.org/?lat=51.34769&amp;amp;lon=10.48602&amp;amp;zoom=15&amp;amp;layers=M The last years I created some ways (tracks/paths) around and thru this area from gpx files, collected with my mountain bike. In the last 10 years there was some change ...'''
+description = '''Hi, here we have an area with a daylight mine. https://www.openstreetmap.org/?lat=51.34769&amp;amp;lon=10.48602&amp;amp;zoom=15&amp;amp;layers=M The last years I created some ways (tracks/paths) around and thru this area from gpx files, collected with my mountain bike. In the last 10 years there was some change ...'''
 date = "2012-01-27T10:18:00Z"
 lastmod = "2012-01-27T14:32:00Z"
 weight = 10266
@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi,</p>
 <p>here we have an area with a daylight mine.</p>
-<p><a href="http://www.openstreetmap.org/?lat=51.34769&amp;lon=10.48602&amp;zoom=15&amp;layers=M">http://www.openstreetmap.org/?lat=51.34769&amp;lon=10.48602&amp;zoom=15&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=51.34769&amp;lon=10.48602&amp;zoom=15&amp;layers=M">https://www.openstreetmap.org/?lat=51.34769&amp;lon=10.48602&amp;zoom=15&amp;layers=M</a></p>
 <p>The last years I created some ways (tracks/paths) around and thru this area from gpx files, collected with my mountain bike. In the last 10 years there was some change in mining area. Now there is a user (Taunide) who was there more than 10 years ago with his horse. He was so kind to paint some streets into the OSM, as he guessed it from bing. Now many ways in this area are really bogus. He was bold enough to write me, if I know it better, I may adjust his painting.</p>
 <p>How should I manage this?</p>
 </div>
@@ -183,7 +183,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter</a> can help you revert the changeset, but make sure to RTFM. Ask for assitance if it looks too complicated.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter</a> can help you revert the changeset, but make sure to RTFM. Ask for assitance if it looks too complicated.</p>
 <p>And try again to convince the other mapper, if it is just a matter of up-to-date data it shouldn't be too hard, and it'll avoid any bad feelings.</p>
 </div>
 <div id="comment-10271-info" class="comment-info">

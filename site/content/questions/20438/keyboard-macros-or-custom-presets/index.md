@@ -75,7 +75,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> Interesting. Autohotkey is for Windows. Does someone have a good Linux solution for this?</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> Interesting. Autohotkey is for Windows. Does someone have a good Linux solution for this?</p>
 </div>
 <div id="comment-49399-info" class="comment-info">
 <span class="comment-age">(25 Apr '16, 07:13)</span> <span class="comment-user userinfo">rwst</span>

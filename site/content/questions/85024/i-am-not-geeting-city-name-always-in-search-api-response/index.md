@@ -44,7 +44,7 @@ osqa_accepted = false
 <p>Here is the address: Bahnhofstrasse 1 8001 Zu</p>
 <p>Here is URL which i am using for search address:</p>
 <p><a href="https://nominatim.openstreetmap.org/search?q=Bahnhofstrasse%201%208001%20Zu&amp;format=json&amp;polygon=1&amp;">https://nominatim.openstreetmap.org/search?q=Bahnhofstrasse%201%208001%20Zu&amp;format=json&amp;polygon=1&amp;</a> addressdetails=1&amp;limit=6&amp;countrycodes=CH&amp;accept-language=de</p>
-<p><img src="https://help.openstreetmap.org/upfiles/api-response.png" alt="alt text" /></p>
+<p><img src="/upfiles/api-response.png" alt="alt text" /></p>
 <p>Can you please help me on this why i am not getting city with this address?</p>
 <p>Thanks Siyaram</p>
 </div>

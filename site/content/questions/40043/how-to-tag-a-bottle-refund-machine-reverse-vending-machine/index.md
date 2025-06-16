@@ -71,7 +71,7 @@ osqa_accepted = true
 <div id="post-84923-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A similar earlier question at <a href="https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return">https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return</a> .</p>
+<p>A similar earlier question at <a href="/questions/51408/is-there-a-better-way-to-tag-a-bottle-return">https://help.openstreetmap.org/questions/51408/is-there-a-better-way-to-tag-a-bottle-return</a> .</p>
 </div>
 <div id="comment-84923-info" class="comment-info">
 <span class="comment-age">(30 Jun '22, 12:29)</span> <span class="comment-user userinfo">Richlv</span>
@@ -280,7 +280,7 @@ recycling_type=vending__machine</strong></p>
 2
 </div>
 <div class="comment-text">
-<p>For the materials it accepts, you would use the <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling#Materials">same tags</a> as for other types of recycling drop-offs.</p>
+<p>For the materials it accepts, you would use the <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling#Materials">same tags</a> as for other types of recycling drop-offs.</p>
 </div>
 <div id="comment-40047-info" class="comment-info">
 <span class="comment-age">(06 Jan '15, 00:35)</span> <span class="comment-user userinfo">alester</span>

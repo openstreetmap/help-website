@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I’ve already posted this on OSM discourse, but I noticed it’s pretty active here, so I’ll ask here as well. So, if you’ve seen/responded to this over there, don't bother answering me here. <img src="https://help.openstreetmap.org/upfiles/E156536E-5CC2-4FA3-B36E-E0325C06A70D.jpeg" alt="alt text" /></p>
+<p>I’ve already posted this on OSM discourse, but I noticed it’s pretty active here, so I’ll ask here as well. So, if you’ve seen/responded to this over there, don't bother answering me here. <img src="/upfiles/E156536E-5CC2-4FA3-B36E-E0325C06A70D.jpeg" alt="alt text" /></p>
 <p>How does this look? Where can I improve?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

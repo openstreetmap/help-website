@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can map these roads with the <a href="http://wiki.openstreetmap.org/wiki/Key%3Ascenic">scenic=yes</a> tag. However I don't know of any tool that uses this tag to display them differently. (Somebody correct me if I'm wrong.)</p>
+<p>You can map these roads with the <a href="https://wiki.openstreetmap.org/wiki/Key%3Ascenic">scenic=yes</a> tag. However I don't know of any tool that uses this tag to display them differently. (Somebody correct me if I'm wrong.)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -135,7 +135,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>Many of the Virginia roads have more of the characteristic of a tourism route, e.g, Blue Ridge Parkway. A good example of which would be the very cleverly named Romantic Road (Romantische Straße) in Germany: <a href="http://www.openstreetmap.org/browse/relation/56917.">http://www.openstreetmap.org/browse/relation/56917.</a></p>
+<p>Many of the Virginia roads have more of the characteristic of a tourism route, e.g, Blue Ridge Parkway. A good example of which would be the very cleverly named Romantic Road (Romantische Straße) in Germany: <a href="https://www.openstreetmap.org/browse/relation/56917.">https://www.openstreetmap.org/browse/relation/56917.</a></p>
 <p>The scenic=yes tag is attached to the relation. Adding scenic=yes tags to roads not promoted as such in tourist literature should be avoided: it is not a quality amenable to objective assessment, and therefore not verifiable. (Despite this I always liked the Michelin cartography which showed this).</p>
 </div>
 <div id="comment-23153-info" class="comment-info">

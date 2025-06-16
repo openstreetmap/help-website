@@ -128,7 +128,7 @@ osqa_accepted = false
 <div id="post-68959-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Exactly. See <a href="https://help.openstreetmap.org/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper">https://help.openstreetmap.org/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper</a> for the same discussion just recently.</p>
+<p>Exactly. See <a href="/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper">https://help.openstreetmap.org/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper</a> for the same discussion just recently.</p>
 </div>
 <div id="comment-68959-info" class="comment-info">
 <span class="comment-age">(26 Apr '19, 07:41)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -230,7 +230,7 @@ osqa_accepted = false
 <div id="post-68958-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This fails for OSRM because some highways still have a construction tag set, for example <a href="https://www.openstreetmap.org/way/645424831.">https://www.openstreetmap.org/way/645424831.</a> The mapping is unclear. There is highway=primary and construction=trunk. Either the road is usable or it is in a construction state. OSRM decides to choose the latter case and avoids it. The map data needs to be fixed. See <a href="https://help.openstreetmap.org/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper">https://help.openstreetmap.org/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper</a> for the same discussion.</p>
+<p>This fails for OSRM because some highways still have a construction tag set, for example <a href="https://www.openstreetmap.org/way/645424831.">https://www.openstreetmap.org/way/645424831.</a> The mapping is unclear. There is highway=primary and construction=trunk. Either the road is usable or it is in a construction state. OSRM decides to choose the latter case and avoids it. The map data needs to be fixed. See <a href="/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper">https://help.openstreetmap.org/questions/68719/how-do-i-fix-a-routing-error-of-1700km-osrm-vs-59m-graphhopper</a> for the same discussion.</p>
 </div>
 <div id="comment-68958-info" class="comment-info">
 <span class="comment-age">(26 Apr '19, 07:39)</span> <span class="comment-user userinfo">scai ♦</span>

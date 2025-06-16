@@ -118,7 +118,7 @@ osqa_accepted = false
         map.addControl(new OpenLayers.Control.LayerSwitcher());
         var mapnik = new OpenLayers.Layer.OSM();
         map.addLayer(mapnik);
-        var transportmap = new  OpenLayers.Layer.OSM.TransportMap(&quot;OpenTransportMap&quot;); //defined here http://www.openstreetmap.org/openlayers/OpenStreetMap.js
+        var transportmap = new  OpenLayers.Layer.OSM.TransportMap(&quot;OpenTransportMap&quot;); //defined here https://www.openstreetmap.org/openlayers/OpenStreetMap.js
         map.addLayer(transportmap);
         var fromProjection = new OpenLayers.Projection(&quot;EPSG:4326&quot;);   // Transform from WGS 1984
         var toProjection = new OpenLayers.Projection(&quot;EPSG:900913&quot;); // to Spherical Mercator Projection

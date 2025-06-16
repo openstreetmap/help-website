@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You are looking for <a href="http://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a> which in turn uses the nice <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to query for map features and displays the result on a map.</p>
+<p>You are looking for <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass Turbo</a> which in turn uses the nice <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> to query for map features and displays the result on a map.</p>
 <p>Here is an example showing all <em>public_transport=station</em> objects (nodes, ways and relations): <a href="http://overpass-turbo.eu/s/1e">http://overpass-turbo.eu/s/1e</a></p>
 <p>Click on "Run", wait a short moment and then either view the result on the map or via the data tab.</p>
 </div>

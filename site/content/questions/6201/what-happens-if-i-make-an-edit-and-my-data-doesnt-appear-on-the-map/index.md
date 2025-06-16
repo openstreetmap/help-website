@@ -119,7 +119,7 @@ One Answer:
 <div class="answer-body">
 <p>Variants of this question are asked very often.</p>
 <p>Please check this question for a complete answer</p>
-<p><a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main Mapnik map get updated?</a></p>
+<p><a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">How often does the main Mapnik map get updated?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

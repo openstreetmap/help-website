@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM doesn't store height data. Most folk use either the Shuttle Radar Topology Mission (SRTM) data or the Aster data. There is a good article in the OSM documentation wiki here: <a href="http://wiki.openstreetmap.org/wiki/Srtm">http://wiki.openstreetmap.org/wiki/Srtm</a> which gives a good start on using NASA's SRTM data.</p>
+<p>OSM doesn't store height data. Most folk use either the Shuttle Radar Topology Mission (SRTM) data or the Aster data. There is a good article in the OSM documentation wiki here: <a href="https://wiki.openstreetmap.org/wiki/Srtm">https://wiki.openstreetmap.org/wiki/Srtm</a> which gives a good start on using NASA's SRTM data.</p>
 <p>The ASTER data seems to have moved since I last looked but a little Googling around for ASTER DEM should get you started. (There is a link from the above SRTM page, too.)</p>
 <p>Good luck with your project.</p>
 </div>
@@ -161,9 +161,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>OSM does not contain elevation data for most points. While it is possible for contributors to add it using the <strong><a href="http://wiki.openstreetmap.org/wiki/Key:ele">ele</a></strong> key, this has some limitations: Most importantly, it is available only on a relatively small number of objects, most of which appear to come from imports. There is also confusion about the values – in practice, elevation is not always converted to WGS84 as it should be according to the wiki.</p>
-<p>Therefore, you will have to rely on external data sources. The only safe, global source appears to be NASA's <strong><a href="http://wiki.openstreetmap.org/wiki/SRTM">SRTM</a></strong> raster data. There are somewhat better datasets, such as the one from CGIAR, which is improved SRTM data, or <a href="http://wiki.openstreetmap.org/wiki/ASTER">ASTER</a> data. However, with the latter two it's unclear whether they are compatible with OSM's license. Because of how our license works, this doesn't matter as much with the common use case of hillshading overlays for 2D maps, but it is crucial if you want to merge the data sources (which you are likely going to do for 3D visualizations).</p>
-<p>Besides ground elevation, there are some other valuable attributes for 3D rendering – depending on what level of detail you are aiming for. For example, the <strong><a href="http://wiki.openstreetmap.org/wiki/Key:layer">layer</a></strong> key indicates the relative vertical ordering of features which are above or below the terrain.</p>
+<p>OSM does not contain elevation data for most points. While it is possible for contributors to add it using the <strong><a href="https://wiki.openstreetmap.org/wiki/Key:ele">ele</a></strong> key, this has some limitations: Most importantly, it is available only on a relatively small number of objects, most of which appear to come from imports. There is also confusion about the values – in practice, elevation is not always converted to WGS84 as it should be according to the wiki.</p>
+<p>Therefore, you will have to rely on external data sources. The only safe, global source appears to be NASA's <strong><a href="https://wiki.openstreetmap.org/wiki/SRTM">SRTM</a></strong> raster data. There are somewhat better datasets, such as the one from CGIAR, which is improved SRTM data, or <a href="https://wiki.openstreetmap.org/wiki/ASTER">ASTER</a> data. However, with the latter two it's unclear whether they are compatible with OSM's license. Because of how our license works, this doesn't matter as much with the common use case of hillshading overlays for 2D maps, but it is crucial if you want to merge the data sources (which you are likely going to do for 3D visualizations).</p>
+<p>Besides ground elevation, there are some other valuable attributes for 3D rendering – depending on what level of detail you are aiming for. For example, the <strong><a href="https://wiki.openstreetmap.org/wiki/Key:layer">layer</a></strong> key indicates the relative vertical ordering of features which are above or below the terrain.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

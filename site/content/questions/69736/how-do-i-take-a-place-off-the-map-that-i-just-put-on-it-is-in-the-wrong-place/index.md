@@ -166,7 +166,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><img src="https://help.openstreetmap.org/upfiles/note.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/note.JPG" alt="alt text" /></p>
 <p>You could add a note to the map but that could highlight your home. Otherwise read the OSM beginners guide and delete it yourself.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>In two threads, I tried to convert my comment to an answer:</p>
 <p>I click "convert to answer", then "yes [I'm sure]", then I get an error "We're sorry, but an unknown error occurred. Please try again in a while."</p>
 <p>Note that the question is bumped in the question list (shows "30 secs ago by Piskvor"), but even after a refresh, the comment is still a comment and not an answer. Tried multiple times so far, from various computers/OSes/connections, but no luck.</p>
-<p>One of the comments is at <a href="https://help.openstreetmap.org/questions/15859/what-does-abandoned-railway-track-really-mean">https://help.openstreetmap.org/questions/15859/what-does-abandoned-railway-track-really-mean</a> and the other at <a href="https://help.openstreetmap.org/questions/50822/creating-maps-and-altitude-cross-sections">https://help.openstreetmap.org/questions/50822/creating-maps-and-altitude-cross-sections</a></p>
+<p>One of the comments is at <a href="/questions/15859/what-does-abandoned-railway-track-really-mean">https://help.openstreetmap.org/questions/15859/what-does-abandoned-railway-track-really-mean</a> and the other at <a href="/questions/50822/creating-maps-and-altitude-cross-sections">https://help.openstreetmap.org/questions/50822/creating-maps-and-altitude-cross-sections</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-meta" rel="tag" title="see questions tagged &#39;meta&#39;">meta</span> <span class="post-tag tag-link-osqa" rel="tag" title="see questions tagged &#39;osqa&#39;">osqa</span> <span class="post-tag tag-link-comments" rel="tag" title="see questions tagged &#39;comments&#39;">comments</span>
@@ -196,7 +196,7 @@ osqa_accepted = true
 <div id="post-50838-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: do you know a bug tracker link/number?</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: do you know a bug tracker link/number?</p>
 </div>
 <div id="comment-50838-info" class="comment-info">
 <span class="comment-age">(11 Jul '16, 21:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -131,7 +131,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation">railway=station</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation">public_transport=station</a> tags define the area of a station, so you could check to see if the user's position is within one of those areas.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dstation">railway=station</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstation">public_transport=station</a> tags define the area of a station, so you could check to see if the user's position is within one of those areas.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -291,7 +291,7 @@ osqa_accepted = true
 <div id="post-52447-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hello Friend Thanks, I did learn node, way and relation but the thing is In the api for railway it says <a href="http://wiki.openstreetmap.org/wiki/Key:railway#Other_railways">http://wiki.openstreetmap.org/wiki/Key:railway#Other_railways</a> railway station Node Area Railway station. whole area But then when i run this query in the turbo node["name"="East Croydon"]<a href="%7B%7Bbbox%7D%7D">"railway"="station"</a>; it returns one point, Please can you help? I am unable to proceed, Any clues otherwise plz</p>
+<p>Hello Friend Thanks, I did learn node, way and relation but the thing is In the api for railway it says <a href="https://wiki.openstreetmap.org/wiki/Key:railway#Other_railways">https://wiki.openstreetmap.org/wiki/Key:railway#Other_railways</a> railway station Node Area Railway station. whole area But then when i run this query in the turbo node["name"="East Croydon"]<a href="%7B%7Bbbox%7D%7D">"railway"="station"</a>; it returns one point, Please can you help? I am unable to proceed, Any clues otherwise plz</p>
 </div>
 <div id="comment-52447-info" class="comment-info">
 <span class="comment-age">(10 Oct '16, 17:17)</span> <span class="comment-user userinfo">brightnlight</span>

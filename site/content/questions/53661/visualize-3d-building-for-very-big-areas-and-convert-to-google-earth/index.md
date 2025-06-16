@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello! I downloaded the area I need (this is Moscow, Russia) from <a href="https://mapzen.com/data/metro-extracts/metro/moscow_russia/">mapzen</a>.</p>
-<p>Then I filtered buildings only (thanks for <a href="https://help.openstreetmap.org/questions/53610/keep-buildings-only-in-osm-file">solution</a>). For now my osm file has about 500mb size.</p>
+<p>Then I filtered buildings only (thanks for <a href="/questions/53610/keep-buildings-only-in-osm-file">solution</a>). For now my osm file has about 500mb size.</p>
 <p>But now I want to visualize buildings in 3d and convert it to kmz/kml for google earth.</p>
 <p>The solution I found doesn't work for big files.(osm-&gt;obj(with osm2world), obj-&gt;kmz(with SOLA G2)</p>
 <p>Any advice?</p>

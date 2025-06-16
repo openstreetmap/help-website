@@ -116,7 +116,7 @@ osqa_accepted = false
 <div id="post-50380-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Ya sure.. When ever i set zoom to 7 in my map i could see the district borders extending on ocean.. U could see that clearly here - <a href="http://www.openstreetmap.org/#map=11/15.6799/80.6688">http://www.openstreetmap.org/#map=11/15.6799/80.6688</a> (lines with purple color)</p>
+<p>Ya sure.. When ever i set zoom to 7 in my map i could see the district borders extending on ocean.. U could see that clearly here - <a href="https://www.openstreetmap.org/#map=11/15.6799/80.6688">https://www.openstreetmap.org/#map=11/15.6799/80.6688</a> (lines with purple color)</p>
 </div>
 <div id="comment-50380-info" class="comment-info">
 <span class="comment-age">(22 Jun '16, 11:41)</span> <span class="comment-user userinfo">ZMapTeam</span>

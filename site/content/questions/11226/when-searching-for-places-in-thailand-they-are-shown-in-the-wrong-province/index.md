@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "When searching for places in Thailand they are shown in the wrong province"
-description = '''When I load map in GPS and search for POIs in Chon Buri province, for example, the address shown in the search result is Samut Prakan province. Even some places in Cambodia show up as Samut Prakan. http://www.openstreetmap.org/?lat=12.992&amp;amp;lon=101.404&amp;amp;zoom=10&amp;amp;layers=M'''
+description = '''When I load map in GPS and search for POIs in Chon Buri province, for example, the address shown in the search result is Samut Prakan province. Even some places in Cambodia show up as Samut Prakan. https://www.openstreetmap.org/?lat=12.992&amp;amp;lon=101.404&amp;amp;zoom=10&amp;amp;layers=M'''
 date = "2012-03-15T14:36:00Z"
 lastmod = "2012-03-20T23:15:00Z"
 weight = 11226
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>When I load map in GPS and search for POIs in Chon Buri province, for example, the address shown in the search result is Samut Prakan province. Even some places in Cambodia show up as Samut Prakan.</p>
-<p><a href="http://www.openstreetmap.org/?lat=12.992&amp;lon=101.404&amp;zoom=10&amp;layers=M">http://www.openstreetmap.org/?lat=12.992&amp;lon=101.404&amp;zoom=10&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=12.992&amp;lon=101.404&amp;zoom=10&amp;layers=M">https://www.openstreetmap.org/?lat=12.992&amp;lon=101.404&amp;zoom=10&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-province" rel="tag" title="see questions tagged &#39;province&#39;">province</span> <span class="post-tag tag-link-thailand" rel="tag" title="see questions tagged &#39;thailand&#39;">thailand</span> <span class="post-tag tag-link-nominatim" rel="tag" title="see questions tagged &#39;nominatim&#39;">nominatim</span> <span class="post-tag tag-link-border" rel="tag" title="see questions tagged &#39;border&#39;">border</span>
@@ -158,7 +158,7 @@ One Answer:
 <div id="post-11372-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Actually - see <a href="http://help.openstreetmap.org/questions/11350/how-edit-a-country-wide-search-error/11355">this</a> previous answer which explains it best.</p>
+<p>Actually - see <a href="/questions/11350/how-edit-a-country-wide-search-error/11355">this</a> previous answer which explains it best.</p>
 </div>
 <div id="comment-11372-info" class="comment-info">
 <span class="comment-age">(20 Mar '12, 23:15)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

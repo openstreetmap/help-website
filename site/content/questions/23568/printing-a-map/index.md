@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I only have an A4 printer and to see some detail a series of screen prints would be the simplest solution. I have exported some small area pngs and jpegs but I expect that if you try to export large area the request will be rejected because it puts too much load on system resources. This bit in the wiki will give some more info <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">http://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map</a></p>
+<p>I only have an A4 printer and to see some detail a series of screen prints would be the simplest solution. I have exported some small area pngs and jpegs but I expect that if you try to export large area the request will be rejected because it puts too much load on system resources. This bit in the wiki will give some more info <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map">https://wiki.openstreetmap.org/wiki/OSM_on_Paper#As_a_big_image_map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

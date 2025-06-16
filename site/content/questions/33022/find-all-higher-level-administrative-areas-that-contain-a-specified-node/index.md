@@ -154,7 +154,7 @@ One Answer:
 <div id="post-33047-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>an entry about Pelias was missing in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Search_engines">http://wiki.openstreetmap.org/wiki/Search_engines</a> ... done</p>
+<p>an entry about Pelias was missing in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Search_engines">https://wiki.openstreetmap.org/wiki/Search_engines</a> ... done</p>
 </div>
 <div id="comment-33047-info" class="comment-info">
 <span class="comment-age">(09 May '14, 15:09)</span> <span class="comment-user userinfo">stephan75</span>

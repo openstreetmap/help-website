@@ -65,7 +65,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Also see <a href="https://help.openstreetmap.org/questions/35262/places-needing-mapping">https://help.openstreetmap.org/questions/35262/places-needing-mapping</a></p>
+<p>Also see <a href="/questions/35262/places-needing-mapping">https://help.openstreetmap.org/questions/35262/places-needing-mapping</a></p>
 </div>
 <div id="comment-35775-info" class="comment-info">
 <span class="comment-age">(12 Aug '14, 21:58)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -207,7 +207,7 @@ osqa_accepted = false
 <div id="post-35793-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... so a collection should be in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">http://wiki.openstreetmap.org/wiki/Quality_Assurance</a></p>
+<p>... so a collection should be in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Quality_Assurance">https://wiki.openstreetmap.org/wiki/Quality_Assurance</a></p>
 </div>
 <div id="comment-35793-info" class="comment-info">
 <span class="comment-age">(13 Aug '14, 19:56)</span> <span class="comment-user userinfo">stephan75</span>

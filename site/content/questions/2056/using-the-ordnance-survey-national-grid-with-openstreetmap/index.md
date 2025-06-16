@@ -249,7 +249,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Having read your additional suggestion about using Quo, and at the risk of being awarded the 'Pedant' badge, I should point out that if you overlay the grid from a transverse Mercator projection (as used by OS) on to a spherical Mercator projection (as used by OSM), the resulting grid lines will be neither exactly parallel nor exactly straight. The effect is small if you are mapping a small area (e.g. a town), but less so if you are mapping a county or a National Park. The image below is the OS grid printed over an OSM map of most of the British Isles. The green line is 53°N on WGS-84.<img src="http://help.openstreetmap.org/upfiles/Grid_Lines_1.bmp" alt="OS grid over OSM map" /></p>
+<p>Having read your additional suggestion about using Quo, and at the risk of being awarded the 'Pedant' badge, I should point out that if you overlay the grid from a transverse Mercator projection (as used by OS) on to a spherical Mercator projection (as used by OSM), the resulting grid lines will be neither exactly parallel nor exactly straight. The effect is small if you are mapping a small area (e.g. a town), but less so if you are mapping a county or a National Park. The image below is the OS grid printed over an OSM map of most of the British Isles. The green line is 53°N on WGS-84.<img src="/upfiles/Grid_Lines_1.bmp" alt="OS grid over OSM map" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -306,7 +306,7 @@ This question is marked "community wiki".
 <p>One possible way of doing this:</p>
 <ul>
 <li>Download and install Google Earth</li>
-<li>Use the KMZ link from <a href="http://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">OSM in Google Earth</a> to display OSM map tiles in it.</li>
+<li>Use the KMZ link from <a href="https://wiki.openstreetmap.org/wiki/OSM_in_Google_Earth">OSM in Google Earth</a> to display OSM map tiles in it.</li>
 <li>Then use the KMZ from <a href="http://nearby.org.uk/google.html#9">nearby.org.uk</a> to load OS grid lines in Google Earth, these will show as an overlay on top of the map.</li>
 </ul>
 <p>So you can then print out a map from that etc.</p>
@@ -353,7 +353,7 @@ This question is marked "community wiki".
 <div id="post-34439-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>nearby.org.uk is working it's also a useful tool to help geo ref old OS maps with a grid, Google Earth KMZ images can then be used as custom maps in the newer garmins. see <a href="https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
+<p>nearby.org.uk is working it's also a useful tool to help geo ref old OS maps with a grid, Google Earth KMZ images can then be used as custom maps in the newer garmins. see <a href="/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data">https://help.openstreetmap.org/questions/27269/is-there-a-simple-way-to-create-a-garmin-custom-map-kmz-type-from-osm-data</a></p>
 </div>
 <div id="comment-34439-info" class="comment-info">
 <span class="comment-age">(29 Jun '14, 15:43)</span> <span class="comment-user userinfo">andy mackey</span>

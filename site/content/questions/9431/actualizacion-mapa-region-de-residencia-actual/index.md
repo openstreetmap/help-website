@@ -121,7 +121,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hola me agradesco mucho que quieres ayudar, primero deberias leer "<a href="http://wiki.openstreetmap.org/wiki/%C2%BFC%C3%B3mo_se_puede_ayudar%3F">Como se puede ayudar</a> " en el wiki. Tambien puedes preguntar en <a href="http://lists.openstreetmap.org/listinfo/talk-co">la lista de coreo de Openstreetmap Colombia</a> parece activo.</p>
+<p>Hola me agradesco mucho que quieres ayudar, primero deberias leer "<a href="https://wiki.openstreetmap.org/wiki/%C2%BFC%C3%B3mo_se_puede_ayudar%3F">Como se puede ayudar</a> " en el wiki. Tambien puedes preguntar en <a href="http://lists.openstreetmap.org/listinfo/talk-co">la lista de coreo de Openstreetmap Colombia</a> parece activo.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

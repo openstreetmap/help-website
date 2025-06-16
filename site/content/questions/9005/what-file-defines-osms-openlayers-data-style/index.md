@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Assuming rendering is done with mapnik, you need to edit the <a href="http://wiki.openstreetmap.org/wiki/Mapnik#Customizing_the_rendering">xml style</a> file.</p>
+<p>Assuming rendering is done with mapnik, you need to edit the <a href="https://wiki.openstreetmap.org/wiki/Mapnik#Customizing_the_rendering">xml style</a> file.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

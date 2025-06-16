@@ -165,8 +165,8 @@ One Answer:
 4
 </div>
 <div class="comment-text">
-<p>Before you import a file, you need to make sure that it has a proper license. You also have to follow a certain procedure, see <a href="http://wiki.openstreetmap.org/wiki/Import.">http://wiki.openstreetmap.org/wiki/Import.</a></p>
-<p>Furthermore, you might run into trouble when you map in China: <a href="http://en.nasg.gov.cn/article/Lawsandregulations/201312/20131200005471.shtml,">http://en.nasg.gov.cn/article/Lawsandregulations/201312/20131200005471.shtml,</a> this is linked from the <a href="http://wiki.openstreetmap.org/wiki/WikiProject_China">wiki page about mapping in China</a></p>
+<p>Before you import a file, you need to make sure that it has a proper license. You also have to follow a certain procedure, see <a href="https://wiki.openstreetmap.org/wiki/Import.">https://wiki.openstreetmap.org/wiki/Import.</a></p>
+<p>Furthermore, you might run into trouble when you map in China: <a href="http://en.nasg.gov.cn/article/Lawsandregulations/201312/20131200005471.shtml,">http://en.nasg.gov.cn/article/Lawsandregulations/201312/20131200005471.shtml,</a> this is linked from the <a href="https://wiki.openstreetmap.org/wiki/WikiProject_China">wiki page about mapping in China</a></p>
 </div>
 <div id="comment-45090-info" class="comment-info">
 <span class="comment-age">(07 Sep '15, 06:13)</span> <span class="comment-user userinfo">escada</span>

@@ -120,7 +120,7 @@ One Answer:
 </ul>
 <p>If you alt-tabbed to here during doing the three last steps the editor might loose focus and act up. If you can't solve it just click "Add" again.</p>
 <p>Then just click "Save" in the top left corner and add a comment. (Perhaps the source of the data you provided, perhaps Knowledge?</p>
-<p>Then you might head on to the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners Guide</a> or perhaps check out some video tutorials at <a href="http://www.youtube.com/watch?v=7fc-n_GXVgI&amp;feature=related">youtube</a></p>
+<p>Then you might head on to the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">Beginners Guide</a> or perhaps check out some video tutorials at <a href="http://www.youtube.com/watch?v=7fc-n_GXVgI&amp;feature=related">youtube</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Overpass API query problem"
-description = '''I have a following query build almost same as the example at :  http://wiki.openstreetmap.org/wiki/Overpass_API It should return all town areas in the given box (second query) that are close to way from a first query, however it return a huuuge list of (?) random (?) towns and I don&#x27;t know what&#x27;s wr...'''
+description = '''I have a following query build almost same as the example at :  https://wiki.openstreetmap.org/wiki/Overpass_API It should return all town areas in the given box (second query) that are close to way from a first query, however it return a huuuge list of (?) random (?) towns and I don&#x27;t know what&#x27;s wr...'''
 date = "2015-01-15T17:37:00Z"
 lastmod = "2015-01-15T18:35:00Z"
 weight = 40400
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a following query build almost same as the example at : <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a> It should return all town areas in the given box (second query) that are close to way from a first query, however it return a huuuge list of (?) random (?) towns and I don't know what's wrong</p>
+<p>I have a following query build almost same as the example at : <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a> It should return all town areas in the given box (second query) that are close to way from a first query, however it return a huuuge list of (?) random (?) towns and I don't know what's wrong</p>
 <blockquote>
 &lt;query type="way"&gt; &lt;bbox-query n="50.3651" s="50.3498" w="20.013" e="20.0468"/&gt; &lt;has-kv k="highway" v="primary"/&gt; &lt;/query&gt; &lt;bbox-query n="50.3651" s="50.3498" w="20.013" e="20.0468"/&gt; &lt;query type="area"&gt; &lt;has-kv k="place" v="town"/&gt; &lt;/query&gt; &lt;print/&gt;
 </blockquote>

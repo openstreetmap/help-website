@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>user <a href="http://www.openstreetmap.org/user/smaleke">smaleke</a> deleted an big area around cortina in this edit. Since I did a lot of work in this area I am not happy ... My provisioncy in the osm editor holds me back to revert his changes. Considering his edits I'd rather not ask him/her either. And wouldn't mind if he or she is not allowed to edit any further...</p>
-<p>this is the actual changeset <a href="http://www.openstreetmap.org/browse/changeset/11784038">11784038</a></p>
+<p>user <a href="https://www.openstreetmap.org/user/smaleke">smaleke</a> deleted an big area around cortina in this edit. Since I did a lot of work in this area I am not happy ... My provisioncy in the osm editor holds me back to revert his changes. Considering his edits I'd rather not ask him/her either. And wouldn't mind if he or she is not allowed to edit any further...</p>
+<p>this is the actual changeset <a href="https://www.openstreetmap.org/browse/changeset/11784038">11784038</a></p>
 <p>Thnx in advance to recouperate my and other ppls work.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Done: <a href="http://www.openstreetmap.org/browse/changeset/14319677">http://www.openstreetmap.org/browse/changeset/14319677</a></p>
+<p>Done: <a href="https://www.openstreetmap.org/browse/changeset/14319677">https://www.openstreetmap.org/browse/changeset/14319677</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -224,7 +224,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>It's perfectly OK to ask here (or on IRC, or on a mailing list) for help with reverting other people's errors, and that's exactly what the top answer to <a href="https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">this previous question</a> suggests. Although I'd always do it out of politeness, in this case it's unlikely that "messaging the user who did the deletion" would work as they made 2 edits 6 months ago and haven't been back since.</p>
+<p>It's perfectly OK to ask here (or on IRC, or on a mailing list) for help with reverting other people's errors, and that's exactly what the top answer to <a href="/questions/731/how-can-i-revert-a-changeset">this previous question</a> suggests. Although I'd always do it out of politeness, in this case it's unlikely that "messaging the user who did the deletion" would work as they made 2 edits 6 months ago and haven't been back since.</p>
 </div>
 <div id="comment-18574-info" class="comment-info">
 <span class="comment-age">(18 Dec '12, 21:29)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

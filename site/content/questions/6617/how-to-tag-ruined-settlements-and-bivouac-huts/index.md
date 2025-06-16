@@ -107,8 +107,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>About tagging ruins, hava a look at the OSM wiki at <a href="http://wiki.openstreetmap.org/wiki/Key:ruins">ruins</a>.</p>
-<p>And about the bivouacs, maybe they are similar to "shelter" or "alpine_hut" or <a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/wilderness_mountain_buildings">Talk:Proposed_features/wilderness_mountain_buildings</a></p>
+<p>About tagging ruins, hava a look at the OSM wiki at <a href="https://wiki.openstreetmap.org/wiki/Key:ruins">ruins</a>.</p>
+<p>And about the bivouacs, maybe they are similar to "shelter" or "alpine_hut" or <a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/wilderness_mountain_buildings">Talk:Proposed_features/wilderness_mountain_buildings</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -158,7 +158,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Also have a look at <a href="http://wiki.openstreetmap.org/wiki/Tag:place%3Disolated_dwelling">place=isolated_dwelling</a>.</p>
+<p>Also have a look at <a href="https://wiki.openstreetmap.org/wiki/Tag:place%3Disolated_dwelling">place=isolated_dwelling</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

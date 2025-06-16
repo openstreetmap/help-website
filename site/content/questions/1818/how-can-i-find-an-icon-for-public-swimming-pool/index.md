@@ -117,10 +117,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Various icon sets can be found on the <a href="http://wiki.openstreetmap.org/wiki/Map_Icons">"Map Icons" wiki page</a>.</p>
+<p>Various icon sets can be found on the <a href="https://wiki.openstreetmap.org/wiki/Map_Icons">"Map Icons" wiki page</a>.</p>
 <p>osmarender has a swimming pool icon.</p>
 <p><img src="http://tah.openstreetmap.org/Tiles/tile/17/65493/43566.png" alt="http://b.tah.openstreetmap.org/Tiles/tile/17/65493/43566.png" /></p>
-<p>(<a href="http://www.openstreetmap.org/?lat=51.53847&amp;lon=-0.11691&amp;zoom=17&amp;layers=O">See on the map</a>) That's probably <a href="http://svn.openstreetmap.org/applications/rendering/osmarender/stylesheets/symbols/swimming-borderless.svg">this SVG source file</a></p>
+<p>(<a href="https://www.openstreetmap.org/?lat=51.53847&amp;lon=-0.11691&amp;zoom=17&amp;layers=O">See on the map</a>) That's probably <a href="http://svn.openstreetmap.org/applications/rendering/osmarender/stylesheets/symbols/swimming-borderless.svg">this SVG source file</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -193,7 +193,7 @@ osqa_accepted = false
 <div id="post-1876-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Nice. Mostly public domain too. I've linked that site from the <a href="http://wiki.openstreetmap.org/wiki/Map_Icons">map icons page</a></p>
+<p>Nice. Mostly public domain too. I've linked that site from the <a href="https://wiki.openstreetmap.org/wiki/Map_Icons">map icons page</a></p>
 </div>
 <div id="comment-1876-info" class="comment-info">
 <span class="comment-age">(21 Dec '10, 09:42)</span> <span class="comment-user userinfo">Harry Wood</span>

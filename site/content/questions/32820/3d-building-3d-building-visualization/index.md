@@ -111,7 +111,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><span>@goldfndr</span>: I think it's much more likely that he meant something like <a href="http://wiki.openstreetmap.org/wiki/3D_Development">http://wiki.openstreetmap.org/wiki/3D_Development</a></p>
+<p><span>@goldfndr</span>: I think it's much more likely that he meant something like <a href="https://wiki.openstreetmap.org/wiki/3D_Development">https://wiki.openstreetmap.org/wiki/3D_Development</a></p>
 <p>The best solution is to ask the professor for clarification, though.</p>
 </div>
 <div id="comment-32835-info" class="comment-info">
@@ -171,9 +171,9 @@ One Answer:
 Yes, it's possible to do 3D processing using OSM. Even if our dataschema is 2D only, you are able to attach object properties that make it possible to create (simple) 3D representations for example: <img src="http://osm2world.org/examples/0.2.0/Passau_from_Inn_2012-09-13_highres-pov.png" alt="alt text" /></p>
 <p>So the references you are looking for are:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings</a> - a united (semi)standard schema for 3D tagging buildings</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/3D_Development">http://wiki.openstreetmap.org/wiki/3D_Development</a> - presenting different tools and approaches</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Research">http://wiki.openstreetmap.org/wiki/Research</a> - search for '3D' to find related articles</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings">https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings</a> - a united (semi)standard schema for 3D tagging buildings</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/3D_Development">https://wiki.openstreetmap.org/wiki/3D_Development</a> - presenting different tools and approaches</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Research">https://wiki.openstreetmap.org/wiki/Research</a> - search for '3D' to find related articles</li>
 <li><a href="http://forum.openstreetmap.org/viewforum.php?id=42">http://forum.openstreetmap.org/viewforum.php?id=42</a> - 3D forum with recent news / developments to get an impression about the 3D sub-community</li>
 </ul>
 <p>Please keep in mind:</p>

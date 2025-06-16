@@ -83,7 +83,7 @@ osqa_accepted = false
 <div id="post-45241-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11458/jon2709"></a><a href="http://help.openstreetmap.org/users/11458/jon2709">@jon2709</a>: do you mean that QGIS is the answer to your question and that this question can be closed then? Welcome to OSM! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/11458/jon2709"></a><a href="https://help.openstreetmap.org/users/11458/jon2709">@jon2709</a>: do you mean that QGIS is the answer to your question and that this question can be closed then? Welcome to OSM! :-)</p>
 </div>
 <div id="comment-45241-info" class="comment-info">
 <span class="comment-age">(14 Sep '15, 20:03)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

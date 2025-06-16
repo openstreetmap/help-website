@@ -251,7 +251,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I just tried an experiment I thought should work. if i walked while sighting along a wall of a building I could align this trace on bing when editing i then turned 90 degrees when my position lined up with another building line. I then drew two straight ways in potlatch two along the mean of these ways to beyond the sides of the buildings observed. I then dragged the bing to agree with these alignments,ok so far but I found that after scrolling the map just 200 meters it was out of alignment.so no better then doing minor adjustments as mis-alignment show up. thought this may give others some ideas.here's the trace <a href="http://www.openstreetmap.org/user/andy%20mackey/traces/1430934">http://www.openstreetmap.org/user/andy%20mackey/traces/1430934</a> the buildings are east wall of catholic church and south wall of changing room building the co-ords of point are 0.17248 W 52.33163 N. this is to big for a comment so its posted in an answer box.</p>
+<p>I just tried an experiment I thought should work. if i walked while sighting along a wall of a building I could align this trace on bing when editing i then turned 90 degrees when my position lined up with another building line. I then drew two straight ways in potlatch two along the mean of these ways to beyond the sides of the buildings observed. I then dragged the bing to agree with these alignments,ok so far but I found that after scrolling the map just 200 meters it was out of alignment.so no better then doing minor adjustments as mis-alignment show up. thought this may give others some ideas.here's the trace <a href="https://www.openstreetmap.org/user/andy%20mackey/traces/1430934">https://www.openstreetmap.org/user/andy%20mackey/traces/1430934</a> the buildings are east wall of catholic church and south wall of changing room building the co-ords of point are 0.17248 W 52.33163 N. this is to big for a comment so its posted in an answer box.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -393,9 +393,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a proposed process (and proposed tagging) and the beginnings of some API implementation for tracking imagery offsets: "<a href="http://wiki.openstreetmap.org/wiki/True_Offset_Process">True Offset Process</a>".</p>
+<p>There's a proposed process (and proposed tagging) and the beginnings of some API implementation for tracking imagery offsets: "<a href="https://wiki.openstreetmap.org/wiki/True_Offset_Process">True Offset Process</a>".</p>
 <p>The tagging scheme though is for drawing an area around where an imagery offset applies. Did you want to tag an imagery offset at a particular point? or perhaps you just wanted to record the fact that you've accurately positioned a particular feature so maybe <code>source:location=multiple_gps_readings</code> ...or something (I just made that up, but you get the idea. Maybe someone else has a better suggestion for a good source tag)</p>
-<p>Also a <a href="http://wiki.openstreetmap.org/wiki/Talk:True_Offset_Process#Process_of_accurately_determining_offset">discussion on 'Process of accurately determining offset'</a>. I've been doing some experiments with this myself recently, following the approach of "average a large number of tracks collected over several weeks" suggested there</p>
+<p>Also a <a href="https://wiki.openstreetmap.org/wiki/Talk:True_Offset_Process#Process_of_accurately_determining_offset">discussion on 'Process of accurately determining offset'</a>. I've been doing some experiments with this myself recently, following the approach of "average a large number of tracks collected over several weeks" suggested there</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

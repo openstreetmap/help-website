@@ -127,11 +127,11 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I suspect that the answer to <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> might help you (including the bit about coastline updates and rendering).<br />
+<p>I suspect that the answer to <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">this question</a> might help you (including the bit about coastline updates and rendering).<br />
 </p>
 <p>What it might be worth doing is getting in contact with other local mappers. One person seems to have done most of the existing work near you, so I'd definitely try and coordinate with them (send them a message through the OSM site - there is a <a href="http://lists.openstreetmap.org/listinfo/talk-cr">talk-cr</a> mailing list, but it seems to have had no local postings on it since it was started).</p>
-<p>Some of the links from <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_Guide">here</a> may also be useful to you.</p>
-<p>(I'm assuming that you're <a href="http://www.openstreetmap.org/user/acktoto123">acktoto123</a> on the main site as well as here of course - my apologies if you're not).</p>
+<p>Some of the links from <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_Guide">here</a> may also be useful to you.</p>
+<p>(I'm assuming that you're <a href="https://www.openstreetmap.org/user/acktoto123">acktoto123</a> on the main site as well as here of course - my apologies if you're not).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

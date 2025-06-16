@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>Hi all,</p>
 <p>sometimes certain lines are not visible and editable on the iD version, which is used by Strava slide. For example in <a href="http://strava.github.io/iD/#background=Bing&amp;map=17.25/2.96883/42.00970">this area:</a></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Missing_street_in_iD_version_used_by_Strava_slide.jpg" alt="Missing road" /></p>
+<p><img src="/upfiles/Missing_street_in_iD_version_used_by_Strava_slide.jpg" alt="Missing road" /></p>
 <p>I had this problem in plenty of different locations already. Not a huge deal. It just slows down the mapping a bit. I am not sure whether it is related to the rather old version of iD used by Strava or something else. Anybody able to fix it? I use the latest version of Google Chrome, by the way (V60.0.3112.11).</p>
 <p>Thanks, René</p>
 </div>

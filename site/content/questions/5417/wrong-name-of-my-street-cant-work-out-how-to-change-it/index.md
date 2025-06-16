@@ -123,7 +123,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>When you see the area on the main map select the "Edit" tab. Now you can select Hope Street and then the node in the intersection between Hope Street and Wattletree road. Split Hope Street in two at this node using the scissors. Then you can select the part of Hope Street from Wattletree to Princess Hwy and rename this to Tonimbuk Road.</p>
-<p>You might want to take a look at the <a href="http://wiki.openstreetmap.org/wiki/Potlatch2/Primer">Potlatch 2 guide</a>.</p>
+<p>You might want to take a look at the <a href="https://wiki.openstreetmap.org/wiki/Potlatch2/Primer">Potlatch 2 guide</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -173,7 +173,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This will help as well <a href="http://wiki.openstreetmap.org/wiki/Map_Making_Overview">http://wiki.openstreetmap.org/wiki/Map_Making_Overview</a> so zoom right into the street you wish to edit click on edit, choose potlach2 ( one easy editor) click on the street and on the left there will bee a box in which you can choose and label(tag) items. don't worry if you mess up just don't save it. just exit and start again.there's an udo button as well. beware it is addictive.Good luck</p>
+<p>This will help as well <a href="https://wiki.openstreetmap.org/wiki/Map_Making_Overview">https://wiki.openstreetmap.org/wiki/Map_Making_Overview</a> so zoom right into the street you wish to edit click on edit, choose potlach2 ( one easy editor) click on the street and on the left there will bee a box in which you can choose and label(tag) items. don't worry if you mess up just don't save it. just exit and start again.there's an udo button as well. beware it is addictive.Good luck</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

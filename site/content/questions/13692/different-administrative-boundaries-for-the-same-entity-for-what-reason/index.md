@@ -107,7 +107,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Fred, I would suggest that the German mailing list (talk-de) or the German forum are probably better places to ask your question. Or potentially even the local Berlin list.</p>
-<p>See: <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:">http://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:</a></p>
+<p>See: <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:">https://wiki.openstreetmap.org/wiki/Mailing_lists#Country-Specific_Lists:</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -126,7 +126,7 @@ One Answer:
 <div id="post-13723-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I'm not German but having a look on both ways, it looks like one of them is obviously a dupplicate. The newest one (Way ID <a href="http://www.openstreetmap.org/browse/way/115947730">115947730</a>) has been created by 'mj10777' and the tag "boundary=administrative" is missing, the reason why it is not rendered. Also the older way (ID <a href="http://www.openstreetmap.org/browse/way/24792156">24792156</a> ) belongs to relations which are the real identifiers of the administrative boundaries (relations with "type=multipolygon" or "type=boundary" + "boundary=administrative"). The newest way has been added with a comment suggesting that the source is perhaps more accurate. This is a valid reason to replace an older way (which could be re-aligned instead of creating a new way) but you should contact this person and asking him/her why he did not suppress the old version, why his version is not completely tagged (missing "boundary=administrative") and why it is not part of the boundary relations.</p>
+<p>I'm not German but having a look on both ways, it looks like one of them is obviously a dupplicate. The newest one (Way ID <a href="https://www.openstreetmap.org/browse/way/115947730">115947730</a>) has been created by 'mj10777' and the tag "boundary=administrative" is missing, the reason why it is not rendered. Also the older way (ID <a href="https://www.openstreetmap.org/browse/way/24792156">24792156</a> ) belongs to relations which are the real identifiers of the administrative boundaries (relations with "type=multipolygon" or "type=boundary" + "boundary=administrative"). The newest way has been added with a comment suggesting that the source is perhaps more accurate. This is a valid reason to replace an older way (which could be re-aligned instead of creating a new way) but you should contact this person and asking him/her why he did not suppress the old version, why his version is not completely tagged (missing "boundary=administrative") and why it is not part of the boundary relations.</p>
 </div>
 <div id="comment-13723-info" class="comment-info">
 <span class="comment-age">(22 Jun '12, 12:24)</span> <span class="comment-user userinfo">Pieren</span>

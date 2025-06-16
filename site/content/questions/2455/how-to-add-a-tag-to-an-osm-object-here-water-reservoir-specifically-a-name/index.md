@@ -128,19 +128,19 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you know how to use potlatch you want to (if not well you can read <a href="http://help.openstreetmap.org/questions/1059/how-do-you-set-the-name-of-a-street">the setting a name on a street question</a>)</p>
+<p>If you know how to use potlatch you want to (if not well you can read <a href="/questions/1059/how-do-you-set-the-name-of-a-street">the setting a name on a street question</a>)</p>
 <ol>
-<li>got to the <a href="http://www.openstreetmap.org/?lat=-27.625306&amp;lon=153.080147&amp;zoom=18&amp;layers=M">"Water reservoir"</a> (right place?)</li>
+<li>got to the <a href="https://www.openstreetmap.org/?lat=-27.625306&amp;lon=153.080147&amp;zoom=18&amp;layers=M">"Water reservoir"</a> (right place?)</li>
 <li>click the edit tab</li>
-<li>add the tags <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dreservoir">landuse=reservoir</a> covered=yes (PS there are alternatives listed later in the post)</li>
+<li>add the tags <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dreservoir">landuse=reservoir</a> covered=yes (PS there are alternatives listed later in the post)</li>
 <li>change the name tag from "Water Reserviour" to "Kuraby Reservoir"</li>
 </ol>
 <p><strong>Other ways to tag reservoirs or water towers</strong> Sorry for not choosing one for you, but I don't know what type it is you are seeing.</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Water_tower">man_made=water_tower</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dreservoir_covered">man_made=reservoir_covered</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/storage_tank">man_made=storage_tank</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Talk:Proposed_features/storage_tank">man_made=tower</a> tower:type=storage_tank</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Water_tower">man_made=water_tower</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dreservoir_covered">man_made=reservoir_covered</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Proposed_features/storage_tank">man_made=storage_tank</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Talk:Proposed_features/storage_tank">man_made=tower</a> tower:type=storage_tank</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

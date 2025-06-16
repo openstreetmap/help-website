@@ -131,7 +131,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Are you sure you are using the latest version of OSMSharp and long definitions throughout? It looks like it is having problems relayed to <a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">http://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a></p>
+<p>Are you sure you are using the latest version of OSMSharp and long definitions throughout? It looks like it is having problems relayed to <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">https://wiki.openstreetmap.org/wiki/64-bit_Identifiers</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

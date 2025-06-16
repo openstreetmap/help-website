@@ -156,7 +156,7 @@ osqa_accepted = false
 <div id="post-46125-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A search for "Callow Park" finds <a href="http://www.openstreetmap.org/way/129252704">http://www.openstreetmap.org/way/129252704</a> , so probably.</p>
+<p>A search for "Callow Park" finds <a href="https://www.openstreetmap.org/way/129252704">https://www.openstreetmap.org/way/129252704</a> , so probably.</p>
 </div>
 <div id="comment-46125-info" class="comment-info">
 <span class="comment-age">(25 Oct '15, 23:18)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -167,7 +167,7 @@ osqa_accepted = false
 <div id="post-46126-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>according to the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">development page</a> it does. You find a list of all "names" that are recognized by Nominatim on that page</p>
+<p>according to the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview">development page</a> it does. You find a list of all "names" that are recognized by Nominatim on that page</p>
 </div>
 <div id="comment-46126-info" class="comment-info">
 <span class="comment-age">(26 Oct '15, 04:16)</span> <span class="comment-user userinfo">escada</span>

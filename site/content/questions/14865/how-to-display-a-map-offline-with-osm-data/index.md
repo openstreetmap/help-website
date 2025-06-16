@@ -62,7 +62,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>A <a href="http://help.openstreetmap.org/search/?q=offline&amp;Submit=search&amp;t=question">very quick search</a> suggests a number of possibilities. Have you had a chance to read any of those? Also, a bit more information about what you're trying to do would help, such as are you looking for something to sit on a desktop PC, or a phone, or on something else?</p>
+<p>A <a href="https://help.openstreetmap.org/search/?q=offline&amp;Submit=search&amp;t=question">very quick search</a> suggests a number of possibilities. Have you had a chance to read any of those? Also, a bit more information about what you're trying to do would help, such as are you looking for something to sit on a desktop PC, or a phone, or on something else?</p>
 </div>
 <div id="comment-14866-info" class="comment-info">
 <span class="comment-age">(06 Aug '12, 12:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What you're looking for is a rendering engine that can handle raw OSM data, or preprocessed vector data, on the input side and drive a display on the output side. There are many options but none of them is "plug and play". Check this list for various rendering projects: <a href="http://wiki.openstreetmap.org/wiki/Rendering">http://wiki.openstreetmap.org/wiki/Rendering</a></p>
+<p>What you're looking for is a rendering engine that can handle raw OSM data, or preprocessed vector data, on the input side and drive a display on the output side. There are many options but none of them is "plug and play". Check this list for various rendering projects: <a href="https://wiki.openstreetmap.org/wiki/Rendering">https://wiki.openstreetmap.org/wiki/Rendering</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

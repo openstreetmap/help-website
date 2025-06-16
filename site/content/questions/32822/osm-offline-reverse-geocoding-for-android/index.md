@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I am not really sure whether <a href="http://wiki.openstreetmap.org/wiki/Libosmscout">LibOSMScout</a> has such a feature ... have a deeper look</p>
+<p>I am not really sure whether <a href="https://wiki.openstreetmap.org/wiki/Libosmscout">LibOSMScout</a> has such a feature ... have a deeper look</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

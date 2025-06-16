@@ -42,13 +42,13 @@ osqa_accepted = true
 <p>Hi,</p>
 <p>I tried OSM mapping this Saturday; I added a path through a square and a staircase, both part of a way to join two streets by walking. But I’m not sure I made it the proper way.</p>
 <p>Here’s the situation:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm_question1a.jpg" alt="situation" /></p>
+<p><img src="/upfiles/osm_question1a.jpg" alt="situation" /></p>
 <p>Two streets at different heights, both with sidewalks, a square, and a some steps.</p>
 <p>Here how it was mapped before I edited:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm_question1b.jpg" alt="how it was" /></p>
+<p><img src="/upfiles/osm_question1b.jpg" alt="how it was" /></p>
 <p>The area of the square is defined and the streets are too. The sidewalks are not, which is okay I guess since the streets are tagged as walkable. But nothing register that you can go through the square and the stairs by feet, which is a useful shortcut that should appear on itineraries and the like.</p>
 <p>So I added a path in the middle of the square (orange), and some steps (red), connecting the two streets:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm_question1c.jpg" alt="what i added" /></p>
+<p><img src="/upfiles/osm_question1c.jpg" alt="what i added" /></p>
 <p>Now, the way is registered, but I’m not sure about :</p>
 <ul>
 <li>The fact that I added a path while it’s not really an actual path, it’s just a square and you can walk through it.</li>
@@ -56,7 +56,7 @@ osqa_accepted = true
 </ul>
 <p>But I couldn’t not find another way to do this.</p>
 <p>Here is how it is in iD:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm_question1_screen.png" alt="iD screenshot" /></p>
+<p><img src="/upfiles/osm_question1_screen.png" alt="iD screenshot" /></p>
 <p>And here is <a href="https://www.openstreetmap.org/#map=19/43.52695/5.43876">the link to the place</a>.</p>
 <p>What should I have done?</p>
 <p>Thank you!<br />
@@ -157,7 +157,7 @@ One Answer:
 <p>Thanks! I’m learning a lot.</p>
 <p>So it is okay to add little paths that are not actual highways but just ‘logical’ links, so that users or software can find their way through it. And walkable areas are treated like paths even if there are polygons and not lines. Right?</p>
 <p>I couldn’t find a way with iD to add new points to a polygon to change the shape of the square to fit the flat area, but I connected the paths and made the stairs going up, south to north:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/osm_question1_correction1_4SqSjGn.png" alt="screenshot" /></p>
+<p><img src="/upfiles/osm_question1_correction1_4SqSjGn.png" alt="screenshot" /></p>
 <p>Thanks again :)</p>
 </div>
 <div id="comment-41862-info" class="comment-info">

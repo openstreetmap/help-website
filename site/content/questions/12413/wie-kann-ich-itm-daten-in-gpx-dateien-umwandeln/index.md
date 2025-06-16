@@ -52,7 +52,7 @@ osqa_accepted = false
 <p>failed to import. Here's the error:</p>
 <p>Found no good GPX points in the input data. At least 75% of the trackpoints lacked a &lt;time&gt; tag.</p>
 <p>More information about GPX import failures and how to avoid them can be found at:</p>
-<p><a href="http://wiki.openstreetmap.org/index.php/GPX_Import_Failures">http://wiki.openstreetmap.org/index.php/GPX_Import_Failures</a></p>
+<p><a href="https://wiki.openstreetmap.org/index.php/GPX_Import_Failures">https://wiki.openstreetmap.org/index.php/GPX_Import_Failures</a></p>
 </blockquote>
 <p>In Wiki habe ich aber keine passende Antwort gefunden. Was mache ich falsch oder muss ich berücksichtigen?</p>
 <p>Danke für die Hilfe</p>
@@ -149,7 +149,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With regard to the "no time tag" problem, I'd suggest having a look at the answers to <a href="http://help.openstreetmap.org/questions/2130/gpx-file-no-time-tag">this</a> previous question here.</p>
+<p>With regard to the "no time tag" problem, I'd suggest having a look at the answers to <a href="/questions/2130/gpx-file-no-time-tag">this</a> previous question here.</p>
 <p>I've no idea if the Travelhoney stores timestamps - if it does it's possible that the two-step conversion process is removing them. A quick web search finds <a href="http://code.google.com/p/itmtogpx/">this</a> which suggests that it might be able to convert to .gpx in one step - perhaps that's worth a look?</p>
 </div>
 <div class="answer-controls post-controls">

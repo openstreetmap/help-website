@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Generally speaking, it isn't always straightforward to undo a saved changeset ("revert" it). There's a summary of the issues on <a href="https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">this previous question</a>.</p>
-<p>However, in your case it may be straightforward, since I'm presuming that we're talking about <a href="http://www.openstreetmap.org/browse/changeset/18923031">this</a> edit, as it wasn't made very long ago, and it's unlikely that anyone has made other changes based on yours. However - looking at it I don't necessarily think that it needs reverting though - just change the shape of the buildings a bit and delete the duplicate nodes?</p>
+<p>Generally speaking, it isn't always straightforward to undo a saved changeset ("revert" it). There's a summary of the issues on <a href="/questions/731/how-can-i-revert-a-changeset">this previous question</a>.</p>
+<p>However, in your case it may be straightforward, since I'm presuming that we're talking about <a href="https://www.openstreetmap.org/browse/changeset/18923031">this</a> edit, as it wasn't made very long ago, and it's unlikely that anyone has made other changes based on yours. However - looking at it I don't necessarily think that it needs reverting though - just change the shape of the buildings a bit and delete the duplicate nodes?</p>
 <p>In the more general case you may often get a quicker response on <a href="https://wiki.openstreetmap.org/wiki/Irc">IRC</a> than the help site.</p>
 </div>
 <div class="answer-controls post-controls">

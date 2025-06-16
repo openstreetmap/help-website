@@ -158,9 +158,9 @@ I noticed that there is no place name for <strong>Panama City</strong> in Panama
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>First you have to find the node. If it was a way you could use the undelete function in Potlatch. To find the node you could use a slow updating rendering like the 'no names' layer to find where the node was. Then you could use <a href="http://matt.dev.openstreetmap.org/owl_viewer/">OWL</a> to find all changes in that <a href="http://matt.dev.openstreetmap.org/owl_viewer/tile/1645318973">area</a>. You can see that node number <a href="http://www.openstreetmap.org/browse/node/343549777">343549777</a> was deleted 6 months ago.</p>
+<p>First you have to find the node. If it was a way you could use the undelete function in Potlatch. To find the node you could use a slow updating rendering like the 'no names' layer to find where the node was. Then you could use <a href="http://matt.dev.openstreetmap.org/owl_viewer/">OWL</a> to find all changes in that <a href="http://matt.dev.openstreetmap.org/owl_viewer/tile/1645318973">area</a>. You can see that node number <a href="https://www.openstreetmap.org/browse/node/343549777">343549777</a> was deleted 6 months ago.</p>
 <p>For more active regions where there has been over 100 edits since the change you can use the history tab on the main page, this can be hard to look through and you might not be able to find the node in a reasonable timeframe.</p>
-<p>Now that you have the information you could go for the lazy way and add another node with the same tags and location as the old one, or you could try to find a way to undelete the node. Just note that the node was part of the <a href="http://www.openstreetmap.org/browse/relation/287668">Panama relation</a> when it was deleted (as seen on the changeset).</p>
+<p>Now that you have the information you could go for the lazy way and add another node with the same tags and location as the old one, or you could try to find a way to undelete the node. Just note that the node was part of the <a href="https://www.openstreetmap.org/browse/relation/287668">Panama relation</a> when it was deleted (as seen on the changeset).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -213,7 +213,7 @@ I noticed that there is no place name for <strong>Panama City</strong> in Panama
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>After finding the node ID, you can view its history. eg for that Panama City node: <a href="http://www.openstreetmap.org/browse/node/343549777/history">history</a></p>
+<p>After finding the node ID, you can view its history. eg for that Panama City node: <a href="https://www.openstreetmap.org/browse/node/343549777/history">history</a></p>
 <p>At the bottom of that page, there is a link for for "Download XML". Click on that, and save this as a .osm file. Then open this .osm file in JOSM, then upload it. This will undelete the node, keeping the same node ID and history, and restoring all of its tags.</p>
 </div>
 <div class="answer-controls post-controls">

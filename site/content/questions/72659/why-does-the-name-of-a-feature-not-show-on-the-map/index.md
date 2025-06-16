@@ -183,7 +183,7 @@ I am just getting used to the way that at different zoom levels the visibility o
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not every feature is shown on any particular map. There are other discussions on this topic, see for example</p>
-<p><a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
+<p><a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Dear osm community,</p>
 <p>I have been both using and adding osm data over the past several years. During the next four weeks I will visit different locations in Antarctica including the south pole and would like to use this opportunity to spend some time to record data for osm.</p>
-<p>Looking at Antarctica on openstreetmap.org it seems though that the southern part of the continent (&gt;85°?) and especially the south pole are kind beyond the edge of the world, probably due to the map projection (Mercator?) which is used by openstreetmap.org: <a href="http://www.openstreetmap.org/relation/2186646">http://www.openstreetmap.org/relation/2186646</a> <a href="http://www.openstreetmap.org/node/436012592">http://www.openstreetmap.org/node/436012592</a></p>
+<p>Looking at Antarctica on openstreetmap.org it seems though that the southern part of the continent (&gt;85°?) and especially the south pole are kind beyond the edge of the world, probably due to the map projection (Mercator?) which is used by openstreetmap.org: <a href="https://www.openstreetmap.org/relation/2186646">https://www.openstreetmap.org/relation/2186646</a> <a href="https://www.openstreetmap.org/node/436012592">https://www.openstreetmap.org/node/436012592</a></p>
 <p>Do you know of any linux compatible programs/ websites which implement a trackball like visualisation of the earth (like google earth)? I would like to be able to look up what data is already there for Antarctica &gt;85°S. Do you have any ideas on how to do this?</p>
 <p>Would it not be a good idea for the official osm website to use a "google-earth"-like projection for at least the (ant-)arctic regions of the planet or some other projection which enables not only to query for but also to display the data in the 90°N/S regions?</p>
 <p>Thank you and a happy new year :) Benjamin</p>
@@ -117,7 +117,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>An OSM <a href="http://polar.openstreetmap.de">map of Antartica</a>.<br />
-How to probably <a href="http://wiki.openstreetmap.org/wiki/Antarctica/Import_2013#Map_projection">add features to Antarctica</a>.</p>
+How to probably <a href="https://wiki.openstreetmap.org/wiki/Antarctica/Import_2013#Map_projection">add features to Antarctica</a>.</p>
 <p>See also these blog posts:<br />
 <a href="http://localwiki.org/blog/2012/oct/10/local+wiki-antarctica">Antarctica like you've never seen it before</a><br />
 <a href="http://blog.jochentopf.com/2013-02-04-antarctica-in-openstreetmap.html">Antarctica in OpenStreetMap</a><br />
@@ -187,7 +187,7 @@ How to probably <a href="http://wiki.openstreetmap.org/wiki/Antarctica/Import_20
 <div id="post-29798-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>thanks, seems that this is basically also what malenki's second links says. The problem is that the distortion at the pole area is maximal making it really impossible to edit anything. I think "wgs84" and "plate carree" are the same thing or at least equally distorted at pole. The tracks are already uploaded public e.g.: <a href="http://www.openstreetmap.org/trace/1638788/data">http://www.openstreetmap.org/trace/1638788/data</a> so the question still is, do I wait for psp to be added to josm, do I wait for someone else to map these gpx-tracks eventually or is there maybe any other osm mapping software that supports polar stereographic or the alike.</p>
+<p>thanks, seems that this is basically also what malenki's second links says. The problem is that the distortion at the pole area is maximal making it really impossible to edit anything. I think "wgs84" and "plate carree" are the same thing or at least equally distorted at pole. The tracks are already uploaded public e.g.: <a href="https://www.openstreetmap.org/trace/1638788/data">https://www.openstreetmap.org/trace/1638788/data</a> so the question still is, do I wait for psp to be added to josm, do I wait for someone else to map these gpx-tracks eventually or is there maybe any other osm mapping software that supports polar stereographic or the alike.</p>
 </div>
 <div id="comment-29798-info" class="comment-info">
 <span class="comment-age">(13 Jan '14, 13:26)</span> <span class="comment-user userinfo">eberhab</span>

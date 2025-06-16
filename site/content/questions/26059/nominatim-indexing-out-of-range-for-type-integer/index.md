@@ -110,7 +110,7 @@ ERROR: Error executing external command: /var/nominatim/nominatim/nominatim -i -
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe this is an issue of <a href="http://wiki.openstreetmap.org/wiki/64-bit_Identifiers">64-bit_Identifiers</a></p>
+<p>Maybe this is an issue of <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">64-bit_Identifiers</a></p>
 <p>Please tell us how old your software framework is ... what version number has each component?</p>
 </div>
 <div class="answer-controls post-controls">
@@ -256,7 +256,7 @@ ERROR: Error executing external command: /var/nominatim/nominatim/nominatim -i -
 <p>As I also just now stumbled upon this issue (with an EU database) and some searching led me to this question, I would like to add my found references and information, for any other people, wondering about their v.2.0.1-Nominatim's mean behaviour.</p>
 <p>It was quite confusing at first because I did not take into account that this could have happened due to a too old Nominatim version. I started following instructions from the wiki which was not too long ago, but everything still was based on a zip including v2.0.1 (which seems to be dated back to the begin of the year). And also, there still are no newer Relase Notes than v2.0.1 in the <a href="https://github.com/twain47/Nominatim/wiki/_pages">Github Pages Overview</a> which made me hesitate to try any newer version.</p>
 <p>Still, I found that quite old <a href="https://github.com/twain47/Nominatim/issues/46">discussion/bug report</a> explaining that there is really a known bug which has been dealt with.</p>
-<p>So I continued research and noticed that recently, <strong>v2.1.0</strong> has been declared the <strong>stable version</strong>, includes these important bigint bugfixes, and the <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#First_Installation">basic setup</a> is also properly updated.</p>
+<p>So I continued research and noticed that recently, <strong>v2.1.0</strong> has been declared the <strong>stable version</strong>, includes these important bigint bugfixes, and the <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#First_Installation">basic setup</a> is also properly updated.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

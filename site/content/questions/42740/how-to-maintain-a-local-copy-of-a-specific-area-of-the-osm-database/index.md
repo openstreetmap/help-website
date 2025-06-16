@@ -146,7 +146,7 @@ One Answer:
 <div id="post-42745-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10923/superfebs">@Superfebs</a>: I guess <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> will help you with this</p>
+<p><a href="https://help.openstreetmap.org/users/10923/superfebs">@Superfebs</a>: I guess <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> will help you with this</p>
 </div>
 <div id="comment-42745-info" class="comment-info">
 <span class="comment-age">(30 Apr '15, 15:24)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -158,7 +158,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>There is also good advice here: <a href="http://wiki.openstreetmap.org/wiki/User:EdLoach#Osmosis_to_keep_a_local_copy_of_a_.osm_file_updated">http://wiki.openstreetmap.org/wiki/User:EdLoach#Osmosis_to_keep_a_local_copy_of_a_.osm_file_updated</a> and Zverik's tools are very useful <a href="https://github.com/Zverik/regional">https://github.com/Zverik/regional</a> particularly limit_osc.py.</p>
+<p>There is also good advice here: <a href="https://wiki.openstreetmap.org/wiki/User:EdLoach#Osmosis_to_keep_a_local_copy_of_a_.osm_file_updated">https://wiki.openstreetmap.org/wiki/User:EdLoach#Osmosis_to_keep_a_local_copy_of_a_.osm_file_updated</a> and Zverik's tools are very useful <a href="https://github.com/Zverik/regional">https://github.com/Zverik/regional</a> particularly limit_osc.py.</p>
 <p>JOSM or QGIS can be used to create .poly files</p>
 </div>
 <div id="comment-42747-info" class="comment-info">

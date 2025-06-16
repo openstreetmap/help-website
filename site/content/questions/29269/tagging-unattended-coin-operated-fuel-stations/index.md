@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Here's another Thailand related question having to do with rural fueling stations. How should I tag an amenity=fuel where the fuel is dispensed by an automatic machine that accepts paper money? You insert a 100 baht note like you would in a laundromat and the machine pumps 100 baht worth of gas.</p>
-<p>These unattended pumps are popping up all over northern Thailand and will probably soon replace the older, hand pumped gasoline sellers that I asked about <a href="https://help.openstreetmap.org/questions/28469/mom-pop-gas-stations-how-to-tag">in here</a> a few weeks ago.</p>
+<p>These unattended pumps are popping up all over northern Thailand and will probably soon replace the older, hand pumped gasoline sellers that I asked about <a href="/questions/28469/mom-pop-gas-stations-how-to-tag">in here</a> a few weeks ago.</p>
 <p>I found payment:coins=yes in Taginfo but this isn't strictly accurate because paper money must be used. Maybe accurate enough though. Opinions or suggestions?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -182,9 +182,9 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's always a good idea to ask the local community, maybe they already have a prevered way of tagging such objects: <a href="http://wiki.openstreetmap.org/wiki/Thailand">http://wiki.openstreetmap.org/wiki/Thailand</a></p>
-<p>So even if it's primary goal is obviously related to <a href="http://wiki.openstreetmap.org/wiki/Fuel_station">amenity=fuel_station</a>, it's automatic character would fit to <a href="http://wiki.openstreetmap.org/wiki/Vending_machine">amenity=vending_machine</a> :/</p>
-<p>For both aproaches a <a href="http://wiki.openstreetmap.org/wiki/Key:payment">payment:cash=yes</a> seems to be the preferred way to express this style of payment.</p>
+<p>It's always a good idea to ask the local community, maybe they already have a prevered way of tagging such objects: <a href="https://wiki.openstreetmap.org/wiki/Thailand">https://wiki.openstreetmap.org/wiki/Thailand</a></p>
+<p>So even if it's primary goal is obviously related to <a href="https://wiki.openstreetmap.org/wiki/Fuel_station">amenity=fuel_station</a>, it's automatic character would fit to <a href="https://wiki.openstreetmap.org/wiki/Vending_machine">amenity=vending_machine</a> :/</p>
+<p>For both aproaches a <a href="https://wiki.openstreetmap.org/wiki/Key:payment">payment:cash=yes</a> seems to be the preferred way to express this style of payment.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

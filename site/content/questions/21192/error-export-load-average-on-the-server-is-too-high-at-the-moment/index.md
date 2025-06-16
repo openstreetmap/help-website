@@ -187,7 +187,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>This may depend on the size of the area you want to have as a PDF output.</p>
 <p>The export tab on osm.org is the one that is very easy to use, but it has limited capacities.</p>
-<p>So if you are willing to learn something about getting OSM based maps in other or similar formats, read the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a>, <a href="http://wiki.openstreetmap.org/wiki/SVG">SVG</a>, <a href="http://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>, <a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> etc.</p>
+<p>So if you are willing to learn something about getting OSM based maps in other or similar formats, read the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM on paper</a>, <a href="https://wiki.openstreetmap.org/wiki/SVG">SVG</a>, <a href="https://wiki.openstreetmap.org/wiki/Rendering">Rendering</a>, <a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a> etc.</p>
 <p>There are also many hints about this topic on this FAQ site, try the search feature.</p>
 </div>
 <div class="answer-controls post-controls">

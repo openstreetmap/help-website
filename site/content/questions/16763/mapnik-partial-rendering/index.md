@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>i have set up a tile server for Faroe Islands everything is working as expected. except i am getting a strange partial rendering in one area</p>
 <p>the problem is that only highway=footway is rendered in this part of the map nothing else, i am missing the buildings and house numbers</p>
 <p>i think it is just in this part of the map the problem is, i haven't found the same problem in another part of the map</p>
-<p>it should look like this <a href="http://www.openstreetmap.org/?zoom=17&amp;lat=62.10338&amp;lon=-7.64377&amp;layers=B0">this</a></p>
+<p>it should look like this <a href="https://www.openstreetmap.org/?zoom=17&amp;lat=62.10338&amp;lon=-7.64377&amp;layers=B0">this</a></p>
 <p>insted i get <a href="http://old.stamps.fo:8080/osm/slippymap.html?zoom=17&amp;lat=62.10338&amp;lon=-7.64377&amp;layers=B0">this</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -67,7 +67,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>It might be helpful if you could fill in details about which set of instructions you were following, what software and server versions you're using, which data you downloaded and imported and whether you cut it e.g. with osmosis prior to load.</p>
 <p>For info I have a tile server, built following <a href="http://switch2osm.org/serving-tiles/manually-building-a-tile-server-12-04/">these instructions</a>, loaded with <a href="http://download.geofabrik.de/openstreetmap/">Geofabrik Europe data</a> as of the licence change and updated using hourly osc files up to 22nd September. On that, your area looks correct, like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/example_5.png" alt="picture showing buildings" /></p>
+<p><img src="/upfiles/example_5.png" alt="picture showing buildings" /></p>
 </div>
 <div id="comment-16774-info" class="comment-info">
 <span class="comment-age">(09 Oct '12, 21:51)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -92,9 +92,9 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>I have tried on a different VM insance of ubuntu 12.04 with the same data, and then i tried to insert some test osm data and this is the</p>
-<p>test data in JOSM <img src="http://help.openstreetmap.org/upfiles/josmData.jpg" alt="alt text" /></p>
+<p>test data in JOSM <img src="/upfiles/josmData.jpg" alt="alt text" /></p>
 <p>and this is the result</p>
-<p><img src="http://help.openstreetmap.org/upfiles/test.png" alt="alt text" /> the strange thing is that in other parts of my map the buildings and house numbers are ok. i have tryed to query for the way 44651223 (building above the word test )and it exists in the database</p>
+<p><img src="/upfiles/test.png" alt="alt text" /> the strange thing is that in other parts of my map the buildings and house numbers are ok. i have tryed to query for the way 44651223 (building above the word test )and it exists in the database</p>
 </div>
 <div id="comment-16801-info" class="comment-info">
 <span class="comment-age">(10 Oct '12, 10:48)</span> <span class="comment-user userinfo">LiFo</span>

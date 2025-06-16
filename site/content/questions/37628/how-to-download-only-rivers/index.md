@@ -191,7 +191,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>the easiest way is to use the Overpass wizard. On the other hand you need to know how something is tagged. The latter you can learn from looking at the data, using taginfo or the wiki, especially <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> and linked pages. So for trunks, type in highway=trunk in the wizard dialog. This will generate the query for you. When you want to export it, the tool will say that it modified the query for that purpose and you have to run the query again. Hope this helps, but feel free to ask another question. It might be best to start another query here.</p>
+<p>the easiest way is to use the Overpass wizard. On the other hand you need to know how something is tagged. The latter you can learn from looking at the data, using taginfo or the wiki, especially <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> and linked pages. So for trunks, type in highway=trunk in the wizard dialog. This will generate the query for you. When you want to export it, the tool will say that it modified the query for that purpose and you have to run the query again. Hope this helps, but feel free to ask another question. It might be best to start another query here.</p>
 </div>
 <div id="comment-37914-info" class="comment-info">
 <span class="comment-age">(24 Oct '14, 06:01)</span> <span class="comment-user userinfo">escada</span>

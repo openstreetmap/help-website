@@ -40,13 +40,13 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>Take a look at <a href="http://www.openstreetmap.org/relation/1083434">relation 1083434</a>, it has a tag route_master = bus which means it refers to some bus routes and in this case:</p>
+<p>Take a look at <a href="https://www.openstreetmap.org/relation/1083434">relation 1083434</a>, it has a tag route_master = bus which means it refers to some bus routes and in this case:</p>
 <ul>
 <li>Relation Bus 89 : Porte de France → Gare de Vanves-Malakoff (1246645)</li>
 <li>Relation Bus 89 : Gare de Vanves-Malakoff → Porte de France (1246644)</li>
 </ul>
 <p>Which means there are directional routes between two addresses.</p>
-<p>Now that being said, if you look at <a href="http://www.openstreetmap.org/relation/1246644#map=17/48.82730/2.29332">Bus 89 : Gare de Vanves-Malakoff → Porte de France</a>, you will see a square (<a href="http://www.openstreetmap.org/way/23744258">Place d'Alleray</a>) that is included <strong>fully</strong> in the route! And same goes for the reverse direction of the other route!</p>
+<p>Now that being said, if you look at <a href="https://www.openstreetmap.org/relation/1246644#map=17/48.82730/2.29332">Bus 89 : Gare de Vanves-Malakoff → Porte de France</a>, you will see a square (<a href="https://www.openstreetmap.org/way/23744258">Place d'Alleray</a>) that is included <strong>fully</strong> in the route! And same goes for the reverse direction of the other route!</p>
 <p>Now my questions:</p>
 <ul>
 <li>Is this correct practice?</li>
@@ -184,7 +184,7 @@ This question is marked "community wiki".
 <p>Some people will split roundabouts for routes, but many will not. There is even editor support in JOSM for having complete roundabouts in routes. See the roundabout symbol in the picture below. So please don't "fix" this.</p>
 <p>There is no need for any special tagging for this.</p>
 <p>JOSM is open source. So you can look at the code they used to check if the roundabout was connected properly: <a href="http://josm.openstreetmap.de/">http://josm.openstreetmap.de/</a></p>
-<p><img src="http://help.openstreetmap.org/upfiles/RoundaboutRelation.png" alt="Roundabout in JOSM relation editor" /></p>
+<p><img src="/upfiles/RoundaboutRelation.png" alt="Roundabout in JOSM relation editor" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -361,7 +361,7 @@ This question is marked "community wiki".
 <div id="post-33917-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>You can see that in <a href="http://www.openstreetmap.org/way/108025091">http://www.openstreetmap.org/way/108025091</a> (a part of this route) the person drew a circle and have mentioned in the note tag that "Ceci n'est pas un rond-point" or in other words, this is not a roundabout. What to do in this case?</p>
+<p>You can see that in <a href="https://www.openstreetmap.org/way/108025091">https://www.openstreetmap.org/way/108025091</a> (a part of this route) the person drew a circle and have mentioned in the note tag that "Ceci n'est pas un rond-point" or in other words, this is not a roundabout. What to do in this case?</p>
 </div>
 <div id="comment-33917-info" class="comment-info">
 <span class="comment-age">(12 Jun '14, 13:43)</span> <span class="comment-user userinfo">Aram Azhari</span>
@@ -472,7 +472,7 @@ This question is marked "community wiki".
 <li>How do you actually calculate the bus route? It's not like the bus goes round and round before it continues the path, and we all know that squares are mostly uni-directional? <strong>Answer</strong>: First of all the direction of the lines must be specified to remove the confusion at the squares. Then by checking the intersection of the square with the entering/exiting lines find the right portion of the square that the bus should actually ride on.</li>
 <li>Is there a tag that I should be looking into that helps me resolve this? <strong>Answer</strong>: Yes, the direction of the lines should help with the navigation, although in the mentioned relation example it is missing.</li>
 </ul>
-<p>Also, I realized that this was not the best route to give as an example. If you look at <a href="http://www.openstreetmap.org/relation/1246644#map=17/48.83273/2.37644">this</a> part of the route, you will clearly see that the person has made a mistake of drawing on the wrong side of the street and worse, create alternate dead-end paths.</p>
+<p>Also, I realized that this was not the best route to give as an example. If you look at <a href="https://www.openstreetmap.org/relation/1246644#map=17/48.83273/2.37644">this</a> part of the route, you will clearly see that the person has made a mistake of drawing on the wrong side of the street and worse, create alternate dead-end paths.</p>
 <p><strong>To resolve</strong> these up to some extent, you can iterate through the ways of the relation and if you want any way that does not have its both ends connected to some other ways, then remove it. Note that you should not touch the first and last way of the route as they are supposed to only be connected on one end. Also note that removing a dead end from the relation will only remove that tail of the dead-end path and may leave a new dead-ends and as a result you need to recursively do this on the updated list until you are left with no dead-end paths.</p>
 <p>Best Regards,</p>
 </div>

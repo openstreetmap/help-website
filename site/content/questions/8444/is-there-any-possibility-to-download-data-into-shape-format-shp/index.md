@@ -156,7 +156,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It is possible to download data and convert it, and some preconverted shape files are also mentioned on <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">this wiki page</a>, which has links to various different options you could try.</p>
+<p>It is possible to download data and convert it, and some preconverted shape files are also mentioned on <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">this wiki page</a>, which has links to various different options you could try.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

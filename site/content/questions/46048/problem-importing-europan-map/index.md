@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem importing europan map"
-description = '''Hi guys and thanks in advance. I have installed nominatim on my local (virtual) centOS 6.6 machine following the wiki guide there http://wiki.openstreetmap.org/wiki/Nominatim/Installation. I follow the instructions line to line and I manage to import a little map (monaco-latest.osm.pbf) and everythi...'''
+description = '''Hi guys and thanks in advance. I have installed nominatim on my local (virtual) centOS 6.6 machine following the wiki guide there https://wiki.openstreetmap.org/wiki/Nominatim/Installation. I follow the instructions line to line and I manage to import a little map (monaco-latest.osm.pbf) and everythi...'''
 date = "2015-10-22T11:37:00Z"
 lastmod = "2015-10-22T11:37:00Z"
 weight = 46048
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi guys and thanks in advance. I have installed nominatim on my local (virtual) centOS 6.6 machine following the wiki guide there <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation.">http://wiki.openstreetmap.org/wiki/Nominatim/Installation.</a> I follow the instructions line to line and I manage to import a little map (monaco-latest.osm.pbf) and everything goes fine. Now I tried to import the european map (15.8 gb), i follow the same procedure, I launch the command:</p>
+<p>Hi guys and thanks in advance. I have installed nominatim on my local (virtual) centOS 6.6 machine following the wiki guide there <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation.">https://wiki.openstreetmap.org/wiki/Nominatim/Installation.</a> I follow the instructions line to line and I manage to import a little map (monaco-latest.osm.pbf) and everything goes fine. Now I tried to import the european map (15.8 gb), i follow the same procedure, I launch the command:</p>
 <pre><code>nohup ./utils/setup.php --osm-file european.latest.osm.pbf --all --osm2pgsql-cache 18000 2&gt;&gt;err.log 1&gt;&gt;setup.log &amp;</code></pre>
 <p>On a (virtual) machine with 500 gb disk space and 16 gb RAM. Now after 20 hours if I open the <em>setup.log</em> I can see some create table (9 exactly) and many insert; the file end with IMPORT command. If I open the <em>err.log</em> I can see something like this:</p>
 <pre><code>NOTICE:  table &quot;place&quot; does not exist, skipping

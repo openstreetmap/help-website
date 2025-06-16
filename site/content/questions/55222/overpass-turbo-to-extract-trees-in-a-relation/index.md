@@ -110,7 +110,7 @@ One Answer:
 <div class="answer-body">
 <p>The simplest thing is probably to set the search area directly to the relation like <code>area(3600114938)-&gt;.searchArea;</code>.</p>
 <p>Working example here: <a href="http://overpass-turbo.eu/s/nGY">http://overpass-turbo.eu/s/nGY</a></p>
-<p>There's <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">some information in the Overpass documentation about how OSM ids are mapped to Overpass area ids</a>.</p>
+<p>There's <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">some information in the Overpass documentation about how OSM ids are mapped to Overpass area ids</a>.</p>
 <p>Overpass Turbo uses <a href="http://nominatim.openstreetmap.org/">the public nominatim service</a> to fill in queries like <code>in Bergenhus</code>, so another possibility would be to craft a search there that returned the correct place as the first result. This might be the way to go if you have other similar nested areas to deal with, though I didn't find such a phrase with a few simple tries.</p>
 </div>
 <div class="answer-controls post-controls">

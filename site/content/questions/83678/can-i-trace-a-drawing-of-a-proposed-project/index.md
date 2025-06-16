@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have a schematic of a proposed project, a short golf course in PNG format. Is there a way to layer this lining up land marks, trees and or road intersection? I think there must be a way to do this but I am not at all sure where to begin.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Elcona_short_course.png" alt="alt text" /></p>
+<p><img src="/upfiles/Elcona_short_course.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-tracing" rel="tag" title="see questions tagged &#39;tracing&#39;">tracing</span>

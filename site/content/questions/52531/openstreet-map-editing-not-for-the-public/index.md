@@ -79,7 +79,7 @@ osqa_accepted = false
 <div id="post-52533-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai"></a><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> if we are storing data locally how we can use the same in our applications.</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai"></a><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> if we are storing data locally how we can use the same in our applications.</p>
 </div>
 <div id="comment-52533-info" class="comment-info">
 <span class="comment-age">(13 Oct '16, 13:44)</span> <span class="comment-user userinfo">sijojose210</span>
@@ -103,7 +103,7 @@ osqa_accepted = false
 <div id="post-52535-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> , <a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> in my application i am using GWT, in that i cannot add any locally stored maps, so my question is that is it possible to edit on openstreet server and use for my application only</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> , <a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> in my application i am using GWT, in that i cannot add any locally stored maps, so my question is that is it possible to edit on openstreet server and use for my application only</p>
 </div>
 <div id="comment-52535-info" class="comment-info">
 <span class="comment-age">(13 Oct '16, 14:06)</span> <span class="comment-user userinfo">sijojose210</span>
@@ -126,7 +126,7 @@ osqa_accepted = false
 <div id="post-52537-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> , is it possible when we adding new locations, (like if we are adding new places instead of showing it publicly is it possible to view the map only for my application with any key)</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> , is it possible when we adding new locations, (like if we are adding new places instead of showing it publicly is it possible to view the map only for my application with any key)</p>
 </div>
 <div id="comment-52537-info" class="comment-info">
 <span class="comment-age">(13 Oct '16, 14:23)</span> <span class="comment-user userinfo">sijojose210</span>

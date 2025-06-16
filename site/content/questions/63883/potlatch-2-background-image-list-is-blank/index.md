@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>Hi My Potlatch 2 background image options have disappeared today. Could someone check if it's just me?</p>
 <p>Is the list stored locally within my browser (Firefox Win7)? What the best way to get it back?</p>
 <p>Ta.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_nsTCKo8.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_nsTCKo8.JPG" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-potlatch2" rel="tag" title="see questions tagged &#39;potlatch2&#39;">potlatch2</span> <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-background" rel="tag" title="see questions tagged &#39;background&#39;">background</span>

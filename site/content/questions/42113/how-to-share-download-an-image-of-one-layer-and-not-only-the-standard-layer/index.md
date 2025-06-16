@@ -138,7 +138,7 @@ One Answer:
 <div id="post-42117-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Also see <a href="https://help.openstreetmap.org/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a>.</p>
+<p>Also see <a href="/questions/22/how-do-i-export-map-images-of-larger-areas">How do I export map images of larger areas?</a>.</p>
 </div>
 <div id="comment-42117-info" class="comment-info">
 <span class="comment-age">(02 Apr '15, 22:13)</span> <span class="comment-user userinfo">scai ♦</span>

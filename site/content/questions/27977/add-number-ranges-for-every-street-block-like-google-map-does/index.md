@@ -123,7 +123,7 @@ ie: Eleuterio Ramírez 501-599, Iquique, Región de Tarapacá, Chile</p>
 <td><div class="item-right">
 <div class="answer-body">
 <p>Generally it is considered better to tag each address, however that is sometimes difficult (I've found some places where I'd have to trespass to determine which number is associated with each building).</p>
-<p>If you can't tag each address, then you can use address interpolation ways. One on each side of the road with nodes indicating the address at various spots. I usually have each way only cover one block. See <a href="http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">http://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a></p>
+<p>If you can't tag each address, then you can use address interpolation ways. One on each side of the road with nodes indicating the address at various spots. I usually have each way only cover one block. See <a href="https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation">https://wiki.openstreetmap.org/wiki/Addresses#Using_interpolation</a></p>
 <p>This will allow data consumers like routing and geocoding tools to get close to the actual address. Not all map rendering sites seem to display them though.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,7 +174,7 @@ ie: Eleuterio Ramírez 501-599, Iquique, Región de Tarapacá, Chile</p>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is an Address Interpolation Plugin available for JOSM. I haven't tried it yet but it looks as if it might be a useful tool. <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/AddrInterpolation">http://wiki.openstreetmap.org/wiki/JOSM/Plugins/AddrInterpolation</a></p>
+<p>There is an Address Interpolation Plugin available for JOSM. I haven't tried it yet but it looks as if it might be a useful tool. <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/AddrInterpolation">https://wiki.openstreetmap.org/wiki/JOSM/Plugins/AddrInterpolation</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

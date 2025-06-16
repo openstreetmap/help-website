@@ -188,7 +188,7 @@ One Answer:
 <div id="post-39516-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span class="small">10 Mar '13, 21:38</span> <a href="http://help.openstreetmap.org/users/5023/bluetiger"></a><a href="http://help.openstreetmap.org/users/5023/bluetiger">@BlueTiger</a>: you should see something like <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">"accept this answer"</a> beneath this answer. That marks this question as solved.<br />
+<p><span class="small">10 Mar '13, 21:38</span> <a href="https://help.openstreetmap.org/users/5023/bluetiger"></a><a href="https://help.openstreetmap.org/users/5023/bluetiger">@BlueTiger</a>: you should see something like <a href="/questions/34318/how-to-mark-an-answer-as-accepted-and-mark-my-question-as-answered">"accept this answer"</a> beneath this answer. That marks this question as solved.<br />
 "Closing" questions is only available for a bit more longterm contributors here (see the <span>FAQ</span> section "How does the karma system work?")</p>
 <p>I seems there are some new magic buttons (at least for me and some other ♦ users): fixed with it. :-)</p>
 </div>

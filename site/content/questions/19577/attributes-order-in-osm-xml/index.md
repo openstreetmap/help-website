@@ -63,7 +63,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>(just in case you haven't already seen it):</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/XML#Assumptions">http://wiki.openstreetmap.org/wiki/XML#Assumptions</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/XML#Assumptions">https://wiki.openstreetmap.org/wiki/XML#Assumptions</a></p>
 </div>
 <div id="comment-19579-info" class="comment-info">
 <span class="comment-age">(04 Feb '13, 19:27)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

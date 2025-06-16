@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hello, I'm trying to update my open street map server. I'm building the server via the instructions at : <a href="http://weait.com/content/build-your-own-openstreetmap-server">http://weait.com/content/build-your-own-openstreetmap-server</a> , however, in the comments section, it was noted that no one was able to update the database after it was built by following instructions at <a href="http://wiki.openstreetmap.org/wiki/Minutely_Mapnik">http://wiki.openstreetmap.org/wiki/Minutely_Mapnik</a> . I'm a new-bee, so I'm assuming this can be done, but I need a pointer as to how to do this. Thanks Zak</p>
+<p>Hello, I'm trying to update my open street map server. I'm building the server via the instructions at : <a href="http://weait.com/content/build-your-own-openstreetmap-server">http://weait.com/content/build-your-own-openstreetmap-server</a> , however, in the comments section, it was noted that no one was able to update the database after it was built by following instructions at <a href="https://wiki.openstreetmap.org/wiki/Minutely_Mapnik">https://wiki.openstreetmap.org/wiki/Minutely_Mapnik</a> . I'm a new-bee, so I'm assuming this can be done, but I need a pointer as to how to do this. Thanks Zak</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-changeset" rel="tag" title="see questions tagged &#39;changeset&#39;">changeset</span>

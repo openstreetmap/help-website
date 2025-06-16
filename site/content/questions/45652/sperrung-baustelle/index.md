@@ -163,7 +163,7 @@ osqa_accepted = false
 <div id="post-45793-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a>: Statt opening_data kann man auch mit Conditional Restrictions (deutsch: bedingte Beschränkungen) arbeiten. <a href="https://wiki.openstreetmap.org/wiki/DE:Conditional_restrictions">https://wiki.openstreetmap.org/wiki/DE:Conditional_restrictions</a></p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a>: Statt opening_data kann man auch mit Conditional Restrictions (deutsch: bedingte Beschränkungen) arbeiten. <a href="https://wiki.openstreetmap.org/wiki/DE:Conditional_restrictions">https://wiki.openstreetmap.org/wiki/DE:Conditional_restrictions</a></p>
 </div>
 <div id="comment-45793-info" class="comment-info">
 <span class="comment-age">(07 Oct '15, 17:32)</span> <span class="comment-user userinfo">Nakaner</span>

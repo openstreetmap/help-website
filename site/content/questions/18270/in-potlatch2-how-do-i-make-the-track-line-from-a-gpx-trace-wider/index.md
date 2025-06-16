@@ -80,7 +80,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>The GPX data comes from Globalsat GB580P, it is a fine cycle computer and very accurate. I load the data in Sporttracks 3.1 and than export it as GPX I like to correct the data in potlatch 2 but the track line is very small, and lot of times exactly matching the road line and therefore not shown. see this track for example <a href="http://www.openstreetmap.org/user/albertla/traces/1365831">http://www.openstreetmap.org/user/albertla/traces/1365831</a>.</p>
+<p>The GPX data comes from Globalsat GB580P, it is a fine cycle computer and very accurate. I load the data in Sporttracks 3.1 and than export it as GPX I like to correct the data in potlatch 2 but the track line is very small, and lot of times exactly matching the road line and therefore not shown. see this track for example <a href="https://www.openstreetmap.org/user/albertla/traces/1365831">https://www.openstreetmap.org/user/albertla/traces/1365831</a>.</p>
 <p>thanks for your reaction, I just started to modify the streetmap, but learning still a lot over the possibilities.<br />
 </p>
 </div>

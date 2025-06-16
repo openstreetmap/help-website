@@ -173,7 +173,7 @@ One Answer:
 <div id="post-72538-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/Untitled.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/Untitled.jpg" alt="alt text" /></p>
 <p>I have tried replace the "hamlet" tag with "neighborhood" but have been unable to figure that out, so I just deleted the node.</p>
 <p>Here is a screen shot of how that area that appears to be runways because of its shading and the way the streets are laid out. Please remove the shading or let me know how to do it.</p>
 <p>Thank you for your help.</p>

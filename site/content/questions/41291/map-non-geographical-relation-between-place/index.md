@@ -208,7 +208,7 @@ osqa_accepted = false
 <div id="post-41302-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: umm, okay.. right. I did not think long enough on "supplies", I think. It would be good if <a href="http://help.openstreetmap.org/users/10556/moxgreen"></a><a href="http://help.openstreetmap.org/users/10556/moxgreen">@moxgreen</a> could explain in more words what is meant by "supplies" here.</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: umm, okay.. right. I did not think long enough on "supplies", I think. It would be good if <a href="https://help.openstreetmap.org/users/10556/moxgreen"></a><a href="https://help.openstreetmap.org/users/10556/moxgreen">@moxgreen</a> could explain in more words what is meant by "supplies" here.</p>
 </div>
 <div id="comment-41302-info" class="comment-info">
 <span class="comment-age">(24 Feb '15, 02:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

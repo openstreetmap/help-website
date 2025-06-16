@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Having searched the wiki, there doesn't seem to be any suggestion for such a tag though <a href="http://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a> seems to be suitable for the signs itself.</p>
+<p>Having searched the wiki, there doesn't seem to be any suggestion for such a tag though <a href="https://wiki.openstreetmap.org/wiki/Tag:information%3Dguidepost">information=guidepost</a> seems to be suitable for the signs itself.</p>
 <p>Because of that I searched <a href="http://taginfo.openstreetmap.org/">taginfo</a> for the word <a href="http://taginfo.openstreetmap.org/search?q=guidepost#keys">guidepost</a> and there is one use of guidepost=tree and a small smattering of uses of guidepost:material , guidepost_type and guidepost:type</p>
 <p>I would suggest picking whichever one of those you think most suitable for now, and if anything gains more widespread adoption in the future they can always be updated.</p>
 </div>

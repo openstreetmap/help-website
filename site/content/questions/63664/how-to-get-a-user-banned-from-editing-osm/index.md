@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Looks like the accepted answer <a href="https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism/221">https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism/221</a> covers it quite well.</p>
+<p>Looks like the accepted answer <a href="/questions/216/what-should-i-do-about-vandalism/221">https://help.openstreetmap.org/questions/216/what-should-i-do-about-vandalism/221</a> covers it quite well.</p>
 <p>I emailed data@osmfoundation.org with the details and they put a 96 hour ban in place: <a href="https://www.openstreetmap.org/user_blocks/1998">https://www.openstreetmap.org/user_blocks/1998</a></p>
 </div>
 <div class="answer-controls post-controls">

@@ -202,7 +202,7 @@ osqa_accepted = true
 4
 </div>
 <div class="comment-text">
-<p>source=Bing is the recommended (and commonly used) source tag for changesets made using Bing aerial imagery. See e.g. <a href="http://wiki.openstreetmap.org/wiki/Bing#Source_tag">Bing#Source_tag</a> in the wiki, but also other pages.</p>
+<p>source=Bing is the recommended (and commonly used) source tag for changesets made using Bing aerial imagery. See e.g. <a href="https://wiki.openstreetmap.org/wiki/Bing#Source_tag">Bing#Source_tag</a> in the wiki, but also other pages.</p>
 </div>
 <div id="comment-18298-info" class="comment-info">
 <span class="comment-age">(08 Dec '12, 19:15)</span> <span class="comment-user userinfo">Tordanik</span>

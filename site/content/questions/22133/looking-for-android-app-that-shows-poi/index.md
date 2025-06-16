@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have an intensive look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Android">Android</a></p>
+<p>Have an intensive look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Android">Android</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

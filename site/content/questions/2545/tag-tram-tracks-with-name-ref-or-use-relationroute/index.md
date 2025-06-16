@@ -39,11 +39,11 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>As a related question to <a href="http://help.openstreetmap.org/questions/2307/does-the-name-tag-make-sense-for-a-tram-track">Does the name tag make sense for a tram track?</a>:</p>
+<p>As a related question to <a href="/questions/2307/does-the-name-tag-make-sense-for-a-tram-track">Does the name tag make sense for a tram track?</a>:</p>
 <p>Is it a good idea at all to use name=* and especially ref=* on tram tracks?</p>
 <p>Usually (at least in Germany where I live) tram tracks themselves do not have names or numbers -- only the tram lines which run over them do. People don't say "that is the tram track 632", they say "tram 632 runs there".</p>
-<p>At present the wiki for <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram">railway=tram</a> recommends to use name=/ref= for the line name/reference.</p>
-<p>It seems to me that name (if applicable) and number of a tram line are better mapped using the relation "route" (see <a href="http://wiki.openstreetmap.org/wiki/Relation:route">Relation:route</a>).</p>
+<p>At present the wiki for <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram">railway=tram</a> recommends to use name=/ref= for the line name/reference.</p>
+<p>It seems to me that name (if applicable) and number of a tram line are better mapped using the relation "route" (see <a href="https://wiki.openstreetmap.org/wiki/Relation:route">Relation:route</a>).</p>
 <ul>
 <li>It is the established mechanism for mapping public transport lines (I believe)</li>
 <li>It makes it easier to find the complete extent of a line - if you use name=* on the track, software must piece together all tracks with the same name to find the line (and what about misspelled names?)</li>

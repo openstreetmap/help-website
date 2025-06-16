@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Bing is just one of various <a href="http://wiki.openstreetmap.org/wiki/Potential_Datasources">potential datasources</a> in addition to GPS traces, photos and similar imagery as well as local knowledge. We don't rely on them in any way, <a href="http://wiki.openstreetmap.org/wiki/Bing">Bing</a> has just granted us the right to trace from their aerial imagery. There is other aerial imagery available from which we are allowed to trace, but Bing has the largest <a href="http://ant.dev.openstreetmap.org/bingimageanalyzer/?lat=-12&amp;zoom=1">coverage</a> and often a pretty good resolution. And there are no drawbacks for us, OSM will remain a free geographic database.</p>
+<p>Bing is just one of various <a href="https://wiki.openstreetmap.org/wiki/Potential_Datasources">potential datasources</a> in addition to GPS traces, photos and similar imagery as well as local knowledge. We don't rely on them in any way, <a href="https://wiki.openstreetmap.org/wiki/Bing">Bing</a> has just granted us the right to trace from their aerial imagery. There is other aerial imagery available from which we are allowed to trace, but Bing has the largest <a href="http://ant.dev.openstreetmap.org/bingimageanalyzer/?lat=-12&amp;zoom=1">coverage</a> and often a pretty good resolution. And there are no drawbacks for us, OSM will remain a free geographic database.</p>
 <p>Looking at the current global surveillance disclosures there is nothing you should be worried about. If you download Bing aerial imagery then the only information Microsoft, the NSA or any other intelligence agency are able to extract is:</p>
 <ul>
 <li>Your current IP address</li>

@@ -119,7 +119,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Use the new 'share' button on the right-hand side of the map.</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Screen_Shot_2013-09-18_at_21.14.02.png" alt="alt text" /></p>
+<p><img src="/upfiles/Screen_Shot_2013-09-18_at_21.14.02.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -177,7 +177,7 @@ One Answer:
 <div id="post-26914-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Amsterdam - where else? <a href="http://www.openstreetmap.org/#map=19/52.35423/4.85464">http://www.openstreetmap.org/#map=19/52.35423/4.85464</a></p>
+<p>Amsterdam - where else? <a href="https://www.openstreetmap.org/#map=19/52.35423/4.85464">https://www.openstreetmap.org/#map=19/52.35423/4.85464</a></p>
 </div>
 <div id="comment-26914-info" class="comment-info">
 <span class="comment-age">(02 Oct '13, 20:15)</span> <span class="comment-user userinfo">Richard ♦</span>

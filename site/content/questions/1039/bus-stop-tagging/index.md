@@ -112,9 +112,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You don't have to put all information on the stop itself. Specify what describes the bus stop with the tags described on <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">the wiki page about bus_stop</a>. Tag the name of the station and/or its reference on the node. You can add more details if you wish (shelter, bench, wheelchair). The location is really optional since the node is self descriptive.<br />
-Describe the buses lines separately with <a href="http://wiki.openstreetmap.org/wiki/Relation:route">relations of type 'route'</a>.<br />
-There is a portal about buses on the wiki : <a href="http://wiki.openstreetmap.org/wiki/Buses"></a><a href="http://wiki.openstreetmap.org/wiki/Buses"></a><a href="http://wiki.openstreetmap.org/wiki/Buses">http://wiki.openstreetmap.org/wiki/Buses</a><br />
+<p>You don't have to put all information on the stop itself. Specify what describes the bus stop with the tags described on <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">the wiki page about bus_stop</a>. Tag the name of the station and/or its reference on the node. You can add more details if you wish (shelter, bench, wheelchair). The location is really optional since the node is self descriptive.<br />
+Describe the buses lines separately with <a href="https://wiki.openstreetmap.org/wiki/Relation:route">relations of type 'route'</a>.<br />
+There is a portal about buses on the wiki : <a href="https://wiki.openstreetmap.org/wiki/Buses"></a><a href="https://wiki.openstreetmap.org/wiki/Buses"></a><a href="https://wiki.openstreetmap.org/wiki/Buses">https://wiki.openstreetmap.org/wiki/Buses</a><br />
 For more complex cases (lines changing during the day/the week, routes depending on direction, etc) where we don't have a consensus on the wiki, you can subscribe to the active mailing-list dedicated for public transportation in OSM at '<a href="http://lists.openstreetmap.org/listinfo/talk-transit">talk-transit</a>'.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -172,7 +172,7 @@ For more complex cases (lines changing during the day/the week, routes depending
 <li>Bus stop number looks like a ref=</li>
 <li>Bus stop location looks like an address, this could be an alternative to storing the location as a position. This should be tagged with addr:*= on the coresponding addresses and not on the bus stop.</li>
 <li>Bus stop name should be tagged as name=</li>
-<li>Bus routes can be tagged using a relation. See <a href="http://wiki.openstreetmap.org/wiki/Relation:route#Bus_Routes_.28also_trolley_bus.29">the wiki</a></li>
+<li>Bus routes can be tagged using a relation. See <a href="https://wiki.openstreetmap.org/wiki/Relation:route#Bus_Routes_.28also_trolley_bus.29">the wiki</a></li>
 </ol>
 <p>I hope this was helpfull.</p>
 </div>

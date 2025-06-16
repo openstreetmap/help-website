@@ -106,7 +106,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>It is properly connected:</p>
-<p><a href="http://www.openstreetmap.org/way/409253131">http://www.openstreetmap.org/way/409253131</a></p>
+<p><a href="https://www.openstreetmap.org/way/409253131">https://www.openstreetmap.org/way/409253131</a></p>
 <p>Notice the 'part of way Green Gate Lane (19586834))' on the left panel. That node appearing in both roads verifies the connection.</p>
 <p>The services that provide the directions have some delay in processing updates so it should just be a matter of waiting for them to catch the update. I'm not sure what the update frequencies are.</p>
 </div>

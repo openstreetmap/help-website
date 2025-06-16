@@ -132,7 +132,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/RU:Beginners%27_guide">Помогает ли это?</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/RU:Beginners%27_guide">Помогает ли это?</a></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

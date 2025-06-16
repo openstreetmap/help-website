@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This question was originally added as an answer to <a href="https://help.openstreetmap.org/questions/20281/my-street-is-not-in-the-map">this other question</a>.</p>
+<p>This question was originally added as an answer to <a href="/questions/20281/my-street-is-not-in-the-map">this other question</a>.</p>
 </div>
 <div id="comment-20305-info" class="comment-info">
 <span class="comment-age">(26 Feb '13, 14:30)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

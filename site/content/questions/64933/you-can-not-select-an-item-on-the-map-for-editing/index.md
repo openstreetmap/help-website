@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>You can not select an item on the map for editing</p>
-<p><a href="https://www.openstreetmap.org/edit#map=17/64.44088/76.50980">https://www.openstreetmap.org/edit#map=17/64.44088/76.50980</a> <img src="https://help.openstreetmap.org/upfiles/Image1_UkvK6yP.jpg" alt="alt text" /></p>
+<p><a href="https://www.openstreetmap.org/edit#map=17/64.44088/76.50980">https://www.openstreetmap.org/edit#map=17/64.44088/76.50980</a> <img src="/upfiles/Image1_UkvK6yP.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-editing" rel="tag" title="see questions tagged &#39;editing&#39;">editing</span>

@@ -125,7 +125,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Hi and welcome to OSM :)</p>
 <p>You need to upload your GPS tracks via the webinterface and wait till they are processed and added to our global tracks database.</p>
-<p>You already uploaded them and they are available: <a href="http://www.openstreetmap.org/user/aaronal/traces">http://www.openstreetmap.org/user/aaronal/traces</a> Then you start the iD editor for the covered area that is embedded in the website (press edit) and enable "OSM GPS traces" at the right layer menu.</p>
+<p>You already uploaded them and they are available: <a href="https://www.openstreetmap.org/user/aaronal/traces">https://www.openstreetmap.org/user/aaronal/traces</a> Then you start the iD editor for the covered area that is embedded in the website (press edit) and enable "OSM GPS traces" at the right layer menu.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -207,7 +207,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I couldn't find it easily either with iii's help its here. This shows the box you need to tic to see your trace in iD<img src="http://help.openstreetmap.org/upfiles/trace_box.JPG" alt="alt text" /></p>
+<p>I couldn't find it easily either with iii's help its here. This shows the box you need to tic to see your trace in iD<img src="/upfiles/trace_box.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

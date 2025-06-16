@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>The logo is licensed under CC BY-SA 2.0. See e.g. <a href="http://commons.wikimedia.org/wiki/File:Openstreetmap_logo.svg">http://commons.wikimedia.org/wiki/File:Openstreetmap_logo.svg</a></p>
-<p>Note, however, that the OpenStreetMap Foundation owns the Trademarks for the OpenStreetMap Logo in the UK. An application for European trademark for the name 'OpenStreetMap' is also in hand ( <a href="http://wiki.openstreetmap.org/wiki/Trademark">http://wiki.openstreetmap.org/wiki/Trademark</a> ). This means there are additional restrictions on using the logo, at least for commercial use (and maybe even for non-commercial use).</p>
+<p>Note, however, that the OpenStreetMap Foundation owns the Trademarks for the OpenStreetMap Logo in the UK. An application for European trademark for the name 'OpenStreetMap' is also in hand ( <a href="https://wiki.openstreetmap.org/wiki/Trademark">https://wiki.openstreetmap.org/wiki/Trademark</a> ). This means there are additional restrictions on using the logo, at least for commercial use (and maybe even for non-commercial use).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

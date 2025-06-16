@@ -116,7 +116,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Everything that you edit becomes live on OpenStreetMap immediately. There's no review process (though other mappers may of course edit it if they spot any problems <em>after</em> it has gone live and been shared with all other OpenStreetMap users).</p>
-<p>The answer to <a href="https://help.openstreetmap.org/questions/16418/revision-control-for-map-changes">this previous question</a> might help to provide a little more detail.</p>
+<p>The answer to <a href="/questions/16418/revision-control-for-map-changes">this previous question</a> might help to provide a little more detail.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -81,7 +81,7 @@ motor_vehicle=no</code></pre>
 1
 </div>
 <div class="comment-text">
-<p>There were a couple of similar previous questions asked - <a href="https://help.openstreetmap.org/questions/41053/prow-tagging-england-wales">https://help.openstreetmap.org/questions/41053/prow-tagging-england-wales</a> and <a href="https://help.openstreetmap.org/questions/37777/rights-of-way-england-and-wales">https://help.openstreetmap.org/questions/37777/rights-of-way-england-and-wales</a> . If you read past the disagreement between the two mappers there there's also useful info about how people tag rights of way in England and Wales.</p>
+<p>There were a couple of similar previous questions asked - <a href="/questions/41053/prow-tagging-england-wales">https://help.openstreetmap.org/questions/41053/prow-tagging-england-wales</a> and <a href="/questions/37777/rights-of-way-england-and-wales">https://help.openstreetmap.org/questions/37777/rights-of-way-england-and-wales</a> . If you read past the disagreement between the two mappers there there's also useful info about how people tag rights of way in England and Wales.</p>
 </div>
 <div id="comment-42502-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 10:38)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

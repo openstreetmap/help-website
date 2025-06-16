@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are answer to all of these questions, and many more, on the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a> page of the OSM wiki - for example <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.2">this page</a> linked from there describes the upload process and <a href="http://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">this one</a>, online editing. Have a read through those and if you've got any further specific questions (and the chances are that you will have - the only silly question is the one that doesn't get asked) ask them here.</p>
+<p>There are answer to all of these questions, and many more, on the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginners' guide</a> page of the OSM wiki - for example <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.2">this page</a> linked from there describes the upload process and <a href="https://wiki.openstreetmap.org/wiki/Beginners_Guide_1.3.2">this one</a>, online editing. Have a read through those and if you've got any further specific questions (and the chances are that you will have - the only silly question is the one that doesn't get asked) ask them here.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

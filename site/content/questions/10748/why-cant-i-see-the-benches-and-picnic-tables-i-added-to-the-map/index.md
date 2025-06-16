@@ -125,9 +125,9 @@ osqa_accepted = false
 <div class="answer-body">
 <p>The default view on <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> can't show everything that is added, and benches and picnic tables are amongst those items that don't. The default view is just that though (and is powered by Mapnik). If you want to produce your own maps you can include or exclude whatever details you want. See for example:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Maperitive">Maperitive</a></li>
 <li><a href="http://switch2osm.org">Switch2osm</a></li>
-<li>and generally <a href="http://wiki.openstreetmap.org/wiki/Category:Renderers">this wiki category</a>.</li>
+<li>and generally <a href="https://wiki.openstreetmap.org/wiki/Category:Renderers">this wiki category</a>.</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">
@@ -148,7 +148,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>Especially check out <a href="http://wiki.openstreetmap.org/wiki/TileMill">TileMill</a>, which I have found to be an excellent tool for easily creating custom maps, especially if you have any familiarity with CSS. Check out the <a href="https://github.com/mapbox/osm-bright">OSM Bright</a> stylesheet which will help you get up and running quickly. Adding benches, tables, etc. is easy from there.</p>
+<p>Especially check out <a href="https://wiki.openstreetmap.org/wiki/TileMill">TileMill</a>, which I have found to be an excellent tool for easily creating custom maps, especially if you have any familiarity with CSS. Check out the <a href="https://github.com/mapbox/osm-bright">OSM Bright</a> stylesheet which will help you get up and running quickly. Adding benches, tables, etc. is easy from there.</p>
 </div>
 <div id="comment-10770-info" class="comment-info">
 <span class="comment-age">(24 Feb '12, 14:56)</span> <span class="comment-user userinfo">JoshD</span>
@@ -225,7 +225,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Enter "map style" in the search box above and read some of the responses. Especially, read the answer to <a href="http://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>.</p>
+<p>Enter "map style" in the search box above and read some of the responses. Especially, read the answer to <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">"I have made edits but they don't show up on the map"</a>.</p>
 <p>Essentially, you will have to create your own map if you require specific amenities to be shown.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -276,7 +276,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You find some by using the search box, if that's any use to you.<img src="http://help.openstreetmap.org/upfiles/zzzzpicnic_tables_1.JPG" alt="alt text" /></p>
+<p>You find some by using the search box, if that's any use to you.<img src="/upfiles/zzzzpicnic_tables_1.JPG" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -378,7 +378,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Please note this is <em>not</em> a place for discussions but a Question&amp;Answer system. If you want to start a discussion use our forum or mailing lists.</p>
-<p><em>The</em> map you are talking about is just one of many many OSM based maps. There are <a href="http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">lots of other OSM based services</a> displaying different objects. Some also offer to choose the types of POIs to display, for example <a href="http://openstreetbrowser.org/">OpenStreetBrowser</a>. Of course it would be nice to have such a feature on our main map, too, but we need people to get involved and implement/improve such a feature. Just wishing for it doesn't automagically make it appear, unfortunately.</p>
+<p><em>The</em> map you are talking about is just one of many many OSM based maps. There are <a href="https://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services">lots of other OSM based services</a> displaying different objects. Some also offer to choose the types of POIs to display, for example <a href="http://openstreetbrowser.org/">OpenStreetBrowser</a>. Of course it would be nice to have such a feature on our main map, too, but we need people to get involved and implement/improve such a feature. Just wishing for it doesn't automagically make it appear, unfortunately.</p>
 <p>Also take a look at our <a href="https://wiki.openstreetmap.org/wiki/Top_Ten_Tasks#Clickable_POIs_on_the_frontpage">top then tasks</a>. <em>Clickable POIs</em> and a <em>POI inspection tool</em> are very similar to your suggestion and high priority. Maybe you can help to implement them.</p>
 </div>
 <div id="comment-22031-info" class="comment-info">

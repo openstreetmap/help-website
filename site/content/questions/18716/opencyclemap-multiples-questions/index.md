@@ -43,7 +43,7 @@ osqa_accepted = true
 <p>I know it's not a good idea to pack multiple questions in the same thread, but I was too lazy to open several :-)</p>
 <p>I'd like to use OpenCycleMap and have the following questions:</p>
 <ol>
-<li>How to hide the two squares at the bottom? <img src="http://help.openstreetmap.org/upfiles/opencyclemap.questions.jpg" /></li>
+<li>How to hide the two squares at the bottom? <img src="/upfiles/opencyclemap.questions.jpg" /></li>
 <li>How to hide details (houses in block)?</li>
 <li>How to add topography infos (hills)?</li>
 <li>How to contribute (missing cycle lanes)?</li>
@@ -142,7 +142,7 @@ One Answer:
 <div class="answer-body">
 <p>Answering your multiple questions briefly (it is annoying that you know your multiple questions is annoying, so my answers are short).</p>
 <p>Changing what features are shown on a map tile is not possible, unless you render your own map tiles. See <a href="http://switch2osm.org">switch2osm</a>.</p>
-<p>To contribute to the map (adding cycle lanes) read the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a>.</p>
+<p>To contribute to the map (adding cycle lanes) read the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">beginners' guide</a>.</p>
 <p>Downloading map tiles for off line use may breach the tile usage policy. The OSM data is freely available, scraping map tiles has a high impact on the servers and is not recommended. Andy, who created the cyclemap, does sell a <a href="http://shop.opencyclemap.org/collections/sd-cards">micro SD card</a> with opencyclemap data on it for some GPS receivers.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -174,7 +174,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>The contact wiki page might help <a href="http://wiki.openstreetmap.org/wiki/Contact">http://wiki.openstreetmap.org/wiki/Contact</a></p>
+<p>The contact wiki page might help <a href="https://wiki.openstreetmap.org/wiki/Contact">https://wiki.openstreetmap.org/wiki/Contact</a></p>
 </div>
 <div id="comment-18740-info" class="comment-info">
 <span class="comment-age">(28 Dec '12, 09:54)</span> <span class="comment-user userinfo">ChrisH</span>

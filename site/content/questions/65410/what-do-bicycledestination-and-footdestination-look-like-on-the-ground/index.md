@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "What do bicycle=destination and foot=destination look like on the ground?"
-description = '''Here is an example of a way that has these tags: http://www.openstreetmap.org/way/493805806 I&#x27;m curious what these signs look like, as I have never seen any with this meaning, and I am not aware of any such signs in the Manual on Uniform Traffic Control Devices.'''
+description = '''Here is an example of a way that has these tags: https://www.openstreetmap.org/way/493805806 I&#x27;m curious what these signs look like, as I have never seen any with this meaning, and I am not aware of any such signs in the Manual on Uniform Traffic Control Devices.'''
 date = "2018-08-17T18:26:00Z"
 lastmod = "2018-08-19T19:02:00Z"
 weight = 65410
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Here is an example of a way that has these tags: <a href="http://www.openstreetmap.org/way/493805806">http://www.openstreetmap.org/way/493805806</a> I'm curious what these signs look like, as I have never seen any with this meaning, and I am not aware of any such signs in the Manual on Uniform Traffic Control Devices.</p>
+<p>Here is an example of a way that has these tags: <a href="https://www.openstreetmap.org/way/493805806">https://www.openstreetmap.org/way/493805806</a> I'm curious what these signs look like, as I have never seen any with this meaning, and I am not aware of any such signs in the Manual on Uniform Traffic Control Devices.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-foot" rel="tag" title="see questions tagged &#39;foot&#39;">foot</span> <span class="post-tag tag-link-access" rel="tag" title="see questions tagged &#39;access&#39;">access</span> <span class="post-tag tag-link-destination" rel="tag" title="see questions tagged &#39;destination&#39;">destination</span> <span class="post-tag tag-link-bicycle" rel="tag" title="see questions tagged &#39;bicycle&#39;">bicycle</span> <span class="post-tag tag-link-signs" rel="tag" title="see questions tagged &#39;signs&#39;">signs</span>

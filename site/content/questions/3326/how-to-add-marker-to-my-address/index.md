@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to add marker to my address?"
-description = '''hai, 1) I have an example openstreetmap code for map integration in my site. In that code, marking is not working. The link for the code iam using is http://wiki.openstreetmap.org/wiki/Google_Maps_Example in this page iam using the code(Example - Using Google Maps API v3 setting OSM as a base map la...'''
+description = '''hai, 1) I have an example openstreetmap code for map integration in my site. In that code, marking is not working. The link for the code iam using is https://wiki.openstreetmap.org/wiki/Google_Maps_Example in this page iam using the code(Example - Using Google Maps API v3 setting OSM as a base map la...'''
 date = "2011-02-24T06:10:00Z"
 lastmod = "2011-02-24T11:40:00Z"
 weight = 3326
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>hai,</p>
-<p>1) I have an example openstreetmap code for map integration in my site. In that code, marking is not working. The link for the code iam using is <a href="http://wiki.openstreetmap.org/wiki/Google_Maps_Example">http://wiki.openstreetmap.org/wiki/Google_Maps_Example</a> in this page iam using the code(Example - Using Google Maps API v3 setting OSM as a base map layer). This code helps me a lot. please help me. (or) 2) In the same page code(Example Using Google Maps API V2 (marked as Deprecated by Google)has not functioning the mouse scroll zoom in and zoom out. please help me in using it.</p>
+<p>1) I have an example openstreetmap code for map integration in my site. In that code, marking is not working. The link for the code iam using is <a href="https://wiki.openstreetmap.org/wiki/Google_Maps_Example">https://wiki.openstreetmap.org/wiki/Google_Maps_Example</a> in this page iam using the code(Example - Using Google Maps API v3 setting OSM as a base map layer). This code helps me a lot. please help me. (or) 2) In the same page code(Example Using Google Maps API V2 (marked as Deprecated by Google)has not functioning the mouse scroll zoom in and zoom out. please help me in using it.</p>
 <p>My first priority goes to the 1st one.</p>
 <p>Thank you in advance.</p>
 </div>
@@ -114,7 +114,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Can you provide more details about your problem? The code in the example you mention in the first point I cut and pasted into a new web page and it seems to work fine - I uploaded it to <a href="http://www.loach.me.uk/osm/googletest.htm">http://www.loach.me.uk/osm/googletest.htm</a> but it also worked on my local drive.</p>
-<p>Incidentally, have you also seen the OpenLayers alternative example in case that is of use? <a href="http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">http://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example</a> (and other examples in the same category) I played with that here: <a href="http://www.loach.me.uk/tendringcamra/">http://www.loach.me.uk/tendringcamra/</a> (I realise it doesn't display correctly at present, but the data displayed is also outdated)</p>
+<p>Incidentally, have you also seen the OpenLayers alternative example in case that is of use? <a href="https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example">https://wiki.openstreetmap.org/wiki/Openlayers_POI_layer_example</a> (and other examples in the same category) I played with that here: <a href="http://www.loach.me.uk/tendringcamra/">http://www.loach.me.uk/tendringcamra/</a> (I realise it doesn't display correctly at present, but the data displayed is also outdated)</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -167,7 +167,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>An answer to your orginal question (in the title) is <a href="http://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker">there</a> :</p>
+<p>An answer to your orginal question (in the title) is <a href="https://wiki.openstreetmap.org/wiki/Browsing#Adding_a_Marker">there</a> :</p>
 <blockquote>
 <p>The simplest way to get a marker is to click 'permalink', then modify lat and lon to mlat and mlon respectively. If you want the marker to appear in a specific position without knowing the exact coordinates, simply double-click a point on the map. The map will be zoomed in to that point and the point will be centered.</p>
 </blockquote>

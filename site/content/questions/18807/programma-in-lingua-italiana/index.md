@@ -130,9 +130,9 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/IT:Potlatch_2">Potlatch 2 è l'editor online di OpenStreetMap</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/IT:JOSM">JOSM è il "Java OpenStreetMap Editor"</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Italy">OpenStreetMap, il portale italiano</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/IT:Potlatch_2">Potlatch 2 è l'editor online di OpenStreetMap</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/IT:JOSM">JOSM è il "Java OpenStreetMap Editor"</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/WikiProject_Italy">OpenStreetMap, il portale italiano</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

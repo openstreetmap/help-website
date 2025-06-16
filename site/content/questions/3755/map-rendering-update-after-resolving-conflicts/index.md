@@ -110,7 +110,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the section <a href="http://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a> in our <a href="http://wiki.openstreetmap.org/wiki/FAQ">FAQ</a>.</p>
+<p>See the section <a href="https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F">I have just made some changes to the map. How do I get to see my changes?</a> in our <a href="https://wiki.openstreetmap.org/wiki/FAQ">FAQ</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

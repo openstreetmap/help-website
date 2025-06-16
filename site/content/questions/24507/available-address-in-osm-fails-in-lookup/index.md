@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are very many different maps generated out of OSM data for Garmin devices, some support address lookup some don't (it is a feature that only recently has been reversed engineered). Unluckily the table <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> doesn't expicitly list the functionality so you will have to check with whoever produced the map you are using.</p>
+<p>There are very many different maps generated out of OSM data for Garmin devices, some support address lookup some don't (it is a feature that only recently has been reversed engineered). Unluckily the table <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download">https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/Download</a> doesn't expicitly list the functionality so you will have to check with whoever produced the map you are using.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

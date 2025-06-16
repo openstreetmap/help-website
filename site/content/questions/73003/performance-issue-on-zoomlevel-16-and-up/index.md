@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>We are having performance issues with the Dutch OSM tiles. Zoomlevel 15 and lower seem fine. From 16 and higher, a lot don't even show up (404). <a href="https://b.tile.openstreetmap.org/16/33927/21415.png">https://b.tile.openstreetmap.org/16/33927/21415.png</a> for example. It's not just in our application. Also on the main page.</p>
-<p><img src="https://help.openstreetmap.org/upfiles/www.openstreetmap.org_(iPad).png" alt="screenshot" /></p>
+<p><img src="/upfiles/www.openstreetmap.org_(iPad).png" alt="screenshot" /></p>
 <p>Is the server overloaded?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

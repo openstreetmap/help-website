@@ -186,7 +186,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Some information on how to map specific objects are on the wiki page at <a href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a> . If you have something that is disused, the osm preference for that is the <code>disused</code> prefix. So, if you have a disused colliery tip, you could tag it <code>disused:landuse=colliery_tip</code>.</p>
+<p>Some information on how to map specific objects are on the wiki page at <a href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> . If you have something that is disused, the osm preference for that is the <code>disused</code> prefix. So, if you have a disused colliery tip, you could tag it <code>disused:landuse=colliery_tip</code>.</p>
 <p>Another good way to see how to tag a specific thing is to look at others in the are and see how they are tagged. And taginfo, as mentioned.</p>
 <p>A prominent german colliery tip is tagged simply as <code>landuse=landfill</code>. I would think that is bad, though, because then there is no distinction between a waste dump landfill and a coal dump tip.</p>
 <p>So, to sum it up:</p>
@@ -244,7 +244,7 @@ landuse=forest/grass/heath/...</code></pre>
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi here’s a link to the region of Belgium, a mining residue is called Terrill (France), <a href="http://www.openstreetmap.org/#map=15/50.3918/4.4309">http://www.openstreetmap.org/#map=15/50.3918/4.4309</a> since most Terrills or pits are reused there’s hardly a tag. Consider landuse - colliery, colliery:disused or abandoned -fi coal_mine. Or use historic instead of disused / abandoned, both are not appropriate since the mine is hardly or impossible to reopen.</p>
+<p>Hi here’s a link to the region of Belgium, a mining residue is called Terrill (France), <a href="https://www.openstreetmap.org/#map=15/50.3918/4.4309">https://www.openstreetmap.org/#map=15/50.3918/4.4309</a> since most Terrills or pits are reused there’s hardly a tag. Consider landuse - colliery, colliery:disused or abandoned -fi coal_mine. Or use historic instead of disused / abandoned, both are not appropriate since the mine is hardly or impossible to reopen.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

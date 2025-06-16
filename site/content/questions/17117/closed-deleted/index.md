@@ -124,7 +124,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I'm not sure this is really a place for religious discussion, but <a href="http://en.wikipedia.org/wiki/Mormons">Mormons</a> think of themselves as Christian. There are many different Christian denominations listed on the non-exhaustive <a href="http://wiki.openstreetmap.org/wiki/Key:denomination#Christian_denominations">wiki list</a>, and while they all have slightly different beliefs they probably all think of themselves as real Christians. The only realistic solution is to accept that the religions think of themselves as Christian, or risk the beginning of religious (edit) wars.</p>
+<p>I'm not sure this is really a place for religious discussion, but <a href="http://en.wikipedia.org/wiki/Mormons">Mormons</a> think of themselves as Christian. There are many different Christian denominations listed on the non-exhaustive <a href="https://wiki.openstreetmap.org/wiki/Key:denomination#Christian_denominations">wiki list</a>, and while they all have slightly different beliefs they probably all think of themselves as real Christians. The only realistic solution is to accept that the religions think of themselves as Christian, or risk the beginning of religious (edit) wars.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -145,7 +145,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>See also the "on the ground rule" on the wiki disputes page - it's what locals self-identify as that's most important.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule">http://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule">https://wiki.openstreetmap.org/wiki/Disputes#On_the_Ground_Rule</a></p>
 </div>
 <div id="comment-17124-info" class="comment-info">
 <span class="comment-age">(23 Oct '12, 12:02)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

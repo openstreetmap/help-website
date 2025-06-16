@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's a few <em>building=container</em> in <a href="http://taginfo.openstreetmap.org/keys/building#values">taginfo</a> that seem to fit better than my initial idea of <em>building=prefab</em>. You might also want to tag <a href="http://wiki.openstreetmap.org/wiki/Simple_3D_Buildings#Tags_for_buildings_outlines_and_parts"><em>roof:shape=flat</em> and <em>height=*</em></a>.</p>
+<p>There's a few <em>building=container</em> in <a href="http://taginfo.openstreetmap.org/keys/building#values">taginfo</a> that seem to fit better than my initial idea of <em>building=prefab</em>. You might also want to tag <a href="https://wiki.openstreetmap.org/wiki/Simple_3D_Buildings#Tags_for_buildings_outlines_and_parts"><em>roof:shape=flat</em> and <em>height=*</em></a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -141,7 +141,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Why on earth in feet? <a href="http://wiki.openstreetmap.org/wiki/Key:length">length</a> is in meters by default.</p>
+<p>Why on earth in feet? <a href="https://wiki.openstreetmap.org/wiki/Key:length">length</a> is in meters by default.</p>
 </div>
 <div id="comment-25268-info" class="comment-info">
 <span class="comment-age">(12 Aug '13, 20:39)</span> <span class="comment-user userinfo">scai ♦</span>

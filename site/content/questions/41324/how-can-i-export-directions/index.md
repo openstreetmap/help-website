@@ -133,7 +133,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Just send the directions to someone else, enter the details and copy the full URL that you see in your browser's addres bar, for example:</p>
-<p><a href="http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=37.77928%2C-122.41927%3B37.34385%2C-121.88313#map=10/37.5625/-122.1501">http://www.openstreetmap.org/directions?engine=osrm_car&amp;route=37.77928%2C-122.41927%3B37.34385%2C-121.88313#map=10/37.5625/-122.1501</a></p>
+<p><a href="https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=37.77928%2C-122.41927%3B37.34385%2C-121.88313#map=10/37.5625/-122.1501">https://www.openstreetmap.org/directions?engine=osrm_car&amp;route=37.77928%2C-122.41927%3B37.34385%2C-121.88313#map=10/37.5625/-122.1501</a></p>
 <p>To send the <em>text</em> of the directions, just copy the text from "Directions" to the bottom of the page and paste it into e.g. a mail message.</p>
 <p>... or if that isn't what you want to do, could you perhaps describe what you'd like to be able to do (or even better, describe it over at Github in an issue added to describe a possible enhancement)?</p>
 </div>
@@ -238,7 +238,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> -&gt; Online Routing to find some OSM based websites where some of them can export the routing als GPX or KML file.</p>
+<p>Have a look at <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> -&gt; Online Routing to find some OSM based websites where some of them can export the routing als GPX or KML file.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

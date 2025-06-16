@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-45030-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Okay I found the proposal process page. <a href="http://wiki.openstreetmap.org/wiki/Proposal_process">http://wiki.openstreetmap.org/wiki/Proposal_process</a></p>
+<p>Okay I found the proposal process page. <a href="https://wiki.openstreetmap.org/wiki/Proposal_process">https://wiki.openstreetmap.org/wiki/Proposal_process</a></p>
 <p>So I'm following that route now. Thanks!</p>
 </div>
 <div id="comment-45030-info" class="comment-info">
@@ -234,7 +234,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You ask a question like this &amp; people like me go and use your tag: <a href="http://www.openstreetmap.org/node/34733637">http://www.openstreetmap.org/node/34733637</a></p>
+<p>You ask a question like this &amp; people like me go and use your tag: <a href="https://www.openstreetmap.org/node/34733637">https://www.openstreetmap.org/node/34733637</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

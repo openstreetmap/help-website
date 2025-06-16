@@ -162,7 +162,7 @@ One Answer:
 <div id="post-11283-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>If you don't want to run the software then you will have to pay someone to do it for you. You might want to check out the standardised offerings of <a href="http://digitaler-lageplan.de/">http://digitaler-lageplan.de/</a> or <a href="http://geodressing.de/,">http://geodressing.de/,</a> or consult one of the professionals listed on <a href="http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">http://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> to help with your project.</p>
+<p>If you don't want to run the software then you will have to pay someone to do it for you. You might want to check out the standardised offerings of <a href="http://digitaler-lageplan.de/">http://digitaler-lageplan.de/</a> or <a href="http://geodressing.de/,">http://geodressing.de/,</a> or consult one of the professionals listed on <a href="https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services">https://wiki.openstreetmap.org/wiki/Commercial_OSM_Software_and_Services</a> to help with your project.</p>
 </div>
 <div id="comment-11283-info" class="comment-info">
 <span class="comment-age">(17 Mar '12, 20:08)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>
@@ -186,7 +186,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>There are many methods for rendering images from OSM files, none of which are particularly easy. For more information, please see <a href="http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website">http://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a> or <a href="http://wiki.openstreetmap.org/wiki/Renderer.">http://wiki.openstreetmap.org/wiki/Renderer.</a> If doing the rendering yourself is too hard, you might want to try downloading OSM-based tiles from a different provider. Please see <a href="http://wiki.openstreetmap.org/wiki/TMS#OSM_TMS_Servers.">http://wiki.openstreetmap.org/wiki/TMS#OSM_TMS_Servers.</a></p>
+<p>There are many methods for rendering images from OSM files, none of which are particularly easy. For more information, please see <a href="/questions/136/how-do-i-render-my-own-maps-for-my-website">https://help.openstreetmap.org/questions/136/how-do-i-render-my-own-maps-for-my-website</a> or <a href="https://wiki.openstreetmap.org/wiki/Renderer.">https://wiki.openstreetmap.org/wiki/Renderer.</a> If doing the rendering yourself is too hard, you might want to try downloading OSM-based tiles from a different provider. Please see <a href="https://wiki.openstreetmap.org/wiki/TMS#OSM_TMS_Servers.">https://wiki.openstreetmap.org/wiki/TMS#OSM_TMS_Servers.</a></p>
 </div>
 <div id="comment-11285-info" class="comment-info">
 <span class="comment-age">(17 Mar '12, 21:09)</span> <span class="comment-user userinfo">Matt</span>

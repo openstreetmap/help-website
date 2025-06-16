@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>If the changes have been made within about the last 16 hours, I think there is an issue with database replication which will have prevented the OSM map view from updating.</p>
-<p>Generally though, Potlatch 2 might not render everything the same as the OSM map view. I think from your changesets you are looking at a shop=jewelry icon? If so these are amongst the items that aren't rendered in the default map view like <a href="http://www.openstreetmap.org/browse/node/455903120">this one I mapped in 2009</a>.</p>
+<p>Generally though, Potlatch 2 might not render everything the same as the OSM map view. I think from your changesets you are looking at a shop=jewelry icon? If so these are amongst the items that aren't rendered in the default map view like <a href="https://www.openstreetmap.org/browse/node/455903120">this one I mapped in 2009</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

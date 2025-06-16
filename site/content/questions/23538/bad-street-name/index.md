@@ -105,9 +105,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Changing the name of the street is an easy <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginner</a> task. As you seem to already have an OSM account you can start right away by logging in at <a href="http://www.openstreetmap.org/">openstreetmap.org</a> and browsing to the street you want to change. Then, click on the little arrow next to <em>Edit</em> from the top bar and choose <em>Edit with iD (in-browser editor)</em> from the drop down list to start editing with the new editor <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a>.</p>
+<p>Changing the name of the street is an easy <a href="https://wiki.openstreetmap.org/wiki/Beginner%27s_Guide">beginner</a> task. As you seem to already have an OSM account you can start right away by logging in at <a href="https://www.openstreetmap.org/">openstreetmap.org</a> and browsing to the street you want to change. Then, click on the little arrow next to <em>Edit</em> from the top bar and choose <em>Edit with iD (in-browser editor)</em> from the drop down list to start editing with the new editor <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a>.</p>
 <p>After a few seconds you should see your road and the surrounding area in the editor. Select the street you want to edit and change its name in the window appearing on the right side. After you closed this window you can click on <em>Save</em> at the top menu bar and your changes will be uploaded to the OSM data base.</p>
-<p>Afterwards you need to <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">wait a little</a> until your <a href="https://help.openstreetmap.org/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">changes get visible</a> on the map. Clearing your browser cache will help.</p>
+<p>Afterwards you need to <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">wait a little</a> until your <a href="/questions/102/i-have-made-edits-but-they-dont-show-up-on-the-map">changes get visible</a> on the map. Clearing your browser cache will help.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

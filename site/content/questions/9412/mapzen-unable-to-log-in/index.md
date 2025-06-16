@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>When starting the Android Mapzen client my efforts to accept the privileges to the site result in the website report an Application Error. I'd like to be able to report POI's but this issue is a show stopper so far as using this application is concerned.</p>
 <p>I just confirmed that I can log out and log back into <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> with no problems.</p>
 <p>Here is the URL I used from my android which is causing me problems.</p>
-<p><a href="http://www.openstreetmap.org/oauth/authorize?oauth_token=s3p6niUl34sliPVG2MsLLzJvRlIGhfU6YzzqJvqC">http://www.openstreetmap.org/oauth/authorize?oauth_token=s3p6niUl34sliPVG2MsLLzJvRlIGhfU6YzzqJvqC</a></p>
+<p><a href="https://www.openstreetmap.org/oauth/authorize?oauth_token=s3p6niUl34sliPVG2MsLLzJvRlIGhfU6YzzqJvqC">https://www.openstreetmap.org/oauth/authorize?oauth_token=s3p6niUl34sliPVG2MsLLzJvRlIGhfU6YzzqJvqC</a></p>
 <p>After you click on the "Save Changes" button you will see the application error it causes me.</p>
 <p>The problem has been created from using mapzen on my Android phone but the URL can replicate the problem from any browser it seems.</p>
 </div>

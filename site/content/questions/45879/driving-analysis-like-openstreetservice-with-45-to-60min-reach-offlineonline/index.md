@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Do you know the OSM wiki page about <a href="http://wiki.openstreetmap.org/wiki/Isochrone">Isochrone</a>?</p>
+<p>Do you know the OSM wiki page about <a href="https://wiki.openstreetmap.org/wiki/Isochrone">Isochrone</a>?</p>
 <p>Maybe you can find a solution there which allows a variable value for time to go.</p>
 </div>
 <div class="answer-controls post-controls">

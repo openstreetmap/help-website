@@ -90,7 +90,7 @@ osqa_accepted = false
 <div id="post-19918-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>So around <a href="http://www.openstreetmap.org/?lat=8.52772&amp;lon=76.92934&amp;zoom=15&amp;layers=M">here</a> then?</p>
+<p>So around <a href="https://www.openstreetmap.org/?lat=8.52772&amp;lon=76.92934&amp;zoom=15&amp;layers=M">here</a> then?</p>
 </div>
 <div id="comment-19918-info" class="comment-info">
 <span class="comment-age">(13 Feb '13, 17:34)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -145,8 +145,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>It rather depends on what you mean by "a place made with GIS".</p>
-<p>If you're proposing to import data into OSM, then you'll need to have a read of <a href="http://wiki.openstreetmap.org/wiki/Import">this introduction</a> and the other pages linked from there, especially <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">these guidelines</a>. At the very least you'll need to ensure that you merge your new data with what's already present in OSM, so that a particular feature doesn't occur twice on the final map. This merge process is likely to be at least partially a manual process.</p>
-<p>Where did the data that you have in your GIS program come from? If it's all from your own surveying, then licensing shouldn't be an issue, but if you've obtained it from another source (government, web sites or other third party sources) then you'll need to make sure that it's licensed appropriately before adding to OSM (see the <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a> for more details).</p>
+<p>If you're proposing to import data into OSM, then you'll need to have a read of <a href="https://wiki.openstreetmap.org/wiki/Import">this introduction</a> and the other pages linked from there, especially <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">these guidelines</a>. At the very least you'll need to ensure that you merge your new data with what's already present in OSM, so that a particular feature doesn't occur twice on the final map. This merge process is likely to be at least partially a manual process.</p>
+<p>Where did the data that you have in your GIS program come from? If it's all from your own surveying, then licensing shouldn't be an issue, but if you've obtained it from another source (government, web sites or other third party sources) then you'll need to make sure that it's licensed appropriately before adding to OSM (see the <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">import guidelines</a> for more details).</p>
 <p>Even if it's all your own surveying, you'll also need to discuss the proposed import with the local OSM community (if it's replacing their existing data).</p>
 <p>Once you've read through those pages you'll likely have lots more specific questions, including technical ones about how best to merge the data. You may be able to find answers to some by searching the help site and the wiki, but if not please don't hesitate to ask them here.</p>
 </div>

@@ -81,7 +81,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Thank you for you response. I am talking about the map that displays the electricity network (grid) in France. Please see the link below. <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France">http://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France</a></p>
+<p>Thank you for you response. I am talking about the map that displays the electricity network (grid) in France. Please see the link below. <a href="https://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France">https://wiki.openstreetmap.org/wiki/WikiProject_Power_networks/France</a></p>
 </div>
 <div id="comment-54704-info" class="comment-info">
 <span class="comment-age">(18 Feb '17, 11:55)</span> <span class="comment-user userinfo">HelloWorld07</span>

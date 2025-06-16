@@ -114,7 +114,7 @@ I know that OpenStreetMap data can be used in this way, but I don&#39;t know wha
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are some suggestion on the OSM Wiki page <a href="http://wiki.openstreetmap.org/wiki/Offline_Openstreetmap">Offline OpenStreetMap</a>.</p>
+<p>There are some suggestion on the OSM Wiki page <a href="https://wiki.openstreetmap.org/wiki/Offline_Openstreetmap">Offline OpenStreetMap</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -175,7 +175,7 @@ I know that OpenStreetMap data can be used in this way, but I don&#39;t know wha
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can have a look at <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">OSM-in-a-box</a> or <a href="http://wiki.openstreetmap.org/wiki/Maps_on_a_Stick">Maps on a stick</a> ...</p>
+<p>You can have a look at <a href="https://wiki.openstreetmap.org/wiki/OpenStreetMap-in-a-Box">OSM-in-a-box</a> or <a href="https://wiki.openstreetmap.org/wiki/Maps_on_a_Stick">Maps on a stick</a> ...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -212,7 +212,7 @@ I know that OpenStreetMap data can be used in this way, but I don&#39;t know wha
 <div id="post-6735-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>for more detailes information about this program come over to <a href="http://forum.osm.org">http://forum.osm.org</a> or to one of the <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p>for more detailes information about this program come over to <a href="http://forum.osm.org">http://forum.osm.org</a> or to one of the <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-6735-info" class="comment-info">
 <span class="comment-age">(31 Jul '11, 11:55)</span> <span class="comment-user userinfo">stephan75</span>

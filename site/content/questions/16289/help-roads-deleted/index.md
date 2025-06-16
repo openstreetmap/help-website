@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Help! roads deleted"
-description = '''at this location: http://www.openstreetmap.org/?lat=52.27373&amp;amp;lon=-113.81211&amp;amp;zoom=17&amp;amp;layers=C and here&#x27;s the corresonding area on Google maps: https://maps.google.com/maps?ll=52.274979,-113.808993&amp;amp;spn=0.004352,0.01075&amp;amp;t=m&amp;amp;z=17 ... you can see that many mapped roads end abruptl...'''
+description = '''at this location: https://www.openstreetmap.org/?lat=52.27373&amp;amp;lon=-113.81211&amp;amp;zoom=17&amp;amp;layers=C and here&#x27;s the corresonding area on Google maps: https://maps.google.com/maps?ll=52.274979,-113.808993&amp;amp;spn=0.004352,0.01075&amp;amp;t=m&amp;amp;z=17 ... you can see that many mapped roads end abruptl...'''
 date = "2012-09-20T19:57:00Z"
 lastmod = "2012-09-20T22:06:00Z"
 weight = 16289
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>at this location:</p>
-<p><a href="http://www.openstreetmap.org/?lat=52.27373&amp;lon=-113.81211&amp;zoom=17&amp;layers=C">http://www.openstreetmap.org/?lat=52.27373&amp;lon=-113.81211&amp;zoom=17&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=52.27373&amp;lon=-113.81211&amp;zoom=17&amp;layers=C">https://www.openstreetmap.org/?lat=52.27373&amp;lon=-113.81211&amp;zoom=17&amp;layers=C</a></p>
 <p>and here's the corresonding area on Google maps:</p>
 <p><a href="https://maps.google.com/maps?ll=52.274979,-113.808993&amp;spn=0.004352,0.01075&amp;t=m&amp;z=17">https://maps.google.com/maps?ll=52.274979,-113.808993&amp;spn=0.004352,0.01075&amp;t=m&amp;z=17</a></p>
 <p>... you can see that many mapped roads end abruptly and a few are unconnected to any other roads whatsoever. Since this is my hometown, I know the mapping is inaccurate and has been changed in the last few months, since I used to see these roads on OSM.</p>

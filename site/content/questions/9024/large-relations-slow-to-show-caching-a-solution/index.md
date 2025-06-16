@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I often work with large relations (like <a href="http://www.openstreetmap.org/browse/relation/1756854">this</a>). Currently, the preview maps at <a href="http://osm.org/browse/relation/%5Bnumber%5D">osm.org/browse/relation/[number]</a> or at <a href="http://osm.org/?relation=%5Bnumber%5D">osm.org/?relation=[number]</a> load painfully slowly. Can this be solved somehow? Is it possible to cache these so they would load instantly?</p>
+<p>I often work with large relations (like <a href="https://www.openstreetmap.org/browse/relation/1756854">this</a>). Currently, the preview maps at <a href="http://osm.org/browse/relation/%5Bnumber%5D">osm.org/browse/relation/[number]</a> or at <a href="http://osm.org/?relation=%5Bnumber%5D">osm.org/?relation=[number]</a> load painfully slowly. Can this be solved somehow? Is it possible to cache these so they would load instantly?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-cache" rel="tag" title="see questions tagged &#39;cache&#39;">cache</span> <span class="post-tag tag-link-relations" rel="tag" title="see questions tagged &#39;relations&#39;">relations</span>

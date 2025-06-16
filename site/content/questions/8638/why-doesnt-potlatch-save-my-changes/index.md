@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why doesn&#x27;t potlatch save my changes?"
-description = '''I&#x27;ve completed the Rail Port tutorial from here : http://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu and here http://wiki.openstreetmap.org/wiki/The_Rails_Port . Everything works fine apart from osmosis importing the data of my country in my &quot;openstreetmap&quot; db. See this post about it: http://help.op...'''
+description = '''I&#x27;ve completed the Rail Port tutorial from here : https://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu and here https://wiki.openstreetmap.org/wiki/The_Rails_Port . Everything works fine apart from osmosis importing the data of my country in my &quot;openstreetmap&quot; db. See this post about it: http://help.op...'''
 date = "2011-10-25T10:42:00Z"
 lastmod = "2011-10-26T07:38:00Z"
 weight = 8638
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've completed the Rail Port tutorial from here : <a href="http://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu">http://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu</a> and here <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">http://wiki.openstreetmap.org/wiki/The_Rails_Port</a> . Everything works fine apart from osmosis importing the data of my country in my "openstreetmap" db. See this post about it: <a href="http://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey">http://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey</a></p>
+<p>I've completed the Rail Port tutorial from here : <a href="https://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu">https://wiki.openstreetmap.org/wiki/Rails_on_Ubuntu</a> and here <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">https://wiki.openstreetmap.org/wiki/The_Rails_Port</a> . Everything works fine apart from osmosis importing the data of my country in my "openstreetmap" db. See this post about it: <a href="/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey">https://help.openstreetmap.org/questions/8630/osmosis-stops-with-error-insert-or-update-on-table-current_way_nodes-violates-foreign-key-constraint-current_way_nodes_node_id_fkey</a></p>
 <p>My problem now is that when edit something with potlatch (on my server at port 3000) and i click the save button, potlatch is stuck at: "contacting server...". My server is on, map works perfectly, i can edit, but can't save.</p>
 <p>The server's console doesn't seem to output anything after i press the save button in potlatch. Perhaps potlatch is not configured to contact my server, i don't know. And i don't know how to check that.</p>
 </div>

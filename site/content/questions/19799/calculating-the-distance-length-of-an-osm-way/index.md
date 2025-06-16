@@ -181,7 +181,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Everything about routing or similar aims based on OSM data is collected in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
+<p>Everything about routing or similar aims based on OSM data is collected in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
 <p>Search for opensource solutions to implement something in your project.</p>
 </div>
 <div class="answer-controls post-controls">

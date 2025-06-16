@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Change not appearing after several days"
-description = '''Good day, I noticed that the territorial waters of the UK were incorrect SW of Tiree. I estimated the correct 12nm arc from Skerryvore as shown on UKHO charts in Changeset: 17099238 ( http://www.openstreetmap.org/browse/changeset/17099238 ) This was my first attempt at a change, so I may have made a...'''
+description = '''Good day, I noticed that the territorial waters of the UK were incorrect SW of Tiree. I estimated the correct 12nm arc from Skerryvore as shown on UKHO charts in Changeset: 17099238 ( https://www.openstreetmap.org/browse/changeset/17099238 ) This was my first attempt at a change, so I may have made a...'''
 date = "2013-07-28T19:36:00Z"
 lastmod = "2013-07-29T07:16:00Z"
 weight = 24659
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Good day, I noticed that the territorial waters of the UK were incorrect SW of Tiree. I estimated the correct 12nm arc from Skerryvore as shown on UKHO charts in Changeset: 17099238 ( <a href="http://www.openstreetmap.org/browse/changeset/17099238">http://www.openstreetmap.org/browse/changeset/17099238</a> ) This was my first attempt at a change, so I may have made a mistake. Liam</p>
+<p>Good day, I noticed that the territorial waters of the UK were incorrect SW of Tiree. I estimated the correct 12nm arc from Skerryvore as shown on UKHO charts in Changeset: 17099238 ( <a href="https://www.openstreetmap.org/browse/changeset/17099238">https://www.openstreetmap.org/browse/changeset/17099238</a> ) This was my first attempt at a change, so I may have made a mistake. Liam</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-territorial" rel="tag" title="see questions tagged &#39;territorial&#39;">territorial</span> <span class="post-tag tag-link-admin_boundary" rel="tag" title="see questions tagged &#39;admin_boundary&#39;">admin_boundary</span> <span class="post-tag tag-link-low-zoom" rel="tag" title="see questions tagged &#39;low-zoom&#39;">low-zoom</span> <span class="post-tag tag-link-uk" rel="tag" title="see questions tagged &#39;uk&#39;">uk</span>
@@ -155,7 +155,7 @@ One Answer:
 <div id="post-24664-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><span>@LiamMason</span>: <a href="http://www.openstreetmap.org/?lat=56.1601&amp;lon=-7.4191&amp;zoom=13&amp;layers=M">new shape visible at zoom 13 and higher</a> (be sure to empty or refresh your browser's cache, otherwise you will see old map tiles if you viewed the location before).</p>
+<p><span>@LiamMason</span>: <a href="https://www.openstreetmap.org/?lat=56.1601&amp;lon=-7.4191&amp;zoom=13&amp;layers=M">new shape visible at zoom 13 and higher</a> (be sure to empty or refresh your browser's cache, otherwise you will see old map tiles if you viewed the location before).</p>
 </div>
 <div id="comment-24664-info" class="comment-info">
 <span class="comment-age">(29 Jul '13, 01:14)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

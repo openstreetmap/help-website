@@ -146,7 +146,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Sorry, the <a href="http://www.portauthority.org/paac/CompanyInfoProjects/DeveloperResources/DeveloperLicenseAgreement.aspx">licence for that data</a> does not seem compatible with <a href="http://www.openstreetmap.org/copyright">OSM's licence</a>. IANAL and I did not read through everything, but at least paragraphs 2, 4, and 6 seem clearly incompatible with OSM/ODBL. As it stands, <em>you cannot import this data into OSM</em>.</p>
+<p>Sorry, the <a href="http://www.portauthority.org/paac/CompanyInfoProjects/DeveloperResources/DeveloperLicenseAgreement.aspx">licence for that data</a> does not seem compatible with <a href="https://www.openstreetmap.org/copyright">OSM's licence</a>. IANAL and I did not read through everything, but at least paragraphs 2, 4, and 6 seem clearly incompatible with OSM/ODBL. As it stands, <em>you cannot import this data into OSM</em>.</p>
 <p>However, it is certainly worth it to contact the owner of the data to see if they are willing to either relicense their data in an odbl-compatible way, or to grant an official, writen exception for OSM to import the data. Alert them to the fact that providing "open" data that can only be used in very restricted circumstances is rather pointless. How easy they are to convince depends on your luck, but sending a few emails is worth it.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -233,7 +233,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi ItchyDemon, before answering your question, please read these lines and follow the import rules accordingly, <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">http://wiki.openstreetmap.org/wiki/Import/Guidelines</a>.</p>
+<p>Hi ItchyDemon, before answering your question, please read these lines and follow the import rules accordingly, <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">https://wiki.openstreetmap.org/wiki/Import/Guidelines</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

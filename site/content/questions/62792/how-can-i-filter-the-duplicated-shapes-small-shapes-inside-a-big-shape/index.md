@@ -47,7 +47,7 @@ osqa_accepted = false
 <p>` - etc</p>
 <p>I just want all the indepent shapes (filter the samll shapes inside if exsits), i readed the wiki,but i did not find a specific solution, do you have any advice?</p>
 <p>Thanks in advance</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Capture_4Gz6XFj.JPG" alt="alt text" /></p>
+<p><img src="/upfiles/Capture_4Gz6XFj.JPG" alt="alt text" /></p>
 <p>QL code [out:json][timeout:25]; // gather results ( // query part</p>
 <pre><code>  way[&quot;leisure&quot;=&quot;garden&quot;]({{bbox}});
   relation[&quot;leisure&quot;=&quot;garden&quot;]({{bbox}});

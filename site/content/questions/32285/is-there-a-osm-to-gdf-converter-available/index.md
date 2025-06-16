@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Is there any OSM to GDF converter available. If yes, please point to the converter and if not will it be helpful to the community at large if such a converter is written ? I could find a similar question <a href="http://wiki.openstreetmap.org/wiki/Talk:GDF">here</a>, but the question has been posted and answered a long time ago ( in 2007).</p>
+<p>Is there any OSM to GDF converter available. If yes, please point to the converter and if not will it be helpful to the community at large if such a converter is written ? I could find a similar question <a href="https://wiki.openstreetmap.org/wiki/Talk:GDF">here</a>, but the question has been posted and answered a long time ago ( in 2007).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-osm" rel="tag" title="see questions tagged &#39;osm&#39;">osm</span> <span class="post-tag tag-link-converter" rel="tag" title="see questions tagged &#39;converter&#39;">converter</span> <span class="post-tag tag-link-gdf" rel="tag" title="see questions tagged &#39;gdf&#39;">gdf</span>

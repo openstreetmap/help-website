@@ -75,9 +75,9 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Can you give any more details about what you think you've deleted? A good start would be to link to the changeset in which you deleted it.</p>
 <p>I can still see this:</p>
-<p><a href="http://www.openstreetmap.org/node/2601023573/history">http://www.openstreetmap.org/node/2601023573/history</a></p>
+<p><a href="https://www.openstreetmap.org/node/2601023573/history">https://www.openstreetmap.org/node/2601023573/history</a></p>
 <p>(last edited 9 months ago). As far as I can see your last edit in Göttingen was:</p>
-<p><a href="http://www.openstreetmap.org/relation/1732035/history">http://www.openstreetmap.org/relation/1732035/history</a></p>
+<p><a href="https://www.openstreetmap.org/relation/1732035/history">https://www.openstreetmap.org/relation/1732035/history</a></p>
 <p>but that isn't a deletion.</p>
 </div>
 <div id="comment-38583-info" class="comment-info">

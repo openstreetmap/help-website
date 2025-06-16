@@ -106,7 +106,7 @@ osqa_accepted = false
 <div id="post-41335-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10563/aq35ityo8r9p">@Aq35ITyo8r9p</a> Re "standard editor" - which in-browser editor you get by default depends on which web browser you use. I believe that IE users get Potlatch 2, and other users iD (although they're free to choose to use whatever editor they want).</p>
+<p><a href="https://help.openstreetmap.org/users/10563/aq35ityo8r9p">@Aq35ITyo8r9p</a> Re "standard editor" - which in-browser editor you get by default depends on which web browser you use. I believe that IE users get Potlatch 2, and other users iD (although they're free to choose to use whatever editor they want).</p>
 </div>
 <div id="comment-41335-info" class="comment-info">
 <span class="comment-age">(24 Feb '15, 21:47)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -117,7 +117,7 @@ osqa_accepted = false
 <div id="post-41336-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10563/aq35ityo8r9p">@Aq35ITyo8r9p</a>: please describe what you do if you try to delete the street and where your problem starts. I cannot see an issue (in iD – assuming that you mean this one)</p>
+<p><a href="https://help.openstreetmap.org/users/10563/aq35ityo8r9p">@Aq35ITyo8r9p</a>: please describe what you do if you try to delete the street and where your problem starts. I cannot see an issue (in iD – assuming that you mean this one)</p>
 </div>
 <div id="comment-41336-info" class="comment-info">
 <span class="comment-age">(24 Feb '15, 21:54)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -128,7 +128,7 @@ osqa_accepted = false
 <div id="post-41338-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> google chrome, not the Potlatch 2</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> google chrome, not the Potlatch 2</p>
 </div>
 <div id="comment-41338-info" class="comment-info">
 <span class="comment-age">(24 Feb '15, 21:58)</span> <span class="comment-user userinfo">Aq35ITyo8r9p</span>
@@ -139,7 +139,7 @@ osqa_accepted = false
 <div id="post-41339-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, so you can delete the street complete, did you test it? I can neither split nor delete it!</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a>, so you can delete the street complete, did you test it? I can neither split nor delete it!</p>
 <p>Please stop asking questions which are wasting my time. I know what I want to do and have a technical problem. I am here to get help with a technical problem, not to explain myself to you.</p>
 </div>
 <div id="comment-41339-info" class="comment-info">
@@ -151,7 +151,7 @@ osqa_accepted = false
 <div id="post-41340-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10563/aq35ityo8r9p"></a><a href="http://help.openstreetmap.org/users/10563/aq35ityo8r9p">@Aq35ITyo8r9p</a>: yes, I did test it in iD with Firefox <em>and</em> Chromium (selected way, pressed the trashcan icon or by ctrl+backspace: way 315183211 is gone, 1 change pending to be uploaded). I am asking questions for a good reason, sorry, I do not get it why you are that upset about my questions.</p>
+<p><a href="https://help.openstreetmap.org/users/10563/aq35ityo8r9p"></a><a href="https://help.openstreetmap.org/users/10563/aq35ityo8r9p">@Aq35ITyo8r9p</a>: yes, I did test it in iD with Firefox <em>and</em> Chromium (selected way, pressed the trashcan icon or by ctrl+backspace: way 315183211 is gone, 1 change pending to be uploaded). I am asking questions for a good reason, sorry, I do not get it why you are that upset about my questions.</p>
 </div>
 <div id="comment-41340-info" class="comment-info">
 <span class="comment-age">(24 Feb '15, 22:06)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Sorry for my ignorance but I am a newbie on here...</p>
 <p>Essentially I was wondering how to make my map changes live. Have clicked saved changes and can see the amendments in my edit view everytime I log back in but they are still not changed on the public view? Is this because they are awaiting confirmation from an administrator or something?</p>
-<p>Note I made some of the changes in Potlatch a few days ago so have given it time :-) An example of one is here <a href="http://www.openstreetmap.org/browse/changeset/8386635">http://www.openstreetmap.org/browse/changeset/8386635</a></p>
+<p>Note I made some of the changes in Potlatch a few days ago so have given it time :-) An example of one is here <a href="https://www.openstreetmap.org/browse/changeset/8386635">https://www.openstreetmap.org/browse/changeset/8386635</a></p>
 <p>TIA</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>Changes go live immediately after you hit the save button. There is no approval or moderation process.</p>
 <p>However, due to resource constraints, not all views and applications update immediately. Seeing your changes outside of the Editors, (or if you download the data directly from the API) can take anything from a couple of minutes, to days (or even weeks to months in some offline products using OpenStreetMap such as some navigation devices). It depends on the Application or Map using the OpenStreetMap data. (Many of them are operated and maintained by independent entities, so OpenStreetMap has no influence on how often they update the data)</p>
-<p>The main (mapnik) map view on <a href="http://OpenStreetMap.org">OpenStreetMap.org</a> should typically update in a couple of minutes to hours. A more detailed description of the process can be found at <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
+<p>The main (mapnik) map view on <a href="http://OpenStreetMap.org">OpenStreetMap.org</a> should typically update in a couple of minutes to hours. A more detailed description of the process can be found at <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hi,</p>
 <p>I want to download all tiles for a subdistrict at level 15. A subdistrict can usually be contained in a 30km x 30km square. I want to download the underlying bing image and osm maps. The age of the satellite image or map does not have to be the most recent or the latest. Can someone recommend me an easy to use existing program or a script to do the same.</p>
 <p>The purpose is to process the images off-line, refer to publicly released maps etc and identify objects of interest in the subdistrict. These objects can then be created on osm, online, in a separate process.</p>
-<p>At zoom level 15, one meter is represented by 4.773 pixels (see <a href="http://wiki.openstreetmap.org/wiki/Zoom_levels">http://wiki.openstreetmap.org/wiki/Zoom_levels</a> see m / pixel column in the table). So, to represent a 30 kilometers square on earth, my image needs 143190 pixels square or about 560 tiles of 256 pixels each.</p>
+<p>At zoom level 15, one meter is represented by 4.773 pixels (see <a href="https://wiki.openstreetmap.org/wiki/Zoom_levels">https://wiki.openstreetmap.org/wiki/Zoom_levels</a> see m / pixel column in the table). So, to represent a 30 kilometers square on earth, my image needs 143190 pixels square or about 560 tiles of 256 pixels each.</p>
 <p>Is there a program to combine these .png tiles into a single .png file. (I dont want to install mapnik)</p>
 <p>Thanks.</p>
 <p>Atamp</p>

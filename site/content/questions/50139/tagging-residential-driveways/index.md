@@ -140,7 +140,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I agree with "definitely contact that user", but disagree with the combination of highway and landuse=residential not being wrong. Maybe that user should have a look at the <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">area:highway</a> tag.</p>
+<p>I agree with "definitely contact that user", but disagree with the combination of highway and landuse=residential not being wrong. Maybe that user should have a look at the <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/area:highway">area:highway</a> tag.</p>
 </div>
 <div id="comment-50144-info" class="comment-info">
 <span class="comment-age">(11 Jun '16, 07:24)</span> <span class="comment-user userinfo">malenki</span>

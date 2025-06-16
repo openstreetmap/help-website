@@ -127,7 +127,7 @@ make: *** [install-recursive] Error 1</code></pre>
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/8708/mmd">@mmd</a> I've changed title and tags.</p>
+<p><a href="https://help.openstreetmap.org/users/8708/mmd">@mmd</a> I've changed title and tags.</p>
 </div>
 <div id="comment-51363-info" class="comment-info">
 <span class="comment-age">(12 Aug '16, 08:35)</span> <span class="comment-user userinfo">scai ♦</span>

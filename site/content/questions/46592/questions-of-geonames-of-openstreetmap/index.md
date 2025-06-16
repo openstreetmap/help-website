@@ -143,8 +143,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You should start to learn basics of OSM first:</p>
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Elements">http://wiki.openstreetmap.org/wiki/Elements</a></p>
-<p>and then <a href="http://wiki.openstreetmap.org/wiki/Key:place">http://wiki.openstreetmap.org/wiki/Key:place</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Elements">https://wiki.openstreetmap.org/wiki/Elements</a></p>
+<p>and then <a href="https://wiki.openstreetmap.org/wiki/Key:place">https://wiki.openstreetmap.org/wiki/Key:place</a></p>
 <p>Finally you can do some filtering, cutting, cropping and exporting of raw OSM data.</p>
 <p>Please do some research on this help site and the OSM wiki first ... all those tasks are mentioned here already.</p>
 </div>

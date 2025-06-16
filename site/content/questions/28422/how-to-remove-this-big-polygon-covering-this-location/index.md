@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>at zoom level 16 &amp; 17 there is a big polygon covering a large portion of the map the makes small buildings undetectable.</p>
-<p>see it <a href="http://www.openstreetmap.org/#map=17/10.30361/123.90763">here</a></p>
+<p>see it <a href="https://www.openstreetmap.org/#map=17/10.30361/123.90763">here</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-polygon" rel="tag" title="see questions tagged &#39;polygon&#39;">polygon</span>
@@ -122,8 +122,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The problem was that a residential area had been changed to a "building=damaged" by mistake. It's already been fixed some hours ago (as part of <a href="http://www.openstreetmap.org/browse/relation/1506936">this changeset</a>). Tiles are gradually being rerendered (if you zoom in you'll see that it no longer appears).</p>
-<p>There's more information about how tiles are rendered <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
+<p>The problem was that a residential area had been changed to a "building=damaged" by mistake. It's already been fixed some hours ago (as part of <a href="https://www.openstreetmap.org/browse/relation/1506936">this changeset</a>). Tiles are gradually being rerendered (if you zoom in you'll see that it no longer appears).</p>
+<p>There's more information about how tiles are rendered <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

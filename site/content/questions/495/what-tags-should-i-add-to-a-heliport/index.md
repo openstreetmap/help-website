@@ -112,7 +112,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Everyone adding data to OSM is free to <a href="http://wiki.openstreetmap.org/wiki/Any_tags_you_like">make up and use their own tags</a>. Just be sure to use <a href="http://wiki.openstreetmap.org/wiki/Map_Features">standard tags</a> if they already exist, and discuss your own suggestions on the <a href="http://lists.openstreetmap.org/">mailing lists</a> and the <a href="http://wiki.openstreetmap.org/">wiki</a>.</p>
+<p>Everyone adding data to OSM is free to <a href="https://wiki.openstreetmap.org/wiki/Any_tags_you_like">make up and use their own tags</a>. Just be sure to use <a href="https://wiki.openstreetmap.org/wiki/Map_Features">standard tags</a> if they already exist, and discuss your own suggestions on the <a href="http://lists.openstreetmap.org/">mailing lists</a> and the <a href="https://wiki.openstreetmap.org/">wiki</a>.</p>
 <p>As to how much detail is required: it really depends on how much information you have available. In principle, the more the better, as long as this information is potentially useful to people. For the case of helipads: are there size/weight limitations for helicopters? Is it paved? I know nothing about helipads, so I'm sure you can think of more.</p>
 <p>Just remember that as long as you map things as they are on the ground, you are always helping. It is better to add a little information than to refrain from contributing at all because you don't know every detail about an object.</p>
 </div>
@@ -171,7 +171,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Not Heliport but Helipad:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Helipad">http://wiki.openstreetmap.org/wiki/Helipad</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Helipad">https://wiki.openstreetmap.org/wiki/Helipad</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

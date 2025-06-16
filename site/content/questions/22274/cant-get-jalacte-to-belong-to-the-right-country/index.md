@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Nominatim says <a href="http://nominatim.openstreetmap.org/details.php?place_id=3666062473">Jalacte</a> belongs to Petén, which in turn belongs to Guatemala. <a href="http://keepright.ipax.at/report_map.php?schema=68&amp;error=46722696">KeepRight</a> says "The boundary of Petén is not closed-loop". The <a href="http://www.openstreetmap.org/browse/relation/214699">Petén (214699)</a>-relation has this problem in a number of places.</p>
+<p>Nominatim says <a href="http://nominatim.openstreetmap.org/details.php?place_id=3666062473">Jalacte</a> belongs to Petén, which in turn belongs to Guatemala. <a href="http://keepright.ipax.at/report_map.php?schema=68&amp;error=46722696">KeepRight</a> says "The boundary of Petén is not closed-loop". The <a href="https://www.openstreetmap.org/browse/relation/214699">Petén (214699)</a>-relation has this problem in a number of places.</p>
 <p>So, my guess is that the Petén relation is leaking. Fix the relation, and the problem might be gone. (But there are more "not closed-loop"-errors in the region, so new problems may arise.)</p>
 </div>
 <div class="answer-controls post-controls">

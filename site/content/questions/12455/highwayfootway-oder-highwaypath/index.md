@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "highway=footway  oder highway=path?"
-description = '''Soll ich innerstädtische Fußwege, die nicht explizit als solche ausgewiesen sind, mit highway=footway oder highway=path taggen?  Bei http://wiki.openstreetmap.org/wiki/DE:Howto_Map_A steht:highway=footway ist ein generischer, meist innerstädtischer Fußweg (Bürgersteig), welcher meistens befestigt is...'''
+description = '''Soll ich innerstädtische Fußwege, die nicht explizit als solche ausgewiesen sind, mit highway=footway oder highway=path taggen?  Bei https://wiki.openstreetmap.org/wiki/DE:Howto_Map_A steht:highway=footway ist ein generischer, meist innerstädtischer Fußweg (Bürgersteig), welcher meistens befestigt is...'''
 date = "2012-04-30T11:43:00Z"
 lastmod = "2013-04-23T10:22:00Z"
 weight = 12455
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Soll ich innerstädtische Fußwege, die nicht explizit als solche ausgewiesen sind, mit highway=footway oder highway=path taggen?</p>
-<p>Bei <a href="http://wiki.openstreetmap.org/wiki/DE:Howto_Map_A">http://wiki.openstreetmap.org/wiki/DE:Howto_Map_A</a> steht:highway=footway ist ein generischer, meist innerstädtischer Fußweg (Bürgersteig), welcher meistens befestigt ist. + Ein offiziell als Fußweg beschilderter Weg, bekommt dann noch zusätzlich ein foot=designated, da er amtlich ausgewiesen ist.</p>
-<p>Bei <a href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dfootway">http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dfootway</a> hingegen: Für ausgewiesene (designated) Fußwege. + Hinweis: Für Wege, die keine ausgewiesenen Fußwege sind, sollte der allgemeinere Tag highway=path zusammen mit passenden access=*-Tags verwendet werden.</p>
+<p>Bei <a href="https://wiki.openstreetmap.org/wiki/DE:Howto_Map_A">https://wiki.openstreetmap.org/wiki/DE:Howto_Map_A</a> steht:highway=footway ist ein generischer, meist innerstädtischer Fußweg (Bürgersteig), welcher meistens befestigt ist. + Ein offiziell als Fußweg beschilderter Weg, bekommt dann noch zusätzlich ein foot=designated, da er amtlich ausgewiesen ist.</p>
+<p>Bei <a href="https://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dfootway">https://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dfootway</a> hingegen: Für ausgewiesene (designated) Fußwege. + Hinweis: Für Wege, die keine ausgewiesenen Fußwege sind, sollte der allgemeinere Tag highway=path zusammen mit passenden access=*-Tags verwendet werden.</p>
 <p>Woran soll ich mich nun halten?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -113,7 +113,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/DE:Howto_Map_A">http://wiki.openstreetmap.org/wiki/DE:Howto_Map_A</a> sollte ignoriert werden.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/DE:Howto_Map_A">https://wiki.openstreetmap.org/wiki/DE:Howto_Map_A</a> sollte ignoriert werden.</p>
 <p>Leider wird die Seite gerade bei etwas umstrittenen Regeln gern dazu benutzt von der Map-Features Seite abweichende Regeln zu propagieren. Dies gilt speziell für den ganzen cycleway, footway und path Komplex.</p>
 </div>
 <div class="answer-controls post-controls">

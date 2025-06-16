@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am building a Drupal site using Openlayers. Since a few days I am getting "API Key Required" on the OpenCycleMap I use as background. This did not happen in the first months I was working on this, only the last few days on various zoom levels. Do I need a key? how to implement it? <img src="http://help.openstreetmap.org/upfiles/openstreetmap_TpVPzxK.jpg" alt="alt text" /></p>
+<p>I am building a Drupal site using Openlayers. Since a few days I am getting "API Key Required" on the OpenCycleMap I use as background. This did not happen in the first months I was working on this, only the last few days on various zoom levels. Do I need a key? how to implement it? <img src="/upfiles/openstreetmap_TpVPzxK.jpg" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-apikey" rel="tag" title="see questions tagged &#39;apikey&#39;">apikey</span> <span class="post-tag tag-link-opencyclemap" rel="tag" title="see questions tagged &#39;opencyclemap&#39;">opencyclemap</span>
@@ -79,7 +79,7 @@ osqa_accepted = true
 <div id="post-56251-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For QGIS please refer to <a href="https://help.openstreetmap.org/questions/55965/thunderforest-api-key-and-qgis">this question</a>.</p>
+<p>For QGIS please refer to <a href="/questions/55965/thunderforest-api-key-and-qgis">this question</a>.</p>
 </div>
 <div id="comment-56251-info" class="comment-info">
 <span class="comment-age">(22 May '17, 10:51)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -125,7 +125,7 @@ osqa_accepted = true
 <div id="post-56600-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For QGIS please refer to this question: <a href="https://help.openstreetmap.org/questions/55965/thunderforest-api-key-and-qgis">https://help.openstreetmap.org/questions/55965/thunderforest-api-key-and-qgis</a></p>
+<p>For QGIS please refer to this question: <a href="/questions/55965/thunderforest-api-key-and-qgis">https://help.openstreetmap.org/questions/55965/thunderforest-api-key-and-qgis</a></p>
 </div>
 <div id="comment-56600-info" class="comment-info">
 <span class="comment-age">(13 Jun '17, 08:02)</span> <span class="comment-user userinfo">scai ♦</span>

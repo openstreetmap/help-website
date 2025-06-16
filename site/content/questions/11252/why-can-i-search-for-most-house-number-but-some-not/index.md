@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Since you didn't include an example it might be difficult for anyone to answer. But I would think your question is a duplicate of <a href="http://help.openstreetmap.org/questions/6742/available-address-in-osm-fails-in-lookup">http://help.openstreetmap.org/questions/6742/available-address-in-osm-fails-in-lookup</a></p>
+<p>Since you didn't include an example it might be difficult for anyone to answer. But I would think your question is a duplicate of <a href="/questions/6742/available-address-in-osm-fails-in-lookup">https://help.openstreetmap.org/questions/6742/available-address-in-osm-fails-in-lookup</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

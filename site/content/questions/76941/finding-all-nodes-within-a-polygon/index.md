@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Both IKEA and Swarovski have their names &amp; brands locked. Probably it may restrict the scripts somehow <img src="https://help.openstreetmap.org/upfiles/Screenshot_2020-10-04_at_20.25.29.png" alt="alt text" /></p>
+<p>Both IKEA and Swarovski have their names &amp; brands locked. Probably it may restrict the scripts somehow <img src="/upfiles/Screenshot_2020-10-04_at_20.25.29.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

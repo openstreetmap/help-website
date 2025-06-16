@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There are multiple river banks/strands in Prague, with permanently moored ships. Onboard those ships are various amenities (restaurants, pubs, hostels/hotels, a theatre, etc.). However, only the amenities are currently mapped, which leads to misunderstandings ("Pub in the river? How unlikely, let's armchair-move it over to the strand.").</p>
-<p>I would like to map those ships - they have been there for <em>years</em>, there is no intent to move them, and are even incapable of moving elsewhere. From a pedestrian POV, they are essentially a connected set of <code>area=pedestrian</code> and <code>highway=steps</code>; however, that does not seem as complete or correct tagging to me. They are otherwise unremarkable refitted coal barges, so <code>historic=ship</code> is inappropriate. <a href="http://www.openstreetmap.org/way/135159169#map=17/50.06291/14.41257">One of them</a> is mapped simply as <code>building=yes</code>, which is OTG-ish (as large as a medium-sized building, with one or more floors, doesn't move, serves a similar purpose), but doesn't seem appropriate either.</p>
+<p>I would like to map those ships - they have been there for <em>years</em>, there is no intent to move them, and are even incapable of moving elsewhere. From a pedestrian POV, they are essentially a connected set of <code>area=pedestrian</code> and <code>highway=steps</code>; however, that does not seem as complete or correct tagging to me. They are otherwise unremarkable refitted coal barges, so <code>historic=ship</code> is inappropriate. <a href="https://www.openstreetmap.org/way/135159169#map=17/50.06291/14.41257">One of them</a> is mapped simply as <code>building=yes</code>, which is OTG-ish (as large as a medium-sized building, with one or more floors, doesn't move, serves a similar purpose), but doesn't seem appropriate either.</p>
 <p>So, what is a good combination of tags for such floating almost-buildings?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Piskvor, use building=houseboat and add sufficient taggs to specify the use of it. see link <a href="http://www.openstreetmap.org/#map=19/52.32674/5.06619">http://www.openstreetmap.org/#map=19/52.32674/5.06619</a></p>
+<p>Hi Piskvor, use building=houseboat and add sufficient taggs to specify the use of it. see link <a href="https://www.openstreetmap.org/#map=19/52.32674/5.06619">https://www.openstreetmap.org/#map=19/52.32674/5.06619</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -143,7 +143,7 @@ One Answer:
 <div id="post-51050-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi just another example, but we dont have a lot of them although I did expect we did. <a href="http://www.openstreetmap.org/#map=19/51.84954/5.86713">http://www.openstreetmap.org/#map=19/51.84954/5.86713</a> All boats used to live on get the same official tag, houseboat</p>
+<p>Hi just another example, but we dont have a lot of them although I did expect we did. <a href="https://www.openstreetmap.org/#map=19/51.84954/5.86713">https://www.openstreetmap.org/#map=19/51.84954/5.86713</a> All boats used to live on get the same official tag, houseboat</p>
 </div>
 <div id="comment-51050-info" class="comment-info">
 <span class="comment-age">(21 Jul '16, 21:47)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -188,7 +188,7 @@ One Answer:
 <div id="post-51087-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: Piskvor's original question was about ships with "restaurants, pubs, hostels/hotels, a theatre, etc.". Regardless of how uncommon they may be, tagging such ships as a houseboat would be wildly inaccurate.</p>
+<p><a href="https://help.openstreetmap.org/users/3443/hendrikklaas">@Hendrikklaas</a>: Piskvor's original question was about ships with "restaurants, pubs, hostels/hotels, a theatre, etc.". Regardless of how uncommon they may be, tagging such ships as a houseboat would be wildly inaccurate.</p>
 </div>
 <div id="comment-51087-info" class="comment-info">
 <span class="comment-age">(25 Jul '16, 17:11)</span> <span class="comment-user userinfo">alester</span>

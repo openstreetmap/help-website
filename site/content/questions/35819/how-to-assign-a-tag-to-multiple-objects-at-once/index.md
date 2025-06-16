@@ -80,7 +80,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span>@SomeoneElse</span>, correct, thanks, question updated. However I would appreciate other solutions as well. See my related question: <a href="https://help.openstreetmap.org/questions/35817/">https://help.openstreetmap.org/questions/35817/</a></p>
+<p><span>@SomeoneElse</span>, correct, thanks, question updated. However I would appreciate other solutions as well. See my related question: <a href="/questions/35817/">https://help.openstreetmap.org/questions/35817/</a></p>
 </div>
 <div id="comment-35827-info" class="comment-info">
 <span class="comment-age">(14 Aug '14, 13:08)</span> <span class="comment-user userinfo">Kotya</span>

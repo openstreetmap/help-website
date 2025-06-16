@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi:</p>
-<p>I found that the <a href="http://www.openstreetmap.org/">osm main page</a> use the openlayers with custom some features.</p>
+<p>I found that the <a href="https://www.openstreetmap.org/">osm main page</a> use the openlayers with custom some features.</p>
 <p>I am interested in this, but I only find the compressed codes.</p>
 <p>Is it possible to get the uncompressed codes(openlayers related)?</p>
 </div>

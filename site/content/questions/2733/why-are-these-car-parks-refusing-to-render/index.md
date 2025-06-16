@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why are these car parks refusing to render?"
-description = '''As far as I can tell then these two parking areas should render as yellow areas on the Slippy Map. Hundreds of other similar areas have worked for me, so can anyone offer any insight into why these aren&#x27;t rendering? They are both closed ways. http://www.openstreetmap.org/browse/way/96949631 http://w...'''
+description = '''As far as I can tell then these two parking areas should render as yellow areas on the Slippy Map. Hundreds of other similar areas have worked for me, so can anyone offer any insight into why these aren&#x27;t rendering? They are both closed ways. https://www.openstreetmap.org/browse/way/96949631 http://w...'''
 date = "2011-02-06T09:54:00Z"
 lastmod = "2011-02-06T20:33:00Z"
 weight = 2733
@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>As far as I can tell then these two parking areas should render as yellow areas on the Slippy Map. Hundreds of other similar areas have worked for me, so can anyone offer any insight into why these aren't rendering? They are both closed ways.</p>
-<p><a href="http://www.openstreetmap.org/browse/way/96949631">http://www.openstreetmap.org/browse/way/96949631</a></p>
-<p><a href="http://www.openstreetmap.org/browse/way/10519366">http://www.openstreetmap.org/browse/way/10519366</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/96949631">https://www.openstreetmap.org/browse/way/96949631</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/10519366">https://www.openstreetmap.org/browse/way/10519366</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rendering" rel="tag" title="see questions tagged &#39;rendering&#39;">rendering</span> <span class="post-tag tag-link-parking" rel="tag" title="see questions tagged &#39;parking&#39;">parking</span> <span class="post-tag tag-link-bug" rel="tag" title="see questions tagged &#39;bug&#39;">bug</span> <span class="post-tag tag-link-area" rel="tag" title="see questions tagged &#39;area&#39;">area</span>

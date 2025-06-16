@@ -105,7 +105,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A duplex is two homes sharing a wall. Normally look identical, but some times not. In other words its two apartments only. And our neighborhood uses house numbers instead of apartment. So is this correct. I made two boxes, and made them houses with the middle wall going down the split. I can do this for my whole community if need be. <img src="https://help.openstreetmap.org/upfiles/testhouse.png" alt="alt text" /></p>
+<p>A duplex is two homes sharing a wall. Normally look identical, but some times not. In other words its two apartments only. And our neighborhood uses house numbers instead of apartment. So is this correct. I made two boxes, and made them houses with the middle wall going down the split. I can do this for my whole community if need be. <img src="/upfiles/testhouse.png" alt="alt text" /></p>
 <p>I Left one with out boxes so you could see the the style of building.</p>
 </div>
 <div class="answer-controls post-controls">

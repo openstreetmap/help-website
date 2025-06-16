@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://www.openstreetmap.org/browse/way/104211929/history">Looks like you've figured it out</a>. :)</p>
+<p><a href="https://www.openstreetmap.org/browse/way/104211929/history">Looks like you've figured it out</a>. :)</p>
 </div>
 <div id="comment-18723-info" class="comment-info">
 <span class="comment-age">(27 Dec '12, 16:34)</span> <span class="comment-user userinfo">Richard ♦</span>
@@ -128,7 +128,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Start with the <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> and the <a href="http://wiki.openstreetmap.org/wiki/Potlatch/Primer">Potlatch Primer</a>. The corresponding tag for the street name (and most other names) is the <a href="http://wiki.openstreetmap.org/wiki/Key:name">name</a> tag.</p>
+<p>Start with the <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">Beginner's Guide</a> and the <a href="https://wiki.openstreetmap.org/wiki/Potlatch/Primer">Potlatch Primer</a>. The corresponding tag for the street name (and most other names) is the <a href="https://wiki.openstreetmap.org/wiki/Key:name">name</a> tag.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

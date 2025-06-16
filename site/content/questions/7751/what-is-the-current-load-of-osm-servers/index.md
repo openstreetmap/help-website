@@ -108,7 +108,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Servers">This wiki page</a> lists the servers and what each do, with links to munin statistics showing lots of different sorts of load data.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Servers">This wiki page</a> lists the servers and what each do, with links to munin statistics showing lots of different sorts of load data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

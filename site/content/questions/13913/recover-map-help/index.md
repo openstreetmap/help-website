@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p><a href="http://www.openstreetmap.org/browse/changeset/12050905">Changeset: 12050905</a> was an accidental save which deleted known good data in a mapset.</p>
+<p><a href="https://www.openstreetmap.org/browse/changeset/12050905">Changeset: 12050905</a> was an accidental save which deleted known good data in a mapset.</p>
 <p>I need help to restore this map tile.</p>
 <p>Thank you!!!!</p>
 </div>
@@ -70,7 +70,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>First of all: Don't make any further changes to the data in the changeset since that will mess up things. Then, hopefully someone who has done this before will read you question help you. Otherwise you have to do it yourself.</p>
-<p>If you search for "revert" in this help forum you will find a lot of related questions, for example <a href="http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset">http://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
+<p>If you search for "revert" in this help forum you will find a lot of related questions, for example <a href="/questions/731/how-can-i-revert-a-changeset">https://help.openstreetmap.org/questions/731/how-can-i-revert-a-changeset</a></p>
 </div>
 <div id="comment-13914-info" class="comment-info">
 <span class="comment-age">(29 Jun '12, 20:05)</span> <span class="comment-user userinfo">gnurk</span>
@@ -125,7 +125,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You can either use the revert plugin or the revert perl scripts. Both are hard to use as they are pretty powerfull.</p>
-<p>I have <a href="http://www.openstreetmap.org/browse/changeset/12060102">started</a> to undelete all the deleted objects in your changeset.</p>
+<p>I have <a href="https://www.openstreetmap.org/browse/changeset/12060102">started</a> to undelete all the deleted objects in your changeset.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

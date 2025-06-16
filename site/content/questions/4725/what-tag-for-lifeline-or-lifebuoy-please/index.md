@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The term <code>life_ring</code> seems to be the most popular in terms of a small number of tags (132 as <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlife_ring"><code>amenity=life_ring</code></a> and a smaller number as <a href="http://taginfo.openstreetmap.de/tags/emergency=life_ring#wiki"><code>emergency=life_ring</code></a> according to taginfo).</p>
+<p>The term <code>life_ring</code> seems to be the most popular in terms of a small number of tags (132 as <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dlife_ring"><code>amenity=life_ring</code></a> and a smaller number as <a href="http://taginfo.openstreetmap.de/tags/emergency=life_ring#wiki"><code>emergency=life_ring</code></a> according to taginfo).</p>
 <p>I haven't seen uses of <code>life_line</code> or <code>life_buoy</code>, but you could either create new tags following the life_ring approach or think of some encompassing tag (e.g., and of the top of my head, the rather unwieldy <code>emergency=life_saving_equipment</code>, <code>life_saving_equipment=life_buoy</code>). The latter approach makes it easier for data consumers to make use of the data, and IMO, makes it easier to find and remember tags by mappers.</p>
 </div>
 <div class="answer-controls post-controls">

@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There is a draft for a key that allows you to link Wikimedia Commons categories, <strong><a href="http://wiki.openstreetmap.org/wiki/Key:wikimedia_commons">wikimedia_commons</a></strong>. It is still very new and not supported anywhere, but it might become more popular.</p>
-<p>You can also reference the category indirectly if there is a <a href="http://wiki.openstreetmap.org/wiki/Key:wikidata">Wikidata</a> item linked to it.</p>
+<p>There is a draft for a key that allows you to link Wikimedia Commons categories, <strong><a href="https://wiki.openstreetmap.org/wiki/Key:wikimedia_commons">wikimedia_commons</a></strong>. It is still very new and not supported anywhere, but it might become more popular.</p>
+<p>You can also reference the category indirectly if there is a <a href="https://wiki.openstreetmap.org/wiki/Key:wikidata">Wikidata</a> item linked to it.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

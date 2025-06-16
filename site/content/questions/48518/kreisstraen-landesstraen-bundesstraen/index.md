@@ -244,7 +244,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Vielleicht hilft auch die Seite <a href="http://wiki.openstreetmap.org/wiki/Attributierung_von_Stra%C3%9Fen_in_Deutschland">Attributierung von Straßen in Deutschland</a> aus dem OSM-Wiki weiter?</p>
+<p>Vielleicht hilft auch die Seite <a href="https://wiki.openstreetmap.org/wiki/Attributierung_von_Stra%C3%9Fen_in_Deutschland">Attributierung von Straßen in Deutschland</a> aus dem OSM-Wiki weiter?</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

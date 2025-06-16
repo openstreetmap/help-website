@@ -109,10 +109,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I have not verified how large that area is, but generally I would start in the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Gudelines</a>.</p>
+<p>I have not verified how large that area is, but generally I would start in the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import Gudelines</a>.</p>
 <p>Read carefully there, and try to get in contact with local mappers in the US community.</p>
 <p>When that area is not too small, you can open a new sub article in OSM wiki and document all your workflow, thus others can evaluate and assist if necessary.</p>
-<p>EDIT: see also <a href="http://wiki.openstreetmap.org/wiki/Import/Software">Import/Software</a>, <a href="http://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a> and <a href="http://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">Converting_map_data_between_formats</a> ... and urgently recommended to use/preview in JOSM offline editor, not in potlatch2 or iD.</p>
+<p>EDIT: see also <a href="https://wiki.openstreetmap.org/wiki/Import/Software">Import/Software</a>, <a href="https://wiki.openstreetmap.org/wiki/Shapefiles">Shapefiles</a> and <a href="https://wiki.openstreetmap.org/wiki/Converting_map_data_between_formats">Converting_map_data_between_formats</a> ... and urgently recommended to use/preview in JOSM offline editor, not in potlatch2 or iD.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>I would recommend JOSM for this type of work. JOSM can import shapefiles(via <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData">OpenData plugin</a> and you can replace existing geometry with new geometry with the <a href="http://josm.openstreetmap.de/wiki/Help/Plugin/UtilsPlugin2">UtilsPlugin2</a></p>
+<p>I would recommend JOSM for this type of work. JOSM can import shapefiles(via <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/OpenData">OpenData plugin</a> and you can replace existing geometry with new geometry with the <a href="http://josm.openstreetmap.de/wiki/Help/Plugin/UtilsPlugin2">UtilsPlugin2</a></p>
 </div>
 <div id="comment-41399-info" class="comment-info">
 <span class="comment-age">(27 Feb '15, 06:32)</span> <span class="comment-user userinfo">escada</span>

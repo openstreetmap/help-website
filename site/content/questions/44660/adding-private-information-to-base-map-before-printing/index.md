@@ -138,7 +138,7 @@ osqa_accepted = false
 <div id="post-44707-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>... or have a look at <a href="http://wiki.openstreetmap.org/wiki/SVG">http://wiki.openstreetmap.org/wiki/SVG</a> how to easily produce OSM based SVG files ... you can load them into Inkscape or similar and add your "private" information before printing.</p>
+<p>... or have a look at <a href="https://wiki.openstreetmap.org/wiki/SVG">https://wiki.openstreetmap.org/wiki/SVG</a> how to easily produce OSM based SVG files ... you can load them into Inkscape or similar and add your "private" information before printing.</p>
 </div>
 <div id="comment-44707-info" class="comment-info">
 <span class="comment-age">(10 Aug '15, 17:33)</span> <span class="comment-user userinfo">stephan75</span>
@@ -230,7 +230,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi bundokter, read the beginnerssite <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> The OSM map is not your own, so dont add personnal stuff, its stays there even if you revert it afterwards. Use OSM to make your own map locally and add anything you like locally.</p>
+<p>Hi bundokter, read the beginnerssite <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> The OSM map is not your own, so dont add personnal stuff, its stays there even if you revert it afterwards. Use OSM to make your own map locally and add anything you like locally.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

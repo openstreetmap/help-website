@@ -135,7 +135,7 @@ One Answer:
 <div id="post-24236-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Transport_Map">http://wiki.openstreetmap.org/wiki/Transport_Map</a> says "Changes to OpenStreetMap data (diffs) are synced on a daily basis".</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Transport_Map">https://wiki.openstreetmap.org/wiki/Transport_Map</a> says "Changes to OpenStreetMap data (diffs) are synced on a daily basis".</p>
 </div>
 <div id="comment-24236-info" class="comment-info">
 <span class="comment-age">(14 Jul '13, 20:09)</span> <span class="comment-user userinfo">gnurk</span>

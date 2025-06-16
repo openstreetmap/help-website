@@ -116,7 +116,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>OSM is about tagging what <strong>is</strong>, not so much about what was. But some features that was is still.</p>
-<p>Old abandoned railways can still have the sleepers and the tracks laying in disrepair. This can be tagged with <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Ddisused"><em>railway=disused</em></a>, or if the sleepers and track has been removed it can be tagged as <a href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dabandoned"><em>railway=abandoned</em></a> and an appropriate <em>highway=</em>* tag if it is used as such.</p>
+<p>Old abandoned railways can still have the sleepers and the tracks laying in disrepair. This can be tagged with <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Ddisused"><em>railway=disused</em></a>, or if the sleepers and track has been removed it can be tagged as <a href="https://wiki.openstreetmap.org/wiki/Tag:railway%3Dabandoned"><em>railway=abandoned</em></a> and an appropriate <em>highway=</em>* tag if it is used as such.</p>
 <p>As to WWI front lines and old roman roads they can and should be mapped as they are now. For example many forts and ditches are still present from WWI. And some old roman ways still exists today.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -171,7 +171,7 @@ This question is marked "community wiki".
 <td><div class="item-right">
 <div class="answer-body">
 <p>We do not do historic information very consistently or thoroughly. It's not really OSM's central focus - describing reality as it is at present. Mass data imports which haven't been checked against objective reality aren't really encouraged.</p>
-<p>However, <em>if and only if</em> you know a physical trace remains in the landscape, you can use <strong>railway=abandoned</strong> or <strong>railway=disused</strong>, as <a href="http://wiki.openstreetmap.org/wiki/Railway#Explanation_of_railway.3Dabandoned">explained</a> on the page for railway tagging, to tag track routes.</p>
+<p>However, <em>if and only if</em> you know a physical trace remains in the landscape, you can use <strong>railway=abandoned</strong> or <strong>railway=disused</strong>, as <a href="https://wiki.openstreetmap.org/wiki/Railway#Explanation_of_railway.3Dabandoned">explained</a> on the page for railway tagging, to tag track routes.</p>
 <p>For everything else? Well, you could use the "historic" key as well for track-side infrastructure of some former importance that's still standing (station level, perhaps). Additionally, for buildings abandoned or disused (and still visible), the "building" key makes a good start. A third option is "man_made" for visible metalwork and signalling remnants. I strongly recommend using values different from anything anybody might want to use for infrastructure which still exists and is in use.</p>
 <p>A very important caveat: if you invent tagging, please make sure that it's backwards-compatible - in other words, if no visible trace remains of something, don't tag it using combinations that would result in it being represented or interpreted as an object currently in use. You can use <a href="http://taginfo.openstreetmap.de/">taginfo</a> (when it's working...) to search for existing tags and how widespread they are.</p>
 </div>
@@ -223,8 +223,8 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, like this: <a href="http://wiki.openstreetmap.org/wiki/Key:historic">http://wiki.openstreetmap.org/wiki/Key:historic</a></p>
-<p>No, not like this: <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/4th_Dimension">http://wiki.openstreetmap.org/wiki/Proposed_features/4th_Dimension</a></p>
+<p>Yes, like this: <a href="https://wiki.openstreetmap.org/wiki/Key:historic">https://wiki.openstreetmap.org/wiki/Key:historic</a></p>
+<p>No, not like this: <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/4th_Dimension">https://wiki.openstreetmap.org/wiki/Proposed_features/4th_Dimension</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -285,7 +285,7 @@ This question is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This would be ideal for the OpenHistoricalMap, see <a href="http://wiki.openstreetmap.org/wiki/OpenHistoricalMap">http://wiki.openstreetmap.org/wiki/OpenHistoricalMap</a> (website OpenHistoricalMap.org down atm)</p>
+<p>This would be ideal for the OpenHistoricalMap, see <a href="https://wiki.openstreetmap.org/wiki/OpenHistoricalMap">https://wiki.openstreetmap.org/wiki/OpenHistoricalMap</a> (website OpenHistoricalMap.org down atm)</p>
 <p>If you want to push OHM, help would be appreciated!</p>
 </div>
 <div class="answer-controls post-controls">

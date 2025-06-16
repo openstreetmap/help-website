@@ -110,8 +110,8 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For the day care centre I'd use amenity=kindergarten as per this page <a href="http://wiki.openstreetmap.org/wiki/Kindergarten">http://wiki.openstreetmap.org/wiki/Kindergarten</a> The tag seems to cover all pre-school centres whether they give care alone or a combination of care and some education.</p>
-<p>The artist's studio is more uncertain. Perhaps craft=artist or shop=art as per these pages <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dart">http://wiki.openstreetmap.org/wiki/Tag:shop%3Dart</a> <a href="http://wiki.openstreetmap.org/wiki/Key:craft">http://wiki.openstreetmap.org/wiki/Key:craft</a> although neither, to my mind, is an exact match.</p>
+<p>For the day care centre I'd use amenity=kindergarten as per this page <a href="https://wiki.openstreetmap.org/wiki/Kindergarten">https://wiki.openstreetmap.org/wiki/Kindergarten</a> The tag seems to cover all pre-school centres whether they give care alone or a combination of care and some education.</p>
+<p>The artist's studio is more uncertain. Perhaps craft=artist or shop=art as per these pages <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dart">https://wiki.openstreetmap.org/wiki/Tag:shop%3Dart</a> <a href="https://wiki.openstreetmap.org/wiki/Key:craft">https://wiki.openstreetmap.org/wiki/Key:craft</a> although neither, to my mind, is an exact match.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

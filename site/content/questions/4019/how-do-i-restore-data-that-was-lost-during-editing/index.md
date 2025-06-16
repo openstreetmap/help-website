@@ -111,7 +111,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You need the History (or <a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">Revert</a>) plug-in for JOSM.</p>
+<p>You need the History (or <a href="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/Reverter">Revert</a>) plug-in for JOSM.</p>
 <ul>
 <li>First download the relation using <code>File|Download Object</code> ... Choose 'relation' and 1490807.</li>
 <li>Next select the object in JOSM, so that it is shown in the selection window.</li>
@@ -184,7 +184,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>you should not undo the complete changeset (unless you have checked that also the other contained edits are wrong) but rather <strong>reupload the relation from the previous version</strong>.</p>
 <ul>
-<li>You can check the current version in the api: <a href="http://www.openstreetmap.org/browse/relation/1490807">http://www.openstreetmap.org/browse/relation/1490807</a> In your case this is 6.</li>
+<li>You can check the current version in the api: <a href="https://www.openstreetmap.org/browse/relation/1490807">https://www.openstreetmap.org/browse/relation/1490807</a> In your case this is 6.</li>
 <li>Now get the previous version: <a href="http://api.openstreetmap.org/api/0.6/relation/1490807/5">http://api.openstreetmap.org/api/0.6/relation/1490807/5</a></li>
 <li>save it as name.osm to your disk.</li>
 <li>Open it in a text editor and add action="modify" to the row where the relation is described. It would then read like this:</li>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Import error with Nominatim installation: No Data and DB Error: insufficient permissions"
-description = '''I&#x27;m on Debian Squeeze and following http://wiki.openstreetmap.org/wiki/Nominatim/Installation . I&#x27;m at the point where I import the OSM file ( http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Import_and_index_OSM_data ): time php -d error_reporting=E_ALL ./utils/setup.php --osm-file austria...'''
+description = '''I&#x27;m on Debian Squeeze and following https://wiki.openstreetmap.org/wiki/Nominatim/Installation . I&#x27;m at the point where I import the OSM file ( https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Import_and_index_OSM_data ): time php -d error_reporting=E_ALL ./utils/setup.php --osm-file austria...'''
 date = "2012-04-26T12:35:00Z"
 lastmod = "2013-06-13T13:25:00Z"
 weight = 12373
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm on Debian Squeeze and following <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">http://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> . I'm at the point where I import the OSM file ( <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Import_and_index_OSM_data">http://wiki.openstreetmap.org/wiki/Nominatim/Installation#Import_and_index_OSM_data</a> ):</p>
+<p>I'm on Debian Squeeze and following <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">https://wiki.openstreetmap.org/wiki/Nominatim/Installation</a> . I'm at the point where I import the OSM file ( <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Import_and_index_OSM_data">https://wiki.openstreetmap.org/wiki/Nominatim/Installation#Import_and_index_OSM_data</a> ):</p>
 <p><code>time php -d error_reporting=E_ALL ./utils/setup.php --osm-file austria.osm --all</code></p>
 <p>I'm using a specific country as opposed to the whole planet and the setup runs for about 13 minutes and ends with:</p>
 <pre><code>INSERT 0 1

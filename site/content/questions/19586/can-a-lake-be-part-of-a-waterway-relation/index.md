@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Can a lake be part of a waterway relation?"
-description = '''I&#x27;ve got a stream (http://www.openstreetmap.org/browse/way/25366571 , http://www.openstreetmap.org/browse/way/23071524 ) that is interrupted by a lake (http://www.openstreetmap.org/browse/way/23728215 ). I had thought of making the stream into a waterway relation, so to prevent having the metadat tw...'''
+description = '''I&#x27;ve got a stream (https://www.openstreetmap.org/browse/way/25366571 , https://www.openstreetmap.org/browse/way/23071524 ) that is interrupted by a lake (https://www.openstreetmap.org/browse/way/23728215 ). I had thought of making the stream into a waterway relation, so to prevent having the metadat tw...'''
 date = "2013-02-05T08:49:00Z"
 lastmod = "2013-02-06T22:29:00Z"
 weight = 19586
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I've got a stream (<a href="http://www.openstreetmap.org/browse/way/25366571">http://www.openstreetmap.org/browse/way/25366571</a> , <a href="http://www.openstreetmap.org/browse/way/23071524">http://www.openstreetmap.org/browse/way/23071524</a> ) that is interrupted by a lake (<a href="http://www.openstreetmap.org/browse/way/23728215">http://www.openstreetmap.org/browse/way/23728215</a> ).</p>
+<p>I've got a stream (<a href="https://www.openstreetmap.org/browse/way/25366571">https://www.openstreetmap.org/browse/way/25366571</a> , <a href="https://www.openstreetmap.org/browse/way/23071524">https://www.openstreetmap.org/browse/way/23071524</a> ) that is interrupted by a lake (<a href="https://www.openstreetmap.org/browse/way/23728215">https://www.openstreetmap.org/browse/way/23728215</a> ).</p>
 <p>I had thought of making the stream into a waterway relation, so to prevent having the metadat twice. But looking at the wiki, waterway relations do not include lakes.</p>
 <p>If I make a waterway relation, should I just leave the lake out, or should I include the lake? Or should the stream continue <em>through</em> the lake?</p>
 </div>
@@ -112,7 +112,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I believe the stream should continue through the lake. See <a href="http://wiki.openstreetmap.org/wiki/Waterway#Wide_rivers.2C_lakes.2C_reservoirs_and_islands">this wiki page</a> and the section that begins "In addition to a linear description of the watercourse" suggesting that if mapping area water features on the course of a stream or river, the linear way should continue.</p>
+<p>I believe the stream should continue through the lake. See <a href="https://wiki.openstreetmap.org/wiki/Waterway#Wide_rivers.2C_lakes.2C_reservoirs_and_islands">this wiki page</a> and the section that begins "In addition to a linear description of the watercourse" suggesting that if mapping area water features on the course of a stream or river, the linear way should continue.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

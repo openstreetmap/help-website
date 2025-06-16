@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "street wasn&#x27;t found with cityMaps2Go"
-description = '''Hi there!! I&#x27;m using at the &#x27;cityMaps2Go&#x27; iOS app from Ulmon company and when I searched in Hebrew in the offline maps inside this app for the street&#x27;s name: ״דב גור״ it prompt me that this street wasn&#x27;t found even that it appears in the online map in the address: &#x27;http://www.openstreetmap.org/?lat=...'''
+description = '''Hi there!! I&#x27;m using at the &#x27;cityMaps2Go&#x27; iOS app from Ulmon company and when I searched in Hebrew in the offline maps inside this app for the street&#x27;s name: ״דב גור״ it prompt me that this street wasn&#x27;t found even that it appears in the online map in the address: &#x27;https://www.openstreetmap.org/?lat=...'''
 date = "2012-08-21T03:46:00Z"
 lastmod = "2012-08-22T09:45:00Z"
 weight = 15310
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi there!!</p>
-<p>I'm using at the 'cityMaps2Go' iOS app from Ulmon company and when I searched in Hebrew in the offline maps inside this app for the street's name: ״דב גור״ it prompt me that this street wasn't found even that it appears in the online map in the address: 'http://www.openstreetmap.org/?lat=31.79029&amp;lon=34.66024&amp;zoom=17&amp;layers=M'. I reported this problem to the app's developer but they said that the problem is in the online map rather than in their app. What should I do in order to solve this issue?</p>
+<p>I'm using at the 'cityMaps2Go' iOS app from Ulmon company and when I searched in Hebrew in the offline maps inside this app for the street's name: ״דב גור״ it prompt me that this street wasn't found even that it appears in the online map in the address: 'https://www.openstreetmap.org/?lat=31.79029&amp;lon=34.66024&amp;zoom=17&amp;layers=M'. I reported this problem to the app's developer but they said that the problem is in the online map rather than in their app. What should I do in order to solve this issue?</p>
 <p>Thanks in advance!!</p>
 <p>Atar.</p>
 </div>
@@ -179,7 +179,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This is obviously not true as the street is found when searching for it on <a href="http://www.openstreetmap.org/.">http://www.openstreetmap.org/.</a> So either <em>cityMaps2Go</em>'s own search function is broken or it isn't able to use ours correctly.</p>
+<p>This is obviously not true as the street is found when searching for it on <a href="https://www.openstreetmap.org/.">https://www.openstreetmap.org/.</a> So either <em>cityMaps2Go</em>'s own search function is broken or it isn't able to use ours correctly.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -202,7 +202,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This is slightly complicated by the redaction / remapping proces. ״דב גור״ exists <a href="http://www.openstreetmap.org/browse/way/171412275/history">here</a>, but was redacted and remapped on 13th July. Oddly the <a href="http://www.openstreetmap.org/browse/way/120404493">other carriageway</a> has a different name (also remapped, 5th july). At the time of writing, our search function <a href="http://nominatim.openstreetmap.org/">Nominatim</a> is using 15th August data (there's a note at the top of that page), but it's possible at the time that Ulmon extracted the data that the street wasn't there.</p>
+<p>This is slightly complicated by the redaction / remapping proces. ״דב גור״ exists <a href="https://www.openstreetmap.org/browse/way/171412275/history">here</a>, but was redacted and remapped on 13th July. Oddly the <a href="https://www.openstreetmap.org/browse/way/120404493">other carriageway</a> has a different name (also remapped, 5th july). At the time of writing, our search function <a href="http://nominatim.openstreetmap.org/">Nominatim</a> is using 15th August data (there's a note at the top of that page), but it's possible at the time that Ulmon extracted the data that the street wasn't there.</p>
 <p>Is there a date against the data in the application anywhere?</p>
 </div>
 <div id="comment-15313-info" class="comment-info">

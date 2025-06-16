@@ -107,7 +107,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Can you explain what you want to achieve exactly? Is what you want simply an OSM background map in QGis, or do you actually want to produce tiles?</p>
-<p>If you are after a background map, see the question <a href="http://help.openstreetmap.org/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis">"How to get OSM as a raster layer in QGis"</a>.</p>
+<p>If you are after a background map, see the question <a href="/questions/400/how-to-get-openstreetmap-as-a-raster-layer-in-qgis">"How to get OSM as a raster layer in QGis"</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

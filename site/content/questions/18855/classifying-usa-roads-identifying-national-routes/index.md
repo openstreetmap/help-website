@@ -39,8 +39,8 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm trying to identify the most appropriate "degree" of road in some areas. The wiki states that <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dsecondary">Secondary</a> "nevertheless forming a link in the national route network." Is this actually a requirement? And on a related note, is the viable source of this information found on freeway exit signs?</p>
-<p>The area I'm looking at is <a href="http://www.openstreetmap.org/?lat=47.3651&amp;lon=-122.1212&amp;zoom=14">here</a> and has two road marked as as secondary, though the southern road (likely to have a national number and probably should be primary) is more prominent than the north. But I ca not imagine 256th having any national reference.</p>
+<p>I'm trying to identify the most appropriate "degree" of road in some areas. The wiki states that <a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dsecondary">Secondary</a> "nevertheless forming a link in the national route network." Is this actually a requirement? And on a related note, is the viable source of this information found on freeway exit signs?</p>
+<p>The area I'm looking at is <a href="https://www.openstreetmap.org/?lat=47.3651&amp;lon=-122.1212&amp;zoom=14">here</a> and has two road marked as as secondary, though the southern road (likely to have a national number and probably should be primary) is more prominent than the north. But I ca not imagine 256th having any national reference.</p>
 <p>My findings on unclassified vs tertiary suggest that they are the same where tertiary is a more prominent unclassified road. To which I think tertiary should be used when no road of higher importance can be identified.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -66,7 +66,7 @@ osqa_accepted = true
 <div id="post-18864-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>It might be worth asking on a US-specific channel such as the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us</a> mailing list or <a href="http://wiki.openstreetmap.org/wiki/IRC">IRC channel</a> - you'll probably get answers from people there who don't read this site.</p>
+<p>It might be worth asking on a US-specific channel such as the <a href="http://lists.openstreetmap.org/listinfo/talk-us">talk-us</a> mailing list or <a href="https://wiki.openstreetmap.org/wiki/IRC">IRC channel</a> - you'll probably get answers from people there who don't read this site.</p>
 </div>
 <div id="comment-18864-info" class="comment-info">
 <span class="comment-age">(05 Jan '13, 11:37)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -121,7 +121,7 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>In practice, all areas use whatever is most practical. In the US highway=motorway and highway=primary are the defaults for Interstates and US roads, but secondary roads are commonly used for state roads. In Canada, these are used for provincial roads</p>
-<p>You gave to remember that the original tagging guidelines were written with the UK in mind. The us road guidelines are on the wiki <a href="http://wiki.openstreetmap.org/wiki/United_States_Road_Classification">here</a> and <a href="http://wiki.openstreetmap.org/wiki/United_States_roads_tagging">here</a>.</p>
+<p>You gave to remember that the original tagging guidelines were written with the UK in mind. The us road guidelines are on the wiki <a href="https://wiki.openstreetmap.org/wiki/United_States_Road_Classification">here</a> and <a href="https://wiki.openstreetmap.org/wiki/United_States_roads_tagging">here</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

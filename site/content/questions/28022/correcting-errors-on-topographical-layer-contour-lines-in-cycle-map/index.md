@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I found and reported some strange errors in the underlying topographical layer (visible as contour lines in cycle map). reports can be found <a href="http://www.openstreetmap.org/?note=21482">here</a>, <a href="http://www.openstreetmap.org/?note=21480">here</a> and a lot around there.</p>
+<p>I found and reported some strange errors in the underlying topographical layer (visible as contour lines in cycle map). reports can be found <a href="https://www.openstreetmap.org/?note=21482">here</a>, <a href="https://www.openstreetmap.org/?note=21480">here</a> and a lot around there.</p>
 <p>how can i correct those or where do i have to report errors on these height data? thanks in advance</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -142,7 +142,7 @@ One Answer:
 3
 </div>
 <div class="comment-text">
-<p>See also answers to <a href="https://help.openstreetmap.org/questions/1968/topographical-data-is-wrong">"Topographical data is wrong"</a>.</p>
+<p>See also answers to <a href="/questions/1968/topographical-data-is-wrong">"Topographical data is wrong"</a>.</p>
 </div>
 <div id="comment-28025-info" class="comment-info">
 <span class="comment-age">(13 Nov '13, 10:16)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

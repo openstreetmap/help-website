@@ -135,7 +135,7 @@ One Answer:
 <div id="post-49189-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> There is a ruler symbol on the bottom of the map. By clicking on it you change the units. A message explaining the change will appear. There are several units that can be chosen, click on the ruler until the one you are looking for appears.</p>
+<p><a href="https://help.openstreetmap.org/users/5016/alaskadave">@AlaskaDave</a> There is a ruler symbol on the bottom of the map. By clicking on it you change the units. A message explaining the change will appear. There are several units that can be chosen, click on the ruler until the one you are looking for appears.</p>
 </div>
 <div id="comment-49189-info" class="comment-info">
 <span class="comment-age">(12 Apr '16, 08:39)</span> <span class="comment-user userinfo">Fa__</span>
@@ -146,7 +146,7 @@ One Answer:
 <div id="post-49190-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11913/carnildo">@Carnildo</a> Thank you for your answer. Is there a way to avoid counting twice overlapping areas?</p>
+<p><a href="https://help.openstreetmap.org/users/11913/carnildo">@Carnildo</a> Thank you for your answer. Is there a way to avoid counting twice overlapping areas?</p>
 </div>
 <div id="comment-49190-info" class="comment-info">
 <span class="comment-age">(12 Apr '16, 08:46)</span> <span class="comment-user userinfo">Fa__</span>
@@ -157,7 +157,7 @@ One Answer:
 <div id="post-49195-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/115/fake-stevec">@Fa</a>, Thank you. That control is fairly well hidden LOL.</p>
+<p><a href="https://help.openstreetmap.org/users/115/fake-stevec">@Fa</a>, Thank you. That control is fairly well hidden LOL.</p>
 </div>
 <div id="comment-49195-info" class="comment-info">
 <span class="comment-age">(12 Apr '16, 11:03)</span> <span class="comment-user userinfo">AlaskaDave</span>

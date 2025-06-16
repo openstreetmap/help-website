@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>(I assume you are talking about the search box on <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> which is powered by <span>Nominatim</span>) - typing/pasting in N 14°13.204,E 74°47.939 (be sure to not have leading or trailing spaces) looks good like it is working! I could not find the list of accepted formats right now.</p>
+<p>(I assume you are talking about the search box on <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> which is powered by <span>Nominatim</span>) - typing/pasting in N 14°13.204,E 74°47.939 (be sure to not have leading or trailing spaces) looks good like it is working! I could not find the list of accepted formats right now.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

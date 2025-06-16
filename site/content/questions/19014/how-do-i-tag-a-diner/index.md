@@ -108,7 +108,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>What's wrong with the <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant">restaurant</a> tag? Additionally there are currently 67 uses of <a href="http://wiki.openstreetmap.org/wiki/Key:cuisine">cuisine</a>=diner according to <a href="http://taginfo.openstreetmap.org/tags/cuisine=diner">taginfo</a>.</p>
+<p>What's wrong with the <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant">restaurant</a> tag? Additionally there are currently 67 uses of <a href="https://wiki.openstreetmap.org/wiki/Key:cuisine">cuisine</a>=diner according to <a href="http://taginfo.openstreetmap.org/tags/cuisine=diner">taginfo</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -128,7 +128,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>Combine the restaurant tag with <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours#Values">opening_hours=24/7</a> and you have tagged all the relevant information.</p>
+<p>Combine the restaurant tag with <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours#Values">opening_hours=24/7</a> and you have tagged all the relevant information.</p>
 </div>
 <div id="comment-19026-info" class="comment-info">
 <span class="comment-age">(13 Jan '13, 13:53)</span> <span class="comment-user userinfo">cartinus</span>
@@ -172,7 +172,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>As an American and a frequent patron of diners, I understand your quandary. I don't have an answer, but this is indicative that there's different tagging approaches in OSM.</p>
 <p>Should I tag it as amenity=diner or amenity=restaurant or use multiple other tags to describe it more ? (and as a second point, I agree that cuisine=diner isn't enough, because you mentioned, some, but not all diners, in the US have an 'ethnic' influence to them... I'm using ethnic in quotations, because when I think of ethnic, I think of "this is what my grandma made 60 years ago" and/or "this is what it tastes like in the capital country" and "ethnic" diners aren't like that, there, the recipes have been americanized and only a small portion of the menu consists of those ethnic dishes.....In your case, There probably should be a 3rd tag to represent the ethnic influence at a particular diner....all of this, IMHO.</p>
-<p>I've run into your similar situation last week: There's <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dchemist">shop=chemist</a> and <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpharmacy">shop=pharmacy</a>. Two separate tags, but after reading both wiki pages, searching for any discussions on talk lists, but as I understood, shop=pharmacy, with an additional tag dispensing=no ; has the same meaning as shop=chemist. Seems a little redundant to have both, right ? Which one to use ?</p>
+<p>I've run into your similar situation last week: There's <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dchemist">shop=chemist</a> and <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dpharmacy">shop=pharmacy</a>. Two separate tags, but after reading both wiki pages, searching for any discussions on talk lists, but as I understood, shop=pharmacy, with an additional tag dispensing=no ; has the same meaning as shop=chemist. Seems a little redundant to have both, right ? Which one to use ?</p>
 <p>With similar logic, I'd also ask why not make my own tag: <a href="http://taginfo.openstreetmap.org/search?q=amenity%3Ddiner">amenity=diner</a> ?<br />
 </p>
 <p><strong>Now, which approach should be used for OSM :</strong> A] using 1 broad tag with one or more additional tags that specify the first broader tag, or B] a singular tag that is very specific ? In general, I honestly don't know. Even if people did, it'd take a lot to have it implemented and monitored. :p</p>

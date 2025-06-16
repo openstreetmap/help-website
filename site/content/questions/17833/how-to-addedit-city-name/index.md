@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hi,</p>
-<p>The <a href="http://www.openstreetmap.org/?lat=36.3103&amp;lon=59.5812&amp;zoom=12&amp;layers=M">city of Mashhad</a> in north easet of Iran (the second large city in that country) has no name and I eant to add a name for this city. What is the best way to do this? I am working with JOSM and Potlatch 2.</p>
+<p>The <a href="https://www.openstreetmap.org/?lat=36.3103&amp;lon=59.5812&amp;zoom=12&amp;layers=M">city of Mashhad</a> in north easet of Iran (the second large city in that country) has no name and I eant to add a name for this city. What is the best way to do this? I am working with JOSM and Potlatch 2.</p>
 <p>Thanks.</p>
 <p>EDIT:</p>
 <p>I tried to select city area in JOSM and I get this error: The OSM server 'http://api.openstreetmap.org/api/0.6/' reported a bad request. The area you tried to download is too big or your request was too large. Either request a smaller area or use an export file provided by the OSM community.</p>
@@ -147,7 +147,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Cities are tagged with <a href="http://wiki.openstreetmap.org/wiki/Place">place=*</a> either on a node (simplest method) or on an area (if you have better info). Either find the existing node/area and add the <a href="http://wiki.openstreetmap.org/wiki/Name">name</a> tag on it, or create the node/area yourself.</p>
+<p>Cities are tagged with <a href="https://wiki.openstreetmap.org/wiki/Place">place=*</a> either on a node (simplest method) or on an area (if you have better info). Either find the existing node/area and add the <a href="https://wiki.openstreetmap.org/wiki/Name">name</a> tag on it, or create the node/area yourself.</p>
 <p>You do not need to download the whole city to do this :</p>
 <ul>
 <li>If you're going for the node, just download the city center where the node should be. Using potlach or using josm's "continuous download" plugin might help if you are searching.</li>

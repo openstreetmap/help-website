@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Oneway roads are tagged with <a href="http://wiki.openstreetmap.org/wiki/Oneway">oneway=yes</a>, so the way direction matters. Other way whose direction matter include waterways, coastlines, cliffs, embankments, any way tagged with "*:forward/backward/left/right" keys, etc.</p>
+<p>Oneway roads are tagged with <a href="https://wiki.openstreetmap.org/wiki/Oneway">oneway=yes</a>, so the way direction matters. Other way whose direction matter include waterways, coastlines, cliffs, embankments, any way tagged with "*:forward/backward/left/right" keys, etc.</p>
 <p>In other cases, the way direction does not matter, so use whatever direction is easyer to draw.</p>
 <p>Your editor should know about most of those cases, so that if you reverse the way's direction ('r' in JOSM or 'v' in iD) it'll update the tag and/or warn you.</p>
 </div>
@@ -287,7 +287,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>I came across this wiki article for the <a href="http://wiki.openstreetmap.org/wiki/Key:priority">Key:priority</a> which seems to express just what I want to show on the map. However, it requires the way to have a specific direction. What I want to know is how do I determine the best direction, or is there no rule, standard or convention?</p>
+<p>I came across this wiki article for the <a href="https://wiki.openstreetmap.org/wiki/Key:priority">Key:priority</a> which seems to express just what I want to show on the map. However, it requires the way to have a specific direction. What I want to know is how do I determine the best direction, or is there no rule, standard or convention?</p>
 </div>
 <div id="comment-43418-info" class="comment-info">
 <span class="comment-age">(05 Jun '15, 14:03)</span> <span class="comment-user userinfo">Huttite</span>

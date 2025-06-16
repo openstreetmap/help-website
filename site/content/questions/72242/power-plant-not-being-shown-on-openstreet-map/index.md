@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>On openinframap.org I can see the Wildorado Wind 1 and 2 farms: <a href="https://openinframap.org/#14/35.29193/-102.31629">https://openinframap.org/#14/35.29193/-102.31629</a></p>
 <p>But on openstreemap.org only the turbines are shown: <a href="https://openinframap.org/#14/35.29193/-102.31629">https://openinframap.org/#14/35.29193/-102.31629</a> The outline is not being shown (so I can't edit it). Secondly the name is not being found in the search results:</p>
-<p>openinframap.org showing Wildorado Wind 1: <img src="https://help.openstreetmap.org/upfiles/openinframap_showing_name_of_wind_farm.png" alt="openinframap.org showing Wildorado Wind 1" /></p>
-<p>openstreemap.org not finding name of wind farm, or showing the name of wind farm or the outline: <img src="https://help.openstreetmap.org/upfiles/openstreemap_not_finding_name_of_wind_farm.png" alt="openstreemap.org not finding name of wind farm" /></p>
+<p>openinframap.org showing Wildorado Wind 1: <img src="/upfiles/openinframap_showing_name_of_wind_farm.png" alt="openinframap.org showing Wildorado Wind 1" /></p>
+<p>openstreemap.org not finding name of wind farm, or showing the name of wind farm or the outline: <img src="/upfiles/openstreemap_not_finding_name_of_wind_farm.png" alt="openstreemap.org not finding name of wind farm" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-infrastructure" rel="tag" title="see questions tagged &#39;infrastructure&#39;">infrastructure</span>

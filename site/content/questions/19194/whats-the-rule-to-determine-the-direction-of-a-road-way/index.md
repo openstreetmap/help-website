@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>For most ways, the direction doesn't matter. It is only some specific tags which depend on the direction, eg if the tags only apply when travelling forward or backward, or refer to the left and right sides of the way.</p>
-<p>This category on the wiki has an explanation, and contains tags which depend on the direction: <a href="http://wiki.openstreetmap.org/wiki/Category:Way_Direction_Dependent">Category:Way Direction Dependent</a></p>
+<p>This category on the wiki has an explanation, and contains tags which depend on the direction: <a href="https://wiki.openstreetmap.org/wiki/Category:Way_Direction_Dependent">Category:Way Direction Dependent</a></p>
 <p>So for a typical road or path, the direction doesn't matter. It is only if it has specific tags like <code>oneway</code> or <code>incline</code> or <code>sidewalk=left/right</code> etc. Or if it is a member of a relation with a direction, eg a route relation with a role of forward or backward.</p>
 </div>
 <div class="answer-controls post-controls">

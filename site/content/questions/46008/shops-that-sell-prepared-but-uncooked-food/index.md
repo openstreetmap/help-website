@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>There are a number of shops which sell food that is meant to be taken home and cooked. For example, <a href="http://www.papamurphys.com/">Papa Murphy's Take 'n' Bake Pizza</a>. How do we tag these?</p>
-<p>It seems like <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant">amenity=fast_food</a> or <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfast_food">amenity=restaurant</a> would be misleading because there is no way to actually eat the food on site.</p>
+<p>It seems like <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drestaurant">amenity=fast_food</a> or <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfast_food">amenity=restaurant</a> would be misleading because there is no way to actually eat the food on site.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-food" rel="tag" title="see questions tagged &#39;food&#39;">food</span> <span class="post-tag tag-link-uncooked" rel="tag" title="see questions tagged &#39;uncooked&#39;">uncooked</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -158,7 +158,7 @@ One Answer:
 <div id="post-46046-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dfood">shop=food</a> sounds good. <a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Ddeli">shop=deli</a> seems like it specializes more in ingredients like processed meats and cheese rather than entire pre-made, ready to cook, meals.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dfood">shop=food</a> sounds good. <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Ddeli">shop=deli</a> seems like it specializes more in ingredients like processed meats and cheese rather than entire pre-made, ready to cook, meals.</p>
 </div>
 <div id="comment-46046-info" class="comment-info">
 <span class="comment-age">(21 Oct '15, 22:02)</span> <span class="comment-user userinfo">Peter Dobratz</span>

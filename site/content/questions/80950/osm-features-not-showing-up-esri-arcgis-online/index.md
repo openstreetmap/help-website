@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I updated some trails on OSM.org via JOSM. Took a couple of days, no problem, looks like the rest of the trails. I am using OSM as a base map layer on my ESRI ArcGIS Online and my trails don't show up. Its been a couple of weeks now. <img src="https://help.openstreetmap.org/upfiles/OSMosm.png" alt="alt text" /> Thanks bruce</p>
-<p><img src="https://help.openstreetmap.org/upfiles/OSMOnline_4Fnijcx.png" alt="alt text" /></p>
+<p>I updated some trails on OSM.org via JOSM. Took a couple of days, no problem, looks like the rest of the trails. I am using OSM as a base map layer on my ESRI ArcGIS Online and my trails don't show up. Its been a couple of weeks now. <img src="/upfiles/OSMosm.png" alt="alt text" /> Thanks bruce</p>
+<p><img src="/upfiles/OSMOnline_4Fnijcx.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-esri" rel="tag" title="see questions tagged &#39;esri&#39;">esri</span>

@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Il problema credo possa essere dato dal fatto che il paese si trova (a zoom 19) sul confine di due differenti tile di rendering. Io ho appena aggiornato la cache del browser (CTRL+SHIFT+F5 in Chromium) e vedo le strade correttamente. <img src="https://help.openstreetmap.org/upfiles/Immagine_H35TGMW.png" alt="alt text" /></p>
+<p>Il problema credo possa essere dato dal fatto che il paese si trova (a zoom 19) sul confine di due differenti tile di rendering. Io ho appena aggiornato la cache del browser (CTRL+SHIFT+F5 in Chromium) e vedo le strade correttamente. <img src="/upfiles/Immagine_H35TGMW.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -130,8 +130,8 @@ One Answer:
 <div id="post-76416-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Grazie Mannivu, ho provato anche io a pulire la chache di Chrome, ma continua a darmi lo stesso problema. <img src="https://help.openstreetmap.org/upfiles/Screenshot_(5).png" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_(5).png" alt="alt text" /></p>
+<p>Grazie Mannivu, ho provato anche io a pulire la chache di Chrome, ma continua a darmi lo stesso problema. <img src="/upfiles/Screenshot_(5).png" alt="alt text" /></p>
+<p><img src="/upfiles/Screenshot_(5).png" alt="alt text" /></p>
 </div>
 <div id="comment-76416-info" class="comment-info">
 <span class="comment-age">(02 Sep '20, 14:45)</span> <span class="comment-user userinfo">Alvin77</span>

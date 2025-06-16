@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Should I manually add building contours in Germany?"
-description = '''I already did some work (http://www.openstreetmap.org/?lat=51.08712&amp;amp;lon=6.31741&amp;amp;zoom=15&amp;amp;layers=M), but the official data is far more detailed and complete ( e.g. search for erkelenz on this page: http://www.arcgis.com/home/webmap/viewer.html ). The state-owned data will be made available...'''
+description = '''I already did some work (https://www.openstreetmap.org/?lat=51.08712&amp;amp;lon=6.31741&amp;amp;zoom=15&amp;amp;layers=M), but the official data is far more detailed and complete ( e.g. search for erkelenz on this page: http://www.arcgis.com/home/webmap/viewer.html ). The state-owned data will be made available...'''
 date = "2012-07-19T20:12:00Z"
 lastmod = "2012-07-19T21:12:00Z"
 weight = 14406
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I already did some work (<a href="http://www.openstreetmap.org/?lat=51.08712&amp;lon=6.31741&amp;zoom=15&amp;layers=M),">http://www.openstreetmap.org/?lat=51.08712&amp;lon=6.31741&amp;zoom=15&amp;layers=M),</a> but the official data is far more detailed and complete ( e.g. search for erkelenz on this page: <a href="http://www.arcgis.com/home/webmap/viewer.html">http://www.arcgis.com/home/webmap/viewer.html</a> ).</p>
+<p>I already did some work (<a href="https://www.openstreetmap.org/?lat=51.08712&amp;lon=6.31741&amp;zoom=15&amp;layers=M),">https://www.openstreetmap.org/?lat=51.08712&amp;lon=6.31741&amp;zoom=15&amp;layers=M),</a> but the official data is far more detailed and complete ( e.g. search for erkelenz on this page: <a href="http://www.arcgis.com/home/webmap/viewer.html">http://www.arcgis.com/home/webmap/viewer.html</a> ).</p>
 <p>The state-owned data will be made available for free in the future (<a href="http://www.heise.de/newsticker/meldung/Bund-stellt-Geodaten-kostenfrei-bereit-1629289.html),">http://www.heise.de/newsticker/meldung/Bund-stellt-Geodaten-kostenfrei-bereit-1629289.html),</a> so I wonder whether it makes sense at all to work on this?</p>
 </div>
 <div id="question-tags" class="tags-container tags">

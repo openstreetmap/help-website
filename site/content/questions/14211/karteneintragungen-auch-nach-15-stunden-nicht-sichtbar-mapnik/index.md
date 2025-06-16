@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-14212-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hast du bereits versucht deinen Browsercache zu leeren? Bei mir sieht die <a href="http://www.openstreetmap.org/?lat=51.940898&amp;lon=11.216204&amp;zoom=17&amp;layers=M">Bodestraße</a> in Ordnung aus und der gerenderte Teil stimmt auch mit den darunter liegenden Daten überein. Davon abgesehen ist es immer sehr hilfreich, einen Link auf das zugehörige Gebiet anzugeben (rechts unten auf Permalink klicken).</p>
+<p>Hast du bereits versucht deinen Browsercache zu leeren? Bei mir sieht die <a href="https://www.openstreetmap.org/?lat=51.940898&amp;lon=11.216204&amp;zoom=17&amp;layers=M">Bodestraße</a> in Ordnung aus und der gerenderte Teil stimmt auch mit den darunter liegenden Daten überein. Davon abgesehen ist es immer sehr hilfreich, einen Link auf das zugehörige Gebiet anzugeben (rechts unten auf Permalink klicken).</p>
 <p>[edit]: Ach du meinst u.a. unten die Häuser, die sind tatsächlich noch nicht gerendert.</p>
 </div>
 <div id="comment-14212-info" class="comment-info">

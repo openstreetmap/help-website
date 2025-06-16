@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Problem with nominatim own server"
-description = '''I&#x27;ve downloaded the osm virtual machine here: http://wiki.openstreetmap.org/wiki/Virtual_machine_image ...and patched the local.php file (for the &quot;declaration allowed only at the start of the document&quot; error). It appears to be working fine, except for the following issue: I understand there are two ...'''
+description = '''I&#x27;ve downloaded the osm virtual machine here: https://wiki.openstreetmap.org/wiki/Virtual_machine_image ...and patched the local.php file (for the &quot;declaration allowed only at the start of the document&quot; error). It appears to be working fine, except for the following issue: I understand there are two ...'''
 date = "2013-12-04T06:04:00Z"
 lastmod = "2013-12-04T18:02:00Z"
 weight = 28748
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I've downloaded the osm virtual machine here:</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">http://wiki.openstreetmap.org/wiki/Virtual_machine_image</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Virtual_machine_image">https://wiki.openstreetmap.org/wiki/Virtual_machine_image</a></p>
 <p>...and patched the local.php file (for the "declaration allowed only at the start of the document" error). It appears to be working fine, except for the following issue:</p>
 <p>I understand there are two ways to query for an address:</p>
 <pre><code> q=&lt;query&gt;
@@ -58,11 +58,11 @@ osqa_accepted = true
 <p>However, the first way works, and the second one gets me no results. I thought it could be a problem with the address formatting but if I use the same query on the public nominatim server (instead of my own) I get results.</p>
 <p>Check the public server output:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
-&lt;searchresults timestamp=&#39;Wed, 04 Dec 13 05:50:52 +0000&#39; attribution=&#39;Data ?? OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright&#39; querystring=&#39;andes 1479, montevideo, montevideo, uruguay&#39; polygon=&#39;false&#39; exclude_place_ids=&#39;96424832,57980898,70445266&#39; more_url=&#39;http://nominatim.openstreetmap.org/search?format=xml&amp;amp;exclude_place_ids=96424832,57980898,70445266&amp;amp;q=andes+1479%2C+montevideo%2C+montevideo%2C+uruguay&#39;&gt;
+&lt;searchresults timestamp=&#39;Wed, 04 Dec 13 05:50:52 +0000&#39; attribution=&#39;Data ?? OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39; querystring=&#39;andes 1479, montevideo, montevideo, uruguay&#39; polygon=&#39;false&#39; exclude_place_ids=&#39;96424832,57980898,70445266&#39; more_url=&#39;http://nominatim.openstreetmap.org/search?format=xml&amp;amp;exclude_place_ids=96424832,57980898,70445266&amp;amp;q=andes+1479%2C+montevideo%2C+montevideo%2C+uruguay&#39;&gt;
 &lt;place place_id=&#39;96424832&#39; osm_type=&#39;way&#39; osm_id=&#39;179061638&#39; place_rank=&#39;26&#39; boundingbox=&quot;-34.9064064025879,-34.9008026123047,-56.1986999511719,-56.1981239318848&quot; lat=&#39;-34.9035605&#39; lon=&#39;-56.1984301&#39; display_name=&#39;Andes, Ciudad Vieja, Montevideo, 11100, Uruguay&#39; class=&#39;highway&#39; type=&#39;residential&#39; importance=&#39;0.9&#39;/&gt;&lt;place place_id=&#39;57980898&#39; osm_type=&#39;way&#39; osm_id=&#39;78105349&#39; place_rank=&#39;26&#39; boundingbox=&quot;-34.9114799499512,-34.9064025878906,-56.198127746582,-56.1972122192383&quot; lat=&#39;-34.9092104&#39; lon=&#39;-56.1978327&#39; display_name=&#39;Andes, Barrio Sur, Montevideo, 11100, Uruguay&#39; class=&#39;highway&#39; type=&#39;residential&#39; importance=&#39;0.9&#39;/&gt;&lt;place place_id=&#39;70445266&#39; osm_type=&#39;way&#39; osm_id=&#39;112698692&#39; place_rank=&#39;26&#39; boundingbox=&quot;-34.8365058898926,-34.8350563049316,-55.9612350463867,-55.9585113525391&quot; lat=&#39;-34.8357171&#39; lon=&#39;-55.9597648&#39; display_name=&#39;Andes, Solymar, Ciudad de la Costa, Canelones, Uruguay&#39; class=&#39;highway&#39; type=&#39;residential&#39; importance=&#39;0.7&#39;/&gt;&lt;/searchresults&gt;</code></pre>
 <p>and my local server output:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
-&lt;searchresults timestamp=&#39;Wed, 04 Dec 13 05:50:59 +0000&#39; attribution=&#39;Data ?? OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright&#39; querystring=&#39;&#39; polygon=&#39;false&#39; more_url=&#39;http://localhost/nominatim/search?format=xml&amp;amp;exclude_place_ids=&amp;amp;accept-language=&amp;amp;q=&#39;&gt;
+&lt;searchresults timestamp=&#39;Wed, 04 Dec 13 05:50:59 +0000&#39; attribution=&#39;Data ?? OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39; querystring=&#39;&#39; polygon=&#39;false&#39; more_url=&#39;http://localhost/nominatim/search?format=xml&amp;amp;exclude_place_ids=&amp;amp;accept-language=&amp;amp;q=&#39;&gt;
 &lt;/searchresults&gt;</code></pre>
 <p>In both cases, I'm using the same query:</p>
 <pre><code>http://&lt;public server or private server&gt;/search?format=xml&amp;street=andes+1479&amp;city=montevideo&amp;county=&amp;state=montevideo&amp;country=uruguay&amp;postalcode=</code></pre>
@@ -132,8 +132,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This virtual image is from the end of 2012 and contains a Nominatim version that is neither capable of handling <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">64-bit node IDs</a> nor supports the structured search that you're attempting. The <a href="http://wiki.openstreetmap.org/wiki/Virtual_machine_image">virtual image wiki page</a> also contains a big red warning message at the beginning which you seem to have missed somehow.</p>
-<p>This means that the current virtual image is of little use. Newer versions of Nominatim can handle 64-bit node IDs but this would require you to update the Nominatim version contained in the virtual image (and possible other software, too), the wiki also contains <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">Nominatim installation instructions</a>.</p>
+<p>This virtual image is from the end of 2012 and contains a Nominatim version that is neither capable of handling <a href="https://wiki.openstreetmap.org/wiki/64-bit_Identifiers">64-bit node IDs</a> nor supports the structured search that you're attempting. The <a href="https://wiki.openstreetmap.org/wiki/Virtual_machine_image">virtual image wiki page</a> also contains a big red warning message at the beginning which you seem to have missed somehow.</p>
+<p>This means that the current virtual image is of little use. Newer versions of Nominatim can handle 64-bit node IDs but this would require you to update the Nominatim version contained in the virtual image (and possible other software, too), the wiki also contains <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">Nominatim installation instructions</a>.</p>
 <p>And if you really need a root password (<code>sudo</code> should be enough for everything) then you can set/change it via <code>sudo passwd</code>.</p>
 </div>
 <div class="answer-controls post-controls">

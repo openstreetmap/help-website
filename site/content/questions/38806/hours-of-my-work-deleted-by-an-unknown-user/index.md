@@ -41,8 +41,8 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hello All, I am a volunteer teacher using osm to organise our community work within a specific rural territory in dominican republic. I received an email this morning mentioning that a user I dont know of just deleted a polygon on which I worked for hours to define our working area;</p>
 <p>"4rch has left a comment on one of your changesets created at 2014-11-25 18:21:53 UTC without comment</p>
-<p>I've deleted the polygon as it covered a large area without residential landuse. <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential</a></p>
-<p>More details about the changeset can be found at <a href="http://www.openstreetmap.org/changeset/26898665">http://www.openstreetmap.org/changeset/26898665"</a></p>
+<p>I've deleted the polygon as it covered a large area without residential landuse. <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential">https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential</a></p>
+<p>More details about the changeset can be found at <a href="https://www.openstreetmap.org/changeset/26898665">https://www.openstreetmap.org/changeset/26898665"</a></p>
 <p>Can someone please help me undo this changeset and recover my work ? Can this type of behavior be restricted ?</p>
 <p>thanks in advance for your kind support</p>
 <p>jfricher</p>
@@ -210,7 +210,7 @@ osqa_accepted = false
 </div>
 <div class="comment-text">
 <p>Another, perhaps simpler way is to use <a href="http://umap.openstreetmap.fr">umap</a> to create a map to coordinate your teachers.</p>
-<p>Download the <a href="http://www.openstreetmap.org/api/0.6/way/312806763/17">version of your data before the deletion</a> and use umap's import feature to save yourself the trouble of redrawing it.</p>
+<p>Download the <a href="https://www.openstreetmap.org/api/0.6/way/312806763/17">version of your data before the deletion</a> and use umap's import feature to save yourself the trouble of redrawing it.</p>
 </div>
 <div id="comment-38819-info" class="comment-info">
 <span class="comment-age">(25 Nov '14, 22:22)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>
@@ -319,7 +319,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Besides all the good suggestions that have already been made maybe you should consider using one of the task managing services to coordinate your work. Either an instance of the HOT task manager see <a href="https://github.com/hotosm/osm-tasking-manager2">https://github.com/hotosm/osm-tasking-manager2</a> or <a href="http://wiki.openstreetmap.org/wiki/MapCraft">http://wiki.openstreetmap.org/wiki/MapCraft</a></p>
+<p>Besides all the good suggestions that have already been made maybe you should consider using one of the task managing services to coordinate your work. Either an instance of the HOT task manager see <a href="https://github.com/hotosm/osm-tasking-manager2">https://github.com/hotosm/osm-tasking-manager2</a> or <a href="https://wiki.openstreetmap.org/wiki/MapCraft">https://wiki.openstreetmap.org/wiki/MapCraft</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

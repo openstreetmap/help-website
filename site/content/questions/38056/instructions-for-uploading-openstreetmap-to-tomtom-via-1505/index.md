@@ -116,7 +116,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Here is a little info on the wiki.<br />
-<a href="http://wiki.openstreetmap.org/wiki/TomTom">http://wiki.openstreetmap.org/wiki/TomTom</a></p>
+<a href="https://wiki.openstreetmap.org/wiki/TomTom">https://wiki.openstreetmap.org/wiki/TomTom</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -136,7 +136,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>It's easyer with Garmin devices : the format has been reverse-engineered and <a href="http://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> can turn osm data into Garmin format.</p>
+<p>It's easyer with Garmin devices : the format has been reverse-engineered and <a href="https://wiki.openstreetmap.org/wiki/Mkgmap">mkgmap</a> can turn osm data into Garmin format.</p>
 </div>
 <div id="comment-38068-info" class="comment-info">
 <span class="comment-age">(29 Oct '14, 09:28)</span> <span class="comment-user userinfo">Vincent de P... ♦</span>

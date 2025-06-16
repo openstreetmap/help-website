@@ -113,7 +113,7 @@ osqa_accepted = false
 <div id="post-66911-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>I download the .zip, exstract it and now I am here: <img src="https://help.openstreetmap.org/upfiles/osm_aFaoXk3.png" alt="alt text" /></p>
+<p>I download the .zip, exstract it and now I am here: <img src="/upfiles/osm_aFaoXk3.png" alt="alt text" /></p>
 <p>It does not matter which .bat I click on, the cmd window that is supposed to open up immdeiatly closes again without even allowing me to read whatever is supposed to be there.</p>
 </div>
 <div id="comment-66911-info" class="comment-info">

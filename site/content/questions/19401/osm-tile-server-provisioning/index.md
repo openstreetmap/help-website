@@ -40,8 +40,8 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>We are looking to roll our own OSM server, and are currently trying to lay down some basic server requirements in terms of disk space and bandwidth usage.</p>
-<p>According to the OSM wiki, the full tile-set without pre-rendering is on the order of <a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">~1.7TB</a>.</p>
-<p>Looking at network <a href="http://wiki.openstreetmap.org/wiki/Stats">stats</a> for a number of the tile servers, <a href="http://munin.openstreetmap.org/openstreetmap/www.openstreetmap/index.html">specifically the www.openstreetmap.org server</a>, I am getting the following breakdown from the weekly charts:</p>
+<p>According to the OSM wiki, the full tile-set without pre-rendering is on the order of <a href="https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">~1.7TB</a>.</p>
+<p>Looking at network <a href="https://wiki.openstreetmap.org/wiki/Stats">stats</a> for a number of the tile servers, <a href="http://munin.openstreetmap.org/openstreetmap/www.openstreetmap/index.html">specifically the www.openstreetmap.org server</a>, I am getting the following breakdown from the weekly charts:</p>
 <pre><code>Apache Accesses/sec = ~105k
 Apache Data/sec = ~625kb</code></pre>
 <p>So on average, each data access generates ~6.25 b/s. Per day, that works out to 540k bytes/user - seems low though as each map tile is ~30k and just the default map with the settings they use is going to be ~15 tiles... and then they are going to be zooming, panning, etc.</p>
@@ -147,7 +147,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You are looking at the wrong stats if you want a tile server. Those stats are just for the website without the tiles.</p>
-<p>The OSM tileserver is behind a set of 5 reverse proxy servers as a cdn. The stats for the aggregate are at <a href="http://munin.openstreetmap.org/openstreetmap/tile.openstreetmap/index.html">http://munin.openstreetmap.org/openstreetmap/tile.openstreetmap/index.html</a> The stats for the actual backend tile server are at <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html</a> But there is a good chance you won't see anything like the traffic on osm.org. A usefull resource is also <a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a></p>
+<p>The OSM tileserver is behind a set of 5 reverse proxy servers as a cdn. The stats for the aggregate are at <a href="http://munin.openstreetmap.org/openstreetmap/tile.openstreetmap/index.html">http://munin.openstreetmap.org/openstreetmap/tile.openstreetmap/index.html</a> The stats for the actual backend tile server are at <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/index.html</a> But there is a good chance you won't see anything like the traffic on osm.org. A usefull resource is also <a href="https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

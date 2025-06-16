@@ -109,7 +109,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>I dug around a little, and the playground appears to have been added to the Tigris multipolygon relation in October 2011 - <a href="http://www.openstreetmap.org/browse/relation/143/history">this</a> is the relation in question. Not sure how that might have happened - either an editor bug, or clicking 'Add to relation' then 'Load relation' and typing 143 (though that seems unlikely!).</p>
+<p>I dug around a little, and the playground appears to have been added to the Tigris multipolygon relation in October 2011 - <a href="https://www.openstreetmap.org/browse/relation/143/history">this</a> is the relation in question. Not sure how that might have happened - either an editor bug, or clicking 'Add to relation' then 'Load relation' and typing 143 (though that seems unlikely!).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -168,7 +168,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="https://help.openstreetmap.org/questions/87587/suddenly-throwing-cors-error-on-open-street-map-api-calls">https://help.openstreetmap.org/questions/87587/suddenly-throwing-cors-error-on-open-street-map-api-calls</a> .</p>
+<p>See <a href="/questions/87587/suddenly-throwing-cors-error-on-open-street-map-api-calls">https://help.openstreetmap.org/questions/87587/suddenly-throwing-cors-error-on-open-street-map-api-calls</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

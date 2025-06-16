@@ -198,8 +198,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>A certain collection of possibilities are listet at <a href="http://wiki.openstreetmap.org/wiki/Offline_Openstreetmap">http://wiki.openstreetmap.org/wiki/Offline_Openstreetmap</a> but it can be outdated.</p>
-<p>Also have a look at <a href="http://wiki.openstreetmap.org/wiki/Software/Desktop">http://wiki.openstreetmap.org/wiki/Software/Desktop</a> and investigate the tables there about offline data display or tile display.</p>
+<p>A certain collection of possibilities are listet at <a href="https://wiki.openstreetmap.org/wiki/Offline_Openstreetmap">https://wiki.openstreetmap.org/wiki/Offline_Openstreetmap</a> but it can be outdated.</p>
+<p>Also have a look at <a href="https://wiki.openstreetmap.org/wiki/Software/Desktop">https://wiki.openstreetmap.org/wiki/Software/Desktop</a> and investigate the tables there about offline data display or tile display.</p>
 </div>
 <div id="comment-14895-info" class="comment-info">
 <span class="comment-age">(07 Aug '12, 17:17)</span> <span class="comment-user userinfo">stephan75</span>

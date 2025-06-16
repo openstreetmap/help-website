@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I have a simple Overpass XML query, and I'd like to restrict it to search in a manually-specified polygon (NOT to an existing area in OSM). The documentation mentions how to <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_region_by_polygon">select region by polygon</a> but it doesn't tell me what to use instead of <code>bbox-query</code> to actually <em>use</em> that polygon.</p>
+<p>I have a simple Overpass XML query, and I'd like to restrict it to search in a manually-specified polygon (NOT to an existing area in OSM). The documentation mentions how to <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_region_by_polygon">select region by polygon</a> but it doesn't tell me what to use instead of <code>bbox-query</code> to actually <em>use</em> that polygon.</p>
 <p>(My use-case: selecting e.g. all the lighthouses in mainland Britain. There are few enough lighthouses that it's OK to query such a big area, but the coast of Britain is far too complex to try and load into the Overpass interpreter so I drew a simplified outline.)</p>
 <p>Here is my bbox query, which easily gets all the lighthouses in mainland Britain, but with a couple of extras from Ireland and France:</p>
 <pre><code> {{key=man_made}}
@@ -177,7 +177,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It <em>does</em> tell you what to use, but not as you seem to expect. Overpass has two different <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#The_languages">query language formats</a>: <em>XML</em> and its own language <em>QL</em>. The <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_region_by_polygon">select region by polygon example query</a> is written in QL but you seem to prefer the XML version. In that case just paste the code into the <a href="http://overpass-api.de/convert_form.html">Overpass API convert form</a> where you can convert between different formats. Converting the example query to XML will result in:</p>
+<p>It <em>does</em> tell you what to use, but not as you seem to expect. Overpass has two different <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#The_languages">query language formats</a>: <em>XML</em> and its own language <em>QL</em>. The <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Select_region_by_polygon">select region by polygon example query</a> is written in QL but you seem to prefer the XML version. In that case just paste the code into the <a href="http://overpass-api.de/convert_form.html">Overpass API convert form</a> where you can convert between different formats. Converting the example query to XML will result in:</p>
 <pre><code>&lt;osm-script&gt;
   &lt;union into=&quot;_&quot;&gt;
     &lt;polygon-query bounds=&quot;50.7 7.1 50.7 7.12 50.71 7.11&quot; into=&quot;_&quot;/&gt;

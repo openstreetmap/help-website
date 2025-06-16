@@ -132,7 +132,7 @@ One Answer:
 <div id="post-36660-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you <a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> for the edit :)</p>
+<p>Thank you <a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> for the edit :)</p>
 </div>
 <div id="comment-36660-info" class="comment-info">
 <span class="comment-age">(07 Sep '14, 17:33)</span> <span class="comment-user userinfo">BlueTiger</span>
@@ -144,7 +144,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5023/bluetiger">@BlueTiger</a>: :-) I saw this menu entry before but never tested/used it (I wrongly assumed it is to be used together with live GPS data). Very interesting!</p>
+<p><a href="https://help.openstreetmap.org/users/5023/bluetiger">@BlueTiger</a>: :-) I saw this menu entry before but never tested/used it (I wrongly assumed it is to be used together with live GPS data). Very interesting!</p>
 </div>
 <div id="comment-36661-info" class="comment-info">
 <span class="comment-age">(07 Sep '14, 17:36)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

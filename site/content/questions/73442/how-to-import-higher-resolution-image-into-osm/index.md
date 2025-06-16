@@ -222,7 +222,7 @@ osqa_accepted = false
 <div id="post-73445-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That may not be good enough. But hopefully it is. Someone with better legal knowledge can answer it for you. The JOSM editor may have a plugin that can use the image, but i haven't used it. <a href="https://help.openstreetmap.org/questions/14552/is-there-an-editor-to-drag-and-drop-imagesicons-and-rotate-them-into-the-map">https://help.openstreetmap.org/questions/14552/is-there-an-editor-to-drag-and-drop-imagesicons-and-rotate-them-into-the-map</a></p>
+<p>That may not be good enough. But hopefully it is. Someone with better legal knowledge can answer it for you. The JOSM editor may have a plugin that can use the image, but i haven't used it. <a href="/questions/14552/is-there-an-editor-to-drag-and-drop-imagesicons-and-rotate-them-into-the-map">https://help.openstreetmap.org/questions/14552/is-there-an-editor-to-drag-and-drop-imagesicons-and-rotate-them-into-the-map</a></p>
 </div>
 <div id="comment-73445-info" class="comment-info">
 <span class="comment-age">(09 Mar '20, 09:49)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -112,7 +112,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>OpenStreetMap tiles are in Spherical Mercator EPSG:900913 (EPSG:3857). The origin is top left. The URL layout is <a href="http://tile.openstreetmap.org/%Z/%X/%Y.png">http://tile.openstreetmap.org/%Z/%X/%Y.png</a></p>
 <p>I've never used MapInfo, but a likely good starting point is to modify an existing .tab/.xml setup designed for Google Maps or similar map service.</p>
-<p>The OpenStreetMap Tile server has a usage policy: <a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy"></a><a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy"></a><a href="http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">http://wiki.openstreetmap.org/wiki/Tile_Usage_Policy</a></p>
+<p>The OpenStreetMap Tile server has a usage policy: <a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy"></a><a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy"></a><a href="https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy">https://wiki.openstreetmap.org/wiki/Tile_Usage_Policy</a></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

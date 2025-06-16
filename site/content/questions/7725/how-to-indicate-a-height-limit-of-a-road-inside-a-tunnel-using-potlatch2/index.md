@@ -70,7 +70,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>This is a related question <a href="http://help.openstreetmap.org/questions/3274/where-should-maxheight-be-positioned">http://help.openstreetmap.org/questions/3274/where-should-maxheight-be-positioned</a></p>
+<p>This is a related question <a href="/questions/3274/where-should-maxheight-be-positioned">https://help.openstreetmap.org/questions/3274/where-should-maxheight-be-positioned</a></p>
 </div>
 <div id="comment-7731-info" class="comment-info">
 <span class="comment-age">(07 Sep '11, 22:55)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -124,7 +124,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See <a href="http://wiki.openstreetmap.org/wiki/Key:maxheight">Key:maxheight</a></p>
+<p>See <a href="https://wiki.openstreetmap.org/wiki/Key:maxheight">Key:maxheight</a></p>
 <p>In your case add the combination <code>maxheight=3.5</code>. Use it only on the segment where the height is limited (split if needed). You can go to the advanced tab and enter it there if it is not in the menu.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -175,7 +175,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>In Potlatch you can click on the tunnel and then the "advanced" tab at the bottom. Then you can add the key <em><a href="http://wiki.openstreetmap.org/wiki/Key:maxheight">maxheight</a></em> with the value "3.5". You can go back to the previous tab by clicking "Simple".</p>
+<p>In Potlatch you can click on the tunnel and then the "advanced" tab at the bottom. Then you can add the key <em><a href="https://wiki.openstreetmap.org/wiki/Key:maxheight">maxheight</a></em> with the value "3.5". You can go back to the previous tab by clicking "Simple".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -242,7 +242,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Just add <a href="http://wiki.openstreetmap.org/wiki/Maxheight">maxheight</a>=3.5 to the tunnel where this restriction applies.</p>
+<p>Just add <a href="https://wiki.openstreetmap.org/wiki/Maxheight">maxheight</a>=3.5 to the tunnel where this restriction applies.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

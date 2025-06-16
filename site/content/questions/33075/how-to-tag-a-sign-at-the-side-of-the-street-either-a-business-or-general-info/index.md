@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>How about <a href="http://wiki.openstreetmap.org/wiki/Key:advertising">advertising=sign</a> if it's just related to businesses? Also <a href="http://wiki.openstreetmap.org/wiki/Key:information">tourism=information with subtags</a> might be a idea, if it's more related to general aspects.</p>
+<p>How about <a href="https://wiki.openstreetmap.org/wiki/Key:advertising">advertising=sign</a> if it's just related to businesses? Also <a href="https://wiki.openstreetmap.org/wiki/Key:information">tourism=information with subtags</a> might be a idea, if it's more related to general aspects.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -114,8 +114,8 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You might want to use the <strong>bbox operator</strong> but there is AFAIK no operator to restrict the admin_level:<br />
-<a href="http://wiki.openstreetmap.org/wiki/Nominatim#Parameters">http://wiki.openstreetmap.org/wiki/Nominatim#Parameters</a></p>
-<p>So either you are able to prefilter your query by adjusting the state,country, ... addresses or you may use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> instead</p>
+<a href="https://wiki.openstreetmap.org/wiki/Nominatim#Parameters">https://wiki.openstreetmap.org/wiki/Nominatim#Parameters</a></p>
+<p>So either you are able to prefilter your query by adjusting the state,country, ... addresses or you may use the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a> instead</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -147,7 +147,7 @@ One Answer:
 </div>
 <div class="comment-text">
 <p>Hmm Qverpass API is one of the fastest ways to work remote with global OSM data. The only alternative would be to do the processing local using OSM planet extracts.</p>
-<p>BTW.: All APIs are hosted on donated resources and maintained by volunteers. So they require fair use and are esp. not suitable to do bulk transfers: <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></p>
+<p>BTW.: All APIs are hosted on donated resources and maintained by volunteers. So they require fair use and are esp. not suitable to do bulk transfers: <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a></p>
 </div>
 <div id="comment-29550-info" class="comment-info">
 <span class="comment-age">(02 Jan '14, 15:54)</span> <span class="comment-user userinfo">iii</span>

@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Seems like a simple question: How to tag bus stops without a name?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">highway=bus_stop</a> tells me to tag a node next to one side of the highway way. Ok, but i prefer <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_position">public_transport=stop_position</a> with <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dplatform">public_transport=platform</a>. As far as I understand I need to add a <a href="http://wiki.openstreetmap.org/wiki/Key:name">key:name</a> on both nodes or add a <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area">public_transport=stop_area</a> relation. Unfortunately this also needs a <a href="http://wiki.openstreetmap.org/wiki/Key:name">key:name</a>. So what can I do?</p>
-<p>I also read <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Noname">Proposed features/Noname</a> and <a href="http://wiki.openstreetmap.org/wiki/Names#No_name">Names/No_Name</a> but could not find an answer. The closest "answer" I have found is <a href="https://help.openstreetmap.org/answer_link/19204/">this</a> but I am still not sure if this is correct.</p>
-<p>(Background: I am trying to add some bus stations on a bus route like <a href="http://www.openstreetmap.org/relation/3586878#map=13/-25.5733/-54.5335&amp;layers=T">this</a> in Brazil. But the bus stops seem to be unnamed and I have no idea how to "link" the platforms with stop_positions).</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_stop">highway=bus_stop</a> tells me to tag a node next to one side of the highway way. Ok, but i prefer <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_position">public_transport=stop_position</a> with <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dplatform">public_transport=platform</a>. As far as I understand I need to add a <a href="https://wiki.openstreetmap.org/wiki/Key:name">key:name</a> on both nodes or add a <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area">public_transport=stop_area</a> relation. Unfortunately this also needs a <a href="https://wiki.openstreetmap.org/wiki/Key:name">key:name</a>. So what can I do?</p>
+<p>I also read <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Noname">Proposed features/Noname</a> and <a href="https://wiki.openstreetmap.org/wiki/Names#No_name">Names/No_Name</a> but could not find an answer. The closest "answer" I have found is <a href="https://help.openstreetmap.org/answer_link/19204/">this</a> but I am still not sure if this is correct.</p>
+<p>(Background: I am trying to add some bus stations on a bus route like <a href="https://www.openstreetmap.org/relation/3586878#map=13/-25.5733/-54.5335&amp;layers=T">this</a> in Brazil. But the bus stops seem to be unnamed and I have no idea how to "link" the platforms with stop_positions).</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-bus" rel="tag" title="see questions tagged &#39;bus&#39;">bus</span> <span class="post-tag tag-link-public-transport" rel="tag" title="see questions tagged &#39;public-transport&#39;">public-transport</span> <span class="post-tag tag-link-busstops" rel="tag" title="see questions tagged &#39;busstops&#39;">busstops</span> <span class="post-tag tag-link-tagging" rel="tag" title="see questions tagged &#39;tagging&#39;">tagging</span>
@@ -140,7 +140,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>by adding a stop area relation: <a href="http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area">http://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area</a></p>
+<p>by adding a stop area relation: <a href="https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area">https://wiki.openstreetmap.org/wiki/Tag:public_transport%3Dstop_area</a></p>
 </div>
 <div id="comment-35980-info" class="comment-info">
 <span class="comment-age">(19 Aug '14, 06:08)</span> <span class="comment-user userinfo">escada</span>
@@ -151,8 +151,8 @@ osqa_accepted = true
 <div id="post-36028-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thank you very much. I just tried(tm) adding a stop_area without a name like <a href="http://www.openstreetmap.org/relation/3975420">http://www.openstreetmap.org/relation/3975420</a> and it worked. I was thinking all the time that relations are linked with an unique name (which is not needed as the relation has a unique ID).</p>
-<p>But: part of the confusion seems to come from this: <a href="http://wiki.openstreetmap.org/wiki/Bus_stop#Stop_area">http://wiki.openstreetmap.org/wiki/Bus_stop#Stop_area</a></p>
+<p>Thank you very much. I just tried(tm) adding a stop_area without a name like <a href="https://www.openstreetmap.org/relation/3975420">https://www.openstreetmap.org/relation/3975420</a> and it worked. I was thinking all the time that relations are linked with an unique name (which is not needed as the relation has a unique ID).</p>
+<p>But: part of the confusion seems to come from this: <a href="https://wiki.openstreetmap.org/wiki/Bus_stop#Stop_area">https://wiki.openstreetmap.org/wiki/Bus_stop#Stop_area</a></p>
 <p>There the name-tag is mandatory. Shouldn't that be corrected?</p>
 </div>
 <div id="comment-36028-info" class="comment-info">
@@ -165,8 +165,8 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p>And one more thing: look at this stop_area: <a href="http://www.openstreetmap.org/relation/949291#map=18/47.08459/15.45657&amp;layers=T">http://www.openstreetmap.org/relation/949291#map=18/47.08459/15.45657&amp;layers=T</a></p>
-<p>and compare it with "my" newly created one: <a href="http://www.openstreetmap.org/relation/3975420#map=18/-25.53994/-54.58729&amp;layers=T">http://www.openstreetmap.org/relation/3975420#map=18/-25.53994/-54.58729&amp;layers=T</a></p>
+<p>And one more thing: look at this stop_area: <a href="https://www.openstreetmap.org/relation/949291#map=18/47.08459/15.45657&amp;layers=T">https://www.openstreetmap.org/relation/949291#map=18/47.08459/15.45657&amp;layers=T</a></p>
+<p>and compare it with "my" newly created one: <a href="https://www.openstreetmap.org/relation/3975420#map=18/-25.53994/-54.58729&amp;layers=T">https://www.openstreetmap.org/relation/3975420#map=18/-25.53994/-54.58729&amp;layers=T</a></p>
 <p>The first stop_area is surrounded with a nice border. Why isn't that shown on the second stop_area?</p>
 </div>
 <div id="comment-36029-info" class="comment-info">
@@ -178,7 +178,7 @@ osqa_accepted = true
 <div id="post-36030-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9469/jkirk"></a><a href="http://help.openstreetmap.org/users/9469/jkirk">@jkirk</a> - (re the name-tag being mandatory) that's part of the problem with the "public transport v2" stuff on that page. It's simply not a good fit for public transport in most of the world, is overcomplicated, and deters people from capturing useful information. Personally, where the wiki's wrong in cases like this I just ignore it - I've largely given up arguing with the people who edit the wiki (who in some cases don't seem to do much mapping).</p>
+<p><a href="https://help.openstreetmap.org/users/9469/jkirk"></a><a href="https://help.openstreetmap.org/users/9469/jkirk">@jkirk</a> - (re the name-tag being mandatory) that's part of the problem with the "public transport v2" stuff on that page. It's simply not a good fit for public transport in most of the world, is overcomplicated, and deters people from capturing useful information. Personally, where the wiki's wrong in cases like this I just ignore it - I've largely given up arguing with the people who edit the wiki (who in some cases don't seem to do much mapping).</p>
 </div>
 <div id="comment-36030-info" class="comment-info">
 <span class="comment-age">(20 Aug '14, 17:48)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

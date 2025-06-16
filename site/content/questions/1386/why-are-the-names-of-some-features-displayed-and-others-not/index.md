@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Label on the map are rendered in function of available space and other labels and icons. Choose made with rules into the renderer engine. I think you talk about the default renderer <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>. But here is other style and renderer. On <a href="http://osm.org">osm.org</a> main page you can see some, at right top of the map you can change the displayed one by open tab with blue "+".</p>
+<p>Label on the map are rendered in function of available space and other labels and icons. Choose made with rules into the renderer engine. I think you talk about the default renderer <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a>. But here is other style and renderer. On <a href="http://osm.org">osm.org</a> main page you can see some, at right top of the map you can change the displayed one by open tab with blue "+".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

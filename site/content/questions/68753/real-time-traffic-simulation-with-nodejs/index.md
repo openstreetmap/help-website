@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-68754-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Converted from an answer to a question from here: <a href="https://help.openstreetmap.org/questions/7313/is-there-an-osm-routing-api">https://help.openstreetmap.org/questions/7313/is-there-an-osm-routing-api</a></p>
+<p>Converted from an answer to a question from here: <a href="/questions/7313/is-there-an-osm-routing-api">https://help.openstreetmap.org/questions/7313/is-there-an-osm-routing-api</a></p>
 </div>
 <div id="comment-68754-info" class="comment-info">
 <span class="comment-age">(11 Apr '19, 08:51)</span> <span class="comment-user userinfo">scai ♦</span>

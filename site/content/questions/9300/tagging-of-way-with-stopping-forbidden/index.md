@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are some suggestions here: <a href="http://wiki.openstreetmap.org/wiki/Road_Signs">http://wiki.openstreetmap.org/wiki/Road_Signs</a></p>
+<p>There are some suggestions here: <a href="https://wiki.openstreetmap.org/wiki/Road_Signs">https://wiki.openstreetmap.org/wiki/Road_Signs</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -110,7 +110,7 @@ One Answer:
 <div class="answer-body">
 <p>Your question is not trivial :) As far as I know there is no one definitive answer, but my take would be:</p>
 <ul>
-<li>If a POI is the only "object of note" at a given address (i.e. if given POI is only thing worth tagging at that address), then tag the address node with the POI tags. This is essentially the <a href="http://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one object, one element</a> guideline, and helps to clearly associate a POI with that street address.</li>
+<li>If a POI is the only "object of note" at a given address (i.e. if given POI is only thing worth tagging at that address), then tag the address node with the POI tags. This is essentially the <a href="https://wiki.openstreetmap.org/wiki/One_feature,_one_OSM_element">one object, one element</a> guideline, and helps to clearly associate a POI with that street address.</li>
 <li>If there could be several POIs associated with a particular address (e.g. a building with several shops in it), then tag the POI as a separate node.</li>
 </ul>
 </div>

@@ -114,7 +114,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A few people have had a go at this - they generally share their experiences in the wiki. A quick search for "<a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;redirs=1&amp;search=aerial&amp;fulltext=Search&amp;ns0=1&amp;ns200=1&amp;ns202=1&amp;ns204=1&amp;ns206=1&amp;ns208=1&amp;ns210=1&amp;ns212=1">aerial</a>" found <a href="http://wiki.openstreetmap.org/wiki/Mappa_Mercia/Aerial_Imagery">this</a>. Also try searching for things such as "<a href="http://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;redirs=1&amp;search=warp+photo&amp;fulltext=Search&amp;ns0=1&amp;ns200=1&amp;ns202=1&amp;ns204=1&amp;ns206=1&amp;ns208=1&amp;ns210=1&amp;ns212=1">warp</a>".</p>
+<p>A few people have had a go at this - they generally share their experiences in the wiki. A quick search for "<a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;redirs=1&amp;search=aerial&amp;fulltext=Search&amp;ns0=1&amp;ns200=1&amp;ns202=1&amp;ns204=1&amp;ns206=1&amp;ns208=1&amp;ns210=1&amp;ns212=1">aerial</a>" found <a href="https://wiki.openstreetmap.org/wiki/Mappa_Mercia/Aerial_Imagery">this</a>. Also try searching for things such as "<a href="https://wiki.openstreetmap.org/w/index.php?title=Special%3ASearch&amp;redirs=1&amp;search=warp+photo&amp;fulltext=Search&amp;ns0=1&amp;ns200=1&amp;ns202=1&amp;ns204=1&amp;ns206=1&amp;ns208=1&amp;ns210=1&amp;ns212=1">warp</a>".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

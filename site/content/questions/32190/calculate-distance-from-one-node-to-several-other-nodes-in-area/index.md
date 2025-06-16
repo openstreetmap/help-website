@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want to calculate distances by goinmg via existing ways in the OSM data, see <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a> in the OSM wiki.</p>
+<p>If you want to calculate distances by goinmg via existing ways in the OSM data, see <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a> in the OSM wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

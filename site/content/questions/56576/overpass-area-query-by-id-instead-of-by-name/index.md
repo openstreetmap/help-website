@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If by city id you mean an OSM id for an object representing a city, there is a mapping between OSM ids and Overpass areas. There is decent discussion of how it works in the documentation: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
+<p>If by city id you mean an OSM id for an object representing a city, there is a mapping between OSM ids and Overpass areas. There is decent discussion of how it works in the documentation: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29">https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_area_.28area.29</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

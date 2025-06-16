@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why are alpine_hut elements not rendered in cycle map?"
-description = '''I like the cycle map also for hiking, but it seems that all items tagged as alpine_hut are not rendered in the map. Please see here for an example: http://www.openstreetmap.org/#map=17/47.53950/12.88899 Shelters are rendered. I couldn&#x27;t find a reason why alpine huts should be excluded.'''
+description = '''I like the cycle map also for hiking, but it seems that all items tagged as alpine_hut are not rendered in the map. Please see here for an example: https://www.openstreetmap.org/#map=17/47.53950/12.88899 Shelters are rendered. I couldn&#x27;t find a reason why alpine huts should be excluded.'''
 date = "2014-08-19T11:04:00Z"
 lastmod = "2014-08-19T21:11:00Z"
 weight = 35988
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I like the cycle map also for hiking, but it seems that all items tagged as alpine_hut are not rendered in the map.</p>
-<p>Please see here for an example: <a href="http://www.openstreetmap.org/#map=17/47.53950/12.88899" title="http://www.openstreetmap.org/#map=17/47.53950/12.88899">http://www.openstreetmap.org/#map=17/47.53950/12.88899</a></p>
+<p>Please see here for an example: <a href="https://www.openstreetmap.org/#map=17/47.53950/12.88899" title="https://www.openstreetmap.org/#map=17/47.53950/12.88899">https://www.openstreetmap.org/#map=17/47.53950/12.88899</a></p>
 <p>Shelters are rendered. I couldn't find a reason why alpine huts should be excluded.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

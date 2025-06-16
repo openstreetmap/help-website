@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] maps for wetravel"
-description = '''I am looking for a map of ecuador for we-travel, where can I find it? I found a good map of ecuador in http://www.openstreetmap.org/, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is ther...'''
+description = '''I am looking for a map of ecuador for we-travel, where can I find it? I found a good map of ecuador in https://www.openstreetmap.org/, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is ther...'''
 date = "2011-01-19T23:58:00Z"
 lastmod = "2011-01-20T01:33:00Z"
 weight = 2311
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am looking for a map of ecuador for we-travel, where can I find it? I found a good map of ecuador in <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a>, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is there anyway to enable zooming? Could someone please help me?</p>
+<p>I am looking for a map of ecuador for we-travel, where can I find it? I found a good map of ecuador in <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a>, i downloaded all the formats but anyone works in we-travel. I tried also the Mexico map available in the we-travel home page, but there is not zoom available, is there anyway to enable zooming? Could someone please help me?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span>
@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-2313-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>This is a (almost) dupe of <a href="http://help.openstreetmap.org/questions/2310/maps-for-we-travel">http://help.openstreetmap.org/questions/2310/maps-for-we-travel</a>. Could someone with enough karma please delete this one.</p>
+<p>This is a (almost) dupe of <a href="/questions/2310/maps-for-we-travel">https://help.openstreetmap.org/questions/2310/maps-for-we-travel</a>. Could someone with enough karma please delete this one.</p>
 </div>
 <div id="comment-2313-info" class="comment-info">
 <span class="comment-age">(20 Jan '11, 01:33)</span> <span class="comment-user userinfo">gnurk</span>

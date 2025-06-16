@@ -105,7 +105,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>We do not have one single map (style). There are many different maps made out of OSM data. It depends on the map style which information is shown and which not. Names often take up much space and space is scarce on maps. You need to ask the creator of the map style or make your own map.</p>
-<p>If you want to ask if you made a mistake in entering the information, please provide a link to the data in question. You can find your edits there (if your username is identical): <a href="http://www.openstreetmap.org/user/Rob%20Biesters/edits">http://www.openstreetmap.org/user/Rob%20Biesters/edits</a> To answer, please leave a "comment" or, preferably, edit your question.</p>
+<p>If you want to ask if you made a mistake in entering the information, please provide a link to the data in question. You can find your edits there (if your username is identical): <a href="https://www.openstreetmap.org/user/Rob%20Biesters/edits">https://www.openstreetmap.org/user/Rob%20Biesters/edits</a> To answer, please leave a "comment" or, preferably, edit your question.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

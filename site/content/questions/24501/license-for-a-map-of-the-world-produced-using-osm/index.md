@@ -176,8 +176,8 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>[I'm not a lawyer and have not read the <a href="http://opendatacommons.org/licenses/odbl/1.0/">legal document</a> for this scenario.]</p>
-<p>Based on their FAQ, <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">Produced Work</a> does not require the same license.</p>
-<p>However, you are required to provide attribution (credit) to OSM which is also <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">specified</a> in the form "© OpenStreetMap contributors." This is an odd requirement as it says to give credit to OSM a copyright to OSM must be attached. I suppose that does not specify a license; your produced work will not be under ODbL or Creative Commons (unless you put it there, and if we believe the FAQ).</p>
+<p>Based on their FAQ, <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3c._If_I_make_something_with_OSM_data.2C_do_I_now_have_to_apply_your_license_to_my_whole_work.3F">Produced Work</a> does not require the same license.</p>
+<p>However, you are required to provide attribution (credit) to OSM which is also <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ#3a._I_would_like_to_use_OpenStreetMap_maps._How_should_I_credit_you.3F">specified</a> in the form "© OpenStreetMap contributors." This is an odd requirement as it says to give credit to OSM a copyright to OSM must be attached. I suppose that does not specify a license; your produced work will not be under ODbL or Creative Commons (unless you put it there, and if we believe the FAQ).</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

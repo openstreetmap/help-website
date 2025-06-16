@@ -66,7 +66,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>Please DON'T ask two different questions in one topic here ... you will get less feedback.</p>
-<p>About the cyberjapandata source: maybe the talk-legal mailing list is a better place to ask ... see <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p>About the cyberjapandata source: maybe the talk-legal mailing list is a better place to ask ... see <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-48241-info" class="comment-info">
 <span class="comment-age">(20 Feb '16, 14:10)</span> <span class="comment-user userinfo">stephan75</span>

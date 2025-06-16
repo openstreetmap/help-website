@@ -43,10 +43,10 @@ osqa_accepted = true
 <p>For a small community website I want to display POIs which are dynamically loaded from a webserver backend. This POI data does not come from OSM. When the map is zoomed or the focused region is changed, new POI data should be loaded from the server which replaces the old POIs. The POI images are a custom images. When a POI is clicked, then a pop-over should be shown with some (aribitrary) details of the POI.</p>
 <p>Other requirements:</p>
 <ul>
-<li>Search on the map using Nominatim (<a href="http://wiki.openstreetmap.org/wiki/Nominatim)">http://wiki.openstreetmap.org/wiki/Nominatim)</a></li>
+<li>Search on the map using Nominatim (<a href="https://wiki.openstreetmap.org/wiki/Nominatim)">https://wiki.openstreetmap.org/wiki/Nominatim)</a></li>
 <li>Support for other layers beside Mapnik, such as OpenCyclemap, and Google Maps satellite data</li>
 </ul>
-<p>I think this is very straight forward stuff which is very common and often seen on various websites. Thus, before I start from "scratch" building a solution with OpenLayers I have done some research of existing solutions but interestingly, I have only found FacilMap (<a href="http://wiki.openstreetmap.org/wiki/FacilMap)">http://wiki.openstreetmap.org/wiki/FacilMap)</a> which supports many map providers, as well as Nominatim.</p>
+<p>I think this is very straight forward stuff which is very common and often seen on various websites. Thus, before I start from "scratch" building a solution with OpenLayers I have done some research of existing solutions but interestingly, I have only found FacilMap (<a href="https://wiki.openstreetmap.org/wiki/FacilMap)">https://wiki.openstreetmap.org/wiki/FacilMap)</a> which supports many map providers, as well as Nominatim.</p>
 <p>Are there any other projects which offer the feature range described above?</p>
 <p>Regards,</p>
 </div>

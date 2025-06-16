@@ -39,9 +39,9 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I'm new to osm and a little confused by all the available tools. I want to use OpenLayers to make a map offline like discribed <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example">here in the wiki</a></p>
-<p>I have tried with few tiles (downloaded with <a href="http://wiki.openstreetmap.org/wiki/JTileDownloader">JTileDownloader</a>) for a very small region and it works great.</p>
-<p>Now i would do that for a all country (France) , but according to the <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> it seems i can't download so much tiles.</p>
+<p>I'm new to osm and a little confused by all the available tools. I want to use OpenLayers to make a map offline like discribed <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_Local_Tiles_Example">here in the wiki</a></p>
+<p>I have tried with few tiles (downloaded with <a href="https://wiki.openstreetmap.org/wiki/JTileDownloader">JTileDownloader</a>) for a very small region and it works great.</p>
+<p>Now i would do that for a all country (France) , but according to the <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a> it seems i can't download so much tiles.</p>
 <p>So here come my question :</p>
 <p>What procedure should i follow (what tools) and what files should i download to generate tiles usable by Openlayers ?</p>
 <p>i found some extract for France like on <a href="http://downloads.cloudmade.com/europe/western_europe/france#downloads_breadcrumbs">CloudMade</a> but i have no idea wat file to chose and how convert it to a bunch of tiles.</p>

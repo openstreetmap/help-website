@@ -106,7 +106,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Yes, if you adhere to attribution requirements. The <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> will answer all your questions.</p>
+<p>Yes, if you adhere to attribution requirements. The <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">Legal FAQ</a> will answer all your questions.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

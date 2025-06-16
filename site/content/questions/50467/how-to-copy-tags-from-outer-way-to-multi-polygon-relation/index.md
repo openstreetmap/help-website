@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "How to copy tags from outer way to multi-polygon relation"
-description = '''We&#x27;ve got lots of polygons in Massachusetts where the outer way is tagged instead of the relation. Example: http://www.openstreetmap.org/relation/1236669 I&#x27;d like to be able to &quot;cut&quot; the tags from the outer way and &quot;paste&quot; them to the relation in the JOSM Relation Editor window. I can&#x27;t seem do it w...'''
+description = '''We&#x27;ve got lots of polygons in Massachusetts where the outer way is tagged instead of the relation. Example: https://www.openstreetmap.org/relation/1236669 I&#x27;d like to be able to &quot;cut&quot; the tags from the outer way and &quot;paste&quot; them to the relation in the JOSM Relation Editor window. I can&#x27;t seem do it w...'''
 date = "2016-06-26T20:02:00Z"
 lastmod = "2017-12-27T19:33:00Z"
 weight = 50467
@@ -40,7 +40,7 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>We've got lots of polygons in Massachusetts where the outer way is tagged instead of the relation.</p>
-<p>Example: <a href="http://www.openstreetmap.org/relation/1236669">http://www.openstreetmap.org/relation/1236669</a></p>
+<p>Example: <a href="https://www.openstreetmap.org/relation/1236669">https://www.openstreetmap.org/relation/1236669</a></p>
 <p>I'd like to be able to "cut" the tags from the outer way and "paste" them to the relation in the JOSM Relation Editor window. I can't seem do it with the copy tags/paste tags commands.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

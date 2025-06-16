@@ -254,7 +254,7 @@ and more ...</p>
 1
 </div>
 <div class="comment-text">
-<p><img src="http://help.openstreetmap.org/upfiles/Przechwytywanie.PNG" alt="alt text" /></p>
+<p><img src="/upfiles/Przechwytywanie.PNG" alt="alt text" /></p>
 <pre><code> roads.mss:2681:10 Property shield-face-name required for defining shield styles.
  roads.mss:2678:10 Property shield-face-name required for defining shield styles.</code></pre>
 <p>etc..</p>

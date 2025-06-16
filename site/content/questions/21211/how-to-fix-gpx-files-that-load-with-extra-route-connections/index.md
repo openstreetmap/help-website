@@ -103,7 +103,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>For example, this is a screen-capture image of what the Mosel River bike route look like. Note the extra lines and connections from Koblenz, the east end point of the route, to points in the middle of the route.</p>
 <p>The entire bike route from Perl to Koblenz is supposed to be about 150 miles (240 km), but with these extra lines and connections, it comes up as over 250 miles long!</p>
-<p><img src="http://help.openstreetmap.org/upfiles/Mosel_Route--b_1.png" alt="alt text" /></p>
+<p><img src="/upfiles/Mosel_Route--b_1.png" alt="alt text" /></p>
 </div>
 <div id="comment-21238-info" class="comment-info">
 <span class="comment-age">(05 Apr '13, 16:03)</span> <span class="comment-user userinfo">smooshed</span>
@@ -125,7 +125,7 @@ osqa_accepted = false
 <div id="post-21244-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://wiki.openstreetmap.org/w/index.php?search=GPX+editors&amp;title=Special%3ASearch">http://wiki.openstreetmap.org/w/index.php?search=GPX+editors&amp;title=Special%3ASearch</a></p>
+<p><a href="https://wiki.openstreetmap.org/w/index.php?search=GPX+editors&amp;title=Special%3ASearch">https://wiki.openstreetmap.org/w/index.php?search=GPX+editors&amp;title=Special%3ASearch</a></p>
 </div>
 <div id="comment-21244-info" class="comment-info">
 <span class="comment-age">(05 Apr '13, 18:43)</span> <span class="comment-user userinfo">andy mackey</span>
@@ -215,7 +215,7 @@ Not all users of these maps are computer savvy, and people shouldn't have to cle
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>With regard to the Mosel, I presume that you're talking about <a href="http://www.openstreetmap.org/browse/relation/4281">this relation</a>. It <a href="http://ra.osmsurround.org/analyzeRelation?relationId=4281&amp;_noCache=on">looks OK to me</a>.</p>
+<p>With regard to the Mosel, I presume that you're talking about <a href="https://www.openstreetmap.org/browse/relation/4281">this relation</a>. It <a href="http://ra.osmsurround.org/analyzeRelation?relationId=4281&amp;_noCache=on">looks OK to me</a>.</p>
 <p>Perhaps whatever software you're loading the GPX into is making some incorrect assumptions about the data? Maybe it's assuming that the data is ordered, when relation data generally isn't, although this one does seem to be. If you click "show more info" on the relation analyser page you can read what it's doing, which includes sorting the relation so that you don't see "links back to Koblenz".<br />
 </p>
 <p>If you want a sorted version of an unsorted relation, load it into JOSM and sort it there. You'll also find (using the relation analyser) that some relations in OSM aren't complete - there are gaps that haven't been mapped yet.</p>
@@ -323,7 +323,7 @@ Not all users of these maps are computer savvy, and people shouldn't have to cle
 <p>I think this route is split into several sections due to parts going around roundabouts or other bits that are one way. I think the route relations in OSM should be continuous so that they can be composed as few tracks as possible.</p>
 <p>Possibly it should have 'forward' and 'reverse' routes depending on the direction one is going in to cater for these subtle differences.</p>
 <p>There was an extra bit here that shouldn't be part of the relation:</p>
-<p><a href="http://www.openstreetmap.org/?lat=50.138589&amp;lon=7.174056&amp;zoom=18&amp;layers=C">http://www.openstreetmap.org/?lat=50.138589&amp;lon=7.174056&amp;zoom=18&amp;layers=C</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=50.138589&amp;lon=7.174056&amp;zoom=18&amp;layers=C">https://www.openstreetmap.org/?lat=50.138589&amp;lon=7.174056&amp;zoom=18&amp;layers=C</a></p>
 <p>Update: Fixed OSM data here on 2013/04/13</p>
 <p>Also in my opinion waymarkedtrails should actually be returning GPX routes not tracks!</p>
 </div>

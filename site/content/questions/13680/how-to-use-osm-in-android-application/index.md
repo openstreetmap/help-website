@@ -70,7 +70,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>Please be more specific in your question. Do you want to use OSM on Android? If so, do you just want to show a OSM map (online, offline?) or do you also want to enter data for OSM? Do you want to create an OSM application for Android instead? Or something completely different?</p>
-<p>The wiki has a <a href="http://wiki.openstreetmap.org/wiki/Android">large page of Android related OSM stuff</a>.</p>
+<p>The wiki has a <a href="https://wiki.openstreetmap.org/wiki/Android">large page of Android related OSM stuff</a>.</p>
 </div>
 <div id="comment-13681-info" class="comment-info">
 <span class="comment-age">(21 Jun '12, 12:28)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -138,10 +138,10 @@ osqa_accepted = true
 <div class="answer-body">
 <p>There are several libraries for Android that allow displaying OSM-based maps, including at least:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Osmdroid">osmdroid</a> (<a href="http://code.google.com/p/osmdroid/">Google code</a>, similar to Android's MapView)</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> (<a href="http://code.google.com/p/mapsforge/">Google code</a>, offline vector rendering)</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Osmdroid">osmdroid</a> (<a href="http://code.google.com/p/osmdroid/">Google code</a>, similar to Android's MapView)</li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Mapsforge">Mapsforge</a> (<a href="http://code.google.com/p/mapsforge/">Google code</a>, offline vector rendering)</li>
 </ul>
-<p>In addition to that, the <a href="http://wiki.openstreetmap.org/wiki/Android">Android wiki page</a> has a full list of OSM software running on Android, including not just map viewers, but also routing and editing applications. A lot of these are Open Source, so code sharing/reuse would be a possibility.</p>
+<p>In addition to that, the <a href="https://wiki.openstreetmap.org/wiki/Android">Android wiki page</a> has a full list of OSM software running on Android, including not just map viewers, but also routing and editing applications. A lot of these are Open Source, so code sharing/reuse would be a possibility.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -267,7 +267,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Please be aware that there is a <a href="http://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>. If your app becomes popular it could easily overwhelm the OSM servers if that is where you get your tiles from. If you use OSM data to render your own map tiles or use OSM data to create a vector map you will not cause a problem.</p>
+<p>Please be aware that there is a <a href="https://wiki.openstreetmap.org/wiki/Tile_usage_policy">tile usage policy</a>. If your app becomes popular it could easily overwhelm the OSM servers if that is where you get your tiles from. If you use OSM data to render your own map tiles or use OSM data to create a vector map you will not cause a problem.</p>
 <p>There are other providers of map tiles based on OSM data too.</p>
 </div>
 <div class="answer-controls post-controls">

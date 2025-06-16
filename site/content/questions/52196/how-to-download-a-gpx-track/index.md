@@ -131,7 +131,7 @@ osqa_accepted = false
 <p>Some other OSM guru may be able to add more help. I'll subscribe to this question and maybe learn something myself.</p>
 <p>Cheers,</p>
 <p>Dave</p>
-<p><a href="http://www.openstreetmap.org/traces">http://www.openstreetmap.org/traces</a></p>
+<p><a href="https://www.openstreetmap.org/traces">https://www.openstreetmap.org/traces</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -260,7 +260,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Hi Samuele, take a look here, <a href="https://help.openstreetmap.org/questions/10982/download-all-osm-gps-traces">https://help.openstreetmap.org/questions/10982/download-all-osm-gps-traces</a> With a possible solution at the bottom.</p>
+<p>Hi Samuele, take a look here, <a href="/questions/10982/download-all-osm-gps-traces">https://help.openstreetmap.org/questions/10982/download-all-osm-gps-traces</a> With a possible solution at the bottom.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

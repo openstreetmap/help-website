@@ -162,7 +162,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse"></a><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: oh, really? interesting! I have added it to <a href="https://wiki.openstreetmap.org/wiki/help.openstreetmap.org">https://wiki.openstreetmap.org/wiki/help.openstreetmap.org</a> (<del>not yet</del> now existing, which I wanted to create for a long time...) since we cannot freely edit the "about" or "faq" here...</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse"></a><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a>: oh, really? interesting! I have added it to <a href="https://wiki.openstreetmap.org/wiki/help.openstreetmap.org">https://wiki.openstreetmap.org/wiki/help.openstreetmap.org</a> (<del>not yet</del> now existing, which I wanted to create for a long time...) since we cannot freely edit the "about" or "faq" here...</p>
 </div>
 <div id="comment-42542-info" class="comment-info">
 <span class="comment-age">(21 Apr '15, 22:31)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

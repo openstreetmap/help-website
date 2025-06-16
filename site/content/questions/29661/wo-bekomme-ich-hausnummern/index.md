@@ -344,7 +344,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Bei den meisten Karten verstößt das Abzeichnen gegen das Urheberrecht.</p>
-<p>Du kannst aber entweder mit Ausdrucken von <a href="http://fieldpapers.org/">Fieldpapers</a> vor Ort die Hausnummern aufzeichnen und diese dann später mit JOSM oder iD auf OpenStreetMap eintragen oder verschiedene Apps verweden. Für Android zum Beispliel <a href="http://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a>, <a href="http://wiki.openstreetmap.org/wiki/Keypad-Mapper_3">KeyPadMapper3</a> odeer <a href="http://osmand.net/">OsmAnd</a> und für iOS z.B. <a href="https://itunes.apple.com/de/app/openmaps/id359719250?mt=8">OpenMaps</a>. Weitere Editoren kannst du aber auch im <a href="http://wiki.openstreetmap.org/wiki/Editors">Wiki</a> finden.</p>
+<p>Du kannst aber entweder mit Ausdrucken von <a href="http://fieldpapers.org/">Fieldpapers</a> vor Ort die Hausnummern aufzeichnen und diese dann später mit JOSM oder iD auf OpenStreetMap eintragen oder verschiedene Apps verweden. Für Android zum Beispliel <a href="https://wiki.openstreetmap.org/wiki/Vespucci">Vespucci</a>, <a href="https://wiki.openstreetmap.org/wiki/Keypad-Mapper_3">KeyPadMapper3</a> odeer <a href="http://osmand.net/">OsmAnd</a> und für iOS z.B. <a href="https://itunes.apple.com/de/app/openmaps/id359719250?mt=8">OpenMaps</a>. Weitere Editoren kannst du aber auch im <a href="https://wiki.openstreetmap.org/wiki/Editors">Wiki</a> finden.</p>
 <p>Du kannst aber auch versuchen entsprechende Daten von deiner Gemeinde zu bekommen. Du solltest aber sicherstellen, dass Sie dir auch die entsprechenden Rechte zum Übertragen einräumen.</p>
 </div>
 <div class="answer-controls post-controls">

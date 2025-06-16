@@ -67,7 +67,7 @@ osqa_accepted = true
 <div id="post-41635-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Related: <a href="https://help.openstreetmap.org/questions/16968/naming-a-school-or-other-building">Naming a school (or other building)</a></p>
+<p>Related: <a href="/questions/16968/naming-a-school-or-other-building">Naming a school (or other building)</a></p>
 </div>
 <div id="comment-41635-info" class="comment-info">
 <span class="comment-age">(11 Mar '15, 11:36)</span> <span class="comment-user userinfo">sleske</span>
@@ -121,9 +121,9 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>So you just create a new closed way that represents the area of the school. Then you add the tag <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">amenity=school</a> (I guess the iD editor has a preset to help to find that tag).<br />
+<p>So you just create a new closed way that represents the area of the school. Then you add the tag <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool">amenity=school</a> (I guess the iD editor has a preset to help to find that tag).<br />
 </p>
-<p>If you want to improve the semantics, you can also create a <a href="http://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">site relation</a> that you add all the site buildings and the school area itself.</p>
+<p>If you want to improve the semantics, you can also create a <a href="https://wiki.openstreetmap.org/wiki/Relations/Proposed/Site">site relation</a> that you add all the site buildings and the school area itself.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

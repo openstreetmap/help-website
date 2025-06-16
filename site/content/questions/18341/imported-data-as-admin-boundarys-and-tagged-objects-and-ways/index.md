@@ -72,7 +72,7 @@ osqa_accepted = true
 <div id="post-18377-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Hi SomeoneElse, this should do <a href="http://www.openstreetmap.org/?lat=52.06522&amp;lon=4.9569&amp;zoom=17&amp;layers=M">http://www.openstreetmap.org/?lat=52.06522&amp;lon=4.9569&amp;zoom=17&amp;layers=M</a> . The question was more fundamental, why tag an admin border ? Since a steadily hear tag what you see and not what you can’t see.</p>
+<p>Hi SomeoneElse, this should do <a href="https://www.openstreetmap.org/?lat=52.06522&amp;lon=4.9569&amp;zoom=17&amp;layers=M">https://www.openstreetmap.org/?lat=52.06522&amp;lon=4.9569&amp;zoom=17&amp;layers=M</a> . The question was more fundamental, why tag an admin border ? Since a steadily hear tag what you see and not what you can’t see.</p>
 </div>
 <div id="comment-18377-info" class="comment-info">
 <span class="comment-age">(11 Dec '12, 23:08)</span> <span class="comment-user userinfo">Hendrikklaas</span>
@@ -150,7 +150,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>You're not the first to ask the "why should admin boundaries be in OSM because we can't verify them on the ground".</p>
-<p>With regard to the second part of the question, that way is part of two admin boundary relations - <a href="http://www.openstreetmap.org/browse/relation/158936">Linschoten</a> and <a href="http://www.openstreetmap.org/browse/relation/158937">Montfoort</a>. You can click "advanced" in Potlatch 2 to see which multipolygons a way is part of.</p>
+<p>With regard to the second part of the question, that way is part of two admin boundary relations - <a href="https://www.openstreetmap.org/browse/relation/158936">Linschoten</a> and <a href="https://www.openstreetmap.org/browse/relation/158937">Montfoort</a>. You can click "advanced" in Potlatch 2 to see which multipolygons a way is part of.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

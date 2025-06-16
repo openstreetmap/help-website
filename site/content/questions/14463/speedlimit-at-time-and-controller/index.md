@@ -105,8 +105,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Concerning the first paragraph (different maxspeed depending on the time of the day), have a look at this <a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags">extended conditions draft</a>. Although it hasn't been adopted yet and the discussion is still ongoing, it tries to answer your question. Join the discussion there if you're thinking of using this scheme.</p>
-<p>Concerning the secong paragraph (variable speed limit), although the wiki mentions <a href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed=signal</a>, I can't see how that kind of information would be usefull. A static map should only worry about the "maximum maxspeed" IMHO. Drivers will slow down regardless of speed signs if there's an accident/traffic jam, and routing engines will get the "actual speed" using dynamic information sources, not using osm.</p>
+<p>Concerning the first paragraph (different maxspeed depending on the time of the day), have a look at this <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Extended_conditions_for_access_tags">extended conditions draft</a>. Although it hasn't been adopted yet and the discussion is still ongoing, it tries to answer your question. Join the discussion there if you're thinking of using this scheme.</p>
+<p>Concerning the secong paragraph (variable speed limit), although the wiki mentions <a href="https://wiki.openstreetmap.org/wiki/Key:maxspeed">maxspeed=signal</a>, I can't see how that kind of information would be usefull. A static map should only worry about the "maximum maxspeed" IMHO. Drivers will slow down regardless of speed signs if there's an accident/traffic jam, and routing engines will get the "actual speed" using dynamic information sources, not using osm.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

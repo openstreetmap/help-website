@@ -110,7 +110,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There's plenty of things that need discussing that aren't suited for this help system - this is a way to find the best answer to a straight question, not for all the varied discussions that happen on both the forum and the mailing lists. <a href="http://help.openstreetmap.org">help.openstreetmap.org</a> is more akin to a turbocharged version of the <a href="http://wiki.openstreetmap.org/wiki/FAQ">FAQ</a> from the wiki.</p>
+<p>There's plenty of things that need discussing that aren't suited for this help system - this is a way to find the best answer to a straight question, not for all the varied discussions that happen on both the forum and the mailing lists. <a href="http://help.openstreetmap.org">help.openstreetmap.org</a> is more akin to a turbocharged version of the <a href="https://wiki.openstreetmap.org/wiki/FAQ">FAQ</a> from the wiki.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

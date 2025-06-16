@@ -106,7 +106,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Well in theory you can use any programming language to parse the data without the help of any libraries. Here's a C program that does exactly that: <a href="http://m.m.i24.cc/osmconvert.c">http://m.m.i24.cc/osmconvert.c</a> - the more usual way, however, is to use a Google Protocol Buffer library to parse the data. Ready-made OSM reading modules exist for Java, Python, and for C++ <a href="http://wiki.openstreetmap.org/wiki/Osmium">("Osmium")</a> among others.</p>
+<p>Well in theory you can use any programming language to parse the data without the help of any libraries. Here's a C program that does exactly that: <a href="http://m.m.i24.cc/osmconvert.c">http://m.m.i24.cc/osmconvert.c</a> - the more usual way, however, is to use a Google Protocol Buffer library to parse the data. Ready-made OSM reading modules exist for Java, Python, and for C++ <a href="https://wiki.openstreetmap.org/wiki/Osmium">("Osmium")</a> among others.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -141,7 +141,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">wiki</a> page for osmconvert is also worth a read - it has links to various binary versions too.</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">wiki</a> page for osmconvert is also worth a read - it has links to various binary versions too.</p>
 </div>
 <div id="comment-14030-info" class="comment-info">
 <span class="comment-age">(06 Jul '12, 11:56)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -261,7 +261,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>The question of MrX1 was about parsing a PBF file for own purposes, maybe with an own program.</p>
-<p>Your way would be correct if you just wanna convert a PBF into an OSM file. This can also be done with <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">http://wiki.openstreetmap.org/wiki/Osmconvert</a> ... maybe even in a more simple way.</p>
+<p>Your way would be correct if you just wanna convert a PBF into an OSM file. This can also be done with <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">https://wiki.openstreetmap.org/wiki/Osmconvert</a> ... maybe even in a more simple way.</p>
 </div>
 <div id="comment-10491-info" class="comment-info">
 <span class="comment-age">(08 Feb '12, 16:35)</span> <span class="comment-user userinfo">stephan75</span>
@@ -273,7 +273,7 @@ osqa_accepted = false
 &#10;</div>
 <div class="comment-text">
 <p>When the user reads the instructions as recommended, he'll see that with Osmosis he can also manipulate the data. Additionally, maybe Osmembrane should be mentioned, a GUI for osmosis.</p>
-<p>Plus, <a href="http://wiki.openstreetmap.org/wiki/Osmfilter">http://wiki.openstreetmap.org/wiki/Osmfilter</a> should be worth a look.</p>
+<p>Plus, <a href="https://wiki.openstreetmap.org/wiki/Osmfilter">https://wiki.openstreetmap.org/wiki/Osmfilter</a> should be worth a look.</p>
 </div>
 <div id="comment-10534-info" class="comment-info">
 <span class="comment-age">(11 Feb '12, 09:46)</span> <span class="comment-user userinfo">malenki</span>

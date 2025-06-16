@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling">amenity=recycling</a>, recycling:clothes=yes, <a href="http://wiki.openstreetmap.org/wiki/Key:recycling_type">recycling_type=container</a>, <a href="http://wiki.openstreetmap.org/wiki/Key:operator">operator=</a>...</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling">amenity=recycling</a>, recycling:clothes=yes, <a href="https://wiki.openstreetmap.org/wiki/Key:recycling_type">recycling_type=container</a>, <a href="https://wiki.openstreetmap.org/wiki/Key:operator">operator=</a>...</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

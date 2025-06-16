@@ -61,7 +61,7 @@ osqa_accepted = false
 <div id="post-88130-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><img src="https://help.openstreetmap.org/upfiles/313076_2024-01-10_18-04_paris_labeled_crop_crop_web_cR2lMcJ.jpg" alt="text" /></p>
+<p><img src="/upfiles/313076_2024-01-10_18-04_paris_labeled_crop_crop_web_cR2lMcJ.jpg" alt="text" /></p>
 </div>
 <div id="comment-88130-info" class="comment-info">
 <span class="comment-age">(10 Jan '24, 18:22)</span> <span class="comment-user userinfo">haslreadybee...</span>
@@ -169,8 +169,8 @@ osqa_accepted = false
 <p>This is terrific and is exactly what I was looking for, thank you, except that I can't get it to show all (r nearly all) the street names at the magnification I want. Do you know anything about this? It leaves out names of smaller streets even when there's plenty of room. For example -</p>
 <p>If make the the image very very large, 700x700 mm (8300x8300 pixels) it leaves out street names (first image, marked in red) but they show up if I save it as multipage pdf (second image). But the mulitpage is bigger than needs to be, 6 x 6 A4 pages. Everything could be shrunk 25 or 30% and the text would still be legible. If I could get the street names to appear in a single large png/jpg I could shrink it to whatever multipage layout I want for printing, for example split it myself or set it to print across multiple pages.</p>
 <p>-- I uploaded images but they're not showing. Trying to solve it now --</p>
-<p><img src="https://help.openstreetmap.org/upfiles/313076_2024-01-10_18-04_paris_labeled_crop_crop_web.jpg" alt="alt text" /></p>
-<p><img src="https://help.openstreetmap.org/upfiles/pdf_screenshot_labeled.png" alt="alt text" /></p>
+<p><img src="/upfiles/313076_2024-01-10_18-04_paris_labeled_crop_crop_web.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/pdf_screenshot_labeled.png" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -133,7 +133,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>As an aside, I often struggle to find previous answers here too, but as it is indexed by google you can search there using e.g. "deletions site:<a href="https://help.openstreetmap.org/questions/">https://help.openstreetmap.org/questions/".</a></p>
+<p>As an aside, I often struggle to find previous answers here too, but as it is indexed by google you can search there using e.g. "deletions site:<a href="/questions/">https://help.openstreetmap.org/questions/".</a></p>
 </div>
 <div id="comment-39686-info" class="comment-info">
 <span class="comment-age">(18 Dec '14, 10:42)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -160,7 +160,7 @@ osqa_accepted = false
 <div id="post-39693-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: to get not dragged into a bush by you, I have slightly modified my comment above. ;-)</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a>: to get not dragged into a bush by you, I have slightly modified my comment above. ;-)</p>
 </div>
 <div id="comment-39693-info" class="comment-info">
 <span class="comment-age">(18 Dec '14, 14:02)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -289,7 +289,7 @@ This answer is marked "community wiki".
 <div id="post-39697-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2012/ikonor">@ikonor</a>: Thanks, also for adding this info to the wiki page. In this question here is was only "written" destroyed, so that was not clear if it is about deletions.</p>
+<p><a href="https://help.openstreetmap.org/users/2012/ikonor">@ikonor</a>: Thanks, also for adding this info to the wiki page. In this question here is was only "written" destroyed, so that was not clear if it is about deletions.</p>
 </div>
 <div id="comment-39697-info" class="comment-info">
 <span class="comment-age">(18 Dec '14, 15:27)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -331,7 +331,7 @@ This answer is marked "community wiki".
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The changeset in question was likely <a href="http://www.openstreetmap.org/changeset/27274779">http://www.openstreetmap.org/changeset/27274779</a> (view in <a href="http://overpass-api.de/achavi/?changeset=27274779">ACHAVI</a>)</p>
+<p>The changeset in question was likely <a href="https://www.openstreetmap.org/changeset/27274779">https://www.openstreetmap.org/changeset/27274779</a> (view in <a href="http://overpass-api.de/achavi/?changeset=27274779">ACHAVI</a>)</p>
 <p>I've reverted it.</p>
 <p>As to the rest of this discussion please see my comments made on the original question.</p>
 </div>
@@ -359,7 +359,7 @@ This answer is marked "community wiki".
 &#10;</div>
 <div class="comment-text">
 <p>Thanks Simon!</p>
-<p><a href="http://help.openstreetmap.org/users/6944/squid3083">@Squid3083</a> and finally just to double-check - does everything look OK in that area now?</p>
+<p><a href="https://help.openstreetmap.org/users/6944/squid3083">@Squid3083</a> and finally just to double-check - does everything look OK in that area now?</p>
 </div>
 <div id="comment-39694-info" class="comment-info">
 <span class="comment-age">(18 Dec '14, 14:57)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

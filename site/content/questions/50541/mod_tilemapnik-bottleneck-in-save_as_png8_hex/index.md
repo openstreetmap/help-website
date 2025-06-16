@@ -46,9 +46,9 @@ osqa_accepted = false
 <li>Ran perf for 60 seconds and dragged around a slippy map a whole load to render lots of background-only tiles (not science, I know)</li>
 </ul>
 <p>The result is a lot of tile requests with TTFB latencies ranging from 2ms to 600ms and a perf log that looks like this:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/write-png-perf.png" alt="perf log" /></p>
+<p><img src="/upfiles/write-png-perf.png" alt="perf log" /></p>
 <p>A background tile looks like this, no interaction required:</p>
-<p><img src="http://help.openstreetmap.org/upfiles/oceantile.png" alt="ocean tile" /></p>
+<p><img src="/upfiles/oceantile.png" alt="ocean tile" /></p>
 <p>The server has loads of head room (2x Intel Xeon 5500s and 32GB of RAM). Any ideas?</p>
 <p><strong>Edit:</strong> The tiles with long waits are the ones which cause a new metatile to be rendered. If I watch the requests come through on the server all meta tiles are taking about the same time to render:</p>
 <pre><code>renderd[3150]: DEBUG: DONE TILE default 19 2848-2855 424-431 in 0.551 seconds

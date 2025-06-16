@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Based on <a href="http://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately/17505">this answer</a> and to help me in my mapping of walls, particularly in Yorkshire. I have come across several places where a road and the surrounding farmland share nodes, I then have to disconnect each of the points individually and drag the edge of the farmland away to the line of the wall and then add my wall.</p>
+<p>Based on <a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately/17505">this answer</a> and to help me in my mapping of walls, particularly in Yorkshire. I have come across several places where a road and the surrounding farmland share nodes, I then have to disconnect each of the points individually and drag the edge of the farmland away to the line of the wall and then add my wall.</p>
 <p>What I am interested to now is: Is there any way to disconnect all of an area and a lines shared points in on go to speed up the first stage of this process? I currently only have experience with iD so if it's possible there that would be great however I am willing to work with the other editors if necessary.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -64,7 +64,7 @@ osqa_accepted = true
 </div>
 <div class="comment-text">
 <p>(not a direct answer to the question but)</p>
-<p>In the case of streets (as that <a href="http://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately/17505">answer</a> says) I wouldn't share nodes between linear features like roads and the surrounding farmland.</p>
+<p>In the case of streets (as that <a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately/17505">answer</a> says) I wouldn't share nodes between linear features like roads and the surrounding farmland.</p>
 <p>However, in the case of farmland and walls, if the farmland really does end at the wall I'd see no problem with farmland and wall sharing nodes, and if it doesn't I'd see no problem with the two being separate. Where I am (Derbyshire) farmland tends to exactly terminate at a wall, though further east it often stops, then there's "nothing much" for a bit, and then the hedge or wall.</p>
 </div>
 <div id="comment-50780-info" class="comment-info">
@@ -76,7 +76,7 @@ osqa_accepted = true
 <div id="post-50781-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Thanks I was almost certain that this was what needed doing, so thanks for clarifying. I just wouldn't mind being able to correct instances where this hasn't been done more quickly. Hence the question. Thanks though!</p>
+<p><a href="https://help.openstreetmap.org/users/387/someoneelse">@SomeoneElse</a> Thanks I was almost certain that this was what needed doing, so thanks for clarifying. I just wouldn't mind being able to correct instances where this hasn't been done more quickly. Hence the question. Thanks though!</p>
 </div>
 <div id="comment-50781-info" class="comment-info">
 <span class="comment-age">(10 Jul '16, 11:43)</span> <span class="comment-user userinfo">BarnsleyOli</span>

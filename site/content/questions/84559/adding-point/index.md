@@ -120,7 +120,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Before asking a question, please consider using the "search" function to see if others have asked the same question and received responses.</p>
-<p>Your question is likely answered in <a href="https://help.openstreetmap.org/questions/4705/why-havent-my-changes-appeared-on-the-map">https://help.openstreetmap.org/questions/4705/why-havent-my-changes-appeared-on-the-map</a> <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> <a href="https://help.openstreetmap.org/questions/45490/why-are-my-changes-visible-only-on-some-but-not-on-all-layers">https://help.openstreetmap.org/questions/45490/why-are-my-changes-visible-only-on-some-but-not-on-all-layers</a> and many others.</p>
+<p>Your question is likely answered in <a href="/questions/4705/why-havent-my-changes-appeared-on-the-map">https://help.openstreetmap.org/questions/4705/why-havent-my-changes-appeared-on-the-map</a> <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated</a> <a href="/questions/45490/why-are-my-changes-visible-only-on-some-but-not-on-all-layers">https://help.openstreetmap.org/questions/45490/why-are-my-changes-visible-only-on-some-but-not-on-all-layers</a> and many others.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

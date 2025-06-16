@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello, I would like to know how to remove the names of the cars in my registry, please see attached photo</p>
-<p>Thank you<img src="https://help.openstreetmap.org/upfiles/mapa.png" alt="alt text" /></p>
+<p>Thank you<img src="/upfiles/mapa.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-erase" rel="tag" title="see questions tagged &#39;erase&#39;">erase</span> <span class="post-tag tag-link-autostracker.com" rel="tag" title="see questions tagged &#39;autostracker.com&#39;">autostracker.com</span> <span class="post-tag tag-link-label" rel="tag" title="see questions tagged &#39;label&#39;">label</span>

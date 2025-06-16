@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>I have been building a tile server from scratch based on the instructions here: <a href="https://switch2osm.org/manually-building-a-tile-server-18-04-lts/">https://switch2osm.org/manually-building-a-tile-server-18-04-lts/</a></p>
-<p>Renderd runs, and the rendering process renders roads, streets names, etc., but it looks like all the polygons are missing (no forests, lakes, etc): <img src="https://help.openstreetmap.org/upfiles/MissingPolygons.png" alt="alt text" /></p>
+<p>Renderd runs, and the rendering process renders roads, streets names, etc., but it looks like all the polygons are missing (no forests, lakes, etc): <img src="/upfiles/MissingPolygons.png" alt="alt text" /></p>
 <p>Renderd is not reporting any errors, and the osm2pgsql process likewise ran without issue. I used the following command for the import, with the standard OSM stylesheet:</p>
 <pre><code>osm2pgsql -d gis --create --slim --hstore --tag-transform-script src/openstreetmap-carto/openstreetmap-carto.lua --flat-nodes planetnodes.bin -C 30000 --number-processes 8 -S src/openstreetmap-carto/openstreetmap-carto.style planet-latest.osm.pbf</code></pre>
 <p>I'm not quite sure where I should start looking, since I'm not seeing any error messages. I may have made a stupid mistake somewhere, or maybe I got unlucky and grabbed a 'bad' version of one of the repositories?</p>

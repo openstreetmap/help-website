@@ -81,8 +81,8 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p>If no maxspeed is set, the developers are supposed to take the values from the wiki. <a href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed</a></p>
-<p>So if the wrong values are mentioned there, you should edit it. But it might be better to ask other Spanish mappers first on the Spanish mailing list: <a href="http://wiki.openstreetmap.org/wiki/MailingLists">http://wiki.openstreetmap.org/wiki/MailingLists</a></p>
+<p>If no maxspeed is set, the developers are supposed to take the values from the wiki. <a href="https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed</a></p>
+<p>So if the wrong values are mentioned there, you should edit it. But it might be better to ask other Spanish mappers first on the Spanish mailing list: <a href="https://wiki.openstreetmap.org/wiki/MailingLists">https://wiki.openstreetmap.org/wiki/MailingLists</a></p>
 </div>
 <div id="comment-15432-info" class="comment-info">
 <span class="comment-age">(23 Aug '12, 09:34)</span> <span class="comment-user userinfo">Sanderd17</span>

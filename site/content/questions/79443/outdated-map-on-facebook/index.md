@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-79445-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Converted from comment to question from <a href="https://help.openstreetmap.org/questions/73860/facebook-pages-map-issue">https://help.openstreetmap.org/questions/73860/facebook-pages-map-issue</a></p>
+<p>Converted from comment to question from <a href="/questions/73860/facebook-pages-map-issue">https://help.openstreetmap.org/questions/73860/facebook-pages-map-issue</a></p>
 </div>
 <div id="comment-79445-info" class="comment-info">
 <span class="comment-age">(30 Mar '21, 10:31)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -93,7 +93,7 @@ osqa_accepted = false
 <div id="post-79448-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> Oh, I see. I wasn't aware of that, unfortunately this isn't very visible. I guess you are correct. <a href="https://help.openstreetmap.org/questions/73860/facebook-pages-map-issue">https://help.openstreetmap.org/questions/73860/facebook-pages-map-issue</a> already provides enough information.</p>
+<p><a href="https://help.openstreetmap.org/users/10133/tzorn">@TZorn</a> Oh, I see. I wasn't aware of that, unfortunately this isn't very visible. I guess you are correct. <a href="/questions/73860/facebook-pages-map-issue">https://help.openstreetmap.org/questions/73860/facebook-pages-map-issue</a> already provides enough information.</p>
 </div>
 <div id="comment-79448-info" class="comment-info">
 <span class="comment-age">(30 Mar '21, 12:09)</span> <span class="comment-user userinfo">scai ♦</span>

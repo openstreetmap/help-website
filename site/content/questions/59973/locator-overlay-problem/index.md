@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Locator overlay problem"
-description = '''Hello. I have made another question like this before one week but I want to ask again. I made whole map of my village but when I look at the map it shows me old streets if I enable locator overlay. What must I do to change locator overlay? Thanks https://help.openstreetmap.org/upfiles/locator_overla...'''
+description = '''Hello. I have made another question like this before one week but I want to ask again. I made whole map of my village but when I look at the map it shows me old streets if I enable locator overlay. What must I do to change locator overlay? Thanks /upfiles/locator_overla...'''
 date = "2017-10-05T14:35:00Z"
 lastmod = "2017-10-05T14:39:00Z"
 weight = 59973
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello. I have made another question like this before one week but I want to ask again. I made whole map of my village but when I look at the map it shows me old streets if I enable locator overlay. What must I do to change locator overlay? Thanks</p>
-<p><a href="https://help.openstreetmap.org/upfiles/locator_overlay.png">https://help.openstreetmap.org/upfiles/locator_overlay.png</a></p>
-<p><a href="https://help.openstreetmap.org/upfiles/locator_overlay_2.png">https://help.openstreetmap.org/upfiles/locator_overlay_2.png</a></p>
+<p><span>/upfiles/locator_overlay.png</span></p>
+<p><span>/upfiles/locator_overlay_2.png</span></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-map" rel="tag" title="see questions tagged &#39;map&#39;">map</span> <span class="post-tag tag-link-locator" rel="tag" title="see questions tagged &#39;locator&#39;">locator</span> <span class="post-tag tag-link-update" rel="tag" title="see questions tagged &#39;update&#39;">update</span> <span class="post-tag tag-link-overlay" rel="tag" title="see questions tagged &#39;overlay&#39;">overlay</span>

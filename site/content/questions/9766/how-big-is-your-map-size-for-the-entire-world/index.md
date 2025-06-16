@@ -110,8 +110,8 @@ osqa_accepted = false
 <div class="answer-body">
 <p>That depends on what you mean with "map size".</p>
 <p>The uncompressed XML variant of the planet.osm file is over 250GB according to the <a href="https://wiki.openstreetmap.org/wiki/Planet.osm">Planet.osm</a> wiki page.</p>
-<p>The <a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">Tile Disk Usage</a> wiki page says "Pre-rendering all tiles would use around 54000GB of storage".</p>
-<p>The question <a href="http://help.openstreetmap.org/questions/6062/how-large-in-disk-size-is-a-current-complete-tile-set">How large (in disk size) is a current complete tile set?</a> has previously been answered with "Using data from tileservers that I have run before, I estimate the complete tileset of zooms 0-18 to be around 342 Tb in size".</p>
+<p>The <a href="https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">Tile Disk Usage</a> wiki page says "Pre-rendering all tiles would use around 54000GB of storage".</p>
+<p>The question <a href="/questions/6062/how-large-in-disk-size-is-a-current-complete-tile-set">How large (in disk size) is a current complete tile set?</a> has previously been answered with "Using data from tileservers that I have run before, I estimate the complete tileset of zooms 0-18 to be around 342 Tb in size".</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -155,7 +155,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>very contradicting...</p>
 <p>why the wiki page says only 54TB when some of the ans above can goes beyond 100TB or 342TB...</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">http://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage">https://wiki.openstreetmap.org/wiki/Tile_Disk_Usage</a></p>
 <p>OSM does NOT pre-render every tile. Pre-rendering all tiles would use around 54000GB of storage. As the following table shows, the majority of tiles are never viewed.</p>
 </div>
 <div id="comment-9771-info" class="comment-info">

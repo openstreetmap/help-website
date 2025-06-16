@@ -106,10 +106,10 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Take a look at overpass api: <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
-<p>You can choose to dowload all nodes with a <a href="http://wiki.openstreetmap.org/wiki/Postal_code">postal code</a> in a certain relation (the german boundary).</p>
+<p>Take a look at overpass api: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>You can choose to dowload all nodes with a <a href="https://wiki.openstreetmap.org/wiki/Postal_code">postal code</a> in a certain relation (the german boundary).</p>
 <p>Now you have an XML file with all German postal codes and their position. I guess you can script your way through to transform that XML file into a CSV.</p>
-<p>See also this question: <a href="http://help.openstreetmap.org/questions/12554/is-there-a-web-service-exposed-to-get-all-cities-in-a-country">http://help.openstreetmap.org/questions/12554/is-there-a-web-service-exposed-to-get-all-cities-in-a-country</a></p>
+<p>See also this question: <a href="/questions/12554/is-there-a-web-service-exposed-to-get-all-cities-in-a-country">https://help.openstreetmap.org/questions/12554/is-there-a-web-service-exposed-to-get-all-cities-in-a-country</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -162,9 +162,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/MapCSS/Examples">MapCSS/Examples</a></p>
+<p>Have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/MapCSS/Examples">MapCSS/Examples</a></p>
 <p>You can adapt that to postal code boundaries.</p>
-<p>Converting OSM data to CSV can be done via <a href="http://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a></p>
+<p>Converting OSM data to CSV can be done via <a href="https://wiki.openstreetmap.org/wiki/Osmconvert">osmconvert</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

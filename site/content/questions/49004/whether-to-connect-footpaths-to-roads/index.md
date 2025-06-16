@@ -80,7 +80,7 @@ osqa_accepted = false
 <div id="post-49008-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>… or even better: a screenshot of it (because it may change in future, which makes the link worthless for readers later on). I think you, <a href="http://help.openstreetmap.org/users/12139/kabads"></a><a href="http://help.openstreetmap.org/users/12139/kabads">@Kabads</a>, are not yet allowed to upload images, so just provide a link.</p>
+<p>… or even better: a screenshot of it (because it may change in future, which makes the link worthless for readers later on). I think you, <a href="https://help.openstreetmap.org/users/12139/kabads"></a><a href="https://help.openstreetmap.org/users/12139/kabads">@Kabads</a>, are not yet allowed to upload images, so just provide a link.</p>
 </div>
 <div id="comment-49008-info" class="comment-info">
 <span class="comment-age">(02 Apr '16, 17:32)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -154,7 +154,7 @@ One Answer:
 2
 </div>
 <div class="comment-text">
-<p>Thanks <a href="http://help.openstreetmap.org/users/5390/escada">@escada</a> - that makes sense. I will readjust the roads to the middle, as a few of them had wandered so that they could easily attach to the footpath. I like the idea of a 'virtual' footpath. I'm guessing this allows for route finding if they are attached?</p>
+<p>Thanks <a href="https://help.openstreetmap.org/users/5390/escada">@escada</a> - that makes sense. I will readjust the roads to the middle, as a few of them had wandered so that they could easily attach to the footpath. I like the idea of a 'virtual' footpath. I'm guessing this allows for route finding if they are attached?</p>
 </div>
 <div id="comment-49014-info" class="comment-info">
 <span class="comment-age">(03 Apr '16, 18:07)</span> <span class="comment-user userinfo">Kabads</span>

@@ -108,7 +108,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Car Sat Navs, Mobile phones and devices such as Garmin Hiking and Cycle units are generally accepted in OSM to be no better 5 meter accuracy. Background Ariel is not always accurate either. We can fall into the trap that "our" device is perfect, it may be very good on some days other days a bit off. We look a Ariel backgrounds and think we can believe our eyes, but that isn't so. Ariel is only as accurate as the care and the data quality used in calibrating it. The advised method is to use several GPX traces taken over a period of time to get a good average and then drag the background images into alignment before starting to map. Expensive survey grade GPS devices use additional devices such base stations signals and computations to get centimeter and better results. I think all the Editors can show cursor position as a Lat long. This is a jpeg of how to show Lat Long when using iD</p>
-<p><img src="https://help.openstreetmap.org/upfiles/co-ords_in_iD.jpg" alt="alt text" /></p>
+<p><img src="/upfiles/co-ords_in_iD.jpg" alt="alt text" /></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -131,7 +131,7 @@ osqa_accepted = false
 <div id="post-86687-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There are lots of questions and answers which are searchable. see this one <a href="https://help.openstreetmap.org/questions/62708/when-buildings-and-roads-are-misaligned-which-takes-preference">https://help.openstreetmap.org/questions/62708/when-buildings-and-roads-are-misaligned-which-takes-preference</a></p>
+<p>There are lots of questions and answers which are searchable. see this one <a href="/questions/62708/when-buildings-and-roads-are-misaligned-which-takes-preference">https://help.openstreetmap.org/questions/62708/when-buildings-and-roads-are-misaligned-which-takes-preference</a></p>
 </div>
 <div id="comment-86687-info" class="comment-info">
 <span class="comment-age">(13 Feb '23, 07:46)</span> <span class="comment-user userinfo">andy mackey</span>

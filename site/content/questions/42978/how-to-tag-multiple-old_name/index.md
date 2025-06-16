@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "how to tag multiple old_name?"
-description = '''Let&#x27;s say a street is known to have had name1 first, then name2, then name3. How should this be tagged so that Nominatim would be able to search in all of them? http://wiki.openstreetmap.org/wiki/Key:name suggests alt_name_1 (and so on) for alternative names, http://wiki.openstreetmap.org/wiki/Talk:...'''
+description = '''Let&#x27;s say a street is known to have had name1 first, then name2, then name3. How should this be tagged so that Nominatim would be able to search in all of them? https://wiki.openstreetmap.org/wiki/Key:name suggests alt_name_1 (and so on) for alternative names, https://wiki.openstreetmap.org/wiki/Talk:...'''
 date = "2015-05-09T07:44:00Z"
 lastmod = "2018-03-31T15:51:00Z"
 weight = 42978
@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Let's say a street is known to have had name1 first, then name2, then name3. How should this be tagged so that Nominatim would be able to search in all of them?</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:name">http://wiki.openstreetmap.org/wiki/Key:name</a> suggests alt_name_1 (and so on) for alternative names, <a href="http://wiki.openstreetmap.org/wiki/Talk:Names#multiple_alt_names_or_loc_names.3F">http://wiki.openstreetmap.org/wiki/Talk:Names#multiple_alt_names_or_loc_names.3F</a> actually discourages that.</p>
-<p><a href="http://wiki.openstreetmap.org/wiki/Key:name#Values">http://wiki.openstreetmap.org/wiki/Key:name#Values</a> also proposes a way to specify years when the name was used, but how to handle the case when the sequence of the names is known, but the exact years when each was used - not?</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:name">https://wiki.openstreetmap.org/wiki/Key:name</a> suggests alt_name_1 (and so on) for alternative names, <a href="https://wiki.openstreetmap.org/wiki/Talk:Names#multiple_alt_names_or_loc_names.3F">https://wiki.openstreetmap.org/wiki/Talk:Names#multiple_alt_names_or_loc_names.3F</a> actually discourages that.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Key:name#Values">https://wiki.openstreetmap.org/wiki/Key:name#Values</a> also proposes a way to specify years when the name was used, but how to handle the case when the sequence of the names is known, but the exact years when each was used - not?</p>
 <p>Update: To clarify why it would be useful to map old names, in many cases the name change is not that long ago. There would still be printed materials referencing the old name, and in case of more recent changes, probably hundreds of websites using the old name still. Having such information in the map is useful today as people could be easily be given the old name and searching for it.</p>
 <p>Another usecase is historical features like mounds or hills. While they might have one more prominent name, in many cases there are several other names they are or were known by.</p>
 </div>
@@ -168,7 +168,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/9580/mboeringa">@mboeringa</a> <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Names">http://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Names</a></p>
+<p><a href="https://help.openstreetmap.org/users/9580/mboeringa">@mboeringa</a> <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Names">https://wiki.openstreetmap.org/wiki/Nominatim/Development_overview#Names</a></p>
 </div>
 <div id="comment-42986-info" class="comment-info">
 <span class="comment-age">(09 May '15, 11:23)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -192,7 +192,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> Thanks, I hadn't seen that page before, gives some insight into Nominatim.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> Thanks, I hadn't seen that page before, gives some insight into Nominatim.</p>
 </div>
 <div id="comment-42989-info" class="comment-info">
 <span class="comment-age">(09 May '15, 12:18)</span> <span class="comment-user userinfo">mboeringa</span>
@@ -203,7 +203,7 @@ osqa_accepted = false
 <div id="post-42994-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/158/scai">@scai</a> but it is unlikely that a lot of SW supports that notation (there was a longer discussion on one of the mailling lists a while back)</p>
+<p><a href="https://help.openstreetmap.org/users/158/scai">@scai</a> but it is unlikely that a lot of SW supports that notation (there was a longer discussion on one of the mailling lists a while back)</p>
 </div>
 <div id="comment-42994-info" class="comment-info">
 <span class="comment-age">(09 May '15, 16:08)</span> <span class="comment-user userinfo">SimonPoole ♦</span>
@@ -215,7 +215,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/2053/simonpoole"></a><a href="http://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> Thats possibly true. But if there is currently no well-supported tag for specifying multiple *_names then we should just start establishing one. And it seems like a good idea to me to choose the tagging scheme that is supported by the geocoder running on our main map.</p>
+<p><a href="https://help.openstreetmap.org/users/2053/simonpoole"></a><a href="https://help.openstreetmap.org/users/2053/simonpoole">@SimonPoole</a> Thats possibly true. But if there is currently no well-supported tag for specifying multiple *_names then we should just start establishing one. And it seems like a good idea to me to choose the tagging scheme that is supported by the geocoder running on our main map.</p>
 </div>
 <div id="comment-42996-info" class="comment-info">
 <span class="comment-age">(09 May '15, 17:44)</span> <span class="comment-user userinfo">scai ♦</span>

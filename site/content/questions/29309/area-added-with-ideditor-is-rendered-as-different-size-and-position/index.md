@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am new to OSM and decided to add an area to a local state park which has been expanded due to a land purchase. I registered and used the IDeditor to carefully define the boundaries of the new rectangular area adjacent to the existing park. However, once I saved the new area, it is rendered as a different size and the position of the area is offset from the position I specified in some views. The new area (Dollar unit of Burton Creek State Park) is rendered properly in this view: <a href="http://www.openstreetmap.org/#map=16/39.2083/-120.1123">http://www.openstreetmap.org/#map=16/39.2083/-120.1123</a> However, the area is a different size and location in this view: <a href="http://www.openstreetmap.org/#map=15/39.2102/-120.1191">http://www.openstreetmap.org/#map=15/39.2102/-120.1191</a> ... and not at all in this view: <a href="http://www.openstreetmap.org/#map=14/39.2031/-120.1101">http://www.openstreetmap.org/#map=14/39.2031/-120.1101</a> It has been less than a day since I did this and I was wondering if I just needed to wait for my changes to update throughout the system or if there is an actual problem.</p>
+<p>I am new to OSM and decided to add an area to a local state park which has been expanded due to a land purchase. I registered and used the IDeditor to carefully define the boundaries of the new rectangular area adjacent to the existing park. However, once I saved the new area, it is rendered as a different size and the position of the area is offset from the position I specified in some views. The new area (Dollar unit of Burton Creek State Park) is rendered properly in this view: <a href="https://www.openstreetmap.org/#map=16/39.2083/-120.1123">https://www.openstreetmap.org/#map=16/39.2083/-120.1123</a> However, the area is a different size and location in this view: <a href="https://www.openstreetmap.org/#map=15/39.2102/-120.1191">https://www.openstreetmap.org/#map=15/39.2102/-120.1191</a> ... and not at all in this view: <a href="https://www.openstreetmap.org/#map=14/39.2031/-120.1101">https://www.openstreetmap.org/#map=14/39.2031/-120.1101</a> It has been less than a day since I did this and I was wondering if I just needed to wait for my changes to update throughout the system or if there is an actual problem.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ideditor" rel="tag" title="see questions tagged &#39;ideditor&#39;">ideditor</span> <span class="post-tag tag-link-areas" rel="tag" title="see questions tagged &#39;areas&#39;">areas</span>
@@ -124,7 +124,7 @@ One Answer:
 1
 </div>
 <div class="comment-text">
-<p>Yes - the short answer is that it's perfectly normal. The long and detailed answer is <a href="https://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
+<p>Yes - the short answer is that it's perfectly normal. The long and detailed answer is <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated">here</a>.</p>
 </div>
 <div id="comment-29311-info" class="comment-info">
 <span class="comment-age">(23 Dec '13, 17:53)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>

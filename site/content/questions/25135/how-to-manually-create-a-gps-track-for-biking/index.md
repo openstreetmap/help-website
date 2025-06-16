@@ -74,7 +74,7 @@ osqa_accepted = true
 <li>Previous English question about the same:
 <ul>
 <li><a href="/questions/884/">application-or-web-interface-for-freehand-plotting-tracks-on-osm-as-saving-as-gpx</a>.</li>
-<li><a href="https://help.openstreetmap.org/questions/20369/">is-it-possible-to-build-and-store-a-track-on-openstreetmap</a>.</li>
+<li><a href="/questions/20369/">is-it-possible-to-build-and-store-a-track-on-openstreetmap</a>.</li>
 </ul></li>
 <li>German version of this question: <a href="/questions/18903/">wie-bringe-ich-einen-track-von-osm-nach-gpx</a>.</li>
 </ul>
@@ -220,7 +220,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See this list of <a href="http://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a>.</p>
+<p>See this list of <a href="https://wiki.openstreetmap.org/wiki/Track_drawing_websites">Track drawing websites</a>.</p>
 <p>They will all let you draw a track on top of an OSM based map. Some also has the option of other maps or aerial imagery to draw on, eg Google or Bing. Some support routing, so the track will automatically follow roads or paths. Or you can just manually click to draw lines.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -283,7 +283,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi take a look at this site with several faq. <a href="http://wiki.openstreetmap.org/w/index.php?search=gps+tracks&amp;title=Special%3ASearch">http://wiki.openstreetmap.org/w/index.php?search=gps+tracks&amp;title=Special%3ASearch</a> I advice you to make the tracks yourself recording them by the way. More fun and reliable.</p>
+<p>hi take a look at this site with several faq. <a href="https://wiki.openstreetmap.org/w/index.php?search=gps+tracks&amp;title=Special%3ASearch">https://wiki.openstreetmap.org/w/index.php?search=gps+tracks&amp;title=Special%3ASearch</a> I advice you to make the tracks yourself recording them by the way. More fun and reliable.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -229,7 +229,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This was a duplicate of <a href="https://help.openstreetmap.org/questions/19537/create-map-with-markers">this question</a></p>
+<p>This was a duplicate of <a href="/questions/19537/create-map-with-markers">this question</a></p>
 </div>
 <div class="answer-controls post-controls">
 <div class="community-wiki">

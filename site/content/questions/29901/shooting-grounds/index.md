@@ -42,15 +42,15 @@ osqa_accepted = false
 <p>I have recently come across four areas which are mainly or entirely dedicated to shooting, but which are not classic rifle ranges. These are just examples of similar things which occur all over the world. In adding a bit of detail to them I realised that there are many features which are not straightforward to tag</p>
 <p>Two are custom built grounds largely dedicated to a range of clay pigeon shooting disciplines:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/#map=16/52.9534/-0.8311">Orston Shooting Ground.</a></li>
-<li><a href="http://www.openstreetmap.org/#map=17/52.52925/-0.96517">Kibworth Shooting Ground.</a></li>
+<li><a href="https://www.openstreetmap.org/#map=16/52.9534/-0.8311">Orston Shooting Ground.</a></li>
+<li><a href="https://www.openstreetmap.org/#map=17/52.52925/-0.96517">Kibworth Shooting Ground.</a></li>
 </ul>
-<p>Also in the East Midlands, <a href="http://www.openstreetmap.org/way/96856363">Cotgrave Forest</a> is a popular shoot, mainly I would imagine for Pheasant. This has been tagged as a military area to provide some kind of warning.</p>
-<p>Lastly in within the Hochfilzen military zone there is a very <a href="http://www.openstreetmap.org/way/207763957">large area</a> dedicated to various shooting disciplines.</p>
-<p>In addition, in many places in Switzerland, local rifle clubs will operate ranges with firing over public footpaths, such as this <a href="http://www.openstreetmap.org/way/207763957">one</a> in Saas (GR).</p>
+<p>Also in the East Midlands, <a href="https://www.openstreetmap.org/way/96856363">Cotgrave Forest</a> is a popular shoot, mainly I would imagine for Pheasant. This has been tagged as a military area to provide some kind of warning.</p>
+<p>Lastly in within the Hochfilzen military zone there is a very <a href="https://www.openstreetmap.org/way/207763957">large area</a> dedicated to various shooting disciplines.</p>
+<p>In addition, in many places in Switzerland, local rifle clubs will operate ranges with firing over public footpaths, such as this <a href="https://www.openstreetmap.org/way/207763957">one</a> in Saas (GR).</p>
 <p>Obviously, the basic tag for the first three, and the last one is sport=shooting, but I dont think this is appropriate for the military training range.</p>
 <p>Military grounds such as that at Hochfilzen may be dual-use, certainly the British National Shooting Ground at <a href="http://en.wikipedia.org/wiki/Bisley,_Surrey#National_Shooting_Centre">Bisley</a> is owned and partially operated by the Ministry of Defence. Thus they may both fulfil sporting and military training purposes.</p>
-<p>Note that this <a href="https://help.openstreetmap.org/questions/11920/how-do-i-correctly-tag-a-shooting-range">previous question</a>, which specifically related to rifle ranges, has not really been resolved. The fundamental issue is that we can tag things sport=shooting, but then don't have tags for the objects that the tag belongs too.</p>
+<p>Note that this <a href="/questions/11920/how-do-i-correctly-tag-a-shooting-range">previous question</a>, which specifically related to rifle ranges, has not really been resolved. The fundamental issue is that we can tag things sport=shooting, but then don't have tags for the objects that the tag belongs too.</p>
 <p>So my first query is: "Is sport=shooting appropriate on military shooting ranges &amp; grounds?"</p>
 <p>My main question is : "How to tag the wide range of features and facilities on such sites?".</p>
 <p>These include:</p>
@@ -128,8 +128,8 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Here in Germany even <strong>sportists</strong> need to get a license to train with weapons on dedicated places ("Schützenverein"). AFAIK this is definitly an area with <a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dshooting">sport=shooting</a>.</p>
-<p>A <strong>military</strong> ground that is for training armee forces on the use of different weapon categories is (IMHO!) something different as it's non public and even dangerous to the public. At least I suggest to mark it as <a href="http://wiki.openstreetmap.org/wiki/Tag:landuse%3Dmilitary">landuse=military</a> and if you like you can be more detailed using <a href="http://wiki.openstreetmap.org/wiki/Tag:military%3Drange">military=range</a></p>
+<p>Here in Germany even <strong>sportists</strong> need to get a license to train with weapons on dedicated places ("Schützenverein"). AFAIK this is definitly an area with <a href="https://wiki.openstreetmap.org/wiki/Tag:sport%3Dshooting">sport=shooting</a>.</p>
+<p>A <strong>military</strong> ground that is for training armee forces on the use of different weapon categories is (IMHO!) something different as it's non public and even dangerous to the public. At least I suggest to mark it as <a href="https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dmilitary">landuse=military</a> and if you like you can be more detailed using <a href="https://wiki.openstreetmap.org/wiki/Tag:military%3Drange">military=range</a></p>
 <p>But currently there seems to be no documented way to do <strong>microtagging</strong> this facilities as you describe.</p>
 </div>
 <div class="answer-controls post-controls">

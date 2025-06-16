@@ -117,7 +117,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can browse the list of mobile applications in the wiki and see, which one does what you want (and add functionality if you miss it and if the source is available): <a href="http://wiki.openstreetmap.org/wiki/Software/Mobile">http://wiki.openstreetmap.org/wiki/Software/Mobile</a> You might also find useful information here: <a href="http://wiki.openstreetmap.org/wiki/Routing#Routing_software">http://wiki.openstreetmap.org/wiki/Routing#Routing_software</a> and here: <a href="http://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools">http://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools</a></p>
+<p>You can browse the list of mobile applications in the wiki and see, which one does what you want (and add functionality if you miss it and if the source is available): <a href="https://wiki.openstreetmap.org/wiki/Software/Mobile">https://wiki.openstreetmap.org/wiki/Software/Mobile</a> You might also find useful information here: <a href="https://wiki.openstreetmap.org/wiki/Routing#Routing_software">https://wiki.openstreetmap.org/wiki/Routing#Routing_software</a> and here: <a href="https://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools">https://wiki.openstreetmap.org/wiki/Routing#Libraries.2FDevelopment-Tools</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

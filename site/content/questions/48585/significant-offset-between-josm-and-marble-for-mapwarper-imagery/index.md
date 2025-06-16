@@ -41,7 +41,7 @@ osqa_accepted = true
 <div class="question-body">
 <p>I managed to load a rectified Mapwarper layer off Marble's cache in JOSM, but it has a very significant offset (500-ish km) and apparently it was heavily distorted. If it is seen through Marble, it looks fine without a problem.</p>
 <p>Is there any way to correct this?</p>
-<p>(quesion converted from a comment to <a href="https://help.openstreetmap.org/questions/48466/how-to-configure-offline-imagery-for-josm">how to configure offline imagery for josm</a>)</p>
+<p>(quesion converted from a comment to <a href="/questions/48466/how-to-configure-offline-imagery-for-josm">how to configure offline imagery for josm</a>)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-mapwarper" rel="tag" title="see questions tagged &#39;mapwarper&#39;">mapwarper</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-offline" rel="tag" title="see questions tagged &#39;offline&#39;">offline</span> <span class="post-tag tag-link-imagery" rel="tag" title="see questions tagged &#39;imagery&#39;">imagery</span> <span class="post-tag tag-link-marble" rel="tag" title="see questions tagged &#39;marble&#39;">marble</span>

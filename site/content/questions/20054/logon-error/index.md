@@ -67,7 +67,7 @@ osqa_accepted = false
 <div id="post-20060-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>With a transitory problem such as this, an up-to-date summary of the current status can often be found by asking on one of the main <a href="http://wiki.openstreetmap.org/wiki/Irc" title="IRC">IRC</a> channels.</p>
+<p>With a transitory problem such as this, an up-to-date summary of the current status can often be found by asking on one of the main <a href="https://wiki.openstreetmap.org/wiki/Irc" title="IRC">IRC</a> channels.</p>
 </div>
 <div id="comment-20060-info" class="comment-info">
 <span class="comment-age">(20 Feb '13, 10:17)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -79,7 +79,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Or check the Platform Status on the wiki: <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
+<p>Or check the Platform Status on the wiki: <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a></p>
 </div>
 <div id="comment-20061-info" class="comment-info">
 <span class="comment-age">(20 Feb '13, 12:13)</span> <span class="comment-user userinfo">Vclaw</span>
@@ -139,7 +139,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>07:02: Seems to be a server problem. <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> is completely down for me (Germany) - confirmed by <a href="http://stats.pingdom.com/p310g2klasry/546498">http://stats.pingdom.com/p310g2klasry/546498</a> . Probably that is also your problem.</p>
+<p>07:02: Seems to be a server problem. <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> is completely down for me (Germany) - confirmed by <a href="http://stats.pingdom.com/p310g2klasry/546498">http://stats.pingdom.com/p310g2klasry/546498</a> . Probably that is also your problem.</p>
 <p>07:16: www works again (for me and pingdom). Login there works too for me.</p>
 </div>
 <div class="answer-controls post-controls">

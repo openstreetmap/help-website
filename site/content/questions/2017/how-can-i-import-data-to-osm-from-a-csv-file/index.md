@@ -112,7 +112,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Your aim sounds like a kind of data import.</p>
-<p>So you should have a look at <a href="http://wiki.openstreetmap.org/wiki/Import">http://wiki.openstreetmap.org/wiki/Import</a> and all subpages there. At /Software you can find some tools to get your data handled (hopefully).</p>
+<p>So you should have a look at <a href="https://wiki.openstreetmap.org/wiki/Import">https://wiki.openstreetmap.org/wiki/Import</a> and all subpages there. At /Software you can find some tools to get your data handled (hopefully).</p>
 <p>For detailed questions about your import aim, the OSM forum or mailing lists can be better places.</p>
 </div>
 <div class="answer-controls post-controls">

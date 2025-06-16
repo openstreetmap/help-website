@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Adding house number properly?"
-description = '''Sorry, first time editing maps, but it would be great to contribute. I think I added my houes number properly by adding a building node on top of the house, then adding the house number: http://www.openstreetmap.org/edit?lat=42.392172&amp;amp;lon=-72.73985&amp;amp;zoom=18 3 Chesterfield Road (Rt 143), Willi...'''
+description = '''Sorry, first time editing maps, but it would be great to contribute. I think I added my houes number properly by adding a building node on top of the house, then adding the house number: https://www.openstreetmap.org/edit?lat=42.392172&amp;amp;lon=-72.73985&amp;amp;zoom=18 3 Chesterfield Road (Rt 143), Willi...'''
 date = "2012-05-29T17:14:00Z"
 lastmod = "2012-05-31T16:20:00Z"
 weight = 13080
@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>Sorry, first time editing maps, but it would be great to contribute.</p>
-<p>I think I added my houes number properly by adding a building node on top of the house, then adding the house number: <a href="http://www.openstreetmap.org/edit?lat=42.392172&amp;lon=-72.73985&amp;zoom=18">http://www.openstreetmap.org/edit?lat=42.392172&amp;lon=-72.73985&amp;zoom=18</a></p>
+<p>I think I added my houes number properly by adding a building node on top of the house, then adding the house number: <a href="https://www.openstreetmap.org/edit?lat=42.392172&amp;lon=-72.73985&amp;zoom=18">https://www.openstreetmap.org/edit?lat=42.392172&amp;lon=-72.73985&amp;zoom=18</a></p>
 <p>3 Chesterfield Road (Rt 143), Williamsburg, MA, USA</p>
-<p>But when I search for my address it ends up pointing much further up the road. <a href="http://www.openstreetmap.org/?minlon=-72.740281&amp;minlat=42.392677&amp;maxlon=-72.740181&amp;maxlat=42.392777">http://www.openstreetmap.org/?minlon=-72.740281&amp;minlat=42.392677&amp;maxlon=-72.740181&amp;maxlat=42.392777</a></p>
+<p>But when I search for my address it ends up pointing much further up the road. <a href="https://www.openstreetmap.org/?minlon=-72.740281&amp;minlat=42.392677&amp;maxlon=-72.740181&amp;maxlat=42.392777">https://www.openstreetmap.org/?minlon=-72.740281&amp;minlat=42.392677&amp;maxlon=-72.740181&amp;maxlat=42.392777</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-housenumbers" rel="tag" title="see questions tagged &#39;housenumbers&#39;">housenumbers</span>

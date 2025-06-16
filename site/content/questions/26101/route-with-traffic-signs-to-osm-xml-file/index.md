@@ -105,7 +105,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><strong>Everything</strong> about routing with OSM based data should be collected at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
+<p><strong>Everything</strong> about routing with OSM based data should be collected at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
 <p>There are also links to some opensource routing software or webservices. Choose the software that comes near your aim by user interface, and find out how raw OSM data is converted to special data that can be used by those routing apps. Then export the raw OSM data for your route you want (e.g. by filtering or clipping), and try to create some routing.</p>
 <p>Or do you need some route information in KML or GeoJSON format or similar?</p>
 </div>

@@ -119,7 +119,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Why not just build <a href="http://weait.com/content/build-your-own-openstreetmap-server-v1">you own openstreetmap server</a> and just query that internally via <a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>? The JSON formated output would be real easy to parse client side with jquery, so you could simply call your own nominatim server and periodicalyl sync the data.</p>
+<p>Why not just build <a href="http://weait.com/content/build-your-own-openstreetmap-server-v1">you own openstreetmap server</a> and just query that internally via <a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>? The JSON formated output would be real easy to parse client side with jquery, so you could simply call your own nominatim server and periodicalyl sync the data.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -208,7 +208,7 @@ osqa_accepted = false
 <div id="post-38184-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>meta: malfunction of this help site - sorry <a href="http://help.openstreetmap.org/users/99/stephan75">@stephan75</a></p>
+<p>meta: malfunction of this help site - sorry <a href="https://help.openstreetmap.org/users/99/stephan75">@stephan75</a></p>
 </div>
 <div id="comment-38184-info" class="comment-info">
 <span class="comment-age">(31 Oct '14, 17:00)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

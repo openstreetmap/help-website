@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Weak grid lines, why?"
-description = '''On some places and at some zoom levels I can see weak horizontal and vertical (maybe) grid lines. Also, on some places these lines are oblique. Mostly over green areas (assume forests) like here: http://www.openstreetmap.org/#map=8/46.851/-83.790 Are these lines real or my W8 display system is wrong...'''
+description = '''On some places and at some zoom levels I can see weak horizontal and vertical (maybe) grid lines. Also, on some places these lines are oblique. Mostly over green areas (assume forests) like here: https://www.openstreetmap.org/#map=8/46.851/-83.790 Are these lines real or my W8 display system is wrong...'''
 date = "2014-08-26T07:54:00Z"
 lastmod = "2014-08-26T14:13:00Z"
 weight = 36166
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>On some places and at some zoom levels I can see weak horizontal and vertical (maybe) grid lines. Also, on some places these lines are oblique. Mostly over green areas (assume forests) like here: <a href="http://www.openstreetmap.org/#map=8/46.851/-83.790">http://www.openstreetmap.org/#map=8/46.851/-83.790</a> Are these lines real or my W8 display system is wrong? Can others see these lines too?</p>
+<p>On some places and at some zoom levels I can see weak horizontal and vertical (maybe) grid lines. Also, on some places these lines are oblique. Mostly over green areas (assume forests) like here: <a href="https://www.openstreetmap.org/#map=8/46.851/-83.790">https://www.openstreetmap.org/#map=8/46.851/-83.790</a> Are these lines real or my W8 display system is wrong? Can others see these lines too?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-grid" rel="tag" title="see questions tagged &#39;grid&#39;">grid</span> <span class="post-tag tag-link-forests" rel="tag" title="see questions tagged &#39;forests&#39;">forests</span>
@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>They are real and seem to be caused by the renderer / stylesheet using a slightly different color for area outlines. Looks ugly.</p>
-<p>See this <a href="http://www.openstreetmap.org/node/2961467939">node</a> for example. It is part of four landuses and its position is exactly at the intersection of a horizontal and a vertical grid line.</p>
+<p>See this <a href="https://www.openstreetmap.org/node/2961467939">node</a> for example. It is part of four landuses and its position is exactly at the intersection of a horizontal and a vertical grid line.</p>
 <p>There is already a <a href="https://github.com/gravitystorm/openstreetmap-carto/issues/652">bug report for this issue</a>.</p>
 </div>
 <div class="answer-controls post-controls">

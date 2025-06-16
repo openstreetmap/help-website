@@ -220,7 +220,7 @@ This answer is marked "community wiki".
 <div id="post-76331-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/53778/openstreetmap-not-working-with-latest-garmin-nuvi-updates">https://help.openstreetmap.org/questions/53778/openstreetmap-not-working-with-latest-garmin-nuvi-updates</a></p>
+<p><a href="/questions/53778/openstreetmap-not-working-with-latest-garmin-nuvi-updates">https://help.openstreetmap.org/questions/53778/openstreetmap-not-working-with-latest-garmin-nuvi-updates</a></p>
 </div>
 <div id="comment-76331-info" class="comment-info">
 <span class="comment-age">(27 Aug '20, 22:11)</span> <span class="comment-user userinfo">andy mackey</span>

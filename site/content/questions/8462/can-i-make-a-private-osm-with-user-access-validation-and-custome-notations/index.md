@@ -111,7 +111,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>All the code in the OpenStreeMap project is open source and you can create your own OSM server by installing the <a href="http://wiki.openstreetmap.org/wiki/Rails_port">rails port</a>. This contains the front end, the api and potlatch. It does not include the tile generator (<a href="http://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a>), the searching (<a href="http://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>) or the extended API.</p>
+<p>All the code in the OpenStreeMap project is open source and you can create your own OSM server by installing the <a href="https://wiki.openstreetmap.org/wiki/Rails_port">rails port</a>. This contains the front end, the api and potlatch. It does not include the tile generator (<a href="https://wiki.openstreetmap.org/wiki/Mapnik">mapnik</a>), the searching (<a href="https://wiki.openstreetmap.org/wiki/Nominatim">nominatim</a>) or the extended API.</p>
 <p>I am currently running this on my laptop, without the whole planet imported.</p>
 <p>Note that this will be your own seperate private map based on OSM software. You can import OSM data to your database or part of it, even continuasly. But you may get problems with colliding id if you commit to your own database and then import updates from the central database.</p>
 </div>

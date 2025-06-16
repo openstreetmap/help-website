@@ -46,7 +46,7 @@ osqa_accepted = false
 <p><em>"C:\Program Files (x86)\osmosis\bin\osmosis.bat" --read-xml file="G:\Restricted\Radu\Facultate\2012-2013\Licenta\europe.osm" --bounding-box left=12.04 top=55.44 right=30.19 bottom=43.51 --write-pgsql host="localhost" database="eastern_europe" user="postgres" password="parola"</em></p>
 <p>After almost a day of executing the following error dropped:<br />
 <em>OutOfMemmory: Java heap space</em></p>
-<p>From what I've seen on <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Tuning">http://wiki.openstreetmap.org/wiki/Osmosis/Tuning</a> a quick fix for this error is to set JAVACMD_OPTIONS to change the amount of memmory allocated (JAVACMD_OPTIONS=-Xmx2G will allocate 2 GB).<br />
+<p>From what I've seen on <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Tuning">https://wiki.openstreetmap.org/wiki/Osmosis/Tuning</a> a quick fix for this error is to set JAVACMD_OPTIONS to change the amount of memmory allocated (JAVACMD_OPTIONS=-Xmx2G will allocate 2 GB).<br />
 </p>
 <p>First of all I would like to know where do I have to set JAVACMD_OPTIONS. I am a Windows user. Do I have to edit osmosis.bat in bin directory?<br />
 </p>

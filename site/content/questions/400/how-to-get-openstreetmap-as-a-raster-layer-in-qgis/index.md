@@ -41,8 +41,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>How can I bring in OpenStreetMap raster maps into QGIS?</p>
-<p>QGIS supports WMS layers for raster maps. Are there OpenStreetMap WMS servers? but also, is there any easy support for standard "google format" tile servers (like tile.openstreetmap.org which uses <a href="http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">tile URLs matching google's approach</a>)</p>
-<p><em>(Note bringing in OpenStreetMap vector data is, in many ways, more interesting. See <a href="http://help.openstreetmap.org/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in GIS program?</a> This question is about using raster map layers)</em></p>
+<p>QGIS supports WMS layers for raster maps. Are there OpenStreetMap WMS servers? but also, is there any easy support for standard "google format" tile servers (like tile.openstreetmap.org which uses <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames">tile URLs matching google's approach</a>)</p>
+<p><em>(Note bringing in OpenStreetMap vector data is, in many ways, more interesting. See <a href="/questions/148/how-can-i-use-openstreetmap-data-in-my-gis-program">How can I use OpenStreetMap data in GIS program?</a> This question is about using raster map layers)</em></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-qgis" rel="tag" title="see questions tagged &#39;qgis&#39;">qgis</span> <span class="post-tag tag-link-tiles" rel="tag" title="see questions tagged &#39;tiles&#39;">tiles</span>
@@ -70,7 +70,7 @@ osqa_accepted = false
 <div id="post-53461-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>For an updated version of this question relevant to QGIS versions 2.10 upwards see <a href="https://help.openstreetmap.org/questions/52409/how-can-i-adding-osm-tiles-as-a-background-layer-in-qgis-21x-and-3x">https://help.openstreetmap.org/questions/52409/how-can-i-adding-osm-tiles-as-a-background-layer-in-qgis-21x-and-3x</a></p>
+<p>For an updated version of this question relevant to QGIS versions 2.10 upwards see <a href="/questions/52409/how-can-i-adding-osm-tiles-as-a-background-layer-in-qgis-21x-and-3x">https://help.openstreetmap.org/questions/52409/how-can-i-adding-osm-tiles-as-a-background-layer-in-qgis-21x-and-3x</a></p>
 </div>
 <div id="comment-53461-info" class="comment-info">
 <span class="comment-age">(10 Dec '16, 14:27)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -225,7 +225,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>For a list of WMS servers, see <a href="http://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">the OSM Wiki</a>. Most of these either require a paid subscription, or have limited coverage, a reduced update frequency, or reduced image quality. The reason for that is that operating a WMS server is more expensive in terms of resources used than for example a tile server. There was a time when OSM itself operated a WMS server but that was long ago.</p>
+<p>For a list of WMS servers, see <a href="https://wiki.openstreetmap.org/wiki/WMS#OSM_WMS_Servers">the OSM Wiki</a>. Most of these either require a paid subscription, or have limited coverage, a reduced update frequency, or reduced image quality. The reason for that is that operating a WMS server is more expensive in terms of resources used than for example a tile server. There was a time when OSM itself operated a WMS server but that was long ago.</p>
 <p>There is a Google plugin for QGIS. You need to have Python support enabled for qgis (package qgis-python installed under Ubuntu), then install the "plugin installer" plugin from the "Plugins/Manage Plugins" menu. Then go to "Plugins/Fetch Python Plugins", enable third party repositories, and you will be able to install a "Google Layers" plugin.</p>
 <p>This plugin only works when your project projection is set to EPSG:3785 (or 900913), and it is hard-coded to work with Google static map images. You can change this to work with OSM static maps. Look at the gmaps.py source in ~/.qgis/python/plugins/GoogleLayers after you have installed the plugin and change the lines</p>
 <pre><code>url = &quot;http://maps.google.com/staticmap?&quot;
@@ -432,7 +432,7 @@ url += &quot;center=%s,%s&amp;zoom=%s&amp;size=%sx%s&amp;sensor=false&amp;format
 <div id="post-52408-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3/andy-allan">@Andy Allan</a>: by all means ask the question again and then we can start with answers relevant to QGIS 2.1x and 3.0. I closed the question at QGIS 2.6 when most of the information was already considerably outdated. It is much more so now.</p>
+<p><a href="https://help.openstreetmap.org/users/3/andy-allan">@Andy Allan</a>: by all means ask the question again and then we can start with answers relevant to QGIS 2.1x and 3.0. I closed the question at QGIS 2.6 when most of the information was already considerably outdated. It is much more so now.</p>
 </div>
 <div id="comment-52408-info" class="comment-info">
 <span class="comment-age">(08 Oct '16, 10:50)</span> <span class="comment-user userinfo">SK53 ♦</span>

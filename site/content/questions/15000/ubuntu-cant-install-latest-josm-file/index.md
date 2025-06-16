@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Apt-get usually is the preferred method, but this is really simple if you can configure things for yourself. This is especially true because the distribution version of josm may well be out of date. Here is what I did --</p>
-<p>1:download josm-tested.jar from the link on <a href="http://wiki.openstreetmap.org/wiki/JOSM">http://wiki.openstreetmap.org/wiki/JOSM</a><br />
+<p>1:download josm-tested.jar from the link on <a href="https://wiki.openstreetmap.org/wiki/JOSM">https://wiki.openstreetmap.org/wiki/JOSM</a><br />
 2: make a directory called "lib" under your HOME directory, and put josm-tested.jar there<br />
 3: find the "bin" directory under your HOME directory and create a script file josm.sh containing<br />
 </p>

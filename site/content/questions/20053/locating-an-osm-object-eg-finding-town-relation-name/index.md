@@ -115,7 +115,7 @@ One Answer:
 <li>or of a given coordinate with: <code>is_in(LAT,LON);out;</code></li>
 </ul>
 <p>In all cases, you need to replace ID with the object id, or LAT and LON with latitude and longitude. You need to prepend <a href="http://overpass-api.de/api/interpreter?data="><code>http://overpass-api.de/api/interpreter?data=</code></a> to get a full URL.</p>
-<p>For more details, you can have a look at the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_Areas">documentation of the is_in statement</a>. To make sense of the returned data, you may need to read the <a href="http://wiki.openstreetmap.org/wiki/Key:admin_level#admin_level">documentation of the admin_level</a> key.</p>
+<p>For more details, you can have a look at the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Query_for_Areas">documentation of the is_in statement</a>. To make sense of the returned data, you may need to read the <a href="https://wiki.openstreetmap.org/wiki/Key:admin_level#admin_level">documentation of the admin_level</a> key.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

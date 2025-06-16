@@ -80,7 +80,7 @@ osqa_accepted = false
 5
 </div>
 <div class="comment-text">
-<p>Is this a similar question as <a href="https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately">https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately</a> ?</p>
+<p>Is this a similar question as <a href="/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately">https://help.openstreetmap.org/questions/17501/when-mapping-polygons-surrounded-by-streets-should-they-share-nodes-or-be-traced-separately</a> ?</p>
 </div>
 <div id="comment-20416-info" class="comment-info">
 <span class="comment-age">(01 Mar '13, 11:58)</span> <span class="comment-user userinfo">EdLoach ♦</span>

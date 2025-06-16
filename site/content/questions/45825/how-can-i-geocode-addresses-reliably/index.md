@@ -111,7 +111,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>As a user the next best approach is to query again removing words from the address/street.</p>
-<p>Related to your other question (<a href="https://help.openstreetmap.org/questions/45823/geocoding-engines)">https://help.openstreetmap.org/questions/45823/geocoding-engines)</a> no other free/open source geocoder can't handle that either. Maybe <a href="https://github.com/etalab/addok">https://github.com/etalab/addok</a> for France or geocod.io (not free) for US addresses but none for Poland (your use case in the Nominatim bugs you filed) or the rest of the world.</p>
+<p>Related to your other question (<a href="/questions/45823/geocoding-engines)">https://help.openstreetmap.org/questions/45823/geocoding-engines)</a> no other free/open source geocoder can't handle that either. Maybe <a href="https://github.com/etalab/addok">https://github.com/etalab/addok</a> for France or geocod.io (not free) for US addresses but none for Poland (your use case in the Nominatim bugs you filed) or the rest of the world.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>You can't search routes that avoid toll roads with the simple UI that is offered on openstreetmap.org. However, you can use one of the many <a href="http://wiki.openstreetmap.org/wiki/Routing">routing services</a> based on OSM, e.g. <a href="http://openrouteservice.org/">OpenRouteService</a> allows you to specify which roads to avoid. There are probably others that allow this as well.</p>
+<p>You can't search routes that avoid toll roads with the simple UI that is offered on openstreetmap.org. However, you can use one of the many <a href="https://wiki.openstreetmap.org/wiki/Routing">routing services</a> based on OSM, e.g. <a href="http://openrouteservice.org/">OpenRouteService</a> allows you to specify which roads to avoid. There are probably others that allow this as well.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

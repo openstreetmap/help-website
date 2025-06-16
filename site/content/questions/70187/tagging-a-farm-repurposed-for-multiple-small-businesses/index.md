@@ -69,7 +69,7 @@ osqa_accepted = true
 <div id="post-70188-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Related question: <a href="https://help.openstreetmap.org/questions/2969/how-to-tag-a-multi-function-facility">How to tag a multi-function facility?</a>.</p>
+<p>Related question: <a href="/questions/2969/how-to-tag-a-multi-function-facility">How to tag a multi-function facility?</a>.</p>
 </div>
 <div id="comment-70188-info" class="comment-info">
 <span class="comment-age">(25 Jul '19, 13:41)</span> <span class="comment-user userinfo">sleske</span>

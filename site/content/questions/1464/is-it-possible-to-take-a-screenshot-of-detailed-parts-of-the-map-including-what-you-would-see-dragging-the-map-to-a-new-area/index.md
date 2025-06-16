@@ -118,7 +118,7 @@ osqa_accepted = false
 <li>You can use software for donwload tiles and glue them together.</li>
 <li>Simply. You can also use the "export" tab on site main page, choose your scale and format type. Set scale at street level and select city area.</li>
 </ul>
-<p>You can also look at <a href="http://wiki.openstreetmap.org/wiki/Maposmatic">MapOSMatic</a>.</p>
+<p>You can also look at <a href="https://wiki.openstreetmap.org/wiki/Maposmatic">MapOSMatic</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -183,7 +183,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Look at all applications and web services at <a href="http://wiki.openstreetmap.org/wiki/Staticmaps">Staticmaps</a> and <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> to get large bitmap maps.</p>
+<p>Look at all applications and web services at <a href="https://wiki.openstreetmap.org/wiki/Staticmaps">Staticmaps</a> and <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM_on_Paper</a> to get large bitmap maps.</p>
 <p>Maybe "Bigmap" is good for tasks like that.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -339,7 +339,7 @@ osqa_accepted = false
 <div id="post-33969-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Meanwhile there is <a href="http://bigmap.osmz.ru/">BigMap2</a> (also visit the <a href="http://wiki.openstreetmap.org/wiki/BigMap">wiki page</a>). And you don't need a perl installation because there is also an option to generate the images online, or using python.</p>
+<p>Meanwhile there is <a href="http://bigmap.osmz.ru/">BigMap2</a> (also visit the <a href="https://wiki.openstreetmap.org/wiki/BigMap">wiki page</a>). And you don't need a perl installation because there is also an option to generate the images online, or using python.</p>
 </div>
 <div id="comment-33969-info" class="comment-info">
 <span class="comment-age">(13 Jun '14, 20:42)</span> <span class="comment-user userinfo">scai ♦</span>

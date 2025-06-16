@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The only information that OSM has about the first of the entries on that list can be seen on <a href="http://www.openstreetmap.org/node/2316544001">this OSM node</a> (I just used OSM's search box to find the name). OSM only has the name and the fact that it is a sports shop.</p>
+<p>The only information that OSM has about the first of the entries on that list can be seen on <a href="https://www.openstreetmap.org/node/2316544001">this OSM node</a> (I just used OSM's search box to find the name). OSM only has the name and the fact that it is a sports shop.</p>
 <p>I suspect you'd need to get the list of locations separately and use that to create a map with markers on it, perhaps using something like <a href="https://umap.openstreetmap.fr/en/">uMap</a>.</p>
 </div>
 <div class="answer-controls post-controls">

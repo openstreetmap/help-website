@@ -89,7 +89,7 @@ render_tiles(bbox, mapfile, tile_dir, minZoom, maxZoom, &quot;Norway&quot;)</cod
 <div id="post-65127-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Converted from an answer to a question from <a href="https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a></p>
+<p>Converted from an answer to a question from <a href="/questions/54560/slow-generation-of-tiles-for-whole-europe">https://help.openstreetmap.org/questions/54560/slow-generation-of-tiles-for-whole-europe</a></p>
 </div>
 <div id="comment-65127-info" class="comment-info">
 <span class="comment-age">(04 Aug '18, 08:07)</span> <span class="comment-user userinfo">scai ♦</span>

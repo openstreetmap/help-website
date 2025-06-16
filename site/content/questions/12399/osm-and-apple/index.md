@@ -105,7 +105,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Almost all open source software avalable for linux is also avalable for mac and windows.</p>
-<p>What software is best to handle osm data depends a lot what you want to do to the data. You find a comparison of different software on <a href="http://wiki.openstreetmap.org/wiki/Software">the wiki</a>.</p>
+<p>What software is best to handle osm data depends a lot what you want to do to the data. You find a comparison of different software on <a href="https://wiki.openstreetmap.org/wiki/Software">the wiki</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

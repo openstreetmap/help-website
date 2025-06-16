@@ -42,7 +42,7 @@ osqa_accepted = true
 <p>As a newbie, I am going as slowly as I can to understand how OSM works in practice. I have made 2 changes (of the few thousand planned) to get an idea of the quirks of the system.</p>
 <p>I can see one of my updates on CycleOSM but not the Standard map. I am assuming from this earlier thread that all changes should be made on the Standard map which will then cascade to the other layer versions.</p>
 <p>My second change (on the Standard Map) has not shown after a few hours now. My presumption if someone will confirm, is that as I asked for it to be checked, it will not show until it is actually checked?</p>
-<p><a href="https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data">https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data</a></p>
+<p><a href="/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data">https://help.openstreetmap.org/questions/56241/why-is-the-standard-updated-but-cycle-transport-and-humanitarian-still-show-old-data</a></p>
 <p>Looking forward to contributing more data but want to ensure I don't cause work for others later.</p>
 <p>Great project which I have used a few times now so time to give back.</p>
 </div>

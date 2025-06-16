@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "[closed] Alignment styling bug in website for /browse/objecttype/id"
-description = '''The pages dsplayed at &quot;http://www.openstreetmap.org/browse/object-type/id&quot; has a small problem isible on the French version : some h4 elements are aligned in the second column, because the h4 section above it takes two lines but the infos displayed on the next column only takes one line. Note that h...'''
+description = '''The pages dsplayed at &quot;https://www.openstreetmap.org/browse/object-type/id&quot; has a small problem isible on the French version : some h4 elements are aligned in the second column, because the h4 section above it takes two lines but the infos displayed on the next column only takes one line. Note that h...'''
 date = "2013-08-10T15:26:00Z"
 lastmod = "2013-08-12T13:59:00Z"
 weight = 25163
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The pages dsplayed at "http://www.openstreetmap.org/browse/<strong><em>object-type/id</em></strong>" has a small problem isible on the French version : some h4 elements are aligned in the second column, because the h4 section above it takes two lines but the infos displayed on the next column only takes one line.</p>
+<p>The pages dsplayed at "https://www.openstreetmap.org/browse/<strong><em>object-type/id</em></strong>" has a small problem isible on the French version : some h4 elements are aligned in the second column, because the h4 section above it takes two lines but the infos displayed on the next column only takes one line.</p>
 <p>Note that h4 does not use a standard "display:block" but a "display:inline-block" which means tht it won't fill the rest of the line, but it may still contain line-wraps when its content does not for in the margins of the colum. The HTML structure is:</p>
 <pre><code>&lt;div id=&quot;browse-section&quot;&gt;
     &lt;div&gt;

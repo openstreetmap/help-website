@@ -258,7 +258,7 @@ osqa_accepted = false
 <div id="post-60880-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/users/14163/privatemajory">@Privatemajory</a>: Common? Yes. Should it be common? No. Tagging a storage tank or silo as a building is a clear case of (mis-)<a href="http://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> just because the Standard map style doesn't render <code>man_made=silo</code> or <code>man_made=storage_tank</code>.</p>
+<p><a href="https://help.openstreetmap.org/users/14163/privatemajory">@Privatemajory</a>: Common? Yes. Should it be common? No. Tagging a storage tank or silo as a building is a clear case of (mis-)<a href="https://wiki.openstreetmap.org/wiki/Tagging_for_the_renderer">tagging for the renderer</a> just because the Standard map style doesn't render <code>man_made=silo</code> or <code>man_made=storage_tank</code>.</p>
 </div>
 <div id="comment-60880-info" class="comment-info">
 <span class="comment-age">(29 Nov '17, 22:59)</span> <span class="comment-user userinfo">alester</span>

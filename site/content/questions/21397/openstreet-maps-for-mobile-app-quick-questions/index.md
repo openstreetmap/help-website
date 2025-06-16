@@ -123,7 +123,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>1) yes, see <a href="http://wiki.openstreetmap.org/wiki/Legal_FAQ">http://wiki.openstreetmap.org/wiki/Legal_FAQ</a> You'll have to mention OSM as your data source.</p>
+<p>1) yes, see <a href="https://wiki.openstreetmap.org/wiki/Legal_FAQ">https://wiki.openstreetmap.org/wiki/Legal_FAQ</a> You'll have to mention OSM as your data source.</p>
 <p>2) OSM provides raw data. It means that you can build you own online/offline maps as you want. Regarding the data content, have a look at it. It may fit your need or not depending on the actual coverage.</p>
 <p>3) raw data are updated "live": see <a href="http://live.openstreetmap.fr/">http://live.openstreetmap.fr/</a></p>
 </div>

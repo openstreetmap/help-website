@@ -107,7 +107,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Check the example on <a href="http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">http://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> - what you want is a file with two polygons, the first being a large rectangle around Europe (or a rectangle that covers the whole planet), the second should be a polygon describing Russia, and it needs to be introduced with an exclamation mark which means it is a "hole" in the polygon before.</p>
+<p>Check the example on <a href="https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format">https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format</a> - what you want is a file with two polygons, the first being a large rectangle around Europe (or a rectangle that covers the whole planet), the second should be a polygon describing Russia, and it needs to be introduced with an exclamation mark which means it is a "hole" in the polygon before.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

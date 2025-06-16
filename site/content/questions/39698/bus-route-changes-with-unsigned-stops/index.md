@@ -166,7 +166,7 @@ osqa_accepted = false
 <div id="post-39730-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>: Great, I am going to map some of those in the Sahara: <code>amenity=drinking_water</code> <code>physically_present=no</code>. … oops, SCNR – those <a href="/questions/15069/is-it-normal-to-dream-of-osm-during-the-night">daydreams</a>…</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>: Great, I am going to map some of those in the Sahara: <code>amenity=drinking_water</code> <code>physically_present=no</code>. … oops, SCNR – those <a href="/questions/15069/is-it-normal-to-dream-of-osm-during-the-night">daydreams</a>…</p>
 </div>
 <div id="comment-39730-info" class="comment-info">
 <span class="comment-age">(19 Dec '14, 21:45)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

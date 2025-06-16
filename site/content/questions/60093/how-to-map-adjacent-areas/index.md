@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Consider there is a small road and a rectangular field by the side of the road. What is the best/right way of drawing the adjacent field edge (Example: <a href="http://www.openstreetmap.org/#map=18/47.41191/8.64013">1</a>)?</p>
+<p>Consider there is a small road and a rectangular field by the side of the road. What is the best/right way of drawing the adjacent field edge (Example: <a href="https://www.openstreetmap.org/#map=18/47.41191/8.64013">1</a>)?</p>
 <ol>
 <li>Should the field edge go along the road (way) without touching its nodes?</li>
 <li>Should the field edge share the nodes of the road, i.e. a fragment of the road is also an edge of the field?</li>
@@ -109,7 +109,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>This probably answers (fsvo "answer") your question: <a href="https://help.openstreetmap.org/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">Should the edges of landuse= <em>or boundary=</em> areas share points with streets that form their borders?</a></p>
+<p>This probably answers (fsvo "answer") your question: <a href="/questions/5352/should-the-edges-of-landuse-or-boundary-areas-share-points-with-streets-that-form-their-borders">Should the edges of landuse= <em>or boundary=</em> areas share points with streets that form their borders?</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

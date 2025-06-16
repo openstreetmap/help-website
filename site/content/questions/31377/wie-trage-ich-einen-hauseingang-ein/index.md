@@ -111,9 +111,9 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Du kannst das mit <a href="http://wiki.openstreetmap.org/wiki/Key:building">building=entrance</a> erfassen. Das wird bisher allerdings von so gut wie noch keinem Renderer dargestellt, mir fällt da nur OSM2World ein, was daraus <a href="http://maps.osm2world.org/?h=128&amp;view=W&amp;zoom=18&amp;lat=54.076264630395&amp;lon=12.112606031234">Türen erstellt</a>.</p>
+<p>Du kannst das mit <a href="https://wiki.openstreetmap.org/wiki/Key:building">building=entrance</a> erfassen. Das wird bisher allerdings von so gut wie noch keinem Renderer dargestellt, mir fällt da nur OSM2World ein, was daraus <a href="http://maps.osm2world.org/?h=128&amp;view=W&amp;zoom=18&amp;lat=54.076264630395&amp;lon=12.112606031234">Türen erstellt</a>.</p>
 <p>Bei deinem betreffenden Areal konnte ich aber noch keine Türen sehen, wo sollen die an den Gebäuden sein?<br />
-<a href="http://www.openstreetmap.org/#map=19/51.01900/13.81056">http://www.openstreetmap.org/#map=19/51.01900/13.81056</a></p>
+<a href="https://www.openstreetmap.org/#map=19/51.01900/13.81056">https://www.openstreetmap.org/#map=19/51.01900/13.81056</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -133,7 +133,7 @@ osqa_accepted = false
 2
 </div>
 <div class="comment-text">
-<p>Etwas besser ist das <a href="http://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a>-Schema, denn dort kann man auch die Art des Einganges eintragen.</p>
+<p>Etwas besser ist das <a href="https://wiki.openstreetmap.org/wiki/Key:entrance">entrance</a>-Schema, denn dort kann man auch die Art des Einganges eintragen.</p>
 </div>
 <div id="comment-31385-info" class="comment-info">
 <span class="comment-age">(07 Mar '14, 12:12)</span> <span class="comment-user userinfo">scai ♦</span>
@@ -209,7 +209,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>building=entrance ist (eigentlich) überholt und sollte nur noch als entrance=* siehe <a href="http://wiki.openstreetmap.org/wiki/Entrance">http://wiki.openstreetmap.org/wiki/Entrance</a> getaggt werden. Diese werden auch in Mapnik dargestellt.</p>
+<p>building=entrance ist (eigentlich) überholt und sollte nur noch als entrance=* siehe <a href="https://wiki.openstreetmap.org/wiki/Entrance">https://wiki.openstreetmap.org/wiki/Entrance</a> getaggt werden. Diese werden auch in Mapnik dargestellt.</p>
 <p>Alles andere hatte ich schon per Mail geschrieben - günstig anderen Editor (mit iD kenne ich mich weniger aus - wie man einen Eingang in den Hausumriss einfügt)</p>
 </div>
 <div class="answer-controls post-controls">

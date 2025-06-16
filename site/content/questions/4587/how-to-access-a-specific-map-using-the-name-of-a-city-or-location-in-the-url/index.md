@@ -43,10 +43,10 @@ osqa_accepted = false
 <p>I'm using Openstreetmap to show the location of faculties on a map. Now, is there any way to pass a url with the name of the location and to get embeddable html code for the location on the map?</p>
 <p>For example:</p>
 <pre><code>&lt;iframe width=&quot;425&quot; height=&quot;350&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; 
-marginwidth=&quot;0&quot; src=&quot;http://www.openstreetmap.org/export/embed.html?
+marginwidth=&quot;0&quot; src=&quot;https://www.openstreetmap.org/export/embed.html?
   bbox=18.396367,43.855225,18.40038,43.858146&amp;amp;layer=mapnik&quot;
 style=&quot;border: 1px solid black&quot;&gt;&lt;/iframe&gt;&lt;br /&gt;
-&lt;small&gt;&lt;a href=&quot;http://www.openstreetmap.org/?lat=43.8566855&amp;amp;
+&lt;small&gt;&lt;a href=&quot;https://www.openstreetmap.org/?lat=43.8566855&amp;amp;
    lon=18.3983735&amp;amp;zoom=17&amp;amp;layers=M&quot;&gt;View Larger Map&lt;/a&gt;&lt;/small&gt;</code></pre>
 <p>So, is there any way to pass the name of the location in a url, because I would like to show maps dynamically (based on location from a mysql table).</p>
 <p>Thanks in advance,</p>
@@ -122,7 +122,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>No, there is no direct way to to this as far as I know. It would be difficult to imagine how this should work, because often location names will be ambiguous (there are even cities with multiple streets with identical names).</p>
-<p>What you can do is use a <a href="http://en.wikipedia.org/wiki/Geolocation">geolocation</a> service (such as <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>) to get the coordinates of a place, then use that to display the map. Nominatim for example can be queried over the web (the <a href="http://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a> lists the URLs and parameters).</p>
+<p>What you can do is use a <a href="http://en.wikipedia.org/wiki/Geolocation">geolocation</a> service (such as <a href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>) to get the coordinates of a place, then use that to display the map. Nominatim for example can be queried over the web (the <a href="https://wiki.openstreetmap.org/wiki/Nominatim">wiki page</a> lists the URLs and parameters).</p>
 <p>Finally, if the list of locations to be shown is known in advance (there are only so many faculties, after all), it's probably easier to get the coordinates once (possibly by hand), then use them directly.</p>
 </div>
 <div class="answer-controls post-controls">

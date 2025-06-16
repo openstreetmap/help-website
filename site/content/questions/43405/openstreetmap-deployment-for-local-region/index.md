@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>If you want a rendering server (serving map tiles like osm.org does) I'd follow <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">this</a> guide. If you want to do address lookups, you may want to look <a href="http://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>. If you want a copy of absolutely everything, and want to edit your own data locally, start <a href="http://wiki.openstreetmap.org/wiki/The_Rails_Port">here</a>.</p>
+<p>If you want a rendering server (serving map tiles like osm.org does) I'd follow <a href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-14-04/">this</a> guide. If you want to do address lookups, you may want to look <a href="https://wiki.openstreetmap.org/wiki/Nominatim/Installation">here</a>. If you want a copy of absolutely everything, and want to edit your own data locally, start <a href="https://wiki.openstreetmap.org/wiki/The_Rails_Port">here</a>.</p>
 <p>But what you might want to do is explain in a few more words what problem you're trying to solve - then people will be able to give more guidance.</p>
 </div>
 <div class="answer-controls post-controls">

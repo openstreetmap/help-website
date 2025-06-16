@@ -94,8 +94,8 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/4529/gavinx"></a><a href="http://help.openstreetmap.org/users/4529/gavinx">@GavinX</a>: from what I've found it is indeed a general Java problem (at least for non JavaFX programs), confirm.</p>
-<p>in fact, we had this question before: <a href="https://help.openstreetmap.org/questions/33450/high-pixel-density-displays-in-josm">https://help.openstreetmap.org/questions/33450/high-pixel-density-displays-in-josm</a></p>
+<p><a href="https://help.openstreetmap.org/users/4529/gavinx"></a><a href="https://help.openstreetmap.org/users/4529/gavinx">@GavinX</a>: from what I've found it is indeed a general Java problem (at least for non JavaFX programs), confirm.</p>
+<p>in fact, we had this question before: <a href="/questions/33450/high-pixel-density-displays-in-josm">https://help.openstreetmap.org/questions/33450/high-pixel-density-displays-in-josm</a></p>
 </div>
 <div id="comment-47012-info" class="comment-info">
 <span class="comment-age">(06 Dec '15, 12:29)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

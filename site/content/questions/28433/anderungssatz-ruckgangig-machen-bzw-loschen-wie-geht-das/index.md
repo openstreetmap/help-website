@@ -41,7 +41,7 @@ osqa_accepted = false
 <div class="question-body">
 <p>Hi!</p>
 <p>Ich fürchte ich hab da versehentlich was verhunzt. Beim Hochladen zeigt er mir 745 Knoten an. Da hat's fürchterlich was verschoben.</p>
-<p>Wie macht man den Änderungssatz <a href="http://www.openstreetmap.org/browse/changeset/19098098">19098098</a> rückgängig??</p>
+<p>Wie macht man den Änderungssatz <a href="https://www.openstreetmap.org/browse/changeset/19098098">19098098</a> rückgängig??</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-rückgängig" rel="tag" title="see questions tagged &#39;rückgängig&#39;">rückgängig</span> <span class="post-tag tag-link-änderungssatz" rel="tag" title="see questions tagged &#39;änderungssatz&#39;">änderungssatz</span> <span class="post-tag tag-link-revert" rel="tag" title="see questions tagged &#39;revert&#39;">revert</span> <span class="post-tag tag-link-undo" rel="tag" title="see questions tagged &#39;undo&#39;">undo</span> <span class="post-tag tag-link-lang-de" rel="tag" title="see questions tagged &#39;lang-de&#39;">lang-de</span>
@@ -70,7 +70,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>(konkret zur Sache:) Das <a href="http://forum.openstreetmap.org/viewtopic.php?id=21611">übliche</a> ideditor-<a href="https://github.com/systemed/iD/issues/542">Problem</a> (versehentlich das falsche Objekt selektiert – durch Klick auf den vermeintlich leeren Hintergrund oder Danebenklicken – und dann versehentlich das <a href="http://www.openstreetmap.org/browse/way/4792347">Wohngebiet</a> zum <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=19098098">Kreis gemacht</a> ohne es zu sehen, weil es außerhalb des Betrachtungsfensters ist). Aber mach dir keine Sorgen, das bekommen wir schon wieder hin (wenn du es nicht schon selbst doch geschafft hast).</p>
+<p>(konkret zur Sache:) Das <a href="http://forum.openstreetmap.org/viewtopic.php?id=21611">übliche</a> ideditor-<a href="https://github.com/systemed/iD/issues/542">Problem</a> (versehentlich das falsche Objekt selektiert – durch Klick auf den vermeintlich leeren Hintergrund oder Danebenklicken – und dann versehentlich das <a href="https://www.openstreetmap.org/browse/way/4792347">Wohngebiet</a> zum <a href="http://osmhv.openstreetmap.de/changeset.jsp?id=19098098">Kreis gemacht</a> ohne es zu sehen, weil es außerhalb des Betrachtungsfensters ist). Aber mach dir keine Sorgen, das bekommen wir schon wieder hin (wenn du es nicht schon selbst doch geschafft hast).</p>
 </div>
 <div id="comment-28439-info" class="comment-info">
 <span class="comment-age">(24 Nov '13, 23:25)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -180,7 +180,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Das macht nichts, wo gehobelt wird fallen Späne. Umso schöner, wenn du dich selbst dran machst das zu korrgieren :)</p>
-<p>Ich selbst habe es noch nie gemacht, aber hier stehts beschrieben: <a href="http://wiki.openstreetmap.org/wiki/Revert_a_changeset">http://wiki.openstreetmap.org/wiki/Revert_a_changeset</a></p>
+<p>Ich selbst habe es noch nie gemacht, aber hier stehts beschrieben: <a href="https://wiki.openstreetmap.org/wiki/Revert_a_changeset">https://wiki.openstreetmap.org/wiki/Revert_a_changeset</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -213,7 +213,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><span></span><span>@DK7MX</span>: Übrigens sollte man mit JOSM und vor allem dem Reverter langsam anfangen - sonst macht man eher mehr kaputt, als es bringt. Ich schaue es mir mal an (aber lade noch nicht hoch - weiß nicht, ob das nicht zu viel für mich ist...). Update: Also ich würde sagen, dass dein revert komplett funktioniert hat (Knoten- und Wegeanzahl war ja auch exakt gleich). Ich habe dennoch nochmal zur Sicherheit ("nur zur Hälfte durchgelaufen") die Änderungssätze ...346 und dann ...098 <a href="http://www.openstreetmap.org/browse/changeset/19101043">revertiert</a>. Problemlos durchgelaufen. Bei <a href="http://www.openstreetmap.org/browse/way/248097335">way/248097335</a> fehlt (jetzt) übrigens noch, was es sein soll.</p>
+<p><span></span><span>@DK7MX</span>: Übrigens sollte man mit JOSM und vor allem dem Reverter langsam anfangen - sonst macht man eher mehr kaputt, als es bringt. Ich schaue es mir mal an (aber lade noch nicht hoch - weiß nicht, ob das nicht zu viel für mich ist...). Update: Also ich würde sagen, dass dein revert komplett funktioniert hat (Knoten- und Wegeanzahl war ja auch exakt gleich). Ich habe dennoch nochmal zur Sicherheit ("nur zur Hälfte durchgelaufen") die Änderungssätze ...346 und dann ...098 <a href="https://www.openstreetmap.org/browse/changeset/19101043">revertiert</a>. Problemlos durchgelaufen. Bei <a href="https://www.openstreetmap.org/browse/way/248097335">way/248097335</a> fehlt (jetzt) übrigens noch, was es sein soll.</p>
 </div>
 <div id="comment-28437-info" class="comment-info">
 <span class="comment-age">(24 Nov '13, 22:56)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

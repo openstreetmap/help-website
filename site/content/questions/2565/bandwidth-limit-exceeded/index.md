@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Bandwidth limit exceeded?"
-description = '''Hey ! A was (hardly) contributing this afternoon but now I receive http 509 when I use Potlatch2. My request was : &amp;lt;pre&amp;gt;http://www.openstreetmap.org/api/0.6/map?bbox=%2D3%2E9156027138233185%2C47%2E87156539324182%2C%2D3%2E913097530603409%2C47%2E87303352924003 And the Response header is : (Statu...'''
+description = '''Hey ! A was (hardly) contributing this afternoon but now I receive http 509 when I use Potlatch2. My request was : &amp;lt;pre&amp;gt;https://www.openstreetmap.org/api/0.6/map?bbox=%2D3%2E9156027138233185%2C47%2E87156539324182%2C%2D3%2E913097530603409%2C47%2E87303352924003 And the Response header is : (Statu...'''
 date = "2011-01-30T17:18:00Z"
 lastmod = "2019-04-26T05:02:00Z"
 weight = 2565
@@ -145,7 +145,7 @@ Content-Type    text/html</code></pre>
 <td><div class="item-right">
 <div class="answer-body">
 <p>The bandwidth limitation depends on how much data is downloaded by the same IP number in relatively short timespan. It is difficult, but not impossible, to trigger this with P2. The most likely cause would be if you were working on a relatively low zoom level (with lots of data visible), and were panning around a lot. It is also possible that you were using a proxy server, or masqueraded internet access so that others seemed to be using the API at the same time as you did.</p>
-<p>Bandwidth limitation is a relatively new feature, and will certainly still have to be fine-tuned to avoid "false positives" like this; sadly, such a limitation is required as we have a number of people who disregard the <a href="http://wiki.openstreetmap.org/wiki/API_usage_policy">API Usage Policy</a> and download an excessive amount of data, slowing down the API for the rest of us.</p>
+<p>Bandwidth limitation is a relatively new feature, and will certainly still have to be fine-tuned to avoid "false positives" like this; sadly, such a limitation is required as we have a number of people who disregard the <a href="https://wiki.openstreetmap.org/wiki/API_usage_policy">API Usage Policy</a> and download an excessive amount of data, slowing down the API for the rest of us.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

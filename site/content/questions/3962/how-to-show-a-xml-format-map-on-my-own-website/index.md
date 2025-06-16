@@ -68,7 +68,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>This question looks very similar to this one: <a href="http://help.openstreetmap.org/questions/3927/how-to-show-the-osm-file-on-my-own-website">http://help.openstreetmap.org/questions/3927/how-to-show-the-osm-file-on-my-own-website</a></p>
+<p>This question looks very similar to this one: <a href="/questions/3927/how-to-show-the-osm-file-on-my-own-website">https://help.openstreetmap.org/questions/3927/how-to-show-the-osm-file-on-my-own-website</a></p>
 <p>What would you like to know that's not answered in that thread?</p>
 </div>
 <div id="comment-3963-info" class="comment-info">
@@ -153,7 +153,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>Try this: <a href="http://dev.openlayers.org/releases/OpenLayers-2.10/doc/apidocs/files/OpenLayers/Format/OSM-js.html">Format.OSM</a></p>
-<p>Here ist an example: <a href="http://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example"></a><a href="http://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example"></a><a href="http://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example">http://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example</a></p>
+<p>Here ist an example: <a href="https://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example"></a><a href="https://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example"></a><a href="https://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example">https://wiki.openstreetmap.org/wiki/OpenLayers_osm_file_example</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

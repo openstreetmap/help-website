@@ -106,7 +106,7 @@ osqa_accepted = false
 <td><div class="item-right">
 <div class="answer-body">
 <p>That is mostly rendering related question, and often tagging "for the renderer" is discouraged. On the other hand, it might be possible to use existing location "hierarchy" to achieve the desired result.</p>
-<p>If documentation at <a href="http://wiki.openstreetmap.org/wiki/Place">http://wiki.openstreetmap.org/wiki/Place</a> is correct, you could try using "village" for Haselstauder, which should render higher level name on higher zoom levels.</p>
+<p>If documentation at <a href="https://wiki.openstreetmap.org/wiki/Place">https://wiki.openstreetmap.org/wiki/Place</a> is correct, you could try using "village" for Haselstauder, which should render higher level name on higher zoom levels.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

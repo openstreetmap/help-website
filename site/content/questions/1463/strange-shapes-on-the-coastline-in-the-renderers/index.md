@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Strange shapes on the coastline in the renderers"
-description = '''How can I fix or get rid of the odd triangle shape here? http://www.openstreetmap.org/?lat=-20.501&amp;amp;lon=116.848&amp;amp;zoom=9&amp;amp;layers=M'''
+description = '''How can I fix or get rid of the odd triangle shape here? https://www.openstreetmap.org/?lat=-20.501&amp;amp;lon=116.848&amp;amp;zoom=9&amp;amp;layers=M'''
 date = "2010-11-05T14:31:00Z"
 lastmod = "2010-11-05T15:14:00Z"
 weight = 1463
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>How can I fix or get rid of the odd triangle shape here? <a href="http://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M"></a><a href="http://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M">http://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M</a></p>
+<p>How can I fix or get rid of the odd triangle shape here? <a href="https://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M"></a><a href="https://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M">https://www.openstreetmap.org/?lat=-20.501&amp;lon=116.848&amp;zoom=9&amp;layers=M</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-shapes" rel="tag" title="see questions tagged &#39;shapes&#39;">shapes</span>

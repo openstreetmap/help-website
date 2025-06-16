@@ -40,8 +40,8 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Re : advanced boolean search in the current help website ?</p>
-<p>related discussions : 1) Help with Help <a href="https://help.openstreetmap.org/questions/3920/help-with-help">https://help.openstreetmap.org/questions/3920/help-with-help</a></p>
-<p>2) How can I search the Wiki ? <a href="https://help.openstreetmap.org/questions/3472/how-can-i-search-the-wiki">https://help.openstreetmap.org/questions/3472/how-can-i-search-the-wiki</a></p>
+<p>related discussions : 1) Help with Help <a href="/questions/3920/help-with-help">https://help.openstreetmap.org/questions/3920/help-with-help</a></p>
+<p>2) How can I search the Wiki ? <a href="/questions/3472/how-can-i-search-the-wiki">https://help.openstreetmap.org/questions/3472/how-can-i-search-the-wiki</a></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-search" rel="tag" title="see questions tagged &#39;search&#39;">search</span> <span class="post-tag tag-link-howto" rel="tag" title="see questions tagged &#39;howto&#39;">howto</span> <span class="post-tag tag-link-help" rel="tag" title="see questions tagged &#39;help&#39;">help</span> <span class="post-tag tag-link-find" rel="tag" title="see questions tagged &#39;find&#39;">find</span>

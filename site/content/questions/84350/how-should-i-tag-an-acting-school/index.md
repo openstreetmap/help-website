@@ -65,7 +65,7 @@ osqa_accepted = false
 <div id="post-84356-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Does this query, asked a couple of days ago, help? <a href="https://help.openstreetmap.org/questions/84338/trainingperformance_art">https://help.openstreetmap.org/questions/84338/trainingperformance_art</a></p>
+<p>Does this query, asked a couple of days ago, help? <a href="/questions/84338/trainingperformance_art">https://help.openstreetmap.org/questions/84338/trainingperformance_art</a></p>
 </div>
 <div id="comment-84356-info" class="comment-info">
 <span class="comment-age">(04 May '22, 09:34)</span> <span class="comment-user userinfo">SK53 ♦</span>

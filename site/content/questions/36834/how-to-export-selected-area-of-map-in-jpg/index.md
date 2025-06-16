@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "how to export selected area of map in jpg"
-description = '''i need to export some selected area in jpg format, to mark there routes and then print on paper. later i did it on export page http://www.openstreetmap.org/export#map=14/53.8531/27.6113 , but now there is impossible to choose jpg.'''
+description = '''i need to export some selected area in jpg format, to mark there routes and then print on paper. later i did it on export page https://www.openstreetmap.org/export#map=14/53.8531/27.6113 , but now there is impossible to choose jpg.'''
 date = "2014-09-15T11:49:00Z"
 lastmod = "2014-09-22T18:57:00Z"
 weight = 36834
@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>i need to export some selected area in jpg format, to mark there routes and then print on paper. later i did it on export page <a href="http://www.openstreetmap.org/export#map=14/53.8531/27.6113">http://www.openstreetmap.org/export#map=14/53.8531/27.6113</a> , but now there is impossible to choose jpg.</p>
+<p>i need to export some selected area in jpg format, to mark there routes and then print on paper. later i did it on export page <a href="https://www.openstreetmap.org/export#map=14/53.8531/27.6113">https://www.openstreetmap.org/export#map=14/53.8531/27.6113</a> , but now there is impossible to choose jpg.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-image" rel="tag" title="see questions tagged &#39;image&#39;">image</span> <span class="post-tag tag-link-export" rel="tag" title="see questions tagged &#39;export&#39;">export</span> <span class="post-tag tag-link-jpg" rel="tag" title="see questions tagged &#39;jpg&#39;">jpg</span>
@@ -136,7 +136,7 @@ osqa_accepted = false
 <div id="post-36846-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>That problem is described in detail <a href="https://help.openstreetmap.org/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">here</a>. For a relatively small area, would an edited screenshot of the browser window work? For example, if you're using Windows 7 - alt-printscreen, run MSPaint or similar, then shift-insert to paste. Crop and otherwise edit as required.</p>
+<p>That problem is described in detail <a href="/questions/21192/error-export-load-average-on-the-server-is-too-high-at-the-moment">here</a>. For a relatively small area, would an edited screenshot of the browser window work? For example, if you're using Windows 7 - alt-printscreen, run MSPaint or similar, then shift-insert to paste. Crop and otherwise edit as required.</p>
 </div>
 <div id="comment-36846-info" class="comment-info">
 <span class="comment-age">(15 Sep '14, 15:26)</span> <span class="comment-user userinfo">SomeoneElse ♦</span>
@@ -231,7 +231,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>See the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM-on-paper</a> to get more options to produce bitmap graphics from OSM based maps.</p>
+<p>See the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/OSM_on_Paper">OSM-on-paper</a> to get more options to produce bitmap graphics from OSM based maps.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

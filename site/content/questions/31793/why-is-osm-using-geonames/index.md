@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Why is OSM using GeoNames?"
-description = '''The wiki says the OSM front end on openstreetmap.org is using GeoNames for the search. http://wiki.openstreetmap.org/wiki/Geonames Wondering because I might implement search functionality for a map myself, and because I&#x27;m curious.  How come GeoNames is used? Are there any benefits of doing this, ins...'''
+description = '''The wiki says the OSM front end on openstreetmap.org is using GeoNames for the search. https://wiki.openstreetmap.org/wiki/Geonames Wondering because I might implement search functionality for a map myself, and because I&#x27;m curious.  How come GeoNames is used? Are there any benefits of doing this, ins...'''
 date = "2014-03-23T14:17:00Z"
 lastmod = "2014-03-23T18:24:00Z"
 weight = 31793
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>The wiki says the OSM front end on openstreetmap.org is using GeoNames for the search. <a href="http://wiki.openstreetmap.org/wiki/Geonames">http://wiki.openstreetmap.org/wiki/Geonames</a> Wondering because I might implement search functionality for a map myself, and because I'm curious.</p>
+<p>The wiki says the OSM front end on openstreetmap.org is using GeoNames for the search. <a href="https://wiki.openstreetmap.org/wiki/Geonames">https://wiki.openstreetmap.org/wiki/Geonames</a> Wondering because I might implement search functionality for a map myself, and because I'm curious.</p>
 <p>How come GeoNames is used? Are there any benefits of doing this, instead of pulling the data from OSM? I mean locations and names are in the OSM dataset.</p>
 </div>
 <div id="question-tags" class="tags-container tags">

@@ -106,10 +106,10 @@ osqa_accepted = true
 <td><div class="item-right">
 <div class="answer-body">
 <p>To view it on the map, try</p>
-<p><a href="http://www.openstreetmap.org/?way=4639304">http://www.openstreetmap.org/?way=4639304</a></p>
+<p><a href="https://www.openstreetmap.org/?way=4639304">https://www.openstreetmap.org/?way=4639304</a></p>
 <p>Then use the Edit button to select the editor of your choice.</p>
 <p>To find out details about the way, you could also use</p>
-<p><a href="http://www.openstreetmap.org/browse/way/4639304">http://www.openstreetmap.org/browse/way/4639304</a></p>
+<p><a href="https://www.openstreetmap.org/browse/way/4639304">https://www.openstreetmap.org/browse/way/4639304</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

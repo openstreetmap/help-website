@@ -115,7 +115,7 @@ osqa_accepted = false
 <p>examples are: <a href="http://map.project-osrm.org/">OSRM</a>, <a href="http://open.mapquest.com/">Mapquest Open</a> or <a href="http://www.yournavigation.org/">Yournavigation</a></p>
 <p>There are also more specialised forms such as for cycling in the UK such as <a href="http://www.cyclestreets.net/">cyclestreets</a>.</p>
 <p>Further more, there are a number of applications that allow you to use OpenStreetMap data for navigation on your smart phone or sat-nav such as:</p>
-<p><a href="http://navigatorfree.mapfactor.com/en/">Mapfactor free</a> for sat-nav devices, <a href="http://www.skobbler.co.uk/apps/navigation">Skobbler</a> for iPhone, <a href="http://www.navmii.com/">Navmii</a> for iPhone, <a href="http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">Garmin OSM maps</a> and many more for all types of devices.</p>
+<p><a href="http://navigatorfree.mapfactor.com/en/">Mapfactor free</a> for sat-nav devices, <a href="http://www.skobbler.co.uk/apps/navigation">Skobbler</a> for iPhone, <a href="http://www.navmii.com/">Navmii</a> for iPhone, <a href="https://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin">Garmin OSM maps</a> and many more for all types of devices.</p>
 <p>There are also plans to eventually include <a href="http://apmon.dev.openstreetmap.org/routing/">directions on openstreetmap.org</a>, but they are still in development.</p>
 </div>
 <div class="answer-controls post-controls">
@@ -263,7 +263,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>To get an overview about the endless possibilities, have a look at the OSM wiki about <a href="http://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
+<p>To get an overview about the endless possibilities, have a look at the OSM wiki about <a href="https://wiki.openstreetmap.org/wiki/Routing">Routing</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">out:csv</a> is one way to do this.</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#Output_Format_.28out.29">out:csv</a> is one way to do this.</p>
 <p>Something like (untested) <code>[out:csv(::lat,::lon,"addr:street")]</code>.</p>
 <p>For ways and relations, <code>::lat</code> and <code>::lon</code> are output if you also use <code>out center</code> as your print statement. If you aren't interested in the coordinates, they can also just be omitted.</p>
 </div>
@@ -125,7 +125,7 @@ One Answer:
 <div id="post-47911-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Is there any workaround for JSON format?</p>
+<p><a href="https://help.openstreetmap.org/users/10973/maxerickson">@maxerickson</a> Is there any workaround for JSON format?</p>
 </div>
 <div id="comment-47911-info" class="comment-info">
 <span class="comment-age">(04 Feb '16, 13:41)</span> <span class="comment-user userinfo">Arun Gowtham</span>

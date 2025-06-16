@@ -149,7 +149,7 @@ osqa_accepted = false
 <div class="answer-body">
 <p>There are two issues here:</p>
 <p>1) origin of the data: data traced from Google Earth is not legal for use in/with OpenStreetMap. If it is actually -your- data, as in independently recorded with a phone or other GPS device and simply stored locally in GE, it is likely to be OK, but you need to check googles terms of service.</p>
-<p>2) importing KML see <a href="https://help.openstreetmap.org/questions/7174/how-to-import-kml-files-into-openstreetmap">https://help.openstreetmap.org/questions/7174/how-to-import-kml-files-into-openstreetmap</a> note that your question indicates that you may not quite understand the difference between OSM data and displaying your own data in conjunction with it<br />
+<p>2) importing KML see <a href="/questions/7174/how-to-import-kml-files-into-openstreetmap">https://help.openstreetmap.org/questions/7174/how-to-import-kml-files-into-openstreetmap</a> note that your question indicates that you may not quite understand the difference between OSM data and displaying your own data in conjunction with it<br />
 </p>
 </div>
 <div class="answer-controls post-controls">

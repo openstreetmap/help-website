@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>A <a href="http://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=bell+tower">search in the wiki</a> finds the <a href="http://taginfo.openstreetmap.org/tags/?key=man_made&amp;value=campanile">rarely used</a> tag <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcampanile">man_made=campanile</a> and the <a href="http://taginfo.openstreetmap.org/tags/tower%3Atype=bell_tower">more common</a> tag combination <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower + tower:type=bell_tower</a>.</p>
+<p>A <a href="https://wiki.openstreetmap.org/w/index.php?title=Special:Search&amp;search=bell+tower">search in the wiki</a> finds the <a href="http://taginfo.openstreetmap.org/tags/?key=man_made&amp;value=campanile">rarely used</a> tag <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dcampanile">man_made=campanile</a> and the <a href="http://taginfo.openstreetmap.org/tags/tower%3Atype=bell_tower">more common</a> tag combination <a href="https://wiki.openstreetmap.org/wiki/Tag:man_made%3Dtower">man_made=tower + tower:type=bell_tower</a>.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

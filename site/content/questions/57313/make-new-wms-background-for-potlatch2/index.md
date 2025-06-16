@@ -64,7 +64,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>AFAIK Potlatch does not use WMS services, only TMS. See <a href="https://help.openstreetmap.org/questions/13868/how-to-use-wms-link-from-rectifiedwarped-map-as-background-in-potlatch-or-josm">https://help.openstreetmap.org/questions/13868/how-to-use-wms-link-from-rectifiedwarped-map-as-background-in-potlatch-or-josm</a></p>
+<p>AFAIK Potlatch does not use WMS services, only TMS. See <a href="/questions/13868/how-to-use-wms-link-from-rectifiedwarped-map-as-background-in-potlatch-or-josm">https://help.openstreetmap.org/questions/13868/how-to-use-wms-link-from-rectifiedwarped-map-as-background-in-potlatch-or-josm</a></p>
 </div>
 <div id="comment-57314-info" class="comment-info">
 <span class="comment-age">(27 Jul '17, 15:16)</span> <span class="comment-user userinfo">SK53 ♦</span>

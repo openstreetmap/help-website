@@ -145,7 +145,7 @@ osqa_accepted = false
 3
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> The OP explicitly asked about road condition separately from surface, and it was in that sense that I answered them.</p>
+<p><a href="https://help.openstreetmap.org/users/5179/aseerel4c26">@aseerel4c26</a> The OP explicitly asked about road condition separately from surface, and it was in that sense that I answered them.</p>
 </div>
 <div id="comment-45488-info" class="comment-info">
 <span class="comment-age">(21 Sep '15, 20:59)</span> <span class="comment-user userinfo">SK53 ♦</span>
@@ -157,7 +157,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/647/sk53">@SK53</a>, oh, right, reading helps ("road surface type (paved, unpaved); road condition (good, fair, poor)"). okay … yes, "condition" may be less popular. We could count our "smoothness" tag as condition, can't we? Yes, seems to me much less popular than "surface".</p>
+<p><a href="https://help.openstreetmap.org/users/647/sk53">@SK53</a>, oh, right, reading helps ("road surface type (paved, unpaved); road condition (good, fair, poor)"). okay … yes, "condition" may be less popular. We could count our "smoothness" tag as condition, can't we? Yes, seems to me much less popular than "surface".</p>
 </div>
 <div id="comment-45489-info" class="comment-info">
 <span class="comment-age">(21 Sep '15, 21:10)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

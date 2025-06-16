@@ -161,7 +161,7 @@ osqa_accepted = true
 1
 </div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/644/andy-mackey"></a><a href="http://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: according to the <a href="http://wayback.archive.org/web/20150807041932/http://www.validome.org/xml/">Internet Archive's snapshot</a> it is down since about Sept. 2015.</p>
+<p><a href="https://help.openstreetmap.org/users/644/andy-mackey"></a><a href="https://help.openstreetmap.org/users/644/andy-mackey">@andy mackey</a>: according to the <a href="http://wayback.archive.org/web/20150807041932/http://www.validome.org/xml/">Internet Archive's snapshot</a> it is down since about Sept. 2015.</p>
 <p>Instead, I would suggest to use the <span>W3C Markup Validator</span>.</p>
 </div>
 <div id="comment-53676-info" class="comment-info">

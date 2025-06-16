@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Hi. I'm quite new to the OpenStreeMap community, and I'm still learning my way around potlatch. I recently added a <a href="http://www.openstreetmap.org/?lat=32.2111&amp;lon=-111.04319&amp;zoom=16&amp;layers=M">golf course</a> to the map. Initially, every detail that I had mapped out eventually rendered and showed up in mapnik. Later, I learned about multipolygons, and I linked every bit of the golf course to eachother using a relation. I think I was successful at doing this, but had the unexpected result of having the name of the golf course printed on every little bit of grass that I had mapped. This looked pretty bad on the map, so I removed the relation that I had created on every polygon. Now, only a portion of the golf course is rendered in mapnik, and I'm not sure why. I've waited a couple days to see if it gets redrawn, but every time I check, there's less and less of the course remaining. Anybody have any suggestions?</p>
+<p>Hi. I'm quite new to the OpenStreeMap community, and I'm still learning my way around potlatch. I recently added a <a href="https://www.openstreetmap.org/?lat=32.2111&amp;lon=-111.04319&amp;zoom=16&amp;layers=M">golf course</a> to the map. Initially, every detail that I had mapped out eventually rendered and showed up in mapnik. Later, I learned about multipolygons, and I linked every bit of the golf course to eachother using a relation. I think I was successful at doing this, but had the unexpected result of having the name of the golf course printed on every little bit of grass that I had mapped. This looked pretty bad on the map, so I removed the relation that I had created on every polygon. Now, only a portion of the golf course is rendered in mapnik, and I'm not sure why. I've waited a couple days to see if it gets redrawn, but every time I check, there's less and less of the course remaining. Anybody have any suggestions?</p>
 <p>(Side question -- When defining multiploygon relationships, is there a way to set up the relationship so that the name of the feature is only displayed over one of the polygons?)</p>
 </div>
 <div id="question-tags" class="tags-container tags">
@@ -133,7 +133,7 @@ osqa_accepted = false
 <div id="post-5644-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>A quick search through namannik's edit history suggests this way is one of a number that aren't rendering - <a href="http://www.openstreetmap.org/browse/way/116540821">http://www.openstreetmap.org/browse/way/116540821</a> - I have tried flagging various tiles as dirty after checking status before and after to check they have rerendered, but that hasn't seemed to help.</p>
+<p>A quick search through namannik's edit history suggests this way is one of a number that aren't rendering - <a href="https://www.openstreetmap.org/browse/way/116540821">https://www.openstreetmap.org/browse/way/116540821</a> - I have tried flagging various tiles as dirty after checking status before and after to check they have rerendered, but that hasn't seemed to help.</p>
 </div>
 <div id="comment-5644-info" class="comment-info">
 <span class="comment-age">(09 Jun '11, 09:37)</span> <span class="comment-user userinfo">EdLoach ♦</span>
@@ -198,7 +198,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>Thanks to both of you for the tips. I'll definitely check out the info about mapping out golf courses.</p>
 <p>I had meant to include a link to the golf course in my original post, but it slipped my mind. Here it is:</p>
-<p><a href="http://www.openstreetmap.org/?lat=32.2111&amp;lon=-111.04319&amp;zoom=16&amp;layers=M">http://www.openstreetmap.org/?lat=32.2111&amp;lon=-111.04319&amp;zoom=16&amp;layers=M</a></p>
+<p><a href="https://www.openstreetmap.org/?lat=32.2111&amp;lon=-111.04319&amp;zoom=16&amp;layers=M">https://www.openstreetmap.org/?lat=32.2111&amp;lon=-111.04319&amp;zoom=16&amp;layers=M</a></p>
 </div>
 <div id="comment-5651-info" class="comment-info">
 <span class="comment-age">(09 Jun '11, 17:37)</span> <span class="comment-user userinfo">namannik</span>

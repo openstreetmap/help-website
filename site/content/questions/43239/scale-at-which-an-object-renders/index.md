@@ -125,7 +125,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Don't worry - it's perfectly normal. Different zoom levels <a href="http://wiki.openstreetmap.org/wiki/Rendering">render</a> at different speeds. More complicated tiles take longer, which is why things tend to appear first at higher zoom levels. There's a more detailed description of the rendering process <a href="http://help.openstreetmap.org/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a>.</p>
+<p>Don't worry - it's perfectly normal. Different zoom levels <a href="https://wiki.openstreetmap.org/wiki/Rendering">render</a> at different speeds. More complicated tiles take longer, which is why things tend to appear first at higher zoom levels. There's a more detailed description of the rendering process <a href="/questions/178/how-often-does-the-main-mapnik-map-get-updated/183">here</a>.</p>
 <p>It is possible (but a bit complicated) to create your own web maps that are like the ones that you see on openstreetmap.org but render things slightly differently (you might choose to render pubs earlier or later, for example). If you do want to render your own tiles there's information about setting up a server <a href="https://switch2osm.org/serving-tiles/">here</a> and the stylesheet itself is developed <a href="https://github.com/gravitystorm/openstreetmap-carto">here</a>. Also, don't forget that on the OpenStreetMap website there are five different map styles available - click on the "stack of books" icon at the right-hand side to switch between them.</p>
 </div>
 <div class="answer-controls post-controls">

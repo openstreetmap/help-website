@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am a GIS student doing a project on erroneous contributions in OSM which I have identified as such by searching for rollbacks in the full history file. I have posted on this forum <a href="https://help.openstreetmap.org/questions/46518/issues-with-st_intersects-for-node-geometry-in-way-geometry">here</a> regarding a technical issue I had which is now resolved.</p>
-<p>Having got my database queries to correctly weed out rollbacks I'd like to weight error candidates according to their impact - various factors surely influence this, such as the category of object that is being erroneously edited, its relative length or size, the time it has taken for the error to be detected, the type of error(deletion, displacement etc.), how many tags the object had, the age of the object, how many nodes were rolled back. etc. etc. The relative importance of these factors is subjective and will greatly affect the overall score given to the error candidate. I seek educated feedback to fairly grade these factors. <a href="http://wiki.openstreetmap.org/wiki/Research">This</a> wiki page states students should get it touch with the OSM community. For such a question how should I get in touch? - through this forum or the mailing lists or another ?</p>
+<p>I am a GIS student doing a project on erroneous contributions in OSM which I have identified as such by searching for rollbacks in the full history file. I have posted on this forum <a href="/questions/46518/issues-with-st_intersects-for-node-geometry-in-way-geometry">here</a> regarding a technical issue I had which is now resolved.</p>
+<p>Having got my database queries to correctly weed out rollbacks I'd like to weight error candidates according to their impact - various factors surely influence this, such as the category of object that is being erroneously edited, its relative length or size, the time it has taken for the error to be detected, the type of error(deletion, displacement etc.), how many tags the object had, the age of the object, how many nodes were rolled back. etc. etc. The relative importance of these factors is subjective and will greatly affect the overall score given to the error candidate. I seek educated feedback to fairly grade these factors. <a href="https://wiki.openstreetmap.org/wiki/Research">This</a> wiki page states students should get it touch with the OSM community. For such a question how should I get in touch? - through this forum or the mailing lists or another ?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-contact" rel="tag" title="see questions tagged &#39;contact&#39;">contact</span> <span class="post-tag tag-link-community" rel="tag" title="see questions tagged &#39;community&#39;">community</span> <span class="post-tag tag-link-research" rel="tag" title="see questions tagged &#39;research&#39;">research</span>
@@ -69,7 +69,7 @@ osqa_accepted = false
 4
 </div>
 <div class="comment-text">
-<p>I would also recommend the talk- and dev-mailinglist ... see <a href="http://wiki.openstreetmap.org/wiki/Mailing_lists">http://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
+<p>I would also recommend the talk- and dev-mailinglist ... see <a href="https://wiki.openstreetmap.org/wiki/Mailing_lists">https://wiki.openstreetmap.org/wiki/Mailing_lists</a></p>
 </div>
 <div id="comment-47711-info" class="comment-info">
 <span class="comment-age">(28 Jan '16, 17:18)</span> <span class="comment-user userinfo">stephan75</span>

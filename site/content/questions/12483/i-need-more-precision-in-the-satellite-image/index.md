@@ -195,7 +195,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The background image can be magnified more when editing with JOSM than in Potlach2. They are same images just a limit to mag in P2, so if you are at present using P2 one solution would be to try JOSM. see my answer to this <a href="http://help.openstreetmap.org/questions/12249/how-do-i-map-regular-buildings">http://help.openstreetmap.org/questions/12249/how-do-i-map-regular-buildings</a></p>
+<p>The background image can be magnified more when editing with JOSM than in Potlach2. They are same images just a limit to mag in P2, so if you are at present using P2 one solution would be to try JOSM. see my answer to this <a href="/questions/12249/how-do-i-map-regular-buildings">https://help.openstreetmap.org/questions/12249/how-do-i-map-regular-buildings</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

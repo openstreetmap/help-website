@@ -208,7 +208,7 @@ osqa_accepted = true
 2
 </div>
 <div class="comment-text">
-<p>You can find out more about <a href="http://wiki.openstreetmap.org/wiki/Tiles@home">tiles@home here</a>, but it has nothing to do with the transport map which uses <a href="http://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> instead.</p>
+<p>You can find out more about <a href="https://wiki.openstreetmap.org/wiki/Tiles@home">tiles@home here</a>, but it has nothing to do with the transport map which uses <a href="https://wiki.openstreetmap.org/wiki/Mapnik">Mapnik</a> instead.</p>
 <p>In my experience, changes in bus routes were visible in about 1-2 days.</p>
 </div>
 <div id="comment-9652-info" class="comment-info">

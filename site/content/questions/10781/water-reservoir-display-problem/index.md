@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Water Reservoir Display Problem"
-description = '''Can someone please look at http://www.openstreetmap.org/browse/way/151563608 for me and let me know what I am doing wrong. I am new at this and would like to contribute to my local area. I have done a few other bodies of water, streets, and boundaries, they have all been fine, but this one will not ...'''
+description = '''Can someone please look at https://www.openstreetmap.org/browse/way/151563608 for me and let me know what I am doing wrong. I am new at this and would like to contribute to my local area. I have done a few other bodies of water, streets, and boundaries, they have all been fine, but this one will not ...'''
 date = "2012-02-25T01:04:00Z"
 lastmod = "2012-02-25T01:23:00Z"
 weight = 10781
@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Can someone please look at <a href="http://www.openstreetmap.org/browse/way/151563608">http://www.openstreetmap.org/browse/way/151563608</a> for me and let me know what I am doing wrong. I am new at this and would like to contribute to my local area. I have done a few other bodies of water, streets, and boundaries, they have all been fine, but this one will not render. It shows the label, but not the lake.</p>
+<p>Can someone please look at <a href="https://www.openstreetmap.org/browse/way/151563608">https://www.openstreetmap.org/browse/way/151563608</a> for me and let me know what I am doing wrong. I am new at this and would like to contribute to my local area. I have done a few other bodies of water, streets, and boundaries, they have all been fine, but this one will not render. It shows the label, but not the lake.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-water" rel="tag" title="see questions tagged &#39;water&#39;">water</span> <span class="post-tag tag-link-boundaries" rel="tag" title="see questions tagged &#39;boundaries&#39;">boundaries</span> <span class="post-tag tag-link-reservoir" rel="tag" title="see questions tagged &#39;reservoir&#39;">reservoir</span> <span class="post-tag tag-link-render" rel="tag" title="see questions tagged &#39;render&#39;">render</span>
@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>It's not quite a closed loop. If you have a look at <a href="http://www.openstreetmap.org/browse/node/1643875617">this node</a> and zoom right in, you can see that it is at one end of a line - not part of a circular way. If you remove that node leaving the remaining closed loop, the lake will show up.</p>
+<p>It's not quite a closed loop. If you have a look at <a href="https://www.openstreetmap.org/browse/node/1643875617">this node</a> and zoom right in, you can see that it is at one end of a line - not part of a circular way. If you remove that node leaving the remaining closed loop, the lake will show up.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

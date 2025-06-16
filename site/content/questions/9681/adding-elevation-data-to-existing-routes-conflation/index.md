@@ -140,7 +140,7 @@ osqa_accepted = false
 <div class="comment-text">
 <p>May I respectfully disagree.</p>
 <p>While F. Ramm is perhaps the most active user here, and me the least, I truly believe there ARE needs for elevation data (keys?), and the argument according to which "moving a geometry will alter elevation" is definitely light to me. We don't displace geometries everyday everywhere, we rather bring minute corrections. And potentially "our editors" could be made to just kill an elevation if the point is moved without reconfirming it: "editors are not OSM" ;-)</p>
-<p>I'd suggest proposing this feature (duly prepared) in <a href="http://wiki.openstreetmap.org/wiki/Proposed_features">http://wiki.openstreetmap.org/wiki/Proposed_features</a></p>
+<p>I'd suggest proposing this feature (duly prepared) in <a href="https://wiki.openstreetmap.org/wiki/Proposed_features">https://wiki.openstreetmap.org/wiki/Proposed_features</a></p>
 </div>
 <div id="comment-9687-info" class="comment-info">
 <span class="comment-age">(29 Dec '11, 18:28)</span> <span class="comment-user userinfo">Herve5</span>
@@ -163,7 +163,7 @@ osqa_accepted = false
 <div id="post-9732-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Take a look at the cyclemap: <a href="http://www.openstreetmap.org/?lat=53.4172&amp;lon=-1.9053&amp;zoom=13&amp;layers=C">http://www.openstreetmap.org/?lat=53.4172&amp;lon=-1.9053&amp;zoom=13&amp;layers=C</a> The elevation data is not stored in OSM - it is better to store it elsewhere and superimpose it as shown here. This is also used on GPS devices like this too. To maintain data in 3D (with elevation) adds a huge amount of work that is not needed. GPS receivers have large vertical error.</p>
+<p>Take a look at the cyclemap: <a href="https://www.openstreetmap.org/?lat=53.4172&amp;lon=-1.9053&amp;zoom=13&amp;layers=C">https://www.openstreetmap.org/?lat=53.4172&amp;lon=-1.9053&amp;zoom=13&amp;layers=C</a> The elevation data is not stored in OSM - it is better to store it elsewhere and superimpose it as shown here. This is also used on GPS devices like this too. To maintain data in 3D (with elevation) adds a huge amount of work that is not needed. GPS receivers have large vertical error.</p>
 </div>
 <div id="comment-9732-info" class="comment-info">
 <span class="comment-age">(01 Jan '12, 20:16)</span> <span class="comment-user userinfo">ChrisH</span>
@@ -198,7 +198,7 @@ osqa_accepted = false
 <div id="post-9834-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>There is working code to combine altitude data from a separate database (eg SRTM) with a route from OSM here: <a href="http://wiki.openstreetmap.org/wiki/Route_altitude_profiles_SRTM">http://wiki.openstreetmap.org/wiki/Route_altitude_profiles_SRTM</a> (this was a Google Summer of Code project years ago). I believe this had at one point been integrated into <a href="http://yournavigation.org">yournavigation.org</a> but I cannot find it on their site now. Also, folks at <a href="http://openseamap.org">openseamap.org</a> are working on something that will allow them to crowd-source the measuring of sea depths; if that turns out to work well it could conceivably be used as the basis for a crowd-sourced DEM as well.</p>
+<p>There is working code to combine altitude data from a separate database (eg SRTM) with a route from OSM here: <a href="https://wiki.openstreetmap.org/wiki/Route_altitude_profiles_SRTM">https://wiki.openstreetmap.org/wiki/Route_altitude_profiles_SRTM</a> (this was a Google Summer of Code project years ago). I believe this had at one point been integrated into <a href="http://yournavigation.org">yournavigation.org</a> but I cannot find it on their site now. Also, folks at <a href="http://openseamap.org">openseamap.org</a> are working on something that will allow them to crowd-source the measuring of sea depths; if that turns out to work well it could conceivably be used as the basis for a crowd-sourced DEM as well.</p>
 </div>
 <div id="comment-9834-info" class="comment-info">
 <span class="comment-age">(07 Jan '12, 03:06)</span> <span class="comment-user userinfo">Frederik Ramm ♦</span>

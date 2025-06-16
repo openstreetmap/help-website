@@ -106,9 +106,9 @@ One Answer:
 <div class="answer-body">
 <p>Should you need to change them to the local language:</p>
 <ul>
-<li><a href="http://wiki.openstreetmap.org/wiki/Names#Localization">Names Localization</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Map_internationalization">Map Internationalization</a></li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Multilingual_names">Multilingual_names</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Names#Localization">Names Localization</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Map_internationalization">Map Internationalization</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Multilingual_names">Multilingual_names</a></li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

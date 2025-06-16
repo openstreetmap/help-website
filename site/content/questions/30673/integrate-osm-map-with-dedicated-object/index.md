@@ -108,7 +108,7 @@ One Answer:
 <td><div class="item-right">
 <div class="answer-body">
 <p>Please have an <em>intensive</em> look at the OSM wiki about the famous overpass-API</p>
-<p>See some <a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Applications">Examples</a> how to implement the display of certain POIs</p>
+<p>See some <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Applications">Examples</a> how to implement the display of certain POIs</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

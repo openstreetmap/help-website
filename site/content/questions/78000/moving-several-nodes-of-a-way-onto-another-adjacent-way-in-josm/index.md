@@ -40,9 +40,9 @@ osqa_accepted = true
 <td><div id="item-right">
 <div class="question-body">
 <p>I am having trouble finding a way on how to move several nodes of a way onto another way or polygon. I am able to achieve this in JOSM using Tools &gt; Move Node onto Way, but the tool seems to work only for single nodes. In the image below, I want to move the nodes of the forest (within the red outline) onto the road so that the forest nodes are exactly aligned with or are on top of the road nodes:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_at_2020-12-19_15-38-27.png" alt="JOSM nodes of two ways before" /></p>
+<p><img src="/upfiles/Screenshot_at_2020-12-19_15-38-27.png" alt="JOSM nodes of two ways before" /></p>
 <p>The following is what I want to achieve:</p>
-<p><img src="https://help.openstreetmap.org/upfiles/Screenshot_at_2020-12-19_15-51-08.png" alt="JOSM nodes of two ways after" /></p>
+<p><img src="/upfiles/Screenshot_at_2020-12-19_15-51-08.png" alt="JOSM nodes of two ways after" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-ways" rel="tag" title="see questions tagged &#39;ways&#39;">ways</span> <span class="post-tag tag-link-josm" rel="tag" title="see questions tagged &#39;josm&#39;">josm</span> <span class="post-tag tag-link-nodes" rel="tag" title="see questions tagged &#39;nodes&#39;">nodes</span> <span class="post-tag tag-link-move" rel="tag" title="see questions tagged &#39;move&#39;">move</span>

@@ -76,7 +76,7 @@ osqa_accepted = false
 1
 </div>
 <div class="comment-text">
-<p>There is some <a href="http://wiki.openstreetmap.org/wiki/Proposal_process">process</a> to introduce new tags. You are not required to follow this process, but since you seem new to the way OSM works, I think it is better to discuss the new tags you want to use with the community. This can be the local Greek community, or via e.g. the tagging mailing list.</p>
+<p>There is some <a href="https://wiki.openstreetmap.org/wiki/Proposal_process">process</a> to introduce new tags. You are not required to follow this process, but since you seem new to the way OSM works, I think it is better to discuss the new tags you want to use with the community. This can be the local Greek community, or via e.g. the tagging mailing list.</p>
 <p>In case you introduce new tags, please document them on the wiki, so others know what you mean.</p>
 <p>E.g. when you introduce a new boundary type, please follow the "schema" used for boundary types as explained in an answer to one of your other questions. fire_boundary=yes is not a good idea.</p>
 <p>I'm not sure whether the average car count on a road really belongs in OSM.</p>

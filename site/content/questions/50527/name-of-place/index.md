@@ -104,7 +104,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>The simple answer is to add the tags place= <em>and name=</em> using one of the OSM editors. There is more information about place tagging on the <a href="http://wiki.openstreetmap.org/wiki/Key:place">key:place</a> wiki page. Before adding a place node, you should also make sure that there is not already a place node.</p>
+<p>The simple answer is to add the tags place= <em>and name=</em> using one of the OSM editors. There is more information about place tagging on the <a href="https://wiki.openstreetmap.org/wiki/Key:place">key:place</a> wiki page. Before adding a place node, you should also make sure that there is not already a place node.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

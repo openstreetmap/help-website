@@ -138,7 +138,7 @@ osqa_accepted = false
 <div id="post-52171-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p>Thanks, Vincent! I was assuming that the parking permit zones are not mappable in pieces. If they are - yes, <a href="http://help.openstreetmap.org/users/12799/corol">@Corol</a>, go for Vincent's advice and add your zones. However, I still think, it is good to start with other stuff first. "Zones" do not sound that easy to me.</p>
+<p>Thanks, Vincent! I was assuming that the parking permit zones are not mappable in pieces. If they are - yes, <a href="https://help.openstreetmap.org/users/12799/corol">@Corol</a>, go for Vincent's advice and add your zones. However, I still think, it is good to start with other stuff first. "Zones" do not sound that easy to me.</p>
 </div>
 <div id="comment-52171-info" class="comment-info">
 <span class="comment-age">(22 Sep '16, 17:36)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>
@@ -213,7 +213,7 @@ osqa_accepted = false
 <div id="post-52155-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/3823/caroline11">@Carol</a>: fine, have fun mapping and … welcome! :-)</p>
+<p><a href="https://help.openstreetmap.org/users/3823/caroline11">@Carol</a>: fine, have fun mapping and … welcome! :-)</p>
 </div>
 <div id="comment-52155-info" class="comment-info">
 <span class="comment-age">(21 Sep '16, 21:15)</span> <span class="comment-user userinfo">aseerel4c26 ♦</span>

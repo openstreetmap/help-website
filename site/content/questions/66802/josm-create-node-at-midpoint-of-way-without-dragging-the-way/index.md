@@ -130,7 +130,7 @@ osqa_accepted = true
 <li>Select the whole line</li>
 <li>Press Shift+B or go to the menu Tools -&gt; Distribute Nodes, so it will place it exactly in the middle.</li>
 </ol>
-<p><img src="https://help.openstreetmap.org/upfiles/josm-distribute-nodes.png" /></p>
+<p><img src="/upfiles/josm-distribute-nodes.png" /></p>
 <p>The line will automatically be straightened, there is no need to straighten it before or afterwards.</p>
 <p><sub>(I just made this image for the Telegram group when someone linked this thread. Figured it might be helpful to post it here as well.)</sub></p>
 </div>

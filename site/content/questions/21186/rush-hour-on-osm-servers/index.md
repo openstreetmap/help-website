@@ -107,7 +107,7 @@ One Answer:
 <div class="answer-body">
 <p>See the server load graphs for the tile servers at <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/cpu.html">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/cpu.html</a> .</p>
 <p>Probably the load average graph is more readable: <a href="http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/load.html">http://munin.openstreetmap.org/openstreetmap/yevaud.openstreetmap/load.html</a> .</p>
-<p>Maybe theres more info linked from <a href="http://wiki.openstreetmap.org/wiki/Platform_Status">http://wiki.openstreetmap.org/wiki/Platform_Status</a> .</p>
+<p>Maybe theres more info linked from <a href="https://wiki.openstreetmap.org/wiki/Platform_Status">https://wiki.openstreetmap.org/wiki/Platform_Status</a> .</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
@@ -199,7 +199,7 @@ One Answer:
 <div id="post-21251-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="https://help.openstreetmap.org/questions/3920/help-with-help">https://help.openstreetmap.org/questions/3920/help-with-help</a></p>
+<p><a href="/questions/3920/help-with-help">https://help.openstreetmap.org/questions/3920/help-with-help</a></p>
 </div>
 <div id="comment-21251-info" class="comment-info">
 <span class="comment-age">(05 Apr '13, 21:48)</span> <span class="comment-user userinfo">andy mackey</span>

@@ -224,7 +224,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>There are different ways to help improve the map a) you could add the streets yourself using one of the editors. b) but if that does work for you, you can go to <a href="http://www.openstreetmap.org/?lat=42.1464729309082&amp;layers=MN&amp;lon=-71.24942779541016&amp;zoom=12">http://www.openstreetmap.org</a> and navigate to the place where the street is missing (perhaps using as a starting point).</p>
+<p>There are different ways to help improve the map a) you could add the streets yourself using one of the editors. b) but if that does work for you, you can go to <a href="https://www.openstreetmap.org/?lat=42.1464729309082&amp;layers=MN&amp;lon=-71.24942779541016&amp;zoom=12">http://www.openstreetmap.org</a> and navigate to the place where the street is missing (perhaps using as a starting point).</p>
 <p>At the bottom right of the map, you can see an 'Add note' link. Click that. Then you can report the missing street (with text) and positioning the node. A nearby mapper may then pick up your node and do a survey. They will never copy the data from Google. I can't tell you how soon the problem will be fixed. That depends on the local OSM community.</p>
 <p>I don't think you can attach the powerpoint file to a note</p>
 </div>
@@ -276,7 +276,7 @@ osqa_accepted = false
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>hi you could take a look here, <a href="http://wiki.openstreetmap.org/wiki/Beginners%27_guide">http://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and start doiing the changes.</p>
+<p>hi you could take a look here, <a href="https://wiki.openstreetmap.org/wiki/Beginners%27_guide">https://wiki.openstreetmap.org/wiki/Beginners%27_guide</a> and start doiing the changes.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

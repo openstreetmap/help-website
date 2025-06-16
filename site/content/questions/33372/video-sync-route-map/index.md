@@ -110,7 +110,7 @@ One Answer:
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Maybe you can find some hints in the OSM wiki starting at <a href="http://wiki.openstreetmap.org/wiki/Videomapping">Videomapping</a></p>
+<p>Maybe you can find some hints in the OSM wiki starting at <a href="https://wiki.openstreetmap.org/wiki/Videomapping">Videomapping</a></p>
 <p>Or type "video" in the text search box of our OSM wiki, there are more articles related to that.</p>
 </div>
 <div class="answer-controls post-controls">

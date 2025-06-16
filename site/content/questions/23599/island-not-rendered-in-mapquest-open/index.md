@@ -39,7 +39,7 @@ osqa_accepted = true
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>An island is mapped in the lake Klausensee near Schwandorf since 2008 but not shown in MapQuest Open? I compared it with a working sample (rendered in <a href="http://www.openstreetmap.org/?lat=49.275405&amp;lon=12.164303&amp;zoom=18&amp;layers=M">Standard</a> and <a href="http://www.openstreetmap.org/?lat=49.275405&amp;lon=12.164303&amp;zoom=18&amp;layers=Q">MapQuest Open</a>) but can't find the reason for the problem (rendered in <a href="http://www.openstreetmap.org/?lat=49.29351&amp;lon=12.108497&amp;zoom=18&amp;layers=M">Standard</a> but not in <strong><a href="http://www.openstreetmap.org/?lat=49.29351&amp;lon=12.108497&amp;zoom=18&amp;layers=Q">MapQuest Open</a></strong>). Can someone else please check it?</p>
+<p>An island is mapped in the lake Klausensee near Schwandorf since 2008 but not shown in MapQuest Open? I compared it with a working sample (rendered in <a href="https://www.openstreetmap.org/?lat=49.275405&amp;lon=12.164303&amp;zoom=18&amp;layers=M">Standard</a> and <a href="https://www.openstreetmap.org/?lat=49.275405&amp;lon=12.164303&amp;zoom=18&amp;layers=Q">MapQuest Open</a>) but can't find the reason for the problem (rendered in <a href="https://www.openstreetmap.org/?lat=49.29351&amp;lon=12.108497&amp;zoom=18&amp;layers=M">Standard</a> but not in <strong><a href="https://www.openstreetmap.org/?lat=49.29351&amp;lon=12.108497&amp;zoom=18&amp;layers=Q">MapQuest Open</a></strong>). Can someone else please check it?</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-islands" rel="tag" title="see questions tagged &#39;islands&#39;">islands</span>
@@ -106,8 +106,8 @@ One Answer:
 <div class="answer-body">
 <p>The difference is the tagging of the lakes:</p>
 <ul>
-<li><a href="http://www.openstreetmap.org/browse/relation/1856664">http://www.openstreetmap.org/browse/relation/1856664</a> (talking of <a href="http://www.openstreetmap.org/browse/relation/1856664/history">version 2</a>) natural = water tagged on the relation</li>
-<li><a href="http://www.openstreetmap.org/browse/relation/58085">http://www.openstreetmap.org/browse/relation/58085</a> (talking of <a href="http://www.openstreetmap.org/browse/relation/58085/history">version 1</a>) natural = water tagged on the outer way</li>
+<li><a href="https://www.openstreetmap.org/browse/relation/1856664">https://www.openstreetmap.org/browse/relation/1856664</a> (talking of <a href="https://www.openstreetmap.org/browse/relation/1856664/history">version 2</a>) natural = water tagged on the relation</li>
+<li><a href="https://www.openstreetmap.org/browse/relation/58085">https://www.openstreetmap.org/browse/relation/58085</a> (talking of <a href="https://www.openstreetmap.org/browse/relation/58085/history">version 1</a>) natural = water tagged on the outer way</li>
 </ul>
 <p>The water in the second example is does not have inner holes - as it is tagged to the whole way.</p>
 <p>See <span>How to create islands in lakes in the wiki</span>.</p>

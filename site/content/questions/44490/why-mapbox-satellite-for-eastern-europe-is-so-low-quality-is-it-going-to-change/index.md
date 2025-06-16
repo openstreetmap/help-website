@@ -126,7 +126,7 @@ osqa_accepted = true
 <div id="post-44578-score" class="comment-score">
 &#10;</div>
 <div class="comment-text">
-<p><a href="http://help.openstreetmap.org/users/11304/mtirwin">@mtirwin</a> thanks for this, do you have any time estimate when it could be available? Weeks or years? - I do not know how fast you are updating :) BTW congrats to your Online editor which is great way to attract people. It is exactly what is needed - you can start to make custom map with several clicks, and you are only asked to register on save (at which point you are already motivated and happy with product) and pay only when it works for you (view limit). I think you might event take this further and allow sharing maps wihtou login, with simple url (which would be limited somehow).</p>
+<p><a href="https://help.openstreetmap.org/users/11304/mtirwin">@mtirwin</a> thanks for this, do you have any time estimate when it could be available? Weeks or years? - I do not know how fast you are updating :) BTW congrats to your Online editor which is great way to attract people. It is exactly what is needed - you can start to make custom map with several clicks, and you are only asked to register on save (at which point you are already motivated and happy with product) and pay only when it works for you (view limit). I think you might event take this further and allow sharing maps wihtou login, with simple url (which would be limited somehow).</p>
 </div>
 <div id="comment-44578-info" class="comment-info">
 <span class="comment-age">(01 Aug '15, 02:49)</span> <span class="comment-user userinfo">gorn</span>
@@ -168,7 +168,7 @@ osqa_accepted = true
 </div></td>
 <td><div class="item-right">
 <div class="answer-body">
-<p>Your best bet for an answer is to contact them directly by tweeting them <a href="http://help.openstreetmap.org/users/6953/mapboxg">@mapbox</a></p>
+<p>Your best bet for an answer is to contact them directly by tweeting them <a href="https://help.openstreetmap.org/users/6953/mapboxg">@mapbox</a></p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>
